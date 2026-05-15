@@ -142,15 +142,31 @@ button {
 
 .site-nav {
   position: absolute; /* 导航脱离左右布局，单独居中 */
-  top: 50%; /* 垂直方向定位到中间 */
-  left: 50%; /* 水平方向定位到中间 */
+  inset: 0; /* 使用 inset + margin 居中，避免 transform 影响 fixed 下拉定位 */
   z-index: 1; /* 导航层级低于 Logo 和右侧工具区 */
   display: flex; /* 导航项横向排列 */
   align-items: center; /* 导航项垂直居中 */
   justify-content: center; /* 导航项整体居中 */
   gap: 46px; /* 中文和韩文默认导航间距 */
+  width: max-content; /* 导航宽度跟随内容 */
+  height: max-content; /* 导航高度跟随内容 */
+  margin: auto; /* 在 Top 栏内部水平垂直居中 */
   white-space: nowrap; /* 防止导航文字换行 */
-  transform: translate(-50%, -50%); /* 让导航自身中心点对齐 Top 栏中心 */
+}
+
+.site-nav-item {
+  position: relative; /* 给导航项 hover 状态和隐形连接区提供定位基础 */
+}
+
+.site-nav-item-has-dropdown::after {
+  content: ""; /* PC 下拉与导航文字之间的隐形连接区 */
+  position: absolute; /* 相对导航项定位 */
+  top: 100%; /* 从导航文字下方开始 */
+  left: 50%; /* 水平居中到导航项 */
+  display: block; /* 让连接区参与 hover */
+  width: 160px; /* 覆盖鼠标下移路径 */
+  height: 34px; /* 连接导航文字和下拉面板 */
+  transform: translateX(-50%); /* 连接区居中 */
 }
 
 .site-nav-link {
@@ -160,6 +176,256 @@ button {
   font-weight: 400; /* 默认字重 */
   letter-spacing: 0.04em; /* 中文导航默认字距 */
   text-decoration: none; /* 去掉链接下划线 */
+}
+
+/* PC 端 mega 下拉：先搭好样式骨架，后续内容可从产品 / 应用 / 资源数据接入 */
+.site-nav-mega {
+  position: absolute; /* 独立挂在 header 下方，避免导航项定位上下文造成空隙 */
+  top: 100%; /* 下拉面板顶部与 Top 栏底部无缝重合 */
+  left: 50%; /* 面板水平居中 */
+  z-index: 2400; /* 位于页面内容之上、顶部栏内容之下 */
+  width: min(calc(100% - 48px), 1600px); /* PC 下拉宽度跟顶部内容区一致，不超过 Logo 到语言栏范围 */
+  max-width: 1600px; /* 普通 PC 最大宽度与 Top 栏内容区对齐 */
+  opacity: 0; /* 默认隐藏 */
+  pointer-events: none; /* 隐藏时不接收鼠标 */
+  transform: translate(-50%, -8px); /* 默认略微上移，便于展开动效 */
+  visibility: hidden; /* 默认不可见 */
+  transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s ease; /* PC 下拉展开动效 */
+}
+
+.site-nav-mega-open {
+  opacity: 1; /* hover 或键盘聚焦时显示下拉 */
+  pointer-events: auto; /* 显示后可交互 */
+  transform: translate(-50%, 0); /* 展开到最终位置 */
+  visibility: visible; /* 显示面板 */
+}
+
+.site-nav-mega-inner {
+  display: grid; /* 左侧分类 + 右侧内容预留 */
+  grid-template-columns: 460px minmax(0, 1fr); /* 左侧分类栏加宽，贴近参考图比例 */
+  min-height: min(760px, calc(100vh - 112px)); /* PC 下拉高度贴近参考图，并限制小屏溢出 */
+  overflow: hidden; /* 保持圆角裁切 */
+  border: 1px solid rgba(23, 51, 104, 0.08); /* 轻边框 */
+  border-top: 0; /* 顶部贴住 Top 栏，不再额外出现线缝 */
+  border-radius: 0 0 22px 22px; /* 底部大圆角，形成正式浮层 */
+  background: #ffffff; /* 下拉面板白底 */
+  box-shadow: 0 34px 90px rgba(6, 26, 58, 0.16); /* 大型浮层阴影 */
+}
+
+.site-nav-mega-sidebar {
+  display: grid; /* 分类纵向排列 */
+  align-content: start; /* 分类从顶部开始 */
+  gap: 0; /* 分类之间无缝衔接 */
+  padding: 34px 0; /* 左侧分类栏上下留白 */
+  border-right: 1px solid rgba(23, 51, 104, 0.08); /* 左右分区线 */
+  background: #e9eef4; /* 左侧浅灰背景，贴近参考图 */
+}
+
+.site-nav-mega-category {
+  display: grid; /* 分类标题和说明上下排列 */
+  grid-template-columns: minmax(0, 1fr) auto; /* 左侧文字，右侧箭头 */
+  column-gap: 24px; /* 文字与右侧三角形之间保留稳定距离 */
+  row-gap: 8px; /* 标题与说明间距 */
+  min-height: 110px; /* 每个分类项高度，贴近参考图的大行距 */
+  padding: 24px 42px; /* 分类项内边距 */
+  color: #173368; /* 分类默认深蓝 */
+  transition: background 0.22s ease, color 0.22s ease, transform 0.22s ease; /* 分类 hover 反馈 */
+}
+
+.site-nav-mega-category strong {
+  grid-column: 1; /* 标题放在左侧 */
+  color: #173368; /* 默认标题使用品牌深蓝 */
+  font-size: 24px; /* 分类标题字号，保持比顶部导航低调一些 */
+  line-height: 1.15; /* 分类标题行高 */
+  transition: color 0.22s ease, transform 0.22s ease; /* 标题跟随 hover / 选中做颜色反馈 */
+}
+
+.site-nav-mega-category-desc {
+  grid-column: 1; /* 说明放在左侧 */
+  color: #7c8a9c; /* 分类说明灰蓝色 */
+  font-size: 14px; /* 分类说明字号 */
+  line-height: 1.4; /* 分类说明行高 */
+  transition: color 0.22s ease; /* 说明文字颜色过渡 */
+}
+
+.site-nav-mega-category-arrow {
+  grid-column: 2; /* 箭头放在右侧 */
+  grid-row: 1 / span 2; /* 箭头跨标题和说明两行居中 */
+  align-self: center; /* 箭头垂直居中 */
+  justify-self: end; /* 三角形始终贴在分类项右侧 */
+  width: 0; /* 用 border 绘制右指三角形 */
+  height: 0; /* 用 border 绘制右指三角形 */
+  border-top: 7px solid transparent; /* 三角形上边 */
+  border-bottom: 7px solid transparent; /* 三角形下边 */
+  border-left: 9px solid currentColor; /* 三角形主体颜色跟随当前状态 */
+  color: #8da0b5; /* 默认三角形浅灰蓝 */
+  transition: color 0.22s ease, transform 0.22s ease; /* 箭头 hover 动效 */
+}
+
+.site-nav-mega-category:hover {
+  background: rgba(255, 255, 255, 0.84); /* 鼠标经过分类时显示轻白底 */
+  transform: translateX(2px); /* 鼠标经过分类时轻微右移 */
+}
+
+.site-nav-mega-category-active {
+  background: #ffffff; /* 第一项高亮为白底 */
+  box-shadow: none; /* 参考图中高亮项以白底和青色文字为主 */
+}
+
+.site-nav-mega-category:hover strong,
+.site-nav-mega-category-active strong {
+  color: #09e9b4; /* hover 或选中时标题变科技青 */
+  transform: translateX(2px); /* 标题给一点轻微位移动效 */
+}
+
+.site-nav-mega-category:hover .site-nav-mega-category-desc,
+.site-nav-mega-category-active .site-nav-mega-category-desc {
+  color: #5d6e82; /* hover 或选中时说明文字加深，增强可读性 */
+}
+
+.site-nav-mega-category:hover .site-nav-mega-category-arrow,
+.site-nav-mega-category-active .site-nav-mega-category-arrow {
+  color: #09e9b4; /* 高亮或 hover 时箭头变科技青 */
+  transform: translateX(5px) scale(1.08); /* 三角形轻微右移放大，强化交互反馈 */
+}
+
+.site-nav-mega-main {
+  display: grid; /* 右侧内容纵向排布 */
+  grid-template-rows: auto 1fr auto; /* 标题、内容、底部入口 */
+  gap: 32px; /* 区块间距 */
+  padding: 58px 70px 44px; /* 右侧内容留白，贴近参考图 */
+  background: #ffffff; /* 右侧内容白底 */
+}
+
+.site-nav-mega-heading {
+  display: flex; /* 标题和说明两端对齐 */
+  align-items: end; /* 底部对齐，贴近参考图标题区 */
+  justify-content: space-between; /* 左标题右说明 */
+  gap: 32px; /* 标题与说明间距 */
+  padding-bottom: 28px; /* 标题区底部留白 */
+  border-bottom: 1px solid rgba(23, 51, 104, 0.1); /* 标题区分割线 */
+}
+
+.site-nav-mega-heading h3 {
+  margin: 0; /* 清除标题默认外边距 */
+  color: #07172f; /* 标题深色 */
+  font-size: 30px; /* PC 下拉标题字号 */
+  line-height: 1.2; /* 标题行高 */
+  letter-spacing: 0; /* 标题不使用负字距 */
+}
+
+.site-nav-mega-heading p {
+  max-width: 700px; /* 控制说明文字行宽 */
+  margin: 0; /* 清除段落默认外边距 */
+  color: #667386; /* 说明文字灰蓝色 */
+  font-size: 15px; /* 说明文字字号 */
+  font-weight: 700; /* 说明文字略加粗 */
+  line-height: 1.5; /* 说明文字行高 */
+}
+
+.site-nav-mega-placeholder-grid {
+  display: grid; /* 预留内容网格 */
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* 产品中心预留三列 */
+  align-content: start; /* 内容从顶部开始 */
+  gap: 54px 82px; /* 产品网格间距，贴近参考图 */
+}
+
+.site-nav-mega-placeholder {
+  display: grid; /* 让占位入口文字居中 */
+  grid-template-rows: auto auto auto; /* 图标、标题、说明上下排列 */
+  gap: 14px; /* 图标和文字间距 */
+  min-height: 218px; /* 产品项高度，贴近参考图 */
+  place-items: center; /* 占位入口文字居中 */
+  border: 0; /* 产品项不使用卡片边框，贴近参考图 */
+  border-radius: 0; /* 产品项不使用卡片圆角 */
+  background: transparent; /* 产品项无底色 */
+  color: #07172f; /* 产品项文字深色 */
+  font-size: 16px; /* 产品项字号 */
+  font-weight: 700; /* 占位入口加粗 */
+  text-align: center; /* 产品项居中 */
+  box-shadow: none; /* 产品项无卡片阴影 */
+  transition: color 0.22s ease, transform 0.22s ease; /* 可点击入口反馈 */
+}
+
+.site-nav-mega-card-icon {
+  position: relative; /* 用伪元素组合产品占位图标 */
+  width: 88px; /* 产品图标宽度 */
+  height: 150px; /* 产品图标高度 */
+  border-radius: 28px; /* 产品图标主体圆角 */
+  background: linear-gradient(180deg, #121d29 0%, #344252 100%); /* 深色产品图标主体 */
+  box-shadow: none; /* 产品占位图不加阴影，避免视觉过重 */
+}
+
+.site-nav-mega-card-icon::before {
+  content: ""; /* 产品图标顶部小帽 */
+  position: absolute; /* 相对主体定位 */
+  top: -28px; /* 小帽位于主体上方 */
+  left: 50%; /* 小帽水平居中 */
+  width: 46px; /* 小帽宽度 */
+  height: 30px; /* 小帽高度 */
+  border-radius: 12px; /* 小帽圆角 */
+  background: #111b27; /* 小帽深色 */
+  transform: translateX(-50%); /* 小帽居中 */
+}
+
+.site-nav-mega-card-icon::after {
+  content: ""; /* 产品图标中部横向模块 */
+  position: absolute; /* 相对主体定位 */
+  top: 44px; /* 横向模块位置 */
+  left: 50%; /* 横向模块水平居中 */
+  width: 118px; /* 横向模块宽度 */
+  height: 48px; /* 横向模块高度 */
+  border-radius: 12px; /* 横向模块圆角 */
+  background: #101923; /* 横向模块深色 */
+  transform: translateX(-50%); /* 横向模块居中 */
+}
+
+.site-nav-mega-card-title {
+  margin-top: 8px; /* 产品标题与图标间距 */
+  color: #07172f; /* 产品标题深色 */
+  font-size: 23px; /* 产品标题字号 */
+  line-height: 1.2; /* 产品标题行高 */
+}
+
+.site-nav-mega-card-label {
+  max-width: 280px; /* 产品说明最大宽度 */
+  color: #667386; /* 产品说明灰蓝色 */
+  font-size: 14px; /* 产品说明字号 */
+  line-height: 1.5; /* 产品说明行高 */
+}
+
+.site-nav-mega-placeholder:hover {
+  color: #09e9b4; /* 鼠标经过产品项时文字变科技青 */
+  transform: translateY(-2px); /* 轻微上移动效 */
+}
+
+.site-nav-mega-footer {
+  display: flex; /* 底部说明和入口两端排布 */
+  align-items: center; /* 垂直居中 */
+  justify-content: space-between; /* 两端对齐 */
+  gap: 24px; /* 底部文本间距 */
+  padding: 28px 0 0; /* 底部分割线上方留白 */
+  border-top: 1px solid rgba(23, 51, 104, 0.1); /* 底部分割线 */
+  color: #667386; /* 底部说明颜色 */
+  font-size: 14px; /* 底部字号 */
+  font-weight: 700; /* 底部文字略加粗 */
+}
+
+.site-nav-mega-footer a {
+  display: inline-flex; /* 查看全部入口可视化为按钮式链接 */
+  align-items: center; /* 垂直居中 */
+  min-height: 36px; /* 操作入口高度 */
+  padding: 0 14px; /* 操作入口左右留白 */
+  border-radius: 8px; /* 操作入口圆角 */
+  background: rgba(23, 51, 104, 0.06); /* 查看全部浅底 */
+  color: #173368; /* 查看全部入口使用品牌深蓝 */
+  font-size: 14px; /* 查看全部入口字号 */
+  transition: background 0.22s ease, color 0.22s ease; /* 查看全部 hover 过渡 */
+}
+
+.site-nav-mega-footer a:hover {
+  background: #173368; /* 查看全部 hover 深蓝底 */
+  color: #09e9b4; /* 查看全部 hover 使用科技青 */
 }
 
 .site-nav-link::after {
@@ -343,7 +609,7 @@ button {
   align-items: center; /* 垂直居中 */
   justify-content: center; /* 水平居中 */
   gap: 6px; /* 文字和箭头间距 */
-  min-width: 118px; /* PC 端按钮宽度 */
+  min-width: 136px; /* PC 端按钮宽度，避免 English 等语言显示不全 */
   height: 42px; /* PC 端按钮高度 */
   padding: 0 14px; /* 左右内边距 */
   border: 1px solid rgba(255, 255, 255, 0.3); /* 1920 及以下语言按钮边框 */
@@ -361,7 +627,7 @@ button {
 
 .language-summary-label {
   display: inline-block; /* 允许限制宽度 */
-  max-width: 82px; /* PC 端文字最大宽度 */
+  max-width: 108px; /* PC 端文字最大宽度，完整显示英文和常见语言名 */
   overflow: hidden; /* 超出隐藏 */
   text-overflow: ellipsis; /* 超出显示省略号 */
   white-space: nowrap; /* 不换行 */
@@ -502,9 +768,9 @@ button {
 }
 
 .mobile-nav-switcher-open .mobile-menu-btn {
-  border-color: #173368; /* 展开时按钮边框 */
-  background: #173368; /* 展开时按钮背景 */
-  color: #09e9b4; /* 展开时 SVG 图标变科技青 */
+  border-color: rgba(23, 51, 104, 0.14); /* 展开时按钮保持浅色边框，贴近手机端设计 */
+  background: #f5f8fb; /* 展开时按钮为浅色背景 */
+  color: #173368; /* 展开时 X 图标使用品牌深蓝 */
 }
 
 .mobile-nav {
@@ -513,7 +779,7 @@ button {
   right: 0; /* 右侧对齐 */
   z-index: 5100; /* 菜单层级高于遮罩 */
   display: block; /* 保持可动画，默认通过透明度隐藏 */
-  width: min(300px, calc(100vw - 28px)); /* 手机导航菜单加宽 */
+  width: min(1000px, calc(100vw - 28px)); /* 手机导航菜单加宽 */
   padding: 8px; /* 菜单内部留白 */
   border: 1px solid rgba(23, 51, 104, 0.1); /* 菜单边框 */
   border-radius: 12px; /* 菜单圆角 */
@@ -543,6 +809,71 @@ button {
   line-height: 1.2; /* 移动端导航行高 */
   text-decoration: none; /* 去掉下划线 */
   white-space: nowrap; /* 不换行 */
+}
+
+.mobile-nav-section {
+  border-radius: 10px; /* 手机端可展开导航项圆角 */
+}
+
+.mobile-nav-summary {
+  display: flex; /* 一级标题和箭头两端排布 */
+  align-items: center; /* 垂直居中 */
+  justify-content: space-between; /* 文字靠左，箭头靠右 */
+  gap: 12px; /* 文本和箭头间距 */
+  padding: 12px 12px; /* 手机端一级导航内边距 */
+  border-radius: 10px; /* 一级导航圆角 */
+  color: #173368; /* 手机端一级导航文字颜色 */
+  font-size: 14px; /* 手机端一级导航字号 */
+  line-height: 1.2; /* 手机端一级导航行高 */
+  background: transparent; /* 一级菜单展开时也不做选中底色 */
+  cursor: pointer; /* 提示可点击展开 */
+  list-style: none; /* 去掉 details 默认箭头 */
+  transition: background 0.18s ease; /* 一级点击时只保留轻微反馈 */
+}
+
+.mobile-nav-summary::-webkit-details-marker {
+  display: none; /* 去掉 WebKit 默认 details 箭头 */
+}
+
+.mobile-nav-summary span:last-child {
+  color: #8da0b5; /* 右侧展开箭头颜色 */
+  font-size: 12px; /* 右侧箭头字号 */
+  transition: transform 0.22s ease; /* 箭头旋转动效 */
+}
+
+.mobile-nav-section[open] .mobile-nav-summary span:last-child {
+  transform: rotate(180deg); /* 展开时箭头向上 */
+}
+
+.mobile-nav-submenu {
+  display: grid; /* 二级预留项纵向排列 */
+  gap: 2px; /* 二级预留项间距 */
+  padding: 4px 6px 10px 18px; /* 二级区域缩进，形成层级 */
+}
+
+.mobile-nav-submenu-link {
+  display: block; /* 二级项独占一行 */
+  width: 100%; /* 二级按钮占满可点击宽度 */
+  padding: 9px 10px; /* 二级项内边距 */
+  border-radius: 8px; /* 二级项圆角 */
+  color: #667386; /* 二级预留项文字颜色 */
+  font-size: 13px; /* 二级预留项字号 */
+  line-height: 1.2; /* 二级预留项行高 */
+  text-align: left; /* 二级项左对齐 */
+  text-decoration: none; /* 二级链接去掉下划线 */
+  white-space: nowrap; /* 二级项不换行 */
+  cursor: pointer; /* 二级末项提示可点击 */
+  transition: background 0.22s ease 0.06s, color 0.22s ease 0.06s; /* 点击态稍作延迟，更像手机反馈 */
+}
+
+.mobile-nav-submenu-entry {
+  color: #173368; /* 进入主栏目入口使用品牌深蓝 */
+  font-weight: 700; /* 主栏目入口加粗 */
+}
+
+.mobile-nav-submenu-link-active {
+  background: #173368; /* 手机端末级项点击后使用品牌深蓝底 */
+  color: #09e9b4; /* 手机端末级项点击后使用荧光青文字 */
 }
 
 .mobile-nav-link:hover {
@@ -823,7 +1154,7 @@ html[lang="ru"] .home-hero-btn:hover {
   }
 
   .language-summary {
-    min-width: 128px; /* 2K 以上语言按钮宽度 */
+    min-width: 146px; /* 2K 以上语言按钮宽度，完整显示语言名称 */
     height: 48px; /* 2K 以上语言按钮高度 */
     padding: 0 18px; /* 2K 以上语言按钮内边距 */
     border-width: 2px; /* 2K 以上语言按钮边框 */
@@ -831,11 +1162,21 @@ html[lang="ru"] .home-hero-btn:hover {
   }
 
   .language-summary-label {
-    max-width: 92px; /* 2K 以上当前语言文字宽度 */
+    max-width: 116px; /* 2K 以上当前语言文字宽度 */
   }
 
   .language-details-menu {
     min-width: 172px; /* 2K 以上语言菜单宽度 */
+  }
+
+  .site-nav-mega {
+    width: min(calc(100% - 48px), 1760px); /* 2K 以上同样跟顶部内容区对齐，不超过 Logo 与语言栏 */
+    max-width: 1760px; /* 2K 以上最大宽度与 Top 栏内容区一致 */
+  }
+
+  .site-nav-mega-inner {
+    grid-template-columns: 460px minmax(0, 1fr); /* 2K 以上保持参考图左侧分类栏宽度 */
+    min-height: min(800px, calc(100vh - 112px)); /* 2K 以上下拉面板更高但不溢出 */
   }
 
   html[lang="en"] .site-nav,
@@ -859,6 +1200,107 @@ html[lang="ru"] .home-hero-btn:hover {
 ================================ */
 
 @media (min-width: 1281px) and (max-width: 1920px) {
+  .site-nav-mega {
+    width: min(calc(100% - 48px), 1600px); /* 1920 及以下对齐 Top 栏内容区，不超过 Logo 与语言栏 */
+    max-width: 1600px; /* 1920 及以下最大宽度与顶部内容区一致 */
+  }
+
+  .site-nav-mega-inner {
+    grid-template-columns: 380px minmax(0, 1fr); /* 1920 及以下左侧分类栏收紧，避免比例过重 */
+    min-height: min(640px, calc(100vh - 104px)); /* 1920 及以下控制面板高度，视觉更克制 */
+    border-radius: 0 0 18px 18px; /* 收小圆角，匹配中等尺寸面板 */
+  }
+
+  .site-nav-mega-sidebar {
+    padding: 24px 0; /* 1920 及以下减少分类栏上下留白 */
+  }
+
+  .site-nav-mega-category {
+    column-gap: 18px; /* 1920 及以下缩小文字和三角形距离 */
+    min-height: 92px; /* 1920 及以下分类项高度更紧凑 */
+    padding: 18px 32px; /* 1920 及以下分类项内边距收紧 */
+  }
+
+  .site-nav-mega-category strong {
+    font-size: 21px; /* 1920 及以下分类标题字号下调 */
+  }
+
+  .site-nav-mega-category-desc {
+    font-size: 13px; /* 1920 及以下分类说明字号下调 */
+  }
+
+  .site-nav-mega-category-arrow {
+    border-top-width: 6px; /* 1920 及以下三角形尺寸收小 */
+    border-bottom-width: 6px; /* 1920 及以下三角形尺寸收小 */
+    border-left-width: 8px; /* 1920 及以下三角形尺寸收小 */
+  }
+
+  .site-nav-mega-main {
+    gap: 26px; /* 1920 及以下右侧区块间距收紧 */
+    padding: 42px 54px 36px; /* 1920 及以下右侧内容留白更克制 */
+  }
+
+  .site-nav-mega-heading {
+    gap: 28px; /* 1920 及以下标题与说明间距收紧 */
+    padding-bottom: 22px; /* 1920 及以下标题区底部留白收紧 */
+  }
+
+  .site-nav-mega-heading h3 {
+    font-size: 26px; /* 1920 及以下右侧主标题字号下调 */
+  }
+
+  .site-nav-mega-heading p {
+    max-width: 620px; /* 1920 及以下控制说明文字行宽 */
+    font-size: 13px; /* 1920 及以下说明文字字号下调 */
+  }
+
+  .site-nav-mega-placeholder-grid {
+    gap: 38px 58px; /* 1920 及以下产品网格间距收紧 */
+  }
+
+  .site-nav-mega-placeholder {
+    gap: 12px; /* 1920 及以下产品图标和文字间距收紧 */
+    min-height: 180px; /* 1920 及以下产品项高度收紧 */
+  }
+
+  .site-nav-mega-card-icon {
+    width: 72px; /* 1920 及以下产品图标宽度收小 */
+    height: 124px; /* 1920 及以下产品图标高度收小 */
+    border-radius: 24px; /* 1920 及以下图标圆角同步收小 */
+  }
+
+  .site-nav-mega-card-icon::before {
+    top: -23px; /* 1920 及以下顶部小帽位置匹配缩小图标 */
+    width: 38px; /* 1920 及以下顶部小帽宽度收小 */
+    height: 25px; /* 1920 及以下顶部小帽高度收小 */
+    border-radius: 10px; /* 1920 及以下顶部小帽圆角收小 */
+  }
+
+  .site-nav-mega-card-icon::after {
+    top: 36px; /* 1920 及以下横向模块位置匹配缩小图标 */
+    width: 98px; /* 1920 及以下横向模块宽度收小 */
+    height: 40px; /* 1920 及以下横向模块高度收小 */
+    border-radius: 10px; /* 1920 及以下横向模块圆角收小 */
+  }
+
+  .site-nav-mega-card-title {
+    font-size: 20px; /* 1920 及以下产品标题字号下调 */
+  }
+
+  .site-nav-mega-card-label {
+    max-width: 250px; /* 1920 及以下产品说明行宽收紧 */
+    font-size: 12px; /* 1920 及以下产品说明字号下调 */
+  }
+
+  .site-nav-mega-footer {
+    padding-top: 24px; /* 1920 及以下底部区域上留白收紧 */
+    font-size: 12px; /* 1920 及以下底部文字字号下调 */
+  }
+
+  .site-nav-mega-footer a {
+    font-size: 12px; /* 1920 及以下查看全部入口字号下调 */
+  }
+
   html[lang="en"] .site-nav,
   html[lang="es"] .site-nav,
   html[lang="fr"] .site-nav {
@@ -867,6 +1309,107 @@ html[lang="ru"] .home-hero-btn:hover {
 
   html[lang="ru"] .site-nav {
     gap: 48px; /* 1920 下俄语导航间距 */
+  }
+}
+
+/* ================================
+   12.1 响应式：1440px 到 1281px
+================================ */
+
+@media (min-width: 1281px) and (max-width: 1440px) {
+  .site-nav-mega {
+    width: min(calc(100% - 48px), 1320px); /* 1440 档面板继续收窄，同时不超过顶部内容区 */
+    max-width: 1320px; /* 1440 档限制最大宽度 */
+  }
+
+  .site-nav-mega-inner {
+    grid-template-columns: 320px minmax(0, 1fr); /* 1440 档左侧栏更紧凑 */
+    min-height: 520px; /* 1440 档降低面板高度 */
+  }
+
+  .site-nav-mega-sidebar {
+    padding: 18px 0; /* 1440 档减少分类栏上下留白 */
+  }
+
+  .site-nav-mega-category {
+    column-gap: 14px; /* 1440 档缩小箭头间距 */
+    min-height: 78px; /* 1440 档分类项高度更适合中屏 */
+    padding: 15px 26px; /* 1440 档分类项内边距再收紧 */
+  }
+
+  .site-nav-mega-category strong {
+    font-size: 18px; /* 1440 档分类标题不再过大 */
+  }
+
+  .site-nav-mega-category-desc {
+    font-size: 12px; /* 1440 档说明文字更轻 */
+  }
+
+  .site-nav-mega-main {
+    gap: 22px; /* 1440 档右侧区块间距再收紧 */
+    padding: 34px 40px 30px; /* 1440 档右侧内容留白更适合中屏 */
+  }
+
+  .site-nav-mega-heading {
+    align-items: start; /* 1440 档标题区顶部对齐，避免说明文字撑开 */
+    gap: 22px; /* 1440 档标题说明间距 */
+    padding-bottom: 18px; /* 1440 档标题区下留白 */
+  }
+
+  .site-nav-mega-heading h3 {
+    font-size: 22px; /* 1440 档主标题字号 */
+  }
+
+  .site-nav-mega-heading p {
+    max-width: 520px; /* 1440 档说明文字行宽 */
+    font-size: 12px; /* 1440 档说明文字字号 */
+  }
+
+  .site-nav-mega-placeholder-grid {
+    gap: 28px 38px; /* 1440 档产品网格距离更紧凑 */
+  }
+
+  .site-nav-mega-placeholder {
+    min-height: 148px; /* 1440 档产品项高度 */
+  }
+
+  .site-nav-mega-card-icon {
+    width: 58px; /* 1440 档产品图标宽度 */
+    height: 98px; /* 1440 档产品图标高度 */
+    border-radius: 20px; /* 1440 档图标圆角 */
+  }
+
+  .site-nav-mega-card-icon::before {
+    top: -18px; /* 1440 档顶部小帽位置 */
+    width: 32px; /* 1440 档顶部小帽宽度 */
+    height: 20px; /* 1440 档顶部小帽高度 */
+    border-radius: 8px; /* 1440 档顶部小帽圆角 */
+  }
+
+  .site-nav-mega-card-icon::after {
+    top: 30px; /* 1440 档横向模块位置 */
+    width: 80px; /* 1440 档横向模块宽度 */
+    height: 32px; /* 1440 档横向模块高度 */
+    border-radius: 8px; /* 1440 档横向模块圆角 */
+  }
+
+  .site-nav-mega-card-title {
+    margin-top: 4px; /* 1440 档产品标题与图标距离 */
+    font-size: 18px; /* 1440 档产品标题字号 */
+  }
+
+  .site-nav-mega-card-label {
+    max-width: 210px; /* 1440 档产品说明行宽 */
+    font-size: 12px; /* 1440 档产品说明字号 */
+  }
+
+  .site-nav-mega-footer {
+    padding-top: 18px; /* 1440 档底部区域上留白 */
+    font-size: 12px; /* 1440 档底部文字字号 */
+  }
+
+  .site-nav-mega-footer a {
+    font-size: 12px; /* 1440 档查看全部入口字号 */
   }
 }
 
@@ -886,6 +1429,25 @@ html[lang="ru"] .home-hero-btn:hover {
   .site-search-form {
     flex-basis: 210px; /* 1280 以下搜索栏宽度 */
     width: 210px; /* 1280 以下搜索栏实际宽度 */
+  }
+
+  .site-nav-mega {
+    width: min(calc(100% - 40px), 1240px); /* 1280 以下也对齐顶部内容区，避免超过 Logo 与语言栏 */
+    max-width: 1240px; /* 1280 以下限制最大宽度 */
+  }
+
+  .site-nav-mega-inner {
+    grid-template-columns: 340px minmax(0, 1fr); /* 1280 以下左侧分类栏适度收窄 */
+    min-height: 560px; /* 1280 以下下拉高度适度收紧 */
+  }
+
+  .site-nav-mega-main {
+    padding: 42px 44px 32px; /* 1280 以下右侧内容留白收紧 */
+  }
+
+  .site-nav-mega-placeholder-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 1280 以下预留内容改为两列 */
+    gap: 42px 56px; /* 1280 以下产品网格间距收紧 */
   }
 
   html[lang="en"] .site-nav,
@@ -912,6 +1474,10 @@ html[lang="ru"] .home-hero-btn:hover {
     display: none; /* 1000 以下隐藏桌面端导航 */
   }
 
+  .site-nav-mega {
+    display: none; /* 手机端不使用 PC mega 下拉，改用手机二级展开 */
+  }
+
   .site-search-form {
     display: none; /* 1000 以下隐藏搜索栏 */
   }
@@ -924,6 +1490,31 @@ html[lang="ru"] .home-hero-btn:hover {
 
   .mobile-nav-switcher {
     display: block; /* 1000 以下显示手机导航开关 */
+  }
+
+  .mobile-nav {
+    position: fixed; /* 手机端菜单固定在顶部栏下方，形成整宽下拉面板 */
+    top: 82px; /* 1000 以下顶部栏高度为 82px */
+    left: 10px; /* 菜单距离屏幕左侧 10px，贴近截图 */
+    right: 10px; /* 菜单距离屏幕右侧 10px，贴近截图 */
+    width: auto; /* 使用 left / right 控制整宽，而不是按钮右侧窄浮层 */
+    max-height: calc(100vh - 94px); /* 菜单最大高度，避免小屏溢出 */
+    padding: 10px; /* 整宽菜单内边距 */
+    overflow-y: auto; /* 后续二级内容变多时允许纵向滚动 */
+    border-radius: 12px; /* 手机端菜单圆角 */
+    transform: translateY(-6px); /* 下拉展开前轻微上移 */
+    transform-origin: top center; /* 整宽面板从顶部中间展开 */
+  }
+
+  .mobile-nav-switcher-open .mobile-nav {
+    transform: translateY(0); /* 展开后回到顶部栏下方 */
+  }
+
+  .mobile-nav-link,
+  .mobile-nav-summary {
+    min-height: 52px; /* 手机端一级菜单行高，贴近截图 */
+    padding: 16px 16px; /* 手机端一级菜单左右留白 */
+    font-size: 16px; /* 手机端一级菜单字号 */
   }
 
   .mobile-nav-backdrop {
@@ -966,8 +1557,8 @@ html[lang="ru"] .home-hero-btn:hover {
   }
 
   .language-summary {
-    min-width: 88px; /* 手机端语言按钮宽度 */
-    max-width: 104px; /* 手机端语言按钮最大宽度 */
+    min-width: 116px; /* 手机端语言按钮宽度，避免 English 显示不全 */
+    max-width: 136px; /* 手机端语言按钮最大宽度 */
     height: 38px; /* 手机端语言按钮高度 */
     padding: 0 9px; /* 手机端语言按钮内边距 */
     gap: 4px; /* 手机端文字和箭头间距 */
@@ -975,7 +1566,7 @@ html[lang="ru"] .home-hero-btn:hover {
   }
 
   .language-summary-label {
-    max-width: 60px; /* 手机端当前语言文字宽度 */
+    max-width: 96px; /* 手机端当前语言文字宽度 */
   }
 
   .language-summary-arrow {
@@ -1004,18 +1595,27 @@ html[lang="ru"] .home-hero-btn:hover {
   }
 
   .mobile-nav {
-    width: min(270px, calc(100vw - 28px)); /* 手机端导航菜单加宽 */
-    padding: 7px; /* 手机端导航菜单内边距 */
+    top: 70px; /* 手机端菜单从 70px Top 栏下方开始 */
+    left: 10px; /* 手机端菜单左侧留白 */
+    right: 10px; /* 手机端菜单右侧留白 */
+    width: auto; /* 手机端同样使用整宽下拉面板 */
+    max-height: calc(100vh - 82px); /* 手机端菜单最大高度 */
+    padding: 10px; /* 手机端导航菜单内边距 */
   }
 
   .mobile-nav-switcher::after {
-    width: min(270px, calc(100vw - 28px)); /* 手机端导航隐形连接区加宽 */
+    width: calc(100vw - 20px); /* 手机端导航隐形连接区覆盖整宽菜单 */
     height: 18px; /* 手机端导航隐形连接区高度 */
   }
 
   .mobile-nav-link {
-    padding: 10px 10px; /* 手机端导航项内边距 */
-    font-size: 13px; /* 手机端导航项字号 */
+    padding: 14px 16px; /* 手机端导航项内边距 */
+    font-size: 16px; /* 手机端导航项字号 */
+  }
+
+  .mobile-nav-summary {
+    padding: 14px 16px; /* 手机端可展开导航项内边距 */
+    font-size: 16px; /* 手机端可展开导航项字号 */
   }
 
   .mobile-nav-backdrop {
