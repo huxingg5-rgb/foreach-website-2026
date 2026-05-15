@@ -1,113 +1,56 @@
-@import "tailwindcss";
+@import "tailwindcss"; /* 引入 Tailwind CSS 基础能力 */
 
 /* ================================
-   全局盒模型
-   说明：
-   1. 所有元素统一使用 border-box
-   2. padding 和 border 会包含在宽高里面
-   3. 后续写卡片、按钮、搜索框时更好控制尺寸
+   01. 全局基础设置
 ================================ */
-* {
-  box-sizing: border-box; /* 统一盒模型，避免 padding 把元素撑大 */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* 统一盒模型，避免 padding 和 border 把元素撑大 */
 }
 
-/* Logo render fix: give the absolute-positioned logo layers a real box on mobile browsers. */
-.site-logo {
-  height: 43px;
-  flex: 0 0 auto;
-}
-
-.site-logo-color {
-  transition: opacity 0.28s ease;
-}
-
-@media (min-width: 1921px) {
-  .site-logo {
-    height: 54px;
-  }
-}
-
-@media (max-width: 640px) {
-  .site-logo {
-    height: 34px;
-  }
-}
-
-/* ================================
-   页面默认字体
-   说明：
-   1. 默认使用中文字体体系
-   2. 后续多语言通过 html[lang="xx"] 单独切换字体
-================================ */
 html {
-  scroll-behavior: auto; /* 关闭平滑滚动，避免页面自动滑动的感觉 */
-  /* scroll-behavior: smooth; 页面滚动更平滑 */
+  scroll-behavior: auto; /* 关闭平滑滚动，避免页面有自动滑动的感觉 */
   font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", Arial, sans-serif; /* 默认中文字体 */
 }
-  
-/* ================================
-   页面基础样式
-   说明：
-   1. 控制全站默认背景和正文颜色
-   2. 字体继承 html 上设置的字体
-================================ */
+
 body {
   margin: 0; /* 清除浏览器默认外边距 */
   color: #243447; /* 全站默认正文文字颜色 */
   background: #f6f9fc; /* 全站默认浅灰白背景 */
-  font-family: inherit; /* 继承 html 上的字体 */
+  font-family: inherit; /* 继承 html 上设置的字体 */
 }
 
-/* ================================
-   多语言字体预留
-   说明：
-   1. 中文、英文、西班牙语、法语、韩语、俄语都提前预留
-   2. 后期切换语言时，只要 html 上的 lang 改了，字体就会自动切换
-================================ */
 html[lang="zh"],
 html[lang="zh-CN"] {
-  font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", Arial, sans-serif; /* 中文页面字体 */
+  font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", Arial, sans-serif; /* 中文字体 */
 }
 
 html[lang="en"],
 html[lang="es"],
 html[lang="fr"],
 html[lang="ru"] {
-  font-family: "Segoe UI", Arial, "Noto Sans", sans-serif; /* 英文 / 西班牙语 / 法语 / 俄语页面字体 */
+  font-family: "Segoe UI", Arial, "Noto Sans", sans-serif; /* 英文、西语、法语、俄语字体 */
 }
 
 html[lang="ko"] {
-  font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", "Noto Sans", sans-serif; /* 韩语页面字体 */
+  font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", "Noto Sans", sans-serif; /* 韩语字体 */
 }
 
-/* ================================
-   基础链接样式
-   说明：
-   1. 链接默认继承父级颜色
-   2. 去掉浏览器默认下划线
-================================ */
 a {
   color: inherit; /* 链接继承父级文字颜色 */
   text-decoration: none; /* 去掉链接默认下划线 */
 }
 
-/* ================================
-   基础按钮样式
-   说明：
-   1. 按钮继承页面字体
-   2. 避免不同浏览器按钮字体不一致
-================================ */
 button {
-  font-family: inherit; /* 按钮继承页面字体 */
+  font-family: inherit; /* 按钮继承全站字体 */
 }
 
 /* ================================
-   顶部导航 SiteHeader
-   说明：
-   1. 全站通用 Top 栏
-   2. 初始状态透明，适合首页深色首屏
-   3. 鼠标放上去或页面向下滚动后，Top 栏变白
+   02. 顶部导航 SiteHeader
 ================================ */
+
 .site-header {
   position: fixed; /* 固定在页面顶部 */
   top: 0; /* 距离页面顶部为 0 */
@@ -115,244 +58,206 @@ button {
   z-index: 1000; /* 保证 Top 栏覆盖页面内容 */
   width: 100%; /* Top 栏横向占满屏幕 */
   background: transparent; /* 初始状态背景透明 */
-  transition: background 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease; /* Top 栏背景、阴影、边框过渡 */
+  transition: background 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease; /* 背景、阴影、边框过渡 */
 }
 
-/* Top 栏 hover / 页面滚动后的状态 */
 .site-header:hover,
 .site-header-scrolled,
-.page-scrolled .site-header {
-  background: rgba(255, 255, 255, 0.94); /* Top 栏变成半透明白色背景 */
-  border-bottom: 1px solid rgba(23, 51, 104, 0.1); /* Top 栏底部分割线 */
-  box-shadow: 0 18px 50px rgba(6, 26, 58, 0.08); /* Top 栏轻微阴影 */
-  backdrop-filter: blur(18px); /* Top 栏背景模糊效果 */
+.page-scrolled .site-header,
+.site-header.header-panel-open {
+  background: rgba(255, 255, 255, 0.94); /* 鼠标悬停、滚动或展开菜单时变成半透明白色 */
+  border-bottom: 1px solid rgba(23, 51, 104, 0.1); /* 顶部栏底部分割线 */
+  box-shadow: 0 18px 50px rgba(6, 26, 58, 0.08); /* 顶部栏轻微阴影 */
+  backdrop-filter: blur(18px); /* 顶部栏背景模糊 */
 }
 
-/* ================================
-   Top 栏内部布局
-   说明：
-   1. Logo 固定左侧
-   2. 导航菜单绝对居中
-   3. 搜索栏和语言切换固定右侧
-================================ */
 .site-header-inner {
-  position: relative; /* 给居中的导航菜单提供定位参考 */
-  display: flex; /* 让左侧 Logo 和右侧工具区横向排列 */
-  align-items: center; /* 让内容垂直居中 */
+  position: relative; /* 给居中导航和下拉菜单层级提供定位基础 */
+  z-index: 3000; /* 保证顶部栏内部元素在遮罩上方 */
+  display: flex; /* Logo 和右侧工具区横向排列 */
+  align-items: center; /* 内容垂直居中 */
   justify-content: space-between; /* Logo 靠左，工具区靠右 */
-  width: min(100% - 48px, 1600px); /* 普通 PC 最大内容宽度为 1600px，左右各留 24px */
+  width: min(100% - 48px, 1600px); /* 普通 PC 最大内容宽度 */
   height: 82px; /* 普通 PC Top 栏高度 */
-  margin: 0 auto; /* Top 栏内容整体居中 */
+  margin: 0 auto; /* 顶部栏内容整体居中 */
 }
 
 /* ================================
-   Logo 样式
-   说明：
-   1. Logo 不做上移、放大、扫光等动效
-   2. 初始透明 Top 栏显示白色 Logo
-   3. 鼠标放上去或页面滚动后显示彩色 Logo
+   03. Logo
 ================================ */
+
 .site-logo {
   position: relative; /* 作为白色 Logo 和彩色 Logo 的叠放容器 */
   z-index: 2; /* 保证 Logo 层级高于居中导航 */
-  display: inline-block; /* 让 Logo 可以设置宽度和高度 */
+  display: inline-block; /* 让 Logo 可以设置宽高 */
+  flex: 0 0 auto; /* 防止 Logo 被压缩 */
   width: 188px; /* 普通 PC Logo 宽度 */
-  aspect-ratio: 386.88 / 87.43; /* 使用官方 SVG 比例，避免 Logo 变形 */
-  text-decoration: none; /* 去掉链接默认下划线 */
+  height: 43px; /* 普通 PC Logo 高度 */
+  aspect-ratio: 386.88 / 87.43; /* 使用官方 SVG 比例，避免变形 */
+  text-decoration: none; /* 去掉链接下划线 */
 }
 
-/* 白色 Logo */
 .site-logo-white {
-  position: absolute; /* 白色 Logo 与彩色 Logo 叠在同一位置 */
-  inset: 0; /* 上下左右都贴合 Logo 容器 */
-  display: block; /* 让 span 可以显示宽高 */
-  width: 100%; /* 宽度跟随 Logo 容器 */
-  height: 100%; /* 高度跟随 Logo 容器 */
-  object-fit: contain;
-  filter: brightness(0) invert(1);
-  opacity: 1; /* 初始透明 Top 栏状态下显示白色 Logo */
-  pointer-events: none;
-  transition: opacity 0.28s ease;
+  position: absolute; /* 白色 Logo 与彩色 Logo 叠在一起 */
+  inset: 0; /* 上下左右贴合容器 */
+  display: block; /* 避免 img 底部空隙 */
+  width: 100%; /* 跟随 Logo 容器宽度 */
+  height: 100%; /* 跟随 Logo 容器高度 */
+  object-fit: contain; /* 保持 Logo 原比例 */
+  filter: brightness(0) invert(1); /* 将彩色 Logo 处理成白色显示 */
+  opacity: 1; /* 初始透明 Top 栏下显示白色 Logo */
+  pointer-events: none; /* Logo 图片不拦截点击 */
+  transition: opacity 0.28s ease; /* Logo 显隐过渡 */
 }
 
-/* 彩色 Logo */
 .site-logo-color {
-  position: absolute; /* 彩色 Logo 与白色 Logo 叠在同一位置 */
-  inset: 0; /* 上下左右都贴合 Logo 容器 */
-  display: block; /* 避免 img 底部出现默认空隙 */
-  width: 100%; /* 宽度跟随 Logo 容器 */
-  height: 100%; /* 高度跟随 Logo 容器 */
-  object-fit: contain; /* 保持 SVG 原比例，不裁切、不拉伸 */
-  opacity: 0; /* 初始状态隐藏彩色 Logo */
-  pointer-events: none;
-  transition: opacity 0.28s ease;
+  position: absolute; /* 彩色 Logo 与白色 Logo 叠在一起 */
+  inset: 0; /* 上下左右贴合容器 */
+  display: block; /* 避免 img 底部空隙 */
+  width: 100%; /* 跟随 Logo 容器宽度 */
+  height: 100%; /* 跟随 Logo 容器高度 */
+  object-fit: contain; /* 保持 Logo 原比例 */
+  opacity: 0; /* 初始透明 Top 栏下隐藏彩色 Logo */
+  pointer-events: none; /* Logo 图片不拦截点击 */
+  transition: opacity 0.28s ease; /* Logo 显隐过渡 */
 }
 
-/* 鼠标放到 Top 栏上时：隐藏白色 Logo */
-.site-header:hover .site-logo-white {
-  opacity: 0; /* 鼠标放到 Top 栏时隐藏白色 Logo */
-}
-
-/* 鼠标放到 Top 栏上时：显示彩色 Logo */
-.site-header:hover .site-logo-color {
-  opacity: 1; /* 鼠标放到 Top 栏时显示彩色 Logo */
-}
-
-/* 页面滚动后：隐藏白色 Logo */
+.site-header:hover .site-logo-white,
 .site-header-scrolled .site-logo-white,
-.page-scrolled .site-logo-white {
-  opacity: 0; /* 页面向下滚动后隐藏白色 Logo */
+.page-scrolled .site-logo-white,
+.site-header.header-panel-open .site-logo-white {
+  opacity: 0; /* Top 栏变白后隐藏白色 Logo */
 }
 
-/* 页面滚动后：显示彩色 Logo */
+.site-header:hover .site-logo-color,
 .site-header-scrolled .site-logo-color,
-.page-scrolled .site-logo-color {
-  opacity: 1; /* 页面向下滚动后显示彩色 Logo */
+.page-scrolled .site-logo-color,
+.site-header.header-panel-open .site-logo-color {
+  opacity: 1; /* Top 栏变白后显示彩色 Logo */
 }
 
 /* ================================
-   桌面端导航菜单
-   说明：
-   1. 导航菜单强制居中在 Top 栏中间
-   2. 不受左侧 Logo 和右侧搜索栏宽度影响
+   04. 桌面端主导航
 ================================ */
+
 .site-nav {
-  position: absolute; /* 让导航脱离左右布局，单独定位 */
-  top: 50%; /* 导航定位到 Top 栏垂直中心 */
-  left: 50%; /* 导航定位到 Top 栏水平中心 */
+  position: absolute; /* 导航脱离左右布局，单独居中 */
+  top: 50%; /* 垂直方向定位到中间 */
+  left: 50%; /* 水平方向定位到中间 */
   z-index: 1; /* 导航层级低于 Logo 和右侧工具区 */
   display: flex; /* 导航项横向排列 */
   align-items: center; /* 导航项垂直居中 */
   justify-content: center; /* 导航项整体居中 */
-  gap: 46px; /* 普通 PC 导航项之间的距离 */
+  gap: 46px; /* 中文和韩文默认导航间距 */
   white-space: nowrap; /* 防止导航文字换行 */
   transform: translate(-50%, -50%); /* 让导航自身中心点对齐 Top 栏中心 */
 }
 
-/* 顶部导航链接 */
 .site-nav-link {
   position: relative; /* 用于放置底部高亮线 */
   color: rgba(255, 255, 255, 0.88); /* 初始透明 Top 栏下导航文字为白色 */
-  font-size: 15px; /* 普通 PC 导航文字大小 */
-  font-weight: 400; /* 导航默认字重 */
-  letter-spacing: 0.04em; /* 增加一点字距，让中文导航更舒展 */
-  text-decoration: none; /* 去掉链接默认下划线 */
+  font-size: 15px; /* 普通 PC 导航字号 */
+  font-weight: 400; /* 默认字重 */
+  letter-spacing: 0.04em; /* 中文导航默认字距 */
+  text-decoration: none; /* 去掉链接下划线 */
 }
 
-/* 导航底部高亮线 */
 .site-nav-link::after {
   content: ""; /* 伪元素内容为空 */
-  position: absolute; /* 相对导航链接定位 */
+  position: absolute; /* 相对导航文字定位 */
   bottom: -10px; /* 高亮线位于文字下方 */
   left: 50%; /* 高亮线从中间开始 */
   width: 0; /* 默认不显示高亮线 */
   height: 2px; /* 高亮线高度 */
   border-radius: 999px; /* 高亮线圆角 */
   background: #09e9b4; /* 高亮线使用科技青 */
-  transform: translateX(-50%); /* 让高亮线居中 */
+  transform: translateX(-50%); /* 高亮线居中 */
   transition: width 0.28s ease; /* 高亮线展开动画 */
 }
- 
-/* 导航 hover 和当前页面状态 */
+
 .site-nav-link:hover,
 .site-nav-link-active {
-  color: #09e9b4; /* hover / 当前页面文字变科技青 */
-  font-weight: 700; /* hover / 当前页面文字加粗 */
+  color: #09e9b4; /* hover 或当前页时文字变科技青 */
+  font-weight: 700; /* 中文和韩文 hover 时加粗 */
 }
 
-/* 导航 hover 和当前页面状态显示底部线 */
 .site-nav-link:hover::after,
 .site-nav-link-active::after {
-  width: 100%; /* hover / 当前页面时高亮线展开 */
+  width: 100%; /* hover 或当前页时高亮线展开 */
 }
 
-/* Top 栏变白后，导航文字变为品牌深蓝 */
 .site-header:hover .site-nav-link,
 .site-header-scrolled .site-nav-link,
-.page-scrolled .site-nav-link {
-  color: #173368; /* 白色 Top 栏下导航文字为品牌深蓝 */
+.page-scrolled .site-nav-link,
+.site-header.header-panel-open .site-nav-link {
+  color: #173368; /* Top 栏变白后导航文字变品牌深蓝 */
 }
 
-/* Top 栏变白后，hover / active 仍然使用科技青 */
 .site-header:hover .site-nav-link:hover,
 .site-header-scrolled .site-nav-link:hover,
 .page-scrolled .site-nav-link:hover,
 .site-header:hover .site-nav-link-active,
 .site-header-scrolled .site-nav-link-active,
 .page-scrolled .site-nav-link-active {
-  color: #09e9b4; /* 白色 Top 栏下 hover / active 仍为科技青 */
+  color: #09e9b4; /* Top 栏变白后 hover 仍然是科技青 */
 }
 
 /* ================================
-   顶部右侧工具区
-   说明：
-   1. 包含搜索栏和语言切换
-   2. 固定在 Top 栏右侧
+   05. 右侧工具区与搜索栏
 ================================ */
+
 .site-header-actions {
   position: relative; /* 保持右侧工具区正常层级 */
-  z-index: 2; /* 保证搜索栏和语言切换高于居中导航 */
-  display: flex; /* 搜索栏和语言切换横向排列 */
-  flex: 0 0 auto; /* 防止右侧工具区被压缩 */
-  align-items: center; /* 右侧工具区垂直居中 */
-  justify-content: flex-end; /* 右侧工具区靠右对齐 */
-  gap: 16px; /* 搜索栏和语言切换之间的距离 */
+  z-index: 2; /* 保证搜索栏、语言栏、菜单按钮高于居中导航 */
+  display: flex; /* 搜索栏、语言栏、菜单按钮横向排列 */
+  flex: 0 0 auto; /* 防止工具区被压缩 */
+  align-items: center; /* 工具区内容垂直居中 */
+  justify-content: flex-end; /* 工具区靠右对齐 */
+  gap: 16px; /* 搜索栏和语言栏之间的距离 */
 }
 
-/* ================================
-   顶部搜索栏
-   说明：
-   1. 普通 PC 下搜索栏边框为 1px
-   2. 2K 以上搜索栏边框变为 2px
-   3. 默认透明 Top 栏下是白色边框
-   4. Top 栏变白后是蓝色边框
-================================ */
 .site-search-form {
-  display: flex; /* 输入框和按钮横向排列 */
-  flex: 0 0 250px; /* 普通 PC 搜索栏占位宽度 */
+  display: flex; /* 输入框和搜索按钮横向排列 */
+  flex: 0 0 230px; /* 普通 PC 搜索栏占位宽度 */
   align-items: center; /* 输入框和按钮垂直居中 */
-  width: 250px; /* 普通 PC 搜索栏显示宽度 */
+  width: 230px; /* 普通 PC 搜索栏实际宽度 */
   height: 46px; /* 普通 PC 搜索栏高度 */
   padding: 4px; /* 搜索栏内部留白 */
-  border: 1px solid rgba(255, 255, 255, 0.32); /* 默认透明 Top 栏下搜索栏白色 1px 边框 */
-  border-radius: 8px; /* 搜索栏圆角矩形 */
-  background: rgba(255, 255, 255, 0.06); /* 默认透明 Top 栏下搜索栏背景 */
+  border: 1px solid rgba(255, 255, 255, 0.32); /* 透明 Top 栏下搜索栏边框 */
+  border-radius: 8px; /* 搜索栏矩形圆角 */
+  background: rgba(255, 255, 255, 0.06); /* 透明 Top 栏下搜索栏背景 */
 }
 
-/* 搜索输入框 */
 .site-search-input {
   flex: 1; /* 输入框占据剩余空间 */
-  width: auto; /* 输入框宽度由 flex 自动分配 */
-  min-width: 0; /* 防止输入内容过长撑开搜索栏 */
+  width: auto; /* 输入框宽度由 flex 控制 */
+  min-width: 0; /* 防止内容撑开搜索栏 */
   height: 100%; /* 输入框高度跟随搜索栏 */
   padding: 0 12px; /* 输入文字左右间距 */
   border: 0; /* 去掉 input 默认边框 */
-  outline: none; /* 去掉点击后的默认蓝色轮廓 */
+  outline: none; /* 去掉默认蓝色轮廓 */
   background: transparent; /* 输入框背景透明 */
   color: #ffffff; /* 透明 Top 栏下输入文字为白色 */
   font-size: 14px; /* 输入框文字大小 */
 }
 
-/* 搜索框占位文字 */
 .site-search-input::placeholder {
-  color: rgba(255, 255, 255, 0.62); /* 透明 Top 栏下占位文字为半透明白色 */
+  color: rgba(255, 255, 255, 0.62); /* 透明 Top 栏下占位文字颜色 */
 }
 
-/* 搜索提交按钮 */
 .site-search-submit {
-  display: grid; /* 让搜索图标居中 */
-  flex: 0 0 auto; /* 按钮尺寸固定，不被压缩 */
+  display: grid; /* 用 grid 让搜索图标居中 */
+  flex: 0 0 auto; /* 搜索按钮尺寸固定 */
   place-items: center; /* 图标水平垂直居中 */
   width: 52px; /* 搜索按钮宽度 */
   height: 36px; /* 搜索按钮高度 */
   border: 1px solid rgba(255, 255, 255, 0.24); /* 透明 Top 栏下按钮边框 */
   border-radius: 8px; /* 搜索按钮圆角 */
   background: rgba(255, 255, 255, 0.1); /* 透明 Top 栏下按钮背景 */
-  color: #ffffff; /* 透明 Top 栏下搜索图标为白色 */
+  color: #ffffff; /* 搜索图标颜色 */
   cursor: pointer; /* 鼠标放上去变手型 */
 }
 
-/* 搜索图标 */
 .site-search-icon {
   position: relative; /* 用于放置放大镜手柄 */
   width: 15px; /* 放大镜圆圈宽度 */
@@ -361,7 +266,6 @@ button {
   border-radius: 50%; /* 放大镜圆圈 */
 }
 
-/* 搜索图标手柄 */
 .site-search-icon::after {
   content: ""; /* 伪元素内容为空 */
   position: absolute; /* 相对放大镜圆圈定位 */
@@ -374,355 +278,351 @@ button {
   transform: rotate(45deg); /* 手柄旋转成放大镜角度 */
 }
 
-/* Top 栏变白后，搜索栏边框变为品牌深蓝 */
 .site-header:hover .site-search-form,
 .site-header-scrolled .site-search-form,
 .page-scrolled .site-search-form {
-  border-color: rgba(23, 51, 104, 0.4); /* Top 栏变白后搜索栏边框变蓝，但不改变边框粗细 */
-  background: rgba(255, 255, 255, 0.72); /* Top 栏变白后搜索栏内部保持浅色透明 */
+  border-color: rgba(23, 51, 104, 0.4); /* Top 栏变白后搜索栏边框变蓝 */
+  background: rgba(255, 255, 255, 0.72); /* Top 栏变白后搜索栏背景变浅 */
 }
-  
 
-/* Top 栏变白后，搜索输入文字变为品牌深蓝 */
 .site-header:hover .site-search-input,
 .site-header-scrolled .site-search-input,
 .page-scrolled .site-search-input {
-  color: #173368; /* 白色 Top 栏下输入文字为品牌深蓝 */
+  color: #173368; /* Top 栏变白后输入文字变品牌深蓝 */
 }
 
-/* Top 栏变白后，搜索占位文字变为半透明深蓝 */
 .site-header:hover .site-search-input::placeholder,
 .site-header-scrolled .site-search-input::placeholder,
 .page-scrolled .site-search-input::placeholder {
-  color: rgba(23, 51, 104, 0.52); /* 白色 Top 栏下占位文字为半透明深蓝 */
+  color: rgba(23, 51, 104, 0.52); /* Top 栏变白后占位文字变深蓝透明 */
 }
 
-/* Top 栏变白后，搜索按钮变为品牌深蓝底 + 白色图标 */
 .site-header:hover .site-search-submit,
 .site-header-scrolled .site-search-submit,
 .page-scrolled .site-search-submit {
-  border-color: rgba(23, 51, 104, 0.18); /* 白色 Top 栏下搜索按钮边框 */
-  background: rgb(23, 51, 104); /* 白色 Top 栏下搜索按钮背景为品牌深蓝 */
-  color: #ffffff; /* 白色 Top 栏下搜索图标为白色 */
-}
-     
-/* Top 栏变白后，搜索按钮 hover 状态 */
-.site-header:hover .site-search-submit:hover,
-.site-header-scrolled .site-search-submit:hover,
-.page-scrolled .site-search-submit:hover {
-  color: #09e9b4; /* 搜索按钮 hover 时图标变科技青 */
-  border-color: rgba(9, 233, 180, 0.48); /* 搜索按钮 hover 时边框变科技青 */
+  border-color: rgba(23, 51, 104, 0.18); /* Top 栏变白后搜索按钮边框 */
+  background: #173368; /* Top 栏变白后搜索按钮背景为品牌深蓝 */
+  color: #ffffff; /* Top 栏变白后搜索图标为白色 */
 }
 
-/* 搜索栏聚焦状态 */
+.site-header:hover .site-search-submit:hover,
+.site-header-scrolled .site-search-submit:hover,
+.page-scrolled .site-search-submit:hover,
+.site-search-submit:hover {
+  color: #09e9b4; /* 搜索按钮 hover 时图标变科技青 */
+}
+
 .site-search-form:focus-within {
   border-color: #09e9b4; /* 输入时搜索栏边框变科技青 */
   box-shadow: 0 0 0 4px rgba(9, 233, 180, 0.12); /* 输入时增加科技青光晕 */
 }
 
-/* 搜索按钮 hover 状态 */
-.site-search-submit:hover {
-  color: #09e9b4; /* 鼠标放到搜索按钮上，图标变科技青 */
-}
-
 /* ================================
-   语言切换
-   说明：
-   1. 位于搜索栏右侧
-   2. 点击后显示语言下拉菜单
+   06. 语言栏：按钮 + 下拉菜单
 ================================ */
+
 .language-switcher {
-  position: relative; /* 用于定位语言下拉菜单 */
-  flex: 0 0 auto; /* 防止语言切换被搜索栏挤压 */
+  position: relative; /* 给语言下拉菜单提供定位参考 */
+  z-index: 5000; /* 保证语言栏层级足够高 */
+  display: block; /* 保证 PC 和手机端都显示 */
+  flex: 0 0 auto; /* 防止语言栏被压缩 */
 }
 
-/* 当前语言按钮 */
-.language-current {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  height: 42px; /* 语言按钮高度 */
-  padding: 0 15px; /* 语言按钮左右内边距 */
-  border: 2px solid rgba(255, 255, 255, 0.3); /* 透明 Top 栏下语言按钮边框 */
-  border-radius: 8px; /* 语言按钮胶囊圆角 */
-  background: rgba(255, 255, 255, 0.08); /* 透明 Top 栏下语言按钮背景 */
-  color: #ffffff; /* 透明 Top 栏下语言文字为白色 */
-  font-size: 14px; /* 语言按钮文字大小 */
-  line-height: 1;
-  white-space: nowrap;
-  cursor: pointer; /* 鼠标放上去变手型 */
-  transition: background 0.28s ease, color 0.28s ease, border-color 0.28s ease; /* 语言按钮颜色过渡 */
-}
-   
-/* Top 栏变白后的语言按钮状态 */
-.site-header:hover .language-current,
-.site-header-scrolled .language-current,
-.page-scrolled .language-current {
-  border-color: rgba(23, 51, 104, 0.4); /* 白色 Top 栏下语言按钮边框 */
-  background: #f5f8fb; /* 白色 Top 栏下语言按钮背景 */
-  color: #173368; /* 白色 Top 栏下语言文字为品牌深蓝 */
-}
-  
-/* 语言按钮 hover 状态 */
-.language-current:hover {
-  border-color: #173368; /* 鼠标放上去时，语言按钮边框变为品牌深蓝 */
-  background: #173368; /* 鼠标放上去时，语言按钮背景变为品牌深蓝 */
-  color: #09e9b4; /* 鼠标放上去时，语言按钮文字变为荧光青 */
-}
-
-/* Top 栏变白后，语言按钮 hover 状态 */
-.site-header:hover .language-current:hover,
-.site-header-scrolled .language-current:hover,
-.page-scrolled .language-current:hover {
-  border-color: #173368; /* 白色 Top 栏下，hover 时边框保持品牌深蓝 */
-  background: #173368; /* 白色 Top 栏下，hover 时背景变品牌深蓝 */
-  color: #09e9b4; /* 白色 Top 栏下，hover 时文字变荧光青 */
-}
-
-/* 语言下拉菜单 */
-.language-menu {
-  position: absolute; /* 相对 language-switcher 定位 */
-  top: calc(100% + 10px); /* 下拉菜单距离按钮 10px */
-  right: 0; /* 下拉菜单右侧对齐 */
-  z-index: 20; /* 保证下拉菜单显示在页面内容上方 */
-  min-width: 150px; /* 下拉菜单最小宽度 */
-  padding: 8px; /* 下拉菜单内边距 */
-  border: 1px solid rgba(23, 51, 104, 0.1); /* 下拉菜单边框 */
-  border-radius: 12px; /* 下拉菜单矩形圆角 */
-  background: #ffffff; /* 下拉菜单白色背景 */
-  box-shadow: 0 24px 60px rgba(6, 26, 58, 0.14); /* 下拉菜单阴影 */
-  opacity: 0; /* 默认隐藏下拉菜单 */
-  visibility: hidden; /* 默认不可见 */
-  pointer-events: none; /* 默认不能点击，避免隐藏状态误触 */
-  transform: translateY(6px); /* 默认略微向下 */
-  transition: opacity 0.22s ease, visibility 0.22s ease, transform 0.22s ease; /* 显示隐藏过渡 */
-}
-
-/* 下拉菜单上方的隐形连接区
-   说明：
-   1. 用来填补语言按钮和下拉菜单之间的空隙
-   2. 避免鼠标从按钮移动到菜单时，下拉菜单突然消失
-*/
-.language-menu::before {
+.language-switcher::after {
   content: ""; /* 伪元素内容为空 */
-  position: absolute; /* 相对下拉菜单定位 */
-  top: -10px; /* 向上覆盖按钮和菜单之间的空隙 */
+  position: absolute; /* 相对语言栏定位 */
+  top: 100%; /* 从语言按钮底部开始 */
   right: 0; /* 右侧对齐 */
-  width: 100%; /* 宽度和菜单一致 */
-  height: 10px; /* 高度等于按钮和菜单之间的距离 */
+  width: 170px; /* 覆盖按钮到菜单之间区域 */
+  height: 18px; /* 覆盖中间空隙，防止 PC 鼠标下移时菜单消失 */
+  background: transparent; /* 透明，不影响视觉 */
 }
 
-/* PC 端：鼠标放到语言区域时显示下拉菜单 */
-@media (hover: hover) and (pointer: fine) {
-  .language-switcher:hover .language-menu {
-    opacity: 1; /* PC 鼠标放上去时显示下拉菜单 */
-    visibility: visible; /* PC 鼠标放上去时下拉菜单可见 */
-    pointer-events: auto; /* PC 鼠标放上去时下拉菜单可点击 */
-    transform: translateY(0); /* PC 鼠标放上去时回到正常位置 */
-  }
-}
-  
-/* 手机端：点击语言按钮后显示下拉菜单
-   说明：
-   1. 这段只给手机 / 触控设备使用
-   2. PC 端不能使用 language-switcher-open 展开
-   3. 避免 PC 端点击语言按钮后下拉栏一直显示
-*/
-@media (hover: none), (pointer: coarse) {
-  .language-switcher-open .language-menu {
-    opacity: 1; /* 手机端点击后显示下拉菜单 */
-    visibility: visible; /* 手机端点击后下拉菜单可见 */
-    pointer-events: auto; /* 手机端点击后下拉菜单可以点击 */
-    transform: translateY(0); /* 手机端点击后回到正常位置 */
-  }
-}
-  
-/* 语言下拉菜单项 */
-.language-menu-item {
-  display: block; /* 菜单项块级显示 */
-  width: 100%;
-  padding: 11px 12px; /* 菜单项内边距 */
-  border: 0;
-  border-radius: 12px; /* 菜单项圆角 */
-  background: transparent;
-  color: #173368; /* 菜单项文字颜色 */
-  font-size: 14px; /* 菜单项文字大小 */
-  font-family: inherit;
-  text-align: left;
-  text-decoration: none; /* 去掉链接下划线 */
-  cursor: pointer;
-  transition: background 0.22s ease, color 0.22s ease, font-weight 0.22s ease; /* 菜单项 hover 过渡 */
+.language-summary {
+  display: inline-flex; /* 文字和箭头横向排列 */
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+  gap: 6px; /* 文字和箭头间距 */
+  min-width: 118px; /* PC 端按钮宽度 */
+  height: 42px; /* PC 端按钮高度 */
+  padding: 0 14px; /* 左右内边距 */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* 1920 及以下语言按钮边框 */
+  border-radius: 8px; /* 圆角 */
+  background: rgba(255, 255, 255, 0.08); /* 透明状态背景 */
+  color: #ffffff; /* 透明状态文字 */
+  font-size: 14px; /* 文字大小 */
+  font-weight: 400; /* 默认字重 */
+  line-height: 1; /* 避免上下偏移 */
+  white-space: nowrap; /* 不换行 */
+  cursor: pointer; /* 鼠标手型 */
+  user-select: none; /* 避免选中文字 */
+  transition: background 0.28s ease, color 0.28s ease, border-color 0.28s ease; /* 语言按钮状态过渡 */
 }
 
-/* 语言下拉菜单项 hover 状态 */
-.language-menu-item:hover {
-  background: #173368; /* 鼠标放到语言选项上时，背景变为品牌深蓝 */
-  color: #09e9b4; /* 鼠标放到语言选项上时，文字变为荧光青 */
-  font-weight: 700; /* 鼠标放到语言选项上时，文字加粗 */
+.language-summary-label {
+  display: inline-block; /* 允许限制宽度 */
+  max-width: 82px; /* PC 端文字最大宽度 */
+  overflow: hidden; /* 超出隐藏 */
+  text-overflow: ellipsis; /* 超出显示省略号 */
+  white-space: nowrap; /* 不换行 */
+}
+
+.language-summary-arrow {
+  font-size: 11px; /* 箭头大小 */
+  line-height: 1; /* 避免偏移 */
+}
+
+.site-header:hover .language-summary,
+.site-header-scrolled .language-summary,
+.page-scrolled .language-summary,
+.site-header.header-panel-open .language-summary {
+  border-color: rgba(23, 51, 104, 0.4); /* 白底状态边框 */
+  background: #f5f8fb; /* 白底状态背景 */
+  color: #173368; /* 白底状态文字 */
+}
+
+.language-switcher-open .language-summary,
+.language-summary:hover {
+  border-color: #173368; /* 展开或 hover 时边框 */
+  background: #173368; /* 展开或 hover 时背景 */
+  color: #09e9b4; /* 展开或 hover 时文字 */
+}
+
+.language-details-menu {
+  position: absolute; /* 绝对定位 */
+  top: calc(100% + 18px); /* 距离按钮 18px */
+  right: 0; /* 右侧对齐 */
+  z-index: 5100; /* 菜单层级高于按钮和遮罩 */
+  display: none; /* 默认隐藏 */
+  min-width: 160px; /* 菜单宽度 */
+  padding: 8px; /* 菜单内边距 */
+  border: 1px solid rgba(23, 51, 104, 0.1); /* 菜单边框 */
+  border-radius: 12px; /* 菜单圆角 */
+  background: #ffffff; /* 菜单背景 */
+  box-shadow: 0 24px 60px rgba(6, 26, 58, 0.14); /* 菜单阴影 */
+}
+
+.language-switcher-open .language-details-menu {
+  display: block; /* 展开时显示菜单 */
+}
+
+.language-details-item {
+  display: block; /* 独占一行 */
+  width: 100%; /* 占满菜单宽度 */
+  padding: 11px 12px; /* 内边距 */
+  border-radius: 10px; /* 菜单项圆角 */
+  color: #173368; /* 品牌深蓝文字 */
+  font-size: 14px; /* 文字大小 */
+  font-weight: 400; /* 默认字重 */
+  line-height: 1.2; /* 行高 */
+  text-align: left; /* 左对齐 */
+  text-decoration: none; /* 去掉下划线 */
+  white-space: nowrap; /* 不换行 */
+}
+
+.language-details-item:hover {
+  background: #173368; /* hover 背景 */
+  color: #09e9b4; /* hover 文字 */
+}
+
+.language-details-item-active {
+  background: rgba(9, 233, 180, 0.12); /* 当前语言背景 */
+  color: #173368; /* 当前语言文字 */
+  font-weight: 700; /* 当前语言加粗 */
 }
 
 /* ================================
-   手机端菜单按钮
-   说明：
-   1. 桌面端默认隐藏
-   2. 980px 以下显示
+   07. 手机导航栏：按钮 + 下拉菜单
 ================================ */
+
+.mobile-nav-switcher {
+  position: relative; /* 给手机导航下拉菜单提供定位参考 */
+  z-index: 5000; /* 保证手机导航按钮在遮罩上方 */
+  display: none; /* 桌面端默认隐藏手机导航开关 */
+  flex: 0 0 auto; /* 防止被压缩 */
+}
+
+.mobile-nav-switcher::after {
+  content: ""; /* 伪元素内容为空 */
+  position: absolute; /* 相对手机导航开关定位 */
+  top: 100%; /* 从按钮底部开始 */
+  right: 0; /* 右侧对齐 */
+  width: 220px; /* 覆盖按钮到菜单之间区域 */
+  height: 18px; /* 覆盖中间空隙 */
+  background: transparent; /* 透明，不影响视觉 */
+}
+
 .mobile-menu-btn {
-  display: none; /* 桌面端默认隐藏手机菜单按钮 */
+  display: grid; /* 使用 grid 让三条线整体居中 */
+  place-items: center; /* 内容居中 */
   width: 42px; /* 手机菜单按钮宽度 */
   height: 42px; /* 手机菜单按钮高度 */
-  border: 1px solid rgba(255, 255, 255, 0.34); /* 透明 Top 栏下菜单按钮边框 */
-  border-radius: 8px; /* 菜单按钮圆形 */
-  background: rgba(255, 255, 255, 0.08); /* 透明 Top 栏下菜单按钮背景 */
+  padding: 0; /* 清除按钮默认内边距 */
+  border: 1px solid rgba(255, 255, 255, 0.34); /* 透明 Top 栏下按钮边框 */
+  border-radius: 8px; /* 按钮圆角 */
+  background: rgba(255, 255, 255, 0.08); /* 透明 Top 栏下按钮背景 */
+  color: #ffffff; /* 透明 Top 栏下 SVG 图标为白色 */
   cursor: pointer; /* 鼠标放上去变手型 */
 }
 
-/* 手机菜单按钮三条线 */
-.mobile-menu-btn span {
-  display: block; /* 让 span 显示为横线 */
-  width: 18px; /* 横线宽度 */
-  height: 2px; /* 横线高度 */
-  margin: 4px auto; /* 横线居中并保留间距 */
-  border-radius: 8px; /* 横线圆角 */
-  background: #ffffff; /* 透明 Top 栏下横线为白色 */
-  transition: background 0.28s ease; /* 横线颜色过渡 */
+.mobile-menu-icon {
+  display: block; /* SVG 图标块级显示 */
+  width: 20px; /* SVG 图标宽度 */
+  height: 20px; /* SVG 图标高度 */
+  color: currentColor; /* 跟随菜单按钮颜色 */
+  transition: color 0.28s ease; /* 图标颜色过渡 */
 }
 
-/* Top 栏变白后，手机菜单按钮状态 */
+.mobile-menu-line {
+  transform-box: fill-box; /* 让每条 SVG 横线围绕自身中心变形 */
+  transform-origin: center; /* 三横线变 × 时从中心旋转 */
+  transition: opacity 0.28s ease, transform 0.28s ease; /* 展开按钮动效 */
+}
+
+.mobile-nav-switcher-open .mobile-menu-line-top {
+  transform: translateY(435px) rotate(45deg) scaleX(0.86); /* 上横线下移并旋转成 × */
+}
+
+.mobile-nav-switcher-open .mobile-menu-line-middle {
+  opacity: 0; /* 展开时中间横线淡出 */
+  transform: scaleX(0.2); /* 中间横线收缩，增强动效 */
+}
+
+.mobile-nav-switcher-open .mobile-menu-line-bottom {
+  transform: translateY(-435px) rotate(-45deg) scaleX(0.86); /* 下横线上移并旋转成 × */
+}
+
 .site-header:hover .mobile-menu-btn,
 .site-header-scrolled .mobile-menu-btn,
 .page-scrolled .mobile-menu-btn,
-.mobile-nav-open .mobile-menu-btn {
-  border-color: rgba(23, 51, 104, 0.14); /* 白色 Top 栏下菜单按钮边框 */
-  background: #f5f8fb; /* 白色 Top 栏下菜单按钮背景 */
+.site-header.header-panel-open .mobile-menu-btn {
+  border-color: rgba(23, 51, 104, 0.14); /* Top 栏变白后菜单按钮边框 */
+  background: #f5f8fb; /* Top 栏变白后菜单按钮背景 */
+  color: #173368; /* Top 栏变白后 SVG 图标变品牌深蓝 */
 }
 
-/* Top 栏变白后，手机菜单按钮横线状态 */
-.site-header:hover .mobile-menu-btn span,
-.site-header-scrolled .mobile-menu-btn span,
-.page-scrolled .mobile-menu-btn span,
-.mobile-nav-open .mobile-menu-btn span {
-  background: #173368; /* 白色 Top 栏下菜单按钮横线变品牌深蓝 */
+.mobile-nav-switcher-open .mobile-menu-btn {
+  border-color: #173368; /* 展开时按钮边框 */
+  background: #173368; /* 展开时按钮背景 */
+  color: #09e9b4; /* 展开时 SVG 图标变科技青 */
 }
 
-/* 手机端展开菜单 */
 .mobile-nav {
-  display: none; /* 默认隐藏移动端菜单 */
-  width: min(100% - 32px, 1600px); /* 移动端菜单宽度 */
-  margin: 0 auto 16px; /* 移动端菜单居中并保留下方间距 */
-  padding: 12px; /* 移动端菜单内边距 */
-  border-radius: 8px; /* 移动端菜单圆角 */
-  background: #ffffff; /* 移动端菜单白色背景 */
-  box-shadow: 0 24px 60px rgba(6, 26, 58, 0.14); /* 移动端菜单阴影 */
+  position: absolute; /* 像语言菜单一样绝对定位 */
+  top: calc(100% + 18px); /* 距离按钮 18px */
+  right: 0; /* 右侧对齐 */
+  z-index: 5100; /* 菜单层级高于遮罩 */
+  display: block; /* 保持可动画，默认通过透明度隐藏 */
+  width: min(300px, calc(100vw - 28px)); /* 手机导航菜单加宽 */
+  padding: 8px; /* 菜单内部留白 */
+  border: 1px solid rgba(23, 51, 104, 0.1); /* 菜单边框 */
+  border-radius: 12px; /* 菜单圆角 */
+  background: #ffffff; /* 菜单背景 */
+  box-shadow: 0 24px 60px rgba(6, 26, 58, 0.14); /* 菜单阴影 */
+  opacity: 0; /* 默认隐藏 */
+  pointer-events: none; /* 默认不接收点击 */
+  transform: translateY(-8px) scale(0.98); /* 下拉初始动效位置 */
+  transform-origin: top right; /* 从右上角展开 */
+  visibility: hidden; /* 默认隐藏给辅助布局 */
+  transition: opacity 0.24s ease, transform 0.24s ease, visibility 0.24s ease; /* 下拉菜单动效 */
 }
 
-/* 手机端导航链接 */
+.mobile-nav-switcher-open .mobile-nav {
+  opacity: 1; /* 展开时显示手机导航菜单 */
+  pointer-events: auto; /* 展开时允许点击 */
+  transform: translateY(0) scale(1); /* 展开到最终位置 */
+  visibility: visible; /* 展开时可见 */
+}
+
 .mobile-nav-link {
-  display: block; /* 移动端导航项块级显示 */
-  padding: 14px 12px; /* 移动端导航项内边距 */
-  border-radius: 14px; /* 移动端导航项圆角 */
+  display: block; /* 每个导航独占一行 */
+  padding: 12px 12px; /* 导航项内边距 */
+  border-radius: 10px; /* 导航项圆角 */
   color: #173368; /* 移动端导航文字颜色 */
-  font-size: 15px; /* 移动端导航文字大小 */
-  text-decoration: none; /* 去掉链接下划线 */
+  font-size: 14px; /* 移动端导航字号 */
+  line-height: 1.2; /* 移动端导航行高 */
+  text-decoration: none; /* 去掉下划线 */
+  white-space: nowrap; /* 不换行 */
 }
 
-/* 手机端导航链接 hover 状态 */
 .mobile-nav-link:hover {
-  background: rgba(9, 233, 180, 0.12); /* 移动端导航 hover 背景 */
-  color: #173368; /* 移动端导航 hover 文字颜色 */
-  font-weight: 700; /* 移动端导航 hover 加粗 */
+  background: #173368; /* hover 背景 */
+  color: #09e9b4; /* hover 文字 */
 }
 
 .mobile-nav-link-active {
-  background: rgba(9, 233, 180, 0.14);
-  color: #173368;
-  font-weight: 700;
+  background: rgba(9, 233, 180, 0.14); /* 当前导航背景 */
+  color: #173368; /* 当前导航文字颜色 */
+  font-weight: 700; /* 当前导航加粗 */
+}
+
+.mobile-nav-backdrop {
+  display: none; /* 默认隐藏空白点击遮罩 */
+  appearance: none; /* 去掉按钮默认样式 */
+  -webkit-appearance: none; /* 去掉 Safari 默认按钮样式 */
+  padding: 0; /* 去掉按钮默认内边距 */
+  margin: 0; /* 去掉按钮默认外边距 */
+  border: 0; /* 去掉按钮默认边框 */
+  outline: none; /* 去掉按钮默认轮廓 */
+  background: transparent; /* 遮罩透明 */
+  box-shadow: none; /* 遮罩无阴影 */
 }
 
 /* ================================
-   首页首屏 Hero 区域
-   说明：
-   1. 这里控制首页第一屏整体背景
-   2. 背景图放在 public/images/home/hero-bg.jpg
-   3. 使用深蓝遮罩保证文字清晰
-   4. 如果要换背景图，只改 url 里的图片路径
+   08. 首页首屏 Hero
 ================================ */
+
 .home-hero {
   min-height: 100vh; /* 首屏高度至少占满一屏 */
   padding-top: 120px; /* 给固定 Top 栏预留顶部空间 */
-  background-color: #173368; /* 图片加载前的兜底品牌深蓝背景 */
-
-  background-image:
-    linear-gradient(
-      135deg,
-      rgba(7, 26, 53, 0.42) 0%,
-      rgba(23, 51, 104, 0.26) 52%,
-      rgba(10, 35, 74, 0.08) 100%
-    ),
-    url("/images/home/hero-bg.jpg"); /* 首页首屏背景图 */
-
-  background-position: center center; /* 背景图居中显示 */
-  background-size: cover; /* 背景图铺满首屏 */
+  background-color: #173368; /* 背景图加载前的兜底品牌深蓝 */
+  background-image: linear-gradient(135deg, rgba(7, 26, 53, 0.42) 0%, rgba(23, 51, 104, 0.26) 52%, rgba(10, 35, 74, 0.08) 100%), url("/images/home/hero-bg.jpg"); /* 深蓝遮罩 + 首屏背景图 */
+  background-position: center center; /* 背景图居中 */
+  background-size: cover; /* 背景图铺满 */
   background-repeat: no-repeat; /* 背景图不重复 */
   background-attachment: scroll; /* 背景图跟随页面正常滚动 */
-  color: #ffffff; /* 深色背景上的默认文字为白色 */
+  color: #ffffff; /* 首屏默认文字为白色 */
 }
-   
-/* 首页首屏内容容器 */
+
 .home-hero-inner {
-  width: min(100% - 48px, 1600px); /* 普通 PC 首页内容最大宽度 */
+  width: min(100% - 48px, 1600px); /* 首页内容最大宽度 */
   margin: 0 auto; /* 首页内容居中 */
-  padding-top: 130px; /* 首页首屏内容顶部留白 */
+  padding-top: 130px; /* 首屏内容顶部留白 */
 }
- 
-/* 首页首屏主标题 */
+
 .home-hero-title {
-  position: relative; /* 允许主标题单独上下左右微调位置 */
-
-  max-width: 980px; /* 主标题最大宽度 */
+  position: relative; /* 允许标题用 transform 微调位置 */
+  max-width: 980px; /* 中文标题最大宽度 */
   margin: 0; /* 清除标题默认外边距 */
-  color: #ffffff; /* 小标签使用科技青 */
-  font-size: clamp(42px, 5vw, 78px); /* 主标题响应式字号 */
-  font-weight: 700; /* 主标题字重，数值越大文字越粗，常用 500 / 600 / 700 */
-  line-height: 1.08; /* 主标题行高 */
-  letter-spacing: 0.05em; /* 主标题字距，负数会让文字更紧凑 */
+  color: #ffffff; /* 标题文字颜色 */
+  font-size: clamp(42px, 5vw, 78px); /* 响应式标题字号 */
+  font-weight: 700; /* 标题字重 */
+  line-height: 1.08; /* 标题行高 */
+  letter-spacing: 0.05em; /* 中文标题字距 */
+  transform: translate(0px, 40px); /* 标题位置微调 */
+}
 
-  transform: translate(0px, 40px); /* 主标题位置微调：第一个值控制左右，第二个值控制上下 */
-} 
-        
-/* 首页首屏副标题 */
 .home-hero-subtitle {
-  position: relative; /* 允许主标题单独上下左右微调位置 */
+  position: relative; /* 允许副标题用 transform 微调位置 */
+  max-width: 980px; /* 中文副标题最大宽度 */
+  margin: 0; /* 清除副标题默认外边距 */
+  color: rgba(255, 255, 255, 0.6); /* 副标题文字颜色 */
+  font-size: clamp(16px, 5vw, 24px); /* 响应式副标题字号 */
+  font-weight: 400; /* 副标题字重 */
+  line-height: 1.2; /* 副标题行高 */
+  letter-spacing: 0.05em; /* 中文副标题字距 */
+  transform: translate(0px, 80px); /* 副标题位置微调 */
+}
 
-  max-width: 980px; /* 主标题最大宽度 */
-  margin: 0; /* 清除标题默认外边距 */ 
-  color: rgba(255, 255, 255, 0.6); /* 小标签使用科技青 */
-  font-size: clamp(16px, 5vw, 24px); /* 主标题响应式字号 */
-  font-weight: 400; /* 主标题字重，数值越大文字越粗，常用 500 / 600 / 700 */
-  line-height: 1.2; /* 主标题行高 */
-  letter-spacing: 0.05em; /* 主标题字距，负数会让文字更紧凑 */
- 
-  transform: translate(0px, 80px); /* 主标题位置微调：第一个值控制左右，第二个值控制上下 */
-}    
-
-/* ================================
-   首页首屏按钮区域
-   说明：
-   1. 放在首页首屏副标题下方
-   2. 包含“产品中心”和“联系我们”两个按钮
-   3. PC 端横向排列，手机端自动换行
-================================ */
 .home-hero-actions {
   display: flex; /* 两个按钮横向排列 */
   align-items: center; /* 按钮垂直居中 */
-  gap: 16px; /* 两个按钮之间的距离 */
+  gap: 16px; /* 按钮之间距离 */
   margin-top: 120px; /* 按钮区域距离副标题的距离 */
 }
-       
-/* 首页首屏按钮通用样式 */
+
 .home-hero-btn {
-  display: inline-flex; /* 让按钮内部文字可以居中 */
+  display: inline-flex; /* 按钮内容使用 flex 居中 */
   align-items: center; /* 按钮文字垂直居中 */
   justify-content: center; /* 按钮文字水平居中 */
   min-width: 148px; /* 按钮最小宽度 */
@@ -730,418 +630,149 @@ button {
   padding: 0 26px; /* 按钮左右内边距 */
   border-radius: 8px; /* 按钮矩形圆角 */
   font-size: 15px; /* 按钮文字大小 */
-  font-weight: 400; /* 按钮默认文字字重 */
+  font-weight: 400; /* 按钮默认字重 */
   text-decoration: none; /* 去掉链接下划线 */
-  transition: background 0.28s ease, color 0.28s ease, border-color 0.28s ease, transform 0.28s ease; /* 按钮 hover 过渡 */
+  transition: background 0.28s ease, color 0.28s ease, border-color 0.28s ease, transform 0.28s ease; /* 按钮状态过渡 */
 }
 
-/* 产品中心按钮：主按钮 */
-.home-hero-btn-primary {
-  border: 1px solid rgba(255, 255, 255, 0.42); /* 次按钮使用半透明白色边框 */
-  background: rgba(255, 255, 255, 0.08); /* 次按钮使用轻微透明白色背景 */
-  color: #ffffff; /* 次按钮文字为白色 */
-}
-
-/* 联系我们按钮：次按钮 */
+.home-hero-btn-primary,
 .home-hero-btn-secondary {
-  border: 1px solid rgba(255, 255, 255, 0.42); /* 次按钮使用半透明白色边框 */
-  background: rgba(255, 255, 255, 0.08); /* 次按钮使用轻微透明白色背景 */
-  color: #ffffff; /* 次按钮文字为白色 */
+  border: 1px solid rgba(255, 255, 255, 0.42); /* 按钮默认边框 */
+  background: rgba(255, 255, 255, 0.08); /* 按钮默认背景 */
+  color: #ffffff; /* 按钮默认文字颜色 */
 }
 
-/* 首页首屏按钮 hover 通用状态 */
 .home-hero-btn:hover {
-  border-color: #173368; /* 主按钮 hover 时边框变品牌深蓝 */
-  background: #173368; /* 主按钮 hover 时背景变品牌深蓝 */
-  color: #09e9b4; /* 主按钮 hover 时文字变荧光青 */
+  border-color: #09e9b4; /* hover 边框变科技青 */
+  background: #09e9b4; /* hover 背景变科技青 */
+  color: #173368; /* hover 文字变品牌深蓝 */
+  font-weight: 600; /* hover 文字加粗 */
 }
-/* 产品中心按钮 hover 状态 */
-.home-hero-btn-primary:hover {
-  border-color: #09e9b4; /* 鼠标放到产品中心按钮上时，边框变品牌深蓝 */
-  background: #09e9b4; /* 鼠标放到产品中心按钮上时，背景变品牌深蓝 */
-  color: #173368; /* 鼠标放到产品中心按钮上时，文字变荧光青 */
-  font-weight: 600; /* 鼠标放到产品中心按钮上时，文字加粗 */
-}
- 
-/* 联系我们按钮 hover 状态 */
-.home-hero-btn-secondary:hover {
-  border-color: #09e9b4; /* 鼠标放到产品中心按钮上时，边框变品牌深蓝 */
-  background: #09e9b4; /* 鼠标放到产品中心按钮上时，背景变品牌深蓝 */
-  color: #173368; /* 鼠标放到产品中心按钮上时，文字变荧光青 */
-  font-weight: 600; /* 鼠标放到产品中心按钮上时，文字加粗 */
-} 
- 
-/* 首页测试滚动区域 */
+
+/* ================================
+   09. 首页测试滚动区域
+================================ */
+
 .home-test-section {
-  min-height: 80vh; /* 测试区域最小高度 */ 
+  min-height: 80vh; /* 测试区域最小高度 */
   padding: 120px 0; /* 测试区域上下内边距 */
   background: #ffffff; /* 测试区域白色背景 */
 }
-  
-/* 首页测试滚动区域内容容器 */
+
 .home-test-inner {
-  width: min(100% - 48px, 1600px); /* 普通 PC 测试区域内容宽度 */
+  width: min(100% - 48px, 1600px); /* 测试区域内容宽度 */
   margin: 0 auto; /* 测试区域内容居中 */
 }
 
-/* 首页测试滚动区域标题 */
 .home-test-inner h2 {
   margin: 0; /* 清除标题默认外边距 */
   color: #173368; /* 标题使用品牌深蓝 */
-  font-size: 42px; /* 标题文字大小 */
+  font-size: 42px; /* 标题字号 */
 }
 
-/* 首页测试滚动区域正文 */
 .home-test-inner p {
-  color: #5b6b7d; /* 正文使用次级说明文字颜色 */
-  font-size: 18px; /* 正文文字大小 */
+  color: #5b6b7d; /* 正文使用灰蓝色 */
+  font-size: 18px; /* 正文字号 */
 }
 
 /* ================================
-   响应式适配：2K 及以上大屏
-   说明：
-   1. 屏幕宽度大于 1920px 时生效
-   2. Top 栏、Logo、导航、搜索栏适当放大
-   3. 搜索栏边框从 1px 变为 2px
-================================ */
-@media (min-width: 1921px) {
-  .site-header-inner {
-    width: min(100% - 48px, 1760px); /* 2K 以上 Top 栏最大宽度 */
-    height: 90px; /* 2K 以上 Top 栏高度 */
-  }
-
-  .site-logo {
-    width: 240px; /* 2K 以上 Logo 宽度 */
-  }
- 
-  .site-nav {
-    gap: 68px; /* 2K 以上导航间距 */
-  }
-
-  .site-nav-link {
-    font-size: 20px; /* 2K 以上导航文字大小 */
-  }
-
-  .site-search-form {
-    flex-basis: 300px; /* 2K 以上搜索栏占位宽度 */
-    width: 300px; /* 2K 以上搜索栏显示宽度 */
-    height: 48px; /* 2K 以上搜索栏高度 */
-    border-width: 2px; /* 2K 以上搜索栏边框粗细 */
-  }
-
-  .language-current {
-    height: 48px; /* 2K 以上语言按钮高度 */
-    padding: 0 18px; /* 2K 以上语言按钮左右内边距 */
-    font-size: 15px; /* 2K 以上语言按钮文字大小 */
-  }
-  
-  .home-hero-inner {
-    width: min(100% - 48px, 1760px); /* 2K 以上首页内容最大宽度 */
-  }
-
-  .home-test-inner {
-    width: min(100% - 48px, 1760px); /* 2K 以上测试区域内容最大宽度 */
-  }
-
-  .mobile-nav {
-    width: min(100% - 32px, 1760px); /* 2K 以上移动菜单最大宽度 */
-  }
-}
-
-/* ================================
-   响应式适配：1280px 以下
-   说明：
-   1. 适配普通笔记本和小桌面屏
-   2. 缩小左右边距、导航间距、搜索栏宽度
-================================ */
-@media (max-width: 1280px) {
-  .site-header-inner {
-    width: min(100% - 40px, 1600px); /* 1280px 以下 Top 栏左右边距 */
-  }
-
-  .site-nav {
-    gap: 26px; /* 1280px 以下导航间距 */
-  }
-
-  .site-search-form {
-    flex-basis: 210px; /* 1280px 以下搜索栏占位宽度 */
-    width: 210px; /* 1280px 以下搜索栏显示宽度 */
-  }
-
-  .home-hero-inner {
-    width: min(100% - 40px, 1600px); /* 1280px 以下首页内容宽度 */
-  }
-}
-
-/* ================================
-   响应式适配：980px 以下
-   说明：
-   1. 适配平板和窄屏电脑
-   2. 隐藏桌面导航和搜索栏
-   3. 显示手机菜单按钮
-================================ */
-@media (max-width: 1000px) {
-  .site-nav {
-    display: none; /* 980px 以下隐藏桌面导航 */
-  }
-
-  .site-search-form {
-    display: none; /* 980px 以下隐藏搜索栏 */
-  }
-
-  .mobile-menu-btn {
-    display: block; /* 980px 以下显示手机菜单按钮 */
-  }
-
-  .mobile-nav-open .mobile-nav {
-    display: block; /* 点击手机菜单按钮后显示移动端导航 */
-  }
-
-  .home-hero-title {
-    font-size: clamp(42px, 8vw, 64px); /* 980px 以下首页主标题字号 */
-  }
-}
-
-/* ================================
-   响应式适配：640px 以下
-   说明：
-   1. 适配手机端
-   2. 调整 Top 栏高度、Logo 尺寸和首页文字
-================================ */
-@media (max-width: 640px) {
-  .site-header-inner {
-    width: min(100% - 28px, 1600px); /* 手机端 Top 栏左右边距 */
-    height: 70px; /* 手机端 Top 栏高度 */
-  }
-
-  .site-header-actions {
-    gap: 10px;
-  }
-
-  .site-logo {
-    width: 150px; /* 手机端 Logo 宽度 */
-  }
-
-  /* 手机端滚动后：隐藏白色 Logo */
-  .site-header-scrolled .site-logo-white {
-    opacity: 0; /* 手机端向下滚动后，白色 Logo 隐藏 */
-  }
-
-  /* 手机端滚动后：显示彩色 Logo */
-  .site-header-scrolled .site-logo-color {
-    opacity: 1; /* 手机端向下滚动后，彩色 Logo 显示 */
-  }
-
-  /* 手机端滚动后：保证 Logo 层级在上方 */
-  .site-header-scrolled .site-logo {
-    z-index: 3; /* 避免彩色 Logo 被其他元素遮住 */
-  }
-
-  .site-search-form {
-    display: none; /* 手机端隐藏搜索栏 */
-  }
-
-  .language-current {
-    min-width: 54px;
-    height: 38px; /* 手机端语言按钮高度 */
-    padding: 0 10px; /* 手机端语言按钮左右内边距 */
-    border-radius: 8px;
-    font-size: 13px; /* 手机端语言按钮文字大小 */
-  }
-
-  .language-current-label {
-    display: inline-block;
-    max-width: 52px;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-
-  .language-arrow {
-    margin-left: 0;
-  }
-
-  .language-menu {
-    top: calc(100% + 8px);
-    right: 0;
-    min-width: 132px;
-    border-radius: 14px;
-  }
-
-  .home-hero-inner {
-    width: min(100% - 28px, 1600px); /* 手机端首页内容宽度 */
-    padding-top: 96px; /* 手机端首页首屏顶部留白 */
-  }
-
-  .home-hero-title {
-    font-size: 40px; /* 手机端首页主标题字号 */
-    line-height: 1.15; /* 手机端首页主标题行高 */
-  }
-
-  .home-hero-subtitle {
-    font-size: 16px; /* 手机端首页副标题字号 */
-    line-height: 1.75; /* 手机端首页副标题行高 */
-  }
-}
-
-/* Mobile logo scroll override: same effect as PC, white first and color after scroll. */
-@media (max-width: 980px) {
-  .site-logo {
-    height: 34px;
-    flex: 0 0 auto;
-  }
-
-  .site-logo-white {
-    z-index: 1;
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .site-logo-color {
-    z-index: 2;
-    opacity: 0;
-    visibility: visible;
-  }
-
-  .site-header-scrolled .site-logo-white,
-  .page-scrolled .site-logo-white {
-    opacity: 0;
-  }
-
-  .site-header-scrolled .site-logo-color,
-  .page-scrolled .site-logo-color {
-    opacity: 1;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ================================
-   多语言排版适配
-   说明：
-   1. SiteHeader 会根据当前路径设置 html 的 lang
-   2. 例如 /en 页面会变成 html[lang="en"]
-   3. 不同语言的字距、行高、标题宽度不一样
-   4. 这里专门控制不同语言的视觉排版
+   10. 多语言排版适配
 ================================ */
 
-/* 中文：标题字距稍微拉开，更稳重 */
 html[lang="zh-CN"] .home-hero-title {
   max-width: 980px; /* 中文标题宽度 */
-  letter-spacing: 0.05em; /* 中文主标题字距 */
-  line-height: 1.08; /* 中文主标题行高 */
+  letter-spacing: 0.05em; /* 中文标题字距 */
+  line-height: 1.08; /* 中文标题行高 */
 }
 
-/* 英文：标题较长，字距要收紧 */
 html[lang="en"] .home-hero-title {
-  max-width: 1220px; /* 英文标题更长，宽度放大 */
-  letter-spacing: -0.02em; /* 英文字母略微收紧 */
+  max-width: 1220px; /* 英文标题宽度 */
+  letter-spacing: -0.02em; /* 英文标题收紧 */
   line-height: 1.06; /* 英文标题行高 */
 }
 
-/* 西班牙语：单词较长，标题宽度放大 */
 html[lang="es"] .home-hero-title {
-  max-width: 1320px; /* 西语标题较长 */
-  letter-spacing: -0.015em; /* 西语字距略微收紧 */
+  max-width: 1320px; /* 西语标题宽度 */
+  letter-spacing: -0.015em; /* 西语标题收紧 */
   line-height: 1.08; /* 西语标题行高 */
 }
 
-/* 法语：单词长度适中，保持较自然字距 */
 html[lang="fr"] .home-hero-title {
   max-width: 1280px; /* 法语标题宽度 */
-  letter-spacing: -0.01em; /* 法语标题轻微收紧 */
+  letter-spacing: -0.01em; /* 法语标题收紧 */
   line-height: 1.08; /* 法语标题行高 */
 }
 
-/* 韩语：不需要像中文一样拉太开 */
 html[lang="ko"] .home-hero-title {
   max-width: 1120px; /* 韩语标题宽度 */
-  letter-spacing: -0.01em; /* 韩语字距略微收紧 */
-  line-height: 1.12; /* 韩语行高稍微舒展 */
+  letter-spacing: -0.01em; /* 韩语标题收紧 */
+  line-height: 1.12; /* 韩语标题行高 */
 }
 
-/* 俄语：单词较长，标题宽度放大 */
 html[lang="ru"] .home-hero-title {
-  max-width: 1380px; /* 俄语标题较长 */
-  letter-spacing: -0.015em; /* 俄语字距略微收紧 */
-  line-height: 1.08; /* 俄语标题行高 */
+  max-width: 1320px; /* 俄语标题宽度 */
+  letter-spacing: -0.035em; /* 俄语标题进一步收紧 */
+  line-height: 1.04; /* 俄语标题行高 */
 }
 
-/* 中文副标题 */
 html[lang="zh-CN"] .home-hero-subtitle {
   max-width: 980px; /* 中文副标题宽度 */
   letter-spacing: 0.05em; /* 中文副标题字距 */
   line-height: 1.2; /* 中文副标题行高 */
 }
 
-/* 英文副标题 */
 html[lang="en"] .home-hero-subtitle {
-  max-width: 1080px; /* 英文副标题更长 */
+  max-width: 1080px; /* 英文副标题宽度 */
   letter-spacing: 0.01em; /* 英文副标题轻微字距 */
-  line-height: 1.5; /* 英文长句行高更舒服 */
+  line-height: 1.5; /* 英文副标题行高 */
 }
 
-/* 西班牙语副标题 */
-html[lang="es"] .home-hero-subtitle {
-  max-width: 1160px; /* 西语副标题宽度 */
-  letter-spacing: 0; /* 西语不额外拉开 */
-  line-height: 1.5; /* 西语长句行高 */
-}
-
-/* 法语副标题 */
+html[lang="es"] .home-hero-subtitle,
 html[lang="fr"] .home-hero-subtitle {
-  max-width: 1160px; /* 法语副标题宽度 */
-  letter-spacing: 0; /* 法语不额外拉开 */
-  line-height: 1.5; /* 法语长句行高 */
+  max-width: 1160px; /* 西语和法语副标题宽度 */
+  letter-spacing: 0; /* 西语和法语不额外拉开 */
+  line-height: 1.5; /* 西语和法语副标题行高 */
 }
 
-/* 韩语副标题 */
 html[lang="ko"] .home-hero-subtitle {
   max-width: 1040px; /* 韩语副标题宽度 */
-  letter-spacing: -0.005em; /* 韩语轻微收紧 */
-  line-height: 1.55; /* 韩语阅读行高 */
+  letter-spacing: -0.005em; /* 韩语副标题轻微收紧 */
+  line-height: 1.55; /* 韩语副标题行高 */
 }
 
-/* 俄语副标题 */
 html[lang="ru"] .home-hero-subtitle {
-  max-width: 1180px; /* 俄语副标题较长 */
-  letter-spacing: 0; /* 俄语不额外拉开 */
-  line-height: 1.5; /* 俄语长句行高 */
+  max-width: 1120px; /* 俄语副标题宽度 */
+  letter-spacing: -0.01em; /* 俄语副标题收紧 */
+  line-height: 1.45; /* 俄语副标题行高 */
 }
 
-/* 中文导航 */
-html[lang="zh-CN"] .site-nav-link {
-  letter-spacing: 0.04em; /* 中文导航稍微拉开 */
-}
-
-/* 英文、西语、法语、韩语、俄语导航 */
 html[lang="en"] .site-nav-link,
 html[lang="es"] .site-nav-link,
 html[lang="fr"] .site-nav-link,
-html[lang="ko"] .site-nav-link,
 html[lang="ru"] .site-nav-link {
-  letter-spacing: 0.01em; /* 非中文导航避免过散 */
+  letter-spacing: 0.01em; /* 英文、西语、法语、俄语导航字距 */
+  font-weight: 400; /* 英文、西语、法语、俄语导航不加粗 */
 }
 
-/* 中文按钮 */
+html[lang="ru"] .site-nav-link {
+  letter-spacing: -0.005em; /* 俄语导航进一步收紧 */
+}
+
+html[lang="en"] .site-nav-link:hover,
+html[lang="en"] .site-nav-link-active,
+html[lang="es"] .site-nav-link:hover,
+html[lang="es"] .site-nav-link-active,
+html[lang="fr"] .site-nav-link:hover,
+html[lang="fr"] .site-nav-link-active,
+html[lang="ru"] .site-nav-link:hover,
+html[lang="ru"] .site-nav-link-active {
+  font-weight: 400; /* 非中文非韩文 hover 不加粗，避免文字宽度跳动 */
+}
+
 html[lang="zh-CN"] .home-hero-btn {
   letter-spacing: 0.04em; /* 中文按钮字距 */
 }
 
-/* 非中文按钮 */
 html[lang="en"] .home-hero-btn,
 html[lang="es"] .home-hero-btn,
 html[lang="fr"] .home-hero-btn,
@@ -1150,482 +781,264 @@ html[lang="ru"] .home-hero-btn {
   letter-spacing: 0.01em; /* 非中文按钮字距 */
 }
 
-
-
-
-/* ================================
-   语言栏点击修复
-   说明：
-   1. SiteHeader.tsx 里点击语言按钮后，会给外层加 language-switcher-open
-   2. 如果 CSS 没有正确显示 .language-menu，就会出现“点了没反应”
-   3. 这段放在文件最底部，用来覆盖前面重复或冲突的语言栏样式
-================================ */
-
-/* 语言切换区域提高层级，避免被搜索框、导航或其他元素盖住 */
-.language-switcher {
-  position: relative; /* 作为语言下拉菜单的定位父级 */
-  z-index: 10020; /* 提高语言栏整体层级 */
+html[lang="ru"] .home-hero-btn {
+  letter-spacing: 0; /* 俄语按钮不额外拉开 */
 }
 
-/* 语言下拉菜单提高层级 */
-.language-menu {
-  z-index: 10030; /* 保证下拉菜单显示在 Top 栏最上层 */
-}
-
-/* 点击语言按钮后显示下拉菜单 */
-.language-switcher-open .language-menu {
-  opacity: 1 !important; /* 强制显示语言下拉菜单 */
-  visibility: visible !important; /* 强制让语言下拉菜单可见 */
-  pointer-events: auto !important; /* 强制允许点击语言菜单 */
-  transform: translateY(0) !important; /* 让下拉菜单回到正常位置 */
-}
-
-/* 鼠标放到语言区域时显示下拉菜单 */
-.language-switcher:hover .language-menu {
-  opacity: 1 !important; /* hover 时显示语言下拉菜单 */
-  visibility: visible !important; /* hover 时让菜单可见 */
-  pointer-events: auto !important; /* hover 时允许点击菜单 */
-  transform: translateY(0) !important; /* hover 时菜单回到正常位置 */
-}
-
-/* 语言按钮或菜单获得焦点时保持下拉菜单显示 */
-.language-switcher:focus-within .language-menu {
-  opacity: 1 !important; /* focus 时显示语言菜单 */
-  visibility: visible !important; /* focus 时菜单可见 */
-  pointer-events: auto !important; /* focus 时菜单可点击 */
-  transform: translateY(0) !important; /* focus 时菜单回到正常位置 */
-}
-
-/* 语言菜单项本身必须可以点击 */
-.language-menu-item {
-  position: relative; /* 让菜单项拥有自己的层级 */
-  z-index: 10040; /* 菜单项层级高于菜单背景 */
-  pointer-events: auto !important; /* 强制 Link 可以点击 */
-}
-
-/* 点击语言按钮后显示下拉菜单 */
-.language-switcher-open .language-menu {
-  opacity: 1 !important; /* 点击后显示语言下拉菜单 */
-  visibility: visible !important; /* 点击后语言下拉菜单可见 */
-  pointer-events: auto !important; /* 点击后语言菜单可以点击 */
-  transform: translateY(0) !important; /* 点击后菜单回到正常位置 */
-}
-
-/* 鼠标放到语言区域时显示下拉菜单 */
-.language-switcher:hover .language-menu {
-  opacity: 1 !important; /* hover 时显示语言下拉菜单 */
-  visibility: visible !important; /* hover 时语言菜单可见 */
-  pointer-events: auto !important; /* hover 时语言菜单可以点击 */
-  transform: translateY(0) !important; /* hover 时菜单回到正常位置 */
-}
-
-/* ================================
-   原生语言选择器样式修复
-   说明：
-   1. 当前语言栏已改成 select，保证切换稳定
-   2. 这里把 select 做成原来矩形语言按钮的视觉
-   3. 放在 globals.css 最底部，覆盖前面的旧语言栏样式
-================================ */
-
-/* 语言栏外层容器 */
-.language-switcher {
-  position: relative; /* 用于放置右侧自定义小箭头 */
-  z-index: 10020; /* 保证语言栏层级高于导航和搜索栏 */
-  flex: 0 0 auto; /* 防止语言栏被挤压 */
-}
-
-/* 语言栏右侧小箭头 */
-.language-switcher::after {
-  content: "▾"; /* 自定义下拉箭头 */
-  position: absolute; /* 相对 language-switcher 定位 */
-  top: 50%; /* 垂直居中 */
-  right: 12px; /* 距离右侧 12px */
-  color: currentColor; /* 跟随语言栏文字颜色 */
-  font-size: 11px; /* 箭头大小 */
-  line-height: 1; /* 避免箭头偏移 */
-  pointer-events: none; /* 不阻挡 select 点击 */
-  transform: translateY(-50%); /* 精准垂直居中 */
-}
-
-/* 原生语言选择器 */
-.language-select {
-  appearance: none; /* 去掉浏览器默认下拉样式 */
-  -webkit-appearance: none; /* 兼容 Safari / Chrome */
-  -moz-appearance: none; /* 兼容 Firefox */
-
-  display: inline-flex; /* 让它像按钮一样显示 */
-  align-items: center; /* 文字垂直居中 */
-
-  min-width: 118px; /* 普通 PC 语言栏宽度 */
-  height: 42px; /* 普通 PC 语言栏高度 */
-  padding: 0 34px 0 14px; /* 右侧留出箭头位置 */
-
-  border: 2px solid rgba(255, 255, 255, 0.3); /* 透明 Top 栏下的白色边框 */
-  border-radius: 8px; /* 矩形圆角 */
-
-  background: rgba(255, 255, 255, 0.08); /* 透明 Top 栏下的半透明背景 */
-  color: #ffffff; /* 透明 Top 栏下文字为白色 */
-
-  font-size: 14px; /* 语言栏文字大小 */
-  font-family: inherit; /* 继承全站字体 */
-  line-height: 1; /* 避免文字上下偏移 */
-  white-space: nowrap; /* 防止语言名称换行 */
-
-  cursor: pointer; /* 鼠标放上去显示手型 */
-  outline: none; /* 去掉默认蓝色轮廓 */
-
-  transition:
-    background 0.28s ease,
-    color 0.28s ease,
-    border-color 0.28s ease,
-    box-shadow 0.28s ease; /* 颜色和阴影过渡 */
-}
-
-/* 下拉选项样式 */
-.language-select option {
-  background: #ffffff; /* 下拉选项背景为白色 */
-  color: #173368; /* 下拉选项文字为品牌深蓝 */
-}
-
-/* Top 栏 hover / 滚动后：语言栏变浅色状态 */
-.site-header:hover .language-select,
-.site-header-scrolled .language-select,
-.page-scrolled .language-select {
-  border-color: rgba(23, 51, 104, 0.4); /* 白底状态下边框为品牌蓝 */
-  background: #f5f8fb; /* 白底状态下背景为浅灰白 */
-  color: #173368; /* 白底状态下文字为品牌深蓝 */
-}
-
-/* Top 栏 hover / 滚动后：自定义箭头颜色 */
-.site-header:hover .language-switcher::after,
-.site-header-scrolled .language-switcher::after,
-.page-scrolled .language-switcher::after {
-  color: #173368; /* 白底状态下箭头为品牌深蓝 */
-}
-
-/* 语言栏 hover 状态 */
-.language-select:hover {
-  border-color: #173368; /* hover 时边框变品牌深蓝 */
-  background: #173368; /* hover 时背景变品牌深蓝 */
-  color: #09e9b4; /* hover 时文字变科技青 */
-}
-
-/* hover 时箭头颜色 */
-.language-switcher:hover::after {
-  color: #09e9b4; /* hover 时箭头变科技青 */
-}
-
-/* 语言栏 focus 状态 */
-.language-select:focus {
-  border-color: #09e9b4; /* 聚焦时边框变科技青 */
-  box-shadow: 0 0 0 4px rgba(9, 233, 180, 0.12); /* 聚焦时增加科技青光晕 */
-}
-
-/* 2K 以上语言栏尺寸 */
-@media (min-width: 1921px) {
-  .language-select {
-    min-width: 128px; /* 2K 以上语言栏宽度 */
-    height: 48px; /* 2K 以上语言栏高度 */
-    padding: 0 38px 0 18px; /* 2K 以上内边距 */
-    font-size: 15px; /* 2K 以上文字大小 */
-  }
-
-  .language-switcher::after {
-    right: 14px; /* 2K 以上箭头右侧距离 */
-  }
-}
-
-/* 手机端语言栏 */
-@media (max-width: 640px) {
-  .language-select {
-    min-width: 92px; /* 手机端语言栏宽度 */
-    max-width: 108px; /* 手机端最大宽度 */
-    height: 38px; /* 手机端语言栏高度 */
-    padding: 0 28px 0 10px; /* 手机端右侧留箭头空间 */
-    font-size: 13px; /* 手机端文字大小 */
-  }
-
-  .language-switcher::after {
-    right: 9px; /* 手机端箭头右侧距离 */
-    font-size: 10px; /* 手机端箭头大小 */
-  }
-}
-
-
-
-/* ================================
-   非中文语言 hover 字重修复
-   说明：
-   1. 英文、西语、法语、俄语在 hover 加粗时，文字宽度会明显变化
-   2. 这里不再用 font-weight 加粗，而是只保留颜色变化
-   3. 中文和韩文保留原来的 hover 加粗效果
-================================ */
-
-/* 英文 / 西语 / 法语 / 俄语：导航 hover 不加粗，避免文字宽度变化 */
-html[lang="en"] .site-nav-link:hover,
-html[lang="es"] .site-nav-link:hover,
-html[lang="fr"] .site-nav-link:hover,
-html[lang="ru"] .site-nav-link:hover {
-  font-weight: 400; /* 非中文导航 hover 不加粗，避免文字横向变宽 */
-}
-
-/* 英文 / 西语 / 法语 / 俄语：首页当前导航也不加粗 */
-html[lang="en"] .site-nav-link-active,
-html[lang="es"] .site-nav-link-active,
-html[lang="fr"] .site-nav-link-active,
-html[lang="ru"] .site-nav-link-active {
-  font-weight: 400; /* 非中文 active 状态也不加粗 */
-}
-
-/* 英文 / 西语 / 法语 / 俄语：按钮 hover 不加粗 */
 html[lang="en"] .home-hero-btn:hover,
 html[lang="es"] .home-hero-btn:hover,
 html[lang="fr"] .home-hero-btn:hover,
 html[lang="ru"] .home-hero-btn:hover {
-  font-weight: 400; /* 非中文按钮 hover 不加粗，避免按钮文字变宽 */
-}
-
-/* 英文 / 西语 / 法语 / 俄语：手机端导航 hover 不加粗 */
-html[lang="en"] .mobile-nav-link:hover,
-html[lang="es"] .mobile-nav-link:hover,
-html[lang="fr"] .mobile-nav-link:hover,
-html[lang="ru"] .mobile-nav-link:hover {
-  font-weight: 400; /* 非中文移动端导航 hover 不加粗 */
-}
-
-
-
-/* ================================
-   非中文语言 hover 文字变宽修复
-   说明：
-   1. 英文、西语、法语、俄语在 hover 加粗时，文字会横向变宽
-   2. 这里用 !important 强制覆盖前面的 font-weight
-   3. 中文和韩文暂时保留原来的加粗效果
-   4. 这段必须放在 globals.css 最底部
-================================ */
-
-/* 英文 / 西语 / 法语 / 俄语：顶部导航默认、hover、active 都不加粗 */
-html[lang="en"] .site-nav-link,
-html[lang="en"] .site-nav-link:hover,
-html[lang="en"] .site-nav-link-active,
-html[lang="es"] .site-nav-link,
-html[lang="es"] .site-nav-link:hover,
-html[lang="es"] .site-nav-link-active,
-html[lang="fr"] .site-nav-link,
-html[lang="fr"] .site-nav-link:hover,
-html[lang="fr"] .site-nav-link-active,
-html[lang="ru"] .site-nav-link,
-html[lang="ru"] .site-nav-link:hover,
-html[lang="ru"] .site-nav-link-active {
-  font-weight: 400 !important; /* 强制不加粗，避免文字宽度变化 */
-}
-
-/* 英文 / 西语 / 法语 / 俄语：按钮 hover 不加粗 */
-html[lang="en"] .home-hero-btn:hover,
-html[lang="en"] .home-hero-btn-primary:hover,
-html[lang="en"] .home-hero-btn-secondary:hover,
-html[lang="es"] .home-hero-btn:hover,
-html[lang="es"] .home-hero-btn-primary:hover,
-html[lang="es"] .home-hero-btn-secondary:hover,
-html[lang="fr"] .home-hero-btn:hover,
-html[lang="fr"] .home-hero-btn-primary:hover,
-html[lang="fr"] .home-hero-btn-secondary:hover,
-html[lang="ru"] .home-hero-btn:hover,
-html[lang="ru"] .home-hero-btn-primary:hover,
-html[lang="ru"] .home-hero-btn-secondary:hover {
-  font-weight: 400 !important; /* 强制按钮 hover 不加粗 */
-}
-
-/* 英文 / 西语 / 法语 / 俄语：手机端导航 hover 不加粗 */
-html[lang="en"] .mobile-nav-link:hover,
-html[lang="en"] .mobile-nav-link-active,
-html[lang="es"] .mobile-nav-link:hover,
-html[lang="es"] .mobile-nav-link-active,
-html[lang="fr"] .mobile-nav-link:hover,
-html[lang="fr"] .mobile-nav-link-active,
-html[lang="ru"] .mobile-nav-link:hover,
-html[lang="ru"] .mobile-nav-link-active {
-  font-weight: 400 !important; /* 移动端也避免文字变宽 */
-}
-
-
-/* ================================
-   俄文排版单独优化
-   说明：
-   1. 俄文单词较长，视觉上容易显得松散
-   2. 这里单独收紧俄文标题和副标题
-   3. 放在 globals.css 最底部，用于覆盖前面的俄文样式
-================================ */
-
-/* 俄文：首页主标题收紧 */
-html[lang="ru"] .home-hero-title {
-  max-width: 1320px; /* 俄文标题宽度稍微收窄 */
-  letter-spacing: -0.035em; /* 俄文字母进一步收紧 */
-  line-height: 1.04; /* 俄文标题行高稍微压紧 */
-}
-
-/* 俄文：首页副标题收紧 */
-html[lang="ru"] .home-hero-subtitle {
-  max-width: 1120px; /* 俄文副标题宽度稍微收窄 */
-  letter-spacing: -0.01em; /* 俄文副标题轻微收紧 */
-  line-height: 1.45; /* 俄文长句行高稍微收紧 */
-}
-
-/* 俄文：导航文字收紧 */
-html[lang="ru"] .site-nav-link {
-  letter-spacing: -0.005em; /* 俄文导航不要太散 */
-}
-
-/* 俄文：按钮文字收紧 */
-html[lang="ru"] .home-hero-btn {
-  letter-spacing: 0; /* 俄文按钮不额外拉开 */
+  font-weight: 400; /* 英文、西语、法语、俄语按钮 hover 不加粗 */
 }
 
 /* ================================
-   非中文 / 非韩文导航间距收紧
-   说明：
-   1. 英文、西语、法语、俄语导航词更长
-   2. 如果继续使用中文导航的间距，会显得太散
-   3. 中文和韩文不改，保持原来的视觉节奏
-   4. 放在 globals.css 最底部，用于覆盖前面的 .site-nav gap
+   11. 响应式：2K 以上
 ================================ */
 
-/* 普通 PC：英文 / 西语 / 法语 / 俄语导航项靠拢 */
-html[lang="en"] .site-nav,
-html[lang="es"] .site-nav,
-html[lang="fr"] .site-nav,
-html[lang="ru"] .site-nav {
-  gap: 32px; /* 非中文导航间距，比原来的 46px 更靠拢 */
-}
-
-/* 2K 以上大屏：非中文导航也适当靠拢 */
 @media (min-width: 1921px) {
-  html[lang="en"] .site-nav,
-  html[lang="es"] .site-nav,
-  html[lang="fr"] .site-nav,
-  html[lang="ru"] .site-nav {
-    gap: 46px; /* 2K 以上不要太散，比原来的 68px 更紧 */
+  .site-header-inner {
+    width: min(100% - 48px, 1760px); /* 2K 以上 Top 栏最大宽度 */
+    height: 90px; /* 2K 以上 Top 栏高度 */
   }
-}
 
-/* 1280px 以下：非中文导航进一步靠拢，避免挤压搜索栏 */
-@media (max-width: 1280px) {
-  html[lang="en"] .site-nav,
-  html[lang="es"] .site-nav,
-  html[lang="fr"] .site-nav,
-  html[lang="ru"] .site-nav {
-    gap: 20px; /* 小屏 PC 下进一步收紧 */
+  .site-logo {
+    width: 240px; /* 2K 以上 Logo 宽度 */
+    height: 54px; /* 2K 以上 Logo 高度 */
   }
-}
 
-/* ================================
-   非中文 / 非韩文导航间距收紧：含 2K 大屏
-   说明：
-   1. 中文和韩文保持原来的导航间距
-   2. 英文、西语、法语、俄语导航词更长，需要靠拢
-   3. 2K 以上原本 gap 较大，所以这里单独覆盖
-   4. 这段必须放在 globals.css 最底部
-================================ */
-
-/* 普通 PC：英文 / 西语 / 法语 / 俄语导航项靠拢 */
-html[lang="en"] .site-nav,
-html[lang="es"] .site-nav,
-html[lang="fr"] .site-nav,
-html[lang="ru"] .site-nav {
-  gap: 30px !important; /* 普通 PC 非中文导航间距 */
-}
-
-/* 2K 以上大屏：英文 / 西语 / 法语 / 俄语导航项也靠拢 */
-@media (min-width: 1921px) {
-  html[lang="en"] .site-nav,
-  html[lang="es"] .site-nav,
-  html[lang="fr"] .site-nav,
-  html[lang="ru"] .site-nav {
-    gap: 38px !important; /* 2K 以上非中文导航间距 */
+  .site-nav {
+    gap: 68px; /* 2K 以上中文和韩文导航间距 */
   }
-}
 
-/* 1280px 以下：英文 / 西语 / 法语 / 俄语进一步靠拢 */
-@media (max-width: 1280px) {
-  html[lang="en"] .site-nav,
-  html[lang="es"] .site-nav,
-  html[lang="fr"] .site-nav,
-  html[lang="ru"] .site-nav {
-    gap: 20px !important; /* 小屏 PC 非中文导航间距 */
+  .site-nav-link {
+    font-size: 20px; /* 2K 以上导航字号 */
   }
-}
 
-
-
-/* ================================
-   搜索栏宽度优化：非 2K 屏幕缩短
-   说明：
-   1. 2K 以上，也就是 1921px 以上，不受这段影响
-   2. 普通 PC 屏幕搜索栏从原来的 280px 缩短为 230px
-   3. 1280px 以下搜索栏从原来的 250px 缩短为 210px
-   4. 980px 以下本来就隐藏搜索栏，所以不用单独改
-================================ */
-
-/* 普通 PC：1920px 及以下搜索栏缩短 */
-@media (max-width: 1920px) {
   .site-search-form {
-    flex-basis: 230px; /* 普通 PC 搜索栏占位宽度 */
-    width: 230px; /* 普通 PC 搜索栏实际宽度 */
+    flex-basis: 300px; /* 2K 以上搜索栏宽度 */
+    width: 300px; /* 2K 以上搜索栏实际宽度 */
+    height: 48px; /* 2K 以上搜索栏高度 */
+    border-width: 2px; /* 2K 以上搜索栏边框粗细 */
   }
-}
 
-/* 小屏 PC：1280px 及以下搜索栏进一步缩短 */
-@media (max-width: 1280px) {
-  .site-search-form {
-    flex-basis: 210px; /* 小屏 PC 搜索栏占位宽度 */
-    width: 210px; /* 小屏 PC 搜索栏实际宽度 */
+  .language-summary {
+    min-width: 128px; /* 2K 以上语言按钮宽度 */
+    height: 48px; /* 2K 以上语言按钮高度 */
+    padding: 0 18px; /* 2K 以上语言按钮内边距 */
+    border-width: 2px; /* 2K 以上语言按钮边框 */
+    font-size: 15px; /* 2K 以上语言按钮字号 */
+  }
+
+  .language-summary-label {
+    max-width: 92px; /* 2K 以上当前语言文字宽度 */
+  }
+
+  .language-details-menu {
+    min-width: 172px; /* 2K 以上语言菜单宽度 */
+  }
+
+  html[lang="en"] .site-nav,
+  html[lang="es"] .site-nav,
+  html[lang="fr"] .site-nav {
+    gap: 38px; /* 2K 以上英文、西语、法语导航间距 */
+  }
+
+  html[lang="ru"] .site-nav {
+    gap: 58px; /* 2K 以上俄语导航间距 */
+  }
+
+  .home-hero-inner,
+  .home-test-inner {
+    width: min(100% - 48px, 1760px); /* 2K 以上首页内容宽度 */
   }
 }
 
 /* ================================
-   1920 屏幕：非中文 / 非韩文导航间距修正
-   说明：
-   1. 中文和韩文不动
-   2. 英文、西语、法语、俄语导航词比较长
-   3. 之前收得太紧，现在在 1920 屏幕下适当放开
-   4. 只作用于 1281px 到 1920px，不影响 2K 以上
+   12. 响应式：1281px 到 1920px
 ================================ */
 
 @media (min-width: 1281px) and (max-width: 1920px) {
   html[lang="en"] .site-nav,
   html[lang="es"] .site-nav,
-  html[lang="fr"] .site-nav,
+  html[lang="fr"] .site-nav {
+    gap: 40px; /* 1920 下英文、西语、法语导航间距 */
+  }
+
   html[lang="ru"] .site-nav {
-    gap: 40px !important; /* 1920 下非中文导航间距，避免词之间太挤 */
+    gap: 48px; /* 1920 下俄语导航间距 */
   }
 }
-
 
 /* ================================
-   俄语导航间距单独优化
-   说明：
-   1. 俄语导航词相对更长，词之间太挤会影响阅读
-   2. 只调整俄语页面，不影响中文、英文、西语、法语、韩语
-   3. 放在 globals.css 最底部，用于覆盖前面的多语言导航间距
+   13. 响应式：1280px 以下
 ================================ */
 
-/* 1281px–1920px：俄语导航词之间放宽 */
-@media (min-width: 1281px) and (max-width: 1920px) {
-  html[lang="ru"] .site-nav {
-    gap: 48px !important; /* 俄语普通 PC 导航间距 */
-  }
-}
-
-/* 2K 以上：俄语导航词之间放宽 */
-@media (min-width: 1921px) {
-  html[lang="ru"] .site-nav {
-    gap: 58px !important; /* 俄语 2K 以上导航间距 */
-  }
-}
-
-/* 1280px 以下：俄语导航稍微放宽，但避免挤压右侧 */
 @media (max-width: 1280px) {
+  .site-header-inner {
+    width: min(100% - 40px, 1600px); /* 1280 以下 Top 栏左右边距 */
+  }
+
+  .site-nav {
+    gap: 26px; /* 1280 以下中文和韩文导航间距 */
+  }
+
+  .site-search-form {
+    flex-basis: 210px; /* 1280 以下搜索栏宽度 */
+    width: 210px; /* 1280 以下搜索栏实际宽度 */
+  }
+
+  html[lang="en"] .site-nav,
+  html[lang="es"] .site-nav,
+  html[lang="fr"] .site-nav {
+    gap: 20px; /* 1280 以下英文、西语、法语导航间距 */
+  }
+
   html[lang="ru"] .site-nav {
-    gap: 26px !important; /* 小屏 PC 俄语导航间距 */
+    gap: 26px; /* 1280 以下俄语导航间距 */
+  }
+
+  .home-hero-inner {
+    width: min(100% - 40px, 1600px); /* 1280 以下首页内容宽度 */
+  }
+}
+
+/* ================================
+   14. 响应式：1000px 以下
+================================ */
+
+@media (max-width: 1000px) {
+  .site-nav {
+    display: none; /* 1000 以下隐藏桌面端导航 */
+  }
+
+  .site-search-form {
+    display: none; /* 1000 以下隐藏搜索栏 */
+  }
+
+  .site-header-actions {
+    display: flex; /* 手机端右侧工具区横向排列 */
+    align-items: center; /* 手机端语言栏和菜单按钮垂直居中 */
+    gap: 10px; /* 手机端语言栏和菜单按钮距离 */
+  }
+
+  .mobile-nav-switcher {
+    display: block; /* 1000 以下显示手机导航开关 */
+  }
+
+  .mobile-nav-backdrop {
+    position: fixed; /* 手机端遮罩固定覆盖页面 */
+    top: 82px; /* 从 Top 栏下方开始 */
+    left: 0; /* 遮罩贴左边 */
+    right: 0; /* 遮罩贴右边 */
+    bottom: 0; /* 遮罩覆盖到底部 */
+    z-index: 1500; /* 遮罩在页面内容上方、菜单下方 */
+    display: block; /* 有展开面板时显示遮罩 */
+    width: 100vw; /* 遮罩宽度占满 */
+    height: calc(100vh - 82px); /* 遮罩高度减去 Top 栏 */
+    padding: 0; /* 清除按钮默认内边距 */
+    margin: 0; /* 清除按钮默认外边距 */
+    border: 0; /* 清除按钮默认边框 */
+    outline: none; /* 清除按钮默认轮廓 */
+    background: transparent; /* 遮罩完全透明，不显示白底 */
+    box-shadow: none; /* 遮罩不显示阴影 */
+    cursor: default; /* 普通鼠标样式 */
+  }
+
+  .home-hero-title {
+    font-size: clamp(42px, 8vw, 64px); /* 1000 以下首页标题字号 */
+  }
+}
+
+/* ================================
+   15. 响应式：640px 以下
+================================ */
+
+@media (max-width: 640px) {
+  .site-header-inner {
+    width: min(100% - 28px, 1600px); /* 手机端 Top 栏左右边距 */
+    height: 70px; /* 手机端 Top 栏高度 */
+  }
+
+  .site-logo {
+    width: 150px; /* 手机端 Logo 宽度 */
+    height: 34px; /* 手机端 Logo 高度 */
+  }
+
+  .language-summary {
+    min-width: 88px; /* 手机端语言按钮宽度 */
+    max-width: 104px; /* 手机端语言按钮最大宽度 */
+    height: 38px; /* 手机端语言按钮高度 */
+    padding: 0 9px; /* 手机端语言按钮内边距 */
+    gap: 4px; /* 手机端文字和箭头间距 */
+    font-size: 13px; /* 手机端语言按钮字号 */
+  }
+
+  .language-summary-label {
+    max-width: 60px; /* 手机端当前语言文字宽度 */
+  }
+
+  .language-summary-arrow {
+    font-size: 10px; /* 手机端箭头大小 */
+  }
+
+  .language-switcher::after {
+    width: 138px; /* 手机端语言栏隐形连接区宽度 */
+    height: 18px; /* 手机端语言栏隐形连接区高度 */
+  }
+
+  .language-details-menu {
+    min-width: 138px; /* 手机端语言菜单宽度 */
+    right: 0; /* 手机端语言菜单右对齐 */
+    padding: 7px; /* 手机端语言菜单内边距 */
+  }
+
+  .language-details-item {
+    padding: 10px 10px; /* 手机端语言菜单项内边距 */
+    font-size: 13px; /* 手机端语言菜单项字号 */
+  }
+
+  .mobile-menu-btn {
+    width: 38px; /* 手机端三横菜单按钮宽度 */
+    height: 38px; /* 手机端三横菜单按钮高度 */
+  }
+
+  .mobile-nav {
+    width: min(270px, calc(100vw - 28px)); /* 手机端导航菜单加宽 */
+    padding: 7px; /* 手机端导航菜单内边距 */
+  }
+
+  .mobile-nav-switcher::after {
+    width: min(270px, calc(100vw - 28px)); /* 手机端导航隐形连接区加宽 */
+    height: 18px; /* 手机端导航隐形连接区高度 */
+  }
+
+  .mobile-nav-link {
+    padding: 10px 10px; /* 手机端导航项内边距 */
+    font-size: 13px; /* 手机端导航项字号 */
+  }
+
+  .mobile-nav-backdrop {
+    top: 70px; /* 手机端遮罩从 70px Top 栏下方开始 */
+    height: calc(100vh - 70px); /* 遮罩高度减去手机 Top 栏高度 */
+  }
+
+  .home-hero-inner {
+    width: min(100% - 28px, 1600px); /* 手机端首页内容宽度 */
+    padding-top: 96px; /* 手机端首页首屏顶部留白 */
+  }
+
+  .home-hero-title {
+    font-size: 40px; /* 手机端首页标题字号 */
+    line-height: 1.15; /* 手机端首页标题行高 */
+  }
+
+  .home-hero-subtitle {
+    font-size: 16px; /* 手机端首页副标题字号 */
+    line-height: 1.75; /* 手机端首页副标题行高 */
+  }
+
+  .home-hero-actions {
+    flex-wrap: wrap; /* 手机端按钮允许换行 */
   }
 }
