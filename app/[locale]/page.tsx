@@ -1,92 +1,94 @@
-import { notFound } from "next/navigation"; // 引入 Next.js 的 404 方法，用于处理不支持的语言路径
+// app/[locale]/page.tsx
+// 多语言首页入口
+//
+// 说明：
+// 1. 这个文件负责 /en、/es、/fr、/ko、/ru 这些多语言首页
+// 2. 中文首页不走这里，中文首页走 app/page.tsx
+// 3. 语言路径统一从 data/languages.ts 读取
+// 4. 后期如果新增语言，只要改 data/languages.ts，这里不用大改
 
-import HomePageContent from "@/components/home/HomePageContent"; // 引入首页共用内容组件
+import { notFound } from "next/navigation"; // 引入 Next.js 的 404 方法
 
+import HomePageContent from "@/components/home/HomePageContent"; // 引入首页内容组件
 import {
-  isSupportedLocale, // 引入语言判断函数，用来判断 URL 里的语言是否合法
-  type LocaleCode, // 引入语言类型，例如 zh-CN / en / es / fr / ko / ru
-} from "@/lib/i18n"; // 从统一多语言配置文件读取语言工具
+  getEnabledLanguages, // 获取已启用语言列表
+  type LocaleCode, // 官网支持的语言代码类型
+} from "@/data/languages"; // 从统一语言配置文件读取语言信息
 
+// 关闭未知动态路径
+// 说明：
+// 1. 只允许 generateStaticParams 里生成的语言路径访问
+// 2. 比如 /en、/es、/fr、/ko、/ru 可以访问
+// 3. /abc 这种无效路径会进入 404
+export const dynamicParams = false;
 
-/* ================================
-   多语言页面参数类型
-   说明：
-   1. params.locale 来自 URL
-   2. 例如访问 /en 时，params.locale 就是 en
-   3. 例如访问 /fr 时，params.locale 就是 fr
-   4. Next.js 16 中 params 推荐按 Promise 异步读取
-================================ */
+/**
+ * 根据 URL 里的 locale 参数，找到真实的 LocaleCode
+ *
+ * 举例：
+ * 1. routeSegment = "en" -> 返回 "en"
+ * 2. routeSegment = "es" -> 返回 "es"
+ * 3. routeSegment = "zh" -> 返回 null，因为中文默认路径是 /
+ */
+function getLocaleFromRouteSegment(routeSegment: string): LocaleCode | null {
+  const matchedLanguage = getEnabledLanguages().find((language) => {
+    // 中文是默认语言，路径是 /，不应该出现在 app/[locale] 里
+    if (language.isDefault) {
+      return false;
+    }
+
+    // 去掉 href 前面的 /，例如 /en 变成 en
+    const segment = language.href.replace(/^\/+/, "");
+
+    return segment === routeSegment;
+  });
+
+  return matchedLanguage?.code ?? null;
+}
+
+/**
+ * 生成静态多语言首页路径
+ *
+ * 说明：
+ * 1. 中文默认首页 / 不在这里生成
+ * 2. 这里只生成 /en、/es、/fr、/ko、/ru
+ * 3. 后期新增语言，只要在 data/languages.ts 里 enabled: true 即可
+ */
+export function generateStaticParams() {
+  return getEnabledLanguages()
+    .filter((language) => !language.isDefault)
+    .map((language) => ({
+      locale: language.href.replace(/^\/+/, ""),
+    }));
+}
+
+// 页面参数类型
+// 说明：
+// 1. 新版 Next.js 里 params 可能是 Promise
+// 2. 使用 Promise 写法更适合当前 Next.js 新版本
 type LocalePageProps = {
   params: Promise<{
-    locale: string; // URL 里的语言参数
+    locale: string;
   }>;
 };
 
-
-/* ================================
-   预生成多语言首页路径
-   说明：
-   1. 这里告诉 Next.js：这些语言页面是我们明确支持的
-   2. 中文首页不放这里，因为中文首页是 /
-   3. /en 显示英文首页
-   4. /es 显示西班牙语首页
-   5. /fr 显示法语首页
-   6. /ko 显示韩语首页
-   7. /ru 显示俄语首页
-================================ */
-export function generateStaticParams() {
-  return [
-    {
-      locale: "en", // 英文首页路径 /en
-    },
-    {
-      locale: "es", // 西班牙语首页路径 /es
-    },
-    {
-      locale: "fr", // 法语首页路径 /fr
-    },
-    {
-      locale: "ko", // 韩语首页路径 /ko
-    },
-    {
-      locale: "ru", // 俄语首页路径 /ru
-    },
-  ];
-}
-
-
 /**
- * LocaleHomePage
- * 多语言首页入口
+ * LocalePage
+ * 多语言首页页面
  *
  * 说明：
- * 1. 访问 /en 时，显示英文首页
- * 2. 访问 /es 时，显示西班牙语首页
- * 3. 访问 /fr 时，显示法语首页
- * 4. 访问 /ko 时，显示韩语首页
- * 5. 访问 /ru 时，显示俄语首页
- * 6. 中文首页 / 由 app/page.tsx 负责
+ * 1. 根据 URL 判断当前语言
+ * 2. 如果语言不支持，显示 404
+ * 3. 如果语言支持，把 locale 传给 HomePageContent
  */
-export default async function LocaleHomePage({ params }: LocalePageProps) {
-  // 等待 Next.js 传入 URL 参数
-  const resolvedParams = await params;
+export default async function LocalePage({ params }: LocalePageProps) {
+  const { locale } = await params;
 
-  // 取出 URL 中的语言参数
-  const localeParam = resolvedParams.locale;
+  const currentLocale = getLocaleFromRouteSegment(locale);
 
-  // 如果 URL 里的语言不是我们支持的语言，就显示 404
-  if (!isSupportedLocale(localeParam)) {
+  if (!currentLocale) {
     notFound();
   }
 
-  // 中文首页只使用 /，不使用 /zh-CN，避免出现重复页面
-  if (localeParam === "zh-CN") {
-    notFound();
-  }
-
-  // 把 URL 里的语言参数转换成项目里的语言类型
-  const locale = localeParam as LocaleCode;
-
-  // 渲染对应语言的首页内容
-  return <HomePageContent locale={locale} />;
+  return <HomePageContent locale={currentLocale} />;
 }
