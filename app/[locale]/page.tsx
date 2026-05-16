@@ -15,8 +15,6 @@ import {
   type LocaleCode, // 官网支持的语言代码类型
 } from "@/data/languages"; // 从统一语言配置文件读取语言信息
 
-import HomeCompanyStrengthSection from "@/components/home/HomeCompanyStrengthSection";
-
 // 关闭未知动态路径
 // 说明：
 // 1. 只允许 generateStaticParams 里生成的语言路径访问

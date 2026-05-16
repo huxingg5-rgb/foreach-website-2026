@@ -4,6 +4,9 @@ import Link from "next/link"; // 引入 Next.js 的 Link 组件，用于页面�
 import HomeApplicationFlowSection from "@/components/home/HomeApplicationFlowSection"; // 首页第二屏应用领域交互模块
 
 import HomeCompanyStrengthSection from "@/components/home/HomeCompanyStrengthSection";
+import HomeInquirySection from "@/components/home/HomeInquirySection"; // 首页第6屏：在线询盘
+import HomeNewsSection from "@/components/home/HomeNewsSection"; // 首页第5屏：资讯中心
+import SiteFooter from "@/components/layout/SiteFooter"; // 网站底部 Footer
 
 import {
   getLocaleAnchorPath, // 多语言锚点路径函数，例如中文 /#products，英文 /en#products
@@ -36,42 +39,54 @@ export default function HomePageContent({ locale }: HomePageContentProps) {
 
   
   return (
-    <main>
-      {/* 首页首屏 Hero 区域 */}
-      <section className="home-hero" id="home">
-        <div className="home-hero-inner">
-          <h1 className="home-hero-title">
-            {homeText.heroTitleLine1}
+    <>
+      <main>
+        {/* 首页首屏 Hero 区域 */}
+        <section className="home-hero" id="home">
+          <div className="home-hero-inner">
+            <h1 className="home-hero-title">
+              {homeText.heroTitleLine1}
 
-            <br />
+              <br />
 
-            {homeText.heroTitleLine2}
-          </h1>
+              {homeText.heroTitleLine2}
+            </h1>
 
-          <p className="home-hero-subtitle">{homeText.heroSubtitle}</p>
+            <p className="home-hero-subtitle">{homeText.heroSubtitle}</p>
 
-          <div className="home-hero-actions">
-            <Link
-              href={productsHref}
-              className="home-hero-btn home-hero-btn-primary"
-            >
-              {homeText.productButton}
-            </Link>
+            <div className="home-hero-actions">
+              <Link
+                href={productsHref}
+                className="home-hero-btn home-hero-btn-primary"
+              >
+                {homeText.productButton}
+              </Link>
 
-            <Link
-              href={contactHref}
-              className="home-hero-btn home-hero-btn-secondary"
-            >
-              {homeText.contactButton}
-            </Link>
+              <Link
+                href={contactHref}
+                className="home-hero-btn home-hero-btn-secondary"
+              >
+                {homeText.contactButton}
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* 首页第二屏：应用领域 × 核心部件 */}
-      <HomeApplicationFlowSection locale={locale} />
+        {/* 首页第二屏：应用领域 × 核心部件 */}
+        <HomeApplicationFlowSection locale={locale} />
 
-      <HomeCompanyStrengthSection locale={locale} />
-    </main>
+        {/* 首页第三 / 第四屏：公司介绍与企业优势 */}
+        <HomeCompanyStrengthSection locale={locale} />
+
+        {/* 首页第5屏：资讯中心 */}
+        <HomeNewsSection />
+
+        {/* 首页第6屏：在线询盘 */}
+        <HomeInquirySection />
+      </main>
+
+      {/* 网站底部 Footer 保持在 main 外面，结构更清晰 */}
+      <SiteFooter />
+    </>
   );
 }
