@@ -1642,3 +1642,2154 @@ html[lang="ru"] .home-hero-btn:hover {
     flex-wrap: wrap; /* 手机端按钮允许换行 */
   }
 }
+
+/* =========================================================
+   首页第二屏：应用领域 × 核心部件
+   对应组件：components/home/HomeApplicationFlowSection.tsx
+
+   说明：
+   1. PC 端保留原来的电视机 + 5 张漂浮卡片 + 滚动动画
+   2. 手机端改为今天 H5 预览的“电视展示屏 + 6 个应用按钮”
+   3. 手机端去掉 Application Fields 小标题
+   4. 手机端去掉电视机外层和应用按钮外层的大圆角矩形
+========================================================= */
+
+.home-flow-section {
+  position: relative;
+  height: 220vh;
+  background:
+    radial-gradient(circle at 16% 18%, rgba(0, 217, 255, 0.1), transparent 30%),
+    radial-gradient(circle at 82% 24%, rgba(0, 87, 184, 0.1), transparent 34%),
+    linear-gradient(180deg, #ffffff 0%, #f6fbff 100%);
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
+.home-flow-sticky {
+  position: sticky;
+  top: 100px;
+  min-height: calc(100vh - 100px);
+  padding: 30px 0 38px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  overflow: hidden;
+}
+
+.home-flow-inner {
+  position: relative;
+  z-index: 2;
+  width: min(1500px, calc(100% - 48px));
+  height: 760px;
+  min-height: 350px;
+  display: grid;
+  grid-template-columns: 0.86fr 1.14fr;
+  gap: 64px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.home-flow-copy {
+  max-width: 710px;
+  transform: translateY(-30px);
+}
+ 
+.home-flow-title {
+  margin: 0;
+  color: #061a3a;
+  font-size: clamp(48px, 4.8vw, 68px);
+  line-height: 1.04;
+  letter-spacing: 0.05em;
+  font-weight: 900;
+}
+
+.home-flow-desc {
+  margin: 54px 0 0;
+  max-width: 620px;
+  color: #5e7088;
+  font-size: 17px;
+  line-height: 1.85;
+}
+  
+.home-flow-capability-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 60px;
+  max-width: 560px;
+}
+ 
+.home-flow-capability-row span {
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: #061a3a;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(6, 26, 58, 0.12);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    color 0.22s ease,
+    background 0.22s ease,
+    border-color 0.22s ease,
+    transform 0.22s ease;
+}
+
+.home-flow-capability-row span:hover {
+  color: var(--brand-accent, #00ffb2);
+  background: #061a3a;
+  border-color: #061a3a;
+  transform: translateY(-2px);
+}
+
+.home-flow-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 42px;
+}
+
+.home-flow-btn {
+  height: 54px;
+  padding: 0 34px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(6, 26, 58, 0.12);
+  color: #061a3a;
+  background: rgba(255, 255, 255, 0.72);
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 0.28s ease,
+    background 0.28s ease,
+    border-color 0.28s ease,
+    color 0.28s ease;
+}
+
+.home-flow-btn:hover {
+  transform: translateY(-2px);
+  color: var(--brand-accent, #00ffb2);
+  background: #061a3a;
+  border-color: #061a3a;
+}
+
+/* ================================
+   电视舞台
+================================ */
+
+.home-flow-tv-stage {
+  --shrink: 0;
+  --fade: 0;
+  --slogan: 0;
+  position: relative;
+  height: 620px;
+  min-height: 620px;
+}
+
+.home-flow-tv-frame {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(760px, 100%);
+  height: 540px;
+  transform: translate(-50%, -50%);
+  border-radius: 42px;
+  padding: 16px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.88),
+      rgba(255, 255, 255, 0.34)
+    ),
+    #eef6ff;
+  border: 1px solid rgba(0, 87, 184, 0.12);
+  box-shadow:
+    0 42px 110px rgba(6, 26, 58, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.72);
+}
+
+.home-flow-tv-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 34% 28%, rgba(0, 217, 255, 0.28), transparent 32%),
+    linear-gradient(145deg, #061a3a 0%, #082a56 55%, #020b18 100%);
+}
+
+.home-flow-tv-image {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: 30px;
+  background-size: cover;
+  background-position: center;
+}
+
+.home-flow-tv-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  opacity: 0.18;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.32) 0 1px,
+      transparent 1px 58px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.22) 0 1px,
+      transparent 1px 58px
+    );
+  pointer-events: none;
+}
+
+.home-flow-tv-slogan {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 9;
+  width: 100%;
+  transform: translateX(-50%) translateY(-50%)
+    scale(calc(0.86 + var(--slogan) * 0.14));
+  opacity: var(--slogan);
+  color: #ffffff;
+  font-size: clamp(38px, 4vw, 58px);
+  line-height: 1;
+  letter-spacing: -0.045em;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  pointer-events: none;
+  text-shadow: 0 18px 48px rgba(0, 0, 0, 0.45);
+}
+
+.home-flow-tv-slogan span {
+  color: var(--brand-accent, #00ffb2);
+}
+
+/* ================================
+   应用卡片基础样式
+================================ */
+
+.home-flow-industry-card {
+  position: absolute;
+  z-index: 6;
+  width: 250px;
+  padding: 16px;
+  border-radius: 22px;
+  border: 1px solid rgba(0, 87, 184, 0.1);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 24px 70px rgba(6, 26, 58, 0.15);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  opacity: calc(1 - var(--shrink));
+  transform-origin: center center;
+
+  --card-hover-scale: 1;
+  --card-hover-y: 0px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease,
+    opacity 0.3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .home-flow-industry-card:hover {
+    z-index: 40;
+    --card-hover-scale: 1.26;
+    --card-hover-y: -26px;
+    border-color: rgba(9, 233, 180, 0.62);
+    box-shadow:
+      0 42px 118px rgba(6, 26, 58, 0.26),
+      0 0 0 5px rgba(9, 233, 180, 0.12);
+  }
+
+  .home-flow-industry-card.analysis:hover {
+    z-index: 60;
+  }
+}
+
+.home-flow-industry-card.is-touch-active {
+  z-index: 80;
+  --card-hover-scale: 1.26;
+  --card-hover-y: -26px;
+  border-color: rgba(9, 233, 180, 0.62);
+  box-shadow:
+    0 42px 118px rgba(6, 26, 58, 0.26),
+    0 0 0 5px rgba(9, 233, 180, 0.12);
+}
+
+.home-flow-industry-card.analysis.is-touch-active {
+  z-index: 90;
+}
+
+/* ================================
+   PC 端卡片位置
+================================ */
+
+.home-flow-industry-card.medical {
+  left: -36px;
+  top: -54px;
+  width: 350px;
+  transform:
+    translate(
+      calc(var(--shrink) * 320px),
+      calc(var(--shrink) * 250px + var(--card-hover-y))
+    )
+    rotate(calc(-1.2deg + var(--shrink) * 1.2deg))
+    scale(calc(1 - var(--shrink) * 0.72))
+    scale(var(--card-hover-scale));
+}
+
+.home-flow-industry-card.synbio {
+  right: -42px;
+  top: -48px;
+  width: 335px;
+  z-index: 8;
+  transform:
+    translate(
+      calc(var(--shrink) * -292px),
+      calc(var(--shrink) * 250px + var(--card-hover-y))
+    )
+    rotate(calc(1deg - var(--shrink) * 1deg))
+    scale(calc(1 - var(--shrink) * 0.72))
+    scale(var(--card-hover-scale));
+}
+
+.home-flow-industry-card.lab {
+  left: 2%;
+  bottom: -38px;
+  width: 330px;
+  transform:
+    translate(
+      calc(var(--shrink) * 265px),
+      calc(var(--shrink) * -210px + var(--card-hover-y))
+    )
+    rotate(calc(0.8deg - var(--shrink) * 0.8deg))
+    scale(calc(1 - var(--shrink) * 0.74))
+    scale(var(--card-hover-scale));
+}
+
+.home-flow-industry-card.analysis {
+  left: 49%;
+  top: 57%;
+  width: 360px;
+  z-index: 6;
+  padding: 18px;
+  border-radius: 22px;
+  transform:
+    translate(-50%, calc(-50% + var(--card-hover-y)))
+    rotate(calc(-4deg + var(--shrink) * 4deg))
+    scale(calc(1.02 - var(--shrink) * 0.62))
+    scale(var(--card-hover-scale));
+}
+
+.home-flow-industry-card.ivd {
+  right: -58px;
+  bottom: -42px;
+  width: 320px;
+  transform:
+    translate(
+      calc(var(--shrink) * -270px),
+      calc(var(--shrink) * -205px + var(--card-hover-y))
+    )
+    rotate(calc(-0.8deg + var(--shrink) * 0.8deg))
+    scale(calc(1 - var(--shrink) * 0.74))
+    scale(var(--card-hover-scale));
+}
+
+.home-flow-tv-stage.is-finished .home-flow-industry-card {
+  pointer-events: none;
+}
+
+/* ================================
+   卡片内部
+================================ */
+
+.home-flow-industry-image {
+  position: relative;
+  height: 98px;
+  border-radius: 17px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 24% 30%, rgba(0, 217, 255, 0.38), transparent 22%),
+    radial-gradient(circle at 74% 66%, rgba(0, 87, 184, 0.3), transparent 24%),
+    linear-gradient(135deg, #eaf6ff, #d8ebff);
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 1024px) {
+  .home-flow-industry-card.medical .home-flow-industry-image,
+  .home-flow-industry-card.synbio .home-flow-industry-image {
+    height: 158px;
+  }
+
+  .home-flow-industry-card.lab .home-flow-industry-image,
+  .home-flow-industry-card.ivd .home-flow-industry-image {
+    height: 132px;
+  }
+
+  .home-flow-industry-card.lab,
+  .home-flow-industry-card.ivd {
+    padding: 18px;
+  }
+}
+
+.home-flow-industry-card h3 {
+  margin: 14px 0 0;
+  color: #061a3a;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.home-flow-industry-card.analysis h3 {
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.home-flow-industry-card p {
+  margin: 8px 0 0;
+  color: #5e7088;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.home-flow-industry-card.analysis p {
+  font-size: 13px;
+  line-height: 1.58;
+}
+
+.home-flow-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.home-flow-tags span {
+  padding: 5px 8px;
+  border-radius: 999px;
+  color: #0057b8;
+  background: rgba(0, 174, 239, 0.08);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.home-flow-industry-card.analysis .home-flow-tags span {
+  padding: 5px 9px;
+  font-size: 11px;
+}
+
+/* ================================
+   新手机端结构默认隐藏
+
+   说明：
+   1. PC 端显示原来的 .home-flow-tv-stage
+   2. 手机端才显示新的 .home-flow-mobile-stage
+================================ */
+
+.home-flow-mobile-stage {
+  display: none;
+}
+
+/* ================================
+   底部流程卡片
+================================ */
+
+.home-flow-process-gallery {
+  position: relative;
+  z-index: 3;
+  width: min(1500px, calc(100% - 48px));
+  margin: 30px auto 0;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.home-flow-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.home-flow-process-card {
+  position: relative;
+  min-height: 142px;
+  padding: 24px 24px;
+  border-radius: 22px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 92% 100%, rgba(0, 255, 178, 0.12), transparent 34%),
+    rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(6, 26, 58, 0.1);
+  color: #061a3a;
+  transition:
+    transform 0.28s ease,
+    border-color 0.28s ease,
+    box-shadow 0.28s ease,
+    background 0.28s ease;
+}
+
+.home-flow-process-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(6, 26, 58, 0.18);
+  box-shadow:
+    0 0 0 5px rgba(6, 26, 58, 0.04),
+    0 30px 76px rgba(6, 26, 58, 0.14);
+  background:
+    radial-gradient(circle at 92% 100%, rgba(0, 255, 178, 0.18), transparent 34%),
+    rgba(255, 255, 255, 0.9);
+}
+
+.home-flow-process-card::after {
+  content: "";
+  position: absolute;
+  right: -44px;
+  bottom: -54px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: rgba(9, 233, 180, 0.16);
+  pointer-events: none;
+}
+
+.home-flow-process-card strong {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin-bottom: 14px;
+  color: #061a3a;
+  font-size: 21px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.home-flow-process-card span {
+  position: relative;
+  z-index: 1;
+  display: block;
+  max-width: 92%;
+  color: rgba(6, 26, 58, 0.58);
+  font-size: 15px;
+  line-height: 1.75;
+  font-weight: 400;
+}
+
+/* ================================
+   1440 屏幕修正
+================================ */
+
+@media (min-width: 769px) and (max-width: 1440px) {
+  .home-flow-inner {
+    width: min(1280px, calc(100% - 56px));
+    height: 700px;
+    grid-template-columns: 0.84fr 1.16fr;
+    gap: 44px;
+  }
+
+  .home-flow-title {
+    font-size: clamp(56px, 5vw, 78px);
+  }
+
+  .home-flow-desc {
+    max-width: 540px;
+    font-size: 16px;
+  }
+
+  .home-flow-tv-stage {
+    width: min(660px, 100%);
+    height: 560px;
+    min-height: 560px;
+    margin: 0 auto;
+  }
+
+  .home-flow-tv-frame {
+    width: min(660px, 100%);
+    height: 470px;
+  }
+
+  .home-flow-industry-card.medical {
+    left: -18px;
+    top: -36px;
+    width: 300px;
+  }
+
+  .home-flow-industry-card.synbio {
+    right: -18px;
+    top: -34px;
+    width: 290px;
+  }
+
+  .home-flow-industry-card.lab {
+    left: 2%;
+    bottom: -28px;
+    width: 292px;
+  }
+
+  .home-flow-industry-card.ivd {
+    right: -24px;
+    bottom: -30px;
+    width: 292px;
+  }
+
+  .home-flow-industry-card.analysis {
+    left: 50%;
+    top: 57%;
+    width: 315px;
+  }
+
+  .home-flow-process-gallery {
+    width: min(1280px, calc(100% - 56px));
+    margin-top: 20px;
+  }
+}
+
+/* ================================
+   手机端布局
+================================ */
+
+@media (max-width: 768px) {
+  .home-flow-section {
+    height: auto;
+    min-height: auto;
+    background:
+      radial-gradient(circle at 12% 10%, rgba(0, 217, 255, 0.12), transparent 34%),
+      radial-gradient(circle at 90% 18%, rgba(9, 233, 180, 0.1), transparent 30%),
+      linear-gradient(180deg, #ffffff 0%, #f4f9ff 100%);
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+
+  .home-flow-sticky {
+    position: relative;
+    top: auto;
+    min-height: auto;
+    padding: 26px 0 52px;
+    display: block;
+    overflow: visible;
+  }
+
+  .home-flow-inner {
+    width: min(430px, calc(100% - 32px));
+    height: auto;
+    min-height: 0;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .home-flow-copy {
+    max-width: none;
+    transform: none;
+    padding: 14px 2px 22px;
+  }
+
+  .home-flow-title {
+    margin: 0;
+    color: #061a3a;
+    font-size: clamp(38px, 11vw, 52px);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    font-weight: 900;
+  }
+
+  .home-flow-desc {
+    margin: 18px 0 0;
+    max-width: 100%;
+    color: #5e7088;
+    font-size: 15px;
+    line-height: 1.78;
+  }
+
+  .home-flow-capability-row {
+    display: none;
+  }
+
+  .home-flow-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .home-flow-btn {
+    width: 100%;
+    height: 48px;
+    padding: 0 14px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(6, 26, 58, 0.12);
+    color: #061a3a;
+    background: rgba(255, 255, 255, 0.78);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 750;
+  }
+
+  .home-flow-actions .home-flow-btn:first-child {
+    color: #00ffb2;
+    background: #061a3a;
+    border-color: #061a3a;
+  }
+
+  .home-flow-btn:active {
+    transform: scale(0.97);
+  }
+
+  .home-flow-tv-stage {
+    display: none;
+  }
+
+  .home-flow-mobile-stage {
+    display: block;
+    width: 100%;
+  }
+
+  .home-flow-mobile-tv-card {
+    margin-top: 24px;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  .home-flow-mobile-tv-screen {
+    position: relative;
+    min-height: 390px;
+    border-radius: 16px;
+    overflow: hidden;
+    background:
+      linear-gradient(135deg, rgba(3, 18, 42, 0.72), rgba(0, 38, 86, 0.78)),
+      radial-gradient(circle at 18% 18%, rgba(9, 233, 180, 0.34), transparent 32%),
+      linear-gradient(145deg, #061a3a, #082a56 60%, #020b18);
+    transition: background 0.36s ease;
+  }
+
+  .home-flow-mobile-tv-screen::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    opacity: 0.18;
+    background:
+      repeating-linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.3) 0 1px,
+        transparent 1px 54px
+      ),
+      repeating-linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.22) 0 1px,
+        transparent 1px 54px
+      );
+    pointer-events: none;
+  }
+
+  .home-flow-mobile-tv-screen::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background:
+      radial-gradient(circle at 70% 12%, rgba(255, 255, 255, 0.18), transparent 22%),
+      linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.12) 100%);
+    pointer-events: none;
+  }
+
+  .home-flow-mobile-tv-image-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.78;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.02);
+    transition:
+      opacity 0.34s ease,
+      transform 0.34s ease,
+      background-image 0.34s ease;
+  }
+
+  .home-flow-mobile-tv-image-layer.is-changing {
+    opacity: 0.58;
+    transform: scale(1.06);
+  }
+
+  .home-flow-mobile-tv-content {
+    position: relative;
+    z-index: 3;
+    min-height: 390px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 26px 22px 22px;
+    transition:
+      opacity 0.24s ease,
+      transform 0.24s ease;
+  }
+
+  .home-flow-mobile-tv-content.is-changing {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  .home-flow-mobile-tv-topline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .home-flow-mobile-tv-current-index {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+  }
+
+  .home-flow-mobile-tv-mini-slogan {
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .home-flow-mobile-tv-mini-slogan span {
+    color: #00ffb2;
+  }
+
+  .home-flow-mobile-tv-main {
+    margin-top: auto;
+  }
+
+  .home-flow-mobile-tv-title {
+    margin: 0;
+    color: #ffffff;
+    font-size: 30px;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    font-weight: 900;
+    text-shadow: 0 16px 44px rgba(0, 0, 0, 0.34);
+  }
+
+  .home-flow-mobile-tv-desc {
+    margin: 12px 0 0;
+    max-width: 300px;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 14px;
+    line-height: 1.68;
+  }
+
+  .home-flow-mobile-tv-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+  }
+
+  .home-flow-mobile-tv-tags span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 30px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    color: #dffef7;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(10px);
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  .home-flow-mobile-app-tabs-wrap {
+    margin-top: 18px;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+
+  .home-flow-mobile-app-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+  }
+
+  .home-flow-mobile-app-tab {
+    min-height: 38px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(6, 26, 58, 0.1);
+    color: #061a3a;
+    background: rgba(255, 255, 255, 0.72);
+    font-size: 13px;
+    font-weight: 760;
+    cursor: pointer;
+    transition:
+      transform 0.22s ease,
+      color 0.22s ease,
+      background 0.22s ease,
+      border-color 0.22s ease,
+      box-shadow 0.22s ease;
+  }
+
+  .home-flow-mobile-app-tab.is-active {
+    color: #00ffb2;
+    background: #061a3a;
+    border-color: #061a3a;
+    box-shadow: none;
+  }
+
+  .home-flow-mobile-app-tab:active {
+    transform: scale(0.96);
+  }
+
+  .home-flow-process-gallery {
+    width: min(430px, calc(100% - 32px));
+    margin: 22px auto 0;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  .home-flow-process-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .home-flow-process-card {
+    position: relative;
+    min-height: 138px;
+    padding: 18px 16px;
+    border-radius: 22px;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 96% 100%, rgba(0, 255, 178, 0.14), transparent 42%),
+      rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(6, 26, 58, 0.1);
+    box-shadow: none;
+  }
+
+  .home-flow-process-card:hover {
+    transform: none;
+    border-color: rgba(6, 26, 58, 0.1);
+    box-shadow: none;
+    background:
+      radial-gradient(circle at 96% 100%, rgba(0, 255, 178, 0.14), transparent 42%),
+      rgba(255, 255, 255, 0.78);
+  }
+
+  .home-flow-process-card strong {
+    position: relative;
+    z-index: 1;
+    display: block;
+    margin-bottom: 0;
+    color: #061a3a;
+    font-size: 17px;
+    line-height: 1.2;
+    font-weight: 850;
+  }
+
+  .home-flow-process-card span {
+    position: relative;
+    z-index: 1;
+    display: block;
+    margin-top: 10px;
+    max-width: 100%;
+    color: rgba(6, 26, 58, 0.58);
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .home-flow-process-card::after {
+    content: "";
+    position: absolute;
+    right: -44px;
+    bottom: -48px;
+    width: 120px;
+    height: 120px;
+    border-radius: 999px;
+    background: rgba(9, 233, 180, 0.14);
+    pointer-events: none;
+  }
+}
+/* =======================================================
+   修复手机端应用按钮不能点击的问题
+
+   原因：
+   旧的 PC / 旧手机电视舞台可能还在页面层级里，
+   即使看起来隐藏了，也可能挡住下面的新按钮。
+======================================================= */
+
+/* 手机端彻底隐藏旧的漂浮卡片舞台，避免挡住按钮 */
+.home-flow-tv-stage {
+  display: none !important;
+  pointer-events: none !important;
+}
+
+/* 手机端新结构放到更高层级 */
+.home-flow-mobile-stage {
+  position: relative;
+  z-index: 20;
+  display: block;
+  width: 100%;
+  pointer-events: auto;
+}
+
+/* 应用按钮区域必须可以接收点击 */
+.home-flow-mobile-app-tabs-wrap {
+  position: relative;
+  z-index: 40;
+  pointer-events: auto;
+}
+
+.home-flow-mobile-app-tabs {
+  position: relative;
+  z-index: 41;
+  pointer-events: auto;
+}
+
+/* 每个按钮强制允许点击 */
+.home-flow-mobile-app-tab {
+  position: relative;
+  z-index: 42;
+  pointer-events: auto;
+  touch-action: manipulation;
+}
+
+/* 电视机的装饰层不能拦截点击 */
+.home-flow-mobile-tv-screen::before,
+.home-flow-mobile-tv-screen::after,
+.home-flow-mobile-tv-image-layer {
+  pointer-events: none;
+}
+
+/* =========================================================
+   第二屏 PC / 手机端显示切换兜底修复
+
+   作用：
+   1. 电脑端只显示 PC 端电视机 + 漂浮卡片
+   2. 手机端只显示新的手机电视展示屏 + 6 个按钮
+   3. 防止电脑宽度下显示未样式化的手机端结构
+========================================================= */
+
+/* ================================
+   电脑端 / 平板横屏：769px 及以上
+   只显示 PC 端结构
+================================ */
+
+@media (min-width: 769px) {
+  /* PC 端显示原来的电视舞台 */
+  .home-flow-tv-stage {
+    display: block !important;
+  }
+
+  /* PC 端必须隐藏手机端新结构 */
+  .home-flow-mobile-stage {
+    display: none !important;
+  }
+
+  /* PC 端恢复原来的整体高度和 sticky 效果 */
+  .home-flow-section {
+    height: 220vh;
+    min-height: 220vh;
+  }
+
+  .home-flow-sticky {
+    position: sticky;
+    top: 100px;
+    min-height: calc(100vh - 100px);
+  }
+
+  .home-flow-inner {
+    display: grid;
+    grid-template-columns: 0.86fr 1.14fr;
+  }
+}
+
+/* ================================
+   手机端：768px 及以下
+   只显示手机端结构
+================================ */
+
+@media (max-width: 768px) {
+  /* 手机端隐藏 PC 端旧电视舞台 */
+  .home-flow-tv-stage {
+    display: none !important;
+  }
+
+  /* 手机端显示新的电视展示屏 */
+  .home-flow-mobile-stage {
+    display: block !important;
+  }
+
+  /* 手机端不再用 220vh 的滚动动画高度 */
+  .home-flow-section {
+    height: auto !important;
+    min-height: auto !important;
+  }
+
+  .home-flow-sticky {
+    position: relative !important;
+    top: auto !important;
+    min-height: auto !important;
+  }
+
+  .home-flow-inner {
+    display: block !important;
+  }
+}
+
+ 
+ /* =========================================================
+   首页第三屏 + 第四屏
+   对应组件：components/home/HomeCompanyStrengthSection.tsx
+========================================================= */
+
+.home-company-about-section {
+  position: relative;
+
+  /* 不要强制撑满 100vh，否则顶部容易出现大空白 */
+  min-height: 100vh;
+  height: auto;
+
+  /* 顶部留白减小，让第三屏内容更快出现 */
+  padding: 72px 0 0;
+ 
+  overflow: hidden;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.0) 0%,
+      rgba(247, 250, 253, 0.0) 100%
+    ),
+    linear-gradient(135deg, #eef4f8 0%, #dfeaf2 45%, #f7fbff 100%);
+} 
+  
+.home-company-about-section::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 238px;
+  height: 360px;
+  z-index: 0;
+  opacity: 0.2;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.98),
+      rgba(255, 255, 255, 0.66),
+      rgba(255, 255, 255, 0.92)
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(6, 26, 58, 0.08) 0 1px,
+      transparent 1px 58px
+    ),
+    linear-gradient(135deg, #cbd9e4 0%, #8da6b9 38%, #eef5fa 100%);
+  pointer-events: none;
+}
+
+.home-company-about-shell {
+  position: relative;
+  z-index: 2;
+  width: min(1600px, calc(100% - 96px));
+
+  /* 不再强制占满整个高度 */
+  min-height: auto;
+  height: auto;
+
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-company-about-main {
+  display: grid;
+  grid-template-columns: 0.98fr 1.12fr;
+  gap: 120px;
+
+  /* 关键：不要垂直居中，改成顶部对齐 */
+  align-items: start;
+
+  /* 控制主体内容和底部荣誉之间的距离 */
+  padding-top: 40px;
+  padding-bottom: 56px;
+}
+
+.home-company-about-left,
+.home-company-about-right {
+  /* 原来是 150px，导致右侧公司介绍又被往下压 */
+  padding-top: 40px;
+}
+
+.home-company-about-title {
+  margin: 0 0 26px;
+  color: #111827;
+  font-size: clamp(36px, 3.4vw, 56px);
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+
+.home-company-about-title span {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.48em;
+  line-height: 1.4;
+  letter-spacing: 0.18em;
+  font-weight: 400;
+}
+
+.home-company-video-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(135deg, #dcebf5 0%, #aac4d7 34%, #5e80a1 66%, #173368 100%);
+}
+
+.home-company-video-wrap::before {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: 18%;
+  height: 44%;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.38) 0 1px,
+      transparent 1px 12%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.92),
+      rgba(255, 255, 255, 0.38)
+    );
+  box-shadow:
+    130px -32px 0 -8px rgba(255, 255, 255, 0.24),
+    270px -12px 0 -8px rgba(255, 255, 255, 0.2),
+    0 34px 90px rgba(6, 26, 58, 0.12);
+  opacity: 0.95;
+}
+
+.home-company-video-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0),
+    rgba(6, 26, 58, 0.1)
+  );
+  pointer-events: none;
+}
+
+.home-company-video-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-company-video-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 3;
+  width: 68px;
+  height: 68px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  background: rgba(6, 26, 58, 0.18);
+  backdrop-filter: blur(10px);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.home-company-video-play::before {
+  content: "";
+  position: absolute;
+  left: 29px;
+  top: 22px;
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 20px solid #ffffff;
+}
+
+.home-company-about-right {
+  padding-top: 150px;
+}
+
+.home-company-intro-title {
+  margin: 0;
+  color: #111827;
+  font-size: clamp(30px, 2.2vw, 42px);
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.home-company-intro-desc {
+  margin: 20px 0 0;
+  max-width: 900px;
+  color: rgba(17, 24, 39, 0.66);
+  font-size: 16px;
+  line-height: 1.9;
+  text-align: justify;
+}
+
+.home-company-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 24px;
+  border: none;
+}
+
+.home-company-metric-card {
+  position: relative;
+  min-height: auto;
+  padding: 8px 0;
+  background: transparent;
+  border: none;
+  text-align: left;
+}
+
+.home-company-metric-card strong {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 2px;
+  color: #173368;
+  font-size: clamp(34px, 3.4vw, 56px);
+  line-height: 1;
+  letter-spacing: -0.045em;
+  font-weight: 680;
+  transform-origin: left bottom;
+  animation: homeMetricReveal 0.72s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.home-company-metric-card:nth-child(1) strong {
+  animation-delay: 0.05s;
+}
+
+.home-company-metric-card:nth-child(2) strong {
+  animation-delay: 0.16s;
+}
+
+.home-company-metric-card:nth-child(3) strong {
+  animation-delay: 0.27s;
+}
+
+.home-company-metric-card:nth-child(4) strong {
+  animation-delay: 0.38s;
+}
+
+.home-metric-number {
+  display: inline-block;
+  color: #173368;
+}
+
+.home-metric-suffix {
+  display: inline-block;
+  margin-left: 2px;
+  color: #173368;
+  font-size: 0.46em;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 0;
+  transform: translateY(-0.08em);
+  opacity: 0.86;
+}
+
+.home-company-metric-card > span {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin-top: 8px;
+  color: rgba(17, 24, 39, 0.68);
+  font-size: 16px;
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+.home-company-about-actions {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 26px;
+}
+
+.home-company-primary-btn {
+  height: 48px;
+  padding: 0 44px;
+  border-radius: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #111827;
+  background: transparent;
+  border: 1px solid rgba(17, 24, 39, 0.34);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition:
+    transform 0.26s ease,
+    color 0.26s ease,
+    background 0.26s ease,
+    border-color 0.26s ease;
+}
+
+.home-company-primary-btn::after {
+  content: " >";
+  margin-left: 22px;
+  font-weight: 800;
+}
+
+.home-company-primary-btn:hover {
+  color: #ffffff;
+  background: #061a3a;
+  border-color: #061a3a;
+  transform: translateY(-2px);
+}
+
+.home-honor-carousel-section {
+  position: relative;
+  z-index: 2;
+  margin-top: 150px;
+  padding: 28px 0 34px;
+  border-top: 1px solid rgba(6, 26, 58, 0.08);
+  overflow: hidden;
+}
+ 
+.home-honor-carousel-mask {
+  position: relative;
+  overflow: hidden;
+  padding: 0 80px;
+}
+
+.home-honor-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  gap: 36px;
+  animation: homeHonorScroll 28s linear infinite;
+}
+
+.home-honor-carousel-mask:hover .home-honor-track {
+  animation-play-state: paused;
+}
+
+.home-honor-card {
+  width: 240px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  opacity: 0.62;
+  filter: grayscale(1);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  text-align: center;
+  transition:
+    opacity 0.24s ease,
+    filter 0.24s ease;
+}
+
+.home-honor-card:hover {
+  opacity: 0.9;
+  filter: grayscale(0);
+}
+
+.home-honor-image {
+  width: 78%;
+  aspect-ratio: 4 / 3;
+  margin: 0 auto 12px;
+  opacity: 0.86;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.72),
+      rgba(255, 255, 255, 0.36)
+    ),
+    var(--home-honor-image),
+    linear-gradient(135deg, #eef3f7 0%, #cfdbe4 52%, #eef4f8 100%);
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(6, 26, 58, 0.08);
+}
+
+.home-honor-card strong {
+  display: block;
+  color: rgba(6, 26, 58, 0.58);
+  font-size: 15px;
+  line-height: 1.35;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* =========================================================
+   第四屏：企业优势
+========================================================= */
+
+.home-company-advantages-section {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 0;
+  background: #061a3a;
+  overflow: hidden;
+}
+
+.home-advantages-head {
+  position: absolute;
+  left: 50%;
+  top: 112px;
+  z-index: 20;
+  width: min(980px, calc(100% - 48px));
+  transform: translateX(-50%);
+  text-align: center;
+  pointer-events: none;
+}
+
+.home-advantages-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 14px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.home-advantages-kicker::before,
+.home-advantages-kicker::after {
+  content: "";
+  width: 46px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.36);
+}
+
+.home-advantages-title {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(34px, 3.2vw, 52px);
+  line-height: 1.14;
+  letter-spacing: -0.045em;
+  font-weight: 900;
+  text-shadow: none;
+}
+
+.home-advantages-desc {
+  margin: 16px auto 0;
+  max-width: 780px;
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 15px;
+  line-height: 1.78;
+}
+
+.home-advantage-panels {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.home-advantage-panel {
+  position: relative;
+  flex: 1 1 20%;
+  min-width: 0;
+  overflow: hidden;
+  cursor: pointer;
+  will-change: flex-grow, flex-basis;
+  backface-visibility: hidden;
+  transition:
+    flex-grow 0.86s cubic-bezier(0.22, 1, 0.36, 1),
+    flex-basis 0.86s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.home-advantage-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: var(--panel-bg);
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.02);
+  transition:
+    transform 0.62s ease,
+    filter 0.62s ease;
+}
+
+.home-advantage-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.12) 0%,
+    rgba(0, 0, 0, 0.32) 58%,
+    rgba(0, 0, 0, 0.48) 100%
+  );
+  transition: background 0.45s ease;
+}
+
+.home-advantage-panels:hover .home-advantage-panel {
+  flex-grow: 0.82;
+  flex-basis: 15%;
+}
+
+.home-advantage-panels:hover .home-advantage-panel:hover {
+  flex-grow: 2.55;
+  flex-basis: 40%;
+}
+
+.home-advantage-panel:hover::before {
+  transform: scale(1.08);
+  filter: saturate(1.08) contrast(1.03);
+}
+
+.home-advantage-panel:hover::after {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.06) 0%,
+    rgba(0, 0, 0, 0.26) 52%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+}
+
+.home-panel-content {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  min-height: 100vh;
+  padding: 0 34px 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  color: #ffffff;
+}
+
+.home-panel-index {
+  display: block;
+  margin: 0 0 18px;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.home-panel-title {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(24px, 2vw, 34px);
+  line-height: 1.16;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+}
+
+.home-panel-line {
+  width: 52px;
+  height: 2px;
+  margin-top: 22px;
+  background: rgba(255, 255, 255, 0.52);
+  transition:
+    width 0.35s ease,
+    background 0.35s ease;
+}
+
+.home-panel-brief,
+.home-panel-detail,
+.home-panel-arrow {
+  opacity: 0;
+  transform: translateY(18px);
+  pointer-events: none;
+  transition:
+    opacity 0.46s ease 0.12s,
+    transform 0.46s ease 0.12s;
+}
+
+.home-panel-brief {
+  margin: 24px 0 0;
+  max-width: 390px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.home-panel-detail {
+  max-width: 460px;
+  max-height: 0;
+  margin: 0;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  line-height: 1.75;
+  transition:
+    max-height 0.52s ease 0.16s,
+    opacity 0.46s ease 0.16s,
+    transform 0.46s ease 0.16s,
+    margin 0.46s ease 0.16s;
+}
+
+.home-panel-arrow {
+  width: 52px;
+  height: 52px;
+  margin-top: 28px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  font-size: 25px;
+}
+
+.home-advantage-panel:hover .home-panel-line {
+  width: 120px;
+  background: #ffffff;
+}
+
+.home-advantage-panel:hover .home-panel-brief,
+.home-advantage-panel:hover .home-panel-detail,
+.home-advantage-panel:hover .home-panel-arrow {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.home-advantage-panel:hover .home-panel-detail {
+  max-height: 180px;
+  margin-top: 14px;
+}
+
+.home-advantage-panel:hover .home-panel-arrow {
+  transform: translateX(10px);
+}
+
+.home-advantage-rd {
+  --panel-bg:
+    linear-gradient(135deg, rgba(210, 224, 235, 0.9), rgba(58, 86, 112, 0.68)),
+    linear-gradient(180deg, #d7e7f2 0%, #6d8ba6 52%, #233f5a 100%);
+}
+
+.home-advantage-manufacturing {
+  --panel-bg:
+    linear-gradient(135deg, rgba(210, 218, 224, 0.9), rgba(82, 102, 122, 0.68)),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.18) 0 2px,
+      transparent 2px 26px
+    ),
+    linear-gradient(180deg, #d6dde5 0%, #7e8da0 45%, #2f4358 100%);
+}
+
+.home-advantage-quality {
+  --panel-bg:
+    linear-gradient(135deg, rgba(221, 238, 241, 0.9), rgba(40, 116, 132, 0.72)),
+    radial-gradient(circle at 70% 28%, rgba(255, 255, 255, 0.5), transparent 26%),
+    linear-gradient(180deg, #d9eef4 0%, #6fa7b5 44%, #24566b 100%);
+}
+
+.home-advantage-custom {
+  --panel-bg:
+    linear-gradient(135deg, rgba(211, 242, 233, 0.86), rgba(28, 125, 113, 0.72)),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.16) 0 1px,
+      transparent 1px 34px
+    ),
+    linear-gradient(180deg, #d6f3eb 0%, #5ca99c 48%, #1e5f58 100%);
+}
+
+.home-advantage-service {
+  --panel-bg:
+    linear-gradient(135deg, rgba(231, 240, 248, 0.9), rgba(86, 130, 166, 0.72)),
+    radial-gradient(circle at 78% 22%, rgba(255, 255, 255, 0.55), transparent 25%),
+    linear-gradient(180deg, #e4f1fb 0%, #8daeca 48%, #3b6588 100%);
+}
+
+.home-company-advantages-section,
+.home-company-advantages-section * {
+  box-shadow: none !important;
+}
+
+/* =========================================================
+   动画
+========================================================= */
+
+@keyframes homeHonorScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes homeMetricReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(18px) scale(0.92);
+    filter: blur(4px);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(-4px) scale(1.03);
+    filter: blur(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* =========================================================
+   响应式：平板
+========================================================= */
+
+@media (max-width: 1180px) {
+  .home-company-about-section {
+    height: auto;
+    min-height: auto;
+    padding-bottom: 42px;
+  }
+
+  .home-company-about-shell {
+    height: auto;
+  }
+
+  .home-company-about-main {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .home-company-about-right {
+    padding-top: 0;
+  }
+
+  .home-company-metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-advantage-panels {
+    flex-wrap: wrap;
+  }
+
+  .home-advantage-panel {
+    flex: 1 1 50%;
+    min-height: 420px;
+  }
+
+  .home-advantage-panels:hover .home-advantage-panel,
+  .home-advantage-panels:hover .home-advantage-panel:hover {
+    flex-grow: 1;
+    flex-basis: 50%;
+  }
+
+  .home-panel-content {
+    min-height: 420px;
+  }
+}
+
+/* =========================================================
+   响应式：手机端
+========================================================= */
+
+@media (max-width: 768px) {
+  .home-company-about-section {
+    height: auto;
+    min-height: auto;
+    padding: 82px 0 42px;
+    overflow: visible;
+  }
+
+.home-company-about-section::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  /* 背景层从第三屏顶部开始铺满 */
+  top: 0;
+  bottom: 0;
+
+  z-index: 0;
+  opacity: 0.18;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.96),
+      rgba(255, 255, 255, 0.72),
+      rgba(255, 255, 255, 0.96)
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(6, 26, 58, 0.06) 0 1px,
+      transparent 1px 58px
+    ),
+    linear-gradient(135deg, #cbd9e4 0%, #8da6b9 38%, #eef5fa 100%);
+  pointer-events: none;
+}
+ 
+  .home-company-about-shell {
+    width: calc(100% - 32px);
+    height: auto;
+    display: block;
+  }
+
+  .home-company-about-main {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-bottom: 0;
+  }
+
+  .home-company-about-left,
+  .home-company-about-right {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .home-company-about-right {
+    padding-top: 0;
+  }
+
+  .home-company-about-title {
+    margin: 0 0 18px;
+    font-size: clamp(30px, 8vw, 40px);
+    line-height: 1.15;
+  }
+
+  .home-company-about-title span {
+    margin-top: 6px;
+    font-size: 18px;
+    line-height: 1.35;
+    letter-spacing: 0.08em;
+  }
+
+  .home-company-video-wrap {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .home-company-intro-title {
+    font-size: 24px;
+    line-height: 1.25;
+  }
+
+  .home-company-intro-desc {
+    margin-top: 14px;
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.78;
+    text-align: left;
+  }
+
+  .home-company-metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 14px;
+    margin-top: 24px;
+  }
+
+  .home-company-metric-card {
+    padding: 0;
+  }
+
+  .home-company-metric-card strong {
+    font-size: clamp(34px, 10vw, 46px);
+  }
+
+  .home-company-metric-card > span {
+    margin-top: 8px;
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  .home-company-about-actions {
+    margin-top: 24px;
+  }
+
+  .home-company-primary-btn {
+    height: 46px;
+    padding: 0 34px;
+    font-size: 14px;
+  }
+
+  .home-honor-carousel-section {
+    margin-top: 34px;
+    padding: 24px 0 10px;
+  }
+
+  .home-honor-carousel-mask {
+    padding: 0;
+  }
+
+  .home-honor-track {
+    gap: 20px;
+    animation-duration: 32s;
+  }
+
+  .home-honor-card {
+    width: 150px;
+    opacity: 0.72;
+  }
+
+  .home-honor-image {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .home-honor-card strong {
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
+  .home-company-advantages-section {
+    min-height: auto;
+    padding: 56px 0 50px;
+  }
+
+  .home-advantages-head {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: calc(100% - 32px);
+    margin: 0 auto 26px;
+    transform: none;
+    text-align: left;
+    pointer-events: auto;
+  }
+
+  .home-advantages-kicker {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+
+  .home-advantages-kicker::before,
+  .home-advantages-kicker::after {
+    width: 26px;
+  }
+
+  .home-advantages-title {
+    font-size: clamp(30px, 8vw, 42px);
+    line-height: 1.12;
+  }
+
+  .home-advantages-desc {
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 1.72;
+  }
+
+  .home-advantage-panels {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: calc(100% - 32px);
+    min-height: auto;
+    margin: 0 auto;
+    gap: 14px;
+  }
+
+  .home-advantage-panel,
+  .home-advantage-panels:hover .home-advantage-panel,
+  .home-advantage-panels:hover .home-advantage-panel:hover {
+    min-height: 320px;
+    flex: none;
+    flex-basis: auto;
+    flex-grow: 0;
+    border-radius: 18px;
+  }
+
+  .home-panel-content {
+    min-height: 320px;
+    padding: 26px 22px;
+  }
+
+  .home-panel-index {
+    margin-bottom: 14px;
+    font-size: 12px;
+  }
+
+  .home-panel-title {
+    font-size: 25px;
+    white-space: normal;
+  }
+
+  .home-panel-line {
+    margin-top: 18px;
+  }
+
+  .home-panel-brief,
+  .home-panel-detail,
+  .home-panel-arrow {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+
+  .home-panel-brief {
+    margin-top: 18px;
+    font-size: 14px;
+    line-height: 1.68;
+  }
+
+  .home-panel-detail {
+    max-height: none;
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .home-panel-arrow {
+    width: 44px;
+    height: 44px;
+    margin-top: 20px;
+  }
+}
