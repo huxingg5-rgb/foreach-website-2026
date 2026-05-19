@@ -937,14 +937,14 @@ button {
   position: relative; /* 允许副标题用 transform 微调位置 */
   max-width: 980px; /* 中文副标题最大宽度 */
   margin: 0; /* 清除副标题默认外边距 */
-  color: rgba(255, 255, 255, 0.6); /* 副标题文字颜色 */
+  color: rgba(255, 255, 255, 1); /* 副标题文字颜色 */
   font-size: clamp(16px, 5vw, 24px); /* 响应式副标题字号 */
   font-weight: 400; /* 副标题字重 */
   line-height: 1.2; /* 副标题行高 */
   letter-spacing: 0.05em; /* 中文副标题字距 */
   transform: translate(0px, 80px); /* 副标题位置微调 */
 }
-
+ 
 .home-hero-actions {
   display: flex; /* 两个按钮横向排列 */
   align-items: center; /* 按钮垂直居中 */
@@ -1906,10 +1906,30 @@ html[lang="ru"] .home-hero-btn:hover {
 }
 
 @media (hover: hover) and (pointer: fine) {
+  .home-flow-tv-stage:has(.home-flow-industry-card:hover)
+    .home-flow-industry-card:not(:hover) {
+    --card-hover-scale: 0.92;
+    filter: saturate(0.82);
+  }
+
+  .home-flow-tv-stage.has-hovered-card .home-flow-industry-card.is-pc-dimmed {
+    --card-hover-scale: 0.78;
+    --card-hover-y: 8px;
+    filter: saturate(0.72);
+  }
+
+  .home-flow-tv-stage.has-hovered-card .home-flow-industry-card.is-pc-hovered {
+    z-index: 50;
+    --card-hover-scale: 1.26;
+    --card-hover-y: -26px;
+    filter: saturate(1);
+  }
+
   .home-flow-industry-card:hover {
     z-index: 40;
     --card-hover-scale: 1.26;
     --card-hover-y: -26px;
+    filter: saturate(1);
     border-color: rgba(9, 233, 180, 0.62);
     box-shadow:
       0 42px 118px rgba(6, 26, 58, 0.26),
@@ -2011,7 +2031,7 @@ html[lang="ru"] .home-hero-btn:hover {
 }
 
 .home-flow-tv-stage.is-finished .home-flow-industry-card {
-  pointer-events: none;
+  pointer-events: auto; /* PC 端收缩完成后仍允许鼠标划到卡片并浮起 */
 }
 
 /* ================================
@@ -2706,6 +2726,11 @@ html[lang="ru"] .home-hero-btn:hover {
   /* PC 端显示原来的电视舞台 */
   .home-flow-tv-stage {
     display: block !important;
+    pointer-events: auto !important; /* 覆盖手机端点击修复兜底，恢复 PC 卡片 hover */
+  }
+
+  .home-flow-industry-card {
+    pointer-events: auto; /* PC 端每张漂浮卡片都可以接收鼠标 */
   }
 
   /* PC 端必须隐藏手机端新结构 */
@@ -2769,41 +2794,53 @@ html[lang="ru"] .home-hero-btn:hover {
    首页第三屏 + 第四屏
    对应组件：components/home/HomeCompanyStrengthSection.tsx
 ========================================================= */
+/* =========================================================
+   首页第三屏：公司介绍 + 公司宣传片
+
+   文件路径：
+   app/globals.css
+
+   设计目标：
+   1. 第三屏整体更紧凑，避免顶部空白太大
+   2. 左侧视频固定 16:9，不会加载后自动变矮
+   3. 右侧公司介绍不再被 padding-top 压得太低
+   4. 荣誉资质滚动区域距离更合理
+   5. 保持苹果式简洁、浅色科技感
+========================================================= */
 
 .home-company-about-section {
   position: relative;
-
-  /* 不要强制撑满 100vh，否则顶部容易出现大空白 */
-  min-height: 100vh;
+  min-height: auto;
   height: auto;
-
-  /* 顶部留白减小，让第三屏内容更快出现 */
-  padding: 72px 0 0;
- 
+  padding: 88px 0 0;
   overflow: hidden;
+   
   background:
     linear-gradient(
       180deg,
-      rgba(255, 255, 255, 0.0) 0%,
-      rgba(247, 250, 253, 0.0) 100%
+      rgba(255, 255, 255, 0.86) 0%,
+      rgba(247, 251, 255, 0.72) 44%,
+      rgba(239, 246, 252, 0.96) 100%
     ),
-    linear-gradient(135deg, #eef4f8 0%, #dfeaf2 45%, #f7fbff 100%);
-} 
-  
+    linear-gradient(135deg, #f6fbff 0%, #e7f0f7 42%, #f8fcff 100%);
+}
+
+/* 背景里的淡淡科技纹理 */
 .home-company-about-section::before {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
-  top: 238px;
+  top: 210px;
   height: 360px;
   z-index: 0;
-  opacity: 0.2;
+  opacity: 0.16;
+
   background:
     linear-gradient(
       90deg,
       rgba(255, 255, 255, 0.98),
-      rgba(255, 255, 255, 0.66),
+      rgba(255, 255, 255, 0.58),
       rgba(255, 255, 255, 0.92)
     ),
     repeating-linear-gradient(
@@ -2812,179 +2849,550 @@ html[lang="ru"] .home-hero-btn:hover {
       transparent 1px 58px
     ),
     linear-gradient(135deg, #cbd9e4 0%, #8da6b9 38%, #eef5fa 100%);
+
   pointer-events: none;
 }
-
+   
+/* 第三屏主容器 */
 .home-company-about-shell {
   position: relative;
   z-index: 2;
   width: min(1600px, calc(100% - 96px));
-
-  /* 不再强制占满整个高度 */
-  min-height: auto;
   height: auto;
-
+  min-height: auto;
   margin: 0 auto;
+
   display: flex;
   flex-direction: column;
 }
 
+/* 左右两栏布局 */
 .home-company-about-main {
   display: grid;
-  grid-template-columns: 0.98fr 1.12fr;
-  gap: 120px;
+  grid-template-columns: minmax(520px, 0.96fr) minmax(560px, 1.04fr);
+  gap: clamp(72px, 7vw, 128px);
 
-  /* 关键：不要垂直居中，改成顶部对齐 */
   align-items: start;
 
-  /* 控制主体内容和底部荣誉之间的距离 */
-  padding-top: 40px;
-  padding-bottom: 56px;
+  padding-top: 24px;
+  padding-bottom: 42px;
 }
 
+/* 左右两侧都不要再额外大幅下压 */
 .home-company-about-left,
 .home-company-about-right {
-  /* 原来是 150px，导致右侧公司介绍又被往下压 */
-  padding-top: 40px;
+  padding-top: 11;
 }
-
+ 
+/* 左侧标题 */
 .home-company-about-title {
-  margin: 0 0 26px;
+  margin: 0 0 28px;
   color: #111827;
-  font-size: clamp(36px, 3.4vw, 56px);
-  line-height: 1.18;
+  font-size: clamp(36px, 3.2vw, 74px);
+  line-height: 1.16;
   letter-spacing: 0.02em;
-  font-weight: 500;
-}
+  font-weight: 520;
+}  
 
 .home-company-about-title span {
   display: block;
-  margin-top: 8px;
-  font-size: 0.48em;
+  margin-top: 9px;
+  color: rgba(17, 24, 39, 0.52);
+  font-size: 0.44em;
   line-height: 1.4;
   letter-spacing: 0.18em;
   font-weight: 400;
+  text-transform: uppercase;
 }
+/* =========================================================
+   首页第三屏：公司介绍 + 宣传片 + 数据 + 荣誉轮播
 
-.home-company-video-wrap {
+   文件路径：
+   app/globals.css
+
+   对应组件：
+   components/home/HomeCompanyStrengthSection.tsx
+
+   设计目标：
+   1. 第三屏整体形成完整一屏，不再出现顶部大面积纯白空白
+   2. 左侧宣传片保持 16:9，封面和视频不变形
+   3. 右侧公司介绍、数据、按钮保持简洁工业科技风
+   4. 底部荣誉资质继续保留在第三屏下方，不单独拆成第四屏
+   5. 代码只保留这一套，避免之前多次追加导致互相覆盖
+========================================================= */
+
+
+/* =========================================================
+   1. 第三屏整体区域
+========================================================= */
+
+.home-company-about-section {
   position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
+
+  /*
+    min-height: 100vh 表示第三屏至少占满一整个浏览器高度。
+    这样第三屏不会只被内容撑开，视觉上更像完整一屏。
+  */
+  min-height: 100vh;
+  height: auto;
+
+  /*
+    不在 section 上加很大的 padding。
+    真正的上下间距交给内部 shell 控制，避免顶部出现大白边。
+  */
+  padding: 0;
+
   overflow: hidden;
-  border-radius: 0;
+
+  /*
+    浅蓝灰科技背景：
+    1. 比纯白更有层次
+    2. 和 FOREACH 深蓝品牌色更统一
+    3. 不会显得电商化或模板化
+  */
   background:
+    radial-gradient(
+      circle at 16% 12%,
+      rgba(9, 233, 180, 0.08),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 82% 10%,
+      rgba(23, 51, 104, 0.08),
+      transparent 34%
+    ),
     linear-gradient(
       180deg,
-      rgba(255, 255, 255, 0.05),
-      rgba(255, 255, 255, 0)
-    ),
-    linear-gradient(135deg, #dcebf5 0%, #aac4d7 34%, #5e80a1 66%, #173368 100%);
+      #eef6fb 0%,
+      #f8fbff 42%,
+      #edf5fa 100%
+    );
 }
 
-.home-company-video-wrap::before {
+/*
+/* =========================================================
+   第三屏淡背景图片层
+
+   作用：
+   1. 不改变第三屏原来的浅蓝灰背景
+   2. 在整个第三屏铺一张很淡的背景图片
+   3. 图片全屏铺满，不只显示底部一块
+   4. 不影响视频、文字、按钮点击
+========================================================= */
+
+.home-company-about-section::after {
   content: "";
   position: absolute;
-  left: 8%;
-  right: 8%;
-  bottom: 18%;
-  height: 44%;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.38) 0 1px,
-      transparent 1px 12%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.92),
-      rgba(255, 255, 255, 0.38)
-    );
-  box-shadow:
-    130px -32px 0 -8px rgba(255, 255, 255, 0.24),
-    270px -12px 0 -8px rgba(255, 255, 255, 0.2),
-    0 34px 90px rgba(6, 26, 58, 0.12);
-  opacity: 0.95;
+
+  /*
+    让图片层铺满整个第三屏。
+    inset: 0 等于 top/right/bottom/left 全部为 0。
+  */
+  inset: 0;
+
+  /*
+    确保图片层宽度跟随整个屏幕区域。
+  */
+  width: 100%;
+  height: 100%;
+
+  /*
+    图片层在内容下面。
+    .home-company-about-shell 是 z-index: 2，
+    所以内容会压在图片上方。
+  */
+  z-index: 1;
+
+  /*
+    使用真实背景图。
+    cover 表示铺满整个区域。
+  */
+  background-image: url("/images/home/company-bottom-bg.webp");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  /*
+    关键：让图片非常淡。
+    0.08 很淡；
+    0.12 稍微明显；
+    0.16 会更清楚。
+  */
+  opacity: 0.08;
+
+  /* 
+    让图片颜色更柔和，避免影响文字阅读。
+  */
+  filter: saturate(0.8) contrast(0.9);
+
+  /*
+    不挡住页面点击。
+  */
+  pointer-events: none;
 }
 
+/* =========================================================
+   2. 第三屏内容外壳
+========================================================= */
+
+.home-company-about-shell {
+  position: relative;
+  z-index: 2;
+
+  /*
+    桌面端最大宽度控制为 1600px。
+    和你官网首页整体宽屏设计保持一致。
+  */
+  width: min(1600px, calc(100% - 96px));
+  min-height: 100vh;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  /*
+    第三屏整体上下留白。
+    clamp 的意思是：根据屏幕高度自动在最小值和最大值之间变化。
+  */
+  padding-top: clamp(72px, 8vh, 108px);
+  padding-bottom: clamp(36px, 5vh, 64px);
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   3. 第三屏主体布局：左视频 + 右介绍
+========================================================= */
+
+.home-company-about-main {
+  display: grid;
+
+  /*
+    左侧放标题和宣传片，右侧放公司介绍。
+    两栏宽度接近，但右侧略大一点，方便放文字和数据。
+  */
+  grid-template-columns: minmax(520px, 0.96fr) minmax(560px, 1.04fr);
+
+  /*
+    使用 clamp 控制左右间距。
+    宽屏更舒展，小屏不至于太散。
+  */
+  gap: clamp(72px, 7vw, 128px);
+
+  /*
+    居中对齐，解决之前第三屏内容偏上、顶部空白不均衡的问题。
+  */
+  align-items: center;
+
+  padding-top: 0;
+  padding-bottom: 150px;
+}
+        
+/*
+  左右两栏不要再单独加 padding-top。
+  之前多次追加里 .home-company-about-right 有 150px / 160px，
+  会导致右侧公司介绍被压得很低。
+*/
+.home-company-about-left{
+  padding-top: 0;
+} 
+.home-company-about-right {
+  padding-top: 150; 
+}  
+           
+/* =========================================================
+   4. 左侧标题
+========================================================= */
+
+.home-company-about-title {
+  margin: 0 0 28px;
+
+  color: #111827;
+  font-size: clamp(36px, 3.2vw, 72px);
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+}   
+             
+/*
+  标题下方的小字：
+  中文时显示“研发 制造 销售 售后”
+  其他语言时也会按对应语言显示。
+*/
+.home-company-about-title span {
+  display: block;
+  margin-top: 9px;
+   color: rgba(17, 24, 39, 0.52);
+  font-size: 0.44em;
+  line-height: 1.4;
+  letter-spacing: 0.18em;
+  font-weight: 400;
+} 
+
+
+/* =========================================================
+   5. 左侧宣传片区域
+========================================================= */
+
+.home-company-video-wrap {
+  margin-top: 54px;
+  position: relative; 
+  width: 100%;
+         
+  /*
+    关键：
+    宣传片区域整体固定为 16:9。
+    前提是你的封面 tv-foreach.png 最好也是 16:9。
+  */
+  aspect-ratio: 16 / 9;
+
+  /*
+    不再写 min-height: 430px。
+    之前这个会破坏 16:9，导致画面比例看起来不稳定。
+  */
+  min-height: 0;
+
+  overflow: hidden;
+  border-radius: 8px;
+
+  /*
+    兜底背景。
+    正常情况下会被封面图盖住。
+  */
+  background: #061a3a;
+
+  
+} 
+
+/*
+  去掉以前的伪元素占位图形。
+  之前 ::before 会生成蓝色占位效果，容易盖住真实视频或封面。
+*/
+.home-company-video-wrap::before {
+  content: none;
+}
+
+/*
+  视频区域的轻微遮罩。
+  注意 pointer-events: none，不能挡住按钮点击。
+*/
 .home-company-video-wrap::after {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 2;
+
   background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0),
-    rgba(6, 26, 58, 0.1)
+    135deg,
+    rgba(6, 26, 58, 0.12),
+    rgba(6, 26, 58, 0.02) 58%,
+    rgba(9, 233, 180, 0.04)
   );
+
   pointer-events: none;
 }
 
+/*
+  video 本体。
+  点击播放后，视频会铺满整个 16:9 区域。
+*/
 .home-company-video-media {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  display: block;
   width: 100%;
   height: 100%;
+
+  /*
+    如果视频本身就是 16:9，用 cover 不会裁剪。
+    如果视频不是 16:9，就会裁掉一点边缘。
+  */
   object-fit: cover;
+  object-position: center center;
+
+  background: #061a3a;
+  border: 0;
 }
 
+/*
+  未播放前的封面按钮层。
+  它覆盖在 video 上方。
+*/
+.home-company-video-poster-button {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/*
+  宣传片封面图。
+  当前你的真实文件名应该是：
+  public/images/home/tv-foreach.png
+
+  对应 TSX：
+  src="/images/home/tv-foreach.png"
+*/
+.home-company-video-poster-image {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  /*
+    如果封面是 16:9，用 cover 不会裁剪。
+    如果封面不是 16:9，需要先把封面重新导出成 1920x1080。
+  */
+  object-fit: cover;
+  object-position: center center;
+
+  background: #061a3a;
+}
+
+/*
+  封面上方的深蓝遮罩。
+  作用是让播放按钮更清楚，同时统一品牌色。
+*/
+.home-company-video-poster-button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  background: linear-gradient(
+    135deg,
+    rgba(6, 26, 58, 0.22),
+    rgba(6, 26, 58, 0.04)
+  );
+
+  pointer-events: none;
+}
+
+/*
+  中间播放按钮外圆。
+*/
 .home-company-video-play {
   position: absolute;
   left: 50%;
   top: 50%;
   z-index: 3;
+
   width: 68px;
   height: 68px;
+
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.42);
-  background: rgba(6, 26, 58, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.46);
+  background: rgba(6, 26, 58, 0.24);
   backdrop-filter: blur(10px);
+
   transform: translate(-50%, -50%);
   cursor: pointer;
+
+  transition:
+    background 0.24s ease,
+    border-color 0.24s ease,
+    transform 0.24s ease;
 }
 
+/*
+  播放按钮里的三角形。
+*/
 .home-company-video-play::before {
   content: "";
   position: absolute;
   left: 29px;
   top: 22px;
+
   width: 0;
   height: 0;
+
   border-top: 12px solid transparent;
   border-bottom: 12px solid transparent;
   border-left: 20px solid #ffffff;
 }
 
-.home-company-about-right {
-  padding-top: 150px;
+/*
+  鼠标放到封面上时，播放按钮增强。
+*/
+.home-company-video-poster-button:hover .home-company-video-play,
+.home-company-video-play:hover {
+  background: rgba(6, 26, 58, 0.44);
+  border-color: rgba(9, 233, 180, 0.78);
+  transform: translate(-50%, -50%) scale(1.04);
 }
+
+
+/* =========================================================
+   6. 右侧公司介绍文字
+========================================================= */
 
 .home-company-intro-title {
   margin: 0;
+
   color: #111827;
   font-size: clamp(30px, 2.2vw, 42px);
-  line-height: 1.2;
-  font-weight: 500;
+  line-height: 1.22;
+  font-weight: 520;
   letter-spacing: 0.02em;
 }
 
 .home-company-intro-desc {
-  margin: 20px 0 0;
-  max-width: 900px;
-  color: rgba(17, 24, 39, 0.66);
+  margin: 22px 0 0;
+  max-width: 980px;
+
+  color: rgba(17, 24, 39, 0.68);
   font-size: 16px;
   line-height: 1.9;
+  font-weight: 400;
   text-align: justify;
+
+  /*
+    桌面端最多显示 7 行。
+    避免文字太多把数据卡片和按钮挤下去。
+  */
+  display: -webkit-box;
+  max-height: 214px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+
+  line-clamp: 7;
+  -webkit-line-clamp: 7;
 }
+
+
+/* =========================================================
+   7. 右侧数据卡片
+========================================================= */
 
 .home-company-metrics-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 28px;
-  margin-top: 24px;
-  border: none;
-}
+  gap: 26px;
 
+  margin-top: 104px;
+  border: none;
+} 
 .home-company-metric-card {
   position: relative;
   min-height: auto;
-  padding: 8px 0;
+  padding: 6px 0;
+
   background: transparent;
   border: none;
   text-align: left;
@@ -2993,15 +3401,18 @@ html[lang="ru"] .home-hero-btn:hover {
 .home-company-metric-card strong {
   position: relative;
   z-index: 1;
+
   display: inline-flex;
   align-items: baseline;
   justify-content: flex-start;
   gap: 2px;
+
   color: #173368;
-  font-size: clamp(34px, 3.4vw, 56px);
+  font-size: clamp(34px, 3.3vw, 54px);
   line-height: 1;
   letter-spacing: -0.045em;
   font-weight: 680;
+
   transform-origin: left bottom;
   animation: homeMetricReveal 0.72s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
@@ -3030,11 +3441,13 @@ html[lang="ru"] .home-hero-btn:hover {
 .home-metric-suffix {
   display: inline-block;
   margin-left: 2px;
+
   color: #173368;
   font-size: 0.46em;
   line-height: 1;
   font-weight: 400;
   letter-spacing: 0;
+
   transform: translateY(-0.08em);
   opacity: 0.86;
 }
@@ -3042,66 +3455,120 @@ html[lang="ru"] .home-hero-btn:hover {
 .home-company-metric-card > span {
   position: relative;
   z-index: 1;
+
   display: block;
   margin-top: 8px;
+
   color: rgba(17, 24, 39, 0.68);
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.45;
   font-weight: 500;
 }
 
+
+/* =========================================================
+   8. 联系我们按钮
+========================================================= */
+
 .home-company-about-actions {
   display: flex;
   justify-content: flex-start;
-  margin-top: 26px;
+  margin-top: 30px;
+}
+/* =========================================================
+   8. 联系我们按钮
+   说明：
+   1. 控制第三屏右侧底部“联系我们”按钮
+   2. 去掉 hover 阴影，保持更干净的苹果式简约风格
+   3. 保留轻微上移动效和颜色变化
+========================================================= */
+
+.home-company-about-actions {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 30px;
 }
 
 .home-company-primary-btn {
-  height: 48px;
-  padding: 0 44px;
-  border-radius: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #111827;
-  background: transparent;
-  border: 1px solid rgba(17, 24, 39, 0.34);
+ 
+  min-width: 150px;
+  height: 48px;
+  padding: 0 34px; 
+
+  border: 1px solid rgba(23, 51, 104, 0.22);
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.72);
+  color: #173368;
+
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 1;
   text-decoration: none;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
+
+  cursor: pointer;
+
+  /*
+    这里去掉 box-shadow 的过渡，
+    因为按钮不再需要阴影效果。
+  */
   transition:
-    transform 0.26s ease,
     color 0.26s ease,
     background 0.26s ease,
-    border-color 0.26s ease;
+    border-color 0.26s ease,
+    transform 0.26s ease;
 }
 
+/*
+  去掉按钮右侧可能残留的 > 符号。
+*/
 .home-company-primary-btn::after {
-  content: " >";
-  margin-left: 22px;
-  font-weight: 800;
+  content: none;
 }
 
+/*
+  鼠标放上去：
+  1. 深蓝底
+  2. 荧光青文字
+  3. 轻微上移
+  4. 不加阴影
+*/
 .home-company-primary-btn:hover {
-  color: #ffffff;
+  color: #09e9b4;
   background: #061a3a;
   border-color: #061a3a;
+
   transform: translateY(-2px);
 }
+
+/* =========================================================
+   9. 底部荣誉资质滚动
+========================================================= */
 
 .home-honor-carousel-section {
   position: relative;
   z-index: 2;
-  margin-top: 150px;
-  padding: 28px 0 34px;
+
+  /*
+    保留在第三屏底部，但不要离主体太远。
+  */
+  margin-top: 28px;
+  padding: 22px 0 24px;
+
   border-top: 1px solid rgba(6, 26, 58, 0.08);
   overflow: hidden;
 }
- 
+
 .home-honor-carousel-mask {
   position: relative;
   overflow: hidden;
+
+  /*
+    左右留一点空间，避免证书卡片贴边。
+  */
   padding: 0 80px;
 }
 
@@ -3110,6 +3577,7 @@ html[lang="ru"] .home-hero-btn:hover {
   align-items: center;
   width: max-content;
   gap: 36px;
+
   animation: homeHonorScroll 28s linear infinite;
 }
 
@@ -3120,30 +3588,39 @@ html[lang="ru"] .home-hero-btn:hover {
 .home-honor-card {
   width: 240px;
   padding: 0;
+
   border: none;
   background: transparent;
+
   opacity: 0.62;
   filter: grayscale(1);
+
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
+
   text-align: center;
+
   transition:
     opacity 0.24s ease,
-    filter 0.24s ease;
+    filter 0.24s ease,
+    transform 0.24s ease;
 }
 
 .home-honor-card:hover {
-  opacity: 0.9;
+  opacity: 0.92;
   filter: grayscale(0);
+  transform: translateY(-2px);
 }
 
 .home-honor-image {
   width: 78%;
   aspect-ratio: 4 / 3;
   margin: 0 auto 12px;
+
   opacity: 0.86;
+
   background:
     linear-gradient(
       180deg,
@@ -3152,18 +3629,184 @@ html[lang="ru"] .home-hero-btn:hover {
     ),
     var(--home-honor-image),
     linear-gradient(135deg, #eef3f7 0%, #cfdbe4 52%, #eef4f8 100%);
+
   background-size: cover;
   background-position: center;
+
   border: 1px solid rgba(6, 26, 58, 0.08);
+  border-radius: 12px;
 }
 
 .home-honor-card strong {
   display: block;
+
   color: rgba(6, 26, 58, 0.58);
   font-size: 15px;
   line-height: 1.35;
   font-weight: 500;
   text-align: center;
+}
+
+
+/* =========================================================
+   10. 动画：数据数字出现
+========================================================= */
+
+@keyframes homeMetricReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================================================
+   11. 动画：荣誉资质横向滚动
+========================================================= */
+
+@keyframes homeHonorScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* =========================================================
+   12. 平板端适配
+========================================================= */
+
+@media (max-width: 1024px) {
+  .home-company-about-section {
+    min-height: auto;
+  }
+
+  .home-company-about-shell {
+    width: min(100% - 48px, 960px);
+    min-height: auto;
+
+    padding-top: 72px;
+    padding-bottom: 56px;
+  }
+
+  .home-company-about-main {
+    grid-template-columns: 1fr;
+    gap: 48px;
+
+    align-items: start;
+
+    padding-top: 0;
+    padding-bottom: 36px;
+  }
+
+  .home-company-about-left,
+  .home-company-about-right {
+    padding-top: 0;
+  }
+
+  .home-company-metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 32px;
+  }
+
+  .home-honor-carousel-section {
+    margin-top: 36px;
+  }
+}
+
+
+/* =========================================================
+   13. 手机端适配
+========================================================= */
+
+@media (max-width: 768px) {
+  .home-company-about-shell {
+    width: min(100% - 32px, 640px);
+
+    padding-top: 64px;
+    padding-bottom: 48px;
+  }
+
+  .home-company-about-main {
+    gap: 36px;
+    padding-bottom: 32px;
+  }
+
+  .home-company-about-title {
+    font-size: clamp(32px, 10vw, 42px);
+  }
+
+  .home-company-video-wrap {
+    border-radius: 22px;
+  }
+
+  .home-company-intro-title {
+    font-size: 28px;
+  }
+
+  /*
+    手机端公司介绍不做省略。
+    手机屏幕是纵向阅读，完整显示更自然。
+  */
+  .home-company-intro-desc {
+    font-size: 15px;
+    line-height: 1.8;
+    max-height: none;
+
+    display: block;
+    overflow: visible;
+    text-overflow: initial;
+
+    line-clamp: unset;
+    -webkit-line-clamp: unset;
+  }
+
+  .home-company-metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 28px;
+  }
+
+  .home-company-metric-card strong {
+    font-size: 38px;
+  }
+
+  .home-company-primary-btn {
+    width: 100%;
+  }
+
+  .home-honor-carousel-section {
+    margin-top: 24px;
+  }
+
+  .home-honor-carousel-mask {
+    padding: 0 24px;
+  }
+
+  .home-honor-card {
+    width: 190px;
+  }
+
+  .home-company-video-play {
+    width: 56px;
+    height: 56px;
+  }
+
+  .home-company-video-play::before {
+    left: 24px;
+    top: 18px;
+
+    border-top-width: 10px;
+    border-bottom-width: 10px;
+    border-left-width: 17px;
+  }
 }
 
 /* =========================================================
@@ -3189,24 +3832,7 @@ html[lang="ru"] .home-hero-btn:hover {
   pointer-events: none;
 }
 
-.home-advantages-kicker {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  margin: 0 0 14px;
-  color: rgba(255, 255, 255, 0.72);
-  font-size: 13px;
-  font-weight: 900;
-  letter-spacing: 0.14em;
-}
-
-.home-advantages-kicker::before,
-.home-advantages-kicker::after {
-  content: "";
-  width: 46px;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.36);
-}
+  
 
 .home-advantages-title {
   margin: 0;
@@ -3349,7 +3975,7 @@ html[lang="ru"] .home-hero-btn:hover {
     opacity 0.46s ease 0.12s,
     transform 0.46s ease 0.12s;
 }
-
+ 
 .home-panel-brief {
   margin: 24px 0 0;
   max-width: 390px;
@@ -3387,11 +4013,28 @@ html[lang="ru"] .home-hero-btn:hover {
   font-size: 25px;
 }
 
+/* =========================================================
+   第四屏企业优势卡片：去掉圆形箭头按钮
+
+   作用：
+   1. 去掉每个优势卡片底部的圆形箭头
+   2. 保留卡片标题、编号、分割线、简介文字
+   3. 不影响卡片本身的 hover 效果
+========================================================= */
+
+.home-panel-arrow { 
+  display: none;
+}
+
+.home-panel-content {
+  padding-bottom: 248px;
+}      
+  
 .home-advantage-panel:hover .home-panel-line {
   width: 120px;
   background: #ffffff;
 }
-
+  
 .home-advantage-panel:hover .home-panel-brief,
 .home-advantage-panel:hover .home-panel-detail,
 .home-advantage-panel:hover .home-panel-arrow {
@@ -3624,14 +4267,6 @@ html[lang="ru"] .home-hero-btn:hover {
     line-height: 1.25;
   }
 
-  .home-company-intro-desc {
-    margin-top: 14px;
-    max-width: 100%;
-    font-size: 14px;
-    line-height: 1.78;
-    text-align: left;
-  }
-
   .home-company-metrics-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 18px 14px;
@@ -3775,7 +4410,7 @@ html[lang="ru"] .home-hero-btn:hover {
   }
 
   .home-panel-brief {
-    margin-top: 18px;
+    margin-top: 18px;   
     font-size: 14px;
     line-height: 1.68;
   }
@@ -3794,6 +4429,138 @@ html[lang="ru"] .home-hero-btn:hover {
   }
 }
 
+/* =========================================================
+   第四屏：企业优势 5 张卡片背景图
+
+   图片位置：
+   public/images/home/advantages/
+
+   说明：
+   1. 不需要改 TSX
+   2. 按第 1、2、3、4、5 张卡片顺序替换背景图
+   3. 图片上方会有深蓝遮罩，保证白色文字可读
+========================================================= */
+
+/* 第 1 张：R&D 研发能力 */
+.home-advantage-panel:nth-child(1) {
+  background-image: url("/images/home/advantages/advantage-01-rd.webp");
+}
+
+/* 第 2 张：制造与交付 */
+.home-advantage-panel:nth-child(2) {
+  background-image: url("/images/home/advantages/advantage-02-manufacturing.webp");
+}
+
+/* 第 3 张：质量体系 */
+.home-advantage-panel:nth-child(3) {
+  background-image: url("/images/home/advantages/advantage-03-quality.webp");
+}
+
+/* 第 4 张：定制支持 */
+.home-advantage-panel:nth-child(4) {
+  background-image: url("/images/home/advantages/advantage-04-custom.webp");
+}
+
+/* 第 5 张：技术服务 */
+.home-advantage-panel:nth-child(5) {
+  background-image: url("/images/home/advantages/advantage-05-service.webp");
+}
+
+/* 卡片基础背景设置 */
+.home-advantage-panel {
+  position: relative;
+  overflow: hidden;
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* =========================================================
+   第四屏企业优势卡片：鼠标悬浮时遮罩变浅
+
+   作用：
+   1. 默认状态：每张图片上都有深蓝遮罩，保证文字清楚
+   2. 鼠标移动到哪一张卡片上，哪一张卡片的遮罩就变浅
+   3. 鼠标离开后，遮罩自动恢复
+   4. 不需要点击，也不需要改 TSX
+========================================================= */
+
+.home-advantage-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  /*
+    默认深蓝遮罩。
+    这个状态下文字比较清楚。
+  */
+  background: linear-gradient(
+    180deg,
+    rgba(6, 26, 58, 0.26) 0%,
+    rgba(6, 26, 58, 0.54) 52%,
+    rgba(6, 26, 58, 0.82) 100%
+  );
+
+  /*
+    让遮罩变浅/恢复时更柔和。
+  */
+  opacity: 1;
+  transition: opacity 0.32s ease;
+ 
+  /*
+    遮罩不挡住鼠标事件。
+  */
+  pointer-events: none;
+}
+
+/*
+  鼠标放到某一张卡片上时，
+  只让当前这张卡片的遮罩变浅。
+*/
+.home-advantage-panel:hover::before {
+  opacity: 0.05;
+} 
+
+/* 卡片文字放在图片和遮罩上方 */
+.home-panel-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================================================
+   第四屏企业优势卡片：标题文字放大
+   放在 app/globals.css 最底部，用来覆盖前面的旧样式
+
+   作用：
+   1. 放大“研发能力 / 制造及交付 / 质量体系 / 定制支持 / 技术服务”
+   2. 提高这一屏卡片标题的视觉重点
+   3. 不需要修改 TSX
+========================================================= */
+
+.home-panel-title {
+  margin: 0;
+
+  color: #ffffff;
+
+  /*
+    标题字体放大。
+    如果觉得还不够大，可以把最大值 52px 改成 58px。
+  */
+  font-size: clamp(36px, 2.8vw, 52px);
+
+  line-height: 1.12;  
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* 手机端不要太大，避免换行太乱 */
+@media (max-width: 768px) {
+  .home-panel-title { 
+    font-size: 32px;
+  }
+}
 
 /* =========================================================
    首页第5屏：资讯中心
@@ -3891,341 +4658,650 @@ html[lang="ru"] .home-hero-btn:hover {
 }
 
 /* =========================================================
-   第5屏：资讯中心
+   第5屏：资讯中心 HomeNewsSection
+
+   说明：
+   1. 对应 components/home/HomeNewsSection.tsx
+   2. 使用 home-news-* 新类名，避免和旧 .news-* 冲突
+   3. 左侧白卡和中间蓝卡固定高度
+   4. 左侧 / 中间“查看详情”底部对齐
+   5. 右侧新闻日期在描述下方，查看详情在右侧
    ========================================================= */
-.news-screen {
-  background: var(--page-bg);
-}
 
-.news-header {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 48px;
-  margin-bottom: 46px;
-}
+.home-news-screen {
+  position: relative;
+  overflow: hidden;
 
-.news-main-title {
-  color: #111827;
-  font-size: clamp(32px, 3.2vw, 48px);
-  line-height: 1.1;
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  white-space: nowrap;
-}
+  /* 让资讯中心这一屏至少占满一个浏览器高度 */
+  min-height: 100vh;
 
-.news-tabs {
+  /* 垂直居中显示内部内容 */
   display: flex;
   align-items: center;
-  gap: 44px;
-  flex-wrap: wrap;
+
+  /* 上下留白不要太大，否则 1080 屏会显得超过一屏 */
+  padding: 72px 0;
+
+  background: linear-gradient(180deg, #f7fafc 0%, #eef3f7 100%);
 }
 
-.news-tab-btn {
-  position: relative;
-  background: transparent;
-  color: #8e97a4;
-  font-size: 17px;
-  font-weight: 600;
-  padding: 8px 0;
-  border: 0;
-  cursor: pointer;
-  transition: color 0.25s var(--ease-out);
-}
-
-.news-tab-btn::after {
+.home-news-screen::before {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -8px;
-  height: 2px;
-  background: var(--brand-cyan);
-  transform: scaleX(0);
-  transform-origin: center;
-  transition: transform 0.25s var(--ease-out);
+  inset: 156px 0 auto 0;
+  height: 560px;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(23, 51, 104, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 51, 104, 0.04) 1px, transparent 1px);
+  background-size: 52px 52px;
+  mask-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.42),
+    transparent 78%
+  );
 }
 
-.news-tab-btn:hover,
-.news-tab-btn.active {
-  color: var(--brand-blue);
+.home-news-inner {
+  position: relative;
+  z-index: 1;
+  width: min(1600px, calc(100% - 80px));
+  margin: 0 auto;
 }
 
-.news-tab-btn.active::after {
-  transform: scaleX(1);
-}
-
-.more-news-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  color: var(--text-muted);
-  font-size: 15px;
-  font-weight: 600;
-  white-space: nowrap;
-  text-decoration: none;
-  transition: color 0.25s var(--ease-out);
-}
-
-.more-news-link:hover {
-  color: var(--brand-blue);
-}
-
-.more-news-link span {
-  color: var(--brand-blue);
-  font-size: 20px;
-  line-height: 1;
-}
-
-.news-layout {
+.home-news-header {
   display: grid;
-  grid-template-columns: 1.05fr 0.98fr 0.98fr;
+  grid-template-columns: 1fr auto;
+  align-items: end;
   gap: 40px;
+  margin-bottom: 42px;
+}
+
+.home-news-title-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  min-width: 0;
+}
+
+.home-news-main-title {
+  margin: 0;
+  color: #071a35;
+  font-size: clamp(42px, 3.2vw, 58px);
+  line-height: 1;
+  font-weight: 850;
+  letter-spacing: -0.055em;
+}
+
+.home-news-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  min-width: 0;
+}
+
+.home-news-tab-btn {
+  appearance: none;
+  min-width: 112px;
+  height: 42px;
+  padding: 0 22px;
+  border: 1px solid rgba(23, 51, 104, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.78);
+  color: #173368;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    color 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.home-news-tab-btn:hover,
+.home-news-tab-btn.active {
+  color: #09e9b4;
+  border-color: #061b3d;
+  background: #061b3d;
+}
+
+.home-news-layout {
+  display: grid;
+  grid-template-columns: 1.08fr 1fr 1.04fr;
+  gap: 34px;
   align-items: stretch;
 }
 
-.news-card {
+/* 左侧白色推荐新闻 */
+.home-news-feature-card {
+  min-width: 0;
+  height: 780px;
   background: #ffffff;
-  border: 1px solid var(--line-soft);
+  border: 1px solid transparent;
   overflow: hidden;
+  transition:
+    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.news-feature-card {
-  min-height: 610px;
-  display: flex;
-  flex-direction: column;
+.home-news-feature-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(9, 233, 180, 0.34);
+  background: #ffffff;
 }
 
-.news-feature-image {
+.home-news-feature-image {
   position: relative;
-  height: 350px;
+  height: 400px;
   overflow: hidden;
-  background:
-    linear-gradient(135deg, rgba(23, 51, 104, 0.88), rgba(23, 51, 104, 0.52)),
-    linear-gradient(135deg, #d7e2ee 0%, #f5f8fc 100%);
+  background-color: #e8eff5;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition:
+    transform 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.news-feature-image::before {
-  content: "";
-  position: absolute;
-  left: 50px;
-  top: 58px;
-  width: 210px;
-  height: 210px;
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  border-radius: 50%;
+.home-news-feature-card:hover .home-news-feature-image {
+  transform: scale(1.025);
+  filter: saturate(1.06) contrast(1.03);
 }
 
-.news-feature-image::after {
-  content: "";
-  position: absolute;
-  right: 54px;
-  bottom: 54px;
-  width: 260px;
-  height: 1px;
-  background: var(--brand-cyan);
-}
-
-.news-feature-lines {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
-  background-size: 44px 44px;
-  opacity: 0.65;
-}
-
-.news-feature-body {
-  flex: 1;
-  padding: 30px 36px 34px;
+.home-news-feature-body {
+  height: 380px;
+  padding: 30px 32px 34px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
-.news-meta-row {
+.home-news-meta-row,
+.home-news-highlight-meta {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
-  margin-bottom: 28px;
+  gap: 18px;
+  margin-bottom: 22px;
+  color: #8d9bab;
+  font-size: 13px;
+  font-weight: 750;
+  flex-shrink: 0;
+}
+
+.home-news-category {
+  color: #173368;
+}
+
+.home-news-date {
+  color: rgba(23, 51, 104, 0.52);
+}
+
+.home-news-feature-title {
+  margin: 0;
+  color: #071a35;
+  font-size: 21px;
+  line-height: 1.68;
+  font-weight: 850;
+  letter-spacing: -0.045em;
+  flex-shrink: 0;
+}
+
+.home-news-feature-desc {
+  margin: 14px 0 0;
+  color: #647386;
   font-size: 14px;
+  line-height: 1.86;
+  flex-shrink: 0;
 }
 
-.news-category {
-  color: var(--brand-blue);
-  font-weight: 700;
-}
-
-.news-date {
-  color: #a6afbb;
-  font-weight: 600;
-}
-
-.news-title {
-  color: #2b3340;
-  font-size: 20px;
-  line-height: 1.75;
-  font-weight: 700;
-}
-
-.news-card-footer {
+.home-news-card-footer {
   margin-top: auto;
-  padding-top: 28px;
+  padding-top: 0;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
 }
 
-.text-link {
+.home-news-text-link {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  color: var(--text-muted);
-  font-size: 14px;
-  font-weight: 600;
+  height: 48px;
+  color: #173368;
   text-decoration: none;
-  transition: color 0.25s var(--ease-out);
+  font-size: 14px;
+  font-weight: 750;
+  transition:
+    color 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.text-link:hover {
-  color: var(--brand-blue);
+.home-news-text-link:hover {
+  color: #09e9b4;
+  transform: translateX(4px);
 }
 
-.news-highlight-card {
-  min-height: 610px;
-  padding: 46px 44px 42px;
+/* 中间深蓝公告 */
+.home-news-highlight-card {
+  min-width: 0;
+  height: 780px;
+  padding: 46px 42px 38px;
+  color: #ffffff;
+  background:
+    radial-gradient(
+      circle at 80% 18%,
+      rgba(9, 233, 180, 0.18),
+      transparent 26%
+    ),
+    linear-gradient(145deg, #173368 0%, #0c2857 52%, #061b3d 100%);
+  border: 1px solid rgba(9, 233, 180, 0.08);
   display: flex;
   flex-direction: column;
-  background: var(--brand-blue);
-  color: #ffffff;
-  border: 1px solid var(--brand-blue);
   overflow: hidden;
+  transition:
+    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.highlight-meta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  margin-bottom: 42px;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.84);
+.home-news-highlight-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(9, 233, 180, 0.36);
+  background:
+    radial-gradient(
+      circle at 80% 18%,
+      rgba(9, 233, 180, 0.24),
+      transparent 28%
+    ),
+    linear-gradient(145deg, #1c3f78 0%, #0d2d62 52%, #061b3d 100%);
 }
 
-.highlight-type,
-.highlight-date {
-  font-weight: 700;
+.home-news-highlight-type,
+.home-news-highlight-date {
+  color: rgba(255, 255, 255, 0.86);
+  flex-shrink: 0;
 }
 
-.highlight-title {
+.home-news-highlight-title {
+  margin: 0;
   color: #ffffff;
-  font-size: 24px;
-  line-height: 1.74;
-  font-weight: 700;
-  margin-bottom: 28px;
+  font-size: 25px;
+  line-height: 1.76;
+  font-weight: 850;
+  letter-spacing: -0.052em;
+  flex-shrink: 0;
 }
 
-.highlight-desc {
-  color: rgba(255, 255, 255, 0.74);
+.home-news-highlight-desc {
+  margin: 24px 0 0;
+  color: rgba(255, 255, 255, 0.76);
   font-size: 15px;
   line-height: 2;
+  flex-shrink: 0;
 }
 
-.highlight-footer {
+.home-news-highlight-footer {
   margin-top: auto;
-  padding-top: 42px;
+  padding-top: 0;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
 }
 
-.highlight-btn {
-  width: 132px;
-  height: 46px;
-  border: 1px solid #ffffff;
-  border-radius: 999px;
-  background: #ffffff;
-  color: var(--brand-blue);
-  font-size: 22px;
-  cursor: pointer;
+.home-news-highlight-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  min-width: 132px;
+  height: 48px;
+  padding: 0 24px;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #061b3d;
   text-decoration: none;
+  font-size: 14px;
+  font-weight: 750;
   transition:
-    background 0.25s var(--ease-out),
-    border-color 0.25s var(--ease-out),
-    transform 0.25s var(--ease-out);
+    transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+    color 0.25s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.highlight-btn:hover {
-  background: var(--brand-cyan);
-  border-color: var(--brand-cyan);
-  transform: translateX(3px);
+.home-news-highlight-btn:hover {
+  transform: translateY(-2px);
+  background: #09e9b4;
+  color: #061b3d;
 }
 
-.news-list-panel {
-  min-height: 610px;
+/* 右侧新闻列表 */
+.home-news-right {
+  min-width: 0;
+  height: 780px;
   display: flex;
   flex-direction: column;
 }
 
-.news-list-item {
+.home-news-list-panel {
   display: grid;
-  grid-template-columns: 190px minmax(0, 1fr);
-  gap: 28px;
-  padding: 0 0 34px;
-  margin-bottom: 34px;
-  border-bottom: 1px solid var(--line-soft);
+  gap: 18px;
+  flex: 1;
 }
 
-.news-list-item:last-child {
-  margin-bottom: 0;
-  border-bottom: 0;
-}
-
-.list-thumb {
+.home-news-list-item {
   position: relative;
-  height: 120px;
+  display: grid;
+  grid-template-columns: 168px minmax(0, 1fr);
+  gap: 22px;
+  align-items: stretch;
+  height: 165px;
+  padding: 18px 0;
   overflow: hidden;
-  border: 1px solid var(--line-soft);
-  background: #dde6f0;
+  border-bottom: 1px solid rgba(23, 51, 104, 0.13);
+  transition:
+    background 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.28s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.list-thumb::before {
+.home-news-list-item::before {
   content: "";
   position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(135deg, rgba(23, 51, 104, 0.75), rgba(9, 233, 180, 0.18)),
-    linear-gradient(180deg, #e6edf5, #c9d8e8);
+  left: 0;
+  top: 18px;
+  bottom: 18px;
+  width: 3px;
+  background: #09e9b4;
+  opacity: 0;
+  transition: opacity 0.28s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.list-thumb::after {
-  content: "";
-  position: absolute;
-  left: 22px;
-  right: 22px;
-  top: 56px;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.7);
+.home-news-list-item:hover {
+  border-color: rgba(9, 233, 180, 0.72);
+  background: linear-gradient(
+    90deg,
+    rgba(9, 233, 180, 0.08),
+    rgba(255, 255, 255, 0)
+  );
 }
 
-.news-list-title {
-  color: #344050;
+.home-news-list-item:hover::before {
+  opacity: 1;
+}
+
+.home-news-list-thumb {
+  position: relative;
+  height: 100%;
+  min-height: 128px;
+  overflow: hidden;
+  background-color: #e8eff5;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.home-news-list-content {
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-right: 8px;
+}
+
+.home-news-list-title {
+  margin: 0;
+  min-width: 0;
+  color: #071a35;
   font-size: 17px;
-  line-height: 1.55;
-  font-weight: 700;
-  margin-bottom: 10px;
+  line-height: 1.45;
+  font-weight: 850;
+  letter-spacing: -0.04em;
+  transition: color 0.24s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.news-list-desc {
-  color: var(--text-muted);
-  font-size: 14px;
-  line-height: 1.75;
-  margin-bottom: 16px;
+.home-news-list-item:hover .home-news-list-title {
+  color: #173368;
 }
 
-.news-list-arrow {
-  color: var(--brand-blue);
-  font-size: 18px;
-  line-height: 1;
+.home-news-list-desc {
+  margin: 8px 0 0;
+  color: #647386;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.home-news-list-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.home-news-list-date {
+  flex-shrink: 0;
+  color: rgba(23, 51, 104, 0.52);
+  font-size: 12px;
+  line-height: 1.45;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.home-news-list-more {
+  display: inline-flex;
+  width: fit-content;
+  color: #173368;
   text-decoration: none;
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 750;
+  transition: color 0.24s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.home-news-list-more:hover,
+.home-news-list-item:hover .home-news-list-more {
+  color: #09e9b4;
+}
+
+.home-news-bottom-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+  padding-top: 18px;
+  flex-shrink: 0;
+}
+
+.home-news-view-all-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 132px;
+  height: 44px;
+  padding: 0 24px;
+  border: 1px solid rgba(23, 51, 104, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.78);
+  color: #173368;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition:
+    color 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.home-news-view-all-btn:hover {
+  color: #09e9b4;
+  border-color: #061b3d;
+  background: #061b3d;
+}
+
+/* 多行省略号 */
+.text-limit {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+}
+
+.limit-2 {
+  -webkit-line-clamp: 2;
+}
+
+.limit-3 {
+  -webkit-line-clamp: 3;
+}
+
+.limit-4 {
+  -webkit-line-clamp: 4;
+}
+
+.limit-5 {
+  -webkit-line-clamp: 5;
+}
+
+/* 第5屏响应式 */
+@media (max-width: 1280px) {
+  .home-news-inner {
+    width: min(1180px, calc(100% - 44px));
+  }
+
+  .home-news-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .home-news-right {
+    grid-column: 1 / -1;
+    height: auto;
+  }
+
+  .home-news-list-panel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-news-list-item {
+    grid-template-columns: 1fr;
+  }
+
+  .home-news-bottom-actions {
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-news-screen {
+    min-height: auto;
+    display: block;
+    padding: 44px 0 84px;
+  }
+
+  .home-news-inner {
+    width: min(100% - 28px, 680px);
+  }
+
+  .home-news-header {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 22px;
+    margin-bottom: 30px;
+  }
+
+  .home-news-main-title {
+    font-size: 34px;
+  }
+
+  .home-news-controls {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .home-news-tab-btn {
+    min-width: 0;
+    width: 100%;
+    height: 40px;
+    padding: 0 8px;
+    font-size: 13px;
+  }
+
+  .home-news-layout {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .home-news-feature-card,
+  .home-news-highlight-card,
+  .home-news-right {
+    height: auto;
+  }
+
+  .home-news-feature-image {
+    height: 260px;
+  }
+
+  .home-news-feature-body,
+  .home-news-highlight-card {
+    padding: 24px 20px;
+  }
+
+  .home-news-feature-body {
+    height: auto;
+  }
+
+  .home-news-feature-title,
+  .home-news-highlight-title {
+    font-size: 20px;
+    line-height: 1.62;
+  }
+
+  .home-news-highlight-desc {
+    font-size: 14px;
+  }
+
+  .home-news-list-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .home-news-list-item {
+    grid-template-columns: 112px minmax(0, 1fr);
+    gap: 14px;
+    height: 132px;
+    padding: 14px 0;
+  }
+
+  .home-news-list-thumb {
+    min-height: 96px;
+  }
+
+  .home-news-list-title {
+    font-size: 16px;
+  }
+
+  .home-news-list-date,
+  .home-news-list-more {
+    font-size: 12px;
+  }
+
+  .home-news-list-desc {
+    display: none;
+  }
+
+  .home-news-bottom-actions {
+    justify-content: stretch;
+    margin-top: 24px;
+  }
+
+  .home-news-view-all-btn {
+    width: 100%;
+  }
 }
 
 /* =========================================================
@@ -4827,3 +5903,721 @@ html[lang="ru"] .home-hero-btn:hover {
     height: 96px;
   }
 }
+
+/* ================================
+   导航栏 Mega Menu 产品图片最终修正版
+   作用：
+   1. 解决泵类 5 张图片竖向堆叠的问题
+   2. 让 5 张产品图横向排列
+   3. 限制图片高度，避免撑高整个下拉菜单
+================================ */
+
+/* 右侧产品卡片网格
+   说明：
+   当前左侧分类切换后，右侧通常只显示一个分类卡片
+   所以这里改成一列，让卡片占满右侧区域
+*/
+.site-nav-mega-placeholder-grid {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: 18px !important;
+  width: 100% !important;
+  align-items: start !important;
+}
+
+/* 单个产品卡片 */
+.site-nav-mega-placeholder {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+  width: 100% !important;
+  min-height: 0 !important;
+  padding: 22px 24px !important;
+  overflow: hidden !important;
+}
+
+/* 多张产品图外层
+   说明：
+   例如泵类有 5 张图，这里强制横向 5 列排列
+*/
+.site-nav-mega-card-image-list {
+  display: grid !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+  width: 100% !important;
+  margin: 0 0 18px !important;
+  align-items: stretch !important;
+}
+
+/* 每张小图的外框 */
+.site-nav-mega-card-image-wrap {
+  position: relative !important;
+  width: 100% !important;
+  height: 118px !important;
+  overflow: hidden !important;
+  border-radius: 14px !important;
+  background: #f4f8fc !important;
+  border: 1px solid rgba(23, 51, 104, 0.08) !important;
+
+  /* 让图片在格子里居中 */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* 多张小图里的图片 */
+.site-nav-mega-card-image {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  display: block !important;
+  position: static !important;
+  transition: transform 0.3s ease !important;
+}
+
+/* 单张主图外层
+   说明：
+   以后阀类、传感器等如果只放一张图，就使用这个样式
+*/
+.site-nav-mega-card-main-image-wrap {
+  width: 100% !important;
+  height: 160px !important;
+  margin-bottom: 18px !important;
+  overflow: hidden !important;
+  border-radius: 16px !important;
+  background: #f4f8fc !important;
+  border: 1px solid rgba(23, 51, 104, 0.08) !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* 单张主图图片 */
+.site-nav-mega-card-main-image {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  display: block !important;
+  position: static !important;
+  transition: transform 0.3s ease !important;
+}
+
+/* 鼠标悬停时，图片轻微放大 */
+.site-nav-mega-placeholder:hover .site-nav-mega-card-image,
+.site-nav-mega-placeholder:hover .site-nav-mega-card-main-image {
+  transform: scale(1.04);
+}
+
+/* 产品卡片标题 */
+.site-nav-mega-card-title {
+  margin-top: 4px !important;
+}
+
+/* 产品卡片说明 */
+.site-nav-mega-card-label {
+  margin-top: 8px !important;
+}
+
+ /* =========================================================
+   第四屏企业优势卡片：统一控制卡片内所有文字
+   放在 app/globals.css 最底部
+
+   作用：
+   1. 统一控制编号、标题、横线、简介、详细说明
+   2. 默认状态文字更克制
+   3. 鼠标滑到哪张卡片，哪张卡片文字整体增强
+   4. 不改 TSX，只改 CSS
+========================================================= */
+
+/* 卡片内容整体 */
+.home-advantage-panel .home-panel-content {
+  position: relative !important;
+  z-index: 2 !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+
+  /*
+    让文字变化更柔和
+  */
+  transition:
+    transform 0.32s ease,
+    opacity 0.32s ease !important;
+}
+
+/* 鼠标滑到当前卡片：文字整体稍微上移 */
+.home-advantage-panel:hover .home-panel-content {
+  transform: translateY(-8px) !important;
+}
+
+
+/* ================================
+   编号文字：01 / 02 / 03
+================================ */
+
+.home-advantage-panel .home-panel-index {
+  color: rgba(255, 255, 255, 0.7) !important;
+
+  font-size: 18px !important;
+  line-height: 1 !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.08em !important;
+
+  margin-bottom: 22px !important;
+
+  transition:
+    color 0.32s ease,
+    font-size 0.32s ease,
+    opacity 0.32s ease !important;
+}
+
+/* 鼠标滑到当前卡片：编号更清楚 */
+.home-advantage-panel:hover .home-panel-index {
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-size: 20px !important;
+}
+
+
+/* ================================
+   主标题：研发能力 / 制造及交付
+================================ */
+
+.home-advantage-panel .home-panel-title {
+  margin: 0 !important;
+
+  color: #ffffff !important;
+
+  /*
+    默认状态标题不要太大
+  */
+  font-size: clamp(30px, 2.2vw, 32px) !important;
+
+  line-height: 1.12 !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em !important;  
+
+  transform-origin: left bottom !important;
+
+  transition:
+    font-size 0.32s ease,
+    transform 0.32s ease,
+    letter-spacing 0.32s ease !important;
+}
+
+/* 鼠标滑到当前卡片：标题变大 */
+.home-advantage-panel:hover .home-panel-title {
+  font-size: clamp(42px, 3.2vw, 62px) !important;
+  transform: translateY(-2px) !important;
+  letter-spacing: 0.03em !important;
+}
+
+
+/* ================================
+   标题下面的横线
+================================ */
+
+.home-advantage-panel .home-panel-line {
+  display: block !important;
+
+  width: 42px !important;
+  height: 2px !important;
+
+  margin: 24px 0 22px !important;
+
+  background: rgba(9, 233, 180, 0.72) !important;
+
+  transition:
+    width 0.32s ease,
+    background 0.32s ease,
+    opacity 0.32s ease !important;
+}
+
+/* 鼠标滑到当前卡片：横线变长 */
+.home-advantage-panel:hover .home-panel-line {
+  width: 72px !important;
+  background: #09e9b4 !important;
+}
+
+
+/* ================================
+   简短说明文字
+================================ */
+
+.home-advantage-panel .home-panel-brief {
+  margin: 0 !important;
+
+  color: rgba(255, 255, 255, 0.88) !important;
+
+  font-size: 17px !important;
+  line-height: 1.7 !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.01em !important;
+
+  max-width: 92% !important;
+
+  transition:
+    color 0.32s ease,
+    font-size 0.32s ease,
+    opacity 0.32s ease !important;
+}
+
+/* 鼠标滑到当前卡片：简短说明略微变大 */
+.home-advantage-panel:hover .home-panel-brief {
+  color: #ffffff !important;
+  font-size: 18px !important;
+}
+
+
+/* ================================
+   详细说明文字
+================================ */
+
+.home-advantage-panel .home-panel-detail {
+  margin: 18px 0 0 !important;
+
+  color: rgba(255, 255, 255, 0.72) !important;
+
+  font-size: 15px !important;
+  line-height: 1.75 !important;
+  font-weight: 400 !important;
+
+  max-width: 94% !important;
+
+  /*
+    默认详细说明稍微弱一点
+  */
+  opacity: 0.78 !important;
+
+  transition:
+    color 0.32s ease,
+    font-size 0.32s ease,
+    opacity 0.32s ease,
+    transform 0.32s ease !important;
+}
+
+/* 鼠标滑到当前卡片：详细说明更清楚 */
+.home-advantage-panel:hover .home-panel-detail {
+  color: rgba(255, 255, 255, 0.92) !important;
+  font-size: 16px !important;
+  opacity: 1 !important;
+  transform: translateY(2px) !important;
+}
+
+
+/* ================================
+   圆形箭头继续隐藏
+================================ */
+
+.home-panel-arrow {
+  display: none !important;
+}
+
+
+/* ================================
+   手机端适配
+================================ */
+
+@media (max-width: 768px) {
+  .home-advantage-panel .home-panel-index {
+    font-size: 16px !important;
+  }
+
+  .home-advantage-panel .home-panel-title {
+    font-size: 30px !important;
+  }
+
+  .home-advantage-panel:hover .home-panel-title {
+    font-size: 36px !important;
+  }
+
+  .home-advantage-panel .home-panel-brief {
+    font-size: 16px !important;
+  }
+ 
+  .home-advantage-panel:hover .home-panel-brief {
+    font-size: 17px !important;
+  }
+
+  .home-advantage-panel .home-panel-detail {
+    font-size: 14px !important;
+  }
+
+  .home-advantage-panel:hover .home-panel-detail {
+    font-size: 15px !important;
+  }
+} 
+
+/* =========================================================
+   第四屏企业优势卡片：文字水平对齐修复
+   放在 app/globals.css 最底部
+
+   作用：
+   1. 让 01 / 02 / 03 / 04 / 05 与主标题左侧对齐
+   2. 让标题、小字、横线都从同一条竖线开始
+   3. 鼠标悬浮时只上下移动，不左右偏移
+========================================================= */
+
+/* 卡片文字内容区：统一左对齐 */
+.home-advantage-panel .home-panel-content {
+  position: relative !important;
+  z-index: 2 !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+
+  /*
+    关键：统一每张卡片内部文字的左边距。
+    如果你觉得文字太靠左，可以把 0 改成 4px 或 8px。
+  */
+  padding-left: 0 !important;
+
+  /*
+    保证内容宽度一致，不要因为文字长短导致视觉偏移。
+  */
+  width: 100% !important;
+  max-width: 92% !important;
+}
+
+/* 编号、标题、横线、小字全部从同一左边线开始 */
+.home-advantage-panel .home-panel-index,
+.home-advantage-panel .home-panel-title,
+.home-advantage-panel .home-panel-line,
+.home-advantage-panel .home-panel-brief,
+.home-advantage-panel .home-panel-detail {
+  align-self: flex-start !important;
+  text-align: left !important;
+
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+/* 编号 */
+.home-advantage-panel .home-panel-index {
+  display: block !important;
+  width: 100% !important;
+  margin-bottom: 22px !important;
+}
+
+/* 主标题 */
+.home-advantage-panel .home-panel-title {
+  display: block !important;
+  width: 100% !important;
+
+  /* 
+    只允许从左侧开始放大。
+    不要居中放大，否则看起来会和 01 不对齐。
+  */
+  transform-origin: left bottom !important;
+}
+
+/* 鼠标悬浮时：标题只上下动，不左右偏移 */
+.home-advantage-panel:hover .home-panel-title {
+  transform: translateY(-2px) !important;
+}
+
+/* 横线也和编号、标题左边对齐 */
+.home-advantage-panel .home-panel-line {
+  margin-left: 0 !important;
+}
+
+/* 小字说明也和标题左边对齐 */
+.home-advantage-panel .home-panel-brief,
+.home-advantage-panel .home-panel-detail {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* =========================================================
+   第四屏企业优势卡片：所有文字整体向右移动 50px
+   放在 app/globals.css 最底部
+
+   作用：
+   1. 让 01 / 02 / 03 / 04 / 05 整体向右
+   2. 让标题、小字、横线一起向右
+   3. 保持 hover 时仍然只向上浮动，不破坏水平对齐
+========================================================= */
+
+/* 默认状态：整块文字向右移动 50px */
+.home-advantage-panel .home-panel-content {
+  transform: translateX(50px) !important;
+
+  /*
+    防止文字右移后太靠边。
+    如果出现文字被挤压，可以把 50px 改成 40px。
+  */
+  max-width: calc(92% - 50px) !important;
+}
+
+/* 鼠标滑到当前卡片时：保持右移，同时整体上移 */
+.home-advantage-panel:hover .home-panel-content {
+  transform: translateX(50px) translateY(-8px) !important;
+}
+
+/* 编号、标题、横线、小字继续保持左对齐 */
+.home-advantage-panel .home-panel-index,
+.home-advantage-panel .home-panel-title,
+.home-advantage-panel .home-panel-line,
+.home-advantage-panel .home-panel-brief,
+.home-advantage-panel .home-panel-detail {
+  text-align: left !important;
+  margin-left: 0 !important;
+  padding-left: 0 !important; 
+} 
+/* =========================================================
+   第四屏企业优势卡片：小字延迟出现
+   放在 app/globals.css 最底部
+
+   效果：
+   1. 默认状态下，小字不显示
+   2. 鼠标滑到某张图片上后，图片先变清楚
+   3. 等 0.45 秒后，小字再逐渐出现
+   4. 鼠标移开后，小字隐藏
+========================================================= */
+
+/* 简短说明：默认隐藏 */
+.home-advantage-panel .home-panel-brief {
+  opacity: 0 !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+
+  transform: translateY(18px) !important;
+
+  visibility: hidden !important;
+
+  transition:
+    opacity 0.48s ease,
+    max-height 0.48s ease,
+    transform 0.48s ease,
+    visibility 0s linear 0.48s !important;
+}
+
+/* 详细说明：默认隐藏 */
+.home-advantage-panel .home-panel-detail {
+  opacity: 0 !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+
+  transform: translateY(20px) !important;
+
+  visibility: hidden !important;
+
+  transition:
+    opacity 0.52s ease,
+    max-height 0.52s ease,
+    transform 0.52s ease,
+    visibility 0s linear 0.52s !important;
+}
+
+/* 鼠标滑到当前卡片：简短说明延迟出现 */
+.home-advantage-panel:hover .home-panel-brief {
+  opacity: 1 !important;
+  max-height: 120px !important;
+
+  transform: translateY(0) !important;
+
+  visibility: visible !important;
+
+  /*
+    关键：延迟 0.45 秒出现
+    如果想更慢，改成 0.6s
+  */
+  transition-delay: 0.25s, 0.25s, 0.25s, 0s !important;
+}
+
+/* 鼠标滑到当前卡片：详细说明再晚一点出现 */ 
+.home-advantage-panel:hover .home-panel-detail {
+  opacity: 1 !important;
+  max-height: 180px !important;
+
+  transform: translateY(0) !important;
+
+  visibility: visible !important;
+
+  /*
+    详细说明比简短说明更晚一点
+  */
+  transition-delay: 0.22s, 0.22s, 0.22s, 0s !important;
+}      
+/* =========================================================
+   第四屏企业优势卡片：隐藏 01 / 02 / 03 / 04 / 05 编号
+   放在 app/globals.css 最底部
+
+   作用：
+   1. 去掉每张卡片左上方的数字编号
+   2. 保留“研发能力 / 制造及交付 / 质量体系”等主标题
+   3. 不修改 TSX，只通过 CSS 隐藏
+========================================================= */
+
+.home-advantage-panel .home-panel-index {
+  display: none !important;
+} 
+
+/* =========================================================
+   第四屏企业优势卡片：手机端直接显示文字
+   放在 app/globals.css 最底部
+
+   作用：
+   1. 手机端不做 hover 动画
+   2. 小字默认直接显示
+   3. 文字整体小一点
+   4. 上下间距更紧凑
+   5. 去掉桌面端向右 50px 的大偏移，避免手机端文字被挤压
+========================================================= */
+
+@media (max-width: 768px) {
+  /* 手机端卡片内容整体 */
+  .home-advantage-panel .home-panel-content {
+    /*
+      手机端不要再向右移动 50px。
+      这里改成 20px，更适合手机屏幕。
+    */
+    transform: translateX(20px) !important;
+
+    width: auto !important;
+    max-width: calc(100% - 40px) !important;
+
+    text-align: left !important;
+    align-items: flex-start !important;
+
+    /*
+      上下间距更紧凑
+    */
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+
+    /*
+      手机端不需要动画
+    */
+    transition: none !important;
+  }
+
+  /* 手机端没有鼠标 hover，所以保持不变 */
+  .home-advantage-panel:hover .home-panel-content {
+    transform: translateX(20px) !important;
+  }
+
+  /* 01 / 02 / 03 / 04 / 05 编号继续隐藏 */
+  .home-advantage-panel .home-panel-index {
+    display: none !important;
+  }
+
+  /* 主标题：研发能力 / 制造及交付 / 质量体系 */
+  .home-advantage-panel .home-panel-title {
+    font-size: 26px !important;
+    line-height: 1.15 !important;
+    font-weight: 700 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    transform: none !important;
+    transition: none !important;
+  }
+
+  /* 手机端 hover 不放大标题 */
+  .home-advantage-panel:hover .home-panel-title {
+    font-size: 26px !important;
+    transform: none !important;
+  }
+
+  /* 标题下面的横线 */
+  .home-advantage-panel .home-panel-line {
+    width: 36px !important;
+    height: 2px !important;
+
+    /*
+      减小上下间距
+    */
+    margin: 14px 0 12px 0 !important;
+
+    background: #09e9b4 !important;
+
+    transition: none !important;
+  }
+
+  /* 手机端 hover 横线不再变长 */
+  .home-advantage-panel:hover .home-panel-line {
+    width: 36px !important;
+    margin: 14px 0 12px 0 !important;
+  }
+
+  /* 简短说明：手机端默认直接显示 */
+  .home-advantage-panel .home-panel-brief {
+    display: block !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+    max-height: none !important;
+    overflow: visible !important;
+
+    transform: none !important;
+    transition: none !important;
+
+    margin: 0 !important;
+
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+    font-weight: 500 !important;
+
+    color: rgba(255, 255, 255, 0.92) !important;
+
+    max-width: 100% !important;
+    text-align: left !important;
+  }
+
+  /* 详细说明：手机端默认直接显示 */
+  .home-advantage-panel .home-panel-detail {
+    display: block !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+    max-height: none !important;
+    overflow: visible !important;
+
+    transform: none !important;
+    transition: none !important;
+
+    /*
+      详细说明和上面小字之间的距离缩小
+    */
+    margin: 8px 0 0 0 !important;
+
+    font-size: 13px !important;
+    line-height: 1.55 !important;
+    font-weight: 400 !important;
+
+    color: rgba(255, 255, 255, 0.78) !important;
+
+    max-width: 100% !important;
+    text-align: left !important;
+  }
+
+  /* 手机端 hover 后小字也不要动画 */
+  .home-advantage-panel:hover .home-panel-brief,
+  .home-advantage-panel:hover .home-panel-detail {
+    opacity: 1 !important;
+    visibility: visible !important;
+    max-height: none !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  /* 手机端遮罩不要变化太明显，保持文字清晰 */
+  .home-advantage-panel::before {
+    opacity: 0.78 !important;
+    transition: none !important;
+  }
+
+  .home-advantage-panel:hover::before {
+    opacity: 0.78 !important;
+  }
+} 

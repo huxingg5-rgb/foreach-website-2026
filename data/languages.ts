@@ -6,6 +6,7 @@
 // 2. 语言切换、URL 路径、多语言 SEO、hreflang 都可以从这里读取
 // 3. 后期如果接后端 / CMS，可以让后端返回类似结构
 // 4. 当前阶段先使用本地静态配置，保证前端开发稳定
+// 5. textLayout 用于控制不同语言的排版密度，例如中文/韩文较短，西语/法语/俄语较长
 
 /* ================================
    01. 官网支持的语言代码类型
@@ -33,7 +34,18 @@ export type LocaleCode = "zh-CN" | "en" | "es" | "fr" | "ko" | "ru";
 export type LanguageDirection = "ltr" | "rtl";
 
 /* ================================
-   03. 语言项类型
+   03. 语言排版密度类型
+================================ */
+
+// LanguageTextLayout：根据语言文字长度控制页面排版
+// 说明：
+// 1. compact：短文本排版，适合中文、韩文
+// 2. standard：标准排版，适合英文
+// 3. expanded：长文本排版，适合西班牙语、法语、俄语
+export type LanguageTextLayout = "compact" | "standard" | "expanded";
+
+/* ================================
+   04. 语言项类型
 ================================ */
 
 // LanguageItem：单个语言配置类型
@@ -49,6 +61,7 @@ export type LanguageItem = {
   htmlLang: string; // 写入 html lang 的标准值
   hreflang: string; // SEO hreflang 使用的值
   direction: LanguageDirection; // 文字方向，当前都是 ltr
+  textLayout: LanguageTextLayout; // 语言排版密度，用于控制不同语言的字号、行高和间距
   isDefault: boolean; // 是否默认语言
   enabled: boolean; // 是否启用
   order: number; // 排序字段
@@ -56,7 +69,7 @@ export type LanguageItem = {
 };
 
 /* ================================
-   04. 默认语言
+   05. 默认语言
 ================================ */
 
 // 默认语言
@@ -67,7 +80,7 @@ export type LanguageItem = {
 export const defaultLocale: LocaleCode = "zh-CN";
 
 /* ================================
-   05. 官网语言列表
+   06. 官网语言列表
 ================================ */
 
 // 官网支持的语言列表
@@ -76,6 +89,7 @@ export const defaultLocale: LocaleCode = "zh-CN";
 // 2. 其他语言路径分别是 /en、/es、/fr、/ko、/ru
 // 3. enabled 可以控制某个语言是否暂时开放
 // 4. order 控制语言下拉菜单排序
+// 5. textLayout 控制页面排版密度
 export const languages: LanguageItem[] = [
   {
     id: "zh-CN", // 稳定 ID
@@ -86,6 +100,7 @@ export const languages: LanguageItem[] = [
     htmlLang: "zh-CN", // HTML lang
     hreflang: "zh-CN", // SEO hreflang
     direction: "ltr", // 中文从左到右
+    textLayout: "compact", // 中文文字密度高、较短，使用紧凑排版
     isDefault: true, // 中文是默认语言
     enabled: true, // 当前启用
     order: 1, // 排序
@@ -100,6 +115,7 @@ export const languages: LanguageItem[] = [
     htmlLang: "en", // HTML lang
     hreflang: "en", // SEO hreflang
     direction: "ltr", // 英文从左到右
+    textLayout: "standard", // 英文长度适中，使用标准排版
     isDefault: false, // 非默认语言
     enabled: true, // 当前启用
     order: 2, // 排序
@@ -114,6 +130,7 @@ export const languages: LanguageItem[] = [
     htmlLang: "es", // HTML lang
     hreflang: "es", // SEO hreflang
     direction: "ltr", // 西班牙语从左到右
+    textLayout: "expanded", // 西班牙语整体更长，使用宽松排版
     isDefault: false, // 非默认语言
     enabled: true, // 当前启用
     order: 3, // 排序
@@ -128,6 +145,7 @@ export const languages: LanguageItem[] = [
     htmlLang: "fr", // HTML lang
     hreflang: "fr", // SEO hreflang
     direction: "ltr", // 法语从左到右
+    textLayout: "expanded", // 法语整体更长，使用宽松排版
     isDefault: false, // 非默认语言
     enabled: true, // 当前启用
     order: 4, // 排序
@@ -142,6 +160,7 @@ export const languages: LanguageItem[] = [
     htmlLang: "ko", // HTML lang
     hreflang: "ko", // SEO hreflang
     direction: "ltr", // 韩语从左到右
+    textLayout: "compact", // 韩语和中文类似，文字密度较高，使用紧凑排版
     isDefault: false, // 非默认语言
     enabled: true, // 当前启用
     order: 5, // 排序
@@ -156,6 +175,7 @@ export const languages: LanguageItem[] = [
     htmlLang: "ru", // HTML lang
     hreflang: "ru", // SEO hreflang
     direction: "ltr", // 俄语从左到右
+    textLayout: "expanded", // 俄语标题和说明通常较长，使用宽松排版
     isDefault: false, // 非默认语言
     enabled: true, // 当前启用
     order: 6, // 排序
@@ -164,7 +184,7 @@ export const languages: LanguageItem[] = [
 ];
 
 /* ================================
-   06. 获取启用语言
+   07. 获取启用语言
 ================================ */
 
 // 已启用语言列表
@@ -179,7 +199,7 @@ export function getEnabledLanguages() {
 }
 
 /* ================================
-   07. 获取启用语言代码
+   08. 获取启用语言代码
 ================================ */
 
 // 已启用语言代码列表
@@ -191,7 +211,7 @@ export function getEnabledLocaleCodes() {
 }
 
 /* ================================
-   08. 判断是否支持某种语言
+   09. 判断是否支持某种语言
 ================================ */
 
 // 判断语言是否被官网支持
@@ -203,7 +223,7 @@ export function isSupportedLocale(locale: string): locale is LocaleCode {
 }
 
 /* ================================
-   09. 判断是否启用某种语言
+   10. 判断是否启用某种语言
 ================================ */
 
 // 判断语言是否启用
@@ -217,7 +237,7 @@ export function isEnabledLocale(locale: string): locale is LocaleCode {
 }
 
 /* ================================
-   10. 根据语言代码获取语言配置
+   11. 根据语言代码获取语言配置
 ================================ */
 
 // 根据语言代码获取语言项
@@ -233,7 +253,7 @@ export function getLanguageByCode(locale: LocaleCode) {
 }
 
 /* ================================
-   11. 获取语言首页路径
+   12. 获取语言首页路径
 ================================ */
 
 // 根据语言代码获取首页路径
@@ -247,7 +267,7 @@ export function getLanguageHomeHref(locale: LocaleCode) {
 }
 
 /* ================================
-   12. 获取 html lang
+   13. 获取 html lang
 ================================ */
 
 // 获取 HTML lang 属性值
@@ -260,7 +280,7 @@ export function getHtmlLang(locale: LocaleCode) {
 }
 
 /* ================================
-   13. 获取 hreflang
+   14. 获取 hreflang
 ================================ */
 
 // 获取 SEO hreflang
@@ -272,7 +292,34 @@ export function getHrefLang(locale: LocaleCode) {
 }
 
 /* ================================
-   14. 根据当前路径判断语言
+   15. 获取语言排版类型
+================================ */
+
+// 获取当前语言的排版密度
+// 说明：
+// 1. zh-CN / ko 返回 compact
+// 2. en 返回 standard
+// 3. es / fr / ru 返回 expanded
+// 4. 后面首页外层 class 会用它控制不同语言的字号和间距
+export function getLanguageTextLayout(locale: LocaleCode) {
+  return getLanguageByCode(locale).textLayout;
+}
+
+/* ================================
+   16. 获取语言排版 class
+================================ */
+
+// 获取当前语言对应的页面排版 class
+// 说明：
+// 1. compact 返回 site-page--compact
+// 2. standard 返回 site-page--standard
+// 3. expanded 返回 site-page--expanded
+export function getLanguageTextLayoutClass(locale: LocaleCode) {
+  return `site-page--${getLanguageTextLayout(locale)}`;
+}
+
+/* ================================
+   17. 根据当前路径判断语言
 ================================ */
 
 // 根据 pathname 判断当前语言
@@ -308,7 +355,7 @@ export function getLocaleFromPathname(pathname: string): LocaleCode {
 }
 
 /* ================================
-   15. 后端 / CMS 对接预留说明
+   18. 后端 / CMS 对接预留说明
 ================================ */
 
 // 后端对接说明：
@@ -328,6 +375,7 @@ export function getLocaleFromPathname(pathname: string): LocaleCode {
 //     htmlLang: "en",
 //     hreflang: "en",
 //     direction: "ltr",
+//     textLayout: "standard",
 //     isDefault: false,
 //     enabled: true,
 //     order: 2,
@@ -338,4 +386,4 @@ export function getLocaleFromPathname(pathname: string): LocaleCode {
 // 前端替换方式：
 // 1. 第一阶段继续使用本地 languages
 // 2. 第二阶段接后端时，新增 fetchLanguages()
-// 3. Header / sitemap / SEO 不需要大改，只要数据结构一致即可
+// 3. Header / sitemap / SEO / 页面排版不需要大改，只要数据结构一致即可

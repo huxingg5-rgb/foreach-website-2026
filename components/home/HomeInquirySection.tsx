@@ -1,6 +1,79 @@
+// components/home/HomeInquirySection.tsx
 "use client";
 
+// 首页第六屏：在线询盘
+//
+// 说明：
+// 1. 这个组件只负责表单状态、邮箱验证码逻辑、提交逻辑和页面渲染
+// 2. 所有文字、表单标签、下拉选项、提示信息，统一从 data/home-inquiry.ts 读取
+// 3. 表单提交时，product / application 使用稳定英文 value，不再提交中文文字
+// 4. 后期接后台 / CRM / 邮件系统时，数据会更稳定
+
 import { FormEvent, useState } from "react";
+
+import type { LocaleCode } from "@/lib/i18n";
+
+import {
+  getHomeInquiryText,
+  homeInquiryData,
+} from "@/data/home-inquiry";
+
+/* ================================
+   组件参数类型
+================================ */
+
+type HomeInquirySectionProps = {
+  locale: LocaleCode; // 当前语言，例如 zh-CN / en / es / fr / ko / ru
+};
+
+/* ================================
+   API 返回类型
+
+   说明：
+   后端接口后面可以返回：
+   {
+     message: "..."
+   }
+================================ */
+
+type ApiResponse = {
+  message?: string;
+};
+
+/* ================================
+   简单邮箱格式判断
+
+   说明：
+   当前只做基础判断，避免用户明显填错。
+   后端正式上线时，还需要后端再次校验。
+================================ */
+
+function isValidEmail(email: string) {
+  return email.includes("@") && email.includes(".");
+}
+
+/* ================================
+   验证码倒计时按钮文字
+
+   说明：
+   这里不单独放进 data 文件，是因为它带动态数字 countdown。
+================================ */
+
+function getCountdownLabel(countdown: number, locale: LocaleCode) {
+  if (locale === "zh-CN") {
+    return `${countdown}秒后重发`;
+  }
+
+  if (locale === "ko") {
+    return `${countdown}초 후 재전송`;
+  }
+
+  if (locale === "ru") {
+    return `${countdown} с`;
+  }
+
+  return `${countdown}s`;
+}
 
 /**
  * HomeInquirySection
@@ -11,37 +84,45 @@ import { FormEvent, useState } from "react";
  * 2. 校验验证码：/api/inquiry/verify-code
  * 3. 提交询盘：/api/inquiry/submit
  */
-export default function HomeInquirySection() {
-  /** 感兴趣产品 */
+export default function HomeInquirySection({ locale }: HomeInquirySectionProps) {
+  // 感兴趣产品
   const [product, setProduct] = useState("");
 
-  /** 应用领域 */
+  // 应用领域
   const [application, setApplication] = useState("");
 
-  /** 其他应用领域 */
+  // 其他应用领域
   const [otherApplication, setOtherApplication] = useState("");
 
-  /** 邮箱是否验证通过 */
+  // 邮箱是否验证通过
   const [emailVerified, setEmailVerified] = useState(false);
 
-  /** 验证码倒计时 */
+  // 验证码倒计时
   const [countdown, setCountdown] = useState(0);
 
-  /** 页面提示信息 */
+  // 页面提示信息
   const [message, setMessage] = useState("");
+
+  // 是否正在提交询盘
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const text = homeInquiryData;
 
   /**
    * 发送邮箱验证码
    * 当前请求预留 API：/api/inquiry/send-code
    */
   async function handleSendCode() {
-    const emailInput = document.getElementById("email") as HTMLInputElement | null;
+    const emailInput = document.getElementById(
+      "email",
+    ) as HTMLInputElement | null;
+
     const email = emailInput?.value.trim() || "";
 
     setMessage("");
 
-    if (!email.includes("@") || !email.includes(".")) {
-      setMessage("请输入正确的邮箱格式。");
+    if (!isValidEmail(email)) {
+      setMessage(getHomeInquiryText(text.messages.invalidEmail, locale));
       return;
     }
 
@@ -54,15 +135,22 @@ export default function HomeInquirySection() {
         body: JSON.stringify({ email }),
       });
 
-      const data = await res.json();
+      const data = (await res.json().catch(() => ({}))) as ApiResponse;
 
       if (!res.ok) {
-        setMessage(data.message || "验证码发送失败。");
+        setMessage(
+          data.message ||
+            getHomeInquiryText(text.messages.sendCodeFailed, locale),
+        );
         return;
       }
 
       setEmailVerified(false);
-      setMessage(data.message || "验证码已发送，请查看邮箱。");
+
+      setMessage(
+        data.message ||
+          getHomeInquiryText(text.messages.sendCodeSuccess, locale),
+      );
 
       setCountdown(60);
 
@@ -77,7 +165,7 @@ export default function HomeInquirySection() {
         });
       }, 1000);
     } catch {
-      setMessage("网络异常，验证码发送失败。");
+      setMessage(getHomeInquiryText(text.messages.sendCodeFailed, locale));
     }
   }
 
@@ -86,16 +174,26 @@ export default function HomeInquirySection() {
    * 当前请求预留 API：/api/inquiry/verify-code
    */
   async function handleVerifyCode() {
-    const emailInput = document.getElementById("email") as HTMLInputElement | null;
-    const codeInput = document.getElementById("verifyCode") as HTMLInputElement | null;
+    const emailInput = document.getElementById(
+      "email",
+    ) as HTMLInputElement | null;
+
+    const codeInput = document.getElementById(
+      "verifyCode",
+    ) as HTMLInputElement | null;
 
     const email = emailInput?.value.trim() || "";
     const code = codeInput?.value.trim() || "";
 
     setMessage("");
 
-    if (!email || !code) {
-      setMessage("请填写邮箱和验证码。");
+    if (!isValidEmail(email)) {
+      setMessage(getHomeInquiryText(text.messages.invalidEmail, locale));
+      return;
+    }
+
+    if (!code) {
+      setMessage(getHomeInquiryText(text.messages.verifyCodeFailed, locale));
       return;
     }
 
@@ -108,18 +206,28 @@ export default function HomeInquirySection() {
         body: JSON.stringify({ email, code }),
       });
 
-      const data = await res.json();
+      const data = (await res.json().catch(() => ({}))) as ApiResponse;
 
       if (!res.ok) {
         setEmailVerified(false);
-        setMessage(data.message || "验证码校验失败。");
+
+        setMessage(
+          data.message ||
+            getHomeInquiryText(text.messages.verifyCodeFailed, locale),
+        );
+
         return;
       }
 
       setEmailVerified(true);
-      setMessage(data.message || "邮箱验证通过。");
+
+      setMessage(
+        data.message ||
+          getHomeInquiryText(text.messages.verifyCodeSuccess, locale),
+      );
     } catch {
-      setMessage("网络异常，验证码校验失败。");
+      setEmailVerified(false);
+      setMessage(getHomeInquiryText(text.messages.verifyCodeFailed, locale));
     }
   }
 
@@ -132,52 +240,80 @@ export default function HomeInquirySection() {
 
     const form = event.currentTarget;
 
+    const name = (
+      form.elements.namedItem("name") as HTMLInputElement
+    ).value.trim();
+
+    const company = (
+      form.elements.namedItem("company") as HTMLInputElement
+    ).value.trim();
+
+    const email = (
+      form.elements.namedItem("email") as HTMLInputElement
+    ).value.trim();
+
+    const region = (
+      form.elements.namedItem("region") as HTMLInputElement
+    ).value.trim();
+
+    const requirementMessage = (
+      form.elements.namedItem("message") as HTMLTextAreaElement
+    ).value.trim();
+
+    const finalApplication =
+      application === "other" ? otherApplication.trim() : application;
+
     const formData = {
-      name: (form.elements.namedItem("name") as HTMLInputElement).value.trim(),
-      company: (form.elements.namedItem("company") as HTMLInputElement).value.trim(),
-      email: (form.elements.namedItem("email") as HTMLInputElement).value.trim(),
+      name,
+      company,
+      email,
       product,
-      region: (form.elements.namedItem("region") as HTMLInputElement).value.trim(),
-      application: application === "其他" ? otherApplication.trim() : application,
-      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value.trim(),
+      region,
+      application: finalApplication,
+      message: requirementMessage,
+      locale,
     };
 
     setMessage("");
 
     if (!formData.name) {
-      setMessage("请填写姓名。");
+      setMessage(getHomeInquiryText(text.messages.requiredName, locale));
       return;
     }
 
     if (!formData.company) {
-      setMessage("请填写公司名称。");
+      setMessage(getHomeInquiryText(text.messages.requiredCompany, locale));
       return;
     }
 
-    if (!formData.email.includes("@")) {
-      setMessage("请填写正确的邮箱。");
+    if (!isValidEmail(formData.email)) {
+      setMessage(getHomeInquiryText(text.messages.invalidEmail, locale));
       return;
     }
 
     if (!emailVerified) {
-      setMessage("请先完成邮箱验证码校验。");
+      setMessage(
+        getHomeInquiryText(text.messages.requiredEmailVerified, locale),
+      );
       return;
     }
 
     if (!formData.product) {
-      setMessage("请选择感兴趣产品。");
+      setMessage(getHomeInquiryText(text.messages.requiredProduct, locale));
       return;
     }
 
-    if (application === "其他" && !otherApplication.trim()) {
-      setMessage("请填写其他应用领域。");
+    if (!formData.application) {
+      setMessage(getHomeInquiryText(text.messages.requiredApplication, locale));
       return;
     }
 
     if (!formData.message) {
-      setMessage("请填写需求描述。");
+      setMessage(getHomeInquiryText(text.messages.requiredMessage, locale));
       return;
     }
+
+    setIsSubmitting(true);
 
     try {
       const res = await fetch("/api/inquiry/submit", {
@@ -188,14 +324,20 @@ export default function HomeInquirySection() {
         body: JSON.stringify(formData),
       });
 
-      const data = await res.json();
+      const data = (await res.json().catch(() => ({}))) as ApiResponse;
 
       if (!res.ok) {
-        setMessage(data.message || "询盘提交失败。");
+        setMessage(
+          data.message ||
+            getHomeInquiryText(text.messages.submitFailed, locale),
+        );
         return;
       }
 
-      setMessage(data.message || "询盘提交成功，我们会尽快与您联系。");
+      setMessage(
+        data.message ||
+          getHomeInquiryText(text.messages.submitSuccess, locale),
+      );
 
       form.reset();
       setProduct("");
@@ -203,194 +345,294 @@ export default function HomeInquirySection() {
       setOtherApplication("");
       setEmailVerified(false);
     } catch {
-      setMessage("网络异常，询盘提交失败。");
+      setMessage(getHomeInquiryText(text.messages.submitFailed, locale));
+    } finally {
+      setIsSubmitting(false);
     }
   }
 
   return (
-    <section className="screen-section contact-screen" aria-labelledby="inquiry-title">
+    <section
+      className="screen-section contact-screen"
+      id={homeInquiryData.sectionId}
+      aria-labelledby="inquiry-title"
+    >
       <div className="screen-inner">
         <div className="contact-layout">
+          {/* 左侧需求说明区域 */}
           <aside className="demand-panel">
-            <h2 className="demand-title">告诉我们您的液路需求</h2>
+            <h2 className="demand-title">
+              {getHomeInquiryText(text.left.title, locale)}
+            </h2>
 
             <p className="demand-intro">
-              无论您正在进行产品选型、样机验证、液路方案设计，还是需要产品资料与合规文件，
-              恒永达都可以围绕您的应用场景、流量范围、压力需求、介质类型和系统结构，提供对应的产品与工程支持。
+              {getHomeInquiryText(text.left.description, locale)}
             </p>
 
             <div className="demand-list">
-              <div className="demand-item">
-                <span className="demand-index">01</span>
-                <div>
-                  <h3 className="demand-item-title">产品选型支持</h3>
-                  <p className="demand-item-text">
-                    根据流量、压力、介质、通道数量和安装空间，协助筛选泵、阀、传感器与管路组件。
-                  </p>
-                </div>
-              </div>
+              {text.supportItems.map((item, index) => (
+                <div className="demand-item" key={item.key}>
+                  <span className="demand-index">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
 
-              <div className="demand-item">
-                <span className="demand-index">02</span>
-                <div>
-                  <h3 className="demand-item-title">液路方案沟通</h3>
-                  <p className="demand-item-text">
-                    围绕样本处理、试剂分配、清洗废液、流路切换与高压控制等场景，提供组合建议。
-                  </p>
-                </div>
-              </div>
+                  <div>
+                    <h3 className="demand-item-title">
+                      {getHomeInquiryText(item.title, locale)}
+                    </h3>
 
-              <div className="demand-item">
-                <span className="demand-index">03</span>
-                <div>
-                  <h3 className="demand-item-title">资料与合规支持</h3>
-                  <p className="demand-item-text">
-                    提供产品目录、规格书、安装说明、选型资料及 RoHS、REACH、CE、MSDS 等合规资料支持。
-                  </p>
+                    <p className="demand-item-text">
+                      {getHomeInquiryText(item.description, locale)}
+                    </p>
+                  </div>
                 </div>
-              </div>
+              ))}
             </div>
           </aside>
 
-          <aside className="inquiry-panel" aria-label="在线询盘表单">
+          {/* 右侧在线询盘表单 */}
+          <aside
+            className="inquiry-panel"
+            aria-label={getHomeInquiryText(text.form.title, locale)}
+          >
             <div className="inquiry-panel-head">
               <h3 id="inquiry-title" className="inquiry-title">
-                在线询盘
+                {getHomeInquiryText(text.form.title, locale)}
               </h3>
+
               <p className="inquiry-desc">
-                提交前需完成邮箱验证。正式上线后可接入真实邮件验证码、邮件通知、数据库和 CRM。
+                {getHomeInquiryText(text.form.description, locale)}
               </p>
             </div>
 
             <form className="inquiry-form" onSubmit={handleSubmit}>
               <div className="form-grid-two">
                 <div className="field">
-                  <label htmlFor="name">姓名</label>
-                  <input id="name" name="name" type="text" placeholder="请输入姓名" />
+                  <label htmlFor="name">
+                    {getHomeInquiryText(text.form.nameLabel, locale)}
+                  </label>
+
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    placeholder={getHomeInquiryText(
+                      text.form.namePlaceholder,
+                      locale,
+                    )}
+                  />
                 </div>
 
                 <div className="field">
-                  <label htmlFor="company">公司名称</label>
-                  <input id="company" name="company" type="text" placeholder="请输入公司名称" />
+                  <label htmlFor="company">
+                    {getHomeInquiryText(text.form.companyLabel, locale)}
+                  </label>
+
+                  <input
+                    id="company"
+                    name="company"
+                    type="text"
+                    placeholder={getHomeInquiryText(
+                      text.form.companyPlaceholder,
+                      locale,
+                    )}
+                  />
                 </div>
               </div>
 
               <div className="field">
-                <label htmlFor="email">邮箱验证</label>
+                <label htmlFor="email">
+                  {getHomeInquiryText(text.form.emailLabel, locale)}
+                </label>
+
                 <div className="verify-row">
-                  <input id="email" name="email" type="email" placeholder="请输入常用邮箱" />
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder={getHomeInquiryText(
+                      text.form.emailPlaceholder,
+                      locale,
+                    )}
+                    onChange={() => {
+                      setEmailVerified(false);
+                    }}
+                  />
+
                   <button
                     className="plain-btn small-btn"
                     type="button"
                     onClick={handleSendCode}
                     disabled={countdown > 0}
                   >
-                    {countdown > 0 ? `${countdown}秒后重发` : "发送验证码"}
+                    {countdown > 0
+                      ? getCountdownLabel(countdown, locale)
+                      : getHomeInquiryText(text.form.sendCodeButton, locale)}
                   </button>
                 </div>
               </div>
 
               <div className="field">
-                <label htmlFor="verifyCode">验证码</label>
+                <label htmlFor="verifyCode">
+                  {getHomeInquiryText(
+                    text.form.verificationCodeLabel,
+                    locale,
+                  )}
+                </label>
+
                 <div className="verify-code-row">
-                  <input id="verifyCode" name="verifyCode" type="text" placeholder="请输入邮箱验证码" />
-                  <button className="plain-btn small-btn" type="button" onClick={handleVerifyCode}>
-                    校验验证码
+                  <input
+                    id="verifyCode"
+                    name="verifyCode"
+                    type="text"
+                    placeholder={getHomeInquiryText(
+                      text.form.verificationCodePlaceholder,
+                      locale,
+                    )}
+                  />
+
+                  <button
+                    className="plain-btn small-btn"
+                    type="button"
+                    onClick={handleVerifyCode}
+                  >
+                    {emailVerified
+                      ? getHomeInquiryText(text.form.verifiedLabel, locale)
+                      : getHomeInquiryText(text.form.verifyCodeButton, locale)}
                   </button>
                 </div>
               </div>
 
               <div className="field">
-                <label htmlFor="productSelect">感兴趣产品</label>
+                <label htmlFor="productSelect">
+                  {getHomeInquiryText(text.form.productLabel, locale)}
+                </label>
+
                 <select
                   id="productSelect"
                   value={product}
                   onChange={(event) => setProduct(event.target.value)}
                 >
-                  <option value="">请选择感兴趣产品</option>
+                  <option value="">
+                    {getHomeInquiryText(text.form.productPlaceholder, locale)}
+                  </option>
 
-                  <optgroup label="泵类产品">
-                    <option value="隔膜泵">隔膜泵</option>
-                    <option value="注射泵">注射泵</option>
-                    <option value="移液泵">移液泵</option>
-                    <option value="柱塞泵">柱塞泵</option>
-                  </optgroup>
-
-                  <optgroup label="阀类产品">
-                    <option value="电磁阀">电磁阀</option>
-                    <option value="夹管阀">夹管阀</option>
-                    <option value="旋转阀">旋转阀</option>
-                    <option value="高压阀">高压阀</option>
-                  </optgroup>
-
-                  <optgroup label="传感器与检测模块">
-                    <option value="压力传感器">压力传感器</option>
-                    <option value="气泡检测器">气泡检测器</option>
-                    <option value="电导率检测模块">电导率检测模块</option>
-                  </optgroup>
-
-                  <optgroup label="管路与连接件">
-                    <option value="管路">管路</option>
-                    <option value="连接件">连接件</option>
-                    <option value="采样针">采样针</option>
-                  </optgroup>
-
-                  <option value="液路系统解决方案">液路系统解决方案</option>
-                  <option value="其他产品">其他产品</option>
+                  {text.productOptions.map((option) => (
+                    <option value={option.value} key={option.value}>
+                      {getHomeInquiryText(option.label, locale)}
+                    </option>
+                  ))}
                 </select>
               </div>
 
               <div className="form-grid-two">
                 <div className="field">
-                  <label htmlFor="region">国家 / 地区</label>
-                  <input id="region" name="region" type="text" placeholder="例如：中国、德国、美国" />
+                  <label htmlFor="region">
+                    {getHomeInquiryText(text.form.countryLabel, locale)}
+                  </label>
+
+                  <input
+                    id="region"
+                    name="region"
+                    type="text"
+                    placeholder={getHomeInquiryText(
+                      text.form.countryPlaceholder,
+                      locale,
+                    )}
+                  />
                 </div>
 
                 <div className="field">
-                  <label htmlFor="application">应用领域</label>
+                  <label htmlFor="application">
+                    {getHomeInquiryText(text.form.applicationLabel, locale)}
+                  </label>
+
                   <select
                     id="application"
                     value={application}
-                    onChange={(event) => setApplication(event.target.value)}
+                    onChange={(event) => {
+                      const nextApplication = event.target.value;
+
+                      setApplication(nextApplication);
+
+                      if (nextApplication !== "other") {
+                        setOtherApplication("");
+                      }
+                    }}
                   >
-                    <option value="">请选择应用领域</option>
-                    <option value="IVD 体外诊断">IVD 体外诊断</option>
-                    <option value="生命科学">生命科学</option>
-                    <option value="高端分析仪器">高端分析仪器</option>
-                    <option value="合成生物">合成生物</option>
-                    <option value="实验室自动化">实验室自动化</option>
-                    <option value="其他">其他</option>
+                    <option value="">
+                      {getHomeInquiryText(
+                        text.form.applicationPlaceholder,
+                        locale,
+                      )}
+                    </option>
+
+                    {text.applicationOptions.map((option) => (
+                      <option value={option.value} key={option.value}>
+                        {getHomeInquiryText(option.label, locale)}
+                      </option>
+                    ))}
                   </select>
                 </div>
               </div>
 
-              <div className={`field other-application-field ${application === "其他" ? "show" : ""}`}>
-                <label htmlFor="otherApplication">其他应用领域</label>
+              <div
+                className={`field other-application-field ${
+                  application === "other" ? "show" : ""
+                }`}
+              >
+                <label htmlFor="otherApplication">
+                  {getHomeInquiryText(
+                    text.form.otherApplicationLabel,
+                    locale,
+                  )}
+                </label>
+
                 <input
                   id="otherApplication"
                   name="otherApplication"
                   type="text"
-                  placeholder="请填写具体应用领域"
+                  placeholder={getHomeInquiryText(
+                    text.form.otherApplicationPlaceholder,
+                    locale,
+                  )}
                   value={otherApplication}
-                  onChange={(event) => setOtherApplication(event.target.value)}
+                  onChange={(event) =>
+                    setOtherApplication(event.target.value)
+                  }
                 />
               </div>
 
               <div className="field">
-                <label htmlFor="message">需求描述</label>
+                <label htmlFor="message">
+                  {getHomeInquiryText(text.form.messageLabel, locale)}
+                </label>
+
                 <textarea
                   id="message"
                   name="message"
-                  placeholder="请填写应用场景、目标产品、流量范围、压力要求、介质类型、接口形式或其他项目需求。"
+                  placeholder={getHomeInquiryText(
+                    text.form.messagePlaceholder,
+                    locale,
+                  )}
                 />
               </div>
 
               {message && <div className="result-box show">{message}</div>}
 
               <div className="submit-row">
-                <p className="submit-tip">提交后可由销售或工程人员进一步联系您。</p>
-                <button className="primary-btn submit-btn" type="submit">
-                  提交询盘
+                <p className="submit-tip">
+                  {getHomeInquiryText(text.form.description, locale)}
+                </p>
+
+                <button
+                  className="primary-btn submit-btn"
+                  type="submit"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting
+                    ? getHomeInquiryText(text.form.submittingButton, locale)
+                    : getHomeInquiryText(text.form.submitButton, locale)}
                 </button>
               </div>
             </form>

@@ -1,34 +1,48 @@
-// data/navigation.ts
-// 官网顶部导航数据配置文件
-//
-// 说明：
-// 1. SiteHeader.tsx 只负责渲染导航样式
-// 2. 具体有哪些导航、下拉菜单、卡片入口，都放在这个文件里
-// 3. 后期如果接后台 / CMS，可以把这里的数据替换成接口返回数据
-// 4. 当前第一阶段多数 href 先指向首页锚点，避免还没做详情页时出现 404
+/* ================================
+   navigation.ts
+   官网导航数据配置文件
 
-import type { LocaleCode } from "@/lib/i18n"; // 引入官网语言类型，保证多语言 key 一致
+   说明：
+   1. 这个文件只负责存放导航数据
+   2. SiteHeader.tsx 只负责读取数据并渲染
+   3. 后续如果接后端 / CMS，可以让后端返回同样结构
+   4. 当前产品中心 Mega Menu 支持：
+      - 左侧分类
+      - 右侧按 categoryKey 对应分类显示产品
+      - 产品图片
+      - 产品名称
+      - 产品简短说明
+      - 中文、英文、西班牙语、法语、韩语、俄语
+================================ */
 
 /* ================================
    多语言文本类型
-   说明：
-   每个导航文字都要支持 6 种语言
 ================================ */
-export type LocalizedText = Record<LocaleCode, string>;
+export type LocalizedText = {
+  "zh-CN": string;
+  en: string;
+  es?: string;
+  fr?: string;
+  ko?: string;
+  ru?: string;
+  [locale: string]: string | undefined;
+};
 
 /* ================================
    多语言链接类型
-   说明：
-   1. 中文默认首页是 /
-   2. 英文首页是 /en
-   3. 其他语言同理
 ================================ */
-export type LocalizedHref = Record<LocaleCode, string>;
+export type LocalizedHref = {
+  "zh-CN": string;
+  en: string;
+  es?: string;
+  fr?: string;
+  ko?: string;
+  ru?: string;
+  [locale: string]: string | undefined;
+};
 
 /* ================================
-   导航 key 类型
-   说明：
-   这里列出顶部一级导航的唯一标识
+   一级导航 key 类型
 ================================ */
 export type NavigationKey =
   | "home"
@@ -39,68 +53,150 @@ export type NavigationKey =
   | "contact";
 
 /* ================================
-   手机端二级菜单类型
+   下拉菜单类型
 ================================ */
-export type MobileChildItem = {
-  key: string; // 二级菜单唯一标识
-  label: LocalizedText; // 二级菜单多语言名称
-  href: LocalizedHref; // 二级菜单多语言链接
-  order: number; // 排序，数字越小越靠前
-  enabled: boolean; // 是否显示
+export type DropdownType = "none" | "mega";
+
+/* ================================
+   导航图片类型
+
+   说明：
+   1. 图片放在 public 目录下时，代码里不要写 public
+   2. 例如：
+      public/images/products/pumps/syringe-pump.jpg
+      代码里写：
+      /images/products/pumps/syringe-pump.jpg
+================================ */
+export type NavigationImage = {
+  src: string;
+  alt: LocalizedText;
+  title?: LocalizedText;
+  description?: LocalizedText;
+  width?: number;
+  height?: number;
 };
 
 /* ================================
-   PC mega 下拉左侧分类类型
+   手机端二级导航类型
+================================ */
+export type MobileNavChild = {
+  key: string;
+  label: LocalizedText;
+  href: LocalizedHref;
+  order: number;
+  enabled: boolean;
+};
+
+/* ================================
+   Mega 菜单左侧分类类型
 ================================ */
 export type MegaCategoryItem = {
-  key: string; // 分类唯一标识
-  title: LocalizedText; // 分类标题
-  description: LocalizedText; // 分类说明
-  order: number; // 排序
-  enabled: boolean; // 是否显示
+  key: string;
+  title: LocalizedText;
+  description: LocalizedText;
+  order: number;
+  enabled: boolean;
 };
 
 /* ================================
-   PC mega 下拉右侧卡片类型
+   Mega 菜单右侧卡片类型
 ================================ */
 export type MegaCardItem = {
-  key: string; // 卡片唯一标识
-  title: LocalizedText; // 卡片标题
-  description: LocalizedText; // 卡片说明
-  href: LocalizedHref; // 卡片链接
-  order: number; // 排序
-  enabled: boolean; // 是否显示
+  key: string;
+  categoryKey?: string;
+  title: LocalizedText;
+  description: LocalizedText;
+  image?: NavigationImage;
+  images?: NavigationImage[];
+  href: LocalizedHref;
+  order: number;
+  enabled: boolean;
 };
 
 /* ================================
-   PC mega 下拉整体类型
+   Mega 下拉菜单完整类型
 ================================ */
 export type MegaDropdown = {
-  heading: LocalizedText; // 右侧内容区标题
-  description: LocalizedText; // 右侧内容区说明
-  footerText: LocalizedText; // 底部说明文字
-  footerLinkLabel: LocalizedText; // 底部按钮文字
-  footerHref: LocalizedHref; // 底部按钮链接
-  categories: MegaCategoryItem[]; // 左侧分类
-  cards: MegaCardItem[]; // 右侧入口卡片
+  heading: LocalizedText;
+  description: LocalizedText;
+  categories: MegaCategoryItem[];
+  cards: MegaCardItem[];
+  footerText: LocalizedText;
+  footerLinkLabel: LocalizedText;
+  footerHref: LocalizedHref;
 };
 
 /* ================================
-   顶部一级导航类型
+   一级导航类型
 ================================ */
 export type NavigationItem = {
-  key: NavigationKey; // 一级导航唯一标识
-  label: LocalizedText; // 一级导航多语言名称
-  href: LocalizedHref; // 一级导航链接
-  order: number; // 排序
-  enabled: boolean; // 是否显示
-  dropdownType?: "none" | "mega"; // 是否有 PC 大下拉
-  megaDropdown?: MegaDropdown; // PC 大下拉数据
-  mobileChildren?: MobileChildItem[]; // 手机端二级菜单
+  key: NavigationKey;
+  label: LocalizedText;
+  href: LocalizedHref;
+  order: number;
+  enabled: boolean;
+  dropdownType: DropdownType;
+  megaDropdown?: MegaDropdown;
+  mobileChildren?: MobileNavChild[];
 };
 
 /* ================================
-   工具函数：生成首页锚点链接
+   多语言文本辅助函数
+
+   说明：
+   1. 为了避免每次都写完整对象，这里用 t() 函数统一生成多语言对象
+   2. 参数顺序固定为：
+      中文、英文、西班牙语、法语、韩语、俄语
+================================ */
+function t(
+  zhCN: string,
+  en: string,
+  es: string,
+  fr: string,
+  ko: string,
+  ru: string
+): LocalizedText {
+  return {
+    "zh-CN": zhCN,
+    en,
+    es,
+    fr,
+    ko,
+    ru,
+  };
+}
+
+/* ================================
+   多语言路径辅助函数
+
+   说明：
+   1. 中文默认根路径 /
+   2. 英文 /en
+   3. 西班牙语 /es
+   4. 法语 /fr
+   5. 韩语 /ko
+   6. 俄语 /ru
+================================ */
+function localizedPath(path: string): LocalizedHref {
+  const normalizedPath = path.startsWith("/") ? path : `/${path}`;
+
+  return {
+    "zh-CN": normalizedPath,
+    en: `/en${normalizedPath === "/" ? "" : normalizedPath}`,
+    es: `/es${normalizedPath === "/" ? "" : normalizedPath}`,
+    fr: `/fr${normalizedPath === "/" ? "" : normalizedPath}`,
+    ko: `/ko${normalizedPath === "/" ? "" : normalizedPath}`,
+    ru: `/ru${normalizedPath === "/" ? "" : normalizedPath}`,
+  };
+}
+
+/* ================================
+   首页锚点路径辅助函数
+
+   说明：
+   1. 当前第一阶段官网很多栏目还在首页内
+   2. 所以先使用 /#products 这种锚点路径
+   3. 后续产品中心独立页面做好后，可以改成 /products
 ================================ */
 function anchorPath(anchor: string): LocalizedHref {
   return {
@@ -114,1680 +210,989 @@ function anchorPath(anchor: string): LocalizedHref {
 }
 
 /* ================================
-   工具函数：生成首页链接
+   产品图片辅助函数
+
+   说明：
+   1. 用这个函数减少重复代码
+   2. title 用于图片下方产品名称
+   3. description 用于图片下方产品说明
+   4. alt 用于图片 SEO / GEO 识别
 ================================ */
-function homePath(): LocalizedHref {
+function productImage(
+  src: string,
+  title: LocalizedText,
+  description: LocalizedText
+): NavigationImage {
   return {
-    "zh-CN": "/",
-    en: "/en",
-    es: "/es",
-    fr: "/fr",
-    ko: "/ko",
-    ru: "/ru",
+    src,
+    alt: title,
+    title,
+    description,
+    width: 600,
+    height: 380,
   };
 }
 
 /* ================================
-   导航主数据
+   产品中心 Mega 下拉菜单数据
 ================================ */
-export const navigationItems: NavigationItem[] = [
+const productMegaDropdown: MegaDropdown = {
+  heading: t(
+    "产品中心",
+    "Product Center",
+    "Centro de productos",
+    "Centre de produits",
+    "제품 센터",
+    "Центр продуктов"
+  ),
+
+  description: t(
+    "覆盖泵、阀、管路、连接件、采样针和传感器等微流体系统核心零部件。",
+    "Core microfluidic components including pumps, valves, tubing, fittings, probes, and sensors.",
+    "Componentes microfluídicos clave, incluidas bombas, válvulas, tubos, conectores, sondas y sensores.",
+    "Composants microfluidiques clés, notamment pompes, vannes, tubes, raccords, sondes et capteurs.",
+    "펌프, 밸브, 튜빙, 피팅, 프로브 및 센서를 포함한 핵심 미세유체 부품.",
+    "Ключевые микрофлюидные компоненты, включая насосы, клапаны, трубки, фитинги, зонды и датчики."
+  ),
+
+  categories: [
+    {
+      key: "pumps",
+      title: t("泵类", "Pumps", "Bombas", "Pompes", "펌프", "Насосы"),
+      description: t(
+        "精密定量、连续供液、自动移液与稳定输送",
+        "Precision metering, continuous supply, automated pipetting, and stable transfer",
+        "Dosificación precisa, suministro continuo, pipeteo automatizado y transferencia estable",
+        "Dosage précis, alimentation continue, pipetage automatisé et transfert stable",
+        "정밀 정량, 연속 공급, 자동 피펫팅 및 안정적인 이송",
+        "Точное дозирование, непрерывная подача, автоматическое пипетирование и стабильная передача"
+      ),
+      order: 1,
+      enabled: true,
+    },
+    {
+      key: "valves",
+      title: t("阀类", "Valves", "Válvulas", "Vannes", "밸브", "Клапаны"),
+      description: t(
+        "流路通断、夹管控制与多通道切换",
+        "On/off control, tubing shutoff, and multi-channel switching",
+        "Control de apertura/cierre, cierre de tubos y conmutación multicanal",
+        "Commande marche/arrêt, fermeture de tubes et commutation multicanal",
+        "온오프 제어, 튜빙 차단 및 다중 채널 전환",
+        "Управление вкл./выкл., перекрытие трубок и многоканальное переключение"
+      ),
+      order: 2,
+      enabled: true,
+    },
+    {
+      key: "tubing",
+      title: t("管路", "Tubing", "Tubos", "Tubes", "튜빙", "Трубки"),
+      description: t(
+        "多材料软管、硬管与透明液路管线",
+        "Multi-material flexible tubing, rigid tubing, and transparent fluid lines",
+        "Tubos flexibles multimaterial, tubos rígidos y líneas de fluido transparentes",
+        "Tubes souples multi-matériaux, tubes rigides et lignes fluidiques transparentes",
+        "다중 소재 플렉시블 튜빙, 리지드 튜빙 및 투명 유체 라인",
+        "Многоматериальные гибкие трубки, жесткие трубки и прозрачные жидкостные линии"
+      ),
+      order: 3,
+      enabled: true,
+    },
+    {
+      key: "fittings",
+      title: t("连接件", "Fittings", "Conectores", "Raccords", "피팅", "Фитинги"),
+      description: t(
+        "软管接头、硬管接头、鲁尔接头、快插连接与定制管路组件",
+        "Tubing connectors, rigid tubing fittings, luer fittings, quick connectors, and custom tubing assemblies",
+        "Conectores para tubos, racores para tubos rígidos, racores Luer, conectores rápidos y conjuntos de tubos personalizados",
+        "Connecteurs pour tubes, raccords pour tubes rigides, raccords Luer, connecteurs rapides et assemblages de tubes personnalisés",
+        "튜빙 커넥터, 리지드 튜빙 피팅, 루어 피팅, 퀵 커넥터 및 맞춤형 튜빙 어셈블리",
+        "Соединители для трубок, фитинги для жестких трубок, фитинги Luer, быстроразъемные соединители и индивидуальные трубные сборки"
+      ),
+      order: 4,
+      enabled: true,
+    },
+    {
+      key: "probes",
+      title: t("采样针", "Probes", "Sondas", "Sondes", "프로브", "Зонды"),
+      description: t(
+        "样本针、清洗针、穿刺针、搅拌针与定制针组件",
+        "Sampling probes, rinsing probes, puncturing probes, stirrers, and custom probe assemblies",
+        "Sondas de muestreo, sondas de enjuague, sondas de perforación, agitadores y conjuntos de sondas personalizados",
+        "Sondes d’échantillonnage, sondes de rinçage, sondes de perçage, agitateurs et assemblages de sondes personnalisés",
+        "샘플링 프로브, 린싱 프로브, 피어싱 프로브, 교반기 및 맞춤형 프로브 어셈블리",
+        "Пробоотборные зонды, промывочные зонды, прокалывающие зонды, мешалки и индивидуальные узлы зондов"
+      ),
+      order: 5,
+      enabled: true,
+    },
+    {
+      key: "sensors",
+      title: t("传感器", "Sensors", "Sensores", "Capteurs", "센서", "Датчики"),
+      description: t(
+        "液路压力监测、状态检测与系统保护",
+        "Fluid pressure monitoring, status detection, and system protection",
+        "Monitoreo de presión de fluido, detección de estado y protección del sistema",
+        "Surveillance de la pression fluidique, détection d’état et protection du système",
+        "유체 압력 모니터링, 상태 감지 및 시스템 보호",
+        "Мониторинг давления жидкости, контроль состояния и защита системы"
+      ),
+      order: 6,
+      enabled: true,
+    },
+  ],
+
+  cards: [
+    {
+      key: "pumps-card",
+      categoryKey: "pumps",
+      title: t("泵类产品", "Pumps", "Bombas", "Pompes", "펌프", "Насосы"),
+      description: t(
+        "定量、供液、移液与废液处理",
+        "Metering, supply, pipetting, and waste handling",
+        "Dosificación, suministro, pipeteo y gestión de residuos",
+        "Dosage, alimentation, pipetage et gestion des déchets",
+        "정량, 공급, 피펫팅 및 폐액 처리",
+        "Дозирование, подача, пипетирование и обращение с отходами"
+      ),
+      href: anchorPath("products"),
+      images: [
+        productImage(
+          "/images/products/pumps/syringe-pump.jpg",
+          t(
+            "注射泵",
+            "Syringe Pump",
+            "Bomba de jeringa",
+            "Pompe seringue",
+            "시린지 펌프",
+            "Шприцевой насос"
+          ),
+          t(
+            "μL–mL 级高精度定量分配",
+            "High-precision μL–mL dispensing",
+            "Dosificación precisa de μL a mL",
+            "Distribution précise de μL à mL",
+            "μL–mL 고정밀 분주",
+            "Высокоточное дозирование от μL до mL"
+          )
+        ),
+        productImage(
+          "/images/products/pumps/diaphragm-pump.jpg",
+          t(
+            "隔膜泵",
+            "Diaphragm Pump",
+            "Bomba de diafragma",
+            "Pompe à membrane",
+            "다이어프램 펌프",
+            "Мембранный насос"
+          ),
+          t(
+            "连续供液、清洗与废液处理",
+            "Continuous supply, washing, and waste handling",
+            "Suministro continuo, lavado y gestión de residuos",
+            "Alimentation continue, lavage et gestion des déchets",
+            "연속 공급, 세척 및 폐액 처리",
+            "Непрерывная подача, промывка и обработка отходов"
+          )
+        ),
+        productImage(
+          "/images/products/pumps/pipetting-pump.jpg",
+          t(
+            "移液泵",
+            "Pipetting Pump",
+            "Bomba de pipeteo",
+            "Pompe de pipetage",
+            "피펫팅 펌프",
+            "Пипеточный насос"
+          ),
+          t(
+            "自动化移液、加样与分液",
+            "Automated pipetting and dispensing",
+            "Pipeteo y dispensación automatizados",
+            "Pipetage et distribution automatisés",
+            "자동 피펫팅 및 분주",
+            "Автоматическое пипетирование и дозирование"
+          )
+        ),
+        productImage(
+          "/images/products/pumps/piston-pump.jpg",
+          t(
+            "柱塞泵",
+            "Piston Pump",
+            "Bomba de pistón",
+            "Pompe à piston",
+            "피스톤 펌프",
+            "Поршневой насос"
+          ),
+          t(
+            "稳定计量与重复性液体输送",
+            "Stable metering and repeatable transfer",
+            "Medición estable y transferencia repetible",
+            "Dosage stable et transfert répétable",
+            "안정적인 계량 및 반복 이송",
+            "Стабильное дозирование и повторяемая передача жидкости"
+          )
+        ),
+        productImage(
+          "/images/products/pumps/rotary-pump.jpg",
+          t(
+            "旋转泵",
+            "Rotary Pump",
+            "Bomba rotativa",
+            "Pompe rotative",
+            "로터리 펌프",
+            "Роторный насос"
+          ),
+          t(
+            "多通道液路切换与定量输送",
+            "Multi-channel switching and metering",
+            "Conmutación multicanal y dosificación",
+            "Commutation multicanal et dosage",
+            "다중 채널 전환 및 계량",
+            "Многоканальное переключение и дозирование"
+          )
+        ),
+      ],
+      order: 1,
+      enabled: true,
+    },
+
+    {
+      key: "valves-card",
+      categoryKey: "valves",
+      title: t("阀类产品", "Valves", "Válvulas", "Vannes", "밸브", "Клапаны"),
+      description: t(
+        "流路切换、通断控制与高压控制",
+        "Flow path switching, on/off control, and high-pressure control",
+        "Conmutación de flujo, control de apertura/cierre y alta presión",
+        "Commutation fluidique, commande marche/arrêt et contrôle haute pression",
+        "유로 전환, 온오프 제어 및 고압 제어",
+        "Переключение потоков, управление вкл./выкл. и высокое давление"
+      ),
+      href: anchorPath("products"),
+      images: [
+        productImage(
+          "/images/products/VALVE/Solenoid valve_200x200_01_v001.jpg",
+          t(
+            "电磁阀",
+            "Solenoid Valve",
+            "Válvula solenoide",
+            "Électrovanne",
+            "솔레노이드 밸브",
+            "Соленоидный клапан"
+          ),
+          t(
+            "流路通断控制与精密切换",
+            "On/off control and precise flow switching",
+            "Control de apertura/cierre y conmutación precisa",
+            "Commande marche/arrêt et commutation précise",
+            "유로 온오프 제어 및 정밀 전환",
+            "Управление вкл./выкл. и точное переключение потока"
+          )
+        ),
+        productImage(
+          "/images/products/VALVE/Pinch valve_200x200_01_v001.jpg",
+          t(
+            "夹管阀",
+            "Pinch Valve",
+            "Válvula de pinza",
+            "Vanne à pincement",
+            "핀치 밸브",
+            "Пережимной клапан"
+          ),
+          t(
+            "零死体积，适合软管液路控制",
+            "Zero-dead-volume control for flexible tubing",
+            "Control sin volumen muerto para tubos flexibles",
+            "Contrôle sans volume mort pour tubes souples",
+            "플렉시블 튜빙용 무사각 체적 제어",
+            "Управление гибкими трубками без мертвого объема"
+          )
+        ),
+        productImage(
+          "/images/products/VALVE/Rotary valve_200x200_01_v001.jpg",
+          t(
+            "旋转阀",
+            "Rotary Valve",
+            "Válvula rotativa",
+            "Vanne rotative",
+            "로터리 밸브",
+            "Роторный клапан"
+          ),
+          t(
+            "多通道流路选择与切换",
+            "Multi-port flow path selection and switching",
+            "Selección y conmutación de rutas multicanal",
+            "Sélection et commutation de voies multicanaux",
+            "다중 포트 유로 선택 및 전환",
+            "Выбор и переключение многоканальных потоков"
+          )
+        ),
+      ],
+      order: 2,
+      enabled: true,
+    },
+
+    {
+      key: "tubing-card",
+      categoryKey: "tubing",
+      title: t("管路产品", "Tubing", "Tubos", "Tubes", "튜빙", "Трубки"),
+      description: t(
+        "软管、硬管与液路管线",
+        "Flexible tubing, rigid tubing, and fluid lines",
+        "Tubos flexibles, tubos rígidos y líneas de fluido",
+        "Tubes souples, tubes rigides et lignes fluidiques",
+        "플렉시블 튜빙, 리지드 튜빙 및 유체 라인",
+        "Гибкие трубки, жесткие трубки и жидкостные линии"
+      ),
+      href: anchorPath("products"),
+      images: [
+        productImage(
+          "/images/products/TUBING/ETFE_200x200_01_v001.JPG",
+          t("ETFE 管", "ETFE Tubing", "Tubo ETFE", "Tube ETFE", "ETFE 튜빙", "Трубка ETFE"),
+          t(
+            "耐化学腐蚀，适合精密液路",
+            "Chemical-resistant tubing for precision fluidics",
+            "Tubo resistente a químicos para fluidos de precisión",
+            "Tube résistant aux produits chimiques pour fluidique de précision",
+            "정밀 유체용 내화학 튜빙",
+            "Химически стойкая трубка для точной флюидики"
+          )
+        ),
+        productImage(
+          "/images/products/TUBING/FEP_200x200_01_v001.JPG",
+          t("FEP 管", "FEP Tubing", "Tubo FEP", "Tube FEP", "FEP 튜빙", "Трубка FEP"),
+          t(
+            "透明度高，适合可视化液路",
+            "High transparency for visual fluid lines",
+            "Alta transparencia para líneas de fluido visibles",
+            "Haute transparence pour lignes fluidiques visibles",
+            "시각 유로용 고투명 튜빙",
+            "Высокая прозрачность для визуальных жидкостных линий"
+          )
+        ),
+        productImage(
+          "/images/products/TUBING/PEEK_200x200_01_v001.JPG",
+          t("PEEK 管", "PEEK Tubing", "Tubo PEEK", "Tube PEEK", "PEEK 튜빙", "Трубка PEEK"),
+          t(
+            "高强度，适合高性能流体系统",
+            "High-strength tubing for demanding fluidic systems",
+            "Tubo de alta resistencia para sistemas fluidos exigentes",
+            "Tube haute résistance pour systèmes fluidiques exigeants",
+            "고성능 유체 시스템용 고강도 튜빙",
+            "Высокопрочная трубка для сложных жидкостных систем"
+          )
+        ),
+        productImage(
+          "/images/products/TUBING/PTFE_200x200_01_v001.JPG",
+          t("PTFE 管", "PTFE Tubing", "Tubo PTFE", "Tube PTFE", "PTFE 튜빙", "Трубка PTFE"),
+          t(
+            "耐腐蚀，适合多种试剂输送",
+            "Corrosion-resistant tubing for reagent transfer",
+            "Tubo resistente a la corrosión para transferencia de reactivos",
+            "Tube anticorrosion pour transfert de réactifs",
+            "시약 이송용 내식성 튜빙",
+            "Коррозионностойкая трубка для подачи реагентов"
+          )
+        ),
+        productImage(
+          "/images/products/TUBING/PU_200x200_01_v001.JPG",
+          t("PU 管", "PU Tubing", "Tubo PU", "Tube PU", "PU 튜빙", "Трубка PU"),
+          t(
+            "柔韧性好，适合通用液路",
+            "Flexible tubing for general fluidic use",
+            "Tubo flexible para uso fluidico general",
+            "Tube flexible pour usage fluidique général",
+            "일반 유체용 플렉시블 튜빙",
+            "Гибкая трубка для общего применения"
+          )
+        ),
+        productImage(
+          "/images/products/TUBING/PVC_200x200_01_v001.JPG",
+          t("PVC 管", "PVC Tubing", "Tubo PVC", "Tube PVC", "PVC 튜빙", "Трубка PVC"),
+          t(
+            "适合体外诊断与实验室液路",
+            "Tubing for IVD and laboratory fluidics",
+            "Tubo para IVD y fluidos de laboratorio",
+            "Tube pour IVD et fluidique de laboratoire",
+            "IVD 및 실험실 유체용 튜빙",
+            "Трубка для IVD и лабораторной флюидики"
+          )
+        ),
+        productImage(
+          "/images/products/TUBING/TPU_200x200_01_v001.JPG",
+          t("TPU 管", "TPU Tubing", "Tubo TPU", "Tube TPU", "TPU 튜빙", "Трубка TPU"),
+          t(
+            "柔韧耐用，适合动态液路",
+            "Durable flexible tubing for dynamic fluid paths",
+            "Tubo flexible y duradero para rutas fluidas dinámicas",
+            "Tube flexible durable pour circuits fluidiques dynamiques",
+            "동적 유로용 내구성 플렉시블 튜빙",
+            "Прочная гибкая трубка для динамических жидкостных линий"
+          )
+        ),
+      ],
+      order: 3,
+      enabled: true,
+    },
+
+    {
+      key: "fittings-card",
+      categoryKey: "fittings",
+      title: t(
+        "连接件与管路组件",
+        "Fittings & Tubing Assemblies",
+        "Conectores y conjuntos de tubos",
+        "Raccords et assemblages de tubes",
+        "피팅 및 튜빙 어셈블리",
+        "Фитинги и трубные сборки"
+      ),
+      description: t(
+        "接头、转接件、快插连接与定制管路组件",
+        "Connectors, adapters, quick connectors, and custom tubing assemblies",
+        "Conectores, adaptadores, conectores rápidos y conjuntos de tubos personalizados",
+        "Connecteurs, adaptateurs, connecteurs rapides et assemblages de tubes personnalisés",
+        "커넥터, 어댑터, 퀵 커넥터 및 맞춤형 튜빙 어셈블리",
+        "Соединители, адаптеры, быстроразъемные соединители и индивидуальные трубные сборки"
+      ),
+      href: anchorPath("products"),
+      images: [
+        productImage(
+          "/images/products/FIT/Barbed connector_200x200_01_v001.jpg",
+          t(
+            "倒钩接头",
+            "Barbed Connector",
+            "Conector de espiga",
+            "Connecteur cannelé",
+            "바브 커넥터",
+            "Штуцерный соединитель"
+          ),
+          t(
+            "用于软管连接与低压液路装配",
+            "For flexible tubing connection and low-pressure fluid paths",
+            "Para conexión de tubos flexibles y líneas de baja presión",
+            "Pour connexion de tubes souples et circuits basse pression",
+            "플렉시블 튜빙 연결 및 저압 유로용",
+            "Для соединения гибких трубок и низкого давления"
+          )
+        ),
+        productImage(
+          "/images/products/FIT/Filter - Check valve_200x200_01_v001.jpg",
+          t(
+            "过滤止回阀",
+            "Filter & Check Valve",
+            "Filtro y válvula de retención",
+            "Filtre et clapet anti-retour",
+            "필터 및 체크 밸브",
+            "Фильтр и обратный клапан"
+          ),
+          t(
+            "集成过滤与单向止回功能",
+            "Integrated filtration and check-valve function",
+            "Filtración integrada y función antirretorno",
+            "Filtration intégrée et fonction anti-retour",
+            "필터링 및 역류 방지 기능 통합",
+            "Интегрированная фильтрация и обратный клапан"
+          )
+        ),
+        productImage(
+          "/images/products/FIT/For rigid tubing_200x200_01_v001.jpg",
+          t(
+            "硬管接头",
+            "Rigid Tubing Fitting",
+            "Racor para tubo rígido",
+            "Raccord pour tube rigide",
+            "리지드 튜빙 피팅",
+            "Фитинг для жесткой трубки"
+          ),
+          t(
+            "用于硬管连接与精密液路固定",
+            "For rigid tubing connection and precise fluidic assembly",
+            "Para conexión de tubos rígidos y montaje preciso",
+            "Pour connexion de tubes rigides et assemblage fluidique précis",
+            "리지드 튜빙 연결 및 정밀 유체 조립용",
+            "Для соединения жестких трубок и точной сборки"
+          )
+        ),
+        productImage(
+          "/images/products/FIT/Luer fitting_200x200_01_v001.jpg",
+          t("鲁尔接头", "Luer Fitting", "Racor Luer", "Raccord Luer", "루어 피팅", "Фитинг Luer"),
+          t(
+            "适合标准鲁尔接口连接",
+            "For standard luer interface connection",
+            "Para conexión de interfaz Luer estándar",
+            "Pour connexion d’interface Luer standard",
+            "표준 루어 인터페이스 연결용",
+            "Для стандартного соединения Luer"
+          )
+        ),
+        productImage(
+          "/images/products/FIT/Panel mountunion_200x200_01_v001.jpg",
+          t(
+            "面板安装接头",
+            "Panel Mount Union",
+            "Unión de montaje en panel",
+            "Union à montage panneau",
+            "패널 마운트 유니온",
+            "Панельный соединитель"
+          ),
+          t(
+            "用于面板穿墙与管路固定",
+            "For panel-mounted fluidic connection",
+            "Para conexión fluidica montada en panel",
+            "Pour connexion fluidique montée sur panneau",
+            "패널 장착 유체 연결용",
+            "Для панельного жидкостного соединения"
+          )
+        ),
+        productImage(
+          "/images/products/FIT/Quick connector_200x200_01_v001.jpg",
+          t(
+            "快插接头",
+            "Quick Connector",
+            "Conector rápido",
+            "Connecteur rapide",
+            "퀵 커넥터",
+            "Быстроразъемный соединитель"
+          ),
+          t(
+            "快速连接与拆卸，提高装配效率",
+            "Quick connection and disconnection for efficient assembly",
+            "Conexión y desconexión rápidas para montaje eficiente",
+            "Connexion et déconnexion rapides pour assemblage efficace",
+            "효율적인 조립을 위한 빠른 연결 및 분리",
+            "Быстрое соединение и разъединение для эффективной сборки"
+          )
+        ),
+        productImage(
+          "/images/products/FIT/Thread with barb_200x200_01_v001.jpg",
+          t(
+            "螺纹倒钩接头",
+            "Thread with Barb",
+            "Rosca con espiga",
+            "Filetage avec cannelure",
+            "나사형 바브",
+            "Резьба со штуцером"
+          ),
+          t(
+            "螺纹固定与软管连接结合",
+            "Combines threaded mounting with barb connection",
+            "Combina montaje roscado con conexión de espiga",
+            "Combine montage fileté et connexion cannelée",
+            "나사 고정과 바브 연결 결합",
+            "Сочетает резьбовое крепление и штуцерное соединение"
+          )
+        ),
+        productImage(
+          "/images/products/FIT/Union_200x200_01_v001.jpg",
+          t("直通接头", "Union Fitting", "Racor recto", "Raccord union", "유니온 피팅", "Прямой соединитель"),
+          t(
+            "用于管路延长与直通连接",
+            "For tubing extension and straight-through connection",
+            "Para extensión de tubos y conexión directa",
+            "Pour prolongement de tube et connexion directe",
+            "튜빙 연장 및 직선 연결용",
+            "Для удлинения трубок и прямого соединения"
+          )
+        ),
+      ],
+      order: 4,
+      enabled: true,
+    },
+
+    {
+      key: "probes-card",
+      categoryKey: "probes",
+      title: t(
+        "采样针与定制针组件",
+        "Probes & Custom Probe Assemblies",
+        "Sondas y conjuntos personalizados",
+        "Sondes et assemblages personnalisés",
+        "프로브 및 맞춤형 프로브 어셈블리",
+        "Зонды и индивидуальные узлы зондов"
+      ),
+      description: t(
+        "样本针、清洗针、穿刺针、搅拌针与定制针组件",
+        "Sampling probes, rinsing probes, puncturing probes, stirrers, and custom probe assemblies",
+        "Sondas de muestreo, sondas de enjuague, sondas de perforación, agitadores y conjuntos de sondas personalizados",
+        "Sondes d’échantillonnage, sondes de rinçage, sondes de perçage, agitateurs et assemblages de sondes personnalisés",
+        "샘플링 프로브, 린싱 프로브, 피어싱 프로브, 교반기 및 맞춤형 프로브 어셈블리",
+        "Пробоотборные зонды, промывочные зонды, прокалывающие зонды, мешалки и индивидуальные узлы зондов"
+      ),
+      href: anchorPath("products"),
+      images: [
+        productImage(
+          "/images/products/PROBE/Puncturing probe_200x200_01_v001.jpg",
+          t(
+            "穿刺针",
+            "Puncturing Probe",
+            "Sonda de perforación",
+            "Sonde de perçage",
+            "피어싱 프로브",
+            "Прокалывающий зонд"
+          ),
+          t(
+            "用于封膜穿刺与样本处理",
+            "For film puncturing and sample handling",
+            "Para perforación de film y manejo de muestras",
+            "Pour perçage de film et traitement d’échantillons",
+            "필름 천공 및 샘플 처리용",
+            "Для прокалывания пленки и обработки образцов"
+          )
+        ),
+        productImage(
+          "/images/products/PROBE/Rinsing probe_200x200_01_v001.jpg",
+          t(
+            "清洗针",
+            "Rinsing Probe",
+            "Sonda de enjuague",
+            "Sonde de rinçage",
+            "린싱 프로브",
+            "Промывочный зонд"
+          ),
+          t(
+            "用于清洗、冲洗与液路维护",
+            "For washing, rinsing, and fluid path maintenance",
+            "Para lavado, enjuague y mantenimiento de rutas fluidas",
+            "Pour lavage, rinçage et maintenance des circuits fluidiques",
+            "세척, 린싱 및 유로 유지보수용",
+            "Для промывки, ополаскивания и обслуживания жидкостных линий"
+          )
+        ),
+        productImage(
+          "/images/products/PROBE/Sampling probe_200x200_01_v001.jpg",
+          t(
+            "采样针",
+            "Sampling Probe",
+            "Sonda de muestreo",
+            "Sonde d’échantillonnage",
+            "샘플링 프로브",
+            "Пробоотборный зонд"
+          ),
+          t(
+            "用于样本吸取、转移与加样",
+            "For sample aspiration, transfer, and dispensing",
+            "Para aspiración, transferencia y dispensación de muestras",
+            "Pour aspiration, transfert et distribution d’échantillons",
+            "샘플 흡입, 이송 및 분주용",
+            "Для аспирации, переноса и дозирования образцов"
+          )
+        ),
+        productImage(
+          "/images/products/PROBE/Stirrer_200x200_01_v001.jpg",
+          t("搅拌针", "Stirrer", "Agitador", "Agitateur", "교반기", "Мешалка"),
+          t(
+            "用于样本混匀与试剂处理",
+            "For sample mixing and reagent handling",
+            "Para mezcla de muestras y manejo de reactivos",
+            "Pour mélange d’échantillons et traitement des réactifs",
+            "샘플 혼합 및 시약 처리용",
+            "Для смешивания образцов и работы с реагентами"
+          )
+        ),
+      ],
+      order: 5,
+      enabled: true,
+    },
+
+    {
+      key: "sensors-card",
+      categoryKey: "sensors",
+      title: t(
+        "传感与检测",
+        "Sensors & Detection",
+        "Sensores y detección",
+        "Capteurs et détection",
+        "센서 및 감지",
+        "Датчики и детектирование"
+      ),
+      description: t(
+        "压力、气泡、电导率等液路状态监测",
+        "Pressure, bubble, conductivity, and fluid status monitoring",
+        "Monitoreo de presión, burbujas, conductividad y estado del fluido",
+        "Surveillance de la pression, des bulles, de la conductivité et de l’état fluidique",
+        "압력, 기포, 전도도 및 유체 상태 모니터링",
+        "Мониторинг давления, пузырьков, проводимости и состояния жидкости"
+      ),
+      href: anchorPath("products"),
+      images: [
+        productImage(
+          "/images/products/Sensor/Pressure sensor_200x200_01_v001.jpg",
+          t(
+            "压力传感器",
+            "Pressure Sensor",
+            "Sensor de presión",
+            "Capteur de pression",
+            "압력 센서",
+            "Датчик давления"
+          ),
+          t(
+            "用于液路压力监测与系统保护",
+            "For fluid pressure monitoring and system protection",
+            "Para monitoreo de presión de fluido y protección del sistema",
+            "Pour surveillance de la pression fluidique et protection du système",
+            "유체 압력 모니터링 및 시스템 보호용",
+            "Для мониторинга давления жидкости и защиты системы"
+          )
+        ),
+      ],
+      order: 6,
+      enabled: true,
+    },
+  ],
+
+  footerText: t(
+    "按产品类型、应用场景和系统参数快速了解恒永达产品矩阵。",
+    "Explore FOREACH products by product type, application scenario, and system requirements.",
+    "Explore los productos FOREACH por tipo, escenario de aplicación y requisitos del sistema.",
+    "Découvrez les produits FOREACH par type, application et exigences système.",
+    "제품 유형, 적용 분야 및 시스템 요구사항별로 FOREACH 제품을 살펴보세요.",
+    "Изучайте продукты FOREACH по типу, применению и системным требованиям."
+  ),
+
+  footerLinkLabel: t(
+    "查看全部产品 →",
+    "View all products →",
+    "Ver todos los productos →",
+    "Voir tous les produits →",
+    "전체 제품 보기 →",
+    "Смотреть все продукты →"
+  ),
+
+  footerHref: anchorPath("products"),
+};
+
+/* ================================
+   官网一级导航数据
+================================ */
+const navigationItems: NavigationItem[] = [
   {
     key: "home",
-    label: {
-      "zh-CN": "首页",
-      en: "Home",
-      es: "Inicio",
-      fr: "Accueil",
-      ko: "홈",
-      ru: "Главная",
-    },
-    href: homePath(),
+    label: t("首页", "Home", "Inicio", "Accueil", "홈", "Главная"),
+    href: localizedPath("/"),
     order: 1,
     enabled: true,
     dropdownType: "none",
   },
-
   {
     key: "products",
-    label: {
-      "zh-CN": "产品中心",
-      en: "Products",
-      es: "Productos",
-      fr: "Produits",
-      ko: "제품",
-      ru: "Продукты",
-    },
+    label: t("产品中心", "Products", "Productos", "Produits", "제품", "Продукты"),
     href: anchorPath("products"),
     order: 2,
     enabled: true,
     dropdownType: "mega",
-    megaDropdown: {
-      heading: {
-        "zh-CN": "产品中心",
-        en: "Products",
-        es: "Productos",
-        fr: "Produits",
-        ko: "제품",
-        ru: "Продукты",
-      },
-      description: {
-        "zh-CN": "覆盖泵、阀、管路、连接件、采样针和传感器等微流体系统核心零部件。",
-        en: "Core components for microfluidic systems, including pumps, valves, tubing, fittings, sampling probes, and sensors.",
-        es: "Componentes clave para sistemas microfluídicos, incluidos bombas, válvulas, tubos, conexiones, sondas y sensores.",
-        fr: "Composants clés pour systèmes microfluidiques : pompes, vannes, tubes, raccords, sondes et capteurs.",
-        ko: "펌프, 밸브, 튜빙, 피팅, 샘플링 프로브 및 센서를 포함한 미세유체 시스템 핵심 부품입니다.",
-        ru: "Ключевые компоненты микрофлюидных систем: насосы, клапаны, трубки, фитинги, пробоотборные иглы и датчики.",
-      },
-      footerText: {
-        "zh-CN": "按产品类型、应用场景和系统参数快速了解恒永达产品矩阵。",
-        en: "Explore FOREACH products by product type, application, and system requirements.",
-        es: "Explore los productos FOREACH por tipo, aplicación y requisitos del sistema.",
-        fr: "Découvrez les produits FOREACH par type, application et exigences système.",
-        ko: "제품 유형, 적용 분야 및 시스템 요구사항별로 FOREACH 제품을 확인하세요.",
-        ru: "Изучите продукты FOREACH по типу, применению и системным требованиям.",
-      },
-      footerLinkLabel: {
-        "zh-CN": "查看全部产品 →",
-        en: "View all products →",
-        es: "Ver todos los productos →",
-        fr: "Voir tous les produits →",
-        ko: "전체 제품 보기 →",
-        ru: "Все продукты →",
-      },
-      footerHref: anchorPath("products"),
-      categories: [
-        {
-          key: "pumps",
-          title: {
-            "zh-CN": "泵类",
-            en: "Pumps",
-            es: "Bombas",
-            fr: "Pompes",
-            ko: "펌프",
-            ru: "Насосы",
-          },
-          description: {
-            "zh-CN": "隔膜泵、注射泵、移液泵、柱塞泵",
-            en: "Diaphragm, syringe, pipetting, and piston pumps",
-            es: "Bombas de diafragma, jeringa, pipeteo y pistón",
-            fr: "Pompes à membrane, seringue, pipetage et piston",
-            ko: "다이어프램, 시린지, 피펫팅, 피스톤 펌프",
-            ru: "Мембранные, шприцевые, пипеточные и поршневые насосы",
-          },
-          order: 1,
-          enabled: true,
-        },
-        {
-          key: "valves",
-          title: {
-            "zh-CN": "阀类",
-            en: "Valves",
-            es: "Válvulas",
-            fr: "Vannes",
-            ko: "밸브",
-            ru: "Клапаны",
-          },
-          description: {
-            "zh-CN": "电磁阀、夹管阀、旋转阀、高压阀",
-            en: "Solenoid, pinch, rotary, and high-pressure valves",
-            es: "Válvulas solenoides, de pinza, rotativas y de alta presión",
-            fr: "Électrovannes, vannes à pincement, rotatives et haute pression",
-            ko: "솔레노이드, 핀치, 로터리, 고압 밸브",
-            ru: "Соленоидные, пережимные, роторные и высоконапорные клапаны",
-          },
-          order: 2,
-          enabled: true,
-        },
-        {
-          key: "tubing",
-          title: {
-            "zh-CN": "管路",
-            en: "Tubing",
-            es: "Tubos",
-            fr: "Tubes",
-            ko: "튜빙",
-            ru: "Трубки",
-          },
-          description: {
-            "zh-CN": "软管、硬管、液路管线",
-            en: "Flexible tubing, rigid tubing, and fluid lines",
-            es: "Tubos flexibles, rígidos y líneas fluídicas",
-            fr: "Tubes souples, rigides et lignes fluidiques",
-            ko: "플렉시블 튜빙, 리지드 튜빙 및 유로 라인",
-            ru: "Гибкие и жесткие трубки, жидкостные линии",
-          },
-          order: 3,
-          enabled: true,
-        },
-        {
-          key: "fittings",
-          title: {
-            "zh-CN": "连接件",
-            en: "Fittings",
-            es: "Conexiones",
-            fr: "Raccords",
-            ko: "피팅",
-            ru: "Фитинги",
-          },
-          description: {
-            "zh-CN": "接头、转接件、卡环接头、高压连接件",
-            en: "Connectors, adapters, ferrule fittings, and high-pressure fittings",
-            es: "Conectores, adaptadores y conexiones de alta presión",
-            fr: "Connecteurs, adaptateurs, raccords à bague et haute pression",
-            ko: "커넥터, 어댑터, 페룰 피팅 및 고압 피팅",
-            ru: "Соединители, адаптеры, фитинги и высоконапорные соединения",
-          },
-          order: 4,
-          enabled: true,
-        },
-        {
-          key: "probes",
-          title: {
-            "zh-CN": "采样针",
-            en: "Sampling Probes",
-            es: "Sondas de muestreo",
-            fr: "Sondes de prélèvement",
-            ko: "샘플링 프로브",
-            ru: "Пробоотборные иглы",
-          },
-          description: {
-            "zh-CN": "样本针、试剂针、穿刺针、定制针组件",
-            en: "Sample probes, reagent probes, piercing probes, and custom probe assemblies",
-            es: "Sondas de muestra, reactivo, perforación y conjuntos personalizados",
-            fr: "Sondes d’échantillon, de réactif, de perçage et ensembles personnalisés",
-            ko: "샘플 프로브, 시약 프로브, 천공 프로브 및 맞춤형 프로브 어셈블리",
-            ru: "Пробоотборные, реагентные, прокалывающие и заказные иглы",
-          },
-          order: 5,
-          enabled: true,
-        },
-        {
-          key: "sensors",
-          title: {
-            "zh-CN": "传感器",
-            en: "Sensors",
-            es: "Sensores",
-            fr: "Capteurs",
-            ko: "센서",
-            ru: "Датчики",
-          },
-          description: {
-            "zh-CN": "压力传感器、气泡检测器、电导率检测模块",
-            en: "Pressure sensors, bubble detectors, and conductivity modules",
-            es: "Sensores de presión, detectores de burbujas y módulos de conductividad",
-            fr: "Capteurs de pression, détecteurs de bulles et modules de conductivité",
-            ko: "압력 센서, 기포 감지기 및 전도도 모듈",
-            ru: "Датчики давления, детекторы пузырьков и модули проводимости",
-          },
-          order: 6,
-          enabled: true,
-        },
-      ],
-      cards: [
-        {
-          key: "pumps-card",
-          title: {
-            "zh-CN": "泵类产品",
-            en: "Pumps",
-            es: "Bombas",
-            fr: "Pompes",
-            ko: "펌프",
-            ru: "Насосы",
-          },
-          description: {
-            "zh-CN": "定量、供液、移液与废液处理",
-            en: "Metering, supply, pipetting, and waste handling",
-            es: "Dosificación, suministro, pipeteo y residuos",
-            fr: "Dosage, alimentation, pipetage et déchets",
-            ko: "정량, 공급, 피펫팅 및 폐액 처리",
-            ru: "Дозирование, подача, пипетирование и отходы",
-          },
-          href: anchorPath("products"),
-          order: 1,
-          enabled: true,
-        },
-        {
-          key: "valves-card",
-          title: {
-            "zh-CN": "阀类产品",
-            en: "Valves",
-            es: "Válvulas",
-            fr: "Vannes",
-            ko: "밸브",
-            ru: "Клапаны",
-          },
-          description: {
-            "zh-CN": "流路切换、通断控制与高压控制",
-            en: "Fluid path switching, on/off control, and high-pressure control",
-            es: "Conmutación de flujo y control de alta presión",
-            fr: "Commutation fluidique et contrôle haute pression",
-            ko: "유로 전환, 개폐 제어 및 고압 제어",
-            ru: "Переключение потоков и управление высоким давлением",
-          },
-          href: anchorPath("products"),
-          order: 2,
-          enabled: true,
-        },
-        {
-          key: "tubing-card",
-          title: {
-            "zh-CN": "管路与连接",
-            en: "Tubing & Fittings",
-            es: "Tubos y conexiones",
-            fr: "Tubes et raccords",
-            ko: "튜빙 및 피팅",
-            ru: "Трубки и фитинги",
-          },
-          description: {
-            "zh-CN": "液路连接、密封与模块化装配",
-            en: "Fluidic connection, sealing, and modular assembly",
-            es: "Conexión, sellado y montaje modular",
-            fr: "Connexion, étanchéité et assemblage modulaire",
-            ko: "유체 연결, 밀봉 및 모듈형 조립",
-            ru: "Соединение, герметизация и модульная сборка",
-          },
-          href: anchorPath("products"),
-          order: 3,
-          enabled: true,
-        },
-        {
-          key: "sensors-card",
-          title: {
-            "zh-CN": "传感与检测",
-            en: "Sensing & Detection",
-            es: "Sensado y detección",
-            fr: "Détection et mesure",
-            ko: "센싱 및 감지",
-            ru: "Измерение и контроль",
-          },
-          description: {
-            "zh-CN": "压力、气泡、电导率等液路状态监测",
-            en: "Pressure, bubble, and conductivity monitoring",
-            es: "Monitoreo de presión, burbujas y conductividad",
-            fr: "Surveillance pression, bulles et conductivité",
-            ko: "압력, 기포 및 전도도 모니터링",
-            ru: "Контроль давления, пузырьков и проводимости",
-          },
-          href: anchorPath("products"),
-          order: 4,
-          enabled: true,
-        },
-      ],
-    },
+    megaDropdown: productMegaDropdown,
     mobileChildren: [
       {
         key: "mobile-products-pumps",
-        label: {
-          "zh-CN": "泵类",
-          en: "Pumps",
-          es: "Bombas",
-          fr: "Pompes",
-          ko: "펌프",
-          ru: "Насосы",
-        },
+        label: t("泵类产品", "Pumps", "Bombas", "Pompes", "펌프", "Насосы"),
         href: anchorPath("products"),
         order: 1,
         enabled: true,
       },
       {
         key: "mobile-products-valves",
-        label: {
-          "zh-CN": "阀类",
-          en: "Valves",
-          es: "Válvulas",
-          fr: "Vannes",
-          ko: "밸브",
-          ru: "Клапаны",
-        },
+        label: t("阀类产品", "Valves", "Válvulas", "Vannes", "밸브", "Клапаны"),
         href: anchorPath("products"),
         order: 2,
         enabled: true,
       },
       {
         key: "mobile-products-tubing",
-        label: {
-          "zh-CN": "管路",
-          en: "Tubing",
-          es: "Tubos",
-          fr: "Tubes",
-          ko: "튜빙",
-          ru: "Трубки",
-        },
+        label: t("管路", "Tubing", "Tubos", "Tubes", "튜빙", "Трубки"),
         href: anchorPath("products"),
         order: 3,
         enabled: true,
       },
       {
         key: "mobile-products-fittings",
-        label: {
-          "zh-CN": "连接件",
-          en: "Fittings",
-          es: "Conexiones",
-          fr: "Raccords",
-          ko: "피팅",
-          ru: "Фитинги",
-        },
+        label: t(
+          "连接件与管路组件",
+          "Fittings & Tubing Assemblies",
+          "Conectores y conjuntos de tubos",
+          "Raccords et assemblages de tubes",
+          "피팅 및 튜빙 어셈블리",
+          "Фитинги и трубные сборки"
+        ),
         href: anchorPath("products"),
         order: 4,
         enabled: true,
       },
       {
         key: "mobile-products-probes",
-        label: {
-          "zh-CN": "采样针",
-          en: "Sampling Probes",
-          es: "Sondas",
-          fr: "Sondes",
-          ko: "샘플링 프로브",
-          ru: "Иглы",
-        },
+        label: t(
+          "采样针与定制针组件",
+          "Probes & Custom Probe Assemblies",
+          "Sondas y conjuntos personalizados",
+          "Sondes et assemblages personnalisés",
+          "프로브 및 맞춤형 프로브 어셈블리",
+          "Зонды и индивидуальные узлы зондов"
+        ),
         href: anchorPath("products"),
         order: 5,
         enabled: true,
       },
       {
         key: "mobile-products-sensors",
-        label: {
-          "zh-CN": "传感器",
-          en: "Sensors",
-          es: "Sensores",
-          fr: "Capteurs",
-          ko: "센서",
-          ru: "Датчики",
-        },
+        label: t("传感器", "Sensors", "Sensores", "Capteurs", "센서", "Датчики"),
         href: anchorPath("products"),
         order: 6,
         enabled: true,
       },
     ],
   },
-
   {
     key: "applications",
-    label: {
-      "zh-CN": "应用领域",
-      en: "Applications",
-      es: "Aplicaciones",
-      fr: "Applications",
-      ko: "응용 분야",
-      ru: "Сферы",
-    },
+    label: t("应用领域", "Applications", "Aplicaciones", "Applications", "응용 분야", "Применения"),
     href: anchorPath("applications"),
     order: 3,
     enabled: true,
-    dropdownType: "mega",
-    megaDropdown: {
-      heading: {
-        "zh-CN": "应用领域",
-        en: "Applications",
-        es: "Aplicaciones",
-        fr: "Applications",
-        ko: "응용 분야",
-        ru: "Сферы применения",
-      },
-      description: {
-        "zh-CN": "面向 IVD、生命科学、合成生物、高端分析仪器和实验室自动化设备提供液路核心部件支持。",
-        en: "Fluidic component support for IVD, life sciences, synthetic biology, analytical instruments, and lab automation.",
-        es: "Soporte de componentes fluídicos para IVD, ciencias de la vida, biología sintética, instrumentos analíticos y automatización de laboratorio.",
-        fr: "Composants fluidiques pour IVD, sciences de la vie, biologie synthétique, instruments analytiques et automatisation de laboratoire.",
-        ko: "IVD, 생명과학, 합성생물학, 분석기기 및 실험실 자동화용 유체 부품 지원.",
-        ru: "Компоненты жидкостных систем для IVD, наук о жизни, синтетической биологии, аналитических приборов и лабораторной автоматизации.",
-      },
-      footerText: {
-        "zh-CN": "从应用场景理解液路系统需求，匹配合适的泵、阀、传感器和连接方案。",
-        en: "Understand fluidic requirements by application and match the right pumps, valves, sensors, and connections.",
-        es: "Comprenda los requisitos fluídicos por aplicación y seleccione bombas, válvulas, sensores y conexiones.",
-        fr: "Comprendre les exigences fluidiques par application et choisir les bons composants.",
-        ko: "응용 분야별 유체 요구사항을 이해하고 적합한 부품을 선택하세요.",
-        ru: "Подберите компоненты по требованиям конкретного применения.",
-      },
-      footerLinkLabel: {
-        "zh-CN": "查看应用领域 →",
-        en: "View applications →",
-        es: "Ver aplicaciones →",
-        fr: "Voir les applications →",
-        ko: "응용 분야 보기 →",
-        ru: "Смотреть применения →",
-      },
-      footerHref: anchorPath("applications"),
-      categories: [
-        {
-          key: "ivd",
-          title: {
-            "zh-CN": "IVD 体外诊断",
-            en: "IVD",
-            es: "IVD",
-            fr: "IVD",
-            ko: "IVD",
-            ru: "IVD",
-          },
-          description: {
-            "zh-CN": "样本、试剂、清洗和废液液路",
-            en: "Sample, reagent, wash, and waste fluidics",
-            es: "Fluidos de muestra, reactivo, lavado y residuos",
-            fr: "Fluidique échantillon, réactif, lavage et déchets",
-            ko: "샘플, 시약, 세척 및 폐액 유로",
-            ru: "Жидкостные системы образцов, реагентов, промывки и отходов",
-          },
-          order: 1,
-          enabled: true,
-        },
-        {
-          key: "life-science",
-          title: {
-            "zh-CN": "生命科学",
-            en: "Life Sciences",
-            es: "Ciencias de la vida",
-            fr: "Sciences de la vie",
-            ko: "생명과학",
-            ru: "Науки о жизни",
-          },
-          description: {
-            "zh-CN": "实验平台、样本处理和液体控制",
-            en: "Experimental platforms, sample handling, and fluid control",
-            es: "Plataformas experimentales y manejo de líquidos",
-            fr: "Plateformes expérimentales et gestion des liquides",
-            ko: "실험 플랫폼, 샘플 처리 및 유체 제어",
-            ru: "Экспериментальные платформы и управление жидкостями",
-          },
-          order: 2,
-          enabled: true,
-        },
-        {
-          key: "synthetic-biology",
-          title: {
-            "zh-CN": "合成生物",
-            en: "Synthetic Biology",
-            es: "Biología sintética",
-            fr: "Biologie synthétique",
-            ko: "합성생물학",
-            ru: "Синтетическая биология",
-          },
-          description: {
-            "zh-CN": "自动化培养、加样和流体控制",
-            en: "Automated culture, dispensing, and fluid control",
-            es: "Cultivo automatizado, dosificación y control de fluidos",
-            fr: "Culture automatisée, distribution et contrôle fluidique",
-            ko: "자동 배양, 분주 및 유체 제어",
-            ru: "Автоматизированное культивирование и дозирование",
-          },
-          order: 3,
-          enabled: true,
-        },
-        {
-          key: "analytical-instruments",
-          title: {
-            "zh-CN": "高端分析仪器",
-            en: "Analytical Instruments",
-            es: "Instrumentos analíticos",
-            fr: "Instruments analytiques",
-            ko: "분석기기",
-            ru: "Аналитические приборы",
-          },
-          description: {
-            "zh-CN": "高压、微量和高稳定性液路",
-            en: "High-pressure, micro-volume, and stable fluidics",
-            es: "Fluidos de alta presión, microvolumen y alta estabilidad",
-            fr: "Fluidique haute pression, micro-volume et haute stabilité",
-            ko: "고압, 미량 및 고안정 유체 시스템",
-            ru: "Высоконапорные и микролитровые жидкостные системы",
-          },
-          order: 4,
-          enabled: true,
-        },
-        {
-          key: "lab-automation",
-          title: {
-            "zh-CN": "实验室自动化",
-            en: "Laboratory Automation",
-            es: "Automatización de laboratorio",
-            fr: "Automatisation de laboratoire",
-            ko: "실험실 자동화",
-            ru: "Лабораторная автоматизация",
-          },
-          description: {
-            "zh-CN": "多通道移液、分配和系统集成",
-            en: "Multi-channel pipetting, dispensing, and system integration",
-            es: "Pipeteo multicanal, dispensación e integración",
-            fr: "Pipetage multicanal, distribution et intégration",
-            ko: "다중 채널 피펫팅, 분주 및 시스템 통합",
-            ru: "Многоканальное пипетирование и интеграция систем",
-          },
-          order: 5,
-          enabled: true,
-        },
-      ],
-      cards: [
-        {
-          key: "application-ivd-card",
-          title: {
-            "zh-CN": "IVD 体外诊断",
-            en: "IVD",
-            es: "IVD",
-            fr: "IVD",
-            ko: "IVD",
-            ru: "IVD",
-          },
-          description: {
-            "zh-CN": "样本处理、试剂分配、清洗与废液",
-            en: "Sample handling, reagent dispensing, washing, and waste",
-            es: "Muestras, reactivos, lavado y residuos",
-            fr: "Échantillons, réactifs, lavage et déchets",
-            ko: "샘플 처리, 시약 분주, 세척 및 폐액",
-            ru: "Образцы, реагенты, промывка и отходы",
-          },
-          href: anchorPath("applications"),
-          order: 1,
-          enabled: true,
-        },
-        {
-          key: "application-life-card",
-          title: {
-            "zh-CN": "生命科学",
-            en: "Life Sciences",
-            es: "Ciencias de la vida",
-            fr: "Sciences de la vie",
-            ko: "생명과학",
-            ru: "Науки о жизни",
-          },
-          description: {
-            "zh-CN": "微量液体处理和实验流程自动化",
-            en: "Micro-volume liquid handling and workflow automation",
-            es: "Manejo de microvolúmenes y automatización",
-            fr: "Micro-volume et automatisation des flux",
-            ko: "미량 액체 처리 및 워크플로 자동화",
-            ru: "Микрообъемная обработка жидкостей",
-          },
-          href: anchorPath("applications"),
-          order: 2,
-          enabled: true,
-        },
-        {
-          key: "application-analysis-card",
-          title: {
-            "zh-CN": "高端分析仪器",
-            en: "Analytical Instruments",
-            es: "Instrumentos analíticos",
-            fr: "Instruments analytiques",
-            ko: "분석기기",
-            ru: "Аналитические приборы",
-          },
-          description: {
-            "zh-CN": "高压阀、传感与稳定液路控制",
-            en: "High-pressure valves, sensing, and stable fluidics",
-            es: "Válvulas de alta presión y fluidos estables",
-            fr: "Vannes haute pression et fluidique stable",
-            ko: "고압 밸브, 센싱 및 안정적 유로",
-            ru: "Высоконапорные клапаны и стабильная жидкостная система",
-          },
-          href: anchorPath("applications"),
-          order: 3,
-          enabled: true,
-        },
-        {
-          key: "application-lab-card",
-          title: {
-            "zh-CN": "实验室自动化",
-            en: "Laboratory Automation",
-            es: "Automatización de laboratorio",
-            fr: "Automatisation de laboratoire",
-            ko: "실험실 자동화",
-            ru: "Лабораторная автоматизация",
-          },
-          description: {
-            "zh-CN": "多通道移液、模块化液路与集成支持",
-            en: "Multi-channel pipetting, modular fluidics, and integration",
-            es: "Pipeteo multicanal e integración fluídica",
-            fr: "Pipetage multicanal et intégration fluidique",
-            ko: "다중 채널 피펫팅 및 모듈형 유체 통합",
-            ru: "Многоканальное пипетирование и интеграция",
-          },
-          href: anchorPath("applications"),
-          order: 4,
-          enabled: true,
-        },
-      ],
-    },
+    dropdownType: "none",
     mobileChildren: [
       {
         key: "mobile-application-ivd",
-        label: {
-          "zh-CN": "IVD 体外诊断",
-          en: "IVD",
-          es: "IVD",
-          fr: "IVD",
-          ko: "IVD",
-          ru: "IVD",
-        },
+        label: t("IVD 体外诊断", "IVD", "IVD", "IVD", "IVD", "IVD"),
         href: anchorPath("applications"),
         order: 1,
         enabled: true,
       },
       {
-        key: "mobile-application-life",
-        label: {
-          "zh-CN": "生命科学",
-          en: "Life Sciences",
-          es: "Ciencias de la vida",
-          fr: "Sciences de la vie",
-          ko: "생명과학",
-          ru: "Науки о жизни",
-        },
+        key: "mobile-application-life-science",
+        label: t(
+          "生命科学",
+          "Life Sciences",
+          "Ciencias de la vida",
+          "Sciences de la vie",
+          "생명과학",
+          "Науки о жизни"
+        ),
         href: anchorPath("applications"),
         order: 2,
         enabled: true,
       },
       {
-        key: "mobile-application-synbio",
-        label: {
-          "zh-CN": "合成生物",
-          en: "Synthetic Biology",
-          es: "Biología sintética",
-          fr: "Biologie synthétique",
-          ko: "합성생물학",
-          ru: "Синтетическая биология",
-        },
+        key: "mobile-application-synthetic-biology",
+        label: t(
+          "合成生物",
+          "Synthetic Biology",
+          "Biología sintética",
+          "Biologie synthétique",
+          "합성생물학",
+          "Синтетическая биология"
+        ),
         href: anchorPath("applications"),
         order: 3,
         enabled: true,
       },
       {
-        key: "mobile-application-analysis",
-        label: {
-          "zh-CN": "高端分析仪器",
-          en: "Analytical Instruments",
-          es: "Instrumentos analíticos",
-          fr: "Instruments analytiques",
-          ko: "분석기기",
-          ru: "Аналитические приборы",
-        },
+        key: "mobile-application-analytical",
+        label: t(
+          "高端分析仪器",
+          "Analytical Instruments",
+          "Instrumentos analíticos",
+          "Instruments analytiques",
+          "분석 장비",
+          "Аналитические приборы"
+        ),
         href: anchorPath("applications"),
         order: 4,
         enabled: true,
       },
       {
-        key: "mobile-application-lab",
-        label: {
-          "zh-CN": "实验室自动化",
-          en: "Lab Automation",
-          es: "Automatización",
-          fr: "Automatisation",
-          ko: "실험실 자동화",
-          ru: "Автоматизация",
-        },
+        key: "mobile-application-lab-automation",
+        label: t(
+          "实验室自动化",
+          "Laboratory Automation",
+          "Automatización de laboratorio",
+          "Automatisation de laboratoire",
+          "실험실 자동화",
+          "Лабораторная автоматизация"
+        ),
         href: anchorPath("applications"),
         order: 5,
         enabled: true,
       },
     ],
   },
-
   {
     key: "resources",
-    label: {
-      "zh-CN": "资源中心",
-      en: "Resources",
-      es: "Recursos",
-      fr: "Ressources",
-      ko: "자료실",
-      ru: "Ресурсы",
-    },
+    label: t("资源中心", "Resources", "Recursos", "Ressources", "자료실", "Ресурсы"),
     href: anchorPath("resources"),
     order: 4,
     enabled: true,
-    dropdownType: "mega",
-    megaDropdown: {
-      heading: {
-        "zh-CN": "资源中心",
-        en: "Resources",
-        es: "Recursos",
-        fr: "Ressources",
-        ko: "자료실",
-        ru: "Ресурсы",
-      },
-      description: {
-        "zh-CN": "获取产品资料、产品目录、认证资质、选型指南、安装说明和技术文章。",
-        en: "Access product documents, catalogs, certifications, selection guides, installation instructions, and technical articles.",
-        es: "Acceda a documentos, catálogos, certificaciones, guías de selección, instrucciones y artículos técnicos.",
-        fr: "Accédez aux documents, catalogues, certifications, guides de sélection, instructions et articles techniques.",
-        ko: "제품 자료, 카탈로그, 인증, 선정 가이드, 설치 안내 및 기술 문서를 확인하세요.",
-        ru: "Документация, каталоги, сертификаты, руководства по подбору, инструкции и технические статьи.",
-      },
-      footerText: {
-        "zh-CN": "为工程选型、采购评估和系统集成提供可下载资料与技术支持内容。",
-        en: "Downloadable resources for engineering selection, purchasing evaluation, and system integration.",
-        es: "Recursos descargables para selección técnica, compras e integración.",
-        fr: "Ressources téléchargeables pour la sélection, l’évaluation et l’intégration.",
-        ko: "엔지니어링 선정, 구매 평가 및 시스템 통합을 위한 자료입니다.",
-        ru: "Материалы для инженерного подбора, оценки закупок и интеграции.",
-      },
-      footerLinkLabel: {
-        "zh-CN": "进入资源中心 →",
-        en: "Go to resources →",
-        es: "Ir a recursos →",
-        fr: "Accéder aux ressources →",
-        ko: "자료실 보기 →",
-        ru: "Перейти к ресурсам →",
-      },
-      footerHref: anchorPath("resources"),
-      categories: [
-        {
-          key: "downloads",
-          title: {
-            "zh-CN": "产品资料下载",
-            en: "Product Downloads",
-            es: "Descargas de productos",
-            fr: "Téléchargements produits",
-            ko: "제품 자료 다운로드",
-            ru: "Загрузка материалов",
-          },
-          description: {
-            "zh-CN": "规格书、图纸、资料包",
-            en: "Datasheets, drawings, and document packages",
-            es: "Fichas técnicas, planos y documentos",
-            fr: "Fiches techniques, plans et documents",
-            ko: "사양서, 도면 및 문서 패키지",
-            ru: "Спецификации, чертежи и документы",
-          },
-          order: 1,
-          enabled: true,
-        },
-        {
-          key: "catalog",
-          title: {
-            "zh-CN": "产品目录",
-            en: "Product Catalogs",
-            es: "Catálogos",
-            fr: "Catalogues",
-            ko: "제품 카탈로그",
-            ru: "Каталоги",
-          },
-          description: {
-            "zh-CN": "综合目录、系列目录",
-            en: "General catalogs and series catalogs",
-            es: "Catálogos generales y de series",
-            fr: "Catalogues généraux et de séries",
-            ko: "종합 카탈로그 및 시리즈 카탈로그",
-            ru: "Общие и серийные каталоги",
-          },
-          order: 2,
-          enabled: true,
-        },
-        {
-          key: "certifications",
-          title: {
-            "zh-CN": "认证与资质资料",
-            en: "Certifications",
-            es: "Certificaciones",
-            fr: "Certifications",
-            ko: "인증 자료",
-            ru: "Сертификаты",
-          },
-          description: {
-            "zh-CN": "质量体系、合规文件、企业资质",
-            en: "Quality systems, compliance files, and company qualifications",
-            es: "Sistemas de calidad, cumplimiento y cualificaciones",
-            fr: "Systèmes qualité, conformité et qualifications",
-            ko: "품질 시스템, 규정 준수 자료 및 기업 자격",
-            ru: "Системы качества, соответствие и квалификации",
-          },
-          order: 3,
-          enabled: true,
-        },
-        {
-          key: "selection-guide",
-          title: {
-            "zh-CN": "选型指南",
-            en: "Selection Guides",
-            es: "Guías de selección",
-            fr: "Guides de sélection",
-            ko: "선정 가이드",
-            ru: "Руководства по подбору",
-          },
-          description: {
-            "zh-CN": "按流量、压力、介质和应用选型",
-            en: "Selection by flow, pressure, media, and application",
-            es: "Selección por caudal, presión, medio y aplicación",
-            fr: "Sélection par débit, pression, fluide et application",
-            ko: "유량, 압력, 매체 및 용도별 선정",
-            ru: "Подбор по расходу, давлению, среде и применению",
-          },
-          order: 4,
-          enabled: true,
-        },
-        {
-          key: "installation",
-          title: {
-            "zh-CN": "安装说明",
-            en: "Installation Instructions",
-            es: "Instrucciones de instalación",
-            fr: "Instructions d’installation",
-            ko: "설치 안내",
-            ru: "Инструкции по установке",
-          },
-          description: {
-            "zh-CN": "安装、连接、维护和注意事项",
-            en: "Installation, connection, maintenance, and notes",
-            es: "Instalación, conexión, mantenimiento y notas",
-            fr: "Installation, connexion, maintenance et remarques",
-            ko: "설치, 연결, 유지보수 및 주의사항",
-            ru: "Установка, подключение, обслуживание и примечания",
-          },
-          order: 5,
-          enabled: true,
-        },
-        {
-          key: "articles",
-          title: {
-            "zh-CN": "技术文章 / FAQ",
-            en: "Technical Articles / FAQ",
-            es: "Artículos técnicos / FAQ",
-            fr: "Articles techniques / FAQ",
-            ko: "기술 문서 / FAQ",
-            ru: "Статьи / FAQ",
-          },
-          description: {
-            "zh-CN": "液路知识、应用说明和常见问题",
-            en: "Fluidic knowledge, application notes, and FAQs",
-            es: "Conocimiento fluídico, aplicaciones y preguntas frecuentes",
-            fr: "Connaissances fluidiques, notes d’application et FAQ",
-            ko: "유체 지식, 적용 노트 및 FAQ",
-            ru: "Знания о жидкостных системах, применения и FAQ",
-          },
-          order: 6,
-          enabled: true,
-        },
-      ],
-      cards: [
-        {
-          key: "resources-downloads-card",
-          title: {
-            "zh-CN": "产品资料下载",
-            en: "Product Downloads",
-            es: "Descargas",
-            fr: "Téléchargements",
-            ko: "자료 다운로드",
-            ru: "Загрузки",
-          },
-          description: {
-            "zh-CN": "规格书、图纸和产品资料包",
-            en: "Datasheets, drawings, and product documents",
-            es: "Fichas técnicas, planos y documentos",
-            fr: "Fiches techniques, plans et documents",
-            ko: "사양서, 도면 및 제품 문서",
-            ru: "Спецификации, чертежи и документы",
-          },
-          href: anchorPath("resources"),
-          order: 1,
-          enabled: true,
-        },
-        {
-          key: "resources-catalog-card",
-          title: {
-            "zh-CN": "产品目录",
-            en: "Product Catalogs",
-            es: "Catálogos",
-            fr: "Catalogues",
-            ko: "제품 카탈로그",
-            ru: "Каталоги",
-          },
-          description: {
-            "zh-CN": "快速了解产品系列和参数范围",
-            en: "Explore product series and parameter ranges",
-            es: "Consulte series y rangos de parámetros",
-            fr: "Voir les séries et plages de paramètres",
-            ko: "제품 시리즈 및 파라미터 범위 확인",
-            ru: "Серии продуктов и диапазоны параметров",
-          },
-          href: anchorPath("resources"),
-          order: 2,
-          enabled: true,
-        },
-        {
-          key: "resources-guide-card",
-          title: {
-            "zh-CN": "选型指南",
-            en: "Selection Guides",
-            es: "Guías de selección",
-            fr: "Guides de sélection",
-            ko: "선정 가이드",
-            ru: "Руководства по подбору",
-          },
-          description: {
-            "zh-CN": "帮助工程师快速匹配产品型号",
-            en: "Help engineers match product models faster",
-            es: "Ayuda a seleccionar modelos adecuados",
-            fr: "Aide au choix rapide des modèles",
-            ko: "엔지니어의 제품 모델 선정 지원",
-            ru: "Помощь инженерам в подборе моделей",
-          },
-          href: anchorPath("resources"),
-          order: 3,
-          enabled: true,
-        },
-        {
-          key: "resources-faq-card",
-          title: {
-            "zh-CN": "技术文章 / FAQ",
-            en: "Technical Articles / FAQ",
-            es: "Artículos / FAQ",
-            fr: "Articles / FAQ",
-            ko: "기술 문서 / FAQ",
-            ru: "Статьи / FAQ",
-          },
-          description: {
-            "zh-CN": "沉淀液路知识，方便 SEO 和 GEO 抓取",
-            en: "Fluidic knowledge for SEO and AI search visibility",
-            es: "Conocimiento fluídico para SEO y búsqueda IA",
-            fr: "Connaissances fluidiques pour SEO et recherche IA",
-            ko: "SEO 및 AI 검색 노출을 위한 유체 지식",
-            ru: "Материалы для SEO и AI-поиска",
-          },
-          href: anchorPath("resources"),
-          order: 4,
-          enabled: true,
-        },
-      ],
-    },
+    dropdownType: "none",
     mobileChildren: [
       {
-        key: "mobile-resources-downloads",
-        label: {
-          "zh-CN": "产品资料下载",
-          en: "Product Downloads",
-          es: "Descargas",
-          fr: "Téléchargements",
-          ko: "자료 다운로드",
-          ru: "Загрузки",
-        },
+        key: "mobile-resource-catalogs",
+        label: t(
+          "产品目录",
+          "Product Catalogs",
+          "Catálogos de productos",
+          "Catalogues produits",
+          "제품 카탈로그",
+          "Каталоги продуктов"
+        ),
         href: anchorPath("resources"),
         order: 1,
         enabled: true,
       },
       {
-        key: "mobile-resources-catalog",
-        label: {
-          "zh-CN": "产品目录",
-          en: "Product Catalogs",
-          es: "Catálogos",
-          fr: "Catalogues",
-          ko: "제품 카탈로그",
-          ru: "Каталоги",
-        },
+        key: "mobile-resource-guides",
+        label: t(
+          "选型指南",
+          "Selection Guides",
+          "Guías de selección",
+          "Guides de sélection",
+          "선정 가이드",
+          "Руководства по выбору"
+        ),
         href: anchorPath("resources"),
         order: 2,
         enabled: true,
       },
       {
-        key: "mobile-resources-certifications",
-        label: {
-          "zh-CN": "认证与资质资料",
-          en: "Certifications",
-          es: "Certificaciones",
-          fr: "Certifications",
-          ko: "인증 자료",
-          ru: "Сертификаты",
-        },
+        key: "mobile-resource-news",
+        label: t(
+          "技术文章 / 新闻",
+          "Articles / News",
+          "Artículos / Noticias",
+          "Articles / Actualités",
+          "기술 문서 / 뉴스",
+          "Статьи / Новости"
+        ),
         href: anchorPath("resources"),
         order: 3,
         enabled: true,
       },
-      {
-        key: "mobile-resources-guide",
-        label: {
-          "zh-CN": "选型指南",
-          en: "Selection Guides",
-          es: "Guías de selección",
-          fr: "Guides de sélection",
-          ko: "선정 가이드",
-          ru: "Подбор",
-        },
-        href: anchorPath("resources"),
-        order: 4,
-        enabled: true,
-      },
-      {
-        key: "mobile-resources-installation",
-        label: {
-          "zh-CN": "安装说明",
-          en: "Installation",
-          es: "Instalación",
-          fr: "Installation",
-          ko: "설치 안내",
-          ru: "Установка",
-        },
-        href: anchorPath("resources"),
-        order: 5,
-        enabled: true,
-      },
-      {
-        key: "mobile-resources-articles",
-        label: {
-          "zh-CN": "技术文章 / FAQ",
-          en: "Articles / FAQ",
-          es: "Artículos / FAQ",
-          fr: "Articles / FAQ",
-          ko: "기술 문서 / FAQ",
-          ru: "Статьи / FAQ",
-        },
-        href: anchorPath("resources"),
-        order: 6,
-        enabled: true,
-      },
     ],
   },
-
   {
     key: "about",
-    label: {
-      "zh-CN": "关于我们",
-      en: "About Us",
-      es: "Sobre nosotros",
-      fr: "À propos",
-      ko: "회사 소개",
-      ru: "О нас",
-    },
+    label: t("关于我们", "About Us", "Sobre nosotros", "À propos", "회사 소개", "О нас"),
     href: anchorPath("about"),
     order: 5,
     enabled: true,
-    dropdownType: "mega",
-    megaDropdown: {
-      heading: {
-        "zh-CN": "关于我们",
-        en: "About FOREACH",
-        es: "Sobre FOREACH",
-        fr: "À propos de FOREACH",
-        ko: "FOREACH 소개",
-        ru: "О FOREACH",
-      },
-      description: {
-        "zh-CN": "了解恒永达的公司介绍、研发制造能力、质量体系、企业资质和全球服务能力。",
-        en: "Learn about FOREACH, R&D and manufacturing capabilities, quality system, qualifications, and global service.",
-        es: "Conozca FOREACH, I+D, fabricación, calidad, cualificaciones y servicio global.",
-        fr: "Découvrez FOREACH, ses capacités R&D, fabrication, qualité, qualifications et service mondial.",
-        ko: "FOREACH의 회사 소개, 연구개발, 제조, 품질 시스템 및 글로벌 서비스를 확인하세요.",
-        ru: "Информация о FOREACH, разработке, производстве, качестве, квалификациях и глобальном сервисе.",
-      },
-      footerText: {
-        "zh-CN": "展示公司实力和长期服务能力，帮助客户建立供应商信任。",
-        en: "Present company capabilities and long-term service strength to build supplier trust.",
-        es: "Muestre capacidades y servicio a largo plazo para generar confianza.",
-        fr: "Présenter les capacités et le service à long terme pour renforcer la confiance.",
-        ko: "기업 역량과 장기 서비스 능력을 보여 신뢰를 구축합니다.",
-        ru: "Демонстрация возможностей компании и долгосрочного сервиса.",
-      },
-      footerLinkLabel: {
-        "zh-CN": "了解恒永达 →",
-        en: "Learn more →",
-        es: "Más información →",
-        fr: "En savoir plus →",
-        ko: "자세히 보기 →",
-        ru: "Подробнее →",
-      },
-      footerHref: anchorPath("about"),
-      categories: [
-        {
-          key: "company-profile",
-          title: {
-            "zh-CN": "公司介绍",
-            en: "Company Profile",
-            es: "Perfil de la empresa",
-            fr: "Profil de l’entreprise",
-            ko: "회사 소개",
-            ru: "Профиль компании",
-          },
-          description: {
-            "zh-CN": "企业定位、发展历程与业务方向",
-            en: "Positioning, development, and business direction",
-            es: "Posicionamiento, desarrollo y dirección",
-            fr: "Positionnement, développement et orientation",
-            ko: "기업 포지셔닝, 발전 과정 및 사업 방향",
-            ru: "Позиционирование, развитие и направления бизнеса",
-          },
-          order: 1,
-          enabled: true,
-        },
-        {
-          key: "rd-manufacturing",
-          title: {
-            "zh-CN": "研发制造能力",
-            en: "R&D & Manufacturing",
-            es: "I+D y fabricación",
-            fr: "R&D et fabrication",
-            ko: "R&D 및 제조",
-            ru: "R&D и производство",
-          },
-          description: {
-            "zh-CN": "研发、加工、生产和系统集成能力",
-            en: "R&D, machining, production, and system integration",
-            es: "I+D, mecanizado, producción e integración",
-            fr: "R&D, usinage, production et intégration",
-            ko: "R&D, 가공, 생산 및 시스템 통합",
-            ru: "Разработка, обработка, производство и интеграция",
-          },
-          order: 2,
-          enabled: true,
-        },
-        {
-          key: "quality-system",
-          title: {
-            "zh-CN": "质量体系",
-            en: "Quality System",
-            es: "Sistema de calidad",
-            fr: "Système qualité",
-            ko: "품질 시스템",
-            ru: "Система качества",
-          },
-          description: {
-            "zh-CN": "质量管理、检测流程与稳定交付",
-            en: "Quality management, inspection, and stable delivery",
-            es: "Gestión de calidad, inspección y entrega estable",
-            fr: "Gestion qualité, inspection et livraison stable",
-            ko: "품질 관리, 검사 및 안정적 납품",
-            ru: "Управление качеством, контроль и стабильные поставки",
-          },
-          order: 3,
-          enabled: true,
-        },
-        {
-          key: "qualifications",
-          title: {
-            "zh-CN": "企业资质",
-            en: "Qualifications",
-            es: "Cualificaciones",
-            fr: "Qualifications",
-            ko: "기업 자격",
-            ru: "Квалификации",
-          },
-          description: {
-            "zh-CN": "企业荣誉、认证和知识产权",
-            en: "Honors, certifications, and intellectual property",
-            es: "Reconocimientos, certificaciones y propiedad intelectual",
-            fr: "Distinctions, certifications et propriété intellectuelle",
-            ko: "수상, 인증 및 지식재산권",
-            ru: "Награды, сертификаты и интеллектуальная собственность",
-          },
-          order: 4,
-          enabled: true,
-        },
-        {
-          key: "global-service",
-          title: {
-            "zh-CN": "全球服务",
-            en: "Global Service",
-            es: "Servicio global",
-            fr: "Service mondial",
-            ko: "글로벌 서비스",
-            ru: "Глобальный сервис",
-          },
-          description: {
-            "zh-CN": "海外客户支持与国际市场服务",
-            en: "International customer support and global market service",
-            es: "Soporte internacional y servicio global",
-            fr: "Support international et service mondial",
-            ko: "해외 고객 지원 및 글로벌 시장 서비스",
-            ru: "Международная поддержка клиентов и сервис",
-          },
-          order: 5,
-          enabled: true,
-        },
-      ],
-      cards: [
-        {
-          key: "about-company-card",
-          title: {
-            "zh-CN": "公司介绍",
-            en: "Company Profile",
-            es: "Perfil de la empresa",
-            fr: "Profil de l’entreprise",
-            ko: "회사 소개",
-            ru: "Профиль компании",
-          },
-          description: {
-            "zh-CN": "了解恒永达的定位、业务和发展方向",
-            en: "Understand FOREACH positioning and business direction",
-            es: "Conozca el posicionamiento y dirección",
-            fr: "Comprendre le positionnement et l’orientation",
-            ko: "FOREACH의 포지셔닝과 사업 방향 확인",
-            ru: "Позиционирование и направления бизнеса",
-          },
-          href: anchorPath("about"),
-          order: 1,
-          enabled: true,
-        },
-        {
-          key: "about-rd-card",
-          title: {
-            "zh-CN": "研发制造能力",
-            en: "R&D & Manufacturing",
-            es: "I+D y fabricación",
-            fr: "R&D et fabrication",
-            ko: "R&D 및 제조",
-            ru: "R&D и производство",
-          },
-          description: {
-            "zh-CN": "从产品研发到批量制造的工程能力",
-            en: "Engineering capability from R&D to production",
-            es: "Capacidad desde I+D hasta producción",
-            fr: "Capacité de la R&D à la production",
-            ko: "R&D부터 생산까지의 엔지니어링 역량",
-            ru: "От разработки до производства",
-          },
-          href: anchorPath("about"),
-          order: 2,
-          enabled: true,
-        },
-        {
-          key: "about-quality-card",
-          title: {
-            "zh-CN": "质量体系",
-            en: "Quality System",
-            es: "Sistema de calidad",
-            fr: "Système qualité",
-            ko: "품질 시스템",
-            ru: "Система качества",
-          },
-          description: {
-            "zh-CN": "支撑稳定交付和长期合作",
-            en: "Support stable delivery and long-term cooperation",
-            es: "Apoyo a entregas estables y cooperación",
-            fr: "Soutien à la livraison stable et coopération",
-            ko: "안정적 납품과 장기 협력 지원",
-            ru: "Стабильные поставки и долгосрочное сотрудничество",
-          },
-          href: anchorPath("about"),
-          order: 3,
-          enabled: true,
-        },
-        {
-          key: "about-global-card",
-          title: {
-            "zh-CN": "全球服务",
-            en: "Global Service",
-            es: "Servicio global",
-            fr: "Service mondial",
-            ko: "글로벌 서비스",
-            ru: "Глобальный сервис",
-          },
-          description: {
-            "zh-CN": "面向全球客户提供销售和技术支持",
-            en: "Sales and technical support for global customers",
-            es: "Soporte comercial y técnico global",
-            fr: "Support commercial et technique mondial",
-            ko: "글로벌 고객 대상 영업 및 기술 지원",
-            ru: "Продажи и техническая поддержка по всему миру",
-          },
-          href: anchorPath("about"),
-          order: 4,
-          enabled: true,
-        },
-      ],
-    },
-    mobileChildren: [
-      {
-        key: "mobile-about-company",
-        label: {
-          "zh-CN": "公司介绍",
-          en: "Company Profile",
-          es: "Empresa",
-          fr: "Entreprise",
-          ko: "회사 소개",
-          ru: "Компания",
-        },
-        href: anchorPath("about"),
-        order: 1,
-        enabled: true,
-      },
-      {
-        key: "mobile-about-rd",
-        label: {
-          "zh-CN": "研发制造能力",
-          en: "R&D & Manufacturing",
-          es: "I+D y fabricación",
-          fr: "R&D et fabrication",
-          ko: "R&D 및 제조",
-          ru: "R&D и производство",
-        },
-        href: anchorPath("about"),
-        order: 2,
-        enabled: true,
-      },
-      {
-        key: "mobile-about-quality",
-        label: {
-          "zh-CN": "质量体系",
-          en: "Quality System",
-          es: "Calidad",
-          fr: "Qualité",
-          ko: "품질 시스템",
-          ru: "Качество",
-        },
-        href: anchorPath("about"),
-        order: 3,
-        enabled: true,
-      },
-      {
-        key: "mobile-about-qualifications",
-        label: {
-          "zh-CN": "企业资质",
-          en: "Qualifications",
-          es: "Cualificaciones",
-          fr: "Qualifications",
-          ko: "기업 자격",
-          ru: "Квалификации",
-        },
-        href: anchorPath("about"),
-        order: 4,
-        enabled: true,
-      },
-      {
-        key: "mobile-about-global",
-        label: {
-          "zh-CN": "全球服务",
-          en: "Global Service",
-          es: "Servicio global",
-          fr: "Service mondial",
-          ko: "글로벌 서비스",
-          ru: "Глобальный сервис",
-        },
-        href: anchorPath("about"),
-        order: 5,
-        enabled: true,
-      },
-    ],
+    dropdownType: "none",
   },
-
   {
     key: "contact",
-    label: {
-      "zh-CN": "联系我们",
-      en: "Contact Us",
-      es: "Contacto",
-      fr: "Contact",
-      ko: "문의하기",
-      ru: "Контакты",
-    },
+    label: t(
+      "联系我们",
+      "Contact Us",
+      "Contáctenos",
+      "Contactez-nous",
+      "문의하기",
+      "Свяжитесь с нами"
+    ),
     href: anchorPath("contact"),
     order: 6,
     enabled: true,
-    dropdownType: "mega",
-    megaDropdown: {
-      heading: {
-        "zh-CN": "联系我们",
-        en: "Contact Us",
-        es: "Contacto",
-        fr: "Contact",
-        ko: "문의하기",
-        ru: "Контакты",
-      },
-      description: {
-        "zh-CN": "提交询盘、获取联系方式、查看地址信息，或联系销售支持团队。",
-        en: "Submit inquiries, find contact details, view address information, or reach sales support.",
-        es: "Envíe consultas, consulte contactos, direcciones o soporte comercial.",
-        fr: "Envoyez une demande, consultez les contacts, adresses ou support commercial.",
-        ko: "문의 제출, 연락처, 주소 정보 및 영업 지원 확인.",
-        ru: "Отправьте запрос, найдите контакты, адрес и поддержку продаж.",
-      },
-      footerText: {
-        "zh-CN": "如果您正在进行产品选型或液路方案评估，可以直接提交需求。",
-        en: "Submit your requirements if you are selecting products or evaluating a fluidic solution.",
-        es: "Envíe sus requisitos para selección de productos o evaluación de soluciones.",
-        fr: "Envoyez vos exigences pour la sélection ou l’évaluation d’une solution fluidique.",
-        ko: "제품 선정 또는 유체 솔루션 검토 중이면 요구사항을 제출하세요.",
-        ru: "Отправьте требования для подбора продукции или оценки решения.",
-      },
-      footerLinkLabel: {
-        "zh-CN": "提交询盘 →",
-        en: "Send inquiry →",
-        es: "Enviar consulta →",
-        fr: "Envoyer une demande →",
-        ko: "문의 보내기 →",
-        ru: "Отправить запрос →",
-      },
-      footerHref: anchorPath("contact"),
-      categories: [
-        {
-          key: "inquiry-form",
-          title: {
-            "zh-CN": "询盘表单",
-            en: "Inquiry Form",
-            es: "Formulario de consulta",
-            fr: "Formulaire de demande",
-            ko: "문의 양식",
-            ru: "Форма запроса",
-          },
-          description: {
-            "zh-CN": "提交产品选型和项目需求",
-            en: "Submit product selection and project requirements",
-            es: "Envíe requisitos de selección y proyecto",
-            fr: "Envoyer les besoins de sélection et de projet",
-            ko: "제품 선정 및 프로젝트 요구사항 제출",
-            ru: "Отправка требований к продукту и проекту",
-          },
-          order: 1,
-          enabled: true,
-        },
-        {
-          key: "contact-info",
-          title: {
-            "zh-CN": "联系方式",
-            en: "Contact Information",
-            es: "Información de contacto",
-            fr: "Coordonnées",
-            ko: "연락처",
-            ru: "Контактная информация",
-          },
-          description: {
-            "zh-CN": "电话、邮箱和销售联系入口",
-            en: "Phone, email, and sales contact channels",
-            es: "Teléfono, correo y canales comerciales",
-            fr: "Téléphone, e-mail et contacts commerciaux",
-            ko: "전화, 이메일 및 영업 연락 채널",
-            ru: "Телефон, e-mail и каналы продаж",
-          },
-          order: 2,
-          enabled: true,
-        },
-        {
-          key: "address",
-          title: {
-            "zh-CN": "地址信息",
-            en: "Address",
-            es: "Dirección",
-            fr: "Adresse",
-            ko: "주소",
-            ru: "Адрес",
-          },
-          description: {
-            "zh-CN": "公司地址、地图和到访信息",
-            en: "Company address, map, and visit information",
-            es: "Dirección, mapa e información de visita",
-            fr: "Adresse, carte et informations de visite",
-            ko: "회사 주소, 지도 및 방문 정보",
-            ru: "Адрес компании, карта и информация для визита",
-          },
-          order: 3,
-          enabled: true,
-        },
-        {
-          key: "sales-support",
-          title: {
-            "zh-CN": "销售支持入口",
-            en: "Sales Support",
-            es: "Soporte comercial",
-            fr: "Support commercial",
-            ko: "영업 지원",
-            ru: "Поддержка продаж",
-          },
-          description: {
-            "zh-CN": "选型咨询、资料获取和销售对接",
-            en: "Selection consulting, document access, and sales connection",
-            es: "Consulta de selección, documentos y ventas",
-            fr: "Conseil de sélection, documents et relation commerciale",
-            ko: "선정 상담, 자료 요청 및 영업 연결",
-            ru: "Консультации, документы и связь с продажами",
-          },
-          order: 4,
-          enabled: true,
-        },
-      ],
-      cards: [
-        {
-          key: "contact-inquiry-card",
-          title: {
-            "zh-CN": "询盘表单",
-            en: "Inquiry Form",
-            es: "Consulta",
-            fr: "Demande",
-            ko: "문의 양식",
-            ru: "Запрос",
-          },
-          description: {
-            "zh-CN": "提交产品型号、应用场景和技术需求",
-            en: "Submit product models, applications, and technical requirements",
-            es: "Envíe modelos, aplicaciones y requisitos técnicos",
-            fr: "Envoyer modèles, applications et besoins techniques",
-            ko: "제품 모델, 적용 분야 및 기술 요구사항 제출",
-            ru: "Модели, применения и технические требования",
-          },
-          href: anchorPath("contact"),
-          order: 1,
-          enabled: true,
-        },
-        {
-          key: "contact-info-card",
-          title: {
-            "zh-CN": "联系方式",
-            en: "Contact Details",
-            es: "Contactos",
-            fr: "Coordonnées",
-            ko: "연락처",
-            ru: "Контакты",
-          },
-          description: {
-            "zh-CN": "获取邮箱、电话和业务联系信息",
-            en: "Find email, phone, and business contact details",
-            es: "Correo, teléfono e información comercial",
-            fr: "E-mail, téléphone et contacts commerciaux",
-            ko: "이메일, 전화 및 비즈니스 연락처 확인",
-            ru: "E-mail, телефон и контакты",
-          },
-          href: anchorPath("contact"),
-          order: 2,
-          enabled: true,
-        },
-        {
-          key: "contact-address-card",
-          title: {
-            "zh-CN": "地址信息",
-            en: "Address",
-            es: "Dirección",
-            fr: "Adresse",
-            ko: "주소",
-            ru: "Адрес",
-          },
-          description: {
-            "zh-CN": "查看公司地址和到访信息",
-            en: "View company address and visit information",
-            es: "Ver dirección e información de visita",
-            fr: "Voir l’adresse et les informations de visite",
-            ko: "회사 주소 및 방문 정보 확인",
-            ru: "Адрес и информация для визита",
-          },
-          href: anchorPath("contact"),
-          order: 3,
-          enabled: true,
-        },
-        {
-          key: "contact-sales-card",
-          title: {
-            "zh-CN": "销售支持入口",
-            en: "Sales Support",
-            es: "Soporte comercial",
-            fr: "Support commercial",
-            ko: "영업 지원",
-            ru: "Поддержка продаж",
-          },
-          description: {
-            "zh-CN": "对接选型、资料、报价和项目支持",
-            en: "Selection, documents, quotation, and project support",
-            es: "Selección, documentos, cotización y soporte",
-            fr: "Sélection, documents, devis et support projet",
-            ko: "선정, 자료, 견적 및 프로젝트 지원",
-            ru: "Подбор, документы, коммерческое предложение и поддержка",
-          },
-          href: anchorPath("contact"),
-          order: 4,
-          enabled: true,
-        },
-      ],
-    },
-    mobileChildren: [
-      {
-        key: "mobile-contact-inquiry",
-        label: {
-          "zh-CN": "询盘表单",
-          en: "Inquiry Form",
-          es: "Consulta",
-          fr: "Demande",
-          ko: "문의 양식",
-          ru: "Запрос",
-        },
-        href: anchorPath("contact"),
-        order: 1,
-        enabled: true,
-      },
-      {
-        key: "mobile-contact-info",
-        label: {
-          "zh-CN": "联系方式",
-          en: "Contact Details",
-          es: "Contactos",
-          fr: "Coordonnées",
-          ko: "연락처",
-          ru: "Контакты",
-        },
-        href: anchorPath("contact"),
-        order: 2,
-        enabled: true,
-      },
-      {
-        key: "mobile-contact-address",
-        label: {
-          "zh-CN": "地址信息",
-          en: "Address",
-          es: "Dirección",
-          fr: "Adresse",
-          ko: "주소",
-          ru: "Адрес",
-        },
-        href: anchorPath("contact"),
-        order: 3,
-        enabled: true,
-      },
-      {
-        key: "mobile-contact-sales",
-        label: {
-          "zh-CN": "销售支持入口",
-          en: "Sales Support",
-          es: "Soporte comercial",
-          fr: "Support commercial",
-          ko: "영업 지원",
-          ru: "Продажи",
-        },
-        href: anchorPath("contact"),
-        order: 4,
-        enabled: true,
-      },
-    ],
+    dropdownType: "none",
   },
 ];
 
 /* ================================
    获取当前可显示导航
-   说明：
-   1. 过滤 enabled=false 的导航
-   2. 按 order 排序
 ================================ */
 export function getVisibleNavigationItems() {
   return navigationItems
@@ -1796,23 +1201,15 @@ export function getVisibleNavigationItems() {
 }
 
 /* ================================
-   获取当前语言文本
-   说明：
-   1. 优先返回当前语言
-   2. 如果当前语言没有，就回退到英文
-   3. 如果英文也没有，就回退到中文
+   读取当前语言文本
 ================================ */
-export function getLocalizedText(text: LocalizedText, locale: LocaleCode) {
-  return text[locale] || text.en || text["zh-CN"];
+export function getLocalizedText(text: LocalizedText, locale: string) {
+  return text[locale] ?? text.en ?? text["zh-CN"] ?? "";
 }
 
 /* ================================
-   获取当前语言链接
-   说明：
-   1. 优先返回当前语言链接
-   2. 如果当前语言没有，就回退到英文链接
-   3. 如果英文也没有，就回退到中文链接
+   读取当前语言链接
 ================================ */
-export function getLocalizedHref(href: LocalizedHref, locale: LocaleCode) {
-  return href[locale] || href.en || href["zh-CN"];
+export function getLocalizedHref(href: LocalizedHref, locale: string) {
+  return href[locale] ?? href.en ?? href["zh-CN"] ?? "/";
 }

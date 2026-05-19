@@ -1,0 +1,1159 @@
+/* =========================================================
+   language-typography.css
+   全站多语言文字大小与排版控制文件
+
+   说明：
+   1. 这个文件只管理文字大小、行高、字距、换行
+   2. 不管理背景、颜色、阴影、布局、动画
+   3. 按三种语言排版类型控制：
+      - compact：中文 / 韩文
+      - standard：英文
+      - expanded：西语 / 法语 / 俄语
+   4. 首页、产品页、新闻页、应用页后续都可以复用这里的规则
+   5. 当前页面外层需要带有：
+      site-page site-page--compact
+      site-page site-page--standard
+      site-page site-page--expanded
+========================================================= */
+
+/* =========================================================
+   01. 三种语言排版类型变量
+
+   说明：
+   1. 这些变量主要给后续产品页、新闻页、应用页复用
+   2. 首页当前模块因为已有大量独立 class，下面会单独覆盖
+========================================================= */
+
+/* 中文 / 韩文：文字较短，保持设计感和信息密度 */
+.site-page--compact {
+  --typo-page-title-size: clamp(42px, 5vw, 78px);
+  --typo-section-title-size: clamp(36px, 3.4vw, 56px);
+  --typo-card-title-size: 22px;
+  --typo-body-size: 16px;
+  --typo-small-size: 14px;
+  --typo-button-size: 15px;
+
+  --typo-title-line-height: 1.12;
+  --typo-body-line-height: 1.75;
+  --typo-card-line-height: 1.6;
+
+  --typo-title-letter-spacing: 0.02em;
+}
+
+/* 英文：标准排版，标题略微收紧 */
+.site-page--standard {
+  --typo-page-title-size: clamp(40px, 4.6vw, 70px);
+  --typo-section-title-size: clamp(34px, 3.1vw, 52px);
+  --typo-card-title-size: 20px;
+  --typo-body-size: 15px;
+  --typo-small-size: 13.5px;
+  --typo-button-size: 14px;
+
+  --typo-title-line-height: 1.18;
+  --typo-body-line-height: 1.86;
+  --typo-card-line-height: 1.68;
+
+  --typo-title-letter-spacing: -0.01em;
+}
+
+/* 西语 / 法语 / 俄语：文字更长，字号更克制，行高更宽松 */
+.site-page--expanded {
+  --typo-page-title-size: clamp(36px, 4vw, 62px);
+  --typo-section-title-size: clamp(30px, 2.8vw, 46px);
+  --typo-card-title-size: 18px;
+  --typo-body-size: 14.5px;
+  --typo-small-size: 13px;
+  --typo-button-size: 13px;
+
+  --typo-title-line-height: 1.24;
+  --typo-body-line-height: 1.96;
+  --typo-card-line-height: 1.78;
+
+  --typo-title-letter-spacing: -0.018em;
+
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: auto;
+}
+
+/* =========================================================
+   02. 全站通用文字等级
+
+   使用方式：
+   1. 后续产品页大标题可以加 typography-page-title
+   2. 模块标题可以加 typography-section-title
+   3. 卡片标题可以加 typography-card-title
+   4. 正文可以加 typography-body-text
+   5. 小字说明可以加 typography-small-text
+   6. 按钮文字可以加 typography-button-text
+========================================================= */
+
+.typography-page-title {
+  font-size: var(--typo-page-title-size);
+  line-height: var(--typo-title-line-height);
+  letter-spacing: var(--typo-title-letter-spacing);
+}
+
+.typography-section-title {
+  font-size: var(--typo-section-title-size);
+  line-height: var(--typo-title-line-height);
+  letter-spacing: var(--typo-title-letter-spacing);
+}
+
+.typography-card-title {
+  font-size: var(--typo-card-title-size);
+  line-height: var(--typo-card-line-height);
+}
+
+.typography-body-text {
+  font-size: var(--typo-body-size);
+  line-height: var(--typo-body-line-height);
+}
+
+.typography-small-text {
+  font-size: var(--typo-small-size);
+  line-height: var(--typo-body-line-height);
+}
+
+.typography-button-text {
+  font-size: var(--typo-button-size);
+  line-height: 1.4;
+}
+
+/* =========================================================
+   03. 首屏 Hero 专属多语言控制
+
+   说明：
+   1. 首屏是品牌第一视觉，需要单独控制
+   2. 不依赖 html[lang="xx"]，统一使用 site-page--compact / standard / expanded
+   3. 这样即使 app/layout.tsx 里的 html lang 暂时固定，也能生效
+========================================================= */
+
+/* 中文 / 韩文：首屏保持原来的大气效果 */
+body .site-page--compact .home-hero-title {
+  max-width: 1380px;
+  font-size: clamp(42px, 5vw, 78px);
+  line-height: 1.08;
+  letter-spacing: 0.02em;
+}
+
+body .site-page--compact .home-hero-subtitle {
+  max-width: 980px;
+  font-size: clamp(16px, 5vw, 24px);
+  line-height: 2;
+  letter-spacing: 0.05em;
+}
+
+body .site-page--compact .home-hero-btn {
+  font-size: 15px;
+  letter-spacing: 0.04em;
+}
+
+/* 英文：标题更长，宽度放宽，字距收紧 */
+body .site-page--standard .home-hero-title {
+  max-width: 1020px;
+  font-size: clamp(40px, 4.7vw, 78px);
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+}
+
+body .site-page--standard .home-hero-subtitle {
+  max-width: 1080px;
+  font-size: clamp(15px, 2.1vw, 22px);
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+}
+
+body .site-page--standard .home-hero-btn {
+  font-size: 14px;
+  letter-spacing: 0.01em;
+}
+
+/* 西语 / 法语 / 俄语：长文本语言，标题更克制 */
+body .site-page--expanded .home-hero-title {
+  max-width: 1020px;
+  font-size: clamp(36px, 4.4vw, 68px);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+body .site-page--expanded .home-hero-subtitle {
+  max-width: 1160px;
+  font-size: clamp(14px, 2vw, 21px);
+  line-height: 1.52;
+  letter-spacing: 0;
+}
+
+body .site-page--expanded .home-hero-btn {
+  font-size: 13.5px;
+  letter-spacing: 0;
+}
+
+/* 英文、西语、法语、俄语按钮 hover 不加粗，避免按钮宽度跳动 */
+body .site-page--standard .home-hero-btn:hover,
+body .site-page--expanded .home-hero-btn:hover {
+  font-weight: 400;
+}
+
+/* =========================================================
+   04. Header 导航语言控制
+
+   说明：
+   1. Header 在 HomePageContent 外面，不在 site-page 里面
+   2. 所以这里用 body:has(.site-page--standard) 判断当前页面排版类型
+   3. 这样 Header 也能跟随当前语言做文字适配
+========================================================= */
+
+/* 英文导航：字距收紧，hover 不加粗 */
+body:has(.site-page--standard) .site-nav-link {
+  letter-spacing: 0.01em;
+  font-weight: 400;
+}
+
+body:has(.site-page--standard) .site-nav-link:hover,
+body:has(.site-page--standard) .site-nav-link-active {
+  font-weight: 400;
+}
+
+/* 西语 / 法语 / 俄语导航：字距更紧，hover 不加粗 */
+body:has(.site-page--expanded) .site-nav-link {
+  letter-spacing: -0.005em;
+  font-weight: 400;
+}
+
+body:has(.site-page--expanded) .site-nav-link:hover,
+body:has(.site-page--expanded) .site-nav-link-active {
+  font-weight: 400;
+}
+
+/* 长语言下，导航间距稍微缩小 */
+@media (min-width: 1281px) and (max-width: 1920px) {
+  body:has(.site-page--standard) .site-nav {
+    gap: 40px;
+  }
+
+  body:has(.site-page--expanded) .site-nav {
+    gap: 34px;
+  }
+}
+
+@media (max-width: 1280px) {
+  body:has(.site-page--standard) .site-nav {
+    gap: 20px;
+  }
+
+  body:has(.site-page--expanded) .site-nav {
+    gap: 18px;
+  }
+}
+
+/* =========================================================
+   05. 首页第二屏：应用领域 × 核心部件
+========================================================= */
+
+/* compact：恢复中文 / 韩文默认值，避免旧 CSS 影响 */
+body .site-page--compact .home-flow-title {
+  font-size: clamp(48px, 4.8vw, 60px);
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+}
+
+body .site-page--compact .home-flow-desc {
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+body .site-page--compact .home-flow-btn {
+  font-size: 15px;
+}
+
+body .site-page--compact .home-flow-capability-row span {
+  font-size: 13px;
+}
+
+body .site-page--compact .home-flow-industry-card h3 {
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+body .site-page--compact .home-flow-industry-card.analysis h3 {
+  font-size: 19px;
+}
+
+body .site-page--compact .home-flow-industry-card p {
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+body .site-page--compact .home-flow-industry-card.analysis p {
+  font-size: 13px;
+  line-height: 1.58;
+}
+
+/* standard：英文 */
+body .site-page--standard .home-flow-title {
+  font-size: clamp(44px, 4.4vw, 62px);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+}
+
+body .site-page--standard .home-flow-desc {
+  font-size: 16px;
+  line-height: 1.82;
+}
+
+body .site-page--standard .home-flow-btn,
+body .site-page--standard .home-flow-capability-row span {
+  font-size: 14px;
+  white-space: normal;
+}
+
+body .site-page--standard .home-flow-industry-card h3 {
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+body .site-page--standard .home-flow-industry-card p {
+  font-size: 12px;
+  line-height: 1.62;
+}
+
+/* expanded：西语 / 法语 / 俄语 */
+body .site-page--expanded .home-flow-title {
+  font-size: clamp(40px, 4vw, 56px);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+body .site-page--expanded .home-flow-desc {
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+body .site-page--expanded .home-flow-btn,
+body .site-page--expanded .home-flow-capability-row span {
+  font-size: 13px;
+  white-space: normal;
+}
+
+body .site-page--expanded .home-flow-industry-card h3 {
+  font-size: 14px;
+  line-height: 1.42;
+}
+
+body .site-page--expanded .home-flow-industry-card p {
+  font-size: 11.5px;
+  line-height: 1.68;
+}
+
+body .site-page--expanded .home-flow-tags span {
+  font-size: 10.5px;
+  white-space: normal;
+}
+
+/* 第二屏手机端电视卡片 */
+body .site-page--compact .home-flow-mobile-tv-title {
+  font-size: 30px;
+  line-height: 1.1;
+}
+
+body .site-page--standard .home-flow-mobile-tv-title {
+  font-size: 28px;
+  line-height: 1.15;
+}
+
+body .site-page--expanded .home-flow-mobile-tv-title {
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+body .site-page--compact .home-flow-mobile-tv-desc {
+  font-size: 14px;
+  line-height: 1.68;
+}
+
+body .site-page--standard .home-flow-mobile-tv-desc {
+  font-size: 13.5px;
+  line-height: 1.72;
+}
+
+body .site-page--expanded .home-flow-mobile-tv-desc {
+  font-size: 13px;
+  line-height: 1.78;
+}
+
+body .site-page--expanded .home-flow-mobile-tv-tags span,
+body .site-page--expanded .home-flow-mobile-app-tab {
+  font-size: 12px;
+  white-space: normal;
+}
+
+/* 第二屏底部流程卡片 */
+body .site-page--compact .home-flow-process-card strong {
+  font-size: 21px;
+  line-height: 1.2;
+}
+
+body .site-page--standard .home-flow-process-card strong {
+  font-size: 20px;
+  line-height: 1.28;
+}
+
+body .site-page--expanded .home-flow-process-card strong {
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+body .site-page--compact .home-flow-process-card span {
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+body .site-page--standard .home-flow-process-card span {
+  font-size: 14px;
+  line-height: 1.78;
+}
+
+body .site-page--expanded .home-flow-process-card span {
+  font-size: 13.5px;
+  line-height: 1.86;
+}
+
+/* =========================================================
+   06. 首页第三屏：公司介绍
+========================================================= */
+
+body .site-page--compact .home-company-about-title {
+  font-size: clamp(36px, 3.4vw, 50px);
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+}
+
+body .site-page--standard .home-company-about-title {
+  font-size: clamp(34px, 3.1vw, 52px);
+  line-height: 1.22;
+  letter-spacing: -0.01em;
+}
+
+body .site-page--expanded .home-company-about-title {
+  font-size: clamp(32px, 2.9vw, 48px);
+  line-height: 1.26;
+  letter-spacing: -0.015em;
+}
+
+body .site-page--compact .home-company-about-title span {
+  letter-spacing: 0.18em;
+}
+
+body .site-page--standard .home-company-about-title span,
+body .site-page--expanded .home-company-about-title span {
+  letter-spacing: 0.08em;
+}
+
+body .site-page--compact .home-company-intro-title {
+  font-size: clamp(30px, 2.2vw, 42px);
+  line-height: 1.2;
+}
+
+body .site-page--standard .home-company-intro-title {
+  font-size: clamp(28px, 2vw, 38px);
+  line-height: 1.28;
+}
+
+body .site-page--expanded .home-company-intro-title {
+  font-size: clamp(26px, 1.9vw, 34px);
+  line-height: 1.32;
+}
+
+body .site-page--compact .home-company-intro-desc {
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+body .site-page--standard .home-company-intro-desc {
+  font-size: 15px;
+  line-height: 1.95;
+  text-align: left;
+}
+
+body .site-page--expanded .home-company-intro-desc {
+  font-size: 14.5px;
+  line-height: 2;
+  text-align: left;
+}
+
+body .site-page--compact .home-company-metric-card > span {
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+body .site-page--standard .home-company-metric-card > span {
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+body .site-page--expanded .home-company-metric-card > span {
+  font-size: 14px;
+  line-height: 1.62;
+}
+
+body .site-page--compact .home-honor-card strong {
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+body .site-page--standard .home-honor-card strong {
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+body .site-page--expanded .home-honor-card strong {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   07. 首页第四屏：企业优势
+========================================================= */
+
+body .site-page--compact .home-advantages-title {
+  font-size: clamp(34px, 3.2vw, 52px);
+  line-height: 1.14;
+  letter-spacing: -0.045em;
+}
+
+body .site-page--standard .home-advantages-title {
+  font-size: clamp(32px, 3vw, 48px);
+  line-height: 1.18;
+  letter-spacing: -0.035em;
+}
+
+body .site-page--expanded .home-advantages-title {
+  font-size: clamp(30px, 2.7vw, 44px);
+  line-height: 1.24;
+  letter-spacing: -0.025em;
+}
+
+body .site-page--compact .home-advantages-desc {
+  font-size: 15px;
+  line-height: 1.78;
+}
+
+body .site-page--standard .home-advantages-desc {
+  font-size: 14.5px;
+  line-height: 1.86;
+}
+
+body .site-page--expanded .home-advantages-desc {
+  font-size: 14px;
+  line-height: 1.95;
+}
+
+body .site-page--compact .home-panel-title {
+  font-size: clamp(24px, 2vw, 34px);
+  line-height: 1.16;
+  white-space: nowrap;
+}
+
+body .site-page--standard .home-panel-title {
+  font-size: clamp(22px, 1.8vw, 30px);
+  line-height: 1.22;
+  white-space: normal;
+}
+
+body .site-page--expanded .home-panel-title {
+  font-size: clamp(20px, 1.65vw, 28px);
+  line-height: 1.28;
+  white-space: normal;
+}
+
+body .site-page--compact .home-panel-brief {
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+body .site-page--standard .home-panel-brief {
+  font-size: 14px;
+  line-height: 1.82;
+}
+
+body .site-page--expanded .home-panel-brief {
+  font-size: 13.5px;
+  line-height: 1.9;
+}
+
+body .site-page--compact .home-panel-detail {
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+body .site-page--standard .home-panel-detail {
+  font-size: 13.5px;
+  line-height: 1.82;
+}
+
+body .site-page--expanded .home-panel-detail {
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+body .site-page--expanded .home-advantage-panel {
+  min-height: 420px;
+}
+
+/* =========================================================
+   08. 首页第五屏：资讯中心
+========================================================= */
+
+body .site-page--compact .news-main-title {
+  font-size: clamp(32px, 3.2vw, 48px);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+body .site-page--standard .news-main-title {
+  font-size: clamp(30px, 3vw, 44px);
+  line-height: 1.16;
+  letter-spacing: -0.035em;
+}
+
+body .site-page--expanded .news-main-title {
+  font-size: clamp(28px, 2.7vw, 40px);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+body .site-page--compact .news-tab-btn,
+body .site-page--compact .more-news-link {
+  font-size: 17px;
+}
+
+body .site-page--standard .news-tab-btn,
+body .site-page--standard .more-news-link {
+  font-size: 15px;
+}
+
+body .site-page--expanded .news-tab-btn,
+body .site-page--expanded .more-news-link {
+  font-size: 14px;
+  white-space: normal;
+}
+
+body .site-page--compact .news-title {
+  font-size: 20px;
+  line-height: 1.75;
+}
+
+body .site-page--standard .news-title {
+  font-size: 18px;
+  line-height: 1.82;
+}
+
+body .site-page--expanded .news-title {
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+body .site-page--compact .highlight-title {
+  font-size: 24px;
+  line-height: 1.74;
+}
+
+body .site-page--standard .highlight-title {
+  font-size: 22px;
+  line-height: 1.8;
+}
+
+body .site-page--expanded .highlight-title {
+  font-size: 20px;
+  line-height: 1.88;
+}
+
+body .site-page--compact .highlight-desc {
+  font-size: 15px;
+  line-height: 2;
+}
+
+body .site-page--standard .highlight-desc {
+  font-size: 14.5px;
+  line-height: 2;
+}
+
+body .site-page--expanded .highlight-desc {
+  font-size: 14px;
+  line-height: 2.08;
+}
+
+body .site-page--compact .news-list-title {
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+body .site-page--standard .news-list-title {
+  font-size: 16px;
+  line-height: 1.62;
+}
+
+body .site-page--expanded .news-list-title {
+  font-size: 15px;
+  line-height: 1.72;
+}
+
+body .site-page--compact .news-list-desc {
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+body .site-page--standard .news-list-desc {
+  font-size: 13.5px;
+  line-height: 1.82;
+}
+
+body .site-page--expanded .news-list-desc {
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+body .site-page--expanded .news-highlight-card,
+body .site-page--expanded .news-feature-card {
+  min-height: 640px;
+}
+
+/* =========================================================
+   09. 首页第六屏：在线询盘
+========================================================= */
+
+body .site-page--compact .demand-title {
+  font-size: clamp(34px, 3.8vw, 54px);
+  line-height: 1.12;
+  letter-spacing: -0.055em;
+}
+
+body .site-page--standard .demand-title {
+  font-size: clamp(32px, 3.4vw, 48px);
+  line-height: 1.18;
+  letter-spacing: -0.04em;
+}
+
+body .site-page--expanded .demand-title {
+  font-size: clamp(30px, 3vw, 44px);
+  line-height: 1.24;
+  letter-spacing: -0.025em;
+}
+
+body .site-page--compact .demand-intro {
+  font-size: 18px;
+  line-height: 2.05;
+}
+
+body .site-page--standard .demand-intro {
+  font-size: 16px;
+  line-height: 2;
+}
+
+body .site-page--expanded .demand-intro {
+  font-size: 15px;
+  line-height: 2.08;
+}
+
+body .site-page--compact .demand-item-title {
+  font-size: 22px;
+  line-height: 1.45;
+}
+
+body .site-page--standard .demand-item-title {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+body .site-page--expanded .demand-item-title {
+  font-size: 18px;
+  line-height: 1.58;
+}
+
+body .site-page--compact .demand-item-text {
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+body .site-page--standard .demand-item-text {
+  font-size: 15px;
+  line-height: 1.92;
+}
+
+body .site-page--expanded .demand-item-text {
+  font-size: 14px;
+  line-height: 2;
+}
+
+body .site-page--compact .inquiry-title {
+  font-size: 26px;
+  line-height: 1.35;
+}
+
+body .site-page--standard .inquiry-title {
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+body .site-page--expanded .inquiry-title {
+  font-size: 22px;
+  line-height: 1.45;
+}
+
+body .site-page--compact .inquiry-desc {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+body .site-page--standard .inquiry-desc,
+body .site-page--expanded .inquiry-desc {
+  line-height: 1.9;
+}
+
+body .site-page--compact .field label {
+  font-size: 13px;
+}
+
+body .site-page--standard .field label {
+  font-size: 12.5px;
+}
+
+body .site-page--expanded .field label {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+body .site-page--compact .field input,
+body .site-page--compact .field select,
+body .site-page--compact .field textarea,
+body .site-page--compact .plain-btn,
+body .site-page--compact .submit-btn {
+  font-size: 14px;
+}
+
+body .site-page--standard .field input,
+body .site-page--standard .field select,
+body .site-page--standard .field textarea,
+body .site-page--standard .plain-btn,
+body .site-page--standard .submit-btn {
+  font-size: 13.5px;
+}
+
+body .site-page--expanded .field input,
+body .site-page--expanded .field select,
+body .site-page--expanded .field textarea,
+body .site-page--expanded .plain-btn,
+body .site-page--expanded .submit-btn {
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+body .site-page--expanded .plain-btn,
+body .site-page--expanded .submit-btn {
+  white-space: normal;
+}
+
+/* =========================================================
+   10. Footer 多语言文字控制
+========================================================= */
+
+body .site-page--compact .site-footer__title {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+body .site-page--standard .site-footer__title {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+body .site-page--expanded .site-footer__title {
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+body .site-page--compact .site-footer__list a,
+body .site-page--compact .site-footer__contact-text,
+body .site-page--compact .site-footer__qrcode-label,
+body .site-page--compact .site-footer__bottom p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+body .site-page--standard .site-footer__list a,
+body .site-page--standard .site-footer__contact-text,
+body .site-page--standard .site-footer__qrcode-label,
+body .site-page--standard .site-footer__bottom p {
+  font-size: 13.5px;
+  line-height: 1.72;
+}
+
+body .site-page--expanded .site-footer__list a,
+body .site-page--expanded .site-footer__contact-text,
+body .site-page--expanded .site-footer__qrcode-label,
+body .site-page--expanded .site-footer__bottom p {
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+body .site-page--compact .site-footer__company {
+  font-size: 22px;
+  line-height: 1.45;
+}
+
+body .site-page--standard .site-footer__company {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+body .site-page--expanded .site-footer__company {
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+body .site-page--expanded .site-footer__column,
+body .site-page--expanded .site-footer__contact {
+  overflow-wrap: break-word;
+}
+
+/* =========================================================
+   11. 后续页面预留
+
+   说明：
+   产品页 / 产品详情页 / 应用页 / 新闻页 / 关于我们页可以复用这些 class
+========================================================= */
+
+.site-page .product-page-title,
+.site-page .application-page-title,
+.site-page .news-page-title,
+.site-page .about-page-title {
+  font-size: var(--typo-page-title-size);
+  line-height: var(--typo-title-line-height);
+  letter-spacing: var(--typo-title-letter-spacing);
+}
+
+.site-page .product-section-title,
+.site-page .application-section-title,
+.site-page .news-section-title,
+.site-page .about-section-title {
+  font-size: var(--typo-section-title-size);
+  line-height: var(--typo-title-line-height);
+  letter-spacing: var(--typo-title-letter-spacing);
+}
+
+.site-page .product-card-title,
+.site-page .application-card-title,
+.site-page .news-card-title,
+.site-page .about-card-title {
+  font-size: var(--typo-card-title-size);
+  line-height: var(--typo-card-line-height);
+}
+
+.site-page .product-body-text,
+.site-page .application-body-text,
+.site-page .news-body-text,
+.site-page .about-body-text {
+  font-size: var(--typo-body-size);
+  line-height: var(--typo-body-line-height);
+}
+
+.site-page .product-small-text,
+.site-page .application-small-text,
+.site-page .news-small-text,
+.site-page .about-small-text {
+  font-size: var(--typo-small-size);
+  line-height: var(--typo-body-line-height);
+}
+
+/* =========================================================
+   12. 手机端多语言补充
+========================================================= */
+
+@media (max-width: 768px) {
+  /* 首屏 Hero 手机端 */
+  body .site-page--compact .home-hero-title {
+    font-size: 40px;
+    line-height: 1.15;
+  }
+
+  body .site-page--standard .home-hero-title {
+    font-size: 36px;
+    line-height: 1.18;
+  }
+
+  body .site-page--expanded .home-hero-title {
+    font-size: 32px;
+    line-height: 1.24;
+  }
+
+  body .site-page--compact .home-hero-subtitle {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  body .site-page--standard .home-hero-subtitle {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  body .site-page--expanded .home-hero-subtitle {
+    font-size: 14px;
+    line-height: 1.82;
+  }
+
+  /* 第二屏 */
+  body .site-page--compact .home-flow-title {
+    font-size: clamp(38px, 11vw, 52px);
+    line-height: 1.05;
+  }
+
+  body .site-page--standard .home-flow-title {
+    font-size: clamp(34px, 10vw, 46px);
+    line-height: 1.12;
+  }
+
+  body .site-page--expanded .home-flow-title {
+    font-size: clamp(30px, 9vw, 40px);
+    line-height: 1.18;
+  }
+
+  body .site-page--compact .home-flow-desc {
+    font-size: 15px;
+    line-height: 1.78;
+  }
+
+  body .site-page--standard .home-flow-desc {
+    font-size: 14px;
+    line-height: 1.82;
+  }
+
+  body .site-page--expanded .home-flow-desc {
+    font-size: 13.5px;
+    line-height: 1.9;
+  }
+
+  body .site-page--expanded .home-flow-actions {
+    grid-template-columns: 1fr;
+  }
+
+  body .site-page--expanded .home-flow-mobile-app-tabs {
+    gap: 8px;
+  }
+
+  body .site-page--expanded .home-flow-mobile-app-tab {
+    min-height: 42px;
+    padding-inline: 10px;
+  }
+
+  body .site-page--expanded .home-flow-mobile-tv-screen,
+  body .site-page--expanded .home-flow-mobile-tv-content {
+    min-height: 430px;
+  }
+
+  /* 第三屏 */
+  body .site-page--compact .home-company-about-title {
+    font-size: clamp(30px, 8vw, 40px);
+    line-height: 1.15;
+  }
+
+  body .site-page--standard .home-company-about-title {
+    font-size: clamp(28px, 7.6vw, 38px);
+    line-height: 1.2;
+  }
+
+  body .site-page--expanded .home-company-about-title {
+    font-size: clamp(26px, 7vw, 34px);
+    line-height: 1.26;
+  }
+
+  body .site-page--standard .home-company-about-title span,
+  body .site-page--expanded .home-company-about-title span {
+    font-size: 16px;
+    letter-spacing: 0.05em;
+  }
+
+  body .site-page--standard .home-company-intro-desc,
+  body .site-page--expanded .home-company-intro-desc {
+    font-size: 13.5px;
+    line-height: 1.86;
+  }
+
+  /* 第四屏 */
+  body .site-page--compact .home-advantages-title {
+    font-size: clamp(30px, 8vw, 42px);
+  }
+
+  body .site-page--standard .home-advantages-title {
+    font-size: clamp(28px, 7.4vw, 38px);
+  }
+
+  body .site-page--expanded .home-advantages-title {
+    font-size: clamp(26px, 7vw, 34px);
+  }
+
+  body .site-page--expanded .home-advantage-panel,
+  body .site-page--expanded .home-advantage-panels:hover .home-advantage-panel,
+  body .site-page--expanded .home-advantage-panels:hover .home-advantage-panel:hover {
+    min-height: 360px;
+  }
+
+  body .site-page--expanded .home-panel-content {
+    min-height: 360px;
+  }
+
+  /* 第五屏 */
+  body .site-page--compact .news-main-title {
+    font-size: clamp(30px, 8vw, 42px);
+  }
+
+  body .site-page--standard .news-main-title {
+    font-size: clamp(28px, 7vw, 38px);
+  }
+
+  body .site-page--expanded .news-main-title {
+    font-size: clamp(26px, 6.6vw, 34px);
+  }
+
+  body .site-page--expanded .news-tabs {
+    gap: 8px;
+  }
+
+  body .site-page--expanded .news-tab-btn {
+    min-height: 40px;
+    padding-inline: 12px;
+  }
+
+  body .site-page--expanded .news-highlight-card,
+  body .site-page--expanded .news-feature-card {
+    min-height: auto;
+  }
+
+  /* 第六屏 */
+  body .site-page--compact .demand-title {
+    font-size: clamp(30px, 8vw, 42px);
+  }
+
+  body .site-page--standard .demand-title {
+    font-size: clamp(28px, 7.4vw, 38px);
+  }
+
+  body .site-page--expanded .demand-title {
+    font-size: clamp(26px, 7vw, 34px);
+  }
+
+  body .site-page--expanded .demand-item {
+    grid-template-columns: 56px minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  body .site-page--expanded .verify-row,
+  body .site-page--expanded .verify-code-row {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer */
+  body .site-page--expanded .site-footer__company {
+    font-size: 17px;
+  }
+}

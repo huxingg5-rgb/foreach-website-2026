@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./language-typography.css";
 import SiteHeader from "@/components/layout/SiteHeader";
 
 /**

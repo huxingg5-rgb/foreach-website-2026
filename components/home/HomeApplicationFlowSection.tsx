@@ -1,8 +1,8 @@
 // components/home/HomeApplicationFlowSection.tsx
-"use client"; // 这一块需要监听滚动和点击，所以必须是客户端组件
+"use client"; // 这一块需要监听滚动、点击、hover 和未来接口请求，所以必须是客户端组件
 
 import Link from "next/link";
-import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 
 import { getLocaleAnchorPath, type LocaleCode } from "@/lib/i18n";
 
@@ -19,33 +19,189 @@ type HomeApplicationFlowSectionProps = {
 };
 
 /* ================================
-   本组件内部使用的多语言文本类型
+   首页应用领域数据类型
 
    说明：
-   这里不强依赖 data 文件导出的类型，
-   避免因为类型名不同导致报错。
+   1. 这里直接复用本地数据 homeApplicationFlowData 的类型
+   2. 以后后端返回的数据结构也建议尽量保持这个格式
+   3. 这样前端组件不用大改，只需要换数据来源
 ================================ */
-type LocalizedText = Partial<Record<LocaleCode, string>>;
+type HomeApplicationFlowData = typeof homeApplicationFlowData;
 
 /* ================================
-   手机端应用卡片类型
+   后端接口返回格式预留
 
    说明：
-   1. 手机端不需要 PC 端的 className
-   2. 手机端只需要标题、描述、图片、标签
-   3. 这里单独定义，是为了不破坏 PC 端原来的 applicationCards 类型
+   以后后端可以返回下面两种格式之一：
+
+   方式一：
+   {
+     "data": { ...完整的 homeApplicationFlowData 结构... }
+   }
+
+   方式二：
+   { ...完整的 homeApplicationFlowData 结构... }
 ================================ */
-type HomeFlowMobileApplicationCard = {
-  key: string;
-  title: LocalizedText;
-  description: LocalizedText;
-  image: string;
-  imageAlt: LocalizedText;
-  tags: {
-    key: string;
-    label: LocalizedText;
-  }[];
+type BackendHomeApplicationFlowResponse =
+  | {
+      data?: HomeApplicationFlowData;
+    }
+  | HomeApplicationFlowData;
+
+/* ================================
+   本次已经放入 public 目录的 5 张 JPG 图片
+
+   真实路径：
+   F:\WebsiteProjects\foreach-website-2026\public\images\applications\
+
+   注意：
+   1. Next.js 访问 public 目录时，不需要写 public
+   2. 正确写法是 /images/applications/xxx.jpg
+   3. 错误写法是 /public/images/applications/xxx.jpg
+================================ */
+const LOCAL_APPLICATION_IMAGE_PATHS = {
+  ivd: "/images/applications/application-ivd.jpg",
+  lifeScience: "/images/applications/application-life-science.jpg",
+  syntheticBiology: "/images/applications/application-synthetic-biology.jpg",
+  analyticalInstruments:
+    "/images/applications/application-analytical-instruments.jpg",
+  labAutomation: "/images/applications/application-lab-automation.jpg",
 };
+
+/* ================================
+   判断是否为普通对象
+
+   说明：
+   用于简单判断后端返回的数据是不是对象，避免接口异常时报错。
+================================ */
+function isPlainObject(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null && !Array.isArray(value);
+}
+
+/* ================================
+   后端数据简单校验
+
+   说明：
+   1. 这里不是严格校验，只做最基础的结构判断
+   2. 如果接口返回不完整，就继续使用本地数据
+   3. 这样第一阶段前端上线更稳定
+================================ */
+function normalizeBackendFlowData(
+  payload: BackendHomeApplicationFlowResponse | unknown,
+): HomeApplicationFlowData | null {
+  const possibleData =
+    isPlainObject(payload) && isPlainObject(payload.data)
+      ? payload.data
+      : payload;
+
+  if (!isPlainObject(possibleData)) {
+    return null;
+  }
+
+  const maybeData = possibleData as Partial<HomeApplicationFlowData>;
+
+  const hasApplicationCards = Array.isArray(maybeData.applicationCards);
+  const hasMobileApplicationCards = Array.isArray(
+    maybeData.mobileApplicationCards,
+  );
+  const hasProcessCards = Array.isArray(maybeData.processCards);
+  const hasTvData = isPlainObject(maybeData.tv);
+  const hasSectionId = typeof maybeData.sectionId === "string";
+
+  if (
+    !hasApplicationCards ||
+    !hasMobileApplicationCards ||
+    !hasProcessCards ||
+    !hasTvData ||
+    !hasSectionId
+  ) {
+    return null;
+  }
+
+  return maybeData as HomeApplicationFlowData;
+}
+
+/* ================================
+   根据应用 key / className 匹配本地图片
+
+   说明：
+   1. 你给的数据文件里，key 可能是：
+      ivd / life-science / synthetic-biology / analytical-instruments / lab-automation
+   2. 也可能写成驼峰：
+      lifeScience / syntheticBiology / labAutomation
+   3. 所以这里做了兼容判断，避免因为命名不同导致图片不显示
+================================ */
+function getLocalApplicationImagePath(cardKey: string, className?: string) {
+  const normalizedName = `${cardKey} ${className ?? ""}`
+    .toLowerCase()
+    .replaceAll("_", "-");
+
+  if (
+    normalizedName.includes("ivd") ||
+    normalizedName.includes("diagnostic") ||
+    normalizedName.includes("diagnostics")
+  ) {
+    return LOCAL_APPLICATION_IMAGE_PATHS.ivd;
+  }
+
+  if (
+    normalizedName.includes("life-science") ||
+    normalizedName.includes("lifescience")
+  ) {
+    return LOCAL_APPLICATION_IMAGE_PATHS.lifeScience;
+  }
+
+  if (
+    normalizedName.includes("synthetic-biology") ||
+    normalizedName.includes("syntheticbiology")
+  ) {
+    return LOCAL_APPLICATION_IMAGE_PATHS.syntheticBiology;
+  }
+
+  if (
+    normalizedName.includes("analytical") ||
+    normalizedName.includes("analysis") ||
+    normalizedName.includes("instrument")
+  ) {
+    return LOCAL_APPLICATION_IMAGE_PATHS.analyticalInstruments;
+  }
+
+  if (
+    normalizedName.includes("lab-automation") ||
+    normalizedName.includes("laboratory-automation") ||
+    normalizedName.includes("labautomation") ||
+    normalizedName.includes("automation")
+  ) {
+    return LOCAL_APPLICATION_IMAGE_PATHS.labAutomation;
+  }
+
+  return null;
+}
+
+/* ================================
+   最终决定应用卡片使用哪张图
+
+   说明：
+   1. 当前阶段：优先使用本地这 5 张 JPG 图
+   2. 未来后端启用后：优先使用后端返回的 image 字段
+   3. 如果后端没有返回 image，则继续回退到本地图片或数据文件里的图片
+================================ */
+function resolveApplicationImagePath(
+  card: {
+    key: string;
+    className?: string;
+    image: string;
+  },
+  isUsingBackendData: boolean,
+) {
+  if (isUsingBackendData && card.image) {
+    return card.image;
+  }
+
+  const localImagePath = getLocalApplicationImagePath(card.key, card.className);
+
+  return localImagePath || card.image;
+}
 
 /* ================================
    限制数值范围
@@ -79,15 +235,16 @@ function mapRange(
    卡片图片背景
 
    说明：
-   1. 图片路径来自 data/home-application-flow.ts
-   2. 如果图片暂时不存在，仍然会显示渐变底色
+   1. 图片会强制铺满卡片
+   2. backgroundSize: "cover" 表示裁切铺满，不留空白
+   3. backgroundPosition: "center center" 表示从图片中心裁切
 ================================ */
 function createCardImageBackground(imagePath: string): CSSProperties {
   return {
-    backgroundImage: `
-      linear-gradient(135deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.06)),
-      url("${imagePath}")
-    `,
+    backgroundImage: `url("${imagePath}")`,
+    backgroundSize: "cover",
+    backgroundPosition: "center center",
+    backgroundRepeat: "no-repeat",
   };
 }
 
@@ -95,7 +252,8 @@ function createCardImageBackground(imagePath: string): CSSProperties {
    PC 端电视机背景图
 
    说明：
-   电视里面的图片路径来自 data/home-application-flow.ts。
+   1. 这里叠加深蓝遮罩
+   2. 图片强制 cover，避免右侧电视图露出空白
 ================================ */
 function createTvBackground(imagePath: string): CSSProperties {
   return {
@@ -103,6 +261,9 @@ function createTvBackground(imagePath: string): CSSProperties {
       linear-gradient(135deg, rgba(3, 18, 42, 0.62), rgba(0, 38, 86, 0.72)),
       url("${imagePath}")
     `,
+    backgroundSize: "cover",
+    backgroundPosition: "center center",
+    backgroundRepeat: "no-repeat",
   };
 }
 
@@ -110,9 +271,9 @@ function createTvBackground(imagePath: string): CSSProperties {
    手机端电视展示屏背景图
 
    说明：
-   1. 如果是图片路径，就叠加深蓝遮罩，保证文字可读
-   2. 如果是渐变背景，就直接使用
-   3. 这样后期既能用真实图片，也能用渐变占位
+   1. 如果是图片路径，就叠加深蓝遮罩
+   2. 如果是渐变背景，就直接使用渐变
+   3. 图片强制铺满手机端展示区域
 ================================ */
 function createMobileTvBackground(imagePath: string): CSSProperties {
   const isGradient =
@@ -122,6 +283,9 @@ function createMobileTvBackground(imagePath: string): CSSProperties {
   if (isGradient) {
     return {
       backgroundImage: imagePath,
+      backgroundSize: "cover",
+      backgroundPosition: "center center",
+      backgroundRepeat: "no-repeat",
     };
   }
 
@@ -130,6 +294,9 @@ function createMobileTvBackground(imagePath: string): CSSProperties {
       linear-gradient(135deg, rgba(3, 18, 42, 0.72), rgba(0, 38, 86, 0.78)),
       url("${imagePath}")
     `,
+    backgroundSize: "cover",
+    backgroundPosition: "center center",
+    backgroundRepeat: "no-repeat",
   };
 }
 
@@ -155,11 +322,17 @@ function isTouchLikeDevice() {
  * 首页第二屏：应用领域 × 核心部件
  *
  * 当前版本说明：
- * 1. PC 端：保留原来的电视机 + 5 张漂浮卡片 + 滚动动画
- * 2. 手机端：新增“电视展示屏 + 应用按钮切换”结构
- * 3. 手机端：显示 6 个按钮，新增“微流体领域”
- * 4. 手机端：去掉 Application Fields 小标题
- * 5. 手机端：去掉电视机外层和应用按钮外层的大圆角矩形
+ * 1. PC 端：电视机 + 5 张漂浮卡片 + 滚动动画
+ * 2. 手机端：电视展示屏 + 应用按钮切换
+ * 3. 应用图片已换为 public/images/applications 下的 JPG 图片
+ * 4. 已预留后端接口：
+ *    /api/home/application-flow?locale=zh-CN
+ *
+ * 后端接入方式：
+ * 1. 当前默认使用本地数据，保证前端第一阶段稳定上线
+ * 2. 以后后端做好后，在 .env.local 里增加：
+ *    NEXT_PUBLIC_ENABLE_HOME_APPLICATION_FLOW_API=true
+ * 3. 后端返回完整数据后，前端会自动用接口数据覆盖本地数据
  */
 export default function HomeApplicationFlowSection({
   locale,
@@ -167,98 +340,101 @@ export default function HomeApplicationFlowSection({
   const sectionRef = useRef<HTMLElement | null>(null); // 第二屏区域
   const tvStageRef = useRef<HTMLDivElement | null>(null); // PC 端电视舞台区域
 
+  // 应用领域模块当前使用的数据
+  // 默认先使用本地 data/home-application-flow.ts，避免接口未完成时报错
+  const [flowData, setFlowData] = useState<HomeApplicationFlowData>(
+    homeApplicationFlowData,
+  );
+
+  // 标记当前数据是否来自后端
+  // 用途：后端启用后，让后端 image 字段优先生效
+  const [isUsingBackendData, setIsUsingBackendData] = useState(false);
+
   // 旧手机端点击放大卡片逻辑保留，避免影响原来代码
   const [activeCardKey, setActiveCardKey] = useState<string | null>(null);
 
-  // 新手机端结构：当前选中的应用按钮下标
+  // 手机端当前选中的应用按钮下标
   const [activeMobileIndex, setActiveMobileIndex] = useState(0);
 
-  // 新手机端结构：切换动效状态
+  // 手机端切换动效状态
   const [isMobileChanging, setIsMobileChanging] = useState(false);
 
   // 根据当前语言生成按钮链接
   const applicationsHref = getLocaleAnchorPath(locale, "applications");
   const productsHref = getLocaleAnchorPath(locale, "products");
 
+  // 手机端应用卡片数据
+  // 说明：
+  // 1. 数据来自 flowData
+  // 2. flowData 默认是本地数据，未来可以由后端接口覆盖
+  const mobileApplicationCards = flowData.mobileApplicationCards;
+
+  // 当前手机端选中的应用卡片
+  const activeMobileApplication =
+    mobileApplicationCards[activeMobileIndex] || mobileApplicationCards[0];
+
   /* ================================
-     手机端应用数据
+     后端接口预留
 
      说明：
-     1. PC 端继续用 homeApplicationFlowData.applicationCards
-     2. 手机端这里单独生成一组数据
-     3. 前 5 个从 PC 应用卡片里复用
-     4. 第 6 个新增“微流体领域”
-     5. 这样你的 data 文件就算没有 mobileApplicationCards，也不会报错
+     1. 第一阶段不强制请求后端，避免接口没有时一直报 404
+     2. 等后端做好后，在 .env.local 里打开：
+        NEXT_PUBLIC_ENABLE_HOME_APPLICATION_FLOW_API=true
+     3. 接口地址预留：
+        /api/home/application-flow?locale=zh-CN
   ================================ */
-  const mobileApplicationCards = useMemo<HomeFlowMobileApplicationCard[]>(() => {
-    const desktopCards = homeApplicationFlowData.applicationCards.map((card) => ({
-      key: card.key,
-      title: card.title,
-      description: card.description,
-      image: card.image,
-      imageAlt: card.imageAlt,
-      tags: card.tags,
-    }));
+  useEffect(() => {
+    const shouldUseBackend =
+      process.env.NEXT_PUBLIC_ENABLE_HOME_APPLICATION_FLOW_API === "true";
 
-    const orderedDesktopCards = [...desktopCards].sort((a, b) => {
-      const order = [
-        "analytical-instruments",
-        "life-science",
-        "synthetic-biology",
-        "lab-automation",
-        "ivd",
-      ];
+    if (!shouldUseBackend) {
+      return;
+    }
 
-      return order.indexOf(a.key) - order.indexOf(b.key);
-    });
+    const controller = new AbortController();
 
-    const microfluidicsCard: HomeFlowMobileApplicationCard = {
-      key: "microfluidics",
-      title: {
-        "zh-CN": "微流体领域",
-      },
-      description: {
-        "zh-CN":
-          "面向微量液体控制、精密分配、低内腔体积流路与模块化微流体系统集成。",
-      },
-      // 这里先复用电视机背景图，避免因为没有新增图片导致页面空白
-      // 后期可以换成：/images/home/application-flow/microfluidics.jpg
-      image: homeApplicationFlowData.tv.image,
-      imageAlt: {
-        "zh-CN": "微流体领域液路应用场景",
-      },
-      tags: [
-        {
-          key: "micro-dispensing",
-          label: {
-            "zh-CN": "微量分配",
+    async function loadBackendFlowData() {
+      try {
+        const response = await fetch(
+          `/api/home/application-flow?locale=${encodeURIComponent(locale)}`,
+          {
+            method: "GET",
+            signal: controller.signal,
+            cache: "no-store",
           },
-        },
-        {
-          key: "low-internal-volume",
-          label: {
-            "zh-CN": "低内腔体积",
-          },
-        },
-        {
-          key: "precision-fluid-control",
-          label: {
-            "zh-CN": "精密流控",
-          },
-        },
-        {
-          key: "system-integration",
-          label: {
-            "zh-CN": "系统集成",
-          },
-        },
-      ],
+        );
+
+        if (!response.ok) {
+          return;
+        }
+
+        const payload = (await response.json()) as unknown;
+        const backendData = normalizeBackendFlowData(payload);
+
+        if (!backendData) {
+          return;
+        }
+
+        setFlowData(backendData);
+        setIsUsingBackendData(true);
+      } catch (error) {
+        // AbortError 是组件卸载或语言切换时主动取消请求，不需要提示
+        if (error instanceof DOMException && error.name === "AbortError") {
+          return;
+        }
+
+        // 接口异常时，继续使用本地数据，避免页面崩掉
+        setFlowData(homeApplicationFlowData);
+        setIsUsingBackendData(false);
+      }
+    }
+
+    loadBackendFlowData();
+
+    return () => {
+      controller.abort();
     };
-
-    return [...orderedDesktopCards, microfluidicsCard];
-  }, []);
-
-  const activeMobileApplication = mobileApplicationCards[activeMobileIndex];
+  }, [locale]);
 
   useEffect(() => {
     let animationFrameId = 0;
@@ -359,7 +535,7 @@ export default function HomeApplicationFlowSection({
       return "";
     }
 
-    const otherCards = homeApplicationFlowData.applicationCards.filter(
+    const otherCards = flowData.applicationCards.filter(
       (card) => card.key !== activeCardKey,
     );
 
@@ -393,29 +569,25 @@ export default function HomeApplicationFlowSection({
   }
 
   return (
-    <section
-      ref={sectionRef}
-      className="home-flow-section"
-      id={homeApplicationFlowData.sectionId}
-    >
+    <section ref={sectionRef} className="home-flow-section" id={flowData.sectionId}>
       <div className="home-flow-sticky">
         <div className="home-flow-inner">
           {/* 左侧文案区 */}
           <div className="home-flow-copy">
             <h2 className="home-flow-title">
-              {getHomeFlowText(homeApplicationFlowData.titleLine1, locale)}
+              {getHomeFlowText(flowData.titleLine1, locale)}
 
               <br />
 
-              {getHomeFlowText(homeApplicationFlowData.titleLine2, locale)}
+              {getHomeFlowText(flowData.titleLine2, locale)}
             </h2>
 
             <p className="home-flow-desc">
-              {getHomeFlowText(homeApplicationFlowData.description, locale)}
+              {getHomeFlowText(flowData.description, locale)}
             </p>
 
             <div className="home-flow-capability-row">
-              {homeApplicationFlowData.capabilityTags.map((tag) => (
+              {flowData.capabilityTags.map((tag) => (
                 <span key={tag.key}>
                   {getHomeFlowText(tag.label, locale)}
                 </span>
@@ -424,17 +596,11 @@ export default function HomeApplicationFlowSection({
 
             <div className="home-flow-actions">
               <Link href={applicationsHref} className="home-flow-btn">
-                {getHomeFlowText(
-                  homeApplicationFlowData.actions.applicationsLabel,
-                  locale,
-                )}
+                {getHomeFlowText(flowData.actions.applicationsLabel, locale)}
               </Link>
 
               <Link href={productsHref} className="home-flow-btn">
-                {getHomeFlowText(
-                  homeApplicationFlowData.actions.productsLabel,
-                  locale,
-                )}
+                {getHomeFlowText(flowData.actions.productsLabel, locale)}
               </Link>
             </div>
           </div>
@@ -449,22 +615,31 @@ export default function HomeApplicationFlowSection({
               <div className="home-flow-tv-screen">
                 <div
                   className="home-flow-tv-image"
-                  style={createTvBackground(homeApplicationFlowData.tv.image)}
+                  style={createTvBackground(flowData.tv.image)}
                 />
 
                 <div className="home-flow-tv-grid" />
 
                 <div className="home-flow-tv-slogan">
-                  {homeApplicationFlowData.tv.sloganPrefix}{" "}
-                  <span>{homeApplicationFlowData.tv.sloganHighlight}</span>{" "}
-                  {homeApplicationFlowData.tv.sloganSuffix}
+                  {flowData.tv.sloganPrefix}{" "}
+                  <span>{flowData.tv.sloganHighlight}</span>{" "}
+                  {flowData.tv.sloganSuffix}
                 </div>
               </div>
             </div>
 
-            {homeApplicationFlowData.applicationCards.map((card) => {
+            {flowData.applicationCards.map((card) => {
               const isActive = activeCardKey === card.key;
               const mobileFillClass = getMobileFillClass(card.key);
+
+              const resolvedCardImage = resolveApplicationImagePath(
+                {
+                  key: card.key,
+                  className: card.className,
+                  image: card.image,
+                },
+                isUsingBackendData,
+              );
 
               return (
                 <article
@@ -484,7 +659,7 @@ export default function HomeApplicationFlowSection({
                 >
                   <div
                     className={`home-flow-industry-image image-${card.className}`}
-                    style={createCardImageBackground(card.image)}
+                    style={createCardImageBackground(resolvedCardImage)}
                     aria-label={getHomeFlowText(card.imageAlt, locale)}
                   />
 
@@ -504,11 +679,20 @@ export default function HomeApplicationFlowSection({
             })}
           </div>
 
-          {/* 手机端应用展示：电视展示屏 + 6 个按钮 */}
-          <div className="home-flow-mobile-stage" aria-label="手机端应用场景展示">
+          {/* 手机端应用展示：电视展示屏 + 应用按钮 */}
+          <div
+            className="home-flow-mobile-stage"
+            aria-label={getHomeFlowText(
+              flowData.ariaLabels.mobileApplications,
+              locale,
+            )}
+          >
             <section
               className="home-flow-mobile-tv-card"
-              aria-label="应用场景展示屏"
+              aria-label={getHomeFlowText(
+                flowData.ariaLabels.applicationScreen,
+                locale,
+              )}
             >
               <div className="home-flow-mobile-tv-screen">
                 <div
@@ -517,7 +701,15 @@ export default function HomeApplicationFlowSection({
                       ? "home-flow-mobile-tv-image-layer is-changing"
                       : "home-flow-mobile-tv-image-layer"
                   }
-                  style={createMobileTvBackground(activeMobileApplication.image)}
+                  style={createMobileTvBackground(
+                    resolveApplicationImagePath(
+                      {
+                        key: activeMobileApplication.key,
+                        image: activeMobileApplication.image,
+                      },
+                      isUsingBackendData,
+                    ),
+                  )}
                 />
 
                 <div
@@ -534,9 +726,9 @@ export default function HomeApplicationFlowSection({
                     </span>
 
                     <span className="home-flow-mobile-tv-mini-slogan">
-                      {homeApplicationFlowData.tv.sloganPrefix}{" "}
-                      <span>{homeApplicationFlowData.tv.sloganHighlight}</span>{" "}
-                      {homeApplicationFlowData.tv.sloganSuffix}
+                      {flowData.tv.sloganPrefix}{" "}
+                      <span>{flowData.tv.sloganHighlight}</span>{" "}
+                      {flowData.tv.sloganSuffix}
                     </span>
                   </div>
 
@@ -566,7 +758,10 @@ export default function HomeApplicationFlowSection({
 
             <section
               className="home-flow-mobile-app-tabs-wrap"
-              aria-label="应用领域切换"
+              aria-label={getHomeFlowText(
+                flowData.ariaLabels.applicationTabs,
+                locale,
+              )}
             >
               <div className="home-flow-mobile-app-tabs">
                 {mobileApplicationCards.map((item, index) => (
@@ -591,7 +786,7 @@ export default function HomeApplicationFlowSection({
         {/* 底部流程卡片 */}
         <div className="home-flow-process-gallery">
           <div className="home-flow-process-grid">
-            {homeApplicationFlowData.processCards.map((card) => (
+            {flowData.processCards.map((card) => (
               <div className="home-flow-process-card" key={card.key}>
                 <strong>{getHomeFlowText(card.title, locale)}</strong>
 

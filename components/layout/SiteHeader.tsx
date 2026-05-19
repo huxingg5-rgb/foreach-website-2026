@@ -1,5 +1,6 @@
 "use client"; // 声明这是客户端组件，因为这里需要使用 useState、useEffect、window 等浏览器能力
 
+import Image from "next/image"; // 引入 Next.js 图片组件，用于导航栏产品图片展示
 import Link from "next/link"; // 引入 Next.js 的 Link 组件，用于站内跳转
 import { usePathname } from "next/navigation"; // 引入 usePathname，用于获取当前页面路径
 import { useEffect, useMemo, useState, type MouseEvent } from "react"; // 引入 React 状态、生命周期、缓存和事件类型
@@ -27,8 +28,72 @@ import {
 type OpenPanel = "none" | "language" | "mobileNav";
 
 // 语言偏好 Cookie 名称
-// 说明：这里必须和 middleware.ts 里的 LOCALE_COOKIE_NAME 保持一致，否则从其他语言切回中文 "/" 时会被旧 Cookie 再次重定向
+// 说明：这里必须和 middleware.ts 里的 LOCALE_COOKIE_NAME 保持一致
 const LOCALE_COOKIE_NAME = "foreach_locale";
+
+/**
+ * 根据产品图片路径返回默认产品名称和说明
+ *
+ * 说明：
+ * 1. 这是兜底逻辑
+ * 2. 如果 navigation.ts 里的图片配置了 title / description，会优先使用 navigation.ts 的多语言内容
+ * 3. 如果某张图片没有配置 title / description，才会使用这里的默认内容
+ */
+function getProductImageDisplayMeta(src: string, locale: string) {
+  const useEnglish = locale !== "zh-CN";
+
+  if (src.includes("syringe-pump")) {
+    return {
+      title: useEnglish ? "Syringe Pump" : "注射泵",
+      description: useEnglish
+        ? "High-precision μL–mL dispensing"
+        : "μL–mL 级高精度定量分配",
+    };
+  }
+
+  if (src.includes("diaphragm-pump")) {
+    return {
+      title: useEnglish ? "Diaphragm Pump" : "隔膜泵",
+      description: useEnglish
+        ? "Continuous supply, washing, and waste handling"
+        : "连续供液、清洗与废液处理",
+    };
+  }
+
+  if (src.includes("pipetting-pump")) {
+    return {
+      title: useEnglish ? "Pipetting Pump" : "移液泵",
+      description: useEnglish
+        ? "Automated pipetting and dispensing"
+        : "自动化移液、加样与分液",
+    };
+  }
+
+  if (src.includes("piston-pump")) {
+    return {
+      title: useEnglish ? "Piston Pump" : "柱塞泵",
+      description: useEnglish
+        ? "Stable metering and repeatable transfer"
+        : "稳定计量与重复性液体输送",
+    };
+  }
+
+  if (src.includes("rotary-pump")) {
+    return {
+      title: useEnglish ? "Rotary Pump" : "旋转泵",
+      description: useEnglish
+        ? "Multi-channel switching and metering"
+        : "多通道液路切换与定量输送",
+    };
+  }
+
+  return {
+    title: useEnglish ? "Product" : "产品",
+    description: useEnglish
+      ? "Fluidic component for microfluidic systems"
+      : "用于微流体液路系统的核心部件",
+  };
+}
 
 /**
  * SiteHeader
@@ -37,9 +102,10 @@ const LOCALE_COOKIE_NAME = "foreach_locale";
  * 说明：
  * 1. PC 端显示 Logo、主导航、搜索框、语言栏
  * 2. PC 端产品中心支持 mega 大下拉菜单
- * 3. 手机端显示 Logo、语言栏、三横菜单
- * 4. 手机端导航支持二级菜单
- * 5. 导航内容从 data/navigation.ts 读取，方便后续后端 / CMS 替换
+ * 3. 左侧分类和右侧产品卡片通过 categoryKey 对应
+ * 4. 右侧产品图按 4 列排列，超过 4 个自动换到下一行
+ * 5. 产品名称和说明优先读取 navigation.ts 里的多语言 title / description
+ * 6. 当前每个产品点击统一跳到产品中心锚点，避免产品详情页未完成导致 404
  */
 export default function SiteHeader() {
   const pathname = usePathname(); // 获取当前页面路径，例如 /、/en、/es、/fr、/ko、/ru
@@ -48,7 +114,7 @@ export default function SiteHeader() {
 
   const headerText = headerI18n[currentLocale]; // 获取当前语言下的 Header 文案
 
-  const navigationItems = useMemo(() => getVisibleNavigationItems(), []); // 获取可显示导航，并缓存结果，避免每次渲染重复排序
+  const navigationItems = useMemo(() => getVisibleNavigationItems(), []); // 获取可显示导航，并缓存结果
 
   const [isScrolled, setIsScrolled] = useState(false); // 控制 Top 栏是否进入滚动后的白底状态
 
@@ -73,40 +139,79 @@ export default function SiteHeader() {
       item.megaDropdown
   ); // 找到当前 PC 端正在展开的 mega 菜单数据
 
+  /* ================================
+     当前 Mega 菜单分类与右侧卡片筛选
+     说明：
+     1. activeMegaCategories：当前下拉菜单左侧分类
+     2. currentMegaCategoryKey：当前真正选中的分类 key
+     3. activeMegaCategory：当前选中的分类对象
+     4. activeMegaCards：右侧根据 categoryKey 筛选后的卡片
+  ================================ */
+  const activeMegaCategories =
+    activeMegaItem?.megaDropdown?.categories
+      .filter((category) => category.enabled)
+      .sort((a, b) => a.order - b.order) ?? [];
+
+  const currentMegaCategoryKey = activeMegaCategories.some(
+    (category) => category.key === activeMegaCategoryKey
+  )
+    ? activeMegaCategoryKey
+    : activeMegaCategories[0]?.key ?? null;
+
+  const activeMegaCategory =
+    activeMegaCategories.find(
+      (category) => category.key === currentMegaCategoryKey
+    ) ??
+    activeMegaCategories[0] ??
+    null;
+
+  const hasCategoryBoundCards =
+    activeMegaItem?.megaDropdown?.cards.some((card) =>
+      Boolean(card.categoryKey)
+    ) ?? false;
+
+  const activeMegaCards =
+    activeMegaItem?.megaDropdown?.cards
+      .filter((card) => card.enabled)
+      .filter((card) => {
+        // 如果没有任何卡片配置 categoryKey，就兼容旧数据，全部显示
+        if (!hasCategoryBoundCards) {
+          return true;
+        }
+
+        // 如果配置了 categoryKey，就只显示当前左侧分类对应的卡片
+        return card.categoryKey === currentMegaCategoryKey;
+      })
+      .sort((a, b) => a.order - b.order) ?? [];
+
   /**
    * 判断当前是不是 PC 鼠标设备
-   *
-   * 说明：
-   * 1. PC 端一般支持 hover
-   * 2. 手机端一般不支持 hover
-   * 3. 同时判断屏幕宽度，避免平板误判
    */
   function isPcHoverDevice() {
     if (typeof window === "undefined") {
-      return false; // 服务端渲染时没有 window，直接返回 false
+      return false;
     }
 
     const canHover = window.matchMedia("(hover: hover) and (pointer: fine)")
-      .matches; // 判断设备是否支持鼠标 hover
+      .matches;
 
-    const isWideScreen = window.innerWidth > 1000; // 判断屏幕是否大于移动端断点
+    const isWideScreen = window.innerWidth > 1000;
 
-    return canHover && isWideScreen; // 同时满足 hover 和宽屏，才认为是 PC 端
+    return canHover && isWideScreen;
   }
 
   /**
    * 判断某个导航是否为当前选中状态
    *
-   * 说明：
-   * 1. 当前阶段先只让首页高亮
-   * 2. 产品中心、应用领域这些是首页锚点，暂时不做滚动高亮
+   * 当前阶段先只让首页高亮；
+   * 产品中心、应用领域等是首页锚点，暂时不做滚动高亮。
    */
   function isNavActive(item: NavigationItem) {
     if (item.key !== "home") {
-      return false; // 非首页暂时不做高亮
+      return false;
     }
 
-    return pathname === getLocaleHomePath(currentLocale); // 当前路径等于当前语言首页时，高亮首页
+    return pathname === getLocaleHomePath(currentLocale);
   }
 
   /**
@@ -114,13 +219,12 @@ export default function SiteHeader() {
    *
    * 作用：
    * 1. 让浏览器知道当前页面语言
-   * 2. 方便 CSS 通过 html[lang="en"] 做不同语言排版适配
-   * 3. 对 SEO / 可访问性也更清晰
+   * 2. 对 SEO / 可访问性更友好
    */
   useEffect(() => {
     document.documentElement.lang =
-      currentLocale === "zh-CN" ? "zh-CN" : currentLocale; // 设置 html lang
-  }, [currentLocale]); // 当前语言变化时重新执行
+      currentLocale === "zh-CN" ? "zh-CN" : currentLocale;
+  }, [currentLocale]);
 
   /**
    * 页面滚动监听
@@ -128,88 +232,74 @@ export default function SiteHeader() {
    * 作用：
    * 1. 页面顶部时 Top 栏透明
    * 2. 页面向下滚动后 Top 栏变白
-   * 3. 给 html 添加 page-scrolled 类名，增强兼容性
+   * 3. 给 html 添加 page-scrolled 类名
    */
   useEffect(() => {
     function handleScroll() {
       const scrollTop =
-        window.scrollY || // 大多数浏览器滚动距离
-        window.pageYOffset || // 老浏览器兼容写法
-        document.documentElement.scrollTop || // 部分浏览器滚动距离
-        document.body.scrollTop || // 兜底写法
-        0; // 如果都取不到，就认为没有滚动
+        window.scrollY ||
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop ||
+        0;
 
-      const nextScrolled = scrollTop > 1; // 滚动超过 1px 就认为已经滚动
+      const nextScrolled = scrollTop > 1;
 
-      setIsScrolled(nextScrolled); // 更新 Top 栏滚动状态
+      setIsScrolled(nextScrolled);
 
-      document.documentElement.classList.toggle("page-scrolled", nextScrolled); // 给 html 添加 / 移除 page-scrolled
+      document.documentElement.classList.toggle("page-scrolled", nextScrolled);
     }
 
-    handleScroll(); // 页面加载后先执行一次，避免刷新时状态不对
+    handleScroll();
 
-    window.addEventListener("scroll", handleScroll, { passive: true }); // 监听滚动
-
-    window.addEventListener("touchmove", handleScroll, { passive: true }); // 监听手机触摸滑动
-
-    document.addEventListener("scroll", handleScroll, { passive: true }); // 兼容部分滚动容器
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("touchmove", handleScroll, { passive: true });
+    document.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
-      window.removeEventListener("scroll", handleScroll); // 清理滚动监听
-
-      window.removeEventListener("touchmove", handleScroll); // 清理触摸监听
-
-      document.removeEventListener("scroll", handleScroll); // 清理 document 监听
-
-      document.documentElement.classList.remove("page-scrolled"); // 组件卸载时清理类名
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("touchmove", handleScroll);
+      document.removeEventListener("scroll", handleScroll);
+      document.documentElement.classList.remove("page-scrolled");
     };
-  }, []); // 只在组件挂载时执行一次
+  }, []);
 
   /**
    * PC 端鼠标进入导航项时执行
-   *
-   * 说明：
-   * 1. 只有 PC 鼠标设备才启用 hover 下拉
-   * 2. 只有 dropdownType 为 mega 的导航才打开大下拉
-   * 3. 每次重新进入 mega 下拉时，默认选中第一个可用分类
    */
   function handleDesktopNavMouseEnter(item: NavigationItem) {
     if (!isPcHoverDevice()) {
-      return; // 手机端不处理 PC hover 逻辑
+      return;
     }
 
     if (item.dropdownType === "mega" && item.megaDropdown) {
       const firstCategory = item.megaDropdown.categories
         .filter((category) => category.enabled)
-        .sort((a, b) => a.order - b.order)[0]; // 找到当前 mega 下拉里的第一个可用分类
+        .sort((a, b) => a.order - b.order)[0];
 
-      setDesktopMegaKey(item.key); // 打开当前导航对应的 mega 下拉
+      setDesktopMegaKey(item.key);
 
-      setActiveMegaCategoryKey(firstCategory?.key ?? null); // 默认选中第一个分类，避免固定残留在旧分类上
+      setActiveMegaCategoryKey(firstCategory?.key ?? null);
     } else {
-      setDesktopMegaKey(null); // 没有下拉的导航，关闭 mega 下拉
+      setDesktopMegaKey(null);
 
-      setActiveMegaCategoryKey(null); // 同时清空 PC mega 当前分类
+      setActiveMegaCategoryKey(null);
     }
   }
 
   /**
    * 鼠标离开整个 Header 时执行
-   *
-   * 说明：
-   * 1. 关闭 PC 端 mega 下拉
-   * 2. 关闭 PC 端语言下拉
    */
   function handleHeaderMouseLeave() {
     if (!isPcHoverDevice()) {
-      return; // 手机端不处理鼠标离开逻辑
+      return;
     }
 
-    setDesktopMegaKey(null); // 关闭 PC mega 下拉
+    setDesktopMegaKey(null);
 
-    setActiveMegaCategoryKey(null); // 鼠标离开 Header 后，清空 PC mega 当前分类
+    setActiveMegaCategoryKey(null);
 
-    setOpenPanel("none"); // 关闭语言菜单
+    setOpenPanel("none");
   }
 
   /**
@@ -217,11 +307,11 @@ export default function SiteHeader() {
    */
   function handleLanguageMouseEnter() {
     if (isPcHoverDevice()) {
-      setDesktopMegaKey(null); // 打开语言栏时，关闭 PC mega 下拉
+      setDesktopMegaKey(null);
 
-      setActiveMegaCategoryKey(null); // 打开语言栏时，清空 PC mega 当前分类
+      setActiveMegaCategoryKey(null);
 
-      setOpenPanel("language"); // 打开语言菜单
+      setOpenPanel("language");
     }
   }
 
@@ -230,85 +320,65 @@ export default function SiteHeader() {
    */
   function handleLanguageMouseLeave() {
     if (isPcHoverDevice()) {
-      setOpenPanel("none"); // 关闭语言菜单
+      setOpenPanel("none");
     }
   }
 
   /**
    * 点击语言按钮时执行
-   *
-   * 说明：
-   * 1. PC 端仍然支持 hover 展开语言菜单
-   * 2. PC 端也允许点击展开，避免 hover 判断失效导致不能切换语言
-   * 3. 手机端点击语言栏时，打开 / 关闭语言菜单
-   * 4. 打开语言菜单时，同步关闭 PC mega 下拉菜单，避免两个菜单重叠
    */
   function handleLanguageButtonClick(event: MouseEvent<HTMLButtonElement>) {
-    event.preventDefault(); // 阻止按钮默认行为
+    event.preventDefault();
 
-    setDesktopMegaKey(null); // 打开语言菜单时，先关闭 PC mega 下拉
+    setDesktopMegaKey(null);
 
-    setActiveMegaCategoryKey(null); // 打开语言菜单时，清空 PC mega 当前分类
+    setActiveMegaCategoryKey(null);
 
     setOpenPanel((currentPanel) =>
       currentPanel === "language" ? "none" : "language"
-    ); // 如果语言菜单已经打开就关闭，否则打开
+    );
   }
 
   /**
    * 点击手机端三横菜单按钮时执行
-   *
-   * 说明：
-   * 1. 手机导航和语言菜单互斥
-   * 2. 如果手机导航已打开，再点一次就关闭
    */
   function handleMobileMenuClick(event: MouseEvent<HTMLButtonElement>) {
-    event.preventDefault(); // 阻止按钮默认行为
+    event.preventDefault();
 
     setOpenPanel((currentPanel) =>
       currentPanel === "mobileNav" ? "none" : "mobileNav"
-    ); // 手机端点击菜单按钮：已打开就关闭，未打开就打开
+    );
   }
 
   /**
    * 关闭所有展开面板
-   *
-   * 说明：
-   * 1. 点击遮罩时执行
-   * 2. 点击语言项时执行
-   * 3. 点击手机导航项时执行
    */
   function closeAllPanels() {
-    setOpenPanel("none"); // 关闭语言菜单和手机导航菜单
+    setOpenPanel("none");
 
-    setDesktopMegaKey(null); // 关闭 PC mega 下拉
+    setDesktopMegaKey(null);
 
-    setActiveMegaCategoryKey(null); // 关闭所有面板时，同步清空 PC mega 当前分类
+    setActiveMegaCategoryKey(null);
   }
 
   /**
    * 点击语言选项时执行
-   *
-   * 说明：
-   * 1. 使用普通 a 标签 + window.location.href 强制跳转，避免 Next.js Link 在当前调试阶段出现不跳转
-   * 2. 记录用户手动选择的语言，避免后续浏览器语言自动判断反复把中文跳回英文
-   * 3. 中文首页路径是 /，英文首页路径是 /en，其他语言同理
    */
   function handleLanguageItemClick(
     event: MouseEvent<HTMLAnchorElement>,
     localeCode: LocaleCode,
     href: string
   ) {
-    event.preventDefault(); // 阻止默认跳转，改为下面的强制跳转，行为更稳定
+    event.preventDefault();
 
-    localStorage.setItem(LOCALE_COOKIE_NAME, localeCode); // 记录用户手动选择的语言，刷新后仍然保留
+    localStorage.setItem(LOCALE_COOKIE_NAME, localeCode);
 
-    // eslint-disable-next-line react-hooks/immutability -- 语言切换必须在跳转前写入 Cookie，middleware 才能识别中文 "/"
-    document.cookie = `${LOCALE_COOKIE_NAME}=${localeCode}; path=/; max-age=31536000; SameSite=Lax`; // 写入和 middleware 一致的 Cookie，保证中文 "/" 不会被旧语言重定向
+    // eslint-disable-next-line react-hooks/immutability -- 语言切换必须在跳转前写入 Cookie
+    document.cookie = `${LOCALE_COOKIE_NAME}=${localeCode}; path=/; max-age=31536000; SameSite=Lax`;
 
-    closeAllPanels(); // 点击语言后关闭所有展开菜单
+    closeAllPanels();
 
-    window.location.assign(href); // 强制跳转到目标语言首页，中文会跳到 /
+    window.location.assign(href);
   }
 
   return (
@@ -317,8 +387,8 @@ export default function SiteHeader() {
         openPanel !== "none" || desktopMegaKey ? "header-panel-open" : ""
       } ${isLanguageOpen ? "language-panel-open" : ""} ${
         isMobileMenuOpen ? "mobile-nav-open" : ""
-      }`} // 根据滚动、语言菜单、手机菜单、PC mega 下拉状态添加类名
-      onMouseLeave={handleHeaderMouseLeave} // PC 鼠标离开整个 Header 时关闭下拉
+      }`}
+      onMouseLeave={handleHeaderMouseLeave}
     >
       {/* Top 栏内部容器 */}
       <div className="site-header-inner">
@@ -348,12 +418,12 @@ export default function SiteHeader() {
         {/* PC 端主导航 */}
         <nav className="site-nav" aria-label={headerText.navAriaLabel}>
           {navigationItems.map((item) => {
-            const navLabel = getLocalizedText(item.label, currentLocale); // 当前语言导航名称
+            const navLabel = getLocalizedText(item.label, currentLocale);
 
-            const navHref = getLocalizedHref(item.href, currentLocale); // 当前语言导航链接
+            const navHref = getLocalizedHref(item.href, currentLocale);
 
             const hasMegaDropdown =
-              item.dropdownType === "mega" && Boolean(item.megaDropdown); // 是否有 PC mega 下拉
+              item.dropdownType === "mega" && Boolean(item.megaDropdown);
 
             return (
               <div
@@ -406,7 +476,7 @@ export default function SiteHeader() {
             </button>
           </form>
 
-          {/* 语言栏：PC hover 展开，手机点击展开 */}
+          {/* 语言栏 */}
           <div
             className={`language-switcher ${
               isLanguageOpen ? "language-switcher-open" : ""
@@ -414,7 +484,6 @@ export default function SiteHeader() {
             onMouseEnter={handleLanguageMouseEnter}
             onMouseLeave={handleLanguageMouseLeave}
           >
-            {/* 当前语言按钮 */}
             <button
               className="language-summary"
               type="button"
@@ -432,7 +501,6 @@ export default function SiteHeader() {
               </span>
             </button>
 
-            {/* 语言下拉菜单 */}
             <div className="language-details-menu">
               {languageItems.map((language) => (
                 <a
@@ -459,7 +527,6 @@ export default function SiteHeader() {
               isMobileMenuOpen ? "mobile-nav-switcher-open" : ""
             }`}
           >
-            {/* 手机端三横菜单按钮 */}
             <button
               className="mobile-menu-btn"
               type="button"
@@ -467,11 +534,6 @@ export default function SiteHeader() {
               aria-expanded={isMobileMenuOpen}
               onClick={handleMobileMenuClick}
             >
-              {/* SVG 三横菜单图标
-                  说明：
-                  1. CSS 会控制三条线变成 X
-                  2. 比直接使用文字 ☰ / × 更稳定
-              */}
               <svg
                 className="mobile-menu-icon"
                 viewBox="0 0 1024 1024"
@@ -509,21 +571,20 @@ export default function SiteHeader() {
               </svg>
             </button>
 
-            {/* 手机端导航下拉菜单 */}
             <nav
               className="mobile-nav"
               aria-label={headerText.mobileNavAriaLabel}
             >
               {navigationItems.map((item) => {
-                const navLabel = getLocalizedText(item.label, currentLocale); // 当前语言一级导航名称
+                const navLabel = getLocalizedText(item.label, currentLocale);
 
-                const navHref = getLocalizedHref(item.href, currentLocale); // 当前语言一级导航路径
+                const navHref = getLocalizedHref(item.href, currentLocale);
 
                 const mobileChildren = (item.mobileChildren || [])
                   .filter((child) => child.enabled)
-                  .sort((a, b) => a.order - b.order); // 获取手机端二级菜单
+                  .sort((a, b) => a.order - b.order);
 
-                const hasMobileChildren = mobileChildren.length > 0; // 是否有手机端二级菜单
+                const hasMobileChildren = mobileChildren.length > 0;
 
                 if (hasMobileChildren) {
                   return (
@@ -535,7 +596,6 @@ export default function SiteHeader() {
                       </summary>
 
                       <div className="mobile-nav-submenu">
-                        {/* 进入当前主栏目入口 */}
                         <Link
                           href={navHref}
                           className="mobile-nav-submenu-link mobile-nav-submenu-entry"
@@ -544,7 +604,6 @@ export default function SiteHeader() {
                           {navLabel}
                         </Link>
 
-                        {/* 当前主栏目下的二级入口 */}
                         {mobileChildren.map((child) => (
                           <Link
                             key={child.key}
@@ -578,94 +637,259 @@ export default function SiteHeader() {
         </div>
       </div>
 
-      {/* PC 端 mega 下拉面板
-          说明：
-          1. 数据来自 data/navigation.ts
-          2. 当前先用于“产品中心”
-          3. 后期后端 / CMS 只要返回同样结构，组件不用大改
-      */}
+      {/* PC 端 Mega 下拉面板 */}
       {activeMegaItem?.megaDropdown && (
         <div
           className="site-nav-mega site-nav-mega-open"
-          onMouseEnter={() => setDesktopMegaKey(activeMegaItem.key)}
+          onMouseEnter={() => {
+            if (activeMegaItem) {
+              setDesktopMegaKey(activeMegaItem.key);
+            }
+          }}
         >
           <div className="site-nav-mega-inner">
             {/* 左侧分类区 */}
             <div className="site-nav-mega-sidebar">
-              {activeMegaItem.megaDropdown.categories
-                .filter((category) => category.enabled)
-                .sort((a, b) => a.order - b.order)
-                .map((category, index) => (
-                  <div
-                    key={category.key}
-                    className={`site-nav-mega-category ${
-                      activeMegaCategoryKey === category.key ||
-                      (!activeMegaCategoryKey && index === 0)
-                        ? "site-nav-mega-category-active"
-                        : ""
-                    }`}
-                    onMouseEnter={() => setActiveMegaCategoryKey(category.key)}
-                  >
-                    <strong>
-                      {getLocalizedText(category.title, currentLocale)}
-                    </strong>
+              {activeMegaCategories.map((category) => (
+                <div
+                  key={category.key}
+                  className={`site-nav-mega-category ${
+                    currentMegaCategoryKey === category.key
+                      ? "site-nav-mega-category-active"
+                      : ""
+                  }`}
+                  onMouseEnter={() => setActiveMegaCategoryKey(category.key)}
+                >
+                  <strong>
+                    {getLocalizedText(category.title, currentLocale)}
+                  </strong>
 
-                    <span className="site-nav-mega-category-desc">
-                      {getLocalizedText(category.description, currentLocale)}
-                    </span>
+                  <span className="site-nav-mega-category-desc">
+                    {getLocalizedText(category.description, currentLocale)}
+                  </span>
 
-                    <span
-                      className="site-nav-mega-category-arrow"
-                      aria-hidden="true"
-                    />
-                  </div>
-                ))}
+                  <span
+                    className="site-nav-mega-category-arrow"
+                    aria-hidden="true"
+                  />
+                </div>
+              ))}
             </div>
 
             {/* 右侧内容区 */}
             <div className="site-nav-mega-main">
+              {/* 右侧顶部说明区：不显示“泵类 / 阀类”等大标题，只保留说明 */}
               <div className="site-nav-mega-heading">
-                <h3>
-                  {getLocalizedText(
-                    activeMegaItem.megaDropdown.heading,
-                    currentLocale
-                  )}
-                </h3>
-
                 <p>
-                  {getLocalizedText(
-                    activeMegaItem.megaDropdown.description,
-                    currentLocale
-                  )}
+                  {activeMegaCategory
+                    ? getLocalizedText(
+                        activeMegaCategory.description,
+                        currentLocale
+                      )
+                    : getLocalizedText(
+                        activeMegaItem.megaDropdown.description,
+                        currentLocale
+                      )}
                 </p>
               </div>
 
-              {/* 产品入口卡片区 */}
-              <div className="site-nav-mega-placeholder-grid">
-                {activeMegaItem.megaDropdown.cards
-                  .filter((card) => card.enabled)
-                  .sort((a, b) => a.order - b.order)
-                  .map((card) => (
-                    <Link
+              {/* 产品入口区域：4 个一行，超过 4 个自动换行 */}
+              <div
+                style={{
+                  width: "100%",
+                  minWidth: 0,
+                  background: "#ffffff",
+                }}
+              >
+                {activeMegaCards.map((card) => {
+                  const cardImages = card.images || [];
+
+                  const mainImage = card.image;
+
+                  // 产品列表：
+                  // 1. 如果有 images，就全部显示 images
+                  // 2. 不使用 slice(0, 4)，所以超过 4 个会自动换行
+                  // 3. 例如 5 个产品：第一行 4 个，第二行 1 个
+                  const displayProductImages = cardImages;
+
+                  return (
+                    <div
                       key={card.key}
-                      href={getLocalizedHref(card.href, currentLocale)}
-                      className="site-nav-mega-placeholder"
-                      onClick={closeAllPanels}
+                      style={{
+                        width: "100%",
+                        minWidth: 0,
+                        background: "#ffffff",
+                      }}
                     >
-                      <span
-                        className="site-nav-mega-card-icon"
-                        aria-hidden="true"
-                      />
+                      {displayProductImages.length > 0 ? (
+                        <div
+                          style={{
+                            display: "grid",
+                            gridTemplateColumns:
+                              "repeat(4, minmax(0, 1fr))",
+                            columnGap: "46px",
+                            rowGap: "34px",
+                            width: "100%",
+                            minWidth: 0,
+                            background: "#ffffff",
+                            alignItems: "start",
+                            paddingTop: "20px",
+                          }}
+                        >
+                          {displayProductImages.map((cardImage) => {
+                            // 兜底产品名称和说明
+                            const fallbackProductMeta =
+                              getProductImageDisplayMeta(
+                                cardImage.src,
+                                currentLocale
+                              );
 
-                      <span className="site-nav-mega-card-title">
-                        {getLocalizedText(card.title, currentLocale)}
-                      </span>
+                            // 最终显示的产品名称和说明
+                            // 优先使用 navigation.ts 里每张图片配置的 title / description
+                            // 如果没有配置，再使用上面的 fallbackProductMeta
+                            const productMeta = {
+                              title: cardImage.title
+                                ? getLocalizedText(
+                                    cardImage.title,
+                                    currentLocale
+                                  )
+                                : fallbackProductMeta.title,
 
-                      <span className="site-nav-mega-card-label">
-                        {getLocalizedText(card.description, currentLocale)}
-                      </span>
-                    </Link>
-                  ))}
+                              description: cardImage.description
+                                ? getLocalizedText(
+                                    cardImage.description,
+                                    currentLocale
+                                  )
+                                : fallbackProductMeta.description,
+                            };
+
+                            return (
+                              <Link
+                                key={cardImage.src}
+                                href={getLocalizedHref(
+                                  card.href,
+                                  currentLocale
+                                )}
+                                onClick={closeAllPanels}
+                                className="site-nav-product-clean-link"
+                                style={{
+                                  display: "block",
+                                  minWidth: 0,
+                                  textAlign: "center",
+                                  textDecoration: "none",
+                                  color: "inherit",
+                                  background: "#ffffff",
+                                  padding: 0,
+                                  border: "none",
+                                  borderRadius: 0,
+                                }}
+                              >
+                                {/* 产品图片 */}
+                                <div
+                                  style={{
+                                    width: "100%",
+                                    height: "112px",
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    marginBottom: "12px",
+                                    background: "#ffffff",
+                                  }}
+                                >
+                                  <Image
+                                    src={cardImage.src}
+                                    alt={getLocalizedText(
+                                      cardImage.alt,
+                                      currentLocale
+                                    )}
+                                    width={cardImage.width ?? 600}
+                                    height={cardImage.height ?? 380}
+                                    style={{
+                                      width: "100%",
+                                      height: "100%",
+                                      objectFit: "contain",
+                                      display: "block",
+                                    }}
+                                  />
+                                </div>
+
+                                {/* 产品名称 */}
+                                <strong
+                                  style={{
+                                    display: "block",
+                                    fontSize: "15px",
+                                    lineHeight: 1.35,
+                                    color: "#173368",
+                                    marginBottom: "6px",
+                                    fontWeight: 700,
+                                  }}
+                                >
+                                  {productMeta.title}
+                                </strong>
+
+                                {/* 产品说明 */}
+                                <span
+                                  style={{
+                                    display: "block",
+                                    fontSize: "12px",
+                                    lineHeight: 1.45,
+                                    color: "rgba(23, 51, 104, 0.62)",
+                                  }}
+                                >
+                                  {productMeta.description}
+                                </span>
+                              </Link>
+                            );
+                          })}
+                        </div>
+                      ) : mainImage ? (
+                        <div
+                          style={{
+                            width: "100%",
+                            height: "180px",
+                            marginBottom: "18px",
+                            overflow: "hidden",
+                            background: "#ffffff",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <Image
+                            src={mainImage.src}
+                            alt={getLocalizedText(
+                              mainImage.alt,
+                              currentLocale
+                            )}
+                            width={mainImage.width ?? 600}
+                            height={mainImage.height ?? 380}
+                            style={{
+                              width: "100%",
+                              height: "100%",
+                              objectFit: "contain",
+                              display: "block",
+                            }}
+                          />
+                        </div>
+                      ) : (
+                        <Link
+                          href={getLocalizedHref(card.href, currentLocale)}
+                          onClick={closeAllPanels}
+                          style={{
+                            display: "inline-block",
+                            textDecoration: "none",
+                            color: "inherit",
+                          }}
+                        >
+                          <span
+                            className="site-nav-mega-card-icon"
+                            aria-hidden="true"
+                          />
+                        </Link>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
 
               {/* 底部入口区 */}
@@ -695,12 +919,7 @@ export default function SiteHeader() {
         </div>
       )}
 
-      {/* 手机端遮罩
-          说明：
-          1. 手机端打开语言菜单或导航菜单时显示
-          2. 点击页面空白区域关闭所有展开面板
-          3. PC 端 CSS 默认隐藏，不影响 PC 使用
-      */}
+      {/* 手机端遮罩 */}
       {openPanel !== "none" && (
         <button
           className="mobile-nav-backdrop"
