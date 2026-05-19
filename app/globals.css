@@ -7767,7 +7767,7 @@ html[lang="ru"] .home-hero-btn:hover {
 }
 
 .site-nav-product-desc {
-  display: block;
+  display: block; 
   color: rgba(23, 51, 104, 0.62);
   font-size: 12px;
   line-height: 1.45;
@@ -7795,4 +7795,1237 @@ html[lang="ru"] .home-hero-btn:hover {
   display: inline-block;
   color: inherit;
   text-decoration: none;
+}
+
+/* =========================================================
+   导航栏视觉整理覆盖层 v002
+
+   作用：
+   1. 只优化 1440 档屏幕，不影响 1920 和 2K
+   2. 只修复手机端语言按钮和菜单按钮
+   3. 不使用 1025px 以上全局压缩，避免大屏也被缩小
+   4. 不改 SiteHeader.tsx
+   5. 不改 navigation.ts
+========================================================= */
+
+/* ================================
+   01. 1440 档导航栏优化
+
+   适用范围：
+   只在 1281px ~ 1440px 生效
+
+   不影响：
+   1. 1920px
+   2. 2K / 2560px
+   3. 更大屏幕
+================================ */
+
+@media (min-width: 1281px) and (max-width: 1440px) {
+  .site-header-inner {
+    width: min(1180px, calc(100% - 56px)) !important; /* 1440 下导航内容宽度收紧 */
+    height: 66px !important; /* 1440 下导航栏高度降低 */
+  }
+
+  .site-logo {
+    width: 150px !important; /* 1440 下 Logo 宽度缩小 */
+    height: 34px !important; /* 1440 下 Logo 高度缩小 */
+  }
+
+  .site-nav {
+    gap: 24px !important; /* 1440 下导航文字间距缩小 */
+  }
+
+  .site-nav-link {
+    font-size: 13px !important; /* 1440 下导航文字缩小 */
+    letter-spacing: 0.02em !important; /* 1440 下字距稍微收紧 */
+  }
+
+  .site-header-actions {
+    gap: 10px !important; /* 1440 下右侧工具区间距缩小 */
+  }
+
+  .site-search-form {
+    width: 180px !important; /* 1440 下搜索框宽度缩小 */
+    flex-basis: 180px !important; /* 1440 下固定搜索框占位宽度 */
+    height: 38px !important; /* 1440 下搜索框高度缩小 */
+  }
+
+  .site-search-input {
+    padding: 0 9px !important; /* 1440 下搜索框输入区内边距缩小 */
+    font-size: 12px !important; /* 1440 下搜索框文字缩小 */
+  }
+
+  .site-search-submit {
+    width: 42px !important; /* 1440 下搜索按钮宽度缩小 */
+    height: 30px !important; /* 1440 下搜索按钮高度缩小 */
+  }
+
+  .language-summary {
+    min-width: 112px !important; /* 1440 下语言按钮宽度缩小 */
+    height: 38px !important; /* 1440 下语言按钮高度缩小 */
+    min-height: 38px !important; /* 覆盖前面可能写过的 min-height */
+    padding: 0 12px !important; /* 1440 下语言按钮内边距缩小 */
+    font-size: 12px !important; /* 1440 下 Language 文字缩小 */
+  }
+
+  .language-summary-label {
+    max-width: 88px !important; /* 1440 下限制 Language 文字区域 */
+    line-height: 1.2 !important; /* 防止 g 被裁剪 */
+  }
+
+  .site-nav-mega {
+    width: min(1180px, calc(100% - 56px)) !important; /* 1440 下 Mega 下拉宽度与导航对齐 */
+    max-width: 1180px !important; /* 1440 下限制最大宽度 */
+  }
+
+  .site-nav-mega-inner {
+    grid-template-columns: 280px minmax(0, 1fr) !important; /* 1440 下左侧分类栏缩窄 */
+    min-height: 480px !important; /* 1440 下 Mega 下拉高度降低 */
+    border-radius: 0 0 16px 16px !important; /* 1440 下底部圆角稍微缩小 */
+  }
+
+  .site-nav-mega-sidebar {
+    padding: 14px 0 !important; /* 1440 下左侧分类上下留白缩小 */
+  }
+
+  .site-nav-mega-category {
+    min-height: 68px !important; /* 1440 下左侧分类高度缩小 */
+    padding: 12px 22px !important; /* 1440 下左侧分类内边距缩小 */
+    row-gap: 4px !important; /* 1440 下分类标题和说明间距缩小 */
+  }
+
+  .site-nav-mega-category strong {
+    font-size: 16px !important; /* 1440 下分类标题缩小 */
+  }
+
+  .site-nav-mega-category-desc {
+    font-size: 11px !important; /* 1440 下分类说明缩小 */
+    line-height: 1.35 !important; /* 1440 下分类说明行高收紧 */
+  }
+
+  .site-nav-mega-category-arrow {
+    border-top-width: 6px !important; /* 1440 下箭头上边缩小 */
+    border-bottom-width: 6px !important; /* 1440 下箭头下边缩小 */
+    border-left-width: 8px !important; /* 1440 下箭头主体缩小 */
+  }
+
+  .site-nav-mega-main {
+    gap: 18px !important; /* 1440 下右侧内容区间距缩小 */
+    padding: 28px 34px 26px !important; /* 1440 下右侧内容区内边距缩小 */
+  }
+
+  .site-nav-mega-heading {
+    gap: 18px !important; /* 1440 下顶部说明区间距缩小 */
+    padding-bottom: 16px !important; /* 1440 下顶部说明区底部留白缩小 */
+  }
+
+  .site-nav-mega-heading p {
+    max-width: 460px !important; /* 1440 下说明文字行宽缩小 */
+    font-size: 11px !important; /* 1440 下说明文字缩小 */
+    line-height: 1.45 !important; /* 1440 下说明文字行高 */
+  }
+
+  .site-nav-mega-product-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important; /* 1440 下仍保持 4 列 */
+    column-gap: 30px !important; /* 1440 下产品列间距缩小 */
+    row-gap: 24px !important; /* 1440 下产品行间距缩小 */
+    padding-top: 10px !important; /* 1440 下产品区顶部留白缩小 */
+  }
+
+  .site-nav-product-image-box {
+    height: 88px !important; /* 1440 下产品图片高度缩小 */
+    margin-bottom: 9px !important; /* 1440 下图片和标题间距缩小 */
+  }
+
+  .site-nav-product-title {
+    margin-bottom: 4px !important; /* 1440 下产品标题底部间距缩小 */
+    font-size: 13px !important; /* 1440 下产品标题缩小 */
+    line-height: 1.3 !important; /* 1440 下产品标题行高 */
+  }
+
+  .site-nav-product-desc {
+    font-size: 10px !important; /* 1440 下产品说明缩小 */
+    line-height: 1.4 !important; /* 1440 下产品说明行高 */
+  }
+
+  .site-nav-mega-single-image-box {
+    height: 150px !important; /* 1440 下单图模式图片区域缩小 */
+    margin-bottom: 14px !important; /* 1440 下单图模式间距缩小 */
+  }
+
+  .site-nav-mega-footer {
+    padding-top: 12px !important; /* 1440 下 Mega 底部留白缩小 */
+    font-size: 12px !important; /* 1440 下 Mega 底部文字缩小 */
+  }
+}
+
+/* ================================
+   02. 手机端语言按钮与菜单按钮修复
+
+   适用范围：
+   只在 768px 以下生效
+
+   不影响：
+   1. 1440
+   2. 1920
+   3. 2K
+================================ */
+
+@media (max-width: 768px) {
+  .site-header-inner {
+    width: calc(100% - 28px) !important; /* 手机端导航左右留白 */
+    height: 60px !important; /* 手机端导航栏高度 */
+  }
+
+  .site-logo {
+    width: 138px !important; /* 手机端 Logo 宽度 */
+    height: 31px !important; /* 手机端 Logo 高度 */
+  }
+
+  .site-header-actions {
+    gap: 8px !important; /* 手机端语言按钮和菜单按钮间距 */
+  }
+
+  .language-switcher {
+    flex: 0 0 auto !important; /* 防止语言按钮被压缩变形 */
+  }
+
+  .language-summary {
+    min-width: 104px !important; /* 手机端语言按钮最小宽度 */
+    max-width: 112px !important; /* 手机端语言按钮最大宽度 */
+    width: auto !important; /* 手机端语言按钮自适应宽度 */
+
+    height: 36px !important; /* 手机端语言按钮高度 */
+    min-height: 36px !important; /* 覆盖之前可能写过的 52px */
+
+    padding: 0 10px !important; /* 手机端语言按钮左右内边距 */
+    gap: 4px !important; /* Language 和箭头间距 */
+
+    border-radius: 8px !important; /* 手机端语言按钮圆角 */
+
+    font-size: 12px !important; /* 手机端 Language 字号 */
+    line-height: 1 !important; /* 防止文字撑高按钮 */
+  }
+
+  .language-summary-label {
+    max-width: 76px !important; /* 手机端限制 Language 文字宽度 */
+    overflow: hidden !important; /* 超出隐藏 */
+    line-height: 1.2 !important; /* 防止 g 被裁剪 */
+    text-overflow: ellipsis !important; /* 超出显示省略号 */
+    white-space: nowrap !important; /* 禁止换行 */
+    transform: translateY(0) !important; /* 取消旧的文字位移 */
+  }
+
+  .language-summary-arrow {
+    font-size: 10px !important; /* 手机端箭头缩小 */
+    line-height: 1 !important; /* 防止箭头撑高 */
+  }
+
+  .language-switcher::after {
+    width: 112px !important; /* 手机端语言按钮 hover 连接区宽度 */
+    height: 10px !important; /* 手机端语言按钮 hover 连接区高度 */
+  }
+
+  .language-details-menu {
+    top: calc(100% + 10px) !important; /* 手机端语言下拉距离按钮 10px */
+    min-width: 126px !important; /* 手机端语言下拉宽度 */
+    padding: 7px !important; /* 手机端语言下拉内边距 */
+    border-radius: 10px !important; /* 手机端语言下拉圆角 */
+  }
+
+  .language-details-item {
+    padding: 10px 10px !important; /* 手机端语言选项内边距 */
+    font-size: 13px !important; /* 手机端语言选项字号 */
+  }
+
+  .mobile-menu-btn {
+    width: 36px !important; /* 手机端菜单按钮宽度 */
+    height: 36px !important; /* 手机端菜单按钮高度 */
+  }
+
+  .mobile-menu-icon {
+    width: 20px !important; /* 手机端三横图标宽度 */
+    height: 20px !important; /* 手机端三横图标高度 */
+  }
+
+  .mobile-nav {
+    top: calc(100% + 10px) !important; /* 手机菜单距离导航栏 10px */
+    right: 0 !important; /* 手机菜单靠右 */
+    width: min(320px, calc(100vw - 28px)) !important; /* 手机菜单宽度 */
+    padding: 12px !important; /* 手机菜单内边距 */
+    border-radius: 14px !important; /* 手机菜单圆角 */
+  }
+
+  .mobile-nav-link,
+  .mobile-nav-summary {
+    min-height: 42px !important; /* 手机菜单一级项高度 */
+    padding: 0 12px !important; /* 手机菜单一级项左右内边距 */
+    font-size: 14px !important; /* 手机菜单一级项字号 */
+  }
+
+  .mobile-nav-submenu {
+    padding: 6px 0 8px !important; /* 手机菜单二级区域内边距 */
+  }
+
+  .mobile-nav-submenu-link {
+    min-height: 36px !important; /* 手机菜单二级项高度 */
+    padding: 0 12px 0 24px !important; /* 手机菜单二级项缩进 */
+    font-size: 13px !important; /* 手机菜单二级项字号 */
+  }
+} 
+
+/* =========================================================
+   1440 首页整体视觉密度优化层 v003
+
+   作用：
+   1. 只在 1281px ~ 1440px 生效
+   2. 不影响 1920、2K、2560 及更大屏幕
+   3. 不使用 body zoom，避免滚动和点击区域异常
+   4. 同时缩小文字、按钮、卡片、图片、间距和模块高度
+   5. 让 1440 下接近浏览器缩放后更舒服的视觉密度
+========================================================= */
+
+@media (min-width: 1281px) and (max-width: 1440px) {
+  /* ================================
+     01. 全局内容宽度
+  ================================ */
+
+  .site-header-inner,
+  .home-hero-inner,
+  .home-flow-inner,
+  .home-flow-process-gallery,
+  .home-company-about-shell,
+  .home-news-inner,
+  .screen-inner,
+  .site-footer__inner,
+  .site-footer__bottom-inner {
+    width: min(1180px, calc(100% - 56px)) !important;
+  }
+
+  /* ================================
+     02. 顶部导航栏
+  ================================ */
+
+  .site-header-inner {
+    height: 66px !important;
+  }
+
+  .site-logo {
+    width: 150px !important;
+    height: 34px !important;
+  }
+
+  .site-nav {
+    gap: 24px !important;
+  }
+
+  .site-nav-link {
+    font-size: 13px !important;
+    letter-spacing: 0.02em !important;
+  }
+
+  .site-header-actions {
+    gap: 10px !important;
+  }
+
+  .site-search-form {
+    width: 180px !important;
+    flex-basis: 180px !important;
+    height: 38px !important;
+  }
+
+  .site-search-input {
+    padding: 0 9px !important;
+    font-size: 12px !important;
+  }
+
+  .site-search-submit {
+    width: 42px !important;
+    height: 30px !important;
+  }
+
+  .language-summary {
+    min-width: 112px !important;
+    height: 38px !important;
+    min-height: 38px !important;
+    padding: 0 12px !important;
+    font-size: 12px !important;
+  }
+
+  .language-summary-label {
+    max-width: 88px !important;
+    line-height: 1.2 !important;
+  }
+
+  /* ================================
+     03. PC Mega 下拉菜单
+  ================================ */
+
+  .site-nav-mega {
+    width: min(1180px, calc(100% - 56px)) !important;
+    max-width: 1180px !important;
+  }
+
+  .site-nav-mega-inner {
+    grid-template-columns: 280px minmax(0, 1fr) !important;
+    min-height: 480px !important;
+    border-radius: 0 0 16px 16px !important;
+  }
+
+  .site-nav-mega-sidebar {
+    padding: 14px 0 !important;
+  }
+
+  .site-nav-mega-category {
+    min-height: 68px !important;
+    padding: 12px 22px !important;
+    row-gap: 4px !important;
+  }
+
+  .site-nav-mega-category strong {
+    font-size: 16px !important;
+  }
+
+  .site-nav-mega-category-desc {
+    font-size: 11px !important;
+    line-height: 1.35 !important;
+  }
+
+  .site-nav-mega-main {
+    gap: 18px !important;
+    padding: 28px 34px 26px !important;
+  }
+
+  .site-nav-mega-heading {
+    gap: 18px !important;
+    padding-bottom: 16px !important;
+  }
+
+  .site-nav-mega-heading p {
+    max-width: 460px !important;
+    font-size: 11px !important;
+    line-height: 1.45 !important;
+  }
+
+  .site-nav-mega-product-grid {
+    column-gap: 30px !important;
+    row-gap: 24px !important;
+    padding-top: 10px !important;
+  }
+
+  .site-nav-product-image-box {
+    height: 88px !important;
+    margin-bottom: 9px !important;
+  }
+
+  .site-nav-product-title {
+    margin-bottom: 4px !important;
+    font-size: 13px !important;
+    line-height: 1.3 !important;
+  }
+
+  .site-nav-product-desc {
+    font-size: 10px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* ================================
+     04. 首页 Hero 首屏
+  ================================ */
+
+  .home-hero {
+    padding-top: 72px !important;
+  }
+
+  .home-hero-inner {
+    padding-top: 76px !important;
+  }
+
+  .home-hero-title {
+    max-width: 760px !important;
+    font-size: clamp(34px, 4vw, 52px) !important;
+    line-height: 1.08 !important;
+    transform: translate(0, 22px) !important;
+  }
+
+  .home-hero-subtitle {
+    max-width: 760px !important;
+    font-size: clamp(14px, 1.55vw, 18px) !important;
+    line-height: 1.45 !important;
+    transform: translate(0, 50px) !important;
+  }
+
+  .home-hero-actions {
+    gap: 12px !important;
+    margin-top: 84px !important;
+  }
+
+  .home-hero-btn {
+    min-width: 120px !important;
+    height: 40px !important;
+    padding: 0 20px !important;
+    font-size: 13px !important;
+  }
+
+  /* ================================
+     05. 第二屏：应用领域 × 核心部件
+     重点：文字、卡片、图片、电视框全部缩小
+  ================================ */
+
+  .home-flow-section {
+    height: 185vh !important;
+    min-height: 185vh !important;
+  }
+
+  .home-flow-sticky {
+    top: 66px !important;
+    min-height: calc(100vh - 66px) !important;
+    padding: 16px 0 26px !important;
+  }
+
+  .home-flow-inner {
+    height: 540px !important;
+    grid-template-columns: 0.82fr 1.18fr !important;
+    gap: 32px !important;
+  }
+
+  .home-flow-copy {
+    max-width: 500px !important;
+    transform: translateY(-18px) !important;
+  }
+
+  .home-flow-title {
+    font-size: clamp(36px, 3.8vw, 52px) !important;
+    line-height: 1.04 !important;
+  }
+
+  .home-flow-desc {
+    max-width: 450px !important;
+    margin-top: 24px !important;
+    font-size: 13px !important;
+    line-height: 1.68 !important;
+  }
+
+  .home-flow-capability-row {
+    gap: 9px !important;
+    margin-top: 26px !important;
+    max-width: 450px !important;
+  }
+
+  .home-flow-capability-row span {
+    padding: 5px 9px !important;
+    font-size: 11px !important;
+  }
+
+  .home-flow-actions {
+    gap: 12px !important;
+    margin-top: 26px !important;
+  }
+
+  .home-flow-btn {
+    height: 40px !important;
+    padding: 0 20px !important;
+    font-size: 13px !important;
+  }
+
+  .home-flow-tv-stage {
+    width: min(540px, 100%) !important;
+    height: 450px !important;
+    min-height: 450px !important;
+  }
+
+  .home-flow-tv-frame {
+    width: min(540px, 100%) !important;
+    height: 380px !important;
+    border-radius: 26px !important;
+    padding: 11px !important;
+  }
+
+  .home-flow-tv-screen {
+    border-radius: 20px !important;
+  }
+
+  .home-flow-tv-slogan {
+    font-size: clamp(26px, 2.8vw, 40px) !important;
+  }
+
+  .home-flow-industry-card {
+    padding: 11px !important;
+    border-radius: 15px !important;
+  }
+
+  .home-flow-industry-card.medical {
+    left: -4px !important;
+    top: -18px !important;
+    width: 235px !important;
+  }
+
+  .home-flow-industry-card.synbio {
+    right: -6px !important;
+    top: -18px !important;
+    width: 232px !important;
+  }
+
+  .home-flow-industry-card.lab {
+    left: 1% !important;
+    bottom: -14px !important;
+    width: 230px !important;
+  }
+
+  .home-flow-industry-card.ivd {
+    right: -8px !important;
+    bottom: -14px !important;
+    width: 226px !important;
+  }
+
+  .home-flow-industry-card.analysis {
+    width: 248px !important;
+    padding: 13px !important;
+  }
+
+  .home-flow-industry-image {
+    height: 80px !important;
+    border-radius: 11px !important;
+  }
+
+  .home-flow-industry-card.medical .home-flow-industry-image,
+  .home-flow-industry-card.synbio .home-flow-industry-image {
+    height: 108px !important;
+  }
+
+  .home-flow-industry-card.lab .home-flow-industry-image,
+  .home-flow-industry-card.ivd .home-flow-industry-image {
+    height: 96px !important;
+  }
+
+  .home-flow-industry-card h3 {
+    margin-top: 9px !important;
+    font-size: 13px !important;
+    line-height: 1.3 !important;
+  }
+
+  .home-flow-industry-card.analysis h3 {
+    font-size: 14px !important;
+  }
+
+  .home-flow-industry-card p {
+    margin-top: 5px !important;
+    font-size: 10px !important;
+    line-height: 1.45 !important;
+  }
+
+  .home-flow-tags {
+    gap: 5px !important;
+    margin-top: 7px !important;
+  }
+
+  .home-flow-tags span {
+    padding: 3px 6px !important;
+    font-size: 9px !important;
+  }
+
+  .home-flow-process-gallery {
+    margin-top: 10px !important;
+  }
+
+  .home-flow-process-grid {
+    gap: 12px !important;
+  }
+
+  .home-flow-process-card {
+    min-height: 96px !important;
+    padding: 14px 15px !important;
+    border-radius: 15px !important;
+  }
+
+  .home-flow-process-card strong {
+    margin-bottom: 7px !important;
+    font-size: 15px !important;
+  }
+
+  .home-flow-process-card span {
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+  }
+
+  /* ================================
+     06. 第三屏：公司介绍
+  ================================ */
+
+  .home-company-about-shell {
+    min-height: 100vh !important;
+    padding-top: 52px !important;
+    padding-bottom: 34px !important;
+  }
+
+  .home-company-about-main {
+    grid-template-columns: minmax(420px, 0.95fr) minmax(460px, 1.05fr) !important;
+    gap: 44px !important;
+    padding-bottom: 78px !important;
+  }
+
+  .home-company-about-title {
+    margin-bottom: 16px !important;
+    font-size: clamp(30px, 2.8vw, 46px) !important;
+    line-height: 1.12 !important;
+  }
+
+  .home-company-about-title span {
+    margin-top: 6px !important;
+    font-size: 0.38em !important;
+  }
+
+  .home-company-video-wrap {
+    margin-top: 28px !important;
+  }
+
+  .home-company-video-play {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .home-company-intro-title {
+    font-size: clamp(23px, 2vw, 31px) !important;
+  }
+
+  .home-company-intro-desc {
+    margin-top: 13px !important;
+    max-height: 150px !important;
+    font-size: 13px !important;
+    line-height: 1.68 !important;
+    -webkit-line-clamp: 6 !important;
+    line-clamp: 6 !important;
+  }
+
+  .home-company-metrics-grid {
+    gap: 16px !important;
+    margin-top: 46px !important;
+  }
+
+  .home-company-metric-card strong {
+    font-size: clamp(28px, 2.8vw, 38px) !important;
+  }
+
+  .home-company-metric-card > span {
+    margin-top: 5px !important;
+    font-size: 12px !important;
+  }
+
+  .home-company-primary-btn {
+    min-width: 118px !important;
+    height: 40px !important;
+    padding: 0 22px !important;
+    font-size: 13px !important;
+  }
+
+  .home-honor-card {
+    width: 165px !important;
+  }
+
+  .home-honor-card strong {
+    font-size: 12px !important;
+  }
+
+  /* ================================
+     07. 第四屏：企业优势
+  ================================ */
+
+  .home-advantages-head {
+    top: 68px !important;
+    width: min(740px, calc(100% - 48px)) !important;
+  }
+
+  .home-advantages-title {
+    font-size: clamp(27px, 2.7vw, 38px) !important;
+  }
+
+  .home-advantages-desc {
+    max-width: 600px !important;
+    margin-top: 10px !important;
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+  }
+
+  .home-panel-content {
+    padding: 0 22px 150px !important;
+  }
+
+  .home-advantage-panel .home-panel-index {
+    margin-bottom: 14px !important;
+    font-size: 14px !important;
+  }
+
+  .home-advantage-panel .home-panel-title {
+    font-size: clamp(23px, 2vw, 29px) !important;
+  }
+
+  .home-advantage-panel:hover .home-panel-title {
+    font-size: clamp(32px, 2.8vw, 44px) !important;
+  }
+
+  .home-advantage-panel .home-panel-brief {
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+  }
+
+  .home-advantage-panel .home-panel-detail {
+    margin-top: 11px !important;
+    font-size: 12px !important;
+    line-height: 1.55 !important;
+  }
+
+  /* ================================
+     08. 第五屏：新闻模块
+  ================================ */
+
+  .home-news-screen {
+    min-height: 100vh !important;
+    padding: 44px 0 !important;
+  }
+
+  .home-news-header {
+    gap: 22px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .home-news-main-title {
+    font-size: clamp(30px, 2.8vw, 40px) !important;
+  }
+
+  .home-news-tab-btn {
+    min-width: 86px !important;
+    height: 34px !important;
+    padding: 0 14px !important;
+    font-size: 12px !important;
+  }
+
+  .home-news-layout {
+    grid-template-columns: 1.05fr 1fr 1.05fr !important;
+    gap: 20px !important;
+  }
+
+  .home-news-feature-card,
+  .home-news-highlight-card,
+  .home-news-right {
+    height: 580px !important;
+  }
+
+  .home-news-feature-image {
+    height: 280px !important;
+  }
+
+  .home-news-feature-body {
+    height: 300px !important;
+    padding: 20px 22px 22px !important;
+  }
+
+  .home-news-feature-title {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  .home-news-feature-desc {
+    margin-top: 9px !important;
+    font-size: 12px !important;
+    line-height: 1.58 !important;
+  }
+
+  .home-news-highlight-card {
+    padding: 28px 26px 26px !important;
+  }
+
+  .home-news-highlight-title {
+    font-size: 17px !important;
+    line-height: 1.55 !important;
+  }
+
+  .home-news-highlight-desc {
+    margin-top: 14px !important;
+    font-size: 12px !important;
+    line-height: 1.68 !important;
+  }
+
+  .home-news-list-item {
+    grid-template-columns: 112px minmax(0, 1fr) !important;
+    gap: 13px !important;
+    height: 118px !important;
+    padding: 10px 0 !important;
+  }
+
+  .home-news-list-thumb {
+    min-height: 92px !important;
+  }
+
+  .home-news-list-title {
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+  }
+
+  .home-news-list-desc {
+    margin-top: 5px !important;
+    font-size: 11px !important;
+    line-height: 1.42 !important;
+  }
+
+  /* ================================
+     09. 第六屏：在线询盘
+  ================================ */
+
+  .screen-section {
+    min-height: 100vh !important;
+    padding: 44px 24px !important;
+  }
+
+  .contact-layout {
+    gap: 26px !important;
+  }
+
+  .demand-panel {
+    padding: 30px 30px 26px !important;
+  }
+
+  .demand-title {
+    font-size: clamp(27px, 2.8vw, 38px) !important;
+  }
+
+  .demand-intro {
+    margin-top: 22px !important;
+    font-size: 14px !important;
+    line-height: 1.68 !important;
+  }
+
+  .demand-list {
+    margin-top: 32px !important;
+  }
+
+  .demand-item {
+    grid-template-columns: 54px minmax(0, 1fr) !important;
+    gap: 20px !important;
+    padding: 16px 0 !important;
+  }
+
+  .demand-index {
+    font-size: 17px !important;
+  }
+
+  .demand-item-title {
+    margin-bottom: 5px !important;
+    font-size: 15px !important;
+  }
+
+  .demand-item-text {
+    font-size: 13px !important;
+    line-height: 1.58 !important;
+  }
+
+  .inquiry-panel-head {
+    padding: 20px 24px !important;
+  }
+
+  .inquiry-title {
+    font-size: 19px !important;
+  }
+
+  .inquiry-desc {
+    margin-top: 6px !important;
+    font-size: 12px !important;
+  }
+
+  .inquiry-form {
+    gap: 11px !important;
+    padding: 20px 24px 24px !important;
+  }
+
+  .field label {
+    font-size: 11px !important;
+  }
+
+  .field input,
+  .field select {
+    height: 35px !important;
+    padding: 0 10px !important;
+    font-size: 12px !important;
+  }
+
+  .field textarea {
+    min-height: 82px !important;
+    padding: 9px 10px !important;
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+  }
+
+  .submit-btn,
+  .small-btn {
+    min-height: 35px !important;
+    font-size: 12px !important;
+  }
+
+  /* ================================
+     10. Footer
+  ================================ */
+
+  .site-footer__inner {
+    grid-template-columns: minmax(0, 1fr) 300px !important;
+    gap: 40px !important;
+    padding: 36px 24px 26px !important;
+  }
+
+  .site-footer__nav-wrap {
+    gap: 20px !important;
+  }
+
+  .site-footer__title {
+    margin-bottom: 13px !important;
+    padding-bottom: 8px !important;
+    font-size: 13px !important;
+  }
+
+  .site-footer__list {
+    gap: 7px !important;
+  }
+
+  .site-footer__list a {
+    font-size: 12px !important;
+    line-height: 1.42 !important;
+  }
+
+  .site-footer__company {
+    font-size: 17px !important;
+  }
+
+  .site-footer__contact-text {
+    font-size: 12px !important;
+    line-height: 1.52 !important;
+  }
+
+  .site-footer__qr-row {
+    grid-template-columns: repeat(2, 82px) !important;
+    gap: 10px !important;
+  }
+
+  .site-footer__qrcode-box {
+    width: 82px !important;
+    height: 82px !important;
+    font-size: 10px !important;
+  }
+
+  .site-footer__qrcode-label {
+    font-size: 11px !important;
+  }
+
+  .site-footer__bottom-inner {
+    padding: 12px 24px 14px !important;
+  }
+
+  .site-footer__bottom-left p { 
+    font-size: 11px !important;
+  }
+}
+
+/* =========================================================
+   1440 第二屏应用卡片进一步缩小 v004
+
+   作用：
+   1. 只影响 1281px ~ 1440px
+   2. 不影响 1920 和 2K
+   3. 进一步缩小第二屏右侧浮动应用卡片
+   4. 同时缩小卡片图片、标题、说明、标签
+   5. 底部流程卡片也稍微缩小
+========================================================= */
+
+@media (min-width: 1281px) and (max-width: 1440px) {
+  /* ================================
+     第二屏右侧整体区域稍微收紧
+  ================================ */
+
+  .home-flow-tv-stage {
+    width: min(500px, 100%) !important;
+    height: 420px !important;
+    min-height: 420px !important;
+  }
+
+  .home-flow-tv-frame {
+    width: min(500px, 100%) !important;
+    height: 350px !important;
+    border-radius: 24px !important;
+    padding: 10px !important;
+  }
+
+  /* ================================
+     第二屏浮动应用卡片整体缩小
+  ================================ */
+
+  .home-flow-industry-card {
+    padding: 9px !important;
+    border-radius: 14px !important;
+  }
+
+  .home-flow-industry-card.medical {
+    left: 4px !important;
+    top: -12px !important;
+    width: 205px !important;
+  }
+
+  .home-flow-industry-card.synbio {
+    right: 4px !important;
+    top: -12px !important;
+    width: 205px !important;
+  }
+
+  .home-flow-industry-card.lab {
+    left: 3% !important;
+    bottom: -8px !important;
+    width: 205px !important;
+  }
+
+  .home-flow-industry-card.ivd {
+    right: 2px !important;
+    bottom: -8px !important;
+    width: 202px !important;
+  }
+
+  .home-flow-industry-card.analysis {
+    width: 220px !important;
+    padding: 10px !important;
+  }
+
+  /* ================================
+     第二屏卡片图片缩小
+  ================================ */
+
+  .home-flow-industry-image {
+    height: 72px !important;
+    border-radius: 10px !important;
+  }
+
+  .home-flow-industry-card.medical .home-flow-industry-image,
+  .home-flow-industry-card.synbio .home-flow-industry-image {
+    height: 92px !important;
+  }
+
+  .home-flow-industry-card.lab .home-flow-industry-image,
+  .home-flow-industry-card.ivd .home-flow-industry-image {
+    height: 84px !important;
+  }
+
+  .home-flow-industry-card.analysis .home-flow-industry-image {
+    height: 86px !important;
+  }
+
+  /* ================================
+     第二屏卡片文字缩小
+  ================================ */
+
+  .home-flow-industry-card h3 {
+    margin-top: 7px !important;
+    font-size: 12px !important;
+    line-height: 1.25 !important;
+  }
+
+  .home-flow-industry-card.analysis h3 {
+    font-size: 13px !important;
+  }
+
+  .home-flow-industry-card p {
+    margin-top: 4px !important;
+    font-size: 9px !important;
+    line-height: 1.38 !important;
+  }
+
+  /* ================================
+     第二屏卡片标签缩小
+  ================================ */
+
+  .home-flow-tags {
+    gap: 4px !important;
+    margin-top: 6px !important;
+  }
+
+  .home-flow-tags span {
+    padding: 3px 5px !important;
+    border-radius: 999px !important;
+    font-size: 8px !important;
+    line-height: 1.2 !important;
+  }
+
+  /* ================================
+     第二屏底部流程卡片缩小
+  ================================ */
+
+  .home-flow-process-gallery {
+    margin-top: 8px !important;
+  }
+
+  .home-flow-process-grid {
+    gap: 10px !important;
+  }
+
+  .home-flow-process-card {
+    min-height: 86px !important; 
+    padding: 12px 14px !important;
+    border-radius: 14px !important;
+  }
+
+  .home-flow-process-card strong {
+    margin-bottom: 5px !important;
+    font-size: 14px !important;
+    line-height: 1.3 !important;
+  }
+
+  .home-flow-process-card span {
+    font-size: 11px !important;
+    line-height: 1.45 !important;
+  }
+}
+
+/* =========================================================
+   1440 第二屏左侧主标题缩小 v005
+
+   作用：
+   1. 只影响 1281px ~ 1440px
+   2. 不影响 1920 和 2K
+   3. 把第二屏左侧大标题缩小到和后面模块标题接近
+   4. 同时稍微收紧副标题、标签和按钮间距
+========================================================= */
+
+@media (min-width: 1281px) and (max-width: 1440px) {
+  .home-flow-copy {
+    max-width: 460px !important;
+    transform: translateY(-8px) !important;
+  }
+
+  .home-flow-title {
+    max-width: 440px !important;
+    font-size: clamp(30px, 2.8vw, 40px) !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.03em !important;
+  }
+
+  .home-flow-desc {
+    max-width: 430px !important;
+    margin-top: 18px !important;
+    font-size: 12px !important;
+    line-height: 1.62 !important;
+  }
+
+  .home-flow-capability-row {
+    max-width: 430px !important;
+    gap: 8px !important;
+    margin-top: 22px !important;
+  }
+ 
+  .home-flow-capability-row span {
+    padding: 5px 8px !important;
+    font-size: 10px !important;
+  }
+
+  .home-flow-actions {
+    margin-top: 24px !important;
+  }
+
+  .home-flow-btn {
+    height: 38px !important;
+    padding: 0 18px !important;
+    font-size: 12px !important;
+  }
 }
