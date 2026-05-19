@@ -1,365 +1,247 @@
-// components/home/HomeInquirySection.tsx
-"use client";
+// 这是关于 components/home/HomeInquirySection.tsx 的文件：用于管理首页第六屏“在线询盘”模块
+// 这个文件的作用：负责询盘表单状态、邮箱验证码逻辑、表单提交逻辑和询盘页面渲染
+// 后端接口预留说明：当前保留 3 个接口：发送验证码、校验验证码、提交询盘
+// 后端接口 1：/api/inquiry/send-code
+// 后端接口 2：/api/inquiry/verify-code
+// 后端接口 3：/api/inquiry/submit
 
-// 首页第六屏：在线询盘
-//
-// 说明：
-// 1. 这个组件只负责表单状态、邮箱验证码逻辑、提交逻辑和页面渲染
-// 2. 所有文字、表单标签、下拉选项、提示信息，统一从 data/home-inquiry.ts 读取
-// 3. 表单提交时，product / application 使用稳定英文 value，不再提交中文文字
-// 4. 后期接后台 / CRM / 邮件系统时，数据会更稳定
+"use client"; // 这个组件需要表单交互、验证码倒计时和接口请求，所以必须是客户端组件
 
-import { FormEvent, useState } from "react";
+import { type FormEvent, useState } from "react"; // 引入表单事件类型和 useState 状态管理
 
-import type { LocaleCode } from "@/lib/i18n";
+import { getCountdownLabel, isValidEmail } from "@/components/home/HomeInquiryUtils"; // 引入询盘模块工具函数：邮箱校验和验证码倒计时文字
 
-import {
-  getHomeInquiryText,
-  homeInquiryData,
-} from "@/data/home-inquiry";
+import type { LocaleCode } from "@/lib/i18n"; // 引入官网支持的语言代码类型，例如 zh-CN、en、es、fr、ko、ru
 
-/* ================================
-   组件参数类型
-================================ */
+import { // 引入首页询盘模块的数据和多语言文字读取函数
+  getHomeInquiryText, // 根据当前语言读取询盘模块文字
+  homeInquiryData, // 首页询盘模块本地数据
+} from "@/data/home-inquiry"; // 首页询盘模块数据文件路径
 
-type HomeInquirySectionProps = {
+type HomeInquirySectionProps = { // 定义 HomeInquirySection 组件接收的参数类型
   locale: LocaleCode; // 当前语言，例如 zh-CN / en / es / fr / ko / ru
-};
-
-/* ================================
-   API 返回类型
-
-   说明：
-   后端接口后面可以返回：
-   {
-     message: "..."
-   }
-================================ */
-
-type ApiResponse = {
-  message?: string;
-};
-
-/* ================================
-   简单邮箱格式判断
-
-   说明：
-   当前只做基础判断，避免用户明显填错。
-   后端正式上线时，还需要后端再次校验。
-================================ */
-
-function isValidEmail(email: string) {
-  return email.includes("@") && email.includes(".");
-}
-
-/* ================================
-   验证码倒计时按钮文字
-
-   说明：
-   这里不单独放进 data 文件，是因为它带动态数字 countdown。
-================================ */
-
-function getCountdownLabel(countdown: number, locale: LocaleCode) {
-  if (locale === "zh-CN") {
-    return `${countdown}秒后重发`;
-  }
-
-  if (locale === "ko") {
-    return `${countdown}초 후 재전송`;
-  }
-
-  if (locale === "ru") {
-    return `${countdown} с`;
-  }
-
-  return `${countdown}s`;
-}
-
-/**
- * HomeInquirySection
- * 首页第 6 屏：在线询盘
- *
- * 后端接口预留：
- * 1. 发送验证码：/api/inquiry/send-code
- * 2. 校验验证码：/api/inquiry/verify-code
- * 3. 提交询盘：/api/inquiry/submit
- */
-export default function HomeInquirySection({ locale }: HomeInquirySectionProps) {
-  // 感兴趣产品
-  const [product, setProduct] = useState("");
-
-  // 应用领域
-  const [application, setApplication] = useState("");
-
-  // 其他应用领域
-  const [otherApplication, setOtherApplication] = useState("");
-
-  // 邮箱是否验证通过
-  const [emailVerified, setEmailVerified] = useState(false);
-
-  // 验证码倒计时
-  const [countdown, setCountdown] = useState(0);
-
-  // 页面提示信息
-  const [message, setMessage] = useState("");
-
-  // 是否正在提交询盘
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const text = homeInquiryData;
-
-  /**
-   * 发送邮箱验证码
-   * 当前请求预留 API：/api/inquiry/send-code
-   */
-  async function handleSendCode() {
-    const emailInput = document.getElementById(
-      "email",
-    ) as HTMLInputElement | null;
-
-    const email = emailInput?.value.trim() || "";
-
-    setMessage("");
-
-    if (!isValidEmail(email)) {
-      setMessage(getHomeInquiryText(text.messages.invalidEmail, locale));
-      return;
-    }
-
-    try {
-      const res = await fetch("/api/inquiry/send-code", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email }),
-      });
-
-      const data = (await res.json().catch(() => ({}))) as ApiResponse;
-
-      if (!res.ok) {
-        setMessage(
-          data.message ||
-            getHomeInquiryText(text.messages.sendCodeFailed, locale),
-        );
-        return;
-      }
-
-      setEmailVerified(false);
-
-      setMessage(
-        data.message ||
-          getHomeInquiryText(text.messages.sendCodeSuccess, locale),
-      );
-
-      setCountdown(60);
-
-      const timer = window.setInterval(() => {
-        setCountdown((current) => {
-          if (current <= 1) {
-            window.clearInterval(timer);
-            return 0;
-          }
-
-          return current - 1;
-        });
-      }, 1000);
-    } catch {
-      setMessage(getHomeInquiryText(text.messages.sendCodeFailed, locale));
-    }
-  }
-
-  /**
-   * 校验邮箱验证码
-   * 当前请求预留 API：/api/inquiry/verify-code
-   */
-  async function handleVerifyCode() {
-    const emailInput = document.getElementById(
-      "email",
-    ) as HTMLInputElement | null;
-
-    const codeInput = document.getElementById(
-      "verifyCode",
-    ) as HTMLInputElement | null;
-
-    const email = emailInput?.value.trim() || "";
-    const code = codeInput?.value.trim() || "";
-
-    setMessage("");
-
-    if (!isValidEmail(email)) {
-      setMessage(getHomeInquiryText(text.messages.invalidEmail, locale));
-      return;
-    }
-
-    if (!code) {
-      setMessage(getHomeInquiryText(text.messages.verifyCodeFailed, locale));
-      return;
-    }
-
-    try {
-      const res = await fetch("/api/inquiry/verify-code", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, code }),
-      });
-
-      const data = (await res.json().catch(() => ({}))) as ApiResponse;
-
-      if (!res.ok) {
-        setEmailVerified(false);
-
-        setMessage(
-          data.message ||
-            getHomeInquiryText(text.messages.verifyCodeFailed, locale),
-        );
-
-        return;
-      }
-
-      setEmailVerified(true);
-
-      setMessage(
-        data.message ||
-          getHomeInquiryText(text.messages.verifyCodeSuccess, locale),
-      );
-    } catch {
-      setEmailVerified(false);
-      setMessage(getHomeInquiryText(text.messages.verifyCodeFailed, locale));
-    }
-  }
-
-  /**
-   * 提交询盘表单
-   * 当前请求预留 API：/api/inquiry/submit
-   */
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-
-    const form = event.currentTarget;
-
-    const name = (
-      form.elements.namedItem("name") as HTMLInputElement
-    ).value.trim();
-
-    const company = (
-      form.elements.namedItem("company") as HTMLInputElement
-    ).value.trim();
-
-    const email = (
-      form.elements.namedItem("email") as HTMLInputElement
-    ).value.trim();
-
-    const region = (
-      form.elements.namedItem("region") as HTMLInputElement
-    ).value.trim();
-
-    const requirementMessage = (
-      form.elements.namedItem("message") as HTMLTextAreaElement
-    ).value.trim();
-
-    const finalApplication =
-      application === "other" ? otherApplication.trim() : application;
-
-    const formData = {
-      name,
-      company,
-      email,
-      product,
-      region,
-      application: finalApplication,
-      message: requirementMessage,
-      locale,
-    };
-
-    setMessage("");
-
-    if (!formData.name) {
-      setMessage(getHomeInquiryText(text.messages.requiredName, locale));
-      return;
-    }
-
-    if (!formData.company) {
-      setMessage(getHomeInquiryText(text.messages.requiredCompany, locale));
-      return;
-    }
-
-    if (!isValidEmail(formData.email)) {
-      setMessage(getHomeInquiryText(text.messages.invalidEmail, locale));
-      return;
-    }
-
-    if (!emailVerified) {
-      setMessage(
-        getHomeInquiryText(text.messages.requiredEmailVerified, locale),
-      );
-      return;
-    }
-
-    if (!formData.product) {
-      setMessage(getHomeInquiryText(text.messages.requiredProduct, locale));
-      return;
-    }
-
-    if (!formData.application) {
-      setMessage(getHomeInquiryText(text.messages.requiredApplication, locale));
-      return;
-    }
-
-    if (!formData.message) {
-      setMessage(getHomeInquiryText(text.messages.requiredMessage, locale));
-      return;
-    }
-
-    setIsSubmitting(true);
-
-    try {
-      const res = await fetch("/api/inquiry/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const data = (await res.json().catch(() => ({}))) as ApiResponse;
-
-      if (!res.ok) {
-        setMessage(
-          data.message ||
-            getHomeInquiryText(text.messages.submitFailed, locale),
-        );
-        return;
-      }
-
-      setMessage(
-        data.message ||
-          getHomeInquiryText(text.messages.submitSuccess, locale),
-      );
-
-      form.reset();
-      setProduct("");
-      setApplication("");
-      setOtherApplication("");
-      setEmailVerified(false);
-    } catch {
-      setMessage(getHomeInquiryText(text.messages.submitFailed, locale));
-    } finally {
-      setIsSubmitting(false);
-    }
-  }
-
-  return (
-    <section
-      className="screen-section contact-screen"
-      id={homeInquiryData.sectionId}
-      aria-labelledby="inquiry-title"
-    >
+}; // HomeInquirySectionProps 类型定义结束
+
+type ApiResponse = { // 定义后端接口返回数据类型
+  message?: string; // 后端可选返回 message，用于显示接口提示信息
+}; // ApiResponse 类型定义结束
+
+export default function HomeInquirySection({ locale }: HomeInquirySectionProps) { // 定义并导出首页第六屏在线询盘组件
+  const [product, setProduct] = useState(""); // 感兴趣产品，提交时使用稳定英文 value
+  const [application, setApplication] = useState(""); // 应用领域，提交时使用稳定英文 value
+  const [otherApplication, setOtherApplication] = useState(""); // 其他应用领域，当 application 为 other 时使用
+  const [emailVerified, setEmailVerified] = useState(false); // 邮箱是否验证通过
+  const [countdown, setCountdown] = useState(0); // 验证码倒计时秒数
+  const [message, setMessage] = useState(""); // 页面提示信息，例如错误、成功、接口返回信息
+  const [isSubmitting, setIsSubmitting] = useState(false); // 是否正在提交询盘，用于禁用提交按钮
+
+  const text = homeInquiryData; // 读取询盘模块本地数据，后期可替换为后端返回的数据
+
+  async function handleSendCode() { // 定义发送邮箱验证码函数，对接 /api/inquiry/send-code
+    const emailInput = document.getElementById("email") as HTMLInputElement | null; // 获取邮箱输入框 DOM
+
+    const email = emailInput?.value.trim() || ""; // 获取邮箱输入值，并去掉前后空格
+
+    setMessage(""); // 每次发送验证码前先清空页面提示信息
+
+    if (!isValidEmail(email)) { // 如果邮箱格式不符合基础要求
+      setMessage(getHomeInquiryText(text.messages.invalidEmail, locale)); // 显示邮箱格式错误提示
+      return; // 阻止继续发送验证码
+    } // 邮箱校验结束
+
+    try { // 开始请求发送验证码接口
+      const res = await fetch("/api/inquiry/send-code", { // 请求发送验证码接口
+        method: "POST", // 使用 POST 方法
+        headers: { // 设置请求头
+          "Content-Type": "application/json", // 告诉后端当前提交的是 JSON 数据
+        }, // 请求头结束
+        body: JSON.stringify({ email }), // 把邮箱提交给后端
+      }); // fetch 请求结束
+
+      const data = (await res.json().catch(() => ({}))) as ApiResponse; // 读取接口返回 JSON，如果读取失败就使用空对象
+
+      if (!res.ok) { // 如果接口返回失败状态
+        setMessage( // 设置失败提示
+          data.message || getHomeInquiryText(text.messages.sendCodeFailed, locale), // 优先显示后端 message，否则显示前端多语言默认提示
+        ); // 设置失败提示结束
+        return; // 阻止继续执行
+      } // 接口失败判断结束
+
+      setEmailVerified(false); // 重新发送验证码后，邮箱验证状态重置为未验证
+
+      setMessage( // 设置验证码发送成功提示
+        data.message || getHomeInquiryText(text.messages.sendCodeSuccess, locale), // 优先显示后端 message，否则显示前端多语言默认提示
+      ); // 设置成功提示结束
+
+      setCountdown(60); // 设置倒计时为 60 秒
+
+      const timer = window.setInterval(() => { // 创建 1 秒一次的倒计时定时器
+        setCountdown((current) => { // 根据当前秒数更新倒计时
+          if (current <= 1) { // 如果倒计时即将结束
+            window.clearInterval(timer); // 清除定时器
+            return 0; // 倒计时归零
+          } // 倒计时结束判断结束
+
+          return current - 1; // 倒计时减少 1 秒
+        }); // setCountdown 结束
+      }, 1000); // 每 1000 毫秒执行一次
+    } catch { // 捕获接口请求异常
+      setMessage(getHomeInquiryText(text.messages.sendCodeFailed, locale)); // 显示发送验证码失败提示
+    } // try / catch 结束
+  } // handleSendCode 函数结束
+
+  async function handleVerifyCode() { // 定义校验邮箱验证码函数，对接 /api/inquiry/verify-code
+    const emailInput = document.getElementById("email") as HTMLInputElement | null; // 获取邮箱输入框 DOM
+    const codeInput = document.getElementById("verifyCode") as HTMLInputElement | null; // 获取验证码输入框 DOM
+
+    const email = emailInput?.value.trim() || ""; // 获取邮箱输入值
+    const code = codeInput?.value.trim() || ""; // 获取验证码输入值
+
+    setMessage(""); // 校验验证码前先清空页面提示
+
+    if (!isValidEmail(email)) { // 如果邮箱格式不符合基础要求
+      setMessage(getHomeInquiryText(text.messages.invalidEmail, locale)); // 显示邮箱格式错误提示
+      return; // 阻止继续校验验证码
+    } // 邮箱校验结束
+
+    if (!code) { // 如果用户没有填写验证码
+      setMessage(getHomeInquiryText(text.messages.verifyCodeFailed, locale)); // 显示验证码错误提示
+      return; // 阻止继续请求接口
+    } // 验证码为空判断结束
+
+    try { // 开始请求校验验证码接口
+      const res = await fetch("/api/inquiry/verify-code", { // 请求校验验证码接口
+        method: "POST", // 使用 POST 请求
+        headers: { // 设置请求头
+          "Content-Type": "application/json", // 告诉后端当前提交的是 JSON
+        }, // 请求头结束
+        body: JSON.stringify({ email, code }), // 把邮箱和验证码提交给后端
+      }); // fetch 请求结束
+
+      const data = (await res.json().catch(() => ({}))) as ApiResponse; // 读取接口返回 JSON，如果失败则使用空对象
+
+      if (!res.ok) { // 如果接口返回失败
+        setEmailVerified(false); // 标记邮箱未验证通过
+
+        setMessage( // 设置验证码校验失败提示
+          data.message || getHomeInquiryText(text.messages.verifyCodeFailed, locale), // 优先使用后端 message，否则使用前端默认提示
+        ); // 设置提示结束
+
+        return; // 阻止继续执行
+      } // 接口失败判断结束
+
+      setEmailVerified(true); // 标记邮箱验证通过
+
+      setMessage( // 设置验证码校验成功提示
+        data.message || getHomeInquiryText(text.messages.verifyCodeSuccess, locale), // 优先使用后端 message，否则使用前端默认提示
+      ); // 设置成功提示结束
+    } catch { // 捕获接口请求异常
+      setEmailVerified(false); // 请求异常时标记邮箱未验证通过
+      setMessage(getHomeInquiryText(text.messages.verifyCodeFailed, locale)); // 显示验证码校验失败提示
+    } // try / catch 结束
+  } // handleVerifyCode 函数结束
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) { // 定义提交询盘表单函数，对接 /api/inquiry/submit
+    event.preventDefault(); // 阻止浏览器默认表单提交刷新页面
+
+    const form = event.currentTarget; // 获取当前表单 DOM
+
+    const name = (form.elements.namedItem("name") as HTMLInputElement).value.trim(); // 获取姓名
+    const company = (form.elements.namedItem("company") as HTMLInputElement).value.trim(); // 获取公司名称
+    const email = (form.elements.namedItem("email") as HTMLInputElement).value.trim(); // 获取邮箱
+    const region = (form.elements.namedItem("region") as HTMLInputElement).value.trim(); // 获取国家 / 地区
+    const requirementMessage = (form.elements.namedItem("message") as HTMLTextAreaElement).value.trim(); // 获取需求描述
+
+    const finalApplication = application === "other" ? otherApplication.trim() : application; // 如果选择其他应用领域，就提交用户手填内容，否则提交下拉框 value
+
+    const formData = { // 组合最终提交给后端的询盘数据
+      name, // 姓名
+      company, // 公司名称
+      email, // 邮箱
+      product, // 感兴趣产品
+      region, // 国家 / 地区
+      application: finalApplication, // 应用领域
+      message: requirementMessage, // 需求描述
+      locale, // 当前语言，方便后端区分来源语言
+    }; // 表单数据对象结束
+
+    setMessage(""); // 提交前清空页面提示
+
+    if (!formData.name) { // 如果姓名为空
+      setMessage(getHomeInquiryText(text.messages.requiredName, locale)); // 显示姓名必填提示
+      return; // 阻止提交
+    } // 姓名校验结束
+
+    if (!formData.company) { // 如果公司名称为空
+      setMessage(getHomeInquiryText(text.messages.requiredCompany, locale)); // 显示公司必填提示
+      return; // 阻止提交
+    } // 公司校验结束
+
+    if (!isValidEmail(formData.email)) { // 如果邮箱格式不正确
+      setMessage(getHomeInquiryText(text.messages.invalidEmail, locale)); // 显示邮箱格式错误提示
+      return; // 阻止提交
+    } // 邮箱校验结束
+
+    if (!emailVerified) { // 如果邮箱还没有验证通过
+      setMessage(getHomeInquiryText(text.messages.requiredEmailVerified, locale)); // 显示请先验证邮箱提示
+      return; // 阻止提交
+    } // 邮箱验证状态校验结束
+
+    if (!formData.product) { // 如果没有选择感兴趣产品
+      setMessage(getHomeInquiryText(text.messages.requiredProduct, locale)); // 显示产品必选提示
+      return; // 阻止提交
+    } // 产品校验结束
+
+    if (!formData.application) { // 如果没有选择应用领域
+      setMessage(getHomeInquiryText(text.messages.requiredApplication, locale)); // 显示应用领域必选提示
+      return; // 阻止提交
+    } // 应用领域校验结束
+
+    if (!formData.message) { // 如果需求描述为空
+      setMessage(getHomeInquiryText(text.messages.requiredMessage, locale)); // 显示需求描述必填提示
+      return; // 阻止提交
+    } // 需求描述校验结束
+
+    setIsSubmitting(true); // 设置正在提交状态，禁用提交按钮
+
+    try { // 开始请求提交询盘接口
+      const res = await fetch("/api/inquiry/submit", { // 请求提交询盘接口
+        method: "POST", // 使用 POST 请求
+        headers: { // 设置请求头
+          "Content-Type": "application/json", // 告诉后端当前提交 JSON
+        }, // 请求头结束
+        body: JSON.stringify(formData), // 把询盘表单数据提交给后端
+      }); // fetch 请求结束
+
+      const data = (await res.json().catch(() => ({}))) as ApiResponse; // 读取接口返回 JSON，如果失败则使用空对象
+
+      if (!res.ok) { // 如果接口返回失败
+        setMessage( // 设置提交失败提示
+          data.message || getHomeInquiryText(text.messages.submitFailed, locale), // 优先使用后端 message，否则使用前端默认提示
+        ); // 设置失败提示结束
+        return; // 阻止继续执行
+      } // 接口失败判断结束
+
+      setMessage( // 设置提交成功提示
+        data.message || getHomeInquiryText(text.messages.submitSuccess, locale), // 优先使用后端 message，否则使用前端默认提示
+      ); // 设置成功提示结束
+
+      form.reset(); // 重置表单原生输入框
+      setProduct(""); // 清空感兴趣产品状态
+      setApplication(""); // 清空应用领域状态
+      setOtherApplication(""); // 清空其他应用领域输入状态
+      setEmailVerified(false); // 提交成功后重置邮箱验证状态
+    } catch { // 捕获接口请求异常
+      setMessage(getHomeInquiryText(text.messages.submitFailed, locale)); // 显示提交失败提示
+    } finally { // 无论成功失败都会执行
+      setIsSubmitting(false); // 取消正在提交状态
+    } // try / catch / finally 结束
+  } // handleSubmit 函数结束
+
+  return ( // 返回在线询盘模块页面结构
+    <section className="screen-section contact-screen" id={homeInquiryData.sectionId} aria-labelledby="inquiry-title">
       <div className="screen-inner">
         <div className="contact-layout">
-          {/* 左侧需求说明区域 */}
           <aside className="demand-panel">
             <h2 className="demand-title">
               {getHomeInquiryText(text.left.title, locale)}
@@ -390,11 +272,7 @@ export default function HomeInquirySection({ locale }: HomeInquirySectionProps) 
             </div>
           </aside>
 
-          {/* 右侧在线询盘表单 */}
-          <aside
-            className="inquiry-panel"
-            aria-label={getHomeInquiryText(text.form.title, locale)}
-          >
+          <aside className="inquiry-panel" aria-label={getHomeInquiryText(text.form.title, locale)}>
             <div className="inquiry-panel-head">
               <h3 id="inquiry-title" className="inquiry-title">
                 {getHomeInquiryText(text.form.title, locale)}
@@ -416,10 +294,7 @@ export default function HomeInquirySection({ locale }: HomeInquirySectionProps) 
                     id="name"
                     name="name"
                     type="text"
-                    placeholder={getHomeInquiryText(
-                      text.form.namePlaceholder,
-                      locale,
-                    )}
+                    placeholder={getHomeInquiryText(text.form.namePlaceholder, locale)}
                   />
                 </div>
 
@@ -432,10 +307,7 @@ export default function HomeInquirySection({ locale }: HomeInquirySectionProps) 
                     id="company"
                     name="company"
                     type="text"
-                    placeholder={getHomeInquiryText(
-                      text.form.companyPlaceholder,
-                      locale,
-                    )}
+                    placeholder={getHomeInquiryText(text.form.companyPlaceholder, locale)}
                   />
                 </div>
               </div>
@@ -450,10 +322,7 @@ export default function HomeInquirySection({ locale }: HomeInquirySectionProps) 
                     id="email"
                     name="email"
                     type="email"
-                    placeholder={getHomeInquiryText(
-                      text.form.emailPlaceholder,
-                      locale,
-                    )}
+                    placeholder={getHomeInquiryText(text.form.emailPlaceholder, locale)}
                     onChange={() => {
                       setEmailVerified(false);
                     }}
@@ -474,10 +343,7 @@ export default function HomeInquirySection({ locale }: HomeInquirySectionProps) 
 
               <div className="field">
                 <label htmlFor="verifyCode">
-                  {getHomeInquiryText(
-                    text.form.verificationCodeLabel,
-                    locale,
-                  )}
+                  {getHomeInquiryText(text.form.verificationCodeLabel, locale)}
                 </label>
 
                 <div className="verify-code-row">
@@ -485,17 +351,10 @@ export default function HomeInquirySection({ locale }: HomeInquirySectionProps) 
                     id="verifyCode"
                     name="verifyCode"
                     type="text"
-                    placeholder={getHomeInquiryText(
-                      text.form.verificationCodePlaceholder,
-                      locale,
-                    )}
+                    placeholder={getHomeInquiryText(text.form.verificationCodePlaceholder, locale)}
                   />
 
-                  <button
-                    className="plain-btn small-btn"
-                    type="button"
-                    onClick={handleVerifyCode}
-                  >
+                  <button className="plain-btn small-btn" type="button" onClick={handleVerifyCode}>
                     {emailVerified
                       ? getHomeInquiryText(text.form.verifiedLabel, locale)
                       : getHomeInquiryText(text.form.verifyCodeButton, locale)}
@@ -535,10 +394,7 @@ export default function HomeInquirySection({ locale }: HomeInquirySectionProps) 
                     id="region"
                     name="region"
                     type="text"
-                    placeholder={getHomeInquiryText(
-                      text.form.countryPlaceholder,
-                      locale,
-                    )}
+                    placeholder={getHomeInquiryText(text.form.countryPlaceholder, locale)}
                   />
                 </div>
 
@@ -561,10 +417,7 @@ export default function HomeInquirySection({ locale }: HomeInquirySectionProps) 
                     }}
                   >
                     <option value="">
-                      {getHomeInquiryText(
-                        text.form.applicationPlaceholder,
-                        locale,
-                      )}
+                      {getHomeInquiryText(text.form.applicationPlaceholder, locale)}
                     </option>
 
                     {text.applicationOptions.map((option) => (
@@ -576,30 +429,18 @@ export default function HomeInquirySection({ locale }: HomeInquirySectionProps) 
                 </div>
               </div>
 
-              <div
-                className={`field other-application-field ${
-                  application === "other" ? "show" : ""
-                }`}
-              >
+              <div className={`field other-application-field ${application === "other" ? "show" : ""}`}>
                 <label htmlFor="otherApplication">
-                  {getHomeInquiryText(
-                    text.form.otherApplicationLabel,
-                    locale,
-                  )}
+                  {getHomeInquiryText(text.form.otherApplicationLabel, locale)}
                 </label>
 
                 <input
                   id="otherApplication"
                   name="otherApplication"
                   type="text"
-                  placeholder={getHomeInquiryText(
-                    text.form.otherApplicationPlaceholder,
-                    locale,
-                  )}
+                  placeholder={getHomeInquiryText(text.form.otherApplicationPlaceholder, locale)}
                   value={otherApplication}
-                  onChange={(event) =>
-                    setOtherApplication(event.target.value)
-                  }
+                  onChange={(event) => setOtherApplication(event.target.value)}
                 />
               </div>
 
@@ -611,10 +452,7 @@ export default function HomeInquirySection({ locale }: HomeInquirySectionProps) 
                 <textarea
                   id="message"
                   name="message"
-                  placeholder={getHomeInquiryText(
-                    text.form.messagePlaceholder,
-                    locale,
-                  )}
+                  placeholder={getHomeInquiryText(text.form.messagePlaceholder, locale)}
                 />
               </div>
 
@@ -625,11 +463,7 @@ export default function HomeInquirySection({ locale }: HomeInquirySectionProps) 
                   {getHomeInquiryText(text.form.description, locale)}
                 </p>
 
-                <button
-                  className="primary-btn submit-btn"
-                  type="submit"
-                  disabled={isSubmitting}
-                >
+                <button className="primary-btn submit-btn" type="submit" disabled={isSubmitting}>
                   {isSubmitting
                     ? getHomeInquiryText(text.form.submittingButton, locale)
                     : getHomeInquiryText(text.form.submitButton, locale)}
@@ -640,5 +474,5 @@ export default function HomeInquirySection({ locale }: HomeInquirySectionProps) 
         </div>
       </div>
     </section>
-  );
-}
+  ); // 在线询盘模块页面结构返回结束
+} // HomeInquirySection 组件结束
