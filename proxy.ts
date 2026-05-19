@@ -1,4 +1,4 @@
-// middleware.ts
+// proxy.ts
 // 根据浏览器语言进行首次语言推荐
 //
 // 说明：
@@ -64,7 +64,7 @@ function normalizeLocaleCookie(value: string | undefined): LocaleCode | null {
 }
 
 // Next.js Middleware 主函数
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl; // 获取当前访问路径
 
   const currentPathLocale = getLocaleFromPathname(pathname); // 判断当前路径是否已经带语言
