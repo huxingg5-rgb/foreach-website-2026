@@ -28,7 +28,7 @@ import {
 type OpenPanel = "none" | "language" | "mobileNav";
 
 // 语言偏好 Cookie 名称
-// 说明：这里必须和 middleware.ts 里的 LOCALE_COOKIE_NAME 保持一致
+// 说明：这里必须和 proxy.ts 里的 LOCALE_COOKIE_NAME 保持一致
 const LOCALE_COOKIE_NAME = "foreach_locale";
 
 /**
