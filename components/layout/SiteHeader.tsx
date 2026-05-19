@@ -40,7 +40,7 @@ const LOCALE_COOKIE_NAME = "foreach_locale";
  * 3. 如果某张图片没有配置 title / description，才会使用这里的默认内容
  */
 function getProductImageDisplayMeta(src: string, locale: string) {
-  const useEnglish = locale !== "zh-CN";
+  const useEnglish = locale !== "zh-CN"; // 非中文语言统一先走英文兜底
 
   if (src.includes("syringe-pump")) {
     return {
@@ -492,15 +492,16 @@ export default function SiteHeader() {
               onClick={handleLanguageButtonClick}
               title={headerText.languageSwitchTitle}
             >
-{/* 
-  语言栏显示文字 
+              {/*
+                语言栏显示文字
 
-  说明：
-  1. 这里固定显示英文单词 Language
-  2. 不再跟随当前页面语言变化
-  3. 下拉菜单里的具体语言选项仍然保持原来的多语言名称
-*/}
-<span className="language-summary-label">Language</span>
+                说明：
+                1. 这里固定显示英文单词 Language
+                2. 不再跟随当前页面语言变化
+                3. 下拉菜单里的具体语言选项仍然保持原来的多语言名称
+              */}
+              <span className="language-summary-label">Language</span>
+
               <span className="language-summary-arrow" aria-hidden="true">
                 ▾
               </span>
@@ -699,17 +700,11 @@ export default function SiteHeader() {
               </div>
 
               {/* 产品入口区域：4 个一行，超过 4 个自动换行 */}
-              <div
-                style={{
-                  width: "100%",
-                  minWidth: 0,
-                  background: "#ffffff",
-                }}
-              >
+              <div className="site-nav-mega-product-area">
                 {activeMegaCards.map((card) => {
-                  const cardImages = card.images || [];
+                  const cardImages = card.images || []; // 读取当前分类下的产品图片列表
 
-                  const mainImage = card.image;
+                  const mainImage = card.image; // 读取单张主图，兼容旧数据结构
 
                   // 产品列表：
                   // 1. 如果有 images，就全部显示 images
@@ -718,29 +713,9 @@ export default function SiteHeader() {
                   const displayProductImages = cardImages;
 
                   return (
-                    <div
-                      key={card.key}
-                      style={{
-                        width: "100%",
-                        minWidth: 0,
-                        background: "#ffffff",
-                      }}
-                    >
+                    <div key={card.key} className="site-nav-mega-product-group">
                       {displayProductImages.length > 0 ? (
-                        <div
-                          style={{
-                            display: "grid",
-                            gridTemplateColumns:
-                              "repeat(4, minmax(0, 1fr))",
-                            columnGap: "46px",
-                            rowGap: "34px",
-                            width: "100%",
-                            minWidth: 0,
-                            background: "#ffffff",
-                            alignItems: "start",
-                            paddingTop: "20px",
-                          }}
-                        >
+                        <div className="site-nav-mega-product-grid">
                           {displayProductImages.map((cardImage) => {
                             // 兜底产品名称和说明
                             const fallbackProductMeta =
@@ -777,31 +752,11 @@ export default function SiteHeader() {
                                 )}
                                 onClick={closeAllPanels}
                                 className="site-nav-product-clean-link"
-                                style={{
-                                  display: "block",
-                                  minWidth: 0,
-                                  textAlign: "center",
-                                  textDecoration: "none",
-                                  color: "inherit",
-                                  background: "#ffffff",
-                                  padding: 0,
-                                  border: "none",
-                                  borderRadius: 0,
-                                }}
                               >
                                 {/* 产品图片 */}
-                                <div
-                                  style={{
-                                    width: "100%",
-                                    height: "112px",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                    marginBottom: "12px",
-                                    background: "#ffffff",
-                                  }}
-                                >
+                                <div className="site-nav-product-image-box">
                                   <Image
+                                    className="site-nav-product-image"
                                     src={cardImage.src}
                                     alt={getLocalizedText(
                                       cardImage.alt,
@@ -809,38 +764,16 @@ export default function SiteHeader() {
                                     )}
                                     width={cardImage.width ?? 600}
                                     height={cardImage.height ?? 380}
-                                    style={{
-                                      width: "100%",
-                                      height: "100%",
-                                      objectFit: "contain",
-                                      display: "block",
-                                    }}
                                   />
                                 </div>
 
                                 {/* 产品名称 */}
-                                <strong
-                                  style={{
-                                    display: "block",
-                                    fontSize: "15px",
-                                    lineHeight: 1.35,
-                                    color: "#173368",
-                                    marginBottom: "6px",
-                                    fontWeight: 700,
-                                  }}
-                                >
+                                <strong className="site-nav-product-title">
                                   {productMeta.title}
                                 </strong>
 
                                 {/* 产品说明 */}
-                                <span
-                                  style={{
-                                    display: "block",
-                                    fontSize: "12px",
-                                    lineHeight: 1.45,
-                                    color: "rgba(23, 51, 104, 0.62)",
-                                  }}
-                                >
+                                <span className="site-nav-product-desc">
                                   {productMeta.description}
                                 </span>
                               </Link>
@@ -848,19 +781,9 @@ export default function SiteHeader() {
                           })}
                         </div>
                       ) : mainImage ? (
-                        <div
-                          style={{
-                            width: "100%",
-                            height: "180px",
-                            marginBottom: "18px",
-                            overflow: "hidden",
-                            background: "#ffffff",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                          }}
-                        >
+                        <div className="site-nav-mega-single-image-box">
                           <Image
+                            className="site-nav-mega-single-image"
                             src={mainImage.src}
                             alt={getLocalizedText(
                               mainImage.alt,
@@ -868,23 +791,13 @@ export default function SiteHeader() {
                             )}
                             width={mainImage.width ?? 600}
                             height={mainImage.height ?? 380}
-                            style={{
-                              width: "100%",
-                              height: "100%",
-                              objectFit: "contain",
-                              display: "block",
-                            }}
                           />
                         </div>
                       ) : (
                         <Link
                           href={getLocalizedHref(card.href, currentLocale)}
                           onClick={closeAllPanels}
-                          style={{
-                            display: "inline-block",
-                            textDecoration: "none",
-                            color: "inherit",
-                          }}
+                          className="site-nav-mega-icon-link"
                         >
                           <span
                             className="site-nav-mega-card-icon"
@@ -935,4 +848,4 @@ export default function SiteHeader() {
       )}
     </header>
   );
-}
+} 

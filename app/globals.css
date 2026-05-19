@@ -7694,3 +7694,105 @@ html[lang="ru"] .home-hero-btn:hover {
     font-size: 11px !important;
   }
 }
+
+/* =========================================================
+   导航栏 Mega 下拉：产品网格结构样式
+
+   作用：
+   1. 把 SiteHeader.tsx 里的 inline style 迁移到 CSS
+   2. 方便后续统一调整 1440、PC、移动端视觉
+   3. 不改变数据逻辑，只整理样式位置
+========================================================= */
+
+.site-nav-mega-product-area {
+  width: 100%;
+  min-width: 0;
+  background: #ffffff;
+}
+
+.site-nav-mega-product-group {
+  width: 100%;
+  min-width: 0;
+  background: #ffffff;
+}
+
+.site-nav-mega-product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: 46px;
+  row-gap: 34px;
+  width: 100%;
+  min-width: 0;
+  padding-top: 20px;
+  background: #ffffff;
+  align-items: start;
+}
+
+.site-nav-product-clean-link {
+  display: block;
+  min-width: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: #ffffff;
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+}
+
+.site-nav-product-image-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 112px;
+  margin-bottom: 12px;
+  background: #ffffff;
+}
+
+.site-nav-product-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.site-nav-product-title {
+  display: block;
+  margin-bottom: 6px;
+  color: #173368;
+  font-size: 15px;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.site-nav-product-desc {
+  display: block;
+  color: rgba(23, 51, 104, 0.62);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.site-nav-mega-single-image-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 180px;
+  margin-bottom: 18px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.site-nav-mega-single-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.site-nav-mega-icon-link {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
