@@ -1213,3 +1213,83 @@ export function getLocalizedText(text: LocalizedText, locale: string) {
 export function getLocalizedHref(href: LocalizedHref, locale: string) {
   return href[locale] ?? href.en ?? href["zh-CN"] ?? "/";
 }
+
+/* ================================
+   导航栏后端接口路径预留
+
+   说明：
+   1. 当前第一阶段导航数据仍然使用本地 navigation.ts
+   2. 后期如果接 CMS / 后端，可以通过这个函数统一生成导航接口地址
+   3. SiteHeader.tsx 未来可以从 /api/navigation?locale=zh-CN 读取导航数据
+   4. 现在只是预留，不影响当前页面功能
+================================ */
+
+export function getNavigationApiPath(locale: string) {
+  return `/api/navigation?locale=${encodeURIComponent(locale)}`;
+}
+
+/* ================================
+   产品图片兜底显示文案
+
+   说明：
+   1. 这是导航栏 Mega Menu 产品图片的兜底逻辑
+   2. 如果 navigation.ts 的图片数据里已经配置了 title / description，会优先使用配置内容
+   3. 如果某张图片没有配置 title / description，才会使用这里的默认内容
+   4. 这样 SiteHeader.tsx 就只负责渲染，不再写产品业务文案
+================================ */
+
+export function getProductImageDisplayMeta(src: string, locale: string) {
+  const useEnglish = locale !== "zh-CN"; // 非中文语言统一先使用英文兜底文案
+
+  if (src.includes("syringe-pump")) {
+    return {
+      title: useEnglish ? "Syringe Pump" : "注射泵",
+      description: useEnglish
+        ? "High-precision μL–mL dispensing"
+        : "μL–mL 级高精度定量分配",
+    };
+  }
+
+  if (src.includes("diaphragm-pump")) {
+    return {
+      title: useEnglish ? "Diaphragm Pump" : "隔膜泵",
+      description: useEnglish
+        ? "Continuous supply, washing, and waste handling"
+        : "连续供液、清洗与废液处理",
+    };
+  }
+
+  if (src.includes("pipetting-pump")) {
+    return {
+      title: useEnglish ? "Pipetting Pump" : "移液泵",
+      description: useEnglish
+        ? "Automated pipetting and dispensing"
+        : "自动化移液、加样与分液",
+    };
+  }
+
+  if (src.includes("piston-pump")) {
+    return {
+      title: useEnglish ? "Piston Pump" : "柱塞泵",
+      description: useEnglish
+        ? "Stable metering and repeatable transfer"
+        : "稳定计量与重复性液体输送",
+    };
+  }
+
+  if (src.includes("rotary-pump")) {
+    return {
+      title: useEnglish ? "Rotary Pump" : "旋转泵",
+      description: useEnglish
+        ? "Multi-channel switching and metering"
+        : "多通道液路切换与定量输送",
+    };
+  }
+
+  return {
+    title: useEnglish ? "Product" : "产品",
+    description: useEnglish
+      ? "Fluidic component for microfluidic systems"
+      : "用于微流体液路系统的核心部件",
+  };
+}
