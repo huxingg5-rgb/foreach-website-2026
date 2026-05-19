@@ -1644,6 +1644,59 @@ html[lang="ru"] .home-hero-btn:hover {
 }
 
 /* =========================================================
+   顶部导航：语言按钮文字下沿被裁剪修复
+   作用：
+   1. 解决 Language 里 g / y / p 这类下沿字母被裁剪的问题
+   2. 给语言按钮更多垂直空间
+   3. 保持按钮整体样式不变
+========================================================= */
+
+/* 语言按钮整体 */
+.site-header-language-button,
+.site-nav-language-button,
+.language-switch-trigger,
+.language-summary {
+  min-height: 52px !important;
+  padding: 0 22px !important;
+  
+  /* 不要裁剪内部文字 */
+  overflow: visible !important;
+
+  /* 垂直居中 */
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* 语言按钮文字 */
+.language-summary-label {
+  display: inline-block !important;
+
+  /* 关键：不要太小，否则 g 的下沿容易被切 */
+  line-height: 1.35 !important;
+
+  /* 不要写死太小的高度 */
+  height: auto !important;
+  
+  /* 不要让文字容器裁剪 */
+  overflow: visible !important;
+
+  /* 稍微向下调一点点，更稳 */
+  transform: translateY(1px) !important;
+
+  white-space: nowrap !important;
+}
+
+/* 语言按钮右侧小箭头，也一起对齐 */
+.language-summary-caret,
+.language-summary-arrow {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+}
+
+/* =========================================================
    首页第二屏：应用领域 × 核心部件
    对应组件：components/home/HomeApplicationFlowSection.tsx
 
@@ -5904,126 +5957,137 @@ html[lang="ru"] .home-hero-btn:hover {
   }
 }
 
-/* ================================
-   导航栏 Mega Menu 产品图片最终修正版
+/* =========================================================
+   顶部导航 Mega Menu：产品文字 hover 柔和动效版
+   放在 app/globals.css 最底部
+
    作用：
-   1. 解决泵类 5 张图片竖向堆叠的问题
-   2. 让 5 张产品图横向排列
-   3. 限制图片高度，避免撑高整个下拉菜单
-================================ */
+   1. 解决文字放大太僵硬的问题
+   2. 不改变 font-size，避免影响布局
+   3. 不改变 font-weight，避免字体突然跳动
+   4. 使用更柔和的缓动曲线
+   5. 图片仍然轻微放大
+========================================================= */
 
-/* 右侧产品卡片网格
-   说明：
-   当前左侧分类切换后，右侧通常只显示一个分类卡片
-   所以这里改成一列，让卡片占满右侧区域
-*/
-.site-nav-mega-placeholder-grid {
-  display: grid !important;
-  grid-template-columns: minmax(0, 1fr) !important;
-  gap: 18px !important;
-  width: 100% !important;
-  align-items: start !important;
+/* 产品链接本体：保持布局稳定 */
+.site-nav-product-clean-link {
+  overflow: visible !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  transform: none !important;
 }
 
-/* 单个产品卡片 */
-.site-nav-mega-placeholder {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: stretch !important;
-  justify-content: flex-start !important;
-  width: 100% !important;
-  min-height: 0 !important;
-  padding: 22px 24px !important;
-  overflow: hidden !important;
+/* 图片外层：允许图片放大，不裁剪 */
+.site-nav-product-clean-link > div:first-child {
+  overflow: visible !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
-/* 多张产品图外层
-   说明：
-   例如泵类有 5 张图，这里强制横向 5 列排列
-*/
+/* 图片默认状态 */
+.site-nav-product-clean-link > div:first-child img {
+  transform: scale(1) !important;
+  transform-origin: center center !important;
+  opacity: 0.96 !important;
+
+  transition:
+    transform 0.46s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.46s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.46s cubic-bezier(0.22, 1, 0.36, 1) !important;
+
+  will-change: transform;
+}
+
+/* 鼠标滑到产品：图片轻微放大 */
+.site-nav-product-clean-link:hover > div:first-child img {
+  transform: scale(1.06) !important;
+  opacity: 1 !important;
+  filter: saturate(1.08) contrast(1.04) !important;
+}
+
+/* 产品名称默认状态 */
+.site-nav-product-clean-link > strong {
+  display: block !important;
+
+  color: #173368 !important;
+  font-size: 15px !important;
+  line-height: 1.35 !important;
+
+  /*
+    关键：
+    字重固定，不要 hover 时突然变粗。
+    字重变化很容易显得僵硬。
+  */
+  font-weight: 700 !important;
+
+  text-align: center !important;
+
+  transform: scale(1) translateY(0) !important;
+  transform-origin: center center !important;
+
+  transition:
+    color 0.36s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+    letter-spacing 0.42s cubic-bezier(0.22, 1, 0.36, 1) !important;
+
+  will-change: transform;
+}
+
+/* 鼠标滑到产品：文字柔和放大 + 变色 */
+.site-nav-product-clean-link:hover > strong {
+  color: #09e9b4 !important;
+
+  /*
+    只轻微放大，不要太夸张。
+    1.04 比 1.08 柔和很多。
+  */
+  transform: scale(1.04) translateY(-1px) !important;
+
+  letter-spacing: 0.01em !important;
+
+  /*
+    保持字号不变，避免影响下面一行布局。
+  */
+  font-size: 15px !important;
+  font-weight: 700 !important;
+}
+
+/* 产品说明默认状态 */
+.site-nav-product-clean-link > span {
+  display: block !important;
+
+  color: rgba(6, 26, 58, 0.56) !important;
+  font-size: 13px !important;
+  line-height: 1.45 !important;
+
+  text-align: center !important;
+
+  transform: translateY(0) !important;
+  
+  transition:
+    color 0.36s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.36s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.36s cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+
+/* 鼠标滑到产品：说明文字轻微增强，不放大 */
+.site-nav-product-clean-link:hover > span {
+  color: rgba(6, 26, 58, 0.76) !important;
+  opacity: 1 !important;
+  transform: translateY(-1px) !important;
+
+  font-size: 13px !important;
+}
+
+/* 外层允许图片放大，不裁剪 */
+.site-nav-mega-placeholder,
+.site-nav-mega-placeholder-grid,
 .site-nav-mega-card-image-list {
-  display: grid !important;
-  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
-  gap: 12px !important;
-  width: 100% !important;
-  margin: 0 0 18px !important;
-  align-items: stretch !important;
+  overflow: visible !important;
 }
-
-/* 每张小图的外框 */
-.site-nav-mega-card-image-wrap {
-  position: relative !important;
-  width: 100% !important;
-  height: 118px !important;
-  overflow: hidden !important;
-  border-radius: 14px !important;
-  background: #f4f8fc !important;
-  border: 1px solid rgba(23, 51, 104, 0.08) !important;
-
-  /* 让图片在格子里居中 */
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-/* 多张小图里的图片 */
-.site-nav-mega-card-image {
-  width: 100% !important;
-  height: 100% !important;
-  max-width: 100% !important;
-  max-height: 100% !important;
-  object-fit: contain !important;
-  display: block !important;
-  position: static !important;
-  transition: transform 0.3s ease !important;
-}
-
-/* 单张主图外层
-   说明：
-   以后阀类、传感器等如果只放一张图，就使用这个样式
-*/
-.site-nav-mega-card-main-image-wrap {
-  width: 100% !important;
-  height: 160px !important;
-  margin-bottom: 18px !important;
-  overflow: hidden !important;
-  border-radius: 16px !important;
-  background: #f4f8fc !important;
-  border: 1px solid rgba(23, 51, 104, 0.08) !important;
-
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-/* 单张主图图片 */
-.site-nav-mega-card-main-image {
-  width: 100% !important;
-  height: 100% !important;
-  max-width: 100% !important;
-  max-height: 100% !important;
-  object-fit: contain !important;
-  display: block !important;
-  position: static !important;
-  transition: transform 0.3s ease !important;
-}
-
-/* 鼠标悬停时，图片轻微放大 */
-.site-nav-mega-placeholder:hover .site-nav-mega-card-image,
-.site-nav-mega-placeholder:hover .site-nav-mega-card-main-image {
-  transform: scale(1.04);
-}
-
-/* 产品卡片标题 */
-.site-nav-mega-card-title {
-  margin-top: 4px !important;
-}
-
-/* 产品卡片说明 */
-.site-nav-mega-card-label {
-  margin-top: 8px !important;
-}
-
+   
  /* =========================================================
    第四屏企业优势卡片：统一控制卡片内所有文字
    放在 app/globals.css 最底部
@@ -6621,3 +6685,4 @@ html[lang="ru"] .home-hero-btn:hover {
     opacity: 0.78 !important;
   }
 } 
+

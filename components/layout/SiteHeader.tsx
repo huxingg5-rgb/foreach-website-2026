@@ -492,10 +492,15 @@ export default function SiteHeader() {
               onClick={handleLanguageButtonClick}
               title={headerText.languageSwitchTitle}
             >
-              <span className="language-summary-label">
-                {headerText.currentLanguageLabel}
-              </span>
+{/* 
+  语言栏显示文字 
 
+  说明：
+  1. 这里固定显示英文单词 Language
+  2. 不再跟随当前页面语言变化
+  3. 下拉菜单里的具体语言选项仍然保持原来的多语言名称
+*/}
+<span className="language-summary-label">Language</span>
               <span className="language-summary-arrow" aria-hidden="true">
                 ▾
               </span>
