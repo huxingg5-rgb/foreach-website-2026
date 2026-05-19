@@ -1,378 +1,247 @@
-// components/home/HomeCompanyStrengthSection.tsx
-"use client";
+// 这是关于 components/home/HomeCompanyStrengthSection.tsx 的文件：用于管理首页第三屏公司介绍和第四屏企业优势模块
+// 这个文件的作用：负责公司介绍区域、公司视频组件、数据动画、资质轮播和企业优势卡片的整体结构
 
-// 首页第三 / 第四屏：公司介绍 + 企业优势
-//
-// 说明：
-// 1. 这个组件只负责页面结构、数字动画和内容渲染
-// 2. 具体文字、数据卡片、能力轮播、企业优势内容，统一从 data/home-company-strength.ts 读取
-// 3. 这样后续做多语言时，不需要在组件里到处找中文文字
-// 4. 样式继续使用 app/globals.css 中已有的 home-company-* 类名
+"use client"; // 这个组件需要数字动画、IntersectionObserver 和浏览器动画帧，所以必须是客户端组件
 
-import Link from "next/link"; // Next.js 站内跳转组件
-import { useEffect, useRef, useState } from "react";
+import Link from "next/link"; // 引入 Next.js 的 Link 组件，用于站内跳转
+import { useEffect, useRef, useState } from "react"; // 引入 React Hook，用于 DOM 引用、状态和副作用
 
-import {
-  getLocaleAnchorPath, // 多语言锚点路径，例如中文 /#contact，英文 /en#contact
-  type LocaleCode, // 官网语言类型
-} from "@/lib/i18n";
+import HomeCompanyVideo from "@/components/home/HomeCompanyVideo"; // 引入公司介绍视频组件
 
-import {
-  getHomeCompanyText, // 公司实力模块多语言读取函数
-  homeCompanyStrengthData, // 公司实力模块数据
-} from "@/data/home-company-strength";
+import { // 从 lib/i18n.ts 中引入多语言相关工具
+  getLocaleAnchorPath, // 根据当前语言生成锚点路径，例如中文 /#contact，英文 /en#contact
+  type LocaleCode, // 官网支持的语言代码类型
+} from "@/lib/i18n"; // 多语言工具文件路径
 
-/* ================================
-   组件参数类型
-================================ */
+import { // 从 data/home-company-strength.ts 中引入公司实力模块数据
+  getHomeCompanyText, // 公司实力模块多语言文字读取函数
+  homeCompanyStrengthData, // 公司实力模块本地数据
+} from "@/data/home-company-strength"; // 公司实力数据文件路径
 
-type HomeCompanyStrengthSectionProps = {
+type HomeCompanyStrengthSectionProps = { // 定义 HomeCompanyStrengthSection 组件接收的参数类型
   locale: LocaleCode; // 当前语言，例如 zh-CN / en / es / fr / ko / ru
-};
+}; // 组件参数类型定义结束
 
-/**
- * HomeCompanyStrengthSection
- * 首页第三屏 + 第四屏：公司介绍、能力数据、企业优势
- *
- * 页面结构：
- * 1. 第三屏：走进恒永达科技 / 公司介绍 / 数据卡片 / 能力轮播
- * 2. 第四屏：COMPANY STRENGTH / 企业优势卡片
- *
- * 多语言说明：
- * 1. 所有文字从 data/home-company-strength.ts 读取
- * 2. 如果某个语言没有写，会自动回退到中文
- */
-export default function HomeCompanyStrengthSection({
-  locale,
-}: HomeCompanyStrengthSectionProps) {
-  // 公司介绍区域数据
-  const aboutData = homeCompanyStrengthData.about;
+export default function HomeCompanyStrengthSection({ // 定义并导出首页公司实力组件
+  locale, // 接收当前语言
+}: HomeCompanyStrengthSectionProps) { // 组件参数定义结束
+  const aboutData = homeCompanyStrengthData.about; // 读取公司介绍区域数据
+  const metrics = homeCompanyStrengthData.metrics; // 读取公司数据卡片数据
+  const honors = homeCompanyStrengthData.honors; // 读取公司能力与资质轮播数据
+  const advantagesSection = homeCompanyStrengthData.advantagesSection; // 读取企业优势标题区数据
+  const advantages = homeCompanyStrengthData.advantages; // 读取企业优势卡片数据
 
-  // 公司数据卡片
-  const metrics = homeCompanyStrengthData.metrics;
+  const companyVideoSrc = "/images/home/foreach-company-intro.mp4"; // 公司介绍视频地址，后期可改为后端返回的视频 URL
+  const companyVideoPosterSrc = "/images/home/tv-foreach.png"; // 公司介绍视频封面地址，后期可改为后端返回的封面 URL
 
-  // 公司能力与资质轮播
-  const honors = homeCompanyStrengthData.honors;
+  const metricsGridRef = useRef<HTMLDivElement | null>(null); // 数据卡片区域 DOM 引用，用于判断是否进入视口
+  const animationFrameRef = useRef<number | null>(null); // requestAnimationFrame 的 id，用于组件卸载时取消动画
 
-  // 企业优势标题区
-  const advantagesSection = homeCompanyStrengthData.advantagesSection;
+  const [shouldAnimateMetrics, setShouldAnimateMetrics] = useState(false); // 是否开始数字计数动画
+  const [animatedMetricValues, setAnimatedMetricValues] = useState(() => // 当前动画中的数字值
+    metrics.map(() => 0), // 初始时每个数字都从 0 开始
+  ); // animatedMetricValues 状态定义结束
 
-  // 企业优势卡片
-  const advantages = homeCompanyStrengthData.advantages;
+  const contactHref = getLocaleAnchorPath(locale, "contact"); // 生成联系我们按钮链接，中文为 /#contact，英文为 /en#contact
 
-  // 数据卡片区域 DOM，用于判断是否进入视口
-  const metricsGridRef = useRef<HTMLDivElement | null>(null);
-  const companyVideoRef = useRef<HTMLVideoElement | null>(null);
+  useEffect(() => { // 监听数据卡片是否进入视口的副作用开始
+    const metricsGrid = metricsGridRef.current; // 获取数据卡片区域 DOM
 
-  // requestAnimationFrame 的 id，用于组件卸载时取消动画
-  const animationFrameRef = useRef<number | null>(null);
+    if (!metricsGrid) { // 如果数据卡片区域还没有渲染出来
+      return; // 直接结束，不继续创建 observer
+    } // DOM 存在判断结束
 
-  // 是否开始数字计数动画
-  const [shouldAnimateMetrics, setShouldAnimateMetrics] = useState(false);
-  const [isCompanyVideoPosterVisible, setIsCompanyVideoPosterVisible] =
-    useState(true);
+    const observer = new IntersectionObserver( // 创建 IntersectionObserver，用于监听元素是否进入视口
+      (entries) => { // observer 回调函数开始
+        if (entries.some((entry) => entry.isIntersecting)) { // 如果任意一个监听元素进入视口
+          setShouldAnimateMetrics(true); // 启动数据卡片数字动画
+          observer.disconnect(); // 动画只需要触发一次，触发后断开监听
+        } // 是否进入视口判断结束
+      }, // observer 回调函数结束
+      { // observer 配置开始
+        threshold: 0.28, // 元素进入约 28% 时触发
+      }, // observer 配置结束
+    ); // IntersectionObserver 创建结束
 
-  // 当前动画中的数字值
-  const [animatedMetricValues, setAnimatedMetricValues] = useState(() =>
-    metrics.map(() => 0),
-  );
+    observer.observe(metricsGrid); // 开始监听数据卡片区域
 
-  // 联系我们按钮链接
-  // 中文：/#contact
-  // 英文：/en#contact
-  const contactHref = getLocaleAnchorPath(locale, "contact");
+    return () => { // 组件卸载时执行清理函数
+      observer.disconnect(); // 断开 IntersectionObserver，避免内存泄漏
+    }; // 清理函数结束
+  }, []); // 只在组件首次挂载时执行一次
 
-function handleCompanyVideoPosterClick() {
-  const video = companyVideoRef.current;
+  useEffect(() => { // 数据卡片数字动画副作用开始
+    if (!shouldAnimateMetrics) { // 如果还没有触发动画
+      return; // 直接返回，不启动动画
+    } // 动画触发判断结束
 
-  setIsCompanyVideoPosterVisible(false);
+    const startedAt = performance.now(); // 记录动画开始时间
+    const duration = 1200; // 设置动画总时长，单位毫秒
 
-  if (video) {
-    video.controls = true;
-    void video.play();
-  }
-}
+    function easeOutCubic(progress: number) { // 定义缓动函数，让数字变化更自然
+      return 1 - Math.pow(1 - progress, 3); // 返回 easeOutCubic 计算结果
+    } // easeOutCubic 函数结束
 
-  /* ================================
-     监听数据卡片是否进入视口
+    function updateMetricValues(now: number) { // 定义每一帧更新数字的函数
+      const progress = Math.min((now - startedAt) / duration, 1); // 计算当前动画进度，并限制最大为 1
+      const easedProgress = easeOutCubic(progress); // 使用缓动函数处理动画进度
 
-     说明：
-     1. 进入视口后启动数字动画
-     2. 只触发一次，触发后 observer.disconnect()
-  ================================ */
+      setAnimatedMetricValues( // 更新当前显示的数据值
+        metrics.map((metric) => Math.round(metric.value * easedProgress)), // 根据动画进度计算每个数据卡片的当前数字
+      ); // setAnimatedMetricValues 更新结束
 
-  useEffect(() => {
-    const metricsGrid = metricsGridRef.current;
+      if (progress < 1) { // 如果动画还没结束
+        animationFrameRef.current = // 保存当前动画帧 id
+          window.requestAnimationFrame(updateMetricValues); // 请求下一帧继续更新数字
+      } // 动画是否结束判断结束
+    } // updateMetricValues 函数结束
 
-    if (!metricsGrid) {
-      return;
-    }
+    animationFrameRef.current = window.requestAnimationFrame(updateMetricValues); // 启动第一帧数字动画
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries.some((entry) => entry.isIntersecting)) {
-          setShouldAnimateMetrics(true);
-          observer.disconnect();
-        }
-      },
-      {
-        threshold: 0.28,
-      },
-    );
+    return () => { // 组件卸载或依赖变化时执行清理函数
+      if (animationFrameRef.current !== null) { // 如果存在未取消的动画帧
+        window.cancelAnimationFrame(animationFrameRef.current); // 取消动画帧，避免组件卸载后继续更新状态
+      } // animationFrameRef 判断结束
+    }; // 清理函数结束
+  }, [shouldAnimateMetrics, metrics]); // 当 shouldAnimateMetrics 或 metrics 变化时重新执行
 
-    observer.observe(metricsGrid);
+  return ( // 返回首页第三屏和第四屏结构
+    <> {/* Fragment 外层，不额外生成 DOM */}
+      <section className="home-company-about-section" id={aboutData.sectionId}> {/* 第三屏：公司介绍区域 */}
+        <div className="home-company-about-shell"> {/* 公司介绍区域内容外壳 */}
+          <div className="home-company-about-main"> {/* 公司介绍主要内容布局 */}
+            <div className="home-company-about-left"> {/* 左侧：标题 + 公司视频 */}
+              <h2 className="home-company-about-title"> {/* 公司介绍大标题 */}
+                {getHomeCompanyText(aboutData.title, locale)} {/* 公司介绍标题多语言文字 */}
 
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
+                <span>{getHomeCompanyText(aboutData.subtitle, locale)}</span> {/* 公司介绍副标题多语言文字 */}
+              </h2> {/* 公司介绍大标题结束 */}
 
-  /* ================================
-     数据卡片数字动画
+              <HomeCompanyVideo // 调用公司介绍视频组件
+                videoSrc={companyVideoSrc} // 传入公司介绍视频地址
+                posterSrc={companyVideoPosterSrc} // 传入公司介绍视频封面地址
+                videoAriaLabel={getHomeCompanyText(aboutData.videoAriaLabel, locale)} // 传入视频区域无障碍说明
+                videoPlayAriaLabel={getHomeCompanyText(aboutData.videoPlayAriaLabel, locale)} // 传入播放按钮无障碍说明
+                posterAlt={getHomeCompanyText(aboutData.videoAriaLabel, locale)} // 传入视频封面 alt 文案，暂时复用已有的视频说明文字
+              /> {/* 公司介绍视频组件结束 */} 
+            </div> {/* 左侧：标题 + 公司视频结束 */}
 
-     说明：
-     1. shouldAnimateMetrics 变为 true 后开始动画
-     2. 动画时长 1200ms
-     3. 使用 easeOutCubic，让数字变化更自然
-  ================================ */
+            <div className="home-company-about-right"> {/* 右侧：公司介绍 + 数据卡片 + 联系按钮 */}
+              <h3 className="home-company-intro-title"> {/* 公司介绍小标题 */}
+                {getHomeCompanyText(aboutData.introTitle, locale)} {/* 公司介绍小标题多语言文字 */}
+              </h3> {/* 公司介绍小标题结束 */}
 
-  useEffect(() => {
-    if (!shouldAnimateMetrics) {
-      return;
-    }
+              <p className="home-company-intro-desc"> {/* 公司介绍描述 */}
+                {getHomeCompanyText(homeCompanyStrengthData.about.introDescription, locale)} {/* 公司介绍描述多语言文字 */}
+              </p> {/* 公司介绍描述结束 */}
 
-    const startedAt = performance.now();
-    const duration = 1200;
+              <div // 数据卡片网格开始
+                ref={metricsGridRef} // 绑定数据卡片 DOM 引用
+                className={ // 根据是否正在计数决定 class
+                  shouldAnimateMetrics // 判断数字动画是否开始
+                    ? "home-company-metrics-grid is-counting" // 动画开始时增加 is-counting
+                    : "home-company-metrics-grid" // 默认数据卡片网格 class
+                } // className 判断结束
+              > {/* 数据卡片网格开始标签结束 */}
+                {metrics.map((metric, index) => ( // 遍历公司数据卡片 */}
+                  <div className="home-company-metric-card" key={metric.key}> {/* 单个数据卡片 */}
+                    <strong> {/* 数据数字区域 */}
+                      <span className="home-metric-number"> {/* 数字本体 */}
+                        {animatedMetricValues[index]} {/* 当前动画数字 */}
+                      </span> {/* 数字本体结束 */}
 
-    function easeOutCubic(progress: number) {
-      return 1 - Math.pow(1 - progress, 3);
-    }
+                      <span className="home-metric-suffix"> {/* 数字后缀 */}
+                        {getHomeCompanyText(metric.suffix, locale)} {/* 数字后缀多语言文字 */}
+                      </span> {/* 数字后缀结束 */}
+                    </strong> {/* 数据数字区域结束 */}
 
-    function updateMetricValues(now: number) {
-      const progress = Math.min((now - startedAt) / duration, 1);
-      const easedProgress = easeOutCubic(progress);
+                    <span>{getHomeCompanyText(metric.label, locale)}</span> {/* 数据说明文字 */}
+                  </div> // 单个数据卡片结束
+                ))} {/* 公司数据卡片遍历结束 */}
+              </div> {/* 数据卡片网格结束 */}
 
-      setAnimatedMetricValues(
-        metrics.map((metric) => Math.round(metric.value * easedProgress)),
-      );
+              <div className="home-company-about-actions"> {/* 公司介绍按钮区域 */}
+                <Link className="home-company-primary-btn" href={contactHref}> {/* 联系我们按钮 */}
+                  {getHomeCompanyText(aboutData.contactButton, locale)} {/* 联系我们按钮多语言文字 */}
+                </Link> {/* 联系我们按钮结束 */}
+              </div> {/* 公司介绍按钮区域结束 */}
+            </div> {/* 右侧：公司介绍 + 数据卡片 + 联系按钮结束 */}
+          </div> {/* 公司介绍主要内容布局结束 */}
 
-      if (progress < 1) {
-        animationFrameRef.current =
-          window.requestAnimationFrame(updateMetricValues);
-      }
-    }
+          <div // 公司能力与资质轮播区域开始
+            className="home-honor-carousel-section" // 公司能力与资质轮播区域 class
+            aria-label={getHomeCompanyText( // 公司能力与资质轮播无障碍说明
+              homeCompanyStrengthData.honorsAriaLabel, // 读取轮播无障碍文案
+              locale, // 当前语言
+            )} // aria-label 结束
+          > {/* 公司能力与资质轮播区域开始标签结束 */}
+            <div className="home-honor-carousel-mask"> {/* 轮播遮罩容器 */}
+              <div className="home-honor-track"> {/* 轮播轨道 */}
+                {[...honors, ...honors].map((honor, index) => ( // 复制两份 honors，形成无缝轮播 */}
+                  <div // 单个资质卡片开始
+                    className="home-honor-card" // 资质卡片 class
+                    key={`${honor.key}-${index}`} // React 列表 key
+                  > {/* 单个资质卡片开始标签结束 */}
+                    <div className="home-honor-image" aria-hidden="true" /> {/* 资质卡片图片占位 */}
 
-    animationFrameRef.current = window.requestAnimationFrame(updateMetricValues);
+                    <strong>{getHomeCompanyText(honor.title, locale)}</strong> {/* 资质卡片标题 */}
+                  </div> // 单个资质卡片结束
+                ))} {/* 资质卡片遍历结束 */}
+              </div> {/* 轮播轨道结束 */}
+            </div> {/* 轮播遮罩容器结束 */}
+          </div> {/* 公司能力与资质轮播区域结束 */}
+        </div> {/* 公司介绍区域内容外壳结束 */}
+      </section> {/* 第三屏：公司介绍区域结束 */}
 
-    return () => {
-      if (animationFrameRef.current !== null) {
-        window.cancelAnimationFrame(animationFrameRef.current);
-      }
-    };
-  }, [shouldAnimateMetrics, metrics]);
+      <section // 第四屏：企业优势区域开始
+        className="home-company-advantages-section" // 企业优势区域 class
+        aria-labelledby="advantages-title" // 绑定标题 id，提升无障碍语义
+      > {/* 第四屏：企业优势区域开始标签结束 */}
+        <div className="home-advantages-head"> {/* 企业优势标题区域 */}
+          <p className="home-advantages-kicker"> {/* 企业优势小标签 */}
+            {getHomeCompanyText(advantagesSection.kicker, locale)} {/* 企业优势小标签多语言文字 */}
+          </p> {/* 企业优势小标签结束 */}
 
-  return (
-    <>
-      {/* ================================
-          第三屏：公司介绍区域
-      ================================ */}
-      <section className="home-company-about-section" id={aboutData.sectionId}>
-        <div className="home-company-about-shell">
-          <div className="home-company-about-main">
-            {/* 左侧：标题 + 视频占位 */}
-            <div className="home-company-about-left">
-              <h2 className="home-company-about-title">
-                {getHomeCompanyText(aboutData.title, locale)}
+          <h2 className="home-advantages-title" id="advantages-title"> {/* 企业优势主标题 */}
+            {getHomeCompanyText(advantagesSection.title, locale)} {/* 企业优势主标题多语言文字 */}
+          </h2> {/* 企业优势主标题结束 */}
 
-                <span>{getHomeCompanyText(aboutData.subtitle, locale)}</span>
-              </h2>
+          <p className="home-advantages-desc"> {/* 企业优势描述 */}
+            {getHomeCompanyText(advantagesSection.description, locale)} {/* 企业优势描述多语言文字 */}
+          </p> {/* 企业优势描述结束 */}
+        </div> {/* 企业优势标题区域结束 */}
 
-<div
-  className="home-company-video-wrap"
-  aria-label={getHomeCompanyText(aboutData.videoAriaLabel, locale)}
->
-  {/* 
-    公司介绍视频
+        <div className="home-advantage-panels"> {/* 企业优势卡片区域 */}
+          {advantages.map((advantage) => ( // 遍历企业优势卡片
+            <article // 单个企业优势卡片开始
+              className={`home-advantage-panel ${advantage.className}`} // 拼接企业优势卡片 class
+              key={advantage.key} // React 列表 key
+            > {/* 单个企业优势卡片开始标签结束 */}
+              <div className="home-panel-content"> {/* 企业优势卡片内容容器 */}
+                <span className="home-panel-index">{advantage.index}</span> {/* 企业优势编号 */}
 
-    说明：
-    1. controls={false}：未点击前不显示浏览器自带控制条
-    2. 点击封面后，隐藏封面，并通过 JS 播放视频
-    3. poster 可以保留，但真正固定封面靠下面的 img
-    4. preload="metadata"：只加载视频基础信息，不让首页太重
-  */}
-  <video
-    ref={companyVideoRef}
-    className="home-company-video-media"
-    src="/images/home/foreach-company-intro.mp4"
-    poster="/images/home/tv-foreach.png"
-    controls={!isCompanyVideoPosterVisible}
-    preload="metadata"
-    playsInline
-    onPlay={() => setIsCompanyVideoPosterVisible(false)}
-    onPlaying={() => setIsCompanyVideoPosterVisible(false)}
-    onEnded={() => setIsCompanyVideoPosterVisible(true)}
-    onPause={(event) => {
-      /*
-        只有视频回到开头时，才重新显示封面。
-        如果用户只是暂停在中间，不要把封面盖回来。
-      */
-      if (event.currentTarget.currentTime <= 0.1) {
-        setIsCompanyVideoPosterVisible(true);
-      }
-    }}
-  >
-    当前浏览器不支持视频播放。
-  </video>
+                <h3 className="home-panel-title"> {/* 企业优势标题 */}
+                  {getHomeCompanyText(advantage.title, locale)} {/* 企业优势标题多语言文字 */}
+                </h3> {/* 企业优势标题结束 */}
 
-  {/* 
-    固定封面层
+                <span className="home-panel-line" /> {/* 企业优势卡片装饰线 */}
 
-    说明：
-    1. 未播放前显示
-    2. 点击后隐藏
-    3. 这里是真正固定封面的关键，不再只依赖 video 的 poster
-  */}
-  {isCompanyVideoPosterVisible && (
-    <button
-      className="home-company-video-poster-button"
-      type="button"
-      aria-label={getHomeCompanyText(aboutData.videoPlayAriaLabel, locale)}
-      onClick={handleCompanyVideoPosterClick}
-    >
-      <img
-        className="home-company-video-poster-image"
-        src="/images/home/tv-foreach.png"
-        alt="恒永达公司宣传片封面"
-      />
+                <p className="home-panel-brief"> {/* 企业优势简短说明 */}
+                  {getHomeCompanyText(advantage.brief, locale)} {/* 企业优势简短说明多语言文字 */}
+                </p> {/* 企业优势简短说明结束 */}
 
-      <span className="home-company-video-play" aria-hidden="true" />
-    </button>
-  )}
-</div>
+                <p className="home-panel-detail"> {/* 企业优势详细说明 */}
+                  {getHomeCompanyText(advantage.detail, locale)} {/* 企业优势详细说明多语言文字 */}
+                </p> {/* 企业优势详细说明结束 */}
 
-            </div>
-
-            {/* 右侧：公司介绍 + 数据卡片 + 联系按钮 */}
-            <div className="home-company-about-right">
-              <h3 className="home-company-intro-title">
-                {getHomeCompanyText(aboutData.introTitle, locale)}
-              </h3>
-
-<p className="home-company-intro-desc">
-  {getHomeCompanyText(homeCompanyStrengthData.about.introDescription, locale)}
-</p>
-
-              <div
-                ref={metricsGridRef}
-                className={
-                  shouldAnimateMetrics
-                    ? "home-company-metrics-grid is-counting"
-                    : "home-company-metrics-grid"
-                }
-              >
-                {metrics.map((metric, index) => (
-                  <div className="home-company-metric-card" key={metric.key}>
-                    <strong>
-                      <span className="home-metric-number">
-                        {animatedMetricValues[index]}
-                      </span>
-
-                      <span className="home-metric-suffix">
-                        {getHomeCompanyText(metric.suffix, locale)}
-                      </span>
-                    </strong>
-
-                    <span>{getHomeCompanyText(metric.label, locale)}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="home-company-about-actions">
-                <Link className="home-company-primary-btn" href={contactHref}>
-                  {getHomeCompanyText(aboutData.contactButton, locale)}
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          {/* 公司能力与资质轮播 */}
-          <div
-            className="home-honor-carousel-section"
-            aria-label={getHomeCompanyText(
-              homeCompanyStrengthData.honorsAriaLabel,
-              locale,
-            )}
-          >
-            <div className="home-honor-carousel-mask">
-              <div className="home-honor-track">
-                {[...honors, ...honors].map((honor, index) => (
-                  <div
-                    className="home-honor-card"
-                    key={`${honor.key}-${index}`}
-                  >
-                    <div className="home-honor-image" aria-hidden="true" />
-
-                    <strong>{getHomeCompanyText(honor.title, locale)}</strong>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ================================
-          第四屏：企业优势区域
-      ================================ */}
-      <section
-        className="home-company-advantages-section"
-        aria-labelledby="advantages-title"
-      >
-        <div className="home-advantages-head">
-          <p className="home-advantages-kicker">
-            {getHomeCompanyText(advantagesSection.kicker, locale)}
-          </p>
-
-          <h2 className="home-advantages-title" id="advantages-title">
-            {getHomeCompanyText(advantagesSection.title, locale)}
-          </h2>
-
-          <p className="home-advantages-desc">
-            {getHomeCompanyText(advantagesSection.description, locale)}
-          </p>
-        </div>
-
-        <div className="home-advantage-panels">
-          {advantages.map((advantage) => (
-            <article
-              className={`home-advantage-panel ${advantage.className}`}
-              key={advantage.key}
-            >
-              <div className="home-panel-content">
-                <span className="home-panel-index">{advantage.index}</span>
-
-                <h3 className="home-panel-title">
-                  {getHomeCompanyText(advantage.title, locale)}
-                </h3>
-
-                <span className="home-panel-line" />
-
-                <p className="home-panel-brief">
-                  {getHomeCompanyText(advantage.brief, locale)}
-                </p>
-
-                <p className="home-panel-detail">
-                  {getHomeCompanyText(advantage.detail, locale)}
-                </p>
-
-                <span className="home-panel-arrow" aria-hidden="true">
-                  →
-                </span>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-    </>
-  );
-}
+                <span className="home-panel-arrow" aria-hidden="true"> {/* 企业优势卡片箭头 */}
+                  → {/* 箭头符号 */}
+                </span> {/* 企业优势卡片箭头结束 */}
+              </div> {/* 企业优势卡片内容容器结束 */}
+            </article> // 单个企业优势卡片结束
+          ))} {/* 企业优势卡片遍历结束 */}
+        </div> {/* 企业优势卡片区域结束 */}
+      </section> {/* 第四屏：企业优势区域结束 */}
+    </> // Fragment 外层结束
+  ); // 返回首页第三屏和第四屏结构结束
+} // HomeCompanyStrengthSection 组件结束
