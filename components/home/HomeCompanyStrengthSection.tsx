@@ -26,13 +26,11 @@ export default function HomeCompanyStrengthSection({ // 定义并导出首页公
   locale, // 接收当前语言
 }: HomeCompanyStrengthSectionProps) { // 组件参数定义结束
   const aboutData = homeCompanyStrengthData.about; // 读取公司介绍区域数据
+  const companyVideoData = aboutData.video; // 读取公司介绍视频数据，后期可由后端接口返回
   const metrics = homeCompanyStrengthData.metrics; // 读取公司数据卡片数据
   const honors = homeCompanyStrengthData.honors; // 读取公司能力与资质轮播数据
   const advantagesSection = homeCompanyStrengthData.advantagesSection; // 读取企业优势标题区数据
   const advantages = homeCompanyStrengthData.advantages; // 读取企业优势卡片数据
-
-  const companyVideoSrc = "/images/home/foreach-company-intro.mp4"; // 公司介绍视频地址，后期可改为后端返回的视频 URL
-  const companyVideoPosterSrc = "/images/home/tv-foreach.png"; // 公司介绍视频封面地址，后期可改为后端返回的封面 URL
 
   const metricsGridRef = useRef<HTMLDivElement | null>(null); // 数据卡片区域 DOM 引用，用于判断是否进入视口
   const animationFrameRef = useRef<number | null>(null); // requestAnimationFrame 的 id，用于组件卸载时取消动画
@@ -117,13 +115,13 @@ export default function HomeCompanyStrengthSection({ // 定义并导出首页公
                 <span>{getHomeCompanyText(aboutData.subtitle, locale)}</span> {/* 公司介绍副标题多语言文字 */}
               </h2> {/* 公司介绍大标题结束 */}
 
-              <HomeCompanyVideo // 调用公司介绍视频组件
-                videoSrc={companyVideoSrc} // 传入公司介绍视频地址
-                posterSrc={companyVideoPosterSrc} // 传入公司介绍视频封面地址
-                videoAriaLabel={getHomeCompanyText(aboutData.videoAriaLabel, locale)} // 传入视频区域无障碍说明
-                videoPlayAriaLabel={getHomeCompanyText(aboutData.videoPlayAriaLabel, locale)} // 传入播放按钮无障碍说明
-                posterAlt={getHomeCompanyText(aboutData.videoAriaLabel, locale)} // 传入视频封面 alt 文案，暂时复用已有的视频说明文字
-              /> {/* 公司介绍视频组件结束 */} 
+<HomeCompanyVideo
+  videoSrc={companyVideoData.src} // 传入公司介绍视频地址，现在从 data/home-company-strength.ts 读取
+  posterSrc={companyVideoData.posterSrc} // 传入公司介绍视频封面地址，现在从 data/home-company-strength.ts 读取
+  videoAriaLabel={getHomeCompanyText(aboutData.videoAriaLabel, locale)} // 传入视频区域无障碍说明
+  videoPlayAriaLabel={getHomeCompanyText(aboutData.videoPlayAriaLabel, locale)} // 传入播放按钮无障碍说明
+  posterAlt={getHomeCompanyText(companyVideoData.posterAlt, locale)} // 传入视频封面 alt 文案，现在从 video.posterAlt 读取
+/>
             </div> {/* 左侧：标题 + 公司视频结束 */}
 
             <div className="home-company-about-right"> {/* 右侧：公司介绍 + 数据卡片 + 联系按钮 */}

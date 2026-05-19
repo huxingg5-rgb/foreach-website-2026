@@ -101,6 +101,19 @@ export const homeCompanyStrengthData = {
       ru: "Воспроизвести видео компании",
     },
 
+    video: { // 公司介绍视频数据，后期可以整体替换为后端接口返回的数据
+  src: "/images/home/foreach-company-intro.mp4", // 公司介绍视频地址，当前使用 public 目录下的本地视频
+  posterSrc: "/images/home/tv-foreach.png", // 公司介绍视频封面地址，当前使用 public 目录下的本地图片
+  posterAlt: { // 公司介绍视频封面图片 alt 文案，方便 SEO 和无障碍识别
+    "zh-CN": "恒永达科技公司介绍视频封面", // 中文封面 alt 文案
+    en: "FOREACH Technology company introduction video cover", // 英文封面 alt 文案
+    es: "Portada del video de presentación de FOREACH Technology", // 西班牙语封面 alt 文案
+    fr: "Couverture de la vidéo de présentation de FOREACH Technology", // 法语封面 alt 文案
+    ko: "FOREACH Technology 회사 소개 영상 커버", // 韩语封面 alt 文案
+    ru: "Обложка видео о компании FOREACH Technology", // 俄语封面 alt 文案
+  }, // posterAlt 结束
+}, // video 数据结束
+
     introTitle: {
       "zh-CN": "公司介绍",
       en: "Company Profile",
