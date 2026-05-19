@@ -915,3 +915,16 @@ export const homeApplicationFlowData = {
 export function getHomeFlowText(text: HomeFlowText, locale: LocaleCode) {
   return text[locale] || text["zh-CN"] || text.en || "";
 }
+
+/* ================================
+   首页第二屏后端接口路径
+
+   说明：
+   1. 当前第一阶段默认使用本地 data 数据
+   2. 后期如果开启后端接口，可以通过这个函数生成请求地址
+   3. HomeApplicationFlowSection.tsx 会调用这个函数，而不是把接口地址写死在组件里
+================================ */
+
+export function getHomeApplicationFlowApiPath(locale: LocaleCode) { // 定义首页第二屏后端接口路径生成函数
+  return `/api/home/application-flow?locale=${encodeURIComponent(locale)}`; // 根据当前语言生成接口地址，并对语言参数做安全编码
+} // getHomeApplicationFlowApiPath 函数结束
