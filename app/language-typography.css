@@ -1157,3 +1157,180 @@ body .site-page--expanded .site-footer__contact {
     font-size: 17px;
   }
 }
+
+/* =========================================================
+   俄语页面｜统一字符间距控制
+   说明：
+   1. 只控制俄语字符之间的间距
+   2. 不调整字号
+   3. 不改变页面布局宽度
+   4. 主要解决俄语文字看起来过挤或过散的问题
+========================================================= */
+
+/* 俄语全站基础字符间距 */
+html[lang="ru"] {
+  --ru-letter-spacing-normal: 0.01em;
+  --ru-letter-spacing-title: 0.015em;
+  --ru-letter-spacing-nav: 0;
+}
+
+/* 普通正文、列表、链接、按钮 */
+html[lang="ru"] p,
+html[lang="ru"] li,
+html[lang="ru"] a,
+html[lang="ru"] span,
+html[lang="ru"] button {
+  letter-spacing: var(--ru-letter-spacing-normal);
+}
+
+/* 标题文字 */
+html[lang="ru"] h1,
+html[lang="ru"] h2,
+html[lang="ru"] h3,
+html[lang="ru"] h4 {
+  letter-spacing: var(--ru-letter-spacing-title);
+}
+
+/* 顶部导航文字
+   说明：
+   俄语导航词较长，所以导航不要加字距
+*/
+html[lang="ru"] .site-header a,
+html[lang="ru"] .site-header button,
+html[lang="ru"] .nav-list a,
+html[lang="ru"] .site-nav a {
+  letter-spacing: var(--ru-letter-spacing-nav);
+}
+
+/* 发展历程页面 Banner 标语 */
+html[lang="ru"] .about-history-inner-banner p {
+  letter-spacing: 0.02em;
+}
+
+/* 发展历程页面标题 */
+html[lang="ru"] .about-history-page-title h1 { 
+  letter-spacing: 0.02em;
+}
+
+/* 发展历程时间轴正文 */
+html[lang="ru"] .about-history-list li {
+  letter-spacing: 0.01em;
+}
+
+/* 关于恒永达页面 */
+html[lang="ru"] .about-foreach-page {
+  letter-spacing: 0.01em;
+}
+
+/* 企业文化页面 */
+html[lang="ru"] .about-culture-page {
+  letter-spacing: 0.01em;
+}
+
+/* =========================================================
+   英文 / 西班牙语 / 法语页面｜统一字符间距控制
+   说明：
+   1. 只控制字符之间的间距
+   2. 不调整字体大小
+   3. 不改变页面布局宽度
+   4. 顶部导航不加大字距，避免文字过长撑开
+========================================================= */
+
+/* 英文页面 */
+html[lang="en"] {
+  --en-letter-spacing-normal: 0.01em;
+  --en-letter-spacing-title: 0.02em;
+  --en-letter-spacing-nav: 0;
+}
+
+/* 西班牙语页面 */
+html[lang="es"] {
+  --es-letter-spacing-normal: 0.005em;
+  --es-letter-spacing-title: 0.015em;
+  --es-letter-spacing-nav: 0;
+}
+
+/* 法语页面 */
+html[lang="fr"] {
+  --fr-letter-spacing-normal: 0.005em;
+  --fr-letter-spacing-title: 0.015em;
+  --fr-letter-spacing-nav: 0;
+}
+
+/* ================================
+   英文字符间距
+================================ */
+
+html[lang="en"] p,
+html[lang="en"] li,
+html[lang="en"] a,
+html[lang="en"] span,
+html[lang="en"] button {
+  letter-spacing: var(--en-letter-spacing-normal);
+}
+
+html[lang="en"] h1,
+html[lang="en"] h2,
+html[lang="en"] h3,
+html[lang="en"] h4 {
+  letter-spacing: var(--en-letter-spacing-title);
+}
+
+html[lang="en"] .site-header a,
+html[lang="en"] .site-header button,
+html[lang="en"] .nav-list a,
+html[lang="en"] .site-nav a {
+  letter-spacing: var(--en-letter-spacing-nav);
+}
+
+/* ================================
+   西班牙语字符间距
+================================ */
+
+html[lang="es"] p,
+html[lang="es"] li,
+html[lang="es"] a,
+html[lang="es"] span,
+html[lang="es"] button {
+  letter-spacing: var(--es-letter-spacing-normal);
+}
+
+html[lang="es"] h1,
+html[lang="es"] h2,
+html[lang="es"] h3,
+html[lang="es"] h4 {
+  letter-spacing: var(--es-letter-spacing-title);
+}
+
+html[lang="es"] .site-header a,
+html[lang="es"] .site-header button,
+html[lang="es"] .nav-list a,
+html[lang="es"] .site-nav a {
+  letter-spacing: var(--es-letter-spacing-nav);
+}
+
+/* ================================
+   法语字符间距
+================================ */
+
+html[lang="fr"] p,
+html[lang="fr"] li,
+html[lang="fr"] a,
+html[lang="fr"] span,
+html[lang="fr"] button {
+  letter-spacing: var(--fr-letter-spacing-normal);
+}
+
+html[lang="fr"] h1,
+html[lang="fr"] h2,
+html[lang="fr"] h3,
+html[lang="fr"] h4 {
+  letter-spacing: var(--fr-letter-spacing-title);
+}
+
+html[lang="fr"] .site-header a,
+html[lang="fr"] .site-header button,
+html[lang="fr"] .nav-list a,
+html[lang="fr"] .site-nav a {
+  letter-spacing: var(--fr-letter-spacing-nav);
+} 

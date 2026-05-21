@@ -40,8 +40,6 @@ export default function HomePageContent({ locale }: HomePageContentProps) { // �
 
       </main> {/* 首页主体内容区域结束 */}
 
-      {/* 网站底部 Footer */}
-      <SiteFooter locale={locale} /> {/* 调用网站底部组件，并把当前语言传进去 */}
     </div> // 首页最外层容器结束
   ); // 返回首页完整页面结构结束
-} // HomePageContent 组件结束
+} // HomePageContent 组件结束  

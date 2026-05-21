@@ -11519,3 +11519,1653 @@ html[lang="ru"] .home-hero-btn:hover {
 .about-foreach-honor-a4-card h4 {
   color: #173368;
 }
+
+/* =========================================================
+   关于我们｜发展历程页面样式
+   路径：/about/history
+
+   设计说明：
+   1. 参考亚辉龙发展历程截图的中轴左右交错结构
+   2. 使用恒永达品牌色：深蓝 #173368，荧光青 #09e9b4
+   3. PC 端图片与文字左右交错
+   4. 手机端统一为年份文字在上、图片在下
+   5. 图片使用 aspect-ratio，缩放时不变形
+   6. 不使用卡片阴影，不使用圆角
+========================================================= */
+
+.about-history-page {
+  background: #f3f3f3; 
+
+  /* 复用企业文化面包屑时需要的变量 */
+  --culture-blue: #173368;
+  --culture-line: rgba(23, 51, 104, 0.12);
+}
+
+/* 页面标题 */
+.about-history-page-title {
+  padding: 64px 20px 36px;
+  text-align: center;
+  background: #ffffff;
+}
+
+.about-history-page-title h1 {
+  color: #173368;  
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+  
+.about-history-page-title h1 span {
+  margin-left: 14px; 
+  color: #173368; 
+}
+
+.about-history-title-line {
+  width: 46px;
+  height: 3px;
+  margin: 18px auto 0;
+  background: #09e9b4;
+}
+  
+/* 时间轴外层 */
+.about-history-section {
+  position: relative;
+  padding: 52px 0 110px;
+  background: #f3f3f3;
+}
+
+.about-history-container {
+  position: relative;
+  width: min(1500px, calc(100% - 80px));
+  margin: 0 auto;
+}
+
+/* 中间竖线：恒永达深蓝色 */
+.about-history-center-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 2px;
+  background: #173368;
+  transform: translateX(-50%);
+}
+
+/* 单个年份行 */
+.about-history-row {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  min-height: 500px;
+}
+
+/* 左右区域 */
+.about-history-col {
+  width: 100%;
+}
+
+.about-history-col--left {
+  padding-right: 72px;
+}
+
+.about-history-col--right {
+  padding-left: 72px;
+}
+
+/* 反向行：左文右图 */
+.about-history-row--reverse .about-history-text {
+  margin-left: auto;
+  text-align: right;
+}
+
+/* 中间圆点 */
+.about-history-node {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 4;
+  width: 34px;
+  height: 34px;
+  border: 4px solid #173368;
+  border-radius: 50%;
+  background: #f3f3f3;
+  transform: translate(-50%, -50%);
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+/* hover 后内部荧光青实心圆 */
+.about-history-node::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #09e9b4;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.25s ease;
+}
+
+/* 鼠标放在图片或文字上，圆点内部出现 */
+.about-history-row:has(.about-history-image:hover) .about-history-node::before,
+.about-history-row:has(.about-history-text:hover) .about-history-node::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* 图片区域
+   说明：
+   1. background-image 在组件内通过 style 设置
+   2. aspect-ratio 保证图片在 PC 和手机端都不变形
+*/
+.about-history-image {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* 初始进入状态 */
+  opacity: 0;
+  transform: translate3d(-44px, 32px, 0) scale(1);
+  transition:
+    opacity 0.72s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.72s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.28s ease;
+  will-change: transform, opacity;
+}
+
+/* 右侧图片从右下进入 */
+.about-history-row--reverse .about-history-image {
+  transform: translate3d(44px, 32px, 0) scale(1);
+}
+
+/* 图片进入屏幕后显示 */
+.about-history-row.is-visible .about-history-image {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+/* 图片 hover 放大 */
+.about-history-row.is-visible .about-history-image:hover,
+.about-history-row.is-visible:has(.about-history-text:hover) .about-history-image {
+  z-index: 5;
+  filter: brightness(1.06) saturate(1.04);
+  transform: translate3d(0, 0, 0) scale(1.035);
+}
+
+/* 文字区域 */
+.about-history-text {
+  max-width: 560px;
+
+  /* 初始进入状态 */
+  opacity: 0;
+  transform: translate3d(44px, 32px, 0);
+  transition:
+    opacity 0.72s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.72s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity;
+}
+
+/* 左侧文字从左下进入 */
+.about-history-row--reverse .about-history-text {
+  transform: translate3d(-44px, 32px, 0);
+}
+
+/* 文字进入屏幕后显示 */
+.about-history-row.is-visible .about-history-text {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* 文字 hover 轻微上移 */
+.about-history-row.is-visible .about-history-text:hover {
+  transform: translate3d(0, -6px, 0);
+}
+
+.about-history-year {
+  margin-bottom: 14px;
+  color: #222222;
+  font-size: 42px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.about-history-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.about-history-list li {
+  margin-bottom: 8px;
+  color: #555555;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.about-history-list li:last-child {
+  margin-bottom: 0;
+}
+
+.about-history-text:hover .about-history-year {
+  color: #173368;
+}
+
+.about-history-text:hover .about-history-list li {
+  color: #333333;
+}
+
+/* =========================================================
+   中等屏幕适配
+========================================================= */
+@media (max-width: 1200px) {
+  .about-history-container {
+    width: min(100%, calc(100% - 40px));
+  }
+
+  .about-history-col--left,
+  .about-history-col--right {
+    padding-left: 42px;
+    padding-right: 42px;
+  }
+
+  .about-history-year {
+    font-size: 34px;
+  }
+
+  .about-history-list li {
+    font-size: 16px;
+  }
+}
+
+/* =========================================================
+   手机端适配
+   重点：
+   1. 图片不变形
+   2. 圆点一直对应年份文字
+   3. 统一为文字在上、图片在下
+========================================================= */
+@media (max-width: 860px) {
+  .about-history-page-title {
+    padding: 48px 16px 28px;
+  }
+
+  .about-history-page-title h1 {
+    font-size: 30px;
+  }
+
+  .about-history-section {
+    padding: 26px 0 64px;
+  }
+
+  .about-history-container {
+    width: calc(100% - 24px);
+  }
+
+  .about-history-center-line {
+    left: 26px;
+    transform: none;
+  }
+
+  .about-history-row,
+  .about-history-row--reverse {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+    padding-left: 58px;
+    margin-bottom: 52px;
+  }
+
+  .about-history-row:last-child {
+    margin-bottom: 0;
+  }
+
+  /* 手机端中轴圆点对准年份 */
+  .about-history-node {
+    left: 28px;
+    top: 4px;
+    transform: translate(-50%, 0);
+  }
+
+  .about-history-col--left,
+  .about-history-col--right {
+    padding: 0;
+    margin-top: 0;
+  }
+
+  /* 默认行：右侧是文字，所以手机端右侧先显示 */
+  .about-history-row:not(.about-history-row--reverse) .about-history-col--right {
+    order: 1;
+  }
+
+  .about-history-row:not(.about-history-row--reverse) .about-history-col--left {
+    order: 2;
+    margin-top: 18px;
+  }
+
+  /* 反向行：左侧是文字，所以手机端左侧先显示 */
+  .about-history-row--reverse .about-history-col--left {
+    order: 1;
+  }
+
+  .about-history-row--reverse .about-history-col--right {
+    order: 2;
+    margin-top: 18px;
+  }
+
+  .about-history-text,
+  .about-history-row--reverse .about-history-text {
+    max-width: none;
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .about-history-image,
+  .about-history-row--reverse .about-history-image,
+  .about-history-text,
+  .about-history-row--reverse .about-history-text {
+    transform: translate3d(0, 28px, 0);
+  }
+
+  .about-history-row.is-visible .about-history-image,
+  .about-history-row.is-visible .about-history-text {
+    transform: translate3d(0, 0, 0);
+  }
+
+  .about-history-row.is-visible .about-history-image:hover,
+  .about-history-row.is-visible:has(.about-history-text:hover) .about-history-image {
+    transform: translate3d(0, 0, 0) scale(1.025);
+  }
+
+  .about-history-year {
+    font-size: 28px;
+  }
+
+  .about-history-list li {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+}  
+
+/* =========================================================
+   关于我们｜发展历程小 Banner
+   页面：/about/history
+
+   说明：
+   1. 图片路径不写死在 CSS 里
+   2. 图片路径由 page.tsx 通过 --history-banner-image 传入
+   3. CSS 只负责视觉样式、遮罩、文字排版
+========================================================= */
+
+.about-history-inner-banner {
+  position: relative;
+  min-height: 260px;      
+  overflow: hidden;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 27, 58, 0.92) 0%,
+      rgba(23, 51, 104, 0.78) 52%,
+      rgba(7, 27, 58, 0.42) 100%
+    ),
+    var(--history-banner-image) center center / cover no-repeat,
+    linear-gradient(135deg, #071b3a 0%, #173368 100%);
+}
+
+.about-history-inner-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 58px 58px;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.about-history-inner-banner-content {
+  position: relative;
+  z-index: 2;
+  width: min(1500px, calc(100% - 80px));
+  min-height:460px;          
+  margin: 0 auto;    
+  display: flex;    
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.about-history-inner-banner-eyebrow {
+  margin-bottom: 14px;
+  color: #09e9b4;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.about-history-inner-banner h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(38px, 4vw, 58px);
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.about-history-inner-banner p {
+  max-width: none;
+  margin: 16px auto 0;  
+  color: rgba(255, 255, 255, 1);  
+  font-size: 37px;    
+  line-height: 1.8; 
+  text-align: center;    
+  letter-spacing: 0.22em; 
+} 
+   
+/* 手机端适配 */
+@media (max-width: 860px) {
+  .about-history-inner-banner {
+    min-height: 220px;
+  }
+
+  .about-history-inner-banner-content {
+    width: calc(100% - 40px);
+    min-height: 220px;
+  }
+
+  .about-history-inner-banner p {
+    font-size: 15px;
+  }
+} 
+
+/* =========================================================
+   关于我们｜发展历程底部纯图片 Banner
+   页面：/about/history
+
+   作用：
+   1. 放在时间轴最后，也就是 2012 年下面
+   2. 纯图片展示，不放文字
+   3. PC 端高度固定 360px
+   4. 图片路径由 page.tsx 通过 CSS 变量传入
+========================================================= */
+
+.about-history-bottom-banner {
+  height: 460px;
+  margin: 72px auto 0;
+  background:
+    var(--history-bottom-banner-image) center center / cover no-repeat,
+    linear-gradient(135deg, #071b3a 0%, #173368 100%);
+}
+  
+/* 手机端适配 */
+@media (max-width: 860px) {  
+  .about-history-bottom-banner {
+    width: calc(100%);
+    height: 220px;
+    margin: 48px auto 0;  
+  }
+}  
+
+/* =========================================================
+   发展历程页面｜面包屑宽度修正
+   说明：
+   1. 发展历程复用企业文化的面包屑样式
+   2. 这里单独给发展历程页面里的面包屑加内容宽度
+   3. 让它和时间轴、Banner 内容区域对齐，不贴最左边
+========================================================= */
+
+.about-history-page .about-culture-breadcrumb-inner {
+  width: min(1500px, calc(100% - 80px));
+  margin: 0 auto;
+}
+
+/* 手机端适配 */
+@media (max-width: 860px) {
+  .about-history-page .about-culture-breadcrumb-inner {
+    width: calc(100% - 40px);
+  }
+} 
+
+/* =========================================================
+   关于恒永达页面｜内容宽度统一
+   页面：
+   /about/foreach
+   /en/about/foreach
+   /es/about/foreach
+   /fr/about/foreach
+   /ko/about/foreach
+   /ru/about/foreach
+
+   说明：
+   1. 让关于恒永达页面和发展历程页面使用同样的内容宽度
+   2. 统一为 1500px
+   3. 左右安全边距为 80px
+   4. 面包屑、Banner 内容、正文容器都对齐
+========================================================= */
+
+.about-foreach-page {
+  --about-foreach-width: 1500px;
+  --about-foreach-side-padding: 80px;
+
+  /* 复用企业文化面包屑时需要的变量 */
+  --culture-blue: #173368;
+  --culture-line: rgba(23, 51, 104, 0.12);
+}
+
+/* 顶部 Banner 内容宽度 */
+.about-foreach-page .about-foreach-hero-content {
+  width: min(
+    var(--about-foreach-width),
+    calc(100% - var(--about-foreach-side-padding))
+  );
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 页面通用内容容器 */
+.about-foreach-page .about-foreach-container {
+  width: min(
+    var(--about-foreach-width),
+    calc(100% - var(--about-foreach-side-padding))
+  );
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 面包屑内容宽度 */
+.about-foreach-page .about-culture-breadcrumb-inner {
+  width: min(
+    var(--about-foreach-width),
+    calc(100% - var(--about-foreach-side-padding))
+  );
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 公司优势 / 数据面板宽度 */
+.about-foreach-page .about-foreach-advantage-panel {
+  width: min(
+    var(--about-foreach-width),
+    calc(100% - var(--about-foreach-side-padding))
+  );
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 手机端恢复正常边距 */
+@media (max-width: 860px) {
+  .about-foreach-page {
+    --about-foreach-side-padding: 40px;
+  }
+
+  .about-foreach-page .about-foreach-hero-content,
+  .about-foreach-page .about-foreach-container,
+  .about-foreach-page .about-culture-breadcrumb-inner,
+  .about-foreach-page .about-foreach-advantage-panel {
+    width: calc(100% - var(--about-foreach-side-padding));
+  }
+}  
+/* =========================================================
+   关于恒永达页面｜面包屑修正
+   说明：
+   1. 复用企业文化页面的面包屑样式
+   2. 修复面包屑贴左、上下空白过大的问题
+   3. 让面包屑紧跟在顶部 Banner 后面
+========================================================= */
+
+.about-foreach-page {
+  --culture-blue: #173368;
+  --culture-line: rgba(23, 51, 104, 0.12);
+}
+
+/* 面包屑外层：固定 64px，不要被其他 section 撑高 */
+.about-foreach-page .about-culture-breadcrumb {
+  height: 64px;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  border-bottom: 1px solid var(--culture-line);
+}
+
+/* 面包屑内容：和页面主体宽度对齐 */
+.about-foreach-page .about-culture-breadcrumb-inner {
+  width: min(1500px, calc(100% - 80px));
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 避免面包屑下面的正文区域继续留太大空白 */
+.about-foreach-page .about-foreach-intro-section {
+  margin-top: 0;
+}
+
+/* 手机端适配 */
+@media (max-width: 860px) {
+  .about-foreach-page .about-culture-breadcrumb {
+    height: 52px;
+  }
+
+  .about-foreach-page .about-culture-breadcrumb-inner {
+    width: calc(100% - 40px);
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+} 
+
+/* =========================================================
+   质量体系与合规认证页面
+   说明：
+   1. 不新建单独 CSS 文件
+   2. 所有样式统一放在 app/globals.css
+   3. 每个模块的布局、交互、动效都放在对应模块分类下面
+========================================================= */
+
+.quality-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  color: #173368;
+}
+
+/* ================================
+   1. 质量方针 Banner
+================================ */
+
+.quality-policy-hero {
+  position: relative;
+  width: 100%;
+  height: 560px;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #173368;
+}
+
+.quality-policy-hero-image {
+  object-fit: cover;
+  object-position: center center;
+  z-index: 0;
+}
+
+.quality-policy-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 18% 28%, rgba(9, 233, 180, 0.16) 0%, transparent 30%),
+    linear-gradient(
+      90deg,
+      rgba(7, 23, 45, 0.88) 0%,
+      rgba(23, 51, 104, 0.76) 48%,
+      rgba(23, 51, 104, 0.42) 100%
+    ),
+    linear-gradient(180deg, rgba(7, 23, 45, 0.05) 0%, rgba(7, 23, 45, 0.24) 100%);
+}
+
+.quality-policy-hero-inner {
+  position: relative;
+  z-index: 2;
+  width: min(1600px, calc(100% - 80px));
+  margin: 0 auto;
+}
+
+.quality-policy-text {
+  max-width: 760px;
+  color: rgba(255, 255, 255, 0.94);
+}
+
+.quality-policy-text p {
+  font-size: clamp(34px, 3.2vw, 58px);
+  line-height: 1.18;
+  font-weight: 650;
+  letter-spacing: -0.05em;
+}
+
+.quality-policy-text p + p {
+  margin-top: 18px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: clamp(20px, 1.55vw, 28px);
+  line-height: 1.55;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+/* ================================
+   2. 质量生命线介绍模块
+================================ */
+
+.quality-life-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 112px 0 128px;
+}
+
+.quality-life-inner {
+  width: min(1600px, calc(100% - 80px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(460px, 0.85fr);
+  gap: 96px;
+  align-items: center;
+}
+
+.quality-life-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+  background: #edf3f9;
+}
+
+.quality-life-image {
+  object-fit: cover;
+  object-position: center center;
+}
+
+.quality-life-image-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(23, 51, 104, 0.04) 0%,
+    rgba(23, 51, 104, 0.16) 100%
+  );
+}
+
+.quality-life-content {
+  max-width: 720px;
+}
+
+.quality-life-title {
+  color: #173368;
+  font-size: clamp(34px, 2.7vw, 50px);
+  line-height: 1.18;
+  font-weight: 650;
+  letter-spacing: -0.045em;
+}
+
+.quality-life-text {
+  margin-top: 30px;
+  color: #5f6f86;
+  font-size: 18px;
+  line-height: 2;
+  font-weight: 400;
+}
+
+.quality-life-text strong {
+  color: #173368;
+  font-weight: 650;
+}
+
+.quality-life-line {
+  width: 84px;
+  height: 2px;
+  margin-top: 38px;
+  background: #09e9b4;
+}
+
+.quality-life-subtext {
+  margin-top: 28px;
+  color: #6b7a90;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* ================================
+   3. 质量路径流程模块
+================================ */
+
+.quality-path-section {
+  position: relative;
+  width: 100%;
+  padding: 118px 0 132px;
+  overflow: hidden;
+  color: #173368;
+  background:
+    radial-gradient(circle at 14% 18%, rgba(9, 233, 180, 0.10) 0%, transparent 28%),
+    radial-gradient(circle at 86% 22%, rgba(23, 51, 104, 0.08) 0%, transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #f5f8fc 100%);
+}
+
+/* 质量路径背景图层
+   说明：
+   1. 背景图由 page.tsx 里的 Next Image 控制
+   2. 这里把透明度提高，让背景更明显
+*/
+.quality-path-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.quality-path-bg-image { 
+  object-fit: cover;
+  object-position: right center;
+  opacity: 0.4;
+  filter: saturate(0.82) contrast(0.96);
+}  
+  
+.quality-path-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 14% 18%, rgba(9, 233, 180, 0.08) 0%, transparent 30%),
+    radial-gradient(circle at 86% 22%, rgba(23, 51, 104, 0.05) 0%, transparent 32%),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.90) 0%,
+      rgba(248, 251, 254, 0.88) 48%,
+      rgba(245, 248, 252, 0.92) 100%
+    );
+}    
+    
+.quality-path-section {
+  position: relative; 
+  width: 100%;
+  padding: 118px 0 132px;
+  overflow: hidden;
+  color: #173368;
+  background: #f5f8fc;
+}
+ 
+.quality-path-inner {
+  position: relative;
+  z-index: 2;
+  width: min(1600px, calc(100% - 80px));
+  margin: 0 auto;
+}
+
+.quality-path-heading {
+  max-width: 980px;
+  margin: 0 auto 86px;
+  text-align: center;
+}
+
+.quality-path-title {
+  color: #173368;
+  font-size: clamp(34px, 2.6vw, 48px);
+  line-height: 1.16;
+  font-weight: 650;
+  letter-spacing: -0.05em;
+}
+
+.quality-path-summary {
+  max-width: 760px;
+  margin: 22px auto 0;
+  color: #5f6f86;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.quality-path-timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 88px;
+  row-gap: 76px;
+}
+
+.quality-path-line {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.quality-path-line path {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.quality-path-line-base {
+  stroke: rgba(23, 51, 104, 0.42);
+  stroke-width: 1.5;
+}
+
+.quality-path-line-flow {
+  stroke: rgba(9, 233, 180, 0.95);
+  stroke-width: 2;
+  stroke-dasharray: 160 1600;
+  stroke-dashoffset: 0;
+  opacity: 0;
+  transition: opacity 0.28s ease;
+}
+
+.quality-path-timeline:hover .quality-path-line-flow {
+  opacity: 0.78;
+  animation: qualityPathFlow 4.8s linear infinite;
+}
+
+@keyframes qualityPathFlow {
+  from {
+    stroke-dashoffset: 0;
+  }
+
+  to {
+    stroke-dashoffset: -1760;
+  }
+}
+
+.quality-path-timeline::before {
+  content: "";
+  display: none;
+}
+
+.quality-path-step {
+  position: relative;
+  z-index: 2;
+  min-height: 230px;
+  padding: 52px 34px 0 0;
+  cursor: default;
+}
+
+.quality-path-step:nth-of-type(4) {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.quality-path-step:nth-of-type(5) {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.quality-path-step:nth-of-type(6) {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.quality-path-step::before {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #09e9b4;
+  box-shadow: 0 0 0 10px rgba(9, 233, 180, 0.13);
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease;
+}
+
+.quality-path-step:hover::before {
+  transform: scale(1.32);
+  box-shadow:
+    0 0 0 12px rgba(9, 233, 180, 0.16),
+    0 0 24px rgba(9, 233, 180, 0.46);
+}
+
+.quality-path-index {
+  display: block;
+  margin-bottom: 22px;
+  color: rgba(23, 51, 104, 0.34);
+  font-size: 42px;
+  line-height: 1;
+  font-weight: 650;
+  letter-spacing: -0.08em;
+  transition: color 0.28s ease;
+}
+
+.quality-path-step:hover .quality-path-index {
+  color: rgba(9, 233, 180, 0.95);
+}
+
+.quality-path-step-title {
+  color: #173368;
+  font-size: 22px;
+  line-height: 1.36;
+  font-weight: 650;
+  letter-spacing: -0.03em;
+  transition: color 0.28s ease;
+}
+
+.quality-path-step:hover .quality-path-step-title {
+  color: #09e9b4;
+}
+
+.quality-path-step-desc {
+  margin-top: 16px;
+  color: #6b7a90;
+  font-size: 15px;
+  line-height: 1.82;
+  transition: color 0.28s ease;
+}
+
+.quality-path-step:hover .quality-path-step-desc {
+  color: #4f6078;
+}
+
+.quality-path-loop {
+  position: relative;
+  margin-top: 34px;
+  padding: 34px 42px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.58fr) minmax(0, 1.42fr);
+  gap: 56px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(23, 51, 104, 0.10);
+  border-left: 3px solid #09e9b4;
+  backdrop-filter: blur(14px);
+  overflow: hidden;
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease,
+    background 0.28s ease;
+}
+
+.quality-path-loop::before {
+  content: "";
+  position: absolute;
+  left: -40%;
+  top: 0;
+  width: 38%;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(9, 233, 180, 0.12) 48%,
+    transparent 100%
+  );
+  opacity: 0;
+  transform: skewX(-16deg);
+}
+
+.quality-path-loop:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(9, 233, 180, 0.38);
+  box-shadow: 0 16px 34px rgba(6, 26, 58, 0.08);
+}
+
+.quality-path-loop:hover::before {
+  opacity: 1;
+  animation: qualityLoopSweep 1.15s ease forwards;
+}
+
+@keyframes qualityLoopSweep {
+  from {
+    left: -42%;
+  }
+
+  to {
+    left: 104%;
+  }
+}
+
+.quality-path-loop-title {
+  position: relative;
+  z-index: 2;
+  color: #173368;
+  font-size: 26px;
+  line-height: 1.32;
+  font-weight: 650;
+  letter-spacing: -0.04em;
+  transition: color 0.28s ease;
+}
+
+.quality-path-loop:hover .quality-path-loop-title {
+  color: #09e9b4;
+}
+
+.quality-path-loop-text {
+  position: relative;
+  z-index: 2;
+  color: #627288;
+  font-size: 16px;
+  line-height: 1.9;
+  transition: color 0.28s ease;
+}
+
+.quality-path-loop:hover .quality-path-loop-text {
+  color: #4f6078;
+}
+
+/* ================================
+   4. 检测设备与质量验证能力模块
+================================ */
+
+.quality-equipment-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 112px 0 132px;
+}
+
+.quality-equipment-inner {
+  width: min(1720px, calc(100% - 80px));
+  margin: 0 auto;
+}
+
+.quality-equipment-heading {
+  max-width: 1180px;
+  margin: 0 auto 84px;
+  text-align: center;
+}
+
+.quality-equipment-title {
+  color: #173368;
+  font-size: clamp(36px, 3vw, 56px);
+  line-height: 1.16;
+  font-weight: 650;
+  letter-spacing: -0.05em;
+}
+
+.quality-equipment-intro {
+  margin: 26px auto 0;
+  max-width: 920px;
+  color: #5f6f86;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.quality-equipment-intro p + p {
+  margin-top: 10px;
+}
+
+.quality-equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 36px;
+  align-items: stretch;
+}
+
+.quality-equipment-item {
+  position: relative;
+  min-width: 0;
+  height: 100%;
+  padding: 0 0 30px;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid rgba(23, 51, 104, 0.08);
+  cursor: default;
+  overflow: hidden;
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease;
+}
+
+.quality-equipment-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(23, 51, 104, 0.12);
+  box-shadow: 0 16px 34px rgba(6, 26, 58, 0.08);
+}
+
+.quality-equipment-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.quality-equipment-image {
+  object-fit: contain;
+  object-position: center center;
+}
+
+.quality-equipment-name {
+  margin: 34px 24px 0;
+  color: #173368;
+  font-size: 22px;
+  line-height: 1.35;
+  font-weight: 650;
+  letter-spacing: -0.03em;
+  transition: color 0.28s ease;
+}
+
+.quality-equipment-item:hover .quality-equipment-name {
+  color: #09e9b4;
+}
+
+.quality-equipment-desc {
+  margin: 16px 24px 0;
+  color: #627288;
+  font-size: 16px;
+  line-height: 1.9;
+  transition: color 0.28s ease;
+}
+
+.quality-equipment-item:hover .quality-equipment-desc {
+  color: #4f6078;
+}
+
+.quality-equipment-data {
+  margin: auto 24px 0;
+  padding-top: 16px;
+  border-top: 1px solid rgba(23, 51, 104, 0.12);
+}
+
+.quality-equipment-data-title {
+  color: #173368;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 650;
+  transition: color 0.28s ease;
+}
+
+.quality-equipment-item:hover .quality-equipment-data-title {
+  color: #09e9b4;
+}
+
+.quality-equipment-data-list {
+  margin-top: 10px;
+  list-style: none;
+}
+
+.quality-equipment-data-list li {
+  position: relative;
+  padding-left: 14px;
+  color: #627288;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.quality-equipment-data-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #09e9b4;
+}
+
+.quality-equipment-note {
+  margin-top: 74px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(23, 51, 104, 0.12);
+  color: #5f6f86;
+  font-size: 16px;
+  line-height: 1.9;
+  text-align: center;
+}
+
+/* ================================
+   5. 质量体系与合规认证模块
+================================ */
+
+/* ================================
+   5. 质量体系与合规认证模块
+   说明：
+   1. 背景图不直接写在 background 里
+   2. 使用 page.tsx 里的 Next Image 作为背景层
+   3. 通过白色遮罩保证证书和文字清晰
+================================ */
+
+.quality-cert-section {
+  position: relative;
+  width: 100%;
+  background: #f5f8fc;
+  padding: 118px 0 132px;
+  overflow: hidden;
+}
+
+/* 质量体系与合规认证背景图层 */
+.quality-cert-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* 背景图片本体 */
+.quality-cert-bg-image {
+  object-fit: cover;
+  object-position: center center;
+
+  /* 背景不要太抢证书，先用比较淡的透明度 */
+  opacity: 0.52;
+
+  filter: saturate(0.84) contrast(0.96);
+}    
+
+/* 背景图上的白色遮罩 */
+.quality-cert-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(9, 233, 180, 0.08) 0%, transparent 28%),
+    radial-gradient(circle at 82% 20%, rgba(23, 51, 104, 0.06) 0%, transparent 32%),
+    linear-gradient(
+      180deg,
+      rgba(245, 248, 252, 0.90) 0%,
+      rgba(245, 248, 252, 0.88) 46%,
+      rgba(245, 248, 252, 0.94) 100%
+    );
+}
+
+/* 内容层压在背景图和遮罩上方 */
+.quality-cert-inner {
+  position: relative;
+  z-index: 2;
+  width: min(1600px, calc(100% - 80px));
+  margin: 0 auto;
+} 
+ 
+.quality-cert-inner {
+  width: min(1600px, calc(100% - 80px));
+  margin: 0 auto;
+}
+
+.quality-cert-heading {
+  max-width: 1180px;
+  margin: 0 auto 76px;
+  text-align: center;
+}
+
+.quality-cert-title {
+  color: #173368;
+  font-size: clamp(36px, 3vw, 56px);
+  line-height: 1.16;
+  font-weight: 650;
+  letter-spacing: -0.05em;
+}
+
+.quality-cert-summary {
+  margin-top: 18px;
+  color: #5f6f86;
+  font-size: 17px;
+  line-height: 1.95;
+}
+
+.quality-cert-layout {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.quality-cert-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.quality-cert-card {
+  position: relative;
+  min-height: auto;
+  padding: 20px 20px 26px;
+  background: #ffffff;
+  border: 1px solid rgba(23, 51, 104, 0.12);
+  overflow: hidden;
+  transition:
+    border-color 0.28s ease,
+    transform 0.28s ease,
+    box-shadow 0.28s ease;
+}
+
+.quality-cert-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(23, 51, 104, 0.12);
+  box-shadow: 0 14px 28px rgba(6, 26, 58, 0.08);
+}
+
+.quality-cert-image-wrap {
+  position: relative;
+  width: min(100%, 300px);
+  margin: 0 auto;
+  aspect-ratio: 210 / 297;
+  background: #ffffff;
+  overflow: hidden;
+  border: 1px solid rgba(23, 51, 104, 0.08);
+}
+
+.quality-cert-image {
+  object-fit: contain;
+  object-position: center center;
+}
+
+.quality-cert-name {
+  margin-top: 22px;
+  color: #173368;
+  font-size: 18px;
+  line-height: 1.42;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  transition: color 0.28s ease;
+}
+
+.quality-cert-card:hover .quality-cert-name {
+  color: #09e9b4;
+}
+
+.quality-cert-desc {
+  margin-top: 10px;
+  color: #6b7a90;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+/* ================================
+   6. 响应式适配
+================================ */
+
+@media (max-width: 1200px) {
+  .quality-life-inner {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .quality-path-heading {
+    margin-bottom: 64px;
+  }
+
+  .quality-path-timeline {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 76px;
+  }
+
+  .quality-path-loop {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .quality-equipment-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 56px 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .quality-policy-hero {
+    height: 560px;
+    min-height: 560px;
+  }
+
+  .quality-policy-hero-inner,
+  .quality-life-inner,
+  .quality-path-inner,
+  .quality-equipment-inner,
+  .quality-cert-inner {
+    width: min(100% - 40px, 1600px);
+  }
+
+  .quality-policy-text p {
+    font-size: 34px;
+    line-height: 1.25;
+    letter-spacing: -0.04em;
+  }
+
+  .quality-policy-text p + p {
+    margin-top: 16px;
+    font-size: 20px;
+    line-height: 1.6;
+    letter-spacing: -0.02em;
+  }
+
+  .quality-life-section,
+  .quality-path-section,
+  .quality-equipment-section,
+  .quality-cert-section {
+    padding: 72px 0 88px;
+  }
+
+  .quality-life-image-wrap {
+    height: 320px;
+  }
+
+  .quality-life-title,
+  .quality-path-title,
+  .quality-equipment-title,
+  .quality-cert-title {
+    font-size: 32px;
+  }
+
+  .quality-life-text {
+    margin-top: 24px;
+    font-size: 16px;
+    line-height: 1.9;
+  }
+
+  .quality-life-subtext,
+  .quality-path-summary,
+  .quality-equipment-intro,
+  .quality-equipment-note,
+  .quality-cert-summary {
+    font-size: 15px;
+  }
+
+  .quality-path-heading {
+    margin-bottom: 48px;
+  }
+
+  .quality-path-timeline {
+    grid-template-columns: 1fr;
+    row-gap: 0;
+  }
+
+  .quality-path-line {
+    display: none;
+  }
+
+  .quality-path-timeline::before {
+    display: block;
+    position: absolute;
+    left: 7px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: rgba(23, 51, 104, 0.42);
+  }
+
+  .quality-path-step:nth-of-type(4),
+  .quality-path-step:nth-of-type(5),
+  .quality-path-step:nth-of-type(6) {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .quality-path-step {
+    min-height: auto;
+    padding: 0 0 42px 42px;
+  }
+
+  .quality-path-index {
+    margin-bottom: 14px;
+    font-size: 34px;
+  }
+
+  .quality-path-loop {
+    margin-top: 12px;
+    padding: 28px 24px;
+  }
+
+  .quality-equipment-heading {
+    margin-bottom: 54px;
+    text-align: left;
+  }
+
+  .quality-equipment-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 44px 28px;
+  }
+
+  .quality-equipment-image-wrap {
+    height: 180px;
+  }
+
+  .quality-equipment-name {
+    margin: 20px 18px 0;
+    font-size: 18px;
+  }
+
+  .quality-equipment-desc {
+    margin-left: 18px;
+    margin-right: 18px;
+    font-size: 14px;
+  }
+
+  .quality-equipment-data {
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+
+  .quality-equipment-data-title,
+  .quality-equipment-data-list li {
+    font-size: 14px;
+  }
+
+  .quality-equipment-note {
+    margin-top: 52px;
+    text-align: left;
+  }
+
+  .quality-cert-heading {
+    margin-bottom: 48px;
+  }
+
+  .quality-cert-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quality-cert-image-wrap {
+    width: min(100%, 260px);
+  }
+
+  .quality-cert-desc {
+    font-size: 14px;
+  }
+}

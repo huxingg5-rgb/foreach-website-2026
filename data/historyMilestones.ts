@@ -1,0 +1,752 @@
+/* =========================================================
+   historyMilestones.ts
+   恒永达官网｜发展历程多语言数据
+
+   作用：
+   1. 集中管理发展历程页面所有年份内容
+   2. 支持中文、英文、西班牙语、法语、韩语、俄语
+   3. 后续新增年份，只需要在 historyMilestoneSources 里新增一条
+   4. 后续接后端时，后端返回类似结构即可
+========================================================= */
+
+export const DEFAULT_HISTORY_LOCALE = "zh-CN" as const;
+
+export const SUPPORTED_HISTORY_LOCALES = [
+  "zh-CN",
+  "en",
+  "es",
+  "fr",
+  "ko",
+  "ru",
+] as const;
+
+export const NON_DEFAULT_HISTORY_LOCALES = [
+  "en",
+  "es",
+  "fr",
+  "ko",
+  "ru",
+] as const;
+
+export type SupportedHistoryLocale =
+  (typeof SUPPORTED_HISTORY_LOCALES)[number];
+
+export type HistoryImageSide = "left" | "right";
+
+type LocalizedText = Record<SupportedHistoryLocale, string>;
+
+export type HistoryMilestone = {
+  id: string;
+  year: number;
+  image: string;
+  imageAlt: string;
+  imageSide: HistoryImageSide;
+  events: string[];
+  enabled: boolean;
+};
+
+type HistoryMilestoneSource = {
+  id: string;
+  year: number;
+  image: string;
+  imageAlt: LocalizedText;
+  imageSide: HistoryImageSide;
+  events: LocalizedText[];
+  enabled: boolean;
+};
+
+export type HistoryPageText = {
+  metadataTitle: string;
+  metadataDescription: string;
+  bannerDescription: string;
+  titleMain: string;
+  titleAccent: string;
+  topBannerAriaLabel: string;
+  bottomBannerAriaLabel: string;
+};
+
+type HistoryPageTextSource = {
+  metadataTitle: LocalizedText;
+  metadataDescription: LocalizedText;
+  bannerDescription: LocalizedText;
+  titleMain: LocalizedText;
+  titleAccent: LocalizedText;
+  topBannerAriaLabel: LocalizedText;
+  bottomBannerAriaLabel: LocalizedText;
+};
+
+/* 多语言文本快捷函数 */
+function t(
+  zh: string,
+  en: string,
+  es: string,
+  fr: string,
+  ko: string,
+  ru: string
+): LocalizedText {
+  return {
+    "zh-CN": zh,
+    en,
+    es,
+    fr,
+    ko,
+    ru,
+  };
+}
+
+/* 判断是否是支持的语言 */
+export function isSupportedHistoryLocale(
+  locale: string
+): locale is SupportedHistoryLocale {
+  return SUPPORTED_HISTORY_LOCALES.includes(locale as SupportedHistoryLocale);
+}
+
+/* 获取安全语言值 */
+export function getValidHistoryLocale(
+  locale: string | undefined
+): SupportedHistoryLocale {
+  if (locale && isSupportedHistoryLocale(locale)) {
+    return locale;
+  }
+
+  return DEFAULT_HISTORY_LOCALE;
+}
+
+/* 获取某个多语言字段的当前语言文本 */
+function getLocalizedText(
+  value: LocalizedText,
+  locale: SupportedHistoryLocale
+): string {
+  return value[locale] || value.en || value["zh-CN"];
+}
+
+/* 页面固定文案 */
+const historyPageTextSource: HistoryPageTextSource = {
+  metadataTitle: t(
+    "发展历程｜恒永达科技",
+    "History｜FOREACH Technology",
+    "Historia｜FOREACH Technology",
+    "Historique｜FOREACH Technology",
+    "연혁｜FOREACH Technology",
+    "История｜FOREACH Technology"
+  ),
+  metadataDescription: t(
+    "深圳市恒永达科技股份有限公司发展历程，展示公司在微流体核心部件、泵阀产品、技术攻关、企业认证与市场拓展方面的关键节点。",
+    "Explore the development history of Shenzhen FOREACH Technology Co., Ltd., including product launches, technical breakthroughs, certifications, and market expansion milestones.",
+    "Conozca la historia de desarrollo de Shenzhen FOREACH Technology Co., Ltd., incluyendo lanzamientos de productos, avances técnicos, certificaciones y expansión de mercado.",
+    "Découvrez l’historique de développement de Shenzhen FOREACH Technology Co., Ltd., incluant les lancements de produits, les avancées techniques, les certifications et l’expansion du marché.",
+    "Shenzhen FOREACH Technology Co., Ltd.의 발전 연혁을 소개하며, 제품 출시, 기술 개발, 인증 및 시장 확장 주요 이정표를 보여줍니다.",
+    "История развития Shenzhen FOREACH Technology Co., Ltd.: запуск продуктов, технологические достижения, сертификации и расширение рынков."
+  ),
+  bannerDescription: t(
+    "用每一寸专注的光明丈量微流体发展",
+    "Measuring the development of microfluidics with dedicated focus and precision.",
+    "Midiendo el desarrollo de la microfluídica con enfoque y precisión.",
+    "Mesurer le développement de la microfluidique avec concentration et précision.",
+    "전문성과 정밀함으로 미세유체 기술의 발전을 이어갑니다.",
+    "Развивая микрофлюидику с высокой концентрацией и точностью."
+  ),
+  titleMain: t(
+    "发展",
+    "Company",
+    "Historia",
+    "Historique",
+    "회사",
+    "История"
+  ),
+  titleAccent: t(
+    "历程",
+    "History",
+    "Corporativa",
+    "de l’entreprise",
+    "연혁",
+    "компании"
+  ),
+  topBannerAriaLabel: t(
+    "恒永达发展历程 Banner",
+    "FOREACH history banner",
+    "Banner de historia de FOREACH",
+    "Bannière historique de FOREACH",
+    "FOREACH 연혁 배너",
+    "Баннер истории FOREACH"
+  ),
+  bottomBannerAriaLabel: t(
+    "恒永达发展历程底部图片 Banner",
+    "FOREACH history bottom image banner",
+    "Banner inferior de imagen de historia de FOREACH",
+    "Bannière image inférieure de l’historique de FOREACH",
+    "FOREACH 연혁 하단 이미지 배너",
+    "Нижний графический баннер истории FOREACH"
+  ),
+};
+
+/* 页面文案输出函数 */
+export function getHistoryPageText(
+  locale: SupportedHistoryLocale
+): HistoryPageText {
+  return {
+    metadataTitle: getLocalizedText(historyPageTextSource.metadataTitle, locale),
+    metadataDescription: getLocalizedText(
+      historyPageTextSource.metadataDescription,
+      locale
+    ),
+    bannerDescription: getLocalizedText(
+      historyPageTextSource.bannerDescription,
+      locale
+    ),
+    titleMain: getLocalizedText(historyPageTextSource.titleMain, locale),
+    titleAccent: getLocalizedText(historyPageTextSource.titleAccent, locale),
+    topBannerAriaLabel: getLocalizedText(
+      historyPageTextSource.topBannerAriaLabel,
+      locale
+    ),
+    bottomBannerAriaLabel: getLocalizedText(
+      historyPageTextSource.bottomBannerAriaLabel,
+      locale
+    ),
+  };
+}
+
+/* 发展历程原始多语言数据 */
+const historyMilestoneSources: HistoryMilestoneSource[] = [
+  {
+    id: "2025",
+    year: 2025,
+    image: "/images/about/history/history-2025.jpg",
+    imageAlt: t(
+      "恒永达 2025 年发展历程配图",
+      "FOREACH 2025 milestone image",
+      "Imagen de hito de FOREACH en 2025",
+      "Image du jalon FOREACH 2025",
+      "FOREACH 2025년 연혁 이미지",
+      "Изображение этапа FOREACH 2025"
+    ),
+    imageSide: "left",
+    events: [
+      t(
+        "DPL30、DPL60、DPGL800 系列隔膜泵产品发布",
+        "DPL30, DPL60, and DPGL800 Series Diaphragm Pumps launched",
+        "Lanzamiento de las bombas de diafragma series DPL30, DPL60 y DPGL800",
+        "Lancement des pompes à membrane séries DPL30, DPL60 et DPGL800",
+        "DPL30, DPL60, DPGL800 시리즈 다이어프램 펌프 출시",
+        "Запущены диафрагменные насосы серий DPL30, DPL60 и DPGL800"
+      ),
+      t(
+        "荣获深圳市“瞪羚企业”",
+        "Awarded the title of Shenzhen Gazelle Enterprise",
+        "Reconocida como Empresa Gacela de Shenzhen",
+        "Reconnue comme entreprise Gazelle de Shenzhen",
+        "선전시 ‘가젤 기업’으로 선정",
+        "Получен статус компании «Газель» города Шэньчжэнь"
+      ),
+    ],
+    enabled: true,
+  },
+  {
+    id: "2024",
+    year: 2024,
+    image: "/images/about/history/history-2024.jpg",
+    imageAlt: t(
+      "恒永达 2024 年发展历程配图",
+      "FOREACH 2024 milestone image",
+      "Imagen de hito de FOREACH en 2024",
+      "Image du jalon FOREACH 2024",
+      "FOREACH 2024년 연혁 이미지",
+      "Изображение этапа FOREACH 2024"
+    ),
+    imageSide: "right",
+    events: [
+      t(
+        "6160、6907、HRV、HPP、EAS 等阀系列及泵系列产品发布",
+        "6160, 6907, HRV, HPP, EAS valve series and pump series launched",
+        "Lanzamiento de las series de válvulas y bombas 6160, 6907, HRV, HPP y EAS",
+        "Lancement des séries de vannes et de pompes 6160, 6907, HRV, HPP et EAS",
+        "6160, 6907, HRV, HPP, EAS 등 밸브 및 펌프 시리즈 출시",
+        "Запущены серии клапанов и насосов 6160, 6907, HRV, HPP и EAS"
+      ),
+      t(
+        "荣获专精特新“小巨人”企业",
+        "Recognized as a National Specialized and Sophisticated Little Giant Enterprise",
+        "Reconocida como empresa nacional especializada y sofisticada “Pequeño Gigante”",
+        "Reconnue comme entreprise nationale spécialisée et innovante « Petit Géant »",
+        "국가급 전문화·정밀화·특색화·혁신형 ‘작은 거인’ 기업으로 선정",
+        "Получен статус национального специализированного инновационного предприятия «Малый гигант»"
+      ),
+      t(
+        "荣获国家工业信息安全发展研究中心“毛细管内壁磁流体抛光控制系统及方法”科学技术成果登记证书",
+        "Obtained the Science and Technology Achievement Registration Certificate for the capillary inner-wall magnetorheological polishing control system and method",
+        "Obtuvo el certificado de registro de logro científico y tecnológico para el sistema y método de control de pulido magnetorreológico de pared interna capilar",
+        "Obtention du certificat d’enregistrement de résultat scientifique et technologique pour le système et la méthode de contrôle du polissage magnétorhéologique de la paroi interne des capillaires",
+        "모세관 내벽 자기유변 연마 제어 시스템 및 방법에 대한 과학기술 성과 등록증 획득",
+        "Получено свидетельство регистрации научно-технического результата для системы и метода управления магнитореологической полировкой внутренней стенки капилляра"
+      ),
+      t(
+        "广东省首家“高性能微流体移液系统工程技术研究中心”认定企业",
+        "Recognized as the first enterprise in Guangdong Province with a High-performance Microfluidic Pipetting System Engineering Technology Research Center",
+        "Reconocida como la primera empresa de Guangdong con un Centro de Investigación de Ingeniería para sistemas de pipeteo microfluídico de alto rendimiento",
+        "Première entreprise du Guangdong reconnue avec un centre de recherche en ingénierie pour les systèmes de pipetage microfluidique haute performance",
+        "광둥성 최초 ‘고성능 미세유체 피펫팅 시스템 공정기술 연구센터’ 인정 기업",
+        "Первая компания в провинции Гуандун, признанная инженерно-технологическим исследовательским центром высокопроизводительной микрофлюидной пипетировочной системы"
+      ),
+    ],
+    enabled: true,
+  },
+  {
+    id: "2023",
+    year: 2023,
+    image: "/images/about/history/history-2023.jpg",
+    imageAlt: t(
+      "恒永达 2023 年发展历程配图",
+      "FOREACH 2023 milestone image",
+      "Imagen de hito de FOREACH en 2023",
+      "Image du jalon FOREACH 2023",
+      "FOREACH 2023년 연혁 이미지",
+      "Изображение этапа FOREACH 2023"
+    ),
+    imageSide: "left",
+    events: [
+      t(
+        "ABD、FOS、TDS、ISC、PDM 等智能控制及热控产品发布",
+        "ABD, FOS, TDS, ISC, PDM and other intelligent control and thermal control products launched",
+        "Lanzamiento de productos de control inteligente y térmico como ABD, FOS, TDS, ISC y PDM",
+        "Lancement de produits de contrôle intelligent et thermique tels que ABD, FOS, TDS, ISC et PDM",
+        "ABD, FOS, TDS, ISC, PDM 등 지능형 제어 및 열 제어 제품 출시",
+        "Запущены продукты интеллектуального и теплового управления ABD, FOS, TDS, ISC, PDM и другие"
+      ),
+      t(
+        "总部迁址深圳市光明区",
+        "Headquarters relocated to Guangming District, Shenzhen",
+        "La sede se trasladó al distrito de Guangming, Shenzhen",
+        "Le siège a été transféré dans le district de Guangming à Shenzhen",
+        "본사를 선전시 광밍구로 이전",
+        "Штаб-квартира переехала в район Гуанмин, Шэньчжэнь"
+      ),
+      t(
+        "成功挂牌新三板",
+        "Successfully listed on the National Equities Exchange and Quotations",
+        "Cotización exitosa en el National Equities Exchange and Quotations",
+        "Cotée avec succès sur le National Equities Exchange and Quotations",
+        "신삼판에 성공적으로 상장",
+        "Успешно размещена на National Equities Exchange and Quotations"
+      ),
+      t(
+        "建设医疗器械净化生产车间",
+        "Clean manufacturing workshop for medical devices established",
+        "Establecimiento de un taller limpio para fabricación de dispositivos médicos",
+        "Mise en place d’un atelier propre pour la fabrication de dispositifs médicaux",
+        "의료기기 클린 생산 작업장 구축",
+        "Создан чистый производственный цех для медицинских изделий"
+      ),
+    ],
+    enabled: true,
+  },
+  {
+    id: "2022",
+    year: 2022,
+    image: "/images/about/history/history-2022.jpg",
+    imageAlt: t(
+      "恒永达 2022 年发展历程配图",
+      "FOREACH 2022 milestone image",
+      "Imagen de hito de FOREACH en 2022",
+      "Image du jalon FOREACH 2022",
+      "FOREACH 2022년 연혁 이미지",
+      "Изображение этапа FOREACH 2022"
+    ),
+    imageSide: "right",
+    events: [
+      t(
+        "新型电磁阀、快插接头、微型隔膜气泵等产品发布",
+        "New-type solenoid valves, quick connectors, and miniature diaphragm air pumps launched",
+        "Lanzamiento de nuevas electroválvulas, racores rápidos y minibombas de diafragma para aire",
+        "Lancement de nouvelles électrovannes, raccords rapides et mini-pompes à membrane pour air",
+        "신형 솔레노이드 밸브, 퀵 커넥터, 미니 다이어프램 에어 펌프 출시",
+        "Запущены новые электромагнитные клапаны, быстросъемные фитинги и миниатюрные диафрагменные воздушные насосы"
+      ),
+      t(
+        "高长径比金属毛细管内壁镜面抛光技术已达到世界领先水平",
+        "Mirror polishing technology for high aspect-ratio metal capillary inner walls reached a world-leading level",
+        "La tecnología de pulido espejo de paredes internas de capilares metálicos de alta relación longitud-diámetro alcanzó un nivel líder mundial",
+        "La technologie de polissage miroir des parois internes de capillaires métalliques à fort rapport longueur/diamètre a atteint un niveau de pointe mondial",
+        "고장경비 금속 모세관 내벽 미러 폴리싱 기술이 세계 선도 수준에 도달",
+        "Технология зеркальной полировки внутренних стенок металлических капилляров с высоким отношением длины к диаметру достигла мирового уровня"
+      ),
+      t(
+        "股改成功，公司正式更名为“深圳市恒永达科技股份有限公司”",
+        "Shareholding reform completed and the company officially renamed Shenzhen FOREACH Technology Co., Ltd.",
+        "Completada la reforma accionarial y la empresa cambió oficialmente su nombre a Shenzhen FOREACH Technology Co., Ltd.",
+        "Réforme actionnariale finalisée et société officiellement renommée Shenzhen FOREACH Technology Co., Ltd.",
+        "주식제 개편 완료, 회사명을 Shenzhen FOREACH Technology Co., Ltd.로 공식 변경",
+        "Завершена акционерная реформа, компания официально переименована в Shenzhen FOREACH Technology Co., Ltd."
+      ),
+      t(
+        "捐赠教学设备，助力贫困地区教育事业发展",
+        "Teaching equipment donated to support education development in underdeveloped regions",
+        "Donación de equipos didácticos para apoyar la educación en regiones desfavorecidas",
+        "Don d’équipements pédagogiques pour soutenir l’éducation dans les régions défavorisées",
+        "교육 장비를 기부하여 낙후 지역 교육 발전 지원",
+        "Пожертвовано учебное оборудование для поддержки образования в менее развитых регионах"
+      ),
+    ],
+    enabled: true,
+  },
+  {
+    id: "2020",
+    year: 2020,
+    image: "/images/about/history/history-2020.jpg",
+    imageAlt: t(
+      "恒永达 2020 年发展历程配图",
+      "FOREACH 2020 milestone image",
+      "Imagen de hito de FOREACH en 2020",
+      "Image du jalon FOREACH 2020",
+      "FOREACH 2020년 연혁 이미지",
+      "Изображение этапа FOREACH 2020"
+    ),
+    imageSide: "left",
+    events: [
+      t(
+        "移液泵诞生，助力分子诊断行业发展",
+        "Pipetting pump developed to support the molecular diagnostics industry",
+        "Desarrollo de la bomba de pipeteo para apoyar la industria del diagnóstico molecular",
+        "Développement de la pompe de pipetage pour soutenir le secteur du diagnostic moléculaire",
+        "분자진단 산업 발전을 지원하는 피펫팅 펌프 개발",
+        "Разработан пипетировочный насос для поддержки индустрии молекулярной диагностики"
+      ),
+      t(
+        "紧急组织生产隔膜泵、柱塞泵等产品，全力支持抗疫",
+        "Diaphragm pumps and piston pumps were urgently organized for production to support pandemic-related needs",
+        "Organización urgente de la producción de bombas de diafragma y bombas de pistón para apoyar las necesidades contra la pandemia",
+        "Organisation urgente de la production de pompes à membrane et de pompes à piston pour soutenir les besoins liés à la pandémie",
+        "방역 수요 지원을 위해 다이어프램 펌프와 피스톤 펌프 긴급 생산",
+        "Срочно организовано производство диафрагменных и поршневых насосов для поддержки потребностей, связанных с пандемией"
+      ),
+      t(
+        "建立南方科技大学—恒永达产学研试验基地",
+        "Industry-university-research experimental base established with Southern University of Science and Technology",
+        "Establecimiento de una base experimental de industria-universidad-investigación con Southern University of Science and Technology",
+        "Création d’une base expérimentale industrie-université-recherche avec la Southern University of Science and Technology",
+        "남방과학기술대학교-恒永达 산학연 실험기지 설립",
+        "Создана экспериментальная база сотрудничества промышленности, университета и исследований с Southern University of Science and Technology"
+      ),
+      t(
+        "成立华东办事处",
+        "East China Office established",
+        "Establecimiento de la oficina del Este de China",
+        "Création du bureau de Chine de l’Est",
+        "화동 사무소 설립",
+        "Открыт офис в Восточном Китае"
+      ),
+    ],
+    enabled: true,
+  },
+  {
+    id: "2019",
+    year: 2019,
+    image: "/images/about/history/history-2019.jpg",
+    imageAlt: t(
+      "恒永达 2019 年发展历程配图",
+      "FOREACH 2019 milestone image",
+      "Imagen de hito de FOREACH en 2019",
+      "Image du jalon FOREACH 2019",
+      "FOREACH 2019년 연혁 이미지",
+      "Изображение этапа FOREACH 2019"
+    ),
+    imageSide: "right",
+    events: [
+      t(
+        "承接深圳市重大技术攻关项目《用于高端 IVD 设备的高精密采样针关键技术》的研发",
+        "Undertook the Shenzhen Major Technical Research Project on key technologies for high-precision sampling probes used in high-end IVD equipment",
+        "Emprendió el proyecto técnico clave de Shenzhen sobre sondas de muestreo de alta precisión para equipos IVD de gama alta",
+        "A entrepris le projet technique majeur de Shenzhen sur les technologies clés des aiguilles de prélèvement haute précision pour équipements IVD haut de gamme",
+        "고급 IVD 장비용 고정밀 샘플링 프로브 핵심기술 관련 선전시 중대 기술개발 과제 수행",
+        "Выполнен крупный технический проект Шэньчжэня по ключевым технологиям высокоточных пробоотборных игл для высококлассного IVD-оборудования"
+      ),
+      t(
+        "推出注射泵、旋转阀、高压泵、恒流泵等产品",
+        "Syringe pumps, rotary valves, high-pressure pumps, and constant-flow pumps launched",
+        "Lanzamiento de bombas de jeringa, válvulas rotativas, bombas de alta presión y bombas de caudal constante",
+        "Lancement des pompes seringues, vannes rotatives, pompes haute pression et pompes à débit constant",
+        "주사기 펌프, 로터리 밸브, 고압 펌프, 정유량 펌프 출시",
+        "Запущены шприцевые насосы, роторные клапаны, насосы высокого давления и насосы постоянного расхода"
+      ),
+      t(
+        "正式进入环保和实验室设备领域",
+        "Entered the environmental protection and laboratory equipment fields",
+        "Entrada oficial en los campos de protección ambiental y equipos de laboratorio",
+        "Entrée dans les domaines de la protection de l’environnement et des équipements de laboratoire",
+        "환경보호 및 실험실 장비 분야에 진출",
+        "Выход в области экологического и лабораторного оборудования"
+      ),
+    ],
+    enabled: true,
+  },
+  {
+    id: "2018",
+    year: 2018,
+    image: "/images/about/history/history-2018.jpg",
+    imageAlt: t(
+      "恒永达 2018 年发展历程配图",
+      "FOREACH 2018 milestone image",
+      "Imagen de hito de FOREACH en 2018",
+      "Image du jalon FOREACH 2018",
+      "FOREACH 2018년 연혁 이미지",
+      "Изображение этапа FOREACH 2018"
+    ),
+    imageSide: "left",
+    events: [
+      t(
+        "电磁阀研制成功",
+        "Solenoid valve developed successfully",
+        "Electroválvula desarrollada con éxito",
+        "Électrovanne développée avec succès",
+        "솔레노이드 밸브 개발 성공",
+        "Электромагнитный клапан успешно разработан"
+      ),
+      t(
+        "柱塞泵累计销量达10万台",
+        "Cumulative sales volume of piston pumps reached 100,000 units",
+        "Las ventas acumuladas de bombas de pistón alcanzaron 100.000 unidades",
+        "Les ventes cumulées de pompes à piston ont atteint 100 000 unités",
+        "피스톤 펌프 누적 판매량 10만 대 달성",
+        "Совокупные продажи поршневых насосов достигли 100 000 единиц"
+      ),
+      t(
+        "进军印度市场",
+        "Entered the Indian market",
+        "Entrada en el mercado indio",
+        "Entrée sur le marché indien",
+        "인도 시장 진출",
+        "Выход на индийский рынок"
+      ),
+    ],
+    enabled: true,
+  },
+  {
+    id: "2017",
+    year: 2017,
+    image: "/images/about/history/history-2017.jpg",
+    imageAlt: t(
+      "恒永达 2017 年发展历程配图",
+      "FOREACH 2017 milestone image",
+      "Imagen de hito de FOREACH en 2017",
+      "Image du jalon FOREACH 2017",
+      "FOREACH 2017년 연혁 이미지",
+      "Изображение этапа FOREACH 2017"
+    ),
+    imageSide: "right",
+    events: [
+      t(
+        "推出传感器和驱动控制器产品系列，向智能化和模块化发展",
+        "Sensor and driver controller product series launched, moving toward intelligent and modular development",
+        "Lanzamiento de sensores y controladores de accionamiento, avanzando hacia la inteligencia y modularización",
+        "Lancement de séries de capteurs et de contrôleurs de pilotage, vers un développement intelligent et modulaire",
+        "센서 및 드라이버 컨트롤러 제품 시리즈 출시, 지능화와 모듈화 방향으로 발전",
+        "Запущены серии датчиков и контроллеров привода, развитие в направлении интеллектуализации и модульности"
+      ),
+      t(
+        "国内首款微型无阀泵产品上市，打破美国垄断",
+        "China’s first miniature valveless pump launched, breaking the monopoly of imported products",
+        "Lanzamiento de la primera minibomba sin válvulas de China, rompiendo el monopolio de productos importados",
+        "Lancement de la première mini-pompe sans vanne en Chine, brisant le monopole des produits importés",
+        "국내 최초 미니 무밸브 펌프 출시, 수입 제품 독점 구조 타파",
+        "Запущен первый в Китае миниатюрный безклапанный насос, что нарушило монополию импортных продуктов"
+      ),
+      t(
+        "EA 单一系列产品年销售额首次突破千万元",
+        "Annual sales of the EA pump series exceeded RMB 10 million for the first time",
+        "Las ventas anuales de la serie EA superaron por primera vez los 10 millones de RMB",
+        "Les ventes annuelles de la série EA ont dépassé pour la première fois 10 millions de RMB",
+        "EA 단일 시리즈 연간 매출 최초 1천만 위안 돌파",
+        "Годовые продажи серии EA впервые превысили 10 млн юаней"
+      ),
+      t(
+        "首次参加 AACC",
+        "Participated in AACC for the first time",
+        "Participación en AACC por primera vez",
+        "Première participation à l’AACC",
+        "AACC 최초 참가",
+        "Первое участие в AACC"
+      ),
+    ],
+    enabled: true,
+  },
+  {
+    id: "2016",
+    year: 2016,
+    image: "/images/about/history/history-2016.jpg",
+    imageAlt: t(
+      "恒永达 2016 年发展历程配图",
+      "FOREACH 2016 milestone image",
+      "Imagen de hito de FOREACH en 2016",
+      "Image du jalon FOREACH 2016",
+      "FOREACH 2016년 연혁 이미지",
+      "Изображение этапа FOREACH 2016"
+    ),
+    imageSide: "left",
+    events: [
+      t(
+        "承接深圳市《基于微流体技术的一体化精密柱塞泵》的技术攻关项目",
+        "Undertook the Shenzhen technical research project on an integrated precision piston pump based on microfluidic technology",
+        "Emprendió el proyecto técnico de Shenzhen sobre una bomba de pistón de precisión integrada basada en tecnología microfluídica",
+        "A entrepris le projet technique de Shenzhen sur une pompe à piston de précision intégrée basée sur la technologie microfluidique",
+        "미세유체 기술 기반 일체형 정밀 피스톤 펌프 관련 선전시 기술개발 과제 수행",
+        "Выполнен технический проект Шэньчжэня по интегрированному прецизионному поршневому насосу на основе микрофлюидной технологии"
+      ),
+      t(
+        "多联泵上市，进军血球市场",
+        "Multi-channel pump launched and entered the hematology analyzer market",
+        "Lanzamiento de la bomba multicanal y entrada en el mercado de analizadores hematológicos",
+        "Lancement de la pompe multicanal et entrée sur le marché des analyseurs hématologiques",
+        "다연 펌프 출시, 혈구 분석기 시장 진출",
+        "Запущен многоканальный насос, выход на рынок гематологических анализаторов"
+      ),
+      t(
+        "获得国家高新技术企业认证",
+        "Recognized as a National High-tech Enterprise",
+        "Reconocida como Empresa Nacional de Alta Tecnología",
+        "Reconnue comme entreprise nationale de haute technologie",
+        "국가 고신기술기업 인증 획득",
+        "Получена сертификация национального высокотехнологичного предприятия"
+      ),
+      t(
+        "产品首次远销海外",
+        "Products exported overseas for the first time",
+        "Productos exportados al extranjero por primera vez",
+        "Premières exportations de produits à l’étranger",
+        "제품 첫 해외 수출",
+        "Продукция впервые экспортирована за рубеж"
+      ),
+    ],
+    enabled: true,
+  },
+  {
+    id: "2015",
+    year: 2015,
+    image: "/images/about/history/history-2015.jpg",
+    imageAlt: t(
+      "恒永达 2015 年发展历程配图",
+      "FOREACH 2015 milestone image",
+      "Imagen de hito de FOREACH en 2015",
+      "Image du jalon FOREACH 2015",
+      "FOREACH 2015년 연혁 이미지",
+      "Изображение этапа FOREACH 2015"
+    ),
+    imageSide: "right",
+    events: [
+      t(
+        "微型柱塞泵上市，进军 POCT 领域",
+        "Mini piston pump launched, entering the POCT market",
+        "Lanzamiento de la minibomba de pistón y entrada en el mercado POCT",
+        "Lancement de la mini-pompe à piston et entrée sur le marché POCT",
+        "미니 피스톤 펌프 출시, POCT 분야 진출",
+        "Запущен мини-поршневой насос, выход на рынок POCT"
+      ),
+      t(
+        "荣获深圳市高新技术企业认证",
+        "Certified as a Shenzhen High-tech Enterprise",
+        "Certificada como Empresa de Alta Tecnología de Shenzhen",
+        "Certifiée comme entreprise de haute technologie de Shenzhen",
+        "선전시 고신기술기업 인증 획득",
+        "Получена сертификация высокотехнологичного предприятия Шэньчжэня"
+      ),
+      t(
+        "产品销售额突破千万",
+        "Product sales revenue exceeded RMB 10 million",
+        "Los ingresos por ventas de productos superaron los 10 millones de RMB",
+        "Le chiffre d’affaires produits a dépassé 10 millions de RMB",
+        "제품 매출 1천만 위안 돌파",
+        "Выручка от продаж продукции превысила 10 млн юаней"
+      ),
+    ],
+    enabled: true,
+  },
+  {
+    id: "2014",
+    year: 2014,
+    image: "/images/about/history/history-2014.jpg",
+    imageAlt: t(
+      "恒永达 2014 年发展历程配图",
+      "FOREACH 2014 milestone image",
+      "Imagen de hito de FOREACH en 2014",
+      "Image du jalon FOREACH 2014",
+      "FOREACH 2014년 연혁 이미지",
+      "Изображение этапа FOREACH 2014"
+    ),
+    imageSide: "left",
+    events: [
+      t(
+        "推出高精度加样针、管路连接件产品系列",
+        "High-precision sampling probe and tubing fitting series launched",
+        "Lanzamiento de la serie de agujas de muestreo de alta precisión y racores para tubos",
+        "Lancement des séries d’aiguilles de prélèvement haute précision et de raccords de tubulure",
+        "고정밀 샘플링 프로브 및 튜빙 피팅 제품 시리즈 출시",
+        "Запущены серии высокоточных пробоотборных игл и фитингов для трубок"
+      ),
+    ],
+    enabled: true,
+  },
+  {
+    id: "2013",
+    year: 2013,
+    image: "/images/about/history/history-2013.jpg",
+    imageAlt: t(
+      "恒永达 2013 年发展历程配图",
+      "FOREACH 2013 milestone image",
+      "Imagen de hito de FOREACH en 2013",
+      "Image du jalon FOREACH 2013",
+      "FOREACH 2013년 연혁 이미지",
+      "Изображение этапа FOREACH 2013"
+    ),
+    imageSide: "right",
+    events: [
+      t(
+        "柱塞泵上市",
+        "Piston pump launched",
+        "Lanzamiento de la bomba de pistón",
+        "Lancement de la pompe à piston",
+        "피스톤 펌프 출시",
+        "Запущен поршневой насос"
+      ),
+    ],
+    enabled: true,
+  },
+  {
+    id: "2012",
+    year: 2012,
+    image: "/images/about/history/history-2012.jpg",
+    imageAlt: t(
+      "恒永达 2012 年发展历程配图",
+      "FOREACH 2012 milestone image",
+      "Imagen de hito de FOREACH en 2012",
+      "Image du jalon FOREACH 2012",
+      "FOREACH 2012년 연혁 이미지",
+      "Изображение этапа FOREACH 2012"
+    ),
+    imageSide: "left",
+    events: [
+      t(
+        "恒永达成立",
+        "FOREACH founded",
+        "Fundación de FOREACH",
+        "Création de FOREACH",
+        "FOREACH 설립",
+        "Основание FOREACH"
+      ),
+    ],
+    enabled: true,
+  },
+];
+
+/* 输出当前语言的发展历程数据 */
+export function getHistoryMilestones(
+  locale: SupportedHistoryLocale
+): HistoryMilestone[] {
+  return historyMilestoneSources.map((item) => ({
+    id: item.id,
+    year: item.year,
+    image: item.image,
+    imageAlt: getLocalizedText(item.imageAlt, locale),
+    imageSide: item.imageSide,
+    events: item.events.map((event) => getLocalizedText(event, locale)),
+    enabled: item.enabled,
+  }));
+} 

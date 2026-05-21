@@ -32,6 +32,57 @@ type OpenPanel = "none" | "language" | "mobileNav";
 // 说明：这里必须和 proxy.ts 里的 LOCALE_COOKIE_NAME 保持一致
 const LOCALE_COOKIE_NAME = "foreach_locale";
 
+/* ================================
+   语言路径前缀配置
+   说明：
+   1. 中文默认不使用 /zh-CN 前缀
+   2. 其他语言统一使用 /en、/es、/fr、/ko、/ru 前缀
+   3. 语言切换时会先移除旧语言前缀，再拼接新语言前缀
+================================ */
+const LOCALE_PATH_PREFIXES = ["en", "es", "fr", "ko", "ru"];
+
+/* ================================
+   去掉路径中的语言前缀
+   例子：
+   /en/about/history → /about/history
+   /es/products/pumps → /products/pumps
+   /about/history → /about/history
+   /en → /
+================================ */
+function stripLocalePrefixFromPath(pathname: string) {
+  const pathOnly = pathname.split("?")[0]?.split("#")[0] || "/";
+
+  const pathParts = pathOnly.split("/").filter(Boolean);
+
+  const firstPart = pathParts[0];
+
+  if (firstPart && LOCALE_PATH_PREFIXES.includes(firstPart)) {
+    const restPath = pathParts.slice(1).join("/");
+
+    return restPath ? `/${restPath}` : "/";
+  }
+
+  return pathOnly || "/";
+}
+
+/* ================================
+   根据目标语言生成新路径
+   例子：
+   当前 /about/history，切英文 → /en/about/history
+   当前 /en/about/history，切法文 → /fr/about/history
+   当前 /fr/about/history，切中文 → /about/history
+   当前 /en，切中文 → /
+================================ */
+function buildLocalizedPathname(pathname: string, localeCode: LocaleCode) {
+  const pathWithoutLocale = stripLocalePrefixFromPath(pathname);
+
+  if (localeCode === "zh-CN") {
+    return pathWithoutLocale;
+  }
+
+  return `/${localeCode}${pathWithoutLocale === "/" ? "" : pathWithoutLocale}`;
+}
+
 /**
  * SiteHeader
  * 全站顶部导航栏组件
@@ -255,11 +306,32 @@ export default function SiteHeader() {
    * 产品中心、应用领域等是首页锚点，暂时不做滚动高亮。
    */
   function isNavActive(item: NavigationItem) {
-    if (item.key !== "home") {
+    /*
+      通用导航高亮逻辑
+      说明：
+      1. 不只针对首页或发展历程
+      2. 所有页面都会先去掉语言前缀再比较
+      3. /en/about/history 会识别为 /about/history
+      4. 这样 About / Products / Applications 等栏目都能正常高亮
+    */
+    const currentPathWithoutLocale = stripLocalePrefixFromPath(pathname);
+
+    const itemHref = getLocalizedHref(item.href, currentLocale);
+
+    const itemPathWithoutLocale = stripLocalePrefixFromPath(itemHref);
+
+    if (item.key === "home") {
+      return currentPathWithoutLocale === "/";
+    }
+
+    if (!itemPathWithoutLocale || itemPathWithoutLocale === "/") {
       return false;
     }
 
-    return pathname === getLocaleHomePath(currentLocale);
+    return (
+      currentPathWithoutLocale === itemPathWithoutLocale ||
+      currentPathWithoutLocale.startsWith(`${itemPathWithoutLocale}/`)
+    );
   }
 
   /**
@@ -429,16 +501,22 @@ export default function SiteHeader() {
   ) {
     event.preventDefault();
 
-    // 立即更新顶部栏当前语言
+    /*
+      通用语言切换逻辑
+      说明：
+      1. 不只服务发展历程页面
+      2. 所有页面都按当前路径切换语言前缀
+      3. 中文默认不加 /zh-CN
+      4. 其他语言统一加 /en、/es、/fr、/ko、/ru
+      5. 不再使用 ?lang=en，避免把多语言页面强行带回中文路径
+    */
     setCurrentLocale(localeCode);
 
-    // 保存用户选择的语言到 localStorage
     localStorage.setItem(LOCALE_COOKIE_NAME, localeCode);
     localStorage.setItem("NEXT_LOCALE", localeCode);
     localStorage.setItem("lang", localeCode);
 
-    // 保存用户选择的语言到 Cookie
-    // eslint-disable-next-line react-hooks/immutability -- 语言切换必须在刷新前写入 Cookie
+    // eslint-disable-next-line react-hooks/immutability -- 语言切换必须在跳转前写入 Cookie
     document.cookie = `${LOCALE_COOKIE_NAME}=${localeCode}; path=/; max-age=31536000; SameSite=Lax`;
 
     // eslint-disable-next-line react-hooks/immutability -- 兼容其他页面读取 NEXT_LOCALE
@@ -447,43 +525,31 @@ export default function SiteHeader() {
     // eslint-disable-next-line react-hooks/immutability -- 兼容通过 lang Cookie 读取语言
     document.cookie = `lang=${localeCode}; path=/; max-age=31536000; SameSite=Lax`;
 
-    // 同步 html lang
-    document.documentElement.lang = localeCode;
+    document.documentElement.lang =
+      localeCode === "zh-CN" ? "zh-CN" : localeCode;
 
-    // 关闭顶部栏所有下拉面板
     closeAllPanels();
 
-    /*
-      去掉 URL 前缀语言
-      例如：
-      /en/about/foreach → /about/foreach
-    */
-    const localePrefixes = ["en", "es", "fr", "ko", "ru"];
-
-    const pathParts = window.location.pathname.split("/").filter(Boolean);
-
-    const firstPart = pathParts[0];
-
-    const pathWithoutLocale = localePrefixes.includes(firstPart)
-      ? `/${pathParts.slice(1).join("/")}`
-      : window.location.pathname;
-
-    const safePathname = pathWithoutLocale === "" ? "/" : pathWithoutLocale;
+    const nextPathname = buildLocalizedPathname(
+      window.location.pathname,
+      localeCode,
+    );
 
     /*
-      关键：
-      把语言写进 URL 参数
-      例如：
-      /about/foreach?lang=en
-      /about/foreach?lang=es
+      保留原来的查询参数，但删除旧的 lang / locale 参数
+      例子：
+      /products?p=1&lang=en → /en/products?p=1
     */
-    const nextUrl = new URL(window.location.href);
+    const nextSearchParams = new URLSearchParams(window.location.search);
 
-    nextUrl.pathname = safePathname;
+    nextSearchParams.delete("lang");
+    nextSearchParams.delete("locale");
 
-    nextUrl.searchParams.set("lang", localeCode);
+    const nextSearch = nextSearchParams.toString();
 
-    window.location.assign(`${nextUrl.pathname}${nextUrl.search}${nextUrl.hash}`);
+    const nextUrl = `${nextPathname}${nextSearch ? `?${nextSearch}` : ""}${window.location.hash}`;
+
+    window.location.assign(nextUrl);
   }
 
   return (
@@ -977,4 +1043,4 @@ export default function SiteHeader() {
       )}
     </header>
   );
-} 
+}  
