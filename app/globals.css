@@ -266,8 +266,20 @@ button {
 .site-nav-mega-inner {
   display: grid; /* 左侧分类 + 右侧内容预留 */
   grid-template-columns: 460px minmax(0, 1fr); /* 左侧分类栏加宽，贴近参考图比例 */
-  min-height: min(760px, calc(100vh - 112px)); /* PC 下拉高度贴近参考图，并限制小屏溢出 */
-  overflow: hidden; /* 保持圆角裁切 */
+
+  /* 
+     高度说明：
+     1. 不再写死 min-height
+     2. 下拉栏高度由左侧分类数量和右侧内容自然撑开
+     3. 后续新增一个主题时，下拉栏会自动变高
+  */
+  height: auto;
+  min-height: 0;
+  max-height: calc(100vh - 112px); /* 防止内容太多时超出屏幕 */
+
+  overflow-x: hidden; /* 横向不溢出 */
+  overflow-y: auto; /* 如果内容真的太多，允许下拉栏内部滚动 */
+
   border: 1px solid rgba(23, 51, 104, 0.08); /* 轻边框 */
   border-top: 0; /* 顶部贴住 Top 栏，不再额外出现线缝 */
   border-radius: 0 0 22px 22px; /* 底部大圆角，形成正式浮层 */
@@ -9028,4 +9040,2482 @@ html[lang="ru"] .home-hero-btn:hover {
     padding: 0 18px !important;
     font-size: 12px !important;
   }
+}
+
+/* ================================
+   04-2. 关于我们 Mega Menu 专用样式
+   说明：
+   1. 左侧分类栏完全沿用产品中心 Mega Menu 的通用样式
+   2. 这里只单独改“关于我们”的右侧内容区域
+   3. 右侧结构：一段文案 + 一张图 + 底部按钮
+   4. 图片无文字、无圆角、无阴影、无 hover 动效
+================================ */
+
+/* 右侧整体区域 */
+.site-nav-mega-about .site-nav-mega-main {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  grid-template-rows: 1fr auto;
+  column-gap: 38px;
+  row-gap: 0;
+  padding: 58px 70px 44px;
+  background: #ffffff;
+}
+
+/* 右侧文案区域 */
+.site-nav-mega-about .site-nav-mega-heading {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  border-bottom: 0;
+}
+
+/* 隐藏关于我们右侧标题，只保留说明文案 */
+.site-nav-mega-about .site-nav-mega-heading h3 {
+  display: none;
+}
+
+/* 关于我们右侧文案 */
+.site-nav-mega-about .site-nav-mega-heading p {
+  max-width: 430px;
+  margin: 0;
+  color: #72839c;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2;
+}
+
+/* 右侧图片区域 */
+.site-nav-mega-about .site-nav-mega-product-area {
+  display: flex;
+  align-items: center;
+  min-height: 260px;
+}
+
+/* 关于我们不使用产品中心那种多列产品网格 */
+.site-nav-mega-about .site-nav-mega-placeholder-grid,
+.site-nav-mega-about .site-nav-mega-product-grid {
+  display: block;
+  width: 100%;
+}
+
+/* 只显示当前分类下的第一张图，避免内容复杂 */
+.site-nav-mega-about .site-nav-product-clean-link:not(:first-child) {
+  display: none;
+}
+
+/* 图片外框：无圆角、无阴影 */
+.site-nav-mega-about .site-nav-product-image-box,
+.site-nav-mega-about .site-nav-mega-single-image-box {
+  width: 100%;
+  min-height: 260px;
+  overflow: hidden;
+  border-radius: 0;
+  background: #eef3f8;
+  box-shadow: none;
+}
+
+/* 图片本身：无圆角、无阴影、无动效 */
+.site-nav-mega-about .site-nav-product-image,
+.site-nav-mega-about .site-nav-mega-single-image {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* 图片下面不显示标题和说明 */
+.site-nav-mega-about .site-nav-product-title,
+.site-nav-mega-about .site-nav-product-desc,
+.site-nav-mega-about .site-nav-mega-card-title,
+.site-nav-mega-about .site-nav-mega-card-label {
+  display: none;
+}
+
+/* 底部区域：跨两列，只保留右下角按钮 */
+.site-nav-mega-about .site-nav-mega-footer {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0;
+  padding: 28px 0 0;
+  border-top: 1px solid rgba(23, 51, 104, 0.1);
+}
+
+/* 隐藏底部说明文字 */
+.site-nav-mega-about .site-nav-mega-footer span {
+  display: none;
+}
+
+/* 底部按钮沿用产品中心按钮风格 */
+.site-nav-mega-about .site-nav-mega-footer a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 0 14px;
+  border-radius: 8px;
+  background: rgba(23, 51, 104, 0.06);
+  color: #173368;
+  font-size: 14px; 
+  font-weight: 700;
+  transition:
+    background 0.22s ease,
+    color 0.22s ease,
+    transform 0.22s ease;
+}
+
+.site-nav-mega-about .site-nav-mega-footer a:hover {
+  background: #173368;
+  color: #09e9b4;
+  transform: translateY(-1px);
+}
+
+/* 关于我们下拉栏不固定高度，由左侧主题数量自然撑开 */
+.site-nav-mega-about .site-nav-mega-inner {
+  height: auto;
+  min-height: 0;
+}
+
+/* 关于我们右侧不要强行撑高 */
+.site-nav-mega-about .site-nav-mega-main {
+  min-height: 0;
+} 
+
+/* ================================
+   关于我们 / 企业文化页面
+   路径：app/about/culture/page.tsx
+
+   说明：
+   1. 所有 class 都使用 about-culture- 前缀
+   2. 避免和首页、SiteHeader、产品中心样式冲突
+   3. 由原 H5 企业文化页面转换而来
+================================ */
+
+.about-culture-page {
+  --culture-blue: #173368;
+  --culture-blue-dark: #0b1d3f;
+  --culture-cyan: #09e9b4;
+  --culture-text-main: #333333;
+  --culture-text-sub: #666666;
+  --culture-line: #eeeeee;
+  --culture-bg-light: #f6f7f9;
+  --culture-shadow-normal: 0 14px 36px rgba(23, 51, 104, 0.08);
+  --culture-shadow-hover: 0 26px 60px rgba(23, 51, 104, 0.18);
+
+  color: var(--culture-text-main);
+  background: #ffffff;
+}
+
+/* ================================
+   恒永达文化页面内容宽度
+   说明：
+   1. 内容页不需要像首页一样铺太宽
+   2. 1920 屏幕下使用 1440px，更适合阅读
+   3. 2K / 大屏下页面会更收敛，不会显得内容太散
+================================ */
+
+.about-culture-container {
+  width: min(1440px, calc(100% - 96px));
+  margin: 0 auto; 
+} 
+
+/* 1440 以下屏幕，左右留白稍微收小 */
+@media (max-width: 1440px) {
+  .about-culture-container {
+    width: calc(100% - 80px);
+  }
+}
+
+/* 手机端左右留白 */
+@media (max-width: 760px) {
+  .about-culture-container {
+    width: calc(100% - 32px);
+  }
+}
+
+/* ================================
+   1. Banner 区域
+================================ */
+
+.about-culture-banner {
+  position: relative;
+  height: 360px;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(23, 51, 104, 0.88), rgba(23, 51, 104, 0.3)),
+    radial-gradient(circle at 78% 42%, rgba(9, 233, 180, 0.36), transparent 21%),
+    linear-gradient(135deg, #e6ebf3 0%, #f8f9fb 44%, #d8e1ec 100%);
+}
+
+.about-culture-banner::before {
+  content: "";
+  position: absolute;
+  right: 13%;
+  top: 70px;
+  width: 430px;
+  height: 220px;
+  border: 1px solid rgba(255, 255, 255, 0.56);
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.42) 0,
+      rgba(255, 255, 255, 0.42) 1px,
+      transparent 1px,
+      transparent 26px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.42) 0,
+      rgba(255, 255, 255, 0.42) 1px,
+      transparent 1px,
+      transparent 26px
+    );
+  opacity: 0.95;
+}
+
+.about-culture-banner::after {
+  content: "";
+  position: absolute;
+  right: 21%;
+  top: 126px;
+  width: 108px;
+  height: 108px;
+  border: 2px solid rgba(9, 233, 180, 0.9);
+  border-radius: 50%;
+  background: rgba(9, 233, 180, 0.12);
+}
+
+.about-culture-banner-inner {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.about-culture-banner-inner h1 {
+  margin: 0;
+  font-size: 42px;
+  line-height: 1.3;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.about-culture-banner-inner p {
+  max-width: 620px;
+  margin: 18px 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+/* ================================
+   2. 面包屑
+================================ */
+
+.about-culture-breadcrumb {
+  height: 64px;
+  background: #ffffff;
+  border-bottom: 1px solid var(--culture-line);
+  color: #888888;
+  font-size: 14px;
+}
+
+.about-culture-breadcrumb-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.about-culture-breadcrumb a {
+  color: #888888;
+  transition: color 0.25s ease;
+}
+
+.about-culture-breadcrumb a:hover {
+  color: var(--culture-blue);
+}
+
+.about-culture-breadcrumb span {
+  color: #aaaaaa;
+}
+
+.about-culture-breadcrumb strong {
+  color: var(--culture-blue);
+  font-weight: 400;
+}
+
+/* ================================
+   3. 页面标题
+================================ */
+
+.about-culture-section-title {
+  text-align: center;
+  padding-top: 64px;
+  padding-bottom: 52px;
+}
+
+.about-culture-section-title h2,
+.about-culture-project-title h2 {
+  margin: 0;
+  color: var(--culture-blue);
+  font-size: 34px;
+  line-height: 1.35;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.about-culture-section-title i,
+.about-culture-project-title i {
+  display: block;
+  width: 42px;
+  height: 3px;
+  background: var(--culture-cyan);
+}
+
+.about-culture-section-title i {
+  margin: 18px auto 0;
+}
+/* ================================
+   4. 恒永达文化核心
+   说明：
+   1. 企业使命已去掉，PC 端改为 3 个卡片
+   2. 三个卡片之间留出间距，不再像表格一样连在一起
+   3. 每张卡片独立成块，更符合官网展示感
+================================ */
+
+.about-culture-core-section {
+  padding-bottom: 186px;
+  background: #ffffff;
+}
+  
+.about-culture-core-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+  background: transparent;
+  list-style: none;
+}
+
+.about-culture-core-item {
+  min-height: 262px;
+  padding: 42px 28px 34px; 
+
+  text-align: center;
+
+  border: 1px solid var(--culture-line);
+  background: #ffffff;
+
+  transition:
+    transform 0.36s ease,
+    box-shadow 0.36s ease,
+    background 0.36s ease;
+}
+
+.about-culture-core-item:last-child {
+  border-right: 1px solid var(--culture-line);
+}
+
+.about-culture-core-icon {
+  width: 74px;
+  height: 74px;
+  margin: 0 auto 22px;
+
+  border: 2px solid var(--culture-blue);
+  border-radius: 50%;
+
+  color: var(--culture-blue);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 34px;
+  line-height: 1;
+
+  transition: all 0.36s ease;
+}
+
+.about-culture-core-item h3 {
+  margin: 0 0 14px;
+
+  color: #333333;
+  font-size: 22px;
+  line-height: 1.35;
+  font-weight: 700;
+
+  transition: color 0.36s ease;
+}
+
+.about-culture-core-item p {
+  margin: 0;
+
+  color: #666666;
+  font-size: 16px;
+  line-height: 1.82;
+
+  transition: color 0.36s ease;
+}
+
+.about-culture-core-item:hover {
+  background: var(--culture-blue);
+  transform: translateY(-4px);
+  box-shadow: var(--culture-shadow-hover);
+} 
+
+.about-culture-core-item:hover h3,
+.about-culture-core-item:hover p {
+  color: #ffffff;
+}
+
+/* ================================
+   5. 组织文化横幅
+================================ */
+
+.about-culture-organization-hero {
+  position: relative;
+  z-index: 1;
+  min-height: 520px;
+  padding: 150px 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  background-color: var(--culture-blue-dark);
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("/images/about/culture/organization-hero.webp");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.about-culture-organization-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(11, 29, 63, 0.18) 0%,
+    rgba(11, 29, 63, 0.08) 46%,
+    rgba(11, 29, 63, 0.25) 100%
+  );
+  pointer-events: none;
+}
+
+.about-culture-organization-content {
+  position: relative;
+  z-index: 2;
+  width: min(980px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.about-culture-organization-content h2 {
+  margin: 0 0 34px;
+  color: #ffffff;
+  font-size: 36px;
+  line-height: 1.45;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.about-culture-organization-content p {
+  max-width: 920px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 17px;
+  line-height: 2.1;
+}
+/* ================================
+   6. 爱心品牌 / 健康品牌
+   说明：
+   1. 爱心品牌：左文案，右图片
+   2. 健康品牌：左图片，右文案
+   3. 两个模块统一 1:1 宽度，保证尺寸一致
+   4. 图片区域和文字区域高度一致，避免上下两块视觉不统一
+================================ */
+
+.about-culture-brand-section {
+  position: relative;
+  z-index: 2;
+  padding: 88px 0 78px;
+  background: #ffffff;
+}
+
+.about-culture-brand-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+/* 每一行统一左右 1:1 */
+.about-culture-brand-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 320px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: var(--culture-shadow-normal);
+  transition:
+    transform 0.36s ease,
+    box-shadow 0.36s ease;
+}
+
+/* 健康品牌反向排列：左图右文 */
+.about-culture-brand-row-reverse .about-culture-brand-image {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.about-culture-brand-row-reverse .about-culture-brand-text {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.about-culture-brand-row:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--culture-shadow-hover);
+}
+
+/* 文字区域 */
+.about-culture-brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 320px;
+  padding: 54px 62px;
+  background: #f6f7f9;
+  color: #333333;
+  transition:
+    background 0.36s ease,
+    color 0.36s ease;
+}
+
+.about-culture-brand-text h3 {
+  margin: 0 0 20px;
+  color: #333333;
+  font-size: 30px;
+  line-height: 1.35;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition:
+    color 0.36s ease,
+    text-shadow 0.36s ease,
+    transform 0.36s ease;
+}
+
+.about-culture-brand-text p {
+  max-width: 620px;
+  margin: 0;
+  color: #555555;
+  font-size: 16px;
+  line-height: 1.95;
+  transition:
+    color 0.36s ease,
+    transform 0.36s ease;
+}
+
+/* hover 后文字区变深蓝 */
+.about-culture-brand-row:hover .about-culture-brand-text {
+  background: var(--culture-blue);
+}
+
+.about-culture-brand-row:hover .about-culture-brand-text h3 {
+  color: var(--culture-cyan);
+  text-shadow: 0 0 14px rgba(9, 233, 180, 0.26);
+  transform: translateY(-4px);
+}
+
+.about-culture-brand-row:hover .about-culture-brand-text p {
+  color: rgba(9, 233, 180, 0.92);
+  transform: translateY(-4px);
+}
+
+/* 图片区域 */
+.about-culture-brand-image {
+  position: relative;
+  min-height: 320px;
+  overflow: hidden;
+  background: #e6ebf3;
+} 
+
+/* Next.js Image 最终会渲染成 img，这里统一控制铺满 */
+.about-culture-brand-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition:
+    transform 0.7s ease,
+    filter 0.36s ease;
+}
+
+.about-culture-brand-row:hover .about-culture-brand-image img {
+  transform: scale(1.06);
+  filter: brightness(0.9);
+}
+
+/* ================================
+   7. 三大工程
+================================ */
+
+.about-culture-project-section {
+  padding: 86px 0 92px;
+  background:
+    linear-gradient(180deg, rgba(246, 247, 249, 0.96), rgba(255, 255, 255, 0.96)),
+    repeating-linear-gradient(
+      90deg,
+      rgba(23, 51, 104, 0.04) 0 1px,
+      transparent 1px 64px
+    );
+}
+
+.about-culture-project-title {
+  text-align: center;
+  margin-bottom: 46px;
+}
+
+.about-culture-project-title i {
+  margin: 14px auto 18px;
+}
+
+.about-culture-project-title p {
+  margin: 0;
+  color: #555555;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.about-culture-project-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  align-items: stretch;
+}
+
+.about-culture-project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: var(--culture-shadow-normal);
+  transition:
+    transform 0.36s ease,
+    box-shadow 0.36s ease;
+}
+
+.about-culture-project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--culture-shadow-hover);
+}
+
+.about-culture-project-image {
+  position: relative;
+  height: 235px;
+  flex: 0 0 235px;
+  overflow: hidden;
+  background: #e6ebf3;
+}
+
+.about-culture-project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition:
+    transform 0.7s ease,
+    filter 0.36s ease;
+}
+
+.about-culture-project-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.36s ease;
+  pointer-events: none;
+}
+
+.about-culture-project-card:hover .about-culture-project-image img {
+  transform: scale(1.06);
+  filter: brightness(0.9);
+}
+
+.about-culture-project-card:hover .about-culture-project-image::after {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.about-culture-project-content {
+  flex: 1;
+  min-height: 184px;
+  padding: 28px 30px 32px;
+  background: #f6f7f9;
+  transition:
+    background 0.36s ease,
+    color 0.36s ease;
+}
+
+.about-culture-project-content h3 {
+  margin: 0 0 14px;
+  color: var(--culture-blue);
+  font-size: 24px;
+  line-height: 1.35;
+  font-weight: 700;
+  transition:
+    color 0.36s ease,
+    text-shadow 0.36s ease;
+}
+
+.about-culture-project-content p {
+  margin: 0;
+  color: #29415f;
+  font-size: 16px;
+  line-height: 1.85;
+  transition: color 0.36s ease;
+}
+
+.about-culture-project-card:hover .about-culture-project-content {
+  background: var(--culture-blue);
+}
+
+.about-culture-project-card:hover .about-culture-project-content h3 {
+  color: var(--culture-cyan);
+  text-shadow: 0 0 14px rgba(9, 233, 180, 0.26);
+}
+
+.about-culture-project-card:hover .about-culture-project-content p {
+  color: rgba(9, 233, 180, 0.92);
+}
+
+/* ================================
+   8. 响应式适配
+================================ */
+
+@media (max-width: 1100px) {
+  .about-culture-core-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about-culture-core-item {
+    border-right: 1px solid var(--culture-line);
+  }
+
+  .about-culture-core-item:last-child {
+    border-right: 0;
+  }
+ 
+  .about-culture-brand-row,
+  .about-culture-brand-row-reverse {
+    grid-template-columns: 1fr;
+  }
+ 
+  .about-culture-brand-row-reverse .about-culture-brand-image {
+    order: 1;
+  }
+
+  .about-culture-brand-row-reverse .about-culture-brand-text {
+    order: 2;
+  }
+
+  .about-culture-project-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .about-culture-banner {
+    height: 290px;
+  }
+
+  .about-culture-banner-inner h1 {
+    font-size: 32px;
+  }
+
+  .about-culture-banner-inner p {
+    font-size: 15px;
+  }
+
+  .about-culture-section-title {
+    padding-top: 46px;
+    padding-bottom: 36px;
+  }
+
+  .about-culture-section-title h2,
+  .about-culture-project-title h2 {
+    font-size: 28px;
+  }
+
+  .about-culture-core-list {
+    grid-template-columns: 1fr;
+  }
+
+  .about-culture-core-item {
+    border-right: 0;
+    border-bottom: 1px solid var(--culture-line);
+  }
+
+  .about-culture-core-item:last-child {
+    border-bottom: 0;
+  }
+
+  .about-culture-organization-hero {
+    min-height: 360px;
+    padding: 90px 0;
+
+    /* 手机端 background-attachment: fixed 兼容性不稳定，所以回退为普通滚动 */
+    background-attachment: scroll;
+  }
+
+  .about-culture-organization-content h2 {
+    margin-bottom: 16px;
+    font-size: 24px;
+  }
+
+  .about-culture-organization-content p {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+  .about-culture-brand-section {
+    padding: 56px 0;
+  }
+
+  .about-culture-brand-text {
+    padding: 38px 30px;
+  }
+
+  .about-culture-brand-text h3 {
+    font-size: 26px;
+  }
+
+  .about-culture-brand-image {
+    min-height: 245px;
+  }
+
+  .about-culture-project-section {
+    padding: 58px 0;
+  }
+
+  .about-culture-project-image {
+    height: 220px;
+  }
+}  
+
+/* ================================
+   手机端 Top 栏下拉导航：全屏宽度 + Footer 同款折叠样式
+   说明：
+   1. 菜单从屏幕左侧开始
+   2. 宽度铺满整个手机屏幕
+   3. 样式和 Footer 一样，只用横线分隔
+   4. 右侧使用 + / - 展开收起
+================================ */
+
+@media (max-width: 900px) {
+  /* 手机端菜单按钮外层不要限制下拉菜单宽度 */
+  .mobile-nav-switcher {
+    position: static !important; 
+  } 
+
+  /* 手机端下拉导航整体：强制全屏宽度 */
+  .mobile-nav {
+    position: fixed !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: 72px !important;
+
+    width: 100vw !important;
+    max-width: none !important;
+    min-width: 100vw !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border-radius: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-top: 1px solid rgba(23, 51, 104, 0.08);
+
+    background: #ffffff !important;
+    box-shadow: none !important;
+
+    max-height: calc(100dvh - 72px);
+    overflow-y: auto;
+
+    z-index: 999 !important;
+  }
+
+  /* 去掉 details 默认小三角 */
+  .mobile-nav-summary {
+    list-style: none;
+  }
+
+  .mobile-nav-summary::-webkit-details-marker {
+    display: none;
+  }
+
+  /* 一级普通链接：全屏横线列表 */
+  .mobile-nav-link {
+    width: 100%;
+    min-height: 56px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(23, 51, 104, 0.12);
+    color: #173368;
+    background: #ffffff;
+    font-size: 15px;
+    font-weight: 650;
+    text-decoration: none;
+  }
+
+  /* 可折叠栏目外层 */
+  .mobile-nav-section {
+    width: 100%;
+    border-bottom: 1px solid rgba(23, 51, 104, 0.12);
+    background: #ffffff;
+  }
+
+  /* 可折叠栏目标题行 */
+  .mobile-nav-summary {
+    width: 100%;
+    min-height: 56px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #173368;
+    background: #ffffff;
+    font-size: 15px;
+    font-weight: 650;
+    cursor: pointer;
+  }
+
+  /* 防止旧样式把文字旋转 */
+  .mobile-nav-summary span,
+  .mobile-nav-summary-text {
+    transform: none !important;
+  }
+
+  .mobile-nav-section[open] .mobile-nav-summary span:last-child {
+    transform: none !important;
+  }
+
+  /* 右侧 + 号 */
+  .mobile-nav-summary::after {
+    content: "+";
+    width: 22px;
+    height: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #173368;
+    font-size: 22px;
+    line-height: 1;
+    font-weight: 300;
+    transform: none !important;
+  }
+
+  /* 展开后变成 - 号 */
+  .mobile-nav-section[open] > .mobile-nav-summary::after {
+    content: "−";
+  }
+
+  /* 子菜单区域：全屏宽度，简单缩进 */
+  .mobile-nav-submenu {
+    width: 100%;
+    padding: 0 0 12px;
+    background: #ffffff;
+  }
+
+  /* 子菜单链接 */
+  .mobile-nav-submenu-link {
+    width: 100%;
+    min-height: 40px;
+    padding: 0 24px 0 42px;
+    display: flex;
+    align-items: center;
+    color: rgba(23, 51, 104, 0.72);
+    background: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;  
+    text-decoration: none;
+  }
+
+  .mobile-nav-submenu-link:hover,
+  .mobile-nav-submenu-link:active {
+    color: #173368;
+    background: #ffffff;
+  }
+
+  .mobile-nav-submenu-entry {
+    color: #173368;
+    font-weight: 600;
+  }
+
+  /* 手机端遮罩也全屏 */
+  .mobile-nav-backdrop {
+    position: fixed !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: 72px !important;
+    bottom: 0 !important;
+    width: 100vw !important;
+    background: rgba(6, 26, 58, 0.12);
+    z-index: 998 !important;
+  }
+}  
+
+/* ================================
+   修复：手机端下拉导航顶部与 Top 栏底部对齐
+   说明：
+   1. 用统一变量控制手机端 Top 栏高度
+   2. mobile-nav 的 top 必须等于 Top 栏真实高度
+   3. 如果还有 1-2px 空隙，只改 --mobile-header-height 即可
+================================ */
+
+@media (max-width: 900px) {
+  :root {
+    --mobile-header-height: 60px;
+  }
+  
+  .mobile-nav {
+    top: var(--mobile-header-height) !important;
+    max-height: calc(100dvh - var(--mobile-header-height)) !important;
+  }
+
+  .mobile-nav-backdrop {
+    top: var(--mobile-header-height) !important;
+  }
+} 
+ 
+/* ================================
+   手机端 Top 栏展开状态修复
+   说明：
+   1. 一级栏目默认细字
+   2. 展开中的栏目变粗、颜色变深
+   3. 右侧 + / - 保持正常
+   4. 这段必须放在 app/globals.css 最底部
+================================ */
+
+@media (max-width: 900px) {
+  /* 默认状态：一级栏目细字 */
+  .mobile-nav .mobile-nav-summary {
+    color: #173368 !important;
+    font-weight: 400 !important;
+  }
+
+  .mobile-nav .mobile-nav-summary-text {
+    color: #173368 !important;
+    font-weight: 400 !important;
+    transform: none !important;
+  }
+
+  /* 默认状态：右侧 + 号 */
+  .mobile-nav .mobile-nav-summary::after {
+    content: "+" !important;
+    color: #173368 !important;
+    font-weight: 300 !important;
+    transform: none !important;
+  }
+
+  /* 展开状态：当前一级栏目加粗 */
+  .mobile-nav .mobile-nav-section[open] > .mobile-nav-summary {
+    color: #173368 !important;
+    font-weight: 900 !important;
+  }
+  
+  .mobile-nav .mobile-nav-section[open] > .mobile-nav-summary .mobile-nav-summary-text {
+    color: #173368 !important;
+    font-weight: 900 !important;
+  }
+    
+  /* 展开状态：右侧变成 - */
+  .mobile-nav .mobile-nav-section[open] > .mobile-nav-summary::after {
+    content: "−" !important;
+    color: #173368 !important;
+    font-weight: 800 !important;
+  }
+  
+  /* 子菜单保持正常细字 */
+  .mobile-nav .mobile-nav-submenu-link {
+    color: rgba(23, 51, 104, 0.72) !important;
+    font-weight: 400 !important;
+  }
+
+  /* 子菜单点击反馈 */
+  .mobile-nav .mobile-nav-submenu-link:hover,
+  .mobile-nav .mobile-nav-submenu-link:active {
+    color: #173368 !important;
+  }
+} 
+
+/* ================================
+   手机端 Top 栏菜单字体统一修复
+   说明：
+   1. 首页、联系我们使用 .mobile-nav-link
+   2. 产品中心、应用领域、资源中心、关于我们使用 .mobile-nav-summary
+   3. 这里统一两类一级导航的字号、字重、行高和高度
+   4. 默认都是细字，只有展开中的栏目才加粗
+================================ */
+
+@media (max-width: 900px) {
+  /* 普通一级链接：例如 首页、联系我们 */
+  .mobile-nav .mobile-nav-link {
+    width: 100% !important;
+    min-height: 56px !important;
+    padding: 0 24px !important;
+    display: flex !important;
+    align-items: center !important;
+
+    color: #173368 !important;
+    background: #ffffff !important;
+
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+    font-weight: 400 !important;
+    letter-spacing: 0 !important;
+
+    border-bottom: 1px solid rgba(23, 51, 104, 0.12) !important;
+    text-decoration: none !important;
+  }
+
+  /* 可折叠一级栏目：例如 产品中心、应用领域、资源中心、关于我们 */
+  .mobile-nav .mobile-nav-summary {
+    width: 100% !important;
+    min-height: 56px !important;
+    padding: 0 24px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    color: #173368 !important;
+    background: #ffffff !important;
+
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+    font-weight: 400 !important;
+    letter-spacing: 0 !important;
+
+    cursor: pointer !important;
+    list-style: none !important;
+  }
+
+  /* 去掉 details 默认小三角 */
+  .mobile-nav .mobile-nav-summary::-webkit-details-marker {
+    display: none !important;
+  }
+
+  /* summary 里面的文字也统一 */
+  .mobile-nav .mobile-nav-summary-text {
+    color: #173368 !important;
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+    font-weight: 400 !important;
+    letter-spacing: 0 !important;
+    transform: none !important;
+  }
+
+  /* 展开中的一级栏目：文字加粗 */
+  .mobile-nav .mobile-nav-section[open] > .mobile-nav-summary {
+    color: #173368 !important;
+    font-weight: 700 !important;
+  }
+
+  .mobile-nav .mobile-nav-section[open] > .mobile-nav-summary .mobile-nav-summary-text {
+    color: #173368 !important;
+    font-weight: 700 !important;
+  }
+
+  /* 右侧 + / - 号统一 */
+  .mobile-nav .mobile-nav-summary::after {
+    content: "+" !important;
+    width: 22px !important;
+    height: 22px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    color: #173368 !important;
+    font-size: 22px !important;
+    line-height: 1 !important;
+    font-weight: 300 !important;
+    transform: none !important;
+  }
+
+  .mobile-nav .mobile-nav-section[open] > .mobile-nav-summary::after {
+    content: "−" !important;
+    color: #173368 !important;
+    font-weight: 400 !important;
+    transform: none !important;
+  }
+
+  /* 子菜单文字统一 */
+  .mobile-nav .mobile-nav-submenu-link {
+    width: 100% !important;
+    min-height: 40px !important;
+    padding: 0 24px 0 42px !important;
+    display: flex !important;
+    align-items: center !important;
+
+    color: rgba(23, 51, 104, 0.72) !important;
+    background: #ffffff !important;
+
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    font-weight: 400 !important;
+    letter-spacing: 0 !important;
+
+    text-decoration: none !important;
+  }
+
+  .mobile-nav .mobile-nav-submenu-link:hover,
+  .mobile-nav .mobile-nav-submenu-link:active {
+    color: #173368 !important;
+    background: #ffffff !important;
+  }
+}
+
+/* ================================
+   俄语 2K / 宽屏进一步适配
+   说明：
+   1. 1920px 以上屏幕一般空间足够
+   2. 这里只做轻微缩小，不会显得太小
+================================ */
+
+@media (min-width: 1600px) {
+  html[lang="ru"] .site-nav-link {
+    font-size: 20px;
+  }
+
+  html[lang="ru"] .site-nav {
+    gap: 38px;
+  }
+}
+
+/* ================================
+   恒永达文化核心图标
+   说明：
+   1. 去掉原来的圆形边框
+   2. 直接显示 SVG 图标本身
+   3. hover 时跟随卡片变成白色
+================================ */
+.about-culture-core-icon {
+  width: 78px;
+  height: 78px;
+  margin: 0 auto 22px;
+
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+
+  color: var(--culture-blue);
+
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+
+  line-height: 1;
+  transition: color 0.36s ease;
+}
+
+.about-culture-core-icon svg {
+  width: 58px;
+  height: 58px;
+  display: block;
+  flex-shrink: 0;
+}
+
+.about-culture-core-item:hover .about-culture-core-icon {
+  color: #ffffff;
+  border-color: transparent;
+  background: transparent;
+}
+.about-culture-core-icon svg {
+  width: 64px;
+  height: 64px;
+} 
+
+/* =========================================================
+   关于恒永达页面样式
+   对应文件：
+   app/about/foreach/page.tsx
+
+   说明：
+   1. 所有类名统一使用 about-foreach- 前缀
+   2. 避免影响首页、企业文化页、产品页
+   3. 当前图片全部使用灰色占位，后续可替换真实图片
+========================================================= */
+
+.about-foreach-page {
+  --about-foreach-brand-blue: #173368;
+  --about-foreach-brand-blue-deep: #071a3a;
+  --about-foreach-brand-cyan: #09e9b4;
+  --about-foreach-page-bg: #f5f6f8;
+  --about-foreach-text-main: #111827;
+  --about-foreach-text-soft: #666f7c;
+  --about-foreach-line-soft: rgba(17, 24, 39, 0.1);
+  --about-foreach-content-width: 1280px;
+  --about-foreach-nav-height: 76px;
+  --about-foreach-shadow-soft: 0 20px 60px rgba(7, 26, 58, 0.08);
+
+  color: var(--about-foreach-text-main);
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+.about-foreach-page * {
+  box-sizing: border-box;
+}
+
+.about-foreach-container {
+  width: min(var(--about-foreach-content-width), calc(100% - 64px));
+  margin: 0 auto;
+}
+
+/* ================================
+   通用灰色图片占位
+================================ */
+.about-foreach-image-placeholder {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #dfe3e8 0%, #bfc6cf 50%, #e7eaee 100%);
+}
+
+.about-foreach-image-placeholder::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(7, 26, 58, 0.2), rgba(7, 26, 58, 0.02)),
+    radial-gradient(circle at 70% 35%, rgba(255, 255, 255, 0.32), transparent 30%);
+}
+
+/* ================================
+   第一部分：Banner
+================================ */
+.about-foreach-hero {
+  position: relative;
+  min-height: 520px;
+  padding-top: var(--about-foreach-nav-height);
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  overflow: hidden;
+  background: var(--about-foreach-brand-blue-deep);
+}
+
+.about-foreach-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.about-foreach-hero-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 26, 58, 0.94),
+      rgba(23, 51, 104, 0.76),
+      rgba(7, 26, 58, 0.42)
+    ),
+    linear-gradient(180deg, rgba(7, 26, 58, 0.12), rgba(7, 26, 58, 0.72));
+}
+
+.about-foreach-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.22;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 72px 72px;
+  pointer-events: none;
+}
+
+.about-foreach-hero-content {
+  position: relative;
+  z-index: 2;
+  width: min(var(--about-foreach-content-width), calc(100% - 64px));
+  margin: 0 auto;
+}
+
+.about-foreach-hero h1 {
+  max-width: 780px;
+  font-size: clamp(46px, 5vw, 74px);
+  line-height: 1.04;
+  font-weight: 860;
+  letter-spacing: -0.06em;
+}
+
+.about-foreach-hero h1 span {
+  display: block;
+  color: var(--about-foreach-brand-cyan);
+}
+
+.about-foreach-hero p {
+  max-width: 760px;
+  margin-top: 26px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+/* ================================
+   第二部分：公司介绍 + 视频
+   说明：
+   1. 给“恒永达科技 + 视频”这一屏增加背景
+   2. 背景图放在 public/images/home/company-bottom-bg.webp
+   3. 叠加浅色遮罩，避免背景影响文字阅读
+================================ */
+.about-foreach-intro-section {
+  position: relative;
+  padding: 120px 0 112px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.96) 0%,
+      rgba(255, 255, 255, 0.92) 45%,
+      rgba(255, 255, 255, 0.82) 100%
+    ),
+    url("/images/home/company-bottom-bg2.webp") center center / cover no-repeat;
+  overflow: hidden;
+}
+  
+/* 让里面的文字和视频浮在背景上方 */
+.about-foreach-intro-section .about-foreach-container {
+  position: relative;
+  z-index: 2;
+}
+
+.about-foreach-intro-layout {
+  display: grid;
+  grid-template-columns: 0.98fr 1.02fr;
+  gap: 90px;
+  align-items: center;
+}
+
+.about-foreach-intro-copy {
+  min-width: 0;
+}
+
+.about-foreach-intro-copy h2 {
+  color: var(--about-foreach-brand-blue);
+  font-size: clamp(38px, 4vw, 56px);
+  line-height: 1.15;
+  font-weight: 850;
+  letter-spacing: -0.04em;
+}
+
+.about-foreach-intro-copy p {
+  max-width: 720px;
+  margin-top: 54px;
+  color: #686f78;
+  font-size: 16px;
+  line-height: 2.12;
+  letter-spacing: 0.02em;
+}
+
+.about-foreach-video-card {
+  position: relative;
+  min-height: 360px;
+  overflow: hidden;
+  background: #071a3a;
+  box-shadow: var(--about-foreach-shadow-soft);
+}
+
+.about-foreach-video {
+  display: block;
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  background: #071a3a;
+}
+
+/* 公司介绍视频本体 */
+.about-foreach-video {
+  display: block;
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  background: #071a3a;
+}
+
+
+.about-foreach-video-play {
+  display: none;
+}
+
+.about-foreach-video-play::before {
+  content: "";
+  width: 0;
+  height: 0;
+  margin-left: 5px;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 19px solid var(--about-foreach-brand-blue);
+}
+
+/* ================================
+   第三部分：公司优势数据 + 图片
+================================ */
+.about-foreach-advantage-section {
+  position: relative;
+  padding: 84px 0 96px;
+  background: #f5f6f8;
+  overflow: hidden;
+}
+
+.about-foreach-advantage-panel {
+  position: relative;
+  z-index: 3;
+  width: min(1120px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.about-foreach-advantage-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.about-foreach-advantage-stat {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  align-items: center;
+  justify-items: center;
+  padding: 0 18px;
+  text-align: center;
+}
+
+.about-foreach-advantage-number {
+  color: var(--about-foreach-brand-blue);
+  font-size: 68px;
+  font-weight: 860;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.about-foreach-advantage-plus {
+  display: inline-block;
+  margin-left: 4px;
+  color: var(--about-foreach-brand-blue);
+  font-size: 0.42em;
+  font-weight: 800;
+  line-height: 1;
+  transform: translateY(-0.12em);
+}
+
+.about-foreach-advantage-text {
+  color: #7b838d;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.about-foreach-advantage-image-wrap {
+  margin-top: 48px;
+}
+
+.about-foreach-advantage-image {
+  width: 100%;
+  min-height: 320px;
+  box-shadow: var(--about-foreach-shadow-soft);
+}
+
+/* ================================
+   第四部分：荣誉资质
+================================ */
+.about-foreach-honor-section {
+  position: relative;
+  padding: 96px 0 108px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.about-foreach-honor-title {
+  text-align: center;
+  margin-bottom: 74px;
+}
+
+.about-foreach-honor-title h2 {
+  color: #111827;
+  font-size: clamp(34px, 3vw, 48px);
+  line-height: 1.12;
+  font-weight: 850;
+  letter-spacing: -0.04em;
+}
+
+.about-foreach-honor-layout {
+  position: relative;
+  display: grid;
+  grid-template-columns: 0.78fr 1.22fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.about-foreach-honor-summary {
+  min-width: 0;
+  padding-bottom: 64px;
+  margin-top: -200px;  
+}    
+  
+.about-foreach-honor-summary h3 {
+  color: #374151;
+  font-size: clamp(28px, 2.4vw, 42px);
+  line-height: 1.18;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.about-foreach-honor-summary-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin-top: 48px;
+  max-width: 520px;
+}
+
+.about-foreach-honor-summary-stat {
+  padding-right: 28px; 
+  border-right: none; /* 去掉中间竖线 */
+}
+
+.about-foreach-honor-summary-stat:last-child {
+  border-right: none;
+}
+
+.about-foreach-honor-summary-number {
+  color: #111827;
+  font-size: 68px;
+  font-weight: 850;
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+.about-foreach-honor-summary-plus {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 0.38em;
+  font-weight: 800;
+  transform: translateY(-0.06em);
+}
+
+.about-foreach-honor-summary-label {
+  margin-top: 10px;
+  color: #69727e;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.about-foreach-honor-display {
+  position: relative;
+  min-height: 420px;
+}
+
+.about-foreach-honor-main-cert {
+  position: relative;
+  z-index: 2;
+  width: min(610px, 100%);
+  height: 320px;
+  margin: 0 auto;
+  border: 8px solid #4a4f57;
+  background: #ffffff;
+  box-shadow: 0 28px 70px rgba(7, 26, 58, 0.16);
+}
+
+.about-foreach-honor-main-cert::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border: 1px solid rgba(17, 24, 39, 0.16);
+  background:
+    linear-gradient(135deg, rgba(223, 227, 232, 0.88), rgba(247, 248, 250, 0.96)),
+    repeating-linear-gradient(
+      135deg,
+      rgba(23, 51, 104, 0.06) 0 1px,
+      transparent 1px 14px
+    );
+}
+
+.about-foreach-honor-thumb-row {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 28px;
+  margin-top: 58px;
+  margin-left: -420px;
+  width: calc(100% + 420px);
+}
+
+.about-foreach-honor-thumb {
+  height: 120px;
+  border: 5px solid #4a4f57;
+  background: linear-gradient(135deg, #dfe3e8 0%, #c2c8d1 50%, #eef1f5 100%);
+  box-shadow: 0 14px 36px rgba(7, 26, 58, 0.08);
+}
+
+  
+
+.about-foreach-honor-thumb::before {
+  background: linear-gradient(90deg, rgba(7, 26, 58, 0.1), rgba(255, 255, 255, 0.12));
+}
+
+.about-foreach-honor-controls {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin-top: 46px;
+}
+
+.about-foreach-honor-arrow {
+  width: 50px;
+  height: 38px;
+  border: none;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  background: var(--about-foreach-brand-blue);
+  font-size: 18px;
+  cursor: default;
+}
+
+.about-foreach-honor-arrow-next {
+  color: #7d8793;
+  background: #ffffff;
+}
+
+/* ================================
+   响应式适配
+================================ */
+@media (max-width: 1180px) {
+  .about-foreach-intro-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .about-foreach-advantage-stats {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 36px;
+  }
+
+  .about-foreach-honor-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .about-foreach-honor-summary {
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+
+  .about-foreach-honor-thumb-row {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 860px) {
+  .about-foreach-hero {
+    min-height: 520px;
+  }
+
+  .about-foreach-hero h1 {
+    font-size: 42px;
+  }
+
+  .about-foreach-hero p,
+  .about-foreach-intro-copy p {
+    font-size: 15px;
+  }
+
+  .about-foreach-intro-section,
+  .about-foreach-honor-section {
+    padding: 82px 0;
+  }
+
+  .about-foreach-advantage-number {
+    font-size: 54px;
+  }
+
+  .about-foreach-advantage-image {
+    min-height: 260px;
+  }
+
+  .about-foreach-honor-summary-number {
+    font-size: 58px;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-foreach-container,
+  .about-foreach-hero-content,
+  .about-foreach-advantage-panel {
+    width: calc(100% - 32px);
+  }
+
+  .about-foreach-intro-layout {
+    gap: 48px;
+  }
+
+  .about-foreach-intro-copy p {
+    margin-top: 32px;
+  }
+
+  .about-foreach-advantage-stats,
+  .about-foreach-honor-summary-stats,
+  .about-foreach-honor-thumb-row {
+    grid-template-columns: 1fr;
+  }
+
+  .about-foreach-advantage-stat {
+    padding: 0;
+  }
+
+  .about-foreach-video-card {
+    min-height: 260px;
+  }
+
+  .about-foreach-advantage-number {
+    font-size: 48px;
+  }
+
+  .about-foreach-honor-summary-stat {
+    padding-right: 0;
+    border-right: none;
+    text-align: center;
+  }
+
+  .about-foreach-honor-summary h3 {
+    text-align: center;
+  }
+}  
+
+/* =========================================================
+   关于恒永达｜荣誉资质图片补充样式
+   对应文件：
+   app/about/foreach/AboutForeachClient.tsx
+
+   作用：
+   1. 让主证书图片正常填充
+   2. 让横向小证书正常显示
+   3. 让新增的 A4 比例证书排成一排
+========================================================= */
+
+/* 主证书图片本体 */
+.about-foreach-honor-main-cert-image {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 如果之前还有主证书的伪元素灰色底，先隐藏，避免盖住真实图片 */
+.about-foreach-honor-main-cert::before {
+  display: none;
+}
+
+/* 横向证书缩略图图片 */
+.about-foreach-honor-thumb {
+  display: block;
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border: 5px solid #4a4f57;
+  background: linear-gradient(135deg, #dfe3e8 0%, #c2c8d1 50%, #eef1f5 100%);
+  box-shadow: 0 14px 36px rgba(7, 26, 58, 0.08);
+}
+
+/* ================================
+   A4 比例荣誉证书图一排
+================================ */
+.about-foreach-honor-a4-row {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr)); /* 5 张图平均铺满整行 */
+  gap: 24px;
+  width: 100%;
+  margin-top: 56px; 
+}    
+.about-foreach-honor-a4-card {
+  text-align: center;
+}
+
+.about-foreach-honor-a4-image-wrap {
+  position: relative;
+  aspect-ratio: 210 / 297;
+  overflow: hidden;
+  background: linear-gradient(135deg, #dfe3e8 0%, #c2c8d1 50%, #eef1f5 100%);
+  border: 1px solid rgba(17, 24, 39, 0.12);
+  box-shadow: 0 16px 42px rgba(7, 26, 58, 0.08);
+}
+
+/* A4 内层细边框，模拟证书边界 */
+.about-foreach-honor-a4-image-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  z-index: 2;
+  border: 1px solid rgba(17, 24, 39, 0.12);
+  pointer-events: none;
+}
+
+/* A4 图片本体 */
+.about-foreach-honor-a4-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* A4 图片名称 */
+.about-foreach-honor-a4-card h4 {
+  margin-top: 8px;
+  color: #1d2430;
+  font-size: 15px;    
+  font-weight: 500;
+  line-height: 1.5;
+}
+  
+/* ================================
+   A4 区域响应式
+================================ */
+@media (max-width: 1180px) {
+  .about-foreach-honor-a4-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 860px) {
+  .about-foreach-honor-a4-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 52px;
+  }
+}
+
+@media (max-width: 520px) {
+  .about-foreach-honor-a4-row {
+    grid-template-columns: 1fr;
+  }
+} 
+
+/* =========================================================
+   关于恒永达｜荣誉证书移动端适配修正版
+   作用：
+   1. 桌面端 8 张平均铺满
+   2. 平板端 4 张一行
+   3. 手机端不再强行压缩，改为横向滑动
+   4. 保持 A4 图片比例不变
+========================================================= */
+
+/* 桌面端：8 张平均铺满 */
+.about-foreach-honor-a4-row {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+  margin-top: 56px;
+  align-items: start;
+}
+
+/* A4 证书外框 */
+.about-foreach-honor-a4-image-wrap {
+  position: relative;
+  aspect-ratio: 210 / 297;
+  overflow: hidden;
+  background: linear-gradient(135deg, #dfe3e8 0%, #c2c8d1 50%, #eef1f5 100%);
+  border: 1px solid rgba(17, 24, 39, 0.06);
+  box-shadow: 0 10px 24px rgba(7, 26, 58, 0.05);
+}
+
+/* 去掉内部细边框，避免真实证书放进去后被压一层框 */
+.about-foreach-honor-a4-image-wrap::before {
+  display: none;
+}
+
+/* A4 图片本体 */
+.about-foreach-honor-a4-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* A4 图片标题 */
+.about-foreach-honor-a4-card h4 {
+  margin-top: 10px;
+  color: #1d2430;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.45;
+  text-align: center;
+}
+
+/* 平板端：4 张一行 */
+@media (max-width: 1180px) {
+  .about-foreach-honor-a4-row {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+  }
+}
+
+/* 小平板：3 张一行 */
+@media (max-width: 860px) {
+  .about-foreach-honor-a4-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 46px;
+  }
+}
+
+/* 手机端：横向滑动，不再强行缩小 */
+@media (max-width: 640px) {
+  .about-foreach-honor-a4-row {
+    display: flex;
+    gap: 14px;
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    padding: 0 16px 12px;
+    overflow-x: auto;
+    overflow-y: hidden; 
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .about-foreach-honor-a4-card {
+    flex: 0 0 132px;
+    scroll-snap-align: start;
+  }
+
+  .about-foreach-honor-a4-card h4 {
+    font-size: 10px;
+    line-height: 1.4;
+  }
+
+  .about-foreach-honor-a4-row::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .about-foreach-honor-a4-row::-webkit-scrollbar-thumb {
+    background: rgba(23, 51, 104, 0.24);
+    border-radius: 999px;
+  }
+}
+
+/* =========================================================
+   关于恒永达｜移动端横向排版修正
+   作用：
+   1. 公司优势数据手机端保持一排，横向滑动
+   2. 荣誉资质左侧数据手机端保持一排，横向滑动
+   3. 荣誉主证书下面的小证书缩略图手机端保持一排，横向滑动
+   4. A4 证书手机端也保持横向滑动，不强行压缩比例
+========================================================= */
+
+/* ================================
+   手机端：公司优势 4 个数据保持一排
+================================ */
+@media (max-width: 640px) {
+  .about-foreach-advantage-stats {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 22px;
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    padding: 0 16px 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+
+  .about-foreach-advantage-stat {
+    flex: 0 0 118px;
+    padding: 0;
+    scroll-snap-align: start;
+  }
+
+  .about-foreach-advantage-number {
+    font-size: 44px;
+  }
+
+  .about-foreach-advantage-text {
+    font-size: 13px;
+  }
+}
+
+/* ================================
+   手机端：荣誉左侧 3 个数据保持一排
+================================ */
+@media (max-width: 640px) {
+  .about-foreach-honor-summary-stats {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 22px;
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    padding: 0 16px 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+
+  .about-foreach-honor-summary-stat {
+    flex: 0 0 108px;
+    padding-right: 0;
+    border-right: none;
+    text-align: left;
+    scroll-snap-align: start;
+  }
+
+  .about-foreach-honor-summary-number {
+    font-size: 44px;
+  }
+
+  .about-foreach-honor-summary-label {
+    font-size: 13px;
+  }
+}
+
+/* ================================
+   手机端：荣誉主证书下面的小证书保持一排
+================================ */
+@media (max-width: 640px) {
+  .about-foreach-honor-thumb-row {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 14px;
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    padding: 0 16px 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+
+  .about-foreach-honor-thumb {
+    flex: 0 0 180px;
+    height: 96px;
+    scroll-snap-align: start;
+  }
+}
+
+/* ================================
+   手机端：A4 证书也保持一排横向滑动
+================================ */
+@media (max-width: 640px) {
+  .about-foreach-honor-a4-row {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 14px;
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    padding: 0 16px 12px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+
+  .about-foreach-honor-a4-card {
+    flex: 0 0 128px;
+    scroll-snap-align: start;
+  }
+
+  .about-foreach-honor-a4-card h4 {
+    font-size: 10px;
+    line-height: 1.4;
+  }
+}
+
+/* =========================================================
+   关于恒永达｜移动端最终适配修正
+   作用：
+   1. 视频按 16:9 自适应，不超过屏幕
+   2. 数据区保持一排横向滑动，不挤压、不撑爆页面
+   3. 荣誉横向证书保持一排横向滑动
+   4. A4 证书保持一排横向滑动
+========================================================= */
+
+/* 视频区域：桌面和移动端都按比例显示 */
+.about-foreach-video-card {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 0;
+  overflow: hidden;
+  background: #071a3a;
+  box-shadow: var(--about-foreach-shadow-soft);
+}
+
+.about-foreach-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #071a3a;
+}
+
+/* 移动端：避免任何内容把页面横向撑出去 */
+@media (max-width: 640px) {
+  .about-foreach-page {
+    overflow-x: hidden;
+  }
+
+  .about-foreach-container,
+  .about-foreach-hero-content,
+  .about-foreach-advantage-panel {
+    width: calc(100% - 32px);
+    max-width: calc(100% - 32px);
+  }
+
+  .about-foreach-intro-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    overflow: hidden;
+  }
+
+  .about-foreach-video-card {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    min-height: 0;
+  }
+}
+
+/* =========================================================
+   关于恒永达｜移动端最终修正版
+   作用：
+   1. 数据类手机端保持一排，不横向滑动
+   2. 图片类手机端自动换行，不横向滑动
+   3. 视频按比例缩放，不超过屏幕
+========================================================= */
+
+@media (max-width: 640px) {
+  /* 页面整体不允许横向溢出 */
+  .about-foreach-page {
+    overflow-x: hidden;
+  }
+
+  .about-foreach-container,
+  .about-foreach-hero-content,
+  .about-foreach-advantage-panel {
+    width: calc(100% - 32px);
+    max-width: calc(100% - 32px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ================================
+     视频：手机端按 16:9 缩放
+  ================================ */
+  .about-foreach-video-card {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .about-foreach-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* ================================
+     公司优势 4 个数据：一排显示，不滑动
+  ================================ */
+  .about-foreach-advantage-stats {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  .about-foreach-advantage-stat {
+    min-width: 0;
+    padding: 0 !important;
+    text-align: center;
+  }
+
+  .about-foreach-advantage-number {
+    font-size: 30px !important;
+    line-height: 1;
+  }
+
+  .about-foreach-advantage-plus {
+    font-size: 0.42em;
+    margin-left: 2px;
+  }
+
+  .about-foreach-advantage-text {
+    margin-top: 6px;
+    font-size: 11px !important;
+    line-height: 1.35;
+    white-space: nowrap;
+  }
+
+  /* ================================
+     荣誉左侧 3 个数据：一排显示，不滑动
+  ================================ */
+  .about-foreach-honor-summary-stats {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  .about-foreach-honor-summary-stat {
+    min-width: 0;
+    padding-right: 0 !important;
+    border-right: none !important;
+    text-align: center !important;
+  }
+
+  .about-foreach-honor-summary-number {
+    font-size: 34px !important;
+    line-height: 1;
+  }
+
+  .about-foreach-honor-summary-plus {
+    font-size: 0.38em;
+    margin-left: 2px;
+  }
+
+  .about-foreach-honor-summary-label {
+    margin-top: 6px;
+    font-size: 11px !important;
+    line-height: 1.35;
+    white-space: nowrap;
+  }
+
+  /* ================================
+     荣誉主证书下面的小证书：
+     手机端自动换行，不横向滑动
+  ================================ */
+  .about-foreach-honor-thumb-row {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  .about-foreach-honor-thumb {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  /* ================================
+     A4 证书：
+     手机端自动换行，不横向滑动
+  ================================ */
+  .about-foreach-honor-a4-row {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 14px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    padding: 0 !important; 
+    overflow: visible !important;
+  }  
+
+  .about-foreach-honor-a4-card {
+    min-width: 0;
+  }
+
+  .about-foreach-honor-a4-image-wrap {
+    width: 100%;
+    aspect-ratio: 210 / 297;
+  }
+
+  .about-foreach-honor-a4-card h4 {
+    margin-top: 8px;
+    font-size: 10px !important;
+    line-height: 1.35;
+    font-weight: 600;
+  }
+}
+ 
+/* =========================================================
+   关于恒永达｜荣誉资质品牌色修正
+   作用：
+   1. 荣誉资质标题使用恒永达深蓝
+   2. 荣誉数据数字使用深蓝
+   3. + 号使用荧光青，作为品牌强调色
+   4. 左侧说明文字使用深蓝灰，更稳重
+========================================================= */
+
+/* 荣誉资质大标题 */
+.about-foreach-honor-title h2 {
+  color: #173368;
+}
+
+/* 左侧说明标题：拥有多项企业资质与技术荣誉 */
+.about-foreach-honor-summary h3 { 
+  font-size: 38px ; 
+  color: #173368;
+  font-weight: 600;
+}       
+  
+/* 荣誉区数字：10 / 10 / 96 */
+.about-foreach-honor-summary-number {
+  color: #173368;
+}
+
+/* 荣誉区数字后面的 + */
+.about-foreach-honor-summary-plus { 
+  color: #173368; 
+}
+
+/* 荣誉区数字下面的小文字 */
+.about-foreach-honor-summary-label {
+  color: #4b5563;
+}
+
+/* A4 证书标题文字 */
+.about-foreach-honor-a4-card h4 {
+  color: #173368;
 }

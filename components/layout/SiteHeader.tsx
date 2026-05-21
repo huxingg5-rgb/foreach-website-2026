@@ -38,17 +38,25 @@ const LOCALE_COOKIE_NAME = "foreach_locale";
  *
  * 说明：
  * 1. PC 端显示 Logo、主导航、搜索框、语言栏
- * 2. PC 端产品中心支持 mega 大下拉菜单
- * 3. 左侧分类和右侧产品卡片通过 categoryKey 对应
- * 4. 右侧产品图按 4 列排列，超过 4 个自动换到下一行
- * 5. 产品名称和说明优先读取 navigation.ts 里的多语言 title / description
- * 6. 如果某张图片缺少 title / description，则使用 data/navigation.ts 中的 getProductImageDisplayMeta 兜底
- * 7. 当前每个产品点击统一跳到产品中心锚点，避免产品详情页未完成导致 404
+ * 2. PC 端产品中心 / 关于我们等支持 Mega 大下拉菜单
+ * 3. 左侧分类和右侧内容卡片通过 categoryKey 对应
+ * 4. 关于我们下拉栏通过 site-nav-mega-about 单独控制右侧样式
+ * 5. 当前阶段多语言详情页还没完整建立，所以切换语言时先保留当前页面路径
  */
 export default function SiteHeader() {
-  const pathname = usePathname(); // 获取当前页面路径，例如 /、/en、/es、/fr、/ko、/ru
+  const pathname = usePathname(); // 获取当前页面路径，例如 /、/about/culture、/en 等
 
-  const currentLocale = getLocaleFromPathname(pathname); // 根据当前路径判断当前语言
+  /**
+   * 当前顶部栏显示语言
+   *
+   * 说明：
+   * 1. 以前 currentLocale 只根据 URL 判断，所以 /about/culture 永远是中文
+   * 2. 现在改成 useState，才能在不改变路径的情况下切换顶部栏语言
+   * 3. 页面加载后会优先读取 localStorage 保存的语言
+   */
+  const [currentLocale, setCurrentLocale] = useState<LocaleCode>(
+    getLocaleFromPathname(pathname),
+  );
 
   const headerText = headerI18n[currentLocale]; // 获取当前语言下的 Header 文案
 
@@ -65,6 +73,16 @@ export default function SiteHeader() {
   const [activeMegaCategoryKey, setActiveMegaCategoryKey] = useState<
     string | null
   >(null); // 控制 PC 端 mega 下拉左侧当前鼠标选中的分类
+
+  /* ================================
+     手机端导航当前展开栏目
+     说明：
+     1. 用于实现手机端手风琴菜单
+     2. 同一时间只允许展开一个栏目
+     3. 点击产品中心时，其他栏目会自动收缩
+  ================================ */
+  const [openMobileSectionKey, setOpenMobileSectionKey] =
+    useState<NavigationKey | null>(null);
 
   const isLanguageOpen = openPanel === "language"; // 判断语言菜单是否展开
 
@@ -122,6 +140,94 @@ export default function SiteHeader() {
       })
       .sort((a, b) => a.order - b.order) ?? [];
 
+  /**
+   * 同步当前语言
+   *
+   * 说明：
+   * 1. 优先读取 URL 参数，例如 /about/foreach?lang=en
+   * 2. 其次读取 URL 路径，例如 /en
+   * 3. 再读取 localStorage 保存的语言
+   * 4. 最后默认中文
+   */
+  useEffect(() => {
+    const supportedLocales: LocaleCode[] = [
+      "zh-CN",
+      "en",
+      "es",
+      "fr",
+      "ko",
+      "ru",
+    ];
+
+    function normalizeHeaderLocale(value: string | null): LocaleCode | null {
+      if (!value) {
+        return null;
+      }
+
+      const normalizedValue = value.trim();
+
+      if (normalizedValue === "zh") {
+        return "zh-CN";
+      }
+
+      if (supportedLocales.includes(normalizedValue as LocaleCode)) {
+        return normalizedValue as LocaleCode;
+      }
+
+      return null;
+    }
+
+    /*
+      1. 先读取 URL 参数
+      例如：
+      /about/foreach?lang=en
+      /about/foreach?lang=es
+    */
+    const searchParams = new URLSearchParams(window.location.search);
+
+    const localeFromQuery =
+      normalizeHeaderLocale(searchParams.get("lang")) ||
+      normalizeHeaderLocale(searchParams.get("locale"));
+
+    if (localeFromQuery) {
+      setCurrentLocale(localeFromQuery);
+
+      localStorage.setItem(LOCALE_COOKIE_NAME, localeFromQuery);
+      localStorage.setItem("NEXT_LOCALE", localeFromQuery);
+      localStorage.setItem("lang", localeFromQuery);
+
+      return;
+    }
+
+    /*
+      2. 再读取 URL 路径
+      例如：
+      /en
+      /es
+      /fr
+    */
+    const localeFromPath = getLocaleFromPathname(pathname);
+
+    if (localeFromPath !== "zh-CN") {
+      setCurrentLocale(localeFromPath);
+      return;
+    }
+
+    /*
+      3. 如果 URL 没有语言信息，再读取 localStorage
+    */
+    const savedLocale =
+      normalizeHeaderLocale(localStorage.getItem(LOCALE_COOKIE_NAME)) ||
+      normalizeHeaderLocale(localStorage.getItem("NEXT_LOCALE")) ||
+      normalizeHeaderLocale(localStorage.getItem("lang"));
+
+    if (savedLocale) {
+      setCurrentLocale(savedLocale);
+      return;
+    }
+
+    setCurrentLocale(localeFromPath);
+  }, [pathname]);
   /**
    * 判断当前是不是 PC 鼠标设备
    *
@@ -301,35 +407,90 @@ export default function SiteHeader() {
     setDesktopMegaKey(null);
 
     setActiveMegaCategoryKey(null);
+
+    // 关闭手机端已展开的折叠菜单
+    setOpenMobileSectionKey(null);
   }
 
   /**
    * 点击语言选项时执行
+   *
+   * 说明：
+   * 1. 写入 localStorage
+   * 2. 写入 Cookie
+   * 3. 修改 html lang
+   * 4. 给当前 URL 加上 ?lang=语言
+   * 5. 刷新当前页面，让关于恒永达页面读取到语言
    */
   function handleLanguageItemClick(
     event: MouseEvent<HTMLAnchorElement>,
     localeCode: LocaleCode,
-    href: string,
+    _homeHref: string,
   ) {
     event.preventDefault();
 
-    localStorage.setItem(LOCALE_COOKIE_NAME, localeCode);
+    // 立即更新顶部栏当前语言
+    setCurrentLocale(localeCode);
 
-    // eslint-disable-next-line react-hooks/immutability -- 语言切换必须在跳转前写入 Cookie
+    // 保存用户选择的语言到 localStorage
+    localStorage.setItem(LOCALE_COOKIE_NAME, localeCode);
+    localStorage.setItem("NEXT_LOCALE", localeCode);
+    localStorage.setItem("lang", localeCode);
+
+    // 保存用户选择的语言到 Cookie
+    // eslint-disable-next-line react-hooks/immutability -- 语言切换必须在刷新前写入 Cookie
     document.cookie = `${LOCALE_COOKIE_NAME}=${localeCode}; path=/; max-age=31536000; SameSite=Lax`;
 
+    // eslint-disable-next-line react-hooks/immutability -- 兼容其他页面读取 NEXT_LOCALE
+    document.cookie = `NEXT_LOCALE=${localeCode}; path=/; max-age=31536000; SameSite=Lax`;
+
+    // eslint-disable-next-line react-hooks/immutability -- 兼容通过 lang Cookie 读取语言
+    document.cookie = `lang=${localeCode}; path=/; max-age=31536000; SameSite=Lax`;
+
+    // 同步 html lang
+    document.documentElement.lang = localeCode;
+
+    // 关闭顶部栏所有下拉面板
     closeAllPanels();
 
-    window.location.assign(href);
+    /*
+      去掉 URL 前缀语言
+      例如：
+      /en/about/foreach → /about/foreach
+    */
+    const localePrefixes = ["en", "es", "fr", "ko", "ru"];
+
+    const pathParts = window.location.pathname.split("/").filter(Boolean);
+
+    const firstPart = pathParts[0];
+
+    const pathWithoutLocale = localePrefixes.includes(firstPart)
+      ? `/${pathParts.slice(1).join("/")}`
+      : window.location.pathname;
+
+    const safePathname = pathWithoutLocale === "" ? "/" : pathWithoutLocale;
+
+    /*
+      关键：
+      把语言写进 URL 参数
+      例如：
+      /about/foreach?lang=en
+      /about/foreach?lang=es
+    */
+    const nextUrl = new URL(window.location.href);
+
+    nextUrl.pathname = safePathname;
+
+    nextUrl.searchParams.set("lang", localeCode);
+
+    window.location.assign(`${nextUrl.pathname}${nextUrl.search}${nextUrl.hash}`);
   }
 
   return (
     <header
-      className={`site-header ${isScrolled ? "site-header-scrolled" : ""} ${
-        openPanel !== "none" || desktopMegaKey ? "header-panel-open" : ""
-      } ${isLanguageOpen ? "language-panel-open" : ""} ${
-        isMobileMenuOpen ? "mobile-nav-open" : ""
-      }`}
+      className={`site-header ${isScrolled ? "site-header-scrolled" : ""} ${openPanel !== "none" || desktopMegaKey ? "header-panel-open" : ""
+        } ${isLanguageOpen ? "language-panel-open" : ""} ${isMobileMenuOpen ? "mobile-nav-open" : ""
+        }`}
       onMouseLeave={handleHeaderMouseLeave}
     >
       {/* Top 栏内部容器 */}
@@ -370,16 +531,14 @@ export default function SiteHeader() {
             return (
               <div
                 key={item.key}
-                className={`site-nav-item ${
-                  hasMegaDropdown ? "site-nav-item-has-dropdown" : ""
-                }`}
+                className={`site-nav-item ${hasMegaDropdown ? "site-nav-item-has-dropdown" : ""
+                  }`}
                 onMouseEnter={() => handleDesktopNavMouseEnter(item)}
               >
                 <Link
                   href={navHref}
-                  className={`site-nav-link ${
-                    isNavActive(item) ? "site-nav-link-active" : ""
-                  }`}
+                  className={`site-nav-link ${isNavActive(item) ? "site-nav-link-active" : ""
+                    }`}
                   onClick={closeAllPanels}
                 >
                   {navLabel}
@@ -420,9 +579,8 @@ export default function SiteHeader() {
 
           {/* 语言栏 */}
           <div
-            className={`language-switcher ${
-              isLanguageOpen ? "language-switcher-open" : ""
-            }`}
+            className={`language-switcher ${isLanguageOpen ? "language-switcher-open" : ""
+              }`}
             onMouseEnter={handleLanguageMouseEnter}
             onMouseLeave={handleLanguageMouseLeave}
           >
@@ -434,14 +592,7 @@ export default function SiteHeader() {
               onClick={handleLanguageButtonClick}
               title={headerText.languageSwitchTitle}
             >
-              {/*
-                语言栏显示文字
-
-                说明：
-                1. 这里固定显示英文单词 Language
-                2. 不再跟随当前页面语言变化
-                3. 下拉菜单里的具体语言选项仍然保持原来的多语言名称
-              */}
+              {/* 语言栏固定显示英文单词 Language */}
               <span className="language-summary-label">Language</span>
 
               <span className="language-summary-arrow" aria-hidden="true">
@@ -454,11 +605,10 @@ export default function SiteHeader() {
                 <a
                   key={language.code}
                   href={language.href}
-                  className={`language-details-item ${
-                    language.code === currentLocale
-                      ? "language-details-item-active"
-                      : ""
-                  }`}
+                  className={`language-details-item ${language.code === currentLocale
+                    ? "language-details-item-active"
+                    : ""
+                    }`}
                   onClick={(event) =>
                     handleLanguageItemClick(event, language.code, language.href)
                   }
@@ -471,9 +621,8 @@ export default function SiteHeader() {
 
           {/* 手机端导航栏：按钮 + 下拉菜单 */}
           <div
-            className={`mobile-nav-switcher ${
-              isMobileMenuOpen ? "mobile-nav-switcher-open" : ""
-            }`}
+            className={`mobile-nav-switcher ${isMobileMenuOpen ? "mobile-nav-switcher-open" : ""
+              }`}
           >
             <button
               className="mobile-menu-btn"
@@ -536,22 +685,25 @@ export default function SiteHeader() {
 
                 if (hasMobileChildren) {
                   return (
-                    <details className="mobile-nav-section" key={item.key}>
-                      <summary className="mobile-nav-summary">
-                        <span>{navLabel}</span>
+                    <details
+                      className="mobile-nav-section"
+                      key={item.key}
+                      open={openMobileSectionKey === item.key}
+                    >
+                      <summary
+                        className="mobile-nav-summary"
+                        onClick={(event) => {
+                          event.preventDefault();
 
-                        <span aria-hidden="true">▾</span>
+                          setOpenMobileSectionKey((currentKey) =>
+                            currentKey === item.key ? null : item.key,
+                          );
+                        }}
+                      >
+                        <span className="mobile-nav-summary-text">{navLabel}</span>
                       </summary>
 
                       <div className="mobile-nav-submenu">
-                        <Link
-                          href={navHref}
-                          className="mobile-nav-submenu-link mobile-nav-submenu-entry"
-                          onClick={closeAllPanels}
-                        >
-                          {navLabel}
-                        </Link>
-
                         {mobileChildren.map((child) => (
                           <Link
                             key={child.key}
@@ -571,9 +723,8 @@ export default function SiteHeader() {
                   <Link
                     key={item.key}
                     href={navHref}
-                    className={`mobile-nav-link ${
-                      isNavActive(item) ? "mobile-nav-link-active" : ""
-                    }`}
+                    className={`mobile-nav-link ${isNavActive(item) ? "mobile-nav-link-active" : ""
+                      }`}
                     onClick={closeAllPanels}
                   >
                     {navLabel}
@@ -588,7 +739,7 @@ export default function SiteHeader() {
       {/* PC 端 Mega 下拉面板 */}
       {activeMegaItem?.megaDropdown && (
         <div
-          className="site-nav-mega site-nav-mega-open"
+          className={`site-nav-mega site-nav-mega-open site-nav-mega-${activeMegaItem.key}`}
           onMouseEnter={() => {
             if (activeMegaItem) {
               setDesktopMegaKey(activeMegaItem.key);
@@ -597,61 +748,98 @@ export default function SiteHeader() {
         >
           <div className="site-nav-mega-inner">
             {/* 左侧分类区 */}
+            {/* 左侧分类区 */}
             <div className="site-nav-mega-sidebar">
-              {activeMegaCategories.map((category) => (
-                <div
-                  key={category.key}
-                  className={`site-nav-mega-category ${
-                    currentMegaCategoryKey === category.key
+              {activeMegaCategories.map((category) => {
+                /**
+                 * 查找当前左侧栏目对应的右侧 card
+                 *
+                 * 说明：
+                 * 1. 左侧栏目本身 categories 没有 href
+                 * 2. 真正的跳转链接在 cards 里面
+                 * 3. 所以这里通过 category.key 找到对应 card.categoryKey
+                 */
+                const categoryPrimaryCard = activeMegaItem.megaDropdown?.cards
+                  .filter((card) => card.enabled)
+                  .sort((a, b) => a.order - b.order)
+                  .find((card) => card.categoryKey === category.key);
+
+                const categoryHref = categoryPrimaryCard?.href;
+
+                const categoryContent = (
+                  <>
+                    <strong>{getLocalizedText(category.title, currentLocale)}</strong>
+
+                    <span className="site-nav-mega-category-desc">
+                      {getLocalizedText(category.description, currentLocale)}
+                    </span>
+
+                    <span className="site-nav-mega-category-arrow" aria-hidden="true" />
+                  </>
+                );
+
+                /**
+                 * 有 href 的栏目渲染成 Link
+                 * 例如：恒永达文化 → /about/culture
+                 */
+                if (categoryHref) {
+                  return (
+                    <Link
+                      key={category.key}
+                      href={getLocalizedHref(categoryHref, currentLocale)}
+                      className={`site-nav-mega-category ${currentMegaCategoryKey === category.key
+                        ? "site-nav-mega-category-active"
+                        : ""
+                        }`}
+                      onMouseEnter={() => setActiveMegaCategoryKey(category.key)}
+                      onClick={closeAllPanels}
+                    >
+                      {categoryContent}
+                    </Link>
+                  );
+                }
+
+                /**
+                 * 没有 href 的栏目只做 hover 切换
+                 */
+                return (
+                  <div
+                    key={category.key}
+                    className={`site-nav-mega-category ${currentMegaCategoryKey === category.key
                       ? "site-nav-mega-category-active"
                       : ""
-                  }`}
-                  onMouseEnter={() => setActiveMegaCategoryKey(category.key)}
-                >
-                  <strong>
-                    {getLocalizedText(category.title, currentLocale)}
-                  </strong>
-
-                  <span className="site-nav-mega-category-desc">
-                    {getLocalizedText(category.description, currentLocale)}
-                  </span>
-
-                  <span
-                    className="site-nav-mega-category-arrow"
-                    aria-hidden="true"
-                  />
-                </div>
-              ))}
+                      }`}
+                    onMouseEnter={() => setActiveMegaCategoryKey(category.key)}
+                  >
+                    {categoryContent}
+                  </div>
+                );
+              })}
             </div>
 
             {/* 右侧内容区 */}
             <div className="site-nav-mega-main">
-              {/* 右侧顶部说明区：不显示“泵类 / 阀类”等大标题，只保留说明 */}
+              {/* 右侧顶部说明区 */}
               <div className="site-nav-mega-heading">
                 <p>
-                  {activeMegaCategory
-                    ? getLocalizedText(
-                        activeMegaCategory.description,
-                        currentLocale,
-                      )
-                    : getLocalizedText(
-                        activeMegaItem.megaDropdown.description,
-                        currentLocale,
-                      )}
+                  {getLocalizedText(
+                    activeMegaItem.key === "about" &&
+                      activeMegaCards[0]?.description
+                      ? activeMegaCards[0].description
+                      : activeMegaCategory?.description ??
+                      activeMegaItem.megaDropdown.description,
+                    currentLocale,
+                  )}
                 </p>
               </div>
 
-              {/* 产品入口区域：4 个一行，超过 4 个自动换行 */}
+              {/* 产品 / 图片入口区域 */}
               <div className="site-nav-mega-product-area">
                 {activeMegaCards.map((card) => {
                   const cardImages = card.images || []; // 读取当前分类下的产品图片列表
 
                   const mainImage = card.image; // 读取单张主图，兼容旧数据结构
 
-                  // 产品列表：
-                  // 1. 如果有 images，就全部显示 images
-                  // 2. 不使用 slice(0, 4)，所以超过 4 个会自动换行
-                  // 3. 例如 5 个产品：第一行 4 个，第二行 1 个
                   const displayProductImages = cardImages;
 
                   return (
@@ -659,29 +847,25 @@ export default function SiteHeader() {
                       {displayProductImages.length > 0 ? (
                         <div className="site-nav-mega-product-grid">
                           {displayProductImages.map((cardImage) => {
-                            // 兜底产品名称和说明
                             const fallbackProductMeta =
                               getProductImageDisplayMeta(
                                 cardImage.src,
                                 currentLocale,
                               );
 
-                            // 最终显示的产品名称和说明
-                            // 优先使用 navigation.ts 里每张图片配置的 title / description
-                            // 如果没有配置，再使用上面的 fallbackProductMeta
                             const productMeta = {
                               title: cardImage.title
                                 ? getLocalizedText(
-                                    cardImage.title,
-                                    currentLocale,
-                                  )
+                                  cardImage.title,
+                                  currentLocale,
+                                )
                                 : fallbackProductMeta.title,
 
                               description: cardImage.description
                                 ? getLocalizedText(
-                                    cardImage.description,
-                                    currentLocale,
-                                  )
+                                  cardImage.description,
+                                  currentLocale,
+                                )
                                 : fallbackProductMeta.description,
                             };
 
@@ -695,7 +879,6 @@ export default function SiteHeader() {
                                 onClick={closeAllPanels}
                                 className="site-nav-product-clean-link"
                               >
-                                {/* 产品图片 */}
                                 <div className="site-nav-product-image-box">
                                   <Image
                                     className="site-nav-product-image"
@@ -709,12 +892,10 @@ export default function SiteHeader() {
                                   />
                                 </div>
 
-                                {/* 产品名称 */}
                                 <strong className="site-nav-product-title">
                                   {productMeta.title}
                                 </strong>
 
-                                {/* 产品说明 */}
                                 <span className="site-nav-product-desc">
                                   {productMeta.description}
                                 </span>
@@ -763,15 +944,21 @@ export default function SiteHeader() {
 
                 <Link
                   href={getLocalizedHref(
+                    activeMegaCards[0]?.href ??
                     activeMegaItem.megaDropdown.footerHref,
                     currentLocale,
                   )}
                   onClick={closeAllPanels}
                 >
-                  {getLocalizedText(
-                    activeMegaItem.megaDropdown.footerLinkLabel,
-                    currentLocale,
-                  )}
+                  {activeMegaCards[0]?.title
+                    ? `${getLocalizedText(
+                      activeMegaCards[0].title,
+                      currentLocale,
+                    )} →`
+                    : getLocalizedText(
+                      activeMegaItem.megaDropdown.footerLinkLabel,
+                      currentLocale,
+                    )}
                 </Link>
               </div>
             </div>
@@ -790,4 +977,4 @@ export default function SiteHeader() {
       )}
     </header>
   );
-}
+} 

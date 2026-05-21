@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./language-typography.css";
+
 import SiteHeader from "@/components/layout/SiteHeader";
 
+import { cookies } from "next/headers";
+import SiteFooter from "@/components/layout/SiteFooter";
+import type { LocaleCode } from "@/lib/i18n";
 /**
- * metadata
+ * metadata 
  * 网站基础 SEO 信息
  * 后续可以根据不同页面单独生成 title 和 description
  */
@@ -16,18 +20,30 @@ export const metadata: Metadata = {
 
 /**
  * RootLayout
- * 全站根布局
+ * 全站根布局 
  *
  * 作用：
  * 1. 所有页面共用这个布局
  * 2. SiteHeader 放在这里后，所有页面都会自动带顶部导航
  * 3. children 是每个页面自己的内容
  */
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
+  const cookieStore = await cookies();
+
+  const cookieLocale = cookieStore.get("foreach_locale")?.value as
+    | LocaleCode
+    | undefined;
+
+  const supportedLocales: LocaleCode[] = ["zh-CN", "en", "es", "fr", "ko", "ru"];
+
+  const currentLocale: LocaleCode =
+    cookieLocale && supportedLocales.includes(cookieLocale)
+      ? cookieLocale
+      : "zh-CN";
   return (
     <html lang="zh-CN">
       <body>
@@ -114,7 +130,10 @@ export default function RootLayout({
           }}
         />
         <SiteHeader />
+
         {children}
+
+        <SiteFooter locale={currentLocale} />
       </body>
     </html>
   );

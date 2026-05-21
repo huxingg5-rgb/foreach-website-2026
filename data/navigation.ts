@@ -1,19 +1,32 @@
 /* ================================
    navigation.ts
-   官网导航数据配置文件
+   官网顶部导航数据配置文件
 
    说明：
-   1. 这个文件只负责存放导航数据
-   2. SiteHeader.tsx 只负责读取数据并渲染
-   3. 后续如果接后端 / CMS，可以让后端返回同样结构
-   4. 当前产品中心 Mega Menu 支持：
-      - 左侧分类
-      - 右侧按 categoryKey 对应分类显示产品
-      - 产品图片
-      - 产品名称
-      - 产品简短说明
-      - 中文、英文、西班牙语、法语、韩语、俄语
-   5. 手机端产品菜单会自动从 PC 端产品分类生成，避免重复维护
+   1. 这个文件只负责存放导航数据，不负责写样式
+   2. SiteHeader.tsx 只负责读取这里的数据并渲染导航和下拉栏
+   3. app/globals.css 负责控制 Top 栏、Mega Menu、移动端菜单等样式
+   4. 后续如果接后端 / CMS，可以让后端返回同样的数据结构
+
+   当前 Mega Menu 支持：
+   - 左侧分类
+   - 右侧按 categoryKey 对应分类显示内容
+   - 图片
+   - 标题
+   - 简短说明
+   - 底部入口按钮
+   - 中文、英文、西班牙语、法语、韩语、俄语
+
+   当前已规划的下拉栏：
+   - 产品中心：展示产品分类、产品图片、产品名称和简短说明
+   - 应用领域：展示应用分类和应用说明
+   - 资源中心：展示资料、目录、选型指南、技术文章、新闻动态等入口
+   - 关于我们：展示公司介绍、研发制造、质量资质、发展历程、企业文化
+
+   手机端说明：
+   - 手机端菜单会优先复用 PC 端导航数据
+   - 产品、应用、资源、关于我们等栏目尽量从同一份数据生成
+   - 避免 PC 端和移动端重复维护两套导航内容
 ================================ */
 
 /* ================================
@@ -661,14 +674,475 @@ const navigationItems: NavigationItem[] = [
       },
     ],
   },
-  {
-    key: "about",
-    label: t("关于我们", "About Us", "Sobre nosotros", "À propos", "회사 소개", "О нас"),
-    href: anchorPath("about"),
-    order: 5,
-    enabled: true,
-    dropdownType: "none",
+
+{
+  key: "about",
+  label: t(
+    "关于我们",
+    "About Us",
+    "Sobre nosotros",
+    "À propos",
+    "회사 소개",
+    "О нас"
+  ),
+  href: anchorPath("about"),
+  order: 5,
+  enabled: true,
+
+  // 说明：
+  // 1. 这里改成 mega，PC 端顶部导航才会显示“关于我们”下拉栏
+  // 2. 关于我们下拉栏的右侧样式由 app/globals.css 里的 .site-nav-mega-about 控制
+  dropdownType: "mega",
+
+  megaDropdown: {
+    title: t(
+      "关于我们",
+      "About Us",
+      "Sobre nosotros",
+      "À propos",
+      "회사 소개",
+      "О нас"
+    ),
+
+    description: t(
+      "了解恒永达的公司定位、研发制造能力、质量体系、发展历程与恒永达文化。",
+      "Learn about FOREACH, including our company profile, R&D and manufacturing capabilities, quality system, milestones, and culture.",
+      "Conozca FOREACH, incluyendo nuestro perfil corporativo, capacidades de I+D y fabricación, sistema de calidad, hitos y cultura.",
+      "Découvrez FOREACH, son profil d’entreprise, ses capacités de R&D et de fabrication, son système qualité, ses jalons et sa culture.",
+      "FOREACH의 회사 소개, 연구개발 및 제조 역량, 품질 시스템, 연혁과 기업 문화를 확인하세요.",
+      "Узнайте о FOREACH: профиль компании, возможности R&D и производства, система качества, история развития и корпоративная культура."
+    ),
+
+    footerText: t(
+      "进入关于我们页面，进一步了解恒永达。",
+      "Visit the About Us page to learn more about FOREACH.",
+      "Visite la página Sobre nosotros para conocer más sobre FOREACH.",
+      "Accédez à la page À propos pour en savoir plus sur FOREACH.",
+      "회사 소개 페이지에서 FOREACH에 대해 자세히 알아보세요.",
+      "Перейдите на страницу «О нас», чтобы узнать больше о FOREACH."
+    ),
+
+    footerLinkLabel: t(
+      "查看关于恒永达 →",
+      "View About FOREACH →",
+      "Ver sobre FOREACH →",
+      "Voir à propos de FOREACH →",
+      "FOREACH 소개 보기 →",
+      "Подробнее о FOREACH →"
+    ),
+
+    footerHref: anchorPath("about"),
+
+    /* ================================
+       PC 端关于我们左侧栏目
+       说明：
+       1. categories 主要用于左侧栏目
+       2. description 尽量短，不要写成长句
+       3. 右侧中间长文案从 cards.description 读取
+    ================================ */
+    categories: [
+      {
+        key: "about-company",
+        title: t(
+          "关于恒永达",
+          "About FOREACH",
+          "Sobre FOREACH",
+          "À propos de FOREACH",
+          "FOREACH 소개",
+          "О FOREACH"
+        ),
+        description: t(
+          "公司定位、服务行业与核心能力",
+          "Profile, industries and capabilities",
+          "Perfil, sectores y capacidades",
+          "Profil, secteurs et capacités",
+          "회사 소개와 핵심 역량",
+          "Профиль и возможности"
+        ),
+        order: 1,
+        enabled: true,
+      },
+      {
+        key: "rd-manufacturing",
+        title: t(
+          "研发与制造能力",
+          "R&D and Manufacturing",
+          "I+D y fabricación",
+          "R&D et fabrication",
+          "R&D 및 제조 역량",
+          "НИОКР и производство"
+        ),
+        description: t(
+          "研发设计、精密制造与系统支持",
+          "R&D, manufacturing and support",
+          "I+D, fabricación y soporte",
+          "R&D, fabrication et support",
+          "연구개발, 제조 및 지원",
+          "НИОКР, производство и поддержка"
+        ),
+        order: 2,
+        enabled: true,
+      },
+      {
+        key: "quality-qualification",
+        title: t(
+          "质量体系与企业资质",
+          "Quality System and Qualifications",
+          "Sistema de calidad y certificaciones",
+          "Système qualité et qualifications",
+          "품질 시스템 및 인증",
+          "Система качества и квалификации"
+        ),
+        description: t(
+          "质量、资质与可靠性保障",
+          "Quality, qualifications and reliability",
+          "Calidad, certificaciones y fiabilidad",
+          "Qualité, qualifications et fiabilité",
+          "품질, 인증 및 신뢰성",
+          "Качество, квалификации и надежность"
+        ),
+        order: 3,
+        enabled: true,
+      },
+      {
+        key: "milestones",
+        title: t(
+          "发展历程",
+          "Milestones",
+          "Hitos",
+          "Jalons",
+          "연혁",
+          "История развития"
+        ),
+        description: t(
+          "从 2012 年起的关键发展节点",
+          "Key milestones since 2012",
+          "Hitos clave desde 2012",
+          "Jalons clés depuis 2012",
+          "2012년부터의 주요 과정",
+          "Ключевые этапы с 2012 года"
+        ),
+        order: 4,
+        enabled: true,
+      },
+      {
+        key: "culture",
+        title: t(
+          "恒永达文化",
+          "FOREACH Culture",
+          "Cultura de FOREACH",
+          "Culture FOREACH",
+          "FOREACH 문화",
+          "Культура FOREACH"
+        ),
+        description: t(
+          "团队协同、客户价值与长期主义",
+          "Teamwork, customer value and long-term commitment",
+          "Colaboración, valor al cliente y visión a largo plazo",
+          "Collaboration, valeur client et vision à long terme",
+          "협업, 고객 가치 및 장기주의",
+          "Команда, ценность для клиента и долгосрочный подход"
+        ),
+        order: 5,
+        enabled: true,
+      },
+    ],
+
+    /* ================================
+       PC 端关于我们右侧图片与正式说明
+       说明：
+       1. 每个 card 通过 categoryKey 对应左侧栏目
+       2. image.src 对应 public/images/about/ 下的图片
+       3. 后续你只要替换同名图片即可自动适配
+    ================================ */
+    cards: [
+      {
+        key: "about-company-image",
+        categoryKey: "about-company",
+        title: t(
+          "关于恒永达",
+          "About FOREACH",
+          "Sobre FOREACH",
+          "À propos de FOREACH",
+          "FOREACH 소개",
+          "О FOREACH"
+        ),
+        description: t(
+          "专注微流体系统核心零部件与液路解决方案，服务 IVD、生命科学、高端分析仪器、合成生物与实验室自动化客户。",
+          "Focused on microfluidic core components and liquid path solutions for IVD, life sciences, analytical instruments, synthetic biology, and laboratory automation.",
+          "Componentes microfluídicos y soluciones de fluidos para IVD, ciencias de la vida, instrumentos analíticos, biología sintética y automatización de laboratorio.",
+          "Composants microfluidiques et solutions fluidiques pour l’IVD, les sciences de la vie, les instruments analytiques, la biologie synthétique et l’automatisation de laboratoire.",
+          "IVD, 생명과학, 분석 장비, 합성생물학 및 실험실 자동화를 위한 미세유체 핵심 부품과 유로 솔루션에 집중합니다.",
+          "Микрофлюидные компоненты и решения для IVD, наук о жизни, аналитических приборов, синтетической биологии и лабораторной автоматизации."
+        ),
+        href: anchorPath("about"),
+        order: 1,
+        enabled: true,
+        image: {
+          src: "/images/about/about-company.webp",
+          alt: t(
+            "恒永达公司形象",
+            "FOREACH company profile",
+            "Perfil corporativo de FOREACH",
+            "Profil de FOREACH",
+            "FOREACH 회사 이미지",
+            "Профиль компании FOREACH"
+          ),
+          width: 900,
+          height: 520,
+        },
+      },
+      {
+        key: "rd-manufacturing-image",
+        categoryKey: "rd-manufacturing",
+        title: t(
+          "研发与制造能力",
+          "R&D and Manufacturing",
+          "I+D y fabricación",
+          "R&D et fabrication",
+          "R&D 및 제조 역량",
+          "НИОКР и производство"
+        ),
+        description: t(
+          "围绕研发设计、精密制造、装配测试与工程验证，支持客户从产品选型到系统级液路方案落地。",
+          "Supporting customers from product selection to system-level liquid path implementation through R&D, precision manufacturing, assembly, testing, and engineering validation.",
+          "Soporte desde la selección de productos hasta la implementación de soluciones de fluidos mediante I+D, fabricación de precisión, montaje, pruebas y validación de ingeniería.",
+          "Accompagnement du choix produit à l’intégration de solutions fluidiques grâce à la R&D, la fabrication de précision, l’assemblage, les tests et la validation d’ingénierie.",
+          "연구개발, 정밀 제조, 조립, 테스트 및 엔지니어링 검증을 통해 제품 선정부터 시스템 유로 구현까지 지원합니다.",
+          "Поддержка от подбора изделий до реализации системного жидкостного тракта через НИОКР, точное производство, сборку, испытания и инженерную проверку."
+        ),
+        href: anchorPath("about"),
+        order: 2,
+        enabled: true,
+        image: {
+          src: "/images/about/rd-manufacturing.webp",
+          alt: t(
+            "恒永达研发与制造能力",
+            "FOREACH R&D and manufacturing capability",
+            "Capacidad de I+D y fabricación de FOREACH",
+            "Capacité R&D et fabrication de FOREACH",
+            "FOREACH R&D 및 제조 역량",
+            "НИОКР и производственные возможности FOREACH"
+          ),
+          width: 900,
+          height: 520,
+        },
+      },
+      {
+        key: "quality-qualification-image",
+        categoryKey: "quality-qualification",
+        title: t(
+          "质量体系与企业资质",
+          "Quality System and Qualifications",
+          "Sistema de calidad y certificaciones",
+          "Système qualité et qualifications",
+          "품질 시스템 및 인증",
+          "Система качества и квалификации"
+        ),
+        description: t(
+          "以质量管理、过程控制、可靠性验证和企业资质为基础，建立长期稳定、可信赖的供应链形象。",
+          "Building long-term supplier trust through quality management, process control, reliability validation, and corporate qualifications.",
+          "Construcción de confianza a largo plazo mediante gestión de calidad, control de procesos, validación de fiabilidad y certificaciones corporativas.",
+          "Construction d’une confiance durable grâce à la gestion qualité, au contrôle des processus, à la validation de fiabilité et aux qualifications de l’entreprise.",
+          "품질 관리, 공정 제어, 신뢰성 검증 및 기업 인증을 기반으로 장기적인 공급 신뢰를 구축합니다.",
+          "Формирование долгосрочного доверия к поставщику за счет управления качеством, контроля процессов, проверки надежности и корпоративных квалификаций."
+        ),
+        href: anchorPath("about"),
+        order: 3,
+        enabled: true,
+        image: {
+          src: "/images/about/quality-qualification.webp",
+          alt: t(
+            "恒永达质量体系与企业资质",
+            "FOREACH quality system and qualifications",
+            "Sistema de calidad y certificaciones de FOREACH",
+            "Système qualité et qualifications de FOREACH",
+            "FOREACH 품질 시스템 및 인증",
+            "Система качества и квалификации FOREACH"
+          ),
+          width: 900,
+          height: 520,
+        },
+      },
+      {
+        key: "milestones-image",
+        categoryKey: "milestones",
+        title: t(
+          "发展历程",
+          "Milestones",
+          "Hitos",
+          "Jalons",
+          "연혁",
+          "История развития"
+        ),
+        description: t(
+          "自 2012 年成立以来，持续积累产品、技术、制造与市场服务能力，形成面向多行业客户的长期支持。",
+          "Since 2012, FOREACH has continued to build product, technology, manufacturing, and market service capabilities for long-term support across industries.",
+          "Desde 2012, FOREACH ha desarrollado capacidades en productos, tecnología, fabricación y servicio para apoyar a clientes de múltiples sectores.",
+          "Depuis 2012, FOREACH développe ses capacités produits, technologies, fabrication et services afin d’accompagner durablement plusieurs secteurs.",
+          "2012년 이후 제품, 기술, 제조 및 시장 서비스 역량을 지속적으로 축적하여 다양한 산업 고객을 장기적으로 지원합니다.",
+          "С 2012 года FOREACH развивает продуктовые, технологические, производственные и сервисные возможности для долгосрочной поддержки разных отраслей."
+        ),
+        href: anchorPath("about"),
+        order: 4,
+        enabled: true,
+        image: {
+          src: "/images/about/milestones.webp",
+          alt: t(
+            "恒永达发展历程",
+            "FOREACH milestones",
+            "Hitos de FOREACH",
+            "Jalons de FOREACH",
+            "FOREACH 연혁",
+            "История развития FOREACH"
+          ),
+          width: 900,
+          height: 520,
+        },
+      },
+      {
+        key: "culture-image",
+        categoryKey: "culture",
+        title: t(
+          "恒永达文化",
+          "FOREACH Culture",
+          "Cultura de FOREACH",
+          "Culture FOREACH",
+          "FOREACH 문화",
+          "Культура FOREACH"
+        ),
+        description: t(
+          "以技术创新和客户价值为导向，重视团队协同、持续学习、工程实践与社会责任。",
+          "Driven by technical innovation and customer value, FOREACH values teamwork, continuous learning, engineering practice, and social responsibility.",
+          "Impulsada por la innovación técnica y el valor para el cliente, FOREACH valora el trabajo en equipo, el aprendizaje continuo, la práctica de ingeniería y la responsabilidad social.",
+          "Portée par l’innovation technique et la valeur client, FOREACH valorise la collaboration, l’apprentissage continu, la pratique d’ingénierie et la responsabilité sociale.",
+          "기술 혁신과 고객 가치를 중심으로 팀워크, 지속 학습, 엔지니어링 실천 및 사회적 책임을 중시합니다.",
+          "Ориентируясь на технические инновации и ценность для клиента, FOREACH ценит командную работу, постоянное обучение, инженерную практику и социальную ответственность."
+        ),
+
+        // 说明：
+        // 1. 恒永达文化页面已经单独建立
+        // 2. 当前多语言详情页还没全部完成
+        // 3. 所以所有语言暂时统一跳中文页面 /about/culture
+        href: {
+          "zh-CN": "/about/culture",
+          en: "/about/culture",
+          es: "/about/culture",
+          fr: "/about/culture",
+          ko: "/about/culture",
+          ru: "/about/culture",
+        },
+
+        order: 5,
+        enabled: true,
+        image: {
+          src: "/images/about/culture.webp",
+          alt: t(
+            "恒永达文化",
+            "FOREACH culture",
+            "Cultura de FOREACH",
+            "Culture FOREACH",
+            "FOREACH 문화",
+            "Культура FOREACH"
+          ),
+          width: 900,
+          height: 520,
+        },
+      },
+    ],
   },
+
+  /* ================================
+     手机端关于我们子菜单
+     说明：
+     1. PC 端关于我们下拉栏读取 megaDropdown
+     2. 手机端 Top 栏读取 mobileChildren
+     3. 所以这里必须单独配置手机端子菜单入口
+  ================================ */
+  mobileChildren: [
+    {
+      key: "about-company-mobile",
+      label: t(
+        "关于恒永达",
+        "About FOREACH",
+        "Sobre FOREACH",
+        "À propos de FOREACH",
+        "FOREACH 소개",
+        "О FOREACH"
+      ),
+      href: anchorPath("about"),
+      order: 1,
+      enabled: true,
+    },
+    {
+      key: "rd-manufacturing-mobile",
+      label: t(
+        "研发与制造能力",
+        "R&D and Manufacturing",
+        "I+D y fabricación",
+        "R&D et fabrication",
+        "R&D 및 제조 역량",
+        "НИОКР и производство"
+      ),
+      href: anchorPath("about"),
+      order: 2,
+      enabled: true,
+    },
+    {
+      key: "quality-qualification-mobile",
+      label: t(
+        "质量体系与企业资质",
+        "Quality System and Qualifications",
+        "Sistema de calidad y certificaciones",
+        "Système qualité et qualifications",
+        "품질 시스템 및 인증",
+        "Система качества и квалификации"
+      ),
+      href: anchorPath("about"),
+      order: 3,
+      enabled: true,
+    },
+    {
+      key: "milestones-mobile",
+      label: t(
+        "发展历程",
+        "Milestones",
+        "Hitos",
+        "Jalons",
+        "연혁",
+        "История развития"
+      ),
+      href: anchorPath("about"),
+      order: 4,
+      enabled: true,
+    },
+    {
+      key: "culture-mobile",
+      label: t(
+        "恒永达文化",
+        "FOREACH Culture",
+        "Cultura de FOREACH",
+        "Culture FOREACH",
+        "FOREACH 문화",
+        "Культура FOREACH"
+      ),
+
+      // 当前多语言详情页还没全部完成，所以所有语言先统一跳中文页面
+      href: {
+        "zh-CN": "/about/culture",
+        en: "/about/culture",
+        es: "/about/culture",
+        fr: "/about/culture",
+        ko: "/about/culture",
+        ru: "/about/culture",
+      },
+
+      order: 5,
+      enabled: true,
+    },
+  ],
+},
+
   {
     key: "contact",
     label: t("联系我们", "Contact Us", "Contáctenos", "Contactez-nous", "문의하기", "Свяжитесь с нами"),

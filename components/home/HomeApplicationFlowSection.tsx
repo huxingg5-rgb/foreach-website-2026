@@ -396,7 +396,8 @@ export default function HomeApplicationFlowSection({
 
     async function loadBackendFlowData() {
       try {
-const response = await fetch(getHomeApplicationFlowApiPath(locale), { // 请求首页第二屏后端接口，接口路径从 data 文件统一生成
+            const response = await fetch(getHomeApplicationFlowApiPath(locale), 
+            { // 请求首页第二屏后端接口，接口路径从 data 文件统一生成
             method: "GET",
             signal: controller.signal,
             cache: "no-store",
