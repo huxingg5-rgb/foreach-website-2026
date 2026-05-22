@@ -702,7 +702,7 @@ const navigationItems: NavigationItem[] = [
     dropdownType: "mega",
 
     megaDropdown: {
-      title: t(
+      heading: t(
         "关于我们",
         "About Us",
         "Sobre nosotros",
