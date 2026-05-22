@@ -13169,3 +13169,1184 @@ html[lang="ru"] .home-hero-btn:hover {
     font-size: 14px;
   }
 }
+
+/* =========================================================
+   研发与制造能力页面样式
+   页面路径：
+   /about/research-manufacturing
+
+   对应组件：
+   components/about/ResearchManufacturingPageContent.tsx
+
+   说明：
+   1. 类名前缀统一使用 rm-，避免影响其他页面
+   2. 不需要新建 home.css
+   3. 图片由 Next.js Image 组件输出
+   4. 后续替换图片只需要替换 public/images/about/research-manufacturing/ 下同名文件
+========================================================= */
+
+/* ================================
+   1. 页面基础变量
+================================ */
+.rm-page {
+  --rm-blue: #173368;
+  --rm-blue-dark: #0b1d3a;
+  --rm-cyan: #09e9b4;
+  --rm-text: #16223a;
+  --rm-muted: #667085;
+  --rm-line: #e4ebf3;
+  --rm-soft: #f5f8fc;
+  --rm-max: 1600px;
+  --rm-wide: 1720px;
+  --rm-side: 80px;
+
+  color: var(--rm-text);
+  background: #ffffff;
+}
+
+.rm-container {
+  width: 100%;
+  max-width: var(--rm-max);
+  margin: 0 auto;
+  padding: 0 var(--rm-side);
+}
+
+.rm-container-wide {
+  width: 100%;
+  max-width: var(--rm-wide);
+  margin: 0 auto;
+  padding: 0 var(--rm-side);
+}
+
+/* ================================
+   2. Banner
+================================ */
+.rm-hero {
+  position: relative;
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--rm-blue-dark);
+}
+
+.rm-hero-image {
+  object-fit: cover;
+}
+
+.rm-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 20, 45, 0.92) 0%,
+      rgba(7, 20, 45, 0.7) 50%,
+      rgba(7, 20, 45, 0.42) 100%
+    ),
+    radial-gradient(
+      circle at 86% 18%,
+      rgba(9, 233, 180, 0.16),
+      transparent 34%
+    );
+}
+
+.rm-hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.rm-hero-title {
+  max-width: 960px;
+  color: #ffffff;
+  font-size: 54px;
+  font-weight: 600;
+  line-height: 1.28;
+  letter-spacing: 0.01em;
+}
+
+.rm-hero-desc {
+  max-width: 900px;
+  margin-top: 26px;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 20px;
+  line-height: 1.85;
+}
+
+.rm-hero-line {
+  width: 88px;
+  height: 3px;
+  margin-top: 36px;
+  background: var(--rm-cyan);
+}
+
+/* ================================
+   3. 通用标题
+================================ */
+.rm-section-title {
+  color: var(--rm-blue);
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1.32;
+  letter-spacing: 0.01em;
+}
+
+.rm-section-desc {
+  margin-top: 26px;
+  color: var(--rm-muted);
+  font-size: 18px;
+  line-height: 2;
+}
+
+/* ================================
+   4. 页面导入
+================================ */
+.rm-intro {
+  padding: 112px 0;
+  background: #ffffff;
+}
+
+.rm-intro-layout {
+  display: grid;
+  grid-template-columns: 1.12fr 0.88fr;
+  gap: 84px;
+  align-items: start;
+}
+
+.rm-intro-image {
+  position: relative;
+  min-height: 560px;
+  overflow: hidden;
+  background: #eef4f9;
+}
+
+.rm-intro-image img {
+  object-fit: cover;
+}
+
+.rm-image-mark {
+  position: absolute;
+  left: 32px;
+  bottom: 30px;
+  z-index: 2;
+  padding: 14px 18px;
+  color: #ffffff;
+  background: rgba(11, 29, 58, 0.68);
+  font-size: 14px;
+  backdrop-filter: blur(8px);
+}
+
+/* ================================
+   5. 研发与制造实力
+================================ */
+.rm-ability {
+  padding: 128px 0 136px;
+  background: var(--rm-soft);
+}
+
+.rm-section-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 56px;
+  align-items: flex-end;
+  margin-bottom: 64px;
+}
+
+.rm-card-grid {
+  display: flex;
+  gap: 34px;
+  align-items: stretch;
+}
+
+.rm-card {
+  height: 740px;
+  min-height: 740px;
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid var(--rm-line);
+  overflow: hidden;
+  transition:
+    flex 0.36s ease,
+    box-shadow 0.24s ease,
+    border-color 0.24s ease;
+}
+
+.rm-card-grid:hover .rm-card {
+  flex: 0.68 1 0;
+}
+
+.rm-card-grid .rm-card:hover {
+  flex: 2.15 1 0;
+}
+
+.rm-card:hover {
+  border-color: var(--rm-line);
+  box-shadow: 0 26px 70px rgba(23, 51, 104, 0.1);
+}
+
+.rm-card-image {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  background: #eef4f9;
+}
+
+.rm-card-image img {
+  object-fit: cover;
+  transition: transform 0.32s ease;
+}
+
+.rm-card:hover .rm-card-image img {
+  transform: scale(1.04);
+}
+
+.rm-card-body {
+  flex: 1;
+  min-height: 0;
+  padding: 34px 34px 24px;
+  overflow: hidden;
+}
+
+.rm-card-title {
+  margin-bottom: 18px;
+  color: var(--rm-blue);
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.35;
+  transition: color 0.24s ease;
+}
+
+.rm-card:hover .rm-card-title {
+  color: var(--rm-cyan);
+}
+
+.rm-card-list-area {
+  position: relative;
+  height: 84px;
+  overflow: hidden;
+}
+
+.rm-card.is-expanded .rm-card-list-area {
+  height: 126px;
+}
+
+.rm-card-list {
+  list-style: none;
+  display: grid;
+  gap: 5px;
+  color: var(--rm-muted);
+  font-size: 16px;
+  line-height: 1.52;
+}
+
+.rm-card-list li {
+  position: relative;
+  padding-left: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rm-card.is-expanded .rm-card-list li {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+}
+
+.rm-card-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.63em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--rm-blue);
+  transition: background 0.24s ease;
+}
+
+.rm-card:hover .rm-card-list li::before,
+.rm-card.is-expanded .rm-card-list li::before {
+  background: var(--rm-cyan);
+}
+
+/* ================================
+   6. 从需求到交付流程
+================================ */
+.rm-process {
+  position: relative;
+  min-height: 700px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  background: var(--rm-blue-dark);
+}
+
+.rm-process-image {
+  object-fit: cover;
+}
+
+.rm-process-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(8, 22, 48, 0.12),
+      rgba(8, 22, 48, 0.82)
+    ),
+    rgba(23, 51, 104, 0.28);
+  transition: background 0.28s ease;
+}
+
+.rm-process.is-hovering .rm-process-overlay {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(8, 22, 48, 0.18),
+      rgba(8, 22, 48, 0.86)
+    ),
+    rgba(23, 51, 104, 0.42);
+}
+
+.rm-process-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--rm-max);
+  margin: 0 auto;
+  padding: 76px var(--rm-side);
+  color: #ffffff;
+}
+
+.rm-process-title {
+  max-width: 960px;
+  min-height: 112px;
+  color: #ffffff;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 1.35;
+  transition: color 0.24s ease;
+}
+
+.rm-process.is-hovering .rm-process-title {
+  color: var(--rm-cyan);
+}
+
+.rm-process-title-main {
+  display: block;
+  margin-bottom: 18px;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.rm-process-title-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 28px;
+  max-width: 960px;
+  color: rgba(9, 233, 180, 0.92);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.rm-process-title-list li {
+  position: relative;
+  padding-left: 16px;
+}
+
+.rm-process-title-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.75em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.rm-process-steps {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin-top: 48px;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+  border-left: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.rm-process-step {
+  min-height: 118px;
+  padding: 24px 20px;
+  border: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.22);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.24s ease, transform 0.24s ease;
+}
+
+.rm-process-step:hover,
+.rm-process-step.is-active {
+  background: rgba(23, 51, 104, 0.58);
+  transform: translateY(-4px);
+}
+
+.rm-process-step span {
+  display: block;
+  margin-bottom: 16px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 14px;
+  font-weight: 700;
+  transition: color 0.24s ease;
+}
+
+.rm-process-step strong {
+  display: block;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.45;
+  transition: color 0.24s ease;
+}
+
+.rm-process-step:hover span,
+.rm-process-step.is-active span,
+.rm-process-step:hover strong,
+.rm-process-step.is-active strong {
+  color: var(--rm-cyan);
+}
+
+/* ================================
+   7. 产品应用与验证场景
+================================ */
+.rm-supply {
+  padding: 128px 0;
+  background: #ffffff;
+}
+
+.rm-supply-head {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 72px;
+  align-items: end;
+  margin-bottom: 54px;
+}
+
+.rm-supply-head .rm-section-desc {
+  max-width: 760px;
+  margin-top: 0;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.rm-supply-carousel {
+  position: relative;
+  --supply-card-width: 650px;
+  --supply-gap: 34px;
+}
+
+.rm-supply-window {
+  overflow: hidden;
+  padding: 30px 0;
+}
+
+.rm-supply-track {
+  display: flex;
+  gap: var(--supply-gap);
+  align-items: center;
+  padding: 0 calc((100% - var(--supply-card-width)) / 2);
+  transition: transform 0.48s ease;
+  will-change: transform;
+}
+
+.rm-supply-card {
+  position: relative;
+  flex: 0 0 var(--supply-card-width);
+  min-height: 520px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  text-align: left;
+  opacity: 0.46;
+  cursor: pointer;
+  transform: scale(0.82);
+  transform-origin: center center;
+  background: #eef4f9;
+  transition:
+    transform 0.38s ease,
+    opacity 0.38s ease,
+    box-shadow 0.38s ease;
+}
+
+.rm-supply-card.is-active {
+  opacity: 1;
+  transform: scale(1.16);
+  z-index: 3;
+  box-shadow: 0 30px 82px rgba(23, 51, 104, 0.16);
+}
+
+.rm-supply-card.is-neighbor {
+  opacity: 0.78;
+  transform: scale(0.92);
+  z-index: 2;
+}
+
+.rm-supply-image {
+  object-fit: cover;
+  transition: transform 0.36s ease;
+}
+
+.rm-supply-card:hover .rm-supply-image {
+  transform: scale(1.04);
+}
+
+.rm-supply-mask {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(8, 22, 48, 0.04) 0%,
+    rgba(8, 22, 48, 0.18) 42%,
+    rgba(8, 22, 48, 0.78) 100%
+  );
+  pointer-events: none;
+}
+
+.rm-supply-copy {
+  position: absolute;
+  left: 36px;
+  right: 36px;
+  bottom: 34px;
+  z-index: 2;
+  color: #ffffff;
+}
+
+.rm-supply-title {
+  margin-bottom: 14px;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.32;
+  transition: color 0.24s ease;
+}
+
+.rm-supply-card:hover .rm-supply-title,
+.rm-supply-card.is-active .rm-supply-title {
+  color: var(--rm-cyan);
+}
+
+.rm-supply-desc {
+  max-width: 520px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.rm-supply-navigator {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  margin-top: 34px;
+}
+
+.rm-supply-timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: start;
+  gap: 0;
+  min-height: 92px;
+}
+
+.rm-supply-timeline::before {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  top: 63px;
+  height: 1px;
+  background: rgba(23, 51, 104, 0.22);
+}
+
+.rm-supply-nav-item {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  justify-items: center;
+  gap: 20px;
+  border: 0;
+  background: transparent;
+  color: var(--rm-blue);
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  opacity: 0.62;
+  transition:
+    color 0.22s ease,
+    opacity 0.22s ease,
+    transform 0.22s ease;
+}
+
+.rm-supply-nav-item:hover {
+  color: var(--rm-blue);
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.rm-supply-nav-item.is-active {
+  color: var(--rm-cyan);
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.rm-supply-nav-dot {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(23, 51, 104, 0.34);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  transition:
+    border-color 0.22s ease,
+    transform 0.22s ease,
+    background 0.22s ease;
+}
+
+.rm-supply-nav-dot::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--rm-blue);
+  transition:
+    background 0.22s ease,
+    transform 0.22s ease;
+}
+
+.rm-supply-nav-item.is-active .rm-supply-nav-dot {
+  border-color: rgba(9, 233, 180, 0.72);
+  background: rgba(9, 233, 180, 0.1);
+  transform: scale(1.16);
+}
+
+.rm-supply-nav-item.is-active .rm-supply-nav-dot::before {
+  background: var(--rm-cyan);
+  transform: scale(1.18);
+}
+/* ================================
+   8. 为什么选择恒永达
+   说明：
+   1. 初始状态：白色卡片、深蓝图标、深蓝标题、深灰正文
+   2. 鼠标悬停：深蓝卡片、白色图标、荧光色标题、白色正文
+   3. 修复文字被挤成竖排的问题
+================================ */
+.rm-why {
+  position: relative;
+  padding: 120px 0 132px;
+  overflow: hidden;
+  background: #f5f8fb;
+}
+
+.rm-why-bg {
+  object-fit: cover;
+}
+
+.rm-why-bg-mask {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.86),
+      rgba(255, 255, 255, 0.94)
+    );
+}
+
+.rm-why > .rm-container-wide {
+  position: relative;
+  z-index: 2;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 72px;
+}
+
+.rm-why-head {
+  margin-bottom: 56px;
+  text-align: center;
+}
+
+.rm-why-title {
+  color: var(--rm-blue);
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.22;
+  letter-spacing: 0.04em;
+}
+
+.rm-why-subtitle {
+  margin-top: 16px;
+  color: var(--rm-text);
+  font-size: 15px;
+  letter-spacing: 0.22em;
+}
+
+/* 三张卡片横向排列 */
+.rm-why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 34px;
+}
+
+/* 初始状态：白色卡片 */
+.rm-why-card {
+  min-height: 360px;
+  padding: 54px 48px 46px;
+
+  text-align: center;
+  color: var(--rm-blue);
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(23, 51, 104, 0.08);
+  box-shadow: 0 22px 60px rgba(23, 51, 104, 0.08);
+
+  transition:
+    transform 0.24s ease,
+    background 0.24s ease,
+    border-color 0.24s ease,
+    box-shadow 0.24s ease;
+}
+
+/* 鼠标悬停：深蓝卡片 */
+.rm-why-card:hover {
+  background: var(--rm-blue);
+  border-color: rgba(23, 51, 104, 0.18);
+  box-shadow: 0 32px 86px rgba(23, 51, 104, 0.22);
+  transform: translateY(-6px);
+}
+
+/* SVG 图标外层 */
+.rm-why-icon {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--rm-blue);
+  transition: color 0.24s ease;
+}
+
+.rm-why-svg {
+  width: 76px;
+  height: 76px;
+  display: block;
+}
+
+.rm-why-svg-accent {
+  fill: var(--rm-cyan);
+  transition: fill 0.24s ease;
+}
+
+/* hover 后图标变白 */
+.rm-why-card:hover .rm-why-icon {
+  color: #ffffff;
+}
+
+/* 初始状态：标题深蓝 */
+.rm-why-card h3 {
+  margin: 0 0 18px;
+  color: var(--rm-blue);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.45;
+  text-align: center;
+  white-space: normal;
+  word-break: keep-all;
+  transition: color 0.24s ease;
+}
+
+/* hover 后标题荧光色 */
+.rm-why-card:hover h3 {
+  color: var(--rm-cyan);
+}
+
+/* 初始状态：正文深灰 */
+.rm-why-card p {
+  max-width: 420px;
+  margin: 0 auto;
+  color: rgba(22, 34, 58, 0.72);
+  font-size: 16px;
+  line-height: 1.85;
+  text-align: center;
+  word-break: normal;
+  overflow-wrap: normal;
+  transition: color 0.24s ease;
+}
+
+/* hover 后正文白色 */
+.rm-why-card:hover p {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+/* ================================
+   平板适配
+================================ */
+@media (max-width: 1180px) {
+  .rm-why > .rm-container-wide {
+    padding: 0 40px;
+  }
+
+  .rm-why-grid {
+    gap: 24px;
+  }
+
+  .rm-why-card {
+    padding: 46px 30px 40px;
+  }
+}
+
+/* ================================
+   手机端适配
+================================ */
+@media (max-width: 768px) {
+  .rm-why {
+    padding: 80px 0 92px;
+  }
+
+  .rm-why > .rm-container-wide {
+    padding: 0 20px;
+  }
+
+  .rm-why-title {
+    font-size: 34px;
+  }
+
+  .rm-why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rm-why-card {
+    min-height: auto;
+  }
+} 
+ 
+/* ================================
+   9. CTA
+================================ */
+.rm-cta {
+  position: relative;
+  padding: 104px 0;
+  overflow: hidden;
+  background: var(--rm-blue-dark);
+}
+
+.rm-cta-bg {
+  object-fit: cover;
+}
+
+.rm-cta-mask {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    90deg,
+    rgba(8, 22, 48, 0.92) 0%,
+    rgba(8, 22, 48, 0.72) 100%
+  );
+}
+
+.rm-cta > .rm-container {
+  position: relative;
+  z-index: 2;
+}
+
+.rm-cta-panel {
+  min-height: 360px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 60px;
+  align-items: center;
+  padding: 70px;
+  color: #ffffff;
+}
+
+.rm-cta-title {
+  color: #ffffff;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.rm-cta-desc {
+  max-width: 760px;
+  margin-top: 20px;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+/* ================================
+   CTA 按钮样式
+   说明：
+   1. 初始状态：白色背景 + 深蓝色文字
+   2. 鼠标悬停：荧光青背景 + 深蓝色文字
+   3. 圆角统一为 8px
+================================ */
+.rm-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 178px;
+  height: 52px;
+  padding: 0 32px;
+
+  color: var(--rm-blue);
+  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.86);
+  border-radius: 8px;
+
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+
+  transition:
+    transform 0.22s ease,
+    background 0.22s ease,
+    border-color 0.22s ease,
+    color 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.rm-cta-button:hover {
+  color: var(--rm-blue);
+  background: var(--rm-cyan);
+  border-color: var(--rm-cyan);
+  transform: translateY(-2px);
+
+}  
+ 
+/* ================================
+   10. 平板适配
+================================ */
+@media (max-width: 1200px) {
+  .rm-page {
+    --rm-side: 48px;
+  }
+
+  .rm-hero-title {
+    font-size: 42px;
+  }
+
+  .rm-section-title {
+    font-size: 34px;
+  }
+
+  .rm-intro-layout,
+  .rm-supply-head {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .rm-why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rm-card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .rm-card-grid:hover .rm-card,
+  .rm-card-grid .rm-card:hover {
+    flex: initial;
+  }
+
+  .rm-card {
+    height: auto;
+    min-height: 680px;
+  }
+
+  .rm-supply-carousel {
+    --supply-card-width: 560px;
+  }
+
+  .rm-supply-nav-item {
+    font-size: 15px;
+  }
+
+  .rm-supply-card {
+    min-height: 460px;
+  }
+
+  .rm-process-steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ================================
+   11. 手机适配
+================================ */
+@media (max-width: 760px) {
+  .rm-page {
+    --rm-side: 20px;
+  }
+
+  .rm-hero {
+    min-height: 520px;
+  }
+
+  .rm-hero-title {
+    font-size: 31px;
+    line-height: 1.45;
+  }
+
+  .rm-hero-desc {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .rm-intro,
+  .rm-ability,
+  .rm-supply,
+  .rm-why,
+  .rm-cta {
+    padding: 72px 0;
+  }
+
+  .rm-intro-layout,
+  .rm-section-head,
+  .rm-supply-head,
+  .rm-why-grid,
+  .rm-cta-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .rm-intro-image {
+    min-height: 360px;
+  }
+
+  .rm-section-head {
+    display: grid;
+    gap: 20px;
+  }
+
+  .rm-section-title {
+    font-size: 28px;
+  }
+
+  .rm-section-desc,
+  .rm-supply-head .rm-section-desc {
+    font-size: 16px;
+    line-height: 1.85;
+  }
+
+  .rm-card-image {
+    height: 380px;
+  }
+
+  .rm-card-title,
+  .rm-supply-title {
+    font-size: 24px;
+  }
+
+  .rm-supply-carousel {
+    --supply-card-width: calc(100vw - 48px);
+  }
+
+  .rm-supply-card {
+    min-height: 380px;
+  }
+
+  .rm-supply-timeline {
+    width: 100%;
+    overflow-x: auto;
+    grid-template-columns: repeat(5, minmax(120px, 1fr));
+    min-height: 82px;
+  }
+
+  .rm-supply-timeline::before {
+    left: 60px;
+    right: 60px;
+    top: 54px;
+  }
+
+  .rm-supply-nav-item {
+    font-size: 14px;
+  }
+
+  .rm-supply-nav-dot {
+    width: 34px;
+    height: 34px;
+  }
+
+  .rm-supply-copy {
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+  }
+
+  .rm-process {
+    min-height: auto;
+  }
+
+  .rm-process-content {
+    padding: 42px 28px;
+  }
+
+  .rm-process-title {
+    min-height: 120px;
+    font-size: 28px;
+  }
+
+  .rm-process-title-list {
+    grid-template-columns: 1fr;
+  }
+
+  .rm-process-steps {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 34px;
+  }
+
+  .rm-process-step {
+    min-height: 96px;
+    padding: 20px 18px;
+  }
+
+  .rm-why-title {
+    font-size: 32px;
+  }
+
+  .rm-why-card {
+    min-height: auto;
+    padding: 44px 28px;
+  }
+
+  .rm-cta-panel {
+    padding: 44px 28px;
+  }
+
+  .rm-cta-title {
+    font-size: 27px;
+  }
+
+  .rm-cta-button {
+    width: 100%;
+  }
+}  

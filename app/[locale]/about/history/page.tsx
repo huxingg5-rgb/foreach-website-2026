@@ -116,4 +116,4 @@ export default async function AboutHistoryLocalePage({ params }: PageProps) {
   }
 
   return <HistoryPageContent locale={locale as HistoryPageLocale} />;
-} 
+}  

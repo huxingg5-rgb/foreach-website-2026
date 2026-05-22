@@ -925,9 +925,16 @@ const navigationItems: NavigationItem[] = [
             "연구개발, 정밀 제조, 조립, 테스트 및 엔지니어링 검증을 통해 제품 선정부터 시스템 유로 구현까지 지원합니다.",
             "Поддержка от подбора изделий до реализации системного жидкостного тракта через НИОКР, точное производство, сборку, испытания и инженерную проверку."
           ),
-          href: anchorPath("about"),
+
+          /*
+            这里原来是 anchorPath("about")，表示跳到首页 about 锚点。
+            现在要进入独立页面，所以改成研发与制造能力页面路径。
+          */
+          href: localizedPath("/about/research-manufacturing"),
+
           order: 2,
           enabled: true,
+
           image: {
             src: "/images/about/rd-manufacturing.webp",
             alt: t(
