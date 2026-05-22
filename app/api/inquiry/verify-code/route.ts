@@ -1,8 +1,8 @@
 // app/api/inquiry/verify-code/route.ts
 
 import { NextResponse } from "next/server";
+export const runtime = "edge";
 
-export const runtime = "nodejs";
 
 /**
  * 这里继续使用发送验证码接口里创建的全局验证码存储

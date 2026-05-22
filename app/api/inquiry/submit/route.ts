@@ -1,8 +1,7 @@
 // app/api/inquiry/submit/route.ts
 
 import { NextResponse } from "next/server";
-
-export const runtime = "nodejs";
+export const runtime = "edge";
 
 /**
  * POST /api/inquiry/submit

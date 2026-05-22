@@ -7,6 +7,7 @@ import SiteHeader from "@/components/layout/SiteHeader";
 import { cookies } from "next/headers";
 import SiteFooter from "@/components/layout/SiteFooter";
 import type { LocaleCode } from "@/lib/i18n";
+export const runtime = "edge"; 
 /**
  * metadata 
  * 网站基础 SEO 信息

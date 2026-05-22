@@ -1,7 +1,7 @@
 // app/api/inquiry/send-code/route.ts
 
 import { NextResponse } from "next/server";
-
+export const runtime = "edge";
 /**
  * 指定运行环境为 Node.js
  *
@@ -9,8 +9,10 @@ import { NextResponse } from "next/server";
  * 1. 这里使用了 globalThis 临时保存验证码
  * 2. 所以明确指定 nodejs 更稳
  * 3. 正式上线后建议换成 Redis、数据库、Cloudflare KV 等方式保存验证码
+ * export const runtime = "nodejs";
  */
-export const runtime = "nodejs";
+
+ 
 
 /**
  * 给 TypeScript 声明一个全局变量
