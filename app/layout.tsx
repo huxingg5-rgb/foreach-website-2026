@@ -1,53 +1,61 @@
+/* =========================================================
+   app/layout.tsx
+   恒永达官网｜全站根布局
+
+   说明：
+   1. 这个文件是所有页面共用的根布局
+   2. 当前为了适配 Cloudflare Pages 免费版静态导出，不使用 cookies()
+   3. 语言不再从 Cookie 判断，页面语言由具体页面路径控制
+   4. SiteHeader 仍然全站共用
+   5. SiteFooter 当前先默认使用中文 zh-CN
+========================================================= */
+
 import type { Metadata } from "next";
 import "./globals.css";
 import "./language-typography.css";
 
 import SiteHeader from "@/components/layout/SiteHeader";
-
-import { cookies } from "next/headers";
 import SiteFooter from "@/components/layout/SiteFooter";
-import type { LocaleCode } from "@/lib/i18n";
-export const runtime = "edge"; 
-/**
- * metadata 
- * 网站基础 SEO 信息
- * 后续可以根据不同页面单独生成 title 和 description
- */
+
+/* =========================================================
+   网站基础 SEO 信息
+   说明：
+   后续每个页面可以在自己的 page.tsx 里单独设置 metadata
+========================================================= */
 export const metadata: Metadata = {
   title: "恒永达 FOREACH 官网",
   description:
     "恒永达专注于微流体系统核心零部件与液路系统解决方案，服务 IVD、生命科学、高端分析仪器、合成生物和实验室自动化领域。",
 };
 
-/**
- * RootLayout
- * 全站根布局 
- *
- * 作用：
- * 1. 所有页面共用这个布局
- * 2. SiteHeader 放在这里后，所有页面都会自动带顶部导航
- * 3. children 是每个页面自己的内容
- */
-export default async function RootLayout({
+/* =========================================================
+   RootLayout
+   全站根布局
+
+   注意：
+   1. 静态导出 output: export 模式下，不要使用 cookies()
+   2. 不要写 export const runtime = "edge"
+   3. 不要在这里根据 Cookie 判断语言
+========================================================= */
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const cookieStore = await cookies();
-
-  const cookieLocale = cookieStore.get("foreach_locale")?.value as
-    | LocaleCode
-    | undefined;
-
-  const supportedLocales: LocaleCode[] = ["zh-CN", "en", "es", "fr", "ko", "ru"];
-
-  const currentLocale: LocaleCode =
-    cookieLocale && supportedLocales.includes(cookieLocale)
-      ? cookieLocale
-      : "zh-CN";
   return (
     <html lang="zh-CN">
       <body>
+        {/* =================================================
+            页面滚动、移动端菜单、语言菜单交互脚本
+
+            说明：
+            1. 这段是纯前端浏览器脚本
+            2. 不依赖 Cookie，不影响静态导出
+            3. 主要控制：
+               - 滚动后导航栏状态
+               - 手机端菜单打开/关闭
+               - 手机端语言下拉打开/关闭
+        ================================================= */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -69,6 +77,7 @@ export default async function RootLayout({
                   var menuButton = target.closest(".mobile-menu-btn");
                   if (menuButton) {
                     event.preventDefault();
+
                     var openLanguageWrap = document.querySelector(".language-switcher-open");
                     if (openLanguageWrap) {
                       openLanguageWrap.classList.remove("language-switcher-open");
@@ -88,8 +97,10 @@ export default async function RootLayout({
                     if (isPc) return;
 
                     event.preventDefault();
+
                     var languageWrap = languageButton.closest(".language-switcher");
                     document.documentElement.classList.remove("mobile-nav-open");
+
                     var openMenuButton = document.querySelector(".mobile-menu-btn");
                     if (openMenuButton) openMenuButton.setAttribute("aria-expanded", "false");
 
@@ -102,6 +113,7 @@ export default async function RootLayout({
                   var mobileNavLink = target.closest(".mobile-nav-link");
                   if (mobileNavLink) {
                     document.documentElement.classList.remove("mobile-nav-open");
+
                     var currentMenuButton = document.querySelector(".mobile-menu-btn");
                     if (currentMenuButton) currentMenuButton.setAttribute("aria-expanded", "false");
                     return;
@@ -110,18 +122,22 @@ export default async function RootLayout({
                   var languageItem = target.closest(".language-menu-item");
                   if (languageItem) {
                     event.preventDefault();
+
                     var currentLanguageWrap = languageItem.closest(".language-switcher");
                     var currentLanguageButton = currentLanguageWrap && currentLanguageWrap.querySelector(".language-current");
                     var currentLanguageLabel = currentLanguageButton && currentLanguageButton.querySelector(".language-current-label");
+
                     if (currentLanguageLabel) currentLanguageLabel.textContent = languageItem.textContent.trim();
                     if (currentLanguageWrap) currentLanguageWrap.classList.remove("language-switcher-open");
                     if (currentLanguageButton) currentLanguageButton.setAttribute("aria-expanded", "false");
+
                     return;
                   }
 
                   var activeLanguageWrap = document.querySelector(".language-switcher-open");
                   if (activeLanguageWrap && !target.closest(".language-switcher")) {
                     activeLanguageWrap.classList.remove("language-switcher-open");
+
                     var activeLanguageButton = activeLanguageWrap.querySelector(".language-current");
                     if (activeLanguageButton) activeLanguageButton.setAttribute("aria-expanded", "false");
                   }
@@ -130,11 +146,17 @@ export default async function RootLayout({
             `,
           }}
         />
+
         <SiteHeader />
 
         {children}
 
-        <SiteFooter locale={currentLocale} />
+        {/* 
+          当前静态导出版先固定中文 Footer。
+          后续如果需要 Footer 也根据 /en、/fr 自动切换，
+          再把语言判断放到具体页面或前端组件里处理。
+        */}
+        <SiteFooter locale="zh-CN" />
       </body>
     </html>
   );

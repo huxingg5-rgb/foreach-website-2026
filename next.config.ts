@@ -1,21 +1,31 @@
-// next.config.ts
-// Next.js 官网项目配置文件
-//
-// 说明：
-// 1. 这个文件是 Next.js 项目的全局配置文件
-// 2. 修改这里之后，需要重新启动 npm run dev 才会生效
-// 3. allowedDevOrigins 用于允许局域网手机访问开发服务器
-// 4. 当前手机访问用的电脑局域网 IP：192.168.8.253
+
+/* =========================================================
+   next.config.ts
+   恒永达官网 Next.js 配置文件
+
+   说明：
+   1. 当前为了适配 Cloudflare Pages 免费版，先使用静态导出 output: "export"
+   2. 静态导出不会生成 Cloudflare Worker，因此不会触发 3 MiB Worker 限制
+   3. images.unoptimized 是必须的，否则 next/image 在静态导出时可能报错 
+   4. 后续如果切换到阿里云 ECS 或完整 Node.js 部署，可以再恢复服务端能力
+========================================================= */
 
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // 允许开发环境下，从指定局域网 IP 访问 Next.js dev server
-  // 说明：
-  // 1. 手机访问电脑本地开发网站时，需要允许这个来源
-  // 2. 这里不要写 http://，只写 IP 或域名
-  // 3. 如果以后电脑 IP 变了，这里也要跟着改
-  allowedDevOrigins: ["192.168.8.253"],
+  /*
+    静态导出：
+    npm run build 后会生成 out 文件夹
+  */
+  output: "export",
+
+  /*
+    静态部署时，禁用 Next.js 图片优化服务
+    因为 Cloudflare Pages 静态模式没有 Next.js 图片优化服务器
+  */
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;
