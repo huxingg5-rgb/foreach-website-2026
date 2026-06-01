@@ -1,0 +1,1619 @@
+/* =========================================================
+   contact.css
+   恒永达官网｜中文联系我们页面专属样式
+
+   文件路径：
+   app/contact/contact.css
+
+   对应页面：
+   /contact
+
+   说明：
+   1. 这个文件只负责“联系我们”页面样式
+   2. 不影响首页、关于我们、产品中心等其他页面
+   3. 页面结构在 components/contact/ContactPageContent.tsx
+   4. 页面文案在 data/contact-cooperation/contact.zh.ts
+   5. 当前页面样式由 app/contact/page.tsx 引入
+========================================================= */
+
+
+/* =========================================================
+   1. 页面基础变量
+   说明：
+   1. 变量写在 .contact-page 内部，避免影响其他页面
+   2. 后续这个页面所有颜色、宽度、圆角、动画都优先用变量
+========================================================= */
+
+.contact-page {
+    --contact-blue: #173368;
+    /* 恒永达官网主品牌深蓝色 */
+    --contact-blue-dark: #0b1f46;
+    /* 更深的蓝色，用于深色背景辅助 */
+    --contact-cyan: #09e9b4;
+    /* 科技感荧光青，用于按钮 hover 和重点强调 */
+    --contact-text-main: #142033;
+    /* 页面主要文字颜色 */
+    --contact-text-sub: #627189;
+    /* 页面说明文字颜色 */
+    --contact-text-muted: #8a96a8;
+    /* 页面弱化提示文字颜色 */
+    --contact-line: rgba(23, 51, 104, 0.15);
+    /* 普通浅蓝灰分割线 */
+    --contact-line-strong: rgba(23, 51, 104, 0.28);
+    /* 稍强一点的边框颜色 */
+    --contact-bg-page: #f5f8fc;
+    /* 浅灰蓝页面分区背景 */
+    --contact-bg-white: #ffffff;
+    /* 白色背景 */
+    --contact-content-width: 1320px;
+    /* 页面主体内容最大宽度 */
+    --contact-radius: 8px;
+    /* 页面按钮、输入框统一圆角 */
+    --contact-transition: 0.24s ease;
+    /* 页面统一交互动效时间 */
+
+    width: 100%;
+    /* 页面宽度占满浏览器 */
+    min-height: 100vh;
+    /* 页面最小高度至少等于一屏 */
+    background: var(--contact-bg-white);
+    /* 页面默认背景为白色 */
+    color: var(--contact-text-main);
+    /* 页面默认文字颜色 */
+}
+
+
+/* =========================================================
+   2. 顶部 Banner
+   说明：
+   1. Banner 使用真实图片作为背景
+   2. 左侧叠加深蓝渐变，保证文字清晰
+   3. 如果图片没有放进去，会显示深蓝渐变兜底背景
+========================================================= */
+
+.contact-hero {
+    position: relative;
+    /* 让内部网格遮罩可以绝对定位 */
+    width: 100%;
+    /* Banner 宽度占满整屏 */
+    overflow: hidden;
+    /* 防止背景或伪元素溢出 */
+    color: #ffffff;
+    /* Banner 内文字默认白色 */
+    background:
+        linear-gradient(90deg,
+            rgba(8, 29, 67, 0.92) 0%,
+            rgba(23, 51, 104, 0.78) 42%,
+            rgba(23, 51, 104, 0.28) 100%),
+        /* 左深右浅的深蓝遮罩，保证左侧标题可读 */
+        radial-gradient(circle at 82% 24%, rgba(9, 233, 180, 0.2), transparent 34%),
+        /* 右上角荧光青氛围光 */
+        url("/images/contact-cooperation/contact-hero.webp"),
+        /* Banner 真实图片路径 */
+        linear-gradient(135deg, #081d43 0%, #173368 56%, #102b5e 100%);
+    /* 图片缺失时的深蓝兜底背景 */
+    background-size: cover, auto, cover, cover;
+    /* 各层背景尺寸设置 */
+    background-position: center, center, center right, center;
+    /* 图片偏右显示，左侧留文字空间 */
+    background-repeat: no-repeat;
+    /* 背景不重复 */
+}
+
+.contact-hero::before {
+    content: "";
+    /* 创建一个装饰层 */
+    position: absolute;
+    /* 覆盖整个 Banner */
+    inset: 0;
+    /* 上右下左全部贴边 */
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    /* 细网格线，增加科技感 */
+    background-size: 64px 64px;
+    /* 网格大小 */
+    opacity: 0.22;
+    /* 网格透明度，避免太抢眼 */
+    pointer-events: none;
+    /* 不影响按钮点击 */
+}
+
+.contact-hero-inner {
+    position: relative;
+    /* 让内容浮在装饰层上面 */
+    z-index: 1;
+    /* 内容层级高于 ::before */
+    max-width: var(--contact-content-width);
+    /* 内容最大宽度 */
+    min-height: 420px;
+    /* Banner 合理高度 */
+    margin: 0 auto;
+    /* 内容区域水平居中 */
+    padding: 86px 28px 76px;
+    /* 上、左右、下内边距 */
+    display: flex;
+    /* 使用 flex 控制内容位置 */
+    align-items: center;
+    /* 内容垂直居中 */
+    justify-content: flex-start;
+    /* 内容靠左 */
+}
+
+.contact-hero-content {
+    max-width: 760px;
+    /* 限制标题宽度，避免太长 */
+}
+
+.contact-hero-title {
+    max-width: 760px;
+    /* 标题最大宽度 */
+    margin: 0;
+    /* 清除默认外边距 */
+    color: #ffffff;
+    /* 标题主文字白色 */
+    font-size: clamp(34px, 3.6vw, 52px);
+    /* 响应式标题字号 */
+    line-height: 1.12;
+    /* 标题行高 */
+    font-weight: 900;
+    /* 标题加粗 */
+    letter-spacing: -0.045em;
+    /* 标题字距略收紧，增强高级感 */
+}
+
+.contact-hero-title span {
+    color: var(--contact-cyan);
+    /* 标题中的重点文字使用荧光青 */
+}
+
+.contact-hero-actions {
+    margin-top: 30px;
+    /* 按钮组和标题之间的距离 */
+    display: flex;
+    /* 按钮横向排列 */
+    flex-wrap: wrap;
+    /* 小屏幕允许换行 */
+    gap: 12px;
+    /* 按钮之间的间距 */
+}
+
+
+/* =========================================================
+   3. 按钮统一样式
+   说明：
+   1. 所有按钮统一 8px 圆角
+   2. 默认白色 / 透明感
+   3. hover 为荧光青底 + 深蓝文字
+========================================================= */
+
+.contact-button,
+.contact-mini-button,
+.contact-file-button,
+.contact-submit-button {
+    min-height: 44px;
+    /* 按钮最小高度 */
+    padding: 0 22px;
+    /* 按钮左右内边距 */
+    border-radius: var(--contact-radius);
+    /* 按钮统一 8px 圆角 */
+    border: 1px solid rgba(23, 51, 104, 0.42);
+    /* 默认深蓝半透明边框 */
+    background: rgba(255, 255, 255, 0.72);
+    /* 默认白色半透明背景 */
+    color: var(--contact-blue);
+    /* 默认深蓝文字 */
+    display: inline-flex;
+    /* 让按钮内容居中 */
+    align-items: center;
+    /* 垂直居中 */
+    justify-content: center;
+    /* 水平居中 */
+    cursor: pointer;
+    /* 鼠标移入显示手型 */
+    font-size: 14px;
+    /* 按钮文字字号 */
+    font-weight: 850;
+    /* 按钮文字加粗 */
+    line-height: 1;
+    /* 按钮文字行高 */
+    text-decoration: none;
+    /* 去掉 a 标签下划线 */
+    white-space: nowrap;
+    /* 按钮文字不换行 */
+    transition:
+        background var(--contact-transition),
+        color var(--contact-transition),
+        border-color var(--contact-transition),
+        transform var(--contact-transition),
+        opacity var(--contact-transition);
+    /* 统一按钮动效 */
+}
+
+.contact-hero .contact-button {
+    border-color: rgba(255, 255, 255, 0.52);
+    /* Banner 上按钮使用白色半透明边框 */
+    background: rgba(255, 255, 255, 0.08);
+    /* Banner 上按钮默认透明白底 */
+    color: #ffffff;
+    /* Banner 上按钮默认白色文字 */
+}
+
+.contact-button:hover,
+.contact-mini-button:hover,
+.contact-file-button:hover,
+.contact-submit-button:hover,
+.contact-hero .contact-button:hover {
+    background: var(--contact-cyan);
+    /* 鼠标悬停变荧光青底 */
+    color: var(--contact-blue);
+    /* 鼠标悬停变深蓝字 */
+    border-color: var(--contact-cyan);
+    /* 鼠标悬停边框变荧光青 */
+    transform: translateY(-1px);
+    /* 鼠标悬停轻微上浮 */
+}
+
+.contact-mini-button:disabled,
+.contact-submit-button:disabled {
+    opacity: 0.55;
+    /* 禁用状态降低透明度 */
+    cursor: not-allowed;
+    /* 禁用状态鼠标显示不可点击 */
+    transform: none;
+    /* 禁用状态不允许上浮 */
+}
+
+
+/* =========================================================
+   4. 通用内容区
+========================================================= */
+
+.contact-section {
+    width: 100%;
+    /* 区块宽度占满页面 */
+    padding: 88px 28px;
+    /* 区块上下和左右内边距 */
+    background: #ffffff;
+    /* 默认白色背景 */
+}
+
+.contact-section-inner {
+    max-width: var(--contact-content-width);
+    /* 内容最大宽度 */
+    margin: 0 auto;
+    /* 内容区域水平居中 */
+}
+
+.contact-section-head {
+    max-width: 840px;
+    /* 标题区最大宽度 */
+    margin-bottom: 34px;
+    /* 标题区和内容之间的距离 */
+    padding-bottom: 24px;
+    /* 标题区底部留白 */
+    border-bottom: 1px solid var(--contact-line);
+    /* 标题区底部分割线 */
+}
+
+.contact-section-title {
+    margin: 0;
+    /* 清除标题默认外边距 */
+    color: var(--contact-blue);
+    /* 标题使用品牌深蓝色 */
+    font-size: clamp(30px, 3vw, 44px);
+    /* 响应式模块标题字号 */
+    line-height: 1.18;
+    /* 模块标题行高 */
+    font-weight: 850;
+    /* 模块标题加粗 */
+    letter-spacing: -0.03em;
+    /* 模块标题字距略收紧 */
+}
+
+.contact-section-desc {
+    max-width: 760px;
+    /* 描述文字最大宽度 */
+    margin: 14px 0 0;
+    /* 描述文字和标题之间的距离 */
+    color: var(--contact-text-sub);
+    /* 描述文字使用次级颜色 */
+    font-size: 16px;
+    /* 描述文字字号 */
+    line-height: 1.7;
+    /* 描述文字行高 */
+}
+
+
+/* =========================================================
+   5. 支持内容模块
+========================================================= */
+
+.contact-support-section {
+    background: #ffffff;
+    /* 支持内容区使用白色背景 */
+}
+
+.contact-support-grid {
+    display: grid;
+    /* 使用网格布局 */
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    /* 桌面端三列 */
+    border-top: 1px solid var(--contact-line);
+    /* 网格顶部边框 */
+    border-left: 1px solid var(--contact-line);
+    /* 网格左侧边框 */
+    background: #ffffff;
+    /* 网格背景白色 */
+}
+
+.contact-support-item {
+    position: relative;
+    /* 用于左侧荧光线定位 */
+    min-height: 132px;
+    /* 每个支持项的最小高度 */
+    padding: 24px 26px 22px 30px;
+    /* 支持项内边距 */
+    border: 0;
+    /* 清除按钮默认边框 */
+    border-right: 1px solid var(--contact-line);
+    /* 每项右侧分割线 */
+    border-bottom: 1px solid var(--contact-line);
+    /* 每项底部分割线 */
+    background: #ffffff;
+    /* 默认白色背景 */
+    text-align: left;
+    /* 文字靠左 */
+    cursor: pointer;
+    /* 鼠标显示手型 */
+    transition:
+        background var(--contact-transition),
+        box-shadow var(--contact-transition);
+    /* hover 动效 */
+}
+
+.contact-support-item::before {
+    content: "";
+    /* 创建左侧荧光线 */
+    position: absolute;
+    /* 绝对定位 */
+    left: 0;
+    /* 靠左 */
+    top: 24px;
+    /* 顶部距离 */
+    width: 3px;
+    /* 荧光线宽度 */
+    height: 34px;
+    /* 默认荧光线高度 */
+    background: var(--contact-cyan);
+    /* 荧光线颜色 */
+    transition: height var(--contact-transition);
+    /* 高度变化动效 */
+}
+
+.contact-support-item:hover {
+    background: #f8fbff;
+    /* hover 时背景变浅蓝白 */
+    box-shadow: inset 0 0 0 1px rgba(9, 233, 180, 0.18);
+    /* hover 时增加荧光描边感 */
+}
+
+.contact-support-item:hover::before {
+    height: calc(100% - 48px);
+    /* hover 时左侧荧光线变长 */
+}
+
+.contact-support-item h3 {
+    margin: 0 0 8px;
+    /* 标题底部间距 */
+    color: var(--contact-blue);
+    /* 标题颜色 */
+    font-size: 18px;
+    /* 支持项标题字号 */
+    line-height: 1.3;
+    /* 支持项标题行高 */
+    font-weight: 850;
+    /* 支持项标题加粗 */
+}
+
+.contact-support-item p {
+    margin: 0;
+    /* 清除段落默认外边距 */
+    color: var(--contact-text-sub);
+    /* 支持项说明文字颜色 */
+    font-size: 14px;
+    /* 支持项说明字号 */
+    line-height: 1.65;
+    /* 支持项说明行高 */
+}
+
+
+/* =========================================================
+   6. 表单区域整体布局
+========================================================= */
+
+.contact-form-section {
+    background: var(--contact-bg-page);
+    /* 表单区使用浅灰蓝背景 */
+}
+
+.contact-form-layout {
+    display: grid;
+    /* 表单区使用左右布局 */
+    grid-template-columns: 420px minmax(0, 1fr);
+    /* 左侧说明 420px，右侧表单自适应 */
+    gap: 34px;
+    /* 左右两栏间距 */
+    align-items: start;
+    /* 两栏顶部对齐 */
+}
+
+
+/* =========================================================
+   7. 左侧填写说明
+========================================================= */
+
+.contact-guide-panel {
+    position: sticky;
+    /* 桌面端滚动时固定在顶部附近 */
+    top: 96px;
+    /* 距离浏览器顶部 96px */
+    border: 1px solid var(--contact-line);
+    /* 面板边框 */
+    background: #ffffff;
+    /* 面板背景白色 */
+}
+
+.contact-guide-head {
+    padding: 28px 30px;
+    /* 说明头部内边距 */
+    background: var(--contact-blue);
+    /* 说明头部深蓝背景 */
+    color: #ffffff;
+    /* 说明头部文字白色 */
+    border-bottom: 1px solid var(--contact-line);
+    /* 说明头部分割线 */
+}
+
+.contact-guide-head h3 {
+    margin: 0;
+    /* 清除标题默认外边距 */
+    font-size: 28px;
+    /* 左侧说明标题字号 */
+    line-height: 1.22;
+    /* 左侧说明标题行高 */
+    font-weight: 850;
+    /* 左侧说明标题加粗 */
+    letter-spacing: -0.03em;
+    /* 标题字距略收紧 */
+}
+
+.contact-guide-head p {
+    margin: 14px 0 0;
+    /* 说明文字和标题间距 */
+    color: rgba(255, 255, 255, 0.68);
+    /* 说明文字白色半透明 */
+    font-size: 15px;
+    /* 说明文字字号 */
+    line-height: 1.65;
+    /* 说明文字行高 */
+}
+
+.contact-guide-list {
+    background: #ffffff;
+    /* 说明列表背景白色 */
+}
+
+.contact-guide-item {
+    display: grid;
+    /* 单条说明使用左右结构 */
+    grid-template-columns: 70px 1fr;
+    /* 左侧编号 70px，右侧内容自适应 */
+    min-height: 118px;
+    /* 单条说明最小高度 */
+    border-bottom: 1px solid var(--contact-line);
+    /* 单条说明底部分割线 */
+}
+
+.contact-guide-number {
+    padding-top: 24px;
+    /* 编号顶部距离 */
+    border-right: 1px solid var(--contact-line);
+    /* 编号和内容之间的分割线 */
+    color: var(--contact-cyan);
+    /* 编号使用荧光青 */
+    font-size: 14px;
+    /* 编号字号 */
+    font-weight: 900;
+    /* 编号加粗 */
+    text-align: center;
+    /* 编号居中 */
+}
+
+.contact-guide-copy {
+    padding: 22px 24px;
+    /* 说明内容内边距 */
+}
+
+.contact-guide-copy h4 {
+    margin: 0 0 6px;
+    /* 小标题底部间距 */
+    color: var(--contact-blue);
+    /* 小标题深蓝色 */
+    font-size: 17px;
+    /* 小标题字号 */
+    font-weight: 850;
+    /* 小标题加粗 */
+}
+
+.contact-guide-copy p {
+    margin: 0;
+    /* 清除段落默认外边距 */
+    color: var(--contact-text-sub);
+    /* 说明内容文字颜色 */
+    font-size: 14px;
+    /* 说明内容字号 */
+    line-height: 1.65;
+    /* 说明内容行高 */
+}
+
+.contact-guide-note {
+    margin: 0;
+    /* 清除默认外边距 */
+    padding: 22px 24px;
+    /* 底部提示内边距 */
+    border-top: 1px solid var(--contact-line);
+    /* 底部提示上分割线 */
+    background: #f8fbff;
+    /* 底部提示浅蓝白背景 */
+    color: var(--contact-text-sub);
+    /* 底部提示文字颜色 */
+    font-size: 14px;
+    /* 底部提示字号 */
+    line-height: 1.65;
+    /* 底部提示行高 */
+}
+
+
+/* =========================================================
+   8. 表单面板
+========================================================= */
+
+.contact-form-panel {
+    border: 1px solid var(--contact-line);
+    /* 表单面板边框 */
+    background: #ffffff;
+    /* 表单面板背景白色 */
+}
+
+.contact-form-panel-head {
+    padding: 26px 30px;
+    /* 表单标题区域内边距 */
+    border-bottom: 1px solid var(--contact-line);
+    /* 表单标题区域底部分割线 */
+}
+
+.contact-form-panel-head h3 {
+    margin: 0;
+    /* 清除标题默认外边距 */
+    color: var(--contact-blue);
+    /* 表单标题深蓝色 */
+    font-size: 26px;
+    /* 表单标题字号 */
+    line-height: 1.25;
+    /* 表单标题行高 */
+    font-weight: 850;
+    /* 表单标题加粗 */
+    letter-spacing: -0.02em;
+    /* 表单标题字距略收紧 */
+}
+
+.contact-form {
+    padding: 30px;
+    /* 表单内部整体内边距 */
+}
+
+.contact-form-grid {
+    display: grid;
+    /* 表单使用网格布局 */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    /* 桌面端两列 */
+    gap: 18px 20px;
+    /* 行间距 18px，列间距 20px */
+}
+
+.contact-field {
+    display: grid;
+    /* 单个字段内部垂直排列 */
+    gap: 8px;
+    /* 标签和输入框之间的距离 */
+}
+
+.contact-field-full {
+    grid-column: 1 / -1;
+    /* 当前字段占满整行 */
+}
+
+.contact-field label {
+    color: #334760;
+    /* 表单标签颜色 */
+    font-size: 14px;
+    /* 表单标签字号 */
+    font-weight: 750;
+    /* 表单标签加粗 */
+}
+
+.contact-field label span {
+    color: #d92d20;
+    /* 必填星号红色 */
+    margin-left: 2px;
+    /* 星号和文字之间的距离 */
+}
+
+
+/* =========================================================
+   9. 输入框 / 下拉框 / 文本域
+========================================================= */
+
+.contact-field input,
+.contact-field select,
+.contact-field textarea {
+    width: 100%;
+    /* 表单控件宽度占满父级 */
+    min-height: 48px;
+    /* 表单控件最小高度 */
+    border: 1px solid rgba(23, 51, 104, 0.2);
+    /* 表单控件浅蓝灰边框 */
+    border-radius: var(--contact-radius);
+    /* 表单控件统一 8px 圆角 */
+    background-color: #ffffff;
+    /* 表单控件白色背景 */
+    padding: 0 13px;
+    /* 输入框左右内边距 */
+    color: var(--contact-text-main);
+    /* 输入文字颜色 */
+    font-size: 14px;
+    /* 输入文字字号 */
+    outline: none;
+    /* 去掉浏览器默认聚焦外框 */
+    transition:
+        border-color var(--contact-transition),
+        box-shadow var(--contact-transition);
+    /* 聚焦动效 */
+}
+
+.contact-field textarea {
+    min-height: 148px;
+    /* 文本域最小高度 */
+    resize: vertical;
+    /* 允许用户上下拖动调整高度 */
+    padding: 13px;
+    /* 文本域内边距 */
+    line-height: 1.7;
+    /* 文本域文字行高 */
+}
+
+.contact-field input:focus,
+.contact-field select:focus,
+.contact-field textarea:focus {
+    border-color: var(--contact-cyan);
+    /* 聚焦时边框变荧光青 */
+    box-shadow: inset 4px 0 0 var(--contact-cyan);
+    /* 聚焦时左侧出现荧光色强调线 */
+}
+
+.contact-field select {
+    appearance: none;
+    /* 隐藏标准浏览器下拉箭头 */
+    -webkit-appearance: none;
+    /* 隐藏 Chrome/Safari 下拉箭头 */
+    -moz-appearance: none;
+    /* 隐藏 Firefox 下拉箭头 */
+    padding-right: 52px;
+    /* 给自定义箭头预留右侧空间 */
+    cursor: pointer;
+    /* 下拉框鼠标显示手型 */
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.2 1.4L6 6.2L10.8 1.4' stroke='%23173368' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
+    /* 自定义深蓝色下拉箭头 */
+    background-repeat: no-repeat;
+    /* 箭头图标不重复 */
+    background-position: right 20px center;
+    /* 箭头距离右侧 20px，垂直居中 */
+    background-size: 12px 8px;
+    /* 箭头图标尺寸 */
+}
+
+.contact-field select:focus {
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.2 1.4L6 6.2L10.8 1.4' stroke='%2309e9b4' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
+    /* 聚焦时下拉箭头变荧光青 */
+}
+
+.contact-field select::-ms-expand {
+    display: none;
+    /* 兼容旧版 IE/Edge，隐藏默认箭头 */
+}
+
+
+/* =========================================================
+   10. 邮箱验证码行
+========================================================= */
+
+.contact-email-row {
+    display: grid;
+    /* 邮箱验证区域使用网格布局 */
+    grid-template-columns: minmax(260px, 1.4fr) auto minmax(180px, 0.8fr) auto;
+    /* 邮箱输入框、发送按钮、验证码输入框、验证按钮 */
+    gap: 8px;
+    /* 邮箱验证区各项间距 */
+    align-items: center;
+    /* 垂直居中 */
+}
+
+.contact-email-tip {
+    min-height: 18px;
+    /* 给提示文字预留高度，避免跳动 */
+    margin: 0;
+    /* 清除默认外边距 */
+    color: var(--contact-text-muted);
+    /* 提示文字弱化颜色 */
+    font-size: 12px;
+    /* 提示文字字号 */
+    line-height: 1.5;
+    /* 提示文字行高 */
+}
+
+.contact-mini-button {
+    min-height: 48px;
+    /* 验证码按钮高度和输入框一致 */
+    padding: 0 18px;
+    /* 验证码按钮左右内边距 */
+}
+
+
+/* =========================================================
+   11. 提交区 / 附件上传
+========================================================= */
+
+.contact-submit-row {
+    margin-top: 26px;
+    /* 提交区和表单主体之间的距离 */
+    padding-top: 24px;
+    /* 提交区顶部内边距 */
+    border-top: 1px solid var(--contact-line);
+    /* 提交区上方分割线 */
+    display: grid;
+    /* 提交区使用网格布局 */
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    /* 左侧说明、中间上传、右侧提交 */
+    align-items: start;
+    /* 顶部对齐 */
+    gap: 8px;
+    /* 三列之间的间距 */
+}
+
+.contact-submit-row>p {
+    max-width: 540px;
+    /* 附件说明最大宽度 */
+    margin: 0;
+    /* 清除默认外边距 */
+    color: var(--contact-text-sub);
+    /* 附件说明文字颜色 */
+    font-size: 13px;
+    /* 附件说明字号 */
+    line-height: 1.7;
+    /* 附件说明行高 */
+}
+
+.contact-file-area {
+    display: grid;
+    /* 上传按钮和附件列表垂直排列 */
+    gap: 8px;
+    /* 上传按钮和附件列表间距 */
+    width: fit-content;
+    /* 上传区域宽度随内容变化 */
+    min-width: 0;
+    /* 防止在 grid 中溢出 */
+    justify-self: end;
+    /* 上传区域靠右，贴近提交按钮 */
+}
+
+.contact-file-button {
+    position: relative;
+    /* 用于隐藏真实 input */
+    overflow: hidden;
+    /* 隐藏超出部分 */
+    min-height: 44px;
+    /* 上传按钮高度 */
+}
+
+.contact-file-button input {
+    position: absolute;
+    /* 让真实 input 覆盖整个按钮 */
+    inset: 0;
+    /* input 四边贴满按钮 */
+    width: 100%;
+    /* input 宽度占满按钮 */
+    height: 100%;
+    /* input 高度占满按钮 */
+    opacity: 0;
+    /* 隐藏真实 input */
+    cursor: pointer;
+    /* 鼠标显示手型 */
+}
+
+.contact-file-list {
+    display: grid;
+    /* 附件列表垂直排列 */
+    gap: 8px;
+    /* 附件项之间的间距 */
+}
+
+.contact-file-item {
+    display: grid;
+    /* 附件项内部使用网格 */
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    /* 文件名、大小、删除按钮 */
+    align-items: center;
+    /* 内容垂直居中 */
+    gap: 12px;
+    /* 附件项内部间距 */
+    min-height: 34px;
+    /* 附件项最小高度 */
+    padding: 0 10px 0 12px;
+    /* 附件项内边距 */
+    border: 1px solid var(--contact-line);
+    /* 附件项边框 */
+    border-radius: var(--contact-radius);
+    /* 附件项圆角 */
+    background: #ffffff;
+    /* 附件项白色背景 */
+    color: #40516a;
+    /* 附件项文字颜色 */
+    font-size: 12px;
+    /* 附件项文字字号 */
+}
+
+.contact-file-item span:first-child {
+    overflow: hidden;
+    /* 文件名超出时隐藏 */
+    text-overflow: ellipsis;
+    /* 文件名超出时显示省略号 */
+    white-space: nowrap;
+    /* 文件名不换行 */
+}
+
+.contact-file-item span:nth-child(2) {
+    color: var(--contact-text-muted);
+    /* 文件大小使用弱化颜色 */
+    white-space: nowrap;
+    /* 文件大小不换行 */
+}
+
+.contact-file-item button {
+    min-width: 44px;
+    /* 删除按钮最小宽度 */
+    height: 24px;
+    /* 删除按钮高度 */
+    border: 1px solid rgba(217, 45, 32, 0.24);
+    /* 删除按钮浅红边框 */
+    border-radius: var(--contact-radius);
+    /* 删除按钮圆角 */
+    background: rgba(217, 45, 32, 0.06);
+    /* 删除按钮浅红背景 */
+    color: #b42318;
+    /* 删除按钮文字红色 */
+    cursor: pointer;
+    /* 鼠标显示手型 */
+    font-size: 12px;
+    /* 删除按钮字号 */
+    font-weight: 750;
+    /* 删除按钮文字加粗 */
+    transition:
+        background var(--contact-transition),
+        border-color var(--contact-transition),
+        transform var(--contact-transition);
+    /* 删除按钮动效 */
+}
+
+.contact-file-item button:hover {
+    background: rgba(217, 45, 32, 0.12);
+    /* 删除按钮 hover 背景加深 */
+    border-color: rgba(217, 45, 32, 0.42);
+    /* 删除按钮 hover 边框加深 */
+    transform: translateY(-1px);
+    /* 删除按钮 hover 轻微上浮 */
+}
+
+
+/* =========================================================
+   12. 联系方式
+========================================================= */
+
+.contact-info-section {
+    background: #ffffff;
+    /* 联系方式区白色背景 */
+}
+
+.contact-info-layout {
+    display: grid;
+    /* 联系方式使用左右布局 */
+    grid-template-columns: minmax(0, 0.9fr) minmax(520px, 1.1fr);
+    /* 左侧信息，右侧位置 */
+    gap: 34px;
+    /* 左右区域间距 */
+}
+
+.contact-company-panel,
+.contact-map-panel {
+    border: 1px solid var(--contact-line);
+    /* 面板边框 */
+    background: #ffffff;
+    /* 面板背景白色 */
+}
+
+.contact-company-panel h3 {
+    margin: 0;
+    /* 清除标题默认外边距 */
+    padding: 28px 30px;
+    /* 公司名称区域内边距 */
+    border-bottom: 1px solid var(--contact-line);
+    /* 公司名称区域底部分割线 */
+    color: var(--contact-blue);
+    /* 公司名称深蓝色 */
+    font-size: 25px;
+    /* 公司名称字号 */
+    line-height: 1.28;
+    /* 公司名称行高 */
+    font-weight: 850;
+    /* 公司名称加粗 */
+}
+
+.contact-company-panel h3 span {
+    display: block;
+    /* 公司定位单独占一行 */
+    margin-top: 8px;
+    /* 公司定位和公司名称之间的距离 */
+    color: var(--contact-text-sub);
+    /* 公司定位文字颜色 */
+    font-size: 14px;
+    /* 公司定位字号 */
+    font-weight: 500;
+    /* 公司定位常规字重 */
+}
+
+.contact-info-row {
+    display: grid;
+    /* 每一行联系方式使用左右结构 */
+    grid-template-columns: 120px 1fr;
+    /* 左侧标签 120px，右侧内容自适应 */
+    border-bottom: 1px solid var(--contact-line);
+    /* 每行底部分割线 */
+}
+
+.contact-info-row:last-child {
+    border-bottom: 0;
+    /* 最后一行不需要底部分割线 */
+}
+
+.contact-info-row>div:first-child {
+    padding: 17px 20px;
+    /* 左侧标签内边距 */
+    border-right: 1px solid var(--contact-line);
+    /* 标签和内容之间的分割线 */
+    background: #f8fbff;
+    /* 左侧标签浅蓝白背景 */
+    color: #718095;
+    /* 左侧标签文字颜色 */
+    font-size: 14px;
+    /* 左侧标签字号 */
+    font-weight: 750;
+    /* 左侧标签加粗 */
+}
+
+.contact-info-row>div:last-child {
+    padding: 17px 20px;
+    /* 右侧内容内边距 */
+    color: #263a55;
+    /* 右侧内容文字颜色 */
+    font-size: 15px;
+    /* 右侧内容字号 */
+    font-weight: 700;
+    /* 右侧内容加粗 */
+}
+
+.contact-map-panel {
+    min-height: 430px;
+    /* 位置面板最小高度 */
+    display: grid;
+    /* 用 grid 居中内部卡片 */
+    place-items: center;
+    /* 内部卡片水平垂直居中 */
+    padding: 36px;
+    /* 位置面板内边距 */
+    background:
+        linear-gradient(135deg, rgba(23, 51, 104, 0.06), rgba(9, 233, 180, 0.08)),
+        linear-gradient(rgba(23, 51, 104, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(23, 51, 104, 0.08) 1px, transparent 1px);
+    /* 位置面板网格背景 */
+    background-size: auto, 40px 40px, 40px 40px;
+    /* 网格背景尺寸 */
+}
+
+.contact-map-card {
+    width: min(420px, 100%);
+    /* 地图地址卡片最大宽度 */
+    border: 1px solid var(--contact-line);
+    /* 地图地址卡片边框 */
+    background: rgba(255, 255, 255, 0.92);
+    /* 地图地址卡片白色半透明背景 */
+}
+
+.contact-map-link {
+  min-height: 44px; /* 按钮最小高度 */
+  margin: 0 24px 24px; /* 按钮和地址文字之间留出距离 */
+  padding: 0 22px; /* 按钮左右内边距 */
+  border-radius: var(--contact-radius); /* 按钮统一 8px 圆角 */
+  border: 1px solid rgba(23, 51, 104, 0.42); /* 默认深蓝半透明边框 */
+  background: rgba(255, 255, 255, 0.72); /* 默认白色半透明背景 */
+  color: var(--contact-blue); /* 默认深蓝文字 */
+  display: inline-flex; /* 让按钮内容居中 */
+  align-items: center; /* 按钮文字垂直居中 */
+  justify-content: center; /* 按钮文字水平居中 */
+  font-size: 14px; /* 按钮文字字号 */
+  font-weight: 850; /* 按钮文字加粗 */
+  line-height: 1; /* 按钮文字行高 */
+  text-decoration: none; /* 去掉链接下划线 */
+  white-space: nowrap; /* 按钮文字不换行 */
+  transition:
+    background var(--contact-transition),
+    color var(--contact-transition),
+    border-color var(--contact-transition),
+    transform var(--contact-transition); /* 按钮 hover 动效 */
+}
+
+.contact-map-link:hover {
+  background: var(--contact-cyan); /* 鼠标悬停时变荧光青底 */
+  color: var(--contact-blue); /* 鼠标悬停时保持深蓝文字 */
+  border-color: var(--contact-cyan); /* 鼠标悬停时边框变荧光青 */
+  transform: translateY(-1px); /* 鼠标悬停时轻微上浮 */
+}
+
+.contact-map-panel h3 {
+    margin: 0;
+    /* 清除标题默认外边距 */
+    padding: 20px 24px;
+    /* 位置标题内边距 */
+    border-bottom: 1px solid var(--contact-line);
+    /* 位置标题底部分割线 */
+    color: var(--contact-blue);
+    /* 位置标题深蓝色 */
+    font-size: 19px;
+    /* 位置标题字号 */
+    font-weight: 850;
+    /* 位置标题加粗 */
+}
+
+.contact-map-panel p {
+    margin: 0;
+    /* 清除段落默认外边距 */
+    padding: 22px 24px;
+    /* 地址文字内边距 */
+    color: #263a55;
+    /* 地址文字颜色 */
+    font-size: 14px;
+    /* 地址文字字号 */
+    line-height: 1.7;
+    /* 地址文字行高 */
+    font-weight: 700;
+    /* 地址文字加粗 */
+}
+
+
+/* =========================================================
+   13. 底部 CTA Banner
+========================================================= */
+
+.contact-bottom-cta {
+    width: 100%;
+    /* 底部 CTA 宽度占满整屏 */
+    padding: 0;
+    /* 清除外层内边距 */
+    background: #ffffff;
+    /* 外层背景白色 */
+}
+
+.contact-bottom-cta-inner {
+    width: 100%;
+    /* 底部 CTA 内层宽度占满整屏 */
+    min-height: 260px;
+    /* 底部 CTA 合理高度 */
+    padding: 64px max(28px, calc((100vw - var(--contact-content-width)) / 2 + 28px));
+    /* 内容与整站宽度对齐 */
+    display: grid;
+    /* 使用左右布局 */
+    grid-template-columns: minmax(0, 1fr) auto;
+    /* 左侧文字自适应，右侧按钮按内容宽度 */
+    gap: 34px;
+    /* 左右内容间距 */
+    align-items: center;
+    /* 内容垂直居中 */
+    color: #ffffff;
+    /* 底部 CTA 默认文字白色 */
+    background:
+        radial-gradient(circle at 86% 16%, rgba(9, 233, 180, 0.2), transparent 32%),
+        linear-gradient(135deg, var(--contact-blue), #0d2554);
+    /* 底部 CTA 深蓝渐变背景 */
+}
+
+.contact-bottom-cta h2 {
+    max-width: 760px;
+    /* 底部标题最大宽度 */
+    margin: 0;
+    /* 清除标题默认外边距 */
+    color: #ffffff;
+    /* 底部标题白色 */
+    font-size: clamp(28px, 3vw, 40px);
+    /* 底部标题响应式字号 */
+    line-height: 1.2;
+    /* 底部标题行高 */
+    font-weight: 850;
+    /* 底部标题加粗 */
+    letter-spacing: -0.03em;
+    /* 底部标题字距略收紧 */
+}
+
+.contact-bottom-cta p {
+    max-width: 680px;
+    /* 底部描述最大宽度 */
+    margin: 12px 0 0;
+    /* 描述和标题之间的距离 */
+    color: rgba(255, 255, 255, 0.68);
+    /* 底部描述白色半透明 */
+    font-size: 16px;
+    /* 底部描述字号 */
+    line-height: 1.7;
+    /* 底部描述行高 */
+}
+
+.contact-bottom-actions {
+    display: flex;
+    /* 底部按钮横向排列 */
+    flex-wrap: wrap;
+    /* 小屏幕允许换行 */
+    justify-content: flex-end;
+    /* 桌面端按钮靠右 */
+    gap: 12px;
+    /* 按钮之间的距离 */
+}
+
+.contact-bottom-cta .contact-button {
+    border-color: rgba(255, 255, 255, 0.52);
+    /* 底部深色背景按钮白色半透明边框 */
+    background: rgba(255, 255, 255, 0.08);
+    /* 底部深色背景按钮透明白底 */
+    color: #ffffff;
+    /* 底部按钮默认白色文字 */
+}
+
+.contact-bottom-cta .contact-button:hover {
+    background: var(--contact-cyan);
+    /* 底部按钮 hover 荧光青背景 */
+    color: var(--contact-blue);
+    /* 底部按钮 hover 深蓝文字 */
+    border-color: var(--contact-cyan);
+    /* 底部按钮 hover 荧光青边框 */
+}
+
+
+/* =========================================================
+   14. 响应式适配
+========================================================= */
+
+@media (max-width: 1180px) {
+
+    .contact-form-layout,
+    .contact-info-layout {
+        grid-template-columns: 1fr;
+        /* 中等屏幕下左右布局改为单列 */
+    }
+
+    .contact-guide-panel {
+        position: static;
+        /* 中等屏幕取消左侧说明吸顶 */
+    }
+
+    .contact-support-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        /* 中等屏幕支持内容改为两列 */
+    }
+
+    .contact-bottom-cta-inner {
+        min-height: 280px;
+        /* 中等屏幕底部 CTA 稍微加高 */
+        grid-template-columns: 1fr;
+        /* 中等屏幕底部 CTA 改为单列 */
+    }
+
+    .contact-bottom-actions {
+        justify-content: flex-start;
+        /* 中等屏幕按钮靠左 */
+    }
+}
+
+@media (max-width: 900px) {
+    .contact-email-row {
+        grid-template-columns: 1fr;
+        /* 小屏幕邮箱验证码改为单列 */
+    }
+
+    .contact-submit-row {
+        grid-template-columns: 1fr;
+        /* 小屏幕提交区改为单列 */
+    }
+
+    .contact-file-area {
+        justify-self: start;
+        /* 小屏幕上传附件靠左 */
+    }
+}
+
+@media (max-width: 760px) {
+    .contact-hero-inner {
+        min-height: 340px;
+        /* 手机端 Banner 高度 */
+        padding: 58px 18px 56px;
+        /* 手机端 Banner 内边距 */
+    }
+
+    .contact-hero-title {
+        font-size: 34px;
+        /* 手机端标题字号 */
+    }
+
+    .contact-section {
+        padding: 62px 18px;
+        /* 手机端通用区块内边距 */
+    }
+
+    .contact-section-head {
+        margin-bottom: 28px;
+        /* 手机端标题区底部间距 */
+    }
+
+    .contact-support-grid,
+    .contact-form-grid {
+        grid-template-columns: 1fr;
+        /* 手机端支持内容和表单都改为单列 */
+    }
+
+    .contact-guide-item,
+    .contact-info-row {
+        grid-template-columns: 1fr;
+        /* 手机端说明项和联系方式行改为单列 */
+    }
+
+    .contact-guide-number,
+    .contact-info-row>div:first-child {
+        border-right: 0;
+        /* 手机端去掉右侧分割线 */
+    }
+
+    .contact-guide-number {
+        padding: 20px 24px 0;
+        /* 手机端编号内边距 */
+        text-align: left;
+        /* 手机端编号靠左 */
+    }
+
+    .contact-form,
+    .contact-form-panel-head,
+    .contact-guide-head,
+    .contact-company-panel h3 {
+        padding: 24px;
+        /* 手机端多个面板统一内边距 */
+    }
+
+    .contact-file-item {
+        grid-template-columns: minmax(0, 1fr) auto;
+        /* 手机端附件项改为两列 */
+    }
+
+    .contact-file-item button {
+        grid-column: 1 / -1;
+        /* 手机端删除按钮独占一行 */
+        width: 72px;
+        /* 手机端删除按钮宽度 */
+    }
+
+    .contact-info-row>div:first-child {
+        padding-bottom: 8px;
+        /* 手机端联系方式标签底部留白减少 */
+    }
+
+    .contact-info-row>div:last-child {
+        padding-top: 8px;
+        /* 手机端联系方式内容顶部留白减少 */
+    }
+
+    .contact-map-panel {
+        min-height: 320px;
+        /* 手机端位置模块高度 */
+        padding: 24px;
+        /* 手机端位置模块内边距 */
+    }
+
+    .contact-bottom-cta-inner {
+        min-height: 300px;
+        /* 手机端底部 CTA 高度 */
+        padding: 48px 18px;
+        /* 手机端底部 CTA 内边距 */
+    }
+}
+
+/* =========================================================
+   15. 高德地图真实底图
+   说明：
+   1. 这里控制 AmapBlock.tsx 的视觉样式
+   2. 地图真实内容由高德 JS API 渲染
+   3. 右下角地址卡片用于强调公司位置
+========================================================= */
+
+.contact-amap-shell {
+  position: relative; /* 让地址卡片和状态提示可以覆盖在地图上 */
+  width: 100%; /* 地图外壳宽度占满父级 */
+  min-height: 430px; /* 地图最小高度 */
+  overflow: hidden; /* 防止地图内容溢出 */
+  background: #f5f8fc; /* 地图加载前的浅灰蓝背景 */
+}
+
+.contact-amap-container {
+  width: 100%; /* 高德地图容器宽度占满 */
+  min-height: 430px; /* 高德地图容器高度 */
+}
+
+.contact-amap-status {
+  position: absolute; /* 状态提示覆盖在地图上 */
+  left: 24px; /* 状态提示距离左侧 */
+  top: 24px; /* 状态提示距离顶部 */
+  z-index: 3; /* 状态提示在地图上方 */
+  padding: 10px 14px; /* 状态提示内边距 */
+  border: 1px solid var(--contact-line); /* 状态提示边框 */
+  border-radius: var(--contact-radius); /* 状态提示圆角 */
+  background: rgba(255, 255, 255, 0.92); /* 状态提示白色半透明背景 */
+  color: var(--contact-blue); /* 状态提示文字颜色 */
+  font-size: 13px; /* 状态提示字号 */
+  font-weight: 750; /* 状态提示文字加粗 */
+}
+
+.contact-amap-status-error {
+  color: #b42318; /* 错误状态使用红色文字 */
+}
+
+@media (max-width: 760px) {
+  .contact-amap-shell {
+    min-height: 420px; /* 手机端地图高度 */
+  }
+
+  .contact-amap-container {
+    min-height: 420px; /* 手机端地图容器高度 */
+  }
+
+  .contact-amap-card {
+    left: 18px; /* 手机端地址卡片靠左 */
+    right: 18px; /* 手机端地址卡片靠右 */
+    bottom: 18px; /* 手机端地址卡片距离底部 */
+    width: auto; /* 手机端地址卡片宽度自动 */
+  }
+} 
+/* =========================================================
+   高德地图区域样式
+   作用：
+   1. 让地图铺满整个右侧区域
+   2. 保持和左侧信息卡片同级视觉高度
+   3. 只保留必要的加载提示
+========================================================= */
+
+.contact-map-panel {
+  height: 100%; /* 地图模块高度跟随父容器 */
+}
+
+.contact-amap-shell {
+  position: relative; /* 让加载状态可以覆盖在地图上 */
+  width: 100%; /* 宽度占满右侧容器 */
+  height: 100%; /* 高度占满右侧容器 */
+  min-height: 520px; /* 地图最小高度，避免太矮 */
+  overflow: hidden; /* 防止地图内容溢出 */
+  border: 1px solid var(--contact-line); /* 保持和页面整体边框风格一致 */
+  background: #f7fafc; /* 地图未加载完成前的浅背景 */
+}
+
+.contact-amap-container {
+  width: 100%; /* 地图容器宽度占满 */
+  height: 100%; /* 地图容器高度占满 */
+  min-height: 520px; /* 地图容器最小高度 */
+}
+
+.contact-amap-status {
+  position: absolute; /* 覆盖在地图上 */
+  left: 20px; /* 距离左边 20px */
+  top: 20px; /* 距离顶部 20px */
+  z-index: 3; /* 保证在地图上层 */
+  padding: 10px 14px; /* 内边距 */
+  border: 1px solid var(--contact-line); /* 边框 */
+  border-radius: 8px; /* 统一 8px 圆角 */
+  background: rgba(255, 255, 255, 0.92); /* 半透明白底 */
+  color: var(--contact-blue); /* 深蓝色文字 */
+  font-size: 13px; /* 字号 */
+  font-weight: 700; /* 字重 */
+}
+
+.contact-amap-status-error {
+  color: #b42318; /* 错误状态使用红色 */
+}
+
+/* =========================================================
+   移动端适配
+========================================================= */
+@media (max-width: 768px) {
+  .contact-amap-shell {
+    min-height: 360px; /* 手机端地图高度降低一点 */
+  }
+
+  .contact-amap-container {
+    min-height: 360px; /* 手机端地图容器同步降低 */
+  }
+} 
+
+/* =========================================================
+   高德地图外层背景最终清理
+   作用：
+   1. 去掉右侧地图外面的浅蓝网格底
+   2. 去掉地图外层 padding
+   3. 让真实高德地图直接铺满右侧区域
+   4. 避免出现“地图外面还有一圈假底图”的问题
+========================================================= */
+
+.contact-map-panel {
+  height: 100%; /* 让地图模块高度跟随右侧区域 */
+  min-height: 520px; /* 保证地图区域不会太矮 */
+  padding: 0 !important; /* 去掉旧版地图外层内边距 */
+  display: block !important; /* 取消旧版 grid 居中布局 */
+  place-items: initial !important; /* 取消旧版 place-items 居中效果 */
+  background: transparent !important; /* 去掉浅蓝网格背景 */
+  background-image: none !important; /* 强制去掉旧版网格背景图 */
+  background-size: auto !important; /* 重置旧版背景尺寸 */
+  border: 1px solid var(--contact-line); /* 保留和左侧信息卡一样的细边框 */
+  overflow: hidden; /* 防止地图内容溢出边框 */
+}
+
+.contact-amap-shell {
+  width: 100%; /* 地图外壳宽度占满右侧区域 */
+  height: 100%; /* 地图外壳高度占满右侧区域 */
+  min-height: 520px; /* 地图外壳最小高度 */
+  padding: 0 !important; /* 去掉外壳内边距 */
+  margin: 0 !important; /* 去掉外壳外边距 */
+  border: 0 !important; /* 避免出现双重边框 */
+  background: #ffffff !important; /* 地图加载前使用白色背景 */
+  background-image: none !important; /* 去掉外壳可能残留的背景图 */
+  overflow: hidden; /* 防止地图溢出 */
+}
+
+.contact-amap-container {
+  width: 100%; /* 高德地图容器宽度占满 */
+  height: 100%; /* 高德地图容器高度占满 */
+  min-height: 520px; /* 高德地图容器最小高度 */
+  padding: 0 !important; /* 去掉地图容器内边距 */
+  margin: 0 !important; /* 去掉地图容器外边距 */
+  background: #ffffff !important; /* 地图未加载时显示白色 */
+}
+
+/* =========================================================
+   联系方式区域地图高度最终调整
+   说明：
+   1. 当前地图高度控制在 460px
+   2. 和左侧联系方式卡片视觉高度更接近
+   3. 避免右侧地图过高，导致页面比例失衡
+========================================================= */
+
+.contact-map-panel {
+  height: 420px !important; /* 地图外层固定高度 */
+  min-height: 420px !important; /* 覆盖之前 520px 的最小高度 */
+}
+
+.contact-amap-shell {
+  height: 420px !important; /* 高德地图外壳高度 */
+  min-height: 420px !important; /* 覆盖之前的最小高度 */
+}
+
+.contact-amap-container {
+  height: 462px !important; /* 高德地图真实容器高度 */ 
+  min-height: 420px !important; /* 覆盖之前的最小高度 */
+}
+
+/* =========================================================
+   联系表单提交成功弹窗
+   说明：
+   1. 用户提交需求后显示“提交成功”
+   2. 当前前端测试阶段在 PDF 预览触发后显示
+   3. 后续接入后台后，应在接口返回成功后显示
+========================================================= */
+
+.contact-success-modal {
+  position: fixed; /* 固定在浏览器窗口上 */
+  inset: 0; /* 覆盖整个窗口 */
+  z-index: 9999; /* 保证弹窗位于页面最上层 */
+  display: grid; /* 使用 grid 实现居中 */
+  place-items: center; /* 水平和垂直居中 */
+  padding: 24px; /* 小屏幕时留出边距 */
+  background: rgba(8, 29, 67, 0.46); /* 深蓝半透明遮罩 */
+  backdrop-filter: blur(8px); /* 背景模糊 */
+}
+
+.contact-success-card {
+  width: min(420px, 100%); /* 弹窗最大宽度 */
+  border: 1px solid rgba(23, 51, 104, 0.16); /* 弹窗边框 */
+  border-radius: 8px; /* 弹窗圆角 */
+  background: #ffffff; /* 弹窗白色背景 */
+  padding: 34px 32px 30px; /* 弹窗内边距 */
+  text-align: center; /* 内容居中 */
+  box-shadow: 0 28px 80px rgba(8, 29, 67, 0.22); /* 弹窗阴影 */
+}
+
+.contact-success-icon {
+  width: 56px; /* 成功图标宽度 */
+  height: 56px; /* 成功图标高度 */
+  margin: 0 auto 18px; /* 图标居中并和标题拉开距离 */
+  border-radius: 999px; /* 圆形图标 */
+  background: var(--contact-cyan); /* 荧光青背景 */
+  color: var(--contact-blue); /* 深蓝色对勾 */
+  display: flex; /* 内部居中 */
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+  font-size: 28px; /* 对勾字号 */
+  font-weight: 900; /* 对勾加粗 */
+}
+
+.contact-success-card h3 {
+  margin: 0; /* 清除默认外边距 */
+  color: var(--contact-blue); /* 标题深蓝色 */
+  font-size: 24px; /* 标题字号 */
+  line-height: 1.25; /* 标题行高 */
+  font-weight: 850; /* 标题加粗 */
+}
+
+.contact-success-card p {
+  margin: 14px 0 0; /* 段落顶部间距 */
+  color: var(--contact-text-sub); /* 正文说明颜色 */
+  font-size: 14px; /* 正文字号 */
+  line-height: 1.7; /* 正文行高 */
+}
+
+.contact-success-tip {
+  color: var(--contact-text-muted) !important; /* PDF 提示弱化颜色 */
+  font-size: 13px !important; /* PDF 提示字号 */
+}
+
+.contact-success-button {
+  min-height: 44px; /* 按钮高度 */
+  margin-top: 24px; /* 按钮和文字间距 */
+  padding: 0 26px; /* 按钮左右内边距 */
+  border: 1px solid var(--contact-blue); /* 默认深蓝边框 */
+  border-radius: 8px; /* 统一 8px 圆角 */
+  background: #ffffff; /* 默认白底 */
+  color: var(--contact-blue); /* 默认深蓝文字 */
+  cursor: pointer; /* 鼠标手型 */
+  font-size: 14px; /* 按钮字号 */
+  font-weight: 850; /* 按钮加粗 */
+  transition:
+    background var(--contact-transition),
+    color var(--contact-transition),
+    border-color var(--contact-transition),
+    transform var(--contact-transition); /* 按钮动效 */
+}
+
+.contact-success-button:hover {
+  background: var(--contact-cyan); /* 悬停荧光青背景 */
+  color: var(--contact-blue); /* 悬停深蓝文字 */
+  border-color: var(--contact-cyan); /* 悬停荧光青边框 */
+  transform: translateY(-1px); /* 悬停轻微上浮 */
+} 

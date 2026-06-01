@@ -1191,8 +1191,22 @@ const navigationItems: NavigationItem[] = [
 
   {
     key: "contact",
-    label: t("联系我们", "Contact Us", "Contáctenos", "Contactez-nous", "문의하기", "Свяжитесь с нами"),
-    href: anchorPath("contact"),
+    label: t(
+      "联系我们",
+      "Contact Us",
+      "Contáctenos",
+      "Contactez-nous",
+      "문의하기",
+      "Свяжитесь с нами"
+    ),
+    href: t(
+      "/contact",
+      "/en/contact",
+      "/es/contact",
+      "/fr/contact",
+      "/ko/contact",
+      "/ru/contact" 
+    ),
     order: 6,
     enabled: true,
     dropdownType: "none",
