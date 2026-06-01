@@ -67,7 +67,7 @@ export type NavigationKey =
   | "applications"
   | "resources"
   | "about"
-  | "contact";
+  | "contact"
 
 /* ================================
    下拉菜单类型
@@ -162,6 +162,18 @@ export type NavigationItem = {
   dropdownType: DropdownType; // 是否有下拉
   megaDropdown?: MegaDropdown; // Mega 下拉数据
   mobileChildren?: MobileNavChild[]; // 手机端二级导航
+
+  /*
+     指定哪些语言显示这一项
+
+     说明：
+     1. 不写 visibleLocales 时，默认所有语言都显示
+     2. 写了 visibleLocales 时，只在指定语言显示
+     3. 用于实现：
+        - 中文站只显示「联系我们」
+        - 外语站显示「Contact Us」和「Become a Distributor」
+  */
+  visibleLocales?: string[];
 };
 
 /* ================================
@@ -1193,11 +1205,11 @@ const navigationItems: NavigationItem[] = [
     key: "contact",
     label: t(
       "联系我们",
-      "Contact Us",
-      "Contáctenos",
-      "Contactez-nous",
-      "문의하기",
-      "Свяжитесь с нами"
+      "Contact & Partnership",
+      "Contacto y cooperación",
+      "Contact et partenariat",
+      "문의 및 협력",
+      "Контакты и сотрудничество"
     ),
     href: t(
       "/contact",
@@ -1205,7 +1217,7 @@ const navigationItems: NavigationItem[] = [
       "/es/contact",
       "/fr/contact",
       "/ko/contact",
-      "/ru/contact" 
+      "/ru/contact"
     ),
     order: 6,
     enabled: true,
@@ -1215,11 +1227,39 @@ const navigationItems: NavigationItem[] = [
 
 /* ================================
    获取当前可显示导航
+
+   说明：
+   1. 当前一级导航统一显示「联系与合作」
+   2. 中文站：联系与合作
+   3. 外语站：Contact & Partnership
+   4. 不再把 Become a Distributor 单独作为一级导航
+================================ */
+/* ================================
+   获取当前可显示导航
 ================================ */
 
-export function getVisibleNavigationItems() {
+export function getVisibleNavigationItems(locale = "zh-CN") {
   return navigationItems
     .filter((item) => item.enabled)
+    .filter((item) => {
+      /*
+         没有设置 visibleLocales：
+         所有语言都显示
+      */
+      if (!item.visibleLocales) {
+        return true;
+      }
+
+      /*
+         设置了 visibleLocales：
+         只在指定语言显示
+
+         示例：
+         distributors 只在 en / es / fr / ko / ru 显示，
+         中文 zh-CN 不显示。
+      */
+      return item.visibleLocales.includes(locale);
+    })
     .sort((a, b) => a.order - b.order);
 }
 

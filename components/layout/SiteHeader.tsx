@@ -110,8 +110,11 @@ export default function SiteHeader() {
   );
 
   const headerText = headerI18n[currentLocale]; // 获取当前语言下的 Header 文案
-
-  const navigationItems = useMemo(() => getVisibleNavigationItems(), []); // 获取可显示导航，并缓存结果
+  
+const navigationItems = useMemo(
+  () => getVisibleNavigationItems(currentLocale),
+  [currentLocale],
+); // 根据当前语言获取可显示导航，并缓存结果
 
   const [isScrolled, setIsScrolled] = useState(false); // 控制 Top 栏是否进入滚动后的白底状态
 
