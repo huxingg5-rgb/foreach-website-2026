@@ -46,3 +46,11 @@ export type {
 
 /* 导出中文联系我们页面数据 */
 export { contactZhData } from "./contact.zh"; 
+
+export {
+  CONTACT_INTL_LOCALES,
+  getContactIntlData,
+  isContactIntlLocale,
+} from "./contact.intl";
+
+export type { ContactIntlLocaleCode } from "./contact.intl"; 

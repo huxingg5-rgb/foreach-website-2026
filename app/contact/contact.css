@@ -1617,3 +1617,1877 @@
   border-color: var(--contact-cyan); /* 悬停荧光青边框 */
   transform: translateY(-1px); /* 悬停轻微上浮 */
 } 
+
+/* =========================================================
+   经销商合作页面｜/en/contact/distributor
+   文件位置：
+   app/contact/contact.css
+
+   说明：
+   1. 当前页面走英文路径，但内容先按中文搭建
+   2. 所有类名使用 distributor- 前缀，避免影响原联系我们页面
+   3. Banner 图片路径：
+      public/images/contact-cooperation/distributor-hero.webp
+   4. 合作伙伴背景图路径：
+      public/images/contact-cooperation/partner-bg.webp
+   5. 产品图片路径：
+      public/images/contact-cooperation/distributor-products/
+========================================================= */
+
+.distributor-page {
+  --distributor-blue: #173368;
+  --distributor-blue-deep: #061a3a;
+  --distributor-cyan: #09e9b4;
+  --distributor-bg: #f4f7fb;
+  --distributor-text: #10213f;
+  --distributor-sub: #5d6d86;
+  --distributor-muted: #8390a4;
+  --distributor-line: rgba(23, 51, 104, 0.14);
+  --distributor-line-light: rgba(23, 51, 104, 0.09);
+  --distributor-width: 1280px;
+
+  color: var(--distributor-text);
+  background: var(--distributor-bg);
+}
+
+/* =========================================================
+   01. 通用版心与标题
+========================================================= */
+
+.distributor-section {
+  padding: 96px 0;
+}
+
+.distributor-section-inner {
+  width: min(var(--distributor-width), calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.distributor-section-head {
+  max-width: 860px;
+  margin-bottom: 42px;
+}
+
+.distributor-section-head h2 {
+  color: var(--distributor-blue);
+  font-size: clamp(34px, 3.5vw, 52px);
+  line-height: 1.14;
+  letter-spacing: -0.045em;
+}
+
+.distributor-section-head p {
+  margin-top: 16px;
+  color: var(--distributor-sub);
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.distributor-section-head-light h2 {
+  color: #fff;
+}
+
+.distributor-section-head-light p {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+/* =========================================================
+   02. 通用按钮
+========================================================= */
+
+.distributor-btn {
+  min-width: 148px;
+  min-height: 48px;
+  padding: 0 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 900;
+  white-space: nowrap;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.distributor-btn-ghost {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.36);
+}
+
+.distributor-btn-ghost:hover {
+  color: var(--distributor-blue-deep);
+  background: var(--distributor-cyan);
+  border-color: var(--distributor-cyan);
+  transform: translateY(-2px);
+}
+
+.distributor-btn-main {
+  color: var(--distributor-blue);
+  background: #fff;
+  border: 1px solid #fff;
+}
+
+.distributor-btn-main:hover {
+  color: var(--distributor-blue-deep);
+  background: var(--distributor-cyan);
+  border-color: var(--distributor-cyan);
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   03. 顶部 Banner
+========================================================= */
+
+.distributor-hero {
+  position: relative;
+  min-height: 720px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: #fff;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(6, 26, 58, 0.9) 0%,
+      rgba(23, 51, 104, 0.76) 42%,
+      rgba(23, 51, 104, 0.26) 100%
+    ),
+    url("/images/contact-cooperation/distributor-hero.webp") center / cover no-repeat;
+}
+
+.distributor-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 78% 24%, rgba(9, 233, 180, 0.12), transparent 26%),
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: auto, 56px 56px, 56px 56px;
+  opacity: 0.7;
+}
+
+.distributor-hero-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.distributor-hero-content {
+  max-width: 780px;
+}
+
+.distributor-hero-content h1 {
+  font-size: clamp(48px, 5vw, 78px);
+  line-height: 1.04;
+  letter-spacing: -0.06em;
+  font-weight: 900;
+}
+
+.distributor-hero-content h1 span {
+  color: var(--distributor-cyan);
+}
+
+.distributor-hero-content p {
+  max-width: 680px;
+  margin-top: 24px;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 17px;
+  line-height: 1.88;
+}
+
+.distributor-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+/* =========================================================
+   04. 合作优势 / 合作伙伴通用卡片
+========================================================= */
+
+.distributor-advantage-section,
+.distributor-partner-section {
+  background: #fff;
+}
+
+.distributor-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.distributor-card-grid-border {
+  border-top: 1px solid var(--distributor-line);
+  border-left: 1px solid var(--distributor-line);
+}
+
+.distributor-info-card {
+  position: relative;
+  min-height: 260px;
+  padding: 30px;
+  overflow: hidden;
+  background: #fff;
+  border-right: 1px solid var(--distributor-line);
+  border-bottom: 1px solid var(--distributor-line);
+  transition:
+    transform 0.36s ease,
+    border-color 0.36s ease,
+    box-shadow 0.36s ease;
+}
+
+.distributor-info-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--distributor-blue);
+  opacity: 0;
+  transition: opacity 0.42s ease;
+  pointer-events: none;
+}
+
+.distributor-info-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(9, 233, 180, 0.26);
+  box-shadow: 0 18px 42px rgba(6, 26, 58, 0.14);
+}
+
+.distributor-info-card:hover::before {
+  opacity: 1;
+}
+
+.distributor-card-index,
+.distributor-info-card h3,
+.distributor-info-card p {
+  position: relative;
+  z-index: 1;
+  transition:
+    color 0.36s ease,
+    opacity 0.36s ease,
+    transform 0.36s ease;
+}
+
+.distributor-card-index {
+  color: #b8c1cc;
+  font-size: 56px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.distributor-info-card h3 {
+  margin-top: 28px;
+  color: var(--distributor-blue);
+  font-size: 22px;
+  line-height: 1.32;
+  letter-spacing: -0.025em;
+}
+
+.distributor-info-card p {
+  margin-top: 12px;
+  color: var(--distributor-sub);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.distributor-info-card:hover .distributor-card-index {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.distributor-info-card:hover h3 {
+  color: var(--distributor-cyan);
+  transform: translateY(-2px);
+}
+
+.distributor-info-card:hover p {
+  color: rgba(255, 255, 255, 0.74);
+}
+
+/* =========================================================
+   05. 合作产品
+========================================================= */
+
+.distributor-products-section {
+  background: linear-gradient(180deg, #f4f7fb 0%, #fff 100%);
+}
+
+.distributor-product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.distributor-product-card {
+  min-height: 470px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--distributor-line);
+  transition:
+    transform 0.28s ease,
+    border-color 0.28s ease,
+    background 0.28s ease,
+    box-shadow 0.28s ease;
+}
+
+.distributor-product-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(9, 233, 180, 0.38);
+  background: #fbfdff;
+  box-shadow: 0 16px 36px rgba(6, 26, 58, 0.08);
+}
+
+.distributor-product-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(23, 51, 104, 0.1);
+  background: #eef3f8;
+}
+
+.distributor-product-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.36s ease;
+}
+
+.distributor-product-card:hover .distributor-product-image img {
+  transform: scale(1.04);
+}
+
+.distributor-product-content {
+  padding: 24px;
+}
+
+.distributor-product-content h3 {
+  color: var(--distributor-blue);
+  font-size: 22px;
+  line-height: 1.32;
+  letter-spacing: -0.025em;
+}
+
+.distributor-product-content p {
+  margin-top: 10px;
+  color: var(--distributor-sub);
+  font-size: 14px;
+  line-height: 1.82;
+}
+
+.distributor-product-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.distributor-product-tags span {
+  padding: 6px 10px;
+  color: var(--distributor-blue);
+  background: rgba(23, 51, 104, 0.06);
+  border: 1px solid rgba(23, 51, 104, 0.08);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   06. 合作伙伴类型底图
+========================================================= */
+
+.distributor-partner-section {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+
+.distributor-partner-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.96) 0%,
+      rgba(255, 255, 255, 0.88) 48%,
+      rgba(244, 247, 251, 0.78) 100%
+    ),
+    url("/images/contact-cooperation/partner-bg.webp") center / cover no-repeat;
+  pointer-events: none;
+}
+
+.distributor-partner-section .distributor-section-inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================================================
+   07. 合作流程
+========================================================= */
+
+.distributor-process-section {
+  color: #fff;
+  background:
+    radial-gradient(circle at 88% 18%, rgba(9, 233, 180, 0.18), transparent 30%),
+    var(--distributor-blue);
+}
+
+.distributor-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  border-left: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.distributor-process-card {
+  min-height: 280px;
+  padding: 34px 32px;
+  background: rgba(255, 255, 255, 0.04);
+  border-right: 1px solid rgba(255, 255, 255, 0.16);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  transition:
+    background 0.28s ease,
+    transform 0.28s ease;
+}
+
+.distributor-process-card:hover {
+  background: rgba(255, 255, 255, 0.07);
+  transform: translateY(-3px);
+}
+
+.distributor-process-index {
+  color: rgba(255, 255, 255, 0.24);
+  font-size: 56px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: -0.06em;
+}
+
+.distributor-process-dot {
+  width: 16px;
+  height: 16px;
+  margin: 24px 0 34px;
+  background: rgba(255, 255, 255, 0.32);
+  border: 5px solid rgba(6, 26, 58, 0.96);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.34);
+}
+
+.distributor-process-card h3 {
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.36;
+  transition:
+    color 0.28s ease,
+    transform 0.28s ease;
+}
+
+.distributor-process-card:hover h3 {
+  color: var(--distributor-cyan);
+  transform: translateY(-2px);
+}
+
+.distributor-process-card p {
+  margin-top: 14px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 14px;
+  line-height: 1.82;
+}
+
+/* =========================================================
+   08. 表单区域
+========================================================= */
+
+.distributor-form-section {
+  background: #f4f7fb;
+}
+
+.distributor-form-layout {
+  display: grid;
+  grid-template-columns: 410px minmax(0, 1fr);
+  gap: 34px;
+  align-items: start;
+}
+
+.distributor-guide-panel,
+.distributor-form-panel {
+  background: #fff;
+  border: 1px solid var(--distributor-line);
+}
+
+.distributor-guide-head {
+  padding: 30px;
+  color: #fff;
+  background: var(--distributor-blue);
+}
+
+.distributor-guide-head h3 {
+  font-size: 26px;
+  line-height: 1.32;
+  letter-spacing: -0.03em;
+}
+
+.distributor-guide-head p {
+  margin-top: 14px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.distributor-guide-list {
+  border-top: 1px solid var(--distributor-line-light);
+}
+
+.distributor-guide-item {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  min-height: 128px;
+  border-bottom: 1px solid var(--distributor-line-light);
+}
+
+.distributor-guide-item > div {
+  padding-top: 24px;
+  color: #b8c1cc;
+  text-align: center;
+  font-size: 46px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  border-right: 1px solid var(--distributor-line-light);
+}
+
+.distributor-guide-item section {
+  padding: 26px 24px;
+}
+
+.distributor-guide-item h4 {
+  color: var(--distributor-blue);
+  font-size: 18px;
+  line-height: 1.36;
+}
+
+.distributor-guide-item p {
+  margin-top: 8px;
+  color: var(--distributor-sub);
+  font-size: 14px;
+  line-height: 1.78;
+}
+
+.distributor-form-panel > h3 {
+  padding: 26px 30px;
+  color: var(--distributor-blue);
+  font-size: 26px;
+  line-height: 1.25;
+  font-weight: 850;
+  letter-spacing: -0.02em;
+  border-bottom: 1px solid var(--distributor-line);
+}
+
+.distributor-form-grid {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 20px;
+}
+
+.distributor-form-grid label {
+  display: grid;
+  gap: 8px;
+  color: #334760;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+/* 表单字段标题
+   说明：
+   - 用一层 span 包住标题文字
+   - 必填星号用 em，避免星号被 grid 排到下一行
+*/
+.distributor-field-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  color: #334760;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.distributor-field-title em {
+  color: #d92d20;
+  font-style: normal;
+}
+
+.distributor-form-full {
+  grid-column: 1 / -1;
+}
+
+.distributor-form-grid input,
+.distributor-form-grid select,
+.distributor-form-grid textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 13px;
+  color: var(--distributor-text);
+  background: #fff;
+  border: 1px solid rgba(23, 51, 104, 0.2);
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  transition:
+    border-color 0.24s ease,
+    box-shadow 0.24s ease;
+}
+
+.distributor-form-grid textarea {
+  min-height: 148px;
+  padding: 13px;
+  line-height: 1.7;
+  resize: vertical;
+}
+
+.distributor-form-grid input:focus,
+.distributor-form-grid select:focus,
+.distributor-form-grid textarea:focus {
+  border-color: var(--distributor-cyan);
+  box-shadow: inset 4px 0 0 var(--distributor-cyan);
+}
+
+.distributor-form-grid small {
+  color: var(--distributor-muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.distributor-email-row {
+  display: grid;
+  grid-template-columns: minmax(260px, 1.4fr) auto minmax(180px, 0.8fr) auto;
+  gap: 8px;
+  align-items: center;
+}
+
+.distributor-email-row button,
+.distributor-submit-btn,
+.distributor-upload-btn {
+  min-height: 48px;
+  padding: 0 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--distributor-blue);
+  background: #fff;
+  border: 1px solid rgba(23, 51, 104, 0.18);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 850;
+  cursor: pointer;
+  transition:
+    background 0.24s ease,
+    border-color 0.24s ease,
+    color 0.24s ease,
+    transform 0.24s ease;
+}
+
+.distributor-email-row button:hover,
+.distributor-submit-btn:hover,
+.distributor-upload-btn:hover {
+  background: rgba(9, 233, 180, 0.12);
+  border-color: rgba(9, 233, 180, 0.32);
+  transform: translateY(-1px);
+}
+
+.distributor-upload-btn input {
+  display: none;
+}
+
+.distributor-submit-row {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  gap: 8px;
+  align-items: start;
+  margin-top: 26px;
+  padding-top: 24px;
+  border-top: 1px solid var(--distributor-line);
+}
+
+.distributor-submit-row p {
+  max-width: 540px;
+  color: var(--distributor-sub);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.distributor-submit-btn {
+  min-width: 168px;
+  white-space: nowrap;
+}
+
+.distributor-file-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.distributor-file-list button {
+  padding: 6px 10px;
+  color: var(--distributor-blue);
+  background: rgba(23, 51, 104, 0.06);
+  border: 1px solid rgba(23, 51, 104, 0.08);
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* =========================================================
+   09. 底部 CTA
+========================================================= */
+
+.distributor-bottom-cta {
+  padding: 88px 0;
+  color: #fff;
+  background:
+    radial-gradient(circle at 14% 14%, rgba(9, 233, 180, 0.18), transparent 28%),
+    var(--distributor-blue);
+}
+
+.distributor-bottom-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 34px;
+}
+
+.distributor-bottom-cta h2 {
+  font-size: clamp(30px, 3.2vw, 48px);
+  line-height: 1.18;
+  letter-spacing: -0.04em;
+}
+
+.distributor-bottom-cta p {
+  max-width: 660px;
+  margin-top: 14px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   10. Toast
+========================================================= */
+
+.distributor-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 34px;
+  z-index: 120;
+  transform: translateX(-50%);
+  padding: 13px 18px;
+  color: #fff;
+  background: rgba(6, 26, 58, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.24);
+}
+
+/* =========================================================
+   11. 响应式
+========================================================= */
+
+@media (max-width: 1120px) {
+  .distributor-section {
+    padding: 76px 0;
+  }
+
+  .distributor-card-grid,
+  .distributor-process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .distributor-product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .distributor-form-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .distributor-email-row,
+  .distributor-submit-row {
+    grid-template-columns: 1fr;
+  }
+
+  .distributor-upload-btn {
+    width: fit-content;
+  }
+}
+
+@media (max-width: 680px) {
+  .distributor-section {
+    padding: 72px 0;
+  }
+
+  .distributor-section-inner {
+    width: min(var(--distributor-width), calc(100% - 32px));
+  }
+
+  .distributor-hero {
+    min-height: 620px;
+  }
+
+  .distributor-hero-content h1 {
+    font-size: 42px;
+  }
+
+  .distributor-section-head h2 {
+    font-size: 32px;
+  }
+
+  .distributor-card-grid,
+  .distributor-process-grid,
+  .distributor-product-grid,
+  .distributor-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .distributor-guide-item {
+    grid-template-columns: 84px minmax(0, 1fr);
+  }
+
+  .distributor-guide-item > div {
+    font-size: 40px;
+  }
+
+  .distributor-form-grid,
+  .distributor-form-panel > h3,
+  .distributor-guide-head {
+    padding: 24px;
+  }
+
+  .distributor-bottom-cta-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+} 
+
+/* =========================================================
+   经销商合作页面｜中文不可用提示页
+========================================================= */
+
+.distributor-unavailable {
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(6, 26, 58, 0.92) 0%,
+      rgba(23, 51, 104, 0.78) 45%,
+      rgba(23, 51, 104, 0.38) 100%
+    ),
+    url("/images/contact-cooperation/distributor-hero.webp") center / cover no-repeat;
+  color: #ffffff;
+}
+
+.distributor-unavailable-card {
+  max-width: 760px;
+  padding: 56px;
+  background: rgba(6, 26, 58, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.distributor-unavailable-label {
+  margin-bottom: 18px;
+  color: var(--distributor-cyan);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.distributor-unavailable-card h1 {
+  font-size: clamp(34px, 4vw, 56px);
+  line-height: 1.16;
+  letter-spacing: -0.045em;
+}
+
+.distributor-unavailable-card > p:not(.distributor-unavailable-label) {
+  margin-top: 22px;
+  max-width: 640px;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.distributor-unavailable-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.distributor-btn-ghost-dark {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.36);
+}
+
+.distributor-btn-ghost-dark:hover {
+  color: var(--distributor-blue-deep);
+  background: var(--distributor-cyan);
+  border-color: var(--distributor-cyan);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 680px) {
+  .distributor-unavailable {
+    min-height: 560px;
+  }
+
+  .distributor-unavailable-card {
+    padding: 32px 24px;
+  }
+} 
+ 
+
+/* =========================================================
+   经销商合作页面｜中文不可用提示页
+   使用路径：
+   /contact/distributor
+========================================================= */
+
+.distributor-unavailable {
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(6, 26, 58, 0.92) 0%,
+      rgba(23, 51, 104, 0.78) 45%,
+      rgba(23, 51, 104, 0.38) 100%
+    ),
+    url("/images/contact-cooperation/distributor-hero.webp") center / cover no-repeat;
+  color: #ffffff;
+}
+
+.distributor-unavailable-card {
+  max-width: 760px;
+  padding: 56px;
+  background: rgba(6, 26, 58, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.distributor-unavailable-label {
+  margin-bottom: 18px;
+  color: #09e9b4;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.distributor-unavailable-card h1 {
+  font-size: clamp(34px, 4vw, 56px);
+  line-height: 1.16;
+  letter-spacing: -0.045em;
+}
+
+.distributor-unavailable-card > p:not(.distributor-unavailable-label) {
+  margin-top: 22px;
+  max-width: 640px;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.distributor-unavailable-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.distributor-btn-ghost-dark {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.36);
+}
+
+.distributor-btn-ghost-dark:hover {
+  color: #061a3a;
+  background: #09e9b4;
+  border-color: #09e9b4;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 680px) {
+  .distributor-unavailable {
+    min-height: 560px;
+  }
+
+  .distributor-unavailable-card {
+    padding: 32px 24px;
+  }
+} 
+
+/* =========================================================
+   中文经销商兜底页
+   使用路径：
+   /contact/distributor
+
+   说明：
+   1. 不是正式招商页
+   2. 不是 404 页面
+   3. 用于温和引导中文用户回到联系我们页面
+========================================================= */
+
+.distributor-cn-page {
+  background: #f4f7fb;
+  color: #173368;
+}
+
+.distributor-cn-section {
+  min-height: calc(100vh - 80px);
+  padding: 96px 0;
+  display: flex;
+  align-items: center;
+}
+
+.distributor-cn-inner {
+  width: min(1280px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.distributor-cn-card {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid rgba(23, 51, 104, 0.12);
+  box-shadow: 0 24px 60px rgba(6, 26, 58, 0.08);
+}
+
+.distributor-cn-copy {
+  padding: 72px 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.distributor-cn-kicker {
+  margin-bottom: 18px;
+  color: #09e9b4;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.distributor-cn-copy h1 {
+  max-width: 560px;
+  color: #173368;
+  font-size: clamp(38px, 4.2vw, 58px);
+  line-height: 1.14;
+  letter-spacing: -0.055em;
+  font-weight: 900;
+}
+
+.distributor-cn-desc {
+  max-width: 580px;
+  margin-top: 24px;
+  color: #5d6d86;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.distributor-cn-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 36px;
+}
+
+.distributor-cn-primary,
+.distributor-cn-secondary {
+  min-width: 158px;
+  min-height: 48px;
+  padding: 0 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 850;
+  transition:
+    color 0.24s ease,
+    background 0.24s ease,
+    border-color 0.24s ease,
+    transform 0.24s ease;
+}
+
+.distributor-cn-primary {
+  color: #ffffff;
+  background: #173368;
+  border: 1px solid #173368;
+}
+
+.distributor-cn-primary:hover {
+  color: #061a3a;
+  background: #09e9b4;
+  border-color: #09e9b4;
+  transform: translateY(-2px);
+}
+
+.distributor-cn-secondary {
+  color: #173368;
+  background: #ffffff;
+  border: 1px solid rgba(23, 51, 104, 0.2);
+}
+
+.distributor-cn-secondary:hover {
+  color: #061a3a;
+  border-color: #09e9b4;
+  background: rgba(9, 233, 180, 0.1);
+  transform: translateY(-2px);
+}
+
+.distributor-cn-visual {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+  background: #eaf1f8;
+}
+
+.distributor-cn-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.04) 0%,
+      rgba(23, 51, 104, 0.05) 48%,
+      rgba(23, 51, 104, 0.1) 100%
+    );
+}
+
+.distributor-cn-visual img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.distributor-cn-support-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 22px;
+  border-top: 1px solid rgba(23, 51, 104, 0.12);
+  border-left: 1px solid rgba(23, 51, 104, 0.12);
+  background: #ffffff;
+}
+
+.distributor-cn-support-card {
+  min-height: 150px;
+  padding: 30px;
+  border-right: 1px solid rgba(23, 51, 104, 0.12);
+  border-bottom: 1px solid rgba(23, 51, 104, 0.12);
+  transition:
+    background 0.24s ease,
+    transform 0.24s ease;
+}
+
+.distributor-cn-support-card:hover {
+  background: #f8fbff;
+  transform: translateY(-2px);
+}
+
+.distributor-cn-support-card h2 {
+  color: #173368;
+  font-size: 20px;
+  line-height: 1.35;
+  font-weight: 850;
+  letter-spacing: -0.025em;
+}
+
+.distributor-cn-support-card p {
+  margin-top: 10px;
+  color: #5d6d86;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   中文经销商兜底页
+   使用路径：
+   /contact/distributor
+
+   设计方向：
+   1. 整体不是 404 页面
+   2. 图片作为温馨背景
+   3. 左侧白色提示卡片承载信息
+   4. 下方三个入口做中文用户分流
+========================================================= */
+
+.distributor-cn-page {
+  min-height: 100vh;
+  background: #f4f7fb;
+  color: #173368;
+}
+
+/* =========================================================
+   主视觉区域
+========================================================= */
+
+.distributor-cn-hero {
+  position: relative;
+  min-height: 640px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #eef4fa;
+}
+
+.distributor-cn-hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url("/images/contact-cooperation/distributor-cn-fallback.webp")
+    center / cover no-repeat;
+}
+
+/* 左侧增强可读性，右侧保留图片人物 */
+.distributor-cn-hero-mask {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(244, 247, 251, 0.96) 0%,
+      rgba(244, 247, 251, 0.86) 34%,
+      rgba(244, 247, 251, 0.38) 62%,
+      rgba(244, 247, 251, 0.08) 100%
+    );
+}
+
+.distributor-cn-inner {
+  position: relative;
+  z-index: 2;
+  width: min(1280px, calc(100% - 56px));
+  margin: 0 auto;
+}
+
+.distributor-cn-panel {
+  width: min(620px, 100%);
+  padding: 52px 56px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(23, 51, 104, 0.12);
+  box-shadow: 0 24px 70px rgba(6, 26, 58, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.distributor-cn-kicker {
+  margin-bottom: 16px;
+  color: #09e9b4;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.distributor-cn-panel h1 {
+  max-width: 520px;
+  color: #173368;
+  font-size: clamp(38px, 4vw, 56px);
+  line-height: 1.14;
+  letter-spacing: -0.055em;
+  font-weight: 900;
+}
+
+.distributor-cn-desc {
+  max-width: 540px;
+  margin-top: 22px;
+  color: #5d6d86;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.distributor-cn-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.distributor-cn-primary,
+.distributor-cn-secondary {
+  min-width: 158px;
+  min-height: 48px;
+  padding: 0 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 850;
+  transition:
+    color 0.24s ease,
+    background 0.24s ease,
+    border-color 0.24s ease,
+    transform 0.24s ease;
+}
+
+.distributor-cn-primary {
+  color: #ffffff;
+  background: #173368;
+  border: 1px solid #173368;
+}
+
+.distributor-cn-primary:hover {
+  color: #061a3a;
+  background: #09e9b4;
+  border-color: #09e9b4;
+  transform: translateY(-2px);
+}
+
+.distributor-cn-secondary {
+  color: #173368;
+  background: #ffffff;
+  border: 1px solid rgba(23, 51, 104, 0.22);
+}
+
+.distributor-cn-secondary:hover {
+  color: #061a3a;
+  border-color: #09e9b4;
+  background: rgba(9, 233, 180, 0.1);
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   下方三个入口
+========================================================= */
+
+.distributor-cn-support-section {
+  padding: 34px 0 96px;
+  background: #f4f7fb;
+}
+
+.distributor-cn-support-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.distributor-cn-support-card {
+  min-height: 160px;
+  padding: 30px 32px;
+  background: #ffffff;
+  border: 1px solid rgba(23, 51, 104, 0.12);
+  transition:
+    background 0.24s ease,
+    border-color 0.24s ease,
+    transform 0.24s ease;
+}
+
+.distributor-cn-support-card:hover {
+  background: #fbfdff;
+  border-color: rgba(9, 233, 180, 0.55);
+  transform: translateY(-2px);
+}
+
+.distributor-cn-support-card h2 {
+  color: #173368;
+  font-size: 21px;
+  line-height: 1.35;
+  font-weight: 850;
+  letter-spacing: -0.025em;
+}
+
+.distributor-cn-support-card p {
+  margin-top: 12px;
+  color: #5d6d86;
+  font-size: 14px;
+  line-height: 1.78;
+}
+
+/* =========================================================
+   中文经销商兜底页｜响应式
+========================================================= */
+
+@media (max-width: 980px) {
+  .distributor-cn-hero {
+    min-height: auto;
+    padding: 96px 0 72px;
+  }
+
+  .distributor-cn-hero-bg {
+    background-position: 62% center;
+  }
+
+  .distributor-cn-hero-mask {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(244, 247, 251, 0.96) 0%,
+        rgba(244, 247, 251, 0.9) 52%,
+        rgba(244, 247, 251, 0.48) 100%
+      );
+  }
+
+  .distributor-cn-panel {
+    padding: 44px 40px;
+  }
+
+  .distributor-cn-support-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .distributor-cn-hero {
+    padding: 82px 0 56px;
+  }
+
+  .distributor-cn-inner {
+    width: min(1280px, calc(100% - 32px));
+  }
+
+  .distributor-cn-panel {
+    padding: 34px 26px;
+  }
+
+  .distributor-cn-panel h1 {
+    font-size: 34px;
+  }
+
+  .distributor-cn-desc {
+    font-size: 15px;
+  }
+
+  .distributor-cn-actions {
+    flex-direction: column;
+  }
+
+  .distributor-cn-primary,
+  .distributor-cn-secondary {
+    width: 100%;
+  }
+
+  .distributor-cn-support-section {
+    padding: 22px 0 72px;
+  }
+
+  .distributor-cn-support-card {
+    min-height: auto;
+    padding: 26px 24px;
+  }
+} 
+
+/* =========================================================
+   经销商合作页｜提交成功弹窗
+   使用页面：
+   /en/contact/distributor
+   /es/contact/distributor
+   /fr/contact/distributor
+   /ko/contact/distributor
+   /ru/contact/distributor
+========================================================= */
+
+.distributor-success-mask {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(6, 26, 58, 0.58);
+  backdrop-filter: blur(6px);
+}
+
+.distributor-success-dialog {
+  width: min(480px, 100%);
+  padding: 42px 38px 34px;
+  background: #ffffff;
+  border: 1px solid rgba(23, 51, 104, 0.12);
+  box-shadow: 0 26px 80px rgba(6, 26, 58, 0.24);
+}
+
+.distributor-success-icon {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #061a3a;
+  background: #09e9b4;
+  border-radius: 50%;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.distributor-success-dialog h3 {
+  margin: 0;
+  color: #173368;
+  font-size: 28px;
+  line-height: 1.25;
+  font-weight: 900;
+  letter-spacing: -0.035em;
+}
+
+.distributor-success-dialog p {
+  margin-top: 14px;
+  color: #5d6d86;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.distributor-success-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.distributor-success-primary,
+.distributor-success-secondary {
+  min-height: 44px;
+  padding: 0 22px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 850;
+  cursor: pointer;
+  transition:
+    color 0.22s ease,
+    background 0.22s ease,
+    border-color 0.22s ease,
+    transform 0.22s ease;
+}
+
+.distributor-success-primary {
+  color: #ffffff;
+  background: #173368;
+  border: 1px solid #173368;
+}
+
+.distributor-success-primary:hover {
+  color: #061a3a;
+  background: #09e9b4;
+  border-color: #09e9b4;
+  transform: translateY(-1px);
+}
+
+.distributor-success-secondary {
+  color: #173368;
+  background: #ffffff;
+  border: 1px solid rgba(23, 51, 104, 0.18);
+}
+
+.distributor-success-secondary:hover {
+  border-color: #09e9b4;
+  background: rgba(9, 233, 180, 0.1);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 680px) {
+  .distributor-success-dialog {
+    padding: 34px 26px 28px;
+  }
+
+  .distributor-success-actions {
+    flex-direction: column;
+  }
+
+  .distributor-success-primary,
+  .distributor-success-secondary {
+    width: 100%;
+  }
+} 
+
+/* =========================================================
+   经销商合作页｜提交成功弹窗优化
+   说明：
+   1. 复用 contact-success-modal 结构
+   2. 让经销商提交成功反馈更正式
+   3. 去掉过大的空白感
+========================================================= */
+
+.distributor-page .contact-success-card {
+  width: min(520px, calc(100vw - 48px));
+  padding: 44px 42px 38px;
+  text-align: left;
+}
+
+.distributor-page .contact-success-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 0 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #061a3a;
+  background: #09e9b4;
+  border-radius: 50%;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.distributor-page .contact-success-card h3 {
+  margin: 0;
+  color: #173368;
+  font-size: 30px;
+  line-height: 1.25;
+  font-weight: 900;
+  letter-spacing: -0.035em;
+}
+
+.distributor-page .contact-success-card p {
+  margin-top: 16px;
+  color: #5d6d86;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.distributor-page .contact-success-button {
+  min-width: 120px;
+  min-height: 44px;
+  margin-top: 30px;
+  padding: 0 24px;
+  color: #ffffff;
+  background: #173368;
+  border: 1px solid #173368;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 850;
+  cursor: pointer;
+  transition:
+    color 0.22s ease,
+    background 0.22s ease,
+    border-color 0.22s ease,
+    transform 0.22s ease;
+}
+
+.distributor-page .contact-success-button:hover {
+  color: #061a3a;
+  background: #09e9b4;
+  border-color: #09e9b4;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 680px) {
+  .distributor-page .contact-success-card {
+    padding: 34px 26px 30px;
+  }
+
+  .distributor-page .contact-success-card h3 {
+    font-size: 26px;
+  }
+
+  .distributor-page .contact-success-button {
+    width: 100%;
+  }
+} 
+
+/* =========================================================
+   经销商合作页｜提交成功弹窗最终居中修正
+   说明：
+   1. 成功图标居中
+   2. 按钮居中
+   3. 去掉之前左对齐造成的不协调
+========================================================= */
+
+.distributor-page .contact-success-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.distributor-page .contact-success-icon {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.distributor-page .contact-success-card h3 {
+  text-align: center;
+}
+
+.distributor-page .contact-success-card p {
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.distributor-page .contact-success-button {
+  margin-left: auto;
+  margin-right: auto;
+} 
+
+/* =========================================================
+   经销商合作页｜标题字重增强
+   说明：
+   1. 只影响经销商页面
+   2. 增强模块大标题和卡片标题的力量感
+   3. 保持 FOREACH 官网深蓝、稳重、B2B 技术感
+========================================================= */
+
+/* 模块大标题：例如 Support local customers... */
+.distributor-page .distributor-section-head h2 {
+  font-weight: 850;
+  letter-spacing: -0.045em;
+  color: #173368;
+}
+
+/* 模块说明文字不要太重，保持层级 */
+.distributor-page .distributor-section-head p {
+  font-weight: 500;
+  line-height: 1.85;
+}
+
+/* 卡片标题：例如 Complete Product Portfolio */
+.distributor-page .distributor-info-card h3 {
+  font-weight: 850;
+  letter-spacing: -0.025em;
+  color: #173368;
+}
+
+/* 产品卡片标题 */
+.distributor-page .distributor-product-content h3 {
+  font-weight: 850;
+  letter-spacing: -0.025em;
+  color: #173368;
+}
+
+/* 合作流程卡片标题 */
+.distributor-page .distributor-process-card h3 {
+  font-weight: 850;
+  letter-spacing: -0.025em;
+}
+
+/* 表单标题 */
+.distributor-page .distributor-form-panel h3,
+.distributor-page .distributor-guide-head h3 {
+  font-weight: 850;
+  letter-spacing: -0.025em;
+} 
+/* =========================================================
+   经销商合作页｜优势/伙伴卡片 Hover 保留荧光色
+   说明：
+   1. 卡片不再变成深蓝大色块
+   2. 鼠标经过时标题显示荧光青
+   3. 数字轻微显示荧光青，保留交互感
+   4. 只影响经销商页面
+========================================================= */
+
+.distributor-page .distributor-card-grid-border .distributor-info-card:hover {
+  background: #ffffff;
+  border-color: rgba(9, 233, 180, 0.55);
+  transform: translateY(-2px);
+  box-shadow: none;
+}
+
+.distributor-page .distributor-card-grid-border .distributor-info-card:hover h3 {
+  color: #09e9b4;
+}
+
+.distributor-page .distributor-card-grid-border .distributor-info-card:hover p {
+  color: #5d6d86;
+}
+
+.distributor-page
+  .distributor-card-grid-border
+  .distributor-info-card:hover
+  .distributor-card-index {
+  color: rgba(9, 233, 180, 0.42);
+  opacity: 1;
+} 
+
+/* =========================================================
+   经销商合作页｜合作流程模块标题改为白色
+   说明：
+   1. 不改深蓝背景
+   2. 不改卡片样式
+   3. 只把 Cooperation Process 这一块的主题大标题改成白色
+========================================================= */
+
+.distributor-page .distributor-process-section .distributor-section-head h2 {
+  color: #ffffff;
+} 
+
+/* =========================================================
+   经销商合作页｜卡片 Hover 后正文改为白色
+   说明：
+   1. 鼠标经过卡片时，深蓝背景保留
+   2. 标题保留荧光色
+   3. 正文说明改为白色，提高可读性
+   4. 只影响经销商页面
+========================================================= */
+
+/* 优势卡片 / 合作伙伴卡片：选中后正文变白 */
+.distributor-page .distributor-card-grid-border .distributor-info-card:hover p {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* 选中后标题保持荧光色 */
+.distributor-page .distributor-card-grid-border .distributor-info-card:hover h3 {
+  color: #09e9b4;
+}
+
+/* 选中后数字可以保持淡荧光色 */
+.distributor-page
+  .distributor-card-grid-border
+  .distributor-info-card:hover
+  .distributor-card-index {
+  color: rgba(9, 233, 180, 0.42);
+}
+
+/* 合作流程卡片如果也有深蓝 hover，同样让正文变白 */
+.distributor-page .distributor-process-card:hover p {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.distributor-page .distributor-process-card:hover h3 {
+  color: #09e9b4;
+} 
+
+/* =========================================================
+   经销商合作页｜合作流程卡片 Hover 数字与方框荧光色
+   说明：
+   1. 鼠标选中流程卡片时，数字带一点荧光青
+   2. 数字不要太亮，保持高级感
+   3. 小方框边框与内部点完全变成荧光青
+   4. 只影响经销商页面
+========================================================= */
+
+/* 选中后数字增加一点荧光色 */
+.distributor-page .distributor-process-card:hover .distributor-process-index {
+  color: rgba(9, 233, 180, 0.55);
+}
+
+/* 选中后小方框边框完全变成荧光色 */
+.distributor-page .distributor-process-card:hover .distributor-process-dot {
+  border-color: #09e9b4;
+  box-shadow: 0 0 0 1px rgba(9, 233, 180, 0.35);
+}
+
+/* 选中后小方框中间点完全变成荧光色 */
+.distributor-page .distributor-process-card:hover .distributor-process-dot::after {
+  background: #09e9b4;
+}
+
+/* 选中后标题保持荧光色 */
+.distributor-page .distributor-process-card:hover h3 {
+  color: #09e9b4;
+}
+
+/* 选中后正文保持白色可读 */
+.distributor-page .distributor-process-card:hover p {
+  color: rgba(255, 255, 255, 0.82);
+} 

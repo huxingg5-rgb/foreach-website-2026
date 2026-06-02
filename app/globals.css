@@ -14350,3 +14350,65 @@ html[lang="ru"] .home-hero-btn:hover {
     width: 100%;
   }
 }  
+
+/* ================================
+   PC 顶部导航：简单下拉菜单
+   用于外语版 Contact & Partnership
+================================ */
+
+.site-nav-item {
+  position: relative;
+}
+
+/* ================================
+   PC 顶部导航：简单下拉菜单
+   用于外语版 Contact & Partnership
+
+   设计说明：
+   1. 下拉框紧贴 Top 栏底部
+   2. 背景色与产品中心下拉左侧浅蓝灰底一致
+   3. 顶部两个角不做圆角
+   4. 底部两个角保留圆角
+================================ */
+
+.site-nav-simple-dropdown {
+  position: absolute;
+  top: calc(100% + 30px); 
+  left: 50%;
+  z-index: 120; 
+  width: 260px;
+  padding: 8px 0 10px;
+
+  /* 和产品下拉左侧底色保持一致 */
+  background: #e8eef6;
+
+  border: 1px solid rgba(23, 51, 104, 0.12);
+  border-top: 0;
+  border-radius: 0 0 14px 14px;
+  box-shadow: 0 18px 48px rgba(10, 27, 58, 0.14);
+  transform: translateX(-50%);
+  overflow: hidden;
+} 
+
+.site-nav-simple-dropdown-link {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  width: 100%;
+  min-height: 62px;
+  padding: 0 28px;
+  background: #e8eef6;
+  color: #173368;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700; 
+  line-height: 1.4;
+  transition: all 0.2s ease;
+} 
+ 
+.site-nav-simple-dropdown-link:hover {
+  background: #ffffff;
+  color: #09e9b4;
+  font-weight: 700;
+}

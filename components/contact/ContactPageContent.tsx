@@ -27,7 +27,6 @@ import type { ContactPageData } from "@/data/contact-cooperation"; // 引入联�
 import AmapBlock from "@/components/contact/AmapBlock"; // 引入高德地图组件
 import ContactInquiryForm from "@/components/contact/ContactInquiryForm"; // 引入独立联系需求表单组件
 
-
 /* =========================================================
    组件 Props 类型
 ========================================================= */
@@ -35,7 +34,6 @@ import ContactInquiryForm from "@/components/contact/ContactInquiryForm"; // 引
 type ContactPageContentProps = {
   data: ContactPageData; // 当前语言的联系我们页面数据
 };
-
 
 /* =========================================================
    平滑滚动到指定模块
@@ -55,7 +53,6 @@ function scrollToSection(targetId: string) {
   });
 }
 
-
 /* =========================================================
    ContactPageContent 组件
 ========================================================= */
@@ -64,7 +61,6 @@ export default function ContactPageContent({ data }: ContactPageContentProps) {
   const [selectedRequestType, setSelectedRequestType] = useState(
     data.form.requestTypes[0] ?? "",
   ); // 当前选中的需求类型，默认取需求类型第一个选项
-
 
   /* =========================================================
      点击支持内容卡片
@@ -80,7 +76,6 @@ export default function ContactPageContent({ data }: ContactPageContentProps) {
       scrollToSection("form"); // 延迟滚动到表单，确保状态先更新
     }, 0);
   }
-
 
   return (
     <main className="contact-page">
@@ -119,7 +114,6 @@ export default function ContactPageContent({ data }: ContactPageContentProps) {
         </div>
       </section>
 
-
       {/* =====================================================
           支持内容模块
       ===================================================== */}
@@ -147,7 +141,6 @@ export default function ContactPageContent({ data }: ContactPageContentProps) {
           </div>
         </div>
       </section>
-
 
       {/* =====================================================
           表单模块
@@ -192,7 +185,6 @@ export default function ContactPageContent({ data }: ContactPageContentProps) {
           </div>
         </div>
       </section>
-
 
       {/* =====================================================
           联系方式 + 高德地图
@@ -240,7 +232,6 @@ export default function ContactPageContent({ data }: ContactPageContentProps) {
           </div>
         </div>
       </section>
-
 
       {/* =====================================================
           底部 CTA

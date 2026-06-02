@@ -110,11 +110,11 @@ export default function SiteHeader() {
   );
 
   const headerText = headerI18n[currentLocale]; // 获取当前语言下的 Header 文案
-  
-const navigationItems = useMemo(
-  () => getVisibleNavigationItems(currentLocale),
-  [currentLocale],
-); // 根据当前语言获取可显示导航，并缓存结果
+
+  const navigationItems = useMemo(
+    () => getVisibleNavigationItems(currentLocale),
+    [currentLocale],
+  ); // 根据当前语言获取可显示导航，并缓存结果
 
   const [isScrolled, setIsScrolled] = useState(false); // 控制 Top 栏是否进入滚动后的白底状态
 
@@ -148,6 +148,18 @@ const navigationItems = useMemo(
       item.dropdownType === "mega" &&
       item.megaDropdown,
   ); // 找到当前 PC 端正在展开的 mega 菜单数据
+
+  const activeSimpleItem = navigationItems.find(
+    (item) =>
+      item.key === desktopMegaKey &&
+      item.dropdownType === "simple" &&
+      item.mobileChildren,
+  ); // 找到当前 PC 端正在展开的简单下拉菜单数据
+
+  const activeSimpleChildren =
+    activeSimpleItem?.mobileChildren
+      ?.filter((child) => child.enabled)
+      .sort((a, b) => a.order - b.order) ?? [];
 
   /* ================================
      当前 Mega 菜单分类与右侧卡片筛选
@@ -396,19 +408,40 @@ const navigationItems = useMemo(
     }
 
     if (item.dropdownType === "mega" && item.megaDropdown) {
+      /*
+         Mega 大下拉：
+         用于产品中心、关于我们等复杂下拉
+      */
       const firstCategory = item.megaDropdown.categories
         .filter((category) => category.enabled)
         .sort((a, b) => a.order - b.order)[0];
 
       setDesktopMegaKey(item.key);
-
       setActiveMegaCategoryKey(firstCategory?.key ?? null);
-    } else {
-      setDesktopMegaKey(null);
 
-      setActiveMegaCategoryKey(null);
+      return;
     }
-  }
+
+    if (item.dropdownType === "simple" && item.mobileChildren) {
+      /*
+         Simple 小下拉：
+         用于外语版 Contact & Partnership
+         只显示 Contact Us / Become a Distributor 两个入口
+      */
+      setDesktopMegaKey(item.key);
+      setActiveMegaCategoryKey(null);
+
+      return;
+    }
+
+    /*
+       没有下拉：
+       中文版“联系我们”等普通导航
+    */
+    setDesktopMegaKey(null);
+    setActiveMegaCategoryKey(null);
+  } 
+
 
   /**
    * 鼠标离开整个 Header 时执行
@@ -597,25 +630,64 @@ const navigationItems = useMemo(
             const hasMegaDropdown =
               item.dropdownType === "mega" && Boolean(item.megaDropdown);
 
+            const hasSimpleDropdown =
+              item.dropdownType === "simple" &&
+              Boolean(item.mobileChildren?.length);
+
+            const simpleChildren =
+              item.mobileChildren
+                ?.filter((child) => child.enabled)
+                .sort((a, b) => a.order - b.order) ?? [];
+
+            const isSimpleDropdownOpen =
+              desktopMegaKey === item.key && hasSimpleDropdown;
+
             return (
               <div
                 key={item.key}
-                className={`site-nav-item ${hasMegaDropdown ? "site-nav-item-has-dropdown" : ""
-                  }`}
+                className={`site-nav-item ${
+                  hasMegaDropdown || hasSimpleDropdown
+                    ? "site-nav-item-has-dropdown"
+                    : ""
+                } ${
+                  isSimpleDropdownOpen ? "site-nav-item-simple-open" : ""
+                }`}
                 onMouseEnter={() => handleDesktopNavMouseEnter(item)}
               >
                 <Link
                   href={navHref}
-                  className={`site-nav-link ${isNavActive(item) ? "site-nav-link-active" : ""
-                    }`}
+                  className={`site-nav-link ${
+                    isNavActive(item) ? "site-nav-link-active" : ""
+                  }`}
                   onClick={closeAllPanels}
                 >
                   {navLabel}
                 </Link>
+
+                {isSimpleDropdownOpen ? (
+                  <div
+                    className="site-nav-simple-dropdown"
+                    onMouseEnter={() => {
+                      setDesktopMegaKey(item.key);
+                      setActiveMegaCategoryKey(null);
+                    }}
+                  >
+                    {simpleChildren.map((child) => (
+                      <Link
+                        key={child.key}
+                        href={getLocalizedHref(child.href, currentLocale)}
+                        className="site-nav-simple-dropdown-link"
+                        onClick={closeAllPanels}
+                      >
+                        {getLocalizedText(child.label, currentLocale)}
+                      </Link>
+                    ))}
+                  </div>
+                ) : null}
               </div>
             );
           })}
-        </nav>
+        </nav>  
 
         {/* 右侧工具区：搜索栏、语言栏、手机菜单按钮 */}
         <div className="site-header-actions">

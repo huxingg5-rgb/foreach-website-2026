@@ -67,13 +67,13 @@ export type NavigationKey =
   | "applications"
   | "resources"
   | "about"
-  | "contact"
+  | "contact";
 
 /* ================================
    下拉菜单类型
 ================================ */
 
-export type DropdownType = "none" | "mega";
+export type DropdownType = "none" | "mega" | "simple";
 
 /* ================================
    导航图片类型
@@ -586,6 +586,217 @@ function createMobileChildrenFromMegaCategories(
 /* ================================
    官网一级导航数据
 ================================ */
+
+/* ================================
+   联系与合作下拉栏数据
+
+   说明：
+   1. 中文站不显示这个下拉栏，只显示「联系我们」
+   2. 外语站显示「Contact & Partnership」下拉栏
+   3. 下拉栏包含：
+      - Contact Us
+      - Become a Distributor
+================================ */
+
+const contactPartnershipMegaDropdown: MegaDropdown = {
+  heading: t(
+    "联系与合作",
+    "Contact & Partnership",
+    "Contacto y cooperación",
+    "Contact et partenariat",
+    "문의 및 협력",
+    "Контакты и сотрудничество"
+  ),
+
+  description: t(
+    "联系恒永达，获取产品咨询、技术支持或合作机会。",
+    "Contact FOREACH for product inquiries, technical support, or partnership opportunities.",
+    "Contacte con FOREACH para consultas de productos, soporte técnico u oportunidades de cooperación.",
+    "Contactez FOREACH pour vos demandes produits, votre support technique ou vos opportunités de partenariat.",
+    "제품 문의, 기술 지원 또는 협력 기회를 위해 FOREACH에 문의하세요.",
+    "Свяжитесь с FOREACH по вопросам продукции, технической поддержки или партнерства."
+  ),
+
+  categories: [
+    {
+      key: "contact-us",
+      title: t(
+        "联系我们",
+        "Contact Us",
+        "Contáctenos",
+        "Contactez-nous",
+        "문의하기",
+        "Свяжитесь с нами"
+      ),
+      description: t(
+        "产品咨询、技术支持、样品申请与项目沟通",
+        "Product inquiries, technical support, sample requests, and project consultation",
+        "Consultas de productos, soporte técnico, solicitudes de muestras y proyectos",
+        "Demandes produits, support technique, échantillons et projets",
+        "제품 문의, 기술 지원, 샘플 요청 및 프로젝트 상담",
+        "Запросы по продукции, техническая поддержка, образцы и проекты"
+      ),
+      order: 1,
+      enabled: true,
+    },
+    {
+      key: "distributors",
+      title: t(
+        "经销商招募",
+        "Become a Distributor",
+        "Convertirse en distribuidor",
+        "Devenir distributeur",
+        "대리점 파트너십",
+        "Стать дистрибьютором"
+      ),
+      description: t(
+        "面向海外渠道伙伴、代理商与本地服务合作伙伴",
+        "For overseas channel partners, distributors, and local service partners",
+        "Para socios de canal, distribuidores y socios de servicio locales",
+        "Pour les partenaires de distribution, revendeurs et services locaux",
+        "해외 채널 파트너, 대리점 및 현지 서비스 파트너 대상",
+        "Для зарубежных партнеров, дистрибьюторов и локальных сервисных партнеров"
+      ),
+      order: 2,
+      enabled: true,
+    },
+  ],
+
+  cards: [
+    {
+      key: "contact-us-card",
+      categoryKey: "contact-us",
+      title: t(
+        "联系我们",
+        "Contact Us",
+        "Contáctenos",
+        "Contactez-nous",
+        "문의하기",
+        "Свяжитесь с нами"
+      ),
+      description: t(
+        "提交产品咨询、技术支持、样品申请、图纸或 BOM 需求。",
+        "Submit product inquiries, technical support requests, sample requests, drawings, or BOM requirements.",
+        "Envíe consultas de productos, soporte técnico, muestras, planos o requisitos de BOM.",
+        "Envoyez vos demandes produits, support technique, échantillons, plans ou BOM.",
+        "제품 문의, 기술 지원, 샘플 요청, 도면 또는 BOM 요구사항을 제출하세요.",
+        "Отправьте запросы по продукции, поддержке, образцам, чертежам или BOM."
+      ),
+      href: t(
+        "/contact",
+        "/en/contact",
+        "/es/contact",
+        "/fr/contact",
+        "/ko/contact",
+        "/ru/contact"
+      ),
+      order: 1,
+      enabled: true,
+    },
+    {
+      key: "distributors-card",
+      categoryKey: "distributors",
+      title: t(
+        "经销商招募",
+        "Become a Distributor",
+        "Convertirse en distribuidor",
+        "Devenir distributeur",
+        "대리점 파트너십",
+        "Стать дистрибьютором"
+      ),
+      description: t(
+        "了解恒永达海外渠道合作、代理支持与本地市场协同机会。",
+        "Explore FOREACH distributor partnerships, channel support, and local market cooperation.",
+        "Explore asociaciones de distribución, soporte de canal y cooperación local con FOREACH.",
+        "Découvrez les partenariats distributeurs, le support réseau et la coopération locale avec FOREACH.",
+        "FOREACH 대리점 파트너십, 채널 지원 및 현지 시장 협력 기회를 확인하세요.",
+        "Узнайте о партнерстве с дистрибьюторами, поддержке каналов и локальном сотрудничестве FOREACH."
+      ),
+      href: t(
+        "/contact",
+        "/en/contact/distributor",
+        "/es/contact/distributor",
+        "/fr/contact/distributor",
+        "/ko/contact/distributor",
+        "/ru/contact/distributor"
+      ),
+      order: 2,
+      enabled: true,
+    },
+  ],
+
+  footerText: t(
+    "选择合适的联系入口，恒永达团队将尽快跟进。",
+    "Choose the right contact option and the FOREACH team will follow up shortly.",
+    "Elija la opción de contacto adecuada y el equipo de FOREACH le responderá pronto.",
+    "Choisissez l’option adaptée et l’équipe FOREACH vous répondra rapidement.",
+    "적절한 문의 항목을 선택하시면 FOREACH 팀이 빠르게 연락드리겠습니다.",
+    "Выберите подходящий способ связи, и команда FOREACH свяжется с вами."
+  ),
+
+  footerLinkLabel: t(
+    "提交需求 →",
+    "Submit an Inquiry →",
+    "Enviar consulta →",
+    "Envoyer une demande →",
+    "문의 제출 →",
+    "Отправить запрос →"
+  ),
+
+  footerHref: t(
+    "/contact",
+    "/en/contact",
+    "/es/contact",
+    "/fr/contact",
+    "/ko/contact",
+    "/ru/contact"
+  ),
+};
+
+const contactPartnershipMobileChildren: MobileNavChild[] = [
+  {
+    key: "mobile-contact-us",
+    label: t(
+      "联系我们",
+      "Contact Us",
+      "Contáctenos",
+      "Contactez-nous",
+      "문의하기",
+      "Свяжитесь с нами"
+    ),
+    href: t(
+      "/contact",
+      "/en/contact",
+      "/es/contact",
+      "/fr/contact",
+      "/ko/contact",
+      "/ru/contact"
+    ),
+    order: 1,
+    enabled: true,
+  },
+  {
+    key: "mobile-distributors",
+    label: t(
+      "经销商招募",
+      "Become a Distributor",
+      "Convertirse en distribuidor",
+      "Devenir distributeur",
+      "대리점 파트너십",
+      "Стать дистрибьютором"
+    ),
+    href: t(
+      "/contact",
+      "/en/contact/distributor",
+      "/es/contact/distributor",
+      "/fr/contact/distributor",
+      "/ko/contact/distributor",
+      "/ru/contact/distributor"
+    ),
+    order: 2,
+    enabled: true,
+  },
+];
 
 const navigationItems: NavigationItem[] = [
   {
@@ -1221,44 +1432,53 @@ const navigationItems: NavigationItem[] = [
     ),
     order: 6,
     enabled: true,
+
+    /*
+       默认写 none。
+       真正是否显示下拉，在 getVisibleNavigationItems(locale) 里根据语言动态处理：
+       - 中文：none
+       - 外语：mega
+    */
     dropdownType: "none",
   },
 ];
 
-/* ================================
-   获取当前可显示导航
-
-   说明：
-   1. 当前一级导航统一显示「联系与合作」
-   2. 中文站：联系与合作
-   3. 外语站：Contact & Partnership
-   4. 不再把 Become a Distributor 单独作为一级导航
-================================ */
-/* ================================
-   获取当前可显示导航
-================================ */
-
 export function getVisibleNavigationItems(locale = "zh-CN") {
   return navigationItems
     .filter((item) => item.enabled)
-    .filter((item) => {
+    .map((item) => {
       /*
-         没有设置 visibleLocales：
-         所有语言都显示
+         联系与合作特殊逻辑：
+
+         中文站：
+         - 顶部显示「联系我们」
+         - 不显示下拉
+         - 点击直接进入 /contact
+
+         外语站：
+         - 顶部显示「Contact & Partnership」 
+         - 显示下拉
+         - 下拉包含 Contact Us 和 Become a Distributor
       */
-      if (!item.visibleLocales) {
-        return true;
+      if (item.key !== "contact") {
+        return item;
       }
 
-      /*
-         设置了 visibleLocales：
-         只在指定语言显示
+      if (locale === "zh-CN") {
+        return {
+          ...item,
+          dropdownType: "none" as const,
+          megaDropdown: undefined,
+          mobileChildren: undefined,
+        };
+      }
 
-         示例：
-         distributors 只在 en / es / fr / ko / ru 显示，
-         中文 zh-CN 不显示。
-      */
-      return item.visibleLocales.includes(locale);
+      return {
+        ...item,
+        dropdownType: "simple" as const,
+        megaDropdown: undefined,
+        mobileChildren: contactPartnershipMobileChildren,
+      };
     })
     .sort((a, b) => a.order - b.order);
 }
