@@ -113,7 +113,19 @@ export default function SiteHeader() {
    */
   const currentLocale = useMemo<LocaleCode>(() => {
     return getLocaleFromPathname(pathname);
-  }, [pathname]); 
+  }, [pathname]);
+
+  /* ================================
+     Header 当前语言 class
+     说明：
+     1. 不依赖 html[lang]
+     2. 直接根据当前 URL 语言给 Header 加 class
+     3. 方便 CSS 精准控制 Top 栏多语言字距
+  ================================ */
+  const headerLocaleClass =
+    currentLocale === "zh-CN"
+      ? "site-header-locale-zh"
+      : `site-header-locale-${currentLocale}`;
 
   const headerText = headerI18n[currentLocale]; // 获取当前语言下的 Header 文案
 
@@ -414,7 +426,7 @@ export default function SiteHeader() {
     */
     setDesktopMegaKey(null);
     setActiveMegaCategoryKey(null);
-  } 
+  }
 
 
   /**
@@ -497,7 +509,7 @@ export default function SiteHeader() {
 
     // 关闭手机端已展开的折叠菜单
     setOpenMobileSectionKey(null);
-  } 
+  }
   /**
    * 点击 PC 端搜索图标按钮时执行
    *
@@ -607,11 +619,10 @@ export default function SiteHeader() {
 
   return (
     <header
-      className={`site-header ${isScrolled ? "site-header-scrolled" : ""} ${
-        openPanel !== "none" || desktopMegaKey ? "header-panel-open" : ""
-      } ${isLanguageOpen ? "language-panel-open" : ""} ${
-        isMobileMenuOpen ? "mobile-nav-open" : ""
-      } ${isSearchOpen ? "site-header-search-open" : ""}`}
+      className={`site-header ${headerLocaleClass} ${isScrolled ? "site-header-scrolled" : ""
+        } ${openPanel !== "none" || desktopMegaKey ? "header-panel-open" : ""} ${isLanguageOpen ? "language-panel-open" : ""
+        } ${isMobileMenuOpen ? "mobile-nav-open" : ""} ${isSearchOpen ? "site-header-search-open" : ""
+        }`}
       onMouseLeave={handleHeaderMouseLeave}
     >
       {/* Top 栏内部容器 */}
@@ -666,20 +677,17 @@ export default function SiteHeader() {
               return (
                 <div
                   key={item.key}
-                  className={`site-nav-item ${
-                    hasMegaDropdown || hasSimpleDropdown
+                  className={`site-nav-item ${hasMegaDropdown || hasSimpleDropdown
                       ? "site-nav-item-has-dropdown"
                       : ""
-                  } ${
-                    isSimpleDropdownOpen ? "site-nav-item-simple-open" : ""
-                  }`}
+                    } ${isSimpleDropdownOpen ? "site-nav-item-simple-open" : ""
+                    }`}
                   onMouseEnter={() => handleDesktopNavMouseEnter(item)}
                 >
                   <Link
                     href={navHref}
-                    className={`site-nav-link ${
-                      isNavActive(item) ? "site-nav-link-active" : ""
-                    }`}
+                    className={`site-nav-link ${isNavActive(item) ? "site-nav-link-active" : ""
+                      }`}
                     onClick={closeAllPanels}
                   >
                     {navLabel}

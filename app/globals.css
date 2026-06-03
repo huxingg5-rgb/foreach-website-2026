@@ -15028,3 +15028,43 @@ html[lang="ru"] .home-hero-btn:hover {
   text-shadow: none !important;
   -webkit-text-stroke: 0 !important;
 } 
+
+ /* =========================================================
+   Top 栏导航｜非中文 / 非韩文字距收紧
+   说明：
+   1. 只影响顶部导航栏
+   2. 不影响中文 zh-CN
+   3. 不影响韩文 ko
+   4. 不依赖 html[lang]，直接使用 Header 自己的语言 class
+   5. 只调整字距和词距，不改字号、不改字重
+========================================================= */
+
+.site-header-locale-en .site-nav-link,
+.site-header-locale-es .site-nav-link,
+.site-header-locale-fr .site-nav-link,
+.site-header-locale-ru .site-nav-link {
+  letter-spacing: -0.01em !important;
+  word-spacing: -0.08em !important;
+}
+
+/* hover / 选中时保持一样，不要突然变开 */
+.site-header-locale-en .site-nav-link:hover, 
+.site-header-locale-en .site-nav-link-active,
+.site-header-locale-es .site-nav-link:hover,
+.site-header-locale-es .site-nav-link-active,
+.site-header-locale-fr .site-nav-link:hover,
+.site-header-locale-fr .site-nav-link-active,
+.site-header-locale-ru .site-nav-link:hover,
+.site-header-locale-ru .site-nav-link-active {
+  letter-spacing: -0.01em !important;
+  word-spacing: -0.08em !important;
+}   
+
+/* 如果导航文字内部有 span，也继承字距 */
+.site-header-locale-en .site-nav-link span,
+.site-header-locale-es .site-nav-link span,
+.site-header-locale-fr .site-nav-link span,
+.site-header-locale-ru .site-nav-link span {
+  letter-spacing: inherit !important;
+  word-spacing: inherit !important;
+}      
