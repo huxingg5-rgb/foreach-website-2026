@@ -15068,3 +15068,132 @@ html[lang="ru"] .home-hero-btn:hover {
   letter-spacing: inherit !important;
   word-spacing: inherit !important;
 }      
+
+ 
+
+/* ================================
+   修复 simple 下拉栏文字过粗问题
+
+   作用：
+   1. 只影响资源中心 / 联系与合作这种简单下拉栏
+   2. 不影响产品中心 Mega Menu
+   3. 鼠标 hover 时也不加粗，只变颜色和背景
+================================ */
+
+.site-nav-simple-dropdown-link {
+  font-weight: 400 !important;
+}
+
+/* hover 时不要变粗，避免文字跳动 */
+.site-nav-simple-dropdown-link:hover,
+.site-nav-simple-dropdown-link:focus-visible {
+  font-weight: 400 !important;
+} 
+
+/* ================================
+   外语 simple 下拉栏宽度优化
+
+   作用：
+   1. 只加宽英文、西班牙语、法语、俄语页面的 simple 下拉栏
+   2. 不影响中文和韩文
+   3. 用于资源中心 / Contact & Partnership 这种简单下拉栏
+================================ */
+
+/* 英文、西班牙语、法语：适当加宽 */
+.site-header-locale-en .site-nav-simple-dropdown,
+.site-header-locale-es .site-nav-simple-dropdown,
+.site-header-locale-fr .site-nav-simple-dropdown {
+  min-width: 340px;
+}
+
+/* 俄语文字更长，单独再宽一点 */
+.site-header-locale-ru .site-nav-simple-dropdown {
+  min-width: 350px;
+} 
+
+/* 外语下拉栏文字左右留白稍微加大一点 */
+.site-header-locale-en .site-nav-simple-dropdown-link,
+.site-header-locale-es .site-nav-simple-dropdown-link,
+.site-header-locale-fr .site-nav-simple-dropdown-link,
+.site-header-locale-ru .site-nav-simple-dropdown-link {
+  padding-left: 38px;
+  padding-right: 38px;
+} 
+
+/* ================================
+   simple 下拉栏入场动效
+
+   作用：
+   1. 用于资源中心 / Contact & Partnership 简单下拉栏
+   2. 解决条件渲染后 transition 不明显的问题
+   3. 打开时有轻微淡入 + 下滑效果
+   4. 不影响产品中心 Mega Menu
+================================ */
+
+/* simple 下拉栏打开时的整体入场动画 */
+.site-nav-simple-dropdown.site-nav-simple-dropdown-open {
+  animation: simpleDropdownFadeIn 220ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* 下拉栏整体：从轻微上方淡入 */
+@keyframes simpleDropdownFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-8px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* 下拉栏文字也做一点轻微入场，不要太明显 */
+.site-nav-simple-dropdown.site-nav-simple-dropdown-open
+  .site-nav-simple-dropdown-link {
+  animation: simpleDropdownLinkIn 260ms ease both;
+}
+
+/* 每个文字项轻微上浮进入 */
+@keyframes simpleDropdownLinkIn {
+  0% {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 让每一项稍微错开进入，动效更柔和 */
+.site-nav-simple-dropdown.site-nav-simple-dropdown-open
+  .site-nav-simple-dropdown-link:nth-child(1) {
+  animation-delay: 20ms;
+}
+
+.site-nav-simple-dropdown.site-nav-simple-dropdown-open
+  .site-nav-simple-dropdown-link:nth-child(2) {
+  animation-delay: 40ms;
+}
+
+.site-nav-simple-dropdown.site-nav-simple-dropdown-open
+  .site-nav-simple-dropdown-link:nth-child(3) {
+  animation-delay: 60ms;
+}
+
+.site-nav-simple-dropdown.site-nav-simple-dropdown-open
+  .site-nav-simple-dropdown-link:nth-child(4) {
+  animation-delay: 80ms;
+}
+
+.site-nav-simple-dropdown.site-nav-simple-dropdown-open
+  .site-nav-simple-dropdown-link:nth-child(5) {
+  animation-delay: 100ms;
+}
+
+.site-nav-simple-dropdown.site-nav-simple-dropdown-open
+  .site-nav-simple-dropdown-link:nth-child(6) {
+  animation-delay: 120ms;
+} 

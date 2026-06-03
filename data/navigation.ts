@@ -866,33 +866,125 @@ const navigationItems: NavigationItem[] = [
       },
     ],
   },
+
   {
     key: "resources",
-    label: t("资源中心", "Resources", "Recursos", "Ressources", "자료실", "Ресурсы"),
-    href: anchorPath("resources"),
+    label: t(
+      "资源中心",
+      "Resources",
+      "Recursos",
+      "Ressources",
+      "자료실",
+      "Ресурсы"
+    ),
+
+    /*
+       说明：
+       1. 当前阶段不做资源中心首页
+       2. 点击顶部导航“资源中心”时，直接进入“规格书下载”
+       3. /resources 页面本身也会通过 app/resources/page.tsx 重定向到 /resources/datasheets
+    */
+    href: localizedPath("resources/datasheets"),
+
     order: 4,
     enabled: true,
-    dropdownType: "none",
+
+    /*
+       simple 表示使用简单下拉栏
+       当前资源中心只先开放“规格书下载”
+    */
+    dropdownType: "simple",
+
+    /*
+       手机端 / 简单下拉栏子项
+       说明：
+       1. 规格书下载直接进入 /resources/datasheets
+       2. 其他资源栏目页面还没做，所以先统一跳到 /resources/datasheets
+       3. 后续对应页面做好后，再分别改成对应路径
+    */
     mobileChildren: [
       {
-        key: "mobile-resource-catalogs",
-        label: t("产品目录", "Product Catalogs", "Catálogos de productos", "Catalogues produits", "제품 카탈로그", "Каталоги продуктов"),
-        href: anchorPath("resources"),
+        key: "mobile-resource-datasheets",
+        label: t(
+          "规格书下载",
+          "Datasheets",
+          "Fichas técnicas",
+          "Fiches techniques",
+          "사양서 다운로드",
+          "Спецификации"
+        ),
+        href: localizedPath("resources/datasheets"),
         order: 1,
         enabled: true,
       },
       {
-        key: "mobile-resource-guides",
-        label: t("选型指南", "Selection Guides", "Guías de selección", "Guides de sélection", "선정 가이드", "Руководства по выбору"),
-        href: anchorPath("resources"),
+        key: "mobile-resource-selection-support",
+        label: t(
+          "选型支持",
+          "Selection Support",
+          "Soporte de selección",
+          "Support de sélection",
+          "선정 지원",
+          "Поддержка подбора"
+        ),
+        href: localizedPath("resources/datasheets"),
         order: 2,
         enabled: true,
       },
       {
-        key: "mobile-resource-news",
-        label: t("技术文章 / 新闻", "Articles / News", "Artículos / Noticias", "Articles / Actualités", "기술 문서 / 뉴스", "Статьи / Новости"),
-        href: anchorPath("resources"),
+        key: "mobile-resource-installation-guide",
+        label: t(
+          "安装教程",
+          "Installation Guides",
+          "Guías de instalación",
+          "Guides d’installation",
+          "설치 가이드",
+          "Инструкции по установке"
+        ),
+        href: localizedPath("resources/datasheets"),
         order: 3,
+        enabled: true,
+      },
+      {
+        key: "mobile-resource-material-compatibility",
+        label: t(
+          "材料兼容",
+          "Material Compatibility",
+          "Compatibilidad de materiales",
+          "Compatibilité des matériaux",
+          "소재 호환성",
+          "Совместимость материалов"
+        ),
+        href: localizedPath("resources/datasheets"),
+        order: 4,
+        enabled: true,
+      },
+      {
+        key: "mobile-resource-technical-qa",
+        label: t(
+          "技术问答",
+          "Technical Q&A",
+          "Preguntas técnicas",
+          "Questions techniques",
+          "기술 Q&A",
+          "Технические вопросы"
+        ),
+        href: localizedPath("resources/datasheets"),
+        order: 5,
+        enabled: true,
+      },
+      {
+        key: "mobile-resource-news",
+        label: t(
+          "公司新闻",
+          "Company News",
+          "Noticias de la empresa",
+          "Actualités de l’entreprise",
+          "회사 뉴스",
+          "Новости компании"
+        ),
+        href: localizedPath("resources/datasheets"),
+        order: 6,
         enabled: true,
       },
     ],
@@ -1577,4 +1669,4 @@ export function getProductImageDisplayMeta(src: string, locale: string) {
       ? "Fluidic component for microfluidic systems"
       : "用于微流体液路系统的核心部件",
   };
-}
+} 

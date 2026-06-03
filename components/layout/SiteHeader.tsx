@@ -653,24 +653,30 @@ export default function SiteHeader() {
         {/* PC 端中间区域：默认显示导航，搜索模式下切换为搜索框 */}
         <div className="site-header-center">
           {/* PC 端主导航 */}
+
+          {/* PC 端主导航 */}
           <nav className="site-nav" aria-label={headerText.navAriaLabel}>
             {navigationItems.map((item) => {
               const navLabel = getLocalizedText(item.label, currentLocale);
 
               const navHref = getLocalizedHref(item.href, currentLocale);
 
+              /* 判断是否是产品中心 / 关于我们这种复杂 Mega 下拉 */
               const hasMegaDropdown =
                 item.dropdownType === "mega" && Boolean(item.megaDropdown);
 
+              /* 判断是否是资源中心 / 联系与合作这种简单下拉 */
               const hasSimpleDropdown =
                 item.dropdownType === "simple" &&
                 Boolean(item.mobileChildren?.length);
 
+              /* simple 下拉栏的数据 */
               const simpleChildren =
                 item.mobileChildren
                   ?.filter((child) => child.enabled)
                   .sort((a, b) => a.order - b.order) ?? [];
 
+              /* 当前 simple 下拉是否打开 */
               const isSimpleDropdownOpen =
                 desktopMegaKey === item.key && hasSimpleDropdown;
 
@@ -680,9 +686,24 @@ export default function SiteHeader() {
                   className={`site-nav-item ${hasMegaDropdown || hasSimpleDropdown
                       ? "site-nav-item-has-dropdown"
                       : ""
+                    } ${hasSimpleDropdown ? "site-nav-item-has-simple-dropdown" : ""
                     } ${isSimpleDropdownOpen ? "site-nav-item-simple-open" : ""
                     }`}
-                  onMouseEnter={() => handleDesktopNavMouseEnter(item)}
+                  onMouseEnter={() => {
+                    handleDesktopNavMouseEnter(item);
+                  }}
+                  onMouseLeave={() => {
+                    /*
+                       重点：
+                       1. 只要鼠标离开当前 simple 菜单区域，就关闭 simple 下拉栏
+                       2. 这样 Resources 和 Contact & Partnership 不会同时保持打开
+                       3. 产品中心 / 关于我们 Mega Menu 不在这里处理
+                    */
+                    if (hasSimpleDropdown) {
+                      setDesktopMegaKey(null);
+                      setActiveMegaCategoryKey(null);
+                    }
+                  }}
                 >
                   <Link
                     href={navHref}
@@ -693,9 +714,17 @@ export default function SiteHeader() {
                     {navLabel}
                   </Link>
 
+                  {/* ================================
+            PC 端 simple 简单下拉栏
+
+            说明：
+            1. 只在当前 simple 菜单打开时渲染
+            2. 不打开时页面里没有这个下拉 DOM
+            3. 这样可以彻底避免两个下拉栏同时显示
+        ================================ */}
                   {isSimpleDropdownOpen ? (
                     <div
-                      className="site-nav-simple-dropdown"
+                      className="site-nav-simple-dropdown site-nav-simple-dropdown-open"
                       onMouseEnter={() => {
                         setDesktopMegaKey(item.key);
                         setActiveMegaCategoryKey(null);

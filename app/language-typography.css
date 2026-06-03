@@ -1176,3 +1176,72 @@ html[lang="ru"] .site-header button,
 html[lang="ru"] .site-header span {
   letter-spacing: var(--locale-letter-spacing-nav);
 } 
+/* =========================================================
+   首页企业优势模块｜恢复卡片展开动效
+   说明：
+   1. 前面为了修复多语言文字跳动，限制了 transition-property
+   2. 企业优势模块的展开动效需要 flex / width / grid 等属性参与过渡
+   3. 这里单独恢复该模块的动效，不影响全站文字稳定性
+========================================================= */
+
+.home-advantage-panels,
+.home-advantage-panel,
+.home-advantage-panel::before,
+.home-advantage-panel::after,
+.home-panel-content,
+.home-panel-title,
+.home-panel-brief,
+.home-panel-detail {
+  transition-property:
+    flex,
+    flex-grow,
+    flex-basis,
+    width,
+    max-width,
+    min-width,
+    grid-template-columns,
+    opacity,
+    transform,
+    filter,
+    background-color,
+    color,
+    border-color,
+    box-shadow !important;
+
+  transition-duration: 0.46s !important;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+
+/* 鼠标移入时，保证卡片仍然可以平滑展开 */
+.home-advantage-panels:hover .home-advantage-panel {
+  transition-property:
+    flex,
+    flex-grow,
+    flex-basis,
+    width,
+    max-width,
+    min-width,
+    opacity,
+    transform,
+    filter,
+    background-color,
+    color,
+    box-shadow !important;
+}
+
+/* 当前鼠标选中的卡片，恢复放大/展开的平滑过渡 */
+.home-advantage-panels:hover .home-advantage-panel:hover {
+  transition-property:
+    flex,
+    flex-grow,
+    flex-basis,
+    width,
+    max-width,
+    min-width,
+    opacity,
+    transform,
+    filter,
+    background-color,
+    color,
+    box-shadow !important;
+} 
