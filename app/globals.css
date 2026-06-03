@@ -14412,3 +14412,551 @@ html[lang="ru"] .home-hero-btn:hover {
   color: #09e9b4;
   font-weight: 700;
 }
+
+/* =========================================================
+   Header 搜索模式改版
+   说明：
+   1. 默认只显示搜索图标按钮
+   2. 点击后导航区域切换为搜索输入框
+   3. 点击搜索外区域 / ESC / X 后退出
+   4. 解决搜索框长期占用导航宽度的问题
+   5. 只改 Header 搜索表现，不改搜索结果逻辑
+========================================================= */
+
+.site-header-center {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* 给导航隐藏加过渡，不影响原本 hover */
+.site-header-center .site-nav {
+  width: 100%;
+  transition:
+    opacity 0.22s ease,
+    visibility 0.22s ease,
+    transform 0.22s ease;
+}
+
+/* 搜索打开时，隐藏 PC 导航 */
+.site-header-search-open .site-header-center .site-nav {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  pointer-events: none;
+}
+
+/* 右侧搜索图标按钮 */
+.site-search-trigger {
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(23, 51, 104, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.94);
+  color: #173368;
+  cursor: pointer;
+  transition:
+    color 0.22s ease,
+    background 0.22s ease,
+    border-color 0.22s ease,
+    transform 0.22s ease;
+}
+
+.site-search-trigger:hover,
+.site-header-search-open .site-search-trigger {
+  color: #061a3a;
+  background: #09e9b4;
+  border-color: #09e9b4;
+  transform: translateY(-1px);
+}
+
+/* 搜索模式表单 */
+.site-search-mode-form {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 46px;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-50%) translateY(8px);
+  pointer-events: none;
+  transition:
+    opacity 0.22s ease,
+    visibility 0.22s ease,
+    transform 0.22s ease;
+}
+
+/* 搜索打开时显示搜索表单 */
+.site-header-search-open .site-search-mode-form {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+/* 搜索输入框外壳 */
+.site-search-mode-box {
+  height: 46px;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr);
+  align-items: center;
+  background: #f4f7fb;
+  border: 1px solid rgba(23, 51, 104, 0.16);
+  border-radius: 8px;
+  transition:
+    background 0.22s ease,
+    border-color 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.site-search-mode-box:focus-within {
+  background: #ffffff;
+  border-color: #09e9b4;
+  box-shadow: 0 0 0 3px rgba(9, 233, 180, 0.12);
+}
+
+/* 搜索输入框 */
+.site-search-mode-input {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  padding: 0 16px 0 0;
+  border: 0;
+  outline: none;
+  color: #173368;
+  background: transparent;
+  font-size: 15px;
+  font-weight: 650;
+}
+
+.site-search-mode-input::placeholder {
+  color: #8c9ab1;
+  font-weight: 600;
+}
+
+/* 搜索模式关闭按钮 */
+.site-search-mode-close {
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(23, 51, 104, 0.16);
+  border-radius: 8px;
+  background: #ffffff;
+  color: #173368;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    color 0.22s ease,
+    background 0.22s ease,
+    border-color 0.22s ease,
+    transform 0.22s ease;
+}
+
+.site-search-mode-close:hover {
+  color: #061a3a;
+  background: #09e9b4;
+  border-color: #09e9b4;
+  transform: translateY(-1px);
+}
+
+/* 搜索图标复用原类名，避免额外引入 SVG */
+.site-search-trigger .site-search-icon,
+.site-search-mode-box .site-search-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+/* 移动端不显示 PC 搜索按钮和搜索模式 */
+@media (max-width: 1000px) {
+  .site-header-center {
+    display: none;
+  }
+
+  .site-search-trigger,
+  .site-search-mode-form {
+    display: none;
+  }
+} 
+/* =========================================================
+   Header 搜索按钮｜与语言栏视觉统一
+   说明：
+   1. 搜索按钮默认改为透明底
+   2. 边框、背景、透明度与 Language 按钮保持一致
+   3. hover 时只变荧光色，不上移
+   4. 只影响 PC 端 Header 搜索按钮
+========================================================= */
+
+.site-search-trigger {
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  transform: none;
+}
+
+.site-search-trigger:hover,
+.site-header-search-open .site-search-trigger {
+  color: #061a3a;
+  background: #09e9b4;
+  border-color: #09e9b4;
+  transform: none;
+}
+
+/* 搜索图标颜色跟随按钮 color */
+.site-search-trigger .site-search-icon {
+  color: inherit;
+}
+
+/* 搜索模式打开后的输入框，也保持半透明质感 */
+.site-search-mode-box {
+  height: 46px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  backdrop-filter: blur(10px);
+}
+
+.site-search-mode-box:focus-within {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: #09e9b4;
+  box-shadow: 0 0 0 3px rgba(9, 233, 180, 0.12);
+}
+
+.site-search-mode-input {
+  color: #ffffff;
+}
+
+.site-search-mode-input::placeholder {
+  color: rgba(255, 255, 255, 0.68);
+} 
+
+/* =========================================================
+   Header 搜索按钮｜滚动后颜色切换
+   说明：
+   1. 顶部透明状态：搜索按钮白色，适合压在 banner 上
+   2. 页面下滑后：Header 变白，搜索按钮同步变深蓝
+   3. hover 仍然保持荧光青
+   4. 不产生上移动效
+========================================================= */
+
+/* 下滑后：搜索按钮改成白底 / 深蓝图标 / 深蓝边框 */
+.site-header-scrolled .site-search-trigger {
+  color: #173368;
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(23, 51, 104, 0.24);
+  transform: none;
+}
+
+/* 下滑后 hover：只变荧光色，不上移 */
+.site-header-scrolled .site-search-trigger:hover,
+.site-header-scrolled.site-header-search-open .site-search-trigger {
+  color: #061a3a;
+  background: #09e9b4;
+  border-color: #09e9b4;
+  transform: none;
+}
+
+/* 下滑后搜索模式输入框：改成浅色输入框 */
+.site-header-scrolled .site-search-mode-box {
+  background: #f4f7fb;
+  border-color: rgba(23, 51, 104, 0.18);
+}
+
+/* 下滑后搜索框聚焦 */
+.site-header-scrolled .site-search-mode-box:focus-within {
+  background: #ffffff;
+  border-color: #09e9b4;
+  box-shadow: 0 0 0 3px rgba(9, 233, 180, 0.12);
+}
+
+/* 下滑后搜索框文字改成深蓝 */
+.site-header-scrolled .site-search-mode-input {
+  color: #173368;
+}
+
+/* 下滑后 placeholder 改成灰蓝 */
+.site-header-scrolled .site-search-mode-input::placeholder {
+  color: #8c9ab1;
+}
+
+/* 下滑后搜索框里的图标也改成深蓝 */
+.site-header-scrolled .site-search-mode-box .site-search-icon {
+  color: #173368;
+} 
+
+/* =========================================================
+   Header 搜索按钮｜顶部 Hover 与 2K 对齐微调
+   说明：
+   1. 页面在顶部未滚动时，鼠标滑到 Header 区域，搜索按钮也切换为浅色可见状态
+   2. 保证搜索按钮和 Language 按钮视觉一致
+   3. 2K 大屏下搜索按钮单独下移 2px，用于和语言按钮垂直对齐
+   4. hover 时只变色，不上移动效
+========================================================= */
+
+/* 顶部未滚动时：鼠标滑到整个 Header，搜索按钮也变成可见的浅色状态 */
+.site-header:hover .site-search-trigger {
+  color: #173368;
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(23, 51, 104, 0.24);
+  transform: none;
+}
+
+/* 顶部 Header hover 状态下，再 hover 搜索按钮：变荧光色 */
+.site-header:hover .site-search-trigger:hover,
+.site-header:hover.site-header-search-open .site-search-trigger {
+  color: #061a3a;
+  background: #09e9b4;
+  border-color: #09e9b4;
+  transform: none;
+}
+
+/* 顶部 Header hover 状态下，搜索模式输入框也变成浅色，避免白色文字看不清 */
+.site-header:hover .site-search-mode-box {
+  background: #f4f7fb;
+  border-color: rgba(23, 51, 104, 0.18);
+}
+
+/* 顶部 Header hover 状态下，搜索框聚焦 */
+.site-header:hover .site-search-mode-box:focus-within {
+  background: #ffffff;
+  border-color: #09e9b4;
+  box-shadow: 0 0 0 3px rgba(9, 233, 180, 0.12);
+}
+
+/* 顶部 Header hover 状态下，搜索框文字和图标变深蓝 */
+.site-header:hover .site-search-mode-input {
+  color: #173368;
+}
+
+.site-header:hover .site-search-mode-input::placeholder {
+  color: #8c9ab1;
+}
+
+.site-header:hover .site-search-mode-box .site-search-icon {
+  color: #173368;
+}
+
+/* =========================================================
+   Header 搜索按钮｜外框加粗到 2px
+   说明：
+   1. 搜索按钮外框改为 2px
+   2. 与 Language 按钮视觉重量保持一致
+   3. hover、滚动、Header hover 状态都统一为 2px
+========================================================= */
+
+.site-search-trigger {
+  border-width: 2px;
+}
+
+/* 顶部透明状态 */
+.site-header:not(.site-header-scrolled) .site-search-trigger {
+  border-width: 2px;
+}
+
+/* 鼠标滑到 Header 时 */
+.site-header:hover .site-search-trigger {
+  border-width: 2px;
+}
+
+/* 页面滚动后 */
+.site-header-scrolled .site-search-trigger {
+  border-width: 2px;
+}
+
+/* 搜索按钮 hover / 搜索打开状态 */
+.site-search-trigger:hover,
+.site-header-search-open .site-search-trigger,
+.site-header-scrolled .site-search-trigger:hover,
+.site-header:hover .site-search-trigger:hover {
+  border-width: 2px;
+} 
+
+/* =========================================================
+   Header 搜索模式｜搜索框位置修正
+   说明：
+   1. 搜索模式下，搜索框不要贴着 Logo
+   2. 搜索框不要铺满整条导航区域
+   3. 搜索图标重新居中，避免被旧样式影响
+   4. 只影响 PC 端 Header 搜索模式
+========================================================= */
+
+/* 搜索模式表单：改为右侧对齐，不从 Logo 后面马上开始 */
+.site-search-mode-form {
+  left: auto;
+  right: 0;
+  width: min(860px, calc(100% - 48px));
+  grid-template-columns: minmax(0, 1fr);
+}
+
+/* 搜索框本体 */
+.site-search-mode-box {
+  height: 46px;
+  grid-template-columns: 50px minmax(0, 1fr);
+  overflow: hidden;
+}
+
+/* 搜索框里的图标强制居中，避免旧样式影响 */
+.site-search-mode-box .site-search-icon {
+  position: relative;
+  left: auto;
+  top: auto;
+  width: 18px;
+  height: 18px;
+  margin: 0 auto;
+  display: block;
+  transform: none;
+}
+
+/* 如果旧样式用了伪元素，这里确保伪元素也居中 */
+.site-search-mode-box .site-search-icon::before,
+.site-search-mode-box .site-search-icon::after {
+  box-sizing: border-box;
+}
+
+/* 输入框左侧不要再额外挤压 */
+.site-search-mode-input {
+  padding-left: 0;
+}
+
+/* 2K 大屏时搜索框可以稍微长一点，但不要贴 Logo */
+@media (min-width: 1800px) {
+  .site-search-mode-form {
+    width: min(980px, calc(100% - 72px));
+  }
+}
+
+/* 1400 左右屏幕再收短一点，避免挤压 Language */
+@media (max-width: 1480px) {
+  .site-search-mode-form {
+    width: min(680px, calc(100% - 40px));
+  }
+} 
+
+/* =========================================================
+   Header 搜索模式｜搜索框居中与响应式宽度最终修正
+   说明：
+   1. 搜索模式下，搜索框在导航中间区域居中
+   2. 2K 屏幕可以更长
+   3. 普通屏幕自动缩短，避免挤压 Language
+   4. 不贴 Logo，也不贴右侧按钮
+========================================================= */
+
+/* 搜索模式表单：居中显示 */
+.site-search-mode-form {
+  left: 50%;
+  right: auto;
+  width: min(980px, calc(100% - 40px));
+  grid-template-columns: minmax(0, 1fr);
+  transform: translate(-50%, -50%) translateY(8px);
+}
+
+/* 搜索打开后，保持居中进入 */
+.site-header-search-open .site-search-mode-form {
+  transform: translate(-50%, -50%) translateY(0);
+}
+
+/* 搜索框本体 */
+.site-search-mode-box {
+  width: 100%;
+  height: 46px;
+  grid-template-columns: 52px minmax(0, 1fr);
+}
+
+/* 搜索图标居中 */
+.site-search-mode-box .site-search-icon {
+  width: 18px;
+  height: 18px;
+  margin: 0 auto;
+}
+
+/* 输入文字不要贴边 */
+.site-search-mode-input {
+  padding: 0 18px 0 0;
+}
+
+/* 2K 大屏：搜索框可以更长一点 */
+@media (min-width: 1800px) {
+  .site-search-mode-form {
+    width: min(1120px, calc(100% - 56px));
+  }
+}
+
+/* 1600 左右：适中长度 */
+@media (max-width: 1680px) {
+  .site-search-mode-form {
+    width: min(880px, calc(100% - 40px));
+  }
+}
+
+/* 1400 左右：再收短，避免碰到 Language */
+@media (max-width: 1480px) {
+  .site-search-mode-form {
+    width: min(720px, calc(100% - 36px));
+  }
+}
+
+/* 1280 左右：保持可用，不挤压右侧 */
+@media (max-width: 1320px) {
+  .site-search-mode-form {
+    width: min(620px, calc(100% - 32px));
+  }
+} 
+/* =========================================================
+   Header 搜索模式｜输入框背景修正
+   说明：
+   1. 修正输入文字后 input 区域变成浅蓝色的问题
+   2. 强制 input 背景透明，让它继承外层搜索框背景
+   3. 覆盖 Chrome 自动填充 / 搜索框默认样式
+   4. 隐藏 type="search" 自带的小 X，避免和设计不统一
+========================================================= */
+
+.site-search-mode-input {
+  background: transparent !important;
+  box-shadow: none !important;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* Chrome / Edge 自动填充时会给 input 加浅蓝底，这里强制覆盖 */
+.site-search-mode-input:-webkit-autofill,
+.site-search-mode-input:-webkit-autofill:hover,
+.site-search-mode-input:-webkit-autofill:focus,
+.site-search-mode-input:-webkit-autofill:active {
+  -webkit-text-fill-color: #173368;
+  box-shadow: 0 0 0 1000px transparent inset !important;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+/* 隐藏搜索框自带的清除按钮 */
+.site-search-mode-input::-webkit-search-cancel-button {
+  display: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* 搜索框聚焦时整体保持白色，不让输入区域单独变色 */
+.site-search-mode-box,
+.site-search-mode-box:focus-within {
+  background: rgba(255, 255, 255, 0.96);
+}
+
+/* 如果 Header 在顶部透明状态，也保持搜索框输入区域统一 */
+.site-header:not(.site-header-scrolled) .site-search-mode-input {
+  background: transparent !important;
+} 

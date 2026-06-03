@@ -19,7 +19,8 @@
 
 import type { ChangeEvent, FormEvent } from "react";
 import { useMemo, useState } from "react";
-
+import AmapBlock from "@/components/contact/AmapBlock";
+import { getContactIntlData } from "@/data/contact-cooperation/contact.intl";
 import type { DistributorPageData } from "@/data/contact-cooperation/distributor.intl";
 import {
   buildDistributorPdfHtml,
@@ -175,6 +176,7 @@ function waitForIframeImages(iframeDocument: Document) {
 export default function DistributorPageContent({
   content,
 }: DistributorPageContentProps) {
+
   const [formValues, setFormValues] =
     useState<DistributorFormValues>(initialFormValues);
 
@@ -222,6 +224,34 @@ export default function DistributorPageContent({
       setShowSuccessModal(false);
     }
   }
+
+
+  /* =========================================================
+   联系方式 + 地图数据
+   说明：
+   1. 经销商页面复用“联系我们”页面的联系方式和地图数据
+   2. 根据当前 URL 的语言前缀读取对应语言
+   3. 如果识别不到语言，默认使用英文
+========================================================= */
+
+  const contactPageData = useMemo(() => {
+    if (typeof window === "undefined") {
+      return getContactIntlData("en");
+    }
+
+    const firstPathSegment =
+      window.location.pathname.split("/").filter(Boolean)[0] || "en";
+
+    const locale =
+      firstPathSegment === "es" ||
+        firstPathSegment === "fr" ||
+        firstPathSegment === "ko" ||
+        firstPathSegment === "ru"
+        ? firstPathSegment
+        : "en";
+
+    return getContactIntlData(locale);
+  }, []);
 
   /* =========================================================
      发送邮箱验证码
@@ -879,6 +909,59 @@ export default function DistributorPageContent({
           </form>
         </div>
       </section>
+
+            {/* =====================================================
+          联系方式 + 地图
+          说明：
+          1. 复用联系我们页面的信息模块
+          2. 放在经销商表单和底部 CTA 之间
+          3. 填补表单下方空白，也方便合作伙伴直接查看公司位置和联系方式
+      ===================================================== */}
+      <section
+        className="contact-section contact-info-section distributor-contact-info-section"
+        id="distributor-contact-info"
+      >
+        <div className="contact-section-inner">
+          <div className="contact-section-head">
+            <h2 className="contact-section-title">
+              {contactPageData.contactInfo.title}
+            </h2>
+
+            <p className="contact-section-desc">
+              {contactPageData.contactInfo.description}
+            </p>
+          </div>
+
+          <div className="contact-info-layout">
+            {/* 左侧公司联系信息 */}
+            <section className="contact-company-panel">
+              <h3>
+                {contactPageData.contactInfo.companyName}
+                <span>{contactPageData.contactInfo.companyPosition}</span>
+              </h3>
+
+              {contactPageData.contactInfo.rows.map((row) => (
+                <div className="contact-info-row" key={row.label}>
+                  <div>{row.label}</div>
+                  <div>{row.value}</div>
+                </div>
+              ))}
+            </section>
+
+            {/* 右侧地图 */}
+            <AmapBlock
+              title={contactPageData.contactInfo.map.title}
+              address={contactPageData.contactInfo.map.address}
+              lng={contactPageData.contactInfo.map.lng}
+              lat={contactPageData.contactInfo.map.lat}
+              mapUrl={contactPageData.contactInfo.map.mapUrl}
+              loadingText={contactPageData.form.mapTexts.loading}
+              errorText={contactPageData.form.mapTexts.error}
+              openMapText={contactPageData.form.mapTexts.openMap}
+            />
+          </div>
+        </div>
+      </section> 
 
       {/* =====================================================
           底部 CTA

@@ -3490,4 +3490,556 @@
 /* 选中后正文保持白色可读 */
 .distributor-page .distributor-process-card:hover p {
   color: rgba(255, 255, 255, 0.82);
+}
+
+/* =========================================================
+   经销商合作页｜联系方式 + 地图模块
+   说明：
+   1. 复用联系我们页面 contact-info-section 的结构
+   2. 放在经销商申请表和底部 CTA 之间
+   3. 收紧表单下方空白
+========================================================= */
+
+.distributor-page .distributor-form-section {
+  padding-bottom: 64px;
+}
+
+.distributor-page .distributor-contact-info-section {
+  padding-top: 86px;
+  padding-bottom: 96px;
+  background: #f4f7fb;
+}
+
+.distributor-page .distributor-contact-info-section + .distributor-bottom-cta {
+  margin-top: 0;
+}
+
+@media (max-width: 760px) {
+  .distributor-page .distributor-form-section {
+    padding-bottom: 48px;
+  }
+
+  .distributor-page .distributor-contact-info-section {
+    padding-top: 64px;
+    padding-bottom: 72px;
+  }
 } 
+
+/* =========================================================
+   经销商合作页｜联系方式 + 地图模块紧凑版
+   说明：
+   1. 解决直接复用联系我们模块后过大、过空的问题
+   2. 控制内容宽度，与经销商表单区域保持一致
+   3. 左侧信息和右侧地图高度统一
+   4. 只影响经销商页面，不影响 /contact 联系我们页面
+========================================================= */
+
+.distributor-page .distributor-contact-info-section {
+  padding: 88px 0 96px;
+  background: #f4f7fb;
+}
+
+/* 整体宽度收窄，避免撑满全屏 */
+.distributor-page .distributor-contact-info-section .contact-section-inner {
+  width: min(1280px, calc(100% - 64px));
+  margin: 0 auto;
+}
+
+/* 标题区不要太宽，也不要太散 */
+.distributor-page .distributor-contact-info-section .contact-section-head {
+  max-width: 760px;
+  margin-bottom: 42px;
+}
+
+/* 标题大小收一点，和经销商页面更统一 */
+.distributor-page .distributor-contact-info-section .contact-section-title {
+  font-size: clamp(38px, 4vw, 56px);
+  line-height: 1.12;
+  letter-spacing: -0.045em;
+  font-weight: 900;
+  color: #173368;
+}
+
+.distributor-page .distributor-contact-info-section .contact-section-desc {
+  max-width: 620px;
+  margin-top: 18px;
+  color: #5d6d86;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* 左右布局收紧 */
+.distributor-page .distributor-contact-info-section .contact-info-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 28px;
+  align-items: stretch;
+}
+
+/* 左侧公司信息卡片 */
+.distributor-page .distributor-contact-info-section .contact-company-panel {
+  min-height: 420px;
+  padding: 36px 36px 34px;
+  background: #ffffff;
+  border: 1px solid rgba(23, 51, 104, 0.1);
+}
+
+/* 公司名称不要太大 */
+.distributor-page .distributor-contact-info-section .contact-company-panel h3 {
+  margin-bottom: 28px;
+  color: #173368;
+  font-size: 24px;
+  line-height: 1.35;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+}
+
+.distributor-page .distributor-contact-info-section .contact-company-panel h3 span {
+  display: block;
+  margin-top: 8px;
+  color: #5d6d86;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+/* 信息行更紧凑 */
+.distributor-page .distributor-contact-info-section .contact-info-row {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  min-height: 48px;
+  border-bottom: 1px solid rgba(23, 51, 104, 0.08);
+}
+
+.distributor-page .distributor-contact-info-section .contact-info-row:last-child {
+  border-bottom: 0;
+}
+
+.distributor-page .distributor-contact-info-section .contact-info-row > div:first-child {
+  padding: 15px 16px;
+  color: #71809a;
+  background: #f4f7fb;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.distributor-page .distributor-contact-info-section .contact-info-row > div:last-child {
+  padding: 15px 18px;
+  color: #173368;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 750;
+  word-break: break-word;
+}
+
+/* 右侧地图区域高度统一，不要过空 */
+.distributor-page .distributor-contact-info-section .contact-map-panel,
+.distributor-page .distributor-contact-info-section .amap-block,
+.distributor-page .distributor-contact-info-section .contact-amap-block {
+  min-height: 420px;
+  height: 420px;
+  background: #ffffff;
+  border: 1px solid rgba(23, 51, 104, 0.1);
+  overflow: hidden;
+}
+
+/* 如果 AMap 容器内部有白底，也强制撑满 */
+.distributor-page .distributor-contact-info-section .contact-map-panel > div,
+.distributor-page .distributor-contact-info-section .amap-block > div,
+.distributor-page .distributor-contact-info-section .contact-amap-block > div {
+  height: 100%;
+}
+
+/* 表单和联系信息之间不要有大空白 */
+.distributor-page .distributor-form-section {
+  padding-bottom: 56px;
+}
+
+/* 联系信息和底部 CTA 衔接 */
+.distributor-page .distributor-contact-info-section + .distributor-bottom-cta {
+  margin-top: 0;
+}
+
+/* =========================================================
+   经销商合作页｜联系方式模块响应式
+========================================================= */
+
+@media (max-width: 1080px) {
+  .distributor-page .distributor-contact-info-section .contact-info-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .distributor-page .distributor-contact-info-section .contact-company-panel,
+  .distributor-page .distributor-contact-info-section .contact-map-panel,
+  .distributor-page .distributor-contact-info-section .amap-block,
+  .distributor-page .distributor-contact-info-section .contact-amap-block {
+    min-height: 360px;
+    height: auto;
+  }
+}
+
+@media (max-width: 760px) {
+  .distributor-page .distributor-contact-info-section {
+    padding: 64px 0 72px;
+  }
+
+  .distributor-page .distributor-contact-info-section .contact-section-inner {
+    width: min(1280px, calc(100% - 32px));
+  }
+
+  .distributor-page .distributor-contact-info-section .contact-section-head {
+    margin-bottom: 30px;
+  }
+
+  .distributor-page .distributor-contact-info-section .contact-section-title {
+    font-size: 34px;
+  }
+
+  .distributor-page .distributor-contact-info-section .contact-company-panel {
+    padding: 28px 22px;
+  }
+
+  .distributor-page .distributor-contact-info-section .contact-info-row {
+    grid-template-columns: 1fr;
+  }
+
+  .distributor-page .distributor-contact-info-section .contact-info-row > div:first-child {
+    padding: 12px 14px 4px;
+    background: transparent;
+  }
+
+  .distributor-page .distributor-contact-info-section .contact-info-row > div:last-child {
+    padding: 4px 14px 14px;
+  }
+}
+
+/* =========================================================
+   经销商合作页｜联系方式与地图模块最终排版修正
+   说明：
+   1. 只影响经销商页面里的联系方式模块
+   2. 不影响 /contact 联系我们页面
+   3. 收紧标题、卡片、地图高度
+   4. 让模块更像经销商页面的一个信息区，而不是完整联系我们页面
+========================================================= */
+
+/* 整个联系方式模块：减少上下空白 */
+.distributor-page .distributor-contact-info-section {
+  padding: 72px 0 80px;
+  background: #f4f7fb;
+}
+
+/* 控制内容总宽度，和上面的表单模块保持一致 */
+.distributor-page .distributor-contact-info-section .contact-section-inner {
+  width: min(1280px, calc(100% - 64px));
+  margin: 0 auto;
+}
+
+/* 标题区收紧 */
+.distributor-page .distributor-contact-info-section .contact-section-head {
+  max-width: 760px;
+  margin-bottom: 34px;
+}
+
+/* 标题不要过大，尤其韩语、俄语会显得很重 */
+.distributor-page .distributor-contact-info-section .contact-section-title {
+  margin: 0;
+  color: #173368;
+  font-size: clamp(36px, 3.2vw, 48px);
+  line-height: 1.16;
+  letter-spacing: -0.035em;
+  font-weight: 900;
+}
+
+/* 说明文字控制宽度和行距 */
+.distributor-page .distributor-contact-info-section .contact-section-desc {
+  max-width: 620px;
+  margin-top: 16px;
+  color: #5d6d86;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* 左右布局：左信息，右地图 */
+.distributor-page .distributor-contact-info-section .contact-info-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: 26px;
+  align-items: stretch;
+}
+
+/* 左侧公司信息卡片 */
+.distributor-page .distributor-contact-info-section .contact-company-panel {
+  min-height: 430px;
+  height: 100%;
+  padding: 34px 34px 30px;
+  background: #ffffff;
+  border: 1px solid rgba(23, 51, 104, 0.1);
+}
+
+/* 公司名称区域收紧 */
+.distributor-page .distributor-contact-info-section .contact-company-panel h3 {
+  margin: 0 0 26px;
+  color: #173368;
+  font-size: 24px;
+  line-height: 1.35;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+}
+
+.distributor-page
+  .distributor-contact-info-section
+  .contact-company-panel
+  h3
+  span {
+  display: block;
+  margin-top: 8px;
+  color: #5d6d86;
+  font-size: 14px;
+  line-height: 1.55;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+/* 信息行改得更紧凑 */
+.distributor-page .distributor-contact-info-section .contact-info-row {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  min-height: 52px;
+  border-bottom: 1px solid rgba(23, 51, 104, 0.08);
+}
+
+.distributor-page .distributor-contact-info-section .contact-info-row:last-child {
+  border-bottom: 0;
+}
+
+.distributor-page
+  .distributor-contact-info-section
+  .contact-info-row
+  > div:first-child {
+  padding: 15px 16px;
+  color: #71809a;
+  background: #f4f7fb;
+  font-size: 13px;
+  line-height: 1.45;
+  font-weight: 800;
+}
+
+.distributor-page
+  .distributor-contact-info-section
+  .contact-info-row
+  > div:last-child {
+  padding: 15px 18px;
+  color: #173368;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 750;
+  word-break: break-word;
+}
+
+/* 右侧地图卡片：强制和左侧等高 */
+.distributor-page .distributor-contact-info-section .contact-map-panel,
+.distributor-page .distributor-contact-info-section .contact-amap-block,
+.distributor-page .distributor-contact-info-section .amap-block {
+  min-height: 430px;
+  height: 430px;
+  background: #ffffff;
+  border: 1px solid rgba(23, 51, 104, 0.1);
+  overflow: hidden;
+}
+
+/* 地图内部撑满 */
+.distributor-page .distributor-contact-info-section .contact-map-panel > div,
+.distributor-page .distributor-contact-info-section .contact-amap-block > div,
+.distributor-page .distributor-contact-info-section .amap-block > div {
+  height: 100%;
+}
+
+/* 地图信息窗不要太靠上，稍微居中一点 */
+.distributor-page .distributor-contact-info-section .amap-info-window,
+.distributor-page .distributor-contact-info-section .contact-map-info {
+  transform: translateY(28px);
+}
+
+/* 表单和联系信息之间收紧 */
+.distributor-page .distributor-form-section {
+  padding-bottom: 48px;
+}
+
+/* 联系信息和底部 CTA 衔接 */
+.distributor-page .distributor-contact-info-section + .distributor-bottom-cta {
+  margin-top: 0;
+}
+
+/* =========================================================
+   响应式
+========================================================= */
+
+@media (max-width: 1080px) {
+  .distributor-page .distributor-contact-info-section .contact-info-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .distributor-page .distributor-contact-info-section .contact-company-panel,
+  .distributor-page .distributor-contact-info-section .contact-map-panel,
+  .distributor-page .distributor-contact-info-section .contact-amap-block,
+  .distributor-page .distributor-contact-info-section .amap-block {
+    min-height: 360px;
+    height: auto;
+  }
+}
+
+@media (max-width: 760px) {
+  .distributor-page .distributor-contact-info-section {
+    padding: 56px 0 68px;
+  }
+
+  .distributor-page .distributor-contact-info-section .contact-section-inner {
+    width: min(1280px, calc(100% - 32px));
+  }
+
+  .distributor-page .distributor-contact-info-section .contact-section-head {
+    margin-bottom: 28px;
+  }
+
+  .distributor-page .distributor-contact-info-section .contact-section-title {
+    font-size: 34px;
+  }
+
+  .distributor-page .distributor-contact-info-section .contact-company-panel {
+    padding: 26px 22px;
+  }
+
+  .distributor-page .distributor-contact-info-section .contact-company-panel h3 {
+    font-size: 22px;
+  }
+
+  .distributor-page .distributor-contact-info-section .contact-info-row {
+    grid-template-columns: 1fr;
+  }
+
+  .distributor-page
+    .distributor-contact-info-section
+    .contact-info-row
+    > div:first-child {
+    padding: 12px 14px 4px;
+    background: transparent;
+  }
+
+  .distributor-page
+    .distributor-contact-info-section
+    .contact-info-row
+    > div:last-child {
+    padding: 4px 14px 14px;
+  }
+}
+
+
+/* =========================================================
+   经销商合作页｜高德地图底图铺满右侧卡片
+   说明：
+   1. 不是压缩右侧地图区域
+   2. 而是让高德地图底图本身铺满整个地图卡片
+   3. 解决地图只显示上半部分、下方空白的问题
+   4. 只影响经销商页面，不影响 /contact 联系我们页面
+========================================================= */
+
+/* 右侧地图卡片高度，和左侧信息卡片统一 */
+.distributor-page .distributor-contact-info-section {
+  --distributor-map-height: 430px;
+}
+
+/* 右侧地图外层 */
+.distributor-page .distributor-contact-info-section .contact-map-panel,
+.distributor-page .distributor-contact-info-section .contact-amap-block,
+.distributor-page .distributor-contact-info-section .amap-block {
+  height: var(--distributor-map-height) !important;
+  min-height: var(--distributor-map-height) !important;
+  max-height: var(--distributor-map-height) !important;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* AmapBlock 直接子级必须撑满 */
+.distributor-page .distributor-contact-info-section .contact-map-panel > div,
+.distributor-page .distributor-contact-info-section .contact-amap-block > div,
+.distributor-page .distributor-contact-info-section .amap-block > div {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: var(--distributor-map-height) !important;
+}
+
+/* 高德地图真实底图容器强制铺满 */
+.distributor-page .distributor-contact-info-section .amap-container,
+.distributor-page .distributor-contact-info-section .amap-maps,
+.distributor-page .distributor-contact-info-section .amap-layers,
+.distributor-page .distributor-contact-info-section .amap-layer,
+.distributor-page .distributor-contact-info-section .amap-drags,
+.distributor-page .distributor-contact-info-section .amap-overlays,
+.distributor-page .distributor-contact-info-section .amap-viewport {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: var(--distributor-map-height) !important;
+}
+
+/* 高德瓦片层也强制撑满高度 */
+.distributor-page .distributor-contact-info-section .amap-tile,
+.distributor-page .distributor-contact-info-section .amap-tile-container,
+.distributor-page .distributor-contact-info-section .amap-tile-layer {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* 如果 AmapBlock 内部有自定义地图容器，也一起撑满 */
+.distributor-page .distributor-contact-info-section .contact-map,
+.distributor-page .distributor-contact-info-section .contact-map-container,
+.distributor-page .distributor-contact-info-section .contact-map-viewport {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: var(--distributor-map-height) !important;
+}
+
+/* 信息窗保持在地图上方，不影响底图高度 */
+.distributor-page .distributor-contact-info-section .amap-info,
+.distributor-page .distributor-contact-info-section .amap-info-content,
+.distributor-page .distributor-contact-info-section .amap-info-outer {
+  z-index: 10;
+}
+
+/* 手机端地图高度适当降低 */
+@media (max-width: 1080px) {
+  .distributor-page .distributor-contact-info-section {
+    --distributor-map-height: 360px;
+  }
+ 
+  .distributor-page .distributor-contact-info-section .contact-map-panel,
+  .distributor-page .distributor-contact-info-section .contact-amap-block,
+  .distributor-page .distributor-contact-info-section .amap-block,
+  .distributor-page .distributor-contact-info-section .contact-map-panel > div,
+  .distributor-page .distributor-contact-info-section .contact-amap-block > div,
+  .distributor-page .distributor-contact-info-section .amap-block > div,
+  .distributor-page .distributor-contact-info-section .amap-container,
+  .distributor-page .distributor-contact-info-section .amap-maps,
+  .distributor-page .distributor-contact-info-section .amap-layers,
+  .distributor-page .distributor-contact-info-section .amap-layer,
+  .distributor-page .distributor-contact-info-section .amap-drags,
+  .distributor-page .distributor-contact-info-section .amap-overlays,
+  .distributor-page .distributor-contact-info-section .amap-viewport {
+    min-height: var(--distributor-map-height) !important;
+    height: var(--distributor-map-height) !important;
+  }
+}
+
+/* =========================================================
+   经销商合作页｜联系方式模块整体改为白色背景
+   说明：
+   1. 把 Contact Information 整个模块背景改为白色
+   2. 左右卡片仍然保持白底
+   3. 避免地图加载不完整时露出浅灰色
+   4. 只影响经销商页面，不影响 /contact 联系我们页面
+========================================================= */
+
+/* 整个联系方式模块背景改白 */
+.distributor-page .distributor-contact-info-section {
+  background: #ffffff !important;
+}

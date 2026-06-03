@@ -3,7 +3,13 @@
 import Image from "next/image"; // 引入 Next.js 图片组件，用于导航栏产品图片展示
 import Link from "next/link"; // 引入 Next.js 的 Link 组件，用于站内跳转
 import { usePathname } from "next/navigation"; // 引入 usePathname，用于获取当前页面路径
-import { useEffect, useMemo, useState, type MouseEvent } from "react"; // 引入 React 状态、生命周期、缓存和事件类型
+import {
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type MouseEvent,
+} from "react"; // 引入 React 状态、生命周期、缓存、Ref 和事件类型
 
 import {
   getLocalizedHref, // 从多语言路径对象中读取当前语言路径
@@ -137,6 +143,24 @@ export default function SiteHeader() {
   ================================ */
   const [openMobileSectionKey, setOpenMobileSectionKey] =
     useState<NavigationKey | null>(null);
+
+  /* ================================
+     PC 端搜索模式
+     说明：
+     1. 默认只显示一个搜索图标按钮，避免搜索框长期占用导航宽度
+     2. 点击搜索图标后，中间导航区域切换成搜索输入框
+     3. 点击搜索框以外区域、点击关闭按钮或按 ESC，会退出搜索模式
+  ================================ */
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+  // 搜索模式表单区域，用于判断点击是否发生在搜索框内部
+  const searchModeRef = useRef<HTMLFormElement | null>(null);
+
+  // 搜索图标按钮，用于避免点击按钮时被判断成外部点击
+  const searchTriggerRef = useRef<HTMLButtonElement | null>(null);
+
+  // 搜索输入框，用于打开搜索模式后自动聚焦
+  const searchInputRef = useRef<HTMLInputElement | null>(null);
 
   const isLanguageOpen = openPanel === "language"; // 判断语言菜单是否展开
 
@@ -399,6 +423,55 @@ export default function SiteHeader() {
     };
   }, []);
 
+  /* ================================
+     搜索模式关闭逻辑
+
+     说明：
+     1. 点击搜索框内部，不关闭搜索模式
+     2. 点击搜索图标按钮，不关闭搜索模式
+     3. 点击页面其他区域，关闭搜索模式
+     4. 按 ESC，关闭搜索模式
+  ================================ */
+  useEffect(() => {
+    if (!isSearchOpen) {
+      return;
+    }
+
+    function handleDocumentMouseDown(event: globalThis.MouseEvent) {
+      const target = event.target as Node | null;
+
+      if (!target) {
+        return;
+      }
+
+      const clickedInsideSearchMode = searchModeRef.current?.contains(target);
+
+      const clickedSearchTrigger = searchTriggerRef.current?.contains(target);
+
+      if (clickedInsideSearchMode || clickedSearchTrigger) {
+        return;
+      }
+
+      setIsSearchOpen(false);
+    }
+
+    function handleDocumentKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setIsSearchOpen(false);
+
+        searchInputRef.current?.blur();
+      }
+    }
+
+    document.addEventListener("mousedown", handleDocumentMouseDown);
+    document.addEventListener("keydown", handleDocumentKeyDown);
+
+    return () => {
+      document.removeEventListener("mousedown", handleDocumentMouseDown);
+      document.removeEventListener("keydown", handleDocumentKeyDown);
+    };
+  }, [isSearchOpen]);
+
   /**
    * PC 端鼠标进入导航项时执行
    */
@@ -463,6 +536,8 @@ export default function SiteHeader() {
    */
   function handleLanguageMouseEnter() {
     if (isPcHoverDevice()) {
+      setIsSearchOpen(false);
+
       setDesktopMegaKey(null);
 
       setActiveMegaCategoryKey(null);
@@ -486,6 +561,8 @@ export default function SiteHeader() {
   function handleLanguageButtonClick(event: MouseEvent<HTMLButtonElement>) {
     event.preventDefault();
 
+    setIsSearchOpen(false);
+
     setDesktopMegaKey(null);
 
     setActiveMegaCategoryKey(null);
@@ -500,6 +577,8 @@ export default function SiteHeader() {
    */
   function handleMobileMenuClick(event: MouseEvent<HTMLButtonElement>) {
     event.preventDefault();
+
+    setIsSearchOpen(false);
 
     setOpenPanel((currentPanel) =>
       currentPanel === "mobileNav" ? "none" : "mobileNav",
@@ -516,8 +595,53 @@ export default function SiteHeader() {
 
     setActiveMegaCategoryKey(null);
 
+    setIsSearchOpen(false);
+
     // 关闭手机端已展开的折叠菜单
     setOpenMobileSectionKey(null);
+  }
+
+  /**
+   * 点击 PC 端搜索图标按钮时执行
+   *
+   * 说明：
+   * 1. 打开搜索模式时，关闭 Mega Menu 和语言菜单
+   * 2. 再次点击搜索图标，可以退出搜索模式
+   * 3. 打开后自动聚焦输入框
+   */
+  function handleSearchButtonClick(event: MouseEvent<HTMLButtonElement>) {
+    event.preventDefault();
+
+    event.stopPropagation();
+
+    setDesktopMegaKey(null);
+
+    setActiveMegaCategoryKey(null);
+
+    setOpenPanel("none");
+
+    setIsSearchOpen((currentValue) => {
+      const nextValue = !currentValue;
+
+      if (nextValue) {
+        window.setTimeout(() => {
+          searchInputRef.current?.focus();
+        }, 80);
+      } else {
+        searchInputRef.current?.blur();
+      }
+
+      return nextValue;
+    });
+  }
+
+  /**
+   * 关闭 PC 端搜索模式
+   */
+  function closeSearchMode() {
+    setIsSearchOpen(false);
+
+    searchInputRef.current?.blur();
   }
 
   /**
@@ -590,9 +714,11 @@ export default function SiteHeader() {
 
   return (
     <header
-      className={`site-header ${isScrolled ? "site-header-scrolled" : ""} ${openPanel !== "none" || desktopMegaKey ? "header-panel-open" : ""
-        } ${isLanguageOpen ? "language-panel-open" : ""} ${isMobileMenuOpen ? "mobile-nav-open" : ""
-        }`}
+      className={`site-header ${isScrolled ? "site-header-scrolled" : ""} ${
+        openPanel !== "none" || desktopMegaKey ? "header-panel-open" : ""
+      } ${isLanguageOpen ? "language-panel-open" : ""} ${
+        isMobileMenuOpen ? "mobile-nav-open" : ""
+      } ${isSearchOpen ? "site-header-search-open" : ""}`}
       onMouseLeave={handleHeaderMouseLeave}
     >
       {/* Top 栏内部容器 */}
@@ -620,80 +746,81 @@ export default function SiteHeader() {
           />
         </Link>
 
-        {/* PC 端主导航 */}
-        <nav className="site-nav" aria-label={headerText.navAriaLabel}>
-          {navigationItems.map((item) => {
-            const navLabel = getLocalizedText(item.label, currentLocale);
+        {/* PC 端中间区域：默认显示导航，搜索模式下切换为搜索框 */}
+        <div className="site-header-center">
+          {/* PC 端主导航 */}
+          <nav className="site-nav" aria-label={headerText.navAriaLabel}>
+            {navigationItems.map((item) => {
+              const navLabel = getLocalizedText(item.label, currentLocale);
 
-            const navHref = getLocalizedHref(item.href, currentLocale);
+              const navHref = getLocalizedHref(item.href, currentLocale);
 
-            const hasMegaDropdown =
-              item.dropdownType === "mega" && Boolean(item.megaDropdown);
+              const hasMegaDropdown =
+                item.dropdownType === "mega" && Boolean(item.megaDropdown);
 
-            const hasSimpleDropdown =
-              item.dropdownType === "simple" &&
-              Boolean(item.mobileChildren?.length);
+              const hasSimpleDropdown =
+                item.dropdownType === "simple" &&
+                Boolean(item.mobileChildren?.length);
 
-            const simpleChildren =
-              item.mobileChildren
-                ?.filter((child) => child.enabled)
-                .sort((a, b) => a.order - b.order) ?? [];
+              const simpleChildren =
+                item.mobileChildren
+                  ?.filter((child) => child.enabled)
+                  .sort((a, b) => a.order - b.order) ?? [];
 
-            const isSimpleDropdownOpen =
-              desktopMegaKey === item.key && hasSimpleDropdown;
+              const isSimpleDropdownOpen =
+                desktopMegaKey === item.key && hasSimpleDropdown;
 
-            return (
-              <div
-                key={item.key}
-                className={`site-nav-item ${
-                  hasMegaDropdown || hasSimpleDropdown
-                    ? "site-nav-item-has-dropdown"
-                    : ""
-                } ${
-                  isSimpleDropdownOpen ? "site-nav-item-simple-open" : ""
-                }`}
-                onMouseEnter={() => handleDesktopNavMouseEnter(item)}
-              >
-                <Link
-                  href={navHref}
-                  className={`site-nav-link ${
-                    isNavActive(item) ? "site-nav-link-active" : ""
+              return (
+                <div
+                  key={item.key}
+                  className={`site-nav-item ${
+                    hasMegaDropdown || hasSimpleDropdown
+                      ? "site-nav-item-has-dropdown"
+                      : ""
+                  } ${
+                    isSimpleDropdownOpen ? "site-nav-item-simple-open" : ""
                   }`}
-                  onClick={closeAllPanels}
+                  onMouseEnter={() => handleDesktopNavMouseEnter(item)}
                 >
-                  {navLabel}
-                </Link>
-
-                {isSimpleDropdownOpen ? (
-                  <div
-                    className="site-nav-simple-dropdown"
-                    onMouseEnter={() => {
-                      setDesktopMegaKey(item.key);
-                      setActiveMegaCategoryKey(null);
-                    }}
+                  <Link
+                    href={navHref}
+                    className={`site-nav-link ${
+                      isNavActive(item) ? "site-nav-link-active" : ""
+                    }`}
+                    onClick={closeAllPanels}
                   >
-                    {simpleChildren.map((child) => (
-                      <Link
-                        key={child.key}
-                        href={getLocalizedHref(child.href, currentLocale)}
-                        className="site-nav-simple-dropdown-link"
-                        onClick={closeAllPanels}
-                      >
-                        {getLocalizedText(child.label, currentLocale)}
-                      </Link>
-                    ))}
-                  </div>
-                ) : null}
-              </div>
-            );
-          })}
-        </nav>  
+                    {navLabel}
+                  </Link>
 
-        {/* 右侧工具区：搜索栏、语言栏、手机菜单按钮 */}
-        <div className="site-header-actions">
-          {/* 搜索栏：手机端通过 CSS 隐藏 */}
+                  {isSimpleDropdownOpen ? (
+                    <div
+                      className="site-nav-simple-dropdown"
+                      onMouseEnter={() => {
+                        setDesktopMegaKey(item.key);
+                        setActiveMegaCategoryKey(null);
+                      }}
+                    >
+                      {simpleChildren.map((child) => (
+                        <Link
+                          key={child.key}
+                          href={getLocalizedHref(child.href, currentLocale)}
+                          className="site-nav-simple-dropdown-link"
+                          onClick={closeAllPanels}
+                        >
+                          {getLocalizedText(child.label, currentLocale)}
+                        </Link>
+                      ))}
+                    </div>
+                  ) : null}
+                </div>
+              );
+            })}
+          </nav>
+
+          {/* PC 端搜索模式：点击右侧搜索图标后显示 */}
           <form
-            className="site-search-form"
+            ref={searchModeRef}
+            className="site-search-mode-form"
             action={
               currentLocale === "zh-CN"
                 ? "/search"
@@ -701,22 +828,34 @@ export default function SiteHeader() {
             }
             method="get"
           >
-            <input
-              className="site-search-input"
-              type="search"
-              name="q"
-              placeholder={headerText.searchPlaceholder}
-              aria-label={headerText.searchAriaLabel}
-            />
-
-            <button
-              className="site-search-submit"
-              type="submit"
-              aria-label={headerText.searchButtonAriaLabel}
-            >
+            <label className="site-search-mode-box">
               <span className="site-search-icon" aria-hidden="true" />
-            </button>
+
+              <input
+                ref={searchInputRef}
+                className="site-search-mode-input"
+                type="search"
+                name="q"
+                placeholder={headerText.searchPlaceholder}
+                aria-label={headerText.searchAriaLabel}
+              />
+            </label>
           </form>
+        </div>
+
+        {/* 右侧工具区：搜索栏、语言栏、手机菜单按钮 */}
+        <div className="site-header-actions">
+          {/* PC 端搜索按钮：点击后中间导航区域切换为搜索模式 */}
+          <button
+            ref={searchTriggerRef}
+            className="site-search-trigger"
+            type="button"
+            aria-label={headerText.searchButtonAriaLabel}
+            aria-expanded={isSearchOpen}
+            onClick={handleSearchButtonClick}
+          >
+            <span className="site-search-icon" aria-hidden="true" />
+          </button>
 
           {/* 语言栏 */}
           <div
@@ -1118,4 +1257,4 @@ export default function SiteHeader() {
       )}
     </header>
   );
-}  
+}   
