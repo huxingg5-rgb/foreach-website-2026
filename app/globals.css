@@ -14960,3 +14960,71 @@ html[lang="ru"] .home-hero-btn:hover {
 .site-header:not(.site-header-scrolled) .site-search-mode-input {
   background: transparent !important;
 } 
+
+
+/* =========================================================
+   Top 栏导航｜全部语言 hover / 选中不加粗
+   说明：
+   1. 所有语言统一处理
+   2. 默认、hover、active、父级 hover 都保持同一个字重
+   3. 鼠标经过和当前选中状态只变颜色
+   4. 避免字体加粗导致 Top 栏文字跳动
+========================================================= */
+
+/* Top 栏导航默认状态 */
+.site-header .site-nav-link {
+  font-weight: 500 !important;
+  text-shadow: none !important;
+  -webkit-text-stroke: 0 !important;
+  font-synthesis: none;
+  transition:
+    color 0.22s ease,
+    opacity 0.22s ease !important;
+}
+
+/* 鼠标经过文字：只变颜色，不加粗 */
+.site-header .site-nav-link:hover {
+  font-weight: 500 !important;
+  color: #09e9b4;
+  text-shadow: none !important;
+  -webkit-text-stroke: 0 !important;
+}
+
+/* 当前页面选中状态：只变颜色，不加粗 */
+.site-header .site-nav-link-active {
+  font-weight: 500 !important;
+  color: #09e9b4;
+  text-shadow: none !important;
+  -webkit-text-stroke: 0 !important;
+}
+
+/* 父级 hover 时也不允许加粗 */
+.site-header .site-nav-item:hover .site-nav-link {
+  font-weight: 500 !important;
+  color: #09e9b4;
+  text-shadow: none !important;
+  -webkit-text-stroke: 0 !important;
+}
+
+/* 键盘聚焦状态也不加粗 */
+.site-header .site-nav-link:focus,
+.site-header .site-nav-link:focus-visible {
+  font-weight: 500 !important;
+  color: #09e9b4;
+  text-shadow: none !important;
+  -webkit-text-stroke: 0 !important;
+}
+
+/* 如果导航文字内部有 span / strong，也一起锁死 */
+.site-header .site-nav-link span,
+.site-header .site-nav-link strong,
+.site-header .site-nav-link:hover span,
+.site-header .site-nav-link:hover strong,
+.site-header .site-nav-link-active span,
+.site-header .site-nav-link-active strong,
+.site-header .site-nav-item:hover .site-nav-link span,
+.site-header .site-nav-item:hover .site-nav-link strong {
+  font-weight: 500 !important;
+  text-shadow: none !important;
+  -webkit-text-stroke: 0 !important;
+} 

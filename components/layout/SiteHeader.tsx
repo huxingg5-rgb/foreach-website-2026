@@ -107,13 +107,13 @@ export default function SiteHeader() {
    * 当前顶部栏显示语言
    *
    * 说明：
-   * 1. 以前 currentLocale 只根据 URL 判断，所以 /about/culture 永远是中文
-   * 2. 现在改成 useState，才能在不改变路径的情况下切换顶部栏语言
-   * 3. 页面加载后会优先读取 localStorage 保存的语言
+   * 1. 直接根据当前 URL 路径同步计算语言
+   * 2. 不再用 useState + useEffect 二次切换语言
+   * 3. 避免非中文页面加载时 Top 栏先按默认语言渲染，再切换成目标语言导致跳动
    */
-  const [currentLocale, setCurrentLocale] = useState<LocaleCode>(
-    getLocaleFromPathname(pathname),
-  );
+  const currentLocale = useMemo<LocaleCode>(() => {
+    return getLocaleFromPathname(pathname);
+  }, [pathname]); 
 
   const headerText = headerI18n[currentLocale]; // 获取当前语言下的 Header 文案
 
@@ -231,94 +231,6 @@ export default function SiteHeader() {
       .sort((a, b) => a.order - b.order) ?? [];
 
   /**
-   * 同步当前语言
-   *
-   * 说明：
-   * 1. 优先读取 URL 参数，例如 /about/foreach?lang=en
-   * 2. 其次读取 URL 路径，例如 /en
-   * 3. 再读取 localStorage 保存的语言
-   * 4. 最后默认中文
-   */
-  useEffect(() => {
-    const supportedLocales: LocaleCode[] = [
-      "zh-CN",
-      "en",
-      "es",
-      "fr",
-      "ko",
-      "ru",
-    ];
-
-    function normalizeHeaderLocale(value: string | null): LocaleCode | null {
-      if (!value) {
-        return null;
-      }
-
-      const normalizedValue = value.trim();
-
-      if (normalizedValue === "zh") {
-        return "zh-CN";
-      }
-
-      if (supportedLocales.includes(normalizedValue as LocaleCode)) {
-        return normalizedValue as LocaleCode;
-      }
-
-      return null;
-    }
-
-    /*
-      1. 先读取 URL 参数
-      例如：
-      /about/foreach?lang=en
-      /about/foreach?lang=es
-    */
-    const searchParams = new URLSearchParams(window.location.search);
-
-    const localeFromQuery =
-      normalizeHeaderLocale(searchParams.get("lang")) ||
-      normalizeHeaderLocale(searchParams.get("locale"));
-
-    if (localeFromQuery) {
-      setCurrentLocale(localeFromQuery);
-
-      localStorage.setItem(LOCALE_COOKIE_NAME, localeFromQuery);
-      localStorage.setItem("NEXT_LOCALE", localeFromQuery);
-      localStorage.setItem("lang", localeFromQuery);
-
-      return;
-    }
-
-    /*
-      2. 再读取 URL 路径
-      例如：
-      /en
-      /es
-      /fr
-    */
-    const localeFromPath = getLocaleFromPathname(pathname);
-
-    if (localeFromPath !== "zh-CN") {
-      setCurrentLocale(localeFromPath);
-      return;
-    }
-
-    /*
-      3. 如果 URL 没有语言信息，再读取 localStorage
-    */
-    const savedLocale =
-      normalizeHeaderLocale(localStorage.getItem(LOCALE_COOKIE_NAME)) ||
-      normalizeHeaderLocale(localStorage.getItem("NEXT_LOCALE")) ||
-      normalizeHeaderLocale(localStorage.getItem("lang"));
-
-    if (savedLocale) {
-      setCurrentLocale(savedLocale);
-      return;
-    }
-
-    setCurrentLocale(localeFromPath);
-  }, [pathname]);
-  /**
    * 判断当前是不是 PC 鼠标设备
    *
    * 说明：
@@ -373,17 +285,6 @@ export default function SiteHeader() {
     );
   }
 
-  /**
-   * 同步 html 的 lang 属性
-   *
-   * 作用：
-   * 1. 让浏览器知道当前页面语言
-   * 2. 对 SEO / 可访问性更友好
-   */
-  useEffect(() => {
-    document.documentElement.lang =
-      currentLocale === "zh-CN" ? "zh-CN" : currentLocale;
-  }, [currentLocale]);
 
   /**
    * 页面滚动监听
@@ -585,9 +486,6 @@ export default function SiteHeader() {
     );
   }
 
-  /**
-   * 关闭所有展开面板
-   */
   function closeAllPanels() {
     setOpenPanel("none");
 
@@ -599,8 +497,7 @@ export default function SiteHeader() {
 
     // 关闭手机端已展开的折叠菜单
     setOpenMobileSectionKey(null);
-  }
-
+  } 
   /**
    * 点击 PC 端搜索图标按钮时执行
    *
@@ -670,7 +567,6 @@ export default function SiteHeader() {
       4. 其他语言统一加 /en、/es、/fr、/ko、/ru
       5. 不再使用 ?lang=en，避免把多语言页面强行带回中文路径
     */
-    setCurrentLocale(localeCode);
 
     localStorage.setItem(LOCALE_COOKIE_NAME, localeCode);
     localStorage.setItem("NEXT_LOCALE", localeCode);
@@ -684,9 +580,6 @@ export default function SiteHeader() {
 
     // eslint-disable-next-line react-hooks/immutability -- 兼容通过 lang Cookie 读取语言
     document.cookie = `lang=${localeCode}; path=/; max-age=31536000; SameSite=Lax`;
-
-    document.documentElement.lang =
-      localeCode === "zh-CN" ? "zh-CN" : localeCode;
 
     closeAllPanels();
 

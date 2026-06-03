@@ -314,9 +314,12 @@ export function getLanguageTextLayout(locale: LocaleCode) {
 // 1. compact 返回 site-page--compact
 // 2. standard 返回 site-page--standard
 // 3. expanded 返回 site-page--expanded
+
+
+
 export function getLanguageTextLayoutClass(locale: LocaleCode) {
-  return `site-page--${getLanguageTextLayout(locale)}`;
-}
+   return `site-page--${getLanguageTextLayout(locale)}`;
+ }
 
 /* ================================
    17. 根据当前路径判断语言
