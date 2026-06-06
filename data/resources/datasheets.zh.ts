@@ -7,22 +7,14 @@
 
    作用：
    1. 存放中文规格书下载页面的所有数据
-   2. 包括：页面文案、筛选分类、规格书列表
+   2. 包括：页面文案、Banner 图片、筛选分类、规格书列表
    3. 页面结构和交互不写在这里
    4. 后续新增规格书时，优先修改这个文件
-
-   命名说明：
-   1. datasheets = 规格书下载
-   2. zh = 中文数据
-   3. 当前只服务中文路径 /resources/datasheets
 ========================================================= */
 
-/* =========================================================
+/* ================================
    分类类型
-   说明：
-   1. all 只用于筛选按钮
-   2. 真实规格书条目不使用 all
-========================================================= */
+================================ */
 
 export type DatasheetCategoryValue =
   | "all"
@@ -32,34 +24,22 @@ export type DatasheetCategoryValue =
   | "tubing"
   | "smart";
 
-/* =========================================================
-   规格书条目分类类型
-   说明：
-   这里排除了 all，因为 all 只是筛选按钮，不是真实分类
-========================================================= */
-
 export type DatasheetItemCategory = Exclude<DatasheetCategoryValue, "all">;
-
-/* =========================================================
-   规格书按钮类型
-   download = 下载规格书
-   custom = 来图定制
-========================================================= */
 
 export type DatasheetActionType = "download" | "custom";
 
-/* =========================================================
+/* ================================
    筛选按钮数据类型
-========================================================= */
+================================ */
 
 export type DatasheetFilterOption = {
   label: string;
   value: DatasheetCategoryValue;
 };
 
-/* =========================================================
+/* ================================
    规格书单条数据类型
-========================================================= */
+================================ */
 
 export type DatasheetItem = {
   id: string;
@@ -77,11 +57,9 @@ export type DatasheetItem = {
   actionType: DatasheetActionType;
 };
 
-/* =========================================================
+/* ================================
    页面基础文案
-   说明：
-   这里放 Banner、标题、说明、底部支持区等文案
-========================================================= */
+================================ */
 
 export const datasheetsZhPageText = {
   seo: {
@@ -94,6 +72,16 @@ export const datasheetsZhPageText = {
     title: "规格书下载",
     description:
       "查找并下载恒永达泵、阀、管路与连接件及智控模块等产品规格书，快速了解产品参数、材料、接口与应用信息。",
+
+    // Banner 图片路径
+    // 图片真实位置：
+    // public/images/resource/datasheets/banner/resource-datasheet-banner-1920x800-v001.webp
+    // 页面引用时不写 public
+    image:
+      "/images/resource/datasheets/banner/resource-datasheet-banner-1920x800-v001.webp",
+
+    // Banner 图片 alt，用于 SEO / GEO / 无障碍识别
+    imageAlt: "恒永达资源中心规格书下载页面 Banner",
   },
 
   breadcrumb: {
@@ -112,10 +100,20 @@ export const datasheetsZhPageText = {
     title: "产品规格书",
     description:
       "当前页面仅收录产品规格书；针系列暂无规格书，支持来图定制；产品图纸建议在对应产品详情页获取。",
+    resultPrefix: "共",
     resultSuffix: "条资料",
     emptyTitle: "没有找到匹配的资料",
     emptyDescription:
       "可以尝试搜索产品名称、关键词或切换产品分类。若仍未找到，请提交资料需求，我们会协助您获取对应资料。",
+  },
+
+  labels: {
+    language: "语言",
+    version: "版本",
+    update: "更新",
+    viewProduct: "查看产品",
+    download: "下载规格书",
+    custom: "来图定制",
   },
 
   support: {
@@ -128,12 +126,9 @@ export const datasheetsZhPageText = {
   },
 };
 
-/* =========================================================
+/* ================================
    筛选按钮数据
-   说明：
-   1. value 用于前端筛选逻辑
-   2. label 用于页面显示
-========================================================= */
+================================ */
 
 export const datasheetZhFilterOptions: DatasheetFilterOption[] = [
   { label: "全部", value: "all" },
@@ -144,15 +139,9 @@ export const datasheetZhFilterOptions: DatasheetFilterOption[] = [
   { label: "智控模块系列", value: "smart" },
 ];
 
-/* =========================================================
+/* ================================
    中文规格书列表数据
-   说明：
-   1. image 为缩略图路径
-   2. downloadHref 为 PDF 下载路径
-   3. 中文 PDF 当前采用：中文文件夹 + 中文 PDF 文件名
-   4. 网页路径从 /downloads/... 开始，不写 public
-   5. 针系列暂无规格书，所以 actionType 为 custom
-========================================================= */
+================================ */
 
 export const datasheetZhItems: DatasheetItem[] = [
   {

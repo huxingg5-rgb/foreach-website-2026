@@ -866,7 +866,6 @@ const navigationItems: NavigationItem[] = [
       },
     ],
   },
-
   {
     key: "resources",
     label: t(
@@ -879,29 +878,34 @@ const navigationItems: NavigationItem[] = [
     ),
 
     /*
+       资源中心一级入口
+  
        说明：
-       1. 当前阶段不做资源中心首页
-       2. 点击顶部导航“资源中心”时，直接进入“规格书下载”
-       3. /resources 页面本身也会通过 app/resources/page.tsx 重定向到 /resources/datasheets
+       1. 当前资源中心首页如果还没完全做好，可以先指向规格书下载页
+       2. 这样点击「资源中心」本身不会进入空页面或 404
+       3. 后续资源中心首页 app/resources/page.tsx 完整做好后，
+          可以改成 localizedPath("/resources")
     */
-    href: localizedPath("resources/datasheets"),
+    href: localizedPath("/resources/datasheets"),
 
     order: 4,
     enabled: true,
 
     /*
        simple 表示使用简单下拉栏
-       当前资源中心只先开放“规格书下载”
+       资源中心不使用产品中心那种 Mega Menu
     */
     dropdownType: "simple",
 
     /*
-       手机端 / 简单下拉栏子项
-       说明：
-       1. 规格书下载直接进入 /resources/datasheets
-       2. 其他资源栏目页面还没做，所以先统一跳到 /resources/datasheets
-       3. 后续对应页面做好后，再分别改成对应路径
-    */
+   资源中心下拉菜单
+
+   重点：
+   1. 这里不能再用 anchorPath("resources")
+   2. 必须使用 localizedPath("/resources/xxx")
+   3. 这样中文、英文、西语、法语、韩语、俄语都会生成正确路径
+   4. 当前 simple 下拉栏只有一层，所以“接头替代查询”先直接作为入口展示
+*/
     mobileChildren: [
       {
         key: "mobile-resource-datasheets",
@@ -913,24 +917,35 @@ const navigationItems: NavigationItem[] = [
           "사양서 다운로드",
           "Спецификации"
         ),
-        href: localizedPath("resources/datasheets"),
+        href: localizedPath("/resources/datasheets"),
         order: 1,
         enabled: true,
       },
+
+      /* =========================================================
+         接头替代查询
+         说明：
+         1. 作为资源中心下拉入口
+         2. 当前 simple 下拉栏只有一层，所以直接显示
+         3. 点击进入接头替代查询页面
+         4. 后续如果做完整“选型支持”总页，可以再新增：
+            /resources/selection-support
+      ========================================================= */
       {
-        key: "mobile-resource-selection-support",
+        key: "mobile-resource-fitting-replacement",
         label: t(
-          "选型支持",
-          "Selection Support",
-          "Soporte de selección",
-          "Support de sélection",
-          "선정 지원",
-          "Поддержка подбора"
+          "接头替代查询",
+          "Fitting Replacement",
+          "Sustitución de conectores",
+          "Remplacement de raccords",
+          "피팅 대체 조회",
+          "Поиск аналогов фитингов"
         ),
-        href: localizedPath("resources/datasheets"),
+        href: localizedPath("/resources/selection-support/fitting-replacement"),
         order: 2,
         enabled: true,
       },
+
       {
         key: "mobile-resource-installation-guide",
         label: t(
@@ -941,10 +956,11 @@ const navigationItems: NavigationItem[] = [
           "설치 가이드",
           "Инструкции по установке"
         ),
-        href: localizedPath("resources/datasheets"),
+        href: localizedPath("/resources/installation-guide"),
         order: 3,
         enabled: true,
       },
+
       {
         key: "mobile-resource-material-compatibility",
         label: t(
@@ -955,24 +971,26 @@ const navigationItems: NavigationItem[] = [
           "소재 호환성",
           "Совместимость материалов"
         ),
-        href: localizedPath("resources/datasheets"),
+        href: localizedPath("/resources/material-compatibility"),
         order: 4,
         enabled: true,
       },
+
       {
-        key: "mobile-resource-technical-qa",
+        key: "mobile-resource-faq",
         label: t(
-          "技术问答",
-          "Technical Q&A",
-          "Preguntas técnicas",
-          "Questions techniques",
-          "기술 Q&A",
-          "Технические вопросы"
+          "常见问题",
+          "FAQ",
+          "Preguntas frecuentes",
+          "FAQ",
+          "자주 묻는 질문",
+          "Часто задаваемые вопросы"
         ),
-        href: localizedPath("resources/datasheets"),
+        href: localizedPath("/resources/faq"),
         order: 5,
         enabled: true,
       },
+
       {
         key: "mobile-resource-news",
         label: t(
@@ -983,13 +1001,13 @@ const navigationItems: NavigationItem[] = [
           "회사 뉴스",
           "Новости компании"
         ),
-        href: localizedPath("resources/datasheets"),
+        href: localizedPath("/resources/news"),
         order: 6,
         enabled: true,
       },
     ],
   },
-
+  
   {
     key: "about",
     label: t(
@@ -1576,21 +1594,77 @@ export function getVisibleNavigationItems(locale = "zh-CN") {
 }
 
 /* ================================
+   统一导航语言代码
+
+   作用：
+   1. 有些地方传进来的语言可能是 es-ES / fr-FR / ko-KR / ru-RU
+   2. 但 navigation.ts 里的 key 是 es / fr / ko / ru
+   3. 所以这里统一转换一次
+   4. 避免西语、法语、韩语、俄语拿不到 href 后回退到英文
+================================ */
+
+function normalizeNavigationLocale(locale: string) {
+  const localeCode = String(locale || "").toLowerCase();
+
+  if (
+    localeCode === "zh-cn" ||
+    localeCode === "zh" ||
+    localeCode.startsWith("zh-")
+  ) {
+    return "zh-CN";
+  }
+
+  if (localeCode === "en" || localeCode.startsWith("en-")) {
+    return "en";
+  }
+
+  if (localeCode === "es" || localeCode.startsWith("es-")) {
+    return "es";
+  }
+
+  if (localeCode === "fr" || localeCode.startsWith("fr-")) {
+    return "fr";
+  }
+
+  if (localeCode === "ko" || localeCode.startsWith("ko-")) {
+    return "ko";
+  }
+
+  if (localeCode === "ru" || localeCode.startsWith("ru-")) {
+    return "ru";
+  }
+
+  return "en";
+}
+
+/* ================================
    读取当前语言文本
+
+   说明：
+   这里不要直接用 text[locale]，
+   要先把 es-ES / fr-FR 等转换成 es / fr。
 ================================ */
 
 export function getLocalizedText(text: LocalizedText, locale: string) {
-  return text[locale] ?? text.en ?? text["zh-CN"] ?? "";
+  const normalizedLocale = normalizeNavigationLocale(locale);
+
+  return text[normalizedLocale] ?? text.en ?? text["zh-CN"] ?? "";
 }
 
 /* ================================
    读取当前语言链接
+
+   说明：
+   这里是资源中心跳转问题的关键。
+   如果 locale 是 fr-FR，但 href 里只有 fr，
+   不转换就会回退到英文。
 ================================ */
 
 export function getLocalizedHref(href: LocalizedHref, locale: string) {
-  return href[locale] ?? href.en ?? href["zh-CN"] ?? "/";
-}
+  const normalizedLocale = normalizeNavigationLocale(locale);
 
+  return href[normalizedLocale] ?? href.en ?? href["zh-CN"] ?? "/";
+}
 /* ================================
    导航栏后端接口路径预留
 

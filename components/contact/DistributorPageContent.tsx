@@ -10,7 +10,8 @@
    3. PDF 内容调用 buildDistributorPdfHtml.ts 生成
    4. 页眉页脚仍然沿用统一设计
    5. PDF 中间正文使用经销商专用字段结构，不再套用联系我们需求单字段
-   6. 多语言文案来自 data/contact-cooperation/distributor.intl.ts
+   6. 经销商页面主体文案来自 data/contact-cooperation/distributor.intl.ts
+   7. 联系方式与地图文案由 page.tsx 服务端按语言传入，避免 Hydration mismatch
 
    注意：
    1. 当前验证码仍然是前端测试验证码 123456
@@ -19,9 +20,13 @@
 
 import type { ChangeEvent, FormEvent } from "react";
 import { useMemo, useState } from "react";
+
 import AmapBlock from "@/components/contact/AmapBlock";
-import { getContactIntlData } from "@/data/contact-cooperation/contact.intl";
+
+import type { getContactIntlData } from "@/data/contact-cooperation/contact.intl";
+
 import type { DistributorPageData } from "@/data/contact-cooperation/distributor.intl";
+
 import {
   buildDistributorPdfHtml,
   formatDistributorFileSize,
@@ -30,10 +35,18 @@ import {
 
 /* =========================================================
    组件参数类型
+
+   说明：
+   1. content：经销商合作页面主体文案
+   2. contactPageData：联系方式与地图文案
+   3. contactPageData 由 page.tsx 在服务端根据 locale 传入
+   4. 这里不再用 window.location.pathname 判断语言
+   5. 这样可以避免服务端英文、客户端西语导致 Hydration mismatch
 ========================================================= */
 
 type DistributorPageContentProps = {
   content: DistributorPageData;
+  contactPageData: ReturnType<typeof getContactIntlData>;
 };
 
 /* =========================================================
@@ -175,8 +188,8 @@ function waitForIframeImages(iframeDocument: Document) {
 
 export default function DistributorPageContent({
   content,
+  contactPageData,
 }: DistributorPageContentProps) {
-
   const [formValues, setFormValues] =
     useState<DistributorFormValues>(initialFormValues);
 
@@ -224,34 +237,6 @@ export default function DistributorPageContent({
       setShowSuccessModal(false);
     }
   }
-
-
-  /* =========================================================
-   联系方式 + 地图数据
-   说明：
-   1. 经销商页面复用“联系我们”页面的联系方式和地图数据
-   2. 根据当前 URL 的语言前缀读取对应语言
-   3. 如果识别不到语言，默认使用英文
-========================================================= */
-
-  const contactPageData = useMemo(() => {
-    if (typeof window === "undefined") {
-      return getContactIntlData("en");
-    }
-
-    const firstPathSegment =
-      window.location.pathname.split("/").filter(Boolean)[0] || "en";
-
-    const locale =
-      firstPathSegment === "es" ||
-        firstPathSegment === "fr" ||
-        firstPathSegment === "ko" ||
-        firstPathSegment === "ru"
-        ? firstPathSegment
-        : "en";
-
-    return getContactIntlData(locale);
-  }, []);
 
   /* =========================================================
      发送邮箱验证码
@@ -910,12 +895,12 @@ export default function DistributorPageContent({
         </div>
       </section>
 
-            {/* =====================================================
+      {/* =====================================================
           联系方式 + 地图
           说明：
           1. 复用联系我们页面的信息模块
           2. 放在经销商表单和底部 CTA 之间
-          3. 填补表单下方空白，也方便合作伙伴直接查看公司位置和联系方式
+          3. contactPageData 由服务端 page.tsx 传入，不在客户端重新判断语言
       ===================================================== */}
       <section
         className="contact-section contact-info-section distributor-contact-info-section"
@@ -961,7 +946,7 @@ export default function DistributorPageContent({
             />
           </div>
         </div>
-      </section> 
+      </section>
 
       {/* =====================================================
           底部 CTA
@@ -998,9 +983,9 @@ export default function DistributorPageContent({
             <h3>Submitted Successfully</h3>
 
             <p>
-              We have received your partnership application. The FOREACH team will review
-              your information and follow up based on your market region, product interest,
-              and cooperation needs.
+              We have received your partnership application. The FOREACH team
+              will review your information and follow up based on your market
+              region, product interest, and cooperation needs.
             </p>
 
             <button

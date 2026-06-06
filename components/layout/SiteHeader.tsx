@@ -42,51 +42,120 @@ const LOCALE_COOKIE_NAME = "foreach_locale";
    语言路径前缀配置
    说明：
    1. 中文默认不使用 /zh-CN 前缀
-   2. 其他语言统一使用 /en、/es、/fr、/ko、/ru 前缀
-   3. 语言切换时会先移除旧语言前缀，再拼接新语言前缀
+   2. 英文使用 /en
+   3. 西班牙语使用 /es
+   4. 法语使用 /fr
+   5. 韩语使用 /ko
+   6. 俄语使用 /ru
+   7. 这里不要直接拿 localeCode 拼 URL，避免以后语言代码变化导致路径错误
 ================================ */
-const LOCALE_PATH_PREFIXES = ["en", "es", "fr", "ko", "ru"];
+const LOCALE_PATH_PREFIXES = ["en", "es", "fr", "ko", "ru"] as const;
+
+type LocalePathPrefix = (typeof LOCALE_PATH_PREFIXES)[number];
 
 /* ================================
-   去掉路径中的语言前缀
+   判断某个字符串是否是官网语言前缀
    例子：
-   /en/about/history → /about/history
-   /es/products/pumps → /products/pumps
-   /about/history → /about/history
-   /en → /
+   en → true
+   zh-CN → false，因为中文不放在 URL 前缀里
+   products → false
 ================================ */
-function stripLocalePrefixFromPath(pathname: string) {
+function isLocalePathPrefix(value: string): value is LocalePathPrefix {
+  return LOCALE_PATH_PREFIXES.includes(value as LocalePathPrefix);
+}
+
+/* ================================
+   清理路径格式
+   作用：
+   1. 只保留 pathname，不处理 query 和 hash
+   2. 确保路径始终以 / 开头
+   3. 避免出现空路径
+================================ */
+function normalizePathname(pathname: string) {
   const pathOnly = pathname.split("?")[0]?.split("#")[0] || "/";
 
-  const pathParts = pathOnly.split("/").filter(Boolean);
-
-  const firstPart = pathParts[0];
-
-  if (firstPart && LOCALE_PATH_PREFIXES.includes(firstPart)) {
-    const restPath = pathParts.slice(1).join("/");
-
-    return restPath ? `/${restPath}` : "/";
+  if (!pathOnly.startsWith("/")) {
+    return `/${pathOnly}`;
   }
 
   return pathOnly || "/";
 }
 
 /* ================================
+   去掉路径中的语言前缀
+   例子：
+   /en/resources/datasheets → /resources/datasheets
+   /es/about/history → /about/history
+   /fr → /
+   /about/history → /about/history
+================================ */
+function stripLocalePrefixFromPath(pathname: string) {
+  const pathOnly = normalizePathname(pathname);
+
+  const pathParts = pathOnly.split("/").filter(Boolean);
+
+  const firstPart = pathParts[0];
+
+  if (firstPart && isLocalePathPrefix(firstPart)) {
+    const restPath = pathParts.slice(1).join("/");
+
+    return restPath ? `/${restPath}` : "/";
+  }
+
+  return pathOnly;
+}
+
+/* ================================
+   根据语言代码获取 URL 前缀
+   说明：
+   1. 中文返回空字符串，因为中文路径不加 /zh-CN
+   2. 外语返回对应前缀
+================================ */
+function getLocalePathPrefix(localeCode: LocaleCode) {
+  switch (localeCode) {
+    case "zh-CN":
+      return "";
+
+    case "en":
+      return "/en";
+
+    case "es":
+      return "/es";
+
+    case "fr":
+      return "/fr";
+
+    case "ko":
+      return "/ko";
+
+    case "ru":
+      return "/ru";
+
+    default:
+      return "";
+  }
+}
+
+/* ================================
    根据目标语言生成新路径
    例子：
-   当前 /about/history，切英文 → /en/about/history
-   当前 /en/about/history，切法文 → /fr/about/history
-   当前 /fr/about/history，切中文 → /about/history
+   当前 /resources/datasheets，切英文 → /en/resources/datasheets
+   当前 /en/resources/datasheets，切法文 → /fr/resources/datasheets
+   当前 /fr/resources/datasheets，切中文 → /resources/datasheets
    当前 /en，切中文 → /
 ================================ */
 function buildLocalizedPathname(pathname: string, localeCode: LocaleCode) {
   const pathWithoutLocale = stripLocalePrefixFromPath(pathname);
 
-  if (localeCode === "zh-CN") {
+  const localePrefix = getLocalePathPrefix(localeCode);
+
+  if (!localePrefix) {
     return pathWithoutLocale;
   }
 
-  return `/${localeCode}${pathWithoutLocale === "/" ? "" : pathWithoutLocale}`;
+  return pathWithoutLocale === "/"
+    ? localePrefix
+    : `${localePrefix}${pathWithoutLocale}`;
 }
 
 /**
@@ -94,14 +163,15 @@ function buildLocalizedPathname(pathname: string, localeCode: LocaleCode) {
  * 全站顶部导航栏组件
  *
  * 说明：
- * 1. PC 端显示 Logo、主导航、搜索框、语言栏
+ * 1. PC 端显示 Logo、主导航、搜索图标、语言栏
  * 2. PC 端产品中心 / 关于我们等支持 Mega 大下拉菜单
- * 3. 左侧分类和右侧内容卡片通过 categoryKey 对应
- * 4. 关于我们下拉栏通过 site-nav-mega-about 单独控制右侧样式
- * 5. 当前阶段多语言详情页还没完整建立，所以切换语言时先保留当前页面路径
+ * 3. 资源中心 / 联系与合作等支持 simple 简单下拉菜单
+ * 4. 左侧分类和右侧内容卡片通过 categoryKey 对应
+ * 5. 多语言切换时，会尽量保留当前页面路径
+ * 6. 接头型号替代详情页已经去掉 Banner，所以需要一进入页面就使用白底 Header
  */
 export default function SiteHeader() {
-  const pathname = usePathname(); // 获取当前页面路径，例如 /、/about/culture、/en 等
+  const pathname = usePathname(); // 获取当前页面路径，例如 /、/about/culture、/en/resources/datasheets 等
 
   /**
    * 当前顶部栏显示语言
@@ -129,6 +199,32 @@ export default function SiteHeader() {
 
   const headerText = headerI18n[currentLocale]; // 获取当前语言下的 Header 文案
 
+  /* ================================
+     当前路径去掉语言前缀
+
+     说明：
+     1. 中文：/resources/xxx
+     2. 英文：/en/resources/xxx → /resources/xxx
+     3. 用于判断当前页面是否属于某个业务页面
+  ================================ */
+  const currentPathWithoutLocale = useMemo(() => {
+    return stripLocalePrefixFromPath(pathname);
+  }, [pathname]);
+
+  /* ================================
+     接头型号替代详情页判断
+
+     说明：
+     1. 这个页面已经去掉 Banner
+     2. 页面一进入就是白底内容
+     3. Header 不能再用透明状态
+     4. 所以这个页面需要强制使用白底 Header
+  ================================ */
+  const isFittingReplacementDetailPage =
+    currentPathWithoutLocale.startsWith(
+      "/resources/selection-support/fitting-replacement/q20/",
+    );
+
   const navigationItems = useMemo(
     () => getVisibleNavigationItems(currentLocale),
     [currentLocale],
@@ -140,7 +236,7 @@ export default function SiteHeader() {
 
   const [desktopMegaKey, setDesktopMegaKey] = useState<NavigationKey | null>(
     null,
-  ); // 控制 PC 端当前打开哪个 mega 下拉菜单
+  ); // 控制 PC 端当前打开哪个 mega / simple 下拉菜单
 
   const [activeMegaCategoryKey, setActiveMegaCategoryKey] = useState<
     string | null
@@ -178,24 +274,27 @@ export default function SiteHeader() {
 
   const isMobileMenuOpen = openPanel === "mobileNav"; // 判断手机端导航是否展开
 
+  /* ================================
+     Header 最终白底状态
+
+     说明：
+     1. 普通页面：滚动后才变白
+     2. 接头详情页：页面一进入就白底
+     3. 下拉菜单 / 搜索展开时也保持白底
+  ================================ */
+  const shouldUseSolidHeader =
+    isScrolled ||
+    isFittingReplacementDetailPage ||
+    openPanel !== "none" ||
+    Boolean(desktopMegaKey) ||
+    isSearchOpen;
+
   const activeMegaItem = navigationItems.find(
     (item) =>
       item.key === desktopMegaKey &&
       item.dropdownType === "mega" &&
       item.megaDropdown,
-  ); // 找到当前 PC 端正在展开的 mega 菜单数据
-
-  const activeSimpleItem = navigationItems.find(
-    (item) =>
-      item.key === desktopMegaKey &&
-      item.dropdownType === "simple" &&
-      item.mobileChildren,
-  ); // 找到当前 PC 端正在展开的简单下拉菜单数据
-
-  const activeSimpleChildren =
-    activeSimpleItem?.mobileChildren
-      ?.filter((child) => child.enabled)
-      .sort((a, b) => a.order - b.order) ?? [];
+  ); // 找到当前 PC 端正在展开的 Mega 菜单数据
 
   /* ================================
      当前 Mega 菜单分类与右侧卡片筛选
@@ -265,20 +364,12 @@ export default function SiteHeader() {
   /**
    * 判断某个导航是否为当前选中状态
    *
-   * 当前阶段先只让首页高亮；
-   * 产品中心、应用领域等是首页锚点，暂时不做滚动高亮。
+   * 说明：
+   * 1. 所有页面都会先去掉语言前缀再比较
+   * 2. /en/about/history 会识别为 /about/history
+   * 3. About / Products / Applications 等栏目都能正常高亮
    */
   function isNavActive(item: NavigationItem) {
-    /*
-      通用导航高亮逻辑
-      说明：
-      1. 不只针对首页或发展历程
-      2. 所有页面都会先去掉语言前缀再比较
-      3. /en/about/history 会识别为 /about/history
-      4. 这样 About / Products / Applications 等栏目都能正常高亮
-    */
-    const currentPathWithoutLocale = stripLocalePrefixFromPath(pathname);
-
     const itemHref = getLocalizedHref(item.href, currentLocale);
 
     const itemPathWithoutLocale = stripLocalePrefixFromPath(itemHref);
@@ -297,14 +388,14 @@ export default function SiteHeader() {
     );
   }
 
-
   /**
    * 页面滚动监听
    *
    * 作用：
-   * 1. 页面顶部时 Top 栏透明
-   * 2. 页面向下滚动后 Top 栏变白
-   * 3. 给 html 添加 page-scrolled 类名
+   * 1. 普通页面顶部时 Top 栏透明
+   * 2. 普通页面向下滚动后 Top 栏变白
+   * 3. 详情页即使在顶部，也会通过 shouldUseSolidHeader 保持白底
+   * 4. 给 html 添加 page-scrolled 类名
    */
   useEffect(() => {
     function handleScroll() {
@@ -411,8 +502,7 @@ export default function SiteHeader() {
     if (item.dropdownType === "simple" && item.mobileChildren) {
       /*
          Simple 小下拉：
-         用于外语版 Contact & Partnership
-         只显示 Contact Us / Become a Distributor 两个入口
+         用于资源中心、外语版 Contact & Partnership 等简单入口
       */
       setDesktopMegaKey(item.key);
       setActiveMegaCategoryKey(null);
@@ -427,7 +517,6 @@ export default function SiteHeader() {
     setDesktopMegaKey(null);
     setActiveMegaCategoryKey(null);
   }
-
 
   /**
    * 鼠标离开整个 Header 时执行
@@ -498,6 +587,9 @@ export default function SiteHeader() {
     );
   }
 
+  /**
+   * 关闭所有顶部展开内容
+   */
   function closeAllPanels() {
     setOpenPanel("none");
 
@@ -510,6 +602,7 @@ export default function SiteHeader() {
     // 关闭手机端已展开的折叠菜单
     setOpenMobileSectionKey(null);
   }
+
   /**
    * 点击 PC 端搜索图标按钮时执行
    *
@@ -545,23 +638,17 @@ export default function SiteHeader() {
   }
 
   /**
-   * 关闭 PC 端搜索模式
-   */
-  function closeSearchMode() {
-    setIsSearchOpen(false);
-
-    searchInputRef.current?.blur();
-  }
-
-  /**
    * 点击语言选项时执行
    *
    * 说明：
-   * 1. 写入 localStorage
-   * 2. 写入 Cookie
-   * 3. 修改 html lang
-   * 4. 给当前 URL 加上 ?lang=语言
-   * 5. 刷新当前页面，让关于恒永达页面读取到语言
+   * 1. 写入 localStorage，方便前端组件读取语言偏好
+   * 2. 写入 Cookie，方便 proxy.ts / 服务端读取语言偏好
+   * 3. 根据当前路径切换语言前缀
+   * 4. 不再使用 ?lang=en 这种方式
+   * 5. 当前页面路径会尽量保留，例如：
+   *    /resources/datasheets → /en/resources/datasheets
+   *    /en/resources/datasheets → /fr/resources/datasheets
+   *    /fr/resources/datasheets → /resources/datasheets
    */
   function handleLanguageItemClick(
     event: MouseEvent<HTMLAnchorElement>,
@@ -570,41 +657,35 @@ export default function SiteHeader() {
   ) {
     event.preventDefault();
 
-    /*
-      通用语言切换逻辑
-      说明：
-      1. 不只服务发展历程页面
-      2. 所有页面都按当前路径切换语言前缀
-      3. 中文默认不加 /zh-CN
-      4. 其他语言统一加 /en、/es、/fr、/ko、/ru
-      5. 不再使用 ?lang=en，避免把多语言页面强行带回中文路径
-    */
-
+    // 保存语言偏好到浏览器本地
     localStorage.setItem(LOCALE_COOKIE_NAME, localeCode);
     localStorage.setItem("NEXT_LOCALE", localeCode);
     localStorage.setItem("lang", localeCode);
 
+    // 保存语言偏好到 Cookie
+    // 说明：这里必须和 proxy.ts 里面读取的 Cookie 名称保持一致
     // eslint-disable-next-line react-hooks/immutability -- 语言切换必须在跳转前写入 Cookie
     document.cookie = `${LOCALE_COOKIE_NAME}=${localeCode}; path=/; max-age=31536000; SameSite=Lax`;
 
-    // eslint-disable-next-line react-hooks/immutability -- 兼容其他页面读取 NEXT_LOCALE
+    // eslint-disable-next-line react-hooks/immutability -- 兼容 Next.js 常见语言 Cookie 名称
     document.cookie = `NEXT_LOCALE=${localeCode}; path=/; max-age=31536000; SameSite=Lax`;
 
-    // eslint-disable-next-line react-hooks/immutability -- 兼容通过 lang Cookie 读取语言
+    // eslint-disable-next-line react-hooks/immutability -- 兼容旧页面可能读取的 lang Cookie
     document.cookie = `lang=${localeCode}; path=/; max-age=31536000; SameSite=Lax`;
 
+    // 同步修改 html lang，避免部分浏览器辅助能力读取旧语言
+    document.documentElement.setAttribute("lang", localeCode);
+
+    // 关闭顶部所有展开面板
     closeAllPanels();
 
+    // 根据当前路径生成目标语言路径
     const nextPathname = buildLocalizedPathname(
       window.location.pathname,
       localeCode,
     );
 
-    /*
-      保留原来的查询参数，但删除旧的 lang / locale 参数
-      例子：
-      /products?p=1&lang=en → /en/products?p=1
-    */
+    // 保留原来的查询参数，但删除旧的 lang / locale 参数
     const nextSearchParams = new URLSearchParams(window.location.search);
 
     nextSearchParams.delete("lang");
@@ -612,17 +693,25 @@ export default function SiteHeader() {
 
     const nextSearch = nextSearchParams.toString();
 
-    const nextUrl = `${nextPathname}${nextSearch ? `?${nextSearch}` : ""}${window.location.hash}`;
+    const nextUrl = `${nextPathname}${nextSearch ? `?${nextSearch}` : ""}${
+      window.location.hash
+    }`;
 
+    // 使用 assign 跳转，让浏览器真正进入新语言路径
     window.location.assign(nextUrl);
   }
 
   return (
     <header
-      className={`site-header ${headerLocaleClass} ${isScrolled ? "site-header-scrolled" : ""
-        } ${openPanel !== "none" || desktopMegaKey ? "header-panel-open" : ""} ${isLanguageOpen ? "language-panel-open" : ""
-        } ${isMobileMenuOpen ? "mobile-nav-open" : ""} ${isSearchOpen ? "site-header-search-open" : ""
-        }`}
+      className={`site-header ${headerLocaleClass} ${
+        shouldUseSolidHeader ? "site-header-scrolled" : ""
+      } ${
+        isFittingReplacementDetailPage ? "site-header-solid-page" : ""
+      } ${
+        openPanel !== "none" || desktopMegaKey ? "header-panel-open" : ""
+      } ${isLanguageOpen ? "language-panel-open" : ""} ${
+        isMobileMenuOpen ? "mobile-nav-open" : ""
+      } ${isSearchOpen ? "site-header-search-open" : ""}`}
       onMouseLeave={handleHeaderMouseLeave}
     >
       {/* Top 栏内部容器 */}
@@ -653,42 +742,45 @@ export default function SiteHeader() {
         {/* PC 端中间区域：默认显示导航，搜索模式下切换为搜索框 */}
         <div className="site-header-center">
           {/* PC 端主导航 */}
-
-          {/* PC 端主导航 */}
           <nav className="site-nav" aria-label={headerText.navAriaLabel}>
             {navigationItems.map((item) => {
               const navLabel = getLocalizedText(item.label, currentLocale);
 
               const navHref = getLocalizedHref(item.href, currentLocale);
 
-              /* 判断是否是产品中心 / 关于我们这种复杂 Mega 下拉 */
+              // 判断是否是产品中心 / 关于我们这种复杂 Mega 下拉
               const hasMegaDropdown =
                 item.dropdownType === "mega" && Boolean(item.megaDropdown);
 
-              /* 判断是否是资源中心 / 联系与合作这种简单下拉 */
+              // 判断是否是资源中心 / 联系与合作这种简单下拉
               const hasSimpleDropdown =
                 item.dropdownType === "simple" &&
                 Boolean(item.mobileChildren?.length);
 
-              /* simple 下拉栏的数据 */
+              // simple 下拉栏的数据
               const simpleChildren =
                 item.mobileChildren
                   ?.filter((child) => child.enabled)
                   .sort((a, b) => a.order - b.order) ?? [];
 
-              /* 当前 simple 下拉是否打开 */
+              // 当前 simple 下拉是否打开
               const isSimpleDropdownOpen =
                 desktopMegaKey === item.key && hasSimpleDropdown;
 
               return (
                 <div
                   key={item.key}
-                  className={`site-nav-item ${hasMegaDropdown || hasSimpleDropdown
+                  className={`site-nav-item ${
+                    hasMegaDropdown || hasSimpleDropdown
                       ? "site-nav-item-has-dropdown"
                       : ""
-                    } ${hasSimpleDropdown ? "site-nav-item-has-simple-dropdown" : ""
-                    } ${isSimpleDropdownOpen ? "site-nav-item-simple-open" : ""
-                    }`}
+                  } ${
+                    hasSimpleDropdown
+                      ? "site-nav-item-has-simple-dropdown"
+                      : ""
+                  } ${
+                    isSimpleDropdownOpen ? "site-nav-item-simple-open" : ""
+                  }`}
                   onMouseEnter={() => {
                     handleDesktopNavMouseEnter(item);
                   }}
@@ -707,21 +799,22 @@ export default function SiteHeader() {
                 >
                   <Link
                     href={navHref}
-                    className={`site-nav-link ${isNavActive(item) ? "site-nav-link-active" : ""
-                      }`}
+                    className={`site-nav-link ${
+                      isNavActive(item) ? "site-nav-link-active" : ""
+                    }`}
                     onClick={closeAllPanels}
                   >
                     {navLabel}
                   </Link>
 
                   {/* ================================
-            PC 端 simple 简单下拉栏
+                      PC 端 simple 简单下拉栏
 
-            说明：
-            1. 只在当前 simple 菜单打开时渲染
-            2. 不打开时页面里没有这个下拉 DOM
-            3. 这样可以彻底避免两个下拉栏同时显示
-        ================================ */}
+                      说明：
+                      1. 只在当前 simple 菜单打开时渲染
+                      2. 不打开时页面里没有这个下拉 DOM
+                      3. 这样可以彻底避免两个下拉栏同时显示
+                  ================================ */}
                   {isSimpleDropdownOpen ? (
                     <div
                       className="site-nav-simple-dropdown site-nav-simple-dropdown-open"
@@ -789,8 +882,9 @@ export default function SiteHeader() {
 
           {/* 语言栏 */}
           <div
-            className={`language-switcher ${isLanguageOpen ? "language-switcher-open" : ""
-              }`}
+            className={`language-switcher ${
+              isLanguageOpen ? "language-switcher-open" : ""
+            }`}
             onMouseEnter={handleLanguageMouseEnter}
             onMouseLeave={handleLanguageMouseLeave}
           >
@@ -815,10 +909,11 @@ export default function SiteHeader() {
                 <a
                   key={language.code}
                   href={language.href}
-                  className={`language-details-item ${language.code === currentLocale
-                    ? "language-details-item-active"
-                    : ""
-                    }`}
+                  className={`language-details-item ${
+                    language.code === currentLocale
+                      ? "language-details-item-active"
+                      : ""
+                  }`}
                   onClick={(event) =>
                     handleLanguageItemClick(event, language.code, language.href)
                   }
@@ -831,8 +926,9 @@ export default function SiteHeader() {
 
           {/* 手机端导航栏：按钮 + 下拉菜单 */}
           <div
-            className={`mobile-nav-switcher ${isMobileMenuOpen ? "mobile-nav-switcher-open" : ""
-              }`}
+            className={`mobile-nav-switcher ${
+              isMobileMenuOpen ? "mobile-nav-switcher-open" : ""
+            }`}
           >
             <button
               className="mobile-menu-btn"
@@ -910,7 +1006,9 @@ export default function SiteHeader() {
                           );
                         }}
                       >
-                        <span className="mobile-nav-summary-text">{navLabel}</span>
+                        <span className="mobile-nav-summary-text">
+                          {navLabel}
+                        </span>
                       </summary>
 
                       <div className="mobile-nav-submenu">
@@ -933,8 +1031,9 @@ export default function SiteHeader() {
                   <Link
                     key={item.key}
                     href={navHref}
-                    className={`mobile-nav-link ${isNavActive(item) ? "mobile-nav-link-active" : ""
-                      }`}
+                    className={`mobile-nav-link ${
+                      isNavActive(item) ? "mobile-nav-link-active" : ""
+                    }`}
                     onClick={closeAllPanels}
                   >
                     {navLabel}
@@ -958,7 +1057,6 @@ export default function SiteHeader() {
         >
           <div className="site-nav-mega-inner">
             {/* 左侧分类区 */}
-            {/* 左侧分类区 */}
             <div className="site-nav-mega-sidebar">
               {activeMegaCategories.map((category) => {
                 /**
@@ -978,13 +1076,18 @@ export default function SiteHeader() {
 
                 const categoryContent = (
                   <>
-                    <strong>{getLocalizedText(category.title, currentLocale)}</strong>
+                    <strong>
+                      {getLocalizedText(category.title, currentLocale)}
+                    </strong>
 
                     <span className="site-nav-mega-category-desc">
                       {getLocalizedText(category.description, currentLocale)}
                     </span>
 
-                    <span className="site-nav-mega-category-arrow" aria-hidden="true" />
+                    <span
+                      className="site-nav-mega-category-arrow"
+                      aria-hidden="true"
+                    />
                   </>
                 );
 
@@ -997,11 +1100,14 @@ export default function SiteHeader() {
                     <Link
                       key={category.key}
                       href={getLocalizedHref(categoryHref, currentLocale)}
-                      className={`site-nav-mega-category ${currentMegaCategoryKey === category.key
-                        ? "site-nav-mega-category-active"
-                        : ""
-                        }`}
-                      onMouseEnter={() => setActiveMegaCategoryKey(category.key)}
+                      className={`site-nav-mega-category ${
+                        currentMegaCategoryKey === category.key
+                          ? "site-nav-mega-category-active"
+                          : ""
+                      }`}
+                      onMouseEnter={() =>
+                        setActiveMegaCategoryKey(category.key)
+                      }
                       onClick={closeAllPanels}
                     >
                       {categoryContent}
@@ -1015,10 +1121,11 @@ export default function SiteHeader() {
                 return (
                   <div
                     key={category.key}
-                    className={`site-nav-mega-category ${currentMegaCategoryKey === category.key
-                      ? "site-nav-mega-category-active"
-                      : ""
-                      }`}
+                    className={`site-nav-mega-category ${
+                      currentMegaCategoryKey === category.key
+                        ? "site-nav-mega-category-active"
+                        : ""
+                    }`}
                     onMouseEnter={() => setActiveMegaCategoryKey(category.key)}
                   >
                     {categoryContent}
@@ -1037,7 +1144,7 @@ export default function SiteHeader() {
                       activeMegaCards[0]?.description
                       ? activeMegaCards[0].description
                       : activeMegaCategory?.description ??
-                      activeMegaItem.megaDropdown.description,
+                          activeMegaItem.megaDropdown.description,
                     currentLocale,
                   )}
                 </p>
@@ -1066,16 +1173,16 @@ export default function SiteHeader() {
                             const productMeta = {
                               title: cardImage.title
                                 ? getLocalizedText(
-                                  cardImage.title,
-                                  currentLocale,
-                                )
+                                    cardImage.title,
+                                    currentLocale,
+                                  )
                                 : fallbackProductMeta.title,
 
                               description: cardImage.description
                                 ? getLocalizedText(
-                                  cardImage.description,
-                                  currentLocale,
-                                )
+                                    cardImage.description,
+                                    currentLocale,
+                                  )
                                 : fallbackProductMeta.description,
                             };
 
@@ -1155,20 +1262,20 @@ export default function SiteHeader() {
                 <Link
                   href={getLocalizedHref(
                     activeMegaCards[0]?.href ??
-                    activeMegaItem.megaDropdown.footerHref,
+                      activeMegaItem.megaDropdown.footerHref,
                     currentLocale,
                   )}
                   onClick={closeAllPanels}
                 >
                   {activeMegaCards[0]?.title
                     ? `${getLocalizedText(
-                      activeMegaCards[0].title,
-                      currentLocale,
-                    )} →`
+                        activeMegaCards[0].title,
+                        currentLocale,
+                      )} →`
                     : getLocalizedText(
-                      activeMegaItem.megaDropdown.footerLinkLabel,
-                      currentLocale,
-                    )}
+                        activeMegaItem.megaDropdown.footerLinkLabel,
+                        currentLocale,
+                      )}
                 </Link>
               </div>
             </div>
@@ -1187,4 +1294,4 @@ export default function SiteHeader() {
       )}
     </header>
   );
-}   
+} 

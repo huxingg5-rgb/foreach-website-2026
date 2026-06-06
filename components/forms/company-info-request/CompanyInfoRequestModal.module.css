@@ -1,0 +1,483 @@
+/* =========================================================
+   CompanyInfoRequestModal.module.css
+   恒永达官网｜通用公司信息申请弹窗样式
+
+   文件路径：
+   components/forms/company-info-request/CompanyInfoRequestModal.module.css
+
+   说明：
+   1. 只服务 CompanyInfoRequestModal 组件
+   2. 不写入 app/globals.css
+   3. 后续图纸申请、规格书申请、资料包申请都可以复用
+   4. 当前包含测试版邮箱验证码视觉样式
+========================================================= */
+
+/* =========================================================
+   弹窗外层
+========================================================= */
+
+.modalLayer {
+  position: fixed;
+  inset: 0;
+  z-index: 9300;
+  display: grid;
+  place-items: center;
+  padding: 32px;
+}
+
+.modalMask {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgba(15, 28, 52, 0.46);
+  cursor: pointer;
+}
+
+/* =========================================================
+   弹窗主体
+========================================================= */
+
+.modal {
+  position: relative;
+  z-index: 1;
+  width: min(760px, calc(100vw - 40px));
+  max-height: calc(100vh - 64px);
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  background: #ffffff;
+  box-shadow: 0 28px 70px rgba(15, 28, 52, 0.24);
+  overflow: hidden;
+}
+
+/* =========================================================
+   弹窗头部
+========================================================= */
+
+.modalHead {
+  padding: 24px 28px 22px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  background: #173368;
+  color: #ffffff;
+}
+
+.modalHead span {
+  display: inline-flex;
+  margin-bottom: 8px;
+  color: #09e9b4;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.modalHead h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 28px;
+  line-height: 1.15;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.modalHead p {
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.modalHead > button {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  background: transparent;
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.modalHead > button:hover {
+  border-color: #09e9b4;
+  color: #09e9b4;
+}
+
+/* =========================================================
+   表单区域
+========================================================= */
+
+.form {
+  padding: 22px 28px 26px;
+  overflow-y: auto;
+  background: #ffffff;
+}
+
+.summary {
+  margin-bottom: 18px;
+  padding: 16px 18px;
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
+  border: 1px solid rgba(23, 51, 104, 0.12);
+  background: #f6f8fb;
+}
+
+.summary div {
+  min-height: 72px;
+  display: grid;
+  align-content: center;
+  border-right: 1px solid rgba(23, 51, 104, 0.12);
+}
+
+.summary span {
+  color: #5e6b80;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.summary strong {
+  margin-top: 4px;
+  color: #173368;
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.summary em {
+  color: #5e6b80;
+  font-size: 12px;
+  font-style: normal;
+}
+
+.summary p {
+  margin: 0;
+  color: #5e6b80;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   申请条目
+========================================================= */
+
+.itemList {
+  margin-bottom: 20px;
+  display: grid;
+  gap: 10px;
+}
+
+.requestItem {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 14px;
+  padding: 14px 16px;
+  border: 1px solid rgba(23, 51, 104, 0.12);
+  background: #ffffff;
+}
+
+.requestItem > span {
+  color: rgba(23, 51, 104, 0.34);
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.requestItem strong {
+  display: block;
+  color: #173368;
+  font-size: 17px;
+  line-height: 1.25;
+  font-weight: 900;
+}
+
+.requestItem p {
+  margin: 6px 0 0;
+  color: #5e6b80;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   空状态
+========================================================= */
+
+.empty {
+  margin-bottom: 18px;
+  padding: 22px;
+  border: 1px dashed rgba(23, 51, 104, 0.2);
+  background: #f6f8fb;
+  text-align: center;
+}
+
+.empty strong {
+  display: block;
+  color: #173368;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.empty p {
+  margin: 8px auto 0;
+  max-width: 420px;
+  color: #5e6b80;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   公司信息字段
+========================================================= */
+
+.fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.fields label {
+  display: grid;
+  gap: 7px;
+}
+
+.fields span {
+  color: #173368;
+  font-size: 13px;
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+.fields input,
+.fields textarea {
+  width: 100%;
+  border: 1px solid rgba(23, 51, 104, 0.18);
+  border-radius: 5px;
+  background: #ffffff;
+  color: #173368;
+  font-size: 14px;
+  outline: none;
+}
+
+.fields input {
+  height: 42px;
+  padding: 0 12px;
+}
+
+.fields textarea {
+  padding: 12px;
+  resize: vertical;
+}
+
+.fields input:focus,
+.fields textarea:focus {
+  border-color: #09e9b4;
+}
+
+.fieldWide {
+  grid-column: 1 / -1;
+}
+
+/* =========================================================
+   邮箱验证码
+========================================================= */
+
+.emailField {
+  grid-column: 1 / -1;
+}
+
+.emailInputGroup {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 118px;
+  gap: 8px;
+}
+
+.emailInputGroup button {
+  height: 42px;
+  border: 1px solid #173368;
+  border-radius: 5px;
+  background: #ffffff;
+  color: #173368;
+  font-size: 13px;
+  font-weight: 900;
+  cursor: pointer;
+  transition:
+    background 0.18s ease,
+    color 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.emailInputGroup button:hover:not(:disabled) {
+  background: #173368;
+  color: #09e9b4;
+}
+
+.emailInputGroup button:disabled {
+  cursor: not-allowed;
+  opacity: 0.52;
+}
+
+.emailCodeHint {
+  color: #09a982;
+  font-size: 12px;
+  line-height: 1.4;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.formError {
+  margin-top: 14px;
+  padding: 10px 12px;
+  border-left: 4px solid #ff5a5f;
+  background: rgba(255, 90, 95, 0.08);
+  color: #b4232a;
+  font-size: 13px;
+  line-height: 1.6;
+  font-weight: 800;
+}
+
+/* =========================================================
+   底部按钮
+========================================================= */
+
+.actions {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 140px;
+  gap: 10px;
+}
+
+.submitButton,
+.backButton {
+  height: 44px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.submitButton {
+  border: 1px solid #173368;
+  background: #173368;
+  color: #ffffff;
+}
+
+.submitButton:hover {
+  border-color: #09e9b4;
+  background: #09e9b4;
+  color: #173368;
+}
+
+.submitButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.42;
+}
+
+.backButton {
+  border: 1px solid rgba(23, 51, 104, 0.22);
+  background: #ffffff;
+  color: #173368;
+}
+
+.backButton:hover {
+  border-color: #173368;
+  background: #173368;
+  color: #09e9b4;
+}
+
+/* =========================================================
+   成功状态
+========================================================= */
+
+.success {
+  padding: 46px 36px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.success strong {
+  display: block;
+  color: #173368;
+  font-size: 26px;
+  line-height: 1.25;
+  font-weight: 900;
+}
+
+.success p {
+  margin: 14px auto 0;
+  max-width: 520px;
+  color: #5e6b80;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.successActions {
+  margin-top: 24px;
+}
+
+.successActions button {
+  min-width: 140px;
+  height: 42px;
+  border: 1px solid #173368;
+  border-radius: 5px;
+  background: #173368;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.successActions button:hover {
+  border-color: #09e9b4;
+  background: #09e9b4;
+  color: #173368;
+}
+
+/* =========================================================
+   移动端
+========================================================= */
+
+@media (max-width: 720px) {
+  .modalLayer {
+    padding: 16px;
+  }
+
+  .modal {
+    width: calc(100vw - 28px);
+    max-height: calc(100vh - 32px);
+  }
+
+  .modalHead {
+    padding: 20px;
+  }
+
+  .form {
+    padding: 18px 20px 22px;
+  }
+
+  .summary {
+    grid-template-columns: 1fr;
+  }
+
+  .summary div {
+    border-right: 0;
+    border-bottom: 1px solid rgba(23, 51, 104, 0.12);
+    padding-bottom: 14px;
+  }
+
+  .fields {
+    grid-template-columns: 1fr;
+  }
+
+  .emailInputGroup {
+    grid-template-columns: 1fr;
+  }
+
+  .actions {
+    grid-template-columns: 1fr;
+  }
+} 

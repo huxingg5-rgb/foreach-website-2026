@@ -15197,3 +15197,82 @@ html[lang="ru"] .home-hero-btn:hover {
   .site-nav-simple-dropdown-link:nth-child(6) {
   animation-delay: 120ms;
 } 
+
+/* =========================================================
+   Header｜无 Banner 详情页白底状态
+   文件路径：
+   app/globals.css
+
+   说明：
+   1. Header 是全站公共模块，所以这段放 globals.css
+   2. 只作用于带 site-header-solid-page 的页面
+   3. 当前用于接头型号替代详情页
+   4. 不影响首页、资源中心首页、关于我们等有 Banner 的页面
+========================================================= */
+
+.site-header.site-header-solid-page {
+  background: rgba(255, 255, 255, 0.98) !important;
+  border-bottom: 1px solid rgba(23, 51, 104, 0.12) !important;
+  box-shadow: 0 8px 24px rgba(23, 51, 104, 0.06) !important;
+  backdrop-filter: blur(16px) !important;
+}
+
+/* 导航文字保持深蓝 */
+.site-header.site-header-solid-page .site-nav-link,
+.site-header.site-header-solid-page .language-summary,
+.site-header.site-header-solid-page .site-search-trigger,
+.site-header.site-header-solid-page .mobile-menu-btn {
+  color: #173368 !important;
+}
+
+/* hover 保持官网交互：深蓝 / 荧光色体系 */
+.site-header.site-header-solid-page .site-nav-link:hover,
+.site-header.site-header-solid-page .language-summary:hover,
+.site-header.site-header-solid-page .site-search-trigger:hover {
+  color: #09e9b4 !important;
+}
+
+/* 白底详情页强制显示彩色 Logo */
+.site-header.site-header-solid-page .site-logo-white {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+.site-header.site-header-solid-page .site-logo-color {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+/* 如果原 CSS 用 display 控制 Logo，这里做兜底 */
+.site-header.site-header-solid-page .site-logo-color {
+  display: block !important;
+}
+
+.site-header.site-header-solid-page .site-logo-white {
+  display: none !important;
+}
+
+/* 搜索图标保持深蓝 */
+.site-header.site-header-solid-page .site-search-icon,
+.site-header.site-header-solid-page .site-search-icon::before,
+.site-header.site-header-solid-page .site-search-icon::after {
+  color: #173368 !important;
+  border-color: #173368 !important;
+}
+
+/* 语言箭头保持深蓝 */
+.site-header.site-header-solid-page .language-summary-arrow {
+  color: #173368 !important;
+}
+
+/* 当前高亮导航保持深蓝，不要变白 */
+.site-header.site-header-solid-page .site-nav-link-active {
+  color: #173368 !important;
+}
+
+/* 当前高亮导航下划线 / 标记使用荧光色 */
+.site-header.site-header-solid-page .site-nav-link-active::after {
+  background: #09e9b4 !important;
+} 

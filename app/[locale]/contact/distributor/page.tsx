@@ -9,34 +9,59 @@
    /ko/contact/distributor
    /ru/contact/distributor
 
-   中文特殊处理：
-   /zh-CN/contact/distributor 不直接 404
-   而是显示一个中文友好提示，引导用户返回联系与合作页面
+   重要规则：
+   1. 中文页面不走 /zh-CN/contact/distributor
+   2. 中文经销商页面走 /contact/distributor
+   3. 当前 [locale] 动态路由只负责外语页面
+   4. 因为 output: export 静态导出，动态路由必须提前声明
+   5. 联系方式与地图文案也在服务端按 locale 传入，避免 Hydration mismatch
 ========================================================= */
 
-import Link from "next/link";
 import { notFound } from "next/navigation";
+
 import DistributorPageContent from "@/components/contact/DistributorPageContent";
+
+import { getContactIntlData } from "@/data/contact-cooperation/contact.intl";
+
 import {
   getDistributorPageData,
   type DistributorLocale,
 } from "@/data/contact-cooperation/distributor.intl";
 
 /* =========================================================
-   可生成的语言路径
+   经销商合作页面外语路径
 
    说明：
-   1. en / es / fr / ko / ru 正常显示经销商合作页面
-   2. zh-CN 只作为友好提示页存在，不显示经销商合作内容
-   3. 因为 output: export 静态导出，动态路由必须提前声明
+   1. 这里只放外语语言代码
+   2. 不能放 zh-CN
+   3. 否则 build 时会生成 /zh-CN/contact/distributor
 ========================================================= */
 
-const DISTRIBUTOR_LOCALES: DistributorLocale[] = ["en", "es", "fr", "ko", "ru"];
+const DISTRIBUTOR_LOCALES: DistributorLocale[] = [
+  "en",
+  "es",
+  "fr",
+  "ko",
+  "ru",
+];
 
-const GENERATED_LOCALES = ["zh-CN", ...DISTRIBUTOR_LOCALES] as const;
+/* =========================================================
+   generateStaticParams
+
+   说明：
+   1. 这里只生成外语路径
+   2. 生成结果：
+      /en/contact/distributor
+      /es/contact/distributor
+      /fr/contact/distributor
+      /ko/contact/distributor
+      /ru/contact/distributor
+   3. 不生成：
+      /zh-CN/contact/distributor
+========================================================= */
 
 export function generateStaticParams() {
-  return GENERATED_LOCALES.map((locale) => ({
+  return DISTRIBUTOR_LOCALES.map((locale) => ({
     locale,
   }));
 }
@@ -45,46 +70,11 @@ export function generateStaticParams() {
 export const dynamicParams = false;
 
 /* =========================================================
-   中文友好提示页
-
-   说明：
-   - 中文站目前不开放经销商合作页面
-   - 但不直接 404，避免用户体验突兀
-   - 后续如果中文也要开放，只需要改这里
+   判断当前 locale 是否为经销商页面支持的外语
 ========================================================= */
 
-function ChineseDistributorFallback() {
-  return (
-    <main className="distributor-page">
-      <section className="distributor-unavailable">
-        <div className="distributor-section-inner">
-          <div className="distributor-unavailable-card">
-            <p className="distributor-unavailable-label">Contact & Partnership</p>
-
-            <h1>经销商合作页面暂未开放中文版本</h1>
-
-            <p>
-              当前经销商合作页面主要面向海外合作伙伴开放。您可以返回“联系与合作”页面，
-              通过询盘表单、联系方式或销售支持入口与我们联系。
-            </p>
-
-            <div className="distributor-unavailable-actions">
-              <Link href="/contact" className="distributor-btn distributor-btn-main">
-                返回联系与合作
-              </Link>
-
-              <Link
-                href="/en/contact/distributor"
-                className="distributor-btn distributor-btn-ghost-dark"
-              >
-                查看英文经销商页面
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-  );
+function isDistributorLocale(locale: string): locale is DistributorLocale {
+  return DISTRIBUTOR_LOCALES.includes(locale as DistributorLocale);
 }
 
 /* =========================================================
@@ -100,17 +90,24 @@ export default async function DistributorPage({
 }) {
   const { locale } = await params;
 
-  /* 中文路径不 404，显示友好提示 */
-  if (locale === "zh-CN") {
-    return <ChineseDistributorFallback />;
-  }
-
-  /* 其他未声明语言仍然 404 */
-  if (!DISTRIBUTOR_LOCALES.includes(locale as DistributorLocale)) {
+  /*
+     说明：
+     1. 当前文件只接受 en / es / fr / ko / ru
+     2. 如果访问 /zh-CN/contact/distributor，直接 404
+     3. 中文页面应该访问 /contact/distributor
+  */
+  if (!isDistributorLocale(locale)) {
     notFound();
   }
 
   const content = getDistributorPageData(locale);
 
-  return <DistributorPageContent content={content} />;
+  const contactPageData = getContactIntlData(locale);
+
+  return (
+    <DistributorPageContent
+      content={content}
+      contactPageData={contactPageData}
+    />
+  );
 }  

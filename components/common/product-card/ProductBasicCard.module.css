@@ -1,0 +1,216 @@
+/* =========================================================
+   ProductBasicCard.module.css
+   恒永达官网｜公共产品基础卡片样式
+
+   文件路径：
+   components/common/product-card/ProductBasicCard.module.css
+
+   说明：
+   1. 只服务 ProductBasicCard.tsx
+   2. 使用 CSS Module，避免影响其它页面
+   3. 不写入 app/globals.css
+   4. 保持品牌视觉：
+      - 深蓝：#173368
+      - 荧光青：#09e9b4
+      - 白底
+      - 细线
+      - 不做大圆角
+      - 不做大阴影
+========================================================= */
+
+.card {
+  position: relative;
+  min-height: 470px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(23, 51, 104, 0.14);
+  background: #ffffff;
+  transition:
+    border-color 0.22s ease,
+    transform 0.22s ease;
+}
+
+/* 顶部荧光线 */
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 3px;
+  background: #09e9b4;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.22s ease;
+}
+
+.card:hover {
+  border-color: rgba(9, 233, 180, 0.95);
+  transform: translateY(-6px);
+}
+
+.card:hover::before {
+  transform: scaleX(1);
+}
+
+/* =========================================================
+   图片区域
+========================================================= */
+
+.imageBox {
+  height: 240px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 18px;
+  overflow: visible;
+}
+
+.image {
+  width: auto;
+  max-width: 94%;
+  max-height: 230px;
+  object-fit: contain;
+  transform: translateY(0) scale(1);
+  transition:
+    transform 0.24s ease,
+    filter 0.24s ease;
+}
+
+.card:hover .image {
+  transform: translateY(-4px) scale(1.06);
+  filter: saturate(1.04) contrast(1.03);
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  border: 1px dashed rgba(23, 51, 104, 0.18);
+  color: rgba(23, 51, 104, 0.42);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   标题
+========================================================= */
+
+.title {
+  margin: 0 0 10px;
+  color: #173368;
+  font-size: 17px;
+  line-height: 1.35;
+  font-weight: 900;
+}
+
+/* =========================================================
+   参数信息
+========================================================= */
+
+.metaList {
+  display: grid;
+  gap: 5px;
+  margin: 0 0 14px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.metaItem {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  min-width: 0;
+}
+
+.metaItem dt {
+  flex: 0 0 auto;
+  margin: 0;
+  color: #5e6b80;
+  font-weight: 400;
+}
+
+.metaItem dd {
+  min-width: 0;
+  margin: 0;
+  color: #173368;
+  font-weight: 900;
+  word-break: break-word;
+}
+
+/* =========================================================
+   按钮区域
+========================================================= */
+
+.actionRow {
+  margin-top: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.actionButton {
+  height: 36px;
+  padding: 0 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(23, 51, 104, 0.24);
+  border-radius: 6px;
+  background: #ffffff;
+  color: #173368;
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 900;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: none;
+  transition:
+    transform 0.18s ease,
+    background 0.18s ease,
+    color 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.actionButton:hover,
+.actionButton:active,
+.actionButton:focus-visible {
+  border-color: #173368;
+  background: #173368;
+  color: #09e9b4;
+  transform: translateY(-1px);
+}
+
+.actionButton.isActive {
+  border-color: #173368;
+  background: #173368;
+  color: #09e9b4;
+}
+
+.actionButton.isActive:hover,
+.actionButton.isActive:active,
+.actionButton.isActive:focus-visible {
+  border-color: #173368;
+  background: #173368;
+  color: #09e9b4;
+}
+
+/* =========================================================
+   响应式
+========================================================= */
+
+@media (max-width: 720px) {
+  .card {
+    min-height: auto;
+  }
+
+  .imageBox {
+    height: 220px;
+  }
+
+  .actionRow {
+    grid-template-columns: 1fr;
+  }
+} 

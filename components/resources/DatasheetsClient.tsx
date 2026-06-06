@@ -11,62 +11,42 @@
    1. 渲染规格书下载页面主体内容
    2. 负责搜索、筛选、列表渲染
    3. 负责下载按钮和来图定制按钮
-   4. 页面数据从 data/resources/datasheets.zh.ts 传入
-   5. 本文件不直接写死规格书数据，后续新增资料只改 data 文件
+   4. 页面数据由 page.tsx 通过 service 层传入
+   5. 本文件不直接写死规格书数据
+   6. 后期接后端时，当前组件原则上不用改
 
-   为什么是客户端组件：
-   1. 搜索输入框需要 useState
-   2. 分类筛选需要 useState
-   3. 列表过滤需要 useMemo
+   当前数据流：
+   page.tsx
+     ↓
+   services/resources/getDatasheetsPageData.ts
+     ↓
+   data/resources/datasheets.i18n.ts
+     ↓
+   DatasheetsClient.tsx
 ========================================================= */
 
-import { useMemo, useState } from "react"; // 引入 React 状态与计算能力
-import Link from "next/link"; // 引入 Next.js 内部跳转组件
+import { useMemo, useState } from "react";
+import Link from "next/link";
 
 import type {
-  DatasheetCategoryValue,
+  DatasheetCategory,
   DatasheetFilterOption,
   DatasheetItem,
-} from "@/data/resources/datasheets.zh"; // 引入规格书数据类型
+  DatasheetsPageText,
+} from "@/data/resources/datasheets.types";
 
 /* =========================================================
    组件 Props 类型
+
    说明：
-   1. pageText：页面文案
-   2. filterOptions：筛选按钮
-   3. datasheetItems：规格书列表
+   1. pageText：页面文案，包括 Banner、面包屑、搜索框、列表说明、按钮文字等
+   2. filterOptions：筛选按钮数据
+   3. datasheetItems：规格书列表数据
+   4. 类型统一从 data/resources/datasheets.types.ts 引入
 ========================================================= */
 
 type DatasheetsClientProps = {
-  pageText: {
-    hero: {
-      title: string;
-      description: string;
-    };
-    breadcrumb: {
-      home: string;
-      resources: string;
-      current: string;
-    };
-    search: {
-      placeholder: string;
-      buttonText: string;
-    };
-    section: {
-      title: string;
-      description: string;
-      resultSuffix: string;
-      emptyTitle: string;
-      emptyDescription: string;
-    };
-    support: {
-      kicker: string;
-      title: string;
-      description: string;
-      buttonText: string;
-      buttonHref: string;
-    };
-  };
+  pageText: DatasheetsPageText;
   filterOptions: DatasheetFilterOption[];
   datasheetItems: DatasheetItem[];
 };
@@ -76,8 +56,8 @@ type DatasheetsClientProps = {
    下载图标组件
 
    说明：
-   1. 跟随按钮文字颜色变化
-   2. 使用 currentColor
+   1. 使用 SVG，不额外引入图片
+   2. fill 使用 currentColor，颜色跟随按钮文字
 ========================================================= */
 
 function DownloadIcon() {
@@ -94,6 +74,10 @@ function DownloadIcon() {
 /* =========================================================
    SearchIcon
    搜索图标组件
+
+   说明：
+   1. 使用 SVG，不使用图片
+   2. className="search-icon" 的大小、位置由 datasheets.css 控制
 ========================================================= */
 
 function SearchIcon() {
@@ -117,21 +101,21 @@ export default function DatasheetsClient({
   filterOptions,
   datasheetItems,
 }: DatasheetsClientProps) {
-  // 搜索关键词
+  /* 搜索关键词 */
   const [searchKeyword, setSearchKeyword] = useState("");
 
-  // 当前选中的分类
+  /* 当前选中的分类 */
   const [activeCategory, setActiveCategory] =
-    useState<DatasheetCategoryValue>("all");
+    useState<DatasheetCategory>("all");
 
   /* =========================================================
      normalizeText
      统一处理搜索文本
 
      说明：
-     1. 去除首尾空格
-     2. 转小写
-     3. 避免英文大小写影响搜索
+     1. 转成字符串
+     2. 去除首尾空格
+     3. 转小写，避免英文大小写影响搜索
   ========================================================= */
 
   function normalizeText(value: string) {
@@ -140,7 +124,12 @@ export default function DatasheetsClient({
 
   /* =========================================================
      filteredItems
-     根据分类和搜索词过滤资料列表
+     根据分类和搜索词过滤规格书列表
+
+     说明：
+     1. activeCategory 为 all 时显示全部
+     2. searchKeyword 为空时不限制关键词
+     3. searchableText 中包含标题、标签、说明、关键词、语言、版本、更新时间
   ========================================================= */
 
   const filteredItems = useMemo(() => {
@@ -160,12 +149,23 @@ export default function DatasheetsClient({
     });
   }, [activeCategory, searchKeyword, datasheetItems]);
 
+  /* 字段分隔符：中文默认用 ： */
+  const fieldSeparator = pageText.labels.fieldSeparator ?? "：";
+
   return (
     <main className="datasheets-page">
       {/* ================================
           1. Banner
       ================================= */}
       <section className="datasheets-hero">
+        <img
+          className="datasheets-hero-image"
+          src={pageText.hero.image}
+          alt={pageText.hero.imageAlt}
+        />
+
+        <div className="datasheets-hero-overlay" />
+
         <div className="datasheets-hero-inner">
           <h1 className="datasheets-hero-title">{pageText.hero.title}</h1>
 
@@ -176,12 +176,20 @@ export default function DatasheetsClient({
       {/* ================================
           2. 面包屑导航
       ================================= */}
-      <section className="breadcrumb-bar" aria-label="面包屑导航">
+      <section className="breadcrumb-bar" aria-label="Breadcrumb">
         <div className="breadcrumb-bar-inner">
-          <Link href="/">{pageText.breadcrumb.home}</Link>
+          <Link href={pageText.breadcrumb.homeHref ?? "/"}>
+            {pageText.breadcrumb.home}
+          </Link>
+
           <span>/</span>
-          <Link href="/resources">{pageText.breadcrumb.resources}</Link>
+
+          <Link href={pageText.breadcrumb.resourcesHref ?? "/resources"}>
+            {pageText.breadcrumb.resources}
+          </Link>
+
           <span>/</span>
+
           <strong>{pageText.breadcrumb.current}</strong>
         </div>
       </section>
@@ -189,7 +197,7 @@ export default function DatasheetsClient({
       {/* ================================
           3. 搜索与筛选区域
       ================================= */}
-      <section className="tool-panel" aria-label="规格书搜索与筛选">
+      <section className="tool-panel" aria-label="Datasheet search and filter">
         <div className="search-row">
           <div className="search-wrap">
             <SearchIcon />
@@ -208,7 +216,7 @@ export default function DatasheetsClient({
           </button>
         </div>
 
-        <div className="filter-row" aria-label="产品分类筛选">
+        <div className="filter-row" aria-label="Product category filter">
           {filterOptions.map((item) => (
             <button
               className={`filter-btn ${
@@ -236,7 +244,10 @@ export default function DatasheetsClient({
           </div>
 
           <div className="result-count">
-            共 {filteredItems.length} {pageText.section.resultSuffix}
+            {pageText.section.resultPrefix
+              ? `${pageText.section.resultPrefix} `
+              : ""}
+            {filteredItems.length} {pageText.section.resultSuffix}
           </div>
         </div>
 
@@ -244,33 +255,53 @@ export default function DatasheetsClient({
           <div className="datasheet-list">
             {filteredItems.map((item) => (
               <article className="datasheet-row" key={item.id}>
+                {/* 左侧产品缩略图 */}
                 <div className="product-thumb">
-                  <img src={item.image} alt={`${item.title}缩略图`} />
+                  <img src={item.image} alt={`${item.title} thumbnail`} />
                 </div>
 
+                {/* 中间文字信息 */}
                 <div className="row-main">
                   <div className="row-title-line">
                     <h3 className="row-title">{item.title}</h3>
+
                     <span className="row-label">{item.label}</span>
                   </div>
 
                   <div className="row-meta">
-                    <span>语言：{item.language}</span>
-                    <span>版本：{item.version}</span>
-                    <span>更新：{item.update}</span>
+                    <span>
+                      {pageText.labels.language}
+                      {fieldSeparator}
+                      {item.language}
+                    </span>
+
+                    <span>
+                      {pageText.labels.version}
+                      {fieldSeparator}
+                      {item.version}
+                    </span>
+
+                    <span>
+                      {pageText.labels.update}
+                      {fieldSeparator}
+                      {item.update}
+                    </span>
                   </div>
 
                   <p className="row-desc">{item.description}</p>
                 </div>
 
+                {/* 右侧按钮 */}
                 <div className="row-actions">
-                  <a className="row-link" href={item.productHref}>
-                    查看产品
-                  </a>
+                  {item.productHref ? (
+                    <Link className="row-link" href={item.productHref}>
+                      {pageText.labels.viewProduct}
+                    </Link>
+                  ) : null}
 
                   {item.actionType === "custom" ? (
                     <Link className="row-custom" href={item.downloadHref}>
-                      来图定制
+                      {pageText.labels.custom}
                     </Link>
                   ) : (
                     <a
@@ -280,7 +311,7 @@ export default function DatasheetsClient({
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      下载规格书
+                      {pageText.labels.download}
                       <DownloadIcon />
                     </a>
                   )}

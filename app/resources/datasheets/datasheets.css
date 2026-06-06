@@ -7,6 +7,7 @@
    2. 图纸不放资源中心，后续建议放在产品详情页
    3. 页面结构：Banner + 面包屑 + 搜索筛选 + 列表 + 底部支持入口
    4. 左侧产品缩略图使用 WebP 图片，不使用 SVG
+   5. Banner 图片不写在 CSS 中，由 data/resources/datasheets.zh.ts 控制
 ========================================================= */
 
 /* ================================
@@ -63,45 +64,72 @@
 .datasheets-page .datasheets-hero {
   position: relative;
   min-height: 520px;
-  display: flex; 
+  display: flex;
   align-items: center;
   overflow: hidden;
-  background:
-    linear-gradient(90deg, rgba(6, 26, 58, 0.88), rgba(23, 51, 104, 0.42)),
-    url("/images/resource/datasheets/banner/resource-datasheet-banner-1920x800-v001.webp");
-  background-size: cover;
-  background-position: center;
+  background: var(--brand-blue);
   color: #ffffff;
 }
 
+/* Banner 主图 */
+.datasheets-page .datasheets-hero-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Banner 深蓝遮罩 */
+.datasheets-page .datasheets-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    90deg,
+    rgba(6, 26, 58, 0.88),
+    rgba(23, 51, 104, 0.42)
+  );
+  pointer-events: none;
+}
+
+/* Banner 科技网格纹理 */
 .datasheets-page .datasheets-hero::before {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 2;
   background:
     linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
     linear-gradient(0deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
   background-size: 86px 86px;
   opacity: 0.28;
+  pointer-events: none;
 }
 
+/* Banner 右下角装饰线框 */
 .datasheets-page .datasheets-hero::after {
   content: "";
   position: absolute;
   right: -150px;
   bottom: -200px;
+  z-index: 3;
   width: 520px;
   height: 520px;
   border: 1px solid rgba(9, 233, 180, 0.28);
   transform: rotate(24deg);
+  pointer-events: none;
 }
 
 .datasheets-page .datasheets-hero-inner {
   position: relative;
-  z-index: 1;
+  z-index: 4;
   width: min(var(--content-width), calc(100% - 56px));
   margin: 0 auto;
-  padding: 86px 0 94px;
+  padding: 132px 0 142px;
 }
 
 .datasheets-page .datasheets-hero-title {
@@ -179,14 +207,15 @@
 
 .datasheets-page .search-icon {
   position: absolute;
-  left: 18px;
-  top: 50%;
-  width: 18px;
-  height: 18px;
+  left: 14px;
+  top: 55%;
+  width: 32px;
+  height: 32px;
   color: var(--brand-blue);
   opacity: 0.72;
   transform: translateY(-50%);
-}
+  pointer-events: none;
+} 
 
 .datasheets-page .search-input {
   width: 100%;
@@ -214,7 +243,7 @@
   padding: 0 24px;
   border: 1px solid var(--brand-blue);
   border-radius: var(--radius-sm);
-  background: #ffffff;
+  background: #ffffff; 
   color: var(--brand-blue);
   font-size: 15px;
   font-weight: 400;
@@ -237,11 +266,6 @@
   margin-top: 16px;
 }
 
-/* 分类筛选按钮
-   1. 默认未选中：白底 + 深蓝字
-   2. hover / 当前选中：深蓝底 + 荧光字
-   3. 不加粗，避免文字跳动
-*/
 .datasheets-page .filter-btn {
   height: 38px;
   padding: 0 18px;
@@ -328,12 +352,6 @@
   border-bottom: 0;
 }
 
-/* 左侧荧光色竖条
-   说明：
-   1. 默认隐藏
-   2. 鼠标放到整行时显示
-   3. z-index 设置为 3，避免被左侧图片盖住
-*/
 .datasheets-page .datasheet-row::before {
   content: "";
   position: absolute;
@@ -346,7 +364,7 @@
   transform: scaleY(0);
   transform-origin: top;
   transition: transform var(--ease-normal);
-} 
+}
 
 .datasheets-page .datasheet-row:hover {
   background: #f9fcfd;
@@ -362,25 +380,19 @@
   width: 126px;
   min-height: 138px;
   height: 100%;
-  display: block; 
+  display: block;
   border-right: 1px solid #e3eaf3;
   background: #ffffff;
   overflow: hidden;
 }
 
-/* WebP 产品缩略图
-   说明：
-   1. width / height 设置为 100%，让图片占满左侧缩略图区域
-   2. object-fit: cover 会裁掉图片多余留白，让产品看起来更大
-   3. 如果后续不想裁切图片，可以把 cover 改成 contain
-*/
 .datasheets-page .product-thumb img {
   width: 100%;
   height: 100%;
   min-height: 138px;
   object-fit: cover;
   object-position: center;
-  display: block; 
+  display: block;
   transition: transform var(--ease-normal);
 }
 
@@ -583,7 +595,6 @@
   justify-content: flex-end;
 }
 
-/* 底部按钮默认状态：白底 + 深蓝字 */
 .datasheets-page .support-btn {
   display: inline-flex !important;
   align-items: center !important;
@@ -608,14 +619,13 @@
     transform var(--ease-fast);
 }
 
-/* 底部按钮 hover / focus 状态：荧光色底 + 深蓝字，无阴影 */
 .datasheets-page .support-btn:hover,
 .datasheets-page .support-btn:focus {
   border-color: var(--brand-cyan) !important;
   background: var(--brand-cyan) !important;
   color: var(--brand-blue) !important;
   box-shadow: none !important;
-} 
+}
 
 /* ================================
    7. 响应式
@@ -633,12 +643,12 @@
     min-height: 126px;
   }
 
- .datasheets-page .product-thumb img {
-  width: 100%;
-  height: 100%;
-  min-height: 126px;
-  object-fit: cover;
-}
+  .datasheets-page .product-thumb img {
+    width: 100%;
+    height: 100%;
+    min-height: 126px;
+    object-fit: cover;
+  }
 
   .datasheets-page .row-main {
     padding: 18px 0;
@@ -669,11 +679,11 @@
   }
 
   .datasheets-page .datasheets-hero {
-    min-height: 300px;
+    min-height: 360px;
   }
 
   .datasheets-page .datasheets-hero-inner {
-    padding: 66px 0 78px;
+    padding: 88px 0 96px;
   }
 
   .datasheets-page .breadcrumb-bar-inner {
@@ -714,12 +724,12 @@
     min-height: 110px;
   }
 
-.datasheets-page .product-thumb img {
-  width: 100%;
-  height: 100%;
-  min-height: 110px;
-  object-fit: cover;
-}
+  .datasheets-page .product-thumb img {
+    width: 100%;
+    height: 100%;
+    min-height: 110px;
+    object-fit: cover;
+  }
 
   .datasheets-page .row-main {
     padding: 14px 0;
@@ -754,4 +764,23 @@
   .datasheets-page .support-btn {
     width: 100%;
   }
+}   
+
+/* =========================================================
+   8. 按钮文字字重统一覆盖
+   说明：
+   1. 用于统一规格书页面所有按钮文字粗细
+   2. 统一为 600，解决按钮文字偏细的问题
+   3. hover 状态也保持 600，避免鼠标经过时文字跳动
+========================================================= */
+
+.datasheets-page .search-btn,
+.datasheets-page .filter-btn,
+.datasheets-page .filter-btn:hover,
+.datasheets-page .filter-btn.is-active,
+.datasheets-page .row-link,
+.datasheets-page .row-download,
+.datasheets-page .row-custom,
+.datasheets-page .support-btn {
+  font-weight: 600 !important;
 } 
