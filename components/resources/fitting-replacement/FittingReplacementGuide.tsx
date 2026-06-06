@@ -63,84 +63,84 @@ const GUIDE_FIELD_CONFIGS: {
   fieldKey: GuideFieldKey;
   description: FittingReplacementI18nText;
 }[] = [
-  {
-    fieldKey: "tubeOrThread",
-    description: {
-      zh: "选择与管路外径或螺纹规格一致的接口。",
-      en: "Select the interface that matches the tube OD or thread specification.",
-      es: "Seleccione la interfaz que coincida con el diámetro exterior del tubo o la rosca.",
-      fr: "Sélectionnez l’interface correspondant au diamètre extérieur du tube ou au filetage.",
-      ko: "튜브 외경 또는 나사 규격에 맞는 인터페이스를 선택하세요.",
-      ru: "Выберите интерфейс, соответствующий наружному диаметру трубки или резьбе.",
+    {
+      fieldKey: "tubeOrThread",
+      description: {
+        zh: "选择与管路外径或螺纹规格一致的接口。",
+        en: "Select the interface that matches the tube OD or thread specification.",
+        es: "Seleccione la interfaz que coincida con el diámetro exterior del tubo o la rosca.",
+        fr: "Sélectionnez l’interface correspondant au diamètre extérieur du tube ou au filetage.",
+        ko: "튜브 외경 또는 나사 규격에 맞는 인터페이스를 선택하세요.",
+        ru: "Выберите интерфейс, соответствующий наружному диаметру трубки или резьбе.",
+      },
     },
-  },
-  {
-    fieldKey: "gender",
-    description: {
-      zh: "选择与现有管路或设备接口匹配的公端或母端。",
-      en: "Select the male or female end that matches the existing tubing or device interface.",
-      es: "Seleccione el extremo macho o hembra que coincida con la tubería o interfaz existente.",
-      fr: "Sélectionnez l’extrémité mâle ou femelle adaptée à la ligne ou à l’interface existante.",
-      ko: "기존 배관 또는 장비 인터페이스에 맞는 수형 또는 암형 단자를 선택하세요.",
-      ru: "Выберите штуцер с наружным или внутренним соединением, подходящий к существующему интерфейсу.",
+    {
+      fieldKey: "gender",
+      description: {
+        zh: "选择与现有管路或设备接口匹配的公端或母端。",
+        en: "Select the male or female end that matches the existing tubing or device interface.",
+        es: "Seleccione el extremo macho o hembra que coincida con la tubería o interfaz existente.",
+        fr: "Sélectionnez l’extrémité mâle ou femelle adaptée à la ligne ou à l’interface existante.",
+        ko: "기존 배관 또는 장비 인터페이스에 맞는 수형 또는 암형 단자를 선택하세요.",
+        ru: "Выберите штуцер с наружным или внутренним соединением, подходящий к существующему интерфейсу.",
+      },
     },
-  },
-  {
-    fieldKey: "panelMount",
-    description: {
-      zh: "如果接头需要固定在面板或外壳上，请选择穿板结构。",
-      en: "Select a panel-mount structure if the fitting needs to be fixed to a panel or housing.",
-      es: "Seleccione una estructura de montaje en panel si el conector debe fijarse a un panel o carcasa.",
-      fr: "Sélectionnez une structure traversante si le raccord doit être fixé sur un panneau ou un boîtier.",
-      ko: "피팅을 패널이나 하우징에 고정해야 하는 경우 패널 장착 구조를 선택하세요.",
-      ru: "Выберите панельное крепление, если фитинг должен быть закреплен на панели или корпусе.",
+    {
+      fieldKey: "panelMount",
+      description: {
+        zh: "如果接头需要固定在面板或外壳上，请选择穿板结构。",
+        en: "Select a panel-mount structure if the fitting needs to be fixed to a panel or housing.",
+        es: "Seleccione una estructura de montaje en panel si el conector debe fijarse a un panel o carcasa.",
+        fr: "Sélectionnez une structure traversante si le raccord doit être fixé sur un panneau ou un boîtier.",
+        ko: "피팅을 패널이나 하우징에 고정해야 하는 경우 패널 장착 구조를 선택하세요.",
+        ru: "Выберите панельное крепление, если фитинг должен быть закреплен на панели или корпусе.",
+      },
     },
-  },
-  {
-    fieldKey: "valved",
-    description: {
-      zh: "根据断开时是否需要自动截止液路，选择带阀或不带阀结构。",
-      en: "Choose a valved or non-valved structure depending on whether the fluid path should shut off when disconnected.",
-      es: "Elija una estructura con o sin válvula según si el flujo debe cerrarse al desconectar.",
-      fr: "Choisissez une version avec ou sans vanne selon que le circuit doit se fermer lors de la déconnexion.",
-      ko: "분리 시 유로를 자동으로 차단해야 하는지에 따라 밸브형 또는 비밸브형 구조를 선택하세요.",
-      ru: "Выберите исполнение с клапаном или без него в зависимости от необходимости перекрытия потока при отсоединении.",
+    {
+      fieldKey: "valved",
+      description: {
+        zh: "根据断开时是否需要自动截止液路，选择带阀或不带阀结构。",
+        en: "Choose a valved or non-valved structure depending on whether the fluid path should shut off when disconnected.",
+        es: "Elija una estructura con o sin válvula según si el flujo debe cerrarse al desconectar.",
+        fr: "Choisissez une version avec ou sans vanne selon que le circuit doit se fermer lors de la déconnexion.",
+        ko: "분리 시 유로를 자동으로 차단해야 하는지에 따라 밸브형 또는 비밸브형 구조를 선택하세요.",
+        ru: "Выберите исполнение с клапаном или без него в зависимости от необходимости перекрытия потока при отсоединении.",
+      },
     },
-  },
-  {
-    fieldKey: "shape",
-    description: {
-      zh: "根据管路空间布置，选择直通、弯头等结构形式。",
-      en: "Select straight, elbow, or other shapes according to the tubing layout.",
-      es: "Seleccione una forma recta, en codo u otra según la disposición de la tubería.",
-      fr: "Sélectionnez une forme droite, coudée ou autre selon l’agencement de la ligne.",
-      ko: "배관 공간 배치에 따라 직선형, 엘보형 등 구조 형태를 선택하세요.",
-      ru: "Выберите прямую, угловую или другую форму в зависимости от компоновки трубопровода.",
+    {
+      fieldKey: "shape",
+      description: {
+        zh: "根据管路空间布置，选择直通、弯头等结构形式。",
+        en: "Select straight, elbow, or other shapes according to the tubing layout.",
+        es: "Seleccione una forma recta, en codo u otra según la disposición de la tubería.",
+        fr: "Sélectionnez une forme droite, coudée ou autre selon l’agencement de la ligne.",
+        ko: "배관 공간 배치에 따라 직선형, 엘보형 등 구조 형태를 선택하세요.",
+        ru: "Выберите прямую, угловую или другую форму в зависимости от компоновки трубопровода.",
+      },
     },
-  },
-  {
-    fieldKey: "housingMaterial",
-    description: {
-      zh: "根据耐化学性、机械强度和应用环境选择外壳材质。",
-      en: "Select the housing material based on chemical resistance, mechanical strength, and application environment.",
-      es: "Seleccione el material de la carcasa según la resistencia química, la resistencia mecánica y el entorno de aplicación.",
-      fr: "Sélectionnez le matériau du corps selon la résistance chimique, la résistance mécanique et l’environnement d’utilisation.",
-      ko: "내화학성, 기계적 강도 및 적용 환경에 따라 하우징 재질을 선택하세요.",
-      ru: "Выберите материал корпуса с учетом химической стойкости, механической прочности и условий применения.",
+    {
+      fieldKey: "housingMaterial",
+      description: {
+        zh: "根据耐化学性、机械强度和应用环境选择外壳材质。",
+        en: "Select the housing material based on chemical resistance, mechanical strength, and application environment.",
+        es: "Seleccione el material de la carcasa según la resistencia química, la resistencia mecánica y el entorno de aplicación.",
+        fr: "Sélectionnez le matériau du corps selon la résistance chimique, la résistance mécanique et l’environnement d’utilisation.",
+        ko: "내화학성, 기계적 강도 및 적용 환경에 따라 하우징 재질을 선택하세요.",
+        ru: "Выберите материал корпуса с учетом химической стойкости, механической прочности и условий применения.",
+      },
     },
-  },
-  {
-    fieldKey: "sealingRingMaterial",
-    description: {
-      zh: "根据介质兼容性和密封要求选择密封圈材质。",
-      en: "Select the sealing ring material based on media compatibility and sealing requirements.",
-      es: "Seleccione el material de la junta según la compatibilidad con el medio y los requisitos de sellado.",
-      fr: "Sélectionnez le matériau du joint selon la compatibilité avec le fluide et les exigences d’étanchéité.",
-      ko: "매체 호환성과 밀봉 요구 사항에 따라 씰링 링 재질을 선택하세요.",
-      ru: "Выберите материал уплотнительного кольца с учетом совместимости со средой и требований к герметизации.",
+    {
+      fieldKey: "sealingRingMaterial",
+      description: {
+        zh: "根据介质兼容性和密封要求选择密封圈材质。",
+        en: "Select the sealing ring material based on media compatibility and sealing requirements.",
+        es: "Seleccione el material de la junta según la compatibilidad con el medio y los requisitos de sellado.",
+        fr: "Sélectionnez le matériau du joint selon la compatibilité avec le fluide et les exigences d’étanchéité.",
+        ko: "매체 호환성과 밀봉 요구 사항에 따라 씰링 링 재질을 선택하세요.",
+        ru: "Выберите материал уплотнительного кольца с учетом совместимости со средой и требований к герметизации.",
+      },
     },
-  },
-];
+  ];
 
 /* =========================================================
    从面包屑判断当前语言
@@ -273,7 +273,7 @@ export default function FittingReplacementGuide({
     Partial<Record<GuideFieldKey, string>>
   >({});
 
-  const { addItem, getItem } = useSelectionCart();
+  const { addItem, getItem, removeItem } = useSelectionCart();
 
   const locale = useMemo(() => {
     return getLocaleFromBreadcrumbs(data.breadcrumbs);
@@ -402,6 +402,28 @@ export default function FittingReplacementGuide({
     });
   }
 
+  /* =========================================================
+   切换清单状态
+
+   说明：
+   1. 未加入清单时，点击加入清单
+   2. 已加入清单时，点击取消加入清单
+   3. 适用于选型指引匹配结果卡片
+========================================================= */
+  function handleToggleCart(product: FittingReplacementProduct) {
+    const currentCartItem = getItem(
+      SERIES_CONFIG.sourceType,
+      product.productCode
+    );
+
+    if (currentCartItem) {
+      removeItem(currentCartItem.id);
+      return;
+    }
+
+    handleAddToCart(product);
+  }
+
   return (
     <section className="frg-guide-section">
       <div className="frg-guide-head">
@@ -447,9 +469,8 @@ export default function FittingReplacementGuide({
 
                   return (
                     <button
-                      className={`frg-option-button ${
-                        isActive ? "is-active" : ""
-                      }`}
+                      className={`frg-option-button ${isActive ? "is-active" : ""
+                        }`}
                       type="button"
                       key={`${step.fieldKey}-${option.code}`}
                       onClick={() => {
@@ -480,7 +501,7 @@ export default function FittingReplacementGuide({
             <p>
               {formatGuideTemplate(
                 guideText?.selectedResultTemplate ??
-                  "当前已选择 {selectedCount} 个条件，匹配到 {matchCount} 个型号。",
+                "当前已选择 {selectedCount} 个条件，匹配到 {matchCount} 个型号。",
                 {
                   selectedCount,
                   matchCount: matchedProducts.length,
@@ -549,7 +570,7 @@ export default function FittingReplacementGuide({
                         : productCardText?.addToCart ?? "加入清单",
                       isActive: Boolean(currentCartItem),
                       onClick: () => {
-                        handleAddToCart(product);
+                        handleToggleCart(product);
                       },
                     },
                   ]}

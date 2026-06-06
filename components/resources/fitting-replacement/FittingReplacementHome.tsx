@@ -133,7 +133,7 @@ function formatCompatibleModelsForCard(models: string[]) {
   }
 
   return models.join(" / ");
-} 
+}
 
 /* =========================================================
    生成详情页链接
@@ -174,7 +174,7 @@ export default function FittingReplacementHome({
   const [hasSubmittedSearch, setHasSubmittedSearch] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
 
-  const { addItem, getItem } = useSelectionCart();
+  const { addItem, getItem, removeItem } = useSelectionCart();
 
   /* 首页多语言文案 */
   const homeText = data.homeText;
@@ -323,6 +323,28 @@ export default function FittingReplacementHome({
     });
   }
 
+  /* =========================================================
+     切换清单状态
+  
+     说明：
+     1. 未加入清单时，点击加入清单
+     2. 已加入清单时，点击取消加入清单
+     3. 这样按钮不会只能加入，不能取消
+  ========================================================= */
+  function handleToggleCart(product: FittingReplacementProduct) {
+    const currentCartItem = getItem(
+      SERIES_CONFIG.sourceType,
+      product.productCode
+    );
+
+    if (currentCartItem) {
+      removeItem(currentCartItem.id);
+      return;
+    }
+
+    handleAddToCart(product);
+  }
+
   return (
     <div className="fitting-replacement-page">
       <section className="frp-hero">
@@ -346,9 +368,8 @@ export default function FittingReplacementHome({
           ================================ */}
           <div className="frp-tab-bar">
             <button
-              className={`frp-tab-button ${
-                activeTab === "replace" ? "active" : ""
-              }`}
+              className={`frp-tab-button ${activeTab === "replace" ? "active" : ""
+                }`}
               type="button"
               onClick={() => {
                 setActiveTab("replace");
@@ -358,9 +379,8 @@ export default function FittingReplacementHome({
             </button>
 
             <button
-              className={`frp-tab-button ${
-                activeTab === "guide" ? "active" : ""
-              }`}
+              className={`frp-tab-button ${activeTab === "guide" ? "active" : ""
+                }`}
               type="button"
               onClick={() => {
                 setActiveTab("guide");
@@ -413,11 +433,10 @@ export default function FittingReplacementHome({
                 {QUICK_SEARCH_ITEMS.map((item) => {
                   return (
                     <button
-                      className={`frp-history-button ${
-                        normalizeKeyword(searchValue) === normalizeKeyword(item)
-                          ? "active"
-                          : ""
-                      }`}
+                      className={`frp-history-button ${normalizeKeyword(searchValue) === normalizeKeyword(item)
+                        ? "active"
+                        : ""
+                        }`}
                       type="button"
                       key={item}
                       onClick={() => {
@@ -459,7 +478,7 @@ export default function FittingReplacementHome({
                       <span>
                         {formatTemplate(
                           homeText?.productSection.countTemplate ??
-                            "当前展示 {start}–{end} / 共 {total} 个型号",
+                          "当前展示 {start}–{end} / 共 {total} 个型号",
                           {
                             start: (currentPage - 1) * PAGE_SIZE + 1,
                             end: Math.min(
@@ -508,7 +527,7 @@ export default function FittingReplacementHome({
                                 value: formatCompatibleModelsForCard(product.competitorModels),
                               },
                             ]}
-                            actions={[ 
+                            actions={[
                               {
                                 label:
                                   homeText?.productCard.viewDetail ??
@@ -520,11 +539,11 @@ export default function FittingReplacementHome({
                               {
                                 label: currentCartItem
                                   ? homeText?.productCard.addedToCart ??
-                                    "已加入清单"
+                                  "已加入清单"
                                   : homeText?.productCard.addToCart ?? "加入清单",
                                 isActive: Boolean(currentCartItem),
                                 onClick: () => {
-                                  handleAddToCart(product);
+                                  handleToggleCart(product);
                                 },
                               },
                             ]}

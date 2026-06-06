@@ -112,7 +112,7 @@ export default function FittingReplacementDetail({
 }: FittingReplacementDetailProps) {
   const { product, modelRules, breadcrumbs, detailText } = data;
 
-  const { addItem, getItem, toggleDrawingNeed } = useSelectionCart();
+  const { addItem, getItem, removeItem, toggleDrawingNeed } = useSelectionCart();
 
   const locale = useMemo(() => {
     return getLocaleFromBreadcrumbs(breadcrumbs);
@@ -192,7 +192,20 @@ export default function FittingReplacementDetail({
     };
   }
 
-  function handleAddToCart() {
+  /* =========================================================
+     切换当前产品清单状态
+  
+     说明：
+     1. 未加入清单时，点击加入清单
+     2. 已加入清单时，点击取消加入清单
+     3. 如果该产品已标记需要图纸，取消清单时也会一起移除图纸需求
+  ========================================================= */
+  function handleToggleCart() {
+    if (currentCartItem) {
+      removeItem(currentCartItem.id);
+      return;
+    }
+
     addItem(createCurrentProductCartItem(false));
   }
 
@@ -294,7 +307,7 @@ export default function FittingReplacementDetail({
                         : "frd-add-button"
                     }
                     type="button"
-                    onClick={handleAddToCart}
+                    onClick={handleToggleCart}
                   >
                     {currentCartItem
                       ? detailText.actions.addedToCart
