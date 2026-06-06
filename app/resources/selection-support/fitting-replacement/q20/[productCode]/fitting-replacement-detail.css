@@ -1,15 +1,20 @@
-/* =========================================================
+﻿/* =========================================================
    fitting-replacement-detail.css
-   恒永达官网｜Q20 接头型号替代详情页样式
+   恒永达官网｜Q20 接头替代查询详情页样式
 
    文件路径：
    app/resources/selection-support/fitting-replacement/q20/[productCode]/fitting-replacement-detail.css
 
    说明：
-   1. 只服务 Q20 接头型号替代详情页
+   1. 只服务 Q20 接头替代查询详情页
    2. 不写入 app/globals.css
-   3. 公共 Banner、面包屑、右侧清单、打印 PDF 样式复用父级 fitting-replacement.css
-   4. 本文件只写详情页独有布局
+   3. 详情页主体、参数表、操作按钮、2D 图纸预览、FAQ 都在这里维护
+   4. 页面公共 Header、右侧清单、PDF 打印等其它全局能力由其它组件负责
+   5. 详情页内容宽度通过 .frd-container 控制，避免内容满屏铺开
+========================================================= */
+
+/* =========================================================
+   页面基础
 ========================================================= */
 
 .fitting-replacement-detail-page {
@@ -19,12 +24,26 @@
 }
 
 .frd-main {
-  padding: 24px 0 110px;
+  padding: 112px 0 110px;
   background: #ffffff;
 }
 
 /* =========================================================
-   详情主体
+   详情页内容容器
+
+   说明：
+   1. 控制详情页内容最大宽度
+   2. 与接头替代查询首页 .frp-container 保持一致
+   3. 修复面包屑、产品详情、2D 图纸区域满屏铺开的问题
+========================================================= */
+
+.frd-container {
+  width: min(1240px, calc(100% - 56px));
+  margin: 0 auto;
+}
+
+/* =========================================================
+   详情页主体
 ========================================================= */
 
 .frd-detail-section {
@@ -33,13 +52,13 @@
 
 .frd-detail-layout {
   display: grid;
-  grid-template-columns: 390px 1fr;
+  grid-template-columns: 390px minmax(0, 1fr);
   gap: 42px;
   align-items: start;
 }
 
 /* =========================================================
-   左侧产品图
+   左侧产品图片
 ========================================================= */
 
 .frd-product-visual {
@@ -57,7 +76,7 @@
 }
 
 /* =========================================================
-   右侧信息区
+   右侧产品信息
 ========================================================= */
 
 .frd-info-area {
@@ -80,7 +99,7 @@
 }
 
 /* =========================================================
-   紧凑参数表
+   参数表
 ========================================================= */
 
 .frd-compact-table {
@@ -137,7 +156,10 @@
 }
 
 /* =========================================================
-   详情页｜加入清单 + 是否需要图纸
+   操作按钮区域
+   包含：
+   1. 加入清单
+   2. 添加图纸
 ========================================================= */
 
 .frd-detail-action-row {
@@ -147,36 +169,13 @@
   gap: 10px;
 }
 
-.frd-add-button {
-  width: auto;
-  min-width: 126px;
-  height: 42px;
-  padding: 0 18px;
-  border: 1px solid #173368;
-  border-radius: 6px;
-  background: #173368;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 900;
-  cursor: pointer;
-  transition:
-    background 0.18s ease,
-    color 0.18s ease,
-    border-color 0.18s ease;
-}
-
-.frd-add-button:hover {
-  background: #09e9b4;
-  border-color: #09e9b4;
-  color: #173368;
-}
-
+.frd-add-button,
 .frd-drawing-toggle-button {
   min-width: 126px;
   height: 42px;
   padding: 0 18px;
-  border: 1px solid rgba(23, 51, 104, 0.24);
-  border-radius: 6px;
+  border: 1px solid rgba(23, 51, 104, 0.28);
+  border-radius: 5px;
   background: #ffffff;
   color: #173368;
   font-size: 16px;
@@ -188,20 +187,38 @@
     border-color 0.18s ease;
 }
 
-.frd-drawing-toggle-button:hover {
-  background: #173368;
+.frd-add-button:hover,
+.frd-add-button:active,
+.frd-add-button:focus-visible,
+.frd-drawing-toggle-button:hover,
+.frd-drawing-toggle-button:active,
+.frd-drawing-toggle-button:focus-visible {
   border-color: #173368;
+  background: #173368;
   color: #09e9b4;
 }
 
-.frd-drawing-toggle-button.is-active {
-  background: #173368;
+.frd-add-button.is-added,
+.frd-add-button.is-added:hover,
+.frd-add-button.is-added:active,
+.frd-add-button.is-added:focus-visible,
+.frd-drawing-toggle-button.is-active,
+.frd-drawing-toggle-button.is-active:hover,
+.frd-drawing-toggle-button.is-active:active,
+.frd-drawing-toggle-button.is-active:focus-visible {
   border-color: #173368;
+  background: #173368;
   color: #09e9b4;
 }
 
 /* =========================================================
-   PDF 2D 图纸预览区
+   2D 图纸预览区域
+
+   说明：
+   1. 服务 FittingReplacementDrawingPreview.tsx
+   2. 默认显示“点击预览图纸”封面
+   3. 点击后显示 PDF iframe
+   4. iframe 逻辑由组件控制
 ========================================================= */
 
 .frd-drawing-section {
@@ -228,78 +245,13 @@
   letter-spacing: -0.04em;
 }
 
-/* =========================================================
-   PDF 2D 图纸｜视频式预览入口
-========================================================= */
-
-.frd-drawing-preview-card {
-  width: 100%;
-  min-height: 260px;
-  padding: 42px 24px;
-  display: grid;
-  place-items: center;
-  border: 1px solid rgba(23, 51, 104, 0.18);
-  background: #f6f8fb;
-  cursor: pointer;
-  text-align: center;
-  transition:
-    border-color 0.18s ease,
-    background 0.18s ease;
+.frd-drawing-head p {
+  margin: 10px 0 0;
+  max-width: 760px;
+  color: #5e6b80;
+  font-size: 15px;
+  line-height: 1.8;
 }
-
-.frd-drawing-preview-card:hover {
-  border-color: rgba(9, 233, 180, 0.9);
-  background: #ffffff;
-}
-
-.frd-drawing-play-icon {
-  width: 74px;
-  height: 74px;
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 14px;
-  border: 2px solid #173368;
-  border-radius: 50%;
-  background: #ffffff;
-  transition:
-    background 0.18s ease,
-    border-color 0.18s ease;
-}
-
-.frd-drawing-play-icon::before {
-  content: "";
-  width: 0;
-  height: 0;
-  margin-left: 5px;
-  border-top: 13px solid transparent;
-  border-bottom: 13px solid transparent;
-  border-left: 20px solid #173368;
-  transition: border-left-color 0.18s ease;
-}
-
-.frd-drawing-preview-card:hover .frd-drawing-play-icon {
-  background: #173368;
-  border-color: #173368;
-}
-
-.frd-drawing-preview-card:hover .frd-drawing-play-icon::before {
-  border-left-color: #09e9b4;
-}
-
-.frd-drawing-preview-card strong {
-  color: #173368;
-  font-size: 18px;
-  font-weight: 900;
-}
-
-/* =========================================================
-   PDF 预览容器
-   说明：
-   1. iframe 立即挂载
-   2. LoadingProgress 覆盖在 PDF 上方
-========================================================= */
 
 .frd-drawing-viewer {
   width: 100%;
@@ -318,6 +270,94 @@
   background: #ffffff;
 }
 
+.frd-drawing-object.is-visible {
+  display: block;
+}
+
+/* =========================================================
+   2D 图纸预览封面
+========================================================= */
+
+.frd-drawing-preview-card {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  width: 100%;
+  min-height: 260px;
+  padding: 42px 24px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 12px;
+  border: 0;
+  background: #f6f8fb;
+  color: #173368;
+  cursor: pointer;
+  text-align: center;
+  transition:
+    border-color 0.18s ease,
+    background 0.18s ease;
+}
+
+.frd-drawing-preview-card:hover {
+  background: #ffffff;
+}
+
+.frd-drawing-play-icon {
+  width: 74px;
+  height: 74px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2px;
+  border: 2px solid #173368;
+  border-radius: 50%;
+  background: #ffffff;
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.frd-drawing-play-icon::before {
+  content: "";
+  width: 0;
+  height: 0;
+  margin-left: 5px;
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent;
+  border-left: 20px solid #173368;
+  transition: border-left-color 0.18s ease;
+}
+
+.frd-drawing-preview-card:hover .frd-drawing-play-icon {
+  background: #173368;
+  border-color: #173368;
+  transform: scale(1.04);
+}
+
+.frd-drawing-preview-card:hover .frd-drawing-play-icon::before {
+  border-left-color: #09e9b4;
+}
+
+.frd-drawing-preview-card strong {
+  display: block;
+  color: #173368;
+  font-size: 18px;
+  line-height: 1.35;
+  font-weight: 900;
+}
+
+.frd-drawing-preview-card em {
+  display: block;
+  max-width: 460px;
+  color: #5e6b80;
+  font-size: 14px;
+  line-height: 1.7;
+  font-style: normal;
+}
+
 .frd-drawing-fallback {
   width: 100%;
   height: 100%;
@@ -328,6 +368,176 @@
   font-size: 14px;
   line-height: 1.8;
   text-align: center;
+}
+
+/* =========================================================
+   FAQ 常见问题
+========================================================= */
+
+.frd-faq-section {
+  margin-top: 72px;
+  padding-top: 42px;
+  border-top: 1px solid rgba(23, 51, 104, 0.14);
+}
+
+.frd-faq-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+/* FAQ 标题说明 */
+
+.frd-faq-heading {
+  position: static;
+  max-width: 760px;
+}
+
+.frd-faq-heading span {
+  display: inline-flex;
+  margin-bottom: 10px;
+  color: #09e9b4;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.frd-faq-heading h2 {
+  margin: 0;
+  color: #173368;
+  font-size: 34px;
+  line-height: 1.15;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.frd-faq-heading p {
+  margin: 14px 0 0;
+  max-width: 720px;
+  color: #5e6b80;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* FAQ 列表 */
+
+.frd-faq-list {
+  width: 100%;
+  max-width: 100%;
+  border-top: 1px solid rgba(23, 51, 104, 0.16);
+}
+
+.frd-faq-item {
+  border-bottom: 1px solid rgba(23, 51, 104, 0.16);
+  background: #ffffff;
+}
+
+.frd-faq-question {
+  width: 100%;
+  min-height: 72px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 12px minmax(0, 1fr) 42px;
+  gap: 20px;
+  align-items: center;
+  border: 0;
+  background: transparent;
+  color: #173368;
+  text-align: left;
+  cursor: pointer;
+}
+
+.frd-faq-question::before {
+  width: auto;
+  height: auto;
+  display: inline-block;
+  justify-self: start;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: rgba(23, 51, 104, 0.42);
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.frd-faq-item:nth-child(1) .frd-faq-question::before {
+  content: "1";
+}
+
+.frd-faq-item:nth-child(2) .frd-faq-question::before {
+  content: "2";
+}
+
+.frd-faq-item:nth-child(3) .frd-faq-question::before {
+  content: "3";
+}
+
+.frd-faq-item:nth-child(4) .frd-faq-question::before {
+  content: "4";
+}
+
+.frd-faq-item:nth-child(5) .frd-faq-question::before {
+  content: "5";
+}
+
+.frd-faq-item:nth-child(6) .frd-faq-question::before {
+  content: "6";
+}
+
+.frd-faq-item.is-active .frd-faq-question::before,
+.frd-faq-question:hover::before {
+  color: #09e9b4;
+}
+
+.frd-faq-question span {
+  color: #173368;
+  font-size: 18px;
+  line-height: 1.45;
+  font-weight: 900;
+}
+
+.frd-faq-question em {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: end;
+  border: 1px solid rgba(23, 51, 104, 0.22);
+  border-radius: 5px;
+  color: #173368;
+  font-size: 18px;
+  line-height: 1;
+  font-style: normal;
+  font-weight: 900;
+  transition:
+    background 0.18s ease,
+    color 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.frd-faq-question:hover em,
+.frd-faq-item.is-active .frd-faq-question em {
+  border-color: #173368;
+  background: #173368;
+  color: #09e9b4;
+}
+
+.frd-faq-answer {
+  padding: 0 64px 26px 32px;
+}
+
+.frd-faq-answer p {
+  max-width: 900px;
+  margin: 0;
+  color: #5e6b80;
+  font-size: 15px;
+  line-height: 1.85;
 }
 
 /* =========================================================
@@ -347,9 +557,30 @@
   .frd-product-visual img {
     max-height: 300px;
   }
+
+  .frd-faq-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .frd-faq-heading {
+    position: static;
+  }
+
+  .frd-faq-heading p {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 720px) {
+  .frd-main {
+    padding-top: 88px;
+  }
+
+  .frd-container {
+    width: min(1240px, calc(100% - 28px));
+  }
+
   .frd-title-block h2 {
     font-size: 26px;
   }
@@ -382,6 +613,11 @@
     width: 100%;
   }
 
+  .frd-drawing-section {
+    margin-top: 48px;
+    padding-top: 32px;
+  }
+
   .frd-drawing-head {
     align-items: flex-start;
     flex-direction: column;
@@ -389,318 +625,20 @@
 
   .frd-drawing-preview-card {
     min-height: 220px;
+    padding: 28px 20px;
   }
 
   .frd-drawing-viewer {
     height: 520px;
   }
-}
 
-/* =========================================================
-   详情页｜图纸按钮最终样式
-   文件路径：
-   app/resources/selection-support/fitting-replacement/q20/[productCode]/fitting-replacement-detail.css
-
-   说明：
-   1. 未添加图纸：白底 + 深蓝字
-   2. 已添加图纸：深蓝底 + 荧光字
-   3. 圆角改小，不使用胶囊圆角
-========================================================= */
-
-.frd-drawing-toggle-button {
-  min-width: 126px;
-  height: 42px;
-  padding: 0 18px;
-  border: 1px solid rgba(23, 51, 104, 0.28);
-  border-radius: 5px;
-  background: #ffffff;
-  color: #173368;
-  font-size: 16px;
-  font-weight: 900;
-}
-
-.frd-drawing-toggle-button:hover {
-  border-color: #173368;
-  background: #173368;
-  color: #09e9b4;
-}
-
-.frd-drawing-toggle-button.is-active {
-  border-color: #173368;
-  background: #173368;
-  color: #09e9b4;
-}
-
-.frd-drawing-toggle-button.is-active:hover {
-  border-color: #173368;
-  background: #173368;
-  color: #09e9b4;
-}
-
-/* =========================================================
-   详情页｜操作按钮最终样式覆盖
-   文件路径：
-   app/resources/selection-support/fitting-replacement/q20/[productCode]/fitting-replacement-detail.css
-
-   说明：
-   1. 这一段必须放在文件最底部
-   2. 覆盖前面旧的 .frd-add-button 深蓝默认样式
-   3. 所有按钮默认白底深蓝字
-   4. 鼠标悬停 / 点击状态为深蓝底 + 荧光色字
-========================================================= */
-
-/* 加入清单：默认白底深蓝字 */
-.frd-add-button {
-  min-width: 126px !important;
-  height: 42px !important;
-  padding: 0 18px !important;
-  border: 1px solid rgba(23, 51, 104, 0.28) !important;
-  border-radius: 5px !important;
-  background: #ffffff !important;
-  color: #173368 !important;
-  font-size: 16px !important;
-  font-weight: 900 !important;
-  cursor: pointer !important;
-  transition:
-    background 0.18s ease,
-    color 0.18s ease,
-    border-color 0.18s ease !important;
-}
-
-/* 加入清单：鼠标悬停 / 点击时变深蓝底荧光字 */
-.frd-add-button:hover,
-.frd-add-button:active,
-.frd-add-button:focus-visible {
-  border-color: #173368 !important;
-  background: #173368 !important;
-  color: #09e9b4 !important;
-}
-
-/* 图纸按钮：未添加时白底深蓝字 */
-.frd-drawing-toggle-button {
-  min-width: 126px !important;
-  height: 42px !important;
-  padding: 0 18px !important;
-  border: 1px solid rgba(23, 51, 104, 0.28) !important;
-  border-radius: 5px !important;
-  background: #ffffff !important;
-  color: #173368 !important;
-  font-size: 16px !important;
-  font-weight: 900 !important;
-  cursor: pointer !important;
-  transition:
-    background 0.18s ease,
-    color 0.18s ease,
-    border-color 0.18s ease !important;
-}
-
-/* 图纸按钮：鼠标悬停时深蓝底荧光字 */
-.frd-drawing-toggle-button:hover,
-.frd-drawing-toggle-button:active,
-.frd-drawing-toggle-button:focus-visible {
-  border-color: #173368 !important;
-  background: #173368 !important;
-  color: #09e9b4 !important;
-}
-
-/* 图纸按钮：已添加状态，保持深蓝底荧光字 */
-.frd-drawing-toggle-button.is-active {
-  border-color: #173368 !important;
-  background: #173368 !important;
-  color: #09e9b4 !important;
-}
-
-/* =========================================================
-   详情页｜加入清单按钮已加入状态
-   文件路径：
-   app/resources/selection-support/fitting-replacement/q20/[productCode]/fitting-replacement-detail.css
-
-   说明：
-   1. 默认状态：白底深蓝字
-   2. 鼠标悬停：深蓝底荧光字
-   3. 已加入清单：深蓝底荧光字
-   4. 不禁用按钮，客户再次点击仍可增加数量
-========================================================= */
-
-.frd-add-button.is-added {
-  border-color: #173368 !important;
-  background: #173368 !important;
-  color: #09e9b4 !important;
-}
-
-.frd-add-button.is-added:hover,
-.frd-add-button.is-added:active,
-.frd-add-button.is-added:focus-visible {
-  border-color: #173368 !important;
-  background: #173368 !important;
-  color: #09e9b4 !important;
-}
-
-/* =========================================================
-   详情页｜FAQ 常见问题
-   文件路径：
-   app/resources/selection-support/fitting-replacement/q20/[productCode]/fitting-replacement-detail.css
-
-   说明：
-   1. FAQ 放在 PDF 2D 图纸区域下方
-   2. 左侧为标题说明，右侧为折叠问题
-   3. 默认第一个问题展开
-   4. 使用深蓝 + 荧光色体系，保持官网风格
-========================================================= */
-
-.frd-faq-section {
-  margin-top: 72px;
-  padding-top: 42px;
-  border-top: 1px solid rgba(23, 51, 104, 0.14);
-}
-
-.frd-faq-layout {
-  display: grid;
-  grid-template-columns: 300px minmax(0, 1fr);
-  gap: 52px;
-  align-items: start;
-}
-
-/* 左侧标题 */
-.frd-faq-heading {
-  position: sticky;
-  top: 110px;
-}
-
-.frd-faq-heading span {
-  display: inline-flex;
-  margin-bottom: 12px;
-  color: #09e9b4;
-  font-size: 14px;
-  line-height: 1;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.frd-faq-heading h2 {
-  margin: 0;
-  color: #173368;
-  font-size: 34px;
-  line-height: 1.15;
-  font-weight: 900;
-  letter-spacing: -0.04em;
-}
-
-.frd-faq-heading p {
-  margin: 16px 0 0;
-  max-width: 260px;
-  color: #5e6b80;
-  font-size: 15px;
-  line-height: 1.8;
-}
-
-/* 右侧列表 */
-.frd-faq-list {
-  border-top: 1px solid rgba(23, 51, 104, 0.16);
-}
-
-/* 单个问题 */
-.frd-faq-item {
-  border-bottom: 1px solid rgba(23, 51, 104, 0.16);
-  background: #ffffff;
-}
-
-/* 问题按钮 */
-.frd-faq-question {
-  width: 100%;
-  min-height: 68px;
-  padding: 0 0;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 42px;
-  gap: 20px;
-  align-items: center;
-  border: 0;
-  background: transparent;
-  color: #173368;
-  text-align: left;
-  cursor: pointer;
-}
-
-.frd-faq-question span {
-  color: #173368;
-  font-size: 18px;
-  line-height: 1.45;
-  font-weight: 900;
-}
-
-.frd-faq-question em {
-  width: 34px;
-  height: 34px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  justify-self: end;
-  border: 1px solid rgba(23, 51, 104, 0.22);
-  border-radius: 5px;
-  color: #173368;
-  font-size: 18px;
-  line-height: 1;
-  font-style: normal;
-  font-weight: 900;
-  transition:
-    background 0.18s ease,
-    color 0.18s ease,
-    border-color 0.18s ease;
-}
-
-.frd-faq-question:hover em {
-  border-color: #173368;
-  background: #173368;
-  color: #09e9b4;
-}
-
-/* 展开状态 */
-.frd-faq-item.is-active {
-  background: #ffffff;
-}
-
-.frd-faq-item.is-active .frd-faq-question em {
-  border-color: #173368;
-  background: #173368;
-  color: #09e9b4;
-}
-
-/* 答案 */
-.frd-faq-answer {
-  padding: 0 56px 24px 0;
-}
-
-.frd-faq-answer p {
-  margin: 0;
-  color: #5e6b80;
-  font-size: 15px;
-  line-height: 1.85;
-}
-
-/* =========================================================
-   FAQ 响应式
-========================================================= */
-
-@media (max-width: 1080px) {
-  .frd-faq-layout {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-
-  .frd-faq-heading {
-    position: static;
-  }
-
-  .frd-faq-heading p {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 720px) {
   .frd-faq-section {
     margin-top: 54px;
     padding-top: 32px;
+  }
+
+  .frd-faq-layout {
+    gap: 24px;
   }
 
   .frd-faq-heading h2 {
@@ -708,9 +646,13 @@
   }
 
   .frd-faq-question {
-    min-height: 62px;
-    grid-template-columns: minmax(0, 1fr) 34px;
+    min-height: 64px;
+    grid-template-columns: 34px minmax(0, 1fr) 34px;
     gap: 14px;
+  }
+
+  .frd-faq-question::before {
+    font-size: 16px;
   }
 
   .frd-faq-question span {
@@ -729,266 +671,5 @@
 
   .frd-faq-answer p {
     font-size: 14px;
-  }
-}
-
-/* =========================================================
-   详情页｜FAQ 上下排布最终样式
-   文件路径：
-   app/resources/selection-support/fitting-replacement/q20/[productCode]/fitting-replacement-detail.css
-
-   说明：
-   1. 覆盖上一版 FAQ 左右两栏布局
-   2. 改为上方标题说明 + 下方问题列表
-   3. 更适合详情页下方阅读，不会显得左右割裂
-========================================================= */
-
-.frd-faq-section {
-  margin-top: 72px !important;
-  padding-top: 42px !important;
-  border-top: 1px solid rgba(23, 51, 104, 0.14) !important;
-}
-
-.frd-faq-layout {
-  display: grid !important;
-  grid-template-columns: 1fr !important;
-  gap: 30px !important;
-  align-items: start !important;
-}
-
-/* FAQ 标题区改为顶部横向说明 */
-.frd-faq-heading {
-  position: static !important;
-  max-width: 760px !important;
-}
-
-.frd-faq-heading span {
-  display: inline-flex !important;
-  margin-bottom: 10px !important;
-  color: #09e9b4 !important;
-  font-size: 14px !important;
-  line-height: 1 !important;
-  font-weight: 900 !important;
-  letter-spacing: 0.08em !important;
-  text-transform: uppercase !important;
-}
-
-.frd-faq-heading h2 {
-  margin: 0 !important;
-  color: #173368 !important;
-  font-size: 34px !important;
-  line-height: 1.15 !important;
-  font-weight: 900 !important;
-  letter-spacing: -0.04em !important;
-}
-
-.frd-faq-heading p {
-  margin: 14px 0 0 !important;
-  max-width: 720px !important;
-  color: #5e6b80 !important;
-  font-size: 15px !important;
-  line-height: 1.8 !important;
-}
-
-/* FAQ 列表改为整行宽度 */
-.frd-faq-list {
-  width: 100% !important;
-  max-width: 100% !important;
-  border-top: 1px solid rgba(23, 51, 104, 0.16) !important;
-}
-
-/* 问题行保持高级简洁 */
-.frd-faq-question {
-  width: 100% !important;
-  min-height: 72px !important;
-  padding: 0 !important;
-  display: grid !important;
-  grid-template-columns: minmax(0, 1fr) 42px !important;
-  gap: 20px !important;
-  align-items: center !important;
-  border: 0 !important;
-  background: transparent !important;
-  color: #173368 !important;
-  text-align: left !important;
-  cursor: pointer !important;
-}
-
-.frd-faq-answer {
-  padding: 0 64px 26px 0 !important;
-}
-
-.frd-faq-answer p {
-  max-width: 900px !important;
-  margin: 0 !important;
-  color: #5e6b80 !important;
-  font-size: 15px !important;
-  line-height: 1.85 !important;
-}
-
-/* 移动端 */
-@media (max-width: 720px) {
-  .frd-faq-section {
-    margin-top: 54px !important;
-    padding-top: 32px !important;
-  }
-
-  .frd-faq-layout {
-    gap: 24px !important;
-  }
-
-  .frd-faq-heading h2 {
-    font-size: 28px !important;
-  }
-
-  .frd-faq-question {
-    min-height: 64px !important;
-    grid-template-columns: minmax(0, 1fr) 34px !important;
-    gap: 14px !important;
-  }
-
-  .frd-faq-answer {
-    padding: 0 0 22px !important;
-  }
-}
-
-/* =========================================================
-   详情页｜FAQ 左侧序号修复版
-   文件路径：
-   app/resources/selection-support/fitting-replacement/q20/[productCode]/fitting-replacement-detail.css
-
-   说明：
-   1. 不再使用 CSS counter
-   2. 直接用 nth-child 写死 1–6
-   3. 避免所有序号显示为 0
-   4. 左侧只显示纯数字，不要边框和背景
-========================================================= */
-
-/* 关闭前面 counter 的影响 */
-.frd-faq-list {
-  counter-reset: none !important;
-}
-
-.frd-faq-item {
-  counter-increment: none !important;
-}
-
-/* FAQ 问题行：左侧数字 + 问题 + 右侧加减号 */
-.frd-faq-question {
-  grid-template-columns: 12px minmax(0, 1fr) 12px !important;
-}
-
-/* 先清空旧的 counter 内容 */
-.frd-faq-question::before {
-  width: auto !important;
-  height: auto !important;
-  display: inline-block !important;
-  justify-self: start !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-  background: transparent !important;
-  color: rgba(23, 51, 104, 0.42) !important;
-  font-size: 18px !important;
-  line-height: 1 !important;
-  font-weight: 900 !important;
-  letter-spacing: -0.04em !important;
-}
-
-/* 直接写死序号 */
-.frd-faq-item:nth-child(1) .frd-faq-question::before {
-  content: "1" !important;
-}
-
-.frd-faq-item:nth-child(2) .frd-faq-question::before {
-  content: "2" !important;
-}
-
-.frd-faq-item:nth-child(3) .frd-faq-question::before {
-  content: "3" !important;
-}
-
-.frd-faq-item:nth-child(4) .frd-faq-question::before {
-  content: "4" !important;
-}
-
-.frd-faq-item:nth-child(5) .frd-faq-question::before {
-  content: "5" !important;
-}
-
-.frd-faq-item:nth-child(6) .frd-faq-question::before {
-  content: "6" !important;
-}
-
-/* 当前展开项 / hover 时数字变荧光色 */
-.frd-faq-item.is-active .frd-faq-question::before,
-.frd-faq-question:hover::before {
-  border: 0 !important;
-  background: transparent !important;
-  color: #09e9b4 !important;
-}
-
-/* 移动端 */
-@media (max-width: 720px) {
-  .frd-faq-question {
-    grid-template-columns: 34px minmax(0, 1fr) 34px !important;
-  }
-
-  .frd-faq-question::before {
-    font-size: 16px !important;
-  }
-}
-
-/* =========================================================
-   详情页｜Banner 高度优化
-   文件路径：
-   app/resources/selection-support/fitting-replacement/q20/[productCode]/fitting-replacement-detail.css
-
-   说明：
-   1. 只调整 Q20 接头型号替代详情页 Banner
-   2. 不影响产品替换表首页 Banner
-   3. Banner 高一点后，页面进入感更强
-========================================================= */
-
-.fitting-replacement-detail-page .frd-hero {
-  min-height: 480px !important;
-  display: flex !important;
-  align-items: center !important;
-}
-
-.fitting-replacement-detail-page .frd-hero .frp-hero-inner {
-  min-height: 380px !important;
-  display: flex !important;
-  align-items: center !important;
-}
-
-/* 移动端适当降低，避免首屏太长 */
-@media (max-width: 720px) {
-  .fitting-replacement-detail-page .frd-hero {
-    min-height: 300px !important;
-  }
-
-  .fitting-replacement-detail-page .frd-hero .frp-hero-inner {
-    min-height: 300px !important;
-  }
-}
-
-/* =========================================================
-   详情页｜去除 Banner 后的顶部间距
-   文件路径：
-   app/resources/selection-support/fitting-replacement/q20/[productCode]/fitting-replacement-detail.css
-
-   说明：
-   1. 单个产品详情页不再显示 Banner
-   2. 页面直接从面包屑和产品详情开始
-   3. 这里给顶部留出 Header 高度，避免内容被导航遮挡
-========================================================= */
-
-.fitting-replacement-detail-page .frd-main {
-  padding-top: 112px !important;
-}
-
-/* 移动端 Header 较低，顶部间距适当减少 */
-@media (max-width: 720px) {
-  .fitting-replacement-detail-page .frd-main {
-    padding-top: 88px !important;
   }
 } 
