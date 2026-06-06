@@ -10,7 +10,7 @@
    2. 当前阶段默认读取：
       fittings / quick-connect / q20
    3. 产品数据来自 q20.zh.ts
-   4. 首页文案来自 q20.page.intl.ts
+   4. 首页多语言文案来自 q20.page.intl.ts
    5. 支持 zh / en / es / fr / ko / ru 多语言首页文案
    6. 后续新增 Q40、硬管接头、倒刺接头时，在数据源映射里继续扩展
    7. 后期接 CMS / API / 数据库时，优先修改这里
@@ -37,8 +37,8 @@ import { getFittingReplacementSeriesConfig } from "@/data/resources/fitting-repl
 
    说明：
    1. productData：当前系列产品数据、型号规则、搜索基础数据
-   2. 当前首页文案不再放在这里
-   3. 首页文案统一从 q20.page.intl.ts 按 locale 读取
+   2. 页面文案不放在这里
+   3. 页面文案统一从 q20.page.intl.ts 按 locale 读取
 ========================================================= */
 interface FittingReplacementHomeStaticDataSource {
   productData: typeof fittingReplacementQuickConnectQ20ZhData;
@@ -121,6 +121,7 @@ function createFittingReplacementHomeBreadcrumbs(
    3. banner：当前语言 Banner 文案
    4. breadcrumbs：当前语言面包屑
    5. search：当前语言搜索框文案
+   6. homeText：首页界面文案，例如 Tab、按钮、卡片字段名
 ========================================================= */
 export async function getFittingReplacementHomeData(
   seriesKey: FittingReplacementSeriesKey = "q20",
@@ -143,6 +144,8 @@ export async function getFittingReplacementHomeData(
       ...dataSource.productData.search,
       ...pageText.search,
     },
+
+    homeText: pageText.homeText,
   };
 }
 

@@ -44,6 +44,30 @@
   position: relative;
 }
 
+/* =========================================================
+   Banner 区域
+   说明：
+   1. 使用真实场景图片作为背景
+   2. 左侧保留文字区域
+   3. 叠加深蓝遮罩，保证多语言文字可读
+========================================================= */
+
+.frp-hero {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(23, 51, 104, 0.88) 0%,
+      rgba(23, 51, 104, 0.72) 38%,
+      rgba(23, 51, 104, 0.28) 68%,
+      rgba(23, 51, 104, 0.08) 100%
+    ),
+    url("/images/resources/selection-support/banner/resources-selection-support-fitting-replacement-banner-1920x520-v001.webp")
+      center center / cover no-repeat;
+}
+
 .frp-hero::after {
   content: "";
   position: absolute;
@@ -82,7 +106,7 @@
 }
 
 .frp-hero-title {
-  margin: 0 0 12px;
+  margin: 42px 0 12px;
   font-size: clamp(40px, 5vw, 62px);
   line-height: 1.08;
   font-weight: 900;
@@ -91,7 +115,7 @@
 
 .frp-hero-desc {
   margin: 0;
-  max-width: 720px;
+  max-width: 820px;
   color: rgba(255, 255, 255, 0.76);
   font-size: 18px;
   line-height: 1.75;
@@ -581,15 +605,6 @@
   }
 }
 
-/* =========================================================
-   鎺ュご閫夊瀷鎸囧紩锝滄ā鍧楁牱寮?
-
-   璇存槑锛?
-   1. 鍙湇鍔℃帴澶存浛浠ｆ煡璇㈤椤甸噷鐨勨€滄帴澶撮€夊瀷鎸囧紩鈥漈ab
-   2. 绫诲悕鍓嶇紑浣跨敤 frg-
-   3. 涓嶄娇鐢?frd-锛岄伩鍏嶅奖鍝嶈鎯呴〉涓讳綋鏍峰紡
-   4. 浜у搧缁撴灉鍗＄墖缁х画澶嶇敤 ProductBasicCard 鍏叡缁勪欢
-========================================================= */
 
 .frg-guide-section {
   padding: 6px 0 0;
@@ -797,3 +812,19 @@
     justify-content: space-between;
   }
 } 
+
+/* =========================================================
+   接头替代查询 Banner 装饰线隐藏
+
+   说明：
+   1. 当前 Banner 已改为真实图片背景
+   2. 原来的几何装饰线会压在图片上，影响真实感
+   3. 这里统一关闭 frp-hero 的伪元素装饰
+   4. 不影响 Banner 背景图、标题、描述和遮罩
+========================================================= */
+
+.frp-hero::before,
+.frp-hero::after {
+  content: none !important;
+  display: none !important;
+}

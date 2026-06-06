@@ -1,15 +1,20 @@
 ﻿/* =========================================================
    fitting-replacement-detail.css
-   鎭掓案杈惧畼缃戯綔Q20 鎺ュご鍨嬪彿鏇夸唬璇︽儏椤垫牱寮?
+   恒永达官网｜Q20 接头替代查询详情页样式
 
-   鏂囦欢璺緞锛?
+   文件路径：
    app/resources/selection-support/fitting-replacement/q20/[productCode]/fitting-replacement-detail.css
 
-   璇存槑锛?
-   1. 鍙湇鍔?Q20 鎺ュご鍨嬪彿鏇夸唬璇︽儏椤?
-   2. 涓嶅啓鍏?app/globals.css
-   3. 鍏叡 Banner銆侀潰鍖呭睉銆佸彸渚ф竻鍗曘€佹墦鍗?PDF 鏍峰紡澶嶇敤鐖剁骇 fitting-replacement.css
-   4. 鏈枃浠跺彧鍐欒鎯呴〉鐙湁甯冨眬
+   说明：
+   1. 只服务 Q20 接头替代查询详情页
+   2. 不写入 app/globals.css
+   3. 详情页主体、参数表、操作按钮、2D 图纸预览、FAQ 都在这里维护
+   4. 页面公共 Header、右侧清单、PDF 打印等其它全局能力由其它组件负责
+   5. 详情页内容宽度通过 .frd-container 控制，避免内容满屏铺开
+========================================================= */
+
+/* =========================================================
+   页面基础
 ========================================================= */
 
 .fitting-replacement-detail-page {
@@ -19,12 +24,26 @@
 }
 
 .frd-main {
-  padding: 24px 0 110px;
+  padding: 112px 0 110px;
   background: #ffffff;
 }
 
 /* =========================================================
-   璇︽儏涓讳綋
+   详情页内容容器
+
+   说明：
+   1. 控制详情页内容最大宽度
+   2. 与接头替代查询首页 .frp-container 保持一致
+   3. 修复面包屑、产品详情、2D 图纸区域满屏铺开的问题
+========================================================= */
+
+.frd-container {
+  width: min(1240px, calc(100% - 56px));
+  margin: 0 auto;
+}
+
+/* =========================================================
+   详情页主体
 ========================================================= */
 
 .frd-detail-section {
@@ -33,13 +52,13 @@
 
 .frd-detail-layout {
   display: grid;
-  grid-template-columns: 390px 1fr;
+  grid-template-columns: 390px minmax(0, 1fr);
   gap: 42px;
   align-items: start;
 }
 
 /* =========================================================
-   宸︿晶浜у搧鍥?
+   左侧产品图片
 ========================================================= */
 
 .frd-product-visual {
@@ -57,7 +76,7 @@
 }
 
 /* =========================================================
-   鍙充晶淇℃伅鍖?
+   右侧产品信息
 ========================================================= */
 
 .frd-info-area {
@@ -80,7 +99,7 @@
 }
 
 /* =========================================================
-   绱у噾鍙傛暟琛?
+   参数表
 ========================================================= */
 
 .frd-compact-table {
@@ -137,7 +156,10 @@
 }
 
 /* =========================================================
-   璇︽儏椤碉綔鍔犲叆娓呭崟 + 鏄惁闇€瑕佸浘绾?
+   操作按钮区域
+   包含：
+   1. 加入清单
+   2. 添加图纸
 ========================================================= */
 
 .frd-detail-action-row {
@@ -147,36 +169,13 @@
   gap: 10px;
 }
 
-.frd-add-button {
-  width: auto;
-  min-width: 126px;
-  height: 42px;
-  padding: 0 18px;
-  border: 1px solid #173368;
-  border-radius: 6px;
-  background: #173368;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 900;
-  cursor: pointer;
-  transition:
-    background 0.18s ease,
-    color 0.18s ease,
-    border-color 0.18s ease;
-}
-
-.frd-add-button:hover {
-  background: #09e9b4;
-  border-color: #09e9b4;
-  color: #173368;
-}
-
+.frd-add-button,
 .frd-drawing-toggle-button {
   min-width: 126px;
   height: 42px;
   padding: 0 18px;
-  border: 1px solid rgba(23, 51, 104, 0.24);
-  border-radius: 6px;
+  border: 1px solid rgba(23, 51, 104, 0.28);
+  border-radius: 5px;
   background: #ffffff;
   color: #173368;
   font-size: 16px;
@@ -188,20 +187,38 @@
     border-color 0.18s ease;
 }
 
-.frd-drawing-toggle-button:hover {
-  background: #173368;
+.frd-add-button:hover,
+.frd-add-button:active,
+.frd-add-button:focus-visible,
+.frd-drawing-toggle-button:hover,
+.frd-drawing-toggle-button:active,
+.frd-drawing-toggle-button:focus-visible {
   border-color: #173368;
+  background: #173368;
   color: #09e9b4;
 }
 
-.frd-drawing-toggle-button.is-active {
-  background: #173368;
+.frd-add-button.is-added,
+.frd-add-button.is-added:hover,
+.frd-add-button.is-added:active,
+.frd-add-button.is-added:focus-visible,
+.frd-drawing-toggle-button.is-active,
+.frd-drawing-toggle-button.is-active:hover,
+.frd-drawing-toggle-button.is-active:active,
+.frd-drawing-toggle-button.is-active:focus-visible {
   border-color: #173368;
+  background: #173368;
   color: #09e9b4;
 }
 
 /* =========================================================
-   PDF 2D 鍥剧焊棰勮鍖?
+   2D 图纸预览区域
+
+   说明：
+   1. 服务 FittingReplacementDrawingPreview.tsx
+   2. 默认显示“点击预览图纸”封面
+   3. 点击后显示 PDF iframe
+   4. iframe 逻辑由组件控制
 ========================================================= */
 
 .frd-drawing-section {
@@ -228,78 +245,13 @@
   letter-spacing: -0.04em;
 }
 
-/* =========================================================
-   PDF 2D 鍥剧焊锝滆棰戝紡棰勮鍏ュ彛
-========================================================= */
-
-.frd-drawing-preview-card {
-  width: 100%;
-  min-height: 260px;
-  padding: 42px 24px;
-  display: grid;
-  place-items: center;
-  border: 1px solid rgba(23, 51, 104, 0.18);
-  background: #f6f8fb;
-  cursor: pointer;
-  text-align: center;
-  transition:
-    border-color 0.18s ease,
-    background 0.18s ease;
+.frd-drawing-head p {
+  margin: 10px 0 0;
+  max-width: 760px;
+  color: #5e6b80;
+  font-size: 15px;
+  line-height: 1.8;
 }
-
-.frd-drawing-preview-card:hover {
-  border-color: rgba(9, 233, 180, 0.9);
-  background: #ffffff;
-}
-
-.frd-drawing-play-icon {
-  width: 74px;
-  height: 74px;
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 14px;
-  border: 2px solid #173368;
-  border-radius: 50%;
-  background: #ffffff;
-  transition:
-    background 0.18s ease,
-    border-color 0.18s ease;
-}
-
-.frd-drawing-play-icon::before {
-  content: "";
-  width: 0;
-  height: 0;
-  margin-left: 5px;
-  border-top: 13px solid transparent;
-  border-bottom: 13px solid transparent;
-  border-left: 20px solid #173368;
-  transition: border-left-color 0.18s ease;
-}
-
-.frd-drawing-preview-card:hover .frd-drawing-play-icon {
-  background: #173368;
-  border-color: #173368;
-}
-
-.frd-drawing-preview-card:hover .frd-drawing-play-icon::before {
-  border-left-color: #09e9b4;
-}
-
-.frd-drawing-preview-card strong {
-  color: #173368;
-  font-size: 18px;
-  font-weight: 900;
-}
-
-/* =========================================================
-   PDF 棰勮瀹瑰櫒
-   璇存槑锛?
-   1. iframe 绔嬪嵆鎸傝浇
-   2. LoadingProgress 瑕嗙洊鍦?PDF 涓婃柟
-========================================================= */
 
 .frd-drawing-viewer {
   width: 100%;
@@ -318,6 +270,94 @@
   background: #ffffff;
 }
 
+.frd-drawing-object.is-visible {
+  display: block;
+}
+
+/* =========================================================
+   2D 图纸预览封面
+========================================================= */
+
+.frd-drawing-preview-card {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  width: 100%;
+  min-height: 260px;
+  padding: 42px 24px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 12px;
+  border: 0;
+  background: #f6f8fb;
+  color: #173368;
+  cursor: pointer;
+  text-align: center;
+  transition:
+    border-color 0.18s ease,
+    background 0.18s ease;
+}
+
+.frd-drawing-preview-card:hover {
+  background: #ffffff;
+}
+
+.frd-drawing-play-icon {
+  width: 74px;
+  height: 74px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2px;
+  border: 2px solid #173368;
+  border-radius: 50%;
+  background: #ffffff;
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.frd-drawing-play-icon::before {
+  content: "";
+  width: 0;
+  height: 0;
+  margin-left: 5px;
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent;
+  border-left: 20px solid #173368;
+  transition: border-left-color 0.18s ease;
+}
+
+.frd-drawing-preview-card:hover .frd-drawing-play-icon {
+  background: #173368;
+  border-color: #173368;
+  transform: scale(1.04);
+}
+
+.frd-drawing-preview-card:hover .frd-drawing-play-icon::before {
+  border-left-color: #09e9b4;
+}
+
+.frd-drawing-preview-card strong {
+  display: block;
+  color: #173368;
+  font-size: 18px;
+  line-height: 1.35;
+  font-weight: 900;
+}
+
+.frd-drawing-preview-card em {
+  display: block;
+  max-width: 460px;
+  color: #5e6b80;
+  font-size: 14px;
+  line-height: 1.7;
+  font-style: normal;
+}
+
 .frd-drawing-fallback {
   width: 100%;
   height: 100%;
@@ -331,7 +371,177 @@
 }
 
 /* =========================================================
-   鍝嶅簲寮?
+   FAQ 常见问题
+========================================================= */
+
+.frd-faq-section {
+  margin-top: 72px;
+  padding-top: 42px;
+  border-top: 1px solid rgba(23, 51, 104, 0.14);
+}
+
+.frd-faq-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+/* FAQ 标题说明 */
+
+.frd-faq-heading {
+  position: static;
+  max-width: 760px;
+}
+
+.frd-faq-heading span {
+  display: inline-flex;
+  margin-bottom: 10px;
+  color: #09e9b4;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.frd-faq-heading h2 {
+  margin: 0;
+  color: #173368;
+  font-size: 34px;
+  line-height: 1.15;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.frd-faq-heading p {
+  margin: 14px 0 0;
+  max-width: 720px;
+  color: #5e6b80;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* FAQ 列表 */
+
+.frd-faq-list {
+  width: 100%;
+  max-width: 100%;
+  border-top: 1px solid rgba(23, 51, 104, 0.16);
+}
+
+.frd-faq-item {
+  border-bottom: 1px solid rgba(23, 51, 104, 0.16);
+  background: #ffffff;
+}
+
+.frd-faq-question {
+  width: 100%;
+  min-height: 72px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 12px minmax(0, 1fr) 42px;
+  gap: 20px;
+  align-items: center;
+  border: 0;
+  background: transparent;
+  color: #173368;
+  text-align: left;
+  cursor: pointer;
+}
+
+.frd-faq-question::before {
+  width: auto;
+  height: auto;
+  display: inline-block;
+  justify-self: start;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: rgba(23, 51, 104, 0.42);
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.frd-faq-item:nth-child(1) .frd-faq-question::before {
+  content: "1";
+}
+
+.frd-faq-item:nth-child(2) .frd-faq-question::before {
+  content: "2";
+}
+
+.frd-faq-item:nth-child(3) .frd-faq-question::before {
+  content: "3";
+}
+
+.frd-faq-item:nth-child(4) .frd-faq-question::before {
+  content: "4";
+}
+
+.frd-faq-item:nth-child(5) .frd-faq-question::before {
+  content: "5";
+}
+
+.frd-faq-item:nth-child(6) .frd-faq-question::before {
+  content: "6";
+}
+
+.frd-faq-item.is-active .frd-faq-question::before,
+.frd-faq-question:hover::before {
+  color: #09e9b4;
+}
+
+.frd-faq-question span {
+  color: #173368;
+  font-size: 18px;
+  line-height: 1.45;
+  font-weight: 900;
+}
+
+.frd-faq-question em {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: end;
+  border: 1px solid rgba(23, 51, 104, 0.22);
+  border-radius: 5px;
+  color: #173368;
+  font-size: 18px;
+  line-height: 1;
+  font-style: normal;
+  font-weight: 900;
+  transition:
+    background 0.18s ease,
+    color 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.frd-faq-question:hover em,
+.frd-faq-item.is-active .frd-faq-question em {
+  border-color: #173368;
+  background: #173368;
+  color: #09e9b4;
+}
+
+.frd-faq-answer {
+  padding: 0 64px 26px 32px;
+}
+
+.frd-faq-answer p {
+  max-width: 900px;
+  margin: 0;
+  color: #5e6b80;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+/* =========================================================
+   响应式
 ========================================================= */
 
 @media (max-width: 1080px) {
@@ -347,9 +557,30 @@
   .frd-product-visual img {
     max-height: 300px;
   }
+
+  .frd-faq-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .frd-faq-heading {
+    position: static;
+  }
+
+  .frd-faq-heading p {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 720px) {
+  .frd-main {
+    padding-top: 88px;
+  }
+
+  .frd-container {
+    width: min(1240px, calc(100% - 28px));
+  }
+
   .frd-title-block h2 {
     font-size: 26px;
   }
@@ -382,6 +613,11 @@
     width: 100%;
   }
 
+  .frd-drawing-section {
+    margin-top: 48px;
+    padding-top: 32px;
+  }
+
   .frd-drawing-head {
     align-items: flex-start;
     flex-direction: column;
@@ -389,318 +625,20 @@
 
   .frd-drawing-preview-card {
     min-height: 220px;
+    padding: 28px 20px;
   }
 
   .frd-drawing-viewer {
     height: 520px;
   }
-}
 
-/* =========================================================
-   璇︽儏椤碉綔鍥剧焊鎸夐挳鏈€缁堟牱寮?
-   鏂囦欢璺緞锛?
-   app/resources/selection-support/fitting-replacement/q20/[productCode]/fitting-replacement-detail.css
-
-   璇存槑锛?
-   1. 鏈坊鍔犲浘绾革細鐧藉簳 + 娣辫摑瀛?
-   2. 宸叉坊鍔犲浘绾革細娣辫摑搴?+ 鑽у厜瀛?
-   3. 鍦嗚鏀瑰皬锛屼笉浣跨敤鑳跺泭鍦嗚
-========================================================= */
-
-.frd-drawing-toggle-button {
-  min-width: 126px;
-  height: 42px;
-  padding: 0 18px;
-  border: 1px solid rgba(23, 51, 104, 0.28);
-  border-radius: 5px;
-  background: #ffffff;
-  color: #173368;
-  font-size: 16px;
-  font-weight: 900;
-}
-
-.frd-drawing-toggle-button:hover {
-  border-color: #173368;
-  background: #173368;
-  color: #09e9b4;
-}
-
-.frd-drawing-toggle-button.is-active {
-  border-color: #173368;
-  background: #173368;
-  color: #09e9b4;
-}
-
-.frd-drawing-toggle-button.is-active:hover {
-  border-color: #173368;
-  background: #173368;
-  color: #09e9b4;
-}
-
-/* =========================================================
-   璇︽儏椤碉綔鎿嶄綔鎸夐挳鏈€缁堟牱寮忚鐩?
-   鏂囦欢璺緞锛?
-   app/resources/selection-support/fitting-replacement/q20/[productCode]/fitting-replacement-detail.css
-
-   璇存槑锛?
-   1. 杩欎竴娈靛繀椤绘斁鍦ㄦ枃浠舵渶搴曢儴
-   2. 瑕嗙洊鍓嶉潰鏃х殑 .frd-add-button 娣辫摑榛樿鏍峰紡
-   3. 鎵€鏈夋寜閽粯璁ょ櫧搴曟繁钃濆瓧
-   4. 榧犳爣鎮仠 / 鐐瑰嚮鐘舵€佷负娣辫摑搴?+ 鑽у厜鑹插瓧
-========================================================= */
-
-/* 鍔犲叆娓呭崟锛氶粯璁ょ櫧搴曟繁钃濆瓧 */
-.frd-add-button {
-  min-width: 126px !important;
-  height: 42px !important;
-  padding: 0 18px !important;
-  border: 1px solid rgba(23, 51, 104, 0.28) !important;
-  border-radius: 5px !important;
-  background: #ffffff !important;
-  color: #173368 !important;
-  font-size: 16px !important;
-  font-weight: 900 !important;
-  cursor: pointer !important;
-  transition:
-    background 0.18s ease,
-    color 0.18s ease,
-    border-color 0.18s ease !important;
-}
-
-/* 鍔犲叆娓呭崟锛氶紶鏍囨偓鍋?/ 鐐瑰嚮鏃跺彉娣辫摑搴曡崸鍏夊瓧 */
-.frd-add-button:hover,
-.frd-add-button:active,
-.frd-add-button:focus-visible {
-  border-color: #173368 !important;
-  background: #173368 !important;
-  color: #09e9b4 !important;
-}
-
-/* 鍥剧焊鎸夐挳锛氭湭娣诲姞鏃剁櫧搴曟繁钃濆瓧 */
-.frd-drawing-toggle-button {
-  min-width: 126px !important;
-  height: 42px !important;
-  padding: 0 18px !important;
-  border: 1px solid rgba(23, 51, 104, 0.28) !important;
-  border-radius: 5px !important;
-  background: #ffffff !important;
-  color: #173368 !important;
-  font-size: 16px !important;
-  font-weight: 900 !important;
-  cursor: pointer !important;
-  transition:
-    background 0.18s ease,
-    color 0.18s ease,
-    border-color 0.18s ease !important;
-}
-
-/* 鍥剧焊鎸夐挳锛氶紶鏍囨偓鍋滄椂娣辫摑搴曡崸鍏夊瓧 */
-.frd-drawing-toggle-button:hover,
-.frd-drawing-toggle-button:active,
-.frd-drawing-toggle-button:focus-visible {
-  border-color: #173368 !important;
-  background: #173368 !important;
-  color: #09e9b4 !important;
-}
-
-/* 鍥剧焊鎸夐挳锛氬凡娣诲姞鐘舵€侊紝淇濇寔娣辫摑搴曡崸鍏夊瓧 */
-.frd-drawing-toggle-button.is-active {
-  border-color: #173368 !important;
-  background: #173368 !important;
-  color: #09e9b4 !important;
-}
-
-/* =========================================================
-   璇︽儏椤碉綔鍔犲叆娓呭崟鎸夐挳宸插姞鍏ョ姸鎬?
-   鏂囦欢璺緞锛?
-   app/resources/selection-support/fitting-replacement/q20/[productCode]/fitting-replacement-detail.css
-
-   璇存槑锛?
-   1. 榛樿鐘舵€侊細鐧藉簳娣辫摑瀛?
-   2. 榧犳爣鎮仠锛氭繁钃濆簳鑽у厜瀛?
-   3. 宸插姞鍏ユ竻鍗曪細娣辫摑搴曡崸鍏夊瓧
-   4. 涓嶇鐢ㄦ寜閽紝瀹㈡埛鍐嶆鐐瑰嚮浠嶅彲澧炲姞鏁伴噺
-========================================================= */
-
-.frd-add-button.is-added {
-  border-color: #173368 !important;
-  background: #173368 !important;
-  color: #09e9b4 !important;
-}
-
-.frd-add-button.is-added:hover,
-.frd-add-button.is-added:active,
-.frd-add-button.is-added:focus-visible {
-  border-color: #173368 !important;
-  background: #173368 !important;
-  color: #09e9b4 !important;
-}
-
-/* =========================================================
-   璇︽儏椤碉綔FAQ 甯歌闂
-   鏂囦欢璺緞锛?
-   app/resources/selection-support/fitting-replacement/q20/[productCode]/fitting-replacement-detail.css
-
-   璇存槑锛?
-   1. FAQ 鏀惧湪 PDF 2D 鍥剧焊鍖哄煙涓嬫柟
-   2. 宸︿晶涓烘爣棰樿鏄庯紝鍙充晶涓烘姌鍙犻棶棰?
-   3. 榛樿绗竴涓棶棰樺睍寮€
-   4. 浣跨敤娣辫摑 + 鑽у厜鑹蹭綋绯伙紝淇濇寔瀹樼綉椋庢牸
-========================================================= */
-
-.frd-faq-section {
-  margin-top: 72px;
-  padding-top: 42px;
-  border-top: 1px solid rgba(23, 51, 104, 0.14);
-}
-
-.frd-faq-layout {
-  display: grid;
-  grid-template-columns: 300px minmax(0, 1fr);
-  gap: 52px;
-  align-items: start;
-}
-
-/* 宸︿晶鏍囬 */
-.frd-faq-heading {
-  position: sticky;
-  top: 110px;
-}
-
-.frd-faq-heading span {
-  display: inline-flex;
-  margin-bottom: 12px;
-  color: #09e9b4;
-  font-size: 14px;
-  line-height: 1;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.frd-faq-heading h2 {
-  margin: 0;
-  color: #173368;
-  font-size: 34px;
-  line-height: 1.15;
-  font-weight: 900;
-  letter-spacing: -0.04em;
-}
-
-.frd-faq-heading p {
-  margin: 16px 0 0;
-  max-width: 260px;
-  color: #5e6b80;
-  font-size: 15px;
-  line-height: 1.8;
-}
-
-/* 鍙充晶鍒楄〃 */
-.frd-faq-list {
-  border-top: 1px solid rgba(23, 51, 104, 0.16);
-}
-
-/* 鍗曚釜闂 */
-.frd-faq-item {
-  border-bottom: 1px solid rgba(23, 51, 104, 0.16);
-  background: #ffffff;
-}
-
-/* 闂鎸夐挳 */
-.frd-faq-question {
-  width: 100%;
-  min-height: 68px;
-  padding: 0 0;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 42px;
-  gap: 20px;
-  align-items: center;
-  border: 0;
-  background: transparent;
-  color: #173368;
-  text-align: left;
-  cursor: pointer;
-}
-
-.frd-faq-question span {
-  color: #173368;
-  font-size: 18px;
-  line-height: 1.45;
-  font-weight: 900;
-}
-
-.frd-faq-question em {
-  width: 34px;
-  height: 34px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  justify-self: end;
-  border: 1px solid rgba(23, 51, 104, 0.22);
-  border-radius: 5px;
-  color: #173368;
-  font-size: 18px;
-  line-height: 1;
-  font-style: normal;
-  font-weight: 900;
-  transition:
-    background 0.18s ease,
-    color 0.18s ease,
-    border-color 0.18s ease;
-}
-
-.frd-faq-question:hover em {
-  border-color: #173368;
-  background: #173368;
-  color: #09e9b4;
-}
-
-/* 灞曞紑鐘舵€?*/
-.frd-faq-item.is-active {
-  background: #ffffff;
-}
-
-.frd-faq-item.is-active .frd-faq-question em {
-  border-color: #173368;
-  background: #173368;
-  color: #09e9b4;
-}
-
-/* 绛旀 */
-.frd-faq-answer {
-  padding: 0 56px 24px 0;
-}
-
-.frd-faq-answer p {
-  margin: 0;
-  color: #5e6b80;
-  font-size: 15px;
-  line-height: 1.85;
-}
-
-/* =========================================================
-   FAQ 鍝嶅簲寮?
-========================================================= */
-
-@media (max-width: 1080px) {
-  .frd-faq-layout {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-
-  .frd-faq-heading {
-    position: static;
-  }
-
-  .frd-faq-heading p {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 720px) {
   .frd-faq-section {
     margin-top: 54px;
     padding-top: 32px;
+  }
+
+  .frd-faq-layout {
+    gap: 24px;
   }
 
   .frd-faq-heading h2 {
@@ -708,9 +646,13 @@
   }
 
   .frd-faq-question {
-    min-height: 62px;
-    grid-template-columns: minmax(0, 1fr) 34px;
+    min-height: 64px;
+    grid-template-columns: 34px minmax(0, 1fr) 34px;
     gap: 14px;
+  }
+
+  .frd-faq-question::before {
+    font-size: 16px;
   }
 
   .frd-faq-question span {
@@ -729,266 +671,5 @@
 
   .frd-faq-answer p {
     font-size: 14px;
-  }
-}
-
-/* =========================================================
-   璇︽儏椤碉綔FAQ 涓婁笅鎺掑竷鏈€缁堟牱寮?
-   鏂囦欢璺緞锛?
-   app/resources/selection-support/fitting-replacement/q20/[productCode]/fitting-replacement-detail.css
-
-   璇存槑锛?
-   1. 瑕嗙洊涓婁竴鐗?FAQ 宸﹀彸涓ゆ爮甯冨眬
-   2. 鏀逛负涓婃柟鏍囬璇存槑 + 涓嬫柟闂鍒楄〃
-   3. 鏇撮€傚悎璇︽儏椤典笅鏂归槄璇伙紝涓嶄細鏄惧緱宸﹀彸鍓茶
-========================================================= */
-
-.frd-faq-section {
-  margin-top: 72px !important;
-  padding-top: 42px !important;
-  border-top: 1px solid rgba(23, 51, 104, 0.14) !important;
-}
-
-.frd-faq-layout {
-  display: grid !important;
-  grid-template-columns: 1fr !important;
-  gap: 30px !important;
-  align-items: start !important;
-}
-
-/* FAQ 鏍囬鍖烘敼涓洪《閮ㄦí鍚戣鏄?*/
-.frd-faq-heading {
-  position: static !important;
-  max-width: 760px !important;
-}
-
-.frd-faq-heading span {
-  display: inline-flex !important;
-  margin-bottom: 10px !important;
-  color: #09e9b4 !important;
-  font-size: 14px !important;
-  line-height: 1 !important;
-  font-weight: 900 !important;
-  letter-spacing: 0.08em !important;
-  text-transform: uppercase !important;
-}
-
-.frd-faq-heading h2 {
-  margin: 0 !important;
-  color: #173368 !important;
-  font-size: 34px !important;
-  line-height: 1.15 !important;
-  font-weight: 900 !important;
-  letter-spacing: -0.04em !important;
-}
-
-.frd-faq-heading p {
-  margin: 14px 0 0 !important;
-  max-width: 720px !important;
-  color: #5e6b80 !important;
-  font-size: 15px !important;
-  line-height: 1.8 !important;
-}
-
-/* FAQ 鍒楄〃鏀逛负鏁磋瀹藉害 */
-.frd-faq-list {
-  width: 100% !important;
-  max-width: 100% !important;
-  border-top: 1px solid rgba(23, 51, 104, 0.16) !important;
-}
-
-/* 闂琛屼繚鎸侀珮绾х畝娲?*/
-.frd-faq-question {
-  width: 100% !important;
-  min-height: 72px !important;
-  padding: 0 !important;
-  display: grid !important;
-  grid-template-columns: minmax(0, 1fr) 42px !important;
-  gap: 20px !important;
-  align-items: center !important;
-  border: 0 !important;
-  background: transparent !important;
-  color: #173368 !important;
-  text-align: left !important;
-  cursor: pointer !important;
-}
-
-.frd-faq-answer {
-  padding: 0 64px 26px 0 !important;
-}
-
-.frd-faq-answer p {
-  max-width: 900px !important;
-  margin: 0 !important;
-  color: #5e6b80 !important;
-  font-size: 15px !important;
-  line-height: 1.85 !important;
-}
-
-/* 绉诲姩绔?*/
-@media (max-width: 720px) {
-  .frd-faq-section {
-    margin-top: 54px !important;
-    padding-top: 32px !important;
-  }
-
-  .frd-faq-layout {
-    gap: 24px !important;
-  }
-
-  .frd-faq-heading h2 {
-    font-size: 28px !important;
-  }
-
-  .frd-faq-question {
-    min-height: 64px !important;
-    grid-template-columns: minmax(0, 1fr) 34px !important;
-    gap: 14px !important;
-  }
-
-  .frd-faq-answer {
-    padding: 0 0 22px !important;
-  }
-}
-
-/* =========================================================
-   璇︽儏椤碉綔FAQ 宸︿晶搴忓彿淇鐗?
-   鏂囦欢璺緞锛?
-   app/resources/selection-support/fitting-replacement/q20/[productCode]/fitting-replacement-detail.css
-
-   璇存槑锛?
-   1. 涓嶅啀浣跨敤 CSS counter
-   2. 鐩存帴鐢?nth-child 鍐欐 1鈥?
-   3. 閬垮厤鎵€鏈夊簭鍙锋樉绀轰负 0
-   4. 宸︿晶鍙樉绀虹函鏁板瓧锛屼笉瑕佽竟妗嗗拰鑳屾櫙
-========================================================= */
-
-/* 鍏抽棴鍓嶉潰 counter 鐨勫奖鍝?*/
-.frd-faq-list {
-  counter-reset: none !important;
-}
-
-.frd-faq-item {
-  counter-increment: none !important;
-}
-
-/* FAQ 闂琛岋細宸︿晶鏁板瓧 + 闂 + 鍙充晶鍔犲噺鍙?*/
-.frd-faq-question {
-  grid-template-columns: 12px minmax(0, 1fr) 12px !important;
-}
-
-/* 鍏堟竻绌烘棫鐨?counter 鍐呭 */
-.frd-faq-question::before {
-  width: auto !important;
-  height: auto !important;
-  display: inline-block !important;
-  justify-self: start !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-  background: transparent !important;
-  color: rgba(23, 51, 104, 0.42) !important;
-  font-size: 18px !important;
-  line-height: 1 !important;
-  font-weight: 900 !important;
-  letter-spacing: -0.04em !important;
-}
-
-/* 鐩存帴鍐欐搴忓彿 */
-.frd-faq-item:nth-child(1) .frd-faq-question::before {
-  content: "1" !important;
-}
-
-.frd-faq-item:nth-child(2) .frd-faq-question::before {
-  content: "2" !important;
-}
-
-.frd-faq-item:nth-child(3) .frd-faq-question::before {
-  content: "3" !important;
-}
-
-.frd-faq-item:nth-child(4) .frd-faq-question::before {
-  content: "4" !important;
-}
-
-.frd-faq-item:nth-child(5) .frd-faq-question::before {
-  content: "5" !important;
-}
-
-.frd-faq-item:nth-child(6) .frd-faq-question::before {
-  content: "6" !important;
-}
-
-/* 褰撳墠灞曞紑椤?/ hover 鏃舵暟瀛楀彉鑽у厜鑹?*/
-.frd-faq-item.is-active .frd-faq-question::before,
-.frd-faq-question:hover::before {
-  border: 0 !important;
-  background: transparent !important;
-  color: #09e9b4 !important;
-}
-
-/* 绉诲姩绔?*/
-@media (max-width: 720px) {
-  .frd-faq-question {
-    grid-template-columns: 34px minmax(0, 1fr) 34px !important;
-  }
-
-  .frd-faq-question::before {
-    font-size: 16px !important;
-  }
-}
-
-/* =========================================================
-   璇︽儏椤碉綔Banner 楂樺害浼樺寲
-   鏂囦欢璺緞锛?
-   app/resources/selection-support/fitting-replacement/q20/[productCode]/fitting-replacement-detail.css
-
-   璇存槑锛?
-   1. 鍙皟鏁?Q20 鎺ュご鍨嬪彿鏇夸唬璇︽儏椤?Banner
-   2. 涓嶅奖鍝嶄骇鍝佹浛鎹㈣〃棣栭〉 Banner
-   3. Banner 楂樹竴鐐瑰悗锛岄〉闈㈣繘鍏ユ劅鏇村己
-========================================================= */
-
-.fitting-replacement-detail-page .frd-hero {
-  min-height: 480px !important;
-  display: flex !important;
-  align-items: center !important;
-}
-
-.fitting-replacement-detail-page .frd-hero .frp-hero-inner {
-  min-height: 380px !important;
-  display: flex !important;
-  align-items: center !important;
-}
-
-/* 绉诲姩绔€傚綋闄嶄綆锛岄伩鍏嶉灞忓お闀?*/
-@media (max-width: 720px) {
-  .fitting-replacement-detail-page .frd-hero {
-    min-height: 300px !important;
-  }
-
-  .fitting-replacement-detail-page .frd-hero .frp-hero-inner {
-    min-height: 300px !important;
-  }
-}
-
-/* =========================================================
-   璇︽儏椤碉綔鍘婚櫎 Banner 鍚庣殑椤堕儴闂磋窛
-   鏂囦欢璺緞锛?
-   app/resources/selection-support/fitting-replacement/q20/[productCode]/fitting-replacement-detail.css
-
-   璇存槑锛?
-   1. 鍗曚釜浜у搧璇︽儏椤典笉鍐嶆樉绀?Banner
-   2. 椤甸潰鐩存帴浠庨潰鍖呭睉鍜屼骇鍝佽鎯呭紑濮?
-   3. 杩欓噷缁欓《閮ㄧ暀鍑?Header 楂樺害锛岄伩鍏嶅唴瀹硅瀵艰埅閬尅
-========================================================= */
-
-.fitting-replacement-detail-page .frd-main {
-  padding-top: 112px !important;
-}
-
-/* 绉诲姩绔?Header 杈冧綆锛岄《閮ㄩ棿璺濋€傚綋鍑忓皯 */
-@media (max-width: 720px) {
-  .fitting-replacement-detail-page .frd-main {
-    padding-top: 88px !important;
   }
 } 
