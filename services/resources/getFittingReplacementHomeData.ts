@@ -9,8 +9,11 @@
    1. 获取接头替代查询首页数据
    2. 当前阶段默认读取：
       fittings / quick-connect / q20
-   3. 后续新增 Q40、硬管接头、倒刺接头时，在数据源映射里继续扩展
-   4. 后期接 CMS / API / 数据库时，优先修改这里
+   3. 产品数据来自 q20.zh.ts
+   4. 首页文案来自 q20.page.intl.ts
+   5. 支持 zh / en / es / fr / ko / ru 多语言首页文案
+   6. 后续新增 Q40、硬管接头、倒刺接头时，在数据源映射里继续扩展
+   7. 后期接 CMS / API / 数据库时，优先修改这里
 
    当前数据层级：
    fitting-replacement
@@ -20,7 +23,8 @@
 ========================================================= */
 
 import { fittingReplacementQuickConnectQ20ZhData } from "@/data/resources/fitting-replacement/fittings/quick-connect/q20/q20.zh";
-import { fittingReplacementQuickConnectQ20PageZh } from "@/data/resources/fitting-replacement/fittings/quick-connect/q20/q20.page.zh";
+
+import { getFittingReplacementQuickConnectQ20PageIntl } from "@/data/resources/fitting-replacement/fittings/quick-connect/q20/q20.page.intl";
 
 import type { FittingReplacementPageData } from "@/data/resources/fitting-replacement/fitting-replacement.types";
 
@@ -33,11 +37,11 @@ import { getFittingReplacementSeriesConfig } from "@/data/resources/fitting-repl
 
    说明：
    1. productData：当前系列产品数据、型号规则、搜索基础数据
-   2. pageText：当前系列页面 Banner、面包屑、搜索文案
+   2. 当前首页文案不再放在这里
+   3. 首页文案统一从 q20.page.intl.ts 按 locale 读取
 ========================================================= */
 interface FittingReplacementHomeStaticDataSource {
   productData: typeof fittingReplacementQuickConnectQ20ZhData;
-  pageText: typeof fittingReplacementQuickConnectQ20PageZh;
 }
 
 /* =========================================================
@@ -57,7 +61,6 @@ const FITTING_REPLACEMENT_HOME_STATIC_DATA_SOURCE_MAP: Record<
 > = {
   q20: {
     productData: fittingReplacementQuickConnectQ20ZhData,
-    pageText: fittingReplacementQuickConnectQ20PageZh,
   },
 };
 
@@ -74,18 +77,21 @@ function getFittingReplacementHomeStaticDataSource(
    生成首页面包屑
 
    说明：
-   1. 基础面包屑来自 pageText
-   2. 如果旧文案里仍然出现“接头型号替代查询 / 型号替代查询”
+   1. 基础面包屑来自 q20.page.intl.ts
+   2. 中文页面传 zh
+   3. 外语页面传 en / es / fr / ko / ru
+   4. 如果旧文案里仍然出现“接头型号替代查询 / 型号替代查询”
       在 service 层统一替换成系列配置里的 sourceLabel
-   3. String(item.label) 用于避免 TypeScript 字面量类型收窄报错
+   5. String(item.label) 用于避免 TypeScript 字面量类型收窄报错
 ========================================================= */
 function createFittingReplacementHomeBreadcrumbs(
-  seriesKey: FittingReplacementSeriesKey
+  seriesKey: FittingReplacementSeriesKey,
+  locale: string
 ): FittingReplacementPageData["breadcrumbs"] {
-  const dataSource = getFittingReplacementHomeStaticDataSource(seriesKey);
+  const pageText = getFittingReplacementQuickConnectQ20PageIntl(locale);
   const seriesConfig = getFittingReplacementSeriesConfig(seriesKey);
 
-  return dataSource.pageText.breadcrumbs.map((item) => {
+  return pageText.breadcrumbs.map((item) => {
     const label = String(item.label);
 
     if (label === "接头型号替代查询" || label === "型号替代查询") {
@@ -107,23 +113,35 @@ function createFittingReplacementHomeBreadcrumbs(
 
    参数说明：
    1. seriesKey：接头系列，当前默认 q20
-   2. 后续如果页面要切换 Q40 / 硬管 / 倒刺，可以传入对应系列
+   2. locale：语言，中文页面传 zh，外语页面传 en / es / fr / ko / ru
+
+   返回内容：
+   1. products：产品数据
+   2. modelRules：型号解析规则
+   3. banner：当前语言 Banner 文案
+   4. breadcrumbs：当前语言面包屑
+   5. search：当前语言搜索框文案
 ========================================================= */
 export async function getFittingReplacementHomeData(
-  seriesKey: FittingReplacementSeriesKey = "q20"
+  seriesKey: FittingReplacementSeriesKey = "q20",
+  locale: string = "zh"
 ): Promise<FittingReplacementPageData> {
   const dataSource = getFittingReplacementHomeStaticDataSource(seriesKey);
+  const pageText = getFittingReplacementQuickConnectQ20PageIntl(locale);
 
   return {
     ...dataSource.productData,
 
-    banner: dataSource.pageText.banner,
+    banner: {
+      ...dataSource.productData.banner,
+      ...pageText.banner,
+    },
 
-    breadcrumbs: createFittingReplacementHomeBreadcrumbs(seriesKey),
+    breadcrumbs: createFittingReplacementHomeBreadcrumbs(seriesKey, locale),
 
     search: {
       ...dataSource.productData.search,
-      ...dataSource.pageText.search,
+      ...pageText.search,
     },
   };
 }
