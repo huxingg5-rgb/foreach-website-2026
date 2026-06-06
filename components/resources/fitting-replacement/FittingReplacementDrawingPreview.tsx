@@ -8,28 +8,28 @@
    components/resources/fitting-replacement/FittingReplacementDrawingPreview.tsx
 
    作用：
-   1. 进入详情页后立即加载 2D 图纸 PDF
-   2. 默认不直接显示 PDF，只显示“点击预览图纸”封面
-   3. 用户点击后再显示已经后台加载的 PDF
-   4. 如果 PDF 还没加载完成，点击后显示短暂加载提示
+   1. 展示详情页 2D 图纸预览区域
+   2. 默认只显示“点击预览图纸”封面
+   3. 用户点击后再加载 PDF iframe
+   4. 避免 iframe 在隐藏状态下后台加载 PDF 时，Chrome PDF Viewer 偶发黑屏或报错
    5. 从 FittingReplacementDetail.tsx 中抽离，保持详情页结构清晰
 
+   为什么改成点击后再加载：
+   1. PDF 文件本身可以直接打开，说明路径和文件没问题
+   2. 问题主要出在隐藏 iframe 预加载时，浏览器 PDF Viewer 不稳定
+   3. 点击后再加载 iframe 更稳，也更符合客户“需要时预览”的使用习惯
+
    注意：
-   1. iframe 必须始终渲染
-   2. iframe 的 src 必须一开始就有值
-   3. 不能点击后才渲染 iframe
-   4. 不能使用 display:none 隐藏 iframe，否则浏览器可能不会后台加载 PDF
+   1. 这个文件只控制 2D 图纸预览逻辑
+   2. 不修改详情页整体样式
+   3. 不修改 PDF 文件路径生成逻辑
 ========================================================= */
 
 import { useEffect, useState } from "react";
 
 import LoadingProgress from "@/components/common/LoadingProgress";
 
-/* PDF 图纸预览加载遮罩时间
-   说明：
-   1. 如果客户点击预览时 PDF 还没有完成加载，就显示加载层
-   2. 兜底 1 秒后关闭加载层，避免 PDF Viewer onLoad 不稳定导致一直转圈
-*/
+/* PDF 图纸预览加载遮罩兜底时间 */
 const DRAWING_PREVIEW_LOADING_TIME = 1000;
 
 interface FittingReplacementDrawingPreviewProps {
@@ -50,28 +50,19 @@ export default function FittingReplacementDrawingPreview({
   /* 是否显示 PDF 预览 */
   const [isDrawingPreviewVisible, setIsDrawingPreviewVisible] = useState(false);
 
-  /* PDF 是否已加载完成 */
-  const [isDrawingLoaded, setIsDrawingLoaded] = useState(false);
-
-  /* 点击预览后的加载遮罩 */
+  /* PDF 加载遮罩 */
   const [isDrawingLoading, setIsDrawingLoading] = useState(false);
 
   /* =========================================================
-     点击预览后的加载遮罩控制
+     点击预览后显示加载遮罩
 
      说明：
-     1. PDF 页面进入后已经在后台加载
-     2. 如果客户点击时已经加载完成，不显示加载层
-     3. 如果还没加载完成，显示 LoadingProgress
-     4. 1 秒后兜底关闭，避免一直转圈
+     1. 点击后 iframe 才挂载
+     2. iframe onLoad 后关闭加载层
+     3. 兜底 1 秒后也会关闭加载层，避免 PDF Viewer onLoad 不稳定
   ========================================================= */
   useEffect(() => {
     if (!isDrawingPreviewVisible) return;
-
-    if (isDrawingLoaded) {
-      setIsDrawingLoading(false);
-      return;
-    }
 
     setIsDrawingLoading(true);
 
@@ -82,7 +73,7 @@ export default function FittingReplacementDrawingPreview({
     return () => {
       window.clearTimeout(loadingTimer);
     };
-  }, [isDrawingPreviewVisible, isDrawingLoaded, productModel]);
+  }, [isDrawingPreviewVisible, drawingPdfPreviewHref]);
 
   return (
     <section className="frd-drawing-section">
@@ -94,27 +85,6 @@ export default function FittingReplacementDrawingPreview({
         <LoadingProgress
           active={isDrawingPreviewVisible && isDrawingLoading}
           label="正在加载 2D 图纸..."
-        />
-
-        {/* 
-          关键：
-          iframe 始终渲染，并且 src 一开始就存在。
-          这样 PDF 页面打开后会后台加载。
-          但默认通过 CSS 隐藏，客户点击预览后才显示。
-        */}
-        <iframe
-          src={drawingPdfPreviewHref}
-          className={
-            isDrawingPreviewVisible
-              ? "frd-drawing-object is-visible"
-              : "frd-drawing-object"
-          }
-          title={`${productModel} 2D PDF drawing`}
-          loading="eager"
-          onLoad={() => {
-            setIsDrawingLoaded(true);
-            setIsDrawingLoading(false);
-          }}
         />
 
         {!isDrawingPreviewVisible ? (
@@ -131,7 +101,17 @@ export default function FittingReplacementDrawingPreview({
 
             <em>如需下载，请添加至清单列表</em>
           </button>
-        ) : null}
+        ) : (
+          <iframe
+            src={drawingPdfPreviewHref}
+            className="frd-drawing-object is-visible"
+            title={`${productModel} 2D PDF drawing`}
+            loading="eager"
+            onLoad={() => {
+              setIsDrawingLoading(false);
+            }}
+          />
+        )}
       </div>
     </section>
   );
