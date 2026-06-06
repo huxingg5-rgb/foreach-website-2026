@@ -25,6 +25,7 @@
    2. 详情页样式不在这里改
    3. 后续 Q40 / Q60 只需要扩展系列配置与数据
 ========================================================= */
+import { Breadcrumb } from "@/components/common/breadcrumb";
 
 import { useMemo, useState } from "react";
 
@@ -267,30 +268,16 @@ export default function FittingReplacementHome({
 
       <main className="frp-main">
         <div className="frp-container">
-          <nav className="frp-breadcrumb" aria-label="面包屑导航">
-            {normalizedBreadcrumbs.map((item, index) => {
-              const isLast = index === normalizedBreadcrumbs.length - 1;
 
-              return (
-                <span
-                  className="frp-breadcrumb-item"
-                  key={`${item.label}-${index}`}
-                >
-                  {item.href && !isLast ? (
-                    <a href={item.href}>{item.label}</a>
-                  ) : (
-                    <span>{item.label}</span>
-                  )}
-                </span>
-              );
-            })}
-          </nav>
+          {/* ================================
+    面包屑
+================================ */}
+          <Breadcrumb items={normalizedBreadcrumbs} />
 
           <div className="frp-tab-bar">
             <button
-              className={`frp-tab-button ${
-                activeTab === "replace" ? "active" : ""
-              }`}
+              className={`frp-tab-button ${activeTab === "replace" ? "active" : ""
+                }`}
               type="button"
               onClick={() => {
                 setActiveTab("replace");
@@ -300,9 +287,8 @@ export default function FittingReplacementHome({
             </button>
 
             <button
-              className={`frp-tab-button ${
-                activeTab === "guide" ? "active" : ""
-              }`}
+              className={`frp-tab-button ${activeTab === "guide" ? "active" : ""
+                }`}
               type="button"
               onClick={() => {
                 setActiveTab("guide");
@@ -350,11 +336,10 @@ export default function FittingReplacementHome({
                 {QUICK_SEARCH_ITEMS.map((item) => {
                   return (
                     <button
-                      className={`frp-history-button ${
-                        normalizeKeyword(searchValue) === normalizeKeyword(item)
+                      className={`frp-history-button ${normalizeKeyword(searchValue) === normalizeKeyword(item)
                           ? "active"
                           : ""
-                      }`}
+                        }`}
                       type="button"
                       key={item}
                       onClick={() => {

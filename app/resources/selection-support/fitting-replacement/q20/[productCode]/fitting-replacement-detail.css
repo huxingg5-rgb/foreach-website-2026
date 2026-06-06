@@ -1,15 +1,15 @@
-/* =========================================================
+﻿/* =========================================================
    fitting-replacement-detail.css
-   恒永达官网｜Q20 接头型号替代详情页样式
+   鎭掓案杈惧畼缃戯綔Q20 鎺ュご鍨嬪彿鏇夸唬璇︽儏椤垫牱寮?
 
-   文件路径：
+   鏂囦欢璺緞锛?
    app/resources/selection-support/fitting-replacement/q20/[productCode]/fitting-replacement-detail.css
 
-   说明：
-   1. 只服务 Q20 接头型号替代详情页
-   2. 不写入 app/globals.css
-   3. 公共 Banner、面包屑、右侧清单、打印 PDF 样式复用父级 fitting-replacement.css
-   4. 本文件只写详情页独有布局
+   璇存槑锛?
+   1. 鍙湇鍔?Q20 鎺ュご鍨嬪彿鏇夸唬璇︽儏椤?
+   2. 涓嶅啓鍏?app/globals.css
+   3. 鍏叡 Banner銆侀潰鍖呭睉銆佸彸渚ф竻鍗曘€佹墦鍗?PDF 鏍峰紡澶嶇敤鐖剁骇 fitting-replacement.css
+   4. 鏈枃浠跺彧鍐欒鎯呴〉鐙湁甯冨眬
 ========================================================= */
 
 .fitting-replacement-detail-page {
@@ -24,7 +24,7 @@
 }
 
 /* =========================================================
-   详情主体
+   璇︽儏涓讳綋
 ========================================================= */
 
 .frd-detail-section {
@@ -39,7 +39,7 @@
 }
 
 /* =========================================================
-   左侧产品图
+   宸︿晶浜у搧鍥?
 ========================================================= */
 
 .frd-product-visual {
@@ -57,7 +57,7 @@
 }
 
 /* =========================================================
-   右侧信息区
+   鍙充晶淇℃伅鍖?
 ========================================================= */
 
 .frd-info-area {
@@ -80,7 +80,7 @@
 }
 
 /* =========================================================
-   紧凑参数表
+   绱у噾鍙傛暟琛?
 ========================================================= */
 
 .frd-compact-table {
@@ -137,7 +137,7 @@
 }
 
 /* =========================================================
-   详情页｜加入清单 + 是否需要图纸
+   璇︽儏椤碉綔鍔犲叆娓呭崟 + 鏄惁闇€瑕佸浘绾?
 ========================================================= */
 
 .frd-detail-action-row {
@@ -201,7 +201,7 @@
 }
 
 /* =========================================================
-   PDF 2D 图纸预览区
+   PDF 2D 鍥剧焊棰勮鍖?
 ========================================================= */
 
 .frd-drawing-section {
@@ -229,7 +229,7 @@
 }
 
 /* =========================================================
-   PDF 2D 图纸｜视频式预览入口
+   PDF 2D 鍥剧焊锝滆棰戝紡棰勮鍏ュ彛
 ========================================================= */
 
 .frd-drawing-preview-card {
@@ -295,10 +295,10 @@
 }
 
 /* =========================================================
-   PDF 预览容器
-   说明：
-   1. iframe 立即挂载
-   2. LoadingProgress 覆盖在 PDF 上方
+   PDF 棰勮瀹瑰櫒
+   璇存槑锛?
+   1. iframe 绔嬪嵆鎸傝浇
+   2. LoadingProgress 瑕嗙洊鍦?PDF 涓婃柟
 ========================================================= */
 
 .frd-drawing-viewer {
@@ -331,7 +331,7 @@
 }
 
 /* =========================================================
-   响应式
+   鍝嶅簲寮?
 ========================================================= */
 
 @media (max-width: 1080px) {
@@ -397,14 +397,14 @@
 }
 
 /* =========================================================
-   详情页｜图纸按钮最终样式
-   文件路径：
+   璇︽儏椤碉綔鍥剧焊鎸夐挳鏈€缁堟牱寮?
+   鏂囦欢璺緞锛?
    app/resources/selection-support/fitting-replacement/q20/[productCode]/fitting-replacement-detail.css
 
-   说明：
-   1. 未添加图纸：白底 + 深蓝字
-   2. 已添加图纸：深蓝底 + 荧光字
-   3. 圆角改小，不使用胶囊圆角
+   璇存槑锛?
+   1. 鏈坊鍔犲浘绾革細鐧藉簳 + 娣辫摑瀛?
+   2. 宸叉坊鍔犲浘绾革細娣辫摑搴?+ 鑽у厜瀛?
+   3. 鍦嗚鏀瑰皬锛屼笉浣跨敤鑳跺泭鍦嗚
 ========================================================= */
 
 .frd-drawing-toggle-button {
@@ -438,18 +438,18 @@
 }
 
 /* =========================================================
-   详情页｜操作按钮最终样式覆盖
-   文件路径：
+   璇︽儏椤碉綔鎿嶄綔鎸夐挳鏈€缁堟牱寮忚鐩?
+   鏂囦欢璺緞锛?
    app/resources/selection-support/fitting-replacement/q20/[productCode]/fitting-replacement-detail.css
 
-   说明：
-   1. 这一段必须放在文件最底部
-   2. 覆盖前面旧的 .frd-add-button 深蓝默认样式
-   3. 所有按钮默认白底深蓝字
-   4. 鼠标悬停 / 点击状态为深蓝底 + 荧光色字
+   璇存槑锛?
+   1. 杩欎竴娈靛繀椤绘斁鍦ㄦ枃浠舵渶搴曢儴
+   2. 瑕嗙洊鍓嶉潰鏃х殑 .frd-add-button 娣辫摑榛樿鏍峰紡
+   3. 鎵€鏈夋寜閽粯璁ょ櫧搴曟繁钃濆瓧
+   4. 榧犳爣鎮仠 / 鐐瑰嚮鐘舵€佷负娣辫摑搴?+ 鑽у厜鑹插瓧
 ========================================================= */
 
-/* 加入清单：默认白底深蓝字 */
+/* 鍔犲叆娓呭崟锛氶粯璁ょ櫧搴曟繁钃濆瓧 */
 .frd-add-button {
   min-width: 126px !important;
   height: 42px !important;
@@ -467,7 +467,7 @@
     border-color 0.18s ease !important;
 }
 
-/* 加入清单：鼠标悬停 / 点击时变深蓝底荧光字 */
+/* 鍔犲叆娓呭崟锛氶紶鏍囨偓鍋?/ 鐐瑰嚮鏃跺彉娣辫摑搴曡崸鍏夊瓧 */
 .frd-add-button:hover,
 .frd-add-button:active,
 .frd-add-button:focus-visible {
@@ -476,7 +476,7 @@
   color: #09e9b4 !important;
 }
 
-/* 图纸按钮：未添加时白底深蓝字 */
+/* 鍥剧焊鎸夐挳锛氭湭娣诲姞鏃剁櫧搴曟繁钃濆瓧 */
 .frd-drawing-toggle-button {
   min-width: 126px !important;
   height: 42px !important;
@@ -494,7 +494,7 @@
     border-color 0.18s ease !important;
 }
 
-/* 图纸按钮：鼠标悬停时深蓝底荧光字 */
+/* 鍥剧焊鎸夐挳锛氶紶鏍囨偓鍋滄椂娣辫摑搴曡崸鍏夊瓧 */
 .frd-drawing-toggle-button:hover,
 .frd-drawing-toggle-button:active,
 .frd-drawing-toggle-button:focus-visible {
@@ -503,7 +503,7 @@
   color: #09e9b4 !important;
 }
 
-/* 图纸按钮：已添加状态，保持深蓝底荧光字 */
+/* 鍥剧焊鎸夐挳锛氬凡娣诲姞鐘舵€侊紝淇濇寔娣辫摑搴曡崸鍏夊瓧 */
 .frd-drawing-toggle-button.is-active {
   border-color: #173368 !important;
   background: #173368 !important;
@@ -511,15 +511,15 @@
 }
 
 /* =========================================================
-   详情页｜加入清单按钮已加入状态
-   文件路径：
+   璇︽儏椤碉綔鍔犲叆娓呭崟鎸夐挳宸插姞鍏ョ姸鎬?
+   鏂囦欢璺緞锛?
    app/resources/selection-support/fitting-replacement/q20/[productCode]/fitting-replacement-detail.css
 
-   说明：
-   1. 默认状态：白底深蓝字
-   2. 鼠标悬停：深蓝底荧光字
-   3. 已加入清单：深蓝底荧光字
-   4. 不禁用按钮，客户再次点击仍可增加数量
+   璇存槑锛?
+   1. 榛樿鐘舵€侊細鐧藉簳娣辫摑瀛?
+   2. 榧犳爣鎮仠锛氭繁钃濆簳鑽у厜瀛?
+   3. 宸插姞鍏ユ竻鍗曪細娣辫摑搴曡崸鍏夊瓧
+   4. 涓嶇鐢ㄦ寜閽紝瀹㈡埛鍐嶆鐐瑰嚮浠嶅彲澧炲姞鏁伴噺
 ========================================================= */
 
 .frd-add-button.is-added {
@@ -537,15 +537,15 @@
 }
 
 /* =========================================================
-   详情页｜FAQ 常见问题
-   文件路径：
+   璇︽儏椤碉綔FAQ 甯歌闂
+   鏂囦欢璺緞锛?
    app/resources/selection-support/fitting-replacement/q20/[productCode]/fitting-replacement-detail.css
 
-   说明：
-   1. FAQ 放在 PDF 2D 图纸区域下方
-   2. 左侧为标题说明，右侧为折叠问题
-   3. 默认第一个问题展开
-   4. 使用深蓝 + 荧光色体系，保持官网风格
+   璇存槑锛?
+   1. FAQ 鏀惧湪 PDF 2D 鍥剧焊鍖哄煙涓嬫柟
+   2. 宸︿晶涓烘爣棰樿鏄庯紝鍙充晶涓烘姌鍙犻棶棰?
+   3. 榛樿绗竴涓棶棰樺睍寮€
+   4. 浣跨敤娣辫摑 + 鑽у厜鑹蹭綋绯伙紝淇濇寔瀹樼綉椋庢牸
 ========================================================= */
 
 .frd-faq-section {
@@ -561,7 +561,7 @@
   align-items: start;
 }
 
-/* 左侧标题 */
+/* 宸︿晶鏍囬 */
 .frd-faq-heading {
   position: sticky;
   top: 110px;
@@ -595,18 +595,18 @@
   line-height: 1.8;
 }
 
-/* 右侧列表 */
+/* 鍙充晶鍒楄〃 */
 .frd-faq-list {
   border-top: 1px solid rgba(23, 51, 104, 0.16);
 }
 
-/* 单个问题 */
+/* 鍗曚釜闂 */
 .frd-faq-item {
   border-bottom: 1px solid rgba(23, 51, 104, 0.16);
   background: #ffffff;
 }
 
-/* 问题按钮 */
+/* 闂鎸夐挳 */
 .frd-faq-question {
   width: 100%;
   min-height: 68px;
@@ -655,7 +655,7 @@
   color: #09e9b4;
 }
 
-/* 展开状态 */
+/* 灞曞紑鐘舵€?*/
 .frd-faq-item.is-active {
   background: #ffffff;
 }
@@ -666,7 +666,7 @@
   color: #09e9b4;
 }
 
-/* 答案 */
+/* 绛旀 */
 .frd-faq-answer {
   padding: 0 56px 24px 0;
 }
@@ -679,7 +679,7 @@
 }
 
 /* =========================================================
-   FAQ 响应式
+   FAQ 鍝嶅簲寮?
 ========================================================= */
 
 @media (max-width: 1080px) {
@@ -733,14 +733,14 @@
 }
 
 /* =========================================================
-   详情页｜FAQ 上下排布最终样式
-   文件路径：
+   璇︽儏椤碉綔FAQ 涓婁笅鎺掑竷鏈€缁堟牱寮?
+   鏂囦欢璺緞锛?
    app/resources/selection-support/fitting-replacement/q20/[productCode]/fitting-replacement-detail.css
 
-   说明：
-   1. 覆盖上一版 FAQ 左右两栏布局
-   2. 改为上方标题说明 + 下方问题列表
-   3. 更适合详情页下方阅读，不会显得左右割裂
+   璇存槑锛?
+   1. 瑕嗙洊涓婁竴鐗?FAQ 宸﹀彸涓ゆ爮甯冨眬
+   2. 鏀逛负涓婃柟鏍囬璇存槑 + 涓嬫柟闂鍒楄〃
+   3. 鏇撮€傚悎璇︽儏椤典笅鏂归槄璇伙紝涓嶄細鏄惧緱宸﹀彸鍓茶
 ========================================================= */
 
 .frd-faq-section {
@@ -756,7 +756,7 @@
   align-items: start !important;
 }
 
-/* FAQ 标题区改为顶部横向说明 */
+/* FAQ 鏍囬鍖烘敼涓洪《閮ㄦí鍚戣鏄?*/
 .frd-faq-heading {
   position: static !important;
   max-width: 760px !important;
@@ -790,14 +790,14 @@
   line-height: 1.8 !important;
 }
 
-/* FAQ 列表改为整行宽度 */
+/* FAQ 鍒楄〃鏀逛负鏁磋瀹藉害 */
 .frd-faq-list {
   width: 100% !important;
   max-width: 100% !important;
   border-top: 1px solid rgba(23, 51, 104, 0.16) !important;
 }
 
-/* 问题行保持高级简洁 */
+/* 闂琛屼繚鎸侀珮绾х畝娲?*/
 .frd-faq-question {
   width: 100% !important;
   min-height: 72px !important;
@@ -825,7 +825,7 @@
   line-height: 1.85 !important;
 }
 
-/* 移动端 */
+/* 绉诲姩绔?*/
 @media (max-width: 720px) {
   .frd-faq-section {
     margin-top: 54px !important;
@@ -852,18 +852,18 @@
 }
 
 /* =========================================================
-   详情页｜FAQ 左侧序号修复版
-   文件路径：
+   璇︽儏椤碉綔FAQ 宸︿晶搴忓彿淇鐗?
+   鏂囦欢璺緞锛?
    app/resources/selection-support/fitting-replacement/q20/[productCode]/fitting-replacement-detail.css
 
-   说明：
-   1. 不再使用 CSS counter
-   2. 直接用 nth-child 写死 1–6
-   3. 避免所有序号显示为 0
-   4. 左侧只显示纯数字，不要边框和背景
+   璇存槑锛?
+   1. 涓嶅啀浣跨敤 CSS counter
+   2. 鐩存帴鐢?nth-child 鍐欐 1鈥?
+   3. 閬垮厤鎵€鏈夊簭鍙锋樉绀轰负 0
+   4. 宸︿晶鍙樉绀虹函鏁板瓧锛屼笉瑕佽竟妗嗗拰鑳屾櫙
 ========================================================= */
 
-/* 关闭前面 counter 的影响 */
+/* 鍏抽棴鍓嶉潰 counter 鐨勫奖鍝?*/
 .frd-faq-list {
   counter-reset: none !important;
 }
@@ -872,12 +872,12 @@
   counter-increment: none !important;
 }
 
-/* FAQ 问题行：左侧数字 + 问题 + 右侧加减号 */
+/* FAQ 闂琛岋細宸︿晶鏁板瓧 + 闂 + 鍙充晶鍔犲噺鍙?*/
 .frd-faq-question {
   grid-template-columns: 12px minmax(0, 1fr) 12px !important;
 }
 
-/* 先清空旧的 counter 内容 */
+/* 鍏堟竻绌烘棫鐨?counter 鍐呭 */
 .frd-faq-question::before {
   width: auto !important;
   height: auto !important;
@@ -893,7 +893,7 @@
   letter-spacing: -0.04em !important;
 }
 
-/* 直接写死序号 */
+/* 鐩存帴鍐欐搴忓彿 */
 .frd-faq-item:nth-child(1) .frd-faq-question::before {
   content: "1" !important;
 }
@@ -918,7 +918,7 @@
   content: "6" !important;
 }
 
-/* 当前展开项 / hover 时数字变荧光色 */
+/* 褰撳墠灞曞紑椤?/ hover 鏃舵暟瀛楀彉鑽у厜鑹?*/
 .frd-faq-item.is-active .frd-faq-question::before,
 .frd-faq-question:hover::before {
   border: 0 !important;
@@ -926,7 +926,7 @@
   color: #09e9b4 !important;
 }
 
-/* 移动端 */
+/* 绉诲姩绔?*/
 @media (max-width: 720px) {
   .frd-faq-question {
     grid-template-columns: 34px minmax(0, 1fr) 34px !important;
@@ -938,14 +938,14 @@
 }
 
 /* =========================================================
-   详情页｜Banner 高度优化
-   文件路径：
+   璇︽儏椤碉綔Banner 楂樺害浼樺寲
+   鏂囦欢璺緞锛?
    app/resources/selection-support/fitting-replacement/q20/[productCode]/fitting-replacement-detail.css
 
-   说明：
-   1. 只调整 Q20 接头型号替代详情页 Banner
-   2. 不影响产品替换表首页 Banner
-   3. Banner 高一点后，页面进入感更强
+   璇存槑锛?
+   1. 鍙皟鏁?Q20 鎺ュご鍨嬪彿鏇夸唬璇︽儏椤?Banner
+   2. 涓嶅奖鍝嶄骇鍝佹浛鎹㈣〃棣栭〉 Banner
+   3. Banner 楂樹竴鐐瑰悗锛岄〉闈㈣繘鍏ユ劅鏇村己
 ========================================================= */
 
 .fitting-replacement-detail-page .frd-hero {
@@ -960,7 +960,7 @@
   align-items: center !important;
 }
 
-/* 移动端适当降低，避免首屏太长 */
+/* 绉诲姩绔€傚綋闄嶄綆锛岄伩鍏嶉灞忓お闀?*/
 @media (max-width: 720px) {
   .fitting-replacement-detail-page .frd-hero {
     min-height: 300px !important;
@@ -972,21 +972,21 @@
 }
 
 /* =========================================================
-   详情页｜去除 Banner 后的顶部间距
-   文件路径：
+   璇︽儏椤碉綔鍘婚櫎 Banner 鍚庣殑椤堕儴闂磋窛
+   鏂囦欢璺緞锛?
    app/resources/selection-support/fitting-replacement/q20/[productCode]/fitting-replacement-detail.css
 
-   说明：
-   1. 单个产品详情页不再显示 Banner
-   2. 页面直接从面包屑和产品详情开始
-   3. 这里给顶部留出 Header 高度，避免内容被导航遮挡
+   璇存槑锛?
+   1. 鍗曚釜浜у搧璇︽儏椤典笉鍐嶆樉绀?Banner
+   2. 椤甸潰鐩存帴浠庨潰鍖呭睉鍜屼骇鍝佽鎯呭紑濮?
+   3. 杩欓噷缁欓《閮ㄧ暀鍑?Header 楂樺害锛岄伩鍏嶅唴瀹硅瀵艰埅閬尅
 ========================================================= */
 
 .fitting-replacement-detail-page .frd-main {
   padding-top: 112px !important;
 }
 
-/* 移动端 Header 较低，顶部间距适当减少 */
+/* 绉诲姩绔?Header 杈冧綆锛岄《閮ㄩ棿璺濋€傚綋鍑忓皯 */
 @media (max-width: 720px) {
   .fitting-replacement-detail-page .frd-main {
     padding-top: 88px !important;

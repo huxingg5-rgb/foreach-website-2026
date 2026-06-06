@@ -27,6 +27,7 @@
 
 import { useMemo } from "react";
 
+import { Breadcrumb } from "@/components/common/breadcrumb";
 import { useSelectionCart } from "@/components/selection-cart/SelectionCartProvider";
 
 import type { FittingModelRule } from "@/data/resources/fitting-replacement/fitting-replacement.types";
@@ -111,11 +112,11 @@ export default function FittingReplacementDetail({
   const compactRows: Array<
     [FittingModelRule["fieldKey"], FittingModelRule["fieldKey"] | null]
   > = [
-    ["tubeOrThread", "gender"],
-    ["panelMount", "valved"],
-    ["shape", "housingMaterial"],
-    ["sealingRingMaterial", null],
-  ];
+      ["tubeOrThread", "gender"],
+      ["panelMount", "valved"],
+      ["shape", "housingMaterial"],
+      ["sealingRingMaterial", null],
+    ];
 
   /* =========================================================
      生成当前产品写入清单的数据
@@ -159,24 +160,8 @@ export default function FittingReplacementDetail({
     <div className="fitting-replacement-detail-page">
       <main className="frd-main">
         <div className="frp-container">
-          <nav className="frp-breadcrumb" aria-label="面包屑导航">
-            {normalizedBreadcrumbs.map((item, index) => {
-              const isLast = index === normalizedBreadcrumbs.length - 1;
 
-              return (
-                <span
-                  className="frp-breadcrumb-item"
-                  key={`${item.label}-${index}`}
-                >
-                  {item.href && !isLast ? (
-                    <a href={item.href}>{item.label}</a>
-                  ) : (
-                    <span>{item.label}</span>
-                  )}
-                </span>
-              );
-            })}
-          </nav>
+          <Breadcrumb items={data.breadcrumbs} />
 
           <section className="frd-detail-section">
             <div className="frd-detail-layout">

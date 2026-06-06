@@ -1,0 +1,48 @@
+/* =========================================================
+   Breadcrumb.module.css
+   恒永达官网｜公共面包屑组件样式
+
+   文件路径：
+   components/common/breadcrumb/Breadcrumb.module.css
+
+   说明：
+   1. 只服务 Breadcrumb.tsx
+   2. 不写入 app/globals.css
+   3. 样式保持轻量，适合资源中心、产品中心、关于我们等页面复用
+========================================================= */
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 22px;
+  color: #8b96a8;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.item:not(:last-child)::after {
+  content: "/";
+  color: rgba(23, 51, 104, 0.28);
+  font-weight: 700;
+}
+
+.item a {
+  color: #5e6b80;
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+
+.item a:hover {
+  color: #173368;
+}
+
+.item span {
+  color: #173368;
+} 
