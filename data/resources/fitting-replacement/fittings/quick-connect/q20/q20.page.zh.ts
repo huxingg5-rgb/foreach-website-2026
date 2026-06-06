@@ -75,13 +75,13 @@
    5. 后期英文、西语等语言直接新增对应文件即可
 ========================================================= */
 
-export const fittingReplacementPageZh = {
+export const fittingReplacementQuickConnectQ20PageZh = {
   /* =====================================================
      Banner
   ===================================================== */
   banner: {
     eyebrow: "",
-    title: "接头替代查询",
+    title: "接头替代查询", 
     description:
       "输入竞品编码、商品编码或恒永达型号，快速查找对应产品。",
   },

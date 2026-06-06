@@ -25,7 +25,7 @@
       fitting-replacement.detail.ru.ts
 ========================================================= */
 
-export const fittingReplacementDetailZh = {
+export const fittingReplacementQuickConnectQ20DetailZh = {
   /* =====================================================
      面包屑基础项
 

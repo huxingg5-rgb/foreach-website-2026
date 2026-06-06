@@ -1,6 +1,6 @@
 /* =========================================================
    convert-q20-fitting-replacement.ts
-   恒永达官网｜Q20 接头型号替代资料 Excel 转换脚本
+   恒永达官网｜快插接头 Q20 型号替代资料 Excel 转换脚本
 
    文件路径：
    scripts/resources/convert-q20-fitting-replacement.ts
@@ -9,13 +9,19 @@
    1. 读取市场部维护的 Excel 原始资料
    2. 读取 Sheet：型号解析规则
    3. 读取 Sheet：产品数据模板
-   4. 只筛选 Q20 数据，Q40 / Q60 暂时保留在 Excel，不参与本次生成
+   4. 只筛选 Q20 数据
    5. 自动生成：
-      data/resources/fitting-replacement/fitting-replacement.zh.ts
+      data/resources/fitting-replacement/fittings/quick-connect/q20/q20.zh.ts
+
+   当前数据层级：
+   fitting-replacement
+   └─ fittings
+      └─ quick-connect
+         └─ q20
 
    说明：
    1. Excel 是人维护的数据源
-   2. fitting-replacement.zh.ts 是 Next.js 页面读取的数据文件
+   2. q20.zh.ts 是 Next.js 页面读取的 Q20 产品数据文件
    3. 后期做后台时，这个脚本逻辑可以迁移到后台导入功能中
 ========================================================= */
 
@@ -25,12 +31,10 @@ import * as XLSX from "xlsx";
 
 /* =========================================================
    项目路径配置
-   process.cwd() 表示当前执行命令所在的项目根目录
 
-   你现在是在：
-   F:\WebsiteProjects\foreach-website-2026
+   process.cwd() 表示当前执行命令所在的项目根目录。
 
-   执行：
+   执行命令：
    npx tsx scripts/resources/convert-q20-fitting-replacement.ts
 ========================================================= */
 const PROJECT_ROOT = process.cwd();
@@ -50,7 +54,10 @@ const OUTPUT_TS_PATH = path.join(
   "data",
   "resources",
   "fitting-replacement",
-  "fitting-replacement.zh.ts"
+  "fittings",
+  "quick-connect",
+  "q20",
+  "q20.zh.ts"
 );
 
 /* Excel Sheet 名称，必须和 Excel 里保持一致 */
@@ -298,11 +305,16 @@ function buildOutputFileContent(params: {
   const { products, modelRules } = params;
 
   return `/* =========================================================
-   fitting-replacement.zh.ts
-   恒永达官网｜接头型号替代查询中文数据
+   q20.zh.ts
+   恒永达官网｜接头替代查询｜快插接头 Q20 中文数据
 
    文件路径：
-   data/resources/fitting-replacement/fitting-replacement.zh.ts
+   data/resources/fitting-replacement/fittings/quick-connect/q20/q20.zh.ts
+
+   作用：
+   1. 存放快插接头 Q20 的产品数据
+   2. 存放 Q20 型号解析规则
+   3. 供接头替代查询首页、详情页、选型指引读取
 
    注意：
    1. 此文件由 scripts/resources/convert-q20-fitting-replacement.ts 自动生成
@@ -313,12 +325,12 @@ function buildOutputFileContent(params: {
       npx tsx scripts/resources/convert-q20-fitting-replacement.ts
 ========================================================= */
 
-import type { FittingReplacementPageData } from "./fitting-replacement.types";
+import type { FittingReplacementPageData } from "@/data/resources/fitting-replacement/fitting-replacement.types";
 
-export const fittingReplacementZhData: FittingReplacementPageData = {
+export const fittingReplacementQuickConnectQ20ZhData: FittingReplacementPageData = {
   banner: {
     eyebrow: "选型支持",
-    title: "接头型号替代查询",
+    title: "接头替代查询",
     description:
       "输入竞品编码、商品编码或恒永达型号，快速查找 Q20 快插接头对应产品。",
   },
@@ -333,11 +345,8 @@ export const fittingReplacementZhData: FittingReplacementPageData = {
       href: "/resources",
     },
     {
-      label: "选型支持",
-      href: "/resources/selection-support",
-    },
-    {
-      label: "接头型号替代查询",
+      label: "接头替代查询",
+      href: "/resources/selection-support/fitting-replacement",
     },
   ],
 
