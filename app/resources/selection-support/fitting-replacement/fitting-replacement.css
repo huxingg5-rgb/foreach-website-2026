@@ -1,16 +1,20 @@
 /* =========================================================
    fitting-replacement.css
-   恒永达官网｜接头型号替代查询页面专用样式
+   恒永达官网｜接头替代查询页面专用样式
 
    文件路径：
    app/resources/selection-support/fitting-replacement/fitting-replacement.css
 
    说明：
-   1. 只服务 /resources/selection-support/fitting-replacement 页面
-   2. 不写入 app/globals.css
-   3. 风格延续官网：品牌深蓝 + 荧光青 + 白底 + 细线
-   4. 避免大圆角、大阴影、电商风
-   5. 右侧选型清单已经抽成全局组件，所以这里不再写旧清单抽屉样式
+   1. 服务接头替代查询首页：
+      /resources/selection-support/fitting-replacement
+   2. 服务多语言接头替代查询首页：
+      /en/resources/selection-support/fitting-replacement 等
+   3. 部分 2D 图纸预览样式会被详情页复用
+   4. 不写入 app/globals.css
+   5. 产品卡片样式已迁移到：
+      components/common/product-card/ProductBasicCard.module.css
+   6. 当前文件只保留页面布局、搜索、分页、2D 图纸预览、选型指引相关样式
 ========================================================= */
 
 /* =========================================================
@@ -315,178 +319,16 @@
 
 /* =========================================================
    产品卡片网格
+
+   说明：
+   1. 卡片本身样式来自 ProductBasicCard.module.css
+   2. 这里仅控制页面中的卡片排列
 ========================================================= */
 
 .frp-card-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 16px;
-}
-
-.frp-product-card {
-  position: relative;
-  overflow: hidden;
-  min-height: 470px;
-  padding: 18px;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid rgba(23, 51, 104, 0.14);
-  background: #ffffff;
-  transition:
-    border-color 0.22s ease,
-    transform 0.22s ease;
-}
-
-.frp-product-card::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 3px;
-  background: #09e9b4;
-  transform: scaleX(0);
-  transform-origin: left center;
-  transition: transform 0.22s ease;
-}
-
-.frp-product-card:hover {
-  border-color: rgba(9, 233, 180, 0.95);
-  transform: translateY(-6px);
-  background: #ffffff;
-}
-
-.frp-product-card:hover::before {
-  transform: scaleX(1);
-}
-
-/* =========================================================
-   产品图片
-========================================================= */
-
-.frp-product-image {
-  height: 240px;
-  display: grid;
-  place-items: center;
-  margin-bottom: 18px;
-  overflow: visible;
-}
-
-.frp-product-image img {
-  width: auto;
-  max-width: 94%;
-  max-height: 230px;
-  object-fit: contain;
-  transform: translateY(0) scale(1);
-  transition:
-    transform 0.24s ease,
-    filter 0.24s ease;
-}
-
-.frp-product-card:hover .frp-product-image img {
-  transform: translateY(-4px) scale(1.06);
-  filter: saturate(1.04) contrast(1.03);
-}
-
-/* =========================================================
-   产品文字信息
-========================================================= */
-
-.frp-product-card h3 {
-  margin: 0 0 10px;
-  color: #173368;
-  font-size: 17px;
-  line-height: 1.35;
-  font-weight: 900;
-  transition: color 0.18s ease;
-}
-
-.frp-product-card:hover h3 {
-  color: #173368;
-}
-
-.frp-card-models {
-  display: grid;
-  gap: 5px;
-  margin-bottom: 14px;
-  font-size: 13px;
-  line-height: 1.5;
-}
-
-.frp-card-models span {
-  color: #5e6b80;
-  font-weight: 400;
-}
-
-.frp-card-models strong {
-  color: #173368;
-  font-weight: 900;
-}
-
-/* =========================================================
-   产品卡片按钮
-   重点：
-   1. 这里删除了旧版 button::after 荧光遮罩
-   2. 旧版遮罩会叠在深蓝背景上，导致品牌深蓝偏青
-   3. 默认：白底 + 品牌深蓝字
-   4. hover：品牌深蓝底 + 荧光字
-   5. 已加入清单：品牌深蓝底 + 荧光字
-========================================================= */
-
-.frp-card-actions {
-  margin-top: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-}
-
-.frp-card-actions button {
-  position: relative;
-  height: 36px;
-  border: 1px solid rgba(23, 51, 104, 0.24);
-  border-radius: 6px;
-  background: #ffffff;
-  color: #173368;
-  font-size: 13px;
-  font-weight: 900;
-  cursor: pointer;
-  box-shadow: none;
-  transition:
-    transform 0.18s ease,
-    background 0.18s ease,
-    color 0.18s ease,
-    border-color 0.18s ease;
-}
-
-/* 禁用旧的荧光遮罩，避免品牌深蓝被叠色 */
-.frp-card-actions button::after {
-  display: none;
-  content: none;
-}
-
-.frp-card-actions button:hover,
-.frp-card-actions button:active,
-.frp-card-actions button:focus-visible {
-  border-color: #173368;
-  background: #173368;
-  color: #09e9b4;
-  transform: translateY(-1px);
-}
-
-/* 已加入清单状态 */
-.frp-card-actions button.is-added {
-  border-color: #173368;
-  background: #173368;
-  color: #09e9b4;
-}
-
-/* 已加入清单 hover 保持品牌深蓝 */
-.frp-card-actions button.is-added:hover,
-.frp-card-actions button.is-added:active,
-.frp-card-actions button.is-added:focus-visible {
-  border-color: #173368;
-  background: #173368;
-  color: #09e9b4;
 }
 
 /* =========================================================
@@ -558,9 +400,11 @@
 }
 
 /* =========================================================
-   接头选型指引占位
+   接头选型指引外层
+
    说明：
-   当前只是占位，后续再做真正的引导型选型助手。
+   1. 当前真正的选型内容由 FittingReplacementGuide.tsx 渲染
+   2. 这里仅保留外层基础间距
 ========================================================= */
 
 .frp-guide-panel {
@@ -568,21 +412,8 @@
   background: #ffffff;
 }
 
-.frp-guide-box {
-  height: 520px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-top: 1px solid rgba(23, 51, 104, 0.14);
-  border-bottom: 1px solid rgba(23, 51, 104, 0.14);
-  background: #f6f8fb;
-  color: #173368;
-  font-size: 28px;
-  font-weight: 900;
-}
-
 /* =========================================================
-   响应式
+   首页响应式
 ========================================================= */
 
 @media (max-width: 1080px) {
@@ -634,19 +465,16 @@
     align-items: flex-start;
     flex-direction: column;
   }
-
-  .frp-card-actions {
-    grid-template-columns: 1fr;
-  }
-} 
+}
 
 /* =========================================================
-   详情页｜2D 图纸预览强制修正版
+   详情页｜2D 图纸预览样式
+
    说明：
-   1. iframe 页面进入后立即加载
-   2. 默认隐藏 iframe，只显示“点击预览图纸”
-   3. 点击后 .is-visible 才显示 iframe
-   4. 这段放在当前页面已加载 CSS 的最底部，用于覆盖旧样式
+   1. 服务 FittingReplacementDrawingPreview.tsx
+   2. 默认显示“点击预览图纸”封面
+   3. 点击后显示 iframe
+   4. iframe 逻辑由组件控制
 ========================================================= */
 
 .frd-drawing-section {
@@ -684,36 +512,19 @@
   overflow: hidden;
 }
 
-/* 
-   关键：
-   默认状态必须隐藏 iframe。
-   注意不能 display:none，否则 PDF 可能不会后台加载。
-*/
 .frd-drawing-object {
-  position: absolute !important;
-  inset: 0 !important;
-  width: 100% !important;
-  height: 720px !important;
-  border: 0 !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-  background: #ffffff !important;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 720px;
+  border: 0;
+  background: #ffffff;
 }
 
-/* 
-   点击预览后才显示 PDF。
-   只有带 is-visible 时才显示。
-*/
 .frd-drawing-object.is-visible {
-  position: relative !important;
-  display: block !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  pointer-events: auto !important;
+  display: block;
 }
 
-/* 默认预览封面 */
 .frd-drawing-preview-card {
   position: absolute;
   inset: 0;
@@ -786,6 +597,27 @@
   transform: scale(1.05);
 }
 
+.frd-drawing-fallback {
+  width: 100%;
+  padding: 12px 18px;
+  border-top: 1px solid rgba(23, 51, 104, 0.12);
+  background: #ffffff;
+  color: #5e6b80;
+  font-size: 14px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.frd-drawing-fallback a {
+  color: #173368;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.frd-drawing-fallback a:hover {
+  color: #09e9b4;
+}
+
 @media (max-width: 760px) {
   .frd-drawing-section {
     margin-top: 48px;
@@ -802,19 +634,17 @@
   }
 
   .frd-drawing-object {
-    height: 560px !important;
+    height: 560px;
   }
 }
 
 /* =========================================================
    接头选型指引｜模块样式
-   文件路径：
-   app/resources/selection-support/fitting-replacement/fitting-replacement.css
 
    说明：
    1. 只服务接头替代查询首页里的“接头选型指引”Tab
    2. 类名前缀使用 frg-
-   3. 不使用 frd-，避免影响详情页
+   3. 不使用 frd-，避免影响详情页主体样式
    4. 产品结果卡片继续复用 ProductBasicCard 公共组件
 ========================================================= */
 
