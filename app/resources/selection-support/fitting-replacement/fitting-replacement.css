@@ -597,26 +597,7 @@
   transform: scale(1.05);
 }
 
-.frd-drawing-fallback {
-  width: 100%;
-  padding: 12px 18px;
-  border-top: 1px solid rgba(23, 51, 104, 0.12);
-  background: #ffffff;
-  color: #5e6b80;
-  font-size: 14px;
-  line-height: 1.7;
-  text-align: center;
-}
 
-.frd-drawing-fallback a {
-  color: #173368;
-  font-weight: 900;
-  text-decoration: none;
-}
-
-.frd-drawing-fallback a:hover {
-  color: #09e9b4;
-}
 
 @media (max-width: 760px) {
   .frd-drawing-section {
