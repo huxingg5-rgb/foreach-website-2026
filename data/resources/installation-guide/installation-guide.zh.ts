@@ -100,7 +100,7 @@ export const installationGuideZhData: InstallationGuidePageData = {
   guides: [
     {
       id: "hard-tube-fitting-guide",
-      title: "硬管接头安装教程",
+      title: "硬管接头安装教程超级长的标题测试这个有多大硬管接头安装教程超级长的标题测试这个有多大",
       category: "fittings",
       series: "fittings",
       tags: ["接头", "管路", "密封"],

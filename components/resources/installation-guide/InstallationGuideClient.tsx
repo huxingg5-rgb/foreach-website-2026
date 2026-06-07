@@ -10,21 +10,20 @@
    作用：
    1. 渲染安装教程列表页主体
    2. 处理搜索、筛选、折叠展开
-   3. 删除原来的弹窗预览逻辑
+   3. 卡片展示交给 InstallationGuideCard 组件
    4. 点击教程卡片后，跳转到独立详情页
-   5. 详情页当前先做空白页，后续再补视频、图文步骤、注意事项等内容
+   5. 当前详情页先是空白页，后续再补视频、图文步骤、注意事项等内容
 ========================================================= */
 
-import Link from "next/link";
 import { useMemo, useState } from "react";
-import type { CSSProperties } from "react";
 
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
 import ResourceSearchBar from "@/components/resources/ResourceSearchBar";
 import ResourceSupportCta from "@/components/resources/ResourceSupportCta";
+import InstallationGuideCard from "@/components/resources/installation-guide/InstallationGuideCard";
 
 import type {
-  InstallationGuideCard,
+  InstallationGuideCard as InstallationGuideCardData,
   InstallationGuideFilterType,
   InstallationGuidePageData,
   InstallationGuideTreeChild,
@@ -62,6 +61,9 @@ export default function InstallationGuideClient({
 
   /* =========================================================
      面包屑数据
+     说明：
+     1. 先在这里生成
+     2. 后续可以进一步移动到 installation-guide.zh.ts / intl.ts
   ========================================================= */
   const breadcrumbItems = [
     {
@@ -78,16 +80,27 @@ export default function InstallationGuideClient({
   ];
 
   /* =========================================================
+     卡片局部文案
+     说明：
+     1. 这里先做中英文基础区分
+     2. 下一步多语言规范化时，再统一移动到 data 层
+  ========================================================= */
+  const cardLabels = {
+    productCategory: isChinesePage ? "产品分类：" : "Product category: ",
+    tags: isChinesePage ? "标签：" : "Tags: ",
+  };
+
+  /* =========================================================
      教程筛选
      说明：
      1. 根据左侧分类筛选
      2. 根据搜索关键词筛选
-     3. 当前为前端静态筛选，后期可接后端搜索
+     3. 当前为前端静态筛选，后期可接后端搜索 / CMS
   ========================================================= */
   const filteredGuides = useMemo(() => {
     const nextKeyword = keyword.trim().toLowerCase();
 
-    return pageData.guides.filter((guide: InstallationGuideCard) => {
+    return pageData.guides.filter((guide: InstallationGuideCardData) => {
       let matchFilter = true;
 
       if (activeFilter.type === "category") {
@@ -117,6 +130,8 @@ export default function InstallationGuideClient({
 
   /* =========================================================
      获取产品分类名称
+     说明：
+     根据 guide.category 的 id，在左侧 sidebar tree 中找到显示名称。
   ========================================================= */
   function getCategoryName(categoryId: string) {
     return (
@@ -259,53 +274,31 @@ export default function InstallationGuideClient({
         <section className="installation-guide-content">
           {filteredGuides.length > 0 ? (
             <div className="installation-guide-card-grid">
-              {filteredGuides.map((guide: InstallationGuideCard) => {
-                const imageStyle: CSSProperties | undefined = guide.thumbnail
-                  ? {
-                      backgroundImage: `url(${guide.thumbnail})`,
-                    }
-                  : undefined;
-
+              {filteredGuides.map((guide: InstallationGuideCardData) => {
                 const detailHref = `${localePrefix}/resources/installation-guide/${guide.id}`;
 
                 return (
-                  <Link
+                  <InstallationGuideCard
                     key={guide.id}
-                    className="installation-guide-card"
+                    guide={guide}
                     href={detailHref}
-                  >
-                    <div
-                      className="installation-guide-card-image"
-                      style={imageStyle}
-                    />
-
-                    <div className="installation-guide-card-body">
-                      <h3>{guide.title}</h3>
-
-                      <div className="installation-guide-card-info">
-                        <div>
-                          <strong>产品分类：</strong>
-                          <b>{getCategoryName(guide.category)}</b>
-                        </div>
-
-                        <div>
-                          <strong>标签：</strong>
-                          <span className="installation-guide-tags">
-                            {guide.tags.map((tag: string) => (
-                              <span key={tag}>{tag}</span>
-                            ))}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
+                    categoryName={getCategoryName(guide.category)}
+                    productCategoryLabel={cardLabels.productCategory}
+                    tagsLabel={cardLabels.tags}
+                  />
                 );
               })}
             </div>
           ) : (
             <div className="installation-guide-empty">
-              <strong>暂无匹配教程</strong>
-              <span>可以更换关键词，或选择其他产品系列查看。</span>
+              <strong>
+                {isChinesePage ? "暂无匹配教程" : "No matching guides found"}
+              </strong>
+              <span>
+                {isChinesePage
+                  ? "可以更换关键词，或选择其他产品系列查看。"
+                  : "Try another keyword or select a different product series."}
+              </span>
             </div>
           )}
         </section>
@@ -313,12 +306,19 @@ export default function InstallationGuideClient({
 
       {/* =====================================================
           全屏宽度底部支持 Banner
+          说明：
+          1. 中文页面进入 /contact
+          2. 外语页面进入对应语言 contact 页面
       ===================================================== */}
       <ResourceSupportCta
-        title="没有找到对应教程？"
-        description="如果您不确定产品安装方式、调试步骤或参数设置方法，可以提交产品型号、应用场景或问题说明，FOREACH 技术团队将为您提供支持。"
-        buttonText="提交教程需求"
-        href="/contact"
+        title={isChinesePage ? "没有找到对应教程？" : "Can’t find the guide you need?"}
+        description={
+          isChinesePage
+            ? "如果您不确定产品安装方式、调试步骤或参数设置方法，可以提交产品型号、应用场景或问题说明，FOREACH 技术团队将为您提供支持。"
+            : "If you are not sure about installation, setup, calibration or parameter settings, submit the product model and application details. The FOREACH technical team will help you."
+        }
+        buttonText={isChinesePage ? "提交教程需求" : "Submit a guide request"}
+        href={`${localePrefix}/contact`}
       />
     </main>
   );
