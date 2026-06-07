@@ -1,0 +1,722 @@
+﻿/* =========================================================
+   installation-guide.css
+   恒永达官网｜安装教程页面专用样式
+
+   文件路径：
+   app/resources/installation-guide/installation-guide.css
+
+   说明：
+   1. 只服务安装教程页面
+   2. 不写入 app/globals.css
+   3. 搜索栏复用接头替代查询页面的 frp-* 样式
+   4. 面包屑使用 components/common/SiteBreadcrumb 组件样式
+   5. 本文件只负责：
+      - 安装教程 Banner
+      - 主体布局
+      - 左侧产品系列筛选
+      - 教程卡片
+      - 教程弹窗
+      - 移动端适配
+   6. Banner 高度统一 450px
+========================================================= */
+
+/* =========================================================
+   1. 页面基础变量
+
+   注意：
+   1. Banner 在 page.tsx 里位于 main.installation-guide-page 外面
+   2. 所以变量必须同时放在 :root 和安装教程相关选择器里
+   3. 避免 Banner 读不到变量导致内容区宽度失效
+========================================================= */
+
+:root {
+  --installation-guide-blue: #173368;
+  --installation-guide-cyan: #09e9b4;
+  --installation-guide-text: #14233d;
+  --installation-guide-muted: #637083;
+  --installation-guide-line: #dfe6ef;
+  --installation-guide-soft-line: #edf1f5;
+  --installation-guide-bg-soft: #f6f8fb;
+  --installation-guide-content-width: 1600px;
+}
+
+.installation-guide-page {
+  min-height: 100vh;
+  background: #ffffff;
+  color: var(--installation-guide-text);
+}
+
+/* =========================================================
+   2. 顶部 Banner
+
+   说明：
+   1. 使用安装教程专用 webp 图
+   2. 左侧用深蓝遮罩保证文字清晰
+   3. 内容区固定对齐 1600px 主体宽度
+   4. 移除旧版几何图形和网格遮罩，避免画面显得假
+========================================================= */
+
+.installation-guide-hero {
+  position: relative;
+  height: 450px;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(10, 34, 78, 0.86) 0%,
+      rgba(10, 34, 78, 0.72) 34%,
+      rgba(10, 34, 78, 0.42) 58%,
+      rgba(10, 34, 78, 0.18) 100%
+    ),
+    url("/images/resources/installation-guide/banner/resources-installation-guide-banner-1920x1080-v001.webp");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.installation-guide-hero-inner {
+  position: relative;
+  z-index: 1;
+  width: min(1600px, calc(100% - 80px));
+  height: 450px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.installation-guide-hero-content {
+  width: min(760px, 60%);
+  color: #ffffff;
+}
+
+.installation-guide-hero h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(38px, 4vw, 62px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.08;
+}
+
+.installation-guide-hero p {
+  width: min(720px, 100%);
+  margin: 22px 0 0;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 18px;
+  line-height: 1.85;
+}
+
+/* =========================================================
+   3. 搜索栏区域
+
+   说明：
+   1. ResourceSearchBar 默认使用 frp-* class
+   2. 真实搜索栏样式来自：
+      app/resources/selection-support/fitting-replacement/fitting-replacement.css
+   3. 这里只保证安装教程页面里的搜索栏背景和接头替代查询一致
+========================================================= */
+
+.installation-guide-page .frp-search-panel {
+  background: #f6f8fb;
+  border-top: 1px solid rgba(23, 51, 104, 0.14);
+  border-bottom: 1px solid rgba(23, 51, 104, 0.14);
+}
+
+/* =========================================================
+   4. 主体布局
+========================================================= */
+
+.installation-guide-main {
+  width: min(1600px, calc(100% - 80px));
+  margin: 0 auto;
+  padding: 64px 0 96px;
+  display: grid;
+  grid-template-columns: 360px minmax(0, 1fr);
+  gap: 52px;
+  align-items: start;
+  background: #ffffff;
+}
+
+/* =========================================================
+   5. 左侧产品系列筛选
+========================================================= */
+
+.installation-guide-sidebar {
+  position: sticky;
+  top: 104px;
+  width: 100%;
+  min-height: 620px;
+  padding: 26px 24px 28px;
+  border: 1px solid var(--installation-guide-line);
+  border-radius: 0;
+  background: #ffffff;
+}
+
+.installation-guide-sidebar-head {
+  padding: 0 0 22px;
+  margin: 0 0 4px;
+  border-bottom: 1px solid #e7edf4;
+}
+
+.installation-guide-sidebar-head strong {
+  display: block;
+  color: var(--installation-guide-blue);
+  font-size: 30px;
+  line-height: 1.08;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+}
+
+.installation-guide-tree-group {
+  padding: 7px 0;
+  border-bottom: 1px solid var(--installation-guide-soft-line);
+}
+
+.installation-guide-tree-group:last-child {
+  border-bottom: 0;
+}
+
+.installation-guide-tree-parent {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 32px;
+  gap: 12px;
+  align-items: center;
+  color: var(--installation-guide-blue);
+  background: #ffffff;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background 0.18s ease,
+    color 0.18s ease;
+}
+
+.installation-guide-tree-parent:hover {
+  background: var(--installation-guide-bg-soft);
+}
+
+.installation-guide-tree-parent.is-active {
+  background: var(--installation-guide-blue);
+  color: var(--installation-guide-cyan);
+}
+
+.installation-guide-tree-parent strong {
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.installation-guide-tree-parent.is-active strong {
+  font-weight: 600;
+}
+
+.installation-guide-tree-parent span {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  justify-self: end;
+}
+
+.installation-guide-tree-parent span::before,
+.installation-guide-tree-parent span::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: currentColor;
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+}
+
+.installation-guide-tree-parent span::before {
+  width: 16px;
+  height: 2px;
+}
+
+.installation-guide-tree-parent span::after {
+  width: 2px;
+  height: 16px;
+}
+
+.installation-guide-tree-group.is-open
+  > .installation-guide-tree-parent
+  span::after {
+  display: none;
+}
+
+.installation-guide-tree-parent.no-children span::before,
+.installation-guide-tree-parent.no-children span::after {
+  display: none;
+}
+
+.installation-guide-tree-children {
+  overflow: hidden;
+  max-height: 0;
+  padding: 0 0 0 18px;
+  transition:
+    max-height 0.24s ease,
+    padding 0.24s ease;
+}
+
+.installation-guide-tree-group.is-open .installation-guide-tree-children {
+  max-height: 260px;
+  padding: 8px 0 2px 18px;
+}
+
+.installation-guide-tree-child {
+  width: 100%;
+  height: 34px;
+  padding: 0 12px 0 16px;
+  border: 0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  color: #707b8d;
+  background: #ffffff;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background 0.18s ease,
+    color 0.18s ease;
+}
+
+.installation-guide-tree-child + .installation-guide-tree-child {
+  margin-top: 4px;
+}
+
+.installation-guide-tree-child:hover {
+  background: var(--installation-guide-bg-soft);
+  color: var(--installation-guide-blue);
+}
+
+.installation-guide-tree-child.is-active {
+  background: var(--installation-guide-blue);
+  color: var(--installation-guide-cyan);
+}
+
+/* =========================================================
+   6. 右侧教程卡片
+========================================================= */
+
+.installation-guide-content {
+  min-width: 0;
+  background: #ffffff;
+}
+
+.installation-guide-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.installation-guide-card {
+  position: relative;
+  border: 1px solid var(--installation-guide-line);
+  border-radius: 0;
+  background: #ffffff;
+  cursor: pointer;
+  overflow: hidden;
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.installation-guide-card::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  right: -1px;
+  top: -1px;
+  height: 4px;
+  background: transparent;
+  transition: background 0.22s ease;
+  z-index: 3;
+}
+
+.installation-guide-card:hover,
+.installation-guide-card.is-active {
+  transform: translateY(-4px);
+  border-color: var(--installation-guide-cyan);
+  box-shadow: none;
+}
+
+.installation-guide-card:hover::before,
+.installation-guide-card.is-active::before {
+  background: var(--installation-guide-cyan);
+}
+
+/* 卡片主图：保留 16:9，占位简洁；后期 thumbnail 可直接覆盖 */
+.installation-guide-card-image {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(23, 51, 104, 0.035) 0%,
+      rgba(23, 51, 104, 0.015) 44%,
+      rgba(9, 233, 180, 0.06) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(23, 51, 104, 0.055) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      0deg,
+      rgba(23, 51, 104, 0.045) 1px,
+      transparent 1px
+    ),
+    #f8fafc;
+  background-size:
+    auto,
+    36px 36px,
+    36px 36px,
+    auto;
+  background-position: center;
+  border-bottom: 1px solid var(--installation-guide-soft-line);
+  overflow: hidden;
+}
+
+.installation-guide-card-image::before,
+.installation-guide-card-image::after {
+  content: none;
+}
+
+.installation-guide-card:hover .installation-guide-card-image,
+.installation-guide-card.is-active .installation-guide-card-image {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(23, 51, 104, 0.055) 0%,
+      rgba(23, 51, 104, 0.02) 44%,
+      rgba(9, 233, 180, 0.11) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(23, 51, 104, 0.06) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      0deg,
+      rgba(23, 51, 104, 0.05) 1px,
+      transparent 1px
+    ),
+    #f8fafc;
+  background-size:
+    auto,
+    36px 36px,
+    36px 36px,
+    auto;
+}
+
+.installation-guide-card-body {
+  padding: 22px 22px 24px;
+}
+
+.installation-guide-card h3 {
+  margin: 0 0 16px;
+  color: var(--installation-guide-blue);
+  font-size: 22px;
+  line-height: 1.34;
+  letter-spacing: -0.04em;
+  font-weight: 700;
+  transition: color 0.18s ease;
+}
+
+.installation-guide-card:hover h3,
+.installation-guide-card.is-active h3 {
+  color: var(--installation-guide-cyan);
+}
+
+.installation-guide-card-info {
+  display: grid;
+  gap: 10px;
+  color: #5f6b7a;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.installation-guide-card-info strong {
+  margin-right: 6px;
+  color: #5f6b7a;
+  font-weight: 500;
+}
+
+.installation-guide-card-info b {
+  color: var(--installation-guide-blue);
+  font-weight: 700;
+}
+
+.installation-guide-tags {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  vertical-align: middle;
+}
+
+.installation-guide-tags span {
+  height: 24px;
+  padding: 0 8px;
+  background: #f1f5f9;
+  color: var(--installation-guide-blue);
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   7. 空状态
+========================================================= */
+
+.installation-guide-empty {
+  padding: 64px 32px;
+  border: 1px dashed #cfd8e3;
+  background: #ffffff;
+  color: #637083;
+  text-align: center;
+}
+
+.installation-guide-empty strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--installation-guide-blue);
+  font-size: 22px;
+}
+
+/* =========================================================
+   8. 教程弹窗
+========================================================= */
+
+.installation-guide-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  padding: 40px;
+  background: rgba(8, 18, 38, 0.72);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.installation-guide-modal-panel {
+  width: min(1040px, 100%);
+  max-height: calc(100vh - 80px);
+  background: #ffffff;
+  overflow: auto;
+}
+
+.installation-guide-modal-head {
+  padding: 24px 28px;
+  border-bottom: 1px solid var(--installation-guide-line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.installation-guide-modal-head strong {
+  display: block;
+  color: var(--installation-guide-blue);
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+.installation-guide-modal-head span {
+  display: block;
+  margin-top: 8px;
+  color: var(--installation-guide-muted);
+  font-size: 14px;
+}
+
+.installation-guide-modal-head button {
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: var(--installation-guide-blue);
+  color: var(--installation-guide-cyan);
+  cursor: pointer;
+  font-size: 26px;
+  line-height: 1;
+}
+
+.installation-guide-modal-visual {
+  aspect-ratio: 16 / 9;
+  padding: 40px;
+  background:
+    linear-gradient(135deg, #0d244d, #173368),
+    radial-gradient(circle at 60% 30%, rgba(9, 233, 180, 0.28), transparent 32%);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  text-align: center;
+}
+
+.installation-guide-modal-play {
+  position: relative;
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--installation-guide-blue);
+}
+
+.installation-guide-modal-play::before {
+  content: "";
+  position: absolute;
+  left: 52%;
+  top: 50%;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-left: 22px solid currentColor;
+  transform: translate(-50%, -50%);
+}
+
+.installation-guide-modal-visual h4 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.installation-guide-modal-visual p {
+  max-width: 620px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.76);
+  line-height: 1.7;
+}
+
+.installation-guide-modal-body {
+  padding: 30px 32px 34px;
+}
+
+.installation-guide-modal-body > strong {
+  color: var(--installation-guide-blue);
+  font-size: 20px;
+}
+
+.installation-guide-step-list {
+  display: grid;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.installation-guide-step {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  border: 1px solid var(--installation-guide-line);
+  background: #ffffff;
+}
+
+.installation-guide-step > div {
+  background: var(--installation-guide-blue);
+  color: var(--installation-guide-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.installation-guide-step section {
+  padding: 18px 20px;
+}
+
+.installation-guide-step section strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--installation-guide-blue);
+  font-size: 16px;
+}
+
+.installation-guide-step section p {
+  margin: 0;
+  color: var(--installation-guide-muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   9. 响应式
+========================================================= */
+
+@media (max-width: 1280px) {
+  .installation-guide-main {
+    grid-template-columns: 330px minmax(0, 1fr);
+    gap: 40px;
+  }
+
+  .installation-guide-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .installation-guide-hero,
+  .installation-guide-hero-inner {
+    height: 360px;
+  }
+
+  .installation-guide-hero {
+    background-position: 62% center;
+  }
+
+  .installation-guide-hero-inner,
+  .installation-guide-main {
+    width: min(100% - 32px, 1600px);
+  }
+
+  .installation-guide-hero-content {
+    width: 100%;
+  }
+
+  .installation-guide-hero h1 {
+    font-size: 34px;
+  }
+
+  .installation-guide-hero p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .installation-guide-main {
+    display: block;
+    padding: 48px 0 72px;
+  }
+
+  .installation-guide-sidebar {
+    position: static;
+    min-height: auto;
+    margin-bottom: 28px;
+  }
+
+  .installation-guide-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .installation-guide-modal {
+    padding: 18px;
+  }
+
+  .installation-guide-modal-head {
+    padding: 20px;
+  }
+
+  .installation-guide-modal-body {
+    padding: 22px 20px 26px;
+  }
+
+  .installation-guide-step {
+    grid-template-columns: 56px 1fr;
+  }
+} 

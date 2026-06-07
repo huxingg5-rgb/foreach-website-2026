@@ -1,0 +1,103 @@
+/* =========================================================
+   SiteBreadcrumb.module.css
+   恒永达官网｜全站通用面包屑样式
+
+   文件路径：
+   components/common/SiteBreadcrumb.module.css
+
+   说明：
+   1. 只服务 SiteBreadcrumb.tsx
+   2. 不写入 app/globals.css
+   3. 支持 bar / inline 两种样式
+   4. 后续不同页面统一复用
+========================================================= */
+
+.breadcrumb {
+  color: #7b8798;
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* =========================================================
+   bar 模式
+   适合：
+   1. Banner 下方
+   2. 资源中心列表页
+   3. 关于我们静态页
+========================================================= */
+
+.bar {
+  height: 64px;
+  background: #ffffff;
+  border-bottom: 1px solid #e3e9f1;
+}
+
+.bar .inner {
+  width: min(1600px, calc(100% - 64px));
+  height: 64px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   inline 模式
+   适合：
+   1. 产品详情页
+   2. 接头替代详情页
+   3. 内容区内部轻量导航
+========================================================= */
+
+.inline {
+  background: transparent;
+}
+
+.inline .inner {
+  width: 100%;
+  min-height: 24px;
+}
+
+/* =========================================================
+   通用内部布局
+========================================================= */
+
+.inner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  color: #7b8798;
+}
+
+.item a {
+  color: #7b8798;
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+
+.item a:hover {
+  color: #173368;
+}
+
+.item strong {
+  color: #173368;
+  font-weight: 600;
+}
+
+.separator {
+  margin: 0 10px;
+  color: #b3bdca;
+}
+
+/* =========================================================
+   移动端
+========================================================= */
+
+@media (max-width: 900px) {
+  .bar .inner {
+    width: min(100% - 32px, 1600px);
+  }
+} 
