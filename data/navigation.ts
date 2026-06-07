@@ -979,14 +979,14 @@ const navigationItems: NavigationItem[] = [
       {
         key: "mobile-resource-faq",
         label: t(
-          "常见问题",
-          "FAQ",
+          "技术文章",
+          "Technical Articles",
           "Preguntas frecuentes",
-          "FAQ",
+          "Technical Articles",
           "자주 묻는 질문",
           "Часто задаваемые вопросы"
         ),
-        href: localizedPath("/resources/faq"),
+        href: localizedPath("/resources/technical-articles"),
         order: 5,
         enabled: true,
       },

@@ -1,0 +1,431 @@
+/* =========================================================
+   news.css
+   恒永达官网｜公司新闻页面专用样式
+
+   说明：
+   1. 只服务公司新闻列表页和详情页
+   2. 不写进 globals.css
+   3. 面包屑、搜索栏、底部 CTA 使用已有共用组件
+   4. 搜索栏结构来自 ResourceSearchBar，默认 class 为 frp-*
+========================================================= */
+
+.newsPage {
+  background: #ffffff;
+  color: #173368;
+}
+
+/* =========================================================
+   顶部 Banner
+========================================================= */
+
+.newsHero {
+  position: relative;
+  height: 520px;
+  min-height: 520px;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.newsHero__inner {
+  position: relative;
+  z-index: 2;
+  width: min(1600px, calc(100% - 64px));
+  height: 520px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.newsHero__title {
+  max-width: 860px;
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(46px, 5vw, 82px);
+  line-height: 1.04;
+  font-weight: 600;
+  letter-spacing: -0.055em;
+}
+
+.newsHero__description {
+  max-width: 860px;
+  margin: 28px 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+/* =========================================================
+   搜索区
+========================================================= */
+
+.newsSearchSection {
+  width: min(1600px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 48px 0 0;
+  background: #ffffff;
+}
+
+
+.newsSearchSection .frp-search-input::placeholder {
+  color: rgba(23, 51, 104, 0.42);
+}
+
+.newsSearchSection .frp-search-input:focus {
+  border-color: #173368;
+  background: #ffffff;
+}
+
+
+.newsSearchSection .frp-search-button:hover {
+  border-color: #173368;
+  background: #173368;
+  color: #09e9b4;
+}
+
+/* =========================================================
+   新闻列表
+========================================================= */
+
+.newsListSection {
+  width: min(1600px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 48px 0 96px;
+}
+
+.newsListSection__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 28px;
+}
+
+.newsListSection__title {
+  margin: 0;
+  color: #173368;
+  font-size: clamp(30px, 2.6vw, 46px);
+  line-height: 1.16;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+.newsCategoryTabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.newsCategoryTabs__button {
+  height: 42px;
+  padding: 0 18px;
+  border: 1px solid rgba(23, 51, 104, 0.16);
+  border-radius: 8px;
+  background: #ffffff;
+  color: #173368;
+  font-size: 14px;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.newsCategoryTabs__button:hover,
+.newsCategoryTabs__button.isActive {
+  border-color: #173368;
+  background: #173368;
+  color: #09e9b4;
+}
+
+.newsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.newsCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid rgba(23, 51, 104, 0.14);
+  color: inherit;
+  text-decoration: none;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.newsCard::before {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: transparent;
+  transition: background-color 0.2s ease;
+}
+
+.newsCard:hover,
+.newsCard:focus-visible {
+  border-color: #09e9b4;
+  transform: translateY(-3px);
+  outline: none;
+}
+
+.newsCard:hover::before,
+.newsCard:focus-visible::before {
+  background: #09e9b4;
+}
+
+.newsCard__image {
+  position: relative;
+  height: 230px;
+  overflow: hidden;
+  background: #edf2f7;
+}
+
+.newsCard__image img {
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.45s ease;
+}
+
+.newsCard:hover .newsCard__image img,
+.newsCard:focus-visible .newsCard__image img {
+  transform: scale(1.045);
+}
+
+.newsCard__body {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 24px 26px;
+}
+
+.newsCard__title {
+  margin: 0;
+  color: #173368;
+  font-size: 21px;
+  line-height: 1.45;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: color 0.2s ease;
+}
+
+.newsCard:hover .newsCard__title,
+.newsCard:focus-visible .newsCard__title {
+  color: #09e9b4;
+}
+
+.newsCard__date {
+  display: block;
+  margin-top: 12px;
+  color: rgba(23, 51, 104, 0.48);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.newsCard__summary {
+  margin: 14px 0 0;
+  color: rgba(23, 51, 104, 0.66);
+  font-size: 14px;
+  line-height: 1.75;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.newsEmpty {
+  padding: 56px 32px;
+  border: 1px solid rgba(23, 51, 104, 0.12);
+  text-align: center;
+}
+
+.newsEmpty p {
+  margin: 0;
+  color: rgba(23, 51, 104, 0.68);
+  font-size: 15px;
+}
+
+/* =========================================================
+   新闻详情
+========================================================= */
+
+.newsArticle {
+  width: min(1200px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 64px 0 96px;
+}
+
+.newsArticle__header {
+  max-width: 900px;
+  margin: 0 auto 42px;
+}
+
+.newsArticle__back {
+  display: inline-flex;
+  margin-bottom: 28px;
+  color: rgba(23, 51, 104, 0.68);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.newsArticle__back:hover {
+  color: #173368;
+}
+
+.newsArticle__title {
+  margin: 0;
+  color: #173368;
+  font-size: clamp(36px, 4.2vw, 64px);
+  line-height: 1.12;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+}
+
+.newsArticle__date {
+  display: block;
+  margin-top: 18px;
+  color: rgba(23, 51, 104, 0.52);
+  font-size: 14px;
+}
+
+.newsArticle__summary {
+  margin: 24px 0 0;
+  color: rgba(23, 51, 104, 0.72);
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.newsArticle__cover {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+  background: #edf2f7;
+}
+
+.newsArticle__cover img {
+  object-fit: cover;
+  object-position: center top;
+}
+
+.newsArticle__content {
+  max-width: 860px;
+  margin: 56px auto 0;
+}
+
+.newsArticle__block {
+  margin-top: 38px;
+}
+
+.newsArticle__block:first-child {
+  margin-top: 0;
+}
+
+.newsArticle__block h2 {
+  margin: 0 0 14px;
+  color: #173368;
+  font-size: 26px;
+  line-height: 1.35;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.newsArticle__block p {
+  margin: 0;
+  color: rgba(23, 51, 104, 0.76);
+  font-size: 16px;
+  line-height: 2;
+}
+
+/* =========================================================
+   响应式
+========================================================= */
+
+@media (max-width: 1180px) {
+  .newsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .newsListSection__head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .newsCategoryTabs {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 760px) {
+  .newsHero,
+  .newsHero__inner {
+    height: 520px;
+    min-height: 520px;
+  }
+
+  .newsHero__inner,
+  .newsSearchSection,
+  .newsListSection,
+  .newsArticle {
+    width: calc(100% - 32px);
+  }
+
+  .newsSearchSection {
+    padding: 36px 0 0;
+  }
+
+  .newsSearchSection .frp-search-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .newsSearchSection .frp-search-input {
+    border-right: 1px solid rgba(23, 51, 104, 0.22);
+    border-radius: 8px;
+  }
+
+  .newsSearchSection .frp-search-button {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .newsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .newsArticle__cover {
+    height: 280px;
+  }
+} 
+
+/* =========================================================
+   搜索区
+
+   说明：
+   1. 搜索栏本体样式由 ResourceSearchBar.module.css 管理
+   2. 新闻页这里只负责把搜索组件放在面包屑下面
+   3. 不写 input / button / 最近搜索按钮样式
+   4. 不设置 max-width，否则搜索栏灰色背景不会全屏
+========================================================= */
+
+.newsSearchSection {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+}
