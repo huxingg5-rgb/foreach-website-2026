@@ -1,21 +1,26 @@
-# 接头替代查询｜新增产品系列操作规范
+# 接头替代查询模块｜新增系列操作文档
 
-文件路径：
+> 文件路径：  
+> `docs/resources/fitting-replacement-add-new-series.md`
+
+> 适用模块：  
+> 接头替代查询 / Fitting Replacement  
+> 当前已完成基础系列：`q20`  
+> 后续可新增：`q40`、`q60`、硬管接头、倒刺接头、鲁尔接头等。
+
+---
+
+## 1. 文档目的
+
+这个文档用于指导后续在官网中新增一个“接头替代查询系列”。
+
+例如：
 
 ```txt
-docs/resources/fitting-replacement-add-new-series.md
-```
-
-适用模块：
-
-```txt
-资源中心 / 选型支持 / 接头替代查询
-```
-
-适用范围：
-
-```txt
+已有：
 Q20 快插接头
+
+后续可能新增：
 Q40 快插接头
 Q60 快插接头
 硬管接头
@@ -23,491 +28,179 @@ Q60 快插接头
 鲁尔接头
 过滤接头
 止回接头
-其它后续需要做型号替代查询、图纸预览、加入清单、发送询盘的接头产品
+```
+
+新增系列时，原则上不要重新写一套页面组件，而是复用现有结构：
+
+```txt
+页面入口 page.tsx
+  ↓
+services 数据服务层
+  ↓
+data 系列静态数据 / 多语言文案
+  ↓
+components 公共展示组件
+  ↓
+public 图片 / PDF 静态资源
+```
+
+这样后续接后端、CMS、数据库时，只需要优先改 `services` 和 `data`，不需要大面积重写组件。
+
+---
+
+## 2. 当前模块结构总览
+
+当前接头替代查询模块主要由这些文件组成：
+
+```txt
+app
+└─ resources
+   └─ selection-support
+      └─ fitting-replacement
+         ├─ page.tsx
+         ├─ fitting-replacement.css
+         └─ q20
+            └─ [productCode]
+               ├─ page.tsx
+               └─ fitting-replacement-detail.css
+
+app
+└─ [locale]
+   └─ resources
+      └─ selection-support
+         └─ fitting-replacement
+            ├─ page.tsx
+            └─ q20
+               └─ [productCode]
+                  └─ page.tsx
+
+components
+└─ resources
+   └─ fitting-replacement
+      ├─ FittingReplacementHome.tsx
+      ├─ FittingReplacementGuide.tsx
+      ├─ FittingReplacementDetail.tsx
+      ├─ FittingReplacementDrawingPreview.tsx
+      ├─ FittingReplacementFaq.tsx
+      └─ FittingSelectionCart.tsx
+
+components
+└─ common
+   ├─ breadcrumb
+   └─ product-card
+
+data
+└─ resources
+   └─ fitting-replacement
+      ├─ fitting-replacement.types.ts
+      ├─ fitting-replacement-series.config.ts
+      └─ fittings
+         └─ quick-connect
+            └─ q20
+               ├─ q20.zh.ts
+               ├─ q20.page.intl.ts
+               └─ q20.detail.intl.ts
+
+services
+└─ resources
+   ├─ getFittingReplacementHomeData.ts
+   ├─ getFittingReplacementDetailData.ts
+   └─ fitting-replacement
+      └─ fittingReplacementModelParser.ts
+
+scripts
+└─ resources
+   └─ convert-q20-fitting-replacement.ts
+
+public
+└─ images
+   └─ resources
+      └─ selection-support
+         └─ fitting-replacement
+            └─ q20
+               └─ products
+
+public
+└─ downloads
+   └─ resources
+      └─ selection-support
+         └─ fitting-replacement
+            └─ q20
+               └─ drawings
 ```
 
 ---
 
-# 1. 模块定位
+## 3. 新增系列前先确定这些信息
 
-接头相关内容分两个系统：
-
-```txt
-产品中心
-= 展示产品体系、产品分类、产品介绍、应用说明
-
-资源中心 / 接头替代查询
-= 查询型号、查竞品替代、看图纸、加清单、发询盘
-```
-
-所以不是所有接头内容都放进 `fitting-replacement`。
-
-`fitting-replacement` 只放和以下功能有关的数据：
+新增一个系列前，先确定下面这些字段：
 
 ```txt
-型号替代
-竞品编码
-商品编码
-恒永达型号
-型号解析规则
-选型指引规则
-图纸 PDF
-产品图片路径
-是否首页展示
-是否加入清单
-是否需要图纸
-```
-
-产品中心的完整介绍、产品分类页、应用场景、宣传文案，不放在这里。
-
----
-
-# 2. 当前标准数据层级
-
-当前 Q20 属于：
-
-```txt
-接头类产品 / 快插接头 / Q20
-```
-
-对应目录结构：
-
-```txt
-data/resources/fitting-replacement/
-├─ fitting-replacement.types.ts
-├─ fitting-replacement-series.config.ts
-└─ fittings/
-   └─ quick-connect/
-      └─ q20/
-         ├─ q20.zh.ts
-         ├─ q20.page.zh.ts
-         └─ q20.detail.zh.ts
-```
-
-含义：
-
-```txt
-fitting-replacement
-= 接头替代查询模块
-
-fittings
-= 接头类产品
-
-quick-connect
-= 快插接头
-
-q20
-= Q20 系列
-```
-
-后续新增系列时，必须按这个层级扩展，不要把所有接头数据塞进一个文件。
-
----
-
-# 3. 后续新增系列的目录规则
-
-## 3.1 快插接头 Q40
-
-```txt
-data/resources/fitting-replacement/fittings/quick-connect/q40/
-├─ q40.zh.ts
-├─ q40.page.zh.ts
-└─ q40.detail.zh.ts
-```
-
-## 3.2 快插接头 Q60
-
-```txt
-data/resources/fitting-replacement/fittings/quick-connect/q60/
-├─ q60.zh.ts
-├─ q60.page.zh.ts
-└─ q60.detail.zh.ts
-```
-
-## 3.3 硬管接头
-
-```txt
-data/resources/fitting-replacement/fittings/hard-tube/
-├─ hard-tube.zh.ts
-├─ hard-tube.page.zh.ts
-└─ hard-tube.detail.zh.ts
-```
-
-## 3.4 倒刺接头
-
-```txt
-data/resources/fitting-replacement/fittings/barbed/
-├─ barbed.zh.ts
-├─ barbed.page.zh.ts
-└─ barbed.detail.zh.ts
-```
-
-## 3.5 鲁尔接头
-
-```txt
-data/resources/fitting-replacement/fittings/luer/
-├─ luer.zh.ts
-├─ luer.page.zh.ts
-└─ luer.detail.zh.ts
-```
-
----
-
-# 4. 文件职责说明
-
-每个系列一般有 3 个数据文件。
-
-## 4.1 产品数据文件
-
-示例：
-
-```txt
-q20.zh.ts
-q40.zh.ts
-hard-tube.zh.ts
-barbed.zh.ts
-```
-
-作用：
-
-```txt
-1. 存放产品列表 products
-2. 存放型号解析规则 modelRules
-3. 存放搜索基础数据 search
-4. 通常由 Excel 转换脚本自动生成
-```
-
-Q20 示例：
-
-```txt
-data/resources/fitting-replacement/fittings/quick-connect/q20/q20.zh.ts
-```
-
-导出名：
-
-```ts
-export const fittingReplacementQuickConnectQ20ZhData
-```
-
----
-
-## 4.2 首页文案文件
-
-示例：
-
-```txt
-q20.page.zh.ts
-q40.page.zh.ts
-hard-tube.page.zh.ts
-barbed.page.zh.ts
-```
-
-作用：
-
-```txt
-1. 存放 Banner 文案
-2. 存放面包屑 breadcrumbs
-3. 存放搜索框文案
-4. 不存放产品数据
-```
-
-Q20 示例：
-
-```txt
-data/resources/fitting-replacement/fittings/quick-connect/q20/q20.page.zh.ts
-```
-
-导出名：
-
-```ts
-export const fittingReplacementQuickConnectQ20PageZh
-```
-
----
-
-## 4.3 详情页文案文件
-
-示例：
-
-```txt
-q20.detail.zh.ts
-q40.detail.zh.ts
-hard-tube.detail.zh.ts
-barbed.detail.zh.ts
-```
-
-作用：
-
-```txt
-1. 存放详情页面包屑
-2. 存放详情页按钮文案
-3. 存放图纸预览文案
-4. 存放 FAQ 或详情页说明文案
-5. 不存放产品列表
-```
-
-Q20 示例：
-
-```txt
-data/resources/fitting-replacement/fittings/quick-connect/q20/q20.detail.zh.ts
-```
-
-导出名：
-
-```ts
-export const fittingReplacementQuickConnectQ20DetailZh
-```
-
----
-
-# 5. 图片与图纸目录规则
-
-## 5.1 产品图片目录
-
-所有接头替代查询图片统一放在：
-
-```txt
-public/images/resources/selection-support/fitting-replacement/
-```
-
-按系列分：
-
-```txt
-public/images/resources/selection-support/fitting-replacement/q20/products
-public/images/resources/selection-support/fitting-replacement/q40/products
-public/images/resources/selection-support/fitting-replacement/q60/products
-public/images/resources/selection-support/fitting-replacement/hard-tube/products
-public/images/resources/selection-support/fitting-replacement/barbed/products
-```
-
-图片命名建议：
-
-```txt
-Q2001-PMV-SPPE.webp
-Q4001-xxxx.webp
-hard-tube-xxxx.webp
-barbed-xxxx.webp
-```
-
-页面引用路径从 `/images/...` 开始，例如：
-
-```txt
-/images/resources/selection-support/fitting-replacement/q20/products/Q2001-PMV-SPPE.webp
-```
-
----
-
-## 5.2 图纸 PDF 目录
-
-所有接头替代查询图纸统一放在：
-
-```txt
-public/downloads/resources/selection-support/fitting-replacement/
-```
-
-按系列分：
-
-```txt
-public/downloads/resources/selection-support/fitting-replacement/q20/drawings
-public/downloads/resources/selection-support/fitting-replacement/q40/drawings
-public/downloads/resources/selection-support/fitting-replacement/q60/drawings
-public/downloads/resources/selection-support/fitting-replacement/hard-tube/drawings
-public/downloads/resources/selection-support/fitting-replacement/barbed/drawings
-```
-
-PDF 命名建议和恒永达型号一致：
-
-```txt
-Q2001-PMV-SPPE.pdf
-Q4001-xxxx.pdf
+系列名称：Q40 快插接头
+seriesKey：q40
+seriesCode：Q40
+URL 路径：/resources/selection-support/fitting-replacement/q40/[productCode]
+中文产品名称：Q40 快插接头
+英文产品名称：Q40 Quick-connect Fitting
+西语产品名称：Conector Q40
+法语产品名称：Raccord Q40
+韩语产品名称：Q40 퀵 커넥트 피팅
+俄语产品名称：Фитинг Q40
 ```
 
 注意：
 
 ```txt
-1. 文件名大小写必须完全一致
-2. 线上 Linux 区分大小写
-3. 不要使用 .PDF 和 .pdf 混用
-4. 不要有空格
-5. 不建议使用中文文件名
-6. 本地能打开，不代表线上一定能打开
-7. 必须确认 PDF 已提交到 Git
+seriesKey 一律小写短横线或小写数字组合
+例如：
+q40
+q60
+hard-tube
+barbed
+luer
 ```
 
-检查 PDF 是否被 Git 跟踪：
-
-```powershell
-git ls-files "public/downloads/resources/selection-support/fitting-replacement/q20/drawings/Q2001-PMV-SPPE.pdf"
-```
-
-如果没有输出，需要强制添加：
-
-```powershell
-git add -f "public/downloads/resources/selection-support/fitting-replacement/q20/drawings"
-```
-
----
-
-# 6. 新增一个产品系列的标准流程
-
-下面以新增 Q40 为例。
-
----
-
-## 第一步：准备 Excel 原始数据
-
-Q40 Excel 至少需要包含：
+不要使用：
 
 ```txt
-商品编码
-恒永达型号
-竞品A编码
-竞品B编码
-竞品C编码
-包装
-是否首页展示
-备注
-型号解析规则
-字段顺序
-字段名称
-代码
-含义
-是否前台显示
-```
-
-如果是硬管接头、倒刺接头，先确认字段结构，不要一边写代码一边补字段。
-
----
-
-## 第二步：新增数据目录
-
-Q40：
-
-```powershell
-New-Item -ItemType Directory -Force .\data\resources\fitting-replacement\fittings\quick-connect\q40
-```
-
-硬管接头：
-
-```powershell
-New-Item -ItemType Directory -Force .\data\resources\fitting-replacement\fittings\hard-tube
-```
-
-倒刺接头：
-
-```powershell
-New-Item -ItemType Directory -Force .\data\resources\fitting-replacement\fittings\barbed
+Q40
+Q-40
+q_40
+Q40Series
 ```
 
 ---
 
-## 第三步：新增产品数据文件
+## 4. 新增系列需要新增 / 修改的文件清单
 
-Q40：
+以新增 `q40` 为例，需要处理这些文件。
+
+### 4.1 新增数据文件
+
+新建：
 
 ```txt
 data/resources/fitting-replacement/fittings/quick-connect/q40/q40.zh.ts
+data/resources/fitting-replacement/fittings/quick-connect/q40/q40.page.intl.ts
+data/resources/fitting-replacement/fittings/quick-connect/q40/q40.detail.intl.ts
 ```
 
-推荐导出名：
-
-```ts
-export const fittingReplacementQuickConnectQ40ZhData
-```
-
-硬管接头：
+作用：
 
 ```txt
-data/resources/fitting-replacement/fittings/hard-tube/hard-tube.zh.ts
-```
+q40.zh.ts
+  存放 Q40 产品数据和型号解析规则
 
-推荐导出名：
+q40.page.intl.ts
+  存放 Q40 首页多语言文案
 
-```ts
-export const fittingReplacementHardTubeZhData
-```
-
-倒刺接头：
-
-```txt
-data/resources/fitting-replacement/fittings/barbed/barbed.zh.ts
-```
-
-推荐导出名：
-
-```ts
-export const fittingReplacementBarbedZhData
+q40.detail.intl.ts
+  存放 Q40 详情页多语言文案
 ```
 
 ---
 
-## 第四步：新增首页文案文件
-
-Q40：
-
-```txt
-data/resources/fitting-replacement/fittings/quick-connect/q40/q40.page.zh.ts
-```
-
-推荐导出名：
-
-```ts
-export const fittingReplacementQuickConnectQ40PageZh
-```
-
-示例结构：
-
-```ts
-export const fittingReplacementQuickConnectQ40PageZh = {
-  banner: {
-    title: "Q40 接头替代查询",
-    description:
-      "输入竞品编码、商品编码或恒永达型号，快速查找 Q40 快插接头对应产品。",
-  },
-
-  breadcrumbs: [
-    {
-      label: "首页",
-      href: "/",
-    },
-    {
-      label: "资源中心",
-      href: "/resources",
-    },
-    {
-      label: "接头替代查询",
-      href: "/resources/selection-support/fitting-replacement",
-    },
-  ],
-
-  search: {
-    placeholder: "请输入竞品编码、商品编码或恒永达型号",
-    buttonText: "搜索",
-  },
-} as const;
-```
-
----
-
-## 第五步：新增详情页文案文件
-
-Q40：
-
-```txt
-data/resources/fitting-replacement/fittings/quick-connect/q40/q40.detail.zh.ts
-```
-
-推荐导出名：
-
-```ts
-export const fittingReplacementQuickConnectQ40DetailZh
-```
-
-如果详情页文案暂时和 Q20 一致，可以先复制 Q20 的 `q20.detail.zh.ts`，但文件必须单独建，方便后续差异化。
-
----
-
-# 7. 更新系列配置
+### 4.2 修改系列配置
 
 修改：
 
@@ -515,13 +208,21 @@ export const fittingReplacementQuickConnectQ40DetailZh
 data/resources/fitting-replacement/fitting-replacement-series.config.ts
 ```
 
-当前 Q20 配置保留。新增 Q40 时，先扩展类型：
+需要做：
+
+```txt
+1. 扩展 FittingReplacementSeriesKey
+2. 新增 Q40_FITTING_REPLACEMENT_SERIES_CONFIG
+3. 加入 FITTING_REPLACEMENT_SERIES_CONFIG_MAP
+```
+
+示例：
 
 ```ts
 export type FittingReplacementSeriesKey = "q20" | "q40";
 ```
 
-新增 Q40 配置：
+新增配置示例：
 
 ```ts
 export const Q40_FITTING_REPLACEMENT_SERIES_CONFIG: FittingReplacementSeriesConfig =
@@ -538,7 +239,7 @@ export const Q40_FITTING_REPLACEMENT_SERIES_CONFIG: FittingReplacementSeriesConf
   };
 ```
 
-加入配置集合：
+配置集合增加：
 
 ```ts
 export const FITTING_REPLACEMENT_SERIES_CONFIG_MAP: Record<
@@ -550,119 +251,929 @@ export const FITTING_REPLACEMENT_SERIES_CONFIG_MAP: Record<
 };
 ```
 
-硬管接头、倒刺接头也按同样方式新增：
-
-```ts
-export type FittingReplacementSeriesKey =
-  | "q20"
-  | "q40"
-  | "hard-tube"
-  | "barbed";
-```
-
 ---
 
-# 8. 更新首页 service 数据源
+### 4.3 修改数据服务层
 
-修改：
+需要修改：
 
 ```txt
 services/resources/getFittingReplacementHomeData.ts
-```
-
-新增 import，例如 Q40：
-
-```ts
-import { fittingReplacementQuickConnectQ40ZhData } from "@/data/resources/fitting-replacement/fittings/quick-connect/q40/q40.zh";
-import { fittingReplacementQuickConnectQ40PageZh } from "@/data/resources/fitting-replacement/fittings/quick-connect/q40/q40.page.zh";
-```
-
-新增映射：
-
-```ts
-q40: {
-  productData: fittingReplacementQuickConnectQ40ZhData,
-  pageText: fittingReplacementQuickConnectQ40PageZh,
-},
-```
-
-这样后续调用：
-
-```ts
-getFittingReplacementHomeData("q40")
-```
-
-就可以读取 Q40 首页数据。
-
----
-
-# 9. 更新详情页 service 数据源
-
-修改：
-
-```txt
 services/resources/getFittingReplacementDetailData.ts
 ```
 
-新增 import，例如 Q40：
+目的：
 
-```ts
-import { fittingReplacementQuickConnectQ40ZhData } from "@/data/resources/fitting-replacement/fittings/quick-connect/q40/q40.zh";
-import { fittingReplacementQuickConnectQ40DetailZh } from "@/data/resources/fitting-replacement/fittings/quick-connect/q40/q40.detail.zh";
+```txt
+让 service 知道 q40 的数据来源
+让首页和详情页可以根据 seriesKey 读取不同系列
 ```
 
-新增映射：
+当前 Q20 是静态数据源，新增 Q40 时要加入类似配置。
+
+示例结构：
 
 ```ts
-q40: {
-  pageData: fittingReplacementQuickConnectQ40ZhData,
-  detailText: fittingReplacementQuickConnectQ40DetailZh,
-},
+const FITTING_REPLACEMENT_HOME_STATIC_DATA_SOURCE_MAP: Record<
+  FittingReplacementSeriesKey,
+  FittingReplacementHomeStaticDataSource
+> = {
+  q20: {
+    pageData: fittingReplacementQuickConnectQ20ZhData,
+    getPageIntl: getFittingReplacementQuickConnectQ20PageIntl,
+  },
+
+  q40: {
+    pageData: fittingReplacementQuickConnectQ40ZhData,
+    getPageIntl: getFittingReplacementQuickConnectQ40PageIntl,
+  },
+};
 ```
 
-这样后续调用：
+详情页同理：
 
 ```ts
-getFittingReplacementDetailData(productCode, "q40")
+const FITTING_REPLACEMENT_STATIC_DATA_SOURCE_MAP: Record<
+  FittingReplacementSeriesKey,
+  FittingReplacementStaticDataSource
+> = {
+  q20: {
+    pageData: fittingReplacementQuickConnectQ20ZhData,
+    getDetailIntl: getFittingReplacementQuickConnectQ20DetailIntl,
+  },
+
+  q40: {
+    pageData: fittingReplacementQuickConnectQ40ZhData,
+    getDetailIntl: getFittingReplacementQuickConnectQ40DetailIntl,
+  },
+};
 ```
 
-就可以读取 Q40 详情页数据。
+注意：
+
+```txt
+如果 service 当前还只写死 q20，需要先把结构整理成 map。
+不要在组件里判断 q20 / q40。
+组件只接收 service 返回的数据。
+```
 
 ---
 
-# 10. 新增详情页路由
+### 4.4 新增页面路由
 
-如果新增 Q40，需要新增：
+如果新增 Q40 详情页，需要新建中文路由：
 
 ```txt
 app/resources/selection-support/fitting-replacement/q40/[productCode]/page.tsx
 ```
 
-这个文件可以复制 Q20 详情页入口，只改：
+也需要新建外语路由：
 
 ```txt
-Q20_FITTING_REPLACEMENT_SERIES_CONFIG
+app/[locale]/resources/selection-support/fitting-replacement/q40/[productCode]/page.tsx
 ```
 
-为：
+这两个文件可以复制 Q20 的详情页入口，然后只改：
+
+```ts
+const SERIES_CONFIG = Q40_FITTING_REPLACEMENT_SERIES_CONFIG;
+```
+
+中文详情页固定传：
+
+```ts
+const PAGE_LOCALE = "zh";
+```
+
+外语详情页使用：
+
+```ts
+locale
+```
+
+注意：
 
 ```txt
-Q40_FITTING_REPLACEMENT_SERIES_CONFIG
+中文路径不加 /zh-CN
+英文路径才是 /en
+西语路径才是 /es
+法语路径才是 /fr
+韩语路径才是 /ko
+俄语路径才是 /ru
 ```
 
-中文详情页路径：
+---
+
+### 4.5 新增图片资源
+
+产品图片放这里：
+
+```txt
+public/images/resources/selection-support/fitting-replacement/q40/products
+```
+
+命名规则：
+
+```txt
+Q4001-PMV-SPPE.webp
+Q4001-PMV-SACN.webp
+```
+
+页面引用路径：
+
+```txt
+/images/resources/selection-support/fitting-replacement/q40/products/Q4001-PMV-SPPE.webp
+```
+
+注意：
+
+```txt
+图片文件名建议和 foreachModel 保持一致。
+这样数据导入脚本可以自动生成 imagePath。
+```
+
+---
+
+### 4.6 新增图纸 PDF
+
+图纸 PDF 放这里：
+
+```txt
+public/downloads/resources/selection-support/fitting-replacement/q40/drawings
+```
+
+命名规则：
+
+```txt
+Q4001-PMV-SPPE.pdf
+Q4001-PMV-SACN.pdf
+```
+
+页面引用路径：
+
+```txt
+/downloads/resources/selection-support/fitting-replacement/q40/drawings/Q4001-PMV-SPPE.pdf
+```
+
+注意：
+
+```txt
+PDF 文件名必须和 foreachModel 一致。
+否则详情页 PDF 预览会找不到文件。
+```
+
+---
+
+## 5. Excel 数据源规则
+
+当前 Q20 使用 Excel 转换脚本生成静态数据。
+
+现有脚本：
+
+```txt
+scripts/resources/convert-q20-fitting-replacement.ts
+```
+
+后续新增系列有两种方式。
+
+---
+
+### 5.1 简单方式：复制一个 Q40 转换脚本
+
+复制：
+
+```txt
+scripts/resources/convert-q20-fitting-replacement.ts
+```
+
+新建：
+
+```txt
+scripts/resources/convert-q40-fitting-replacement.ts
+```
+
+修改：
+
+```ts
+const SOURCE_EXCEL_PATH = path.join(
+  PROJECT_ROOT,
+  "data-source",
+  "resources",
+  "fitting-replacement",
+  "Q40系列_测试数据.xlsx"
+);
+
+const OUTPUT_TS_PATH = path.join(
+  PROJECT_ROOT,
+  "data",
+  "resources",
+  "fitting-replacement",
+  "fittings/quick-connect/q40/q40.zh.ts"
+);
+
+const TARGET_SERIES = "Q40";
+```
+
+执行：
+
+```powershell
+npx tsx scripts/resources/convert-q40-fitting-replacement.ts
+```
+
+优点：
+
+```txt
+简单
+不容易影响 Q20
+适合前期快速做
+```
+
+缺点：
+
+```txt
+Q20 / Q40 / Q60 脚本重复
+后期维护成本较高
+```
+
+---
+
+### 5.2 推荐方式：做一个通用转换脚本
+
+后期建议改成：
+
+```txt
+scripts/resources/convert-fitting-replacement-series.ts
+```
+
+执行方式：
+
+```powershell
+npx tsx scripts/resources/convert-fitting-replacement-series.ts q40
+npx tsx scripts/resources/convert-fitting-replacement-series.ts q60
+```
+
+脚本根据传入的 seriesKey 自动判断：
+
+```txt
+输入 Excel
+输出 TS 文件
+图片路径
+PDF 路径
+TARGET_SERIES
+```
+
+示例映射：
+
+```ts
+const SERIES_CONVERT_CONFIG = {
+  q20: {
+    targetSeries: "Q20",
+    sourceExcel: "Q20系列_测试数据.xlsx",
+    outputFile:
+      "data/resources/fitting-replacement/fittings/quick-connect/q20/q20.zh.ts",
+    imageBasePath:
+      "/images/resources/selection-support/fitting-replacement/q20/products",
+    drawingBasePath:
+      "/downloads/resources/selection-support/fitting-replacement/q20/drawings",
+  },
+
+  q40: {
+    targetSeries: "Q40",
+    sourceExcel: "Q40系列_测试数据.xlsx",
+    outputFile:
+      "data/resources/fitting-replacement/fittings/quick-connect/q40/q40.zh.ts",
+    imageBasePath:
+      "/images/resources/selection-support/fitting-replacement/q40/products",
+    drawingBasePath:
+      "/downloads/resources/selection-support/fitting-replacement/q40/drawings",
+  },
+};
+```
+
+---
+
+## 6. Excel 表格字段要求
+
+Excel 至少需要这两个 Sheet：
+
+```txt
+型号解析规则
+产品数据模板
+```
+
+### 6.1 型号解析规则 Sheet
+
+建议字段：
+
+```txt
+适用系列
+字段顺序
+字段名称
+位置说明
+代码
+含义_中文
+Meaning_English
+Significado_Español
+Signification_Français
+의미_한국어
+Значение_Русский
+```
+
+注意：
+
+```txt
+同一个代码在不同字段里可能含义不同。
+例如 S 在“公母端”里可能是母端；
+S 在“形状”里可能是直通。
+所以不能只按代码判断，一定要按 fieldKey + code 判断。
+```
+
+---
+
+### 6.2 产品数据模板 Sheet
+
+建议字段：
+
+```txt
+商品编码
+型号
+竞品A编码
+竞品B编码
+竞品C编码
+包装
+是否首页展示
+备注
+```
+
+后续如果竞品编码很多，可以扩展为：
+
+```txt
+竞品A编码
+竞品B编码
+竞品C编码
+竞品D编码
+竞品E编码
+```
+
+或者后期改成：
+
+```txt
+兼容编码
+```
+
+里面用英文逗号或斜杠分隔。
+
+注意：
+
+```txt
+商品编码不能为空
+型号不能为空
+型号必须和 PDF / 图片文件名保持一致
+是否首页展示 建议填 是 / 否
+```
+
+---
+
+## 7. 多语言文案文件规则
+
+每个系列都要有两个多语言文案文件：
+
+```txt
+q40.page.intl.ts
+q40.detail.intl.ts
+```
+
+---
+
+### 7.1 page.intl.ts 负责首页
+
+主要包含：
+
+```txt
+banner
+breadcrumbs
+search
+homeText.tabs
+homeText.history
+homeText.guide
+homeText.productSection
+homeText.productCard
+homeText.emptyResult
+homeText.pagination
+```
+
+必须包含 6 种语言：
+
+```txt
+zh
+en
+es
+fr
+ko
+ru
+```
+
+注意：
+
+```txt
+按钮文案尽量短。
+法语、俄语、西语不要硬翻长句。
+产品卡片里尤其要短。
+```
+
+推荐按钮文案：
+
+```txt
+英文：View Details / Add to List
+西语：Detalles / Añadir
+法语：Détails / Ajouter
+韩语：상세 보기 / 추가
+俄语：Детали / Добавить
+```
+
+---
+
+### 7.2 detail.intl.ts 负责详情页
+
+主要包含：
+
+```txt
+breadcrumbs
+tableLabels
+actions
+drawingPreview
+faq
+```
+
+其中：
+
+```txt
+drawingPreview
+```
+
+控制详情页 2D 图纸区域：
+
+```txt
+title
+loadingLabel
+previewButton
+description
+```
+
+注意：
+
+```txt
+PDF iframe 应进入页面就挂载预加载。
+点击“预览图纸”只是隐藏封面，不应该点击后才开始加载 PDF。
+```
+
+---
+
+## 8. 详情页路径规则
+
+中文详情页：
 
 ```txt
 /resources/selection-support/fitting-replacement/q40/商品编码
 ```
 
-外语详情页路径：
+英文详情页：
 
 ```txt
-/[locale]/resources/selection-support/fitting-replacement/q40/商品编码
+/en/resources/selection-support/fitting-replacement/q40/商品编码
 ```
 
-对应外语路由：
+西语详情页：
+
+```txt
+/es/resources/selection-support/fitting-replacement/q40/商品编码
+```
+
+法语详情页：
+
+```txt
+/fr/resources/selection-support/fitting-replacement/q40/商品编码
+```
+
+韩语详情页：
+
+```txt
+/ko/resources/selection-support/fitting-replacement/q40/商品编码
+```
+
+俄语详情页：
+
+```txt
+/ru/resources/selection-support/fitting-replacement/q40/商品编码
+```
+
+不要出现：
+
+```txt
+/zh-CN/resources/selection-support/fitting-replacement/q40/商品编码
+/fr-FR/resources/selection-support/fitting-replacement/q40/商品编码
+/ru-RU/resources/selection-support/fitting-replacement/q40/商品编码
+```
+
+---
+
+## 9. 详情页链接生成规则
+
+详情页链接统一从这里生成：
+
+```txt
+data/resources/fitting-replacement/fitting-replacement-series.config.ts
+```
+
+函数：
+
+```ts
+getFittingReplacementDetailHref(productCode, seriesKey, locale)
+```
+
+要求：
+
+```txt
+中文 locale = zh，不加前缀
+外语 locale = en / es / fr / ko / ru，加对应前缀
+```
+
+不要在组件里手写：
+
+```ts
+`/resources/selection-support/fitting-replacement/q40/${productCode}`
+```
+
+应该统一写：
+
+```ts
+getFittingReplacementDetailHref(
+  product.productCode,
+  SERIES_CONFIG.seriesKey,
+  locale
+)
+```
+
+否则会出现：
+
+```txt
+外语首页点击详情后跳回中文详情页
+```
+
+---
+
+## 10. 卡片显示规则
+
+首页产品卡片只展示核心信息：
+
+```txt
+产品名称
+商品编码
+恒永达型号
+兼容编码
+查看详情
+加入清单
+```
+
+注意：
+
+```txt
+兼容编码可能很长。
+卡片里不要强行显示全部内容撑开布局。
+```
+
+当前规则：
+
+```txt
+卡片中显示完整字符串，但 CSS 限制一行。
+超出宽度用省略号。
+鼠标 hover 时通过 title 查看完整内容。
+详情页显示完整兼容编码。
+```
+
+实现位置：
+
+```txt
+components/common/product-card/ProductBasicCard.tsx
+components/common/product-card/ProductBasicCard.module.css
+```
+
+---
+
+## 11. 清单逻辑规则
+
+产品清单由全局 Provider 管理：
+
+```txt
+components/selection-cart/SelectionCartProvider.tsx
+```
+
+当前按钮逻辑应该是：
+
+```txt
+未加入清单 → 显示“加入清单”
+点击后 → 加入清单，按钮变成“已加入清单”
+再次点击 → 从清单移除，按钮恢复“加入清单”
+```
+
+不要做成：
+
+```txt
+每点一次就重复增加一个相同型号
+```
+
+因为接头替代查询场景里，一个型号通常只需要加入一次，数量后续可以在清单里调整。
+
+---
+
+## 12. 图纸逻辑规则
+
+详情页有两个动作：
+
+```txt
+加入清单
+添加图纸
+```
+
+含义：
+
+```txt
+加入清单：
+表示客户关注这个产品型号。
+
+添加图纸：
+表示客户希望后续提交需求时，把该型号 2D 图纸也纳入资料范围。
+```
+
+注意：
+
+```txt
+添加图纸时，如果产品还没加入清单，需要自动加入清单，并设置 needDrawing = true。
+```
+
+PDF 预览逻辑：
+
+```txt
+进入详情页后 iframe 立即挂载，提前加载 PDF。
+用户看到的是“点击预览图纸”的封面。
+点击封面后，隐藏封面，显示已加载的 PDF。
+```
+
+---
+
+## 13. 图纸数量限制建议
+
+当前静态官网如果要限制图纸数量，只能做前端软限制。
+
+建议规则：
+
+```txt
+同一浏览器一周最多申请 20 份图纸。
+超过 20 份后提示联系销售。
+```
+
+提示文案：
+
+```txt
+本周图纸申请数量已达上限。
+如需更多型号图纸或批量资料，请联系销售团队，我们将为您统一整理发送。
+```
+
+注意：
+
+```txt
+前端限制可以被清缓存、换浏览器、无痕模式绕过。
+真正限制“一个人一周 20 份图纸”，必须后期接后端，用邮箱验证码识别用户。
+```
+
+后期正式方案：
+
+```txt
+邮箱验证码
+  ↓
+后端记录邮箱、本周图纸数量、图纸型号、IP、时间
+  ↓
+超过 20 份，不自动发送，提示联系销售
+```
+
+---
+
+## 14. Banner 图片规则
+
+接头替代查询 Banner 图片建议放在：
+
+```txt
+public/images/resources/selection-support/banner
+```
+
+命名示例：
+
+```txt
+resources-selection-support-fitting-replacement-banner-1920x520-v001.webp
+```
+
+页面引用路径：
+
+```txt
+/images/resources/selection-support/banner/resources-selection-support-fitting-replacement-banner-1920x520-v001.webp
+```
+
+注意：
+
+```txt
+不要把文字做进图片。
+标题和描述仍然用多语言数据渲染。
+图片只做背景。
+```
+
+推荐尺寸：
+
+```txt
+1920 × 520 px
+```
+
+如果页面需要更高：
+
+```txt
+1920 × 600 px
+```
+
+---
+
+## 15. CSS 规则
+
+接头替代查询首页 CSS：
+
+```txt
+app/resources/selection-support/fitting-replacement/fitting-replacement.css
+```
+
+详情页 CSS：
+
+```txt
+app/resources/selection-support/fitting-replacement/q20/[productCode]/fitting-replacement-detail.css
+```
+
+新增系列如果复用详情页样式，可以直接 import 同一份 CSS。
+
+注意：
+
+```txt
+不要把资源中心、接头替代查询、详情页样式继续堆到 app/globals.css。
+```
+
+公共产品卡片样式：
+
+```txt
+components/common/product-card/ProductBasicCard.module.css
+```
+
+这个文件会影响：
+
+```txt
+接头替代查询首页卡片
+接头选型指引结果卡片
+未来其它使用 ProductBasicCard 的页面
+```
+
+修改时要注意影响范围。
+
+---
+
+## 16. 新增 Q40 标准步骤
+
+以新增 Q40 为例，完整步骤如下。
+
+### 第 1 步：准备资源文件
+
+新建文件夹：
+
+```txt
+public/images/resources/selection-support/fitting-replacement/q40/products
+public/downloads/resources/selection-support/fitting-replacement/q40/drawings
+```
+
+放入：
+
+```txt
+Q40 产品图 .webp
+Q40 图纸 .pdf
+```
+
+---
+
+### 第 2 步：准备 Excel
+
+放入：
+
+```txt
+data-source/resources/fitting-replacement/Q40系列_测试数据.xlsx
+```
+
+确保包含：
+
+```txt
+型号解析规则
+产品数据模板
+```
+
+---
+
+### 第 3 步：生成 q40.zh.ts
+
+简单方案：
+
+```txt
+复制 convert-q20-fitting-replacement.ts
+改成 convert-q40-fitting-replacement.ts
+```
+
+执行：
+
+```powershell
+npx tsx scripts/resources/convert-q40-fitting-replacement.ts
+```
+
+生成：
+
+```txt
+data/resources/fitting-replacement/fittings/quick-connect/q40/q40.zh.ts
+```
+
+---
+
+### 第 4 步：新增多语言文案
+
+新建：
+
+```txt
+data/resources/fitting-replacement/fittings/quick-connect/q40/q40.page.intl.ts
+data/resources/fitting-replacement/fittings/quick-connect/q40/q40.detail.intl.ts
+```
+
+可以复制 Q20 的文案文件，再把：
+
+```txt
+Q20
+q20
+Q20 快插接头
+```
+
+替换为：
+
+```txt
+Q40
+q40
+Q40 快插接头
+```
+
+然后逐一检查 6 种语言。
+
+---
+
+### 第 5 步：扩展系列配置
+
+修改：
+
+```txt
+data/resources/fitting-replacement/fitting-replacement-series.config.ts
+```
+
+增加：
+
+```txt
+q40
+Q40_FITTING_REPLACEMENT_SERIES_CONFIG
+```
+
+---
+
+### 第 6 步：扩展 service 数据源
+
+修改：
+
+```txt
+services/resources/getFittingReplacementHomeData.ts
+services/resources/getFittingReplacementDetailData.ts
+```
+
+让 service 支持：
+
+```txt
+seriesKey = q40
+```
+
+---
+
+### 第 7 步：新增详情页路由
+
+新建中文详情页：
+
+```txt
+app/resources/selection-support/fitting-replacement/q40/[productCode]/page.tsx
+```
+
+新建外语详情页：
 
 ```txt
 app/[locale]/resources/selection-support/fitting-replacement/q40/[productCode]/page.tsx
@@ -670,267 +1181,319 @@ app/[locale]/resources/selection-support/fitting-replacement/q40/[productCode]/p
 
 ---
 
-# 11. 转换脚本规则
+### 第 8 步：检查导航入口
 
-每个系列建议有独立转换脚本。
+如果 Q40 暂时不作为单独入口，可以先不改导航。
 
-当前 Q20 脚本：
+如果要在页面上增加系列切换，后续再新增：
 
 ```txt
-scripts/resources/convert-q20-fitting-replacement.ts
+Q20
+Q40
+Q60
 ```
 
-生成目标：
+系列切换组件。
+
+暂时建议：
 
 ```txt
-data/resources/fitting-replacement/fittings/quick-connect/q20/q20.zh.ts
-```
-
-后续 Q40 建议新增：
-
-```txt
-scripts/resources/convert-q40-fitting-replacement.ts
-```
-
-生成目标：
-
-```txt
-data/resources/fitting-replacement/fittings/quick-connect/q40/q40.zh.ts
-```
-
-硬管接头建议新增：
-
-```txt
-scripts/resources/convert-hard-tube-fitting-replacement.ts
-```
-
-生成目标：
-
-```txt
-data/resources/fitting-replacement/fittings/hard-tube/hard-tube.zh.ts
-```
-
-倒刺接头建议新增：
-
-```txt
-scripts/resources/convert-barbed-fitting-replacement.ts
-```
-
-生成目标：
-
-```txt
-data/resources/fitting-replacement/fittings/barbed/barbed.zh.ts
-```
-
-脚本必须保证：
-
-```txt
-1. 输出路径是新分级目录
-2. 自动创建输出目录
-3. 生成文件的 import 使用 @/data/...
-4. 生成文件的 export 名称和 service 引用一致
-5. 不要再生成旧路径 fitting-replacement.zh.ts
+先不要做系列切换。
+先把 Q40 详情页链路跑通。
+再考虑首页如何展示多个系列。
 ```
 
 ---
 
-# 12. 新增单个产品的流程
+## 17. 测试清单
 
-如果只是给已有 Q20 新增一个产品，不需要新增目录。
+新增系列后必须测试。
 
-流程：
-
-```txt
-1. 在 Q20 Excel 原始表里新增产品行
-2. 添加产品图片到 q20/products
-3. 添加 PDF 图纸到 q20/drawings
-4. 重新运行 Q20 转换脚本
-5. npm run build
-6. 检查详情页是否生成
-7. 提交 Git
-```
-
-运行转换脚本：
+### 17.1 build 测试
 
 ```powershell
-npx tsx scripts/resources/convert-q20-fitting-replacement.ts
+npm run build
 ```
 
-生成文件：
+必须通过。
+
+---
+
+### 17.2 中文路径测试
 
 ```txt
-data/resources/fitting-replacement/fittings/quick-connect/q20/q20.zh.ts
+/resources/selection-support/fitting-replacement
+/resources/selection-support/fitting-replacement/q40/839041
+```
+
+注意：
+
+```txt
+商品编码要换成 Q40 真实商品编码。
 ```
 
 ---
 
-# 13. 新增系列后的测试清单
-
-每次新增系列或新增产品后，必须测试：
+### 17.3 外语路径测试
 
 ```txt
-1. npm run dev 是否正常
-2. npm run build 是否通过
-3. 首页是否正常显示
-4. 搜索是否能找到产品
-5. 查看详情是否能打开
-6. 商品编码是否正确
-7. 兼容编码是否正确
-8. 型号解析是否正确
-9. 产品图片是否显示
-10. PDF 图纸直链是否能打开
-11. 详情页图纸预览是否能打开
-12. 加入清单是否正常
-13. 添加图纸是否正常
-14. 外语路径是否不 404
-15. GitHub / Vercel 部署是否成功
+/en/resources/selection-support/fitting-replacement/q40/商品编码
+/es/resources/selection-support/fitting-replacement/q40/商品编码
+/fr/resources/selection-support/fitting-replacement/q40/商品编码
+/ko/resources/selection-support/fitting-replacement/q40/商品编码
+/ru/resources/selection-support/fitting-replacement/q40/商品编码
+```
+
+检查：
+
+```txt
+1. 面包屑语言是否正确
+2. 表格字段语言是否正确
+3. 按钮语言是否正确
+4. FAQ 语言是否正确
+5. 2D 图纸文案语言是否正确
+6. PDF 是否能预览
 ```
 
 ---
 
-# 14. 常见问题
+### 17.4 详情页跳转测试
 
-## 14.1 本地 PDF 能打开，线上打不开
+从外语首页点击详情：
 
-检查 PDF 是否进入 Git：
-
-```powershell
-git ls-files "public/downloads/resources/selection-support/fitting-replacement/q20/drawings/Q2001-PMV-SPPE.pdf"
+```txt
+/en/resources/selection-support/fitting-replacement
 ```
 
-如果没有输出：
+点击产品卡片：
+
+```txt
+View Details
+```
+
+应该进入：
+
+```txt
+/en/resources/selection-support/fitting-replacement/q40/商品编码
+```
+
+不能跳回：
+
+```txt
+/resources/selection-support/fitting-replacement/q40/商品编码
+```
+
+---
+
+### 17.5 清单测试
+
+测试：
+
+```txt
+第一次点击加入清单
+  → 按钮变成已加入清单
+
+第二次点击已加入清单
+  → 从清单移除，按钮恢复加入清单
+
+详情页点击添加图纸
+  → 如果产品未加入清单，需要自动加入清单并标记 needDrawing = true
+```
+
+---
+
+### 17.6 图片和 PDF 测试
+
+检查控制台是否有 404：
+
+```txt
+产品图 .webp 不能 404
+图纸 .pdf 不能 404
+```
+
+如果 404，优先检查：
+
+```txt
+1. 文件名是否和 foreachModel 完全一致
+2. 后缀是否正确
+3. public 路径是否正确
+4. 数据里的 imagePath / drawingPdfPath 是否正确
+```
+
+---
+
+## 18. 常见错误
+
+### 错误 1：外语详情页跳回中文
+
+原因：
+
+```txt
+getFittingReplacementDetailHref 没有传 locale
+```
+
+修复：
+
+```ts
+getFittingReplacementDetailHref(
+  product.productCode,
+  SERIES_CONFIG.seriesKey,
+  locale
+)
+```
+
+---
+
+### 错误 2：PDF 不能打开
+
+可能原因：
+
+```txt
+1. PDF 文件损坏
+2. PDF 文件被加密软件处理过
+3. 文件名前后空格
+4. 文件名和 foreachModel 不一致
+5. public 路径写错
+```
+
+检查命令示例：
 
 ```powershell
-git add -f "public/downloads/resources/selection-support/fitting-replacement/q20/drawings"
-git commit -m "add fitting drawing pdf files"
+Format-Hex -Path ".\public\downloads\resources\selection-support\fitting-replacement\q40\drawings\Q4001-PMV-SPPE.pdf" | Select-Object -First 2
+```
+
+正常 PDF 开头应该能看到：
+
+```txt
+%PDF
+```
+
+---
+
+### 错误 3：图片不显示
+
+可能原因：
+
+```txt
+1. 图片路径不对
+2. 图片文件名和型号不一致
+3. 图片格式不是 webp
+4. 文件没有放到 public 目录
+```
+
+---
+
+### 错误 4：TypeScript 报 readonly 类型错误
+
+原因：
+
+```txt
+intl.ts 文件用了 as const
+组件 props 里如果写普通数组，会和 readonly 数组类型冲突
+```
+
+解决：
+
+```ts
+readonly items: readonly FittingReplacementFaqItem[];
+```
+
+---
+
+### 错误 5：按钮文字把卡片撑变形
+
+原因：
+
+```txt
+法语 / 俄语 / 西语按钮文案太长
+```
+
+解决：
+
+```txt
+优先缩短文案
+其次调整 ProductBasicCard.module.css
+```
+
+推荐短文案：
+
+```txt
+Détails
+Ajouter
+Детали
+Добавить
+Detalles
+Añadir
+```
+
+---
+
+### 错误 6：新增系列后 build 没有生成静态详情页
+
+原因：
+
+```txt
+generateStaticParams 没有从新系列数据中读取 productCode
+```
+
+解决：
+
+```txt
+检查 app/.../q40/[productCode]/page.tsx 是否使用了 q40 的 SERIES_CONFIG
+检查 getFittingReplacementDetailStaticParams 是否支持 seriesKey = q40
+```
+
+---
+
+## 19. 提交前检查
+
+提交前执行：
+
+```powershell
+npm run build
+git status
+```
+
+确认没有无关文件：
+
+```txt
+.bak
+临时备份文件夹
+未使用图片
+测试 PDF
+```
+
+如果没问题：
+
+```powershell
+git add .
+git commit -m "新增接头替代查询 Q40 系列支持"
+git push
+```
+
+如果只是完善文档：
+
+```powershell
+git add docs/resources/fitting-replacement-add-new-series.md
+git commit -m "完善接头替代查询新增系列说明文档"
 git push
 ```
 
 ---
 
-## 14.2 本地能打开，线上 404
+## 20. 最终原则
 
-检查文件名大小写：
-
-```txt
-Q2001-PMV-SPPE.pdf
-```
-
-不能写成：
+新增系列时遵守这几个原则：
 
 ```txt
-Q2001-PMV-SPPE.PDF
-q2001-pmv-sppe.pdf
-Q2001-PMV-SPPE (1).pdf
-```
-
----
-
-## 14.3 搜索不到产品
-
-检查：
-
-```txt
-1. 商品编码是否写错
-2. 恒永达型号是否写错
-3. 竞品编码是否进入 competitorModels
-4. 转换脚本是否重新运行
-5. 页面数据文件是否已更新
-```
-
----
-
-## 14.4 详情页 404
-
-检查：
-
-```txt
-1. getFittingReplacementDetailStaticParams 是否生成该商品编码
-2. 商品编码是否在 products 数据里
-3. 页面路径是否带正确系列
-4. 是否重新 npm run build
-```
-
----
-
-## 14.5 型号解析不正确
-
-检查：
-
-```txt
-1. modelRules 是否包含该字段
-2. fieldKey 是否正确
-3. code 是否和型号切分结果一致
-4. 当前系列型号结构是否和 Q20 一样
-5. 如果不一样，需要扩展 fittingReplacementModelParser.ts
-```
-
----
-
-# 15. 哪些文件不要重复新建
-
-新增 Q40、硬管接头、倒刺接头时，不要重复新建这些组件：
-
-```txt
-components/resources/fitting-replacement/FittingReplacementHome.tsx
-components/resources/fitting-replacement/FittingReplacementDetail.tsx
-components/resources/fitting-replacement/FittingReplacementGuide.tsx
-components/resources/fitting-replacement/FittingReplacementDrawingPreview.tsx
-components/resources/fitting-replacement/FittingReplacementFaq.tsx
-components/common/product-card/ProductBasicCard.tsx
-```
-
-这些组件继续复用。
-
-新增系列时，只新增：
-
-```txt
-数据
-配置
-图纸
-图片
-路由入口
-必要的转换脚本
-```
-
----
-
-# 16. 总结原则
-
-核心原则：
-
-```txt
-数据按产品类型和系列分级
-组件按功能复用
-路径按系列区分
-样式尽量公共化
-后续接后台优先改 service
-不要复制组件
-不要把所有接头塞进一个数据文件
-```
-
-当前标准：
-
-```txt
-fitting-replacement
-└─ fittings
-   └─ quick-connect
-      └─ q20
-```
-
-后续扩展：
-
-```txt
-fitting-replacement
-└─ fittings
-   ├─ quick-connect
-   │  ├─ q20
-   │  ├─ q40
-   │  └─ q60
-   ├─ hard-tube
-   ├─ barbed
-   ├─ luer
-   ├─ filter
-   └─ check-valve
-```
- 
+1. 数据进 data，不写死在组件里
+2. 获取数据进 services，不写死在 page.tsx
+3. 页面入口只负责传参和渲染
+4. 图片和 PDF 进 public
+5. 多语言进 intl.ts
+6. CSS 不进 globals.css
+7. 中文路径不加 /zh-CN
+8. 外语详情页必须保留 locale
+9. 图纸完整信息放详情页，首页卡片只做简洁展示
+10. 后期接后端时，优先替换 service，不重写组件
+``` 

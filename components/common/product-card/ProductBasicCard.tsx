@@ -118,7 +118,9 @@ export default function ProductBasicCard({
           return (
             <div className={styles.metaItem} key={`${item.label}-${item.value}`}>
               <dt>{item.label}</dt>
-              <dd>{item.value || "-"}</dd>
+              <dd title={item.value || "-"}>
+                {item.value || "-"}
+              </dd>
             </div>
           );
         })}

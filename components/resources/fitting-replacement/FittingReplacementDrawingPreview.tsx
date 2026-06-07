@@ -8,60 +8,45 @@
    components/resources/fitting-replacement/FittingReplacementDrawingPreview.tsx
 
    作用：
-   1. 展示详情页 2D 图纸预览区域
-   2. 默认只显示“点击预览图纸”封面
-   3. 用户点击后再加载 PDF iframe
+   1. 进入详情页后立即挂载 iframe，让 2D PDF 图纸提前加载
+   2. 默认用“点击预览图纸”封面盖住 PDF
+   3. 用户点击封面后，仅隐藏封面，不重新加载 PDF
    4. 不显示下载按钮
-   5. 不显示新窗口打开按钮
-   6. 通过 #toolbar=0 尽量隐藏浏览器 PDF 工具栏
-   7. 从 FittingReplacementDetail.tsx 中抽离，保持详情页结构清晰
-
-   注意：
-   1. 这里只是隐藏下载入口，不是真正防下载
-   2. public 目录下的 PDF 仍然可以被知道链接的人访问
-   3. 如果后续要真正防下载，应改成图片预览 + 询盘后发送 PDF
+   5. 文案从详情页 detailText.drawingPreview 传入，支持多语言
 ========================================================= */
 
 import { useEffect, useState } from "react";
 
 import LoadingProgress from "@/components/common/LoadingProgress";
 
-/* PDF 图纸预览加载遮罩兜底时间 */
+/* PDF 加载遮罩兜底时间 */
 const DRAWING_PREVIEW_LOADING_TIME = 1200;
 
-interface FittingReplacementDrawingPreviewProps {
-  /* PDF 预览地址，通常带 #toolbar=0 等参数 */
-  drawingPdfPreviewHref: string;
-
-  /* 产品型号，用于 iframe title */
-  productModel: string;
+interface FittingReplacementDrawingPreviewText {
+  readonly title: string;
+  readonly loadingLabel: string;
+  readonly previewButton: string;
+  readonly description: string;
 }
 
-/* =========================================================
-   2D 图纸预览组件
-========================================================= */
+interface FittingReplacementDrawingPreviewProps {
+  drawingPdfPreviewHref: string;
+  productModel: string;
+  text: FittingReplacementDrawingPreviewText;
+}
+
 export default function FittingReplacementDrawingPreview({
   drawingPdfPreviewHref,
   productModel,
+  text,
 }: FittingReplacementDrawingPreviewProps) {
-  /* 是否显示 PDF 预览 */
   const [isDrawingPreviewVisible, setIsDrawingPreviewVisible] = useState(false);
+  const [isDrawingLoading, setIsDrawingLoading] = useState(true);
 
-  /* PDF 加载遮罩 */
-  const [isDrawingLoading, setIsDrawingLoading] = useState(false);
-
-  /* =========================================================
-     点击预览后显示加载遮罩
-
-     说明：
-     1. 点击后 iframe 才挂载
-     2. iframe onLoad 后关闭加载层
-     3. 兜底 1.2 秒后也会关闭加载层
-  ========================================================= */
   useEffect(() => {
-    if (!isDrawingPreviewVisible) return;
-
-    setIsDrawingLoading(true);
+    if (!isDrawingPreviewVisible || !isDrawingLoading) {
+      return;
+    }
 
     const loadingTimer = window.setTimeout(() => {
       setIsDrawingLoading(false);
@@ -70,18 +55,35 @@ export default function FittingReplacementDrawingPreview({
     return () => {
       window.clearTimeout(loadingTimer);
     };
-  }, [isDrawingPreviewVisible, drawingPdfPreviewHref]);
+  }, [isDrawingPreviewVisible, isDrawingLoading]);
 
   return (
     <section className="frd-drawing-section">
       <div className="frd-drawing-head">
-        <h2>2D 图纸</h2>
+        <h2>{text.title}</h2>
       </div>
 
       <div className="frd-drawing-viewer">
         <LoadingProgress
           active={isDrawingPreviewVisible && isDrawingLoading}
-          label="正在加载 2D 图纸..."
+          label={text.loadingLabel}
+        />
+
+        {/* 
+          PDF iframe 始终挂载：
+          1. 页面进入后立即开始加载 PDF
+          2. 封面只是盖在上面
+          3. 点击封面后隐藏封面，直接看到已加载的 PDF
+        */}
+        <iframe
+          key={drawingPdfPreviewHref}
+          src={drawingPdfPreviewHref}
+          className="frd-drawing-object is-visible"
+          title={`${productModel} 2D PDF drawing`}
+          loading="eager"
+          onLoad={() => {
+            setIsDrawingLoading(false);
+          }}
         />
 
         {!isDrawingPreviewVisible ? (
@@ -94,22 +96,11 @@ export default function FittingReplacementDrawingPreview({
           >
             <span className="frd-drawing-play-icon" aria-hidden="true" />
 
-            <strong>点击预览图纸</strong>
+            <strong>{text.previewButton}</strong>
 
-            <em>如需图纸文件，请添加至清单列表</em>
+            <em>{text.description}</em>
           </button>
-        ) : (
-          <iframe
-            key={drawingPdfPreviewHref}
-            src={drawingPdfPreviewHref}
-            className="frd-drawing-object is-visible"
-            title={`${productModel} 2D PDF drawing`}
-            loading="eager"
-            onLoad={() => {
-              setIsDrawingLoading(false);
-            }}
-          />
-        )}
+        ) : null}
       </div>
     </section>
   );

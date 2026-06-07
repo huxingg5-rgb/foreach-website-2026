@@ -14,18 +14,10 @@
 
    作用：
    1. 作为外语接头替代查询页面入口
-   2. 让外语资源中心路径先能正常访问
-   3. 当前阶段先复用中文 Q20 数据
-   4. 当前阶段先复用中文 FittingReplacementHome 组件
-   5. 后续真正多语言时，优先改 service / data，不改组件结构
-
-   注意：
-   1. 中文页面仍然走：
-      app/resources/selection-support/fitting-replacement/page.tsx
-   2. 中文默认不加 /zh-CN
-   3. 外语页面统一走 /[locale]/...
-   4. 如果 next.config.js 使用 output: "export"，
-      必须保留 generateStaticParams()
+   2. 当前加载 Q20 快插接头数据
+   3. 产品数据仍然复用 q20.zh.ts
+   4. 首页文案根据 locale 从 q20.page.intl.ts 读取
+   5. 后续真正多语言产品字段，可以继续扩展 service
 ========================================================= */
 
 import type { Metadata } from "next";
@@ -56,10 +48,6 @@ const SERIES_CONFIG = Q20_FITTING_REPLACEMENT_SERIES_CONFIG;
 
 /* =========================================================
    页面参数类型
-
-   说明：
-   1. 当前项目使用较新的 Next.js 写法
-   2. params 按 Promise 处理更稳
 ========================================================= */
 interface FittingReplacementLocalePageProps {
   params: Promise<{
@@ -78,10 +66,6 @@ function isSupportedLocale(locale: string): locale is FittingReplacementLocale {
 
 /* =========================================================
    静态导出参数
-
-   说明：
-   如果 next.config.js 使用 output: "export"，
-   外语动态路由必须提前生成所有 locale。
 ========================================================= */
 export function generateStaticParams() {
   return FITTING_REPLACEMENT_LOCALES.map((locale) => {
@@ -95,9 +79,8 @@ export function generateStaticParams() {
    多语言页面 SEO 信息
 
    说明：
-   1. 当前阶段先使用英文 SEO
-   2. 后续真正做多语言时，可以根据 locale 返回不同语言标题
-   3. 页面内容当前仍然复用中文 Q20 数据
+   1. 当前先根据 locale 返回基础 SEO
+   2. 具体页面内容由 service 读取对应语言文案
 ========================================================= */
 export async function generateMetadata({
   params,
@@ -110,20 +93,19 @@ export async function generateMetadata({
     };
   }
 
+  const pageData = await getFittingReplacementHomeData(
+    SERIES_CONFIG.seriesKey,
+    locale
+  );
+
   return {
-    title: `Fitting Replacement Search｜Selection Support｜FOREACH`,
-    description: `Search by competitor model, product code, or FOREACH model to find matching ${SERIES_CONFIG.productName} products and model details.`,
+    title: `${pageData.banner.title}｜Selection Support｜FOREACH`,
+    description: pageData.banner.description,
   };
 }
 
 /* =========================================================
    多语言接头替代查询页面
-
-   说明：
-   1. 当前先复用中文 Q20 数据
-   2. 后续如果接入真正多语言数据，可以改成：
-      getFittingReplacementHomeData(SERIES_CONFIG.seriesKey, locale)
-   3. 这里不写搜索、筛选、分页、清单逻辑
 ========================================================= */
 export default async function FittingReplacementLocalePage({
   params,
@@ -135,7 +117,8 @@ export default async function FittingReplacementLocalePage({
   }
 
   const pageData = await getFittingReplacementHomeData(
-    SERIES_CONFIG.seriesKey
+    SERIES_CONFIG.seriesKey,
+    locale
   );
 
   return <FittingReplacementHome data={pageData} />;

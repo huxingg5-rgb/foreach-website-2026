@@ -5,49 +5,56 @@
    文件路径：
    components/common/product-card/ProductBasicCard.module.css
 
-   说明：
-   1. 只服务 ProductBasicCard.tsx
-   2. 使用 CSS Module，避免影响其它页面
-   3. 不写入 app/globals.css
-   4. 保持品牌视觉：
-      - 深蓝：#173368
-      - 荧光青：#09e9b4
-      - 白底
-      - 细线
-      - 不做大圆角
-      - 不做大阴影
+   作用：
+   1. 服务接头替代查询首页产品卡片
+   2. 服务接头选型指引匹配结果卡片
+   3. 控制产品图片、标题、参数、按钮布局
+   4. 恢复产品卡片 hover 动效
+   5. 参数值超出一行时使用省略号，避免卡片被撑高
 ========================================================= */
 
 .card {
   position: relative;
-  min-height: 470px;
+  min-height: 100%;
   padding: 18px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  border: 1px solid rgba(23, 51, 104, 0.14);
+  border: 1px solid rgba(23, 51, 104, 0.16);
   background: #ffffff;
+  color: #173368;
+  transform: translateY(0);
   transition:
     border-color 0.22s ease,
-    transform 0.22s ease;
+    transform 0.22s ease,
+    background 0.22s ease;
 }
 
-/* 顶部荧光线 */
+/* =========================================================
+   顶部荧光线动效
+
+   说明：
+   1. 默认隐藏在左侧
+   2. hover 时横向展开
+   3. 保持官网深蓝 + 荧光青风格
+========================================================= */
+
 .card::before {
   content: "";
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
+  z-index: 2;
   width: 100%;
   height: 3px;
   background: #09e9b4;
   transform: scaleX(0);
   transform-origin: left center;
-  transition: transform 0.22s ease;
+  transition: transform 0.24s ease;
 }
 
 .card:hover {
-  border-color: rgba(9, 233, 180, 0.95);
+  border-color: #09e9b4;
   transform: translateY(-6px);
 }
 
@@ -60,38 +67,33 @@
 ========================================================= */
 
 .imageBox {
-  height: 240px;
+  height: 230px;
+  margin-bottom: 18px;
   display: grid;
   place-items: center;
-  margin-bottom: 18px;
-  overflow: visible;
+  background: #ffffff;
+  overflow: hidden;
 }
 
 .image {
   width: auto;
-  max-width: 94%;
-  max-height: 230px;
+  max-width: 96%;
+  max-height: 210px;
   object-fit: contain;
-  transform: translateY(0) scale(1);
+  transform: scale(1);
   transition:
-    transform 0.24s ease,
-    filter 0.24s ease;
+    transform 0.28s ease,
+    opacity 0.28s ease;
 }
 
 .card:hover .image {
-  transform: translateY(-4px) scale(1.06);
-  filter: saturate(1.04) contrast(1.03);
+  transform: scale(1.055);
 }
 
 .imagePlaceholder {
-  width: 100%;
-  height: 100%;
-  display: grid;
-  place-items: center;
-  border: 1px dashed rgba(23, 51, 104, 0.18);
-  color: rgba(23, 51, 104, 0.42);
+  color: #8b96a8;
   font-size: 14px;
-  font-weight: 700;
+  line-height: 1.6;
 }
 
 /* =========================================================
@@ -99,99 +101,121 @@
 ========================================================= */
 
 .title {
-  margin: 0 0 10px;
+  margin: 0 0 12px;
   color: #173368;
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.35;
   font-weight: 900;
-}
+  letter-spacing: -0.03em;
+  transition: color 0.18s ease;
+} 
 
 /* =========================================================
+   卡片 hover 时标题变荧光色
+
+   说明：
+   1. 鼠标移入产品卡片时，标题同步变为品牌荧光色
+   2. 与卡片外框、顶部荧光线保持统一
+========================================================= */
+
+.card:hover .title {
+  color: #09e9b4;
+}
+/* =========================================================
    参数信息
+
+   说明：
+   1. label 固定宽度
+   2. value 自动占满剩余空间
+   3. value 超出一行时显示省略号
+   4. 避免兼容编码太长导致卡片高度变形
 ========================================================= */
 
 .metaList {
+  margin: 0;
   display: grid;
-  gap: 5px;
-  margin: 0 0 14px;
-  font-size: 13px;
-  line-height: 1.5;
+  gap: 4px;
 }
 
 .metaItem {
+  min-width: 0;
   display: flex;
   align-items: baseline;
-  gap: 6px;
-  min-width: 0;
+  gap: 4px;
 }
 
 .metaItem dt {
   flex: 0 0 auto;
-  margin: 0;
   color: #5e6b80;
+  font-size: 14px;
+  line-height: 1.6;
   font-weight: 400;
+  white-space: nowrap;
 }
 
 .metaItem dd {
+  flex: 1 1 auto;
   min-width: 0;
   margin: 0;
   color: #173368;
+  font-size: 14px;
+  line-height: 1.6;
   font-weight: 900;
-  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* =========================================================
-   按钮区域
+   操作按钮
 ========================================================= */
 
 .actionRow {
   margin-top: auto;
+  padding-top: 18px;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 8px;
+  align-items: center;
 }
 
 .actionButton {
-  height: 36px;
-  padding: 0 12px;
+  min-height: 38px;
+  padding: 0 10px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border: 1px solid rgba(23, 51, 104, 0.24);
-  border-radius: 6px;
+  border-radius: 5px;
   background: #ffffff;
   color: #173368;
   font-size: 13px;
-  line-height: 1;
+  line-height: 1.2;
   font-weight: 900;
+  text-align: center;
   text-decoration: none;
   cursor: pointer;
-  box-shadow: none;
   transition:
-    transform 0.18s ease,
     background 0.18s ease,
     color 0.18s ease,
-    border-color 0.18s ease;
+    border-color 0.18s ease,
+    transform 0.18s ease;
 }
 
-.actionButton:hover,
-.actionButton:active,
-.actionButton:focus-visible {
-  border-color: #173368;
+.actionButton:hover {
+  border-color: #09e9b4;
   background: #173368;
   color: #09e9b4;
-  transform: translateY(-1px);
+  transform: translateY(-1px); 
 }
 
 .actionButton.isActive {
-  border-color: #173368;
+  border-color: #09e9b4;
   background: #173368;
   color: #09e9b4;
 }
 
-.actionButton.isActive:hover,
-.actionButton.isActive:active,
-.actionButton.isActive:focus-visible {
+.actionButton.isActive:hover {
   border-color: #173368;
   background: #173368;
   color: #09e9b4;
@@ -203,14 +227,30 @@
 
 @media (max-width: 720px) {
   .card {
-    min-height: auto;
+    padding: 16px;
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
   }
 
   .imageBox {
-    height: 220px;
+    height: 210px;
+  }
+
+  .image {
+    max-height: 190px;
+  }
+
+  .title {
+    font-size: 18px;
   }
 
   .actionRow {
     grid-template-columns: 1fr;
+  }
+
+  .actionButton {
+    min-height: 40px;
   }
 } 

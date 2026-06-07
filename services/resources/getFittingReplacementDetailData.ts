@@ -9,18 +9,15 @@
    1. 根据商品编码读取单个接头替代详情
    2. 当前阶段默认读取：
       fittings / quick-connect / q20
-   3. 后续新增 Q40、硬管接头、倒刺接头时，在数据源映射里继续扩展
-   4. 后期接后台 / 数据库时，优先改这个文件
-
-   当前数据层级：
-   fitting-replacement
-   └─ fittings
-      └─ quick-connect
-         └─ q20
+   3. 产品数据来自 q20.zh.ts
+   4. 详情页多语言文案来自 q20.detail.intl.ts
+   5. 支持 zh / en / es / fr / ko / ru 多语言详情页文案
+   6. 后期接后台 / 数据库时，优先改这个文件
 ========================================================= */
 
 import { fittingReplacementQuickConnectQ20ZhData } from "@/data/resources/fitting-replacement/fittings/quick-connect/q20/q20.zh";
-import { fittingReplacementQuickConnectQ20DetailZh } from "@/data/resources/fitting-replacement/fittings/quick-connect/q20/q20.detail.zh";
+
+import { getFittingReplacementQuickConnectQ20DetailIntl } from "@/data/resources/fitting-replacement/fittings/quick-connect/q20/q20.detail.intl";
 
 import type {
   FittingModelRule,
@@ -29,7 +26,12 @@ import type {
 
 import type { FittingReplacementSeriesKey } from "@/data/resources/fitting-replacement/fitting-replacement-series.config";
 
-import { getFittingReplacementSeriesConfig } from "@/data/resources/fitting-replacement/fitting-replacement-series.config";
+/* =========================================================
+   详情页多语言文案类型
+========================================================= */
+type FittingReplacementDetailText = ReturnType<
+  typeof getFittingReplacementQuickConnectQ20DetailIntl
+>;
 
 /* =========================================================
    详情页数据类型
@@ -46,6 +48,9 @@ export interface FittingReplacementDetailPageData {
     label: string;
     href?: string;
   }[];
+
+  /* 详情页多语言文案 */
+  detailText: FittingReplacementDetailText;
 }
 
 /* =========================================================
@@ -53,11 +58,11 @@ export interface FittingReplacementDetailPageData {
 
    说明：
    1. pageData：当前系列产品数据与型号规则
-   2. detailText：当前系列详情页文案
+   2. 详情页文案不放在这里
+   3. 详情页文案统一从 q20.detail.intl.ts 按 locale 读取
 ========================================================= */
 interface FittingReplacementStaticDataSource {
   pageData: typeof fittingReplacementQuickConnectQ20ZhData;
-  detailText: typeof fittingReplacementQuickConnectQ20DetailZh;
 }
 
 /* =========================================================
@@ -77,7 +82,6 @@ const FITTING_REPLACEMENT_STATIC_DATA_SOURCE_MAP: Record<
 > = {
   q20: {
     pageData: fittingReplacementQuickConnectQ20ZhData,
-    detailText: fittingReplacementQuickConnectQ20DetailZh,
   },
 };
 
@@ -122,29 +126,17 @@ function findFittingReplacementProductByCode(
    生成详情页面包屑
 
    说明：
-   1. 基础层级来自详情页文案文件
+   1. 基础层级来自 q20.detail.intl.ts
    2. 最后一项当前产品型号由 service 自动补上
-   3. String(item.label) 用于避免 TypeScript 字面量类型收窄报错
+   3. 这样不会污染自动生成的产品数据文件
 ========================================================= */
 function createDetailBreadcrumbs(
   product: FittingReplacementProduct,
-  seriesKey: FittingReplacementSeriesKey
+  detailText: FittingReplacementDetailText
 ): FittingReplacementDetailPageData["breadcrumbs"] {
-  const dataSource = getFittingReplacementStaticDataSource(seriesKey);
-  const seriesConfig = getFittingReplacementSeriesConfig(seriesKey);
-
-  const baseBreadcrumbs = dataSource.detailText.breadcrumbs.map((item) => {
-    const label = String(item.label);
-
-    if (label === "接头型号替代查询" || label === "型号替代查询") {
-      return {
-        label: seriesConfig.sourceLabel,
-        href: seriesConfig.homeHref,
-      };
-    }
-
+  const baseBreadcrumbs = detailText.breadcrumbs.map((item) => {
     return {
-      label,
+      label: String(item.label),
       href: item.href,
     };
   });
@@ -163,12 +155,15 @@ function createDetailBreadcrumbs(
    参数说明：
    1. productCode：商品编码，例如 839085
    2. seriesKey：接头系列，当前默认 q20
+   3. locale：语言，中文传 zh，外语传 en / es / fr / ko / ru
 ========================================================= */
 export async function getFittingReplacementDetailData(
   productCode: string,
-  seriesKey: FittingReplacementSeriesKey = "q20"
+  seriesKey: FittingReplacementSeriesKey = "q20",
+  locale: string = "zh"
 ): Promise<FittingReplacementDetailPageData | null> {
   const dataSource = getFittingReplacementStaticDataSource(seriesKey);
+  const detailText = getFittingReplacementQuickConnectQ20DetailIntl(locale);
 
   const product = findFittingReplacementProductByCode(
     productCode,
@@ -182,7 +177,8 @@ export async function getFittingReplacementDetailData(
   return {
     product,
     modelRules: [...dataSource.pageData.modelRules],
-    breadcrumbs: createDetailBreadcrumbs(product, seriesKey),
+    breadcrumbs: createDetailBreadcrumbs(product, detailText),
+    detailText,
   };
 }
 
