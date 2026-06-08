@@ -11,6 +11,15 @@
    3. 英文数据来自 datasheets.en.ts
    4. 西班牙语、法语、韩语、俄语当前先基于英文数据结构做多语言覆盖
    5. 后期接后端时，可以把这个文件替换为 CMS / 数据库返回的数据
+
+   本次调整：
+   1. 中文按钮：查看产品 / 下载
+   2. 英文按钮：View Product / Download
+   3. 西语按钮：Ver producto / Descargar
+   4. 法语按钮：Voir le produit / Télécharger
+   5. 韩语按钮：제품 보기 / 다운로드
+   6. 俄语按钮：Смотреть продукт / Скачать
+   7. “查看产品”必须保留产品含义，避免客户误解为预览规格书
 ========================================================= */
 
 import {
@@ -37,9 +46,11 @@ import type {
    外语规格书页面文案
 
    说明：
-   1. 英文直接复用 datasheets.en.ts
+   1. 英文直接复用 datasheets.en.ts，但在 getDatasheetsStaticPageText 中覆盖按钮文案
    2. 西班牙语、法语、韩语、俄语只覆盖页面文字
    3. Banner 图片继续复用英文页面图片
+   4. 下载按钮不写“下载规格书”，避免按钮过长
+   5. 查看产品按钮必须带“产品”含义，避免客户误解为预览规格书
 ========================================================= */
 
 const foreignPageTextMap: Record<
@@ -86,8 +97,8 @@ const foreignPageTextMap: Record<
       version: "Versión",
       update: "Actualización",
       viewProduct: "Ver producto",
-      download: "Descargar ficha técnica",
-      custom: "Solicitud personalizada",
+      download: "Descargar",
+      custom: "Personalizar",
     },
     support: {
       kicker: "Soporte",
@@ -139,8 +150,8 @@ const foreignPageTextMap: Record<
       version: "Version",
       update: "Mise à jour",
       viewProduct: "Voir le produit",
-      download: "Télécharger la fiche",
-      custom: "Demande personnalisée",
+      download: "Télécharger",
+      custom: "Sur mesure",
     },
     support: {
       kicker: "Support",
@@ -192,7 +203,7 @@ const foreignPageTextMap: Record<
       version: "버전",
       update: "업데이트",
       viewProduct: "제품 보기",
-      download: "사양서 다운로드",
+      download: "다운로드",
       custom: "맞춤 요청",
     },
     support: {
@@ -245,8 +256,8 @@ const foreignPageTextMap: Record<
       version: "Версия",
       update: "Обновлено",
       viewProduct: "Смотреть продукт",
-      download: "Скачать спецификацию",
-      custom: "Индивидуальный запрос",
+      download: "Скачать",
+      custom: "Под заказ",
     },
     support: {
       kicker: "Поддержка",
@@ -274,33 +285,33 @@ const foreignFilterLabelMap: Record<
 > = {
   es: {
     all: "Todo",
-    pump: "Serie de bombas",
-    valve: "Serie de válvulas",
-    needle: "Serie de sondas",
+    pump: "Bombas",
+    valve: "Válvulas",
+    needle: "Sondas",
     tubing: "Tubos y conectores",
     smart: "Módulos de control",
   },
   fr: {
     all: "Tous",
-    pump: "Série de pompes",
-    valve: "Série de vannes",
-    needle: "Série de sondes",
+    pump: "Pompes",
+    valve: "Vannes",
+    needle: "Sondes",
     tubing: "Tubes et raccords",
     smart: "Modules de contrôle",
   },
   ko: {
     all: "전체",
-    pump: "펌프 시리즈",
-    valve: "밸브 시리즈",
-    needle: "프로브 시리즈",
+    pump: "펌프",
+    valve: "밸브",
+    needle: "프로브",
     tubing: "튜빙 및 피팅",
     smart: "제어 모듈",
   },
   ru: {
     all: "Все",
-    pump: "Серия насосов",
-    valve: "Серия клапанов",
-    needle: "Серия зондов",
+    pump: "Насосы",
+    valve: "Клапаны",
+    needle: "Зонды",
     tubing: "Трубки и фитинги",
     smart: "Модули управления",
   },
@@ -328,7 +339,7 @@ const foreignItemTextMap: Record<
   es: {
     "plunger-pump": {
       title: "Ficha técnica de la serie de bombas de émbolo",
-      label: "Serie de bombas",
+      label: "Bombas",
       language: "PDF en inglés",
       description:
         "Para dosificación precisa, distribución y sistemas fluídicos de instrumentos analíticos automatizados.",
@@ -336,7 +347,7 @@ const foreignItemTextMap: Record<
     },
     "valveless-pump": {
       title: "Ficha técnica de bomba sin válvulas",
-      label: "Serie de bombas",
+      label: "Bombas",
       language: "PDF en inglés",
       description:
         "Para aplicaciones de microdosificación que reducen el número de válvulas y mejoran la fiabilidad del sistema.",
@@ -344,7 +355,7 @@ const foreignItemTextMap: Record<
     },
     "diaphragm-pump": {
       title: "Ficha técnica de bomba de diafragma",
-      label: "Serie de bombas",
+      label: "Bombas",
       language: "PDF en inglés",
       description:
         "Para suministro de bajo caudal, transferencia autocebante, suministro de líquidos de lavado e integración fluídica automatizada.",
@@ -352,7 +363,7 @@ const foreignItemTextMap: Record<
     },
     "high-pressure-pump": {
       title: "Ficha técnica de bomba de alta presión",
-      label: "Serie de bombas",
+      label: "Bombas",
       language: "PDF en inglés",
       description:
         "Para control de fluidos a alta presión, transferencia precisa y aplicaciones fluídicas resistentes a la presión.",
@@ -360,7 +371,7 @@ const foreignItemTextMap: Record<
     },
     "syringe-pump": {
       title: "Ficha técnica de bomba de jeringa",
-      label: "Serie de bombas",
+      label: "Bombas",
       language: "PDF en inglés",
       description:
         "Para dosificación de alta precisión de μL a mL, distribución y manejo de líquidos multicanal.",
@@ -368,7 +379,7 @@ const foreignItemTextMap: Record<
     },
     "rotary-valve": {
       title: "Ficha técnica de válvula rotativa",
-      label: "Serie de válvulas",
+      label: "Válvulas",
       language: "PDF en inglés",
       description:
         "Para conmutación de flujo multicanal, distribución de reactivos e integración de sistemas fluídicos complejos.",
@@ -376,7 +387,7 @@ const foreignItemTextMap: Record<
     },
     "high-pressure-valve": {
       title: "Ficha técnica de válvula de alta presión",
-      label: "Serie de válvulas",
+      label: "Válvulas",
       language: "PDF en inglés",
       description:
         "Para conmutación de fluidos a alta presión, control resistente a la presión y gestión precisa de fluidos.",
@@ -384,15 +395,15 @@ const foreignItemTextMap: Record<
     },
     "solenoid-valve": {
       title: "Ficha técnica de válvula solenoide",
-      label: "Serie de válvulas",
+      label: "Válvulas",
       language: "PDF en inglés",
       description:
         "Para control de apertura/cierre y conmutación microfluídica de muestras, reactivos y líquidos de lavado.",
       keywords: "válvula solenoide control conmutación solenoid valve",
     },
     "sample-probe": {
-      title: "Serie de sondas",
-      label: "Serie de sondas",
+      title: "Sondas",
+      label: "Sondas",
       language: "—",
       description:
         "Actualmente no hay ficha técnica estándar. Se admiten solicitudes personalizadas basadas en planos o muestras.",
@@ -427,7 +438,7 @@ const foreignItemTextMap: Record<
   fr: {
     "plunger-pump": {
       title: "Fiche technique de la série de pompes à piston",
-      label: "Série de pompes",
+      label: "Pompes",
       language: "PDF en anglais",
       description:
         "Pour le dosage de haute précision, la distribution et les systèmes fluidiques d’instruments d’analyse automatisés.",
@@ -435,7 +446,7 @@ const foreignItemTextMap: Record<
     },
     "valveless-pump": {
       title: "Fiche technique de pompe sans vanne",
-      label: "Série de pompes",
+      label: "Pompes",
       language: "PDF en anglais",
       description:
         "Pour les applications de microdosage réduisant le nombre de vannes et améliorant la fiabilité du système.",
@@ -443,7 +454,7 @@ const foreignItemTextMap: Record<
     },
     "diaphragm-pump": {
       title: "Fiche technique de pompe à membrane",
-      label: "Série de pompes",
+      label: "Pompes",
       language: "PDF en anglais",
       description:
         "Pour l’alimentation à faible débit, le transfert auto-amorçant, l’acheminement de liquides de lavage et l’intégration fluidique automatisée.",
@@ -451,7 +462,7 @@ const foreignItemTextMap: Record<
     },
     "high-pressure-pump": {
       title: "Fiche technique de pompe haute pression",
-      label: "Série de pompes",
+      label: "Pompes",
       language: "PDF en anglais",
       description:
         "Pour le contrôle fluidique haute pression, le transfert précis et les applications fluidiques résistantes à la pression.",
@@ -459,7 +470,7 @@ const foreignItemTextMap: Record<
     },
     "syringe-pump": {
       title: "Fiche technique de pompe seringue",
-      label: "Série de pompes",
+      label: "Pompes",
       language: "PDF en anglais",
       description:
         "Pour le dosage de haute précision de μL à mL, la distribution et la manipulation de liquides multicanal.",
@@ -467,7 +478,7 @@ const foreignItemTextMap: Record<
     },
     "rotary-valve": {
       title: "Fiche technique de vanne rotative",
-      label: "Série de vannes",
+      label: "Vannes",
       language: "PDF en anglais",
       description:
         "Pour la commutation de voies fluidiques multicanal, la distribution de réactifs et l’intégration de systèmes fluidiques complexes.",
@@ -475,7 +486,7 @@ const foreignItemTextMap: Record<
     },
     "high-pressure-valve": {
       title: "Fiche technique de vanne haute pression",
-      label: "Série de vannes",
+      label: "Vannes",
       language: "PDF en anglais",
       description:
         "Pour la commutation fluidique haute pression, le contrôle résistant à la pression et la gestion précise des fluides.",
@@ -483,15 +494,15 @@ const foreignItemTextMap: Record<
     },
     "solenoid-valve": {
       title: "Fiche technique d’électrovanne",
-      label: "Série de vannes",
+      label: "Vannes",
       language: "PDF en anglais",
       description:
         "Pour le contrôle marche/arrêt et la commutation microfluidique des échantillons, réactifs et liquides de lavage.",
       keywords: "électrovanne contrôle commutation solenoid valve",
     },
     "sample-probe": {
-      title: "Série de sondes",
-      label: "Série de sondes",
+      title: "Sondes",
+      label: "Sondes",
       language: "—",
       description:
         "Aucune fiche technique standard n’est disponible pour le moment. Les demandes personnalisées sont prises en charge à partir de plans ou d’échantillons.",
@@ -526,7 +537,7 @@ const foreignItemTextMap: Record<
   ko: {
     "plunger-pump": {
       title: "플런저 펌프 시리즈 사양서",
-      label: "펌프 시리즈",
+      label: "펌프",
       language: "영어 PDF",
       description:
         "고정밀 정량 이송, 분주 및 자동화 분석 장비의 유체 시스템에 적합합니다.",
@@ -534,7 +545,7 @@ const foreignItemTextMap: Record<
     },
     "valveless-pump": {
       title: "무밸브 펌프 사양서",
-      label: "펌프 시리즈",
+      label: "펌프",
       language: "영어 PDF",
       description:
         "밸브 수를 줄이고 시스템 신뢰성을 높이는 미량 정량 액체 응용에 적합합니다.",
@@ -542,7 +553,7 @@ const foreignItemTextMap: Record<
     },
     "diaphragm-pump": {
       title: "다이어프램 펌프 사양서",
-      label: "펌프 시리즈",
+      label: "펌프",
       language: "영어 PDF",
       description:
         "소유량 공급, 자흡 이송, 세척액 공급 및 자동화 유체 시스템 통합에 적합합니다.",
@@ -550,7 +561,7 @@ const foreignItemTextMap: Record<
     },
     "high-pressure-pump": {
       title: "고압 펌프 사양서",
-      label: "펌프 시리즈",
+      label: "펌프",
       language: "영어 PDF",
       description:
         "고압 유체 제어, 정밀 이송 및 특수 내압 유로 응용에 적합합니다.",
@@ -558,7 +569,7 @@ const foreignItemTextMap: Record<
     },
     "syringe-pump": {
       title: "시린지 펌프 사양서",
-      label: "펌프 시리즈",
+      label: "펌프",
       language: "영어 PDF",
       description:
         "μL–mL급 고정밀 정량, 분주 및 다중 채널 액체 처리에 적합합니다.",
@@ -566,7 +577,7 @@ const foreignItemTextMap: Record<
     },
     "rotary-valve": {
       title: "로터리 밸브 사양서",
-      label: "밸브 시리즈",
+      label: "밸브",
       language: "영어 PDF",
       description:
         "다중 채널 유로 전환, 시약 분배 및 복잡한 유체 시스템 통합에 적합합니다.",
@@ -574,7 +585,7 @@ const foreignItemTextMap: Record<
     },
     "high-pressure-valve": {
       title: "고압 밸브 사양서",
-      label: "밸브 시리즈",
+      label: "밸브",
       language: "영어 PDF",
       description:
         "고압 유로 전환, 내압 제어 및 정밀 유체 관리에 적합합니다.",
@@ -582,15 +593,15 @@ const foreignItemTextMap: Record<
     },
     "solenoid-valve": {
       title: "솔레노이드 밸브 사양서",
-      label: "밸브 시리즈",
+      label: "밸브",
       language: "영어 PDF",
       description:
         "샘플, 시약 및 세척액의 미세유체 온오프 제어와 전환에 적합합니다.",
       keywords: "솔레노이드 밸브 온오프 제어 전환",
     },
     "sample-probe": {
-      title: "프로브 시리즈",
-      label: "프로브 시리즈",
+      title: "프로브",
+      label: "프로브",
       language: "—",
       description:
         "현재 표준 사양서는 없으며, 도면 또는 샘플 기반 맞춤 요청을 지원합니다.",
@@ -625,7 +636,7 @@ const foreignItemTextMap: Record<
   ru: {
     "plunger-pump": {
       title: "Спецификация серии плунжерных насосов",
-      label: "Серия насосов",
+      label: "Насосы",
       language: "PDF на английском",
       description:
         "Для высокоточного дозирования, распределения и жидкостных систем автоматизированных аналитических приборов.",
@@ -633,7 +644,7 @@ const foreignItemTextMap: Record<
     },
     "valveless-pump": {
       title: "Спецификация безклапанного насоса",
-      label: "Серия насосов",
+      label: "Насосы",
       language: "PDF на английском",
       description:
         "Для микродозирования, где требуется сократить количество клапанов и повысить надежность системы.",
@@ -641,7 +652,7 @@ const foreignItemTextMap: Record<
     },
     "diaphragm-pump": {
       title: "Спецификация мембранного насоса",
-      label: "Серия насосов",
+      label: "Насосы",
       language: "PDF на английском",
       description:
         "Для подачи малых объемов, самовсасывающей передачи, подачи промывочных жидкостей и интеграции в автоматизированные жидкостные системы.",
@@ -649,7 +660,7 @@ const foreignItemTextMap: Record<
     },
     "high-pressure-pump": {
       title: "Спецификация насоса высокого давления",
-      label: "Серия насосов",
+      label: "Насосы",
       language: "PDF на английском",
       description:
         "Для управления жидкостями под высоким давлением, точной передачи и специальных напорных жидкостных применений.",
@@ -657,7 +668,7 @@ const foreignItemTextMap: Record<
     },
     "syringe-pump": {
       title: "Спецификация шприцевого насоса",
-      label: "Серия насосов",
+      label: "Насосы",
       language: "PDF на английском",
       description:
         "Для высокоточного дозирования от μL до mL, распределения и многоканальной работы с жидкостями.",
@@ -665,7 +676,7 @@ const foreignItemTextMap: Record<
     },
     "rotary-valve": {
       title: "Спецификация роторного клапана",
-      label: "Серия клапанов",
+      label: "Клапаны",
       language: "PDF на английском",
       description:
         "Для многоканального переключения потоков, распределения реагентов и интеграции сложных жидкостных систем.",
@@ -673,7 +684,7 @@ const foreignItemTextMap: Record<
     },
     "high-pressure-valve": {
       title: "Спецификация клапана высокого давления",
-      label: "Серия клапанов",
+      label: "Клапаны",
       language: "PDF на английском",
       description:
         "Для переключения потоков под высоким давлением, напорного управления и точного управления жидкостями.",
@@ -681,15 +692,15 @@ const foreignItemTextMap: Record<
     },
     "solenoid-valve": {
       title: "Спецификация соленоидного клапана",
-      label: "Серия клапанов",
+      label: "Клапаны",
       language: "PDF на английском",
       description:
         "Для микрофлюидного включения/выключения и переключения проб, реагентов и промывочных жидкостей.",
       keywords: "соленоидный клапан переключение",
     },
     "sample-probe": {
-      title: "Серия зондов",
-      label: "Серия зондов",
+      title: "Зонды",
+      label: "Зонды",
       language: "—",
       description:
         "Стандартная спецификация пока недоступна. Возможны индивидуальные запросы по чертежам или образцам.",
@@ -725,6 +736,11 @@ const foreignItemTextMap: Record<
 /* =========================================================
    localizeFilterOptions
    根据语言生成筛选按钮
+
+   说明：
+   1. 中文和英文继续使用原始数据
+   2. 西班牙语、法语、韩语、俄语使用当前文件中的短标签
+   3. value 不能修改，否则筛选逻辑会失效
 ========================================================= */
 
 function localizeFilterOptions(
@@ -749,6 +765,13 @@ function localizeFilterOptions(
 /* =========================================================
    localizeItems
    根据语言生成规格书卡片
+
+   说明：
+   1. 中文和英文继续使用原始卡片数据
+   2. 外语页面使用英文卡片结构，只替换标题、标签、语言、描述、关键词
+   3. PDF 下载链接继续沿用英文 PDF
+   4. 产品链接继续沿用英文产品路径
+   5. probe / needle 这种暂无规格书的项目，跳转到对应语言联系页
 ========================================================= */
 
 function localizeItems(locale: DatasheetLocale): DatasheetItem[] {
@@ -786,17 +809,39 @@ function localizeItems(locale: DatasheetLocale): DatasheetItem[] {
 /* =========================================================
    getDatasheetsStaticPageText
    根据语言生成页面文案
+
+   说明：
+   1. 中文数据来自 datasheets.zh.ts，但这里统一覆盖按钮文字
+   2. 英文数据来自 datasheets.en.ts，但这里统一覆盖按钮文字
+   3. 外语数据来自当前文件 foreignPageTextMap
+   4. 这样只改当前聚合文件，也能统一按钮文案
 ========================================================= */
 
 function getDatasheetsStaticPageText(
   locale: DatasheetLocale,
 ): DatasheetsPageText {
   if (locale === "zh-CN") {
-    return datasheetsZhPageText;
+    return {
+      ...datasheetsZhPageText,
+      labels: {
+        ...datasheetsZhPageText.labels,
+        viewProduct: "查看产品",
+        download: "下载",
+        custom: "来图定制",
+      },
+    };
   }
 
   if (locale === "en") {
-    return datasheetsEnPageText;
+    return {
+      ...datasheetsEnPageText,
+      labels: {
+        ...datasheetsEnPageText.labels,
+        viewProduct: "View Product",
+        download: "Download",
+        custom: "Custom Request",
+      },
+    };
   }
 
   return foreignPageTextMap[locale];
@@ -820,4 +865,4 @@ export function getDatasheetsStaticPageData(
     filterOptions: localizeFilterOptions(locale),
     datasheetItems: localizeItems(locale),
   };
-}
+} 

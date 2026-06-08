@@ -429,3 +429,23 @@
   padding: 0;
   background: #ffffff;
 }
+/* =========================================================
+   新闻详情页｜面包屑顶部留白修正
+
+   说明：
+   1. 只影响新闻详情页
+   2. 不影响新闻首页 /resources/news
+   3. 不修改统一 SiteBreadcrumb 组件本身
+   4. 依赖详情页外层 class：newsArticleDetailPage
+========================================================= */
+
+.newsArticleDetailPage .newsArticleBreadcrumbShell {
+  padding-top: 92px;
+  background: #ffffff;
+}
+
+@media (max-width: 760px) {
+  .newsArticleDetailPage .newsArticleBreadcrumbShell {
+    padding-top: 74px;
+  }
+} 

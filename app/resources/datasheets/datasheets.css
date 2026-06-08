@@ -1,13 +1,14 @@
 /* =========================================================
    app/resources/datasheets/datasheets.css
-   恒永达官网｜资源中心 - 规格书下载页面
+   恒永达官网｜资源中心 - 规格书下载页面样式
 
    说明：
    1. 当前页面只展示“规格书下载”
-   2. 图纸不放资源中心，后续建议放在产品详情页
-   3. 页面结构：Banner + 面包屑 + 搜索筛选 + 列表 + 底部支持入口
+   2. 图纸不放资源中心，后续建议放在对应产品详情页
+   3. 页面结构：Banner + 面包屑 + 搜索栏 + 分类筛选 + 列表 + 底部支持入口
    4. 左侧产品缩略图使用 WebP 图片，不使用 SVG
    5. Banner 图片不写在 CSS 中，由 data/resources/datasheets.zh.ts 控制
+   6. 本文件是页面专用 CSS，不放到 app/globals.css
 ========================================================= */
 
 /* ================================
@@ -22,7 +23,7 @@
   --text-main: #11213f;
   --text-sub: #667386;
 
-  --bg-page: #f5f8fb;
+  --bg-page: #ffffff;
   --bg-white: #ffffff;
 
   --line: #dce4ee;
@@ -34,7 +35,7 @@
   --ease-normal: 0.32s ease;
 
   color: var(--text-main);
-  background: var(--bg-page);
+  background: #ffffff;
   line-height: 1.6;
 }
 
@@ -58,7 +59,7 @@
 }
 
 /* ================================
-   2. Banner
+   2. Banner 区域
 ================================ */
 
 .datasheets-page .datasheets-hero {
@@ -71,7 +72,6 @@
   color: #ffffff;
 }
 
-/* Banner 主图 */
 .datasheets-page .datasheets-hero-image {
   position: absolute;
   inset: 0;
@@ -83,7 +83,6 @@
   display: block;
 }
 
-/* Banner 深蓝遮罩 */
 .datasheets-page .datasheets-hero-overlay {
   position: absolute;
   inset: 0;
@@ -96,7 +95,6 @@
   pointer-events: none;
 }
 
-/* Banner 科技网格纹理 */
 .datasheets-page .datasheets-hero::before {
   content: "";
   position: absolute;
@@ -110,7 +108,6 @@
   pointer-events: none;
 }
 
-/* Banner 右下角装饰线框 */
 .datasheets-page .datasheets-hero::after {
   content: "";
   position: absolute;
@@ -150,7 +147,7 @@
 }
 
 /* ================================
-   3. Banner 下方面包屑
+   3. 面包屑
 ================================ */
 
 .datasheets-page .breadcrumb-bar {
@@ -184,7 +181,11 @@
 }
 
 /* ================================
-   4. 搜索筛选工具栏
+   4. 搜索工具栏兼容样式
+
+   说明：
+   1. 当前搜索框主要使用 ResourceSearchBar 共用组件
+   2. 这里保留旧搜索结构样式，避免旧结构残留时报错或失样式
 ================================ */
 
 .datasheets-page .tool-panel {
@@ -215,7 +216,7 @@
   opacity: 0.72;
   transform: translateY(-50%);
   pointer-events: none;
-} 
+}
 
 .datasheets-page .search-input {
   width: 100%;
@@ -243,7 +244,7 @@
   padding: 0 24px;
   border: 1px solid var(--brand-blue);
   border-radius: var(--radius-sm);
-  background: #ffffff; 
+  background: #ffffff;
   color: var(--brand-blue);
   font-size: 15px;
   font-weight: 400;
@@ -259,11 +260,46 @@
   border-color: var(--brand-blue);
 }
 
+/* ================================
+   5. 内容区域
+================================ */
+
+.datasheets-page .content-wrap {
+  width: min(var(--content-width), calc(100% - 56px));
+  margin: 54px auto 0;
+  padding-bottom: 72px;
+  background: #ffffff;
+}
+
+/* ================================
+   6. 分类筛选按钮居中区域
+
+   说明：
+   1. 分类按钮放在规格书标题上方
+   2. 整行居中显示
+   3. 多语言按钮过长时自动换行
+   4. 避免英文、西语、法语、俄语挤压标题
+================================ */
+
+.datasheets-page .datasheets-category-bar {
+  width: 100%;
+  margin: 0 0 34px;
+  display: flex;
+  justify-content: center;
+}
+
 .datasheets-page .filter-row {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 16px;
+}
+
+.datasheets-page .section-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  max-width: 100%;
 }
 
 .datasheets-page .filter-btn {
@@ -275,6 +311,7 @@
   color: var(--brand-blue);
   font-size: 14px;
   font-weight: 400;
+  white-space: nowrap;
   box-shadow: none;
   transition:
     color var(--ease-fast),
@@ -291,15 +328,14 @@
   box-shadow: none;
 }
 
-/* ================================
-   5. 内容区
-================================ */
-
-.datasheets-page .content-wrap {
-  width: min(var(--content-width), calc(100% - 56px));
-  margin: 54px auto 0;
-  padding-bottom: 72px;
+/* 兼容旧的独立筛选区：当前组件已经不再使用 */
+.datasheets-page .datasheets-filter-panel {
+  display: none;
 }
+
+/* ================================
+   7. 标题区域
+================================ */
 
 .datasheets-page .section-head {
   display: flex;
@@ -307,6 +343,11 @@
   justify-content: space-between;
   gap: 24px;
   margin-bottom: 20px;
+}
+
+.datasheets-page .section-head-main {
+  min-width: 0;
+  max-width: 760px;
 }
 
 .datasheets-page .section-title {
@@ -325,10 +366,16 @@
 }
 
 .datasheets-page .result-count {
+  flex: 0 0 auto;
   color: var(--text-sub);
   font-size: 14px;
   white-space: nowrap;
+  text-align: right;
 }
+
+/* ================================
+   8. 规格书列表
+================================ */
 
 .datasheets-page .datasheet-list {
   border: 1px solid var(--line);
@@ -452,7 +499,7 @@
 }
 
 .datasheets-page .row-meta span:not(:last-child)::after {
-  content: "｜";
+  content: "·";
   margin-left: 7px;
   color: #b6c0ce;
 }
@@ -508,6 +555,10 @@
   color: currentColor;
 }
 
+/* ================================
+   9. 空状态
+================================ */
+
 .datasheets-page .empty-state {
   padding: 48px 24px;
   border: 1px dashed rgba(23, 51, 104, 0.26);
@@ -530,7 +581,7 @@
 }
 
 /* ================================
-   6. 底部支持入口
+   10. 底部支持入口
 ================================ */
 
 .datasheets-page .support-section {
@@ -628,10 +679,38 @@
 }
 
 /* ================================
-   7. 响应式
+   11. 按钮文字字重统一覆盖
+
+   说明：
+   1. 统一规格书页面所有按钮文字粗细
+   2. hover 状态也保持一致，避免鼠标经过时文字跳动
+================================ */
+
+.datasheets-page .search-btn,
+.datasheets-page .filter-btn,
+.datasheets-page .filter-btn:hover,
+.datasheets-page .filter-btn.is-active,
+.datasheets-page .row-link,
+.datasheets-page .row-download,
+.datasheets-page .row-custom,
+.datasheets-page .support-btn {
+  font-weight: 600 !important;
+}
+
+/* ================================
+   12. 响应式适配
 ================================ */
 
 @media (max-width: 1080px) {
+  .datasheets-page .section-head {
+    display: block;
+  }
+
+  .datasheets-page .result-count {
+    margin-top: 10px;
+    text-align: left;
+  }
+
   .datasheets-page .datasheet-row {
     grid-template-columns: 110px 1fr;
     min-height: 126px;
@@ -686,6 +765,15 @@
     padding: 88px 0 96px;
   }
 
+  .datasheets-page .datasheets-hero-title {
+    font-size: clamp(34px, 10vw, 42px);
+  }
+
+  .datasheets-page .datasheets-hero-desc {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
   .datasheets-page .breadcrumb-bar-inner {
     height: 52px;
     font-size: 13px;
@@ -704,12 +792,36 @@
     width: 100%;
   }
 
+  .datasheets-page .content-wrap {
+    margin-top: 42px;
+  }
+
+  .datasheets-page .datasheets-category-bar {
+    margin-bottom: 26px;
+  }
+
+  .datasheets-page .section-filter-row {
+    gap: 8px;
+  }
+
+  .datasheets-page .filter-btn {
+    height: 36px;
+    padding: 0 14px;
+    font-size: 13px;
+  }
+
   .datasheets-page .section-head {
     display: block;
+    margin-bottom: 18px;
+  }
+
+  .datasheets-page .section-title {
+    font-size: 26px;
   }
 
   .datasheets-page .result-count {
     margin-top: 10px;
+    text-align: left;
   }
 
   .datasheets-page .datasheet-row {
@@ -764,23 +876,17 @@
   .datasheets-page .support-btn {
     width: 100%;
   }
-}   
-
+}
 /* =========================================================
-   8. 按钮文字字重统一覆盖
+   规格书页面 2K 宽屏内容宽度修正
+
    说明：
-   1. 用于统一规格书页面所有按钮文字粗细
-   2. 统一为 600，解决按钮文字偏细的问题
-   3. hover 状态也保持 600，避免鼠标经过时文字跳动
+   1. 当前页面内容区在 2K 屏幕下过窄，主要是因为 --content-width 仍然偏小
+   2. 这里统一把规格书页面内容宽度恢复到 1600px
+   3. 会影响 Banner 内容、面包屑、搜索区、规格书列表、底部支持区的统一对齐
+   4. 小屏幕不会撑爆，因为原有布局使用的是 min(var(--content-width), calc(100% - 56px))
 ========================================================= */
 
-.datasheets-page .search-btn,
-.datasheets-page .filter-btn,
-.datasheets-page .filter-btn:hover,
-.datasheets-page .filter-btn.is-active,
-.datasheets-page .row-link,
-.datasheets-page .row-download,
-.datasheets-page .row-custom,
-.datasheets-page .support-btn {
-  font-weight: 600 !important;
-} 
+.datasheets-page {
+  --content-width: 1600px;
+}

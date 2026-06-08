@@ -1,0 +1,131 @@
+/* =========================================================
+   ResourceSearchBar.module.css
+   恒永达官网｜资源中心通用搜索栏样式
+========================================================= */
+
+.searchPanel {
+  width: 100%;
+  padding: 22px 0 20px;
+  background: #f4f7fb;
+  border-top: 1px solid rgba(23, 51, 104, 0.1);
+  border-bottom: 1px solid rgba(23, 51, 104, 0.12);
+}
+
+.searchRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 96px;
+  width: min(760px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.searchInput {
+  width: 100%;
+  height: 46px;
+  padding: 0 18px;
+  border: 1px solid rgba(23, 51, 104, 0.22);
+  border-right: 0;
+  border-radius: 6px 0 0 6px;
+  outline: none;
+  background: #ffffff;
+  color: #173368;
+  font-size: 15px;
+  text-align: center;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.searchInput::placeholder {
+  color: rgba(23, 51, 104, 0.42);
+}
+
+.searchInput:focus {
+  border-color: #09e9b4;
+  background: #ffffff;
+}
+
+.searchButton {
+  height: 46px;
+  border: 1px solid #173368;
+  border-radius: 0 6px 6px 0;
+  background: #173368;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.searchButton:hover,
+.searchButton:focus-visible {
+  border-color: #09e9b4;
+  background: #09e9b4;
+  color: #173368;
+  outline: none;
+}
+
+.historyRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  width: min(760px, calc(100% - 32px));
+  margin: 14px auto 0;
+}
+
+.historyLabel {
+  color: rgba(23, 51, 104, 0.66);
+  font-size: 13px;
+}
+
+.historyButton {
+  min-width: 78px;
+  height: 30px;
+  padding: 0 14px;
+  border: 1px solid rgba(23, 51, 104, 0.16);
+  border-radius: 6px;
+  background: #ffffff;
+  color: #173368;
+  font-size: 13px;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.historyButton:hover,
+.historyButton.active,
+.active {
+  border-color: #09e9b4;
+  background: #ffffff;
+  color: #173368;
+}
+
+@media (max-width: 760px) {
+  .searchPanel {
+    padding: 20px 0;
+  }
+
+  .searchRow {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .searchInput {
+    border-right: 1px solid rgba(23, 51, 104, 0.22);
+    border-radius: 6px;
+  }
+
+  .searchButton {
+    width: 100%;
+    border-radius: 6px;
+  }
+
+  .historyRow {
+    gap: 8px;
+  }
+}

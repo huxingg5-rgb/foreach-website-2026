@@ -828,3 +828,81 @@
   content: none !important;
   display: none !important;
 }
+
+/* =========================================================
+   接头替代查询页面｜2K 宽屏内容宽度修正
+
+   文件路径：
+   app/resources/selection-support/fitting-replacement/fitting-replacement.css
+
+   说明：
+   1. 当前页面主体内容仍然是 1240px，2K 屏幕下会显得过窄
+   2. 这里把主体内容区改为 1600px
+   3. 搜索框、Tab 本身已有独立宽度，不会被拉得特别长
+   4. 只改当前页面专用 CSS，不改 globals.css
+========================================================= */
+
+/* 2K 宽屏：主体内容区加宽 */
+.fitting-replacement-page .frp-container {
+  width: min(1600px, calc(100% - 56px)) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* 搜索框保持原来的中等宽度，不跟着主体拉长 */
+.fitting-replacement-page .frp-search-row,
+.fitting-replacement-page .frp-history-row {
+  width: min(760px, calc(100% - 48px)) !important;
+}
+
+/* Tab 保持原来的中等宽度 */
+.fitting-replacement-page .frp-tab-bar {
+  width: min(720px, 100%) !important;
+}
+
+/* 产品替换表卡片：2K 下保持 4 列，但整体更宽 */
+.fitting-replacement-page .frp-card-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* =========================================================
+   接头替代查询页面｜产品卡片列表显示修正
+
+   文件路径：
+   app/resources/selection-support/fitting-replacement/fitting-replacement.css
+
+   说明：
+   1. 2K 屏幕下不再显示 5 列
+   2. 桌面端固定最多 4 列，避免第一页 8 个产品变成 5 + 3 的尴尬排版
+   3. 这样会显示为 4 + 4，更整齐
+   4. 只修正产品卡片列表，不影响搜索框、Tab、Banner
+========================================================= */
+
+/* 桌面端：固定 4 列 */
+.fitting-replacement-page .frp-card-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 18px !important;
+}
+
+/* 取消之前 2K 下 5 列的效果，超宽屏也保持 4 列 */
+@media (min-width: 1800px) {
+  .fitting-replacement-page .frp-card-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+}
+
+/* 平板端：2 列 */
+@media (max-width: 1080px) {
+  .fitting-replacement-page .frp-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* 手机端：1 列 */
+@media (max-width: 720px) {
+  .fitting-replacement-page .frp-card-grid { 
+    grid-template-columns: 1fr !important;
+  }
+}

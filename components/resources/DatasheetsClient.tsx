@@ -2,7 +2,7 @@
 
 /* =========================================================
    DatasheetsClient.tsx
-   恒永达官网｜资源中心｜规格书下载｜客户端组件
+   恒永达官网｜资源中心 - 规格书下载客户端组件
 
    文件路径：
    components/resources/DatasheetsClient.tsx
@@ -13,7 +13,7 @@
    3. 负责下载按钮和来图定制按钮
    4. 页面数据由 page.tsx 通过 service 层传入
    5. 本文件不直接写死规格书数据
-   6. 后期接后端时，当前组件原则上不用改
+   6. 后期接后端时，当前组件原则上不用大改
 
    当前数据流：
    page.tsx
@@ -27,6 +27,8 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
+
+import ResourceSearchBar from "@/components/resources/ResourceSearchBar";
 
 import type {
   DatasheetCategory,
@@ -72,26 +74,6 @@ function DownloadIcon() {
 }
 
 /* =========================================================
-   SearchIcon
-   搜索图标组件
-
-   说明：
-   1. 使用 SVG，不使用图片
-   2. className="search-icon" 的大小、位置由 datasheets.css 控制
-========================================================= */
-
-function SearchIcon() {
-  return (
-    <svg className="search-icon" viewBox="0 0 24 24" aria-hidden="true">
-      <path
-        fill="currentColor"
-        d="M9.8 4a5.8 5.8 0 0 1 4.62 9.31l4.13 4.13-1.41 1.41-4.13-4.13A5.8 5.8 0 1 1 9.8 4m0 2a3.8 3.8 0 1 0 0 7.6 3.8 3.8 0 0 0 0-7.6Z"
-      />
-    </svg>
-  );
-}
-
-/* =========================================================
    DatasheetsClient
    规格书下载页面主体组件
 ========================================================= */
@@ -104,7 +86,7 @@ export default function DatasheetsClient({
   /* 搜索关键词 */
   const [searchKeyword, setSearchKeyword] = useState("");
 
-  /* 当前选中的分类 */
+  /* 当前选中的产品分类 */
   const [activeCategory, setActiveCategory] =
     useState<DatasheetCategory>("all");
 
@@ -119,7 +101,9 @@ export default function DatasheetsClient({
   ========================================================= */
 
   function normalizeText(value: string) {
-    return String(value || "").trim().toLowerCase();
+    return String(value || "")
+      .trim()
+      .toLowerCase();
   }
 
   /* =========================================================
@@ -149,7 +133,7 @@ export default function DatasheetsClient({
     });
   }, [activeCategory, searchKeyword, datasheetItems]);
 
-  /* 字段分隔符：中文默认用 ： */
+  /* 字段分隔符：中文默认使用 ： */
   const fieldSeparator = pageText.labels.fieldSeparator ?? "：";
 
   return (
@@ -195,49 +179,50 @@ export default function DatasheetsClient({
       </section>
 
       {/* ================================
-          3. 搜索与筛选区域
+          3. 共用搜索栏
+
+          说明：
+          1. 规格书搜索框使用资源中心共用搜索组件
+          2. 分类筛选不放在搜索框下方
+          3. 分类筛选放到规格书标题上方居中显示
       ================================= */}
-      <section className="tool-panel" aria-label="Datasheet search and filter">
-        <div className="search-row">
-          <div className="search-wrap">
-            <SearchIcon />
-
-            <input
-              className="search-input"
-              type="search"
-              value={searchKeyword}
-              placeholder={pageText.search.placeholder}
-              onChange={(event) => setSearchKeyword(event.target.value)}
-            />
-          </div>
-
-          <button className="search-btn" type="button">
-            {pageText.search.buttonText}
-          </button>
-        </div>
-
-        <div className="filter-row" aria-label="Product category filter">
-          {filterOptions.map((item) => (
-            <button
-              className={`filter-btn ${
-                activeCategory === item.value ? "is-active" : ""
-              }`}
-              type="button"
-              key={item.value}
-              onClick={() => setActiveCategory(item.value)}
-            >
-              {item.label}
-            </button>
-          ))}
-        </div>
-      </section>
+      <ResourceSearchBar
+        value={searchKeyword}
+        onChange={setSearchKeyword}
+        onSearch={setSearchKeyword}
+        placeholder={pageText.search.placeholder}
+        searchButtonText={pageText.search.buttonText}
+        showRecentKeywords={false}
+      />
 
       {/* ================================
-          4. 规格书列表
+          4. 规格书列表区域
       ================================= */}
       <section id="datasheets" className="content-wrap">
+        {/* 分类筛选按钮：放在规格书标题上方，并且居中显示 */}
+        <div className="datasheets-category-bar">
+          <div
+            className="filter-row section-filter-row"
+            aria-label="Product category filter"
+          >
+            {filterOptions.map((item) => (
+              <button
+                className={`filter-btn ${
+                  activeCategory === item.value ? "is-active" : ""
+                }`}
+                type="button"
+                key={item.value}
+                onClick={() => setActiveCategory(item.value)}
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* 标题区域：左侧标题说明，右侧资料数量 */}
         <div className="section-head">
-          <div>
+          <div className="section-head-main">
             <h2 className="section-title">{pageText.section.title}</h2>
 
             <p className="section-desc">{pageText.section.description}</p>

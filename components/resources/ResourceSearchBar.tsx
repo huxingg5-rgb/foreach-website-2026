@@ -8,23 +8,15 @@
    components/resources/ResourceSearchBar.tsx
 
    作用：
-   1. 抽出资源中心通用搜索栏
-   2. 结构完全对齐接头替代查询页面
-   3. 不新写搜索栏 CSS
-   4. 默认复用接头替代查询的 frp-* 样式
-   5. 搜索逻辑由父组件传入
-
-   当前复用的接头替代查询 class：
-   - frp-search-panel
-   - frp-search-row
-   - frp-search-input
-   - frp-search-button
-   - frp-history-row
-   - frp-history-label
-   - frp-history-button
+   1. 统一资源中心搜索栏结构
+   2. 新闻、技术文章、规格书下载、材料兼容等页面都可以复用
+   3. 搜索栏样式由 ResourceSearchBar.module.css 管理
+   4. 页面只负责传入 value / onChange / onSearch
 ========================================================= */
 
 import type { FormEvent } from "react";
+
+import styles from "./ResourceSearchBar.module.css";
 
 export type ResourceSearchBarClassNames = {
   root?: string;
@@ -37,40 +29,17 @@ export type ResourceSearchBarClassNames = {
 };
 
 export type ResourceSearchBarProps = {
-  /* 当前输入框的值 */
   value: string;
-
-  /* 输入框变化 */
   onChange: (value: string) => void;
-
-  /* 点击搜索按钮或回车 */
   onSearch: (value: string) => void;
-
-  /* 搜索框占位文案 */
   placeholder?: string;
-
-  /* 搜索按钮文案 */
   searchButtonText?: string;
-
-  /* 最近搜索标题 */
   recentLabel?: string;
-
-  /* 最近搜索关键词 */
   recentKeywords?: string[];
-
-  /* 是否显示最近搜索 */
   showRecentKeywords?: boolean;
-
-  /* 如果后续其他页面要覆盖 className，可以传入 */
   classNames?: ResourceSearchBarClassNames;
 };
 
-/* =========================================================
-   统一搜索关键词
-   说明：
-   1. 和接头替代查询保持一致
-   2. 最近搜索按钮选中状态需要忽略大小写
-========================================================= */
 function normalizeKeyword(value: string) {
   return value.trim().toUpperCase();
 }
@@ -82,7 +51,7 @@ export default function ResourceSearchBar({
   placeholder = "请输入产品",
   searchButtonText = "搜索",
   recentLabel = "最近搜索",
-  recentKeywords = [],
+  recentKeywords = ["柱塞泵", "Q20", "电磁阀", "高压阀", "压力传感器"],
   showRecentKeywords = true,
   classNames = {},
 }: ResourceSearchBarProps) {
@@ -96,32 +65,33 @@ export default function ResourceSearchBar({
     onSearch(keyword);
   }
 
+  const rootClassName = classNames.root ?? styles.searchPanel;
+  const formClassName = classNames.form ?? styles.searchRow;
+  const inputClassName = classNames.input ?? styles.searchInput;
+  const buttonClassName = classNames.button ?? styles.searchButton;
+  const recentClassName = classNames.recent ?? styles.historyRow;
+  const recentLabelClassName = classNames.recentLabel ?? styles.historyLabel;
+  const recentButtonClassName =
+    classNames.recentButton ?? styles.historyButton;
+
   return (
-    <section className={classNames.root ?? "frp-search-panel"}>
-      <form
-        className={classNames.form ?? "frp-search-row"}
-        onSubmit={handleSubmit}
-      >
+    <section className={rootClassName}>
+      <form className={formClassName} onSubmit={handleSubmit}>
         <input
-          className={classNames.input ?? "frp-search-input"}
+          className={inputClassName}
           value={value}
           placeholder={placeholder}
           onChange={(event) => onChange(event.target.value)}
         />
 
-        <button
-          className={classNames.button ?? "frp-search-button"}
-          type="submit"
-        >
+        <button className={buttonClassName} type="submit">
           {searchButtonText}
         </button>
       </form>
 
-      {showRecentKeywords && recentKeywords.length > 0 && (
-        <div className={classNames.recent ?? "frp-history-row"}>
-          <span className={classNames.recentLabel ?? "frp-history-label"}>
-            {recentLabel}
-          </span>
+      {showRecentKeywords && recentKeywords.length > 0 ? (
+        <div className={recentClassName}>
+          <span className={recentLabelClassName}>{recentLabel}</span>
 
           {recentKeywords.map((keyword) => {
             const isActive =
@@ -130,8 +100,8 @@ export default function ResourceSearchBar({
             return (
               <button
                 key={keyword}
-                className={`${classNames.recentButton ?? "frp-history-button"} ${
-                  isActive ? "active" : ""
+                className={`${recentButtonClassName} ${
+                  isActive ? styles.active : ""
                 }`}
                 type="button"
                 onClick={() => handleRecentKeywordClick(keyword)}
@@ -141,7 +111,7 @@ export default function ResourceSearchBar({
             );
           })}
         </div>
-      )}
+      ) : null}
     </section>
   );
-} 
+}
