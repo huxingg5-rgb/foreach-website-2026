@@ -1,0 +1,1090 @@
+/* =========================================================
+   ivd-application.css
+   恒永达官网｜IVD 应用领域页专用样式
+
+   说明：
+   1. 参考 H5 最终预览版视觉结构
+   2. 不写入 globals.css
+   3. 保留深蓝 #173368 与荧光青 #09e9b4
+   4. 页面 Banner 高度按 H5 原版 520px
+========================================================= */
+
+.ivd-page {
+  --blue: #173368;
+  --blue-dark: #0c2246;
+  --cyan: #09e9b4;
+  --cyan-soft: rgba(9, 233, 180, 0.12);
+  --text: #12233c;
+  --muted: #66758d;
+  --line: rgba(23, 51, 104, 0.11);
+  --line-strong: rgba(23, 51, 104, 0.18);
+  --bg: #f5f8fc;
+  --white: #ffffff;
+  --max: 1360px;
+
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.72;
+}
+
+.ivd-page * {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   Banner：面包屑在 Banner 内
+========================================================= */
+
+.ivd-hero {
+  height: 520px;
+  color: var(--white);
+  overflow: hidden;
+  background:
+    linear-gradient(105deg, rgba(12, 34, 70, 0.98), rgba(23, 51, 104, 0.9)),
+    radial-gradient(circle at 82% 26%, rgba(9, 233, 180, 0.24), transparent 34%),
+    linear-gradient(135deg, #0c2246, #173368);
+}
+
+.ivd-hero-inner {
+  max-width: var(--max);
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 36px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 430px;
+  gap: 72px;
+  align-items: center;
+}
+
+.ivd-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 14px;
+  margin-bottom: 26px;
+}
+
+.ivd-breadcrumb span {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.ivd-breadcrumb a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.22s ease;
+}
+
+.ivd-breadcrumb a:hover {
+  color: var(--cyan);
+}
+
+.ivd-breadcrumb strong {
+  color: var(--cyan);
+  font-weight: 500;
+}
+
+.ivd-breadcrumb em {
+  color: rgba(255, 255, 255, 0.42);
+  font-style: normal;
+}
+
+.ivd-hero h1 {
+  max-width: 860px;
+  color: var(--white);
+  font-size: clamp(40px, 4.8vw, 64px);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  font-weight: 760;
+  margin: 0 0 22px;
+}
+
+.ivd-hero h1 span {
+  color: var(--cyan);
+}
+
+.ivd-hero p {
+  max-width: 760px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.ivd-hero-panel {
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.ivd-hero-panel h2 {
+  color: var(--white);
+  font-size: 20px;
+  margin: 0 0 18px;
+}
+
+.ivd-hero-panel ul {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.ivd-hero-panel li {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 15px;
+  line-height: 1.66;
+}
+
+.ivd-hero-panel li::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  margin-top: 10px;
+  background: var(--cyan);
+}
+
+/* =========================================================
+   通用区块
+========================================================= */
+
+.ivd-section {
+  padding: 78px 36px;
+}
+
+.ivd-section-light {
+  background: var(--bg);
+}
+
+.ivd-section-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+.ivd-section-head {
+  display: block;
+  margin-bottom: 32px;
+}
+
+.ivd-section-title {
+  color: var(--blue);
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  font-weight: 760;
+  margin: 0 0 10px;
+}
+
+.ivd-section-desc {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* =========================================================
+   仪器类型：H5 原版 5 栏连体 Tab
+========================================================= */
+
+.ivd-instrument-tabs {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border: 1px solid var(--line);
+  background: var(--white);
+}
+
+.ivd-instrument-btn {
+  min-height: 150px;
+  border: 0;
+  border-right: 1px solid var(--line);
+  background: var(--white);
+  padding: 24px 20px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.22s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.ivd-instrument-btn:last-child {
+  border-right: 0;
+}
+
+.ivd-instrument-btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 3px;
+  background: var(--cyan);
+  transition: width 0.22s ease;
+}
+
+.ivd-instrument-btn b {
+  display: block;
+  color: rgba(23, 51, 104, 0.18);
+  font-size: 28px;
+  line-height: 1;
+  margin-bottom: 18px;
+  transition: all 0.22s ease;
+}
+
+.ivd-instrument-btn strong {
+  display: block;
+  color: var(--blue);
+  font-size: 18px;
+  line-height: 1.35;
+  margin-bottom: 7px;
+  transition: all 0.22s ease;
+}
+
+.ivd-instrument-btn span {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+  transition: all 0.22s ease;
+}
+
+.ivd-instrument-btn:hover,
+.ivd-instrument-btn.active {
+  background: var(--blue);
+}
+
+.ivd-instrument-btn:hover::before,
+.ivd-instrument-btn.active::before {
+  width: 100%;
+}
+
+.ivd-instrument-btn:hover b,
+.ivd-instrument-btn.active b {
+  color: rgba(9, 233, 180, 0.72);
+}
+
+.ivd-instrument-btn:hover strong,
+.ivd-instrument-btn.active strong {
+  color: var(--cyan);
+}
+
+.ivd-instrument-btn:hover span,
+.ivd-instrument-btn.active span {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+/* =========================================================
+   当前仪器关注重点：深蓝氛围区
+========================================================= */
+
+.ivd-instrument-focus-section {
+  position: relative;
+  min-height: 430px;
+  padding: 86px 36px;
+  overflow: hidden;
+  background: #0c2246;
+  color: #fff;
+}
+
+.ivd-instrument-focus-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(120deg, rgba(12, 34, 70, 0.92), rgba(23, 51, 104, 0.74)),
+    radial-gradient(circle at 76% 25%, rgba(9, 233, 180, 0.22), transparent 34%),
+    linear-gradient(135deg, #102a58, #f5f8fc);
+}
+
+.ivd-instrument-focus-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.22;
+  background-image:
+    linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255,255,255,.08) 1px, transparent 1px);
+  background-size: 52px 52px;
+  mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent);
+}
+
+.ivd-instrument-focus-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(7, 27, 58, 0.72), rgba(7, 27, 58, 0.24)),
+    linear-gradient(0deg, rgba(7, 27, 58, 0.28), transparent 40%);
+}
+
+.ivd-instrument-focus-inner {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: 48px;
+  align-items: center;
+}
+
+.ivd-instrument-focus-kicker {
+  display: inline-flex;
+  color: var(--cyan);
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.ivd-instrument-focus-copy h2 {
+  max-width: 620px;
+  color: var(--white);
+  font-size: clamp(30px, 3.2vw, 46px);
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+  margin: 0 0 16px;
+}
+
+.ivd-instrument-focus-copy p {
+  max-width: 660px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 16px;
+  line-height: 1.86;
+  margin: 0;
+}
+
+.ivd-instrument-focus-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+}
+
+.ivd-instrument-focus-item {
+  min-height: 128px;
+  padding: 24px;
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.ivd-instrument-focus-item:nth-child(2n) {
+  border-right: 0;
+}
+
+.ivd-instrument-focus-item:nth-last-child(-n + 2) {
+  border-bottom: 0;
+}
+
+.ivd-instrument-focus-item b {
+  display: block;
+  color: rgba(9, 233, 180, 0.88);
+  font-size: 22px;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+
+.ivd-instrument-focus-item span {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 14px;
+  line-height: 1.68;
+}
+
+/* =========================================================
+   第四块：顶部液路导航 + 产品能力
+========================================================= */
+
+.ivd-ability-layout {
+  display: block;
+}
+
+.ivd-module-nav {
+  position: static;
+  margin-bottom: 34px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+}
+
+.ivd-module-nav-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(178px, 1fr));
+  border: 1px solid rgba(23, 51, 104, 0.11);
+  background: #fff;
+}
+
+.ivd-module-nav-btn {
+  min-height: 96px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  padding: 18px 14px;
+  border: 0;
+  border-right: 1px solid rgba(23, 51, 104, 0.10);
+  border-bottom: 1px solid rgba(23, 51, 104, 0.10);
+  border-top: 3px solid transparent;
+  background: #fff;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.22s ease;
+}
+
+.ivd-module-nav-btn:hover {
+  background: #f7fbff;
+  border-top-color: rgba(9, 233, 180, 0.68);
+}
+
+.ivd-module-nav-btn.active {
+  background: rgba(9, 233, 180, 0.08);
+  border-top-color: #09e9b4;
+}
+
+.ivd-module-nav-index {
+  color: rgba(23, 51, 104, 0.28);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.ivd-module-nav-btn:hover .ivd-module-nav-index,
+.ivd-module-nav-btn.active .ivd-module-nav-index {
+  color: rgba(23, 51, 104, 0.76);
+}
+
+.ivd-module-nav-text {
+  min-width: 0;
+  display: grid;
+  gap: 5px;
+}
+
+.ivd-module-nav-label {
+  display: block;
+  color: #173368;
+  font-size: 16px;
+  font-weight: 760;
+  line-height: 1.28;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ivd-module-nav-subtitle {
+  display: block;
+  color: #748197;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.35;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.ivd-ability-main {
+  width: 100%;
+  max-width: none;
+}
+
+.ivd-module-summary {
+  background: transparent;
+  border: 0;
+  padding: 0 0 22px 0;
+  margin-bottom: 12px;
+}
+
+.ivd-module-summary h3 {
+  color: var(--blue);
+  font-size: clamp(32px, 3vw, 42px);
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+  margin: 0 0 10px;
+}
+
+.ivd-module-summary p {
+  max-width: 980px;
+  color: #263955;
+  font-size: 15px;
+  line-height: 1.9;
+  margin: 0 0 16px;
+}
+
+.ivd-need-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ivd-need-tag {
+  display: inline-flex;
+  padding: 5px 10px;
+  color: var(--blue);
+  background: var(--cyan-soft);
+  border: 1px solid rgba(9, 233, 180, 0.34);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   产品手风琴
+========================================================= */
+
+.ivd-accordion {
+  display: grid;
+  gap: 10px;
+}
+
+.ivd-product-item {
+  background: var(--white);
+  border: 1px solid var(--line);
+  position: relative;
+  overflow: hidden;
+  box-shadow: none;
+  transition: border-color 0.22s ease;
+}
+
+.ivd-product-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: var(--cyan);
+  transition: width 0.22s ease;
+}
+
+.ivd-product-item:hover {
+  border-color: var(--line-strong);
+}
+
+.ivd-product-item.active {
+  border-color: rgba(9, 233, 180, 0.48);
+  box-shadow: none;
+}
+
+.ivd-product-item.active::before {
+  width: 4px;
+}
+
+.ivd-product-summary {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  padding: 18px 22px;
+  display: block;
+  text-align: left;
+  cursor: pointer;
+}
+
+.ivd-product-title h4 {
+  color: var(--blue);
+  font-size: 22px;
+  line-height: 1.25;
+  margin: 0 0 5px;
+}
+
+.ivd-product-title p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.ivd-product-detail {
+  display: none;
+  padding: 0 22px 22px 26px;
+}
+
+.ivd-product-item.active .ivd-product-detail {
+  display: block;
+}
+
+.ivd-detail-head {
+  color: #263955;
+  font-size: 14px;
+  line-height: 1.78;
+  margin: 0 0 14px;
+}
+
+.ivd-detail-head b {
+  color: var(--blue);
+}
+
+.ivd-param-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.ivd-param {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 5px 9px;
+  color: #263955;
+  background: #f5f8fc;
+  border: 1px solid rgba(23, 51, 104, 0.08);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.ivd-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  border-top: 1px solid rgba(23, 51, 104, 0.08);
+  padding-top: 16px;
+}
+
+.ivd-detail-box {
+  background: #f8fbff;
+  border: 1px solid rgba(23, 51, 104, 0.07);
+  padding: 16px;
+}
+
+.ivd-detail-box b {
+  display: block;
+  color: var(--blue);
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.ivd-detail-box span {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.78;
+}
+
+/* =========================================================
+   产品按钮：V10 统一规则
+   默认白底深蓝字，hover 深蓝底荧光字
+========================================================= */
+
+.ivd-product-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 18px;
+}
+
+.ivd-product-action,
+.ivd-product-action-primary {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(23, 51, 104, 0.24);
+  background: #ffffff;
+  color: #173368;
+  font-size: 14px;
+  font-weight: 760;
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: none;
+  transition:
+    background-color 0.22s ease,
+    border-color 0.22s ease,
+    color 0.22s ease,
+    transform 0.22s ease;
+}
+
+.ivd-product-action:hover,
+.ivd-product-action-primary:hover,
+.ivd-product-action:focus-visible,
+.ivd-product-action-primary:focus-visible {
+  background: #173368;
+  border-color: #173368;
+  color: #09e9b4;
+  transform: translateY(-1px);
+}
+
+.ivd-product-action:active,
+.ivd-product-action-primary:active {
+  background: #102a58;
+  border-color: #102a58;
+  color: #09e9b4;
+  transform: translateY(0);
+}
+
+/* =========================================================
+   联系 Banner
+========================================================= */
+
+.ivd-cta {
+  padding: 76px 36px;
+  color: var(--white);
+  background:
+    linear-gradient(105deg, rgba(12, 34, 70, 0.98), rgba(23, 51, 104, 0.95)),
+    radial-gradient(circle at 82% 24%, rgba(9, 233, 180, 0.22), transparent 32%);
+}
+
+.ivd-cta-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: center;
+}
+
+.ivd-cta h2 {
+  color: var(--white);
+  font-size: clamp(30px, 3vw, 46px);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  margin: 0 0 14px;
+}
+
+.ivd-cta p {
+  max-width: 820px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 16px;
+  line-height: 1.85;
+  margin: 0;
+}
+
+.ivd-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 24px;
+  background: var(--cyan);
+  color: var(--blue);
+  font-size: 15px;
+  font-weight: 800;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: all 0.22s ease;
+}
+
+.ivd-btn:hover {
+  background: var(--white);
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   响应式
+========================================================= */
+
+@media (max-width: 1180px) {
+  .ivd-hero {
+    height: auto;
+  }
+
+  .ivd-hero-inner,
+  .ivd-instrument-focus-inner,
+  .ivd-cta-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .ivd-hero-inner {
+    padding-top: 76px;
+    padding-bottom: 68px;
+  }
+
+  .ivd-instrument-tabs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ivd-instrument-btn {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .ivd-module-nav-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .ivd-module-nav-btn {
+    min-height: 84px;
+  }
+}
+
+@media (max-width: 760px) {
+  .ivd-hero-inner,
+  .ivd-section,
+  .ivd-instrument-focus-section,
+  .ivd-cta {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .ivd-section {
+    padding-top: 58px;
+    padding-bottom: 58px;
+  }
+
+  .ivd-hero-inner {
+    padding-top: 68px;
+    padding-bottom: 58px;
+  }
+
+  .ivd-instrument-tabs,
+  .ivd-instrument-focus-grid,
+  .ivd-detail-grid,
+  .ivd-module-nav-list {
+    grid-template-columns: 1fr;
+  }
+
+  .ivd-instrument-btn {
+    min-height: auto;
+  }
+
+  .ivd-instrument-focus-grid {
+    border-bottom: 0;
+  }
+
+  .ivd-instrument-focus-item,
+  .ivd-instrument-focus-item:nth-child(2n),
+  .ivd-instrument-focus-item:nth-last-child(-n + 2) {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .ivd-instrument-focus-item:last-child {
+    border-bottom: 0;
+  }
+
+  .ivd-module-nav-btn {
+    min-height: 72px;
+    grid-template-columns: 32px minmax(0, 1fr);
+    border-right: 0;
+  }
+
+  .ivd-product-action,
+  .ivd-product-action-primary,
+  .ivd-btn {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   V11 修正｜底部 CTA 按钮状态
+
+   说明：
+   1. 底部联系 Banner 的按钮不是默认荧光色底
+   2. 默认 / 未选中：白色底 + 深蓝字 + 8px 圆角
+   3. 鼠标经过 / focus / active：荧光色底 + 深蓝字
+   4. 与联系我们 / 经销商页面按钮规则保持一致
+========================================================= */
+
+.ivd-btn {
+  min-height: 48px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 24px !important;
+  border-radius: 8px !important;
+  border: 1px solid rgba(255, 255, 255, 0.72) !important;
+  background: #ffffff !important;
+  color: #173368 !important;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+  transition:
+    background-color 0.22s ease,
+    border-color 0.22s ease,
+    color 0.22s ease,
+    transform 0.22s ease !important;
+}
+
+.ivd-btn:hover,
+.ivd-btn:focus-visible {
+  background: #09e9b4 !important;
+  border-color: #09e9b4 !important;
+  color: #173368 !important;
+  transform: translateY(-2px) !important;
+}
+
+.ivd-btn:active {
+  background: #09e9b4 !important;
+  border-color: #09e9b4 !important;
+  color: #173368 !important;
+  transform: translateY(0) !important;
+}
+
+.ivd-btn:focus-visible {
+  outline: 3px solid rgba(9, 233, 180, 0.34) !important;
+  outline-offset: 3px !important;
+}
+
+/* ===== V11 CTA BUTTON PATCH END ===== */
+
+/* =========================================================
+   V12 修正｜IVD 页面真实背景图接入
+
+   说明：
+   1. 三张图已经放在 public/images/applications/ivd/
+   2. 顶部 Banner、关注重点区、底部 CTA 都改为真实图片背景
+   3. 叠加深蓝遮罩，保证文字可读
+   4. 不影响页面结构和交互逻辑
+========================================================= */
+
+/* 顶部 Banner：左侧文字区保留深蓝遮罩，右侧展示人物与液路场景 */
+.ivd-hero {
+  background-image:
+    linear-gradient(
+      105deg,
+      rgba(12, 34, 70, 0.98) 0%,
+      rgba(12, 34, 70, 0.94) 34%,
+      rgba(23, 51, 104, 0.72) 58%,
+      rgba(23, 51, 104, 0.18) 100%
+    ),
+    url("/images/applications/ivd/ivd-hero-bg-1920x800-v001.webp") !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+/* 当前仪器关注重点：使用深色液路零部件近景，更符合零部件公司属性 */
+.ivd-instrument-focus-bg {
+  background-image:
+    linear-gradient(
+      120deg,
+      rgba(12, 34, 70, 0.94) 0%,
+      rgba(23, 51, 104, 0.82) 44%,
+      rgba(23, 51, 104, 0.62) 100%
+    ),
+    url("/images/applications/ivd/ivd-focus-bg-1920x680-v001.webp") !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+/* 关注重点区保留轻微网格，不要太强 */
+.ivd-instrument-focus-bg::after {
+  opacity: 0.14 !important;
+}
+
+/* 底部 CTA：真实场景图 + 深蓝遮罩 */
+.ivd-cta {
+  background-image:
+    linear-gradient(
+      105deg,
+      rgba(12, 34, 70, 0.98) 0%,
+      rgba(23, 51, 104, 0.94) 46%,
+      rgba(23, 51, 104, 0.72) 100%
+    ),
+    url("/images/applications/ivd/ivd-cta-bg-1920x520-v001.webp") !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+/* ===== V12 IVD REAL IMAGE PATCH END ===== */
+
+/* =========================================================
+   Application Banner V11｜主题化精简版
+   说明：
+   1. Banner 只保留左侧主题文字
+   2. 不再显示右侧分类卡片
+   3. 遮罩调浅，保留更多实验室背景
+   4. 适用于 IVD 页面，也作为生命科学页面的基础样式
+========================================================= */
+
+.ivd-page .ivd-hero-inner {
+  grid-template-columns: minmax(0, 760px) !important;
+  gap: 0 !important;
+}
+
+.ivd-page .ivd-hero-panel {
+  display: none !important;
+}
+
+.ivd-page .ivd-hero h1 {
+  max-width: 760px !important;
+}
+
+.ivd-page .ivd-hero p {
+  max-width: 620px !important;
+  font-size: 16px !important;
+  line-height: 1.85 !important;
+}
+
+/* IVD 页面 Banner 遮罩调浅 */
+.ivd-page:not(.life-science-page) .ivd-hero {
+  background-image:
+    linear-gradient(105deg, rgba(12, 34, 70, 0.90) 0%, rgba(23, 51, 104, 0.68) 42%, rgba(23, 51, 104, 0.24) 100%),
+    radial-gradient(circle at 82% 26%, rgba(9, 233, 180, 0.16), transparent 34%),
+    url("/images/applications/ivd/ivd-hero-bg-1920x800-v001.webp") !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+@media (max-width: 1180px) {
+  .ivd-page .ivd-hero-inner {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* =========================================================
+   应用领域类型卡片统一对齐修正
+   适用页面：
+   IVD / 生命科学 / 实验室自动化 / 分析仪器 / 环保监测 / 合成生物
+
+   规则：
+   1. 01 / 02 / 03 / 04 / 05 编号统一在同一排
+   2. 主题标题统一在同一排
+   3. 副标题不强制对齐，允许自然换行
+   4. 多语言标题最多 2 行，避免撑坏卡片高度
+========================================================= */
+
+.ivd-instrument-btn {
+  display: grid !important;
+  grid-template-rows: 46px 58px auto !important;
+  align-content: start !important;
+  gap: 0 !important;
+}
+
+.ivd-instrument-btn b {
+  display: flex !important;
+  align-items: flex-start !important;
+  height: 46px !important;
+  margin-bottom: 0 !important;
+  line-height: 1 !important;
+}
+
+.ivd-instrument-btn strong {
+  display: -webkit-box !important;
+  height: 58px !important;
+  margin-bottom: 8px !important;
+  line-height: 1.35 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+}
+
+.ivd-instrument-btn span {
+  display: block !important;
+  line-height: 1.72 !important;
+}
+
+/* 小屏下适当降低标题区高度 */
+@media (max-width: 760px) {
+  .ivd-instrument-btn {
+    grid-template-rows: 38px auto auto !important;
+  }
+
+  .ivd-instrument-btn b {
+    height: 38px !important;
+  }
+
+  .ivd-instrument-btn strong {
+    height: auto !important;
+    min-height: 0 !important;
+    -webkit-line-clamp: 2 !important;
+  }
+}
