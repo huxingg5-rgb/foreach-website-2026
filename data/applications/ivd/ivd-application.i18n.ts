@@ -25,7 +25,10 @@ function createIntlData(locale: Exclude<IvdLocale, "zh-CN">): IvdApplicationPage
     ],
     hero: {
       eyebrow: "IVD APPLICATION",
-      title: "IVD Fluidic System Solutions",
+      title: "IVD Fluidic System",
+
+      /* Banner main title highlight */
+      highlight: "Solutions",
       description:
         "Fluidic component support for biochemistry, immunoassay, hematology, coagulation, molecular diagnostics and PCR instruments.",
       backgroundImage: "/images/applications/ivd/ivd-hero-bg-1920x800-v001.webp",

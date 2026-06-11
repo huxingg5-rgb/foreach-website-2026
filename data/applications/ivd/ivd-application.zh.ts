@@ -25,10 +25,12 @@ export const ivdApplicationZhData: IvdApplicationPageData = {
   ],
 
   hero: {
+    eyebrow: "IVD 应用领域",
     title: "面向 IVD 诊断仪器的",
     highlight: "精密液路控制方案",
     description:
       "服务样本、试剂、清洗、废液与液路监测等关键环节。",
+    backgroundImage: "/images/applications/ivd/ivd-hero-bg-1920x800-v001.webp",
     panelTitle: "",
     panelItems: [],
   },

@@ -18,8 +18,17 @@ export type IvdBreadcrumbItem = {
 export type IvdHeroData = {
   eyebrow: string;
   title: string;
+
+  /* Banner 主标题高亮部分，例如：精密液路控制方案 */
+  highlight: string;
   description: string;
   backgroundImage: string;
+
+  /* Banner 右侧信息面板标题，可选 */
+  panelTitle?: string;
+
+  /* Banner 右侧信息面板列表，可选 */
+  panelItems?: string[];
 };
 
 export type IvdSectionIntro = {

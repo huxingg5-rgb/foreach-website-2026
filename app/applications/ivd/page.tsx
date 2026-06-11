@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 /* =========================================================
    page.tsx
    恒永达官网｜中文 IVD 应用领域页入口
@@ -28,5 +29,9 @@ export const metadata: Metadata = {
 export default function IvdApplicationPage() {
   const pageData = getIvdApplicationPageData("zh-CN");
 
-  return <IvdApplicationClient data={pageData} />;
+  return (
+    <Suspense fallback={null}>
+      <IvdApplicationClient data={pageData} />
+    </Suspense>
+  );
 }

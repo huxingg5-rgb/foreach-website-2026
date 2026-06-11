@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 /* =========================================================
    page.tsx
    恒永达官网｜外语 IVD 应用领域页入口
@@ -58,5 +59,9 @@ export default async function IvdLocaleApplicationPage({ params }: IvdLocalePage
 
   const pageData = getIvdApplicationPageData(locale);
 
-  return <IvdApplicationClient data={pageData} />;
+  return (
+    <Suspense fallback={null}>
+      <IvdApplicationClient data={pageData} />
+    </Suspense>
+  );
 }
