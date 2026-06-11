@@ -1,0 +1,49 @@
+/* =========================================================
+   synthetic-biology-application.css
+   恒永达官网｜合成生物应用领域页面样式
+========================================================= */
+
+@import "../ivd/ivd-application.css";
+
+.synthetic-biology-page .ivd-hero {
+  background-image:
+    linear-gradient(105deg, rgba(12, 34, 70, 0.88) 0%, rgba(23, 51, 104, 0.60) 42%, rgba(23, 51, 104, 0.18) 100%),
+    radial-gradient(circle at 82% 26%, rgba(9, 233, 180, 0.16), transparent 34%),
+    url("/images/applications/synthetic-biology/synthetic-biology-hero-bg-1920x800-v001.webp") !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.synthetic-biology-page .ivd-hero-inner {
+  grid-template-columns: minmax(0, 760px) !important;
+}
+
+.synthetic-biology-page .ivd-hero h1 {
+  max-width: 760px !important;
+}
+
+.synthetic-biology-page .ivd-hero p {
+  max-width: 620px !important;
+}
+
+.synthetic-biology-page .ivd-hero-panel {
+  display: none !important;
+}
+
+.synthetic-biology-page .ivd-instrument-focus-bg {
+  background-image:
+    linear-gradient(120deg, rgba(12, 34, 70, 0.92), rgba(23, 51, 104, 0.74)),
+    radial-gradient(circle at 76% 25%, rgba(9, 233, 180, 0.20), transparent 34%),
+    url("/images/applications/synthetic-biology/synthetic-biology-focus-bg-1920x680-v001.webp") !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.synthetic-biology-page .ivd-cta {
+  background-image:
+    linear-gradient(105deg, rgba(12, 34, 70, 0.98), rgba(23, 51, 104, 0.90)),
+    radial-gradient(circle at 82% 24%, rgba(9, 233, 180, 0.20), transparent 32%),
+    url("/images/applications/synthetic-biology/synthetic-biology-cta-bg-1920x520-v001.webp") !important;
+  background-size: cover !important;
+  background-position: center !important;
+}

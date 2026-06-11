@@ -389,13 +389,13 @@ export default async function NewsIntlArticlePage({
         <BreadcrumbComponent {...breadcrumbData} />
       </div>
 
-<NewsArticleClient
-  locale={locale}
-  pageData={pageData}
-  article={article}
-  previousArticle={previousArticle}
-  nextArticle={nextArticle}
-/>
+      <NewsArticleClient
+        locale={locale}
+        pageData={pageData}
+        article={article}
+        previousArticle={previousArticle}
+        nextArticle={nextArticle}
+      />
     </div>
   );
 } 

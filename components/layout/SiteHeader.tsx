@@ -1225,7 +1225,7 @@ const isNewsArticlePage =
                                 <Link
                                   key={cardImage.src}
                                   href={getLocalizedHref(
-                                    card.href,
+                                    cardImage.href ?? card.href,
                                     currentLocale,
                                   )}
                                   onClick={closeAllPanels}

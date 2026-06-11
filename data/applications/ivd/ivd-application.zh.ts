@@ -1,0 +1,570 @@
+/* =========================================================
+   ivd-application.zh.ts
+   恒永达官网｜IVD 应用领域页中文数据
+
+   说明：
+   1. 当前为 IVD 应用领域页最终上线前中文内容版本
+   2. 页面逻辑：仪器类型 → 关注重点 → 液路部位 → 产品能力
+   3. 产品能力包含：核心能力、关键参数、适用优势、解决问题
+   4. 后期接 CMS / 后端 / 数据库时，优先改 service 层，不改页面结构
+   5. 产品参数正式上线前仍建议由研发 / 产品部门做最终核对
+========================================================= */
+
+import type { IvdApplicationPageData } from "./ivd-application.types";
+
+const PRODUCT_HREF = "/products";
+const CONTACT_HREF = "/contact";
+
+export const ivdApplicationZhData: IvdApplicationPageData = {
+  locale: "zh-CN",
+
+  breadcrumb: [
+    { label: "首页", href: "/" },
+    { label: "应用领域" },
+    { label: "IVD 体外诊断" },
+  ],
+
+  hero: {
+    title: "面向 IVD 诊断仪器的",
+    highlight: "精密液路控制方案",
+    description:
+      "服务样本、试剂、清洗、废液与液路监测等关键环节。",
+    panelTitle: "",
+    panelItems: [],
+  },
+
+  instrumentSection: {
+    eyebrow: "INSTRUMENT TYPES",
+    title: "仪器类型",
+    description:
+      "选择具体 IVD 仪器后，下方内容会同步展示该仪器的关注重点与液路产品能力。",
+  },
+
+  moduleSection: {
+    eyebrow: "FLUIDIC MODULES",
+    title: "关键液路部位与产品能力",
+    description:
+      "选择液路部位后，只展示该部位相关产品。点击产品可展开参数、优势和解决问题。",
+  },
+
+  ctaBanner: {
+    eyebrow: "ENGINEERING SUPPORT",
+    title: "有具体仪器液路需求？",
+    description:
+      "可提交仪器类型、液体介质、流量范围、压力要求、管路尺寸和当前问题，由恒永达工程团队协助评估产品组合与液路方案。",
+    primaryText: "查看产品系列",
+    primaryHref: PRODUCT_HREF,
+    secondaryText: "提交应用需求",
+    secondaryHref: CONTACT_HREF,
+  },
+
+  productAbilities: {
+    syringePump: {
+      key: "syringePump",
+      name: "注射泵",
+      ability: "样本吸取、保持与推出的一体化液体处理",
+      params: ["25 μL–25 mL", "30 / 60 mm 行程", "1–8 通道", "分配误差 ≤1%", "压力 0.4 MPa", "可级联 16 台"],
+      advantage:
+        "适合样本针吸样、试剂转移、多通道分液等需要“吸取—保持—推出”完整动作控制的场景，可配合控制系统实现小体积液体的稳定转移。",
+      solves:
+        "用于降低样本吸取量偏差、空吸后的动作失控、多通道转移不一致等问题，提高样本取样和试剂转移过程的可控性。",
+      productHref: PRODUCT_HREF,
+      contactHref: CONTACT_HREF,
+    },
+
+    pistonPump: {
+      key: "pistonPump",
+      name: "柱塞泵",
+      ability: "高频重复定量分配与体积一致性控制",
+      params: ["50 μL–20 mL", "ACC＜0.5%", "CV＜0.5%", "压力 0.3 MPa", "寿命 500 万次", "1/4-28 UNF / M6"],
+      advantage:
+        "适合稀释液、缓冲液、清洗液和常用试剂的重复定量加入，重点用于需要长期稳定、批量重复、体积一致的分配位置。",
+      solves:
+        "用于减少重复分配波动、不同周期加液量不一致、长期运行后分配稳定性下降等问题，提高仪器长期检测结果的一致性。",
+      productHref: PRODUCT_HREF,
+      contactHref: CONTACT_HREF,
+    },
+
+    sampleNeedle: {
+      key: "sampleNeedle",
+      name: "采样针",
+      ability: "样本吸取前端与液面接触位置控制",
+      params: ["适配样本吸取", "可配合液位检测", "支持定制化沟通"],
+      advantage:
+        "用于样本杯、采血管、反应杯等取样前端，可与注射泵、液位检测和清洗结构配合，形成稳定的样本吸取路径。",
+      solves:
+        "用于改善取样位置偏差、挂液残留、针外壁污染、吸样深度不稳定等问题，帮助样本吸取动作更稳定。",
+      productHref: PRODUCT_HREF,
+      contactHref: CONTACT_HREF,
+    },
+
+    solenoidValve: {
+      key: "solenoidValve",
+      name: "电磁阀",
+      ability: "试剂、清洗液与废液通道的快速通断控制",
+      params: ["二通 / 三通", "CV 0.03", "-75 kPa–0.25 MPa", "响应时间 ≤30 ms", "EPDM / FKM / FFKM"],
+      advantage:
+        "适合试剂、清洗液、废液和气液混合路径的快速开关控制，可根据试剂腐蚀性、清洗液类型和工作压力选择密封材料。",
+      solves:
+        "用于减少通断响应慢、路径误通、阀位不稳定、介质兼容不足导致的漏液和残留问题。",
+      productHref: PRODUCT_HREF,
+      contactHref: CONTACT_HREF,
+    },
+
+    rotaryValve: {
+      key: "rotaryValve",
+      name: "旋转阀",
+      ability: "多试剂、多清洗液、多废液路径集中切换",
+      params: ["10 / 12 / 24 通", "寿命 100 万次", "适合多路径集中管理"],
+      advantage:
+        "适合多试剂项目、多清洗流程和多废液路径集中管理，可把复杂阀组整合成一个多通道切换单元。",
+      solves:
+        "用于降低多通道液路连接复杂度、减少接头数量、降低误接和路径切换不稳定风险，并节省仪器内部空间。",
+      productHref: PRODUCT_HREF,
+      contactHref: CONTACT_HREF,
+    },
+
+    pinchValve: {
+      key: "pinchValve",
+      name: "夹管阀",
+      ability: "软管液路的非接触式通断控制",
+      params: ["2 位 3 通", "响应时间 ≤200 ms", "压力 ≤150 kPa"],
+      advantage:
+        "适合清洗、废液或特定软管路径，液体只接触软管，不直接接触阀体，可减少阀体污染和清洁压力。",
+      solves:
+        "用于降低液体污染阀体、腐蚀阀体、阀腔残留和维护复杂度，适合对污染控制有要求的软管液路。",
+      productHref: PRODUCT_HREF,
+      contactHref: CONTACT_HREF,
+    },
+
+    diaphragmPump: {
+      key: "diaphragmPump",
+      name: "隔膜泵",
+      ability: "清洗液输送、废液抽排与较大流量液体搬运",
+      params: ["300 / 600 mL/min", "自吸 5 m / 3 m", "压力 100 kPa", "无刷电机寿命 10000 h"],
+      advantage:
+        "适合样本针清洗、反应杯清洗、管路冲洗、废液抽排等不以微量精密分配为主、但需要稳定流量和自吸能力的位置。",
+      solves:
+        "用于改善清洗液供给不足、废液排放不彻底、自吸不稳定、长时间运行流量衰减等问题。",
+      productHref: PRODUCT_HREF,
+      contactHref: CONTACT_HREF,
+    },
+
+    fittingsTubing: {
+      key: "fittingsTubing",
+      name: "接头与管材",
+      ability: "泵、阀、针、传感器之间的连接密封与材料适配",
+      params: ["管外径 1.6–19.0 mm", "NPT / UNF", "Q20 / Q40 / Q60", "鲁尔接头", "PTFE / PFA / FEP / PEEK"],
+      advantage:
+        "用于仪器内部管路连接、转接、密封和不同材料适配，可根据管径、压力、试剂兼容性和维护方式选择。",
+      solves:
+        "用于降低接头漏液、管路松脱、死体积偏大、材料不兼容、拆装维护困难和不同管径适配不一致等问题。",
+      productHref: PRODUCT_HREF,
+      contactHref: CONTACT_HREF,
+    },
+
+    sensors: {
+      key: "sensors",
+      name: "压力 / 液位 / 气泡检测",
+      ability: "样本针、试剂管路、清洗液路和废液通道的状态识别",
+      params: ["压力 ≤2000 kPa", "液位 1 fF / 50 μL / 1 ms", "气泡检测管外径 1.6–6.4 mm", "电导率 0.01–5 μS/cm"],
+      advantage:
+        "用于关键节点状态监测，可识别空吸、气泡混入、堵针、堵管、液位不足、废液排放异常和压力波动。",
+      solves:
+        "用于提升仪器对异常液路状态的识别能力，减少加样、分液、清洗和排废过程中因气泡、堵塞、空吸造成的流程异常。",
+      productHref: PRODUCT_HREF,
+      contactHref: CONTACT_HREF,
+    },
+
+    checkFilter: {
+      key: "checkFilter",
+      name: "止回阀 / 过滤器",
+      ability: "防回流、颗粒过滤与关键液路保护",
+      params: ["适配防回流场景", "适配过滤场景", "可配合接头管材使用"],
+      advantage:
+        "可布置在试剂路径、清洗路径或废液路径的关键位置，用于减少回流、颗粒进入和液路污染风险。",
+      solves:
+        "用于降低液体回流、颗粒堵塞、杂质进入泵阀和异常液路污染对系统稳定性的影响。",
+      productHref: PRODUCT_HREF,
+      contactHref: CONTACT_HREF,
+    },
+  },
+
+  instruments: [
+    {
+      key: "clinical",
+      index: "01",
+      title: "生化分析仪",
+      summary: "样本、试剂、清洗与废液处理液路。",
+      focusTitle: "样本、试剂、清洗与废液处理液路",
+      focusSummary:
+        "生化分析仪通常需要完成样本吸取、试剂加入、稀释混合、反应检测、清洗和废液排放。液路系统需要保证分配一致性、通道切换稳定性、连接密封和长期运行可靠。",
+      focusPoints: [
+        "样本与试剂分配的一致性",
+        "多试剂、清洗液、废液通道切换稳定性",
+        "管路密封、低残留与维护便利性",
+        "气泡、空吸、堵塞等异常识别",
+      ],
+      modules: [
+        {
+          key: "clinical-sample",
+          index: "01",
+          navLabel: "样本吸取",
+          navSubtitle: "小体积取样 / 空吸识别 / 挂液残留",
+          title: "样本吸取",
+          description:
+            "用于血清、血浆、全血等样本的吸取、保持和转移，重点控制小体积取样偏差、样本针空吸、挂液残留、吸取动作稳定性和重复取样一致性。",
+          tags: ["小体积取样", "空吸识别", "挂液残留", "重复一致性"],
+          products: ["syringePump", "pistonPump", "sampleNeedle", "sensors"],
+        },
+        {
+          key: "clinical-reagent",
+          index: "02",
+          navLabel: "试剂分配",
+          navSubtitle: "试剂定量 / 重复分配 / 残留控制",
+          title: "试剂分配",
+          description:
+            "用于稀释液、缓冲液、清洗液、底物和多组分试剂的定量加入，重点控制重复分配波动、试剂加入量一致性、多项目切换后的残留和长期运行稳定性。",
+          tags: ["试剂定量", "重复分配", "残留控制", "长期稳定"],
+          products: ["pistonPump", "syringePump", "solenoidValve"],
+        },
+        {
+          key: "clinical-switching",
+          index: "03",
+          navLabel: "液路切换",
+          navSubtitle: "多通道切换 / 路径防误通 / 降低残留",
+          title: "液路切换",
+          description:
+            "用于多试剂、多清洗液、多废液路径之间的切换，重点解决阀位切换可靠性、通道残留、路径误通、空间占用和多管路连接复杂的问题。",
+          tags: ["多通道切换", "路径防误通", "降低残留", "节省空间"],
+          products: ["rotaryValve", "solenoidValve", "pinchValve"],
+        },
+        {
+          key: "clinical-cleaning",
+          index: "04",
+          navLabel: "清洗废液",
+          navSubtitle: "清洗液供给 / 废液抽排 / 自吸能力",
+          title: "清洗废液",
+          description:
+            "用于样本针清洗、反应杯清洗、管路冲洗和废液排放，重点关注清洗流量是否足够、废液是否排净、自吸能力是否稳定、长期运行后流量是否衰减。",
+          tags: ["清洗液供给", "废液抽排", "自吸能力", "流量稳定"],
+          products: ["diaphragmPump", "solenoidValve", "sensors"],
+        },
+        {
+          key: "clinical-connection",
+          index: "05",
+          navLabel: "管路连接",
+          navSubtitle: "密封连接 / 管径适配 / 材料兼容",
+          title: "管路连接",
+          description:
+            "用于泵、阀、针、传感器和管路之间的连接，重点解决接头漏液、管路松脱、死体积、材料兼容、拆装维护和不同管径适配问题。",
+          tags: ["密封连接", "管径适配", "材料兼容", "维护便利"],
+          products: ["fittingsTubing", "checkFilter", "solenoidValve", "sensors"],
+        },
+        {
+          key: "clinical-monitoring",
+          index: "06",
+          navLabel: "状态监测",
+          navSubtitle: "空吸判断 / 气泡识别 / 堵塞监测",
+          title: "状态监测",
+          description:
+            "用于样本针、试剂管路、清洗液路和废液通道等关键位置，重点识别空吸、气泡混入、堵针、堵管、液位不足、废液排放异常和压力波动，帮助设备判断液路是否稳定。",
+          tags: ["空吸判断", "气泡识别", "堵塞监测", "压力反馈"],
+          products: ["sensors", "checkFilter"],
+        },
+      ],
+    },
+
+    {
+      key: "immunoassay",
+      index: "02",
+      title: "化学发光 / 免疫分析仪",
+      summary: "多试剂分配、磁珠清洗与底物添加液路。",
+      focusTitle: "多试剂分配、磁珠清洗与底物添加液路",
+      focusSummary:
+        "化学发光和免疫分析设备通常涉及样本加入、试剂分配、磁珠清洗、底物添加和废液排出。液路重点在于低残留、低交叉污染、多通道稳定切换和清洗效率。",
+      focusPoints: [
+        "多试剂分配与通道切换稳定性",
+        "磁珠清洗效率与废液排放能力",
+        "底物添加精度与低残留控制",
+        "气泡、液位、压力异常监测",
+      ],
+      modules: [
+        {
+          key: "immunoassay-sample",
+          index: "01",
+          navLabel: "样本加入",
+          navSubtitle: "样本定量 / 低残留 / 加样稳定",
+          title: "样本加入",
+          description:
+            "用于血清、血浆等样本向反应杯、反应管或反应腔的定量加入，重点关注样本体积一致性、针路残留、空吸识别和不同样本间的交叉污染控制。",
+          tags: ["样本定量", "低残留", "空吸识别", "交叉污染控制"],
+          products: ["syringePump", "sampleNeedle", "sensors"],
+        },
+        {
+          key: "immunoassay-reagent",
+          index: "02",
+          navLabel: "多试剂分配",
+          navSubtitle: "试剂加入 / 底物添加 / 重复一致",
+          title: "多试剂分配",
+          description:
+            "用于磁珠试剂、标记物、清洗缓冲液、底物等多种试剂的定量加入，重点控制多试剂加入顺序、分配重复性、底物加入稳定性和长期运行后体积漂移。",
+          tags: ["多试剂加入", "底物添加", "体积一致", "长期稳定"],
+          products: ["pistonPump", "syringePump", "solenoidValve"],
+        },
+        {
+          key: "immunoassay-beadWash",
+          index: "03",
+          navLabel: "磁珠清洗",
+          navSubtitle: "清洗效率 / 废液排放 / 残留控制",
+          title: "磁珠清洗",
+          description:
+            "用于磁珠结合后的多轮清洗、缓冲液输送和废液排出，重点关注清洗液流量、废液抽排稳定性、残留控制和气泡对清洗效果的影响。",
+          tags: ["磁珠清洗", "废液抽排", "残留控制", "气泡识别"],
+          products: ["diaphragmPump", "solenoidValve", "sensors"],
+        },
+        {
+          key: "immunoassay-switching",
+          index: "04",
+          navLabel: "液路切换",
+          navSubtitle: "多路径 / 阀组简化 / 介质兼容",
+          title: "液路切换",
+          description:
+            "用于样本、磁珠试剂、标记物、底物、清洗液和废液通道之间的路径控制，重点降低多试剂系统中的阀组复杂度、路径误通和残留风险。",
+          tags: ["多路径管理", "路径防误通", "介质兼容", "降低残留"],
+          products: ["rotaryValve", "solenoidValve", "pinchValve"],
+        },
+        {
+          key: "immunoassay-monitoring",
+          index: "05",
+          navLabel: "状态监测",
+          navSubtitle: "气泡 / 液位 / 压力异常",
+          title: "状态监测",
+          description:
+            "用于样本针、试剂管路、底物通道、清洗液路和废液通道的状态识别，重点判断气泡混入、液位不足、压力波动、堵塞和空吸风险。",
+          tags: ["气泡识别", "液位检测", "压力异常", "空吸判断"],
+          products: ["sensors", "checkFilter"],
+        },
+      ],
+    },
+
+    {
+      key: "hematology",
+      index: "03",
+      title: "血液分析仪",
+      summary: "血样稀释、溶血剂添加与废液排放液路。",
+      focusTitle: "血样稀释、溶血剂添加与废液排放液路",
+      focusSummary:
+        "血液分析仪液路通常涉及血样吸取、稀释液分配、溶血剂添加、鞘液输送、清洗和废液排出。液路设计需要关注稀释比例、气泡控制、堵塞识别和连续运行稳定性。",
+      focusPoints: [
+        "血样吸取与稀释比例稳定",
+        "溶血剂、稀释液、鞘液输送一致性",
+        "清洗与废液排放可靠性",
+        "堵塞、气泡、压力异常识别",
+      ],
+      modules: [
+        {
+          key: "hematology-sample",
+          index: "01",
+          navLabel: "血样吸取",
+          navSubtitle: "血样取样 / 抗堵塞 / 残留控制",
+          title: "血样吸取",
+          description:
+            "用于全血样本的吸取、保持和转移，重点关注血样粘度、吸取稳定性、挂液残留、样本针堵塞和重复取样一致性。",
+          tags: ["血样取样", "抗堵塞", "残留控制", "重复一致性"],
+          products: ["syringePump", "sampleNeedle", "sensors"],
+        },
+        {
+          key: "hematology-dilution",
+          index: "02",
+          navLabel: "稀释分配",
+          navSubtitle: "稀释液 / 溶血剂 / 鞘液",
+          title: "稀释分配",
+          description:
+            "用于稀释液、溶血剂、鞘液等液体的定量分配，重点控制稀释比例稳定、加液重复性和连续检测过程中的体积一致性。",
+          tags: ["稀释比例", "溶血剂添加", "鞘液输送", "体积一致"],
+          products: ["pistonPump", "syringePump", "solenoidValve"],
+        },
+        {
+          key: "hematology-channel",
+          index: "03",
+          navLabel: "检测通道切换",
+          navSubtitle: "检测路径 / 多通道 / 阀组控制",
+          title: "检测通道切换",
+          description:
+            "用于不同检测通道、清洗路径和废液路径之间的切换，重点保证路径选择准确、阀位稳定和液路切换后的残留可控。",
+          tags: ["检测路径", "多通道切换", "路径防误通", "残留控制"],
+          products: ["rotaryValve", "solenoidValve", "pinchValve"],
+        },
+        {
+          key: "hematology-cleaning",
+          index: "04",
+          navLabel: "清洗废液",
+          navSubtitle: "针路清洗 / 管路冲洗 / 废液排放",
+          title: "清洗废液",
+          description:
+            "用于样本针清洗、检测通道冲洗和废液排放，重点关注清洗流量、废液抽排能力、污染控制和长期运行后的稳定性。",
+          tags: ["针路清洗", "废液排放", "污染控制", "流量稳定"],
+          products: ["diaphragmPump", "pinchValve", "solenoidValve", "sensors"],
+        },
+        {
+          key: "hematology-monitoring",
+          index: "05",
+          navLabel: "状态监测",
+          navSubtitle: "堵塞 / 气泡 / 压力异常",
+          title: "状态监测",
+          description:
+            "用于血样吸取、稀释、清洗和废液通道的状态识别，重点判断堵针、堵管、气泡混入、空吸和压力异常。",
+          tags: ["堵塞识别", "气泡检测", "压力反馈", "空吸判断"],
+          products: ["sensors", "checkFilter"],
+        },
+      ],
+    },
+
+    {
+      key: "coagulation",
+      index: "04",
+      title: "凝血分析仪",
+      summary: "小体积样本与凝血试剂稳定分配。",
+      focusTitle: "小体积样本与凝血试剂稳定分配液路",
+      focusSummary:
+        "凝血分析仪对样本和试剂的分配一致性要求较高，常见流程包括样本吸取、凝血试剂加入、反应混合、清洗和废液处理。",
+      focusPoints: [
+        "小体积样本和试剂分配重复性",
+        "不同凝血试剂路径切换稳定性",
+        "紧凑空间内的管路密封与装配",
+        "液位、气泡和空吸状态识别",
+      ],
+      modules: [
+        {
+          key: "coagulation-sample",
+          index: "01",
+          navLabel: "样本吸取",
+          navSubtitle: "小体积样本 / 低残留 / 稳定取样",
+          title: "样本吸取",
+          description:
+            "用于凝血检测样本的吸取、保持和转移，重点关注小体积取样偏差、样本残留、液位判断和重复取样稳定性。",
+          tags: ["小体积样本", "低残留", "液位判断", "重复一致性"],
+          products: ["syringePump", "sampleNeedle", "sensors"],
+        },
+        {
+          key: "coagulation-reagent",
+          index: "02",
+          navLabel: "凝血试剂分配",
+          navSubtitle: "试剂定量 / 加样时序 / 重复性",
+          title: "凝血试剂分配",
+          description:
+            "用于凝血试剂、缓冲液和触发试剂的定量加入，重点控制加样体积、加样时序、重复分配稳定性和试剂残留。",
+          tags: ["凝血试剂", "加样时序", "重复分配", "体积一致"],
+          products: ["pistonPump", "syringePump", "solenoidValve"],
+        },
+        {
+          key: "coagulation-switching",
+          index: "03",
+          navLabel: "试剂路径切换",
+          navSubtitle: "多试剂 / 路径控制 / 低残留",
+          title: "试剂路径切换",
+          description:
+            "用于不同凝血试剂、清洗液和废液通道之间的路径切换，重点控制路径选择准确性、介质兼容性和残留风险。",
+          tags: ["多试剂路径", "路径控制", "低残留", "介质兼容"],
+          products: ["rotaryValve", "solenoidValve", "pinchValve"],
+        },
+        {
+          key: "coagulation-cleaning",
+          index: "04",
+          navLabel: "清洗废液",
+          navSubtitle: "清洗液 / 废液抽排 / 污染控制",
+          title: "清洗废液",
+          description:
+            "用于样本针、反应通道和管路的清洗与废液排放，重点关注清洗液供给、废液抽排、残留降低和污染控制。",
+          tags: ["清洗液供给", "废液抽排", "污染控制", "维护便利"],
+          products: ["diaphragmPump", "solenoidValve", "sensors"],
+        },
+        {
+          key: "coagulation-monitoring",
+          index: "05",
+          navLabel: "状态监测",
+          navSubtitle: "液位 / 气泡 / 空吸 / 压力",
+          title: "状态监测",
+          description:
+            "用于样本、试剂和清洗废液通道的状态识别，重点判断液位不足、气泡混入、空吸、堵塞和压力异常。",
+          tags: ["液位判断", "气泡识别", "空吸判断", "压力反馈"],
+          products: ["sensors", "checkFilter"],
+        },
+      ],
+    },
+
+    {
+      key: "molecular",
+      index: "05",
+      title: "分子诊断 / PCR",
+      summary: "核酸提取、清洗、洗脱与防污染液路。",
+      focusTitle: "核酸提取、清洗、洗脱与防污染液路",
+      focusSummary:
+        "分子诊断设备常见液路包括裂解液、结合液、清洗液、洗脱液和废液处理。液路设计重点在自动化流程稳定、低残留、防回流、防污染和紧凑集成。",
+      focusPoints: [
+        "裂解、清洗、洗脱等多路径流程切换",
+        "低残留、防回流与防污染设计",
+        "紧凑空间内的管路连接和维护",
+        "废液处理、空吸和堵塞异常识别",
+      ],
+      modules: [
+        {
+          key: "molecular-lysis",
+          index: "01",
+          navLabel: "裂解加液",
+          navSubtitle: "裂解液 / 结合液 / 定量加入",
+          title: "裂解加液",
+          description:
+            "用于裂解液、结合液等试剂的定量加入和流程转移，重点关注加液体积一致性、材料兼容、低残留和污染控制。",
+          tags: ["裂解液", "结合液", "定量加液", "材料兼容"],
+          products: ["pistonPump", "syringePump", "solenoidValve"],
+        },
+        {
+          key: "molecular-wash",
+          index: "02",
+          navLabel: "清洗洗脱",
+          navSubtitle: "清洗液 / 洗脱液 / 废液处理",
+          title: "清洗洗脱",
+          description:
+            "用于核酸提取流程中的清洗液输送、洗脱液加入和废液排放，重点关注流量稳定、低残留、防回流和流程一致性。",
+          tags: ["清洗液", "洗脱液", "废液处理", "低残留"],
+          products: ["diaphragmPump", "pistonPump", "pinchValve", "sensors"],
+        },
+        {
+          key: "molecular-switching",
+          index: "03",
+          navLabel: "路径切换",
+          navSubtitle: "多路径 / 防误通 / 防污染",
+          title: "路径切换",
+          description:
+            "用于裂解、结合、清洗、洗脱和废液等不同流程路径之间的切换，重点控制路径防误通、防回流、防污染和阀组简化。",
+          tags: ["多路径切换", "防误通", "防回流", "防污染"],
+          products: ["rotaryValve", "solenoidValve", "pinchValve", "checkFilter"],
+        },
+        {
+          key: "molecular-connection",
+          index: "04",
+          navLabel: "管路连接",
+          navSubtitle: "密封 / 材料兼容 / 低残留",
+          title: "管路连接",
+          description:
+            "用于泵、阀、试剂瓶、反应腔和废液通道之间的连接，重点关注密封可靠、材料耐受、低死体积、易维护和防污染。",
+          tags: ["密封连接", "材料兼容", "低死体积", "防污染"],
+          products: ["fittingsTubing", "checkFilter", "solenoidValve"],
+        },
+        {
+          key: "molecular-monitoring",
+          index: "05",
+          navLabel: "状态监测",
+          navSubtitle: "气泡 / 液位 / 堵塞 / 压力",
+          title: "状态监测",
+          description:
+            "用于核酸提取、清洗、洗脱和废液排放过程中的状态识别，重点判断气泡、空吸、液位不足、堵塞和压力异常，降低流程失败风险。",
+          tags: ["气泡识别", "液位检测", "堵塞判断", "压力反馈"],
+          products: ["sensors", "checkFilter"],
+        },
+      ],
+    },
+  ],
+};

@@ -91,6 +91,7 @@ export type NavigationImage = {
   alt: LocalizedText; // 图片 alt，用于 SEO / GEO / 无障碍识别
   title?: LocalizedText; // 图片下方产品名称
   description?: LocalizedText; // 图片下方产品说明
+  href?: LocalizedHref; // 图片点击链接，用于 Mega Menu 中单张图片跳转
   width?: number; // 图片原始宽度
   height?: number; // 图片原始高度
 };
@@ -556,6 +557,795 @@ const productMegaDropdown: MegaDropdown = {
   footerHref: anchorPath("products"),
 };
 
+/* ===== APPLICATION MEGA MENU DATA START ===== */
+
+/* ================================
+   应用领域图片辅助函数
+
+   说明：
+   1. 用于顶部导航「应用领域」Mega Menu
+   2. 图片放在 public/images/applications/mega-menu/
+   3. 代码路径不要写 public
+   4. 后续你只需要替换同名 webp 图片，不需要改代码
+================================ */
+
+function applicationSceneImage(
+  src: string,
+  title: LocalizedText,
+  description: LocalizedText,
+  href?: LocalizedHref
+): NavigationImage {
+  return {
+    src,
+    alt: title,
+    title,
+    description,
+    href,
+    width: 1200,
+    height: 760,
+  };
+}
+
+/* ================================
+   应用领域 Mega Menu 数据
+
+   说明：
+   1. 左侧 categories 是应用行业分类
+   2. 右侧 cards 是当前行业的典型仪器 / 场景入口
+   3. IVD 已有正式页面，href 指向 /applications/ivd
+   4. 其他应用领域页面后续再建立，当前先指向首页 applications 锚点，避免 404
+================================ */
+
+const applicationMegaDropdown: MegaDropdown = {
+  heading: t(
+    "应用领域",
+    "Applications",
+    "Aplicaciones",
+    "Applications",
+    "응용 분야",
+    "Области применения"
+  ),
+
+  description: t(
+    "按应用行业、典型仪器和液路需求快速了解恒永达在微流体系统中的产品支持能力。",
+    "Explore FOREACH fluidic component capabilities by application, instrument type, and fluidic requirements.",
+    "Explore las capacidades de componentes fluídicos de FOREACH por aplicación, tipo de instrumento y requisitos de fluido.",
+    "Découvrez les capacités des composants fluidiques FOREACH par application, type d’instrument et besoins fluidiques.",
+    "응용 분야, 장비 유형 및 유체 요구 사항에 따라 FOREACH 유체 부품 역량을 확인하세요.",
+    "Ознакомьтесь с возможностями жидкостных компонентов FOREACH по областям применения, типам приборов и требованиям к жидкостным трактам."
+  ),
+
+  categories: [
+    {
+      key: "ivd",
+      title: t("IVD 体外诊断", "IVD Diagnostics", "Diagnóstico IVD", "Diagnostic IVD", "IVD 체외진단", "IVD диагностика"),
+      description: t(
+        "样本、试剂、清洗、废液与状态监测液路",
+        "Samples, reagents, washing, waste, and status monitoring",
+        "Muestras, reactivos, lavado, residuos y monitoreo",
+        "Échantillons, réactifs, lavage, déchets et surveillance",
+        "샘플, 시약, 세척, 폐액 및 상태 모니터링",
+        "Образцы, реагенты, промывка, отходы и контроль состояния"
+      ),
+      order: 1,
+      enabled: true,
+    },
+    {
+      key: "life-science",
+      title: t("生命科学", "Life Sciences", "Ciencias de la vida", "Sciences de la vie", "생명과학", "Науки о жизни"),
+      description: t(
+        "样本处理、反应、分离与检测前处理液路",
+        "Sample handling, reaction, separation, and pre-analytical fluidics",
+        "Manejo de muestras, reacción, separación y pretratamiento",
+        "Traitement d’échantillons, réaction, séparation et prétraitement",
+        "샘플 처리, 반응, 분리 및 분석 전 처리",
+        "Обработка образцов, реакции, разделение и пробоподготовка"
+      ),
+      order: 2,
+      enabled: true,
+    },
+    {
+      key: "laboratory-automation",
+      title: t("实验室自动化", "Laboratory Automation", "Automatización de laboratorio", "Automatisation de laboratoire", "실험실 자동화", "Лабораторная автоматизация"),
+      description: t(
+        "自动加样、移液、清洗、转移与联机系统",
+        "Automated dispensing, pipetting, washing, transfer, and integration",
+        "Dispensación, pipeteo, lavado, transferencia e integración",
+        "Distribution, pipetage, lavage, transfert et intégration",
+        "자동 분주, 피펫팅, 세척, 이송 및 통합",
+        "Автоматическое дозирование, пипетирование, промывка, перенос и интеграция"
+      ),
+      order: 3,
+      enabled: true,
+    },
+    {
+      key: "analytical-instruments",
+      title: t("分析仪器", "Analytical Instruments", "Instrumentos analíticos", "Instruments analytiques", "분석 장비", "Аналитические приборы"),
+      description: t(
+        "连续进样、试剂输送、流路切换与管路连接",
+        "Sampling, reagent delivery, flow switching, and tubing connections",
+        "Muestreo, reactivos, conmutación de flujo y conexiones",
+        "Échantillonnage, réactifs, commutation et raccordements",
+        "샘플링, 시약 이송, 유로 전환 및 튜빙 연결",
+        "Отбор проб, подача реагентов, переключение потоков и соединения"
+      ),
+      order: 4,
+      enabled: true,
+    },
+    {
+      key: "environmental-monitoring",
+      title: t("环保监测", "Environmental Monitoring", "Monitoreo ambiental", "Surveillance environnementale", "환경 모니터링", "Экологический мониторинг"),
+      description: t(
+        "水质、废水、气体预处理、采样前处理与在线液路",
+        "Water, gas, online sampling, pretreatment, and testing fluidics",
+        "Agua, gas, muestreo en línea, pretratamiento y detección",
+        "Eau, gaz, échantillonnage en ligne, prétraitement et détection",
+        "수질, 가스, 온라인 샘플링, 전처리 및 검출",
+        "Вода, газ, онлайн-отбор, подготовка и измерение"
+      ),
+      order: 5,
+      enabled: true,
+    },
+    {
+      key: "synthetic-biology",
+      title: t("合成生物", "Synthetic Biology", "Biología sintética", "Biologie synthétique", "합성생물학", "Синтетическая биология"),
+      description: t(
+        "培养、补液、取样、换液与连续流控制",
+        "Culture, feeding, sampling, media exchange, and continuous flow",
+        "Cultivo, alimentación, muestreo, cambio de medio y flujo continuo",
+        "Culture, alimentation, prélèvement, renouvellement et flux continu",
+        "배양, 보충, 샘플링, 배지 교환 및 연속 흐름",
+        "Культивирование, подпитка, отбор проб, замена среды и непрерывный поток"
+      ),
+      order: 6,
+      enabled: true,
+    },
+  ],
+
+  cards: [
+    {
+      key: "ivd-card",
+      categoryKey: "ivd",
+      title: t("IVD 体外诊断", "IVD Diagnostics", "Diagnóstico IVD", "Diagnostic IVD", "IVD 체외진단", "IVD диагностика"),
+      description: t(
+        "面向 IVD 体外诊断仪器中的样本吸取、试剂分配、清洗废液、液路切换、管路连接与状态监测需求。",
+        "For sample aspiration, reagent dispensing, washing, waste handling, switching, tubing connections, and status monitoring in IVD instruments.",
+        "Para aspiración de muestras, dispensación de reactivos, lavado, residuos, conmutación, conexiones y monitoreo en instrumentos IVD.",
+        "Pour aspiration d’échantillons, distribution de réactifs, lavage, déchets, commutation, raccordements et surveillance dans les instruments IVD.",
+        "IVD 장비의 샘플 흡입, 시약 분주, 세척, 폐액, 유로 전환, 튜빙 연결 및 상태 모니터링.",
+        "Для аспирации образцов, дозирования реагентов, промывки, отходов, переключения, соединений и контроля состояния."
+      ),
+      href: localizedPath("/applications/analytical-instruments"),
+      images: [
+        applicationSceneImage("/images/applications/mega-menu/ivd-biochemistry.webp", t("生化分析仪", "Clinical Chemistry Analyzer", "Analizador bioquímico", "Analyseur de biochimie", "생화학 분석기", "Биохимический анализатор"), t("样本、试剂、清洗与废液处理液路", "Sample, reagent, washing, and waste fluidics", "Muestra, reactivo, lavado y residuos", "Échantillon, réactif, lavage et déchets", "샘플, 시약, 세척 및 폐액 유로", "Образцы, реагенты, промывка и отходы"), localizedPath("/applications/ivd?instrument=clinical")),
+        applicationSceneImage("/images/applications/mega-menu/ivd-immunoassay.webp", t("化学发光 / 免疫分析仪", "CLIA / Immunoassay Analyzer", "Analizador CLIA / inmunoensayo", "Analyseur CLIA / immunoessai", "화학발광 / 면역 분석기", "Хемилюминесцентный / иммунологический анализатор"), t("多试剂分配、磁珠清洗与底物添加液路", "Multi-reagent dispensing, bead washing, and substrate addition", "Reactivos, lavado de perlas y sustrato", "Réactifs, billes magnétiques et substrat", "다중 시약, 비드 세척 및 기질 첨가", "Реагенты, промывка частиц и субстрат"), localizedPath("/applications/ivd?instrument=immunoassay")),
+        applicationSceneImage("/images/applications/mega-menu/ivd-hematology.webp", t("血液分析仪", "Hematology Analyzer", "Analizador hematológico", "Analyseur d’hématologie", "혈액 분석기", "Гематологический анализатор"), t("血样稀释、溶血剂添加与废液排放液路", "Blood dilution, lysing reagent addition, and waste discharge", "Dilución de sangre, lisante y residuos", "Dilution du sang, lyseur et déchets", "혈액 희석, 용혈제 및 폐액 배출", "Разбавление крови, лизирующий реагент и отходы"), localizedPath("/applications/ivd?instrument=hematology")),
+        applicationSceneImage("/images/applications/mega-menu/ivd-coagulation.webp", t("凝血分析仪", "Coagulation Analyzer", "Analizador de coagulación", "Analyseur de coagulation", "혈액응고 분석기", "Коагулометр"), t("小体积样本与凝血试剂稳定分配", "Stable dispensing of small-volume samples and coagulation reagents", "Muestras pequeñas y reactivos de coagulación", "Petits échantillons et réactifs de coagulation", "소량 샘플 및 응고 시약 분주", "Малые образцы и реагенты коагуляции"), localizedPath("/applications/ivd?instrument=coagulation")),
+        applicationSceneImage("/images/applications/mega-menu/ivd-molecular.webp", t("分子诊断 / PCR", "Molecular Diagnostics / PCR", "Diagnóstico molecular / PCR", "Diagnostic moléculaire / PCR", "분자진단 / PCR", "Молекулярная диагностика / PCR"), t("核酸提取、清洗、洗脱与防污染液路", "Nucleic acid extraction, washing, elution, and contamination control", "Extracción, lavado, elución y control de contaminación", "Extraction, lavage, élution et contrôle de contamination", "핵산 추출, 세척, 용출 및 오염 제어", "Экстракция, промывка, элюирование и контроль загрязнения"), localizedPath("/applications/ivd?instrument=molecular")),
+      ],
+      order: 1,
+      enabled: true,
+    },
+
+    {
+      key: "life-science-card",
+      categoryKey: "life-science",
+      title: t("生命科学", "Life Sciences", "Ciencias de la vida", "Sciences de la vie", "생명과학", "Науки о жизни"),
+      description: t(
+        "面向生命科学设备中的样本处理、试剂加入、反应控制、分离清洗和检测前处理流程。",
+        "For sample handling, reagent addition, reaction control, separation washing, and pre-analytical processing.",
+        "Para manejo de muestras, reactivos, reacción, separación y pretratamiento.",
+        "Pour traitement d’échantillons, réactifs, réaction, séparation et prétraitement.",
+        "샘플 처리, 시약 첨가, 반응 제어, 분리 세척 및 전처리.",
+        "Для обработки образцов, реагентов, реакций, разделения и подготовки."
+      ),
+      href: localizedPath("/applications/life-science"),
+      images: [
+        applicationSceneImage(
+          "/images/applications/mega-menu/life-nucleic-acid.webp",
+          t(
+            "基因测序 / 样本制备",
+            "Genomics / Sample Preparation",
+            "Genomics / Sample Preparation",
+            "Genomics / Sample Preparation",
+            "Genomics / Sample Preparation",
+            "Genomics / Sample Preparation",
+          ),
+          t(
+            "裂解、结合、清洗、洗脱与低残留液路",
+            "Lysis, binding, washing, elution and low-residue fluidic paths",
+            "Lysis, binding, washing, elution and low-residue fluidic paths",
+            "Lysis, binding, washing, elution and low-residue fluidic paths",
+            "Lysis, binding, washing, elution and low-residue fluidic paths",
+            "Lysis, binding, washing, elution and low-residue fluidic paths",
+          ),
+          localizedPath("/applications/life-science?application=genomics"),
+        ),
+        applicationSceneImage(
+          "/images/applications/mega-menu/life-cell-analysis.webp",
+          t(
+            "细胞培养 / 细胞治疗",
+            "Cell Culture / Cell Therapy",
+            "Cell Culture / Cell Therapy",
+            "Cell Culture / Cell Therapy",
+            "Cell Culture / Cell Therapy",
+            "Cell Culture / Cell Therapy",
+          ),
+          t(
+            "培养基补液、缓冲液切换与封闭式转移",
+            "Media replenishment, buffer switching and closed fluid transfer",
+            "Media replenishment, buffer switching and closed fluid transfer",
+            "Media replenishment, buffer switching and closed fluid transfer",
+            "Media replenishment, buffer switching and closed fluid transfer",
+            "Media replenishment, buffer switching and closed fluid transfer",
+          ),
+          localizedPath("/applications/life-science?application=cellCulture"),
+        ),
+        applicationSceneImage(
+          "/images/applications/mega-menu/life-sample-prep.webp",
+          t(
+            "实验室自动化工作站",
+            "Laboratory Automation Workstation",
+            "Laboratory Automation Workstation",
+            "Laboratory Automation Workstation",
+            "Laboratory Automation Workstation",
+            "Laboratory Automation Workstation",
+          ),
+          t(
+            "移液、分液、清洗与多工位液路集成",
+            "Pipetting, dispensing, washing and multi-station fluidic integration",
+            "Pipetting, dispensing, washing and multi-station fluidic integration",
+            "Pipetting, dispensing, washing and multi-station fluidic integration",
+            "Pipetting, dispensing, washing and multi-station fluidic integration",
+            "Pipetting, dispensing, washing and multi-station fluidic integration",
+          ),
+          localizedPath("/applications/life-science?application=automation"),
+        ),
+        applicationSceneImage(
+          "/images/applications/mega-menu/life-protein-analysis.webp",
+          t(
+            "蛋白 / 抗体分析",
+            "Protein / Antibody Analysis",
+            "Protein / Antibody Analysis",
+            "Protein / Antibody Analysis",
+            "Protein / Antibody Analysis",
+            "Protein / Antibody Analysis",
+          ),
+          t(
+            "样本进样、缓冲液切换与低吸附流路",
+            "Sample injection, buffer switching and low-adsorption flow paths",
+            "Sample injection, buffer switching and low-adsorption flow paths",
+            "Sample injection, buffer switching and low-adsorption flow paths",
+            "Sample injection, buffer switching and low-adsorption flow paths",
+            "Sample injection, buffer switching and low-adsorption flow paths",
+          ),
+          localizedPath("/applications/life-science?application=protein"),
+        ),
+        applicationSceneImage(
+          "/images/applications/mega-menu/life-microfluidic-platform.webp",
+          t(
+            "合成生物学 / 生物工艺",
+            "Synthetic Biology / Bioprocess",
+            "Synthetic Biology / Bioprocess",
+            "Synthetic Biology / Bioprocess",
+            "Synthetic Biology / Bioprocess",
+            "Synthetic Biology / Bioprocess",
+          ),
+          t(
+            "补料、取样、排液与过程状态监测",
+            "Feeding, sampling, drainage and process status monitoring",
+            "Feeding, sampling, drainage and process status monitoring",
+            "Feeding, sampling, drainage and process status monitoring",
+            "Feeding, sampling, drainage and process status monitoring",
+            "Feeding, sampling, drainage and process status monitoring",
+          ),
+          localizedPath("/applications/life-science?application=bioProcess"),
+        ),
+      ],
+      order: 2,
+      enabled: true,
+    },
+
+    {
+      key: "laboratory-automation-card",
+      categoryKey: "laboratory-automation",
+      title: t("实验室自动化", "Laboratory Automation", "Automatización de laboratorio", "Automatisation de laboratoire", "실험실 자동화", "Лабораторная автоматизация"),
+      description: t(
+        "面向实验室自动化系统中的自动移液、样本转移、微孔板处理、清洗排废和多模块联机液路。",
+        "For automated pipetting, sample transfer, microplate handling, washing, waste handling, and integrated fluidics.",
+        "Para pipeteo, transferencia, microplacas, lavado, residuos y fluidos integrados.",
+        "Pour pipetage, transfert, microplaques, lavage, déchets et fluidique intégrée.",
+        "자동 피펫팅, 샘플 이송, 마이크로플레이트, 세척, 폐액 및 통합 유로.",
+        "Для пипетирования, переноса, микропланшетов, промывки, отходов и интеграции."
+      ),
+      href: localizedPath("/applications/lab-automation"),
+      images: [
+        applicationSceneImage(
+          "/images/applications/mega-menu/lab-sample-processing.webp",
+          t(
+            "样本制备工作站",
+            "Sample Preparation Workstation",
+            "Sample Preparation Workstation",
+            "Sample Preparation Workstation",
+            "Sample Preparation Workstation",
+            "Sample Preparation Workstation",
+          ),
+          t(
+            "样本前处理、试剂加入、清洗、洗脱与废液排放",
+            "Sample pretreatment, reagent dosing, washing, elution and waste drainage",
+            "Sample pretreatment, reagent dosing, washing, elution and waste drainage",
+            "Sample pretreatment, reagent dosing, washing, elution and waste drainage",
+            "Sample pretreatment, reagent dosing, washing, elution and waste drainage",
+            "Sample pretreatment, reagent dosing, washing, elution and waste drainage",
+          ),
+          localizedPath("/applications/lab-automation?application=samplePrep"),
+        ),
+        applicationSceneImage(
+          "/images/applications/mega-menu/lab-pipetting-workstation.webp",
+          t(
+            "自动移液平台",
+            "Automated Pipetting Platform",
+            "Automated Pipetting Platform",
+            "Automated Pipetting Platform",
+            "Automated Pipetting Platform",
+            "Automated Pipetting Platform",
+          ),
+          t(
+            "孔板、试管与反应腔之间的微量液体转移",
+            "Micro-volume liquid transfer between plates, tubes and reaction chambers",
+            "Micro-volume liquid transfer between plates, tubes and reaction chambers",
+            "Micro-volume liquid transfer between plates, tubes and reaction chambers",
+            "Micro-volume liquid transfer between plates, tubes and reaction chambers",
+            "Micro-volume liquid transfer between plates, tubes and reaction chambers",
+          ),
+          localizedPath("/applications/lab-automation?application=pipetting"),
+        ),
+        applicationSceneImage(
+          "/images/applications/mega-menu/lab-microplate-processing.webp",
+          t(
+            "微孔板处理设备",
+            "Microplate Processing Systems",
+            "Microplate Processing Systems",
+            "Microplate Processing Systems",
+            "Microplate Processing Systems",
+            "Microplate Processing Systems",
+          ),
+          t(
+            "孔板加液、洗板、残液抽排与清洗废液处理",
+            "Plate dosing, washing, residual liquid aspiration and waste handling",
+            "Plate dosing, washing, residual liquid aspiration and waste handling",
+            "Plate dosing, washing, residual liquid aspiration and waste handling",
+            "Plate dosing, washing, residual liquid aspiration and waste handling",
+            "Plate dosing, washing, residual liquid aspiration and waste handling",
+          ),
+          localizedPath("/applications/lab-automation?application=microplate"),
+        ),
+        applicationSceneImage(
+          "/images/applications/mega-menu/lab-reagent-dispensing.webp",
+          t(
+            "试剂分装与分配设备",
+            "Reagent Dispensing Systems",
+            "Reagent Dispensing Systems",
+            "Reagent Dispensing Systems",
+            "Reagent Dispensing Systems",
+            "Reagent Dispensing Systems",
+          ),
+          t(
+            "缓冲液、清洗液、培养基与添加液重复定量分配",
+            "Repeatable dosing of buffers, wash solutions, media and additives",
+            "Repeatable dosing of buffers, wash solutions, media and additives",
+            "Repeatable dosing of buffers, wash solutions, media and additives",
+            "Repeatable dosing of buffers, wash solutions, media and additives",
+            "Repeatable dosing of buffers, wash solutions, media and additives",
+          ),
+          localizedPath("/applications/lab-automation?application=reagentDispensing"),
+        ),
+        applicationSceneImage(
+          "/images/applications/mega-menu/lab-integrated-system.webp",
+          t(
+            "自动化系统集成",
+            "Automation System Integration",
+            "Automation System Integration",
+            "Automation System Integration",
+            "Automation System Integration",
+            "Automation System Integration",
+          ),
+          t(
+            "多模块、多工位、多路径液路集成与状态监测",
+            "Multi-module, multi-station and multi-path fluidic integration with status monitoring",
+            "Multi-module, multi-station and multi-path fluidic integration with status monitoring",
+            "Multi-module, multi-station and multi-path fluidic integration with status monitoring",
+            "Multi-module, multi-station and multi-path fluidic integration with status monitoring",
+            "Multi-module, multi-station and multi-path fluidic integration with status monitoring",
+          ),
+          localizedPath("/applications/lab-automation?application=systemIntegration"),
+        ),
+      ],
+      order: 3,
+      enabled: true,
+    },
+
+    {
+      key: "analytical-instruments-card",
+      categoryKey: "analytical-instruments",
+      title: t("分析仪器", "Analytical Instruments", "Instrumentos analíticos", "Instruments analytiques", "분석 장비", "Аналитические приборы"),
+      description: t(
+        "面向分析仪器中的试剂输送、连续进样、流路切换、样本池清洗和精密管路连接需求。",
+        "For reagent delivery, continuous sampling, flow switching, cuvette washing, and precision tubing connections.",
+        "Para reactivos, muestreo continuo, conmutación, lavado y conexiones precisas.",
+        "Pour réactifs, échantillonnage continu, commutation, lavage et raccordements précis.",
+        "시약 이송, 연속 샘플링, 유로 전환, 셀 세척 및 정밀 연결.",
+        "Для реагентов, непрерывного отбора, переключения, промывки и соединений."
+      ),
+      href: localizedPath("/applications/analytical-instruments"),
+      images: [
+        applicationSceneImage(
+          "/images/applications/mega-menu/analytical-chromatography.webp",
+          t(
+            "色谱 / 自动进样系统",
+            "Chromatography / Autosampler",
+            "Chromatography / Autosampler",
+            "Chromatography / Autosampler",
+            "Chromatography / Autosampler",
+            "Chromatography / Autosampler",
+          ),
+          t(
+            "样品进样、溶剂切换、清洗排废与低残留流路",
+            "Sample injection, solvent switching, washing, waste drainage and low-residue flow paths",
+            "Sample injection, solvent switching, washing, waste drainage and low-residue flow paths",
+            "Sample injection, solvent switching, washing, waste drainage and low-residue flow paths",
+            "Sample injection, solvent switching, washing, waste drainage and low-residue flow paths",
+            "Sample injection, solvent switching, washing, waste drainage and low-residue flow paths",
+          ),
+          localizedPath("/applications/analytical-instruments?application=chromatography"),
+        ),
+        applicationSceneImage(
+          "/images/applications/mega-menu/analytical-spectroscopy.webp",
+          t(
+            "光谱 / 元素分析仪器",
+            "Spectroscopy / Elemental Analysis",
+            "Spectroscopy / Elemental Analysis",
+            "Spectroscopy / Elemental Analysis",
+            "Spectroscopy / Elemental Analysis",
+            "Spectroscopy / Elemental Analysis",
+          ),
+          t(
+            "样品输送、试剂加入、清洗与废液排放",
+            "Sample delivery, reagent dosing, washing and waste drainage",
+            "Sample delivery, reagent dosing, washing and waste drainage",
+            "Sample delivery, reagent dosing, washing and waste drainage",
+            "Sample delivery, reagent dosing, washing and waste drainage",
+            "Sample delivery, reagent dosing, washing and waste drainage",
+          ),
+          localizedPath("/applications/analytical-instruments?application=spectroscopy"),
+        ),
+        applicationSceneImage(
+          "/images/applications/mega-menu/analytical-titration.webp",
+          t(
+            "水质 / 环境监测设备",
+            "Water Quality / Environmental Monitoring",
+            "Water Quality / Environmental Monitoring",
+            "Water Quality / Environmental Monitoring",
+            "Water Quality / Environmental Monitoring",
+            "Water Quality / Environmental Monitoring",
+          ),
+          t(
+            "取样、试剂分配、反应检测、清洗与排废",
+            "Sampling, reagent dosing, reaction detection, washing and waste drainage",
+            "Sampling, reagent dosing, reaction detection, washing and waste drainage",
+            "Sampling, reagent dosing, reaction detection, washing and waste drainage",
+            "Sampling, reagent dosing, reaction detection, washing and waste drainage",
+            "Sampling, reagent dosing, reaction detection, washing and waste drainage",
+          ),
+          localizedPath("/applications/analytical-instruments?application=waterQuality"),
+        ),
+        applicationSceneImage(
+          "/images/applications/mega-menu/analytical-ms-pretreatment.webp",
+          t(
+            "样品前处理设备",
+            "Sample Preparation Systems",
+            "Sample Preparation Systems",
+            "Sample Preparation Systems",
+            "Sample Preparation Systems",
+            "Sample Preparation Systems",
+          ),
+          t(
+            "稀释、萃取、混合、过滤与多路径液路控制",
+            "Dilution, extraction, mixing, filtration and multi-path fluidic control",
+            "Dilution, extraction, mixing, filtration and multi-path fluidic control",
+            "Dilution, extraction, mixing, filtration and multi-path fluidic control",
+            "Dilution, extraction, mixing, filtration and multi-path fluidic control",
+            "Dilution, extraction, mixing, filtration and multi-path fluidic control",
+          ),
+          localizedPath("/applications/analytical-instruments?application=samplePrep"),
+        ),
+        applicationSceneImage(
+          "/images/applications/mega-menu/analytical-online-system.webp",
+          t(
+            "实验室分析系统集成",
+            "Laboratory Analyzer System Integration",
+            "Laboratory Analyzer System Integration",
+            "Laboratory Analyzer System Integration",
+            "Laboratory Analyzer System Integration",
+            "Laboratory Analyzer System Integration",
+          ),
+          t(
+            "多模块、多试剂、多检测路径的液路系统集成",
+            "Fluidic system integration for multi-module, multi-reagent and multi-detection paths",
+            "Fluidic system integration for multi-module, multi-reagent and multi-detection paths",
+            "Fluidic system integration for multi-module, multi-reagent and multi-detection paths",
+            "Fluidic system integration for multi-module, multi-reagent and multi-detection paths",
+            "Fluidic system integration for multi-module, multi-reagent and multi-detection paths",
+          ),
+          localizedPath("/applications/analytical-instruments?application=labAnalyzer"),
+        ),
+      ],
+      order: 4,
+      enabled: true,
+    },
+
+    {
+      key: "environmental-monitoring-card",
+      categoryKey: "environmental-monitoring",
+      title: t("环保监测", "Environmental Monitoring", "Monitoreo ambiental", "Surveillance environnementale", "환경 모니터링", "Экологический мониторинг"),
+      description: t(
+        "面向环保监测设备中的水样采集、试剂加入、在线预处理、清洗排废和异常状态监测。",
+        "For water sampling, reagent addition, online pretreatment, washing, waste handling, and status monitoring.",
+        "Para muestreo de agua, reactivos, pretratamiento, lavado, residuos y monitoreo.",
+        "Pour prélèvement d’eau, réactifs, prétraitement, lavage, déchets et surveillance.",
+        "수질 샘플링, 시약, 전처리, 세척, 폐액 및 상태 모니터링.",
+        "Для отбора воды, реагентов, подготовки, промывки, отходов и контроля."
+      ),
+      href: localizedPath("/applications/environmental-monitoring"),
+      images: [
+        applicationSceneImage(
+          "/images/applications/mega-menu/environment-water-monitoring.webp",
+          t(
+            "水质在线监测",
+            "Water Quality Monitoring",
+            "Water Quality Monitoring",
+            "Water Quality Monitoring",
+            "Water Quality Monitoring",
+            "Water Quality Monitoring",
+          ),
+          t(
+            "取样、试剂分配、反应检测、清洗与排废",
+            "Sampling, reagent dosing, reaction detection, washing and waste drainage",
+            "Sampling, reagent dosing, reaction detection, washing and waste drainage",
+            "Sampling, reagent dosing, reaction detection, washing and waste drainage",
+            "Sampling, reagent dosing, reaction detection, washing and waste drainage",
+            "Sampling, reagent dosing, reaction detection, washing and waste drainage",
+          ),
+          localizedPath("/applications/environmental-monitoring?application=waterQuality"),
+        ),
+        applicationSceneImage(
+          "/images/applications/mega-menu/environment-pretreatment.webp",
+          t(
+            "废水 / 工业过程水",
+            "Wastewater / Process Water",
+            "Wastewater / Process Water",
+            "Wastewater / Process Water",
+            "Wastewater / Process Water",
+            "Wastewater / Process Water",
+          ),
+          t(
+            "复杂水样取送、过滤保护、试剂反应与排液维护",
+            "Complex water sampling, filtration protection, reagent reaction and drainage maintenance",
+            "Complex water sampling, filtration protection, reagent reaction and drainage maintenance",
+            "Complex water sampling, filtration protection, reagent reaction and drainage maintenance",
+            "Complex water sampling, filtration protection, reagent reaction and drainage maintenance",
+            "Complex water sampling, filtration protection, reagent reaction and drainage maintenance",
+          ),
+          localizedPath("/applications/environmental-monitoring?application=wastewater"),
+        ),
+        applicationSceneImage(
+          "/images/applications/mega-menu/environment-gas-analysis.webp",
+          t(
+            "烟气 / 气体预处理",
+            "Flue Gas / Gas Pretreatment",
+            "Flue Gas / Gas Pretreatment",
+            "Flue Gas / Gas Pretreatment",
+            "Flue Gas / Gas Pretreatment",
+            "Flue Gas / Gas Pretreatment",
+          ),
+          t(
+            "冷凝液排放、吸收液输送、清洗与防堵保护",
+            "Condensate drainage, absorbent delivery, washing and anti-clogging protection",
+            "Condensate drainage, absorbent delivery, washing and anti-clogging protection",
+            "Condensate drainage, absorbent delivery, washing and anti-clogging protection",
+            "Condensate drainage, absorbent delivery, washing and anti-clogging protection",
+            "Condensate drainage, absorbent delivery, washing and anti-clogging protection",
+          ),
+          localizedPath("/applications/environmental-monitoring?application=gasPretreatment"),
+        ),
+        applicationSceneImage(
+          "/images/applications/mega-menu/environment-auto-sampling.webp",
+          t(
+            "环境采样与前处理",
+            "Environmental Sampling & Pretreatment",
+            "Environmental Sampling & Pretreatment",
+            "Environmental Sampling & Pretreatment",
+            "Environmental Sampling & Pretreatment",
+            "Environmental Sampling & Pretreatment",
+          ),
+          t(
+            "样品转移、稀释、过滤、混合与废液排放",
+            "Sample transfer, dilution, filtration, mixing and waste drainage",
+            "Sample transfer, dilution, filtration, mixing and waste drainage",
+            "Sample transfer, dilution, filtration, mixing and waste drainage",
+            "Sample transfer, dilution, filtration, mixing and waste drainage",
+            "Sample transfer, dilution, filtration, mixing and waste drainage",
+          ),
+          localizedPath("/applications/environmental-monitoring?application=samplingPrep"),
+        ),
+        applicationSceneImage(
+          "/images/applications/mega-menu/environment-portable-device.webp",
+          t(
+            "环保在线系统集成",
+            "Online Environmental System Integration",
+            "Online Environmental System Integration",
+            "Online Environmental System Integration",
+            "Online Environmental System Integration",
+            "Online Environmental System Integration",
+          ),
+          t(
+            "多试剂、多通道、多废液路径的长期在线液路集成",
+            "Long-term online fluidic integration for multi-reagent, multi-channel and waste paths",
+            "Long-term online fluidic integration for multi-reagent, multi-channel and waste paths",
+            "Long-term online fluidic integration for multi-reagent, multi-channel and waste paths",
+            "Long-term online fluidic integration for multi-reagent, multi-channel and waste paths",
+            "Long-term online fluidic integration for multi-reagent, multi-channel and waste paths",
+          ),
+          localizedPath("/applications/environmental-monitoring?application=systemIntegration"),
+        ),
+      ],
+      order: 5,
+      enabled: true,
+    },
+
+    {
+      key: "synthetic-biology-card",
+      categoryKey: "synthetic-biology",
+      title: t("合成生物", "Synthetic Biology", "Biología sintética", "Biologie synthétique", "합성생물학", "Синтетическая биология"),
+      description: t(
+        "面向合成生物设备中的培养补液、自动取样、换液、连续流控制和反应过程液路管理。",
+        "For culture feeding, automated sampling, media exchange, continuous flow control, and process fluidics.",
+        "Para cultivo, alimentación, muestreo, cambio de medio, flujo continuo y proceso.",
+        "Pour culture, alimentation, prélèvement, renouvellement, flux continu et procédé.",
+        "배양 보충, 자동 샘플링, 배지 교환, 연속 흐름 및 공정 유로.",
+        "Для подпитки, отбора проб, замены среды, непрерывного потока и процесса."
+      ),
+      href: localizedPath("/applications/synthetic-biology"),
+      images: [
+        applicationSceneImage(
+          "/images/applications/mega-menu/synthetic-bioreactor.webp",
+          t(
+            "微型生物反应器",
+            "Micro Bioreactor",
+            "Micro Bioreactor",
+            "Micro Bioreactor",
+            "Micro Bioreactor",
+            "Micro Bioreactor",
+          ),
+          t(
+            "补料、取样、排液、清洗与过程状态监测",
+            "Feeding, sampling, drainage, washing and process status monitoring",
+            "Feeding, sampling, drainage, washing and process status monitoring",
+            "Feeding, sampling, drainage, washing and process status monitoring",
+            "Feeding, sampling, drainage, washing and process status monitoring",
+            "Feeding, sampling, drainage, washing and process status monitoring",
+          ),
+          localizedPath("/applications/synthetic-biology?application=microBioreactor"),
+        ),
+        applicationSceneImage(
+          "/images/applications/mega-menu/synthetic-high-throughput.webp",
+          t(
+            "自动化构建与筛选平台",
+            "Automated Build & Screening Platform",
+            "Automated Build & Screening Platform",
+            "Automated Build & Screening Platform",
+            "Automated Build & Screening Platform",
+            "Automated Build & Screening Platform",
+          ),
+          t(
+            "菌株构建、试剂分配、移液、清洗与高通量筛选",
+            "Strain construction, reagent dispensing, pipetting, washing and high-throughput screening",
+            "Strain construction, reagent dispensing, pipetting, washing and high-throughput screening",
+            "Strain construction, reagent dispensing, pipetting, washing and high-throughput screening",
+            "Strain construction, reagent dispensing, pipetting, washing and high-throughput screening",
+            "Strain construction, reagent dispensing, pipetting, washing and high-throughput screening",
+          ),
+          localizedPath("/applications/synthetic-biology?application=biofoundry"),
+        ),
+        applicationSceneImage(
+          "/images/applications/mega-menu/synthetic-auto-culture.webp",
+          t(
+            "补料与培养控制系统",
+            "Feeding & Culture Control System",
+            "Feeding & Culture Control System",
+            "Feeding & Culture Control System",
+            "Feeding & Culture Control System",
+            "Feeding & Culture Control System",
+          ),
+          t(
+            "培养基、诱导剂、缓冲液和添加液稳定补加",
+            "Stable feeding of media, inducers, buffers and additives",
+            "Stable feeding of media, inducers, buffers and additives",
+            "Stable feeding of media, inducers, buffers and additives",
+            "Stable feeding of media, inducers, buffers and additives",
+            "Stable feeding of media, inducers, buffers and additives",
+          ),
+          localizedPath("/applications/synthetic-biology?application=feedingControl"),
+        ),
+        applicationSceneImage(
+          "/images/applications/mega-menu/synthetic-microfluidic-platform.webp",
+          t(
+            "在线取样 / 过程分析系统",
+            "Online Sampling / Process Analysis",
+            "Online Sampling / Process Analysis",
+            "Online Sampling / Process Analysis",
+            "Online Sampling / Process Analysis",
+            "Online Sampling / Process Analysis",
+          ),
+          t(
+            "在线取样、样品转移、过滤保护与分析前处理",
+            "Online sampling, sample transfer, filtration protection and analytical pretreatment",
+            "Online sampling, sample transfer, filtration protection and analytical pretreatment",
+            "Online sampling, sample transfer, filtration protection and analytical pretreatment",
+            "Online sampling, sample transfer, filtration protection and analytical pretreatment",
+            "Online sampling, sample transfer, filtration protection and analytical pretreatment",
+          ),
+          localizedPath("/applications/synthetic-biology?application=onlineSampling"),
+        ),
+        applicationSceneImage(
+          "/images/applications/mega-menu/synthetic-continuous-flow.webp",
+          t(
+            "小型生物工艺系统集成",
+            "Compact Bioprocess System Integration",
+            "Compact Bioprocess System Integration",
+            "Compact Bioprocess System Integration",
+            "Compact Bioprocess System Integration",
+            "Compact Bioprocess System Integration",
+          ),
+          t(
+            "多泵、多阀、多路径液路集成与长期运行维护",
+            "Multi-pump, multi-valve and multi-path fluidic integration for long-term operation",
+            "Multi-pump, multi-valve and multi-path fluidic integration for long-term operation",
+            "Multi-pump, multi-valve and multi-path fluidic integration for long-term operation",
+            "Multi-pump, multi-valve and multi-path fluidic integration for long-term operation",
+            "Multi-pump, multi-valve and multi-path fluidic integration for long-term operation",
+          ),
+          localizedPath("/applications/synthetic-biology?application=bioProcessIntegration"),
+        ),
+      ],
+      order: 6,
+      enabled: true,
+    },
+  ],
+
+  footerText: t(
+    "按应用场景、典型仪器和液路需求快速了解恒永达产品支持能力。",
+    "Explore FOREACH product support by application scenario, instrument type, and fluidic requirement.",
+    "Explore el soporte de productos FOREACH por aplicación, instrumento y requisito fluídico.",
+    "Découvrez le support produit FOREACH par application, instrument et besoin fluidique.",
+    "응용 분야, 장비 유형 및 유체 요구에 따른 FOREACH 제품 지원을 확인하세요.",
+    "Изучайте поддержку продукции FOREACH по применению, приборам и жидкостным требованиям."
+  ),
+
+  footerLinkLabel: t(
+    "查看全部应用领域 →",
+    "View all applications →",
+    "Ver todas las aplicaciones →",
+    "Voir toutes les applications →",
+    "전체 응용 분야 보기 →",
+    "Все области применения →"
+  ),
+
+  footerHref: anchorPath("applications"),
+};
+
+/* ===== APPLICATION MEGA MENU DATA END ===== */
+
 /* ================================
    根据 Mega 分类生成手机端二级导航
 
@@ -827,44 +1617,13 @@ const navigationItems: NavigationItem[] = [
     href: anchorPath("applications"),
     order: 3,
     enabled: true,
-    dropdownType: "none",
-    mobileChildren: [
-      {
-        key: "mobile-application-ivd",
-        label: t("IVD 体外诊断", "IVD", "IVD", "IVD", "IVD", "IVD"),
-        href: anchorPath("applications"),
-        order: 1,
-        enabled: true,
-      },
-      {
-        key: "mobile-application-life-science",
-        label: t("生命科学", "Life Sciences", "Ciencias de la vida", "Sciences de la vie", "생명과학", "Науки о жизни"),
-        href: anchorPath("applications"),
-        order: 2,
-        enabled: true,
-      },
-      {
-        key: "mobile-application-synthetic-biology",
-        label: t("合成生物", "Synthetic Biology", "Biología sintética", "Biologie synthétique", "합성생물학", "Синтетическая биология"),
-        href: anchorPath("applications"),
-        order: 3,
-        enabled: true,
-      },
-      {
-        key: "mobile-application-analytical",
-        label: t("高端分析仪器", "Analytical Instruments", "Instrumentos analíticos", "Instruments analytiques", "분석 장비", "Аналитические приборы"),
-        href: anchorPath("applications"),
-        order: 4,
-        enabled: true,
-      },
-      {
-        key: "mobile-application-lab-automation",
-        label: t("实验室自动化", "Laboratory Automation", "Automatización de laboratorio", "Automatisation de laboratoire", "실험실 자동화", "Лабораторная автоматизация"),
-        href: anchorPath("applications"),
-        order: 5,
-        enabled: true,
-      },
-    ],
+    dropdownType: "mega",
+    megaDropdown: applicationMegaDropdown,
+    mobileChildren: createMobileChildrenFromMegaCategories(
+      applicationMegaDropdown,
+      "applications",
+      "mobile-applications"
+    ),
   },
   {
     key: "resources",
