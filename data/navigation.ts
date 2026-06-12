@@ -1614,7 +1614,7 @@ const navigationItems: NavigationItem[] = [
   {
     key: "applications",
     label: t("应用领域", "Applications", "Aplicaciones", "Applications", "응용 분야", "Применения"),
-    href: anchorPath("applications"),
+    href: localizedPath("/applications/ivd"),
     order: 3,
     enabled: true,
     dropdownType: "mega",

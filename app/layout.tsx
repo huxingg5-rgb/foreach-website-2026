@@ -1,4 +1,4 @@
-/* =========================================================
+﻿/* =========================================================
    app/layout.tsx
    恒永达官网｜全站根布局
 
@@ -24,6 +24,7 @@ import SiteFooter from "@/components/layout/SiteFooter";
 
 import { SelectionCartProvider } from "@/components/selection-cart/SelectionCartProvider";
 import GlobalSelectionCartDrawer from "@/components/selection-cart/GlobalSelectionCartDrawer";
+import "./products/products.css";
 
 /* =========================================================
    网站基础 SEO 信息

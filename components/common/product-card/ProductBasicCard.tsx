@@ -1,6 +1,4 @@
-"use client";
-
-/* =========================================================
+﻿/* =========================================================
    ProductBasicCard.tsx
    恒永达官网｜公共产品基础卡片组件
 
@@ -33,132 +31,288 @@
    3. 后续产品中心统一图片规范后，再整体切换 next/image
 ========================================================= */
 
+"use client";
+
+import type {
+  ElementType,
+  MouseEventHandler,
+  ReactNode,
+} from "react";
+
 import styles from "./ProductBasicCard.module.css";
 
-/* =========================================================
-   卡片参数行类型
+export type ProductBasicCardMetaItem = {
+  label?: ReactNode;
+  value?: ReactNode;
+  text?: ReactNode;
+  children?: ReactNode;
+};
 
-   示例：
-   商品编码：839041
-   恒永达型号：Q2001-PMV-SACN
-   兼容编码：A0012 / B0001 / C0001
-========================================================= */
-export interface ProductBasicCardMetaItem {
-  label: string;
-  value: string;
-}
-
-/* =========================================================
-   卡片按钮类型
-
-   说明：
-   1. 当前主要使用 button + onClick
-   2. 后续如果需要链接，也可以传 href
-   3. isActive 用于“已加入清单”等状态
-========================================================= */
-export interface ProductBasicCardAction {
-  label: string;
+export type ProductBasicCardAction = {
+  label: ReactNode;
   href?: string;
-  onClick?: () => void;
+  onClick?: MouseEventHandler<HTMLElement>;
+  type?: "button" | "submit" | "reset";
+  variant?: "primary" | "secondary" | "ghost";
+  active?: boolean;
   isActive?: boolean;
+  disabled?: boolean;
+  target?: string;
+  rel?: string;
   ariaLabel?: string;
-}
-
-/* =========================================================
-   公共产品卡片 Props
-========================================================= */
-export interface ProductBasicCardProps {
-  title: string;
-  imageSrc?: string;
-  imageAlt: string;
-  metaItems: ProductBasicCardMetaItem[];
-  actions: ProductBasicCardAction[];
   className?: string;
+};
+
+export type ProductBasicCardProps = {
+  title: ReactNode;
+  subtitle?: ReactNode;
+  description?: ReactNode;
+  summary?: ReactNode;
+  eyebrow?: ReactNode;
+
+  imageSrc?: string;
+  image?: string;
+  imageAlt?: string;
+  alt?: string;
+
+  href?: string;
+  detailHref?: string;
+
+  meta?: ProductBasicCardMetaItem[];
+  metas?: ProductBasicCardMetaItem[];
+  metaItems?: ProductBasicCardMetaItem[];
+
+  tags?: ReactNode[];
+  badges?: ReactNode[];
+  badgeItems?: ReactNode[];
+
+  actions?: ProductBasicCardAction[];
+  primaryAction?: ProductBasicCardAction;
+  secondaryAction?: ProductBasicCardAction;
+
+  renderVisual?: ReactNode;
+  children?: ReactNode;
+  footer?: ReactNode;
+
+  className?: string;
+  imageClassName?: string;
+  visualClassName?: string;
+  bodyClassName?: string;
+
+  isActive?: boolean;
+  selected?: boolean;
+
+  titleAs?: ElementType;
+  onClick?: MouseEventHandler<HTMLElement>;
+};
+
+function cx(...items: Array<string | false | null | undefined>) {
+  return items.filter(Boolean).join(" ");
 }
 
-/* =========================================================
-   公共产品基础卡片组件
-========================================================= */
-export default function ProductBasicCard({
-  title,
-  imageSrc,
-  imageAlt,
-  metaItems,
-  actions,
-  className,
-}: ProductBasicCardProps) {
-  const cardClassName = className
-    ? `${styles.card} ${className}`
-    : styles.card;
+function getActionClassName(action: ProductBasicCardAction, index: number) {
+  const isPrimary = action.variant === "primary";
+  const isGhost = action.variant === "ghost";
+  const isActive = action.active || action.isActive;
+
+  return cx(
+    styles.action,
+    isPrimary ? styles.actionPrimary : styles.actionSecondary,
+    isGhost && styles.actionGhost,
+    isActive && styles.active,
+    action.className
+  );
+}
+
+function renderAction(action: ProductBasicCardAction, index: number) {
+  const actionClassName = getActionClassName(action, index);
+  const rel =
+    action.rel ??
+    (action.target === "_blank" ? "noopener noreferrer" : undefined);
+
+  if (action.href) {
+    return (
+      <a
+        key={index}
+        className={actionClassName}
+        href={action.disabled ? undefined : action.href}
+        target={action.target}
+        rel={rel}
+        aria-label={action.ariaLabel}
+        aria-disabled={action.disabled || undefined}
+        tabIndex={action.disabled ? -1 : undefined}
+        onClick={
+          action.onClick as MouseEventHandler<HTMLAnchorElement> | undefined
+        }
+      >
+        {action.label}
+      </a>
+    );
+  }
 
   return (
-    <article className={cardClassName}>
-      {/* 产品图片区域 */}
-      <div className={styles.imageBox}>
-        {imageSrc ? (
-          <img
-            className={styles.image}
-            src={imageSrc}
-            alt={imageAlt}
-            onError={(event) => {
-              event.currentTarget.style.display = "none";
-            }}
-          />
-        ) : (
-          <div className={styles.imagePlaceholder}>暂无图片</div>
-        )}
+    <button
+      key={index}
+      className={actionClassName}
+      type={action.type ?? "button"}
+      disabled={action.disabled}
+      aria-label={action.ariaLabel}
+      onClick={
+        action.onClick as MouseEventHandler<HTMLButtonElement> | undefined
+      }
+    >
+      {action.label}
+    </button>
+  );
+}
+
+export default function ProductBasicCard({
+  title,
+  subtitle,
+  description,
+  summary,
+  eyebrow,
+
+  imageSrc,
+  image,
+  imageAlt,
+  alt,
+
+  href,
+  detailHref,
+
+  meta,
+  metas,
+  metaItems,
+
+  tags,
+  badges,
+  badgeItems,
+
+  actions,
+  primaryAction,
+  secondaryAction,
+
+  renderVisual,
+  children,
+  footer,
+
+  className,
+  imageClassName,
+  visualClassName,
+  bodyClassName,
+
+  isActive,
+  selected,
+
+  titleAs,
+  onClick,
+}: ProductBasicCardProps) {
+  const TitleTag = titleAs ?? "h3";
+
+  const imageValue = imageSrc ?? image;
+  const titleText = typeof title === "string" ? title : "产品图片";
+  const finalImageAlt = imageAlt ?? alt ?? titleText;
+
+  const finalMeta = meta ?? metas ?? metaItems ?? [];
+  const finalTags = tags ?? badges ?? badgeItems ?? [];
+
+  const finalActions =
+    actions ??
+    [primaryAction, secondaryAction].filter(
+      Boolean
+    ) as ProductBasicCardAction[];
+
+  const descriptionNode = description ?? summary;
+  const finalHref = href ?? detailHref;
+
+  return (
+    <article
+      className={cx(
+        styles.card,
+        (isActive || selected) && styles.isActive,
+        className
+      )}
+      onClick={onClick}
+    >
+      <span className={styles.selectedBar} />
+
+      <div
+        className={cx(styles.image, imageClassName)}
+        aria-label={finalImageAlt}
+      >
+        <div className={cx(styles.productVisual, visualClassName)}>
+          {renderVisual ? (
+            renderVisual
+          ) : imageValue ? (
+            <img
+              className={styles.imageElement}
+              src={imageValue}
+              alt={finalImageAlt}
+              loading="lazy"
+            />
+          ) : (
+            <div className={styles.imagePlaceholder}>
+              <span>{titleText}</span>
+            </div>
+          )}
+        </div>
       </div>
 
-      {/* 产品标题 */}
-      <h3 className={styles.title}>{title}</h3>
+      <div className={cx(styles.body, bodyClassName)}>
+        {eyebrow ? <div className={styles.eyebrow}>{eyebrow}</div> : null}
 
-      {/* 产品参数信息 */}
-      <dl className={styles.metaList}>
-        {metaItems.map((item) => {
-          return (
-            <div className={styles.metaItem} key={`${item.label}-${item.value}`}>
-              <dt>{item.label}</dt>
-              <dd title={item.value || "-"}>
-                {item.value || "-"}
-              </dd>
-            </div>
-          );
-        })}
-      </dl>
+        {finalHref ? (
+          <a className={styles.titleLink} href={finalHref}>
+            <TitleTag className={styles.title}>{title}</TitleTag>
+          </a>
+        ) : (
+          <TitleTag className={styles.title}>{title}</TitleTag>
+        )}
 
-      {/* 操作按钮区 */}
-      <div className={styles.actionRow}>
-        {actions.map((action) => {
-          const actionClassName = action.isActive
-            ? `${styles.actionButton} ${styles.isActive}`
-            : styles.actionButton;
+        {subtitle ? <div className={styles.subtitle}>{subtitle}</div> : null}
 
-          if (action.href) {
-            return (
-              <a
-                className={actionClassName}
-                href={action.href}
-                key={action.label}
-                aria-label={action.ariaLabel || action.label}
-              >
-                {action.label}
-              </a>
-            );
-          }
+        {descriptionNode ? (
+          <div className={styles.description}>{descriptionNode}</div>
+        ) : null}
 
-          return (
-            <button
-              className={actionClassName}
-              type="button"
-              key={action.label}
-              onClick={action.onClick}
-              aria-label={action.ariaLabel || action.label}
-            >
-              {action.label}
-            </button>
-          );
-        })}
+        {finalMeta.length > 0 ? (
+          <div className={styles.metaList}>
+            {finalMeta.map((item, index) => {
+              const value = item.value ?? item.text ?? item.children;
+
+              return (
+                <div className={styles.metaItem} key={index}>
+                  {item.label ? (
+                    <span className={styles.metaLabel}>{item.label}</span>
+                  ) : null}
+                  <span className={styles.metaValue}>{value}</span>
+                </div>
+              );
+            })}
+          </div>
+        ) : null}
+
+        {finalTags.length > 0 ? (
+          <div className={styles.tags}>
+            {finalTags.map((tag, index) => (
+              <span className={styles.tag} key={index}>
+                {tag}
+              </span>
+            ))}
+          </div>
+        ) : null}
+
+        {children ? <div className={styles.children}>{children}</div> : null}
+
+        {finalActions.length > 0 ? (
+          <div className={styles.actions}>
+            {finalActions.map((action, index) => renderAction(action, index))}
+          </div>
+        ) : null}
+
+        {footer ? <div className={styles.footer}>{footer}</div> : null}
       </div>
     </article>
   );
-} 
+}

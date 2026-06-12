@@ -1,4 +1,4 @@
-"use client"; // 声明这是客户端组件，因为这里需要使用 useState、useEffect、window 等浏览器能力
+﻿"use client"; // 声明这是客户端组件，因为这里需要使用 useState、useEffect、window 等浏览器能力
 
 import Image from "next/image"; // 引入 Next.js 图片组件，用于导航栏产品图片展示
 import Link from "next/link"; // 引入 Next.js 的 Link 组件，用于站内跳转
@@ -290,43 +290,57 @@ const isFittingReplacementDetailPage =
 
   const isMobileMenuOpen = openPanel === "mobileNav"; // 判断手机端导航是否展开
 
-  /* ================================
+    /* ================================
      Header 最终白底状态
 
      说明：
      1. 普通页面：滚动后才变白
-     2. 接头详情页：页面一进入就白底
-     3. 下拉菜单 / 搜索展开时也保持白底
+     2. 接头替代详情页：页面一进入就白底
+     3. 新闻详情页：页面一进入就白底
+     4. 产品中心页：页面一进入就白底
+     5. 下拉菜单 / 搜索展开时也保持白底
   ================================ */
+
   /* ================================
      新闻详情页判断
-  
+
+     说明：
+     1. /resources/news 和 /resources/news/ 都是新闻首页
+     2. /resources/news/[slug] 才是新闻详情页
+     3. 多语言路径已经通过 stripLocalePrefixFromPath 去掉语言前缀
+     4. 用 path segment 判断，避免新闻首页被误判
+  ================================ */
+  const newsPathSegments = normalizedPathWithoutLocale
+    .split("/")
+    .filter(Boolean);
+
+  const isNewsArticlePage =
+    newsPathSegments.length >= 3 &&
+    newsPathSegments[0] === "resources" &&
+    newsPathSegments[1] === "news" &&
+    Boolean(newsPathSegments[2]);
+
   /* ================================
-   新闻详情页判断
+     产品中心页面判断
 
-   说明：
-   1. /resources/news 和 /resources/news/ 都是新闻首页
-   2. /resources/news/[slug] 才是新闻详情页
-   3. 多语言路径已经通过 stripLocalePrefixFromPath 去掉语言前缀
-   4. 用 path segment 判断，避免新闻首页被误判
-================================ */
-const newsPathSegments = normalizedPathWithoutLocale
-  .split("/")
-  .filter(Boolean);
-
-const isNewsArticlePage =
-  newsPathSegments.length >= 3 &&
-  newsPathSegments[0] === "resources" &&
-  newsPathSegments[1] === "news" &&
-  Boolean(newsPathSegments[2]);
+     说明：
+     1. 中文产品中心：/products
+     2. 外语产品中心：/en/products、/es/products 等
+     3. normalizedPathWithoutLocale 已经去掉语言前缀
+     4. 产品中心没有 Banner，需要直接使用白底 Header + 彩色 Logo
+  ================================ */
+  const isProductCenterPage =
+    normalizedPathWithoutLocale === "/products" ||
+    normalizedPathWithoutLocale.startsWith("/products/");
 
   const shouldUseSolidHeader =
     isScrolled ||
     isFittingReplacementDetailPage ||
     isNewsArticlePage ||
+    isProductCenterPage ||
     openPanel !== "none" ||
     Boolean(desktopMegaKey) ||
-    isSearchOpen;
+    isSearchOpen; 
 
   const activeMegaItem = navigationItems.find(
     (item) =>
@@ -751,7 +765,7 @@ const isNewsArticlePage =
     return (
       <header
         className={`site-header ${headerLocaleClass} ${shouldUseSolidHeader ? "site-header-scrolled" : ""
-          } ${isFittingReplacementDetailPage || isNewsArticlePage
+          } ${isFittingReplacementDetailPage || isNewsArticlePage || isProductCenterPage
             ? "site-header-solid-page"
             : ""
           } ${openPanel !== "none" || desktopMegaKey ? "header-panel-open" : ""

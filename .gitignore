@@ -41,3 +41,30 @@ yarn-error.log*
 next-env.d.ts
 
 .env*.local
+
+# FOREACH temporary backup files
+*.bak
+*.bak-*
+*.backup-*
+*.before-*
+*.broken-*
+data-source/_legacy/
+cleanup-*.js
+fix-*.js
+restore-*.js
+patch-*.js
+tune-*.js
+add-*.js
+remove-*.js
+insert-*.js
+limit-*.js
+match-*.js
+mobile-*.js
+force-*.js
+connect-*.js
+archive-*.js
+refactor-*.js
+make-*.js
+unify-*.js
+reuse-*.js
+# END FOREACH temporary backup files

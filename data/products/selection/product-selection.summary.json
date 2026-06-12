@@ -1,0 +1,12 @@
+{
+  "sourceRoot": "data-source/product-center",
+  "generatedAt": "2026-06-12T09:02:29.856Z",
+  "sourceFiles": [
+    "data-source/product-center/pumps/plunger-pump/ea-selection.xlsx"
+  ],
+  "products": 14,
+  "activeProducts": 14,
+  "filterLabels": 7,
+  "taxonomyItems": 12,
+  "warnings": []
+}
