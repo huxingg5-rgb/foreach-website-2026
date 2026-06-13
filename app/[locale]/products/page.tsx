@@ -1,4 +1,4 @@
-﻿/* =========================================================
+/* =========================================================
    page.tsx
    恒永达官网｜多语言产品中心选型页入口
 
@@ -17,8 +17,10 @@
    4. 页面结构严格交给 ProductSelectionClient 渲染
 ========================================================= */
 
+import { Suspense } from "react";
 import { notFound } from "next/navigation";
 
+import ProductPageSkeleton from "@/components/common/ProductPageSkeleton";
 import ProductSelectionClient from "@/components/products/selection/ProductSelectionClient";
 
 type ProductSelectionLocale = "en" | "es" | "fr" | "ko" | "ru";
@@ -57,5 +59,9 @@ const productSelectionLocale =
       ? (locale as ProductSelectionLocale)
       : "en";
 
-  return <ProductSelectionClient locale={productSelectionLocale} />;
+  return (
+    <Suspense fallback={<ProductPageSkeleton variant="selection" />}>
+      <ProductSelectionClient locale={productSelectionLocale} />
+    </Suspense>
+  );
 }

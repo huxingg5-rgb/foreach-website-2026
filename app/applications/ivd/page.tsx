@@ -1,3 +1,4 @@
+import ApplicationPageSkeleton from "@/components/common/ApplicationPageSkeleton";
 import { Suspense } from "react";
 /* =========================================================
    page.tsx
@@ -30,7 +31,7 @@ export default function IvdApplicationPage() {
   const pageData = getIvdApplicationPageData("zh-CN");
 
   return (
-    <Suspense fallback={null}>
+    <Suspense fallback={<ApplicationPageSkeleton />}>
       <IvdApplicationClient data={pageData} />
     </Suspense>
   );

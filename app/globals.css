@@ -979,82 +979,58 @@ button {
 ================================ */
 
 .home-hero {
-  min-height: 100vh; /* 首屏高度至少占满一屏 */
-  padding-top: 120px; /* 给固定 Top 栏预留顶部空间 */
-  background-color: #173368; /* 背景图加载前的兜底品牌深蓝 */
-  background-image: linear-gradient(135deg, rgba(7, 26, 53, 0.42) 0%, rgba(23, 51, 104, 0.26) 52%, rgba(10, 35, 74, 0.08) 100%), url("/images/home/hero-bg.jpg"); /* 深蓝遮罩 + 首屏背景图 */
-  background-position: center center; /* 背景图居中 */
-  background-size: cover; /* 背景图铺满 */
-  background-repeat: no-repeat; /* 背景图不重复 */
-  background-attachment: scroll; /* 背景图跟随页面正常滚动 */
-  color: #ffffff; /* 首屏默认文字为白色 */
+  position: relative;
+  min-height: 100vh;
+  padding-top: 120px;
+  overflow: hidden;
+
+  /* 视频加载前或播放失败时的兜底背景 */
+  background-color: #173368;
+  background-image: url("/images/home/hero-bg.webp");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  color: #ffffff;
 }
 
-.home-hero-inner {
-  width: min(100% - 48px, 1600px); /* 首页内容最大宽度 */
-  margin: 0 auto; /* 首页内容居中 */
-  padding-top: 130px; /* 首屏内容顶部留白 */
+/* Banner 背景视频 */
+.home-hero-video {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center center;
+
+  pointer-events: none;
 }
 
-.home-hero-title {
-  position: relative; /* 允许标题用 transform 微调位置 */
-  max-width: 980px; /* 中文标题最大宽度 */
-  margin: 0; /* 清除标题默认外边距 */
-  color: #ffffff; /* 标题文字颜色 */
-  font-size: clamp(42px, 5vw, 78px); /* 响应式标题字号 */
-  font-weight: 700; /* 标题字重 */
-  line-height: 1.08; /* 标题行高 */
-  letter-spacing: 0.05em; /* 中文标题字距 */
-  transform: translate(0px, 40px); /* 标题位置微调 */
+/* 视频上方的深蓝遮罩 */
+.home-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background: linear-gradient(
+    135deg,
+    rgba(7, 26, 53, 0.42) 0%,
+    rgba(23, 51, 104, 0.26) 52%,
+    rgba(10, 35, 74, 0.08) 100%
+  );
+
+  pointer-events: none;
 }
 
-.home-hero-subtitle {
-  position: relative; /* 允许副标题用 transform 微调位置 */
-  max-width: 980px; /* 中文副标题最大宽度 */
-  margin: 0; /* 清除副标题默认外边距 */
-  color: rgba(255, 255, 255, 1); /* 副标题文字颜色 */
-  font-size: clamp(16px, 5vw, 24px); /* 响应式副标题字号 */
-  font-weight: 400; /* 副标题字重 */
-  line-height: 1.2; /* 副标题行高 */
-  letter-spacing: 0.05em; /* 中文副标题字距 */
-  transform: translate(0px, 80px); /* 副标题位置微调 */
+/* 原来的标题、说明和按钮内容 */
+.home-hero-content {
+  position: relative;
+  z-index: 2;
 }
- 
-.home-hero-actions {
-  display: flex; /* 两个按钮横向排列 */
-  align-items: center; /* 按钮垂直居中 */
-  gap: 16px; /* 按钮之间距离 */
-  margin-top: 120px; /* 按钮区域距离副标题的距离 */
-}
-
-.home-hero-btn {
-  display: inline-flex; /* 按钮内容使用 flex 居中 */
-  align-items: center; /* 按钮文字垂直居中 */
-  justify-content: center; /* 按钮文字水平居中 */
-  min-width: 148px; /* 按钮最小宽度 */
-  height: 48px; /* 按钮高度 */
-  padding: 0 26px; /* 按钮左右内边距 */
-  border-radius: 8px; /* 按钮矩形圆角 */
-  font-size: 15px; /* 按钮文字大小 */
-  font-weight: 400; /* 按钮默认字重 */
-  text-decoration: none; /* 去掉链接下划线 */
-  transition: background 0.28s ease, color 0.28s ease, border-color 0.28s ease, transform 0.28s ease; /* 按钮状态过渡 */
-}
-
-.home-hero-btn-primary,
-.home-hero-btn-secondary {
-  border: 1px solid rgba(255, 255, 255, 0.42); /* 按钮默认边框 */
-  background: rgba(255, 255, 255, 0.08); /* 按钮默认背景 */
-  color: #ffffff; /* 按钮默认文字颜色 */
-}
-
-.home-hero-btn:hover {
-  border-color: #09e9b4; /* hover 边框变科技青 */
-  background: #09e9b4; /* hover 背景变科技青 */
-  color: #173368; /* hover 文字变品牌深蓝 */
-  font-weight: 600; /* hover 文字加粗 */
-}
-
 /* ================================
    09. 首页测试滚动区域
 ================================ */
@@ -15330,4 +15306,243 @@ html body nav[aria-label*="面包屑"] em {
 }
 /* PRODUCT_LOCAL_BREADCRUMB_SPACING_END */
 
+/* HOME_HERO_VIDEO_V27_START */
+/* 首页首屏：直接使用 MP4，不显示 hero-bg.webp 封面图 */
+.home-hero {
+  position: relative;
+  overflow: hidden;
+  background-color: #173368;
+  background-image: none !important;
+}
 
+.home-hero-video {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center center;
+
+  pointer-events: none;
+}
+
+.home-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background: linear-gradient(
+    135deg,
+    rgba(7, 26, 53, 0.42) 0%,
+    rgba(23, 51, 104, 0.26) 52%,
+    rgba(10, 35, 74, 0.08) 100%
+  );
+
+  pointer-events: none;
+}
+
+.home-hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 760px) {
+  .home-hero-video {
+    object-position: center center;
+  }
+}
+/* HOME_HERO_VIDEO_V27_END */
+
+/* HOME_HERO_LAYOUT_FIX_V29_START */
+/* 修复首页视频 Banner：恢复标题、副标题和按钮的完整布局 */
+.home-hero {
+  position: relative !important;
+  display: block !important;
+  min-height: 100vh !important;
+  padding-top: 120px !important;
+  overflow: hidden !important;
+
+  background-color: #173368 !important;
+  background-image: none !important;
+
+  color: #ffffff !important;
+}
+
+.home-hero-video {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+
+  object-fit: cover !important;
+  object-position: center center !important;
+
+  pointer-events: none !important;
+}
+
+.home-hero-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+
+  background: linear-gradient(
+    90deg,
+    rgba(7, 26, 53, 0.58) 0%,
+    rgba(23, 51, 104, 0.28) 48%,
+    rgba(10, 35, 74, 0.08) 100%
+  ) !important;
+
+  pointer-events: none !important;
+}
+
+.home-hero-inner {
+  position: relative !important;
+  z-index: 2 !important;
+
+  width: min(calc(100% - 48px), 1600px) !important;
+  margin: 0 auto !important;
+  padding-top: 130px !important;
+}
+
+.home-hero-title {
+  position: relative !important;
+
+  max-width: 980px !important;
+  margin: 0 !important;
+
+  color: #ffffff !important;
+  font-size: clamp(42px, 5vw, 78px) !important;
+  font-weight: 700 !important;
+  line-height: 1.08 !important;
+  letter-spacing: 0.05em !important;
+
+  transform: translate(0, 40px) !important;
+}
+
+.home-hero-subtitle {
+  position: relative !important;
+
+  max-width: 980px !important;
+  margin: 0 !important;
+
+  color: rgba(255, 255, 255, 0.96) !important;
+  font-size: clamp(16px, 1.4vw, 24px) !important;
+  font-weight: 400 !important;
+  line-height: 1.55 !important;
+  letter-spacing: 0.04em !important;
+
+  transform: translate(0, 80px) !important;
+}
+
+.home-hero-actions {
+  position: relative !important;
+
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+
+  margin-top: 120px !important;
+}
+
+.home-hero-btn {
+  display: inline-flex !important;
+  min-width: 148px !important;
+  height: 48px !important;
+  padding: 0 26px !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  border: 1px solid rgba(255, 255, 255, 0.42) !important;
+  border-radius: 8px !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
+
+  backdrop-filter: blur(4px);
+}
+
+.home-hero-btn:hover,
+.home-hero-btn:focus-visible {
+  border-color: #09e9b4 !important;
+  background: #09e9b4 !important;
+  color: #173368 !important;
+  font-weight: 600 !important;
+  outline: none !important;
+}
+
+@media (max-width: 900px) {
+  .home-hero {
+    min-height: 100svh !important;
+    padding-top: 90px !important;
+  }
+
+  .home-hero-inner {
+    width: calc(100% - 32px) !important;
+    padding-top: 110px !important;
+  }
+
+  .home-hero-title {
+    max-width: 760px !important;
+    font-size: clamp(38px, 7vw, 62px) !important;
+  }
+
+  .home-hero-subtitle {
+    max-width: 760px !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .home-hero {
+    padding-top: 70px !important;
+  }
+
+  .home-hero-inner {
+    width: calc(100% - 24px) !important;
+    padding-top: 86px !important;
+  }
+
+  .home-hero-video {
+    object-position: center center !important;
+  }
+
+  .home-hero-title {
+    max-width: 100% !important;
+    font-size: clamp(34px, 11vw, 48px) !important;
+    line-height: 1.12 !important;
+    transform: none !important;
+  }
+
+  .home-hero-subtitle {
+    max-width: 100% !important;
+    margin-top: 24px !important;
+    font-size: 16px !important;
+    line-height: 1.65 !important;
+    transform: none !important;
+  }
+
+  .home-hero-actions {
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    margin-top: 34px !important;
+  }
+
+  .home-hero-btn {
+    min-width: 136px !important;
+    height: 44px !important;
+    padding: 0 20px !important;
+    font-size: 14px !important;
+  }
+}
+/* HOME_HERO_LAYOUT_FIX_V29_END */

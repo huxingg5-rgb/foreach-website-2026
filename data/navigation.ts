@@ -262,13 +262,15 @@ function anchorPath(anchor: string): LocalizedHref {
 function productImage(
   src: string,
   title: LocalizedText,
-  description: LocalizedText
+  description: LocalizedText,
+  href?: LocalizedHref
 ): NavigationImage {
   return {
     src,
     alt: title,
     title,
     description,
+    href,
     width: 600,
     height: 380,
   };
@@ -397,7 +399,7 @@ const productMegaDropdown: MegaDropdown = {
         "정량, 공급, 피펫팅 및 폐액 처리",
         "Дозирование, подача, пипетирование и обращение с отходами"
       ),
-      href: anchorPath("products"),
+      href: localizedPath("/products?category=pumps"),
       images: [
         productImage(
           "/images/products/pumps/syringe-pump.jpg",
@@ -417,7 +419,8 @@ const productMegaDropdown: MegaDropdown = {
         productImage(
           "/images/products/pumps/piston-pump.jpg",
           t("柱塞泵", "Piston Pump", "Bomba de pistón", "Pompe à piston", "피스톤 펌프", "Поршневой насос"),
-          t("稳定计量与重复性液体输送", "Stable metering and repeatable transfer", "Medición estable y transferencia repetible", "Dosage stable et transfert répétable", "안정적인 계량 및 반복 이송", "Стабильное дозирование и повторяемая передача жидкости")
+          t("稳定计量与重复性液体输送", "Stable metering and repeatable transfer", "Medición estable y transferencia repetible", "Dosage stable et transfert répétable", "안정적인 계량 및 반복 이송", "Стабильное дозирование и повторяемая передача жидкости"),
+          localizedPath("/products?category=pumps&productType=plunger-pump")
         ),
         productImage(
           "/images/products/pumps/rotary-pump.jpg",
@@ -554,7 +557,7 @@ const productMegaDropdown: MegaDropdown = {
     "Смотреть все продукты →"
   ),
 
-  footerHref: anchorPath("products"),
+  footerHref: localizedPath("/products"),
 };
 
 /* ===== APPLICATION MEGA MENU DATA START ===== */
@@ -1600,7 +1603,7 @@ const navigationItems: NavigationItem[] = [
   {
     key: "products",
     label: t("产品中心", "Products", "Productos", "Produits", "제품", "Продукты"),
-    href: anchorPath("products"),
+    href: localizedPath("/products"),
     order: 2,
     enabled: true,
     dropdownType: "mega",

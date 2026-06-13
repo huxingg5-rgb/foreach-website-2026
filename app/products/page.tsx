@@ -1,4 +1,4 @@
-﻿/* =========================================================
+/* =========================================================
    page.tsx
    恒永达官网｜中文产品中心选型页入口
 
@@ -12,9 +12,16 @@
    4. 不在这里单独渲染面包屑，避免和 HTML 预览结构不一致
 ========================================================= */
 
+import { Suspense } from "react";
+
+import ProductPageSkeleton from "@/components/common/ProductPageSkeleton";
 import ProductSelectionClient from "@/components/products/selection/ProductSelectionClient";
 import "./products.css";
 
 export default function ProductsPage() {
-return <ProductSelectionClient locale="zh" />;
+  return (
+    <Suspense fallback={<ProductPageSkeleton variant="selection" />}>
+      <ProductSelectionClient locale="zh" />
+    </Suspense>
+  );
 }

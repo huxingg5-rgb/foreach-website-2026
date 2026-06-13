@@ -12,6 +12,7 @@
 
 import SitePageShell from "@/components/layout/SitePageShell";
 import { useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import ResourceSearchBar from "@/components/resources/ResourceSearchBar";
 import {
   selectionFilterLabels,
@@ -374,7 +375,12 @@ function makeDetailHref(product: ProductSelectionProduct) {
 export default function ProductSelectionClient({
   locale = "zh",
 }: ProductSelectionClientProps) {
-  const pageText = PRODUCT_SELECTION_PAGE_TEXT[locale] || PRODUCT_SELECTION_PAGE_TEXT.zh;
+  const searchParams = useSearchParams();
+  const requestedCategoryId = searchParams.get("category");
+  const requestedProductTypeId = searchParams.get("productType");
+
+  const pageText =
+    PRODUCT_SELECTION_PAGE_TEXT[locale] || PRODUCT_SELECTION_PAGE_TEXT.zh;
 
   const categoryItems = useMemo(() => getCategoryItems(locale), [locale]);
 
@@ -580,6 +586,37 @@ export default function ProductSelectionClient({
       window.removeEventListener("resize", updateProductsPageSize);
     };
   }, []);
+
+  useEffect(() => {
+    const fallbackCategoryId = categoryItems[0]?.id || "pumps";
+
+    const nextCategoryId =
+      requestedCategoryId &&
+      categoryItems.some((category) => category.id === requestedCategoryId)
+        ? requestedCategoryId
+        : fallbackCategoryId;
+
+    const categoryProductsForUrl = getProductsByCategory(nextCategoryId);
+
+    const nextProductTypeId =
+      requestedProductTypeId &&
+      categoryProductsForUrl.some(
+        (product) => product.productTypeId === requestedProductTypeId
+      )
+        ? requestedProductTypeId
+        : getFirstProductTypeId(nextCategoryId);
+
+    setActiveCategoryId(nextCategoryId);
+    setActiveProductTypeId(nextProductTypeId);
+    setSelectedFilters(
+      getDefaultSelectedFilters(nextCategoryId, nextProductTypeId)
+    );
+    setSearchKeyword("");
+    setMobileCategoryOpen(false);
+    setMobileOpenFilterGroups(
+      getDefaultMobileOpenFilterGroups(nextProductTypeId)
+    );
+  }, [categoryItems, requestedCategoryId, requestedProductTypeId]);
 
   useEffect(() => {
     setCurrentProductPage(1);
