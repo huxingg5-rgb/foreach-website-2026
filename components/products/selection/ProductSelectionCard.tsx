@@ -43,7 +43,12 @@ export default function ProductSelectionCard({
         <div className="product-param-line">{subtitle}</div>
 
         <div className="product-actions">
-          <a className="product-link" href={detailHref}>
+          <a
+            className="product-link"
+            href={detailHref}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {detailButtonText}
           </a>
 

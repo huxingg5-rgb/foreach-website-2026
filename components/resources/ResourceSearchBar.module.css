@@ -114,27 +114,29 @@
   background: #ffffff;
   color: #173368;
 }
-
 @media (max-width: 760px) {
   .searchPanel {
     padding: 20px 0;
   }
 
   .searchRow {
-    grid-template-columns: 1fr;
-    gap: 10px;
+    grid-template-columns: minmax(0, 1fr) 96px;
+    gap: 0;
   }
 
   .searchInput {
-    border-right: 1px solid rgba(23, 51, 104, 0.22);
-    border-radius: 6px;
+    min-width: 0;
+    border-right: 0;
+    border-radius: 6px 0 0 6px;
   }
 
   .searchButton {
-    width: 100%;
-    border-radius: 6px;
+    width: 96px;
+    min-width: 96px;
+    border-radius: 0 6px 6px 0;
+    white-space: nowrap;
   }
-
+  
   .historyRow {
     gap: 8px;
   }

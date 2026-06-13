@@ -6,20 +6,9 @@
    components/common/breadcrumb/Breadcrumb.tsx
 
    作用：
-   1. 统一官网所有页面的面包屑展示
-   2. 支持中文 / 多语言文案
-   3. 支持最后一项不可点击
-   4. 页面只负责传入 breadcrumbs 数据
-   5. 组件不负责判断当前路径、不负责翻译
-
-   使用示例：
-   <Breadcrumb
-     items={[
-       { label: "首页", href: "/" },
-       { label: "资源中心", href: "/resources" },
-       { label: "接头替代查询" },
-     ]}
-   />
+   1. 统一官网部分页面的面包屑展示
+   2. 支持最后一项不可点击
+   3. 页面只负责传入 items 数据
 ========================================================= */
 
 import Link from "next/link";
@@ -36,10 +25,10 @@ interface BreadcrumbProps {
   className?: string;
 }
 
-/* =========================================================
-   公共面包屑组件
-========================================================= */
-export default function Breadcrumb({ items, className }: BreadcrumbProps) {
+export default function Breadcrumb({
+  items,
+  className,
+}: BreadcrumbProps) {
   if (!items.length) {
     return null;
   }
@@ -67,4 +56,4 @@ export default function Breadcrumb({ items, className }: BreadcrumbProps) {
       })}
     </nav>
   );
-} 
+}

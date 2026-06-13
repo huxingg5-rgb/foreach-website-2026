@@ -36,7 +36,7 @@ export const selectionProducts: ProductSelectionProduct[] = [
       "filter03": "PMMA"
     },
     "imageCard": "/images/products/pumps/plunger-pump/ea/pump-ea-100ul-pmma.webp",
-    "detailSlug": "ea-100ul-pmma",
+    "detailSlug": "ea-100-pmma",
     "status": "active",
     "sortOrder": 201,
     "searchKeywords": {
@@ -63,7 +63,7 @@ export const selectionProducts: ProductSelectionProduct[] = [
       "filter03": "PEEK"
     },
     "imageCard": "/images/products/pumps/plunger-pump/ea/pump-ea-100ul-peek.webp",
-    "detailSlug": "ea-100ul-peek",
+    "detailSlug": "ea-100-peek",
     "status": "active",
     "sortOrder": 202,
     "searchKeywords": {
@@ -90,7 +90,7 @@ export const selectionProducts: ProductSelectionProduct[] = [
       "filter03": "PMMA"
     },
     "imageCard": "/images/products/pumps/plunger-pump/ea/pump-ea-250ul-pmma.webp",
-    "detailSlug": "ea-250ul-pmma",
+    "detailSlug": "ea-250-pmma",
     "status": "active",
     "sortOrder": 301,
     "searchKeywords": {
@@ -117,7 +117,7 @@ export const selectionProducts: ProductSelectionProduct[] = [
       "filter03": "PEEK"
     },
     "imageCard": "/images/products/pumps/plunger-pump/ea/pump-ea-250ul-peek.webp",
-    "detailSlug": "ea-250ul-peek",
+    "detailSlug": "ea-250-peek",
     "status": "active",
     "sortOrder": 302,
     "searchKeywords": {
@@ -144,7 +144,7 @@ export const selectionProducts: ProductSelectionProduct[] = [
       "filter03": "PMMA"
     },
     "imageCard": "/images/products/pumps/plunger-pump/ea/pump-ea-500ul-pmma.webp",
-    "detailSlug": "ea-500ul-pmma",
+    "detailSlug": "ea-500-pmma",
     "status": "active",
     "sortOrder": 401,
     "searchKeywords": {
@@ -171,7 +171,7 @@ export const selectionProducts: ProductSelectionProduct[] = [
       "filter03": "PEEK"
     },
     "imageCard": "/images/products/pumps/plunger-pump/ea/pump-ea-500ul-peek.webp",
-    "detailSlug": "ea-500ul-peek",
+    "detailSlug": "ea-500-peek",
     "status": "active",
     "sortOrder": 402,
     "searchKeywords": {
@@ -198,7 +198,7 @@ export const selectionProducts: ProductSelectionProduct[] = [
       "filter03": "PMMA"
     },
     "imageCard": "/images/products/pumps/plunger-pump/ea/pump-ea-1000ul-pmma.webp",
-    "detailSlug": "ea-1000ul-pmma",
+    "detailSlug": "ea-1000-pmma",
     "status": "active",
     "sortOrder": 501,
     "searchKeywords": {
@@ -225,7 +225,7 @@ export const selectionProducts: ProductSelectionProduct[] = [
       "filter03": "PEEK"
     },
     "imageCard": "/images/products/pumps/plunger-pump/ea/pump-ea-1000ul-peek.webp",
-    "detailSlug": "ea-1000ul-peek",
+    "detailSlug": "ea-1000-peek",
     "status": "active",
     "sortOrder": 502,
     "searchKeywords": {
@@ -252,7 +252,7 @@ export const selectionProducts: ProductSelectionProduct[] = [
       "filter03": "PMMA"
     },
     "imageCard": "/images/products/pumps/plunger-pump/ea/pump-ea-2500ul-pmma.webp",
-    "detailSlug": "ea-2500ul-pmma",
+    "detailSlug": "ea-2500-pmma",
     "status": "active",
     "sortOrder": 601,
     "searchKeywords": {
@@ -279,7 +279,7 @@ export const selectionProducts: ProductSelectionProduct[] = [
       "filter03": "PEEK"
     },
     "imageCard": "/images/products/pumps/plunger-pump/ea/pump-ea-2500ul-peek.webp",
-    "detailSlug": "ea-2500ul-peek",
+    "detailSlug": "ea-2500-peek",
     "status": "active",
     "sortOrder": 602,
     "searchKeywords": {
@@ -306,7 +306,7 @@ export const selectionProducts: ProductSelectionProduct[] = [
       "filter03": "PMMA"
     },
     "imageCard": "/images/products/pumps/plunger-pump/ea/pump-ea-5000ul-pmma.webp",
-    "detailSlug": "ea-5000ul-pmma",
+    "detailSlug": "ea-5000-pmma",
     "status": "active",
     "sortOrder": 701,
     "searchKeywords": {
@@ -333,7 +333,7 @@ export const selectionProducts: ProductSelectionProduct[] = [
       "filter03": "PEEK"
     },
     "imageCard": "/images/products/pumps/plunger-pump/ea/pump-ea-5000ul-peek.webp",
-    "detailSlug": "ea-5000ul-peek",
+    "detailSlug": "ea-5000-peek",
     "status": "active",
     "sortOrder": 702,
     "searchKeywords": {
@@ -360,7 +360,7 @@ export const selectionProducts: ProductSelectionProduct[] = [
       "filter03": "PMMA"
     },
     "imageCard": "/images/products/pumps/plunger-pump/ea/pump-ea-10000ul-pmma.webp",
-    "detailSlug": "ea-10000ul-pmma",
+    "detailSlug": "ea-10000-pmma",
     "status": "active",
     "sortOrder": 801,
     "searchKeywords": {
@@ -387,7 +387,7 @@ export const selectionProducts: ProductSelectionProduct[] = [
       "filter03": "PEEK"
     },
     "imageCard": "/images/products/pumps/plunger-pump/ea/pump-ea-10000ul-peek.webp",
-    "detailSlug": "ea-10000ul-peek",
+    "detailSlug": "ea-10000-peek",
     "status": "active",
     "sortOrder": 802,
     "searchKeywords": {

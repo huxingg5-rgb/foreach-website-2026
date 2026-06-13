@@ -10,8 +10,8 @@
    3. 数据来源为 Excel 解析生成的数据文件
 ========================================================= */
 
+import SitePageShell from "@/components/layout/SitePageShell";
 import { useEffect, useMemo, useState } from "react";
-
 import ResourceSearchBar from "@/components/resources/ResourceSearchBar";
 import {
   selectionFilterLabels,
@@ -368,7 +368,7 @@ function getDefaultMobileOpenFilterGroups(productTypeId: string) {
 }
 
 function makeDetailHref(product: ProductSelectionProduct) {
-  return `/products/${product.categoryId}/${product.productTypeId}/${product.detailSlug}`;
+  return `/products/${product.categoryId}/${product.detailSlug}`;
 }
 
 export default function ProductSelectionClient({
@@ -711,15 +711,24 @@ export default function ProductSelectionClient({
   }
 
   return (
-    <main className="products-selection-page page">
+    <div data-product-breadcrumb-shell="true" data-product-center-page="true">
+<SitePageShell
+      breadcrumbAriaLabel={
+        locale === "zh" ? "面包屑导航" : "Breadcrumb"
+      }
+      breadcrumbItems={[
+        {
+          label: pageText.breadcrumbHome,
+          href: locale === "zh" ? "/" : `/${locale}`,
+        },
+        {
+          label: pageText.breadcrumbCurrent,
+        },
+      ]}
+    >
+      <main className="products-selection-page page">
       <div className="container">
-        <section className="products-breadcrumb-row">
-          <div className="products-breadcrumb">
-            <span>{pageText.breadcrumbHome}</span>
-            <span>/</span>
-            <strong>{pageText.breadcrumbCurrent}</strong>
-          </div>
-        </section>
+        
 
         <ResourceSearchBar
           value={searchKeyword}
@@ -805,5 +814,7 @@ export default function ProductSelectionClient({
         </section>
       </div>
     </main>
+    </SitePageShell>
+</div>
   );
 }

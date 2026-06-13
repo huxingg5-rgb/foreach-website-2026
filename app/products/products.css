@@ -963,36 +963,7 @@
 
 /* FOREACH_PRODUCTS_LAYOUT_TUNE_V2_END */
 
-/* FOREACH_PRODUCTS_TOP_OFFSET_START */
 
-/* =========================================================
-   产品中心页面顶部偏移修正
-
-   说明：
-   当前顶部导航栏会压住产品页上方区域，
-   因此产品页整体向下移动，让面包屑与顶部导航保持呼吸感。
-========================================================= */
-
-.products-selection-page {
-  padding-top: 112px !important;
-}
-
-.products-selection-page .products-breadcrumb-row {
-  margin-top: 0 !important;
-  margin-bottom: 20px !important;
-}
-
-.products-selection-page .category-tabs-wrap {
-  padding-top: 0 !important;
-}
-
-@media (max-width: 760px) {
-  .products-selection-page {
-    padding-top: 88px !important;
-  }
-}
-
-/* FOREACH_PRODUCTS_TOP_OFFSET_END */
 
 /* FOREACH_PRODUCTS_CATEGORY_SPACING_TUNE_START */
 
@@ -1962,3 +1933,16 @@
 }
 
 /* FOREACH_PRODUCTS_SELECTION_STANDARD_STYLE_END */
+
+/* SITE_PAGE_SHELL_PRODUCT_CENTER_RESET_START */
+/* 产品中心顶部结构改由 SitePageShell 统一控制 */
+.products-selection-page {
+  padding-top: 0 !important;
+}
+
+@media (max-width: 760px) {
+  .products-selection-page {
+    padding-top: 0 !important;
+  }
+}
+/* SITE_PAGE_SHELL_PRODUCT_CENTER_RESET_END */

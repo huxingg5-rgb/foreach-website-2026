@@ -1,40 +1,51 @@
 /* =========================================================
    Breadcrumb.module.css
-   恒永达官网｜公共面包屑组件样式
+   恒永达官网｜公共面包屑兼容样式
 
-   文件路径：
-   components/common/breadcrumb/Breadcrumb.module.css
-
-   说明：
-   1. 只服务 Breadcrumb.tsx
-   2. 不写入 app/globals.css
-   3. 样式保持轻量，适合资源中心、产品中心、关于我们等页面复用
+   与 SiteBreadcrumb 保持一致：
+   1. 上下保留呼吸空间
+   2. 顶部和底部各一条 100% 浏览器宽度横线
+   3. 所有文字使用常规字重
 ========================================================= */
 
 .breadcrumb {
   display: flex;
+  width: 100vw;
+  min-height: 24px;
+  margin-left: calc(50% - 50vw);
+  padding:
+    18px
+    max(32px, calc((100vw - 1600px) / 2));
+  align-items: center;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 22px;
-  color: #8b96a8;
-  font-size: 13px;
+  border-top: 1px solid #e3e9f1;
+  border-bottom: 1px solid #e3e9f1;
+  background: #ffffff;
+  color: #7b8798;
+  font-size: 14px;
+  font-weight: 400;
   line-height: 1.6;
+  box-sizing: border-box;
 }
 
 .item {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  color: #7b8798;
+  font-weight: 400;
 }
 
 .item:not(:last-child)::after {
   content: "/";
-  color: rgba(23, 51, 104, 0.28);
-  font-weight: 700;
+  color: #b3bdca;
+  font-weight: 400;
 }
 
 .item a {
-  color: #5e6b80;
+  color: #7b8798;
+  font-weight: 400;
   text-decoration: none;
   transition: color 0.18s ease;
 }
@@ -45,4 +56,11 @@
 
 .item span {
   color: #173368;
-} 
+  font-weight: 400;
+}
+
+@media (max-width: 900px) {
+  .breadcrumb {
+    padding: 15px 16px;
+  }
+}

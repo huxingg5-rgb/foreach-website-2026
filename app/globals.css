@@ -15275,4 +15275,59 @@ html[lang="ru"] .home-hero-btn:hover {
 /* 当前高亮导航下划线 / 标记使用荧光色 */
 .site-header.site-header-solid-page .site-nav-link-active::after {
   background: #09e9b4 !important;
-} 
+}
+
+/* FOREACH_GLOBAL_BREADCRUMB_FONT_WEIGHT_START */
+/* =========================================================
+   全站面包屑字体粗细统一
+
+   说明：
+   1. 只修改面包屑文字字重
+   2. 不修改结构、间距、颜色、尺寸和位置
+   3. 所有普通文字、链接和当前页面文字统一为 400
+========================================================= */
+
+html body [class*="breadcrumb" i],
+html body [class*="breadcrumb" i] a,
+html body [class*="breadcrumb" i] span,
+html body [class*="breadcrumb" i] strong,
+html body [class*="breadcrumb" i] em,
+html body nav[aria-label*="breadcrumb" i],
+html body nav[aria-label*="breadcrumb" i] a,
+html body nav[aria-label*="breadcrumb" i] span,
+html body nav[aria-label*="breadcrumb" i] strong,
+html body nav[aria-label*="breadcrumb" i] em,
+html body nav[aria-label*="面包屑"],
+html body nav[aria-label*="面包屑"] a,
+html body nav[aria-label*="面包屑"] span,
+html body nav[aria-label*="面包屑"] strong,
+html body nav[aria-label*="面包屑"] em {
+  font-weight: 400 !important;
+  font-style: normal;
+}
+
+/* FOREACH_GLOBAL_BREADCRUMB_FONT_WEIGHT_END */
+
+
+/* PRODUCT_LOCAL_BREADCRUMB_SPACING_START */
+/*
+ * 只作用于产品中心和产品详情页中，
+ * 由 V5 自动找到并标记的面包屑外层。
+ */
+[data-product-breadcrumb-shell="true"] {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 18px !important;
+}
+
+@media (max-width: 680px) {
+  [data-product-breadcrumb-shell="true"] {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 18px !important;
+  }
+}
+/* PRODUCT_LOCAL_BREADCRUMB_SPACING_END */
+
+
