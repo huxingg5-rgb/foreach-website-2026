@@ -1,3 +1,4 @@
+import { getPumpSeriesProductDetailAdapter } from "@/services/products/adapters/getPumpSeriesProductDetailAdapter";
 import nodePath from "node:path";
 import nodeFs from "node:fs";
 ﻿import { notFound } from "next/navigation";
@@ -550,6 +551,23 @@ function adaptToProductDetailClientData(detail: DetailRecord) {
 
 
 
+
+function getPreferredProductDetailData(slug: string) {
+  const dbData = getPumpSeriesProductDetailAdapter(slug, "zh");
+
+  if (dbData) {
+    return dbData;
+  }
+
+  const legacyDetail = getDetailBySlug(slug);
+
+  if (!legacyDetail) {
+    return null;
+  }
+
+  return adaptToProductDetailClientData(legacyDetail);
+}
+
 export function generateStaticParams() {
   const detailParams = getDetailList()
     .map((item) => getRecordSlug(item))
@@ -565,33 +583,39 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps) {
   const resolvedParams = await params;
-  const detail = getDetailBySlug(resolvedParams.slug);
+  const data = getPreferredProductDetailData(resolvedParams.slug);
 
-  if (!detail) {
+  if (!data) {
     return {
       title: "Plunger Pump Detail | FOREACH",
     };
   }
 
+  const pageData = data as any;
+  const title =
+    getText(pageData.seoTitle || pageData.metaTitle || pageData.model || pageData.title) ||
+    "Plunger Pump";
+
+  const description = getText(
+    pageData.seoDescription ||
+      pageData.metaDescription ||
+      pageData.description ||
+      pageData.summary
+  );
+
   return {
-    title: `${getText(detail.model) || "Plunger Pump"} | FOREACH`,
-    description: getText(detail.description || detail.summary),
+    title: title.includes("FOREACH") ? title : `${title} | FOREACH`,
+    description,
   };
 }
 
 export default async function PlungerPumpDetailPage({ params }: PageProps) {
   const resolvedParams = await params;
-  const detail = getDetailBySlug(resolvedParams.slug);
+  const data = getPreferredProductDetailData(resolvedParams.slug);
 
-  if (!detail) {
+  if (!data) {
     notFound();
   }
 
-  const data = adaptToProductDetailClientData(detail);
-
   return <ProductDetailView data={data} />;
 }
-
-
-
-
