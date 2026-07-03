@@ -1,9 +1,3 @@
-/* =========================================================
-   pump-series.detail.generated.ts
-   由 scripts/products/build-pump-series-data.js 自动生成
-   FAQ 已通过 apply-pump-series-faq-scope.js 按 scope/productId 过滤
-========================================================= */
-
 export const pumpSeriesDetailRecords = [
   {
     "productId": "ea-100-pmma",
@@ -190,15 +184,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-100-pmma-main.webp",
+                "src": "/images/products/pumps/plunger-pump/ea/pump-ea-100ul-pmma.webp",
                 "alt": "EA-100-PMMA 柱塞泵产品图",
                 "caption": "产品图片仅用于结构展示",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-100-pmma-detail.webp",
-                "alt": "EA-100-PMMA 柱塞泵泵头细节图",
-                "caption": "泵头细节图仅用于结构说明",
                 "isFallback": false
               }
             ],
@@ -448,15 +436,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-100-pmma-main.webp",
+                "src": "/images/products/pumps/plunger-pump/ea/pump-ea-100ul-pmma.webp",
                 "alt": "100 µL PMMA Plunger Pump for Precision Dispensing product image",
                 "caption": "Product image for structural reference only",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-100-pmma-detail.webp",
-                "alt": "100 µL PMMA Plunger Pump for Precision Dispensing pump head detail image",
-                "caption": "Pump head detail image for structural reference only",
                 "isFallback": false
               }
             ],
@@ -747,15 +729,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-250-pmma-main.webp",
+                "src": "/images/products/pumps/plunger-pump/ea/pump-ea-250ul-pmma.webp",
                 "alt": "EA-250-PMMA 柱塞泵产品图",
                 "caption": "产品图片仅用于结构展示",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-250-pmma-detail.webp",
-                "alt": "EA-250-PMMA 柱塞泵泵头细节图",
-                "caption": "泵头细节图仅用于结构说明",
                 "isFallback": false
               }
             ],
@@ -989,15 +965,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-250-pmma-main.webp",
+                "src": "/images/products/pumps/plunger-pump/ea/pump-ea-250ul-pmma.webp",
                 "alt": "250 µL PMMA Plunger Pump for Precision Dispensing product image",
                 "caption": "Product image for structural reference only",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-250-pmma-detail.webp",
-                "alt": "250 µL PMMA Plunger Pump for Precision Dispensing pump head detail image",
-                "caption": "Pump head detail image for structural reference only",
                 "isFallback": false
               }
             ],
@@ -1288,15 +1258,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/sm/sm-100-pmma-main.webp",
+                "src": "/images/products/pumps/plunger-pump/sm/pump-sm-100ul-pmma.webp",
                 "alt": "SM-100-PMMA 微型柱塞泵产品图",
                 "caption": "产品图片仅用于结构展示",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/sm/sm-100-pmma-detail.webp",
-                "alt": "SM-100-PMMA 微型柱塞泵泵头细节图",
-                "caption": "泵头细节图仅用于结构说明",
                 "isFallback": false
               }
             ],
@@ -1530,15 +1494,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/sm/sm-100-pmma-main.webp",
+                "src": "/images/products/pumps/plunger-pump/sm/pump-sm-100ul-pmma.webp",
                 "alt": "100 µL Miniature PMMA Plunger Pump for Compact Fluidic Systems product image",
                 "caption": "Product image for structural reference only",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/sm/sm-100-pmma-detail.webp",
-                "alt": "100 µL Miniature PMMA Plunger Pump for Compact Fluidic Systems pump head detail image",
-                "caption": "Pump head detail image for structural reference only",
                 "isFallback": false
               }
             ],
@@ -1829,15 +1787,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-100-peek-main.webp",
+                "src": "/images/products/pumps/plunger-pump/ea/pump-ea-100ul-peek.webp",
                 "alt": "EA-100-PEEK 柱塞泵产品图",
                 "caption": "产品图片仅用于结构展示",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-100-peek-detail.webp",
-                "alt": "EA-100-PEEK 柱塞泵泵头细节图",
-                "caption": "泵头细节图仅用于结构说明",
                 "isFallback": false
               }
             ],
@@ -2071,15 +2023,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-100-peek-main.webp",
+                "src": "/images/products/pumps/plunger-pump/ea/pump-ea-100ul-peek.webp",
                 "alt": "100 µL PEEK Plunger Pump for Precision Dispensing product image",
                 "caption": "Product image for structural reference only",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-100-peek-detail.webp",
-                "alt": "100 µL PEEK Plunger Pump for Precision Dispensing pump head detail image",
-                "caption": "Pump head detail image for structural reference only",
                 "isFallback": false
               }
             ],
@@ -2370,15 +2316,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-250-peek-main.webp",
+                "src": "/images/products/pumps/plunger-pump/ea/pump-ea-250ul-peek.webp",
                 "alt": "EA-250-PEEK 柱塞泵产品图",
                 "caption": "产品图片仅用于结构展示",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-250-peek-detail.webp",
-                "alt": "EA-250-PEEK 柱塞泵泵头细节图",
-                "caption": "泵头细节图仅用于结构说明",
                 "isFallback": false
               }
             ],
@@ -2612,15 +2552,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-250-peek-main.webp",
+                "src": "/images/products/pumps/plunger-pump/ea/pump-ea-250ul-peek.webp",
                 "alt": "250 µL PEEK Plunger Pump for Precision Dispensing product image",
                 "caption": "Product image for structural reference only",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-250-peek-detail.webp",
-                "alt": "250 µL PEEK Plunger Pump for Precision Dispensing pump head detail image",
-                "caption": "Pump head detail image for structural reference only",
                 "isFallback": false
               }
             ],
@@ -2911,15 +2845,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-500-peek-main.webp",
+                "src": "/images/products/pumps/plunger-pump/ea/pump-ea-500ul-peek.webp",
                 "alt": "EA-500-PEEK 柱塞泵产品图",
                 "caption": "产品图片仅用于结构展示",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-500-peek-detail.webp",
-                "alt": "EA-500-PEEK 柱塞泵泵头细节图",
-                "caption": "泵头细节图仅用于结构说明",
                 "isFallback": false
               }
             ],
@@ -3153,15 +3081,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-500-peek-main.webp",
+                "src": "/images/products/pumps/plunger-pump/ea/pump-ea-500ul-peek.webp",
                 "alt": "500 µL PEEK Plunger Pump for Precision Dispensing product image",
                 "caption": "Product image for structural reference only",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-500-peek-detail.webp",
-                "alt": "500 µL PEEK Plunger Pump for Precision Dispensing pump head detail image",
-                "caption": "Pump head detail image for structural reference only",
                 "isFallback": false
               }
             ],
@@ -3452,15 +3374,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-500-pmma-main.webp",
+                "src": "/images/products/pumps/plunger-pump/ea/pump-ea-500ul-pmma.webp",
                 "alt": "EA-500-PMMA 柱塞泵产品图",
                 "caption": "产品图片仅用于结构展示",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-500-pmma-detail.webp",
-                "alt": "EA-500-PMMA 柱塞泵泵头细节图",
-                "caption": "泵头细节图仅用于结构说明",
                 "isFallback": false
               }
             ],
@@ -3694,15 +3610,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-500-pmma-main.webp",
+                "src": "/images/products/pumps/plunger-pump/ea/pump-ea-500ul-pmma.webp",
                 "alt": "500 µL PMMA Plunger Pump for Precision Dispensing product image",
                 "caption": "Product image for structural reference only",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-500-pmma-detail.webp",
-                "alt": "500 µL PMMA Plunger Pump for Precision Dispensing pump head detail image",
-                "caption": "Pump head detail image for structural reference only",
                 "isFallback": false
               }
             ],
@@ -3993,15 +3903,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-1000-peek-main.webp",
+                "src": "/images/products/pumps/plunger-pump/ea/pump-ea-1000ul-peek.webp",
                 "alt": "EA-1000-PEEK 柱塞泵产品图",
                 "caption": "产品图片仅用于结构展示",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-1000-peek-detail.webp",
-                "alt": "EA-1000-PEEK 柱塞泵泵头细节图",
-                "caption": "泵头细节图仅用于结构说明",
                 "isFallback": false
               }
             ],
@@ -4235,15 +4139,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-1000-peek-main.webp",
+                "src": "/images/products/pumps/plunger-pump/ea/pump-ea-1000ul-peek.webp",
                 "alt": "1000 µL PEEK Plunger Pump for Precision Dispensing product image",
                 "caption": "Product image for structural reference only",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-1000-peek-detail.webp",
-                "alt": "1000 µL PEEK Plunger Pump for Precision Dispensing pump head detail image",
-                "caption": "Pump head detail image for structural reference only",
                 "isFallback": false
               }
             ],
@@ -4534,15 +4432,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-1000-pmma-main.webp",
+                "src": "/images/products/pumps/plunger-pump/ea/pump-ea-1000ul-pmma.webp",
                 "alt": "EA-1000-PMMA 柱塞泵产品图",
                 "caption": "产品图片仅用于结构展示",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-1000-pmma-detail.webp",
-                "alt": "EA-1000-PMMA 柱塞泵泵头细节图",
-                "caption": "泵头细节图仅用于结构说明",
                 "isFallback": false
               }
             ],
@@ -4776,15 +4668,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-1000-pmma-main.webp",
+                "src": "/images/products/pumps/plunger-pump/ea/pump-ea-1000ul-pmma.webp",
                 "alt": "1000 µL PMMA Plunger Pump for Precision Dispensing product image",
                 "caption": "Product image for structural reference only",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-1000-pmma-detail.webp",
-                "alt": "1000 µL PMMA Plunger Pump for Precision Dispensing pump head detail image",
-                "caption": "Pump head detail image for structural reference only",
                 "isFallback": false
               }
             ],
@@ -5075,15 +4961,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-2500-peek-main.webp",
+                "src": "/images/products/pumps/plunger-pump/ea/pump-ea-2500ul-peek.webp",
                 "alt": "EA-2500-PEEK 柱塞泵产品图",
                 "caption": "产品图片仅用于结构展示",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-2500-peek-detail.webp",
-                "alt": "EA-2500-PEEK 柱塞泵泵头细节图",
-                "caption": "泵头细节图仅用于结构说明",
                 "isFallback": false
               }
             ],
@@ -5317,15 +5197,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-2500-peek-main.webp",
+                "src": "/images/products/pumps/plunger-pump/ea/pump-ea-2500ul-peek.webp",
                 "alt": "2500 µL PEEK Plunger Pump for Precision Dispensing product image",
                 "caption": "Product image for structural reference only",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-2500-peek-detail.webp",
-                "alt": "2500 µL PEEK Plunger Pump for Precision Dispensing pump head detail image",
-                "caption": "Pump head detail image for structural reference only",
                 "isFallback": false
               }
             ],
@@ -5616,15 +5490,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-2500-pmma-main.webp",
+                "src": "/images/products/pumps/plunger-pump/ea/pump-ea-2500ul-pmma.webp",
                 "alt": "EA-2500-PMMA 柱塞泵产品图",
                 "caption": "产品图片仅用于结构展示",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-2500-pmma-detail.webp",
-                "alt": "EA-2500-PMMA 柱塞泵泵头细节图",
-                "caption": "泵头细节图仅用于结构说明",
                 "isFallback": false
               }
             ],
@@ -5858,15 +5726,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-2500-pmma-main.webp",
+                "src": "/images/products/pumps/plunger-pump/ea/pump-ea-2500ul-pmma.webp",
                 "alt": "2500 µL PMMA Plunger Pump for Precision Dispensing product image",
                 "caption": "Product image for structural reference only",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-2500-pmma-detail.webp",
-                "alt": "2500 µL PMMA Plunger Pump for Precision Dispensing pump head detail image",
-                "caption": "Pump head detail image for structural reference only",
                 "isFallback": false
               }
             ],
@@ -6157,15 +6019,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-5000-peek-main.webp",
+                "src": "/images/products/pumps/plunger-pump/ea/pump-ea-5000ul-peek.webp",
                 "alt": "EA-5000-PEEK 柱塞泵产品图",
                 "caption": "产品图片仅用于结构展示",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-5000-peek-detail.webp",
-                "alt": "EA-5000-PEEK 柱塞泵泵头细节图",
-                "caption": "泵头细节图仅用于结构说明",
                 "isFallback": false
               }
             ],
@@ -6399,15 +6255,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-5000-peek-main.webp",
+                "src": "/images/products/pumps/plunger-pump/ea/pump-ea-5000ul-peek.webp",
                 "alt": "5000 µL PEEK Plunger Pump for Precision Dispensing product image",
                 "caption": "Product image for structural reference only",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-5000-peek-detail.webp",
-                "alt": "5000 µL PEEK Plunger Pump for Precision Dispensing pump head detail image",
-                "caption": "Pump head detail image for structural reference only",
                 "isFallback": false
               }
             ],
@@ -6698,15 +6548,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-5000-pmma-main.webp",
+                "src": "/images/products/pumps/plunger-pump/ea/pump-ea-5000ul-pmma.webp",
                 "alt": "EA-5000-PMMA 柱塞泵产品图",
                 "caption": "产品图片仅用于结构展示",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-5000-pmma-detail.webp",
-                "alt": "EA-5000-PMMA 柱塞泵泵头细节图",
-                "caption": "泵头细节图仅用于结构说明",
                 "isFallback": false
               }
             ],
@@ -6940,15 +6784,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-5000-pmma-main.webp",
+                "src": "/images/products/pumps/plunger-pump/ea/pump-ea-5000ul-pmma.webp",
                 "alt": "5000 µL PMMA Plunger Pump for Precision Dispensing product image",
                 "caption": "Product image for structural reference only",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-5000-pmma-detail.webp",
-                "alt": "5000 µL PMMA Plunger Pump for Precision Dispensing pump head detail image",
-                "caption": "Pump head detail image for structural reference only",
                 "isFallback": false
               }
             ],
@@ -7239,15 +7077,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-10000-peek-main.webp",
+                "src": "/images/products/pumps/plunger-pump/ea/pump-ea-10000ul-peek.webp",
                 "alt": "EA-10000-PEEK 柱塞泵产品图",
                 "caption": "产品图片仅用于结构展示",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-10000-peek-detail.webp",
-                "alt": "EA-10000-PEEK 柱塞泵泵头细节图",
-                "caption": "泵头细节图仅用于结构说明",
                 "isFallback": false
               }
             ],
@@ -7481,15 +7313,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-10000-peek-main.webp",
+                "src": "/images/products/pumps/plunger-pump/ea/pump-ea-10000ul-peek.webp",
                 "alt": "10000 µL PEEK Plunger Pump for Precision Dispensing product image",
                 "caption": "Product image for structural reference only",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-10000-peek-detail.webp",
-                "alt": "10000 µL PEEK Plunger Pump for Precision Dispensing pump head detail image",
-                "caption": "Pump head detail image for structural reference only",
                 "isFallback": false
               }
             ],
@@ -7780,15 +7606,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-10000-pmma-main.webp",
+                "src": "/images/products/pumps/plunger-pump/ea/pump-ea-10000ul-pmma.webp",
                 "alt": "EA-10000-PMMA 柱塞泵产品图",
                 "caption": "产品图片仅用于结构展示",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-10000-pmma-detail.webp",
-                "alt": "EA-10000-PMMA 柱塞泵泵头细节图",
-                "caption": "泵头细节图仅用于结构说明",
                 "isFallback": false
               }
             ],
@@ -8022,15 +7842,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-10000-pmma-main.webp",
+                "src": "/images/products/pumps/plunger-pump/ea/pump-ea-10000ul-pmma.webp",
                 "alt": "10000 µL PMMA Plunger Pump for Precision Dispensing product image",
                 "caption": "Product image for structural reference only",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/ea/ea-10000-pmma-detail.webp",
-                "alt": "10000 µL PMMA Plunger Pump for Precision Dispensing pump head detail image",
-                "caption": "Pump head detail image for structural reference only",
                 "isFallback": false
               }
             ],
@@ -8321,15 +8135,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/sm/sm-50-pmma-main.webp",
+                "src": "/images/products/pumps/plunger-pump/sm/pump-sm-50ul-pmma.webp",
                 "alt": "SM-50-PMMA 微型柱塞泵产品图",
                 "caption": "产品图片仅用于结构展示",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/sm/sm-50-pmma-detail.webp",
-                "alt": "SM-50-PMMA 微型柱塞泵泵头细节图",
-                "caption": "泵头细节图仅用于结构说明",
                 "isFallback": false
               }
             ],
@@ -8563,15 +8371,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/sm/sm-50-pmma-main.webp",
+                "src": "/images/products/pumps/plunger-pump/sm/pump-sm-50ul-pmma.webp",
                 "alt": "50 µL Miniature PMMA Plunger Pump for Compact Fluidic Systems product image",
                 "caption": "Product image for structural reference only",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/sm/sm-50-pmma-detail.webp",
-                "alt": "50 µL Miniature PMMA Plunger Pump for Compact Fluidic Systems pump head detail image",
-                "caption": "Pump head detail image for structural reference only",
                 "isFallback": false
               }
             ],
@@ -8862,15 +8664,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/sm/sm-100-peek-main.webp",
+                "src": "/images/products/pumps/plunger-pump/sm/pump-sm-100ul-peek.webp",
                 "alt": "SM-100-PEEK 微型柱塞泵产品图",
                 "caption": "产品图片仅用于结构展示",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/sm/sm-100-peek-detail.webp",
-                "alt": "SM-100-PEEK 微型柱塞泵泵头细节图",
-                "caption": "泵头细节图仅用于结构说明",
                 "isFallback": false
               }
             ],
@@ -9104,15 +8900,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/sm/sm-100-peek-main.webp",
+                "src": "/images/products/pumps/plunger-pump/sm/pump-sm-100ul-peek.webp",
                 "alt": "100 µL Miniature PEEK Plunger Pump for Compact Fluidic Systems product image",
                 "caption": "Product image for structural reference only",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/sm/sm-100-peek-detail.webp",
-                "alt": "100 µL Miniature PEEK Plunger Pump for Compact Fluidic Systems pump head detail image",
-                "caption": "Pump head detail image for structural reference only",
                 "isFallback": false
               }
             ],
@@ -9403,15 +9193,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/sm/sm-250-peek-main.webp",
+                "src": "/images/products/pumps/plunger-pump/sm/pump-sm-250ul-peek.webp",
                 "alt": "SM-250-PEEK 微型柱塞泵产品图",
                 "caption": "产品图片仅用于结构展示",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/sm/sm-250-peek-detail.webp",
-                "alt": "SM-250-PEEK 微型柱塞泵泵头细节图",
-                "caption": "泵头细节图仅用于结构说明",
                 "isFallback": false
               }
             ],
@@ -9645,15 +9429,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/sm/sm-250-peek-main.webp",
+                "src": "/images/products/pumps/plunger-pump/sm/pump-sm-250ul-peek.webp",
                 "alt": "250 µL Miniature PEEK Plunger Pump for Compact Fluidic Systems product image",
                 "caption": "Product image for structural reference only",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/sm/sm-250-peek-detail.webp",
-                "alt": "250 µL Miniature PEEK Plunger Pump for Compact Fluidic Systems pump head detail image",
-                "caption": "Pump head detail image for structural reference only",
                 "isFallback": false
               }
             ],
@@ -9944,15 +9722,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/sm/sm-250-pmma-main.webp",
+                "src": "/images/products/pumps/plunger-pump/sm/pump-sm-250ul-pmma.webp",
                 "alt": "SM-250-PMMA 微型柱塞泵产品图",
                 "caption": "产品图片仅用于结构展示",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/sm/sm-250-pmma-detail.webp",
-                "alt": "SM-250-PMMA 微型柱塞泵泵头细节图",
-                "caption": "泵头细节图仅用于结构说明",
                 "isFallback": false
               }
             ],
@@ -10186,15 +9958,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/sm/sm-250-pmma-main.webp",
+                "src": "/images/products/pumps/plunger-pump/sm/pump-sm-250ul-pmma.webp",
                 "alt": "250 µL Miniature PMMA Plunger Pump for Compact Fluidic Systems product image",
                 "caption": "Product image for structural reference only",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/sm/sm-250-pmma-detail.webp",
-                "alt": "250 µL Miniature PMMA Plunger Pump for Compact Fluidic Systems pump head detail image",
-                "caption": "Pump head detail image for structural reference only",
                 "isFallback": false
               }
             ],
@@ -10485,15 +10251,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/sm/sm-500-pmma-main.webp",
+                "src": "/images/products/pumps/plunger-pump/sm/pump-sm-500ul-pmma.webp",
                 "alt": "SM-500-PMMA 微型柱塞泵产品图",
                 "caption": "产品图片仅用于结构展示",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/sm/sm-500-pmma-detail.webp",
-                "alt": "SM-500-PMMA 微型柱塞泵泵头细节图",
-                "caption": "泵头细节图仅用于结构说明",
                 "isFallback": false
               }
             ],
@@ -10727,15 +10487,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/sm/sm-500-pmma-main.webp",
+                "src": "/images/products/pumps/plunger-pump/sm/pump-sm-500ul-pmma.webp",
                 "alt": "500 µL Miniature PMMA Plunger Pump for Compact Fluidic Systems product image",
                 "caption": "Product image for structural reference only",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/sm/sm-500-pmma-detail.webp",
-                "alt": "500 µL Miniature PMMA Plunger Pump for Compact Fluidic Systems pump head detail image",
-                "caption": "Pump head detail image for structural reference only",
                 "isFallback": false
               }
             ],
@@ -11026,15 +10780,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/sm/sm-1000-pmma-main.webp",
+                "src": "/images/products/pumps/plunger-pump/sm/pump-sm-1000ul-pmma.webp",
                 "alt": "SM-1000-PMMA 微型柱塞泵产品图",
                 "caption": "产品图片仅用于结构展示",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/sm/sm-1000-pmma-detail.webp",
-                "alt": "SM-1000-PMMA 微型柱塞泵泵头细节图",
-                "caption": "泵头细节图仅用于结构说明",
                 "isFallback": false
               }
             ],
@@ -11268,15 +11016,9 @@ export const pumpSeriesDetailRecords = [
             "fallbackImage": "/images/products/common/product-placeholder.webp",
             "images": [
               {
-                "src": "/images/products/pumps/plunger-pump/sm/sm-1000-pmma-main.webp",
+                "src": "/images/products/pumps/plunger-pump/sm/pump-sm-1000ul-pmma.webp",
                 "alt": "1000 µL Miniature PMMA Plunger Pump for Compact Fluidic Systems product image",
                 "caption": "Product image for structural reference only",
-                "isFallback": false
-              },
-              {
-                "src": "/images/products/pumps/plunger-pump/sm/sm-1000-pmma-detail.webp",
-                "alt": "1000 µL Miniature PMMA Plunger Pump for Compact Fluidic Systems pump head detail image",
-                "caption": "Pump head detail image for structural reference only",
                 "isFallback": false
               }
             ],
