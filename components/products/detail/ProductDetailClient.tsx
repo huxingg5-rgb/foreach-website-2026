@@ -36,20 +36,41 @@ type ZoomStyle = CSSProperties & {
   "--zoom-y"?: string;
 };
 
-function getProductDrawingPreviewUrl(slug: string) {
-  const normalizedSlug = slug.trim().toLowerCase();
-  const eaMatch = normalizedSlug.match(/^ea-(\d+)/);
+function getProductDrawingPreviewUrl(slug: string, configuredUrl?: string) {
+  const normalizedConfiguredUrl = configuredUrl?.trim();
 
-  if (!eaMatch) {
+  if (normalizedConfiguredUrl) {
+    return normalizedConfiguredUrl.includes("#")
+      ? normalizedConfiguredUrl
+      : normalizedConfiguredUrl + "#toolbar=0&navpanes=0&scrollbar=1";
+  }
+
+  const normalizedSlug = slug.trim().toLowerCase();
+  const match = normalizedSlug.match(/^(ea|sm|tm)-(\d+)/);
+
+  if (!match) {
     return "";
   }
 
-  return `/assets/products/ea/2d-drawings/ea-${eaMatch[1]}.pdf#toolbar=0&navpanes=0&scrollbar=1`;
+  const seriesCode = match[1];
+  const seriesUpper = seriesCode.toUpperCase();
+  const capacityCode = String(Number(match[2])).padStart(4, "0") + "UL";
+
+  return (
+    "/assets/products/" +
+    seriesCode +
+    "/2d-drawings/" +
+    seriesUpper +
+    "-" +
+    capacityCode +
+    ".pdf#toolbar=0&navpanes=0&scrollbar=1"
+  );
 }
 export default function ProductDetailClient({
   data,
 }: ProductDetailClientProps) {
   const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
   const [activeThumb, setActiveThumb] = useState(0);
   const [isZooming, setIsZooming] = useState(false);
   const [zoomPosition, setZoomPosition] = useState({
@@ -421,7 +442,6 @@ export default function ProductDetailClient({
           <div className={styles.productInfo}>
             <div className={styles.titleGroup}>
               <h1 className={styles.productModelTitle}>{data.model}</h1>
-              <div className={styles.productName}>{data.name}</div>
             </div>
 
             <p className={styles.productDesc}>
@@ -578,6 +598,7 @@ export default function ProductDetailClient({
                 <ProductModelViewer
                   slug={data.slug}
                   modelName={data.model}
+                  modelUrl={(data as any).model3dUrl || (data as any).resources?.model3dUrl}
                 />
               </div>
             </div>
@@ -590,9 +611,9 @@ export default function ProductDetailClient({
                 .filter(Boolean)
                 .join(" ")}
             >
-              {getProductDrawingPreviewUrl(data.slug) ? (
+              {getProductDrawingPreviewUrl(data.slug, (data as any).drawing2dUrl || (data as any).drawingPdfUrl || (data as any).partDrawingUrl || (data as any).resources?.drawing2dUrl) ? (
                 <PdfDrawingPreview
-                  pdfPreviewUrl={getProductDrawingPreviewUrl(data.slug)}
+                  pdfPreviewUrl={getProductDrawingPreviewUrl(data.slug, (data as any).drawing2dUrl || (data as any).drawingPdfUrl || (data as any).partDrawingUrl || (data as any).resources?.drawing2dUrl)}
                   documentTitle={data.model}
                 />
               ) : (
@@ -603,6 +624,59 @@ export default function ProductDetailClient({
             </div>
           </div>
         </section>
+        {data.faqs && data.faqs.length > 0 ? (
+          <section className={styles.faqSection}>
+            <div className={styles.faqHeader}>
+              <h2>常见问题</h2>
+            </div>
+
+            <div className={styles.faqList}>
+              {data.faqs.map((item, index) => {
+                const isOpen = openFaqIndex === index;
+
+                return (
+                  <article
+                    className={[
+                      styles.faqItem,
+                      isOpen ? styles.faqItemOpen : "",
+                    ]
+                      .filter(Boolean)
+                      .join(" ")}
+                    key={`${item.question}-${index}`}
+                  >
+                    <button
+                      className={styles.faqQuestion}
+                      type="button"
+                      aria-expanded={isOpen}
+                      onClick={() =>
+                        setOpenFaqIndex(isOpen ? null : index)
+                      }
+                    >
+                      <span className={styles.faqQuestionText}>
+                        {item.question}
+                      </span>
+                      <span
+                        className={styles.faqToggle}
+                        aria-hidden="true"
+                      >
+                        {isOpen ? "−" : "+"}
+                      </span>
+                    </button>
+                    <div
+                      className={styles.faqAnswerWrap}
+                      aria-hidden={!isOpen}
+                    >
+                      <p className={styles.faqAnswer}>
+                        {item.answer}
+                      </p>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          </section>
+        ) : null}
+
       </div>
     </main>
     </SitePageShell>

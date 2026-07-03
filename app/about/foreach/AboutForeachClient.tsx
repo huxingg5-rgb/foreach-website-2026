@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
- 
+
 /* =========================================================
    文件路径：
    app/about/foreach/AboutForeachClient.tsx
@@ -22,20 +22,18 @@ import { usePathname } from "next/navigation";
             ├─ about-foreach-banner.webp
             ├─ company-strength.webp
             └─ honors
-               ├─ honor-main-certificate.jpg
-               ├─ honor-thumb-01.jpg
-               ├─ honor-thumb-02.jpg
-               ├─ honor-thumb-03.jpg
-               ├─ honor-thumb-04.jpg
-               ├─ honor-thumb-05.jpg
-               ├─ honor-a4-01-national-high-tech-enterprise.jpg
-               ├─ honor-a4-02-specialized-little-giant.jpg
-               ├─ honor-a4-03-shenzhen-gazelle-enterprise.jpg
-               ├─ honor-a4-04-guangdong-engineering-center.jpg
-               ├─ honor-a4-05-intellectual-property-certificate.jpg
-               ├─ honor-a4-06-innovative-sme.jpg
-               ├─ honor-a4-07-quality-management-system.jpg
-               └─ honor-a4-08-other-honor.jpg
+               ├─ honor-main-certificate.webp
+               ├─ honor-thumb-01.webp
+               ├─ honor-thumb-02.webp
+               ├─ honor-thumb-03.webp
+               ├─ honor.webp
+               ├─ honor.webp
+               ├─ honor.webp
+               ├─ honor.webp
+               ├─ honor.webp
+               ├─ honor.webp
+               ├─ honor.webp
+               └─ honor.webp
 
    视频文件当前沿用你已经放好的路径：
    public/images/home/foreach-company-intro.mp4
@@ -238,7 +236,7 @@ const pageText = {
     ru: "Множество корпоративных квалификаций\nи технических наград",
   },
 } satisfies Record<string, LocalizedText>;
- 
+
 /* 公司优势数据 */
 const advantageStats = [
   {
@@ -344,134 +342,77 @@ const aboutVideos = {
 /* 荣誉主证书 */
 const honorMainCertificate = {
   title: {
-    "zh-CN": "荣誉资质主证书",
-    en: "Main Honor Certificate",
-    es: "Certificado principal",
-    fr: "Certificat principal",
-    ko: "대표 인증서",
-    ru: "Основной сертификат",
+    "zh-CN": "高新技术企业证书",
+    en: "High-Tech Enterprise Certificate",
+    es: "Certificado de empresa de alta tecnología",
+    fr: "Certificat d'entreprise de haute technologie",
+    ko: "하이테크 기업 인증서",
+    ru: "Сертификат высокотехнологичного предприятия",
   },
-  src: "/images/about/foreach/honors/honor-main-certificate.jpg",
+  src: "/images/about/foreach/honors/honor-main-certificate.webp",
 };
 
-/* 荣誉横向缩略图 */
-const honorThumbs = [
+const honorTopCertificates = [
   {
-    title: {
-      "zh-CN": "荣誉证书缩略图 01",
-      en: "Honor Thumbnail 01",
-      es: "Miniatura de certificado 01",
-      fr: "Vignette de certificat 01",
-      ko: "인증서 썸네일 01",
-      ru: "Миниатюра сертификата 01",
-    },
-    src: "/images/about/foreach/honors/honor-thumb-01.jpg",
+    title: { "zh-CN": "ISO 13485", en: "ISO 13485", es: "ISO 13485", fr: "ISO 13485", ko: "ISO 13485", ru: "ISO 13485" },
+    src: "/images/about/foreach/honors/honor-row2-iso13485.webp",
   },
   {
-    title: {
-      "zh-CN": "荣誉证书缩略图 02",
-      en: "Honor Thumbnail 02",
-      es: "Miniatura de certificado 02",
-      fr: "Vignette de certificat 02",
-      ko: "인증서 썸네일 02",
-      ru: "Миниатюра сертификата 02",
-    },
-    src: "/images/about/foreach/honors/honor-thumb-02.jpg",
-  },
-  {
-    title: {
-      "zh-CN": "荣誉证书缩略图 03",
-      en: "Honor Thumbnail 03",
-      es: "Miniatura de certificado 03",
-      fr: "Vignette de certificat 03",
-      ko: "인증서 썸네일 03",
-      ru: "Миниатюра сертификата 03",
-    },
-    src: "/images/about/foreach/honors/honor-thumb-03.jpg",
-  },
-  {
-    title: {
-      "zh-CN": "荣誉证书缩略图 04",
-      en: "Honor Thumbnail 04",
-      es: "Miniatura de certificado 04",
-      fr: "Vignette de certificat 04",
-      ko: "인증서 썸네일 04",
-      ru: "Миниатюра сертификата 04",
-    },
-    src: "/images/about/foreach/honors/honor-thumb-04.jpg",
-  },
-  {
-    title: {
-      "zh-CN": "荣誉证书缩略图 05",
-      en: "Honor Thumbnail 05",
-      es: "Miniatura de certificado 05",
-      fr: "Vignette de certificat 05",
-      ko: "인증서 썸네일 05",
-      ru: "Миниатюра сертификата 05",
-    },
-    src: "/images/about/foreach/honors/honor-thumb-05.jpg",
+    title: { "zh-CN": "ISO 9001", en: "ISO 9001", es: "ISO 9001", fr: "ISO 9001", ko: "ISO 9001", ru: "ISO 9001" },
+    src: "/images/about/foreach/honors/honor-row2-iso9001.webp",
   },
 ];
 
-/* A4 比例荣誉证书图 */
-const honorA4Images = [
+const honorMiddleImages = [
   {
-    title: {
-
-    },
-    src: "/images/about/foreach/honors/honor-a4-01-national-high-tech-enterprise.jpg",
+    title: { "zh-CN": "广东省工程技术研究中心", en: "Guangdong Engineering Technology Research Center", es: "Guangdong Engineering Technology Research Center", fr: "Guangdong Engineering Technology Research Center", ko: "Guangdong Engineering Technology Research Center", ru: "Guangdong Engineering Technology Research Center" },
+    src: "/images/about/foreach/honors/honor-row2-engineering-center.webp",
   },
   {
-    title: {
-
-    },
-    src: "/images/about/foreach/honors/honor-a4-02-specialized-little-giant.jpg",
+    title: { "zh-CN": "瞪羚企业", en: "Gazelle Enterprise", es: "Gazelle Enterprise", fr: "Gazelle Enterprise", ko: "Gazelle Enterprise", ru: "Gazelle Enterprise" },
+    src: "/images/about/foreach/honors/honor-row2-gazelle.webp",
   },
   {
-    title: {
-
-    },
-    src: "/images/about/foreach/honors/honor-a4-03-shenzhen-gazelle-enterprise.jpg",
-  },
-  {
-    title: {
-
-    },
-    src: "/images/about/foreach/honors/honor-a4-04-guangdong-engineering-center.jpg",
-  },
-  {
-    title: {
-
-    },
-    src: "/images/about/foreach/honors/honor-a4-05-intellectual-property-certificate.jpg",
-  },
-  {
-    title: {
-
-    },
-    src: "/images/about/foreach/honors/honor-a4-06-innovative-sme.jpg",
-  },
-  {
-    title: {
-   
-    },
-    src: "/images/about/foreach/honors/honor-a4-07-quality-management-system.jpg",
-  },
-  {
-    title: {
-
-    }, 
-    src: "/images/about/foreach/honors/honor-a4-08-other-honor.jpg",
+    title: { "zh-CN": "专精特新小巨人企业", en: "Specialized and Innovative Little Giant Enterprise", es: "Specialized and Innovative Little Giant Enterprise", fr: "Specialized and Innovative Little Giant Enterprise", ko: "Specialized and Innovative Little Giant Enterprise", ru: "Specialized and Innovative Little Giant Enterprise" },
+    src: "/images/about/foreach/honors/honor-row2-little-giant.webp",
   },
 ];
 
-/* =========================================================
-   图片组件
-   作用：
-   1. 优先读取真实图片
-   2. 图片文件还没放进去时，自动显示灰色占位背景
-   3. 后续只需要把图片按 src 路径放好，不需要再改代码
-========================================================= */
+const honorBottomImages = [
+  {
+    title: { "zh-CN": "团体标准 01", en: "Group Standard 01", es: "Group Standard 01", fr: "Group Standard 01", ko: "Group Standard 01", ru: "Group Standard 01" },
+    src: "/images/about/foreach/honors/honor-row3-national-standard-01.webp",
+  },
+  {
+    title: { "zh-CN": "团体标准 02", en: "Group Standard 02", es: "Group Standard 02", fr: "Group Standard 02", ko: "Group Standard 02", ru: "Group Standard 02" },
+    src: "/images/about/foreach/honors/honor-row3-national-standard-02.webp",
+  },
+  {
+    title: { "zh-CN": "团体标准 03", en: "Group Standard 03", es: "Group Standard 03", fr: "Group Standard 03", ko: "Group Standard 03", ru: "Group Standard 03" },
+    src: "/images/about/foreach/honors/honor-row3-national-standard-03.webp",
+  },
+  {
+    title: { "zh-CN": "发明专利证书 01", en: "Invention Patent Certificate 01", es: "Invention Patent Certificate 01", fr: "Invention Patent Certificate 01", ko: "Invention Patent Certificate 01", ru: "Invention Patent Certificate 01" },
+    src: "/images/about/foreach/honors/honor-row3-invention-patent-01.webp",
+  },
+  {
+    title: { "zh-CN": "发明专利证书 02", en: "Invention Patent Certificate 02", es: "Invention Patent Certificate 02", fr: "Invention Patent Certificate 02", ko: "Invention Patent Certificate 02", ru: "Invention Patent Certificate 02" },
+    src: "/images/about/foreach/honors/honor-row3-invention-patent-02.webp",
+  },
+  {
+    title: { "zh-CN": "发明专利证书 03", en: "Invention Patent Certificate 03", es: "Invention Patent Certificate 03", fr: "Invention Patent Certificate 03", ko: "Invention Patent Certificate 03", ru: "Invention Patent Certificate 03" },
+    src: "/images/about/foreach/honors/honor-row3-invention-patent-03.webp",
+  },
+  {
+    title: { "zh-CN": "发明专利证书 04", en: "Invention Patent Certificate 04", es: "Invention Patent Certificate 04", fr: "Invention Patent Certificate 04", ko: "Invention Patent Certificate 04", ru: "Invention Patent Certificate 04" },
+    src: "/images/about/foreach/honors/honor-row3-invention-patent-04.webp",
+  },
+  {
+    title: { "zh-CN": "发明专利证书 05", en: "Invention Patent Certificate 05", es: "Invention Patent Certificate 05", fr: "Invention Patent Certificate 05", ko: "Invention Patent Certificate 05", ru: "Invention Patent Certificate 05" },
+    src: "/images/about/foreach/honors/honor-row3-invention-patent-05.webp",
+  },
+];
+
 function LocalImageWithFallback({
   src,
   alt,
@@ -630,7 +571,7 @@ export default function AboutForeachClient() {
           第一部分：Banner
       ================================ */}
       <section className="about-foreach-hero">
-        {/* 
+        {/*
           Banner 背景图
           图片文件位置：
           public/images/about/foreach/about-foreach-banner.webp
@@ -720,14 +661,14 @@ export default function AboutForeachClient() {
             )}
           </strong>
         </div>
-      </nav> 
+      </nav>
       {/* ================================
           第二部分：恒永达介绍 + 视频
       ================================ */}
       <section className="about-foreach-intro-section" id="company-intro">
 
-     
-      
+
+
         <div className="about-foreach-container about-foreach-intro-layout">
           <div className="about-foreach-intro-copy">
             <h2>{getLocalizedText(pageText.introTitle, locale)}</h2>
@@ -737,7 +678,7 @@ export default function AboutForeachClient() {
             </p>
           </div>
 
-          {/* 
+          {/*
             公司介绍视频
             封面图位置：
             public/images/home/tv-foreach.png
@@ -845,7 +786,7 @@ export default function AboutForeachClient() {
                     en: "FOREACH honor statistics",
                     es: "Datos de honores de FOREACH",
                     fr: "Données sur les distinctions de FOREACH",
-                    ko: "FOREACH 인증 및 수상 데이터",
+                    ko: "FOREACH honor statistics",
                     ru: "Данные о наградах FOREACH",
                   },
                   locale
@@ -871,98 +812,63 @@ export default function AboutForeachClient() {
               </div>
             </div>
 
-            <div className="about-foreach-honor-display">
-              {/* 
-                荣誉主证书
-                图片文件位置：
-                public/images/about/foreach/honors/honor-main-certificate.jpg
-              */}
-              <div className="about-foreach-honor-main-cert">
-                <LocalImageWithFallback
-                  src={honorMainCertificate.src}
-                  alt={getLocalizedText(honorMainCertificate.title, locale)}
-                  className="about-foreach-honor-main-cert-image"
-                />
-              </div>
-
-              {/* 
-                横向荣誉证书缩略图
-                图片文件位置：
-                public/images/about/foreach/honors/honor-thumb-01.jpg
-                public/images/about/foreach/honors/honor-thumb-02.jpg
-                public/images/about/foreach/honors/honor-thumb-03.jpg
-                public/images/about/foreach/honors/honor-thumb-04.jpg
-                public/images/about/foreach/honors/honor-thumb-05.jpg
-              */}
-              <div
-                className="about-foreach-honor-thumb-row"
-                aria-label={getLocalizedText(
-                  {
-                    "zh-CN": "荣誉证书缩略图",
-                    en: "Honor certificate thumbnails",
-                    es: "Miniaturas de certificados",
-                    fr: "Vignettes de certificats",
-                    ko: "인증서 썸네일",
-                    ru: "Миниатюры сертификатов",
-                  },
-                  locale
-                )}
-              >
-                {honorThumbs.map((item) => (
+            <div className="about-foreach-honor-board">
+              <div className="about-foreach-honor-top-row">
+                <div className="about-foreach-honor-main-cert">
                   <LocalImageWithFallback
-                    key={getLocalizedText(item.title, "en")}
+                    src={honorMainCertificate.src}
+                    alt={getLocalizedText(honorMainCertificate.title, locale)}
+                    className="about-foreach-honor-main-cert-image"
+                  />
+                </div>
+
+                {honorTopCertificates.map((item) => (
+                  <LocalImageWithFallback
+                    key={item.src}
                     src={item.src}
                     alt={getLocalizedText(item.title, locale)}
-                    className="about-foreach-honor-thumb"
+                    className="about-foreach-honor-iso-cert"
+                  />
+                ))}
+              </div>
+
+              <div
+                className="about-foreach-honor-middle-row"
+                aria-label="Horizontal enterprise honors"
+              >
+                {honorMiddleImages.map((item) => (
+                  <LocalImageWithFallback
+                    key={item.src}
+                    src={item.src}
+                    alt={getLocalizedText(item.title, locale)}
+                    className="about-foreach-honor-middle-image"
                   />
                 ))}
               </div>
             </div>
           </div>
 
-          {/* 
-            A4 比例荣誉证书图一排
-            图片文件位置：
-            public/images/about/foreach/honors/honor-a4-01-national-high-tech-enterprise.jpg
-            public/images/about/foreach/honors/honor-a4-02-specialized-little-giant.jpg
-            public/images/about/foreach/honors/honor-a4-03-shenzhen-gazelle-enterprise.jpg
-            public/images/about/foreach/honors/honor-a4-04-guangdong-engineering-center.jpg
-            public/images/about/foreach/honors/honor-a4-05-intellectual-property-certificate.jpg
-            public/images/about/foreach/honors/honor-a4-06-innovative-sme.jpg
-            public/images/about/foreach/honors/honor-a4-07-quality-management-system.jpg
-            public/images/about/foreach/honors/honor-a4-08-other-honor.jpg
-          */}
           <div
             className="about-foreach-honor-a4-row"
-            aria-label={getLocalizedText(
-              {
-                "zh-CN": "A4比例荣誉证书展示",
-                en: "A4 ratio honor certificate display",
-                es: "Visualización de certificados en formato A4",
-                fr: "Affichage des certificats au format A4",
-                ko: "A4 비율 인증서 표시",
-                ru: "Отображение сертификатов формата A4",
-              },
-              locale
-            )}
+            aria-label="Group standards and invention patents"
           >
-{honorA4Images.map((item, index) => (
-  <article
-    className="about-foreach-honor-a4-card"
-    key={item.src}
-  >
-    <div className="about-foreach-honor-a4-image-wrap">
-      <LocalImageWithFallback
-        src={item.src}
-        alt={`荣誉资质证书 ${index + 1}`}
-        className="about-foreach-honor-a4-image"
-      />
-    </div>
-  </article>
-))}
+            {honorBottomImages.map((item, index) => (
+              <article
+                className="about-foreach-honor-a4-card"
+                key={item.src}
+              >
+                <div className="about-foreach-honor-a4-image-wrap">
+                  <LocalImageWithFallback
+                    src={item.src}
+                    alt={getLocalizedText(item.title, locale) || `Honor certificate ${index + 1}`}
+                    className="about-foreach-honor-a4-image"
+                  />
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
     </main>
   );
-}  
+}

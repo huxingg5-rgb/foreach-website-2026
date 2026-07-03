@@ -1,4 +1,4 @@
-/* =========================================================
+﻿/* =========================================================
    product-selection.generated.ts
    产品中心｜选型页自动生成数据
 
@@ -23,12 +23,12 @@ export const selectionProducts: ProductSelectionProduct[] = [
     "productTypeId": "plunger-pump",
     "seriesId": "ea",
     "cardTitle": {
-      "zh": "常规柱塞泵",
-      "en": "Standard Plunger Pump"
+      "zh": "EA-100-PMMA",
+      "en": "EA-100-PMMA"
     },
     "cardSubtitle": {
-      "zh": "EA · 100μL · PMMA",
-      "en": "EA · 100μL · PMMA"
+      "zh": "1/4-28 UNF 液路接口\n满行程 CV < 0.5%\n单泵 / 泵阀一体 / 控制器可选",
+      "en": "1/4-28 UNF Fluidic Ports\nCV < 0.5% at Full Stroke\nStandalone / Valve / Controller Options"
     },
     "filters": {
       "filter01": "EA 常规柱塞泵",
@@ -50,12 +50,12 @@ export const selectionProducts: ProductSelectionProduct[] = [
     "productTypeId": "plunger-pump",
     "seriesId": "ea",
     "cardTitle": {
-      "zh": "常规柱塞泵",
-      "en": "Standard Plunger Pump"
+      "zh": "EA-100-PEEK",
+      "en": "EA-100-PEEK"
     },
     "cardSubtitle": {
-      "zh": "EA · 100μL · PEEK",
-      "en": "EA · 100μL · PEEK"
+      "zh": "1/4-28 UNF 液路接口\n满行程 CV < 0.5%\n单泵 / 泵阀一体 / 控制器可选",
+      "en": "1/4-28 UNF Fluidic Ports\nCV < 0.5% at Full Stroke\nStandalone / Valve / Controller Options"
     },
     "filters": {
       "filter01": "EA 常规柱塞泵",
@@ -77,12 +77,12 @@ export const selectionProducts: ProductSelectionProduct[] = [
     "productTypeId": "plunger-pump",
     "seriesId": "ea",
     "cardTitle": {
-      "zh": "常规柱塞泵",
-      "en": "Standard Plunger Pump"
+      "zh": "EA-250-PMMA",
+      "en": "EA-250-PMMA"
     },
     "cardSubtitle": {
-      "zh": "EA · 250μL · PMMA",
-      "en": "EA · 250μL · PMMA"
+      "zh": "1/4-28 UNF 液路接口\n满行程 CV < 0.5%\n单泵 / 泵阀一体 / 控制器可选",
+      "en": "1/4-28 UNF Fluidic Ports\nCV < 0.5% at Full Stroke\nStandalone / Valve / Controller Options"
     },
     "filters": {
       "filter01": "EA 常规柱塞泵",
@@ -104,12 +104,12 @@ export const selectionProducts: ProductSelectionProduct[] = [
     "productTypeId": "plunger-pump",
     "seriesId": "ea",
     "cardTitle": {
-      "zh": "常规柱塞泵",
-      "en": "Standard Plunger Pump"
+      "zh": "EA-250-PEEK",
+      "en": "EA-250-PEEK"
     },
     "cardSubtitle": {
-      "zh": "EA · 250μL · PEEK",
-      "en": "EA · 250μL · PEEK"
+      "zh": "1/4-28 UNF 液路接口\n满行程 CV < 0.5%\n单泵 / 泵阀一体 / 控制器可选",
+      "en": "1/4-28 UNF Fluidic Ports\nCV < 0.5% at Full Stroke\nStandalone / Valve / Controller Options"
     },
     "filters": {
       "filter01": "EA 常规柱塞泵",
@@ -131,12 +131,12 @@ export const selectionProducts: ProductSelectionProduct[] = [
     "productTypeId": "plunger-pump",
     "seriesId": "ea",
     "cardTitle": {
-      "zh": "常规柱塞泵",
-      "en": "Standard Plunger Pump"
+      "zh": "EA-500-PMMA",
+      "en": "EA-500-PMMA"
     },
     "cardSubtitle": {
-      "zh": "EA · 500μL · PMMA",
-      "en": "EA · 500μL · PMMA"
+      "zh": "1/4-28 UNF 液路接口\n满行程 CV < 0.5%\n单泵 / 泵阀一体 / 控制器可选",
+      "en": "1/4-28 UNF Fluidic Ports\nCV < 0.5% at Full Stroke\nStandalone / Valve / Controller Options"
     },
     "filters": {
       "filter01": "EA 常规柱塞泵",
@@ -158,12 +158,12 @@ export const selectionProducts: ProductSelectionProduct[] = [
     "productTypeId": "plunger-pump",
     "seriesId": "ea",
     "cardTitle": {
-      "zh": "常规柱塞泵",
-      "en": "Standard Plunger Pump"
+      "zh": "EA-500-PEEK",
+      "en": "EA-500-PEEK"
     },
     "cardSubtitle": {
-      "zh": "EA · 500μL · PEEK",
-      "en": "EA · 500μL · PEEK"
+      "zh": "1/4-28 UNF 液路接口\n满行程 CV < 0.5%\n单泵 / 泵阀一体 / 控制器可选",
+      "en": "1/4-28 UNF Fluidic Ports\nCV < 0.5% at Full Stroke\nStandalone / Valve / Controller Options"
     },
     "filters": {
       "filter01": "EA 常规柱塞泵",
@@ -185,12 +185,12 @@ export const selectionProducts: ProductSelectionProduct[] = [
     "productTypeId": "plunger-pump",
     "seriesId": "ea",
     "cardTitle": {
-      "zh": "常规柱塞泵",
-      "en": "Standard Plunger Pump"
+      "zh": "EA-1000-PMMA",
+      "en": "EA-1000-PMMA"
     },
     "cardSubtitle": {
-      "zh": "EA · 1000μL · PMMA",
-      "en": "EA · 1000μL · PMMA"
+      "zh": "1/4-28 UNF 液路接口\n满行程 CV < 0.5%\n单泵 / 泵阀一体 / 控制器可选",
+      "en": "1/4-28 UNF Fluidic Ports\nCV < 0.5% at Full Stroke\nStandalone / Valve / Controller Options"
     },
     "filters": {
       "filter01": "EA 常规柱塞泵",
@@ -212,12 +212,12 @@ export const selectionProducts: ProductSelectionProduct[] = [
     "productTypeId": "plunger-pump",
     "seriesId": "ea",
     "cardTitle": {
-      "zh": "常规柱塞泵",
-      "en": "Standard Plunger Pump"
+      "zh": "EA-1000-PEEK",
+      "en": "EA-1000-PEEK"
     },
     "cardSubtitle": {
-      "zh": "EA · 1000μL · PEEK",
-      "en": "EA · 1000μL · PEEK"
+      "zh": "1/4-28 UNF 液路接口\n满行程 CV < 0.5%\n单泵 / 泵阀一体 / 控制器可选",
+      "en": "1/4-28 UNF Fluidic Ports\nCV < 0.5% at Full Stroke\nStandalone / Valve / Controller Options"
     },
     "filters": {
       "filter01": "EA 常规柱塞泵",
@@ -239,12 +239,12 @@ export const selectionProducts: ProductSelectionProduct[] = [
     "productTypeId": "plunger-pump",
     "seriesId": "ea",
     "cardTitle": {
-      "zh": "常规柱塞泵",
-      "en": "Standard Plunger Pump"
+      "zh": "EA-2500-PMMA",
+      "en": "EA-2500-PMMA"
     },
     "cardSubtitle": {
-      "zh": "EA · 2500μL · PMMA",
-      "en": "EA · 2500μL · PMMA"
+      "zh": "1/4-28 UNF 液路接口\n满行程 CV < 0.5%\n单泵 / 泵阀一体 / 控制器可选",
+      "en": "1/4-28 UNF Fluidic Ports\nCV < 0.5% at Full Stroke\nStandalone / Valve / Controller Options"
     },
     "filters": {
       "filter01": "EA 常规柱塞泵",
@@ -266,12 +266,12 @@ export const selectionProducts: ProductSelectionProduct[] = [
     "productTypeId": "plunger-pump",
     "seriesId": "ea",
     "cardTitle": {
-      "zh": "常规柱塞泵",
-      "en": "Standard Plunger Pump"
+      "zh": "EA-2500-PEEK",
+      "en": "EA-2500-PEEK"
     },
     "cardSubtitle": {
-      "zh": "EA · 2500μL · PEEK",
-      "en": "EA · 2500μL · PEEK"
+      "zh": "1/4-28 UNF 液路接口\n满行程 CV < 0.5%\n单泵 / 泵阀一体 / 控制器可选",
+      "en": "1/4-28 UNF Fluidic Ports\nCV < 0.5% at Full Stroke\nStandalone / Valve / Controller Options"
     },
     "filters": {
       "filter01": "EA 常规柱塞泵",
@@ -293,12 +293,12 @@ export const selectionProducts: ProductSelectionProduct[] = [
     "productTypeId": "plunger-pump",
     "seriesId": "ea",
     "cardTitle": {
-      "zh": "常规柱塞泵",
-      "en": "Standard Plunger Pump"
+      "zh": "EA-5000-PMMA",
+      "en": "EA-5000-PMMA"
     },
     "cardSubtitle": {
-      "zh": "EA · 5000μL · PMMA",
-      "en": "EA · 5000μL · PMMA"
+      "zh": "1/4-28 UNF 液路接口\n满行程 CV < 0.5%\n单泵 / 泵阀一体 / 控制器可选",
+      "en": "1/4-28 UNF Fluidic Ports\nCV < 0.5% at Full Stroke\nStandalone / Valve / Controller Options"
     },
     "filters": {
       "filter01": "EA 常规柱塞泵",
@@ -320,12 +320,12 @@ export const selectionProducts: ProductSelectionProduct[] = [
     "productTypeId": "plunger-pump",
     "seriesId": "ea",
     "cardTitle": {
-      "zh": "常规柱塞泵",
-      "en": "Standard Plunger Pump"
+      "zh": "EA-5000-PEEK",
+      "en": "EA-5000-PEEK"
     },
     "cardSubtitle": {
-      "zh": "EA · 5000μL · PEEK",
-      "en": "EA · 5000μL · PEEK"
+      "zh": "1/4-28 UNF 液路接口\n满行程 CV < 0.5%\n单泵 / 泵阀一体 / 控制器可选",
+      "en": "1/4-28 UNF Fluidic Ports\nCV < 0.5% at Full Stroke\nStandalone / Valve / Controller Options"
     },
     "filters": {
       "filter01": "EA 常规柱塞泵",
@@ -347,12 +347,12 @@ export const selectionProducts: ProductSelectionProduct[] = [
     "productTypeId": "plunger-pump",
     "seriesId": "ea",
     "cardTitle": {
-      "zh": "常规柱塞泵",
-      "en": "Standard Plunger Pump"
+      "zh": "EA-10000-PMMA",
+      "en": "EA-10000-PMMA"
     },
     "cardSubtitle": {
-      "zh": "EA · 10000μL · PMMA",
-      "en": "EA · 10000μL · PMMA"
+      "zh": "1/4-28 UNF 液路接口\n满行程 CV < 0.5%\n单泵 / 泵阀一体 / 控制器可选",
+      "en": "1/4-28 UNF Fluidic Ports\nCV < 0.5% at Full Stroke\nStandalone / Valve / Controller Options"
     },
     "filters": {
       "filter01": "EA 常规柱塞泵",
@@ -374,12 +374,12 @@ export const selectionProducts: ProductSelectionProduct[] = [
     "productTypeId": "plunger-pump",
     "seriesId": "ea",
     "cardTitle": {
-      "zh": "常规柱塞泵",
-      "en": "Standard Plunger Pump"
+      "zh": "EA-10000-PEEK",
+      "en": "EA-10000-PEEK"
     },
     "cardSubtitle": {
-      "zh": "EA · 10000μL · PEEK",
-      "en": "EA · 10000μL · PEEK"
+      "zh": "1/4-28 UNF 液路接口\n满行程 CV < 0.5%\n单泵 / 泵阀一体 / 控制器可选",
+      "en": "1/4-28 UNF Fluidic Ports\nCV < 0.5% at Full Stroke\nStandalone / Valve / Controller Options"
     },
     "filters": {
       "filter01": "EA 常规柱塞泵",
@@ -393,6 +393,303 @@ export const selectionProducts: ProductSelectionProduct[] = [
     "searchKeywords": {
       "zh": "EA 常规柱塞泵 10000μL PEEK 柱塞泵 plunger pump",
       "en": "EA standard plunger pump 10000μL PEEK"
+    }
+  },
+  {
+    "productId": "pump-sm-50ul-pmma",
+    "categoryId": "pumps",
+    "productTypeId": "plunger-pump",
+    "seriesId": "sm",
+    "cardTitle": {
+      "zh": "SM-50-PMMA",
+      "en": "SM-50-PMMA"
+    },
+    "cardSubtitle": {
+      "zh": "SM 微型柱塞泵",
+      "en": "SM Miniature Plunger Pump"
+    },
+    "filters": {
+      "filter01": "SM 微型柱塞泵",
+      "filter02": "50μL",
+      "filter03": "PMMA"
+    },
+    "imageCard": "/images/products/pumps/plunger-pump/sm/pump-sm-50ul-pmma.webp",
+    "detailSlug": "sm-50-pmma",
+    "status": "active",
+    "sortOrder": 901,
+    "searchKeywords": {
+      "zh": "SM 微型柱塞泵 50μL PMMA 柱塞泵 plunger pump",
+      "en": "SM miniature plunger pump 50μL PMMA"
+    }
+  },
+  {
+    "productId": "pump-sm-100ul-pmma",
+    "categoryId": "pumps",
+    "productTypeId": "plunger-pump",
+    "seriesId": "sm",
+    "cardTitle": {
+      "zh": "SM-100-PMMA",
+      "en": "SM-100-PMMA"
+    },
+    "cardSubtitle": {
+      "zh": "SM 微型柱塞泵",
+      "en": "SM Miniature Plunger Pump"
+    },
+    "filters": {
+      "filter01": "SM 微型柱塞泵",
+      "filter02": "100μL",
+      "filter03": "PMMA"
+    },
+    "imageCard": "/images/products/pumps/plunger-pump/sm/pump-sm-100ul-pmma.webp",
+    "detailSlug": "sm-100-pmma",
+    "status": "active",
+    "sortOrder": 902,
+    "searchKeywords": {
+      "zh": "SM 微型柱塞泵 100μL PMMA 柱塞泵 plunger pump",
+      "en": "SM miniature plunger pump 100μL PMMA"
+    }
+  },
+  {
+    "productId": "pump-sm-100ul-peek",
+    "categoryId": "pumps",
+    "productTypeId": "plunger-pump",
+    "seriesId": "sm",
+    "cardTitle": {
+      "zh": "SM-100-PEEK",
+      "en": "SM-100-PEEK"
+    },
+    "cardSubtitle": {
+      "zh": "SM 微型柱塞泵",
+      "en": "SM Miniature Plunger Pump"
+    },
+    "filters": {
+      "filter01": "SM 微型柱塞泵",
+      "filter02": "100μL",
+      "filter03": "PEEK"
+    },
+    "imageCard": "/images/products/pumps/plunger-pump/sm/pump-sm-100ul-peek.webp",
+    "detailSlug": "sm-100-peek",
+    "status": "active",
+    "sortOrder": 903,
+    "searchKeywords": {
+      "zh": "SM 微型柱塞泵 100μL PEEK 柱塞泵 plunger pump",
+      "en": "SM miniature plunger pump 100μL PEEK"
+    }
+  },
+  {
+    "productId": "pump-sm-250ul-pmma",
+    "categoryId": "pumps",
+    "productTypeId": "plunger-pump",
+    "seriesId": "sm",
+    "cardTitle": {
+      "zh": "SM-250-PMMA",
+      "en": "SM-250-PMMA"
+    },
+    "cardSubtitle": {
+      "zh": "SM 微型柱塞泵",
+      "en": "SM Miniature Plunger Pump"
+    },
+    "filters": {
+      "filter01": "SM 微型柱塞泵",
+      "filter02": "250μL",
+      "filter03": "PMMA"
+    },
+    "imageCard": "/images/products/pumps/plunger-pump/sm/pump-sm-250ul-pmma.webp",
+    "detailSlug": "sm-250-pmma",
+    "status": "active",
+    "sortOrder": 904,
+    "searchKeywords": {
+      "zh": "SM 微型柱塞泵 250μL PMMA 柱塞泵 plunger pump",
+      "en": "SM miniature plunger pump 250μL PMMA"
+    }
+  },
+  {
+    "productId": "pump-sm-250ul-peek",
+    "categoryId": "pumps",
+    "productTypeId": "plunger-pump",
+    "seriesId": "sm",
+    "cardTitle": {
+      "zh": "SM-250-PEEK",
+      "en": "SM-250-PEEK"
+    },
+    "cardSubtitle": {
+      "zh": "SM 微型柱塞泵",
+      "en": "SM Miniature Plunger Pump"
+    },
+    "filters": {
+      "filter01": "SM 微型柱塞泵",
+      "filter02": "250μL",
+      "filter03": "PEEK"
+    },
+    "imageCard": "/images/products/pumps/plunger-pump/sm/pump-sm-250ul-peek.webp",
+    "detailSlug": "sm-250-peek",
+    "status": "active",
+    "sortOrder": 905,
+    "searchKeywords": {
+      "zh": "SM 微型柱塞泵 250μL PEEK 柱塞泵 plunger pump",
+      "en": "SM miniature plunger pump 250μL PEEK"
+    }
+  },
+  {
+    "productId": "pump-sm-500ul-pmma",
+    "categoryId": "pumps",
+    "productTypeId": "plunger-pump",
+    "seriesId": "sm",
+    "cardTitle": {
+      "zh": "SM-500-PMMA",
+      "en": "SM-500-PMMA"
+    },
+    "cardSubtitle": {
+      "zh": "SM 微型柱塞泵",
+      "en": "SM Miniature Plunger Pump"
+    },
+    "filters": {
+      "filter01": "SM 微型柱塞泵",
+      "filter02": "500μL",
+      "filter03": "PMMA"
+    },
+    "imageCard": "/images/products/pumps/plunger-pump/sm/pump-sm-500ul-pmma.webp",
+    "detailSlug": "sm-500-pmma",
+    "status": "active",
+    "sortOrder": 906,
+    "searchKeywords": {
+      "zh": "SM 微型柱塞泵 500μL PMMA 柱塞泵 plunger pump",
+      "en": "SM miniature plunger pump 500μL PMMA"
+    }
+  },
+  {
+    "productId": "pump-sm-1000ul-pmma",
+    "categoryId": "pumps",
+    "productTypeId": "plunger-pump",
+    "seriesId": "sm",
+    "cardTitle": {
+      "zh": "SM-1000-PMMA",
+      "en": "SM-1000-PMMA"
+    },
+    "cardSubtitle": {
+      "zh": "SM 微型柱塞泵",
+      "en": "SM Miniature Plunger Pump"
+    },
+    "filters": {
+      "filter01": "SM 微型柱塞泵",
+      "filter02": "1000μL",
+      "filter03": "PMMA"
+    },
+    "imageCard": "/images/products/pumps/plunger-pump/sm/pump-sm-1000ul-pmma.webp",
+    "detailSlug": "sm-1000-pmma",
+    "status": "active",
+    "sortOrder": 907,
+    "searchKeywords": {
+      "zh": "SM 微型柱塞泵 1000μL PMMA 柱塞泵 plunger pump",
+      "en": "SM miniature plunger pump 1000μL PMMA"
+    }
+  },
+  {
+    "productId": "pump-tm-50ul-pmma",
+    "categoryId": "pumps",
+    "productTypeId": "plunger-pump",
+    "seriesId": "tm",
+    "cardTitle": {
+      "zh": "TM-50-PMMA",
+      "en": "TM-50-PMMA"
+    },
+    "cardSubtitle": {
+      "zh": "TM 超微型柱塞泵",
+      "en": "TM Ultra-Compact Plunger Pump"
+    },
+    "filters": {
+      "filter01": "TM 超微型柱塞泵",
+      "filter02": "50μL",
+      "filter03": "PMMA"
+    },
+    "imageCard": "/images/products/pumps/plunger-pump/tm/pump-tm-50ul-pmma.webp",
+    "detailSlug": "tm-50-pmma",
+    "status": "active",
+    "sortOrder": 1001,
+    "searchKeywords": {
+      "zh": "TM 超微型柱塞泵 50μL PMMA 柱塞泵 plunger pump",
+      "en": "TM ultra-compact plunger pump 50μL PMMA"
+    }
+  },
+  {
+    "productId": "pump-tm-100ul-pmma",
+    "categoryId": "pumps",
+    "productTypeId": "plunger-pump",
+    "seriesId": "tm",
+    "cardTitle": {
+      "zh": "TM-100-PMMA",
+      "en": "TM-100-PMMA"
+    },
+    "cardSubtitle": {
+      "zh": "TM 超微型柱塞泵",
+      "en": "TM Ultra-Compact Plunger Pump"
+    },
+    "filters": {
+      "filter01": "TM 超微型柱塞泵",
+      "filter02": "100μL",
+      "filter03": "PMMA"
+    },
+    "imageCard": "/images/products/pumps/plunger-pump/tm/pump-tm-100ul-pmma.webp",
+    "detailSlug": "tm-100-pmma",
+    "status": "active",
+    "sortOrder": 1002,
+    "searchKeywords": {
+      "zh": "TM 超微型柱塞泵 100μL PMMA 柱塞泵 plunger pump",
+      "en": "TM ultra-compact plunger pump 100μL PMMA"
+    }
+  },
+  {
+    "productId": "pump-tm-250ul-pmma",
+    "categoryId": "pumps",
+    "productTypeId": "plunger-pump",
+    "seriesId": "tm",
+    "cardTitle": {
+      "zh": "TM-250-PMMA",
+      "en": "TM-250-PMMA"
+    },
+    "cardSubtitle": {
+      "zh": "TM 超微型柱塞泵",
+      "en": "TM Ultra-Compact Plunger Pump"
+    },
+    "filters": {
+      "filter01": "TM 超微型柱塞泵",
+      "filter02": "250μL",
+      "filter03": "PMMA"
+    },
+    "imageCard": "/images/products/pumps/plunger-pump/tm/pump-tm-250ul-pmma.webp",
+    "detailSlug": "tm-250-pmma",
+    "status": "active",
+    "sortOrder": 1003,
+    "searchKeywords": {
+      "zh": "TM 超微型柱塞泵 250μL PMMA 柱塞泵 plunger pump",
+      "en": "TM ultra-compact plunger pump 250μL PMMA"
+    }
+  },
+  {
+    "productId": "pump-tm-500ul-pmma",
+    "categoryId": "pumps",
+    "productTypeId": "plunger-pump",
+    "seriesId": "tm",
+    "cardTitle": {
+      "zh": "TM-500-PMMA",
+      "en": "TM-500-PMMA"
+    },
+    "cardSubtitle": {
+      "zh": "TM 超微型柱塞泵",
+      "en": "TM Ultra-Compact Plunger Pump"
+    },
+    "filters": {
+      "filter01": "TM 超微型柱塞泵",
+      "filter02": "500μL",
+      "filter03": "PMMA"
+    },
+    "imageCard": "/images/products/pumps/plunger-pump/tm/pump-tm-500ul-pmma.webp",
+    "detailSlug": "tm-500-pmma",
+    "status": "active",
+    "sortOrder": 1004,
+    "searchKeywords": {
+      "zh": "TM 超微型柱塞泵 500μL PMMA 柱塞泵 plunger pump",
+      "en": "TM ultra-compact plunger pump 500μL PMMA"
     }
   }
 ];
@@ -670,3 +967,5 @@ export const selectionTaxonomyItems: ProductSelectionTaxonomyItem[] = [
     "sortOrder": 60
   }
 ];
+
+

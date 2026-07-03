@@ -1,4 +1,4 @@
-/* ================================
+﻿/* ================================
    navigation.ts
    官网顶部导航数据配置文件
 
@@ -399,7 +399,7 @@ const productMegaDropdown: MegaDropdown = {
         "정량, 공급, 피펫팅 및 폐액 처리",
         "Дозирование, подача, пипетирование и обращение с отходами"
       ),
-      href: localizedPath("/products?category=pumps"),
+      href: localizedPath("/products/pumps"),
       images: [
         productImage(
           "/images/products/pumps/syringe-pump.jpg",
@@ -420,7 +420,7 @@ const productMegaDropdown: MegaDropdown = {
           "/images/products/pumps/piston-pump.jpg",
           t("柱塞泵", "Piston Pump", "Bomba de pistón", "Pompe à piston", "피스톤 펌프", "Поршневой насос"),
           t("稳定计量与重复性液体输送", "Stable metering and repeatable transfer", "Medición estable y transferencia repetible", "Dosage stable et transfert répétable", "안정적인 계량 및 반복 이송", "Стабильное дозирование и повторяемая передача жидкости"),
-          localizedPath("/products?category=pumps&productType=plunger-pump")
+          localizedPath("/products/pumps/plunger-pumps")
         ),
         productImage(
           "/images/products/pumps/rotary-pump.jpg",
@@ -2506,3 +2506,4 @@ export function getProductImageDisplayMeta(src: string, locale: string) {
       : "用于微流体液路系统的核心部件",
   };
 } 
+

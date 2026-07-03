@@ -218,7 +218,7 @@
 .productName {
   margin: 8px 0 0;
   color: #111111;
-  font-size: 23px;
+  font-size: 24px;
   line-height: 1.2;
   font-weight: 800;
   letter-spacing: -0.02em;
@@ -237,18 +237,10 @@
   margin-top: 28px;
 }
 
-.applicationTitle {
-  margin: 0;
-  color: #111111;
-  font-size: 18px;
-  line-height: 1.4;
-  font-weight: 900;
-}
-
 .applicationText {
   margin: 8px 0 0;
   color: #111111;
-  font-size: 18px;
+  font-size: 24px;
   line-height: 1.65;
   font-weight: 400;
 }
@@ -363,7 +355,7 @@
   border-radius: 0;
   background: #ffffff;
   color: var(--blue);
-  font-size: 18px;
+  font-size: 24px;
   line-height: 48px;
   font-weight: 500;
 }
@@ -466,7 +458,7 @@
   font-size: 17px;
   font-weight: 400;
   letter-spacing: 0.01em;
-  text-align: center;
+  text-align: left;
 }
 
 /* =========================================================
@@ -517,7 +509,7 @@
   }
 
   .pumpSvg {
-    width: 300px;
+    width: 360px;
   }
 
   .thumbRow {
@@ -529,7 +521,7 @@
   }
 
   .productName {
-    font-size: 21px;
+    font-size: 24px;
   }
 
   .productDesc,
@@ -1178,4 +1170,482 @@
     padding-top: 24px !important;
   }
 }
- 
+
+
+
+
+
+/* ===== FOREACH product detail tab final clean START ===== */
+
+/*
+  产品详情页资料 Tab 最终样式：
+  - 居中
+  - 字号接近“型号：EA-100-PMMA”
+  - 文字与下方横线拉开距离
+  - 不使用背景色
+*/
+
+.tabNav {
+  justify-content: center !important;
+  gap: 76px !important;
+  border-bottom: 1px solid #dbe3ee !important;
+  padding-bottom: 10px !important;
+  margin-bottom: 12px !important;
+}
+
+.tabNav .tabButton {
+  position: relative !important;
+  min-width: auto !important;
+  padding: 0 6px !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: #0b2f5b !important;
+  font-size: 24px !important;
+  font-weight: 500 !important;
+  line-height: 1.2 !important;
+  cursor: pointer !important;
+}
+
+.tabNav .tabButton:hover {
+  color: #00b894 !important;
+  background: transparent !important;
+}
+
+.tabNav .tabButton.isActive {
+  color: #00cfa5 !important;
+  font-weight: 600 !important;
+  background: transparent !important;
+}
+
+.tabNav .tabButton::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 50% !important;
+  right: auto !important;
+  bottom: -10px !important;
+  width: 0 !important;
+  height: 0 !important;
+  transform: translateX(-50%) !important;
+  background: transparent !important;
+  border-radius: 999px !important;
+}
+
+.tabNav .tabButton.isActive::after {
+  width: 46px !important;
+  height: 3px !important;
+  background: #00d6aa !important;
+}
+
+/* ===== FOREACH product detail tab final clean END ===== */
+
+
+/* ===== FOREACH final spec table layout START ===== */
+
+/*
+  产品详情页规格表最终样式：
+  - 表格宽度保持当前页面宽度
+  - 左列字段名固定 420px，让右侧参数值自然靠右
+  - 只保留横向分割线
+  - 鼠标经过行有浅色高亮
+  - 不使用外框和竖线
+*/
+
+.specPanelClean {
+  padding: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  background: #ffffff !important;
+}
+
+.specPanelClean .specTable {
+  display: block !important;
+  width: 100% !important;
+  border: 0 !important;
+  border-collapse: collapse !important;
+  table-layout: auto !important;
+  background: #ffffff !important;
+}
+
+.specPanelClean .specTable tbody {
+  display: block !important;
+  width: 100% !important;
+}
+
+.specPanelClean .specTable tr[data-product-spec-row="true"] {
+  display: grid !important;
+  grid-template-columns: 370px minmax(0, 1fr) !important;
+  width: 100% !important;
+  min-height: 56px !important;
+  border-bottom: 1px solid #dbe3ee !important;
+  transition: background-color 0.18s ease !important;
+}
+
+.specPanelClean .specTable tr[data-product-spec-row="true"]:first-child {
+  border-top: 1px solid #dbe3ee !important;
+}
+
+.specPanelClean .specTable th,
+.specPanelClean .specTable td {
+  display: flex !important;
+  align-items: center !important;
+  width: auto !important;
+  min-width: 0 !important;
+  height: auto !important;
+  margin: 0 !important;
+  border: 0 !important;
+  background: #ffffff !important;
+  color: #0b2f5b !important;
+  line-height: 1.45 !important;
+  text-align: left !important;
+  vertical-align: middle !important;
+  box-sizing: border-box !important;
+  cursor: default !important;
+}
+
+.specPanelClean .specTable th {
+  padding: 14px 32px 14px 148px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  justify-content: flex-start !important;
+  white-space: nowrap !important;
+}
+
+.specPanelClean .specTable td {
+  padding: 14px 32px 14px 148px !important;
+  font-size: 17px !important;
+  font-weight: 400 !important;
+  justify-content: flex-start !important;
+  white-space: normal !important;
+}
+
+.specPanelClean .specTable tr[data-product-spec-row="true"]:hover th,
+.specPanelClean .specTable tr[data-product-spec-row="true"]:hover td {
+  background-color: rgba(0, 214, 170, 0.055) !important;
+}
+
+@media (max-width: 768px) {
+  .specPanelClean .specTable tr[data-product-spec-row="true"] {
+    grid-template-columns: minmax(108px, 36%) minmax(0, 1fr) !important;
+    min-height: 42px !important;
+  }
+
+  .specPanelClean .specTable th,
+  .specPanelClean .specTable td {
+    padding: 9px 10px !important;
+    font-size: 14px !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+  }
+}
+
+/* ===== FOREACH final spec table layout END ===== */
+
+
+
+
+
+
+
+
+
+
+
+/* ===== FOREACH fix FAQ footer gap START ===== */
+
+/*
+  修复 FAQ 与页脚之间的间距：
+  - 间距保留在产品详情页白色区域内
+  - 不让空白落到 footer 灰色区域里
+*/
+
+.page {
+  padding-bottom: 56px !important;
+}
+
+.faqSection {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.detailSection {
+  margin-bottom: 0 !important;
+}
+
+.panelWrap {
+  margin-bottom: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding-bottom: 36px !important;
+  }
+}
+
+/* ===== FOREACH fix FAQ footer gap END ===== */
+
+
+/* ===== FOREACH product detail FAQ START ===== */
+
+/*
+  产品详情页 FAQ：
+  - 折叠展开式
+  - 左右留出内边距
+  - 展开 / 收起加入过渡动画
+  - 去掉默认黑色 focus 边框
+*/
+
+.faqSection {
+  margin-top: 48px;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.faqHeader {
+  margin-bottom: 18px;
+}
+
+.faqHeader h2 {
+  margin: 0;
+  color: #0b2f5b;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.faqHeader p {
+  display: none;
+}
+
+.faqList {
+  border-top: 1px solid #dbe3ee;
+}
+
+.faqItem {
+  border-bottom: 1px solid #dbe3ee;
+  background: #ffffff;
+}
+
+.faqQuestion {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 34px;
+  width: 100%;
+  padding: 22px 28px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #0b2f5b;
+  text-align: left;
+  cursor: pointer;
+  align-items: center;
+  gap: 24px;
+  transition:
+    background-color 0.18s ease,
+    color 0.18s ease;
+}
+
+.faqQuestion:hover {
+  background-color: rgba(0, 214, 170, 0.035);
+}
+
+.faqQuestion:focus {
+  outline: none;
+}
+
+.faqQuestion:focus-visible {
+  box-shadow: inset 0 0 0 1px rgba(0, 214, 170, 0.55);
+}
+
+.faqQuestionText {
+  color: #0b2f5b;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.faqToggle {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  color: #0b2f5b;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1;
+  align-items: center;
+  justify-content: center;
+  transition:
+    color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.faqItemOpen .faqToggle {
+  color: #00b894;
+  transform: rotate(180deg);
+}
+
+.faqAnswerWrap {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition:
+    max-height 0.28s ease,
+    opacity 0.22s ease,
+    transform 0.22s ease;
+}
+
+.faqItemOpen .faqAnswerWrap {
+  max-height: 220px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.faqAnswer {
+  margin: 0;
+  padding: 0 72px 24px 28px;
+  max-width: 1080px;
+  color: #32445d;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .faqSection {
+    margin-top: 36px;
+  }
+
+  .faqHeader h2 {
+    font-size: 24px;
+  }
+
+  .faqQuestion {
+    grid-template-columns: minmax(0, 1fr) 30px;
+    gap: 14px;
+    padding: 20px 16px;
+  }
+
+  .faqQuestionText {
+    font-size: 16px;
+  }
+
+  .faqToggle {
+    width: 28px;
+    height: 28px;
+    font-size: 22px;
+  }
+
+  .faqAnswer {
+    padding: 0 52px 20px 16px;
+    font-size: 14px;
+  }
+}
+
+/* ===== FOREACH product detail FAQ END ===== */
+
+
+/* ===== FOREACH product intro text spacing START ===== */
+
+/*
+  产品详情页顶部简介文字优化：
+  - 让产品简介更像核心说明，不像小备注
+  - 增加行高和上下间距
+  - 不影响标题、按钮、规格表
+*/
+
+.productDesc {
+  margin-top: 20px !important;
+  margin-bottom: 28px !important;
+  max-width: 960px !important;
+  color: #0b2f5b !important;
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  line-height: 1.75 !important;
+  letter-spacing: 0 !important;
+}
+
+.application {
+  margin-top: 4px !important;
+}
+
+.applicationText {
+  font-size: 18px !important;
+  line-height: 1.65 !important;
+}
+
+@media (max-width: 768px) {
+  .productDesc {
+    margin-top: 16px !important;
+    margin-bottom: 22px !important;
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+  }
+
+  .applicationText {
+    font-size: 16px !important;
+  }
+}
+
+/* ===== FOREACH product intro text spacing END ===== */
+
+/* === Product 3D Viewer Stage START === */
+.modelViewerStage {
+  position: relative;
+  width: 100%;
+  min-height: 560px;
+  overflow: hidden;
+  border: none;
+  border-radius: 0;
+  background: #ffffff;
+}
+
+.modelViewerStage::before {
+  content: none;
+}
+
+.modelViewerCanvasWrap {
+  position: relative;
+  width: 100%;
+  height: 560px;
+  background: #ffffff;
+}
+
+.modelViewerCanvas {
+  width: 100%;
+  height: 100%;
+  min-height: 560px;
+  background: #ffffff;
+  --poster-color: #ffffff;
+  outline: none;
+  border: none;
+}
+
+.modelViewerCanvas:focus {
+  outline: none;
+}
+
+.modelViewerEmpty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 420px;
+  color: #64748b;
+  font-size: 15px;
+  background: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .modelViewerStage {
+    min-height: 460px;
+  }
+
+  .modelViewerCanvasWrap {
+    height: 460px;
+  }
+
+  .modelViewerCanvas {
+    min-height: 460px;
+  }
+}
+/* === Product 3D Viewer Stage END === */

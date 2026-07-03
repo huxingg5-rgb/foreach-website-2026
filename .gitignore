@@ -68,3 +68,14 @@ make-*.js
 unify-*.js
 reuse-*.js
 # END FOREACH temporary backup files
+# Private 3D model assets
+private-assets/**/*.glb
+private-assets/**/*.step
+private-assets/**/*.stp
+private-assets/**/*.obj
+private-assets/**/*.fbx
+# Private product document assets
+private-assets/**/*.pdf
+# Private product assets
+private-assets/**/*.dwg
+private-assets/**/*.dxf

@@ -267,7 +267,7 @@ button {
   display: grid; /* 左侧分类 + 右侧内容预留 */
   grid-template-columns: 460px minmax(0, 1fr); /* 左侧分类栏加宽，贴近参考图比例 */
 
-  /* 
+  /*
      高度说明：
      1. 不再写死 min-height
      2. 下拉栏高度由左侧分类数量和右侧内容自然撑开
@@ -1709,7 +1709,7 @@ html[lang="ru"] .home-hero-btn:hover {
 .language-summary {
   min-height: 52px !important;
   padding: 0 22px !important;
-  
+
   /* 不要裁剪内部文字 */
   overflow: visible !important;
 
@@ -1728,7 +1728,7 @@ html[lang="ru"] .home-hero-btn:hover {
 
   /* 不要写死太小的高度 */
   height: auto !important;
-  
+
   /* 不要让文字容器裁剪 */
   overflow: visible !important;
 
@@ -1799,7 +1799,7 @@ html[lang="ru"] .home-hero-btn:hover {
   max-width: 710px;
   transform: translateY(-30px);
 }
- 
+
 .home-flow-title {
   margin: 0;
   color: #061a3a;
@@ -1816,7 +1816,7 @@ html[lang="ru"] .home-hero-btn:hover {
   font-size: 17px;
   line-height: 1.85;
 }
-  
+
 .home-flow-capability-row {
   display: flex;
   flex-wrap: wrap;
@@ -1824,7 +1824,7 @@ html[lang="ru"] .home-hero-btn:hover {
   margin-top: 60px;
   max-width: 560px;
 }
- 
+
 .home-flow-capability-row span {
   padding: 8px 16px;
   border-radius: 8px;
@@ -2893,7 +2893,7 @@ html[lang="ru"] .home-hero-btn:hover {
   }
 }
 
- 
+
  /* =========================================================
    首页第三屏 + 第四屏
    对应组件：components/home/HomeCompanyStrengthSection.tsx
@@ -2918,7 +2918,7 @@ html[lang="ru"] .home-hero-btn:hover {
   height: auto;
   padding: 88px 0 0;
   overflow: hidden;
-   
+
   background:
     linear-gradient(
       180deg,
@@ -2956,7 +2956,7 @@ html[lang="ru"] .home-hero-btn:hover {
 
   pointer-events: none;
 }
-   
+
 /* 第三屏主容器 */
 .home-company-about-shell {
   position: relative;
@@ -2987,7 +2987,7 @@ html[lang="ru"] .home-hero-btn:hover {
 .home-company-about-right {
   padding-top: 11;
 }
- 
+
 /* 左侧标题 */
 .home-company-about-title {
   margin: 0 0 28px;
@@ -2996,7 +2996,7 @@ html[lang="ru"] .home-hero-btn:hover {
   line-height: 1.16;
   letter-spacing: 0.02em;
   font-weight: 520;
-}  
+}
 
 .home-company-about-title span {
   display: block;
@@ -3124,7 +3124,7 @@ html[lang="ru"] .home-hero-btn:hover {
   */
   opacity: 0.08;
 
-  /* 
+  /*
     让图片颜色更柔和，避免影响文字阅读。
   */
   filter: saturate(0.8) contrast(0.9);
@@ -3192,7 +3192,7 @@ html[lang="ru"] .home-hero-btn:hover {
   padding-top: 0;
   padding-bottom: 150px;
 }
-        
+
 /*
   左右两栏不要再单独加 padding-top。
   之前多次追加里 .home-company-about-right 有 150px / 160px，
@@ -3200,11 +3200,11 @@ html[lang="ru"] .home-hero-btn:hover {
 */
 .home-company-about-left{
   padding-top: 0;
-} 
+}
 .home-company-about-right {
-  padding-top: 150; 
-}  
-           
+  padding-top: 150;
+}
+
 /* =========================================================
    4. 左侧标题
 ========================================================= */
@@ -3217,8 +3217,8 @@ html[lang="ru"] .home-hero-btn:hover {
   line-height: 1.16;
   letter-spacing: 0.02em;
   font-weight: 700;
-}   
-             
+}
+
 /*
   标题下方的小字：
   中文时显示“研发 制造 销售 售后”
@@ -3232,7 +3232,7 @@ html[lang="ru"] .home-hero-btn:hover {
   line-height: 1.4;
   letter-spacing: 0.18em;
   font-weight: 400;
-} 
+}
 
 
 /* =========================================================
@@ -3241,9 +3241,9 @@ html[lang="ru"] .home-hero-btn:hover {
 
 .home-company-video-wrap {
   margin-top: 54px;
-  position: relative; 
+  position: relative;
   width: 100%;
-         
+
   /*
     关键：
     宣传片区域整体固定为 16:9。
@@ -3266,8 +3266,8 @@ html[lang="ru"] .home-hero-btn:hover {
   */
   background: #061a3a;
 
-  
-} 
+
+}
 
 /*
   去掉以前的伪元素占位图形。
@@ -3491,7 +3491,7 @@ html[lang="ru"] .home-hero-btn:hover {
 
   margin-top: 104px;
   border: none;
-} 
+}
 .home-company-metric-card {
   position: relative;
   min-height: auto;
@@ -3597,10 +3597,10 @@ html[lang="ru"] .home-hero-btn:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
- 
+
   min-width: 150px;
   height: 48px;
-  padding: 0 34px; 
+  padding: 0 34px;
 
   border: 1px solid rgba(23, 51, 104, 0.22);
   border-radius: 8px;
@@ -3936,7 +3936,7 @@ html[lang="ru"] .home-hero-btn:hover {
   pointer-events: none;
 }
 
-  
+
 
 .home-advantages-title {
   margin: 0;
@@ -4079,7 +4079,7 @@ html[lang="ru"] .home-hero-btn:hover {
     opacity 0.46s ease 0.12s,
     transform 0.46s ease 0.12s;
 }
- 
+
 .home-panel-brief {
   margin: 24px 0 0;
   max-width: 390px;
@@ -4126,19 +4126,19 @@ html[lang="ru"] .home-hero-btn:hover {
    3. 不影响卡片本身的 hover 效果
 ========================================================= */
 
-.home-panel-arrow { 
+.home-panel-arrow {
   display: none;
 }
 
 .home-panel-content {
   padding-bottom: 248px;
-}      
-  
+}
+
 .home-advantage-panel:hover .home-panel-line {
   width: 120px;
   background: #ffffff;
 }
-  
+
 .home-advantage-panel:hover .home-panel-brief,
 .home-advantage-panel:hover .home-panel-detail,
 .home-advantage-panel:hover .home-panel-arrow {
@@ -4324,7 +4324,7 @@ html[lang="ru"] .home-hero-btn:hover {
     linear-gradient(135deg, #cbd9e4 0%, #8da6b9 38%, #eef5fa 100%);
   pointer-events: none;
 }
- 
+
   .home-company-about-shell {
     width: calc(100% - 32px);
     height: auto;
@@ -4514,7 +4514,7 @@ html[lang="ru"] .home-hero-btn:hover {
   }
 
   .home-panel-brief {
-    margin-top: 18px;   
+    margin-top: 18px;
     font-size: 14px;
     line-height: 1.68;
   }
@@ -4612,7 +4612,7 @@ html[lang="ru"] .home-hero-btn:hover {
   */
   opacity: 1;
   transition: opacity 0.32s ease;
- 
+
   /*
     遮罩不挡住鼠标事件。
   */
@@ -4625,7 +4625,7 @@ html[lang="ru"] .home-hero-btn:hover {
 */
 .home-advantage-panel:hover::before {
   opacity: 0.05;
-} 
+}
 
 /* 卡片文字放在图片和遮罩上方 */
 .home-panel-content {
@@ -4654,14 +4654,14 @@ html[lang="ru"] .home-hero-btn:hover {
   */
   font-size: clamp(36px, 2.8vw, 52px);
 
-  line-height: 1.12;  
+  line-height: 1.12;
   font-weight: 700;
   letter-spacing: 0.02em;
 }
 
 /* 手机端不要太大，避免换行太乱 */
 @media (max-width: 768px) {
-  .home-panel-title { 
+  .home-panel-title {
     font-size: 32px;
   }
 }
@@ -6098,7 +6098,7 @@ html[lang="ru"] .home-hero-btn:hover {
   text-align: center !important;
 
   transform: translateY(0) !important;
-  
+
   transition:
     color 0.36s cubic-bezier(0.22, 1, 0.36, 1),
     opacity 0.36s cubic-bezier(0.22, 1, 0.36, 1),
@@ -6120,7 +6120,7 @@ html[lang="ru"] .home-hero-btn:hover {
 .site-nav-mega-card-image-list {
   overflow: visible !important;
 }
-   
+
  /* =========================================================
    第四屏企业优势卡片：统一控制卡片内所有文字
    放在 app/globals.css 最底部
@@ -6198,7 +6198,7 @@ html[lang="ru"] .home-hero-btn:hover {
 
   line-height: 1.12 !important;
   font-weight: 700 !important;
-  letter-spacing: 0.02em !important;  
+  letter-spacing: 0.02em !important;
 
   transform-origin: left bottom !important;
 
@@ -6337,7 +6337,7 @@ html[lang="ru"] .home-hero-btn:hover {
   .home-advantage-panel .home-panel-brief {
     font-size: 16px !important;
   }
- 
+
   .home-advantage-panel:hover .home-panel-brief {
     font-size: 17px !important;
   }
@@ -6349,7 +6349,7 @@ html[lang="ru"] .home-hero-btn:hover {
   .home-advantage-panel:hover .home-panel-detail {
     font-size: 15px !important;
   }
-} 
+}
 
 /* =========================================================
    第四屏企业优势卡片：文字水平对齐修复
@@ -6409,7 +6409,7 @@ html[lang="ru"] .home-hero-btn:hover {
   display: block !important;
   width: 100% !important;
 
-  /* 
+  /*
     只允许从左侧开始放大。
     不要居中放大，否则看起来会和 01 不对齐。
   */
@@ -6467,8 +6467,8 @@ html[lang="ru"] .home-hero-btn:hover {
 .home-advantage-panel .home-panel-detail {
   text-align: left !important;
   margin-left: 0 !important;
-  padding-left: 0 !important; 
-} 
+  padding-left: 0 !important;
+}
 /* =========================================================
    第四屏企业优势卡片：小字延迟出现
    放在 app/globals.css 最底部
@@ -6530,7 +6530,7 @@ html[lang="ru"] .home-hero-btn:hover {
   transition-delay: 0.25s, 0.25s, 0.25s, 0s !important;
 }
 
-/* 鼠标滑到当前卡片：详细说明再晚一点出现 */ 
+/* 鼠标滑到当前卡片：详细说明再晚一点出现 */
 .home-advantage-panel:hover .home-panel-detail {
   opacity: 1 !important;
   max-height: 180px !important;
@@ -6543,7 +6543,7 @@ html[lang="ru"] .home-hero-btn:hover {
     详细说明比简短说明更晚一点
   */
   transition-delay: 0.22s, 0.22s, 0.22s, 0s !important;
-}      
+}
 /* =========================================================
    第四屏企业优势卡片：隐藏 01 / 02 / 03 / 04 / 05 编号
    放在 app/globals.css 最底部
@@ -6556,7 +6556,7 @@ html[lang="ru"] .home-hero-btn:hover {
 
 .home-advantage-panel .home-panel-index {
   display: none !important;
-} 
+}
 
 /* =========================================================
    第四屏企业优势卡片：手机端直接显示文字
@@ -6717,7 +6717,7 @@ html[lang="ru"] .home-hero-btn:hover {
   .home-advantage-panel:hover::before {
     opacity: 0.78 !important;
   }
-} 
+}
 
 /* =========================================================
    手机端语言按钮尺寸修复
@@ -6786,7 +6786,7 @@ html[lang="ru"] .home-hero-btn:hover {
   .language-details-item {
     padding: 10px 10px !important;
     font-size: 13px !important;
-  } 
+  }
 
   .mobile-menu-btn {
     width: 38px !important;
@@ -7755,7 +7755,7 @@ html[lang="ru"] .home-hero-btn:hover {
 }
 
 .site-nav-product-desc {
-  display: block; 
+  display: block;
   color: rgba(23, 51, 104, 0.62);
   font-size: 12px;
   line-height: 1.45;
@@ -8060,7 +8060,7 @@ html[lang="ru"] .home-hero-btn:hover {
     padding: 0 12px 0 24px !important; /* 手机菜单二级项缩进 */
     font-size: 13px !important; /* 手机菜单二级项字号 */
   }
-} 
+}
 
 /* =========================================================
    1440 首页整体视觉密度优化层 v003
@@ -8805,7 +8805,7 @@ html[lang="ru"] .home-hero-btn:hover {
     padding: 12px 24px 14px !important;
   }
 
-  .site-footer__bottom-left p { 
+  .site-footer__bottom-left p {
     font-size: 11px !important;
   }
 }
@@ -8949,7 +8949,7 @@ html[lang="ru"] .home-hero-btn:hover {
   }
 
   .home-flow-process-card {
-    min-height: 86px !important; 
+    min-height: 86px !important;
     padding: 12px 14px !important;
     border-radius: 14px !important;
   }
@@ -9001,7 +9001,7 @@ html[lang="ru"] .home-hero-btn:hover {
     gap: 8px !important;
     margin-top: 22px !important;
   }
- 
+
   .home-flow-capability-row span {
     padding: 5px 8px !important;
     font-size: 10px !important;
@@ -9137,7 +9137,7 @@ html[lang="ru"] .home-hero-btn:hover {
   border-radius: 8px;
   background: rgba(23, 51, 104, 0.06);
   color: #173368;
-  font-size: 14px; 
+  font-size: 14px;
   font-weight: 700;
   transition:
     background 0.22s ease,
@@ -9160,7 +9160,7 @@ html[lang="ru"] .home-hero-btn:hover {
 /* 关于我们右侧不要强行撑高 */
 .site-nav-mega-about .site-nav-mega-main {
   min-height: 0;
-} 
+}
 
 /* ================================
    关于我们 / 企业文化页面
@@ -9197,8 +9197,8 @@ html[lang="ru"] .home-hero-btn:hover {
 
 .about-culture-container {
   width: min(1440px, calc(100% - 96px));
-  margin: 0 auto; 
-} 
+  margin: 0 auto;
+}
 
 /* 1440 以下屏幕，左右留白稍微收小 */
 @media (max-width: 1440px) {
@@ -9220,7 +9220,7 @@ html[lang="ru"] .home-hero-btn:hover {
 
 .about-culture-banner {
   position: relative;
-  height: 360px;
+  height: 520px;
   overflow: hidden;
   background:
     linear-gradient(90deg, rgba(23, 51, 104, 0.88), rgba(23, 51, 104, 0.3)),
@@ -9234,7 +9234,7 @@ html[lang="ru"] .home-hero-btn:hover {
   right: 13%;
   top: 70px;
   width: 430px;
-  height: 220px;
+  height: 260px;
   border: 1px solid rgba(255, 255, 255, 0.56);
   background:
     repeating-linear-gradient(
@@ -9372,7 +9372,7 @@ html[lang="ru"] .home-hero-btn:hover {
   padding-bottom: 186px;
   background: #ffffff;
 }
-  
+
 .about-culture-core-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -9388,7 +9388,7 @@ html[lang="ru"] .home-hero-btn:hover {
 
 .about-culture-core-item {
   min-height: 262px;
-  padding: 42px 28px 34px; 
+  padding: 42px 28px 34px;
 
   text-align: center;
 
@@ -9450,7 +9450,7 @@ html[lang="ru"] .home-hero-btn:hover {
   background: var(--culture-blue);
   transform: translateY(-4px);
   box-shadow: var(--culture-shadow-hover);
-} 
+}
 
 .about-culture-core-item:hover h3,
 .about-culture-core-item:hover p {
@@ -9630,7 +9630,7 @@ html[lang="ru"] .home-hero-btn:hover {
   min-height: 320px;
   overflow: hidden;
   background: #e6ebf3;
-} 
+}
 
 /* Next.js Image 最终会渲染成 img，这里统一控制铺满 */
 .about-culture-brand-image img {
@@ -9795,12 +9795,12 @@ html[lang="ru"] .home-hero-btn:hover {
   .about-culture-core-item:last-child {
     border-right: 0;
   }
- 
+
   .about-culture-brand-row,
   .about-culture-brand-row-reverse {
     grid-template-columns: 1fr;
   }
- 
+
   .about-culture-brand-row-reverse .about-culture-brand-image {
     order: 1;
   }
@@ -9816,7 +9816,7 @@ html[lang="ru"] .home-hero-btn:hover {
 
 @media (max-width: 760px) {
   .about-culture-banner {
-    height: 290px;
+    height: 520px;
   }
 
   .about-culture-banner-inner h1 {
@@ -9889,9 +9889,9 @@ html[lang="ru"] .home-hero-btn:hover {
   }
 
   .about-culture-project-image {
-    height: 220px;
+    height: 260px;
   }
-}  
+}
 
 /* ================================
    手机端 Top 栏下拉导航：全屏宽度 + Footer 同款折叠样式
@@ -9905,8 +9905,8 @@ html[lang="ru"] .home-hero-btn:hover {
 @media (max-width: 900px) {
   /* 手机端菜单按钮外层不要限制下拉菜单宽度 */
   .mobile-nav-switcher {
-    position: static !important; 
-  } 
+    position: static !important;
+  }
 
   /* 手机端下拉导航整体：强制全屏宽度 */
   .mobile-nav {
@@ -10030,7 +10030,7 @@ html[lang="ru"] .home-hero-btn:hover {
     background: #ffffff;
     font-size: 14px;
     font-weight: 400;
-    line-height: 1.5;  
+    line-height: 1.5;
     text-decoration: none;
   }
 
@@ -10056,7 +10056,7 @@ html[lang="ru"] .home-hero-btn:hover {
     background: rgba(6, 26, 58, 0.12);
     z-index: 998 !important;
   }
-}  
+}
 
 /* ================================
    修复：手机端下拉导航顶部与 Top 栏底部对齐
@@ -10070,7 +10070,7 @@ html[lang="ru"] .home-hero-btn:hover {
   :root {
     --mobile-header-height: 60px;
   }
-  
+
   .mobile-nav {
     top: var(--mobile-header-height) !important;
     max-height: calc(100dvh - var(--mobile-header-height)) !important;
@@ -10079,8 +10079,8 @@ html[lang="ru"] .home-hero-btn:hover {
   .mobile-nav-backdrop {
     top: var(--mobile-header-height) !important;
   }
-} 
- 
+}
+
 /* ================================
    手机端 Top 栏展开状态修复
    说明：
@@ -10116,19 +10116,19 @@ html[lang="ru"] .home-hero-btn:hover {
     color: #173368 !important;
     font-weight: 900 !important;
   }
-  
+
   .mobile-nav .mobile-nav-section[open] > .mobile-nav-summary .mobile-nav-summary-text {
     color: #173368 !important;
     font-weight: 900 !important;
   }
-    
+
   /* 展开状态：右侧变成 - */
   .mobile-nav .mobile-nav-section[open] > .mobile-nav-summary::after {
     content: "−" !important;
     color: #173368 !important;
     font-weight: 800 !important;
   }
-  
+
   /* 子菜单保持正常细字 */
   .mobile-nav .mobile-nav-submenu-link {
     color: rgba(23, 51, 104, 0.72) !important;
@@ -10140,7 +10140,7 @@ html[lang="ru"] .home-hero-btn:hover {
   .mobile-nav .mobile-nav-submenu-link:active {
     color: #173368 !important;
   }
-} 
+}
 
 /* ================================
    手机端 Top 栏菜单字体统一修复
@@ -10304,7 +10304,7 @@ html[lang="ru"] .home-hero-btn:hover {
   color: var(--culture-blue);
 
   display: flex;
-  align-items: center; 
+  align-items: center;
   justify-content: center;
 
   line-height: 1;
@@ -10326,7 +10326,7 @@ html[lang="ru"] .home-hero-btn:hover {
 .about-culture-core-icon svg {
   width: 64px;
   height: 64px;
-} 
+}
 
 /* =========================================================
    关于恒永达页面样式
@@ -10388,8 +10388,8 @@ html[lang="ru"] .home-hero-btn:hover {
 ================================ */
 .about-foreach-hero {
   position: relative;
+  height: 520px;
   min-height: 520px;
-  padding-top: var(--about-foreach-nav-height);
   display: flex;
   align-items: center;
   color: #ffffff;
@@ -10400,10 +10400,14 @@ html[lang="ru"] .home-hero-btn:hover {
 .about-foreach-hero-bg {
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
   z-index: 0;
+  object-fit: cover;
+  object-position: center center;
 }
 
-.about-foreach-hero-bg::before {
+.about-foreach-hero::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -10411,23 +10415,15 @@ html[lang="ru"] .home-hero-btn:hover {
   background:
     linear-gradient(
       90deg,
-      rgba(7, 26, 58, 0.94),
-      rgba(23, 51, 104, 0.76),
-      rgba(7, 26, 58, 0.42)
+      rgba(7, 20, 45, 0.92) 0%,
+      rgba(7, 20, 45, 0.7) 50%,
+      rgba(7, 20, 45, 0.42) 100%
     ),
-    linear-gradient(180deg, rgba(7, 26, 58, 0.12), rgba(7, 26, 58, 0.72));
-}
-
-.about-foreach-hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  opacity: 0.22;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
-  background-size: 72px 72px;
+    radial-gradient(
+      circle at 86% 18%,
+      rgba(9, 233, 180, 0.16),
+      transparent 34%
+    );
   pointer-events: none;
 }
 
@@ -10479,7 +10475,7 @@ html[lang="ru"] .home-hero-btn:hover {
     url("/images/home/company-bottom-bg2.webp") center center / cover no-repeat;
   overflow: hidden;
 }
-  
+
 /* 让里面的文字和视频浮在背景上方 */
 .about-foreach-intro-section .about-foreach-container {
   position: relative;
@@ -10659,9 +10655,9 @@ html[lang="ru"] .home-hero-btn:hover {
 .about-foreach-honor-summary {
   min-width: 0;
   padding-bottom: 64px;
-  margin-top: -200px;  
-}    
-  
+  margin-top: -200px;
+}
+
 .about-foreach-honor-summary h3 {
   color: #374151;
   font-size: clamp(28px, 2.4vw, 42px);
@@ -10679,7 +10675,7 @@ html[lang="ru"] .home-hero-btn:hover {
 }
 
 .about-foreach-honor-summary-stat {
-  padding-right: 28px; 
+  padding-right: 28px;
   border-right: none; /* 去掉中间竖线 */
 }
 
@@ -10758,7 +10754,7 @@ html[lang="ru"] .home-hero-btn:hover {
   box-shadow: 0 14px 36px rgba(7, 26, 58, 0.08);
 }
 
-  
+
 
 .about-foreach-honor-thumb::before {
   background: linear-gradient(90deg, rgba(7, 26, 58, 0.1), rgba(255, 255, 255, 0.12));
@@ -10818,6 +10814,7 @@ html[lang="ru"] .home-hero-btn:hover {
 
 @media (max-width: 860px) {
   .about-foreach-hero {
+    height: 520px;
     min-height: 520px;
   }
 
@@ -10890,7 +10887,7 @@ html[lang="ru"] .home-hero-btn:hover {
   .about-foreach-honor-summary h3 {
     text-align: center;
   }
-}  
+}
 
 /* =========================================================
    关于恒永达｜荣誉资质图片补充样式
@@ -10910,7 +10907,7 @@ html[lang="ru"] .home-hero-btn:hover {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* 如果之前还有主证书的伪元素灰色底，先隐藏，避免盖住真实图片 */
@@ -10923,7 +10920,7 @@ html[lang="ru"] .home-hero-btn:hover {
   display: block;
   width: 100%;
   height: 120px;
-  object-fit: cover;
+  object-fit: contain;
   border: 5px solid #4a4f57;
   background: linear-gradient(135deg, #dfe3e8 0%, #c2c8d1 50%, #eef1f5 100%);
   box-shadow: 0 14px 36px rgba(7, 26, 58, 0.08);
@@ -10937,8 +10934,8 @@ html[lang="ru"] .home-hero-btn:hover {
   grid-template-columns: repeat(8, minmax(0, 1fr)); /* 5 张图平均铺满整行 */
   gap: 24px;
   width: 100%;
-  margin-top: 56px; 
-}    
+  margin-top: 56px;
+}
 .about-foreach-honor-a4-card {
   text-align: center;
 }
@@ -10967,18 +10964,18 @@ html[lang="ru"] .home-hero-btn:hover {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* A4 图片名称 */
 .about-foreach-honor-a4-card h4 {
   margin-top: 8px;
   color: #1d2430;
-  font-size: 15px;    
+  font-size: 15px;
   font-weight: 500;
   line-height: 1.5;
 }
-  
+
 /* ================================
    A4 区域响应式
 ================================ */
@@ -10999,7 +10996,7 @@ html[lang="ru"] .home-hero-btn:hover {
   .about-foreach-honor-a4-row {
     grid-template-columns: 1fr;
   }
-} 
+}
 
 /* =========================================================
    关于恒永达｜荣誉证书移动端适配修正版
@@ -11040,7 +11037,7 @@ html[lang="ru"] .home-hero-btn:hover {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* A4 图片标题 */
@@ -11079,7 +11076,7 @@ html[lang="ru"] .home-hero-btn:hover {
     margin-left: -16px;
     padding: 0 16px 12px;
     overflow-x: auto;
-    overflow-y: hidden; 
+    overflow-y: hidden;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
   }
@@ -11255,7 +11252,7 @@ html[lang="ru"] .home-hero-btn:hover {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   background: #071a3a;
 }
 
@@ -11420,7 +11417,7 @@ html[lang="ru"] .home-hero-btn:hover {
     width: 100% !important;
     height: auto !important;
     aspect-ratio: 16 / 9;
-    object-fit: cover;
+    object-fit: contain;
   }
 
   /* ================================
@@ -11434,9 +11431,9 @@ html[lang="ru"] .home-hero-btn:hover {
     width: 100% !important;
     max-width: 100% !important;
     margin-left: 0 !important;
-    padding: 0 !important; 
+    padding: 0 !important;
     overflow: visible !important;
-  }  
+  }
 
   .about-foreach-honor-a4-card {
     min-width: 0;
@@ -11454,7 +11451,7 @@ html[lang="ru"] .home-hero-btn:hover {
     font-weight: 600;
   }
 }
- 
+
 /* =========================================================
    关于恒永达｜荣誉资质品牌色修正
    作用：
@@ -11470,20 +11467,20 @@ html[lang="ru"] .home-hero-btn:hover {
 }
 
 /* 左侧说明标题：拥有多项企业资质与技术荣誉 */
-.about-foreach-honor-summary h3 { 
-  font-size: 38px ; 
+.about-foreach-honor-summary h3 {
+  font-size: 38px ;
   color: #173368;
   font-weight: 600;
-}       
-  
+}
+
 /* 荣誉区数字：10 / 10 / 96 */
 .about-foreach-honor-summary-number {
   color: #173368;
 }
 
 /* 荣誉区数字后面的 + */
-.about-foreach-honor-summary-plus { 
-  color: #173368; 
+.about-foreach-honor-summary-plus {
+  color: #173368;
 }
 
 /* 荣誉区数字下面的小文字 */
@@ -11495,6 +11492,280 @@ html[lang="ru"] .home-hero-btn:hover {
 .about-foreach-honor-a4-card h4 {
   color: #173368;
 }
+
+
+/* ABOUT_FOREACH_HONOR_REFERENCE_LAYOUT_START */
+.about-foreach-honor-section {
+  padding: 92px 0 96px;
+  background: #ffffff;
+}
+
+.about-foreach-honor-title {
+  margin-bottom: 82px;
+  text-align: center;
+}
+
+.about-foreach-honor-title h2 {
+  color: #173368;
+  font-size: clamp(40px, 3.6vw, 58px);
+  line-height: 1.1;
+  font-weight: 850;
+  letter-spacing: 0;
+}
+
+.about-foreach-honor-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.28fr) minmax(0, 0.72fr);
+  gap: clamp(44px, 5vw, 84px);
+  align-items: center;
+}
+
+.about-foreach-honor-summary {
+  min-width: 0;
+  margin-top: 0;
+  padding: 28px 0 0;
+}
+
+.about-foreach-honor-summary h3 {
+  color: #173368;
+  font-size: clamp(30px, 2.6vw, 44px);
+  line-height: 1.18;
+  font-weight: 750;
+  letter-spacing: 0;
+}
+
+.about-foreach-honor-summary-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 2.5vw, 42px);
+  max-width: 560px;
+  margin-top: clamp(42px, 5vw, 68px);
+}
+
+.about-foreach-honor-summary-stat {
+  min-width: 0;
+  padding-right: 0;
+  border-right: none;
+}
+
+.about-foreach-honor-summary-number {
+  color: #173368;
+  font-size: clamp(56px, 5.4vw, 86px);
+  font-weight: 850;
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+.about-foreach-honor-summary-plus {
+  color: #173368;
+  margin-left: 4px;
+  font-size: 0.34em;
+  font-weight: 850;
+}
+
+.about-foreach-honor-summary-label {
+  margin-top: 14px;
+  color: #364152;
+  font-size: 16px;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.about-foreach-honor-board {
+  min-width: 0;
+}
+
+.about-foreach-honor-top-row {
+  display: grid;
+  grid-template-columns: minmax(360px, 1.78fr) repeat(2, minmax(142px, 0.78fr));
+  gap: clamp(18px, 1.6vw, 28px);
+  align-items: stretch;
+}
+
+.about-foreach-honor-main-cert {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.43 / 1;
+  margin: 0;
+  border: 8px solid #454b55;
+  background: #ffffff;
+  box-shadow: 0 18px 42px rgba(7, 26, 58, 0.08);
+}
+
+.about-foreach-honor-main-cert::before {
+  display: none;
+}
+
+.about-foreach-honor-main-cert-image,
+.about-foreach-honor-iso-cert,
+.about-foreach-honor-middle-image,
+.about-foreach-honor-a4-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.about-foreach-honor-iso-cert {
+  min-width: 0;
+  background: #f5df53;
+  box-shadow: 0 12px 30px rgba(7, 26, 58, 0.06);
+}
+
+.about-foreach-honor-middle-row {
+  display: grid;
+  grid-template-columns: minmax(320px, 1.32fr) minmax(210px, 0.86fr) minmax(260px, 1fr);
+  gap: clamp(22px, 2vw, 32px);
+  align-items: stretch;
+  margin-top: clamp(40px, 4vw, 58px);
+}
+
+.about-foreach-honor-middle-image {
+  height: clamp(150px, 13vw, 230px);
+  background: #f7f8fb;
+  box-shadow: 0 12px 30px rgba(7, 26, 58, 0.06);
+}
+
+.about-foreach-honor-a4-row {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: clamp(14px, 1.35vw, 24px);
+  width: 100%;
+  margin-top: clamp(56px, 5vw, 78px);
+  align-items: start;
+}
+
+.about-foreach-honor-a4-card {
+  min-width: 0;
+  text-align: center;
+}
+
+.about-foreach-honor-a4-image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 210 / 297;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  box-shadow: 0 14px 32px rgba(7, 26, 58, 0.06);
+}
+
+.about-foreach-honor-a4-image-wrap::before {
+  display: none;
+}
+
+@media (max-width: 1280px) {
+  .about-foreach-honor-layout {
+    grid-template-columns: minmax(240px, 0.32fr) minmax(0, 0.68fr);
+    gap: 40px;
+  }
+
+  .about-foreach-honor-top-row {
+    grid-template-columns: minmax(300px, 1.7fr) repeat(2, minmax(120px, 0.72fr));
+  }
+
+  .about-foreach-honor-middle-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 980px) {
+  .about-foreach-honor-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .about-foreach-honor-summary {
+    padding-top: 0;
+    text-align: center;
+  }
+
+  .about-foreach-honor-summary-stats {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .about-foreach-honor-top-row {
+    grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 0.8fr));
+  }
+
+  .about-foreach-honor-middle-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .about-foreach-honor-a4-row {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .about-foreach-honor-section {
+    padding: 72px 0;
+  }
+
+  .about-foreach-honor-title {
+    margin-bottom: 46px;
+  }
+
+  .about-foreach-honor-layout {
+    gap: 36px !important;
+  }
+
+  .about-foreach-honor-summary-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 34px 0 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  .about-foreach-honor-summary-number {
+    font-size: 38px !important;
+  }
+
+  .about-foreach-honor-summary-label {
+    font-size: 12px !important;
+    white-space: normal !important;
+  }
+
+  .about-foreach-honor-top-row {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+  }
+
+  .about-foreach-honor-main-cert {
+    grid-column: 1 / -1;
+    border-width: 5px;
+  }
+
+  .about-foreach-honor-iso-cert {
+    aspect-ratio: 210 / 297;
+    height: auto !important;
+  }
+
+  .about-foreach-honor-middle-row {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+    margin-top: 22px;
+  }
+
+  .about-foreach-honor-middle-image {
+    height: auto !important;
+    aspect-ratio: 16 / 9;
+  }
+
+  .about-foreach-honor-a4-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 36px 0 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+}
+/* ABOUT_FOREACH_HONOR_REFERENCE_LAYOUT_END */
 
 /* =========================================================
    关于我们｜发展历程页面样式
@@ -11510,7 +11781,7 @@ html[lang="ru"] .home-hero-btn:hover {
 ========================================================= */
 
 .about-history-page {
-  background: #f3f3f3; 
+  background: #f3f3f3;
 
   /* 复用企业文化面包屑时需要的变量 */
   --culture-blue: #173368;
@@ -11525,16 +11796,16 @@ html[lang="ru"] .home-hero-btn:hover {
 }
 
 .about-history-page-title h1 {
-  color: #173368;  
+  color: #173368;
   font-size: 40px;
   line-height: 1.2;
   font-weight: 700;
   letter-spacing: 0.16em;
 }
-  
+
 .about-history-page-title h1 span {
-  margin-left: 14px; 
-  color: #173368; 
+  margin-left: 14px;
+  color: #173368;
 }
 
 .about-history-title-line {
@@ -11543,7 +11814,7 @@ html[lang="ru"] .home-hero-btn:hover {
   margin: 18px auto 0;
   background: #09e9b4;
 }
-  
+
 /* 时间轴外层 */
 .about-history-section {
   position: relative;
@@ -11873,7 +12144,7 @@ html[lang="ru"] .home-hero-btn:hover {
     font-size: 15px;
     line-height: 1.8;
   }
-}  
+}
 
 /* =========================================================
    关于我们｜发展历程小 Banner
@@ -11887,7 +12158,8 @@ html[lang="ru"] .home-hero-btn:hover {
 
 .about-history-inner-banner {
   position: relative;
-  min-height: 260px;      
+  height: 520px;
+  min-height: 520px;
   overflow: hidden;
   background:
     linear-gradient(
@@ -11916,9 +12188,9 @@ html[lang="ru"] .home-hero-btn:hover {
   position: relative;
   z-index: 2;
   width: min(1500px, calc(100% - 80px));
-  min-height:460px;          
-  margin: 0 auto;    
-  display: flex;    
+  min-height: 520px;
+  margin: 0 auto;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   color: #ffffff;
@@ -11944,29 +12216,30 @@ html[lang="ru"] .home-hero-btn:hover {
 
 .about-history-inner-banner p {
   max-width: none;
-  margin: 16px auto 0;  
-  color: rgba(255, 255, 255, 1);  
-  font-size: 37px;    
-  line-height: 1.8; 
-  text-align: center;    
-  letter-spacing: 0.22em; 
-} 
-   
+  margin: 16px auto 0;
+  color: rgba(255, 255, 255, 1);
+  font-size: 37px;
+  line-height: 1.8;
+  text-align: center;
+  letter-spacing: 0.22em;
+}
+
 /* 手机端适配 */
 @media (max-width: 860px) {
   .about-history-inner-banner {
-    min-height: 220px;
+    height: 520px;
+    min-height: 520px;
   }
 
   .about-history-inner-banner-content {
     width: calc(100% - 40px);
-    min-height: 220px;
+    min-height: 520px;
   }
 
   .about-history-inner-banner p {
     font-size: 15px;
   }
-} 
+}
 
 /* =========================================================
    关于我们｜发展历程底部纯图片 Banner
@@ -11986,15 +12259,15 @@ html[lang="ru"] .home-hero-btn:hover {
     var(--history-bottom-banner-image) center center / cover no-repeat,
     linear-gradient(135deg, #071b3a 0%, #173368 100%);
 }
-  
+
 /* 手机端适配 */
-@media (max-width: 860px) {  
+@media (max-width: 860px) {
   .about-history-bottom-banner {
     width: calc(100%);
-    height: 220px;
-    margin: 48px auto 0;  
+    height: 260px;
+    margin: 48px auto 0;
   }
-}  
+}
 
 /* =========================================================
    发展历程页面｜面包屑宽度修正
@@ -12014,7 +12287,7 @@ html[lang="ru"] .home-hero-btn:hover {
   .about-history-page .about-culture-breadcrumb-inner {
     width: calc(100% - 40px);
   }
-} 
+}
 
 /* =========================================================
    关于恒永达页面｜内容宽度统一
@@ -12098,7 +12371,7 @@ html[lang="ru"] .home-hero-btn:hover {
   .about-foreach-page .about-foreach-advantage-panel {
     width: calc(100% - var(--about-foreach-side-padding));
   }
-}  
+}
 /* =========================================================
    关于恒永达页面｜面包屑修正
    说明：
@@ -12147,7 +12420,7 @@ html[lang="ru"] .home-hero-btn:hover {
     overflow-x: auto;
     white-space: nowrap;
   }
-} 
+}
 
 /* =========================================================
    质量体系与合规认证页面
@@ -12171,8 +12444,8 @@ html[lang="ru"] .home-hero-btn:hover {
 .quality-policy-hero {
   position: relative;
   width: 100%;
-  height: 560px;
-  min-height: 560px;
+  height: 520px;
+  min-height: 520px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -12341,13 +12614,13 @@ html[lang="ru"] .home-hero-btn:hover {
   overflow: hidden;
 }
 
-.quality-path-bg-image { 
+.quality-path-bg-image {
   object-fit: cover;
   object-position: right center;
   opacity: 0.4;
   filter: saturate(0.82) contrast(0.96);
-}  
-  
+}
+
 .quality-path-bg::after {
   content: "";
   position: absolute;
@@ -12363,17 +12636,17 @@ html[lang="ru"] .home-hero-btn:hover {
       rgba(248, 251, 254, 0.88) 48%,
       rgba(245, 248, 252, 0.92) 100%
     );
-}    
-    
+}
+
 .quality-path-section {
-  position: relative; 
+  position: relative;
   width: 100%;
   padding: 118px 0 132px;
   overflow: hidden;
   color: #173368;
   background: #f5f8fc;
 }
- 
+
 .quality-path-inner {
   position: relative;
   z-index: 2;
@@ -12709,7 +12982,7 @@ html[lang="ru"] .home-hero-btn:hover {
 .quality-equipment-image-wrap {
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 340px;
   background: #ffffff;
   overflow: hidden;
 }
@@ -12835,7 +13108,7 @@ html[lang="ru"] .home-hero-btn:hover {
   opacity: 0.52;
 
   filter: saturate(0.84) contrast(0.96);
-}    
+}
 
 /* 背景图上的白色遮罩 */
 .quality-cert-bg::after {
@@ -12861,8 +13134,8 @@ html[lang="ru"] .home-hero-btn:hover {
   z-index: 2;
   width: min(1600px, calc(100% - 80px));
   margin: 0 auto;
-} 
- 
+}
+
 .quality-cert-inner {
   width: min(1600px, calc(100% - 80px));
   margin: 0 auto;
@@ -12987,8 +13260,8 @@ html[lang="ru"] .home-hero-btn:hover {
 
 @media (max-width: 768px) {
   .quality-policy-hero {
-    height: 560px;
-    min-height: 560px;
+    height: 520px;
+    min-height: 520px;
   }
 
   .quality-policy-hero-inner,
@@ -13199,7 +13472,8 @@ html[lang="ru"] .home-hero-btn:hover {
 ================================ */
 .rm-hero {
   position: relative;
-  min-height: 620px;
+  height: 520px;
+  min-height: 520px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -14019,8 +14293,8 @@ html[lang="ru"] .home-hero-btn:hover {
   .rm-why-card {
     min-height: auto;
   }
-} 
- 
+}
+
 /* ================================
    9. CTA
 ================================ */
@@ -14116,8 +14390,8 @@ html[lang="ru"] .home-hero-btn:hover {
   border-color: var(--rm-cyan);
   transform: translateY(-2px);
 
-}  
- 
+}
+
 /* ================================
    10. 平板适配
 ================================ */
@@ -14185,6 +14459,7 @@ html[lang="ru"] .home-hero-btn:hover {
   }
 
   .rm-hero {
+    height: 520px;
     min-height: 520px;
   }
 
@@ -14325,7 +14600,7 @@ html[lang="ru"] .home-hero-btn:hover {
   .rm-cta-button {
     width: 100%;
   }
-}  
+}
 
 /* ================================
    PC 顶部导航：简单下拉菜单
@@ -14349,9 +14624,9 @@ html[lang="ru"] .home-hero-btn:hover {
 
 .site-nav-simple-dropdown {
   position: absolute;
-  top: calc(100% + 30px); 
+  top: calc(100% + 30px);
   left: 50%;
-  z-index: 120; 
+  z-index: 120;
   width: 260px;
   padding: 8px 0 10px;
 
@@ -14364,12 +14639,12 @@ html[lang="ru"] .home-hero-btn:hover {
   box-shadow: 0 18px 48px rgba(10, 27, 58, 0.14);
   transform: translateX(-50%);
   overflow: hidden;
-} 
+}
 
 .site-nav-simple-dropdown-link {
   display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   width: 100%;
   min-height: 62px;
   padding: 0 28px;
@@ -14378,11 +14653,11 @@ html[lang="ru"] .home-hero-btn:hover {
   text-align: center;
   text-decoration: none;
   font-size: 18px;
-  font-weight: 700; 
+  font-weight: 700;
   line-height: 1.4;
   transition: all 0.2s ease;
-} 
- 
+}
+
 .site-nav-simple-dropdown-link:hover {
   background: #ffffff;
   color: #09e9b4;
@@ -14565,7 +14840,7 @@ html[lang="ru"] .home-hero-btn:hover {
   .site-search-mode-form {
     display: none;
   }
-} 
+}
 /* =========================================================
    Header 搜索按钮｜与语言栏视觉统一
    说明：
@@ -14620,7 +14895,7 @@ html[lang="ru"] .home-hero-btn:hover {
 
 .site-search-mode-input::placeholder {
   color: rgba(255, 255, 255, 0.68);
-} 
+}
 
 /* =========================================================
    Header 搜索按钮｜滚动后颜色切换
@@ -14674,7 +14949,7 @@ html[lang="ru"] .home-hero-btn:hover {
 /* 下滑后搜索框里的图标也改成深蓝 */
 .site-header-scrolled .site-search-mode-box .site-search-icon {
   color: #173368;
-} 
+}
 
 /* =========================================================
    Header 搜索按钮｜顶部 Hover 与 2K 对齐微调
@@ -14761,7 +15036,7 @@ html[lang="ru"] .home-hero-btn:hover {
 .site-header-scrolled .site-search-trigger:hover,
 .site-header:hover .site-search-trigger:hover {
   border-width: 2px;
-} 
+}
 
 /* =========================================================
    Header 搜索模式｜搜索框位置修正
@@ -14822,7 +15097,7 @@ html[lang="ru"] .home-hero-btn:hover {
   .site-search-mode-form {
     width: min(680px, calc(100% - 40px));
   }
-} 
+}
 
 /* =========================================================
    Header 搜索模式｜搜索框居中与响应式宽度最终修正
@@ -14892,7 +15167,7 @@ html[lang="ru"] .home-hero-btn:hover {
   .site-search-mode-form {
     width: min(620px, calc(100% - 32px));
   }
-} 
+}
 /* =========================================================
    Header 搜索模式｜输入框背景修正
    说明：
@@ -14935,7 +15210,7 @@ html[lang="ru"] .home-hero-btn:hover {
 /* 如果 Header 在顶部透明状态，也保持搜索框输入区域统一 */
 .site-header:not(.site-header-scrolled) .site-search-mode-input {
   background: transparent !important;
-} 
+}
 
 
 /* =========================================================
@@ -15003,7 +15278,7 @@ html[lang="ru"] .home-hero-btn:hover {
   font-weight: 500 !important;
   text-shadow: none !important;
   -webkit-text-stroke: 0 !important;
-} 
+}
 
  /* =========================================================
    Top 栏导航｜非中文 / 非韩文字距收紧
@@ -15024,7 +15299,7 @@ html[lang="ru"] .home-hero-btn:hover {
 }
 
 /* hover / 选中时保持一样，不要突然变开 */
-.site-header-locale-en .site-nav-link:hover, 
+.site-header-locale-en .site-nav-link:hover,
 .site-header-locale-en .site-nav-link-active,
 .site-header-locale-es .site-nav-link:hover,
 .site-header-locale-es .site-nav-link-active,
@@ -15034,7 +15309,7 @@ html[lang="ru"] .home-hero-btn:hover {
 .site-header-locale-ru .site-nav-link-active {
   letter-spacing: -0.01em !important;
   word-spacing: -0.08em !important;
-}   
+}
 
 /* 如果导航文字内部有 span，也继承字距 */
 .site-header-locale-en .site-nav-link span,
@@ -15043,9 +15318,9 @@ html[lang="ru"] .home-hero-btn:hover {
 .site-header-locale-ru .site-nav-link span {
   letter-spacing: inherit !important;
   word-spacing: inherit !important;
-}      
+}
 
- 
+
 
 /* ================================
    修复 simple 下拉栏文字过粗问题
@@ -15064,7 +15339,7 @@ html[lang="ru"] .home-hero-btn:hover {
 .site-nav-simple-dropdown-link:hover,
 .site-nav-simple-dropdown-link:focus-visible {
   font-weight: 400 !important;
-} 
+}
 
 /* ================================
    外语 simple 下拉栏宽度优化
@@ -15085,7 +15360,7 @@ html[lang="ru"] .home-hero-btn:hover {
 /* 俄语文字更长，单独再宽一点 */
 .site-header-locale-ru .site-nav-simple-dropdown {
   min-width: 350px;
-} 
+}
 
 /* 外语下拉栏文字左右留白稍微加大一点 */
 .site-header-locale-en .site-nav-simple-dropdown-link,
@@ -15094,7 +15369,7 @@ html[lang="ru"] .home-hero-btn:hover {
 .site-header-locale-ru .site-nav-simple-dropdown-link {
   padding-left: 38px;
   padding-right: 38px;
-} 
+}
 
 /* ================================
    simple 下拉栏入场动效
@@ -15172,7 +15447,7 @@ html[lang="ru"] .home-hero-btn:hover {
 .site-nav-simple-dropdown.site-nav-simple-dropdown-open
   .site-nav-simple-dropdown-link:nth-child(6) {
   animation-delay: 120ms;
-} 
+}
 
 /* =========================================================
    Header｜无 Banner 详情页白底状态

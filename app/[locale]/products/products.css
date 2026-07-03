@@ -1,14 +1,14 @@
 /* =========================================================
    products.css
-   恒永达官网｜产品中心选型页专用样式
+   鎭掓案杈惧畼缃戯綔浜у搧涓績閫夊瀷椤典笓鐢ㄦ牱寮?
 
-   文件路径：
+   鏂囦欢璺緞锛?
    app/products/products.css
 
-   说明：
-   1. 只服务 /products 和 /[locale]/products
-   2. 不放到 globals.css，避免污染其他页面
-   3. 卡片本体复用 ProductBasicCard，这里只做产品中心局部覆盖
+   璇存槑锛?
+   1. 鍙湇鍔?/products 鍜?/[locale]/products
+   2. 涓嶆斁鍒?globals.css锛岄伩鍏嶆薄鏌撳叾浠栭〉闈?
+   3. 鍗＄墖鏈綋澶嶇敤 ProductBasicCard锛岃繖閲屽彧鍋氫骇鍝佷腑蹇冨眬閮ㄨ鐩?
 ========================================================= */
 
 .product-selection-page {
@@ -60,7 +60,7 @@
   text-align: center;
 }
 
-/* 搜索栏：复用 ResourceSearchBar 结构，产品中心只覆盖 class */
+/* 鎼滅储鏍忥細澶嶇敤 ResourceSearchBar 缁撴瀯锛屼骇鍝佷腑蹇冨彧瑕嗙洊 class */
 .product-selection-search {
   margin-bottom: 28px;
   padding: 0;
@@ -150,7 +150,7 @@
   color: #09e9b4;
 }
 
-/* 顶部产品大类按钮 */
+/* 椤堕儴浜у搧澶х被鎸夐挳 */
 .product-category-tabs {
   display: flex;
   flex-wrap: wrap;
@@ -188,7 +188,7 @@
   align-items: flex-start;
 }
 
-/* 左侧筛选栏 */
+/* 宸︿晶绛涢€夋爮 */
 .product-selection-sidebar {
   position: sticky;
   top: 92px;
@@ -312,7 +312,7 @@
   font-size: 14px;
 }
 
-/* 右侧结果区 */
+/* 鍙充晶缁撴灉鍖?*/
 .product-selection-results {
   min-width: 0;
 }
@@ -369,7 +369,7 @@
   gap: 18px;
 }
 
-/* 公共 ProductBasicCard 在产品中心里的局部覆盖 */
+/* 鍏叡 ProductBasicCard 鍦ㄤ骇鍝佷腑蹇冮噷鐨勫眬閮ㄨ鐩?*/
 .product-selection-page .product-selection-card:hover {
   transform: translateY(-1px);
 }

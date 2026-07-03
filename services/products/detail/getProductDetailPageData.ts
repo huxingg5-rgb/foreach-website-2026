@@ -31,6 +31,8 @@ import {
 
 import { selectionProducts } from "@/data/products/selection/product-selection.generated";
 
+import { getProductDetailFaqZhBySeries } from "@/data/products/detail/product-detail-faq.zh";
+
 import type {
   ProductDetailCategory,
   ProductDetailPageData,
@@ -124,6 +126,9 @@ export function getProductDetailPageData({
      * FAQ 第一版只预留，不渲染。
      */
     faqKey: detailRecord.faqSeries || undefined,
+    faqs: getProductDetailFaqZhBySeries(
+      detailRecord.faqSeries,
+    ),
 
     /*
      * 用于标识当前规格系列。

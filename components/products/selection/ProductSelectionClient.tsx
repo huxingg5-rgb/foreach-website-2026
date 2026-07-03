@@ -1,4 +1,8 @@
-"use client";
+﻿"use client";
+
+import { useEffect, useMemo, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import ResourceSearchBar from "@/components/resources/ResourceSearchBar";
 
 /* =========================================================
    ProductSelectionClient.tsx
@@ -11,14 +15,21 @@
 ========================================================= */
 
 import SitePageShell from "@/components/layout/SitePageShell";
-import { useEffect, useMemo, useState } from "react";
-import { useSearchParams } from "next/navigation";
-import ResourceSearchBar from "@/components/resources/ResourceSearchBar";
+import {
+  getProductTypeFilterOptionsByCategory,
+  getProductTypeHrefByIds,
+  getSeriesFilterOptionsByProductType,
+  getSeriesHrefByFilterValue,
+  hasProductTypeRouteByIds,
+} from "@/data/products/selection/product-route-map";
+import { getProductTypeIntroByIds } from "@/data/products/selection/product-type-intro";
+import { getProductFilterOptions } from "@/data/products/selection/filter-rules/product-filter-rules.index";
 import {
   selectionFilterLabels,
   selectionProducts,
   selectionTaxonomyItems,
 } from "@/data/products/selection/product-selection.generated";
+import { plungerPumpDetails as plungerPumpDetails } from "@/data/products/detail/plunger-pump-detail.generated";
 
 import ProductCardGrid from "./ProductCardGrid";
 import ProductCategoryTabs from "./ProductCategoryTabs";
@@ -43,6 +54,9 @@ import type {
 type ProductSelectionClientProps = {
   locale?: SelectionLocale;
   pageData?: unknown;
+  initialCategoryId?: string;
+  initialProductTypeId?: string;
+  initialFilters?: Partial<Record<SelectionFilterKey, string[]>>;
 };
 
 type SelectedFilterMap = Partial<Record<SelectionFilterKey, Set<string>>>;
@@ -292,47 +306,49 @@ function getVisibleFilterLabels(productTypeId: string) {
 
 function getFilterOptions(
   products: ProductSelectionProduct[],
-  filterKey: SelectionFilterKey
+  filterKey: SelectionFilterKey,
+  selectedFilters: SelectedFilterMap,
+  productTypeId: string
 ) {
-  const optionMap = new Map<string, { value: string; label: string }>();
-
-  products.forEach((product) => {
-    const value = product.filters[filterKey];
-
-    if (!value) return;
-
-    if (!optionMap.has(value)) {
-      optionMap.set(value, {
-        value,
-        label: value,
-      });
-    }
+  return getProductFilterOptions({
+    productTypeId,
+    products,
+    filterKey,
+    selectedFilters,
   });
-
-  return Array.from(optionMap.values());
+}
+function getDefaultSelectedFilters(
+  _categoryId: string,
+  _productTypeId: string
+): SelectedFilterMap {
+  /*
+   * 说明：
+   * 1. 二级产品类型页只代表“柱塞泵”
+   * 2. 不应该默认选中 EA / SM / TM
+   * 3. 三级系列页会通过 initialFilters 单独选中对应系列
+   */
+  return {};
 }
 
-function getDefaultSelectedFilters(
+function getInitialSelectedFilters(
   categoryId: string,
-  productTypeId: string
+  productTypeId: string,
+  initialFilters?: ProductSelectionClientProps["initialFilters"]
 ): SelectedFilterMap {
-  if (!productTypeId) {
-    return {};
+  const selected = getDefaultSelectedFilters(categoryId, productTypeId);
+
+  if (!initialFilters) {
+    return selected;
   }
 
-  const products = getProductsByCategory(categoryId).filter((product) => {
-    return product.productTypeId === productTypeId;
-  });
+  FILTER_KEYS.forEach((filterKey) => {
+    const values = initialFilters[filterKey];
 
-  const selected: SelectedFilterMap = {};
-  const labels = getVisibleFilterLabels(productTypeId);
-
-  labels.forEach((label) => {
-    const options = getFilterOptions(products, label.filterKey);
-
-    if (label.inputType === "single" && options.length === 1) {
-      selected[label.filterKey] = new Set([options[0].value]);
+    if (!values || values.length === 0) {
+      return;
     }
+
+    selected[filterKey] = new Set(values.filter(Boolean));
   });
 
   return selected;
@@ -368,13 +384,148 @@ function getDefaultMobileOpenFilterGroups(productTypeId: string) {
   return openGroups;
 }
 
+function normalizeDetailPathPart(value: unknown) {
+  return String(value || "")
+    .trim()
+    .replace(/^\/+|\/+$/g, "")
+    .split("/")
+    .filter(Boolean)
+    .pop() || "";
+}
+
+function normalizeModelKey(value: unknown) {
+  return String(value || "")
+    .trim()
+    .toLowerCase()
+    .replace(/μ/g, "u")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function findPlungerPumpDetailSlug(product: ProductSelectionProduct) {
+  const candidates = [
+    product.cardTitle?.en,
+    product.cardTitle?.zh,
+    product.productId,
+    product.detailSlug,
+  ]
+    .map(normalizeModelKey)
+    .filter(Boolean);
+
+  const matchedDetail = (plungerPumpDetails as any[]).find((detail) => {
+    const detailCandidates = [
+      detail.model,
+      detail.productId,
+      detail.slug,
+      detail.detailSlug,
+    ]
+      .map(normalizeModelKey)
+      .filter(Boolean);
+
+    return detailCandidates.some((item) => candidates.includes(item));
+  });
+
+  return normalizeDetailPathPart(
+    matchedDetail?.slug ||
+      matchedDetail?.detailSlug ||
+      product.detailSlug
+  );
+}
+
+
+/* ===== FOREACH plunger pump model detail href helpers START ===== */
+
+function cleanPlungerHrefText(value: unknown) {
+  return String(value || "").trim();
+}
+
+function normalizePlungerPathPart(value: unknown) {
+  const parts = cleanPlungerHrefText(value).split("/").filter(Boolean);
+  return parts.length > 0 ? parts[parts.length - 1] : "";
+}
+
+function normalizePlungerModelSlug(value: unknown) {
+  return cleanPlungerHrefText(value)
+    .toLowerCase()
+    .replace(/μ/g, "u")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function getPlungerPumpModelSlugForDetailHref(product: ProductSelectionProduct) {
+  const existingSlug = normalizePlungerPathPart(product.detailSlug);
+
+  if (/^(ea|sm|tm)-\d+-(pmma|peek)$/i.test(existingSlug)) {
+    return existingSlug.toLowerCase();
+  }
+
+  const text = [
+    product.cardTitle?.en,
+    product.cardTitle?.zh,
+    product.productId,
+    product.detailSlug,
+    product.seriesId,
+    product.filters?.filter01,
+    product.filters?.filter02,
+    product.filters?.filter03,
+    product.searchKeywords?.en,
+    product.searchKeywords?.zh,
+  ]
+    .map(cleanPlungerHrefText)
+    .filter(Boolean)
+    .join(" ");
+
+  const directModel = text.match(/\b(EA|SM|TM)[\s_-]*(\d{2,5})(?:\s*(?:UL|U|μL|uL))?[\s_-]*(PMMA|PEEK)\b/i);
+
+  if (directModel) {
+    return [
+      directModel[1].toLowerCase(),
+      String(Number(directModel[2])),
+      directModel[3].toLowerCase(),
+    ].join("-");
+  }
+
+  const seriesMatch = text.match(/\b(EA|SM|TM)\b/i);
+  const capacityMatch = text.match(/(\d{2,5})\s*(?:μL|uL|UL|U)/i);
+  const materialMatch = text.match(/\b(PMMA|PEEK)\b/i);
+
+  if (seriesMatch && capacityMatch && materialMatch) {
+    return [
+      seriesMatch[1].toLowerCase(),
+      String(Number(capacityMatch[1])),
+      materialMatch[1].toLowerCase(),
+    ].join("-");
+  }
+
+  return normalizePlungerModelSlug(product.cardTitle?.en || product.cardTitle?.zh || product.productId || product.detailSlug);
+}
+
+/* ===== FOREACH plunger pump model detail href helpers END ===== */
+
+
 function makeDetailHref(product: ProductSelectionProduct) {
+  const isPlungerPump =
+    product.categoryId === "pumps" &&
+    ["plunger-pump", "plunger-pumps"].includes(product.productTypeId);
+
+  if (isPlungerPump) {
+    const slug = getPlungerPumpModelSlugForDetailHref(product);
+
+    return slug
+      ? `/products/pumps/plunger-pumps/${slug}`
+      : "/products/pumps/plunger-pumps";
+  }
+
   return `/products/${product.categoryId}/${product.detailSlug}`;
 }
 
 export default function ProductSelectionClient({
   locale = "zh",
+  initialCategoryId,
+  initialProductTypeId,
+  initialFilters,
 }: ProductSelectionClientProps) {
+  const router = useRouter();
   const searchParams = useSearchParams();
   const requestedCategoryId = searchParams.get("category");
   const requestedProductTypeId = searchParams.get("productType");
@@ -385,19 +536,29 @@ export default function ProductSelectionClient({
   const categoryItems = useMemo(() => getCategoryItems(locale), [locale]);
 
   const [activeCategoryId, setActiveCategoryId] = useState(() => {
-    return categoryItems[0]?.id || "pumps";
+    return initialCategoryId || categoryItems[0]?.id || "pumps";
   });
 
   const [activeProductTypeId, setActiveProductTypeId] = useState(() => {
-    return getFirstProductTypeId(categoryItems[0]?.id || "pumps");
+    const initialActiveCategoryId =
+      initialCategoryId || categoryItems[0]?.id || "pumps";
+
+    return initialProductTypeId || getFirstProductTypeId(initialActiveCategoryId);
   });
 
   const [selectedFilters, setSelectedFilters] = useState<SelectedFilterMap>(
-    () =>
-      getDefaultSelectedFilters(
-        categoryItems[0]?.id || "pumps",
-        getFirstProductTypeId(categoryItems[0]?.id || "pumps")
-      )
+    () => {
+      const initialActiveCategoryId =
+        initialCategoryId || categoryItems[0]?.id || "pumps";
+      const initialActiveProductTypeId =
+        initialProductTypeId || getFirstProductTypeId(initialActiveCategoryId);
+
+      return getInitialSelectedFilters(
+        initialActiveCategoryId,
+        initialActiveProductTypeId,
+        initialFilters
+      );
+    }
   );
 
   const [selectedList, setSelectedList] = useState<Set<string>>(() => new Set());
@@ -405,7 +566,14 @@ export default function ProductSelectionClient({
   const [mobileCategoryOpen, setMobileCategoryOpen] = useState(false);
   const [mobileOpenFilterGroups, setMobileOpenFilterGroups] = useState<
     Record<string, boolean>
-  >(() => getDefaultMobileOpenFilterGroups(getFirstProductTypeId("pumps")));
+  >(() => {
+    const initialActiveCategoryId =
+      initialCategoryId || categoryItems[0]?.id || "pumps";
+    const initialActiveProductTypeId =
+      initialProductTypeId || getFirstProductTypeId(initialActiveCategoryId);
+
+    return getDefaultMobileOpenFilterGroups(initialActiveProductTypeId);
+  });
   const [currentProductPage, setCurrentProductPage] = useState(1);
   const [productsPageSize, setProductsPageSize] = useState(12);
 
@@ -424,6 +592,11 @@ export default function ProductSelectionClient({
   const productTypeOptions = useMemo(() => {
     const optionMap = new Map<string, { value: string; label: string }>();
 
+    /*
+     * 说明：
+     * 1. 先读取已有产品数据中的产品类型
+     * 2. 这部分用于已经有产品卡片的数据，例如 EA 柱塞泵
+     */
     categoryProducts.forEach((product) => {
       if (!product.productTypeId) return;
 
@@ -435,8 +608,23 @@ export default function ProductSelectionClient({
       }
     });
 
+    /*
+     * 说明：
+     * 1. 再从 product-route-map.ts 补充正式产品类型入口
+     * 2. 这样即使隔膜泵 / 移液泵 / 注射泵 / 无阀泵 / 高压泵暂时没有产品数据
+     * 3. 左侧“产品类型”里也会先显示对应入口
+     */
+    getProductTypeFilterOptionsByCategory(activeCategoryId).forEach((option) => {
+      if (!optionMap.has(option.value)) {
+        optionMap.set(option.value, {
+          value: option.value,
+          label: option.label,
+        });
+      }
+    });
+
     return Array.from(optionMap.values());
-  }, [categoryProducts, locale]);
+  }, [activeCategoryId, categoryProducts, locale]);
 
   const currentTypeProducts = useMemo(() => {
     if (!activeProductTypeId) {
@@ -465,7 +653,12 @@ export default function ProductSelectionClient({
     }
 
     activeFilterLabels.forEach((label: ProductSelectionFilterLabel) => {
-      const options = getFilterOptions(currentTypeProducts, label.filterKey);
+      const options = getFilterOptions(
+        currentTypeProducts,
+        label.filterKey,
+        selectedFilters,
+        activeProductTypeId
+      );
 
       if (options.length === 0) return;
 
@@ -478,7 +671,7 @@ export default function ProductSelectionClient({
     });
 
     return groups;
-  }, [activeFilterLabels, currentTypeProducts, locale, productTypeOptions]);
+  }, [activeCategoryId, activeFilterLabels, activeProductTypeId, currentTypeProducts, locale, productTypeOptions, selectedFilters]);
 
   const matchedProducts = useMemo(() => {
     const keyword = searchKeyword.trim().toLowerCase();
@@ -530,6 +723,17 @@ export default function ProductSelectionClient({
     });
   }, [activeProductTypeId, categoryProducts, searchKeyword, selectedFilters]);
 
+  /*
+   * 当前产品种类介绍数据
+   * 说明：
+   * 1. 根据当前产品大类和产品类型匹配介绍内容
+   * 2. 例如 pumps + plunger-pump 会显示柱塞泵系列介绍
+   * 3. 找不到时不显示横幅
+   */
+  const activeProductTypeIntro = getProductTypeIntroByIds(
+    activeCategoryId,
+    activeProductTypeId
+  );
   const selectedTagItems = useMemo<ProductSelectionSelectedTag[]>(() => {
     const tags: ProductSelectionSelectedTag[] = [];
 
@@ -589,34 +793,62 @@ export default function ProductSelectionClient({
 
   useEffect(() => {
     const fallbackCategoryId = categoryItems[0]?.id || "pumps";
+    const preferredCategoryId = requestedCategoryId || initialCategoryId;
 
     const nextCategoryId =
-      requestedCategoryId &&
-      categoryItems.some((category) => category.id === requestedCategoryId)
-        ? requestedCategoryId
+      preferredCategoryId &&
+      categoryItems.some((category) => category.id === preferredCategoryId)
+        ? preferredCategoryId
         : fallbackCategoryId;
 
     const categoryProductsForUrl = getProductsByCategory(nextCategoryId);
+    const preferredProductTypeId =
+      requestedProductTypeId || initialProductTypeId;
+
+    const productTypeExistsInProducts = Boolean(
+      preferredProductTypeId &&
+        categoryProductsForUrl.some(
+          (product) => product.productTypeId === preferredProductTypeId
+        )
+    );
+
+    const productTypeExistsInRouteMap = Boolean(
+      preferredProductTypeId &&
+        hasProductTypeRouteByIds(nextCategoryId, preferredProductTypeId)
+    );
 
     const nextProductTypeId =
-      requestedProductTypeId &&
-      categoryProductsForUrl.some(
-        (product) => product.productTypeId === requestedProductTypeId
-      )
-        ? requestedProductTypeId
+      preferredProductTypeId &&
+      (productTypeExistsInProducts || productTypeExistsInRouteMap)
+        ? preferredProductTypeId
         : getFirstProductTypeId(nextCategoryId);
+
+    const hasQuerySelection = Boolean(requestedCategoryId || requestedProductTypeId);
 
     setActiveCategoryId(nextCategoryId);
     setActiveProductTypeId(nextProductTypeId);
     setSelectedFilters(
-      getDefaultSelectedFilters(nextCategoryId, nextProductTypeId)
+      hasQuerySelection
+        ? getDefaultSelectedFilters(nextCategoryId, nextProductTypeId)
+        : getInitialSelectedFilters(
+            nextCategoryId,
+            nextProductTypeId,
+            initialFilters
+          )
     );
     setSearchKeyword("");
     setMobileCategoryOpen(false);
     setMobileOpenFilterGroups(
       getDefaultMobileOpenFilterGroups(nextProductTypeId)
     );
-  }, [categoryItems, requestedCategoryId, requestedProductTypeId]);
+  }, [
+    categoryItems,
+    requestedCategoryId,
+    requestedProductTypeId,
+    initialCategoryId,
+    initialProductTypeId,
+    initialFilters,
+  ]);
 
   useEffect(() => {
     setCurrentProductPage(1);
@@ -627,6 +859,66 @@ export default function ProductSelectionClient({
     searchKeyword,
     productsPageSize,
   ]);
+  /*
+   * 筛选项联动后的自动清理：
+   * 1. 当用户切换产品系列后，量程 / 材质可能不再属于当前系列
+   * 2. 这里根据当前可见 filterGroups 自动移除无效筛选值
+   * 3. 例如从 EA 切到 SM 后，自动清除 5000μL / 10000μL 等无效量程
+   */
+  useEffect(() => {
+    const allowedValuesByFilterKey = new Map<SelectionFilterKey, Set<string>>();
+
+    filterGroups.forEach((group) => {
+      if (!FILTER_KEYS.includes(group.key as SelectionFilterKey)) {
+        return;
+      }
+
+      const filterKey = group.key as SelectionFilterKey;
+      allowedValuesByFilterKey.set(
+        filterKey,
+        new Set(group.options.map((option) => option.value))
+      );
+    });
+
+    setSelectedFilters((current) => {
+      let changed = false;
+      const next: SelectedFilterMap = {
+        ...current,
+      };
+
+      FILTER_KEYS.forEach((filterKey) => {
+        const currentValues = next[filterKey];
+
+        if (!currentValues || currentValues.size === 0) {
+          return;
+        }
+
+        const allowedValues = allowedValuesByFilterKey.get(filterKey);
+
+        if (!allowedValues || allowedValues.size === 0) {
+          delete next[filterKey];
+          changed = true;
+          return;
+        }
+
+        const validValues = Array.from(currentValues).filter((value) =>
+          allowedValues.has(value)
+        );
+
+        if (validValues.length !== currentValues.size) {
+          if (validValues.length > 0) {
+            next[filterKey] = new Set(validValues);
+          } else {
+            delete next[filterKey];
+          }
+
+          changed = true;
+        }
+      });
+
+      return changed ? next : current;
+    });
+  }, [filterGroups]);
 
   function handleCategoryChange(categoryId: string) {
     const firstProductTypeId = getFirstProductTypeId(categoryId);
@@ -647,6 +939,22 @@ export default function ProductSelectionClient({
   }
 
   function handleProductTypeChange(productTypeId: string) {
+    /*
+     * 说明：
+     * 1. 点击产品类型时，优先跳转正式 URL
+     * 2. 柱塞泵会跳到 /products/pumps/plunger-pumps/
+     * 3. 没配置正式 URL 的类型，才走原来的前端筛选逻辑
+     */
+    const productTypeHref = getProductTypeHrefByIds(
+      activeCategoryId,
+      productTypeId
+    );
+
+    if (productTypeHref) {
+      router.push(productTypeHref);
+      return;
+    }
+
     setActiveProductTypeId(productTypeId);
     setSelectedFilters(getDefaultSelectedFilters(activeCategoryId, productTypeId));
     setMobileOpenFilterGroups(getDefaultMobileOpenFilterGroups(productTypeId));
@@ -656,74 +964,217 @@ export default function ProductSelectionClient({
     group: ProductSelectionFilterGroup,
     value: string
   ) {
+    /*
+     * 说明：
+     * 1. 产品类型筛选项，例如“柱塞泵”，仍然走 handleProductTypeChange
+     * 2. 产品系列筛选项，例如 EA / SM / TM，不再使用 router.push
+     * 3. 系列点击改为：
+     *    - 原地更新 selectedFilters
+     *    - 用 window.history.pushState 同步地址栏
+     *    - 不触发 Next.js 页面重新跳转，避免页面明显跳动
+     * 4. 普通筛选项，例如容量、材质，继续保留原地筛选逻辑
+     */
     if (group.key === "productType") {
       handleProductTypeChange(value);
       return;
     }
 
-    const filterKey = group.key;
+    if (!FILTER_KEYS.includes(group.key as SelectionFilterKey)) {
+      return;
+    }
 
+    const filterKey = group.key as SelectionFilterKey;
+
+    /*
+     * 说明：
+     * 1. 先判断当前筛选项是否命中正式系列路由
+     * 2. EA / SM / TM 会命中 product-route-map.ts 里的三级 URL
+     * 3. 命中后不 router.push，而是原地切换状态并同步地址栏
+     */
+    const seriesHref = getSeriesHrefByFilterValue(
+      activeCategoryId,
+      activeProductTypeId,
+      group.key,
+      value
+    );
+
+    if (seriesHref) {
+      const isAlreadySelected = selectedFilters[filterKey]?.has(value) || false;
+      const productTypeHref = getProductTypeHrefByIds(
+        activeCategoryId,
+        activeProductTypeId
+      );
+
+      setSelectedFilters((current) => {
+        const next: SelectedFilterMap = {
+          ...current,
+        };
+
+        /*
+         * 说明：
+         * 系列筛选属于单选逻辑：
+         * - 选择 EA 时，不再同时保留 SM / TM
+         * - 选择 SM 时，不再同时保留 EA / TM
+         * - 再次点击已选中的系列，则取消选择
+         */
+        if (isAlreadySelected) {
+          delete next[filterKey];
+        } else {
+          next[filterKey] = new Set([value]);
+        }
+
+        return next;
+      });
+
+      /*
+       * 说明：
+       * 1. 选中系列时，同步到三级 URL
+       * 2. 取消系列时，回到二级产品类型 URL
+       * 3. 使用 pushState 不触发 Next 路由跳转，页面不会明显跳动
+       */
+      const nextHref = isAlreadySelected
+        ? productTypeHref
+        : seriesHref;
+
+      if (nextHref) {
+        const normalizedHref = nextHref.endsWith("/")
+          ? nextHref
+          : `${nextHref}/`;
+
+        window.history.pushState(null, "", normalizedHref);
+      }
+
+      return;
+    }
+
+    /*
+     * 说明：
+     * 普通筛选项仍然走前端筛选，不改 URL。
+     */
     setSelectedFilters((current) => {
       const next: SelectedFilterMap = {
         ...current,
       };
 
-      const currentValues = new Set(next[filterKey] || []);
+      const values = new Set(next[filterKey] || []);
+      const shouldSelect = !values.has(value);
 
       if (group.inputType === "single") {
-        next[filterKey] = new Set([value]);
-      } else if (currentValues.has(value)) {
-        currentValues.delete(value);
-        next[filterKey] = currentValues;
+        values.clear();
+      }
+
+      if (shouldSelect) {
+        values.add(value);
       } else {
-        currentValues.add(value);
-        next[filterKey] = currentValues;
+        values.delete(value);
+      }
+
+      if (values.size === 0) {
+        delete next[filterKey];
+      } else {
+        next[filterKey] = values;
       }
 
       return next;
     });
-
-    setMobileOpenFilterGroups((current) => ({
-      ...current,
-      [filterKey]: false,
-    }));
   }
-
   function isFilterOptionActive(
     group: ProductSelectionFilterGroup,
     value: string
   ) {
+    /*
+     * 说明：
+     * 1. 这个函数用于告诉筛选面板：当前选项是否处于选中状态
+     * 2. productType 是产品类型，例如“柱塞泵”
+     * 3. filter01 / filter02 / filter03 是普通筛选项，例如产品系列、量程、材质
+     * 4. 这里必须先判断 FILTER_KEYS，避免 TypeScript 认为 string 不能索引 selectedFilters
+     */
     if (group.key === "productType") {
       return activeProductTypeId === value;
     }
 
-    return Boolean(selectedFilters[group.key]?.has(value));
-  }
+    if (!FILTER_KEYS.includes(group.key as SelectionFilterKey)) {
+      return false;
+    }
 
+    const filterKey = group.key as SelectionFilterKey;
+
+    return selectedFilters[filterKey]?.has(value) || false;
+  }
   function removeSelectedTag(
-    key: ProductSelectionSelectedTag["key"],
+    key: string,
     value: string
   ) {
+    /*
+     * 说明：
+     * 1. 这个函数用于移除顶部“已选筛选标签”
+     * 2. productType 是产品类型，例如“柱塞泵”
+     * 3. filter01 是产品系列，例如 EA / SM / TM
+     * 4. 在三级系列页清除 EA / SM / TM 时，应回到二级柱塞泵页面
+     */
+
     if (key === "productType") {
       setActiveProductTypeId("");
       setSelectedFilters({});
       return;
     }
 
+    /*
+     * 说明：
+     * 1. 判断当前清除的标签是否命中正式系列路由
+     * 2. 例如 EA 常规柱塞泵命中：
+     *    /products/pumps/plunger-pumps/ea-standard-piston-pumps/
+     * 3. 清除后跳回产品类型页：
+     *    /products/pumps/plunger-pumps/
+     */
+    const seriesHref = getSeriesHrefByFilterValue(
+      activeCategoryId,
+      activeProductTypeId,
+      key,
+      value
+    );
+
+    if (seriesHref) {
+      const productTypeHref = getProductTypeHrefByIds(
+        activeCategoryId,
+        activeProductTypeId
+      );
+
+      if (productTypeHref) {
+        router.push(productTypeHref);
+        return;
+      }
+    }
+
+    /*
+     * 说明：
+     * selectedFilters 的 key 只能是 SelectionFilterKey。
+     * removeSelectedTag 传进来的 key 是 string，
+     * 所以这里必须先判断 key 是否属于 FILTER_KEYS，再转换类型。
+     */
+    if (!FILTER_KEYS.includes(key as SelectionFilterKey)) {
+      return;
+    }
+
+    const filterKey = key as SelectionFilterKey;
+
     setSelectedFilters((current) => {
-      const next: SelectedFilterMap = {
+      const next = {
         ...current,
       };
 
-      const values = new Set(next[key] || []);
+      const values = new Set(next[filterKey] || []);
       values.delete(value);
 
-      next[key] = values;
+      if (values.size === 0) {
+        delete next[filterKey];
+      } else {
+        next[filterKey] = values;
+      }
 
       return next;
     });
   }
-
   function resetCurrentFilters() {
     const firstProductTypeId = getFirstProductTypeId(activeCategoryId);
 
@@ -788,6 +1239,43 @@ export default function ProductSelectionClient({
           onCategoryChange={handleCategoryChange}
         />
 
+        {activeProductTypeIntro ? (
+          <section
+            className="product-type-intro-module"
+            aria-label={`${activeProductTypeIntro.title}产品种类说明`}
+          >
+            <div className="product-type-intro-image">
+              <img
+                src={activeProductTypeIntro.image.src}
+                alt={activeProductTypeIntro.image.alt}
+                loading="lazy"
+              />
+            </div>
+
+            <div className="product-type-intro-copy">
+              <h2>{activeProductTypeIntro.title}</h2>
+
+              {activeProductTypeIntro.paragraphs.map((paragraph) => {
+                const emphasisText = "详情页查看或提交选型需求确认";
+                const emphasisIndex = paragraph.indexOf(emphasisText);
+
+                if (emphasisIndex < 0) {
+                  return <p key={paragraph}>{paragraph}</p>;
+                }
+
+                return (
+                  <p key={paragraph}>
+                    {paragraph.slice(0, emphasisIndex)}
+                    <strong className="product-type-intro-emphasis">
+                      {emphasisText}
+                    </strong>
+                    {paragraph.slice(emphasisIndex + emphasisText.length)}
+                  </p>
+                );
+              })}
+            </div>
+          </section>
+        ) : null}
         <section className="selection-section">
           <div className="selection-layout">
             <ProductFilterPanel
@@ -798,9 +1286,6 @@ export default function ProductSelectionClient({
               isOptionActive={isFilterOptionActive}
               onFilterChange={handleFilterChange}
               emptyText={pageText.filterEmpty}
-              resetButtonText={pageText.resetFilters}
-              submitButtonText={pageText.submitRequirement}
-              onResetFilters={resetCurrentFilters}
             />
 
             <section className="product-area">

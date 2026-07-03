@@ -1,6 +1,7 @@
-"use client";
+﻿"use client";
 
 import type { ProductSelectionProductItem } from "./product-selection-ui.types";
+import { getProductCardSpecs } from "@/data/products/selection/card-copy/plunger-pump-card-copy";
 
 type ProductSelectionCardProps = {
   product: ProductSelectionProductItem;
@@ -25,6 +26,9 @@ export default function ProductSelectionCard({
   addedToListText,
   onToggleList,
 }: ProductSelectionCardProps) {
+
+  const cardSpecs = getProductCardSpecs(product);
+
   return (
     <article className="product-card" title={title}>
       <span className="selected-bar" />
@@ -33,14 +37,19 @@ export default function ProductSelectionCard({
         {product.imageCard ? (
           <img src={product.imageCard} alt={title} loading="lazy" />
         ) : (
-          <div className="product-image-placeholder">暂无图片</div>
+          <div className="product-image-placeholder">鏆傛棤鍥剧墖</div>
         )}
       </div>
 
       <div className="product-body">
         <h3 className="product-title">{title}</h3>
-
-        <div className="product-param-line">{subtitle}</div>
+        {cardSpecs.length > 0 ? (
+          <ul className="product-card-specs" aria-label={`${title} 核心参数`}>
+            {cardSpecs.map((spec) => (
+              <li key={spec.label}>{spec.label}</li>
+            ))}
+          </ul>
+        ) : null}
 
         <div className="product-actions">
           <a
@@ -64,3 +73,7 @@ export default function ProductSelectionCard({
     </article>
   );
 }
+
+
+
+

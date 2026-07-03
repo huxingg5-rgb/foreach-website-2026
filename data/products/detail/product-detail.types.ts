@@ -20,6 +20,11 @@ export type ProductDetailCategory =
   | "needles"
   | "controllers";
 
+export type ProductDetailFaqItem = {
+  question: string;
+  answer: string;
+};
+
 export type ProductSpecItem = {
   label: string;
   value: string;
@@ -49,6 +54,12 @@ export type ProductDetailZhRecord = {
    * FAQ 第一版只预留，不渲染。
    */
   faqKey?: string;
+
+  /**
+   * FAQ 按产品系列读取。
+   * 没有配置 FAQ 时不渲染。
+   */
+  faqs?: ProductDetailFaqItem[];
 
   /**
    * 用于关联对应产品系列的规格参数数据。
