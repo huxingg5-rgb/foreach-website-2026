@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -511,21 +511,9 @@ function makeDetailHref(product: ProductSelectionProduct) {
   if (isPlungerPump) {
     const slug = getPlungerPumpModelSlugForDetailHref(product);
 
-    if (!slug) {
-      return "/products/pumps/plunger-pumps";
-    }
-
-    const seriesSlug = slug.startsWith("ea-")
-      ? "ea-standard-piston-pumps"
-      : slug.startsWith("sm-")
-        ? "sm-miniature-piston-pumps"
-        : "";
-
-    if (seriesSlug) {
-      return `/products/pumps-db/plunger-pumps/${seriesSlug}/${slug}`;
-    }
-
-    return `/products/pumps/plunger-pumps/${slug}`;
+    return slug
+      ? `/products/pumps/plunger-pumps/${slug}`
+      : "/products/pumps/plunger-pumps";
   }
 
   return `/products/${product.categoryId}/${product.detailSlug}`;
