@@ -1,0 +1,61 @@
+{
+  "generatedAt": "2026-07-03T08:45:20.566Z",
+  "pumpSource": "F:\\WebsiteProjects\\foreach-website-2026\\data-source\\product-center\\pumps\\FOREACH_泵系列_产品数据源.xlsx",
+  "footnoteSource": "F:\\WebsiteProjects\\foreach-website-2026\\data-source\\global\\FOREACH_全站脚注库.xlsx",
+  "sheets": {
+    "rules": "01_泵系列页面规则",
+    "products": "02_泵产品索引",
+    "routes": "03_路由与页面映射",
+    "hero": "04_详情页首屏",
+    "seo": "05_SEO与HTML标记",
+    "sections": "06_页面模块与标题",
+    "cards": "07_选型卡片",
+    "body": "08_详情页正文",
+    "parameters": "09_详情页参数",
+    "images": "10_图片资源",
+    "resources": "11_资料资源",
+    "faq": "12_FAQ",
+    "selector": "13_选型入口划分",
+    "footnoteRefs": "14_脚注引用映射",
+    "footnotes": "01_脚注库"
+  },
+  "productCount": 3,
+  "cardCount": 3,
+  "routeCount": 3,
+  "warnings": [],
+  "products": [
+    {
+      "productId": "ea-100-pmma",
+      "slug": "ea-100-pmma",
+      "routeSlug": "ea-100-pmma",
+      "canonicalPath": "/products/pumps/plunger-pumps/ea-100-pmma",
+      "pumpTypeSlug": "plunger-pumps",
+      "h1Zh": "EA-100-PMMA 柱塞泵",
+      "h1En": "100 µL PMMA Plunger Pump for Precision Dispensing",
+      "detailMode": "custom_inquiry",
+      "showModel": false
+    },
+    {
+      "productId": "ea-250-pmma",
+      "slug": "ea-250-pmma",
+      "routeSlug": "ea-250-pmma",
+      "canonicalPath": "/products/pumps/plunger-pumps/ea-250-pmma",
+      "pumpTypeSlug": "plunger-pumps",
+      "h1Zh": "EA-250-PMMA 柱塞泵",
+      "h1En": "250 µL PMMA Plunger Pump for Precision Dispensing",
+      "detailMode": "custom_inquiry",
+      "showModel": false
+    },
+    {
+      "productId": "sm-100-pmma",
+      "slug": "sm-100-pmma",
+      "routeSlug": "sm-100-pmma",
+      "canonicalPath": "/products/pumps/plunger-pumps/sm-100-pmma",
+      "pumpTypeSlug": "plunger-pumps",
+      "h1Zh": "SM-100-PMMA 微型柱塞泵",
+      "h1En": "100 µL Miniature PMMA Plunger Pump for Compact Fluidic Systems",
+      "detailMode": "custom_inquiry",
+      "showModel": false
+    }
+  ]
+}

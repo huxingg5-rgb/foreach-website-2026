@@ -114,6 +114,20 @@ export default function ProductDetailClient({
     "--zoom-y": `${zoomPosition.y}%`,
   };
 
+  const runtimeDataForSectionTitle = data as any;
+  const sectionTitleMap =
+    runtimeDataForSectionTitle.sectionTitleMap &&
+    typeof runtimeDataForSectionTitle.sectionTitleMap === "object"
+      ? runtimeDataForSectionTitle.sectionTitleMap
+      : {};
+
+  function getDbSectionTitle(sectionKey: string, fallback: string) {
+    const value = sectionTitleMap[sectionKey];
+
+    return typeof value === "string" && value.trim()
+      ? value.trim()
+      : fallback;
+  }
   function handleMainImageMove(event: MouseEvent<HTMLDivElement>) {
     const rect = event.currentTarget.getBoundingClientRect();
 
@@ -449,7 +463,7 @@ export default function ProductDetailClient({
             </p>
 
             <div className={styles.application}>
-              <p className={styles.applicationTitle}>常见应用：</p>
+              <p className={styles.applicationTitle}>{getDbSectionTitle("applications", "常见应用：")}</p>
               <p className={styles.applicationText}>
                 {data.commonApplications.join("、")}
               </p>
@@ -627,7 +641,7 @@ export default function ProductDetailClient({
         {data.faqs && data.faqs.length > 0 ? (
           <section className={styles.faqSection}>
             <div className={styles.faqHeader}>
-              <h2>常见问题</h2>
+              <h2>{getDbSectionTitle("faq", "常见问题")}</h2>
             </div>
 
             <div className={styles.faqList}>
