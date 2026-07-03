@@ -511,9 +511,21 @@ function makeDetailHref(product: ProductSelectionProduct) {
   if (isPlungerPump) {
     const slug = getPlungerPumpModelSlugForDetailHref(product);
 
-    return slug
-      ? `/products/pumps/plunger-pumps/${slug}`
-      : "/products/pumps/plunger-pumps";
+    if (!slug) {
+      return "/products/pumps/plunger-pumps";
+    }
+
+    const seriesSlug = slug.startsWith("ea-")
+      ? "ea-standard-piston-pumps"
+      : slug.startsWith("sm-")
+        ? "sm-miniature-piston-pumps"
+        : "";
+
+    if (seriesSlug) {
+      return `/products/pumps-db/plunger-pumps/${seriesSlug}/${slug}`;
+    }
+
+    return `/products/pumps/plunger-pumps/${slug}`;
   }
 
   return `/products/${product.categoryId}/${product.detailSlug}`;
