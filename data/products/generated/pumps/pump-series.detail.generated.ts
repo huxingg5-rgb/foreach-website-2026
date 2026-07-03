@@ -254,11 +254,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "EA-100-PMMA 适合用在什么液路场景？",
-            "answer": "EA-100-PMMA 属于 EA 常规柱塞泵，适合用于自动化分析仪器、IVD 分析仪、实验室自动化设备和生命科学仪器中的精密液体吸排、分配和转移。该型号适用于 100 µL 级别的液体处理任务，最终选型需结合液体介质、分配体积、速度、寿命和集成方式确认。"
+            "answer": "EA-100-PMMA 属于 EA 常规柱塞泵，适合用于小体积试剂吸排、样本前处理、反应液定量加入和微量分配模块。该型号更适合 100 µL 级别的精密液体处理任务。PMMA 泵头适用于对材料兼容性和成本平衡有要求的常规液路。 最终选型需结合液体介质、目标分配体积、节拍和集成方式确认。"
           },
           {
-            "question": "EA-100-PMMA 是否可以直接按标准型号下单？",
-            "answer": "柱塞泵属于定制化产品。EA-100-PMMA 的泵头材料、容量范围、接口方式、阀体搭配、控制器和传感器配置都需要根据实际应用确认。页面型号用于选型沟通和报价识别，最终交付型号以工程确认结果为准。"
+            "question": "EA-100-PMMA 选型前需要确认哪些信息？",
+            "answer": "选型前需要确认目标分配体积、液体介质、泵头材料、接口方式、阀体搭配、控制器、传感器配置、速度节拍和寿命要求。EA-100-PMMA 页面型号用于初步沟通和报价识别，最终型号以工程确认结果为准。"
           },
           {
             "question": "EA-100-PMMA 的 PMMA 泵头应该如何判断是否适用？",
@@ -512,11 +512,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "What fluidic applications is EA-100-PMMA suitable for?",
-            "answer": "EA-100-PMMA is an EA standard plunger pump for precision aspiration, dispensing, and transfer in automated analytical instruments, IVD analyzers, laboratory automation systems, and life science instruments. It is suitable for 100 µL-level liquid handling tasks. Final selection should be confirmed based on liquid media, dispensing volume, speed, lifetime, and integration method."
+            "answer": "EA-100-PMMA is an EA standard plunger pump for small-volume reagent aspiration, sample preparation, reaction liquid addition, and micro-volume dispensing modules. It is suitable for 100 µL-level precision liquid handling tasks. The PMMA pump head is suitable for common fluidic systems that require a balance between material compatibility and cost. Final selection should be confirmed based on liquid media, target volume, cycle time, and integration method."
           },
           {
-            "question": "Can EA-100-PMMA be ordered directly as a standard model?",
-            "answer": "Plunger pumps are custom-engineered products. Pump head material, volume range, interface, valve configuration, controller, and sensor options for EA-100-PMMA should be confirmed according to the actual application. The page model is used for selection communication and quotation reference. The final delivered model should follow engineering confirmation."
+            "question": "What should be confirmed before selecting EA-100-PMMA?",
+            "answer": "Before selection, target dispensing volume, liquid media, pump head material, interface, valve configuration, controller, sensor options, cycle time, and lifetime requirements should be confirmed. The page model EA-100-PMMA is used for preliminary communication and quotation reference, while the final model should follow engineering confirmation."
           },
           {
             "question": "How should the suitability of the PMMA pump head on EA-100-PMMA be evaluated?",
@@ -811,11 +811,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "EA-250-PMMA 适合用在什么液路场景？",
-            "answer": "EA-250-PMMA 属于 EA 常规柱塞泵，适合用于自动化分析仪器、IVD 分析仪、实验室自动化设备和生命科学仪器中的精密液体吸排、分配和转移。该型号适用于 250 µL 级别的液体处理任务，最终选型需结合液体介质、分配体积、速度、寿命和集成方式确认。"
+            "answer": "EA-250-PMMA 属于 EA 常规柱塞泵，适合用于小体积试剂吸排、样本前处理、反应液定量加入和微量分配模块。该型号更适合 250 µL 级别的精密液体处理任务。PMMA 泵头适用于对材料兼容性和成本平衡有要求的常规液路。 最终选型需结合液体介质、目标分配体积、节拍和集成方式确认。"
           },
           {
-            "question": "EA-250-PMMA 是否可以直接按标准型号下单？",
-            "answer": "柱塞泵属于定制化产品。EA-250-PMMA 的泵头材料、容量范围、接口方式、阀体搭配、控制器和传感器配置都需要根据实际应用确认。页面型号用于选型沟通和报价识别，最终交付型号以工程确认结果为准。"
+            "question": "EA-250-PMMA 选型前需要确认哪些信息？",
+            "answer": "选型前需要确认目标分配体积、液体介质、泵头材料、接口方式、阀体搭配、控制器、传感器配置、速度节拍和寿命要求。EA-250-PMMA 页面型号用于初步沟通和报价识别，最终型号以工程确认结果为准。"
           },
           {
             "question": "EA-250-PMMA 的 PMMA 泵头应该如何判断是否适用？",
@@ -1053,11 +1053,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "What fluidic applications is EA-250-PMMA suitable for?",
-            "answer": "EA-250-PMMA is an EA standard plunger pump for precision aspiration, dispensing, and transfer in automated analytical instruments, IVD analyzers, laboratory automation systems, and life science instruments. It is suitable for 250 µL-level liquid handling tasks. Final selection should be confirmed based on liquid media, dispensing volume, speed, lifetime, and integration method."
+            "answer": "EA-250-PMMA is an EA standard plunger pump for small-volume reagent aspiration, sample preparation, reaction liquid addition, and micro-volume dispensing modules. It is suitable for 250 µL-level precision liquid handling tasks. The PMMA pump head is suitable for common fluidic systems that require a balance between material compatibility and cost. Final selection should be confirmed based on liquid media, target volume, cycle time, and integration method."
           },
           {
-            "question": "Can EA-250-PMMA be ordered directly as a standard model?",
-            "answer": "Plunger pumps are custom-engineered products. Pump head material, volume range, interface, valve configuration, controller, and sensor options for EA-250-PMMA should be confirmed according to the actual application. The page model is used for selection communication and quotation reference. The final delivered model should follow engineering confirmation."
+            "question": "What should be confirmed before selecting EA-250-PMMA?",
+            "answer": "Before selection, target dispensing volume, liquid media, pump head material, interface, valve configuration, controller, sensor options, cycle time, and lifetime requirements should be confirmed. The page model EA-250-PMMA is used for preliminary communication and quotation reference, while the final model should follow engineering confirmation."
           },
           {
             "question": "How should the suitability of the PMMA pump head on EA-250-PMMA be evaluated?",
@@ -1352,11 +1352,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "SM-100-PMMA 适合用在什么类型的设备中？",
-            "answer": "SM-100-PMMA 属于 SM 微型柱塞泵，适合用于空间受限的紧凑型 IVD 设备、小型液路模块、实验室自动化设备和生命科学仪器。该型号主要用于 100 µL 级别的微量液体吸排、分配和转移，最终配置需结合整机空间、液路路径和控制方式确认。"
+            "answer": "SM-100-PMMA 属于 SM 微型柱塞泵，适合用于空间受限的小型液路模块、紧凑型自动化设备、微量试剂分配单元和便携式检测设备。该型号主要用于 100 µL 级别的微量液体吸排、分配和转移。最终配置需结合安装空间、液路路径、阀体搭配和控制方式确认。"
           },
           {
-            "question": "SM-100-PMMA 是否可以直接按标准型号下单？",
-            "answer": "柱塞泵属于定制化产品。SM-100-PMMA 的容量、泵头材料、接口形式、阀体搭配、光耦类型和控制方式都需要根据实际应用确认。建议提交需求表单或联系我们进行方案评估后再确认最终型号。"
+            "question": "SM-100-PMMA 选型前需要确认哪些信息？",
+            "answer": "选型前需要确认目标分配体积、液体介质、泵头材料、接口形式、阀体搭配、光耦反馈、控制方式和安装空间。SM-100-PMMA 属于微型柱塞泵，页面型号用于初步沟通和报价识别，最终型号以工程确认结果为准。"
           },
           {
             "question": "SM 微型柱塞泵和 EA 柱塞泵的满量程步数是否一样？",
@@ -1594,11 +1594,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "What type of equipment is SM-100-PMMA suitable for?",
-            "answer": "SM-100-PMMA is an SM miniature plunger pump designed for compact IVD instruments, small fluidic modules, laboratory automation systems, and life science instruments. It is mainly used for 100 µL-level micro-volume aspiration, dispensing, and transfer. Final configuration should be confirmed according to instrument space, fluidic layout, and control method."
+            "answer": "SM-100-PMMA is an SM miniature plunger pump for space-limited fluidic modules, compact automation systems, micro-reagent dispensing units, and portable testing devices. It is mainly used for 100 µL-level micro-volume aspiration, dispensing, and transfer. Final configuration should be confirmed according to installation space, fluidic layout, valve configuration, and control method."
           },
           {
-            "question": "Can SM-100-PMMA be ordered directly as a standard model?",
-            "answer": "Plunger pumps are custom-engineered products. For SM-100-PMMA, volume, pump head material, interface, valve configuration, optical sensor type, and control method should be confirmed according to the actual application. We recommend submitting requirements or contacting us before confirming the final model."
+            "question": "What should be confirmed before selecting SM-100-PMMA?",
+            "answer": "Before selection, target dispensing volume, liquid media, pump head material, interface, valve configuration, optical feedback, control method, and installation space should be confirmed. SM-100-PMMA is a miniature plunger pump. The page model is used for preliminary communication and quotation reference, while the final model should follow engineering confirmation."
           },
           {
             "question": "Does the SM miniature plunger pump use the same full-stroke steps as the EA series?",
@@ -1893,11 +1893,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "EA-100-PEEK 适合用在什么液路场景？",
-            "answer": "EA-100-PEEK 属于 EA 常规柱塞泵，适合用于自动化分析仪器、IVD 分析仪、实验室自动化设备和生命科学仪器中的精密液体吸排、分配和转移。该型号适用于 100 µL 级别的液体处理任务，最终选型需结合液体介质、分配体积、速度、寿命和集成方式确认。"
+            "answer": "EA-100-PEEK 属于 EA 常规柱塞泵，适合用于小体积试剂吸排、样本前处理、反应液定量加入和微量分配模块。该型号更适合 100 µL 级别的精密液体处理任务。PEEK 泵头更适合对化学兼容性、低析出或避光性有要求的液路。 最终选型需结合液体介质、目标分配体积、节拍和集成方式确认。"
           },
           {
-            "question": "EA-100-PEEK 是否可以直接按标准型号下单？",
-            "answer": "柱塞泵属于定制化产品。EA-100-PEEK 的泵头材料、容量范围、接口方式、阀体搭配、控制器和传感器配置都需要根据实际应用确认。页面型号用于选型沟通和报价识别，最终交付型号以工程确认结果为准。"
+            "question": "EA-100-PEEK 选型前需要确认哪些信息？",
+            "answer": "选型前需要确认目标分配体积、液体介质、泵头材料、接口方式、阀体搭配、控制器、传感器配置、速度节拍和寿命要求。EA-100-PEEK 页面型号用于初步沟通和报价识别，最终型号以工程确认结果为准。"
           },
           {
             "question": "EA-100-PEEK 的 PEEK 泵头应该如何判断是否适用？",
@@ -2135,11 +2135,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "What fluidic applications is EA-100-PEEK suitable for?",
-            "answer": "EA-100-PEEK is an EA standard plunger pump for precision aspiration, dispensing, and transfer in automated analytical instruments, IVD analyzers, laboratory automation systems, and life science instruments. It is suitable for 100 µL-level liquid handling tasks. Final selection should be confirmed based on liquid media, dispensing volume, speed, lifetime, and integration method."
+            "answer": "EA-100-PEEK is an EA standard plunger pump for small-volume reagent aspiration, sample preparation, reaction liquid addition, and micro-volume dispensing modules. It is suitable for 100 µL-level precision liquid handling tasks. The PEEK pump head is suitable for fluidic systems requiring chemical compatibility, low extractables, or light protection. Final selection should be confirmed based on liquid media, target volume, cycle time, and integration method."
           },
           {
-            "question": "Can EA-100-PEEK be ordered directly as a standard model?",
-            "answer": "Plunger pumps are custom-engineered products. Pump head material, volume range, interface, valve configuration, controller, and sensor options for EA-100-PEEK should be confirmed according to the actual application. The page model is used for selection communication and quotation reference. The final delivered model should follow engineering confirmation."
+            "question": "What should be confirmed before selecting EA-100-PEEK?",
+            "answer": "Before selection, target dispensing volume, liquid media, pump head material, interface, valve configuration, controller, sensor options, cycle time, and lifetime requirements should be confirmed. The page model EA-100-PEEK is used for preliminary communication and quotation reference, while the final model should follow engineering confirmation."
           },
           {
             "question": "How should the suitability of the PEEK pump head on EA-100-PEEK be evaluated?",
@@ -2434,11 +2434,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "EA-250-PEEK 适合用在什么液路场景？",
-            "answer": "EA-250-PEEK 属于 EA 常规柱塞泵，适合用于自动化分析仪器、IVD 分析仪、实验室自动化设备和生命科学仪器中的精密液体吸排、分配和转移。该型号适用于 250 µL 级别的液体处理任务，最终选型需结合液体介质、分配体积、速度、寿命和集成方式确认。"
+            "answer": "EA-250-PEEK 属于 EA 常规柱塞泵，适合用于小体积试剂吸排、样本前处理、反应液定量加入和微量分配模块。该型号更适合 250 µL 级别的精密液体处理任务。PEEK 泵头更适合对化学兼容性、低析出或避光性有要求的液路。 最终选型需结合液体介质、目标分配体积、节拍和集成方式确认。"
           },
           {
-            "question": "EA-250-PEEK 是否可以直接按标准型号下单？",
-            "answer": "柱塞泵属于定制化产品。EA-250-PEEK 的泵头材料、容量范围、接口方式、阀体搭配、控制器和传感器配置都需要根据实际应用确认。页面型号用于选型沟通和报价识别，最终交付型号以工程确认结果为准。"
+            "question": "EA-250-PEEK 选型前需要确认哪些信息？",
+            "answer": "选型前需要确认目标分配体积、液体介质、泵头材料、接口方式、阀体搭配、控制器、传感器配置、速度节拍和寿命要求。EA-250-PEEK 页面型号用于初步沟通和报价识别，最终型号以工程确认结果为准。"
           },
           {
             "question": "EA-250-PEEK 的 PEEK 泵头应该如何判断是否适用？",
@@ -2676,11 +2676,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "What fluidic applications is EA-250-PEEK suitable for?",
-            "answer": "EA-250-PEEK is an EA standard plunger pump for precision aspiration, dispensing, and transfer in automated analytical instruments, IVD analyzers, laboratory automation systems, and life science instruments. It is suitable for 250 µL-level liquid handling tasks. Final selection should be confirmed based on liquid media, dispensing volume, speed, lifetime, and integration method."
+            "answer": "EA-250-PEEK is an EA standard plunger pump for small-volume reagent aspiration, sample preparation, reaction liquid addition, and micro-volume dispensing modules. It is suitable for 250 µL-level precision liquid handling tasks. The PEEK pump head is suitable for fluidic systems requiring chemical compatibility, low extractables, or light protection. Final selection should be confirmed based on liquid media, target volume, cycle time, and integration method."
           },
           {
-            "question": "Can EA-250-PEEK be ordered directly as a standard model?",
-            "answer": "Plunger pumps are custom-engineered products. Pump head material, volume range, interface, valve configuration, controller, and sensor options for EA-250-PEEK should be confirmed according to the actual application. The page model is used for selection communication and quotation reference. The final delivered model should follow engineering confirmation."
+            "question": "What should be confirmed before selecting EA-250-PEEK?",
+            "answer": "Before selection, target dispensing volume, liquid media, pump head material, interface, valve configuration, controller, sensor options, cycle time, and lifetime requirements should be confirmed. The page model EA-250-PEEK is used for preliminary communication and quotation reference, while the final model should follow engineering confirmation."
           },
           {
             "question": "How should the suitability of the PEEK pump head on EA-250-PEEK be evaluated?",
@@ -2975,11 +2975,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "EA-500-PEEK 适合用在什么液路场景？",
-            "answer": "EA-500-PEEK 属于 EA 常规柱塞泵，适合用于自动化分析仪器、IVD 分析仪、实验室自动化设备和生命科学仪器中的精密液体吸排、分配和转移。该型号适用于 500 µL 级别的液体处理任务，最终选型需结合液体介质、分配体积、速度、寿命和集成方式确认。"
+            "answer": "EA-500-PEEK 属于 EA 常规柱塞泵，适合用于常规试剂分配、缓冲液转移、稀释液加入和自动化液路中的定量吸排。该型号适合 500 µL 级别的中小体积液体处理任务。PEEK 泵头更适合对化学兼容性、低析出或避光性有要求的液路。 最终选型需结合液体介质、速度、寿命和阀路配置确认。"
           },
           {
-            "question": "EA-500-PEEK 是否可以直接按标准型号下单？",
-            "answer": "柱塞泵属于定制化产品。EA-500-PEEK 的泵头材料、容量范围、接口方式、阀体搭配、控制器和传感器配置都需要根据实际应用确认。页面型号用于选型沟通和报价识别，最终交付型号以工程确认结果为准。"
+            "question": "EA-500-PEEK 选型前需要确认哪些信息？",
+            "answer": "选型前需要确认目标分配体积、液体介质、泵头材料、接口方式、阀体搭配、控制器、传感器配置、速度节拍和寿命要求。EA-500-PEEK 页面型号用于初步沟通和报价识别，最终型号以工程确认结果为准。"
           },
           {
             "question": "EA-500-PEEK 的 PEEK 泵头应该如何判断是否适用？",
@@ -3217,11 +3217,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "What fluidic applications is EA-500-PEEK suitable for?",
-            "answer": "EA-500-PEEK is an EA standard plunger pump for precision aspiration, dispensing, and transfer in automated analytical instruments, IVD analyzers, laboratory automation systems, and life science instruments. It is suitable for 500 µL-level liquid handling tasks. Final selection should be confirmed based on liquid media, dispensing volume, speed, lifetime, and integration method."
+            "answer": "EA-500-PEEK is an EA standard plunger pump for reagent dispensing, buffer transfer, diluent addition, and quantitative aspiration or dispensing in automated fluidic systems. It is suitable for 500 µL-level small-to-medium volume liquid handling tasks. The PEEK pump head is suitable for fluidic systems requiring chemical compatibility, low extractables, or light protection. Final selection should be confirmed based on liquid media, speed, lifetime, and valve configuration."
           },
           {
-            "question": "Can EA-500-PEEK be ordered directly as a standard model?",
-            "answer": "Plunger pumps are custom-engineered products. Pump head material, volume range, interface, valve configuration, controller, and sensor options for EA-500-PEEK should be confirmed according to the actual application. The page model is used for selection communication and quotation reference. The final delivered model should follow engineering confirmation."
+            "question": "What should be confirmed before selecting EA-500-PEEK?",
+            "answer": "Before selection, target dispensing volume, liquid media, pump head material, interface, valve configuration, controller, sensor options, cycle time, and lifetime requirements should be confirmed. The page model EA-500-PEEK is used for preliminary communication and quotation reference, while the final model should follow engineering confirmation."
           },
           {
             "question": "How should the suitability of the PEEK pump head on EA-500-PEEK be evaluated?",
@@ -3516,11 +3516,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "EA-500-PMMA 适合用在什么液路场景？",
-            "answer": "EA-500-PMMA 属于 EA 常规柱塞泵，适合用于自动化分析仪器、IVD 分析仪、实验室自动化设备和生命科学仪器中的精密液体吸排、分配和转移。该型号适用于 500 µL 级别的液体处理任务，最终选型需结合液体介质、分配体积、速度、寿命和集成方式确认。"
+            "answer": "EA-500-PMMA 属于 EA 常规柱塞泵，适合用于常规试剂分配、缓冲液转移、稀释液加入和自动化液路中的定量吸排。该型号适合 500 µL 级别的中小体积液体处理任务。PMMA 泵头适用于对材料兼容性和成本平衡有要求的常规液路。 最终选型需结合液体介质、速度、寿命和阀路配置确认。"
           },
           {
-            "question": "EA-500-PMMA 是否可以直接按标准型号下单？",
-            "answer": "柱塞泵属于定制化产品。EA-500-PMMA 的泵头材料、容量范围、接口方式、阀体搭配、控制器和传感器配置都需要根据实际应用确认。页面型号用于选型沟通和报价识别，最终交付型号以工程确认结果为准。"
+            "question": "EA-500-PMMA 选型前需要确认哪些信息？",
+            "answer": "选型前需要确认目标分配体积、液体介质、泵头材料、接口方式、阀体搭配、控制器、传感器配置、速度节拍和寿命要求。EA-500-PMMA 页面型号用于初步沟通和报价识别，最终型号以工程确认结果为准。"
           },
           {
             "question": "EA-500-PMMA 的 PMMA 泵头应该如何判断是否适用？",
@@ -3758,11 +3758,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "What fluidic applications is EA-500-PMMA suitable for?",
-            "answer": "EA-500-PMMA is an EA standard plunger pump for precision aspiration, dispensing, and transfer in automated analytical instruments, IVD analyzers, laboratory automation systems, and life science instruments. It is suitable for 500 µL-level liquid handling tasks. Final selection should be confirmed based on liquid media, dispensing volume, speed, lifetime, and integration method."
+            "answer": "EA-500-PMMA is an EA standard plunger pump for reagent dispensing, buffer transfer, diluent addition, and quantitative aspiration or dispensing in automated fluidic systems. It is suitable for 500 µL-level small-to-medium volume liquid handling tasks. The PMMA pump head is suitable for common fluidic systems that require a balance between material compatibility and cost. Final selection should be confirmed based on liquid media, speed, lifetime, and valve configuration."
           },
           {
-            "question": "Can EA-500-PMMA be ordered directly as a standard model?",
-            "answer": "Plunger pumps are custom-engineered products. Pump head material, volume range, interface, valve configuration, controller, and sensor options for EA-500-PMMA should be confirmed according to the actual application. The page model is used for selection communication and quotation reference. The final delivered model should follow engineering confirmation."
+            "question": "What should be confirmed before selecting EA-500-PMMA?",
+            "answer": "Before selection, target dispensing volume, liquid media, pump head material, interface, valve configuration, controller, sensor options, cycle time, and lifetime requirements should be confirmed. The page model EA-500-PMMA is used for preliminary communication and quotation reference, while the final model should follow engineering confirmation."
           },
           {
             "question": "How should the suitability of the PMMA pump head on EA-500-PMMA be evaluated?",
@@ -4057,11 +4057,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "EA-1000-PEEK 适合用在什么液路场景？",
-            "answer": "EA-1000-PEEK 属于 EA 常规柱塞泵，适合用于自动化分析仪器、IVD 分析仪、实验室自动化设备和生命科学仪器中的精密液体吸排、分配和转移。该型号适用于 1000 µL 级别的液体处理任务，最终选型需结合液体介质、分配体积、速度、寿命和集成方式确认。"
+            "answer": "EA-1000-PEEK 属于 EA 常规柱塞泵，适合用于常规试剂分配、缓冲液转移、稀释液加入和自动化液路中的定量吸排。该型号适合 1000 µL 级别的中小体积液体处理任务。PEEK 泵头更适合对化学兼容性、低析出或避光性有要求的液路。 最终选型需结合液体介质、速度、寿命和阀路配置确认。"
           },
           {
-            "question": "EA-1000-PEEK 是否可以直接按标准型号下单？",
-            "answer": "柱塞泵属于定制化产品。EA-1000-PEEK 的泵头材料、容量范围、接口方式、阀体搭配、控制器和传感器配置都需要根据实际应用确认。页面型号用于选型沟通和报价识别，最终交付型号以工程确认结果为准。"
+            "question": "EA-1000-PEEK 选型前需要确认哪些信息？",
+            "answer": "选型前需要确认目标分配体积、液体介质、泵头材料、接口方式、阀体搭配、控制器、传感器配置、速度节拍和寿命要求。EA-1000-PEEK 页面型号用于初步沟通和报价识别，最终型号以工程确认结果为准。"
           },
           {
             "question": "EA-1000-PEEK 的 PEEK 泵头应该如何判断是否适用？",
@@ -4299,11 +4299,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "What fluidic applications is EA-1000-PEEK suitable for?",
-            "answer": "EA-1000-PEEK is an EA standard plunger pump for precision aspiration, dispensing, and transfer in automated analytical instruments, IVD analyzers, laboratory automation systems, and life science instruments. It is suitable for 1000 µL-level liquid handling tasks. Final selection should be confirmed based on liquid media, dispensing volume, speed, lifetime, and integration method."
+            "answer": "EA-1000-PEEK is an EA standard plunger pump for reagent dispensing, buffer transfer, diluent addition, and quantitative aspiration or dispensing in automated fluidic systems. It is suitable for 1000 µL-level small-to-medium volume liquid handling tasks. The PEEK pump head is suitable for fluidic systems requiring chemical compatibility, low extractables, or light protection. Final selection should be confirmed based on liquid media, speed, lifetime, and valve configuration."
           },
           {
-            "question": "Can EA-1000-PEEK be ordered directly as a standard model?",
-            "answer": "Plunger pumps are custom-engineered products. Pump head material, volume range, interface, valve configuration, controller, and sensor options for EA-1000-PEEK should be confirmed according to the actual application. The page model is used for selection communication and quotation reference. The final delivered model should follow engineering confirmation."
+            "question": "What should be confirmed before selecting EA-1000-PEEK?",
+            "answer": "Before selection, target dispensing volume, liquid media, pump head material, interface, valve configuration, controller, sensor options, cycle time, and lifetime requirements should be confirmed. The page model EA-1000-PEEK is used for preliminary communication and quotation reference, while the final model should follow engineering confirmation."
           },
           {
             "question": "How should the suitability of the PEEK pump head on EA-1000-PEEK be evaluated?",
@@ -4598,11 +4598,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "EA-1000-PMMA 适合用在什么液路场景？",
-            "answer": "EA-1000-PMMA 属于 EA 常规柱塞泵，适合用于自动化分析仪器、IVD 分析仪、实验室自动化设备和生命科学仪器中的精密液体吸排、分配和转移。该型号适用于 1000 µL 级别的液体处理任务，最终选型需结合液体介质、分配体积、速度、寿命和集成方式确认。"
+            "answer": "EA-1000-PMMA 属于 EA 常规柱塞泵，适合用于常规试剂分配、缓冲液转移、稀释液加入和自动化液路中的定量吸排。该型号适合 1000 µL 级别的中小体积液体处理任务。PMMA 泵头适用于对材料兼容性和成本平衡有要求的常规液路。 最终选型需结合液体介质、速度、寿命和阀路配置确认。"
           },
           {
-            "question": "EA-1000-PMMA 是否可以直接按标准型号下单？",
-            "answer": "柱塞泵属于定制化产品。EA-1000-PMMA 的泵头材料、容量范围、接口方式、阀体搭配、控制器和传感器配置都需要根据实际应用确认。页面型号用于选型沟通和报价识别，最终交付型号以工程确认结果为准。"
+            "question": "EA-1000-PMMA 选型前需要确认哪些信息？",
+            "answer": "选型前需要确认目标分配体积、液体介质、泵头材料、接口方式、阀体搭配、控制器、传感器配置、速度节拍和寿命要求。EA-1000-PMMA 页面型号用于初步沟通和报价识别，最终型号以工程确认结果为准。"
           },
           {
             "question": "EA-1000-PMMA 的 PMMA 泵头应该如何判断是否适用？",
@@ -4840,11 +4840,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "What fluidic applications is EA-1000-PMMA suitable for?",
-            "answer": "EA-1000-PMMA is an EA standard plunger pump for precision aspiration, dispensing, and transfer in automated analytical instruments, IVD analyzers, laboratory automation systems, and life science instruments. It is suitable for 1000 µL-level liquid handling tasks. Final selection should be confirmed based on liquid media, dispensing volume, speed, lifetime, and integration method."
+            "answer": "EA-1000-PMMA is an EA standard plunger pump for reagent dispensing, buffer transfer, diluent addition, and quantitative aspiration or dispensing in automated fluidic systems. It is suitable for 1000 µL-level small-to-medium volume liquid handling tasks. The PMMA pump head is suitable for common fluidic systems that require a balance between material compatibility and cost. Final selection should be confirmed based on liquid media, speed, lifetime, and valve configuration."
           },
           {
-            "question": "Can EA-1000-PMMA be ordered directly as a standard model?",
-            "answer": "Plunger pumps are custom-engineered products. Pump head material, volume range, interface, valve configuration, controller, and sensor options for EA-1000-PMMA should be confirmed according to the actual application. The page model is used for selection communication and quotation reference. The final delivered model should follow engineering confirmation."
+            "question": "What should be confirmed before selecting EA-1000-PMMA?",
+            "answer": "Before selection, target dispensing volume, liquid media, pump head material, interface, valve configuration, controller, sensor options, cycle time, and lifetime requirements should be confirmed. The page model EA-1000-PMMA is used for preliminary communication and quotation reference, while the final model should follow engineering confirmation."
           },
           {
             "question": "How should the suitability of the PMMA pump head on EA-1000-PMMA be evaluated?",
@@ -5139,11 +5139,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "EA-2500-PEEK 适合用在什么液路场景？",
-            "answer": "EA-2500-PEEK 属于 EA 常规柱塞泵，适合用于自动化分析仪器、IVD 分析仪、实验室自动化设备和生命科学仪器中的精密液体吸排、分配和转移。该型号适用于 2500 µL 级别的液体处理任务，最终选型需结合液体介质、分配体积、速度、寿命和集成方式确认。"
+            "answer": "EA-2500-PEEK 属于 EA 常规柱塞泵，适合用于较大体积试剂输送、清洗液定量加入、缓冲液转移和分析仪器中的液路补液模块。该型号适合 2500 µL 级别的液体处理任务。PEEK 泵头更适合对化学兼容性、低析出或避光性有要求的液路。 最终选型需结合流量需求、压力条件、接口方式和控制方案确认。"
           },
           {
-            "question": "EA-2500-PEEK 是否可以直接按标准型号下单？",
-            "answer": "柱塞泵属于定制化产品。EA-2500-PEEK 的泵头材料、容量范围、接口方式、阀体搭配、控制器和传感器配置都需要根据实际应用确认。页面型号用于选型沟通和报价识别，最终交付型号以工程确认结果为准。"
+            "question": "EA-2500-PEEK 选型前需要确认哪些信息？",
+            "answer": "选型前需要确认目标分配体积、液体介质、泵头材料、接口方式、阀体搭配、控制器、传感器配置、速度节拍和寿命要求。EA-2500-PEEK 页面型号用于初步沟通和报价识别，最终型号以工程确认结果为准。"
           },
           {
             "question": "EA-2500-PEEK 的 PEEK 泵头应该如何判断是否适用？",
@@ -5381,11 +5381,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "What fluidic applications is EA-2500-PEEK suitable for?",
-            "answer": "EA-2500-PEEK is an EA standard plunger pump for precision aspiration, dispensing, and transfer in automated analytical instruments, IVD analyzers, laboratory automation systems, and life science instruments. It is suitable for 2500 µL-level liquid handling tasks. Final selection should be confirmed based on liquid media, dispensing volume, speed, lifetime, and integration method."
+            "answer": "EA-2500-PEEK is an EA standard plunger pump for larger-volume reagent transfer, wash solution dosing, buffer transfer, and fluid replenishment modules in analytical instruments. It is suitable for 2500 µL-level liquid handling tasks. The PEEK pump head is suitable for fluidic systems requiring chemical compatibility, low extractables, or light protection. Final selection should be confirmed based on flow requirement, pressure condition, interface, and control method."
           },
           {
-            "question": "Can EA-2500-PEEK be ordered directly as a standard model?",
-            "answer": "Plunger pumps are custom-engineered products. Pump head material, volume range, interface, valve configuration, controller, and sensor options for EA-2500-PEEK should be confirmed according to the actual application. The page model is used for selection communication and quotation reference. The final delivered model should follow engineering confirmation."
+            "question": "What should be confirmed before selecting EA-2500-PEEK?",
+            "answer": "Before selection, target dispensing volume, liquid media, pump head material, interface, valve configuration, controller, sensor options, cycle time, and lifetime requirements should be confirmed. The page model EA-2500-PEEK is used for preliminary communication and quotation reference, while the final model should follow engineering confirmation."
           },
           {
             "question": "How should the suitability of the PEEK pump head on EA-2500-PEEK be evaluated?",
@@ -5680,11 +5680,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "EA-2500-PMMA 适合用在什么液路场景？",
-            "answer": "EA-2500-PMMA 属于 EA 常规柱塞泵，适合用于自动化分析仪器、IVD 分析仪、实验室自动化设备和生命科学仪器中的精密液体吸排、分配和转移。该型号适用于 2500 µL 级别的液体处理任务，最终选型需结合液体介质、分配体积、速度、寿命和集成方式确认。"
+            "answer": "EA-2500-PMMA 属于 EA 常规柱塞泵，适合用于较大体积试剂输送、清洗液定量加入、缓冲液转移和分析仪器中的液路补液模块。该型号适合 2500 µL 级别的液体处理任务。PMMA 泵头适用于对材料兼容性和成本平衡有要求的常规液路。 最终选型需结合流量需求、压力条件、接口方式和控制方案确认。"
           },
           {
-            "question": "EA-2500-PMMA 是否可以直接按标准型号下单？",
-            "answer": "柱塞泵属于定制化产品。EA-2500-PMMA 的泵头材料、容量范围、接口方式、阀体搭配、控制器和传感器配置都需要根据实际应用确认。页面型号用于选型沟通和报价识别，最终交付型号以工程确认结果为准。"
+            "question": "EA-2500-PMMA 选型前需要确认哪些信息？",
+            "answer": "选型前需要确认目标分配体积、液体介质、泵头材料、接口方式、阀体搭配、控制器、传感器配置、速度节拍和寿命要求。EA-2500-PMMA 页面型号用于初步沟通和报价识别，最终型号以工程确认结果为准。"
           },
           {
             "question": "EA-2500-PMMA 的 PMMA 泵头应该如何判断是否适用？",
@@ -5922,11 +5922,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "What fluidic applications is EA-2500-PMMA suitable for?",
-            "answer": "EA-2500-PMMA is an EA standard plunger pump for precision aspiration, dispensing, and transfer in automated analytical instruments, IVD analyzers, laboratory automation systems, and life science instruments. It is suitable for 2500 µL-level liquid handling tasks. Final selection should be confirmed based on liquid media, dispensing volume, speed, lifetime, and integration method."
+            "answer": "EA-2500-PMMA is an EA standard plunger pump for larger-volume reagent transfer, wash solution dosing, buffer transfer, and fluid replenishment modules in analytical instruments. It is suitable for 2500 µL-level liquid handling tasks. The PMMA pump head is suitable for common fluidic systems that require a balance between material compatibility and cost. Final selection should be confirmed based on flow requirement, pressure condition, interface, and control method."
           },
           {
-            "question": "Can EA-2500-PMMA be ordered directly as a standard model?",
-            "answer": "Plunger pumps are custom-engineered products. Pump head material, volume range, interface, valve configuration, controller, and sensor options for EA-2500-PMMA should be confirmed according to the actual application. The page model is used for selection communication and quotation reference. The final delivered model should follow engineering confirmation."
+            "question": "What should be confirmed before selecting EA-2500-PMMA?",
+            "answer": "Before selection, target dispensing volume, liquid media, pump head material, interface, valve configuration, controller, sensor options, cycle time, and lifetime requirements should be confirmed. The page model EA-2500-PMMA is used for preliminary communication and quotation reference, while the final model should follow engineering confirmation."
           },
           {
             "question": "How should the suitability of the PMMA pump head on EA-2500-PMMA be evaluated?",
@@ -6221,11 +6221,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "EA-5000-PEEK 适合用在什么液路场景？",
-            "answer": "EA-5000-PEEK 属于 EA 常规柱塞泵，适合用于自动化分析仪器、IVD 分析仪、实验室自动化设备和生命科学仪器中的精密液体吸排、分配和转移。该型号适用于 5000 µL 级别的液体处理任务，最终选型需结合液体介质、分配体积、速度、寿命和集成方式确认。"
+            "answer": "EA-5000-PEEK 属于 EA 常规柱塞泵，适合用于较大体积试剂输送、清洗液定量加入、缓冲液转移和分析仪器中的液路补液模块。该型号适合 5000 µL 级别的液体处理任务。PEEK 泵头更适合对化学兼容性、低析出或避光性有要求的液路。 最终选型需结合流量需求、压力条件、接口方式和控制方案确认。"
           },
           {
-            "question": "EA-5000-PEEK 是否可以直接按标准型号下单？",
-            "answer": "柱塞泵属于定制化产品。EA-5000-PEEK 的泵头材料、容量范围、接口方式、阀体搭配、控制器和传感器配置都需要根据实际应用确认。页面型号用于选型沟通和报价识别，最终交付型号以工程确认结果为准。"
+            "question": "EA-5000-PEEK 选型前需要确认哪些信息？",
+            "answer": "选型前需要确认目标分配体积、液体介质、泵头材料、接口方式、阀体搭配、控制器、传感器配置、速度节拍和寿命要求。EA-5000-PEEK 页面型号用于初步沟通和报价识别，最终型号以工程确认结果为准。"
           },
           {
             "question": "EA-5000-PEEK 的 PEEK 泵头应该如何判断是否适用？",
@@ -6463,11 +6463,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "What fluidic applications is EA-5000-PEEK suitable for?",
-            "answer": "EA-5000-PEEK is an EA standard plunger pump for precision aspiration, dispensing, and transfer in automated analytical instruments, IVD analyzers, laboratory automation systems, and life science instruments. It is suitable for 5000 µL-level liquid handling tasks. Final selection should be confirmed based on liquid media, dispensing volume, speed, lifetime, and integration method."
+            "answer": "EA-5000-PEEK is an EA standard plunger pump for larger-volume reagent transfer, wash solution dosing, buffer transfer, and fluid replenishment modules in analytical instruments. It is suitable for 5000 µL-level liquid handling tasks. The PEEK pump head is suitable for fluidic systems requiring chemical compatibility, low extractables, or light protection. Final selection should be confirmed based on flow requirement, pressure condition, interface, and control method."
           },
           {
-            "question": "Can EA-5000-PEEK be ordered directly as a standard model?",
-            "answer": "Plunger pumps are custom-engineered products. Pump head material, volume range, interface, valve configuration, controller, and sensor options for EA-5000-PEEK should be confirmed according to the actual application. The page model is used for selection communication and quotation reference. The final delivered model should follow engineering confirmation."
+            "question": "What should be confirmed before selecting EA-5000-PEEK?",
+            "answer": "Before selection, target dispensing volume, liquid media, pump head material, interface, valve configuration, controller, sensor options, cycle time, and lifetime requirements should be confirmed. The page model EA-5000-PEEK is used for preliminary communication and quotation reference, while the final model should follow engineering confirmation."
           },
           {
             "question": "How should the suitability of the PEEK pump head on EA-5000-PEEK be evaluated?",
@@ -6762,11 +6762,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "EA-5000-PMMA 适合用在什么液路场景？",
-            "answer": "EA-5000-PMMA 属于 EA 常规柱塞泵，适合用于自动化分析仪器、IVD 分析仪、实验室自动化设备和生命科学仪器中的精密液体吸排、分配和转移。该型号适用于 5000 µL 级别的液体处理任务，最终选型需结合液体介质、分配体积、速度、寿命和集成方式确认。"
+            "answer": "EA-5000-PMMA 属于 EA 常规柱塞泵，适合用于较大体积试剂输送、清洗液定量加入、缓冲液转移和分析仪器中的液路补液模块。该型号适合 5000 µL 级别的液体处理任务。PMMA 泵头适用于对材料兼容性和成本平衡有要求的常规液路。 最终选型需结合流量需求、压力条件、接口方式和控制方案确认。"
           },
           {
-            "question": "EA-5000-PMMA 是否可以直接按标准型号下单？",
-            "answer": "柱塞泵属于定制化产品。EA-5000-PMMA 的泵头材料、容量范围、接口方式、阀体搭配、控制器和传感器配置都需要根据实际应用确认。页面型号用于选型沟通和报价识别，最终交付型号以工程确认结果为准。"
+            "question": "EA-5000-PMMA 选型前需要确认哪些信息？",
+            "answer": "选型前需要确认目标分配体积、液体介质、泵头材料、接口方式、阀体搭配、控制器、传感器配置、速度节拍和寿命要求。EA-5000-PMMA 页面型号用于初步沟通和报价识别，最终型号以工程确认结果为准。"
           },
           {
             "question": "EA-5000-PMMA 的 PMMA 泵头应该如何判断是否适用？",
@@ -7004,11 +7004,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "What fluidic applications is EA-5000-PMMA suitable for?",
-            "answer": "EA-5000-PMMA is an EA standard plunger pump for precision aspiration, dispensing, and transfer in automated analytical instruments, IVD analyzers, laboratory automation systems, and life science instruments. It is suitable for 5000 µL-level liquid handling tasks. Final selection should be confirmed based on liquid media, dispensing volume, speed, lifetime, and integration method."
+            "answer": "EA-5000-PMMA is an EA standard plunger pump for larger-volume reagent transfer, wash solution dosing, buffer transfer, and fluid replenishment modules in analytical instruments. It is suitable for 5000 µL-level liquid handling tasks. The PMMA pump head is suitable for common fluidic systems that require a balance between material compatibility and cost. Final selection should be confirmed based on flow requirement, pressure condition, interface, and control method."
           },
           {
-            "question": "Can EA-5000-PMMA be ordered directly as a standard model?",
-            "answer": "Plunger pumps are custom-engineered products. Pump head material, volume range, interface, valve configuration, controller, and sensor options for EA-5000-PMMA should be confirmed according to the actual application. The page model is used for selection communication and quotation reference. The final delivered model should follow engineering confirmation."
+            "question": "What should be confirmed before selecting EA-5000-PMMA?",
+            "answer": "Before selection, target dispensing volume, liquid media, pump head material, interface, valve configuration, controller, sensor options, cycle time, and lifetime requirements should be confirmed. The page model EA-5000-PMMA is used for preliminary communication and quotation reference, while the final model should follow engineering confirmation."
           },
           {
             "question": "How should the suitability of the PMMA pump head on EA-5000-PMMA be evaluated?",
@@ -7303,11 +7303,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "EA-10000-PEEK 适合用在什么液路场景？",
-            "answer": "EA-10000-PEEK 属于 EA 常规柱塞泵，适合用于自动化分析仪器、IVD 分析仪、实验室自动化设备和生命科学仪器中的精密液体吸排、分配和转移。该型号适用于 10000 µL 级别的液体处理任务，最终选型需结合液体介质、分配体积、速度、寿命和集成方式确认。"
+            "answer": "EA-10000-PEEK 属于 EA 常规柱塞泵，适合用于大体积缓冲液、清洗液、稀释液和系统液的定量转移。该型号适合 10000 µL 级别的液体处理任务，更关注稳定输送、寿命和系统集成。PEEK 泵头更适合对化学兼容性、低析出或避光性有要求的液路。 最终选型需结合整机液路、安装空间、阀体搭配和控制方式确认。"
           },
           {
-            "question": "EA-10000-PEEK 是否可以直接按标准型号下单？",
-            "answer": "柱塞泵属于定制化产品。EA-10000-PEEK 的泵头材料、容量范围、接口方式、阀体搭配、控制器和传感器配置都需要根据实际应用确认。页面型号用于选型沟通和报价识别，最终交付型号以工程确认结果为准。"
+            "question": "EA-10000-PEEK 选型前需要确认哪些信息？",
+            "answer": "选型前需要确认目标分配体积、液体介质、泵头材料、接口方式、阀体搭配、控制器、传感器配置、速度节拍和寿命要求。EA-10000-PEEK 页面型号用于初步沟通和报价识别，最终型号以工程确认结果为准。"
           },
           {
             "question": "EA-10000-PEEK 的 PEEK 泵头应该如何判断是否适用？",
@@ -7545,11 +7545,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "What fluidic applications is EA-10000-PEEK suitable for?",
-            "answer": "EA-10000-PEEK is an EA standard plunger pump for precision aspiration, dispensing, and transfer in automated analytical instruments, IVD analyzers, laboratory automation systems, and life science instruments. It is suitable for 10000 µL-level liquid handling tasks. Final selection should be confirmed based on liquid media, dispensing volume, speed, lifetime, and integration method."
+            "answer": "EA-10000-PEEK is an EA standard plunger pump for quantitative transfer of buffer, wash solution, diluent, and system liquid in larger-volume fluidic modules. It is suitable for 10000 µL-level liquid handling tasks with a focus on stable transfer, lifetime, and system integration. The PEEK pump head is suitable for fluidic systems requiring chemical compatibility, low extractables, or light protection. Final selection should be confirmed based on the instrument fluidic layout, installation space, valve configuration, and control method."
           },
           {
-            "question": "Can EA-10000-PEEK be ordered directly as a standard model?",
-            "answer": "Plunger pumps are custom-engineered products. Pump head material, volume range, interface, valve configuration, controller, and sensor options for EA-10000-PEEK should be confirmed according to the actual application. The page model is used for selection communication and quotation reference. The final delivered model should follow engineering confirmation."
+            "question": "What should be confirmed before selecting EA-10000-PEEK?",
+            "answer": "Before selection, target dispensing volume, liquid media, pump head material, interface, valve configuration, controller, sensor options, cycle time, and lifetime requirements should be confirmed. The page model EA-10000-PEEK is used for preliminary communication and quotation reference, while the final model should follow engineering confirmation."
           },
           {
             "question": "How should the suitability of the PEEK pump head on EA-10000-PEEK be evaluated?",
@@ -7844,11 +7844,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "EA-10000-PMMA 适合用在什么液路场景？",
-            "answer": "EA-10000-PMMA 属于 EA 常规柱塞泵，适合用于自动化分析仪器、IVD 分析仪、实验室自动化设备和生命科学仪器中的精密液体吸排、分配和转移。该型号适用于 10000 µL 级别的液体处理任务，最终选型需结合液体介质、分配体积、速度、寿命和集成方式确认。"
+            "answer": "EA-10000-PMMA 属于 EA 常规柱塞泵，适合用于大体积缓冲液、清洗液、稀释液和系统液的定量转移。该型号适合 10000 µL 级别的液体处理任务，更关注稳定输送、寿命和系统集成。PMMA 泵头适用于对材料兼容性和成本平衡有要求的常规液路。 最终选型需结合整机液路、安装空间、阀体搭配和控制方式确认。"
           },
           {
-            "question": "EA-10000-PMMA 是否可以直接按标准型号下单？",
-            "answer": "柱塞泵属于定制化产品。EA-10000-PMMA 的泵头材料、容量范围、接口方式、阀体搭配、控制器和传感器配置都需要根据实际应用确认。页面型号用于选型沟通和报价识别，最终交付型号以工程确认结果为准。"
+            "question": "EA-10000-PMMA 选型前需要确认哪些信息？",
+            "answer": "选型前需要确认目标分配体积、液体介质、泵头材料、接口方式、阀体搭配、控制器、传感器配置、速度节拍和寿命要求。EA-10000-PMMA 页面型号用于初步沟通和报价识别，最终型号以工程确认结果为准。"
           },
           {
             "question": "EA-10000-PMMA 的 PMMA 泵头应该如何判断是否适用？",
@@ -8086,11 +8086,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "What fluidic applications is EA-10000-PMMA suitable for?",
-            "answer": "EA-10000-PMMA is an EA standard plunger pump for precision aspiration, dispensing, and transfer in automated analytical instruments, IVD analyzers, laboratory automation systems, and life science instruments. It is suitable for 10000 µL-level liquid handling tasks. Final selection should be confirmed based on liquid media, dispensing volume, speed, lifetime, and integration method."
+            "answer": "EA-10000-PMMA is an EA standard plunger pump for quantitative transfer of buffer, wash solution, diluent, and system liquid in larger-volume fluidic modules. It is suitable for 10000 µL-level liquid handling tasks with a focus on stable transfer, lifetime, and system integration. The PMMA pump head is suitable for common fluidic systems that require a balance between material compatibility and cost. Final selection should be confirmed based on the instrument fluidic layout, installation space, valve configuration, and control method."
           },
           {
-            "question": "Can EA-10000-PMMA be ordered directly as a standard model?",
-            "answer": "Plunger pumps are custom-engineered products. Pump head material, volume range, interface, valve configuration, controller, and sensor options for EA-10000-PMMA should be confirmed according to the actual application. The page model is used for selection communication and quotation reference. The final delivered model should follow engineering confirmation."
+            "question": "What should be confirmed before selecting EA-10000-PMMA?",
+            "answer": "Before selection, target dispensing volume, liquid media, pump head material, interface, valve configuration, controller, sensor options, cycle time, and lifetime requirements should be confirmed. The page model EA-10000-PMMA is used for preliminary communication and quotation reference, while the final model should follow engineering confirmation."
           },
           {
             "question": "How should the suitability of the PMMA pump head on EA-10000-PMMA be evaluated?",
@@ -8385,11 +8385,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "SM-50-PMMA 适合用在什么类型的设备中？",
-            "answer": "SM-50-PMMA 属于 SM 微型柱塞泵，适合用于空间受限的紧凑型 IVD 设备、小型液路模块、实验室自动化设备和生命科学仪器。该型号主要用于 50 µL 级别的微量液体吸排、分配和转移，最终配置需结合整机空间、液路路径和控制方式确认。"
+            "answer": "SM-50-PMMA 属于 SM 微型柱塞泵，适合用于空间受限的小型液路模块、紧凑型自动化设备、微量试剂分配单元和便携式检测设备。该型号主要用于 50 µL 级别的微量液体吸排、分配和转移。最终配置需结合安装空间、液路路径、阀体搭配和控制方式确认。"
           },
           {
-            "question": "SM-50-PMMA 是否可以直接按标准型号下单？",
-            "answer": "柱塞泵属于定制化产品。SM-50-PMMA 的容量、泵头材料、接口形式、阀体搭配、光耦类型和控制方式都需要根据实际应用确认。建议提交需求表单或联系我们进行方案评估后再确认最终型号。"
+            "question": "SM-50-PMMA 选型前需要确认哪些信息？",
+            "answer": "选型前需要确认目标分配体积、液体介质、泵头材料、接口形式、阀体搭配、光耦反馈、控制方式和安装空间。SM-50-PMMA 属于微型柱塞泵，页面型号用于初步沟通和报价识别，最终型号以工程确认结果为准。"
           },
           {
             "question": "SM 微型柱塞泵和 EA 柱塞泵的满量程步数是否一样？",
@@ -8627,11 +8627,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "What type of equipment is SM-50-PMMA suitable for?",
-            "answer": "SM-50-PMMA is an SM miniature plunger pump designed for compact IVD instruments, small fluidic modules, laboratory automation systems, and life science instruments. It is mainly used for 50 µL-level micro-volume aspiration, dispensing, and transfer. Final configuration should be confirmed according to instrument space, fluidic layout, and control method."
+            "answer": "SM-50-PMMA is an SM miniature plunger pump for space-limited fluidic modules, compact automation systems, micro-reagent dispensing units, and portable testing devices. It is mainly used for 50 µL-level micro-volume aspiration, dispensing, and transfer. Final configuration should be confirmed according to installation space, fluidic layout, valve configuration, and control method."
           },
           {
-            "question": "Can SM-50-PMMA be ordered directly as a standard model?",
-            "answer": "Plunger pumps are custom-engineered products. For SM-50-PMMA, volume, pump head material, interface, valve configuration, optical sensor type, and control method should be confirmed according to the actual application. We recommend submitting requirements or contacting us before confirming the final model."
+            "question": "What should be confirmed before selecting SM-50-PMMA?",
+            "answer": "Before selection, target dispensing volume, liquid media, pump head material, interface, valve configuration, optical feedback, control method, and installation space should be confirmed. SM-50-PMMA is a miniature plunger pump. The page model is used for preliminary communication and quotation reference, while the final model should follow engineering confirmation."
           },
           {
             "question": "Does the SM miniature plunger pump use the same full-stroke steps as the EA series?",
@@ -8926,11 +8926,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "SM-100-PEEK 适合用在什么类型的设备中？",
-            "answer": "SM-100-PEEK 属于 SM 微型柱塞泵，适合用于空间受限的紧凑型 IVD 设备、小型液路模块、实验室自动化设备和生命科学仪器。该型号主要用于 100 µL 级别的微量液体吸排、分配和转移，最终配置需结合整机空间、液路路径和控制方式确认。"
+            "answer": "SM-100-PEEK 属于 SM 微型柱塞泵，适合用于空间受限的小型液路模块、紧凑型自动化设备、微量试剂分配单元和便携式检测设备。该型号主要用于 100 µL 级别的微量液体吸排、分配和转移。最终配置需结合安装空间、液路路径、阀体搭配和控制方式确认。"
           },
           {
-            "question": "SM-100-PEEK 是否可以直接按标准型号下单？",
-            "answer": "柱塞泵属于定制化产品。SM-100-PEEK 的容量、泵头材料、接口形式、阀体搭配、光耦类型和控制方式都需要根据实际应用确认。建议提交需求表单或联系我们进行方案评估后再确认最终型号。"
+            "question": "SM-100-PEEK 选型前需要确认哪些信息？",
+            "answer": "选型前需要确认目标分配体积、液体介质、泵头材料、接口形式、阀体搭配、光耦反馈、控制方式和安装空间。SM-100-PEEK 属于微型柱塞泵，页面型号用于初步沟通和报价识别，最终型号以工程确认结果为准。"
           },
           {
             "question": "SM 微型柱塞泵和 EA 柱塞泵的满量程步数是否一样？",
@@ -9168,11 +9168,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "What type of equipment is SM-100-PEEK suitable for?",
-            "answer": "SM-100-PEEK is an SM miniature plunger pump designed for compact IVD instruments, small fluidic modules, laboratory automation systems, and life science instruments. It is mainly used for 100 µL-level micro-volume aspiration, dispensing, and transfer. Final configuration should be confirmed according to instrument space, fluidic layout, and control method."
+            "answer": "SM-100-PEEK is an SM miniature plunger pump for space-limited fluidic modules, compact automation systems, micro-reagent dispensing units, and portable testing devices. It is mainly used for 100 µL-level micro-volume aspiration, dispensing, and transfer. Final configuration should be confirmed according to installation space, fluidic layout, valve configuration, and control method."
           },
           {
-            "question": "Can SM-100-PEEK be ordered directly as a standard model?",
-            "answer": "Plunger pumps are custom-engineered products. For SM-100-PEEK, volume, pump head material, interface, valve configuration, optical sensor type, and control method should be confirmed according to the actual application. We recommend submitting requirements or contacting us before confirming the final model."
+            "question": "What should be confirmed before selecting SM-100-PEEK?",
+            "answer": "Before selection, target dispensing volume, liquid media, pump head material, interface, valve configuration, optical feedback, control method, and installation space should be confirmed. SM-100-PEEK is a miniature plunger pump. The page model is used for preliminary communication and quotation reference, while the final model should follow engineering confirmation."
           },
           {
             "question": "Does the SM miniature plunger pump use the same full-stroke steps as the EA series?",
@@ -9467,11 +9467,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "SM-250-PEEK 适合用在什么类型的设备中？",
-            "answer": "SM-250-PEEK 属于 SM 微型柱塞泵，适合用于空间受限的紧凑型 IVD 设备、小型液路模块、实验室自动化设备和生命科学仪器。该型号主要用于 250 µL 级别的微量液体吸排、分配和转移，最终配置需结合整机空间、液路路径和控制方式确认。"
+            "answer": "SM-250-PEEK 属于 SM 微型柱塞泵，适合用于空间受限的小型液路模块、紧凑型自动化设备、微量试剂分配单元和便携式检测设备。该型号主要用于 250 µL 级别的微量液体吸排、分配和转移。最终配置需结合安装空间、液路路径、阀体搭配和控制方式确认。"
           },
           {
-            "question": "SM-250-PEEK 是否可以直接按标准型号下单？",
-            "answer": "柱塞泵属于定制化产品。SM-250-PEEK 的容量、泵头材料、接口形式、阀体搭配、光耦类型和控制方式都需要根据实际应用确认。建议提交需求表单或联系我们进行方案评估后再确认最终型号。"
+            "question": "SM-250-PEEK 选型前需要确认哪些信息？",
+            "answer": "选型前需要确认目标分配体积、液体介质、泵头材料、接口形式、阀体搭配、光耦反馈、控制方式和安装空间。SM-250-PEEK 属于微型柱塞泵，页面型号用于初步沟通和报价识别，最终型号以工程确认结果为准。"
           },
           {
             "question": "SM 微型柱塞泵和 EA 柱塞泵的满量程步数是否一样？",
@@ -9709,11 +9709,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "What type of equipment is SM-250-PEEK suitable for?",
-            "answer": "SM-250-PEEK is an SM miniature plunger pump designed for compact IVD instruments, small fluidic modules, laboratory automation systems, and life science instruments. It is mainly used for 250 µL-level micro-volume aspiration, dispensing, and transfer. Final configuration should be confirmed according to instrument space, fluidic layout, and control method."
+            "answer": "SM-250-PEEK is an SM miniature plunger pump for space-limited fluidic modules, compact automation systems, micro-reagent dispensing units, and portable testing devices. It is mainly used for 250 µL-level micro-volume aspiration, dispensing, and transfer. Final configuration should be confirmed according to installation space, fluidic layout, valve configuration, and control method."
           },
           {
-            "question": "Can SM-250-PEEK be ordered directly as a standard model?",
-            "answer": "Plunger pumps are custom-engineered products. For SM-250-PEEK, volume, pump head material, interface, valve configuration, optical sensor type, and control method should be confirmed according to the actual application. We recommend submitting requirements or contacting us before confirming the final model."
+            "question": "What should be confirmed before selecting SM-250-PEEK?",
+            "answer": "Before selection, target dispensing volume, liquid media, pump head material, interface, valve configuration, optical feedback, control method, and installation space should be confirmed. SM-250-PEEK is a miniature plunger pump. The page model is used for preliminary communication and quotation reference, while the final model should follow engineering confirmation."
           },
           {
             "question": "Does the SM miniature plunger pump use the same full-stroke steps as the EA series?",
@@ -10008,11 +10008,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "SM-250-PMMA 适合用在什么类型的设备中？",
-            "answer": "SM-250-PMMA 属于 SM 微型柱塞泵，适合用于空间受限的紧凑型 IVD 设备、小型液路模块、实验室自动化设备和生命科学仪器。该型号主要用于 250 µL 级别的微量液体吸排、分配和转移，最终配置需结合整机空间、液路路径和控制方式确认。"
+            "answer": "SM-250-PMMA 属于 SM 微型柱塞泵，适合用于空间受限的小型液路模块、紧凑型自动化设备、微量试剂分配单元和便携式检测设备。该型号主要用于 250 µL 级别的微量液体吸排、分配和转移。最终配置需结合安装空间、液路路径、阀体搭配和控制方式确认。"
           },
           {
-            "question": "SM-250-PMMA 是否可以直接按标准型号下单？",
-            "answer": "柱塞泵属于定制化产品。SM-250-PMMA 的容量、泵头材料、接口形式、阀体搭配、光耦类型和控制方式都需要根据实际应用确认。建议提交需求表单或联系我们进行方案评估后再确认最终型号。"
+            "question": "SM-250-PMMA 选型前需要确认哪些信息？",
+            "answer": "选型前需要确认目标分配体积、液体介质、泵头材料、接口形式、阀体搭配、光耦反馈、控制方式和安装空间。SM-250-PMMA 属于微型柱塞泵，页面型号用于初步沟通和报价识别，最终型号以工程确认结果为准。"
           },
           {
             "question": "SM 微型柱塞泵和 EA 柱塞泵的满量程步数是否一样？",
@@ -10250,11 +10250,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "What type of equipment is SM-250-PMMA suitable for?",
-            "answer": "SM-250-PMMA is an SM miniature plunger pump designed for compact IVD instruments, small fluidic modules, laboratory automation systems, and life science instruments. It is mainly used for 250 µL-level micro-volume aspiration, dispensing, and transfer. Final configuration should be confirmed according to instrument space, fluidic layout, and control method."
+            "answer": "SM-250-PMMA is an SM miniature plunger pump for space-limited fluidic modules, compact automation systems, micro-reagent dispensing units, and portable testing devices. It is mainly used for 250 µL-level micro-volume aspiration, dispensing, and transfer. Final configuration should be confirmed according to installation space, fluidic layout, valve configuration, and control method."
           },
           {
-            "question": "Can SM-250-PMMA be ordered directly as a standard model?",
-            "answer": "Plunger pumps are custom-engineered products. For SM-250-PMMA, volume, pump head material, interface, valve configuration, optical sensor type, and control method should be confirmed according to the actual application. We recommend submitting requirements or contacting us before confirming the final model."
+            "question": "What should be confirmed before selecting SM-250-PMMA?",
+            "answer": "Before selection, target dispensing volume, liquid media, pump head material, interface, valve configuration, optical feedback, control method, and installation space should be confirmed. SM-250-PMMA is a miniature plunger pump. The page model is used for preliminary communication and quotation reference, while the final model should follow engineering confirmation."
           },
           {
             "question": "Does the SM miniature plunger pump use the same full-stroke steps as the EA series?",
@@ -10549,11 +10549,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "SM-500-PMMA 适合用在什么类型的设备中？",
-            "answer": "SM-500-PMMA 属于 SM 微型柱塞泵，适合用于空间受限的紧凑型 IVD 设备、小型液路模块、实验室自动化设备和生命科学仪器。该型号主要用于 500 µL 级别的微量液体吸排、分配和转移，最终配置需结合整机空间、液路路径和控制方式确认。"
+            "answer": "SM-500-PMMA 属于 SM 微型柱塞泵，适合用于空间受限的小型液路模块、紧凑型自动化设备、微量试剂分配单元和便携式检测设备。该型号主要用于 500 µL 级别的微量液体吸排、分配和转移。最终配置需结合安装空间、液路路径、阀体搭配和控制方式确认。"
           },
           {
-            "question": "SM-500-PMMA 是否可以直接按标准型号下单？",
-            "answer": "柱塞泵属于定制化产品。SM-500-PMMA 的容量、泵头材料、接口形式、阀体搭配、光耦类型和控制方式都需要根据实际应用确认。建议提交需求表单或联系我们进行方案评估后再确认最终型号。"
+            "question": "SM-500-PMMA 选型前需要确认哪些信息？",
+            "answer": "选型前需要确认目标分配体积、液体介质、泵头材料、接口形式、阀体搭配、光耦反馈、控制方式和安装空间。SM-500-PMMA 属于微型柱塞泵，页面型号用于初步沟通和报价识别，最终型号以工程确认结果为准。"
           },
           {
             "question": "SM 微型柱塞泵和 EA 柱塞泵的满量程步数是否一样？",
@@ -10791,11 +10791,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "What type of equipment is SM-500-PMMA suitable for?",
-            "answer": "SM-500-PMMA is an SM miniature plunger pump designed for compact IVD instruments, small fluidic modules, laboratory automation systems, and life science instruments. It is mainly used for 500 µL-level micro-volume aspiration, dispensing, and transfer. Final configuration should be confirmed according to instrument space, fluidic layout, and control method."
+            "answer": "SM-500-PMMA is an SM miniature plunger pump for space-limited fluidic modules, compact automation systems, micro-reagent dispensing units, and portable testing devices. It is mainly used for 500 µL-level micro-volume aspiration, dispensing, and transfer. Final configuration should be confirmed according to installation space, fluidic layout, valve configuration, and control method."
           },
           {
-            "question": "Can SM-500-PMMA be ordered directly as a standard model?",
-            "answer": "Plunger pumps are custom-engineered products. For SM-500-PMMA, volume, pump head material, interface, valve configuration, optical sensor type, and control method should be confirmed according to the actual application. We recommend submitting requirements or contacting us before confirming the final model."
+            "question": "What should be confirmed before selecting SM-500-PMMA?",
+            "answer": "Before selection, target dispensing volume, liquid media, pump head material, interface, valve configuration, optical feedback, control method, and installation space should be confirmed. SM-500-PMMA is a miniature plunger pump. The page model is used for preliminary communication and quotation reference, while the final model should follow engineering confirmation."
           },
           {
             "question": "Does the SM miniature plunger pump use the same full-stroke steps as the EA series?",
@@ -11090,11 +11090,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "SM-1000-PMMA 适合用在什么类型的设备中？",
-            "answer": "SM-1000-PMMA 属于 SM 微型柱塞泵，适合用于空间受限的紧凑型 IVD 设备、小型液路模块、实验室自动化设备和生命科学仪器。该型号主要用于 1000 µL 级别的微量液体吸排、分配和转移，最终配置需结合整机空间、液路路径和控制方式确认。"
+            "answer": "SM-1000-PMMA 属于 SM 微型柱塞泵，适合用于空间受限的小型液路模块、紧凑型自动化设备、微量试剂分配单元和便携式检测设备。该型号主要用于 1000 µL 级别的微量液体吸排、分配和转移。最终配置需结合安装空间、液路路径、阀体搭配和控制方式确认。"
           },
           {
-            "question": "SM-1000-PMMA 是否可以直接按标准型号下单？",
-            "answer": "柱塞泵属于定制化产品。SM-1000-PMMA 的容量、泵头材料、接口形式、阀体搭配、光耦类型和控制方式都需要根据实际应用确认。建议提交需求表单或联系我们进行方案评估后再确认最终型号。"
+            "question": "SM-1000-PMMA 选型前需要确认哪些信息？",
+            "answer": "选型前需要确认目标分配体积、液体介质、泵头材料、接口形式、阀体搭配、光耦反馈、控制方式和安装空间。SM-1000-PMMA 属于微型柱塞泵，页面型号用于初步沟通和报价识别，最终型号以工程确认结果为准。"
           },
           {
             "question": "SM 微型柱塞泵和 EA 柱塞泵的满量程步数是否一样？",
@@ -11332,11 +11332,11 @@ export const pumpSeriesDetailRecords = [
         "faqs": [
           {
             "question": "What type of equipment is SM-1000-PMMA suitable for?",
-            "answer": "SM-1000-PMMA is an SM miniature plunger pump designed for compact IVD instruments, small fluidic modules, laboratory automation systems, and life science instruments. It is mainly used for 1000 µL-level micro-volume aspiration, dispensing, and transfer. Final configuration should be confirmed according to instrument space, fluidic layout, and control method."
+            "answer": "SM-1000-PMMA is an SM miniature plunger pump for space-limited fluidic modules, compact automation systems, micro-reagent dispensing units, and portable testing devices. It is mainly used for 1000 µL-level micro-volume aspiration, dispensing, and transfer. Final configuration should be confirmed according to installation space, fluidic layout, valve configuration, and control method."
           },
           {
-            "question": "Can SM-1000-PMMA be ordered directly as a standard model?",
-            "answer": "Plunger pumps are custom-engineered products. For SM-1000-PMMA, volume, pump head material, interface, valve configuration, optical sensor type, and control method should be confirmed according to the actual application. We recommend submitting requirements or contacting us before confirming the final model."
+            "question": "What should be confirmed before selecting SM-1000-PMMA?",
+            "answer": "Before selection, target dispensing volume, liquid media, pump head material, interface, valve configuration, optical feedback, control method, and installation space should be confirmed. SM-1000-PMMA is a miniature plunger pump. The page model is used for preliminary communication and quotation reference, while the final model should follow engineering confirmation."
           },
           {
             "question": "Does the SM miniature plunger pump use the same full-stroke steps as the EA series?",
