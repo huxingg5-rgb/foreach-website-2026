@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-03T08:45:20.566Z",
+  "generatedAt": "2026-07-03T10:18:25.549Z",
   "pumpSource": "F:\\WebsiteProjects\\foreach-website-2026\\data-source\\product-center\\pumps\\FOREACH_泵系列_产品数据源.xlsx",
   "footnoteSource": "F:\\WebsiteProjects\\foreach-website-2026\\data-source\\global\\FOREACH_全站脚注库.xlsx",
   "sheets": {
@@ -19,9 +19,9 @@
     "footnoteRefs": "14_脚注引用映射",
     "footnotes": "01_脚注库"
   },
-  "productCount": 3,
-  "cardCount": 3,
-  "routeCount": 3,
+  "productCount": 21,
+  "cardCount": 21,
+  "routeCount": 21,
   "warnings": [],
   "products": [
     {
@@ -54,6 +54,204 @@
       "pumpTypeSlug": "plunger-pumps",
       "h1Zh": "SM-100-PMMA 微型柱塞泵",
       "h1En": "100 µL Miniature PMMA Plunger Pump for Compact Fluidic Systems",
+      "detailMode": "custom_inquiry",
+      "showModel": false
+    },
+    {
+      "productId": "ea-100-peek",
+      "slug": "ea-100-peek",
+      "routeSlug": "ea-100-peek",
+      "canonicalPath": "/products/pumps/plunger-pumps/ea-100-peek",
+      "pumpTypeSlug": "plunger-pumps",
+      "h1Zh": "EA-100-PEEK 柱塞泵",
+      "h1En": "100 µL PEEK Plunger Pump for Precision Dispensing",
+      "detailMode": "custom_inquiry",
+      "showModel": false
+    },
+    {
+      "productId": "ea-250-peek",
+      "slug": "ea-250-peek",
+      "routeSlug": "ea-250-peek",
+      "canonicalPath": "/products/pumps/plunger-pumps/ea-250-peek",
+      "pumpTypeSlug": "plunger-pumps",
+      "h1Zh": "EA-250-PEEK 柱塞泵",
+      "h1En": "250 µL PEEK Plunger Pump for Precision Dispensing",
+      "detailMode": "custom_inquiry",
+      "showModel": false
+    },
+    {
+      "productId": "ea-500-peek",
+      "slug": "ea-500-peek",
+      "routeSlug": "ea-500-peek",
+      "canonicalPath": "/products/pumps/plunger-pumps/ea-500-peek",
+      "pumpTypeSlug": "plunger-pumps",
+      "h1Zh": "EA-500-PEEK 柱塞泵",
+      "h1En": "500 µL PEEK Plunger Pump for Precision Dispensing",
+      "detailMode": "custom_inquiry",
+      "showModel": false
+    },
+    {
+      "productId": "ea-500-pmma",
+      "slug": "ea-500-pmma",
+      "routeSlug": "ea-500-pmma",
+      "canonicalPath": "/products/pumps/plunger-pumps/ea-500-pmma",
+      "pumpTypeSlug": "plunger-pumps",
+      "h1Zh": "EA-500-PMMA 柱塞泵",
+      "h1En": "500 µL PMMA Plunger Pump for Precision Dispensing",
+      "detailMode": "custom_inquiry",
+      "showModel": false
+    },
+    {
+      "productId": "ea-1000-peek",
+      "slug": "ea-1000-peek",
+      "routeSlug": "ea-1000-peek",
+      "canonicalPath": "/products/pumps/plunger-pumps/ea-1000-peek",
+      "pumpTypeSlug": "plunger-pumps",
+      "h1Zh": "EA-1000-PEEK 柱塞泵",
+      "h1En": "1000 µL PEEK Plunger Pump for Precision Dispensing",
+      "detailMode": "custom_inquiry",
+      "showModel": false
+    },
+    {
+      "productId": "ea-1000-pmma",
+      "slug": "ea-1000-pmma",
+      "routeSlug": "ea-1000-pmma",
+      "canonicalPath": "/products/pumps/plunger-pumps/ea-1000-pmma",
+      "pumpTypeSlug": "plunger-pumps",
+      "h1Zh": "EA-1000-PMMA 柱塞泵",
+      "h1En": "1000 µL PMMA Plunger Pump for Precision Dispensing",
+      "detailMode": "custom_inquiry",
+      "showModel": false
+    },
+    {
+      "productId": "ea-2500-peek",
+      "slug": "ea-2500-peek",
+      "routeSlug": "ea-2500-peek",
+      "canonicalPath": "/products/pumps/plunger-pumps/ea-2500-peek",
+      "pumpTypeSlug": "plunger-pumps",
+      "h1Zh": "EA-2500-PEEK 柱塞泵",
+      "h1En": "2500 µL PEEK Plunger Pump for Precision Dispensing",
+      "detailMode": "custom_inquiry",
+      "showModel": false
+    },
+    {
+      "productId": "ea-2500-pmma",
+      "slug": "ea-2500-pmma",
+      "routeSlug": "ea-2500-pmma",
+      "canonicalPath": "/products/pumps/plunger-pumps/ea-2500-pmma",
+      "pumpTypeSlug": "plunger-pumps",
+      "h1Zh": "EA-2500-PMMA 柱塞泵",
+      "h1En": "2500 µL PMMA Plunger Pump for Precision Dispensing",
+      "detailMode": "custom_inquiry",
+      "showModel": false
+    },
+    {
+      "productId": "ea-5000-peek",
+      "slug": "ea-5000-peek",
+      "routeSlug": "ea-5000-peek",
+      "canonicalPath": "/products/pumps/plunger-pumps/ea-5000-peek",
+      "pumpTypeSlug": "plunger-pumps",
+      "h1Zh": "EA-5000-PEEK 柱塞泵",
+      "h1En": "5000 µL PEEK Plunger Pump for Precision Dispensing",
+      "detailMode": "custom_inquiry",
+      "showModel": false
+    },
+    {
+      "productId": "ea-5000-pmma",
+      "slug": "ea-5000-pmma",
+      "routeSlug": "ea-5000-pmma",
+      "canonicalPath": "/products/pumps/plunger-pumps/ea-5000-pmma",
+      "pumpTypeSlug": "plunger-pumps",
+      "h1Zh": "EA-5000-PMMA 柱塞泵",
+      "h1En": "5000 µL PMMA Plunger Pump for Precision Dispensing",
+      "detailMode": "custom_inquiry",
+      "showModel": false
+    },
+    {
+      "productId": "ea-10000-peek",
+      "slug": "ea-10000-peek",
+      "routeSlug": "ea-10000-peek",
+      "canonicalPath": "/products/pumps/plunger-pumps/ea-10000-peek",
+      "pumpTypeSlug": "plunger-pumps",
+      "h1Zh": "EA-10000-PEEK 柱塞泵",
+      "h1En": "10000 µL PEEK Plunger Pump for Precision Dispensing",
+      "detailMode": "custom_inquiry",
+      "showModel": false
+    },
+    {
+      "productId": "ea-10000-pmma",
+      "slug": "ea-10000-pmma",
+      "routeSlug": "ea-10000-pmma",
+      "canonicalPath": "/products/pumps/plunger-pumps/ea-10000-pmma",
+      "pumpTypeSlug": "plunger-pumps",
+      "h1Zh": "EA-10000-PMMA 柱塞泵",
+      "h1En": "10000 µL PMMA Plunger Pump for Precision Dispensing",
+      "detailMode": "custom_inquiry",
+      "showModel": false
+    },
+    {
+      "productId": "sm-50-pmma",
+      "slug": "sm-50-pmma",
+      "routeSlug": "sm-50-pmma",
+      "canonicalPath": "/products/pumps/plunger-pumps/sm-50-pmma",
+      "pumpTypeSlug": "plunger-pumps",
+      "h1Zh": "SM-50-PMMA 微型柱塞泵",
+      "h1En": "50 µL Miniature PMMA Plunger Pump for Compact Fluidic Systems",
+      "detailMode": "custom_inquiry",
+      "showModel": false
+    },
+    {
+      "productId": "sm-100-peek",
+      "slug": "sm-100-peek",
+      "routeSlug": "sm-100-peek",
+      "canonicalPath": "/products/pumps/plunger-pumps/sm-100-peek",
+      "pumpTypeSlug": "plunger-pumps",
+      "h1Zh": "SM-100-PEEK 微型柱塞泵",
+      "h1En": "100 µL Miniature PEEK Plunger Pump for Compact Fluidic Systems",
+      "detailMode": "custom_inquiry",
+      "showModel": false
+    },
+    {
+      "productId": "sm-250-peek",
+      "slug": "sm-250-peek",
+      "routeSlug": "sm-250-peek",
+      "canonicalPath": "/products/pumps/plunger-pumps/sm-250-peek",
+      "pumpTypeSlug": "plunger-pumps",
+      "h1Zh": "SM-250-PEEK 微型柱塞泵",
+      "h1En": "250 µL Miniature PEEK Plunger Pump for Compact Fluidic Systems",
+      "detailMode": "custom_inquiry",
+      "showModel": false
+    },
+    {
+      "productId": "sm-250-pmma",
+      "slug": "sm-250-pmma",
+      "routeSlug": "sm-250-pmma",
+      "canonicalPath": "/products/pumps/plunger-pumps/sm-250-pmma",
+      "pumpTypeSlug": "plunger-pumps",
+      "h1Zh": "SM-250-PMMA 微型柱塞泵",
+      "h1En": "250 µL Miniature PMMA Plunger Pump for Compact Fluidic Systems",
+      "detailMode": "custom_inquiry",
+      "showModel": false
+    },
+    {
+      "productId": "sm-500-pmma",
+      "slug": "sm-500-pmma",
+      "routeSlug": "sm-500-pmma",
+      "canonicalPath": "/products/pumps/plunger-pumps/sm-500-pmma",
+      "pumpTypeSlug": "plunger-pumps",
+      "h1Zh": "SM-500-PMMA 微型柱塞泵",
+      "h1En": "500 µL Miniature PMMA Plunger Pump for Compact Fluidic Systems",
+      "detailMode": "custom_inquiry",
+      "showModel": false
+    },
+    {
+      "productId": "sm-1000-pmma",
+      "slug": "sm-1000-pmma",
+      "routeSlug": "sm-1000-pmma",
+      "canonicalPath": "/products/pumps/plunger-pumps/sm-1000-pmma",
+      "pumpTypeSlug": "plunger-pumps",
+      "h1Zh": "SM-1000-PMMA 微型柱塞泵",
+      "h1En": "1000 µL Miniature PMMA Plunger Pump for Compact Fluidic Systems",
       "detailMode": "custom_inquiry",
       "showModel": false
     }
