@@ -74,13 +74,123 @@ function isPlungerPumpDisplayModel(value: unknown): boolean {
 }
 
 function getDisplayModelText(data: any): string {
-  const displayModel = (data as any).displayModel || data.model;
-
-  if (isPlungerPumpDisplayModel(displayModel)) {
+  if (isCustomInquiryMode(data)) {
     return "定制配置请联系我们";
   }
 
-  return displayModel;
+  return (data as any).displayModel || data.model || "";
+}
+
+function isCustomInquiryMode(data: any): boolean {
+  const detailMode = String(
+    data?.detailMode ||
+      data?.hero?.detailMode ||
+      data?.productMode ||
+      data?.mode ||
+      ""
+  ).trim();
+
+  if (
+    detailMode === "custom_inquiry" ||
+    detailMode === "custom" ||
+    detailMode === "customized"
+  ) {
+    return true;
+  }
+
+  if (
+    detailMode === "standard_model" ||
+    detailMode === "standard" ||
+    detailMode === "selection" ||
+    detailMode === "configurable"
+  ) {
+    return false;
+  }
+
+  if (data?.isCustomInquiry === true) {
+    return true;
+  }
+
+  if (data?.showConfigurator === true || data?.hasConfigurator === true) {
+    return false;
+  }
+
+  const displayModel = data?.displayModel || data?.model || "";
+
+  return isPlungerPumpDisplayModel(displayModel);
+}
+
+function getModelActionText(data: any): string {
+  return isCustomInquiryMode(data) ? "联系我们" : "型号选择";
+}
+
+function isPlungerPumpDetailData(data: any): boolean {
+  const text = JSON.stringify(data || {}).toLowerCase();
+
+  return (
+    text.includes("柱塞泵") ||
+    text.includes("plunger pump") ||
+    text.includes("plunger-pumps") ||
+    text.includes("piston pump") ||
+    text.includes("ea-") ||
+    text.includes("eas-") ||
+    text.includes("sm-") ||
+    text.includes("tm-")
+  );
+}
+
+function getPlungerPumpBottomCta(data: any) {
+  if (!isPlungerPumpDetailData(data)) {
+    return null;
+  }
+
+  return {
+    title: "柱塞泵可根据您的设备需求进行定制",
+    desc: "恒永达可根据您的设备结构、目标容量、液体兼容性、接口方式、控制方式和使用寿命要求，协助确认柱塞泵配置、泵头材质、柱塞材质及液路集成方案，适用于 IVD 分析仪、实验室自动化设备和生命科学仪器中的精密液体处理场景。",
+    button: "提交定制需求",
+    href: "/contact"
+  };
+}
+
+function getModelActionHref(data: any): string {
+  if (isCustomInquiryMode(data)) {
+    return (
+      data.primaryButtonHref ||
+      data.contactHref ||
+      data.requestHref ||
+      "/contact"
+    );
+  }
+
+  return (
+    data.configuratorHref ||
+    data.selectionHref ||
+    data.modelSelectionHref ||
+    "#model-selection"
+  );
+}
+
+
+function PlungerPumpBottomCta({ data }: { data: any }) {
+  const cta = getPlungerPumpBottomCta(data);
+
+  if (!cta) {
+    return null;
+  }
+
+  return (
+    <section className={styles.plungerBottomCta}>
+      <div className={styles.plungerBottomCtaInner}>
+        <div className={styles.plungerBottomCtaText}>
+          <h2>{cta.title}</h2>
+          <p>{cta.desc}</p>
+        </div>
+        <a className={styles.plungerBottomCtaButton} href={cta.href}>
+          {cta.button}
+        </a>
+      </div>
+    </section>
+  );
 }
 
 export default function ProductDetailClient({
@@ -489,8 +599,19 @@ export default function ProductDetailClient({
             <div className={styles.operationArea}>
               <div data-product-model-row="true" className={styles.modelLine}>
                 <div className={styles.modelCodeWrap}>
-                  <span className={styles.modelLabel}>型号：</span>
-                  <span className={styles.modelCode}>{getDisplayModelText(data)}</span>
+                  <div className={styles.modelCodeText}>
+                    <span className={styles.modelLabel}>型号：</span>
+                    <span className={styles.modelCode}>{getDisplayModelText(data)}</span>
+                  </div>
+                  <button
+                    className={styles.button}
+                    type="button"
+                    onClick={() => {
+                      window.location.href = getModelActionHref(data);
+                    }}
+                  >
+                    {getModelActionText(data)}
+                  </button>
                 </div>
 
                 {data.showConfigurator ? (
@@ -625,7 +746,10 @@ export default function ProductDetailClient({
                 .filter(Boolean)
                 .join(" ")}
             >
-              <div className={styles.panelBox}>
+              <div
+                  className={styles.panelBox}
+                  data-product-model3d-panel="true"
+                >
                 <ProductModelViewer
                   slug={data.slug}
                   modelName={data.model}
@@ -649,14 +773,15 @@ export default function ProductDetailClient({
                 />
               ) : (
                 <div className={styles.panelBox}>
-                  当前产品尚未配置公开 2D 零件图。
+                  当前产品尚未配置公开 零件图。
                 </div>
               )}
             </div>
           </div>
         </section>
         {data.faqs && data.faqs.length > 0 ? (
-          <section className={styles.faqSection}>
+<>
+<section className={styles.faqSection}>
             <div className={styles.faqHeader}>
               <h2>{getDbSectionTitle("faq", "常见问题")}</h2>
             </div>
@@ -706,6 +831,9 @@ export default function ProductDetailClient({
               })}
             </div>
           </section>
+
+          <PlungerPumpBottomCta data={data} />
+          </>
         ) : null}
 
       </div>

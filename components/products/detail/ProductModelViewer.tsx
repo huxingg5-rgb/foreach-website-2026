@@ -12,7 +12,7 @@
 ========================================================= */
 
 import { createElement, useEffect, useState } from "react";
-import styles from "./ProductDetail.module.css";
+import styles from "./product-detail.module.css";
 
 type ProductModelViewerProps = {
   /* 当前产品 slug，旧详情页组件会传入 */
@@ -85,7 +85,14 @@ export default function ProductModelViewer({
   }
 
   return (
-    <div className={styles.modelViewerCanvasWrap}>
+    <div
+          className={styles.modelViewerCanvasWrap}
+          style={{
+            width: "100%",
+            height: "100%",
+            minHeight: "100%",
+          }}
+        >
       {createElement("model-viewer", {
         src: modelUrl,
         alt: `${finalProductName} 3D model`,
@@ -96,7 +103,13 @@ export default function ProductModelViewer({
         ar: false,
         loading: "lazy",
         className: styles.modelViewerCanvas,
-      })}
+          style: {
+            display: "block",
+            width: "100%",
+            height: "100%",
+            minHeight: "100%",
+          },
+})}
     </div>
   );
 }
