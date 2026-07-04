@@ -18190,11 +18190,11 @@ export const pumpSeriesDetailRecords = [
           }
         ],
         "resources": {
-          "drawing2dUrl": "",
+          "drawing2dUrl": "/assets/products/tm/2d-drawings/TM-0050UL.pdf",
           "model3dUrl": "",
           "datasheetUrl": "",
           "manualUrl": "",
-          "showDrawing": false,
+          "showDrawing": true,
           "show3D": false,
           "showDatasheet": false,
           "showManual": false,
@@ -18561,11 +18561,11 @@ export const pumpSeriesDetailRecords = [
           }
         ],
         "resources": {
-          "drawing2dUrl": "",
+          "drawing2dUrl": "/assets/products/tm/2d-drawings/TM-0050UL.pdf",
           "model3dUrl": "",
           "datasheetUrl": "",
           "manualUrl": "",
-          "showDrawing": false,
+          "showDrawing": true,
           "show3D": false,
           "showDatasheet": false,
           "showManual": false,
@@ -19029,11 +19029,11 @@ export const pumpSeriesDetailRecords = [
           }
         ],
         "resources": {
-          "drawing2dUrl": "",
+          "drawing2dUrl": "/assets/products/tm/2d-drawings/TM-0100UL.pdf",
           "model3dUrl": "",
           "datasheetUrl": "",
           "manualUrl": "",
-          "showDrawing": false,
+          "showDrawing": true,
           "show3D": false,
           "showDatasheet": false,
           "showManual": false,
@@ -19400,11 +19400,11 @@ export const pumpSeriesDetailRecords = [
           }
         ],
         "resources": {
-          "drawing2dUrl": "",
+          "drawing2dUrl": "/assets/products/tm/2d-drawings/TM-0100UL.pdf",
           "model3dUrl": "",
           "datasheetUrl": "",
           "manualUrl": "",
-          "showDrawing": false,
+          "showDrawing": true,
           "show3D": false,
           "showDatasheet": false,
           "showManual": false,
@@ -19868,11 +19868,11 @@ export const pumpSeriesDetailRecords = [
           }
         ],
         "resources": {
-          "drawing2dUrl": "",
+          "drawing2dUrl": "/assets/products/tm/2d-drawings/TM-0250UL.pdf",
           "model3dUrl": "",
           "datasheetUrl": "",
           "manualUrl": "",
-          "showDrawing": false,
+          "showDrawing": true,
           "show3D": false,
           "showDatasheet": false,
           "showManual": false,
@@ -20239,11 +20239,11 @@ export const pumpSeriesDetailRecords = [
           }
         ],
         "resources": {
-          "drawing2dUrl": "",
+          "drawing2dUrl": "/assets/products/tm/2d-drawings/TM-0250UL.pdf",
           "model3dUrl": "",
           "datasheetUrl": "",
           "manualUrl": "",
-          "showDrawing": false,
+          "showDrawing": true,
           "show3D": false,
           "showDatasheet": false,
           "showManual": false,
@@ -20707,11 +20707,11 @@ export const pumpSeriesDetailRecords = [
           }
         ],
         "resources": {
-          "drawing2dUrl": "",
+          "drawing2dUrl": "/assets/products/tm/2d-drawings/TM-0500UL.pdf",
           "model3dUrl": "",
           "datasheetUrl": "",
           "manualUrl": "",
-          "showDrawing": false,
+          "showDrawing": true,
           "show3D": false,
           "showDatasheet": false,
           "showManual": false,
@@ -21078,11 +21078,11 @@ export const pumpSeriesDetailRecords = [
           }
         ],
         "resources": {
-          "drawing2dUrl": "",
+          "drawing2dUrl": "/assets/products/tm/2d-drawings/TM-0500UL.pdf",
           "model3dUrl": "",
           "datasheetUrl": "",
           "manualUrl": "",
-          "showDrawing": false,
+          "showDrawing": true,
           "show3D": false,
           "showDatasheet": false,
           "showManual": false,
