@@ -12,7 +12,7 @@
 export const pumpSeriesRoutes = [
   {
     "productId": "ea-100-pmma",
-    "slug": "ea-100-pmma",
+    "slug": "",
     "routeSlug": "ea-100-pmma",
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "ea-standard-piston-pumps",
@@ -22,30 +22,8 @@ export const pumpSeriesRoutes = [
     "trailingSlashPolicy": "no_trailing_slash"
   },
   {
-    "productId": "ea-250-pmma",
-    "slug": "ea-250-pmma",
-    "routeSlug": "ea-250-pmma",
-    "pumpTypeSlug": "plunger-pumps",
-    "seriesSlug": "ea-standard-piston-pumps",
-    "canonicalPath": "/products/pumps/plunger-pumps/ea-250-pmma",
-    "detailHref": "/products/pumps/plunger-pumps/ea-250-pmma",
-    "legacyRedirectFrom": "",
-    "trailingSlashPolicy": "no_trailing_slash"
-  },
-  {
-    "productId": "sm-100-pmma",
-    "slug": "sm-100-pmma",
-    "routeSlug": "sm-100-pmma",
-    "pumpTypeSlug": "plunger-pumps",
-    "seriesSlug": "sm-miniature-piston-pumps",
-    "canonicalPath": "/products/pumps/plunger-pumps/sm-100-pmma",
-    "detailHref": "/products/pumps/plunger-pumps/sm-100-pmma",
-    "legacyRedirectFrom": "",
-    "trailingSlashPolicy": "no_trailing_slash"
-  },
-  {
     "productId": "ea-100-peek",
-    "slug": "ea-100-peek",
+    "slug": "",
     "routeSlug": "ea-100-peek",
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "ea-standard-piston-pumps",
@@ -55,8 +33,19 @@ export const pumpSeriesRoutes = [
     "trailingSlashPolicy": "no_trailing_slash"
   },
   {
+    "productId": "ea-250-pmma",
+    "slug": "",
+    "routeSlug": "ea-250-pmma",
+    "pumpTypeSlug": "plunger-pumps",
+    "seriesSlug": "ea-standard-piston-pumps",
+    "canonicalPath": "/products/pumps/plunger-pumps/ea-250-pmma",
+    "detailHref": "/products/pumps/plunger-pumps/ea-250-pmma",
+    "legacyRedirectFrom": "",
+    "trailingSlashPolicy": "no_trailing_slash"
+  },
+  {
     "productId": "ea-250-peek",
-    "slug": "ea-250-peek",
+    "slug": "",
     "routeSlug": "ea-250-peek",
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "ea-standard-piston-pumps",
@@ -66,19 +55,8 @@ export const pumpSeriesRoutes = [
     "trailingSlashPolicy": "no_trailing_slash"
   },
   {
-    "productId": "ea-500-peek",
-    "slug": "ea-500-peek",
-    "routeSlug": "ea-500-peek",
-    "pumpTypeSlug": "plunger-pumps",
-    "seriesSlug": "ea-standard-piston-pumps",
-    "canonicalPath": "/products/pumps/plunger-pumps/ea-500-peek",
-    "detailHref": "/products/pumps/plunger-pumps/ea-500-peek",
-    "legacyRedirectFrom": "",
-    "trailingSlashPolicy": "no_trailing_slash"
-  },
-  {
     "productId": "ea-500-pmma",
-    "slug": "ea-500-pmma",
+    "slug": "",
     "routeSlug": "ea-500-pmma",
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "ea-standard-piston-pumps",
@@ -88,19 +66,19 @@ export const pumpSeriesRoutes = [
     "trailingSlashPolicy": "no_trailing_slash"
   },
   {
-    "productId": "ea-1000-peek",
-    "slug": "ea-1000-peek",
-    "routeSlug": "ea-1000-peek",
+    "productId": "ea-500-peek",
+    "slug": "",
+    "routeSlug": "ea-500-peek",
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "ea-standard-piston-pumps",
-    "canonicalPath": "/products/pumps/plunger-pumps/ea-1000-peek",
-    "detailHref": "/products/pumps/plunger-pumps/ea-1000-peek",
+    "canonicalPath": "/products/pumps/plunger-pumps/ea-500-peek",
+    "detailHref": "/products/pumps/plunger-pumps/ea-500-peek",
     "legacyRedirectFrom": "",
     "trailingSlashPolicy": "no_trailing_slash"
   },
   {
     "productId": "ea-1000-pmma",
-    "slug": "ea-1000-pmma",
+    "slug": "",
     "routeSlug": "ea-1000-pmma",
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "ea-standard-piston-pumps",
@@ -110,19 +88,19 @@ export const pumpSeriesRoutes = [
     "trailingSlashPolicy": "no_trailing_slash"
   },
   {
-    "productId": "ea-2500-peek",
-    "slug": "ea-2500-peek",
-    "routeSlug": "ea-2500-peek",
+    "productId": "ea-1000-peek",
+    "slug": "",
+    "routeSlug": "ea-1000-peek",
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "ea-standard-piston-pumps",
-    "canonicalPath": "/products/pumps/plunger-pumps/ea-2500-peek",
-    "detailHref": "/products/pumps/plunger-pumps/ea-2500-peek",
+    "canonicalPath": "/products/pumps/plunger-pumps/ea-1000-peek",
+    "detailHref": "/products/pumps/plunger-pumps/ea-1000-peek",
     "legacyRedirectFrom": "",
     "trailingSlashPolicy": "no_trailing_slash"
   },
   {
     "productId": "ea-2500-pmma",
-    "slug": "ea-2500-pmma",
+    "slug": "",
     "routeSlug": "ea-2500-pmma",
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "ea-standard-piston-pumps",
@@ -132,19 +110,19 @@ export const pumpSeriesRoutes = [
     "trailingSlashPolicy": "no_trailing_slash"
   },
   {
-    "productId": "ea-5000-peek",
-    "slug": "ea-5000-peek",
-    "routeSlug": "ea-5000-peek",
+    "productId": "ea-2500-peek",
+    "slug": "",
+    "routeSlug": "ea-2500-peek",
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "ea-standard-piston-pumps",
-    "canonicalPath": "/products/pumps/plunger-pumps/ea-5000-peek",
-    "detailHref": "/products/pumps/plunger-pumps/ea-5000-peek",
+    "canonicalPath": "/products/pumps/plunger-pumps/ea-2500-peek",
+    "detailHref": "/products/pumps/plunger-pumps/ea-2500-peek",
     "legacyRedirectFrom": "",
     "trailingSlashPolicy": "no_trailing_slash"
   },
   {
     "productId": "ea-5000-pmma",
-    "slug": "ea-5000-pmma",
+    "slug": "",
     "routeSlug": "ea-5000-pmma",
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "ea-standard-piston-pumps",
@@ -154,19 +132,19 @@ export const pumpSeriesRoutes = [
     "trailingSlashPolicy": "no_trailing_slash"
   },
   {
-    "productId": "ea-10000-peek",
-    "slug": "ea-10000-peek",
-    "routeSlug": "ea-10000-peek",
+    "productId": "ea-5000-peek",
+    "slug": "",
+    "routeSlug": "ea-5000-peek",
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "ea-standard-piston-pumps",
-    "canonicalPath": "/products/pumps/plunger-pumps/ea-10000-peek",
-    "detailHref": "/products/pumps/plunger-pumps/ea-10000-peek",
+    "canonicalPath": "/products/pumps/plunger-pumps/ea-5000-peek",
+    "detailHref": "/products/pumps/plunger-pumps/ea-5000-peek",
     "legacyRedirectFrom": "",
     "trailingSlashPolicy": "no_trailing_slash"
   },
   {
     "productId": "ea-10000-pmma",
-    "slug": "ea-10000-pmma",
+    "slug": "",
     "routeSlug": "ea-10000-pmma",
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "ea-standard-piston-pumps",
@@ -176,8 +154,19 @@ export const pumpSeriesRoutes = [
     "trailingSlashPolicy": "no_trailing_slash"
   },
   {
+    "productId": "ea-10000-peek",
+    "slug": "",
+    "routeSlug": "ea-10000-peek",
+    "pumpTypeSlug": "plunger-pumps",
+    "seriesSlug": "ea-standard-piston-pumps",
+    "canonicalPath": "/products/pumps/plunger-pumps/ea-10000-peek",
+    "detailHref": "/products/pumps/plunger-pumps/ea-10000-peek",
+    "legacyRedirectFrom": "",
+    "trailingSlashPolicy": "no_trailing_slash"
+  },
+  {
     "productId": "sm-50-pmma",
-    "slug": "sm-50-pmma",
+    "slug": "",
     "routeSlug": "sm-50-pmma",
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "sm-miniature-piston-pumps",
@@ -187,8 +176,19 @@ export const pumpSeriesRoutes = [
     "trailingSlashPolicy": "no_trailing_slash"
   },
   {
+    "productId": "sm-100-pmma",
+    "slug": "",
+    "routeSlug": "sm-100-pmma",
+    "pumpTypeSlug": "plunger-pumps",
+    "seriesSlug": "sm-miniature-piston-pumps",
+    "canonicalPath": "/products/pumps/plunger-pumps/sm-100-pmma",
+    "detailHref": "/products/pumps/plunger-pumps/sm-100-pmma",
+    "legacyRedirectFrom": "",
+    "trailingSlashPolicy": "no_trailing_slash"
+  },
+  {
     "productId": "sm-100-peek",
-    "slug": "sm-100-peek",
+    "slug": "",
     "routeSlug": "sm-100-peek",
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "sm-miniature-piston-pumps",
@@ -198,19 +198,8 @@ export const pumpSeriesRoutes = [
     "trailingSlashPolicy": "no_trailing_slash"
   },
   {
-    "productId": "sm-250-peek",
-    "slug": "sm-250-peek",
-    "routeSlug": "sm-250-peek",
-    "pumpTypeSlug": "plunger-pumps",
-    "seriesSlug": "sm-miniature-piston-pumps",
-    "canonicalPath": "/products/pumps/plunger-pumps/sm-250-peek",
-    "detailHref": "/products/pumps/plunger-pumps/sm-250-peek",
-    "legacyRedirectFrom": "",
-    "trailingSlashPolicy": "no_trailing_slash"
-  },
-  {
     "productId": "sm-250-pmma",
-    "slug": "sm-250-pmma",
+    "slug": "",
     "routeSlug": "sm-250-pmma",
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "sm-miniature-piston-pumps",
@@ -220,8 +209,19 @@ export const pumpSeriesRoutes = [
     "trailingSlashPolicy": "no_trailing_slash"
   },
   {
+    "productId": "sm-250-peek",
+    "slug": "",
+    "routeSlug": "sm-250-peek",
+    "pumpTypeSlug": "plunger-pumps",
+    "seriesSlug": "sm-miniature-piston-pumps",
+    "canonicalPath": "/products/pumps/plunger-pumps/sm-250-peek",
+    "detailHref": "/products/pumps/plunger-pumps/sm-250-peek",
+    "legacyRedirectFrom": "",
+    "trailingSlashPolicy": "no_trailing_slash"
+  },
+  {
     "productId": "sm-500-pmma",
-    "slug": "sm-500-pmma",
+    "slug": "",
     "routeSlug": "sm-500-pmma",
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "sm-miniature-piston-pumps",
@@ -232,12 +232,56 @@ export const pumpSeriesRoutes = [
   },
   {
     "productId": "sm-1000-pmma",
-    "slug": "sm-1000-pmma",
+    "slug": "",
     "routeSlug": "sm-1000-pmma",
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "sm-miniature-piston-pumps",
     "canonicalPath": "/products/pumps/plunger-pumps/sm-1000-pmma",
     "detailHref": "/products/pumps/plunger-pumps/sm-1000-pmma",
+    "legacyRedirectFrom": "",
+    "trailingSlashPolicy": "no_trailing_slash"
+  },
+  {
+    "productId": "tm-50-pmma",
+    "slug": "",
+    "routeSlug": "tm-50-pmma",
+    "pumpTypeSlug": "plunger-pumps",
+    "seriesSlug": "tm-ultra-compact-piston-pumps",
+    "canonicalPath": "/products/pumps/plunger-pumps/tm-50-pmma",
+    "detailHref": "/products/pumps/plunger-pumps/tm-50-pmma",
+    "legacyRedirectFrom": "",
+    "trailingSlashPolicy": "no_trailing_slash"
+  },
+  {
+    "productId": "tm-100-pmma",
+    "slug": "",
+    "routeSlug": "tm-100-pmma",
+    "pumpTypeSlug": "plunger-pumps",
+    "seriesSlug": "tm-ultra-compact-piston-pumps",
+    "canonicalPath": "/products/pumps/plunger-pumps/tm-100-pmma",
+    "detailHref": "/products/pumps/plunger-pumps/tm-100-pmma",
+    "legacyRedirectFrom": "",
+    "trailingSlashPolicy": "no_trailing_slash"
+  },
+  {
+    "productId": "tm-250-pmma",
+    "slug": "",
+    "routeSlug": "tm-250-pmma",
+    "pumpTypeSlug": "plunger-pumps",
+    "seriesSlug": "tm-ultra-compact-piston-pumps",
+    "canonicalPath": "/products/pumps/plunger-pumps/tm-250-pmma",
+    "detailHref": "/products/pumps/plunger-pumps/tm-250-pmma",
+    "legacyRedirectFrom": "",
+    "trailingSlashPolicy": "no_trailing_slash"
+  },
+  {
+    "productId": "tm-500-pmma",
+    "slug": "",
+    "routeSlug": "tm-500-pmma",
+    "pumpTypeSlug": "plunger-pumps",
+    "seriesSlug": "tm-ultra-compact-piston-pumps",
+    "canonicalPath": "/products/pumps/plunger-pumps/tm-500-pmma",
+    "detailHref": "/products/pumps/plunger-pumps/tm-500-pmma",
     "legacyRedirectFrom": "",
     "trailingSlashPolicy": "no_trailing_slash"
   }

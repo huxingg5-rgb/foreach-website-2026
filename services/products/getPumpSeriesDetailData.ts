@@ -1,14 +1,15 @@
 ﻿/* =========================================================
    getPumpSeriesDetailData.ts
-   恒永达官网｜泵系列详情页数据服务层
+   鎭掓案杈惧畼缃戯綔娉电郴鍒楄鎯呴〉鏁版嵁鏈嶅姟灞?
+   璇存槑锛?   1. 褰撳墠闃舵璇诲彇 xlsx 瑙ｆ瀽鐢熸垚鐨?generated.ts
+   2. 椤甸潰缁勪欢涓嶇洿鎺ヨ鍙?generated 鏂囦欢
+   3. 鍚庢湡濡傛灉鎺ユ暟鎹簱 / CMS锛屼紭鍏堟敼杩欎釜 service
+   4. 鏈?service 鍙湇鍔′簬娉电郴鍒楋紝涓嶅己鍒舵墿灞曞埌鎺ュご銆侀榾銆佷紶鎰熷櫒绛変骇鍝佺嚎
+   5. generated.ts 浣跨敤 as const锛屽瓧娈典細琚帹鏂垚瀛楅潰閲忕被鍨?      鎵€浠?service 灞傜粺涓€杞垚杩愯鏃舵暟鎹被鍨嬶紝閬垮厤 TypeScript 璇垽
 
-   说明：
-   1. 当前阶段读取 xlsx 解析生成的 generated.ts
-   2. 页面组件不直接读取 generated 文件
-   3. 后期如果接数据库 / CMS，优先改这个 service
-   4. 本 service 只服务于泵系列，不强制扩展到接头、阀、传感器等产品线
-   5. generated.ts 使用 as const，字段会被推断成字面量类型
-      所以 service 层统一转成运行时数据类型，避免 TypeScript 误判
+   鏈淇锛?   1. 璇︽儏椤垫寜 slug + locale 浼樺厛鍙栨暟鎹?   2. 閬垮厤涓枃椤甸潰鎷垮埌鑻辨枃璁板綍
+   3. 涓枃椤甸潰涓嶈兘 fallback 鍒拌嫳鏂?content
+   4. 鑻辨枃椤甸潰鍙互 fallback 鍒颁腑鏂?content锛岄伩鍏嶆湭鏉ヨ嫳鏂囬〉缂烘暟鎹椂 404
 ========================================================= */
 
 import { pumpSeriesDetailRecords } from "@/data/products/generated/pumps/pump-series.detail.generated";
@@ -18,12 +19,10 @@ import { pumpSeriesSelectionCards } from "@/data/products/generated/pumps/pump-s
 export type PumpSeriesLocale = "zh" | "en";
 
 /* =========================================================
-   运行时数据类型
-
-   说明：
-   1. generated 文件来自 xlsx 解析
-   2. 这里先用 any 承接，避免 generated as const 导致类型过窄
-   3. 后续数据结构稳定后，可以再补正式 TypeScript 类型
+   杩愯鏃舵暟鎹被鍨?
+   璇存槑锛?   1. generated 鏂囦欢鏉ヨ嚜 xlsx 瑙ｆ瀽
+   2. 杩欓噷鍏堢敤 any 鎵挎帴锛岄伩鍏?generated as const 瀵艰嚧绫诲瀷杩囩獎
+   3. 鍚庣画鏁版嵁缁撴瀯绋冲畾鍚庯紝鍙互鍐嶈ˉ姝ｅ紡 TypeScript 绫诲瀷
 ========================================================= */
 type PumpRuntimeRecord = any;
 
@@ -32,7 +31,7 @@ const pumpRoutes = pumpSeriesRoutes as readonly PumpRuntimeRecord[];
 const pumpSelectionCards = pumpSeriesSelectionCards as readonly PumpRuntimeRecord[];
 
 /* =========================================================
-   多语言处理
+   澶氳瑷€澶勭悊
 ========================================================= */
 export function normalizePumpSeriesLocale(locale?: string): PumpSeriesLocale {
   if (!locale || locale === "zh" || locale === "zh-CN") {
@@ -42,8 +41,53 @@ export function normalizePumpSeriesLocale(locale?: string): PumpSeriesLocale {
   return "en";
 }
 
+function sameSlug(item: PumpRuntimeRecord, slug: string) {
+  return (
+    item.slug === slug ||
+    item.routeSlug === slug ||
+    item.route?.routeSlug === slug ||
+    item.productId === slug ||
+    item.internalModelRef === slug ||
+    String(item.productId || "").toLowerCase() === slug.toLowerCase() ||
+    String(item.internalModelRef || "").toLowerCase() === slug.toLowerCase()
+  );
+}
+
+function recordHasLocaleContent(record: PumpRuntimeRecord, locale: PumpSeriesLocale) {
+  if (!record) {
+    return false;
+  }
+
+  if (record.locale === locale) {
+    return true;
+  }
+
+  if (record.content?.[locale]) {
+    return true;
+  }
+
+  /*
+    鍏煎鈥渃ontent 宸茬粡鏄綋鍓嶈瑷€鎵佸钩瀵硅薄鈥濈殑 generated 缁撴瀯銆?    涓枃璁板綍閫氬父浼氭湁涓枃 h1 / body / faq锛涜嫳鏂囪褰曢€氬父 locale = en銆?  */
+  if (locale === "zh") {
+    const h1 = String(record.content?.h1 || record.h1 || "");
+    const title = String(record.content?.title || record.title || "");
+    const desc = String(record.content?.body?.description || "");
+
+    return /[\u4e00-\u9fa5]/.test(`${h1}${title}${desc}`);
+  }
+
+  if (locale === "en") {
+    const h1 = String(record.content?.h1 || record.h1 || "");
+    const title = String(record.content?.title || record.title || "");
+
+    return /^[A-Za-z0-9\s碌渭.-]+/.test(`${h1}${title}`) && !/[\u4e00-\u9fa5]/.test(`${h1}${title}`);
+  }
+
+  return false;
+}
+
 /* =========================================================
-   获取所有泵系列路由
+   鑾峰彇鎵€鏈夋车绯诲垪璺敱
 ========================================================= */
 export function getPumpSeriesStaticParams() {
   return pumpRoutes.map((item) => ({
@@ -52,42 +96,80 @@ export function getPumpSeriesStaticParams() {
 }
 
 /* =========================================================
-   根据 slug 获取泵产品详情原始记录
-========================================================= */
-export function getPumpSeriesDetailRecord(slug: string): PumpRuntimeRecord | null {
-  const record = pumpDetailRecords.find((item) => {
-    return (
-      item.slug === slug ||
-      item.routeSlug === slug ||
-      item.route?.routeSlug === slug
-    );
-  });
+   鏍规嵁 slug 鑾峰彇娉典骇鍝佽鎯呭師濮嬭褰?
+   璇存槑锛?   1. 濡傛灉浼犲叆 locale锛屼紭鍏堝尮閰?slug + locale
+   2. 涓嶄紶 locale 鏃讹紝淇濈暀鏃ч€昏緫锛屾寜 slug 鎵剧涓€鏉?========================================================= */
+export function getPumpSeriesDetailRecord(
+  slug: string,
+  locale?: string
+): PumpRuntimeRecord | null {
+  const matchedRecords = pumpDetailRecords.filter((item) => sameSlug(item, slug));
 
-  return record || null;
+  if (matchedRecords.length === 0) {
+    return null;
+  }
+
+  if (!locale) {
+    return matchedRecords[0] || null;
+  }
+
+  const normalizedLocale = normalizePumpSeriesLocale(locale);
+
+  const localeMatchedRecord = matchedRecords.find((item) =>
+    recordHasLocaleContent(item, normalizedLocale)
+  );
+
+  if (localeMatchedRecord) {
+    return localeMatchedRecord;
+  }
+
+  /*
+    涓枃椤甸潰涓嶈兘闅忎究 fallback 鍒拌嫳鏂囷紝鍚﹀垯浼氬嚭鐜颁腑鏂囬〉鑻辨枃鏂囨銆?    濡傛灉鎵句笉鍒颁腑鏂囪褰曪紝杩斿洖绗竴鏉★紝璁?adapter 鍚庣画杩囨护锛涗絾涓嶄富鍔ㄩ€夎嫳鏂囥€?  */
+  if (normalizedLocale === "zh") {
+    const zhLikeRecord = matchedRecords.find((item) => {
+      const text = JSON.stringify(item.content || item);
+      return /[\u4e00-\u9fa5]/.test(text);
+    });
+
+    return zhLikeRecord || matchedRecords[0] || null;
+  }
+
+  /*
+    鑻辨枃椤甸潰鏈潵鍙?fallback 鍒颁换鎰忚褰曪紝閬垮厤鑻辨枃璇︽儏椤垫殏鏈畬鍠勬椂 404銆?  */
+  return matchedRecords[0] || null;
 }
 
 /* =========================================================
-   获取当前语言详情数据
+   鑾峰彇褰撳墠璇█璇︽儏鏁版嵁
 
-   说明：
-   1. content.zh / content.en 来自 xlsx 解析结果
-   2. 页面只拿当前语言的 content
+   璇存槑锛?   1. content.zh / content.en 鏉ヨ嚜 xlsx 瑙ｆ瀽缁撴灉
+   2. 椤甸潰鍙嬁褰撳墠璇█鐨?content
+   3. 涓枃椤甸潰浼樺厛骞朵弗鏍艰鍙栦腑鏂?content
 ========================================================= */
 export function getPumpSeriesDetailData(
   slug: string,
   locale?: string
 ): PumpRuntimeRecord | null {
-  const record = getPumpSeriesDetailRecord(slug);
+  const normalizedLocale = normalizePumpSeriesLocale(locale);
+  const record = getPumpSeriesDetailRecord(slug, normalizedLocale);
 
   if (!record) {
     return null;
   }
 
-  const normalizedLocale = normalizePumpSeriesLocale(locale);
-  const content =
-    record.content?.[normalizedLocale] ||
-    record.content?.en ||
-    record.content?.zh;
+  let content: PumpRuntimeRecord | null = null;
+
+  if (record.content?.[normalizedLocale]) {
+    content = record.content[normalizedLocale];
+  } else if (record.locale === normalizedLocale && record.content) {
+    content = record.content;
+  } else if (normalizedLocale === "zh") {
+    /*
+      涓枃椤甸潰涓嶈兘 fallback 鍒拌嫳鏂囥€?      濡傛灉娌℃湁鏍囧噯 content.zh锛屽氨灏濊瘯浣跨敤褰撳墠 content锛?      鍚庣画 adapter 浼氱户缁繃婊よ嫳鏂囧弬鏁?/ 鑻辨枃鏂囨銆?    */
+    content = record.content?.zh || record.content || null;
+  } else {
+    content = record.content?.en || record.content?.zh || record.content || null;
+  }
 
   if (!content) {
     return null;
@@ -101,13 +183,11 @@ export function getPumpSeriesDetailData(
 }
 
 /* =========================================================
-   生成 metadata
+   鐢熸垚 metadata
 
-   说明：
-   1. titleTag / metaDescription 来自 xlsx
-   2. canonicalPath 来自 xlsx
-   3. H1 不在 metadata 中渲染，H1 由页面组件渲染
-========================================================= */
+   璇存槑锛?   1. titleTag / metaDescription 鏉ヨ嚜 xlsx
+   2. canonicalPath 鏉ヨ嚜 xlsx
+   3. H1 涓嶅湪 metadata 涓覆鏌擄紝H1 鐢遍〉闈㈢粍浠舵覆鏌?========================================================= */
 export function getPumpSeriesMetadata(slug: string, locale?: string) {
   const data = getPumpSeriesDetailData(slug, locale) as PumpRuntimeRecord | null;
 
@@ -135,11 +215,10 @@ export function getPumpSeriesMetadata(slug: string, locale?: string) {
 }
 
 /* =========================================================
-   获取泵系列选型卡片
+   鑾峰彇娉电郴鍒楅€夊瀷鍗＄墖
 
-   说明：
-   1. 选型卡片文案来自 xlsx
-   2. 这里只做语言选择，不创作文案
+   璇存槑锛?   1. 閫夊瀷鍗＄墖鏂囨鏉ヨ嚜 xlsx
+   2. 杩欓噷鍙仛璇█閫夋嫨锛屼笉鍒涗綔鏂囨
 ========================================================= */
 export function getPumpSeriesSelectionCards(locale?: string) {
   const normalizedLocale = normalizePumpSeriesLocale(locale);
@@ -148,14 +227,14 @@ export function getPumpSeriesSelectionCards(locale?: string) {
     ...card,
     content:
       card.content?.[normalizedLocale] ||
-      card.content?.en ||
+      (normalizedLocale === "zh" ? card.content?.zh : card.content?.en) ||
       card.content?.zh ||
       {},
   }));
 }
 
 /* =========================================================
-   按泵类型获取选型卡片
+   鎸夋车绫诲瀷鑾峰彇閫夊瀷鍗＄墖
 ========================================================= */
 export function getPumpSeriesSelectionCardsByType(
   pumpTypeSlug: string,
@@ -167,10 +246,8 @@ export function getPumpSeriesSelectionCardsByType(
 }
 
 /* =========================================================
-   按泵类型获取静态路由参数
-
-   示例：
-   pumpTypeSlug = plunger-pumps
+   鎸夋车绫诲瀷鑾峰彇闈欐€佽矾鐢卞弬鏁?
+   绀轰緥锛?   pumpTypeSlug = plunger-pumps
 ========================================================= */
 export function getPumpSeriesStaticParamsByType(pumpTypeSlug: string) {
   return pumpRoutes
@@ -181,10 +258,9 @@ export function getPumpSeriesStaticParamsByType(pumpTypeSlug: string) {
 }
 
 /* =========================================================
-   按泵类型获取带系列层级的静态路由参数
-
-   数据库预览路由结构：
-   /products/pumps-db/[pumpTypeSlug]/[seriesSlug]/[slug]
+   鎸夋车绫诲瀷鑾峰彇甯︾郴鍒楀眰绾х殑闈欐€佽矾鐢卞弬鏁?
+   鏁版嵁搴撻瑙堣矾鐢辩粨鏋勶細
+   /products/pumps/plunger-pumps/[slug]
 ========================================================= */
 export function getPumpSeriesStaticParamsByTypeWithSeries(pumpTypeSlug: string) {
   return pumpRoutes

@@ -1,222 +1,298 @@
+﻿/* =========================================================
+   apply-pump-series-faq-scope.js
+
+   作用：
+   1. 读取 data-source/product-center/pumps/FOREACH_泵系列_产品数据源.xlsx 的 12_FAQ
+   2. 按 scope 规则把 FAQ 应用到详情页 generated 数据
+   3. 支持 pumpType / series / product 三种层级
+   4. 不重新创作 FAQ，只使用 Excel 里已有 question / answer
+========================================================= */
+
 const fs = require("fs");
 const path = require("path");
 const XLSX = require("xlsx");
 
 const root = process.cwd();
 
-const xlsxFile = path.join(
+const sourceWorkbookPath = path.join(
   root,
-  "data-source/product-center/pumps/FOREACH_泵系列_产品数据源.xlsx"
+  "data-source",
+  "product-center",
+  "pumps",
+  "FOREACH_泵系列_产品数据源.xlsx"
 );
 
-const detailFile = path.join(
+const detailGeneratedPath = path.join(
   root,
-  "data/products/generated/pumps/pump-series.detail.generated.ts"
+  "data",
+  "products",
+  "generated",
+  "pumps",
+  "pump-series.detail.generated.ts"
 );
 
-if (!fs.existsSync(xlsxFile)) {
-  throw new Error("未找到 xlsx 数据源：" + xlsxFile);
-}
-
-if (!fs.existsSync(detailFile)) {
-  throw new Error("未找到 generated detail 文件：" + detailFile);
-}
-
-function text(value) {
+function toText(value) {
   return String(value || "").trim();
 }
 
-function yes(value) {
-  const v = text(value).toLowerCase();
-  return !v || v === "yes" || v === "true" || v === "1";
+function normalizeKey(value) {
+  return toText(value).toLowerCase();
 }
 
-function normalizeScope(value) {
-  const scope = text(value).toLowerCase();
+function readSheetRows(workbook, sheetName) {
+  const sheet = workbook.Sheets[sheetName];
 
-  if (!scope) return "product";
-  if (scope === "product") return "product";
-  if (scope === "series") return "series";
-  if (scope === "global") return "global";
-  if (scope === "pumptype") return "pumpType";
-  if (scope === "producttype") return "pumpType";
+  if (!sheet) {
+    return [];
+  }
 
-  return scope;
+  const rows = XLSX.utils.sheet_to_json(sheet, {
+    defval: "",
+    raw: false,
+  });
+
+  return rows;
 }
 
-function getRecordValue(record, keys) {
-  for (const key of keys) {
-    const parts = key.split(".");
-    let current = record;
+function isVisible(value) {
+  const text = toText(value);
 
-    for (const part of parts) {
-      if (!current || typeof current !== "object") {
-        current = null;
-        break;
-      }
+  return text === "是" || text.toLowerCase() === "true" || text === "1";
+}
 
-      current = current[part];
+function parseFaqRows() {
+  const workbook = XLSX.readFile(sourceWorkbookPath);
+  const rows = readSheetRows(workbook, "12_FAQ");
+
+  return rows
+    .map((row) => ({
+      faqId: toText(row.faqId),
+      locale: normalizeKey(row.locale || "zh"),
+      scope: normalizeKey(row.scope),
+      pumpTypeSlug: normalizeKey(row.pumpTypeSlug),
+      seriesSlug: normalizeKey(row.seriesSlug),
+      productId: normalizeKey(row.productId),
+      question: toText(row.question),
+      answer: toText(row.answer),
+      frontVisible: row.frontVisible,
+      sort: Number(row.sort || 0),
+    }))
+    .filter((item) => {
+      return (
+        item.locale &&
+        item.scope &&
+        item.question &&
+        item.answer &&
+        isVisible(item.frontVisible)
+      );
+    })
+    .sort((a, b) => a.sort - b.sort);
+}
+
+function extractArraySource(text) {
+  const marker = "pumpSeriesDetailRecords";
+  const markerIndex = text.indexOf(marker);
+
+  if (markerIndex < 0) {
+    throw new Error("未找到 pumpSeriesDetailRecords");
+  }
+
+  const arrayStart = text.indexOf("[", markerIndex);
+
+  if (arrayStart < 0) {
+    throw new Error("未找到 records 数组开始位置");
+  }
+
+  let depth = 0;
+  let inString = false;
+  let escapeNext = false;
+
+  for (let i = arrayStart; i < text.length; i += 1) {
+    const char = text[i];
+
+    if (escapeNext) {
+      escapeNext = false;
+      continue;
     }
 
-    if (text(current)) {
-      return text(current);
+    if (char === "\\") {
+      escapeNext = true;
+      continue;
+    }
+
+    if (char === '"') {
+      inString = !inString;
+      continue;
+    }
+
+    if (!inString && char === "[") {
+      depth += 1;
+    }
+
+    if (!inString && char === "]") {
+      depth -= 1;
+
+      if (depth === 0) {
+        return {
+          before: text.slice(0, arrayStart),
+          arraySource: text.slice(arrayStart, i + 1),
+          after: text.slice(i + 1),
+        };
+      }
     }
   }
 
-  return "";
+  throw new Error("records 数组提取失败");
 }
 
-function getRecordIdentity(record) {
-  const productId = getRecordValue(record, [
-    "productId",
-    "slug",
-    "routeSlug",
-    "index.productId",
-    "index.slug",
-    "index.routeSlug",
-    "route.productId",
-    "route.slug",
-    "route.routeSlug",
-  ]);
+function getRecordLocaleEntries(record) {
+  const content = record.content || {};
 
-  const pumpTypeSlug = getRecordValue(record, [
-    "pumpTypeSlug",
-    "index.pumpTypeSlug",
-    "route.pumpTypeSlug",
-  ]);
+  if (content.zh || content.en) {
+    return [
+      content.zh ? ["zh", content.zh] : null,
+      content.en ? ["en", content.en] : null,
+    ].filter(Boolean);
+  }
 
-  const seriesSlug = getRecordValue(record, [
-    "seriesSlug",
-    "index.seriesSlug",
-    "route.seriesSlug",
-  ]);
+  const locale = normalizeKey(record.locale || "zh");
 
-  return {
-    productId,
-    pumpTypeSlug,
-    seriesSlug,
-  };
+  return [[locale, content]];
 }
 
-function faqAppliesToProduct(faq, identity) {
-  const scope = normalizeScope(faq.scope);
+function getRecordProductId(record, content) {
+  return normalizeKey(
+    record.productId ||
+      record.internalModelRef ||
+      content?.hero?.displayModel ||
+      record.slug ||
+      record.routeSlug
+  );
+}
 
-  if (!yes(faq.enabled)) {
+function getRecordSeriesSlug(record) {
+  return normalizeKey(record.seriesSlug || record.route?.seriesSlug);
+}
+
+function getRecordPumpTypeSlug(record) {
+  return normalizeKey(record.pumpTypeSlug || record.route?.pumpTypeSlug);
+}
+
+function matchFaqToRecord(faq, record, content, locale) {
+  if (faq.locale !== locale) {
     return false;
   }
 
-  if (scope === "global") {
-    return true;
+  const recordPumpTypeSlug = getRecordPumpTypeSlug(record);
+  const recordSeriesSlug = getRecordSeriesSlug(record);
+  const recordProductId = getRecordProductId(record, content);
+
+  if (faq.scope === "pumpType".toLowerCase() || faq.scope === "pumptype") {
+    return faq.pumpTypeSlug && faq.pumpTypeSlug === recordPumpTypeSlug;
   }
 
-  if (scope === "pumpType") {
-    return text(faq.pumpTypeSlug) === text(identity.pumpTypeSlug);
+  if (faq.scope === "series") {
+    return (
+      faq.pumpTypeSlug &&
+      faq.seriesSlug &&
+      faq.pumpTypeSlug === recordPumpTypeSlug &&
+      faq.seriesSlug === recordSeriesSlug
+    );
   }
 
-  if (scope === "series") {
-    return text(faq.seriesSlug) === text(identity.seriesSlug);
-  }
-
-  if (scope === "product") {
-    return text(faq.productId) === text(identity.productId);
+  if (faq.scope === "product") {
+    return faq.productId && faq.productId === recordProductId;
   }
 
   return false;
 }
 
-function toFaqItems(faqRows, locale) {
-  const items = [];
+function buildFaqsForRecord(faqRows, record, content, locale) {
+  const matched = faqRows
+    .filter((faq) => matchFaqToRecord(faq, record, content, locale))
+    .map((faq) => ({
+      question: faq.question,
+      answer: faq.answer,
+    }));
 
-  for (const row of faqRows) {
-    const question =
-      locale === "en" ? text(row.questionEn) : text(row.questionZh);
-    const answer =
-      locale === "en" ? text(row.answerEn) : text(row.answerZh);
+  const seen = new Set();
 
-    if (!question || !answer) {
-      continue;
+  return matched.filter((item) => {
+    const key = `${item.question}::${item.answer}`;
+
+    if (seen.has(key)) {
+      return false;
     }
 
-    items.push({
-      question,
-      answer,
+    seen.add(key);
+    return true;
+  });
+}
+
+const faqRows = parseFaqRows();
+
+const detailText = fs.readFileSync(detailGeneratedPath, "utf8");
+const { before, arraySource, after } = extractArraySource(detailText);
+const records = JSON.parse(arraySource);
+
+let zhApplied = 0;
+let enApplied = 0;
+
+const nextRecords = records.map((record) => {
+  const nextRecord = { ...record };
+
+  const localeEntries = getRecordLocaleEntries(nextRecord);
+
+  if (nextRecord.content?.zh || nextRecord.content?.en) {
+    nextRecord.content = { ...nextRecord.content };
+
+    localeEntries.forEach(([locale, content]) => {
+      const faqs = buildFaqsForRecord(faqRows, nextRecord, content, locale);
+
+      if (faqs.length > 0) {
+        nextRecord.content[locale] = {
+          ...content,
+          faqs,
+        };
+
+        if (locale === "zh") {
+          zhApplied += 1;
+        } else {
+          enApplied += 1;
+        }
+      }
     });
+
+    return nextRecord;
   }
 
-  const map = new Map();
+  const locale = normalizeKey(nextRecord.locale || "zh");
+  const faqs = buildFaqsForRecord(faqRows, nextRecord, nextRecord.content, locale);
 
-  for (const item of items) {
-    const key = `${item.question}||${item.answer}`;
+  if (faqs.length > 0) {
+    nextRecord.content = {
+      ...(nextRecord.content || {}),
+      faqs,
+    };
 
-    if (!map.has(key)) {
-      map.set(key, item);
+    if (locale === "zh") {
+      zhApplied += 1;
+    } else {
+      enApplied += 1;
     }
   }
 
-  return Array.from(map.values());
-}
+  return nextRecord;
+});
 
-const wb = XLSX.readFile(xlsxFile);
-const faqSheet = wb.Sheets["12_FAQ"];
+const output =
+  before +
+  JSON.stringify(nextRecords, null, 2) +
+  after;
 
-if (!faqSheet) {
-  throw new Error("未找到 12_FAQ sheet");
-}
+fs.writeFileSync(detailGeneratedPath, output, "utf8");
 
-const faqRows = XLSX.utils.sheet_to_json(faqSheet, { defval: "" });
-
-const source = fs.readFileSync(detailFile, "utf8");
-
-const match = source.match(
-  /export const pumpSeriesDetailRecords = ([\s\S]*?) as const;?/
-);
-
-if (!match) {
-  throw new Error("未找到 pumpSeriesDetailRecords 导出");
-}
-
-const records = JSON.parse(match[1]);
-
-let fixedProductCount = 0;
-
-for (const record of records) {
-  const identity = getRecordIdentity(record);
-
-  if (!identity.productId) {
-    continue;
-  }
-
-  const matchedFaqRows = faqRows
-    .filter((faq) => faqAppliesToProduct(faq, identity))
-    .sort((a, b) => Number(a.sort || 9999) - Number(b.sort || 9999));
-
-  if (!record.content || typeof record.content !== "object") {
-    continue;
-  }
-
-  if (record.content.zh) {
-    record.content.zh.faqs = toFaqItems(matchedFaqRows, "zh");
-  }
-
-  if (record.content.en) {
-    record.content.en.faqs = toFaqItems(matchedFaqRows, "en");
-  }
-
-  fixedProductCount += 1;
-}
-
-const nextSource =
-  "/* =========================================================\n" +
-  "   pump-series.detail.generated.ts\n" +
-  "   由 scripts/products/build-pump-series-data.js 自动生成\n" +
-  "   FAQ 已通过 apply-pump-series-faq-scope.js 按 scope/productId 过滤\n" +
-  "========================================================= */\n\n" +
-  "export const pumpSeriesDetailRecords = " +
-  JSON.stringify(records, null, 2) +
-  " as const;\n";
-
-fs.writeFileSync(detailFile, nextSource, "utf8");
-
-console.log("✅ 已按 FAQ scope / productId 重新过滤 generated FAQ");
-console.log("FAQ 源行数：" + faqRows.length);
-console.log("处理产品数：" + fixedProductCount);
+console.log("FAQ scope 应用完成");
+console.log("FAQ 行数：", faqRows.length);
+console.log("写入中文详情记录数：", zhApplied);
+console.log("写入英文详情记录数：", enApplied);

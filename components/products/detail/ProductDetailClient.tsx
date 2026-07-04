@@ -473,7 +473,7 @@ export default function ProductDetailClient({
               <div data-product-model-row="true" className={styles.modelLine}>
                 <div className={styles.modelCodeWrap}>
                   <span className={styles.modelLabel}>型号：</span>
-                  <span className={styles.modelCode}>{data.model}</span>
+                  <span className={styles.modelCode}>{(data as any).displayModel || data.model}</span>
                 </div>
 
                 {data.showConfigurator ? (
