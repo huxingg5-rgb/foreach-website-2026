@@ -91,6 +91,113 @@ function splitChineseSemicolon(value) {
     .filter(Boolean);
 }
 
+
+/**
+ * 通用列表拆分。
+ * 支持 |、中文分号、英文分号、顿号、逗号。
+ */
+function splitList(value) {
+  return cleanText(value)
+    .split(/[|；;、，,]/)
+    .map((item) => item.trim())
+    .filter(Boolean);
+}
+
+/**
+ * 同一个 productId 可能同时存在 zh / en 两行。
+ * 不能只用 productId 建 Map，否则后面的英文行会覆盖中文行。
+ */
+function pickLocaleRow(rows, productId, locale) {
+  const id = cleanText(productId);
+
+  const exact = rows.find((row) => {
+    return cleanText(row.productId) === id && cleanText(row.locale) === locale;
+  });
+
+  if (exact) return exact;
+
+  const noLocale = rows.find((row) => {
+    return cleanText(row.productId) === id && !cleanText(row.locale);
+  });
+
+  if (noLocale) return noLocale;
+
+  return rows.find((row) => cleanText(row.productId) === id) || {};
+}
+
+/**
+ * 从 08_详情页正文 中提取 commonApplications。
+ * 优先读取明确字段；如果没有 commonApplications，就从“应用 / 场景 / 用途 / 任务 / 液路”等字段提取。
+ */
+function getBodyApplications(body, locale) {
+  const explicitKeys = [
+    "commonApplications",
+    "applications",
+    "application",
+    "applicationScenarios",
+    "applicationTasks",
+    "fluidicApplications",
+    "fluidicTasks",
+    "typicalApplications",
+    "useCases",
+    "liquidHandlingTasks"
+  ];
+
+  for (const key of explicitKeys) {
+    const value = getLocalized(body, key, locale);
+    const list = splitList(value);
+    if (list.length > 0) return list;
+  }
+
+  const applicationKeyPatterns = [
+    /commonapplications/i,
+    /applications?/i,
+    /usecases?/i,
+    /fluidic/i,
+    /liquid/i,
+    /应用/,
+    /场景/,
+    /用途/,
+    /任务/,
+    /液路/,
+    /适用/
+  ];
+
+  const blockedKeyPatterns = [
+    /productid/i,
+    /model/i,
+    /locale/i,
+    /description/i,
+    /advantages/i,
+    /notice/i,
+    /note/i,
+    /enabled/i,
+    /visible/i,
+    /sort/i,
+    /备注/,
+    /说明/,
+    /正文/,
+    /优势/,
+    /提示/
+  ];
+
+  for (const [key, value] of Object.entries(body || {})) {
+    const keyText = cleanText(key);
+    if (!keyText) continue;
+
+    const blocked = blockedKeyPatterns.some((pattern) => pattern.test(keyText));
+    if (blocked) continue;
+
+    const matched = applicationKeyPatterns.some((pattern) => pattern.test(keyText));
+    if (!matched) continue;
+
+    const list = splitList(value);
+    if (list.length > 0) return list;
+  }
+
+  return [];
+}
+
 function readWorkbook(filePath) {
   return XLSX.readFile(filePath);
 }
@@ -424,10 +531,10 @@ function main() {
     const pumpTypeSlug = cleanText(product.pumpTypeSlug || product.productTypeSlug);
     const rule = ruleMap.get(pumpTypeSlug) || {};
     const route = routeMap.get(productId) || {};
-    const hero = heroMap.get(productId) || {};
+    const hero = pickLocaleRow(heroRows, productId, locale);
     const seoCandidateRows = getLocaleRows(seoRows, productId, locale);
     const seo = seoCandidateRows[0] || (seoByProduct.get(productId) || [])[0] || {};
-    const body = bodyMap.get(productId) || {};
+    const body = pickLocaleRow(bodyRows, productId, locale);
     const resource = resourceMap.get(productId) || {};
     const selector = selectorMap.get(pumpTypeSlug) || {};
 
@@ -562,8 +669,8 @@ function main() {
       },
       body: {
         description: getLocalized(body, "description", locale),
-        advantages: splitPipe(getLocalized(body, "advantages", locale)),
-        commonApplications: splitPipe(getLocalized(body, "commonApplications", locale)),
+        advantages: splitList(getLocalized(body, "advantages", locale)),
+        commonApplications: getBodyApplications(body, locale),
       },
       sections,
       parameters,

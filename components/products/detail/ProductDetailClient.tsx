@@ -66,6 +66,23 @@ function getProductDrawingPreviewUrl(slug: string, configuredUrl?: string) {
     ".pdf#toolbar=0&navpanes=0&scrollbar=1"
   );
 }
+
+function isPlungerPumpDisplayModel(value: unknown): boolean {
+  const model = String(value || "").trim();
+
+  return /^(EA|SM|TM)-/i.test(model);
+}
+
+function getDisplayModelText(data: any): string {
+  const displayModel = (data as any).displayModel || data.model;
+
+  if (isPlungerPumpDisplayModel(displayModel)) {
+    return "定制配置请联系我们";
+  }
+
+  return displayModel;
+}
+
 export default function ProductDetailClient({
   data,
 }: ProductDetailClientProps) {
@@ -473,7 +490,7 @@ export default function ProductDetailClient({
               <div data-product-model-row="true" className={styles.modelLine}>
                 <div className={styles.modelCodeWrap}>
                   <span className={styles.modelLabel}>型号：</span>
-                  <span className={styles.modelCode}>{(data as any).displayModel || data.model}</span>
+                  <span className={styles.modelCode}>{getDisplayModelText(data)}</span>
                 </div>
 
                 {data.showConfigurator ? (

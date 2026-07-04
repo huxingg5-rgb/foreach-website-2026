@@ -24,7 +24,7 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "100 µL PMMA Pump Head Standard Plunger Pump",
+        "title": "100 μL PMMA 泵头常规柱塞泵",
         "h1": "100 μL PMMA 泵头常规柱塞泵",
         "seo": {
           "titleTag": "EA-100-PMMA 常规柱塞泵｜100 μL PMMA 精密液体分配泵｜FOREACH 恒永达",
@@ -38,7 +38,7 @@ export const pumpSeriesDetailRecords = [
           "detailMode": "custom_inquiry",
           "showModel": false,
           "displayModel": "EA-100-PMMA",
-          "customNotice": "Plunger pumps are custom-engineered products. The page model is for preliminary selection, technical communication, and quotation reference. Final pump head material, piston material, interface, valve configuration, optical feedback, and control method should be confirmed according to the application.",
+          "customNotice": "柱塞泵为定制化产品。页面型号用于初步选型、技术沟通和报价识别，最终泵头材质、柱塞材质、接口方式、阀体搭配、光耦反馈和控制方式需根据实际应用确认。",
           "primaryButtonText": "",
           "primaryButtonHref": "/contact",
           "secondaryButtonText": "",
@@ -47,11 +47,23 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "EA-100-PMMA is a custom-engineered 100 µL PMMA pump head standard plunger pump for micro-reagent dispensing, small-volume sample handling, reagent replenishment, and automated testing fluidics. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "description": "该 100 μL 聚甲基丙烯酸甲酯（PMMA）展示配置适用于体外诊断（IVD）分析仪、小型反应模块和自动化检测设备中的微量液体处理场景，可用于低容量液体分配、反应液补加和小体积样本处理。实际项目可根据液体兼容性、结构空间和系统集成需求进一步确认泵头材质、柱塞材质及其他配置。",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "100 μL 容量展示配置",
+            "便于初步选型",
+            "PMMA 泵头展示配置",
+            "可按应用评估更多材料",
+            "支持接口",
+            "阀体",
+            "控制器和光耦反馈等组合确认"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "液体吸排",
+            "精密分配",
+            "转移",
+            "反应液补加",
+            "清洗液或缓冲液定量输送"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -428,9 +440,17 @@ export const pumpSeriesDetailRecords = [
         "body": {
           "description": "EA-100-PMMA is a custom-engineered 100 µL PMMA pump head standard plunger pump for micro-reagent dispensing, small-volume sample handling, reagent replenishment, and automated testing fluidics. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "Preliminary model identification",
+            "configurable material and interface",
+            "engineering confirmation for final configuration"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "Aspiration",
+            "precision dispensing",
+            "transfer",
+            "reagent addition",
+            "wash/buffer dosing"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -879,7 +899,7 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "100 µL PEEK Pump Head Standard Plunger Pump",
+        "title": "100 μL PEEK 泵头常规柱塞泵",
         "h1": "100 μL PEEK 泵头常规柱塞泵",
         "seo": {
           "titleTag": "EA-100-PEEK 常规柱塞泵｜100 μL PEEK 精密液体分配泵｜FOREACH 恒永达",
@@ -893,7 +913,7 @@ export const pumpSeriesDetailRecords = [
           "detailMode": "custom_inquiry",
           "showModel": false,
           "displayModel": "EA-100-PEEK",
-          "customNotice": "Plunger pumps are custom-engineered products. The page model is for preliminary selection, technical communication, and quotation reference. Final pump head material, piston material, interface, valve configuration, optical feedback, and control method should be confirmed according to the application.",
+          "customNotice": "柱塞泵为定制化产品。页面型号用于初步选型、技术沟通和报价识别，最终泵头材质、柱塞材质、接口方式、阀体搭配、光耦反馈和控制方式需根据实际应用确认。",
           "primaryButtonText": "",
           "primaryButtonHref": "/contact",
           "secondaryButtonText": "",
@@ -902,11 +922,23 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "EA-100-PEEK is a custom-engineered 100 µL PEEK pump head standard plunger pump for micro-reagent dispensing, small-volume sample handling, reagent replenishment, and automated testing fluidics. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "description": "该 100 μL 聚醚醚酮（PEEK）展示配置适用于对避光、液体兼容性或长期稳定性要求更高的微量液体处理场景，可用于分子诊断、生命科学样本处理、特殊试剂分配和小体积反应体系构建。实际项目可根据液体特性、结构空间和系统集成方式进一步确认完整配置。",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "100 μL 容量展示配置",
+            "便于初步选型",
+            "PEEK 泵头展示配置",
+            "可按应用评估更多材料",
+            "支持接口",
+            "阀体",
+            "控制器和光耦反馈等组合确认"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "液体吸排",
+            "精密分配",
+            "转移",
+            "反应液补加",
+            "清洗液或缓冲液定量输送"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -1283,9 +1315,17 @@ export const pumpSeriesDetailRecords = [
         "body": {
           "description": "EA-100-PEEK is a custom-engineered 100 µL PEEK pump head standard plunger pump for micro-reagent dispensing, small-volume sample handling, reagent replenishment, and automated testing fluidics. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "Preliminary model identification",
+            "configurable material and interface",
+            "engineering confirmation for final configuration"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "Aspiration",
+            "precision dispensing",
+            "transfer",
+            "reagent addition",
+            "wash/buffer dosing"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -1734,7 +1774,7 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "250 µL PMMA Pump Head Standard Plunger Pump",
+        "title": "250 μL PMMA 泵头常规柱塞泵",
         "h1": "250 μL PMMA 泵头常规柱塞泵",
         "seo": {
           "titleTag": "EA-250-PMMA 常规柱塞泵｜250 μL PMMA 精密液体分配泵｜FOREACH 恒永达",
@@ -1748,7 +1788,7 @@ export const pumpSeriesDetailRecords = [
           "detailMode": "custom_inquiry",
           "showModel": false,
           "displayModel": "EA-250-PMMA",
-          "customNotice": "Plunger pumps are custom-engineered products. The page model is for preliminary selection, technical communication, and quotation reference. Final pump head material, piston material, interface, valve configuration, optical feedback, and control method should be confirmed according to the application.",
+          "customNotice": "柱塞泵为定制化产品。页面型号用于初步选型、技术沟通和报价识别，最终泵头材质、柱塞材质、接口方式、阀体搭配、光耦反馈和控制方式需根据实际应用确认。",
           "primaryButtonText": "",
           "primaryButtonHref": "/contact",
           "secondaryButtonText": "",
@@ -1757,11 +1797,23 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "EA-250-PMMA is a custom-engineered 250 µL PMMA pump head standard plunger pump for micro-reagent dispensing, small-volume sample handling, reagent replenishment, and automated testing fluidics. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "description": "该 250 μL 聚甲基丙烯酸甲酯（PMMA）展示配置适用于体外诊断（IVD）、生化分析、免疫分析和实验室自动化设备中的常规液体分配与反应液处理场景，可用于样本稀释、试剂分配模块和中小体积反应体系构建。",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "250 μL 容量展示配置",
+            "便于初步选型",
+            "PMMA 泵头展示配置",
+            "可按应用评估更多材料",
+            "支持接口",
+            "阀体",
+            "控制器和光耦反馈等组合确认"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "液体吸排",
+            "精密分配",
+            "转移",
+            "反应液补加",
+            "清洗液或缓冲液定量输送"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -2138,9 +2190,17 @@ export const pumpSeriesDetailRecords = [
         "body": {
           "description": "EA-250-PMMA is a custom-engineered 250 µL PMMA pump head standard plunger pump for micro-reagent dispensing, small-volume sample handling, reagent replenishment, and automated testing fluidics. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "Preliminary model identification",
+            "configurable material and interface",
+            "engineering confirmation for final configuration"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "Aspiration",
+            "precision dispensing",
+            "transfer",
+            "reagent addition",
+            "wash/buffer dosing"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -2589,7 +2649,7 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "250 µL PEEK Pump Head Standard Plunger Pump",
+        "title": "250 μL PEEK 泵头常规柱塞泵",
         "h1": "250 μL PEEK 泵头常规柱塞泵",
         "seo": {
           "titleTag": "EA-250-PEEK 常规柱塞泵｜250 μL PEEK 精密液体分配泵｜FOREACH 恒永达",
@@ -2603,7 +2663,7 @@ export const pumpSeriesDetailRecords = [
           "detailMode": "custom_inquiry",
           "showModel": false,
           "displayModel": "EA-250-PEEK",
-          "customNotice": "Plunger pumps are custom-engineered products. The page model is for preliminary selection, technical communication, and quotation reference. Final pump head material, piston material, interface, valve configuration, optical feedback, and control method should be confirmed according to the application.",
+          "customNotice": "柱塞泵为定制化产品。页面型号用于初步选型、技术沟通和报价识别，最终泵头材质、柱塞材质、接口方式、阀体搭配、光耦反馈和控制方式需根据实际应用确认。",
           "primaryButtonText": "",
           "primaryButtonHref": "/contact",
           "secondaryButtonText": "",
@@ -2612,11 +2672,23 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "EA-250-PEEK is a custom-engineered 250 µL PEEK pump head standard plunger pump for micro-reagent dispensing, small-volume sample handling, reagent replenishment, and automated testing fluidics. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "description": "该 250 μL 聚醚醚酮（PEEK）展示配置适用于特殊试剂分配、避光试剂输送和对材料兼容性要求较高的中小体积液路模块，可用于分子检测、生命科学分析、化学分析设备和高稳定性试剂处理场景。",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "250 μL 容量展示配置",
+            "便于初步选型",
+            "PEEK 泵头展示配置",
+            "可按应用评估更多材料",
+            "支持接口",
+            "阀体",
+            "控制器和光耦反馈等组合确认"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "液体吸排",
+            "精密分配",
+            "转移",
+            "反应液补加",
+            "清洗液或缓冲液定量输送"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -2993,9 +3065,17 @@ export const pumpSeriesDetailRecords = [
         "body": {
           "description": "EA-250-PEEK is a custom-engineered 250 µL PEEK pump head standard plunger pump for micro-reagent dispensing, small-volume sample handling, reagent replenishment, and automated testing fluidics. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "Preliminary model identification",
+            "configurable material and interface",
+            "engineering confirmation for final configuration"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "Aspiration",
+            "precision dispensing",
+            "transfer",
+            "reagent addition",
+            "wash/buffer dosing"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -3444,7 +3524,7 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "500 µL PMMA Pump Head Standard Plunger Pump",
+        "title": "500 μL PMMA 泵头常规柱塞泵",
         "h1": "500 μL PMMA 泵头常规柱塞泵",
         "seo": {
           "titleTag": "EA-500-PMMA 常规柱塞泵｜500 μL PMMA 精密液体分配泵｜FOREACH 恒永达",
@@ -3458,7 +3538,7 @@ export const pumpSeriesDetailRecords = [
           "detailMode": "custom_inquiry",
           "showModel": false,
           "displayModel": "EA-500-PMMA",
-          "customNotice": "Plunger pumps are custom-engineered products. The page model is for preliminary selection, technical communication, and quotation reference. Final pump head material, piston material, interface, valve configuration, optical feedback, and control method should be confirmed according to the application.",
+          "customNotice": "柱塞泵为定制化产品。页面型号用于初步选型、技术沟通和报价识别，最终泵头材质、柱塞材质、接口方式、阀体搭配、光耦反馈和控制方式需根据实际应用确认。",
           "primaryButtonText": "",
           "primaryButtonHref": "/contact",
           "secondaryButtonText": "",
@@ -3467,11 +3547,23 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "EA-500-PMMA is a custom-engineered 500 µL PMMA pump head standard plunger pump for routine reagent transfer, sample dilution, reaction liquid handling, and laboratory automation fluidic modules. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "description": "该 500 μL 聚甲基丙烯酸甲酯（PMMA）展示配置适用于自动化分析仪器中的常规试剂输送、反应液处理、样本稀释和缓冲液定量分配场景。该量程适合主流体外诊断（IVD）和实验室自动化设备中的中等体积液体处理任务。",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "500 μL 容量展示配置",
+            "便于初步选型",
+            "PMMA 泵头展示配置",
+            "可按应用评估更多材料",
+            "支持接口",
+            "阀体",
+            "控制器和光耦反馈等组合确认"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "液体吸排",
+            "精密分配",
+            "转移",
+            "反应液补加",
+            "清洗液或缓冲液定量输送"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -3848,9 +3940,17 @@ export const pumpSeriesDetailRecords = [
         "body": {
           "description": "EA-500-PMMA is a custom-engineered 500 µL PMMA pump head standard plunger pump for routine reagent transfer, sample dilution, reaction liquid handling, and laboratory automation fluidic modules. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "Preliminary model identification",
+            "configurable material and interface",
+            "engineering confirmation for final configuration"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "Aspiration",
+            "precision dispensing",
+            "transfer",
+            "reagent addition",
+            "wash/buffer dosing"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -4299,7 +4399,7 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "500 µL PEEK Pump Head Standard Plunger Pump",
+        "title": "500 μL PEEK 泵头常规柱塞泵",
         "h1": "500 μL PEEK 泵头常规柱塞泵",
         "seo": {
           "titleTag": "EA-500-PEEK 常规柱塞泵｜500 μL PEEK 精密液体分配泵｜FOREACH 恒永达",
@@ -4313,7 +4413,7 @@ export const pumpSeriesDetailRecords = [
           "detailMode": "custom_inquiry",
           "showModel": false,
           "displayModel": "EA-500-PEEK",
-          "customNotice": "Plunger pumps are custom-engineered products. The page model is for preliminary selection, technical communication, and quotation reference. Final pump head material, piston material, interface, valve configuration, optical feedback, and control method should be confirmed according to the application.",
+          "customNotice": "柱塞泵为定制化产品。页面型号用于初步选型、技术沟通和报价识别，最终泵头材质、柱塞材质、接口方式、阀体搭配、光耦反馈和控制方式需根据实际应用确认。",
           "primaryButtonText": "",
           "primaryButtonHref": "/contact",
           "secondaryButtonText": "",
@@ -4322,11 +4422,23 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "EA-500-PEEK is a custom-engineered 500 µL PEEK pump head standard plunger pump for routine reagent transfer, sample dilution, reaction liquid handling, and laboratory automation fluidic modules. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "description": "该 500 μL 聚醚醚酮（PEEK）展示配置适用于对液体兼容性、避光条件或长期稳定性要求更高的中等体积液体输送场景，可用于特殊试剂、分子诊断试剂、生命科学试剂和分析仪器液路模块。",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "500 μL 容量展示配置",
+            "便于初步选型",
+            "PEEK 泵头展示配置",
+            "可按应用评估更多材料",
+            "支持接口",
+            "阀体",
+            "控制器和光耦反馈等组合确认"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "液体吸排",
+            "精密分配",
+            "转移",
+            "反应液补加",
+            "清洗液或缓冲液定量输送"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -4703,9 +4815,17 @@ export const pumpSeriesDetailRecords = [
         "body": {
           "description": "EA-500-PEEK is a custom-engineered 500 µL PEEK pump head standard plunger pump for routine reagent transfer, sample dilution, reaction liquid handling, and laboratory automation fluidic modules. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "Preliminary model identification",
+            "configurable material and interface",
+            "engineering confirmation for final configuration"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "Aspiration",
+            "precision dispensing",
+            "transfer",
+            "reagent addition",
+            "wash/buffer dosing"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -5154,7 +5274,7 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "1000 µL PMMA Pump Head Standard Plunger Pump",
+        "title": "1000 μL PMMA 泵头常规柱塞泵",
         "h1": "1000 μL PMMA 泵头常规柱塞泵",
         "seo": {
           "titleTag": "EA-1000-PMMA 常规柱塞泵｜1000 μL PMMA 精密液体分配泵｜FOREACH 恒永达",
@@ -5168,7 +5288,7 @@ export const pumpSeriesDetailRecords = [
           "detailMode": "custom_inquiry",
           "showModel": false,
           "displayModel": "EA-1000-PMMA",
-          "customNotice": "Plunger pumps are custom-engineered products. The page model is for preliminary selection, technical communication, and quotation reference. Final pump head material, piston material, interface, valve configuration, optical feedback, and control method should be confirmed according to the application.",
+          "customNotice": "柱塞泵为定制化产品。页面型号用于初步选型、技术沟通和报价识别，最终泵头材质、柱塞材质、接口方式、阀体搭配、光耦反馈和控制方式需根据实际应用确认。",
           "primaryButtonText": "",
           "primaryButtonHref": "/contact",
           "secondaryButtonText": "",
@@ -5177,11 +5297,23 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "EA-1000-PMMA is a custom-engineered 1000 µL PMMA pump head standard plunger pump for routine reagent transfer, sample dilution, reaction liquid handling, and laboratory automation fluidic modules. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "description": "该 1000 μL 聚甲基丙烯酸甲酯（PMMA）展示配置适用于体外诊断（IVD）、生化分析和实验室自动化设备中的常规试剂输送、稀释液添加和缓冲液分配场景，可用于反应体系供液、试剂转移和分析仪器中的标准液路模块。",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "1000 μL 容量展示配置",
+            "便于初步选型",
+            "PMMA 泵头展示配置",
+            "可按应用评估更多材料",
+            "支持接口",
+            "阀体",
+            "控制器和光耦反馈等组合确认"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "液体吸排",
+            "精密分配",
+            "转移",
+            "反应液补加",
+            "清洗液或缓冲液定量输送"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -5558,9 +5690,17 @@ export const pumpSeriesDetailRecords = [
         "body": {
           "description": "EA-1000-PMMA is a custom-engineered 1000 µL PMMA pump head standard plunger pump for routine reagent transfer, sample dilution, reaction liquid handling, and laboratory automation fluidic modules. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "Preliminary model identification",
+            "configurable material and interface",
+            "engineering confirmation for final configuration"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "Aspiration",
+            "precision dispensing",
+            "transfer",
+            "reagent addition",
+            "wash/buffer dosing"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -6009,7 +6149,7 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "1000 µL PEEK Pump Head Standard Plunger Pump",
+        "title": "1000 μL PEEK 泵头常规柱塞泵",
         "h1": "1000 μL PEEK 泵头常规柱塞泵",
         "seo": {
           "titleTag": "EA-1000-PEEK 常规柱塞泵｜1000 μL PEEK 精密液体分配泵｜FOREACH 恒永达",
@@ -6023,7 +6163,7 @@ export const pumpSeriesDetailRecords = [
           "detailMode": "custom_inquiry",
           "showModel": false,
           "displayModel": "EA-1000-PEEK",
-          "customNotice": "Plunger pumps are custom-engineered products. The page model is for preliminary selection, technical communication, and quotation reference. Final pump head material, piston material, interface, valve configuration, optical feedback, and control method should be confirmed according to the application.",
+          "customNotice": "柱塞泵为定制化产品。页面型号用于初步选型、技术沟通和报价识别，最终泵头材质、柱塞材质、接口方式、阀体搭配、光耦反馈和控制方式需根据实际应用确认。",
           "primaryButtonText": "",
           "primaryButtonHref": "/contact",
           "secondaryButtonText": "",
@@ -6032,11 +6172,23 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "EA-1000-PEEK is a custom-engineered 1000 µL PEEK pump head standard plunger pump for routine reagent transfer, sample dilution, reaction liquid handling, and laboratory automation fluidic modules. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "description": "该 1000 μL 聚醚醚酮（PEEK）展示配置适用于中等体积特殊试剂输送、避光试剂处理和高兼容性液路系统，可用于生命科学、分子诊断、分析检测和长期运行的自动化仪器平台。",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "1000 μL 容量展示配置",
+            "便于初步选型",
+            "PEEK 泵头展示配置",
+            "可按应用评估更多材料",
+            "支持接口",
+            "阀体",
+            "控制器和光耦反馈等组合确认"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "液体吸排",
+            "精密分配",
+            "转移",
+            "反应液补加",
+            "清洗液或缓冲液定量输送"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -6413,9 +6565,17 @@ export const pumpSeriesDetailRecords = [
         "body": {
           "description": "EA-1000-PEEK is a custom-engineered 1000 µL PEEK pump head standard plunger pump for routine reagent transfer, sample dilution, reaction liquid handling, and laboratory automation fluidic modules. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "Preliminary model identification",
+            "configurable material and interface",
+            "engineering confirmation for final configuration"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "Aspiration",
+            "precision dispensing",
+            "transfer",
+            "reagent addition",
+            "wash/buffer dosing"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -6864,7 +7024,7 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "2500 µL PMMA Pump Head Standard Plunger Pump",
+        "title": "2500 μL PMMA 泵头常规柱塞泵",
         "h1": "2500 μL PMMA 泵头常规柱塞泵",
         "seo": {
           "titleTag": "EA-2500-PMMA 常规柱塞泵｜2500 μL PMMA 精密液体分配泵｜FOREACH 恒永达",
@@ -6878,7 +7038,7 @@ export const pumpSeriesDetailRecords = [
           "detailMode": "custom_inquiry",
           "showModel": false,
           "displayModel": "EA-2500-PMMA",
-          "customNotice": "Plunger pumps are custom-engineered products. The page model is for preliminary selection, technical communication, and quotation reference. Final pump head material, piston material, interface, valve configuration, optical feedback, and control method should be confirmed according to the application.",
+          "customNotice": "柱塞泵为定制化产品。页面型号用于初步选型、技术沟通和报价识别，最终泵头材质、柱塞材质、接口方式、阀体搭配、光耦反馈和控制方式需根据实际应用确认。",
           "primaryButtonText": "",
           "primaryButtonHref": "/contact",
           "secondaryButtonText": "",
@@ -6887,11 +7047,23 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "EA-2500-PMMA is a custom-engineered 2500 µL PMMA pump head standard plunger pump for wash solution dosing, buffer transfer, line priming, medium-to-large volume replenishment, and analyzer fluidic supply. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "description": "该 2500 μL 聚甲基丙烯酸甲酯（PMMA）展示配置适用于自动化分析设备中的缓冲液输送、稀释液添加、清洗液补充和中大体积试剂转移场景。该量程更适合承担系统供液和中大体积定量输送任务，可用于体外诊断（IVD）、实验室自动化和分析检测设备中的液路供应模块。",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "2500 μL 容量展示配置",
+            "便于初步选型",
+            "PMMA 泵头展示配置",
+            "可按应用评估更多材料",
+            "支持接口",
+            "阀体",
+            "控制器和光耦反馈等组合确认"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "液体吸排",
+            "精密分配",
+            "转移",
+            "反应液补加",
+            "清洗液或缓冲液定量输送"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -7268,9 +7440,17 @@ export const pumpSeriesDetailRecords = [
         "body": {
           "description": "EA-2500-PMMA is a custom-engineered 2500 µL PMMA pump head standard plunger pump for wash solution dosing, buffer transfer, line priming, medium-to-large volume replenishment, and analyzer fluidic supply. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "Preliminary model identification",
+            "configurable material and interface",
+            "engineering confirmation for final configuration"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "Aspiration",
+            "precision dispensing",
+            "transfer",
+            "reagent addition",
+            "wash/buffer dosing"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -7719,7 +7899,7 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "2500 µL PEEK Pump Head Standard Plunger Pump",
+        "title": "2500 μL PEEK 泵头常规柱塞泵",
         "h1": "2500 μL PEEK 泵头常规柱塞泵",
         "seo": {
           "titleTag": "EA-2500-PEEK 常规柱塞泵｜2500 μL PEEK 精密液体分配泵｜FOREACH 恒永达",
@@ -7733,7 +7913,7 @@ export const pumpSeriesDetailRecords = [
           "detailMode": "custom_inquiry",
           "showModel": false,
           "displayModel": "EA-2500-PEEK",
-          "customNotice": "Plunger pumps are custom-engineered products. The page model is for preliminary selection, technical communication, and quotation reference. Final pump head material, piston material, interface, valve configuration, optical feedback, and control method should be confirmed according to the application.",
+          "customNotice": "柱塞泵为定制化产品。页面型号用于初步选型、技术沟通和报价识别，最终泵头材质、柱塞材质、接口方式、阀体搭配、光耦反馈和控制方式需根据实际应用确认。",
           "primaryButtonText": "",
           "primaryButtonHref": "/contact",
           "secondaryButtonText": "",
@@ -7742,11 +7922,23 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "EA-2500-PEEK is a custom-engineered 2500 µL PEEK pump head standard plunger pump for wash solution dosing, buffer transfer, line priming, medium-to-large volume replenishment, and analyzer fluidic supply. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "description": "该 2500 μL 聚醚醚酮（PEEK）展示配置适用于中大体积特殊试剂、避光液体、缓冲液和清洗液的稳定输送场景。该配置适合对液体兼容性、材料稳定性和长期运行可靠性要求更高的分析仪器液路系统。",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "2500 μL 容量展示配置",
+            "便于初步选型",
+            "PEEK 泵头展示配置",
+            "可按应用评估更多材料",
+            "支持接口",
+            "阀体",
+            "控制器和光耦反馈等组合确认"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "液体吸排",
+            "精密分配",
+            "转移",
+            "反应液补加",
+            "清洗液或缓冲液定量输送"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -8123,9 +8315,17 @@ export const pumpSeriesDetailRecords = [
         "body": {
           "description": "EA-2500-PEEK is a custom-engineered 2500 µL PEEK pump head standard plunger pump for wash solution dosing, buffer transfer, line priming, medium-to-large volume replenishment, and analyzer fluidic supply. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "Preliminary model identification",
+            "configurable material and interface",
+            "engineering confirmation for final configuration"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "Aspiration",
+            "precision dispensing",
+            "transfer",
+            "reagent addition",
+            "wash/buffer dosing"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -8574,7 +8774,7 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "5000 µL PMMA Pump Head Standard Plunger Pump",
+        "title": "5000 μL PMMA 泵头常规柱塞泵",
         "h1": "5000 μL PMMA 泵头常规柱塞泵",
         "seo": {
           "titleTag": "EA-5000-PMMA 常规柱塞泵｜5000 μL PMMA 精密液体分配泵｜FOREACH 恒永达",
@@ -8588,7 +8788,7 @@ export const pumpSeriesDetailRecords = [
           "detailMode": "custom_inquiry",
           "showModel": false,
           "displayModel": "EA-5000-PMMA",
-          "customNotice": "Plunger pumps are custom-engineered products. The page model is for preliminary selection, technical communication, and quotation reference. Final pump head material, piston material, interface, valve configuration, optical feedback, and control method should be confirmed according to the application.",
+          "customNotice": "柱塞泵为定制化产品。页面型号用于初步选型、技术沟通和报价识别，最终泵头材质、柱塞材质、接口方式、阀体搭配、光耦反馈和控制方式需根据实际应用确认。",
           "primaryButtonText": "",
           "primaryButtonHref": "/contact",
           "secondaryButtonText": "",
@@ -8597,11 +8797,23 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "EA-5000-PMMA is a custom-engineered 5000 µL PMMA pump head standard plunger pump for wash solution dosing, buffer transfer, line priming, medium-to-large volume replenishment, and analyzer fluidic supply. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "description": "该 5000 μL 聚甲基丙烯酸甲酯（PMMA）展示配置适用于清洗液添加、缓冲液输送、管路预充和自动化设备中的中大体积补液任务。该量程更适合系统清洗、液路冲洗和稳定供液场景，可用于体外诊断（IVD）、生化分析、实验室自动化和分析检测设备中的供液模块。",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "5000 μL 容量展示配置",
+            "便于初步选型",
+            "PMMA 泵头展示配置",
+            "可按应用评估更多材料",
+            "支持接口",
+            "阀体",
+            "控制器和光耦反馈等组合确认"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "液体吸排",
+            "精密分配",
+            "转移",
+            "反应液补加",
+            "清洗液或缓冲液定量输送"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -8978,9 +9190,17 @@ export const pumpSeriesDetailRecords = [
         "body": {
           "description": "EA-5000-PMMA is a custom-engineered 5000 µL PMMA pump head standard plunger pump for wash solution dosing, buffer transfer, line priming, medium-to-large volume replenishment, and analyzer fluidic supply. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "Preliminary model identification",
+            "configurable material and interface",
+            "engineering confirmation for final configuration"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "Aspiration",
+            "precision dispensing",
+            "transfer",
+            "reagent addition",
+            "wash/buffer dosing"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -9429,7 +9649,7 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "5000 µL PEEK Pump Head Standard Plunger Pump",
+        "title": "5000 μL PEEK 泵头常规柱塞泵",
         "h1": "5000 μL PEEK 泵头常规柱塞泵",
         "seo": {
           "titleTag": "EA-5000-PEEK 常规柱塞泵｜5000 μL PEEK 精密液体分配泵｜FOREACH 恒永达",
@@ -9443,7 +9663,7 @@ export const pumpSeriesDetailRecords = [
           "detailMode": "custom_inquiry",
           "showModel": false,
           "displayModel": "EA-5000-PEEK",
-          "customNotice": "Plunger pumps are custom-engineered products. The page model is for preliminary selection, technical communication, and quotation reference. Final pump head material, piston material, interface, valve configuration, optical feedback, and control method should be confirmed according to the application.",
+          "customNotice": "柱塞泵为定制化产品。页面型号用于初步选型、技术沟通和报价识别，最终泵头材质、柱塞材质、接口方式、阀体搭配、光耦反馈和控制方式需根据实际应用确认。",
           "primaryButtonText": "",
           "primaryButtonHref": "/contact",
           "secondaryButtonText": "",
@@ -9452,11 +9672,23 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "EA-5000-PEEK is a custom-engineered 5000 µL PEEK pump head standard plunger pump for wash solution dosing, buffer transfer, line priming, medium-to-large volume replenishment, and analyzer fluidic supply. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "description": "该 5000 μL 聚醚醚酮（PEEK）展示配置适用于需要避光、耐化学或更高液体兼容性的中大体积液体输送场景，可用于特殊清洗液、缓冲液、生命科学试剂和分析仪器流路系统。",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "5000 μL 容量展示配置",
+            "便于初步选型",
+            "PEEK 泵头展示配置",
+            "可按应用评估更多材料",
+            "支持接口",
+            "阀体",
+            "控制器和光耦反馈等组合确认"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "液体吸排",
+            "精密分配",
+            "转移",
+            "反应液补加",
+            "清洗液或缓冲液定量输送"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -9833,9 +10065,17 @@ export const pumpSeriesDetailRecords = [
         "body": {
           "description": "EA-5000-PEEK is a custom-engineered 5000 µL PEEK pump head standard plunger pump for wash solution dosing, buffer transfer, line priming, medium-to-large volume replenishment, and analyzer fluidic supply. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "Preliminary model identification",
+            "configurable material and interface",
+            "engineering confirmation for final configuration"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "Aspiration",
+            "precision dispensing",
+            "transfer",
+            "reagent addition",
+            "wash/buffer dosing"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -10284,7 +10524,7 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "10000 µL PMMA Pump Head Standard Plunger Pump",
+        "title": "10000 μL PMMA 泵头常规柱塞泵",
         "h1": "10000 μL PMMA 泵头常规柱塞泵",
         "seo": {
           "titleTag": "EA-10000-PMMA 常规柱塞泵｜10000 μL PMMA 精密液体分配泵｜FOREACH 恒永达",
@@ -10298,7 +10538,7 @@ export const pumpSeriesDetailRecords = [
           "detailMode": "custom_inquiry",
           "showModel": false,
           "displayModel": "EA-10000-PMMA",
-          "customNotice": "Plunger pumps are custom-engineered products. The page model is for preliminary selection, technical communication, and quotation reference. Final pump head material, piston material, interface, valve configuration, optical feedback, and control method should be confirmed according to the application.",
+          "customNotice": "柱塞泵为定制化产品。页面型号用于初步选型、技术沟通和报价识别，最终泵头材质、柱塞材质、接口方式、阀体搭配、光耦反馈和控制方式需根据实际应用确认。",
           "primaryButtonText": "",
           "primaryButtonHref": "/contact",
           "secondaryButtonText": "",
@@ -10307,11 +10547,23 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "EA-10000-PMMA is a custom-engineered 10000 µL PMMA pump head standard plunger pump for wash solution dosing, buffer transfer, line priming, medium-to-large volume replenishment, and analyzer fluidic supply. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "description": "该 10000 μL 聚甲基丙烯酸甲酯（PMMA）展示配置适用于大体积清洗液输送、缓冲液补充、系统冲洗、管路预充和自动化设备中的稳定供液模块。该量程更适合承担大体积液体处理任务，可用于分析仪器和实验室自动化设备中的清洗、冲洗和补液系统。",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "10000 μL 容量展示配置",
+            "便于初步选型",
+            "PMMA 泵头展示配置",
+            "可按应用评估更多材料",
+            "支持接口",
+            "阀体",
+            "控制器和光耦反馈等组合确认"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "液体吸排",
+            "精密分配",
+            "转移",
+            "反应液补加",
+            "清洗液或缓冲液定量输送"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -10688,9 +10940,17 @@ export const pumpSeriesDetailRecords = [
         "body": {
           "description": "EA-10000-PMMA is a custom-engineered 10000 µL PMMA pump head standard plunger pump for wash solution dosing, buffer transfer, line priming, medium-to-large volume replenishment, and analyzer fluidic supply. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "Preliminary model identification",
+            "configurable material and interface",
+            "engineering confirmation for final configuration"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "Aspiration",
+            "precision dispensing",
+            "transfer",
+            "reagent addition",
+            "wash/buffer dosing"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -11139,7 +11399,7 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "10000 µL PEEK Pump Head Standard Plunger Pump",
+        "title": "10000 μL PEEK 泵头常规柱塞泵",
         "h1": "10000 μL PEEK 泵头常规柱塞泵",
         "seo": {
           "titleTag": "EA-10000-PEEK 常规柱塞泵｜10000 μL PEEK 精密液体分配泵｜FOREACH 恒永达",
@@ -11153,7 +11413,7 @@ export const pumpSeriesDetailRecords = [
           "detailMode": "custom_inquiry",
           "showModel": false,
           "displayModel": "EA-10000-PEEK",
-          "customNotice": "Plunger pumps are custom-engineered products. The page model is for preliminary selection, technical communication, and quotation reference. Final pump head material, piston material, interface, valve configuration, optical feedback, and control method should be confirmed according to the application.",
+          "customNotice": "柱塞泵为定制化产品。页面型号用于初步选型、技术沟通和报价识别，最终泵头材质、柱塞材质、接口方式、阀体搭配、光耦反馈和控制方式需根据实际应用确认。",
           "primaryButtonText": "",
           "primaryButtonHref": "/contact",
           "secondaryButtonText": "",
@@ -11162,11 +11422,23 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "EA-10000-PEEK is a custom-engineered 10000 µL PEEK pump head standard plunger pump for wash solution dosing, buffer transfer, line priming, medium-to-large volume replenishment, and analyzer fluidic supply. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "description": "该 10000 μL 聚醚醚酮（PEEK）展示配置适用于大体积特殊液体、避光液体、清洗液和缓冲液的稳定输送。该配置适合对材料兼容性、避光性和长期运行稳定性要求更高的设备平台，可用于分析仪器中的高要求供液、冲洗和管路维护模块。",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "10000 μL 容量展示配置",
+            "便于初步选型",
+            "PEEK 泵头展示配置",
+            "可按应用评估更多材料",
+            "支持接口",
+            "阀体",
+            "控制器和光耦反馈等组合确认"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "液体吸排",
+            "精密分配",
+            "转移",
+            "反应液补加",
+            "清洗液或缓冲液定量输送"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -11543,9 +11815,17 @@ export const pumpSeriesDetailRecords = [
         "body": {
           "description": "EA-10000-PEEK is a custom-engineered 10000 µL PEEK pump head standard plunger pump for wash solution dosing, buffer transfer, line priming, medium-to-large volume replenishment, and analyzer fluidic supply. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "Preliminary model identification",
+            "configurable material and interface",
+            "engineering confirmation for final configuration"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "Aspiration",
+            "precision dispensing",
+            "transfer",
+            "reagent addition",
+            "wash/buffer dosing"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -11994,7 +12274,7 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "50 µL PMMA Pump Head Miniature Plunger Pump",
+        "title": "50 μL PMMA 泵头微型柱塞泵",
         "h1": "50 μL PMMA 泵头微型柱塞泵",
         "seo": {
           "titleTag": "SM-50-PMMA 微型柱塞泵｜50 μL PMMA 精密液体分配泵｜FOREACH 恒永达",
@@ -12008,7 +12288,7 @@ export const pumpSeriesDetailRecords = [
           "detailMode": "custom_inquiry",
           "showModel": false,
           "displayModel": "SM-50-PMMA",
-          "customNotice": "Plunger pumps are custom-engineered products. The page model is for preliminary selection, technical communication, and quotation reference. Final pump head material, piston material, interface, valve configuration, optical feedback, and control method should be confirmed according to the application.",
+          "customNotice": "柱塞泵为定制化产品。页面型号用于初步选型、技术沟通和报价识别，最终泵头材质、柱塞材质、接口方式、阀体搭配、光耦反馈和控制方式需根据实际应用确认。",
           "primaryButtonText": "",
           "primaryButtonHref": "/contact",
           "secondaryButtonText": "",
@@ -12017,11 +12297,23 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "SM-50-PMMA is a custom-engineered 50 µL PMMA pump head miniature plunger pump for space-limited fluidic modules, POCT devices, compact automated testing units, and micro-reagent handling. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "description": "该 50 μL 聚甲基丙烯酸甲酯（PMMA）展示配置适用于小型体外诊断（IVD）设备、紧凑型检测模块和微量液体控制系统中的低容量液体处理任务，可用于微量试剂分配、低容量反应液补加和小体积样本处理。",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "50 μL 容量展示配置",
+            "便于初步选型",
+            "PMMA 泵头展示配置",
+            "可按应用评估更多材料",
+            "支持接口",
+            "阀体",
+            "控制器和光耦反馈等组合确认"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "液体吸排",
+            "精密分配",
+            "转移",
+            "反应液补加",
+            "清洗液或缓冲液定量输送"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -12390,9 +12682,17 @@ export const pumpSeriesDetailRecords = [
         "body": {
           "description": "SM-50-PMMA is a custom-engineered 50 µL PMMA pump head miniature plunger pump for space-limited fluidic modules, POCT devices, compact automated testing units, and micro-reagent handling. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "Preliminary model identification",
+            "configurable material and interface",
+            "engineering confirmation for final configuration"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "Aspiration",
+            "precision dispensing",
+            "transfer",
+            "reagent addition",
+            "wash/buffer dosing"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -12833,7 +13133,7 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "100 µL PMMA Pump Head Miniature Plunger Pump",
+        "title": "100 μL PMMA 泵头微型柱塞泵",
         "h1": "100 μL PMMA 泵头微型柱塞泵",
         "seo": {
           "titleTag": "SM-100-PMMA 微型柱塞泵｜100 μL PMMA 精密液体分配泵｜FOREACH 恒永达",
@@ -12847,7 +13147,7 @@ export const pumpSeriesDetailRecords = [
           "detailMode": "custom_inquiry",
           "showModel": false,
           "displayModel": "SM-100-PMMA",
-          "customNotice": "Plunger pumps are custom-engineered products. The page model is for preliminary selection, technical communication, and quotation reference. Final pump head material, piston material, interface, valve configuration, optical feedback, and control method should be confirmed according to the application.",
+          "customNotice": "柱塞泵为定制化产品。页面型号用于初步选型、技术沟通和报价识别，最终泵头材质、柱塞材质、接口方式、阀体搭配、光耦反馈和控制方式需根据实际应用确认。",
           "primaryButtonText": "",
           "primaryButtonHref": "/contact",
           "secondaryButtonText": "",
@@ -12856,11 +13156,23 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "SM-100-PMMA is a custom-engineered 100 µL PMMA pump head miniature plunger pump for space-limited fluidic modules, POCT devices, compact automated testing units, and micro-reagent handling. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "description": "该 100 μL 聚甲基丙烯酸甲酯（PMMA）展示配置适用于即时检测（POCT）、小型分析仪器、紧凑型实验室自动化模块和微量试剂分配系统。该量程适合小体积液体处理、样本稀释和低容量液路定量控制。",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "100 μL 容量展示配置",
+            "便于初步选型",
+            "PMMA 泵头展示配置",
+            "可按应用评估更多材料",
+            "支持接口",
+            "阀体",
+            "控制器和光耦反馈等组合确认"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "液体吸排",
+            "精密分配",
+            "转移",
+            "反应液补加",
+            "清洗液或缓冲液定量输送"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -13229,9 +13541,17 @@ export const pumpSeriesDetailRecords = [
         "body": {
           "description": "SM-100-PMMA is a custom-engineered 100 µL PMMA pump head miniature plunger pump for space-limited fluidic modules, POCT devices, compact automated testing units, and micro-reagent handling. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "Preliminary model identification",
+            "configurable material and interface",
+            "engineering confirmation for final configuration"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "Aspiration",
+            "precision dispensing",
+            "transfer",
+            "reagent addition",
+            "wash/buffer dosing"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -13672,7 +13992,7 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "100 µL PEEK Pump Head Miniature Plunger Pump",
+        "title": "100 μL PEEK 泵头微型柱塞泵",
         "h1": "100 μL PEEK 泵头微型柱塞泵",
         "seo": {
           "titleTag": "SM-100-PEEK 微型柱塞泵｜100 μL PEEK 精密液体分配泵｜FOREACH 恒永达",
@@ -13686,7 +14006,7 @@ export const pumpSeriesDetailRecords = [
           "detailMode": "custom_inquiry",
           "showModel": false,
           "displayModel": "SM-100-PEEK",
-          "customNotice": "Plunger pumps are custom-engineered products. The page model is for preliminary selection, technical communication, and quotation reference. Final pump head material, piston material, interface, valve configuration, optical feedback, and control method should be confirmed according to the application.",
+          "customNotice": "柱塞泵为定制化产品。页面型号用于初步选型、技术沟通和报价识别，最终泵头材质、柱塞材质、接口方式、阀体搭配、光耦反馈和控制方式需根据实际应用确认。",
           "primaryButtonText": "",
           "primaryButtonHref": "/contact",
           "secondaryButtonText": "",
@@ -13695,11 +14015,23 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "SM-100-PEEK is a custom-engineered 100 µL PEEK pump head miniature plunger pump for space-limited fluidic modules, POCT devices, compact automated testing units, and micro-reagent handling. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "description": "该 100 μL 聚醚醚酮（PEEK）展示配置适用于紧凑型设备中对避光、耐化学或液体兼容性要求更高的微量液体处理模块，可用于分子诊断、生命科学样本处理、特殊试剂分配和小体积高稳定性液路系统。",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "100 μL 容量展示配置",
+            "便于初步选型",
+            "PEEK 泵头展示配置",
+            "可按应用评估更多材料",
+            "支持接口",
+            "阀体",
+            "控制器和光耦反馈等组合确认"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "液体吸排",
+            "精密分配",
+            "转移",
+            "反应液补加",
+            "清洗液或缓冲液定量输送"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -14068,9 +14400,17 @@ export const pumpSeriesDetailRecords = [
         "body": {
           "description": "SM-100-PEEK is a custom-engineered 100 µL PEEK pump head miniature plunger pump for space-limited fluidic modules, POCT devices, compact automated testing units, and micro-reagent handling. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "Preliminary model identification",
+            "configurable material and interface",
+            "engineering confirmation for final configuration"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "Aspiration",
+            "precision dispensing",
+            "transfer",
+            "reagent addition",
+            "wash/buffer dosing"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -14511,7 +14851,7 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "250 µL PMMA Pump Head Miniature Plunger Pump",
+        "title": "250 μL PMMA 泵头微型柱塞泵",
         "h1": "250 μL PMMA 泵头微型柱塞泵",
         "seo": {
           "titleTag": "SM-250-PMMA 微型柱塞泵｜250 μL PMMA 精密液体分配泵｜FOREACH 恒永达",
@@ -14525,7 +14865,7 @@ export const pumpSeriesDetailRecords = [
           "detailMode": "custom_inquiry",
           "showModel": false,
           "displayModel": "SM-250-PMMA",
-          "customNotice": "Plunger pumps are custom-engineered products. The page model is for preliminary selection, technical communication, and quotation reference. Final pump head material, piston material, interface, valve configuration, optical feedback, and control method should be confirmed according to the application.",
+          "customNotice": "柱塞泵为定制化产品。页面型号用于初步选型、技术沟通和报价识别，最终泵头材质、柱塞材质、接口方式、阀体搭配、光耦反馈和控制方式需根据实际应用确认。",
           "primaryButtonText": "",
           "primaryButtonHref": "/contact",
           "secondaryButtonText": "",
@@ -14534,11 +14874,23 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "SM-250-PMMA is a custom-engineered 250 µL PMMA pump head miniature plunger pump for micro-volume aspiration, dispensing, transfer, and compact fluidic integration in automated instruments. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "description": "该 250 μL 聚甲基丙烯酸甲酯（PMMA）展示配置适用于紧凑型体外诊断（IVD）仪器、小型反应模块、样本处理单元和微量试剂输送系统。该量程适合中小体积液体分配，可用于小型设备中的反应液分配和样本处理任务。",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "250 μL 容量展示配置",
+            "便于初步选型",
+            "PMMA 泵头展示配置",
+            "可按应用评估更多材料",
+            "支持接口",
+            "阀体",
+            "控制器和光耦反馈等组合确认"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "液体吸排",
+            "精密分配",
+            "转移",
+            "反应液补加",
+            "清洗液或缓冲液定量输送"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -14907,9 +15259,17 @@ export const pumpSeriesDetailRecords = [
         "body": {
           "description": "SM-250-PMMA is a custom-engineered 250 µL PMMA pump head miniature plunger pump for micro-volume aspiration, dispensing, transfer, and compact fluidic integration in automated instruments. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "Preliminary model identification",
+            "configurable material and interface",
+            "engineering confirmation for final configuration"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "Aspiration",
+            "precision dispensing",
+            "transfer",
+            "reagent addition",
+            "wash/buffer dosing"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -15350,7 +15710,7 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "250 µL PEEK Pump Head Miniature Plunger Pump",
+        "title": "250 μL PEEK 泵头微型柱塞泵",
         "h1": "250 μL PEEK 泵头微型柱塞泵",
         "seo": {
           "titleTag": "SM-250-PEEK 微型柱塞泵｜250 μL PEEK 精密液体分配泵｜FOREACH 恒永达",
@@ -15364,7 +15724,7 @@ export const pumpSeriesDetailRecords = [
           "detailMode": "custom_inquiry",
           "showModel": false,
           "displayModel": "SM-250-PEEK",
-          "customNotice": "Plunger pumps are custom-engineered products. The page model is for preliminary selection, technical communication, and quotation reference. Final pump head material, piston material, interface, valve configuration, optical feedback, and control method should be confirmed according to the application.",
+          "customNotice": "柱塞泵为定制化产品。页面型号用于初步选型、技术沟通和报价识别，最终泵头材质、柱塞材质、接口方式、阀体搭配、光耦反馈和控制方式需根据实际应用确认。",
           "primaryButtonText": "",
           "primaryButtonHref": "/contact",
           "secondaryButtonText": "",
@@ -15373,11 +15733,23 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "SM-250-PEEK is a custom-engineered 250 µL PEEK pump head miniature plunger pump for micro-volume aspiration, dispensing, transfer, and compact fluidic integration in automated instruments. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "description": "该 250 μL 聚醚醚酮（PEEK）展示配置适用于小型化液路系统中的特殊试剂分配、避光试剂输送和高兼容性液体处理场景。该配置适合分子诊断、生命科学试剂、小型分析仪器和对泵头材料稳定性要求较高的紧凑型设备。",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "250 μL 容量展示配置",
+            "便于初步选型",
+            "PEEK 泵头展示配置",
+            "可按应用评估更多材料",
+            "支持接口",
+            "阀体",
+            "控制器和光耦反馈等组合确认"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "液体吸排",
+            "精密分配",
+            "转移",
+            "反应液补加",
+            "清洗液或缓冲液定量输送"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -15746,9 +16118,17 @@ export const pumpSeriesDetailRecords = [
         "body": {
           "description": "SM-250-PEEK is a custom-engineered 250 µL PEEK pump head miniature plunger pump for micro-volume aspiration, dispensing, transfer, and compact fluidic integration in automated instruments. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "Preliminary model identification",
+            "configurable material and interface",
+            "engineering confirmation for final configuration"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "Aspiration",
+            "precision dispensing",
+            "transfer",
+            "reagent addition",
+            "wash/buffer dosing"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -16189,7 +16569,7 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "500 µL PMMA Pump Head Miniature Plunger Pump",
+        "title": "500 μL PMMA 泵头微型柱塞泵",
         "h1": "500 μL PMMA 泵头微型柱塞泵",
         "seo": {
           "titleTag": "SM-500-PMMA 微型柱塞泵｜500 μL PMMA 精密液体分配泵｜FOREACH 恒永达",
@@ -16203,7 +16583,7 @@ export const pumpSeriesDetailRecords = [
           "detailMode": "custom_inquiry",
           "showModel": false,
           "displayModel": "SM-500-PMMA",
-          "customNotice": "Plunger pumps are custom-engineered products. The page model is for preliminary selection, technical communication, and quotation reference. Final pump head material, piston material, interface, valve configuration, optical feedback, and control method should be confirmed according to the application.",
+          "customNotice": "柱塞泵为定制化产品。页面型号用于初步选型、技术沟通和报价识别，最终泵头材质、柱塞材质、接口方式、阀体搭配、光耦反馈和控制方式需根据实际应用确认。",
           "primaryButtonText": "",
           "primaryButtonHref": "/contact",
           "secondaryButtonText": "",
@@ -16212,11 +16592,23 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "SM-500-PMMA is a custom-engineered 500 µL PMMA pump head miniature plunger pump for micro-volume aspiration, dispensing, transfer, and compact fluidic integration in automated instruments. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "description": "该 500 μL 聚甲基丙烯酸甲酯（PMMA）展示配置适用于小型分析设备、紧凑型实验室自动化模块和中等体积试剂输送系统。该量程适合在有限空间内实现常规试剂输送、样本处理和反应液分配，适合小型化仪器平台的液路集成。",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "500 μL 容量展示配置",
+            "便于初步选型",
+            "PMMA 泵头展示配置",
+            "可按应用评估更多材料",
+            "支持接口",
+            "阀体",
+            "控制器和光耦反馈等组合确认"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "液体吸排",
+            "精密分配",
+            "转移",
+            "反应液补加",
+            "清洗液或缓冲液定量输送"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -16585,9 +16977,17 @@ export const pumpSeriesDetailRecords = [
         "body": {
           "description": "SM-500-PMMA is a custom-engineered 500 µL PMMA pump head miniature plunger pump for micro-volume aspiration, dispensing, transfer, and compact fluidic integration in automated instruments. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "Preliminary model identification",
+            "configurable material and interface",
+            "engineering confirmation for final configuration"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "Aspiration",
+            "precision dispensing",
+            "transfer",
+            "reagent addition",
+            "wash/buffer dosing"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -17028,7 +17428,7 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "1000 µL PMMA Pump Head Miniature Plunger Pump",
+        "title": "1000 μL PMMA 泵头微型柱塞泵",
         "h1": "1000 μL PMMA 泵头微型柱塞泵",
         "seo": {
           "titleTag": "SM-1000-PMMA 微型柱塞泵｜1000 μL PMMA 精密液体分配泵｜FOREACH 恒永达",
@@ -17042,7 +17442,7 @@ export const pumpSeriesDetailRecords = [
           "detailMode": "custom_inquiry",
           "showModel": false,
           "displayModel": "SM-1000-PMMA",
-          "customNotice": "Plunger pumps are custom-engineered products. The page model is for preliminary selection, technical communication, and quotation reference. Final pump head material, piston material, interface, valve configuration, optical feedback, and control method should be confirmed according to the application.",
+          "customNotice": "柱塞泵为定制化产品。页面型号用于初步选型、技术沟通和报价识别，最终泵头材质、柱塞材质、接口方式、阀体搭配、光耦反馈和控制方式需根据实际应用确认。",
           "primaryButtonText": "",
           "primaryButtonHref": "/contact",
           "secondaryButtonText": "",
@@ -17051,11 +17451,23 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "SM-1000-PMMA is a custom-engineered 1000 µL PMMA pump head miniature plunger pump for micro-volume aspiration, dispensing, transfer, and compact fluidic integration in automated instruments. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "description": "该 1000 μL 聚甲基丙烯酸甲酯（PMMA）展示配置适用于紧凑型仪器中的常规试剂输送、稀释液添加、缓冲液分配和小型供液模块。该量程适合在小型设备中承担中等体积液体处理任务，适合兼顾液体处理能力和结构紧凑性的液路系统。",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "1000 μL 容量展示配置",
+            "便于初步选型",
+            "PMMA 泵头展示配置",
+            "可按应用评估更多材料",
+            "支持接口",
+            "阀体",
+            "控制器和光耦反馈等组合确认"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "液体吸排",
+            "精密分配",
+            "转移",
+            "反应液补加",
+            "清洗液或缓冲液定量输送"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -17424,9 +17836,17 @@ export const pumpSeriesDetailRecords = [
         "body": {
           "description": "SM-1000-PMMA is a custom-engineered 1000 µL PMMA pump head miniature plunger pump for micro-volume aspiration, dispensing, transfer, and compact fluidic integration in automated instruments. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "Preliminary model identification",
+            "configurable material and interface",
+            "engineering confirmation for final configuration"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "Aspiration",
+            "precision dispensing",
+            "transfer",
+            "reagent addition",
+            "wash/buffer dosing"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -17867,7 +18287,7 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "50 µL PMMA Pump Head Ultra-Compact Plunger Pump",
+        "title": "50 μL PMMA 泵头超紧凑柱塞泵",
         "h1": "50 μL PMMA 泵头超紧凑柱塞泵",
         "seo": {
           "titleTag": "TM-50-PMMA 超紧凑柱塞泵｜50 μL PMMA 精密液体分配泵｜FOREACH 恒永达",
@@ -17881,7 +18301,7 @@ export const pumpSeriesDetailRecords = [
           "detailMode": "custom_inquiry",
           "showModel": false,
           "displayModel": "TM-50-PMMA",
-          "customNotice": "Plunger pumps are custom-engineered products. The page model is for preliminary selection, technical communication, and quotation reference. Final pump head material, piston material, interface, valve configuration, optical feedback, and control method should be confirmed according to the application.",
+          "customNotice": "柱塞泵为定制化产品。页面型号用于初步选型、技术沟通和报价识别，最终泵头材质、柱塞材质、接口方式、阀体搭配、光耦反馈和控制方式需根据实际应用确认。",
           "primaryButtonText": "",
           "primaryButtonHref": "/contact",
           "secondaryButtonText": "",
@@ -17890,11 +18310,23 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "TM-50-PMMA is a custom-engineered 50 µL PMMA pump head ultra-compact plunger pump for ultra-compact instrument layouts, small testing modules, and micro-volume handling in limited installation space. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "description": "该 50 μL 聚甲基丙烯酸甲酯（PMMA）展示配置适用于超紧凑型检测模块、便携式分析设备和低容量微流体控制场景。该量程适合微量液体处理、低容量样本处理和小型反应单元，可用于对安装空间要求较高的微量液路系统。",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "50 μL 容量展示配置",
+            "便于初步选型",
+            "PMMA 泵头展示配置",
+            "可按应用评估更多材料",
+            "支持接口",
+            "阀体",
+            "控制器和光耦反馈等组合确认"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "液体吸排",
+            "精密分配",
+            "转移",
+            "反应液补加",
+            "清洗液或缓冲液定量输送"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -18191,7 +18623,7 @@ export const pumpSeriesDetailRecords = [
         ],
         "resources": {
           "drawing2dUrl": "/assets/products/tm/2d-drawings/TM-0050UL.pdf",
-          "model3dUrl": "",
+          "model3dUrl": "/assets/products/tm/3d-models/TM-0050UL.glb",
           "datasheetUrl": "",
           "manualUrl": "",
           "showDrawing": true,
@@ -18263,9 +18695,17 @@ export const pumpSeriesDetailRecords = [
         "body": {
           "description": "TM-50-PMMA is a custom-engineered 50 µL PMMA pump head ultra-compact plunger pump for ultra-compact instrument layouts, small testing modules, and micro-volume handling in limited installation space. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "Preliminary model identification",
+            "configurable material and interface",
+            "engineering confirmation for final configuration"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "Aspiration",
+            "precision dispensing",
+            "transfer",
+            "reagent addition",
+            "wash/buffer dosing"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -18562,7 +19002,7 @@ export const pumpSeriesDetailRecords = [
         ],
         "resources": {
           "drawing2dUrl": "/assets/products/tm/2d-drawings/TM-0050UL.pdf",
-          "model3dUrl": "",
+          "model3dUrl": "/assets/products/tm/3d-models/TM-0050UL.glb",
           "datasheetUrl": "",
           "manualUrl": "",
           "showDrawing": true,
@@ -18706,7 +19146,7 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "100 µL PMMA Pump Head Ultra-Compact Plunger Pump",
+        "title": "100 μL PMMA 泵头超紧凑柱塞泵",
         "h1": "100 μL PMMA 泵头超紧凑柱塞泵",
         "seo": {
           "titleTag": "TM-100-PMMA 超紧凑柱塞泵｜100 μL PMMA 精密液体分配泵｜FOREACH 恒永达",
@@ -18720,7 +19160,7 @@ export const pumpSeriesDetailRecords = [
           "detailMode": "custom_inquiry",
           "showModel": false,
           "displayModel": "TM-100-PMMA",
-          "customNotice": "Plunger pumps are custom-engineered products. The page model is for preliminary selection, technical communication, and quotation reference. Final pump head material, piston material, interface, valve configuration, optical feedback, and control method should be confirmed according to the application.",
+          "customNotice": "柱塞泵为定制化产品。页面型号用于初步选型、技术沟通和报价识别，最终泵头材质、柱塞材质、接口方式、阀体搭配、光耦反馈和控制方式需根据实际应用确认。",
           "primaryButtonText": "",
           "primaryButtonHref": "/contact",
           "secondaryButtonText": "",
@@ -18729,11 +19169,23 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "TM-100-PMMA is a custom-engineered 100 µL PMMA pump head ultra-compact plunger pump for ultra-compact instrument layouts, small testing modules, and micro-volume handling in limited installation space. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "description": "该 100 μL 聚甲基丙烯酸甲酯（PMMA）展示配置适用于便携式检测设备、小型体外诊断（IVD）模块、紧凑型生命科学仪器和微量液路单元。该量程适合小体积液体处理、样本分配和低容量液路控制，可用于空间受限的自动化液体处理平台。",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "100 μL 容量展示配置",
+            "便于初步选型",
+            "PMMA 泵头展示配置",
+            "可按应用评估更多材料",
+            "支持接口",
+            "阀体",
+            "控制器和光耦反馈等组合确认"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "液体吸排",
+            "精密分配",
+            "转移",
+            "反应液补加",
+            "清洗液或缓冲液定量输送"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -19030,7 +19482,7 @@ export const pumpSeriesDetailRecords = [
         ],
         "resources": {
           "drawing2dUrl": "/assets/products/tm/2d-drawings/TM-0100UL.pdf",
-          "model3dUrl": "",
+          "model3dUrl": "/assets/products/tm/3d-models/TM-0100UL.glb",
           "datasheetUrl": "",
           "manualUrl": "",
           "showDrawing": true,
@@ -19102,9 +19554,17 @@ export const pumpSeriesDetailRecords = [
         "body": {
           "description": "TM-100-PMMA is a custom-engineered 100 µL PMMA pump head ultra-compact plunger pump for ultra-compact instrument layouts, small testing modules, and micro-volume handling in limited installation space. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "Preliminary model identification",
+            "configurable material and interface",
+            "engineering confirmation for final configuration"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "Aspiration",
+            "precision dispensing",
+            "transfer",
+            "reagent addition",
+            "wash/buffer dosing"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -19401,7 +19861,7 @@ export const pumpSeriesDetailRecords = [
         ],
         "resources": {
           "drawing2dUrl": "/assets/products/tm/2d-drawings/TM-0100UL.pdf",
-          "model3dUrl": "",
+          "model3dUrl": "/assets/products/tm/3d-models/TM-0100UL.glb",
           "datasheetUrl": "",
           "manualUrl": "",
           "showDrawing": true,
@@ -19545,7 +20005,7 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "250 µL PMMA Pump Head Ultra-Compact Plunger Pump",
+        "title": "250 μL PMMA 泵头超紧凑柱塞泵",
         "h1": "250 μL PMMA 泵头超紧凑柱塞泵",
         "seo": {
           "titleTag": "TM-250-PMMA 超紧凑柱塞泵｜250 μL PMMA 精密液体分配泵｜FOREACH 恒永达",
@@ -19559,7 +20019,7 @@ export const pumpSeriesDetailRecords = [
           "detailMode": "custom_inquiry",
           "showModel": false,
           "displayModel": "TM-250-PMMA",
-          "customNotice": "Plunger pumps are custom-engineered products. The page model is for preliminary selection, technical communication, and quotation reference. Final pump head material, piston material, interface, valve configuration, optical feedback, and control method should be confirmed according to the application.",
+          "customNotice": "柱塞泵为定制化产品。页面型号用于初步选型、技术沟通和报价识别，最终泵头材质、柱塞材质、接口方式、阀体搭配、光耦反馈和控制方式需根据实际应用确认。",
           "primaryButtonText": "",
           "primaryButtonHref": "/contact",
           "secondaryButtonText": "",
@@ -19568,11 +20028,23 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "TM-250-PMMA is a custom-engineered 250 µL PMMA pump head ultra-compact plunger pump for ultra-compact instrument layouts, small testing modules, and micro-volume handling in limited installation space. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "description": "该 250 μL 聚甲基丙烯酸甲酯（PMMA）展示配置适用于小型分析设备、微型液路模块和紧凑型实验室自动化单元中的定量分配任务。该量程适合常规微量试剂输送、样本处理和小体积反应体系构建，适合需要小型化集成的仪器平台。",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "250 μL 容量展示配置",
+            "便于初步选型",
+            "PMMA 泵头展示配置",
+            "可按应用评估更多材料",
+            "支持接口",
+            "阀体",
+            "控制器和光耦反馈等组合确认"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "液体吸排",
+            "精密分配",
+            "转移",
+            "反应液补加",
+            "清洗液或缓冲液定量输送"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -19869,7 +20341,7 @@ export const pumpSeriesDetailRecords = [
         ],
         "resources": {
           "drawing2dUrl": "/assets/products/tm/2d-drawings/TM-0250UL.pdf",
-          "model3dUrl": "",
+          "model3dUrl": "/assets/products/tm/3d-models/TM-0250UL.glb",
           "datasheetUrl": "",
           "manualUrl": "",
           "showDrawing": true,
@@ -19941,9 +20413,17 @@ export const pumpSeriesDetailRecords = [
         "body": {
           "description": "TM-250-PMMA is a custom-engineered 250 µL PMMA pump head ultra-compact plunger pump for ultra-compact instrument layouts, small testing modules, and micro-volume handling in limited installation space. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "Preliminary model identification",
+            "configurable material and interface",
+            "engineering confirmation for final configuration"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "Aspiration",
+            "precision dispensing",
+            "transfer",
+            "reagent addition",
+            "wash/buffer dosing"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -20240,7 +20720,7 @@ export const pumpSeriesDetailRecords = [
         ],
         "resources": {
           "drawing2dUrl": "/assets/products/tm/2d-drawings/TM-0250UL.pdf",
-          "model3dUrl": "",
+          "model3dUrl": "/assets/products/tm/3d-models/TM-0250UL.glb",
           "datasheetUrl": "",
           "manualUrl": "",
           "showDrawing": true,
@@ -20384,7 +20864,7 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "500 µL PMMA Pump Head Ultra-Compact Plunger Pump",
+        "title": "500 μL PMMA 泵头超紧凑柱塞泵",
         "h1": "500 μL PMMA 泵头超紧凑柱塞泵",
         "seo": {
           "titleTag": "TM-500-PMMA 超紧凑柱塞泵｜500 μL PMMA 精密液体分配泵｜FOREACH 恒永达",
@@ -20398,7 +20878,7 @@ export const pumpSeriesDetailRecords = [
           "detailMode": "custom_inquiry",
           "showModel": false,
           "displayModel": "TM-500-PMMA",
-          "customNotice": "Plunger pumps are custom-engineered products. The page model is for preliminary selection, technical communication, and quotation reference. Final pump head material, piston material, interface, valve configuration, optical feedback, and control method should be confirmed according to the application.",
+          "customNotice": "柱塞泵为定制化产品。页面型号用于初步选型、技术沟通和报价识别，最终泵头材质、柱塞材质、接口方式、阀体搭配、光耦反馈和控制方式需根据实际应用确认。",
           "primaryButtonText": "",
           "primaryButtonHref": "/contact",
           "secondaryButtonText": "",
@@ -20407,11 +20887,23 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "TM-500-PMMA is a custom-engineered 500 µL PMMA pump head ultra-compact plunger pump for ultra-compact instrument layouts, small testing modules, and micro-volume handling in limited installation space. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "description": "该 500 μL 聚甲基丙烯酸甲酯（PMMA）展示配置适用于空间受限设备中的常规试剂输送、低容量缓冲液添加和小型液路系统供液。该量程适合在超紧凑结构中承担相对较大的微量输送任务，可用于便携式检测、小型分析仪器和模块化液体处理系统。",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "500 μL 容量展示配置",
+            "便于初步选型",
+            "PMMA 泵头展示配置",
+            "可按应用评估更多材料",
+            "支持接口",
+            "阀体",
+            "控制器和光耦反馈等组合确认"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "液体吸排",
+            "精密分配",
+            "转移",
+            "反应液补加",
+            "清洗液或缓冲液定量输送"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -20708,7 +21200,7 @@ export const pumpSeriesDetailRecords = [
         ],
         "resources": {
           "drawing2dUrl": "/assets/products/tm/2d-drawings/TM-0500UL.pdf",
-          "model3dUrl": "",
+          "model3dUrl": "/assets/products/tm/3d-models/TM-0500UL.glb",
           "datasheetUrl": "",
           "manualUrl": "",
           "showDrawing": true,
@@ -20780,9 +21272,17 @@ export const pumpSeriesDetailRecords = [
         "body": {
           "description": "TM-500-PMMA is a custom-engineered 500 µL PMMA pump head ultra-compact plunger pump for ultra-compact instrument layouts, small testing modules, and micro-volume handling in limited installation space. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
           "advantages": [
-            "Preliminary model identification; configurable material and interface; engineering confirmation for final configuration"
+            "Preliminary model identification",
+            "configurable material and interface",
+            "engineering confirmation for final configuration"
           ],
-          "commonApplications": []
+          "commonApplications": [
+            "Aspiration",
+            "precision dispensing",
+            "transfer",
+            "reagent addition",
+            "wash/buffer dosing"
+          ]
         },
         "sections": [],
         "parameters": [
@@ -21079,7 +21579,7 @@ export const pumpSeriesDetailRecords = [
         ],
         "resources": {
           "drawing2dUrl": "/assets/products/tm/2d-drawings/TM-0500UL.pdf",
-          "model3dUrl": "",
+          "model3dUrl": "/assets/products/tm/3d-models/TM-0500UL.glb",
           "datasheetUrl": "",
           "manualUrl": "",
           "showDrawing": true,
