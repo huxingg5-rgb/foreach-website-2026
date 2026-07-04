@@ -12,9 +12,12 @@
       /fr/products
       /ko/products
       /ru/products
-   2. 不生成 /zh-CN/products
-   3. 当前外语页面先统一读取英文数据
-   4. 页面结构严格交给 ProductSelectionClient 渲染
+   2. 中文默认路径不加 /zh-CN，中文产品中心为 /products
+   3. 当前外语产品中心使用 ProductSelectionClient 渲染
+   4. 产品卡片详情链接目前统一跳转到中文正式详情页：
+      /products/pumps/plunger-pumps/[slug]
+   5. 后续如果新增外语产品详情页，再单独增加：
+      app/[locale]/products/pumps/plunger-pumps/[slug]/page.tsx
 ========================================================= */
 
 import { Suspense } from "react";
