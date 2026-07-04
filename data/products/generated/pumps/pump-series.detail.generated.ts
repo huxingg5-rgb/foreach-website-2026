@@ -181,7 +181,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/ea/pump-ea-100ul-pmma.webp",
@@ -433,7 +433,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/ea/pump-ea-100ul-pmma.webp",
@@ -726,7 +726,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/ea/pump-ea-250ul-pmma.webp",
@@ -962,7 +962,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/ea/pump-ea-250ul-pmma.webp",
@@ -1255,7 +1255,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/sm/pump-sm-100ul-pmma.webp",
@@ -1491,7 +1491,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/sm/pump-sm-100ul-pmma.webp",
@@ -1784,7 +1784,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/ea/pump-ea-100ul-peek.webp",
@@ -2020,7 +2020,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/ea/pump-ea-100ul-peek.webp",
@@ -2313,7 +2313,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/ea/pump-ea-250ul-peek.webp",
@@ -2549,7 +2549,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/ea/pump-ea-250ul-peek.webp",
@@ -2842,7 +2842,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/ea/pump-ea-500ul-peek.webp",
@@ -3078,7 +3078,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/ea/pump-ea-500ul-peek.webp",
@@ -3371,7 +3371,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/ea/pump-ea-500ul-pmma.webp",
@@ -3607,7 +3607,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/ea/pump-ea-500ul-pmma.webp",
@@ -3900,7 +3900,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/ea/pump-ea-1000ul-peek.webp",
@@ -4136,7 +4136,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/ea/pump-ea-1000ul-peek.webp",
@@ -4429,7 +4429,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/ea/pump-ea-1000ul-pmma.webp",
@@ -4665,7 +4665,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/ea/pump-ea-1000ul-pmma.webp",
@@ -4958,7 +4958,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/ea/pump-ea-2500ul-peek.webp",
@@ -5194,7 +5194,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/ea/pump-ea-2500ul-peek.webp",
@@ -5487,7 +5487,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/ea/pump-ea-2500ul-pmma.webp",
@@ -5723,7 +5723,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/ea/pump-ea-2500ul-pmma.webp",
@@ -6016,7 +6016,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/ea/pump-ea-5000ul-peek.webp",
@@ -6252,7 +6252,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/ea/pump-ea-5000ul-peek.webp",
@@ -6545,7 +6545,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/ea/pump-ea-5000ul-pmma.webp",
@@ -6781,7 +6781,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/ea/pump-ea-5000ul-pmma.webp",
@@ -7074,7 +7074,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/ea/pump-ea-10000ul-peek.webp",
@@ -7310,7 +7310,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/ea/pump-ea-10000ul-peek.webp",
@@ -7603,7 +7603,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/ea/pump-ea-10000ul-pmma.webp",
@@ -7839,7 +7839,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/ea/pump-ea-10000ul-pmma.webp",
@@ -8132,7 +8132,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/sm/pump-sm-50ul-pmma.webp",
@@ -8368,7 +8368,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/sm/pump-sm-50ul-pmma.webp",
@@ -8661,7 +8661,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/sm/pump-sm-100ul-peek.webp",
@@ -8897,7 +8897,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/sm/pump-sm-100ul-peek.webp",
@@ -9190,7 +9190,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/sm/pump-sm-250ul-peek.webp",
@@ -9426,7 +9426,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/sm/pump-sm-250ul-peek.webp",
@@ -9719,7 +9719,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/sm/pump-sm-250ul-pmma.webp",
@@ -9955,7 +9955,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/sm/pump-sm-250ul-pmma.webp",
@@ -10248,7 +10248,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/sm/pump-sm-500ul-pmma.webp",
@@ -10484,7 +10484,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/sm/pump-sm-500ul-pmma.webp",
@@ -10777,7 +10777,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/sm/pump-sm-1000ul-pmma.webp",
@@ -11013,7 +11013,7 @@ export const pumpSeriesDetailRecords = [
           {
             "imageUsage": "detailImages",
             "showCaption": true,
-            "fallbackImage": "/images/products/common/product-placeholder.webp",
+            "fallbackImage": "/images/products/common/product-placeholder.svg",
             "images": [
               {
                 "src": "/images/products/pumps/plunger-pump/sm/pump-sm-1000ul-pmma.webp",

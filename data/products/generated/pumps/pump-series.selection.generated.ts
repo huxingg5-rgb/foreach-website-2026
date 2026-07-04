@@ -15,7 +15,7 @@ export const pumpSeriesSelectionCards = [
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "ea-standard-piston-pumps",
     "detailHref": "/products/pumps/plunger-pumps/ea-100-peek",
-    "cardImage": "/images/products/pumps/plunger-pump/ea/ea-100-peek-card.webp",
+    "cardImage": "/images/products/pumps/plunger-pump/ea/pump-ea-100ul-peek.webp",
     "badges": [
       "Custom",
       "100 µL",
@@ -50,7 +50,7 @@ export const pumpSeriesSelectionCards = [
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "ea-standard-piston-pumps",
     "detailHref": "/products/pumps/plunger-pumps/ea-100-pmma",
-    "cardImage": "/images/products/pumps/plunger-pump/ea/ea-100-pmma-card.webp",
+    "cardImage": "/images/products/pumps/plunger-pump/ea/pump-ea-100ul-pmma.webp",
     "badges": [
       "Custom",
       "100 µL",
@@ -85,7 +85,7 @@ export const pumpSeriesSelectionCards = [
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "ea-standard-piston-pumps",
     "detailHref": "/products/pumps/plunger-pumps/ea-250-peek",
-    "cardImage": "/images/products/pumps/plunger-pump/ea/ea-250-peek-card.webp",
+    "cardImage": "/images/products/pumps/plunger-pump/ea/pump-ea-250ul-peek.webp",
     "badges": [
       "Custom",
       "250 µL",
@@ -120,7 +120,7 @@ export const pumpSeriesSelectionCards = [
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "ea-standard-piston-pumps",
     "detailHref": "/products/pumps/plunger-pumps/ea-250-pmma",
-    "cardImage": "/images/products/pumps/plunger-pump/ea/ea-250-pmma-card.webp",
+    "cardImage": "/images/products/pumps/plunger-pump/ea/pump-ea-250ul-pmma.webp",
     "badges": [
       "Custom",
       "250 µL",
@@ -155,7 +155,7 @@ export const pumpSeriesSelectionCards = [
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "ea-standard-piston-pumps",
     "detailHref": "/products/pumps/plunger-pumps/ea-500-peek",
-    "cardImage": "/images/products/pumps/plunger-pump/ea/ea-500-peek-card.webp",
+    "cardImage": "/images/products/pumps/plunger-pump/ea/pump-ea-500ul-peek.webp",
     "badges": [
       "Custom",
       "500 µL",
@@ -190,7 +190,7 @@ export const pumpSeriesSelectionCards = [
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "ea-standard-piston-pumps",
     "detailHref": "/products/pumps/plunger-pumps/ea-500-pmma",
-    "cardImage": "/images/products/pumps/plunger-pump/ea/ea-500-pmma-card.webp",
+    "cardImage": "/images/products/pumps/plunger-pump/ea/pump-ea-500ul-pmma.webp",
     "badges": [
       "Custom",
       "500 µL",
@@ -225,7 +225,7 @@ export const pumpSeriesSelectionCards = [
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "ea-standard-piston-pumps",
     "detailHref": "/products/pumps/plunger-pumps/ea-1000-peek",
-    "cardImage": "/images/products/pumps/plunger-pump/ea/ea-1000-peek-card.webp",
+    "cardImage": "/images/products/pumps/plunger-pump/ea/pump-ea-1000ul-peek.webp",
     "badges": [
       "Custom",
       "1000 µL",
@@ -260,7 +260,7 @@ export const pumpSeriesSelectionCards = [
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "ea-standard-piston-pumps",
     "detailHref": "/products/pumps/plunger-pumps/ea-1000-pmma",
-    "cardImage": "/images/products/pumps/plunger-pump/ea/ea-1000-pmma-card.webp",
+    "cardImage": "/images/products/pumps/plunger-pump/ea/pump-ea-1000ul-pmma.webp",
     "badges": [
       "Custom",
       "1000 µL",
@@ -295,7 +295,7 @@ export const pumpSeriesSelectionCards = [
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "ea-standard-piston-pumps",
     "detailHref": "/products/pumps/plunger-pumps/ea-2500-peek",
-    "cardImage": "/images/products/pumps/plunger-pump/ea/ea-2500-peek-card.webp",
+    "cardImage": "/images/products/pumps/plunger-pump/ea/pump-ea-2500ul-peek.webp",
     "badges": [
       "Custom",
       "2500 µL",
@@ -330,7 +330,7 @@ export const pumpSeriesSelectionCards = [
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "ea-standard-piston-pumps",
     "detailHref": "/products/pumps/plunger-pumps/ea-2500-pmma",
-    "cardImage": "/images/products/pumps/plunger-pump/ea/ea-2500-pmma-card.webp",
+    "cardImage": "/images/products/pumps/plunger-pump/ea/pump-ea-2500ul-pmma.webp",
     "badges": [
       "Custom",
       "2500 µL",
@@ -365,7 +365,7 @@ export const pumpSeriesSelectionCards = [
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "ea-standard-piston-pumps",
     "detailHref": "/products/pumps/plunger-pumps/ea-5000-peek",
-    "cardImage": "/images/products/pumps/plunger-pump/ea/ea-5000-peek-card.webp",
+    "cardImage": "/images/products/pumps/plunger-pump/ea/pump-ea-5000ul-peek.webp",
     "badges": [
       "Custom",
       "5000 µL",
@@ -400,7 +400,7 @@ export const pumpSeriesSelectionCards = [
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "ea-standard-piston-pumps",
     "detailHref": "/products/pumps/plunger-pumps/ea-5000-pmma",
-    "cardImage": "/images/products/pumps/plunger-pump/ea/ea-5000-pmma-card.webp",
+    "cardImage": "/images/products/pumps/plunger-pump/ea/pump-ea-5000ul-pmma.webp",
     "badges": [
       "Custom",
       "5000 µL",
@@ -435,7 +435,7 @@ export const pumpSeriesSelectionCards = [
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "ea-standard-piston-pumps",
     "detailHref": "/products/pumps/plunger-pumps/ea-10000-peek",
-    "cardImage": "/images/products/pumps/plunger-pump/ea/ea-10000-peek-card.webp",
+    "cardImage": "/images/products/pumps/plunger-pump/ea/pump-ea-10000ul-peek.webp",
     "badges": [
       "Custom",
       "10000 µL",
@@ -470,7 +470,7 @@ export const pumpSeriesSelectionCards = [
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "ea-standard-piston-pumps",
     "detailHref": "/products/pumps/plunger-pumps/ea-10000-pmma",
-    "cardImage": "/images/products/pumps/plunger-pump/ea/ea-10000-pmma-card.webp",
+    "cardImage": "/images/products/pumps/plunger-pump/ea/pump-ea-10000ul-pmma.webp",
     "badges": [
       "Custom",
       "10000 µL",
@@ -505,7 +505,7 @@ export const pumpSeriesSelectionCards = [
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "sm-miniature-piston-pumps",
     "detailHref": "/products/pumps/plunger-pumps/sm-50-pmma",
-    "cardImage": "/images/products/pumps/plunger-pump/sm/sm-50-pmma-card.webp",
+    "cardImage": "/images/products/pumps/plunger-pump/sm/pump-sm-50ul-pmma.webp",
     "badges": [
       "Custom",
       "50 µL",
@@ -540,7 +540,7 @@ export const pumpSeriesSelectionCards = [
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "sm-miniature-piston-pumps",
     "detailHref": "/products/pumps/plunger-pumps/sm-100-peek",
-    "cardImage": "/images/products/pumps/plunger-pump/sm/sm-100-peek-card.webp",
+    "cardImage": "/images/products/pumps/plunger-pump/sm/pump-sm-100ul-peek.webp",
     "badges": [
       "Custom",
       "100 µL",
@@ -575,7 +575,7 @@ export const pumpSeriesSelectionCards = [
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "sm-miniature-piston-pumps",
     "detailHref": "/products/pumps/plunger-pumps/sm-100-pmma",
-    "cardImage": "/images/products/pumps/plunger-pump/sm/sm-100-pmma-card.webp",
+    "cardImage": "/images/products/pumps/plunger-pump/sm/pump-sm-100ul-pmma.webp",
     "badges": [
       "Custom",
       "100 µL",
@@ -610,7 +610,7 @@ export const pumpSeriesSelectionCards = [
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "sm-miniature-piston-pumps",
     "detailHref": "/products/pumps/plunger-pumps/sm-250-peek",
-    "cardImage": "/images/products/pumps/plunger-pump/sm/sm-250-peek-card.webp",
+    "cardImage": "/images/products/pumps/plunger-pump/sm/pump-sm-250ul-peek.webp",
     "badges": [
       "Custom",
       "250 µL",
@@ -645,7 +645,7 @@ export const pumpSeriesSelectionCards = [
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "sm-miniature-piston-pumps",
     "detailHref": "/products/pumps/plunger-pumps/sm-250-pmma",
-    "cardImage": "/images/products/pumps/plunger-pump/sm/sm-250-pmma-card.webp",
+    "cardImage": "/images/products/pumps/plunger-pump/sm/pump-sm-250ul-pmma.webp",
     "badges": [
       "Custom",
       "250 µL",
@@ -680,7 +680,7 @@ export const pumpSeriesSelectionCards = [
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "sm-miniature-piston-pumps",
     "detailHref": "/products/pumps/plunger-pumps/sm-500-pmma",
-    "cardImage": "/images/products/pumps/plunger-pump/sm/sm-500-pmma-card.webp",
+    "cardImage": "/images/products/pumps/plunger-pump/sm/pump-sm-500ul-pmma.webp",
     "badges": [
       "Custom",
       "500 µL",
@@ -715,7 +715,7 @@ export const pumpSeriesSelectionCards = [
     "pumpTypeSlug": "plunger-pumps",
     "seriesSlug": "sm-miniature-piston-pumps",
     "detailHref": "/products/pumps/plunger-pumps/sm-1000-pmma",
-    "cardImage": "/images/products/pumps/plunger-pump/sm/sm-1000-pmma-card.webp",
+    "cardImage": "/images/products/pumps/plunger-pump/sm/pump-sm-1000ul-pmma.webp",
     "badges": [
       "Custom",
       "1000 µL",
