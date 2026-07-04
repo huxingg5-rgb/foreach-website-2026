@@ -34,12 +34,12 @@ export default function PdfDrawingPreview({
   text = {},
 }: PdfDrawingPreviewProps) {
   const resolvedText: PdfDrawingPreviewText = {
-    title: text.title || "2D零件图",
-    loadingLabel: text.loadingLabel || "2D图纸加载中",
+    title: text.title || "零件图",
+    loadingLabel: text.loadingLabel || "图纸加载中",
     previewButton: text.previewButton || "点击预览图纸",
     description:
       text.description ||
-      `在线查看 ${documentTitle} 的2D零件图`,
+      `在线查看 ${documentTitle} 的零件图`,
   };
 
   return (

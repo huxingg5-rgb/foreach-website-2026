@@ -59,11 +59,7 @@ export default function FittingReplacementDrawingPreview({
 
   return (
     <section className="frd-drawing-section">
-      <div className="frd-drawing-head">
-        <h2>{text.title}</h2>
-      </div>
-
-      <div className="frd-drawing-viewer">
+<div className="frd-drawing-viewer">
         <LoadingProgress
           active={isDrawingPreviewVisible && isDrawingLoading}
           label={text.loadingLabel}
