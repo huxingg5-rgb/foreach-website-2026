@@ -1,18 +1,17 @@
 /* =========================================================
    page.tsx
-   恒永达官网｜中文产品类型页入口
+   恒永达官网｜中文产品类型页 / 旧产品详情页复用动态路由
 
    文件路径：
    app/products/[category]/[slug]/page.tsx
 
-   示例路径：
-   /products/pumps/plunger-pumps
-
-   说明：
-   1. 用于展示某个产品类型的筛选结果，例如柱塞泵
-   2. 当前通过 generateStaticParams 静态生成产品类型路径
-   3. 页面结构交给 ProductSelectionClient 渲染
-   4. 柱塞泵型号卡片会跳转到正式详情页：
+   路由说明：
+   1. /products/{category}/{slug}
+   2. 如果 slug 命中 product-route-map.ts，则显示产品类型筛选页
+      示例：/products/pumps/plunger-pumps
+   3. 如果没有命中产品类型路由，则继续按旧逻辑显示产品详情页
+   4. 这样可以保留原有产品详情页，同时支持新的产品中心 SEO 路径
+   5. 柱塞泵具体型号详情页已单独使用：
       /products/pumps/plunger-pumps/[slug]
 ========================================================= */
 

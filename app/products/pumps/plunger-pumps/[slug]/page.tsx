@@ -1,7 +1,7 @@
 import { getPumpSeriesProductDetailAdapter } from "@/services/products/adapters/getPumpSeriesProductDetailAdapter";
 import nodePath from "node:path";
 import nodeFs from "node:fs";
-﻿import { notFound } from "next/navigation";
+import { notFound } from "next/navigation";
 import type { ComponentType } from "react";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
 import * as plungerPumpDetailModule from "@/data/products/detail/plunger-pump-detail.generated";
