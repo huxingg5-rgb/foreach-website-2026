@@ -24,7 +24,7 @@ export function getOptionsFromProducts(
   const optionMap = new Map<string, ProductFilterOption>();
 
   products.forEach((product) => {
-    const value = normalizeFilterText(product.filters[filterKey]);
+    const value = normalizeFilterText((product.filters || {})[filterKey]);
 
     if (!value || optionMap.has(value)) return;
 
@@ -109,9 +109,9 @@ export function filterProductsByDependencies(
         return true;
       }
 
-      const productValue = product.filters[filterKey];
+      const productValue = (product.filters || {})[filterKey];
 
-      return Boolean(productValue && selectedValues.has(productValue));
+      return Boolean(productValue && selectedValues.has(String(productValue)));
     });
   });
 }

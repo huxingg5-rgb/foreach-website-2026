@@ -1,0 +1,151 @@
+[
+  {
+    "slug": "rotary-valves",
+    "title": "MRV3 陶瓷多通道旋转阀",
+    "seoTitle": "MRV3 陶瓷多通道旋转阀｜旋转阀｜恒永达 FOREACH",
+    "model": "MRV3-D10 / MRV3-D16 / MRV3-D24",
+    "productTypeName": "旋转阀",
+    "image": "/images/products/VALVE/Rotary valve_200x200_01_v001.jpg",
+    "description": "MRV3 陶瓷多通道旋转阀用于自动化分析仪器中的多通道流路切换、试剂选择、样本分配和清洗路径管理。",
+    "applications": [
+      "多试剂路径切换",
+      "样本与清洗液路径管理",
+      "多废液路径集中控制",
+      "自动化分析仪器多通道液路"
+    ],
+    "advantages": [
+      "10 / 16 / 24 通道可选",
+      "内容积低至 2.9μL",
+      "耐压 0.7MPa",
+      "触液材料包含 PCTFE、氧化锆陶瓷和蓝宝石"
+    ],
+    "specs": [
+      {
+        "label": "产品类型",
+        "value": "旋转阀"
+      },
+      {
+        "label": "通道数量",
+        "value": "10 / 16 / 24"
+      },
+      {
+        "label": "通道直径",
+        "value": "1.2 / 1.0 / 0.5mm"
+      },
+      {
+        "label": "内容积",
+        "value": "15.8 / 10 / 2.9μL"
+      },
+      {
+        "label": "耐压",
+        "value": "0.7MPa"
+      },
+      {
+        "label": "寿命",
+        "value": "100万圈"
+      }
+    ]
+  },
+  {
+    "slug": "high-pressure-valves",
+    "title": "HP 三位七通高压阀",
+    "seoTitle": "HP 三位七通高压阀｜高压阀｜恒永达 FOREACH",
+    "model": "HP-37SSU3204",
+    "productTypeName": "高压阀",
+    "image": "/images/products/common/product-placeholder.svg",
+    "description": "HP 三位七通高压阀用于高压流体控制、HPLC 自动进样、进样位 / 抽样位 / 排气位切换和分析仪器高压流路管理。",
+    "applications": [
+      "HPLC 自动进样",
+      "高压流路切换",
+      "系统排气",
+      "分析仪器高压液路模块"
+    ],
+    "advantages": [
+      "三位七通结构",
+      "最大工作压力 25MPa",
+      "内体积 0.8μL",
+      "接口规格 10-32UNF"
+    ],
+    "specs": [
+      {
+        "label": "产品类型",
+        "value": "高压阀"
+      },
+      {
+        "label": "结构",
+        "value": "三位七通"
+      },
+      {
+        "label": "最大工作压力",
+        "value": "25MPa"
+      },
+      {
+        "label": "通道直径",
+        "value": "0.4mm"
+      },
+      {
+        "label": "内体积",
+        "value": "0.8μL"
+      },
+      {
+        "label": "接口",
+        "value": "10-32UNF"
+      },
+      {
+        "label": "寿命",
+        "value": "15万 cycles（纯水）"
+      }
+    ]
+  },
+  {
+    "slug": "solenoid-valves",
+    "title": "6010 系列电磁阀",
+    "seoTitle": "6010 系列电磁阀｜电磁阀｜恒永达 FOREACH",
+    "model": "SV10-P / SV10-M6 / SV10-U28 / SV10-B16",
+    "productTypeName": "电磁阀",
+    "image": "/images/products/VALVE/Solenoid valve_200x200_01_v001.jpg",
+    "description": "6010 系列电磁阀用于自动化仪器中的液路通断控制、试剂路径控制、清洗路径控制和阀组集成。",
+    "applications": [
+      "试剂路径通断控制",
+      "清洗液路径控制",
+      "废液路径控制",
+      "自动化仪器阀组集成"
+    ],
+    "advantages": [
+      "基板型、螺纹型和倒刺型结构可选",
+      "2通 / 3通，NO / NC / 万向可选",
+      "压力范围 -75kPa～0.25MPa",
+      "膜片材质 EPDM / FKM / FFKM 可选"
+    ],
+    "specs": [
+      {
+        "label": "产品类型",
+        "value": "电磁阀"
+      },
+      {
+        "label": "结构形式",
+        "value": "基板型 / 螺纹型 / 倒刺型"
+      },
+      {
+        "label": "通口数",
+        "value": "2 / 3"
+      },
+      {
+        "label": "阀形式",
+        "value": "万向 / NO / NC"
+      },
+      {
+        "label": "使用压力范围",
+        "value": "-75kPa～0.25MPa"
+      },
+      {
+        "label": "孔口直径",
+        "value": "1.4mm"
+      },
+      {
+        "label": "CV",
+        "value": "0.03"
+      }
+    ]
+  }
+]

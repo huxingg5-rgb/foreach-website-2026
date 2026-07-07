@@ -3,16 +3,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import ResourceSearchBar from "@/components/resources/ResourceSearchBar";
-
-/* =========================================================
-   ProductSelectionClient.tsx
-   恒永达官网｜产品中心选型页客户端组件
-
-   说明：
-   1. 本文件只保留状态、筛选、搜索、分页和数据逻辑
-   2. 筛选栏 / 产品卡片 / 分页 / 分类按钮已拆成通用模板组件
-   3. 数据来源为 Excel 解析生成的数据文件
-========================================================= */
+import { useSelectionCart } from "@/components/selection-cart/SelectionCartProvider";
+import type { SelectionCartItemInput } from "@/components/selection-cart/selection-cart.types";
 
 import SitePageShell from "@/components/layout/SitePageShell";
 import {
@@ -25,18 +17,45 @@ import {
 import { getProductTypeIntroByIds } from "@/data/products/selection/product-type-intro";
 import { getProductFilterOptions } from "@/data/products/selection/filter-rules/product-filter-rules.index";
 import {
-  selectionFilterLabels,
-  selectionProducts,
-  selectionTaxonomyItems,
+  selectionFilterLabels as baseSelectionFilterLabels,
+  selectionProducts as baseSelectionProducts,
+  selectionTaxonomyItems as baseSelectionTaxonomyItems,
 } from "@/data/products/selection/product-selection.generated";
+import {
+  diaphragmPumpSelectionProducts,
+  diaphragmPumpTaxonomyItems,
+  diaphragmPumpFilterLabels,
+} from "@/data/products/selection/diaphragm-pump-selection.generated";
+import {
+  pipettingPumpSelectionProducts,
+  pipettingPumpFilterLabels,
+} from "@/data/products/selection/pipetting-pump-selection.generated";
+import {
+  valvelessPumpSelectionProducts,
+  valvelessPumpFilterLabels,
+} from "@/data/products/selection/valveless-pump-selection.generated";
+import {
+  valveSelectionProducts,
+  valveFilterLabels,
+} from "@/data/products/selection/valve-selection.generated";
+import {
+  probeSelectionProducts,
+  probeFilterLabels,
+} from "@/data/products/selection/probe-selection.generated";
+
 import { plungerPumpDetails as plungerPumpDetails } from "@/data/products/detail/plunger-pump-detail.generated";
 
+import { tubingSelectionProducts } from "@/data/products/selection/tubing-selection.generated";
 import ProductCardGrid from "./ProductCardGrid";
 import ProductCategoryTabs from "./ProductCategoryTabs";
 import ProductEmptyState from "./ProductEmptyState";
 import ProductFilterPanel from "./ProductFilterPanel";
 import ProductSelectionPagination from "./ProductSelectionPagination";
 import ProductSelectionToolbar from "./ProductSelectionToolbar";
+import {
+  syringePumpFilterLabels,
+  syringePumpSelectionProducts,
+} from "@/data/products/selection/syringe-pump-selection.generated";
 
 import type {
   ProductSelectionFilterLabel,
@@ -50,6 +69,45 @@ import type {
   ProductSelectionFilterGroup,
   ProductSelectionSelectedTag,
 } from "./product-selection-ui.types";
+
+const selectionProducts = [
+  ...baseSelectionProducts,
+  ...diaphragmPumpSelectionProducts,
+  ...pipettingPumpSelectionProducts,
+  ...valvelessPumpSelectionProducts,
+  ...valveSelectionProducts,
+  ...probeSelectionProducts,
+  ...syringePumpSelectionProducts,
+].filter((product, index, array) => {
+  return index === array.findIndex((item) => item.productId === product.productId);
+});
+
+const selectionTaxonomyItems = [
+  ...baseSelectionTaxonomyItems,
+  ...diaphragmPumpTaxonomyItems,
+].filter((item, index, array) => {
+  return index === array.findIndex((entry) => entry.id === item.id);
+});
+
+const selectionFilterLabels = [
+  ...baseSelectionFilterLabels,
+  ...diaphragmPumpFilterLabels,
+  ...pipettingPumpFilterLabels,
+  ...valvelessPumpFilterLabels,
+  ...valveFilterLabels,
+  ...probeFilterLabels,
+  ...syringePumpFilterLabels,
+].filter((label, index, array) => {
+  return (
+    index ===
+    array.findIndex((item) => {
+      return (
+        (item as any).productTypeId === (label as any).productTypeId &&
+        (item as any).filterKey === (label as any).filterKey
+      );
+    })
+  );
+});
 
 type ProductSelectionClientProps = {
   locale?: SelectionLocale;
@@ -284,24 +342,58 @@ function getCategoryItems(locale: SelectionLocale) {
 }
 
 function getProductsByCategory(categoryId: string) {
-  return selectionProducts
-    .filter((product) => {
-      return product.categoryId === categoryId && product.status === "active";
-    })
-    .sort((current, next) => current.sortOrder - next.sortOrder);
+  
+  /*
+    TUBING_GET_PRODUCTS_BY_CATEGORY_20260707
+    管路系列直接返回 6 张材料卡片。
+  */
+  if (String(arguments[0] || "") === "tubing") {
+    return tubingSelectionProducts;
+  }
+
+return selectionProducts
+    .filter((product) => product.categoryId === categoryId)
+    .filter((product, index, array) => {
+      return (
+        index ===
+        array.findIndex((item) => item.productId === product.productId)
+      );
+    });
 }
 
 function getFirstProductTypeId(categoryId: string) {
-  const products = getProductsByCategory(categoryId);
+  
+  /*
+    TUBING_GET_FIRST_PRODUCT_TYPE_20260707
+  */
+  if (String(arguments[0] || "") === "tubing") {
+    return "tubing";
+  }
+
+const products = getProductsByCategory(categoryId);
   const first = products[0];
 
   return first?.productTypeId || "";
 }
 
-function getVisibleFilterLabels(productTypeId: string) {
+function getVisibleFilterLabels(productTypeId: string): ProductSelectionFilterLabel[] {
   return selectionFilterLabels
-    .filter((item) => item.productTypeId === productTypeId && item.visible)
-    .sort((current, next) => current.sortOrder - next.sortOrder);
+    .filter((item): item is ProductSelectionFilterLabel => {
+      const label = item as any;
+
+      return Boolean(
+        label &&
+          typeof label === "object" &&
+          label.productTypeId === productTypeId &&
+          label.visible
+      );
+    })
+    .sort((current, next) => {
+      const currentSortOrder = Number((current as any).sortOrder ?? 0);
+      const nextSortOrder = Number((next as any).sortOrder ?? 0);
+
+      return currentSortOrder - nextSortOrder;
+    });
 }
 
 function getFilterOptions(
@@ -402,10 +494,29 @@ function normalizeModelKey(value: unknown) {
     .replace(/^-+|-+$/g, "");
 }
 
+
+function getSelectionLocalizedText(value: unknown, locale: "zh" | "en" = "zh"): string {
+  if (!value) return "";
+  if (typeof value === "string") return value;
+
+  if (typeof value === "object") {
+    const record = value as Record<string, unknown>;
+    const current = record[locale];
+    const zh = record.zh;
+    const en = record.en;
+
+    if (typeof current === "string") return current;
+    if (typeof zh === "string") return zh;
+    if (typeof en === "string") return en;
+  }
+
+  return "";
+}
+
 function findPlungerPumpDetailSlug(product: ProductSelectionProduct) {
   const candidates = [
-    product.cardTitle?.en,
-    product.cardTitle?.zh,
+    getSelectionLocalizedText(product.cardTitle, "en"),
+    getSelectionLocalizedText(product.cardTitle, "zh"),
     product.productId,
     product.detailSlug,
   ]
@@ -460,16 +571,16 @@ function getPlungerPumpModelSlugForDetailHref(product: ProductSelectionProduct) 
   }
 
   const text = [
-    product.cardTitle?.en,
-    product.cardTitle?.zh,
+    getSelectionLocalizedText(product.cardTitle, "en"),
+    getSelectionLocalizedText(product.cardTitle, "zh"),
     product.productId,
     product.detailSlug,
     product.seriesId,
     product.filters?.filter01,
     product.filters?.filter02,
     product.filters?.filter03,
-    product.searchKeywords?.en,
-    product.searchKeywords?.zh,
+    getSelectionLocalizedText(product.searchKeywords, "en"),
+    getSelectionLocalizedText(product.searchKeywords, "zh"),
   ]
     .map(cleanPlungerHrefText)
     .filter(Boolean)
@@ -497,16 +608,513 @@ function getPlungerPumpModelSlugForDetailHref(product: ProductSelectionProduct) 
     ].join("-");
   }
 
-  return normalizePlungerModelSlug(product.cardTitle?.en || product.cardTitle?.zh || product.productId || product.detailSlug);
+  return normalizePlungerModelSlug(getSelectionLocalizedText(product.cardTitle, "en") || getSelectionLocalizedText(product.cardTitle, "zh") || product.productId || product.detailSlug);
 }
 
 /* ===== FOREACH plunger pump model detail href helpers END ===== */
 
 
+
+/*
+  FORCE_FIX_PLUNGER_WRONG_PROBE_HREF_20260707
+
+  最终详情链接出口保护：
+  防止柱塞泵 EA / SM / TM 被错误跳到 /products/probes/[slug]。
+  只纠正 EA / SM / TM 柱塞泵型号，不影响真正的针系列页面。
+*/
+function normalizeFinalProductDetailHref(
+  product: ProductSelectionProduct,
+  href: string
+): string {
+  const rawHref = String(href || "").trim();
+
+  const hrefSlug = rawHref
+    .split("/")
+    .filter(Boolean)
+    .pop()
+    ?.toLowerCase();
+
+  const rawSlug = String(
+    (product as any).detailSlug ||
+      (product as any).slug ||
+      (product as any).productId ||
+      hrefSlug ||
+      ""
+  )
+    .split("/")
+    .filter(Boolean)
+    .pop()
+    ?.toLowerCase();
+
+  if (rawSlug && /^(ea|sm|tm)-\d+-(pmma|peek)$/.test(rawSlug)) {
+    return `/products/pumps/plunger-pumps/${rawSlug}`;
+  }
+
+  if (
+    rawHref.includes("/products/probes/") &&
+    hrefSlug &&
+    /^(ea|sm|tm)-\d+-(pmma|peek)$/.test(hrefSlug)
+  ) {
+    return `/products/pumps/plunger-pumps/${hrefSlug}`;
+  }
+
+  return rawHref;
+}
+
+
 function makeDetailHref(product: ProductSelectionProduct) {
+  /*
+    PLUNGER_DETAIL_HREF_PRIORITY_FIX_20260707
+
+    柱塞泵详情链接优先处理。
+    防止 EA / SM / TM 型号被后面的 probes 分支错误导向 /products/probes/[slug]。
+  */
+  {
+    const rawHref = String(
+      (product as any).detailHref ||
+        (product as any).productDetailHref ||
+        (product as any).href ||
+        ""
+    ).trim();
+
+    if (rawHref.includes("/products/pumps/plunger-pumps/")) {
+      return rawHref;
+    }
+
+    const rawSlug = String(
+      (product as any).detailSlug ||
+        (product as any).slug ||
+        (product as any).productId ||
+        ""
+    )
+      .split("/")
+      .filter(Boolean)
+      .pop()
+      ?.toLowerCase();
+
+    if (rawSlug && /^(ea|sm|tm)-\d+-(pmma|peek)$/.test(rawSlug)) {
+      return `/products/pumps/plunger-pumps/${rawSlug}`;
+    }
+
+    const textForModel = [
+      (product as any).productId,
+      (product as any).detailSlug,
+      (product as any).slug,
+      (product as any).cardTitle?.zh,
+      (product as any).cardTitle?.en,
+    ]
+      .filter(Boolean)
+      .join(" ")
+      .toLowerCase();
+
+    const modelMatch = textForModel.match(/\b(ea|sm|tm)[-_\s]*(\d{2,5})[-_\s]*(pmma|peek)\b/i);
+
+    if (modelMatch) {
+      return `/products/pumps/plunger-pumps/${modelMatch[1].toLowerCase()}-${modelMatch[2]}-${modelMatch[3].toLowerCase()}`;
+    }
+  }
+
+/*
+    TUBING_MAKE_DETAIL_HREF_20260707
+    管路卡片优先使用 detailHref / href。
+  */
+  {
+    const rawHref = String(
+      (product as any).detailHref ||
+        (product as any).productDetailHref ||
+        (product as any).href ||
+        ""
+    ).trim();
+
+    if (rawHref.includes("/products/tubing/")) {
+      return rawHref;
+    }
+
+    const rawSlug = String(
+      (product as any).detailSlug ||
+        (product as any).slug ||
+        (product as any).productId ||
+        ""
+    )
+      .split("/")
+      .filter(Boolean)
+      .pop()
+      ?.toLowerCase();
+
+    if (
+      rawSlug === "pvc-tubing" ||
+      rawSlug === "tpu-tubing" ||
+      rawSlug === "fep-tubing" ||
+      rawSlug === "ptfe-tubing" ||
+      rawSlug === "peek-tubing" ||
+      rawSlug === "pfa-tubing"
+    ) {
+      return `/products/tubing/${rawSlug}`;
+    }
+  }
+
+/*
+    TUBING_SELECTION_DETAIL_HREF_PATCH_20260707
+
+    管路系列详情链接分支。
+    只影响 PVC / TPU / FEP / PTFE / PEEK / PFA 管路卡片。
+    其它产品仍走原来的针、阀、泵逻辑。
+  */
+  {
+    const rawHref = String(
+      (product as any).detailHref ||
+        (product as any).productDetailHref ||
+        (product as any).href ||
+        (product as any).url ||
+        (product as any).path ||
+        ""
+    ).trim();
+
+    if (rawHref.includes("/products/tubing/")) {
+      return rawHref;
+    }
+
+    const rawText = JSON.stringify(product || {}).toLowerCase();
+
+    const isTubingProduct =
+      rawText.includes("tubing") ||
+      rawText.includes("管路") ||
+      rawText.includes("pvc 管") ||
+      rawText.includes("tpu 管") ||
+      rawText.includes("fep 管") ||
+      rawText.includes("ptfe 管") ||
+      rawText.includes("peek 管") ||
+      rawText.includes("pfa 管") ||
+      rawText.includes("pvc-tubing") ||
+      rawText.includes("tpu-tubing") ||
+      rawText.includes("fep-tubing") ||
+      rawText.includes("ptfe-tubing") ||
+      rawText.includes("peek-tubing") ||
+      rawText.includes("pfa-tubing");
+
+    if (isTubingProduct) {
+      const rawSlug = String(
+        (product as any).detailSlug ||
+          (product as any).routeSlug ||
+          (product as any).slug ||
+          (product as any).seriesSlug ||
+          (product as any).productId ||
+          ""
+      )
+        .split("/")
+        .filter(Boolean)
+        .pop()
+        ?.toLowerCase();
+
+      if (
+        rawSlug === "pvc-tubing" ||
+        rawSlug === "tpu-tubing" ||
+        rawSlug === "fep-tubing" ||
+        rawSlug === "ptfe-tubing" ||
+        rawSlug === "peek-tubing" ||
+        rawSlug === "pfa-tubing"
+      ) {
+        return `/products/tubing/${rawSlug}`;
+      }
+
+      if (rawText.includes("pvc")) return "/products/tubing/pvc-tubing";
+      if (rawText.includes("tpu")) return "/products/tubing/tpu-tubing";
+      if (rawText.includes("fep")) return "/products/tubing/fep-tubing";
+      if (rawText.includes("ptfe")) return "/products/tubing/ptfe-tubing";
+      if (rawText.includes("peek")) return "/products/tubing/peek-tubing";
+      if (rawText.includes("pfa")) return "/products/tubing/pfa-tubing";
+
+      return "/products";
+    }
+  }
+
+
+  /*
+    PROBE_DETAIL_HREF_PATCH_FORCE_NEEDLES
+
+    产品中心针系列 categoryId 使用 needles。
+    详情页路由使用 /products/probes/[slug]。
+    避免生成 /products/probes/undefined。
+  */
+  if (
+    (product as any)?.sourceType === "probe-selection" ||
+    (product as any)?.categoryId === "needles" ||
+    (product as any)?.category === "needles" ||
+    (product as any)?.categoryLabel === "针系列"
+  ) {
+    const rawHref = String(
+      (product as any).detailHref ||
+        (product as any).href ||
+        ""
+    );
+
+    const slugFromHref = rawHref
+      .split("/")
+      .filter(Boolean)
+      .pop();
+
+    const rawSlug =
+      (product as any).productTypeSlug ||
+      (product as any).detailSlug ||
+      (product as any).routeSlug ||
+      (product as any).slug ||
+      (product as any).seriesSlug ||
+      slugFromHref;
+
+    const probeSlug = String(rawSlug || "")
+      .split("/")
+      .filter(Boolean)
+      .pop();
+
+    if (
+      probeSlug &&
+      probeSlug !== "undefined" &&
+      probeSlug !== "null"
+    ) {
+      return `/products/probes/${probeSlug}`;
+    }
+
+    return "/products";
+  }
+
+  /*
+    PROBE_DETAIL_HREF_PATCH_20260709
+
+    针系列在产品中心中使用中文 productTypeId 显示筛选项，
+    详情路由不能依赖 productTypeId。
+    这里优先读取 detailHref / href / productTypeSlug / detailSlug / routeSlug / slug。
+  */
+  if (
+    (product as any)?.sourceType === "probe-selection" ||
+    (product as any)?.category === "probes" ||
+    (product as any)?.categoryLabel === "针系列"
+  ) {
+    const rawHref = String(
+      (product as any).detailHref ||
+        (product as any).href ||
+        ""
+    );
+
+    const slugFromHref = rawHref
+      .split("/")
+      .filter(Boolean)
+      .pop();
+
+    const rawSlug =
+      (product as any).productTypeSlug ||
+      (product as any).detailSlug ||
+      (product as any).routeSlug ||
+      (product as any).slug ||
+      (product as any).seriesSlug ||
+      slugFromHref;
+
+    const probeSlug = String(rawSlug || "")
+      .split("/")
+      .filter(Boolean)
+      .pop();
+
+    if (
+      probeSlug &&
+      probeSlug !== "undefined" &&
+      probeSlug !== "null"
+    ) {
+      return `/products/probes/${probeSlug}`;
+    }
+
+    return "/products";
+  }
+
+  /*
+    PROBE_DETAIL_HREF_PATCH_20260708
+
+    针系列产品类型使用中文显示，详情路径不能依赖 productTypeId。
+    这里优先读取 detailHref / href / productTypeSlug / detailSlug / routeSlug / slug。
+    避免生成 /products/probes/undefined。
+  */
+  if (
+    (product as any)?.sourceType === "probe-selection" ||
+    (product as any)?.category === "probes" ||
+    (product as any)?.categoryLabel === "针系列"
+  ) {
+    const rawHref = String(
+      (product as any).detailHref ||
+        (product as any).href ||
+        ""
+    );
+
+    const slugFromHref = rawHref
+      .split("/")
+      .filter(Boolean)
+      .pop();
+
+    const rawSlug =
+      (product as any).productTypeSlug ||
+      (product as any).detailSlug ||
+      (product as any).routeSlug ||
+      (product as any).slug ||
+      (product as any).seriesSlug ||
+      slugFromHref;
+
+    const probeSlug = String(rawSlug || "")
+      .split("/")
+      .filter(Boolean)
+      .pop();
+
+    if (
+      probeSlug &&
+      probeSlug !== "undefined" &&
+      probeSlug !== "null"
+    ) {
+      return `/products/probes/${probeSlug}`;
+    }
+
+    return "/products";
+  }
+
+  /*
+    VALVE_DETAIL_HREF_PATCH_20260707
+
+    阀系列产品类型为了中文显示，productTypeId 可能是“旋转阀 / 高压阀 / 电磁阀”。
+    因此详情链接不能只依赖 productTypeId。
+    这里优先读取 detailHref / href / detailSlug / routeSlug / slug / seriesSlug。
+    避免生成 /products/valves/undefined/。
+  */
+  if ((product as any)?.categoryId === "valves") {
+    const rawHref = String(
+      (product as any).detailHref ||
+        (product as any).href ||
+        ""
+    );
+
+    const slugFromHref = rawHref
+      .split("/")
+      .filter(Boolean)
+      .pop();
+
+    const rawSlug =
+      (product as any).detailSlug ||
+      (product as any).routeSlug ||
+      (product as any).slug ||
+      (product as any).seriesSlug ||
+      (product as any).seriesId ||
+      slugFromHref;
+
+    const valveSlug = String(rawSlug || "")
+      .split("/")
+      .filter(Boolean)
+      .pop();
+
+    if (
+      valveSlug &&
+      valveSlug !== "undefined" &&
+      valveSlug !== "null"
+    ) {
+      return `/products/valves/${valveSlug}`;
+    }
+
+    return "/products";
+  }
+
+  
+  const isValveProduct =
+    product.categoryId === "valves" &&
+    ["rotary-valves", "high-pressure-valves", "solenoid-valves"].includes(String(product.productTypeId || ""));
+
+  if (isValveProduct) {
+    return (
+      (product as any).detailHref ||
+      (product as any).href ||
+      `/products/valves/${product.productTypeId}`
+    );
+  }
+
+  const isValvelessPump =
+    product.categoryId === "pumps" &&
+    ["valveless-pump", "valveless-pumps"].includes(String(product.productTypeId || ""));
+
+  const isSyringePump =
+    product.categoryId === "pumps" &&
+    ["syringe-pump", "syringe-pumps"].includes(String(product.productTypeId || ""));
+
+  if (isValvelessPump) {
+    const rawSlug =
+      (product as any).detailSlug ||
+      (product as any).seriesSlug ||
+      (product as any).seriesId ||
+      product.productId;
+
+    const slug = String(rawSlug || "")
+      .split("/")
+      .filter(Boolean)
+      .pop();
+
+    return slug
+      ? `/products/pumps/valveless-pumps/${slug}`
+      : "/products/pumps/valveless-pumps";
+  }
+
+  if (isSyringePump) {
+    const rawSlug =
+      (product as any).detailSlug ||
+      (product as any).seriesSlug ||
+      (product as any).seriesId ||
+      product.productId;
+
+    const slug = String(rawSlug || "")
+      .split("/")
+      .filter(Boolean)
+      .pop();
+
+    return slug
+      ? `/products/pumps/syringe-pumps/${slug}`
+      : "/products/pumps/syringe-pumps";
+  }
+const isDiaphragmPump =
+    product.categoryId === "pumps" &&
+    ["diaphragm-pump", "diaphragm-pumps"].includes(String(product.productTypeId || ""));
+
+  if (isDiaphragmPump) {
+    const rawSlug =
+      (product as any).detailSlug ||
+      (product as any).seriesSlug ||
+      (product as any).seriesId ||
+      product.productId;
+
+    const slug = String(rawSlug || "")
+      .split("/")
+      .filter(Boolean)
+      .pop();
+
+    return slug
+      ? `/products/pumps/diaphragm-pumps/${slug}`
+      : "/products/pumps/diaphragm-pumps";
+  }  const isPipettingPump =
+    product.categoryId === "pumps" &&
+    ["pipette-pump", "pipetting-pump", "pipetting-pumps"].includes(String(product.productTypeId || ""));
+
+  if (isPipettingPump) {
+    const rawSlug =
+      (product as any).detailSlug ||
+      (product as any).seriesSlug ||
+      (product as any).seriesId ||
+      product.productId;
+
+    const slug = String(rawSlug || "")
+      .split("/")
+      .filter(Boolean)
+      .pop();
+
+    return slug
+      ? `/products/pumps/pipetting-pumps/${slug}`
+      : "/products/pumps/pipetting-pumps";
+  }
+
+
+
+
   const isPlungerPump =
     product.categoryId === "pumps" &&
-    ["plunger-pump", "plunger-pumps"].includes(product.productTypeId);
+    ["plunger-pump", "plunger-pumps"].includes(String(product.productTypeId || ""));
 
   if (isPlungerPump) {
     const slug = getPlungerPumpModelSlugForDetailHref(product);
@@ -560,9 +1168,21 @@ export default function ProductSelectionClient({
       );
     }
   );
+  const {
+    items: selectionCartItems,
+    addItem,
+    removeItem,
+    getItem,
+  } = useSelectionCart();
 
-  const [selectedList, setSelectedList] = useState<Set<string>>(() => new Set());
-  const [searchKeyword, setSearchKeyword] = useState("");
+  const selectedList = useMemo(() => {
+    return new Set(
+      selectionCartItems
+        .filter((item) => item.sourceType === "pump-selection")
+        .map((item) => item.productCode)
+    );
+  }, [selectionCartItems]);
+const [searchKeyword, setSearchKeyword] = useState("");
   const [mobileCategoryOpen, setMobileCategoryOpen] = useState(false);
   const [mobileOpenFilterGroups, setMobileOpenFilterGroups] = useState<
     Record<string, boolean>
@@ -603,7 +1223,7 @@ export default function ProductSelectionClient({
       if (!optionMap.has(product.productTypeId)) {
         optionMap.set(product.productTypeId, {
           value: product.productTypeId,
-          label: getTaxonomyLabel(locale, product.productTypeId),
+          label: getTaxonomyLabel(locale, String(product.productTypeId || "")),
         });
       }
     });
@@ -654,8 +1274,9 @@ export default function ProductSelectionClient({
 
     activeFilterLabels.forEach((label: ProductSelectionFilterLabel) => {
       const options = getFilterOptions(
-        currentTypeProducts,
-        label.filterKey,
+        currentTypeProducts as any,
+
+        (label as any).filterKey,
         selectedFilters,
         activeProductTypeId
       );
@@ -663,8 +1284,8 @@ export default function ProductSelectionClient({
       if (options.length === 0) return;
 
       groups.push({
-        key: label.filterKey,
-        title: getText(locale, label.label, label.filterKey),
+        key: (label as any).filterKey,
+        title: getText(locale, label.label, (label as any).filterKey),
         inputType: label.inputType,
         options,
       });
@@ -688,9 +1309,9 @@ export default function ProductSelectionClient({
           return true;
         }
 
-        const value = product.filters[filterKey];
+        const value = (product.filters || {})[filterKey];
 
-        return Boolean(value && selectedValues.has(value));
+        return Boolean(value && selectedValues.has(String(value)));
       });
 
       if (!filterMatched) {
@@ -707,13 +1328,13 @@ export default function ProductSelectionClient({
         product.productTypeId,
         product.seriesId,
         product.detailSlug,
-        product.cardTitle.zh,
-        product.cardTitle.en,
-        product.cardSubtitle.zh,
-        product.cardSubtitle.en,
-        product.searchKeywords.zh,
-        product.searchKeywords.en,
-        ...Object.values(product.filters),
+        ((product.cardTitle as any)?.zh || ""),
+        ((product.cardTitle as any)?.en || ""),
+        ((product.cardSubtitle as any)?.zh || ""),
+        ((product.cardSubtitle as any)?.en || ""),
+        ((product.searchKeywords as any)?.zh || ""),
+        ((product.searchKeywords as any)?.en || ""),
+        ...Object.values(product.filters || {}),
       ]
         .filter(Boolean)
         .join(" ")
@@ -1183,87 +1804,98 @@ export default function ProductSelectionClient({
     setSearchKeyword("");
     setMobileOpenFilterGroups(getDefaultMobileOpenFilterGroups(firstProductTypeId));
   }
+  function createProductCartItem(
+    product: ProductSelectionProduct
+  ): SelectionCartItemInput {
+    const title = getText(locale, product.cardTitle, product.productId);
 
-  function toggleProductInList(productId: string) {
-    setSelectedList((current) => {
-      const next = new Set(current);
+    return {
+      sourceType: "pump-selection",
+      sourceLabel: "产品中心",
+      productName: getTaxonomyLabel(locale, String(product.productTypeId || "")),
+      productCode: product.productId,
+      foreachModel: title,
+      competitorModels: [],
+      quantity: 1,
+      needDrawing: false,
+      imagePath: product.imageCard,
+      detailHref: makeDetailHref(product),
+    };
+  }
 
-      if (next.has(productId)) {
-        next.delete(productId);
-      } else {
-        next.add(productId);
-      }
+  function toggleProductInList(product: ProductSelectionProduct) {
+    const currentItem = getItem("pump-selection", product.productId);
 
-      return next;
-    });
+    if (currentItem) {
+      removeItem(currentItem.id);
+      return;
+    }
+
+    addItem(createProductCartItem(product));
   }
 
   return (
-    <div data-product-breadcrumb-shell="true" data-product-center-page="true">
+    <div className="products-selection-page">
 <SitePageShell
-      breadcrumbAriaLabel={
-        locale === "zh" ? "面包屑导航" : "Breadcrumb"
-      }
-      breadcrumbItems={[
-        {
-          label: pageText.breadcrumbHome,
-          href: locale === "zh" ? "/" : `/${locale}`,
-        },
-        {
-          label: pageText.breadcrumbCurrent,
-        },
-      ]}
-    >
-      <main className="products-selection-page page">
-      <div className="container">
-        
+        breadcrumbAriaLabel={locale === "zh" ? "面包屑导航" : "Breadcrumb"}
+        breadcrumbItems={[
+          {
+            label: pageText.breadcrumbHome,
+            href: locale === "zh" ? "/" : `/${locale}`,
+          },
+          {
+            label: pageText.breadcrumbCurrent,
+          },
+        ]}
+      >
+        <main className="products-main">
+          <div className="products-container">
+            <ResourceSearchBar
+              value={searchKeyword}
+              onChange={setSearchKeyword}
+              onSearch={(value) => setSearchKeyword(value)}
+              placeholder={pageText.searchPlaceholder}
+              searchButtonText={pageText.searchButton}
+              showRecentKeywords={false}
+            />
 
-        <ResourceSearchBar
-          value={searchKeyword}
-          onChange={setSearchKeyword}
-          onSearch={setSearchKeyword}
-          placeholder={pageText.searchPlaceholder}
-          searchButtonText={pageText.searchButton}
-          showRecentKeywords={false}
-        />
+            <ProductCategoryTabs
+              categories={categoryItems}
+              activeCategoryId={activeCategoryId}
+              activeCategoryLabel={activeCategory.label}
+              mobileCategoryOpen={mobileCategoryOpen}
+              mobileCategoryPrefix={pageText.mobileCategoryPrefix}
+              onToggleMobileCategory={() =>
+                setMobileCategoryOpen((current) => !current)
+              }
+              onCategoryChange={handleCategoryChange}
+            />
 
-        <ProductCategoryTabs
-          categories={categoryItems}
-          activeCategoryId={activeCategoryId}
-          activeCategoryLabel={activeCategory.label}
-          mobileCategoryOpen={mobileCategoryOpen}
-          mobileCategoryPrefix={pageText.mobileCategoryPrefix}
-          onToggleMobileCategory={() =>
-            setMobileCategoryOpen((current) => !current)
-          }
-          onCategoryChange={handleCategoryChange}
-        />
+            {activeProductTypeIntro ? (
+              <section
+                className="product-type-intro-module"
+                data-product-type-id={activeProductTypeId || ""}
+                aria-label={`${activeProductTypeIntro.title}产品种类说明`}
+              >
+                <div className="product-type-intro-image">
+                  <img
+                    src={activeProductTypeIntro.image.src}
+                    alt={activeProductTypeIntro.image.alt}
+                    loading="lazy"
+                  />
+                </div>
 
-        {activeProductTypeIntro ? (
-          <section
-            className="product-type-intro-module"
-            aria-label={`${activeProductTypeIntro.title}产品种类说明`}
-          >
-            <div className="product-type-intro-image">
-              <img
-                src={activeProductTypeIntro.image.src}
-                alt={activeProductTypeIntro.image.alt}
-                loading="lazy"
-              />
-            </div>
+                <div className="product-type-intro-copy">
+                  <h2>{activeProductTypeIntro.title}</h2>
+                  {activeProductTypeIntro.paragraphs.map((paragraph) => {
+                    const emphasisText = "详情页查看或提交选型需求确认";
+                    const emphasisIndex = paragraph.indexOf(emphasisText);
 
-            <div className="product-type-intro-copy">
-              <h2>{activeProductTypeIntro.title}</h2>
+                    if (emphasisIndex < 0) {
+                      return <p key={paragraph}>{paragraph}</p>;
+                    }
 
-              {activeProductTypeIntro.paragraphs.map((paragraph) => {
-                const emphasisText = "详情页查看或提交选型需求确认";
-                const emphasisIndex = paragraph.indexOf(emphasisText);
-
-                if (emphasisIndex < 0) {
-                  return <p key={paragraph}>{paragraph}</p>;
-                }
-
-                return (
+                    return (
                   <p key={paragraph}>
                     {paragraph.slice(0, emphasisIndex)}
                     <strong className="product-type-intro-emphasis">
@@ -1302,7 +1934,7 @@ export default function ProductSelectionClient({
               {matchedProducts.length > 0 ? (
                 <>
                   <ProductCardGrid
-                    products={pagedProducts}
+                    products={pagedProducts as any}
                     selectedList={selectedList}
                     detailButtonText={pageText.detailButton}
                     addToListText={pageText.addToList}
@@ -1313,7 +1945,7 @@ export default function ProductSelectionClient({
                     getSubtitle={(product) =>
                       getText(locale, product.cardSubtitle, "")
                     }
-                    getDetailHref={makeDetailHref}
+                    getDetailHref={(product) => normalizeFinalProductDetailHref(product, makeDetailHref(product))}
                     onToggleList={toggleProductInList}
                   />
 
@@ -1340,3 +1972,24 @@ export default function ProductSelectionClient({
 </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

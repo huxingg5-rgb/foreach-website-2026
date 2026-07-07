@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 /* =========================================================
    SelectionCartProvider.tsx
@@ -135,30 +135,33 @@ function buildCartText(items: SelectionCartItem[]) {
   }
 
   const lines = items.map((item, index) => {
+    const isPumpSelection = item.sourceType === "pump-selection";
+
+    if (isPumpSelection) {
+      return [
+        `#${index + 1}`,
+        `来源：${item.sourceLabel}`,
+        `产品类型：${item.productName}`,
+        `产品型号：${item.foreachModel}`,
+        `数量：${item.quantity}`,
+        `2D 图纸：${item.needDrawing ? "需要" : "暂不需要"}`,
+      ].join("\n");
+    }
+
     return [
-      `${index + 1}. ${item.foreachModel}`,
+      `#${index + 1}`,
       `来源：${item.sourceLabel}`,
+      `产品：${item.productName}`,
       `商品编码：${item.productCode}`,
+      `恒永达型号：${item.foreachModel}`,
       `兼容编码：${item.competitorModels.join(" / ") || "-"}`,
       `数量：${item.quantity}`,
       `2D 图纸：${item.needDrawing ? "需要" : "暂不需要"}`,
     ].join("\n");
   });
 
-  return [
-    "恒永达选型清单",
-    "",
-    "请协助确认以下型号、数量及图纸需求：",
-    "",
-    lines.join("\n\n"),
-    "",
-    "说明：最终适配性需结合管径、材质、密封件、连接方式、耐压要求及实际应用环境进行确认。",
-  ].join("\n");
+  return lines.join("\n\n");
 }
-
-/* =========================================================
-   Provider
-========================================================= */
 export function SelectionCartProvider({
   children,
 }: {
@@ -175,7 +178,13 @@ export function SelectionCartProvider({
       const rawGlobalCart = window.localStorage.getItem(GLOBAL_CART_STORAGE_KEY);
 
       if (rawGlobalCart) {
-        const parsedGlobalCart = JSON.parse(rawGlobalCart) as SelectionCartItem[];
+        let parsedGlobalCart: SelectionCartItem[] = [];
+
+      try {
+        parsedGlobalCart = JSON.parse(rawGlobalCart) as SelectionCartItem[];
+      } catch {
+        parsedGlobalCart = [];
+      }
 
         setItems(
           parsedGlobalCart.map((item) => {
@@ -197,7 +206,13 @@ export function SelectionCartProvider({
       );
 
       if (rawLegacyCart) {
-        const parsedLegacyCart = JSON.parse(rawLegacyCart);
+        let parsedLegacyCart: any = [];
+
+      try {
+        parsedLegacyCart = JSON.parse(rawLegacyCart);
+      } catch {
+        parsedLegacyCart = [];
+      }
         const migratedItems = normalizeLegacyFittingItems(parsedLegacyCart);
 
         setItems(migratedItems);
@@ -371,3 +386,8 @@ export function useSelectionCart() {
 
   return context;
 }
+
+
+
+
+

@@ -1,0 +1,1531 @@
+[
+  {
+    "slug": "smtp2-1000ul",
+    "productId": "pipetting-smtp2-1000ul",
+    "productCode": "SMTP2-1000μL",
+    "category": "pumps",
+    "productTypeId": "pipette-pump",
+    "productTypeSlug": "pipetting-pumps",
+    "seriesId": "smtp2-programmable-gas-displacement-pipetting-pump",
+    "seriesSlug": "smtp2-programmable-gas-displacement-pipetting-pump",
+    "model": "SMTP2 1000μL 可编程气体置换式移液泵",
+    "name": "SMTP2 1000μL 可编程气体置换式移液泵",
+    "title": "SMTP2 1000μL 可编程气体置换式移液泵",
+    "modelDisplay": "SMTP2-1000μL",
+    "displayModel": "SMTP2-1000μL",
+    "foreachModel": "SMTP2-1000μL",
+    "description": "SMTP2 1000μL 可编程气体置换式移液泵面向自动化仪器中的样本转移、试剂加样和微量液体处理场景设计，采用气体置换式移液方式配合一次性吸头使用，可降低样本残留与交叉污染风险。该型号集成液面检测、尖端堵塞检测、吸头有无检测和自动脱吸头功能，并支持 RS232、RS485、CAN 通讯接口，适合需要稳定移液控制、状态反馈和系统集成的自动化平台。",
+    "commonApplications": [
+      "自动化移液",
+      "样本转移",
+      "试剂加样",
+      "微量液体处理",
+      "实验室自动化设备集成",
+      "体外诊断仪器液体处理模块"
+    ],
+    "additionalImages": [],
+    "showConfigurator": false,
+    "showDatasheetRequest": false,
+    "showDrawingRequest": true,
+    "show3DRequest": true,
+    "detailHref": "/products/pumps/pipetting-pumps/smtp2-1000ul",
+    "selectionHref": "/products/pumps/pipetting-pumps",
+    "specSeriesKey": "smtp2-1000ul",
+    "mainImage": "/images/products/pumps/pipetting-pumps/foreach-smtp2-1000ul-programmable-gas-displacement-pipetting-pump.webp",
+    "imageAltEn": "FOREACH SMTP2 1000μL programmable gas displacement pipetting pump for automated sample transfer and reagent dispensing",
+    "imageAlt": "FOREACH SMTP2 1000μL programmable gas displacement pipetting pump for automated sample transfer and reagent dispensing",
+    "mainImageAlt": "FOREACH SMTP2 1000μL programmable gas displacement pipetting pump for automated sample transfer and reagent dispensing",
+    "model3dUrl": "/models/products/pumps/pipetting-pumps/foreach-smtp2-1000ul-programmable-gas-displacement-pipetting-pump.glb",
+    "drawing2dUrl": "/documents/products/pumps/pipetting-pumps/2d-drawings/foreach-smtp2-1000ul-programmable-gas-displacement-pipetting-pump-2d-drawing.pdf",
+    "drawingPdfUrl": "/documents/products/pumps/pipetting-pumps/2d-drawings/foreach-smtp2-1000ul-programmable-gas-displacement-pipetting-pump-2d-drawing.pdf",
+    "resources": {
+      "model3dUrl": "/models/products/pumps/pipetting-pumps/foreach-smtp2-1000ul-programmable-gas-displacement-pipetting-pump.glb",
+      "drawing2dUrl": "/documents/products/pumps/pipetting-pumps/2d-drawings/foreach-smtp2-1000ul-programmable-gas-displacement-pipetting-pump-2d-drawing.pdf",
+      "drawingPdfUrl": "/documents/products/pumps/pipetting-pumps/2d-drawings/foreach-smtp2-1000ul-programmable-gas-displacement-pipetting-pump-2d-drawing.pdf",
+      "imageAltEn": "FOREACH SMTP2 1000μL programmable gas displacement pipetting pump for automated sample transfer and reagent dispensing"
+    },
+    "plannedFiles": {
+      "mainImage": "public/images/products/pumps/pipetting-pumps/foreach-smtp2-1000ul-programmable-gas-displacement-pipetting-pump.webp",
+      "model3d": "public/models/products/pumps/pipetting-pumps/foreach-smtp2-1000ul-programmable-gas-displacement-pipetting-pump.glb",
+      "drawing2d": "public/documents/products/pumps/pipetting-pumps/2d-drawings/foreach-smtp2-1000ul-programmable-gas-displacement-pipetting-pump-2d-drawing.pdf"
+    },
+    "specs": [
+      {
+        "label": "产品名称",
+        "name": "产品名称",
+        "title": "产品名称",
+        "value": "SMTP2 1000μL 可编程气体置换式移液泵",
+        "content": "SMTP2 1000μL 可编程气体置换式移液泵"
+      },
+      {
+        "label": "型号",
+        "name": "型号",
+        "title": "型号",
+        "value": "SMTP2-1000μL",
+        "content": "SMTP2-1000μL"
+      },
+      {
+        "label": "产品系列",
+        "name": "产品系列",
+        "title": "产品系列",
+        "value": "SMTP2 可编程气体置换式移液泵",
+        "content": "SMTP2 可编程气体置换式移液泵"
+      },
+      {
+        "label": "移液方式",
+        "name": "移液方式",
+        "title": "移液方式",
+        "value": "气体置换式",
+        "content": "气体置换式"
+      },
+      {
+        "label": "标称量程",
+        "name": "标称量程",
+        "title": "标称量程",
+        "value": "1000μL",
+        "content": "1000μL"
+      },
+      {
+        "label": "驱动设计",
+        "name": "驱动设计",
+        "title": "驱动设计",
+        "value": "四线双极步进丝杆电机",
+        "content": "四线双极步进丝杆电机"
+      },
+      {
+        "label": "定量分辨率",
+        "name": "定量分辨率",
+        "title": "定量分辨率",
+        "value": "标准模式 0.319μL/步；高分辨率模式 0.02μL/微步",
+        "content": "标准模式 0.319μL/步；高分辨率模式 0.02μL/微步"
+      },
+      {
+        "label": "满量程步数",
+        "name": "满量程步数",
+        "title": "满量程步数",
+        "value": "标准模式 3143 步；高分辨率模式 48000 微步",
+        "content": "标准模式 3143 步；高分辨率模式 48000 微步"
+      },
+      {
+        "label": "液面探测",
+        "name": "液面探测",
+        "title": "液面探测",
+        "value": "支持压力型 pLLD、电容型 cLLD、混合型 hLLD",
+        "content": "支持压力型 pLLD、电容型 cLLD、混合型 hLLD"
+      },
+      {
+        "label": "尖端堵塞检测",
+        "name": "尖端堵塞检测",
+        "title": "尖端堵塞检测",
+        "value": "支持 TPBD 尖端堵塞检测",
+        "content": "支持 TPBD 尖端堵塞检测"
+      },
+      {
+        "label": "吸头有无检测",
+        "name": "吸头有无检测",
+        "title": "吸头有无检测",
+        "value": "支持 TPON / TPOFF 吸头有无检测",
+        "content": "支持 TPON / TPOFF 吸头有无检测"
+      },
+      {
+        "label": "自动脱吸头",
+        "name": "自动脱吸头",
+        "title": "自动脱吸头",
+        "value": "支持 ADTP 自动脱吸头",
+        "content": "支持 ADTP 自动脱吸头"
+      },
+      {
+        "label": "通讯接口",
+        "name": "通讯接口",
+        "title": "通讯接口",
+        "value": "RS232 / RS485 / CAN",
+        "content": "RS232 / RS485 / CAN"
+      },
+      {
+        "label": "级联能力",
+        "name": "级联能力",
+        "title": "级联能力",
+        "value": "最多可级联 16 台泵",
+        "content": "最多可级联 16 台泵"
+      },
+      {
+        "label": "运行噪音",
+        "name": "运行噪音",
+        "title": "运行噪音",
+        "value": "<60 dBA，仅室内使用",
+        "content": "<60 dBA，仅室内使用"
+      },
+      {
+        "label": "运行环境",
+        "name": "运行环境",
+        "title": "运行环境",
+        "value": "15°C to 40°C，20% to 95% RH at 40°C，无冷凝",
+        "content": "15°C to 40°C，20% to 95% RH at 40°C，无冷凝"
+      },
+      {
+        "label": "存储环境",
+        "name": "存储环境",
+        "title": "存储环境",
+        "value": "-20°C to 65°C，30% to 85% RH，无冷凝",
+        "content": "-20°C to 65°C，30% to 85% RH，无冷凝"
+      },
+      {
+        "label": "介质温度",
+        "name": "介质温度",
+        "title": "介质温度",
+        "value": "15°C to 40°C",
+        "content": "15°C to 40°C"
+      },
+      {
+        "label": "电源要求",
+        "name": "电源要求",
+        "title": "电源要求",
+        "value": "24VDC 500mA",
+        "content": "24VDC 500mA"
+      },
+      {
+        "label": "吸头适配",
+        "name": "吸头适配",
+        "title": "吸头适配",
+        "value": "支持主流一次性吸头及定制吸头适配，需根据客户设备结构确认",
+        "content": "支持主流一次性吸头及定制吸头适配，需根据客户设备结构确认"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "SMTP2 1000μL 可编程气体置换式移液泵适合哪些应用场景？",
+        "answer": "SMTP2 1000μL 可编程气体置换式移液泵适用于自动化仪器中的样本转移、试剂加样、微量液体处理和实验室自动化设备集成，也可用于体外诊断仪器中的液体处理模块。"
+      },
+      {
+        "question": "SMTP2 1000μL 可编程气体置换式移液泵为什么采用气体置换式移液方式？",
+        "answer": "气体置换式移液方式可配合一次性吸头使用，使液体不直接接触泵体内部结构，有助于降低样本残留与交叉污染风险，适合对洁净度和重复性有要求的自动化移液场景。"
+      },
+      {
+        "question": "SMTP2 1000μL 可编程气体置换式移液泵支持哪些检测功能？",
+        "answer": "SMTP2 1000μL 可编程气体置换式移液泵支持液面检测、尖端堵塞检测、吸头有无检测等功能，可帮助系统判断吸液、排液和吸头状态，提升自动化运行过程的可靠性。"
+      },
+      {
+        "question": "SMTP2 1000μL 可编程气体置换式移液泵支持哪些通讯接口？",
+        "answer": "SMTP2 1000μL 可编程气体置换式移液泵支持 RS232、RS485、CAN 通讯接口，便于接入不同类型的自动化仪器控制系统。"
+      },
+      {
+        "question": "SMTP2 1000μL 可编程气体置换式移液泵是否支持自动脱吸头？",
+        "answer": "支持。SMTP2 1000μL 可编程气体置换式移液泵集成自动脱吸头功能，适合使用一次性吸头的自动化液体处理场景，可减少人工干预。"
+      },
+      {
+        "question": "SMTP2 1000μL 可编程气体置换式移液泵的吸头是否可以定制适配？",
+        "answer": "可以。吸头适配需要根据客户设备结构、吸头规格、装配空间和移液流程进行确认，后续可通过选型或需求提交进一步确认配置。"
+      }
+    ],
+    "seo": {
+      "title": "SMTP2 1000μL 可编程气体置换式移液泵 | FOREACH",
+      "description": "FOREACH SMTP2 1000μL 可编程气体置换式移液泵，支持液面检测、尖端堵塞检测、吸头有无检测、自动脱吸头和 RS232/RS485/CAN 通讯，适用于自动化样本转移、试剂加样和微量液体处理。"
+    },
+    "advantages": [],
+    "specifications": [
+      {
+        "label": "产品名称",
+        "name": "产品名称",
+        "title": "产品名称",
+        "value": "SMTP2 1000μL 可编程气体置换式移液泵",
+        "content": "SMTP2 1000μL 可编程气体置换式移液泵"
+      },
+      {
+        "label": "型号",
+        "name": "型号",
+        "title": "型号",
+        "value": "SMTP2-1000μL",
+        "content": "SMTP2-1000μL"
+      },
+      {
+        "label": "产品系列",
+        "name": "产品系列",
+        "title": "产品系列",
+        "value": "SMTP2 可编程气体置换式移液泵",
+        "content": "SMTP2 可编程气体置换式移液泵"
+      },
+      {
+        "label": "移液方式",
+        "name": "移液方式",
+        "title": "移液方式",
+        "value": "气体置换式",
+        "content": "气体置换式"
+      },
+      {
+        "label": "标称量程",
+        "name": "标称量程",
+        "title": "标称量程",
+        "value": "1000μL",
+        "content": "1000μL"
+      },
+      {
+        "label": "驱动设计",
+        "name": "驱动设计",
+        "title": "驱动设计",
+        "value": "四线双极步进丝杆电机",
+        "content": "四线双极步进丝杆电机"
+      },
+      {
+        "label": "定量分辨率",
+        "name": "定量分辨率",
+        "title": "定量分辨率",
+        "value": "标准模式 0.319μL/步；高分辨率模式 0.02μL/微步",
+        "content": "标准模式 0.319μL/步；高分辨率模式 0.02μL/微步"
+      },
+      {
+        "label": "满量程步数",
+        "name": "满量程步数",
+        "title": "满量程步数",
+        "value": "标准模式 3143 步；高分辨率模式 48000 微步",
+        "content": "标准模式 3143 步；高分辨率模式 48000 微步"
+      },
+      {
+        "label": "液面探测",
+        "name": "液面探测",
+        "title": "液面探测",
+        "value": "支持压力型 pLLD、电容型 cLLD、混合型 hLLD",
+        "content": "支持压力型 pLLD、电容型 cLLD、混合型 hLLD"
+      },
+      {
+        "label": "尖端堵塞检测",
+        "name": "尖端堵塞检测",
+        "title": "尖端堵塞检测",
+        "value": "支持 TPBD 尖端堵塞检测",
+        "content": "支持 TPBD 尖端堵塞检测"
+      },
+      {
+        "label": "吸头有无检测",
+        "name": "吸头有无检测",
+        "title": "吸头有无检测",
+        "value": "支持 TPON / TPOFF 吸头有无检测",
+        "content": "支持 TPON / TPOFF 吸头有无检测"
+      },
+      {
+        "label": "自动脱吸头",
+        "name": "自动脱吸头",
+        "title": "自动脱吸头",
+        "value": "支持 ADTP 自动脱吸头",
+        "content": "支持 ADTP 自动脱吸头"
+      },
+      {
+        "label": "通讯接口",
+        "name": "通讯接口",
+        "title": "通讯接口",
+        "value": "RS232 / RS485 / CAN",
+        "content": "RS232 / RS485 / CAN"
+      },
+      {
+        "label": "级联能力",
+        "name": "级联能力",
+        "title": "级联能力",
+        "value": "最多可级联 16 台泵",
+        "content": "最多可级联 16 台泵"
+      },
+      {
+        "label": "运行噪音",
+        "name": "运行噪音",
+        "title": "运行噪音",
+        "value": "<60 dBA，仅室内使用",
+        "content": "<60 dBA，仅室内使用"
+      },
+      {
+        "label": "运行环境",
+        "name": "运行环境",
+        "title": "运行环境",
+        "value": "15°C to 40°C，20% to 95% RH at 40°C，无冷凝",
+        "content": "15°C to 40°C，20% to 95% RH at 40°C，无冷凝"
+      },
+      {
+        "label": "存储环境",
+        "name": "存储环境",
+        "title": "存储环境",
+        "value": "-20°C to 65°C，30% to 85% RH，无冷凝",
+        "content": "-20°C to 65°C，30% to 85% RH，无冷凝"
+      },
+      {
+        "label": "介质温度",
+        "name": "介质温度",
+        "title": "介质温度",
+        "value": "15°C to 40°C",
+        "content": "15°C to 40°C"
+      },
+      {
+        "label": "电源要求",
+        "name": "电源要求",
+        "title": "电源要求",
+        "value": "24VDC 500mA",
+        "content": "24VDC 500mA"
+      },
+      {
+        "label": "吸头适配",
+        "name": "吸头适配",
+        "title": "吸头适配",
+        "value": "支持主流一次性吸头及定制吸头适配，需根据客户设备结构确认",
+        "content": "支持主流一次性吸头及定制吸头适配，需根据客户设备结构确认"
+      }
+    ],
+    "specificationGroups": [
+      {
+        "title": "技术参数",
+        "items": [
+          {
+            "label": "产品名称",
+            "name": "产品名称",
+            "title": "产品名称",
+            "value": "SMTP2 1000μL 可编程气体置换式移液泵",
+            "content": "SMTP2 1000μL 可编程气体置换式移液泵"
+          },
+          {
+            "label": "型号",
+            "name": "型号",
+            "title": "型号",
+            "value": "SMTP2-1000μL",
+            "content": "SMTP2-1000μL"
+          },
+          {
+            "label": "产品系列",
+            "name": "产品系列",
+            "title": "产品系列",
+            "value": "SMTP2 可编程气体置换式移液泵",
+            "content": "SMTP2 可编程气体置换式移液泵"
+          },
+          {
+            "label": "移液方式",
+            "name": "移液方式",
+            "title": "移液方式",
+            "value": "气体置换式",
+            "content": "气体置换式"
+          },
+          {
+            "label": "标称量程",
+            "name": "标称量程",
+            "title": "标称量程",
+            "value": "1000μL",
+            "content": "1000μL"
+          },
+          {
+            "label": "驱动设计",
+            "name": "驱动设计",
+            "title": "驱动设计",
+            "value": "四线双极步进丝杆电机",
+            "content": "四线双极步进丝杆电机"
+          },
+          {
+            "label": "定量分辨率",
+            "name": "定量分辨率",
+            "title": "定量分辨率",
+            "value": "标准模式 0.319μL/步；高分辨率模式 0.02μL/微步",
+            "content": "标准模式 0.319μL/步；高分辨率模式 0.02μL/微步"
+          },
+          {
+            "label": "满量程步数",
+            "name": "满量程步数",
+            "title": "满量程步数",
+            "value": "标准模式 3143 步；高分辨率模式 48000 微步",
+            "content": "标准模式 3143 步；高分辨率模式 48000 微步"
+          },
+          {
+            "label": "液面探测",
+            "name": "液面探测",
+            "title": "液面探测",
+            "value": "支持压力型 pLLD、电容型 cLLD、混合型 hLLD",
+            "content": "支持压力型 pLLD、电容型 cLLD、混合型 hLLD"
+          },
+          {
+            "label": "尖端堵塞检测",
+            "name": "尖端堵塞检测",
+            "title": "尖端堵塞检测",
+            "value": "支持 TPBD 尖端堵塞检测",
+            "content": "支持 TPBD 尖端堵塞检测"
+          },
+          {
+            "label": "吸头有无检测",
+            "name": "吸头有无检测",
+            "title": "吸头有无检测",
+            "value": "支持 TPON / TPOFF 吸头有无检测",
+            "content": "支持 TPON / TPOFF 吸头有无检测"
+          },
+          {
+            "label": "自动脱吸头",
+            "name": "自动脱吸头",
+            "title": "自动脱吸头",
+            "value": "支持 ADTP 自动脱吸头",
+            "content": "支持 ADTP 自动脱吸头"
+          },
+          {
+            "label": "通讯接口",
+            "name": "通讯接口",
+            "title": "通讯接口",
+            "value": "RS232 / RS485 / CAN",
+            "content": "RS232 / RS485 / CAN"
+          },
+          {
+            "label": "级联能力",
+            "name": "级联能力",
+            "title": "级联能力",
+            "value": "最多可级联 16 台泵",
+            "content": "最多可级联 16 台泵"
+          },
+          {
+            "label": "运行噪音",
+            "name": "运行噪音",
+            "title": "运行噪音",
+            "value": "<60 dBA，仅室内使用",
+            "content": "<60 dBA，仅室内使用"
+          },
+          {
+            "label": "运行环境",
+            "name": "运行环境",
+            "title": "运行环境",
+            "value": "15°C to 40°C，20% to 95% RH at 40°C，无冷凝",
+            "content": "15°C to 40°C，20% to 95% RH at 40°C，无冷凝"
+          },
+          {
+            "label": "存储环境",
+            "name": "存储环境",
+            "title": "存储环境",
+            "value": "-20°C to 65°C，30% to 85% RH，无冷凝",
+            "content": "-20°C to 65°C，30% to 85% RH，无冷凝"
+          },
+          {
+            "label": "介质温度",
+            "name": "介质温度",
+            "title": "介质温度",
+            "value": "15°C to 40°C",
+            "content": "15°C to 40°C"
+          },
+          {
+            "label": "电源要求",
+            "name": "电源要求",
+            "title": "电源要求",
+            "value": "24VDC 500mA",
+            "content": "24VDC 500mA"
+          },
+          {
+            "label": "吸头适配",
+            "name": "吸头适配",
+            "title": "吸头适配",
+            "value": "支持主流一次性吸头及定制吸头适配，需根据客户设备结构确认",
+            "content": "支持主流一次性吸头及定制吸头适配，需根据客户设备结构确认"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "smtp4-100ul",
+    "productId": "pipetting-smtp4-100ul",
+    "productCode": "SMTP4-100μL",
+    "category": "pumps",
+    "productTypeId": "pipette-pump",
+    "productTypeSlug": "pipetting-pumps",
+    "seriesId": "smtp4-gas-displacement-pipetting-pump",
+    "seriesSlug": "smtp4-gas-displacement-pipetting-pump",
+    "model": "SMTP4 100μL 气体置换式移液泵",
+    "name": "SMTP4 100μL 气体置换式移液泵",
+    "title": "SMTP4 100μL 气体置换式移液泵",
+    "modelDisplay": "SMTP4-100μL",
+    "displayModel": "SMTP4-100μL",
+    "foreachModel": "SMTP4-100μL",
+    "description": "SMTP4 100μL 气体置换式移液泵面向自动化仪器中的小体积样本转移、试剂加样和微量液体处理场景设计，采用气体置换式移液方式配合一次性吸头使用，可降低样本残留与交叉污染风险。该型号适用于 100μL 量程的基础移液需求，支持自动脱吸头，吸头配置可根据客户设备结构和移液场景进行定制确认，适合对装配空间、移液稳定性和系统集成有要求的自动化平台。",
+    "commonApplications": [
+      "小体积样本转移",
+      "试剂加样",
+      "自动化移液",
+      "微量液体处理",
+      "紧凑型仪器集成"
+    ],
+    "additionalImages": [],
+    "showConfigurator": false,
+    "showDatasheetRequest": false,
+    "showDrawingRequest": true,
+    "show3DRequest": true,
+    "detailHref": "/products/pumps/pipetting-pumps/smtp4-100ul",
+    "selectionHref": "/products/pumps/pipetting-pumps",
+    "specSeriesKey": "smtp4-100ul",
+    "mainImage": "/images/products/pumps/pipetting-pumps/foreach-smtp4-100ul-gas-displacement-pipetting-pump.webp",
+    "imageAltEn": "FOREACH SMTP4 100μL gas displacement pipetting pump for small-volume automated pipetting",
+    "imageAlt": "FOREACH SMTP4 100μL gas displacement pipetting pump for small-volume automated pipetting",
+    "mainImageAlt": "FOREACH SMTP4 100μL gas displacement pipetting pump for small-volume automated pipetting",
+    "model3dUrl": "/models/products/pumps/pipetting-pumps/foreach-smtp4-100ul-gas-displacement-pipetting-pump.glb",
+    "drawing2dUrl": "/documents/products/pumps/pipetting-pumps/2d-drawings/foreach-smtp4-100ul-gas-displacement-pipetting-pump-2d-drawing.pdf",
+    "drawingPdfUrl": "/documents/products/pumps/pipetting-pumps/2d-drawings/foreach-smtp4-100ul-gas-displacement-pipetting-pump-2d-drawing.pdf",
+    "resources": {
+      "model3dUrl": "/models/products/pumps/pipetting-pumps/foreach-smtp4-100ul-gas-displacement-pipetting-pump.glb",
+      "drawing2dUrl": "/documents/products/pumps/pipetting-pumps/2d-drawings/foreach-smtp4-100ul-gas-displacement-pipetting-pump-2d-drawing.pdf",
+      "drawingPdfUrl": "/documents/products/pumps/pipetting-pumps/2d-drawings/foreach-smtp4-100ul-gas-displacement-pipetting-pump-2d-drawing.pdf",
+      "imageAltEn": "FOREACH SMTP4 100μL gas displacement pipetting pump for small-volume automated pipetting"
+    },
+    "plannedFiles": {
+      "mainImage": "public/images/products/pumps/pipetting-pumps/foreach-smtp4-100ul-gas-displacement-pipetting-pump.webp",
+      "model3d": "public/models/products/pumps/pipetting-pumps/foreach-smtp4-100ul-gas-displacement-pipetting-pump.glb",
+      "drawing2d": "public/documents/products/pumps/pipetting-pumps/2d-drawings/foreach-smtp4-100ul-gas-displacement-pipetting-pump-2d-drawing.pdf"
+    },
+    "specs": [
+      {
+        "label": "产品名称",
+        "name": "产品名称",
+        "title": "产品名称",
+        "value": "SMTP4 100μL 气体置换式移液泵",
+        "content": "SMTP4 100μL 气体置换式移液泵"
+      },
+      {
+        "label": "型号",
+        "name": "型号",
+        "title": "型号",
+        "value": "SMTP4-100μL",
+        "content": "SMTP4-100μL"
+      },
+      {
+        "label": "产品系列",
+        "name": "产品系列",
+        "title": "产品系列",
+        "value": "SMTP4 气体置换式移液泵",
+        "content": "SMTP4 气体置换式移液泵"
+      },
+      {
+        "label": "移液方式",
+        "name": "移液方式",
+        "title": "移液方式",
+        "value": "气体置换式",
+        "content": "气体置换式"
+      },
+      {
+        "label": "标称量程",
+        "name": "标称量程",
+        "title": "标称量程",
+        "value": "100μL",
+        "content": "100μL"
+      },
+      {
+        "label": "驱动设计",
+        "name": "驱动设计",
+        "title": "驱动设计",
+        "value": "四线双极步进丝杆电机",
+        "content": "四线双极步进丝杆电机"
+      },
+      {
+        "label": "电机转速",
+        "name": "电机转速",
+        "title": "电机转速",
+        "value": "1~3000 pps",
+        "content": "1~3000 pps"
+      },
+      {
+        "label": "定量分辨率",
+        "name": "定量分辨率",
+        "title": "定量分辨率",
+        "value": "0.05μL/步",
+        "content": "0.05μL/步"
+      },
+      {
+        "label": "适配吸头",
+        "name": "适配吸头",
+        "title": "适配吸头",
+        "value": "根据客户需求定制",
+        "content": "根据客户需求定制"
+      },
+      {
+        "label": "装吸头所需力",
+        "name": "装吸头所需力",
+        "title": "装吸头所需力",
+        "value": "25 N",
+        "content": "25 N"
+      },
+      {
+        "label": "满量程步数",
+        "name": "满量程步数",
+        "title": "满量程步数",
+        "value": "2000 步",
+        "content": "2000 步"
+      },
+      {
+        "label": "脱 TIP 头步数",
+        "name": "脱 TIP 头步数",
+        "title": "脱 TIP 头步数",
+        "value": "550 步",
+        "content": "550 步"
+      },
+      {
+        "label": "退 TIP 头推力",
+        "name": "退 TIP 头推力",
+        "title": "退 TIP 头推力",
+        "value": "转速 5 r/s 时退枪头电机推力大于 120 N",
+        "content": "转速 5 r/s 时退枪头电机推力大于 120 N"
+      },
+      {
+        "label": "运行噪音",
+        "name": "运行噪音",
+        "title": "运行噪音",
+        "value": "<60 dBA，仅室内使用",
+        "content": "<60 dBA，仅室内使用"
+      },
+      {
+        "label": "运行环境",
+        "name": "运行环境",
+        "title": "运行环境",
+        "value": "15°C to 40°C，20% to 95% RH at 40°C，无冷凝",
+        "content": "15°C to 40°C，20% to 95% RH at 40°C，无冷凝"
+      },
+      {
+        "label": "存储环境",
+        "name": "存储环境",
+        "title": "存储环境",
+        "value": "-20°C to 65°C，30% to 85% RH，无冷凝",
+        "content": "-20°C to 65°C，30% to 85% RH，无冷凝"
+      },
+      {
+        "label": "介质温度",
+        "name": "介质温度",
+        "title": "介质温度",
+        "value": "15°C to 40°C",
+        "content": "15°C to 40°C"
+      },
+      {
+        "label": "电源要求",
+        "name": "电源要求",
+        "title": "电源要求",
+        "value": "24VDC 500mA",
+        "content": "24VDC 500mA"
+      },
+      {
+        "label": "总体尺寸",
+        "name": "总体尺寸",
+        "title": "总体尺寸",
+        "value": "28 × 28 × 153.1 mm",
+        "content": "28 × 28 × 153.1 mm"
+      },
+      {
+        "label": "重量",
+        "name": "重量",
+        "title": "重量",
+        "value": "300 g",
+        "content": "300 g"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "SMTP4 100μL 气体置换式移液泵适合哪些应用场景？",
+        "answer": "SMTP4 100μL 气体置换式移液泵适用于小体积样本转移、试剂加样、自动化移液和紧凑型仪器中的微量液体处理模块。"
+      },
+      {
+        "question": "SMTP4 100μL 气体置换式移液泵为什么采用气体置换式移液方式？",
+        "answer": "气体置换式移液方式可配合一次性吸头使用，使液体不直接接触泵体内部结构，有助于降低样本残留与交叉污染风险。"
+      },
+      {
+        "question": "SMTP4 100μL 气体置换式移液泵的定量分辨率是多少？",
+        "answer": "SMTP4 100μL 气体置换式移液泵的定量分辨率为 0.05μL/步，适合小体积液体处理场景。"
+      },
+      {
+        "question": "SMTP4 100μL 气体置换式移液泵是否支持自动脱吸头？",
+        "answer": "支持。该型号支持自动脱吸头功能，适合使用一次性吸头的自动化液体处理场景。"
+      },
+      {
+        "question": "SMTP4 100μL 气体置换式移液泵的吸头是否可以定制适配？",
+        "answer": "可以。吸头配置需要根据客户设备结构、吸头规格、装配空间和移液流程进行确认。"
+      }
+    ],
+    "seo": {
+      "title": "SMTP4 100μL 气体置换式移液泵 | FOREACH",
+      "description": "FOREACH SMTP4 100μL 气体置换式移液泵，定量分辨率 0.05μL/步，支持自动脱吸头和定制吸头适配，适用于小体积样本转移、试剂加样和自动化移液。"
+    },
+    "advantages": [],
+    "specifications": [
+      {
+        "label": "产品名称",
+        "name": "产品名称",
+        "title": "产品名称",
+        "value": "SMTP4 100μL 气体置换式移液泵",
+        "content": "SMTP4 100μL 气体置换式移液泵"
+      },
+      {
+        "label": "型号",
+        "name": "型号",
+        "title": "型号",
+        "value": "SMTP4-100μL",
+        "content": "SMTP4-100μL"
+      },
+      {
+        "label": "产品系列",
+        "name": "产品系列",
+        "title": "产品系列",
+        "value": "SMTP4 气体置换式移液泵",
+        "content": "SMTP4 气体置换式移液泵"
+      },
+      {
+        "label": "移液方式",
+        "name": "移液方式",
+        "title": "移液方式",
+        "value": "气体置换式",
+        "content": "气体置换式"
+      },
+      {
+        "label": "标称量程",
+        "name": "标称量程",
+        "title": "标称量程",
+        "value": "100μL",
+        "content": "100μL"
+      },
+      {
+        "label": "驱动设计",
+        "name": "驱动设计",
+        "title": "驱动设计",
+        "value": "四线双极步进丝杆电机",
+        "content": "四线双极步进丝杆电机"
+      },
+      {
+        "label": "电机转速",
+        "name": "电机转速",
+        "title": "电机转速",
+        "value": "1~3000 pps",
+        "content": "1~3000 pps"
+      },
+      {
+        "label": "定量分辨率",
+        "name": "定量分辨率",
+        "title": "定量分辨率",
+        "value": "0.05μL/步",
+        "content": "0.05μL/步"
+      },
+      {
+        "label": "适配吸头",
+        "name": "适配吸头",
+        "title": "适配吸头",
+        "value": "根据客户需求定制",
+        "content": "根据客户需求定制"
+      },
+      {
+        "label": "装吸头所需力",
+        "name": "装吸头所需力",
+        "title": "装吸头所需力",
+        "value": "25 N",
+        "content": "25 N"
+      },
+      {
+        "label": "满量程步数",
+        "name": "满量程步数",
+        "title": "满量程步数",
+        "value": "2000 步",
+        "content": "2000 步"
+      },
+      {
+        "label": "脱 TIP 头步数",
+        "name": "脱 TIP 头步数",
+        "title": "脱 TIP 头步数",
+        "value": "550 步",
+        "content": "550 步"
+      },
+      {
+        "label": "退 TIP 头推力",
+        "name": "退 TIP 头推力",
+        "title": "退 TIP 头推力",
+        "value": "转速 5 r/s 时退枪头电机推力大于 120 N",
+        "content": "转速 5 r/s 时退枪头电机推力大于 120 N"
+      },
+      {
+        "label": "运行噪音",
+        "name": "运行噪音",
+        "title": "运行噪音",
+        "value": "<60 dBA，仅室内使用",
+        "content": "<60 dBA，仅室内使用"
+      },
+      {
+        "label": "运行环境",
+        "name": "运行环境",
+        "title": "运行环境",
+        "value": "15°C to 40°C，20% to 95% RH at 40°C，无冷凝",
+        "content": "15°C to 40°C，20% to 95% RH at 40°C，无冷凝"
+      },
+      {
+        "label": "存储环境",
+        "name": "存储环境",
+        "title": "存储环境",
+        "value": "-20°C to 65°C，30% to 85% RH，无冷凝",
+        "content": "-20°C to 65°C，30% to 85% RH，无冷凝"
+      },
+      {
+        "label": "介质温度",
+        "name": "介质温度",
+        "title": "介质温度",
+        "value": "15°C to 40°C",
+        "content": "15°C to 40°C"
+      },
+      {
+        "label": "电源要求",
+        "name": "电源要求",
+        "title": "电源要求",
+        "value": "24VDC 500mA",
+        "content": "24VDC 500mA"
+      },
+      {
+        "label": "总体尺寸",
+        "name": "总体尺寸",
+        "title": "总体尺寸",
+        "value": "28 × 28 × 153.1 mm",
+        "content": "28 × 28 × 153.1 mm"
+      },
+      {
+        "label": "重量",
+        "name": "重量",
+        "title": "重量",
+        "value": "300 g",
+        "content": "300 g"
+      }
+    ],
+    "specificationGroups": [
+      {
+        "title": "技术参数",
+        "items": [
+          {
+            "label": "产品名称",
+            "name": "产品名称",
+            "title": "产品名称",
+            "value": "SMTP4 100μL 气体置换式移液泵",
+            "content": "SMTP4 100μL 气体置换式移液泵"
+          },
+          {
+            "label": "型号",
+            "name": "型号",
+            "title": "型号",
+            "value": "SMTP4-100μL",
+            "content": "SMTP4-100μL"
+          },
+          {
+            "label": "产品系列",
+            "name": "产品系列",
+            "title": "产品系列",
+            "value": "SMTP4 气体置换式移液泵",
+            "content": "SMTP4 气体置换式移液泵"
+          },
+          {
+            "label": "移液方式",
+            "name": "移液方式",
+            "title": "移液方式",
+            "value": "气体置换式",
+            "content": "气体置换式"
+          },
+          {
+            "label": "标称量程",
+            "name": "标称量程",
+            "title": "标称量程",
+            "value": "100μL",
+            "content": "100μL"
+          },
+          {
+            "label": "驱动设计",
+            "name": "驱动设计",
+            "title": "驱动设计",
+            "value": "四线双极步进丝杆电机",
+            "content": "四线双极步进丝杆电机"
+          },
+          {
+            "label": "电机转速",
+            "name": "电机转速",
+            "title": "电机转速",
+            "value": "1~3000 pps",
+            "content": "1~3000 pps"
+          },
+          {
+            "label": "定量分辨率",
+            "name": "定量分辨率",
+            "title": "定量分辨率",
+            "value": "0.05μL/步",
+            "content": "0.05μL/步"
+          },
+          {
+            "label": "适配吸头",
+            "name": "适配吸头",
+            "title": "适配吸头",
+            "value": "根据客户需求定制",
+            "content": "根据客户需求定制"
+          },
+          {
+            "label": "装吸头所需力",
+            "name": "装吸头所需力",
+            "title": "装吸头所需力",
+            "value": "25 N",
+            "content": "25 N"
+          },
+          {
+            "label": "满量程步数",
+            "name": "满量程步数",
+            "title": "满量程步数",
+            "value": "2000 步",
+            "content": "2000 步"
+          },
+          {
+            "label": "脱 TIP 头步数",
+            "name": "脱 TIP 头步数",
+            "title": "脱 TIP 头步数",
+            "value": "550 步",
+            "content": "550 步"
+          },
+          {
+            "label": "退 TIP 头推力",
+            "name": "退 TIP 头推力",
+            "title": "退 TIP 头推力",
+            "value": "转速 5 r/s 时退枪头电机推力大于 120 N",
+            "content": "转速 5 r/s 时退枪头电机推力大于 120 N"
+          },
+          {
+            "label": "运行噪音",
+            "name": "运行噪音",
+            "title": "运行噪音",
+            "value": "<60 dBA，仅室内使用",
+            "content": "<60 dBA，仅室内使用"
+          },
+          {
+            "label": "运行环境",
+            "name": "运行环境",
+            "title": "运行环境",
+            "value": "15°C to 40°C，20% to 95% RH at 40°C，无冷凝",
+            "content": "15°C to 40°C，20% to 95% RH at 40°C，无冷凝"
+          },
+          {
+            "label": "存储环境",
+            "name": "存储环境",
+            "title": "存储环境",
+            "value": "-20°C to 65°C，30% to 85% RH，无冷凝",
+            "content": "-20°C to 65°C，30% to 85% RH，无冷凝"
+          },
+          {
+            "label": "介质温度",
+            "name": "介质温度",
+            "title": "介质温度",
+            "value": "15°C to 40°C",
+            "content": "15°C to 40°C"
+          },
+          {
+            "label": "电源要求",
+            "name": "电源要求",
+            "title": "电源要求",
+            "value": "24VDC 500mA",
+            "content": "24VDC 500mA"
+          },
+          {
+            "label": "总体尺寸",
+            "name": "总体尺寸",
+            "title": "总体尺寸",
+            "value": "28 × 28 × 153.1 mm",
+            "content": "28 × 28 × 153.1 mm"
+          },
+          {
+            "label": "重量",
+            "name": "重量",
+            "title": "重量",
+            "value": "300 g",
+            "content": "300 g"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "smtp4-500ul",
+    "productId": "pipetting-smtp4-500ul",
+    "productCode": "SMTP4-500μL",
+    "category": "pumps",
+    "productTypeId": "pipette-pump",
+    "productTypeSlug": "pipetting-pumps",
+    "seriesId": "smtp4-gas-displacement-pipetting-pump",
+    "seriesSlug": "smtp4-gas-displacement-pipetting-pump",
+    "model": "SMTP4 500μL 气体置换式移液泵",
+    "name": "SMTP4 500μL 气体置换式移液泵",
+    "title": "SMTP4 500μL 气体置换式移液泵",
+    "modelDisplay": "SMTP4-500μL",
+    "displayModel": "SMTP4-500μL",
+    "foreachModel": "SMTP4-500μL",
+    "description": "SMTP4 500μL 气体置换式移液泵面向自动化仪器中的样本转移、试剂加样和中等体积微量液体处理场景设计，采用气体置换式移液方式配合一次性吸头使用，可降低样本残留与交叉污染风险。该型号适用于 500μL 量程的移液需求，相比 100μL 配置覆盖更大的移液体积范围，支持自动脱吸头，吸头配置可根据客户设备结构和移液场景进行定制确认，适合需要稳定移液、结构集成和一次性吸头适配的自动化平台。",
+    "commonApplications": [
+      "样本转移",
+      "试剂加样",
+      "自动化移液",
+      "中等体积液体处理",
+      "实验室自动化设备集成"
+    ],
+    "additionalImages": [],
+    "showConfigurator": false,
+    "showDatasheetRequest": false,
+    "showDrawingRequest": true,
+    "show3DRequest": true,
+    "detailHref": "/products/pumps/pipetting-pumps/smtp4-500ul",
+    "selectionHref": "/products/pumps/pipetting-pumps",
+    "specSeriesKey": "smtp4-500ul",
+    "mainImage": "/images/products/pumps/pipetting-pumps/foreach-smtp4-500ul-gas-displacement-pipetting-pump.webp",
+    "imageAltEn": "FOREACH SMTP4 500μL gas displacement pipetting pump for automated sample transfer and reagent dispensing",
+    "imageAlt": "FOREACH SMTP4 500μL gas displacement pipetting pump for automated sample transfer and reagent dispensing",
+    "mainImageAlt": "FOREACH SMTP4 500μL gas displacement pipetting pump for automated sample transfer and reagent dispensing",
+    "model3dUrl": "/models/products/pumps/pipetting-pumps/foreach-smtp4-500ul-gas-displacement-pipetting-pump.glb",
+    "drawing2dUrl": "/documents/products/pumps/pipetting-pumps/2d-drawings/foreach-smtp4-500ul-gas-displacement-pipetting-pump-2d-drawing.pdf",
+    "drawingPdfUrl": "/documents/products/pumps/pipetting-pumps/2d-drawings/foreach-smtp4-500ul-gas-displacement-pipetting-pump-2d-drawing.pdf",
+    "resources": {
+      "model3dUrl": "/models/products/pumps/pipetting-pumps/foreach-smtp4-500ul-gas-displacement-pipetting-pump.glb",
+      "drawing2dUrl": "/documents/products/pumps/pipetting-pumps/2d-drawings/foreach-smtp4-500ul-gas-displacement-pipetting-pump-2d-drawing.pdf",
+      "drawingPdfUrl": "/documents/products/pumps/pipetting-pumps/2d-drawings/foreach-smtp4-500ul-gas-displacement-pipetting-pump-2d-drawing.pdf",
+      "imageAltEn": "FOREACH SMTP4 500μL gas displacement pipetting pump for automated sample transfer and reagent dispensing"
+    },
+    "plannedFiles": {
+      "mainImage": "public/images/products/pumps/pipetting-pumps/foreach-smtp4-500ul-gas-displacement-pipetting-pump.webp",
+      "model3d": "public/models/products/pumps/pipetting-pumps/foreach-smtp4-500ul-gas-displacement-pipetting-pump.glb",
+      "drawing2d": "public/documents/products/pumps/pipetting-pumps/2d-drawings/foreach-smtp4-500ul-gas-displacement-pipetting-pump-2d-drawing.pdf"
+    },
+    "specs": [
+      {
+        "label": "产品名称",
+        "name": "产品名称",
+        "title": "产品名称",
+        "value": "SMTP4 500μL 气体置换式移液泵",
+        "content": "SMTP4 500μL 气体置换式移液泵"
+      },
+      {
+        "label": "型号",
+        "name": "型号",
+        "title": "型号",
+        "value": "SMTP4-500μL",
+        "content": "SMTP4-500μL"
+      },
+      {
+        "label": "产品系列",
+        "name": "产品系列",
+        "title": "产品系列",
+        "value": "SMTP4 气体置换式移液泵",
+        "content": "SMTP4 气体置换式移液泵"
+      },
+      {
+        "label": "移液方式",
+        "name": "移液方式",
+        "title": "移液方式",
+        "value": "气体置换式",
+        "content": "气体置换式"
+      },
+      {
+        "label": "标称量程",
+        "name": "标称量程",
+        "title": "标称量程",
+        "value": "500μL",
+        "content": "500μL"
+      },
+      {
+        "label": "驱动设计",
+        "name": "驱动设计",
+        "title": "驱动设计",
+        "value": "四线双极步进丝杆电机",
+        "content": "四线双极步进丝杆电机"
+      },
+      {
+        "label": "电机转速",
+        "name": "电机转速",
+        "title": "电机转速",
+        "value": "1~3000 pps",
+        "content": "1~3000 pps"
+      },
+      {
+        "label": "定量分辨率",
+        "name": "定量分辨率",
+        "title": "定量分辨率",
+        "value": "0.25μL/步",
+        "content": "0.25μL/步"
+      },
+      {
+        "label": "适配吸头",
+        "name": "适配吸头",
+        "title": "适配吸头",
+        "value": "根据客户需求定制",
+        "content": "根据客户需求定制"
+      },
+      {
+        "label": "装吸头所需力",
+        "name": "装吸头所需力",
+        "title": "装吸头所需力",
+        "value": "30 N",
+        "content": "30 N"
+      },
+      {
+        "label": "满量程步数",
+        "name": "满量程步数",
+        "title": "满量程步数",
+        "value": "2000 步",
+        "content": "2000 步"
+      },
+      {
+        "label": "脱 TIP 头步数",
+        "name": "脱 TIP 头步数",
+        "title": "脱 TIP 头步数",
+        "value": "550 步",
+        "content": "550 步"
+      },
+      {
+        "label": "退 TIP 头推力",
+        "name": "退 TIP 头推力",
+        "title": "退 TIP 头推力",
+        "value": "转速 5 r/s 时退枪头电机推力大于 120 N",
+        "content": "转速 5 r/s 时退枪头电机推力大于 120 N"
+      },
+      {
+        "label": "运行噪音",
+        "name": "运行噪音",
+        "title": "运行噪音",
+        "value": "<60 dBA，仅室内使用",
+        "content": "<60 dBA，仅室内使用"
+      },
+      {
+        "label": "运行环境",
+        "name": "运行环境",
+        "title": "运行环境",
+        "value": "15°C to 40°C，20% to 95% RH at 40°C，无冷凝",
+        "content": "15°C to 40°C，20% to 95% RH at 40°C，无冷凝"
+      },
+      {
+        "label": "存储环境",
+        "name": "存储环境",
+        "title": "存储环境",
+        "value": "-20°C to 65°C，30% to 85% RH，无冷凝",
+        "content": "-20°C to 65°C，30% to 85% RH，无冷凝"
+      },
+      {
+        "label": "介质温度",
+        "name": "介质温度",
+        "title": "介质温度",
+        "value": "15°C to 40°C",
+        "content": "15°C to 40°C"
+      },
+      {
+        "label": "电源要求",
+        "name": "电源要求",
+        "title": "电源要求",
+        "value": "24VDC 500mA",
+        "content": "24VDC 500mA"
+      },
+      {
+        "label": "总体尺寸",
+        "name": "总体尺寸",
+        "title": "总体尺寸",
+        "value": "28 × 28 × 153.1 mm",
+        "content": "28 × 28 × 153.1 mm"
+      },
+      {
+        "label": "重量",
+        "name": "重量",
+        "title": "重量",
+        "value": "300 g",
+        "content": "300 g"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "SMTP4 500μL 气体置换式移液泵适合哪些应用场景？",
+        "answer": "SMTP4 500μL 气体置换式移液泵适用于样本转移、试剂加样、自动化移液和中等体积液体处理场景。"
+      },
+      {
+        "question": "SMTP4 500μL 气体置换式移液泵与 SMTP4 100μL 气体置换式移液泵有什么区别？",
+        "answer": "主要区别是量程和定量分辨率不同。SMTP4 500μL 气体置换式移液泵覆盖更大的移液体积范围，适合中等体积样本转移和试剂加样。"
+      },
+      {
+        "question": "SMTP4 500μL 气体置换式移液泵的定量分辨率是多少？",
+        "answer": "SMTP4 500μL 气体置换式移液泵的定量分辨率为 0.25μL/步。"
+      },
+      {
+        "question": "SMTP4 500μL 气体置换式移液泵是否支持自动脱吸头？",
+        "answer": "支持。该型号支持自动脱吸头功能，适合使用一次性吸头的自动化液体处理场景。"
+      },
+      {
+        "question": "SMTP4 500μL 气体置换式移液泵的吸头是否可以定制适配？",
+        "answer": "可以。吸头配置需要根据客户设备结构、吸头规格、装配空间和移液流程进行确认。"
+      }
+    ],
+    "seo": {
+      "title": "SMTP4 500μL 气体置换式移液泵 | FOREACH",
+      "description": "FOREACH SMTP4 500μL 气体置换式移液泵，定量分辨率 0.25μL/步，支持自动脱吸头和定制吸头适配，适用于样本转移、试剂加样和中等体积自动化移液。"
+    },
+    "advantages": [],
+    "specifications": [
+      {
+        "label": "产品名称",
+        "name": "产品名称",
+        "title": "产品名称",
+        "value": "SMTP4 500μL 气体置换式移液泵",
+        "content": "SMTP4 500μL 气体置换式移液泵"
+      },
+      {
+        "label": "型号",
+        "name": "型号",
+        "title": "型号",
+        "value": "SMTP4-500μL",
+        "content": "SMTP4-500μL"
+      },
+      {
+        "label": "产品系列",
+        "name": "产品系列",
+        "title": "产品系列",
+        "value": "SMTP4 气体置换式移液泵",
+        "content": "SMTP4 气体置换式移液泵"
+      },
+      {
+        "label": "移液方式",
+        "name": "移液方式",
+        "title": "移液方式",
+        "value": "气体置换式",
+        "content": "气体置换式"
+      },
+      {
+        "label": "标称量程",
+        "name": "标称量程",
+        "title": "标称量程",
+        "value": "500μL",
+        "content": "500μL"
+      },
+      {
+        "label": "驱动设计",
+        "name": "驱动设计",
+        "title": "驱动设计",
+        "value": "四线双极步进丝杆电机",
+        "content": "四线双极步进丝杆电机"
+      },
+      {
+        "label": "电机转速",
+        "name": "电机转速",
+        "title": "电机转速",
+        "value": "1~3000 pps",
+        "content": "1~3000 pps"
+      },
+      {
+        "label": "定量分辨率",
+        "name": "定量分辨率",
+        "title": "定量分辨率",
+        "value": "0.25μL/步",
+        "content": "0.25μL/步"
+      },
+      {
+        "label": "适配吸头",
+        "name": "适配吸头",
+        "title": "适配吸头",
+        "value": "根据客户需求定制",
+        "content": "根据客户需求定制"
+      },
+      {
+        "label": "装吸头所需力",
+        "name": "装吸头所需力",
+        "title": "装吸头所需力",
+        "value": "30 N",
+        "content": "30 N"
+      },
+      {
+        "label": "满量程步数",
+        "name": "满量程步数",
+        "title": "满量程步数",
+        "value": "2000 步",
+        "content": "2000 步"
+      },
+      {
+        "label": "脱 TIP 头步数",
+        "name": "脱 TIP 头步数",
+        "title": "脱 TIP 头步数",
+        "value": "550 步",
+        "content": "550 步"
+      },
+      {
+        "label": "退 TIP 头推力",
+        "name": "退 TIP 头推力",
+        "title": "退 TIP 头推力",
+        "value": "转速 5 r/s 时退枪头电机推力大于 120 N",
+        "content": "转速 5 r/s 时退枪头电机推力大于 120 N"
+      },
+      {
+        "label": "运行噪音",
+        "name": "运行噪音",
+        "title": "运行噪音",
+        "value": "<60 dBA，仅室内使用",
+        "content": "<60 dBA，仅室内使用"
+      },
+      {
+        "label": "运行环境",
+        "name": "运行环境",
+        "title": "运行环境",
+        "value": "15°C to 40°C，20% to 95% RH at 40°C，无冷凝",
+        "content": "15°C to 40°C，20% to 95% RH at 40°C，无冷凝"
+      },
+      {
+        "label": "存储环境",
+        "name": "存储环境",
+        "title": "存储环境",
+        "value": "-20°C to 65°C，30% to 85% RH，无冷凝",
+        "content": "-20°C to 65°C，30% to 85% RH，无冷凝"
+      },
+      {
+        "label": "介质温度",
+        "name": "介质温度",
+        "title": "介质温度",
+        "value": "15°C to 40°C",
+        "content": "15°C to 40°C"
+      },
+      {
+        "label": "电源要求",
+        "name": "电源要求",
+        "title": "电源要求",
+        "value": "24VDC 500mA",
+        "content": "24VDC 500mA"
+      },
+      {
+        "label": "总体尺寸",
+        "name": "总体尺寸",
+        "title": "总体尺寸",
+        "value": "28 × 28 × 153.1 mm",
+        "content": "28 × 28 × 153.1 mm"
+      },
+      {
+        "label": "重量",
+        "name": "重量",
+        "title": "重量",
+        "value": "300 g",
+        "content": "300 g"
+      }
+    ],
+    "specificationGroups": [
+      {
+        "title": "技术参数",
+        "items": [
+          {
+            "label": "产品名称",
+            "name": "产品名称",
+            "title": "产品名称",
+            "value": "SMTP4 500μL 气体置换式移液泵",
+            "content": "SMTP4 500μL 气体置换式移液泵"
+          },
+          {
+            "label": "型号",
+            "name": "型号",
+            "title": "型号",
+            "value": "SMTP4-500μL",
+            "content": "SMTP4-500μL"
+          },
+          {
+            "label": "产品系列",
+            "name": "产品系列",
+            "title": "产品系列",
+            "value": "SMTP4 气体置换式移液泵",
+            "content": "SMTP4 气体置换式移液泵"
+          },
+          {
+            "label": "移液方式",
+            "name": "移液方式",
+            "title": "移液方式",
+            "value": "气体置换式",
+            "content": "气体置换式"
+          },
+          {
+            "label": "标称量程",
+            "name": "标称量程",
+            "title": "标称量程",
+            "value": "500μL",
+            "content": "500μL"
+          },
+          {
+            "label": "驱动设计",
+            "name": "驱动设计",
+            "title": "驱动设计",
+            "value": "四线双极步进丝杆电机",
+            "content": "四线双极步进丝杆电机"
+          },
+          {
+            "label": "电机转速",
+            "name": "电机转速",
+            "title": "电机转速",
+            "value": "1~3000 pps",
+            "content": "1~3000 pps"
+          },
+          {
+            "label": "定量分辨率",
+            "name": "定量分辨率",
+            "title": "定量分辨率",
+            "value": "0.25μL/步",
+            "content": "0.25μL/步"
+          },
+          {
+            "label": "适配吸头",
+            "name": "适配吸头",
+            "title": "适配吸头",
+            "value": "根据客户需求定制",
+            "content": "根据客户需求定制"
+          },
+          {
+            "label": "装吸头所需力",
+            "name": "装吸头所需力",
+            "title": "装吸头所需力",
+            "value": "30 N",
+            "content": "30 N"
+          },
+          {
+            "label": "满量程步数",
+            "name": "满量程步数",
+            "title": "满量程步数",
+            "value": "2000 步",
+            "content": "2000 步"
+          },
+          {
+            "label": "脱 TIP 头步数",
+            "name": "脱 TIP 头步数",
+            "title": "脱 TIP 头步数",
+            "value": "550 步",
+            "content": "550 步"
+          },
+          {
+            "label": "退 TIP 头推力",
+            "name": "退 TIP 头推力",
+            "title": "退 TIP 头推力",
+            "value": "转速 5 r/s 时退枪头电机推力大于 120 N",
+            "content": "转速 5 r/s 时退枪头电机推力大于 120 N"
+          },
+          {
+            "label": "运行噪音",
+            "name": "运行噪音",
+            "title": "运行噪音",
+            "value": "<60 dBA，仅室内使用",
+            "content": "<60 dBA，仅室内使用"
+          },
+          {
+            "label": "运行环境",
+            "name": "运行环境",
+            "title": "运行环境",
+            "value": "15°C to 40°C，20% to 95% RH at 40°C，无冷凝",
+            "content": "15°C to 40°C，20% to 95% RH at 40°C，无冷凝"
+          },
+          {
+            "label": "存储环境",
+            "name": "存储环境",
+            "title": "存储环境",
+            "value": "-20°C to 65°C，30% to 85% RH，无冷凝",
+            "content": "-20°C to 65°C，30% to 85% RH，无冷凝"
+          },
+          {
+            "label": "介质温度",
+            "name": "介质温度",
+            "title": "介质温度",
+            "value": "15°C to 40°C",
+            "content": "15°C to 40°C"
+          },
+          {
+            "label": "电源要求",
+            "name": "电源要求",
+            "title": "电源要求",
+            "value": "24VDC 500mA",
+            "content": "24VDC 500mA"
+          },
+          {
+            "label": "总体尺寸",
+            "name": "总体尺寸",
+            "title": "总体尺寸",
+            "value": "28 × 28 × 153.1 mm",
+            "content": "28 × 28 × 153.1 mm"
+          },
+          {
+            "label": "重量",
+            "name": "重量",
+            "title": "重量",
+            "value": "300 g",
+            "content": "300 g"
+          }
+        ]
+      }
+    ]
+  }
+]

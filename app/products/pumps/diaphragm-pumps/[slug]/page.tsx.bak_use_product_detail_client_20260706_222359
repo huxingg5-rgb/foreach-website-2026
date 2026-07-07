@@ -1,0 +1,323 @@
+﻿import fs from "fs";
+import path from "path";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import "../diaphragm-pump-detail.css";
+
+import detailsJson from "@/data/products/generated/pumps/diaphragm-pumps/detail/index.json";
+
+type Params = Promise<{
+  slug: string;
+}>;
+
+type DiaphragmMedia = {
+  resourceId?: string;
+  version?: string;
+  displayName?: string;
+  resourceType?: string;
+  pagePosition?: string;
+  fileName?: string;
+  path?: string;
+  fullPath?: string;
+  alt?: string;
+  caption?: string;
+  sourcePdfPage?: string;
+  status?: string;
+};
+
+type DiaphragmSpec = {
+  tableName?: string;
+  parameter?: string;
+  value?: string;
+  note?: string;
+};
+
+type DiaphragmModelConfig = {
+  itemCode?: string;
+  model?: string;
+  category?: string;
+  motorType?: string;
+  voltage?: string;
+  connectionType?: string;
+  portDirection?: string;
+  diaphragm?: string;
+  valvePlate?: string;
+  pumpHead?: string;
+  detailSlug?: string;
+  reservedModelSlug?: string;
+  note?: string;
+};
+
+type DiaphragmFaq = {
+  question?: string;
+  answer?: string;
+  seoDirection?: string;
+};
+
+type DiaphragmDetail = {
+  seriesId: string;
+  slug: string;
+  category?: string;
+  title?: string;
+  displayName?: string;
+  path?: string;
+  description?: string;
+  commonApplications?: string;
+  modelDisplay?: string;
+  modelButtonText?: string;
+  status?: string;
+  seo?: {
+    title?: string;
+    description?: string;
+    pageTitle?: string;
+    path?: string;
+  };
+  specifications?: DiaphragmSpec[];
+  modelConfigurations?: DiaphragmModelConfig[];
+  faqs?: DiaphragmFaq[];
+  media?: DiaphragmMedia[];
+};
+
+const details = detailsJson as DiaphragmDetail[];
+
+function findDetail(slug: string) {
+  return details.find((item) => item.slug === slug);
+}
+
+function publicSrcFromFullPath(fullPath?: string) {
+  const value = String(fullPath || "").replaceAll("\\", "/");
+
+  if (!value) return "";
+
+  if (value.startsWith("public/")) {
+    return "/" + value.slice("public/".length);
+  }
+
+  if (value.startsWith("/public/")) {
+    return value.replace(/^\/public\//, "/");
+  }
+
+  return value.startsWith("/") ? value : "/" + value;
+}
+
+function existingPublicSrc(media?: DiaphragmMedia) {
+  if (!media?.fullPath) return "";
+
+  const diskPath = path.join(process.cwd(), media.fullPath);
+
+  if (!fs.existsSync(diskPath)) {
+    return "";
+  }
+
+  return publicSrcFromFullPath(media.fullPath);
+}
+
+function findMainImage(detail: DiaphragmDetail) {
+  return detail.media?.find((item) => item.resourceType?.includes("主图"));
+}
+
+function groupSpecs(specs: DiaphragmSpec[]) {
+  return specs.reduce<Record<string, DiaphragmSpec[]>>((acc, item) => {
+    const key = item.tableName || "规格参数";
+    acc[key] = acc[key] || [];
+    acc[key].push(item);
+    return acc;
+  }, {});
+}
+
+function splitApplications(value?: string) {
+  return String(value || "")
+    .split(/[、,，]/)
+    .map((item) => item.trim())
+    .filter(Boolean);
+}
+
+export function generateStaticParams() {
+  return details.map((item) => ({
+    slug: item.slug,
+  }));
+}
+
+export async function generateMetadata({ params }: { params: Params }) {
+  const { slug } = await params;
+  const detail = findDetail(slug);
+
+  if (!detail) {
+    return {
+      title: "隔膜泵详情 | FOREACH",
+    };
+  }
+
+  return {
+    title: detail.seo?.title || `${detail.title} | FOREACH`,
+    description: detail.seo?.description || detail.description || "",
+  };
+}
+
+export default async function DiaphragmPumpDetailPage({
+  params,
+}: {
+  params: Params;
+}) {
+  const { slug } = await params;
+  const detail = findDetail(slug);
+
+  if (!detail) {
+    notFound();
+  }
+
+  const mainImage = findMainImage(detail);
+  const mainImageSrc = existingPublicSrc(mainImage);
+  const applications = splitApplications(detail.commonApplications);
+  const specsByTable = groupSpecs(detail.specifications || []);
+
+  return (
+    <main className="diaphragm-detail-page">
+      <div className="diaphragm-detail-inner">
+        <nav className="diaphragm-breadcrumb" aria-label="Breadcrumb">
+          <Link href="/products">产品中心</Link>
+          <span>/</span>
+          <Link href="/products/pumps">泵</Link>
+          <span>/</span>
+          <Link href="/products/pumps/diaphragm-pumps">隔膜泵</Link>
+          <span>/</span>
+          <span>{detail.title}</span>
+        </nav>
+
+        <section className="diaphragm-hero">
+          <div className="diaphragm-hero-media">
+            {mainImageSrc ? (
+              <img
+                src={mainImageSrc}
+                alt={mainImage?.alt || detail.title || "Diaphragm pump"}
+              />
+            ) : (
+              <div className="diaphragm-media-placeholder">
+                <strong>{detail.title}</strong>
+                <span>主图待放置</span>
+                <br />
+                <span>{mainImage?.fileName}</span>
+              </div>
+            )}
+          </div>
+
+          <div className="diaphragm-hero-copy">
+            <div className="diaphragm-kicker">{detail.category || "隔膜泵"}</div>
+            <h1 className="diaphragm-title">{detail.title}</h1>
+            <p className="diaphragm-desc">{detail.description}</p>
+
+            <div className="diaphragm-model-line">
+              <strong>型号：</strong>
+              <span>{detail.modelDisplay || `${detail.seriesId} 标准型号`}</span>
+              <a className="diaphragm-primary-link" href="#model-configuration">
+                {detail.modelButtonText || "型号配置"}
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {applications.length > 0 && (
+          <section className="diaphragm-section">
+            <h2 className="diaphragm-section-title">常见应用</h2>
+            <ul className="diaphragm-applications">
+              {applications.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        <section className="diaphragm-section" id="specifications">
+          <h2 className="diaphragm-section-title">规格参数</h2>
+
+          {Object.entries(specsByTable).map(([tableName, rows]) => (
+            <div key={tableName}>
+              <h3 className="diaphragm-subtitle">{tableName}</h3>
+              <div className="diaphragm-table-wrap">
+                <table className="diaphragm-table">
+                  <thead>
+                    <tr>
+                      <th>参数</th>
+                      <th>规格值</th>
+                      <th>备注</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {rows.map((row, index) => (
+                      <tr key={`${tableName}-${row.parameter}-${index}`}>
+                        <td>{row.parameter}</td>
+                        <td>{row.value}</td>
+                        <td>{row.note}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          ))}
+        </section>
+
+        <section className="diaphragm-section" id="model-configuration">
+          <h2 className="diaphragm-section-title">型号配置</h2>
+          <div className="diaphragm-table-wrap">
+            <table className="diaphragm-table">
+              <thead>
+                <tr>
+                  <th>商品编码</th>
+                  <th>产品型号</th>
+                  <th>电机类型</th>
+                  <th>电压</th>
+                  <th>连接方式</th>
+                  <th>膜片</th>
+                  <th>阀片</th>
+                  <th>泵头</th>
+                </tr>
+              </thead>
+              <tbody>
+                {(detail.modelConfigurations || []).map((item) => (
+                  <tr key={`${item.itemCode}-${item.model}`}>
+                    <td>{item.itemCode}</td>
+                    <td>{item.model}</td>
+                    <td>{item.motorType}</td>
+                    <td>{item.voltage}</td>
+                    <td>{item.connectionType}</td>
+                    <td>{item.diaphragm}</td>
+                    <td>{item.valvePlate}</td>
+                    <td>{item.pumpHead}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {(detail.media || []).length > 0 && (
+          <section className="diaphragm-section">
+            <h2 className="diaphragm-section-title">图纸与资源</h2>
+            <div className="diaphragm-media-list">
+              {(detail.media || []).map((item) => (
+                <div className="diaphragm-media-item" key={item.resourceId}>
+                  <strong>{item.resourceType}</strong>
+                  <span>{item.caption || item.displayName}</span>
+                  <span>{item.fileName}</span>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {(detail.faqs || []).length > 0 && (
+          <section className="diaphragm-section">
+            <h2 className="diaphragm-section-title">常见问题</h2>
+            {(detail.faqs || []).map((item) => (
+              <div className="diaphragm-faq" key={item.question}>
+                <h3>{item.question}</h3>
+                <p>{item.answer}</p>
+              </div>
+            ))}
+          </section>
+        )}
+      </div>
+    </main>
+  );
+}

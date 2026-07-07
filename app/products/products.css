@@ -2542,22 +2542,23 @@
 /* 产品中心：产品种类介绍区最终整理版
    说明：
    1. 这是产品中心顶部产品种类介绍区的唯一最终样式
-   2. 清理掉之前反复追加的重复覆盖块
-   3. 左侧产品图放大，右侧正文保持黑色大字号
-   4. HaloFlx 固定在右下角，使用荧光色低透明度
-   5. 只加粗 .product-type-intro-emphasis 包住的指定文字
+   2. 左侧产品图固定占位，右侧正文吃满剩余空间
+   3. HaloFlx 仅作为右下角背景装饰，不参与布局、不预留空间
+   4. 只加粗 .product-type-intro-emphasis 包住的指定文字
 ========================================================= */
 
 .products-selection-page .product-type-intro-module {
   position: relative !important;
+  isolation: isolate !important;
   width: 100% !important;
   margin: 0 0 28px !important;
-  padding: 24px 340px 24px 0 !important;
+  padding: 24px 0 24px 0 !important;
   display: grid !important;
   grid-template-columns: 430px minmax(0, 1fr) !important;
   gap: 46px !important;
   align-items: center !important;
-  justify-content: start !important;
+  justify-content: stretch !important;
+  overflow: hidden !important;
   border: 0 !important;
   border-top: 1px solid var(--line) !important;
   background: transparent !important;
@@ -2565,6 +2566,8 @@
 
 /* 左侧产品图 */
 .products-selection-page .product-type-intro-image {
+  position: relative !important;
+  z-index: 2 !important;
   width: 430px !important;
   height: 320px !important;
   display: flex !important;
@@ -2583,10 +2586,12 @@
   transform-origin: center center !important;
 }
 
-/* 右侧文字 */
+/* 右侧文字：不再限宽，让正文铺到右侧 */
 .products-selection-page .product-type-intro-copy {
+  position: relative !important;
+  z-index: 2 !important;
   width: 100% !important;
-  max-width: 920px !important;
+  max-width: none !important;
   min-width: 0 !important;
   padding-top: 2px !important;
 }
@@ -2617,10 +2622,11 @@
   font-weight: 800 !important;
 }
 
-/* HaloFlx 右下角装饰字 */
+/* HaloFlx 右下角装饰字：背景层，不占空间 */
 .products-selection-page .product-type-intro-module::after {
   content: "HaloFlx";
   position: absolute !important;
+  z-index: 1 !important;
   top: auto !important;
   right: 28px !important;
   bottom: 18px !important;
@@ -2630,7 +2636,7 @@
   font-weight: 840 !important;
   line-height: 1 !important;
   letter-spacing: -0.05em !important;
-  opacity: 0.18 !important;
+  opacity: 0.14 !important;
   white-space: nowrap !important;
   pointer-events: none !important;
   user-select: none !important;
@@ -2639,7 +2645,7 @@
 /* 中等屏幕 */
 @media (max-width: 1400px) {
   .products-selection-page .product-type-intro-module {
-    padding: 24px 280px 22px 0 !important;
+    padding: 24px 0 22px 0 !important;
     grid-template-columns: 390px minmax(0, 1fr) !important;
     gap: 38px !important;
   }
@@ -2666,7 +2672,7 @@
     right: 18px !important;
     bottom: 16px !important;
     font-size: 70px !important;
-    opacity: 0.16 !important;
+    opacity: 0.13 !important;
   }
 }
 
@@ -2689,7 +2695,7 @@
   }
 
   .products-selection-page .product-type-intro-copy {
-    max-width: 100% !important;
+    max-width: none !important;
     padding-top: 0 !important;
   }
 
@@ -2707,7 +2713,6 @@
     display: none !important;
   }
 }
-
 /* 产品中心：取消左侧筛选栏吸顶
    说明：
    1. 左侧筛选栏不再随着页面滚动一直停在顶部
@@ -2799,3 +2804,229 @@
   gap: 3px;
   line-height: 1.35;
 }
+
+
+/* =========================================================
+   产品中心：手机端产品卡片字号最终修正
+   说明：
+   1. 放在 products.css 最后，用于压住前面重复样式
+   2. 只影响手机端产品卡片
+   3. 收小型号、三行参数和按钮文字
+   4. 不影响桌面端
+========================================================= */
+@media (max-width: 900px) {
+  .products-selection-page .product-card .product-title,
+  .products-selection-page .product-card h3,
+  .products-selection-page .product-card-title,
+  .products-selection-page .product-name {
+    font-size: 16px !important;
+    line-height: 1.22 !important;
+    min-height: auto !important;
+    margin-bottom: 8px !important;
+  }
+
+  .products-selection-page .product-param-line,
+  .products-selection-page .product-card-specs,
+  .products-selection-page .product-card-specs li,
+  .products-selection-page .product-card-description,
+  .products-selection-page .product-summary {
+    font-size: 12px !important;
+    line-height: 1.38 !important;
+  }
+
+  .products-selection-page .product-card-specs {
+    min-height: 56px !important;
+    margin-top: -2px !important;
+    gap: 2px !important;
+  }
+
+  .products-selection-page .product-actions,
+  .products-selection-page .product-card-actions {
+    margin-top: 8px !important;
+    gap: 8px !important;
+  }
+
+  .products-selection-page .product-link,
+  .products-selection-page .list-toggle {
+    height: 32px !important;
+    min-height: 32px !important;
+    padding: 0 8px !important;
+    font-size: 12px !important;
+    line-height: 1 !important;
+  }
+}
+
+
+/* =========================================================
+   产品中心：产品卡片两按钮最终功能样式
+   说明：
+   1. 当前只保留 查看详情 / 加入清单
+   2. 当前仅保留添加图纸与加入清单两个操作
+   3. 默认白底蓝字，选中后深蓝底 + 荧光字
+========================================================= */
+.products-selection-page .product-actions {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 8px !important;
+}
+
+.products-selection-page .product-link,
+.products-selection-page .list-toggle {
+  height: 34px !important;
+  min-height: 34px !important;
+  padding: 0 8px !important;
+  border: 1px solid var(--brand-blue, #173368) !important;
+  border-radius: 6px !important;
+  background: #ffffff !important;
+  color: var(--brand-blue, #173368) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-family: inherit !important;
+  font-size: 12px !important;
+  font-weight: 760 !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  cursor: pointer !important;
+}
+
+.products-selection-page .product-link:hover,
+.products-selection-page .list-toggle:hover,
+.products-selection-page .product-link.active,
+.products-selection-page .list-toggle.active {
+  background: var(--brand-blue, #173368) !important;
+  border-color: var(--brand-blue, #173368) !important;
+  color: var(--brand-cyan, #09e9b4) !important;
+}
+
+@media (max-width: 900px) {
+  .products-selection-page .product-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 6px !important;
+  }
+
+  .products-selection-page .product-link,
+  .products-selection-page .list-toggle {
+    height: 30px !important;
+    min-height: 30px !important;
+    padding: 0 6px !important;
+    font-size: 11px !important;
+  }
+}
+
+
+
+
+/* =========================================================
+   Diaphragm pump selection card temporary style fix
+   说明：
+   1. 隔膜泵真实产品图未放置前，避免破图图标和大面积空白
+   2. 保持和现有产品中心卡片体系一致，不单独重做页面
+========================================================= */
+
+.product-card:has(.product-card-title) {
+  min-height: auto;
+}
+
+.product-card-image,
+.product-card-media,
+.product-card-figure,
+.product-card-img-wrap {
+  background: #f8fafc;
+}
+
+/* 没有图片时，压缩上方图片区，避免空白过大 */
+.product-card:not(:has(img[src])) .product-card-image,
+.product-card:not(:has(img[src])) .product-card-media,
+.product-card:not(:has(img[src])) .product-card-figure,
+.product-card:not(:has(img[src])) .product-card-img-wrap {
+  min-height: 120px;
+  height: 120px;
+}
+
+/* 有破图时隐藏图片图标，避免页面显得不完整 */
+.product-card img:not([src]),
+.product-card img[src=""] {
+  display: none !important;
+}
+
+/* 隔膜泵卡片内容比例优化 */
+.product-card-title {
+  color: #173368;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.product-card-summary {
+  color: #172033;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 6px;
+}
+
+/* 让“有刷电机 · 流量 · 压力”不要显得像正文大段 */
+.product-card-summary:only-child,
+.product-card-body .product-card-summary {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 卡片按钮保持底部对齐 */
+.product-card-actions {
+  margin-top: auto;
+}
+
+/* 隔膜泵暂未放图时，卡片上半部分不要撑得太高 */
+.product-card img[alt*="DPL"],
+.product-card img[alt*="DPGL"] {
+  object-fit: contain;
+}
+
+@media (max-width: 900px) {
+  .product-card:not(:has(img[src])) .product-card-image,
+  .product-card:not(:has(img[src])) .product-card-media,
+  .product-card:not(:has(img[src])) .product-card-figure,
+  .product-card:not(:has(img[src])) .product-card-img-wrap {
+    min-height: 100px;
+    height: 100px;
+  }
+
+  .product-card-summary:only-child,
+  .product-card-body .product-card-summary {
+    white-space: normal;
+  }
+}
+
+
+/* =========================================================
+   Diaphragm pump card subtitle multiline
+   隔膜泵卡片参数分行：
+   有刷/无刷电机
+   流量
+   寿命
+========================================================= */
+
+.product-card-summary {
+  white-space: pre-line;
+  overflow: visible;
+  text-overflow: clip;
+  line-height: 1.75;
+}
+
+/* 覆盖之前为了单行省略添加的样式 */
+.product-card-summary:only-child,
+.product-card-body .product-card-summary {
+  white-space: pre-line;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+
+/* ===== FOREACH diaphragm product type intro brand word START ===== */
+.products-selection-page .product-type-intro-module[data-product-type-id="diaphragm-pump"]::after,
+.products-selection-page .product-type-intro-module[data-product-type-id="diaphragm-pumps"]::after {
+  content: "HaloDp" !important;
+}
+/* ===== FOREACH diaphragm product type intro brand word END ===== */

@@ -1,0 +1,13 @@
+图片放置说明
+
+页面：PFA 管
+路由：/products/tubing/pfa-tubing
+
+请把主图放到：
+public/images/products/tubing/pfa-tubing/pfa-tubing-main.webp
+
+可选角度图：
+public/images/products/tubing/pfa-tubing/pfa-tubing-view-02.webp
+public/images/products/tubing/pfa-tubing/pfa-tubing-view-03.webp
+public/images/products/tubing/pfa-tubing/pfa-tubing-view-04.webp
+public/images/products/tubing/pfa-tubing/pfa-tubing-view-05.webp

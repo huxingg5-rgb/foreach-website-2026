@@ -1,0 +1,218 @@
+import type { ProductSelectionProduct } from "@/data/products/selection/product-selection.types";
+
+export const tubingSelectionProducts: ProductSelectionProduct[] = [
+  {
+    "productId": "pvc-tubing",
+    "categoryId": "tubing",
+    "productTypeId": "tubing",
+    "seriesId": "tubing",
+    "detailSlug": "pvc-tubing",
+    "slug": "pvc-tubing",
+    "cardTitle": {
+      "zh": "PVC 管",
+      "en": "PVC Tubing"
+    },
+    "cardSubtitle": {
+      "zh": "聚氯乙烯（PVC）\\n内径范围：1.6mm~19.1mm\\n工作温度：-42℃~75℃",
+      "en": "Polyvinyl Chloride (PVC)\\nID range: 1.6mm~19.1mm\\nWorking temperature: -42℃~75℃"
+    },
+    "description": {
+      "zh": "聚氯乙烯（PVC），内径范围 1.6mm~19.1mm，工作温度 -42℃~75℃。",
+      "en": "Polyvinyl Chloride (PVC), ID range 1.6mm~19.1mm, working temperature -42℃~75℃."
+    },
+    "imageCard": "/images/products/tubing/pvc-tubing/pvc-tubing-main.webp",
+    "imagePath": "/images/products/tubing/pvc-tubing/pvc-tubing-main.webp",
+    "imageAlt": {
+      "zh": "PVC 管",
+      "en": "PVC Tubing"
+    },
+    "href": "/products/tubing/pvc-tubing",
+    "detailHref": "/products/tubing/pvc-tubing",
+    "productDetailHref": "/products/tubing/pvc-tubing",
+    "selectionHref": "/products",
+    "filters": {},
+    "searchKeywords": {
+      "zh": "PVC 管 聚氯乙烯（PVC） 管路 管材",
+      "en": "PVC Tubing Polyvinyl Chloride (PVC) tubing"
+    }
+  },
+  {
+    "productId": "tpu-tubing",
+    "categoryId": "tubing",
+    "productTypeId": "tubing",
+    "seriesId": "tubing",
+    "detailSlug": "tpu-tubing",
+    "slug": "tpu-tubing",
+    "cardTitle": {
+      "zh": "TPU 管",
+      "en": "TPU Tubing"
+    },
+    "cardSubtitle": {
+      "zh": "热塑性聚氨酯（TPU）\\n内径范围：3.7mm~7.0mm\\n工作温度：-30℃~70℃",
+      "en": "Thermoplastic Polyurethane (TPU)\\nID range: 3.7mm~7.0mm\\nWorking temperature: -30℃~70℃"
+    },
+    "description": {
+      "zh": "热塑性聚氨酯（TPU），内径范围 3.7mm~7.0mm，工作温度 -30℃~70℃。",
+      "en": "Thermoplastic Polyurethane (TPU), ID range 3.7mm~7.0mm, working temperature -30℃~70℃."
+    },
+    "imageCard": "/images/products/tubing/tpu-tubing/tpu-tubing-main.webp",
+    "imagePath": "/images/products/tubing/tpu-tubing/tpu-tubing-main.webp",
+    "imageAlt": {
+      "zh": "TPU 管",
+      "en": "TPU Tubing"
+    },
+    "href": "/products/tubing/tpu-tubing",
+    "detailHref": "/products/tubing/tpu-tubing",
+    "productDetailHref": "/products/tubing/tpu-tubing",
+    "selectionHref": "/products",
+    "filters": {},
+    "searchKeywords": {
+      "zh": "TPU 管 热塑性聚氨酯（TPU） 管路 管材",
+      "en": "TPU Tubing Thermoplastic Polyurethane (TPU) tubing"
+    }
+  },
+  {
+    "productId": "fep-tubing",
+    "categoryId": "tubing",
+    "productTypeId": "tubing",
+    "seriesId": "tubing",
+    "detailSlug": "fep-tubing",
+    "slug": "fep-tubing",
+    "cardTitle": {
+      "zh": "FEP 管",
+      "en": "FEP Tubing"
+    },
+    "cardSubtitle": {
+      "zh": "氟化乙烯丙烯共聚物（FEP）\\n内径范围：0.3mm~2.0mm\\n工作温度：-230℃~200℃",
+      "en": "Fluorinated Ethylene Propylene (FEP)\\nID range: 0.3mm~2.0mm\\nWorking temperature: -230℃~200℃"
+    },
+    "description": {
+      "zh": "氟化乙烯丙烯共聚物（FEP），内径范围 0.3mm~2.0mm，工作温度 -230℃~200℃。",
+      "en": "Fluorinated Ethylene Propylene (FEP), ID range 0.3mm~2.0mm, working temperature -230℃~200℃."
+    },
+    "imageCard": "/images/products/tubing/fep-tubing/fep-tubing-main.webp",
+    "imagePath": "/images/products/tubing/fep-tubing/fep-tubing-main.webp",
+    "imageAlt": {
+      "zh": "FEP 管",
+      "en": "FEP Tubing"
+    },
+    "href": "/products/tubing/fep-tubing",
+    "detailHref": "/products/tubing/fep-tubing",
+    "productDetailHref": "/products/tubing/fep-tubing",
+    "selectionHref": "/products",
+    "filters": {},
+    "searchKeywords": {
+      "zh": "FEP 管 氟化乙烯丙烯共聚物（FEP） 管路 管材",
+      "en": "FEP Tubing Fluorinated Ethylene Propylene (FEP) tubing"
+    }
+  },
+  {
+    "productId": "ptfe-tubing",
+    "categoryId": "tubing",
+    "productTypeId": "tubing",
+    "seriesId": "tubing",
+    "detailSlug": "ptfe-tubing",
+    "slug": "ptfe-tubing",
+    "cardTitle": {
+      "zh": "PTFE 管",
+      "en": "PTFE Tubing"
+    },
+    "cardSubtitle": {
+      "zh": "聚四氟乙烯（PTFE）\\n内径范围：1.5mm~2.0mm\\n工作温度：-200℃~260℃",
+      "en": "Polytetrafluoroethylene (PTFE)\\nID range: 1.5mm~2.0mm\\nWorking temperature: -200℃~260℃"
+    },
+    "description": {
+      "zh": "聚四氟乙烯（PTFE），内径范围 1.5mm~2.0mm，工作温度 -200℃~260℃。",
+      "en": "Polytetrafluoroethylene (PTFE), ID range 1.5mm~2.0mm, working temperature -200℃~260℃."
+    },
+    "imageCard": "/images/products/tubing/ptfe-tubing/ptfe-tubing-main.webp",
+    "imagePath": "/images/products/tubing/ptfe-tubing/ptfe-tubing-main.webp",
+    "imageAlt": {
+      "zh": "PTFE 管",
+      "en": "PTFE Tubing"
+    },
+    "href": "/products/tubing/ptfe-tubing",
+    "detailHref": "/products/tubing/ptfe-tubing",
+    "productDetailHref": "/products/tubing/ptfe-tubing",
+    "selectionHref": "/products",
+    "filters": {},
+    "searchKeywords": {
+      "zh": "PTFE 管 聚四氟乙烯（PTFE） 管路 管材",
+      "en": "PTFE Tubing Polytetrafluoroethylene (PTFE) tubing"
+    }
+  },
+  {
+    "productId": "peek-tubing",
+    "categoryId": "tubing",
+    "productTypeId": "tubing",
+    "seriesId": "tubing",
+    "detailSlug": "peek-tubing",
+    "slug": "peek-tubing",
+    "cardTitle": {
+      "zh": "PEEK 管",
+      "en": "PEEK Tubing"
+    },
+    "cardSubtitle": {
+      "zh": "聚醚醚酮（PEEK）\\n内径范围：0.2mm~0.8mm\\n工作温度：-180℃~225℃",
+      "en": "Polyether Ether Ketone (PEEK)\\nID range: 0.2mm~0.8mm\\nWorking temperature: -180℃~225℃"
+    },
+    "description": {
+      "zh": "聚醚醚酮（PEEK），内径范围 0.2mm~0.8mm，工作温度 -180℃~225℃。",
+      "en": "Polyether Ether Ketone (PEEK), ID range 0.2mm~0.8mm, working temperature -180℃~225℃."
+    },
+    "imageCard": "/images/products/tubing/peek-tubing/peek-tubing-main.webp",
+    "imagePath": "/images/products/tubing/peek-tubing/peek-tubing-main.webp",
+    "imageAlt": {
+      "zh": "PEEK 管",
+      "en": "PEEK Tubing"
+    },
+    "href": "/products/tubing/peek-tubing",
+    "detailHref": "/products/tubing/peek-tubing",
+    "productDetailHref": "/products/tubing/peek-tubing",
+    "selectionHref": "/products",
+    "filters": {},
+    "searchKeywords": {
+      "zh": "PEEK 管 聚醚醚酮（PEEK） 管路 管材",
+      "en": "PEEK Tubing Polyether Ether Ketone (PEEK) tubing"
+    }
+  },
+  {
+    "productId": "pfa-tubing",
+    "categoryId": "tubing",
+    "productTypeId": "tubing",
+    "seriesId": "tubing",
+    "detailSlug": "pfa-tubing",
+    "slug": "pfa-tubing",
+    "cardTitle": {
+      "zh": "PFA 管",
+      "en": "PFA Tubing"
+    },
+    "cardSubtitle": {
+      "zh": "全氟烷氧基树脂（PFA）\\n内径范围：0.5mm~1.0mm\\n工作温度：-230℃~200℃",
+      "en": "Perfluoroalkoxy Alkane (PFA)\\nID range: 0.5mm~1.0mm\\nWorking temperature: -230℃~200℃"
+    },
+    "description": {
+      "zh": "全氟烷氧基树脂（PFA），内径范围 0.5mm~1.0mm，工作温度 -230℃~200℃。",
+      "en": "Perfluoroalkoxy Alkane (PFA), ID range 0.5mm~1.0mm, working temperature -230℃~200℃."
+    },
+    "imageCard": "/images/products/tubing/pfa-tubing/pfa-tubing-main.webp",
+    "imagePath": "/images/products/tubing/pfa-tubing/pfa-tubing-main.webp",
+    "imageAlt": {
+      "zh": "PFA 管",
+      "en": "PFA Tubing"
+    },
+    "href": "/products/tubing/pfa-tubing",
+    "detailHref": "/products/tubing/pfa-tubing",
+    "productDetailHref": "/products/tubing/pfa-tubing",
+    "selectionHref": "/products",
+    "filters": {},
+    "searchKeywords": {
+      "zh": "PFA 管 全氟烷氧基树脂（PFA） 管路 管材",
+      "en": "PFA Tubing Perfluoroalkoxy Alkane (PFA) tubing"
+    }
+  }
+];
+
+export const tubingSelectionCards = tubingSelectionProducts;
+
+export default tubingSelectionProducts;

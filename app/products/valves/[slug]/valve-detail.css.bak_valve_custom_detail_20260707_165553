@@ -1,0 +1,299 @@
+/* =========================================================
+   valve-detail.css
+   恒永达官网｜阀系列详情页样式
+
+   说明：
+   1. 仅作用于 /products/valves/[slug]
+   2. 使用品牌深蓝 #173368 与科技强调色 #09E9B4
+   3. 保持 B2B 工业精密感，不使用电商风大阴影
+========================================================= */
+
+.valve-detail-page {
+  background: #f6f8fb;
+  color: #173368;
+}
+
+.valve-detail-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.9fr);
+  gap: 56px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 72px 40px 56px;
+}
+
+.valve-detail-hero__media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 520px;
+  background: #ffffff;
+  border: 1px solid rgba(23, 51, 104, 0.12);
+}
+
+.valve-detail-hero__media img {
+  width: min(78%, 560px);
+  height: auto;
+  object-fit: contain;
+}
+
+.valve-detail-hero__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valve-detail-eyebrow {
+  margin: 0 0 14px;
+  color: #09a988;
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.valve-detail-hero h1 {
+  margin: 0;
+  font-size: clamp(36px, 4vw, 56px);
+  line-height: 1.12;
+  color: #173368;
+}
+
+.valve-detail-model {
+  margin: 16px 0 0;
+  font-size: 20px;
+  color: rgba(23, 51, 104, 0.72);
+}
+
+.valve-detail-desc {
+  margin: 28px 0 0;
+  font-size: 18px;
+  line-height: 1.9;
+  color: rgba(16, 30, 58, 0.86);
+}
+
+.valve-detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.valve-detail-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 132px;
+  height: 44px;
+  padding: 0 22px;
+  border-radius: 6px;
+  font-size: 15px;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.valve-detail-primary {
+  background: #173368;
+  border: 1px solid #173368;
+  color: #09e9b4;
+}
+
+.valve-detail-primary:hover {
+  background: #10264f;
+  color: #09e9b4;
+}
+
+.valve-detail-secondary {
+  background: #ffffff;
+  border: 1px solid rgba(23, 51, 104, 0.24);
+  color: #173368;
+}
+
+.valve-detail-secondary:hover {
+  border-color: #173368;
+}
+
+.valve-detail-section {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 30px 40px 56px;
+}
+
+.valve-detail-section__head {
+  margin-bottom: 24px;
+}
+
+.valve-detail-section__head p {
+  margin: 0 0 8px;
+  color: #09a988;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.valve-detail-section__head h2 {
+  margin: 0;
+  font-size: 30px;
+  color: #173368;
+}
+
+.valve-detail-chip-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.valve-detail-chip-grid span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 18px;
+  background: #ffffff;
+  border: 1px solid rgba(23, 51, 104, 0.14);
+  color: #173368;
+  font-size: 15px;
+}
+
+.valve-detail-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.valve-detail-card {
+  min-height: 120px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid rgba(23, 51, 104, 0.12);
+  color: rgba(16, 30, 58, 0.88);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.valve-detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border: 1px solid rgba(23, 51, 104, 0.12);
+}
+
+.valve-detail-table th,
+.valve-detail-table td {
+  padding: 18px 24px;
+  border-bottom: 1px solid rgba(23, 51, 104, 0.1);
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.valve-detail-table th {
+  width: 220px;
+  color: #173368;
+  background: rgba(23, 51, 104, 0.04);
+  font-weight: 600;
+}
+
+.valve-detail-table td {
+  color: rgba(16, 30, 58, 0.86);
+}
+
+.valve-detail-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  max-width: 1440px;
+  margin: 20px auto 72px;
+  padding: 40px;
+  background: #173368;
+  color: #ffffff;
+}
+
+.valve-detail-cta h2 {
+  margin: 0 0 12px;
+  font-size: 28px;
+  color: #ffffff;
+}
+
+.valve-detail-cta p {
+  margin: 0;
+  max-width: 860px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.valve-detail-cta a {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 24px;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #173368;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+@media (max-width: 1024px) {
+  .valve-detail-hero {
+    grid-template-columns: 1fr;
+    padding: 48px 24px 36px;
+  }
+
+  .valve-detail-hero__media {
+    min-height: 360px;
+  }
+
+  .valve-detail-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .valve-detail-section {
+    padding: 24px 24px 42px;
+  }
+
+  .valve-detail-cta {
+    margin: 12px 24px 56px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .valve-detail-hero {
+    padding: 36px 16px 28px;
+    gap: 28px;
+  }
+
+  .valve-detail-hero__media {
+    min-height: 300px;
+  }
+
+  .valve-detail-desc {
+    font-size: 16px;
+  }
+
+  .valve-detail-actions {
+    width: 100%;
+  }
+
+  .valve-detail-actions a {
+    flex: 1 1 100%;
+  }
+
+  .valve-detail-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .valve-detail-table th,
+  .valve-detail-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .valve-detail-table th {
+    border-bottom: 0;
+  }
+}

@@ -1,0 +1,119 @@
+[
+  {
+    "slug": "rotary-valves",
+    "title": "旋转阀系列",
+    "seoTitle": "旋转阀系列｜多通道流路切换与试剂路径管理",
+    "model": "Rotary Valve Series",
+    "productTypeName": "旋转阀",
+    "description": "旋转阀用于多试剂、多样本、多清洗液和多废液路径的集中切换，适合自动化分析仪器、IVD、生命科学和实验室自动化设备中的多通道流路管理。",
+    "image": "/images/products/VALVE/Rotary valve_200x200_01_v001.jpg",
+    "applications": [
+      "多试剂路径切换",
+      "样本与清洗液路径管理",
+      "废液路径集中控制",
+      "自动化分析仪器多通道液路"
+    ],
+    "advantages": [
+      "适合复杂液路中的多通道切换",
+      "减少多个单独阀组带来的空间占用",
+      "便于进行试剂、清洗液和废液路径集中管理",
+      "可根据通道数、接口、材料和安装空间进行配置确认"
+    ],
+    "specs": [
+      {
+        "label": "产品类型",
+        "value": "旋转阀"
+      },
+      {
+        "label": "核心功能",
+        "value": "多通道流路切换"
+      },
+      {
+        "label": "典型应用",
+        "value": "试剂选择、清洗路径、废液路径管理"
+      },
+      {
+        "label": "配置方式",
+        "value": "按通道数、接口、材料和安装空间确认"
+      }
+    ]
+  },
+  {
+    "slug": "high-pressure-valves",
+    "title": "高压阀系列",
+    "seoTitle": "高压阀系列｜高压流体控制与分析仪器液路切换",
+    "model": "High-pressure Valve Series",
+    "productTypeName": "高压阀",
+    "description": "高压阀用于高压流体控制、分析检测流路切换和耐压液路模块集成，适合对密封可靠性、耐压能力和流路稳定性要求较高的自动化仪器。",
+    "image": "/images/products/common/product-placeholder.svg",
+    "applications": [
+      "高压流路切换",
+      "分析检测液路控制",
+      "耐压液路模块集成",
+      "高压样品或试剂路径管理"
+    ],
+    "advantages": [
+      "面向高压流体控制场景",
+      "重点关注密封可靠性和耐压稳定性",
+      "适合分析仪器中的高压流路切换",
+      "可根据压力范围、接口、材料和密封结构确认配置"
+    ],
+    "specs": [
+      {
+        "label": "产品类型",
+        "value": "高压阀"
+      },
+      {
+        "label": "核心功能",
+        "value": "高压液路控制"
+      },
+      {
+        "label": "典型应用",
+        "value": "高压流路切换、分析检测、耐压液路模块"
+      },
+      {
+        "label": "配置方式",
+        "value": "按压力范围、接口、材料和密封结构确认"
+      }
+    ]
+  },
+  {
+    "slug": "solenoid-valves",
+    "title": "电磁阀系列",
+    "seoTitle": "电磁阀系列｜液路通断控制与自动化仪器阀组集成",
+    "model": "Solenoid Valve Series",
+    "productTypeName": "电磁阀",
+    "description": "电磁阀用于液路通断控制、试剂路径控制和自动化仪器阀组集成，适合 IVD、生命科学、实验室自动化和分析仪器中的小型化流体控制模块。",
+    "image": "/images/products/VALVE/Solenoid valve_200x200_01_v001.jpg",
+    "applications": [
+      "试剂路径通断控制",
+      "清洗液路径控制",
+      "废液路径控制",
+      "自动化仪器阀组集成"
+    ],
+    "advantages": [
+      "适合液路通断控制和路径管理",
+      "便于与泵、传感器、接头和管路组合使用",
+      "适合小型化自动化仪器液路模块",
+      "可根据通路、位数、接口、密封材料和驱动方式确认配置"
+    ],
+    "specs": [
+      {
+        "label": "产品类型",
+        "value": "电磁阀"
+      },
+      {
+        "label": "核心功能",
+        "value": "液路通断控制"
+      },
+      {
+        "label": "典型应用",
+        "value": "试剂路径、清洗路径、废液路径通断"
+      },
+      {
+        "label": "配置方式",
+        "value": "按通路、位数、接口、密封材料和驱动方式确认"
+      }
+    ]
+  }
+]

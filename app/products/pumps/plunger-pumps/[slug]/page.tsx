@@ -7,6 +7,16 @@ import ProductDetailClient from "@/components/products/detail/ProductDetailClien
 import * as plungerPumpDetailModule from "@/data/products/detail/plunger-pump-detail.generated";
 import { selectionProducts } from "@/data/products/selection/product-selection.generated";
 
+function getLocalizedSelectionText(
+  value: string | { zh?: string; en?: string; [key: string]: string | undefined } | undefined,
+  locale: "zh" | "en"
+): string {
+  if (!value) return "";
+  if (typeof value === "string") return value;
+
+  return value[locale] || value.zh || value.en || "";
+}
+
 export const dynamicParams = false;
 
 type PageParams = {
@@ -219,8 +229,8 @@ function findSelectionImageByDetail(detail: DetailRecord) {
 
   const matchedProduct = selectionProducts.find((product) => {
     const productKeys = [
-      product.cardTitle?.en,
-      product.cardTitle?.zh,
+      getLocalizedSelectionText(product.cardTitle, "en"),
+      getLocalizedSelectionText(product.cardTitle, "zh"),
       product.productId,
       product.detailSlug,
     ]

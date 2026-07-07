@@ -44,11 +44,23 @@ type ProductDetailRoutePageProps = {
 
 export const dynamicParams = false;
 
+
+const tubingStaticParams = [
+  { category: "tubing", slug: "pvc-tubing" },
+  { category: "tubing", slug: "tpu-tubing" },
+  { category: "tubing", slug: "fep-tubing" },
+  { category: "tubing", slug: "ptfe-tubing" },
+  { category: "tubing", slug: "peek-tubing" },
+  { category: "tubing", slug: "pfa-tubing" },
+];
+
 export function generateStaticParams() {
   const detailParams = getAllProductDetailRouteParams();
   const productTypeParams = getProductTypeRouteParams();
 
-  return [...productTypeParams, ...detailParams];
+  return [...productTypeParams, ...detailParams,
+    ...tubingStaticParams,
+  ];
 }
 
 export async function generateMetadata({

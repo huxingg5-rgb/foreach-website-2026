@@ -1,0 +1,1582 @@
+[
+  {
+    "slug": "rpl-p4",
+    "productId": "valveless-rpl-p4",
+    "productCode": "RPL-P4",
+    "foreachModel": "RPL-P4",
+    "seriesId": "rpl-p4",
+    "seriesSlug": "rpl-p4-valveless-pump",
+    "model": "RPL-P4 12–80 μL/rev 小量程无阀泵",
+    "name": "RPL-P4 12–80 μL/rev 小量程无阀泵",
+    "title": "RPL-P4 12–80 μL/rev 小量程无阀泵",
+    "description": "RPL-P4 12–80 μL/rev 小量程无阀泵是一款用于微量加样、滴定和小体积定量输送的陶瓷柱塞无阀泵，适用于自动化分析仪器、IVD 设备和紧凑型液路模块。\n\n产品通过陶瓷柱塞旋转位移完成吸液与排液，可减少外置电磁阀使用，降低液路复杂度、阀件维护和残留风险；具体排量、接口和安装方式可根据项目需求确认。",
+    "commonApplications": [
+      "微量试剂加样",
+      "小体积滴定",
+      "定量输送",
+      "校准液加注",
+      "微量反应液分配",
+      "紧凑型分析仪器液路模块"
+    ],
+    "mainImage": "/images/products/pumps/valveless-pumps/foreach-rpl-p4-valveless-pump.webp",
+    "image": "/images/products/pumps/valveless-pumps/foreach-rpl-p4-valveless-pump.webp",
+    "heroImage": "/images/products/pumps/valveless-pumps/foreach-rpl-p4-valveless-pump.webp",
+    "imageCard": "/images/products/pumps/valveless-pumps/foreach-rpl-p4-valveless-pump.webp",
+    "additionalImages": [],
+    "images": [],
+    "thumbnails": [],
+    "imageAltEn": "FOREACH RPL-P4 12–80 μL/rev valveless ceramic piston pump for micro dispensing and titration",
+    "imageAlt": "FOREACH RPL-P4 12–80 μL/rev valveless ceramic piston pump for micro dispensing and titration",
+    "mainImageAlt": "FOREACH RPL-P4 12–80 μL/rev valveless ceramic piston pump for micro dispensing and titration",
+    "model3dUrl": "/models/products/pumps/valveless-pumps/foreach-rpl-p4-valveless-pump.glb",
+    "drawing2dUrl": "/documents/products/pumps/valveless-pumps/2d-drawings/foreach-rpl-p4-valveless-pump-2d-drawing.pdf",
+    "drawingPdfUrl": "/documents/products/pumps/valveless-pumps/2d-drawings/foreach-rpl-p4-valveless-pump-2d-drawing.pdf",
+    "resources": {
+      "model3dUrl": "/models/products/pumps/valveless-pumps/foreach-rpl-p4-valveless-pump.glb",
+      "drawing2dUrl": "/documents/products/pumps/valveless-pumps/2d-drawings/foreach-rpl-p4-valveless-pump-2d-drawing.pdf"
+    },
+    "specs": [
+      {
+        "label": "产品类型",
+        "name": "产品类型",
+        "title": "产品类型",
+        "value": "RPL 无阀泵",
+        "content": "RPL 无阀泵"
+      },
+      {
+        "label": "排量范围",
+        "name": "排量范围",
+        "title": "排量范围",
+        "value": "12–80 μL/rev",
+        "content": "12–80 μL/rev"
+      },
+      {
+        "label": "转速",
+        "name": "转速",
+        "title": "转速",
+        "value": "5–300 rpm",
+        "content": "5–300 rpm"
+      },
+      {
+        "label": "准确度",
+        "name": "准确度",
+        "title": "准确度",
+        "value": "<2%",
+        "content": "<2%"
+      },
+      {
+        "label": "重复性",
+        "name": "重复性",
+        "title": "重复性",
+        "value": "<0.5%",
+        "content": "<0.5%"
+      },
+      {
+        "label": "耐压",
+        "name": "耐压",
+        "title": "耐压",
+        "value": "Max 150 kPa",
+        "content": "Max 150 kPa"
+      },
+      {
+        "label": "寿命",
+        "name": "寿命",
+        "title": "寿命",
+        "value": "20,000,000 cycles",
+        "content": "20,000,000 cycles"
+      },
+      {
+        "label": "泵头材质",
+        "name": "泵头材质",
+        "title": "泵头材质",
+        "value": "PVDF",
+        "content": "PVDF"
+      },
+      {
+        "label": "陶瓷套件",
+        "name": "陶瓷套件",
+        "title": "陶瓷套件",
+        "value": "AL2O3",
+        "content": "AL2O3"
+      },
+      {
+        "label": "工作液路接口",
+        "name": "工作液路接口",
+        "title": "工作液路接口",
+        "value": "1/4-28 UNF-2B",
+        "content": "1/4-28 UNF-2B"
+      },
+      {
+        "label": "整体尺寸",
+        "name": "整体尺寸",
+        "title": "整体尺寸",
+        "value": "57 × 57 × 115 mm",
+        "content": "57 × 57 × 115 mm"
+      },
+      {
+        "label": "重量",
+        "name": "重量",
+        "title": "重量",
+        "value": "500 g",
+        "content": "500 g"
+      },
+      {
+        "label": "配置方式",
+        "name": "配置方式",
+        "title": "配置方式",
+        "value": "定制配置",
+        "content": "定制配置"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "RPL-P4 无阀泵适合哪些应用场景？",
+        "answer": "RPL-P4 适合微量试剂加样、小体积滴定、定量输送和校准液加注等场景，常用于自动化分析仪器和紧凑型液路模块。"
+      },
+      {
+        "question": "RPL-P4 是标准品还是定制品？",
+        "answer": "RPL-P4 按项目需求进行配置确认，不作为固定标准品直接选购。具体排量、接口和安装方式需要结合客户设备结构确认。"
+      },
+      {
+        "question": "为什么选择无阀泵结构？",
+        "answer": "无阀泵可减少外置电磁阀使用，降低液路复杂度，并减少阀件堵塞、卡滞和维护风险。"
+      },
+      {
+        "question": "RPL-P4 是否适合小体积液体处理？",
+        "answer": "适合。RPL-P4 覆盖 12–80 μL/rev 小量程输送需求，适用于微量液体处理和紧凑空间集成。"
+      },
+      {
+        "question": "RPL-P4 的接口可以定制吗？",
+        "answer": "可以根据项目需求确认具体接口形式、安装方式和液路连接方式。"
+      }
+    ],
+    "seo": {
+      "title": "RPL-P4 12–80 μL/rev 小量程无阀泵 | FOREACH",
+      "description": "RPL-P4 小量程无阀泵适用于微量加样、滴定和定量输送，采用陶瓷柱塞无阀结构，支持定制排量、接口和安装方式。",
+      "keywords": [
+        "RPL-P4 无阀泵",
+        "12–80 μL/rev 无阀泵",
+        "陶瓷柱塞泵",
+        "旋转柱塞泵",
+        "微量加样泵",
+        "滴定泵",
+        "定量输送泵",
+        "IVD 液路模块"
+      ]
+    },
+    "category": "pumps",
+    "productTypeId": "valveless-pump",
+    "productTypeSlug": "valveless-pumps",
+    "isCustomOnly": true,
+    "isCustomInquiry": true,
+    "detailMode": "custom_inquiry",
+    "productTypeName": "无阀泵",
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "showDatasheetRequest": false,
+    "customInquiryHref": "/contact",
+    "contactHref": "/contact",
+    "modelDisplay": "定制配置请联系我们",
+    "displayModel": "定制配置请联系我们",
+    "advantages": [],
+    "specifications": [
+      {
+        "label": "产品类型",
+        "name": "产品类型",
+        "title": "产品类型",
+        "value": "RPL 无阀泵",
+        "content": "RPL 无阀泵"
+      },
+      {
+        "label": "排量范围",
+        "name": "排量范围",
+        "title": "排量范围",
+        "value": "12–80 μL/rev",
+        "content": "12–80 μL/rev"
+      },
+      {
+        "label": "转速",
+        "name": "转速",
+        "title": "转速",
+        "value": "5–300 rpm",
+        "content": "5–300 rpm"
+      },
+      {
+        "label": "准确度",
+        "name": "准确度",
+        "title": "准确度",
+        "value": "<2%",
+        "content": "<2%"
+      },
+      {
+        "label": "重复性",
+        "name": "重复性",
+        "title": "重复性",
+        "value": "<0.5%",
+        "content": "<0.5%"
+      },
+      {
+        "label": "耐压",
+        "name": "耐压",
+        "title": "耐压",
+        "value": "Max 150 kPa",
+        "content": "Max 150 kPa"
+      },
+      {
+        "label": "寿命",
+        "name": "寿命",
+        "title": "寿命",
+        "value": "20,000,000 cycles",
+        "content": "20,000,000 cycles"
+      },
+      {
+        "label": "泵头材质",
+        "name": "泵头材质",
+        "title": "泵头材质",
+        "value": "PVDF",
+        "content": "PVDF"
+      },
+      {
+        "label": "陶瓷套件",
+        "name": "陶瓷套件",
+        "title": "陶瓷套件",
+        "value": "AL2O3",
+        "content": "AL2O3"
+      },
+      {
+        "label": "工作液路接口",
+        "name": "工作液路接口",
+        "title": "工作液路接口",
+        "value": "1/4-28 UNF-2B",
+        "content": "1/4-28 UNF-2B"
+      },
+      {
+        "label": "整体尺寸",
+        "name": "整体尺寸",
+        "title": "整体尺寸",
+        "value": "57 × 57 × 115 mm",
+        "content": "57 × 57 × 115 mm"
+      },
+      {
+        "label": "重量",
+        "name": "重量",
+        "title": "重量",
+        "value": "500 g",
+        "content": "500 g"
+      },
+      {
+        "label": "配置方式",
+        "name": "配置方式",
+        "title": "配置方式",
+        "value": "定制配置",
+        "content": "定制配置"
+      }
+    ],
+    "specificationGroups": [
+      {
+        "title": "技术参数",
+        "items": [
+          {
+            "label": "产品类型",
+            "name": "产品类型",
+            "title": "产品类型",
+            "value": "RPL 无阀泵",
+            "content": "RPL 无阀泵"
+          },
+          {
+            "label": "排量范围",
+            "name": "排量范围",
+            "title": "排量范围",
+            "value": "12–80 μL/rev",
+            "content": "12–80 μL/rev"
+          },
+          {
+            "label": "转速",
+            "name": "转速",
+            "title": "转速",
+            "value": "5–300 rpm",
+            "content": "5–300 rpm"
+          },
+          {
+            "label": "准确度",
+            "name": "准确度",
+            "title": "准确度",
+            "value": "<2%",
+            "content": "<2%"
+          },
+          {
+            "label": "重复性",
+            "name": "重复性",
+            "title": "重复性",
+            "value": "<0.5%",
+            "content": "<0.5%"
+          },
+          {
+            "label": "耐压",
+            "name": "耐压",
+            "title": "耐压",
+            "value": "Max 150 kPa",
+            "content": "Max 150 kPa"
+          },
+          {
+            "label": "寿命",
+            "name": "寿命",
+            "title": "寿命",
+            "value": "20,000,000 cycles",
+            "content": "20,000,000 cycles"
+          },
+          {
+            "label": "泵头材质",
+            "name": "泵头材质",
+            "title": "泵头材质",
+            "value": "PVDF",
+            "content": "PVDF"
+          },
+          {
+            "label": "陶瓷套件",
+            "name": "陶瓷套件",
+            "title": "陶瓷套件",
+            "value": "AL2O3",
+            "content": "AL2O3"
+          },
+          {
+            "label": "工作液路接口",
+            "name": "工作液路接口",
+            "title": "工作液路接口",
+            "value": "1/4-28 UNF-2B",
+            "content": "1/4-28 UNF-2B"
+          },
+          {
+            "label": "整体尺寸",
+            "name": "整体尺寸",
+            "title": "整体尺寸",
+            "value": "57 × 57 × 115 mm",
+            "content": "57 × 57 × 115 mm"
+          },
+          {
+            "label": "重量",
+            "name": "重量",
+            "title": "重量",
+            "value": "500 g",
+            "content": "500 g"
+          },
+          {
+            "label": "配置方式",
+            "name": "配置方式",
+            "title": "配置方式",
+            "value": "定制配置",
+            "content": "定制配置"
+          }
+        ]
+      }
+    ],
+    "selectionHref": "/products/pumps/valveless-pumps",
+    "detailHref": "/products/pumps/valveless-pumps/rpl-p4",
+    "href": "/products/pumps/valveless-pumps/rpl-p4"
+  },
+  {
+    "slug": "rpl-p635",
+    "productId": "valveless-rpl-p635",
+    "productCode": "RPL-P6.35",
+    "foreachModel": "RPL-P6.35",
+    "seriesId": "rpl-p635",
+    "seriesSlug": "rpl-p635-valveless-pump",
+    "model": "RPL-P6.35 50–250 μL/rev 中小量程无阀泵",
+    "name": "RPL-P6.35 50–250 μL/rev 中小量程无阀泵",
+    "title": "RPL-P6.35 50–250 μL/rev 中小量程无阀泵",
+    "description": "RPL-P6.35 50–250 μL/rev 中小量程无阀泵面向试剂加样、滴定、灌装和定量输送场景，适合自动化分析仪器中的中小体积液体处理模块。\n\n产品采用高精密陶瓷柱塞与无阀液路结构，可减少外置阀件依赖，并支持清洗口、液路接口、安装方向和具体排量配置，适合对稳定输送、化学兼容性和结构集成有要求的设备。",
+    "commonApplications": [
+      "试剂加样",
+      "滴定分析",
+      "定量灌装",
+      "缓冲液输送",
+      "清洗液分配",
+      "自动化分析仪器液路集成"
+    ],
+    "mainImage": "/images/products/pumps/valveless-pumps/foreach-rpl-p635-valveless-pump.webp",
+    "image": "/images/products/pumps/valveless-pumps/foreach-rpl-p635-valveless-pump.webp",
+    "heroImage": "/images/products/pumps/valveless-pumps/foreach-rpl-p635-valveless-pump.webp",
+    "imageCard": "/images/products/pumps/valveless-pumps/foreach-rpl-p635-valveless-pump.webp",
+    "additionalImages": [],
+    "images": [],
+    "thumbnails": [],
+    "imageAltEn": "FOREACH RPL-P6.35 50–250 μL/rev valveless ceramic piston pump for reagent dispensing and filling",
+    "imageAlt": "FOREACH RPL-P6.35 50–250 μL/rev valveless ceramic piston pump for reagent dispensing and filling",
+    "mainImageAlt": "FOREACH RPL-P6.35 50–250 μL/rev valveless ceramic piston pump for reagent dispensing and filling",
+    "model3dUrl": "/models/products/pumps/valveless-pumps/foreach-rpl-p635-valveless-pump.glb",
+    "drawing2dUrl": "/documents/products/pumps/valveless-pumps/2d-drawings/foreach-rpl-p635-valveless-pump-2d-drawing.pdf",
+    "drawingPdfUrl": "/documents/products/pumps/valveless-pumps/2d-drawings/foreach-rpl-p635-valveless-pump-2d-drawing.pdf",
+    "resources": {
+      "model3dUrl": "/models/products/pumps/valveless-pumps/foreach-rpl-p635-valveless-pump.glb",
+      "drawing2dUrl": "/documents/products/pumps/valveless-pumps/2d-drawings/foreach-rpl-p635-valveless-pump-2d-drawing.pdf"
+    },
+    "specs": [
+      {
+        "label": "产品类型",
+        "name": "产品类型",
+        "title": "产品类型",
+        "value": "RPL 无阀泵",
+        "content": "RPL 无阀泵"
+      },
+      {
+        "label": "排量范围",
+        "name": "排量范围",
+        "title": "排量范围",
+        "value": "50–250 μL/rev",
+        "content": "50–250 μL/rev"
+      },
+      {
+        "label": "转速",
+        "name": "转速",
+        "title": "转速",
+        "value": "5–300 rpm",
+        "content": "5–300 rpm"
+      },
+      {
+        "label": "准确度",
+        "name": "准确度",
+        "title": "准确度",
+        "value": "<2%",
+        "content": "<2%"
+      },
+      {
+        "label": "重复性",
+        "name": "重复性",
+        "title": "重复性",
+        "value": "<0.5%",
+        "content": "<0.5%"
+      },
+      {
+        "label": "耐压",
+        "name": "耐压",
+        "title": "耐压",
+        "value": "Max 150 kPa",
+        "content": "Max 150 kPa"
+      },
+      {
+        "label": "寿命",
+        "name": "寿命",
+        "title": "寿命",
+        "value": "20,000,000 cycles",
+        "content": "20,000,000 cycles"
+      },
+      {
+        "label": "泵头材质",
+        "name": "泵头材质",
+        "title": "泵头材质",
+        "value": "PVDF",
+        "content": "PVDF"
+      },
+      {
+        "label": "陶瓷套件",
+        "name": "陶瓷套件",
+        "title": "陶瓷套件",
+        "value": "ZrO2",
+        "content": "ZrO2"
+      },
+      {
+        "label": "工作液路接口",
+        "name": "工作液路接口",
+        "title": "工作液路接口",
+        "value": "1/4-28 UNF-2B",
+        "content": "1/4-28 UNF-2B"
+      },
+      {
+        "label": "清洗液路接口",
+        "name": "清洗液路接口",
+        "title": "清洗液路接口",
+        "value": "1/4-28 UNF-2B",
+        "content": "1/4-28 UNF-2B"
+      },
+      {
+        "label": "整体尺寸",
+        "name": "整体尺寸",
+        "title": "整体尺寸",
+        "value": "78 × 78 × 145 mm",
+        "content": "78 × 78 × 145 mm"
+      },
+      {
+        "label": "重量",
+        "name": "重量",
+        "title": "重量",
+        "value": "750 g",
+        "content": "750 g"
+      },
+      {
+        "label": "配置方式",
+        "name": "配置方式",
+        "title": "配置方式",
+        "value": "定制配置",
+        "content": "定制配置"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "RPL-P6.35 无阀泵适合哪些场景？",
+        "answer": "RPL-P6.35 适合试剂加样、滴定、灌装、缓冲液输送和中小体积定量输送场景。"
+      },
+      {
+        "question": "RPL-P6.35 与 RPL-P4 的区别是什么？",
+        "answer": "RPL-P6.35 面向 50–250 μL/rev 中小量程输送，排量范围高于 RPL-P4，更适合中小体积试剂加样和灌装。"
+      },
+      {
+        "question": "清洗口有什么作用？",
+        "answer": "在高腐蚀性或易结晶液体场景下，清洗口可用于对柱塞区域进行清洗，有助于降低残留和维护风险。"
+      },
+      {
+        "question": "RPL-P6.35 可以定制排量吗？",
+        "answer": "可以。具体排量、清洗口、接口形式和安装方向可根据客户液路方案确认。"
+      },
+      {
+        "question": "RPL-P6.35 是否适合自动化仪器集成？",
+        "answer": "适合。该系列结构紧凑，适用于自动化分析仪器、IVD 设备和实验室自动化设备中的液路模块集成。"
+      }
+    ],
+    "seo": {
+      "title": "RPL-P6.35 50–250 μL/rev 中小量程无阀泵 | FOREACH",
+      "description": "RPL-P6.35 中小量程无阀泵适用于试剂加样、滴定、灌装和定量输送，支持清洗口、接口和排量定制。",
+      "keywords": [
+        "RPL-P6.35 无阀泵",
+        "50–250 μL/rev 无阀泵",
+        "陶瓷柱塞无阀泵",
+        "试剂加样泵",
+        "灌装泵",
+        "滴定泵",
+        "自动化分析仪器液路"
+      ]
+    },
+    "category": "pumps",
+    "productTypeId": "valveless-pump",
+    "productTypeSlug": "valveless-pumps",
+    "isCustomOnly": true,
+    "isCustomInquiry": true,
+    "detailMode": "custom_inquiry",
+    "productTypeName": "无阀泵",
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "showDatasheetRequest": false,
+    "customInquiryHref": "/contact",
+    "contactHref": "/contact",
+    "modelDisplay": "定制配置请联系我们",
+    "displayModel": "定制配置请联系我们",
+    "advantages": [],
+    "specifications": [
+      {
+        "label": "产品类型",
+        "name": "产品类型",
+        "title": "产品类型",
+        "value": "RPL 无阀泵",
+        "content": "RPL 无阀泵"
+      },
+      {
+        "label": "排量范围",
+        "name": "排量范围",
+        "title": "排量范围",
+        "value": "50–250 μL/rev",
+        "content": "50–250 μL/rev"
+      },
+      {
+        "label": "转速",
+        "name": "转速",
+        "title": "转速",
+        "value": "5–300 rpm",
+        "content": "5–300 rpm"
+      },
+      {
+        "label": "准确度",
+        "name": "准确度",
+        "title": "准确度",
+        "value": "<2%",
+        "content": "<2%"
+      },
+      {
+        "label": "重复性",
+        "name": "重复性",
+        "title": "重复性",
+        "value": "<0.5%",
+        "content": "<0.5%"
+      },
+      {
+        "label": "耐压",
+        "name": "耐压",
+        "title": "耐压",
+        "value": "Max 150 kPa",
+        "content": "Max 150 kPa"
+      },
+      {
+        "label": "寿命",
+        "name": "寿命",
+        "title": "寿命",
+        "value": "20,000,000 cycles",
+        "content": "20,000,000 cycles"
+      },
+      {
+        "label": "泵头材质",
+        "name": "泵头材质",
+        "title": "泵头材质",
+        "value": "PVDF",
+        "content": "PVDF"
+      },
+      {
+        "label": "陶瓷套件",
+        "name": "陶瓷套件",
+        "title": "陶瓷套件",
+        "value": "ZrO2",
+        "content": "ZrO2"
+      },
+      {
+        "label": "工作液路接口",
+        "name": "工作液路接口",
+        "title": "工作液路接口",
+        "value": "1/4-28 UNF-2B",
+        "content": "1/4-28 UNF-2B"
+      },
+      {
+        "label": "清洗液路接口",
+        "name": "清洗液路接口",
+        "title": "清洗液路接口",
+        "value": "1/4-28 UNF-2B",
+        "content": "1/4-28 UNF-2B"
+      },
+      {
+        "label": "整体尺寸",
+        "name": "整体尺寸",
+        "title": "整体尺寸",
+        "value": "78 × 78 × 145 mm",
+        "content": "78 × 78 × 145 mm"
+      },
+      {
+        "label": "重量",
+        "name": "重量",
+        "title": "重量",
+        "value": "750 g",
+        "content": "750 g"
+      },
+      {
+        "label": "配置方式",
+        "name": "配置方式",
+        "title": "配置方式",
+        "value": "定制配置",
+        "content": "定制配置"
+      }
+    ],
+    "specificationGroups": [
+      {
+        "title": "技术参数",
+        "items": [
+          {
+            "label": "产品类型",
+            "name": "产品类型",
+            "title": "产品类型",
+            "value": "RPL 无阀泵",
+            "content": "RPL 无阀泵"
+          },
+          {
+            "label": "排量范围",
+            "name": "排量范围",
+            "title": "排量范围",
+            "value": "50–250 μL/rev",
+            "content": "50–250 μL/rev"
+          },
+          {
+            "label": "转速",
+            "name": "转速",
+            "title": "转速",
+            "value": "5–300 rpm",
+            "content": "5–300 rpm"
+          },
+          {
+            "label": "准确度",
+            "name": "准确度",
+            "title": "准确度",
+            "value": "<2%",
+            "content": "<2%"
+          },
+          {
+            "label": "重复性",
+            "name": "重复性",
+            "title": "重复性",
+            "value": "<0.5%",
+            "content": "<0.5%"
+          },
+          {
+            "label": "耐压",
+            "name": "耐压",
+            "title": "耐压",
+            "value": "Max 150 kPa",
+            "content": "Max 150 kPa"
+          },
+          {
+            "label": "寿命",
+            "name": "寿命",
+            "title": "寿命",
+            "value": "20,000,000 cycles",
+            "content": "20,000,000 cycles"
+          },
+          {
+            "label": "泵头材质",
+            "name": "泵头材质",
+            "title": "泵头材质",
+            "value": "PVDF",
+            "content": "PVDF"
+          },
+          {
+            "label": "陶瓷套件",
+            "name": "陶瓷套件",
+            "title": "陶瓷套件",
+            "value": "ZrO2",
+            "content": "ZrO2"
+          },
+          {
+            "label": "工作液路接口",
+            "name": "工作液路接口",
+            "title": "工作液路接口",
+            "value": "1/4-28 UNF-2B",
+            "content": "1/4-28 UNF-2B"
+          },
+          {
+            "label": "清洗液路接口",
+            "name": "清洗液路接口",
+            "title": "清洗液路接口",
+            "value": "1/4-28 UNF-2B",
+            "content": "1/4-28 UNF-2B"
+          },
+          {
+            "label": "整体尺寸",
+            "name": "整体尺寸",
+            "title": "整体尺寸",
+            "value": "78 × 78 × 145 mm",
+            "content": "78 × 78 × 145 mm"
+          },
+          {
+            "label": "重量",
+            "name": "重量",
+            "title": "重量",
+            "value": "750 g",
+            "content": "750 g"
+          },
+          {
+            "label": "配置方式",
+            "name": "配置方式",
+            "title": "配置方式",
+            "value": "定制配置",
+            "content": "定制配置"
+          }
+        ]
+      }
+    ],
+    "selectionHref": "/products/pumps/valveless-pumps",
+    "detailHref": "/products/pumps/valveless-pumps/rpl-p635",
+    "href": "/products/pumps/valveless-pumps/rpl-p635"
+  },
+  {
+    "slug": "rpl-p15",
+    "productId": "valveless-rpl-p15",
+    "productCode": "RPL-P15",
+    "foreachModel": "RPL-P15",
+    "seriesId": "rpl-p15",
+    "seriesSlug": "rpl-p15-valveless-pump",
+    "model": "RPL-P15 300–1200 μL/rev 中大量程无阀泵",
+    "name": "RPL-P15 300–1200 μL/rev 中大量程无阀泵",
+    "title": "RPL-P15 300–1200 μL/rev 中大量程无阀泵",
+    "description": "RPL-P15 300–1200 μL/rev 中大量程无阀泵适用于较大体积加液、试剂灌装、液体转移和定量输送场景，可用于自动化分析仪器和实验室自动化设备。\n\n陶瓷柱塞与无阀液路结构有助于提升输送稳定性，并减少传统阀件带来的堵塞、卡滞和维护问题；工作接口、清洗口、安装方向和排量可按项目需求确认。",
+    "commonApplications": [
+      "较大体积加液",
+      "试剂灌装",
+      "液体转移",
+      "定量输送",
+      "稀释液补液",
+      "实验室自动化设备液路模块"
+    ],
+    "mainImage": "/images/products/pumps/valveless-pumps/foreach-rpl-p15-valveless-pump.webp",
+    "image": "/images/products/pumps/valveless-pumps/foreach-rpl-p15-valveless-pump.webp",
+    "heroImage": "/images/products/pumps/valveless-pumps/foreach-rpl-p15-valveless-pump.webp",
+    "imageCard": "/images/products/pumps/valveless-pumps/foreach-rpl-p15-valveless-pump.webp",
+    "additionalImages": [],
+    "images": [],
+    "thumbnails": [],
+    "imageAltEn": "FOREACH RPL-P15 300–1200 μL/rev valveless ceramic piston pump for larger-volume dispensing and filling",
+    "imageAlt": "FOREACH RPL-P15 300–1200 μL/rev valveless ceramic piston pump for larger-volume dispensing and filling",
+    "mainImageAlt": "FOREACH RPL-P15 300–1200 μL/rev valveless ceramic piston pump for larger-volume dispensing and filling",
+    "model3dUrl": "/models/products/pumps/valveless-pumps/foreach-rpl-p15-valveless-pump.glb",
+    "drawing2dUrl": "/documents/products/pumps/valveless-pumps/2d-drawings/foreach-rpl-p15-valveless-pump-2d-drawing.pdf",
+    "drawingPdfUrl": "/documents/products/pumps/valveless-pumps/2d-drawings/foreach-rpl-p15-valveless-pump-2d-drawing.pdf",
+    "resources": {
+      "model3dUrl": "/models/products/pumps/valveless-pumps/foreach-rpl-p15-valveless-pump.glb",
+      "drawing2dUrl": "/documents/products/pumps/valveless-pumps/2d-drawings/foreach-rpl-p15-valveless-pump-2d-drawing.pdf"
+    },
+    "specs": [
+      {
+        "label": "产品类型",
+        "name": "产品类型",
+        "title": "产品类型",
+        "value": "RPL 无阀泵",
+        "content": "RPL 无阀泵"
+      },
+      {
+        "label": "排量范围",
+        "name": "排量范围",
+        "title": "排量范围",
+        "value": "300–1200 μL/rev",
+        "content": "300–1200 μL/rev"
+      },
+      {
+        "label": "转速",
+        "name": "转速",
+        "title": "转速",
+        "value": "5–300 rpm",
+        "content": "5–300 rpm"
+      },
+      {
+        "label": "准确度",
+        "name": "准确度",
+        "title": "准确度",
+        "value": "<2%",
+        "content": "<2%"
+      },
+      {
+        "label": "重复性",
+        "name": "重复性",
+        "title": "重复性",
+        "value": "<0.5%",
+        "content": "<0.5%"
+      },
+      {
+        "label": "耐压",
+        "name": "耐压",
+        "title": "耐压",
+        "value": "Max 150 kPa",
+        "content": "Max 150 kPa"
+      },
+      {
+        "label": "寿命",
+        "name": "寿命",
+        "title": "寿命",
+        "value": "20,000,000 cycles",
+        "content": "20,000,000 cycles"
+      },
+      {
+        "label": "泵头材质",
+        "name": "泵头材质",
+        "title": "泵头材质",
+        "value": "PVDF",
+        "content": "PVDF"
+      },
+      {
+        "label": "陶瓷套件",
+        "name": "陶瓷套件",
+        "title": "陶瓷套件",
+        "value": "AL2O3",
+        "content": "AL2O3"
+      },
+      {
+        "label": "工作液路接口",
+        "name": "工作液路接口",
+        "title": "工作液路接口",
+        "value": "G1/8",
+        "content": "G1/8"
+      },
+      {
+        "label": "清洗液路接口",
+        "name": "清洗液路接口",
+        "title": "清洗液路接口",
+        "value": "1/4-28 UNF-2B",
+        "content": "1/4-28 UNF-2B"
+      },
+      {
+        "label": "整体尺寸",
+        "name": "整体尺寸",
+        "title": "整体尺寸",
+        "value": "78 × 78 × 160 mm",
+        "content": "78 × 78 × 160 mm"
+      },
+      {
+        "label": "重量",
+        "name": "重量",
+        "title": "重量",
+        "value": "900 g",
+        "content": "900 g"
+      },
+      {
+        "label": "配置方式",
+        "name": "配置方式",
+        "title": "配置方式",
+        "value": "定制配置",
+        "content": "定制配置"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "RPL-P15 无阀泵适合哪些场景？",
+        "answer": "RPL-P15 适合较大体积加液、试剂灌装、液体转移、稀释液补液和中大量程定量输送。"
+      },
+      {
+        "question": "RPL-P15 与 RPL-P6.35 的区别是什么？",
+        "answer": "RPL-P15 面向 300–1200 μL/rev 中大量程输送，适合更大体积的加液和灌装；RPL-P6.35 更适合中小量程试剂加样。"
+      },
+      {
+        "question": "RPL-P15 的工作接口是什么？",
+        "answer": "RPL-P15 工作液路接口为 G1/8，清洗液路接口为 1/4-28 UNF-2B，具体接口形式可根据项目进一步确认。"
+      },
+      {
+        "question": "RPL-P15 可以用于连续输送吗？",
+        "answer": "可用于液体转移和定量输送场景，但具体连续运行条件、目标流量和压力要求需要结合工况确认。"
+      },
+      {
+        "question": "RPL-P15 是否支持定制？",
+        "answer": "支持。排量、接口、清洗口、安装方向和液路结构可根据设备项目需求确认。"
+      }
+    ],
+    "seo": {
+      "title": "RPL-P15 300–1200 μL/rev 中大量程无阀泵 | FOREACH",
+      "description": "RPL-P15 中大量程无阀泵适用于较大体积加液、试剂灌装、液体转移和定量输送，支持接口、清洗口和排量定制。",
+      "keywords": [
+        "RPL-P15 无阀泵",
+        "300–1200 μL/rev 无阀泵",
+        "中大量程陶瓷柱塞泵",
+        "试剂灌装泵",
+        "液体转移泵",
+        "定量输送泵"
+      ]
+    },
+    "category": "pumps",
+    "productTypeId": "valveless-pump",
+    "productTypeSlug": "valveless-pumps",
+    "isCustomOnly": true,
+    "isCustomInquiry": true,
+    "detailMode": "custom_inquiry",
+    "productTypeName": "无阀泵",
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "showDatasheetRequest": false,
+    "customInquiryHref": "/contact",
+    "contactHref": "/contact",
+    "modelDisplay": "定制配置请联系我们",
+    "displayModel": "定制配置请联系我们",
+    "advantages": [],
+    "specifications": [
+      {
+        "label": "产品类型",
+        "name": "产品类型",
+        "title": "产品类型",
+        "value": "RPL 无阀泵",
+        "content": "RPL 无阀泵"
+      },
+      {
+        "label": "排量范围",
+        "name": "排量范围",
+        "title": "排量范围",
+        "value": "300–1200 μL/rev",
+        "content": "300–1200 μL/rev"
+      },
+      {
+        "label": "转速",
+        "name": "转速",
+        "title": "转速",
+        "value": "5–300 rpm",
+        "content": "5–300 rpm"
+      },
+      {
+        "label": "准确度",
+        "name": "准确度",
+        "title": "准确度",
+        "value": "<2%",
+        "content": "<2%"
+      },
+      {
+        "label": "重复性",
+        "name": "重复性",
+        "title": "重复性",
+        "value": "<0.5%",
+        "content": "<0.5%"
+      },
+      {
+        "label": "耐压",
+        "name": "耐压",
+        "title": "耐压",
+        "value": "Max 150 kPa",
+        "content": "Max 150 kPa"
+      },
+      {
+        "label": "寿命",
+        "name": "寿命",
+        "title": "寿命",
+        "value": "20,000,000 cycles",
+        "content": "20,000,000 cycles"
+      },
+      {
+        "label": "泵头材质",
+        "name": "泵头材质",
+        "title": "泵头材质",
+        "value": "PVDF",
+        "content": "PVDF"
+      },
+      {
+        "label": "陶瓷套件",
+        "name": "陶瓷套件",
+        "title": "陶瓷套件",
+        "value": "AL2O3",
+        "content": "AL2O3"
+      },
+      {
+        "label": "工作液路接口",
+        "name": "工作液路接口",
+        "title": "工作液路接口",
+        "value": "G1/8",
+        "content": "G1/8"
+      },
+      {
+        "label": "清洗液路接口",
+        "name": "清洗液路接口",
+        "title": "清洗液路接口",
+        "value": "1/4-28 UNF-2B",
+        "content": "1/4-28 UNF-2B"
+      },
+      {
+        "label": "整体尺寸",
+        "name": "整体尺寸",
+        "title": "整体尺寸",
+        "value": "78 × 78 × 160 mm",
+        "content": "78 × 78 × 160 mm"
+      },
+      {
+        "label": "重量",
+        "name": "重量",
+        "title": "重量",
+        "value": "900 g",
+        "content": "900 g"
+      },
+      {
+        "label": "配置方式",
+        "name": "配置方式",
+        "title": "配置方式",
+        "value": "定制配置",
+        "content": "定制配置"
+      }
+    ],
+    "specificationGroups": [
+      {
+        "title": "技术参数",
+        "items": [
+          {
+            "label": "产品类型",
+            "name": "产品类型",
+            "title": "产品类型",
+            "value": "RPL 无阀泵",
+            "content": "RPL 无阀泵"
+          },
+          {
+            "label": "排量范围",
+            "name": "排量范围",
+            "title": "排量范围",
+            "value": "300–1200 μL/rev",
+            "content": "300–1200 μL/rev"
+          },
+          {
+            "label": "转速",
+            "name": "转速",
+            "title": "转速",
+            "value": "5–300 rpm",
+            "content": "5–300 rpm"
+          },
+          {
+            "label": "准确度",
+            "name": "准确度",
+            "title": "准确度",
+            "value": "<2%",
+            "content": "<2%"
+          },
+          {
+            "label": "重复性",
+            "name": "重复性",
+            "title": "重复性",
+            "value": "<0.5%",
+            "content": "<0.5%"
+          },
+          {
+            "label": "耐压",
+            "name": "耐压",
+            "title": "耐压",
+            "value": "Max 150 kPa",
+            "content": "Max 150 kPa"
+          },
+          {
+            "label": "寿命",
+            "name": "寿命",
+            "title": "寿命",
+            "value": "20,000,000 cycles",
+            "content": "20,000,000 cycles"
+          },
+          {
+            "label": "泵头材质",
+            "name": "泵头材质",
+            "title": "泵头材质",
+            "value": "PVDF",
+            "content": "PVDF"
+          },
+          {
+            "label": "陶瓷套件",
+            "name": "陶瓷套件",
+            "title": "陶瓷套件",
+            "value": "AL2O3",
+            "content": "AL2O3"
+          },
+          {
+            "label": "工作液路接口",
+            "name": "工作液路接口",
+            "title": "工作液路接口",
+            "value": "G1/8",
+            "content": "G1/8"
+          },
+          {
+            "label": "清洗液路接口",
+            "name": "清洗液路接口",
+            "title": "清洗液路接口",
+            "value": "1/4-28 UNF-2B",
+            "content": "1/4-28 UNF-2B"
+          },
+          {
+            "label": "整体尺寸",
+            "name": "整体尺寸",
+            "title": "整体尺寸",
+            "value": "78 × 78 × 160 mm",
+            "content": "78 × 78 × 160 mm"
+          },
+          {
+            "label": "重量",
+            "name": "重量",
+            "title": "重量",
+            "value": "900 g",
+            "content": "900 g"
+          },
+          {
+            "label": "配置方式",
+            "name": "配置方式",
+            "title": "配置方式",
+            "value": "定制配置",
+            "content": "定制配置"
+          }
+        ]
+      }
+    ],
+    "selectionHref": "/products/pumps/valveless-pumps",
+    "detailHref": "/products/pumps/valveless-pumps/rpl-p15",
+    "href": "/products/pumps/valveless-pumps/rpl-p15"
+  },
+  {
+    "slug": "drpl",
+    "productId": "valveless-drpl",
+    "productCode": "DRPL",
+    "foreachModel": "DRPL",
+    "seriesId": "drpl",
+    "seriesSlug": "drpl-dual-head-valveless-pump",
+    "model": "DRPL 1:9–1:19 双头比例输送无阀泵",
+    "name": "DRPL 1:9–1:19 双头比例输送无阀泵",
+    "title": "DRPL 1:9–1:19 双头比例输送无阀泵",
+    "description": "DRPL 1:9–1:19 双头比例输送无阀泵是一款用于稀释、配液和双液路比例加液的陶瓷柱塞无阀泵，适合浓缩液与稀释液按固定比例输送的自动化仪器液路模块。\n\n产品采用双头结构实现两路液体同步定量输送，支持 1:9 和 1:19 配比配置，可根据配比、流量、接口和安装方式进行项目确认。",
+    "commonApplications": [
+      "浓缩液稀释",
+      "双液路配液",
+      "比例加液",
+      "稀释液与试剂同步输送",
+      "自动化配比模块",
+      "喷涂和稀释系统"
+    ],
+    "mainImage": "/images/products/pumps/valveless-pumps/foreach-drpl-dual-head-valveless-pump.webp",
+    "image": "/images/products/pumps/valveless-pumps/foreach-drpl-dual-head-valveless-pump.webp",
+    "heroImage": "/images/products/pumps/valveless-pumps/foreach-drpl-dual-head-valveless-pump.webp",
+    "imageCard": "/images/products/pumps/valveless-pumps/foreach-drpl-dual-head-valveless-pump.webp",
+    "additionalImages": [],
+    "images": [],
+    "thumbnails": [],
+    "imageAltEn": "FOREACH DRPL 1:9 to 1:19 dual-head valveless ceramic piston pump for proportional dispensing and dilution",
+    "imageAlt": "FOREACH DRPL 1:9 to 1:19 dual-head valveless ceramic piston pump for proportional dispensing and dilution",
+    "mainImageAlt": "FOREACH DRPL 1:9 to 1:19 dual-head valveless ceramic piston pump for proportional dispensing and dilution",
+    "model3dUrl": "/models/products/pumps/valveless-pumps/foreach-drpl-dual-head-valveless-pump.glb",
+    "drawing2dUrl": "/documents/products/pumps/valveless-pumps/2d-drawings/foreach-drpl-dual-head-valveless-pump-2d-drawing.pdf",
+    "drawingPdfUrl": "/documents/products/pumps/valveless-pumps/2d-drawings/foreach-drpl-dual-head-valveless-pump-2d-drawing.pdf",
+    "resources": {
+      "model3dUrl": "/models/products/pumps/valveless-pumps/foreach-drpl-dual-head-valveless-pump.glb",
+      "drawing2dUrl": "/documents/products/pumps/valveless-pumps/2d-drawings/foreach-drpl-dual-head-valveless-pump-2d-drawing.pdf"
+    },
+    "specs": [
+      {
+        "label": "产品类型",
+        "name": "产品类型",
+        "title": "产品类型",
+        "value": "DRPL 双头无阀泵",
+        "content": "DRPL 双头无阀泵"
+      },
+      {
+        "label": "配比范围",
+        "name": "配比范围",
+        "title": "配比范围",
+        "value": "1:9 / 1:19",
+        "content": "1:9 / 1:19"
+      },
+      {
+        "label": "转速",
+        "name": "转速",
+        "title": "转速",
+        "value": "60–300 RPM",
+        "content": "60–300 RPM"
+      },
+      {
+        "label": "准确度",
+        "name": "准确度",
+        "title": "准确度",
+        "value": "<2%",
+        "content": "<2%"
+      },
+      {
+        "label": "重复性",
+        "name": "重复性",
+        "title": "重复性",
+        "value": "<0.5%",
+        "content": "<0.5%"
+      },
+      {
+        "label": "试剂 A 端耐压",
+        "name": "试剂 A 端耐压",
+        "title": "试剂 A 端耐压",
+        "value": "Max 150 kPa",
+        "content": "Max 150 kPa"
+      },
+      {
+        "label": "试剂 B 端耐压",
+        "name": "试剂 B 端耐压",
+        "title": "试剂 B 端耐压",
+        "value": "Max 150 kPa",
+        "content": "Max 150 kPa"
+      },
+      {
+        "label": "寿命",
+        "name": "寿命",
+        "title": "寿命",
+        "value": "20,000,000 cycles",
+        "content": "20,000,000 cycles"
+      },
+      {
+        "label": "试剂 A 工作液路接口",
+        "name": "试剂 A 工作液路接口",
+        "title": "试剂 A 工作液路接口",
+        "value": "1/4-28 UNF-2B",
+        "content": "1/4-28 UNF-2B"
+      },
+      {
+        "label": "试剂 B 工作液路接口",
+        "name": "试剂 B 工作液路接口",
+        "title": "试剂 B 工作液路接口",
+        "value": "G1/8",
+        "content": "G1/8"
+      },
+      {
+        "label": "试剂 A 清洗液路接口",
+        "name": "试剂 A 清洗液路接口",
+        "title": "试剂 A 清洗液路接口",
+        "value": "1/4-28 UNF-2B",
+        "content": "1/4-28 UNF-2B"
+      },
+      {
+        "label": "试剂 B 清洗液路接口",
+        "name": "试剂 B 清洗液路接口",
+        "title": "试剂 B 清洗液路接口",
+        "value": "1/4-28 UNF-2B",
+        "content": "1/4-28 UNF-2B"
+      },
+      {
+        "label": "尺寸",
+        "name": "尺寸",
+        "title": "尺寸",
+        "value": "L180 × W83.7 × H75 mm",
+        "content": "L180 × W83.7 × H75 mm"
+      },
+      {
+        "label": "重量",
+        "name": "重量",
+        "title": "重量",
+        "value": "1536 g",
+        "content": "1536 g"
+      },
+      {
+        "label": "配置方式",
+        "name": "配置方式",
+        "title": "配置方式",
+        "value": "定制配置",
+        "content": "定制配置"
+      }
+    ],
+    "specificationGroups": [
+      {
+        "title": "技术参数",
+        "items": [
+          {
+            "label": "产品类型",
+            "name": "产品类型",
+            "title": "产品类型",
+            "value": "DRPL 双头无阀泵",
+            "content": "DRPL 双头无阀泵"
+          },
+          {
+            "label": "配比范围",
+            "name": "配比范围",
+            "title": "配比范围",
+            "value": "1:9 / 1:19",
+            "content": "1:9 / 1:19"
+          },
+          {
+            "label": "转速",
+            "name": "转速",
+            "title": "转速",
+            "value": "60–300 RPM",
+            "content": "60–300 RPM"
+          },
+          {
+            "label": "准确度",
+            "name": "准确度",
+            "title": "准确度",
+            "value": "<2%",
+            "content": "<2%"
+          },
+          {
+            "label": "重复性",
+            "name": "重复性",
+            "title": "重复性",
+            "value": "<0.5%",
+            "content": "<0.5%"
+          },
+          {
+            "label": "试剂 A 端耐压",
+            "name": "试剂 A 端耐压",
+            "title": "试剂 A 端耐压",
+            "value": "Max 150 kPa",
+            "content": "Max 150 kPa"
+          },
+          {
+            "label": "试剂 B 端耐压",
+            "name": "试剂 B 端耐压",
+            "title": "试剂 B 端耐压",
+            "value": "Max 150 kPa",
+            "content": "Max 150 kPa"
+          },
+          {
+            "label": "寿命",
+            "name": "寿命",
+            "title": "寿命",
+            "value": "20,000,000 cycles",
+            "content": "20,000,000 cycles"
+          },
+          {
+            "label": "试剂 A 工作液路接口",
+            "name": "试剂 A 工作液路接口",
+            "title": "试剂 A 工作液路接口",
+            "value": "1/4-28 UNF-2B",
+            "content": "1/4-28 UNF-2B"
+          },
+          {
+            "label": "试剂 B 工作液路接口",
+            "name": "试剂 B 工作液路接口",
+            "title": "试剂 B 工作液路接口",
+            "value": "G1/8",
+            "content": "G1/8"
+          },
+          {
+            "label": "试剂 A 清洗液路接口",
+            "name": "试剂 A 清洗液路接口",
+            "title": "试剂 A 清洗液路接口",
+            "value": "1/4-28 UNF-2B",
+            "content": "1/4-28 UNF-2B"
+          },
+          {
+            "label": "试剂 B 清洗液路接口",
+            "name": "试剂 B 清洗液路接口",
+            "title": "试剂 B 清洗液路接口",
+            "value": "1/4-28 UNF-2B",
+            "content": "1/4-28 UNF-2B"
+          },
+          {
+            "label": "尺寸",
+            "name": "尺寸",
+            "title": "尺寸",
+            "value": "L180 × W83.7 × H75 mm",
+            "content": "L180 × W83.7 × H75 mm"
+          },
+          {
+            "label": "重量",
+            "name": "重量",
+            "title": "重量",
+            "value": "1536 g",
+            "content": "1536 g"
+          },
+          {
+            "label": "配置方式",
+            "name": "配置方式",
+            "title": "配置方式",
+            "value": "定制配置",
+            "content": "定制配置"
+          }
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "DRPL 双头无阀泵适合哪些场景？",
+        "answer": "DRPL 适合浓缩液稀释、双液路配液、比例加液和自动化配比模块，尤其适用于浓缩液与稀释液按固定比例输送的场景。"
+      },
+      {
+        "question": "DRPL 和 RPL 的区别是什么？",
+        "answer": "RPL 是单头无阀泵，主要用于定量输送；DRPL 是双头结构，主要用于双液路比例输送、稀释和配液。"
+      },
+      {
+        "question": "DRPL 支持哪些配比？",
+        "answer": "当前配置包含 1:9 和 1:19 两种配比。其他配比、流量和接口需求需要根据项目进一步评估。"
+      },
+      {
+        "question": "DRPL 是否可以定制？",
+        "answer": "可以。DRPL 按项目需求确认具体配比、目标流量、接口形式、安装方式和液路结构。"
+      },
+      {
+        "question": "DRPL 的两路接口是否相同？",
+        "answer": "规格书中试剂 A 工作液路接口为 1/4-28 UNF-2B，试剂 B 工作液路接口为 G1/8；清洗液路接口均为 1/4-28 UNF-2B。"
+      }
+    ],
+    "seo": {
+      "title": "DRPL 1:9–1:19 双头比例输送无阀泵 | FOREACH",
+      "description": "DRPL 双头无阀泵适用于稀释、配液和双液路比例加液，支持 1:9 和 1:19 配比配置，可按项目需求确认接口、流量和安装方式。",
+      "keywords": [
+        "DRPL 双头无阀泵",
+        "1:9 比例输送泵",
+        "1:19 比例输送泵",
+        "双头陶瓷柱塞泵",
+        "稀释泵",
+        "配液泵",
+        "比例加液泵"
+      ]
+    },
+    "category": "pumps",
+    "productTypeId": "valveless-pump",
+    "productTypeSlug": "valveless-pumps",
+    "isCustomOnly": true,
+    "isCustomInquiry": true,
+    "detailMode": "custom_inquiry",
+    "productTypeName": "无阀泵",
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "showDatasheetRequest": false,
+    "customInquiryHref": "/contact",
+    "contactHref": "/contact",
+    "modelDisplay": "定制配置请联系我们",
+    "displayModel": "定制配置请联系我们",
+    "advantages": [],
+    "specifications": [
+      {
+        "label": "产品类型",
+        "name": "产品类型",
+        "title": "产品类型",
+        "value": "DRPL 双头无阀泵",
+        "content": "DRPL 双头无阀泵"
+      },
+      {
+        "label": "配比范围",
+        "name": "配比范围",
+        "title": "配比范围",
+        "value": "1:9 / 1:19",
+        "content": "1:9 / 1:19"
+      },
+      {
+        "label": "转速",
+        "name": "转速",
+        "title": "转速",
+        "value": "60–300 RPM",
+        "content": "60–300 RPM"
+      },
+      {
+        "label": "准确度",
+        "name": "准确度",
+        "title": "准确度",
+        "value": "<2%",
+        "content": "<2%"
+      },
+      {
+        "label": "重复性",
+        "name": "重复性",
+        "title": "重复性",
+        "value": "<0.5%",
+        "content": "<0.5%"
+      },
+      {
+        "label": "试剂 A 端耐压",
+        "name": "试剂 A 端耐压",
+        "title": "试剂 A 端耐压",
+        "value": "Max 150 kPa",
+        "content": "Max 150 kPa"
+      },
+      {
+        "label": "试剂 B 端耐压",
+        "name": "试剂 B 端耐压",
+        "title": "试剂 B 端耐压",
+        "value": "Max 150 kPa",
+        "content": "Max 150 kPa"
+      },
+      {
+        "label": "寿命",
+        "name": "寿命",
+        "title": "寿命",
+        "value": "20,000,000 cycles",
+        "content": "20,000,000 cycles"
+      },
+      {
+        "label": "试剂 A 工作液路接口",
+        "name": "试剂 A 工作液路接口",
+        "title": "试剂 A 工作液路接口",
+        "value": "1/4-28 UNF-2B",
+        "content": "1/4-28 UNF-2B"
+      },
+      {
+        "label": "试剂 B 工作液路接口",
+        "name": "试剂 B 工作液路接口",
+        "title": "试剂 B 工作液路接口",
+        "value": "G1/8",
+        "content": "G1/8"
+      },
+      {
+        "label": "试剂 A 清洗液路接口",
+        "name": "试剂 A 清洗液路接口",
+        "title": "试剂 A 清洗液路接口",
+        "value": "1/4-28 UNF-2B",
+        "content": "1/4-28 UNF-2B"
+      },
+      {
+        "label": "试剂 B 清洗液路接口",
+        "name": "试剂 B 清洗液路接口",
+        "title": "试剂 B 清洗液路接口",
+        "value": "1/4-28 UNF-2B",
+        "content": "1/4-28 UNF-2B"
+      },
+      {
+        "label": "尺寸",
+        "name": "尺寸",
+        "title": "尺寸",
+        "value": "L180 × W83.7 × H75 mm",
+        "content": "L180 × W83.7 × H75 mm"
+      },
+      {
+        "label": "重量",
+        "name": "重量",
+        "title": "重量",
+        "value": "1536 g",
+        "content": "1536 g"
+      },
+      {
+        "label": "配置方式",
+        "name": "配置方式",
+        "title": "配置方式",
+        "value": "定制配置",
+        "content": "定制配置"
+      }
+    ],
+    "selectionHref": "/products/pumps/valveless-pumps",
+    "detailHref": "/products/pumps/valveless-pumps/drpl",
+    "href": "/products/pumps/valveless-pumps/drpl"
+  }
+]

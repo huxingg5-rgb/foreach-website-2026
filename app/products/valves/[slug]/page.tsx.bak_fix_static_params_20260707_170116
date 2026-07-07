@@ -1,0 +1,202 @@
+import Image from "next/image";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+
+import valveDetailData from "@/data/products/generated/valves/detail/index.json";
+
+import "./valve-detail.css";
+
+type ValveDetailItem = {
+  slug: string;
+  categoryName: string;
+  title: string;
+  customModelText: string;
+  intro: string;
+  image: string;
+  imageAlt: string;
+  highlights: string[];
+  applications: string[];
+  customOptions: string[];
+  specs: {
+    label: string;
+    value: string;
+  }[];
+  faq: {
+    q: string;
+    a: string;
+  }[];
+};
+
+const valveDetails = valveDetailData as ValveDetailItem[];
+
+type ValveDetailPageProps = {
+  params: Promise<{
+    slug: string;
+  }>;
+};
+
+export function generateStaticParams() {
+  return valveDetails.map((item) => ({
+    slug: item.slug,
+  }));
+}
+
+export async function generateMetadata({ params }: ValveDetailPageProps) {
+  const { slug } = await params;
+  const data = valveDetails.find((item) => item.slug === slug);
+
+  if (!data) {
+    return {
+      title: "阀系列产品｜恒永达 FOREACH",
+    };
+  }
+
+  return {
+    title: `${data.title}｜${data.categoryName}｜恒永达 FOREACH`,
+    description: data.intro,
+  };
+}
+
+export default async function ValveDetailPage({ params }: ValveDetailPageProps) {
+  const { slug } = await params;
+  const data = valveDetails.find((item) => item.slug === slug);
+
+  if (!data) {
+    notFound();
+  }
+
+  return (
+    <main className="valveDetailPage">
+      <section className="valveDetailBreadcrumb">
+        <Link href="/">首页</Link>
+        <span>/</span>
+        <Link href="/products">产品中心</Link>
+        <span>/</span>
+        <span>{data.categoryName}</span>
+      </section>
+
+      <section className="valveDetailHero">
+        <div className="valveDetailImagePanel">
+          <div className="valveDetailImageBox">
+            <Image
+              src={data.image}
+              alt={data.imageAlt}
+              width={520}
+              height={420}
+              priority
+            />
+          </div>
+        </div>
+
+        <div className="valveDetailInfo">
+          <p className="valveDetailEyebrow">FOREACH 阀系列定制配置</p>
+          <h1>{data.title}</h1>
+
+          <div className="valveDetailModel">
+            <span>型号：</span>
+            <strong>{data.customModelText}</strong>
+          </div>
+
+          <p className="valveDetailIntro">{data.intro}</p>
+
+          <div className="valveDetailHighlights">
+            {data.highlights.map((item) => (
+              <span key={item}>{item}</span>
+            ))}
+          </div>
+
+          <div className="valveDetailActions">
+            <Link className="valvePrimaryButton" href="/contact">
+              联系我们
+            </Link>
+            <Link className="valveSecondaryButton" href="/products">
+              返回产品中心
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="valveDetailSection">
+        <div className="valveSectionTitle">
+          <p>Applications</p>
+          <h2>常见应用</h2>
+        </div>
+
+        <div className="valveApplicationGrid">
+          {data.applications.map((item) => (
+            <div className="valveApplicationCard" key={item}>
+              {item}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="valveDetailSection">
+        <div className="valveSectionTitle">
+          <p>Custom Options</p>
+          <h2>可定制配置</h2>
+        </div>
+
+        <div className="valveCustomGrid">
+          {data.customOptions.map((item) => (
+            <div className="valveCustomItem" key={item}>
+              {item}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="valveDetailSection">
+        <div className="valveSectionTitle">
+          <p>Specifications</p>
+          <h2>关键规格参数</h2>
+        </div>
+
+        <div className="valveSpecTableWrap">
+          <table className="valveSpecTable">
+            <tbody>
+              {data.specs.map((item) => (
+                <tr key={`${item.label}-${item.value}`}>
+                  <th>{item.label}</th>
+                  <td>{item.value}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <p className="valveSpecNote">
+          注：以上参数用于官网选型参考，具体配置需结合实际介质、压力、接口、安装空间和系统控制方式确认。
+        </p>
+      </section>
+
+      <section className="valveDetailSection">
+        <div className="valveSectionTitle">
+          <p>FAQ</p>
+          <h2>常见问题</h2>
+        </div>
+
+        <div className="valveFaqList">
+          {data.faq.map((item) => (
+            <details className="valveFaqItem" key={item.q}>
+              <summary>{item.q}</summary>
+              <p>{item.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      <section className="valveDetailCta">
+        <div>
+          <p>Custom Inquiry</p>
+          <h2>提交阀系列定制需求</h2>
+          <span>
+            请提供介质、压力范围、接口方式、通道数量、安装空间和控制方式，我们将协助确认合适的阀配置。
+          </span>
+        </div>
+
+        <Link href="/contact">提交定制需求</Link>
+      </section>
+    </main>
+  );
+}

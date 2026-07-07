@@ -1,4 +1,4 @@
-﻿/* =========================================================
+/* =========================================================
    product-type-intro.ts
    恒永达官网｜产品中心产品种类介绍数据
 
@@ -10,6 +10,7 @@
 ========================================================= */
 
 export type ProductTypeIntroContent = {
+  imagePath?: string;
   title: string;
   paragraphs: string[];
   image: {
@@ -24,7 +25,7 @@ export const productTypeIntroMap: Record<string, ProductTypeIntroContent> = {
     paragraphs: [
       "恒永达柱塞泵系列专为自动化分析仪器中的精密液体处理而设计，适用于体外诊断、生命科学、实验室自动化及分析检测设备中的试剂加注、样本分配、定量输送和微量液体控制场景。",
       "产品覆盖 EA 常规柱塞泵、SM 微型柱塞泵和 TM 超微型柱塞泵等平台，可根据仪器空间、加液量程、泵头材质、接口方式和系统集成需求进行选型。",
-      "产品卡片仅展示常用基础配置，完整参数与型号组合请进入详情页查看或提交选型需求确认。",
+      "产品卡片展示常用基础型号，完整规格参数、性能曲线和可选配置可进入详情页查看；如有特殊工况或非标需求，可通过选型清单提交给工程师进一步确认。",
     ],
     image: {
       src: "/images/products/pumps/product-types/plunger-pumps/foreach-plunger-pumps-product-type-intro.webp",
@@ -35,8 +36,8 @@ export const productTypeIntroMap: Record<string, ProductTypeIntroContent> = {
   "pumps:diaphragm-pump": {
     title: "隔膜泵系列",
     paragraphs: [
-      "恒永达隔膜泵系列适用于自动化仪器中的清洗、废液、试剂输送、循环液路和中低流量液体传输场景。",
-      "隔膜泵适合对自吸能力、耐腐蚀性、长期运行稳定性和维护便利性有要求的系统。",
+      "恒永达隔膜泵系列适用于自动化仪器中的气体抽吸、液体输送、清洗循环、废液排放和气液混合介质抽排等场景。",
+      "产品按应用介质和工况分为气体隔膜泵、液体隔膜泵和气液混合隔膜泵三类，可根据流量、耐压、自吸能力、膜片材质、阀片材质和安装空间进行选型。",
       "产品卡片仅展示常用基础配置，完整参数与型号组合请进入详情页查看或提交选型需求确认。",
     ],
     image: {
@@ -48,9 +49,9 @@ export const productTypeIntroMap: Record<string, ProductTypeIntroContent> = {
   "pumps:pipette-pump": {
     title: "移液泵系列",
     paragraphs: [
-      "恒永达移液泵系列面向自动化移液、加样、分液和样本处理场景，可用于体外诊断、生命科学、实验室自动化和分析仪器中的微量液体操作。",
-      "产品可结合液面检测、压力监测、堵针识别和控制模块，实现更稳定的吸液、排液和移液过程。",
-      "产品卡片仅展示常用基础配置，完整参数与型号组合请进入详情页查看或提交选型需求确认。",
+      "恒永达移液泵系列适用于自动化仪器中的样本转移、试剂分配和微量液体处理场景，采用气体置换方式配合一次性吸头使用，可降低样本残留与交叉污染风险。",
+      "产品包含 SMTP2 可编程气体置换式移液泵和 SMTP4 气体置换式移液泵，覆盖 100 μL、500 μL 和 1000 μL 基础配置。",
+      "支持主流一次性吸头及定制吸头适配，吸头适配器长度多种可选，可根据客户设备结构和移液场景进行配置确认。",
     ],
     image: {
       src: "/images/products/pumps/product-types/pipetting-pumps/foreach-pipetting-pumps-product-type-intro.webp",
@@ -59,11 +60,12 @@ export const productTypeIntroMap: Record<string, ProductTypeIntroContent> = {
   },
 
   "pumps:syringe-pump": {
+    imagePath: "/images/products/pumps/syringe-pumps/foreach-syringe-pump-series.webp",
     title: "注射泵系列",
     paragraphs: [
       "恒永达注射泵系列适用于高精度进样、注液、梯度控制和稳定流量输出。",
       "注射泵可根据注射器规格、行程分辨率、速度范围、控制方式和系统安装空间进行选型。",
-      "产品卡片仅展示常用基础配置，完整参数与型号组合请进入详情页查看或提交选型需求确认。",
+      "所有无阀泵均按项目需求定制，具体排量、接口、清洗口和安装方式可进一步确认。",
     ],
     image: {
       src: "/images/products/pumps/product-types/syringe-pumps/foreach-syringe-pumps-product-type-intro.webp",
@@ -74,9 +76,9 @@ export const productTypeIntroMap: Record<string, ProductTypeIntroContent> = {
   "pumps:valveless-pump": {
     title: "无阀泵系列",
     paragraphs: [
-      "恒永达无阀泵系列适用于需要简化液路结构、减少阀件依赖和提高系统集成度的精密液体处理场景。",
-      "无阀泵通过结构设计减少传统阀件带来的维护和集成复杂度，适合紧凑空间和低维护需求的仪器液路。",
-      "产品卡片仅展示常用基础配置，完整参数与型号组合请进入详情页查看或提交选型需求确认。",
+      "恒永达无阀泵系列适用于自动化分析仪器中的加样、滴定、灌装、定量输送和比例输送场景，可减少外置电磁阀使用，降低液路复杂度。",
+      "产品覆盖 12–80 μL/rev、50–250 μL/rev、300–1200 μL/rev 单圈排量，并支持 1:9 至 1:19 双头比例输送配置。",
+      "所有无阀泵均按项目需求定制，具体排量、接口、清洗口和安装方式可进一步确认。",
     ],
     image: {
       src: "/images/products/pumps/product-types/valveless-pumps/foreach-valveless-pumps-product-type-intro.webp",
@@ -89,7 +91,7 @@ export const productTypeIntroMap: Record<string, ProductTypeIntroContent> = {
     paragraphs: [
       "恒永达高压泵系列适用于对压力稳定性、耐压能力和连续输送性能要求较高的分析仪器液路场景。",
       "该系列可用于需要稳定压力输出、精密流量控制和高可靠性液体输送的仪器平台。",
-      "产品卡片仅展示常用基础配置，完整参数与型号组合请进入详情页查看或提交选型需求确认。",
+      "所有无阀泵均按项目需求定制，具体排量、接口、清洗口和安装方式可进一步确认。",
     ],
     image: {
       src: "/images/products/pumps/product-types/high-pressure-pumps/foreach-high-pressure-pumps-product-type-intro.webp",
@@ -104,3 +106,5 @@ export function getProductTypeIntroByIds(
 ) {
   return productTypeIntroMap[`${categoryId}:${productTypeId}`] || null;
 }
+
+

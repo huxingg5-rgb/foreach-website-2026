@@ -1,0 +1,954 @@
+"use client";
+
+
+import { useSelectionCart } from "@/components/selection-cart/SelectionCartProvider";
+import type { SelectionCartItemInput } from "@/components/selection-cart/selection-cart.types";
+/* =========================================================
+   ProductDetailClient.tsx
+   恒永达官网｜中文产品详情页
+
+   重要说明：
+   1. 页面结构严格按照用户提供的 HTML 转换。
+   2. 未经要求，不调整原始布局、间距、字号与视觉。
+   3. 当前明确改动仅包括：
+      - 主型号 EA-100-PMMA
+      - 添加规格书按钮
+      - 申请3D文件按钮
+      - 中文不显示保修
+      - 主图悬停放大
+      - 所有业务按钮只留端口
+========================================================= */
+
+import SitePageShell from "@/components/layout/SitePageShell";
+import PdfDrawingPreview from "@/components/common/PdfDrawingPreview";
+import { useMemo, useState } from "react";
+
+import type { CSSProperties, MouseEvent } from "react";
+import type { ProductDetailPageData } from "@/data/products/detail/product-detail.types";
+import ProductModelViewer from "./ProductModelViewer";
+import styles from "./product-detail.module.css";
+
+type ProductDetailTab = "spec" | "model3d" | "drawing";
+
+type ProductDetailClientProps = {
+  data: ProductDetailPageData & Record<string, any>;
+};
+
+type ZoomStyle = CSSProperties & {
+  "--zoom-x"?: string;
+  "--zoom-y"?: string;
+};
+
+function getProductDrawingPreviewUrl(slug: string, configuredUrl?: string) {
+  const normalizedConfiguredUrl = configuredUrl?.trim();
+
+  if (normalizedConfiguredUrl) {
+    return normalizedConfiguredUrl.includes("#")
+      ? normalizedConfiguredUrl
+      : normalizedConfiguredUrl + "#toolbar=0&navpanes=0&scrollbar=1";
+  }
+
+  const normalizedSlug = slug.trim().toLowerCase();
+  const match = normalizedSlug.match(/^(ea|sm|tm)-(\d+)/);
+
+  if (!match) {
+    return "";
+  }
+
+  const seriesCode = match[1];
+  const seriesUpper = seriesCode.toUpperCase();
+  const capacityCode = String(Number(match[2])).padStart(4, "0") + "UL";
+
+  return (
+    "/assets/products/" +
+    seriesCode +
+    "/2d-drawings/" +
+    seriesUpper +
+    "-" +
+    capacityCode +
+    ".pdf#toolbar=0&navpanes=0&scrollbar=1"
+  );
+}
+
+function isPlungerPumpDisplayModel(value: unknown): boolean {
+  const model = String(value || "").trim();
+
+  return /^(EA|SM|TM)-/i.test(model);
+}
+
+function getDisplayModelText(data: any): string {
+  if (isCustomInquiryMode(data)) {
+    return "定制配置请联系我们";
+  }
+
+  return (data as any).displayModel || data.model || "";
+}
+
+function isCustomInquiryMode(data: any): boolean {
+  const detailMode = String(
+    data?.detailMode ||
+      data?.hero?.detailMode ||
+      data?.productMode ||
+      data?.mode ||
+      ""
+  ).trim();
+
+  if (
+    detailMode === "custom_inquiry" ||
+    detailMode === "custom" ||
+    detailMode === "customized"
+  ) {
+    return true;
+  }
+
+  if (
+    detailMode === "standard_model" ||
+    detailMode === "standard" ||
+    detailMode === "selection" ||
+    detailMode === "configurable"
+  ) {
+    return false;
+  }
+
+  if (data?.isCustomInquiry === true) {
+    return true;
+  }
+
+  if (data?.showConfigurator === true || data?.hasConfigurator === true) {
+    return false;
+  }
+
+  const displayModel = data?.displayModel || data?.model || "";
+
+  return isPlungerPumpDisplayModel(displayModel);
+}
+
+function getModelActionText(data: any): string {
+  return isCustomInquiryMode(data) ? "联系我们" : "型号选择";
+}
+
+function isPlungerPumpDetailData(data: any): boolean {
+  const text = JSON.stringify(data || {}).toLowerCase();
+
+  return (
+    text.includes("柱塞泵") ||
+    text.includes("plunger pump") ||
+    text.includes("plunger-pumps") ||
+    text.includes("piston pump") ||
+    text.includes("ea-") ||
+    text.includes("eas-") ||
+    text.includes("sm-") ||
+    text.includes("tm-")
+  );
+}
+
+function isDiaphragmPumpDetailData(data: any): boolean {
+  const text = JSON.stringify(data || {}).toLowerCase();
+
+  return (
+    text.includes("隔膜泵") ||
+    text.includes("diaphragm pump") ||
+    text.includes("diaphragm-pump") ||
+    text.includes("diaphragm-pumps") ||
+    text.includes("dpl30") ||
+    text.includes("dpl60") ||
+    text.includes("dpl30h") ||
+    text.includes("dpgl800")
+  );
+}
+
+function getPlungerPumpBottomCta(data: any) {
+  if (isPlungerPumpDetailData(data)) {
+    return {
+      title: "柱塞泵可根据您的设备需求进行定制",
+      desc: "恒永达可根据您的设备结构、目标容量、液体兼容性、接口方式、控制方式和使用寿命要求，协助确认柱塞泵配置、泵头材质、柱塞材质及液路集成方案，适用于 IVD 分析仪、实验室自动化设备和生命科学仪器中的精密液体处理场景。",
+      button: "提交定制需求",
+      href: "/contact"
+    };
+  }
+
+  if (isDiaphragmPumpDetailData(data)) {
+    return {
+      title: "不确定如何选择隔膜泵型号？",
+      desc: "如果您不确定具体型号，可根据介质类型、流量、耐压、自吸能力、膜片材质、阀片材质、泵头材质、接口方式和安装空间等信息联系我们。恒永达可协助您确认适合自动化仪器液路的隔膜泵配置。",
+      button: "联系工程师确认",
+      href: "/contact"
+    };
+  }
+
+  return null;
+}
+
+function getModelActionHref(data: any): string {
+  if (isCustomInquiryMode(data)) {
+    return (
+      data.primaryButtonHref ||
+      data.contactHref ||
+      data.requestHref ||
+      "/contact"
+    );
+  }
+
+  return (
+    data.configuratorHref ||
+    data.selectionHref ||
+    data.modelSelectionHref ||
+    "#model-selection"
+  );
+}
+
+
+function PlungerPumpBottomCta({ data }: { data: any }) {
+  const cta = getPlungerPumpBottomCta(data);
+
+  if (!cta) {
+    return null;
+  }
+
+  return (
+    <section className={styles.plungerBottomCta}>
+      <div className={styles.plungerBottomCtaInner}>
+        <div className={styles.plungerBottomCtaText}>
+          <h2>{cta.title}</h2>
+          <p>{cta.desc}</p>
+        </div>
+        <a className={styles.plungerBottomCtaButton} href={cta.href}>
+          {cta.button}
+        </a>
+      </div>
+    </section>
+  );
+}
+
+export default function ProductDetailClient({
+  data,
+}: ProductDetailClientProps) {
+    const { addItem, getItem, toggleDrawingNeed } = useSelectionCart();
+
+const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
+  const [activeThumb, setActiveThumb] = useState(0);
+  const [isZooming, setIsZooming] = useState(false);
+  const [zoomPosition, setZoomPosition] = useState({
+    x: 50,
+    y: 50,
+  });
+
+  const realImages = useMemo(() => {
+    const images: string[] = [];
+
+    if (data.mainImage) {
+      images.push(data.mainImage);
+    }
+
+    data.additionalImages.forEach((image) => {
+      if (image && !images.includes(image)) {
+        images.push(image);
+      }
+    });
+
+    return images;
+  }, [data.additionalImages, data.mainImage]);
+
+  const hasRealImages = realImages.length > 0;
+  const activeRealImage = hasRealImages
+    ? realImages[Math.min(activeThumb, realImages.length - 1)]
+    : null;
+
+  /*
+   * 正式数据中：
+   * 只有主图且没有附属图时，不显示缩略图栏。
+   *
+   * 当前测试数据尚未连接选型主图，因此保留 HTML 原型中的
+   * 三个 SVG 缩略图，便于核对版式。
+   */
+  const showThumbnailRow = hasRealImages
+    ? realImages.length > 0
+    : true;
+  const zoomStyle: ZoomStyle = {
+    "--zoom-x": `${zoomPosition.x}%`,
+    "--zoom-y": `${zoomPosition.y}%`,
+  };
+
+  const runtimeDataForSectionTitle = data as any;
+  const sectionTitleMap =
+    runtimeDataForSectionTitle.sectionTitleMap &&
+    typeof runtimeDataForSectionTitle.sectionTitleMap === "object"
+      ? runtimeDataForSectionTitle.sectionTitleMap
+      : {};
+
+  function getDbSectionTitle(sectionKey: string, fallback: string) {
+    const value = sectionTitleMap[sectionKey];
+
+    return typeof value === "string" && value.trim()
+      ? value.trim()
+      : fallback;
+  }
+  function handleMainImageMove(event: MouseEvent<HTMLDivElement>) {
+    const rect = event.currentTarget.getBoundingClientRect();
+
+    const x = ((event.clientX - rect.left) / rect.width) * 100;
+    const y = ((event.clientY - rect.top) / rect.height) * 100;
+
+    setZoomPosition({
+      x: Math.max(0, Math.min(100, x)),
+      y: Math.max(0, Math.min(100, y)),
+    });
+  }
+
+  function handlePreviousThumb() {
+    if (hasRealImages) {
+      setActiveThumb((current) =>
+        current === 0 ? realImages.length - 1 : current - 1,
+      );
+      return;
+    }
+
+    setActiveThumb((current) => (current === 0 ? 2 : current - 1));
+  }
+
+  function handleNextThumb() {
+    if (hasRealImages) {
+      setActiveThumb((current) =>
+        current === realImages.length - 1 ? 0 : current + 1,
+      );
+      return;
+    }
+
+    setActiveThumb((current) => (current === 2 ? 0 : current + 1));
+  }
+
+  function getDetailCartProductCode() {
+    return String(
+      data.modelDisplay ||
+        data.displayModel ||
+        data.foreachModel ||
+        data.model ||
+        data.productCode ||
+        data.slug ||
+        ""
+    ).trim();
+  }
+
+  function createDetailCartItem(needDrawing: boolean): SelectionCartItemInput {
+    const productCode = getDetailCartProductCode();
+    const modelText = String(
+      data.modelDisplay ||
+        data.displayModel ||
+        data.foreachModel ||
+        data.model ||
+        data.title ||
+        productCode
+    ).trim();
+
+    return {
+      sourceType: "pump-selection",
+      sourceLabel: "产品详情页",
+      productName: String(
+        data.productTypeName ||
+          data.seriesName ||
+          data.series ||
+          "隔膜泵"
+      ).trim(),
+      productCode,
+      foreachModel: modelText,
+      competitorModels: [],
+      quantity: 1,
+      needDrawing,
+      imagePath:
+        data.imageCard ||
+        data.image ||
+        data.imageUrl ||
+        data.mainImage ||
+        data.heroImage ||
+        "",
+      detailHref:
+        data.detailHref ||
+        data.href ||
+        (data.slug ? `/products/pumps/diaphragm-pumps/${data.slug}` : ""),
+    };
+  }
+
+  function addDetailProductToCart(needDrawing: boolean) {
+    const item = createDetailCartItem(needDrawing);
+
+    if (!item.productCode || !item.foreachModel) {
+      console.warn("详情页清单参数不完整", data);
+      return;
+    }
+
+    const existingItem = getItem("pump-selection", item.productCode);
+
+    if (existingItem) {
+      if (needDrawing && !existingItem.needDrawing) {
+        toggleDrawingNeed(existingItem.id, true);
+      } else {
+        addItem(item);
+      }
+      return;
+    }
+
+    addItem(item);
+  }
+function handleOpenConfigurator() {
+    console.info("配置选择端口预留", data.slug);
+  }
+
+  function handleAddDatasheet() {
+    console.info("添加规格书端口预留", data.slug);
+  }
+
+  function handleAddDrawing() {
+    addDetailProductToCart(true);
+  }
+
+  function handleRequest3DFile() {
+    console.info("申请3D文件端口预留", data.slug);
+  }
+
+  function handleAddList() {
+    addDetailProductToCart(false);
+  }
+
+  return (
+    <div data-product-breadcrumb-shell="true">
+<SitePageShell
+      breadcrumbAriaLabel="面包屑导航"
+      breadcrumbItems={[
+        {
+          label: "首页",
+          href: "/",
+        },
+        {
+          label: "产品中心",
+          href: "/products/",
+        },
+        {
+          label: data.model,
+        },
+      ]}
+    >
+      <main className={styles.page} data-product-detail-page="true">
+      <div className={styles.container}>
+        
+        <section className={styles.productTop}>
+          <div data-product-gallery="true" className={styles.gallery} aria-label="产品图片区域">
+            <div data-product-main-stage="true"
+              className={[
+                styles.mainImage,
+                isZooming ? styles.isZooming : "",
+              ]
+                .filter(Boolean)
+                .join(" ")}
+              style={zoomStyle}
+              onMouseEnter={() => setIsZooming(true)}
+              onMouseLeave={() => setIsZooming(false)}
+              onMouseMove={handleMainImageMove}
+            >
+              {activeRealImage ? (
+                <img data-product-main-image="true"
+                  src={activeRealImage}
+                  alt={`${data.model} ${data.name}`}
+                />
+              ) : (
+                <svg
+                  className={styles.pumpSvg}
+                  viewBox="0 0 520 310"
+                  aria-hidden="true"
+                >
+                  <g transform="translate(34, 84)">
+                    <rect
+                      x="0"
+                      y="52"
+                      width="54"
+                      height="20"
+                      fill="#ffffff"
+                      stroke="#d7dee8"
+                      strokeWidth="2"
+                    />
+                    <rect
+                      x="54"
+                      y="33"
+                      width="72"
+                      height="58"
+                      fill="#ffffff"
+                      stroke="#d7dee8"
+                      strokeWidth="2"
+                    />
+                    <rect
+                      x="126"
+                      y="16"
+                      width="72"
+                      height="92"
+                      fill="#eef2f7"
+                      stroke="#d7dee8"
+                      strokeWidth="2"
+                    />
+                    <rect
+                      x="198"
+                      y="24"
+                      width="62"
+                      height="76"
+                      fill="#ffffff"
+                      stroke="#d7dee8"
+                      strokeWidth="2"
+                    />
+                    <path
+                      d="M260 24 L320 24 L342 48 L342 76 L320 100 L260 100 Z"
+                      fill="#173368"
+                    />
+                    <rect
+                      x="342"
+                      y="38"
+                      width="78"
+                      height="48"
+                      fill="#ffffff"
+                      stroke="#d7dee8"
+                      strokeWidth="2"
+                    />
+                    <rect
+                      x="420"
+                      y="52"
+                      width="48"
+                      height="20"
+                      fill="#ffffff"
+                      stroke="#d7dee8"
+                      strokeWidth="2"
+                    />
+                    <rect
+                      x="80"
+                      y="38"
+                      width="9"
+                      height="48"
+                      fill="#173368"
+                    />
+                    <rect
+                      x="94"
+                      y="38"
+                      width="9"
+                      height="48"
+                      fill="#173368"
+                    />
+                    <line
+                      x1="202"
+                      y1="24"
+                      x2="236"
+                      y2="100"
+                      stroke="#d7dee8"
+                      strokeWidth="4"
+                    />
+                    <line
+                      x1="214"
+                      y1="24"
+                      x2="248"
+                      y2="100"
+                      stroke="#d7dee8"
+                      strokeWidth="4"
+                    />
+                  </g>
+                </svg>
+              )}
+            </div>
+
+            {showThumbnailRow ? (
+              <div data-product-thumb-row="true" className={styles.thumbRow} aria-label="缩略图区域">
+                <button
+                  className={styles.thumbArrow}
+                  type="button"
+                  aria-label="上一张"
+                  onClick={handlePreviousThumb}
+                >
+                  ‹
+                </button>
+
+                {hasRealImages ? (
+                  realImages.slice(0, 5).map((image, index) => (
+                    <button
+                      key={`${image}-${index}`}
+                      className={[
+                        styles.thumb,
+                        activeThumb === index ? styles.isActive : "",
+                      ]
+                        .filter(Boolean)
+                        .join(" ")}
+                      type="button"
+                      onClick={() => setActiveThumb(index)}
+                    >
+                      <img src={image} alt="" />
+                    </button>
+                  ))
+                ) : (
+                  <>
+                    <button
+                      className={[
+                        styles.thumb,
+                        activeThumb === 0 ? styles.isActive : "",
+                      ]
+                        .filter(Boolean)
+                        .join(" ")}
+                      type="button"
+                      aria-label="主视图"
+                      onClick={() => setActiveThumb(0)}
+                    >
+                      <svg viewBox="0 0 120 70" aria-hidden="true">
+                        <rect
+                          x="18"
+                          y="28"
+                          width="84"
+                          height="16"
+                          fill="#ffffff"
+                          stroke="#d7dee8"
+                          strokeWidth="2"
+                        />
+                        <path
+                          d="M72 20 L94 20 L104 30 L104 40 L94 50 L72 50 Z"
+                          fill="#173368"
+                        />
+                      </svg>
+                    </button>
+
+                    <button
+                      className={[
+                        styles.thumb,
+                        activeThumb === 1 ? styles.isActive : "",
+                      ]
+                        .filter(Boolean)
+                        .join(" ")}
+                      type="button"
+                      aria-label="侧视图"
+                      onClick={() => setActiveThumb(1)}
+                    >
+                      <svg viewBox="0 0 120 70" aria-hidden="true">
+                        <rect
+                          x="26"
+                          y="19"
+                          width="54"
+                          height="32"
+                          fill="#ffffff"
+                          stroke="#d7dee8"
+                          strokeWidth="2"
+                        />
+                        <rect
+                          x="80"
+                          y="15"
+                          width="18"
+                          height="40"
+                          fill="#173368"
+                        />
+                      </svg>
+                    </button>
+
+                    <button
+                      className={[
+                        styles.thumb,
+                        activeThumb === 2 ? styles.isActive : "",
+                      ]
+                        .filter(Boolean)
+                        .join(" ")}
+                      type="button"
+                      aria-label="接口细节"
+                      onClick={() => setActiveThumb(2)}
+                    >
+                      <svg viewBox="0 0 120 70" aria-hidden="true">
+                        <circle
+                          cx="60"
+                          cy="35"
+                          r="22"
+                          fill="#ffffff"
+                          stroke="#d7dee8"
+                          strokeWidth="2"
+                        />
+                        <circle
+                          cx="60"
+                          cy="35"
+                          r="7"
+                          fill="#173368"
+                        />
+                      </svg>
+                    </button>
+                  </>
+                )}
+
+                <button
+                  className={styles.thumbArrow}
+                  type="button"
+                  aria-label="下一张"
+                  onClick={handleNextThumb}
+                >
+                  ›
+                </button>
+              </div>
+            ) : null}
+          </div>
+
+          <div className={styles.productInfo}>
+            <div className={styles.titleGroup}>
+              <h1 className={styles.productModelTitle}>{data.model}</h1>
+            </div>
+
+            <p className={styles.productDesc}>
+              {data.advantages.join("")}
+            </p>
+
+            <div className={styles.application}>
+              <p className={styles.applicationTitle}>{getDbSectionTitle("applications", "常见应用：")}</p>
+              <p className={styles.applicationText}>
+                {data.commonApplications.join("、")}
+              </p>
+            </div>
+
+            <div className={styles.operationArea}>
+              <div data-product-model-row="true" className={styles.modelLine}>
+                <div className={styles.modelCodeWrap}>
+                  <div className={styles.modelCodeText}>
+                    <span className={styles.modelLabel}>型号：</span>
+                    <span className={styles.modelCode}>{getDisplayModelText(data)}</span>
+                  </div>
+                  <button
+                    className={styles.button}
+                    type="button"
+                    onClick={() => {
+                      const href = getModelActionHref(data);
+
+                      if (isCustomInquiryMode(data)) {
+                        window.location.href = href;
+                        return;
+                      }
+
+                      window.open(href, "_blank", "noopener,noreferrer");
+                    }}
+                  >
+                    {getModelActionText(data)}
+                  </button>
+                </div>
+
+                {data.showConfigurator ? (
+                  <button
+                    className={styles.button}
+                    type="button"
+                    onClick={handleOpenConfigurator}
+                  >
+                    配置选择
+                  </button>
+                ) : null}
+              </div>
+
+              <div data-product-action-grid="true" className={styles.actionRow}>
+                {data.showDatasheetRequest ? (
+                  <button
+                    className={styles.button}
+                    type="button"
+                    onClick={handleAddDatasheet}
+                  >
+                    添加规格书
+                  </button>
+                ) : null}
+
+                {data.showDrawingRequest ? (
+                  <button
+                    className={isDetailDrawingSelected ? "list-toggle active" : "list-toggle"}
+                    type="button"
+                    aria-pressed={isDetailDrawingSelected}
+                    onClick={handleAddDrawing}
+                  >
+                    {isDetailDrawingSelected ? "已添加图纸" : "添加图纸"}
+                  </button>
+                ) : null}
+
+                {data.show3DRequest ? (
+                  <button
+                    className={styles.button}
+                    type="button"
+                    onClick={handleRequest3DFile}
+                  >
+                    申请3D文件
+                  </button>
+                ) : null}
+
+                <button
+                  className={isDetailProductSelected ? "list-toggle active" : "list-toggle"}
+                  type="button"
+                  aria-pressed={isDetailProductSelected}
+                  onClick={handleAddList}
+                >
+                  {isDetailProductSelected ? "已加入清单" : "加入清单"}
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.detailSection}>
+          <nav className={styles.tabNav} aria-label="产品资料切换">
+            <button
+              className={[
+                styles.tabButton,
+                activeTab === "spec" ? styles.isActive : "",
+              ]
+                .filter(Boolean)
+                .join(" ")}
+              type="button"
+              onClick={() => setActiveTab("spec")}
+            >
+              规格
+            </button>
+
+            <button
+              className={[
+                styles.tabButton,
+                activeTab === "model3d" ? styles.isActive : "",
+              ]
+                .filter(Boolean)
+                .join(" ")}
+              type="button"
+              onClick={() => setActiveTab("model3d")}
+            >
+              3D模型
+            </button>
+
+            <button
+              className={[
+                styles.tabButton,
+                activeTab === "drawing" ? styles.isActive : "",
+              ]
+                .filter(Boolean)
+                .join(" ")}
+              type="button"
+              onClick={() => setActiveTab("drawing")}
+            >
+              零件图
+            </button>
+          </nav>
+
+          <div className={styles.panelWrap}>
+            <div
+              className={[
+                styles.panel,
+                activeTab === "spec" ? styles.isActive : "",
+              ]
+                .filter(Boolean)
+                .join(" ")}
+            >
+              <div
+                className={[
+                  styles.panelBox,
+                  styles.specPanelClean,
+                ].join(" ")}
+              >
+                <table className={styles.specTable}>
+                  <tbody>
+                    {data.specs.map((item) => (
+                      <tr data-product-spec-row="true" key={`${item.label}-${item.value}`}>
+                        <th>{item.label}</th>
+                        <td>{item.value}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div
+              className={[
+                styles.panel,
+                activeTab === "model3d" ? styles.isActive : "",
+              ]
+                .filter(Boolean)
+                .join(" ")}
+            >
+              <div
+                  className={styles.panelBox}
+                  data-product-model3d-panel="true"
+                >
+                <ProductModelViewer
+                  slug={data.slug}
+                  modelName={data.model}
+                  modelUrl={(data as any).model3dUrl || (data as any).resources?.model3dUrl}
+                />
+              </div>
+            </div>
+
+            <div
+              className={[
+                styles.panel,
+                activeTab === "drawing" ? styles.isActive : "",
+              ]
+                .filter(Boolean)
+                .join(" ")}
+            >
+              {getProductDrawingPreviewUrl(data.slug, (data as any).drawing2dUrl || (data as any).drawingPdfUrl || (data as any).partDrawingUrl || (data as any).resources?.drawing2dUrl) ? (
+                <PdfDrawingPreview
+                  pdfPreviewUrl={getProductDrawingPreviewUrl(data.slug, (data as any).drawing2dUrl || (data as any).drawingPdfUrl || (data as any).partDrawingUrl || (data as any).resources?.drawing2dUrl)}
+                  documentTitle={data.model}
+                />
+              ) : (
+                <div className={styles.panelBox}>
+                  当前产品尚未配置公开 零件图。
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+        {data.faqs && data.faqs.length > 0 ? (
+<>
+<section className={styles.faqSection}>
+            <div className={styles.faqHeader}>
+              <h2>{getDbSectionTitle("faq", "常见问题")}</h2>
+            </div>
+
+            <div className={styles.faqList}>
+              {data.faqs.map((item, index) => {
+                const isOpen = openFaqIndex === index;
+
+                return (
+                  <article
+                    className={[
+                      styles.faqItem,
+                      isOpen ? styles.faqItemOpen : "",
+                    ]
+                      .filter(Boolean)
+                      .join(" ")}
+                    key={`${item.question}-${index}`}
+                  >
+                    <button
+                      className={styles.faqQuestion}
+                      type="button"
+                      aria-expanded={isOpen}
+                      onClick={() =>
+                        setOpenFaqIndex(isOpen ? null : index)
+                      }
+                    >
+                      <span className={styles.faqQuestionText}>
+                        {item.question}
+                      </span>
+                      <span
+                        className={styles.faqToggle}
+                        aria-hidden="true"
+                      >
+                        {isOpen ? "−" : "+"}
+                      </span>
+                    </button>
+                    <div
+                      className={styles.faqAnswerWrap}
+                      aria-hidden={!isOpen}
+                    >
+                      <p className={styles.faqAnswer}>
+                        {item.answer}
+                      </p>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          </section>
+
+          <PlungerPumpBottomCta data={data} />
+          </>
+        ) : null}
+
+      </div>
+    </main>
+    </SitePageShell>
+</div>
+  );
+}

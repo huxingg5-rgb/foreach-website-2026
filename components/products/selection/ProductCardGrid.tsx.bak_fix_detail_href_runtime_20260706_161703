@@ -1,0 +1,56 @@
+﻿"use client";
+
+import ProductSelectionCard from "./ProductSelectionCard";
+
+import type { ProductSelectionProductItem } from "./product-selection-ui.types";
+
+type ProductCardGridProps = {
+  products: ProductSelectionProductItem[];
+  selectedList: ReadonlySet<string>;
+  selectedDrawingList: ReadonlySet<string>;
+  addToListText: string;
+  addedToListText: string;
+  getTitle: (product: ProductSelectionProductItem) => string;
+  getSubtitle: (product: ProductSelectionProductItem) => string;
+  getDetailHref: (product: ProductSelectionProductItem) => string;
+  onRequestDrawing: (product: ProductSelectionProductItem) => void;
+  onToggleList: (product: ProductSelectionProductItem) => void;
+};
+
+export default function ProductCardGrid({
+  products,
+  selectedList,
+  selectedDrawingList,
+  addToListText,
+  addedToListText,
+  getTitle,
+  getSubtitle,
+  getDetailHref,
+  onRequestDrawing,
+  onToggleList,
+}: ProductCardGridProps) {
+  return (
+    <div className="product-grid">
+      {products.map((product) => {
+        const title = getTitle(product);
+        const subtitle = getSubtitle(product);
+
+        return (
+          <ProductSelectionCard
+            product={product}
+            title={title}
+            subtitle={subtitle}
+            detailHref={getDetailHref(product)}
+            isAdded={selectedList.has(product.productId)}
+            isDrawingRequested={selectedDrawingList.has(product.productId)}
+            addToListText={addToListText}
+            addedToListText={addedToListText}
+            key={product.productId}
+            onRequestDrawing={onRequestDrawing}
+            onToggleList={onToggleList}
+          />
+        );
+      })}
+    </div>
+  );
+}

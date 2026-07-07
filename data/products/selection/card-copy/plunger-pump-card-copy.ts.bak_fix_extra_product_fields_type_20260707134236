@@ -1,0 +1,191 @@
+/* =========================================================
+   plunger-pump-card-copy.ts
+   FOREACH 瀹樼綉锝滄煴濉炴车浜у搧鍗＄墖涓夎鏂囨
+
+   鏁版嵁鏉ユ簮锛?
+   1. FOREACH_鏌卞娉靛畼缃戣〃鏍肩淮鎶ょ増_v2.xlsx
+   2. 宸ヤ綔琛細04_浜у搧鍗＄墖
+
+   娓叉煋鍘熷垯锛?
+   1. 鍗＄墖鍙睍绀虹‖鍙傛暟
+   2. 涓嶅湪鍗＄墖閲屽啓搴旂敤鍦烘櫙
+   3. 涓嶅湪鍗＄墖閲屽啓鏉愭枡鍙€夎寖鍥?
+   4. 璇︽儏姝ｆ枃銆佸弬鏁拌〃銆丗AQ 鍚庣画鏀惧埌璇︽儏椤?
+========================================================= */
+
+import type { ProductSelectionProduct } from "../product-selection.types";
+
+export type ProductCardSpecItem = {
+  label: string;
+};
+
+export const PLUNGER_PUMP_CARD_SPECS_BY_MODEL: Record<
+  string,
+  ProductCardSpecItem[]
+> = {
+  /* EA Series */
+  "EA-100-PMMA": [
+    { label: "1/4-28 UNF / M6 娑茶矾鎺ュ彛" },
+    { label: "100% 閲忕▼閲嶅鎬?< 0.5%" },
+    { label: "2000 Step 婊￠噺绋嬪垎杈ㄧ巼" },
+  ],
+  "EA-100-PEEK": [
+    { label: "1/4-28 UNF / M6 娑茶矾鎺ュ彛" },
+    { label: "100% 閲忕▼閲嶅鎬?< 0.5%" },
+    { label: "2000 Step 婊￠噺绋嬪垎杈ㄧ巼" },
+  ],
+  "EA-250-PMMA": [
+    { label: "1/4-28 UNF / M6 娑茶矾鎺ュ彛" },
+    { label: "100% 閲忕▼閲嶅鎬?< 0.5%" },
+    { label: "2000 Step 婊￠噺绋嬪垎杈ㄧ巼" },
+  ],
+  "EA-250-PEEK": [
+    { label: "1/4-28 UNF / M6 娑茶矾鎺ュ彛" },
+    { label: "100% 閲忕▼閲嶅鎬?< 0.5%" },
+    { label: "2000 Step 婊￠噺绋嬪垎杈ㄧ巼" },
+  ],
+  "EA-500-PMMA": [
+    { label: "1/4-28 UNF / M6 娑茶矾鎺ュ彛" },
+    { label: "100% 閲忕▼閲嶅鎬?< 0.5%" },
+    { label: "2000 Step 婊￠噺绋嬪垎杈ㄧ巼" },
+  ],
+  "EA-500-PEEK": [
+    { label: "1/4-28 UNF / M6 娑茶矾鎺ュ彛" },
+    { label: "100% 閲忕▼閲嶅鎬?< 0.5%" },
+    { label: "2000 Step 婊￠噺绋嬪垎杈ㄧ巼" },
+  ],
+  "EA-1000-PMMA": [
+    { label: "1/4-28 UNF / M6 娑茶矾鎺ュ彛" },
+    { label: "100% 閲忕▼閲嶅鎬?< 0.5%" },
+    { label: "2000 Step 婊￠噺绋嬪垎杈ㄧ巼" },
+  ],
+  "EA-1000-PEEK": [
+    { label: "1/4-28 UNF / M6 娑茶矾鎺ュ彛" },
+    { label: "100% 閲忕▼閲嶅鎬?< 0.5%" },
+    { label: "2000 Step 婊￠噺绋嬪垎杈ㄧ巼" },
+  ],
+  "EA-2500-PMMA": [
+    { label: "1/4-28 UNF / M6 娑茶矾鎺ュ彛" },
+    { label: "100% 閲忕▼閲嶅鎬?< 0.5%" },
+    { label: "2000 / 2236 Step 婊￠噺绋嬪垎杈ㄧ巼" },
+  ],
+  "EA-2500-PEEK": [
+    { label: "1/4-28 UNF / M6 娑茶矾鎺ュ彛" },
+    { label: "100% 閲忕▼閲嶅鎬?< 0.5%" },
+    { label: "2000 / 2236 Step 婊￠噺绋嬪垎杈ㄧ巼" },
+  ],
+  "EA-5000-PMMA": [
+    { label: "1/4-28 UNF / M6 娑茶矾鎺ュ彛" },
+    { label: "100% 閲忕▼閲嶅鎬?< 0.5%" },
+    { label: "2000 Step 婊￠噺绋嬪垎杈ㄧ巼" },
+  ],
+  "EA-5000-PEEK": [
+    { label: "1/4-28 UNF / M6 娑茶矾鎺ュ彛" },
+    { label: "100% 閲忕▼閲嶅鎬?< 0.5%" },
+    { label: "2000 Step 婊￠噺绋嬪垎杈ㄧ巼" },
+  ],
+  "EA-10000-PMMA": [
+    { label: "1/4-28 UNF / M6 娑茶矾鎺ュ彛" },
+    { label: "100% 閲忕▼閲嶅鎬?< 0.5%" },
+    { label: "4000 Step 婊￠噺绋嬪垎杈ㄧ巼" },
+  ],
+  "EA-10000-PEEK": [
+    { label: "1/4-28 UNF / M6 娑茶矾鎺ュ彛" },
+    { label: "100% 閲忕▼閲嶅鎬?< 0.5%" },
+    { label: "4000 Step 婊￠噺绋嬪垎杈ㄧ巼" },
+  ],
+
+  /* SM Series */
+  "SM-50-PMMA": [
+    { label: "1/4-28 UNF / M6 娑茶矾鎺ュ彛" },
+    { label: "100% 閲忕▼閲嶅鎬?< 0.5%" },
+    { label: "2000 Step 婊￠噺绋嬪垎杈ㄧ巼" },
+  ],
+  "SM-100-PMMA": [
+    { label: "1/4-28 UNF / M6 娑茶矾鎺ュ彛" },
+    { label: "100% 閲忕▼閲嶅鎬?< 0.5%" },
+    { label: "2000 Step 婊￠噺绋嬪垎杈ㄧ巼" },
+  ],
+  "SM-100-PEEK": [
+    { label: "1/4-28 UNF / M6 娑茶矾鎺ュ彛" },
+    { label: "100% 閲忕▼閲嶅鎬?< 0.5%" },
+    { label: "2000 Step 婊￠噺绋嬪垎杈ㄧ巼" },
+  ],
+  "SM-250-PMMA": [
+    { label: "1/4-28 UNF / M6 娑茶矾鎺ュ彛" },
+    { label: "100% 閲忕▼閲嶅鎬?< 0.5%" },
+    { label: "2000 Step 婊￠噺绋嬪垎杈ㄧ巼" },
+  ],
+  "SM-250-PEEK": [
+    { label: "1/4-28 UNF / M6 娑茶矾鎺ュ彛" },
+    { label: "100% 閲忕▼閲嶅鎬?< 0.5%" },
+    { label: "2000 Step 婊￠噺绋嬪垎杈ㄧ巼" },
+  ],
+  "SM-500-PMMA": [
+    { label: "1/4-28 UNF / M6 娑茶矾鎺ュ彛" },
+    { label: "100% 閲忕▼閲嶅鎬?< 0.5%" },
+    { label: "2000 Step 婊￠噺绋嬪垎杈ㄧ巼" },
+  ],
+  "SM-1000-PMMA": [
+    { label: "1/4-28 UNF / M6 娑茶矾鎺ュ彛" },
+    { label: "100% 閲忕▼閲嶅鎬?< 0.5%" },
+    { label: "2000 Step 婊￠噺绋嬪垎杈ㄧ巼" },
+  ],
+
+  /* TM Series */
+  "TM-50-PMMA": [
+    { label: "6-40 UNF 娑茶矾鎺ュ彛" },
+    { label: "100% 閲忕▼閲嶅鎬?< 0.5%" },
+    { label: "2540 Step 婊￠噺绋嬪垎杈ㄧ巼" },
+  ],
+  "TM-100-PMMA": [
+    { label: "6-40 UNF 娑茶矾鎺ュ彛" },
+    { label: "100% 閲忕▼閲嶅鎬?< 0.5%" },
+    { label: "2540 Step 婊￠噺绋嬪垎杈ㄧ巼" },
+  ],
+  "TM-250-PMMA": [
+    { label: "6-40 UNF 娑茶矾鎺ュ彛" },
+    { label: "100% 閲忕▼閲嶅鎬?< 0.5%" },
+    { label: "2540 Step 婊￠噺绋嬪垎杈ㄧ巼" },
+  ],
+  "TM-500-PMMA": [
+    { label: "6-40 UNF 娑茶矾鎺ュ彛" },
+    { label: "100% 閲忕▼閲嶅鎬?< 0.5%" },
+    { label: "2540 Step 婊￠噺绋嬪垎杈ㄧ巼" },
+  ],
+};
+
+export function getProductCardSpecs(product: ProductSelectionProduct) {
+  /*
+    产品中心卡片规格兜底保护。
+
+    这个文件原本只服务柱塞泵卡片，因此旧逻辑默认所有产品都有：
+    product.cardTitle.en / product.cardTitle.zh
+
+    现在产品中心已经接入多个产品系列，包括阀系列。
+    阀系列卡片第一版没有 cardTitle 多语言对象，如果继续直接读取
+    product.cardTitle.en，就会导致运行时报错。
+
+    处理方式：
+    1. 如果 cardTitle 存在，优先读取 cardTitle.en / cardTitle.zh
+    2. 如果 cardTitle 不存在，则使用 model / title / productName 兜底
+    3. 如果不是柱塞泵型号，则返回空数组，不影响其他系列卡片
+  */
+
+  const cardTitle = product.cardTitle as
+    | {
+        zh?: string;
+        en?: string;
+      }
+    | undefined;
+
+  const model =
+    cardTitle?.en ||
+    cardTitle?.zh ||
+    product.model ||
+    product.title ||
+    product.productName ||
+    "";
+
+  return PLUNGER_PUMP_CARD_SPECS_BY_MODEL[model] || [];
+}

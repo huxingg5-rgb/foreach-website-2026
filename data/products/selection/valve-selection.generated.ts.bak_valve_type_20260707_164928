@@ -1,0 +1,240 @@
+/* =========================================================
+   valve-selection.generated.ts
+   FOREACH 官网｜阀系列产品中心卡片数据
+
+   说明：
+   1. 当前文件用于产品中心“阀系列”第一版上线
+   2. 数据层级按“无阀泵系列”的方式整理：
+      - productTypeId = valves，表示产品类型是“阀系列”
+      - seriesId = rotary-valves / high-pressure-valves / solenoid-valves
+      - seriesLabel = 旋转阀 / 高压阀 / 电磁阀
+   3. 这样左侧筛选就会像无阀泵一样：
+      产品类型：当前：阀系列
+      产品系列：旋转阀 / 高压阀 / 电磁阀
+   4. id / slug / href 保留英文，用于路由，不要改成中文
+========================================================= */
+
+import type { ProductSelectionProduct } from "./product-selection.types";
+
+/**
+ * 阀系列筛选标签。
+ *
+ * 注意：
+ * 当前 ProductSelectionClient.tsx 会用 ...valveFilterLabels 展开，
+ * 所以这里保持字符串数组格式，和无阀泵、隔膜泵等生成数据兼容。
+ */
+export const valveFilterLabels = [
+  "阀系列",
+  "旋转阀",
+  "高压阀",
+  "电磁阀",
+] as const;
+
+/**
+ * 阀系列产品中心卡片数据。
+ */
+const valveProducts = [
+  {
+    id: "rotary-valves",
+    slug: "rotary-valves",
+    productId: "rotary-valves",
+    productCode: "ROTARY-VALVE-SERIES",
+    code: "ROTARY-VALVE-SERIES",
+
+    model: "旋转阀系列",
+    title: "旋转阀系列",
+    name: "旋转阀系列",
+    productName: "旋转阀系列",
+
+    cardTitle: {
+      zh: "旋转阀系列",
+      en: "Rotary Valve Series",
+    },
+    cardSubtitle: {
+      zh: "多通道流路切换\n适用于试剂选择与清洗路径管理\n可用于复杂液路集中切换",
+      en: "Multi-channel flow-path switching\nFor reagent selection and wash path management\nSupports centralized switching in complex fluidics",
+    },
+
+    categoryId: "valves",
+    categoryLabel: "阀系列",
+
+    productTypeId: "valves",
+    productTypeLabel: "阀系列",
+
+    seriesId: "rotary-valves",
+    seriesLabel: "旋转阀",
+    seriesName: "旋转阀",
+
+    image: "/images/products/VALVE/Rotary valve_200x200_01_v001.jpg",
+    imagePath: "/images/products/VALVE/Rotary valve_200x200_01_v001.jpg",
+    imageUrl: "/images/products/VALVE/Rotary valve_200x200_01_v001.jpg",
+    imageAlt: "FOREACH 旋转阀系列",
+
+    subtitle: "多通道流路切换 / 试剂选择 / 清洗路径管理",
+    description:
+      "旋转阀用于多试剂、多样本、多清洗液和多废液路径的集中切换，适合自动化分析仪器、IVD、生命科学和实验室自动化设备中的多通道流路管理。",
+    summary:
+      "多通道流路切换，适用于试剂选择、清洗路径和废液路径集中管理。",
+
+    tags: ["多通道切换", "路径管理", "低残留"],
+
+    specs: [
+      { label: "功能定位", value: "多通道流路切换" },
+      { label: "典型应用", value: "试剂选择、清洗路径、废液路径管理" },
+      { label: "配置方式", value: "按通道数、接口、材料和安装空间定制" },
+    ],
+
+    filter01: "阀系列",
+    filter02: "旋转阀",
+    filter03: "多通道切换",
+    filter04: "定制配置",
+    filters: {
+      filter01: "阀系列",
+      filter02: "旋转阀",
+      filter03: "多通道切换",
+      filter04: "定制配置",
+    },
+
+    href: "/products/valves/rotary-valves",
+    detailHref: "/products/valves/rotary-valves",
+    selectionHref: "/products",
+    sourceType: "valve-selection",
+  },
+
+  {
+    id: "high-pressure-valves",
+    slug: "high-pressure-valves",
+    productId: "high-pressure-valves",
+    productCode: "HIGH-PRESSURE-VALVE-SERIES",
+    code: "HIGH-PRESSURE-VALVE-SERIES",
+
+    model: "高压阀系列",
+    title: "高压阀系列",
+    name: "高压阀系列",
+    productName: "高压阀系列",
+
+    cardTitle: {
+      zh: "高压阀系列",
+      en: "High-pressure Valve Series",
+    },
+    cardSubtitle: {
+      zh: "高压液路控制\n适用于分析仪器流路切换\n关注密封可靠与耐压稳定",
+      en: "High-pressure fluidic control\nFor analytical flow-path switching\nFocused on sealing and pressure stability",
+    },
+
+    categoryId: "valves",
+    categoryLabel: "阀系列",
+
+    productTypeId: "valves",
+    productTypeLabel: "阀系列",
+
+    seriesId: "high-pressure-valves",
+    seriesLabel: "高压阀",
+    seriesName: "高压阀",
+
+    image: "/images/products/common/product-placeholder.svg",
+    imagePath: "/images/products/common/product-placeholder.svg",
+    imageUrl: "/images/products/common/product-placeholder.svg",
+    imageAlt: "FOREACH 高压阀系列",
+
+    subtitle: "高压液路控制 / 分析仪器流路切换 / 耐压场景",
+    description:
+      "高压阀用于高压流体控制、分析检测流路切换和耐压液路模块集成，适合对密封可靠性、耐压能力和流路稳定性要求较高的自动化仪器。",
+    summary:
+      "高压液路控制，适用于分析检测、耐压流路和高压液路模块集成。",
+
+    tags: ["高压控制", "密封可靠", "分析仪器"],
+
+    specs: [
+      { label: "功能定位", value: "高压液路控制" },
+      { label: "典型应用", value: "高压流路切换、分析检测、耐压液路模块" },
+      { label: "配置方式", value: "按压力范围、接口、材料和密封结构确认" },
+    ],
+
+    filter01: "阀系列",
+    filter02: "高压阀",
+    filter03: "高压控制",
+    filter04: "定制配置",
+    filters: {
+      filter01: "阀系列",
+      filter02: "高压阀",
+      filter03: "高压控制",
+      filter04: "定制配置",
+    },
+
+    href: "/products/valves/high-pressure-valves",
+    detailHref: "/products/valves/high-pressure-valves",
+    selectionHref: "/products",
+    sourceType: "valve-selection",
+  },
+
+  {
+    id: "solenoid-valves",
+    slug: "solenoid-valves",
+    productId: "solenoid-valves",
+    productCode: "SOLENOID-VALVE-SERIES",
+    code: "SOLENOID-VALVE-SERIES",
+
+    model: "电磁阀系列",
+    title: "电磁阀系列",
+    name: "电磁阀系列",
+    productName: "电磁阀系列",
+
+    cardTitle: {
+      zh: "电磁阀系列",
+      en: "Solenoid Valve Series",
+    },
+    cardSubtitle: {
+      zh: "液路通断控制\n适用于试剂与清洗路径控制\n可集成到自动化仪器阀组",
+      en: "Fluidic on/off control\nFor reagent and wash path control\nCan be integrated into instrument valve modules",
+    },
+
+    categoryId: "valves",
+    categoryLabel: "阀系列",
+
+    productTypeId: "valves",
+    productTypeLabel: "阀系列",
+
+    seriesId: "solenoid-valves",
+    seriesLabel: "电磁阀",
+    seriesName: "电磁阀",
+
+    image: "/images/products/VALVE/Solenoid valve_200x200_01_v001.jpg",
+    imagePath: "/images/products/VALVE/Solenoid valve_200x200_01_v001.jpg",
+    imageUrl: "/images/products/VALVE/Solenoid valve_200x200_01_v001.jpg",
+    imageAlt: "FOREACH 电磁阀系列",
+
+    subtitle: "通断控制 / 试剂路径控制 / 液路模块集成",
+    description:
+      "电磁阀用于液路通断控制、试剂路径控制和自动化仪器阀组集成，适合 IVD、生命科学、实验室自动化和分析仪器中的小型化流体控制模块。",
+    summary:
+      "液路通断控制，适用于试剂路径、清洗路径、废液路径和阀组集成。",
+
+    tags: ["通断控制", "响应快速", "模块集成"],
+
+    specs: [
+      { label: "功能定位", value: "液路通断控制" },
+      { label: "典型应用", value: "试剂路径、清洗路径、废液路径通断" },
+      { label: "配置方式", value: "按通路、位数、接口、密封材料和驱动方式确认" },
+    ],
+
+    filter01: "阀系列",
+    filter02: "电磁阀",
+    filter03: "通断控制",
+    filter04: "定制配置",
+    filters: {
+      filter01: "阀系列",
+      filter02: "电磁阀",
+      filter03: "通断控制",
+      filter04: "定制配置",
+    },
+
+    href: "/products/valves/solenoid-valves",
+    detailHref: "/products/valves/solenoid-valves",
+    selectionHref: "/products",
+    sourceType: "valve-selection",
+  },
+] as const;
+
+export const valveSelectionProducts =
+  valveProducts as unknown as ProductSelectionProduct[];

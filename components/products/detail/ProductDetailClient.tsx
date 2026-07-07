@@ -1,5 +1,8 @@
 "use client";
 
+
+import { useSelectionCart } from "@/components/selection-cart/SelectionCartProvider";
+import type { SelectionCartItemInput } from "@/components/selection-cart/selection-cart.types";
 /* =========================================================
    ProductDetailClient.tsx
    恒永达官网｜中文产品详情页
@@ -28,7 +31,7 @@ import styles from "./product-detail.module.css";
 type ProductDetailTab = "spec" | "model3d" | "drawing";
 
 type ProductDetailClientProps = {
-  data: ProductDetailPageData;
+  data: ProductDetailPageData & Record<string, any>;
 };
 
 type ZoomStyle = CSSProperties & {
@@ -73,7 +76,22 @@ function isPlungerPumpDisplayModel(value: unknown): boolean {
   return /^(EA|SM|TM)-/i.test(model);
 }
 
+
+function isTubingDetailData(data: any): boolean {
+  return (
+    data?.productCategory === "tubing" ||
+    data?.productType === "tubing" ||
+    data?.category === "tubing" ||
+    data?.detailMode === "material_selection" ||
+    (typeof data?.slug === "string" && data.slug.includes("-tubing"))
+  );
+}
+
 function getDisplayModelText(data: any): string {
+  if (isTubingDetailData(data)) {
+    return "XXX-XXX-XX-XX";
+  }
+
   if (isCustomInquiryMode(data)) {
     return "定制配置请联系我们";
   }
@@ -82,7 +100,15 @@ function getDisplayModelText(data: any): string {
 }
 
 function isCustomInquiryMode(data: any): boolean {
-  const detailMode = String(
+  
+  if (
+    isValvelessPumpDetailData(data) ||
+    data?.isCustomOnly === true ||
+    data?.showCustomInquiryCta === true
+  ) {
+    return true;
+  }
+const detailMode = String(
     data?.detailMode ||
       data?.hero?.detailMode ||
       data?.productMode ||
@@ -121,6 +147,10 @@ function isCustomInquiryMode(data: any): boolean {
 }
 
 function getModelActionText(data: any): string {
+  if (isTubingDetailData(data)) {
+    return "选择型号";
+  }
+
   return isCustomInquiryMode(data) ? "联系我们" : "型号选择";
 }
 
@@ -139,21 +169,300 @@ function isPlungerPumpDetailData(data: any): boolean {
   );
 }
 
-function getPlungerPumpBottomCta(data: any) {
-  if (!isPlungerPumpDetailData(data)) {
+function isDiaphragmPumpDetailData(data: any): boolean {
+  const text = JSON.stringify(data || {}).toLowerCase();
+
+  return (
+    text.includes("隔膜泵") ||
+    text.includes("diaphragm pump") ||
+    text.includes("diaphragm-pump") ||
+    text.includes("diaphragm-pumps") ||
+    text.includes("dpl30") ||
+    text.includes("dpl60") ||
+    text.includes("dpl30h") ||
+    text.includes("dpgl800")
+  );
+}
+
+
+function isPipettingPumpDetailData(data: any): boolean {
+  const text = JSON.stringify(data || {}).toLowerCase();
+
+  return (
+    text.includes("移液泵") ||
+    text.includes("pipetting pump") ||
+    text.includes("pipette pump") ||
+    text.includes("pipette-pump") ||
+    text.includes("pipetting-pumps") ||
+    text.includes("smtp2") ||
+    text.includes("smtp4")
+  );
+}
+
+function isValvelessPumpDetailData(data: any): boolean {
+  const text = JSON.stringify(data || {}).toLowerCase();
+
+  return (
+    text.includes("无阀泵") ||
+    text.includes("valveless pump") ||
+    text.includes("valveless-pump") ||
+    text.includes("valveless-pumps") ||
+    text.includes("rpl-p4") ||
+    text.includes("rpl-p6.35") ||
+    text.includes("rpl-p635") ||
+    text.includes("rpl-p15") ||
+    text.includes("drpl")
+  );
+}
+
+function isSyringePumpDetailData(data: any): boolean {
+  const text = JSON.stringify(data || {}).toLowerCase();
+
+  return (
+    text.includes("注射泵") ||
+    text.includes("syringe pump") ||
+    text.includes("syringe-pump") ||
+    text.includes("syringe-pumps") ||
+    text.includes("hmd3") ||
+    text.includes("hmd6") ||
+    text.includes("hld3") ||
+    text.includes("hld6")
+  );
+}
+
+
+/*
+  VALVE_DETAIL_BOTTOM_CTA_20260708
+
+  阀系列详情页复用公共 ProductDetailClient。
+  这里单独识别阀系列数据，避免底部 CTA 回退到柱塞泵，或直接不显示。
+*/
+function isValveDetailData(data: any): boolean {
+  return (
+    data?.sourceType === "valve-detail" ||
+    data?.categoryId === "valves" ||
+    data?.category === "valves" ||
+    data?.categoryLabel === "阀系列" ||
+    data?.productTypeName === "旋转阀" ||
+    data?.productTypeName === "高压阀" ||
+    data?.productTypeName === "电磁阀"
+  );
+}
+
+function getValveDetailBottomCta(data: any) {
+  if (!isValveDetailData(data)) {
+    return null;
+  }
+
+  const title =
+    data?.bottomCtaTitle ||
+    data?.customInquiryTitle ||
+    data?.bottomCta?.title ||
+    data?.customInquiryCta?.title ||
+    "需要确认阀系列定制配置？";
+
+  const desc =
+    data?.bottomCtaDescription ||
+    data?.customInquiryDescription ||
+    data?.bottomCta?.desc ||
+    data?.bottomCta?.description ||
+    data?.customInquiryCta?.desc ||
+    data?.customInquiryCta?.description ||
+    "请提供介质类型、压力范围、接口方式、通道数量、安装空间和控制方式，FOREACH 可协助确认适合您设备的阀系列配置。";
+
+  const button =
+    data?.bottomCtaButtonText ||
+    data?.customInquiryButtonText ||
+    data?.bottomCta?.button ||
+    data?.bottomCta?.buttonText ||
+    data?.customInquiryCta?.button ||
+    data?.customInquiryCta?.buttonText ||
+    "联系工程师确认配置";
+
+  const href =
+    data?.bottomCtaHref ||
+    data?.customInquiryHref ||
+    data?.bottomCta?.href ||
+    data?.customInquiryCta?.href ||
+    "/contact";
+
+  return {
+    title,
+    desc,
+    description: desc,
+    button,
+    buttonText: button,
+    href,
+  };
+}
+
+
+/*
+  PROBE_DETAIL_BOTTOM_CTA_20260708
+
+  针系列详情页复用公共 ProductDetailClient。
+  这里单独识别针系列数据，避免底部 CTA 回退到其他产品系列，或直接不显示。
+*/
+function isProbeDetailData(data: any): boolean {
+  return (
+    data?.sourceType === "probe-detail" ||
+    data?.category === "probes" ||
+    data?.categoryLabel === "针系列" ||
+    data?.productTypeName === "采样针" ||
+    data?.productTypeName === "穿刺针" ||
+    data?.productTypeName === "清洗针" ||
+    data?.productTypeName === "搅拌桨"
+  );
+}
+
+function getProbeDetailBottomCta(data: any) {
+  if (!isProbeDetailData(data)) {
+    return null;
+  }
+
+  const title =
+    data?.bottomCtaTitle ||
+    data?.customInquiryTitle ||
+    data?.bottomCta?.title ||
+    data?.customInquiryCta?.title ||
+    "需要确认针系列来图定制方案？";
+
+  const desc =
+    data?.bottomCtaDescription ||
+    data?.customInquiryDescription ||
+    data?.bottomCta?.desc ||
+    data?.bottomCta?.description ||
+    data?.customInquiryCta?.desc ||
+    data?.customInquiryCta?.description ||
+    "请提供图纸、样品、针管尺寸、针尖结构、安装空间和目标液体信息，FOREACH 可协助确认针系列定制方案。";
+
+  const button =
+    data?.bottomCtaButtonText ||
+    data?.customInquiryButtonText ||
+    data?.bottomCta?.button ||
+    data?.bottomCta?.buttonText ||
+    data?.customInquiryCta?.button ||
+    data?.customInquiryCta?.buttonText ||
+    "联系工程师";
+
+  const href =
+    data?.bottomCtaHref ||
+    data?.customInquiryHref ||
+    data?.bottomCta?.href ||
+    data?.customInquiryCta?.href ||
+    "/contact";
+
+  return {
+    title,
+    desc,
+    description: desc,
+    button,
+    buttonText: button,
+    href,
+  };
+}
+
+
+/*
+  TUBING_CTA_DATA_ONLY_20260707
+  管路详情页复用现有底部 CTA 样式，只提供 CTA 数据，不新增样式。
+*/
+function getTubingBottomCtaData(data: any) {
+  const isTubing =
+    data?.productCategory === "tubing" ||
+    data?.productType === "tubing" ||
+    data?.category === "tubing" ||
+    data?.detailMode === "material_selection" ||
+    (typeof data?.slug === "string" && data.slug.includes("-tubing"));
+
+  if (!isTubing) {
     return null;
   }
 
   return {
-    title: "柱塞泵可根据您的设备需求进行定制",
-    desc: "恒永达可根据您的设备结构、目标容量、液体兼容性、接口方式、控制方式和使用寿命要求，协助确认柱塞泵配置、泵头材质、柱塞材质及液路集成方案，适用于 IVD 分析仪、实验室自动化设备和生命科学仪器中的精密液体处理场景。",
-    button: "提交定制需求",
-    href: "/contact"
+    title: data?.bottomCtaTitle || "需要评估管路流阻与泵阀匹配？",
+    desc:
+      data?.bottomCtaDesc ||
+      "请提供液体介质、目标流量、管材、内径/外径、管路长度、接头数量、弯折情况、工作温度和压力范围。FOREACH 工程师可协助估算管路压降、流体阻力和死体积，并确认管材、接头与泵阀配置是否匹配。",
+    button: data?.bottomCtaButton || "联系工程师",
+    href: data?.bottomCtaHref || data?.contactHref || "/contact",
   };
 }
 
+function getPlungerPumpBottomCta(data: any) {
+  const tubingCta = getTubingBottomCtaData(data);
+
+  if (tubingCta) {
+    return tubingCta;
+  }
+
+  const probeBottomCta = getProbeDetailBottomCta(data);
+
+  if (probeBottomCta) {
+    return probeBottomCta;
+  }
+
+  const valveBottomCta = getValveDetailBottomCta(data);
+
+  if (valveBottomCta) {
+    return valveBottomCta;
+  }
+
+  if (isSyringePumpDetailData(data)) {
+    return {
+      title: "注射泵可根据您的液路与结构需求进行定制",
+      desc: "恒永达可根据您的应用场景、注射器规格、行程平台、通道数量、阀门结构、通讯方式、安装空间和液路集成需求，协助确认适合自动化仪器集成的注射泵配置。",
+      button: "提交定制需求",
+      href: "/contact",
+    };
+  }
+
+  if (isValvelessPumpDetailData(data)) {
+    return {
+      title: "无阀泵可根据您的液路需求进行定制",
+      desc: "恒永达可根据您的应用场景、目标排量、配比要求、液体兼容性、接口方式、清洗口和安装空间，协助确认适合自动化仪器集成的无阀泵配置。",
+      button: "提交定制需求",
+      href: "/contact",
+    };
+  }
+  if (isPlungerPumpDetailData(data)) {
+    return {
+      title: "柱塞泵可根据您的设备需求进行定制",
+      desc: "恒永达可根据您的设备结构、目标容量、液体兼容性、接口方式、控制方式和使用寿命要求，协助确认柱塞泵配置、泵头材质、柱塞材质及液路集成方案，适用于 IVD 分析仪、实验室自动化设备和生命科学仪器中的精密液体处理场景。",
+      button: "提交定制需求",
+      href: "/contact"
+    };
+  }
+
+  if (isDiaphragmPumpDetailData(data)) {
+    return {
+      title: "不确定如何选择隔膜泵型号？",
+      desc: "如果您不确定具体型号，可根据介质类型、流量、耐压、自吸能力、膜片材质、阀片材质、泵头材质、接口方式和安装空间等信息联系我们。恒永达可协助您确认适合自动化仪器液路的隔膜泵配置。",
+      button: "联系工程师确认",
+      href: "/contact"
+    };
+  }
+
+  if (isPipettingPumpDetailData(data)) {
+    return {
+      title: "不确定如何选择移液泵型号？",
+      desc: "如果您不确定具体型号，可根据量程、吸头规格、液面检测方式、堵塞检测需求、通讯接口、安装空间和控制方式等信息联系我们。恒永达可协助您确认适合自动化仪器液体处理模块的移液泵配置。",
+      button: "联系工程师确认",
+      href: "/contact"
+    };
+  }
+return null;
+}
+
 function getModelActionHref(data: any): string {
-  if (isCustomInquiryMode(data)) {
+  if (isTubingDetailData(data)) {
+    return data?.modelSelectionHref || "#model-selection";
+  }
+
+  if (isCustomInquiryMode(data) || isValvelessPumpDetailData(data)) {
+    return data?.customInquiryHref || data?.contactHref || "/contact";
+  }
+if (isCustomInquiryMode(data)) {
     return (
       data.primaryButtonHref ||
       data.contactHref ||
@@ -196,7 +505,9 @@ function PlungerPumpBottomCta({ data }: { data: any }) {
 export default function ProductDetailClient({
   data,
 }: ProductDetailClientProps) {
-  const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
+    const { addItem, getItem, toggleDrawingNeed, removeItem } = useSelectionCart();
+
+const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
   const [activeThumb, setActiveThumb] = useState(0);
   const [isZooming, setIsZooming] = useState(false);
@@ -289,6 +600,62 @@ export default function ProductDetailClient({
     setActiveThumb((current) => (current === 2 ? 0 : current + 1));
   }
 
+  function getDetailCartProductCode() {
+    return String(
+      data.modelDisplay ||
+        data.displayModel ||
+        data.foreachModel ||
+        data.model ||
+        data.productCode ||
+        data.slug ||
+        ""
+    ).trim();
+  }
+
+  function createDetailCartItem(needDrawing: boolean): SelectionCartItemInput {
+    const productCode = getDetailCartProductCode();
+    const modelText = String(
+      data.modelDisplay ||
+        data.displayModel ||
+        data.foreachModel ||
+        data.model ||
+        data.title ||
+        productCode
+    ).trim();
+
+    return {
+      sourceType: "pump-selection",
+      sourceLabel: "产品详情页",
+      productName: String(
+        data.productTypeName ||
+          data.seriesName ||
+          data.series ||
+          "隔膜泵"
+      ).trim(),
+      productCode,
+      foreachModel: modelText,
+      competitorModels: [],
+      quantity: 1,
+      needDrawing,
+      imagePath:
+        data.imageCard ||
+        data.image ||
+        data.imageUrl ||
+        data.mainImage ||
+        data.heroImage ||
+        "",
+      detailHref:
+        data.detailHref ||
+        data.href ||
+        (data.slug ? `/products/pumps/diaphragm-pumps/${data.slug}` : ""),
+    };
+  }
+
+  
+  const currentDetailCartItem = getItem("pump-selection", getDetailCartProductCode());
+  const isDetailProductSelected = Boolean(currentDetailCartItem);
+  const isDetailDrawingSelected = Boolean(currentDetailCartItem?.needDrawing);
+
   function handleOpenConfigurator() {
     console.info("配置选择端口预留", data.slug);
   }
@@ -298,7 +665,21 @@ export default function ProductDetailClient({
   }
 
   function handleAddDrawing() {
-    console.info("添加图纸端口预留", data.slug);
+    const item = createDetailCartItem(true);
+
+    if (!item.productCode || !item.foreachModel) {
+      console.warn("详情页清单参数不完整", data);
+      return;
+    }
+
+    const existingItem = getItem("pump-selection", item.productCode);
+
+    if (existingItem) {
+      toggleDrawingNeed(existingItem.id, !existingItem.needDrawing);
+      return;
+    }
+
+    addItem(item);
   }
 
   function handleRequest3DFile() {
@@ -306,7 +687,21 @@ export default function ProductDetailClient({
   }
 
   function handleAddList() {
-    console.info("加入清单端口预留", data.slug);
+    const item = createDetailCartItem(false);
+
+    if (!item.productCode || !item.foreachModel) {
+      console.warn("详情页清单参数不完整", data);
+      return;
+    }
+
+    const existingItem = getItem("pump-selection", item.productCode);
+
+    if (existingItem) {
+      removeItem(existingItem.id);
+      return;
+    }
+
+    addItem(item);
   }
 
   return (
@@ -347,7 +742,7 @@ export default function ProductDetailClient({
               {activeRealImage ? (
                 <img data-product-main-image="true"
                   src={activeRealImage}
-                  alt={`${data.model} ${data.name}`}
+                  alt={(data as any).imageAltEn || (data as any).mainImageAlt || (data as any).imageAlt || `${data.model} ${data.name}`}
                 />
               ) : (
                 <svg
@@ -586,7 +981,7 @@ export default function ProductDetailClient({
             </div>
 
             <p className={styles.productDesc}>
-              {data.advantages.join("")}
+              {(data as any).description || (Array.isArray(data.advantages) ? data.advantages.join("") : "")}
             </p>
 
             <div className={styles.application}>
@@ -607,7 +1002,14 @@ export default function ProductDetailClient({
                     className={styles.button}
                     type="button"
                     onClick={() => {
-                      window.location.href = getModelActionHref(data);
+                      const href = getModelActionHref(data);
+
+                      if (isCustomInquiryMode(data)) {
+                        window.location.href = href;
+                        return;
+                      }
+
+                      window.open(href, "_blank", "noopener,noreferrer");
                     }}
                   >
                     {getModelActionText(data)}
@@ -640,9 +1042,10 @@ export default function ProductDetailClient({
                   <button
                     className={styles.button}
                     type="button"
+                    aria-pressed={isDetailDrawingSelected}
                     onClick={handleAddDrawing}
                   >
-                    添加图纸
+                    {isDetailDrawingSelected ? "已添加图纸" : "添加图纸"}
                   </button>
                 ) : null}
 
@@ -659,9 +1062,10 @@ export default function ProductDetailClient({
                 <button
                   className={styles.button}
                   type="button"
+                  aria-pressed={isDetailProductSelected}
                   onClick={handleAddList}
                 >
-                  加入清单
+                  {isDetailProductSelected ? "已加入清单" : "加入清单"}
                 </button>
               </div>
             </div>

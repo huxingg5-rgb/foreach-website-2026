@@ -1,0 +1,88 @@
+﻿"use client";
+
+import type { ProductSelectionProductItem } from "./product-selection-ui.types";
+import { getProductCardSpecs } from "@/data/products/selection/card-copy/plunger-pump-card-copy";
+
+type ProductSelectionCardProps = {
+  product: ProductSelectionProductItem;
+  title: string;
+  subtitle: string;
+  detailHref: string;
+  isAdded: boolean;
+  isDrawingRequested: boolean;
+  isModel3dRequested: boolean;
+  addToListText: string;
+  addedToListText: string;
+  onRequestDrawing: (product: ProductSelectionProductItem) => void;
+  onRequestModel3d: (product: ProductSelectionProductItem) => void;
+  onToggleList: (product: ProductSelectionProductItem) => void;
+};
+
+export default function ProductSelectionCard({
+  product,
+  title,
+  subtitle,
+  detailHref,
+  isAdded,
+  isDrawingRequested,
+  isModel3dRequested,
+  addToListText,
+  addedToListText,
+  onRequestDrawing,
+  onRequestModel3d,
+  onToggleList,
+}: ProductSelectionCardProps) {
+  const cardSpecs = getProductCardSpecs(product);
+
+  return (
+    <article className="product-card" title={title}>
+      <span className="selected-bar" />
+
+      <a className="product-image" aria-label={title} href={detailHref}>
+        {product.imageCard ? (
+          <img src={product.imageCard} alt={title} loading="lazy" />
+        ) : (
+          <div className="product-image-placeholder">暂无图片</div>
+        )}
+      </a>
+
+      <div className="product-body">
+        <h3 className="product-title">{title}</h3>
+
+        {cardSpecs.length > 0 ? (
+          <ul className="product-card-specs" aria-label={`${title} 核心参数`}>
+            {cardSpecs.map((spec) => (
+              <li key={spec.label}>{spec.label}</li>
+            ))}
+          </ul>
+        ) : null}
+
+        <div className="product-actions">
+          <button
+            className={`product-link ${isDrawingRequested ? "active" : ""}`}
+            type="button"
+            onClick={() => onRequestDrawing(product)}
+          >
+            {isDrawingRequested ? "已添加图纸" : "添加图纸"}
+          </button>
+
+          <button
+            className={`model3d-toggle ${isModel3dRequested ? "active" : ""}`}
+            type="button"
+            onClick={() => onRequestModel3d(product)}
+          >
+            {isModel3dRequested ? "已申请3D" : "申请3D"}
+          </button>
+
+          <button
+            className={`list-toggle ${isAdded ? "active" : ""}`}
+            type="button"
+            onClick={() => onToggleList(product)}
+          >
+            {isAdded ? addedToListText : addToListText}
+          </button>
+        </div>
+      </div>
+    </article>
+  );
+}

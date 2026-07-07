@@ -2103,3 +2103,120 @@
 
 /* ===== FOREACH model text same size bold END ===== */
 
+
+
+
+
+
+
+/* 详情页：常见应用标题不变，只调整下方应用内容字号 */
+.commonApplicationsText,
+.commonApplicationText,
+.applicationText,
+.applicationContent,
+.applicationItems,
+.applicationList,
+.productApplications,
+.productApplicationList,
+.scenarioText,
+.scenarioContent {
+  font-size: 18px;
+  line-height: 1.75;
+  font-weight: 400;
+}
+
+.commonApplicationsText li,
+.commonApplicationText li,
+.applicationText li,
+.applicationContent li,
+.applicationItems li,
+.applicationList li,
+.productApplications li,
+.productApplicationList li,
+.scenarioText li,
+.scenarioContent li,
+.commonApplicationsText span,
+.commonApplicationText span,
+.applicationText span,
+.applicationContent span,
+.applicationItems span,
+.applicationList span,
+.productApplications span,
+.productApplicationList span,
+.scenarioText span,
+.scenarioContent span {
+  font-size: 18px;
+  line-height: 1.75;
+  font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== FOREACH product detail FAQ fixed area final START ===== */
+.faqSection {
+  height: 560px !important;
+  min-height: 560px !important;
+  margin-top: 36px !important;
+  margin-bottom: 50px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  overflow: hidden !important;
+}
+
+.faqList {
+  margin-bottom: 0 !important;
+  overflow: visible !important;
+}
+
+.faqItemOpen .faqAnswerWrap {
+  max-height: 190px !important;
+}
+
+.plungerBottomCta {
+  margin-top: 0 !important;
+}
+
+.plungerBottomCtaInner {
+  min-height: 250px !important;
+  padding: 58px 0 !important;
+}
+
+@media (max-width: 768px) {
+  .faqSection {
+    height: 520px !important;
+    min-height: 520px !important;
+    margin-top: 28px !important;
+    margin-bottom: 42px !important;
+  }
+
+  .faqItemOpen .faqAnswerWrap {
+    max-height: 220px !important;
+  }
+}
+/* ===== FOREACH product detail FAQ fixed area final END ===== */
+
+
+
+/* ===== FOREACH product detail button pressed state START ===== */
+/* 详情页按钮选中态：保持原按钮结构，只在 aria-pressed=true 时显示已选中 */
+.button[aria-pressed="true"] {
+  background: var(--brand-blue, #005bac) !important;
+  border-color: var(--brand-blue, #005bac) !important;
+  color: #ffffff !important;
+}
+
+.button[aria-pressed="true"]:hover {
+  background: var(--brand-blue, #005bac) !important;
+  border-color: var(--brand-blue, #005bac) !important;
+  color: #ffffff !important;
+}
+/* ===== FOREACH product detail button pressed state END ===== */

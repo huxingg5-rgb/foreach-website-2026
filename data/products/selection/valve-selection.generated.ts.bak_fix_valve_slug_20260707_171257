@@ -1,0 +1,237 @@
+/* =========================================================
+   valve-selection.generated.ts
+   FOREACH 官网｜阀系列产品中心卡片数据
+
+   说明：
+   1. 当前文件用于产品中心“阀系列”第一版上线
+   2. 阀系列按产品类型拆分：
+      - 旋转阀
+      - 高压阀
+      - 电磁阀
+   3. 不再额外显示“产品系列”层级
+   4. id / slug / href 使用英文，页面显示使用中文
+========================================================= */
+
+import type { ProductSelectionProduct } from "./product-selection.types";
+
+export const valveFilterLabels = [
+  "旋转阀",
+  "高压阀",
+  "电磁阀",
+] as const;
+
+const valveProducts = [
+  {
+    id: "mrv3-ceramic-rotary-valve",
+    slug: "rotary-valves",
+    productId: "mrv3-ceramic-rotary-valve",
+    productCode: "MRV3-D16-10-U28APE-MD",
+    code: "MRV3-D16-10-U28APE-MD",
+
+    categoryId: "valves",
+    categoryLabel: "阀系列",
+
+    productTypeId: "旋转阀",
+    productTypeLabel: "旋转阀",
+
+    model: "MRV3 陶瓷多通道旋转阀",
+    title: "MRV3 陶瓷多通道旋转阀",
+    name: "MRV3 陶瓷多通道旋转阀",
+    productName: "MRV3 陶瓷多通道旋转阀",
+
+    cardTitle: {
+      zh: "MRV3 陶瓷多通道旋转阀",
+      en: "MRV3 Ceramic Multi-channel Rotary Valve",
+    },
+
+    cardSubtitle: {
+      zh: "10 / 16 / 24 通道可选\n耐压 0.7MPa，内容积低至 2.9μL\n适用于多试剂、多清洗液路径切换",
+      en: "10 / 16 / 24 channels available\n0.7MPa pressure rating, internal volume down to 2.9μL\nFor multi-reagent and wash path switching",
+    },
+
+    image: "/images/products/VALVE/Rotary valve_200x200_01_v001.jpg",
+    imagePath: "/images/products/VALVE/Rotary valve_200x200_01_v001.jpg",
+    imageUrl: "/images/products/VALVE/Rotary valve_200x200_01_v001.jpg",
+    imageAlt: "MRV3 陶瓷多通道旋转阀",
+
+    subtitle: "10 / 16 / 24 通道可选，适用于多试剂和清洗路径切换",
+    description:
+      "MRV3 陶瓷多通道旋转阀用于自动化分析仪器中的多通道流路切换、试剂选择、样本分配和清洗路径管理。",
+
+    summary:
+      "10 / 16 / 24 通道可选，耐压 0.7MPa，内容积低至 2.9μL。",
+
+    tags: ["多通道切换", "0.7MPa", "低内容积"],
+
+    specs: [
+      { label: "产品类型", value: "旋转阀" },
+      { label: "通道数量", value: "10 / 16 / 24" },
+      { label: "通道直径", value: "1.2 / 1.0 / 0.5mm" },
+      { label: "内容积", value: "15.8 / 10 / 2.9μL" },
+      { label: "耐压", value: "0.7MPa" },
+      { label: "接口", value: "1/4-28UNF / 6-40UNF" },
+      { label: "寿命", value: "100万圈" },
+    ],
+
+    filter01: "旋转阀",
+    filter02: "多通道切换",
+    filter03: "0.7MPa",
+    filter04: "定制配置",
+
+    filters: {
+      filter01: "旋转阀",
+      filter02: "多通道切换",
+      filter03: "0.7MPa",
+      filter04: "定制配置",
+    },
+
+    href: "/products/valves/rotary-valves",
+    detailHref: "/products/valves/rotary-valves",
+    selectionHref: "/products",
+    sourceType: "valve-selection",
+  },
+
+  {
+    id: "hp-3-position-7-port-high-pressure-valve",
+    slug: "high-pressure-valves",
+    productId: "hp-3-position-7-port-high-pressure-valve",
+    productCode: "HP-37SSU3204",
+    code: "HP-37SSU3204",
+
+    categoryId: "valves",
+    categoryLabel: "阀系列",
+
+    productTypeId: "高压阀",
+    productTypeLabel: "高压阀",
+
+    model: "HP 三位七通高压阀",
+    title: "HP 三位七通高压阀",
+    name: "HP 三位七通高压阀",
+    productName: "HP 三位七通高压阀",
+
+    cardTitle: {
+      zh: "HP 三位七通高压阀",
+      en: "HP 3-position 7-port High-pressure Valve",
+    },
+
+    cardSubtitle: {
+      zh: "三位七通高压流路控制\n耐压 25MPa，内体积 0.8μL\n适用于 HPLC 自动进样与排气场景",
+      en: "3-position 7-port high-pressure flow control\n25MPa pressure rating, 0.8μL internal volume\nFor HPLC autosampling and venting applications",
+    },
+
+    image: "/images/products/common/product-placeholder.svg",
+    imagePath: "/images/products/common/product-placeholder.svg",
+    imageUrl: "/images/products/common/product-placeholder.svg",
+    imageAlt: "HP 三位七通高压阀",
+
+    subtitle: "三位七通高压流路控制，适用于 HPLC 自动进样与排气场景",
+    description:
+      "HP 三位七通高压阀用于高压流体控制、HPLC 自动进样、进样位 / 抽样位 / 排气位切换和分析仪器高压流路管理。",
+
+    summary:
+      "三位七通结构，耐压 25MPa，内体积 0.8μL，接口 10-32UNF。",
+
+    tags: ["25MPa", "三位七通", "HPLC"],
+
+    specs: [
+      { label: "产品类型", value: "高压阀" },
+      { label: "结构", value: "三位七通" },
+      { label: "最大工作压力", value: "25MPa" },
+      { label: "通道直径", value: "0.4mm" },
+      { label: "内体积", value: "0.8μL" },
+      { label: "接口", value: "10-32UNF" },
+      { label: "寿命", value: "15万 cycles（纯水）" },
+    ],
+
+    filter01: "高压阀",
+    filter02: "高压控制",
+    filter03: "25MPa",
+    filter04: "定制配置",
+
+    filters: {
+      filter01: "高压阀",
+      filter02: "高压控制",
+      filter03: "25MPa",
+      filter04: "定制配置",
+    },
+
+    href: "/products/valves/high-pressure-valves",
+    detailHref: "/products/valves/high-pressure-valves",
+    selectionHref: "/products",
+    sourceType: "valve-selection",
+  },
+
+  {
+    id: "6010-solenoid-valve",
+    slug: "solenoid-valves",
+    productId: "6010-solenoid-valve",
+    productCode: "SV10",
+    code: "SV10",
+
+    categoryId: "valves",
+    categoryLabel: "阀系列",
+
+    productTypeId: "电磁阀",
+    productTypeLabel: "电磁阀",
+
+    model: "6010 系列电磁阀",
+    title: "6010 系列电磁阀",
+    name: "6010 系列电磁阀",
+    productName: "6010 系列电磁阀",
+
+    cardTitle: {
+      zh: "6010 系列电磁阀",
+      en: "6010 Series Solenoid Valve",
+    },
+
+    cardSubtitle: {
+      zh: "2通 / 3通，NO / NC / 万向可选\n-75kPa～0.25MPa，孔口直径 1.4mm\n支持基板型、螺纹型和倒刺型配置",
+      en: "2-port / 3-port, NO / NC / universal options\n-75kPa to 0.25MPa, 1.4mm orifice\nPanel-mount, threaded and barbed configurations",
+    },
+
+    image: "/images/products/VALVE/Solenoid valve_200x200_01_v001.jpg",
+    imagePath: "/images/products/VALVE/Solenoid valve_200x200_01_v001.jpg",
+    imageUrl: "/images/products/VALVE/Solenoid valve_200x200_01_v001.jpg",
+    imageAlt: "6010 系列电磁阀",
+
+    subtitle: "2通 / 3通，NO / NC / 万向可选，适用于液路通断控制",
+    description:
+      "6010 系列电磁阀用于自动化仪器中的液路通断控制、试剂路径控制、清洗路径控制和阀组集成。",
+
+    summary:
+      "2通 / 3通结构可选，压力范围 -75kPa～0.25MPa，CV 0.03。",
+
+    tags: ["通断控制", "CV 0.03", "2通 / 3通"],
+
+    specs: [
+      { label: "产品类型", value: "电磁阀" },
+      { label: "结构形式", value: "基板型 / 螺纹型 / 倒刺型" },
+      { label: "通口数", value: "2 / 3" },
+      { label: "阀形式", value: "万向 / NO / NC" },
+      { label: "使用压力范围", value: "-75kPa～0.25MPa" },
+      { label: "孔口直径", value: "1.4mm" },
+      { label: "CV", value: "0.03" },
+      { label: "膜片材质", value: "EPDM / FKM / FFKM" },
+    ],
+
+    filter01: "电磁阀",
+    filter02: "通断控制",
+    filter03: "-75kPa～0.25MPa",
+    filter04: "定制配置",
+
+    filters: {
+      filter01: "电磁阀",
+      filter02: "通断控制",
+      filter03: "-75kPa～0.25MPa",
+      filter04: "定制配置",
+    },
+
+    href: "/products/valves/solenoid-valves",
+    detailHref: "/products/valves/solenoid-valves",
+    selectionHref: "/products",
+    sourceType: "valve-selection",
+  },
+] as const;
+
+export const valveSelectionProducts =
+  valveProducts as unknown as ProductSelectionProduct[];

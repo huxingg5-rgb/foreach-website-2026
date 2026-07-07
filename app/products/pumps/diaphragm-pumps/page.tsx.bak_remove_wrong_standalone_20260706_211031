@@ -1,0 +1,137 @@
+﻿import Link from "next/link";
+import "./diaphragm-pump-detail.css";
+
+import cardsJson from "@/data/products/generated/pumps/diaphragm-pumps/selection/cards.json";
+import mediaJson from "@/data/products/generated/pumps/diaphragm-pumps/media/media.json";
+
+type DiaphragmSelectionCard = {
+  cardId?: string;
+  category?: string;
+  series?: string;
+  title: string;
+  description: string;
+  flowRate?: string;
+  pressure?: string;
+  motorType?: string;
+  targetSeriesSlug: string;
+  imageKey?: string;
+  alt?: string;
+};
+
+type DiaphragmMedia = {
+  resourceId?: string;
+  fullPath?: string;
+  alt?: string;
+};
+
+const cards = cardsJson as DiaphragmSelectionCard[];
+const media = mediaJson as DiaphragmMedia[];
+
+function toPublicSrc(fullPath?: string) {
+  const value = String(fullPath || "").replaceAll("\\", "/");
+
+  if (!value) return "";
+  if (value.startsWith("public/")) return "/" + value.slice("public/".length);
+  if (value.startsWith("/public/")) return value.replace(/^\/public\//, "/");
+
+  return value.startsWith("/") ? value : "/" + value;
+}
+
+function getCardImage(card: DiaphragmSelectionCard) {
+  const item = media.find((entry) => entry.resourceId === card.imageKey);
+  return item ? toPublicSrc(item.fullPath) : "";
+}
+
+function groupByCategory(items: DiaphragmSelectionCard[]) {
+  return items.reduce<Record<string, DiaphragmSelectionCard[]>>((acc, item) => {
+    const key = item.category || "隔膜泵";
+    acc[key] = acc[key] || [];
+    acc[key].push(item);
+    return acc;
+  }, {});
+}
+
+const groupedCards = groupByCategory(cards);
+
+export const metadata = {
+  title: "隔膜泵选型 | FOREACH",
+  description:
+    "恒永达隔膜泵选型页，包含 DPL30、DPL60、DPL30H 液体隔膜泵和 DPGL800 气液混合隔膜泵基础型号。",
+};
+
+export default function DiaphragmPumpSelectionPage() {
+  return (
+    <main className="diaphragm-selection-page">
+      <div className="diaphragm-selection-inner">
+        <nav className="diaphragm-breadcrumb" aria-label="Breadcrumb">
+          <Link href="/products">产品中心</Link>
+          <span>/</span>
+          <Link href="/products/pumps">泵</Link>
+          <span>/</span>
+          <span>隔膜泵</span>
+        </nav>
+
+        <section className="diaphragm-selection-hero">
+          <div>
+            <div className="diaphragm-kicker">DIAPHRAGM PUMPS</div>
+            <h1 className="diaphragm-title">隔膜泵选型</h1>
+            <p className="diaphragm-selection-desc">
+              恒永达隔膜泵系列适用于仪器内部气体抽吸、液体输送、清洗液转移、废液抽排、负压建立和气液混合物抽排等流体控制场景。当前页面展示常用基础型号，可根据电机类型、流量和压力快速进入详情页确认规格与型号配置。
+            </p>
+          </div>
+        </section>
+
+        {Object.entries(groupedCards).map(([category, items]) => (
+          <section className="diaphragm-selection-section" key={category}>
+            <div className="diaphragm-selection-section-head">
+              <h2>{category}</h2>
+              <span>{items.length} 个基础型号</span>
+            </div>
+
+            <div className="diaphragm-selection-grid">
+              {items.map((card) => {
+                const imageSrc = getCardImage(card);
+
+                return (
+                  <article className="diaphragm-selection-card" key={card.cardId || card.title}>
+                    <Link
+                      className="diaphragm-selection-image"
+                      href={`/products/pumps/diaphragm-pumps/${card.targetSeriesSlug}`}
+                    >
+                      {imageSrc ? (
+                        <img src={imageSrc} alt={card.alt || card.title} />
+                      ) : (
+                        <div className="diaphragm-selection-placeholder">
+                          <strong>{card.series || card.title}</strong>
+                          <span>产品图待放置</span>
+                        </div>
+                      )}
+                    </Link>
+
+                    <div className="diaphragm-selection-body">
+                      <h3>{card.title}</h3>
+                      <p>{card.description}</p>
+
+                      <div className="diaphragm-selection-meta">
+                        {card.motorType && <span>{card.motorType}</span>}
+                        {card.flowRate && <span>{card.flowRate}</span>}
+                        {card.pressure && <span>{card.pressure}</span>}
+                      </div>
+
+                      <Link
+                        className="diaphragm-selection-detail"
+                        href={`/products/pumps/diaphragm-pumps/${card.targetSeriesSlug}`}
+                      >
+                        查看详情
+                      </Link>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          </section>
+        ))}
+      </div>
+    </main>
+  );
+}

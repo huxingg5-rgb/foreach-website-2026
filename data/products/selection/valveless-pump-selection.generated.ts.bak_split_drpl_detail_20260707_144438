@@ -1,0 +1,161 @@
+/* =========================================================
+   valveless-pump-selection.generated.ts
+   产品中心｜无阀泵筛选页数据
+
+   说明：
+   1. 无阀泵为定制型产品，不按标准 SKU 做复杂筛选
+   2. 页面展示 5 个定制配置卡片：RPL-P4 / RPL-P6.35 / RPL-P15 / DRPL-0109-0100 / DRPL-0119-0060
+   3. 不新增独立页面样式，沿用公共产品筛选页组件
+========================================================= */
+
+import type {
+  ProductSelectionFilterLabel,
+  ProductSelectionProduct,
+} from "./product-selection.types";
+
+export const valvelessPumpSelectionProducts: ProductSelectionProduct[] = [
+  {
+    productId: "pump-rpl-p4-valveless",
+    categoryId: "pumps",
+    productTypeId: "valveless-pump",
+    seriesId: "rpl-p4",
+    cardTitle: {
+      zh: "RPL-P4 小量程无阀泵",
+      en: "RPL-P4 Small-Volume Valveless Pump",
+    },
+    cardSubtitle: {
+      zh: "12–80 μL/rev 小量程输送\n适用于微量加样、滴定场景\n支持定制排量与接口配置",
+      en: "12–80 μL/rev small-volume dispensing\nFor micro dispensing and titration\nCustom displacement and port options",
+    },
+    filters: {
+      filter01: "RPL 无阀泵",
+    },
+    imageCard: "/images/products/pumps/valveless-pumps/foreach-rpl-p4-valveless-pump.webp",
+    detailSlug: "rpl-p4",
+    status: "active",
+    sortOrder: 1101,
+    searchKeywords: {
+      zh: "RPL-P4 无阀泵 12–80 μL/rev 小量程 微量加样 滴定 定量输送 valveless pump",
+      en: "RPL-P4 valveless pump 12–80 μL/rev micro dispensing titration",
+    },
+  },
+  {
+    productId: "pump-rpl-p635-valveless",
+    categoryId: "pumps",
+    productTypeId: "valveless-pump",
+    seriesId: "rpl-p635",
+    cardTitle: {
+      zh: "RPL-P6.35 中小量程无阀泵",
+      en: "RPL-P6.35 Mid-Small Volume Valveless Pump",
+    },
+    cardSubtitle: {
+      zh: "50–300 μL/rev 中小量程输送\n适用于加样、灌装场景\n支持清洗口与液路配置",
+      en: "50–300 μL/rev mid-small volume dispensing\nFor reagent dispensing and filling\nWash port and fluidic configuration options",
+    },
+    filters: {
+      filter01: "RPL 无阀泵",
+    },
+    imageCard: "/images/products/pumps/valveless-pumps/foreach-rpl-p635-valveless-pump.webp",
+    detailSlug: "rpl-p635",
+    status: "active",
+    sortOrder: 1102,
+    searchKeywords: {
+      zh: "RPL-P6.35 无阀泵 50–300 μL/rev 加样 灌装 清洗口 液路配置 valveless pump",
+      en: "RPL-P6.35 valveless pump 50–300 μL/rev dispensing filling wash port",
+    },
+  },
+  {
+    productId: "pump-rpl-p15-valveless",
+    categoryId: "pumps",
+    productTypeId: "valveless-pump",
+    seriesId: "rpl-p15",
+    cardTitle: {
+      zh: "RPL-P15 中大量程无阀泵",
+      en: "RPL-P15 Mid-Large Volume Valveless Pump",
+    },
+    cardSubtitle: {
+      zh: "300–1200 μL/rev 中大量程输送\n适用于加液、灌装场景\n支持接口与安装方式定制",
+      en: "300–1200 μL/rev mid-large volume dispensing\nFor liquid addition and filling\nCustom ports and mounting options",
+    },
+    filters: {
+      filter01: "RPL 无阀泵",
+    },
+    imageCard: "/images/products/pumps/valveless-pumps/foreach-rpl-p15-valveless-pump.webp",
+    detailSlug: "rpl-p15",
+    status: "active",
+    sortOrder: 1103,
+    searchKeywords: {
+      zh: "RPL-P15 无阀泵 300–1200 μL/rev 加液 灌装 接口 安装方式 valveless pump",
+      en: "RPL-P15 valveless pump 300–1200 μL/rev liquid addition filling",
+    },
+  },
+  {
+    productId: "pump-drpl-0109-0100-valveless",
+    categoryId: "pumps",
+    productTypeId: "valveless-pump",
+    seriesId: "drpl-0109-0100",
+    cardTitle: {
+      zh: "DRPL-0109 双头无阀泵",
+      en: "DRPL-0109 Dual-Head Valveless Pump",
+    },
+    cardSubtitle: {
+      zh: "1:9 双头比例输送结构\n浓缩液 100 μL，稀释液 900 μL\n适用于 1 mL 配液量场景",
+      en: "1:9 dual-head proportional dispensing\n100 μL concentrate and 900 μL diluent\nFor 1 mL dilution and dispensing",
+    },
+    filters: {
+      filter01: "DRPL 双头无阀泵",
+    },
+    imageCard: "/images/products/pumps/valveless-pumps/foreach-drpl-dual-head-valveless-pump.webp",
+    detailSlug: "drpl",
+    status: "active",
+    sortOrder: 1104,
+    searchKeywords: {
+      zh: "DRPL-0109-0100 双头无阀泵 1:9 浓缩液 100 μL 稀释液 900 μL 配液量 1 mL QMin 60 QMax 300 比例输送 valveless pump",
+      en: "DRPL-0109-0100 dual-head valveless pump 1:9 proportional dispensing 100 μL 900 μL 1 mL",
+    },
+  },
+  {
+    productId: "pump-drpl-0119-0060-valveless",
+    categoryId: "pumps",
+    productTypeId: "valveless-pump",
+    seriesId: "drpl-0119-0060",
+    cardTitle: {
+      zh: "DRPL-0119 双头无阀泵",
+      en: "DRPL-0119 Dual-Head Valveless Pump",
+    },
+    cardSubtitle: {
+      zh: "1:19 双头比例输送结构\n浓缩液 60 μL，稀释液 1140 μL\n适用于 1.2 mL 配液量场景",
+      en: "1:19 dual-head proportional dispensing\n60 μL concentrate and 1140 μL diluent\nFor 1.2 mL dilution and dispensing",
+    },
+    filters: {
+      filter01: "DRPL 双头无阀泵",
+    },
+    imageCard: "/images/products/pumps/valveless-pumps/foreach-drpl-dual-head-valveless-pump.webp",
+    detailSlug: "drpl",
+    status: "active",
+    sortOrder: 1105,
+    searchKeywords: {
+      zh: "DRPL-0119-0060 双头无阀泵 1:19 浓缩液 60 μL 稀释液 1140 μL 配液量 1.2 mL QMin 72 QMax 360 比例输送 valveless pump",
+      en: "DRPL-0119-0060 dual-head valveless pump 1:19 proportional dispensing 60 μL 1140 μL 1.2 mL",
+    },
+  },
+];
+
+export const valvelessPumpFilterLabels: ProductSelectionFilterLabel[] = [
+  {
+    categoryId: "pumps",
+    productTypeId: "valveless-pump",
+    filterKey: "filter01",
+    label: {
+      zh: "产品系列",
+      en: "Series",
+      es: "",
+      fr: "",
+      ko: "",
+      ru: "",
+    },
+    inputType: "single",
+    sortOrder: 10,
+    visible: true,
+  },
+];

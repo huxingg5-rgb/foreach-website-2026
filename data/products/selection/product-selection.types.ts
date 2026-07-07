@@ -26,29 +26,112 @@ export type SelectionFilterKey =
   | "filter07"
   | "filter08";
 
-export interface ProductSelectionProduct {
+export type LocalizedText =
+  | string
+  | {
+      zh?: string;
+      en?: string;
+      es?: string;
+      fr?: string;
+      ko?: string;
+      ru?: string;
+      [key: string]: string | undefined;
+    };
+
+export type ProductSelectionProduct = {
   productId: string;
-  categoryId: string;
-  productTypeId: string;
-  seriesId: string;
-  cardTitle: {
-    zh: string;
-    en: string;
-  };
-  cardSubtitle: {
-    zh: string;
-    en: string;
-  };
-  filters: Partial<Record<SelectionFilterKey, string>>;
-  imageCard: string;
-  detailSlug: string;
-  status: SelectionStatus;
-  sortOrder: number;
-  searchKeywords: {
-    zh: string;
-    en: string;
-  };
-}
+
+  categoryId?: string;
+  category?: string;
+  categorySlug?: string;
+  categoryName?: string;
+  categoryLabel?: string;
+
+  productTypeId?: string;
+  productType?: string;
+  productTypeSlug?: string;
+  productTypeName?: string;
+  productTypeLabel?: string;
+
+  seriesId?: string;
+  series?: string;
+  seriesSlug?: string;
+  seriesName?: string;
+
+  detailSlug?: string;
+  routeSlug?: string;
+  reservedConfigSlug?: string;
+  slug?: string;
+
+  href?: string;
+  detailHref?: string;
+  productDetailHref?: string;
+  selectionHref?: string;
+
+  model?: string;
+  title?: any;
+  name?: any;
+  productName?: any;
+  subtitle?: any;
+  summary?: any;
+  description?: any;
+  code?: any;
+  productCode?: any;
+
+  cardTitle?: any;
+  cardSubtitle?: any;
+  cardDescription?: any;
+
+  image?: string;
+  imageCard?: string;
+  cardImage?: string;
+  imagePath?: string;
+  imageUrl?: string;
+  imageAlt?: any;
+
+  status?: string;
+  enabled?: boolean;
+  visible?: boolean;
+  sort?: number;
+  sortOrder?: number;
+  order?: number;
+  level?: number;
+  parentId?: string;
+  id?: string;
+
+  filter01?: string;
+  filter02?: string;
+  filter03?: string;
+  filter04?: string;
+  filter05?: string;
+  filter06?: string;
+  filterKey?: string;
+  inputType?: string;
+  label?: any;
+
+  filters?: Record<string, string | number | boolean | null | undefined>;
+
+  searchKeywords?: any;
+
+  tags?: string[];
+  badges?: string[];
+  specs?: any[];
+
+  source?: string;
+  sourceType?: string;
+
+  needDrawing?: boolean;
+  needModel3d?: boolean;
+
+  flowRate?: string;
+  pressure?: string;
+  motorType?: string;
+  serviceLife?: string;
+
+  content?: Record<string, any>;
+
+  [key: string]: any;
+};
 
 export interface ProductSelectionFilterLabel {
   categoryId: string;

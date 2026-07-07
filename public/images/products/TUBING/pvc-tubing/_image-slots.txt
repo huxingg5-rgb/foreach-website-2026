@@ -1,0 +1,13 @@
+图片放置说明
+
+页面：PVC 管
+路由：/products/tubing/pvc-tubing
+
+请把主图放到：
+public/images/products/tubing/pvc-tubing/pvc-tubing-main.webp
+
+可选角度图：
+public/images/products/tubing/pvc-tubing/pvc-tubing-view-02.webp
+public/images/products/tubing/pvc-tubing/pvc-tubing-view-03.webp
+public/images/products/tubing/pvc-tubing/pvc-tubing-view-04.webp
+public/images/products/tubing/pvc-tubing/pvc-tubing-view-05.webp

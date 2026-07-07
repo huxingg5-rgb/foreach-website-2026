@@ -1,4 +1,4 @@
-﻿import { notFound } from "next/navigation";
+import { notFound } from "next/navigation";
 import type { ComponentType } from "react";
 import type { Metadata } from "next";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
@@ -36,6 +36,7 @@ type DetailRecord = {
   description?: string;
   category?: string;
   productId?: string;
+  productCode?: string;
   productTypeId?: string;
   productTypeSlug?: string;
   seriesId?: string;
@@ -161,7 +162,6 @@ function toClientData(detail: DetailRecord) {
     showConfigurator: Boolean(detail.showConfigurator),
     showDatasheetRequest: Boolean(detail.showDatasheetRequest),
     showDrawingRequest: Boolean(detail.showDrawingRequest),
-    show3DRequest: Boolean(detail.show3DRequest),
     specSeriesKey: detail.specSeriesKey || detail.slug,
     specs,
     specifications: specs,
@@ -178,10 +178,12 @@ function toClientData(detail: DetailRecord) {
     modelDisplay: detail.modelDisplay || detail.model,
     displayModel: detail.displayModel || detail.model,
     foreachModel: detail.foreachModel || detail.model,
-    productCode: detail.model,
+    productCode: detail.productCode || detail.modelDisplay || detail.displayModel || detail.model,
     model3dUrl: detail.model3dUrl || detail.resources?.model3dUrl || "",
     drawing2dUrl: detail.drawing2dUrl || detail.resources?.drawing2dUrl || "",
     drawingPdfUrl: detail.drawingPdfUrl || detail.drawing2dUrl || detail.resources?.drawing2dUrl || "",
+
+    show3DRequest: false,
     resources: {
       model3dUrl: detail.model3dUrl || detail.resources?.model3dUrl || "",
       drawing2dUrl: detail.drawing2dUrl || detail.resources?.drawing2dUrl || "",

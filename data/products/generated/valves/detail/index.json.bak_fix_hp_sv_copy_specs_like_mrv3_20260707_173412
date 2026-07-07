@@ -1,0 +1,371 @@
+[
+  {
+    "slug": "rotary-valves",
+    "productTypeId": "rotary-valves",
+    "productTypeName": "旋转阀",
+    "title": "MRV3 陶瓷多通道旋转阀",
+    "modelName": "MRV3 陶瓷多通道旋转阀",
+    "image": "/images/products/valves/rotary-valves/mrv3-ceramic-rotary-valve-main.webp",
+    "description": "MRV3 陶瓷多通道旋转阀是一款用于自动化分析仪器多路径流路切换的机械式旋转阀，可在 10 通道、16 通道和 24 通道配置中实现试剂、样本、清洗液和废液路径的集中切换。产品通过电机旋转与光耦定位完成端口切换，适用于需要多通道选择、阀位定位、低内容积和稳定进样的 IVD、生命科学和实验室自动化液路模块。规格书参数覆盖 1.2mm、1.0mm、0.5mm 通道直径，内容积 15.8μL、10μL、2.9μL，耐压 0.7MPa，接口支持 1/4-28UNF 与 6-40UNF，可根据通道数量、接口、驱动器和安装空间进行项目配置确认。",
+    "commonApplications": [
+      "多试剂选择",
+      "样本分配",
+      "清洗液切换",
+      "废液路径管理",
+      "多通道液路集成",
+      "自动化分析仪器"
+    ],
+    "advantages": [
+      "10 / 16 / 24 通道可选，适合多试剂和多路径液路集中切换",
+      "内容积低至 2.9μL，可降低混液和残留风险",
+      "耐压 0.7MPa，适合自动化分析仪器常见液路压力范围",
+      "PCTFE、氧化锆陶瓷和蓝宝石触液材质，兼顾耐腐蚀与耐磨需求",
+      "电机驱动与光耦定位，便于整机控制系统识别阀位",
+      "阀头可更换，便于后期维护和不同通道配置切换"
+    ],
+    "specs": [
+      {
+        "label": "名称",
+        "value": "陶瓷转阀"
+      },
+      {
+        "label": "通道数量",
+        "value": "10 / 16 / 24"
+      },
+      {
+        "label": "通道直径",
+        "value": "1.2mm / 1.0mm / 0.5mm"
+      },
+      {
+        "label": "内容积",
+        "value": "15.8μL / 10μL / 2.9μL"
+      },
+      {
+        "label": "螺纹接口",
+        "value": "1/4-28UNF / 6-40UNF"
+      },
+      {
+        "label": "耐压",
+        "value": "0.7MPa"
+      },
+      {
+        "label": "触液材质",
+        "value": "PCTFE / 氧化锆陶瓷 / 蓝宝石"
+      },
+      {
+        "label": "初始位置",
+        "value": "通电自动复位"
+      },
+      {
+        "label": "切换时间",
+        "value": "≤2s/圈，相邻端口＜100ms"
+      },
+      {
+        "label": "寿命",
+        "value": "100万圈"
+      },
+      {
+        "label": "电机/驱动器",
+        "value": "可选"
+      },
+      {
+        "label": "电机减速比",
+        "value": "1：10"
+      },
+      {
+        "label": "通信接口",
+        "value": "RS232 / RS485"
+      },
+      {
+        "label": "波特率",
+        "value": "9600 / 57600 / 115200"
+      },
+      {
+        "label": "适用电源",
+        "value": "DC24V/2A±10%"
+      },
+      {
+        "label": "最大功率",
+        "value": "48W"
+      },
+      {
+        "label": "工作环境温度",
+        "value": "0-50℃"
+      },
+      {
+        "label": "工作相对湿度",
+        "value": "20-80%RH"
+      },
+      {
+        "label": "外形尺寸",
+        "value": "42*61*132.3mm，详见3.1"
+      },
+      {
+        "label": "安装尺寸",
+        "value": "2-φ3通孔，间距43.5、49.6mm"
+      },
+      {
+        "label": "重量",
+        "value": "约600g"
+      }
+    ],
+    "faq": [
+      {
+        "question": "MRV3 多通道旋转阀适合解决什么液路问题？",
+        "answer": "MRV3 适合把多瓶试剂、多路清洗液、多条废液路径或多个样本路径集中到一个旋转切换单元中，减少外部阀组数量和管路交叉。"
+      },
+      {
+        "question": "10 通道、16 通道和 24 通道如何选择？",
+        "answer": "主要根据实际需要切换的试剂数量、清洗路径数量、废液路径数量和预留端口数量确认。端口数量越多，越适合多试剂或多路径平台化仪器。"
+      },
+      {
+        "question": "MRV3 为什么按定制配置展示？",
+        "answer": "MRV3 涉及通道数量、通道直径、螺纹接口、触液材质、电机、驱动器、通信接口和安装尺寸等配置，实际项目需要结合液路图和整机空间确认。"
+      }
+    ],
+    "seoTitle": "MRV3陶瓷多通道旋转阀｜10/16/24通道流路切换阀｜恒永达 FOREACH",
+    "seoDescription": "MRV3陶瓷多通道旋转阀用于自动化分析仪器中的多试剂选择、样本分配、清洗液切换和废液路径管理，支持10/16/24通道，耐压0.7MPa，内容积低至2.9μL。",
+    "searchKeywords": [
+      "MRV3陶瓷多通道旋转阀",
+      "MRV3旋转阀",
+      "多通道旋转阀",
+      "10通道旋转阀",
+      "16通道旋转阀",
+      "24通道旋转阀",
+      "试剂选择阀",
+      "清洗液切换阀",
+      "IVD流路切换阀"
+    ],
+    "h1Title": "MRV3 陶瓷多通道旋转阀",
+    "pageTitle": "MRV3 陶瓷多通道旋转阀",
+    "bottomCtaTitle": "需要确认 MRV3 多通道旋转阀配置？",
+    "bottomCtaDescription": "请提供试剂数量、清洗路径、废液路径、目标通道数、接口规格、介质类型和安装空间，FOREACH 可协助确认 MRV3 陶瓷多通道旋转阀的通道配置、触液材料、驱动方式和安装方式。",
+    "bottomCtaButtonText": "联系工程师确认旋转阀配置",
+    "bottomCtaHref": "/contact",
+    "customInquiryTitle": "需要确认 MRV3 多通道旋转阀配置？",
+    "customInquiryDescription": "请提供试剂数量、清洗路径、废液路径、目标通道数、接口规格、介质类型和安装空间，FOREACH 可协助确认 MRV3 陶瓷多通道旋转阀的通道配置、触液材料、驱动方式和安装方式。",
+    "customInquiryButtonText": "联系工程师确认旋转阀配置",
+    "customInquiryHref": "/contact",
+    "imageAlt": "MRV3 10/16/24通道陶瓷多通道旋转阀",
+    "additionalImages": [],
+    "images": [],
+    "thumbnails": [],
+    "name": "MRV3 陶瓷多通道旋转阀",
+    "productName": "MRV3 陶瓷多通道旋转阀"
+  },
+  {
+    "slug": "high-pressure-valves",
+    "productTypeId": "high-pressure-valves",
+    "productTypeName": "高压阀",
+    "title": "HP 25MPa三位七通高压阀",
+    "modelName": "HP 25MPa三位七通高压阀",
+    "image": "/images/products/valves/high-pressure-valves/hp-3-position-7-port-high-pressure-valve-main.webp",
+    "description": "HP 25MPa三位七通高压阀用于高压分析液路中的进样位、抽样位、排气位和旁路状态切换，适合 HPLC 自动进样模块、分析仪器高压液路模块和对内体积敏感的高压流路系统。该页面按定制配置展示，选型时需要结合系统压力、流动相介质、接口规格、切换状态、控制方式和安装空间确认。",
+    "commonApplications": [
+      "HPLC自动进样",
+      "高压流路切换",
+      "系统排气",
+      "样品旁路",
+      "高压分析模块",
+      "低内体积液路"
+    ],
+    "advantages": [
+      "25MPa 最大工作压力，适合高压分析液路和 HPLC 自动进样相关场景",
+      "三位七通结构可覆盖进样、抽样、排气等多种液路状态切换",
+      "0.4mm 通道直径和 0.8μL 内体积，适合低残留、低滞留体积液路",
+      "10-32UNF 接口适配常见高压分析仪器液路连接方式",
+      "SUS316L 定子与高分子转子组合，兼顾高压密封与液路切换需求",
+      "相邻流道切换时间 100ms，适合自动化控制节拍明确的仪器模块"
+    ],
+    "specs": [
+      {
+        "label": "产品类型",
+        "value": "高压阀"
+      },
+      {
+        "label": "配置方式",
+        "value": "定制配置"
+      },
+      {
+        "label": "典型型号",
+        "value": "HP-37SSU3204"
+      },
+      {
+        "label": "结构",
+        "value": "三位七通"
+      },
+      {
+        "label": "最大工作压力",
+        "value": "25MPa"
+      },
+      {
+        "label": "通道直径",
+        "value": "0.4mm"
+      },
+      {
+        "label": "内体积",
+        "value": "0.8μL"
+      },
+      {
+        "label": "接口",
+        "value": "10-32UNF"
+      },
+      {
+        "label": "寿命",
+        "value": "15万 cycles（纯水）"
+      }
+    ],
+    "faq": [
+      {
+        "question": "HP 三位七通高压阀主要用于什么设备？",
+        "answer": "该阀更适合 HPLC 自动进样、高压分析仪器、高压样品切换模块和需要进样位、抽样位、排气位切换的高压液路系统。"
+      },
+      {
+        "question": "高压阀选型时最需要确认哪些信息？",
+        "answer": "需要确认系统最大压力、流动相或样品介质、接口规格、切换位置数量、内体积要求、安装空间、电机控制方式和整机控制时序。"
+      },
+      {
+        "question": "为什么高压阀不直接按标准商品编码展示？",
+        "answer": "高压阀与客户系统压力、流路连接方式、安装空间和控制方式强相关。官网先按定制配置展示，避免客户只按单个型号选择而忽略压力、接口和液路状态要求。"
+      }
+    ],
+    "seoTitle": "HP三位七通高压阀｜25MPa高压进样与排气阀｜恒永达 FOREACH",
+    "seoDescription": "HP三位七通高压阀用于HPLC自动进样、高压流路切换、进样位/抽样位/排气位控制和分析仪器高压液路模块，支持25MPa压力、10-32UNF接口和0.8μL内体积。",
+    "searchKeywords": [
+      "HP三位七通高压阀",
+      "25MPa高压阀",
+      "HPLC自动进样阀",
+      "高压流路切换阀",
+      "10-32UNF高压阀",
+      "三位七通阀",
+      "高压进样阀"
+    ],
+    "h1Title": "HP 25MPa三位七通高压阀",
+    "pageTitle": "HP 25MPa三位七通高压阀",
+    "bottomCtaTitle": "需要确认高压阀压力、接口和切换状态？",
+    "bottomCtaDescription": "请提供最大工作压力、流动相或样品介质、接口规格、阀位切换逻辑、内体积要求和安装空间，FOREACH 可协助确认 HP 高压阀是否适合您的高压液路模块。",
+    "bottomCtaButtonText": "联系工程师确认高压阀方案",
+    "bottomCtaHref": "/contact",
+    "customInquiryTitle": "需要确认高压阀压力、接口和切换状态？",
+    "customInquiryDescription": "请提供最大工作压力、流动相或样品介质、接口规格、阀位切换逻辑、内体积要求和安装空间，FOREACH 可协助确认 HP 高压阀是否适合您的高压液路模块。",
+    "customInquiryButtonText": "联系工程师确认高压阀方案",
+    "customInquiryHref": "/contact",
+    "imageAlt": "HP 25MPa三位七通高压阀",
+    "additionalImages": [],
+    "images": [],
+    "thumbnails": []
+  },
+  {
+    "slug": "solenoid-valves",
+    "productTypeId": "solenoid-valves",
+    "productTypeName": "电磁阀",
+    "title": "6010 2/3通摆臂隔膜电磁阀",
+    "modelName": "6010 2/3通摆臂隔膜电磁阀",
+    "image": "/images/products/valves/solenoid-valves/6010-solenoid-valve-main.webp",
+    "description": "6010 2/3通摆臂隔膜电磁阀用于自动化分析仪器中的液路通断控制，可覆盖试剂路径开关、清洗液路径开关、废液路径控制和小型化阀组集成。该系列包含基板型、螺纹型和倒刺型结构，可根据通口数、NO/NC/万向阀形式、膜片材质、阀座材质、电压和节能回路进行定制配置确认。",
+    "commonApplications": [
+      "试剂通断控制",
+      "清洗液控制",
+      "废液控制",
+      "阀组集成",
+      "样本针清洗",
+      "低压液路开关"
+    ],
+    "advantages": [
+      "2通 / 3通结构可选，适合常开、常闭和万向液路控制需求",
+      "基板型适合阀组集成，螺纹型适合标准接头连接，倒刺型适合软管连接",
+      "-75kPa~0.25MPa 压力范围覆盖常见试剂、清洗液和废液控制场景",
+      "孔口直径 1.4mm、CV 0.03，适合小型自动化仪器液路通断控制",
+      "EPDM / FKM / FFKM 膜片可选，便于根据试剂兼容性做项目确认",
+      "可选节能回路，适合长时间保持状态的仪器液路控制场景"
+    ],
+    "specs": [
+      {
+        "label": "产品类型",
+        "value": "电磁阀"
+      },
+      {
+        "label": "配置方式",
+        "value": "定制配置"
+      },
+      {
+        "label": "典型型号",
+        "value": "SV10-P / SV10-M6 / SV10-U28 / SV10-B16"
+      },
+      {
+        "label": "结构形式",
+        "value": "基板型 / 螺纹型 / 倒刺型"
+      },
+      {
+        "label": "通口数",
+        "value": "2 / 3"
+      },
+      {
+        "label": "阀形式",
+        "value": "万向 / NO / NC"
+      },
+      {
+        "label": "使用压力范围",
+        "value": "-75kPa～0.25MPa"
+      },
+      {
+        "label": "孔口直径",
+        "value": "1.4mm"
+      },
+      {
+        "label": "阀室内容积",
+        "value": "20μL"
+      },
+      {
+        "label": "CV",
+        "value": "0.03"
+      },
+      {
+        "label": "膜片材质",
+        "value": "EPDM / FKM / FFKM"
+      }
+    ],
+    "faq": [
+      {
+        "question": "6010 电磁阀的基板型、螺纹型和倒刺型怎么选？",
+        "answer": "基板型适合多阀集中安装和阀组集成；螺纹型适合使用 M6 或 1/4-28UNF 接头的标准管路连接；倒刺型适合软管连接和空间较紧凑的低压液路。"
+      },
+      {
+        "question": "2通、3通、NO、NC、万向分别适合什么场景？",
+        "answer": "2通通常用于单一路径开关；3通可用于路径选择或切换；NO 常开适合默认导通的液路；NC 常闭适合默认关闭的液路；万向结构更适合需要灵活定义端口功能的液路方案。"
+      },
+      {
+        "question": "6010 电磁阀为什么要按定制配置确认？",
+        "answer": "6010 涉及结构形式、通口数、阀形式、膜片材质、底板材质、阀座材质、额定电压和节能回路等组合，客户需要结合介质、压力、响应时间、安装空间和控制方式确认最终配置。"
+      }
+    ],
+    "seoTitle": "6010系列电磁阀｜2通/3通摆臂隔膜阀｜恒永达 FOREACH",
+    "seoDescription": "6010系列电磁阀用于IVD和自动化分析仪器中的试剂通断、清洗液控制、废液路径控制和阀组集成，支持2通/3通、NO/NC/万向、基板型、螺纹型和倒刺型配置。",
+    "searchKeywords": [
+      "6010电磁阀",
+      "SV10电磁阀",
+      "2通电磁阀",
+      "3通电磁阀",
+      "摆臂隔膜阀",
+      "IVD电磁阀",
+      "试剂通断阀",
+      "基板型电磁阀",
+      "螺纹型电磁阀",
+      "倒刺型电磁阀"
+    ],
+    "h1Title": "6010 2/3通摆臂隔膜电磁阀",
+    "pageTitle": "6010 2/3通摆臂隔膜电磁阀",
+    "bottomCtaTitle": "需要确认电磁阀通口数、阀形式和膜片材料？",
+    "bottomCtaDescription": "请提供介质类型、压力范围、通口数、NO/NC/万向阀形式、接口方式、膜片材料、电压和是否需要节能回路，FOREACH 可协助确认 6010 电磁阀配置。",
+    "bottomCtaButtonText": "联系工程师确认电磁阀配置",
+    "bottomCtaHref": "/contact",
+    "customInquiryTitle": "需要确认电磁阀通口数、阀形式和膜片材料？",
+    "customInquiryDescription": "请提供介质类型、压力范围、通口数、NO/NC/万向阀形式、接口方式、膜片材料、电压和是否需要节能回路，FOREACH 可协助确认 6010 电磁阀配置。",
+    "customInquiryButtonText": "联系工程师确认电磁阀配置",
+    "customInquiryHref": "/contact",
+    "imageAlt": "6010 2/3通摆臂隔膜电磁阀",
+    "additionalImages": [],
+    "images": [],
+    "thumbnails": []
+  }
+]

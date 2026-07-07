@@ -1,0 +1,401 @@
+warning: in the working copy of 'components/products/selection/ProductSelectionClient.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'components/selection-cart/SelectionCartProvider.tsx', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/components/products/selection/ProductSelectionClient.tsx b/components/products/selection/ProductSelectionClient.tsx[m
+[1mindex 5d11afd..16001e8 100644[m
+[1m--- a/components/products/selection/ProductSelectionClient.tsx[m
+[1m+++ b/components/products/selection/ProductSelectionClient.tsx[m
+[36m@@ -1,8 +1,10 @@[m
+[31m-"use client";[m
+[32m+[m[32m﻿"use client";[m
+ [m
+ import { useEffect, useMemo, useState } from "react";[m
+ import { useRouter, useSearchParams } from "next/navigation";[m
+ import ResourceSearchBar from "@/components/resources/ResourceSearchBar";[m
+[32m+[m[32mimport { useSelectionCart } from "@/components/selection-cart/SelectionCartProvider";[m
+[32m+[m[32mimport type { SelectionCartItemInput } from "@/components/selection-cart/selection-cart.types";[m
+ [m
+ /* =========================================================[m
+    ProductSelectionClient.tsx[m
+[36m@@ -560,9 +562,30 @@[m [mexport default function ProductSelectionClient({[m
+       );[m
+     }[m
+   );[m
+[32m+[m[32m  const {[m
+[32m+[m[32m    items: selectionCartItems,[m
+[32m+[m[32m    addItem,[m
+[32m+[m[32m    removeItem,[m
+[32m+[m[32m    getItem,[m
+[32m+[m[32m    toggleDrawingNeed,[m
+[32m+[m[32m  } = useSelectionCart();[m
+[32m+[m
+[32m+[m[32m  const selectedList = useMemo(() => {[m
+[32m+[m[32m    return new Set([m
+[32m+[m[32m      selectionCartItems[m
+[32m+[m[32m        .filter((item) => item.sourceType === "pump-selection")[m
+[32m+[m[32m        .map((item) => item.productCode)[m
+[32m+[m[32m    );[m
+[32m+[m[32m  }, [selectionCartItems]);[m
+ [m
+[31m-  const [selectedList, setSelectedList] = useState<Set<string>>(() => new Set());[m
+[31m-  const [searchKeyword, setSearchKeyword] = useState("");[m
+[32m+[m[32m  const selectedDrawingList = useMemo(() => {[m
+[32m+[m[32m    return new Set([m
+[32m+[m[32m      selectionCartItems[m
+[32m+[m[32m        .filter((item) => item.sourceType === "pump-selection" && item.needDrawing)[m
+[32m+[m[32m        .map((item) => item.productCode)[m
+[32m+[m[32m    );[m
+[32m+[m[32m  }, [selectionCartItems]);[m
+[32m+[m[32mconst [searchKeyword, setSearchKeyword] = useState("");[m
+   const [mobileCategoryOpen, setMobileCategoryOpen] = useState(false);[m
+   const [mobileOpenFilterGroups, setMobileOpenFilterGroups] = useState<[m
+     Record<string, boolean>[m
+[36m@@ -1184,86 +1207,105 @@[m [mexport default function ProductSelectionClient({[m
+     setMobileOpenFilterGroups(getDefaultMobileOpenFilterGroups(firstProductTypeId));[m
+   }[m
+ [m
+[31m-  function toggleProductInList(productId: string) {[m
+[31m-    setSelectedList((current) => {[m
+[31m-      const next = new Set(current);[m
+ [m
+[31m-      if (next.has(productId)) {[m
+[31m-        next.delete(productId);[m
+[31m-      } else {[m
+[31m-        next.add(productId);[m
+[31m-      }[m
+ [m
+[31m-      return next;[m
+[32m+[m[32m  function createProductCartItem([m
+[32m+[m[32m    product: ProductSelectionProductItem,[m
+[32m+[m[32m    options: {[m
+[32m+[m[32m      needDrawing?: boolean;[m
+[32m+[m[32m    } = {}[m
+[32m+[m[32m  ): SelectionCartItemInput {[m
+[32m+[m[32m    const title = getText(locale, product.cardTitle, product.productId);[m
+[32m+[m[32m    const subtitle = getText(locale, product.cardSubtitle, "");[m
+[32m+[m
+[32m+[m[32m    return {[m
+[32m+[m[32m      sourceType: "pump-selection",[m
+[32m+[m[32m      sourceLabel: "产品中心",[m
+[32m+[m[32m      productName: getTaxonomyLabel(locale, product.productTypeId),[m
+[32m+[m[32m      productCode: product.productId,[m
+[32m+[m[32m      foreachModel: title,[m
+[32m+[m[32m      competitorModels: [],[m
+[32m+[m[32m      quantity: 1,[m
+[32m+[m[32m      needDrawing: Boolean(options.needDrawing),[m
+[32m+[m[32m      imagePath: product.imageCard,[m
+[32m+[m[32m      detailHref: makeDetailHref(product as ProductSelectionProduct),[m
+[32m+[m[32m    };[m
+[32m+[m[32m  }[m
+[32m+[m
+[32m+[m[32m  function ensureProductInCart([m
+[32m+[m[32m    product: ProductSelectionProductItem,[m
+[32m+[m[32m    options: {[m
+[32m+[m[32m      needDrawing?: boolean;[m
+[32m+[m[32m    } = {}[m
+[32m+[m[32m  ) {[m
+[32m+[m[32m    const currentItem = getItem("pump-selection", product.productId);[m
+[32m+[m
+[32m+[m[32m    if (!currentItem) {[m
+[32m+[m[32m      addItem(createProductCartItem(product, options));[m
+[32m+[m[32m      return;[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    if (options.needDrawing && !currentItem.needDrawing) {[m
+[32m+[m[32m      toggleDrawingNeed(currentItem.id, true);[m
+[32m+[m[32m    }[m
+[32m+[m[32m  }[m
+[32m+[m
+[32m+[m[32m  function requestProductDrawing(product: ProductSelectionProductItem) {[m
+[32m+[m[32m    ensureProductInCart(product, {[m
+[32m+[m[32m      needDrawing: true,[m
+     });[m
+   }[m
+ [m
+[31m-  return ([m
+[31m-    <div data-product-breadcrumb-shell="true" data-product-center-page="true">[m
+[31m-<SitePageShell[m
+[31m-      breadcrumbAriaLabel={[m
+[31m-        locale === "zh" ? "面包屑导航" : "Breadcrumb"[m
+[31m-      }[m
+[31m-      breadcrumbItems={[[m
+[31m-        {[m
+[31m-          label: pageText.breadcrumbHome,[m
+[31m-          href: locale === "zh" ? "/" : `/${locale}`,[m
+[31m-        },[m
+[31m-        {[m
+[31m-          label: pageText.breadcrumbCurrent,[m
+[31m-        },[m
+[31m-      ]}[m
+[31m-    >[m
+[31m-      <main className="products-selection-page page">[m
+[31m-      <div className="container">[m
+[31m-        [m
+[31m-[m
+[31m-        <ResourceSearchBar[m
+[31m-          value={searchKeyword}[m
+[31m-          onChange={setSearchKeyword}[m
+[31m-          onSearch={setSearchKeyword}[m
+[31m-          placeholder={pageText.searchPlaceholder}[m
+[31m-          searchButtonText={pageText.searchButton}[m
+[31m-          showRecentKeywords={false}[m
+[31m-        />[m
+[31m-[m
+[31m-        <ProductCategoryTabs[m
+[31m-          categories={categoryItems}[m
+[31m-          activeCategoryId={activeCategoryId}[m
+[31m-          activeCategoryLabel={activeCategory.label}[m
+[31m-          mobileCategoryOpen={mobileCategoryOpen}[m
+[31m-          mobileCategoryPrefix={pageText.mobileCategoryPrefix}[m
+[31m-          onToggleMobileCategory={() =>[m
+[31m-            setMobileCategoryOpen((current) => !current)[m
+[31m-          }[m
+[31m-          onCategoryChange={handleCategoryChange}[m
+[31m-        />[m
+[31m-[m
+[31m-        {activeProductTypeIntro ? ([m
+[31m-          <section[m
+[31m-            className="product-type-intro-module"[m
+[31m-            aria-label={`${activeProductTypeIntro.title}产品种类说明`}[m
+[31m-          >[m
+[31m-            <div className="product-type-intro-image">[m
+[31m-              <img[m
+[31m-                src={activeProductTypeIntro.image.src}[m
+[31m-                alt={activeProductTypeIntro.image.alt}[m
+[31m-                loading="lazy"[m
+[31m-              />[m
+[31m-            </div>[m
+[32m+[m[32m  function toggleProductInList(product: ProductSelectionProductItem) {[m
+[32m+[m[32m    const currentItem = getItem("pump-selection", product.productId);[m
+ [m
+[31m-            <div className="product-type-intro-copy">[m
+[31m-              <h2>{activeProductTypeIntro.title}</h2>[m
+[32m+[m[32m    if (currentItem) {[m
+[32m+[m[32m      removeItem(currentItem.id);[m
+[32m+[m[32m      return;[m
+[32m+[m[32m    }[m
+ [m
+[31m-              {activeProductTypeIntro.paragraphs.map((paragraph) => {[m
+[31m-                const emphasisText = "详情页查看或提交选型需求确认";[m
+[31m-                const emphasisIndex = paragraph.indexOf(emphasisText);[m
+[32m+[m[32m    addItem(createProductCartItem(product));[m
+[32m+[m[32m  }[m
+[32m+[m[32m  return ([m
+[32m+[m[32m    <div className="products-selection-page">[m
+[32m+[m[32m      <SitePageShell[m
+[32m+[m[32m        breadcrumbAriaLabel={locale === "zh" ? "面包屑导航" : "Breadcrumb"}[m
+[32m+[m[32m        breadcrumbItems={[[m
+[32m+[m[32m          {[m
+[32m+[m[32m            label: pageText.breadcrumbHome,[m
+[32m+[m[32m            href: locale === "zh" ? "/" : `/${locale}`,[m
+[32m+[m[32m          },[m
+[32m+[m[32m          {[m
+[32m+[m[32m            label: pageText.breadcrumbCurrent,[m
+[32m+[m[32m          },[m
+[32m+[m[32m        ]}[m
+[32m+[m[32m      >[m
+[32m+[m[32m        <main className="products-main">[m
+[32m+[m[32m          <div className="products-container">[m
+[32m+[m[32m            {activeProductTypeIntro ? ([m
+[32m+[m[32m              <section[m
+[32m+[m[32m                className="product-type-intro-module"[m
+[32m+[m[32m                aria-label={`${activeProductTypeIntro.title}产品种类说明`}[m
+[32m+[m[32m              >[m
+[32m+[m[32m                <div className="product-type-intro-image">[m
+[32m+[m[32m                  <img[m
+[32m+[m[32m                    src={activeProductTypeIntro.image.src}[m
+[32m+[m[32m                    alt={activeProductTypeIntro.image.alt}[m
+[32m+[m[32m                    loading="lazy"[m
+[32m+[m[32m                  />[m
+[32m+[m[32m                </div>[m
+ [m
+[31m-                if (emphasisIndex < 0) {[m
+[31m-                  return <p key={paragraph}>{paragraph}</p>;[m
+[31m-                }[m
+[32m+[m[32m                <div className="product-type-intro-copy">[m
+[32m+[m[32m                  <h2>{activeProductTypeIntro.title}</h2>[m
+[32m+[m[32m                  {activeProductTypeIntro.paragraphs.map((paragraph) => {[m
+[32m+[m[32m                    const emphasisText = "详情页查看或提交选型需求确认";[m
+[32m+[m[32m                    const emphasisIndex = paragraph.indexOf(emphasisText);[m
+ [m
+[31m-                return ([m
+[32m+[m[32m                    if (emphasisIndex < 0) {[m
+[32m+[m[32m                      return <p key={paragraph}>{paragraph}</p>;[m
+[32m+[m[32m                    }[m
+[32m+[m
+[32m+[m[32m                    return ([m
+                   <p key={paragraph}>[m
+                     {paragraph.slice(0, emphasisIndex)}[m
+                     <strong className="product-type-intro-emphasis">[m
+[36m@@ -1304,7 +1346,7 @@[m [mexport default function ProductSelectionClient({[m
+                   <ProductCardGrid[m
+                     products={pagedProducts}[m
+                     selectedList={selectedList}[m
+[31m-                    detailButtonText={pageText.detailButton}[m
+[32m+[m[32m                    selectedDrawingList={selectedDrawingList}[m
+                     addToListText={pageText.addToList}[m
+                     addedToListText={pageText.addedToList}[m
+                     getTitle={(product) =>[m
+[36m@@ -1314,7 +1356,7 @@[m [mexport default function ProductSelectionClient({[m
+                       getText(locale, product.cardSubtitle, "")[m
+                     }[m
+                     getDetailHref={makeDetailHref}[m
+[31m-                    onToggleList={toggleProductInList}[m
+[32m+[m[32m                    onRequestDrawing={requestProductDrawing}                    onToggleList={toggleProductInList}[m
+                   />[m
+ [m
+                   <ProductSelectionPagination[m
+[36m@@ -1339,4 +1381,9 @@[m [mexport default function ProductSelectionClient({[m
+     </SitePageShell>[m
+ </div>[m
+   );[m
+[31m-}[m
+\ No newline at end of file[m
+[32m+[m[32m}[m
+[41m+[m
+[41m+[m
+[41m+[m
+[41m+[m
+[41m+[m
+[1mdiff --git a/components/selection-cart/GlobalSelectionCartDrawer.tsx b/components/selection-cart/GlobalSelectionCartDrawer.tsx[m
+[1mindex 6691146..3e97a44 100644[m
+[1m--- a/components/selection-cart/GlobalSelectionCartDrawer.tsx[m
+[1m+++ b/components/selection-cart/GlobalSelectionCartDrawer.tsx[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-"use client";[m
+[32m+[m[32m﻿"use client";[m
+ [m
+ /* =========================================================[m
+    GlobalSelectionCartDrawer.tsx[m
+[36m@@ -576,4 +576,4 @@[m [mexport default function GlobalSelectionCartDrawer() {[m
+       {isMounted ? createPortal(printDocument, document.body) : null}[m
+     </>[m
+   );[m
+[31m-}[m
+\ No newline at end of file[m
+[32m+[m[32m}[m
+[1mdiff --git a/components/selection-cart/SelectionCartProvider.tsx b/components/selection-cart/SelectionCartProvider.tsx[m
+[1mindex 090b228..f1aae5a 100644[m
+[1m--- a/components/selection-cart/SelectionCartProvider.tsx[m
+[1m+++ b/components/selection-cart/SelectionCartProvider.tsx[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-"use client";[m
+[32m+[m[32m﻿"use client";[m
+ [m
+ /* =========================================================[m
+    SelectionCartProvider.tsx[m
+[36m@@ -51,6 +51,7 @@[m [minterface SelectionCartContextValue {[m
+ [m
+   changeQuantity: (id: string, quantity: number) => void;[m
+   toggleDrawingNeed: (id: string, needDrawing: boolean) => void;[m
+[32m+[m[32m  toggleModel3dNeed: (id: string, needModel3d: boolean) => void;[m
+ [m
+   getItem: ([m
+     sourceType: SelectionCartSourceType,[m
+[36m@@ -117,6 +118,7 @@[m [mfunction normalizeLegacyFittingItems(rawItems: unknown): SelectionCartItem[] {[m
+           : [],[m
+         quantity: Math.max(1, Number(raw.quantity || 1)),[m
+         needDrawing: Boolean(raw.needDrawing),[m
+[32m+[m[32m        needModel3d: Boolean((raw as any).needModel3d),[m
+         imagePath: raw.imagePath,[m
+         detailHref: `/resources/selection-support/fitting-replacement/q20/${raw.productCode}`,[m
+       };[m
+[36m@@ -135,30 +137,33 @@[m [mfunction buildCartText(items: SelectionCartItem[]) {[m
+   }[m
+ [m
+   const lines = items.map((item, index) => {[m
+[32m+[m[32m    const isPumpSelection = item.sourceType === "pump-selection";[m
+[32m+[m
+[32m+[m[32m    if (isPumpSelection) {[m
+[32m+[m[32m      return [[m
+[32m+[m[32m        `#${index + 1}`,[m
+[32m+[m[32m        `来源：${item.sourceLabel}`,[m
+[32m+[m[32m        `产品类型：${item.productName}`,[m
+[32m+[m[32m        `产品型号：${item.foreachModel}`,[m
+[32m+[m[32m        `数量：${item.quantity}`,[m
+[32m+[m[32m        `2D 图纸：${item.needDrawing ? "需要" : "暂不需要"}`,[m
+[32m+[m[32m      ].join("\n");[m
+[32m+[m[32m    }[m
+[32m+[m
+     return [[m
+[31m-      `${index + 1}. ${item.foreachModel}`,[m
+[32m+[m[32m      `#${index + 1}`,[m
+       `来源：${item.sourceLabel}`,[m
+[32m+[m[32m      `产品：${item.productName}`,[m
+       `商品编码：${item.productCode}`,[m
+[32m+[m[32m      `恒永达型号：${item.foreachModel}`,[m
+       `兼容编码：${item.competitorModels.join(" / ") || "-"}`,[m
+       `数量：${item.quantity}`,[m
+       `2D 图纸：${item.needDrawing ? "需要" : "暂不需要"}`,[m
+     ].join("\n");[m
+   });[m
+ [m
+[31m-  return [[m
+[31m-    "恒永达选型清单",[m
+[31m-    "",[m
+[31m-    "请协助确认以下型号、数量及图纸需求：",[m
+[31m-    "",[m
+[31m-    lines.join("\n\n"),[m
+[31m-    "",[m
+[31m-    "说明：最终适配性需结合管径、材质、密封件、连接方式、耐压要求及实际应用环境进行确认。",[m
+[31m-  ].join("\n");[m
+[32m+[m[32m  return lines.join("\n\n");[m
+ }[m
+[31m-[m
+[31m-/* =========================================================[m
+[31m-   Provider[m
+[31m-========================================================= */[m
+ export function SelectionCartProvider({[m
+   children,[m
+ }: {[m
+[36m@@ -245,6 +250,7 @@[m [mexport function SelectionCartProvider({[m
+             ...item,[m
+             quantity: item.quantity + quantity,[m
+             needDrawing: Boolean(item.needDrawing || input.needDrawing),[m
+[32m+[m[32m            needModel3d: Boolean(item.needModel3d || input.needModel3d),[m
+           };[m
+         });[m
+       }[m
+[36m@@ -256,6 +262,7 @@[m [mexport function SelectionCartProvider({[m
+           id,[m
+           quantity,[m
+           needDrawing: Boolean(input.needDrawing),[m
+[32m+[m[32m          needModel3d: Boolean(input.needModel3d),[m
+         },[m
+       ];[m
+     });[m
+[36m@@ -299,6 +306,19 @@[m [mexport function SelectionCartProvider({[m
+     });[m
+   }[m
+ [m
+[32m+[m[32m  function toggleModel3dNeed(id: string, needModel3d: boolean) {[m
+[32m+[m[32m    setItems((prev) => {[m
+[32m+[m[32m      return prev.map((item) => {[m
+[32m+[m[32m        if (item.id !== id) return item;[m
+[32m+[m
+[32m+[m[32m        return {[m
+[32m+[m[32m          ...item,[m
+[32m+[m[32m          needModel3d,[m
+[32m+[m[32m        };[m
+[32m+[m[32m      });[m
+[32m+[m[32m    });[m
+[32m+[m[32m  }[m
+[32m+[m
+   function getItem(sourceType: SelectionCartSourceType, productCode: string) {[m
+     const id = buildCartItemId({[m
+       sourceType,[m
+[36m@@ -343,6 +363,7 @@[m [mexport function SelectionCartProvider({[m
+       clearCart,[m
+       changeQuantity,[m
+       toggleDrawingNeed,[m
+[32m+[m[32m      toggleModel3dNeed,[m
+       getItem,[m
+       copyCartText,[m
+       generatePdfList,[m
+[36m@@ -370,4 +391,5 @@[m [mexport function useSelectionCart() {[m
+   }[m
+ [m
+   return context;[m
+[31m-}[m
+\ No newline at end of file[m
+[32m+[m[32m}[m
+[41m+[m

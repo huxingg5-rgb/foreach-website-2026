@@ -174,7 +174,57 @@ export const productRouteMap: {
       description:
         "TM 超微型柱塞泵适用于对安装空间、结构集成度和微量液体处理要求更高的精密仪器场景。",
     },
-  },
+  
+    "gas-diaphragm-pumps": {
+      category: "pumps",
+      slug: "diaphragm-pumps",
+      categoryId: "pumps",
+      productTypeId: "diaphragm-pump",
+      filterKey: "filter01",
+      filterValue: "气体隔膜泵",
+      initialFilters: {
+        filter01: ["气体隔膜泵"],
+      },
+      label: "气泵",
+      title: "气体隔膜泵 | FOREACH",
+      description:
+        "气体隔膜泵适用于仪器内部气体抽吸、正负压建立和气路辅助输送等场景。当前型号数据待补充。",
+    },
+
+    "liquid-diaphragm-pumps": {
+      category: "pumps",
+      slug: "diaphragm-pumps",
+      categoryId: "pumps",
+      productTypeId: "diaphragm-pump",
+      filterKey: "filter01",
+      filterValue: "液体隔膜泵",
+      initialFilters: {
+        filter01: ["液体隔膜泵"],
+      },
+      label: "液泵",
+      title: "液体隔膜泵 | FOREACH",
+      description:
+        "液体隔膜泵适用于仪器内部清洗液输送、试剂转移、废液抽排、管路预充和液体循环等场景。",
+    },
+
+    "gas-liquid-diaphragm-pumps": {
+      category: "pumps",
+      slug: "diaphragm-pumps",
+      categoryId: "pumps",
+      productTypeId: "diaphragm-pump",
+      filterKey: "filter01",
+      filterValue: "气液混合隔膜泵",
+      initialFilters: {
+        filter01: ["气液混合隔膜泵"],
+      },
+      label: "气液混合泵",
+      title: "气液混合隔膜泵 | FOREACH",
+      description:
+        "气液混合隔膜泵适用于气体抽吸、负压建立和气液混合物抽排等场景。",
+    },
+},
+
+
 };
 
 export function getCategoryRouteParams() {
@@ -359,9 +409,9 @@ export const productTypeIntroMap: Record<string, ProductTypeIntroEntry> = {
     productTypeId: "diaphragm-pump",
     title: "隔膜泵系列",
     paragraphs: [
-      "恒永达隔膜泵系列适用于自动化仪器中的清洗、废液、试剂输送、循环液路和中低流量液体传输场景，可用于体外诊断、实验室自动化、生命科学和分析检测设备。",
-      "隔膜泵适合对自吸能力、耐腐蚀性、长期运行稳定性和维护便利性有要求的系统，可根据流量、压力、膜片材质、阀片材质和安装空间进行配置选择。",
-      "产品卡片仅展示常用基础配置，完整参数与型号组合请进入详情页查看或提交选型需求确认。"
+      "恒永达隔膜泵系列适用于自动化仪器中的气体抽吸、液体输送、清洗循环、废液排放和气液混合介质抽排等场景。",
+      "产品按应用介质和工况分为气体隔膜泵、液体隔膜泵和气液混合隔膜泵三类，可根据流量、耐压、自吸能力、膜片材质、阀片材质和安装空间进行选型。",
+      "产品卡片仅展示常用基础配置，完整参数与型号组合请进入详情页查看或提交选型需求确认。",
     ],
     image: {
       src: "/images/products/pumps/product-types/diaphragm-pumps/foreach-diaphragm-pumps-product-type-intro.webp",
@@ -437,3 +487,13 @@ export function getProductTypeIntroByIds(
   return productTypeIntroMap[`${categoryId}:${productTypeId}`] || null;
 }
 
+
+
+export const tubingProductRouteMap = {
+  "pvc-tubing": "/products/tubing/pvc-tubing",
+  "tpu-tubing": "/products/tubing/tpu-tubing",
+  "fep-tubing": "/products/tubing/fep-tubing",
+  "ptfe-tubing": "/products/tubing/ptfe-tubing",
+  "peek-tubing": "/products/tubing/peek-tubing",
+  "pfa-tubing": "/products/tubing/pfa-tubing",
+};

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 /* =========================================================
    GlobalSelectionCartDrawer.tsx
@@ -139,11 +139,18 @@ export default function GlobalSelectionCartDrawer() {
       return {
         id: item.id,
         title: item.foreachModel,
-        metaLines: [
-          `商品编码：${item.productCode}`,
-          `兼容编码：${item.competitorModels.join(" / ") || "-"}`,
-          `数量：${item.quantity}`,
-        ],
+        metaLines:
+          item.sourceType === "pump-selection"
+            ? [
+                `产品类型：${item.productName}`,
+                `产品型号：${item.foreachModel}`,
+                `数量：${item.quantity}`,
+              ]
+            : [
+                `商品编码：${item.productCode}`,
+                `兼容编码：${item.competitorModels.join(" / ") || "-"}`,
+                `数量：${item.quantity}`,
+              ],
       };
     });
   }, [requestDrawingItems]);
@@ -300,9 +307,9 @@ export default function GlobalSelectionCartDrawer() {
               <tr>
                 <th>序号</th>
                 <th>来源</th>
-                <th>商品编码</th>
-                <th>兼容编码</th>
-                <th>恒永达型号</th>
+                <th>产品信息</th>
+                <th>关联信息</th>
+                <th>型号</th>
                 <th>数量</th>
                 <th>2D 图纸</th>
               </tr>
@@ -319,8 +326,16 @@ export default function GlobalSelectionCartDrawer() {
                     <tr key={item.id}>
                       <td>{index + 1}</td>
                       <td>{item.sourceLabel}</td>
-                      <td>{item.productCode}</td>
-                      <td>{item.competitorModels.join(" / ") || "-"}</td>
+                      <td>
+                        {item.sourceType === "pump-selection"
+                          ? item.productName
+                          : item.productCode}
+                      </td>
+                      <td>
+                        {item.sourceType === "pump-selection"
+                          ? "定制选型产品"
+                          : item.competitorModels.join(" / ") || "-"}
+                      </td>
                       <td>{item.foreachModel}</td>
                       <td>{item.quantity}</td>
                       <td>{item.needDrawing ? "需要" : "暂不需要"}</td>
@@ -434,7 +449,7 @@ export default function GlobalSelectionCartDrawer() {
                             <div>
                               <span>{item.sourceLabel}</span>
 
-                              {item.detailHref ? (
+                              {item.detailHref && item.sourceType !== "pump-selection" ? (
                                 <Link
                                   className={styles.itemTitleLink}
                                   href={item.detailHref}
@@ -464,17 +479,26 @@ export default function GlobalSelectionCartDrawer() {
                             </button>
                           </div>
 
-                          <div className={styles.infoRow}>
-                            <span>兼容编码</span>
-                            <strong>
-                              {item.competitorModels.join(" / ") || "-"}
-                            </strong>
-                          </div>
+                          {item.sourceType === "pump-selection" ? (
+                            <div className={styles.infoRow}>
+                              <span>产品类型</span>
+                              <strong>{item.productName}</strong>
+                            </div>
+                          ) : (
+                            <>
+                              <div className={styles.infoRow}>
+                                <span>兼容编码</span>
+                                <strong>
+                                  {item.competitorModels.join(" / ") || "-"}
+                                </strong>
+                              </div>
 
-                          <div className={styles.infoRow}>
-                            <span>商品编码</span>
-                            <strong>{item.productCode}</strong>
-                          </div>
+                              <div className={styles.infoRow}>
+                                <span>商品编码</span>
+                                <strong>{item.productCode}</strong>
+                              </div>
+                            </>
+                          )}
 
                           <div className={styles.quantityRow}>
                             <label htmlFor={`global-cart-qty-${item.id}`}>
@@ -577,3 +601,7 @@ export default function GlobalSelectionCartDrawer() {
     </>
   );
 }
+
+
+
+

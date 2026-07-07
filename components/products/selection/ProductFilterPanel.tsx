@@ -68,12 +68,13 @@ export default function ProductFilterPanel({
           /*
            * 筛选项列数说明：
            * 产品系列名称较长，保持一列
-           * 产品类型、量程、材质使用两列
+           * 产品类型、电机类型、流量、耐压使用两列
            */
           const shouldUseTwoColumns =
             group.key === "productType" ||
             group.key === "filter02" ||
             group.key === "filter03" ||
+            group.key === "filter04" ||
             group.options.length > 4;
 
           const filterOptionsClass = `filter-options${
