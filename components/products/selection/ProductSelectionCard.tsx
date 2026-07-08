@@ -1,6 +1,9 @@
-﻿"use client";
+"use client";
+
+import { usePathname } from "next/navigation";
 
 import type { ProductSelectionProductItem } from "./product-selection-ui.types";
+import type { SelectionLocale } from "@/data/products/selection/product-selection.types";
 import { getProductCardSpecs } from "@/data/products/selection/card-copy/plunger-pump-card-copy";
 
 type ProductSelectionCardProps = {
@@ -14,6 +17,58 @@ type ProductSelectionCardProps = {
   addedToListText: string;
   onToggleList: (product: ProductSelectionProductItem) => void;
 };
+
+const PRODUCT_SELECTION_LOCALES: SelectionLocale[] = [
+  "zh",
+  "en",
+  "es",
+  "fr",
+  "ko",
+  "ru",
+];
+
+const CARD_TEXT: Record<
+  SelectionLocale,
+  {
+    imagePlaceholder: string;
+    specsAriaSuffix: string;
+  }
+> = {
+  zh: {
+    imagePlaceholder: "暂无图片",
+    specsAriaSuffix: "关键参数",
+  },
+  en: {
+    imagePlaceholder: "No image",
+    specsAriaSuffix: "key specifications",
+  },
+  es: {
+    imagePlaceholder: "Sin imagen",
+    specsAriaSuffix: "key specifications",
+  },
+  fr: {
+    imagePlaceholder: "Aucune image",
+    specsAriaSuffix: "key specifications",
+  },
+  ko: {
+    imagePlaceholder: "이미지 없음",
+    specsAriaSuffix: "key specifications",
+  },
+  ru: {
+    imagePlaceholder: "Нет изображения",
+    specsAriaSuffix: "key specifications",
+  },
+};
+
+function getLocaleFromPathname(pathname: string | null): SelectionLocale {
+  const firstSegment = String(pathname || "")
+    .split("/")
+    .filter(Boolean)[0];
+
+  return PRODUCT_SELECTION_LOCALES.includes(firstSegment as SelectionLocale)
+    ? (firstSegment as SelectionLocale)
+    : "zh";
+}
 
 function toDisplayText(value: unknown): string {
   if (value === null || value === undefined) return "";
@@ -107,10 +162,13 @@ export default function ProductSelectionCard({
   addedToListText,
   onToggleList,
 }: ProductSelectionCardProps) {
+  const pathname = usePathname();
+  const locale = getLocaleFromPathname(pathname);
+  const cardText = CARD_TEXT[locale];
   const safeTitle = toDisplayText(title) || product.productId;
   const safeSubtitle = toDisplayText(subtitle);
   const safeDetailHref = normalizeCardDetailHref(product, detailHref);
-  const cardSpecs = getProductCardSpecs(product)
+  const cardSpecs = getProductCardSpecs(product, locale)
     .map((spec) => toDisplayText(spec))
     .filter(Boolean);
 
@@ -122,7 +180,7 @@ export default function ProductSelectionCard({
         {product.imageCard ? (
           <img src={product.imageCard} alt={safeTitle} loading="lazy" />
         ) : (
-          <div className="product-image-placeholder">暂无图片</div>
+          <div className="product-image-placeholder">{cardText.imagePlaceholder}</div>
         )}
       </div>
 
@@ -130,7 +188,7 @@ export default function ProductSelectionCard({
         <h3 className="product-title">{safeTitle}</h3>
 
         {cardSpecs.length > 0 ? (
-          <ul className="product-card-specs" aria-label={`${safeTitle} 关键参数`}>
+          <ul className="product-card-specs" aria-label={`${safeTitle} ${cardText.specsAriaSuffix}`}>
             {cardSpecs.map((spec, index) => (
               <li key={`${safeTitle}-spec-${index}`}>{spec}</li>
             ))}
