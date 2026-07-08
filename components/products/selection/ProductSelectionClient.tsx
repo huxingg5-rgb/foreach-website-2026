@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -56,6 +56,7 @@ import {
   syringePumpFilterLabels,
   syringePumpSelectionProducts,
 } from "@/data/products/selection/syringe-pump-selection.generated";
+import { controlModuleSelectionProducts, controlModuleTaxonomyItems, controlModuleFilterLabels } from "@/data/products/selection/control-module-selection.generated";
 
 import type {
   ProductSelectionFilterLabel,
@@ -78,6 +79,7 @@ const selectionProducts = [
   ...valveSelectionProducts,
   ...probeSelectionProducts,
   ...syringePumpSelectionProducts,
+  ...controlModuleSelectionProducts,
 ].filter((product, index, array) => {
   return index === array.findIndex((item) => item.productId === product.productId);
 });
@@ -85,6 +87,7 @@ const selectionProducts = [
 const selectionTaxonomyItems = [
   ...baseSelectionTaxonomyItems,
   ...diaphragmPumpTaxonomyItems,
+  ...controlModuleTaxonomyItems,
 ].filter((item, index, array) => {
   return index === array.findIndex((entry) => entry.id === item.id);
 });
@@ -97,6 +100,7 @@ const selectionFilterLabels = [
   ...valveFilterLabels,
   ...probeFilterLabels,
   ...syringePumpFilterLabels,
+  ...controlModuleFilterLabels,
 ].filter((label, index, array) => {
   return (
     index ===
@@ -663,6 +667,67 @@ function normalizeFinalProductDetailHref(
 
 
 function makeDetailHref(product: ProductSelectionProduct) {
+  /*
+    CONTROL_MODULE_DETAIL_HREF_20260708
+
+    说明：
+    1. 智控模块属于 control 分类；
+    2. 卡片详情页不走 /products/control-modules 这种孤立页面；
+    3. 统一走现有通用路由 /products/control/[slug]；
+    4. slug 来自 control-module-selection.generated.ts 里的 detailSlug。
+  */
+  if (String(product.categoryId || "") === "control") {
+    const controlSlug = String(
+      (product as any).detailSlug ||
+        (product as any).slug ||
+        (product as any).productSlug ||
+        ""
+    ).trim();
+
+    return controlSlug ? `/products/control/${controlSlug}` : "/products";
+  }
+  /*
+    CONTROL_MODULE_DETAIL_HREF_PATCH_20260708
+    智控系列选型卡片强制跳转到正式详情页。
+  */
+  if (
+    (product as any)?.categoryId === "control" ||
+    (product as any)?.category === "control" ||
+    (product as any)?.productTypeId === "control-module" ||
+    (product as any)?.productTypeLabel === "智控模块"
+  ) {
+    const rawHref = String(
+      (product as any).detailHref ||
+        (product as any).href ||
+        ""
+    ).trim();
+
+    if (rawHref.includes("/products/control-modules/")) {
+      return rawHref;
+    }
+
+    const rawSlug = String(
+      (product as any).detailSlug ||
+        (product as any).slug ||
+        (product as any).productId ||
+        ""
+    )
+      .split("/")
+      .filter(Boolean)
+      .pop();
+
+    if (rawSlug === "abd-air-bubble-detector" || rawSlug === "control-abd-air-bubble-detector") {
+      return "/products/control/abd-air-bubble-detector";
+    }
+
+    if (rawSlug === "pdm5-pressure-sensor" || rawSlug === "control-pdm5-pressure-sensor") {
+      return "/products/control/pdm5-pressure-sensor";
+    }
+
+    return "/products/control";
+  }
+
+
   /*
     PLUNGER_DETAIL_HREF_PRIORITY_FIX_20260707
 
@@ -1972,6 +2037,11 @@ const [searchKeyword, setSearchKeyword] = useState("");
 </div>
   );
 }
+
+
+
+
+
 
 
 

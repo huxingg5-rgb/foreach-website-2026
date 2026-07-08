@@ -882,8 +882,7 @@ const isFittingReplacementDetailPage =
                           <Link
                             key={child.key}
                             href={getLocalizedHref(child.href, currentLocale)}
-                            className="site-nav-simple-dropdown-link"
-                            onClick={closeAllPanels}
+                            className="site-nav-simple-dropdown-link"                        onClick={closeAllPanels}
                           >
                             {getLocalizedText(child.label, currentLocale)}
                           </Link>
@@ -1068,8 +1067,7 @@ const isFittingReplacementDetailPage =
                             <Link
                               key={child.key}
                               href={getLocalizedHref(child.href, currentLocale)}
-                              className="mobile-nav-submenu-link"
-                              onClick={closeAllPanels}
+                              className="mobile-nav-submenu-link"                        onClick={closeAllPanels}
                             >
                               {getLocalizedText(child.label, currentLocale)}
                             </Link>
@@ -1123,6 +1121,30 @@ const isFittingReplacementDetailPage =
                     .sort((a, b) => a.order - b.order)
                     .find((card) => card.categoryKey === category.key);
 
+                  /*
+                    MEGA_CATEGORY_CLICK_FIX_20260708
+
+                    说明：
+                    1. 左侧分类 categories 本身没有 href；
+                    2. 原逻辑只从右侧 card 里找 categoryPrimaryCard?.href；
+                    3. 如果某个分类暂时没有匹配到右侧 card，左侧分类会被渲染成 div；
+                    4. div 只能 hover 切换，点击不会跳转，所以“智控系列”点击没有反应；
+                    5. 这里增加兜底跳转：
+                       - 优先跳转当前分类对应的产品卡片链接；
+                       - 如果没有匹配卡片，就跳转 Mega 菜单底部入口；
+                       - 如果底部入口也没有，就回到 /products；
+                    6. 后续如果要做到“智控系列”点击后自动筛选到智控产品，
+                       应该继续在 data/navigation 里补齐对应 card.categoryKey 和 href。
+                  */
+                  /*
+                    MEGA_CATEGORY_LINK_RESTORE_20260708
+
+                    说明：
+                    1. 左侧分类点击应跳转到当前分类对应的真实产品入口；
+                    2. 不再兜底跳转 /products，因为当前页面本来就是 /products，会看起来没反应；
+                    3. 分类链接只从对应 card.categoryKey 的第一张卡片里读取；
+                    4. 如果某个分类没有对应 card，则只保留 hover 切换，不强行跳转。
+                  */
                   const categoryHref = categoryPrimaryCard?.href;
 
                   const categoryContent = (
@@ -1157,8 +1179,7 @@ const isFittingReplacementDetailPage =
                           }`}
                         onMouseEnter={() =>
                           setActiveMegaCategoryKey(category.key)
-                        }
-                        onClick={closeAllPanels}
+                        }                        onClick={closeAllPanels}
                       >
                         {categoryContent}
                       </Link>
@@ -1241,8 +1262,7 @@ const isFittingReplacementDetailPage =
                                   href={getLocalizedHref(
                                     cardImage.href ?? card.href,
                                     currentLocale,
-                                  )}
-                                  onClick={closeAllPanels}
+                                  )}                        onClick={closeAllPanels}
                                   className="site-nav-product-clean-link"
                                 >
                                   <div className="site-nav-product-image-box">
@@ -1284,8 +1304,7 @@ const isFittingReplacementDetailPage =
                           </div>
                         ) : (
                           <Link
-                            href={getLocalizedHref(card.href, currentLocale)}
-                            onClick={closeAllPanels}
+                            href={getLocalizedHref(card.href, currentLocale)}                        onClick={closeAllPanels}
                             className="site-nav-mega-icon-link"
                           >
                             <span
@@ -1344,3 +1363,5 @@ const isFittingReplacementDetailPage =
       </header>
     );
   } 
+
+

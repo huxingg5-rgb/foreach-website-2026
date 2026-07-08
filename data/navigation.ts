@@ -371,11 +371,11 @@ const productMegaDropdown: MegaDropdown = {
       enabled: true,
     },
     {
-      key: "sensors",
+      key: "control",
       title: t("智控系列", "Smart Control Series", "Serie de control inteligente", "Série de contrôle intelligent", "스마트 제어 시리즈", "Серия интеллектуального управления"),
       description: t(
-        "液路压力监测、状态检测与系统保护",
-        "Fluid pressure monitoring, status detection, and system protection",
+        "液路压力监测、气泡检测与系统保护",
+        "Fluid pressure monitoring, bubble detection, and system protection",
         "Monitoreo de presión de fluido, detección de estado y protección del sistema",
         "Surveillance de la pression fluidique, détection d’état et protection du système",
         "유체 압력 모니터링, 상태 감지 및 시스템 보호",
@@ -457,7 +457,7 @@ const productMegaDropdown: MegaDropdown = {
           localizedPath("/products/valves/rotary-valves")
         ),
         productImage(
-          "/images/products/valves/high-pressure-valves/hp-3-position-7-port-high-pressure-valve-main.webp",
+          "/images/resource/datasheets/thumbnails/resource-datasheet-thumb-high-pressure-valve-v001.webp",
           t("高压阀", "High Pressure Valve", "Válvula de alta presión", "Vanne haute pression", "고압 밸브", "Клапан высокого давления"),
           t("适用于高压流路切换与精密控制", "For high-pressure flow switching and precise control", "Para conmutación de flujo de alta presión y control preciso", "Pour commutation de flux haute pression et contrôle précis", "고압 유로 전환 및 정밀 제어용", "Для переключения потоков высокого давления и точного управления"),
           localizedPath("/products/valves/high-pressure-valves")
@@ -528,15 +528,29 @@ const productMegaDropdown: MegaDropdown = {
 
     {
       key: "sensors-card",
-      categoryKey: "sensors",
-      title: t("传感与检测", "Sensors & Detection", "Sensores y detección", "Capteurs et détection", "센서 및 감지", "Датчики и детектирование"),
-      description: t("压力、气泡、电导率等液路状态监测", "Pressure, bubble, conductivity, and fluid status monitoring", "Monitoreo de presión, burbujas, conductividad y estado del fluido", "Surveillance de la pression, des bulles, de la conductivité et de l’état fluidique", "압력, 기포, 전도도 및 유체 상태 모니터링", "Мониторинг давления, пузырьков, проводимости и состояния жидкости"),
-      href: anchorPath("products"),
+      categoryKey: "control",
+      href: localizedPath("/products/control"),
+      title: t("智控系列", "Smart Control Series", "Serie de control inteligente", "Série de contrôle intelligent", "스마트 제어 시리즈", "Серия интеллектуального управления"),
+      description: t(
+        "液路压力监测、气泡检测与系统保护",
+        "Fluid pressure monitoring, bubble detection, and system protection",
+        "Monitoreo de presión de fluido, detección de burbujas y protección del sistema",
+        "Surveillance de la pression fluidique, détection de bulles et protection du système",
+        "유체 압력 모니터링, 기포 감지 및 시스템 보호",
+        "Мониторинг давления жидкости, обнаружение пузырьков и защита системы"
+      ),
       images: [
         productImage(
+          "/images/logo/foreach-logo-color.svg",
+          t("ABD 气泡检测模块", "ABD Air Bubble Detector", "Detector de burbujas ABD", "Détecteur de bulles ABD", "ABD 기포 감지 모듈", "Детектор пузырьков ABD"),
+          t("用于透明管路气泡与液滴检测", "For bubble and droplet detection in transparent tubing", "Para detectar burbujas y gotas en tubos transparentes", "Pour détecter les bulles et gouttelettes dans les tubes transparents", "투명 튜빙 내 기포 및 액적 감지용", "Для обнаружения пузырьков и капель в прозрачных трубках"),
+          localizedPath("/products/control/abd-air-bubble-detector")
+        ),
+        productImage(
           "/images/products/Sensor/Pressure sensor_200x200_01_v001.jpg",
-          t("压力传感器", "Pressure Sensor", "Sensor de presión", "Capteur de pression", "압력 센서", "Датчик давления"),
-          t("用于液路压力监测与系统保护", "For fluid pressure monitoring and system protection", "Para monitoreo de presión de fluido y protección del sistema", "Pour surveillance de la pression fluidique et protection du système", "유체 압력 모니터링 및 시스템 보호용", "Для мониторинга давления жидкости и защиты системы")
+          t("PDM5 压力检测模块", "PDM5 Pressure Sensor", "Sensor de presión PDM5", "Capteur de pression PDM5", "PDM5 압력 감지 모듈", "Датчик давления PDM5"),
+          t("用于液路压力监测与堵塞预警", "For fluid pressure monitoring and blockage warning", "Para monitoreo de presión de fluido y alerta de obstrucción", "Pour surveillance de pression fluidique et alerte de colmatage", "유체 압력 모니터링 및 막힘 경고용", "Для мониторинга давления жидкости и предупреждения о засоре"),
+          localizedPath("/products/control/pdm5-pressure-sensor")
         ),
       ],
       order: 6,
@@ -2511,6 +2525,11 @@ export function getProductImageDisplayMeta(src: string, locale: string) {
       : "用于微流体液路系统的核心部件",
   };
 } 
+
+
+
+
+
 
 
 
