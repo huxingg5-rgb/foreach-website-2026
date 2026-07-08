@@ -3030,3 +3030,11 @@
   content: "HaloDp" !important;
 }
 /* ===== FOREACH diaphragm product type intro brand word END ===== */
+/* ===== FOREACH desktop hide filter symbol START ===== */
+@media (min-width: 901px) {
+  .products-selection-page .filter-panel .filter-group-trigger .filter-group-symbol,
+  .products-selection-page .filter-panel .product-type-filter-toggle .filter-group-symbol {
+    display: none !important;
+  }
+}
+/* ===== FOREACH desktop hide filter symbol END ===== */

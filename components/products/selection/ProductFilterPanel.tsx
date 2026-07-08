@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import type {
   ProductSelectionCategoryItem,
@@ -36,6 +36,20 @@ export default function ProductFilterPanel({
    * 3. 产品类型使用本组件内部状态控制，因为它在桌面端也需要折叠
    */
   const [isProductTypeOpen, setIsProductTypeOpen] = useState(false);
+  const [isDesktopFilterOpen, setIsDesktopFilterOpen] = useState(false);
+
+  useEffect(() => {
+    const updateDesktopState = () => {
+      setIsDesktopFilterOpen(window.innerWidth >= 901);
+    };
+
+    updateDesktopState();
+    window.addEventListener("resize", updateDesktopState);
+
+    return () => {
+      window.removeEventListener("resize", updateDesktopState);
+    };
+  }, []);
 
   return (
     <aside className="filter-panel">
@@ -90,9 +104,11 @@ export default function ProductFilterPanel({
             ? isProductTypeOpen
             : Boolean(mobileOpenFilterGroups[group.key]);
 
+          const isGroupOpen = isDesktopFilterOpen || isMobileOpen;
+
           const groupClassName = `filter-group${
             isProductTypeGroup ? " product-type-filter-group" : ""
-          }${isMobileOpen ? " is-mobile-open" : ""}`;
+          }${isGroupOpen ? " is-mobile-open" : ""}`;
 
           const handleToggleGroup = () => {
             if (isProductTypeGroup) {
@@ -133,15 +149,15 @@ export default function ProductFilterPanel({
                 }`}
                 type="button"
                 onClick={handleToggleGroup}
-                aria-expanded={isMobileOpen}
+                aria-expanded={isGroupOpen}
               >
                 <span>{group.title}</span>
                 <span className="filter-group-symbol" aria-hidden="true">
-                  {isMobileOpen ? "-" : "+"}
+                  {isGroupOpen ? "-" : "+"}
                 </span>
               </button>
 
-              {isProductTypeGroup && !isProductTypeOpen && activeOption ? (
+              {!isDesktopFilterOpen && isProductTypeGroup && !isProductTypeOpen && activeOption ? (
                 <div className="product-type-current-option">
                   <button
                     className="filter-option is-single active"
@@ -155,7 +171,7 @@ export default function ProductFilterPanel({
               ) : null}
 
               {isProductTypeGroup ? (
-                isProductTypeOpen ? (
+                isGroupOpen ? (
                   renderOptions()
                 ) : null
               ) : (

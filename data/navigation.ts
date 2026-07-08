@@ -402,30 +402,34 @@ const productMegaDropdown: MegaDropdown = {
       href: localizedPath("/products/pumps"),
       images: [
         productImage(
-          "/images/products/pumps/syringe-pump.jpg",
-          t("注射泵", "Syringe Pump", "Bomba de jeringa", "Pompe seringue", "시린지 펌프", "Шприцевой насос"),
-          t("μL–mL 级高精度定量分配", "High-precision μL–mL dispensing", "Dosificación precisa de μL a mL", "Distribution précise de μL à mL", "μL–mL 고정밀 분주", "Высокоточное дозирование от μL до mL")
-        ),
-        productImage(
-          "/images/products/pumps/diaphragm-pump.jpg",
-          t("隔膜泵", "Diaphragm Pump", "Bomba de diafragma", "Pompe à membrane", "다이어프램 펌프", "Мембранный насос"),
-          t("连续供液、清洗与废液处理", "Continuous supply, washing, and waste handling", "Suministro continuo, lavado y gestión de residuos", "Alimentation continue, lavage et gestion des déchets", "연속 공급, 세척 및 폐액 처리", "Непрерывная подача, промывка и обработка отходов")
-        ),
-        productImage(
-          "/images/products/pumps/pipetting-pump.jpg",
-          t("移液泵", "Pipetting Pump", "Bomba de pipeteo", "Pompe de pipetage", "피펫팅 펌프", "Пипеточный насос"),
-          t("连续定量输送与比例加液", "Automated pipetting and dispensing", "Pipeteo y dispensación automatizados", "Pipetage et distribution automatisés", "자동 피펫팅 및 분주", "Автоматическое пипетирование и дозирование")
-        ),
-        productImage(
           "/images/products/pumps/piston-pump.jpg",
           t("柱塞泵", "Piston Pump", "Bomba de pistón", "Pompe à piston", "피스톤 펌프", "Поршневой насос"),
           t("稳定计量与重复性液体输送", "Stable metering and repeatable transfer", "Medición estable y transferencia repetible", "Dosage stable et transfert répétable", "안정적인 계량 및 반복 이송", "Стабильное дозирование и повторяемая передача жидкости"),
           localizedPath("/products/pumps/plunger-pumps")
         ),
         productImage(
+          "/images/products/pumps/syringe-pump.jpg",
+          t("注射泵", "Syringe Pump", "Bomba de jeringa", "Pompe seringue", "시린지 펌프", "Шприцевой насос"),
+          t("μL–mL 级高精度定量分配", "High-precision μL–mL dispensing", "Dosificación precisa de μL a mL", "Distribution précise de μL à mL", "μL–mL 고정밀 분주", "Высокоточное дозирование от μL до mL"),
+          localizedPath("/products/pumps/syringe-pumps")
+        ),
+        productImage(
           "/images/products/pumps/rotary-pump.jpg",
           t("无阀泵", "Valveless Pump", "Bomba sin válvula", "Pompe sans clapet", "무밸브 펌프", "Бесклапанный насос"),
-          t("连续定量输送与比例加液", "Continuous metering and proportional dispensing", "Dosificación continua y dispensación proporcional", "Dosage continu et distribution proportionnelle", "연속 정량 이송 및 비례 분주", "Непрерывное дозирование и пропорциональная подача")
+          t("连续定量输送与比例加液", "Continuous metering and proportional dispensing", "Dosificación continua y dispensación proporcional", "Dosage continu et distribution proportionnelle", "연속 정량 이송 및 비례 분주", "Непрерывное дозирование и пропорциональная подача"),
+          localizedPath("/products/pumps/valveless-pumps")
+        ),
+        productImage(
+          "/images/products/pumps/diaphragm-pump.jpg",
+          t("隔膜泵", "Diaphragm Pump", "Bomba de diafragma", "Pompe à membrane", "다이어프램 펌프", "Мембранный насос"),
+          t("连续供液、清洗与废液处理", "Continuous supply, washing, and waste handling", "Suministro continuo, lavado y gestión de residuos", "Alimentation continue, lavage et gestion des déchets", "연속 공급, 세척 및 폐액 처리", "Непрерывная подача, промывка и обработка отходов"),
+          localizedPath("/products/pumps/diaphragm-pumps")
+        ),
+        productImage(
+          "/images/products/pumps/pipetting-pump.jpg",
+          t("移液泵", "Pipetting Pump", "Bomba de pipeteo", "Pompe de pipetage", "피펫팅 펌프", "Пипеточный насос"),
+          t("连续定量输送与比例加液", "Automated pipetting and dispensing", "Pipeteo y dispensación automatizados", "Pipetage et distribution automatisés", "자동 피펫팅 및 분주", "Автоматическое пипетирование и дозирование"),
+          localizedPath("/products/pumps/pipetting-pumps")
         ),
       ],
       order: 1,
@@ -447,19 +451,22 @@ const productMegaDropdown: MegaDropdown = {
       href: localizedPath("/products/valves"),
       images: [
         productImage(
-          "/images/products/VALVE/Solenoid valve_200x200_01_v001.jpg",
-          t("电磁阀", "Solenoid Valve", "Válvula solenoide", "Électrovanne", "솔레노이드 밸브", "Соленоидный клапан"),
-          t("流路通断控制与精密切换", "On/off control and precise flow switching", "Control de apertura/cierre y conmutación precisa", "Commande marche/arrêt et commutation précise", "유로 온오프 제어 및 정밀 전환", "Управление вкл./выкл. и точное переключение потока")
-        ),
-        productImage(
-          "/images/products/VALVE/Pinch valve_200x200_01_v001.jpg",
-          t("夹管阀", "Pinch Valve", "Válvula de pinza", "Vanne à pincement", "핀치 밸브", "Пережимной клапан"),
-          t("零死体积，适合软管液路控制", "Zero-dead-volume control for flexible tubing", "Control sin volumen muerto para tubos flexibles", "Contrôle sans volume mort pour tubes souples", "플렉시블 튜빙용 무사각 체적 제어", "Управление гибкими трубками без мертвого объема")
-        ),
-        productImage(
           "/images/products/VALVE/Rotary valve_200x200_01_v001.jpg",
           t("旋转阀", "Rotary Valve", "Válvula rotativa", "Vanne rotative", "로터리 밸브", "Роторный клапан"),
-          t("多通道流路选择与切换", "Multi-port flow path selection and switching", "Selección y conmutación de rutas multicanal", "Sélection et commutation de voies multicanaux", "다중 포트 유로 선택 및 전환", "Выбор и переключение многоканальных потоков")
+          t("多通道流路选择与切换", "Multi-port flow path selection and switching", "Selección y conmutación de rutas multicanal", "Sélection et commutation de voies multicanaux", "다중 포트 유로 선택 및 전환", "Выбор и переключение многоканальных потоков"),
+          localizedPath("/products/valves/rotary-valves")
+        ),
+        productImage(
+          "/images/products/valves/high-pressure-valves/hp-3-position-7-port-high-pressure-valve-main.webp",
+          t("高压阀", "High Pressure Valve", "Válvula de alta presión", "Vanne haute pression", "고압 밸브", "Клапан высокого давления"),
+          t("适用于高压流路切换与精密控制", "For high-pressure flow switching and precise control", "Para conmutación de flujo de alta presión y control preciso", "Pour commutation de flux haute pression et contrôle précis", "고압 유로 전환 및 정밀 제어용", "Для переключения потоков высокого давления и точного управления"),
+          localizedPath("/products/valves/high-pressure-valves")
+        ),
+        productImage(
+          "/images/products/VALVE/Solenoid valve_200x200_01_v001.jpg",
+          t("电磁阀", "Solenoid Valve", "Válvula solenoide", "Électrovanne", "솔레노이드 밸브", "Соленоидный клапан"),
+          t("流路通断控制与精密切换", "On/off control and precise flow switching", "Control de apertura/cierre y conmutación precisa", "Commande marche/arrêt et commutation précise", "유로 온오프 제어 및 정밀 전환", "Управление вкл./выкл. и точное переключение потока"),
+          localizedPath("/products/valves/solenoid-valves")
         ),
       ],
       order: 2,
@@ -467,19 +474,16 @@ const productMegaDropdown: MegaDropdown = {
     },
 
     {
-      key: "tubing-card",
-      categoryKey: "tubing",
-      title: t("管路系列", "Tubing Series", "Series de tubos", "Séries de tubes", "튜빙 시리즈", "Серии трубок"),
-      description: t("软管、硬管与液路管线", "Flexible tubing, rigid tubing, and fluid lines", "Tubos flexibles, tubos rígidos y líneas de fluido", "Tubes souples, tubes rigides et lignes fluidiques", "플렉시블 튜빙, 리지드 튜빙 및 유체 라인", "Гибкие трубки, жесткие трубки и жидкостные линии"),
-      href: localizedPath("/products/tubing"),
+      key: "probes-card",
+      categoryKey: "probes",
+      title: t("针系列", "Probe Series", "Series de sondas", "Séries de sondes", "프로브 시리즈", "Серии зондов"),
+      description: t("样本针、清洗针、穿刺针、搅拌针与定制针组件", "Sampling probes, rinsing probes, puncturing probes, stirrers, and custom probe assemblies", "Sondas de muestreo, sondas de enjuague, sondas de perforación, agitadores y conjuntos de sondas personalizados", "Sondes d’échantillonnage, sondes de rinçage, sondes de perçage, agitateurs et assemblages de sondes personnalisés", "샘플링 프로브, 린싱 프로브, 피어싱 프로브, 교반기 및 맞춤형 프로브 어셈블리", "Пробоотборные зонды, промывочные зонды, прокалывающие зонды, мешалки и индивидуальные узлы зондов"),
+      href: localizedPath("/products/probes"),
       images: [
-        productImage("/images/products/TUBING/ETFE_200x200_01_v001.JPG", t("ETFE 管", "ETFE Tubing", "Tubo ETFE", "Tube ETFE", "ETFE 튜빙", "Трубка ETFE"), t("耐化学腐蚀，适合精密液路", "Chemical-resistant tubing for precision fluidics", "Tubo resistente a químicos para fluidos de precisión", "Tube résistant aux produits chimiques pour fluidique de précision", "정밀 유체용 내화학 튜빙", "Химически стойкая трубка для точной флюидики")),
-        productImage("/images/products/TUBING/FEP_200x200_01_v001.JPG", t("FEP 管", "FEP Tubing", "Tubo FEP", "Tube FEP", "FEP 튜빙", "Трубка FEP"), t("透明度高，适合可视化液路", "High transparency for visual fluid lines", "Alta transparencia para líneas de fluido visibles", "Haute transparence pour lignes fluidiques visibles", "시각 유로용 고투명 튜빙", "Высокая прозрачность для визуальных жидкостных линий")),
-        productImage("/images/products/TUBING/PEEK_200x200_01_v001.JPG", t("PEEK 管", "PEEK Tubing", "Tubo PEEK", "Tube PEEK", "PEEK 튜빙", "Трубка PEEK"), t("高强度，适合高性能流体系统", "High-strength tubing for demanding fluidic systems", "Tubo de alta resistencia para sistemas fluidos exigentes", "Tube haute résistance pour systèmes fluidiques exigeants", "고성능 유체 시스템용 고강도 튜빙", "Высокопрочная трубка для сложных жидкостных систем")),
-        productImage("/images/products/TUBING/PTFE_200x200_01_v001.JPG", t("PTFE 管", "PTFE Tubing", "Tubo PTFE", "Tube PTFE", "PTFE 튜빙", "Трубка PTFE"), t("耐腐蚀，适合多种试剂输送", "Corrosion-resistant tubing for reagent transfer", "Tubo resistente a la corrosión para transferencia de reactivos", "Tube anticorrosion pour transfert de réactifs", "시약 이송용 내식성 튜빙", "Коррозионностойкая трубка для подачи реагентов")),
-        productImage("/images/products/TUBING/PU_200x200_01_v001.JPG", t("PU 管", "PU Tubing", "Tubo PU", "Tube PU", "PU 튜빙", "Трубка PU"), t("柔韧性好，适合通用液路", "Flexible tubing for general fluidic use", "Tubo flexible para uso fluidico general", "Tube flexible pour usage fluidique général", "일반 유체용 플렉시블 튜빙", "Гибкая трубка для общего применения")),
-        productImage("/images/products/TUBING/PVC_200x200_01_v001.JPG", t("PVC 管", "PVC Tubing", "Tubo PVC", "Tube PVC", "PVC 튜빙", "Трубка PVC"), t("适合体外诊断与实验室液路", "Tubing for IVD and laboratory fluidics", "Tubo para IVD y fluidos de laboratorio", "Tube pour IVD et fluidique de laboratoire", "IVD 및 실험실 유체용 튜빙", "Трубка для IVD и лабораторной флюидики")),
-        productImage("/images/products/TUBING/TPU_200x200_01_v001.JPG", t("TPU 管", "TPU Tubing", "Tubo TPU", "Tube TPU", "TPU 튜빙", "Трубка TPU"), t("柔韧耐用，适合动态液路", "Durable flexible tubing for dynamic fluid paths", "Tubo flexible y duradero para rutas fluidas dinámicas", "Tube flexible durable pour circuits fluidiques dynamiques", "동적 유로용 내구성 플렉시블 튜빙", "Прочная гибкая трубка для динамических жидкостных линий")),
+        productImage("/images/products/PROBE/Sampling probe_200x200_01_v001.jpg", t("采样针", "Sampling Probe", "Sonda de muestreo", "Sonde d’échantillonnage", "샘플링 프로브", "Пробоотборный зонд"), t("用于样本吸取、转移与加样", "For sample aspiration, transfer, and dispensing", "Para aspiración, transferencia y dispensación de muestras", "Pour aspiration, transfert et distribution d’échantillons", "샘플 흡입, 이송 및 분주용", "Для аспирации, переноса и дозирования образцов"), localizedPath("/products/probes/sampling-probes")),
+        productImage("/images/products/PROBE/Puncturing probe_200x200_01_v001.jpg", t("穿刺针", "Puncturing Probe", "Sonda de perforación", "Sonde de perçage", "피어싱 프로브", "Прокалывающий зонд"), t("用于封膜穿刺与样本处理", "For film puncturing and sample handling", "Para perforación de film y manejo de muestras", "Pour perçage de film et traitement d’échantillons", "필름 천공 및 샘플 처리용", "Для прокалывания пленки и обработки образцов"), localizedPath("/products/probes/piercing-probes")),
+        productImage("/images/products/PROBE/Rinsing probe_200x200_01_v001.jpg", t("清洗针", "Rinsing Probe", "Sonda de enjuague", "Sonde de rinçage", "린싱 프로브", "Промывочный зонд"), t("用于清洗、冲洗与液路维护", "For washing, rinsing, and fluid path maintenance", "Para lavado, enjuague y mantenimiento de rutas fluidas", "Pour lavage, rinçage et maintenance des circuits fluidiques", "세척, 린싱 및 유로 유지보수용", "Для промывки, ополаскивания и обслуживания жидкостных линий"), localizedPath("/products/probes/wash-probes")),
+        productImage("/images/products/PROBE/Stirrer_200x200_01_v001.jpg", t("搅拌针", "Stirrer", "Agitador", "Agitateur", "교반기", "Мешалка"), t("用于样本混匀与试剂处理", "For sample mixing and reagent handling", "Para mezcla de muestras y manejo de reactivos", "Pour mélange d’échantillons et traitement des réactifs", "샘플 혼합 및 시약 처리용", "Для смешивания образцов и работы с реагентами"), localizedPath("/products/probes/stirring-paddles")),
       ],
       order: 3,
       enabled: true,
@@ -506,16 +510,17 @@ const productMegaDropdown: MegaDropdown = {
     },
 
     {
-      key: "probes-card",
-      categoryKey: "probes",
-      title: t("针系列", "Probe Series", "Series de sondas", "Séries de sondes", "프로브 시리즈", "Серии зондов"),
-      description: t("样本针、清洗针、穿刺针、搅拌针与定制针组件", "Sampling probes, rinsing probes, puncturing probes, stirrers, and custom probe assemblies", "Sondas de muestreo, sondas de enjuague, sondas de perforación, agitadores y conjuntos de sondas personalizados", "Sondes d’échantillonnage, sondes de rinçage, sondes de perçage, agitateurs et assemblages de sondes personnalisés", "샘플링 프로브, 린싱 프로브, 피어싱 프로브, 교반기 및 맞춤형 프로브 어셈블리", "Пробоотборные зонды, промывочные зонды, прокалывающие зонды, мешалки и индивидуальные узлы зондов"),
-      href: localizedPath("/products/probes"),
+      key: "tubing-card",
+      categoryKey: "tubing",
+      title: t("管路系列", "Tubing Series", "Series de tubos", "Séries de tubes", "튜빙 시리즈", "Серии трубок"),
+      description: t("软管、硬管与液路管线", "Flexible tubing, rigid tubing, and fluid lines", "Tubos flexibles, tubos rígidos y líneas de fluido", "Tubes souples, tubes rigides et lignes fluidiques", "플렉시블 튜빙, 리지드 튜빙 및 유체 라인", "Гибкие трубки, жесткие трубки и жидкостные линии"),
+      href: localizedPath("/products/tubing"),
       images: [
-        productImage("/images/products/PROBE/Puncturing probe_200x200_01_v001.jpg", t("穿刺针", "Puncturing Probe", "Sonda de perforación", "Sonde de perçage", "피어싱 프로브", "Прокалывающий зонд"), t("用于封膜穿刺与样本处理", "For film puncturing and sample handling", "Para perforación de film y manejo de muestras", "Pour perçage de film et traitement d’échantillons", "필름 천공 및 샘플 처리용", "Для прокалывания пленки и обработки образцов")),
-        productImage("/images/products/PROBE/Rinsing probe_200x200_01_v001.jpg", t("清洗针", "Rinsing Probe", "Sonda de enjuague", "Sonde de rinçage", "린싱 프로브", "Промывочный зонд"), t("用于清洗、冲洗与液路维护", "For washing, rinsing, and fluid path maintenance", "Para lavado, enjuague y mantenimiento de rutas fluidas", "Pour lavage, rinçage et maintenance des circuits fluidiques", "세척, 린싱 및 유로 유지보수용", "Для промывки, ополаскивания и обслуживания жидкостных линий")),
-        productImage("/images/products/PROBE/Sampling probe_200x200_01_v001.jpg", t("采样针", "Sampling Probe", "Sonda de muestreo", "Sonde d’échantillonnage", "샘플링 프로브", "Пробоотборный зонд"), t("用于样本吸取、转移与加样", "For sample aspiration, transfer, and dispensing", "Para aspiración, transferencia y dispensación de muestras", "Pour aspiration, transfert et distribution d’échantillons", "샘플 흡입, 이송 및 분주용", "Для аспирации, переноса и дозирования образцов")),
-        productImage("/images/products/PROBE/Stirrer_200x200_01_v001.jpg", t("搅拌针", "Stirrer", "Agitador", "Agitateur", "교반기", "Мешалка"), t("用于样本混匀与试剂处理", "For sample mixing and reagent handling", "Para mezcla de muestras y manejo de reactivos", "Pour mélange d’échantillons et traitement des réactifs", "샘플 혼합 및 시약 처리용", "Для смешивания образцов и работы с реагентами")),
+        productImage("/images/products/TUBING/FEP_200x200_01_v001.JPG", t("FEP 管", "FEP Tubing", "Tubo FEP", "Tube FEP", "FEP 튜빙", "Трубка FEP"), t("透明度高，适合可视化液路", "High transparency for visual fluid lines", "Alta transparencia para líneas de fluido visibles", "Haute transparence pour lignes fluidiques visibles", "시각 유로용 고투명 튜빙", "Высокая прозрачность для визуальных жидкостных линий"), localizedPath("/products/tubing/fep-tubing")),
+        productImage("/images/products/TUBING/PTFE_200x200_01_v001.JPG", t("PTFE 管", "PTFE Tubing", "Tubo PTFE", "Tube PTFE", "PTFE 튜빙", "Трубка PTFE"), t("耐腐蚀，适合多种试剂输送", "Corrosion-resistant tubing for reagent transfer", "Tubo resistente a la corrosión para transferencia de reactivos", "Tube anticorrosion pour transfert de réactifs", "시약 이송용 내식성 튜빙", "Коррозионностойкая трубка для подачи реагентов"), localizedPath("/products/tubing/ptfe-tubing")),
+        productImage("/images/products/TUBING/PEEK_200x200_01_v001.JPG", t("PEEK 管", "PEEK Tubing", "Tubo PEEK", "Tube PEEK", "PEEK 튜빙", "Трубка PEEK"), t("高强度，适合高性能流体系统", "High-strength tubing for demanding fluidic systems", "Tubo de alta resistencia para sistemas fluidos exigentes", "Tube haute résistance pour systèmes fluidiques exigeants", "고성능 유체 시스템용 고강도 튜빙", "Высокопрочная трубка для сложных жидкостных систем"), localizedPath("/products/tubing/peek-tubing")),
+        productImage("/images/products/TUBING/PVC_200x200_01_v001.JPG", t("PVC 管", "PVC Tubing", "Tubo PVC", "Tube PVC", "PVC 튜빙", "Трубка PVC"), t("适合体外诊断与实验室液路", "Tubing for IVD and laboratory fluidics", "Tubo para IVD y fluidos de laboratorio", "Tube pour IVD et fluidique de laboratoire", "IVD 및 실험실 유체용 튜빙", "Трубка для IVD и лабораторной флюидики"), localizedPath("/products/tubing/pvc-tubing")),
+        productImage("/images/products/TUBING/TPU_200x200_01_v001.JPG", t("TPU 管", "TPU Tubing", "Tubo TPU", "Tube TPU", "TPU 튜빙", "Трубка TPU"), t("柔韧耐用，适合动态液路", "Durable flexible tubing for dynamic fluid paths", "Tubo flexible y duradero para rutas fluidas dinámicas", "Tube flexible durable pour circuits fluidiques dynamiques", "동적 유로용 내구성 플렉시블 튜빙", "Прочная гибкая трубка для динамических жидкостных линий"), localizedPath("/products/tubing/tpu-tubing")),
       ],
       order: 5,
       enabled: true,
