@@ -44,11 +44,19 @@ const valveProducts = [
     cardTitle: {
       zh: "MRV3 陶瓷多通道旋转阀",
       en: "MRV3 Ceramic Multi-channel Rotary Valve",
+      es: "Válvula rotativa cerámica multicanal MRV3",
+      fr: "Valve rotative céramique multicanal MRV3",
+      ko: "MRV3 세라믹 멀티채널 로터리 밸브",
+      ru: "Керамический многоканальный поворотный клапан MRV3",
     },
 
     cardSubtitle: {
       zh: "10 / 16 / 24 通道可选\n耐压 0.7MPa，内容积低至 2.9μL\n适用于多试剂、多清洗液路径切换",
       en: "10 / 16 / 24 channels available\n0.7MPa pressure rating, internal volume down to 2.9μL\nFor multi-reagent and wash path switching",
+      es: "10 / 16 / 24 canales disponibles\nPresión nominal 0.7MPa, volumen interno hasta 2.9μL\nPara conmutación de múltiples reactivos y rutas de lavado",
+      fr: "10 / 16 / 24 canaux disponibles\nPression nominale 0.7MPa, volume interne jusqu'à 2.9μL\nPour commutation de réactifs multiples et circuits de lavage",
+      ko: "10 / 16 / 24 채널 선택 가능\n정격 압력 0.7MPa, 내부 체적 최소 2.9μL\n다중 시약 및 세척 경로 전환용",
+      ru: "Доступны 10 / 16 / 24 канала\nНоминальное давление 0.7MPa, внутренний объем до 2.9μL\nДля переключения реагентов и промывочных трактов",
     },
 
     image: "/images/products/valves/rotary-valves/mrv3-ceramic-rotary-valve-main.webp",
@@ -115,11 +123,19 @@ const valveProducts = [
     cardTitle: {
       zh: "HP 三位七通高压阀",
       en: "HP Three-position Seven-port High-pressure Valve",
+      es: "Válvula de alta presión HP de tres posiciones y siete puertos",
+      fr: "Valve haute pression HP trois positions sept ports",
+      ko: "HP 3위치 7포트 고압 밸브",
+      ru: "Высоконапорный клапан HP на три положения и семь портов",
     },
 
     cardSubtitle: {
       zh: "三位七通高压流路控制\n25MPa，10-32UNF 接口\n适用于 HPLC 自动进样与排气场景",
       en: "Three-position seven-port high-pressure flow control\n25MPa, 10-32UNF port\nFor HPLC autosampling and venting",
+      es: "Control de flujo de alta presión de tres posiciones y siete puertos\n25MPa, puerto 10-32UNF\nPara automuestreo HPLC y ventilación",
+      fr: "Contrôle de débit haute pression trois positions sept ports\n25MPa, port 10-32UNF\nPour autosampling HPLC et purge",
+      ko: "3위치 7포트 고압 유로 제어\n25MPa, 10-32UNF 포트\nHPLC 자동 샘플링 및 배기용",
+      ru: "Высоконапорное управление потоком: три положения, семь портов\n25MPa, порт 10-32UNF\nДля автосамплинга HPLC и выпуска воздуха",
     },
 
     image: "/images/products/valves/high-pressure-valves/hp-3-position-7-port-high-pressure-valve-main.webp",
@@ -186,11 +202,19 @@ const valveProducts = [
     cardTitle: {
       zh: "6010 系列电磁阀",
       en: "6010 Series Solenoid Valve",
+      es: "Válvula solenoide serie 6010",
+      fr: "Électrovanne série 6010",
+      ko: "6010 시리즈 솔레노이드 밸브",
+      ru: "Электромагнитный клапан серии 6010",
     },
 
     cardSubtitle: {
       zh: "2通 / 3通摆臂隔膜阀\n-75kPa~0.25MPa，CV 0.03\n支持基板型、螺纹型和倒刺型配置",
       en: "2-port / 3-port rocker diaphragm valve\n-75kPa to 0.25MPa, CV 0.03\nPanel, threaded and barbed configurations",
+      es: "Válvula de diafragma basculante de 2 / 3 puertos\n-75kPa a 0.25MPa, CV 0.03\nConfiguraciones de panel, rosca y espiga",
+      fr: "Valve à membrane à bascule 2 / 3 ports\n-75kPa à 0.25MPa, CV 0.03\nConfigurations panneau, filetée et cannelée",
+      ko: "2포트 / 3포트 로커 다이어프램 밸브\n-75kPa~0.25MPa, CV 0.03\n패널형, 나사형 및 바브형 구성",
+      ru: "Коромысловый мембранный клапан 2-порт / 3-порт\nот -75kPa до 0.25MPa, CV 0.03\nПанельная, резьбовая и штуцерная конфигурации",
     },
 
     image: "/images/products/valves/solenoid-valves/6010-solenoid-valve-main.webp",
