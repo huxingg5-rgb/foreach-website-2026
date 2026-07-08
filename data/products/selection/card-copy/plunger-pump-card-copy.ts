@@ -1,177 +1,209 @@
-﻿/* =========================================================
+/* =========================================================
    plunger-pump-card-copy.ts
-   FOREACH 瀹樼綉锝滄煴濉炴车浜у搧鍗＄墖涓夎鏂囨
+   FOREACH 产品中心｜柱塞泵产品卡片规格文案
 
-   鏁版嵁鏉ユ簮锛?
-   1. FOREACH_鏌卞娉靛畼缃戣〃鏍肩淮鎶ょ増_v2.xlsx
-   2. 宸ヤ綔琛細04_浜у搧鍗＄墖
-
-   娓叉煋鍘熷垯锛?
-   1. 鍗＄墖鍙睍绀虹‖鍙傛暟
-   2. 涓嶅湪鍗＄墖閲屽啓搴旂敤鍦烘櫙
-   3. 涓嶅湪鍗＄墖閲屽啓鏉愭枡鍙€夎寖鍥?
-   4. 璇︽儏姝ｆ枃銆佸弬鏁拌〃銆丗AQ 鍚庣画鏀惧埌璇︽儏椤?
+   说明：
+   1. 卡片只展示硬参数
+   2. 中文页面保留中文规格文案
+   3. 非中文页面规格参数统一工程英文
 ========================================================= */
 
-import type { ProductSelectionProduct } from "../product-selection.types";
+import type {
+  ProductSelectionProduct,
+  SelectionLocale,
+} from "../product-selection.types";
 
 export type ProductCardSpecItem = {
   label: string;
 };
 
+type ProductCardSpecKey =
+  | "port_1_4_28_m6"
+  | "port_6_40_unf"
+  | "repeatability_cv_0_5"
+  | "resolution_2000"
+  | "resolution_2000_2236"
+  | "resolution_2540"
+  | "resolution_4000";
+
+const PLUNGER_PUMP_CARD_SPEC_COPY: Record<
+  ProductCardSpecKey,
+  Record<"zh" | "en", string>
+> = {
+  port_1_4_28_m6: {
+    zh: "接口方式：1/4-28 UNF / M6 接口可选",
+    en: "Fluidic Port: 1/4-28 UNF / M6 optional",
+  },
+  port_6_40_unf: {
+    zh: "接口方式：6-40 UNF 液路接口",
+    en: "Fluidic Port: 6-40 UNF",
+  },
+  repeatability_cv_0_5: {
+    zh: "重复性：(100% 满量程) CV < 0.5%",
+    en: "Repeatability: CV < 0.5% at 100% full stroke",
+  },
+  resolution_2000: {
+    zh: "满量程分辨率：2000 步",
+    en: "Full Stroke Resolution: 2000 steps",
+  },
+  resolution_2000_2236: {
+    zh: "满量程分辨率：2000 / 2236 Step",
+    en: "Full Stroke Resolution: 2000 / 2236 steps",
+  },
+  resolution_2540: {
+    zh: "满量程分辨率：2540 Step",
+    en: "Full Stroke Resolution: 2540 steps",
+  },
+  resolution_4000: {
+    zh: "满量程分辨率：4000 Step",
+    en: "Full Stroke Resolution: 4000 steps",
+  },
+};
+
 export const PLUNGER_PUMP_CARD_SPECS_BY_MODEL: Record<
   string,
-  ProductCardSpecItem[]
+  ProductCardSpecKey[]
 > = {
   /* EA Series */
   "EA-100-PMMA": [
-    { label: "1/4-28 UNF / M6 接口可选" },
-    { label: "(100% 满量程)CV < 0.5%" },
-    { label: "2000步满量程分辨率" },
+    "port_1_4_28_m6",
+    "repeatability_cv_0_5",
+    "resolution_2000",
   ],
   "EA-100-PEEK": [
-    { label: "1/4-28 UNF / M6 接口可选" },
-    { label: "(100% 满量程)CV < 0.5%" },
-    { label: "2000步满量程分辨率" },
+    "port_1_4_28_m6",
+    "repeatability_cv_0_5",
+    "resolution_2000",
   ],
   "EA-250-PMMA": [
-    { label: "1/4-28 UNF / M6 接口可选" },
-    { label: "(100% 满量程)CV < 0.5%" },
-    { label: "2000步满量程分辨率" },
+    "port_1_4_28_m6",
+    "repeatability_cv_0_5",
+    "resolution_2000",
   ],
   "EA-250-PEEK": [
-    { label: "1/4-28 UNF / M6 接口可选" },
-    { label: "(100% 满量程)CV < 0.5%" },
-    { label: "2000步满量程分辨率" },
+    "port_1_4_28_m6",
+    "repeatability_cv_0_5",
+    "resolution_2000",
   ],
   "EA-500-PMMA": [
-    { label: "1/4-28 UNF / M6 接口可选" },
-    { label: "(100% 满量程)CV < 0.5%" },
-    { label: "2000步满量程分辨率" },
+    "port_1_4_28_m6",
+    "repeatability_cv_0_5",
+    "resolution_2000",
   ],
   "EA-500-PEEK": [
-    { label: "1/4-28 UNF / M6 接口可选" },
-    { label: "(100% 满量程)CV < 0.5%" },
-    { label: "2000步满量程分辨率" },
+    "port_1_4_28_m6",
+    "repeatability_cv_0_5",
+    "resolution_2000",
   ],
   "EA-1000-PMMA": [
-    { label: "1/4-28 UNF / M6 接口可选" },
-    { label: "(100% 满量程)CV < 0.5%" },
-    { label: "2000步满量程分辨率" },
+    "port_1_4_28_m6",
+    "repeatability_cv_0_5",
+    "resolution_2000",
   ],
   "EA-1000-PEEK": [
-    { label: "1/4-28 UNF / M6 接口可选" },
-    { label: "(100% 满量程)CV < 0.5%" },
-    { label: "2000步满量程分辨率" },
+    "port_1_4_28_m6",
+    "repeatability_cv_0_5",
+    "resolution_2000",
   ],
   "EA-2500-PMMA": [
-    { label: "1/4-28 UNF / M6 接口可选" },
-    { label: "(100% 满量程)CV < 0.5%" },
-    { label: "2000 / 2236 Step 婊￠噺绋嬪垎杈ㄧ巼" },
+    "port_1_4_28_m6",
+    "repeatability_cv_0_5",
+    "resolution_2000_2236",
   ],
   "EA-2500-PEEK": [
-    { label: "1/4-28 UNF / M6 接口可选" },
-    { label: "(100% 满量程)CV < 0.5%" },
-    { label: "2000 / 2236 Step 婊￠噺绋嬪垎杈ㄧ巼" },
+    "port_1_4_28_m6",
+    "repeatability_cv_0_5",
+    "resolution_2000_2236",
   ],
   "EA-5000-PMMA": [
-    { label: "1/4-28 UNF / M6 接口可选" },
-    { label: "(100% 满量程)CV < 0.5%" },
-    { label: "2000步满量程分辨率" },
+    "port_1_4_28_m6",
+    "repeatability_cv_0_5",
+    "resolution_2000",
   ],
   "EA-5000-PEEK": [
-    { label: "1/4-28 UNF / M6 接口可选" },
-    { label: "(100% 满量程)CV < 0.5%" },
-    { label: "2000步满量程分辨率" },
+    "port_1_4_28_m6",
+    "repeatability_cv_0_5",
+    "resolution_2000",
   ],
   "EA-10000-PMMA": [
-    { label: "1/4-28 UNF / M6 接口可选" },
-    { label: "(100% 满量程)CV < 0.5%" },
-    { label: "4000 Step 婊￠噺绋嬪垎杈ㄧ巼" },
+    "port_1_4_28_m6",
+    "repeatability_cv_0_5",
+    "resolution_4000",
   ],
   "EA-10000-PEEK": [
-    { label: "1/4-28 UNF / M6 接口可选" },
-    { label: "(100% 满量程)CV < 0.5%" },
-    { label: "4000 Step 婊￠噺绋嬪垎杈ㄧ巼" },
+    "port_1_4_28_m6",
+    "repeatability_cv_0_5",
+    "resolution_4000",
   ],
 
   /* SM Series */
   "SM-50-PMMA": [
-    { label: "1/4-28 UNF / M6 接口可选" },
-    { label: "(100% 满量程)CV < 0.5%" },
-    { label: "2000步满量程分辨率" },
+    "port_1_4_28_m6",
+    "repeatability_cv_0_5",
+    "resolution_2000",
   ],
   "SM-100-PMMA": [
-    { label: "1/4-28 UNF / M6 接口可选" },
-    { label: "(100% 满量程)CV < 0.5%" },
-    { label: "2000步满量程分辨率" },
+    "port_1_4_28_m6",
+    "repeatability_cv_0_5",
+    "resolution_2000",
   ],
   "SM-100-PEEK": [
-    { label: "1/4-28 UNF / M6 接口可选" },
-    { label: "(100% 满量程)CV < 0.5%" },
-    { label: "2000步满量程分辨率" },
+    "port_1_4_28_m6",
+    "repeatability_cv_0_5",
+    "resolution_2000",
   ],
   "SM-250-PMMA": [
-    { label: "1/4-28 UNF / M6 接口可选" },
-    { label: "(100% 满量程)CV < 0.5%" },
-    { label: "2000步满量程分辨率" },
+    "port_1_4_28_m6",
+    "repeatability_cv_0_5",
+    "resolution_2000",
   ],
   "SM-250-PEEK": [
-    { label: "1/4-28 UNF / M6 接口可选" },
-    { label: "(100% 满量程)CV < 0.5%" },
-    { label: "2000步满量程分辨率" },
+    "port_1_4_28_m6",
+    "repeatability_cv_0_5",
+    "resolution_2000",
   ],
   "SM-500-PMMA": [
-    { label: "1/4-28 UNF / M6 接口可选" },
-    { label: "(100% 满量程)CV < 0.5%" },
-    { label: "2000步满量程分辨率" },
+    "port_1_4_28_m6",
+    "repeatability_cv_0_5",
+    "resolution_2000",
   ],
   "SM-1000-PMMA": [
-    { label: "1/4-28 UNF / M6 接口可选" },
-    { label: "(100% 满量程)CV < 0.5%" },
-    { label: "2000步满量程分辨率" },
+    "port_1_4_28_m6",
+    "repeatability_cv_0_5",
+    "resolution_2000",
   ],
 
   /* TM Series */
   "TM-50-PMMA": [
-    { label: "6-40 UNF 娑茶矾鎺ュ彛" },
-    { label: "(100% 满量程)CV < 0.5%" },
-    { label: "2540 Step 婊￠噺绋嬪垎杈ㄧ巼" },
+    "port_6_40_unf",
+    "repeatability_cv_0_5",
+    "resolution_2540",
   ],
   "TM-100-PMMA": [
-    { label: "6-40 UNF 娑茶矾鎺ュ彛" },
-    { label: "(100% 满量程)CV < 0.5%" },
-    { label: "2540 Step 婊￠噺绋嬪垎杈ㄧ巼" },
+    "port_6_40_unf",
+    "repeatability_cv_0_5",
+    "resolution_2540",
   ],
   "TM-250-PMMA": [
-    { label: "6-40 UNF 娑茶矾鎺ュ彛" },
-    { label: "(100% 满量程)CV < 0.5%" },
-    { label: "2540 Step 婊￠噺绋嬪垎杈ㄧ巼" },
+    "port_6_40_unf",
+    "repeatability_cv_0_5",
+    "resolution_2540",
   ],
   "TM-500-PMMA": [
-    { label: "6-40 UNF 娑茶矾鎺ュ彛" },
-    { label: "(100% 满量程)CV < 0.5%" },
-    { label: "2540 Step 婊￠噺绋嬪垎杈ㄧ巼" },
+    "port_6_40_unf",
+    "repeatability_cv_0_5",
+    "resolution_2540",
   ],
 };
 
-export function getProductCardSpecs(product: ProductSelectionProduct) {
-  /*
-    产品中心卡片规格兜底保护。
+function getSpecLocale(locale: SelectionLocale): "zh" | "en" {
+  return locale === "zh" ? "zh" : "en";
+}
 
-    这个文件原本只服务柱塞泵卡片，因此旧逻辑默认所有产品都有：
-    product.cardTitle.en / product.cardTitle.zh
-
-    现在产品中心已经接入多个产品系列，包括阀系列。
-    阀系列卡片第一版没有 cardTitle 多语言对象，如果继续直接读取
-    product.cardTitle.en，就会导致运行时报错。
-
-    处理方式：
-    1. 如果 cardTitle 存在，优先读取 cardTitle.en / cardTitle.zh
-    2. 如果 cardTitle 不存在，则使用 model / title / productName 兜底
-    3. 如果不是柱塞泵型号，则返回空数组，不影响其他系列卡片
-  */
-
+export function getProductCardSpecs(
+  product: ProductSelectionProduct,
+  locale: SelectionLocale = "zh"
+): ProductCardSpecItem[] {
   const cardTitle = product.cardTitle as
     | {
         zh?: string;
@@ -187,7 +219,11 @@ export function getProductCardSpecs(product: ProductSelectionProduct) {
     (product as any).productName ||
     "";
 
-  return PLUNGER_PUMP_CARD_SPECS_BY_MODEL[model] || [];
+  const specLocale = getSpecLocale(locale);
+
+  return (PLUNGER_PUMP_CARD_SPECS_BY_MODEL[model] || []).map((specKey) => ({
+    label: PLUNGER_PUMP_CARD_SPEC_COPY[specKey][specLocale],
+  }));
 }
 
 
