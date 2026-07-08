@@ -22,10 +22,18 @@ export const valvelessPumpSelectionProducts: ProductSelectionProduct[] = [
     cardTitle: {
       zh: "RPL-P4 小量程无阀泵",
       en: "RPL-P4 Small-Volume Valveless Pump",
+      es: "RPL-P4 Small-Volume Valveless Pump",
+      fr: "RPL-P4 Small-Volume Valveless Pump",
+      ko: "RPL-P4 Small-Volume Valveless Pump",
+      ru: "RPL-P4 Small-Volume Valveless Pump",
     },
     cardSubtitle: {
       zh: "12–80 μL/rev 小量程输送\n适用于微量加样、滴定场景\n支持定制排量与接口配置",
       en: "12–80 μL/rev small-volume dispensing\nFor micro dispensing and titration\nCustom displacement and port options",
+      es: "12–80 μL/rev small-volume dispensing\nFor micro dispensing and titration\nCustom displacement and port options",
+      fr: "12–80 μL/rev small-volume dispensing\nFor micro dispensing and titration\nCustom displacement and port options",
+      ko: "12–80 μL/rev small-volume dispensing\nFor micro dispensing and titration\nCustom displacement and port options",
+      ru: "12–80 μL/rev small-volume dispensing\nFor micro dispensing and titration\nCustom displacement and port options",
     },
     filters: {
       filter01: "RPL 无阀泵",
@@ -37,6 +45,10 @@ export const valvelessPumpSelectionProducts: ProductSelectionProduct[] = [
     searchKeywords: {
       zh: "RPL-P4 无阀泵 12–80 μL/rev 小量程 微量加样 滴定 定量输送 valveless pump",
       en: "RPL-P4 valveless pump 12–80 μL/rev micro dispensing titration",
+      es: "RPL-P4 valveless pump 12–80 μL/rev micro dispensing titration",
+      fr: "RPL-P4 valveless pump 12–80 μL/rev micro dispensing titration",
+      ko: "RPL-P4 valveless pump 12–80 μL/rev micro dispensing titration",
+      ru: "RPL-P4 valveless pump 12–80 μL/rev micro dispensing titration",
     },
   },
   {
@@ -47,10 +59,18 @@ export const valvelessPumpSelectionProducts: ProductSelectionProduct[] = [
     cardTitle: {
       zh: "RPL-P6.35 中小量程无阀泵",
       en: "RPL-P6.35 Mid-Small Volume Valveless Pump",
+      es: "RPL-P6.35 Mid-Small Volume Valveless Pump",
+      fr: "RPL-P6.35 Mid-Small Volume Valveless Pump",
+      ko: "RPL-P6.35 Mid-Small Volume Valveless Pump",
+      ru: "RPL-P6.35 Mid-Small Volume Valveless Pump",
     },
     cardSubtitle: {
       zh: "50–300 μL/rev 中小量程输送\n适用于加样、灌装场景\n支持清洗口与液路配置",
       en: "50–300 μL/rev mid-small volume dispensing\nFor reagent dispensing and filling\nWash port and fluidic configuration options",
+      es: "50–300 μL/rev mid-small volume dispensing\nFor reagent dispensing and filling\nWash port and fluidic configuration options",
+      fr: "50–300 μL/rev mid-small volume dispensing\nFor reagent dispensing and filling\nWash port and fluidic configuration options",
+      ko: "50–300 μL/rev mid-small volume dispensing\nFor reagent dispensing and filling\nWash port and fluidic configuration options",
+      ru: "50–300 μL/rev mid-small volume dispensing\nFor reagent dispensing and filling\nWash port and fluidic configuration options",
     },
     filters: {
       filter01: "RPL 无阀泵",
@@ -62,6 +82,10 @@ export const valvelessPumpSelectionProducts: ProductSelectionProduct[] = [
     searchKeywords: {
       zh: "RPL-P6.35 无阀泵 50–300 μL/rev 加样 灌装 清洗口 液路配置 valveless pump",
       en: "RPL-P6.35 valveless pump 50–300 μL/rev dispensing filling wash port",
+      es: "RPL-P6.35 valveless pump 50–300 μL/rev dispensing filling wash port",
+      fr: "RPL-P6.35 valveless pump 50–300 μL/rev dispensing filling wash port",
+      ko: "RPL-P6.35 valveless pump 50–300 μL/rev dispensing filling wash port",
+      ru: "RPL-P6.35 valveless pump 50–300 μL/rev dispensing filling wash port",
     },
   },
   {
@@ -72,10 +96,18 @@ export const valvelessPumpSelectionProducts: ProductSelectionProduct[] = [
     cardTitle: {
       zh: "RPL-P15 中大量程无阀泵",
       en: "RPL-P15 Mid-Large Volume Valveless Pump",
+      es: "RPL-P15 Mid-Large Volume Valveless Pump",
+      fr: "RPL-P15 Mid-Large Volume Valveless Pump",
+      ko: "RPL-P15 Mid-Large Volume Valveless Pump",
+      ru: "RPL-P15 Mid-Large Volume Valveless Pump",
     },
     cardSubtitle: {
       zh: "300–1200 μL/rev 中大量程输送\n适用于加液、灌装场景\n支持接口与安装方式定制",
       en: "300–1200 μL/rev mid-large volume dispensing\nFor liquid addition and filling\nCustom ports and mounting options",
+      es: "300–1200 μL/rev mid-large volume dispensing\nFor liquid addition and filling\nCustom ports and mounting options",
+      fr: "300–1200 μL/rev mid-large volume dispensing\nFor liquid addition and filling\nCustom ports and mounting options",
+      ko: "300–1200 μL/rev mid-large volume dispensing\nFor liquid addition and filling\nCustom ports and mounting options",
+      ru: "300–1200 μL/rev mid-large volume dispensing\nFor liquid addition and filling\nCustom ports and mounting options",
     },
     filters: {
       filter01: "RPL 无阀泵",
@@ -87,6 +119,10 @@ export const valvelessPumpSelectionProducts: ProductSelectionProduct[] = [
     searchKeywords: {
       zh: "RPL-P15 无阀泵 300–1200 μL/rev 加液 灌装 接口 安装方式 valveless pump",
       en: "RPL-P15 valveless pump 300–1200 μL/rev liquid addition filling",
+      es: "RPL-P15 valveless pump 300–1200 μL/rev liquid addition filling",
+      fr: "RPL-P15 valveless pump 300–1200 μL/rev liquid addition filling",
+      ko: "RPL-P15 valveless pump 300–1200 μL/rev liquid addition filling",
+      ru: "RPL-P15 valveless pump 300–1200 μL/rev liquid addition filling",
     },
   },
   {
@@ -97,10 +133,18 @@ export const valvelessPumpSelectionProducts: ProductSelectionProduct[] = [
     cardTitle: {
       zh: "DRPL-0109 双头无阀泵",
       en: "DRPL-0109 Dual-Head Valveless Pump",
+      es: "DRPL-0109 Dual-Head Valveless Pump",
+      fr: "DRPL-0109 Dual-Head Valveless Pump",
+      ko: "DRPL-0109 Dual-Head Valveless Pump",
+      ru: "DRPL-0109 Dual-Head Valveless Pump",
     },
     cardSubtitle: {
       zh: "1:9 双头比例输送结构\n浓缩液 100 μL，稀释液 900 μL\n适用于 1 mL 配液量场景",
       en: "1:9 dual-head proportional dispensing\n100 μL concentrate and 900 μL diluent\nFor 1 mL dilution and dispensing",
+      es: "1:9 dual-head proportional dispensing\n100 μL concentrate and 900 μL diluent\nFor 1 mL dilution and dispensing",
+      fr: "1:9 dual-head proportional dispensing\n100 μL concentrate and 900 μL diluent\nFor 1 mL dilution and dispensing",
+      ko: "1:9 dual-head proportional dispensing\n100 μL concentrate and 900 μL diluent\nFor 1 mL dilution and dispensing",
+      ru: "1:9 dual-head proportional dispensing\n100 μL concentrate and 900 μL diluent\nFor 1 mL dilution and dispensing",
     },
     filters: {
       filter01: "DRPL 双头无阀泵",
@@ -112,6 +156,10 @@ export const valvelessPumpSelectionProducts: ProductSelectionProduct[] = [
     searchKeywords: {
       zh: "DRPL-0109 双头无阀泵 1:9 浓缩液 100 μL 稀释液 900 μL 配液量 1 mL QMin 60 QMax 300 比例输送 valveless pump",
       en: "DRPL-0109-0100 dual-head valveless pump 1:9 proportional dispensing 100 μL 900 μL 1 mL",
+      es: "DRPL-0109-0100 dual-head valveless pump 1:9 proportional dispensing 100 μL 900 μL 1 mL",
+      fr: "DRPL-0109-0100 dual-head valveless pump 1:9 proportional dispensing 100 μL 900 μL 1 mL",
+      ko: "DRPL-0109-0100 dual-head valveless pump 1:9 proportional dispensing 100 μL 900 μL 1 mL",
+      ru: "DRPL-0109-0100 dual-head valveless pump 1:9 proportional dispensing 100 μL 900 μL 1 mL",
     },
   },
   {
@@ -122,10 +170,18 @@ export const valvelessPumpSelectionProducts: ProductSelectionProduct[] = [
     cardTitle: {
       zh: "DRPL-0119 双头无阀泵",
       en: "DRPL-0119 Dual-Head Valveless Pump",
+      es: "DRPL-0119 Dual-Head Valveless Pump",
+      fr: "DRPL-0119 Dual-Head Valveless Pump",
+      ko: "DRPL-0119 Dual-Head Valveless Pump",
+      ru: "DRPL-0119 Dual-Head Valveless Pump",
     },
     cardSubtitle: {
       zh: "1:19 双头比例输送结构\n浓缩液 60 μL，稀释液 1140 μL\n适用于 1.2 mL 配液量场景",
       en: "1:19 dual-head proportional dispensing\n60 μL concentrate and 1140 μL diluent\nFor 1.2 mL dilution and dispensing",
+      es: "1:19 dual-head proportional dispensing\n60 μL concentrate and 1140 μL diluent\nFor 1.2 mL dilution and dispensing",
+      fr: "1:19 dual-head proportional dispensing\n60 μL concentrate and 1140 μL diluent\nFor 1.2 mL dilution and dispensing",
+      ko: "1:19 dual-head proportional dispensing\n60 μL concentrate and 1140 μL diluent\nFor 1.2 mL dilution and dispensing",
+      ru: "1:19 dual-head proportional dispensing\n60 μL concentrate and 1140 μL diluent\nFor 1.2 mL dilution and dispensing",
     },
     filters: {
       filter01: "DRPL 双头无阀泵",
@@ -137,6 +193,10 @@ export const valvelessPumpSelectionProducts: ProductSelectionProduct[] = [
     searchKeywords: {
       zh: "DRPL-0119 双头无阀泵 1:19 浓缩液 60 μL 稀释液 1140 μL 配液量 1.2 mL QMin 72 QMax 360 比例输送 valveless pump",
       en: "DRPL-0119-0060 dual-head valveless pump 1:19 proportional dispensing 60 μL 1140 μL 1.2 mL",
+      es: "DRPL-0119-0060 dual-head valveless pump 1:19 proportional dispensing 60 μL 1140 μL 1.2 mL",
+      fr: "DRPL-0119-0060 dual-head valveless pump 1:19 proportional dispensing 60 μL 1140 μL 1.2 mL",
+      ko: "DRPL-0119-0060 dual-head valveless pump 1:19 proportional dispensing 60 μL 1140 μL 1.2 mL",
+      ru: "DRPL-0119-0060 dual-head valveless pump 1:19 proportional dispensing 60 μL 1140 μL 1.2 mL",
     },
   },
 ];
@@ -149,10 +209,10 @@ export const valvelessPumpFilterLabels: ProductSelectionFilterLabel[] = [
     label: {
       zh: "产品系列",
       en: "Series",
-      es: "",
-      fr: "",
-      ko: "",
-      ru: "",
+      es: "Series",
+      fr: "Series",
+      ko: "Series",
+      ru: "Series",
     },
     inputType: "single",
     sortOrder: 10,
