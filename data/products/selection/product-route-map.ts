@@ -62,6 +62,30 @@ export const productRouteMap: {
       description:
         "恒永达泵系列产品覆盖自动化分析仪器、IVD、生命科学与实验室自动化设备中的精密液体处理需求。",
     },
+
+    valves: {
+      categoryId: "valves",
+      label: "阀系列",
+      title: "阀系列 | FOREACH",
+      description:
+        "恒永达阀系列产品覆盖旋转阀、高压阀、电磁阀等自动化仪器液路控制需求。",
+    },
+
+    tubing: {
+      categoryId: "tubing",
+      label: "管路系列",
+      title: "管路系列 | FOREACH",
+      description:
+        "恒永达管路系列产品覆盖 FEP、PFA、PTFE、PEEK、PVC、TPU 等仪器液路连接需求。",
+    },
+
+    probes: {
+      categoryId: "needles",
+      label: "针系列",
+      title: "针系列 | FOREACH",
+      description:
+        "恒永达针系列产品覆盖采样针、穿刺针、清洗针和搅拌桨等自动化仪器定制需求。",
+    },
   },
 
   productTypes: {
@@ -115,16 +139,7 @@ export const productRouteMap: {
         "无阀泵适用于简化液路结构、降低阀件依赖和提高系统集成度的精密液体处理场景。",
     },
 
-    "high-pressure-pumps": {
-      category: "pumps",
-      categoryId: "pumps",
-      productTypeId: "high-pressure-pump",
-      label: "高压泵",
-      title: "高压泵 | FOREACH",
-      description:
-        "高压泵适用于对压力稳定性、耐压能力和持续输送性能要求较高的分析仪器液路场景。",
-    },
-  },
+},
 
   series: {
     "ea-standard-piston-pumps": {
@@ -497,3 +512,5 @@ export const tubingProductRouteMap = {
   "peek-tubing": "/products/tubing/peek-tubing",
   "pfa-tubing": "/products/tubing/pfa-tubing",
 };
+
+

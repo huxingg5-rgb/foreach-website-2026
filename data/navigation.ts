@@ -444,7 +444,7 @@ const productMegaDropdown: MegaDropdown = {
         "유로 전환, 온오프 제어 및 고압 제어",
         "Переключение потоков, управление вкл./выкл. и высокое давление"
       ),
-      href: anchorPath("products"),
+      href: localizedPath("/products/valves"),
       images: [
         productImage(
           "/images/products/VALVE/Solenoid valve_200x200_01_v001.jpg",
@@ -471,7 +471,7 @@ const productMegaDropdown: MegaDropdown = {
       categoryKey: "tubing",
       title: t("管路系列", "Tubing Series", "Series de tubos", "Séries de tubes", "튜빙 시리즈", "Серии трубок"),
       description: t("软管、硬管与液路管线", "Flexible tubing, rigid tubing, and fluid lines", "Tubos flexibles, tubos rígidos y líneas de fluido", "Tubes souples, tubes rigides et lignes fluidiques", "플렉시블 튜빙, 리지드 튜빙 및 유체 라인", "Гибкие трубки, жесткие трубки и жидкостные линии"),
-      href: anchorPath("products"),
+      href: localizedPath("/products/tubing"),
       images: [
         productImage("/images/products/TUBING/ETFE_200x200_01_v001.JPG", t("ETFE 管", "ETFE Tubing", "Tubo ETFE", "Tube ETFE", "ETFE 튜빙", "Трубка ETFE"), t("耐化学腐蚀，适合精密液路", "Chemical-resistant tubing for precision fluidics", "Tubo resistente a químicos para fluidos de precisión", "Tube résistant aux produits chimiques pour fluidique de précision", "정밀 유체용 내화학 튜빙", "Химически стойкая трубка для точной флюидики")),
         productImage("/images/products/TUBING/FEP_200x200_01_v001.JPG", t("FEP 管", "FEP Tubing", "Tubo FEP", "Tube FEP", "FEP 튜빙", "Трубка FEP"), t("透明度高，适合可视化液路", "High transparency for visual fluid lines", "Alta transparencia para líneas de fluido visibles", "Haute transparence pour lignes fluidiques visibles", "시각 유로용 고투명 튜빙", "Высокая прозрачность для визуальных жидкостных линий")),
@@ -510,7 +510,7 @@ const productMegaDropdown: MegaDropdown = {
       categoryKey: "probes",
       title: t("针系列", "Probe Series", "Series de sondas", "Séries de sondes", "프로브 시리즈", "Серии зондов"),
       description: t("样本针、清洗针、穿刺针、搅拌针与定制针组件", "Sampling probes, rinsing probes, puncturing probes, stirrers, and custom probe assemblies", "Sondas de muestreo, sondas de enjuague, sondas de perforación, agitadores y conjuntos de sondas personalizados", "Sondes d’échantillonnage, sondes de rinçage, sondes de perçage, agitateurs et assemblages de sondes personnalisés", "샘플링 프로브, 린싱 프로브, 피어싱 프로브, 교반기 및 맞춤형 프로브 어셈블리", "Пробоотборные зонды, промывочные зонды, прокалывающие зонды, мешалки и индивидуальные узлы зондов"),
-      href: anchorPath("products"),
+      href: localizedPath("/products/probes"),
       images: [
         productImage("/images/products/PROBE/Puncturing probe_200x200_01_v001.jpg", t("穿刺针", "Puncturing Probe", "Sonda de perforación", "Sonde de perçage", "피어싱 프로브", "Прокалывающий зонд"), t("用于封膜穿刺与样本处理", "For film puncturing and sample handling", "Para perforación de film y manejo de muestras", "Pour perçage de film et traitement d’échantillons", "필름 천공 및 샘플 처리용", "Для прокалывания пленки и обработки образцов")),
         productImage("/images/products/PROBE/Rinsing probe_200x200_01_v001.jpg", t("清洗针", "Rinsing Probe", "Sonda de enjuague", "Sonde de rinçage", "린싱 프로브", "Промывочный зонд"), t("用于清洗、冲洗与液路维护", "For washing, rinsing, and fluid path maintenance", "Para lavado, enjuague y mantenimiento de rutas fluidas", "Pour lavage, rinçage et maintenance des circuits fluidiques", "세척, 린싱 및 유로 유지보수용", "Для промывки, ополаскивания и обслуживания жидкостных линий")),
@@ -2506,6 +2506,7 @@ export function getProductImageDisplayMeta(src: string, locale: string) {
       : "用于微流体液路系统的核心部件",
   };
 } 
+
 
 
 
