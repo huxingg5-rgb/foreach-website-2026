@@ -35,27 +35,27 @@ const CARD_TEXT: Record<
   }
 > = {
   zh: {
-    imagePlaceholder: "暂无图片",
-    specsAriaSuffix: "关键参数",
+    imagePlaceholder: "\u6682\u65e0\u56fe\u7247",
+    specsAriaSuffix: "\u5173\u952e\u53c2\u6570",
   },
   en: {
     imagePlaceholder: "No image",
     specsAriaSuffix: "key specifications",
   },
   es: {
-    imagePlaceholder: "Sin imagen",
+    imagePlaceholder: "No image",
     specsAriaSuffix: "key specifications",
   },
   fr: {
-    imagePlaceholder: "Aucune image",
+    imagePlaceholder: "No image",
     specsAriaSuffix: "key specifications",
   },
   ko: {
-    imagePlaceholder: "이미지 없음",
+    imagePlaceholder: "No image",
     specsAriaSuffix: "key specifications",
   },
   ru: {
-    imagePlaceholder: "Нет изображения",
+    imagePlaceholder: "No image",
     specsAriaSuffix: "key specifications",
   },
 };
