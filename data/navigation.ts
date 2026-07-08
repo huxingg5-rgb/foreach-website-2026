@@ -302,7 +302,7 @@ const productMegaDropdown: MegaDropdown = {
   categories: [
     {
       key: "pumps",
-      title: t("泵类", "Pumps", "Bombas", "Pompes", "펌프", "Насосы"),
+      title: t("泵系列", "Pump Series", "Series de bombas", "Séries de pompes", "펌프 시리즈", "Серии насосов"),
       description: t(
         "精密定量、连续供液、自动移液与稳定输送",
         "Precision metering, continuous supply, automated pipetting, and stable transfer",
@@ -316,7 +316,7 @@ const productMegaDropdown: MegaDropdown = {
     },
     {
       key: "valves",
-      title: t("阀类", "Valves", "Válvulas", "Vannes", "밸브", "Клапаны"),
+      title: t("阀系列", "Valve Series", "Series de válvulas", "Séries de vannes", "밸브 시리즈", "Серии клапанов"),
       description: t(
         "流路通断、夹管控制与多通道切换",
         "On/off control, tubing shutoff, and multi-channel switching",
@@ -330,7 +330,7 @@ const productMegaDropdown: MegaDropdown = {
     },
     {
       key: "tubing",
-      title: t("管路", "Tubing", "Tubos", "Tubes", "튜빙", "Трубки"),
+      title: t("管路系列", "Tubing Series", "Series de tubos", "Séries de tubes", "튜빙 시리즈", "Серии трубок"),
       description: t(
         "多材料软管、硬管与透明液路管线",
         "Multi-material flexible tubing, rigid tubing, and transparent fluid lines",
@@ -344,7 +344,7 @@ const productMegaDropdown: MegaDropdown = {
     },
     {
       key: "fittings",
-      title: t("连接件", "Fittings", "Conectores", "Raccords", "피팅", "Фитинги"),
+      title: t("接头系列", "Fitting Series", "Series de racores", "Séries de raccords", "피팅 시리즈", "Серии фитингов"),
       description: t(
         "软管接头、硬管接头、鲁尔接头、快插连接与定制管路组件",
         "Tubing connectors, rigid tubing fittings, luer fittings, quick connectors, and custom tubing assemblies",
@@ -358,7 +358,7 @@ const productMegaDropdown: MegaDropdown = {
     },
     {
       key: "probes",
-      title: t("采样针", "Probes", "Sondas", "Sondes", "프로브", "Зонды"),
+      title: t("针系列", "Probe Series", "Series de sondas", "Séries de sondes", "프로브 시리즈", "Серии зондов"),
       description: t(
         "样本针、清洗针、穿刺针、搅拌针与定制针组件",
         "Sampling probes, rinsing probes, puncturing probes, stirrers, and custom probe assemblies",
@@ -372,7 +372,7 @@ const productMegaDropdown: MegaDropdown = {
     },
     {
       key: "sensors",
-      title: t("传感器", "Sensors", "Sensores", "Capteurs", "센서", "Датчики"),
+      title: t("智控系列", "Smart Control Series", "Serie de control inteligente", "Série de contrôle intelligent", "스마트 제어 시리즈", "Серия интеллектуального управления"),
       description: t(
         "液路压力监测、状态检测与系统保护",
         "Fluid pressure monitoring, status detection, and system protection",
@@ -390,7 +390,7 @@ const productMegaDropdown: MegaDropdown = {
     {
       key: "pumps-card",
       categoryKey: "pumps",
-      title: t("泵类产品", "Pumps", "Bombas", "Pompes", "펌프", "Насосы"),
+      title: t("泵系列", "Pump Series", "Series de bombas", "Séries de pompes", "펌프 시리즈", "Серии насосов"),
       description: t(
         "定量、供液、移液与废液处理",
         "Metering, supply, pipetting, and waste handling",
@@ -435,7 +435,7 @@ const productMegaDropdown: MegaDropdown = {
     {
       key: "valves-card",
       categoryKey: "valves",
-      title: t("阀类产品", "Valves", "Válvulas", "Vannes", "밸브", "Клапаны"),
+      title: t("阀系列", "Valve Series", "Series de válvulas", "Séries de vannes", "밸브 시리즈", "Серии клапанов"),
       description: t(
         "流路切换、通断控制与高压控制",
         "Flow path switching, on/off control, and high-pressure control",
@@ -469,7 +469,7 @@ const productMegaDropdown: MegaDropdown = {
     {
       key: "tubing-card",
       categoryKey: "tubing",
-      title: t("管路产品", "Tubing", "Tubos", "Tubes", "튜빙", "Трубки"),
+      title: t("管路系列", "Tubing Series", "Series de tubos", "Séries de tubes", "튜빙 시리즈", "Серии трубок"),
       description: t("软管、硬管与液路管线", "Flexible tubing, rigid tubing, and fluid lines", "Tubos flexibles, tubos rígidos y líneas de fluido", "Tubes souples, tubes rigides et lignes fluidiques", "플렉시블 튜빙, 리지드 튜빙 및 유체 라인", "Гибкие трубки, жесткие трубки и жидкостные линии"),
       href: anchorPath("products"),
       images: [
@@ -488,7 +488,7 @@ const productMegaDropdown: MegaDropdown = {
     {
       key: "fittings-card",
       categoryKey: "fittings",
-      title: t("连接件与管路组件", "Fittings & Tubing Assemblies", "Conectores y conjuntos de tubos", "Raccords et assemblages de tubes", "피팅 및 튜빙 어셈블리", "Фитинги и трубные сборки"),
+      title: t("接头系列", "Fitting Series", "Series de racores", "Séries de raccords", "피팅 시리즈", "Серии фитингов"),
       description: t("接头、转接件、快插连接与定制管路组件", "Connectors, adapters, quick connectors, and custom tubing assemblies", "Conectores, adaptadores, conectores rápidos y conjuntos de tubos personalizados", "Connecteurs, adaptateurs, connecteurs rapides et assemblages de tubes personnalisés", "커넥터, 어댑터, 퀵 커넥터 및 맞춤형 튜빙 어셈블리", "Соединители, адаптеры, быстроразъемные соединители и индивидуальные трубные сборки"),
       href: anchorPath("products"),
       images: [
@@ -508,7 +508,7 @@ const productMegaDropdown: MegaDropdown = {
     {
       key: "probes-card",
       categoryKey: "probes",
-      title: t("采样针与定制针组件", "Probes & Custom Probe Assemblies", "Sondas y conjuntos personalizados", "Sondes et assemblages personnalisés", "프로브 및 맞춤형 프로브 어셈블리", "Зонды и индивидуальные узлы зондов"),
+      title: t("针系列", "Probe Series", "Series de sondas", "Séries de sondes", "프로브 시리즈", "Серии зондов"),
       description: t("样本针、清洗针、穿刺针、搅拌针与定制针组件", "Sampling probes, rinsing probes, puncturing probes, stirrers, and custom probe assemblies", "Sondas de muestreo, sondas de enjuague, sondas de perforación, agitadores y conjuntos de sondas personalizados", "Sondes d’échantillonnage, sondes de rinçage, sondes de perçage, agitateurs et assemblages de sondes personnalisés", "샘플링 프로브, 린싱 프로브, 피어싱 프로브, 교반기 및 맞춤형 프로브 어셈블리", "Пробоотборные зонды, промывочные зонды, прокалывающие зонды, мешалки и индивидуальные узлы зондов"),
       href: anchorPath("products"),
       images: [
@@ -2506,6 +2506,7 @@ export function getProductImageDisplayMeta(src: string, locale: string) {
       : "用于微流体液路系统的核心部件",
   };
 } 
+
 
 
 
