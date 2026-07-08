@@ -43,11 +43,19 @@ const probeProducts = [
     cardTitle: {
       zh: "采样针系列",
       en: "Sampling Probe Series",
+      es: "Serie de agujas de muestreo",
+      fr: "Série d'aiguilles de prélèvement",
+      ko: "샘플링 프로브 시리즈",
+      ru: "Серия пробоотборных игл",
     },
 
     cardSubtitle: {
       zh: "用于试剂、样本吸取与分配\n可做针尖、侧孔、弯折和长度定制\n支持内壁抛光与液位检测适配",
       en: "For reagent and sample aspiration and dispensing\nCustom tip, side hole, bending and length options\nInner-wall polishing and liquid level detection support",
+      es: "Para aspiración y dosificación de reactivos y muestras\nOpciones personalizadas de punta, orificio lateral, curvado y longitud\nSoporte para pulido interno y detección de nivel de líquido",
+      fr: "Pour aspiration et distribution de réactifs et d'échantillons\nOptions personnalisées de pointe, trou latéral, cintrage et longueur\nPrise en charge du polissage interne et de la détection de niveau liquide",
+      ko: "시약 및 샘플 흡입/분주용\n팁, 측면 홀, 굽힘 및 길이 맞춤 옵션\n내벽 연마 및 액면 감지 지원",
+      ru: "Для аспирации и дозирования реагентов и образцов\nПользовательские варианты наконечника, бокового отверстия, изгиба и длины\nПоддержка полировки внутренней стенки и определения уровня жидкости",
     },
 
     image: "/images/products/probes/sampling-probes/sampling-probes-main.webp",
@@ -115,11 +123,19 @@ const probeProducts = [
     cardTitle: {
       zh: "穿刺针系列",
       en: "Piercing Probe Series",
+      es: "Serie de agujas de perforación",
+      fr: "Série d'aiguilles de perçage",
+      ko: "피어싱 프로브 시리즈",
+      ru: "Серия прокалывающих игл",
     },
 
     cardSubtitle: {
       zh: "用于封膜、瓶塞和耗材穿刺取液\n针管、针尖和排气结构可定制\n适用于试剂仓、样本仓和封闭耗材",
       en: "For piercing sealed films, stoppers and consumables\nCustom tube, tip and venting structures\nFor reagent chambers, sample chambers and closed consumables",
+      es: "Para perforar films sellados, tapones y consumibles\nEstructuras personalizadas de tubo, punta y ventilación\nPara cámaras de reactivo, cámaras de muestra y consumibles cerrados",
+      fr: "Pour perçage de films scellés, bouchons et consommables\nStructures personnalisées de tube, pointe et évent\nPour chambres de réactif, chambres d'échantillon et consommables fermés",
+      ko: "밀봉 필름, 마개 및 소모품 천공용\n튜브, 팁 및 배기 구조 맞춤 가능\n시약 챔버, 샘플 챔버 및 밀폐 소모품용",
+      ru: "Для прокалывания герметичных пленок, пробок и расходников\nПользовательские структуры трубки, наконечника и вентиляции\nДля камер реагентов, камер образцов и закрытых расходников",
     },
 
     image: "/images/products/probes/piercing-probes/piercing-probes-main.webp",
@@ -187,11 +203,19 @@ const probeProducts = [
     cardTitle: {
       zh: "清洗针系列",
       en: "Wash Probe Series",
+      es: "Serie de agujas de lavado",
+      fr: "Série d'aiguilles de lavage",
+      ko: "세척 프로브 시리즈",
+      ru: "Серия промывочных игл",
     },
 
     cardSubtitle: {
       zh: "用于针外壁清洗、废液排出和残液处理\n可做单头、双头、多头和侧孔结构\n适配清洗站与自动化液路模块",
       en: "For outer-wall washing, waste removal and residual liquid handling\nSingle-head, dual-head, multi-head and side-hole options\nFor wash stations and automated fluidic modules",
+      es: "Para lavado de pared exterior, eliminación de residuos y manejo de líquido residual\nOpciones de cabezal simple, doble, múltiple y orificio lateral\nPara estaciones de lavado y módulos fluídicos automatizados",
+      fr: "Pour lavage de paroi externe, évacuation des déchets et gestion des liquides résiduels\nOptions simple tête, double tête, multi-tête et trou latéral\nPour stations de lavage et modules fluidiques automatisés",
+      ko: "외벽 세척, 폐액 제거 및 잔류액 처리용\n싱글 헤드, 듀얼 헤드, 멀티 헤드 및 측면 홀 옵션\n세척 스테이션 및 자동화 유체 모듈용",
+      ru: "Для промывки наружной стенки, удаления отходов и работы с остаточной жидкостью\nВарианты с одной, двумя, несколькими головками и боковым отверстием\nДля промывочных станций и автоматизированных жидкостных модулей",
     },
 
     image: "/images/products/probes/wash-probes/wash-probes-main.webp",
@@ -259,11 +283,19 @@ const probeProducts = [
     cardTitle: {
       zh: "搅拌桨系列",
       en: "Stirring Paddle Series",
+      es: "Serie de paletas agitadoras",
+      fr: "Série de pales d'agitation",
+      ko: "교반 패들 시리즈",
+      ru: "Серия мешалок",
     },
 
     cardSubtitle: {
       zh: "用于样本、试剂和反应液混匀\n支持平板、螺旋、90度角叶片等结构\n可按杯型、转速和混匀效果定制",
       en: "For sample, reagent and reaction-liquid mixing\nFlat, spiral and 90-degree blade options\nCustomizable by cup geometry, speed and mixing effect",
+      es: "Para mezcla de muestras, reactivos y líquidos de reacción\nOpciones de palas planas, espirales y de 90 grados\nPersonalizable según geometría del vaso, velocidad y efecto de mezcla",
+      fr: "Pour mélange d'échantillons, réactifs et liquides de réaction\nOptions de pales plates, spirales et à 90 degrés\nPersonnalisation selon géométrie de cuve, vitesse et effet de mélange",
+      ko: "샘플, 시약 및 반응액 혼합용\n평판, 나선형 및 90도 블레이드 옵션\n컵 형상, 속도 및 혼합 효과에 맞춤 가능",
+      ru: "Для перемешивания образцов, реагентов и реакционных жидкостей\nПлоские, спиральные и 90-градусные лопасти\nНастройка по геометрии чашки, скорости и эффекту перемешивания",
     },
 
     image: "/images/products/probes/stirring-paddles/stirring-paddles-main.webp",
