@@ -414,7 +414,7 @@ const productMegaDropdown: MegaDropdown = {
         productImage(
           "/images/products/pumps/pipetting-pump.jpg",
           t("移液泵", "Pipetting Pump", "Bomba de pipeteo", "Pompe de pipetage", "피펫팅 펌프", "Пипеточный насос"),
-          t("自动化移液、加样与分液", "Automated pipetting and dispensing", "Pipeteo y dispensación automatizados", "Pipetage et distribution automatisés", "자동 피펫팅 및 분주", "Автоматическое пипетирование и дозирование")
+          t("连续定量输送与比例加液", "Automated pipetting and dispensing", "Pipeteo y dispensación automatizados", "Pipetage et distribution automatisés", "자동 피펫팅 및 분주", "Автоматическое пипетирование и дозирование")
         ),
         productImage(
           "/images/products/pumps/piston-pump.jpg",
@@ -424,8 +424,8 @@ const productMegaDropdown: MegaDropdown = {
         ),
         productImage(
           "/images/products/pumps/rotary-pump.jpg",
-          t("旋转泵", "Rotary Pump", "Bomba rotativa", "Pompe rotative", "로터리 펌프", "Роторный насос"),
-          t("多通道液路切换与定量输送", "Multi-channel switching and metering", "Conmutación multicanal y dosificación", "Commutation multicanal et dosage", "다중 채널 전환 및 계량", "Многоканальное переключение и дозирование")
+          t("无阀泵", "Valveless Pump", "Bomba sin válvula", "Pompe sans clapet", "무밸브 펌프", "Бесклапанный насос"),
+          t("连续定量输送与比例加液", "Continuous metering and proportional dispensing", "Dosificación continua y dispensación proporcional", "Dosage continu et distribution proportionnelle", "연속 정량 이송 및 비례 분주", "Непрерывное дозирование и пропорциональная подача")
         ),
       ],
       order: 1,
@@ -2477,7 +2477,7 @@ export function getProductImageDisplayMeta(src: string, locale: string) {
       title: useEnglish ? "Pipetting Pump" : "移液泵",
       description: useEnglish
         ? "Automated pipetting and dispensing"
-        : "自动化移液、加样与分液",
+        : "连续定量输送与比例加液",
     };
   }
 
@@ -2492,10 +2492,10 @@ export function getProductImageDisplayMeta(src: string, locale: string) {
 
   if (src.includes("rotary-pump")) {
     return {
-      title: useEnglish ? "Rotary Pump" : "旋转泵",
+      title: useEnglish ? "Valveless Pump" : "无阀泵",
       description: useEnglish
-        ? "Multi-channel switching and metering"
-        : "多通道液路切换与定量输送",
+        ? "Continuous metering and proportional dispensing"
+        : "连续定量输送与比例加液",
     };
   }
 
@@ -2506,4 +2506,6 @@ export function getProductImageDisplayMeta(src: string, locale: string) {
       : "用于微流体液路系统的核心部件",
   };
 } 
+
+
 
