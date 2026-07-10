@@ -1,61 +1,37 @@
-// 这是关于 data/home-news.ts 的文件：用于管理首页第五屏「资讯中心」数据
-// 这个文件的作用：统一管理首页新闻模块的标题、分类、主推新闻、公告卡片、新闻列表、图片和跳转链接
-// 后端预留说明：后期接后台 / CMS 时，可以把这里的数据替换成接口返回数据
-// 图片预留说明：当前 image 使用 public 目录下的本地图片路径，后期可以替换为后端返回的图片 URL
-
-import type { LocaleCode } from "@/lib/i18n"; // 引入官网支持的语言代码类型，例如 zh-CN、en、es、fr、ko、ru
-
-/* ================================
-   多语言文本类型
-================================ */
-
-export type HomeNewsText = Partial<Record<LocaleCode, string>>; // 定义多语言文本类型，每种语言都可以单独配置文字
-
-/* ================================
-   多语言链接类型
-
-   说明：
-   1. 中文新闻路径可以是 /news
-   2. 英文新闻路径可以是 /en/news
-   3. 后期如果新闻详情页还没做，可以先统一跳 /news 或对应语言新闻列表
-================================ */
-
-export type HomeNewsHref = Partial<Record<LocaleCode, string>>; // 定义多语言链接类型，每种语言都可以单独配置链接
-
-/* ================================
-   新闻分类类型
-================================ */
-
-export type HomeNewsTab = {
-  key: string; // 分类唯一标识，前端筛选和后端数据匹配时使用，不使用中文
-  label: HomeNewsText; // 分类显示文字，支持多语言
-};
-
-/* ================================
-   新闻卡片类型
-================================ */
-
-export type HomeNewsItem = {
-  key: string; // 新闻唯一标识，用于 React key 和后端数据匹配
-  categoryKey: string; // 对应分类 key，例如 company-news、announcements、knowledge
-  categoryLabel: HomeNewsText; // 分类显示文字，支持多语言
-  date: string; // 新闻日期
-  title: HomeNewsText; // 新闻标题，支持多语言
-  description?: HomeNewsText; // 新闻说明，可选，支持多语言
-  image?: string; // 新闻图片路径，可选，后期可以替换为后端 / CMS 返回的图片 URL
-  href: HomeNewsHref; // 新闻链接，支持多语言路径
-};
+﻿import type { LocaleCode } from "@/lib/i18n";
 
 /* ================================
    首页资讯中心数据
+   说明：
+   1. 首页资讯模块只负责展示精选新闻
+   2. 真实新闻正文仍然维护在 data/resources/news/news.zh.ts 与 news.intl.ts
+   3. 首页链接必须指向 /resources/news/[slug]
 ================================ */
 
-export const homeNewsData = {
-  /* ================================
-     模块基础文案
-  ================================ */
+export type HomeNewsText = Partial<Record<LocaleCode, string>>;
+export type HomeNewsHref = Partial<Record<LocaleCode, string>>;
 
-  sectionId: "news", // 首页新闻模块锚点 id
+export type HomeNewsTab = {
+  key: string;
+  label: HomeNewsText;
+};
+
+export type HomeNewsItem = {
+  key: string;
+  categoryKey: string;
+  categoryLabel: HomeNewsText;
+  date: string;
+  title: HomeNewsText;
+  description?: HomeNewsText;
+  image?: string;
+  href: HomeNewsHref;
+};
+
+const defaultNewsImage =
+  "/images/resources/news/banner/resources-news-banner-1920x520-v001.webp";
+
+export const homeNewsData = {
+  sectionId: "news",
 
   title: {
     "zh-CN": "资讯中心",
@@ -64,7 +40,7 @@ export const homeNewsData = {
     fr: "Centre d’actualités",
     ko: "뉴스 센터",
     ru: "Центр новостей",
-  }, // 新闻模块标题
+  },
 
   tabsAriaLabel: {
     "zh-CN": "资讯分类切换",
@@ -73,7 +49,7 @@ export const homeNewsData = {
     fr: "Changement de catégorie d’actualités",
     ko: "뉴스 카테고리 전환",
     ru: "Переключение категорий новостей",
-  }, // 顶部分类按钮区域无障碍说明
+  },
 
   newsListAriaLabel: {
     "zh-CN": "新闻列表",
@@ -82,7 +58,7 @@ export const homeNewsData = {
     fr: "Liste des actualités",
     ko: "뉴스 목록",
     ru: "Список новостей",
-  }, // 右侧新闻列表无障碍说明
+  },
 
   moreNewsLabel: {
     "zh-CN": "更多新闻",
@@ -91,7 +67,7 @@ export const homeNewsData = {
     fr: "Plus d’actualités",
     ko: "더 많은 뉴스",
     ru: "Больше новостей",
-  }, // 查看更多新闻按钮文字
+  },
 
   viewDetailLabel: {
     "zh-CN": "查看详情",
@@ -100,7 +76,7 @@ export const homeNewsData = {
     fr: "Voir les détails",
     ko: "자세히 보기",
     ru: "Подробнее",
-  }, // 查看详情按钮文字
+  },
 
   viewAnnouncementAriaLabel: {
     "zh-CN": "查看公告详情",
@@ -109,7 +85,7 @@ export const homeNewsData = {
     fr: "Voir les détails de l’annonce",
     ko: "공지 상세 보기",
     ru: "Подробнее об объявлении",
-  }, // 中间公告卡片查看详情的无障碍说明
+  },
 
   viewNewsAriaLabel: {
     "zh-CN": "查看详情",
@@ -118,363 +94,327 @@ export const homeNewsData = {
     fr: "Voir les détails",
     ko: "자세히 보기",
     ru: "Подробнее",
-  }, // 普通新闻查看详情的无障碍说明
+  },
 
   moreNewsHref: {
-    "zh-CN": "/news",
-    en: "/en/news",
-    es: "/es/news",
-    fr: "/fr/news",
-    ko: "/ko/news",
-    ru: "/ru/news",
-  }, // 查看更多新闻的多语言跳转链接
-
-  /* ================================
-     顶部分类按钮
-  ================================ */
+    "zh-CN": "/resources/news",
+    en: "/en/resources/news",
+    es: "/es/resources/news",
+    fr: "/fr/resources/news",
+    ko: "/ko/resources/news",
+    ru: "/ru/resources/news",
+  },
 
   tabs: [
     {
-      key: "company-news", // 公司动态分类 key
+      key: "exhibition",
+      label: {
+        "zh-CN": "展会活动",
+        en: "Exhibitions",
+        es: "Exposiciones",
+        fr: "Salons",
+        ko: "전시회",
+        ru: "Выставки",
+      },
+    },
+    {
+      key: "company",
       label: {
         "zh-CN": "公司动态",
-        en: "Company News",
+        en: "Company Updates",
         es: "Noticias de la empresa",
         fr: "Actualités de l’entreprise",
         ko: "회사 소식",
         ru: "Новости компании",
-      }, // 公司动态分类文字
+      },
     },
     {
-      key: "announcements", // 通知公告分类 key
+      key: "notice",
       label: {
-        "zh-CN": "通知公告",
+        "zh-CN": "公告通知",
         en: "Announcements",
         es: "Anuncios",
         fr: "Annonces",
         ko: "공지사항",
         ru: "Объявления",
-      }, // 通知公告分类文字
+      },
     },
-    {
-      key: "knowledge", // 知识分享分类 key
-      label: {
-        "zh-CN": "知识分享",
-        en: "Knowledge Sharing",
-        es: "Recursos técnicos",
-        fr: "Partage de connaissances",
-        ko: "기술 자료",
-        ru: "Технические материалы",
-      }, // 知识分享分类文字
-    },
-  ] satisfies HomeNewsTab[], // 限定 tabs 必须符合 HomeNewsTab 数组类型
-
-  /* ================================
-     左侧主推新闻卡片
-  ================================ */
+  ] satisfies HomeNewsTab[],
 
   featureNews: {
-    key: "company-fluidic-capability", // 左侧主推新闻 key
-    categoryKey: "company-news", // 左侧主推新闻所属分类
+    key: "whx-labs-dubai-2026",
+    categoryKey: "exhibition",
+    categoryLabel: {
+      "zh-CN": "展会活动",
+      en: "Exhibitions",
+      es: "Exposiciones",
+      fr: "Salons",
+      ko: "전시회",
+      ru: "Выставки",
+    },
+    date: "2026/02/07",
+    image: "/images/resources/news/articles/whx-labs-dubai-2026/cover.png",
+    title: {
+      "zh-CN": "迪拜实验室展｜期待在现场与您相见",
+      en: "FOREACH to Exhibit at WHX Labs Dubai 2026",
+      es: "FOREACH participará en WHX Labs Dubai 2026",
+      fr: "FOREACH participera au WHX Labs Dubai 2026",
+      ko: "FOREACH, WHX Labs Dubai 2026 참가",
+      ru: "FOREACH примет участие в WHX Labs Dubai 2026",
+    },
+    description: {
+      "zh-CN":
+        "恒永达将于 2026 年 2 月 10 日至 13 日参加迪拜实验室展，展位号 H2.F34，展示微流体核心产品、技术优势及多场景应用方案。",
+      en:
+        "FOREACH will exhibit at WHX Labs Dubai 2026 at Booth H2.F34, presenting core microfluidic products, technical capabilities, and application solutions.",
+      es:
+        "FOREACH presentará productos microfluídicos clave y soluciones de aplicación en WHX Labs Dubai 2026, Stand H2.F34.",
+      fr:
+        "FOREACH présentera ses composants microfluidiques clés et ses solutions d’application au WHX Labs Dubai 2026, stand H2.F34.",
+      ko:
+        "FOREACH는 WHX Labs Dubai 2026 H2.F34 부스에서 핵심 마이크로플루이딕 제품과 응용 솔루션을 선보입니다.",
+      ru:
+        "FOREACH представит ключевые микрофлюидные продукты и прикладные решения на WHX Labs Dubai 2026, стенд H2.F34.",
+    },
+    href: {
+      "zh-CN": "/resources/news/whx-labs-dubai-2026",
+      en: "/en/resources/news/whx-labs-dubai-2026",
+      es: "/es/resources/news/whx-labs-dubai-2026",
+      fr: "/fr/resources/news/whx-labs-dubai-2026",
+      ko: "/ko/resources/news/whx-labs-dubai-2026",
+      ru: "/ru/resources/news/whx-labs-dubai-2026",
+    },
+  } satisfies HomeNewsItem,
+
+  highlightNews: {
+    key: "gazelle-enterprise-2025",
+    categoryKey: "company",
     categoryLabel: {
       "zh-CN": "公司动态",
-      en: "Company News",
+      en: "Company Updates",
       es: "Noticias de la empresa",
       fr: "Actualités de l’entreprise",
       ko: "회사 소식",
       ru: "Новости компании",
-    }, // 左侧主推新闻分类文字
-    date: "2026/05/16", // 左侧主推新闻日期
-    image: "/images/home/news/news-feature-01.webp", // 左侧主推新闻图片，后期可替换为后端图片 URL
+    },
+    date: "2025/07/22",
+    image: "/images/resources/news/articles/gazelle-enterprise-2025/cover.png",
     title: {
-      "zh-CN":
-        "恒永达持续推进微流体系统核心零部件与液路方案能力建设，为 IVD、生命科学与实验室自动化客户提供稳定的产品支持。",
-      en:
-        "FOREACH continues to strengthen its core microfluidic component and fluidic solution capabilities, providing stable product support for IVD, life sciences, and laboratory automation customers.",
-      es:
-        "FOREACH continúa fortaleciendo sus capacidades en componentes microfluídicos clave y soluciones fluídicas, ofreciendo soporte estable para clientes de IVD, ciencias de la vida y automatización de laboratorios.",
-      fr:
-        "FOREACH continue de renforcer ses capacités en composants microfluidiques clés et solutions fluidiques, afin d’offrir un support produit stable aux clients IVD, sciences de la vie et automatisation de laboratoire.",
-      ko:
-        "FOREACH는 마이크로플루이딕 핵심 부품과 유체 솔루션 역량을 지속적으로 강화하여 IVD, 생명과학 및 실험실 자동화 고객에게 안정적인 제품 지원을 제공합니다.",
-      ru:
-        "FOREACH продолжает развивать возможности в области ключевых микрофлюидных компонентов и жидкостных решений, обеспечивая стабильную продуктовую поддержку клиентов в IVD, науках о жизни и лабораторной автоматизации.",
-    }, // 左侧主推新闻标题
+      "zh-CN": "创新再突破，恒永达科技荣膺“瞪羚企业”",
+      en: "FOREACH Recognized as a Gazelle Enterprise",
+      es: "FOREACH reconocida como empresa gacela",
+      fr: "FOREACH reconnue comme entreprise Gazelle",
+      ko: "FOREACH, 가젤 기업으로 선정",
+      ru: "FOREACH признана предприятием Gazelle",
+    },
     description: {
       "zh-CN":
-        "围绕泵、阀、传感器、管路连接件和采样针等核心部件，持续完善面向自动化分析仪器的液路系统支持能力，帮助客户更高效地完成样本处理、试剂分配、清洗废液及多通道流路控制。",
+        "恒永达凭借技术创新实力、成长速度和市场表现，获评深圳市瞪羚企业，企业资质与成长能力再次获得认可。",
       en:
-        "Focused on pumps, valves, sensors, fittings, tubing, and sampling probes, FOREACH continues to improve fluidic system support for automated analytical instruments.",
+        "FOREACH was recognized as a Gazelle Enterprise, reflecting its innovation capability, growth momentum, and market performance.",
       es:
-        "Centrada en bombas, válvulas, sensores, conectores, tubos y agujas de muestreo, FOREACH sigue mejorando el soporte de sistemas fluídicos para instrumentos analíticos automatizados.",
+        "FOREACH fue reconocida como empresa gacela por su capacidad de innovación, crecimiento y desempeño de mercado.",
       fr:
-        "Axée sur les pompes, vannes, capteurs, raccords, tubes et aiguilles de prélèvement, FOREACH continue d’améliorer le support des systèmes fluidiques pour les instruments d’analyse automatisés.",
+        "FOREACH a été reconnue comme entreprise Gazelle pour ses capacités d’innovation, sa croissance et ses performances de marché.",
       ko:
-        "FOREACH는 펌프, 밸브, 센서, 피팅, 튜빙 및 샘플링 프로브를 중심으로 자동화 분석 장비를 위한 유체 시스템 지원 역량을 지속적으로 향상하고 있습니다.",
+        "FOREACH는 혁신 역량, 성장성 및 시장 성과를 바탕으로 가젤 기업으로 선정되었습니다.",
       ru:
-        "FOREACH продолжает развивать поддержку жидкостных систем для автоматизированных аналитических приборов, уделяя внимание насосам, клапанам, датчикам, фитингам, трубкам и пробоотборным иглам.",
-    }, // 左侧主推新闻描述
+        "FOREACH получила статус предприятия Gazelle благодаря инновациям, росту и рыночным результатам.",
+    },
     href: {
-      "zh-CN": "/news",
-      en: "/en/news",
-      es: "/es/news",
-      fr: "/fr/news",
-      ko: "/ko/news",
-      ru: "/ru/news",
-    }, // 左侧主推新闻链接
-  } satisfies HomeNewsItem, // 限定 featureNews 必须符合 HomeNewsItem 类型
-
-  /* ================================
-     中间公告卡片
-  ================================ */
-
-  highlightNews: {
-    key: "website-upgrade-project", // 中间公告新闻 key
-    categoryKey: "announcements", // 中间公告所属分类
-    categoryLabel: {
-      "zh-CN": "通知公告",
-      en: "Announcements",
-      es: "Anuncios",
-      fr: "Annonces",
-      ko: "공지사항",
-      ru: "Объявления",
-    }, // 中间公告分类文字
-    date: "2026/05/16", // 中间公告日期
-    image: "", // 中间公告当前不使用图片，后期如果设计需要可以补图片
-    title: {
-      "zh-CN":
-        "恒永达官网升级项目启动，将围绕产品展示、技术内容、询盘承接与后续优化持续完善。",
-      en:
-        "FOREACH has launched its website upgrade project, focusing on product presentation, technical content, inquiry conversion, and continuous optimization.",
-      es:
-        "FOREACH ha iniciado el proyecto de actualización de su sitio web, centrado en la presentación de productos, contenido técnico, gestión de consultas y mejora continua.",
-      fr:
-        "FOREACH a lancé son projet de mise à niveau du site web, axé sur la présentation des produits, le contenu technique, la gestion des demandes et l’optimisation continue.",
-      ko:
-        "FOREACH는 제품 전시, 기술 콘텐츠, 문의 접수 및 지속적인 최적화를 중심으로 공식 웹사이트 업그레이드 프로젝트를 시작했습니다.",
-      ru:
-        "FOREACH запустила проект обновления сайта, уделяя особое внимание презентации продукции, техническому контенту, обработке запросов и дальнейшей оптимизации.",
-    }, // 中间公告标题
-    description: {
-      "zh-CN":
-        "本次升级将重点优化首页信息结构、产品中心、应用领域、技术文章与联系我们模块，提升客户获取资料、了解产品与提交询盘的效率，并为多语言内容和后续运营预留空间。",
-      en:
-        "This upgrade will optimize the homepage structure, product center, application pages, technical articles, and contact modules, helping customers access information, understand products, and submit inquiries more efficiently while preparing for multilingual content and future operations.",
-      es:
-        "Esta actualización optimizará la estructura de la página principal, el centro de productos, las áreas de aplicación, los artículos técnicos y los módulos de contacto, ayudando a los clientes a obtener información, conocer productos y enviar consultas con mayor eficiencia.",
-      fr:
-        "Cette mise à niveau optimisera la structure de la page d’accueil, le centre produits, les domaines d’application, les articles techniques et les modules de contact, afin d’aider les clients à accéder plus efficacement aux informations, comprendre les produits et envoyer des demandes.",
-      ko:
-        "이번 업그레이드는 홈페이지 정보 구조, 제품 센터, 응용 분야, 기술 문서 및 문의 모듈을 최적화하여 고객이 자료를 확인하고 제품을 이해하며 문의를 제출하는 효율을 높입니다.",
-      ru:
-        "Обновление оптимизирует структуру главной страницы, центр продукции, области применения, технические статьи и контактные модули, помогая клиентам быстрее получать информацию, понимать продукты и отправлять запросы.",
-    }, // 中间公告描述
-    href: {
-      "zh-CN": "/news",
-      en: "/en/news",
-      es: "/es/news",
-      fr: "/fr/news",
-      ko: "/ko/news",
-      ru: "/ru/news",
-    }, // 中间公告链接
-  } satisfies HomeNewsItem, // 限定 highlightNews 必须符合 HomeNewsItem 类型
-
-  /* ================================
-     右侧新闻列表
-  ================================ */
+      "zh-CN": "/resources/news/gazelle-enterprise-2025",
+      en: "/en/resources/news/gazelle-enterprise-2025",
+      es: "/es/resources/news/gazelle-enterprise-2025",
+      fr: "/fr/resources/news/gazelle-enterprise-2025",
+      ko: "/ko/resources/news/gazelle-enterprise-2025",
+      ru: "/ru/resources/news/gazelle-enterprise-2025",
+    },
+  } satisfies HomeNewsItem,
 
   newsList: [
     {
-      key: "pump-valve-sensor-fluidic-system", // 第一条新闻 key
-      categoryKey: "knowledge", // 第一条新闻分类 key
+      key: "caclp-2026",
+      categoryKey: "exhibition",
       categoryLabel: {
-        "zh-CN": "知识分享",
-        en: "Knowledge Sharing",
-        es: "Recursos técnicos",
-        fr: "Partage de connaissances",
-        ko: "기술 자료",
-        ru: "Технические материалы",
-      }, // 第一条新闻分类文字
-      date: "2026/05/16", // 第一条新闻日期
-      image: "/images/home/news/news-side-01.webp", // 第一条新闻缩略图
+        "zh-CN": "展会活动",
+        en: "Exhibitions",
+        es: "Exposiciones",
+        fr: "Salons",
+        ko: "전시회",
+        ru: "Выставки",
+      },
+      date: "2026/03/17",
+      image: "/images/resources/news/articles/caclp-2026/cover.png",
       title: {
-        "zh-CN": "微流体液路系统中泵阀传感器如何协同工作？",
-        en: "How do pumps, valves, and sensors work together in a microfluidic system?",
-        es: "¿Cómo trabajan juntos bombas, válvulas y sensores en un sistema microfluídico?",
-        fr: "Comment les pompes, vannes et capteurs fonctionnent-ils ensemble dans un système microfluidique ?",
-        ko: "마이크로플루이딕 시스템에서 펌프, 밸브, 센서는 어떻게 함께 작동할까요?",
-        ru: "Как насосы, клапаны и датчики работают вместе в микрофлюидной системе?",
-      }, // 第一条新闻标题
+        "zh-CN": "邀请函｜恒永达诚邀您参加 2026 CACLP",
+        en: "Invitation: Meet FOREACH at CACLP 2026",
+        es: "Invitación: visite FOREACH en CACLP 2026",
+        fr: "Invitation : retrouvez FOREACH au CACLP 2026",
+        ko: "초청장: CACLP 2026에서 FOREACH를 만나보세요",
+        ru: "Приглашение: посетите FOREACH на CACLP 2026",
+      },
       description: {
         "zh-CN":
-          "从样本处理、试剂分配、清洗废液和多通道切换场景，理解核心部件的系统价值。",
+          "恒永达将于 2026 年 3 月 21 日至 23 日参加 CACLP，展位号 2-0424，欢迎新老客户莅临交流。",
         en:
-          "Understand the system value of core components through sample processing, reagent dispensing, washing, waste handling, and multi-channel switching scenarios.",
+          "FOREACH will exhibit at CACLP 2026 from March 21 to 23 at Booth 2-0424.",
         es:
-          "Comprenda el valor sistémico de los componentes clave en escenarios de procesamiento de muestras, distribución de reactivos, lavado, manejo de residuos y conmutación multicanal.",
+          "FOREACH participará en CACLP 2026 del 21 al 23 de marzo en el stand 2-0424.",
         fr:
-          "Comprendre la valeur système des composants clés à travers le traitement des échantillons, la distribution de réactifs, le lavage, la gestion des déchets et la commutation multicanal.",
+          "FOREACH participera au CACLP 2026 du 21 au 23 mars, stand 2-0424.",
         ko:
-          "시료 처리, 시약 분주, 세척, 폐액 처리 및 다채널 전환 시나리오를 통해 핵심 부품의 시스템 가치를 이해합니다.",
+          "FOREACH는 2026년 3월 21일부터 23일까지 CACLP 2026 2-0424 부스에 참가합니다.",
         ru:
-          "Понять системную ценность ключевых компонентов через обработку образцов, дозирование реагентов, промывку, удаление отходов и многоканальное переключение.",
-      }, // 第一条新闻描述
+          "FOREACH примет участие в CACLP 2026 с 21 по 23 марта, стенд 2-0424.",
+      },
       href: {
-        "zh-CN": "/news",
-        en: "/en/news",
-        es: "/es/news",
-        fr: "/fr/news",
-        ko: "/ko/news",
-        ru: "/ru/news",
-      }, // 第一条新闻链接
+        "zh-CN": "/resources/news/caclp-2026",
+        en: "/en/resources/news/caclp-2026",
+        es: "/es/resources/news/caclp-2026",
+        fr: "/fr/resources/news/caclp-2026",
+        ko: "/ko/resources/news/caclp-2026",
+        ru: "/ru/resources/news/caclp-2026",
+      },
     },
     {
-      key: "diaphragm-pump-selection", // 第二条新闻 key
-      categoryKey: "knowledge", // 第二条新闻分类 key
+      key: "me-supply-chain-expo-2026",
+      categoryKey: "exhibition",
       categoryLabel: {
-        "zh-CN": "知识分享",
-        en: "Knowledge Sharing",
-        es: "Recursos técnicos",
-        fr: "Partage de connaissances",
-        ko: "기술 자료",
-        ru: "Технические материалы",
-      }, // 第二条新闻分类文字
-      date: "2026/05/15", // 第二条新闻日期
-      image: "/images/home/news/news-side-02.webp", // 第二条新闻缩略图
+        "zh-CN": "展会活动",
+        en: "Exhibitions",
+        es: "Exposiciones",
+        fr: "Salons",
+        ko: "전시회",
+        ru: "Выставки",
+      },
+      date: "2026/03/27",
+      image: "/images/resources/news/articles/me-supply-chain-expo-2026/cover.png",
       title: {
-        "zh-CN": "如何为自动化分析仪器选择合适的隔膜泵？",
-        en: "How to select a suitable diaphragm pump for automated analytical instruments?",
-        es: "¿Cómo seleccionar una bomba de diafragma adecuada para instrumentos analíticos automatizados?",
-        fr: "Comment choisir une pompe à membrane adaptée aux instruments d’analyse automatisés ?",
-        ko: "자동화 분석 장비에 적합한 다이어프램 펌프는 어떻게 선택할까요?",
-        ru: "Как выбрать подходящий мембранный насос для автоматизированных аналитических приборов?",
-      }, // 第二条新闻标题
+        "zh-CN": "2026 ME 供应链生态展｜恒永达诚邀您的莅临指导",
+        en: "FOREACH to Exhibit at 2026 ME Supply Chain Expo",
+        es: "FOREACH participará en 2026 ME Supply Chain Expo",
+        fr: "FOREACH participera au 2026 ME Supply Chain Expo",
+        ko: "FOREACH, 2026 ME 공급망 생태 전시회 참가",
+        ru: "FOREACH примет участие в 2026 ME Supply Chain Expo",
+      },
       description: {
         "zh-CN":
-          "围绕流量、压力、寿命、介质兼容性和噪音等因素，梳理常见选型维度。",
+          "恒永达将参加 2026 ME 供应链生态展，展位号 2-M46，展示核心产品、技术能力及多场景应用方案。",
         en:
-          "Review common selection factors such as flow rate, pressure, lifetime, media compatibility, and noise.",
+          "FOREACH will exhibit at the 2026 ME Supply Chain Expo at Booth 2-M46.",
         es:
-          "Revise factores comunes de selección como caudal, presión, vida útil, compatibilidad de medios y ruido.",
+          "FOREACH participará en 2026 ME Supply Chain Expo en el stand 2-M46.",
         fr:
-          "Passer en revue les critères de sélection courants tels que le débit, la pression, la durée de vie, la compatibilité des fluides et le bruit.",
+          "FOREACH participera au 2026 ME Supply Chain Expo, stand 2-M46.",
         ko:
-          "유량, 압력, 수명, 매체 호환성 및 소음 등 일반적인 선정 요소를 정리합니다.",
+          "FOREACH는 2026 ME 공급망 생태 전시회 2-M46 부스에 참가합니다.",
         ru:
-          "Обзор ключевых факторов выбора: расход, давление, срок службы, совместимость сред и уровень шума.",
-      }, // 第二条新闻描述
+          "FOREACH примет участие в 2026 ME Supply Chain Expo, стенд 2-M46.",
+      },
       href: {
-        "zh-CN": "/news",
-        en: "/en/news",
-        es: "/es/news",
-        fr: "/fr/news",
-        ko: "/ko/news",
-        ru: "/ru/news",
-      }, // 第二条新闻链接
+        "zh-CN": "/resources/news/me-supply-chain-expo-2026",
+        en: "/en/resources/news/me-supply-chain-expo-2026",
+        es: "/es/resources/news/me-supply-chain-expo-2026",
+        fr: "/fr/resources/news/me-supply-chain-expo-2026",
+        ko: "/ko/resources/news/me-supply-chain-expo-2026",
+        ru: "/ru/resources/news/me-supply-chain-expo-2026",
+      },
     },
     {
-      key: "high-pressure-rotary-valve-selection", // 第三条新闻 key
-      categoryKey: "knowledge", // 第三条新闻分类 key
+      key: "guangzhou-high-med-expo-2026",
+      categoryKey: "exhibition",
       categoryLabel: {
-        "zh-CN": "知识分享",
-        en: "Knowledge Sharing",
-        es: "Recursos técnicos",
-        fr: "Partage de connaissances",
-        ko: "기술 자료",
-        ru: "Технические материалы",
-      }, // 第三条新闻分类文字
-      date: "2026/05/14", // 第三条新闻日期
-      image: "/images/home/news/news-side-03.webp", // 第三条新闻缩略图
+        "zh-CN": "展会活动",
+        en: "Exhibitions",
+        es: "Exposiciones",
+        fr: "Salons",
+        ko: "전시회",
+        ru: "Выставки",
+      },
+      date: "2026/03/26",
+      image: "/images/resources/news/articles/guangzhou-high-med-expo-2026/cover.png",
       title: {
-        "zh-CN": "高压流体控制场景下旋转阀的关键选型因素",
-        en: "Key selection factors for rotary valves in high-pressure fluid control",
-        es: "Factores clave para seleccionar válvulas rotativas en control de fluidos de alta presión",
-        fr: "Facteurs clés de sélection des vannes rotatives pour le contrôle des fluides haute pression",
-        ko: "고압 유체 제어에서 로터리 밸브 선정의 핵심 요소",
-        ru: "Ключевые факторы выбора поворотных клапанов для управления жидкостями высокого давления",
-      }, // 第三条新闻标题
+        "zh-CN": "2026 广州高医展｜恒永达科技诚邀您莅临展位参观交流",
+        en: "FOREACH Invitation to Guangzhou High Medical Expo 2026",
+        es: "Invitación de FOREACH a Guangzhou High Medical Expo 2026",
+        fr: "Invitation de FOREACH au Guangzhou High Medical Expo 2026",
+        ko: "FOREACH, 2026 광저우 고의료 전시회 초청",
+        ru: "Приглашение FOREACH на Guangzhou High Medical Expo 2026",
+      },
       description: {
         "zh-CN":
-          "关注耐压、内腔体积、接口形式、通道数量与长期稳定性，辅助系统方案判断。",
+          "恒永达将于 2026 年 3 月 30 日至 4 月 1 日参加广州高医展，展位号 B529。",
         en:
-          "Focus on pressure rating, internal volume, interface type, number of ports, and long-term stability to support system-level decisions.",
+          "FOREACH will exhibit at Guangzhou High Medical Expo 2026 from March 30 to April 1 at Booth B529.",
         es:
-          "Considere presión nominal, volumen interno, tipo de interfaz, número de canales y estabilidad a largo plazo para apoyar decisiones de sistema.",
+          "FOREACH participará en Guangzhou High Medical Expo 2026 del 30 de marzo al 1 de abril en el stand B529.",
         fr:
-          "Examiner la tenue en pression, le volume interne, le type d’interface, le nombre de voies et la stabilité à long terme pour guider les décisions système.",
+          "FOREACH participera au Guangzhou High Medical Expo 2026 du 30 mars au 1er avril, stand B529.",
         ko:
-          "내압, 내부 체적, 인터페이스 형식, 포트 수 및 장기 안정성을 고려하여 시스템方案 판단을 지원합니다.",
+          "FOREACH는 2026년 3월 30일부터 4월 1일까지 광저우 고의료 전시회 B529 부스에 참가합니다.",
         ru:
-          "Учитывайте рабочее давление, внутренний объем, тип интерфейса, количество каналов и долговременную стабильность для выбора системного решения.",
-      }, // 第三条新闻描述
+          "FOREACH примет участие в Guangzhou High Medical Expo 2026 с 30 марта по 1 апреля, стенд B529.",
+      },
       href: {
-        "zh-CN": "/news",
-        en: "/en/news",
-        es: "/es/news",
-        fr: "/fr/news",
-        ko: "/ko/news",
-        ru: "/ru/news",
-      }, // 第三条新闻链接
+        "zh-CN": "/resources/news/guangzhou-high-med-expo-2026",
+        en: "/en/resources/news/guangzhou-high-med-expo-2026",
+        es: "/es/resources/news/guangzhou-high-med-expo-2026",
+        fr: "/fr/resources/news/guangzhou-high-med-expo-2026",
+        ko: "/ko/resources/news/guangzhou-high-med-expo-2026",
+        ru: "/ru/resources/news/guangzhou-high-med-expo-2026",
+      },
     },
     {
-      key: "fittings-fluidic-system-stability", // 第四条新闻 key
-      categoryKey: "knowledge", // 第四条新闻分类 key
+      key: "national-little-giant-2024",
+      categoryKey: "company",
       categoryLabel: {
-        "zh-CN": "知识分享",
-        en: "Knowledge Sharing",
-        es: "Recursos técnicos",
-        fr: "Partage de connaissances",
-        ko: "기술 자료",
-        ru: "Технические материалы",
-      }, // 第四条新闻分类文字
-      date: "2026/05/13", // 第四条新闻日期
-      image: "/images/home/news/news-side-04.webp", // 第四条新闻缩略图
+        "zh-CN": "公司动态",
+        en: "Company Updates",
+        es: "Noticias de la empresa",
+        fr: "Actualités de l’entreprise",
+        ko: "회사 소식",
+        ru: "Новости компании",
+      },
+      date: "2024/09/06",
+      image: "/images/resources/news/articles/national-little-giant-2024/cover.png",
       title: {
-        "zh-CN": "管路连接件在微流体系统稳定性中的作用",
-        en: "The role of fittings in microfluidic system stability",
-        es: "El papel de los conectores en la estabilidad de sistemas microfluídicos",
-        fr: "Le rôle des raccords dans la stabilité des systèmes microfluidiques",
-        ko: "마이크로플루이딕 시스템 안정성에서 피팅의 역할",
-        ru: "Роль фитингов в стабильности микрофлюидных систем",
-      }, // 第四条新闻标题
+        "zh-CN": "恒永达荣获国家级专精特新“小巨人”称号",
+        en: "FOREACH Recognized as a National Specialized and Innovative Little Giant Enterprise",
+        es: "FOREACH reconocida como empresa nacional especializada e innovadora",
+        fr: "FOREACH reconnue comme entreprise nationale spécialisée et innovante",
+        ko: "FOREACH, 국가급 전문·특화·혁신 Little Giant 기업 선정",
+        ru: "FOREACH получила статус национального специализированного и инновационного предприятия Little Giant",
+      },
       description: {
         "zh-CN":
-          "从密封、死体积、材料兼容性和安装一致性等角度，理解连接件对整机液路可靠性的影响。",
+          "恒永达凭借在微流体控制领域的长期专注与创新能力，荣获国家级专精特新“小巨人”企业称号。",
         en:
-          "Understand how sealing, dead volume, material compatibility, and installation consistency affect overall fluidic reliability.",
+          "FOREACH was recognized for its long-term focus and innovation in microfluidic control technology.",
         es:
-          "Comprenda cómo el sellado, el volumen muerto, la compatibilidad de materiales y la consistencia de instalación afectan la fiabilidad fluídica.",
+          "FOREACH fue reconocida por su enfoque e innovación en tecnología de control microfluídico.",
         fr:
-          "Comprendre comment l’étanchéité, le volume mort, la compatibilité des matériaux et la constance d’installation influencent la fiabilité fluidique.",
+          "FOREACH a été reconnue pour son engagement et son innovation dans le contrôle microfluidique.",
         ko:
-          "밀봉, 데드 볼륨, 재료 호환성 및 설치 일관성이 전체 유체 신뢰성에 미치는 영향을 이해합니다.",
+          "FOREACH는 마이크로플루이딕 제어 기술에 대한 지속적인 집중과 혁신 역량을 인정받았습니다.",
         ru:
-          "Понять, как герметичность, мертвый объем, совместимость материалов и стабильность монтажа влияют на надежность жидкостной системы.",
-      }, // 第四条新闻描述
+          "FOREACH получила признание за долгосрочную специализацию и инновации в области микрофлюидного управления.",
+      },
       href: {
-        "zh-CN": "/news",
-        en: "/en/news",
-        es: "/es/news",
-        fr: "/fr/news",
-        ko: "/ko/news",
-        ru: "/ru/news",
-      }, // 第四条新闻链接
+        "zh-CN": "/resources/news/national-little-giant-2024",
+        en: "/en/resources/news/national-little-giant-2024",
+        es: "/es/resources/news/national-little-giant-2024",
+        fr: "/fr/resources/news/national-little-giant-2024",
+        ko: "/ko/resources/news/national-little-giant-2024",
+        ru: "/ru/resources/news/national-little-giant-2024",
+      },
     },
-  ] satisfies HomeNewsItem[], // 限定 newsList 必须符合 HomeNewsItem 数组类型
-}; // 首页资讯中心数据结束
-
-/* ================================
-   多语言文本读取函数
-================================ */
+  ] satisfies HomeNewsItem[],
+};
 
 export function getHomeNewsText(text: HomeNewsText, locale: LocaleCode) {
-  return text[locale] || text["zh-CN"] || text.en || ""; // 优先读取当前语言，没有则回退中文，再回退英文，最后返回空字符串
+  return text[locale] || text["zh-CN"] || text.en || "";
 }
 
-/* ================================
-   多语言链接读取函数
-================================ */
-
 export function getHomeNewsHref(href: HomeNewsHref, locale: LocaleCode) {
-  return href[locale] || href["zh-CN"] || href.en || "/news"; // 优先读取当前语言链接，没有则回退中文，再回退英文，最后回到 /news
+  return href[locale] || href["zh-CN"] || href.en || "/resources/news";
 }

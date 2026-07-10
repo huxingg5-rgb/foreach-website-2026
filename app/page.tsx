@@ -1,22 +1,20 @@
+﻿import "@/app/contact/contact.css";
 // app/page.tsx
-// 中文默认首页入口
+// 涓枃榛樿棣栭〉鍏ュ彛
 //
-// 说明：
-// 1. 中文默认路径是 /
-// 2. 不再使用 /zh
-// 3. 首页内容统一交给 HomePageContent 组件渲染
-// 4. defaultLocale 从 data/languages.ts 读取，避免语言代码到处写死
+// 璇存槑锛?// 1. 涓枃榛樿璺緞鏄?/
+// 2. 涓嶅啀浣跨敤 /zh
+// 3. 棣栭〉鍐呭缁熶竴浜ょ粰 HomePageContent 缁勪欢娓叉煋
+// 4. defaultLocale 浠?data/languages.ts 璇诲彇锛岄伩鍏嶈瑷€浠ｇ爜鍒板鍐欐
 
-import HomePageContent from "@/components/home/HomePageContent"; // 引入首页内容组件
-import { defaultLocale } from "@/data/languages"; // 引入默认语言，当前是 zh-CN
+import HomePageContent from "@/components/home/HomePageContent"; // 寮曞叆棣栭〉鍐呭缁勪欢
+import { defaultLocale } from "@/data/languages"; // 寮曞叆榛樿璇█锛屽綋鍓嶆槸 zh-CN
 
 /**
  * HomePage
- * 中文默认首页
+ * 涓枃榛樿棣栭〉
  *
- * 说明：
- * 1. 访问 / 时显示中文首页
- * 2. locale 传入 zh-CN
+ * 璇存槑锛? * 1. 璁块棶 / 鏃舵樉绀轰腑鏂囬椤? * 2. locale 浼犲叆 zh-CN
  */
 export default function HomePage() {
   return <HomePageContent locale={defaultLocale} />;

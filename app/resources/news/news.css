@@ -411,7 +411,7 @@
   .newsArticle__cover {
     height: 280px;
   }
-} 
+}
 
 /* =========================================================
    搜索区
@@ -448,4 +448,82 @@
   .newsArticleDetailPage .newsArticleBreadcrumbShell {
     padding-top: 74px;
   }
-} 
+}
+/* =========================================================
+   新闻列表分页
+   说明：
+   1. 新闻列表每页 9 条，PC 端对应 3 列 × 3 排
+   2. 这里只补分页样式，不影响新闻卡片原有布局
+========================================================= */
+
+.newsPagination {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.newsPagination__button,
+.newsPagination__number {
+  min-width: 40px;
+  height: 40px;
+  padding: 0 14px;
+  border: 1px solid rgba(23, 51, 104, 0.16);
+  border-radius: 8px;
+  background: #ffffff;
+  color: #173368;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.18s ease,
+    color 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.newsPagination__button:hover,
+.newsPagination__number:hover {
+  border-color: #173368;
+}
+
+.newsPagination__button:disabled {
+  opacity: 0.42;
+  cursor: not-allowed;
+}
+
+.newsPagination__number.isActive {
+  border-color: #173368;
+  background: #173368;
+  color: #09e9b4;
+}
+
+.newsPagination__summary {
+  margin-left: 8px;
+  color: rgba(23, 51, 104, 0.62);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+  .newsPagination {
+    margin-top: 28px;
+    gap: 8px;
+  }
+
+  .newsPagination__button,
+  .newsPagination__number {
+    min-width: 36px;
+    height: 36px;
+    padding: 0 10px;
+    font-size: 13px;
+  }
+
+  .newsPagination__summary {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+}

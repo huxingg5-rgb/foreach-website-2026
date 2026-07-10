@@ -1,264 +1,190 @@
-// 这是关于 data/site-footer.ts 的文件：用于管理网站底部 Footer 的数据配置
-// 这个文件的作用：统一管理 Footer 栏目、链接、公司信息、联系方式、版权信息和后端接口预留
+﻿import type { LocaleCode } from "@/lib/i18n";
 
-import type { LocaleCode } from "@/lib/i18n"; // 引入官网支持的语言代码类型，例如 zh-CN、en、es、fr、ko、ru
+export type SiteFooterMarket = "china" | "global";
+export type SiteFooterText = Partial<Record<SiteFooterMarket | LocaleCode, string>>;
+export type SiteFooterHref = Partial<Record<SiteFooterMarket | LocaleCode, string>>;
 
-export type SiteFooterMarket = "china" | "global"; // 定义 Footer 市场类型：china 表示国内版，global 表示海外版
+export type SiteFooterLink = {
+  key: string;
+  label: SiteFooterText;
+  href: SiteFooterHref;
+};
 
-export type SiteFooterText = Partial<Record<SiteFooterMarket | LocaleCode, string>>; // 定义 Footer 文本类型，既兼容 china/global，也兼容旧的多语言 key
+export type SiteFooterColumn = {
+  key: string;
+  title: SiteFooterText;
+  links: SiteFooterLink[];
+};
 
-export type SiteFooterHref = Partial<Record<SiteFooterMarket | LocaleCode, string>>; // 定义 Footer 链接类型，链接仍然保留多语言路径
+export type SiteFooterQrCode = {
+  key: string;
+  label: SiteFooterText;
+  image?: SiteFooterHref;
+  href?: SiteFooterHref;
+};
 
-export type SiteFooterLink = { // 定义 Footer 单个链接的数据类型
-  key: string; // 链接唯一标识
-  label: SiteFooterText; // 链接显示文字，当前主要使用 china/global
-  href: SiteFooterHref; // 链接路径，当前仍按具体语言区分
-}; // Footer 单个链接类型结束
+function href(path: string): SiteFooterHref {
+  return { china: path, global: path };
+}
 
-export type SiteFooterColumn = { // 定义 Footer 栏目的数据类型
-  key: string; // 栏目唯一标识
-  title: SiteFooterText; // 栏目标题，当前主要使用 china/global
-  links: SiteFooterLink[]; // 栏目下的链接列表
-}; // Footer 栏目类型结束
+export function getSiteFooterMarket(locale: LocaleCode): SiteFooterMarket {
+  return locale === "zh-CN" ? "china" : "global";
+}
 
-export function getSiteFooterMarket(locale: LocaleCode): SiteFooterMarket { // 根据当前语言判断使用国内版还是海外版 Footer
-  return locale === "zh-CN" ? "china" : "global"; // 中文使用国内版，其他语言统一使用海外版
-} // getSiteFooterMarket 函数结束
+export function getSiteFooterApiPath(locale: LocaleCode) {
+  const market = getSiteFooterMarket(locale);
+  return `/api/site-footer?market=${market}`;
+}
 
-export function getSiteFooterApiPath(locale: LocaleCode) { // 预留 Footer 后端接口路径生成函数
-  const market = getSiteFooterMarket(locale); // 根据当前语言得到 china 或 global
-  return `/api/site-footer?market=${market}`; // 返回后期可对接的 Footer 接口路径
-} // getSiteFooterApiPath 函数结束
+export const siteFooterData = {
+  columns: [
+    {
+      key: "home",
+      title: { china: "首页", global: "Home" },
+      links: [
+        { key: "home", label: { china: "首页", global: "Home" }, href: href("/") },
+      ],
+    },
+    {
+      key: "products",
+      title: { china: "产品中心", global: "Products" },
+      links: [
+        { key: "pumps", label: { china: "泵系列", global: "Pump Series" }, href: href("/products/pumps") },
+        { key: "valves", label: { china: "阀系列", global: "Valve Series" }, href: href("/products/valves") },
+        { key: "probes", label: { china: "针系列", global: "Probe Series" }, href: href("/products/probes") },
+        { key: "fittings", label: { china: "接头系列", global: "Fitting Series" }, href: href("/products?category=fittings") },
+        { key: "tubing", label: { china: "管路系列", global: "Tubing Series" }, href: href("/products/tubing") },
+        { key: "control", label: { china: "智控系列", global: "Control Series" }, href: href("/products?category=control") },
+      ],
+    },
+    {
+      key: "applications",
+      title: { china: "应用领域", global: "Applications" },
+      links: [
+        { key: "ivd", label: { china: "IVD 体外诊断", global: "IVD" }, href: href("/applications/ivd") },
+        { key: "life-science", label: { china: "生命科学", global: "Life Science" }, href: href("/applications/life-science") },
+        { key: "lab-automation", label: { china: "实验室自动化", global: "Lab Automation" }, href: href("/applications/lab-automation") },
+        { key: "analytical-instruments", label: { china: "分析仪器", global: "Analytical Instruments" }, href: href("/applications/analytical-instruments") },
+        { key: "environmental-monitoring", label: { china: "环保监测", global: "Environmental Monitoring" }, href: href("/applications/environmental-monitoring") },
+        { key: "synthetic-biology", label: { china: "合成生物", global: "Synthetic Biology" }, href: href("/applications/synthetic-biology") },
+      ],
+    },
+    {
+      key: "resources",
+      title: { china: "资源中心", global: "Resources" },
+      links: [
+        { key: "datasheets", label: { china: "规格书下载", global: "Datasheets" }, href: href("/resources/datasheets") },
+        { key: "fitting-replacement", label: { china: "接头替代查询", global: "Fitting Replacement" }, href: href("/resources/selection-support/fitting-replacement") },
+        { key: "installation-guide", label: { china: "安装教程", global: "Installation Guides" }, href: href("/resources/installation-guide") },
+        { key: "material-compatibility", label: { china: "材料兼容", global: "Material Compatibility" }, href: href("/resources/material-compatibility") },
+        { key: "technical-articles", label: { china: "技术文章", global: "Technical Articles" }, href: href("/resources/technical-articles") },
+        { key: "news", label: { china: "公司新闻", global: "Company News" }, href: href("/resources/news") },
+      ],
+    },
+    {
+      key: "about",
+      title: { china: "关于我们", global: "About Us" },
+      links: [
+        { key: "foreach", label: { china: "关于恒永达", global: "About FOREACH" }, href: href("/about/foreach") },
+        { key: "research-manufacturing", label: { china: "研发与制造能力", global: "R&D & Manufacturing" }, href: href("/about/research-manufacturing") },
+        { key: "quality", label: { china: "质量体系与合规认证", global: "Quality & Compliance" }, href: href("/about/quality") },
+        { key: "history", label: { china: "发展历程", global: "History" }, href: href("/about/history") },
+        { key: "culture", label: { china: "恒永达文化", global: "FOREACH Culture" }, href: href("/about/culture") },
+      ],
+    },
+    {
+      key: "contact",
+      title: { china: "联系我们", global: "Contact Us" },
+      links: [
+        { key: "inquiry", label: { china: "询盘表单", global: "Inquiry Form" }, href: href("/contact#inquiry") },
+        { key: "contact-info", label: { china: "联系方式", global: "Contact Information" }, href: href("/contact#contact-info") },
+      ],
+    },
+  ] satisfies SiteFooterColumn[],
 
-export const siteFooterData = { // 定义网站底部 Footer 数据
-  columns: [ // Footer 左侧栏目数据开始
-    { // 首页栏目开始
-      key: "home", // 栏目 key
-      title: { china: "首页", global: "Home" }, // 首页栏目标题
-      links: [ // 首页栏目链接开始
-        { // 首页链接开始
-          key: "home", // 首页链接 key
-          label: { china: "首页", global: "Home" }, // 首页链接文字
-          href: { "zh-CN": "/", en: "/en", es: "/es", fr: "/fr", ko: "/ko", ru: "/ru" }, // 首页链接路径
-        }, // 首页链接结束
-      ], // 首页栏目链接结束
-    }, // 首页栏目结束
+  companyName: { china: "深圳市恒永达科技股份有限公司", global: "Shenzhen FOREACH Technology Co., Ltd." },
 
-    { // 产品中心栏目开始
-      key: "products", // 栏目 key
-      title: { china: "产品中心", global: "Products" }, // 产品中心栏目标题
-      links: [ // 产品中心栏目链接开始
-        { // 泵类链接开始
-          key: "pumps", // 泵类链接 key
-          label: { china: "泵类", global: "Pumps" }, // 泵类链接文字
-          href: { "zh-CN": "/#products", en: "/en#products", es: "/es#products", fr: "/fr#products", ko: "/ko#products", ru: "/ru#products" }, // 泵类链接路径
-        }, // 泵类链接结束
-        { // 阀类链接开始
-          key: "valves", // 阀类链接 key
-          label: { china: "阀类", global: "Valves" }, // 阀类链接文字
-          href: { "zh-CN": "/#products", en: "/en#products", es: "/es#products", fr: "/fr#products", ko: "/ko#products", ru: "/ru#products" }, // 阀类链接路径
-        }, // 阀类链接结束
-        { // 管路链接开始
-          key: "tubing", // 管路链接 key
-          label: { china: "管路", global: "Tubing" }, // 管路链接文字
-          href: { "zh-CN": "/#products", en: "/en#products", es: "/es#products", fr: "/fr#products", ko: "/ko#products", ru: "/ru#products" }, // 管路链接路径
-        }, // 管路链接结束
-        { // 连接件链接开始
-          key: "fittings", // 连接件链接 key
-          label: { china: "连接件", global: "Fittings" }, // 连接件链接文字
-          href: { "zh-CN": "/#products", en: "/en#products", es: "/es#products", fr: "/fr#products", ko: "/ko#products", ru: "/ru#products" }, // 连接件链接路径
-        }, // 连接件链接结束
-        { // 采样针链接开始
-          key: "sampling-probes", // 采样针链接 key
-          label: { china: "采样针", global: "Sampling Probes" }, // 采样针链接文字
-          href: { "zh-CN": "/#products", en: "/en#products", es: "/es#products", fr: "/fr#products", ko: "/ko#products", ru: "/ru#products" }, // 采样针链接路径
-        }, // 采样针链接结束
-        { // 传感器链接开始
-          key: "sensors", // 传感器链接 key
-          label: { china: "传感器", global: "Sensors" }, // 传感器链接文字
-          href: { "zh-CN": "/#products", en: "/en#products", es: "/es#products", fr: "/fr#products", ko: "/ko#products", ru: "/ru#products" }, // 传感器链接路径
-        }, // 传感器链接结束
-      ], // 产品中心栏目链接结束
-    }, // 产品中心栏目结束
+  addressLabel: { china: "地址", global: "Address" },
 
-    { // 应用领域栏目开始
-      key: "applications", // 栏目 key
-      title: { china: "应用领域", global: "Applications" }, // 应用领域栏目标题
-      links: [ // 应用领域栏目链接开始
-        { // IVD 链接开始
-          key: "ivd", // IVD 链接 key
-          label: { china: "IVD 体外诊断", global: "IVD" }, // IVD 链接文字
-          href: { "zh-CN": "/#applications", en: "/en#applications", es: "/es#applications", fr: "/fr#applications", ko: "/ko#applications", ru: "/ru#applications" }, // IVD 链接路径
-        }, // IVD 链接结束
-        { // 生命科学链接开始
-          key: "life-sciences", // 生命科学链接 key
-          label: { china: "生命科学", global: "Life Sciences" }, // 生命科学链接文字
-          href: { "zh-CN": "/#applications", en: "/en#applications", es: "/es#applications", fr: "/fr#applications", ko: "/ko#applications", ru: "/ru#applications" }, // 生命科学链接路径
-        }, // 生命科学链接结束
-        { // 合成生物链接开始
-          key: "synthetic-biology", // 合成生物链接 key
-          label: { china: "合成生物", global: "Synthetic Biology" }, // 合成生物链接文字
-          href: { "zh-CN": "/#applications", en: "/en#applications", es: "/es#applications", fr: "/fr#applications", ko: "/ko#applications", ru: "/ru#applications" }, // 合成生物链接路径
-        }, // 合成生物链接结束
-        { // 高端分析仪器链接开始
-          key: "analytical-instruments", // 高端分析仪器链接 key
-          label: { china: "高端分析仪器", global: "High-end Analytical Instruments" }, // 高端分析仪器链接文字
-          href: { "zh-CN": "/#applications", en: "/en#applications", es: "/es#applications", fr: "/fr#applications", ko: "/ko#applications", ru: "/ru#applications" }, // 高端分析仪器链接路径
-        }, // 高端分析仪器链接结束
-        { // 实验室自动化链接开始
-          key: "laboratory-automation", // 实验室自动化链接 key
-          label: { china: "实验室自动化", global: "Laboratory Automation" }, // 实验室自动化链接文字
-          href: { "zh-CN": "/#applications", en: "/en#applications", es: "/es#applications", fr: "/fr#applications", ko: "/ko#applications", ru: "/ru#applications" }, // 实验室自动化链接路径
-        }, // 实验室自动化链接结束
-      ], // 应用领域栏目链接结束
-    }, // 应用领域栏目结束
+  address: {
+    china: "广东省深圳市光明区玉塘街道玉律社区光侨大道1008号裕丰达工业园2栋1301",
+    global: "1301, Building 2, Yufengda Industrial Park, No. 1008 Guangqiao Avenue, Yulv Community, Yutang Subdistrict, Guangming District, Shenzhen, Guangdong, China",
+  },
 
-    { // 资源中心栏目开始
-      key: "resources", // 栏目 key
-      title: { china: "资源中心", global: "Resources" }, // 资源中心栏目标题
-      links: [ // 资源中心栏目链接开始
-        { // 产品资料下载链接开始
-          key: "downloads", // 产品资料下载链接 key
-          label: { china: "产品资料下载", global: "Product Downloads" }, // 产品资料下载链接文字
-          href: { "zh-CN": "/news", en: "/en/news", es: "/es/news", fr: "/fr/news", ko: "/ko/news", ru: "/ru/news" }, // 产品资料下载链接路径
-        }, // 产品资料下载链接结束
-        { // 产品目录链接开始
-          key: "catalogs", // 产品目录链接 key
-          label: { china: "产品目录", global: "Product Catalogs" }, // 产品目录链接文字
-          href: { "zh-CN": "/news", en: "/en/news", es: "/es/news", fr: "/fr/news", ko: "/ko/news", ru: "/ru/news" }, // 产品目录链接路径
-        }, // 产品目录链接结束
-        { // 认证与资质资料链接开始
-          key: "certificates", // 认证与资质资料链接 key
-          label: { china: "认证与资质资料", global: "Certifications" }, // 认证与资质资料链接文字
-          href: { "zh-CN": "/#about", en: "/en#about", es: "/es#about", fr: "/fr#about", ko: "/ko#about", ru: "/ru#about" }, // 认证与资质资料链接路径
-        }, // 认证与资质资料链接结束
-        { // 选型指南链接开始
-          key: "selection-guide", // 选型指南链接 key
-          label: { china: "选型指南", global: "Selection Guides" }, // 选型指南链接文字
-          href: { "zh-CN": "/news", en: "/en/news", es: "/es/news", fr: "/fr/news", ko: "/ko/news", ru: "/ru/news" }, // 选型指南链接路径
-        }, // 选型指南链接结束
-        { // 安装说明链接开始
-          key: "installation", // 安装说明链接 key
-          label: { china: "安装说明", global: "Installation Guides" }, // 安装说明链接文字
-          href: { "zh-CN": "/news", en: "/en/news", es: "/es/news", fr: "/fr/news", ko: "/ko/news", ru: "/ru/news" }, // 安装说明链接路径
-        }, // 安装说明链接结束
-        { // 技术文章 FAQ 链接开始
-          key: "faq", // 技术文章 FAQ 链接 key
-          label: { china: "技术文章 / FAQ", global: "Technical Articles / FAQ" }, // 技术文章 FAQ 链接文字
-          href: { "zh-CN": "/news", en: "/en/news", es: "/es/news", fr: "/fr/news", ko: "/ko/news", ru: "/ru/news" }, // 技术文章 FAQ 链接路径
-        }, // 技术文章 FAQ 链接结束
-      ], // 资源中心栏目链接结束
-    }, // 资源中心栏目结束
+  mapLabel: { china: "查看地图", global: "View Map" },
 
-    { // 关于我们栏目开始
-      key: "about", // 栏目 key
-      title: { china: "关于我们", global: "About Us" }, // 关于我们栏目标题
-      links: [ // 关于我们栏目链接开始
-        { // 公司介绍链接开始
-          key: "company-profile", // 公司介绍链接 key
-          label: { china: "公司介绍", global: "Company Profile" }, // 公司介绍链接文字
-          href: { "zh-CN": "/#about", en: "/en#about", es: "/es#about", fr: "/fr#about", ko: "/ko#about", ru: "/ru#about" }, // 公司介绍链接路径
-        }, // 公司介绍链接结束
-        { // 研发制造能力链接开始
-          key: "rd-manufacturing", // 研发制造能力链接 key
-          label: { china: "研发制造能力", global: "R&D & Manufacturing" }, // 研发制造能力链接文字
-          href: { "zh-CN": "/#about", en: "/en#about", es: "/es#about", fr: "/fr#about", ko: "/ko#about", ru: "/ru#about" }, // 研发制造能力链接路径
-        }, // 研发制造能力链接结束
-        { // 质量体系链接开始
-          key: "quality", // 质量体系链接 key
-          label: { china: "质量体系", global: "Quality System" }, // 质量体系链接文字
-          href: { "zh-CN": "/#about", en: "/en#about", es: "/es#about", fr: "/fr#about", ko: "/ko#about", ru: "/ru#about" }, // 质量体系链接路径
-        }, // 质量体系链接结束
-        { // 企业资质链接开始
-          key: "qualifications", // 企业资质链接 key
-          label: { china: "企业资质", global: "Qualifications" }, // 企业资质链接文字
-          href: { "zh-CN": "/#about", en: "/en#about", es: "/es#about", fr: "/fr#about", ko: "/ko#about", ru: "/ru#about" }, // 企业资质链接路径
-        }, // 企业资质链接结束
-        { // 全球服务链接开始
-          key: "global-service", // 全球服务链接 key
-          label: { china: "全球服务", global: "Global Service" }, // 全球服务链接文字
-          href: { "zh-CN": "/#about", en: "/en#about", es: "/es#about", fr: "/fr#about", ko: "/ko#about", ru: "/ru#about" }, // 全球服务链接路径
-        }, // 全球服务链接结束
-      ], // 关于我们栏目链接结束
-    }, // 关于我们栏目结束
+  mapHref: {
+    china: "https://uri.amap.com/search?keyword=%E6%B7%B1%E5%9C%B3%E5%B8%82%E6%81%92%E6%B0%B8%E8%BE%BE%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8&city=%E6%B7%B1%E5%9C%B3",
+    global: "https://www.google.com/maps/search/?api=1&query=Shenzhen%20FOREACH%20Technology%20Co.%2C%20Ltd.%201301%20Building%202%20Yufengda%20Industrial%20Park%201008%20Guangqiao%20Avenue%20Guangming%20District%20Shenzhen",
+  },
 
-    { // 联系我们栏目开始
-      key: "contact", // 栏目 key
-      title: { china: "联系我们", global: "Contact Us" }, // 联系我们栏目标题
-      links: [ // 联系我们栏目链接开始
-        { // 询盘表单链接开始
-          key: "inquiry-form", // 询盘表单链接 key
-          label: { china: "询盘表单", global: "Inquiry Form" }, // 询盘表单链接文字
-          href: { "zh-CN": "/#contact", en: "/en#contact", es: "/es#contact", fr: "/fr#contact", ko: "/ko#contact", ru: "/ru#contact" }, // 询盘表单链接路径
-        }, // 询盘表单链接结束
-        { // 联系方式链接开始
-          key: "contact-info", // 联系方式链接 key
-          label: { china: "联系方式", global: "Contact Information" }, // 联系方式链接文字
-          href: { "zh-CN": "/#contact", en: "/en#contact", es: "/es#contact", fr: "/fr#contact", ko: "/ko#contact", ru: "/ru#contact" }, // 联系方式链接路径
-        }, // 联系方式链接结束
-        { // 地址信息链接开始
-          key: "address", // 地址信息链接 key
-          label: { china: "地址信息", global: "Address" }, // 地址信息链接文字
-          href: { "zh-CN": "/#contact", en: "/en#contact", es: "/es#contact", fr: "/fr#contact", ko: "/ko#contact", ru: "/ru#contact" }, // 地址信息链接路径
-        }, // 地址信息链接结束
-        { // 销售支持入口链接开始
-          key: "sales-support", // 销售支持入口链接 key
-          label: { china: "销售支持入口", global: "Sales Support" }, // 销售支持入口链接文字
-          href: { "zh-CN": "/#contact", en: "/en#contact", es: "/es#contact", fr: "/fr#contact", ko: "/ko#contact", ru: "/ru#contact" }, // 销售支持入口链接路径
-        }, // 销售支持入口链接结束
-      ], // 联系我们栏目链接结束
-    }, // 联系我们栏目结束
-  ] satisfies SiteFooterColumn[], // Footer 左侧栏目数据结束
+  emailLabel: { china: "邮箱", global: "Email" },
+  email: { china: "sales@foreachtek.com", global: "sales@foreachtek.com" },
+  emailHref: { china: "mailto:sales@foreachtek.com", global: "mailto:sales@foreachtek.com" },
 
-  companyName: { china: "深圳市恒永达科技股份有限公司", global: "Shenzhen FOREACH Technology Co., Ltd." }, // Footer 公司名称
+  phoneLabel: { china: "咨询电话", global: "Tel" },
+  phone: { china: "0755 8655 3831", global: "+86 755 8655 3831" },
+  phoneHref: { china: "tel:075586553831", global: "tel:+8675586553831" },
 
-  addressLabel: { china: "地址", global: "Address" }, // Footer 地址标签
+  qrCodes: [
+    { key: "wechat-official", label: { china: "公众号", global: "LinkedIn" } },
+    { key: "douyin", label: { china: "抖音", global: "YouTube" } },
+    { key: "wechat-channels", label: { china: "视频号", global: "Video Channel" } },
+  ] as SiteFooterQrCode[],
 
-  address: { // Footer 地址内容
-    china: "广东省深圳市光明区玉塘街道玉律社区光侨大道1008号裕丰达工业园2栋1301", // 国内版中文地址
-    global: "1301, Building 2, Yufengda Industrial Park, No. 1008 Guangqiao Avenue, Yulv Community, Yutang Subdistrict, Guangming District, Shenzhen, Guangdong, China", // 海外版英文地址
-  }, // Footer 地址内容结束
+  qrCodePlaceholder: { china: "二维码", global: "Social" },
 
-  mapLabel: { china: "查看地图", global: "View Map" }, // Footer 地图按钮文字
+  icp: { china: "粤ICP备2020107216号-2", global: "" },
 
-  emailLabel: { china: "邮箱", global: "Email" }, // Footer 邮箱标签
+  icpHref: { china: "https://beian.miit.gov.cn/", global: "https://beian.miit.gov.cn/" },
 
-  email: { china: "sales@foreachtek.com", global: "sales@foreachtek.com" }, // Footer 邮箱，后期可按国内 / 海外分别改
+  copyright: {
+    china: "© 2026 深圳市恒永达科技股份有限公司 版权所有",
+    global: "© 2026 Shenzhen FOREACH Technology Co., Ltd. All rights reserved.",
+  },
+};
 
-  phoneLabel: { china: "咨询电话", global: "Tel" }, // Footer 电话标签
+export function getSiteFooterText(text: SiteFooterText | string | undefined | null, locale: LocaleCode) {
+  if (!text) return "";
+  if (typeof text === "string") return text;
 
-  phone: { china: "0755 8655 3831", global: "+86 755 8655 3831" }, // Footer 电话，海外版使用国际格式
+  const market = getSiteFooterMarket(locale);
 
-  wechatLabel: { china: "公众号", global: "LinkedIn" }, // Footer 第一社媒标签，国内显示公众号，海外预留 LinkedIn
+  return text[market] || text[locale] || text.china || text.global || text["zh-CN"] || text.en || "";
+}
 
-  douyinLabel: { china: "抖音", global: "YouTube" }, // Footer 第二社媒标签，国内显示抖音，海外预留 YouTube
+function shouldKeepHrefAsIs(value: string) {
+  return (
+    value === "" ||
+    value === "#" ||
+    value.startsWith("#") ||
+    value.startsWith("http://") ||
+    value.startsWith("https://") ||
+    value.startsWith("mailto:") ||
+    value.startsWith("tel:")
+  );
+}
 
-  qrCodePlaceholder: { china: "二维码", global: "Social" }, // Footer 二维码 / 社媒占位文字
+function localizeHref(value: string, locale: LocaleCode) {
+  if (shouldKeepHrefAsIs(value)) return value;
+  if (locale === "zh-CN") return value;
 
-  icp: { china: "粤ICP备XXXXXXXX号", global: "" }, // Footer 备案号，国内显示，海外版留空
+  const prefix = `/${locale}`;
 
-  copyright: { // Footer 版权信息
-    china: "© 2026 深圳市恒永达科技股份有限公司 版权所有", // 国内版版权
-    global: "© 2026 Shenzhen FOREACH Technology Co., Ltd. All rights reserved.", // 海外版版权
-  }, // Footer 版权信息结束
-}; // siteFooterData 数据结束
+  if (value === "/") return prefix;
+  if (value.startsWith(`${prefix}/`) || value.startsWith(`${prefix}#`)) return value;
+  if (/^\/(en|es|fr|ko|ru)(\/|#|$)/.test(value)) return value;
+  if (value.startsWith("/#")) return `${prefix}${value.slice(1)}`;
 
-export function getSiteFooterText(text: SiteFooterText | string, locale: LocaleCode) { // 定义 Footer 文本读取函数
-  if (typeof text === "string") { // 如果传入的是普通字符串
-    return text; // 直接返回字符串
-  } // 普通字符串判断结束
+  return `${prefix}${value}`;
+}
 
-  const market = getSiteFooterMarket(locale); // 根据当前语言获取国内版或海外版
+export function getSiteFooterHref(value: SiteFooterHref | string | undefined | null, locale: LocaleCode) {
+  if (!value) return "#";
+  if (typeof value === "string") return localizeHref(value, locale);
 
-  return text[market] || text[locale] || text.china || text.global || text["zh-CN"] || text.en || ""; // 按优先级返回 Footer 文本
-} // getSiteFooterText 函数结束
+  const market = getSiteFooterMarket(locale);
+  const resolved = value[locale] || value[market] || value["zh-CN"] || value.en || value.china || value.global || "#";
 
-export function getSiteFooterHref(href: SiteFooterHref | string, locale: LocaleCode) { // 定义 Footer 链接读取函数
-  if (typeof href === "string") { // 如果传入的是普通字符串
-    return href; // 直接返回字符串
-  } // 普通字符串判断结束
-
-  const market = getSiteFooterMarket(locale); // 根据当前语言获取国内版或海外版
-
-  return href[locale] || href[market] || href["zh-CN"] || href.en || href.china || href.global || "#"; // 链接优先按具体语言读取，再回退市场版本
-} // getSiteFooterHref 函数结束
+  return localizeHref(resolved, locale);
+}

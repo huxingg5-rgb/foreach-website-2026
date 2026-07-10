@@ -1,5 +1,5 @@
-// 这是关于 components/home/HomeHeroSection.tsx 的文件：用于管理首页第一屏 Hero 首屏内容
-// 这个文件的作用：把首页首屏从 HomePageContent.tsx 中拆出来，方便后续维护
+﻿// 杩欐槸鍏充簬 components/home/HomeHeroSection.tsx 鐨勬枃浠讹細鐢ㄤ簬绠＄悊棣栭〉绗竴灞?Hero 棣栧睆鍐呭
+// 杩欎釜鏂囦欢鐨勪綔鐢細鎶婇椤甸灞忎粠 HomePageContent.tsx 涓媶鍑烘潵锛屾柟渚垮悗缁淮鎶?
 
 import Link from "next/link";
 
@@ -18,15 +18,8 @@ export default function HomeHeroSection({
 }: HomeHeroSectionProps) {
   const homeText = homeI18n[locale];
 
-  const productsHref = getLocaleAnchorPath(
-    locale,
-    "products",
-  );
-
-  const contactHref = getLocaleAnchorPath(
-    locale,
-    "contact",
-  );
+  const productsHref = locale === "zh-CN" ? "/products" : `/${locale}/products`;
+  const contactHref = locale === "zh-CN" ? "/contact" : `/${locale}/contact`;
 
   return (
     <section

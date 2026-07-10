@@ -1,4 +1,4 @@
-﻿"use client"; // 声明这是客户端组件，因为这里需要使用 useState、useEffect、window 等浏览器能力
+"use client"; // 声明这是客户端组件，因为这里需要使用 useState、useEffect、window 等浏览器能力
 
 import Image from "next/image"; // 引入 Next.js 图片组件，用于导航栏产品图片展示
 import Link from "next/link"; // 引入 Next.js 的 Link 组件，用于站内跳转
@@ -212,8 +212,8 @@ export default function SiteHeader() {
   }, [pathname]);
 
   /* ================================
-     当前路径规范化 
-  
+     当前路径规范化
+
      说明：
      1. 解决 /resources/news 和 /resources/news/ 被当成不同路径的问题
      2. 除首页 / 之外，统一去掉末尾斜杠
@@ -239,7 +239,7 @@ export default function SiteHeader() {
 const isFittingReplacementDetailPage =
   normalizedPathWithoutLocale.startsWith(
     "/resources/selection-support/fitting-replacement/q20/",
-  ); 
+  );
 
   const navigationItems = useMemo(
     () => getVisibleNavigationItems(currentLocale),
@@ -340,7 +340,7 @@ const isFittingReplacementDetailPage =
     isProductCenterPage ||
     openPanel !== "none" ||
     Boolean(desktopMegaKey) ||
-    isSearchOpen; 
+    isSearchOpen;
 
   const activeMegaItem = navigationItems.find(
     (item) =>
@@ -491,7 +491,7 @@ const isFittingReplacementDetailPage =
 
     /* ================================
        搜索模式关闭逻辑
-  
+
        说明：
        1. 点击搜索框内部，不关闭搜索模式
        2. 点击搜索图标按钮，不关闭搜索模式
@@ -1153,10 +1153,6 @@ const isFittingReplacementDetailPage =
                         {getLocalizedText(category.title, currentLocale)}
                       </strong>
 
-                      <span className="site-nav-mega-category-desc">
-                        {getLocalizedText(category.description, currentLocale)}
-                      </span>
-
                       <span
                         className="site-nav-mega-category-arrow"
                         aria-hidden="true"
@@ -1205,9 +1201,9 @@ const isFittingReplacementDetailPage =
               </div>
 
               {/* 右侧内容区 */}
-              <div className="site-nav-mega-main">
+              <div className="site-nav-mega-main" style={{ gridTemplateRows: "1fr", gap: 0, alignContent: "start" }}>
                 {/* 右侧顶部说明区 */}
-                <div className="site-nav-mega-heading">
+                <div className="site-nav-mega-heading" style={{ display: "none" }}>
                   <p>
                     {getLocalizedText(
                       activeMegaItem.key === "about" &&
@@ -1319,7 +1315,7 @@ const isFittingReplacementDetailPage =
                 </div>
 
                 {/* 底部入口区 */}
-                <div className="site-nav-mega-footer">
+                <div className="site-nav-mega-footer" style={{ display: "none" }}>
                   <span>
                     {getLocalizedText(
                       activeMegaItem.megaDropdown.footerText,
@@ -1362,6 +1358,4 @@ const isFittingReplacementDetailPage =
         )}
       </header>
     );
-  } 
-
-
+  }

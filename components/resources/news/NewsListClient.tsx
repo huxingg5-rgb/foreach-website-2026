@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 /* =========================================================
    NewsListClient.tsx
@@ -6,10 +6,8 @@
 
    说明：
    1. 展示公司新闻列表
-   2. 面包屑直接引用 SiteBreadcrumb
-   3. 搜索栏直接引用 ResourceSearchBar，不额外传 classNames
-   4. 底部 CTA 直接引用 ResourceSupportCta
-   5. 新闻卡片整张可点击进入详情页
+   2. 每页显示 9 条新闻：PC 端对应 3 列 × 3 排
+   3. 切换分类或搜索关键词时自动回到第 1 页
 ========================================================= */
 
 import { useMemo, useState } from "react";
@@ -40,6 +38,8 @@ const BreadcrumbComponent =
 const SupportCtaComponent =
   ResourceSupportCta as ComponentType<SharedComponentProps>;
 
+const NEWS_PAGE_SIZE = 9;
+
 function isChinesePage(locale: string) {
   return locale === "zh-CN";
 }
@@ -57,6 +57,7 @@ export default function NewsListClient({ pageData }: NewsListClientProps) {
   const [activeCategory, setActiveCategory] = useState<"all" | NewsCategory>(
     "all"
   );
+  const [currentPage, setCurrentPage] = useState(1);
 
   const filteredArticles = useMemo(() => {
     const normalizedKeyword = keyword.trim().toLowerCase();
@@ -82,6 +83,41 @@ export default function NewsListClient({ pageData }: NewsListClientProps) {
     });
   }, [activeCategory, keyword, pageData.articles]);
 
+  const totalPages = Math.max(
+    1,
+    Math.ceil(filteredArticles.length / NEWS_PAGE_SIZE)
+  );
+
+  const safeCurrentPage = Math.min(currentPage, totalPages);
+
+  const pagedArticles = useMemo(() => {
+    const startIndex = (safeCurrentPage - 1) * NEWS_PAGE_SIZE;
+    const endIndex = startIndex + NEWS_PAGE_SIZE;
+
+    return filteredArticles.slice(startIndex, endIndex);
+  }, [filteredArticles, safeCurrentPage]);
+
+  function handleKeywordChange(value: string) {
+    setKeyword(value);
+    setCurrentPage(1);
+  }
+
+  function handleCategoryChange(category: "all" | NewsCategory) {
+    setActiveCategory(category);
+    setCurrentPage(1);
+  }
+
+  function handlePageChange(page: number) {
+    const nextPage = Math.max(1, Math.min(page, totalPages));
+
+    setCurrentPage(nextPage);
+  }
+
+  const pageSummaryText =
+    pageData.locale === "zh-CN"
+      ? `第 ${safeCurrentPage} / ${totalPages} 页，共 ${filteredArticles.length} 条`
+      : `Page ${safeCurrentPage} of ${totalPages}, ${filteredArticles.length} items`;
+
   return (
     <main className="newsPage">
       <section
@@ -105,8 +141,8 @@ export default function NewsListClient({ pageData }: NewsListClientProps) {
       <section className="newsSearchSection">
         <ResourceSearchBar
           value={keyword}
-          onChange={setKeyword}
-          onSearch={setKeyword}
+          onChange={handleKeywordChange}
+          onSearch={handleKeywordChange}
           placeholder={pageData.search.placeholder}
           searchButtonText={pageData.locale === "zh-CN" ? "搜索" : "Search"}
           showRecentKeywords={false}
@@ -127,7 +163,7 @@ export default function NewsListClient({ pageData }: NewsListClientProps) {
                     ? "newsCategoryTabs__button isActive"
                     : "newsCategoryTabs__button"
                 }
-                onClick={() => setActiveCategory(category.key)}
+                onClick={() => handleCategoryChange(category.key)}
               >
                 {category.label}
               </button>
@@ -136,15 +172,64 @@ export default function NewsListClient({ pageData }: NewsListClientProps) {
         </div>
 
         {filteredArticles.length > 0 ? (
-          <div className="newsGrid">
-            {filteredArticles.map((article) => (
-              <NewsCard
-                key={article.id}
-                article={article}
-                href={getNewsHref(pageData.locale, article.slug)}
-              />
-            ))}
-          </div>
+          <>
+            <div className="newsGrid">
+              {pagedArticles.map((article) => (
+                <NewsCard
+                  key={article.id}
+                  article={article}
+                  href={getNewsHref(pageData.locale, article.slug)}
+                />
+              ))}
+            </div>
+
+            {totalPages > 1 ? (
+              <div className="newsPagination" aria-label="新闻分页">
+                <button
+                  type="button"
+                  className="newsPagination__button"
+                  disabled={safeCurrentPage <= 1}
+                  onClick={() => handlePageChange(safeCurrentPage - 1)}
+                >
+                  {pageData.locale === "zh-CN" ? "上一页" : "Previous"}
+                </button>
+
+                <div className="newsPagination__numbers">
+                  {Array.from({ length: totalPages }, (_, index) => {
+                    const page = index + 1;
+
+                    return (
+                      <button
+                        key={page}
+                        type="button"
+                        className={
+                          page === safeCurrentPage
+                            ? "newsPagination__number isActive"
+                            : "newsPagination__number"
+                        }
+                        onClick={() => handlePageChange(page)}
+                      >
+                        {page}
+                      </button>
+                    );
+                  })}
+                </div>
+
+                <button
+                  type="button"
+                  className="newsPagination__button"
+                  disabled={safeCurrentPage >= totalPages}
+                  onClick={() => handlePageChange(safeCurrentPage + 1)}
+                >
+                  {pageData.locale === "zh-CN" ? "下一页" : "Next"}
+                </button>
+
+                <span className="newsPagination__summary">
+                  {pageSummaryText}
+                </span>
+              </div>
+            ) : null}
+          </>
         ) : (
           <div className="newsEmpty">
             <p>没有找到匹配的新闻，请更换关键词或分类。</p>
@@ -186,4 +271,4 @@ function NewsCard({ article, href }: NewsCardProps) {
       </div>
     </Link>
   );
-} 
+}

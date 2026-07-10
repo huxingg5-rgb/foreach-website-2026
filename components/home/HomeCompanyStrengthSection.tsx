@@ -128,9 +128,11 @@ export default function HomeCompanyStrengthSection({ // 定义并导出首页公
               <h3 className="home-company-intro-title"> {/* 公司介绍小标题 */}
                 {getHomeCompanyText(aboutData.introTitle, locale)} {/* 公司介绍小标题多语言文字 */}
               </h3> {/* 公司介绍小标题结束 */}
-
-              <p className="home-company-intro-desc"> {/* 公司介绍描述 */}
-                {getHomeCompanyText(homeCompanyStrengthData.about.introDescription, locale)} {/* 公司介绍描述多语言文字 */}
+              <p className="home-company-intro-copy">
+                {getHomeCompanyText(homeCompanyStrengthData.about.introDescription, locale) ||
+                  (locale === "zh-CN"
+                    ? "恒永达科技长期专注于微流体系统核心部件与液路解决方案，围绕泵、阀、针、管路连接、传感器与智控模块，为 IVD、生命科学、实验室自动化和分析仪器客户提供稳定、可追溯、可集成的产品与技术支持。"
+                    : "FOREACH focuses on core microfluidic components and fluidic system solutions, covering pumps, valves, probes, tubing connections, sensors, and control modules for IVD, life sciences, laboratory automation, and analytical instruments.")}
               </p> {/* 公司介绍描述结束 */}
 
               <div // 数据卡片网格开始

@@ -1,27 +1,27 @@
-// 这是关于 components/home/HomePageContent.tsx 的文件：用于管理首页所有模块的排列顺序
-// 这个文件的作用：只负责“首页结构组合”，不直接写 Hero 首屏的具体内容
+﻿// 杩欐槸鍏充簬 components/home/HomePageContent.tsx 鐨勬枃浠讹細鐢ㄤ簬绠＄悊棣栭〉鎵€鏈夋ā鍧楃殑鎺掑垪椤哄簭
+// 杩欎釜鏂囦欢鐨勪綔鐢細鍙礋璐ｂ€滈椤电粨鏋勭粍鍚堚€濓紝涓嶇洿鎺ュ啓 Hero 棣栧睆鐨勫叿浣撳唴瀹?
 
-import HomeApplicationFlowSection from "@/components/home/HomeApplicationFlowSection"; // 引入首页第二屏：应用领域 × 核心部件组件
-import HomeCompanyStrengthSection from "@/components/home/HomeCompanyStrengthSection"; // 引入首页第三 / 第四屏：公司介绍与企业优势组件
-import HomeHeroSection from "@/components/home/HomeHeroSection"; // 引入首页第一屏：Hero 首屏组件
-import HomeInquirySection from "@/components/home/HomeInquirySection"; // 引入首页第六屏：在线询盘组件
-import HomeNewsSection from "@/components/home/HomeNewsSection"; // 引入首页第五屏：资讯中心组件
+import HomeApplicationFlowSection from "@/components/home/HomeApplicationFlowSection"; // 寮曞叆棣栭〉绗簩灞忥細搴旂敤棰嗗煙 脳 鏍稿績閮ㄤ欢缁勪欢
+import HomeCompanyStrengthSection from "@/components/home/HomeCompanyStrengthSection"; // 寮曞叆棣栭〉绗笁 / 绗洓灞忥細鍏徃浠嬬粛涓庝紒涓氫紭鍔跨粍浠?
+import HomeHeroSection from "@/components/home/HomeHeroSection"; // 寮曞叆棣栭〉绗竴灞忥細Hero 棣栧睆缁勪欢
+import HomeContactInquirySection from "@/components/home/HomeContactInquirySection";
+import HomeNewsSection from "@/components/home/HomeNewsSection"; // 寮曞叆棣栭〉绗簲灞忥細璧勮涓績缁勪欢
 
-import { getLanguageTextLayoutClass } from "@/data/languages"; // 引入根据当前语言获取排版 class 的方法
+import { getLanguageTextLayoutClass } from "@/data/languages"; // 寮曞叆鏍规嵁褰撳墠璇█鑾峰彇鎺掔増 class 鐨勬柟娉?
 
-import type { LocaleCode } from "@/lib/i18n"; // 引入官网支持的语言代码类型
+import type { LocaleCode } from "@/lib/i18n"; // 寮曞叆瀹樼綉鏀寔鐨勮瑷€浠ｇ爜绫诲瀷
 
 /* =========================================================
-   首页内容组件参数类型
-   说明：
-   1. locale 是当前页面语言
-   2. 例如：
-      - zh-CN 中文
-      - en 英文
-      - es 西班牙语
-      - fr 法语
-      - ko 韩语
-      - ru 俄语
+   棣栭〉鍐呭缁勪欢鍙傛暟绫诲瀷
+   璇存槑锛?
+   1. locale 鏄綋鍓嶉〉闈㈣瑷€
+   2. 渚嬪锛?
+      - zh-CN 涓枃
+      - en 鑻辨枃
+      - es 瑗跨彮鐗欒
+      - fr 娉曡
+      - ko 闊╄
+      - ru 淇勮
 ========================================================= */
 
 type HomePageContentProps = {
@@ -29,19 +29,19 @@ type HomePageContentProps = {
 };
 
 /* =========================================================
-   首页内容总入口组件
-   说明：
-   1. 这个组件只负责组合首页模块
-   2. 每个模块的具体内容分别放在对应组件里
-   3. languageTextLayoutClass 用于给不同语言提供排版密度 class
-   4. 如果多语言页面出现文字“先大后小”的跳动问题，
-      不建议在这里删除 languageTextLayoutClass，
-      应该去 app/language-typography.css 里修正字号/动画规则
+   棣栭〉鍐呭鎬诲叆鍙ｇ粍浠?
+   璇存槑锛?
+   1. 杩欎釜缁勪欢鍙礋璐ｇ粍鍚堥椤垫ā鍧?
+   2. 姣忎釜妯″潡鐨勫叿浣撳唴瀹瑰垎鍒斁鍦ㄥ搴旂粍浠堕噷
+   3. languageTextLayoutClass 鐢ㄤ簬缁欎笉鍚岃瑷€鎻愪緵鎺掔増瀵嗗害 class
+   4. 濡傛灉澶氳瑷€椤甸潰鍑虹幇鏂囧瓧鈥滃厛澶у悗灏忊€濈殑璺冲姩闂锛?
+      涓嶅缓璁湪杩欓噷鍒犻櫎 languageTextLayoutClass锛?
+      搴旇鍘?app/language-typography.css 閲屼慨姝ｅ瓧鍙?鍔ㄧ敾瑙勫垯
 ========================================================= */
 
 export default function HomePageContent({ locale }: HomePageContentProps) {
-  // 根据当前语言获取页面排版 class
-  // 例如可能返回：
+  // 鏍规嵁褰撳墠璇█鑾峰彇椤甸潰鎺掔増 class
+  // 渚嬪鍙兘杩斿洖锛?
   // site-page--compact
   // site-page--standard
   // site-page--expanded
@@ -50,21 +50,21 @@ export default function HomePageContent({ locale }: HomePageContentProps) {
   return (
     <div className={`site-page ${languageTextLayoutClass}`}>
       <main>
-        {/* 第一屏：Hero 首屏区域 */}
+        {/* 绗竴灞忥細Hero 棣栧睆鍖哄煙 */}
         <HomeHeroSection locale={locale} />
 
-        {/* 第二屏：应用领域 × 核心部件 */}
+        {/* 绗簩灞忥細搴旂敤棰嗗煙 脳 鏍稿績閮ㄤ欢 */}
         <HomeApplicationFlowSection locale={locale} />
 
-        {/* 第三 / 第四屏：公司介绍与企业优势 */}
+        {/* 绗笁 / 绗洓灞忥細鍏徃浠嬬粛涓庝紒涓氫紭鍔?*/}
         <HomeCompanyStrengthSection locale={locale} />
 
-        {/* 第五屏：资讯中心 */}
+        {/* 绗簲灞忥細璧勮涓績 */}
         <HomeNewsSection locale={locale} />
 
-        {/* 第六屏：在线询盘 */}
-        <HomeInquirySection locale={locale} />
+        {/* 绗叚灞忥細鍦ㄧ嚎璇㈢洏 */}
+        <HomeContactInquirySection locale={locale} />
       </main>
     </div>
   );
-} 
+}

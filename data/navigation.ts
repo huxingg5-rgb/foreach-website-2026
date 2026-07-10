@@ -1,4 +1,4 @@
-﻿/* ================================
+/* ================================
    navigation.ts
    官网顶部导航数据配置文件
 
@@ -314,7 +314,7 @@ const productMegaDropdown: MegaDropdown = {
       order: 1,
       enabled: true,
     },
-    {
+{
       key: "valves",
       title: t("阀系列", "Valve Series", "Series de válvulas", "Séries de vannes", "밸브 시리즈", "Серии клапанов"),
       description: t(
@@ -328,35 +328,7 @@ const productMegaDropdown: MegaDropdown = {
       order: 2,
       enabled: true,
     },
-    {
-      key: "tubing",
-      title: t("管路系列", "Tubing Series", "Series de tubos", "Séries de tubes", "튜빙 시리즈", "Серии трубок"),
-      description: t(
-        "多材料软管、硬管与透明液路管线",
-        "Multi-material flexible tubing, rigid tubing, and transparent fluid lines",
-        "Tubos flexibles multimaterial, tubos rígidos y líneas de fluido transparentes",
-        "Tubes souples multi-matériaux, tubes rigides et lignes fluidiques transparentes",
-        "다중 소재 플렉시블 튜빙, 리지드 튜빙 및 투명 유체 라인",
-        "Многоматериальные гибкие трубки, жесткие трубки и прозрачные жидкостные линии"
-      ),
-      order: 3,
-      enabled: true,
-    },
-    {
-      key: "fittings",
-      title: t("接头系列", "Fitting Series", "Series de racores", "Séries de raccords", "피팅 시리즈", "Серии фитингов"),
-      description: t(
-        "软管接头、硬管接头、鲁尔接头、快插连接与定制管路组件",
-        "Tubing connectors, rigid tubing fittings, luer fittings, quick connectors, and custom tubing assemblies",
-        "Conectores para tubos, racores para tubos rígidos, racores Luer, conectores rápidos y conjuntos de tubos personalizados",
-        "Connecteurs pour tubes, raccords pour tubes rigides, raccords Luer, connecteurs rapides et assemblages de tubes personnalisés",
-        "튜빙 커넥터, 리지드 튜빙 피팅, 루어 피팅, 퀵 커넥터 및 맞춤형 튜빙 어셈블리",
-        "Соединители для трубок, фитинги для жестких трубок, фитинги Luer, быстроразъемные соединители и индивидуальные трубные сборки"
-      ),
-      order: 4,
-      enabled: true,
-    },
-    {
+{
       key: "probes",
       title: t("针系列", "Probe Series", "Series de sondas", "Séries de sondes", "프로브 시리즈", "Серии зондов"),
       description: t(
@@ -370,7 +342,35 @@ const productMegaDropdown: MegaDropdown = {
       order: 5,
       enabled: true,
     },
-    {
+{
+      key: "fittings",
+      title: t("接头系列", "Fitting Series", "Series de racores", "Séries de raccords", "피팅 시리즈", "Серии фитингов"),
+      description: t(
+        "软管接头、硬管接头、鲁尔接头、快插连接与定制管路组件",
+        "Tubing connectors, rigid tubing fittings, luer fittings, quick connectors, and custom tubing assemblies",
+        "Conectores para tubos, racores para tubos rígidos, racores Luer, conectores rápidos y conjuntos de tubos personalizados",
+        "Connecteurs pour tubes, raccords pour tubes rigides, raccords Luer, connecteurs rapides et assemblages de tubes personnalisés",
+        "튜빙 커넥터, 리지드 튜빙 피팅, 루어 피팅, 퀵 커넥터 및 맞춤형 튜빙 어셈블리",
+        "Соединители для трубок, фитинги для жестких трубок, фитинги Luer, быстроразъемные соединители и индивидуальные трубные сборки"
+      ),
+      order: 4,
+      enabled: true,
+    },
+{
+      key: "tubing",
+      title: t("管路系列", "Tubing Series", "Series de tubos", "Séries de tubes", "튜빙 시리즈", "Серии трубок"),
+      description: t(
+        "多材料软管、硬管与透明液路管线",
+        "Multi-material flexible tubing, rigid tubing, and transparent fluid lines",
+        "Tubos flexibles multimaterial, tubos rígidos y líneas de fluido transparentes",
+        "Tubes souples multi-matériaux, tubes rigides et lignes fluidiques transparentes",
+        "다중 소재 플렉시블 튜빙, 리지드 튜빙 및 투명 유체 라인",
+        "Многоматериальные гибкие трубки, жесткие трубки и прозрачные жидкостные линии"
+      ),
+      order: 3,
+      enabled: true,
+    },
+{
       key: "control",
       title: t("智控系列", "Smart Control Series", "Serie de control inteligente", "Série de contrôle intelligent", "스마트 제어 시리즈", "Серия интеллектуального управления"),
       description: t(
@@ -451,19 +451,19 @@ const productMegaDropdown: MegaDropdown = {
       href: localizedPath("/products/valves"),
       images: [
         productImage(
-          "/images/products/VALVE/Rotary valve_200x200_01_v001.jpg",
+          "/images/products/valves/rotary-valves/foreach-rotary-valve-main.webp",
           t("旋转阀", "Rotary Valve", "Válvula rotativa", "Vanne rotative", "로터리 밸브", "Роторный клапан"),
           t("多通道流路选择与切换", "Multi-port flow path selection and switching", "Selección y conmutación de rutas multicanal", "Sélection et commutation de voies multicanaux", "다중 포트 유로 선택 및 전환", "Выбор и переключение многоканальных потоков"),
           localizedPath("/products/valves/rotary-valves")
         ),
         productImage(
-          "/images/resource/datasheets/thumbnails/resource-datasheet-thumb-high-pressure-valve-v001.webp",
+          "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp",
           t("高压阀", "High Pressure Valve", "Válvula de alta presión", "Vanne haute pression", "고압 밸브", "Клапан высокого давления"),
           t("适用于高压流路切换与精密控制", "For high-pressure flow switching and precise control", "Para conmutación de flujo de alta presión y control preciso", "Pour commutation de flux haute pression et contrôle précis", "고압 유로 전환 및 정밀 제어용", "Для переключения потоков высокого давления и точного управления"),
           localizedPath("/products/valves/high-pressure-valves")
         ),
         productImage(
-          "/images/products/VALVE/Solenoid valve_200x200_01_v001.jpg",
+          "/images/products/valves/solenoid-valves/foreach-solenoid-valve-main.webp",
           t("电磁阀", "Solenoid Valve", "Válvula solenoide", "Électrovanne", "솔레노이드 밸브", "Соленоидный клапан"),
           t("流路通断控制与精密切换", "On/off control and precise flow switching", "Control de apertura/cierre y conmutación precisa", "Commande marche/arrêt et commutation précise", "유로 온오프 제어 및 정밀 전환", "Управление вкл./выкл. и точное переключение потока"),
           localizedPath("/products/valves/solenoid-valves")
@@ -516,11 +516,84 @@ const productMegaDropdown: MegaDropdown = {
       description: t("软管、硬管与液路管线", "Flexible tubing, rigid tubing, and fluid lines", "Tubos flexibles, tubos rígidos y líneas de fluido", "Tubes souples, tubes rigides et lignes fluidiques", "플렉시블 튜빙, 리지드 튜빙 및 유체 라인", "Гибкие трубки, жесткие трубки и жидкостные линии"),
       href: localizedPath("/products/tubing"),
       images: [
-        productImage("/images/products/TUBING/FEP_200x200_01_v001.JPG", t("FEP 管", "FEP Tubing", "Tubo FEP", "Tube FEP", "FEP 튜빙", "Трубка FEP"), t("透明度高，适合可视化液路", "High transparency for visual fluid lines", "Alta transparencia para líneas de fluido visibles", "Haute transparence pour lignes fluidiques visibles", "시각 유로용 고투명 튜빙", "Высокая прозрачность для визуальных жидкостных линий"), localizedPath("/products/tubing/fep-tubing")),
-        productImage("/images/products/TUBING/PTFE_200x200_01_v001.JPG", t("PTFE 管", "PTFE Tubing", "Tubo PTFE", "Tube PTFE", "PTFE 튜빙", "Трубка PTFE"), t("耐腐蚀，适合多种试剂输送", "Corrosion-resistant tubing for reagent transfer", "Tubo resistente a la corrosión para transferencia de reactivos", "Tube anticorrosion pour transfert de réactifs", "시약 이송용 내식성 튜빙", "Коррозионностойкая трубка для подачи реагентов"), localizedPath("/products/tubing/ptfe-tubing")),
-        productImage("/images/products/TUBING/PEEK_200x200_01_v001.JPG", t("PEEK 管", "PEEK Tubing", "Tubo PEEK", "Tube PEEK", "PEEK 튜빙", "Трубка PEEK"), t("高强度，适合高性能流体系统", "High-strength tubing for demanding fluidic systems", "Tubo de alta resistencia para sistemas fluidos exigentes", "Tube haute résistance pour systèmes fluidiques exigeants", "고성능 유체 시스템용 고강도 튜빙", "Высокопрочная трубка для сложных жидкостных систем"), localizedPath("/products/tubing/peek-tubing")),
-        productImage("/images/products/TUBING/PVC_200x200_01_v001.JPG", t("PVC 管", "PVC Tubing", "Tubo PVC", "Tube PVC", "PVC 튜빙", "Трубка PVC"), t("适合体外诊断与实验室液路", "Tubing for IVD and laboratory fluidics", "Tubo para IVD y fluidos de laboratorio", "Tube pour IVD et fluidique de laboratoire", "IVD 및 실험실 유체용 튜빙", "Трубка для IVD и лабораторной флюидики"), localizedPath("/products/tubing/pvc-tubing")),
-        productImage("/images/products/TUBING/TPU_200x200_01_v001.JPG", t("TPU 管", "TPU Tubing", "Tubo TPU", "Tube TPU", "TPU 튜빙", "Трубка TPU"), t("柔韧耐用，适合动态液路", "Durable flexible tubing for dynamic fluid paths", "Tubo flexible y duradero para rutas fluidas dinámicas", "Tube flexible durable pour circuits fluidiques dynamiques", "동적 유로용 내구성 플렉시블 튜빙", "Прочная гибкая трубка для динамических жидкостных линий"), localizedPath("/products/tubing/tpu-tubing")),
+        productImage(
+          "/images/products/TUBING/pvc-tubing/pvc-tubing-main.webp",
+          t("PVC 管", "PVC Tubing", "Tubo PVC", "Tube PVC", "PVC 튜빙", "Трубка PVC"),
+          t(
+            "适合体外诊断与实验室液路",
+            "Suitable for IVD and laboratory fluid paths",
+            "Adecuado para circuitos de diagnóstico in vitro y laboratorio",
+            "Adapté aux circuits de diagnostic in vitro et de laboratoire",
+            "체외진단 및 실험실 유로에 적합",
+            "Подходит для жидкостных линий IVD и лабораторий"
+          ),
+          localizedPath("/products/tubing/pvc-tubing")
+        ),
+        productImage(
+          "/images/products/TUBING/tpu-tubing/tpu-tubing-main.webp",
+          t("TPU 管", "TPU Tubing", "Tubo TPU", "Tube TPU", "TPU 튜빙", "Трубка TPU"),
+          t(
+            "柔韧耐用，适合动态液路",
+            "Flexible and durable for dynamic fluid paths",
+            "Flexible y duradero para circuitos de fluidos dinámicos",
+            "Souple et durable pour les circuits fluidiques dynamiques",
+            "유연하고 내구성이 뛰어나 동적 유로에 적합",
+            "Гибкая и долговечная трубка для динамических жидкостных линий"
+          ),
+          localizedPath("/products/tubing/tpu-tubing")
+        ),
+        productImage(
+          "/images/products/TUBING/fep-tubing/fep-tubing-main.webp",
+          t("FEP 管", "FEP Tubing", "Tubo FEP", "Tube FEP", "FEP 튜빙", "Трубка FEP"),
+          t(
+            "透明度高，适合可视化液路",
+            "High transparency for visual fluid lines",
+            "Alta transparencia para líneas de fluido visibles",
+            "Haute transparence pour les circuits fluidiques visibles",
+            "가시 유로에 적합한 고투명 튜빙",
+            "Высокая прозрачность для визуального контроля потока"
+          ),
+          localizedPath("/products/tubing/fep-tubing")
+        ),
+        productImage(
+          "/images/products/TUBING/ptfe-tubing/ptfe-tubing-main.webp",
+          t("PTFE 管", "PTFE Tubing", "Tubo PTFE", "Tube PTFE", "PTFE 튜빙", "Трубка PTFE"),
+          t(
+            "耐腐蚀，适合多种试剂输送",
+            "Corrosion-resistant tubing for reagent transfer",
+            "Tubo resistente a la corrosión para transferencia de reactivos",
+            "Tube résistant à la corrosion pour le transfert de réactifs",
+            "다양한 시약 이송에 적합한 내식성 튜빙",
+            "Коррозионностойкая трубка для подачи реагентов"
+          ),
+          localizedPath("/products/tubing/ptfe-tubing")
+        ),
+        productImage(
+          "/images/products/TUBING/peek-tubing/peek-tubing-main.webp",
+          t("PEEK 管", "PEEK Tubing", "Tubo PEEK", "Tube PEEK", "PEEK 튜빙", "Трубка PEEK"),
+          t(
+            "高强度，适合高性能流体系统",
+            "High-strength tubing for demanding fluidic systems",
+            "Tubo de alta resistencia para sistemas fluídicos exigentes",
+            "Tube haute résistance pour les systèmes fluidiques exigeants",
+            "고성능 유체 시스템용 고강도 튜빙",
+            "Высокопрочная трубка для требовательных жидкостных систем"
+          ),
+          localizedPath("/products/tubing/peek-tubing")
+        ),
+        productImage(
+          "/images/products/TUBING/pfa-tubing/pfa-tubing-main.webp",
+          t("PFA 管", "PFA Tubing", "Tubo PFA", "Tube PFA", "PFA 튜빙", "Трубка PFA"),
+          t(
+            "高纯度、耐腐蚀，适合高要求液路",
+            "High-purity, corrosion-resistant tubing for demanding fluid paths",
+            "Tubo de alta pureza y resistente a la corrosión para circuitos exigentes",
+            "Tube haute pureté et résistant à la corrosion pour circuits exigeants",
+            "고순도·내식성이 요구되는 유로에 적합",
+            "Высокочистая коррозионностойкая трубка для требовательных линий"
+          ),
+          localizedPath("/products/tubing/pfa-tubing")
+        ),
       ],
       order: 5,
       enabled: true,
@@ -529,7 +602,7 @@ const productMegaDropdown: MegaDropdown = {
     {
       key: "sensors-card",
       categoryKey: "control",
-      href: localizedPath("/products/control"),
+      href: localizedPath("/products?category=control"),
       title: t("智控系列", "Smart Control Series", "Serie de control inteligente", "Série de contrôle intelligent", "스마트 제어 시리즈", "Серия интеллектуального управления"),
       description: t(
         "液路压力监测、气泡检测与系统保护",
@@ -541,16 +614,16 @@ const productMegaDropdown: MegaDropdown = {
       ),
       images: [
         productImage(
-          "/images/logo/foreach-logo-color.svg",
+          "/images/products/control/foreach-abd-air-bubble-detector.webp",
           t("ABD 气泡检测模块", "ABD Air Bubble Detector", "Detector de burbujas ABD", "Détecteur de bulles ABD", "ABD 기포 감지 모듈", "Детектор пузырьков ABD"),
           t("用于透明管路气泡与液滴检测", "For bubble and droplet detection in transparent tubing", "Para detectar burbujas y gotas en tubos transparentes", "Pour détecter les bulles et gouttelettes dans les tubes transparents", "투명 튜빙 내 기포 및 액적 감지용", "Для обнаружения пузырьков и капель в прозрачных трубках"),
-          localizedPath("/products/control/abd-air-bubble-detector")
+          localizedPath("/products?category=control")
         ),
         productImage(
-          "/images/products/Sensor/Pressure sensor_200x200_01_v001.jpg",
+          "/images/products/control/foreach-pdm5-pressure-sensor.webp",
           t("PDM5 压力检测模块", "PDM5 Pressure Sensor", "Sensor de presión PDM5", "Capteur de pression PDM5", "PDM5 압력 감지 모듈", "Датчик давления PDM5"),
           t("用于液路压力监测与堵塞预警", "For fluid pressure monitoring and blockage warning", "Para monitoreo de presión de fluido y alerta de obstrucción", "Pour surveillance de pression fluidique et alerte de colmatage", "유체 압력 모니터링 및 막힘 경고용", "Для мониторинга давления жидкости и предупреждения о засоре"),
-          localizedPath("/products/control/pdm5-pressure-sensor")
+          localizedPath("/products?category=control")
         ),
       ],
       order: 6,
@@ -1660,7 +1733,7 @@ const navigationItems: NavigationItem[] = [
 
     /*
        资源中心一级入口
-  
+
        说明：
        1. 当前资源中心首页如果还没完全做好，可以先指向规格书下载页
        2. 这样点击「资源中心」本身不会进入空页面或 404
@@ -1788,7 +1861,7 @@ const navigationItems: NavigationItem[] = [
       },
     ],
   },
-  
+
   {
     key: "about",
     label: t(
@@ -2347,7 +2420,7 @@ export function getVisibleNavigationItems(locale = "zh-CN") {
          - 点击直接进入 /contact
 
          外语站：
-         - 顶部显示「Contact & Partnership」 
+         - 顶部显示「Contact & Partnership」
          - 显示下拉
          - 下拉包含 Contact Us 和 Become a Distributor
       */
@@ -2524,14 +2597,4 @@ export function getProductImageDisplayMeta(src: string, locale: string) {
       ? "Fluidic component for microfluidic systems"
       : "用于微流体液路系统的核心部件",
   };
-} 
-
-
-
-
-
-
-
-
-
-
+}
