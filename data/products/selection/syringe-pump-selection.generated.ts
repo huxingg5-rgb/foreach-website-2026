@@ -64,6 +64,8 @@ export const syringePumpSelectionProducts: ProductSelectionProduct[] = [
       filter02: "30mm",
     },
     imagePath: "/images/products/pumps/syringe-pumps/foreach-hmd3-solenoid-valve-syringe-pump.webp",
+
+    imageCard: "/images/products/pumps/syringe-pumps/foreach-hmd3-solenoid-valve-syringe-pump.webp",
     detailSlug: "hmd3-30mm-solenoid-syringe-pump",
     sortOrder: 1201,
   },
@@ -92,6 +94,8 @@ export const syringePumpSelectionProducts: ProductSelectionProduct[] = [
       filter02: "60mm",
     },
     imagePath: "/images/products/pumps/syringe-pumps/foreach-hmd6-solenoid-valve-syringe-pump.webp",
+
+    imageCard: "/images/products/pumps/syringe-pumps/foreach-hmd6-solenoid-valve-syringe-pump.webp",
     detailSlug: "hmd6-60mm-solenoid-syringe-pump",
     sortOrder: 1202,
   },
@@ -120,6 +124,8 @@ export const syringePumpSelectionProducts: ProductSelectionProduct[] = [
       filter02: "30mm",
     },
     imagePath: "/images/products/pumps/syringe-pumps/foreach-hld3-rotary-valve-syringe-pump.webp",
+
+    imageCard: "/images/products/pumps/syringe-pumps/foreach-hld3-rotary-valve-syringe-pump.webp",
     detailSlug: "hld3-30mm-rotary-valve-syringe-pump",
     sortOrder: 1203,
   },
@@ -148,6 +154,8 @@ export const syringePumpSelectionProducts: ProductSelectionProduct[] = [
       filter02: "60mm",
     },
     imagePath: "/images/products/pumps/syringe-pumps/foreach-hld6-rotary-valve-syringe-pump.webp",
+
+    imageCard: "/images/products/pumps/syringe-pumps/foreach-hld6-rotary-valve-syringe-pump.webp",
     detailSlug: "hld6-60mm-rotary-valve-syringe-pump",
     sortOrder: 1204,
   },

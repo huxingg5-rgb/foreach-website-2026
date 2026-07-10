@@ -5,7 +5,7 @@
     "productTypeName": "旋转阀",
     "title": "MRV3 陶瓷多通道旋转阀",
     "modelName": "MRV3 陶瓷多通道旋转阀",
-    "image": "/images/products/valves/rotary-valves/mrv3-ceramic-rotary-valve-main.webp",
+    "image": "/images/products/valves/rotary-valves/foreach-rotary-valve-main.webp",
     "description": "MRV3 陶瓷多通道旋转阀用于自动化分析仪器中的多端口流路选择，可将多瓶试剂、清洗液、废液或样本相关路径集中接入一个旋转切换单元。该系列覆盖 10 / 16 / 24 通道配置，通道直径为 1.2mm / 1.0mm / 0.5mm，内容积为 15.8μL / 10μL / 2.9μL，耐压 0.7MPa，接口支持 1/4-28UNF 与 6-40UNF。实际选型时需结合端口数量、目标通径、介质兼容性、接口规格、驱动器、通信接口和安装空间确认。",
     "commonApplications": [
       "多试剂选择",
@@ -152,7 +152,9 @@
     "customInquiryHref": "/contact",
     "imageAlt": "MRV3 10/16/24通道陶瓷多通道旋转阀",
     "additionalImages": [],
-    "images": [],
+    "images": [
+      "/images/products/valves/rotary-valves/foreach-rotary-valve-main.webp"
+    ],
     "thumbnails": [],
     "name": "MRV3 陶瓷多通道旋转阀",
     "productName": "MRV3 陶瓷多通道旋转阀",
@@ -191,6 +193,15 @@
         "question": "选型时需要提供哪些信息？",
         "answer": "建议提供通道数量、通道直径、接口规格、介质类型、是否需要驱动器、通信方式、安装空间和阀位控制逻辑。"
       }
+    ],
+    "mainImage": "/images/products/valves/rotary-valves/foreach-rotary-valve-main.webp",
+    "imagePath": "/images/products/valves/rotary-valves/foreach-rotary-valve-main.webp",
+    "imageUrl": "/images/products/valves/rotary-valves/foreach-rotary-valve-main.webp",
+    "heroImage": "/images/products/valves/rotary-valves/foreach-rotary-valve-main.webp",
+    "productImage": "/images/products/valves/rotary-valves/foreach-rotary-valve-main.webp",
+    "imageCard": "/images/products/valves/rotary-valves/foreach-rotary-valve-main.webp",
+    "galleryImages": [
+      "/images/products/valves/rotary-valves/foreach-rotary-valve-main.webp"
     ]
   },
   {
@@ -199,7 +210,7 @@
     "productTypeName": "高压阀",
     "title": "HP 三位七通高压阀",
     "modelName": "HP 三位七通高压阀",
-    "image": "/images/products/valves/high-pressure-valves/hp-3-position-7-port-high-pressure-valve-main.webp",
+    "image": "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp",
     "description": "HP 三位七通高压阀用于 HPLC 自动进样和分析仪器高压液路中的路径切换，可在进样、排气、旁路和清洗等液路状态之间进行切换。该阀采用三位七通结构，最大工作压力 25MPa，接口规格 10-32UNF，通道直径 0.4mm，内体积 0.8μL，适用于对耐压、密封可靠性、低内体积和阀位切换稳定性有要求的高压分析液路模块。实际选型时需结合流动相或样品介质、系统压力、接口形式、切换逻辑和安装空间确认。",
     "commonApplications": [
       "HPLC自动进样",
@@ -340,7 +351,9 @@
     "customInquiryHref": "/contact",
     "imageAlt": "HP 25MPa三位七通高压阀",
     "additionalImages": [],
-    "images": [],
+    "images": [
+      "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp"
+    ],
     "thumbnails": [],
     "name": "HP 三位七通高压阀",
     "productName": "HP 三位七通高压阀",
@@ -379,6 +392,15 @@
         "question": "为什么高压阀按定制配置展示？",
         "answer": "高压阀与系统压力、接口、介质兼容性、阀位切换状态和整机安装空间强相关，需要结合客户高压液路方案确认。"
       }
+    ],
+    "mainImage": "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp",
+    "imagePath": "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp",
+    "imageUrl": "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp",
+    "heroImage": "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp",
+    "productImage": "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp",
+    "imageCard": "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp",
+    "galleryImages": [
+      "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp"
     ]
   },
   {
@@ -387,7 +409,7 @@
     "productTypeName": "电磁阀",
     "title": "6010 系列电磁阀",
     "modelName": "6010 系列电磁阀",
-    "image": "/images/products/valves/solenoid-valves/6010-solenoid-valve-main.webp",
+    "image": "/images/products/valves/solenoid-valves/foreach-solenoid-valve-main.webp",
     "description": "6010 系列电磁阀用于自动化分析仪器中的低压液路通断控制，可用于试剂、清洗液、稀释液和废液路径的开关控制。该系列为摆臂隔膜阀，覆盖基板型、螺纹型和倒刺型结构，使用压力范围为 -75kPa~0.25MPa，孔口直径 1.4mm，阀室内容积 20uL，流量系数 CV 为 0.03。实际选型时需确认通口数、阀形式、接口方式、膜片材质、介质兼容性、额定电压和是否需要节能回路。",
     "commonApplications": [
       "试剂通断控制",
@@ -509,9 +531,22 @@
     "customInquiryButtonText": "联系工程师",
     "customInquiryHref": "/contact",
     "imageAlt": "6010 2/3通摆臂隔膜电磁阀",
-    "additionalImages": [],
-    "images": [],
-    "thumbnails": [],
+    "additionalImages": [
+      "/images/products/valves/solenoid-valves/foreach-solenoid-valve-01.webp",
+      "/images/products/valves/solenoid-valves/foreach-solenoid-valve-02.webp",
+      "/images/products/valves/solenoid-valves/foreach-solenoid-valve-03.webp"
+    ],
+    "images": [
+      "/images/products/valves/solenoid-valves/foreach-solenoid-valve-main.webp",
+      "/images/products/valves/solenoid-valves/foreach-solenoid-valve-01.webp",
+      "/images/products/valves/solenoid-valves/foreach-solenoid-valve-02.webp",
+      "/images/products/valves/solenoid-valves/foreach-solenoid-valve-03.webp"
+    ],
+    "thumbnails": [
+      "/images/products/valves/solenoid-valves/foreach-solenoid-valve-01.webp",
+      "/images/products/valves/solenoid-valves/foreach-solenoid-valve-02.webp",
+      "/images/products/valves/solenoid-valves/foreach-solenoid-valve-03.webp"
+    ],
     "name": "6010 系列电磁阀",
     "productName": "6010 系列电磁阀",
     "faqs": [
@@ -549,6 +584,18 @@
         "question": "是否需要节能回路？",
         "answer": "如果阀需要长时间保持通电状态，可评估节能回路；如果只是短时间切换，通常可根据控制节拍和功耗要求确认。"
       }
+    ],
+    "mainImage": "/images/products/valves/solenoid-valves/foreach-solenoid-valve-main.webp",
+    "imagePath": "/images/products/valves/solenoid-valves/foreach-solenoid-valve-main.webp",
+    "imageUrl": "/images/products/valves/solenoid-valves/foreach-solenoid-valve-main.webp",
+    "heroImage": "/images/products/valves/solenoid-valves/foreach-solenoid-valve-main.webp",
+    "productImage": "/images/products/valves/solenoid-valves/foreach-solenoid-valve-main.webp",
+    "imageCard": "/images/products/valves/solenoid-valves/foreach-solenoid-valve-main.webp",
+    "galleryImages": [
+      "/images/products/valves/solenoid-valves/foreach-solenoid-valve-main.webp",
+      "/images/products/valves/solenoid-valves/foreach-solenoid-valve-01.webp",
+      "/images/products/valves/solenoid-valves/foreach-solenoid-valve-02.webp",
+      "/images/products/valves/solenoid-valves/foreach-solenoid-valve-03.webp"
     ]
   }
 ]

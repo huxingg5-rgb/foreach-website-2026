@@ -13,26 +13,11 @@
     "category": "tubing",
     "detailMode": "material_selection",
     "image": "/images/products/tubing/pvc-tubing/pvc-tubing-main.webp",
-    "additionalImages": [
-      "/images/products/tubing/pvc-tubing/pvc-tubing-view-02.webp",
-      "/images/products/tubing/pvc-tubing/pvc-tubing-view-03.webp",
-      "/images/products/tubing/pvc-tubing/pvc-tubing-view-04.webp",
-      "/images/products/tubing/pvc-tubing/pvc-tubing-view-05.webp"
-    ],
+    "additionalImages": [],
     "images": [
-      "/images/products/tubing/pvc-tubing/pvc-tubing-main.webp",
-      "/images/products/tubing/pvc-tubing/pvc-tubing-view-02.webp",
-      "/images/products/tubing/pvc-tubing/pvc-tubing-view-03.webp",
-      "/images/products/tubing/pvc-tubing/pvc-tubing-view-04.webp",
-      "/images/products/tubing/pvc-tubing/pvc-tubing-view-05.webp"
+      "/images/products/tubing/pvc-tubing/pvc-tubing-main.webp"
     ],
-    "thumbnails": [
-      "/images/products/tubing/pvc-tubing/pvc-tubing-main.webp",
-      "/images/products/tubing/pvc-tubing/pvc-tubing-view-02.webp",
-      "/images/products/tubing/pvc-tubing/pvc-tubing-view-03.webp",
-      "/images/products/tubing/pvc-tubing/pvc-tubing-view-04.webp",
-      "/images/products/tubing/pvc-tubing/pvc-tubing-view-05.webp"
-    ],
+    "thumbnails": [],
     "description": "PVC 管采用聚氯乙烯（PVC）材质，内径范围覆盖 1.6mm~19.1mm，工作温度范围为 -42℃~75℃。可按项目需求提供 RoHS 等材料合规资料，具体文件随材质与项目要求确认。",
     "shortDescription": "聚氯乙烯（PVC），内径范围 1.6mm~19.1mm，工作温度 -42℃~75℃。",
     "commonApplications": [
@@ -192,7 +177,14 @@
     "material": "PVC",
     "materialFullName": "聚氯乙烯（PVC）",
     "innerDiameterRange": "1.6mm~19.1mm",
-    "workingTemperature": "-42℃~75℃"
+    "workingTemperature": "-42℃~75℃",
+    "imageUrl": "/images/products/tubing/pvc-tubing/pvc-tubing-main.webp",
+    "imageCard": "/images/products/tubing/pvc-tubing/pvc-tubing-main.webp",
+    "heroImage": "/images/products/tubing/pvc-tubing/pvc-tubing-main.webp",
+    "productImage": "/images/products/tubing/pvc-tubing/pvc-tubing-main.webp",
+    "galleryImages": [
+      "/images/products/tubing/pvc-tubing/pvc-tubing-main.webp"
+    ]
   },
   {
     "slug": "tpu-tubing",
@@ -208,26 +200,11 @@
     "category": "tubing",
     "detailMode": "material_selection",
     "image": "/images/products/tubing/tpu-tubing/tpu-tubing-main.webp",
-    "additionalImages": [
-      "/images/products/tubing/tpu-tubing/tpu-tubing-view-02.webp",
-      "/images/products/tubing/tpu-tubing/tpu-tubing-view-03.webp",
-      "/images/products/tubing/tpu-tubing/tpu-tubing-view-04.webp",
-      "/images/products/tubing/tpu-tubing/tpu-tubing-view-05.webp"
-    ],
+    "additionalImages": [],
     "images": [
-      "/images/products/tubing/tpu-tubing/tpu-tubing-main.webp",
-      "/images/products/tubing/tpu-tubing/tpu-tubing-view-02.webp",
-      "/images/products/tubing/tpu-tubing/tpu-tubing-view-03.webp",
-      "/images/products/tubing/tpu-tubing/tpu-tubing-view-04.webp",
-      "/images/products/tubing/tpu-tubing/tpu-tubing-view-05.webp"
+      "/images/products/tubing/tpu-tubing/tpu-tubing-main.webp"
     ],
-    "thumbnails": [
-      "/images/products/tubing/tpu-tubing/tpu-tubing-main.webp",
-      "/images/products/tubing/tpu-tubing/tpu-tubing-view-02.webp",
-      "/images/products/tubing/tpu-tubing/tpu-tubing-view-03.webp",
-      "/images/products/tubing/tpu-tubing/tpu-tubing-view-04.webp",
-      "/images/products/tubing/tpu-tubing/tpu-tubing-view-05.webp"
-    ],
+    "thumbnails": [],
     "description": "TPU 管采用热塑性聚氨酯（TPU）材质，内径范围覆盖 3.7mm~7.0mm，工作温度范围为 -30℃~70℃。可按项目需求提供 RoHS 等材料合规资料，具体文件随材质与项目要求确认。",
     "shortDescription": "热塑性聚氨酯（TPU），内径范围 3.7mm~7.0mm，工作温度 -30℃~70℃。",
     "commonApplications": [
@@ -387,7 +364,14 @@
     "material": "TPU",
     "materialFullName": "热塑性聚氨酯（TPU）",
     "innerDiameterRange": "3.7mm~7.0mm",
-    "workingTemperature": "-30℃~70℃"
+    "workingTemperature": "-30℃~70℃",
+    "imageUrl": "/images/products/tubing/tpu-tubing/tpu-tubing-main.webp",
+    "imageCard": "/images/products/tubing/tpu-tubing/tpu-tubing-main.webp",
+    "heroImage": "/images/products/tubing/tpu-tubing/tpu-tubing-main.webp",
+    "productImage": "/images/products/tubing/tpu-tubing/tpu-tubing-main.webp",
+    "galleryImages": [
+      "/images/products/tubing/tpu-tubing/tpu-tubing-main.webp"
+    ]
   },
   {
     "slug": "fep-tubing",
@@ -403,26 +387,11 @@
     "category": "tubing",
     "detailMode": "material_selection",
     "image": "/images/products/tubing/fep-tubing/fep-tubing-main.webp",
-    "additionalImages": [
-      "/images/products/tubing/fep-tubing/fep-tubing-view-02.webp",
-      "/images/products/tubing/fep-tubing/fep-tubing-view-03.webp",
-      "/images/products/tubing/fep-tubing/fep-tubing-view-04.webp",
-      "/images/products/tubing/fep-tubing/fep-tubing-view-05.webp"
-    ],
+    "additionalImages": [],
     "images": [
-      "/images/products/tubing/fep-tubing/fep-tubing-main.webp",
-      "/images/products/tubing/fep-tubing/fep-tubing-view-02.webp",
-      "/images/products/tubing/fep-tubing/fep-tubing-view-03.webp",
-      "/images/products/tubing/fep-tubing/fep-tubing-view-04.webp",
-      "/images/products/tubing/fep-tubing/fep-tubing-view-05.webp"
+      "/images/products/tubing/fep-tubing/fep-tubing-main.webp"
     ],
-    "thumbnails": [
-      "/images/products/tubing/fep-tubing/fep-tubing-main.webp",
-      "/images/products/tubing/fep-tubing/fep-tubing-view-02.webp",
-      "/images/products/tubing/fep-tubing/fep-tubing-view-03.webp",
-      "/images/products/tubing/fep-tubing/fep-tubing-view-04.webp",
-      "/images/products/tubing/fep-tubing/fep-tubing-view-05.webp"
-    ],
+    "thumbnails": [],
     "description": "FEP 管采用氟化乙烯丙烯共聚物（FEP）材质，内径范围覆盖 0.3mm~2.0mm，工作温度范围为 -230℃~200℃。可按项目需求提供 RoHS 等材料合规资料，具体文件随材质与项目要求确认。",
     "shortDescription": "氟化乙烯丙烯共聚物（FEP），内径范围 0.3mm~2.0mm，工作温度 -230℃~200℃。",
     "commonApplications": [
@@ -582,7 +551,14 @@
     "material": "FEP",
     "materialFullName": "氟化乙烯丙烯共聚物（FEP）",
     "innerDiameterRange": "0.3mm~2.0mm",
-    "workingTemperature": "-230℃~200℃"
+    "workingTemperature": "-230℃~200℃",
+    "imageUrl": "/images/products/tubing/fep-tubing/fep-tubing-main.webp",
+    "imageCard": "/images/products/tubing/fep-tubing/fep-tubing-main.webp",
+    "heroImage": "/images/products/tubing/fep-tubing/fep-tubing-main.webp",
+    "productImage": "/images/products/tubing/fep-tubing/fep-tubing-main.webp",
+    "galleryImages": [
+      "/images/products/tubing/fep-tubing/fep-tubing-main.webp"
+    ]
   },
   {
     "slug": "ptfe-tubing",
@@ -598,26 +574,11 @@
     "category": "tubing",
     "detailMode": "material_selection",
     "image": "/images/products/tubing/ptfe-tubing/ptfe-tubing-main.webp",
-    "additionalImages": [
-      "/images/products/tubing/ptfe-tubing/ptfe-tubing-view-02.webp",
-      "/images/products/tubing/ptfe-tubing/ptfe-tubing-view-03.webp",
-      "/images/products/tubing/ptfe-tubing/ptfe-tubing-view-04.webp",
-      "/images/products/tubing/ptfe-tubing/ptfe-tubing-view-05.webp"
-    ],
+    "additionalImages": [],
     "images": [
-      "/images/products/tubing/ptfe-tubing/ptfe-tubing-main.webp",
-      "/images/products/tubing/ptfe-tubing/ptfe-tubing-view-02.webp",
-      "/images/products/tubing/ptfe-tubing/ptfe-tubing-view-03.webp",
-      "/images/products/tubing/ptfe-tubing/ptfe-tubing-view-04.webp",
-      "/images/products/tubing/ptfe-tubing/ptfe-tubing-view-05.webp"
+      "/images/products/tubing/ptfe-tubing/ptfe-tubing-main.webp"
     ],
-    "thumbnails": [
-      "/images/products/tubing/ptfe-tubing/ptfe-tubing-main.webp",
-      "/images/products/tubing/ptfe-tubing/ptfe-tubing-view-02.webp",
-      "/images/products/tubing/ptfe-tubing/ptfe-tubing-view-03.webp",
-      "/images/products/tubing/ptfe-tubing/ptfe-tubing-view-04.webp",
-      "/images/products/tubing/ptfe-tubing/ptfe-tubing-view-05.webp"
-    ],
+    "thumbnails": [],
     "description": "PTFE 管采用聚四氟乙烯（PTFE）材质，内径范围覆盖 1.5mm~2.0mm，工作温度范围为 -200℃~260℃。可按项目需求提供 RoHS 等材料合规资料，具体文件随材质与项目要求确认。",
     "shortDescription": "聚四氟乙烯（PTFE），内径范围 1.5mm~2.0mm，工作温度 -200℃~260℃。",
     "commonApplications": [
@@ -773,7 +734,14 @@
     "material": "PTFE",
     "materialFullName": "聚四氟乙烯（PTFE）",
     "innerDiameterRange": "1.5mm~2.0mm",
-    "workingTemperature": "-200℃~260℃"
+    "workingTemperature": "-200℃~260℃",
+    "imageUrl": "/images/products/tubing/ptfe-tubing/ptfe-tubing-main.webp",
+    "imageCard": "/images/products/tubing/ptfe-tubing/ptfe-tubing-main.webp",
+    "heroImage": "/images/products/tubing/ptfe-tubing/ptfe-tubing-main.webp",
+    "productImage": "/images/products/tubing/ptfe-tubing/ptfe-tubing-main.webp",
+    "galleryImages": [
+      "/images/products/tubing/ptfe-tubing/ptfe-tubing-main.webp"
+    ]
   },
   {
     "slug": "peek-tubing",
@@ -789,26 +757,11 @@
     "category": "tubing",
     "detailMode": "material_selection",
     "image": "/images/products/tubing/peek-tubing/peek-tubing-main.webp",
-    "additionalImages": [
-      "/images/products/tubing/peek-tubing/peek-tubing-view-02.webp",
-      "/images/products/tubing/peek-tubing/peek-tubing-view-03.webp",
-      "/images/products/tubing/peek-tubing/peek-tubing-view-04.webp",
-      "/images/products/tubing/peek-tubing/peek-tubing-view-05.webp"
-    ],
+    "additionalImages": [],
     "images": [
-      "/images/products/tubing/peek-tubing/peek-tubing-main.webp",
-      "/images/products/tubing/peek-tubing/peek-tubing-view-02.webp",
-      "/images/products/tubing/peek-tubing/peek-tubing-view-03.webp",
-      "/images/products/tubing/peek-tubing/peek-tubing-view-04.webp",
-      "/images/products/tubing/peek-tubing/peek-tubing-view-05.webp"
+      "/images/products/tubing/peek-tubing/peek-tubing-main.webp"
     ],
-    "thumbnails": [
-      "/images/products/tubing/peek-tubing/peek-tubing-main.webp",
-      "/images/products/tubing/peek-tubing/peek-tubing-view-02.webp",
-      "/images/products/tubing/peek-tubing/peek-tubing-view-03.webp",
-      "/images/products/tubing/peek-tubing/peek-tubing-view-04.webp",
-      "/images/products/tubing/peek-tubing/peek-tubing-view-05.webp"
-    ],
+    "thumbnails": [],
     "description": "PEEK 管采用聚醚醚酮（PEEK）材质，内径范围覆盖 0.2mm~0.8mm，工作温度范围为 -180℃~225℃。可按项目需求提供 RoHS 等材料合规资料，具体文件随材质与项目要求确认。",
     "shortDescription": "聚醚醚酮（PEEK），内径范围 0.2mm~0.8mm，工作温度 -180℃~225℃。",
     "commonApplications": [
@@ -960,7 +913,14 @@
     "material": "PEEK",
     "materialFullName": "聚醚醚酮（PEEK）",
     "innerDiameterRange": "0.2mm~0.8mm",
-    "workingTemperature": "-180℃~225℃"
+    "workingTemperature": "-180℃~225℃",
+    "imageUrl": "/images/products/tubing/peek-tubing/peek-tubing-main.webp",
+    "imageCard": "/images/products/tubing/peek-tubing/peek-tubing-main.webp",
+    "heroImage": "/images/products/tubing/peek-tubing/peek-tubing-main.webp",
+    "productImage": "/images/products/tubing/peek-tubing/peek-tubing-main.webp",
+    "galleryImages": [
+      "/images/products/tubing/peek-tubing/peek-tubing-main.webp"
+    ]
   },
   {
     "slug": "pfa-tubing",
@@ -976,26 +936,11 @@
     "category": "tubing",
     "detailMode": "material_selection",
     "image": "/images/products/tubing/pfa-tubing/pfa-tubing-main.webp",
-    "additionalImages": [
-      "/images/products/tubing/pfa-tubing/pfa-tubing-view-02.webp",
-      "/images/products/tubing/pfa-tubing/pfa-tubing-view-03.webp",
-      "/images/products/tubing/pfa-tubing/pfa-tubing-view-04.webp",
-      "/images/products/tubing/pfa-tubing/pfa-tubing-view-05.webp"
-    ],
+    "additionalImages": [],
     "images": [
-      "/images/products/tubing/pfa-tubing/pfa-tubing-main.webp",
-      "/images/products/tubing/pfa-tubing/pfa-tubing-view-02.webp",
-      "/images/products/tubing/pfa-tubing/pfa-tubing-view-03.webp",
-      "/images/products/tubing/pfa-tubing/pfa-tubing-view-04.webp",
-      "/images/products/tubing/pfa-tubing/pfa-tubing-view-05.webp"
+      "/images/products/tubing/pfa-tubing/pfa-tubing-main.webp"
     ],
-    "thumbnails": [
-      "/images/products/tubing/pfa-tubing/pfa-tubing-main.webp",
-      "/images/products/tubing/pfa-tubing/pfa-tubing-view-02.webp",
-      "/images/products/tubing/pfa-tubing/pfa-tubing-view-03.webp",
-      "/images/products/tubing/pfa-tubing/pfa-tubing-view-04.webp",
-      "/images/products/tubing/pfa-tubing/pfa-tubing-view-05.webp"
-    ],
+    "thumbnails": [],
     "description": "PFA 管采用全氟烷氧基树脂（PFA）材质，内径范围覆盖 0.5mm~1.0mm，工作温度范围为 -230℃~200℃。可按项目需求提供 RoHS 等材料合规资料，具体文件随材质与项目要求确认。",
     "shortDescription": "全氟烷氧基树脂（PFA），内径范围 0.5mm~1.0mm，工作温度 -230℃~200℃。",
     "commonApplications": [
@@ -1139,6 +1084,13 @@
     "material": "PFA",
     "materialFullName": "全氟烷氧基树脂（PFA）",
     "innerDiameterRange": "0.5mm~1.0mm",
-    "workingTemperature": "-230℃~200℃"
+    "workingTemperature": "-230℃~200℃",
+    "imageUrl": "/images/products/tubing/pfa-tubing/pfa-tubing-main.webp",
+    "heroImage": "/images/products/tubing/pfa-tubing/pfa-tubing-main.webp",
+    "productImage": "/images/products/tubing/pfa-tubing/pfa-tubing-main.webp",
+    "imageCard": "/images/products/tubing/pfa-tubing/pfa-tubing-main.webp",
+    "galleryImages": [
+      "/images/products/tubing/pfa-tubing/pfa-tubing-main.webp"
+    ]
   }
 ]

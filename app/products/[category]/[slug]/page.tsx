@@ -87,10 +87,23 @@ function getControlModuleStaticParams() {
    3. 这里把智控数据转成 ProductDetailClient 可以直接渲染的字段；
    4. 不新建独立页面，不新建独立样式，继续复用公共详情页。
 ========================================================= */
+
+const CONTROL_MODULE_DETAIL_IMAGE_MAP: Record<string, string> = {
+  "abd-air-bubble-detector": "/images/products/control/foreach-abd-air-bubble-detector.webp",
+  "pdm5-pressure-sensor": "/images/products/control/foreach-pdm5-pressure-sensor.webp",
+};
+
 function getControlModuleProductDetailData(detail: ControlModuleDetail) {
+  const controlModuleMainImage =
+    CONTROL_MODULE_DETAIL_IMAGE_MAP[detail.slug] ||
+    (detail as any).mainImage ||
+    ((detail as any).images && (detail as any).images[0]) ||
+    (detail as any).image ||
+    "/images/logo/foreach-logo-color.svg";
+
   const images = Array.isArray(detail.media?.images) ? detail.media.images : [];
 
-  const mainImage = images[0] || "/images/logo/foreach-logo-color.svg";
+  const mainImage = controlModuleMainImage;
 
   const drawing2dUrl = detail.media?.drawing2d || "";
 
@@ -120,11 +133,12 @@ function getControlModuleProductDetailData(detail: ControlModuleDetail) {
     faqs: detail.faqs || [],
 
     mainImage,
-    imageCard: mainImage,
-    image: mainImage,
-    imageUrl: mainImage,
+    imageCard: controlModuleMainImage,
+    image: controlModuleMainImage,
+    imagePath: controlModuleMainImage,
+    imageUrl: controlModuleMainImage,
     heroImage: mainImage,
-    additionalImages: images.slice(1),
+    additionalImages: [],
 
     detailHref: `/products/control/${detail.slug}`,
     href: `/products/control/${detail.slug}`,

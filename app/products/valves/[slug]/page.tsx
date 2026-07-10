@@ -76,6 +76,33 @@ function getDetailBySlug(slug: string) {
   - 传 additionalImages / images / thumbnails 空数组，避免轮播读取报错
 */
 function toClientData(detail: ValveDetailRecord) {
+  // VALVE_DETAIL_MULTIPLE_IMAGES_PATCH
+  // 阀系列详情页：兼容 JSON 中的 thumbnails / additionalImages / images / galleryImages。
+  // 目的：让电磁阀 02/03/04 可以进入详情页缩略图。
+  const valveMainImage =
+    (detail as any).mainImage ||
+    (detail as any).image ||
+    (detail as any).imagePath ||
+    "";
+
+  const valveExtraImages = Array.from(
+    new Set(
+      [
+        ...(((detail as any).thumbnails || []) as string[]),
+        ...(((detail as any).additionalImages || []) as string[]),
+        ...(((detail as any).galleryImages || []) as string[]),
+        ...(((detail as any).images || []) as string[]),
+      ]
+        .map((item: any) => {
+          if (typeof item === "string") return item;
+          if (item && typeof item.src === "string") return item.src;
+          return "";
+        })
+        .filter(Boolean)
+        .filter((src) => src !== valveMainImage),
+    ),
+  );
+
   const image = detail.image || "/images/products/common/product-placeholder.svg";
 
   return {
@@ -158,15 +185,15 @@ function toClientData(detail: ValveDetailRecord) {
     image,
     imagePath: image,
     imageUrl: image,
-    mainImage: image,
+    mainImage: valveMainImage,
     primaryImage: image,
     productImage: image,
     heroImage: image,
     imageAlt: detail.title,
 
-    additionalImages: [],
+    additionalImages: valveExtraImages,
     images: [],
-    thumbnails: [],
+    thumbnails: valveExtraImages,
 
     selectionHref: "/products",
     detailHref: "/products/valves/" + detail.slug,

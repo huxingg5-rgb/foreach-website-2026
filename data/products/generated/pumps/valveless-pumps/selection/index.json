@@ -1,71 +1,71 @@
 {
-  "page": {
-    "h1": "无阀泵系列",
-    "description": [
-      "恒永达无阀泵系列适用于自动化分析仪器中的加样、滴定、灌装、定量输送和比例输送场景，可减少外置电磁阀使用，降低液路复杂度。",
-      "产品覆盖 12–80 μL/rev、50–250 μL/rev、300–1200 μL/rev 单圈排量，并支持 1:9 至 1:19 双头比例输送配置。"
-    ],
-    "resultText": "已找到 4 个定制系列",
-    "tag": "定制型无阀泵",
-    "sidebarTitle": "产品系列",
-    "sidebarDesc": "根据排量范围和输送方式选择无阀泵定制系列。"
-  },
-  "cards": [
-    {
-      "slug": "rpl-p4",
-      "title": "RPL-P4 无阀泵",
-      "type": "RPL 无阀泵",
-      "displacement": "12–80 μL/rev",
-      "description": [
-        "12–80 μL/rev 小量程输送。",
-        "适用于微量加样、滴定场景。",
-        "支持定制排量与接口配置。"
-      ],
-      "image": "/images/products/pumps/valveless-pumps/foreach-rpl-p4-valveless-pump.webp",
-      "imageAltEn": "FOREACH RPL-P4 valveless ceramic piston pump for small-volume dispensing",
-      "detailHref": "/products/pumps/valveless-pumps/rpl-p4"
-    },
-    {
-      "slug": "rpl-p635",
-      "title": "RPL-P6.35 无阀泵",
-      "type": "RPL 无阀泵",
-      "displacement": "50–250 μL/rev",
-      "description": [
-        "50–250 μL/rev 中小量程输送。",
-        "适用于加样、灌装场景。",
-        "支持清洗口与液路配置。"
-      ],
-      "image": "/images/products/pumps/valveless-pumps/foreach-rpl-p635-valveless-pump.webp",
-      "imageAltEn": "FOREACH RPL-P6.35 valveless ceramic piston pump for reagent dispensing and filling",
-      "detailHref": "/products/pumps/valveless-pumps/rpl-p635"
-    },
-    {
-      "slug": "rpl-p15",
-      "title": "RPL-P15 无阀泵",
-      "type": "RPL 无阀泵",
-      "displacement": "300–1200 μL/rev",
-      "description": [
-        "300–1200 μL/rev 中大量程输送。",
-        "适用于加液、灌装场景。",
-        "支持接口与安装方式定制。"
-      ],
-      "image": "/images/products/pumps/valveless-pumps/foreach-rpl-p15-valveless-pump.webp",
-      "imageAltEn": "FOREACH RPL-P15 valveless ceramic piston pump for larger-volume dispensing and filling",
-      "detailHref": "/products/pumps/valveless-pumps/rpl-p15"
-    },
-    {
-      "slug": "drpl",
-      "title": "DRPL 双头无阀泵",
-      "type": "DRPL 双头无阀泵",
-      "displacement": "1:9 至 1:19",
-      "description": [
-        "双头比例输送结构。",
-        "支持 1:9 至 1:19 配比范围。",
-        "适用于双液路配比加液。"
-      ],
-      "image": "/images/products/pumps/valveless-pumps/foreach-drpl-dual-head-valveless-pump.webp",
-      "imageAltEn": "FOREACH DRPL dual-head valveless pump for proportional fluid dispensing",
-      "detailHref": "/products/pumps/valveless-pumps/drpl"
-    }
-  ]
+    "page":  {
+                 "h1":  "无阀泵系列",
+                 "description":  [
+                                     "恒永达无阀泵系列适用于自动化分析仪器中的加样、滴定、灌装、定量输送和比例输送场景，可减少外置电磁阀使用，降低液路复杂度。",
+                                     "产品覆盖 12–80 μL/rev、50–250 μL/rev、300–1200 μL/rev 单圈排量，并支持 1:9 至 1:19 双头比例输送配置。"
+                                 ],
+                 "resultText":  "已找到 4 个定制系列",
+                 "tag":  "定制型无阀泵",
+                 "sidebarTitle":  "产品系列",
+                 "sidebarDesc":  "根据排量范围和输送方式选择无阀泵定制系列。"
+             },
+    "cards":  [
+                  {
+                      "slug":  "rpl-p4",
+                      "title":  "RPL-P4 无阀泵",
+                      "type":  "RPL 无阀泵",
+                      "displacement":  "12–80 μL/rev",
+                      "description":  [
+                                          "12–80 μL/rev 小量程输送。",
+                                          "适用于微量加样、滴定场景。",
+                                          "支持定制排量与接口配置。"
+                                      ],
+                      "image":  "/images/products/pumps/valveless-pumps/foreach-rpl-p4-valveless-pump.webp",
+                      "imageAltEn":  "FOREACH RPL-P4 valveless ceramic piston pump for small-volume dispensing",
+                      "detailHref":  "/products/pumps/valveless-pumps/rpl-p4"
+                  },
+                  {
+                      "slug":  "rpl-p635",
+                      "title":  "RPL-P6.35 无阀泵",
+                      "type":  "RPL 无阀泵",
+                      "displacement":  "50–250 μL/rev",
+                      "description":  [
+                                          "50–250 μL/rev 中小量程输送。",
+                                          "适用于加样、灌装场景。",
+                                          "支持清洗口与液路配置。"
+                                      ],
+                      "image":  "/images/products/pumps/valveless-pumps/foreach-rpl-p635-valveless-pump.webp",
+                      "imageAltEn":  "FOREACH RPL-P6.35 valveless ceramic piston pump for reagent dispensing and filling",
+                      "detailHref":  "/products/pumps/valveless-pumps/rpl-p635"
+                  },
+                  {
+                      "slug":  "rpl-p15",
+                      "title":  "RPL-P15 无阀泵",
+                      "type":  "RPL 无阀泵",
+                      "displacement":  "300–1200 μL/rev",
+                      "description":  [
+                                          "300–1200 μL/rev 中大量程输送。",
+                                          "适用于加液、灌装场景。",
+                                          "支持接口与安装方式定制。"
+                                      ],
+                      "image":  "/images/products/pumps/valveless-pumps/foreach-rpl-p15-valveless-pump.webp",
+                      "imageAltEn":  "FOREACH RPL-P15 valveless ceramic piston pump for larger-volume dispensing and filling",
+                      "detailHref":  "/products/pumps/valveless-pumps/rpl-p15"
+                  },
+                  {
+                      "slug":  "drpl",
+                      "title":  "DRPL 双头无阀泵",
+                      "type":  "DRPL 双头无阀泵",
+                      "displacement":  "1:9 至 1:19",
+                      "description":  [
+                                          "双头比例输送结构。",
+                                          "支持 1:9 至 1:19 配比范围。",
+                                          "适用于双液路配比加液。"
+                                      ],
+                      "image":  "/images/products/pumps/valveless-pumps/foreach-drpl-dual-head-valveless-pump.webp",
+                      "imageAltEn":  "FOREACH DRPL dual-head valveless pump for proportional fluid dispensing",
+                      "detailHref":  "/products/pumps/valveless-pumps/drpl"
+                  }
+              ]
 }

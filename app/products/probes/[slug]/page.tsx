@@ -63,6 +63,33 @@ function getDetailBySlug(slug: string) {
 }
 
 function toClientData(detail: ProbeDetailRecord) {
+  // PROBE_DETAIL_MULTIPLE_IMAGES_PATCH
+  // 针系列详情页：兼容 JSON 中的 thumbnails / additionalImages / images / galleryImages。
+  // 目的：避免详情页只显示 mainImage 一张图。
+  const probeMainImage =
+    (detail as any).mainImage ||
+    (detail as any).image ||
+    (detail as any).imagePath ||
+    "";
+
+  const probeExtraImages = Array.from(
+    new Set(
+      [
+        ...(((detail as any).thumbnails || []) as string[]),
+        ...(((detail as any).additionalImages || []) as string[]),
+        ...(((detail as any).galleryImages || []) as string[]),
+        ...(((detail as any).images || []) as string[]),
+      ]
+        .map((item: any) => {
+          if (typeof item === "string") return item;
+          if (item && typeof item.src === "string") return item.src;
+          return "";
+        })
+        .filter(Boolean)
+        .filter((src) => src !== probeMainImage),
+    ),
+  );
+
   const image = detail.image || "/images/products/common/product-placeholder.svg";
 
   const faqItems = Array.isArray(detail.faq)
@@ -140,15 +167,15 @@ function toClientData(detail: ProbeDetailRecord) {
     image,
     imagePath: image,
     imageUrl: image,
-    mainImage: image,
+    mainImage: probeMainImage,
     primaryImage: image,
     productImage: image,
     heroImage: image,
     imageAlt: detail.imageAlt || detail.title,
 
-    additionalImages: [],
+    additionalImages: probeExtraImages,
     images: [],
-    thumbnails: [],
+    thumbnails: probeExtraImages,
 
     bottomCtaTitle: detail.bottomCtaTitle,
     bottomCtaDescription: detail.bottomCtaDescription,

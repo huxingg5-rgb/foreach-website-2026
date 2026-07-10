@@ -41,7 +41,13 @@ export const controlModuleSelectionProducts: ProductSelectionProduct[] = [
       filter01: "气泡检测",
       filter02: "非接触式",
     },
-    imageCard: "/images/logo/foreach-logo-color.svg",
+    imageCard: "/images/products/control/foreach-abd-air-bubble-detector.webp",
+    image: "/images/products/control/foreach-abd-air-bubble-detector.webp",
+
+    imagePath: "/images/products/control/foreach-abd-air-bubble-detector.webp",
+
+    imageUrl: "/images/products/control/foreach-abd-air-bubble-detector.webp",
+
     detailSlug: "abd-air-bubble-detector",
     status: "active",
     sortOrder: 6001,
@@ -79,7 +85,13 @@ export const controlModuleSelectionProducts: ProductSelectionProduct[] = [
       filter01: "压力检测",
       filter02: "状态反馈",
     },
-    imageCard: "/images/logo/foreach-logo-color.svg",
+    imageCard: "/images/products/control/foreach-pdm5-pressure-sensor.webp",
+    image: "/images/products/control/foreach-pdm5-pressure-sensor.webp",
+
+    imagePath: "/images/products/control/foreach-pdm5-pressure-sensor.webp",
+
+    imageUrl: "/images/products/control/foreach-pdm5-pressure-sensor.webp",
+
     detailSlug: "pdm5-pressure-sensor",
     status: "active",
     sortOrder: 6002,

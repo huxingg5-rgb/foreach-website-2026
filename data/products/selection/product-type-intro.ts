@@ -62,7 +62,7 @@ export const productTypeIntroMap: Record<string, ProductTypeIntroContent> = {
       "产品卡片仅展示常用基础配置，完整参数与型号组合请进入详情页查看或提交选型需求确认。",
     ],
     image: {
-      src: "/images/products/pumps/product-types/diaphragm-pumps/foreach-diaphragm-pumps-product-type-intro.webp",
+      src: "/images/products/pumps/diaphragm-pumps/series/images/dpl-diaphragm-pump-series-main.webp",
       alt: "FOREACH 隔膜泵系列产品图，用于清洗、废液和试剂输送液路",
     },
   },
@@ -492,5 +492,3 @@ export function getProductTypeIntroByIds(
     },
   };
 }
-
-

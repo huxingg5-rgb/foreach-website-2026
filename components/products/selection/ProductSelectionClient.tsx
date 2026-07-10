@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -52,6 +52,7 @@ import ProductEmptyState from "./ProductEmptyState";
 import ProductFilterPanel from "./ProductFilterPanel";
 import ProductSelectionPagination from "./ProductSelectionPagination";
 import ProductSelectionToolbar from "./ProductSelectionToolbar";
+import { getLocalizedFilterOptionLabel } from "./filter-option-i18n";
 import {
   syringePumpFilterLabels,
   syringePumpSelectionProducts,
@@ -78,6 +79,7 @@ const selectionProducts = [
   ...valvelessPumpSelectionProducts,
   ...valveSelectionProducts,
   ...probeSelectionProducts,
+  ...tubingSelectionProducts,
   ...syringePumpSelectionProducts,
   ...controlModuleSelectionProducts,
 ].filter((product, index, array) => {
@@ -1303,7 +1305,7 @@ const [searchKeyword, setSearchKeyword] = useState("");
       if (!optionMap.has(option.value)) {
         optionMap.set(option.value, {
           value: option.value,
-          label: option.label,
+          label: getLocalizedFilterOptionLabel(option.label, locale),
         });
       }
     });
@@ -1352,7 +1354,10 @@ const [searchKeyword, setSearchKeyword] = useState("");
         key: (label as any).filterKey,
         title: getText(locale, label.label, (label as any).filterKey),
         inputType: label.inputType,
-        options,
+        options: options.map((option) => ({
+          ...option,
+          label: getLocalizedFilterOptionLabel(option.label || option.value, locale),
+        })),
       });
     });
 
@@ -1440,7 +1445,7 @@ const [searchKeyword, setSearchKeyword] = useState("");
         tags.push({
           key: filterKey,
           value,
-          label: value,
+          label: getLocalizedFilterOptionLabel(value, locale),
         });
       });
     });
@@ -1883,7 +1888,39 @@ const [searchKeyword, setSearchKeyword] = useState("");
       competitorModels: [],
       quantity: 1,
       needDrawing: false,
-      imagePath: product.imageCard,
+      imagePath:
+      product.imageCard ||
+      (() => {
+        const text = Object.values(product as Record<string, unknown>).join(" ");
+
+        if (/DPGL800/i.test(text)) {
+          return "/images/products/pumps/diaphragm-pumps/dpgl800/images/dpgl800-gas-liquid-diaphragm-pump-main.webp";
+        }
+
+        if (/DPL30H/i.test(text)) {
+          return /(BB|brushless|无刷)/i.test(text)
+            ? "/images/products/pumps/diaphragm-pumps/dpl30h/images/dpl30h-brushless-liquid-diaphragm-pump-main.webp"
+            : "/images/products/pumps/diaphragm-pumps/dpl30h/images/dpl30h-brushed-liquid-diaphragm-pump-main.webp";
+        }
+
+        if (/DPL60/i.test(text)) {
+          return /(BB|brushless|无刷)/i.test(text)
+            ? "/images/products/pumps/diaphragm-pumps/dpl60/images/dpl60-brushless-liquid-diaphragm-pump-main.webp"
+            : "/images/products/pumps/diaphragm-pumps/dpl60/images/dpl60-brushed-liquid-diaphragm-pump-main.webp";
+        }
+
+        if (/DPL30/i.test(text)) {
+          return /(BB|brushless|无刷)/i.test(text)
+            ? "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushless-liquid-diaphragm-pump-main.webp"
+            : "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushed-liquid-diaphragm-pump-main.webp";
+        }
+
+        if (/(diaphragm|隔膜泵)/i.test(text)) {
+          return "/images/products/pumps/diaphragm-pump.jpg";
+        }
+
+        return undefined;
+      })(),
       detailHref: makeDetailHref(product),
     };
   }
@@ -1940,7 +1977,7 @@ const [searchKeyword, setSearchKeyword] = useState("");
               <section
                 className="product-type-intro-module"
                 data-product-type-id={activeProductTypeId || ""}
-                aria-label={`${activeProductTypeIntro.title}产品种类说明`}
+                aria-label={locale === "zh" ? `${activeProductTypeIntro.title}产品种类说明` : `${activeProductTypeIntro.title} product type overview`}
               >
                 <div className="product-type-intro-image">
                   <img
@@ -1976,7 +2013,13 @@ const [searchKeyword, setSearchKeyword] = useState("");
         <section className="selection-section">
           <div className="selection-layout">
             <ProductFilterPanel
-              activeCategory={activeCategory}
+              activeCategory={{
+                ...activeCategory,
+                description:
+                  typeof activeCategory.description === "string"
+                    ? activeCategory.description
+                    : getText(locale, activeCategory.description as any, ""),
+              }}
               filterGroups={filterGroups}
               mobileOpenFilterGroups={mobileOpenFilterGroups}
               onToggleMobileGroup={toggleMobileFilterGroup}
@@ -2037,29 +2080,3 @@ const [searchKeyword, setSearchKeyword] = useState("");
 </div>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

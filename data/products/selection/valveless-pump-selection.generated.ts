@@ -149,7 +149,7 @@ export const valvelessPumpSelectionProducts: ProductSelectionProduct[] = [
     filters: {
       filter01: "DRPL 双头无阀泵",
     },
-    imageCard: "/images/products/pumps/valveless-pumps/foreach-drpl-dual-head-valveless-pump.webp",
+    imageCard: "/images/products/pumps/valveless-pumps/foreach-drpl-0109-dual-head-valveless-pump.webp",
     detailSlug: "drpl-0109",
     status: "active",
     sortOrder: 1104,
@@ -186,7 +186,7 @@ export const valvelessPumpSelectionProducts: ProductSelectionProduct[] = [
     filters: {
       filter01: "DRPL 双头无阀泵",
     },
-    imageCard: "/images/products/pumps/valveless-pumps/foreach-drpl-dual-head-valveless-pump.webp",
+    imageCard: "/images/products/pumps/valveless-pumps/foreach-drpl-0119-dual-head-valveless-pump.webp",
     detailSlug: "drpl-0119",
     status: "active",
     sortOrder: 1105,

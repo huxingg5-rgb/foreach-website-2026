@@ -32,31 +32,31 @@ const PLUNGER_PUMP_CARD_SPEC_COPY: Record<
 > = {
   port_1_4_28_m6: {
     zh: "接口方式：1/4-28 UNF / M6 接口可选",
-    en: "Fluidic Port: 1/4-28 UNF / M6 optional",
+    en: "1/4-28 UNF port; M6 optional",
   },
   port_6_40_unf: {
     zh: "接口方式：6-40 UNF 液路接口",
-    en: "Fluidic Port: 6-40 UNF",
+    en: "6-40 UNF port",
   },
   repeatability_cv_0_5: {
     zh: "重复性：(100% 满量程) CV < 0.5%",
-    en: "Repeatability: CV < 0.5% at 100% full stroke",
+    en: "CV <0.5% repeatability at full stroke",
   },
   resolution_2000: {
     zh: "满量程分辨率：2000 步",
-    en: "Full Stroke Resolution: 2000 steps",
+    en: "2,000-step full-stroke resolution",
   },
   resolution_2000_2236: {
     zh: "满量程分辨率：2000 / 2236 Step",
-    en: "Full Stroke Resolution: 2000 / 2236 steps",
+    en: "2,000 / 2,236-step full-stroke resolution",
   },
   resolution_2540: {
     zh: "满量程分辨率：2540 Step",
-    en: "Full Stroke Resolution: 2540 steps",
+    en: "2,540-step full-stroke resolution",
   },
   resolution_4000: {
     zh: "满量程分辨率：4000 Step",
-    en: "Full Stroke Resolution: 4000 steps",
+    en: "4,000-step full-stroke resolution",
   },
 };
 

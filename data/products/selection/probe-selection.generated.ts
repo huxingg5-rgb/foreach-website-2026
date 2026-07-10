@@ -58,9 +58,11 @@ const probeProducts = [
       ru: "Для аспирации и дозирования реагентов и образцов\nПользовательские варианты наконечника, бокового отверстия, изгиба и длины\nПоддержка полировки внутренней стенки и определения уровня жидкости",
     },
 
-    image: "/images/products/probes/sampling-probes/sampling-probes-main.webp",
-    imagePath: "/images/products/probes/sampling-probes/sampling-probes-main.webp",
-    imageUrl: "/images/products/probes/sampling-probes/sampling-probes-main.webp",
+    image: "/images/products/probes/sampling-probes/foreach-sampling-probe-main.webp",
+    imagePath: "/images/products/probes/sampling-probes/foreach-sampling-probe-main.webp",
+
+    imageCard: "/images/products/probes/sampling-probes/foreach-sampling-probe-main.webp",
+    imageUrl: "/images/products/probes/sampling-probes/foreach-sampling-probe-main.webp",
     imageAlt: "采样针系列",
 
     subtitle: "用于试剂、样本吸取与分配，支持来图定制",
@@ -138,9 +140,11 @@ const probeProducts = [
       ru: "Для прокалывания герметичных пленок, пробок и расходников\nПользовательские структуры трубки, наконечника и вентиляции\nДля камер реагентов, камер образцов и закрытых расходников",
     },
 
-    image: "/images/products/probes/piercing-probes/piercing-probes-main.webp",
-    imagePath: "/images/products/probes/piercing-probes/piercing-probes-main.webp",
-    imageUrl: "/images/products/probes/piercing-probes/piercing-probes-main.webp",
+    image: "/images/products/probes/piercing-probes/foreach-piercing-probe-main.webp",
+    imagePath: "/images/products/probes/piercing-probes/foreach-piercing-probe-main.webp",
+
+    imageCard: "/images/products/probes/piercing-probes/foreach-piercing-probe-main.webp",
+    imageUrl: "/images/products/probes/piercing-probes/foreach-piercing-probe-main.webp",
     imageAlt: "穿刺针系列",
 
     subtitle: "用于封膜、瓶塞和耗材穿刺取液，支持来图定制",
@@ -218,9 +222,11 @@ const probeProducts = [
       ru: "Для промывки наружной стенки, удаления отходов и работы с остаточной жидкостью\nВарианты с одной, двумя, несколькими головками и боковым отверстием\nДля промывочных станций и автоматизированных жидкостных модулей",
     },
 
-    image: "/images/products/probes/wash-probes/wash-probes-main.webp",
-    imagePath: "/images/products/probes/wash-probes/wash-probes-main.webp",
-    imageUrl: "/images/products/probes/wash-probes/wash-probes-main.webp",
+    image: "/images/products/probes/wash-probes/foreach-wash-probe-main.webp",
+    imagePath: "/images/products/probes/wash-probes/foreach-wash-probe-main.webp",
+
+    imageCard: "/images/products/probes/wash-probes/foreach-wash-probe-main.webp",
+    imageUrl: "/images/products/probes/wash-probes/foreach-wash-probe-main.webp",
     imageAlt: "清洗针系列",
 
     subtitle: "用于清洗排废与残液处理，支持清洗站适配",
@@ -298,9 +304,11 @@ const probeProducts = [
       ru: "Для перемешивания образцов, реагентов и реакционных жидкостей\nПлоские, спиральные и 90-градусные лопасти\nНастройка по геометрии чашки, скорости и эффекту перемешивания",
     },
 
-    image: "/images/products/probes/stirring-paddles/stirring-paddles-main.webp",
-    imagePath: "/images/products/probes/stirring-paddles/stirring-paddles-main.webp",
-    imageUrl: "/images/products/probes/stirring-paddles/stirring-paddles-main.webp",
+    image: "/images/products/probes/stirring-paddles/foreach-stirring-paddle-main.webp",
+    imagePath: "/images/products/probes/stirring-paddles/foreach-stirring-paddle-main.webp",
+
+    imageCard: "/images/products/probes/stirring-paddles/foreach-stirring-paddle-main.webp",
+    imageUrl: "/images/products/probes/stirring-paddles/foreach-stirring-paddle-main.webp",
     imageAlt: "搅拌桨系列",
 
     subtitle: "用于杯内混匀与反应液搅拌，支持来图定制",

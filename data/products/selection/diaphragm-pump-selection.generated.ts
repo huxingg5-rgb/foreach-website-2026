@@ -19,7 +19,7 @@ export const diaphragmPumpSelectionProducts = [
       "zh": "有刷电机\n300 mL/min\n寿命 3000 h",
       "en": "Brushed motor\n300 mL/min\nService life 3000 h"
     },
-    "imageCard": "",
+    "imageCard": "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushed-liquid-diaphragm-pump-main.webp",
     "imageAlt": {
       "zh": "DPL30 brushed liquid diaphragm pump, 300 mL/min, 100 kPa",
       "en": "DPL30 brushed liquid diaphragm pump, 300 mL/min, 100 kPa"
@@ -85,7 +85,7 @@ export const diaphragmPumpSelectionProducts = [
       "zh": "无刷电机\n300 mL/min\n寿命 10000 h",
       "en": "Brushless motor\n300 mL/min\nService life 10000 h"
     },
-    "imageCard": "",
+    "imageCard": "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushless-liquid-diaphragm-pump-main.webp",
     "imageAlt": {
       "zh": "DPL30 brushless liquid diaphragm pump, 300 mL/min, 100 kPa",
       "en": "DPL30 brushless liquid diaphragm pump, 300 mL/min, 100 kPa"
@@ -151,7 +151,7 @@ export const diaphragmPumpSelectionProducts = [
       "zh": "有刷电机\n600 mL/min\n寿命 3000 h",
       "en": "Brushed motor\n600 mL/min\nService life 3000 h"
     },
-    "imageCard": "",
+    "imageCard": "/images/products/pumps/diaphragm-pumps/dpl60/images/dpl60-brushed-liquid-diaphragm-pump-main.webp",
     "imageAlt": {
       "zh": "DPL60 brushed liquid diaphragm pump, 600 mL/min, 100 kPa",
       "en": "DPL60 brushed liquid diaphragm pump, 600 mL/min, 100 kPa"
@@ -217,7 +217,7 @@ export const diaphragmPumpSelectionProducts = [
       "zh": "无刷电机\n600 mL/min\n寿命 10000 h",
       "en": "Brushless motor\n600 mL/min\nService life 10000 h"
     },
-    "imageCard": "",
+    "imageCard": "/images/products/pumps/diaphragm-pumps/dpl60/images/dpl60-brushless-liquid-diaphragm-pump-main.webp",
     "imageAlt": {
       "zh": "DPL60 brushless liquid diaphragm pump, 600 mL/min, 100 kPa",
       "en": "DPL60 brushless liquid diaphragm pump, 600 mL/min, 100 kPa"
@@ -283,7 +283,7 @@ export const diaphragmPumpSelectionProducts = [
       "zh": "有刷电机\n300 mL/min\n寿命 3000 h",
       "en": "Brushed motor\n300 mL/min\nService life 3000 h"
     },
-    "imageCard": "",
+    "imageCard": "/images/products/pumps/diaphragm-pumps/dpl30h/images/dpl30h-brushed-liquid-diaphragm-pump-main.webp",
     "imageAlt": {
       "zh": "DPL30H brushed liquid diaphragm pump, 300 mL/min, 600 kPa",
       "en": "DPL30H brushed liquid diaphragm pump, 300 mL/min, 600 kPa"
@@ -349,7 +349,7 @@ export const diaphragmPumpSelectionProducts = [
       "zh": "无刷电机\n300 mL/min\n寿命 10000 h",
       "en": "Brushless motor\n300 mL/min\nService life 10000 h"
     },
-    "imageCard": "",
+    "imageCard": "/images/products/pumps/diaphragm-pumps/dpl30h/images/dpl30h-brushless-liquid-diaphragm-pump-main.webp",
     "imageAlt": {
       "zh": "DPL30H brushless liquid diaphragm pump, 300 mL/min, 600 kPa",
       "en": "DPL30H brushless liquid diaphragm pump, 300 mL/min, 600 kPa"
@@ -415,7 +415,7 @@ export const diaphragmPumpSelectionProducts = [
       "zh": "无刷电机\n6 L/min\n寿命 10000 h",
       "en": "Brushless motor\n6 L/min\nService life 10000 h"
     },
-    "imageCard": "",
+    "imageCard": "/images/products/pumps/diaphragm-pumps/dpgl800/images/dpgl800-gas-liquid-diaphragm-pump-main.webp",
     "imageAlt": {
       "zh": "DPGL800 brushless gas liquid diaphragm pump, 6 L/min, +30 kPa and below -90 kPa",
       "en": "DPGL800 brushless gas liquid diaphragm pump, 6 L/min, +30 kPa and below -90 kPa"
@@ -481,7 +481,7 @@ export const diaphragmPumpSelectionProducts = [
       "zh": "无刷电机\n6 L/min\n寿命 10000 h",
       "en": "Brushless motor\n6 L/min\nService life 10000 h"
     },
-    "imageCard": "",
+    "imageCard": "/images/products/pumps/diaphragm-pumps/dpgl800/images/dpgl800-gas-liquid-diaphragm-pump-main.webp",
     "imageAlt": {
       "zh": "DPGL800 brushless gas liquid diaphragm pump, 6 L/min, +30 kPa and below -90 kPa",
       "en": "DPGL800 brushless gas liquid diaphragm pump, 6 L/min, +30 kPa and below -90 kPa"

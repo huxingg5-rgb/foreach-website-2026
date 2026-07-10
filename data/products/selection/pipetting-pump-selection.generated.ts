@@ -24,7 +24,7 @@ export const pipettingPumpSelectionProducts = [
       ko: "분해능 0.02 μL/microstep\nLLD 및 막힘 감지\n자동 팁 배출",
       ru: "Разрешение 0.02 μL/microstep\nLLD и обнаружение засора\nАвтоматический сброс наконечника",
     },
-    imageCard: "",
+    imageCard: "/images/products/pumps/pipetting-pumps/smtp2-1000ul.webp",
     imageAlt: {
       zh: "SMTP2 可编程气体置换式移液泵",
       en: "SMTP2 programmable gas displacement pipetting pump",
@@ -104,7 +104,7 @@ export const pipettingPumpSelectionProducts = [
       ko: "분해능 0.05 μL/step\n맞춤형 팁 구성\n자동 팁 배출",
       ru: "Разрешение 0.05 μL/step\nПользовательская конфигурация наконечника\nАвтоматический сброс наконечника",
     },
-    imageCard: "",
+    imageCard: "/images/products/pumps/pipetting-pumps/smtp4-100ul.webp",
     imageAlt: {
       zh: "SMTP4 气体置换式移液泵 100 μL",
       en: "SMTP4 gas displacement pipetting pump 100 μL",
@@ -183,7 +183,7 @@ export const pipettingPumpSelectionProducts = [
       ko: "분해능 0.25 μL/step\n맞춤형 팁 구성\n자동 팁 배출",
       ru: "Разрешение 0.25 μL/step\nПользовательская конфигурация наконечника\nАвтоматический сброс наконечника",
     },
-    imageCard: "",
+    imageCard: "/images/products/pumps/pipetting-pumps/smtp4-500ul.webp",
     imageAlt: {
       zh: "SMTP4 气体置换式移液泵 500 μL",
       en: "SMTP4 gas displacement pipetting pump 500 μL",

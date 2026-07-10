@@ -21,6 +21,8 @@ const valveProducts = [
   {
     id: "mrv3-ceramic-rotary-valve",
     slug: "rotary-valves",
+    imageCard: "/images/products/valves/rotary-valves/foreach-rotary-valve-main.webp",
+
     detailSlug: "rotary-valves",
     routeSlug: "rotary-valves",
     seriesSlug: "rotary-valves",
@@ -59,9 +61,9 @@ const valveProducts = [
       ru: "Доступны 10 / 16 / 24 канала\nНоминальное давление 0.7MPa, внутренний объем до 2.9μL\nДля переключения реагентов и промывочных трактов",
     },
 
-    image: "/images/products/valves/rotary-valves/mrv3-ceramic-rotary-valve-main.webp",
-    imagePath: "/images/products/valves/rotary-valves/mrv3-ceramic-rotary-valve-main.webp",
-    imageUrl: "/images/products/valves/rotary-valves/mrv3-ceramic-rotary-valve-main.webp",
+    image: "/images/products/valves/rotary-valves/foreach-rotary-valve-main.webp",
+    imagePath: "/images/products/valves/rotary-valves/foreach-rotary-valve-main.webp",
+    imageUrl: "/images/products/valves/rotary-valves/foreach-rotary-valve-main.webp",
     imageAlt: "MRV3 陶瓷多通道旋转阀",
 
     subtitle: "10 / 16 / 24 通道可选，适用于多试剂和清洗路径切换",
@@ -100,6 +102,8 @@ const valveProducts = [
   {
     id: "hp-3-position-7-port-high-pressure-valve",
     slug: "high-pressure-valves",
+    imageCard: "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp",
+
     detailSlug: "high-pressure-valves",
     routeSlug: "high-pressure-valves",
     seriesSlug: "high-pressure-valves",
@@ -138,9 +142,9 @@ const valveProducts = [
       ru: "Высоконапорное управление потоком: три положения, семь портов\n25MPa, порт 10-32UNF\nДля автосамплинга HPLC и выпуска воздуха",
     },
 
-    image: "/images/products/valves/high-pressure-valves/hp-3-position-7-port-high-pressure-valve-main.webp",
-    imagePath: "/images/products/valves/high-pressure-valves/hp-3-position-7-port-high-pressure-valve-main.webp",
-    imageUrl: "/images/products/valves/high-pressure-valves/hp-3-position-7-port-high-pressure-valve-main.webp",
+    image: "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp",
+    imagePath: "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp",
+    imageUrl: "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp",
     imageAlt: "HP 三位七通高压阀",
 
     subtitle: "三位七通高压流路控制，适用于 HPLC 自动进样与排气场景",
@@ -179,6 +183,8 @@ const valveProducts = [
   {
     id: "6010-solenoid-valve",
     slug: "solenoid-valves",
+    imageCard: "/images/products/valves/solenoid-valves/foreach-solenoid-valve-main.webp",
+
     detailSlug: "solenoid-valves",
     routeSlug: "solenoid-valves",
     seriesSlug: "solenoid-valves",
@@ -217,9 +223,9 @@ const valveProducts = [
       ru: "Коромысловый мембранный клапан 2-порт / 3-порт\nот -75kPa до 0.25MPa, CV 0.03\nПанельная, резьбовая и штуцерная конфигурации",
     },
 
-    image: "/images/products/valves/solenoid-valves/6010-solenoid-valve-main.webp",
-    imagePath: "/images/products/valves/solenoid-valves/6010-solenoid-valve-main.webp",
-    imageUrl: "/images/products/valves/solenoid-valves/6010-solenoid-valve-main.webp",
+    image: "/images/products/valves/solenoid-valves/foreach-solenoid-valve-main.webp",
+    imagePath: "/images/products/valves/solenoid-valves/foreach-solenoid-valve-main.webp",
+    imageUrl: "/images/products/valves/solenoid-valves/foreach-solenoid-valve-main.webp",
     imageAlt: "6010 系列电磁阀",
 
     subtitle: "2通 / 3通摆臂隔膜阀，适用于试剂通断与阀组集成",
