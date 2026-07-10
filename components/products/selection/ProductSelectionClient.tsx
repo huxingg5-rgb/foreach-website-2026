@@ -46,6 +46,11 @@ import {
 import { plungerPumpDetails as plungerPumpDetails } from "@/data/products/detail/plunger-pump-detail.generated";
 
 import { tubingSelectionProducts } from "@/data/products/selection/tubing-selection.generated";
+import {
+  hardTubeFittingFilterLabels,
+  hardTubeFittingSelectionProducts,
+  hardTubeFittingTaxonomyItems,
+} from "@/data/products/selection/hard-tube-fitting-selection.generated";
 import ProductCardGrid from "./ProductCardGrid";
 import ProductCategoryTabs from "./ProductCategoryTabs";
 import ProductEmptyState from "./ProductEmptyState";
@@ -80,6 +85,7 @@ const selectionProducts = [
   ...valveSelectionProducts,
   ...probeSelectionProducts,
   ...tubingSelectionProducts,
+  ...hardTubeFittingSelectionProducts,
   ...syringePumpSelectionProducts,
   ...controlModuleSelectionProducts,
 ].filter((product, index, array) => {
@@ -88,6 +94,7 @@ const selectionProducts = [
 
 const selectionTaxonomyItems = [
   ...baseSelectionTaxonomyItems,
+  ...hardTubeFittingTaxonomyItems,
   ...diaphragmPumpTaxonomyItems,
   ...controlModuleTaxonomyItems,
 ].filter((item, index, array) => {
@@ -96,6 +103,7 @@ const selectionTaxonomyItems = [
 
 const selectionFilterLabels = [
   ...baseSelectionFilterLabels,
+  ...hardTubeFittingFilterLabels,
   ...diaphragmPumpFilterLabels,
   ...pipettingPumpFilterLabels,
   ...valvelessPumpFilterLabels,
@@ -379,7 +387,13 @@ function getFirstProductTypeId(categoryId: string) {
 const products = getProductsByCategory(categoryId);
   const first = products[0];
 
-  return first?.productTypeId || "";
+  if (first?.productTypeId) {
+    return first.productTypeId;
+  }
+
+  return (
+    getProductTypeFilterOptionsByCategory(categoryId)[0]?.value || ""
+  );
 }
 
 function getVisibleFilterLabels(productTypeId: string): ProductSelectionFilterLabel[] {
@@ -402,12 +416,57 @@ function getVisibleFilterLabels(productTypeId: string): ProductSelectionFilterLa
     });
 }
 
+function splitFilterValues(value: unknown): string[] {
+  return String(value || "")
+    .split("|")
+    .map((item) => item.trim())
+    .filter(Boolean);
+}
 function getFilterOptions(
   products: ProductSelectionProduct[],
   filterKey: SelectionFilterKey,
   selectedFilters: SelectedFilterMap,
   productTypeId: string
 ) {
+  /*
+   * 硬管接头的接管外径可能包含多个兼容尺寸。
+   *
+   * 例如：
+   * 1.6 mm|1.8 mm|2.0 mm
+   *
+   * 左侧筛选必须拆成三个独立选项。
+   */
+  if (
+    productTypeId === "hard-tube-fittings" &&
+    filterKey === "filter03"
+  ) {
+    const expandedProducts = products.flatMap((product) => {
+      const values = splitFilterValues(
+        (product.filters || {})[filterKey]
+      );
+
+      if (values.length <= 1) {
+        return [product];
+      }
+
+      return values.map((value) => ({
+        ...product,
+        productId: `${product.productId}__${value}`,
+        filters: {
+          ...(product.filters || {}),
+          [filterKey]: value,
+        },
+      }));
+    });
+
+    return getProductFilterOptions({
+      productTypeId,
+      products: expandedProducts,
+      filterKey,
+      selectedFilters,
+    });
+  }
+
   return getProductFilterOptions({
     productTypeId,
     products,
@@ -1194,6 +1253,53 @@ const isDiaphragmPump =
   return `/products/${product.categoryId}/${product.detailSlug}`;
 }
 
+/*
+ * 硬管接头接管外径筛选排序
+ *
+ * 仅作用于：
+ * productTypeId = hard-tube-fittings
+ * filter03 = 接管外径
+ */
+function sortHardTubeFilterOptionsForDisplay(
+  productTypeId: string,
+  filterKey: SelectionFilterKey,
+  options: Array<{
+    value: string;
+    label: string;
+  }>
+) {
+  if (
+    productTypeId !== "hard-tube-fittings" ||
+    filterKey !== "filter03"
+  ) {
+    return options;
+  }
+
+  const tubeOdOrder = new Map<string, number>([
+    ["1.6 mm", 10],
+    ["1.8 mm", 20],
+    ["2.0 mm", 30],
+    ["2.5 mm", 40],
+    ["3.0 mm", 50],
+    ["3.2 mm", 60],
+  ]);
+
+  return [...options].sort((current, next) => {
+    const currentNumber = Number.parseFloat(current.value);
+    const nextNumber = Number.parseFloat(next.value);
+
+    const currentOrder =
+      tubeOdOrder.get(current.value) ??
+      (Number.isFinite(currentNumber) ? currentNumber : 999);
+
+    const nextOrder =
+      tubeOdOrder.get(next.value) ??
+      (Number.isFinite(nextNumber) ? nextNumber : 999);
+
+    return currentOrder - nextOrder;
+  });
+}
+
 export default function ProductSelectionClient({
   locale = "zh",
   initialCategoryId,
@@ -1333,7 +1439,10 @@ const [searchKeyword, setSearchKeyword] = useState("");
     if (productTypeOptions.length > 0) {
       groups.push({
         key: "productType",
-        title: pageText.productTypeLabel,
+        title:
+          activeCategoryId === "fittings" && locale === "zh"
+            ? "产品种类"
+            : pageText.productTypeLabel,
         inputType: "single",
         options: productTypeOptions,
       });
@@ -1354,10 +1463,17 @@ const [searchKeyword, setSearchKeyword] = useState("");
         key: (label as any).filterKey,
         title: getText(locale, label.label, (label as any).filterKey),
         inputType: label.inputType,
-        options: options.map((option) => ({
-          ...option,
-          label: getLocalizedFilterOptionLabel(option.label || option.value, locale),
-        })),
+        options: sortHardTubeFilterOptionsForDisplay(
+          activeProductTypeId,
+          (label as any).filterKey,
+          options.map((option) => ({
+            ...option,
+            label: getLocalizedFilterOptionLabel(
+              option.label || option.value,
+              locale
+            ),
+          }))
+        ),
       });
     });
 
@@ -1380,8 +1496,11 @@ const [searchKeyword, setSearchKeyword] = useState("");
         }
 
         const value = (product.filters || {})[filterKey];
+        const productValues = splitFilterValues(value);
 
-        return Boolean(value && selectedValues.has(String(value)));
+        return productValues.some((item) =>
+          selectedValues.has(item)
+        );
       });
 
       if (!filterMatched) {
@@ -1432,7 +1551,11 @@ const [searchKeyword, setSearchKeyword] = useState("");
       tags.push({
         key: "productType",
         value: activeProductTypeId,
-        label: getTaxonomyLabel(locale, activeProductTypeId),
+        label:
+          productTypeOptions.find(
+            (option) => option.value === activeProductTypeId
+          )?.label ||
+          getTaxonomyLabel(locale, activeProductTypeId),
       });
     }
 
@@ -1451,7 +1574,7 @@ const [searchKeyword, setSearchKeyword] = useState("");
     });
 
     return tags;
-  }, [activeProductTypeId, locale, selectedFilters]);
+  }, [activeProductTypeId, locale, productTypeOptions, selectedFilters]);
 
   const totalProductPages = Math.max(
     1,

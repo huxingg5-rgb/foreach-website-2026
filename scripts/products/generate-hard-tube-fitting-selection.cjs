@@ -1,0 +1,717 @@
+const fs = require("fs");
+const path = require("path");
+const XLSX = require("xlsx");
+
+const root = process.cwd();
+const sourcePath = process.argv[2];
+
+if (!sourcePath || !fs.existsSync(sourcePath)) {
+  throw new Error(`在售清单不存在：${sourcePath || "(empty)"}`);
+}
+
+const workbook = XLSX.readFile(sourcePath, {
+  cellDates: false,
+  raw: false,
+});
+
+const sheetName = "01_硬管接头";
+const worksheet = workbook.Sheets[sheetName];
+
+if (!worksheet) {
+  throw new Error(`未找到工作表：${sheetName}`);
+}
+
+const matrix = XLSX.utils.sheet_to_json(worksheet, {
+  header: 1,
+  defval: "",
+  raw: false,
+});
+
+const sourceRows = matrix.slice(2);
+
+const prefixConfig = {
+  HF: {
+    seriesZh: "标滚平底接头",
+    seriesEn: "Standard Flanged Fitting",
+    seriesId: "standard-flat-bottom-fitting",
+    order: 10,
+  },
+  HFL: {
+    seriesZh: "标滚平底接头",
+    seriesEn: "Standard Flanged Fitting",
+    seriesId: "standard-flat-bottom-fitting",
+    order: 11,
+  },
+
+  HF6: {
+    seriesZh: "紧凑平底接头",
+    seriesEn: "Compact Flanged Fitting",
+    seriesId: "compact-flat-bottom-fitting",
+    order: 20,
+  },
+  HFL6: {
+    seriesZh: "紧凑平底接头",
+    seriesEn: "Compact Flanged Fitting",
+    seriesId: "compact-flat-bottom-fitting",
+    order: 21,
+  },
+
+  HN: {
+    seriesZh: "标滚卡箍接头",
+    seriesEn: "Standard Ferrule Fitting",
+    seriesId: "standard-ferrule-fitting",
+    order: 30,
+  },
+  HNF: {
+    seriesZh: "标滚卡箍接头",
+    seriesEn: "Standard Ferrule Fitting",
+    seriesId: "standard-ferrule-fitting",
+    order: 31,
+  },
+  HNE: {
+    seriesZh: "标滚卡箍接头",
+    seriesEn: "Standard Ferrule Fitting",
+    seriesId: "standard-ferrule-fitting",
+    order: 32,
+  },
+
+  HN6: {
+    seriesZh: "紧凑卡箍接头",
+    seriesEn: "Compact Ferrule Fitting",
+    seriesId: "compact-ferrule-fitting",
+    order: 40,
+  },
+  HNF6: {
+    seriesZh: "紧凑卡箍接头",
+    seriesEn: "Compact Ferrule Fitting",
+    seriesId: "compact-ferrule-fitting",
+    order: 41,
+  },
+  HNE6: {
+    seriesZh: "紧凑卡箍接头",
+    seriesEn: "Compact Ferrule Fitting",
+    seriesId: "compact-ferrule-fitting",
+    order: 42,
+  },
+
+  HSF: {
+    seriesZh: "卡环接头",
+    seriesEn: "Retaining-ring Fitting",
+    seriesId: "retaining-ring-fitting",
+    order: 50,
+  },
+  HSF6: {
+    seriesZh: "卡环接头",
+    seriesEn: "Retaining-ring Fitting",
+    seriesId: "retaining-ring-fitting",
+    order: 51,
+  },
+
+  PNC: {
+    seriesZh: "高压接头",
+    seriesEn: "High-pressure Fitting",
+    seriesId: "high-pressure-fitting",
+    order: 60,
+  },
+  PNC6: {
+    seriesZh: "高压接头",
+    seriesEn: "High-pressure Fitting",
+    seriesId: "high-pressure-fitting",
+    order: 61,
+  },
+  PNF: {
+    seriesZh: "高压接头",
+    seriesEn: "High-pressure Fitting",
+    seriesId: "high-pressure-fitting",
+    order: 62,
+  },
+};
+
+const threadMap = {
+  M6: {
+    zh: "M6×1",
+    en: "M6×1",
+    order: 10,
+  },
+  U28: {
+    zh: "1/4-28 UNF",
+    en: "1/4-28 UNF",
+    order: 20,
+  },
+  U40: {
+    zh: "6-40 UNF",
+    en: "6-40 UNF",
+    order: 30,
+  },
+  U32: {
+    zh: "10-32 UNF",
+    en: "10-32 UNF",
+    order: 40,
+  },
+};
+
+const materialMap = {
+  PV: {
+    zh: "PVDF",
+    en: "PVDF",
+    order: 10,
+  },
+  PS: {
+    zh: "PPS",
+    en: "PPS",
+    order: 20,
+  },
+  PK: {
+    zh: "PEEK",
+    en: "PEEK",
+    order: 30,
+  },
+  PEEK: {
+    zh: "PEEK",
+    en: "PEEK",
+    order: 30,
+  },
+  AC: {
+    zh: "POM",
+    en: "POM",
+    order: 40,
+  },
+  ET: {
+    zh: "ETFE",
+    en: "ETFE",
+    order: 50,
+  },
+  PP: {
+    zh: "PP",
+    en: "PP",
+    order: 60,
+  },
+  SS: {
+    zh: "SUS",
+    en: "Stainless Steel",
+    order: 70,
+  },
+};
+
+const colorMap = {
+  N: {
+    zh: "本色",
+    en: "Natural",
+    order: 10,
+  },
+  B: {
+    zh: "黑色",
+    en: "Black",
+    order: 20,
+  },
+  U: {
+    zh: "蓝色",
+    en: "Blue",
+    order: 30,
+  },
+};
+
+const tubeOrder = {
+  "1.6 mm": 10,
+  "1.8 mm": 15,
+  "1.6–2.0 mm": 20,
+  "2.0 mm": 21,
+  "2.5 mm": 30,
+  "3.0 mm": 40,
+  "3.2 mm": 50,
+};
+
+function normalizeText(value) {
+  return String(value ?? "").trim();
+}
+
+function normalizeProductCode(value) {
+  return normalizeText(value).replace(/\.0$/, "");
+}
+
+function extractModelCode(value) {
+  const text = normalizeText(value).toUpperCase();
+
+  const matches =
+    text.match(/[A-Z][A-Z0-9]*(?:-[A-Z0-9]+){4}/g) || [];
+
+  return (
+    matches.find((modelCode) => {
+      const prefix = modelCode.split("-")[0];
+      return Boolean(prefixConfig[prefix]);
+    }) || ""
+  );
+}
+
+function getTubeLabel(prefix, code) {
+  if (code === "16") return "1.6 mm";
+  if (code === "18") return "1.8 mm";
+
+  if (
+    code === "20" &&
+    (prefix === "HF" || prefix === "HF6")
+  ) {
+    return "1.6–2.0 mm";
+  }
+
+  if (code === "20") return "2.0 mm";
+  if (code === "25") return "2.5 mm";
+  if (code === "30") return "3.0 mm";
+  if (code === "32") return "3.2 mm";
+
+  return code;
+}
+
+function getTubeFilterValue(prefix, code) {
+  /*
+   * HF / HF6 的 20 为范围型管径：
+   * 选择 1.6 / 1.8 / 2.0 mm 都应该匹配该产品。
+   *
+   * 使用 | 分隔多个兼容值，前端会拆分处理。
+   */
+  if (
+    code === "20" &&
+    (prefix === "HF" || prefix === "HF6")
+  ) {
+    return "1.6 mm|1.8 mm|2.0 mm";
+  }
+
+  return getTubeLabel(prefix, code);
+}
+function localeText(zh, en) {
+  return {
+    zh,
+    en,
+    es: en,
+    fr: en,
+    ko: en,
+    ru: en,
+  };
+}
+
+const records = [];
+const seenProductCodes = new Set();
+const skippedRows = [];
+
+sourceRows.forEach((row, rowIndex) => {
+  const excelRowNumber = rowIndex + 3;
+
+  const sourceProductType = normalizeText(row[0]);
+  const sourceSeries = normalizeText(row[1]);
+  const partNumber = normalizeText(row[2]);
+  const sourceModelText = normalizeText(row[3]);
+  const productCode = normalizeProductCode(row[4]);
+
+  const modelCode = extractModelCode(sourceModelText);
+
+  if (!modelCode) {
+    return;
+  }
+
+  const parts = modelCode.split("-");
+
+  if (parts.length !== 5) {
+    skippedRows.push({
+      excelRowNumber,
+      reason: "型号不是5段编码",
+      sourceModelText,
+    });
+    return;
+  }
+
+  const [
+    prefix,
+    threadCode,
+    tubeCode,
+    materialCode,
+    colorCode,
+  ] = parts;
+
+  const prefixInfo = prefixConfig[prefix];
+  const threadInfo = threadMap[threadCode];
+  const materialInfo = materialMap[materialCode];
+  const colorInfo = colorMap[colorCode];
+
+  if (!prefixInfo) {
+    return;
+  }
+
+  if (!threadInfo || !materialInfo || !colorInfo) {
+    skippedRows.push({
+      excelRowNumber,
+      reason: "型号存在未识别字段",
+      modelCode,
+      threadCode,
+      materialCode,
+      colorCode,
+    });
+    return;
+  }
+
+  const uniqueKey = productCode || modelCode;
+
+  if (seenProductCodes.has(uniqueKey)) {
+    return;
+  }
+
+  seenProductCodes.add(uniqueKey);
+
+  const tubeLabel = getTubeLabel(prefix, tubeCode);
+
+  records.push({
+    sourceRow: excelRowNumber,
+    sourceProductType,
+    sourceSeries,
+    partNumber,
+    productCode,
+    modelCode,
+    prefix,
+    prefixInfo,
+    threadInfo,
+    tubeLabel,
+    tubeFilterValue: getTubeFilterValue(prefix, tubeCode),
+    materialInfo,
+    colorInfo,
+  });
+});
+
+records.sort((current, next) => {
+  return (
+    current.prefixInfo.order - next.prefixInfo.order ||
+    current.threadInfo.order - next.threadInfo.order ||
+    (tubeOrder[current.tubeLabel] || 999) -
+      (tubeOrder[next.tubeLabel] || 999) ||
+    current.materialInfo.order - next.materialInfo.order ||
+    current.colorInfo.order - next.colorInfo.order ||
+    current.modelCode.localeCompare(next.modelCode)
+  );
+});
+
+if (records.length < 140) {
+  throw new Error(
+    `硬管接头解析数量异常：${records.length}。预期至少140条。`
+  );
+}
+
+function buildHardTubeCardSubtitle(record) {
+  const {
+    prefix,
+    threadInfo,
+    tubeLabel,
+  } = record;
+
+  /*
+   * 卡片只显示三个工程判断字段。
+   * 材质和颜色继续保留在左侧筛选与完整型号中，
+   * 不再占用卡片摘要位置。
+   */
+  const sealTypeMap = {
+    HF: "法兰垫片底面密封",
+    HFL: "法兰垫片底面密封",
+    HF6: "法兰垫片底面密封",
+    HFL6: "法兰垫片底面密封",
+
+    HN: "卡箍密封",
+    HNF: "卡箍密封",
+    HNE: "卡箍密封",
+    HN6: "卡箍密封",
+    HNF6: "卡箍密封",
+    HNE6: "卡箍密封",
+
+    HSF: "卡环密封",
+    HSF6: "卡环密封",
+  };
+
+  const sealTypeEnMap = {
+    HF: "Flange gasket bottom seal",
+    HFL: "Flange gasket bottom seal",
+    HF6: "Flange gasket bottom seal",
+    HFL6: "Flange gasket bottom seal",
+
+    HN: "Ferrule seal",
+    HNF: "Ferrule seal",
+    HNE: "Ferrule seal",
+    HN6: "Ferrule seal",
+    HNF6: "Ferrule seal",
+    HNE6: "Ferrule seal",
+
+    HSF: "Retaining-ring seal",
+    HSF6: "Retaining-ring seal",
+  };
+
+  const isHighPressure =
+    prefix === "PNC" ||
+    prefix === "PNC6" ||
+    prefix === "PNF";
+
+  if (isHighPressure) {
+    return {
+      zh: [
+        "耐压：25 MPa",
+        `螺纹：${threadInfo.zh}`,
+        `接管外径：${tubeLabel}`,
+      ].join("\n"),
+
+      en: [
+        "Pressure rating: 25 MPa",
+        `Thread: ${threadInfo.en}`,
+        `Tube OD: ${tubeLabel}`,
+      ].join("\n"),
+    };
+  }
+
+  const sealType =
+    sealTypeMap[prefix] || "硬管密封结构";
+
+  const sealTypeEn =
+    sealTypeEnMap[prefix] || "Hard-tube sealing structure";
+
+  return {
+    zh: [
+      `密封方式：${sealType}`,
+      `螺纹规格：${threadInfo.zh}`,
+      `接管外径：${tubeLabel}`,
+    ].join("\n"),
+
+    en: [
+      `Sealing method: ${sealTypeEn}`,
+      `Thread: ${threadInfo.en}`,
+      `Tube OD: ${tubeLabel}`,
+    ].join("\n"),
+  };
+}
+const products = records.map((record, index) => {
+  const {
+    productCode,
+    modelCode,
+    prefix,
+    prefixInfo,
+    threadInfo,
+    tubeLabel,
+    tubeFilterValue,
+    materialInfo,
+    colorInfo,
+    sourceProductType,
+    partNumber,
+  } = record;
+
+  const stableId =
+    productCode ||
+    `hard-tube-${modelCode.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+
+  return {
+    productId: stableId,
+    categoryId: "fittings",
+    productTypeId: "hard-tube-fittings",
+    seriesId: prefixInfo.seriesId,
+
+    cardTitle: {
+      zh: modelCode,
+      en: modelCode,
+    },
+
+    cardSubtitle: buildHardTubeCardSubtitle(record),
+
+    filters: {
+      filter01: prefixInfo.seriesZh,
+      filter02: threadInfo.zh,
+      filter03: tubeFilterValue,
+      filter04: materialInfo.zh,
+      filter05: colorInfo.zh,
+    },
+
+    imageCard: "/images/logo/foreach-logo-color.svg",
+
+    /*
+     * 详情页尚未建立前，先回到硬管接头选型页，
+     * 避免生成不存在的具体SKU详情路径。
+     */
+    detailSlug: "hard-tube-fittings",
+
+    status: "active",
+    sortOrder: index + 1,
+
+    searchKeywords: {
+      zh: [
+        "硬管接头",
+        prefixInfo.seriesZh,
+        prefix,
+        modelCode,
+        productCode,
+        partNumber,
+        sourceProductType,
+        threadInfo.zh,
+        tubeLabel,
+        materialInfo.zh,
+        colorInfo.zh,
+      ]
+        .filter(Boolean)
+        .join(" "),
+
+      en: [
+        "hard tube fitting",
+        prefixInfo.seriesEn,
+        prefix,
+        modelCode,
+        productCode,
+        partNumber,
+        threadInfo.en,
+        tubeLabel,
+        materialInfo.en,
+        colorInfo.en,
+      ]
+        .filter(Boolean)
+        .join(" "),
+    },
+  };
+});
+
+const filterLabels = [
+  {
+    categoryId: "fittings",
+    productTypeId: "hard-tube-fittings",
+    filterKey: "filter01",
+    label: localeText("产品系列", "Product Series"),
+    inputType: "single",
+    sortOrder: 10,
+    visible: true,
+  },
+  {
+    categoryId: "fittings",
+    productTypeId: "hard-tube-fittings",
+    filterKey: "filter02",
+    label: localeText("螺纹规格", "Thread"),
+    inputType: "multiple",
+    sortOrder: 20,
+    visible: true,
+  },
+  {
+    categoryId: "fittings",
+    productTypeId: "hard-tube-fittings",
+    filterKey: "filter03",
+    label: localeText("接管外径", "Tube OD"),
+    inputType: "multiple",
+    sortOrder: 30,
+    visible: true,
+  },
+  {
+    categoryId: "fittings",
+    productTypeId: "hard-tube-fittings",
+    filterKey: "filter04",
+    label: localeText("主体材质", "Body Material"),
+    inputType: "multiple",
+    sortOrder: 40,
+    visible: true,
+  },
+  {
+    categoryId: "fittings",
+    productTypeId: "hard-tube-fittings",
+    filterKey: "filter05",
+    label: localeText("颜色", "Color"),
+    inputType: "multiple",
+    sortOrder: 50,
+    visible: true,
+  },
+];
+
+const seriesTaxonomy = Array.from(
+  new Map(
+    Object.values(prefixConfig).map((item) => [
+      item.seriesId,
+      item,
+    ])
+  ).values()
+)
+  .sort((current, next) => current.order - next.order)
+  .map((item, index) => ({
+    type: "series",
+    id: item.seriesId,
+    label: localeText(item.seriesZh, item.seriesEn),
+    sortOrder: 420 + index,
+  }));
+
+const taxonomyItems = [
+  {
+    type: "productType",
+    id: "hard-tube-fittings",
+    label: localeText("硬管接头", "Hard Tube Fittings"),
+    sortOrder: 410,
+  },
+  ...seriesTaxonomy,
+];
+
+const outputPath = path.join(
+  root,
+  "data",
+  "products",
+  "selection",
+  "hard-tube-fitting-selection.generated.ts"
+);
+
+fs.mkdirSync(path.dirname(outputPath), {
+  recursive: true,
+});
+
+const output = `/* =========================================================
+   hard-tube-fitting-selection.generated.ts
+   由 FRGD-140D-2606-0002_001_cn_连接件标品在售清单.xlsx 自动生成
+
+   数据范围：
+   - 工作表：01_硬管接头
+   - 包含：平底、卡箍、卡环和高压接头
+   - 不包含：堵头、卡箍、卡环套件
+   ========================================================= */
+
+import type {
+  ProductSelectionFilterLabel,
+  ProductSelectionProduct,
+  ProductSelectionTaxonomyItem,
+} from "./product-selection.types";
+
+export const hardTubeFittingSelectionProducts =
+${JSON.stringify(products, null, 2)} as ProductSelectionProduct[];
+
+export const hardTubeFittingFilterLabels =
+${JSON.stringify(filterLabels, null, 2)} as ProductSelectionFilterLabel[];
+
+export const hardTubeFittingTaxonomyItems =
+${JSON.stringify(taxonomyItems, null, 2)} as ProductSelectionTaxonomyItem[];
+`;
+
+fs.writeFileSync(outputPath, output, "utf8");
+
+const summary = {
+  sourcePath,
+  sheetName,
+  sourceRows: sourceRows.length,
+  generatedProducts: products.length,
+  skippedRows,
+  seriesCounts: products.reduce((result, product) => {
+    const key = product.filters.filter01 || "unknown";
+    result[key] = (result[key] || 0) + 1;
+    return result;
+  }, {}),
+};
+
+const summaryPath = path.join(
+  root,
+  "data",
+  "products",
+  "selection",
+  "hard-tube-fitting-selection.summary.json"
+);
+
+fs.writeFileSync(
+  summaryPath,
+  JSON.stringify(summary, null, 2),
+  "utf8"
+);
+
+console.log("硬管接头选型数据生成完成");
+console.log(`输出产品数：${products.length}`);
+console.log(summary.seriesCounts);
+
+if (skippedRows.length > 0) {
+  console.log(`未识别行数：${skippedRows.length}`);
+  console.log(skippedRows);
+}

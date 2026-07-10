@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useState } from "react";
 
@@ -14,42 +14,41 @@ type ProductFilterPanelProps = {
   emptyText: string;
   resetButtonText?: string;
   submitButtonText?: string;
-  onToggleMobileGroup?: (key: ProductSelectionFilterGroup["key"]) => void;
-  isOptionActive: (group: ProductSelectionFilterGroup, value: string) => boolean;
-  onFilterChange: (group: ProductSelectionFilterGroup, value: string) => void;
+  onToggleMobileGroup?: (
+    key: ProductSelectionFilterGroup["key"]
+  ) => void;
+  isOptionActive: (
+    group: ProductSelectionFilterGroup,
+    value: string
+  ) => boolean;
+  onFilterChange: (
+    group: ProductSelectionFilterGroup,
+    value: string
+  ) => void;
   onResetFilters?: () => void;
 };
 
 export default function ProductFilterPanel({
   activeCategory,
   filterGroups,
-  mobileOpenFilterGroups = {},
   emptyText,
-  onToggleMobileGroup,
   isOptionActive,
   onFilterChange,
 }: ProductFilterPanelProps) {
   /*
-   * 说明：
-   * 1. 桌面端只让“产品类型”默认折叠
-   * 2. 手机端所有筛选组都使用 is-mobile-open 控制展开
-   * 3. 产品类型使用本组件内部状态控制，因为它在桌面端也需要折叠
+   * 只有接头系列中的第一个“产品种类”允许折叠。
+   * 其余所有筛选组始终展开。
    */
-  const [isProductTypeOpen, setIsProductTypeOpen] = useState(false);
-  const [isDesktopFilterOpen, setIsDesktopFilterOpen] = useState(false);
+  const [isFittingProductTypeOpen, setIsFittingProductTypeOpen] =
+    useState(false);
 
+  /*
+   * 切换顶部产品大类后，
+   * 接头系列的产品种类恢复为收起状态。
+   */
   useEffect(() => {
-    const updateDesktopState = () => {
-      setIsDesktopFilterOpen(window.innerWidth >= 901);
-    };
-
-    updateDesktopState();
-    window.addEventListener("resize", updateDesktopState);
-
-    return () => {
-      window.removeEventListener("resize", updateDesktopState);
-    };
-  }, []);
+    setIsFittingProductTypeOpen(false);
+  }, [activeCategory.id]);
 
   return (
     <aside className="filter-panel">
@@ -60,19 +59,24 @@ export default function ProductFilterPanel({
 
       {filterGroups.length > 0 ? (
         filterGroups.map((group) => {
-          const isProductTypeGroup = group.key === "productType";
+          const isProductTypeGroup =
+            group.key === "productType";
 
           /*
-           * 单选 / 多选说明：
-           * productType：产品类型，单选，圆形
-           * filter01：产品系列，单选，圆形
-           * 其他筛选项：量程、材质等，多选，方形
+           * 只有这一组折叠：
+           * 接头系列 + 第一个产品种类。
            */
-          const isSingleSelectGroup =
-            group.key === "productType" || group.key === "filter01";
+          const isCollapsibleProductType =
+            activeCategory.id === "fittings" &&
+            isProductTypeGroup;
 
-          const activeOption = group.options.find((option) =>
-            isOptionActive(group, option.value)
+          const isSingleSelectGroup =
+            group.key === "productType" ||
+            group.key === "filter01";
+
+          const activeOption = group.options.find(
+            (option) =>
+              isOptionActive(group, option.value)
           );
 
           const optionTypeClass = isSingleSelectGroup
@@ -80,9 +84,7 @@ export default function ProductFilterPanel({
             : "is-multi";
 
           /*
-           * 筛选项列数说明：
-           * 产品系列名称较长，保持一列
-           * 产品类型、电机类型、流量、耐压使用两列
+           * 保留原有列数逻辑。
            */
           const shouldUseTwoColumns =
             group.key === "productType" ||
@@ -96,33 +98,40 @@ export default function ProductFilterPanel({
           }`;
 
           /*
-           * 手机端展开状态：
-           * 1. 产品类型使用 isProductTypeOpen
-           * 2. 其他筛选组使用父组件传入的 mobileOpenFilterGroups
+           * 只有接头的产品种类使用状态控制。
+           * 其他所有组始终展开。
            */
-          const isMobileOpen = isProductTypeGroup
-            ? isProductTypeOpen
-            : Boolean(mobileOpenFilterGroups[group.key]);
-
-          const isGroupOpen = isDesktopFilterOpen || isMobileOpen;
+          const isGroupOpen = isCollapsibleProductType
+            ? isFittingProductTypeOpen
+            : true;
 
           const groupClassName = `filter-group${
-            isProductTypeGroup ? " product-type-filter-group" : ""
+            isProductTypeGroup
+              ? " product-type-filter-group"
+              : ""
+          }${
+            isCollapsibleProductType
+              ? " fittings-product-type-filter-group"
+              : ""
           }${isGroupOpen ? " is-mobile-open" : ""}`;
 
           const handleToggleGroup = () => {
-            if (isProductTypeGroup) {
-              setIsProductTypeOpen((current) => !current);
+            if (!isCollapsibleProductType) {
               return;
             }
 
-            onToggleMobileGroup?.(group.key);
+            setIsFittingProductTypeOpen(
+              (current) => !current
+            );
           };
 
           const renderOptions = () => (
             <div className={filterOptionsClass}>
               {group.options.map((option) => {
-                const active = isOptionActive(group, option.value);
+                const active = isOptionActive(
+                  group,
+                  option.value
+                );
 
                 return (
                   <button
@@ -131,7 +140,21 @@ export default function ProductFilterPanel({
                     }`}
                     type="button"
                     key={option.value}
-                    onClick={() => onFilterChange(group, option.value)}
+                    onClick={() => {
+                      onFilterChange(
+                        group,
+                        option.value
+                      );
+
+                      /*
+                       * 选择接头产品种类后自动收起。
+                       */
+                      if (isCollapsibleProductType) {
+                        setIsFittingProductTypeOpen(
+                          false
+                        );
+                      }
+                    }}
                   >
                     <span className="filter-check" />
                     <span>{option.label}</span>
@@ -142,46 +165,61 @@ export default function ProductFilterPanel({
           );
 
           return (
-            <section className={groupClassName} key={group.key}>
+            <section
+              className={groupClassName}
+              key={group.key}
+            >
               <button
                 className={`filter-group-trigger${
-                  isProductTypeGroup ? " product-type-filter-toggle" : ""
+                  isCollapsibleProductType
+                    ? " product-type-filter-toggle"
+                    : ""
                 }`}
                 type="button"
                 onClick={handleToggleGroup}
                 aria-expanded={isGroupOpen}
               >
                 <span>{group.title}</span>
-                <span className="filter-group-symbol" aria-hidden="true">
-                  {isGroupOpen ? "-" : "+"}
-                </span>
+
+                {isCollapsibleProductType ? (
+                  <span
+                    className="filter-group-symbol"
+                    aria-hidden="true"
+                  >
+                    {isGroupOpen ? "−" : "+"}
+                  </span>
+                ) : null}
               </button>
 
-              {!isDesktopFilterOpen && isProductTypeGroup && !isProductTypeOpen && activeOption ? (
+              {isCollapsibleProductType &&
+              !isFittingProductTypeOpen &&
+              activeOption ? (
                 <div className="product-type-current-option">
                   <button
                     className="filter-option is-single active"
                     type="button"
-                    onClick={() => setIsProductTypeOpen(true)}
+                    onClick={() =>
+                      setIsFittingProductTypeOpen(
+                        true
+                      )
+                    }
                   >
                     <span className="filter-check" />
-                    <span>当前：{activeOption.label}</span>
+                    <span>
+                      当前：{activeOption.label}
+                    </span>
                   </button>
                 </div>
               ) : null}
 
-              {isProductTypeGroup ? (
-                isGroupOpen ? (
-                  renderOptions()
-                ) : null
-              ) : (
-                renderOptions()
-              )}
+              {isGroupOpen ? renderOptions() : null}
             </section>
           );
         })
       ) : (
-        <div className="filter-empty">{emptyText}</div>
+        <div className="filter-empty">
+          {emptyText}
+        </div>
       )}
     </aside>
   );

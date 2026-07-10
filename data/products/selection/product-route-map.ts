@@ -1,4 +1,4 @@
-﻿/* =========================================================
+/* =========================================================
    product-route-map.ts
    恒永达官网｜产品中心动态路由映射表
 
@@ -86,7 +86,14 @@ export const productRouteMap: {
       description:
         "恒永达针系列产品覆盖采样针、穿刺针、清洗针和搅拌桨等自动化仪器定制需求。",
     },
-  },
+
+    fittings: {
+      categoryId: "fittings",
+      label: "接头系列",
+      title: "接头系列 | FOREACH",
+      description:
+        "恒永达接头产品覆盖硬管接头、软管接头、鲁尔接头、快插接头、内螺纹互转接头、堵头、过滤器和单向阀。",
+    },  },
 
   productTypes: {
     "plunger-pumps": {
@@ -137,9 +144,91 @@ export const productRouteMap: {
       title: "无阀泵 | FOREACH",
       description:
         "无阀泵适用于简化液路结构、降低阀件依赖和提高系统集成度的精密液体处理场景。",
+  
     },
 
+    "hard-tube-fittings": {
+      category: "fittings",
+      categoryId: "fittings",
+      productTypeId: "hard-tube-fittings",
+      label: "硬管接头",
+      title: "硬管接头 | FOREACH",
+      description:
+        "硬管接头适用于PTFE、FEP、PFA和PEEK等硬管连接，可根据密封结构、接口螺纹、接管外径、材质和颜色进行选型。",
+    },
+
+    "soft-tube-fittings": {
+      category: "fittings",
+      categoryId: "fittings",
+      productTypeId: "soft-tube-fittings",
+      label: "软管接头",
+      title: "软管接头 | FOREACH",
+      description:
+        "软管接头覆盖倒刺转倒刺、螺纹转倒刺、穿板倒刺及不同通路结构。",
+    },
+
+    "luer-fittings": {
+      category: "fittings",
+      categoryId: "fittings",
+      productTypeId: "luer-fittings",
+      label: "鲁尔接头",
+      title: "鲁尔接头 | FOREACH",
+      description:
+        "鲁尔接头覆盖公鲁尔、母鲁尔、固定锁圈、旋转锁圈及穿板结构。",
+    },
+
+    "quick-connect-fittings": {
+      category: "fittings",
+      categoryId: "fittings",
+      productTypeId: "quick-connect-fittings",
+      label: "快插接头",
+      title: "快插接头 | FOREACH",
+      description:
+        "快插接头覆盖Q20、Q40和Q60系列，可根据管径、端口形式、阀门配置和安装结构进行选型。",
+    },
+
+    "female-thread-adapters": {
+      category: "fittings",
+      categoryId: "fittings",
+      productTypeId: "female-thread-adapters",
+      label: "内螺纹互转接头",
+      title: "内螺纹互转接头 | FOREACH",
+      description:
+        "内螺纹互转接头覆盖二通、三通、标准型、方型、穿板型、T型和Y型结构。",
+    },
+
+    "plugs": {
+      category: "fittings",
+      categoryId: "fittings",
+      productTypeId: "plugs",
+      label: "堵头",
+      title: "堵头 | FOREACH",
+      description:
+        "堵头覆盖螺纹堵头、倒刺堵头、公鲁尔堵头、标滚堵头、紧凑堵头和顶丝堵头。",
+    },
+
+    "filters": {
+      category: "fittings",
+      categoryId: "fittings",
+      productTypeId: "filters",
+      label: "过滤器",
+      title: "过滤器 | FOREACH",
+      description:
+        "过滤器用于自动化仪器液路中的颗粒拦截、流体净化和水循环过滤。",
+    },
+
+    "check-valves": {
+      category: "fittings",
+      categoryId: "fittings",
+      productTypeId: "check-valves",
+      label: "单向阀",
+      title: "单向阀 | FOREACH",
+      description:
+        "单向阀用于控制流体单向流动并降低液路回流风险。",
+
 },
+
+  },
 
   series: {
     "ea-standard-piston-pumps": {
