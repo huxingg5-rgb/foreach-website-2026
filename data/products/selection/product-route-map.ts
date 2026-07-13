@@ -92,7 +92,7 @@ export const productRouteMap: {
       label: "接头系列",
       title: "接头系列 | FOREACH",
       description:
-        "恒永达接头产品覆盖硬管接头、软管接头、鲁尔接头、快插接头、内螺纹互转接头、堵头、过滤器和单向阀。",
+        "恒永达接头产品覆盖硬管接头、软管接头、鲁尔接头、快插接头、内螺纹互转接头，以及过滤器与单向阀。",
     },  },
 
   productTypes: {
@@ -147,7 +147,7 @@ export const productRouteMap: {
   
     },
 
-    "hard-tube-fittings": {
+        "hard-tube-fittings": {
       category: "fittings",
       categoryId: "fittings",
       productTypeId: "hard-tube-fittings",
@@ -157,14 +157,24 @@ export const productRouteMap: {
         "硬管接头适用于PTFE、FEP、PFA和PEEK等硬管连接，可根据密封结构、接口螺纹、接管外径、材质和颜色进行选型。",
     },
 
-    "soft-tube-fittings": {
+    "barbed-fittings": {
       category: "fittings",
       categoryId: "fittings",
-      productTypeId: "soft-tube-fittings",
-      label: "软管接头",
-      title: "软管接头 | FOREACH",
+      productTypeId: "barbed-fittings",
+      label: "倒刺接头",
+      title: "倒刺接头 | FOREACH",
       description:
-        "软管接头覆盖倒刺转倒刺、螺纹转倒刺、穿板倒刺及不同通路结构。",
+        "倒刺接头用于软管之间的直通、转向、分流和汇流连接，可根据产品结构、接管内径、材质和颜色进行选型。",
+    },
+
+    "thread-to-barbed-fittings": {
+      category: "fittings",
+      categoryId: "fittings",
+      productTypeId: "thread-to-barbed-fittings",
+      label: "螺纹转倒刺接头",
+      title: "螺纹转倒刺接头 | FOREACH",
+      description:
+        "螺纹转倒刺接头用于设备螺纹接口与软管液路之间的转接，可根据连接结构、密封方式、螺纹规格、接管内径、材质和颜色进行选型。",
     },
 
     "luer-fittings": {
@@ -197,36 +207,26 @@ export const productRouteMap: {
         "内螺纹互转接头覆盖二通、三通、标准型、方型、穿板型、T型和Y型结构。",
     },
 
-    "plugs": {
+    "bulkhead-barbed-fittings": {
       category: "fittings",
       categoryId: "fittings",
-      productTypeId: "plugs",
-      label: "堵头",
-      title: "堵头 | FOREACH",
+      productTypeId: "bulkhead-barbed-fittings",
+      label: "穿板倒刺接头",
+      title: "穿板倒刺接头 | FOREACH",
       description:
-        "堵头覆盖螺纹堵头、倒刺堵头、公鲁尔堵头、标滚堵头、紧凑堵头和顶丝堵头。",
+        "穿板倒刺接头系列包含PMB穿板倒刺接头和PMBSN六角螺母，可根据产品结构、螺纹规格、接管内径、材质和颜色进行选型。",
     },
 
     "filters": {
       category: "fittings",
       categoryId: "fittings",
       productTypeId: "filters",
-      label: "过滤器",
-      title: "过滤器 | FOREACH",
+      label: "过滤器与单向阀",
+      title: "过滤器与单向阀 | FOREACH",
       description:
-        "过滤器用于自动化仪器液路中的颗粒拦截、流体净化和水循环过滤。",
+        "过滤器用于液路中的颗粒拦截与流体净化，单向阀用于控制流体单向流动并降低回流风险。",
     },
 
-    "check-valves": {
-      category: "fittings",
-      categoryId: "fittings",
-      productTypeId: "check-valves",
-      label: "单向阀",
-      title: "单向阀 | FOREACH",
-      description:
-        "单向阀用于控制流体单向流动并降低液路回流风险。",
-
-},
 
   },
 

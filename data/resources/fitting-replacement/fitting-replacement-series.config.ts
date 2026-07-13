@@ -1,4 +1,4 @@
-/* =========================================================
+﻿/* =========================================================
    fitting-replacement-series.config.ts
    恒永达官网｜接头替代查询系列配置
 
@@ -62,9 +62,9 @@ export const Q20_FITTING_REPLACEMENT_SERIES_CONFIG: FittingReplacementSeriesConf
   {
     seriesKey: "q20",
     seriesCode: "Q20",
-    productName: "Q20 快插接头",
+    productName: "接头产品",
     sourceType: "fitting-replacement",
-    sourceLabel: "接头替代查询",
+    sourceLabel: "接头兼容型号查询",
     homeHref: "/resources/selection-support/fitting-replacement",
     detailBaseHref: "/resources/selection-support/fitting-replacement/q20",
     drawingBaseHref:

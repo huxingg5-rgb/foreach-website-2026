@@ -1,0 +1,68 @@
+{
+  "generatedAt": "2026-07-12T12:18:23.156Z",
+  "sourceWorkbook": "data-source\\product-center\\fittings\\FRGD-140D-2606-0002_001_cn_连接件标品在售清单.xlsx",
+  "sourceSheet": "05_螺纹转倒刺接头",
+  "productTypeId": "thread-to-barbed-fittings",
+  "total": 101,
+  "seriesCounts": {
+    "SA": 45,
+    "SAL": 10,
+    "SB": 34,
+    "SBS": 4,
+    "SBR": 3,
+    "SC": 5
+  },
+  "structureCounts": {
+    "直通型": 83,
+    "L型": 10,
+    "可旋转直通型": 3,
+    "内螺纹直通型": 5
+  },
+  "sealingCounts": {
+    "螺纹密封": 55,
+    "底面密封": 41,
+    "内螺纹连接": 5
+  },
+  "threadCounts": {
+    "10-32 UNF": 12,
+    "1/4-28 UNF": 33,
+    "1/8-27 NPT": 12,
+    "1/4-18 NPT": 5,
+    "3.4 锥螺纹": 4,
+    "3/8-18 NPT": 1,
+    "G1/8": 8,
+    "M6×1": 18,
+    "M5×0.8": 8
+  },
+  "tubeIdCounts": {
+    "2.4 mm": 21,
+    "3.2 mm": 27,
+    "1.6 mm": 20,
+    "4.0 mm": 16,
+    "4.8 mm": 4,
+    "6.4 mm": 10,
+    "9.5 mm": 2,
+    "12.7 mm": 1
+  },
+  "materialCounts": {
+    "PP": 53,
+    "PA": 28,
+    "PVDF": 13,
+    "PEEK": 1,
+    "POM": 6
+  },
+  "colorCounts": {
+    "本色": 63,
+    "白色": 32,
+    "黑色": 6
+  },
+  "duplicateModels": [
+    {
+      "model": "SA-G1/8-64C-PP-N（带O圈）",
+      "productCodes": [
+        "809034",
+        "809924"
+      ]
+    }
+  ]
+}

@@ -36,7 +36,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-20-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 1,
@@ -65,7 +65,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-20-ps-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 2,
@@ -94,7 +94,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PEEK",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-20-pk-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 3,
@@ -123,7 +123,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-25-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 4,
@@ -152,7 +152,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-25-ps-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 5,
@@ -181,7 +181,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PEEK",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-25-pk-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 6,
@@ -210,7 +210,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-32-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 7,
@@ -239,7 +239,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-32-ps-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 8,
@@ -268,7 +268,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PEEK",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-32-pk-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 9,
@@ -297,7 +297,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-20-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 10,
@@ -326,7 +326,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-20-ps-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 11,
@@ -355,7 +355,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PEEK",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-20-pk-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 12,
@@ -384,7 +384,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-25-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 13,
@@ -413,7 +413,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-25-ps-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 14,
@@ -442,7 +442,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PEEK",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-25-pk-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 15,
@@ -471,7 +471,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-32-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 16,
@@ -500,7 +500,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-32-ps-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 17,
@@ -529,7 +529,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PEEK",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-32-pk-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 18,
@@ -558,7 +558,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-16-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 19,
@@ -587,7 +587,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-16-pv-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 20,
@@ -616,7 +616,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-20-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 21,
@@ -645,7 +645,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-20-pv-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 22,
@@ -674,7 +674,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-25-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 23,
@@ -703,7 +703,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-25-pv-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 24,
@@ -732,7 +732,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-30-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 25,
@@ -761,7 +761,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-30-pv-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 26,
@@ -790,7 +790,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-32-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 27,
@@ -819,7 +819,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-32-pv-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 28,
@@ -848,7 +848,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-16-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 29,
@@ -877,7 +877,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-16-pv-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 30,
@@ -906,7 +906,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-20-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 31,
@@ -935,7 +935,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-20-pv-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 32,
@@ -964,7 +964,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-25-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 33,
@@ -993,7 +993,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-25-pv-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 34,
@@ -1022,7 +1022,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-30-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 35,
@@ -1051,7 +1051,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-30-pv-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 36,
@@ -1080,7 +1080,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-32-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 37,
@@ -1109,7 +1109,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-32-pv-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 38,
@@ -1138,7 +1138,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-m6-20-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 39,
@@ -1167,7 +1167,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-m6-20-ps-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 40,
@@ -1196,7 +1196,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PEEK",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-m6-20-pk-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 41,
@@ -1225,7 +1225,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-m6-25-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 42,
@@ -1254,7 +1254,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-m6-25-ps-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 43,
@@ -1283,7 +1283,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PEEK",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-m6-25-pk-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 44,
@@ -1312,7 +1312,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-m6-32-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 45,
@@ -1341,7 +1341,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-m6-32-ps-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 46,
@@ -1370,7 +1370,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PEEK",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-m6-32-pk-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 47,
@@ -1399,7 +1399,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-u28-20-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 48,
@@ -1428,7 +1428,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-u28-20-ps-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 49,
@@ -1457,7 +1457,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PEEK",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-u28-20-pk-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 50,
@@ -1486,7 +1486,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-u28-25-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 51,
@@ -1515,7 +1515,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-u28-25-ps-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 52,
@@ -1544,7 +1544,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PEEK",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-u28-25-pk-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 53,
@@ -1573,7 +1573,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-u28-32-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 54,
@@ -1602,7 +1602,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-u28-32-ps-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 55,
@@ -1631,7 +1631,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PEEK",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-u28-32-pk-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 56,
@@ -1660,7 +1660,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-16-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 57,
@@ -1689,7 +1689,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-20-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 58,
@@ -1718,7 +1718,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-25-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 59,
@@ -1747,7 +1747,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "蓝色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-25-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 60,
@@ -1776,7 +1776,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-30-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 61,
@@ -1805,7 +1805,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-32-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 62,
@@ -1834,7 +1834,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-16-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 63,
@@ -1863,7 +1863,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "蓝色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-16-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 64,
@@ -1892,7 +1892,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-20-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 65,
@@ -1921,7 +1921,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "蓝色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-20-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 66,
@@ -1950,7 +1950,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-25-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 67,
@@ -1979,7 +1979,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-30-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 68,
@@ -2008,7 +2008,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-32-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 69,
@@ -2066,7 +2066,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-m6-16-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 71,
@@ -2095,7 +2095,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-m6-16-ps-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 72,
@@ -2124,7 +2124,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PEEK",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-m6-16-pk-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 73,
@@ -2153,7 +2153,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "POM",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-m6-16-ac-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 74,
@@ -2182,7 +2182,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-m6-32-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 75,
@@ -2211,7 +2211,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-m6-32-ps-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 76,
@@ -2240,7 +2240,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PEEK",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-m6-32-pk-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 77,
@@ -2269,7 +2269,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "POM",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-m6-32-ac-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 78,
@@ -2298,7 +2298,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-u28-16-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 79,
@@ -2327,7 +2327,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-u28-16-ps-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 80,
@@ -2356,7 +2356,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PEEK",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-u28-16-pk-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 81,
@@ -2385,7 +2385,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "POM",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-u28-16-ac-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 82,
@@ -2414,7 +2414,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-u28-32-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 83,
@@ -2443,7 +2443,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-u28-32-ps-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 84,
@@ -2472,7 +2472,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PEEK",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-u28-32-pk-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 85,
@@ -2501,7 +2501,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "POM",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-u28-32-ac-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 86,
@@ -2530,7 +2530,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hnf-m6-16-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 87,
@@ -2559,7 +2559,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hnf-m6-16-pv-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 88,
@@ -2588,7 +2588,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hnf-m6-20-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 89,
@@ -2617,7 +2617,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hnf-m6-20-pv-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 90,
@@ -2646,7 +2646,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hnf-m6-25-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 91,
@@ -2675,7 +2675,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hnf-m6-25-pv-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 92,
@@ -2704,7 +2704,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hnf-m6-30-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 93,
@@ -2733,7 +2733,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hnf-m6-30-pv-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 94,
@@ -2762,7 +2762,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hnf-m6-32-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 95,
@@ -2791,7 +2791,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hnf-m6-32-pv-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 96,
@@ -2820,7 +2820,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hnf-u28-16-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 97,
@@ -2849,7 +2849,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hnf-u28-16-pv-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 98,
@@ -2878,7 +2878,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hnf-u28-20-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 99,
@@ -2907,7 +2907,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hnf-u28-20-pv-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 100,
@@ -2936,7 +2936,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hnf-u28-25-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 101,
@@ -2965,7 +2965,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hnf-u28-25-pv-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 102,
@@ -2994,7 +2994,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hnf-u28-30-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 103,
@@ -3023,7 +3023,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hnf-u28-30-pv-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 104,
@@ -3052,7 +3052,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hnf-u28-32-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 105,
@@ -3081,7 +3081,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hnf-u28-32-pv-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 106,
@@ -3139,7 +3139,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-16-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 108,
@@ -3168,7 +3168,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-16-ps-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 109,
@@ -3197,7 +3197,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PEEK",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-16-pk-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 110,
@@ -3226,7 +3226,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "POM",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-16-ac-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 111,
@@ -3255,7 +3255,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-32-ps-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 112,
@@ -3284,7 +3284,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PEEK",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-32-pk-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 113,
@@ -3313,7 +3313,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "POM",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-32-ac-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 114,
@@ -3342,7 +3342,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-16-pv-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 115,
@@ -3371,7 +3371,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-16-ps-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 116,
@@ -3400,7 +3400,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PEEK",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-16-pk-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 117,
@@ -3429,7 +3429,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "POM",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-16-ac-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 118,
@@ -3458,7 +3458,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PVDF",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-32-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 119,
@@ -3487,7 +3487,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-32-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 120,
@@ -3516,7 +3516,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PEEK",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-32-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 121,
@@ -3545,7 +3545,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "POM",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-32-ac-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 122,
@@ -3574,7 +3574,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "ETFE",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-32-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 123,
@@ -3603,7 +3603,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-m6-16-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 124,
@@ -3632,7 +3632,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-m6-20-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 125,
@@ -3661,7 +3661,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-m6-25-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 126,
@@ -3690,7 +3690,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-m6-30-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 127,
@@ -3719,7 +3719,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-m6-32-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 128,
@@ -3748,7 +3748,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-u28-16-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 129,
@@ -3777,7 +3777,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "蓝色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-u28-16-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 130,
@@ -3806,7 +3806,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-u28-20-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 131,
@@ -3835,7 +3835,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "蓝色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-u28-20-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 132,
@@ -3864,7 +3864,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-u28-25-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 133,
@@ -3893,7 +3893,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-u28-30-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 134,
@@ -3922,7 +3922,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-u28-32-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 135,
@@ -4212,7 +4212,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PEEK",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc-u32-16-pk-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 145,
@@ -4241,7 +4241,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PEEK",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc6-u32-16-pk-n-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 146,

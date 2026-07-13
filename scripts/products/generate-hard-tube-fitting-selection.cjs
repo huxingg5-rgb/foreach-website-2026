@@ -480,6 +480,22 @@ function buildHardTubeCardSubtitle(record) {
     ].join("\n"),
   };
 }
+/* HARD_TUBE_IMAGE_MAP_START */
+const imageMapPath = path.join(
+  root,
+  "data",
+  "products",
+  "selection",
+  "hard-tube-fitting-image-map.generated.json"
+);
+
+const imageMap = fs.existsSync(imageMapPath)
+  ? JSON.parse(
+      fs.readFileSync(imageMapPath, "utf8")
+    )
+  : {};
+/* HARD_TUBE_IMAGE_MAP_END */
+
 const products = records.map((record, index) => {
   const {
     productCode,
@@ -520,7 +536,9 @@ const products = records.map((record, index) => {
       filter05: colorInfo.zh,
     },
 
-    imageCard: "/images/logo/foreach-logo-color.svg",
+    imageCard:
+      imageMap[modelCode]?.imageCard ||
+      "/images/logo/foreach-logo-color.svg",
 
     /*
      * 详情页尚未建立前，先回到硬管接头选型页，

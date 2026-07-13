@@ -1,4 +1,4 @@
-import type {
+﻿import type {
   ProductSelectionProduct,
   SelectionFilterKey,
 } from "@/data/products/selection/product-selection.types";
@@ -20,6 +20,7 @@ export type ProductSelectionFilterGroup = {
   title: string;
   inputType: "single" | "multiple";
   options: ProductSelectionFilterOption[];
+  layout?: "one" | "two" | "three";
 };
 
 export type ProductSelectionSelectedTag = {
@@ -50,3 +51,5 @@ export type ProductSelectionPageText = {
   emptyTitle: string;
   emptyDescription: string;
 };
+
+

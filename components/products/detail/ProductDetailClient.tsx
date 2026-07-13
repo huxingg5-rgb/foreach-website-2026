@@ -146,6 +146,16 @@ const detailMode = String(
   return isPlungerPumpDisplayModel(displayModel);
 }
 
+function isHardTubeFittingDetailData(data: any): boolean {
+  return (
+    data?.sourceType === "fitting-detail" ||
+    (
+      data?.categoryId === "fittings" &&
+      data?.productTypeId === "hard-tube-fittings"
+    )
+  );
+}
+
 function getModelActionText(data: any): string {
   if (isTubingDetailData(data)) {
     return "选择型号";
@@ -623,15 +633,36 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
         productCode
     ).trim();
 
+    const productName = isPlungerPumpDetailData(data)
+      ? "柱塞泵"
+      : String(
+          data.productTypeName ||
+            data.productTypeLabel ||
+            data.seriesName ||
+            data.series ||
+            (isDiaphragmPumpDetailData(data)
+              ? "隔膜泵"
+              : isPipettingPumpDetailData(data)
+                ? "移液泵"
+                : "产品")
+        ).trim();
+
+    const fallbackDetailHref = data.slug
+      ? isPlungerPumpDetailData(data)
+        ? `/products/pumps/plunger-pumps/${data.slug}`
+        : isDiaphragmPumpDetailData(data)
+          ? `/products/pumps/diaphragm-pumps/${data.slug}`
+          : isPipettingPumpDetailData(data)
+            ? `/products/pumps/pipetting-pumps/${data.slug}`
+            : isTubingDetailData(data)
+              ? `/products/tubing/${data.slug}`
+              : ""
+      : "";
+
     return {
       sourceType: "pump-selection",
       sourceLabel: "产品详情页",
-      productName: String(
-        data.productTypeName ||
-          data.seriesName ||
-          data.series ||
-          "隔膜泵"
-      ).trim(),
+      productName,
       productCode,
       foreachModel: modelText,
       competitorModels: [],
@@ -647,7 +678,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
       detailHref:
         data.detailHref ||
         data.href ||
-        (data.slug ? `/products/pumps/diaphragm-pumps/${data.slug}` : ""),
+        fallbackDetailHref,
     };
   }
 
@@ -1183,6 +1214,74 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
             </div>
           </div>
         </section>
+        {/* QUICK_CONNECT_SERIES_MODEL_TABLE_START */}
+        {Array.isArray((data as any).modelRows) &&
+        (data as any).modelRows.length > 0 ? (
+          <section
+            id="model-selection"
+            className={styles.faqSection}
+          >
+            <div className={styles.faqHeader}>
+              <h2>
+                {(data as any).modelTableTitle ||
+                  "完整型号"}
+              </h2>
+        
+              {(data as any).modelTableDescription ? (
+                <p>
+                  {(data as any).modelTableDescription}
+                </p>
+              ) : null}
+            </div>
+        
+            <div style={{ overflowX: "auto" }}>
+              <table className={styles.specTable}>
+                <thead>
+                  <tr>
+                    <th>恒永达型号</th>
+                    <th>商品编码</th>
+                    <th>接管内径或螺纹</th>
+                    <th>公母端</th>
+                    <th>安装方式</th>
+                    <th>阀门配置</th>
+                    <th>形状</th>
+                    <th>外壳材质</th>
+                  </tr>
+                </thead>
+        
+                <tbody>
+                  {(data as any).modelRows.map(
+                    (item: any) => {
+                      const rowKey = String(
+                        item.productCode ||
+                          item.model ||
+                          ""
+                      ).trim();
+        
+                      return (
+                        <tr
+                          id={rowKey || undefined}
+                          key={rowKey}
+                        >
+                          <td>{item.model}</td>
+                          <td>{item.productCode}</td>
+                          <td>{item.connection}</td>
+                          <td>{item.gender}</td>
+                          <td>{item.panelMount}</td>
+                          <td>{item.valved}</td>
+                          <td>{item.shape}</td>
+                          <td>{item.housingMaterial}</td>
+                        </tr>
+                      );
+                    }
+                  )}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        ) : null}
+        {/* QUICK_CONNECT_SERIES_MODEL_TABLE_END */}
+
         {data.faqs && data.faqs.length > 0 ? (
 <>
 <section className={styles.faqSection}>

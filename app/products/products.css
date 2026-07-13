@@ -1,4 +1,4 @@
-﻿/* =========================================================
+/* =========================================================
    products.css
    鎭掓案杈惧畼缃戯綔浜у搧涓績閫夊瀷椤典笓鐢?CSS
 
@@ -3097,3 +3097,528 @@
 .filter-group-symbol {
   display: none;
 }
+
+
+/* BARBED_FITTING_FILTER_LAYOUT_START */
+
+/*
+ * 倒刺接头接管内径布局
+ *
+ * 1. 接管1、接管2、接管3横向一排
+ * 2. 每个接管内部的内径选项两列排列
+ * 3. 选项使用与主体材质相同的按钮形式
+ */
+
+/*
+ * 倒刺接头筛选内容较多，
+ * 仅在该筛选存在时适当加宽左栏。
+ */
+.products-selection-page
+  .selection-layout:has(
+    [data-barbed-port-filter="true"]
+  ) {
+  grid-template-columns:
+    460px minmax(0, 1fr);
+}
+
+.products-selection-page
+  .barbed-port-filter-title {
+  cursor: default;
+}
+
+.products-selection-page
+  .barbed-port-columns {
+  display: grid;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  padding: 0 12px 16px;
+}
+
+.products-selection-page
+  .barbed-port-column {
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid #e5ebf2;
+  background: #ffffff;
+}
+
+.products-selection-page
+  .barbed-port-column-title {
+  margin-bottom: 8px;
+  color: #173368;
+  font-size: 13px;
+  font-weight: 850;
+  line-height: 1.3;
+}
+
+.products-selection-page
+  .barbed-port-options {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.products-selection-page
+  .barbed-port-option {
+  width: 100%;
+  min-width: 0;
+  min-height: 38px;
+  padding: 0 7px;
+  gap: 6px;
+  justify-content: flex-start;
+  font-size: 12px;
+}
+
+.products-selection-page
+  .barbed-port-option
+  .filter-check {
+  width: 11px;
+  height: 11px;
+  flex: 0 0 11px;
+}
+
+.products-selection-page
+  .barbed-port-option-label {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.products-selection-page
+  .barbed-port-column.is-disabled {
+  background: #f5f7fa;
+  border-color: #e6eaf0;
+}
+
+.products-selection-page
+  .barbed-port-column.is-disabled
+  .barbed-port-column-title {
+  color: #9aa5b5;
+}
+
+.products-selection-page
+  .barbed-port-disabled {
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e2e7ed;
+  background: #eef1f5;
+  color: #9aa5b5;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/*
+ * 平板以下筛选栏改为整行，
+ * 三个接管仍然保持同一排。
+ */
+@media (max-width: 1180px) {
+  .products-selection-page
+    .selection-layout:has(
+      [data-barbed-port-filter="true"]
+    ) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*
+ * 手机端空间不足时再改为纵向，
+ * 避免按钮文字被压坏。
+ */
+@media (max-width: 760px) {
+  .products-selection-page
+    .barbed-port-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .products-selection-page
+    .barbed-port-options {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* BARBED_FITTING_FILTER_LAYOUT_END */
+
+/* BARBED_PORT_VERTICAL_LIST_START */
+
+/*
+ * 接管1、接管2、接管3横向三列；
+ * 每个接管下面的内径选项竖向单列排列。
+ */
+.products-selection-page .barbed-port-columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  padding: 0 12px 16px;
+}
+
+.products-selection-page .barbed-port-column {
+  min-width: 0;
+}
+
+.products-selection-page .barbed-port-options {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+}
+
+.products-selection-page .barbed-port-option {
+  width: 100%;
+  min-width: 0;
+  min-height: 40px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.products-selection-page .barbed-port-option-label {
+  display: block;
+  min-width: 0;
+  overflow: visible;
+  text-overflow: clip;
+  white-space: nowrap;
+}
+
+.products-selection-page .barbed-port-option .filter-check {
+  width: 12px;
+  height: 12px;
+  flex: 0 0 12px;
+}
+
+/* BARBED_PORT_VERTICAL_LIST_END */
+
+/* BARBED_PORT_FINAL_DISABLED_STYLE_START */
+
+/*
+ * 接管1、接管2、接管3横向三列。
+ */
+.products-selection-page .barbed-port-columns {
+  display: grid;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  padding: 0 12px 16px;
+}
+
+/*
+ * 去掉每个接管列自己的外框。
+ */
+.products-selection-page .barbed-port-column,
+.products-selection-page .barbed-port-column.is-disabled {
+  min-width: 0;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+/*
+ * 每个接管的尺寸竖向排列。
+ */
+.products-selection-page .barbed-port-options {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+}
+
+.products-selection-page .barbed-port-option {
+  width: 100%;
+  min-width: 0;
+  min-height: 40px;
+  padding: 0 8px;
+  justify-content: flex-start;
+  gap: 7px;
+}
+
+.products-selection-page .barbed-port-option-label {
+  overflow: visible;
+  text-overflow: clip;
+  white-space: nowrap;
+}
+
+/*
+ * 当前组合中不存在的内径：
+ * 保留显示、变灰、不可点击。
+ */
+.products-selection-page .barbed-port-option.is-disabled,
+.products-selection-page .barbed-port-option:disabled {
+  border-color: #e4e8ed !important;
+  background: #f1f3f6 !important;
+  color: #a5adba !important;
+  cursor: not-allowed !important;
+  opacity: 1 !important;
+}
+
+.products-selection-page
+  .barbed-port-option.is-disabled
+  .filter-check,
+.products-selection-page
+  .barbed-port-option:disabled
+  .filter-check {
+  border-color: #cbd2dc !important;
+  background: #e7eaee !important;
+  box-shadow: none !important;
+}
+
+.products-selection-page
+  .barbed-port-option.is-disabled:hover,
+.products-selection-page
+  .barbed-port-option:disabled:hover {
+  border-color: #e4e8ed !important;
+  background: #f1f3f6 !important;
+  color: #a5adba !important;
+}
+
+.products-selection-page
+  .barbed-port-column.is-disabled
+  .barbed-port-column-title {
+  color: #a5adba;
+}
+
+/* BARBED_PORT_FINAL_DISABLED_STYLE_END */
+
+/* BARBED_PORT_FINAL_LAYOUT_START */
+
+/*
+ * 只保留：
+ * 接管内径1 / 接管内径2 / 接管内径3
+ */
+.products-selection-page
+  .barbed-port-filter-title,
+.products-selection-page
+  .barbed-port-column-title {
+  display: none !important;
+}
+
+.products-selection-page
+  .barbed-port-heading-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  padding: 14px 12px 8px;
+  color: #173368;
+  font-size: 13px;
+  font-weight: 850;
+  line-height: 1.3;
+}
+
+.products-selection-page
+  .barbed-port-columns {
+  display: grid;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  padding: 0 12px 16px;
+}
+
+.products-selection-page
+  .barbed-port-column,
+.products-selection-page
+  .barbed-port-column.is-disabled {
+  min-width: 0;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+.products-selection-page
+  .barbed-port-options {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+}
+
+.products-selection-page
+  .barbed-port-option {
+  width: 100%;
+  min-width: 0;
+  min-height: 40px;
+  padding: 0 8px;
+  justify-content: flex-start;
+  gap: 7px;
+}
+
+.products-selection-page
+  .barbed-port-option-label {
+  overflow: visible;
+  text-overflow: clip;
+  white-space: nowrap;
+}
+
+/*
+ * 无对应型号的内径：
+ * 保留位置、灰色显示、不能点击。
+ */
+.products-selection-page
+  .barbed-port-option.is-disabled,
+.products-selection-page
+  .barbed-port-option:disabled {
+  border-color: #e4e8ed !important;
+  background: #f1f3f6 !important;
+  color: #a8b0bc !important;
+  cursor: not-allowed !important;
+  opacity: 1 !important;
+}
+
+.products-selection-page
+  .barbed-port-option.is-disabled
+  .filter-check,
+.products-selection-page
+  .barbed-port-option:disabled
+  .filter-check {
+  border-color: #cbd2dc !important;
+  background: #e6e9ed !important;
+  box-shadow: none !important;
+}
+
+.products-selection-page
+  .barbed-port-option.is-disabled:hover,
+.products-selection-page
+  .barbed-port-option:disabled:hover {
+  border-color: #e4e8ed !important;
+  background: #f1f3f6 !important;
+  color: #a8b0bc !important;
+}
+
+/* BARBED_PORT_FINAL_LAYOUT_END */
+
+/* =========================================================
+   THREAD_TO_BARBED_FILTER_LAYOUT_FINAL_START
+
+   螺纹转倒刺接头筛选布局：
+   1. 密封方式 filter02：每个选项独占一整行
+   2. 连接结构 filter01：两个选项一排
+   3. 只影响 thread-to-barbed-fittings
+   ========================================================= */
+
+.filter-panel[data-product-type-id="thread-to-barbed-fittings"]
+  .filter-group-filter02
+  .filter-options,
+.filter-panel[data-product-type-id="thread-to-barbed-fittings"]
+  [data-filter-key="filter02"]
+  .filter-options {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+}
+
+.filter-panel[data-product-type-id="thread-to-barbed-fittings"]
+  .filter-group-filter01
+  .filter-options,
+.filter-panel[data-product-type-id="thread-to-barbed-fittings"]
+  [data-filter-key="filter01"]
+  .filter-options {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+@media (max-width: 760px) {
+  .filter-panel[data-product-type-id="thread-to-barbed-fittings"]
+    .filter-group-filter01
+    .filter-options,
+  .filter-panel[data-product-type-id="thread-to-barbed-fittings"]
+    [data-filter-key="filter01"]
+    .filter-options {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+}
+
+/* THREAD_TO_BARBED_FILTER_LAYOUT_FINAL_END */
+
+/* =========================================================
+   THREAD_TO_BARBED_GENERIC_DISABLED_STYLE_START
+
+   螺纹转倒刺接头：
+   当前筛选组合中不存在的选项保留显示，
+   但变灰并禁止点击。
+   ========================================================= */
+
+.products-selection-page
+  .filter-panel[data-product-type-id="thread-to-barbed-fittings"]
+  .filter-option.is-disabled,
+.products-selection-page
+  .filter-panel[data-product-type-id="thread-to-barbed-fittings"]
+  .filter-option:disabled {
+  border-color: #e4e8ed !important;
+  background: #f1f3f6 !important;
+  color: #a5adba !important;
+  cursor: not-allowed !important;
+  opacity: 1 !important;
+}
+
+.products-selection-page
+  .filter-panel[data-product-type-id="thread-to-barbed-fittings"]
+  .filter-option.is-disabled
+  .filter-check,
+.products-selection-page
+  .filter-panel[data-product-type-id="thread-to-barbed-fittings"]
+  .filter-option:disabled
+  .filter-check {
+  border-color: #c7ced8 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.products-selection-page
+  .filter-panel[data-product-type-id="thread-to-barbed-fittings"]
+  .filter-option.is-disabled:hover,
+.products-selection-page
+  .filter-panel[data-product-type-id="thread-to-barbed-fittings"]
+  .filter-option:disabled:hover {
+  border-color: #e4e8ed !important;
+  background: #f1f3f6 !important;
+  color: #a5adba !important;
+  transform: none !important;
+}
+
+/* THREAD_TO_BARBED_GENERIC_DISABLED_STYLE_END */
+
+
+
+/* =========================================================
+   LUER_FILTER_DISABLED_STYLE_START
+
+   鲁尔接头无对应型号的筛选项：
+   保留显示、灰色、不可点击。
+   ========================================================= */
+
+.filter-panel[data-product-type-id="luer-fittings"]
+  .filter-option.is-disabled,
+.filter-panel[data-product-type-id="luer-fittings"]
+  .filter-option:disabled {
+  border-color: #e4e8ed !important;
+  background: #f1f3f6 !important;
+  color: #a8b0bc !important;
+  cursor: not-allowed !important;
+  opacity: 1 !important;
+}
+
+.filter-panel[data-product-type-id="luer-fittings"]
+  .filter-option.is-disabled
+  .filter-check,
+.filter-panel[data-product-type-id="luer-fittings"]
+  .filter-option:disabled
+  .filter-check {
+  border-color: #cbd2dc !important;
+  background: #e6e9ed !important;
+  box-shadow: none !important;
+}
+
+.filter-panel[data-product-type-id="luer-fittings"]
+  .filter-option.is-disabled:hover,
+.filter-panel[data-product-type-id="luer-fittings"]
+  .filter-option:disabled:hover {
+  border-color: #e4e8ed !important;
+  background: #f1f3f6 !important;
+  color: #a8b0bc !important;
+  transform: none !important;
+}
+
+/* LUER_FILTER_DISABLED_STYLE_END */

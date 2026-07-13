@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -51,6 +51,56 @@ import {
   hardTubeFittingSelectionProducts,
   hardTubeFittingTaxonomyItems,
 } from "@/data/products/selection/hard-tube-fitting-selection.generated";
+import {
+  barbedFittingFilterLabels,
+  barbedFittingSelectionProducts,
+  barbedFittingTaxonomyItems,
+} from "@/data/products/selection/barbed-fitting-selection.generated";
+import {
+  quickConnectFittingFilterLabels,
+  quickConnectFittingSelectionProducts,
+  quickConnectFittingTaxonomyItems,
+} from "@/data/products/selection/quick-connect-fitting-selection.generated";
+import {
+  threadToBarbedFittingFilterLabels,
+  threadToBarbedFittingSelectionProducts,
+  threadToBarbedFittingTaxonomyItems,
+} from "@/data/products/selection/thread-to-barbed-fitting-selection.generated";
+
+import {
+  luerFittingSelectionFilterLabels,
+  luerFittingSelectionProducts,
+  luerFittingSelectionTaxonomyItems,
+} from "@/data/products/selection/luer-fitting-selection.generated";
+
+/* BULKHEAD_BARBED_GENERATED_IMPORT_START */
+import {
+  bulkheadBarbedFittingFilterLabels,
+  bulkheadBarbedFittingSelectionProducts,
+  bulkheadBarbedFittingTaxonomyItems,
+} from "@/data/products/selection/bulkhead-barbed-fitting-selection.generated";
+/* BULKHEAD_BARBED_GENERATED_IMPORT_END */
+
+import {
+  femaleThreadAdapterFilterLabels,
+  femaleThreadAdapterSelectionProducts,
+  femaleThreadAdapterTaxonomyItems,
+} from "@/data/products/selection/female-thread-adapter-selection.generated";
+
+
+/* FILTER_CHECK_VALVE_GENERATED_IMPORT_START */
+import {
+  filterCheckValveFilterLabels,
+  filterCheckValveSelectionProducts,
+  filterCheckValveTaxonomyItems,
+} from "@/data/products/selection/filter-check-valve-selection.generated";
+/* FILTER_CHECK_VALVE_GENERATED_IMPORT_END */
+
+import {
+  threadToBarbedDetailHrefByModel,
+  threadToBarbedDetailHrefByProductCode,
+} from "@/data/products/selection/thread-to-barbed-detail-route-map.generated";
+
 import ProductCardGrid from "./ProductCardGrid";
 import ProductCategoryTabs from "./ProductCategoryTabs";
 import ProductEmptyState from "./ProductEmptyState";
@@ -76,9 +126,20 @@ import type {
   ProductSelectionFilterGroup,
   ProductSelectionSelectedTag,
 } from "./product-selection-ui.types";
+import hardTubeDetailsJson from "@/data/products/generated/fittings/hard-tube-fittings/detail/index.json";
 
 const selectionProducts = [
-  ...baseSelectionProducts,
+  /* FILTER_CHECK_VALVE_SELECTION_PRODUCTS_START */
+  ...(filterCheckValveSelectionProducts as unknown as typeof baseSelectionProducts),
+  /* FILTER_CHECK_VALVE_SELECTION_PRODUCTS_END */
+    ...femaleThreadAdapterSelectionProducts,
+/* BULKHEAD_BARBED_SELECTION_PRODUCTS_START */
+  ...(bulkheadBarbedFittingSelectionProducts as unknown as typeof baseSelectionProducts),
+  /* BULKHEAD_BARBED_SELECTION_PRODUCTS_END */
+...luerFittingSelectionProducts,
+    ...quickConnectFittingSelectionProducts,
+  ...threadToBarbedFittingSelectionProducts,
+...baseSelectionProducts,
   ...diaphragmPumpSelectionProducts,
   ...pipettingPumpSelectionProducts,
   ...valvelessPumpSelectionProducts,
@@ -86,6 +147,7 @@ const selectionProducts = [
   ...probeSelectionProducts,
   ...tubingSelectionProducts,
   ...hardTubeFittingSelectionProducts,
+  ...barbedFittingSelectionProducts,
   ...syringePumpSelectionProducts,
   ...controlModuleSelectionProducts,
 ].filter((product, index, array) => {
@@ -93,8 +155,19 @@ const selectionProducts = [
 });
 
 const selectionTaxonomyItems = [
-  ...baseSelectionTaxonomyItems,
+  /* FILTER_CHECK_VALVE_TAXONOMY_START */
+  ...(filterCheckValveTaxonomyItems as unknown as typeof baseSelectionTaxonomyItems),
+  /* FILTER_CHECK_VALVE_TAXONOMY_END */
+    ...femaleThreadAdapterTaxonomyItems,
+/* BULKHEAD_BARBED_TAXONOMY_START */
+  ...(bulkheadBarbedFittingTaxonomyItems as unknown as typeof baseSelectionTaxonomyItems),
+  /* BULKHEAD_BARBED_TAXONOMY_END */
+...luerFittingSelectionTaxonomyItems,
+    ...quickConnectFittingTaxonomyItems,
+  ...threadToBarbedFittingTaxonomyItems,
+...baseSelectionTaxonomyItems,
   ...hardTubeFittingTaxonomyItems,
+  ...barbedFittingTaxonomyItems,
   ...diaphragmPumpTaxonomyItems,
   ...controlModuleTaxonomyItems,
 ].filter((item, index, array) => {
@@ -102,8 +175,19 @@ const selectionTaxonomyItems = [
 });
 
 const selectionFilterLabels = [
-  ...baseSelectionFilterLabels,
+  /* FILTER_CHECK_VALVE_FILTER_LABELS_START */
+  ...(filterCheckValveFilterLabels as unknown as typeof baseSelectionFilterLabels),
+  /* FILTER_CHECK_VALVE_FILTER_LABELS_END */
+    ...femaleThreadAdapterFilterLabels,
+/* BULKHEAD_BARBED_FILTER_LABELS_START */
+  ...(bulkheadBarbedFittingFilterLabels as unknown as typeof baseSelectionFilterLabels),
+  /* BULKHEAD_BARBED_FILTER_LABELS_END */
+...luerFittingSelectionFilterLabels,
+    ...quickConnectFittingFilterLabels,
+  ...threadToBarbedFittingFilterLabels,
+...baseSelectionFilterLabels,
   ...hardTubeFittingFilterLabels,
+  ...barbedFittingFilterLabels,
   ...diaphragmPumpFilterLabels,
   ...pipettingPumpFilterLabels,
   ...valvelessPumpFilterLabels,
@@ -142,7 +226,33 @@ const FILTER_KEYS: SelectionFilterKey[] = [
   "filter06",
   "filter07",
   "filter08",
+  "filter09",
 ];
+
+const FITTING_PRODUCT_TYPE_ORDER_START = true;
+
+const FITTING_PRODUCT_TYPE_ORDER = [
+  "hard-tube-fittings",
+  "barbed-fittings",
+  "thread-to-barbed-fittings",
+  "luer-fittings",
+  "quick-connect-fittings",
+  "female-thread-adapters",
+  "bulkhead-barbed-fittings",
+  "filters",
+] as const;
+
+const FITTING_PRODUCT_TYPE_ORDER_MAP =
+  new Map<string, number>(
+    FITTING_PRODUCT_TYPE_ORDER.map(
+      (productTypeId, index) => [
+        productTypeId,
+        index,
+      ]
+    )
+  );
+
+/* FITTING_PRODUCT_TYPE_ORDER_END */
 
 const PRODUCT_SELECTION_PAGE_TEXT: Record<SelectionLocale, import("./product-selection-ui.types").ProductSelectionPageText> = {
   zh: {
@@ -376,6 +486,17 @@ return selectionProducts
 }
 
 function getFirstProductTypeId(categoryId: string) {
+
+  /* FITTING_DEFAULT_PRODUCT_TYPE_START */
+
+  if (
+    categoryId ===
+    "fittings"
+  ) {
+    return "hard-tube-fittings";
+  }
+
+  /* FITTING_DEFAULT_PRODUCT_TYPE_END */
   
   /*
     TUBING_GET_FIRST_PRODUCT_TYPE_20260707
@@ -436,6 +557,64 @@ function getFilterOptions(
    *
    * 左侧筛选必须拆成三个独立选项。
    */
+  /*
+   * FEMALE_THREAD_MULTI_VALUE_OPTIONS_START
+   *
+   * 内螺纹互转接头中：
+   * PU-U32-U28 同时包含两个液路螺纹。
+   *
+   * 在生成任意筛选组之前，
+   * 先将 filter02 拆成独立产品副本，
+   * 确保螺纹选项和其他筛选条件可以正常联动。
+   */
+  if (
+    productTypeId ===
+    "female-thread-adapters"
+  ) {
+    const expandedProducts =
+      products.flatMap(
+        (product) => {
+          const threadValues =
+            splitFilterValues(
+              (product.filters || {})
+                .filter02
+            );
+
+          if (
+            threadValues.length <= 1
+          ) {
+            return [product];
+          }
+
+          return threadValues.map(
+            (threadValue) => ({
+              ...product,
+
+              productId:
+                `${product.productId}__thread__${threadValue}`,
+
+              filters: {
+                ...(product.filters || {}),
+
+                filter02:
+                  threadValue,
+              },
+            })
+          );
+        }
+      );
+
+    return getProductFilterOptions({
+      productTypeId,
+      products:
+        expandedProducts,
+      filterKey,
+      selectedFilters,
+    });
+  }
+
+  /* FEMALE_THREAD_MULTI_VALUE_OPTIONS_END */
+
   if (
     productTypeId === "hard-tube-fittings" &&
     filterKey === "filter03"
@@ -728,6 +907,625 @@ function normalizeFinalProductDetailHref(
 
 
 function makeDetailHref(product: ProductSelectionProduct) {
+
+  /* FILTER_CHECK_VALVE_DETAIL_HREF_START */
+
+  {
+    const rawProductTypeId =
+      String(
+        (product as any)?.productTypeId ||
+        ""
+      ).trim();
+
+    const rawExistingHref =
+      String(
+        (product as any)?.detailHref ||
+        (product as any)?.href ||
+        ""
+      ).trim();
+
+    const isFilterOrCheckValve =
+      rawProductTypeId ===
+        "filters" ||
+      rawProductTypeId ===
+        "check-valves" ||
+      rawExistingHref.includes(
+        "/products/fittings/filters/"
+      ) ||
+      rawExistingHref.includes(
+        "/products/fittings/check-valves/"
+      );
+
+    if (isFilterOrCheckValve) {
+      /*
+       * 生成数据已经带有正式详情地址时，
+       * 直接使用，不再进入其它接头或针阀分支。
+       */
+      if (
+        /^\/products\/fittings\/(filters|check-valves)\/[^/]+\/?$/.test(
+          rawExistingHref
+        )
+      ) {
+        return rawExistingHref.replace(
+          /\/$/,
+          ""
+        );
+      }
+
+      const routeType =
+        rawProductTypeId ===
+          "check-valves" ||
+        rawExistingHref.includes(
+          "/products/fittings/check-valves/"
+        )
+          ? "check-valves"
+          : "filters";
+
+      const slugFromHref =
+        rawExistingHref
+          .split("/")
+          .filter(Boolean)
+          .pop();
+
+      const rawSlug =
+        String(
+          (product as any)?.detailSlug ||
+          (product as any)?.slug ||
+          slugFromHref ||
+          ""
+        )
+          .trim()
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/^-+|-+$/g, "");
+
+      if (rawSlug) {
+        return `/products/fittings/${routeType}/${rawSlug}`;
+      }
+
+      return "/products/fittings/filters";
+    }
+  }
+
+  /* FILTER_CHECK_VALVE_DETAIL_HREF_END */
+
+  /* HARD_TUBE_DETAIL_HREF_START */
+
+  if (
+    String(
+      (product as any)?.productTypeId ||
+      ""
+    ).trim() ===
+      "hard-tube-fittings"
+  ) {
+    /*
+     * filter03 多值展开后，
+     * productId 可能变成：
+     *
+     * 809746__1.6 mm
+     *
+     * 匹配详情前先恢复真实商品ID。
+     */
+    const rawProductId =
+      String(
+        (product as any)?.productId ||
+        ""
+      )
+        .split("__")[0]
+        .trim();
+
+    const productCandidates = [
+      rawProductId,
+
+      getSelectionLocalizedText(
+        product.cardTitle,
+        "zh"
+      ),
+
+      getSelectionLocalizedText(
+        product.cardTitle,
+        "en"
+      ),
+    ]
+      .map(
+        normalizeModelKey
+      )
+      .filter(Boolean);
+
+    const matchedDetail =
+      (
+        hardTubeDetailsJson as any[]
+      ).find((detail) => {
+        const detailCandidates = [
+          detail?.productId,
+          detail?.model,
+          detail?.slug,
+          detail?.displayModel,
+          detail?.foreachModel,
+          detail?.modelDisplay,
+        ]
+          .map(
+            normalizeModelKey
+          )
+          .filter(Boolean);
+
+        return detailCandidates.some(
+          (value) =>
+            productCandidates.includes(
+              value
+            )
+        );
+      });
+
+    const matchedHref =
+      String(
+        matchedDetail?.detailHref ||
+        ""
+      ).trim();
+
+    if (matchedHref) {
+      return matchedHref;
+    }
+
+    const matchedSlug =
+      normalizeDetailPathPart(
+        matchedDetail?.slug ||
+        matchedDetail?.detailSlug ||
+        ""
+      );
+
+    if (matchedSlug) {
+      return `/products/fittings/hard-tube-fittings/${matchedSlug}`;
+    }
+
+    /*
+     * 152张选型卡中只有147条正式详情。
+     * 没匹配到详情的5条保持回到硬管筛选页，
+     * 不生成错误的三级详情地址。
+     */
+    return "/products/fittings/hard-tube-fittings";
+  }
+
+  /* HARD_TUBE_DETAIL_HREF_END */
+
+  /*
+    QUICK_CONNECT_DETAIL_HREF_PRIORITY_20260712
+
+    快插接头卡片优先使用生成数据中的真实详情链接：
+    /products/fittings/quick-connect-fittings/q20#商品编码
+
+    避免后续通用逻辑把链接改回产品类型筛选页。
+  */
+  {
+    const rawProductTypeId =
+      String(
+        (product as any)?.productTypeId ||
+        ""
+      ).trim();
+
+    const rawSourceType =
+      String(
+        (product as any)?.sourceType ||
+        ""
+      ).trim();
+
+    const rawExistingHref =
+      String(
+        (product as any)?.detailHref ||
+        (product as any)?.href ||
+        ""
+      ).trim();
+
+    const rawProductText =
+      JSON.stringify(
+        product || {}
+      );
+
+    const isQuickConnect =
+      rawProductTypeId ===
+        "quick-connect-fittings" ||
+      rawSourceType ===
+        "quick-connect-selection" ||
+      rawExistingHref.includes(
+        "/products/fittings/quick-connect-fittings/"
+      ) ||
+      rawProductText.includes(
+        "快插接头"
+      );
+
+    if (isQuickConnect) {
+
+      /*
+        QUICK_CONNECT_MODEL_DETAIL_HREF_20260712
+
+        快插接头进入具体型号详情页，
+        不再进入Q20/Q40/Q60系列汇总页。
+      */
+      {
+        const rawCardTitle =
+          (product as any)?.cardTitle;
+
+        const cardTitleText =
+          typeof rawCardTitle ===
+          "string"
+            ? rawCardTitle
+            : String(
+                rawCardTitle?.zh ||
+                rawCardTitle?.["zh-CN"] ||
+                rawCardTitle?.en ||
+                ""
+              ).trim();
+
+        const modelCandidates = [
+          (product as any)?.foreachModel,
+          (product as any)?.model,
+          (product as any)?.modelCode,
+          (product as any)?.modelDisplay,
+          (product as any)?.displayModel,
+          cardTitleText,
+          JSON.stringify(
+            (product as any)?.searchKeywords ||
+            {}
+          ),
+          JSON.stringify(
+            product ||
+            {}
+          ),
+        ]
+          .map(
+            (value) =>
+              String(
+                value ||
+                ""
+              )
+          )
+          .join(
+            " "
+          );
+
+        const modelMatch =
+          modelCandidates.match(
+            /\bQ(?:20|40|60)[A-Z0-9]*-[A-Z0-9]+-[A-Z0-9]+\b/i
+          );
+
+        if (
+          modelMatch
+        ) {
+          const modelSlug =
+            modelMatch[0]
+              .toLowerCase()
+              .replace(
+                /[^a-z0-9]+/g,
+                "-"
+              )
+              .replace(
+                /^-+|-+$/g,
+                ""
+              );
+
+          return (
+            "/products/fittings/quick-connect-fittings/" +
+            modelSlug
+          );
+        }
+      }
+
+      if (
+        /^\/products\/fittings\/quick-connect-fittings\/(q20|q40|q60)(?:#.*)?$/i.test(
+          rawExistingHref
+        )
+      ) {
+        return rawExistingHref;
+      }
+
+      const seriesMatch =
+        rawProductText.match(
+          /\bQ(?:20|40|60)\b/i
+        );
+
+      const productCode =
+        String(
+          (product as any)?.productCode ||
+          (product as any)?.productId ||
+          ""
+        ).trim();
+
+      if (seriesMatch) {
+        const seriesSlug =
+          seriesMatch[0]
+            .toLowerCase();
+
+        return (
+          "/products/fittings/quick-connect-fittings/" +
+          seriesSlug +
+          (
+            productCode
+              ? "#" +
+                encodeURIComponent(
+                  productCode
+                )
+              : ""
+          )
+        );
+      }
+
+      return rawExistingHref ||
+        "/products/fittings/quick-connect-fittings";
+    }
+  }
+  /* THREAD_TO_BARBED_DETAIL_HREF_START */
+
+  /*
+   * 螺纹转倒刺接头具体型号详情链接。
+   *
+   * 优先按商品编码匹配，
+   * 避免相同基础型号、不同 O 圈配置产生重复地址。
+   */
+  {
+    const rawProductTypeId =
+      String(
+        (product as any)
+          ?.productTypeId ||
+        ""
+      ).trim();
+
+    const rawExistingHref =
+      String(
+        (product as any)
+          ?.detailHref ||
+        (product as any)
+          ?.href ||
+        ""
+      ).trim();
+
+    const isThreadToBarbed =
+      rawProductTypeId ===
+        "thread-to-barbed-fittings" ||
+      rawExistingHref.includes(
+        "/products/fittings/thread-to-barbed-fittings"
+      );
+
+    if (isThreadToBarbed) {
+      const productCode =
+        String(
+          (product as any)
+            ?.productCode ||
+          (product as any)
+            ?.productId ||
+          ""
+        ).trim();
+
+      const rawCardTitle =
+        (product as any)
+          ?.cardTitle;
+
+      const cardTitleText =
+        typeof rawCardTitle ===
+        "string"
+          ? rawCardTitle
+          : String(
+              rawCardTitle?.zh ||
+              rawCardTitle?.["zh-CN"] ||
+              rawCardTitle?.en ||
+              ""
+            ).trim();
+
+      const model =
+        String(
+          (product as any)?.model ||
+          (product as any)
+            ?.foreachModel ||
+          (product as any)
+            ?.modelCode ||
+          (product as any)
+            ?.modelDisplay ||
+          (product as any)
+            ?.displayModel ||
+          cardTitleText ||
+          ""
+        ).trim();
+
+      const matchedHref =
+        threadToBarbedDetailHrefByProductCode[
+          productCode
+        ] ||
+        threadToBarbedDetailHrefByModel[
+          model
+        ];
+
+      if (matchedHref) {
+        return matchedHref;
+      }
+
+      return (
+        rawExistingHref ||
+        "/products/fittings/thread-to-barbed-fittings"
+      );
+    }
+  }
+
+  /* THREAD_TO_BARBED_DETAIL_HREF_END */
+
+  /* BULKHEAD_BARBED_DETAIL_HREF_START */
+
+  /*
+   * 穿板倒刺接头与六角螺母具体型号详情链接。
+   *
+   * 选型卡片不能回退到通用动态页面
+   * /products/[category]/[slug]，
+   * 必须进入本系列的具体型号详情路由。
+   */
+  {
+    const rawProductTypeId =
+      String(
+        (product as any)?.productTypeId ||
+        ""
+      ).trim();
+
+    const rawSourceType =
+      String(
+        (product as any)?.sourceType ||
+        ""
+      ).trim();
+
+    const rawExistingHref =
+      String(
+        (product as any)?.detailHref ||
+        (product as any)?.productHref ||
+        (product as any)?.detailUrl ||
+        (product as any)?.href ||
+        ""
+      ).trim();
+
+    const isBulkheadBarbed =
+      rawProductTypeId ===
+        "bulkhead-barbed-fittings" ||
+      rawSourceType ===
+        "bulkhead-barbed-selection" ||
+      rawExistingHref.includes(
+        "/products/fittings/bulkhead-barbed-fittings/"
+      );
+
+    if (isBulkheadBarbed) {
+      /*
+       * 数据中已经存在完整具体型号链接时，
+       * 直接使用，不再经过通用路由推导。
+       */
+      if (
+        /^\/products\/fittings\/bulkhead-barbed-fittings\/[a-z0-9-]+(?:[?#].*)?$/i.test(
+          rawExistingHref
+        )
+      ) {
+        return rawExistingHref;
+      }
+
+      const rawCardTitle =
+        (product as any)?.cardTitle;
+
+      const cardTitleText =
+        typeof rawCardTitle ===
+        "string"
+          ? rawCardTitle
+          : String(
+              rawCardTitle?.zh ||
+              rawCardTitle?.["zh-CN"] ||
+              rawCardTitle?.en ||
+              ""
+            ).trim();
+
+      const rawSlug =
+        String(
+          (product as any)?.detailSlug ||
+          (product as any)?.slug ||
+          (product as any)?.productSlug ||
+          (product as any)?.model ||
+          (product as any)?.displayModel ||
+          (product as any)?.modelDisplay ||
+          cardTitleText ||
+          ""
+        )
+          .trim()
+          .split("/")
+          .filter(Boolean)
+          .pop() ||
+        "";
+
+      const modelSlug =
+        rawSlug
+          .toLowerCase()
+          .replace(/μ/g, "u")
+          .replace(
+            /[^a-z0-9]+/g,
+            "-"
+          )
+          .replace(
+            /^-+|-+$/g,
+            ""
+          );
+
+      return modelSlug
+        ? "/products/fittings/bulkhead-barbed-fittings/" +
+            modelSlug
+        : "/products/fittings/bulkhead-barbed-fittings";
+    }
+  }
+
+  /* BULKHEAD_BARBED_DETAIL_HREF_END */
+
+  /* BARBED_FITTING_DETAIL_HREF_START */
+
+  /*
+   * 倒刺接头标准型号详情链接。
+   * 页面结构继续复用 ProductDetailClient，
+   * 这里只负责把卡片导向具体型号。
+   */
+  {
+    const rawProductTypeId =
+      String(
+        (product as any)?.productTypeId ||
+        ""
+      ).trim();
+
+    const rawExistingHref =
+      String(
+        (product as any)?.detailHref ||
+        (product as any)?.href ||
+        ""
+      ).trim();
+
+    const isBarbedFitting =
+      rawProductTypeId ===
+        "barbed-fittings" ||
+      rawExistingHref.includes(
+        "/products/fittings/barbed-fittings"
+      );
+
+    if (isBarbedFitting) {
+      const rawCardTitle =
+        (product as any)?.cardTitle;
+
+      const cardTitleText =
+        typeof rawCardTitle ===
+        "string"
+          ? rawCardTitle
+          : String(
+              rawCardTitle?.zh ||
+              rawCardTitle?.["zh-CN"] ||
+              rawCardTitle?.en ||
+              ""
+            ).trim();
+
+      const model =
+        String(
+          (product as any)?.model ||
+          (product as any)?.modelCode ||
+          (product as any)?.modelDisplay ||
+          cardTitleText ||
+          (product as any)?.productId ||
+          ""
+        ).trim();
+
+      const modelSlug =
+        model
+          .toLowerCase()
+          .replace(/μ/g, "u")
+          .replace(
+            /[^a-z0-9]+/g,
+            "-"
+          )
+          .replace(
+            /^-+|-+$/g,
+            ""
+          );
+
+      return modelSlug
+        ? "/products/fittings/barbed-fittings/" + modelSlug
+        : "/products/fittings/barbed-fittings";
+    }
+  }
+
+  /* BARBED_FITTING_DETAIL_HREF_END */
+
   /*
     CONTROL_MODULE_DETAIL_HREF_20260708
 
@@ -1268,6 +2066,110 @@ function sortHardTubeFilterOptionsForDisplay(
     label: string;
   }>
 ) {
+  /* QUICK_CONNECT_FILTER02_SORT_START */
+
+  /*
+   * 快插接头的“接管内径或螺纹”排序：
+   *
+   * 1. 软管内径按照毫米数值从小到大；
+   * 2. 螺纹规格放在所有软管尺寸之后；
+   * 3. 不改变硬管接头和其他产品筛选。
+   */
+  if (
+    productTypeId === "quick-connect-fittings" &&
+    filterKey === "filter02"
+  ) {
+    const diameterOrder = [
+      "1.6 mm",
+      "3.2 mm",
+      "4.8 mm",
+      "6.4 mm",
+      "7.9 mm",
+      "9.5 mm",
+      "12.7 mm",
+      "16.0 mm",
+      "19.0 mm",
+    ];
+
+    const threadOrder = [
+      "1/8\"-27 NPT",
+      "1/4\"-18 NPT",
+      "3/8\"-18 NPT",
+      "1/2\"-14 NPT",
+      "R1/8（BSPT）",
+      "1/4\"-28 UNF",
+    ];
+
+    function getQuickConnectOptionOrder(
+      value: string
+    ) {
+      const diameterIndex =
+        diameterOrder.indexOf(value);
+
+      if (diameterIndex >= 0) {
+        return diameterIndex;
+      }
+
+      const threadIndex =
+        threadOrder.indexOf(value);
+
+      if (threadIndex >= 0) {
+        return (
+          diameterOrder.length +
+          threadIndex
+        );
+      }
+
+      return 999;
+    }
+
+    return [...options].sort(
+      (
+        current,
+        next
+      ) => {
+        const currentValue =
+          String(
+            current.value ||
+            current.label ||
+            ""
+          ).trim();
+
+        const nextValue =
+          String(
+            next.value ||
+            next.label ||
+            ""
+          ).trim();
+
+        const orderDifference =
+          getQuickConnectOptionOrder(
+            currentValue
+          ) -
+          getQuickConnectOptionOrder(
+            nextValue
+          );
+
+        if (orderDifference !== 0) {
+          return orderDifference;
+        }
+
+        return currentValue.localeCompare(
+          nextValue,
+          "zh-CN",
+          {
+            numeric: true,
+          }
+        );
+      }
+    );
+  }
+
+  /* QUICK_CONNECT_FILTER02_SORT_END */
+
+
+
+
   if (
     productTypeId !== "hard-tube-fittings" ||
     filterKey !== "filter03"
@@ -1299,6 +2201,114 @@ function sortHardTubeFilterOptionsForDisplay(
     return currentOrder - nextOrder;
   });
 }
+
+
+/*
+ * THREAD_TO_BARBED_FINAL_FILTER_LAYOUT
+ *
+ * 螺纹转倒刺接头：
+ * filter02 = 密封方式，每项独占一行
+ * filter01 = 连接结构，两个一排
+ */
+function getProductFilterGroupLayout(
+  productTypeId: string,
+  filterKey: SelectionFilterKey
+): ProductSelectionFilterGroup["layout"] | undefined {
+
+  /* BULKHEAD_BARBED_TWO_COLUMN_LAYOUT_START */
+  if (productTypeId === "bulkhead-barbed-fittings") {
+    return "two";
+  }
+  /* BULKHEAD_BARBED_TWO_COLUMN_LAYOUT_END */
+
+  /*
+   * 过滤器与单向阀筛选页：
+   * 从“产品类型”开始，所有筛选选项统一两个一排。
+   *
+   * 包括：
+   * filter01 产品类型
+   * filter02 过滤器类型
+   * filter03 滤网材质
+   * filter04 过滤精度
+   * filter05 密封类型
+   * filter06 膜片材质
+   * filter07 接管内径 / 螺纹类型
+   * filter08 材质
+   * filter09 颜色
+   */
+  if (
+    productTypeId ===
+    "filters"
+  ) {
+    return "two";
+  }
+
+  /*
+   * 保留螺纹转倒刺接头原有布局。
+   */
+  if (
+    productTypeId !==
+    "thread-to-barbed-fittings"
+  ) {
+    return undefined;
+  }
+
+  if (
+    filterKey === "filter01" ||
+    filterKey === "filter02"
+  ) {
+    return "two";
+  }
+
+  return undefined;
+}
+
+/* =========================================================
+   FITTING_FILTER_CHECK_VALVE_MERGE_HELPER_START
+
+   左侧只显示 filters 一个入口，
+   但该入口同时匹配：
+   - filters
+   - check-valves
+   ========================================================= */
+
+const FITTING_FILTER_AND_CHECK_VALVE_TYPE_ID =
+  "filters";
+
+const FITTING_CHECK_VALVE_SOURCE_TYPE_ID =
+  "check-valves";
+
+function matchesActiveProductType(
+  categoryId: string,
+  activeProductTypeId: string,
+  productTypeId: string
+) {
+  if (!activeProductTypeId) {
+    return true;
+  }
+
+  if (
+    categoryId ===
+      "fittings" &&
+    activeProductTypeId ===
+      FITTING_FILTER_AND_CHECK_VALVE_TYPE_ID
+  ) {
+    return (
+      productTypeId ===
+        FITTING_FILTER_AND_CHECK_VALVE_TYPE_ID ||
+      productTypeId ===
+        FITTING_CHECK_VALVE_SOURCE_TYPE_ID
+    );
+  }
+
+  return (
+    productTypeId ===
+    activeProductTypeId
+  );
+}
+
+/* FITTING_FILTER_CHECK_VALVE_MERGE_HELPER_END */
+
 
 export default function ProductSelectionClient({
   locale = "zh",
@@ -1416,7 +2426,91 @@ const [searchKeyword, setSearchKeyword] = useState("");
       }
     });
 
-    return Array.from(optionMap.values());
+    /* FITTING_FILTER_CHECK_VALVE_OPTIONS_START */
+
+    if (
+      activeCategoryId ===
+      "fittings"
+    ) {
+      /*
+       * 顶层不再显示堵头。
+       */
+      optionMap.delete(
+        "plugs"
+      );
+
+      /*
+       * 单向阀不再独立显示，
+       * 后续由 filters 合并入口承接。
+       */
+      optionMap.delete(
+        "check-valves"
+      );
+
+      const filterOption =
+        optionMap.get(
+          "filters"
+        );
+
+      if (filterOption) {
+        optionMap.set(
+          "filters",
+          {
+            ...filterOption,
+
+            label:
+              locale === "zh"
+                ? "过滤器与单向阀"
+                : "Filters & Check Valves",
+          }
+        );
+      }
+    }
+
+    /* FITTING_FILTER_CHECK_VALVE_OPTIONS_END */
+
+    /* FITTING_PRODUCT_TYPE_OPTIONS_SORT_START */
+
+    const options =
+      Array.from(
+        optionMap.values()
+      );
+
+    if (
+      activeCategoryId ===
+      "fittings"
+    ) {
+      options.sort(
+        (current, next) => {
+          const currentOrder =
+            FITTING_PRODUCT_TYPE_ORDER_MAP.get(
+              String(
+                current.value ||
+                ""
+              )
+            ) ??
+            999;
+
+          const nextOrder =
+            FITTING_PRODUCT_TYPE_ORDER_MAP.get(
+              String(
+                next.value ||
+                ""
+              )
+            ) ??
+            999;
+
+          return (
+            currentOrder -
+            nextOrder
+          );
+        }
+      );
+    }
+
+    return options;
+
+    /* FITTING_PRODUCT_TYPE_OPTIONS_SORT_END */
   }, [activeCategoryId, categoryProducts, locale]);
 
   const currentTypeProducts = useMemo(() => {
@@ -1424,9 +2518,17 @@ const [searchKeyword, setSearchKeyword] = useState("");
       return categoryProducts;
     }
 
-    return categoryProducts.filter((product) => {
-      return product.productTypeId === activeProductTypeId;
-    });
+    return categoryProducts.filter(
+      (product) =>
+        matchesActiveProductType(
+          activeCategoryId,
+          activeProductTypeId,
+          String(
+            product.productTypeId ||
+            ""
+          )
+        )
+    );
   }, [activeProductTypeId, categoryProducts]);
 
   const activeFilterLabels = useMemo(() => {
@@ -1449,6 +2551,90 @@ const [searchKeyword, setSearchKeyword] = useState("");
     }
 
     activeFilterLabels.forEach((label: ProductSelectionFilterLabel) => {
+      /* FILTER_CHECK_VALVE_DYNAMIC_GROUPS_START */
+
+      /*
+       * 过滤器与单向阀共用一个顶层入口，
+       * 但筛选字段按实际型号结构动态显示。
+       *
+       * 未选择产品类型：
+       * - 产品类型
+       * - 接管内径 / 螺纹类型
+       * - 材质
+       * - 颜色
+       *
+       * 选择过滤器：
+       * - 增加过滤器类型、滤网材质、过滤精度
+       *
+       * 选择单向阀：
+       * - 增加密封类型、膜片材质
+       */
+      if (
+        activeCategoryId ===
+          "fittings" &&
+        activeProductTypeId ===
+          "filters"
+      ) {
+        const currentFilterKey =
+          String(
+            (label as any)
+              .filterKey ||
+            ""
+          );
+
+        const selectedTypeValues =
+          selectedFilters.filter01;
+
+        const selectedMergedType =
+          selectedTypeValues &&
+          selectedTypeValues.size === 1
+            ? Array.from(
+                selectedTypeValues
+              )[0]
+            : "";
+
+        const commonKeys =
+          new Set([
+            "filter01",
+            "filter07",
+            "filter08",
+            "filter09",
+          ]);
+
+        const filterKeys =
+          new Set([
+            ...commonKeys,
+            "filter02",
+            "filter03",
+            "filter04",
+          ]);
+
+        const checkValveKeys =
+          new Set([
+            ...commonKeys,
+            "filter05",
+            "filter06",
+          ]);
+
+        const allowedKeys =
+          selectedMergedType ===
+            "过滤器"
+            ? filterKeys
+            : selectedMergedType ===
+                "单向阀"
+              ? checkValveKeys
+              : commonKeys;
+
+        if (
+          !allowedKeys.has(
+            currentFilterKey
+          )
+        ) {
+          return;
+        }
+      }
+
+      /* FILTER_CHECK_VALVE_DYNAMIC_GROUPS_END */
       const options = getFilterOptions(
         currentTypeProducts as any,
 
@@ -1463,6 +2649,10 @@ const [searchKeyword, setSearchKeyword] = useState("");
         key: (label as any).filterKey,
         title: getText(locale, label.label, (label as any).filterKey),
         inputType: label.inputType,
+        layout: getProductFilterGroupLayout(
+          activeProductTypeId,
+          (label as any).filterKey as SelectionFilterKey
+        ),
         options: sortHardTubeFilterOptionsForDisplay(
           activeProductTypeId,
           (label as any).filterKey,
@@ -1484,7 +2674,16 @@ const [searchKeyword, setSearchKeyword] = useState("");
     const keyword = searchKeyword.trim().toLowerCase();
 
     return categoryProducts.filter((product) => {
-      if (activeProductTypeId && product.productTypeId !== activeProductTypeId) {
+      if (
+        !matchesActiveProductType(
+          activeCategoryId,
+          activeProductTypeId,
+          String(
+            product.productTypeId ||
+            ""
+          )
+        )
+      ) {
         return false;
       }
 
@@ -1892,7 +3091,721 @@ const [searchKeyword, setSearchKeyword] = useState("");
       return next;
     });
   }
-  function isFilterOptionActive(
+
+/* BARBED_PORT_OPTION_DISABLED_START */
+
+
+function isBarbedPortOptionDisabled(
+
+  group: ProductSelectionFilterGroup,
+
+  value: string
+
+) {
+
+  if (
+
+    activeProductTypeId !==
+
+    "barbed-fittings"
+
+  ) {
+
+    return false;
+
+  }
+
+
+  if (
+
+    group.key !== "filter02" &&
+
+    group.key !== "filter03" &&
+
+    group.key !== "filter04"
+
+  ) {
+
+    return false;
+
+  }
+
+
+  const candidateKey =
+
+    group.key as SelectionFilterKey;
+
+
+  /*
+
+   * 当前已经选中的值不能禁用，
+
+   * 保留再次点击取消的能力。
+
+   */
+
+  if (
+
+    selectedFilters[
+
+      candidateKey
+
+    ]?.has(value)
+
+  ) {
+
+    return false;
+
+  }
+
+
+  /*
+
+   * 顺序联动：
+
+   *
+
+   * 内径1不受内径2、3反向影响；
+
+   * 内径2受内径1影响；
+
+   * 内径3受内径1、2影响。
+
+   */
+
+  const dependencyMap: Record<
+
+    "filter02" |
+
+    "filter03" |
+
+    "filter04",
+
+    SelectionFilterKey[]
+
+  > = {
+
+    filter02: [
+
+      "filter01",
+
+      "filter05",
+
+      "filter06",
+
+    ],
+
+
+    filter03: [
+
+      "filter01",
+
+      "filter02",
+
+      "filter05",
+
+      "filter06",
+
+    ],
+
+
+    filter04: [
+
+      "filter01",
+
+      "filter02",
+
+      "filter03",
+
+      "filter05",
+
+      "filter06",
+
+    ],
+
+  };
+
+
+  const dependencies =
+
+    dependencyMap[
+
+      candidateKey as
+
+        | "filter02"
+
+        | "filter03"
+
+        | "filter04"
+
+    ];
+
+
+  const hasMatchingProduct =
+
+    currentTypeProducts.some(
+
+      (product) => {
+
+        const candidateValues =
+
+          splitFilterValues(
+
+            (product.filters || {})[
+
+              candidateKey
+
+            ]
+
+          );
+
+
+        if (
+
+          !candidateValues.includes(
+
+            value
+
+          )
+
+        ) {
+
+          return false;
+
+        }
+
+
+        return dependencies.every(
+
+          (dependencyKey) => {
+
+            const selectedValues =
+
+              selectedFilters[
+
+                dependencyKey
+
+              ];
+
+
+            if (
+
+              !selectedValues ||
+
+              selectedValues.size === 0
+
+            ) {
+
+              return true;
+
+            }
+
+
+            const productValues =
+
+              splitFilterValues(
+
+                (product.filters || {})[
+
+                  dependencyKey
+
+                ]
+
+              );
+
+
+            return productValues.some(
+
+              (productValue) =>
+
+                selectedValues.has(
+
+                  productValue
+
+                )
+
+            );
+
+          }
+
+        );
+
+      }
+
+    );
+
+
+  return !hasMatchingProduct;
+
+}
+
+
+/* BARBED_PORT_OPTION_DISABLED_END */
+
+/* THREAD_TO_BARBED_OPTION_DISABLED_START */
+
+/*
+ * 螺纹转倒刺接头筛选联动：
+ *
+ * 1. 选择接管内径后，不兼容的螺纹变灰；
+ * 2. 选择螺纹后，不兼容的接管内径变灰；
+ * 3. 结构、密封方式、材质和颜色同样参与组合判断；
+ * 4. 已选中的选项保留取消能力，不设置为禁用；
+ * 5. 只影响 thread-to-barbed-fittings。
+ */
+function isProductFilterOptionDisabled(
+  group: ProductSelectionFilterGroup,
+  value: string
+) {
+
+  /*
+   * FEMALE_THREAD_ADAPTER_DISABLED_LINKAGE_START
+   *
+   * 内螺纹互转接头筛选规则：
+   *
+   * 1. filter01 连接结构为单选；
+   * 2. 二通、三通始终允许切换，不互相置灰；
+   * 3. filter02 至 filter05 根据当前组合判断；
+   * 4. 没有对应在售型号的选项保留显示并变灰；
+   * 5. 已选中的选项保持可点击，允许取消。
+   */
+  if (
+    activeProductTypeId ===
+    "female-thread-adapters"
+  ) {
+    if (
+      !FILTER_KEYS.includes(
+        group.key as SelectionFilterKey
+      )
+    ) {
+      return false;
+    }
+
+    const candidateKey =
+      group.key as SelectionFilterKey;
+
+    /*
+     * 二通和三通必须始终允许互相切换。
+     */
+    if (
+      candidateKey === "filter01"
+    ) {
+      return false;
+    }
+
+    /*
+     * 已选中的项目保持可点击，
+     * 允许再次点击取消。
+     */
+    if (
+      selectedFilters[
+        candidateKey
+      ]?.has(value)
+    ) {
+      return false;
+    }
+
+    const hasMatchingProduct =
+      currentTypeProducts.some(
+        (product) => {
+          const candidateValues =
+            splitFilterValues(
+              (product.filters || {})[
+                candidateKey
+              ]
+            );
+
+          if (
+            !candidateValues.includes(
+              value
+            )
+          ) {
+            return false;
+          }
+
+          /*
+           * 候选值必须同时满足其他已选条件。
+           *
+           * 同一个筛选组不参与自身判断，
+           * 其他组之间采用组合交集判断。
+           */
+          return FILTER_KEYS.every(
+            (dependencyKey) => {
+              if (
+                dependencyKey ===
+                candidateKey
+              ) {
+                return true;
+              }
+
+              const selectedValues =
+                selectedFilters[
+                  dependencyKey
+                ];
+
+              if (
+                !selectedValues ||
+                selectedValues.size === 0
+              ) {
+                return true;
+              }
+
+              const productValues =
+                splitFilterValues(
+                  (product.filters || {})[
+                    dependencyKey
+                  ]
+                );
+
+              return productValues.some(
+                (productValue) =>
+                  selectedValues.has(
+                    productValue
+                  )
+              );
+            }
+          );
+        }
+      );
+
+    return !hasMatchingProduct;
+  }
+
+  /* FEMALE_THREAD_ADAPTER_DISABLED_LINKAGE_END */
+
+  /*
+   * 保留原倒刺接头三端口禁用逻辑。
+   */
+  if (
+    isBarbedPortOptionDisabled(
+      group,
+      value
+    )
+  ) {
+    return true;
+  }
+
+  /*
+   * FEMALE_THREAD_FILTER_OPTION_DISABLED_START
+   *
+   * 内螺纹互转接头双向筛选联动：
+   * - 连接结构
+   * - 螺纹规格
+   * - 流道内径
+   * - 材质
+   * - 颜色
+   *
+   * 当前组合不存在对应在售型号时，
+   * 选项保留显示，但变灰且不可点击。
+   */
+  if (
+    activeProductTypeId ===
+    "female-thread-adapters"
+  ) {
+    if (
+      !FILTER_KEYS.includes(
+        group.key as SelectionFilterKey
+      )
+    ) {
+      return false;
+    }
+
+    const candidateKey =
+      group.key as SelectionFilterKey;
+
+    /*
+     * 已经选中的项目不能禁用，
+     * 保留再次点击取消的能力。
+     */
+    if (
+      selectedFilters[
+        candidateKey
+      ]?.has(value)
+    ) {
+      return false;
+    }
+
+    const hasMatchingProduct =
+      currentTypeProducts.some(
+        (product) => {
+          const candidateValues =
+            splitFilterValues(
+              (product.filters || {})[
+                candidateKey
+              ]
+            );
+
+          if (
+            !candidateValues.includes(
+              value
+            )
+          ) {
+            return false;
+          }
+
+          return FILTER_KEYS.every(
+            (dependencyKey) => {
+              /*
+               * 当前候选组内仍然保持多选 OR 逻辑。
+               */
+              if (
+                dependencyKey ===
+                candidateKey
+              ) {
+                return true;
+              }
+
+              const selectedValues =
+                selectedFilters[
+                  dependencyKey
+                ];
+
+              if (
+                !selectedValues ||
+                selectedValues.size === 0
+              ) {
+                return true;
+              }
+
+              const productValues =
+                splitFilterValues(
+                  (product.filters || {})[
+                    dependencyKey
+                  ]
+                );
+
+              return productValues.some(
+                (productValue) =>
+                  selectedValues.has(
+                    productValue
+                  )
+              );
+            }
+          );
+        }
+      );
+
+    return !hasMatchingProduct;
+  }
+
+  /* FEMALE_THREAD_FILTER_OPTION_DISABLED_END */
+
+  /*
+   * LUER_FILTER_OPTION_DISABLED_START
+   *
+   * 鲁尔接头双向组合联动：
+   * 1. 产品系列、接管内径、螺纹、材质、颜色共同参与判断；
+   * 2. 当前组合没有对应在售型号时，选项变灰；
+   * 3. 已选中的项目保留取消能力；
+   * 4. filter01 产品类型已隐藏，不参与联动。
+   */
+  if (
+    activeProductTypeId ===
+    "luer-fittings"
+  ) {
+    if (
+      !FILTER_KEYS.includes(
+        group.key as SelectionFilterKey
+      )
+    ) {
+      return false;
+    }
+
+    const candidateKey =
+      group.key as SelectionFilterKey;
+
+    /*
+     * 产品类型 filter01 已隐藏。
+     */
+    if (
+      candidateKey === "filter01"
+    ) {
+      return false;
+    }
+
+    /*
+     * 已选项目必须能够再次点击取消。
+     */
+    if (
+      selectedFilters[
+        candidateKey
+      ]?.has(value)
+    ) {
+      return false;
+    }
+
+    const hasMatchingProduct =
+      currentTypeProducts.some(
+        (product) => {
+          const candidateValues =
+            splitFilterValues(
+              (product.filters || {})[
+                candidateKey
+              ]
+            );
+
+          if (
+            !candidateValues.includes(
+              value
+            )
+          ) {
+            return false;
+          }
+
+          /*
+           * 检查其他所有已选筛选项。
+           *
+           * 当前分组使用多选逻辑，
+           * 因此判断候选项时忽略当前分组
+           * 已选的其他值。
+           */
+          return FILTER_KEYS.every(
+            (dependencyKey) => {
+              if (
+                dependencyKey ===
+                  candidateKey ||
+                dependencyKey ===
+                  "filter01"
+              ) {
+                return true;
+              }
+
+              const selectedValues =
+                selectedFilters[
+                  dependencyKey
+                ];
+
+              if (
+                !selectedValues ||
+                selectedValues.size === 0
+              ) {
+                return true;
+              }
+
+              const productValues =
+                splitFilterValues(
+                  (product.filters || {})[
+                    dependencyKey
+                  ]
+                );
+
+              return productValues.some(
+                (productValue) =>
+                  selectedValues.has(
+                    productValue
+                  )
+              );
+            }
+          );
+        }
+      );
+
+    return !hasMatchingProduct;
+  }
+
+  /* LUER_FILTER_OPTION_DISABLED_END */
+
+
+  if (
+    activeProductTypeId !==
+    "thread-to-barbed-fittings"
+  ) {
+    return false;
+  }
+
+  if (
+    !FILTER_KEYS.includes(
+      group.key as SelectionFilterKey
+    )
+  ) {
+    return false;
+  }
+
+  const candidateKey =
+    group.key as SelectionFilterKey;
+
+  /*
+   * 当前已选项不能禁用，
+   * 用户需要能够再次点击取消。
+   */
+  if (
+    selectedFilters[
+      candidateKey
+    ]?.has(value)
+  ) {
+    return false;
+  }
+
+  /*
+   * 查找是否至少存在一个真实型号：
+   *
+   * - 当前候选字段等于 value；
+   * - 同时满足其他已选筛选条件。
+   */
+  const hasMatchingProduct =
+    currentTypeProducts.some(
+      (product) => {
+        const candidateValues =
+          splitFilterValues(
+            (product.filters || {})[
+              candidateKey
+            ]
+          );
+
+        if (
+          !candidateValues.includes(value)
+        ) {
+          return false;
+        }
+
+        return FILTER_KEYS.every(
+          (filterKey) => {
+            /*
+             * 判断候选字段时，
+             * 不使用该字段当前已有选择限制自己。
+             */
+            if (
+              filterKey === candidateKey
+            ) {
+              return true;
+            }
+
+            const selectedValues =
+              selectedFilters[filterKey];
+
+            if (
+              !selectedValues ||
+              selectedValues.size === 0
+            ) {
+              return true;
+            }
+
+            const productValues =
+              splitFilterValues(
+                (product.filters || {})[
+                  filterKey
+                ]
+              );
+
+            return productValues.some(
+              (productValue) =>
+                selectedValues.has(
+                  productValue
+                )
+            );
+          }
+        );
+      }
+    );
+
+  return !hasMatchingProduct;
+}
+
+/* THREAD_TO_BARBED_OPTION_DISABLED_END */
+
+
+
+function isFilterOptionActive(
     group: ProductSelectionFilterGroup,
     value: string
   ) {
@@ -2143,10 +4056,12 @@ const [searchKeyword, setSearchKeyword] = useState("");
                     ? activeCategory.description
                     : getText(locale, activeCategory.description as any, ""),
               }}
+              activeProductTypeId={activeProductTypeId}
               filterGroups={filterGroups}
               mobileOpenFilterGroups={mobileOpenFilterGroups}
               onToggleMobileGroup={toggleMobileFilterGroup}
               isOptionActive={isFilterOptionActive}
+              isOptionDisabled={isProductFilterOptionDisabled}
               onFilterChange={handleFilterChange}
               emptyText={pageText.filterEmpty}
             />
@@ -2203,3 +4118,6 @@ const [searchKeyword, setSearchKeyword] = useState("");
 </div>
   );
 }
+
+
+

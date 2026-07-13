@@ -1,17 +1,46 @@
-"use client";
+﻿"use client";
 
 import type { ProductSelectionFilterGroup } from "./product-selection-ui.types";
 
 type ProductFilterGroupProps = {
   group: ProductSelectionFilterGroup;
+  activeProductTypeId?: string;
   mobileOpen: boolean;
   onToggleMobileGroup: (key: ProductSelectionFilterGroup["key"]) => void;
   isOptionActive: (group: ProductSelectionFilterGroup, value: string) => boolean;
   onFilterChange: (group: ProductSelectionFilterGroup, value: string) => void;
 };
 
-function getLayoutClass(group: ProductSelectionFilterGroup) {
-  if (group.key === "productType" || group.key === "filter01") {
+function getLayoutClass(
+  group: ProductSelectionFilterGroup,
+  activeProductTypeId?: string
+) {
+  /*
+   * 螺纹转倒刺接头专属布局：
+   *
+   * filter02 = 密封方式，每个选项占一整行；
+   * filter01 = 连接结构，两个选项一排。
+   */
+  if (
+    activeProductTypeId ===
+    "thread-to-barbed-fittings"
+  ) {
+    if (group.key === "filter02") {
+      return "one";
+    }
+
+    if (group.key === "filter01") {
+      return "two";
+    }
+  }
+
+  /*
+   * 其他产品继续保持原来的公共布局。
+   */
+  if (
+    group.key === "productType" ||
+    group.key === "filter01"
+  ) {
     return "one";
   }
 
@@ -20,13 +49,17 @@ function getLayoutClass(group: ProductSelectionFilterGroup) {
 
 export default function ProductFilterGroup({
   group,
+  activeProductTypeId,
   mobileOpen,
   onToggleMobileGroup,
   isOptionActive,
   onFilterChange,
 }: ProductFilterGroupProps) {
   const modeClass = group.inputType === "single" ? "is-single" : "is-multi";
-  const layoutClass = getLayoutClass(group);
+  const layoutClass = getLayoutClass(
+    group,
+    activeProductTypeId
+  );
 
   return (
     <div
@@ -68,3 +101,4 @@ export default function ProductFilterGroup({
     </div>
   );
 }
+

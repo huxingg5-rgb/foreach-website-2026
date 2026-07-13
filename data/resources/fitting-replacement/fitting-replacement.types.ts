@@ -1,4 +1,4 @@
-/* =========================================================
+﻿/* =========================================================
    fitting-replacement.types.ts
    恒永达官网｜接头替代查询数据类型定义
 
@@ -7,7 +7,7 @@
 
    作用：
    1. 统一约束接头替代查询模块的数据结构
-   2. 防止商品编码、型号、竞品编码、图片路径、图纸路径等字段写乱
+   2. 防止商品编码、型号、兼容型号、图片路径、图纸路径等字段写乱
    3. 当前服务：
       - Q20 快插接头替代查询
       - 中文页面 /resources/selection-support/fitting-replacement
@@ -85,7 +85,7 @@ export interface FittingModelRule {
    说明：
    1. 商品编码是内部唯一 ID
    2. 型号用于解析产品含义
-   3. 竞品编码用于客户搜索
+   3. 兼容型号用于客户搜索
    4. 产品图按型号自动匹配
    5. 2D 图纸 PDF 也按型号自动匹配
 ========================================================= */
@@ -96,7 +96,7 @@ export interface FittingReplacementProduct {
   /* 恒永达型号，例如 Q2001-PMV-SPPE */
   foreachModel: string;
 
-  /* 竞品编码列表，例如 A0018 / B0007 / C0007 */
+  /* 兼容型号列表，例如 A0018 / B0007 / C0007 */
   competitorModels: string[];
 
   /* 包装，例如 25pcs/pkg */
@@ -113,6 +113,13 @@ export interface FittingReplacementProduct {
 
   /* 2D 图纸 PDF 路径，后续根据型号自动生成 */
   drawingPdfPath: string;
+
+  /* 对应的正式产品详情页；尚未建设详情页时为空 */
+  detailHref?: string;
+
+  /* 前台辅助展示的产品分类和系列 */
+  productType?: string;
+  productSeries?: string;
 }
 
 /* =========================================================

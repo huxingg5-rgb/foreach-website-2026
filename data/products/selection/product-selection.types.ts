@@ -24,7 +24,8 @@ export type SelectionFilterKey =
   | "filter05"
   | "filter06"
   | "filter07"
-  | "filter08";
+  | "filter08"
+  | "filter09";
 
 export type LocalizedText =
   | string
