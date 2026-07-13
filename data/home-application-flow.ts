@@ -488,95 +488,6 @@ const ivdCard: HomeFlowApplicationCard = {
 };
 
 /* ================================
-   手机端新增应用卡片：微流体领域
-
-   说明：
-   1. 这个卡片只放在 mobileApplicationCards 里
-   2. PC 端不显示这个卡片，避免破坏原来的五张漂浮卡片布局
-   3. 当前图片先复用 tv-bg.jpg，后期有真实图片后可以替换
-================================ */
-const microfluidicsMobileCard: HomeFlowMobileApplicationCard = {
-  key: "microfluidics",
-  title: {
-    "zh-CN": "微流体领域",
-    en: "Microfluidics",
-    es: "Microfluídica",
-    fr: "Microfluidique",
-    ko: "마이크로플루이딕스",
-    ru: "Микрофлюидика",
-  },
-  description: {
-    "zh-CN":
-      "面向微量液体控制、精密分配、低内腔体积流路与模块化微流体系统集成。",
-    en:
-      "For micro-volume liquid control, precision dispensing, low internal volume fluid paths, and modular microfluidic system integration.",
-    es:
-      "Para control de microlíquidos, dispensación precisa, vías fluídicas de bajo volumen interno e integración modular de sistemas microfluídicos.",
-    fr:
-      "Pour le contrôle de micro-volumes, la distribution précise, les voies fluidiques à faible volume interne et l’intégration modulaire de systèmes microfluidiques.",
-    ko:
-      "미량 액체 제어, 정밀 분주, 낮은 내부 체적 유로 및 모듈형 마이크로플루이딕 시스템 통합에 적합합니다.",
-    ru:
-      "Для управления микролитровыми объемами жидкости, точного дозирования, жидкостных каналов с малым внутренним объемом и модульной интеграции микрофлюидных систем.",
-  },
-  image: "/images/home/application-flow/tv-bg.jpg",
-  imageAlt: {
-    "zh-CN": "微流体领域液路应用场景",
-    en: "Fluidic application scenario for microfluidics",
-    es: "Escenario fluídico para microfluídica",
-    fr: "Scénario fluidique pour la microfluidique",
-    ko: "마이크로플루이딕스 유체 응용 장면",
-    ru: "Сценарий применения жидкостных систем в микрофлюидике",
-  },
-  tags: [
-    {
-      key: "micro-dispensing",
-      label: {
-        "zh-CN": "微量分配",
-        en: "Micro Dispensing",
-        es: "Microdispensación",
-        fr: "Micro-distribution",
-        ko: "미량 분주",
-        ru: "Микродозирование",
-      },
-    },
-    {
-      key: "low-internal-volume",
-      label: {
-        "zh-CN": "低内腔体积",
-        en: "Low Internal Volume",
-        es: "Bajo volumen interno",
-        fr: "Faible volume interne",
-        ko: "낮은 내부 체적",
-        ru: "Малый внутренний объем",
-      },
-    },
-    {
-      key: "precision-fluid-control",
-      label: {
-        "zh-CN": "精密流控",
-        en: "Precision Fluid Control",
-        es: "Control fluídico preciso",
-        fr: "Contrôle fluidique précis",
-        ko: "정밀 유체 제어",
-        ru: "Прецизионное управление жидкостями",
-      },
-    },
-    {
-      key: "system-integration",
-      label: {
-        "zh-CN": "系统集成",
-        en: "System Integration",
-        es: "Integración de sistemas",
-        fr: "Intégration système",
-        ko: "시스템 통합",
-        ru: "Системная интеграция",
-      },
-    },
-  ],
-};
-
-/* ================================
    把 PC 应用卡片转换成手机端应用卡片
 
    说明：
@@ -786,10 +697,9 @@ export const homeApplicationFlowData = {
      手机端应用按钮数据
 
      说明：
-     1. 手机端显示 6 个按钮
-     2. 前 5 个复用 PC 端数据
-     3. 第 6 个是新增的“微流体领域”
-     4. 以后手机端内容全部从这里读取，不再写在组件里
+     1. 手机端显示 5 个按钮
+     2. 5 个按钮全部复用 PC 端数据
+          3. 以后手机端内容全部从这里读取，不再写在组件里
   ================================ */
   mobileApplicationCards: [
     toMobileApplicationCard(analyticalInstrumentsCard),
@@ -797,7 +707,6 @@ export const homeApplicationFlowData = {
     toMobileApplicationCard(syntheticBiologyCard),
     toMobileApplicationCard(labAutomationCard),
     toMobileApplicationCard(ivdCard),
-    microfluidicsMobileCard,
   ] satisfies HomeFlowMobileApplicationCard[],
 
   /* ================================

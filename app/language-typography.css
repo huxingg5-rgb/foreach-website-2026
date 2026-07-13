@@ -747,14 +747,17 @@ body .site-page--expanded .site-footer__contact {
   }
 
   body .site-page--compact .home-flow-title {
+    font-size: clamp(30px, 8.2vw, 38px) !important;
     line-height: 1.05;
   }
 
   body .site-page--standard .home-flow-title {
+    font-size: clamp(30px, 8.2vw, 38px) !important;
     line-height: 1.12;
   }
 
   body .site-page--expanded .home-flow-title {
+    font-size: clamp(30px, 8.2vw, 38px) !important;
     line-height: 1.18;
   }
 

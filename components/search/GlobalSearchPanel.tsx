@@ -716,7 +716,31 @@ export default function GlobalSearchPanel({
                             locale
                           )}
                           key={`${item.m}-${item.h}-${item.t}`}
-                          onClick={onClose}
+                          onClick={(event) => {
+                            /*
+                              MOBILE_SEARCH_LINK_FIX_20260713
+
+                              手机端点击搜索结果时，明确执行页面跳转，
+                              避免搜索面板先卸载导致默认链接跳转被中断。
+                            */
+                            if (
+                              event.metaKey ||
+                              event.ctrlKey ||
+                              event.shiftKey ||
+                              event.altKey ||
+                              event.button !== 0
+                            ) {
+                              return;
+                            }
+
+                            event.preventDefault();
+
+                            const nextHref =
+                              event.currentTarget.href;
+
+                            onClose();
+                            window.location.assign(nextHref);
+                          }}
                         >
                           {item.i ? (
                             <span className="global-search-result-image">

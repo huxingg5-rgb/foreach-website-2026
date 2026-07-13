@@ -1,4 +1,4 @@
-﻿@import "tailwindcss"; /* 闂傚倸鍊峰ù鍥敋瑜忛埀顒佺▓閺呯娀銆佸▎鎾冲唨妞ゆ挾鍋熼悰銉モ攽鎺抽崐鎰板磻閹剧粯鍋傞柕鍫濐槹閻撴稓鈧箍鍎辨鎼佺嵁閺嶎厽鐓?Tailwind CSS 闂傚倸鍊搁崐鎼佸磹閻戣姤鍤勯柛鎾茬劍閸忔粓鏌涢锝嗙闁汇倝绠栭弻锝夊箛椤撶姰鍋為梺鍝勵儏缁夊綊寮婚妸銉㈡斀闁糕檧鏅滆倴闂備線鈧偛鑻崢鍝ョ磼閼镐絻澹橀柣锝囧厴婵℃瓕顦柛瀣尭閳藉鈻嶉褌绨婚柍缁樻崌楠炲鏁傜憴锝嗗闂備礁鍚嬫禍浠嬪磿瀹ュ鏁傞柛鈺勬硾濞差參銆佸☉銏″€婚柛銉㈡櫇閳?*/
+@import "tailwindcss"; /* 闂傚倸鍊峰ù鍥敋瑜忛埀顒佺▓閺呯娀銆佸▎鎾冲唨妞ゆ挾鍋熼悰銉モ攽鎺抽崐鎰板磻閹剧粯鍋傞柕鍫濐槹閻撴稓鈧箍鍎辨鎼佺嵁閺嶎厽鐓?Tailwind CSS 闂傚倸鍊搁崐鎼佸磹閻戣姤鍤勯柛鎾茬劍閸忔粓鏌涢锝嗙闁汇倝绠栭弻锝夊箛椤撶姰鍋為梺鍝勵儏缁夊綊寮婚妸銉㈡斀闁糕檧鏅滆倴闂備線鈧偛鑻崢鍝ョ磼閼镐絻澹橀柣锝囧厴婵℃瓕顦柛瀣尭閳藉鈻嶉褌绨婚柍缁樻崌楠炲鏁傜憴锝嗗闂備礁鍚嬫禍浠嬪磿瀹ュ鏁傞柛鈺勬硾濞差參銆佸☉銏″€婚柛銉㈡櫇閳?*/
 
 /* =========================================================
    app/globals.css
@@ -1680,7 +1680,7 @@ html[lang="ru"] .home-hero-btn:hover {
   }
 
   .home-hero-title {
-    font-size: 40px; /* 闂傚倸鍊搁崐鎼佸磹妞嬪海鐭嗗ù锝堟缁€濠傗攽閻樻彃浜為柣鎺旀櫕閹叉悂寮崼娑掑亾娓氣偓瀵粙顢橀悙鑼垛偓鍨攽閿涘嫬浠х紒顕呭灦瀵偊鎮╃紒妯锋嫼闂備緡鍋嗛崑娑㈡嚐椤栨稒娅犻柟娈垮枤绾惧ジ寮堕崼娑樺婵炴惌鍠氶埀顒侇問閸ｎ噣宕抽敐澶屽祦閻庯綆浜栭弨浠嬫煕椤愶絿鐭嬫い銏∶埞鎴︽晬閸曨偂鏉梺绋匡攻閸旀瑥顕ｉ幓鎺嗘斀闁割偅绻傞悘濠傤渻閵堝棛澧遍柛瀣⊕椤㈠﹪姊绘担鍛婂暈婵炶绠撳畷瑙勫閺夋垵鐎梺绋挎湰缁嬪繑绂嶅鍫熺厵闁逛絻娅曞▍鍛存煃瑜滈崜姘洪悢鐓庣畺婵☆垳绮紞鍥煏婵炲灝鈧绮诲顒夋富闁靛牆妫楁慨鍌炴煕婵犲啯绀嬮柕鍡楀€圭缓浠嬪川婵犲嫬寮虫繝娈垮枟椤牓宕洪弽顓熷亗闁绘柨鍚嬮悡鍐┿亜閺嶃劎銆掗柟鍐插暞缁绘稓浠﹂崒姘ｅ亾濠靛绠?*/
+    font-size: clamp(26px, 6.5vw, 30px); /* 闂傚倸鍊搁崐鎼佸磹妞嬪海鐭嗗ù锝堟缁€濠傗攽閻樻彃浜為柣鎺旀櫕閹叉悂寮崼娑掑亾娓氣偓瀵粙顢橀悙鑼垛偓鍨攽閿涘嫬浠х紒顕呭灦瀵偊鎮╃紒妯锋嫼闂備緡鍋嗛崑娑㈡嚐椤栨稒娅犻柟娈垮枤绾惧ジ寮堕崼娑樺婵炴惌鍠氶埀顒侇問閸ｎ噣宕抽敐澶屽祦閻庯綆浜栭弨浠嬫煕椤愶絿鐭嬫い銏∶埞鎴︽晬閸曨偂鏉梺绋匡攻閸旀瑥顕ｉ幓鎺嗘斀闁割偅绻傞悘濠傤渻閵堝棛澧遍柛瀣⊕椤㈠﹪姊绘担鍛婂暈婵炶绠撳畷瑙勫閺夋垵鐎梺绋挎湰缁嬪繑绂嶅鍫熺厵闁逛絻娅曞▍鍛存煃瑜滈崜姘洪悢鐓庣畺婵☆垳绮紞鍥煏婵炲灝鈧绮诲顒夋富闁靛牆妫楁慨鍌炴煕婵犲啯绀嬮柕鍡楀€圭缓浠嬪川婵犲嫬寮虫繝娈垮枟椤牓宕洪弽顓熷亗闁绘柨鍚嬮悡鍐┿亜閺嶃劎銆掗柟鍐插暞缁绘稓浠﹂崒姘ｅ亾濠靛绠?*/
     line-height: 1.15; /* 闂傚倸鍊搁崐鎼佸磹妞嬪海鐭嗗ù锝堟缁€濠傗攽閻樻彃浜為柣鎺旀櫕閹叉悂寮崼娑掑亾娓氣偓瀵粙顢橀悙鑼垛偓鍨攽閿涘嫬浠х紒顕呭灦瀵偊鎮╃紒妯锋嫼闂備緡鍋嗛崑娑㈡嚐椤栨稒娅犻柟娈垮枤绾惧ジ寮堕崼娑樺婵炴惌鍠氶埀顒侇問閸ｎ噣宕抽敐澶屽祦閻庯綆浜栭弨浠嬫煕椤愶絿鐭嬫い銏∶埞鎴︽晬閸曨偂鏉梺绋匡攻閸旀瑥顕ｉ幓鎺嗘斀闁割偅绻傞悘濠傤渻閵堝棛澧遍柛瀣⊕椤㈠﹪姊绘担鍛婂暈婵炶绠撳畷瑙勫閺夋垵鐎梺绋挎湰缁嬪繑绂嶅鍫熺厵闁逛絻娅曞▍鍛存煃瑜滈崜姘洪悢鐓庣畺婵☆垳绮紞鍥煏婵炲灝鈧绮诲顒夋富闁靛牆妫楁慨鍌炴煕婵犲啯绀嬮柕鍡楀€垮畷妤冪箔鏉炴壆鐩庢俊鐐€栭幐楣冨磻閻斿憡娅犻柨鏇炲€归悡蹇涙煕閳╁啯绀堢紒鎰⒐椤ㄣ儵鎮欏顔煎壎闂佽鍠楃划鎾崇暦閸楃倣鐔煎礂閸忚偐妲?*/
   }
 
@@ -2227,6 +2227,7 @@ html[lang="ru"] .home-hero-btn:hover {
 
 .home-flow-mobile-stage {
   display: none;
+  border-radius: 0 !important;
 }
 
 /* ================================
@@ -2255,7 +2256,7 @@ html[lang="ru"] .home-hero-btn:hover {
   position: relative;
   min-height: 142px;
   padding: 24px 24px;
-  border-radius: 22px;
+  border-radius: 0 !important;
   overflow: hidden;
   background:
     radial-gradient(circle at 92% 100%, rgba(0, 255, 178, 0.12), transparent 34%),
@@ -2267,17 +2268,6 @@ html[lang="ru"] .home-hero-btn:hover {
     border-color 0.28s ease,
     box-shadow 0.28s ease,
     background 0.28s ease;
-}
-
-.home-flow-process-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(6, 26, 58, 0.18);
-  box-shadow:
-    0 0 0 5px rgba(6, 26, 58, 0.04),
-    0 30px 76px rgba(6, 26, 58, 0.14);
-  background:
-    radial-gradient(circle at 92% 100%, rgba(0, 255, 178, 0.18), transparent 34%),
-    rgba(255, 255, 255, 0.9);
 }
 
 .home-flow-process-card::after {
@@ -2466,10 +2456,10 @@ html[lang="ru"] .home-hero-btn:hover {
     font-weight: 750;
   }
 
-  .home-flow-actions .home-flow-btn:first-child {
+  .home-flow-actions .home-flow-btn.is-active {
     color: #00ffb2;
-    background: #061a3a;
-    border-color: #061a3a;
+    background: #173368;
+    border-color: #173368;
   }
 
   .home-flow-btn:active {
@@ -2483,13 +2473,14 @@ html[lang="ru"] .home-hero-btn:hover {
   .home-flow-mobile-stage {
     display: block;
     width: 100%;
-  }
+    border-radius: 0 !important;
+}
 
   .home-flow-mobile-tv-card {
     margin-top: 24px;
     padding: 0;
-    border-radius: 0;
-    background: transparent;
+    border-radius: 0 !important;
+    background: transparent !important;
     border: none;
     box-shadow: none;
   }
@@ -2497,12 +2488,9 @@ html[lang="ru"] .home-hero-btn:hover {
   .home-flow-mobile-tv-screen {
     position: relative;
     min-height: 390px;
-    border-radius: 16px;
+    border-radius: 0 !important;
     overflow: hidden;
-    background:
-      linear-gradient(135deg, rgba(3, 18, 42, 0.72), rgba(0, 38, 86, 0.78)),
-      radial-gradient(circle at 18% 18%, rgba(9, 233, 180, 0.34), transparent 32%),
-      linear-gradient(145deg, #061a3a, #082a56 60%, #020b18);
+    background: transparent !important;
     transition: background 0.36s ease;
   }
 
@@ -2512,30 +2500,22 @@ html[lang="ru"] .home-hero-btn:hover {
     inset: 0;
     z-index: 1;
     opacity: 0.18;
-    background:
-      repeating-linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0.3) 0 1px,
-        transparent 1px 54px
-      ),
-      repeating-linear-gradient(
-        0deg,
-        rgba(255, 255, 255, 0.22) 0 1px,
-        transparent 1px 54px
-      );
+    background: transparent !important;
     pointer-events: none;
-  }
+    background-image: none !important;
+    border-radius: 0 !important;
+}
 
   .home-flow-mobile-tv-screen::after {
     content: "";
     position: absolute;
     inset: 0;
     z-index: 2;
-    background:
-      radial-gradient(circle at 70% 12%, rgba(255, 255, 255, 0.18), transparent 22%),
-      linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.12) 100%);
+    background: transparent !important;
     pointer-events: none;
-  }
+    background-image: none !important;
+    border-radius: 0 !important;
+}
 
   .home-flow-mobile-tv-image-layer {
     position: absolute;
@@ -2549,12 +2529,14 @@ html[lang="ru"] .home-hero-btn:hover {
       opacity 0.34s ease,
       transform 0.34s ease,
       background-image 0.34s ease;
+    border-radius: 0 !important;
   }
 
   .home-flow-mobile-tv-image-layer.is-changing {
     opacity: 0.58;
     transform: scale(1.06);
-  }
+    border-radius: 0 !important;
+}
 
   .home-flow-mobile-tv-content {
     position: relative;
@@ -2567,12 +2549,15 @@ html[lang="ru"] .home-hero-btn:hover {
     transition:
       opacity 0.24s ease,
       transform 0.24s ease;
+    border-radius: 0 !important;
+    background: transparent !important;
   }
 
   .home-flow-mobile-tv-content.is-changing {
     opacity: 0;
     transform: translateY(12px);
-  }
+    border-radius: 0 !important;
+}
 
   .home-flow-mobile-tv-topline {
     display: flex;
@@ -2603,7 +2588,8 @@ html[lang="ru"] .home-hero-btn:hover {
 
   .home-flow-mobile-tv-main {
     margin-top: auto;
-  }
+    border-radius: 0 !important;
+}
 
   .home-flow-mobile-tv-title {
     margin: 0;
@@ -2644,6 +2630,85 @@ html[lang="ru"] .home-hero-btn:hover {
     font-weight: 800;
   }
 
+/* HOME_MOBILE_APPLICATION_STYLE_START */
+/* 所有手机端应用卡片统一底部渐变 */
+.home-flow-mobile-tv-content {
+  background: linear-gradient(
+    to top,
+    rgba(23, 51, 104, 0.94) 0%,
+    rgba(23, 51, 104, 0.72) 34%,
+    rgba(23, 51, 104, 0.38) 64%,
+    rgba(23, 51, 104, 0) 100%
+  ) !important;
+  border-radius: 0 !important;
+}
+
+/* 所有手机端应用标题和说明统一为荧光色 */
+.home-flow-mobile-tv-title,
+.home-flow-mobile-tv-desc {
+  color: #09e9b4 !important;
+  text-shadow: none !important;
+}
+
+/* 所有标签统一间距 */
+.home-flow-mobile-tv-tags {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 6px !important;
+}
+
+/* 普通标签与可点击标签使用同一视觉 */
+.home-flow-mobile-tv-tags span,
+.home-flow-mobile-tv-tags
+  a.home-flow-mobile-product-tag {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 28px !important;
+  padding: 4px 8px !important;
+  color: #173368 !important;
+  background: rgba(255, 255, 255, 0.72) !important;
+  border: 1px solid rgba(23, 51, 104, 0.42) !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    color 120ms ease,
+    background-color 120ms ease,
+    border-color 120ms ease,
+    transform 120ms ease !important;
+}
+
+.home-flow-mobile-tv-tags
+  a.home-flow-mobile-product-tag {
+  cursor: pointer !important;
+}
+
+/* 手机按压反馈 */
+.home-flow-mobile-tv-tags span:active,
+.home-flow-mobile-tv-tags
+  a.home-flow-mobile-product-tag:active,
+.home-flow-mobile-tv-tags
+  a.home-flow-mobile-product-tag:focus-visible {
+  color: #173368 !important;
+  background: #09e9b4 !important;
+  border-color: #09e9b4 !important;
+  outline: none !important;
+  transform: scale(0.97) !important;
+}
+
+/* 防止访问过的链接改变颜色 */
+.home-flow-mobile-tv-tags
+  a.home-flow-mobile-product-tag:visited {
+  color: #173368 !important;
+}
+/* HOME_MOBILE_APPLICATION_STYLE_END */
+
   .home-flow-mobile-app-tabs-wrap {
     margin-top: 18px;
     padding: 0;
@@ -2680,8 +2745,8 @@ html[lang="ru"] .home-hero-btn:hover {
 
   .home-flow-mobile-app-tab.is-active {
     color: #00ffb2;
-    background: #061a3a;
-    border-color: #061a3a;
+    background: #173368;
+    border-color: #173368;
     box-shadow: none;
   }
 
@@ -2709,7 +2774,7 @@ html[lang="ru"] .home-hero-btn:hover {
     position: relative;
     min-height: 138px;
     padding: 18px 16px;
-    border-radius: 22px;
+    border-radius: 0 !important;
     overflow: hidden;
     background:
       radial-gradient(circle at 96% 100%, rgba(0, 255, 178, 0.14), transparent 42%),
@@ -2725,7 +2790,8 @@ html[lang="ru"] .home-hero-btn:hover {
     background:
       radial-gradient(circle at 96% 100%, rgba(0, 255, 178, 0.14), transparent 42%),
       rgba(255, 255, 255, 0.78);
-  }
+    border-radius: 0 !important;
+}
 
   .home-flow-process-card strong {
     position: relative;
@@ -2782,6 +2848,7 @@ html[lang="ru"] .home-hero-btn:hover {
   display: block;
   width: 100%;
   pointer-events: auto;
+  border-radius: 0 !important;
 }
 
 /* 闂傚倸鍊搁崐椋庣矆娴ｉ潻鑰块梺顒€绉撮崒銊ф喐閺冨牆绠栨繛宸簻鎯熼梺闈涱樈閸犳绱炴惔銏㈢瘈闁汇垽娼ф牎闂佺厧缍婄粻鏍ь嚕閸涘﹦鐟归柍褜鍓熷濠氬即閵忕娀鍞跺┑鐘茬仛閸旀牜鐟х紓鍌氬€烽懗鑸垫叏闂堟侗鐔嗘慨妞诲亾闁炽儻绠撳畷绋课旀担鍛婄杺闂傚倸鍊搁悧濠勭矙閹达讣缍栫€广儱顦伴悡鐔肩叓閸ャ劍宕岄柣娑欑矌缁辨帡鎮╅搹顐㈢３閻庢鍠涢褔鍩ユ径鎰潊闁绘ɑ褰冮弫銈夋煟閻斿摜鐭婇梺甯秮閻涱噣宕卞☉姗€鍞堕梺闈涱檧婵″洭宕㈡禒瀣拺閻熸瑥瀚崝銈嗐亜閺囥劌寮鐐诧躬瀹曞崬鈻庨幋鐙呯床闂備胶绮敋缁剧虎鍘肩叅閻庣數纭堕崑鎾舵喆閸曨剛锛橀梺鍛婃煥閻浇銇愭担鍓叉富闁靛牆妫楅悘杈ㄤ繆椤愩垹顏紒鍌氱У閵堬綁宕橀鍕导闂備焦鎮堕崕顖炲礉鎼淬劌鐓″鑸靛姈閻撶喐銇勯幘璺烘珡婵炲牊娲熼弻鏇㈠炊瑜嶉顓犫偓娈垮枙缁瑦淇婂宀婃Ъ闂侀潻绲婚崕宕囨閹惧瓨濯撮梻鍫熺☉椤棝姊洪崨濠庢畷濠电偛锕ら锝嗙節濮橆厼浜滈梺缁樻尭濞寸兘鎮鹃幎鑺モ拺闁革富鍘奸崝瀣煕閵娿儳浠涢柟渚垮姂瀵挳濮€閳锯偓閹锋椽鏌℃径灞戒沪濠㈢懓妫濊棟闁挎柨澧界壕鐣屸偓骞垮劚閹锋垿鐓渚囨闁绘劖褰冮弳娆撴煃鐠囨煡鍙勬鐐达耿瀵爼骞嬪鍛毎闂傚倸鍊风粈渚€骞栭位鍥箥椤旂懓浜剧紒妤佺☉濞诧箓宕?*/
@@ -2810,6 +2877,7 @@ html[lang="ru"] .home-hero-btn:hover {
 .home-flow-mobile-tv-screen::after,
 .home-flow-mobile-tv-image-layer {
   pointer-events: none;
+  border-radius: 0 !important;
 }
 
 /* =========================================================
@@ -2840,7 +2908,8 @@ html[lang="ru"] .home-hero-btn:hover {
   /* PC 缂傚倸鍊搁崐鎼佸磹閹间礁纾归柣鎴ｅГ閸婂潡鏌ㄩ弴妤€浜鹃柧鑽ゅ仱閻擃偊宕堕妸褉妲堥梺鎼炲妼閸婂潡寮婚悢灏佹灁闁割煈鍠楅悘宥夋倵鐟欏嫭绀冮柣鎿勭節瀵顓奸崼顐ｎ€囬梻浣告啞閹稿鎮烽埡鍛伋闁哄啫鐗嗙粈鍐┿亜閺傛寧顫嶇憸鏃堝蓟濞戞﹩鐓ラ柍褜鍓熼幊妤呭醇閺囩偠袝闁诲函缍嗘禍鏍绩娴犲鐓熼柟閭﹀灠閻ㄥ搫顭胯绾绢厾妲愰幘鎰佸悑闁告洦鍘鹃悰銏犖旈悩闈涗沪闁告梹鐗滈幑銏犫攽鐎ｎ亜绐涘銈嗙墬缁秴顭块幋锔解拻濞达絽鎲￠幆鍫ユ煕婵犲倻绉烘い銏＄墪閳诲酣骞樺畷鍥崜闁荤喐绮庢晶妤冩暜濡ゅ懎鐓曢柟杈鹃檮閻撴洘绻濋棃娑欘棞妞ゅ浚鍋勯…鑳檪缂佹彃澧介幑銏犫槈閵忕姵銇濋梺鍛婂姦娴滅偠鈪靛┑锛勫亼閸婃垿宕归崫鍕庢盯宕橀琛″亾娴ｈ倽鏃堝川椤撶媭妲规俊鐐€栭崝褏绱為崱妞㈡盯鎮㈤崗灏栨嫽婵炶揪绲块悺鏂款焽閹邦厹浜滈柡鍐ｅ亾闁绘濮撮悾鐑藉级濞嗙偓鍍靛銈嗗灱婵倝鎮橀崘顔解拺闂傚牊绋撶粻鐐烘煕婵犲啰澧甸柟?*/
   .home-flow-mobile-stage {
     display: none !important;
-  }
+    border-radius: 0 !important;
+}
 
   /* PC 缂傚倸鍊搁崐鎼佸磹閹间礁纾归柣鎴ｅГ閸婂潡鏌ㄩ弴妤€浜鹃柧鑽ゅ仱閻擃偊宕堕妸褉妲堥梺鎼炲妼閸婂灝顕ｉ崼鏇為唶婵炴垶锚椤顪冮妶鍌涙珚闁衡偓闁秴桅闁告洦鍨扮猾宥夋煕閵夘喚鍘涙俊顐㈠缁辨挻鎷呯粙娆炬殺闂佺顑囬崰鏍春閳ь剚銇勯幒鍡椾壕缂備胶濮寸粔鐟扮暦閺囥垺鐒肩€广儱鎳愰悿鍥煙閸忚偐鏆橀柛鏂胯嫰铻炴俊顖氬悑閸犳劙鏌￠崘銊у闁藉啰鍠栭弻宥夊煛娴ｅ憡娈紓浣稿閸嬨倝寮诲☉銏╂晝闁挎繂娲ㄩ悾鍨節濞堝灝鏋旈柛銊ョ秺閸╃偤骞嬮敂钘夆偓鐑芥煠绾板崬澧い銈傚亾闂傚倷鐒﹂幃鍫曞礉瀹€鍕€舵繝闈涱儛閺佸鏌ㄥ┑鍡╂▓闁轰礁鍟撮弻鏇㈠醇濠靛洤绐涘銈忚吂閺呯姴顫忛搹鍦＜婵妫涢崝鐑芥⒑鏉炴壆顦﹂柟璇х節閹缚绠涢弮鍌滅槇閻庡吀鍗抽弨鍗烆熆濮椻偓閸┾偓妞ゆ帊鐒︾粈瀣偓瑙勬礃閸旀﹢濡甸幇鏉跨闁规儳鐡ㄩ悵銊╂⒒閸屾瑦绁版い鏇嗗喚娼╅柨鏇炲亰缂嶆牕顭跨捄渚剳缂佺姵鍎抽埞鎴︽偐閹绘巻鍋撴繝姘辈?sticky 闂傚倸鍊搁崐鎼佸磹瀹勬噴褰掑炊瑜滃ù鏍煏婵炑冩噽閻掑吋绻涢幘鏉戠劰闁稿鎹囬弻鐔碱敊閵娿儱顏紒鈾€鍋撻梻浣规偠閸庮垶宕濆畝鍕劦?*/
   .home-flow-section {
@@ -2874,7 +2943,8 @@ html[lang="ru"] .home-hero-btn:hover {
   /* 闂傚倸鍊搁崐鎼佸磹妞嬪海鐭嗗ù锝堟缁€濠傗攽閻樻彃浜為柣鎺旀櫕閹叉悂寮崼娑掑亾娓氣偓瀵粙顢橀悙鑼垛偓鍨攽閿涘嫬浠х紒顕呭灦瀵偊鎮╃紒妯锋嫼闂備緡鍋嗛崑娑㈡嚐椤栨稒娅犻柟娈垮枤绾惧ジ寮堕崼娑樺婵炴惌鍠氶埀顒侇問閸ｎ噣宕抽敐澶屽祦閻庯綆浜栭弨浠嬫煕椤愶絿鐭岄柡浣瑰劤閳规垿鎮╁▓鎸庢瘜濠碘剝褰冮幊妯虹暦鐟欏嫬顕辨慨婵勫€曞ú锕€顭囪箛娑樼厸濞达絽鎽滄禍浼存⒒娴ｇ顥忛柛瀣╃窔瀹曟洟寮婚妷銉э紮缂傚倷鐒︾湁缂佽妫欓妵鍕冀閵娧呯暤闂佸憡鑹剧紞濠囧蓟濞戞鐔烘嫚閹绘帩娼氭繝娈垮枛閿曘倝骞栭锝嗘珡闂備焦鎮堕崕婊堝礃閸撗€鍋撻幎鑺モ拺閻犲洦褰冮銏ゆ煕閹存繄绉虹€规洘濞婇弫鎰板椽娴ｅ憡顓挎俊鐐€栭崝褏绮婚幋鐐差嚤闁绘绮悡蹇擃熆閼哥數銆掗柣锝変憾閺岋紕鈧綆浜滈埀顒€鐏濋～蹇涙惞閻熸澘顕ч梺鍝勬川閸嬫盯鍩涙径濠庢富闁靛牆鍟俊濂告煟濡も偓濡繈鍨鹃敃鍌氱倞妞ゆ巻鍋撶紒顐㈢Ч閺屾稓浠﹂崜褏鐓傞梺鎸庣⊕缁挸顫忓ú顏呯劵闁绘劘灏€氭澘顭胯椤曨參鍩€椤掑喚娼愭繛璇х畵瀹曟垶绻濋崒婊勬闂佺粯姊婚埛鍫ュ极閸ヮ剚鐓熼柡鍐ㄦ处椤忕姷浜?*/
   .home-flow-mobile-stage {
     display: block !important;
-  }
+    border-radius: 0 !important;
+}
 
   /* 闂傚倸鍊搁崐鎼佸磹妞嬪海鐭嗗ù锝堟缁€濠傗攽閻樻彃浜為柣鎺旀櫕閹叉悂寮崼娑掑亾娓氣偓瀵粙顢橀悙鑼垛偓鍨攽閿涘嫬浠х紒顕呭灦瀵偊鎮╃紒妯锋嫼闂備緡鍋嗛崑娑㈡嚐椤栨稒娅犻柟娈垮枤绾惧ジ寮堕崼娑樺婵炴惌鍠氶埀顒侇問閸ｎ噣宕抽敐澶屽祦閻庯綆浜栭弨浠嬫煕椤愶絿鐭嬮柛鈺傜〒缁辨捇宕掑顑藉亾閻戣姤鍊块柨鏇炲€堕埀顒€鍟村畷銊ヮ潰閵堝懏鍠樻俊顐㈠暙閳藉顫濋鐕佸晭濠电姷顣藉Σ鍛村垂椤栨粍濯伴柨鏇炲€哥憴锕傛倵閿濆骸鏋熼柣鎾存礋閺屾洘寰勫☉姘煂婵犲痉銈呅撶紒?220vh 闂傚倸鍊搁崐鎼佸磹閻戣姤鍊块柨鏇炲€归崕鎴犳喐閻楀牆绗掔紒鈧径灞稿亾閸忓浜鹃梺閫炲苯澧撮柛鈹惧亾濡炪倖甯婄粈渚€宕甸鍕厱婵せ鍋撶紒鐘崇墪閻ｅ嘲顫濈捄铏诡唺濠德板€愰崑鎾剁磼閻樼數甯涢柕鍥у瀵噣宕惰濮规顪冮妶蹇撶槣闁革綇绲介～蹇撁洪鍜佹濠电偞鍨兼禍顒勫礉閹间焦鈷戠紒瀣閸炲绱掗鈧粻鏍熅闂佸憡娲﹂崹閬嶅煕閹烘嚚褰掓晲閸涱喛纭€濠电姭鍋撳ù鐘差儐閻撴洟鏌曟繛鍨姢缂佸妞介弻宥夊Ψ椤栨粎鏆ら梺璇″枟缁捇骞婇悙鍝勎ㄩ柕澶堝€栭崺娑樷攽閿涘嫬浜奸柛濠冪墪铻炲ù锝堫潐閸欏繘鏌曢崼婵愭Ц缁?*/
   .home-flow-section {
@@ -3935,8 +4005,6 @@ html[lang="ru"] .home-hero-btn:hover {
   text-align: center;
   pointer-events: none;
 }
-
-
 
 .home-advantages-title {
   margin: 0;
@@ -7083,7 +7151,7 @@ html[lang="ru"] .home-hero-btn:hover {
   .home-flow-process-card {
     min-height: 102px !important;
     padding: 16px 16px !important;
-    border-radius: 16px !important;
+    border-radius: 0 !important;
   }
 
   .home-flow-process-card strong {
@@ -7792,21 +7860,6 @@ html[lang="ru"] .home-hero-btn:hover {
     line-height: 1.2 !important; /* 闂傚倸鍊搁崐鎼佸磹閹间礁纾归柟闂寸绾惧綊鏌熼梻瀵割槮闁汇値鍠楅妵鍕箛閳轰胶鍔撮梺鎼炲€栧ú鐔煎蓟濞戙埄鏁冮柨婵嗘椤︹晠姊?g 闂傚倸鍊搁崐宄懊归崶褏鏆﹂柣銏㈩焾绾惧鏌ｉ幇顒佹儓缂佲偓閸曨厽鍠愰柣妤€鐗嗙粭鎺旂棯閹规劦鍤欐い顓炴健閹虫粓妫冨☉妯锋嫟濠电姰鍨奸崺鏍礉閺囥垻宓侀柕蹇ョ磿缁犻箖鏌熺€电鍓遍柣鎺曞Г閵?*/
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 /* ================================
@@ -8213,7 +8266,7 @@ html[lang="ru"] .home-hero-btn:hover {
   .home-flow-process-card {
     min-height: 96px !important;
     padding: 14px 15px !important;
-    border-radius: 15px !important;
+    border-radius: 0 !important;
   }
 
   .home-flow-process-card strong {
@@ -8741,7 +8794,7 @@ html[lang="ru"] .home-hero-btn:hover {
   .home-flow-process-card {
     min-height: 86px !important;
     padding: 12px 14px !important;
-    border-radius: 14px !important;
+    border-radius: 0 !important;
   }
 
   .home-flow-process-card strong {
@@ -10543,8 +10596,6 @@ html[lang="ru"] .home-hero-btn:hover {
   background: linear-gradient(135deg, #dfe3e8 0%, #c2c8d1 50%, #eef1f5 100%);
   box-shadow: 0 14px 36px rgba(7, 26, 58, 0.08);
 }
-
-
 
 .about-foreach-honor-thumb::before {
   background: linear-gradient(90deg, rgba(7, 26, 58, 0.1), rgba(255, 255, 255, 0.12));
@@ -15110,8 +15161,6 @@ html[lang="ru"] .home-hero-btn:hover {
   word-spacing: inherit !important;
 }
 
-
-
 /* ================================
    濠电姷鏁告慨鐑藉极閹间礁纾块柟瀵稿Т缁躲倝鏌﹀Ο渚＆鐟滅増甯掔壕濂告煟閹邦垰鐨洪柣娑栧劦濮婃椽宕崟顓涙瀱闂?simple 濠电姷鏁告慨鐑藉极閹间礁纾婚柣鎰惈閸ㄥ倿鏌涢锝嗙缂佺姳鍗抽弻鐔兼⒒鐎垫瓕绐楅梺杞扮鐎氫即寮诲☉銏犵労闁稿繒濯禍顏勭暦瑜版帒绫嶉柍褜鍓涢幑銏犫槈濮楀棗鏅犲銈嗘瀹曠敻鎯勬惔銊︹拺闁告稑锕ゆ慨鈧梺绋款儐閹瑰洤顫忕紒妯肩瘈閹肩补鈧尙鐩庢繝鐢靛仩椤曟粎绮婚幋锔肩稏闊洦鍝庢禍褰掓煙閻戞ɑ灏柍褜鍓欓悘姘跺Φ閸曨垰鍗虫俊銈傚亾濞存粓绠栧铏规嫚閳ヨ櫕鐏嶅銈冨妼閹虫﹢宕洪妷锕€绶炲┑鐐靛亾閻庤鈹戦埥鍡楃仴鐎规洜鏁诲鎶筋敍濠婂懐锛濋梺绋挎湰閻燂妇绮婇悧鍫涗簻闁哄洤妫楀ú銈夋偪椤旀祹褰掑礂閸忚偐绋囩紓浣插亾闁糕剝绋掗悡娆撴煟閹寸伝顏勨枔妤ｅ啯鐓涢柛鎰╁妿婢ф洜鈧懓鎲＄换鍐Φ閸曨垰鍗抽柣鎰儗濡倕鈹戦敍鍕哗婵☆偄瀚伴崺?
 
@@ -15578,7 +15627,7 @@ html body nav[aria-label*="breadcrumb"] em {
 
   .home-hero-title {
     max-width: 100% !important;
-    font-size: clamp(34px, 11vw, 48px) !important;
+    font-size: clamp(26px, 6.5vw, 30px) !important;
     line-height: 1.12 !important;
     transform: none !important;
   }
@@ -15772,17 +15821,6 @@ html body nav[aria-label*="breadcrumb"] em {
 
 /* ===== Footer QR width fix END ===== */
 
-
-
-
-
-
-
-
-
-
-
-
 /* =========================================================
    濠电姷鏁告慨鐑姐€傞挊澹╋綁宕ㄩ弶鎴狅紱闂佽宕樺▔娑氭閵堝憘鏃堟晲閸涱厽娈查梺绋款儏椤戝寮婚敐鍛傜喎鈻庨幆褎顔勯柡澶嗘櫆缁诲啰鎹㈠┑瀣潊闁挎繂妫涢妴鎰版⒑閸濆嫮澧遍柛鎾寸⊕缁傚秹宕ㄦ繝鍐ㄥ妳闂侀潧顭俊鍥储闁秵鈷戦柛婵嗗閸屻劑鏌涢弬鑳闁宠绉撮～婊堝焵椤掑嫬钃熸繛鎴欏灪閸婄兘鏌ｉ幋鐐嗘垿鏌ㄩ銏♀拺閻庡湱濮甸ˉ澶嬨亜閿旂偓鏆柣娑卞枛閳诲酣骞樺畷鍥舵О闂備線娼ч…鍫ュ磿閹剁瓔鏁婇柟閭﹀枤绾句粙鏌涚仦鍓ф噮闁告柨绉垫穱濠囨倷閸偅鐝紓渚囧枛椤嘲顕ｉ崐鐕佹Ь闂佸搫妫寸粻鎾诲蓟濞戙埄鏁冮柨婵嗘椤︺儳绱撴担鎻掍壕闂佸壊鍋侀崹娲窗閹邦喒鍋撻獮鍨姎妞わ富鍙冮崺鈧い鎺嗗亾闁稿﹤婀遍幑銏犫攽閸♀晜鍍靛銈嗘尵婵挳鐛幇鐗堚拻濞达絿顭堥ˉ蹇涙煕鐎ｎ亝鍤囬柟铏箞閹瑩顢楅崒銈嗛敜闂備礁鎲￠幐鍡涘川椤栥倗闂梻鍌欒兌椤牓寮甸鍕仭鐟滄棁妫熼梺鎸庢礀閸婂綊鎮￠悢闀愮箚闁靛牆鍊告禍楣冩⒑閹稿孩澶勫ù婊庝邯閻涱噣宕橀褎鈻岄柣搴ゎ潐濞测晝鎹㈠┑瀣畺婵犲﹤鐗嗛獮銏′繆閵堝嫮璐伴柛姘懇濮婂宕掑鑲╁彆闂佺顑呯€氼剛鍙呴梺闈涚箞閸婃洜澹曠捄銊㈠亾鐟欏嫭绀€婵炲眰鍔戦幃宕囩磼濡湱绠氶梺闈涚墕閹冲繘宕冲ú顏呯厽闁规儳鐡ㄧ粈鍐ㄇ庨崶褝韬い銏＄☉椤劑宕橀妸銈囧笡闂傚倷绀侀幖顐︻敄閸涘瓨鐓€闁挎繂顦拑鐔兼煥閻斿搫孝缂佲偓鐎ｎ偁浜滈柟鑸妽閸ｄ即鏌涚€ｎ偅灏扮紒缁樼箓椤繈顢楅崒姘?+ 闂傚倸鍊搁崐鎼佸磹閻戣姤鍊块柨鏇炲€哥粻鏍煕椤愶絾绀€缁炬儳娼″鍫曞醇濞戞ê顬夊┑鐐叉噽婵炩偓闁哄被鍊濋獮渚€骞掗幋婵嗩潥婵犵數鍋涢幊鎰箾閳ь剟鏌＄仦绯曞亾閹颁礁鎮戦柟鑲╄ˉ閳ь剙纾鎰磽娴ｉ缚妾搁柛妯绘倐瀹曟垿骞樼紒妯锋嫽婵炶揪缍€濞咃絿鏁☉銏＄叆婵鍩栭悡鏇㈡煟閺冨偆鐒炬い鏇熺矒閺?+ 闂傚倸鍊搁崐鎼佸磹閹间礁纾归柟闂寸绾惧綊鏌熼梻瀵稿妽闁稿顑夐悡顐﹀炊閵婏腹鎷归梺鍛婄懃缁绘﹢骞冨Δ鈧埥澶娾枎濡厧濮洪梻?
    闂傚倸鍊搁崐宄懊归崶褏鏆﹂柛顭戝亝閸欏繘鏌℃径瀣婵炲樊浜滃洿婵犮垼娉涢鍛闁秵鈷戦梻鍫熶緱閻掗箖鏌涙惔銏㈡噰闁轰焦鍔栧鍕節閸曢潧鎮堥梻鍌欑劍鐎笛兾涙担瑙勫弿闁靛牆鎳夐弸?   1. 濠电姷鏁告慨鐑藉极閹间礁纾婚柣鎰惈閸ㄥ倿鏌涢锝嗙缂佺姳鍗抽弻娑樷攽閸曨偄濮㈤梺娲诲幗閹瑰洭寮婚埄鍐ㄧ窞閻庯綆浜為崝鎼佹⒑閸濄儱鏋庨柟铏～蹇撁洪宥嗘櫌闂侀€炲苯澧扮紒顔芥⒒閳ь剟娼ч幗婊堟儗?16:9
@@ -15801,18 +15839,6 @@ html body nav[aria-label*="breadcrumb"] em {
   background-repeat: no-repeat !important;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* =========================================================
    濠电姷鏁告慨鐑姐€傞挊澹╋綁宕ㄩ弶鎴狅紱闂佽宕樺▔娑氭閵堝憘鏃堟晲閸涱厽娈查梺绋款儏椤戝寮婚敐鍛傜喎鈻庨幆褎顔勯柡澶嗘櫆缁诲啰鎹㈠┑瀣潊闁挎繂鎳愰崢顐︽⒑閸涘﹥鈷愭繛鍙夌矌閸掓帡宕奸妷銉э紲濠电偞鍨堕悧鏃傝姳婵犳碍鈷戦柣鐔哄閹牊淇婇锝庢畷缂佸倸绉甸妶锝夊礃閳轰讲鍋撻悽鍛婄厱妞ゎ厽鍨垫禍婵堢磼閼哥數鍙€闁哄本鐩幃銈嗘媴閸濄儰鍖栫紓鍌欑贰閸犳牠顢栨径鎰祦闁圭儤顨呭Λ姗€鏌涘┑鍡楊仹濠㈣娲熷娲箰鎼达絿鐣垫俊銈囧Т閹诧繝寮查懜闈涱嚤閻庢稒顭囬崢钘夘渻閵堝棙灏甸柛鐘虫尵缁骞樼紒妯煎帗闂佽姤锚椤﹁棄螣閳ь剙螖閻橀潧浠﹂柨姘舵煟閿濆洤鍘寸€规洘鍎奸ˇ鍙夋叏閿濆懐澧㈢紒杈ㄦ崌瀹曟帒鈻庨幇顔哄仒濠碉紕鍋炲娆撳箺濠婂牆鏋佹い鏂挎閺冨牆绀冩い蹇撴閸橆垰鈹戦悩顔肩伇婵炲鐩垾锕傤敆閳ь剟鈥﹂崶顒€鐓涢柛灞久肩花濠氭⒑鐟欏嫬顥愰柡鍛洴閸┾偓妞ゆ帊鐒︾粈瀣偓娈垮枟閹倿骞冮埡鍐＜婵☆垶鏀辩€氬ジ姊绘担鍛婂暈缂佸鍨块弫鍐Ψ閳哄倸浜楅梺闈涱槴閺呮粓鎮￠悢鑲╁彄闁搞儯鍔嶉埛鎺旂磼閻樺磭澧辩紒杈ㄥ浮瀵噣宕掑顓犱邯闁诲氦顫夊ú鏍偉婵傛悶鈧礁螖閸涱厾鍔﹀銈嗗笒鐎氼剛绮堥崘顔界厓鐟滄粓宕滈悢濂夋綎婵炲樊浜滅粻褰掓煟閹邦厼绲诲┑顔肩埣濮婃椽宕ㄦ繝鍐╁創缂備胶濮甸幐鎼侇敋閿濆绠紒娑橆儐閺咁剟姊虹紒妯哄閻炴稏鍎甸獮蹇旂節濮橆厸鎷洪梺鍛婄☉閿曪絿娆㈤柆宥嗙厱闁绘ê纾晶顒勬煙娓氬灝濡垮ù鐙呯畵瀹曪綁濡疯閻?
    闂傚倸鍊搁崐宄懊归崶褏鏆﹂柛顭戝亝閸欏繘鏌℃径瀣婵炲樊浜滃洿婵犮垼娉涢鍛闁秵鈷戦梻鍫熶緱閻掗箖鏌涙惔銏㈡噰闁轰焦鍔栧鍕節閸曢潧鎮堥梻鍌欑劍鐎笛兾涙担瑙勫弿闁靛牆鎳夐弸?   1. 闂傚倸鍊搁崐鎼佸磹閹间礁纾归柟闂寸绾惧綊鏌熼梻瀵割槮缂佺姷濞€閻擃偊宕堕妸褉妲堢紓浣插亾濠㈣泛顑勭换鍡樸亜閺嶃劎鎳呯紒澶嬪缁绘盯骞嬮悙鐢靛彎濠电偛鐭堟禍顏堝蓟閻旂厧绠氱憸搴ㄥ闯閻ｅ瞼妫Δ锝呭暟閻ｇ儤鎱ㄦ繝鍐┿仢鐎规洦鍋婂畷鐔碱敇濞戞瑧鈧亶姊绘担鍛婂暈闁挎氨绱撳鍜冭含鐎规洘妞介崺鈧い鎺嶉檷娴滄粓鏌熼崫鍕棞濞存粍鍎抽—鍐Χ韫囨洜鏆ゅ┑鐐板尃閸ャ劌浠奸悗鐟板鐎氬牓寮崼婵囥仢婵炶揪缍€椤鈻嶅畝鍕拻濞撴埃鍋撻柍褜鍓涢崑娑㈡嚐椤栨稒娅犳い鏂款潟娴滄粓鏌￠崶顭嬵亪宕濋敂閿亾鐟欏嫭绀冮柨鏇樺灲瀹曟椽鏁撻悩鑼槰闂佺粯鍔﹂崜娑㈠Χ椤愶附鈷掑ù锝囩摂閸ゆ瑩鏌涢幋鐘虫珪缂佽京鍋ゅ畷鍗炩槈濡⒈妲舵繝鐢靛仦閸垶宕瑰ú顏勭？婵°倓鑳剁弧鈧梻鍌氱墛娓氭宕曢幇鐗堢厽闁规儳顕妴鎺楁煃瑜滈崜娆戠不瀹ュ纾块梺顒€绉寸粻鐘荤叓閸ャ劎鈽夌紒鎰殕娣囧﹪顢涘☉姘弴婵炲瓨绮嶇划鎾诲蓟閵娿儮鏀介柛鈩冪懃椤ｆ椽鎮跺顓熺殤缂佽鲸鎸婚幏鍛村礈閹绘帒澹堟俊鐐€х粻鎾寸閸洖鏄ラ柍褜鍓氶妵鍕箳閹搭垰濮涚紓浣割槺閺佸寮诲☉姘ｅ亾閿濆簼绨奸柛銈呮喘閺岀喖顢欓崗澶婁壕闁哄倶鍎查悗濠氭⒑閸︻厼浜炬繛鍏肩懄缁傛帡顢涢悙绮规嫼闂佺鍋愰崑娑㈠礉閳ь剟姊洪崨濠佺繁闁哥姵顨婂畷浼村冀閵娧呯槇缂佸墽澧楄彜闁稿鎹囧畷姗€鎳犻鍕礈闂傚倷鐒﹂幃鍫曞礉瀹€鍕€舵繝闈涱儛閺佸鏌ㄥ┑鍡╂▓闁轰礁妫濋弻娑㈠即閵娿儰绨介梺绋匡功閸嬨倝骞冨畡閭︾叆闁告劦浜為鎺懳?
@@ -15827,9 +15853,6 @@ html body nav[aria-label*="breadcrumb"] em {
 .home-advantages-desc {
   display: none !important;
 }
-
-
-
 
 /* =========================================================
    濠电姷鏁告慨鐑姐€傞挊澹╋綁宕ㄩ弶鎴狅紱闂佽宕樺▔娑氭閵堝憘鏃堟晲閸涱厽娈查梺绋款儏椤戝寮婚敐鍛傜喎鈻庨幆褎顔勯柡澶嗘櫆缁诲啰鎹㈠┑瀣潊闁挎繂妫涢妴鎰渻閵堝棗鐏ラ柟铏耿閵嗕礁顫濈捄铏诡攨闂佽绻楅褏绱炴繝鍥ф瀬闁归偊鍘肩欢鐐翠繆椤栨稒銇熸俊顐ｇ墵濮婄粯鎷呴挊澶婃優闂佸摜濮甸幑鍥嵁婵犲洤绠荤紓浣诡焽閻ｆ娊姊婚崒娆掑厡妞ゎ厼鐗忛幑銏ゅ箣閻樼數鐒鹃悷婊呭鐢晠寮崒鐐寸厱婵炴垵宕悘锝嗐亜閺冣偓濞茬喖骞冨Δ鍛祦闁割煈鍠栨慨搴☆渻閵堝繐鐦滈柛銊ュ暱閳藉鎮界粙璺ㄥ姦濡炪倖甯掔€氼參鍩涢幋锔界厵缂佸瀵ч幑锝夋煃閽樺妯€闁诡喗顨呴～婵嬫偂鎼粹檧鎷梻渚€娼уΛ妤呭磹閸ф绠犻柨鐔哄Т鍥撮梺鎼炲劗閺咁亞妲愰崣澶夌箚闁绘劦浜滈埀顒佺墵閹兾旈崘鈺佸簥閻庡箍鍎遍ˇ顖炲触鐟欏嫮绠鹃柛鈩兩戠亸浼存煟閹惧瓨绀冮柕鍥у椤㈡﹢鎮㈡搴濆寲闂傚倷绶￠崣搴ㄥ垂閹惰棄鐒垫い鎺嶇贰閸熷繘鏌涢敐搴℃珝鐎规洘绮撻幃銏☆槹鎼淬垺顔曢梻浣筋嚃閸ㄥ爼宕戞繝鍋斤絾銈ｉ崘鈹炬嫼闂侀潻瀵岄崢钘夆枍閺囥垺鐓曢柣妯虹－婢х數鈧鍠栭…鐑藉春閸曨垰绀冮柍杞扮贰閳ь剚鎹囧娲箚瑜忕粻鐗堢節閳ь剟鏌嗗鍡楀墾闂佸壊鍋侀崹鑽ゅ娴犲鐓曢悘鐐靛亾閻ㄦ垹鈧稒绻傞—鍐Χ閸℃浠村┑鈽嗗亝缁嬫捇宕氶幒鎴旀瀻闁归偊鍓涚粣鐐烘煟韫囨洖浠фい顓炵墛缁傚秵銈ｉ崘鈺冨弳濠电娀娼уΛ婵嬵敁濡ゅ懏鐓?
@@ -15866,11 +15889,6 @@ html body nav[aria-label*="breadcrumb"] em {
     transform: none !important;
   }
 }
-
-
-
-
-
 
 /* =========================================================
    濠电姷鏁告慨鐑姐€傞挊澹╋綁宕ㄩ弶鎴狅紱闂佽宕樺▔娑氭閵堝憘鏃堟晲閸涱厽娈查梺绋款儏椤戝寮婚敐鍛傜喎鈻庨幆褎顔勯柡澶嗘櫆缁诲啰鎹㈠┑瀣潊闁挎繂妫涢妴鎰渻閵堝棗鐏ラ柟铏耿閵嗕礁顫濈捄铏诡攨闂佽绻楅褏绱炴繝鍥ф瀬闁归偊鍘肩欢鐐翠繆椤栨稒銇熸俊顐ｇ墵濮婄粯鎷呴挊澶婃優闂佸摜濮甸幑鍥嵁婵犲洤绠荤紓浣诡焽閻ｆ娊姊婚崒娆掑厡妞ゎ厼鐗忛幑銏ゅ箣閻樼數鐒鹃悷婊呭鐢晠寮崒鐐寸厱婵炴垵宕悘锝嗐亜閺冣偓濞茬喖骞冨Δ鍛祦闁割煈鍠栨慨搴☆渻閵堝繐鐦滈柛銊ュ暱閳藉鎮界粙璺ㄥ姦濡炪倖甯掔€氼參鍩涢幋锔界厵缂佸瀵ч幑锝夋煃閽樺妯€闁诡喗顨呴～婵嬫偂鎼粹檧鎷梻渚€娼уΛ妤呭磹閸︻厽宕叉繝闈涙－濞尖晜銇勯幘瀵糕姇閻庢矮绮欏缁樻媴娓氼垳鍔搁梺鍝勭墱閸撴盯宕氶幒妤佸亹闁告瑥鍊圭粙鎺楀箚閺冨牊鏅查柛銉㈡櫔缁辨煡姊绘担鍝ョШ闁稿锕畷銏°偅閸愩劎鍘愰梺鍝勬川婵澹曟總鍛婂€甸柨婵嗙凹閹茬偓淇婇幓鎺旂Ш闁哄瞼鍠栭、娑樷槈濞嗘ɑ顥堝┑鐘愁問閸犳帡宕戦幘缁樷拺闁圭娴烽埥澶愭倵濮樷偓閸パ咃紱闂佸湱鍋撳鍧楀极鐎ｎ喗鐓冪憸婊堝礈閻旇偐宓侀柛鎰╁壆閺冨牆鐒垫い鎺戝閻撯€愁熆鐠哄彿鍫ュ几鎼搭澀绻嗘い鏍ㄧ箓閸氬綊鏌￠崱鎰姦婵﹦绮幏鍛村川婵犲啫鏋戦梻浣侯焾椤戝棝鎯勯鐐茬畺婵炲樊浜滄儫闂侀潧顦介崰姘跺礉閻戣姤顥婃い鎰╁灪婢跺嫭绻涢崣澶涜€跨€规洘顨呴…銊╁醇閻斿搫骞堟繝鐢靛仦閸ㄩ潧鐣烽鍕€堕柨婵嗘礌閸?
@@ -15975,9 +15993,6 @@ html body nav[aria-label*="breadcrumb"] em {
   }
 }
 
-
-
-
 /* =========================================================
    濠电姷鏁告慨鐑姐€傞挊澹╋綁宕ㄩ弶鎴狅紱闂佽宕樺▔娑氭閵堝憘鏃堟晲閸涱厽娈查梺绋款儏椤戝寮婚敐鍛傜喎鈻庨幆褎顔勯柡澶嗘櫆缁诲啰鎹㈠┑瀣潊闁挎繂妫涢妴鎰渻閵堝棗鐏ラ柟铏耿閵嗕礁顫濈捄铏诡攨闂佽绻楅褏绱炴繝鍥ф瀬闁归偊鍘肩欢鐐翠繆椤栨稒銇熸俊顐ｇ墵濮婄粯鎷呴挊澶婃優闂佸摜濮甸幑鍥嵁婵犲洤绠荤紓浣诡焽閻ｆ娊姊婚崒娆掑厡妞ゎ厼鐗忛幑銏ゅ箣閻樼數鐒鹃悷婊呭鐢晠寮崒鐐寸厱婵炴垵宕悘锝嗐亜閺冣偓濞茬喖骞冨Δ鍛祦闁割煈鍠栨慨搴☆渻閵堝繐鐦滈柛銊ュ暱閳藉鎮界粙璺ㄥ姦濡炪倖甯掔€氼參鍩涢幋锔界厵缂佸瀵ч幑锝夋煃閽樺妯€闁诡喗顨呴～婵嬫偂鎼粹檧鎷梻渚€娼уΛ妤呭磹閸︻厽宕叉繝闈涙－濞尖晜銇勯幘璺盒㈡鐐村姍閺岋絾鎯旈敍鍕殯闂佺閰ｆ禍鍫曠嵁婵犲懐鐤€婵炴垶顭囬悰銉モ攽閳藉棗鐏￠柣顏囶潐缁傚秴顭ㄩ崼鐔哄弳濠电娀娼уΛ妤咁敂椤愶附鐓熸い鎾跺枔閹冲懘鏌嶈閸撴岸顢欓弽顓炵獥婵°倕鎳庣粻浼存煕閹邦剚鈻曢柛銈嗘礋閺屾盯顢曢敐鍡欘槬缂備胶濯寸紞渚€寮婚敐鍛傜喖鎼归惂鍝ョ婵犵鈧啿绾фい銊ワ工椤?   闂傚倸鍊搁崐宄懊归崶褏鏆﹂柛顭戝亝閸欏繘鏌℃径瀣婵炲樊浜滃洿婵犮垼娉涢鍛闁秵鈷戦梻鍫熶緱閻掗箖鏌涙惔銏㈡噰闁轰焦鍔栧鍕節閸曢潧鎮堥梻鍌欑劍鐎笛兾涙担瑙勫弿闁靛牆鎳夐弸?   1. 濠电姷鏁告慨鐑藉极閹间礁纾婚柣鎰惈閸ㄥ倿鏌涢锝嗙缂佺姳鍗抽幃褰掑炊瑜嶅Λ姗€鏌ㄥ┑鍡╂Ц缂佺姾娅曟穱濠囨倷閼碱剚鐧侀梺绋款儐閹瑰洤鐣烽妸褉鍋撳☉娅虫垵鈻嶉崶顒佲拺缂佸瀵у﹢浼存煠瑜版帞鐣虹€规洘鍨甸鍏煎緞鐎ｎ剙骞楅梺鐟板悑閹矂宕瑰畷鍥╃煋闁汇垹鎲￠悡鏇㈡煙閹屽殶闁靛棙甯楁穱濠囧矗婢跺﹤顫屽銈庡亝缁诲牓骞婂鍫燁棃婵炴垶甯掓禍楣冩煕椤愶絾绀冮柣鎾跺枛閺岀喖鏌囬敃鈧晶浼存煙閻ｅ苯啸缂佽鲸甯￠崺鈧い鎺戝閻掑灚銇勯幒鎴濃偓鑽ゅ閽樺褰掓晲閸曨厾鐓撻梺鍛婄箖濡炰粙寮诲☉銏犖╅柕澶涚畱娴犳潙螖閻橀潧浠滈柛鐔告尦瀹曟椽鏁撻悩鎻掔獩濡炪倖鏌ㄩ崥瀣偪閸屾粎纾藉ù锝囶焾閳锋柨顭胯椤ㄥ﹪寮€ｎ偆绠鹃悗娑欘焽閻鏌涙惔銏犫枙婵犫偓娓氣偓濮婃椽骞愭惔锝囩暤濡炪倧绠掑Λ鍕亱闂佺鎻梽鍕偂閻斿吋鐓熼柡鍌涘閸熺偟鈧娲栭惌鍌炲蓟?Technical Service / Customization Support 缂傚倸鍊搁崐鎼佸磹閹间礁纾归柣鎴ｅГ閸婂潡鏌ㄩ弬鍨挃闁活厽鐟╅弻鐔封枎闄囬褍煤椤擃潿鈧礁鈽夐姀鈥斥偓鐑芥煕濞嗗繐浜扮紒鐘虫崌瀵鈽夐姀鐘栥劍銇勯弮鍌氬付妞ゎ偀鏅犲娲川婵犲倸顫呴梺绋款儐閹瑰洤顫忕紒妯诲閻熸瑥瀚禒鈺呮⒑缁嬪灝顒㈡俊鐐舵閻ｅ嘲顭ㄩ崼鐔告珖闂佺鏈喊宥嗘綇?
    2. 1920 闂?1440 闂傚倸鍊搁崐宄懊归崶顒夋晪鐟滃秹婀侀梺缁樺灥椤洟鍩€椤戣法鍔嶇紒缁樼箞瀹曟垿鎳為妷褎鍒涢悗瑙勬礈閸犳牠銆佸Ο琛℃婵☆垳鎳撻ˉ姘辩磽娴ｉ缚妾搁柛妯恒偢楠炲﹨绠涘☉娆忎户濡炪倕绻愬Λ娑氬婵傚憡鍊甸柨婵嗙凹閹茬偓淇婇崣澶嬨仢闁哄苯绉烽¨渚€鏌涢幘鍗炲缂佽京鍋ゅ畷鍗炩槈濡偐宕堕梻浣告惈缁嬩線宕㈡總绋跨＜闁靛ň鏅滈崐鐢告⒒閸喓鈯曢柟鎻掓憸閻ヮ亪宕ｉ妷褏鐓撻梺鍝勬湰缁嬫挻绂掗敂鍓х＜闁靛骏绱曢弳锔界節閻㈤潧浠滈柟鍐查叄楠炲﹤顫滈埀顒€顕?
@@ -16051,12 +16066,6 @@ html body nav[aria-label*="breadcrumb"] em {
       0 1px 3px rgba(0, 0, 0, 0.38) !important;
   }
 }
-
-
-
-
-
-
 
 /* =========================================================
    濠电姷鏁告慨鐑姐€傞鐐潟闁哄洢鍨圭壕濠氭煙鏉堝墽鐣辩痪鎯х秺閺岋繝宕堕妷銉т痪闂佺顑呴ˇ顖炲煘閹达箑纾兼繝濠傛捣閸斿摜绱掗悙顒€鍔ゆ繛纭风節楠炲啫螖閸涱喖浠洪梺姹囧灮閸嬶綁鍩€椤掆偓閿曨亪寮诲☉姘ｅ亾閿濆骸浜濋悘蹇庡嵆閺岀喎鐣￠悧鍫濇畻閻庤娲橀敃銏ゅ灳閿曞倸绠ｉ柣鎴濇椤ュ秹姊?Mega Menu 闂傚倸鍊搁崐椋庣矆娓氣偓楠炴牠顢曚綅閸ヮ剚鐒肩€广儱鎳愰敍娑樷攽閻愭潙鐏嶉柟鍐叉喘閸┾偓妞ゆ帒锕﹂悾鐢告煙椤旂晫鐭掗柟绋匡攻瀵板嫰骞囬銊ц埞婵犵數濮烽弫鎼佸磻濞戞鐔哥節閸愵亶娲稿┑鐘绘涧椤戝懘鎮￠弴銏＄厵闁告挆鍛闂佺粯鎸荤粙鎴︹€︾捄銊﹀磯濞撴凹鍨伴崜浼存⒑鐠囪尙绠為柛搴㈢叀婵＄敻宕熼姣尖晠鏌ㄩ弮鍌氫壕闁告帗鐩?   闂傚倸鍊搁崐宄懊归崶褏鏆﹂柛顭戝亝閸欏繘鏌℃径瀣婵炲樊浜滃洿婵犮垼娉涢鍛闁秵鈷戦梻鍫熶緱閻掗箖鏌涙惔銏㈡噰闁轰焦鍔栧鍕節閸曢潧鎮堥梻鍌欑劍鐎笛兾涙担瑙勫弿闁靛牆鎳夐弸?   1. Header 濠电姷鏁告慨鐑姐€傞鐐潟闁哄洢鍨圭壕濠氭煙鏉堝墽鐣辩痪鎯х秺閺岋繝宕堕妷銉т痪闂佺顑呴ˇ顖炲煘閹达箑纾兼繝濠傛捣閸斿摜绱掗悙顒€鍔ゆ繛纭风節楠炲啫螖閸涱喖浠洪梺姹囧灮閸嬶綁鍩€椤掆偓閿曨亪寮诲☉姘ｅ亾閿濆骸浜濋悘蹇庡嵆閺岀喎鐣￠悧鍫濇畻閻庤娲橀敃銏ゅ灳閿曞倸绠ｉ柣鎴濇椤ュ秹姊婚崒姘偓鐑芥嚄閸撲焦鍏滈柛顐ｆ礀閻ょ偓绻涢幋娆忕仼缂佺姷濮垫穱濠囶敍濞嗘帩鍔呴梺鎼炲€栧ú鐔煎蓟閿濆顫呴柣妯烘▕濡矂姊烘潪鎵槮婵☆偅绻堝璇测槈閵忕姷鐤€闂傚倸鐗婄粙鎺楁倶閹剧粯鈷戦柛娑橈功閹冲嫰鏌涢弮鈧悷鈺侇嚕婵犳碍鏅查柛鈩兠崝鍛存⒑閹稿海绠撴俊顐ｎ殔閳绘挸鐣濋崟顑芥嫼闂佺绻愰崥瀣Φ閻斿吋鐓曢柕濞垮妽绾箖鏌ｉ敐鍥у幋闁轰焦鍔欏畷濂稿閵忊剝绶┑鐘垫暩閸嬬偤宕归崼鏇椻偓锕傚炊椤掍礁鍓甸梺鍛婃处閸ㄩ亶鍩涢幋鐘电＝濞达絿娅㈡笟娑㈡煟閹烘梹娅曠紒杈ㄥ浮椤㈡岸宕ㄩ鐘辨闂備浇顕уù鐑藉礂濮椻偓瀵?   2. Mega Menu 闂傚倸鍊搁崐鎼佸磹閹间礁纾归柟闂寸绾惧綊鏌熼梻瀵稿妽闁稿顑夐弻娑㈠即閵娿儳浠╅梺鎼炲妼閸婂潡寮诲☉妯锋斀闁糕剝顨忔导宀勬⒑缂佹ɑ鐓ユ俊顐ｇ懇楠炲牓濡搁妷顔藉瘜闁荤姴娲╁鎾寸珶閺囥垺鐓熼幖娣焺閸熷繘鏌涢悩鍐插摵鐎殿噮鍋呯换婵嗩潩閵夈垹浜惧〒姘ｅ亾鐎殿喕绮欓、鏇㈡晲閸涱垽绱￠梻鍌欑窔濞佳団€﹂鍕€舵繝闈涱儛閺佸倿鏌涢銈呮毐闁?box-shadow / filter
@@ -17013,3 +17022,1108 @@ body.global-search-lock {
 
 /* GLOBAL_SEARCH_SQUARE_IMAGE_END */
 
+/* HOME_MOBILE_HERO_BOTTOM_ALIGN_START */
+@media (max-width: 768px) {
+  /* 手机端首屏作为文案底部定位容器 */
+  .home-hero {
+    position: relative !important;
+  }
+
+  /*
+     整组文案以底部为基准：
+     文案增加时向上扩展，不再从顶部向下堆叠。
+  */
+  .home-hero-inner {
+    position: absolute !important;
+    z-index: 3 !important;
+
+    top: auto !important;
+    bottom: clamp(64px, 8svh, 96px) !important;
+    left: 18px !important;
+    right: 18px !important;
+
+    width: auto !important;
+    max-width: none !important;
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+    align-items: flex-start !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 按钮保持在整组文案最下方 */
+  .home-hero-actions {
+    flex-shrink: 0 !important;
+  }
+}
+/* HOME_MOBILE_HERO_BOTTOM_ALIGN_END */
+
+/* ABOUT_FOREACH_MOBILE_VIDEO_SQUARE_START */
+@media (max-width: 768px) {
+  .about-foreach-video-card,
+  .about-foreach-video-card::before,
+  .about-foreach-video-card::after,
+  .about-foreach-video {
+    border-radius: 0 !important;
+  }
+}
+/* ABOUT_FOREACH_MOBILE_VIDEO_SQUARE_END */
+
+/* ABOUT_FOREACH_MOBILE_VIDEO_EDGE_CROP_START */
+@media (max-width: 640px) {
+  .about-foreach-video-card {
+    position: relative !important;
+    overflow: hidden !important;
+    border-radius: 0 !important;
+    clip-path: inset(0) !important;
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+  }
+
+  .about-foreach-video.about-foreach-video-edge-crop {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 0 !important;
+    clip-path: none !important;
+
+    /*
+      播放时同步裁掉视频画面四周，
+      防止视频素材本身也带有圆角边缘。
+    */
+    transform: scale(1.12) !important;
+    transform-origin: center center !important;
+  }
+}
+/* ABOUT_FOREACH_MOBILE_VIDEO_EDGE_CROP_END */
+
+/* HOME_MOBILE_ADVANTAGE_STATIC_START */
+@media (max-width: 768px) {
+  /* 手机端只保留静态信息展示 */
+  .home-company-advantages-section
+    .home-advantage-panel {
+    pointer-events: none !important;
+    cursor: default !important;
+    touch-action: pan-y !important;
+    -webkit-tap-highlight-color: transparent !important;
+
+    flex: none !important;
+    flex-grow: 0 !important;
+    flex-shrink: 0 !important;
+    flex-basis: auto !important;
+
+    transition: none !important;
+    animation: none !important;
+    will-change: auto !important;
+  }
+
+  /* 父容器进入 hover 时也不允许卡片重新分配宽度 */
+  .home-company-advantages-section
+    .home-advantage-panels:hover
+    .home-advantage-panel,
+  .home-company-advantages-section
+    .home-advantage-panels:hover
+    .home-advantage-panel:hover {
+    flex: none !important;
+    flex-grow: 0 !important;
+    flex-shrink: 0 !important;
+    flex-basis: auto !important;
+  }
+
+  .home-company-advantages-section
+    .home-advantage-panels,
+  .home-company-advantages-section
+    .home-advantage-panels:hover {
+    gap: 12px !important;
+  }
+
+  /* 背景图保持默认状态，不放大、不增强饱和度 */
+  .home-company-advantages-section
+    .home-advantage-panel::before,
+  .home-company-advantages-section
+    .home-advantage-panel:hover::before,
+  .home-company-advantages-section
+    .home-advantage-panel:active::before,
+  .home-company-advantages-section
+    .home-advantage-panel:focus::before {
+    transform: scale(1.02) !important;
+    filter: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+
+  /* 遮罩始终保持手机端默认效果 */
+  .home-company-advantages-section
+    .home-advantage-panel::after,
+  .home-company-advantages-section
+    .home-advantage-panel:hover::after,
+  .home-company-advantages-section
+    .home-advantage-panel:active::after,
+  .home-company-advantages-section
+    .home-advantage-panel:focus::after {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.12) 0%,
+      rgba(0, 0, 0, 0.32) 58%,
+      rgba(0, 0, 0, 0.48) 100%
+    ) !important;
+    transition: none !important;
+  }
+
+  /* 内容不能因为 hover 横向移动 */
+  .home-company-advantages-section
+    .home-panel-content,
+  .home-company-advantages-section
+    .home-advantage-panel:hover
+    .home-panel-content,
+  .home-company-advantages-section
+    .home-advantage-panels:hover
+    .home-advantage-panel:hover
+    .home-panel-content {
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+
+  /* 标题始终使用手机端固定字号 */
+  .home-company-advantages-section
+    .home-panel-title,
+  .home-company-advantages-section
+    .home-advantage-panel:hover
+    .home-panel-title,
+  .home-company-advantages-section
+    .home-advantage-panels:hover
+    .home-advantage-panel:hover
+    .home-panel-title {
+    font-size: clamp(18px, 2.2vw, 24px) !important;
+    line-height: 1.12 !important;
+    letter-spacing: 0.01em !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  /* 装饰线始终保持默认长度和品牌色 */
+  .home-company-advantages-section
+    .home-panel-line,
+  .home-company-advantages-section
+    .home-advantage-panel:hover
+    .home-panel-line {
+    width: 52px !important;
+    background: #09e9b4 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  /* 两段说明文字始终完整显示，不再由 hover 展开 */
+  .home-company-advantages-section
+    .home-panel-brief,
+  .home-company-advantages-section
+    .home-panel-detail,
+  .home-company-advantages-section
+    .home-advantage-panel:hover
+    .home-panel-brief,
+  .home-company-advantages-section
+    .home-advantage-panel:hover
+    .home-panel-detail {
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .home-company-advantages-section
+    .home-panel-detail,
+  .home-company-advantages-section
+    .home-advantage-panel:hover
+    .home-panel-detail {
+    max-height: none !important;
+    margin-top: 4px !important;
+    overflow: visible !important;
+  }
+
+  /* 箭头代表可进入或可点击，手机端直接隐藏 */
+  .home-company-advantages-section
+    .home-panel-arrow,
+  .home-company-advantages-section
+    .home-advantage-panel:hover
+    .home-panel-arrow {
+    display: none !important;
+    opacity: 0 !important;
+    transform: none !important;
+    pointer-events: none !important;
+  }
+
+  .home-company-advantages-section
+    .home-advantage-panel *,
+  .home-company-advantages-section
+    .home-advantage-panel::before,
+  .home-company-advantages-section
+    .home-advantage-panel::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+
+/* HOME_MOBILE_ADVANTAGE_TEXT_GAP_START */
+  /* 标题和荧光线保持原位置，只统一左侧基准线 */
+  .home-company-advantages-section
+    .home-panel-title,
+  .home-company-advantages-section
+    .home-panel-line {
+    margin-left: 12px !important;
+    padding-left: 0 !important;
+    text-align: left !important;
+    position: relative !important;
+    top: 15px !important;
+  }
+
+  /* 两段正文作为一个整体，只移动这个整体 */
+  .home-company-advantages-section
+    .home-panel-copy-group {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 2px !important;
+
+    width: calc(100% - 12px) !important;
+    max-width: calc(100% - 12px) !important;
+
+    margin-top: 18px !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+    margin-left: 12px !important;
+
+    padding: 0 !important;
+    padding-bottom: 8px !important;
+
+    transform: translateY(-5px) !important;
+    transition: none !important;
+    animation: none !important;
+  }
+
+  /* 清除正文自身的位移和段落外边距 */
+  .home-company-advantages-section
+    .home-panel-copy-group
+    .home-panel-brief,
+  .home-company-advantages-section
+    .home-panel-copy-group
+    .home-panel-detail,
+  .home-company-advantages-section
+    .home-advantage-panel:hover
+    .home-panel-copy-group
+    .home-panel-brief,
+  .home-company-advantages-section
+    .home-advantage-panel:hover
+    .home-panel-copy-group
+    .home-panel-detail {
+    position: static !important;
+    top: auto !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    text-align: left !important;
+    text-indent: 0 !important;
+
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+    pointer-events: none !important;
+  }
+/* HOME_MOBILE_ADVANTAGE_TEXT_GAP_END */
+}
+/* HOME_MOBILE_ADVANTAGE_STATIC_END */
+
+/* HOME_MOBILE_NEWS_HIGHLIGHT_BUTTON_START */
+@media (max-width: 768px) {
+  .home-news-highlight-card
+    .home-news-highlight-footer
+    .home-news-highlight-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    box-sizing: border-box !important;
+    flex: 0 0 96px !important;
+    align-self: flex-start !important;
+
+    width: 96px !important;
+    min-width: 96px !important;
+    max-width: 96px !important;
+
+    height: 34px !important;
+    min-height: 34px !important;
+    max-height: 34px !important;
+
+    padding: 0 !important;
+    border-radius: 6px !important;
+
+    font-size: 12px !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+    position: relative !important;
+    top: 15px !important;
+  }
+}
+/* HOME_MOBILE_NEWS_HIGHLIGHT_BUTTON_END */
+
+/* HOME_MOBILE_NEWS_TOUCH_INTERACTION_START */
+@media (max-width: 768px) {
+  /*
+    手机端取消 PC 的卡片 hover 动效。
+    点击按钮后也不会让整张卡片保持上浮状态。
+  */
+  .home-news-highlight-card,
+  .home-news-highlight-card:hover,
+  .home-news-highlight-card:focus-within {
+    transform: none !important;
+    border-color: rgba(9, 233, 180, 0.08) !important;
+
+    background:
+      radial-gradient(
+        circle at 80% 18%,
+        rgba(9, 233, 180, 0.18),
+        transparent 26%
+      ),
+      linear-gradient(
+        145deg,
+        #173368 0%,
+        #0c2857 52%,
+        #061b3d 100%
+      ) !important;
+
+    transition: none !important;
+    animation: none !important;
+  }
+
+  /*
+    默认和 hover 状态完全一致。
+    避免手机点击后残留 PC hover 的绿色和上浮状态。
+  */
+  .home-news-highlight-btn,
+  .home-news-highlight-btn:hover {
+    transform: none !important;
+    background: #ffffff !important;
+    color: #061b3d !important;
+
+    -webkit-tap-highlight-color: transparent !important;
+    touch-action: manipulation !important;
+
+    transition:
+      transform 120ms ease,
+      background-color 120ms ease,
+      color 120ms ease !important;
+  }
+
+  /*
+    只有手指正在按下时出现反馈。
+    松开后自动恢复白色按钮。
+  */
+  .home-news-highlight-btn:active {
+    transform: scale(0.96) !important;
+    background: #09e9b4 !important;
+    color: #061b3d !important;
+  }
+
+  /*
+    键盘访问保留清晰焦点，
+    但不产生位置移动。
+  */
+  .home-news-highlight-btn:focus-visible {
+    transform: none !important;
+    outline: 2px solid #09e9b4 !important;
+    outline-offset: 3px !important;
+  }
+}
+/* HOME_MOBILE_NEWS_TOUCH_INTERACTION_END */
+
+
+/* =========================================================
+   HOME_FLOW_CLICKABLE_LINKS_20260713
+   首页第二屏能力标签与产品标签链接
+========================================================= */
+
+.home-flow-inline-link {
+  display: inline-flex;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.home-flow-inline-link:visited {
+  color: inherit;
+}
+
+.home-flow-inline-link:focus-visible {
+  outline: 2px solid #09e9b4;
+  outline-offset: 3px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .home-flow-capability-row
+    .home-flow-inline-link:hover
+    span,
+  .home-flow-tags
+    .home-flow-inline-link:hover
+    span,
+  .home-flow-mobile-tv-tags
+    .home-flow-inline-link:hover
+    span {
+    color: #09e9b4;
+    border-color: #09e9b4;
+  }
+}
+
+/* HOME_FLOW_CLICKABLE_LINKS_20260713_END */
+
+
+/* HOME_FLOW_ACTION_CLICK_LAYER_20260713_START */
+
+/*
+ * 首页第二屏左右两部分建立独立堆叠层级。
+ * 左侧按钮必须高于右侧电视舞台。
+ */
+.home-flow-inner {
+  isolation: isolate;
+}
+
+.home-flow-copy {
+  position: relative;
+  z-index: 50;
+  pointer-events: auto;
+}
+
+.home-flow-actions {
+  position: relative;
+  z-index: 60;
+  pointer-events: auto;
+}
+
+.home-flow-actions .home-flow-btn {
+  position: relative;
+  z-index: 1;
+  pointer-events: auto !important;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/*
+ * 电视舞台继续保持可交互，
+ * 但整体层级不能压住左侧按钮。
+ */
+.home-flow-tv-stage {
+  z-index: 10;
+}
+
+/*
+ * 防止舞台装饰伪元素拦截左侧点击。
+ */
+.home-flow-tv-stage::before,
+.home-flow-tv-stage::after,
+.home-flow-tv-frame::before,
+.home-flow-tv-frame::after {
+  pointer-events: none;
+}
+
+/* HOME_FLOW_ACTION_CLICK_LAYER_20260713_END */
+
+/* HOME_FLOW_ACTION_TEXT_STATE_FINAL_START */
+
+/*
+ * 首页第二屏两个主按钮最终状态修复。
+ *
+ * 只控制文字颜色，不修改：
+ * - 按钮尺寸
+ * - 圆角
+ * - 背景
+ * - 边框
+ * - 间距
+ * - 原有 hover 位移动画
+ */
+
+/* 默认状态，包括已经访问过的链接 */
+.home-flow-actions a.home-flow-btn:link,
+.home-flow-actions a.home-flow-btn:visited {
+  color: #061a3a !important;
+}
+
+/* PC 鼠标悬停：保持原设计的深蓝底、荧光色文字 */
+@media (hover: hover) and (pointer: fine) {
+  .home-flow-actions a.home-flow-btn:hover,
+  .home-flow-actions a.home-flow-btn:link:hover,
+  .home-flow-actions a.home-flow-btn:visited:hover {
+    color: var(--brand-accent, #00ffb2) !important;
+  }
+}
+
+/* 兼容原来可能存在的选中状态 */
+.home-flow-actions a.home-flow-btn.is-active,
+.home-flow-actions a.home-flow-btn.is-active:link,
+.home-flow-actions a.home-flow-btn.is-active:visited {
+  color: #00ffb2 !important;
+}
+
+/* HOME_FLOW_ACTION_TEXT_STATE_FINAL_END */
+
+/* HOME_HONOR_CERTIFICATES_V1_START */
+/*
+  首页公司资质证书
+  PC：自动横向循环
+  手机：双卡可滑动，不自动播放
+*/
+.home-honor-carousel-section {
+  width: 100%;
+  margin-top: 32px;
+}
+
+.home-honor-carousel-mask {
+  width: 100%;
+  overflow: hidden;
+  padding: 6px 0 4px;
+}
+
+.home-honor-track {
+  display: flex !important;
+  align-items: stretch;
+  gap: 24px !important;
+  width: max-content;
+  min-width: max-content;
+  animation: homeHonorCertificatesMarquee 38s linear infinite !important;
+  will-change: transform;
+}
+
+.home-honor-carousel-mask:hover .home-honor-track {
+  animation-play-state: paused !important;
+}
+
+.home-honor-card {
+  flex: 0 0 clamp(176px, 12.8vw, 208px) !important;
+  width: clamp(176px, 12.8vw, 208px) !important;
+  min-width: 0 !important;
+  height: 198px !important;
+  display: flex !important;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.home-honor-image {
+  width: 100%;
+  height: 142px !important;
+  flex: 0 0 142px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+
+.home-honor-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  object-fit: contain;
+  object-position: center;
+  filter: none !important;
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+}
+
+.home-honor-card strong {
+  height: 44px;
+  min-height: 44px;
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+  color: #173368;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.45;
+  text-align: center;
+}
+
+@keyframes homeHonorCertificatesMarquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(calc(-50% - 12px), 0, 0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .home-honor-track {
+    gap: 18px !important;
+  }
+
+  .home-honor-card {
+    flex-basis: 178px !important;
+    width: 178px !important;
+    height: 188px !important;
+  }
+
+  .home-honor-image {
+    height: 132px !important;
+    flex-basis: 132px;
+  }
+}
+
+@media (max-width: 767px) {
+  .home-honor-carousel-section {
+    margin-top: 22px;
+  }
+
+  .home-honor-carousel-mask {
+    overflow-x: auto !important;
+    overflow-y: hidden;
+    padding: 4px 16px 8px;
+    margin-inline: -16px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .home-honor-carousel-mask::-webkit-scrollbar {
+    display: none;
+  }
+
+  .home-honor-track {
+    gap: 12px !important;
+    padding-right: 16px;
+    animation: none !important;
+    transform: none !important;
+    will-change: auto;
+  }
+
+  .home-honor-card {
+    flex: 0 0 calc((100vw - 56px) / 2) !important;
+    width: calc((100vw - 56px) / 2) !important;
+    max-width: 176px;
+    height: 164px !important;
+    gap: 9px;
+    scroll-snap-align: start;
+  }
+
+  /* 手机端只保留第一组，隐藏为 PC 无缝轮播复制出的第二组 */
+  .home-honor-card:nth-child(n + 7) {
+    display: none !important;
+  }
+
+  .home-honor-image {
+    height: 118px !important;
+    flex-basis: 118px;
+  }
+
+  .home-honor-image img {
+    padding: 7px;
+  }
+
+  .home-honor-card strong {
+    height: 37px;
+    min-height: 37px;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-honor-track {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+/* HOME_HONOR_CERTIFICATES_V1_END */
+
+/* HOME_HONOR_ORIGINAL_COLOR_NO_PANEL_V2_START */
+/*
+  首页资质最终覆盖：
+  使用原始彩色 PNG，不显示白色卡片底。
+*/
+html body .home-honor-carousel-section,
+html body .home-honor-carousel-mask,
+html body .home-honor-track,
+html body .home-honor-card,
+html body .home-honor-image {
+  opacity: 1 !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+html body .home-honor-carousel-section,
+html body .home-honor-carousel-mask,
+html body .home-honor-track,
+html body .home-honor-card,
+html body .home-honor-image,
+html body .home-honor-card::before,
+html body .home-honor-card::after,
+html body .home-honor-image::before,
+html body .home-honor-image::after {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+html body .home-honor-card::before,
+html body .home-honor-card::after,
+html body .home-honor-image::before,
+html body .home-honor-image::after {
+  content: none !important;
+  display: none !important;
+}
+
+html body .home-honor-image {
+  height: 142px !important;
+  flex: 0 0 142px !important;
+  padding: 0 !important;
+  overflow: visible !important;
+}
+
+html body .home-honor-image img {
+  display: block !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  margin: auto !important;
+  padding: 0 !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+  mix-blend-mode: normal !important;
+}
+
+@media (max-width: 1024px) {
+  html body .home-honor-image {
+    height: 132px !important;
+    flex-basis: 132px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  html body .home-honor-image {
+    height: 118px !important;
+    flex-basis: 118px !important;
+  }
+}
+/* HOME_HONOR_ORIGINAL_COLOR_NO_PANEL_V2_END */
+
+/* HOME_HONOR_EQUAL_SPACING_V3_START */
+/*
+  首页资质证书等距布局
+  - 每张证书占用相同宽度
+  - 图片在固定区域内居中
+  - PC / 平板 / 手机分别使用统一间距
+*/
+@media (min-width: 1025px) {
+  html body .home-honor-track {
+    gap: 40px !important;
+  }
+
+  html body .home-honor-card {
+    flex: 0 0 220px !important;
+    width: 220px !important;
+    min-width: 220px !important;
+    max-width: 220px !important;
+  }
+
+  html body .home-honor-image {
+    width: 220px !important;
+    height: 150px !important;
+    flex: 0 0 150px !important;
+  }
+
+  html body .home-honor-image img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    object-position: center !important;
+  }
+
+  html body .home-honor-card strong {
+    width: 100% !important;
+    padding-inline: 4px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  html body .home-honor-track {
+    gap: 28px !important;
+  }
+
+  html body .home-honor-card {
+    flex: 0 0 190px !important;
+    width: 190px !important;
+    min-width: 190px !important;
+    max-width: 190px !important;
+  }
+
+  html body .home-honor-image {
+    width: 190px !important;
+    height: 132px !important;
+    flex: 0 0 132px !important;
+  }
+
+  html body .home-honor-image img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    object-position: center !important;
+  }
+}
+
+@media (max-width: 767px) {
+  html body .home-honor-track {
+    gap: 14px !important;
+  }
+
+  html body .home-honor-card {
+    flex: 0 0 calc((100vw - 46px) / 2) !important;
+    width: calc((100vw - 46px) / 2) !important;
+    min-width: calc((100vw - 46px) / 2) !important;
+    max-width: none !important;
+  }
+
+  html body .home-honor-image {
+    width: 100% !important;
+    height: 118px !important;
+    flex: 0 0 118px !important;
+  }
+
+  html body .home-honor-image img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    object-position: center !important;
+  }
+
+  html body .home-honor-card strong {
+    width: 100% !important;
+    padding-inline: 2px;
+    text-align: center;
+  }
+}
+/* HOME_HONOR_EQUAL_SPACING_V3_END */
+
+/* HOME_HONOR_MOBILE_SWIPE_V4_START */
+/*
+  首页资质证书：手机端手指左右滑动
+  PC / 平板原样保留，仅覆盖 767px 以下。
+*/
+@media (max-width: 767px) {
+  html body .home-honor-carousel-section {
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  html body .home-honor-carousel-mask {
+    display: block !important;
+    width: calc(100% + 32px) !important;
+    max-width: none !important;
+    margin-inline: -16px !important;
+    padding: 4px 16px 10px !important;
+
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+
+    touch-action: pan-x !important;
+    -webkit-overflow-scrolling: touch !important;
+    overscroll-behavior-x: contain !important;
+
+    scroll-snap-type: x proximity !important;
+    scroll-behavior: smooth;
+
+    scrollbar-width: none !important;
+    cursor: grab;
+  }
+
+  html body .home-honor-carousel-mask:active {
+    cursor: grabbing;
+  }
+
+  html body .home-honor-carousel-mask::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  html body .home-honor-track {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: stretch !important;
+
+    width: max-content !important;
+    min-width: max-content !important;
+    max-width: none !important;
+
+    margin: 0 !important;
+    padding: 0 16px 0 0 !important;
+
+    animation: none !important;
+    transform: none !important;
+    will-change: auto !important;
+
+    pointer-events: auto !important;
+  }
+
+  html body .home-honor-card {
+    flex-shrink: 0 !important;
+    scroll-snap-align: start !important;
+    scroll-snap-stop: normal !important;
+  }
+
+  html body .home-honor-image,
+  html body .home-honor-image img,
+  html body .home-honor-card strong {
+    pointer-events: none !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+  }
+
+  html body .home-honor-image img {
+    -webkit-user-drag: none !important;
+  }
+
+  /* 手机端只显示第一组 6 张，避免重复内容继续出现在滑动列表中 */
+  html body .home-honor-card:nth-child(n + 7) {
+    display: none !important;
+  }
+}
+/* HOME_HONOR_MOBILE_SWIPE_V4_END */
+
+/* HOME_HONOR_TITLE_MORE_LINES_V5_START */
+/*
+  首页资质证书标题区域加高
+  英文标题最多显示 4 行，避免被原固定高度裁掉。
+*/
+@media (min-width: 1025px) {
+  html body .home-honor-card {
+    height: 242px !important;
+  }
+
+  html body .home-honor-card strong {
+    display: -webkit-box !important;
+    width: 100% !important;
+    height: 80px !important;
+    min-height: 80px !important;
+    max-height: 80px !important;
+    padding: 0 4px !important;
+    overflow: hidden !important;
+
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+    font-weight: 500 !important;
+    text-align: center !important;
+
+    -webkit-box-orient: vertical !important;
+    -webkit-line-clamp: 4 !important;
+    line-clamp: 4 !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  html body .home-honor-card {
+    height: 224px !important;
+  }
+
+  html body .home-honor-card strong {
+    display: -webkit-box !important;
+    width: 100% !important;
+    height: 74px !important;
+    min-height: 74px !important;
+    max-height: 74px !important;
+    padding: 0 3px !important;
+    overflow: hidden !important;
+
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+    text-align: center !important;
+
+    -webkit-box-orient: vertical !important;
+    -webkit-line-clamp: 4 !important;
+    line-clamp: 4 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  html body .home-honor-card {
+    height: 188px !important;
+  }
+
+  html body .home-honor-card strong {
+    display: -webkit-box !important;
+    width: 100% !important;
+    height: 58px !important;
+    min-height: 58px !important;
+    max-height: 58px !important;
+    padding: 0 2px !important;
+    overflow: hidden !important;
+
+    font-size: 12px !important;
+    line-height: 1.35 !important;
+    text-align: center !important;
+
+    -webkit-box-orient: vertical !important;
+    -webkit-line-clamp: 4 !important;
+    line-clamp: 4 !important;
+  }
+}
+/* HOME_HONOR_TITLE_MORE_LINES_V5_END */
+
+/* HOME_HONOR_SECTION_UP_25PX_START */
+/*
+  首页公司资质区域整体上移 25px
+  仅桌面与平板生效，避免影响手机端手指滑动区域。
+*/
+@media (min-width: 768px) {
+  html body .home-honor-carousel-section {
+    position: relative !important;
+    top: -25px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  html body .home-honor-carousel-section {
+    top: auto !important;
+  }
+}
+/* HOME_HONOR_SECTION_UP_25PX_END */

@@ -331,7 +331,7 @@ const aboutImages = {
   companyStrength: "/images/about/foreach/company-strength.webp",
 
   /* 公司介绍视频封面 */
-  videoPoster: "/images/home/tv-foreach.png",
+  videoPoster: "/images/about/foreach/company-video-poster-square.png",
 };
 
 /* 页面视频路径统一管理 */
@@ -706,7 +706,7 @@ export default function AboutForeachClient() {
             )}
           >
             <video
-              className="about-foreach-video"
+              className="about-foreach-video about-foreach-video-edge-crop"
               src={aboutVideos.companyIntro}
               poster={aboutImages.videoPoster}
               controls

@@ -22,6 +22,23 @@ type HomeCompanyStrengthSectionProps = { // 定义 HomeCompanyStrengthSection �
   locale: LocaleCode; // 当前语言，例如 zh-CN / en / es / fr / ko / ru
 }; // 组件参数类型定义结束
 
+/* HOME_HONOR_CERTIFICATE_IMAGE_MAP_START */
+const HOME_HONOR_CERTIFICATE_IMAGE_BY_KEY: Record<string, string> = {
+  "national-high-tech":
+    "/images/home/company-honors-original/national-high-tech.png",
+  "engineering-center":
+    "/images/home/company-honors-original/engineering-center.png",
+  "little-giant":
+    "/images/home/company-honors-original/little-giant.png",
+  "gazelle-enterprise":
+    "/images/home/company-honors-original/gazelle-enterprise.png",
+  "iso-13485":
+    "/images/home/company-honors-original/iso-13485.png",
+  "iso-9001":
+    "/images/home/company-honors-original/iso-9001.png",
+};
+/* HOME_HONOR_CERTIFICATE_IMAGE_MAP_END */
+
 export default function HomeCompanyStrengthSection({ // 定义并导出首页公司实力组件
   locale, // 接收当前语言
 }: HomeCompanyStrengthSectionProps) { // 组件参数定义结束
@@ -182,7 +199,17 @@ export default function HomeCompanyStrengthSection({ // 定义并导出首页公
                     className="home-honor-card" // 资质卡片 class
                     key={`${honor.key}-${index}`} // React 列表 key
                   > {/* 单个资质卡片开始标签结束 */}
-                    <div className="home-honor-image" aria-hidden="true" /> {/* 资质卡片图片占位 */}
+                    <div className="home-honor-image">
+                      <img
+                        src={
+                          HOME_HONOR_CERTIFICATE_IMAGE_BY_KEY[honor.key] ??
+                          "/images/about/foreach/honors/honor-main-certificate.webp"
+                        }
+                        alt={getHomeCompanyText(honor.title, locale)}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div> {/* 资质卡片图片占位 */}
 
                     <strong>{getHomeCompanyText(honor.title, locale)}</strong> {/* 资质卡片标题 */}
                   </div> // 单个资质卡片结束
@@ -226,13 +253,15 @@ export default function HomeCompanyStrengthSection({ // 定义并导出首页公
 
                 <span className="home-panel-line" /> {/* 企业优势卡片装饰线 */}
 
-                <p className="home-panel-brief"> {/* 企业优势简短说明 */}
-                  {getHomeCompanyText(advantage.brief, locale)} {/* 企业优势简短说明多语言文字 */}
-                </p> {/* 企业优势简短说明结束 */}
+                <div className="home-panel-copy-group"> {/* 企业优势两段正文独立容器 */}
+                  <p className="home-panel-brief"> {/* 企业优势简短说明 */}
+                    {getHomeCompanyText(advantage.brief, locale)} {/* 企业优势简短说明多语言文字 */}
+                  </p> {/* 企业优势简短说明结束 */}
 
-                <p className="home-panel-detail"> {/* 企业优势详细说明 */}
-                  {getHomeCompanyText(advantage.detail, locale)} {/* 企业优势详细说明多语言文字 */}
-                </p> {/* 企业优势详细说明结束 */}
+                  <p className="home-panel-detail"> {/* 企业优势详细说明 */}
+                    {getHomeCompanyText(advantage.detail, locale)} {/* 企业优势详细说明多语言文字 */}
+                  </p> {/* 企业优势详细说明结束 */}
+                </div> {/* 企业优势两段正文独立容器结束 */}
 
                 <span className="home-panel-arrow" aria-hidden="true"> {/* 企业优势卡片箭头 */}
                   → {/* 箭头符号 */}
