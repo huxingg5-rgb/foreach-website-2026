@@ -514,12 +514,25 @@ const isFittingReplacementDetailPage =
         if (!target) {
           return;
         }
+        const clickedInsideSearchMode =
+          searchModeRef.current?.contains(target);
 
-        const clickedInsideSearchMode = searchModeRef.current?.contains(target);
+        const clickedSearchTrigger =
+          searchTriggerRef.current?.contains(target);
 
-        const clickedSearchTrigger = searchTriggerRef.current?.contains(target);
+        const clickedInsideSearchPanel =
+          target instanceof Element &&
+          Boolean(
+            target.closest(
+              '[data-global-search-panel="true"]',
+            ),
+          );
 
-        if (clickedInsideSearchMode || clickedSearchTrigger) {
+        if (
+          clickedInsideSearchMode ||
+          clickedSearchTrigger ||
+          clickedInsideSearchPanel
+        ) {
           return;
         }
 
@@ -1398,6 +1411,7 @@ const isFittingReplacementDetailPage =
               /></header>
     );
   }
+
 
 
 
