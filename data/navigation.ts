@@ -1,4 +1,4 @@
-/* ================================
+﻿/* ================================
    navigation.ts
    官网顶部导航数据配置文件
 
@@ -1451,9 +1451,31 @@ const applicationMegaDropdown: MegaDropdown = {
    4. 后续只要修改 productMegaDropdown.categories，手机端产品菜单会自动同步
 ================================ */
 
+function getMobileCategoryHref(
+  categoryKey: string,
+  routeMode: "products" | "applications"
+): LocalizedHref {
+  if (routeMode === "products") {
+    const productCategoryRoutes: Record<string, string> = {
+      pumps: "/products/pumps",
+      valves: "/products/valves",
+      tubing: "/products/tubing",
+      fittings: "/products/fittings",
+      probes: "/products/probes",
+      control: "/products?category=control",
+    };
+
+    return localizedPath(
+      productCategoryRoutes[categoryKey] ?? "/products"
+    );
+  }
+
+  return localizedPath(`/applications/${categoryKey}`);
+}
+
 function createMobileChildrenFromMegaCategories(
   megaDropdown: MegaDropdown,
-  anchor: string,
+  routeMode: "products" | "applications",
   keyPrefix: string
 ): MobileNavChild[] {
   return megaDropdown.categories
@@ -1462,7 +1484,7 @@ function createMobileChildrenFromMegaCategories(
     .map((category) => ({
       key: `${keyPrefix}-${category.key}`,
       label: category.title,
-      href: anchorPath(anchor),
+      href: getMobileCategoryHref(category.key, routeMode),
       order: category.order,
       enabled: category.enabled,
     }));
@@ -2296,7 +2318,7 @@ const navigationItems: NavigationItem[] = [
           "FOREACH 소개",
           "О FOREACH"
         ),
-        href: anchorPath("about"),
+        href: localizedPath("/about/foreach"),
         order: 1,
         enabled: true,
       },
@@ -2310,7 +2332,7 @@ const navigationItems: NavigationItem[] = [
           "R&D 및 제조 역량",
           "НИОКР и производство"
         ),
-        href: anchorPath("about"),
+        href: localizedPath("/about/research-manufacturing"),
         order: 2,
         enabled: true,
       },
@@ -2324,7 +2346,7 @@ const navigationItems: NavigationItem[] = [
           "품질 시스템 및 인증",
           "Система качества и квалификации"
         ),
-        href: anchorPath("about"),
+        href: localizedPath("/about/quality"),
         order: 3,
         enabled: true,
       },

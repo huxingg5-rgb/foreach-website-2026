@@ -1085,9 +1085,17 @@ const isFittingReplacementDetailPage =
                             );
                           }}
                         >
-                          <span className="mobile-nav-summary-text">
+                          <Link
+                            href={navHref}
+                            className="mobile-nav-summary-text"
+                            onClick={(event) => {
+                              // 阻止点击栏目标题时触发 summary 展开逻辑
+                              event.stopPropagation();
+                              closeAllPanels();
+                            }}
+                          >
                             {navLabel}
-                          </span>
+                          </Link>
                         </summary>
 
                         <div className="mobile-nav-submenu">

@@ -75,6 +75,15 @@ const LOCAL_APPLICATION_IMAGE_PATHS = {
    说明：
    用于简单判断后端返回的数据是不是对象，避免接口异常时报错。
 ================================ */
+/* HOME_ANALYTICAL_PRODUCT_LINKS_START */
+const ANALYTICAL_PRODUCT_TAG_LINKS: Record<string, string> = {
+  "high-pressure-valve": "/products/valves/high-pressure-valves",
+  "piston-pump": "/products/pumps/plunger-pumps/ea-100-pmma",
+  "pressure-sensor": "/products/control/pdm5-pressure-sensor",
+  "peek-tubing": "/products/tubing/peek-tubing",
+};
+/* HOME_ANALYTICAL_PRODUCT_LINKS_END */
+
 function isPlainObject(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
 }
@@ -291,10 +300,7 @@ function createMobileTvBackground(imagePath: string): CSSProperties {
   }
 
   return {
-    backgroundImage: `
-      linear-gradient(135deg, rgba(3, 18, 42, 0.72), rgba(0, 38, 86, 0.78)),
-      url("${imagePath}")
-    `,
+    backgroundImage: `url("${imagePath}")`,
     backgroundSize: "cover",
     backgroundPosition: "center center",
     backgroundRepeat: "no-repeat",
@@ -335,6 +341,96 @@ function isTouchLikeDevice() {
  *    NEXT_PUBLIC_ENABLE_HOME_APPLICATION_FLOW_API=true
  * 3. 后端返回完整数据后，前端会自动用接口数据覆盖本地数据
  */
+
+/* =========================================================
+   HOME_FLOW_LINK_HELPERS_20260713
+
+   首页第二屏产品链接映射。
+
+   中文站：
+   进入正式产品分类或产品类型页面。
+
+   外语站：
+   当前产品类型详情页尚未全部建立，
+   先进入对应语言的产品中心，防止出现 404。
+========================================================= */
+
+const HOME_FLOW_PRODUCT_PATHS: Record<string, string> = {
+  /* 左侧五个能力标签 */
+  "precision-pump": "/products/pumps",
+  "fluid-control-valve": "/products/valves",
+  sensor: "/products",
+  "tubing-component": "/products/tubing",
+  "tubing-components": "/products/tubing",
+  "fluidic-connection": "/products/fittings",
+
+  /* 泵系列 */
+  "syringe-pump": "/products/pumps/syringe-pumps",
+  "pipetting-pump": "/products/pumps/pipetting-pumps",
+  "pipette-pump": "/products/pumps/pipetting-pumps",
+  "diaphragm-pump": "/products/pumps/diaphragm-pumps",
+  "piston-pump": "/products/pumps/plunger-pumps",
+  "plunger-pump": "/products/pumps/plunger-pumps",
+  "valveless-pump": "/products/pumps/valveless-pumps",
+
+  /*
+   * 当前没有单独的“多通道泵”正式类型页，
+   * 先进入泵系列页面。
+   */
+  "multi-channel-pump": "/products/pumps",
+
+  /* 阀系列 */
+  "rotary-valve": "/products/valves/rotary-valves",
+  "high-pressure-valve": "/products/valves/high-pressure-valves",
+  "solenoid-valve": "/products/valves/solenoid-valves",
+
+  /*
+   * 当前没有单独的夹管阀正式类型页，
+   * 先进入阀系列页面。
+   */
+  "pinch-valve": "/products/valves",
+
+  /* 针系列 */
+  "sampling-probe": "/products/probes/sampling-probes",
+  "sample-probe": "/products/probes/sampling-probes",
+  "wash-probe": "/products/probes/wash-probes",
+  "piercing-probe": "/products/probes/piercing-probes",
+
+  /* 管路系列 */
+  "peek-tubing": "/products/tubing/peek-tubing",
+  "fep-tubing": "/products/tubing/fep-tubing",
+  "pfa-tubing": "/products/tubing/pfa-tubing",
+  "ptfe-tubing": "/products/tubing/ptfe-tubing",
+  "pvc-tubing": "/products/tubing/pvc-tubing",
+  "tpu-tubing": "/products/tubing/tpu-tubing",
+
+  /*
+   * 压力传感器与气泡检测器目前属于智控系列，
+   * 但正式独立分类路由还没有建立。
+   * 当前先进入产品中心，避免生成不存在的 URL。
+   */
+  "pressure-sensor": "/products",
+  "bubble-detector": "/products",
+  "bubble-sensor": "/products",
+  "control-module": "/products",
+};
+
+function getHomeFlowProductHref(
+  key: string,
+  locale: LocaleCode,
+) {
+  const chinesePath =
+    HOME_FLOW_PRODUCT_PATHS[key] || "/products";
+
+  if (locale === "zh-CN") {
+    return chinesePath;
+  }
+
+  return `/${locale}/products`;
+}
+
+/* HOME_FLOW_LINK_HELPERS_20260713_END */
+
 export default function HomeApplicationFlowSection({
   locale,
 }: HomeApplicationFlowSectionProps) {
@@ -354,16 +450,20 @@ export default function HomeApplicationFlowSection({
   // 旧手机端点击放大卡片逻辑保留，避免影响原来代码
   const [activeCardKey, setActiveCardKey] = useState<string | null>(null);
 
-  // 手机端当前选中的应用按钮下标
-  const [activeMobileIndex, setActiveMobileIndex] = useState(0);
+  // 上方入口按钮默认不选中，点击后才显示选中状态
+  const [activeMobileAction, setActiveMobileAction] = useState<
+    "applications" | "products" | null
+  >(null);
+
+  // 手机端当前选中的应用按钮下标，默认也不选中
+  const [activeMobileIndex, setActiveMobileIndex] = useState<number | null>(
+    null,
+  );
 
   // 手机端切换动效状态
   const [isMobileChanging, setIsMobileChanging] = useState(false);
 
   // 根据当前语言生成按钮链接
-  const applicationsHref = getLocaleAnchorPath(locale, "applications");
-  const productsHref = getLocaleAnchorPath(locale, "products");
-
   // 手机端应用卡片数据
   // 说明：
   // 1. 数据来自 flowData
@@ -371,8 +471,12 @@ export default function HomeApplicationFlowSection({
   const mobileApplicationCards = flowData.mobileApplicationCards;
 
   // 当前手机端选中的应用卡片
+  // 默认展示第一张内容，但页面初始不选中任何行业按钮
+  const displayedMobileIndex = activeMobileIndex ?? 0;
+
   const activeMobileApplication =
-    mobileApplicationCards[activeMobileIndex] || mobileApplicationCards[0];
+    mobileApplicationCards[displayedMobileIndex] ||
+    mobileApplicationCards[0];
 
   /* ================================
      后端接口预留
@@ -587,22 +691,60 @@ export default function HomeApplicationFlowSection({
             </p>
 
             <div className="home-flow-capability-row">
-              {flowData.capabilityTags.map((tag) => (
-                <span key={tag.key}>
-                  {getHomeFlowText(tag.label, locale)}
-                </span>
-              ))}
-            </div>
+  {flowData.capabilityTags.map((tag) => (
+    <Link
+      key={tag.key}
+      href={getHomeFlowProductHref(tag.key, locale)}
+      className="home-flow-inline-link"
+      aria-label={getHomeFlowText(tag.label, locale)}
+    >
+      <span>
+        {getHomeFlowText(tag.label, locale)}
+      </span>
+    </Link>
+  ))}
+</div>
 
-            <div className="home-flow-actions">
-              <Link href={applicationsHref} className="home-flow-btn">
-                {getHomeFlowText(flowData.actions.applicationsLabel, locale)}
-              </Link>
+            <div
+  className="home-flow-actions"
+  data-home-actions="true"
+>
+  <a
+    href={
+      locale === "zh-CN"
+        ? "/applications/ivd"
+        : `/${locale}/applications/ivd`
+    }
+    className="home-flow-btn"
+    data-home-action="applications"
+    onClick={(event) => {
+      event.stopPropagation();
+    }}
+  >
+    {getHomeFlowText(
+      flowData.actions.applicationsLabel,
+      locale,
+    )}
+  </a>
 
-              <Link href={productsHref} className="home-flow-btn">
-                {getHomeFlowText(flowData.actions.productsLabel, locale)}
-              </Link>
-            </div>
+  <a
+    href={
+      locale === "zh-CN"
+        ? "/products"
+        : `/${locale}/products`
+    }
+    className="home-flow-btn"
+    data-home-action="products"
+    onClick={(event) => {
+      event.stopPropagation();
+    }}
+  >
+    {getHomeFlowText(
+      flowData.actions.productsLabel,
+      locale,
+    )}
+  </a>
+</div>
           </div>
 
           {/* PC 端右侧电视舞台 */}
@@ -668,12 +810,22 @@ export default function HomeApplicationFlowSection({
                   <p>{getHomeFlowText(card.description, locale)}</p>
 
                   <div className="home-flow-tags">
-                    {card.tags.map((tag) => (
-                      <span key={tag.key}>
-                        {getHomeFlowText(tag.label, locale)}
-                      </span>
-                    ))}
-                  </div>
+  {card.tags.map((tag) => (
+    <Link
+      key={tag.key}
+      href={getHomeFlowProductHref(tag.key, locale)}
+      className="home-flow-inline-link"
+      aria-label={getHomeFlowText(tag.label, locale)}
+      onClick={(event) => {
+        event.stopPropagation();
+      }}
+    >
+      <span>
+        {getHomeFlowText(tag.label, locale)}
+      </span>
+    </Link>
+  ))}
+</div>
                 </article>
               );
             })}
@@ -713,15 +865,20 @@ export default function HomeApplicationFlowSection({
                 />
 
                 <div
-                  className={
-                    isMobileChanging
-                      ? "home-flow-mobile-tv-content is-changing"
-                      : "home-flow-mobile-tv-content"
-                  }
+                  className={[
+                    "home-flow-mobile-tv-content",
+                    isMobileChanging ? "is-changing" : "",
+                    activeMobileApplication.key ===
+                    "analytical-instruments"
+                      ? "is-analytical"
+                      : "",
+                  ]
+                    .filter(Boolean)
+                    .join(" ")}
                 >
                   <div className="home-flow-mobile-tv-topline">
                     <span className="home-flow-mobile-tv-current-index">
-                      {String(activeMobileIndex + 1).padStart(2, "0")} /{" "}
+                      {String(displayedMobileIndex + 1).padStart(2, "0")} /{" "}
                       {String(mobileApplicationCards.length).padStart(2, "0")}
                     </span>
 
@@ -733,11 +890,31 @@ export default function HomeApplicationFlowSection({
                   </div>
 
                   <div className="home-flow-mobile-tv-main">
-                    <h3 className="home-flow-mobile-tv-title">
+                    <h3
+                      className={[
+                        "home-flow-mobile-tv-title",
+                        activeMobileApplication.key ===
+                        "analytical-instruments"
+                          ? "is-analytical"
+                          : "",
+                      ]
+                        .filter(Boolean)
+                        .join(" ")}
+                    >
                       {getHomeFlowText(activeMobileApplication.title, locale)}
                     </h3>
 
-                    <p className="home-flow-mobile-tv-desc">
+                    <p
+                      className={[
+                        "home-flow-mobile-tv-desc",
+                        activeMobileApplication.key ===
+                        "analytical-instruments"
+                          ? "is-analytical"
+                          : "",
+                      ]
+                        .filter(Boolean)
+                        .join(" ")}
+                    >
                       {getHomeFlowText(
                         activeMobileApplication.description,
                         locale,
@@ -745,12 +922,19 @@ export default function HomeApplicationFlowSection({
                     </p>
 
                     <div className="home-flow-mobile-tv-tags">
-                      {activeMobileApplication.tags.map((tag) => (
-                        <span key={tag.key}>
-                          {getHomeFlowText(tag.label, locale)}
-                        </span>
-                      ))}
-                    </div>
+  {activeMobileApplication.tags.map((tag) => (
+    <Link
+      key={tag.key}
+      href={getHomeFlowProductHref(tag.key, locale)}
+      className="home-flow-inline-link"
+      aria-label={getHomeFlowText(tag.label, locale)}
+    >
+      <span>
+        {getHomeFlowText(tag.label, locale)}
+      </span>
+    </Link>
+  ))}
+</div>
                   </div>
                 </div>
               </div>
@@ -773,7 +957,9 @@ export default function HomeApplicationFlowSection({
                         ? "home-flow-mobile-app-tab is-active"
                         : "home-flow-mobile-app-tab"
                     }
-                    onClick={() => handleMobileApplicationChange(index)}
+                    onClick={() =>
+                      handleMobileApplicationChange(index)
+                    }
                   >
                     {getHomeFlowText(item.title, locale)}
                   </button>
@@ -799,3 +985,4 @@ export default function HomeApplicationFlowSection({
     </section>
   );
 }
+
