@@ -1,4 +1,4 @@
-"use client"; // 声明这是客户端组件，因为这里需要使用 useState、useEffect、window 等浏览器能力
+﻿"use client"; // 声明这是客户端组件，因为这里需要使用 useState、useEffect、window 等浏览器能力
 
 import Image from "next/image"; // 引入 Next.js 图片组件，用于导航栏产品图片展示
 import Link from "next/link"; // 引入 Next.js 的 Link 组件，用于站内跳转
@@ -10,6 +10,10 @@ import {
   useState,
   type MouseEvent,
 } from "react"; // 引入 React 状态、生命周期、缓存、Ref 和事件类型
+
+import GlobalSearchPanel, {
+  preloadGlobalSearchIndex,
+} from "@/components/search/GlobalSearchPanel";
 
 import {
   getLocalizedHref, // 从多语言路径对象中读取当前语言路径
@@ -276,6 +280,7 @@ const isFittingReplacementDetailPage =
      3. 点击搜索框以外区域、点击关闭按钮或按 ESC，会退出搜索模式
   ================================ */
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
 
   // 搜索模式表单区域，用于判断点击是否发生在搜索框内部
   const searchModeRef = useRef<HTMLFormElement | null>(null);
@@ -771,7 +776,7 @@ const isFittingReplacementDetailPage =
           } ${openPanel !== "none" || desktopMegaKey ? "header-panel-open" : ""
           } ${isLanguageOpen ? "language-panel-open" : ""} ${isMobileMenuOpen ? "mobile-nav-open" : ""
           } ${isSearchOpen ? "site-header-search-open" : ""}`}
-        onMouseLeave={handleHeaderMouseLeave}
+        onMouseLeave={isSearchOpen ? undefined : handleHeaderMouseLeave}
       >
         {/* Top 栏内部容器 */}
         <div className="site-header-inner">
@@ -898,12 +903,9 @@ const isFittingReplacementDetailPage =
             <form
               ref={searchModeRef}
               className="site-search-mode-form"
-              action={
-                currentLocale === "zh-CN"
-                  ? "/search"
-                  : `/${currentLocale}/search`
-              }
-              method="get"
+              onSubmit={(event) => {
+                event.preventDefault();
+              }}
             >
               <label className="site-search-mode-box">
                 <span className="site-search-icon" aria-hidden="true" />
@@ -915,6 +917,10 @@ const isFittingReplacementDetailPage =
                   name="q"
                   placeholder={headerText.searchPlaceholder}
                   aria-label={headerText.searchAriaLabel}
+                  value={searchQuery}
+                  onChange={(event) => {
+                    setSearchQuery(event.target.value);
+                  }}
                 />
               </label>
             </form>
@@ -929,6 +935,15 @@ const isFittingReplacementDetailPage =
               type="button"
               aria-label={headerText.searchButtonAriaLabel}
               aria-expanded={isSearchOpen}
+              onMouseEnter={() => {
+                void preloadGlobalSearchIndex();
+              }}
+              onFocus={() => {
+                void preloadGlobalSearchIndex();
+              }}
+              onTouchStart={() => {
+                void preloadGlobalSearchIndex();
+              }}
               onClick={handleSearchButtonClick}
             >
               <span className="site-search-icon" aria-hidden="true" />
@@ -1252,7 +1267,9 @@ const isFittingReplacementDetailPage =
                                   : fallbackProductMeta.description,
                               };
 
-                              return (
+                                                            /* FITTING_MEGA_IMAGE_LINK_START */
+
+                              const cardImageContent = (
                                 <Link
                                   key={cardImage.src}
                                   href={getLocalizedHref(
@@ -1283,6 +1300,18 @@ const isFittingReplacementDetailPage =
                                   </span>
                                 </Link>
                               );
+
+                              const cardImageHref =
+                                cardImage.href
+                                  ? getLocalizedHref(
+                                      cardImage.href,
+                                      currentLocale
+                                    )
+                                  : "";
+
+                              return cardImageContent;
+
+                              /* FITTING_MEGA_IMAGE_LINK_END */
                             })}
                           </div>
                         ) : mainImage ? (
@@ -1356,6 +1385,21 @@ const isFittingReplacementDetailPage =
             onClick={closeAllPanels}
           />
         )}
-      </header>
+      
+        <GlobalSearchPanel
+                isOpen={isSearchOpen}
+                query={searchQuery}
+                locale={currentLocale}
+                onQueryChange={setSearchQuery}
+                onClose={() => {
+                  setIsSearchOpen(false);
+                  searchInputRef.current?.blur();
+                }}
+              /></header>
     );
   }
+
+
+
+
+
