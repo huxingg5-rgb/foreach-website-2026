@@ -1,0 +1,82 @@
+{
+  "generatedAt": "2026-07-12T16:50:04.458Z",
+  "sourceDirectory": "H:\\01-官网项目\\02_产品中心\\fit\\Barbed connector\\已压缩_JPG",
+  "targetDirectory": "F:\\WebsiteProjects\\foreach-website-2026\\public\\images\\products\\fittings\\barbed-fittings\\products",
+  "sourceImageCount": 144,
+  "importedImageCount": 144,
+  "overwrittenImageCount": 0,
+  "selectionProductCount": 166,
+  "detailProductCount": 166,
+  "updatedSelectionCount": 144,
+  "updatedDetailCount": 144,
+  "remainingSelectionWithoutProvidedImage": 22,
+  "remainingDetailWithoutProvidedImage": 22,
+  "backups": {
+    "selectionBackup": "F:\\WebsiteProjects\\foreach-website-2026\\data\\products\\selection\\barbed-fitting-selection.generated.ts.bak_barbed_images_20260712165004",
+    "detailBackup": "F:\\WebsiteProjects\\foreach-website-2026\\data\\products\\generated\\fittings\\barbed-fittings\\detail\\index.json.bak_barbed_images_20260712165004",
+    "mapBackup": "",
+    "imageBackupDirectory": ""
+  },
+  "examples": [
+    {
+      "model": "BA-16C-PA-W",
+      "productId": "809300",
+      "sourceFile": "BA-16C-PA-W.jpg",
+      "webPath": "/images/products/fittings/barbed-fittings/products/ba-16c-pa-w-main.jpg"
+    },
+    {
+      "model": "BA-16C-PP-N",
+      "productId": "809547",
+      "sourceFile": "BA-16C-PP-N.jpg",
+      "webPath": "/images/products/fittings/barbed-fittings/products/ba-16c-pp-n-main.jpg"
+    },
+    {
+      "model": "BA-16D-24D-PA-W",
+      "productId": "809605",
+      "sourceFile": "BA-16D-24D-PA-W.jpg",
+      "webPath": "/images/products/fittings/barbed-fittings/products/ba-16d-24d-pa-w-main.jpg"
+    },
+    {
+      "model": "BA-16D-24D-PP-N",
+      "productId": "809604",
+      "sourceFile": "BA-16D-24D-PP-N.jpg",
+      "webPath": "/images/products/fittings/barbed-fittings/products/ba-16d-24d-pp-n-main.jpg"
+    },
+    {
+      "model": "BA-16D-32D-PA-W",
+      "productId": "809630",
+      "sourceFile": "BA-16D-32D-PA-W.jpg",
+      "webPath": "/images/products/fittings/barbed-fittings/products/ba-16d-32d-pa-w-main.jpg"
+    },
+    {
+      "model": "BA-16D-32D-PP-N",
+      "productId": "809629",
+      "sourceFile": "BA-16D-32D-PP-N.jpg",
+      "webPath": "/images/products/fittings/barbed-fittings/products/ba-16d-32d-pp-n-main.jpg"
+    },
+    {
+      "model": "BA-16F-24F-PA-W",
+      "productId": "809322",
+      "sourceFile": "BA-16F-24F-PA-W.jpg",
+      "webPath": "/images/products/fittings/barbed-fittings/products/ba-16f-24f-pa-w-main.jpg"
+    },
+    {
+      "model": "BA-16F-24F-PP-N",
+      "productId": "809288",
+      "sourceFile": "BA-16F-24F-PP-N.jpg",
+      "webPath": "/images/products/fittings/barbed-fittings/products/ba-16f-24f-pp-n-main.jpg"
+    },
+    {
+      "model": "BA-16F-24F-PV-N",
+      "productId": "809788",
+      "sourceFile": "BA-16F-24F-Pv-N.jpg",
+      "webPath": "/images/products/fittings/barbed-fittings/products/ba-16f-24f-pv-n-main.jpg"
+    },
+    {
+      "model": "BA-16F-32F-PA-W",
+      "productId": "809332",
+      "sourceFile": "BA-16F-32F-PA-W.jpg",
+      "webPath": "/images/products/fittings/barbed-fittings/products/ba-16f-32f-pa-w-main.jpg"
+    }
+  ]
+}

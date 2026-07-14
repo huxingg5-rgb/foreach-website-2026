@@ -2287,6 +2287,18 @@ function matchesActiveProductType(
     return true;
   }
 
+  /*
+   * 阀系列是统一产品类别，
+   * 同时匹配旋转阀、高压阀和电磁阀。
+   */
+  if (
+    categoryId === "valves" &&
+    activeProductTypeId ===
+      "valve-series"
+  ) {
+    return true;
+  }
+
   if (
     categoryId ===
       "fittings" &&
@@ -2309,6 +2321,14 @@ function matchesActiveProductType(
 
 /* FITTING_FILTER_CHECK_VALVE_MERGE_HELPER_END */
 
+
+function getCategoryDefaultProductTypeId(
+  categoryId: string
+) {
+  return categoryId === "valves"
+    ? "valve-series"
+    : getFirstProductTypeId(categoryId);
+}
 
 export default function ProductSelectionClient({
   locale = "zh",
@@ -2334,7 +2354,8 @@ export default function ProductSelectionClient({
     const initialActiveCategoryId =
       initialCategoryId || categoryItems[0]?.id || "pumps";
 
-    return initialProductTypeId || getFirstProductTypeId(initialActiveCategoryId);
+    return initialProductTypeId ||
+        getCategoryDefaultProductTypeId(initialActiveCategoryId);
   });
 
   const [selectedFilters, setSelectedFilters] = useState<SelectedFilterMap>(
@@ -2342,7 +2363,8 @@ export default function ProductSelectionClient({
       const initialActiveCategoryId =
         initialCategoryId || categoryItems[0]?.id || "pumps";
       const initialActiveProductTypeId =
-        initialProductTypeId || getFirstProductTypeId(initialActiveCategoryId);
+        initialProductTypeId ||
+        getCategoryDefaultProductTypeId(initialActiveCategoryId);
 
       return getInitialSelectedFilters(
         initialActiveCategoryId,
@@ -2373,7 +2395,8 @@ const [searchKeyword, setSearchKeyword] = useState("");
     const initialActiveCategoryId =
       initialCategoryId || categoryItems[0]?.id || "pumps";
     const initialActiveProductTypeId =
-      initialProductTypeId || getFirstProductTypeId(initialActiveCategoryId);
+      initialProductTypeId ||
+        getCategoryDefaultProductTypeId(initialActiveCategoryId);
 
     return getDefaultMobileOpenFilterGroups(initialActiveProductTypeId);
   });
@@ -2476,6 +2499,29 @@ const [searchKeyword, setSearchKeyword] = useState("");
         optionMap.values()
       );
 
+    /* VALVE_SINGLE_CATEGORY_FINAL_START */
+
+    /*
+     * 阀系列左侧不再显示旋转阀、高压阀、电磁阀三个选项。
+     * 产品类别下只保留一个阀系列。
+     */
+    if (
+      activeCategoryId ===
+      "valves"
+    ) {
+      return [
+        {
+          value: "valve-series",
+          label:
+            locale === "zh"
+              ? "阀系列"
+              : "Valve Series",
+        },
+      ];
+    }
+
+    /* VALVE_SINGLE_CATEGORY_FINAL_END */
+
     if (
       activeCategoryId ===
       "fittings"
@@ -2542,9 +2588,11 @@ const [searchKeyword, setSearchKeyword] = useState("");
       groups.push({
         key: "productType",
         title:
-          activeCategoryId === "fittings" && locale === "zh"
-            ? "产品种类"
-            : pageText.productTypeLabel,
+          activeCategoryId === "valves" && locale === "zh"
+            ? "产品类别"
+            : activeCategoryId === "fittings" && locale === "zh"
+              ? "产品种类"
+              : pageText.productTypeLabel,
         inputType: "single",
         options: productTypeOptions,
       });
@@ -2834,7 +2882,7 @@ const [searchKeyword, setSearchKeyword] = useState("");
       preferredProductTypeId &&
       (productTypeExistsInProducts || productTypeExistsInRouteMap)
         ? preferredProductTypeId
-        : getFirstProductTypeId(nextCategoryId);
+        : getCategoryDefaultProductTypeId(nextCategoryId);
 
     const hasQuerySelection = Boolean(requestedCategoryId || requestedProductTypeId);
 
@@ -2934,7 +2982,8 @@ const [searchKeyword, setSearchKeyword] = useState("");
   }, [filterGroups]);
 
   function handleCategoryChange(categoryId: string) {
-    const firstProductTypeId = getFirstProductTypeId(categoryId);
+    const firstProductTypeId =
+      getCategoryDefaultProductTypeId(categoryId);
 
     setActiveCategoryId(categoryId);
     setActiveProductTypeId(firstProductTypeId);
@@ -2952,6 +3001,35 @@ const [searchKeyword, setSearchKeyword] = useState("");
   }
 
   function handleProductTypeChange(productTypeId: string) {
+    /*
+     * 阀系列是统一产品类别。
+     * 点击后保持阀系列选中，并显示全部三张阀卡片。
+     */
+    if (
+      activeCategoryId ===
+      "valves"
+    ) {
+      setActiveProductTypeId(
+        "valve-series"
+      );
+
+      setSelectedFilters(
+        {}
+      );
+
+      setSearchKeyword(
+        ""
+      );
+
+      setMobileOpenFilterGroups(
+        getDefaultMobileOpenFilterGroups(
+          "valve-series"
+        )
+      );
+
+      return;
+    }
+
     /*
      * 说明：
      * 1. 点击产品类型时，优先跳转正式 URL
@@ -3903,7 +3981,8 @@ function isFilterOptionActive(
     });
   }
   function resetCurrentFilters() {
-    const firstProductTypeId = getFirstProductTypeId(activeCategoryId);
+    const firstProductTypeId =
+      getCategoryDefaultProductTypeId(activeCategoryId);
 
     setActiveProductTypeId(firstProductTypeId);
     setSelectedFilters(getDefaultSelectedFilters(activeCategoryId, firstProductTypeId));
@@ -4070,7 +4149,12 @@ function isFilterOptionActive(
               <ProductSelectionToolbar
                 total={matchedProducts.length}
                 resultPrefix={pageText.resultPrefix}
-                resultSuffix={pageText.resultSuffix}
+                resultSuffix={
+                  activeCategoryId === "valves" &&
+                  locale === "zh"
+                    ? " 个阀系列"
+                    : pageText.resultSuffix
+                }
                 resetButtonText={pageText.resetFilters}
                 selectedTags={selectedTagItems}
                 onRemoveTag={removeSelectedTag}

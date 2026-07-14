@@ -1798,6 +1798,21 @@ const navigationItems: NavigationItem[] = [
         enabled: true,
       },
 
+      {
+        key: "mobile-resource-fluid-resistance-calculator",
+        label: t(
+          "流阻计算器",
+          "Fluid Resistance Calculator",
+          "Calculadora de resistencia de flujo",
+          "Calculateur de résistance à l’écoulement",
+          "유동 저항 계산기",
+          "Калькулятор гидравлического сопротивления"
+        ),
+        href: localizedPath("/resources/calculators/fluid-resistance"),
+        order: 2,
+        enabled: true,
+      },
+
       /* =========================================================
          接头替代查询
          说明：
@@ -1818,7 +1833,7 @@ const navigationItems: NavigationItem[] = [
           "Поиск аналогов фитингов"
         ),
         href: localizedPath("/resources/selection-support/fitting-replacement"),
-        order: 2,
+        order: 3,
         enabled: true,
       },
 
@@ -1833,7 +1848,7 @@ const navigationItems: NavigationItem[] = [
           "Инструкции по установке"
         ),
         href: localizedPath("/resources/installation-guide"),
-        order: 3,
+        order: 4,
         enabled: true,
       },
 
@@ -1848,7 +1863,7 @@ const navigationItems: NavigationItem[] = [
           "Совместимость материалов"
         ),
         href: localizedPath("/resources/material-compatibility"),
-        order: 4,
+        order: 5,
         enabled: true,
       },
 
@@ -1863,7 +1878,7 @@ const navigationItems: NavigationItem[] = [
           "Часто задаваемые вопросы"
         ),
         href: localizedPath("/resources/technical-articles"),
-        order: 5,
+        order: 6,
         enabled: true,
       },
 
@@ -1878,7 +1893,7 @@ const navigationItems: NavigationItem[] = [
           "Новости компании"
         ),
         href: localizedPath("/resources/news"),
-        order: 6,
+        order: 7,
         enabled: true,
       },
     ],

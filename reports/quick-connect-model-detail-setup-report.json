@@ -1,0 +1,45 @@
+{
+  "createdAt": "2026-07-12T00:27:12.656Z",
+  "sourceData": "data\\products\\generated\\fittings\\quick-connect-fittings\\index.json",
+  "detailOutput": "data\\products\\generated\\fittings\\quick-connect-fittings\\detail\\index.json",
+  "detailPage": "app\\products\\fittings\\quick-connect-fittings\\[slug]\\page.tsx",
+  "selectionClient": "components\\products\\selection\\ProductSelectionClient.tsx",
+  "generatedDetailCount": 191,
+  "seriesCounts": {
+    "Q20": 98,
+    "Q40": 58,
+    "Q60": 35
+  },
+  "examples": [
+    {
+      "model": "Q2001-PMV-SACN",
+      "name": "Q20公端直通带阀快插接头",
+      "href": "/products/fittings/quick-connect-fittings/q2001-pmv-sacn"
+    },
+    {
+      "model": "Q2001-PMV-SPPE",
+      "name": "Q20公端直通带阀快插接头",
+      "href": "/products/fittings/quick-connect-fittings/q2001-pmv-sppe"
+    },
+    {
+      "model": "Q2001-PMX-SACN",
+      "name": "Q20公端直通不带阀快插接头",
+      "href": "/products/fittings/quick-connect-fittings/q2001-pmx-sacn"
+    },
+    {
+      "model": "Q2001-PMX-SPPE",
+      "name": "Q20公端直通不带阀快插接头",
+      "href": "/products/fittings/quick-connect-fittings/q2001-pmx-sppe"
+    },
+    {
+      "model": "Q2001-PNV-SACN",
+      "name": "Q20公端直通带阀快插接头",
+      "href": "/products/fittings/quick-connect-fittings/q2001-pnv-sacn"
+    }
+  ],
+  "backups": {
+    "detail": "",
+    "page": "",
+    "selectionClient": "components\\products\\selection\\ProductSelectionClient.tsx.bak_quick_connect_model_href_20260712002712"
+  }
+}

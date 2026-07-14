@@ -3622,3 +3622,528 @@
 }
 
 /* LUER_FILTER_DISABLED_STYLE_END */
+
+/* VALVE_SERIES_FILTER_THREE_COLUMNS_START */
+
+/*
+ * 阀系列的三个筛选项在PC端同一行显示。
+ * 该规则只作用于阀系列，不影响泵、针、接头和其他筛选页面。
+ */
+@media (min-width: 761px) {
+  .products-selection-page
+    .filter-panel[data-category-id="valves"]
+    .product-type-filter-group
+    .filter-options {
+    grid-template-columns: repeat(
+      3,
+      minmax(0, 1fr)
+    );
+    gap: 6px;
+  }
+
+  .products-selection-page
+    .filter-panel[data-category-id="valves"]
+    .product-type-filter-group
+    .filter-option {
+    min-width: 0;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+/* VALVE_SERIES_FILTER_THREE_COLUMNS_END */
+
+/* MOBILE_FILTER_COLLAPSE_V2_CSS_START */
+
+/*
+ * 手机端普通筛选组默认收起。
+ */
+@media (max-width: 760px) {
+  .products-selection-page
+    .filter-panel
+    .filter-group:not(.is-mobile-open)
+    .filter-options {
+    display: none !important;
+  }
+
+  .products-selection-page
+    .filter-panel
+    .filter-group.is-mobile-open
+    .filter-options {
+    display: grid !important;
+  }
+
+  .products-selection-page
+    .barbed-port-filter-wrapper {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .products-selection-page
+    .barbed-port-mobile-trigger {
+    display: flex !important;
+  }
+
+  .products-selection-page
+    .barbed-port-filter-body {
+    display: none !important;
+  }
+
+  .products-selection-page
+    .barbed-port-filter-wrapper.is-mobile-open
+    .barbed-port-filter-body {
+    display: block !important;
+  }
+
+  .products-selection-page
+    .barbed-port-filter-wrapper
+    .barbed-port-filter-group {
+    border-bottom: 0;
+  }
+}
+
+/*
+ * PC端保持当前全部展开布局。
+ */
+@media (min-width: 761px) {
+  .products-selection-page
+    .mobile-only-filter-symbol {
+    display: none !important;
+  }
+
+  .products-selection-page
+    .barbed-port-mobile-trigger {
+    display: none !important;
+  }
+
+  .products-selection-page
+    .barbed-port-filter-body {
+    display: block !important;
+  }
+}
+
+/* MOBILE_FILTER_COLLAPSE_V2_CSS_END */
+
+/* FIX_MOBILE_FITTING_DOUBLE_SYMBOL_START */
+
+/*
+ * The fitting product type already uses ::after for the plus/minus icon.
+ * Hide the additional React symbol to avoid two icons on mobile.
+ */
+@media (max-width: 760px) {
+  .products-selection-page
+    .fittings-product-type-filter-group
+    .product-type-filter-toggle
+    .filter-group-symbol {
+    display: none !important;
+  }
+}
+
+/* FIX_MOBILE_FITTING_DOUBLE_SYMBOL_END */
+/* MOBILE_FITTING_COMPACT_PRODUCT_TYPE_START */
+
+@media (max-width: 760px) {
+  /*
+   * 产品种类收起后只保留标题行，
+   * 不再额外显示“当前：硬管接头”。
+   */
+  .products-selection-page
+    .fittings-product-type-filter-group
+    .product-type-current-option {
+    display: none !important;
+  }
+
+  /*
+   * 隐藏原来的伪元素加减号。
+   */
+  .products-selection-page
+    .fittings-product-type-filter-group
+    .product-type-filter-toggle::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  /*
+   * 使用与其他筛选组相同的组件图标，
+   * 保持加减号粗细和尺寸一致。
+   */
+  .products-selection-page
+    .fittings-product-type-filter-group
+    .product-type-filter-toggle
+    .filter-group-symbol {
+    display: inline-flex !important;
+  }
+}
+
+/* MOBILE_FITTING_COMPACT_PRODUCT_TYPE_END */
+/* MOBILE_FILTER_SYMBOL_FINAL_UNIFY_START */
+
+@media (max-width: 760px) {
+  /*
+   * Disable the old fitting product-type pseudo icon.
+   */
+  .products-selection-page
+    .fittings-product-type-filter-group
+    .product-type-filter-toggle::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  /*
+   * Use one identical icon style for every mobile filter group.
+   */
+  .products-selection-page
+    .filter-panel
+    .filter-group-trigger
+    .filter-group-symbol {
+    display: inline-flex !important;
+    width: 24px !important;
+    height: 24px !important;
+    flex: 0 0 24px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: var(--brand-blue) !important;
+    font-size: 26px !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+  }
+
+  /*
+   * Extra specificity for the fitting product-type row.
+   */
+  .products-selection-page
+    .fittings-product-type-filter-group
+    .product-type-filter-toggle
+    .filter-group-symbol {
+    display: inline-flex !important;
+    font-size: 26px !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+  }
+}
+
+/* MOBILE_FILTER_SYMBOL_FINAL_UNIFY_END */
+/* MOBILE_CATEGORY_COLLAPSE_FINAL_START */
+
+@media (max-width: 760px) {
+  /*
+   * Remove the unnecessary outer frame and blank space.
+   */
+  .products-selection-page
+    .category-tabs-wrap {
+    display: block !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    height: auto !important;
+    margin: 0 0 28px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    overflow: visible !important;
+  }
+
+  /*
+   * Main mobile category trigger.
+   */
+  .products-selection-page
+    .mobile-category-trigger {
+    display: flex !important;
+    width: 100% !important;
+    min-height: 70px !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 16px !important;
+    margin: 0 !important;
+    padding: 0 24px !important;
+    border: 0 !important;
+    outline: 0 !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+    background: #173368 !important;
+    color: #09e9b4 !important;
+    font-size: 20px !important;
+    font-weight: 800 !important;
+    line-height: 1.35 !important;
+    text-align: left !important;
+    cursor: pointer !important;
+  }
+
+  .products-selection-page
+    .mobile-category-trigger:focus,
+  .products-selection-page
+    .mobile-category-trigger:focus-visible,
+  .products-selection-page
+    .mobile-category-trigger:active {
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+  }
+
+  /*
+   * Fluorescent plus/minus symbol.
+   */
+  .products-selection-page
+    .mobile-category-symbol {
+    display: inline-flex !important;
+    width: 26px !important;
+    height: 26px !important;
+    flex: 0 0 26px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #09e9b4 !important;
+    font-size: 28px !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+  }
+
+  /*
+   * Fully remove the category list from layout when collapsed.
+   */
+  .products-selection-page
+    .category-tabs-wrap:not(.is-mobile-open)
+    .category-tabs {
+    display: none !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    overflow: hidden !important;
+  }
+
+  /*
+   * Show the category list only after opening.
+   */
+  .products-selection-page
+    .category-tabs-wrap.is-mobile-open
+    .category-tabs {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 10px 0 0 !important;
+    padding: 12px !important;
+    border: 1px solid var(--line) !important;
+    background: #ffffff !important;
+  }
+
+  .products-selection-page
+    .category-tabs-wrap.is-mobile-open
+    .category-tab {
+    width: 100% !important;
+    min-height: 46px !important;
+  }
+}
+
+/* MOBILE_CATEGORY_COLLAPSE_FINAL_END */
+/* MOBILE_CATEGORY_SIZE_POSITION_FIX_START */
+
+@media (max-width: 760px) {
+  /*
+   * 产品大类区域整体向下移动 24px。
+   */
+  .products-selection-page
+    .category-tabs-wrap {
+    margin-top: 24px !important;
+    margin-bottom: 28px !important;
+  }
+
+  /*
+   * 缩小深蓝色产品大类按钮高度。
+   */
+  .products-selection-page
+    .mobile-category-trigger {
+    height: 56px !important;
+    min-height: 56px !important;
+    padding: 0 20px !important;
+    border-radius: 8px !important;
+    font-size: 19px !important;
+  }
+
+  /*
+   * 同步缩小右侧荧光色加减号。
+   */
+  .products-selection-page
+    .mobile-category-symbol {
+    width: 24px !important;
+    height: 24px !important;
+    flex-basis: 24px !important;
+    font-size: 26px !important;
+  }
+}
+
+/* MOBILE_CATEGORY_SIZE_POSITION_FIX_END */
+/* MOBILE_PRODUCT_CARD_ONE_COLUMN_START */
+
+@media (max-width: 760px) {
+  /*
+   * 手机端产品卡片统一一行一张。
+   */
+  .products-selection-page
+    .product-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  .products-selection-page
+    .product-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+  }
+}
+
+/* MOBILE_PRODUCT_CARD_ONE_COLUMN_END */
+/* PC_FILTER_GROUPS_ALWAYS_OPEN_START */
+
+/*
+ * PC端所有左侧筛选组固定展开。
+ * 手机端继续使用原来的折叠状态。
+ */
+@media (min-width: 761px) {
+  /*
+   * 所有筛选选项保持显示。
+   */
+  .products-selection-page
+    .filter-panel
+    .filter-options {
+    display: grid !important;
+    height: auto !important;
+    visibility: visible !important;
+    overflow: visible !important;
+  }
+
+  /*
+   * PC端不显示加减号。
+   */
+  .products-selection-page
+    .filter-panel
+    .filter-group-symbol,
+  .products-selection-page
+    .filter-panel
+    .mobile-only-filter-symbol {
+    display: none !important;
+  }
+
+  /*
+   * PC端筛选标题仅作为标题展示，不能点击折叠。
+   */
+  .products-selection-page
+    .filter-panel
+    .filter-group-trigger {
+    pointer-events: none !important;
+    cursor: default !important;
+  }
+
+  /*
+   * 避免接头产品种类出现“当前：硬管接头”重复状态行。
+   */
+  .products-selection-page
+    .filter-panel
+    .product-type-current-option {
+    display: none !important;
+  }
+
+  /*
+   * 倒刺接头组合筛选在PC端始终展开。
+   */
+  .products-selection-page
+    .barbed-port-filter-body,
+  .products-selection-page
+    .barbed-port-filter-content {
+    display: block !important;
+    height: auto !important;
+    visibility: visible !important;
+  }
+
+  .products-selection-page
+    .barbed-port-mobile-trigger {
+    display: none !important;
+  }
+}
+
+/* PC_FILTER_GROUPS_ALWAYS_OPEN_END */
+/* PC_FILTER_FINAL_FORCE_OPEN_START */
+
+@media (min-width: 761px) {
+  /*
+   * PC端强制显示所有普通筛选选项。
+   */
+  .products-selection-page
+    .filter-panel
+    .filter-group
+    > .filter-options,
+  .products-selection-page
+    .filter-panel
+    .product-type-filter-group:not(.is-mobile-open)
+    > .filter-options,
+  .products-selection-page
+    .filter-panel
+    .product-type-filter-group.is-mobile-open
+    > .filter-options,
+  .products-selection-page
+    .filter-panel
+    .fittings-product-type-filter-group
+    > .filter-options {
+    display: grid !important;
+    height: auto !important;
+    max-height: none !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+  }
+
+  /*
+   * PC端隐藏所有组件加减号。
+   */
+  .products-selection-page
+    .filter-panel
+    .filter-group-symbol,
+  .products-selection-page
+    .filter-panel
+    .mobile-only-filter-symbol {
+    display: none !important;
+  }
+
+  /*
+   * PC端隐藏接头产品种类旧的伪元素加减号。
+   */
+  .products-selection-page
+    .filter-panel
+    .fittings-product-type-filter-group
+    .product-type-filter-toggle::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  /*
+   * PC端标题只用于展示，不响应折叠点击。
+   */
+  .products-selection-page
+    .filter-panel
+    .filter-group-trigger,
+  .products-selection-page
+    .filter-panel
+    .product-type-filter-toggle {
+    pointer-events: none !important;
+    cursor: default !important;
+  }
+
+  /*
+   * PC端不显示“当前：硬管接头”状态行。
+   */
+  .products-selection-page
+    .filter-panel
+    .product-type-current-option {
+    display: none !important;
+  }
+}
+
+/* PC_FILTER_FINAL_FORCE_OPEN_END */

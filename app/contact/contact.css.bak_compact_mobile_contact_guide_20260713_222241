@@ -1,0 +1,4151 @@
+﻿/* =========================================================
+   contact.css
+   鎭掓案杈惧畼缃戯綔涓枃鑱旂郴鎴戜滑椤甸潰涓撳睘鏍峰紡
+
+   鏂囦欢璺緞锛?
+   app/contact/contact.css
+
+   瀵瑰簲椤甸潰锛?
+   /contact
+
+   璇存槑锛?
+   1. 杩欎釜鏂囦欢鍙礋璐ｂ€滆仈绯绘垜浠€濋〉闈㈡牱寮?
+   2. 涓嶅奖鍝嶉椤点€佸叧浜庢垜浠€佷骇鍝佷腑蹇冪瓑鍏朵粬椤甸潰
+   3. 椤甸潰缁撴瀯鍦?components/contact/ContactPageContent.tsx
+   4. 椤甸潰鏂囨鍦?data/contact-cooperation/contact.zh.ts
+   5. 褰撳墠椤甸潰鏍峰紡鐢?app/contact/page.tsx 寮曞叆
+========================================================= */
+
+
+/* =========================================================
+   1. 椤甸潰鍩虹鍙橀噺
+   璇存槑锛?
+   1. 鍙橀噺鍐欏湪 .contact-page 鍐呴儴锛岄伩鍏嶅奖鍝嶅叾浠栭〉闈?
+   2. 鍚庣画杩欎釜椤甸潰鎵€鏈夐鑹层€佸搴︺€佸渾瑙掋€佸姩鐢婚兘浼樺厛鐢ㄥ彉閲?
+========================================================= */
+
+.contact-page {
+    --contact-blue: #173368;
+    /* 鎭掓案杈惧畼缃戜富鍝佺墝娣辫摑鑹?*/
+    --contact-blue-dark: #0b1f46;
+    /* 鏇存繁鐨勮摑鑹诧紝鐢ㄤ簬娣辫壊鑳屾櫙杈呭姪 */
+    --contact-cyan: #09e9b4;
+    /* 绉戞妧鎰熻崸鍏夐潚锛岀敤浜庢寜閽?hover 鍜岄噸鐐瑰己璋?*/
+    --contact-text-main: #142033;
+    /* 椤甸潰涓昏鏂囧瓧棰滆壊 */
+    --contact-text-sub: #627189;
+    /* 椤甸潰璇存槑鏂囧瓧棰滆壊 */
+    --contact-text-muted: #8a96a8;
+    /* 椤甸潰寮卞寲鎻愮ず鏂囧瓧棰滆壊 */
+    --contact-line: rgba(23, 51, 104, 0.15);
+    /* 鏅€氭祬钃濈伆鍒嗗壊绾?*/
+    --contact-line-strong: rgba(23, 51, 104, 0.28);
+    /* 绋嶅己涓€鐐圭殑杈规棰滆壊 */
+    --contact-bg-page: #f5f8fc;
+    /* 娴呯伆钃濋〉闈㈠垎鍖鸿儗鏅?*/
+    --contact-bg-white: #ffffff;
+    /* 鐧借壊鑳屾櫙 */
+    --contact-content-width: 1320px;
+    /* 椤甸潰涓讳綋鍐呭鏈€澶у搴?*/
+    --contact-radius: 8px;
+    /* 椤甸潰鎸夐挳銆佽緭鍏ユ缁熶竴鍦嗚 */
+    --contact-transition: 0.24s ease;
+    /* 椤甸潰缁熶竴浜や簰鍔ㄦ晥鏃堕棿 */
+
+    width: 100%;
+    /* 椤甸潰瀹藉害鍗犳弧娴忚鍣?*/
+    min-height: 100vh;
+    /* 椤甸潰鏈€灏忛珮搴﹁嚦灏戠瓑浜庝竴灞?*/
+    background: var(--contact-bg-white);
+    /* 椤甸潰榛樿鑳屾櫙涓虹櫧鑹?*/
+    color: var(--contact-text-main);
+    /* 椤甸潰榛樿鏂囧瓧棰滆壊 */
+}
+
+
+/* =========================================================
+   2. 椤堕儴 Banner
+   璇存槑锛?
+   1. Banner 浣跨敤鐪熷疄鍥剧墖浣滀负鑳屾櫙
+   2. 宸︿晶鍙犲姞娣辫摑娓愬彉锛屼繚璇佹枃瀛楁竻鏅?
+   3. 濡傛灉鍥剧墖娌℃湁鏀捐繘鍘伙紝浼氭樉绀烘繁钃濇笎鍙樺厹搴曡儗鏅?
+========================================================= */
+
+.contact-hero {
+    position: relative;
+    /* 璁╁唴閮ㄧ綉鏍奸伄缃╁彲浠ョ粷瀵瑰畾浣?*/
+    width: 100%;
+    /* Banner 瀹藉害鍗犳弧鏁村睆 */
+    overflow: hidden;
+    /* 闃叉鑳屾櫙鎴栦吉鍏冪礌婧㈠嚭 */
+    color: #ffffff;
+    /* Banner 鍐呮枃瀛楅粯璁ょ櫧鑹?*/
+    background:
+        linear-gradient(90deg,
+            rgba(8, 29, 67, 0.92) 0%,
+            rgba(23, 51, 104, 0.78) 42%,
+            rgba(23, 51, 104, 0.28) 100%),
+        /* 宸︽繁鍙虫祬鐨勬繁钃濋伄缃╋紝淇濊瘉宸︿晶鏍囬鍙 */
+        radial-gradient(circle at 82% 24%, rgba(9, 233, 180, 0.2), transparent 34%),
+        /* 鍙充笂瑙掕崸鍏夐潚姘涘洿鍏?*/
+        url("/images/contact-cooperation/contact-hero.webp"),
+        /* Banner 鐪熷疄鍥剧墖璺緞 */
+        linear-gradient(135deg, #081d43 0%, #173368 56%, #102b5e 100%);
+    /* 鍥剧墖缂哄け鏃剁殑娣辫摑鍏滃簳鑳屾櫙 */
+    background-size: cover, auto, cover, cover;
+    /* 鍚勫眰鑳屾櫙灏哄璁剧疆 */
+    background-position: center, center, center right, center;
+    /* 鍥剧墖鍋忓彸鏄剧ず锛屽乏渚х暀鏂囧瓧绌洪棿 */
+    background-repeat: no-repeat;
+    /* 鑳屾櫙涓嶉噸澶?*/
+}
+
+.contact-hero::before {
+    content: "";
+    /* 鍒涘缓涓€涓楗板眰 */
+    position: absolute;
+    /* 瑕嗙洊鏁翠釜 Banner */
+    inset: 0;
+    /* 涓婂彸涓嬪乏鍏ㄩ儴璐磋竟 */
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    /* 缁嗙綉鏍肩嚎锛屽鍔犵鎶€鎰?*/
+    background-size: 64px 64px;
+    /* 缃戞牸澶у皬 */
+    opacity: 0.22;
+    /* 缃戞牸閫忔槑搴︼紝閬垮厤澶姠鐪?*/
+    pointer-events: none;
+    /* 涓嶅奖鍝嶆寜閽偣鍑?*/
+}
+
+.contact-hero-inner {
+    position: relative;
+    /* 璁╁唴瀹规诞鍦ㄨ楗板眰涓婇潰 */
+    z-index: 1;
+    /* 鍐呭灞傜骇楂樹簬 ::before */
+    max-width: var(--contact-content-width);
+    /* 鍐呭鏈€澶у搴?*/
+    min-height: 420px;
+    /* Banner 鍚堢悊楂樺害 */
+    margin: 0 auto;
+    /* 鍐呭鍖哄煙姘村钩灞呬腑 */
+    padding: 86px 28px 76px;
+    /* 涓娿€佸乏鍙炽€佷笅鍐呰竟璺?*/
+    display: flex;
+    /* 浣跨敤 flex 鎺у埗鍐呭浣嶇疆 */
+    align-items: center;
+    /* 鍐呭鍨傜洿灞呬腑 */
+    justify-content: flex-start;
+    /* 鍐呭闈犲乏 */
+}
+
+.contact-hero-content {
+    max-width: 760px;
+    /* 闄愬埗鏍囬瀹藉害锛岄伩鍏嶅お闀?*/
+}
+
+.contact-hero-title {
+    max-width: 760px;
+    /* 鏍囬鏈€澶у搴?*/
+    margin: 0;
+    /* 娓呴櫎榛樿澶栬竟璺?*/
+    color: #ffffff;
+    /* 鏍囬涓绘枃瀛楃櫧鑹?*/
+    font-size: clamp(34px, 3.6vw, 52px);
+    /* 鍝嶅簲寮忔爣棰樺瓧鍙?*/
+    line-height: 1.12;
+    /* 鏍囬琛岄珮 */
+    font-weight: 900;
+    /* 鏍囬鍔犵矖 */
+    letter-spacing: -0.045em;
+    /* 鏍囬瀛楄窛鐣ユ敹绱э紝澧炲己楂樼骇鎰?*/
+}
+
+.contact-hero-title span {
+    color: var(--contact-cyan);
+    /* 鏍囬涓殑閲嶇偣鏂囧瓧浣跨敤鑽у厜闈?*/
+}
+
+.contact-hero-actions {
+    margin-top: 30px;
+    /* 鎸夐挳缁勫拰鏍囬涔嬮棿鐨勮窛绂?*/
+    display: flex;
+    /* 鎸夐挳妯悜鎺掑垪 */
+    flex-wrap: wrap;
+    /* 灏忓睆骞曞厑璁告崲琛?*/
+    gap: 12px;
+    /* 鎸夐挳涔嬮棿鐨勯棿璺?*/
+}
+
+
+/* =========================================================
+   3. 鎸夐挳缁熶竴鏍峰紡
+   璇存槑锛?
+   1. 鎵€鏈夋寜閽粺涓€ 8px 鍦嗚
+   2. 榛樿鐧借壊 / 閫忔槑鎰?
+   3. hover 涓鸿崸鍏夐潚搴?+ 娣辫摑鏂囧瓧
+========================================================= */
+
+.contact-button,
+.contact-mini-button,
+.contact-file-button,
+.contact-submit-button {
+    min-height: 44px;
+    /* 鎸夐挳鏈€灏忛珮搴?*/
+    padding: 0 22px;
+    /* 鎸夐挳宸﹀彸鍐呰竟璺?*/
+    border-radius: var(--contact-radius);
+    /* 鎸夐挳缁熶竴 8px 鍦嗚 */
+    border: 1px solid rgba(23, 51, 104, 0.42);
+    /* 榛樿娣辫摑鍗婇€忔槑杈规 */
+    background: rgba(255, 255, 255, 0.72);
+    /* 榛樿鐧借壊鍗婇€忔槑鑳屾櫙 */
+    color: var(--contact-blue);
+    /* 榛樿娣辫摑鏂囧瓧 */
+    display: inline-flex;
+    /* 璁╂寜閽唴瀹瑰眳涓?*/
+    align-items: center;
+    /* 鍨傜洿灞呬腑 */
+    justify-content: center;
+    /* 姘村钩灞呬腑 */
+    cursor: pointer;
+    /* 榧犳爣绉诲叆鏄剧ず鎵嬪瀷 */
+    font-size: 14px;
+    /* 鎸夐挳鏂囧瓧瀛楀彿 */
+    font-weight: 850;
+    /* 鎸夐挳鏂囧瓧鍔犵矖 */
+    line-height: 1;
+    /* 鎸夐挳鏂囧瓧琛岄珮 */
+    text-decoration: none;
+    /* 鍘绘帀 a 鏍囩涓嬪垝绾?*/
+    white-space: nowrap;
+    /* 鎸夐挳鏂囧瓧涓嶆崲琛?*/
+    transition:
+        background var(--contact-transition),
+        color var(--contact-transition),
+        border-color var(--contact-transition),
+        transform var(--contact-transition),
+        opacity var(--contact-transition);
+    /* 缁熶竴鎸夐挳鍔ㄦ晥 */
+}
+
+.contact-hero .contact-button {
+    border-color: rgba(255, 255, 255, 0.52);
+    /* Banner 涓婃寜閽娇鐢ㄧ櫧鑹插崐閫忔槑杈规 */
+    background: rgba(255, 255, 255, 0.08);
+    /* Banner 涓婃寜閽粯璁ら€忔槑鐧藉簳 */
+    color: #ffffff;
+    /* Banner 涓婃寜閽粯璁ょ櫧鑹叉枃瀛?*/
+}
+
+.contact-button:hover,
+.contact-mini-button:hover,
+.contact-file-button:hover,
+.contact-submit-button:hover,
+.contact-hero .contact-button:hover {
+    background: var(--contact-cyan);
+    /* 榧犳爣鎮仠鍙樿崸鍏夐潚搴?*/
+    color: var(--contact-blue);
+    /* 榧犳爣鎮仠鍙樻繁钃濆瓧 */
+    border-color: var(--contact-cyan);
+    /* 榧犳爣鎮仠杈规鍙樿崸鍏夐潚 */
+    transform: translateY(-1px);
+    /* 榧犳爣鎮仠杞诲井涓婃诞 */
+}
+
+.contact-mini-button:disabled,
+.contact-submit-button:disabled {
+    opacity: 0.55;
+    /* 绂佺敤鐘舵€侀檷浣庨€忔槑搴?*/
+    cursor: not-allowed;
+    /* 绂佺敤鐘舵€侀紶鏍囨樉绀轰笉鍙偣鍑?*/
+    transform: none;
+    /* 绂佺敤鐘舵€佷笉鍏佽涓婃诞 */
+}
+
+
+/* =========================================================
+   4. 閫氱敤鍐呭鍖?
+========================================================= */
+
+.contact-section {
+    width: 100%;
+    /* 鍖哄潡瀹藉害鍗犳弧椤甸潰 */
+    padding: 88px 28px;
+    /* 鍖哄潡涓婁笅鍜屽乏鍙冲唴杈硅窛 */
+    background: #ffffff;
+    /* 榛樿鐧借壊鑳屾櫙 */
+}
+
+.contact-section-inner {
+    max-width: var(--contact-content-width);
+    /* 鍐呭鏈€澶у搴?*/
+    margin: 0 auto;
+    /* 鍐呭鍖哄煙姘村钩灞呬腑 */
+}
+
+.contact-section-head {
+    max-width: 840px;
+    /* 鏍囬鍖烘渶澶у搴?*/
+    margin-bottom: 34px;
+    /* 鏍囬鍖哄拰鍐呭涔嬮棿鐨勮窛绂?*/
+    padding-bottom: 24px;
+    /* 鏍囬鍖哄簳閮ㄧ暀鐧?*/
+    border-bottom: 1px solid var(--contact-line);
+    /* 鏍囬鍖哄簳閮ㄥ垎鍓茬嚎 */
+}
+
+.contact-section-title {
+    margin: 0;
+    /* 娓呴櫎鏍囬榛樿澶栬竟璺?*/
+    color: var(--contact-blue);
+    /* 鏍囬浣跨敤鍝佺墝娣辫摑鑹?*/
+    font-size: clamp(30px, 3vw, 44px);
+    /* 鍝嶅簲寮忔ā鍧楁爣棰樺瓧鍙?*/
+    line-height: 1.18;
+    /* 妯″潡鏍囬琛岄珮 */
+    font-weight: 850;
+    /* 妯″潡鏍囬鍔犵矖 */
+    letter-spacing: -0.03em;
+    /* 妯″潡鏍囬瀛楄窛鐣ユ敹绱?*/
+}
+
+.contact-section-desc {
+    max-width: 760px;
+    /* 鎻忚堪鏂囧瓧鏈€澶у搴?*/
+    margin: 14px 0 0;
+    /* 鎻忚堪鏂囧瓧鍜屾爣棰樹箣闂寸殑璺濈 */
+    color: var(--contact-text-sub);
+    /* 鎻忚堪鏂囧瓧浣跨敤娆＄骇棰滆壊 */
+    font-size: 16px;
+    /* 鎻忚堪鏂囧瓧瀛楀彿 */
+    line-height: 1.7;
+    /* 鎻忚堪鏂囧瓧琛岄珮 */
+}
+
+
+/* =========================================================
+   5. 鏀寔鍐呭妯″潡
+========================================================= */
+
+.contact-support-section {
+    background: #ffffff;
+    /* 鏀寔鍐呭鍖轰娇鐢ㄧ櫧鑹茶儗鏅?*/
+}
+
+.contact-support-grid {
+    display: grid;
+    /* 浣跨敤缃戞牸甯冨眬 */
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    /* 妗岄潰绔笁鍒?*/
+    border-top: 1px solid var(--contact-line);
+    /* 缃戞牸椤堕儴杈规 */
+    border-left: 1px solid var(--contact-line);
+    /* 缃戞牸宸︿晶杈规 */
+    background: #ffffff;
+    /* 缃戞牸鑳屾櫙鐧借壊 */
+}
+
+.contact-support-item {
+    position: relative;
+    /* 鐢ㄤ簬宸︿晶鑽у厜绾垮畾浣?*/
+    min-height: 132px;
+    /* 姣忎釜鏀寔椤圭殑鏈€灏忛珮搴?*/
+    padding: 24px 26px 22px 30px;
+    /* 鏀寔椤瑰唴杈硅窛 */
+    border: 0;
+    /* 娓呴櫎鎸夐挳榛樿杈规 */
+    border-right: 1px solid var(--contact-line);
+    /* 姣忛」鍙充晶鍒嗗壊绾?*/
+    border-bottom: 1px solid var(--contact-line);
+    /* 姣忛」搴曢儴鍒嗗壊绾?*/
+    background: #ffffff;
+    /* 榛樿鐧借壊鑳屾櫙 */
+    text-align: left;
+    /* 鏂囧瓧闈犲乏 */
+    cursor: pointer;
+    /* 榧犳爣鏄剧ず鎵嬪瀷 */
+    transition:
+        background var(--contact-transition),
+        box-shadow var(--contact-transition);
+    /* hover 鍔ㄦ晥 */
+}
+
+.contact-support-item::before {
+    content: "";
+    /* 鍒涘缓宸︿晶鑽у厜绾?*/
+    position: absolute;
+    /* 缁濆瀹氫綅 */
+    left: 0;
+    /* 闈犲乏 */
+    top: 24px;
+    /* 椤堕儴璺濈 */
+    width: 3px;
+    /* 鑽у厜绾垮搴?*/
+    height: 34px;
+    /* 榛樿鑽у厜绾块珮搴?*/
+    background: var(--contact-cyan);
+    /* 鑽у厜绾块鑹?*/
+    transition: height var(--contact-transition);
+    /* 楂樺害鍙樺寲鍔ㄦ晥 */
+}
+
+.contact-support-item:hover {
+    background: #f8fbff;
+    /* hover 鏃惰儗鏅彉娴呰摑鐧?*/
+    box-shadow: inset 0 0 0 1px rgba(9, 233, 180, 0.18);
+    /* hover 鏃跺鍔犺崸鍏夋弿杈规劅 */
+}
+
+.contact-support-item:hover::before {
+    height: calc(100% - 48px);
+    /* hover 鏃跺乏渚ц崸鍏夌嚎鍙橀暱 */
+}
+
+.contact-support-item h3 {
+    margin: 0 0 8px;
+    /* 鏍囬搴曢儴闂磋窛 */
+    color: var(--contact-blue);
+    /* 鏍囬棰滆壊 */
+    font-size: 18px;
+    /* 鏀寔椤规爣棰樺瓧鍙?*/
+    line-height: 1.3;
+    /* 鏀寔椤规爣棰樿楂?*/
+    font-weight: 850;
+    /* 鏀寔椤规爣棰樺姞绮?*/
+}
+
+.contact-support-item p {
+    margin: 0;
+    /* 娓呴櫎娈佃惤榛樿澶栬竟璺?*/
+    color: var(--contact-text-sub);
+    /* 鏀寔椤硅鏄庢枃瀛楅鑹?*/
+    font-size: 14px;
+    /* 鏀寔椤硅鏄庡瓧鍙?*/
+    line-height: 1.65;
+    /* 鏀寔椤硅鏄庤楂?*/
+}
+
+
+/* =========================================================
+   6. 琛ㄥ崟鍖哄煙鏁翠綋甯冨眬
+========================================================= */
+
+.contact-form-section {
+    background: var(--contact-bg-page);
+    /* 琛ㄥ崟鍖轰娇鐢ㄦ祬鐏拌摑鑳屾櫙 */
+}
+
+.contact-form-layout {
+    display: grid;
+    /* 琛ㄥ崟鍖轰娇鐢ㄥ乏鍙冲竷灞€ */
+    grid-template-columns: 420px minmax(0, 1fr);
+    /* 宸︿晶璇存槑 420px锛屽彸渚ц〃鍗曡嚜閫傚簲 */
+    gap: 34px;
+    /* 宸﹀彸涓ゆ爮闂磋窛 */
+    align-items: start;
+    /* 涓ゆ爮椤堕儴瀵归綈 */
+}
+
+
+/* =========================================================
+   7. 宸︿晶濉啓璇存槑
+========================================================= */
+
+.contact-guide-panel {
+    position: sticky;
+    /* 妗岄潰绔粴鍔ㄦ椂鍥哄畾鍦ㄩ《閮ㄩ檮杩?*/
+    top: 96px;
+    /* 璺濈娴忚鍣ㄩ《閮?96px */
+    border: 1px solid var(--contact-line);
+    /* 闈㈡澘杈规 */
+    background: #ffffff;
+    /* 闈㈡澘鑳屾櫙鐧借壊 */
+}
+
+.contact-guide-head {
+    padding: 28px 30px;
+    /* 璇存槑澶撮儴鍐呰竟璺?*/
+    background: var(--contact-blue);
+    /* 璇存槑澶撮儴娣辫摑鑳屾櫙 */
+    color: #ffffff;
+    /* 璇存槑澶撮儴鏂囧瓧鐧借壊 */
+    border-bottom: 1px solid var(--contact-line);
+    /* 璇存槑澶撮儴鍒嗗壊绾?*/
+}
+
+.contact-guide-head h3 {
+    margin: 0;
+    /* 娓呴櫎鏍囬榛樿澶栬竟璺?*/
+    font-size: 28px;
+    /* 宸︿晶璇存槑鏍囬瀛楀彿 */
+    line-height: 1.22;
+    /* 宸︿晶璇存槑鏍囬琛岄珮 */
+    font-weight: 850;
+    /* 宸︿晶璇存槑鏍囬鍔犵矖 */
+    letter-spacing: -0.03em;
+    /* 鏍囬瀛楄窛鐣ユ敹绱?*/
+}
+
+.contact-guide-head p {
+    margin: 14px 0 0;
+    /* 璇存槑鏂囧瓧鍜屾爣棰橀棿璺?*/
+    color: rgba(255, 255, 255, 0.68);
+    /* 璇存槑鏂囧瓧鐧借壊鍗婇€忔槑 */
+    font-size: 15px;
+    /* 璇存槑鏂囧瓧瀛楀彿 */
+    line-height: 1.65;
+    /* 璇存槑鏂囧瓧琛岄珮 */
+}
+
+.contact-guide-list {
+    background: #ffffff;
+    /* 璇存槑鍒楄〃鑳屾櫙鐧借壊 */
+}
+
+.contact-guide-item {
+    display: grid;
+    /* 鍗曟潯璇存槑浣跨敤宸﹀彸缁撴瀯 */
+    grid-template-columns: 70px 1fr;
+    /* 宸︿晶缂栧彿 70px锛屽彸渚у唴瀹硅嚜閫傚簲 */
+    min-height: 118px;
+    /* 鍗曟潯璇存槑鏈€灏忛珮搴?*/
+    border-bottom: 1px solid var(--contact-line);
+    /* 鍗曟潯璇存槑搴曢儴鍒嗗壊绾?*/
+}
+
+.contact-guide-number {
+    padding-top: 24px;
+    /* 缂栧彿椤堕儴璺濈 */
+    border-right: 1px solid var(--contact-line);
+    /* 缂栧彿鍜屽唴瀹逛箣闂寸殑鍒嗗壊绾?*/
+    color: var(--contact-cyan);
+    /* 缂栧彿浣跨敤鑽у厜闈?*/
+    font-size: 14px;
+    /* 缂栧彿瀛楀彿 */
+    font-weight: 900;
+    /* 缂栧彿鍔犵矖 */
+    text-align: center;
+    /* 缂栧彿灞呬腑 */
+}
+
+.contact-guide-copy {
+    padding: 22px 24px;
+    /* 璇存槑鍐呭鍐呰竟璺?*/
+}
+
+.contact-guide-copy h4 {
+    margin: 0 0 6px;
+    /* 灏忔爣棰樺簳閮ㄩ棿璺?*/
+    color: var(--contact-blue);
+    /* 灏忔爣棰樻繁钃濊壊 */
+    font-size: 17px;
+    /* 灏忔爣棰樺瓧鍙?*/
+    font-weight: 850;
+    /* 灏忔爣棰樺姞绮?*/
+}
+
+.contact-guide-copy p {
+    margin: 0;
+    /* 娓呴櫎娈佃惤榛樿澶栬竟璺?*/
+    color: var(--contact-text-sub);
+    /* 璇存槑鍐呭鏂囧瓧棰滆壊 */
+    font-size: 14px;
+    /* 璇存槑鍐呭瀛楀彿 */
+    line-height: 1.65;
+    /* 璇存槑鍐呭琛岄珮 */
+}
+
+.contact-guide-note {
+    margin: 0;
+    /* 娓呴櫎榛樿澶栬竟璺?*/
+    padding: 22px 24px;
+    /* 搴曢儴鎻愮ず鍐呰竟璺?*/
+    border-top: 1px solid var(--contact-line);
+    /* 搴曢儴鎻愮ず涓婂垎鍓茬嚎 */
+    background: #f8fbff;
+    /* 搴曢儴鎻愮ず娴呰摑鐧借儗鏅?*/
+    color: var(--contact-text-sub);
+    /* 搴曢儴鎻愮ず鏂囧瓧棰滆壊 */
+    font-size: 14px;
+    /* 搴曢儴鎻愮ず瀛楀彿 */
+    line-height: 1.65;
+    /* 搴曢儴鎻愮ず琛岄珮 */
+}
+
+
+/* =========================================================
+   8. 琛ㄥ崟闈㈡澘
+========================================================= */
+
+.contact-form-panel {
+    border: 1px solid var(--contact-line);
+    /* 琛ㄥ崟闈㈡澘杈规 */
+    background: #ffffff;
+    /* 琛ㄥ崟闈㈡澘鑳屾櫙鐧借壊 */
+}
+
+.contact-form-panel-head {
+    padding: 26px 30px;
+    /* 琛ㄥ崟鏍囬鍖哄煙鍐呰竟璺?*/
+    border-bottom: 1px solid var(--contact-line);
+    /* 琛ㄥ崟鏍囬鍖哄煙搴曢儴鍒嗗壊绾?*/
+}
+
+.contact-form-panel-head h3 {
+    margin: 0;
+    /* 娓呴櫎鏍囬榛樿澶栬竟璺?*/
+    color: var(--contact-blue);
+    /* 琛ㄥ崟鏍囬娣辫摑鑹?*/
+    font-size: 26px;
+    /* 琛ㄥ崟鏍囬瀛楀彿 */
+    line-height: 1.25;
+    /* 琛ㄥ崟鏍囬琛岄珮 */
+    font-weight: 850;
+    /* 琛ㄥ崟鏍囬鍔犵矖 */
+    letter-spacing: -0.02em;
+    /* 琛ㄥ崟鏍囬瀛楄窛鐣ユ敹绱?*/
+}
+
+.contact-form {
+    padding: 30px;
+    /* 琛ㄥ崟鍐呴儴鏁翠綋鍐呰竟璺?*/
+}
+
+.contact-form-grid {
+    display: grid;
+    /* 琛ㄥ崟浣跨敤缃戞牸甯冨眬 */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    /* 妗岄潰绔袱鍒?*/
+    gap: 18px 20px;
+    /* 琛岄棿璺?18px锛屽垪闂磋窛 20px */
+}
+
+.contact-field {
+    display: grid;
+    /* 鍗曚釜瀛楁鍐呴儴鍨傜洿鎺掑垪 */
+    gap: 8px;
+    /* 鏍囩鍜岃緭鍏ユ涔嬮棿鐨勮窛绂?*/
+}
+
+.contact-field-full {
+    grid-column: 1 / -1;
+    /* 褰撳墠瀛楁鍗犳弧鏁磋 */
+}
+
+.contact-field label {
+    color: #334760;
+    /* 琛ㄥ崟鏍囩棰滆壊 */
+    font-size: 14px;
+    /* 琛ㄥ崟鏍囩瀛楀彿 */
+    font-weight: 750;
+    /* 琛ㄥ崟鏍囩鍔犵矖 */
+}
+
+.contact-field label span {
+    color: #d92d20;
+    /* 蹇呭～鏄熷彿绾㈣壊 */
+    margin-left: 2px;
+    /* 鏄熷彿鍜屾枃瀛椾箣闂寸殑璺濈 */
+}
+
+
+/* =========================================================
+   9. 杈撳叆妗?/ 涓嬫媺妗?/ 鏂囨湰鍩?
+========================================================= */
+
+.contact-field input,
+.contact-field select,
+.contact-field textarea {
+    width: 100%;
+    /* 琛ㄥ崟鎺т欢瀹藉害鍗犳弧鐖剁骇 */
+    min-height: 48px;
+    /* 琛ㄥ崟鎺т欢鏈€灏忛珮搴?*/
+    border: 1px solid rgba(23, 51, 104, 0.2);
+    /* 琛ㄥ崟鎺т欢娴呰摑鐏拌竟妗?*/
+    border-radius: var(--contact-radius);
+    /* 琛ㄥ崟鎺т欢缁熶竴 8px 鍦嗚 */
+    background-color: #ffffff;
+    /* 琛ㄥ崟鎺т欢鐧借壊鑳屾櫙 */
+    padding: 0 13px;
+    /* 杈撳叆妗嗗乏鍙冲唴杈硅窛 */
+    color: var(--contact-text-main);
+    /* 杈撳叆鏂囧瓧棰滆壊 */
+    font-size: 14px;
+    /* 杈撳叆鏂囧瓧瀛楀彿 */
+    outline: none;
+    /* 鍘绘帀娴忚鍣ㄩ粯璁よ仛鐒﹀妗?*/
+    transition:
+        border-color var(--contact-transition),
+        box-shadow var(--contact-transition);
+    /* 鑱氱劍鍔ㄦ晥 */
+}
+
+.contact-field textarea {
+    min-height: 148px;
+    /* 鏂囨湰鍩熸渶灏忛珮搴?*/
+    resize: vertical;
+    /* 鍏佽鐢ㄦ埛涓婁笅鎷栧姩璋冩暣楂樺害 */
+    padding: 13px;
+    /* 鏂囨湰鍩熷唴杈硅窛 */
+    line-height: 1.7;
+    /* 鏂囨湰鍩熸枃瀛楄楂?*/
+}
+
+.contact-field input:focus,
+.contact-field select:focus,
+.contact-field textarea:focus {
+    border-color: var(--contact-cyan);
+    /* 鑱氱劍鏃惰竟妗嗗彉鑽у厜闈?*/
+    box-shadow: inset 4px 0 0 var(--contact-cyan);
+    /* 鑱氱劍鏃跺乏渚у嚭鐜拌崸鍏夎壊寮鸿皟绾?*/
+}
+
+.contact-field select {
+    appearance: none;
+    /* 闅愯棌鏍囧噯娴忚鍣ㄤ笅鎷夌澶?*/
+    -webkit-appearance: none;
+    /* 闅愯棌 Chrome/Safari 涓嬫媺绠ご */
+    -moz-appearance: none;
+    /* 闅愯棌 Firefox 涓嬫媺绠ご */
+    padding-right: 52px;
+    /* 缁欒嚜瀹氫箟绠ご棰勭暀鍙充晶绌洪棿 */
+    cursor: pointer;
+    /* 涓嬫媺妗嗛紶鏍囨樉绀烘墜鍨?*/
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.2 1.4L6 6.2L10.8 1.4' stroke='%23173368' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
+    /* 鑷畾涔夋繁钃濊壊涓嬫媺绠ご */
+    background-repeat: no-repeat;
+    /* 绠ご鍥炬爣涓嶉噸澶?*/
+    background-position: right 20px center;
+    /* 绠ご璺濈鍙充晶 20px锛屽瀭鐩村眳涓?*/
+    background-size: 12px 8px;
+    /* 绠ご鍥炬爣灏哄 */
+}
+
+.contact-field select:focus {
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.2 1.4L6 6.2L10.8 1.4' stroke='%2309e9b4' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
+    /* 鑱氱劍鏃朵笅鎷夌澶村彉鑽у厜闈?*/
+}
+
+.contact-field select::-ms-expand {
+    display: none;
+    /* 鍏煎鏃х増 IE/Edge锛岄殣钘忛粯璁ょ澶?*/
+}
+
+
+/* =========================================================
+   10. 閭楠岃瘉鐮佽
+========================================================= */
+
+.contact-email-row {
+    display: grid;
+    /* 閭楠岃瘉鍖哄煙浣跨敤缃戞牸甯冨眬 */
+    grid-template-columns: minmax(260px, 1.4fr) auto minmax(180px, 0.8fr) auto;
+    /* 閭杈撳叆妗嗐€佸彂閫佹寜閽€侀獙璇佺爜杈撳叆妗嗐€侀獙璇佹寜閽?*/
+    gap: 8px;
+    /* 閭楠岃瘉鍖哄悇椤归棿璺?*/
+    align-items: center;
+    /* 鍨傜洿灞呬腑 */
+}
+
+.contact-email-tip {
+    min-height: 18px;
+    /* 缁欐彁绀烘枃瀛楅鐣欓珮搴︼紝閬垮厤璺冲姩 */
+    margin: 0;
+    /* 娓呴櫎榛樿澶栬竟璺?*/
+    color: var(--contact-text-muted);
+    /* 鎻愮ず鏂囧瓧寮卞寲棰滆壊 */
+    font-size: 12px;
+    /* 鎻愮ず鏂囧瓧瀛楀彿 */
+    line-height: 1.5;
+    /* 鎻愮ず鏂囧瓧琛岄珮 */
+}
+
+.contact-mini-button {
+    min-height: 48px;
+    /* 楠岃瘉鐮佹寜閽珮搴﹀拰杈撳叆妗嗕竴鑷?*/
+    padding: 0 18px;
+    /* 楠岃瘉鐮佹寜閽乏鍙冲唴杈硅窛 */
+}
+
+
+/* =========================================================
+   11. 鎻愪氦鍖?/ 闄勪欢涓婁紶
+========================================================= */
+
+.contact-submit-row {
+    margin-top: 26px;
+    /* 鎻愪氦鍖哄拰琛ㄥ崟涓讳綋涔嬮棿鐨勮窛绂?*/
+    padding-top: 24px;
+    /* 鎻愪氦鍖洪《閮ㄥ唴杈硅窛 */
+    border-top: 1px solid var(--contact-line);
+    /* 鎻愪氦鍖轰笂鏂瑰垎鍓茬嚎 */
+    display: grid;
+    /* 鎻愪氦鍖轰娇鐢ㄧ綉鏍煎竷灞€ */
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    /* 宸︿晶璇存槑銆佷腑闂翠笂浼犮€佸彸渚ф彁浜?*/
+    align-items: start;
+    /* 椤堕儴瀵归綈 */
+    gap: 8px;
+    /* 涓夊垪涔嬮棿鐨勯棿璺?*/
+}
+
+.contact-submit-row>p {
+    max-width: 540px;
+    /* 闄勪欢璇存槑鏈€澶у搴?*/
+    margin: 0;
+    /* 娓呴櫎榛樿澶栬竟璺?*/
+    color: var(--contact-text-sub);
+    /* 闄勪欢璇存槑鏂囧瓧棰滆壊 */
+    font-size: 13px;
+    /* 闄勪欢璇存槑瀛楀彿 */
+    line-height: 1.7;
+    /* 闄勪欢璇存槑琛岄珮 */
+}
+
+.contact-file-area {
+    display: grid;
+    /* 涓婁紶鎸夐挳鍜岄檮浠跺垪琛ㄥ瀭鐩存帓鍒?*/
+    gap: 8px;
+    /* 涓婁紶鎸夐挳鍜岄檮浠跺垪琛ㄩ棿璺?*/
+    width: fit-content;
+    /* 涓婁紶鍖哄煙瀹藉害闅忓唴瀹瑰彉鍖?*/
+    min-width: 0;
+    /* 闃叉鍦?grid 涓孩鍑?*/
+    justify-self: end;
+    /* 涓婁紶鍖哄煙闈犲彸锛岃创杩戞彁浜ゆ寜閽?*/
+}
+
+.contact-file-button {
+    position: relative;
+    /* 鐢ㄤ簬闅愯棌鐪熷疄 input */
+    overflow: hidden;
+    /* 闅愯棌瓒呭嚭閮ㄥ垎 */
+    min-height: 44px;
+    /* 涓婁紶鎸夐挳楂樺害 */
+}
+
+.contact-file-button input {
+    position: absolute;
+    /* 璁╃湡瀹?input 瑕嗙洊鏁翠釜鎸夐挳 */
+    inset: 0;
+    /* input 鍥涜竟璐存弧鎸夐挳 */
+    width: 100%;
+    /* input 瀹藉害鍗犳弧鎸夐挳 */
+    height: 100%;
+    /* input 楂樺害鍗犳弧鎸夐挳 */
+    opacity: 0;
+    /* 闅愯棌鐪熷疄 input */
+    cursor: pointer;
+    /* 榧犳爣鏄剧ず鎵嬪瀷 */
+}
+
+.contact-file-list {
+    display: grid;
+    /* 闄勪欢鍒楄〃鍨傜洿鎺掑垪 */
+    gap: 8px;
+    /* 闄勪欢椤逛箣闂寸殑闂磋窛 */
+}
+
+.contact-file-item {
+    display: grid;
+    /* 闄勪欢椤瑰唴閮ㄤ娇鐢ㄧ綉鏍?*/
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    /* 鏂囦欢鍚嶃€佸ぇ灏忋€佸垹闄ゆ寜閽?*/
+    align-items: center;
+    /* 鍐呭鍨傜洿灞呬腑 */
+    gap: 12px;
+    /* 闄勪欢椤瑰唴閮ㄩ棿璺?*/
+    min-height: 34px;
+    /* 闄勪欢椤规渶灏忛珮搴?*/
+    padding: 0 10px 0 12px;
+    /* 闄勪欢椤瑰唴杈硅窛 */
+    border: 1px solid var(--contact-line);
+    /* 闄勪欢椤硅竟妗?*/
+    border-radius: var(--contact-radius);
+    /* 闄勪欢椤瑰渾瑙?*/
+    background: #ffffff;
+    /* 闄勪欢椤圭櫧鑹茶儗鏅?*/
+    color: #40516a;
+    /* 闄勪欢椤规枃瀛楅鑹?*/
+    font-size: 12px;
+    /* 闄勪欢椤规枃瀛楀瓧鍙?*/
+}
+
+.contact-file-item span:first-child {
+    overflow: hidden;
+    /* 鏂囦欢鍚嶈秴鍑烘椂闅愯棌 */
+    text-overflow: ellipsis;
+    /* 鏂囦欢鍚嶈秴鍑烘椂鏄剧ず鐪佺暐鍙?*/
+    white-space: nowrap;
+    /* 鏂囦欢鍚嶄笉鎹㈣ */
+}
+
+.contact-file-item span:nth-child(2) {
+    color: var(--contact-text-muted);
+    /* 鏂囦欢澶у皬浣跨敤寮卞寲棰滆壊 */
+    white-space: nowrap;
+    /* 鏂囦欢澶у皬涓嶆崲琛?*/
+}
+
+.contact-file-item button {
+    min-width: 44px;
+    /* 鍒犻櫎鎸夐挳鏈€灏忓搴?*/
+    height: 24px;
+    /* 鍒犻櫎鎸夐挳楂樺害 */
+    border: 1px solid rgba(217, 45, 32, 0.24);
+    /* 鍒犻櫎鎸夐挳娴呯孩杈规 */
+    border-radius: var(--contact-radius);
+    /* 鍒犻櫎鎸夐挳鍦嗚 */
+    background: rgba(217, 45, 32, 0.06);
+    /* 鍒犻櫎鎸夐挳娴呯孩鑳屾櫙 */
+    color: #b42318;
+    /* 鍒犻櫎鎸夐挳鏂囧瓧绾㈣壊 */
+    cursor: pointer;
+    /* 榧犳爣鏄剧ず鎵嬪瀷 */
+    font-size: 12px;
+    /* 鍒犻櫎鎸夐挳瀛楀彿 */
+    font-weight: 750;
+    /* 鍒犻櫎鎸夐挳鏂囧瓧鍔犵矖 */
+    transition:
+        background var(--contact-transition),
+        border-color var(--contact-transition),
+        transform var(--contact-transition);
+    /* 鍒犻櫎鎸夐挳鍔ㄦ晥 */
+}
+
+.contact-file-item button:hover {
+    background: rgba(217, 45, 32, 0.12);
+    /* 鍒犻櫎鎸夐挳 hover 鑳屾櫙鍔犳繁 */
+    border-color: rgba(217, 45, 32, 0.42);
+    /* 鍒犻櫎鎸夐挳 hover 杈规鍔犳繁 */
+    transform: translateY(-1px);
+    /* 鍒犻櫎鎸夐挳 hover 杞诲井涓婃诞 */
+}
+
+
+/* =========================================================
+   12. 鑱旂郴鏂瑰紡
+========================================================= */
+
+.contact-info-section {
+    background: #ffffff;
+    /* 鑱旂郴鏂瑰紡鍖虹櫧鑹茶儗鏅?*/
+}
+
+.contact-info-layout {
+    display: grid;
+    /* 鑱旂郴鏂瑰紡浣跨敤宸﹀彸甯冨眬 */
+    grid-template-columns: minmax(0, 0.9fr) minmax(520px, 1.1fr);
+    /* 宸︿晶淇℃伅锛屽彸渚т綅缃?*/
+    gap: 34px;
+    /* 宸﹀彸鍖哄煙闂磋窛 */
+}
+
+.contact-company-panel,
+.contact-map-panel {
+    border: 1px solid var(--contact-line);
+    /* 闈㈡澘杈规 */
+    background: #ffffff;
+    /* 闈㈡澘鑳屾櫙鐧借壊 */
+}
+
+.contact-company-panel h3 {
+    margin: 0;
+    /* 娓呴櫎鏍囬榛樿澶栬竟璺?*/
+    padding: 28px 30px;
+    /* 鍏徃鍚嶇О鍖哄煙鍐呰竟璺?*/
+    border-bottom: 1px solid var(--contact-line);
+    /* 鍏徃鍚嶇О鍖哄煙搴曢儴鍒嗗壊绾?*/
+    color: var(--contact-blue);
+    /* 鍏徃鍚嶇О娣辫摑鑹?*/
+    font-size: 25px;
+    /* 鍏徃鍚嶇О瀛楀彿 */
+    line-height: 1.28;
+    /* 鍏徃鍚嶇О琛岄珮 */
+    font-weight: 850;
+    /* 鍏徃鍚嶇О鍔犵矖 */
+}
+
+.contact-company-panel h3 span {
+    display: block;
+    /* 鍏徃瀹氫綅鍗曠嫭鍗犱竴琛?*/
+    margin-top: 8px;
+    /* 鍏徃瀹氫綅鍜屽叕鍙稿悕绉颁箣闂寸殑璺濈 */
+    color: var(--contact-text-sub);
+    /* 鍏徃瀹氫綅鏂囧瓧棰滆壊 */
+    font-size: 14px;
+    /* 鍏徃瀹氫綅瀛楀彿 */
+    font-weight: 500;
+    /* 鍏徃瀹氫綅甯歌瀛楅噸 */
+}
+
+.contact-info-row {
+    display: grid;
+    /* 姣忎竴琛岃仈绯绘柟寮忎娇鐢ㄥ乏鍙崇粨鏋?*/
+    grid-template-columns: 120px 1fr;
+    /* 宸︿晶鏍囩 120px锛屽彸渚у唴瀹硅嚜閫傚簲 */
+    border-bottom: 1px solid var(--contact-line);
+    /* 姣忚搴曢儴鍒嗗壊绾?*/
+}
+
+.contact-info-row:last-child {
+    border-bottom: 0;
+    /* 鏈€鍚庝竴琛屼笉闇€瑕佸簳閮ㄥ垎鍓茬嚎 */
+}
+
+.contact-info-row>div:first-child {
+    padding: 17px 20px;
+    /* 宸︿晶鏍囩鍐呰竟璺?*/
+    border-right: 1px solid var(--contact-line);
+    /* 鏍囩鍜屽唴瀹逛箣闂寸殑鍒嗗壊绾?*/
+    background: #f8fbff;
+    /* 宸︿晶鏍囩娴呰摑鐧借儗鏅?*/
+    color: #718095;
+    /* 宸︿晶鏍囩鏂囧瓧棰滆壊 */
+    font-size: 14px;
+    /* 宸︿晶鏍囩瀛楀彿 */
+    font-weight: 750;
+    /* 宸︿晶鏍囩鍔犵矖 */
+}
+
+.contact-info-row>div:last-child {
+    padding: 17px 20px;
+    /* 鍙充晶鍐呭鍐呰竟璺?*/
+    color: #263a55;
+    /* 鍙充晶鍐呭鏂囧瓧棰滆壊 */
+    font-size: 15px;
+    /* 鍙充晶鍐呭瀛楀彿 */
+    font-weight: 700;
+    /* 鍙充晶鍐呭鍔犵矖 */
+}
+
+.contact-map-panel {
+    min-height: 430px;
+    /* 浣嶇疆闈㈡澘鏈€灏忛珮搴?*/
+    display: grid;
+    /* 鐢?grid 灞呬腑鍐呴儴鍗＄墖 */
+    place-items: center;
+    /* 鍐呴儴鍗＄墖姘村钩鍨傜洿灞呬腑 */
+    padding: 36px;
+    /* 浣嶇疆闈㈡澘鍐呰竟璺?*/
+    background:
+        linear-gradient(135deg, rgba(23, 51, 104, 0.06), rgba(9, 233, 180, 0.08)),
+        linear-gradient(rgba(23, 51, 104, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(23, 51, 104, 0.08) 1px, transparent 1px);
+    /* 浣嶇疆闈㈡澘缃戞牸鑳屾櫙 */
+    background-size: auto, 40px 40px, 40px 40px;
+    /* 缃戞牸鑳屾櫙灏哄 */
+}
+
+.contact-map-card {
+    width: min(420px, 100%);
+    /* 鍦板浘鍦板潃鍗＄墖鏈€澶у搴?*/
+    border: 1px solid var(--contact-line);
+    /* 鍦板浘鍦板潃鍗＄墖杈规 */
+    background: rgba(255, 255, 255, 0.92);
+    /* 鍦板浘鍦板潃鍗＄墖鐧借壊鍗婇€忔槑鑳屾櫙 */
+}
+
+.contact-map-link {
+  min-height: 44px; /* 鎸夐挳鏈€灏忛珮搴?*/
+  margin: 0 24px 24px; /* 鎸夐挳鍜屽湴鍧€鏂囧瓧涔嬮棿鐣欏嚭璺濈 */
+  padding: 0 22px; /* 鎸夐挳宸﹀彸鍐呰竟璺?*/
+  border-radius: var(--contact-radius); /* 鎸夐挳缁熶竴 8px 鍦嗚 */
+  border: 1px solid rgba(23, 51, 104, 0.42); /* 榛樿娣辫摑鍗婇€忔槑杈规 */
+  background: rgba(255, 255, 255, 0.72); /* 榛樿鐧借壊鍗婇€忔槑鑳屾櫙 */
+  color: var(--contact-blue); /* 榛樿娣辫摑鏂囧瓧 */
+  display: inline-flex; /* 璁╂寜閽唴瀹瑰眳涓?*/
+  align-items: center; /* 鎸夐挳鏂囧瓧鍨傜洿灞呬腑 */
+  justify-content: center; /* 鎸夐挳鏂囧瓧姘村钩灞呬腑 */
+  font-size: 14px; /* 鎸夐挳鏂囧瓧瀛楀彿 */
+  font-weight: 850; /* 鎸夐挳鏂囧瓧鍔犵矖 */
+  line-height: 1; /* 鎸夐挳鏂囧瓧琛岄珮 */
+  text-decoration: none; /* 鍘绘帀閾炬帴涓嬪垝绾?*/
+  white-space: nowrap; /* 鎸夐挳鏂囧瓧涓嶆崲琛?*/
+  transition:
+    background var(--contact-transition),
+    color var(--contact-transition),
+    border-color var(--contact-transition),
+    transform var(--contact-transition); /* 鎸夐挳 hover 鍔ㄦ晥 */
+}
+
+.contact-map-link:hover {
+  background: var(--contact-cyan); /* 榧犳爣鎮仠鏃跺彉鑽у厜闈掑簳 */
+  color: var(--contact-blue); /* 榧犳爣鎮仠鏃朵繚鎸佹繁钃濇枃瀛?*/
+  border-color: var(--contact-cyan); /* 榧犳爣鎮仠鏃惰竟妗嗗彉鑽у厜闈?*/
+  transform: translateY(-1px); /* 榧犳爣鎮仠鏃惰交寰笂娴?*/
+}
+
+.contact-map-panel h3 {
+    margin: 0;
+    /* 娓呴櫎鏍囬榛樿澶栬竟璺?*/
+    padding: 20px 24px;
+    /* 浣嶇疆鏍囬鍐呰竟璺?*/
+    border-bottom: 1px solid var(--contact-line);
+    /* 浣嶇疆鏍囬搴曢儴鍒嗗壊绾?*/
+    color: var(--contact-blue);
+    /* 浣嶇疆鏍囬娣辫摑鑹?*/
+    font-size: 19px;
+    /* 浣嶇疆鏍囬瀛楀彿 */
+    font-weight: 850;
+    /* 浣嶇疆鏍囬鍔犵矖 */
+}
+
+.contact-map-panel p {
+    margin: 0;
+    /* 娓呴櫎娈佃惤榛樿澶栬竟璺?*/
+    padding: 22px 24px;
+    /* 鍦板潃鏂囧瓧鍐呰竟璺?*/
+    color: #263a55;
+    /* 鍦板潃鏂囧瓧棰滆壊 */
+    font-size: 14px;
+    /* 鍦板潃鏂囧瓧瀛楀彿 */
+    line-height: 1.7;
+    /* 鍦板潃鏂囧瓧琛岄珮 */
+    font-weight: 700;
+    /* 鍦板潃鏂囧瓧鍔犵矖 */
+}
+
+
+/* =========================================================
+   13. 搴曢儴 CTA Banner
+========================================================= */
+
+.contact-bottom-cta {
+    width: 100%;
+    /* 搴曢儴 CTA 瀹藉害鍗犳弧鏁村睆 */
+    padding: 0;
+    /* 娓呴櫎澶栧眰鍐呰竟璺?*/
+    background: #ffffff;
+    /* 澶栧眰鑳屾櫙鐧借壊 */
+}
+
+.contact-bottom-cta-inner {
+    width: 100%;
+    /* 搴曢儴 CTA 鍐呭眰瀹藉害鍗犳弧鏁村睆 */
+    min-height: 260px;
+    /* 搴曢儴 CTA 鍚堢悊楂樺害 */
+    padding: 64px max(28px, calc((100vw - var(--contact-content-width)) / 2 + 28px));
+    /* 鍐呭涓庢暣绔欏搴﹀榻?*/
+    display: grid;
+    /* 浣跨敤宸﹀彸甯冨眬 */
+    grid-template-columns: minmax(0, 1fr) auto;
+    /* 宸︿晶鏂囧瓧鑷€傚簲锛屽彸渚ф寜閽寜鍐呭瀹藉害 */
+    gap: 34px;
+    /* 宸﹀彸鍐呭闂磋窛 */
+    align-items: center;
+    /* 鍐呭鍨傜洿灞呬腑 */
+    color: #ffffff;
+    /* 搴曢儴 CTA 榛樿鏂囧瓧鐧借壊 */
+    background:
+        radial-gradient(circle at 86% 16%, rgba(9, 233, 180, 0.2), transparent 32%),
+        linear-gradient(135deg, var(--contact-blue), #0d2554);
+    /* 搴曢儴 CTA 娣辫摑娓愬彉鑳屾櫙 */
+}
+
+.contact-bottom-cta h2 {
+    max-width: 760px;
+    /* 搴曢儴鏍囬鏈€澶у搴?*/
+    margin: 0;
+    /* 娓呴櫎鏍囬榛樿澶栬竟璺?*/
+    color: #ffffff;
+    /* 搴曢儴鏍囬鐧借壊 */
+    font-size: clamp(28px, 3vw, 40px);
+    /* 搴曢儴鏍囬鍝嶅簲寮忓瓧鍙?*/
+    line-height: 1.2;
+    /* 搴曢儴鏍囬琛岄珮 */
+    font-weight: 850;
+    /* 搴曢儴鏍囬鍔犵矖 */
+    letter-spacing: -0.03em;
+    /* 搴曢儴鏍囬瀛楄窛鐣ユ敹绱?*/
+}
+
+.contact-bottom-cta p {
+    max-width: 680px;
+    /* 搴曢儴鎻忚堪鏈€澶у搴?*/
+    margin: 12px 0 0;
+    /* 鎻忚堪鍜屾爣棰樹箣闂寸殑璺濈 */
+    color: rgba(255, 255, 255, 0.68);
+    /* 搴曢儴鎻忚堪鐧借壊鍗婇€忔槑 */
+    font-size: 16px;
+    /* 搴曢儴鎻忚堪瀛楀彿 */
+    line-height: 1.7;
+    /* 搴曢儴鎻忚堪琛岄珮 */
+}
+
+.contact-bottom-actions {
+    display: flex;
+    /* 搴曢儴鎸夐挳妯悜鎺掑垪 */
+    flex-wrap: wrap;
+    /* 灏忓睆骞曞厑璁告崲琛?*/
+    justify-content: flex-end;
+    /* 妗岄潰绔寜閽潬鍙?*/
+    gap: 12px;
+    /* 鎸夐挳涔嬮棿鐨勮窛绂?*/
+}
+
+.contact-bottom-cta .contact-button {
+    border-color: rgba(255, 255, 255, 0.52);
+    /* 搴曢儴娣辫壊鑳屾櫙鎸夐挳鐧借壊鍗婇€忔槑杈规 */
+    background: rgba(255, 255, 255, 0.08);
+    /* 搴曢儴娣辫壊鑳屾櫙鎸夐挳閫忔槑鐧藉簳 */
+    color: #ffffff;
+    /* 搴曢儴鎸夐挳榛樿鐧借壊鏂囧瓧 */
+}
+
+.contact-bottom-cta .contact-button:hover {
+    background: var(--contact-cyan);
+    /* 搴曢儴鎸夐挳 hover 鑽у厜闈掕儗鏅?*/
+    color: var(--contact-blue);
+    /* 搴曢儴鎸夐挳 hover 娣辫摑鏂囧瓧 */
+    border-color: var(--contact-cyan);
+    /* 搴曢儴鎸夐挳 hover 鑽у厜闈掕竟妗?*/
+}
+
+
+/* =========================================================
+   14. 鍝嶅簲寮忛€傞厤
+========================================================= */
+
+@media (max-width: 1180px) {
+
+    .contact-form-layout,
+    .contact-info-layout {
+        grid-template-columns: 1fr;
+        /* 涓瓑灞忓箷涓嬪乏鍙冲竷灞€鏀逛负鍗曞垪 */
+    }
+
+    .contact-guide-panel {
+        position: static;
+        /* 涓瓑灞忓箷鍙栨秷宸︿晶璇存槑鍚搁《 */
+    }
+
+    .contact-support-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        /* 涓瓑灞忓箷鏀寔鍐呭鏀逛负涓ゅ垪 */
+    }
+
+    .contact-bottom-cta-inner {
+        min-height: 280px;
+        /* 涓瓑灞忓箷搴曢儴 CTA 绋嶅井鍔犻珮 */
+        grid-template-columns: 1fr;
+        /* 涓瓑灞忓箷搴曢儴 CTA 鏀逛负鍗曞垪 */
+    }
+
+    .contact-bottom-actions {
+        justify-content: flex-start;
+        /* 涓瓑灞忓箷鎸夐挳闈犲乏 */
+    }
+}
+
+@media (max-width: 900px) {
+    .contact-email-row {
+        grid-template-columns: 1fr;
+        /* 灏忓睆骞曢偖绠遍獙璇佺爜鏀逛负鍗曞垪 */
+    }
+
+    .contact-submit-row {
+        grid-template-columns: 1fr;
+        /* 灏忓睆骞曟彁浜ゅ尯鏀逛负鍗曞垪 */
+    }
+
+    .contact-file-area {
+        justify-self: start;
+        /* 灏忓睆骞曚笂浼犻檮浠堕潬宸?*/
+    }
+}
+
+@media (max-width: 760px) {
+    .contact-hero-inner {
+        min-height: 340px;
+        /* 鎵嬫満绔?Banner 楂樺害 */
+        padding: 58px 18px 56px;
+        /* 鎵嬫満绔?Banner 鍐呰竟璺?*/
+    }
+
+    .contact-hero-title {
+        font-size: 34px;
+        /* 鎵嬫満绔爣棰樺瓧鍙?*/
+    }
+
+    .contact-section {
+        padding: 62px 18px;
+        /* 鎵嬫満绔€氱敤鍖哄潡鍐呰竟璺?*/
+    }
+
+    .contact-section-head {
+        margin-bottom: 28px;
+        /* 鎵嬫満绔爣棰樺尯搴曢儴闂磋窛 */
+    }
+
+    .contact-support-grid,
+    .contact-form-grid {
+        grid-template-columns: 1fr;
+        /* 鎵嬫満绔敮鎸佸唴瀹瑰拰琛ㄥ崟閮芥敼涓哄崟鍒?*/
+    }
+
+    .contact-guide-item,
+    .contact-info-row {
+        grid-template-columns: 1fr;
+        /* 鎵嬫満绔鏄庨」鍜岃仈绯绘柟寮忚鏀逛负鍗曞垪 */
+    }
+
+    .contact-guide-number,
+    .contact-info-row>div:first-child {
+        border-right: 0;
+        /* 鎵嬫満绔幓鎺夊彸渚у垎鍓茬嚎 */
+    }
+
+    .contact-guide-number {
+        padding: 20px 24px 0;
+        /* 鎵嬫満绔紪鍙峰唴杈硅窛 */
+        text-align: left;
+        /* 鎵嬫満绔紪鍙烽潬宸?*/
+    }
+
+    .contact-form,
+    .contact-form-panel-head,
+    .contact-guide-head,
+    .contact-company-panel h3 {
+        padding: 24px;
+        /* 鎵嬫満绔涓潰鏉跨粺涓€鍐呰竟璺?*/
+    }
+
+    .contact-file-item {
+        grid-template-columns: minmax(0, 1fr) auto;
+        /* 鎵嬫満绔檮浠堕」鏀逛负涓ゅ垪 */
+    }
+
+    .contact-file-item button {
+        grid-column: 1 / -1;
+        /* 鎵嬫満绔垹闄ゆ寜閽嫭鍗犱竴琛?*/
+        width: 72px;
+        /* 鎵嬫満绔垹闄ゆ寜閽搴?*/
+    }
+
+    .contact-info-row>div:first-child {
+        padding-bottom: 8px;
+        /* 鎵嬫満绔仈绯绘柟寮忔爣绛惧簳閮ㄧ暀鐧藉噺灏?*/
+    }
+
+    .contact-info-row>div:last-child {
+        padding-top: 8px;
+        /* 鎵嬫満绔仈绯绘柟寮忓唴瀹归《閮ㄧ暀鐧藉噺灏?*/
+    }
+
+    .contact-map-panel {
+        min-height: 320px;
+        /* 鎵嬫満绔綅缃ā鍧楅珮搴?*/
+        padding: 24px;
+        /* 鎵嬫満绔綅缃ā鍧楀唴杈硅窛 */
+    }
+
+    .contact-bottom-cta-inner {
+        min-height: 300px;
+        /* 鎵嬫満绔簳閮?CTA 楂樺害 */
+        padding: 48px 18px;
+        /* 鎵嬫満绔簳閮?CTA 鍐呰竟璺?*/
+    }
+}
+
+/* =========================================================
+   15. 楂樺痉鍦板浘鐪熷疄搴曞浘
+   璇存槑锛?
+   1. 杩欓噷鎺у埗 AmapBlock.tsx 鐨勮瑙夋牱寮?
+   2. 鍦板浘鐪熷疄鍐呭鐢遍珮寰?JS API 娓叉煋
+   3. 鍙充笅瑙掑湴鍧€鍗＄墖鐢ㄤ簬寮鸿皟鍏徃浣嶇疆
+========================================================= */
+
+.contact-amap-shell {
+  position: relative; /* 璁╁湴鍧€鍗＄墖鍜岀姸鎬佹彁绀哄彲浠ヨ鐩栧湪鍦板浘涓?*/
+  width: 100%; /* 鍦板浘澶栧３瀹藉害鍗犳弧鐖剁骇 */
+  min-height: 430px; /* 鍦板浘鏈€灏忛珮搴?*/
+  overflow: hidden; /* 闃叉鍦板浘鍐呭婧㈠嚭 */
+  background: #f5f8fc; /* 鍦板浘鍔犺浇鍓嶇殑娴呯伆钃濊儗鏅?*/
+}
+
+.contact-amap-container {
+  width: 100%; /* 楂樺痉鍦板浘瀹瑰櫒瀹藉害鍗犳弧 */
+  min-height: 430px; /* 楂樺痉鍦板浘瀹瑰櫒楂樺害 */
+}
+
+.contact-amap-status {
+  position: absolute; /* 鐘舵€佹彁绀鸿鐩栧湪鍦板浘涓?*/
+  left: 24px; /* 鐘舵€佹彁绀鸿窛绂诲乏渚?*/
+  top: 24px; /* 鐘舵€佹彁绀鸿窛绂婚《閮?*/
+  z-index: 3; /* 鐘舵€佹彁绀哄湪鍦板浘涓婃柟 */
+  padding: 10px 14px; /* 鐘舵€佹彁绀哄唴杈硅窛 */
+  border: 1px solid var(--contact-line); /* 鐘舵€佹彁绀鸿竟妗?*/
+  border-radius: var(--contact-radius); /* 鐘舵€佹彁绀哄渾瑙?*/
+  background: rgba(255, 255, 255, 0.92); /* 鐘舵€佹彁绀虹櫧鑹插崐閫忔槑鑳屾櫙 */
+  color: var(--contact-blue); /* 鐘舵€佹彁绀烘枃瀛楅鑹?*/
+  font-size: 13px; /* 鐘舵€佹彁绀哄瓧鍙?*/
+  font-weight: 750; /* 鐘舵€佹彁绀烘枃瀛楀姞绮?*/
+}
+
+.contact-amap-status-error {
+  color: #b42318; /* 閿欒鐘舵€佷娇鐢ㄧ孩鑹叉枃瀛?*/
+}
+
+@media (max-width: 760px) {
+  .contact-amap-shell {
+    min-height: 420px; /* 鎵嬫満绔湴鍥鹃珮搴?*/
+  }
+
+  .contact-amap-container {
+    min-height: 420px; /* 鎵嬫満绔湴鍥惧鍣ㄩ珮搴?*/
+  }
+
+  .contact-amap-card {
+    left: 18px; /* 鎵嬫満绔湴鍧€鍗＄墖闈犲乏 */
+    right: 18px; /* 鎵嬫満绔湴鍧€鍗＄墖闈犲彸 */
+    bottom: 18px; /* 鎵嬫満绔湴鍧€鍗＄墖璺濈搴曢儴 */
+    width: auto; /* 鎵嬫満绔湴鍧€鍗＄墖瀹藉害鑷姩 */
+  }
+}
+/* =========================================================
+   楂樺痉鍦板浘鍖哄煙鏍峰紡
+   浣滅敤锛?
+   1. 璁╁湴鍥鹃摵婊℃暣涓彸渚у尯鍩?
+   2. 淇濇寔鍜屽乏渚т俊鎭崱鐗囧悓绾ц瑙夐珮搴?
+   3. 鍙繚鐣欏繀瑕佺殑鍔犺浇鎻愮ず
+========================================================= */
+
+.contact-map-panel {
+  height: 100%; /* 鍦板浘妯″潡楂樺害璺熼殢鐖跺鍣?*/
+}
+
+.contact-amap-shell {
+  position: relative; /* 璁╁姞杞界姸鎬佸彲浠ヨ鐩栧湪鍦板浘涓?*/
+  width: 100%; /* 瀹藉害鍗犳弧鍙充晶瀹瑰櫒 */
+  height: 100%; /* 楂樺害鍗犳弧鍙充晶瀹瑰櫒 */
+  min-height: 520px; /* 鍦板浘鏈€灏忛珮搴︼紝閬垮厤澶煯 */
+  overflow: hidden; /* 闃叉鍦板浘鍐呭婧㈠嚭 */
+  border: 1px solid var(--contact-line); /* 淇濇寔鍜岄〉闈㈡暣浣撹竟妗嗛鏍间竴鑷?*/
+  background: #f7fafc; /* 鍦板浘鏈姞杞藉畬鎴愬墠鐨勬祬鑳屾櫙 */
+}
+
+.contact-amap-container {
+  width: 100%; /* 鍦板浘瀹瑰櫒瀹藉害鍗犳弧 */
+  height: 100%; /* 鍦板浘瀹瑰櫒楂樺害鍗犳弧 */
+  min-height: 520px; /* 鍦板浘瀹瑰櫒鏈€灏忛珮搴?*/
+}
+
+.contact-amap-status {
+  position: absolute; /* 瑕嗙洊鍦ㄥ湴鍥句笂 */
+  left: 20px; /* 璺濈宸﹁竟 20px */
+  top: 20px; /* 璺濈椤堕儴 20px */
+  z-index: 3; /* 淇濊瘉鍦ㄥ湴鍥句笂灞?*/
+  padding: 10px 14px; /* 鍐呰竟璺?*/
+  border: 1px solid var(--contact-line); /* 杈规 */
+  border-radius: 8px; /* 缁熶竴 8px 鍦嗚 */
+  background: rgba(255, 255, 255, 0.92); /* 鍗婇€忔槑鐧藉簳 */
+  color: var(--contact-blue); /* 娣辫摑鑹叉枃瀛?*/
+  font-size: 13px; /* 瀛楀彿 */
+  font-weight: 700; /* 瀛楅噸 */
+}
+
+.contact-amap-status-error {
+  color: #b42318; /* 閿欒鐘舵€佷娇鐢ㄧ孩鑹?*/
+}
+
+/* =========================================================
+   绉诲姩绔€傞厤
+========================================================= */
+@media (max-width: 768px) {
+  .contact-amap-shell {
+    min-height: 360px; /* 鎵嬫満绔湴鍥鹃珮搴﹂檷浣庝竴鐐?*/
+  }
+
+  .contact-amap-container {
+    min-height: 360px; /* 鎵嬫満绔湴鍥惧鍣ㄥ悓姝ラ檷浣?*/
+  }
+}
+
+/* =========================================================
+   楂樺痉鍦板浘澶栧眰鑳屾櫙鏈€缁堟竻鐞?
+   浣滅敤锛?
+   1. 鍘绘帀鍙充晶鍦板浘澶栭潰鐨勬祬钃濈綉鏍煎簳
+   2. 鍘绘帀鍦板浘澶栧眰 padding
+   3. 璁╃湡瀹為珮寰峰湴鍥剧洿鎺ラ摵婊″彸渚у尯鍩?
+   4. 閬垮厤鍑虹幇鈥滃湴鍥惧闈㈣繕鏈変竴鍦堝亣搴曞浘鈥濈殑闂
+========================================================= */
+
+.contact-map-panel {
+  height: 100%; /* 璁╁湴鍥炬ā鍧楅珮搴﹁窡闅忓彸渚у尯鍩?*/
+  min-height: 520px; /* 淇濊瘉鍦板浘鍖哄煙涓嶄細澶煯 */
+  padding: 0 !important; /* 鍘绘帀鏃х増鍦板浘澶栧眰鍐呰竟璺?*/
+  display: block !important; /* 鍙栨秷鏃х増 grid 灞呬腑甯冨眬 */
+  place-items: initial !important; /* 鍙栨秷鏃х増 place-items 灞呬腑鏁堟灉 */
+  background: transparent !important; /* 鍘绘帀娴呰摑缃戞牸鑳屾櫙 */
+  background-image: none !important; /* 寮哄埗鍘绘帀鏃х増缃戞牸鑳屾櫙鍥?*/
+  background-size: auto !important; /* 閲嶇疆鏃х増鑳屾櫙灏哄 */
+  border: 1px solid var(--contact-line); /* 淇濈暀鍜屽乏渚т俊鎭崱涓€鏍风殑缁嗚竟妗?*/
+  overflow: hidden; /* 闃叉鍦板浘鍐呭婧㈠嚭杈规 */
+}
+
+.contact-amap-shell {
+  width: 100%; /* 鍦板浘澶栧３瀹藉害鍗犳弧鍙充晶鍖哄煙 */
+  height: 100%; /* 鍦板浘澶栧３楂樺害鍗犳弧鍙充晶鍖哄煙 */
+  min-height: 520px; /* 鍦板浘澶栧３鏈€灏忛珮搴?*/
+  padding: 0 !important; /* 鍘绘帀澶栧３鍐呰竟璺?*/
+  margin: 0 !important; /* 鍘绘帀澶栧３澶栬竟璺?*/
+  border: 0 !important; /* 閬垮厤鍑虹幇鍙岄噸杈规 */
+  background: #ffffff !important; /* 鍦板浘鍔犺浇鍓嶄娇鐢ㄧ櫧鑹茶儗鏅?*/
+  background-image: none !important; /* 鍘绘帀澶栧３鍙兘娈嬬暀鐨勮儗鏅浘 */
+  overflow: hidden; /* 闃叉鍦板浘婧㈠嚭 */
+}
+
+.contact-amap-container {
+  width: 100%; /* 楂樺痉鍦板浘瀹瑰櫒瀹藉害鍗犳弧 */
+  height: 100%; /* 楂樺痉鍦板浘瀹瑰櫒楂樺害鍗犳弧 */
+  min-height: 520px; /* 楂樺痉鍦板浘瀹瑰櫒鏈€灏忛珮搴?*/
+  padding: 0 !important; /* 鍘绘帀鍦板浘瀹瑰櫒鍐呰竟璺?*/
+  margin: 0 !important; /* 鍘绘帀鍦板浘瀹瑰櫒澶栬竟璺?*/
+  background: #ffffff !important; /* 鍦板浘鏈姞杞芥椂鏄剧ず鐧借壊 */
+}
+
+/* =========================================================
+   鑱旂郴鏂瑰紡鍖哄煙鍦板浘楂樺害鏈€缁堣皟鏁?
+   璇存槑锛?
+   1. 褰撳墠鍦板浘楂樺害鎺у埗鍦?460px
+   2. 鍜屽乏渚ц仈绯绘柟寮忓崱鐗囪瑙夐珮搴︽洿鎺ヨ繎
+   3. 閬垮厤鍙充晶鍦板浘杩囬珮锛屽鑷撮〉闈㈡瘮渚嬪け琛?
+========================================================= */
+
+.contact-map-panel {
+  height: 420px !important; /* 鍦板浘澶栧眰鍥哄畾楂樺害 */
+  min-height: 420px !important; /* 瑕嗙洊涔嬪墠 520px 鐨勬渶灏忛珮搴?*/
+}
+
+.contact-amap-shell {
+  height: 420px !important; /* 楂樺痉鍦板浘澶栧３楂樺害 */
+  min-height: 420px !important; /* 瑕嗙洊涔嬪墠鐨勬渶灏忛珮搴?*/
+}
+
+.contact-amap-container {
+  height: 462px !important; /* 楂樺痉鍦板浘鐪熷疄瀹瑰櫒楂樺害 */
+  min-height: 420px !important; /* 瑕嗙洊涔嬪墠鐨勬渶灏忛珮搴?*/
+}
+
+/* =========================================================
+   鑱旂郴琛ㄥ崟鎻愪氦鎴愬姛寮圭獥
+   璇存槑锛?
+   1. 鐢ㄦ埛鎻愪氦闇€姹傚悗鏄剧ず鈥滄彁浜ゆ垚鍔熲€?
+   2. 褰撳墠鍓嶇娴嬭瘯闃舵鍦?PDF 棰勮瑙﹀彂鍚庢樉绀?
+   3. 鍚庣画鎺ュ叆鍚庡彴鍚庯紝搴斿湪鎺ュ彛杩斿洖鎴愬姛鍚庢樉绀?
+========================================================= */
+
+.contact-success-modal {
+  position: fixed; /* 鍥哄畾鍦ㄦ祻瑙堝櫒绐楀彛涓?*/
+  inset: 0; /* 瑕嗙洊鏁翠釜绐楀彛 */
+  z-index: 9999; /* 淇濊瘉寮圭獥浣嶄簬椤甸潰鏈€涓婂眰 */
+  display: grid; /* 浣跨敤 grid 瀹炵幇灞呬腑 */
+  place-items: center; /* 姘村钩鍜屽瀭鐩村眳涓?*/
+  padding: 24px; /* 灏忓睆骞曟椂鐣欏嚭杈硅窛 */
+  background: rgba(8, 29, 67, 0.46); /* 娣辫摑鍗婇€忔槑閬僵 */
+  backdrop-filter: blur(8px); /* 鑳屾櫙妯＄硦 */
+}
+
+.contact-success-card {
+  width: min(420px, 100%); /* 寮圭獥鏈€澶у搴?*/
+  border: 1px solid rgba(23, 51, 104, 0.16); /* 寮圭獥杈规 */
+  border-radius: 8px; /* 寮圭獥鍦嗚 */
+  background: #ffffff; /* 寮圭獥鐧借壊鑳屾櫙 */
+  padding: 34px 32px 30px; /* 寮圭獥鍐呰竟璺?*/
+  text-align: center; /* 鍐呭灞呬腑 */
+  box-shadow: 0 28px 80px rgba(8, 29, 67, 0.22); /* 寮圭獥闃村奖 */
+}
+
+.contact-success-icon {
+  width: 56px; /* 鎴愬姛鍥炬爣瀹藉害 */
+  height: 56px; /* 鎴愬姛鍥炬爣楂樺害 */
+  margin: 0 auto 18px; /* 鍥炬爣灞呬腑骞跺拰鏍囬鎷夊紑璺濈 */
+  border-radius: 999px; /* 鍦嗗舰鍥炬爣 */
+  background: var(--contact-cyan); /* 鑽у厜闈掕儗鏅?*/
+  color: var(--contact-blue); /* 娣辫摑鑹插鍕?*/
+  display: flex; /* 鍐呴儴灞呬腑 */
+  align-items: center; /* 鍨傜洿灞呬腑 */
+  justify-content: center; /* 姘村钩灞呬腑 */
+  font-size: 28px; /* 瀵瑰嬀瀛楀彿 */
+  font-weight: 900; /* 瀵瑰嬀鍔犵矖 */
+}
+
+.contact-success-card h3 {
+  margin: 0; /* 娓呴櫎榛樿澶栬竟璺?*/
+  color: var(--contact-blue); /* 鏍囬娣辫摑鑹?*/
+  font-size: 24px; /* 鏍囬瀛楀彿 */
+  line-height: 1.25; /* 鏍囬琛岄珮 */
+  font-weight: 850; /* 鏍囬鍔犵矖 */
+}
+
+.contact-success-card p {
+  margin: 14px 0 0; /* 娈佃惤椤堕儴闂磋窛 */
+  color: var(--contact-text-sub); /* 姝ｆ枃璇存槑棰滆壊 */
+  font-size: 14px; /* 姝ｆ枃瀛楀彿 */
+  line-height: 1.7; /* 姝ｆ枃琛岄珮 */
+}
+
+.contact-success-tip {
+  color: var(--contact-text-muted) !important; /* PDF 鎻愮ず寮卞寲棰滆壊 */
+  font-size: 13px !important; /* PDF 鎻愮ず瀛楀彿 */
+}
+
+.contact-success-button {
+  min-height: 44px; /* 鎸夐挳楂樺害 */
+  margin-top: 24px; /* 鎸夐挳鍜屾枃瀛楅棿璺?*/
+  padding: 0 26px; /* 鎸夐挳宸﹀彸鍐呰竟璺?*/
+  border: 1px solid var(--contact-blue); /* 榛樿娣辫摑杈规 */
+  border-radius: 8px; /* 缁熶竴 8px 鍦嗚 */
+  background: #ffffff; /* 榛樿鐧藉簳 */
+  color: var(--contact-blue); /* 榛樿娣辫摑鏂囧瓧 */
+  cursor: pointer; /* 榧犳爣鎵嬪瀷 */
+  font-size: 14px; /* 鎸夐挳瀛楀彿 */
+  font-weight: 850; /* 鎸夐挳鍔犵矖 */
+  transition:
+    background var(--contact-transition),
+    color var(--contact-transition),
+    border-color var(--contact-transition),
+    transform var(--contact-transition); /* 鎸夐挳鍔ㄦ晥 */
+}
+
+.contact-success-button:hover {
+  background: var(--contact-cyan); /* 鎮仠鑽у厜闈掕儗鏅?*/
+  color: var(--contact-blue); /* 鎮仠娣辫摑鏂囧瓧 */
+  border-color: var(--contact-cyan); /* 鎮仠鑽у厜闈掕竟妗?*/
+  transform: translateY(-1px); /* 鎮仠杞诲井涓婃诞 */
+}
+
+/* =========================================================
+   缁忛攢鍟嗗悎浣滈〉闈綔/en/contact/distributor
+   鏂囦欢浣嶇疆锛?
+   app/contact/contact.css
+
+   璇存槑锛?
+   1. 褰撳墠椤甸潰璧拌嫳鏂囪矾寰勶紝浣嗗唴瀹瑰厛鎸変腑鏂囨惌寤?
+   2. 鎵€鏈夌被鍚嶄娇鐢?distributor- 鍓嶇紑锛岄伩鍏嶅奖鍝嶅師鑱旂郴鎴戜滑椤甸潰
+   3. Banner 鍥剧墖璺緞锛?
+      public/images/contact-cooperation/distributor-hero.webp
+   4. 鍚堜綔浼欎即鑳屾櫙鍥捐矾寰勶細
+      public/images/contact-cooperation/partner-bg.webp
+   5. 浜у搧鍥剧墖璺緞锛?
+      public/images/contact-cooperation/distributor-products/
+========================================================= */
+
+.distributor-page {
+  --distributor-blue: #173368;
+  --distributor-blue-deep: #061a3a;
+  --distributor-cyan: #09e9b4;
+  --distributor-bg: #f4f7fb;
+  --distributor-text: #10213f;
+  --distributor-sub: #5d6d86;
+  --distributor-muted: #8390a4;
+  --distributor-line: rgba(23, 51, 104, 0.14);
+  --distributor-line-light: rgba(23, 51, 104, 0.09);
+  --distributor-width: 1280px;
+
+  color: var(--distributor-text);
+  background: var(--distributor-bg);
+}
+
+/* =========================================================
+   01. 閫氱敤鐗堝績涓庢爣棰?
+========================================================= */
+
+.distributor-section {
+  padding: 96px 0;
+}
+
+.distributor-section-inner {
+  width: min(var(--distributor-width), calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.distributor-section-head {
+  max-width: 860px;
+  margin-bottom: 42px;
+}
+
+.distributor-section-head h2 {
+  color: var(--distributor-blue);
+  font-size: clamp(34px, 3.5vw, 52px);
+  line-height: 1.14;
+  letter-spacing: -0.045em;
+}
+
+.distributor-section-head p {
+  margin-top: 16px;
+  color: var(--distributor-sub);
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.distributor-section-head-light h2 {
+  color: #fff;
+}
+
+.distributor-section-head-light p {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+/* =========================================================
+   02. 閫氱敤鎸夐挳
+========================================================= */
+
+.distributor-btn {
+  min-width: 148px;
+  min-height: 48px;
+  padding: 0 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 900;
+  white-space: nowrap;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.distributor-btn-ghost {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.36);
+}
+
+.distributor-btn-ghost:hover {
+  color: var(--distributor-blue-deep);
+  background: var(--distributor-cyan);
+  border-color: var(--distributor-cyan);
+  transform: translateY(-2px);
+}
+
+.distributor-btn-main {
+  color: var(--distributor-blue);
+  background: #fff;
+  border: 1px solid #fff;
+}
+
+.distributor-btn-main:hover {
+  color: var(--distributor-blue-deep);
+  background: var(--distributor-cyan);
+  border-color: var(--distributor-cyan);
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   03. 椤堕儴 Banner
+========================================================= */
+
+.distributor-hero {
+  position: relative;
+  min-height: 720px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: #fff;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(6, 26, 58, 0.9) 0%,
+      rgba(23, 51, 104, 0.76) 42%,
+      rgba(23, 51, 104, 0.26) 100%
+    ),
+    url("/images/contact-cooperation/distributor-hero.webp") center / cover no-repeat;
+}
+
+.distributor-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 78% 24%, rgba(9, 233, 180, 0.12), transparent 26%),
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: auto, 56px 56px, 56px 56px;
+  opacity: 0.7;
+}
+
+.distributor-hero-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.distributor-hero-content {
+  max-width: 780px;
+}
+
+.distributor-hero-content h1 {
+  font-size: clamp(48px, 5vw, 78px);
+  line-height: 1.04;
+  letter-spacing: -0.06em;
+  font-weight: 900;
+}
+
+.distributor-hero-content h1 span {
+  color: var(--distributor-cyan);
+}
+
+.distributor-hero-content p {
+  max-width: 680px;
+  margin-top: 24px;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 17px;
+  line-height: 1.88;
+}
+
+.distributor-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+/* =========================================================
+   04. 鍚堜綔浼樺娍 / 鍚堜綔浼欎即閫氱敤鍗＄墖
+========================================================= */
+
+.distributor-advantage-section,
+.distributor-partner-section {
+  background: #fff;
+}
+
+.distributor-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.distributor-card-grid-border {
+  border-top: 1px solid var(--distributor-line);
+  border-left: 1px solid var(--distributor-line);
+}
+
+.distributor-info-card {
+  position: relative;
+  min-height: 260px;
+  padding: 30px;
+  overflow: hidden;
+  background: #fff;
+  border-right: 1px solid var(--distributor-line);
+  border-bottom: 1px solid var(--distributor-line);
+  transition:
+    transform 0.36s ease,
+    border-color 0.36s ease,
+    box-shadow 0.36s ease;
+}
+
+.distributor-info-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--distributor-blue);
+  opacity: 0;
+  transition: opacity 0.42s ease;
+  pointer-events: none;
+}
+
+.distributor-info-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(9, 233, 180, 0.26);
+  box-shadow: 0 18px 42px rgba(6, 26, 58, 0.14);
+}
+
+.distributor-info-card:hover::before {
+  opacity: 1;
+}
+
+.distributor-card-index,
+.distributor-info-card h3,
+.distributor-info-card p {
+  position: relative;
+  z-index: 1;
+  transition:
+    color 0.36s ease,
+    opacity 0.36s ease,
+    transform 0.36s ease;
+}
+
+.distributor-card-index {
+  color: #b8c1cc;
+  font-size: 56px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.distributor-info-card h3 {
+  margin-top: 28px;
+  color: var(--distributor-blue);
+  font-size: 22px;
+  line-height: 1.32;
+  letter-spacing: -0.025em;
+}
+
+.distributor-info-card p {
+  margin-top: 12px;
+  color: var(--distributor-sub);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.distributor-info-card:hover .distributor-card-index {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.distributor-info-card:hover h3 {
+  color: var(--distributor-cyan);
+  transform: translateY(-2px);
+}
+
+.distributor-info-card:hover p {
+  color: rgba(255, 255, 255, 0.74);
+}
+
+/* =========================================================
+   05. 鍚堜綔浜у搧
+========================================================= */
+
+.distributor-products-section {
+  background: linear-gradient(180deg, #f4f7fb 0%, #fff 100%);
+}
+
+.distributor-product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.distributor-product-card {
+  min-height: 470px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--distributor-line);
+  transition:
+    transform 0.28s ease,
+    border-color 0.28s ease,
+    background 0.28s ease,
+    box-shadow 0.28s ease;
+}
+
+.distributor-product-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(9, 233, 180, 0.38);
+  background: #fbfdff;
+  box-shadow: 0 16px 36px rgba(6, 26, 58, 0.08);
+}
+
+.distributor-product-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(23, 51, 104, 0.1);
+  background: #eef3f8;
+}
+
+.distributor-product-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.36s ease;
+}
+
+.distributor-product-card:hover .distributor-product-image img {
+  transform: scale(1.04);
+}
+
+.distributor-product-content {
+  padding: 24px;
+}
+
+.distributor-product-content h3 {
+  color: var(--distributor-blue);
+  font-size: 22px;
+  line-height: 1.32;
+  letter-spacing: -0.025em;
+}
+
+.distributor-product-content p {
+  margin-top: 10px;
+  color: var(--distributor-sub);
+  font-size: 14px;
+  line-height: 1.82;
+}
+
+.distributor-product-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.distributor-product-tags span {
+  padding: 6px 10px;
+  color: var(--distributor-blue);
+  background: rgba(23, 51, 104, 0.06);
+  border: 1px solid rgba(23, 51, 104, 0.08);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   06. 鍚堜綔浼欎即绫诲瀷搴曞浘
+========================================================= */
+
+.distributor-partner-section {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+
+.distributor-partner-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.96) 0%,
+      rgba(255, 255, 255, 0.88) 48%,
+      rgba(244, 247, 251, 0.78) 100%
+    ),
+    url("/images/contact-cooperation/partner-bg.webp") center / cover no-repeat;
+  pointer-events: none;
+}
+
+.distributor-partner-section .distributor-section-inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================================================
+   07. 鍚堜綔娴佺▼
+========================================================= */
+
+.distributor-process-section {
+  color: #fff;
+  background:
+    radial-gradient(circle at 88% 18%, rgba(9, 233, 180, 0.18), transparent 30%),
+    var(--distributor-blue);
+}
+
+.distributor-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  border-left: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.distributor-process-card {
+  min-height: 280px;
+  padding: 34px 32px;
+  background: rgba(255, 255, 255, 0.04);
+  border-right: 1px solid rgba(255, 255, 255, 0.16);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  transition:
+    background 0.28s ease,
+    transform 0.28s ease;
+}
+
+.distributor-process-card:hover {
+  background: rgba(255, 255, 255, 0.07);
+  transform: translateY(-3px);
+}
+
+.distributor-process-index {
+  color: rgba(255, 255, 255, 0.24);
+  font-size: 56px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: -0.06em;
+}
+
+.distributor-process-dot {
+  width: 16px;
+  height: 16px;
+  margin: 24px 0 34px;
+  background: rgba(255, 255, 255, 0.32);
+  border: 5px solid rgba(6, 26, 58, 0.96);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.34);
+}
+
+.distributor-process-card h3 {
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.36;
+  transition:
+    color 0.28s ease,
+    transform 0.28s ease;
+}
+
+.distributor-process-card:hover h3 {
+  color: var(--distributor-cyan);
+  transform: translateY(-2px);
+}
+
+.distributor-process-card p {
+  margin-top: 14px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 14px;
+  line-height: 1.82;
+}
+
+/* =========================================================
+   08. 琛ㄥ崟鍖哄煙
+========================================================= */
+
+.distributor-form-section {
+  background: #f4f7fb;
+}
+
+.distributor-form-layout {
+  display: grid;
+  grid-template-columns: 410px minmax(0, 1fr);
+  gap: 34px;
+  align-items: start;
+}
+
+.distributor-guide-panel,
+.distributor-form-panel {
+  background: #fff;
+  border: 1px solid var(--distributor-line);
+}
+
+.distributor-guide-head {
+  padding: 30px;
+  color: #fff;
+  background: var(--distributor-blue);
+}
+
+.distributor-guide-head h3 {
+  font-size: 26px;
+  line-height: 1.32;
+  letter-spacing: -0.03em;
+}
+
+.distributor-guide-head p {
+  margin-top: 14px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.distributor-guide-list {
+  border-top: 1px solid var(--distributor-line-light);
+}
+
+.distributor-guide-item {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  min-height: 128px;
+  border-bottom: 1px solid var(--distributor-line-light);
+}
+
+.distributor-guide-item > div {
+  padding-top: 24px;
+  color: #b8c1cc;
+  text-align: center;
+  font-size: 46px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  border-right: 1px solid var(--distributor-line-light);
+}
+
+.distributor-guide-item section {
+  padding: 26px 24px;
+}
+
+.distributor-guide-item h4 {
+  color: var(--distributor-blue);
+  font-size: 18px;
+  line-height: 1.36;
+}
+
+.distributor-guide-item p {
+  margin-top: 8px;
+  color: var(--distributor-sub);
+  font-size: 14px;
+  line-height: 1.78;
+}
+
+.distributor-form-panel > h3 {
+  padding: 26px 30px;
+  color: var(--distributor-blue);
+  font-size: 26px;
+  line-height: 1.25;
+  font-weight: 850;
+  letter-spacing: -0.02em;
+  border-bottom: 1px solid var(--distributor-line);
+}
+
+.distributor-form-grid {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 20px;
+}
+
+.distributor-form-grid label {
+  display: grid;
+  gap: 8px;
+  color: #334760;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+/* 琛ㄥ崟瀛楁鏍囬
+   璇存槑锛?
+   - 鐢ㄤ竴灞?span 鍖呬綇鏍囬鏂囧瓧
+   - 蹇呭～鏄熷彿鐢?em锛岄伩鍏嶆槦鍙疯 grid 鎺掑埌涓嬩竴琛?
+*/
+.distributor-field-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  color: #334760;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.distributor-field-title em {
+  color: #d92d20;
+  font-style: normal;
+}
+
+.distributor-form-full {
+  grid-column: 1 / -1;
+}
+
+.distributor-form-grid input,
+.distributor-form-grid select,
+.distributor-form-grid textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 13px;
+  color: var(--distributor-text);
+  background: #fff;
+  border: 1px solid rgba(23, 51, 104, 0.2);
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  transition:
+    border-color 0.24s ease,
+    box-shadow 0.24s ease;
+}
+
+.distributor-form-grid textarea {
+  min-height: 148px;
+  padding: 13px;
+  line-height: 1.7;
+  resize: vertical;
+}
+
+.distributor-form-grid input:focus,
+.distributor-form-grid select:focus,
+.distributor-form-grid textarea:focus {
+  border-color: var(--distributor-cyan);
+  box-shadow: inset 4px 0 0 var(--distributor-cyan);
+}
+
+.distributor-form-grid small {
+  color: var(--distributor-muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.distributor-email-row {
+  display: grid;
+  grid-template-columns: minmax(260px, 1.4fr) auto minmax(180px, 0.8fr) auto;
+  gap: 8px;
+  align-items: center;
+}
+
+.distributor-email-row button,
+.distributor-submit-btn,
+.distributor-upload-btn {
+  min-height: 48px;
+  padding: 0 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--distributor-blue);
+  background: #fff;
+  border: 1px solid rgba(23, 51, 104, 0.18);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 850;
+  cursor: pointer;
+  transition:
+    background 0.24s ease,
+    border-color 0.24s ease,
+    color 0.24s ease,
+    transform 0.24s ease;
+}
+
+.distributor-email-row button:hover,
+.distributor-submit-btn:hover,
+.distributor-upload-btn:hover {
+  background: rgba(9, 233, 180, 0.12);
+  border-color: rgba(9, 233, 180, 0.32);
+  transform: translateY(-1px);
+}
+
+.distributor-upload-btn input {
+  display: none;
+}
+
+.distributor-submit-row {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  gap: 8px;
+  align-items: start;
+  margin-top: 26px;
+  padding-top: 24px;
+  border-top: 1px solid var(--distributor-line);
+}
+
+.distributor-submit-row p {
+  max-width: 540px;
+  color: var(--distributor-sub);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.distributor-submit-btn {
+  min-width: 168px;
+  white-space: nowrap;
+}
+
+.distributor-file-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.distributor-file-list button {
+  padding: 6px 10px;
+  color: var(--distributor-blue);
+  background: rgba(23, 51, 104, 0.06);
+  border: 1px solid rgba(23, 51, 104, 0.08);
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* =========================================================
+   09. 搴曢儴 CTA
+========================================================= */
+
+.distributor-bottom-cta {
+  padding: 88px 0;
+  color: #fff;
+  background:
+    radial-gradient(circle at 14% 14%, rgba(9, 233, 180, 0.18), transparent 28%),
+    var(--distributor-blue);
+}
+
+.distributor-bottom-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 34px;
+}
+
+.distributor-bottom-cta h2 {
+  font-size: clamp(30px, 3.2vw, 48px);
+  line-height: 1.18;
+  letter-spacing: -0.04em;
+}
+
+.distributor-bottom-cta p {
+  max-width: 660px;
+  margin-top: 14px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   10. Toast
+========================================================= */
+
+.distributor-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 34px;
+  z-index: 120;
+  transform: translateX(-50%);
+  padding: 13px 18px;
+  color: #fff;
+  background: rgba(6, 26, 58, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.24);
+}
+
+/* =========================================================
+   11. 鍝嶅簲寮?
+========================================================= */
+
+@media (max-width: 1120px) {
+  .distributor-section {
+    padding: 76px 0;
+  }
+
+  .distributor-card-grid,
+  .distributor-process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .distributor-product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .distributor-form-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .distributor-email-row,
+  .distributor-submit-row {
+    grid-template-columns: 1fr;
+  }
+
+  .distributor-upload-btn {
+    width: fit-content;
+  }
+}
+
+@media (max-width: 680px) {
+  .distributor-section {
+    padding: 72px 0;
+  }
+
+  .distributor-section-inner {
+    width: min(var(--distributor-width), calc(100% - 32px));
+  }
+
+  .distributor-hero {
+    min-height: 620px;
+  }
+
+  .distributor-hero-content h1 {
+    font-size: 42px;
+  }
+
+  .distributor-section-head h2 {
+    font-size: 32px;
+  }
+
+  .distributor-card-grid,
+  .distributor-process-grid,
+  .distributor-product-grid,
+  .distributor-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .distributor-guide-item {
+    grid-template-columns: 84px minmax(0, 1fr);
+  }
+
+  .distributor-guide-item > div {
+    font-size: 40px;
+  }
+
+  .distributor-form-grid,
+  .distributor-form-panel > h3,
+  .distributor-guide-head {
+    padding: 24px;
+  }
+
+  .distributor-bottom-cta-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* =========================================================
+   缁忛攢鍟嗗悎浣滈〉闈綔涓枃涓嶅彲鐢ㄦ彁绀洪〉
+========================================================= */
+
+.distributor-unavailable {
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(6, 26, 58, 0.92) 0%,
+      rgba(23, 51, 104, 0.78) 45%,
+      rgba(23, 51, 104, 0.38) 100%
+    ),
+    url("/images/contact-cooperation/distributor-hero.webp") center / cover no-repeat;
+  color: #ffffff;
+}
+
+.distributor-unavailable-card {
+  max-width: 760px;
+  padding: 56px;
+  background: rgba(6, 26, 58, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.distributor-unavailable-label {
+  margin-bottom: 18px;
+  color: var(--distributor-cyan);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.distributor-unavailable-card h1 {
+  font-size: clamp(34px, 4vw, 56px);
+  line-height: 1.16;
+  letter-spacing: -0.045em;
+}
+
+.distributor-unavailable-card > p:not(.distributor-unavailable-label) {
+  margin-top: 22px;
+  max-width: 640px;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.distributor-unavailable-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.distributor-btn-ghost-dark {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.36);
+}
+
+.distributor-btn-ghost-dark:hover {
+  color: var(--distributor-blue-deep);
+  background: var(--distributor-cyan);
+  border-color: var(--distributor-cyan);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 680px) {
+  .distributor-unavailable {
+    min-height: 560px;
+  }
+
+  .distributor-unavailable-card {
+    padding: 32px 24px;
+  }
+}
+
+
+/* =========================================================
+   缁忛攢鍟嗗悎浣滈〉闈綔涓枃涓嶅彲鐢ㄦ彁绀洪〉
+   浣跨敤璺緞锛?
+   /contact/distributor
+========================================================= */
+
+.distributor-unavailable {
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(6, 26, 58, 0.92) 0%,
+      rgba(23, 51, 104, 0.78) 45%,
+      rgba(23, 51, 104, 0.38) 100%
+    ),
+    url("/images/contact-cooperation/distributor-hero.webp") center / cover no-repeat;
+  color: #ffffff;
+}
+
+.distributor-unavailable-card {
+  max-width: 760px;
+  padding: 56px;
+  background: rgba(6, 26, 58, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.distributor-unavailable-label {
+  margin-bottom: 18px;
+  color: #09e9b4;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.distributor-unavailable-card h1 {
+  font-size: clamp(34px, 4vw, 56px);
+  line-height: 1.16;
+  letter-spacing: -0.045em;
+}
+
+.distributor-unavailable-card > p:not(.distributor-unavailable-label) {
+  margin-top: 22px;
+  max-width: 640px;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.distributor-unavailable-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.distributor-btn-ghost-dark {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.36);
+}
+
+.distributor-btn-ghost-dark:hover {
+  color: #061a3a;
+  background: #09e9b4;
+  border-color: #09e9b4;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 680px) {
+  .distributor-unavailable {
+    min-height: 560px;
+  }
+
+  .distributor-unavailable-card {
+    padding: 32px 24px;
+  }
+}
+
+/* =========================================================
+   涓枃缁忛攢鍟嗗厹搴曢〉
+   浣跨敤璺緞锛?
+   /contact/distributor
+
+   璇存槑锛?
+   1. 涓嶆槸姝ｅ紡鎷涘晢椤?
+   2. 涓嶆槸 404 椤甸潰
+   3. 鐢ㄤ簬娓╁拰寮曞涓枃鐢ㄦ埛鍥炲埌鑱旂郴鎴戜滑椤甸潰
+========================================================= */
+
+.distributor-cn-page {
+  background: #f4f7fb;
+  color: #173368;
+}
+
+.distributor-cn-section {
+  min-height: calc(100vh - 80px);
+  padding: 96px 0;
+  display: flex;
+  align-items: center;
+}
+
+.distributor-cn-inner {
+  width: min(1280px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.distributor-cn-card {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid rgba(23, 51, 104, 0.12);
+  box-shadow: 0 24px 60px rgba(6, 26, 58, 0.08);
+}
+
+.distributor-cn-copy {
+  padding: 72px 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.distributor-cn-kicker {
+  margin-bottom: 18px;
+  color: #09e9b4;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.distributor-cn-copy h1 {
+  max-width: 560px;
+  color: #173368;
+  font-size: clamp(38px, 4.2vw, 58px);
+  line-height: 1.14;
+  letter-spacing: -0.055em;
+  font-weight: 900;
+}
+
+.distributor-cn-desc {
+  max-width: 580px;
+  margin-top: 24px;
+  color: #5d6d86;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.distributor-cn-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 36px;
+}
+
+.distributor-cn-primary,
+.distributor-cn-secondary {
+  min-width: 158px;
+  min-height: 48px;
+  padding: 0 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 850;
+  transition:
+    color 0.24s ease,
+    background 0.24s ease,
+    border-color 0.24s ease,
+    transform 0.24s ease;
+}
+
+.distributor-cn-primary {
+  color: #ffffff;
+  background: #173368;
+  border: 1px solid #173368;
+}
+
+.distributor-cn-primary:hover {
+  color: #061a3a;
+  background: #09e9b4;
+  border-color: #09e9b4;
+  transform: translateY(-2px);
+}
+
+.distributor-cn-secondary {
+  color: #173368;
+  background: #ffffff;
+  border: 1px solid rgba(23, 51, 104, 0.2);
+}
+
+.distributor-cn-secondary:hover {
+  color: #061a3a;
+  border-color: #09e9b4;
+  background: rgba(9, 233, 180, 0.1);
+  transform: translateY(-2px);
+}
+
+.distributor-cn-visual {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+  background: #eaf1f8;
+}
+
+.distributor-cn-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.04) 0%,
+      rgba(23, 51, 104, 0.05) 48%,
+      rgba(23, 51, 104, 0.1) 100%
+    );
+}
+
+.distributor-cn-visual img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.distributor-cn-support-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 22px;
+  border-top: 1px solid rgba(23, 51, 104, 0.12);
+  border-left: 1px solid rgba(23, 51, 104, 0.12);
+  background: #ffffff;
+}
+
+.distributor-cn-support-card {
+  min-height: 150px;
+  padding: 30px;
+  border-right: 1px solid rgba(23, 51, 104, 0.12);
+  border-bottom: 1px solid rgba(23, 51, 104, 0.12);
+  transition:
+    background 0.24s ease,
+    transform 0.24s ease;
+}
+
+.distributor-cn-support-card:hover {
+  background: #f8fbff;
+  transform: translateY(-2px);
+}
+
+.distributor-cn-support-card h2 {
+  color: #173368;
+  font-size: 20px;
+  line-height: 1.35;
+  font-weight: 850;
+  letter-spacing: -0.025em;
+}
+
+.distributor-cn-support-card p {
+  margin-top: 10px;
+  color: #5d6d86;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   涓枃缁忛攢鍟嗗厹搴曢〉
+   浣跨敤璺緞锛?
+   /contact/distributor
+
+   璁捐鏂瑰悜锛?
+   1. 鏁翠綋涓嶆槸 404 椤甸潰
+   2. 鍥剧墖浣滀负娓╅Θ鑳屾櫙
+   3. 宸︿晶鐧借壊鎻愮ず鍗＄墖鎵胯浇淇℃伅
+   4. 涓嬫柟涓変釜鍏ュ彛鍋氫腑鏂囩敤鎴峰垎娴?
+========================================================= */
+
+.distributor-cn-page {
+  min-height: 100vh;
+  background: #f4f7fb;
+  color: #173368;
+}
+
+/* =========================================================
+   涓昏瑙夊尯鍩?
+========================================================= */
+
+.distributor-cn-hero {
+  position: relative;
+  min-height: 640px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #eef4fa;
+}
+
+.distributor-cn-hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url("/images/contact-cooperation/distributor-cn-fallback.webp")
+    center / cover no-repeat;
+}
+
+/* 宸︿晶澧炲己鍙鎬э紝鍙充晶淇濈暀鍥剧墖浜虹墿 */
+.distributor-cn-hero-mask {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(244, 247, 251, 0.96) 0%,
+      rgba(244, 247, 251, 0.86) 34%,
+      rgba(244, 247, 251, 0.38) 62%,
+      rgba(244, 247, 251, 0.08) 100%
+    );
+}
+
+.distributor-cn-inner {
+  position: relative;
+  z-index: 2;
+  width: min(1280px, calc(100% - 56px));
+  margin: 0 auto;
+}
+
+.distributor-cn-panel {
+  width: min(620px, 100%);
+  padding: 52px 56px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(23, 51, 104, 0.12);
+  box-shadow: 0 24px 70px rgba(6, 26, 58, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.distributor-cn-kicker {
+  margin-bottom: 16px;
+  color: #09e9b4;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.distributor-cn-panel h1 {
+  max-width: 520px;
+  color: #173368;
+  font-size: clamp(38px, 4vw, 56px);
+  line-height: 1.14;
+  letter-spacing: -0.055em;
+  font-weight: 900;
+}
+
+.distributor-cn-desc {
+  max-width: 540px;
+  margin-top: 22px;
+  color: #5d6d86;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.distributor-cn-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.distributor-cn-primary,
+.distributor-cn-secondary {
+  min-width: 158px;
+  min-height: 48px;
+  padding: 0 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 850;
+  transition:
+    color 0.24s ease,
+    background 0.24s ease,
+    border-color 0.24s ease,
+    transform 0.24s ease;
+}
+
+.distributor-cn-primary {
+  color: #ffffff;
+  background: #173368;
+  border: 1px solid #173368;
+}
+
+.distributor-cn-primary:hover {
+  color: #061a3a;
+  background: #09e9b4;
+  border-color: #09e9b4;
+  transform: translateY(-2px);
+}
+
+.distributor-cn-secondary {
+  color: #173368;
+  background: #ffffff;
+  border: 1px solid rgba(23, 51, 104, 0.22);
+}
+
+.distributor-cn-secondary:hover {
+  color: #061a3a;
+  border-color: #09e9b4;
+  background: rgba(9, 233, 180, 0.1);
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   涓嬫柟涓変釜鍏ュ彛
+========================================================= */
+
+.distributor-cn-support-section {
+  padding: 34px 0 96px;
+  background: #f4f7fb;
+}
+
+.distributor-cn-support-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.distributor-cn-support-card {
+  min-height: 160px;
+  padding: 30px 32px;
+  background: #ffffff;
+  border: 1px solid rgba(23, 51, 104, 0.12);
+  transition:
+    background 0.24s ease,
+    border-color 0.24s ease,
+    transform 0.24s ease;
+}
+
+.distributor-cn-support-card:hover {
+  background: #fbfdff;
+  border-color: rgba(9, 233, 180, 0.55);
+  transform: translateY(-2px);
+}
+
+.distributor-cn-support-card h2 {
+  color: #173368;
+  font-size: 21px;
+  line-height: 1.35;
+  font-weight: 850;
+  letter-spacing: -0.025em;
+}
+
+.distributor-cn-support-card p {
+  margin-top: 12px;
+  color: #5d6d86;
+  font-size: 14px;
+  line-height: 1.78;
+}
+
+/* =========================================================
+   涓枃缁忛攢鍟嗗厹搴曢〉锝滃搷搴斿紡
+========================================================= */
+
+@media (max-width: 980px) {
+  .distributor-cn-hero {
+    min-height: auto;
+    padding: 96px 0 72px;
+  }
+
+  .distributor-cn-hero-bg {
+    background-position: 62% center;
+  }
+
+  .distributor-cn-hero-mask {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(244, 247, 251, 0.96) 0%,
+        rgba(244, 247, 251, 0.9) 52%,
+        rgba(244, 247, 251, 0.48) 100%
+      );
+  }
+
+  .distributor-cn-panel {
+    padding: 44px 40px;
+  }
+
+  .distributor-cn-support-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .distributor-cn-hero {
+    padding: 82px 0 56px;
+  }
+
+  .distributor-cn-inner {
+    width: min(1280px, calc(100% - 32px));
+  }
+
+  .distributor-cn-panel {
+    padding: 34px 26px;
+  }
+
+  .distributor-cn-panel h1 {
+    font-size: 34px;
+  }
+
+  .distributor-cn-desc {
+    font-size: 15px;
+  }
+
+  .distributor-cn-actions {
+    flex-direction: column;
+  }
+
+  .distributor-cn-primary,
+  .distributor-cn-secondary {
+    width: 100%;
+  }
+
+  .distributor-cn-support-section {
+    padding: 22px 0 72px;
+  }
+
+  .distributor-cn-support-card {
+    min-height: auto;
+    padding: 26px 24px;
+  }
+}
+
+/* =========================================================
+   缁忛攢鍟嗗悎浣滈〉锝滄彁浜ゆ垚鍔熷脊绐?
+   浣跨敤椤甸潰锛?
+   /en/contact/distributor
+   /es/contact/distributor
+   /fr/contact/distributor
+   /ko/contact/distributor
+   /ru/contact/distributor
+========================================================= */
+
+.distributor-success-mask {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(6, 26, 58, 0.58);
+  backdrop-filter: blur(6px);
+}
+
+.distributor-success-dialog {
+  width: min(480px, 100%);
+  padding: 42px 38px 34px;
+  background: #ffffff;
+  border: 1px solid rgba(23, 51, 104, 0.12);
+  box-shadow: 0 26px 80px rgba(6, 26, 58, 0.24);
+}
+
+.distributor-success-icon {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #061a3a;
+  background: #09e9b4;
+  border-radius: 50%;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.distributor-success-dialog h3 {
+  margin: 0;
+  color: #173368;
+  font-size: 28px;
+  line-height: 1.25;
+  font-weight: 900;
+  letter-spacing: -0.035em;
+}
+
+.distributor-success-dialog p {
+  margin-top: 14px;
+  color: #5d6d86;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.distributor-success-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.distributor-success-primary,
+.distributor-success-secondary {
+  min-height: 44px;
+  padding: 0 22px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 850;
+  cursor: pointer;
+  transition:
+    color 0.22s ease,
+    background 0.22s ease,
+    border-color 0.22s ease,
+    transform 0.22s ease;
+}
+
+.distributor-success-primary {
+  color: #ffffff;
+  background: #173368;
+  border: 1px solid #173368;
+}
+
+.distributor-success-primary:hover {
+  color: #061a3a;
+  background: #09e9b4;
+  border-color: #09e9b4;
+  transform: translateY(-1px);
+}
+
+.distributor-success-secondary {
+  color: #173368;
+  background: #ffffff;
+  border: 1px solid rgba(23, 51, 104, 0.18);
+}
+
+.distributor-success-secondary:hover {
+  border-color: #09e9b4;
+  background: rgba(9, 233, 180, 0.1);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 680px) {
+  .distributor-success-dialog {
+    padding: 34px 26px 28px;
+  }
+
+  .distributor-success-actions {
+    flex-direction: column;
+  }
+
+  .distributor-success-primary,
+  .distributor-success-secondary {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   缁忛攢鍟嗗悎浣滈〉锝滄彁浜ゆ垚鍔熷脊绐椾紭鍖?
+   璇存槑锛?
+   1. 澶嶇敤 contact-success-modal 缁撴瀯
+   2. 璁╃粡閿€鍟嗘彁浜ゆ垚鍔熷弽棣堟洿姝ｅ紡
+   3. 鍘绘帀杩囧ぇ鐨勭┖鐧芥劅
+========================================================= */
+
+.distributor-page .contact-success-card {
+  width: min(520px, calc(100vw - 48px));
+  padding: 44px 42px 38px;
+  text-align: left;
+}
+
+.distributor-page .contact-success-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 0 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #061a3a;
+  background: #09e9b4;
+  border-radius: 50%;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.distributor-page .contact-success-card h3 {
+  margin: 0;
+  color: #173368;
+  font-size: 30px;
+  line-height: 1.25;
+  font-weight: 900;
+  letter-spacing: -0.035em;
+}
+
+.distributor-page .contact-success-card p {
+  margin-top: 16px;
+  color: #5d6d86;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.distributor-page .contact-success-button {
+  min-width: 120px;
+  min-height: 44px;
+  margin-top: 30px;
+  padding: 0 24px;
+  color: #ffffff;
+  background: #173368;
+  border: 1px solid #173368;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 850;
+  cursor: pointer;
+  transition:
+    color 0.22s ease,
+    background 0.22s ease,
+    border-color 0.22s ease,
+    transform 0.22s ease;
+}
+
+.distributor-page .contact-success-button:hover {
+  color: #061a3a;
+  background: #09e9b4;
+  border-color: #09e9b4;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 680px) {
+  .distributor-page .contact-success-card {
+    padding: 34px 26px 30px;
+  }
+
+  .distributor-page .contact-success-card h3 {
+    font-size: 26px;
+  }
+
+  .distributor-page .contact-success-button {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   缁忛攢鍟嗗悎浣滈〉锝滄彁浜ゆ垚鍔熷脊绐楁渶缁堝眳涓慨姝?
+   璇存槑锛?
+   1. 鎴愬姛鍥炬爣灞呬腑
+   2. 鎸夐挳灞呬腑
+   3. 鍘绘帀涔嬪墠宸﹀榻愰€犳垚鐨勪笉鍗忚皟
+========================================================= */
+
+.distributor-page .contact-success-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.distributor-page .contact-success-icon {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.distributor-page .contact-success-card h3 {
+  text-align: center;
+}
+
+.distributor-page .contact-success-card p {
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.distributor-page .contact-success-button {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================================================
+   缁忛攢鍟嗗悎浣滈〉锝滄爣棰樺瓧閲嶅寮?
+   璇存槑锛?
+   1. 鍙奖鍝嶇粡閿€鍟嗛〉闈?
+   2. 澧炲己妯″潡澶ф爣棰樺拰鍗＄墖鏍囬鐨勫姏閲忔劅
+   3. 淇濇寔 FOREACH 瀹樼綉娣辫摑銆佺ǔ閲嶃€丅2B 鎶€鏈劅
+========================================================= */
+
+/* 妯″潡澶ф爣棰橈細渚嬪 Support local customers... */
+.distributor-page .distributor-section-head h2 {
+  font-weight: 850;
+  letter-spacing: -0.045em;
+  color: #173368;
+}
+
+/* 妯″潡璇存槑鏂囧瓧涓嶈澶噸锛屼繚鎸佸眰绾?*/
+.distributor-page .distributor-section-head p {
+  font-weight: 500;
+  line-height: 1.85;
+}
+
+/* 鍗＄墖鏍囬锛氫緥濡?Complete Product Portfolio */
+.distributor-page .distributor-info-card h3 {
+  font-weight: 850;
+  letter-spacing: -0.025em;
+  color: #173368;
+}
+
+/* 浜у搧鍗＄墖鏍囬 */
+.distributor-page .distributor-product-content h3 {
+  font-weight: 850;
+  letter-spacing: -0.025em;
+  color: #173368;
+}
+
+/* 鍚堜綔娴佺▼鍗＄墖鏍囬 */
+.distributor-page .distributor-process-card h3 {
+  font-weight: 850;
+  letter-spacing: -0.025em;
+}
+
+/* 琛ㄥ崟鏍囬 */
+.distributor-page .distributor-form-panel h3,
+.distributor-page .distributor-guide-head h3 {
+  font-weight: 850;
+  letter-spacing: -0.025em;
+}
+/* =========================================================
+   缁忛攢鍟嗗悎浣滈〉锝滀紭鍔?浼欎即鍗＄墖 Hover 淇濈暀鑽у厜鑹?
+   璇存槑锛?
+   1. 鍗＄墖涓嶅啀鍙樻垚娣辫摑澶ц壊鍧?
+   2. 榧犳爣缁忚繃鏃舵爣棰樻樉绀鸿崸鍏夐潚
+   3. 鏁板瓧杞诲井鏄剧ず鑽у厜闈掞紝淇濈暀浜や簰鎰?
+   4. 鍙奖鍝嶇粡閿€鍟嗛〉闈?
+========================================================= */
+
+.distributor-page .distributor-card-grid-border .distributor-info-card:hover {
+  background: #ffffff;
+  border-color: rgba(9, 233, 180, 0.55);
+  transform: translateY(-2px);
+  box-shadow: none;
+}
+
+.distributor-page .distributor-card-grid-border .distributor-info-card:hover h3 {
+  color: #09e9b4;
+}
+
+.distributor-page .distributor-card-grid-border .distributor-info-card:hover p {
+  color: #5d6d86;
+}
+
+.distributor-page
+  .distributor-card-grid-border
+  .distributor-info-card:hover
+  .distributor-card-index {
+  color: rgba(9, 233, 180, 0.42);
+  opacity: 1;
+}
+
+/* =========================================================
+   缁忛攢鍟嗗悎浣滈〉锝滃悎浣滄祦绋嬫ā鍧楁爣棰樻敼涓虹櫧鑹?
+   璇存槑锛?
+   1. 涓嶆敼娣辫摑鑳屾櫙
+   2. 涓嶆敼鍗＄墖鏍峰紡
+   3. 鍙妸 Cooperation Process 杩欎竴鍧楃殑涓婚澶ф爣棰樻敼鎴愮櫧鑹?
+========================================================= */
+
+.distributor-page .distributor-process-section .distributor-section-head h2 {
+  color: #ffffff;
+}
+
+/* =========================================================
+   缁忛攢鍟嗗悎浣滈〉锝滃崱鐗?Hover 鍚庢鏂囨敼涓虹櫧鑹?
+   璇存槑锛?
+   1. 榧犳爣缁忚繃鍗＄墖鏃讹紝娣辫摑鑳屾櫙淇濈暀
+   2. 鏍囬淇濈暀鑽у厜鑹?
+   3. 姝ｆ枃璇存槑鏀逛负鐧借壊锛屾彁楂樺彲璇绘€?
+   4. 鍙奖鍝嶇粡閿€鍟嗛〉闈?
+========================================================= */
+
+/* 浼樺娍鍗＄墖 / 鍚堜綔浼欎即鍗＄墖锛氶€変腑鍚庢鏂囧彉鐧?*/
+.distributor-page .distributor-card-grid-border .distributor-info-card:hover p {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* 閫変腑鍚庢爣棰樹繚鎸佽崸鍏夎壊 */
+.distributor-page .distributor-card-grid-border .distributor-info-card:hover h3 {
+  color: #09e9b4;
+}
+
+/* 閫変腑鍚庢暟瀛楀彲浠ヤ繚鎸佹贰鑽у厜鑹?*/
+.distributor-page
+  .distributor-card-grid-border
+  .distributor-info-card:hover
+  .distributor-card-index {
+  color: rgba(9, 233, 180, 0.42);
+}
+
+/* 鍚堜綔娴佺▼鍗＄墖濡傛灉涔熸湁娣辫摑 hover锛屽悓鏍疯姝ｆ枃鍙樼櫧 */
+.distributor-page .distributor-process-card:hover p {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.distributor-page .distributor-process-card:hover h3 {
+  color: #09e9b4;
+}
+
+/* =========================================================
+   缁忛攢鍟嗗悎浣滈〉锝滃悎浣滄祦绋嬪崱鐗?Hover 鏁板瓧涓庢柟妗嗚崸鍏夎壊
+   璇存槑锛?
+   1. 榧犳爣閫変腑娴佺▼鍗＄墖鏃讹紝鏁板瓧甯︿竴鐐硅崸鍏夐潚
+   2. 鏁板瓧涓嶈澶寒锛屼繚鎸侀珮绾ф劅
+   3. 灏忔柟妗嗚竟妗嗕笌鍐呴儴鐐瑰畬鍏ㄥ彉鎴愯崸鍏夐潚
+   4. 鍙奖鍝嶇粡閿€鍟嗛〉闈?
+========================================================= */
+
+/* 閫変腑鍚庢暟瀛楀鍔犱竴鐐硅崸鍏夎壊 */
+.distributor-page .distributor-process-card:hover .distributor-process-index {
+  color: rgba(9, 233, 180, 0.55);
+}
+
+/* 閫変腑鍚庡皬鏂规杈规瀹屽叏鍙樻垚鑽у厜鑹?*/
+.distributor-page .distributor-process-card:hover .distributor-process-dot {
+  border-color: #09e9b4;
+  box-shadow: 0 0 0 1px rgba(9, 233, 180, 0.35);
+}
+
+/* 閫変腑鍚庡皬鏂规涓棿鐐瑰畬鍏ㄥ彉鎴愯崸鍏夎壊 */
+.distributor-page .distributor-process-card:hover .distributor-process-dot::after {
+  background: #09e9b4;
+}
+
+/* 閫変腑鍚庢爣棰樹繚鎸佽崸鍏夎壊 */
+.distributor-page .distributor-process-card:hover h3 {
+  color: #09e9b4;
+}
+
+/* 閫変腑鍚庢鏂囦繚鎸佺櫧鑹插彲璇?*/
+.distributor-page .distributor-process-card:hover p {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* =========================================================
+   缁忛攢鍟嗗悎浣滈〉锝滆仈绯绘柟寮?+ 鍦板浘妯″潡
+   璇存槑锛?
+   1. 澶嶇敤鑱旂郴鎴戜滑椤甸潰 contact-info-section 鐨勭粨鏋?
+   2. 鏀惧湪缁忛攢鍟嗙敵璇疯〃鍜屽簳閮?CTA 涔嬮棿
+   3. 鏀剁揣琛ㄥ崟涓嬫柟绌虹櫧
+========================================================= */
+
+.distributor-page .distributor-form-section {
+  padding-bottom: 64px;
+}
+
+.distributor-page .distributor-contact-info-section {
+  padding-top: 86px;
+  padding-bottom: 96px;
+  background: #f4f7fb;
+}
+
+.distributor-page .distributor-contact-info-section + .distributor-bottom-cta {
+  margin-top: 0;
+}
+
+@media (max-width: 760px) {
+  .distributor-page .distributor-form-section {
+    padding-bottom: 48px;
+  }
+
+  .distributor-page .distributor-contact-info-section {
+    padding-top: 64px;
+    padding-bottom: 72px;
+  }
+}
+
+/* =========================================================
+   缁忛攢鍟嗗悎浣滈〉锝滆仈绯绘柟寮?+ 鍦板浘妯″潡绱у噾鐗?
+   璇存槑锛?
+   1. 瑙ｅ喅鐩存帴澶嶇敤鑱旂郴鎴戜滑妯″潡鍚庤繃澶с€佽繃绌虹殑闂
+   2. 鎺у埗鍐呭瀹藉害锛屼笌缁忛攢鍟嗚〃鍗曞尯鍩熶繚鎸佷竴鑷?
+   3. 宸︿晶淇℃伅鍜屽彸渚у湴鍥鹃珮搴︾粺涓€
+   4. 鍙奖鍝嶇粡閿€鍟嗛〉闈紝涓嶅奖鍝?/contact 鑱旂郴鎴戜滑椤甸潰
+========================================================= */
+
+.distributor-page .distributor-contact-info-section {
+  padding: 88px 0 96px;
+  background: #f4f7fb;
+}
+
+/* 鏁翠綋瀹藉害鏀剁獎锛岄伩鍏嶆拺婊″叏灞?*/
+.distributor-page .distributor-contact-info-section .contact-section-inner {
+  width: min(1280px, calc(100% - 64px));
+  margin: 0 auto;
+}
+
+/* 鏍囬鍖轰笉瑕佸お瀹斤紝涔熶笉瑕佸お鏁?*/
+.distributor-page .distributor-contact-info-section .contact-section-head {
+  max-width: 760px;
+  margin-bottom: 42px;
+}
+
+/* 鏍囬澶у皬鏀朵竴鐐癸紝鍜岀粡閿€鍟嗛〉闈㈡洿缁熶竴 */
+.distributor-page .distributor-contact-info-section .contact-section-title {
+  font-size: clamp(38px, 4vw, 56px);
+  line-height: 1.12;
+  letter-spacing: -0.045em;
+  font-weight: 900;
+  color: #173368;
+}
+
+.distributor-page .distributor-contact-info-section .contact-section-desc {
+  max-width: 620px;
+  margin-top: 18px;
+  color: #5d6d86;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* 宸﹀彸甯冨眬鏀剁揣 */
+.distributor-page .distributor-contact-info-section .contact-info-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 28px;
+  align-items: stretch;
+}
+
+/* 宸︿晶鍏徃淇℃伅鍗＄墖 */
+.distributor-page .distributor-contact-info-section .contact-company-panel {
+  min-height: 420px;
+  padding: 36px 36px 34px;
+  background: #ffffff;
+  border: 1px solid rgba(23, 51, 104, 0.1);
+}
+
+/* 鍏徃鍚嶇О涓嶈澶ぇ */
+.distributor-page .distributor-contact-info-section .contact-company-panel h3 {
+  margin-bottom: 28px;
+  color: #173368;
+  font-size: 24px;
+  line-height: 1.35;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+}
+
+.distributor-page .distributor-contact-info-section .contact-company-panel h3 span {
+  display: block;
+  margin-top: 8px;
+  color: #5d6d86;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+/* 淇℃伅琛屾洿绱у噾 */
+.distributor-page .distributor-contact-info-section .contact-info-row {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  min-height: 48px;
+  border-bottom: 1px solid rgba(23, 51, 104, 0.08);
+}
+
+.distributor-page .distributor-contact-info-section .contact-info-row:last-child {
+  border-bottom: 0;
+}
+
+.distributor-page .distributor-contact-info-section .contact-info-row > div:first-child {
+  padding: 15px 16px;
+  color: #71809a;
+  background: #f4f7fb;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.distributor-page .distributor-contact-info-section .contact-info-row > div:last-child {
+  padding: 15px 18px;
+  color: #173368;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 750;
+  word-break: break-word;
+}
+
+/* 鍙充晶鍦板浘鍖哄煙楂樺害缁熶竴锛屼笉瑕佽繃绌?*/
+.distributor-page .distributor-contact-info-section .contact-map-panel,
+.distributor-page .distributor-contact-info-section .amap-block,
+.distributor-page .distributor-contact-info-section .contact-amap-block {
+  min-height: 420px;
+  height: 420px;
+  background: #ffffff;
+  border: 1px solid rgba(23, 51, 104, 0.1);
+  overflow: hidden;
+}
+
+/* 濡傛灉 AMap 瀹瑰櫒鍐呴儴鏈夌櫧搴曪紝涔熷己鍒舵拺婊?*/
+.distributor-page .distributor-contact-info-section .contact-map-panel > div,
+.distributor-page .distributor-contact-info-section .amap-block > div,
+.distributor-page .distributor-contact-info-section .contact-amap-block > div {
+  height: 100%;
+}
+
+/* 琛ㄥ崟鍜岃仈绯讳俊鎭箣闂翠笉瑕佹湁澶х┖鐧?*/
+.distributor-page .distributor-form-section {
+  padding-bottom: 56px;
+}
+
+/* 鑱旂郴淇℃伅鍜屽簳閮?CTA 琛旀帴 */
+.distributor-page .distributor-contact-info-section + .distributor-bottom-cta {
+  margin-top: 0;
+}
+
+/* =========================================================
+   缁忛攢鍟嗗悎浣滈〉锝滆仈绯绘柟寮忔ā鍧楀搷搴斿紡
+========================================================= */
+
+@media (max-width: 1080px) {
+  .distributor-page .distributor-contact-info-section .contact-info-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .distributor-page .distributor-contact-info-section .contact-company-panel,
+  .distributor-page .distributor-contact-info-section .contact-map-panel,
+  .distributor-page .distributor-contact-info-section .amap-block,
+  .distributor-page .distributor-contact-info-section .contact-amap-block {
+    min-height: 360px;
+    height: auto;
+  }
+}
+
+@media (max-width: 760px) {
+  .distributor-page .distributor-contact-info-section {
+    padding: 64px 0 72px;
+  }
+
+  .distributor-page .distributor-contact-info-section .contact-section-inner {
+    width: min(1280px, calc(100% - 32px));
+  }
+
+  .distributor-page .distributor-contact-info-section .contact-section-head {
+    margin-bottom: 30px;
+  }
+
+  .distributor-page .distributor-contact-info-section .contact-section-title {
+    font-size: 34px;
+  }
+
+  .distributor-page .distributor-contact-info-section .contact-company-panel {
+    padding: 28px 22px;
+  }
+
+  .distributor-page .distributor-contact-info-section .contact-info-row {
+    grid-template-columns: 1fr;
+  }
+
+  .distributor-page .distributor-contact-info-section .contact-info-row > div:first-child {
+    padding: 12px 14px 4px;
+    background: transparent;
+  }
+
+  .distributor-page .distributor-contact-info-section .contact-info-row > div:last-child {
+    padding: 4px 14px 14px;
+  }
+}
+
+/* =========================================================
+   缁忛攢鍟嗗悎浣滈〉锝滆仈绯绘柟寮忎笌鍦板浘妯″潡鏈€缁堟帓鐗堜慨姝?
+   璇存槑锛?
+   1. 鍙奖鍝嶇粡閿€鍟嗛〉闈㈤噷鐨勮仈绯绘柟寮忔ā鍧?
+   2. 涓嶅奖鍝?/contact 鑱旂郴鎴戜滑椤甸潰
+   3. 鏀剁揣鏍囬銆佸崱鐗囥€佸湴鍥鹃珮搴?
+   4. 璁╂ā鍧楁洿鍍忕粡閿€鍟嗛〉闈㈢殑涓€涓俊鎭尯锛岃€屼笉鏄畬鏁磋仈绯绘垜浠〉闈?
+========================================================= */
+
+/* 鏁翠釜鑱旂郴鏂瑰紡妯″潡锛氬噺灏戜笂涓嬬┖鐧?*/
+.distributor-page .distributor-contact-info-section {
+  padding: 72px 0 80px;
+  background: #f4f7fb;
+}
+
+/* 鎺у埗鍐呭鎬诲搴︼紝鍜屼笂闈㈢殑琛ㄥ崟妯″潡淇濇寔涓€鑷?*/
+.distributor-page .distributor-contact-info-section .contact-section-inner {
+  width: min(1280px, calc(100% - 64px));
+  margin: 0 auto;
+}
+
+/* 鏍囬鍖烘敹绱?*/
+.distributor-page .distributor-contact-info-section .contact-section-head {
+  max-width: 760px;
+  margin-bottom: 34px;
+}
+
+/* 鏍囬涓嶈杩囧ぇ锛屽挨鍏堕煩璇€佷縿璇細鏄惧緱寰堥噸 */
+.distributor-page .distributor-contact-info-section .contact-section-title {
+  margin: 0;
+  color: #173368;
+  font-size: clamp(36px, 3.2vw, 48px);
+  line-height: 1.16;
+  letter-spacing: -0.035em;
+  font-weight: 900;
+}
+
+/* 璇存槑鏂囧瓧鎺у埗瀹藉害鍜岃璺?*/
+.distributor-page .distributor-contact-info-section .contact-section-desc {
+  max-width: 620px;
+  margin-top: 16px;
+  color: #5d6d86;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* 宸﹀彸甯冨眬锛氬乏淇℃伅锛屽彸鍦板浘 */
+.distributor-page .distributor-contact-info-section .contact-info-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: 26px;
+  align-items: stretch;
+}
+
+/* 宸︿晶鍏徃淇℃伅鍗＄墖 */
+.distributor-page .distributor-contact-info-section .contact-company-panel {
+  min-height: 430px;
+  height: 100%;
+  padding: 34px 34px 30px;
+  background: #ffffff;
+  border: 1px solid rgba(23, 51, 104, 0.1);
+}
+
+/* 鍏徃鍚嶇О鍖哄煙鏀剁揣 */
+.distributor-page .distributor-contact-info-section .contact-company-panel h3 {
+  margin: 0 0 26px;
+  color: #173368;
+  font-size: 24px;
+  line-height: 1.35;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+}
+
+.distributor-page
+  .distributor-contact-info-section
+  .contact-company-panel
+  h3
+  span {
+  display: block;
+  margin-top: 8px;
+  color: #5d6d86;
+  font-size: 14px;
+  line-height: 1.55;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+/* 淇℃伅琛屾敼寰楁洿绱у噾 */
+.distributor-page .distributor-contact-info-section .contact-info-row {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  min-height: 52px;
+  border-bottom: 1px solid rgba(23, 51, 104, 0.08);
+}
+
+.distributor-page .distributor-contact-info-section .contact-info-row:last-child {
+  border-bottom: 0;
+}
+
+.distributor-page
+  .distributor-contact-info-section
+  .contact-info-row
+  > div:first-child {
+  padding: 15px 16px;
+  color: #71809a;
+  background: #f4f7fb;
+  font-size: 13px;
+  line-height: 1.45;
+  font-weight: 800;
+}
+
+.distributor-page
+  .distributor-contact-info-section
+  .contact-info-row
+  > div:last-child {
+  padding: 15px 18px;
+  color: #173368;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 750;
+  word-break: break-word;
+}
+
+/* 鍙充晶鍦板浘鍗＄墖锛氬己鍒跺拰宸︿晶绛夐珮 */
+.distributor-page .distributor-contact-info-section .contact-map-panel,
+.distributor-page .distributor-contact-info-section .contact-amap-block,
+.distributor-page .distributor-contact-info-section .amap-block {
+  min-height: 430px;
+  height: 430px;
+  background: #ffffff;
+  border: 1px solid rgba(23, 51, 104, 0.1);
+  overflow: hidden;
+}
+
+/* 鍦板浘鍐呴儴鎾戞弧 */
+.distributor-page .distributor-contact-info-section .contact-map-panel > div,
+.distributor-page .distributor-contact-info-section .contact-amap-block > div,
+.distributor-page .distributor-contact-info-section .amap-block > div {
+  height: 100%;
+}
+
+/* 鍦板浘淇℃伅绐椾笉瑕佸お闈犱笂锛岀◢寰眳涓竴鐐?*/
+.distributor-page .distributor-contact-info-section .amap-info-window,
+.distributor-page .distributor-contact-info-section .contact-map-info {
+  transform: translateY(28px);
+}
+
+/* 琛ㄥ崟鍜岃仈绯讳俊鎭箣闂存敹绱?*/
+.distributor-page .distributor-form-section {
+  padding-bottom: 48px;
+}
+
+/* 鑱旂郴淇℃伅鍜屽簳閮?CTA 琛旀帴 */
+.distributor-page .distributor-contact-info-section + .distributor-bottom-cta {
+  margin-top: 0;
+}
+
+/* =========================================================
+   鍝嶅簲寮?
+========================================================= */
+
+@media (max-width: 1080px) {
+  .distributor-page .distributor-contact-info-section .contact-info-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .distributor-page .distributor-contact-info-section .contact-company-panel,
+  .distributor-page .distributor-contact-info-section .contact-map-panel,
+  .distributor-page .distributor-contact-info-section .contact-amap-block,
+  .distributor-page .distributor-contact-info-section .amap-block {
+    min-height: 360px;
+    height: auto;
+  }
+}
+
+@media (max-width: 760px) {
+  .distributor-page .distributor-contact-info-section {
+    padding: 56px 0 68px;
+  }
+
+  .distributor-page .distributor-contact-info-section .contact-section-inner {
+    width: min(1280px, calc(100% - 32px));
+  }
+
+  .distributor-page .distributor-contact-info-section .contact-section-head {
+    margin-bottom: 28px;
+  }
+
+  .distributor-page .distributor-contact-info-section .contact-section-title {
+    font-size: 34px;
+  }
+
+  .distributor-page .distributor-contact-info-section .contact-company-panel {
+    padding: 26px 22px;
+  }
+
+  .distributor-page .distributor-contact-info-section .contact-company-panel h3 {
+    font-size: 22px;
+  }
+
+  .distributor-page .distributor-contact-info-section .contact-info-row {
+    grid-template-columns: 1fr;
+  }
+
+  .distributor-page
+    .distributor-contact-info-section
+    .contact-info-row
+    > div:first-child {
+    padding: 12px 14px 4px;
+    background: transparent;
+  }
+
+  .distributor-page
+    .distributor-contact-info-section
+    .contact-info-row
+    > div:last-child {
+    padding: 4px 14px 14px;
+  }
+}
+
+
+/* =========================================================
+   缁忛攢鍟嗗悎浣滈〉锝滈珮寰峰湴鍥惧簳鍥鹃摵婊″彸渚у崱鐗?
+   璇存槑锛?
+   1. 涓嶆槸鍘嬬缉鍙充晶鍦板浘鍖哄煙
+   2. 鑰屾槸璁╅珮寰峰湴鍥惧簳鍥炬湰韬摵婊℃暣涓湴鍥惧崱鐗?
+   3. 瑙ｅ喅鍦板浘鍙樉绀轰笂鍗婇儴鍒嗐€佷笅鏂圭┖鐧界殑闂
+   4. 鍙奖鍝嶇粡閿€鍟嗛〉闈紝涓嶅奖鍝?/contact 鑱旂郴鎴戜滑椤甸潰
+========================================================= */
+
+/* 鍙充晶鍦板浘鍗＄墖楂樺害锛屽拰宸︿晶淇℃伅鍗＄墖缁熶竴 */
+.distributor-page .distributor-contact-info-section {
+  --distributor-map-height: 430px;
+}
+
+/* 鍙充晶鍦板浘澶栧眰 */
+.distributor-page .distributor-contact-info-section .contact-map-panel,
+.distributor-page .distributor-contact-info-section .contact-amap-block,
+.distributor-page .distributor-contact-info-section .amap-block {
+  height: var(--distributor-map-height) !important;
+  min-height: var(--distributor-map-height) !important;
+  max-height: var(--distributor-map-height) !important;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* AmapBlock 鐩存帴瀛愮骇蹇呴』鎾戞弧 */
+.distributor-page .distributor-contact-info-section .contact-map-panel > div,
+.distributor-page .distributor-contact-info-section .contact-amap-block > div,
+.distributor-page .distributor-contact-info-section .amap-block > div {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: var(--distributor-map-height) !important;
+}
+
+/* 楂樺痉鍦板浘鐪熷疄搴曞浘瀹瑰櫒寮哄埗閾烘弧 */
+.distributor-page .distributor-contact-info-section .amap-container,
+.distributor-page .distributor-contact-info-section .amap-maps,
+.distributor-page .distributor-contact-info-section .amap-layers,
+.distributor-page .distributor-contact-info-section .amap-layer,
+.distributor-page .distributor-contact-info-section .amap-drags,
+.distributor-page .distributor-contact-info-section .amap-overlays,
+.distributor-page .distributor-contact-info-section .amap-viewport {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: var(--distributor-map-height) !important;
+}
+
+/* 楂樺痉鐡︾墖灞備篃寮哄埗鎾戞弧楂樺害 */
+.distributor-page .distributor-contact-info-section .amap-tile,
+.distributor-page .distributor-contact-info-section .amap-tile-container,
+.distributor-page .distributor-contact-info-section .amap-tile-layer {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* 濡傛灉 AmapBlock 鍐呴儴鏈夎嚜瀹氫箟鍦板浘瀹瑰櫒锛屼篃涓€璧锋拺婊?*/
+.distributor-page .distributor-contact-info-section .contact-map,
+.distributor-page .distributor-contact-info-section .contact-map-container,
+.distributor-page .distributor-contact-info-section .contact-map-viewport {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: var(--distributor-map-height) !important;
+}
+
+/* 淇℃伅绐椾繚鎸佸湪鍦板浘涓婃柟锛屼笉褰卞搷搴曞浘楂樺害 */
+.distributor-page .distributor-contact-info-section .amap-info,
+.distributor-page .distributor-contact-info-section .amap-info-content,
+.distributor-page .distributor-contact-info-section .amap-info-outer {
+  z-index: 10;
+}
+
+/* 鎵嬫満绔湴鍥鹃珮搴﹂€傚綋闄嶄綆 */
+@media (max-width: 1080px) {
+  .distributor-page .distributor-contact-info-section {
+    --distributor-map-height: 360px;
+  }
+
+  .distributor-page .distributor-contact-info-section .contact-map-panel,
+  .distributor-page .distributor-contact-info-section .contact-amap-block,
+  .distributor-page .distributor-contact-info-section .amap-block,
+  .distributor-page .distributor-contact-info-section .contact-map-panel > div,
+  .distributor-page .distributor-contact-info-section .contact-amap-block > div,
+  .distributor-page .distributor-contact-info-section .amap-block > div,
+  .distributor-page .distributor-contact-info-section .amap-container,
+  .distributor-page .distributor-contact-info-section .amap-maps,
+  .distributor-page .distributor-contact-info-section .amap-layers,
+  .distributor-page .distributor-contact-info-section .amap-layer,
+  .distributor-page .distributor-contact-info-section .amap-drags,
+  .distributor-page .distributor-contact-info-section .amap-overlays,
+  .distributor-page .distributor-contact-info-section .amap-viewport {
+    min-height: var(--distributor-map-height) !important;
+    height: var(--distributor-map-height) !important;
+  }
+}
+
+/* =========================================================
+   缁忛攢鍟嗗悎浣滈〉锝滆仈绯绘柟寮忔ā鍧楁暣浣撴敼涓虹櫧鑹茶儗鏅?
+   璇存槑锛?
+   1. 鎶?Contact Information 鏁翠釜妯″潡鑳屾櫙鏀逛负鐧借壊
+   2. 宸﹀彸鍗＄墖浠嶇劧淇濇寔鐧藉簳
+   3. 閬垮厤鍦板浘鍔犺浇涓嶅畬鏁存椂闇插嚭娴呯伆鑹?
+   4. 鍙奖鍝嶇粡閿€鍟嗛〉闈紝涓嶅奖鍝?/contact 鑱旂郴鎴戜滑椤甸潰
+========================================================= */
+
+/* 鏁翠釜鑱旂郴鏂瑰紡妯″潡鑳屾櫙鏀圭櫧 */
+.distributor-page .distributor-contact-info-section {
+  background: #ffffff !important;
+}
+
+/* =========================================================
+   首页复用联系我们询盘表单白底最终版
+   说明：
+   1. 首页复用联系我们表单时，整块背景改为白色
+   2. 通过覆盖 --contact-bg-page 变量解决 contact-form-section 灰底
+   3. 只影响首页的 home-contact-inquiry-wrapper
+   4. 不影响 /contact 联系我们页面
+========================================================= */
+
+.contact-page.home-contact-inquiry-wrapper {
+  --contact-bg-page: #ffffff !important;
+  background: #ffffff !important;
+}
+
+.contact-page.home-contact-inquiry-wrapper .contact-form-section,
+.contact-page.home-contact-inquiry-wrapper .home-contact-inquiry-form-section {
+  background: #ffffff !important;
+  padding-top: 72px;
+  padding-bottom: 88px;
+}
+
+.contact-page.home-contact-inquiry-wrapper .contact-section-inner {
+  background: transparent !important;
+}
+
+.contact-page.home-contact-inquiry-wrapper .contact-section-head {
+  margin-bottom: 32px;
+}
+
+@media (max-width: 768px) {
+  .contact-page.home-contact-inquiry-wrapper .contact-form-section,
+  .contact-page.home-contact-inquiry-wrapper .home-contact-inquiry-form-section {
+    padding-top: 48px;
+    padding-bottom: 64px;
+  }
+}
+
+/* CONTACT_MOBILE_GUIDE_TITLE_ROW_START */
+@media (max-width: 768px) {
+  /*
+    手机端将编号和标题放在同一行：
+    01 应用场景
+  */
+  .contact-guide-item {
+    display: grid !important;
+    grid-template-columns: max-content minmax(0, 1fr) !important;
+    grid-template-rows: auto auto !important;
+
+    column-gap: 8px !important;
+    row-gap: 12px !important;
+
+    align-items: baseline !important;
+  }
+
+  /*
+    编号只占自身文字宽度，
+    不再单独占据一整行。
+  */
+  .contact-guide-number {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+
+    width: auto !important;
+    min-width: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    font-size: 14px !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+  }
+
+  /*
+    让标题和说明文字直接参与外层网格布局。
+  */
+  .contact-guide-copy {
+    display: contents !important;
+  }
+
+  .contact-guide-copy h4 {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    line-height: 1.25 !important;
+  }
+
+  /*
+    说明文字单独放到下一行，
+    使用整个卡片的可用宽度。
+  */
+  .contact-guide-copy p {
+    grid-column: 1 / -1 !important;
+    grid-row: 2 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+/* CONTACT_MOBILE_GUIDE_TITLE_ROW_END */
