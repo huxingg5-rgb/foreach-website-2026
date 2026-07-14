@@ -1,0 +1,500 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
+import type {
+  ProductSelectionCategoryItem,
+  ProductSelectionFilterGroup,
+} from "./product-selection-ui.types";
+
+type ProductFilterPanelProps = {
+  activeCategory: ProductSelectionCategoryItem;
+  activeProductTypeId?: string;
+  filterGroups: ProductSelectionFilterGroup[];
+  mobileOpenFilterGroups?: Record<string, boolean>;
+  emptyText: string;
+  resetButtonText?: string;
+  submitButtonText?: string;
+  onToggleMobileGroup?: (
+    key: ProductSelectionFilterGroup["key"]
+  ) => void;
+  isOptionActive: (
+    group: ProductSelectionFilterGroup,
+    value: string
+  ) => boolean;
+  onFilterChange: (
+    group: ProductSelectionFilterGroup,
+    value: string
+  ) => void;
+  onResetFilters?: () => void;
+};
+
+
+/* BARBED_PORT_FILTER_GROUP_START */
+
+const BARBED_PORT_FILTER_KEYS = [
+  "filter02",
+  "filter03",
+  "filter04",
+] as const;
+
+function getBarbedPortCount(
+  structure: string
+) {
+  const portCountMap: Record<string, number> = {
+    "直通型": 2,
+    "L型": 2,
+    "T型": 3,
+    "Y型": 3,
+    "π型": 1,
+    "十字型": 1,
+    "倒刺堵头": 1,
+  };
+
+  /*
+   * 尚未选择产品结构时，
+   * 三个接管都保持可选。
+   */
+  return portCountMap[structure] || 3;
+}
+
+function sortBarbedPortOptions(
+  options: ProductSelectionFilterGroup["options"]
+) {
+  return [...options].sort(
+    (current, next) => {
+      const currentNumber =
+        Number.parseFloat(current.value);
+
+      const nextNumber =
+        Number.parseFloat(next.value);
+
+      if (
+        Number.isFinite(currentNumber) &&
+        Number.isFinite(nextNumber)
+      ) {
+        return currentNumber - nextNumber;
+      }
+
+      return current.label.localeCompare(
+        next.label,
+        "zh-CN"
+      );
+    }
+  );
+}
+
+function BarbedPortFilterGroup({
+  filterGroups,
+  isOptionActive,
+  onFilterChange,
+}: {
+  filterGroups: ProductSelectionFilterGroup[];
+
+  isOptionActive: (
+    group: ProductSelectionFilterGroup,
+    value: string
+  ) => boolean;
+
+  onFilterChange: (
+    group: ProductSelectionFilterGroup,
+    value: string
+  ) => void;
+}) {
+  const structureGroup =
+    filterGroups.find(
+      (group) =>
+        group.key === "filter01"
+    );
+
+  const activeStructure =
+    structureGroup?.options.find(
+      (option) =>
+        isOptionActive(
+          structureGroup,
+          option.value
+        )
+    )?.value || "";
+
+  const enabledPortCount =
+    getBarbedPortCount(
+      activeStructure
+    );
+
+  /*
+   * 从三接口结构切换到两接口或单接口结构时，
+   * 自动清除已经不适用的接管筛选。
+   */
+  useEffect(() => {
+    BARBED_PORT_FILTER_KEYS.forEach(
+      (filterKey, index) => {
+        if (
+          index + 1 <= enabledPortCount
+        ) {
+          return;
+        }
+
+        const group =
+          filterGroups.find(
+            (item) =>
+              item.key === filterKey
+          );
+
+        if (!group) {
+          return;
+        }
+
+        const activeOption =
+          group.options.find(
+            (option) =>
+              isOptionActive(
+                group,
+                option.value
+              )
+          );
+
+        if (activeOption) {
+          onFilterChange(
+            group,
+            activeOption.value
+          );
+        }
+      }
+    );
+  }, [
+    enabledPortCount,
+    filterGroups,
+    isOptionActive,
+    onFilterChange,
+  ]);
+
+  return (
+    <section
+      className="filter-group barbed-port-filter-group is-mobile-open"
+      data-barbed-port-filter="true"
+    >
+      <div className="filter-group-trigger barbed-port-filter-title">
+        <span>接管内径</span>
+      </div>
+
+      <div className="barbed-port-columns">
+        {BARBED_PORT_FILTER_KEYS.map(
+          (filterKey, index) => {
+            const group =
+              filterGroups.find(
+                (item) =>
+                  item.key === filterKey
+              );
+
+            const portNumber =
+              index + 1;
+
+            const disabled =
+              portNumber >
+                enabledPortCount ||
+              !group;
+
+            const options =
+              group
+                ? sortBarbedPortOptions(
+                    group.options
+                  )
+                : [];
+
+            return (
+              <div
+                className={
+                  disabled
+                    ? "barbed-port-column is-disabled"
+                    : "barbed-port-column"
+                }
+                key={filterKey}
+              >
+                <div className="barbed-port-column-title">
+                  接管{portNumber}
+                </div>
+
+                {disabled ? (
+                  <div className="barbed-port-disabled">
+                    不适用
+                  </div>
+                ) : (
+                  <div className="barbed-port-options">
+                    {options.map(
+                      (option) => {
+                        const active =
+                          isOptionActive(
+                            group,
+                            option.value
+                          );
+
+                        return (
+                          <button
+                            className={
+                              `filter-option is-single barbed-port-option${active ? " active" : ""}`
+                            }
+                            type="button"
+                            key={option.value}
+                            onClick={() =>
+                              onFilterChange(
+                                group,
+                                option.value
+                              )
+                            }
+                          >
+                            <span className="filter-check" />
+
+                            <span className="barbed-port-option-label">
+                              {option.label}
+                            </span>
+                          </button>
+                        );
+                      }
+                    )}
+                  </div>
+                )}
+              </div>
+            );
+          }
+        )}
+      </div>
+    </section>
+  );
+}
+
+/* BARBED_PORT_FILTER_GROUP_END */
+
+
+export default function ProductFilterPanel({
+  activeCategory,
+  activeProductTypeId,
+  filterGroups,
+  emptyText,
+  isOptionActive,
+  onFilterChange,
+}: ProductFilterPanelProps) {
+  /*
+   * 只有接头系列中的第一个“产品种类”允许折叠。
+   * 其余所有筛选组始终展开。
+   */
+  const [isFittingProductTypeOpen, setIsFittingProductTypeOpen] =
+    useState(false);
+
+  /*
+   * 切换顶部产品大类后，
+   * 接头系列的产品种类恢复为收起状态。
+   */
+  useEffect(() => {
+    setIsFittingProductTypeOpen(false);
+  }, [activeCategory.id]);
+
+  return (
+    <aside className="filter-panel">
+      <div className="filter-panel-head">
+        <h2>{activeCategory.label}</h2>
+        <p>{activeCategory.description}</p>
+      </div>
+
+      {filterGroups.length > 0 ? (
+        filterGroups.map((group) => {
+          if (
+            activeProductTypeId === "barbed-fittings" &&
+            group.key === "filter02"
+          ) {
+            return (
+              <div
+                data-barbed-filter-group="ports"
+                key="barbed-port-filter-group"
+              >
+                <BarbedPortFilterGroup
+                  filterGroups={filterGroups}
+                  isOptionActive={isOptionActive}
+                  onFilterChange={onFilterChange}
+                />
+              </div>
+            );
+          }
+
+          if (
+            activeProductTypeId === "barbed-fittings" &&
+            (
+              group.key === "filter03" ||
+              group.key === "filter04"
+            )
+          ) {
+            return null;
+          }
+
+          const isProductTypeGroup =
+            group.key === "productType";
+
+          /*
+           * 只有这一组折叠：
+           * 接头系列 + 第一个产品种类。
+           */
+          const isCollapsibleProductType =
+            activeCategory.id === "fittings" &&
+            isProductTypeGroup;
+
+          const isSingleSelectGroup =
+            group.key === "productType" ||
+            group.key === "filter01";
+
+          const activeOption = group.options.find(
+            (option) =>
+              isOptionActive(group, option.value)
+          );
+
+          const optionTypeClass = isSingleSelectGroup
+            ? "is-single"
+            : "is-multi";
+
+          /*
+           * 保留原有列数逻辑。
+           */
+          const shouldUseTwoColumns =
+            (
+              activeProductTypeId === "barbed-fittings" &&
+              (
+                group.key === "filter01" ||
+                group.key === "filter05" ||
+                group.key === "filter06"
+              )
+            ) ||
+            group.key === "productType" ||
+            group.key === "filter02" ||
+            group.key === "filter03" ||
+            group.key === "filter04" ||
+            group.options.length > 4;
+
+          const filterOptionsClass = `filter-options${
+            shouldUseTwoColumns ? " two" : " one"
+          }`;
+
+          /*
+           * 只有接头的产品种类使用状态控制。
+           * 其他所有组始终展开。
+           */
+          const isGroupOpen = isCollapsibleProductType
+            ? isFittingProductTypeOpen
+            : true;
+
+          const groupClassName = `filter-group${
+            isProductTypeGroup
+              ? " product-type-filter-group"
+              : ""
+          }${
+            isCollapsibleProductType
+              ? " fittings-product-type-filter-group"
+              : ""
+          }${isGroupOpen ? " is-mobile-open" : ""}`;
+
+          const handleToggleGroup = () => {
+            if (!isCollapsibleProductType) {
+              return;
+            }
+
+            setIsFittingProductTypeOpen(
+              (current) => !current
+            );
+          };
+
+          const renderOptions = () => (
+            <div className={filterOptionsClass}>
+              {group.options.map((option) => {
+                const active = isOptionActive(
+                  group,
+                  option.value
+                );
+
+                return (
+                  <button
+                    className={`filter-option ${optionTypeClass}${
+                      active ? " active" : ""
+                    }`}
+                    type="button"
+                    key={option.value}
+                    onClick={() => {
+                      onFilterChange(
+                        group,
+                        option.value
+                      );
+
+                      /*
+                       * 选择接头产品种类后自动收起。
+                       */
+                      if (isCollapsibleProductType) {
+                        setIsFittingProductTypeOpen(
+                          false
+                        );
+                      }
+                    }}
+                  >
+                    <span className="filter-check" />
+                    <span>{option.label}</span>
+                  </button>
+                );
+              })}
+            </div>
+          );
+
+          return (
+            <section
+              className={groupClassName}
+              key={group.key}
+            >
+              <button
+                className={`filter-group-trigger${
+                  isCollapsibleProductType
+                    ? " product-type-filter-toggle"
+                    : ""
+                }`}
+                type="button"
+                onClick={handleToggleGroup}
+                aria-expanded={isGroupOpen}
+              >
+                <span>{group.title}</span>
+
+                {isCollapsibleProductType ? (
+                  <span
+                    className="filter-group-symbol"
+                    aria-hidden="true"
+                  >
+                    {isGroupOpen ? "−" : "+"}
+                  </span>
+                ) : null}
+              </button>
+
+              {isCollapsibleProductType &&
+              !isFittingProductTypeOpen &&
+              activeOption ? (
+                <div className="product-type-current-option">
+                  <button
+                    className="filter-option is-single active"
+                    type="button"
+                    onClick={() =>
+                      setIsFittingProductTypeOpen(
+                        true
+                      )
+                    }
+                  >
+                    <span className="filter-check" />
+                    <span>
+                      当前：{activeOption.label}
+                    </span>
+                  </button>
+                </div>
+              ) : null}
+
+              {isGroupOpen ? renderOptions() : null}
+            </section>
+          );
+        })
+      ) : (
+        <div className="filter-empty">
+          {emptyText}
+        </div>
+      )}
+    </aside>
+  );
+}

@@ -1,0 +1,148 @@
+﻿===== 过滤器与单向阀静态路由检查 =====
+
+过滤器详情数量：18
+单向阀详情数量：16
+
+===== 必要标记 =====
+
+filterParams：
+False
+
+checkValveParams：
+False
+
+...filterParams：
+False
+
+...checkValveParams：
+False
+
+===== 过滤器前3个slug =====
+
+filters / g-178-64-pa-v
+filters / g-178-48-pa-v
+filters / g-178-32-pa-v
+
+
+===== 单向阀前3个slug =====
+
+check-valves / cv-de-16-pv-n
+check-valves / cv-bv-32-pp-n
+check-valves / cv-bv-48-pp-n
+
+
+===== 当前 generateStaticParams 完整代码 =====
+
+export function generateStaticParams() {
+  const existingSeriesParams =
+    getSeriesRouteParams();
+
+  const hardTubeParams =
+    hardTubeDetails.map(
+      (detail) => ({
+        category:
+          "fittings",
+
+        slug:
+          "hard-tube-fittings",
+
+        seriesSlug:
+          normalizeSegment(
+            detail.slug
+          ),
+      })
+    );
+
+  const threadToBarbedParams =
+    threadToBarbedDetails.map(
+      (detail) => ({
+        category:
+          "fittings",
+
+        slug:
+          "thread-to-barbed-fittings",
+
+        seriesSlug:
+          normalizeSegment(
+            detail.slug
+          ),
+      })
+    );
+
+  const luerParams =
+    luerDetails.map(
+      (detail) => ({
+        category:
+          "fittings",
+
+        slug:
+          "luer-fittings",
+
+        seriesSlug:
+          normalizeSegment(
+            detail.slug
+          ),
+      })
+    );
+
+  const femaleThreadParams =
+    femaleThreadDetails.map(
+      (detail) => ({
+        category:
+          "fittings",
+
+        slug:
+          "female-thread-adapters",
+
+        seriesSlug:
+          normalizeSegment(
+            detail.slug
+          ),
+      })
+    );
+
+  const routeMap =
+    new Map<
+      string,
+      {
+        category: string;
+        slug: string;
+        seriesSlug: string;
+      }
+    >();
+
+  [
+    ...existingSeriesParams,
+    ...hardTubeParams,
+    ...threadToBarbedParams,
+    ...luerParams,
+    ...femaleThreadParams,
+  ]
+    .filter(
+      (item) =>
+        Boolean(
+          item &&
+          item.category &&
+          item.slug &&
+          item.seriesSlug
+        )
+    )
+    .forEach((item) => {
+      const key = [
+        item.category,
+        item.slug,
+        item.seriesSlug,
+      ].join("/");
+
+      routeMap.set(
+        key,
+        item
+      );
+    });
+
+  return Array.from(
+    routeMap.values()
+  );
+}
+
+

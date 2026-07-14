@@ -1,0 +1,287 @@
+{
+  "generatedAt": "2026-07-12T16:15:41.030Z",
+  "targets": [
+    {
+      "productTypeId": "luer-fittings",
+      "count": 151,
+      "withImage": 150,
+      "withDrawing": 151,
+      "withModel3d": 0,
+      "detailOutputPath": "F:\\WebsiteProjects\\foreach-website-2026\\data\\products\\generated\\fittings\\luer-fittings\\detail\\index.json",
+      "routeMapOutputPath": "F:\\WebsiteProjects\\foreach-website-2026\\data\\products\\selection\\luer-fitting-detail-route-map.generated.ts",
+      "backups": [
+        "F:\\WebsiteProjects\\foreach-website-2026\\data\\products\\generated\\fittings\\luer-fittings\\detail\\index.json.bak_20260712161541",
+        "F:\\WebsiteProjects\\foreach-website-2026\\data\\products\\selection\\luer-fitting-detail-route-map.generated.ts.bak_20260712161541"
+      ],
+      "samples": [
+        {
+          "model": "LSL-16-PP-N",
+          "name": "固定公鲁尔芯子",
+          "description": "LSL-16-PP-N是一款固定公鲁尔芯子，适配1.6 mm内径软管，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路连接。",
+          "specs": [
+            {
+              "label": "型号",
+              "value": "LSL-16-PP-N"
+            },
+            {
+              "label": "商品编码",
+              "value": "809558"
+            },
+            {
+              "label": "产品类别",
+              "value": "鲁尔接头"
+            },
+            {
+              "label": "产品系列",
+              "value": "LSL"
+            },
+            {
+              "label": "鲁尔结构",
+              "value": "固定公鲁尔芯子"
+            },
+            {
+              "label": "接管内径",
+              "value": "1.6 mm"
+            },
+            {
+              "label": "材质",
+              "value": "PP"
+            },
+            {
+              "label": "颜色",
+              "value": "本色"
+            }
+          ],
+          "detailHref": "/products/fittings/luer-fittings/lsl-16-pp-n"
+        },
+        {
+          "model": "LSL-16-PA-W",
+          "name": "固定公鲁尔芯子",
+          "description": "LSL-16-PA-W是一款固定公鲁尔芯子，适配1.6 mm内径软管，主体材质为PA，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路连接。",
+          "specs": [
+            {
+              "label": "型号",
+              "value": "LSL-16-PA-W"
+            },
+            {
+              "label": "商品编码",
+              "value": "809705"
+            },
+            {
+              "label": "产品类别",
+              "value": "鲁尔接头"
+            },
+            {
+              "label": "产品系列",
+              "value": "LSL"
+            },
+            {
+              "label": "鲁尔结构",
+              "value": "固定公鲁尔芯子"
+            },
+            {
+              "label": "接管内径",
+              "value": "1.6 mm"
+            },
+            {
+              "label": "材质",
+              "value": "PA"
+            },
+            {
+              "label": "颜色",
+              "value": "白色"
+            }
+          ],
+          "detailHref": "/products/fittings/luer-fittings/lsl-16-pa-w"
+        },
+        {
+          "model": "LSL-24-PP-N",
+          "name": "固定公鲁尔芯子",
+          "description": "LSL-24-PP-N是一款固定公鲁尔芯子，适配2.4 mm内径软管，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路连接。",
+          "specs": [
+            {
+              "label": "型号",
+              "value": "LSL-24-PP-N"
+            },
+            {
+              "label": "商品编码",
+              "value": "809560"
+            },
+            {
+              "label": "产品类别",
+              "value": "鲁尔接头"
+            },
+            {
+              "label": "产品系列",
+              "value": "LSL"
+            },
+            {
+              "label": "鲁尔结构",
+              "value": "固定公鲁尔芯子"
+            },
+            {
+              "label": "接管内径",
+              "value": "2.4 mm"
+            },
+            {
+              "label": "材质",
+              "value": "PP"
+            },
+            {
+              "label": "颜色",
+              "value": "本色"
+            }
+          ],
+          "detailHref": "/products/fittings/luer-fittings/lsl-24-pp-n"
+        }
+      ]
+    },
+    {
+      "productTypeId": "female-thread-adapters",
+      "count": 24,
+      "withImage": 19,
+      "withDrawing": 20,
+      "withModel3d": 0,
+      "detailOutputPath": "F:\\WebsiteProjects\\foreach-website-2026\\data\\products\\generated\\fittings\\female-thread-adapters\\detail\\index.json",
+      "routeMapOutputPath": "F:\\WebsiteProjects\\foreach-website-2026\\data\\products\\selection\\female-thread-adapter-detail-route-map.generated.ts",
+      "backups": [
+        "F:\\WebsiteProjects\\foreach-website-2026\\data\\products\\generated\\fittings\\female-thread-adapters\\detail\\index.json.bak_20260712161541",
+        "F:\\WebsiteProjects\\foreach-website-2026\\data\\products\\selection\\female-thread-adapter-detail-route-map.generated.ts.bak_20260712161541"
+      ],
+      "samples": [
+        {
+          "model": "US-M6-05-AC-B",
+          "name": "方形二通内螺纹互转接头",
+          "description": "US-M6-05-AC-B是一款方形二通内螺纹互转接头，采用M6内螺纹接口，通径为0.5 mm，主体材质为AC，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+          "specs": [
+            {
+              "label": "型号",
+              "value": "US-M6-05-AC-B"
+            },
+            {
+              "label": "商品编码",
+              "value": "809484"
+            },
+            {
+              "label": "产品类别",
+              "value": "内螺纹互转接头"
+            },
+            {
+              "label": "产品系列",
+              "value": "US"
+            },
+            {
+              "label": "连接结构",
+              "value": "二通"
+            },
+            {
+              "label": "螺纹规格",
+              "value": "M6"
+            },
+            {
+              "label": "通径",
+              "value": "0.5 mm"
+            },
+            {
+              "label": "材质",
+              "value": "AC"
+            },
+            {
+              "label": "颜色",
+              "value": "黑色"
+            }
+          ],
+          "detailHref": "/products/fittings/female-thread-adapters/us-m6-05-ac-b"
+        },
+        {
+          "model": "US-M6-10-AC-B",
+          "name": "方形二通内螺纹互转接头",
+          "description": "US-M6-10-AC-B是一款方形二通内螺纹互转接头，采用M6内螺纹接口，通径为1.0 mm，主体材质为AC，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+          "specs": [
+            {
+              "label": "型号",
+              "value": "US-M6-10-AC-B"
+            },
+            {
+              "label": "商品编码",
+              "value": "809531"
+            },
+            {
+              "label": "产品类别",
+              "value": "内螺纹互转接头"
+            },
+            {
+              "label": "产品系列",
+              "value": "US"
+            },
+            {
+              "label": "连接结构",
+              "value": "二通"
+            },
+            {
+              "label": "螺纹规格",
+              "value": "M6"
+            },
+            {
+              "label": "通径",
+              "value": "1.0 mm"
+            },
+            {
+              "label": "材质",
+              "value": "AC"
+            },
+            {
+              "label": "颜色",
+              "value": "黑色"
+            }
+          ],
+          "detailHref": "/products/fittings/female-thread-adapters/us-m6-10-ac-b"
+        },
+        {
+          "model": "US-M6-15-AC-B",
+          "name": "方形二通内螺纹互转接头",
+          "description": "US-M6-15-AC-B是一款方形二通内螺纹互转接头，采用M6内螺纹接口，通径为1.5 mm，主体材质为AC，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+          "specs": [
+            {
+              "label": "型号",
+              "value": "US-M6-15-AC-B"
+            },
+            {
+              "label": "商品编码",
+              "value": "809532"
+            },
+            {
+              "label": "产品类别",
+              "value": "内螺纹互转接头"
+            },
+            {
+              "label": "产品系列",
+              "value": "US"
+            },
+            {
+              "label": "连接结构",
+              "value": "二通"
+            },
+            {
+              "label": "螺纹规格",
+              "value": "M6"
+            },
+            {
+              "label": "通径",
+              "value": "1.5 mm"
+            },
+            {
+              "label": "材质",
+              "value": "AC"
+            },
+            {
+              "label": "颜色",
+              "value": "黑色"
+            }
+          ],
+          "detailHref": "/products/fittings/female-thread-adapters/us-m6-15-ac-b"
+        }
+      ]
+    }
+  ]
+}

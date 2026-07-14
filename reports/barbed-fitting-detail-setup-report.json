@@ -1,0 +1,39 @@
+{
+  "createdAt": "2026-07-11T22:08:38.280Z",
+  "selectionSource": "data\\products\\selection\\barbed-fitting-selection.generated.ts",
+  "detailOutput": "data\\products\\generated\\fittings\\barbed-fittings\\detail\\index.json",
+  "detailPage": "app\\products\\fittings\\barbed-fittings\\[slug]\\page.tsx",
+  "selectionClient": "components\\products\\selection\\ProductSelectionClient.tsx",
+  "generatedDetailCount": 166,
+  "examples": [
+    {
+      "model": "BA-16F-PP-N",
+      "name": "直通等径倒刺接头",
+      "href": "/products/fittings/barbed-fittings/ba-16f-pp-n"
+    },
+    {
+      "model": "BA-24F-PP-N",
+      "name": "直通等径倒刺接头",
+      "href": "/products/fittings/barbed-fittings/ba-24f-pp-n"
+    },
+    {
+      "model": "BA-32F-PP-N",
+      "name": "直通等径倒刺接头",
+      "href": "/products/fittings/barbed-fittings/ba-32f-pp-n"
+    },
+    {
+      "model": "BA-40F-PP-N",
+      "name": "直通等径倒刺接头",
+      "href": "/products/fittings/barbed-fittings/ba-40f-pp-n"
+    },
+    {
+      "model": "BA-16F-24F-PP-N",
+      "name": "直通异径倒刺接头",
+      "href": "/products/fittings/barbed-fittings/ba-16f-24f-pp-n"
+    }
+  ],
+  "backups": {
+    "page": "",
+    "client": "components\\products\\selection\\ProductSelectionClient.tsx.bak_barbed_detail_href_20260711220838"
+  }
+}

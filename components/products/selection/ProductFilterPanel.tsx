@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useState } from "react";
 
@@ -244,7 +244,9 @@ export default function ProductFilterPanel({
   activeCategory,
   activeProductTypeId,
   filterGroups,
+  mobileOpenFilterGroups,
   emptyText,
+  onToggleMobileGroup,
   isOptionActive,
   isOptionDisabled,
   onFilterChange,
@@ -267,6 +269,7 @@ export default function ProductFilterPanel({
   return (
     <aside
       className="filter-panel"
+      data-category-id={activeCategory.id}
       data-product-type-id={activeProductTypeId || ""}>
       <div className="filter-panel-head">
         <h2>{activeCategory.label}</h2>
@@ -279,17 +282,74 @@ export default function ProductFilterPanel({
             activeProductTypeId === "barbed-fittings" &&
             group.key === "filter02"
           ) {
+            const isBarbedPortGroupOpen =
+              Boolean(
+                mobileOpenFilterGroups?.[
+                  group.key
+                ]
+              );
+
             return (
               <div
+                className={[
+                  "barbed-port-filter-wrapper",
+                  isBarbedPortGroupOpen
+                    ? "is-mobile-open"
+                    : "",
+                ]
+                  .filter(Boolean)
+                  .join(" ")}
                 data-barbed-filter-group="ports"
                 key="barbed-port-filter-group"
               >
-                <BarbedPortFilterGroup
-                  filterGroups={filterGroups}
-                  isOptionActive={isOptionActive}
-                isOptionDisabled={isOptionDisabled}
-                  onFilterChange={onFilterChange}
-                />
+                <button
+                  className="filter-group-trigger barbed-port-mobile-trigger"
+                  type="button"
+                  onClick={() =>
+                    onToggleMobileGroup?.(
+                      group.key
+                    )
+                  }
+                  aria-expanded={
+                    isBarbedPortGroupOpen
+                  }
+                >
+                  <span>接管内径</span>
+
+                  <span
+                    className="filter-group-symbol"
+                    aria-hidden="true"
+                  >
+                    {isBarbedPortGroupOpen
+                      ? "−"
+                      : "+"}
+                  </span>
+                </button>
+
+                <div className="barbed-port-filter-body">
+                  <BarbedPortFilterGroup
+                    filterGroups={filterGroups}
+                    isOptionActive={isOptionActive}
+                    isOptionDisabled={isOptionDisabled}
+                    onFilterChange={(
+                      targetGroup,
+                      value
+                    ) => {
+                      onFilterChange(
+                        targetGroup,
+                        value
+                      );
+
+                      if (
+                        isBarbedPortGroupOpen
+                      ) {
+                        onToggleMobileGroup?.(
+                          group.key
+                        );
+                      }
+                    }}
+                  />
+                </div>
               </div>
             );
           }
@@ -430,13 +490,23 @@ export default function ProductFilterPanel({
             shouldUseTwoColumns ? " two" : " one"
           }`;
 
+          /* MOBILE_FILTER_COLLAPSE_V2_START */
+
           /*
-           * 只有接头的产品种类使用状态控制。
-           * 其他所有组始终展开。
+           * 接头产品种类继续使用原有独立状态。
+           * 其他筛选组使用手机端展开状态。
+           * PC端由CSS保持正常显示。
            */
-          const isGroupOpen = isCollapsibleProductType
-            ? isFittingProductTypeOpen
-            : true;
+          const isGroupOpen =
+            isCollapsibleProductType
+              ? isFittingProductTypeOpen
+              : Boolean(
+                  mobileOpenFilterGroups?.[
+                    group.key
+                  ]
+                );
+
+          /* MOBILE_FILTER_COLLAPSE_V2_END */
 
           const groupClassName = `filter-group${
             isProductTypeGroup
@@ -449,12 +519,16 @@ export default function ProductFilterPanel({
           }${isGroupOpen ? " is-mobile-open" : ""}`;
 
           const handleToggleGroup = () => {
-            if (!isCollapsibleProductType) {
+            if (isCollapsibleProductType) {
+              setIsFittingProductTypeOpen(
+                (current) => !current
+              );
+
               return;
             }
 
-            setIsFittingProductTypeOpen(
-              (current) => !current
+            onToggleMobileGroup?.(
+              group.key
             );
           };
 
@@ -511,13 +585,23 @@ export default function ProductFilterPanel({
                       );
 
                       /*
-                       * 选择接头产品种类后自动收起。
+                       * 手机端选择任意筛选项后，
+                       * 自动收起当前筛选组。
                        */
                       if (
                         isCollapsibleProductType
                       ) {
                         setIsFittingProductTypeOpen(
                           false
+                        );
+                      }
+                      else if (
+                        mobileOpenFilterGroups?.[
+                          group.key
+                        ]
+                      ) {
+                        onToggleMobileGroup?.(
+                          group.key
                         );
                       }
                     }}
@@ -547,9 +631,14 @@ export default function ProductFilterPanel({
               >
                 <span>{group.title}</span>
 
-                {isCollapsibleProductType ? (
+                {isCollapsibleProductType ||
+                onToggleMobileGroup ? (
                   <span
-                    className="filter-group-symbol"
+                    className={
+                      isCollapsibleProductType
+                        ? "filter-group-symbol"
+                        : "filter-group-symbol mobile-only-filter-symbol"
+                    }
                     aria-hidden="true"
                   >
                     {isGroupOpen ? "−" : "+"}
@@ -578,7 +667,7 @@ export default function ProductFilterPanel({
                 </div>
               ) : null}
 
-              {isGroupOpen ? renderOptions() : null}
+              {renderOptions()}
             </section>
           );
         })
