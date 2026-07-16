@@ -11,9 +11,44 @@ import {
   siteFooterData,
 } from "@/data/site-footer";
 
+import styles from "./SiteFooterSocial.module.css";
+
 type SiteFooterProps = {
   locale: LocaleCode;
 };
+
+const englishSocialLinks = [
+  {
+    key: "linkedin",
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/102748876/",
+    icon: "/images/social-media/international/linkedin.svg",
+  },
+  {
+    key: "youtube",
+    label: "YouTube",
+    href: "https://www.youtube.com/@ForeachFluid",
+    icon: "/images/social-media/international/youtube.svg",
+  },
+  {
+    key: "facebook",
+    label: "Facebook",
+    href: "https://www.facebook.com/people/Foreach-Technology/61586049132811/",
+    icon: "/images/social-media/international/facebook.svg",
+  },
+  {
+    key: "instagram",
+    label: "Instagram",
+    href: "https://www.instagram.com/foreachtechnology/",
+    icon: "/images/social-media/international/instagram.svg",
+  },
+  {
+    key: "x",
+    label: "X",
+    href: "https://x.com/ForeachFluid",
+    icon: "/images/social-media/international/x.svg",
+  },
+] as const;
 
 export default function SiteFooter({ locale }: SiteFooterProps) {
   const [openColumn, setOpenColumn] = useState("");
@@ -23,6 +58,7 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
   const phoneHref = getSiteFooterHref(siteFooterData.phoneHref, locale);
   const icpText = getSiteFooterText(siteFooterData.icp, locale);
   const icpHref = getSiteFooterHref(siteFooterData.icpHref, locale);
+  const showEnglishSocialLinks = locale === "en";
 
   return (
     <footer className="site-footer">
@@ -96,32 +132,58 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
               </p>
             </div>
 
-            <div className="site-footer__qrcode-area">
-              <div className="site-footer__qr-row">
-                {siteFooterData.qrCodes.map((item) => {
-                  const label = getSiteFooterText(item.label, locale);
-                  const imageSrc = item.image ? getSiteFooterHref(item.image, locale) : "";
-
-                  return (
-                    <div className="site-footer__qrcode-item" key={item.key}>
-                      <div className="site-footer__qrcode-box">
-                        {imageSrc ? (
-                          <img src={imageSrc} alt={`${label}二维码`} loading="lazy" />
-                        ) : (
-                          <>
-                            {label}
-                            <br />
-                            {getSiteFooterText(siteFooterData.qrCodePlaceholder, locale)}
-                          </>
-                        )}
-                      </div>
-
-                      <span className="site-footer__qrcode-label">{label}</span>
-                    </div>
-                  );
-                })}
+            {showEnglishSocialLinks ? (
+              <div className={`site-footer__qrcode-area ${styles.socialArea}`}>
+                <div className={styles.socialRow} aria-label="FOREACH social media">
+                  {englishSocialLinks.map((item) => (
+                    <a
+                      className={styles.socialLink}
+                      href={item.href}
+                      key={item.key}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Visit FOREACH on ${item.label}`}
+                      title={item.label}
+                    >
+                      <img
+                        className={styles.socialIcon}
+                        src={item.icon}
+                        alt=""
+                        loading="lazy"
+                        aria-hidden="true"
+                      />
+                    </a>
+                  ))}
+                </div>
               </div>
-            </div>
+            ) : (
+              <div className="site-footer__qrcode-area">
+                <div className="site-footer__qr-row">
+                  {siteFooterData.qrCodes.map((item) => {
+                    const label = getSiteFooterText(item.label, locale);
+                    const imageSrc = item.image ? getSiteFooterHref(item.image, locale) : "";
+
+                    return (
+                      <div className="site-footer__qrcode-item" key={item.key}>
+                        <div className="site-footer__qrcode-box">
+                          {imageSrc ? (
+                            <img src={imageSrc} alt={`${label}二维码`} loading="lazy" />
+                          ) : (
+                            <>
+                              {label}
+                              <br />
+                              {getSiteFooterText(siteFooterData.qrCodePlaceholder, locale)}
+                            </>
+                          )}
+                        </div>
+
+                        <span className="site-footer__qrcode-label">{label}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
