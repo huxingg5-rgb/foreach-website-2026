@@ -810,7 +810,7 @@ const applicationMegaDropdown: MegaDropdown = {
         "IVD 장비의 샘플 흡입, 시약 분주, 세척, 폐액, 유로 전환, 튜빙 연결 및 상태 모니터링.",
         "Для аспирации образцов, дозирования реагентов, промывки, отходов, переключения, соединений и контроля состояния."
       ),
-      href: localizedPath("/applications/analytical-instruments"),
+      href: localizedPath("/applications/ivd"),
       images: [
         applicationSceneImage("/images/application-center/ivd-biochemistry-analyzer.webp", t("生化分析仪", "Clinical Chemistry Analyzer", "Analizador bioquímico", "Analyseur de biochimie", "생화학 분석기", "Биохимический анализатор"), t("样本、试剂、清洗与废液处理液路", "Sample, reagent, washing, and waste fluidics", "Muestra, reactivo, lavado y residuos", "Échantillon, réactif, lavage et déchets", "샘플, 시약, 세척 및 폐액 유로", "Образцы, реагенты, промывка и отходы"), localizedPath("/applications/ivd?instrument=clinical")),
         applicationSceneImage("/images/application-center/ivd-chemiluminescence-immunoassay.webp", t("化学发光 / 免疫分析仪", "CLIA / Immunoassay Analyzer", "Analizador CLIA / inmunoensayo", "Analyseur CLIA / immunoessai", "화학발광 / 면역 분석기", "Хемилюминесцентный / иммунологический анализатор"), t("多试剂分配、磁珠清洗与底物添加液路", "Multi-reagent dispensing, bead washing, and substrate addition", "Reactivos, lavado de perlas y sustrato", "Réactifs, billes magnétiques et substrat", "다중 시약, 비드 세척 및 기질 첨가", "Реагенты, промывка частиц и субстрат"), localizedPath("/applications/ivd?instrument=immunoassay")),
