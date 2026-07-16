@@ -13,10 +13,13 @@
 
 import type { Metadata } from "next";
 
+import ApplicationEnglishClient from "@/components/applications/ApplicationEnglishClient";
 import LifeScienceApplicationClient from "@/components/applications/life-science/LifeScienceApplicationClient";
+import { createEnglishApplicationData } from "@/data/applications/application-english";
 import { getLifeScienceApplicationPageData } from "@/services/applications/life-science/getLifeScienceApplicationPageData";
 
 import "@/app/applications/life-science/life-science-application.css";
+import "@/app/applications/ivd/ivd-application.css";
 
 const ENABLED_LOCALES = ["en", "es", "fr", "ko", "ru"] as const;
 
@@ -41,6 +44,14 @@ export default async function LifeScienceApplicationLocalePage({
 }: LifeScienceApplicationLocalePageProps) {
   const { locale } = await params;
   const data = getLifeScienceApplicationPageData(locale);
+
+  if (locale === "en") {
+    return (
+      <ApplicationEnglishClient
+        data={createEnglishApplicationData("life-science", data)}
+      />
+    );
+  }
 
   return <LifeScienceApplicationClient data={data} />;
 }

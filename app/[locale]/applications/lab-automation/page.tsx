@@ -13,10 +13,13 @@
 
 import type { Metadata } from "next";
 
+import ApplicationEnglishClient from "@/components/applications/ApplicationEnglishClient";
 import LabAutomationApplicationClient from "@/components/applications/lab-automation/LabAutomationApplicationClient";
+import { createEnglishApplicationData } from "@/data/applications/application-english";
 import { getLabAutomationApplicationPageData } from "@/services/applications/lab-automation/getLabAutomationApplicationPageData";
 
 import "@/app/applications/lab-automation/lab-automation-application.css";
+import "@/app/applications/ivd/ivd-application.css";
 
 const ENABLED_LOCALES = ["en", "es", "fr", "ko", "ru"] as const;
 
@@ -41,6 +44,14 @@ export default async function LabAutomationApplicationLocalePage({
 }: LabAutomationApplicationLocalePageProps) {
   const { locale } = await params;
   const data = getLabAutomationApplicationPageData(locale);
+
+  if (locale === "en") {
+    return (
+      <ApplicationEnglishClient
+        data={createEnglishApplicationData("lab-automation", data)}
+      />
+    );
+  }
 
   return <LabAutomationApplicationClient data={data} />;
 }

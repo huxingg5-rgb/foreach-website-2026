@@ -74,6 +74,7 @@ export const siteFooterData = {
       title: { china: "资源中心", global: "Resources" },
       links: [
         { key: "datasheets", label: { china: "规格书下载", global: "Datasheets" }, href: href("/resources/datasheets") },
+        { key: "fluid-resistance-calculator", label: { china: "流阻计算器", global: "Fluid Resistance Calculator" }, href: href("/resources/calculators/fluid-resistance") },
         { key: "fitting-replacement", label: { china: "接头替代查询", global: "Fitting Replacement" }, href: href("/resources/selection-support/fitting-replacement") },
         { key: "installation-guide", label: { china: "安装教程", global: "Installation Guides" }, href: href("/resources/installation-guide") },
         { key: "material-compatibility", label: { china: "材料兼容", global: "Material Compatibility" }, href: href("/resources/material-compatibility") },
@@ -127,9 +128,12 @@ export const siteFooterData = {
   phoneHref: { china: "tel:075586553831", global: "tel:+8675586553831" },
 
   qrCodes: [
-    { key: "wechat-official", label: { china: "公众号", global: "LinkedIn" } },
-    { key: "douyin", label: { china: "抖音", global: "YouTube" } },
-    { key: "wechat-channels", label: { china: "视频号", global: "Video Channel" } },
+    { key: "wechat-official",
+  image: "/images/social-media/wechat-official.webp", label: { china: "公众号", global: "LinkedIn" } },
+    { key: "douyin",
+  image: "/images/social-media/douyin.webp", label: { china: "抖音", global: "YouTube" } },
+    { key: "wechat-channels",
+  image: "/images/social-media/wechat-channels.webp", label: { china: "视频号", global: "Video Channel" } },
   ] as SiteFooterQrCode[],
 
   qrCodePlaceholder: { china: "二维码", global: "Social" },
@@ -149,8 +153,16 @@ export function getSiteFooterText(text: SiteFooterText | string | undefined | nu
   if (typeof text === "string") return text;
 
   const market = getSiteFooterMarket(locale);
+  const candidates = [
+    text[locale],
+    text[market],
+    text["zh-CN"],
+    text.en,
+    text.china,
+    text.global,
+  ];
 
-  return text[market] || text[locale] || text.china || text.global || text["zh-CN"] || text.en || "";
+  return candidates.find((value) => value !== undefined) ?? "";
 }
 
 function shouldKeepHrefAsIs(value: string) {

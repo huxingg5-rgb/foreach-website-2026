@@ -13,229 +13,6 @@
 export const filterCheckValveSelectionProducts =
 [
   {
-    "productId": "136003",
-    "productCode": "136003",
-    "productCodes": [
-      "136003"
-    ],
-    "internalCodes": [
-      "382-10-00019",
-      "382-10-00049"
-    ],
-    "sourceType": "filter-check-valve-selection",
-    "categoryId": "fittings",
-    "categoryLabel": "接头系列",
-    "productTypeId": "filters",
-    "productTypeName": "过滤器",
-    "seriesId": "g",
-    "seriesCode": "G",
-    "seriesName": "G系列过滤器",
-    "model": "G-178-64-PA-V",
-    "foreachModel": "G-178-64-PA-V",
-    "hasStandardModel": true,
-    "competitorModels": [
-      "FAX84-NY0"
-    ],
-    "cardTitle": {
-      "zh": "G-178-64-PA-V",
-      "en": "G-178-64-PA-V",
-      "es": "G-178-64-PA-V",
-      "fr": "G-178-64-PA-V",
-      "ko": "G-178-64-PA-V",
-      "ru": "G-178-64-PA-V"
-    },
-    "cardSubtitle": {
-      "zh": "G 系列过滤器\n壳体材质为 PA\n适配 6.4 mm 接管内径",
-      "en": "G Series Filter\nTube ID 6.4 mm · PA body · V色",
-      "es": "G Series Filter\nTube ID 6.4 mm · PA body · V色",
-      "fr": "G Series Filter\nTube ID 6.4 mm · PA body · V色",
-      "ko": "G Series Filter\nTube ID 6.4 mm · PA body · V色",
-      "ru": "G Series Filter\nTube ID 6.4 mm · PA body · V色"
-    },
-    "filters": {
-      "filter01": "过滤器",
-      "filter02": "G系列过滤器",
-      "filter03": "",
-      "filter04": "",
-      "filter05": "",
-      "filter06": "",
-      "filter07": "6.4 mm",
-      "filter08": "PA",
-      "filter09": "V色"
-    },
-    "structureCode": "G",
-    "specificationCode": "178",
-    "portSize": "6.4 mm",
-    "materialCode": "PA",
-    "colorCode": "V",
-    "imageCard": "/images/products/fittings/filters/products/g-178-64-pa-v-main.jpg",
-    "detailSlug": "g-178-64-pa-v",
-    "detailHref": "/products/fittings/filters/g-178-64-pa-v",
-    "href": "/products/fittings/filters/g-178-64-pa-v",
-    "selectionHref": "/products/fittings/filters",
-    "needDrawing": true,
-    "needModel3d": true,
-    "status": "active",
-    "sourceIndex": 3,
-    "sortOrder": 470000,
-    "searchKeywords": {
-      "zh": "过滤器与单向阀 过滤器 G系列过滤器 6.4 mm PA G-178-64-PA-V 136003 过滤器与单向阀 过滤器 G系列过滤器 G-178-64-PA-V 136003 382-10-00019 382-10-00049 FAX84-NY0 6.4 mm PA G系列过滤器 标准型 6.4 mm 6.4 mm PA V色 过滤器 G系列过滤器 178 μm 6.4 mm PA V色",
-      "en": "filters check valves filter G系列过滤器 6.4 mm PA G-178-64-PA-V 136003 filters check valves 过滤器 G系列过滤器 G-178-64-PA-V 136003 382-10-00019 382-10-00049 FAX84-NY0 6.4 mm PA G Series Filter Standard 6.4 mm 6.4 mm PA V Color 过滤器 G系列过滤器 178 μm 6.4 mm PA V色",
-      "es": "filters check valves 过滤器 G系列过滤器 G-178-64-PA-V 136003 382-10-00019 382-10-00049 FAX84-NY0 6.4 mm PA",
-      "fr": "filters check valves 过滤器 G系列过滤器 G-178-64-PA-V 136003 382-10-00019 382-10-00049 FAX84-NY0 6.4 mm PA",
-      "ko": "filters check valves 过滤器 G系列过滤器 G-178-64-PA-V 136003 382-10-00019 382-10-00049 FAX84-NY0 6.4 mm PA",
-      "ru": "filters check valves 过滤器 G系列过滤器 G-178-64-PA-V 136003 382-10-00019 382-10-00049 FAX84-NY0 6.4 mm PA"
-    }
-  },
-  {
-    "productId": "136004",
-    "productCode": "136004",
-    "productCodes": [
-      "136004"
-    ],
-    "internalCodes": [
-      "382-10-00020"
-    ],
-    "sourceType": "filter-check-valve-selection",
-    "categoryId": "fittings",
-    "categoryLabel": "接头系列",
-    "productTypeId": "filters",
-    "productTypeName": "过滤器",
-    "seriesId": "g",
-    "seriesCode": "G",
-    "seriesName": "G系列过滤器",
-    "model": "G-178-48-PA-V",
-    "foreachModel": "G-178-48-PA-V",
-    "hasStandardModel": true,
-    "competitorModels": [
-      "FAX86-NY0"
-    ],
-    "cardTitle": {
-      "zh": "G-178-48-PA-V",
-      "en": "G-178-48-PA-V",
-      "es": "G-178-48-PA-V",
-      "fr": "G-178-48-PA-V",
-      "ko": "G-178-48-PA-V",
-      "ru": "G-178-48-PA-V"
-    },
-    "cardSubtitle": {
-      "zh": "G 系列过滤器\n壳体材质为 PA\n适配 4.8 mm 接管内径",
-      "en": "G Series Filter\nTube ID 4.8 mm · PA body · V色",
-      "es": "G Series Filter\nTube ID 4.8 mm · PA body · V色",
-      "fr": "G Series Filter\nTube ID 4.8 mm · PA body · V色",
-      "ko": "G Series Filter\nTube ID 4.8 mm · PA body · V色",
-      "ru": "G Series Filter\nTube ID 4.8 mm · PA body · V色"
-    },
-    "filters": {
-      "filter01": "过滤器",
-      "filter02": "G系列过滤器",
-      "filter03": "",
-      "filter04": "",
-      "filter05": "",
-      "filter06": "",
-      "filter07": "4.8 mm",
-      "filter08": "PA",
-      "filter09": "V色"
-    },
-    "structureCode": "G",
-    "specificationCode": "178",
-    "portSize": "4.8 mm",
-    "materialCode": "PA",
-    "colorCode": "V",
-    "imageCard": "/images/products/fittings/filters/products/g-178-48-pa-v-main.jpg",
-    "detailSlug": "g-178-48-pa-v",
-    "detailHref": "/products/fittings/filters/g-178-48-pa-v",
-    "href": "/products/fittings/filters/g-178-48-pa-v",
-    "selectionHref": "/products/fittings/filters",
-    "needDrawing": true,
-    "needModel3d": true,
-    "status": "active",
-    "sourceIndex": 4,
-    "sortOrder": 470001,
-    "searchKeywords": {
-      "zh": "过滤器与单向阀 过滤器 G系列过滤器 4.8 mm PA G-178-48-PA-V 136004 过滤器与单向阀 过滤器 G系列过滤器 G-178-48-PA-V 136004 382-10-00020 FAX86-NY0 4.8 mm PA G系列过滤器 标准型 4.8 mm 4.8 mm PA V色 过滤器 G系列过滤器 178 μm 4.8 mm PA V色",
-      "en": "filters check valves filter G系列过滤器 4.8 mm PA G-178-48-PA-V 136004 filters check valves 过滤器 G系列过滤器 G-178-48-PA-V 136004 382-10-00020 FAX86-NY0 4.8 mm PA G Series Filter Standard 4.8 mm 4.8 mm PA V Color 过滤器 G系列过滤器 178 μm 4.8 mm PA V色",
-      "es": "filters check valves 过滤器 G系列过滤器 G-178-48-PA-V 136004 382-10-00020 FAX86-NY0 4.8 mm PA",
-      "fr": "filters check valves 过滤器 G系列过滤器 G-178-48-PA-V 136004 382-10-00020 FAX86-NY0 4.8 mm PA",
-      "ko": "filters check valves 过滤器 G系列过滤器 G-178-48-PA-V 136004 382-10-00020 FAX86-NY0 4.8 mm PA",
-      "ru": "filters check valves 过滤器 G系列过滤器 G-178-48-PA-V 136004 382-10-00020 FAX86-NY0 4.8 mm PA"
-    }
-  },
-  {
-    "productId": "136005",
-    "productCode": "136005",
-    "productCodes": [
-      "136005"
-    ],
-    "internalCodes": [
-      "382-10-00021"
-    ],
-    "sourceType": "filter-check-valve-selection",
-    "categoryId": "fittings",
-    "categoryLabel": "接头系列",
-    "productTypeId": "filters",
-    "productTypeName": "过滤器",
-    "seriesId": "g",
-    "seriesCode": "G",
-    "seriesName": "G系列过滤器",
-    "model": "G-178-32-PA-V",
-    "foreachModel": "G-178-32-PA-V",
-    "hasStandardModel": true,
-    "competitorModels": [
-      "FAX26-NY0"
-    ],
-    "cardTitle": {
-      "zh": "G-178-32-PA-V",
-      "en": "G-178-32-PA-V",
-      "es": "G-178-32-PA-V",
-      "fr": "G-178-32-PA-V",
-      "ko": "G-178-32-PA-V",
-      "ru": "G-178-32-PA-V"
-    },
-    "cardSubtitle": {
-      "zh": "G 系列过滤器\n壳体材质为 PA\n适配 3.2 mm 接管内径",
-      "en": "G Series Filter\nTube ID 3.2 mm · PA body · V色",
-      "es": "G Series Filter\nTube ID 3.2 mm · PA body · V色",
-      "fr": "G Series Filter\nTube ID 3.2 mm · PA body · V色",
-      "ko": "G Series Filter\nTube ID 3.2 mm · PA body · V色",
-      "ru": "G Series Filter\nTube ID 3.2 mm · PA body · V色"
-    },
-    "filters": {
-      "filter01": "过滤器",
-      "filter02": "G系列过滤器",
-      "filter03": "",
-      "filter04": "",
-      "filter05": "",
-      "filter06": "",
-      "filter07": "3.2 mm",
-      "filter08": "PA",
-      "filter09": "V色"
-    },
-    "structureCode": "G",
-    "specificationCode": "178",
-    "portSize": "3.2 mm",
-    "materialCode": "PA",
-    "colorCode": "V",
-    "imageCard": "/images/products/fittings/filters/products/g-178-32-pa-v-main.jpg",
-    "detailSlug": "g-178-32-pa-v",
-    "detailHref": "/products/fittings/filters/g-178-32-pa-v",
-    "href": "/products/fittings/filters/g-178-32-pa-v",
-    "selectionHref": "/products/fittings/filters",
-    "needDrawing": true,
-    "needModel3d": false,
-    "status": "active",
-    "sourceIndex": 5,
-    "sortOrder": 470002,
-    "searchKeywords": {
-      "zh": "过滤器与单向阀 过滤器 G系列过滤器 3.2 mm PA G-178-32-PA-V 136005 过滤器与单向阀 过滤器 G系列过滤器 G-178-32-PA-V 136005 382-10-00021 FAX26-NY0 3.2 mm PA G系列过滤器 标准型 3.2 mm 3.2 mm PA V色 过滤器 G系列过滤器 178 μm 3.2 mm PA V色",
-      "en": "filters check valves filter G系列过滤器 3.2 mm PA G-178-32-PA-V 136005 filters check valves 过滤器 G系列过滤器 G-178-32-PA-V 136005 382-10-00021 FAX26-NY0 3.2 mm PA G Series Filter Standard 3.2 mm 3.2 mm PA V Color 过滤器 G系列过滤器 178 μm 3.2 mm PA V色",
-      "es": "filters check valves 过滤器 G系列过滤器 G-178-32-PA-V 136005 382-10-00021 FAX26-NY0 3.2 mm PA",
-      "fr": "filters check valves 过滤器 G系列过滤器 G-178-32-PA-V 136005 382-10-00021 FAX26-NY0 3.2 mm PA",
-      "ko": "filters check valves 过滤器 G系列过滤器 G-178-32-PA-V 136005 382-10-00021 FAX26-NY0 3.2 mm PA",
-      "ru": "filters check valves 过滤器 G系列过滤器 G-178-32-PA-V 136005 382-10-00021 FAX26-NY0 3.2 mm PA"
-    }
-  },
-  {
     "productId": "136009",
     "productCode": "136009",
     "productCodes": [
@@ -266,7 +43,7 @@ export const filterCheckValveSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "HDPE 滤网材质过滤器\n过滤精度 10 μm，壳体材质为 PP\n适配 2.4 mm 接管内径",
-      "en": "PE & PA Filter\nHDPE filter media · 10 μm\nTube ID 2.4 mm · PP body · 本色",
+      "en": "HDPE Mesh Filter\nFiltration Rating: 10 μm; Housing Material: PP\nFits 2.4 mm ID tubing",
       "es": "PE & PA Filter\nHDPE filter media · 10 μm\nTube ID 2.4 mm · PP body · 本色",
       "fr": "PE & PA Filter\nHDPE filter media · 10 μm\nTube ID 2.4 mm · PP body · 本色",
       "ko": "PE & PA Filter\nHDPE filter media · 10 μm\nTube ID 2.4 mm · PP body · 本色",
@@ -338,7 +115,7 @@ export const filterCheckValveSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "HDPE 滤网材质过滤器\n过滤精度 80–100 μm，壳体材质为 PP\n适配 3.2 mm 接管内径",
-      "en": "PE & PA Filter\nHDPE filter media · 80–100 μm\nTube ID 3.2 mm · PP body · 本色",
+      "en": "HDPE Mesh Filter\nFiltration Rating: 80–100 μm; Housing Material: PP\nFits 3.2 mm ID tubing",
       "es": "PE & PA Filter\nHDPE filter media · 80–100 μm\nTube ID 3.2 mm · PP body · 本色",
       "fr": "PE & PA Filter\nHDPE filter media · 80–100 μm\nTube ID 3.2 mm · PP body · 本色",
       "ko": "PE & PA Filter\nHDPE filter media · 80–100 μm\nTube ID 3.2 mm · PP body · 本色",
@@ -410,7 +187,7 @@ export const filterCheckValveSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "HDPE 滤网材质过滤器\n过滤精度 80–100 μm，壳体材质为 PVDF\n适配 3.2 mm 接管内径",
-      "en": "PE & PA Filter\nHDPE filter media · 80–100 μm\nTube ID 3.2 mm · PVDF body · 本色",
+      "en": "HDPE Mesh Filter\nFiltration Rating: 80–100 μm; Housing Material: PVDF\nFits 3.2 mm ID tubing",
       "es": "PE & PA Filter\nHDPE filter media · 80–100 μm\nTube ID 3.2 mm · PVDF body · 本色",
       "fr": "PE & PA Filter\nHDPE filter media · 80–100 μm\nTube ID 3.2 mm · PVDF body · 本色",
       "ko": "PE & PA Filter\nHDPE filter media · 80–100 μm\nTube ID 3.2 mm · PVDF body · 本色",
@@ -482,7 +259,7 @@ export const filterCheckValveSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "HDPE 滤网材质过滤器\n过滤精度 40–60 μm，壳体材质为 PP\n适配 3.2 mm 接管内径",
-      "en": "PE & PA Filter\nHDPE filter media · 40–60 μm\nTube ID 3.2 mm · PP body · 本色",
+      "en": "HDPE Mesh Filter\nFiltration Rating: 40–60 μm; Housing Material: PP\nFits 3.2 mm ID tubing",
       "es": "PE & PA Filter\nHDPE filter media · 40–60 μm\nTube ID 3.2 mm · PP body · 本色",
       "fr": "PE & PA Filter\nHDPE filter media · 40–60 μm\nTube ID 3.2 mm · PP body · 本色",
       "ko": "PE & PA Filter\nHDPE filter media · 40–60 μm\nTube ID 3.2 mm · PP body · 本色",
@@ -554,7 +331,7 @@ export const filterCheckValveSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "PA 滤网材质过滤器\n过滤精度 150 μm，壳体材质为 PP\n适配 3.2 mm 接管内径",
-      "en": "PE & PA Filter\nPA filter media · 150 μm\nTube ID 3.2 mm · PP body · 本色",
+      "en": "PA Mesh Filter\nFiltration Rating: 150 μm; Housing Material: PP\nFits 3.2 mm ID tubing",
       "es": "PE & PA Filter\nPA filter media · 150 μm\nTube ID 3.2 mm · PP body · 本色",
       "fr": "PE & PA Filter\nPA filter media · 150 μm\nTube ID 3.2 mm · PP body · 本色",
       "ko": "PE & PA Filter\nPA filter media · 150 μm\nTube ID 3.2 mm · PP body · 本色",
@@ -626,7 +403,7 @@ export const filterCheckValveSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "PA 滤网材质过滤器\n过滤精度 250 μm，壳体材质为 PA\n适配 3.2 mm 接管内径",
-      "en": "PE & PA Filter\nPA filter media · 250 μm\nTube ID 3.2 mm · PA body · 本色",
+      "en": "PA Mesh Filter\nFiltration Rating: 250 μm; Housing Material: PA\nFits 3.2 mm ID tubing",
       "es": "PE & PA Filter\nPA filter media · 250 μm\nTube ID 3.2 mm · PA body · 本色",
       "fr": "PE & PA Filter\nPA filter media · 250 μm\nTube ID 3.2 mm · PA body · 本色",
       "ko": "PE & PA Filter\nPA filter media · 250 μm\nTube ID 3.2 mm · PA body · 本色",
@@ -698,7 +475,7 @@ export const filterCheckValveSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "SUS 滤网材质过滤器\n过滤精度 150 μm，壳体材质为 AC\n适配 12.7 mm 接管内径",
-      "en": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 12.7 mm · AC body · 本色",
+      "en": "SUS Mesh Filter\nFiltration Rating: 150 μm; Housing Material: AC\nFits 12.7 mm ID tubing",
       "es": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 12.7 mm · AC body · 本色",
       "fr": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 12.7 mm · AC body · 本色",
       "ko": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 12.7 mm · AC body · 本色",
@@ -770,7 +547,7 @@ export const filterCheckValveSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "SUS 滤网材质过滤器\n过滤精度 150 μm，壳体材质为 AC\n适配 12.7 mm 接管内径",
-      "en": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 12.7 mm · AC body · 本色",
+      "en": "SUS Mesh Filter\nFiltration Rating: 150 μm; Housing Material: AC\nFits 12.7 mm ID tubing",
       "es": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 12.7 mm · AC body · 本色",
       "fr": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 12.7 mm · AC body · 本色",
       "ko": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 12.7 mm · AC body · 本色",
@@ -842,7 +619,7 @@ export const filterCheckValveSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "SUS 滤网材质过滤器\n过滤精度 150 μm，壳体材质为 PP\n适配 12.7 mm 接管内径",
-      "en": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 12.7 mm · PP body · 本色",
+      "en": "SUS Mesh Filter\nFiltration Rating: 150 μm; Housing Material: PP\nFits 12.7 mm ID tubing",
       "es": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 12.7 mm · PP body · 本色",
       "fr": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 12.7 mm · PP body · 本色",
       "ko": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 12.7 mm · PP body · 本色",
@@ -915,7 +692,7 @@ export const filterCheckValveSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "SUS 滤网材质过滤器\n过滤精度 150 μm，壳体材质为 PP\n适配 12.7 mm 接管内径",
-      "en": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 12.7 mm · PP body · 本色",
+      "en": "SUS Mesh Filter\nFiltration Rating: 150 μm; Housing Material: PP\nFits 12.7 mm ID tubing",
       "es": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 12.7 mm · PP body · 本色",
       "fr": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 12.7 mm · PP body · 本色",
       "ko": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 12.7 mm · PP body · 本色",
@@ -987,7 +764,7 @@ export const filterCheckValveSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "SUS 滤网材质过滤器\n过滤精度 150 μm，壳体材质为 PP\n适配 7.9 mm 接管内径",
-      "en": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 7.9 mm · PP body · 本色",
+      "en": "SUS Mesh Filter\nFiltration Rating: 150 μm; Housing Material: PP\nFits 7.9 mm ID tubing",
       "es": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 7.9 mm · PP body · 本色",
       "fr": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 7.9 mm · PP body · 本色",
       "ko": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 7.9 mm · PP body · 本色",
@@ -1061,7 +838,7 @@ export const filterCheckValveSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "SUS 滤网材质过滤器\n过滤精度 150 μm，壳体材质为 PP\n适配 9.5 mm 接管内径",
-      "en": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 9.5 mm · PP body · 本色",
+      "en": "SUS Mesh Filter\nFiltration Rating: 150 μm; Housing Material: PP\nFits 9.5 mm ID tubing",
       "es": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 9.5 mm · PP body · 本色",
       "fr": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 9.5 mm · PP body · 本色",
       "ko": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 9.5 mm · PP body · 本色",
@@ -1133,7 +910,7 @@ export const filterCheckValveSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "SUS 滤网材质过滤器\n过滤精度 150 μm，壳体材质为 PP\n适配 19.1 mm 接管内径",
-      "en": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 19.1 mm · PP body · 本色",
+      "en": "SUS Mesh Filter\nFiltration Rating: 150 μm; Housing Material: PP\nFits 19.1 mm ID tubing",
       "es": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 19.1 mm · PP body · 本色",
       "fr": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 19.1 mm · PP body · 本色",
       "ko": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 19.1 mm · PP body · 本色",
@@ -1205,7 +982,7 @@ export const filterCheckValveSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "水循环过滤器组件\n壳体材质为 POM\n外形尺寸 86 × 48.8 mm",
-      "en": "Water Circulation Filter Assembly\nPOM body",
+      "en": "Water Circulation Filter Assembly\nHousing Material: POM\nOverall Dimensions: 86 × 48.8 mm",
       "es": "Water Circulation Filter Assembly\nPOM body",
       "fr": "Water Circulation Filter Assembly\nPOM body",
       "ko": "Water Circulation Filter Assembly\nPOM body",
@@ -1277,7 +1054,7 @@ export const filterCheckValveSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "SUS 滤网材质过滤器组件\n过滤精度 150 μm，壳体材质为 PP\n适配 3/8-18 NPT 螺纹接口",
-      "en": "Water Circulation Filter Assembly\nSUS filter media · 150 μm\nThread 3/8-18 NPT · PP body · 本色",
+      "en": "SUS Mesh Filter Assembly\nFiltration Rating: 150 μm; Housing Material: PP\nFits 3/8-18 NPT thread",
       "es": "Water Circulation Filter Assembly\nSUS filter media · 150 μm\nThread 3/8-18 NPT · PP body · 本色",
       "fr": "Water Circulation Filter Assembly\nSUS filter media · 150 μm\nThread 3/8-18 NPT · PP body · 本色",
       "ko": "Water Circulation Filter Assembly\nSUS filter media · 150 μm\nThread 3/8-18 NPT · PP body · 本色",
@@ -1349,7 +1126,7 @@ export const filterCheckValveSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "鸭嘴式单向阀\n密封件材质为 EPDM，壳体材质为 PVDF\n适配 1.6 mm 接管内径",
-      "en": "Duckbill Check Valve\nEPDM diaphragm · Tube ID 1.6 mm\nPVDF body · 本色",
+      "en": "Duckbill Check Valve\nSeal Material: EPDM; Housing Material: PVDF\nFits 1.6 mm ID tubing",
       "es": "Duckbill Check Valve\nEPDM diaphragm · Tube ID 1.6 mm\nPVDF body · 本色",
       "fr": "Duckbill Check Valve\nEPDM diaphragm · Tube ID 1.6 mm\nPVDF body · 本色",
       "ko": "Duckbill Check Valve\nEPDM diaphragm · Tube ID 1.6 mm\nPVDF body · 本色",
@@ -1423,7 +1200,7 @@ export const filterCheckValveSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "膜片式单向阀\n膜片材质为 FKM，壳体材质为 PP\n适配 3.2 mm 接管内径",
-      "en": "Diaphragm Check Valve\nFKM diaphragm · Tube ID 3.2 mm\nPP body · 本色",
+      "en": "Diaphragm Check Valve\nDiaphragm Material: FKM; Housing Material: PP\nFits 3.2 mm ID tubing",
       "es": "Diaphragm Check Valve\nFKM diaphragm · Tube ID 3.2 mm\nPP body · 本色",
       "fr": "Diaphragm Check Valve\nFKM diaphragm · Tube ID 3.2 mm\nPP body · 本色",
       "ko": "Diaphragm Check Valve\nFKM diaphragm · Tube ID 3.2 mm\nPP body · 本色",
@@ -1499,7 +1276,7 @@ export const filterCheckValveSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "膜片式单向阀\n膜片材质为 FKM，壳体材质为 PP\n适配 4.8 mm 接管内径",
-      "en": "Diaphragm Check Valve\nFKM diaphragm · Tube ID 4.8 mm\nPP body · 本色",
+      "en": "Diaphragm Check Valve\nDiaphragm Material: FKM; Housing Material: PP\nFits 4.8 mm ID tubing",
       "es": "Diaphragm Check Valve\nFKM diaphragm · Tube ID 4.8 mm\nPP body · 本色",
       "fr": "Diaphragm Check Valve\nFKM diaphragm · Tube ID 4.8 mm\nPP body · 本色",
       "ko": "Diaphragm Check Valve\nFKM diaphragm · Tube ID 4.8 mm\nPP body · 本色",
@@ -1573,7 +1350,7 @@ export const filterCheckValveSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "膜片式单向阀\n膜片材质为 FKM，壳体材质为 PP\n适配 6.4 mm 接管内径",
-      "en": "Diaphragm Check Valve\nFKM diaphragm · Tube ID 6.4 mm\nPP body · 本色",
+      "en": "Diaphragm Check Valve\nDiaphragm Material: FKM; Housing Material: PP\nFits 6.4 mm ID tubing",
       "es": "Diaphragm Check Valve\nFKM diaphragm · Tube ID 6.4 mm\nPP body · 本色",
       "fr": "Diaphragm Check Valve\nFKM diaphragm · Tube ID 6.4 mm\nPP body · 本色",
       "ko": "Diaphragm Check Valve\nFKM diaphragm · Tube ID 6.4 mm\nPP body · 本色",
@@ -1645,7 +1422,7 @@ export const filterCheckValveSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "膜片式单向阀\n膜片材质为 EPDM，壳体材质为 PP\n适配 6.4 mm 接管内径",
-      "en": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 6.4 mm\nPP body · 本色",
+      "en": "Diaphragm Check Valve\nDiaphragm Material: EPDM; Housing Material: PP\nFits 6.4 mm ID tubing",
       "es": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 6.4 mm\nPP body · 本色",
       "fr": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 6.4 mm\nPP body · 本色",
       "ko": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 6.4 mm\nPP body · 本色",
@@ -1717,7 +1494,7 @@ export const filterCheckValveSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "膜片式单向阀\n膜片材质为 FKM，壳体材质为 PP\n适配 7.9 mm 接管内径",
-      "en": "Diaphragm Check Valve\nFKM diaphragm · Tube ID 7.9 mm\nPP body · 本色",
+      "en": "Diaphragm Check Valve\nDiaphragm Material: FKM; Housing Material: PP\nFits 7.9 mm ID tubing",
       "es": "Diaphragm Check Valve\nFKM diaphragm · Tube ID 7.9 mm\nPP body · 本色",
       "fr": "Diaphragm Check Valve\nFKM diaphragm · Tube ID 7.9 mm\nPP body · 本色",
       "ko": "Diaphragm Check Valve\nFKM diaphragm · Tube ID 7.9 mm\nPP body · 本色",
@@ -1789,7 +1566,7 @@ export const filterCheckValveSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "膜片式单向阀\n膜片材质为 EPDM，壳体材质为 PP\n适配 7.9 mm 接管内径",
-      "en": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 7.9 mm\nPP body · 本色",
+      "en": "Diaphragm Check Valve\nDiaphragm Material: EPDM; Housing Material: PP\nFits 7.9 mm ID tubing",
       "es": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 7.9 mm\nPP body · 本色",
       "fr": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 7.9 mm\nPP body · 本色",
       "ko": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 7.9 mm\nPP body · 本色",
@@ -1861,7 +1638,7 @@ export const filterCheckValveSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "膜片式单向阀\n膜片材质为 EPDM，壳体材质为 PP\n适配 9.5 mm 接管内径",
-      "en": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 9.5 mm\nPP body · 本色",
+      "en": "Diaphragm Check Valve\nDiaphragm Material: EPDM; Housing Material: PP\nFits 9.5 mm ID tubing",
       "es": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 9.5 mm\nPP body · 本色",
       "fr": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 9.5 mm\nPP body · 本色",
       "ko": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 9.5 mm\nPP body · 本色",
@@ -1933,7 +1710,7 @@ export const filterCheckValveSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "膜片式单向阀\n膜片材质为 FFKM，壳体材质为 PVDF\n适配 1.6 mm 接管内径",
-      "en": "Diaphragm Check Valve\nFFKM diaphragm · Tube ID 1.6 mm\nPVDF body · 本色",
+      "en": "Diaphragm Check Valve\nDiaphragm Material: FFKM; Housing Material: PVDF\nFits 1.6 mm ID tubing",
       "es": "Diaphragm Check Valve\nFFKM diaphragm · Tube ID 1.6 mm\nPVDF body · 本色",
       "fr": "Diaphragm Check Valve\nFFKM diaphragm · Tube ID 1.6 mm\nPVDF body · 本色",
       "ko": "Diaphragm Check Valve\nFFKM diaphragm · Tube ID 1.6 mm\nPVDF body · 本色",
@@ -2005,7 +1782,7 @@ export const filterCheckValveSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "鸭嘴式单向阀\n密封件材质为 EPDM，壳体材质为 PVDF\n适配 2.4 mm 接管内径",
-      "en": "Duckbill Check Valve\nEPDM diaphragm · Tube ID 2.4 mm\nPVDF body · 本色",
+      "en": "Duckbill Check Valve\nSeal Material: EPDM; Housing Material: PVDF\nFits 2.4 mm ID tubing",
       "es": "Duckbill Check Valve\nEPDM diaphragm · Tube ID 2.4 mm\nPVDF body · 本色",
       "fr": "Duckbill Check Valve\nEPDM diaphragm · Tube ID 2.4 mm\nPVDF body · 本色",
       "ko": "Duckbill Check Valve\nEPDM diaphragm · Tube ID 2.4 mm\nPVDF body · 本色",
@@ -2077,7 +1854,7 @@ export const filterCheckValveSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "鸭嘴式单向阀\n密封件材质为 EPDM，壳体材质为 PVDF\n适配 3.2 mm 接管内径",
-      "en": "Duckbill Check Valve\nEPDM diaphragm · Tube ID 3.2 mm\nPVDF body · 本色",
+      "en": "Duckbill Check Valve\nSeal Material: EPDM; Housing Material: PVDF\nFits 3.2 mm ID tubing",
       "es": "Duckbill Check Valve\nEPDM diaphragm · Tube ID 3.2 mm\nPVDF body · 本色",
       "fr": "Duckbill Check Valve\nEPDM diaphragm · Tube ID 3.2 mm\nPVDF body · 本色",
       "ko": "Duckbill Check Valve\nEPDM diaphragm · Tube ID 3.2 mm\nPVDF body · 本色",
@@ -2149,7 +1926,7 @@ export const filterCheckValveSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "膜片式单向阀\n膜片材质为 EPDM，壳体材质为 PP\n适配 3.2 mm 接管内径",
-      "en": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 3.2 mm\nPP body · 本色",
+      "en": "Diaphragm Check Valve\nDiaphragm Material: EPDM; Housing Material: PP\nFits 3.2 mm ID tubing",
       "es": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 3.2 mm\nPP body · 本色",
       "fr": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 3.2 mm\nPP body · 本色",
       "ko": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 3.2 mm\nPP body · 本色",
@@ -2221,7 +1998,7 @@ export const filterCheckValveSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "膜片式单向阀\n膜片材质为 EPDM，壳体材质为 PVDF\n适配 3.2 mm 接管内径",
-      "en": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 3.2 mm\nPVDF body · 本色",
+      "en": "Diaphragm Check Valve\nDiaphragm Material: EPDM; Housing Material: PVDF\nFits 3.2 mm ID tubing",
       "es": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 3.2 mm\nPVDF body · 本色",
       "fr": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 3.2 mm\nPVDF body · 本色",
       "ko": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 3.2 mm\nPVDF body · 本色",
@@ -2293,7 +2070,7 @@ export const filterCheckValveSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "膜片式单向阀\n膜片材质为 FFKM，壳体材质为 PP\n适配 3.2 mm 接管内径",
-      "en": "Diaphragm Check Valve\nFFKM diaphragm · Tube ID 3.2 mm\nPP body · 本色",
+      "en": "Diaphragm Check Valve\nDiaphragm Material: FFKM; Housing Material: PP\nFits 3.2 mm ID tubing",
       "es": "Diaphragm Check Valve\nFFKM diaphragm · Tube ID 3.2 mm\nPP body · 本色",
       "fr": "Diaphragm Check Valve\nFFKM diaphragm · Tube ID 3.2 mm\nPP body · 本色",
       "ko": "Diaphragm Check Valve\nFFKM diaphragm · Tube ID 3.2 mm\nPP body · 本色",
@@ -2365,7 +2142,7 @@ export const filterCheckValveSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "膜片式单向阀\n膜片材质为 EPDM，壳体材质为 PP\n适配 2.4 mm 接管内径",
-      "en": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 2.4 mm\nPP body · 本色",
+      "en": "Diaphragm Check Valve\nDiaphragm Material: EPDM; Housing Material: PP\nFits 2.4 mm ID tubing",
       "es": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 2.4 mm\nPP body · 本色",
       "fr": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 2.4 mm\nPP body · 本色",
       "ko": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 2.4 mm\nPP body · 本色",
@@ -2437,7 +2214,7 @@ export const filterCheckValveSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "膜片式单向阀\n膜片材质为 FFKM，壳体材质为 PP\n适配 3.2 mm 接管内径",
-      "en": "Diaphragm Check Valve\nFFKM diaphragm · Tube ID 3.2 mm\nPP body · 黑色",
+      "en": "Diaphragm Check Valve\nDiaphragm Material: FFKM; Housing Material: PP\nFits 3.2 mm ID tubing",
       "es": "Diaphragm Check Valve\nFFKM diaphragm · Tube ID 3.2 mm\nPP body · 黑色",
       "fr": "Diaphragm Check Valve\nFFKM diaphragm · Tube ID 3.2 mm\nPP body · 黑色",
       "ko": "Diaphragm Check Valve\nFFKM diaphragm · Tube ID 3.2 mm\nPP body · 黑色",

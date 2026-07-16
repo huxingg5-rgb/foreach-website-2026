@@ -31,8 +31,8 @@ export default function ApplicationPageSkeleton() {
   return (
     <section
       className={styles.page}
-      aria-label="应用领域页面加载中"
       aria-busy="true"
+      aria-hidden="true"
     >
       <div className={styles.banner}>
         <div className={styles.bannerOverlay}>

@@ -1,4 +1,4 @@
-﻿export type ProductFilterLocale = "zh" | "zh-CN" | "en" | "es" | "fr" | "ko" | "ru";
+export type ProductFilterLocale = "zh" | "zh-CN" | "en" | "es" | "fr" | "ko" | "ru";
 
 type FilterOptionLabelMap = Partial<Record<ProductFilterLocale, string>>;
 
@@ -94,6 +94,38 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
     ru: "Мембранный насос DPL для газа и жидкости",
   },
 
+  "液泵": {
+    zh: "液泵",
+    en: "Liquid Pump",
+    es: "Bomba para líquidos",
+    fr: "Pompe pour liquides",
+    ko: "액체 펌프",
+    ru: "Жидкостный насос",
+  },
+  "气液混合泵": {
+    zh: "气液混合泵",
+    en: "Gas-Liquid Mixing Pump",
+    es: "Bomba de mezcla gas-líquido",
+    fr: "Pompe de mélange gaz-liquide",
+    ko: "기액 혼합 펌프",
+    ru: "Насос для газожидкостной смеси",
+  },
+  "有刷电机": {
+    zh: "有刷电机",
+    en: "Brushed Motor",
+    es: "Motor con escobillas",
+    fr: "Moteur à balais",
+    ko: "브러시 모터",
+    ru: "Щёточный двигатель",
+  },
+  "无刷电机": {
+    zh: "无刷电机",
+    en: "Brushless Motor",
+    es: "Motor sin escobillas",
+    fr: "Moteur sans balais",
+    ko: "브러시리스 모터",
+    ru: "Бесщёточный двигатель",
+  },
   "SMTP2 可编程气体置换式移液泵": {
     zh: "SMTP2 可编程气体置换式移液泵",
     en: "SMTP2 Programmable Gas Displacement Pipetting Pump",
@@ -170,6 +202,14 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
     ru: "Электромагнитный клапан",
   },
 
+  "针系列": {
+    zh: "针系列",
+    en: "Probe Series",
+    es: "Serie de sondas",
+    fr: "Série de sondes",
+    ko: "프로브 시리즈",
+    ru: "Серия зондов",
+  },
   "采样针": {
     zh: "采样针",
     en: "Sampling Probe",
@@ -227,6 +267,291 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
     ko: "기포 감지 모듈",
     ru: "Модуль обнаружения пузырьков воздуха",
   },
+
+  "标滚平底接头": {
+    zh: "标滚平底接头",
+    en: "Standard Flanged Fittings",
+  },
+
+  "标准平底接头": {
+    zh: "标准平底接头",
+    en: "Standard Flanged Fittings",
+  },
+
+  "紧凑平底接头": {
+    zh: "紧凑平底接头",
+    en: "Compact Flanged Fittings",
+  },
+
+  "标滚卡箍接头": {
+    zh: "标滚卡箍接头",
+    en: "Standard Ferrule Fittings",
+  },
+
+  "标准卡箍接头": {
+    zh: "标准卡箍接头",
+    en: "Standard Ferrule Fittings",
+  },
+
+  "紧凑卡箍接头": {
+    zh: "紧凑卡箍接头",
+    en: "Compact Ferrule Fittings",
+  },
+
+  "卡环接头": {
+    zh: "卡环接头",
+    en: "Snap Ring Fittings",
+  },
+
+  "高压接头": {
+    zh: "高压接头",
+    en: "High-Pressure Fittings",
+  },
+
+  "本色": {
+    zh: "本色",
+    en: "Natural",
+  },
+
+  "黑色": {
+    zh: "黑色",
+    en: "Black",
+  },
+
+  "蓝色": {
+    zh: "蓝色",
+    en: "Blue",
+  },
+  "直通型": {
+    zh: "直通型",
+    en: "Straight Through",
+  },
+
+  "L型": {
+    zh: "L型",
+    en: "Elbow",
+  },
+
+  "T型": {
+    zh: "T型",
+    en: "Tee",
+  },
+
+  "Y型": {
+    zh: "Y型",
+    en: "Y",
+  },
+
+  "π型": {
+    zh: "π型",
+    en: "π-Type",
+  },
+
+  "十字型": {
+    zh: "十字型",
+    en: "Cross",
+  },
+
+  "倒刺堵头": {
+    zh: "倒刺堵头",
+    en: "Barbed Plug",
+  },
+
+  "白色": {
+    zh: "白色",
+    en: "White",
+  },
+
+  "螺纹密封": {
+    zh: "螺纹密封",
+    en: "Thread Seal",
+  },
+
+  "底面密封": {
+    zh: "底面密封",
+    en: "Bottom-Face Seal",
+  },
+
+  "内螺纹转倒刺": {
+    zh: "内螺纹转倒刺",
+    en: "Female Thread to Barb",
+  },
+
+  "可旋转直通型": {
+    zh: "可旋转直通型",
+    en: "Rotary Straight Through",
+  },
+
+  "3.4 锥螺纹": {
+    zh: "3.4 锥螺纹",
+    en: "3.4 Tapered Thread",
+  },
+
+  "LSL 固定芯子": {
+    zh: "LSL 固定芯子",
+    en: "Male Luer Stationary Lock",
+  },
+
+  "LRL 旋转芯子": {
+    zh: "LRL 旋转芯子",
+    en: "Male Luer Rotating Lock",
+  },
+
+  "LPR 旋转锁圈": {
+    zh: "LPR 旋转锁圈",
+    en: "Male Luer Rotating Lock Ring Fitting",
+  },
+
+  "LPS 固定锁圈": {
+    zh: "LPS 固定锁圈",
+    en: "Male Luer Stationary Lock Ring Fitting",
+  },
+
+  "LP 一体式": {
+    zh: "LP 一体式",
+    en: "Male Luer Integral Lock Ring Fitting",
+  },
+
+  "LS 母鲁尔": {
+    zh: "LS 母鲁尔",
+    en: "Female Luer Integral Fitting",
+  },
+
+  "PMLS 穿板母鲁尔": {
+    zh: "PMLS 穿板母鲁尔",
+    en: "Female Luer Panel Mount Fitting",
+  },
+
+  "LCR 色环": {
+    zh: "LCR 色环",
+    en: "Color Coding Ring",
+  },
+
+  "LPT 内螺纹套": {
+    zh: "LPT 内螺纹套",
+    en: "Luer Lock Ring",
+  },
+
+  "LNS 滚花螺母": {
+    zh: "LNS 滚花螺母",
+    en: "Panel Mount Lock Nut",
+  },
+
+  "N - 本色": {
+    zh: "N - 本色",
+    en: "Natural",
+  },
+
+  "W - 白色": {
+    zh: "W - 白色",
+    en: "White",
+  },
+
+  "B - 黑色": {
+    zh: "B - 黑色",
+    en: "Black",
+  },
+
+  "R - 红色": {
+    zh: "R - 红色",
+    en: "Red",
+  },
+
+  "G - 绿色": {
+    zh: "G - 绿色",
+    en: "Green",
+  },
+
+  "U - 蓝色": {
+    zh: "U - 蓝色",
+    en: "Blue",
+  },
+
+  "O - 橙色": {
+    zh: "O - 橙色",
+    en: "Orange",
+  },
+
+  "Y - 黄色": {
+    zh: "Y - 黄色",
+    en: "Yellow",
+  },
+
+  "公端": {
+    zh: "公端",
+    en: "Male",
+  },
+
+  "母端": {
+    zh: "母端",
+    en: "Female",
+  },
+
+  "穿板": {
+    zh: "穿板",
+    en: "Panel Mount",
+  },
+
+  "非穿板": {
+    zh: "非穿板",
+    en: "Non-Panel Mount",
+  },
+
+  "带阀": {
+    zh: "带阀",
+    en: "Valved",
+  },
+
+  "不带阀": {
+    zh: "不带阀",
+    en: "Non-Valved",
+  },
+
+  "直通": {
+    zh: "直通",
+    en: "In-line",
+  },
+
+  "弯头": {
+    zh: "弯头",
+    en: "Elbow",
+  },
+
+  "弯头型": {
+    zh: "弯头型",
+    en: "Elbow",
+  },
+
+  "二通": {
+    zh: "二通",
+    en: "2-Way",
+  },
+
+  "三通": {
+    zh: "三通",
+    en: "3-Way",
+  },
+
+  "穿板倒刺接头": {
+    zh: "穿板倒刺接头",
+    en: "Bulkhead Barbed Fitting",
+  },
+
+  "六角螺母": {
+    zh: "六角螺母",
+    en: "Hex Nut",
+  },
+
+  "过滤器": {
+    zh: "过滤器",
+    en: "Filters",
+  },
+
+  "单向阀": {
+    zh: "单向阀",
+    en: "Check Valves",
+  },
+
 };
 
 function normalizeProductFilterLocale(locale?: string): ProductFilterLocale {

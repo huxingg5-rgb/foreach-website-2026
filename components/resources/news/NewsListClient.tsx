@@ -153,7 +153,14 @@ export default function NewsListClient({ pageData }: NewsListClientProps) {
         <div className="newsListSection__head">
           <h2 className="newsListSection__title">{pageData.sectionTitle}</h2>
 
-          <div className="newsCategoryTabs" aria-label="新闻分类筛选">
+          <div
+            className="newsCategoryTabs"
+            aria-label={
+              pageData.locale === "zh-CN"
+                ? "新闻分类筛选"
+                : "News category filters"
+            }
+          >
             {pageData.categories.map((category) => (
               <button
                 key={category.key}
@@ -184,7 +191,14 @@ export default function NewsListClient({ pageData }: NewsListClientProps) {
             </div>
 
             {totalPages > 1 ? (
-              <div className="newsPagination" aria-label="新闻分页">
+              <div
+                className="newsPagination"
+                aria-label={
+                  pageData.locale === "zh-CN"
+                    ? "新闻分页"
+                    : "News pagination"
+                }
+              >
                 <button
                   type="button"
                   className="newsPagination__button"

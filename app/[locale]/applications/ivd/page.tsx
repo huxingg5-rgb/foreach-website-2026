@@ -20,7 +20,9 @@ import { Suspense } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+import ApplicationEnglishClient from "@/components/applications/ApplicationEnglishClient";
 import IvdApplicationClient from "@/components/applications/ivd/IvdApplicationClient";
+import { createEnglishApplicationData } from "@/data/applications/application-english";
 import { getIvdApplicationPageData } from "@/services/applications/ivd/getIvdApplicationPageData";
 
 import "../../../applications/ivd/ivd-application.css";
@@ -62,7 +64,13 @@ export default async function IvdLocaleApplicationPage({ params }: IvdLocalePage
 
   return (
     <Suspense fallback={<ApplicationPageSkeleton />}>
-      <IvdApplicationClient data={pageData} />
+      {locale === "en" ? (
+        <ApplicationEnglishClient
+          data={createEnglishApplicationData("ivd", pageData)}
+        />
+      ) : (
+        <IvdApplicationClient data={pageData} />
+      )}
     </Suspense>
   );
 }

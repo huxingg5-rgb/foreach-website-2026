@@ -17,6 +17,7 @@
    4. 鎵€浠ヨ繖閲屽繀椤绘彁渚?generateStaticParams
 ================================ */
 
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import HomePageContent from "@/components/home/HomePageContent";
@@ -90,6 +91,22 @@ type LocalePageProps = {
     locale: string;
   }>;
 };
+
+export async function generateMetadata({
+  params,
+}: LocalePageProps): Promise<Metadata> {
+  const { locale } = await params;
+
+  if (locale !== "en") {
+    return {};
+  }
+
+  return {
+    title: "FOREACH | Microfluidic Components and Fluidic Solutions",
+    description:
+      "FOREACH develops pumps, valves, probes, fittings, tubing, sensors, and control modules for IVD, life sciences, analytical instruments, synthetic biology, and laboratory automation.",
+  };
+}
 
 /* ================================
    澶氳瑷€棣栭〉椤甸潰缁勪欢

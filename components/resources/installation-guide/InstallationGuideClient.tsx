@@ -284,12 +284,14 @@ export default function InstallationGuideClient({
 
                       <div className="installation-guide-card-info">
                         <div>
-                          <strong>产品分类：</strong>
+                          <strong>
+                            {isChinesePage ? "产品分类：" : "Product Category: "}
+                          </strong>
                           <b>{getCategoryName(guide.category)}</b>
                         </div>
 
                         <div>
-                          <strong>标签：</strong>
+                          <strong>{isChinesePage ? "标签：" : "Tags: "}</strong>
                           <span className="installation-guide-tags">
                             {guide.tags.map((tag: string) => (
                               <span key={tag}>{tag}</span>
@@ -304,8 +306,14 @@ export default function InstallationGuideClient({
             </div>
           ) : (
             <div className="installation-guide-empty">
-              <strong>暂无匹配教程</strong>
-              <span>可以更换关键词，或选择其他产品系列查看。</span>
+              <strong>
+                {isChinesePage ? "暂无匹配教程" : "No matching guides found"}
+              </strong>
+              <span>
+                {isChinesePage
+                  ? "可以更换关键词，或选择其他产品系列查看。"
+                  : "Try another keyword or select a different product series."}
+              </span>
             </div>
           )}
         </section>
@@ -315,11 +323,15 @@ export default function InstallationGuideClient({
           全屏宽度底部支持 Banner
       ===================================================== */}
       <ResourceSupportCta
-        title="没有找到对应教程？"
-        description="如果您不确定产品安装方式、调试步骤或参数设置方法，可以提交产品型号、应用场景或问题说明，FOREACH 技术团队将为您提供支持。"
-        buttonText="提交教程需求"
-        href="/contact"
+        title={isChinesePage ? "没有找到对应教程？" : "Need another guide?"}
+        description={
+          isChinesePage
+            ? "如果您不确定产品安装方式、调试步骤或参数设置方法，可以提交产品型号、应用场景或问题说明，FOREACH 技术团队将为您提供支持。"
+            : "Send us the product model, application, or issue details, and the FOREACH technical team will help with installation, commissioning, or parameter setup."
+        }
+        buttonText={isChinesePage ? "提交教程需求" : "Request a Guide"}
+        href={`${localePrefix}/contact`}
       />
     </main>
   );
-} 
+}

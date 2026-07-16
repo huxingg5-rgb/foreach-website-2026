@@ -128,10 +128,20 @@ function BarbedPortFilterGroup({
       data-barbed-port-filter="true"
     >
       <div className="barbed-port-heading-grid">
-        <div>接管内径1</div>
-        <div>接管内径2</div>
-        <div>接管内径3</div>
-      </div>
+            {BARBED_PORT_FILTER_KEYS.map((filterKey, index) => {
+              const groupTitle =
+                filterGroups.find(
+                  (item) => item.key === filterKey
+                )?.title ||
+                `接管内径${index + 1}`;
+
+              return (
+                <div key={filterKey}>
+                  {groupTitle}
+                </div>
+              );
+            })}
+          </div>
 
       <div className="barbed-port-columns">
         {BARBED_PORT_FILTER_KEYS.map(
@@ -314,7 +324,16 @@ export default function ProductFilterPanel({
                     isBarbedPortGroupOpen
                   }
                 >
-                  <span>接管内径</span>
+                  <span>
+                        {/[\u3400-\u9fff]/.test(
+                          filterGroups.find(
+                            (item) =>
+                              item.key === "filter02"
+                          )?.title || ""
+                        )
+                          ? "接管内径"
+                          : "Barb ID"}
+                      </span>
 
                   <span
                     className="filter-group-symbol"
@@ -461,7 +480,16 @@ export default function ProductFilterPanel({
                   )
                 ? true
                 :
-            isThreadToBarbed &&
+            /* THREAD_TO_BARBED_COLOR_TWO_COLUMNS_START */
+                isThreadToBarbed &&
+                  (
+                    group.title === "Color" ||
+                    group.title === "颜色"
+                  )
+                  ? true
+                  :
+                /* THREAD_TO_BARBED_COLOR_TWO_COLUMNS_END */
+                isThreadToBarbed &&
             group.key === "filter02"
               ? false
               : isThreadToBarbed &&

@@ -194,7 +194,7 @@ export default function FittingReplacementDetail({
 
   /* =========================================================
      切换当前产品清单状态
-  
+
      说明：
      1. 未加入清单时，点击加入清单
      2. 已加入清单时，点击取消加入清单
@@ -222,7 +222,10 @@ export default function FittingReplacementDetail({
     <div className="fitting-replacement-detail-page">
       <main className="frd-main">
         <div className="frd-container">
-          <Breadcrumb items={normalizedBreadcrumbs} />
+          <Breadcrumb
+            items={normalizedBreadcrumbs}
+            ariaLabel={locale === "zh" ? "面包屑导航" : "Breadcrumb"}
+          />
 
           <section className="frd-detail-section">
             <div className="frd-detail-layout">
@@ -343,4 +346,4 @@ export default function FittingReplacementDetail({
       </main>
     </div>
   );
-} 
+}

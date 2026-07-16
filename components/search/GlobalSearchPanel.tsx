@@ -153,6 +153,45 @@ const MODULE_TEXT: Record<
   },
 };
 
+const MODULE_TEXT_EN: typeof MODULE_TEXT = {
+  products: {
+    title: "Products",
+    action: "View Product",
+  },
+  "compatible-models": {
+    title: "Compatible Model Search",
+    action: "View Compatible Product",
+  },
+  datasheets: {
+    title: "Datasheets",
+    action: "View Datasheet",
+  },
+  "installation-guides": {
+    title: "Installation Guides",
+    action: "View Guide",
+  },
+  "technical-articles": {
+    title: "Technical Articles",
+    action: "Read Article",
+  },
+  "material-compatibility": {
+    title: "Material Compatibility",
+    action: "View Material Data",
+  },
+  applications: {
+    title: "Applications",
+    action: "View Application",
+  },
+  news: {
+    title: "News",
+    action: "View News",
+  },
+  pages: {
+    title: "Pages",
+    action: "Open Page",
+  },
+};
+
 const INITIAL_SUGGESTIONS = [
   "Q2002",
   "PMC1702",
@@ -161,6 +200,88 @@ const INITIAL_SUGGESTIONS = [
   "接头安装",
   "ADLM",
 ];
+
+const INITIAL_SUGGESTIONS_EN = [
+  "Q2002",
+  "PMC1702",
+  "Plunger Pump",
+  "PEEK",
+  "Fitting Installation",
+  "ADLM",
+];
+
+const ENGLISH_RESULT_DESCRIPTIONS: Record<SearchModule, string> = {
+  products: "View product details and selection information.",
+  "compatible-models": "View the corresponding FOREACH compatible product.",
+  datasheets: "View or download the available product datasheet.",
+  "installation-guides": "View installation and commissioning guidance.",
+  "technical-articles": "Read the full technical article.",
+  "material-compatibility": "Review material compatibility information.",
+  applications: "Explore the related fluid handling application.",
+  news: "Read the full FOREACH news update.",
+  pages: "Open this FOREACH website page.",
+};
+
+function containsHan(value: string): boolean {
+  return /[\u3400-\u9fff]/.test(value);
+}
+
+function getPathLabel(href: string): string {
+  const segment = href
+    .split(/[?#]/)[0]
+    .split("/")
+    .filter(Boolean)
+    .at(-1);
+
+  if (!segment) {
+    return "FOREACH";
+  }
+
+  return decodeURIComponent(segment)
+    .split(/[-_]+/)
+    .filter(Boolean)
+    .map((word) =>
+      /^[a-z]+$/.test(word)
+        ? word.charAt(0).toUpperCase() + word.slice(1)
+        : word.toUpperCase()
+    )
+    .join(" ");
+}
+
+function getTechnicalText(value: string | undefined): string {
+  return (value ?? "")
+    .replace(/[\u3400-\u9fff：]/g, "")
+    .replace(/^\s*[:：-]\s*/, "")
+    .trim();
+}
+
+function getEnglishSearchItem(item: CompactSearchItem): CompactSearchItem {
+  const technicalText = getTechnicalText(item.s);
+  const title = !containsHan(item.t)
+    ? item.t
+    : technicalText || getPathLabel(item.h);
+  const subtitle = item.s && !containsHan(item.s)
+    ? item.s
+    : undefined;
+  const pathKeywords = item.h
+    .split(/[/?#_-]+/)
+    .filter(Boolean)
+    .join(" ");
+
+  return {
+    ...item,
+    t: title,
+    s: subtitle,
+    d: ENGLISH_RESULT_DESCRIPTIONS[item.m],
+    a: MODULE_TEXT_EN[item.m].action,
+    x: [
+      item.x,
+      normalize(title),
+      normalize(pathKeywords),
+      normalize(MODULE_TEXT_EN[item.m].title),
+    ].join(" "),
+  };
+}
 
 function normalize(value: string): string {
   return value
@@ -320,6 +441,14 @@ export default function GlobalSearchPanel({
   onQueryChange,
   onClose,
 }: GlobalSearchPanelProps) {
+  const isEnglish = locale === "en";
+  const moduleText = isEnglish
+    ? MODULE_TEXT_EN
+    : MODULE_TEXT;
+  const suggestions = isEnglish
+    ? INITIAL_SUGGESTIONS_EN
+    : INITIAL_SUGGESTIONS;
+
   const debouncedQuery = useDebouncedValue(
     query,
     SEARCH_DEBOUNCE_MS
@@ -477,14 +606,22 @@ export default function GlobalSearchPanel({
   const queryIsLongEnough =
     isSearchQueryLongEnough(debouncedQuery);
 
+  const displayItems = useMemo(() => {
+    if (!items || !isEnglish) {
+      return items;
+    }
+
+    return items.map(getEnglishSearchItem);
+  }, [isEnglish, items]);
+
   const groupedResults = useMemo(() => {
     const grouped = new Map<
       SearchModule,
       ScoredItem[]
     >();
 
-    for (const module of MODULE_ORDER) {
-      grouped.set(module, []);
+    for (const moduleId of MODULE_ORDER) {
+      grouped.set(moduleId, []);
     }
 
     const normalizedQuery =
@@ -493,12 +630,12 @@ export default function GlobalSearchPanel({
     if (
       !normalizedQuery ||
       !queryIsLongEnough ||
-      !items
+      !displayItems
     ) {
       return grouped;
     }
 
-    for (const item of items) {
+    for (const item of displayItems) {
       const score = scoreItem(
         item,
         normalizedQuery
@@ -512,9 +649,9 @@ export default function GlobalSearchPanel({
       });
     }
 
-    for (const module of MODULE_ORDER) {
+    for (const moduleId of MODULE_ORDER) {
       const moduleItems =
-        grouped.get(module) ?? [];
+        grouped.get(moduleId) ?? [];
 
       moduleItems.sort((a, b) => {
         return (
@@ -526,13 +663,13 @@ export default function GlobalSearchPanel({
         );
       });
 
-      grouped.set(module, moduleItems);
+      grouped.set(moduleId, moduleItems);
     }
 
     return grouped;
   }, [
     debouncedQuery,
-    items,
+    displayItems,
     queryIsLongEnough,
   ]);
 
@@ -577,7 +714,11 @@ export default function GlobalSearchPanel({
     <section
       className="global-search-panel"
       data-global-search-panel="true"
-      aria-label="全站搜索结果"
+      aria-label={
+        isEnglish
+          ? "Site search results"
+          : "全站搜索结果"
+      }
       style={{
         top: headerBottom,
       }}
@@ -591,12 +732,14 @@ export default function GlobalSearchPanel({
       <div className="global-search-panel-inner">
         <div className="global-search-panel-head">
           <div>
-            <span>全站搜索</span>
+            <span>{isEnglish ? "Site Search" : "全站搜索"}</span>
 
             <strong>
               {query.trim()
                 ? `“${query.trim()}”`
-                : "搜索产品与技术资料"}
+                : isEnglish
+                  ? "Search products and technical resources"
+                  : "搜索产品与技术资料"}
             </strong>
           </div>
 
@@ -606,14 +749,20 @@ export default function GlobalSearchPanel({
             !queryTooShort &&
             loadState === "ready" ? (
               <span>
-                共 {totalCount} 条结果
+                {isEnglish
+                  ? `${totalCount} results`
+                  : `共 ${totalCount} 条结果`}
               </span>
             ) : null}
 
             <button
               className="global-search-close"
               type="button"
-              aria-label="关闭全站搜索"
+              aria-label={
+                isEnglish
+                  ? "Close site search"
+                  : "关闭全站搜索"
+              }
               onClick={onClose}
             >
               ×
@@ -624,11 +773,13 @@ export default function GlobalSearchPanel({
         {!query.trim() ? (
           <div className="global-search-start">
             <p>
-              输入产品名称、型号、兼容型号、规格书、教程或技术关键词。
+              {isEnglish
+                ? "Search by product name, model, compatible model, datasheet, guide, or technical keyword."
+                : "输入产品名称、型号、兼容型号、规格书、教程或技术关键词。"}
             </p>
 
             <div className="global-search-suggestions">
-              {INITIAL_SUGGESTIONS.map(
+              {suggestions.map(
                 (suggestion) => (
                   <button
                     type="button"
@@ -645,27 +796,45 @@ export default function GlobalSearchPanel({
           </div>
         ) : showLoading ? (
           <div className="global-search-status">
-            正在搜索……
+            {isEnglish ? "Searching..." : "正在搜索……"}
           </div>
         ) : queryTooShort ? (
           <div className="global-search-status">
-            <strong>请继续输入关键词</strong>
+            <strong>
+              {isEnglish
+                ? "Enter another character"
+                : "请继续输入关键词"}
+            </strong>
             <p>
-              英文字母或数字至少输入 2 个字符；中文可输入 1 个字。
+              {isEnglish
+                ? "Enter at least two letters or numbers."
+                : "英文字母或数字至少输入 2 个字符；中文可输入 1 个字。"}
             </p>
           </div>
         ) : loadState === "error" ? (
           <div className="global-search-status">
-            <strong>搜索数据加载失败</strong>
+            <strong>
+              {isEnglish
+                ? "Search data could not be loaded"
+                : "搜索数据加载失败"}
+            </strong>
             <p>
-              请重新启动开发服务并刷新页面。
+              {isEnglish
+                ? "Refresh the page and try again."
+                : "请重新启动开发服务并刷新页面。"}
             </p>
           </div>
         ) : totalCount === 0 ? (
           <div className="global-search-status">
-            <strong>没有找到匹配结果</strong>
+            <strong>
+              {isEnglish
+                ? "No matching results"
+                : "没有找到匹配结果"}
+            </strong>
             <p>
-              请检查型号是否完整，或尝试产品名称、系列、材料及应用关键词。
+              {isEnglish
+                ? "Check the model number or try a product name, series, material, or application keyword."
+                : "请检查型号是否完整，或尝试产品名称、系列、材料及应用关键词。"}
             </p>
           </div>
         ) : (
@@ -698,11 +867,13 @@ export default function GlobalSearchPanel({
                 >
                   <div className="global-search-module-head">
                     <h2>
-                      {MODULE_TEXT[module].title}
+                      {moduleText[module].title}
                     </h2>
 
                     <span>
-                      {moduleResults.length} 条
+                      {isEnglish
+                        ? moduleResults.length
+                        : `${moduleResults.length} 条`}
                     </span>
                   </div>
 
@@ -784,7 +955,7 @@ export default function GlobalSearchPanel({
 
                             <span className="global-search-result-action">
                               {item.a ??
-                                MODULE_TEXT[module]
+                                moduleText[module]
                                   .action}
 
                               <span aria-hidden="true">
@@ -818,11 +989,15 @@ export default function GlobalSearchPanel({
                       }}
                     >
                       {allVisible
-                        ? "收起结果"
-                        : `查看更多（剩余 ${
-                            moduleResults.length -
-                            visibleCount
-                          } 条）`}
+                        ? isEnglish
+                          ? "Show Less"
+                          : "收起结果"
+                        : isEnglish
+                          ? `Show More (${moduleResults.length - visibleCount} remaining)`
+                          : `查看更多（剩余 ${
+                              moduleResults.length -
+                              visibleCount
+                            } 条）`}
                     </button>
                   ) : null}
                 </section>

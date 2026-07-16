@@ -21,9 +21,11 @@ import type { SelectionCartItemInput } from "@/components/selection-cart/selecti
 
 import SitePageShell from "@/components/layout/SitePageShell";
 import PdfDrawingPreview from "@/components/common/PdfDrawingPreview";
+import { usePathname } from "next/navigation";
 import { useMemo, useState } from "react";
 
 import type { CSSProperties, MouseEvent } from "react";
+import { localizeProductDetailData } from "@/data/products/detail/product-detail.intl";
 import type { ProductDetailPageData } from "@/data/products/detail/product-detail.types";
 import ProductModelViewer from "./ProductModelViewer";
 import styles from "./product-detail.module.css";
@@ -93,7 +95,9 @@ function getDisplayModelText(data: any): string {
   }
 
   if (isCustomInquiryMode(data)) {
-    return "定制配置请联系我们";
+    return data?.__locale === "en"
+      ? "Contact us for a custom configuration"
+      : "定制配置请联系我们";
   }
 
   return (data as any).displayModel || data.model || "";
@@ -158,7 +162,11 @@ function isHardTubeFittingDetailData(data: any): boolean {
 
 function getModelActionText(data: any): string {
   if (isTubingDetailData(data)) {
-    return "选择型号";
+    return data?.__locale === "en" ? "Select a Model" : "选择型号";
+  }
+
+  if (data?.__locale === "en") {
+    return isCustomInquiryMode(data) ? "Contact Us" : "Select a Model";
   }
 
   return isCustomInquiryMode(data) ? "联系我们" : "型号选择";
@@ -419,6 +427,15 @@ function getPlungerPumpBottomCta(data: any) {
   }
 
   if (isSyringePumpDetailData(data)) {
+    if (data?.__locale === "en") {
+      return {
+        title: "Syringe pumps configured for your fluidic system",
+        desc: "Share the syringe size, stroke, channel count, valve arrangement, communication interface, installation space, and fluidic integration requirements. The FOREACH engineering team can help confirm a suitable configuration.",
+        button: "Submit a Custom Request",
+        href: "/en/contact",
+      };
+    }
+
     return {
       title: "注射泵可根据您的液路与结构需求进行定制",
       desc: "恒永达可根据您的应用场景、注射器规格、行程平台、通道数量、阀门结构、通讯方式、安装空间和液路集成需求，协助确认适合自动化仪器集成的注射泵配置。",
@@ -428,6 +445,15 @@ function getPlungerPumpBottomCta(data: any) {
   }
 
   if (isValvelessPumpDetailData(data)) {
+    if (data?.__locale === "en") {
+      return {
+        title: "Valveless pumps configured for your fluidic requirements",
+        desc: "Share the target displacement, ratio requirements, fluid compatibility, port type, cleaning requirements, and installation space. The FOREACH engineering team can help confirm a suitable configuration.",
+        button: "Submit a Custom Request",
+        href: "/en/contact",
+      };
+    }
+
     return {
       title: "无阀泵可根据您的液路需求进行定制",
       desc: "恒永达可根据您的应用场景、目标排量、配比要求、液体兼容性、接口方式、清洗口和安装空间，协助确认适合自动化仪器集成的无阀泵配置。",
@@ -436,6 +462,15 @@ function getPlungerPumpBottomCta(data: any) {
     };
   }
   if (isPlungerPumpDetailData(data)) {
+    if (data?.__locale === "en") {
+      return {
+        title: "Plunger pumps configured for your instrument",
+        desc: "Share the target volume, fluid compatibility, port type, control method, installation space, and service-life requirements. The FOREACH engineering team can help confirm the pump configuration and wetted materials.",
+        button: "Submit a Custom Request",
+        href: "/en/contact",
+      };
+    }
+
     return {
       title: "柱塞泵可根据您的设备需求进行定制",
       desc: "恒永达可根据您的设备结构、目标容量、液体兼容性、接口方式、控制方式和使用寿命要求，协助确认柱塞泵配置、泵头材质、柱塞材质及液路集成方案，适用于 IVD 分析仪、实验室自动化设备和生命科学仪器中的精密液体处理场景。",
@@ -445,6 +480,15 @@ function getPlungerPumpBottomCta(data: any) {
   }
 
   if (isDiaphragmPumpDetailData(data)) {
+    if (data?.__locale === "en") {
+      return {
+        title: "Need help selecting a diaphragm pump?",
+        desc: "Share the fluid, flow rate, pressure, self-priming requirements, wetted materials, port type, and installation space. The FOREACH engineering team can help confirm a suitable diaphragm pump configuration.",
+        button: "Contact an Engineer",
+        href: "/en/contact",
+      };
+    }
+
     return {
       title: "不确定如何选择隔膜泵型号？",
       desc: "如果您不确定具体型号，可根据介质类型、流量、耐压、自吸能力、膜片材质、阀片材质、泵头材质、接口方式和安装空间等信息联系我们。恒永达可协助您确认适合自动化仪器液路的隔膜泵配置。",
@@ -454,6 +498,15 @@ function getPlungerPumpBottomCta(data: any) {
   }
 
   if (isPipettingPumpDetailData(data)) {
+    if (data?.__locale === "en") {
+      return {
+        title: "Need help selecting a pipetting pump?",
+        desc: "Share the volume range, tip specification, liquid-level and clog-detection requirements, communication interface, installation space, and control method. The FOREACH engineering team can help confirm a suitable configuration.",
+        button: "Contact an Engineer",
+        href: "/en/contact",
+      };
+    }
+
     return {
       title: "不确定如何选择移液泵型号？",
       desc: "如果您不确定具体型号，可根据量程、吸头规格、液面检测方式、堵塞检测需求、通讯接口、安装空间和控制方式等信息联系我们。恒永达可协助您确认适合自动化仪器液体处理模块的移液泵配置。",
@@ -489,8 +542,33 @@ if (isCustomInquiryMode(data)) {
   );
 }
 
+function localizeInternalHref(value: unknown, isEnglish: boolean): string {
+  const href = String(value || "").trim();
 
-function PlungerPumpBottomCta({ data }: { data: any }) {
+  if (
+    !isEnglish ||
+    !href.startsWith("/") ||
+    href.startsWith("/en/") ||
+    href === "/en" ||
+    href.startsWith("/assets/") ||
+    href.startsWith("/images/") ||
+    href.startsWith("/_next/") ||
+    href.startsWith("/api/")
+  ) {
+    return href;
+  }
+
+  return `/en${href}`;
+}
+
+
+function PlungerPumpBottomCta({
+  data,
+  isEnglish,
+}: {
+  data: any;
+  isEnglish: boolean;
+}) {
   const cta = getPlungerPumpBottomCta(data);
 
   if (!cta) {
@@ -504,7 +582,10 @@ function PlungerPumpBottomCta({ data }: { data: any }) {
           <h2>{cta.title}</h2>
           <p>{cta.desc}</p>
         </div>
-        <a className={styles.plungerBottomCtaButton} href={cta.href}>
+        <a
+          className={styles.plungerBottomCtaButton}
+          href={localizeInternalHref(cta.href, isEnglish)}
+        >
           {cta.button}
         </a>
       </div>
@@ -512,9 +593,303 @@ function PlungerPumpBottomCta({ data }: { data: any }) {
   );
 }
 
+const PRODUCT_SITE_ORIGIN = "https://www.foreachtek.com";
+
+function toAbsoluteProductUrl(value: unknown) {
+  const text = String(value || "").trim();
+
+  if (!text) {
+    return "";
+  }
+
+  if (/^https?:\/\//i.test(text)) {
+    return text;
+  }
+
+  return `${PRODUCT_SITE_ORIGIN}${text.startsWith("/") ? text : `/${text}`}`;
+}
+
+function collectProductImageUrls(data: any) {
+  const values: unknown[] = [
+    data.mainImage,
+    data.imageUrl,
+    data.image,
+    data.heroImage,
+    data.coverImage,
+    ...(Array.isArray(data.images) ? data.images : []),
+    ...(Array.isArray(data.galleryImages) ? data.galleryImages : []),
+  ];
+
+  const urls = values
+    .flatMap((value) => {
+      if (typeof value === "string") {
+        return [value];
+      }
+
+      if (value && typeof value === "object") {
+        const item = value as Record<string, unknown>;
+        return [item.src, item.url, item.path, item.fullPath];
+      }
+
+      return [];
+    })
+    .map(toAbsoluteProductUrl)
+    .filter(Boolean);
+
+  return Array.from(new Set(urls));
+}
+
+function collectProductSpecifications(data: any) {
+  const source = Array.isArray(data.specs)
+    ? data.specs
+    : Array.isArray(data.specificationGroups)
+      ? data.specificationGroups
+      : [];
+  const rows: Array<{ name: string; value: string }> = [];
+
+  function visit(value: unknown) {
+    if (Array.isArray(value)) {
+      value.forEach(visit);
+      return;
+    }
+
+    if (!value || typeof value !== "object") {
+      return;
+    }
+
+    const item = value as Record<string, unknown>;
+    const name = String(
+      item.label || item.name || item.title || ""
+    ).trim();
+    const itemValue = String(
+      item.value || item.content || item.text || ""
+    ).trim();
+
+    if (name && itemValue) {
+      rows.push({ name, value: itemValue });
+    }
+
+    Object.entries(item).forEach(([key, child]) => {
+      if (!["label", "name", "title", "value", "content", "text"].includes(key)) {
+        visit(child);
+      }
+    });
+  }
+
+  visit(source);
+
+  return Array.from(
+    new Map(rows.map((row) => [`${row.name}::${row.value}`, row])).values()
+  );
+}
+
+function buildProductStructuredData(data: any, pathname: string) {
+  const canonicalUrl = toAbsoluteProductUrl(pathname || "/");
+  const productName = String(
+    data.model || data.title || data.name || ""
+  ).trim();
+  const description = String(data.description || "").trim();
+  const imageUrls = collectProductImageUrls(data);
+  const applications = Array.isArray(data.commonApplications)
+    ? data.commonApplications.filter(Boolean).map(String)
+    : [];
+  const specifications = collectProductSpecifications(data);
+  const faqs: Array<{ question: string; answer: string }> = Array.isArray(data.faqs)
+    ? data.faqs
+        .map((item: any) => ({
+          question: String(item?.question || "").trim(),
+          answer: String(item?.answer || "").trim(),
+        }))
+        .filter((item: { question: string; answer: string }) =>
+          item.question && item.answer
+        )
+    : [];
+  const category = String(
+    data.categoryLabel || data.productTypeName || ""
+  ).trim();
+
+  const product: Record<string, unknown> = {
+    "@type": "Product",
+    "@id": `${canonicalUrl}#product`,
+    name: productName,
+    url: canonicalUrl,
+    description,
+    brand: {
+      "@type": "Brand",
+      name: "FOREACH",
+    },
+    manufacturer: {
+      "@type": "Organization",
+      name: "Shenzhen FOREACH Technology Co., Ltd.",
+      url: PRODUCT_SITE_ORIGIN,
+    },
+  };
+
+  if (data.productCode || data.seriesCode) {
+    product.sku = String(data.productCode || data.seriesCode);
+  }
+
+  if (category) {
+    product.category = category;
+  }
+
+  if (imageUrls.length > 0) {
+    product.image = imageUrls;
+  }
+
+  if (specifications.length > 0) {
+    product.additionalProperty = specifications.map((item) => ({
+      "@type": "PropertyValue",
+      name: item.name,
+      value: item.value,
+    }));
+  }
+
+  const graph: Record<string, unknown>[] = [
+    product,
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${canonicalUrl}#breadcrumb`,
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: toAbsoluteProductUrl("/en/"),
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Products",
+          item: toAbsoluteProductUrl("/en/products/"),
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: productName,
+          item: canonicalUrl,
+        },
+      ],
+    },
+  ];
+
+  if (faqs.length > 0) {
+    graph.push({
+      "@type": "FAQPage",
+      "@id": `${canonicalUrl}#faq`,
+      mainEntity: faqs.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.answer,
+        },
+      })),
+    });
+  }
+
+  if (applications.length > 0) {
+    product.keywords = applications.join(", ");
+  }
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": graph,
+  };
+}
+
 export default function ProductDetailClient({
-  data,
+  data: sourceData,
 }: ProductDetailClientProps) {
+  const pathname = usePathname();
+  const isEnglish = pathname === "/en" || pathname.startsWith("/en/");
+  const data = useMemo(
+    () =>
+      isEnglish
+        ? localizeProductDetailData(sourceData)
+        : sourceData,
+    [isEnglish, sourceData]
+  );
+  const structuredData = useMemo(
+    () =>
+      isEnglish
+        ? buildProductStructuredData(data, pathname || "/")
+        : null,
+    [data, isEnglish, pathname]
+  );
+  const copy = isEnglish
+    ? {
+        breadcrumb: "Breadcrumb navigation",
+        home: "Home",
+        products: "Products",
+        gallery: "Product gallery",
+        thumbnails: "Product thumbnails",
+        previous: "Previous image",
+        next: "Next image",
+        frontView: "Front view",
+        sideView: "Side view",
+        portDetail: "Port detail",
+        applications: "Typical Applications:",
+        model: "Model:",
+        configurator: "Configure",
+        datasheet: "Add Datasheet",
+        drawing: "Add Drawing",
+        drawingAdded: "Drawing Added",
+        request3d: "Request 3D File",
+        addToList: "Add to List",
+        addedToList: "Added to List",
+        tabs: "Product resources",
+        specifications: "Specifications",
+        model3d: "3D Model",
+        technicalDrawing: "Technical Drawing",
+        noDrawing: "No public technical drawing is available for this product.",
+        completeModels: "Complete Model Numbers",
+        foreachModel: "FOREACH Model",
+        productCode: "Product Code",
+        connection: "Tube ID or Thread",
+        gender: "Gender",
+        mounting: "Mounting Method",
+        valved: "Valve Configuration",
+        shape: "Shape",
+        housingMaterial: "Housing Material",
+        faq: "Frequently Asked Questions",
+      }
+    : {
+        breadcrumb: "面包屑导航",
+        home: "首页",
+        products: "产品中心",
+        gallery: "产品图片区域",
+        thumbnails: "缩略图区域",
+        previous: "上一张",
+        next: "下一张",
+        frontView: "主视图",
+        sideView: "侧视图",
+        portDetail: "接口细节",
+        applications: "常见应用：",
+        model: "型号：",
+        configurator: "配置选择",
+        datasheet: "添加规格书",
+        drawing: "添加图纸",
+        drawingAdded: "已添加图纸",
+        request3d: "申请3D文件",
+        addToList: "加入清单",
+        addedToList: "已加入清单",
+        tabs: "产品资料切换",
+        specifications: "规格",
+        model3d: "3D模型",
+        technicalDrawing: "零件图",
+        noDrawing: "当前产品尚未配置公开零件图。",
+        completeModels: "完整型号",
+        foreachModel: "恒永达型号",
+        productCode: "商品编码",
+        connection: "接管内径或螺纹",
+        gender: "公母端",
+        mounting: "安装方式",
+        valved: "阀门配置",
+        shape: "形状",
+        housingMaterial: "外壳材质",
+        faq: "常见问题",
+      };
     const { addItem, getItem, toggleDrawingNeed, removeItem } = useSelectionCart();
 
 const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
@@ -634,17 +1009,25 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
     ).trim();
 
     const productName = isPlungerPumpDetailData(data)
-      ? "柱塞泵"
+      ? isEnglish
+        ? "Plunger Pump"
+        : "柱塞泵"
       : String(
           data.productTypeName ||
             data.productTypeLabel ||
             data.seriesName ||
             data.series ||
             (isDiaphragmPumpDetailData(data)
-              ? "隔膜泵"
+              ? isEnglish
+                ? "Diaphragm Pump"
+                : "隔膜泵"
               : isPipettingPumpDetailData(data)
-                ? "移液泵"
-                : "产品")
+                ? isEnglish
+                  ? "Pipetting Pump"
+                  : "移液泵"
+                : isEnglish
+                  ? "Product"
+                  : "产品")
         ).trim();
 
     const fallbackDetailHref = data.slug
@@ -661,7 +1044,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
 
     return {
       sourceType: "pump-selection",
-      sourceLabel: "产品详情页",
+      sourceLabel: isEnglish ? "Product Detail Page" : "产品详情页",
       productName,
       productCode,
       foreachModel: modelText,
@@ -678,7 +1061,9 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
       detailHref:
         data.detailHref ||
         data.href ||
-        fallbackDetailHref,
+        (isEnglish && fallbackDetailHref
+          ? `/en${fallbackDetailHref}`
+          : fallbackDetailHref),
     };
   }
 
@@ -737,16 +1122,24 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
 
   return (
     <div data-product-breadcrumb-shell="true">
+      {structuredData ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+          }}
+        />
+      ) : null}
 <SitePageShell
-      breadcrumbAriaLabel="面包屑导航"
+      breadcrumbAriaLabel={copy.breadcrumb}
       breadcrumbItems={[
         {
-          label: "首页",
-          href: "/",
+          label: copy.home,
+          href: isEnglish ? "/en/" : "/",
         },
         {
-          label: "产品中心",
-          href: "/products/",
+          label: copy.products,
+          href: isEnglish ? "/en/products/" : "/products/",
         },
         {
           label: data.model,
@@ -757,7 +1150,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
       <div className={styles.container}>
         
         <section className={styles.productTop}>
-          <div data-product-gallery="true" className={styles.gallery} aria-label="产品图片区域">
+          <div data-product-gallery="true" className={styles.gallery} aria-label={copy.gallery}>
             <div data-product-main-stage="true"
               className={[
                 styles.mainImage,
@@ -876,11 +1269,16 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
             </div>
 
             {showThumbnailRow ? (
-              <div data-product-thumb-row="true" className={styles.thumbRow} aria-label="缩略图区域">
+              <div
+                data-product-thumb-row="true"
+                data-detail-locale={isEnglish ? "en" : "zh"}
+                className={styles.thumbRow}
+                aria-label={copy.thumbnails}
+              >
                 <button
                   className={styles.thumbArrow}
                   type="button"
-                  aria-label="上一张"
+                  aria-label={copy.previous}
                   onClick={handlePreviousThumb}
                 >
                   ‹
@@ -912,7 +1310,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                         .filter(Boolean)
                         .join(" ")}
                       type="button"
-                      aria-label="主视图"
+                      aria-label={copy.frontView}
                       onClick={() => setActiveThumb(0)}
                     >
                       <svg viewBox="0 0 120 70" aria-hidden="true">
@@ -940,7 +1338,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                         .filter(Boolean)
                         .join(" ")}
                       type="button"
-                      aria-label="侧视图"
+                      aria-label={copy.sideView}
                       onClick={() => setActiveThumb(1)}
                     >
                       <svg viewBox="0 0 120 70" aria-hidden="true">
@@ -971,7 +1369,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                         .filter(Boolean)
                         .join(" ")}
                       type="button"
-                      aria-label="接口细节"
+                      aria-label={copy.portDetail}
                       onClick={() => setActiveThumb(2)}
                     >
                       <svg viewBox="0 0 120 70" aria-hidden="true">
@@ -997,7 +1395,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                 <button
                   className={styles.thumbArrow}
                   type="button"
-                  aria-label="下一张"
+                  aria-label={copy.next}
                   onClick={handleNextThumb}
                 >
                   ›
@@ -1016,9 +1414,13 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
             </p>
 
             <div className={styles.application}>
-              <p className={styles.applicationTitle}>{getDbSectionTitle("applications", "常见应用：")}</p>
+              <p className={styles.applicationTitle}>
+                {isEnglish
+                  ? copy.applications
+                  : getDbSectionTitle("applications", copy.applications)}
+              </p>
               <p className={styles.applicationText}>
-                {data.commonApplications.join("、")}
+                {data.commonApplications.join(isEnglish ? ", " : "、")}
               </p>
             </div>
 
@@ -1026,14 +1428,17 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
               <div data-product-model-row="true" className={styles.modelLine}>
                 <div className={styles.modelCodeWrap}>
                   <div className={styles.modelCodeText}>
-                    <span className={styles.modelLabel}>型号：</span>
+                    <span className={styles.modelLabel}>{copy.model}</span>
                     <span className={styles.modelCode}>{getDisplayModelText(data)}</span>
                   </div>
                   <button
                     className={styles.button}
                     type="button"
                     onClick={() => {
-                      const href = getModelActionHref(data);
+                      const href = localizeInternalHref(
+                        getModelActionHref(data),
+                        isEnglish,
+                      );
 
                       if (isCustomInquiryMode(data)) {
                         window.location.href = href;
@@ -1053,7 +1458,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                     type="button"
                     onClick={handleOpenConfigurator}
                   >
-                    配置选择
+                    {copy.configurator}
                   </button>
                 ) : null}
               </div>
@@ -1065,7 +1470,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                     type="button"
                     onClick={handleAddDatasheet}
                   >
-                    添加规格书
+                    {copy.datasheet}
                   </button>
                 ) : null}
 
@@ -1076,7 +1481,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                     aria-pressed={isDetailDrawingSelected}
                     onClick={handleAddDrawing}
                   >
-                    {isDetailDrawingSelected ? "已添加图纸" : "添加图纸"}
+                    {isDetailDrawingSelected ? copy.drawingAdded : copy.drawing}
                   </button>
                 ) : null}
 
@@ -1086,7 +1491,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                     type="button"
                     onClick={handleRequest3DFile}
                   >
-                    申请3D文件
+                    {copy.request3d}
                   </button>
                 ) : null}
 
@@ -1096,7 +1501,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                   aria-pressed={isDetailProductSelected}
                   onClick={handleAddList}
                 >
-                  {isDetailProductSelected ? "已加入清单" : "加入清单"}
+                  {isDetailProductSelected ? copy.addedToList : copy.addToList}
                 </button>
               </div>
             </div>
@@ -1104,7 +1509,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
         </section>
 
         <section className={styles.detailSection}>
-          <nav className={styles.tabNav} aria-label="产品资料切换">
+          <nav className={styles.tabNav} aria-label={copy.tabs}>
             <button
               className={[
                 styles.tabButton,
@@ -1115,7 +1520,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
               type="button"
               onClick={() => setActiveTab("spec")}
             >
-              规格
+              {copy.specifications}
             </button>
 
             <button
@@ -1128,7 +1533,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
               type="button"
               onClick={() => setActiveTab("model3d")}
             >
-              3D模型
+              {copy.model3d}
             </button>
 
             <button
@@ -1141,7 +1546,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
               type="button"
               onClick={() => setActiveTab("drawing")}
             >
-              零件图
+              {copy.technicalDrawing}
             </button>
           </nav>
 
@@ -1189,6 +1594,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                   slug={data.slug}
                   modelName={data.model}
                   modelUrl={(data as any).model3dUrl || (data as any).resources?.model3dUrl}
+                  locale={isEnglish ? "en" : "zh"}
                 />
               </div>
             </div>
@@ -1205,10 +1611,20 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                 <PdfDrawingPreview
                   pdfPreviewUrl={getProductDrawingPreviewUrl(data.slug, (data as any).drawing2dUrl || (data as any).drawingPdfUrl || (data as any).partDrawingUrl || (data as any).resources?.drawing2dUrl)}
                   documentTitle={data.model}
+                  text={
+                    isEnglish
+                      ? {
+                          title: "Technical Drawing",
+                          loadingLabel: "Loading drawing...",
+                          previewButton: "Preview Drawing",
+                          description: `View the technical drawing for ${data.model}.`,
+                        }
+                      : undefined
+                  }
                 />
               ) : (
                 <div className={styles.panelBox}>
-                  当前产品尚未配置公开 零件图。
+                  {copy.noDrawing}
                 </div>
               )}
             </div>
@@ -1224,7 +1640,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
             <div className={styles.faqHeader}>
               <h2>
                 {(data as any).modelTableTitle ||
-                  "完整型号"}
+                  copy.completeModels}
               </h2>
         
               {(data as any).modelTableDescription ? (
@@ -1238,14 +1654,14 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
               <table className={styles.specTable}>
                 <thead>
                   <tr>
-                    <th>恒永达型号</th>
-                    <th>商品编码</th>
-                    <th>接管内径或螺纹</th>
-                    <th>公母端</th>
-                    <th>安装方式</th>
-                    <th>阀门配置</th>
-                    <th>形状</th>
-                    <th>外壳材质</th>
+                    <th>{copy.foreachModel}</th>
+                    <th>{copy.productCode}</th>
+                    <th>{copy.connection}</th>
+                    <th>{copy.gender}</th>
+                    <th>{copy.mounting}</th>
+                    <th>{copy.valved}</th>
+                    <th>{copy.shape}</th>
+                    <th>{copy.housingMaterial}</th>
                   </tr>
                 </thead>
         
@@ -1286,7 +1702,11 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
 <>
 <section className={styles.faqSection}>
             <div className={styles.faqHeader}>
-              <h2>{getDbSectionTitle("faq", "常见问题")}</h2>
+              <h2>
+                {isEnglish
+                  ? copy.faq
+                  : getDbSectionTitle("faq", copy.faq)}
+              </h2>
             </div>
 
             <div className={styles.faqList}>
@@ -1335,7 +1755,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
             </div>
           </section>
 
-          <PlungerPumpBottomCta data={data} />
+          <PlungerPumpBottomCta data={data} isEnglish={isEnglish} />
           </>
         ) : null}
 

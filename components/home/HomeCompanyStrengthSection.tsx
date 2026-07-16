@@ -138,6 +138,11 @@ export default function HomeCompanyStrengthSection({ // 定义并导出首页公
   videoAriaLabel={getHomeCompanyText(aboutData.videoAriaLabel, locale)} // 传入视频区域无障碍说明
   videoPlayAriaLabel={getHomeCompanyText(aboutData.videoPlayAriaLabel, locale)} // 传入播放按钮无障碍说明
   posterAlt={getHomeCompanyText(companyVideoData.posterAlt, locale)} // 传入视频封面 alt 文案，现在从 video.posterAlt 读取
+  fallbackText={
+    locale === "zh-CN"
+      ? "当前浏览器不支持视频播放。"
+      : "Your browser does not support video playback."
+  }
 />
             </div> {/* 左侧：标题 + 公司视频结束 */}
 

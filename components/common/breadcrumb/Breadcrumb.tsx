@@ -23,11 +23,13 @@ export interface BreadcrumbItem {
 interface BreadcrumbProps {
   items: BreadcrumbItem[];
   className?: string;
+  ariaLabel?: string;
 }
 
 export default function Breadcrumb({
   items,
   className,
+  ariaLabel = "面包屑导航",
 }: BreadcrumbProps) {
   if (!items.length) {
     return null;
@@ -36,7 +38,7 @@ export default function Breadcrumb({
   return (
     <nav
       className={`${styles.breadcrumb}${className ? ` ${className}` : ""}`}
-      aria-label="面包屑导航"
+      aria-label={ariaLabel}
     >
       {items.map((item, index) => {
         const isLast = index === items.length - 1;

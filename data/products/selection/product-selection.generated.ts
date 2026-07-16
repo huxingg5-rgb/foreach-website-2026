@@ -1,4 +1,4 @@
-﻿/* =========================================================
+/* =========================================================
    product-selection.generated.ts
    产品中心｜选型页自动生成数据
 
@@ -880,7 +880,7 @@ export const selectionTaxonomyItems: ProductSelectionTaxonomyItem[] = [
     "id": "needles",
     "label": {
       "zh": "针系列",
-      "en": "Needles",
+      "en": "Probes",
       "es": "",
       "fr": "",
       "ko": "",

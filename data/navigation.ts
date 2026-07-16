@@ -812,11 +812,11 @@ const applicationMegaDropdown: MegaDropdown = {
       ),
       href: localizedPath("/applications/analytical-instruments"),
       images: [
-        applicationSceneImage("/images/applications/mega-menu/ivd-biochemistry.webp", t("生化分析仪", "Clinical Chemistry Analyzer", "Analizador bioquímico", "Analyseur de biochimie", "생화학 분석기", "Биохимический анализатор"), t("样本、试剂、清洗与废液处理液路", "Sample, reagent, washing, and waste fluidics", "Muestra, reactivo, lavado y residuos", "Échantillon, réactif, lavage et déchets", "샘플, 시약, 세척 및 폐액 유로", "Образцы, реагенты, промывка и отходы"), localizedPath("/applications/ivd?instrument=clinical")),
-        applicationSceneImage("/images/applications/mega-menu/ivd-immunoassay.webp", t("化学发光 / 免疫分析仪", "CLIA / Immunoassay Analyzer", "Analizador CLIA / inmunoensayo", "Analyseur CLIA / immunoessai", "화학발광 / 면역 분석기", "Хемилюминесцентный / иммунологический анализатор"), t("多试剂分配、磁珠清洗与底物添加液路", "Multi-reagent dispensing, bead washing, and substrate addition", "Reactivos, lavado de perlas y sustrato", "Réactifs, billes magnétiques et substrat", "다중 시약, 비드 세척 및 기질 첨가", "Реагенты, промывка частиц и субстрат"), localizedPath("/applications/ivd?instrument=immunoassay")),
-        applicationSceneImage("/images/applications/mega-menu/ivd-hematology.webp", t("血液分析仪", "Hematology Analyzer", "Analizador hematológico", "Analyseur d’hématologie", "혈액 분석기", "Гематологический анализатор"), t("血样稀释、溶血剂添加与废液排放液路", "Blood dilution, lysing reagent addition, and waste discharge", "Dilución de sangre, lisante y residuos", "Dilution du sang, lyseur et déchets", "혈액 희석, 용혈제 및 폐액 배출", "Разбавление крови, лизирующий реагент и отходы"), localizedPath("/applications/ivd?instrument=hematology")),
-        applicationSceneImage("/images/applications/mega-menu/ivd-coagulation.webp", t("凝血分析仪", "Coagulation Analyzer", "Analizador de coagulación", "Analyseur de coagulation", "혈액응고 분석기", "Коагулометр"), t("小体积样本与凝血试剂稳定分配", "Stable dispensing of small-volume samples and coagulation reagents", "Muestras pequeñas y reactivos de coagulación", "Petits échantillons et réactifs de coagulation", "소량 샘플 및 응고 시약 분주", "Малые образцы и реагенты коагуляции"), localizedPath("/applications/ivd?instrument=coagulation")),
-        applicationSceneImage("/images/applications/mega-menu/ivd-molecular.webp", t("分子诊断 / PCR", "Molecular Diagnostics / PCR", "Diagnóstico molecular / PCR", "Diagnostic moléculaire / PCR", "분자진단 / PCR", "Молекулярная диагностика / PCR"), t("核酸提取、清洗、洗脱与防污染液路", "Nucleic acid extraction, washing, elution, and contamination control", "Extracción, lavado, elución y control de contaminación", "Extraction, lavage, élution et contrôle de contamination", "핵산 추출, 세척, 용출 및 오염 제어", "Экстракция, промывка, элюирование и контроль загрязнения"), localizedPath("/applications/ivd?instrument=molecular")),
+        applicationSceneImage("/images/application-center/ivd-biochemistry-analyzer.webp", t("生化分析仪", "Clinical Chemistry Analyzer", "Analizador bioquímico", "Analyseur de biochimie", "생화학 분석기", "Биохимический анализатор"), t("样本、试剂、清洗与废液处理液路", "Sample, reagent, washing, and waste fluidics", "Muestra, reactivo, lavado y residuos", "Échantillon, réactif, lavage et déchets", "샘플, 시약, 세척 및 폐액 유로", "Образцы, реагенты, промывка и отходы"), localizedPath("/applications/ivd?instrument=clinical")),
+        applicationSceneImage("/images/application-center/ivd-chemiluminescence-immunoassay.webp", t("化学发光 / 免疫分析仪", "CLIA / Immunoassay Analyzer", "Analizador CLIA / inmunoensayo", "Analyseur CLIA / immunoessai", "화학발광 / 면역 분석기", "Хемилюминесцентный / иммунологический анализатор"), t("多试剂分配、磁珠清洗与底物添加液路", "Multi-reagent dispensing, bead washing, and substrate addition", "Reactivos, lavado de perlas y sustrato", "Réactifs, billes magnétiques et substrat", "다중 시약, 비드 세척 및 기질 첨가", "Реагенты, промывка частиц и субстрат"), localizedPath("/applications/ivd?instrument=immunoassay")),
+        applicationSceneImage("/images/application-center/ivd-hematology-analyzer.webp", t("血液分析仪", "Hematology Analyzer", "Analizador hematológico", "Analyseur d’hématologie", "혈액 분석기", "Гематологический анализатор"), t("血样稀释、溶血剂添加与废液排放液路", "Blood dilution, lysing reagent addition, and waste discharge", "Dilución de sangre, lisante y residuos", "Dilution du sang, lyseur et déchets", "혈액 희석, 용혈제 및 폐액 배출", "Разбавление крови, лизирующий реагент и отходы"), localizedPath("/applications/ivd?instrument=hematology")),
+        applicationSceneImage("/images/application-center/ivd-coagulation-analyzer.webp", t("凝血分析仪", "Coagulation Analyzer", "Analizador de coagulación", "Analyseur de coagulation", "혈액응고 분석기", "Коагулометр"), t("小体积样本与凝血试剂稳定分配", "Stable dispensing of small-volume samples and coagulation reagents", "Muestras pequeñas y reactivos de coagulación", "Petits échantillons et réactifs de coagulation", "소량 샘플 및 응고 시약 분주", "Малые образцы и реагенты коагуляции"), localizedPath("/applications/ivd?instrument=coagulation")),
+        applicationSceneImage("/images/application-center/ivd-molecular-diagnostics-pcr.webp", t("分子诊断 / PCR", "Molecular Diagnostics / PCR", "Diagnóstico molecular / PCR", "Diagnostic moléculaire / PCR", "분자진단 / PCR", "Молекулярная диагностика / PCR"), t("核酸提取、清洗、洗脱与防污染液路", "Nucleic acid extraction, washing, elution, and contamination control", "Extracción, lavado, elución y control de contaminación", "Extraction, lavage, élution et contrôle de contamination", "핵산 추출, 세척, 용출 및 오염 제어", "Экстракция, промывка, элюирование и контроль загрязнения"), localizedPath("/applications/ivd?instrument=molecular")),
       ],
       order: 1,
       enabled: true,
@@ -837,7 +837,7 @@ const applicationMegaDropdown: MegaDropdown = {
       href: localizedPath("/applications/life-science"),
       images: [
         applicationSceneImage(
-          "/images/applications/mega-menu/life-nucleic-acid.webp",
+          "/images/application-center/life-science-gene-sequencing-sample-preparation.webp",
           t(
             "基因测序 / 样本制备",
             "Genomics / Sample Preparation",
@@ -857,7 +857,7 @@ const applicationMegaDropdown: MegaDropdown = {
           localizedPath("/applications/life-science?application=genomics"),
         ),
         applicationSceneImage(
-          "/images/applications/mega-menu/life-cell-analysis.webp",
+          "/images/application-center/life-science-cell-culture-cell-therapy.webp",
           t(
             "细胞培养 / 细胞治疗",
             "Cell Culture / Cell Therapy",
@@ -877,7 +877,7 @@ const applicationMegaDropdown: MegaDropdown = {
           localizedPath("/applications/life-science?application=cellCulture"),
         ),
         applicationSceneImage(
-          "/images/applications/mega-menu/life-sample-prep.webp",
+          "/images/application-center/life-science-laboratory-automation-workstation.webp",
           t(
             "实验室自动化工作站",
             "Laboratory Automation Workstation",
@@ -897,7 +897,7 @@ const applicationMegaDropdown: MegaDropdown = {
           localizedPath("/applications/life-science?application=automation"),
         ),
         applicationSceneImage(
-          "/images/applications/mega-menu/life-protein-analysis.webp",
+          "/images/application-center/life-science-protein-antibody-analysis.webp",
           t(
             "蛋白 / 抗体分析",
             "Protein / Antibody Analysis",
@@ -917,7 +917,7 @@ const applicationMegaDropdown: MegaDropdown = {
           localizedPath("/applications/life-science?application=protein"),
         ),
         applicationSceneImage(
-          "/images/applications/mega-menu/life-microfluidic-platform.webp",
+          "/images/application-center/life-science-synthetic-biology-bioprocess.webp",
           t(
             "合成生物学 / 生物工艺",
             "Synthetic Biology / Bioprocess",
@@ -956,7 +956,7 @@ const applicationMegaDropdown: MegaDropdown = {
       href: localizedPath("/applications/lab-automation"),
       images: [
         applicationSceneImage(
-          "/images/applications/mega-menu/lab-sample-processing.webp",
+          "/images/application-center/lab-automation-sample-preparation-workstation.webp",
           t(
             "样本制备工作站",
             "Sample Preparation Workstation",
@@ -976,7 +976,7 @@ const applicationMegaDropdown: MegaDropdown = {
           localizedPath("/applications/lab-automation?application=samplePrep"),
         ),
         applicationSceneImage(
-          "/images/applications/mega-menu/lab-pipetting-workstation.webp",
+          "/images/application-center/lab-automation-liquid-handling-platform.webp",
           t(
             "自动移液平台",
             "Automated Pipetting Platform",
@@ -996,7 +996,7 @@ const applicationMegaDropdown: MegaDropdown = {
           localizedPath("/applications/lab-automation?application=pipetting"),
         ),
         applicationSceneImage(
-          "/images/applications/mega-menu/lab-microplate-processing.webp",
+          "/images/application-center/lab-automation-microplate-processing.webp",
           t(
             "微孔板处理设备",
             "Microplate Processing Systems",
@@ -1016,7 +1016,7 @@ const applicationMegaDropdown: MegaDropdown = {
           localizedPath("/applications/lab-automation?application=microplate"),
         ),
         applicationSceneImage(
-          "/images/applications/mega-menu/lab-reagent-dispensing.webp",
+          "/images/application-center/lab-automation-reagent-dispensing.webp",
           t(
             "试剂分装与分配设备",
             "Reagent Dispensing Systems",
@@ -1036,7 +1036,7 @@ const applicationMegaDropdown: MegaDropdown = {
           localizedPath("/applications/lab-automation?application=reagentDispensing"),
         ),
         applicationSceneImage(
-          "/images/applications/mega-menu/lab-integrated-system.webp",
+          "/images/application-center/lab-automation-system-integration.webp",
           t(
             "自动化系统集成",
             "Automation System Integration",
@@ -1075,7 +1075,7 @@ const applicationMegaDropdown: MegaDropdown = {
       href: localizedPath("/applications/analytical-instruments"),
       images: [
         applicationSceneImage(
-          "/images/applications/mega-menu/analytical-chromatography.webp",
+          "/images/application-center/analytical-chromatography-autosampler.webp",
           t(
             "色谱 / 自动进样系统",
             "Chromatography / Autosampler",
@@ -1095,7 +1095,7 @@ const applicationMegaDropdown: MegaDropdown = {
           localizedPath("/applications/analytical-instruments?application=chromatography"),
         ),
         applicationSceneImage(
-          "/images/applications/mega-menu/analytical-spectroscopy.webp",
+          "/images/application-center/analytical-spectroscopy-elemental-analysis.webp",
           t(
             "光谱 / 元素分析仪器",
             "Spectroscopy / Elemental Analysis",
@@ -1115,7 +1115,7 @@ const applicationMegaDropdown: MegaDropdown = {
           localizedPath("/applications/analytical-instruments?application=spectroscopy"),
         ),
         applicationSceneImage(
-          "/images/applications/mega-menu/analytical-titration.webp",
+          "/images/application-center/analytical-water-environment-monitoring.webp",
           t(
             "水质 / 环境监测设备",
             "Water Quality / Environmental Monitoring",
@@ -1135,7 +1135,7 @@ const applicationMegaDropdown: MegaDropdown = {
           localizedPath("/applications/analytical-instruments?application=waterQuality"),
         ),
         applicationSceneImage(
-          "/images/applications/mega-menu/analytical-ms-pretreatment.webp",
+          "/images/application-center/analytical-sample-pretreatment.webp",
           t(
             "样品前处理设备",
             "Sample Preparation Systems",
@@ -1155,7 +1155,7 @@ const applicationMegaDropdown: MegaDropdown = {
           localizedPath("/applications/analytical-instruments?application=samplePrep"),
         ),
         applicationSceneImage(
-          "/images/applications/mega-menu/analytical-online-system.webp",
+          "/images/application-center/analytical-laboratory-system-integration.webp",
           t(
             "实验室分析系统集成",
             "Laboratory Analyzer System Integration",
@@ -1194,7 +1194,7 @@ const applicationMegaDropdown: MegaDropdown = {
       href: localizedPath("/applications/environmental-monitoring"),
       images: [
         applicationSceneImage(
-          "/images/applications/mega-menu/environment-water-monitoring.webp",
+          "/images/application-center/water-quality-online-monitoring.webp",
           t(
             "水质在线监测",
             "Water Quality Monitoring",
@@ -1214,7 +1214,7 @@ const applicationMegaDropdown: MegaDropdown = {
           localizedPath("/applications/environmental-monitoring?application=waterQuality"),
         ),
         applicationSceneImage(
-          "/images/applications/mega-menu/environment-pretreatment.webp",
+          "/images/application-center/wastewater-industrial-process-water.webp",
           t(
             "废水 / 工业过程水",
             "Wastewater / Process Water",
@@ -1234,7 +1234,7 @@ const applicationMegaDropdown: MegaDropdown = {
           localizedPath("/applications/environmental-monitoring?application=wastewater"),
         ),
         applicationSceneImage(
-          "/images/applications/mega-menu/environment-gas-analysis.webp",
+          "/images/application-center/flue-gas-gas-pretreatment.webp",
           t(
             "烟气 / 气体预处理",
             "Flue Gas / Gas Pretreatment",
@@ -1254,7 +1254,7 @@ const applicationMegaDropdown: MegaDropdown = {
           localizedPath("/applications/environmental-monitoring?application=gasPretreatment"),
         ),
         applicationSceneImage(
-          "/images/applications/mega-menu/environment-auto-sampling.webp",
+          "/images/application-center/environmental-sampling-pretreatment.webp",
           t(
             "环境采样与前处理",
             "Environmental Sampling & Pretreatment",
@@ -1274,7 +1274,7 @@ const applicationMegaDropdown: MegaDropdown = {
           localizedPath("/applications/environmental-monitoring?application=samplingPrep"),
         ),
         applicationSceneImage(
-          "/images/applications/mega-menu/environment-portable-device.webp",
+          "/images/application-center/environmental-online-system-integration.webp",
           t(
             "环保在线系统集成",
             "Online Environmental System Integration",
@@ -1313,7 +1313,7 @@ const applicationMegaDropdown: MegaDropdown = {
       href: localizedPath("/applications/synthetic-biology"),
       images: [
         applicationSceneImage(
-          "/images/applications/mega-menu/synthetic-bioreactor.webp",
+          "/images/application-center/miniature-bioreactor.webp",
           t(
             "微型生物反应器",
             "Micro Bioreactor",
@@ -1333,7 +1333,7 @@ const applicationMegaDropdown: MegaDropdown = {
           localizedPath("/applications/synthetic-biology?application=microBioreactor"),
         ),
         applicationSceneImage(
-          "/images/applications/mega-menu/synthetic-high-throughput.webp",
+          "/images/application-center/automated-build-screening-platform.webp",
           t(
             "自动化构建与筛选平台",
             "Automated Build & Screening Platform",
@@ -1353,7 +1353,7 @@ const applicationMegaDropdown: MegaDropdown = {
           localizedPath("/applications/synthetic-biology?application=biofoundry"),
         ),
         applicationSceneImage(
-          "/images/applications/mega-menu/synthetic-auto-culture.webp",
+          "/images/application-center/feeding-culture-control-system.webp",
           t(
             "补料与培养控制系统",
             "Feeding & Culture Control System",
@@ -1373,7 +1373,7 @@ const applicationMegaDropdown: MegaDropdown = {
           localizedPath("/applications/synthetic-biology?application=feedingControl"),
         ),
         applicationSceneImage(
-          "/images/applications/mega-menu/synthetic-microfluidic-platform.webp",
+          "/images/application-center/online-sampling-process-analysis-system.webp",
           t(
             "在线取样 / 过程分析系统",
             "Online Sampling / Process Analysis",
@@ -1393,7 +1393,7 @@ const applicationMegaDropdown: MegaDropdown = {
           localizedPath("/applications/synthetic-biology?application=onlineSampling"),
         ),
         applicationSceneImage(
-          "/images/applications/mega-menu/synthetic-continuous-flow.webp",
+          "/images/application-center/small-scale-bioprocess-system-integration.webp",
           t(
             "小型生物工艺系统集成",
             "Compact Bioprocess System Integration",
@@ -2285,11 +2285,11 @@ const navigationItems: NavigationItem[] = [
 
           // 说明：
           // 1. 恒永达文化页面已经单独建立
-          // 2. 当前多语言详情页还没全部完成
-          // 3. 所以所有语言暂时统一跳中文页面 /about/culture
+          // 2. English uses the completed localized culture page
+          // 3. Other incomplete locales continue using the Chinese page
           href: {
             "zh-CN": "/about/culture",
-            en: "/about/culture",
+            en: "/en/about/culture",
             es: "/about/culture",
             fr: "/about/culture",
             ko: "/about/culture",
@@ -2397,10 +2397,10 @@ const navigationItems: NavigationItem[] = [
           "Культура FOREACH"
         ),
 
-        // 当前多语言详情页还没全部完成，所以所有语言先统一跳中文页面
+        // English uses its localized page; incomplete locales keep the Chinese page.
         href: {
           "zh-CN": "/about/culture",
-          en: "/about/culture",
+          en: "/en/about/culture",
           es: "/about/culture",
           fr: "/about/culture",
           ko: "/about/culture",

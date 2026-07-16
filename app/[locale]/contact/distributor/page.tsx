@@ -17,6 +17,7 @@
    5. 联系方式与地图文案也在服务端按 locale 传入，避免 Hydration mismatch
 ========================================================= */
 
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import DistributorPageContent from "@/components/contact/DistributorPageContent";
@@ -77,6 +78,24 @@ function isDistributorLocale(locale: string): locale is DistributorLocale {
   return DISTRIBUTOR_LOCALES.includes(locale as DistributorLocale);
 }
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+
+  if (locale !== "en") {
+    return {};
+  }
+
+  return {
+    title: "Distributor Partnerships | FOREACH",
+    description:
+      "Learn about distributor partnership opportunities with FOREACH for microfluidic components and fluid handling solutions.",
+  };
+}
+
 /* =========================================================
    页面组件
 ========================================================= */
@@ -110,4 +129,4 @@ export default async function DistributorPage({
       contactPageData={contactPageData}
     />
   );
-}  
+}

@@ -144,6 +144,131 @@ const RESULT_COLUMNS = [
   "Notes",
 ] as const;
 
+const RESULT_COLUMNS_EN = [
+  "No.",
+  "Type",
+  "Flow (ml/min)",
+  "ID (mm)/Cv",
+  "Length (mm)",
+  "Local Resistance Coefficient ξ",
+  "Velocity (m/s)",
+  "Reynolds Number Re",
+  "Friction Factor λ",
+  "Laminar Sublayer (mm)",
+  "R (Pa/m)",
+  "ΔPy (Pa)",
+  "Dynamic Pressure (Pa)",
+  "ΔPj (Pa)",
+  "ΔPt (Pa)",
+  "FR (Re)",
+  "Equivalent Orifice (mm)",
+  "Equivalent Cv",
+  "Flow Regime",
+  "Name",
+  "Notes",
+] as const;
+
+const FLUID_NAME_EN: Record<string, string> = {
+  水: "Water",
+  空气: "Air",
+  "PBS 缓冲液": "PBS Buffer",
+  "血液（全血）": "Whole Blood",
+  血浆: "Plasma",
+  血清: "Serum",
+  "尿液（模拟）": "Simulated Urine",
+  脑脊液: "Cerebrospinal Fluid",
+  "DMEM 培养基": "DMEM Medium",
+  "RPMI 1640 培养基": "RPMI 1640 Medium",
+  乙醇: "Ethanol",
+  "异丙醇 (IPA)": "Isopropyl Alcohol (IPA)",
+  丙酮: "Acetone",
+  "L-HM 46 抗磨液压油": "L-HM 46 Anti-Wear Hydraulic Oil",
+  "L-HM 68 抗磨液压油": "L-HM 68 Anti-Wear Hydraulic Oil",
+  "L-TSA 46 汽轮机油": "L-TSA 46 Turbine Oil",
+  "L-AN 100 全损耗系统用油": "L-AN 100 Total-Loss System Oil",
+  "导轨油 68": "Slideway Oil 68",
+  "甲基硅油 5cSt": "Methyl Silicone Oil 5 cSt",
+  "甲基硅油 10cSt": "Methyl Silicone Oil 10 cSt",
+  "甲基硅油 50cSt": "Methyl Silicone Oil 50 cSt",
+  "甲基硅油 100cSt": "Methyl Silicone Oil 100 cSt",
+  "甲基硅油 350cSt": "Methyl Silicone Oil 350 cSt",
+  "甲基硅油 1000cSt": "Methyl Silicone Oil 1000 cSt",
+  "氟硅油 300cSt": "Fluorosilicone Oil 300 cSt",
+  "苯基硅油 500cSt": "Phenyl Silicone Oil 500 cSt",
+  矿物油: "Mineral Oil",
+  "FC-40": "FC-40",
+  "HFE-7500": "HFE-7500",
+  "全氟聚醚 PFPE": "Perfluoropolyether (PFPE)",
+  "Galden HT135": "Galden HT135",
+  "PAO 4 合成基础油": "PAO 4 Synthetic Base Oil",
+  "PAO 40 合成基础油": "PAO 40 Synthetic Base Oil",
+  矿物润滑脂基油: "Mineral Grease Base Oil",
+  "Tween-20 水溶液 1%": "Tween-20 Aqueous Solution 1%",
+  "SDS 水溶液 1%": "SDS Aqueous Solution 1%",
+  "甘油水溶液 50%": "Glycerol Aqueous Solution 50%",
+  甘油: "Glycerol",
+  "Polyacrylamide 0.1%": "Polyacrylamide 0.1%",
+  [CUSTOM_FLUID]: "Other / Custom",
+};
+
+const FLUID_DESCRIPTION_EN: Record<string, string> = {
+  "PBS 缓冲液": "Phosphate-buffered saline",
+  "血液（全血）": "Human whole blood, Hct = 45%",
+  血浆: "Human plasma at 37°C",
+  血清: "Human serum at 37°C",
+  "尿液（模拟）": "Artificial urine",
+  脑脊液: "Artificial cerebrospinal fluid",
+  "DMEM 培养基": "Contains 10% FBS",
+  "RPMI 1640 培养基": "Suspension cell culture",
+  乙醇: "Anhydrous ethanol",
+  "异丙醇 (IPA)": "Commonly used for microfluidic cleaning",
+  丙酮: "Low-viscosity solvent",
+  "L-HM 46 抗磨液压油": "General hydraulic systems",
+  "L-HM 68 抗磨液压油": "High-pressure hydraulic systems",
+  "L-TSA 46 汽轮机油": "High-speed rotating machinery",
+  "L-AN 100 全损耗系统用油": "General machinery lubrication",
+  "导轨油 68": "Machine-tool slideways and micro-motion stages",
+  "甲基硅油 5cSt": "Low-viscosity silicone oil",
+  "甲基硅油 10cSt": "Low-viscosity silicone oil",
+  "甲基硅油 50cSt": "Continuous phase for microfluidics",
+  "甲基硅油 100cSt": "Continuous phase for microfluidics",
+  "甲基硅油 350cSt": "Medium-viscosity damping fluid",
+  "甲基硅油 1000cSt": "High-viscosity damping fluid",
+  "氟硅油 300cSt": "Solvent-resistant sealing and wide-temperature lubrication",
+  "苯基硅油 500cSt": "High-temperature, high-vacuum lubrication",
+  矿物油: "Continuous phase for digital PCR",
+  "FC-40": "3M fluorocarbon oil",
+  "HFE-7500": "3M fluorocarbon oil for digital PCR",
+  "全氟聚醚 PFPE": "For strong oxidants and semiconductor applications",
+  "Galden HT135": "Vapor-phase soldering and cooling fluid",
+  "PAO 4 合成基础油": "Synthetic grease base oil",
+  "PAO 40 合成基础油": "High-viscosity synthetic grease base oil",
+  矿物润滑脂基油: "General lithium grease base oil",
+  "Tween-20 水溶液 1%": "Microfluidic surfactant",
+  "SDS 水溶液 1%": "Electrophoresis buffer",
+  "甘油水溶液 50%": "Glycerol:water = 1:1",
+  甘油: "Pure glycerol at 20°C",
+  "Polyacrylamide 0.1%": "Simulated high-viscosity biological fluid",
+};
+
+const ORIFICE_NAME_EN: Record<string, string> = {
+  锐边薄壁孔: "Sharp-Edged Thin Orifice",
+  "45°倒角": "45° Chamfer",
+  "圆角 r/d=0.1": "Rounded Edge r/d = 0.1",
+  "圆角 r/d=0.2": "Rounded Edge r/d = 0.2",
+  "全圆角(喷嘴)": "Fully Rounded Nozzle",
+};
+
+const REGIME_EN: Record<string, string> = {
+  层流: "Laminar",
+  过渡区: "Transitional",
+  湍流: "Turbulent",
+};
+
+function localizedName(value: string, isEnglish: boolean) {
+  return isEnglish ? FLUID_NAME_EN[value] ?? value : value;
+}
+
 function toNumber(value: string | number | null | undefined, fallback = 0) {
   const parsed = Number.parseFloat(String(value ?? ""));
   return Number.isFinite(parsed) ? parsed : fallback;
@@ -623,10 +748,10 @@ function makePolynomial(
   return { fit, formula: formatFormula(fit), qMin, qMax, samples };
 }
 
-function metricQuality(fit: PolynomialFit) {
-  if (fit.metrics.r2 >= 0.999) return "极佳";
-  if (fit.metrics.r2 >= 0.99) return "良好";
-  return "一般";
+function metricQuality(fit: PolynomialFit, isEnglish = false) {
+  if (fit.metrics.r2 >= 0.999) return isEnglish ? "Excellent" : "极佳";
+  if (fit.metrics.r2 >= 0.99) return isEnglish ? "Good" : "良好";
+  return isEnglish ? "Fair" : "一般";
 }
 
 const CHART_WIDTH = 1200;
@@ -648,11 +773,13 @@ function PQChart({
   polynomial,
   currentFlow,
   currentPressure,
+  isEnglish,
 }: {
   data: PQPoint[];
   polynomial: PolynomialData;
   currentFlow: number;
   currentPressure: number;
+  isEnglish: boolean;
 }) {
   const height = 390;
   const sampledQMin = Math.min(...data.map((point) => point.Q));
@@ -684,9 +811,9 @@ function PQChart({
   });
 
   return (
-    <svg className={styles.chartSvg} viewBox={`0 0 ${CHART_WIDTH} ${height}`} role="img" aria-label="根据当前计算参数生成的 PQ 特性曲线">
-      <title>根据当前输入参数和原计算核心生成的 PQ 特性曲线</title>
-      <text className={styles.chartTitle} x={CHART_WIDTH / 2} y={21}>PQ 特性曲线（工作流量 {formatValue(currentFlow, 2)} ml/min）</text>
+    <svg className={styles.chartSvg} viewBox={`0 0 ${CHART_WIDTH} ${height}`} role="img" aria-label={isEnglish ? "PQ characteristic curve generated from the current calculation parameters" : "根据当前计算参数生成的 PQ 特性曲线"}>
+      <title>{isEnglish ? "PQ characteristic curve generated by the original calculation core" : "根据当前输入参数和原计算核心生成的 PQ 特性曲线"}</title>
+      <text className={styles.chartTitle} x={CHART_WIDTH / 2} y={21}>{isEnglish ? "PQ Characteristic Curve" : "PQ 特性曲线"} ({isEnglish ? "Operating flow" : "工作流量"} {formatValue(currentFlow, 2)} ml/min)</text>
       {xAxis.ticks.map((value) => {
         const x = scale.x(value);
         return (
@@ -735,34 +862,34 @@ function PQChart({
             height="7"
             transform={`rotate(45 ${x} ${y})`}
           >
-            <title>流量 {formatValue(sample.q, 4)} ml/min；压降 {formatValue(sample.pressure, 4)} Pa</title>
+            <title>{isEnglish ? "Flow" : "流量"} {formatValue(sample.q, 4)} ml/min; {isEnglish ? "pressure drop" : "压降"} {formatValue(sample.pressure, 4)} Pa</title>
           </rect>
         );
       })}
       <circle className={styles.workPoint} cx={scale.x(currentFlow)} cy={scale.y(currentPressure)} r="6">
-        <title>当前工作点：{formatValue(currentFlow, 4)} ml/min，{formatValue(currentPressure, 4)} Pa</title>
+        <title>{isEnglish ? "Current operating point" : "当前工作点"}: {formatValue(currentFlow, 4)} ml/min, {formatValue(currentPressure, 4)} Pa</title>
       </circle>
-      <text className={styles.chartLabel} x={CHART_MARGIN.left + scale.plotWidth / 2} y={height - 10} textAnchor="middle">流量 (ml/min){xAxis.exponent ? `  1e${xAxis.exponent}` : ""}</text>
-      <text className={styles.chartLabel} transform={`translate(18 ${CHART_MARGIN.top + scale.plotHeight / 2}) rotate(-90)`} textAnchor="middle">总压降 (Pa)</text>
+      <text className={styles.chartLabel} x={CHART_MARGIN.left + scale.plotWidth / 2} y={height - 10} textAnchor="middle">{isEnglish ? "Flow" : "流量"} (ml/min){xAxis.exponent ? `  1e${xAxis.exponent}` : ""}</text>
+      <text className={styles.chartLabel} transform={`translate(18 ${CHART_MARGIN.top + scale.plotHeight / 2}) rotate(-90)`} textAnchor="middle">{isEnglish ? "Total Pressure Drop" : "总压降"} (Pa)</text>
       <line className={styles.rawCurve} x1={CHART_MARGIN.left} y1={height - 31} x2={CHART_MARGIN.left + 28} y2={height - 31} />
-      <text className={styles.legendText} x={CHART_MARGIN.left + 35} y={height - 27}>PQ 曲线</text>
+      <text className={styles.legendText} x={CHART_MARGIN.left + 35} y={height - 27}>{isEnglish ? "PQ Curve" : "PQ 曲线"}</text>
       <line className={styles.fitCurve} x1={CHART_MARGIN.left + 120} y1={height - 31} x2={CHART_MARGIN.left + 148} y2={height - 31} />
-      <text className={styles.legendText} x={CHART_MARGIN.left + 155} y={height - 27}>多项式拟合</text>
+      <text className={styles.legendText} x={CHART_MARGIN.left + 155} y={height - 27}>{isEnglish ? "Polynomial Fit" : "多项式拟合"}</text>
       <rect className={styles.samplePoint} x={CHART_MARGIN.left + 258} y={height - 35} width="7" height="7" transform={`rotate(45 ${CHART_MARGIN.left + 261.5} ${height - 31.5})`} />
-      <text className={styles.legendText} x={CHART_MARGIN.left + 273} y={height - 27}>采样点</text>
+      <text className={styles.legendText} x={CHART_MARGIN.left + 273} y={height - 27}>{isEnglish ? "Samples" : "采样点"}</text>
       <circle className={styles.workPoint} cx={CHART_MARGIN.left + 353} cy={height - 31} r="4" />
-      <text className={styles.legendText} x={CHART_MARGIN.left + 364} y={height - 27}>工作点</text>
+      <text className={styles.legendText} x={CHART_MARGIN.left + 364} y={height - 27}>{isEnglish ? "Operating Point" : "工作点"}</text>
       {nonMonotonicSegments.length ? (
         <>
           <line className={styles.nonMonotonicCurve} x1={CHART_MARGIN.left + 435} y1={height - 31} x2={CHART_MARGIN.left + 463} y2={height - 31} />
-          <text className={styles.legendText} x={CHART_MARGIN.left + 470} y={height - 27}>非单调段</text>
+          <text className={styles.legendText} x={CHART_MARGIN.left + 470} y={height - 27}>{isEnglish ? "Non-Monotonic Segment" : "非单调段"}</text>
         </>
       ) : null}
     </svg>
   );
 }
 
-function ResidualChart({ polynomial }: { polynomial: PolynomialData }) {
+function ResidualChart({ polynomial, isEnglish }: { polynomial: PolynomialData; isEnglish: boolean }) {
   const height = 260;
   const predictions = polynomial.samples.map((sample) => sample.predicted);
   const residuals = polynomial.samples.map((sample) => sample.residual);
@@ -771,9 +898,9 @@ function ResidualChart({ polynomial }: { polynomial: PolynomialData }) {
   const scale = getChartScale(xAxis.min, xAxis.max, yAxis.min, yAxis.max, height);
 
   return (
-    <svg className={styles.residualSvg} viewBox={`0 0 ${CHART_WIDTH} ${height}`} role="img" aria-label="根据当前多项式拟合结果生成的残差图">
-      <title>当前 18 个计算采样点的拟合残差</title>
-      <text className={styles.chartTitle} x={CHART_WIDTH / 2} y={21}>残差图</text>
+    <svg className={styles.residualSvg} viewBox={`0 0 ${CHART_WIDTH} ${height}`} role="img" aria-label={isEnglish ? "Residual chart generated from the current polynomial fit" : "根据当前多项式拟合结果生成的残差图"}>
+      <title>{isEnglish ? "Fit residuals for the current 18 calculation samples" : "当前 18 个计算采样点的拟合残差"}</title>
+      <text className={styles.chartTitle} x={CHART_WIDTH / 2} y={21}>{isEnglish ? "Residual Plot" : "残差图"}</text>
       {xAxis.ticks.map((value) => {
         const x = scale.x(value);
         return (
@@ -800,11 +927,11 @@ function ResidualChart({ polynomial }: { polynomial: PolynomialData }) {
       <line className={styles.chartAxis} x1={CHART_MARGIN.left} y1={CHART_MARGIN.top + scale.plotHeight} x2={CHART_MARGIN.left + scale.plotWidth} y2={CHART_MARGIN.top + scale.plotHeight} />
       {polynomial.samples.map((sample, index) => (
         <circle className={styles.residualPoint} key={`${sample.q}-${index}`} cx={scale.x(sample.predicted)} cy={scale.y(sample.residual)} r="4">
-          <title>流量 {formatValue(sample.q, 4)} ml/min；计算压降 {formatValue(sample.pressure, 4)} Pa；预测压降 {formatValue(sample.predicted, 4)} Pa；残差 {formatValue(sample.residual, 4)} Pa</title>
+          <title>{isEnglish ? "Flow" : "流量"} {formatValue(sample.q, 4)} ml/min; {isEnglish ? "calculated pressure drop" : "计算压降"} {formatValue(sample.pressure, 4)} Pa; {isEnglish ? "predicted pressure drop" : "预测压降"} {formatValue(sample.predicted, 4)} Pa; {isEnglish ? "residual" : "残差"} {formatValue(sample.residual, 4)} Pa</title>
         </circle>
       ))}
-      <text className={styles.chartLabel} x={CHART_MARGIN.left + scale.plotWidth / 2} y={height - 10} textAnchor="middle">预测压降 (Pa){xAxis.exponent ? `  1e${xAxis.exponent}` : ""}</text>
-      <text className={styles.chartLabel} transform={`translate(18 ${CHART_MARGIN.top + scale.plotHeight / 2}) rotate(-90)`} textAnchor="middle">残差 (Pa)</text>
+      <text className={styles.chartLabel} x={CHART_MARGIN.left + scale.plotWidth / 2} y={height - 10} textAnchor="middle">{isEnglish ? "Predicted Pressure Drop" : "预测压降"} (Pa){xAxis.exponent ? `  1e${xAxis.exponent}` : ""}</text>
+      <text className={styles.chartLabel} transform={`translate(18 ${CHART_MARGIN.top + scale.plotHeight / 2}) rotate(-90)`} textAnchor="middle">{isEnglish ? "Residual" : "残差"} (Pa)</text>
     </svg>
   );
 }
@@ -812,6 +939,7 @@ function ResidualChart({ polynomial }: { polynomial: PolynomialData }) {
 export default function FluidResistanceCalculator({
   locale = "zh-CN",
 }: FluidResistanceCalculatorProps) {
+  const isEnglish = locale === "en";
   const fluidOptions = useMemo(
     () => ["水", "空气", ...Object.keys(constants.PRESET_FLUIDS), CUSTOM_FLUID],
     [],
@@ -829,7 +957,23 @@ export default function FluidResistanceCalculator({
   const [flowUnit, setFlowUnit] = useState<(typeof FLOW_UNITS)[number]>(FLOW_UNITS[0]);
   const [pressureInput, setPressureInput] = useState("100000");
   const [pressureUnit, setPressureUnit] = useState<(typeof PRESSURE_UNITS)[number]>(PRESSURE_UNITS[0]);
-  const [rows, setRows] = useState<InputRow[]>(DEFAULT_ROWS);
+  const [rows, setRows] = useState<InputRow[]>(() =>
+    DEFAULT_ROWS.map((row) => ({
+      ...row,
+      name:
+        isEnglish && row.name === "管路"
+          ? "Tubing"
+          : isEnglish && row.name === "阀或阻尼"
+            ? "Valve or Restrictor"
+            : row.name,
+      notes:
+        isEnglish && row.notes === "管路备注"
+          ? "Tubing Notes"
+          : isEnglish && row.notes === "阻尼备注"
+            ? "Resistance Notes"
+            : row.notes,
+    })),
+  );
   const [selectedRowId, setSelectedRowId] = useState<number | null>(null);
   const [calculation, setCalculation] = useState<CalculationState | null>(null);
   const [activeTab, setActiveTab] = useState<ActiveTab>("results");
@@ -865,15 +1009,15 @@ export default function FluidResistanceCalculator({
         diameter_cv: "1.0",
         length: "100.0",
         xi: "0.0",
-        name: "管路",
-        notes: "管路备注",
+        name: isEnglish ? "Tubing" : "管路",
+        notes: isEnglish ? "Tubing Notes" : "管路备注",
       },
     ]);
   }
 
   function deleteSelectedRow() {
     if (selectedRowId === null) {
-      window.alert("请先选择要删除的行");
+      window.alert(isEnglish ? "Select a row to delete." : "请先选择要删除的行");
       return;
     }
     setRows((current) => current.filter((row) => row.id !== selectedRowId));
@@ -886,7 +1030,7 @@ export default function FluidResistanceCalculator({
       .filter((row) => toNumber(row.flow) > 0);
 
     if (!normalizedRows.length) {
-      window.alert("请输入有效的管路数据");
+      window.alert(isEnglish ? "Enter valid fluid-path data." : "请输入有效的管路数据");
       return;
     }
 
@@ -921,7 +1065,11 @@ export default function FluidResistanceCalculator({
         cvModel,
       );
       if (solved.flow <= 0) {
-        window.alert("无法收敛，请检查输入参数");
+        window.alert(
+          isEnglish
+            ? "The calculation did not converge. Check the input parameters."
+            : "无法收敛，请检查输入参数",
+        );
         return;
       }
       currentFlow = solved.flow;
@@ -984,8 +1132,12 @@ export default function FluidResistanceCalculator({
     );
     const summary =
       calculationMode === "已知流量（求压降）"
-        ? `计算完成！总压降 = ${calculator.fmt_num(systemResult.total_dPt, 2)} Pa`
-        : `反算完成！流量 = ${calculator.fmt_num(currentFlow, 3)} ml/min, 实际压降 = ${calculator.fmt_num(systemResult.total_dPt, 2)} Pa`;
+        ? isEnglish
+          ? `Calculation complete. Total pressure drop = ${calculator.fmt_num(systemResult.total_dPt, 2)} Pa`
+          : `计算完成！总压降 = ${calculator.fmt_num(systemResult.total_dPt, 2)} Pa`
+        : isEnglish
+          ? `Reverse calculation complete. Flow = ${calculator.fmt_num(currentFlow, 3)} ml/min, actual pressure drop = ${calculator.fmt_num(systemResult.total_dPt, 2)} Pa`
+          : `反算完成！流量 = ${calculator.fmt_num(currentFlow, 3)} ml/min, 实际压降 = ${calculator.fmt_num(systemResult.total_dPt, 2)} Pa`;
 
     setCalculation({ summary, currentFlow, resultRows, statistics, pqData, polynomial });
     setActiveTab("results");
@@ -993,58 +1145,107 @@ export default function FluidResistanceCalculator({
 
   async function exportExcel() {
     if (!calculation) {
-      window.alert("请先完成计算");
+      window.alert(isEnglish ? "Run a calculation before exporting." : "请先完成计算");
       return;
     }
 
     const XLSX = await import("xlsx");
-    const reportRows = calculation.resultRows.map((row, index) => ({
-      序号: index + 1,
-      类型: normalizedType(row.source.type),
-      "流量(ml/min)": calculation.currentFlow,
-      "内径(mm)/Cv": toNumber(row.source.diameter_cv),
-      "管长(mm)": toNumber(row.source.length),
-      "局部阻力系数ξ": toNumber(row.source.xi),
-      "流速(m/s)": row.raw["流速(m/s)"],
-      雷诺数Re: row.raw["雷诺数Re"],
-      "沿程阻力系数λ": row.raw["沿程阻力系数λ"],
-      "层流底层(mm)": row.raw["层流底层(mm)"],
-      "R(Pa/m)": row.raw["R(Pa/m)"],
-      "ΔPy(Pa)": row.raw["ΔPy(Pa)"],
-      "动压(Pa)": row.raw["动压(Pa)"],
-      "ΔPj(Pa)": row.raw["ΔPj(Pa)"],
-      "ΔPt(Pa)": row.raw["ΔPt(Pa)"],
-      "FR(Re)": row.raw["FR(Re)"],
-      "当量孔径(mm)": row.raw["当量孔径(mm)"],
-      当量Cv: row.raw["当量Cv"],
-      流态: row.regime,
-      Name: row.source.name,
-      Notes: row.source.notes,
-    }));
-    const summaryRows = [
-      { 指标: "沿程损失 (Pa)", 值: calculation.statistics.totalDPy },
-      { 指标: "局部损失 (Pa)", 值: calculation.statistics.totalDPj },
-      { 指标: "总损失 (Pa)", 值: calculation.statistics.totalDPt },
-      { 指标: "整体 Cv", 值: calculation.statistics.overallCv },
-      { 指标: "清水沿程 (Pa)", 值: calculation.statistics.waterDPy },
-      { 指标: "清水局部 (Pa)", 值: calculation.statistics.waterDPj },
-      { 指标: "清水总损失 (Pa)", 值: calculation.statistics.waterDPt },
-      { 指标: "清水 Cv", 值: calculation.statistics.waterCv },
-    ];
-    const pqRows = calculation.pqData.map((point) => ({
-      "流量 Q (ml/min)": point.Q,
-      "压降 ΔP (Pa)": point.dP,
-      最小雷诺数: point.Re_min,
-      最大雷诺数: point.Re_max,
-      压降差分: point.dP_diff,
-      非单调区段: point.is_non_monotonic ? "是" : "否",
-      K: point.K,
-    }));
+    const reportRows = calculation.resultRows.map((row, index) =>
+      isEnglish
+        ? {
+            "No.": index + 1,
+            Type: normalizedType(row.source.type),
+            "Flow (ml/min)": calculation.currentFlow,
+            "ID (mm)/Cv": toNumber(row.source.diameter_cv),
+            "Length (mm)": toNumber(row.source.length),
+            "Local Resistance Coefficient ξ": toNumber(row.source.xi),
+            "Velocity (m/s)": row.raw["流速(m/s)"],
+            "Reynolds Number Re": row.raw["雷诺数Re"],
+            "Friction Factor λ": row.raw["沿程阻力系数λ"],
+            "Laminar Sublayer (mm)": row.raw["层流底层(mm)"],
+            "R (Pa/m)": row.raw["R(Pa/m)"],
+            "ΔPy (Pa)": row.raw["ΔPy(Pa)"],
+            "Dynamic Pressure (Pa)": row.raw["动压(Pa)"],
+            "ΔPj (Pa)": row.raw["ΔPj(Pa)"],
+            "ΔPt (Pa)": row.raw["ΔPt(Pa)"],
+            "FR (Re)": row.raw["FR(Re)"],
+            "Equivalent Orifice (mm)": row.raw["当量孔径(mm)"],
+            "Equivalent Cv": row.raw["当量Cv"],
+            "Flow Regime": REGIME_EN[row.regime] ?? row.regime,
+            Name: row.source.name,
+            Notes: row.source.notes,
+          }
+        : {
+            序号: index + 1,
+            类型: normalizedType(row.source.type),
+            "流量(ml/min)": calculation.currentFlow,
+            "内径(mm)/Cv": toNumber(row.source.diameter_cv),
+            "管长(mm)": toNumber(row.source.length),
+            "局部阻力系数ξ": toNumber(row.source.xi),
+            "流速(m/s)": row.raw["流速(m/s)"],
+            雷诺数Re: row.raw["雷诺数Re"],
+            "沿程阻力系数λ": row.raw["沿程阻力系数λ"],
+            "层流底层(mm)": row.raw["层流底层(mm)"],
+            "R(Pa/m)": row.raw["R(Pa/m)"],
+            "ΔPy(Pa)": row.raw["ΔPy(Pa)"],
+            "动压(Pa)": row.raw["动压(Pa)"],
+            "ΔPj(Pa)": row.raw["ΔPj(Pa)"],
+            "ΔPt(Pa)": row.raw["ΔPt(Pa)"],
+            "FR(Re)": row.raw["FR(Re)"],
+            "当量孔径(mm)": row.raw["当量孔径(mm)"],
+            当量Cv: row.raw["当量Cv"],
+            流态: row.regime,
+            Name: row.source.name,
+            Notes: row.source.notes,
+          },
+    );
+    const summaryRows = isEnglish
+      ? [
+          { Metric: "Friction Loss (Pa)", Value: calculation.statistics.totalDPy },
+          { Metric: "Local Loss (Pa)", Value: calculation.statistics.totalDPj },
+          { Metric: "Total Loss (Pa)", Value: calculation.statistics.totalDPt },
+          { Metric: "Overall Cv", Value: calculation.statistics.overallCv },
+          { Metric: "Water Friction Loss (Pa)", Value: calculation.statistics.waterDPy },
+          { Metric: "Water Local Loss (Pa)", Value: calculation.statistics.waterDPj },
+          { Metric: "Water Total Loss (Pa)", Value: calculation.statistics.waterDPt },
+          { Metric: "Water Cv", Value: calculation.statistics.waterCv },
+        ]
+      : [
+          { 指标: "沿程损失 (Pa)", 值: calculation.statistics.totalDPy },
+          { 指标: "局部损失 (Pa)", 值: calculation.statistics.totalDPj },
+          { 指标: "总损失 (Pa)", 值: calculation.statistics.totalDPt },
+          { 指标: "整体 Cv", 值: calculation.statistics.overallCv },
+          { 指标: "清水沿程 (Pa)", 值: calculation.statistics.waterDPy },
+          { 指标: "清水局部 (Pa)", 值: calculation.statistics.waterDPj },
+          { 指标: "清水总损失 (Pa)", 值: calculation.statistics.waterDPt },
+          { 指标: "清水 Cv", 值: calculation.statistics.waterCv },
+        ];
+    const pqRows = calculation.pqData.map((point) =>
+      isEnglish
+        ? {
+            "Flow Q (ml/min)": point.Q,
+            "Pressure Drop ΔP (Pa)": point.dP,
+            "Minimum Reynolds Number": point.Re_min,
+            "Maximum Reynolds Number": point.Re_max,
+            "Pressure-Drop Difference": point.dP_diff,
+            "Non-Monotonic Segment": point.is_non_monotonic ? "Yes" : "No",
+            K: point.K,
+          }
+        : {
+            "流量 Q (ml/min)": point.Q,
+            "压降 ΔP (Pa)": point.dP,
+            最小雷诺数: point.Re_min,
+            最大雷诺数: point.Re_max,
+            压降差分: point.dP_diff,
+            非单调区段: point.is_non_monotonic ? "是" : "否",
+            K: point.K,
+          },
+    );
     const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, XLSX.utils.json_to_sheet(reportRows), "GPLCT 报表");
-    XLSX.utils.book_append_sheet(workbook, XLSX.utils.json_to_sheet(summaryRows), "统计摘要");
-    XLSX.utils.book_append_sheet(workbook, XLSX.utils.json_to_sheet(pqRows), "PQ 曲线数据");
-    XLSX.writeFile(workbook, "管内流动阻尼计算结果.xlsx");
+    XLSX.utils.book_append_sheet(workbook, XLSX.utils.json_to_sheet(reportRows), isEnglish ? "Results" : "GPLCT 报表");
+    XLSX.utils.book_append_sheet(workbook, XLSX.utils.json_to_sheet(summaryRows), isEnglish ? "Summary" : "统计摘要");
+    XLSX.utils.book_append_sheet(workbook, XLSX.utils.json_to_sheet(pqRows), isEnglish ? "PQ Curve Data" : "PQ 曲线数据");
+    XLSX.writeFile(workbook, isEnglish ? "fluid-resistance-calculation.xlsx" : "管内流动阻尼计算结果.xlsx");
   }
 
   return (
@@ -1052,92 +1253,92 @@ export default function FluidResistanceCalculator({
       <div className={styles.workbench}>
         <aside className={styles.sidebar}>
           <section className={styles.section}>
-            <h2 className={styles.sectionTitle}>流体与工程参数</h2>
+            <h2 className={styles.sectionTitle}>{isEnglish ? "Fluid and Engineering Parameters" : "流体与工程参数"}</h2>
             <div className={styles.sectionBody}>
               <label className={styles.field}>
-                <span>流体类型:</span>
+                <span>{isEnglish ? "Fluid Type:" : "流体类型:"}</span>
                 <select value={fluidType} onChange={(event) => setFluidType(event.target.value)}>
-                  {fluidOptions.map((option) => <option key={option}>{option}</option>)}
+                  {fluidOptions.map((option) => <option key={option} value={option}>{localizedName(option, isEnglish)}</option>)}
                 </select>
               </label>
               <label className={styles.field}>
-                <span>温度 (C):</span>
+                <span>{isEnglish ? "Temperature (C):" : "温度 (C):"}</span>
                 <input type="number" step="0.1" value={temperature} onChange={(event) => setTemperature(event.target.value)} />
               </label>
 
               {fluidType === CUSTOM_FLUID ? (
                 <div className={styles.customFluid}>
                   <label className={styles.field}>
-                    <span>密度 (kg/m³):</span>
+                    <span>{isEnglish ? "Density (kg/m³):" : "密度 (kg/m³):"}</span>
                     <input value={customRho} onChange={(event) => setCustomRho(event.target.value)} inputMode="decimal" />
                   </label>
                   <div className={styles.field}>
-                    <span>黏度输入方式:</span>
+                    <span>{isEnglish ? "Viscosity Input:" : "黏度输入方式:"}</span>
                     <div className={styles.segment}>
                       {VISCOSITY_MODES.map((mode) => (
-                        <button key={mode} type="button" className={viscosityMode === mode ? styles.selected : ""} onClick={() => setViscosityMode(mode)}>{mode}</button>
+                        <button key={mode} type="button" className={viscosityMode === mode ? styles.selected : ""} onClick={() => setViscosityMode(mode)}>{isEnglish ? (mode === "动力黏度" ? "Dynamic" : "Kinematic") : mode}</button>
                       ))}
                     </div>
                   </div>
                   <label className={styles.field}>
-                    <span>{viscosityMode === "动力黏度" ? "动力黏度 (Pa*s):" : "运动黏度 (m²/s):"}</span>
+                    <span>{viscosityMode === "动力黏度" ? (isEnglish ? "Dynamic Viscosity (Pa*s):" : "动力黏度 (Pa*s):") : (isEnglish ? "Kinematic Viscosity (m²/s):" : "运动黏度 (m²/s):")}</span>
                     <input value={customViscosity} onChange={(event) => setCustomViscosity(event.target.value)} inputMode="decimal" />
                   </label>
                 </div>
               ) : null}
 
               <div className={styles.propertyList}>
-                <div><span>密度:</span><strong>{fluidType === "空气" ? properties.rho.toFixed(3) : properties.rho.toFixed(2)} kg/m3</strong></div>
-                <div><span>动力黏度:</span><strong>{properties.mu.toExponential(3)} Pa*s</strong></div>
-                <div><span>运动黏度:</span><strong>{properties.nu.toExponential(3)} m2/s</strong></div>
-                {properties.description ? <p>{properties.description}</p> : null}
+                <div><span>{isEnglish ? "Density:" : "密度:"}</span><strong>{fluidType === "空气" ? properties.rho.toFixed(3) : properties.rho.toFixed(2)} kg/m3</strong></div>
+                <div><span>{isEnglish ? "Dynamic Viscosity:" : "动力黏度:"}</span><strong>{properties.mu.toExponential(3)} Pa*s</strong></div>
+                <div><span>{isEnglish ? "Kinematic Viscosity:" : "运动黏度:"}</span><strong>{properties.nu.toExponential(3)} m2/s</strong></div>
+                {properties.description ? <p>{isEnglish ? FLUID_DESCRIPTION_EN[fluidType] ?? properties.description : properties.description}</p> : null}
               </div>
             </div>
           </section>
 
           <section className={styles.section}>
-            <h2 className={styles.sectionTitle}>计算参数</h2>
+            <h2 className={styles.sectionTitle}>{isEnglish ? "Calculation Parameters" : "计算参数"}</h2>
             <div className={styles.sectionBody}>
               <div className={styles.field}>
-                <span>Cv 元件修正模型:</span>
+                <span>{isEnglish ? "Cv Element Correction Model:" : "Cv 元件修正模型:"}</span>
                 <div className={styles.segment}>
                   {CV_MODELS.map((mode) => (
                     <button key={mode} type="button" className={cvModel === mode ? styles.selected : ""} onClick={() => setCvModel(mode)}>
                       {mode === CV_MODELS[1] ? (
                         <>
-                          <span>管道沿程</span>
-                          <span>（Churchill 法）</span>
+                          <span>{isEnglish ? "Pipe Friction" : "管道沿程"}</span>
+                          <span>{isEnglish ? "(Churchill Method)" : "（Churchill 法）"}</span>
                         </>
-                      ) : mode}
+                      ) : isEnglish ? "Orifice Restriction (Cd Method)" : mode}
                     </button>
                   ))}
                 </div>
               </div>
               <label className={styles.field}>
-                <span>Cv 元件默认入口形状:</span>
+                <span>{isEnglish ? "Default Cv Inlet Geometry:" : "Cv 元件默认入口形状:"}</span>
                 <select value={orificeShape} onChange={(event) => setOrificeShape(event.target.value)}>
-                  {orificeOptions.map((option) => <option key={option}>{option}</option>)}
+                  {orificeOptions.map((option) => <option key={option} value={option}>{isEnglish ? ORIFICE_NAME_EN[option] ?? option : option}</option>)}
                 </select>
                 <small>Cd = {selectedOrifice.Cd_inf}, Re_c = {selectedOrifice.Re_c}</small>
               </label>
               <div className={styles.field}>
-                <span>计算模式:</span>
+                <span>{isEnglish ? "Calculation Mode:" : "计算模式:"}</span>
                 <div className={styles.segment}>
                   {CALCULATION_MODES.map((mode) => (
-                    <button key={mode} type="button" className={calculationMode === mode ? styles.selected : ""} onClick={() => setCalculationMode(mode)}>{mode}</button>
+                    <button key={mode} type="button" className={calculationMode === mode ? styles.selected : ""} onClick={() => setCalculationMode(mode)}>{isEnglish ? (mode === "已知流量（求压降）" ? "Known Flow (Pressure Drop)" : "Known Pressure Drop (Flow)") : mode}</button>
                   ))}
                 </div>
               </div>
 
               <div className={styles.subgroup}>
-                <h3>{calculationMode === "已知流量（求压降）" ? "流量输入" : "压降输入"}</h3>
+                <h3>{calculationMode === "已知流量（求压降）" ? (isEnglish ? "Flow Input" : "流量输入") : (isEnglish ? "Pressure-Drop Input" : "压降输入")}</h3>
                 <div className={styles.inputPair}>
                   <label className={styles.field}>
-                    <span>{calculationMode === "已知流量（求压降）" ? "流量值:" : "压降值:"}</span>
+                    <span>{calculationMode === "已知流量（求压降）" ? (isEnglish ? "Flow:" : "流量值:") : (isEnglish ? "Pressure Drop:" : "压降值:")}</span>
                     <input value={calculationMode === "已知流量（求压降）" ? flowInput : pressureInput} onChange={(event) => calculationMode === "已知流量（求压降）" ? setFlowInput(event.target.value) : setPressureInput(event.target.value)} inputMode="decimal" />
                   </label>
                   <label className={styles.field}>
-                    <span>单位:</span>
+                    <span>{isEnglish ? "Unit:" : "单位:"}</span>
                     {calculationMode === "已知流量（求压降）" ? (
                       <select value={flowUnit} onChange={(event) => setFlowUnit(event.target.value as (typeof FLOW_UNITS)[number])}>{FLOW_UNITS.map((unit) => <option key={unit}>{unit}</option>)}</select>
                     ) : (
@@ -1148,8 +1349,8 @@ export default function FluidResistanceCalculator({
               </div>
             </div>
             <div className={styles.buttonStack}>
-              <button className={styles.primaryButton} type="button" onClick={runCalculation}>开始计算</button>
-              <button className={styles.secondaryButton} type="button" onClick={exportExcel}>导出 Excel</button>
+              <button className={styles.primaryButton} type="button" onClick={runCalculation}>{isEnglish ? "Calculate" : "开始计算"}</button>
+              <button className={styles.secondaryButton} type="button" onClick={exportExcel}>{isEnglish ? "Export Excel" : "导出 Excel"}</button>
             </div>
           </section>
         </aside>
@@ -1157,30 +1358,30 @@ export default function FluidResistanceCalculator({
         <div className={styles.workspace}>
           <section className={styles.panel}>
             <div className={styles.panelHeader}>
-              <h2>管路输入数据</h2>
+              <h2>{isEnglish ? "Fluid-Path Input Data" : "管路输入数据"}</h2>
               <div className={styles.actions}>
-                <button type="button" onClick={addRow}>+ 添加行</button>
-                <button className={styles.deleteButton} type="button" onClick={deleteSelectedRow}>- 删除选中行</button>
+                <button type="button" onClick={addRow}>+ {isEnglish ? "Add Row" : "添加行"}</button>
+                <button className={styles.deleteButton} type="button" onClick={deleteSelectedRow}>- {isEnglish ? "Delete Selected Row" : "删除选中行"}</button>
               </div>
             </div>
             <div className={styles.inputTableWrap}>
               <table className={styles.inputTable}>
                 <thead>
                   <tr>
-                    <th>序号</th><th>类型</th><th>流量(ml/min)</th><th>内径(mm)/Cv</th><th>管长(mm)</th><th>局部阻力系数ξ</th><th>Name</th><th>Notes</th>
+                    <th>{isEnglish ? "No." : "序号"}</th><th>{isEnglish ? "Type" : "类型"}</th><th>{isEnglish ? "Flow (ml/min)" : "流量(ml/min)"}</th><th>{isEnglish ? "ID (mm)/Cv" : "内径(mm)/Cv"}</th><th>{isEnglish ? "Length (mm)" : "管长(mm)"}</th><th>{isEnglish ? "Local Resistance Coefficient ξ" : "局部阻力系数ξ"}</th><th>Name</th><th>Notes</th>
                   </tr>
                 </thead>
                 <tbody>
                   {rows.map((row, index) => (
                     <tr key={row.id} className={selectedRowId === row.id ? styles.selectedRow : ""} onClick={() => setSelectedRowId(row.id)}>
                       <td>{index + 1}</td>
-                      <td><input aria-label={`第 ${index + 1} 行类型`} value={row.type} onChange={(event) => updateRow(row.id, "type", event.target.value)} /></td>
-                      <td><input aria-label={`第 ${index + 1} 行流量`} value={row.flow} onChange={(event) => updateRow(row.id, "flow", event.target.value)} /></td>
-                      <td><input aria-label={`第 ${index + 1} 行内径或 Cv`} value={String(row.diameter_cv)} onChange={(event) => updateRow(row.id, "diameter_cv", event.target.value)} /></td>
-                      <td><input aria-label={`第 ${index + 1} 行管长`} value={String(row.length)} onChange={(event) => updateRow(row.id, "length", event.target.value)} /></td>
-                      <td><input aria-label={`第 ${index + 1} 行局部阻力系数`} value={String(row.xi)} onChange={(event) => updateRow(row.id, "xi", event.target.value)} /></td>
-                      <td><input aria-label={`第 ${index + 1} 行 Name`} value={row.name ?? ""} onChange={(event) => updateRow(row.id, "name", event.target.value)} /></td>
-                      <td><input aria-label={`第 ${index + 1} 行 Notes`} value={row.notes ?? ""} onChange={(event) => updateRow(row.id, "notes", event.target.value)} /></td>
+                      <td><input aria-label={isEnglish ? `Row ${index + 1} type` : `第 ${index + 1} 行类型`} value={row.type} onChange={(event) => updateRow(row.id, "type", event.target.value)} /></td>
+                      <td><input aria-label={isEnglish ? `Row ${index + 1} flow` : `第 ${index + 1} 行流量`} value={row.flow} onChange={(event) => updateRow(row.id, "flow", event.target.value)} /></td>
+                      <td><input aria-label={isEnglish ? `Row ${index + 1} ID or Cv` : `第 ${index + 1} 行内径或 Cv`} value={String(row.diameter_cv)} onChange={(event) => updateRow(row.id, "diameter_cv", event.target.value)} /></td>
+                      <td><input aria-label={isEnglish ? `Row ${index + 1} length` : `第 ${index + 1} 行管长`} value={String(row.length)} onChange={(event) => updateRow(row.id, "length", event.target.value)} /></td>
+                      <td><input aria-label={isEnglish ? `Row ${index + 1} local resistance coefficient` : `第 ${index + 1} 行局部阻力系数`} value={String(row.xi)} onChange={(event) => updateRow(row.id, "xi", event.target.value)} /></td>
+                      <td><input aria-label={isEnglish ? `Row ${index + 1} name` : `第 ${index + 1} 行 Name`} value={row.name ?? ""} onChange={(event) => updateRow(row.id, "name", event.target.value)} /></td>
+                      <td><input aria-label={isEnglish ? `Row ${index + 1} notes` : `第 ${index + 1} 行 Notes`} value={row.notes ?? ""} onChange={(event) => updateRow(row.id, "notes", event.target.value)} /></td>
                     </tr>
                   ))}
                 </tbody>
@@ -1192,37 +1393,37 @@ export default function FluidResistanceCalculator({
             <div
               className={styles.tabs}
               role="tablist"
-              aria-label="计算结果"
+              aria-label={isEnglish ? "Calculation Results" : "计算结果"}
               style={{
                 "--active-offset": `${["results", "statistics", "pq", "polynomial"].indexOf(activeTab) * 100}%`,
               } as CSSProperties}
             >
               <span className={styles.tabIndicator} aria-hidden="true" />
               {([
-                ["results", "计算结果"],
-                ["statistics", "统计摘要"],
-                ["pq", "PQ曲线"],
-                ["polynomial", "多项式拟合"],
+                ["results", isEnglish ? "Results" : "计算结果"],
+                ["statistics", isEnglish ? "Summary" : "统计摘要"],
+                ["pq", isEnglish ? "PQ Curve" : "PQ曲线"],
+                ["polynomial", isEnglish ? "Polynomial Fit" : "多项式拟合"],
               ] as const).map(([key, label]) => (
                 <button key={key} type="button" role="tab" aria-selected={activeTab === key} className={activeTab === key ? styles.activeTab : ""} onClick={() => setActiveTab(key)}>{label}</button>
               ))}
             </div>
 
             {!calculation ? (
-              <div className={styles.emptyState}>请设置参数并开始计算</div>
+              <div className={styles.emptyState}>{isEnglish ? "Set the parameters and run the calculation." : "请设置参数并开始计算"}</div>
             ) : null}
 
             {calculation && activeTab === "results" ? (
               <div className={styles.resultTableWrap}>
                 <table className={styles.resultTable}>
-                  <thead><tr>{RESULT_COLUMNS.map((column) => <th key={column}>{column}</th>)}</tr></thead>
+                  <thead><tr>{(isEnglish ? RESULT_COLUMNS_EN : RESULT_COLUMNS).map((column) => <th key={column}>{column}</th>)}</tr></thead>
                   <tbody>
                     {calculation.resultRows.map((row, index) => (
                       <tr key={`${row.source.id}-${index}`}>
                         <td>{index + 1}</td><td>{normalizedType(row.source.type)}</td><td>{row.flow}</td><td>{row.source.diameter_cv}</td><td>{row.source.length}</td><td>{row.source.xi}</td>
                         <td>{formatValue(row.raw["流速(m/s)"], 2)}</td><td>{formatValue(row.raw["雷诺数Re"], 0)}</td><td>{formatValue(row.raw["沿程阻力系数λ"], 2)}</td><td>{formatValue(row.raw["层流底层(mm)"], 2)}</td><td>{formatValue(row.raw["R(Pa/m)"], 2)}</td>
                         <td>{formatValue(row.raw["ΔPy(Pa)"], 2)}</td><td>{formatValue(row.raw["动压(Pa)"], 2)}</td><td>{formatValue(row.raw["ΔPj(Pa)"], 2)}</td><td>{formatValue(row.raw["ΔPt(Pa)"], 2)}</td><td>{formatValue(row.raw["FR(Re)"], 4)}</td><td>{formatValue(row.raw["当量孔径(mm)"], 3)}</td><td>{formatValue(row.raw["当量Cv"], 5)}</td>
-                        <td>{row.regime}</td><td>{row.source.name}</td><td>{row.source.notes}</td>
+                        <td>{isEnglish ? REGIME_EN[row.regime] ?? row.regime : row.regime}</td><td>{row.source.name}</td><td>{row.source.notes}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -1232,24 +1433,24 @@ export default function FluidResistanceCalculator({
 
             {calculation && activeTab === "statistics" ? (
               <div className={styles.statisticsPanel}>
-                <p className={styles.conditionLine}>当前工况：{fluidType} | {temperature}C | 总流量 {formatValue(calculation.currentFlow, 3)} ml/min</p>
+                <p className={styles.conditionLine}>{isEnglish ? "Current condition" : "当前工况"}: {localizedName(fluidType, isEnglish)} | {temperature}C | {isEnglish ? "Total flow" : "总流量"} {formatValue(calculation.currentFlow, 3)} ml/min</p>
                 <div className={styles.metricGrid}>
-                  <div><span>沿程损失</span><strong>{formatValue(calculation.statistics.totalDPy, 2)} Pa</strong><small>偏差: {calculation.statistics.deltaDPy.toFixed(1)}%</small></div>
-                  <div><span>局部损失</span><strong>{formatValue(calculation.statistics.totalDPj, 2)} Pa</strong><small>偏差: {calculation.statistics.deltaDPj.toFixed(1)}%</small></div>
-                  <div><span>总损失</span><strong>{formatValue(calculation.statistics.totalDPt, 2)} Pa</strong><small>偏差: {calculation.statistics.deltaDPt.toFixed(1)}%</small></div>
-                  <div><span>整体Cv</span><strong>{formatValue(calculation.statistics.overallCv, 6)}</strong><small>偏差: {calculation.statistics.deltaCv.toFixed(1)}%</small></div>
+                  <div><span>{isEnglish ? "Friction Loss" : "沿程损失"}</span><strong>{formatValue(calculation.statistics.totalDPy, 2)} Pa</strong><small>{isEnglish ? "Deviation" : "偏差"}: {calculation.statistics.deltaDPy.toFixed(1)}%</small></div>
+                  <div><span>{isEnglish ? "Local Loss" : "局部损失"}</span><strong>{formatValue(calculation.statistics.totalDPj, 2)} Pa</strong><small>{isEnglish ? "Deviation" : "偏差"}: {calculation.statistics.deltaDPj.toFixed(1)}%</small></div>
+                  <div><span>{isEnglish ? "Total Loss" : "总损失"}</span><strong>{formatValue(calculation.statistics.totalDPt, 2)} Pa</strong><small>{isEnglish ? "Deviation" : "偏差"}: {calculation.statistics.deltaDPt.toFixed(1)}%</small></div>
+                  <div><span>{isEnglish ? "Overall Cv" : "整体Cv"}</span><strong>{formatValue(calculation.statistics.overallCv, 6)}</strong><small>{isEnglish ? "Deviation" : "偏差"}: {calculation.statistics.deltaCv.toFixed(1)}%</small></div>
                 </div>
-                <h3>对比 20C 清水（基准）</h3>
+                <h3>{isEnglish ? "Comparison with Water at 20C (Baseline)" : "对比 20C 清水（基准）"}</h3>
                 <div className={styles.metricGrid}>
-                  <div><span>沿程损失(清水)</span><strong>{formatValue(calculation.statistics.waterDPy, 2)} Pa</strong></div>
-                  <div><span>局部损失(清水)</span><strong>{formatValue(calculation.statistics.waterDPj, 2)} Pa</strong></div>
-                  <div><span>总损失(清水)</span><strong>{formatValue(calculation.statistics.waterDPt, 2)} Pa</strong></div>
-                  <div><span>整体Cv(清水)</span><strong>{formatValue(calculation.statistics.waterCv, 6)}</strong></div>
+                  <div><span>{isEnglish ? "Friction Loss (Water)" : "沿程损失(清水)"}</span><strong>{formatValue(calculation.statistics.waterDPy, 2)} Pa</strong></div>
+                  <div><span>{isEnglish ? "Local Loss (Water)" : "局部损失(清水)"}</span><strong>{formatValue(calculation.statistics.waterDPj, 2)} Pa</strong></div>
+                  <div><span>{isEnglish ? "Total Loss (Water)" : "总损失(清水)"}</span><strong>{formatValue(calculation.statistics.waterDPt, 2)} Pa</strong></div>
+                  <div><span>{isEnglish ? "Overall Cv (Water)" : "整体Cv(清水)"}</span><strong>{formatValue(calculation.statistics.waterCv, 6)}</strong></div>
                 </div>
                 <div className={styles.analysisList}>
-                  <p>局部损失占比 {calculation.statistics.localRatio.toFixed(1)}%，{calculation.statistics.localRatio > 50 ? "超过总损失一半，建议重点关注阀门、接头等局部阻力元件。" : "以沿程损失为主，可考虑优化管路长度或内径。"}</p>
-                  {calculation.statistics.maxDampSource ? <p>最大阻尼来源：序号 {calculation.statistics.maxDampSource.index}（{calculation.statistics.maxDampSource.type}）名称：{calculation.statistics.maxDampSource.name}，总压降 {formatValue(calculation.statistics.maxDampSource.dPt, 2)} Pa，占总损失比例 {calculation.statistics.maxDampSource.ratio.toFixed(1)}%</p> : null}
-                  {calculation.statistics.minCvSource ? <p>最小当量 Cv：序号 {calculation.statistics.minCvSource.index}（{calculation.statistics.minCvSource.type}），名称：{calculation.statistics.minCvSource.name}，Cv = {formatValue(calculation.statistics.minCvSource.cv, 5)}，该元件对流量的限制最显著。</p> : null}
+                  <p>{isEnglish ? "Local-loss share" : "局部损失占比"} {calculation.statistics.localRatio.toFixed(1)}%{isEnglish ? ". " : "，"}{calculation.statistics.localRatio > 50 ? (isEnglish ? "Local losses exceed half of the total. Review valves, fittings and other local resistance elements." : "超过总损失一半，建议重点关注阀门、接头等局部阻力元件。") : (isEnglish ? "Friction loss is dominant. Consider optimizing tubing length or internal diameter." : "以沿程损失为主，可考虑优化管路长度或内径。")}</p>
+                  {calculation.statistics.maxDampSource ? <p>{isEnglish ? "Largest resistance source" : "最大阻尼来源"}: {isEnglish ? "No." : "序号"} {calculation.statistics.maxDampSource.index} ({calculation.statistics.maxDampSource.type}), {isEnglish ? "name" : "名称"}: {calculation.statistics.maxDampSource.name}, {isEnglish ? "total pressure drop" : "总压降"} {formatValue(calculation.statistics.maxDampSource.dPt, 2)} Pa, {isEnglish ? "share of total loss" : "占总损失比例"} {calculation.statistics.maxDampSource.ratio.toFixed(1)}%</p> : null}
+                  {calculation.statistics.minCvSource ? <p>{isEnglish ? "Minimum equivalent Cv" : "最小当量 Cv"}: {isEnglish ? "No." : "序号"} {calculation.statistics.minCvSource.index} ({calculation.statistics.minCvSource.type}), {isEnglish ? "name" : "名称"}: {calculation.statistics.minCvSource.name}, Cv = {formatValue(calculation.statistics.minCvSource.cv, 5)}. {isEnglish ? "This element imposes the strongest flow limitation." : "该元件对流量的限制最显著。"}</p> : null}
                 </div>
               </div>
             ) : null}
@@ -1261,8 +1462,9 @@ export default function FluidResistanceCalculator({
                   polynomial={calculation.polynomial}
                   currentFlow={calculation.currentFlow}
                   currentPressure={calculation.statistics.totalDPt}
+                  isEnglish={isEnglish}
                 />
-                <p className={calculation.pqData.some((point) => point.is_non_monotonic) ? styles.chartWarning : styles.chartNotice}>{calculation.pqData.some((point) => point.is_non_monotonic) ? "在采样范围内检测到非单调区段。" : "在采样范围内未检测到非单调段，流动特性单调。"}</p>
+                <p className={calculation.pqData.some((point) => point.is_non_monotonic) ? styles.chartWarning : styles.chartNotice}>{calculation.pqData.some((point) => point.is_non_monotonic) ? (isEnglish ? "A non-monotonic segment was detected within the sampling range." : "在采样范围内检测到非单调区段。") : (isEnglish ? "No non-monotonic segment was detected within the sampling range; the flow characteristic is monotonic." : "在采样范围内未检测到非单调段，流动特性单调。")}</p>
               </div>
             ) : null}
 
@@ -1270,22 +1472,22 @@ export default function FluidResistanceCalculator({
               <div className={styles.polynomialPanel}>
                 <div className={styles.formula}>{calculation.polynomial.formula}</div>
                 <table className={styles.metricsTable}>
-                  <thead><tr><th></th><th>指标</th><th>值</th></tr></thead>
+                  <thead><tr><th></th><th>{isEnglish ? "Metric" : "指标"}</th><th>{isEnglish ? "Value" : "值"}</th></tr></thead>
                   <tbody>
-                    <tr><td>1</td><td>拟合阶数</td><td>{calculation.polynomial.fit.degree} 次</td></tr>
-                    <tr><td>2</td><td>决定系数 R2</td><td>{calculation.polynomial.fit.metrics.r2.toFixed(6)}</td></tr>
-                    <tr><td>3</td><td>调整 R2</td><td>{calculation.polynomial.fit.metrics.r2_adj.toFixed(6)}</td></tr>
+                    <tr><td>1</td><td>{isEnglish ? "Polynomial Degree" : "拟合阶数"}</td><td>{calculation.polynomial.fit.degree}{isEnglish ? "" : " 次"}</td></tr>
+                    <tr><td>2</td><td>{isEnglish ? "Coefficient of Determination R2" : "决定系数 R2"}</td><td>{calculation.polynomial.fit.metrics.r2.toFixed(6)}</td></tr>
+                    <tr><td>3</td><td>{isEnglish ? "Adjusted R2" : "调整 R2"}</td><td>{calculation.polynomial.fit.metrics.r2_adj.toFixed(6)}</td></tr>
                     <tr><td>4</td><td>RMSE (Pa)</td><td>{formatValue(calculation.polynomial.fit.metrics.rmse, 2)}</td></tr>
                     <tr><td>5</td><td>MAE (Pa)</td><td>{formatValue(calculation.polynomial.fit.metrics.mae, 2)}</td></tr>
-                    <tr><td>6</td><td>拟合质量{metricQuality(calculation.polynomial.fit)}</td><td></td></tr>
-                    <tr><td>7</td><td>采样范围</td><td>{formatValue(calculation.polynomial.qMin, 2)} ~ {formatValue(calculation.polynomial.qMax, 2)} ml/min</td></tr>
+                    <tr><td>6</td><td>{isEnglish ? "Fit Quality" : "拟合质量"}</td><td>{metricQuality(calculation.polynomial.fit, isEnglish)}</td></tr>
+                    <tr><td>7</td><td>{isEnglish ? "Sampling Range" : "采样范围"}</td><td>{formatValue(calculation.polynomial.qMin, 2)} ~ {formatValue(calculation.polynomial.qMax, 2)} ml/min</td></tr>
                   </tbody>
                 </table>
-                <div className={styles.residualChart}><ResidualChart polynomial={calculation.polynomial} /></div>
+                <div className={styles.residualChart}><ResidualChart polynomial={calculation.polynomial} isEnglish={isEnglish} /></div>
               </div>
             ) : null}
 
-            <div className={styles.statusBar}>{calculation?.summary ?? "等待计算"}</div>
+            <div className={styles.statusBar}>{calculation?.summary ?? (isEnglish ? "Ready" : "等待计算")}</div>
           </section>
         </div>
       </div>

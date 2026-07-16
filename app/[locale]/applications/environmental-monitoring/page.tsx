@@ -5,10 +5,13 @@
 
 import type { Metadata } from "next";
 
+import ApplicationEnglishClient from "@/components/applications/ApplicationEnglishClient";
 import EnvironmentalMonitoringApplicationClient from "@/components/applications/environmental-monitoring/EnvironmentalMonitoringApplicationClient";
+import { createEnglishApplicationData } from "@/data/applications/application-english";
 import { getEnvironmentalMonitoringApplicationPageData } from "@/services/applications/environmental-monitoring/getEnvironmentalMonitoringApplicationPageData";
 
 import "@/app/applications/environmental-monitoring/environmental-monitoring-application.css";
+import "@/app/applications/ivd/ivd-application.css";
 
 const ENABLED_LOCALES = ["en", "es", "fr", "ko", "ru"] as const;
 
@@ -33,6 +36,14 @@ export default async function EnvironmentalMonitoringApplicationLocalePage({
 }: EnvironmentalMonitoringApplicationLocalePageProps) {
   const { locale } = await params;
   const data = getEnvironmentalMonitoringApplicationPageData(locale);
+
+  if (locale === "en") {
+    return (
+      <ApplicationEnglishClient
+        data={createEnglishApplicationData("environmental-monitoring", data)}
+      />
+    );
+  }
 
   return <EnvironmentalMonitoringApplicationClient data={data} />;
 }

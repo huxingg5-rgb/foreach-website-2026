@@ -54,9 +54,20 @@ export default function RootLayout({
   children: ReactNode;
 }) {
   return (
-    <html lang="zh-CN">
+    <html lang="zh-CN" suppressHydrationWarning>
       <body>
         <SelectionCartProvider>
+          <Script id="foreach-document-language" strategy="beforeInteractive">
+            {`
+              (function () {
+                var firstSegment = window.location.pathname.split('/').filter(Boolean)[0];
+                var supported = ['en', 'es', 'fr', 'ko', 'ru'];
+                document.documentElement.lang = supported.indexOf(firstSegment) >= 0
+                  ? firstSegment
+                  : 'zh-CN';
+              })();
+            `}
+          </Script>
           {/* =================================================
               页面滚动、移动端菜单、语言菜单交互脚本
 
@@ -231,7 +242,7 @@ export default function RootLayout({
             后续如果需要 Footer 也根据 /en、/fr 自动切换，
             再把语言判断放到具体页面或前端组件里处理。
           */}
-          <SiteFooter locale="zh-CN" />
+          <SiteFooter />
 
           {/* 
             全局选型清单抽屉

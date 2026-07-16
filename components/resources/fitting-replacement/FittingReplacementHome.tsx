@@ -198,7 +198,12 @@ export default function FittingReplacementHome({
 
       <main className="frp-main">
         <div className="frp-container">
-          <Breadcrumb items={data.breadcrumbs} />
+          <Breadcrumb
+            items={data.breadcrumbs}
+            ariaLabel={
+              pageLocale === "zh" ? "面包屑导航" : "Breadcrumb"
+            }
+          />
         </div>
 
         <section className="frp-search-panel">

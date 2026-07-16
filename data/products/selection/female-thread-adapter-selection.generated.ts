@@ -30,7 +30,7 @@ export const femaleThreadAdapterSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "二通M6螺纹互转\n通径为0.5mm\nAC材质",
-      "en": "二通M6螺纹互转\n通径为0.5mm\nAC材质"
+      "en": "2-Way M6 Female Thread Adapter\nFlow Path Diameter: 0.5 mm\nAC material"
     },
     "filters": {
       "filter01": "二通",
@@ -59,7 +59,7 @@ export const femaleThreadAdapterSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "二通M6螺纹互转\n通径为1.0mm\nAC材质",
-      "en": "二通M6螺纹互转\n通径为1.0mm\nAC材质"
+      "en": "2-Way M6 Female Thread Adapter\nFlow Path Diameter: 1.0 mm\nAC material"
     },
     "filters": {
       "filter01": "二通",
@@ -88,7 +88,7 @@ export const femaleThreadAdapterSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "二通M6螺纹互转\n通径为1.5mm\nAC材质",
-      "en": "二通M6螺纹互转\n通径为1.5mm\nAC材质"
+      "en": "2-Way M6 Female Thread Adapter\nFlow Path Diameter: 1.5 mm\nAC material"
     },
     "filters": {
       "filter01": "二通",
@@ -117,7 +117,7 @@ export const femaleThreadAdapterSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "二通M6螺纹互转\n通径为0.5mm\nPP材质",
-      "en": "二通M6螺纹互转\n通径为0.5mm\nPP材质"
+      "en": "2-Way M6 Female Thread Adapter\nFlow Path Diameter: 0.5 mm\nPP material"
     },
     "filters": {
       "filter01": "二通",
@@ -146,7 +146,7 @@ export const femaleThreadAdapterSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "二通M6螺纹互转\n通径为1.0mm\nPP材质",
-      "en": "二通M6螺纹互转\n通径为1.0mm\nPP材质"
+      "en": "2-Way M6 Female Thread Adapter\nFlow Path Diameter: 1.0 mm\nPP material"
     },
     "filters": {
       "filter01": "二通",
@@ -175,7 +175,7 @@ export const femaleThreadAdapterSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "二通M6螺纹互转\n通径为1.5mm\nPP材质",
-      "en": "二通M6螺纹互转\n通径为1.5mm\nPP材质"
+      "en": "2-Way M6 Female Thread Adapter\nFlow Path Diameter: 1.5 mm\nPP material"
     },
     "filters": {
       "filter01": "二通",
@@ -204,7 +204,7 @@ export const femaleThreadAdapterSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "二通1/4-28 UNF螺纹互转\n通径为2.0mm\nPP材质",
-      "en": "二通1/4-28 UNF螺纹互转\n通径为2.0mm\nPP材质"
+      "en": "2-Way 1/4-28 UNF Female Thread Adapter\nFlow Path Diameter: 2.0 mm\nPP material"
     },
     "filters": {
       "filter01": "二通",
@@ -233,7 +233,7 @@ export const femaleThreadAdapterSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "二通1/4-28 UNF螺纹互转\n通径为2.0mm\nPP材质",
-      "en": "二通1/4-28 UNF螺纹互转\n通径为2.0mm\nPP材质"
+      "en": "2-Way 1/4-28 UNF Female Thread Adapter\nFlow Path Diameter: 2.0 mm\nPP material"
     },
     "filters": {
       "filter01": "二通",
@@ -262,7 +262,7 @@ export const femaleThreadAdapterSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "二通1/4-28 UNF螺纹互转\n通径为2.0mm\nAC材质",
-      "en": "二通1/4-28 UNF螺纹互转\n通径为2.0mm\nAC材质"
+      "en": "2-Way 1/4-28 UNF Female Thread Adapter\nFlow Path Diameter: 2.0 mm\nAC material"
     },
     "filters": {
       "filter01": "二通",
@@ -291,7 +291,7 @@ export const femaleThreadAdapterSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "二通1/4-28 UNF螺纹互转\n通径为2.0mm\nPS材质",
-      "en": "二通1/4-28 UNF螺纹互转\n通径为2.0mm\nPS材质"
+      "en": "2-Way 1/4-28 UNF Female Thread Adapter\nFlow Path Diameter: 2.0 mm\nPS material"
     },
     "filters": {
       "filter01": "二通",
@@ -320,7 +320,7 @@ export const femaleThreadAdapterSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "二通M6螺纹互转\n通径为2.0mm\nPP材质",
-      "en": "二通M6螺纹互转\n通径为2.0mm\nPP材质"
+      "en": "2-Way M6 Female Thread Adapter\nFlow Path Diameter: 2.0 mm\nPP material"
     },
     "filters": {
       "filter01": "二通",
@@ -349,7 +349,7 @@ export const femaleThreadAdapterSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "二通M6螺纹互转\n通径为2.0mm\nAC材质",
-      "en": "二通M6螺纹互转\n通径为2.0mm\nAC材质"
+      "en": "2-Way M6 Female Thread Adapter\nFlow Path Diameter: 2.0 mm\nAC material"
     },
     "filters": {
       "filter01": "二通",
@@ -378,7 +378,7 @@ export const femaleThreadAdapterSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "三通1/4-28 UNF螺纹互转\n通径为1.5mm\nPP材质",
-      "en": "三通1/4-28 UNF螺纹互转\n通径为1.5mm\nPP材质"
+      "en": "3-Way 1/4-28 UNF Female Thread Adapter\nFlow Path Diameter: 1.5 mm\nPP material"
     },
     "filters": {
       "filter01": "三通",
@@ -407,7 +407,7 @@ export const femaleThreadAdapterSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "三通1/4-28 UNF螺纹互转\n通径为2.0mm\nPP材质",
-      "en": "三通1/4-28 UNF螺纹互转\n通径为2.0mm\nPP材质"
+      "en": "3-Way 1/4-28 UNF Female Thread Adapter\nFlow Path Diameter: 2.0 mm\nPP material"
     },
     "filters": {
       "filter01": "三通",
@@ -436,7 +436,7 @@ export const femaleThreadAdapterSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "三通1/4-28 UNF螺纹互转\n通径为1.5mm\nPS材质",
-      "en": "三通1/4-28 UNF螺纹互转\n通径为1.5mm\nPS材质"
+      "en": "3-Way 1/4-28 UNF Female Thread Adapter\nFlow Path Diameter: 1.5 mm\nPS material"
     },
     "filters": {
       "filter01": "三通",
@@ -465,7 +465,7 @@ export const femaleThreadAdapterSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "三通1/4-28 UNF螺纹互转\n通径为2.0mm\nPS材质",
-      "en": "三通1/4-28 UNF螺纹互转\n通径为2.0mm\nPS材质"
+      "en": "3-Way 1/4-28 UNF Female Thread Adapter\nFlow Path Diameter: 2.0 mm\nPS material"
     },
     "filters": {
       "filter01": "三通",
@@ -494,7 +494,7 @@ export const femaleThreadAdapterSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "三通M6螺纹互转\n通径为2.0mm\nPP材质",
-      "en": "三通M6螺纹互转\n通径为2.0mm\nPP材质"
+      "en": "3-Way M6 Female Thread Adapter\nFlow Path Diameter: 2.0 mm\nPP material"
     },
     "filters": {
       "filter01": "三通",
@@ -523,7 +523,7 @@ export const femaleThreadAdapterSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "三通1/4-28 UNF螺纹互转\n通径为1.0mm\nPP材质",
-      "en": "三通1/4-28 UNF螺纹互转\n通径为1.0mm\nPP材质"
+      "en": "3-Way 1/4-28 UNF Female Thread Adapter\nFlow Path Diameter: 1.0 mm\nPP material"
     },
     "filters": {
       "filter01": "三通",
@@ -552,7 +552,7 @@ export const femaleThreadAdapterSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "三通1/4-28 UNF螺纹互转\n通径为1.5mm\nPP材质",
-      "en": "三通1/4-28 UNF螺纹互转\n通径为1.5mm\nPP材质"
+      "en": "3-Way 1/4-28 UNF Female Thread Adapter\nFlow Path Diameter: 1.5 mm\nPP material"
     },
     "filters": {
       "filter01": "三通",
@@ -581,7 +581,7 @@ export const femaleThreadAdapterSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "三通1/4-28 UNF螺纹互转\n通径为2.0mm\nPP材质",
-      "en": "三通1/4-28 UNF螺纹互转\n通径为2.0mm\nPP材质"
+      "en": "3-Way 1/4-28 UNF Female Thread Adapter\nFlow Path Diameter: 2.0 mm\nPP material"
     },
     "filters": {
       "filter01": "三通",
@@ -610,7 +610,7 @@ export const femaleThreadAdapterSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "二通M12螺纹互转\nPA材质",
-      "en": "二通M12螺纹互转\nPA材质"
+      "en": "2-Way M12 Female Thread Adapter\nPA material"
     },
     "filters": {
       "filter01": "二通",
@@ -638,7 +638,7 @@ export const femaleThreadAdapterSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "二通10-32 UNF螺纹互转\n通径为0.8mm\nSS材质",
-      "en": "二通10-32 UNF螺纹互转\n通径为0.8mm\nSS材质"
+      "en": "2-Way 10-32 UNF Female Thread Adapter\nFlow Path Diameter: 0.8 mm\nSS material"
     },
     "filters": {
       "filter01": "二通",
@@ -667,7 +667,7 @@ export const femaleThreadAdapterSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "二通10-32 UNF转1/4-28 UNF螺纹互转\n通径为0.8mm\nSS材质",
-      "en": "二通10-32 UNF转1/4-28 UNF螺纹互转\n通径为0.8mm\nSS材质"
+      "en": "2-Way 10-32 UNF to 1/4-28 UNF Female Thread Adapter\nFlow Path Diameter: 0.8 mm\nSS material"
     },
     "filters": {
       "filter01": "二通",
@@ -696,7 +696,7 @@ export const femaleThreadAdapterSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "三通10-32 UNF螺纹互转\n通径为0.5mm\nSS材质",
-      "en": "三通10-32 UNF螺纹互转\n通径为0.5mm\nSS材质"
+      "en": "3-Way 10-32 UNF Female Thread Adapter\nFlow Path Diameter: 0.5 mm\nSS material"
     },
     "filters": {
       "filter01": "三通",

@@ -82,7 +82,9 @@ export default function TechnicalArticleDetail({
       <article className="technicalArticleDetail">
         <div className="technicalArticleDetail__header">
           <Link className="technicalArticleDetail__back" href={listHref}>
-            返回技术文章列表
+            {isChinesePage(pageData.locale)
+              ? "返回技术文章列表"
+              : "Back to Technical Articles"}
           </Link>
 
           <h1 className="technicalArticleDetail__title">{article.title}</h1>
@@ -113,7 +115,10 @@ export default function TechnicalArticleDetail({
       <SupportCtaComponent
         title={pageData.bottomBanner.title}
         description={pageData.bottomBanner.description}
-        buttonText={pageData.bottomBanner.actions[0]?.label ?? "联系我们"}
+        buttonText={
+          pageData.bottomBanner.actions[0]?.label ??
+          (isChinesePage(pageData.locale) ? "联系我们" : "Contact Us")
+        }
         href={pageData.bottomBanner.actions[0]?.href ?? "/contact"}
       />
     </main>

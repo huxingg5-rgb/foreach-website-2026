@@ -34,11 +34,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通倒刺接头\n适用1.6 mm内径软管\nPP材质，本色",
-      "en": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "es": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "fr": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "ko": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "ru": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色"
+      "en": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "es": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "fr": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "ko": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "ru": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "直通型",
@@ -63,7 +63,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10000,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-16F-PP-N 809276 1.6 mm 1.6 mm PP 本色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-16F-PP-N 809276 1.6 mm 1.6 mm PP 本色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-16F-PP-N 809276 1.6 mm 1.6 mm PP Natural",
       "es": "barbed fitting Straight Barbed Fitting BA BA-16F-PP-N 809276 1.6 mm 1.6 mm PP 本色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-16F-PP-N 809276 1.6 mm 1.6 mm PP 本色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-16F-PP-N 809276 1.6 mm 1.6 mm PP 本色",
@@ -92,11 +92,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通倒刺接头\n适用2.4 mm内径软管\nPP材质，本色",
-      "en": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "es": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "fr": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "ko": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "ru": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色"
+      "en": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "es": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "fr": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "ko": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "ru": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "直通型",
@@ -121,7 +121,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10001,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-24F-PP-N 809277 2.4 mm 2.4 mm PP 本色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-24F-PP-N 809277 2.4 mm 2.4 mm PP 本色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-24F-PP-N 809277 2.4 mm 2.4 mm PP Natural",
       "es": "barbed fitting Straight Barbed Fitting BA BA-24F-PP-N 809277 2.4 mm 2.4 mm PP 本色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-24F-PP-N 809277 2.4 mm 2.4 mm PP 本色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-24F-PP-N 809277 2.4 mm 2.4 mm PP 本色",
@@ -150,11 +150,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通倒刺接头\n适用3.2 mm内径软管\nPP材质，本色",
-      "en": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "es": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "fr": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "ko": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "ru": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色"
+      "en": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "es": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "fr": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "ko": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "ru": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "直通型",
@@ -179,7 +179,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10002,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-32F-PP-N 809278 3.2 mm 3.2 mm PP 本色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-32F-PP-N 809278 3.2 mm 3.2 mm PP 本色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-32F-PP-N 809278 3.2 mm 3.2 mm PP Natural",
       "es": "barbed fitting Straight Barbed Fitting BA BA-32F-PP-N 809278 3.2 mm 3.2 mm PP 本色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-32F-PP-N 809278 3.2 mm 3.2 mm PP 本色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-32F-PP-N 809278 3.2 mm 3.2 mm PP 本色",
@@ -208,11 +208,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通倒刺接头\n适用4.0 mm内径软管\nPP材质，本色",
-      "en": "Straight Barbed Fitting\nTube ID: 4.0 mm\nPP body | 本色",
-      "es": "Straight Barbed Fitting\nTube ID: 4.0 mm\nPP body | 本色",
-      "fr": "Straight Barbed Fitting\nTube ID: 4.0 mm\nPP body | 本色",
-      "ko": "Straight Barbed Fitting\nTube ID: 4.0 mm\nPP body | 本色",
-      "ru": "Straight Barbed Fitting\nTube ID: 4.0 mm\nPP body | 本色"
+      "en": "Straight Barbed Fitting\nTube ID: 4.0 mm\nPP body | Natural",
+      "es": "Straight Barbed Fitting\nTube ID: 4.0 mm\nPP body | Natural",
+      "fr": "Straight Barbed Fitting\nTube ID: 4.0 mm\nPP body | Natural",
+      "ko": "Straight Barbed Fitting\nTube ID: 4.0 mm\nPP body | Natural",
+      "ru": "Straight Barbed Fitting\nTube ID: 4.0 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "直通型",
@@ -237,7 +237,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10003,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-40F-PP-N 809279 4.0 mm 4.0 mm PP 本色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-40F-PP-N 809279 4.0 mm 4.0 mm PP 本色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-40F-PP-N 809279 4.0 mm 4.0 mm PP Natural",
       "es": "barbed fitting Straight Barbed Fitting BA BA-40F-PP-N 809279 4.0 mm 4.0 mm PP 本色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-40F-PP-N 809279 4.0 mm 4.0 mm PP 本色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-40F-PP-N 809279 4.0 mm 4.0 mm PP 本色",
@@ -266,11 +266,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用1.6 mm转2.4 mm内径软管\nPP材质，本色",
-      "en": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPP body | 本色",
-      "es": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPP body | 本色",
-      "fr": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPP body | 本色",
-      "ko": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPP body | 本色",
-      "ru": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPP body | 本色"
+      "en": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPP body | Natural",
+      "es": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPP body | Natural",
+      "fr": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPP body | Natural",
+      "ko": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPP body | Natural",
+      "ru": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "直通型",
@@ -295,7 +295,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10004,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-16F-24F-PP-N 809288 1.6 mm 2.4 mm PP 本色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-16F-24F-PP-N 809288 1.6 mm 2.4 mm PP 本色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-16F-24F-PP-N 809288 1.6 mm 2.4 mm PP Natural",
       "es": "barbed fitting Straight Barbed Fitting BA BA-16F-24F-PP-N 809288 1.6 mm 2.4 mm PP 本色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-16F-24F-PP-N 809288 1.6 mm 2.4 mm PP 本色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-16F-24F-PP-N 809288 1.6 mm 2.4 mm PP 本色",
@@ -324,11 +324,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用2.4 mm转3.2 mm内径软管\nPP材质，本色",
-      "en": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPP body | 本色",
-      "es": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPP body | 本色",
-      "fr": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPP body | 本色",
-      "ko": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPP body | 本色",
-      "ru": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPP body | 本色"
+      "en": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPP body | Natural",
+      "es": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPP body | Natural",
+      "fr": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPP body | Natural",
+      "ko": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPP body | Natural",
+      "ru": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "直通型",
@@ -353,7 +353,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10005,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-24F-32F-PP-N 809289 2.4 mm 3.2 mm PP 本色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-24F-32F-PP-N 809289 2.4 mm 3.2 mm PP 本色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-24F-32F-PP-N 809289 2.4 mm 3.2 mm PP Natural",
       "es": "barbed fitting Straight Barbed Fitting BA BA-24F-32F-PP-N 809289 2.4 mm 3.2 mm PP 本色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-24F-32F-PP-N 809289 2.4 mm 3.2 mm PP 本色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-24F-32F-PP-N 809289 2.4 mm 3.2 mm PP 本色",
@@ -382,11 +382,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通倒刺接头\n适用1.6 mm内径软管\nPA材质，白色",
-      "en": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色",
-      "es": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色",
-      "fr": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色",
-      "ko": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色",
-      "ru": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色"
+      "en": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPA body | White",
+      "es": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPA body | White",
+      "fr": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPA body | White",
+      "ko": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPA body | White",
+      "ru": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPA body | White"
     },
     "filters": {
       "filter01": "直通型",
@@ -411,7 +411,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10006,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-16F-PA-W 809321 1.6 mm 1.6 mm PA 白色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-16F-PA-W 809321 1.6 mm 1.6 mm PA 白色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-16F-PA-W 809321 1.6 mm 1.6 mm PA White",
       "es": "barbed fitting Straight Barbed Fitting BA BA-16F-PA-W 809321 1.6 mm 1.6 mm PA 白色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-16F-PA-W 809321 1.6 mm 1.6 mm PA 白色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-16F-PA-W 809321 1.6 mm 1.6 mm PA 白色",
@@ -440,11 +440,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用1.6 mm转2.4 mm内径软管\nPA材质，白色",
-      "en": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPA body | 白色",
-      "es": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPA body | 白色",
-      "fr": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPA body | 白色",
-      "ko": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPA body | 白色",
-      "ru": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPA body | 白色"
+      "en": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPA body | White",
+      "es": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPA body | White",
+      "fr": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPA body | White",
+      "ko": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPA body | White",
+      "ru": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPA body | White"
     },
     "filters": {
       "filter01": "直通型",
@@ -469,7 +469,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10007,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-16F-24F-PA-W 809322 1.6 mm 2.4 mm PA 白色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-16F-24F-PA-W 809322 1.6 mm 2.4 mm PA 白色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-16F-24F-PA-W 809322 1.6 mm 2.4 mm PA White",
       "es": "barbed fitting Straight Barbed Fitting BA BA-16F-24F-PA-W 809322 1.6 mm 2.4 mm PA 白色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-16F-24F-PA-W 809322 1.6 mm 2.4 mm PA 白色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-16F-24F-PA-W 809322 1.6 mm 2.4 mm PA 白色",
@@ -498,11 +498,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通倒刺接头\n适用2.4 mm内径软管\nPA材质，白色",
-      "en": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色",
-      "es": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色",
-      "fr": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色",
-      "ko": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色",
-      "ru": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色"
+      "en": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPA body | White",
+      "es": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPA body | White",
+      "fr": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPA body | White",
+      "ko": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPA body | White",
+      "ru": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPA body | White"
     },
     "filters": {
       "filter01": "直通型",
@@ -527,7 +527,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10008,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-24F-PA-W 809324 2.4 mm 2.4 mm PA 白色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-24F-PA-W 809324 2.4 mm 2.4 mm PA 白色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-24F-PA-W 809324 2.4 mm 2.4 mm PA White",
       "es": "barbed fitting Straight Barbed Fitting BA BA-24F-PA-W 809324 2.4 mm 2.4 mm PA 白色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-24F-PA-W 809324 2.4 mm 2.4 mm PA 白色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-24F-PA-W 809324 2.4 mm 2.4 mm PA 白色",
@@ -556,11 +556,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用2.4 mm转3.2 mm内径软管\nPA材质，白色",
-      "en": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPA body | 白色",
-      "es": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPA body | 白色",
-      "fr": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPA body | 白色",
-      "ko": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPA body | 白色",
-      "ru": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPA body | 白色"
+      "en": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPA body | White",
+      "es": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPA body | White",
+      "fr": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPA body | White",
+      "ko": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPA body | White",
+      "ru": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPA body | White"
     },
     "filters": {
       "filter01": "直通型",
@@ -585,7 +585,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10009,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-24F-32F-PA-W 809325 2.4 mm 3.2 mm PA 白色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-24F-32F-PA-W 809325 2.4 mm 3.2 mm PA 白色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-24F-32F-PA-W 809325 2.4 mm 3.2 mm PA White",
       "es": "barbed fitting Straight Barbed Fitting BA BA-24F-32F-PA-W 809325 2.4 mm 3.2 mm PA 白色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-24F-32F-PA-W 809325 2.4 mm 3.2 mm PA 白色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-24F-32F-PA-W 809325 2.4 mm 3.2 mm PA 白色",
@@ -614,11 +614,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通倒刺接头\n适用3.2 mm内径软管\nPA材质，白色",
-      "en": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色",
-      "es": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色",
-      "fr": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色",
-      "ko": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色",
-      "ru": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色"
+      "en": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPA body | White",
+      "es": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPA body | White",
+      "fr": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPA body | White",
+      "ko": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPA body | White",
+      "ru": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPA body | White"
     },
     "filters": {
       "filter01": "直通型",
@@ -643,7 +643,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10010,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-32F-PA-W 809328 3.2 mm 3.2 mm PA 白色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-32F-PA-W 809328 3.2 mm 3.2 mm PA 白色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-32F-PA-W 809328 3.2 mm 3.2 mm PA White",
       "es": "barbed fitting Straight Barbed Fitting BA BA-32F-PA-W 809328 3.2 mm 3.2 mm PA 白色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-32F-PA-W 809328 3.2 mm 3.2 mm PA 白色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-32F-PA-W 809328 3.2 mm 3.2 mm PA 白色",
@@ -672,11 +672,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通倒刺接头\n适用4.0 mm内径软管\nPA材质，白色",
-      "en": "Straight Barbed Fitting\nTube ID: 4.0 mm\nPA body | 白色",
-      "es": "Straight Barbed Fitting\nTube ID: 4.0 mm\nPA body | 白色",
-      "fr": "Straight Barbed Fitting\nTube ID: 4.0 mm\nPA body | 白色",
-      "ko": "Straight Barbed Fitting\nTube ID: 4.0 mm\nPA body | 白色",
-      "ru": "Straight Barbed Fitting\nTube ID: 4.0 mm\nPA body | 白色"
+      "en": "Straight Barbed Fitting\nTube ID: 4.0 mm\nPA body | White",
+      "es": "Straight Barbed Fitting\nTube ID: 4.0 mm\nPA body | White",
+      "fr": "Straight Barbed Fitting\nTube ID: 4.0 mm\nPA body | White",
+      "ko": "Straight Barbed Fitting\nTube ID: 4.0 mm\nPA body | White",
+      "ru": "Straight Barbed Fitting\nTube ID: 4.0 mm\nPA body | White"
     },
     "filters": {
       "filter01": "直通型",
@@ -701,7 +701,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10011,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-40F-PA-W 809329 4.0 mm 4.0 mm PA 白色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-40F-PA-W 809329 4.0 mm 4.0 mm PA 白色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-40F-PA-W 809329 4.0 mm 4.0 mm PA White",
       "es": "barbed fitting Straight Barbed Fitting BA BA-40F-PA-W 809329 4.0 mm 4.0 mm PA 白色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-40F-PA-W 809329 4.0 mm 4.0 mm PA 白色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-40F-PA-W 809329 4.0 mm 4.0 mm PA 白色",
@@ -730,11 +730,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用1.6 mm转3.2 mm内径软管\nPP材质，本色",
-      "en": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPP body | 本色",
-      "es": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPP body | 本色",
-      "fr": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPP body | 本色",
-      "ko": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPP body | 本色",
-      "ru": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPP body | 本色"
+      "en": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPP body | Natural",
+      "es": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPP body | Natural",
+      "fr": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPP body | Natural",
+      "ko": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPP body | Natural",
+      "ru": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "直通型",
@@ -759,7 +759,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10012,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-16F-32F-PP-N 809330 1.6 mm 3.2 mm PP 本色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-16F-32F-PP-N 809330 1.6 mm 3.2 mm PP 本色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-16F-32F-PP-N 809330 1.6 mm 3.2 mm PP Natural",
       "es": "barbed fitting Straight Barbed Fitting BA BA-16F-32F-PP-N 809330 1.6 mm 3.2 mm PP 本色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-16F-32F-PP-N 809330 1.6 mm 3.2 mm PP 本色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-16F-32F-PP-N 809330 1.6 mm 3.2 mm PP 本色",
@@ -788,11 +788,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用1.6 mm转3.2 mm内径软管\nPA材质，白色",
-      "en": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPA body | 白色",
-      "es": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPA body | 白色",
-      "fr": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPA body | 白色",
-      "ko": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPA body | 白色",
-      "ru": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPA body | 白色"
+      "en": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPA body | White",
+      "es": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPA body | White",
+      "fr": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPA body | White",
+      "ko": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPA body | White",
+      "ru": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPA body | White"
     },
     "filters": {
       "filter01": "直通型",
@@ -817,7 +817,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10013,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-16F-32F-PA-W 809332 1.6 mm 3.2 mm PA 白色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-16F-32F-PA-W 809332 1.6 mm 3.2 mm PA 白色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-16F-32F-PA-W 809332 1.6 mm 3.2 mm PA White",
       "es": "barbed fitting Straight Barbed Fitting BA BA-16F-32F-PA-W 809332 1.6 mm 3.2 mm PA 白色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-16F-32F-PA-W 809332 1.6 mm 3.2 mm PA 白色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-16F-32F-PA-W 809332 1.6 mm 3.2 mm PA 白色",
@@ -846,11 +846,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用3.2 mm转6.4 mm内径软管\nPA材质，白色",
-      "en": "Straight Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm\nPA body | 白色",
-      "es": "Straight Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm\nPA body | 白色",
-      "fr": "Straight Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm\nPA body | 白色",
-      "ko": "Straight Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm\nPA body | 白色",
-      "ru": "Straight Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm\nPA body | 白色"
+      "en": "Straight Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm\nPA body | White",
+      "es": "Straight Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm\nPA body | White",
+      "fr": "Straight Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm\nPA body | White",
+      "ko": "Straight Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm\nPA body | White",
+      "ru": "Straight Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm\nPA body | White"
     },
     "filters": {
       "filter01": "直通型",
@@ -875,7 +875,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10014,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-32C-64C-PA-W 809371 3.2 mm 6.4 mm PA 白色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-32C-64C-PA-W 809371 3.2 mm 6.4 mm PA 白色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-32C-64C-PA-W 809371 3.2 mm 6.4 mm PA White",
       "es": "barbed fitting Straight Barbed Fitting BA BA-32C-64C-PA-W 809371 3.2 mm 6.4 mm PA 白色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-32C-64C-PA-W 809371 3.2 mm 6.4 mm PA 白色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-32C-64C-PA-W 809371 3.2 mm 6.4 mm PA 白色",
@@ -904,11 +904,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用3.2 mm转6.4 mm内径软管\nPP材质，本色",
-      "en": "Straight Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm\nPP body | 本色",
-      "es": "Straight Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm\nPP body | 本色",
-      "fr": "Straight Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm\nPP body | 本色",
-      "ko": "Straight Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm\nPP body | 本色",
-      "ru": "Straight Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm\nPP body | 本色"
+      "en": "Straight Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm\nPP body | Natural",
+      "es": "Straight Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm\nPP body | Natural",
+      "fr": "Straight Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm\nPP body | Natural",
+      "ko": "Straight Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm\nPP body | Natural",
+      "ru": "Straight Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "直通型",
@@ -933,7 +933,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10015,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-32C-64C-PP-N 809370 3.2 mm 6.4 mm PP 本色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-32C-64C-PP-N 809370 3.2 mm 6.4 mm PP 本色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-32C-64C-PP-N 809370 3.2 mm 6.4 mm PP Natural",
       "es": "barbed fitting Straight Barbed Fitting BA BA-32C-64C-PP-N 809370 3.2 mm 6.4 mm PP 本色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-32C-64C-PP-N 809370 3.2 mm 6.4 mm PP 本色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-32C-64C-PP-N 809370 3.2 mm 6.4 mm PP 本色",
@@ -962,11 +962,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用3.2 mm转4.0 mm内径软管\nPP材质，本色",
-      "en": "Straight Barbed Fitting\nTube ID: 3.2 mm / 4.0 mm\nPP body | 本色",
-      "es": "Straight Barbed Fitting\nTube ID: 3.2 mm / 4.0 mm\nPP body | 本色",
-      "fr": "Straight Barbed Fitting\nTube ID: 3.2 mm / 4.0 mm\nPP body | 本色",
-      "ko": "Straight Barbed Fitting\nTube ID: 3.2 mm / 4.0 mm\nPP body | 本色",
-      "ru": "Straight Barbed Fitting\nTube ID: 3.2 mm / 4.0 mm\nPP body | 本色"
+      "en": "Straight Barbed Fitting\nTube ID: 3.2 mm / 4.0 mm\nPP body | Natural",
+      "es": "Straight Barbed Fitting\nTube ID: 3.2 mm / 4.0 mm\nPP body | Natural",
+      "fr": "Straight Barbed Fitting\nTube ID: 3.2 mm / 4.0 mm\nPP body | Natural",
+      "ko": "Straight Barbed Fitting\nTube ID: 3.2 mm / 4.0 mm\nPP body | Natural",
+      "ru": "Straight Barbed Fitting\nTube ID: 3.2 mm / 4.0 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "直通型",
@@ -991,7 +991,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10016,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-32V-40V-PP-N 809374 3.2 mm 4.0 mm PP 本色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-32V-40V-PP-N 809374 3.2 mm 4.0 mm PP 本色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-32V-40V-PP-N 809374 3.2 mm 4.0 mm PP Natural",
       "es": "barbed fitting Straight Barbed Fitting BA BA-32V-40V-PP-N 809374 3.2 mm 4.0 mm PP 本色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-32V-40V-PP-N 809374 3.2 mm 4.0 mm PP 本色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-32V-40V-PP-N 809374 3.2 mm 4.0 mm PP 本色",
@@ -1020,11 +1020,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用3.2 mm转4.0 mm内径软管\nPA材质，白色",
-      "en": "Straight Barbed Fitting\nTube ID: 3.2 mm / 4.0 mm\nPA body | 白色",
-      "es": "Straight Barbed Fitting\nTube ID: 3.2 mm / 4.0 mm\nPA body | 白色",
-      "fr": "Straight Barbed Fitting\nTube ID: 3.2 mm / 4.0 mm\nPA body | 白色",
-      "ko": "Straight Barbed Fitting\nTube ID: 3.2 mm / 4.0 mm\nPA body | 白色",
-      "ru": "Straight Barbed Fitting\nTube ID: 3.2 mm / 4.0 mm\nPA body | 白色"
+      "en": "Straight Barbed Fitting\nTube ID: 3.2 mm / 4.0 mm\nPA body | White",
+      "es": "Straight Barbed Fitting\nTube ID: 3.2 mm / 4.0 mm\nPA body | White",
+      "fr": "Straight Barbed Fitting\nTube ID: 3.2 mm / 4.0 mm\nPA body | White",
+      "ko": "Straight Barbed Fitting\nTube ID: 3.2 mm / 4.0 mm\nPA body | White",
+      "ru": "Straight Barbed Fitting\nTube ID: 3.2 mm / 4.0 mm\nPA body | White"
     },
     "filters": {
       "filter01": "直通型",
@@ -1049,7 +1049,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10017,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-32V-40V-PA-W 809375 3.2 mm 4.0 mm PA 白色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-32V-40V-PA-W 809375 3.2 mm 4.0 mm PA 白色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-32V-40V-PA-W 809375 3.2 mm 4.0 mm PA White",
       "es": "barbed fitting Straight Barbed Fitting BA BA-32V-40V-PA-W 809375 3.2 mm 4.0 mm PA 白色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-32V-40V-PA-W 809375 3.2 mm 4.0 mm PA 白色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-32V-40V-PA-W 809375 3.2 mm 4.0 mm PA 白色",
@@ -1078,11 +1078,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用2.4 mm转4.0 mm内径软管\nPP材质，本色",
-      "en": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.0 mm\nPP body | 本色",
-      "es": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.0 mm\nPP body | 本色",
-      "fr": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.0 mm\nPP body | 本色",
-      "ko": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.0 mm\nPP body | 本色",
-      "ru": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.0 mm\nPP body | 本色"
+      "en": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.0 mm\nPP body | Natural",
+      "es": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.0 mm\nPP body | Natural",
+      "fr": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.0 mm\nPP body | Natural",
+      "ko": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.0 mm\nPP body | Natural",
+      "ru": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.0 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "直通型",
@@ -1107,7 +1107,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10018,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-24V-40V-PP-N 809376 2.4 mm 4.0 mm PP 本色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-24V-40V-PP-N 809376 2.4 mm 4.0 mm PP 本色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-24V-40V-PP-N 809376 2.4 mm 4.0 mm PP Natural",
       "es": "barbed fitting Straight Barbed Fitting BA BA-24V-40V-PP-N 809376 2.4 mm 4.0 mm PP 本色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-24V-40V-PP-N 809376 2.4 mm 4.0 mm PP 本色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-24V-40V-PP-N 809376 2.4 mm 4.0 mm PP 本色",
@@ -1136,11 +1136,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用2.4 mm转4.0 mm内径软管\nPA材质，白色",
-      "en": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.0 mm\nPA body | 白色",
-      "es": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.0 mm\nPA body | 白色",
-      "fr": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.0 mm\nPA body | 白色",
-      "ko": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.0 mm\nPA body | 白色",
-      "ru": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.0 mm\nPA body | 白色"
+      "en": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.0 mm\nPA body | White",
+      "es": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.0 mm\nPA body | White",
+      "fr": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.0 mm\nPA body | White",
+      "ko": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.0 mm\nPA body | White",
+      "ru": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.0 mm\nPA body | White"
     },
     "filters": {
       "filter01": "直通型",
@@ -1165,7 +1165,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10019,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-24V-40V-PA-W 809377 2.4 mm 4.0 mm PA 白色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-24V-40V-PA-W 809377 2.4 mm 4.0 mm PA 白色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-24V-40V-PA-W 809377 2.4 mm 4.0 mm PA White",
       "es": "barbed fitting Straight Barbed Fitting BA BA-24V-40V-PA-W 809377 2.4 mm 4.0 mm PA 白色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-24V-40V-PA-W 809377 2.4 mm 4.0 mm PA 白色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-24V-40V-PA-W 809377 2.4 mm 4.0 mm PA 白色",
@@ -1194,11 +1194,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用6.4 mm转7.9 mm内径软管\nPP材质，本色",
-      "en": "Straight Barbed Fitting\nTube ID: 6.4 mm / 7.9 mm\nPP body | 本色",
-      "es": "Straight Barbed Fitting\nTube ID: 6.4 mm / 7.9 mm\nPP body | 本色",
-      "fr": "Straight Barbed Fitting\nTube ID: 6.4 mm / 7.9 mm\nPP body | 本色",
-      "ko": "Straight Barbed Fitting\nTube ID: 6.4 mm / 7.9 mm\nPP body | 本色",
-      "ru": "Straight Barbed Fitting\nTube ID: 6.4 mm / 7.9 mm\nPP body | 本色"
+      "en": "Straight Barbed Fitting\nTube ID: 6.4 mm / 7.9 mm\nPP body | Natural",
+      "es": "Straight Barbed Fitting\nTube ID: 6.4 mm / 7.9 mm\nPP body | Natural",
+      "fr": "Straight Barbed Fitting\nTube ID: 6.4 mm / 7.9 mm\nPP body | Natural",
+      "ko": "Straight Barbed Fitting\nTube ID: 6.4 mm / 7.9 mm\nPP body | Natural",
+      "ru": "Straight Barbed Fitting\nTube ID: 6.4 mm / 7.9 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "直通型",
@@ -1223,7 +1223,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10020,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-64V-79V-PP-N 809378 6.4 mm 7.9 mm PP 本色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-64V-79V-PP-N 809378 6.4 mm 7.9 mm PP 本色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-64V-79V-PP-N 809378 6.4 mm 7.9 mm PP Natural",
       "es": "barbed fitting Straight Barbed Fitting BA BA-64V-79V-PP-N 809378 6.4 mm 7.9 mm PP 本色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-64V-79V-PP-N 809378 6.4 mm 7.9 mm PP 本色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-64V-79V-PP-N 809378 6.4 mm 7.9 mm PP 本色",
@@ -1252,11 +1252,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用6.4 mm转7.9 mm内径软管\nPA材质，白色",
-      "en": "Straight Barbed Fitting\nTube ID: 6.4 mm / 7.9 mm\nPA body | 白色",
-      "es": "Straight Barbed Fitting\nTube ID: 6.4 mm / 7.9 mm\nPA body | 白色",
-      "fr": "Straight Barbed Fitting\nTube ID: 6.4 mm / 7.9 mm\nPA body | 白色",
-      "ko": "Straight Barbed Fitting\nTube ID: 6.4 mm / 7.9 mm\nPA body | 白色",
-      "ru": "Straight Barbed Fitting\nTube ID: 6.4 mm / 7.9 mm\nPA body | 白色"
+      "en": "Straight Barbed Fitting\nTube ID: 6.4 mm / 7.9 mm\nPA body | White",
+      "es": "Straight Barbed Fitting\nTube ID: 6.4 mm / 7.9 mm\nPA body | White",
+      "fr": "Straight Barbed Fitting\nTube ID: 6.4 mm / 7.9 mm\nPA body | White",
+      "ko": "Straight Barbed Fitting\nTube ID: 6.4 mm / 7.9 mm\nPA body | White",
+      "ru": "Straight Barbed Fitting\nTube ID: 6.4 mm / 7.9 mm\nPA body | White"
     },
     "filters": {
       "filter01": "直通型",
@@ -1281,7 +1281,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10021,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-64V-79V-PA-W 809379 6.4 mm 7.9 mm PA 白色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-64V-79V-PA-W 809379 6.4 mm 7.9 mm PA 白色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-64V-79V-PA-W 809379 6.4 mm 7.9 mm PA White",
       "es": "barbed fitting Straight Barbed Fitting BA BA-64V-79V-PA-W 809379 6.4 mm 7.9 mm PA 白色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-64V-79V-PA-W 809379 6.4 mm 7.9 mm PA 白色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-64V-79V-PA-W 809379 6.4 mm 7.9 mm PA 白色",
@@ -1310,11 +1310,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通倒刺接头\n适用6.4 mm内径软管\nPP材质，本色",
-      "en": "Straight Barbed Fitting\nTube ID: 6.4 mm\nPP body | 本色",
-      "es": "Straight Barbed Fitting\nTube ID: 6.4 mm\nPP body | 本色",
-      "fr": "Straight Barbed Fitting\nTube ID: 6.4 mm\nPP body | 本色",
-      "ko": "Straight Barbed Fitting\nTube ID: 6.4 mm\nPP body | 本色",
-      "ru": "Straight Barbed Fitting\nTube ID: 6.4 mm\nPP body | 本色"
+      "en": "Straight Barbed Fitting\nTube ID: 6.4 mm\nPP body | Natural",
+      "es": "Straight Barbed Fitting\nTube ID: 6.4 mm\nPP body | Natural",
+      "fr": "Straight Barbed Fitting\nTube ID: 6.4 mm\nPP body | Natural",
+      "ko": "Straight Barbed Fitting\nTube ID: 6.4 mm\nPP body | Natural",
+      "ru": "Straight Barbed Fitting\nTube ID: 6.4 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "直通型",
@@ -1339,7 +1339,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10022,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-64C-PP-N 809424 6.4 mm 6.4 mm PP 本色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-64C-PP-N 809424 6.4 mm 6.4 mm PP 本色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-64C-PP-N 809424 6.4 mm 6.4 mm PP Natural",
       "es": "barbed fitting Straight Barbed Fitting BA BA-64C-PP-N 809424 6.4 mm 6.4 mm PP 本色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-64C-PP-N 809424 6.4 mm 6.4 mm PP 本色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-64C-PP-N 809424 6.4 mm 6.4 mm PP 本色",
@@ -1368,11 +1368,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通倒刺接头\n适用6.4 mm内径软管\nPA材质，白色",
-      "en": "Straight Barbed Fitting\nTube ID: 6.4 mm\nPA body | 白色",
-      "es": "Straight Barbed Fitting\nTube ID: 6.4 mm\nPA body | 白色",
-      "fr": "Straight Barbed Fitting\nTube ID: 6.4 mm\nPA body | 白色",
-      "ko": "Straight Barbed Fitting\nTube ID: 6.4 mm\nPA body | 白色",
-      "ru": "Straight Barbed Fitting\nTube ID: 6.4 mm\nPA body | 白色"
+      "en": "Straight Barbed Fitting\nTube ID: 6.4 mm\nPA body | White",
+      "es": "Straight Barbed Fitting\nTube ID: 6.4 mm\nPA body | White",
+      "fr": "Straight Barbed Fitting\nTube ID: 6.4 mm\nPA body | White",
+      "ko": "Straight Barbed Fitting\nTube ID: 6.4 mm\nPA body | White",
+      "ru": "Straight Barbed Fitting\nTube ID: 6.4 mm\nPA body | White"
     },
     "filters": {
       "filter01": "直通型",
@@ -1397,7 +1397,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10023,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-64C-PA-W 809425 6.4 mm 6.4 mm PA 白色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-64C-PA-W 809425 6.4 mm 6.4 mm PA 白色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-64C-PA-W 809425 6.4 mm 6.4 mm PA White",
       "es": "barbed fitting Straight Barbed Fitting BA BA-64C-PA-W 809425 6.4 mm 6.4 mm PA 白色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-64C-PA-W 809425 6.4 mm 6.4 mm PA 白色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-64C-PA-W 809425 6.4 mm 6.4 mm PA 白色",
@@ -1426,11 +1426,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用6.4 mm转9.5 mm内径软管\nPP材质，本色",
-      "en": "Straight Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm\nPP body | 本色",
-      "es": "Straight Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm\nPP body | 本色",
-      "fr": "Straight Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm\nPP body | 本色",
-      "ko": "Straight Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm\nPP body | 本色",
-      "ru": "Straight Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm\nPP body | 本色"
+      "en": "Straight Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm\nPP body | Natural",
+      "es": "Straight Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm\nPP body | Natural",
+      "fr": "Straight Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm\nPP body | Natural",
+      "ko": "Straight Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm\nPP body | Natural",
+      "ru": "Straight Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "直通型",
@@ -1455,7 +1455,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10024,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-64V-95V-PP-N 809426 6.4 mm 9.5 mm PP 本色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-64V-95V-PP-N 809426 6.4 mm 9.5 mm PP 本色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-64V-95V-PP-N 809426 6.4 mm 9.5 mm PP Natural",
       "es": "barbed fitting Straight Barbed Fitting BA BA-64V-95V-PP-N 809426 6.4 mm 9.5 mm PP 本色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-64V-95V-PP-N 809426 6.4 mm 9.5 mm PP 本色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-64V-95V-PP-N 809426 6.4 mm 9.5 mm PP 本色",
@@ -1484,11 +1484,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用6.4 mm转9.5 mm内径软管\nPA材质，白色",
-      "en": "Straight Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm\nPA body | 白色",
-      "es": "Straight Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm\nPA body | 白色",
-      "fr": "Straight Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm\nPA body | 白色",
-      "ko": "Straight Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm\nPA body | 白色",
-      "ru": "Straight Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm\nPA body | 白色"
+      "en": "Straight Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm\nPA body | White",
+      "es": "Straight Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm\nPA body | White",
+      "fr": "Straight Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm\nPA body | White",
+      "ko": "Straight Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm\nPA body | White",
+      "ru": "Straight Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm\nPA body | White"
     },
     "filters": {
       "filter01": "直通型",
@@ -1513,7 +1513,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10025,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-64V-95V-PA-W 809427 6.4 mm 9.5 mm PA 白色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-64V-95V-PA-W 809427 6.4 mm 9.5 mm PA 白色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-64V-95V-PA-W 809427 6.4 mm 9.5 mm PA White",
       "es": "barbed fitting Straight Barbed Fitting BA BA-64V-95V-PA-W 809427 6.4 mm 9.5 mm PA 白色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-64V-95V-PA-W 809427 6.4 mm 9.5 mm PA 白色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-64V-95V-PA-W 809427 6.4 mm 9.5 mm PA 白色",
@@ -1542,11 +1542,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用6.4 mm转12.7 mm内径软管\nPP材质，本色",
-      "en": "Straight Barbed Fitting\nTube ID: 6.4 mm / 12.7 mm\nPP body | 本色",
-      "es": "Straight Barbed Fitting\nTube ID: 6.4 mm / 12.7 mm\nPP body | 本色",
-      "fr": "Straight Barbed Fitting\nTube ID: 6.4 mm / 12.7 mm\nPP body | 本色",
-      "ko": "Straight Barbed Fitting\nTube ID: 6.4 mm / 12.7 mm\nPP body | 本色",
-      "ru": "Straight Barbed Fitting\nTube ID: 6.4 mm / 12.7 mm\nPP body | 本色"
+      "en": "Straight Barbed Fitting\nTube ID: 6.4 mm / 12.7 mm\nPP body | Natural",
+      "es": "Straight Barbed Fitting\nTube ID: 6.4 mm / 12.7 mm\nPP body | Natural",
+      "fr": "Straight Barbed Fitting\nTube ID: 6.4 mm / 12.7 mm\nPP body | Natural",
+      "ko": "Straight Barbed Fitting\nTube ID: 6.4 mm / 12.7 mm\nPP body | Natural",
+      "ru": "Straight Barbed Fitting\nTube ID: 6.4 mm / 12.7 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "直通型",
@@ -1571,7 +1571,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10026,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-64X-127X-PP-N 809428 6.4 mm 12.7 mm PP 本色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-64X-127X-PP-N 809428 6.4 mm 12.7 mm PP 本色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-64X-127X-PP-N 809428 6.4 mm 12.7 mm PP Natural",
       "es": "barbed fitting Straight Barbed Fitting BA BA-64X-127X-PP-N 809428 6.4 mm 12.7 mm PP 本色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-64X-127X-PP-N 809428 6.4 mm 12.7 mm PP 本色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-64X-127X-PP-N 809428 6.4 mm 12.7 mm PP 本色",
@@ -1600,11 +1600,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用6.4 mm转12.7 mm内径软管\nPA材质，白色",
-      "en": "Straight Barbed Fitting\nTube ID: 6.4 mm / 12.7 mm\nPA body | 白色",
-      "es": "Straight Barbed Fitting\nTube ID: 6.4 mm / 12.7 mm\nPA body | 白色",
-      "fr": "Straight Barbed Fitting\nTube ID: 6.4 mm / 12.7 mm\nPA body | 白色",
-      "ko": "Straight Barbed Fitting\nTube ID: 6.4 mm / 12.7 mm\nPA body | 白色",
-      "ru": "Straight Barbed Fitting\nTube ID: 6.4 mm / 12.7 mm\nPA body | 白色"
+      "en": "Straight Barbed Fitting\nTube ID: 6.4 mm / 12.7 mm\nPA body | White",
+      "es": "Straight Barbed Fitting\nTube ID: 6.4 mm / 12.7 mm\nPA body | White",
+      "fr": "Straight Barbed Fitting\nTube ID: 6.4 mm / 12.7 mm\nPA body | White",
+      "ko": "Straight Barbed Fitting\nTube ID: 6.4 mm / 12.7 mm\nPA body | White",
+      "ru": "Straight Barbed Fitting\nTube ID: 6.4 mm / 12.7 mm\nPA body | White"
     },
     "filters": {
       "filter01": "直通型",
@@ -1629,7 +1629,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10027,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-64X-127X-PA-W 809429 6.4 mm 12.7 mm PA 白色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-64X-127X-PA-W 809429 6.4 mm 12.7 mm PA 白色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-64X-127X-PA-W 809429 6.4 mm 12.7 mm PA White",
       "es": "barbed fitting Straight Barbed Fitting BA BA-64X-127X-PA-W 809429 6.4 mm 12.7 mm PA 白色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-64X-127X-PA-W 809429 6.4 mm 12.7 mm PA 白色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-64X-127X-PA-W 809429 6.4 mm 12.7 mm PA 白色",
@@ -1658,11 +1658,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通倒刺接头\n适用1.6 mm内径软管\nPP材质，本色",
-      "en": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "es": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "fr": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "ko": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "ru": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色"
+      "en": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "es": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "fr": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "ko": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "ru": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "直通型",
@@ -1687,7 +1687,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10028,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-16C-PP-N 809547 1.6 mm 1.6 mm PP 本色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-16C-PP-N 809547 1.6 mm 1.6 mm PP 本色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-16C-PP-N 809547 1.6 mm 1.6 mm PP Natural",
       "es": "barbed fitting Straight Barbed Fitting BA BA-16C-PP-N 809547 1.6 mm 1.6 mm PP 本色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-16C-PP-N 809547 1.6 mm 1.6 mm PP 本色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-16C-PP-N 809547 1.6 mm 1.6 mm PP 本色",
@@ -1716,11 +1716,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用1.6 mm转2.4 mm内径软管\nPP材质，本色",
-      "en": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPP body | 本色",
-      "es": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPP body | 本色",
-      "fr": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPP body | 本色",
-      "ko": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPP body | 本色",
-      "ru": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPP body | 本色"
+      "en": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPP body | Natural",
+      "es": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPP body | Natural",
+      "fr": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPP body | Natural",
+      "ko": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPP body | Natural",
+      "ru": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "直通型",
@@ -1745,7 +1745,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10029,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-16D-24D-PP-N 809604 1.6 mm 2.4 mm PP 本色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-16D-24D-PP-N 809604 1.6 mm 2.4 mm PP 本色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-16D-24D-PP-N 809604 1.6 mm 2.4 mm PP Natural",
       "es": "barbed fitting Straight Barbed Fitting BA BA-16D-24D-PP-N 809604 1.6 mm 2.4 mm PP 本色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-16D-24D-PP-N 809604 1.6 mm 2.4 mm PP 本色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-16D-24D-PP-N 809604 1.6 mm 2.4 mm PP 本色",
@@ -1774,11 +1774,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用1.6 mm转2.4 mm内径软管\nPA材质，白色",
-      "en": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPA body | 白色",
-      "es": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPA body | 白色",
-      "fr": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPA body | 白色",
-      "ko": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPA body | 白色",
-      "ru": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPA body | 白色"
+      "en": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPA body | White",
+      "es": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPA body | White",
+      "fr": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPA body | White",
+      "ko": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPA body | White",
+      "ru": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPA body | White"
     },
     "filters": {
       "filter01": "直通型",
@@ -1803,7 +1803,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10030,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-16D-24D-PA-W 809605 1.6 mm 2.4 mm PA 白色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-16D-24D-PA-W 809605 1.6 mm 2.4 mm PA 白色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-16D-24D-PA-W 809605 1.6 mm 2.4 mm PA White",
       "es": "barbed fitting Straight Barbed Fitting BA BA-16D-24D-PA-W 809605 1.6 mm 2.4 mm PA 白色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-16D-24D-PA-W 809605 1.6 mm 2.4 mm PA 白色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-16D-24D-PA-W 809605 1.6 mm 2.4 mm PA 白色",
@@ -1832,11 +1832,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用2.4 mm转3.2 mm内径软管\nPP材质，本色",
-      "en": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPP body | 本色",
-      "es": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPP body | 本色",
-      "fr": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPP body | 本色",
-      "ko": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPP body | 本色",
-      "ru": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPP body | 本色"
+      "en": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPP body | Natural",
+      "es": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPP body | Natural",
+      "fr": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPP body | Natural",
+      "ko": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPP body | Natural",
+      "ru": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "直通型",
@@ -1861,7 +1861,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10031,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-24D-32D-PP-N 809606 2.4 mm 3.2 mm PP 本色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-24D-32D-PP-N 809606 2.4 mm 3.2 mm PP 本色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-24D-32D-PP-N 809606 2.4 mm 3.2 mm PP Natural",
       "es": "barbed fitting Straight Barbed Fitting BA BA-24D-32D-PP-N 809606 2.4 mm 3.2 mm PP 本色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-24D-32D-PP-N 809606 2.4 mm 3.2 mm PP 本色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-24D-32D-PP-N 809606 2.4 mm 3.2 mm PP 本色",
@@ -1890,11 +1890,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用2.4 mm转3.2 mm内径软管\nPA材质，白色",
-      "en": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPA body | 白色",
-      "es": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPA body | 白色",
-      "fr": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPA body | 白色",
-      "ko": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPA body | 白色",
-      "ru": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPA body | 白色"
+      "en": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPA body | White",
+      "es": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPA body | White",
+      "fr": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPA body | White",
+      "ko": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPA body | White",
+      "ru": "Straight Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPA body | White"
     },
     "filters": {
       "filter01": "直通型",
@@ -1919,7 +1919,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10032,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-24D-32D-PA-W 809607 2.4 mm 3.2 mm PA 白色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-24D-32D-PA-W 809607 2.4 mm 3.2 mm PA 白色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-24D-32D-PA-W 809607 2.4 mm 3.2 mm PA White",
       "es": "barbed fitting Straight Barbed Fitting BA BA-24D-32D-PA-W 809607 2.4 mm 3.2 mm PA 白色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-24D-32D-PA-W 809607 2.4 mm 3.2 mm PA 白色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-24D-32D-PA-W 809607 2.4 mm 3.2 mm PA 白色",
@@ -1948,11 +1948,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通倒刺接头\n适用2.4 mm内径软管\nPP材质，本色",
-      "en": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "es": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "fr": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "ko": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "ru": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色"
+      "en": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "es": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "fr": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "ko": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "ru": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "直通型",
@@ -1977,7 +1977,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10033,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-24D-PP-N 809625 2.4 mm 2.4 mm PP 本色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-24D-PP-N 809625 2.4 mm 2.4 mm PP 本色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-24D-PP-N 809625 2.4 mm 2.4 mm PP Natural",
       "es": "barbed fitting Straight Barbed Fitting BA BA-24D-PP-N 809625 2.4 mm 2.4 mm PP 本色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-24D-PP-N 809625 2.4 mm 2.4 mm PP 本色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-24D-PP-N 809625 2.4 mm 2.4 mm PP 本色",
@@ -2006,11 +2006,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通倒刺接头\n适用2.4 mm内径软管\nPA材质，白色",
-      "en": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色",
-      "es": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色",
-      "fr": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色",
-      "ko": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色",
-      "ru": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色"
+      "en": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPA body | White",
+      "es": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPA body | White",
+      "fr": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPA body | White",
+      "ko": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPA body | White",
+      "ru": "Straight Barbed Fitting\nTube ID: 2.4 mm\nPA body | White"
     },
     "filters": {
       "filter01": "直通型",
@@ -2035,7 +2035,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10034,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-24D-PA-W 809626 2.4 mm 2.4 mm PA 白色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-24D-PA-W 809626 2.4 mm 2.4 mm PA 白色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-24D-PA-W 809626 2.4 mm 2.4 mm PA White",
       "es": "barbed fitting Straight Barbed Fitting BA BA-24D-PA-W 809626 2.4 mm 2.4 mm PA 白色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-24D-PA-W 809626 2.4 mm 2.4 mm PA 白色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-24D-PA-W 809626 2.4 mm 2.4 mm PA 白色",
@@ -2064,11 +2064,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通倒刺接头\n适用3.2 mm内径软管\nPP材质，本色",
-      "en": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "es": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "fr": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "ko": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "ru": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色"
+      "en": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "es": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "fr": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "ko": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "ru": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "直通型",
@@ -2093,7 +2093,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10035,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-32D-PP-N 809627 3.2 mm 3.2 mm PP 本色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-32D-PP-N 809627 3.2 mm 3.2 mm PP 本色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-32D-PP-N 809627 3.2 mm 3.2 mm PP Natural",
       "es": "barbed fitting Straight Barbed Fitting BA BA-32D-PP-N 809627 3.2 mm 3.2 mm PP 本色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-32D-PP-N 809627 3.2 mm 3.2 mm PP 本色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-32D-PP-N 809627 3.2 mm 3.2 mm PP 本色",
@@ -2122,11 +2122,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通倒刺接头\n适用3.2 mm内径软管\nPA材质，白色",
-      "en": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色",
-      "es": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色",
-      "fr": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色",
-      "ko": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色",
-      "ru": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色"
+      "en": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPA body | White",
+      "es": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPA body | White",
+      "fr": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPA body | White",
+      "ko": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPA body | White",
+      "ru": "Straight Barbed Fitting\nTube ID: 3.2 mm\nPA body | White"
     },
     "filters": {
       "filter01": "直通型",
@@ -2151,7 +2151,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10036,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-32D-PA-W 809628 3.2 mm 3.2 mm PA 白色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-32D-PA-W 809628 3.2 mm 3.2 mm PA 白色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-32D-PA-W 809628 3.2 mm 3.2 mm PA White",
       "es": "barbed fitting Straight Barbed Fitting BA BA-32D-PA-W 809628 3.2 mm 3.2 mm PA 白色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-32D-PA-W 809628 3.2 mm 3.2 mm PA 白色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-32D-PA-W 809628 3.2 mm 3.2 mm PA 白色",
@@ -2180,11 +2180,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用1.6 mm转3.2 mm内径软管\nPP材质，本色",
-      "en": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPP body | 本色",
-      "es": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPP body | 本色",
-      "fr": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPP body | 本色",
-      "ko": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPP body | 本色",
-      "ru": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPP body | 本色"
+      "en": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPP body | Natural",
+      "es": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPP body | Natural",
+      "fr": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPP body | Natural",
+      "ko": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPP body | Natural",
+      "ru": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "直通型",
@@ -2209,7 +2209,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10037,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-16D-32D-PP-N 809629 1.6 mm 3.2 mm PP 本色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-16D-32D-PP-N 809629 1.6 mm 3.2 mm PP 本色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-16D-32D-PP-N 809629 1.6 mm 3.2 mm PP Natural",
       "es": "barbed fitting Straight Barbed Fitting BA BA-16D-32D-PP-N 809629 1.6 mm 3.2 mm PP 本色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-16D-32D-PP-N 809629 1.6 mm 3.2 mm PP 本色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-16D-32D-PP-N 809629 1.6 mm 3.2 mm PP 本色",
@@ -2238,11 +2238,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用1.6 mm转3.2 mm内径软管\nPA材质，白色",
-      "en": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPA body | 白色",
-      "es": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPA body | 白色",
-      "fr": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPA body | 白色",
-      "ko": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPA body | 白色",
-      "ru": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPA body | 白色"
+      "en": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPA body | White",
+      "es": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPA body | White",
+      "fr": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPA body | White",
+      "ko": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPA body | White",
+      "ru": "Straight Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPA body | White"
     },
     "filters": {
       "filter01": "直通型",
@@ -2267,7 +2267,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10038,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-16D-32D-PA-W 809630 1.6 mm 3.2 mm PA 白色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-16D-32D-PA-W 809630 1.6 mm 3.2 mm PA 白色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-16D-32D-PA-W 809630 1.6 mm 3.2 mm PA White",
       "es": "barbed fitting Straight Barbed Fitting BA BA-16D-32D-PA-W 809630 1.6 mm 3.2 mm PA 白色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-16D-32D-PA-W 809630 1.6 mm 3.2 mm PA 白色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-16D-32D-PA-W 809630 1.6 mm 3.2 mm PA 白色",
@@ -2296,11 +2296,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通倒刺接头\n适用1.6 mm内径软管\nPA材质，白色",
-      "en": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色",
-      "es": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色",
-      "fr": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色",
-      "ko": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色",
-      "ru": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色"
+      "en": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPA body | White",
+      "es": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPA body | White",
+      "fr": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPA body | White",
+      "ko": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPA body | White",
+      "ru": "Straight Barbed Fitting\nTube ID: 1.6 mm\nPA body | White"
     },
     "filters": {
       "filter01": "直通型",
@@ -2325,7 +2325,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10039,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-16C-PA-W 809300 1.6 mm 1.6 mm PA 白色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-16C-PA-W 809300 1.6 mm 1.6 mm PA 白色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-16C-PA-W 809300 1.6 mm 1.6 mm PA White",
       "es": "barbed fitting Straight Barbed Fitting BA BA-16C-PA-W 809300 1.6 mm 1.6 mm PA 白色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-16C-PA-W 809300 1.6 mm 1.6 mm PA 白色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-16C-PA-W 809300 1.6 mm 1.6 mm PA 白色",
@@ -2354,11 +2354,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用1.6 mm转2.4 mm内径软管\nPVDF材质，本色",
-      "en": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPVDF body | 本色",
-      "es": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPVDF body | 本色",
-      "fr": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPVDF body | 本色",
-      "ko": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPVDF body | 本色",
-      "ru": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPVDF body | 本色"
+      "en": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPVDF body | Natural",
+      "es": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPVDF body | Natural",
+      "fr": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPVDF body | Natural",
+      "ko": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPVDF body | Natural",
+      "ru": "Straight Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPVDF body | Natural"
     },
     "filters": {
       "filter01": "直通型",
@@ -2383,7 +2383,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10040,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-16F-24F-PV-N 809788 1.6 mm 2.4 mm PVDF 本色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-16F-24F-PV-N 809788 1.6 mm 2.4 mm PVDF 本色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-16F-24F-PV-N 809788 1.6 mm 2.4 mm PVDF Natural",
       "es": "barbed fitting Straight Barbed Fitting BA BA-16F-24F-PV-N 809788 1.6 mm 2.4 mm PVDF 本色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-16F-24F-PV-N 809788 1.6 mm 2.4 mm PVDF 本色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-16F-24F-PV-N 809788 1.6 mm 2.4 mm PVDF 本色",
@@ -2412,11 +2412,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用2.4 mm转4.8 mm内径软管\nPP材质，本色",
-      "en": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.8 mm\nPP body | 本色",
-      "es": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.8 mm\nPP body | 本色",
-      "fr": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.8 mm\nPP body | 本色",
-      "ko": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.8 mm\nPP body | 本色",
-      "ru": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.8 mm\nPP body | 本色"
+      "en": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.8 mm\nPP body | Natural",
+      "es": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.8 mm\nPP body | Natural",
+      "fr": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.8 mm\nPP body | Natural",
+      "ko": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.8 mm\nPP body | Natural",
+      "ru": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.8 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "直通型",
@@ -2441,7 +2441,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10041,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-24C-48C-PP-N 809519 2.4 mm 4.8 mm PP 本色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-24C-48C-PP-N 809519 2.4 mm 4.8 mm PP 本色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-24C-48C-PP-N 809519 2.4 mm 4.8 mm PP Natural",
       "es": "barbed fitting Straight Barbed Fitting BA BA-24C-48C-PP-N 809519 2.4 mm 4.8 mm PP 本色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-24C-48C-PP-N 809519 2.4 mm 4.8 mm PP 本色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-24C-48C-PP-N 809519 2.4 mm 4.8 mm PP 本色",
@@ -2470,11 +2470,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用2.4 mm转4.8 mm内径软管\nPA材质，白色",
-      "en": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.8 mm\nPA body | 白色",
-      "es": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.8 mm\nPA body | 白色",
-      "fr": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.8 mm\nPA body | 白色",
-      "ko": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.8 mm\nPA body | 白色",
-      "ru": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.8 mm\nPA body | 白色"
+      "en": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.8 mm\nPA body | White",
+      "es": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.8 mm\nPA body | White",
+      "fr": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.8 mm\nPA body | White",
+      "ko": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.8 mm\nPA body | White",
+      "ru": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.8 mm\nPA body | White"
     },
     "filters": {
       "filter01": "直通型",
@@ -2499,7 +2499,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10042,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-24C-48C-PA-W 809520 2.4 mm 4.8 mm PA 白色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-24C-48C-PA-W 809520 2.4 mm 4.8 mm PA 白色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-24C-48C-PA-W 809520 2.4 mm 4.8 mm PA White",
       "es": "barbed fitting Straight Barbed Fitting BA BA-24C-48C-PA-W 809520 2.4 mm 4.8 mm PA 白色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-24C-48C-PA-W 809520 2.4 mm 4.8 mm PA 白色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-24C-48C-PA-W 809520 2.4 mm 4.8 mm PA 白色",
@@ -2528,11 +2528,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用1.6 mm转4.0 mm内径软管\nPA材质，白色",
-      "en": "Straight Barbed Fitting\nTube ID: 1.6 mm / 4.0 mm\nPA body | 白色",
-      "es": "Straight Barbed Fitting\nTube ID: 1.6 mm / 4.0 mm\nPA body | 白色",
-      "fr": "Straight Barbed Fitting\nTube ID: 1.6 mm / 4.0 mm\nPA body | 白色",
-      "ko": "Straight Barbed Fitting\nTube ID: 1.6 mm / 4.0 mm\nPA body | 白色",
-      "ru": "Straight Barbed Fitting\nTube ID: 1.6 mm / 4.0 mm\nPA body | 白色"
+      "en": "Straight Barbed Fitting\nTube ID: 1.6 mm / 4.0 mm\nPA body | White",
+      "es": "Straight Barbed Fitting\nTube ID: 1.6 mm / 4.0 mm\nPA body | White",
+      "fr": "Straight Barbed Fitting\nTube ID: 1.6 mm / 4.0 mm\nPA body | White",
+      "ko": "Straight Barbed Fitting\nTube ID: 1.6 mm / 4.0 mm\nPA body | White",
+      "ru": "Straight Barbed Fitting\nTube ID: 1.6 mm / 4.0 mm\nPA body | White"
     },
     "filters": {
       "filter01": "直通型",
@@ -2557,7 +2557,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10043,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-16V-40V-PA-W 809843 1.6 mm 4.0 mm PA 白色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-16V-40V-PA-W 809843 1.6 mm 4.0 mm PA 白色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-16V-40V-PA-W 809843 1.6 mm 4.0 mm PA White",
       "es": "barbed fitting Straight Barbed Fitting BA BA-16V-40V-PA-W 809843 1.6 mm 4.0 mm PA 白色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-16V-40V-PA-W 809843 1.6 mm 4.0 mm PA 白色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-16V-40V-PA-W 809843 1.6 mm 4.0 mm PA 白色",
@@ -2586,11 +2586,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用1.6 mm转4.0 mm内径软管\nPP材质，本色",
-      "en": "Straight Barbed Fitting\nTube ID: 1.6 mm / 4.0 mm\nPP body | 本色",
-      "es": "Straight Barbed Fitting\nTube ID: 1.6 mm / 4.0 mm\nPP body | 本色",
-      "fr": "Straight Barbed Fitting\nTube ID: 1.6 mm / 4.0 mm\nPP body | 本色",
-      "ko": "Straight Barbed Fitting\nTube ID: 1.6 mm / 4.0 mm\nPP body | 本色",
-      "ru": "Straight Barbed Fitting\nTube ID: 1.6 mm / 4.0 mm\nPP body | 本色"
+      "en": "Straight Barbed Fitting\nTube ID: 1.6 mm / 4.0 mm\nPP body | Natural",
+      "es": "Straight Barbed Fitting\nTube ID: 1.6 mm / 4.0 mm\nPP body | Natural",
+      "fr": "Straight Barbed Fitting\nTube ID: 1.6 mm / 4.0 mm\nPP body | Natural",
+      "ko": "Straight Barbed Fitting\nTube ID: 1.6 mm / 4.0 mm\nPP body | Natural",
+      "ru": "Straight Barbed Fitting\nTube ID: 1.6 mm / 4.0 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "直通型",
@@ -2615,7 +2615,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10044,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-16V-40V-PP-N 809854 1.6 mm 4.0 mm PP 本色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-16V-40V-PP-N 809854 1.6 mm 4.0 mm PP 本色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-16V-40V-PP-N 809854 1.6 mm 4.0 mm PP Natural",
       "es": "barbed fitting Straight Barbed Fitting BA BA-16V-40V-PP-N 809854 1.6 mm 4.0 mm PP 本色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-16V-40V-PP-N 809854 1.6 mm 4.0 mm PP 本色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-16V-40V-PP-N 809854 1.6 mm 4.0 mm PP 本色",
@@ -2644,11 +2644,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用4.0 mm转6.4 mm内径软管\nPP材质，本色",
-      "en": "Straight Barbed Fitting\nTube ID: 4.0 mm / 6.4 mm\nPP body | 本色",
-      "es": "Straight Barbed Fitting\nTube ID: 4.0 mm / 6.4 mm\nPP body | 本色",
-      "fr": "Straight Barbed Fitting\nTube ID: 4.0 mm / 6.4 mm\nPP body | 本色",
-      "ko": "Straight Barbed Fitting\nTube ID: 4.0 mm / 6.4 mm\nPP body | 本色",
-      "ru": "Straight Barbed Fitting\nTube ID: 4.0 mm / 6.4 mm\nPP body | 本色"
+      "en": "Straight Barbed Fitting\nTube ID: 4.0 mm / 6.4 mm\nPP body | Natural",
+      "es": "Straight Barbed Fitting\nTube ID: 4.0 mm / 6.4 mm\nPP body | Natural",
+      "fr": "Straight Barbed Fitting\nTube ID: 4.0 mm / 6.4 mm\nPP body | Natural",
+      "ko": "Straight Barbed Fitting\nTube ID: 4.0 mm / 6.4 mm\nPP body | Natural",
+      "ru": "Straight Barbed Fitting\nTube ID: 4.0 mm / 6.4 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "直通型",
@@ -2673,7 +2673,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10045,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-40D-64D-PP-N 809862 4.0 mm 6.4 mm PP 本色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-40D-64D-PP-N 809862 4.0 mm 6.4 mm PP 本色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-40D-64D-PP-N 809862 4.0 mm 6.4 mm PP Natural",
       "es": "barbed fitting Straight Barbed Fitting BA BA-40D-64D-PP-N 809862 4.0 mm 6.4 mm PP 本色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-40D-64D-PP-N 809862 4.0 mm 6.4 mm PP 本色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-40D-64D-PP-N 809862 4.0 mm 6.4 mm PP 本色",
@@ -2702,11 +2702,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用4.0 mm转6.4 mm内径软管\nPP材质，本色",
-      "en": "Straight Barbed Fitting\nTube ID: 4.0 mm / 6.4 mm\nPP body | 本色",
-      "es": "Straight Barbed Fitting\nTube ID: 4.0 mm / 6.4 mm\nPP body | 本色",
-      "fr": "Straight Barbed Fitting\nTube ID: 4.0 mm / 6.4 mm\nPP body | 本色",
-      "ko": "Straight Barbed Fitting\nTube ID: 4.0 mm / 6.4 mm\nPP body | 本色",
-      "ru": "Straight Barbed Fitting\nTube ID: 4.0 mm / 6.4 mm\nPP body | 本色"
+      "en": "Straight Barbed Fitting\nTube ID: 4.0 mm / 6.4 mm\nPP body | Natural",
+      "es": "Straight Barbed Fitting\nTube ID: 4.0 mm / 6.4 mm\nPP body | Natural",
+      "fr": "Straight Barbed Fitting\nTube ID: 4.0 mm / 6.4 mm\nPP body | Natural",
+      "ko": "Straight Barbed Fitting\nTube ID: 4.0 mm / 6.4 mm\nPP body | Natural",
+      "ru": "Straight Barbed Fitting\nTube ID: 4.0 mm / 6.4 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "直通型",
@@ -2731,7 +2731,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10046,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-40-64-PP-N 806037 4.0 mm 6.4 mm PP 本色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-40-64-PP-N 806037 4.0 mm 6.4 mm PP 本色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-40-64-PP-N 806037 4.0 mm 6.4 mm PP Natural",
       "es": "barbed fitting Straight Barbed Fitting BA BA-40-64-PP-N 806037 4.0 mm 6.4 mm PP 本色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-40-64-PP-N 806037 4.0 mm 6.4 mm PP 本色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-40-64-PP-N 806037 4.0 mm 6.4 mm PP 本色",
@@ -2760,11 +2760,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用3.2 mm转9.5 mm内径软管\nPP材质，本色",
-      "en": "Straight Barbed Fitting\nTube ID: 3.2 mm / 9.5 mm\nPP body | 本色",
-      "es": "Straight Barbed Fitting\nTube ID: 3.2 mm / 9.5 mm\nPP body | 本色",
-      "fr": "Straight Barbed Fitting\nTube ID: 3.2 mm / 9.5 mm\nPP body | 本色",
-      "ko": "Straight Barbed Fitting\nTube ID: 3.2 mm / 9.5 mm\nPP body | 本色",
-      "ru": "Straight Barbed Fitting\nTube ID: 3.2 mm / 9.5 mm\nPP body | 本色"
+      "en": "Straight Barbed Fitting\nTube ID: 3.2 mm / 9.5 mm\nPP body | Natural",
+      "es": "Straight Barbed Fitting\nTube ID: 3.2 mm / 9.5 mm\nPP body | Natural",
+      "fr": "Straight Barbed Fitting\nTube ID: 3.2 mm / 9.5 mm\nPP body | Natural",
+      "ko": "Straight Barbed Fitting\nTube ID: 3.2 mm / 9.5 mm\nPP body | Natural",
+      "ru": "Straight Barbed Fitting\nTube ID: 3.2 mm / 9.5 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "直通型",
@@ -2789,7 +2789,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10047,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-32-95-PP-N 806148 3.2 mm 9.5 mm PP 本色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-32-95-PP-N 806148 3.2 mm 9.5 mm PP 本色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-32-95-PP-N 806148 3.2 mm 9.5 mm PP Natural",
       "es": "barbed fitting Straight Barbed Fitting BA BA-32-95-PP-N 806148 3.2 mm 9.5 mm PP 本色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-32-95-PP-N 806148 3.2 mm 9.5 mm PP 本色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-32-95-PP-N 806148 3.2 mm 9.5 mm PP 本色",
@@ -2818,11 +2818,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用4.8 mm转9.5 mm内径软管\nPP材质，本色",
-      "en": "Straight Barbed Fitting\nTube ID: 4.8 mm / 9.5 mm\nPP body | 本色",
-      "es": "Straight Barbed Fitting\nTube ID: 4.8 mm / 9.5 mm\nPP body | 本色",
-      "fr": "Straight Barbed Fitting\nTube ID: 4.8 mm / 9.5 mm\nPP body | 本色",
-      "ko": "Straight Barbed Fitting\nTube ID: 4.8 mm / 9.5 mm\nPP body | 本色",
-      "ru": "Straight Barbed Fitting\nTube ID: 4.8 mm / 9.5 mm\nPP body | 本色"
+      "en": "Straight Barbed Fitting\nTube ID: 4.8 mm / 9.5 mm\nPP body | Natural",
+      "es": "Straight Barbed Fitting\nTube ID: 4.8 mm / 9.5 mm\nPP body | Natural",
+      "fr": "Straight Barbed Fitting\nTube ID: 4.8 mm / 9.5 mm\nPP body | Natural",
+      "ko": "Straight Barbed Fitting\nTube ID: 4.8 mm / 9.5 mm\nPP body | Natural",
+      "ru": "Straight Barbed Fitting\nTube ID: 4.8 mm / 9.5 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "直通型",
@@ -2847,7 +2847,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10048,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-48-95-PP-N 806276 4.8 mm 9.5 mm PP 本色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-48-95-PP-N 806276 4.8 mm 9.5 mm PP 本色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-48-95-PP-N 806276 4.8 mm 9.5 mm PP Natural",
       "es": "barbed fitting Straight Barbed Fitting BA BA-48-95-PP-N 806276 4.8 mm 9.5 mm PP 本色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-48-95-PP-N 806276 4.8 mm 9.5 mm PP 本色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-48-95-PP-N 806276 4.8 mm 9.5 mm PP 本色",
@@ -2876,11 +2876,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用2.4 mm转4.0 mm内径软管\nPP材质，本色",
-      "en": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.0 mm\nPP body | 本色",
-      "es": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.0 mm\nPP body | 本色",
-      "fr": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.0 mm\nPP body | 本色",
-      "ko": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.0 mm\nPP body | 本色",
-      "ru": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.0 mm\nPP body | 本色"
+      "en": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.0 mm\nPP body | Natural",
+      "es": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.0 mm\nPP body | Natural",
+      "fr": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.0 mm\nPP body | Natural",
+      "ko": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.0 mm\nPP body | Natural",
+      "ru": "Straight Barbed Fitting\nTube ID: 2.4 mm / 4.0 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "直通型",
@@ -2905,7 +2905,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10049,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-24-40-PP-N 806036 2.4 mm 4.0 mm PP 本色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-24-40-PP-N 806036 2.4 mm 4.0 mm PP 本色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-24-40-PP-N 806036 2.4 mm 4.0 mm PP Natural",
       "es": "barbed fitting Straight Barbed Fitting BA BA-24-40-PP-N 806036 2.4 mm 4.0 mm PP 本色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-24-40-PP-N 806036 2.4 mm 4.0 mm PP 本色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-24-40-PP-N 806036 2.4 mm 4.0 mm PP 本色",
@@ -2934,11 +2934,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用3.2 mm转6.4 mm内径软管\nPP材质，本色",
-      "en": "Straight Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm\nPP body | 本色",
-      "es": "Straight Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm\nPP body | 本色",
-      "fr": "Straight Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm\nPP body | 本色",
-      "ko": "Straight Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm\nPP body | 本色",
-      "ru": "Straight Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm\nPP body | 本色"
+      "en": "Straight Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm\nPP body | Natural",
+      "es": "Straight Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm\nPP body | Natural",
+      "fr": "Straight Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm\nPP body | Natural",
+      "ko": "Straight Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm\nPP body | Natural",
+      "ru": "Straight Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "直通型",
@@ -2963,7 +2963,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10050,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-32-64-PP-N 806033 3.2 mm 6.4 mm PP 本色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-32-64-PP-N 806033 3.2 mm 6.4 mm PP 本色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-32-64-PP-N 806033 3.2 mm 6.4 mm PP Natural",
       "es": "barbed fitting Straight Barbed Fitting BA BA-32-64-PP-N 806033 3.2 mm 6.4 mm PP 本色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-32-64-PP-N 806033 3.2 mm 6.4 mm PP 本色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-32-64-PP-N 806033 3.2 mm 6.4 mm PP 本色",
@@ -2992,11 +2992,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通倒刺接头\n适用12.7 mm内径软管\nPP材质，本色",
-      "en": "Straight Barbed Fitting\nTube ID: 12.7 mm\nPP body | 本色",
-      "es": "Straight Barbed Fitting\nTube ID: 12.7 mm\nPP body | 本色",
-      "fr": "Straight Barbed Fitting\nTube ID: 12.7 mm\nPP body | 本色",
-      "ko": "Straight Barbed Fitting\nTube ID: 12.7 mm\nPP body | 本色",
-      "ru": "Straight Barbed Fitting\nTube ID: 12.7 mm\nPP body | 本色"
+      "en": "Straight Barbed Fitting\nTube ID: 12.7 mm\nPP body | Natural",
+      "es": "Straight Barbed Fitting\nTube ID: 12.7 mm\nPP body | Natural",
+      "fr": "Straight Barbed Fitting\nTube ID: 12.7 mm\nPP body | Natural",
+      "ko": "Straight Barbed Fitting\nTube ID: 12.7 mm\nPP body | Natural",
+      "ru": "Straight Barbed Fitting\nTube ID: 12.7 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "直通型",
@@ -3021,7 +3021,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10051,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-127-PP-N 806201 12.7 mm 12.7 mm PP 本色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-127-PP-N 806201 12.7 mm 12.7 mm PP 本色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-127-PP-N 806201 12.7 mm 12.7 mm PP Natural",
       "es": "barbed fitting Straight Barbed Fitting BA BA-127-PP-N 806201 12.7 mm 12.7 mm PP 本色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-127-PP-N 806201 12.7 mm 12.7 mm PP 本色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-127-PP-N 806201 12.7 mm 12.7 mm PP 本色",
@@ -3050,11 +3050,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用9.5 mm转12.7 mm内径软管\nPP材质，本色",
-      "en": "Straight Barbed Fitting\nTube ID: 9.5 mm / 12.7 mm\nPP body | 本色",
-      "es": "Straight Barbed Fitting\nTube ID: 9.5 mm / 12.7 mm\nPP body | 本色",
-      "fr": "Straight Barbed Fitting\nTube ID: 9.5 mm / 12.7 mm\nPP body | 本色",
-      "ko": "Straight Barbed Fitting\nTube ID: 9.5 mm / 12.7 mm\nPP body | 本色",
-      "ru": "Straight Barbed Fitting\nTube ID: 9.5 mm / 12.7 mm\nPP body | 本色"
+      "en": "Straight Barbed Fitting\nTube ID: 9.5 mm / 12.7 mm\nPP body | Natural",
+      "es": "Straight Barbed Fitting\nTube ID: 9.5 mm / 12.7 mm\nPP body | Natural",
+      "fr": "Straight Barbed Fitting\nTube ID: 9.5 mm / 12.7 mm\nPP body | Natural",
+      "ko": "Straight Barbed Fitting\nTube ID: 9.5 mm / 12.7 mm\nPP body | Natural",
+      "ru": "Straight Barbed Fitting\nTube ID: 9.5 mm / 12.7 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "直通型",
@@ -3079,7 +3079,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10052,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-95-127-PP-N 806256 9.5 mm 12.7 mm PP 本色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-95-127-PP-N 806256 9.5 mm 12.7 mm PP 本色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-95-127-PP-N 806256 9.5 mm 12.7 mm PP Natural",
       "es": "barbed fitting Straight Barbed Fitting BA BA-95-127-PP-N 806256 9.5 mm 12.7 mm PP 本色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-95-127-PP-N 806256 9.5 mm 12.7 mm PP 本色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-95-127-PP-N 806256 9.5 mm 12.7 mm PP 本色",
@@ -3108,11 +3108,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用4.0 mm转7.9 mm内径软管\nAC材质，白色",
-      "en": "Straight Barbed Fitting\nTube ID: 4.0 mm / 7.9 mm\nAC body | 白色",
-      "es": "Straight Barbed Fitting\nTube ID: 4.0 mm / 7.9 mm\nAC body | 白色",
-      "fr": "Straight Barbed Fitting\nTube ID: 4.0 mm / 7.9 mm\nAC body | 白色",
-      "ko": "Straight Barbed Fitting\nTube ID: 4.0 mm / 7.9 mm\nAC body | 白色",
-      "ru": "Straight Barbed Fitting\nTube ID: 4.0 mm / 7.9 mm\nAC body | 白色"
+      "en": "Straight Barbed Fitting\nTube ID: 4.0 mm / 7.9 mm\nAC body | White",
+      "es": "Straight Barbed Fitting\nTube ID: 4.0 mm / 7.9 mm\nAC body | White",
+      "fr": "Straight Barbed Fitting\nTube ID: 4.0 mm / 7.9 mm\nAC body | White",
+      "ko": "Straight Barbed Fitting\nTube ID: 4.0 mm / 7.9 mm\nAC body | White",
+      "ru": "Straight Barbed Fitting\nTube ID: 4.0 mm / 7.9 mm\nAC body | White"
     },
     "filters": {
       "filter01": "直通型",
@@ -3137,7 +3137,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10053,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-40-79-AC-W 806272 4.0 mm 7.9 mm AC 白色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-40-79-AC-W 806272 4.0 mm 7.9 mm AC 白色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-40-79-AC-W 806272 4.0 mm 7.9 mm AC White",
       "es": "barbed fitting Straight Barbed Fitting BA BA-40-79-AC-W 806272 4.0 mm 7.9 mm AC 白色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-40-79-AC-W 806272 4.0 mm 7.9 mm AC 白色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-40-79-AC-W 806272 4.0 mm 7.9 mm AC 白色",
@@ -3166,11 +3166,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "直通异径倒刺接头\n适用3.2 mm转4.8 mm内径软管\nPP材质，本色",
-      "en": "Straight Barbed Fitting\nTube ID: 3.2 mm / 4.8 mm\nPP body | 本色",
-      "es": "Straight Barbed Fitting\nTube ID: 3.2 mm / 4.8 mm\nPP body | 本色",
-      "fr": "Straight Barbed Fitting\nTube ID: 3.2 mm / 4.8 mm\nPP body | 本色",
-      "ko": "Straight Barbed Fitting\nTube ID: 3.2 mm / 4.8 mm\nPP body | 本色",
-      "ru": "Straight Barbed Fitting\nTube ID: 3.2 mm / 4.8 mm\nPP body | 本色"
+      "en": "Straight Barbed Fitting\nTube ID: 3.2 mm / 4.8 mm\nPP body | Natural",
+      "es": "Straight Barbed Fitting\nTube ID: 3.2 mm / 4.8 mm\nPP body | Natural",
+      "fr": "Straight Barbed Fitting\nTube ID: 3.2 mm / 4.8 mm\nPP body | Natural",
+      "ko": "Straight Barbed Fitting\nTube ID: 3.2 mm / 4.8 mm\nPP body | Natural",
+      "ru": "Straight Barbed Fitting\nTube ID: 3.2 mm / 4.8 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "直通型",
@@ -3195,7 +3195,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 10054,
     "searchKeywords": {
       "zh": "倒刺接头 直通型倒刺接头 BA BA-32-48-PP-N 806147 3.2 mm 4.8 mm PP 本色",
-      "en": "barbed fitting Straight Barbed Fitting BA BA-32-48-PP-N 806147 3.2 mm 4.8 mm PP 本色",
+      "en": "barbed fitting Straight Barbed Fitting BA BA-32-48-PP-N 806147 3.2 mm 4.8 mm PP Natural",
       "es": "barbed fitting Straight Barbed Fitting BA BA-32-48-PP-N 806147 3.2 mm 4.8 mm PP 本色",
       "fr": "barbed fitting Straight Barbed Fitting BA BA-32-48-PP-N 806147 3.2 mm 4.8 mm PP 本色",
       "ko": "barbed fitting Straight Barbed Fitting BA BA-32-48-PP-N 806147 3.2 mm 4.8 mm PP 本色",
@@ -3224,11 +3224,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "L型倒刺接头\n适用1.6 mm内径软管\nPA材质，白色",
-      "en": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色",
-      "es": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色",
-      "fr": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色",
-      "ko": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色",
-      "ru": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色"
+      "en": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPA body | White",
+      "es": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPA body | White",
+      "fr": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPA body | White",
+      "ko": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPA body | White",
+      "ru": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPA body | White"
     },
     "filters": {
       "filter01": "L型",
@@ -3253,7 +3253,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 20128,
     "searchKeywords": {
       "zh": "倒刺接头 L型倒刺接头 BL BL-16F-PA-W 809345 1.6 mm 1.6 mm PA 白色",
-      "en": "barbed fitting Elbow Barbed Fitting BL BL-16F-PA-W 809345 1.6 mm 1.6 mm PA 白色",
+      "en": "barbed fitting Elbow Barbed Fitting BL BL-16F-PA-W 809345 1.6 mm 1.6 mm PA White",
       "es": "barbed fitting Elbow Barbed Fitting BL BL-16F-PA-W 809345 1.6 mm 1.6 mm PA 白色",
       "fr": "barbed fitting Elbow Barbed Fitting BL BL-16F-PA-W 809345 1.6 mm 1.6 mm PA 白色",
       "ko": "barbed fitting Elbow Barbed Fitting BL BL-16F-PA-W 809345 1.6 mm 1.6 mm PA 白色",
@@ -3282,11 +3282,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "L型倒刺接头\n适用2.4 mm内径软管\nPA材质，白色",
-      "en": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色",
-      "es": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色",
-      "fr": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色",
-      "ko": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色",
-      "ru": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色"
+      "en": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPA body | White",
+      "es": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPA body | White",
+      "fr": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPA body | White",
+      "ko": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPA body | White",
+      "ru": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPA body | White"
     },
     "filters": {
       "filter01": "L型",
@@ -3311,7 +3311,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 20129,
     "searchKeywords": {
       "zh": "倒刺接头 L型倒刺接头 BL BL-24F-PA-W 809346 2.4 mm 2.4 mm PA 白色",
-      "en": "barbed fitting Elbow Barbed Fitting BL BL-24F-PA-W 809346 2.4 mm 2.4 mm PA 白色",
+      "en": "barbed fitting Elbow Barbed Fitting BL BL-24F-PA-W 809346 2.4 mm 2.4 mm PA White",
       "es": "barbed fitting Elbow Barbed Fitting BL BL-24F-PA-W 809346 2.4 mm 2.4 mm PA 白色",
       "fr": "barbed fitting Elbow Barbed Fitting BL BL-24F-PA-W 809346 2.4 mm 2.4 mm PA 白色",
       "ko": "barbed fitting Elbow Barbed Fitting BL BL-24F-PA-W 809346 2.4 mm 2.4 mm PA 白色",
@@ -3340,11 +3340,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "L型倒刺接头\n适用3.2 mm内径软管\nPA材质，白色",
-      "en": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色",
-      "es": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色",
-      "fr": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色",
-      "ko": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色",
-      "ru": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色"
+      "en": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPA body | White",
+      "es": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPA body | White",
+      "fr": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPA body | White",
+      "ko": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPA body | White",
+      "ru": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPA body | White"
     },
     "filters": {
       "filter01": "L型",
@@ -3369,7 +3369,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 20130,
     "searchKeywords": {
       "zh": "倒刺接头 L型倒刺接头 BL BL-32F-PA-W 809347 3.2 mm 3.2 mm PA 白色",
-      "en": "barbed fitting Elbow Barbed Fitting BL BL-32F-PA-W 809347 3.2 mm 3.2 mm PA 白色",
+      "en": "barbed fitting Elbow Barbed Fitting BL BL-32F-PA-W 809347 3.2 mm 3.2 mm PA White",
       "es": "barbed fitting Elbow Barbed Fitting BL BL-32F-PA-W 809347 3.2 mm 3.2 mm PA 白色",
       "fr": "barbed fitting Elbow Barbed Fitting BL BL-32F-PA-W 809347 3.2 mm 3.2 mm PA 白色",
       "ko": "barbed fitting Elbow Barbed Fitting BL BL-32F-PA-W 809347 3.2 mm 3.2 mm PA 白色",
@@ -3398,11 +3398,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "L型倒刺接头\n适用4.0 mm内径软管\nPA材质，白色",
-      "en": "Elbow Barbed Fitting\nTube ID: 4.0 mm\nPA body | 白色",
-      "es": "Elbow Barbed Fitting\nTube ID: 4.0 mm\nPA body | 白色",
-      "fr": "Elbow Barbed Fitting\nTube ID: 4.0 mm\nPA body | 白色",
-      "ko": "Elbow Barbed Fitting\nTube ID: 4.0 mm\nPA body | 白色",
-      "ru": "Elbow Barbed Fitting\nTube ID: 4.0 mm\nPA body | 白色"
+      "en": "Elbow Barbed Fitting\nTube ID: 4.0 mm\nPA body | White",
+      "es": "Elbow Barbed Fitting\nTube ID: 4.0 mm\nPA body | White",
+      "fr": "Elbow Barbed Fitting\nTube ID: 4.0 mm\nPA body | White",
+      "ko": "Elbow Barbed Fitting\nTube ID: 4.0 mm\nPA body | White",
+      "ru": "Elbow Barbed Fitting\nTube ID: 4.0 mm\nPA body | White"
     },
     "filters": {
       "filter01": "L型",
@@ -3427,7 +3427,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 20131,
     "searchKeywords": {
       "zh": "倒刺接头 L型倒刺接头 BL BL-40F-PA-W 809348 4.0 mm 4.0 mm PA 白色",
-      "en": "barbed fitting Elbow Barbed Fitting BL BL-40F-PA-W 809348 4.0 mm 4.0 mm PA 白色",
+      "en": "barbed fitting Elbow Barbed Fitting BL BL-40F-PA-W 809348 4.0 mm 4.0 mm PA White",
       "es": "barbed fitting Elbow Barbed Fitting BL BL-40F-PA-W 809348 4.0 mm 4.0 mm PA 白色",
       "fr": "barbed fitting Elbow Barbed Fitting BL BL-40F-PA-W 809348 4.0 mm 4.0 mm PA 白色",
       "ko": "barbed fitting Elbow Barbed Fitting BL BL-40F-PA-W 809348 4.0 mm 4.0 mm PA 白色",
@@ -3456,11 +3456,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "L型倒刺接头\n适用6.4 mm内径软管\nPA材质，白色",
-      "en": "Elbow Barbed Fitting\nTube ID: 6.4 mm\nPA body | 白色",
-      "es": "Elbow Barbed Fitting\nTube ID: 6.4 mm\nPA body | 白色",
-      "fr": "Elbow Barbed Fitting\nTube ID: 6.4 mm\nPA body | 白色",
-      "ko": "Elbow Barbed Fitting\nTube ID: 6.4 mm\nPA body | 白色",
-      "ru": "Elbow Barbed Fitting\nTube ID: 6.4 mm\nPA body | 白色"
+      "en": "Elbow Barbed Fitting\nTube ID: 6.4 mm\nPA body | White",
+      "es": "Elbow Barbed Fitting\nTube ID: 6.4 mm\nPA body | White",
+      "fr": "Elbow Barbed Fitting\nTube ID: 6.4 mm\nPA body | White",
+      "ko": "Elbow Barbed Fitting\nTube ID: 6.4 mm\nPA body | White",
+      "ru": "Elbow Barbed Fitting\nTube ID: 6.4 mm\nPA body | White"
     },
     "filters": {
       "filter01": "L型",
@@ -3485,7 +3485,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 20132,
     "searchKeywords": {
       "zh": "倒刺接头 L型倒刺接头 BL BL-64F-PA-W 809349 6.4 mm 6.4 mm PA 白色",
-      "en": "barbed fitting Elbow Barbed Fitting BL BL-64F-PA-W 809349 6.4 mm 6.4 mm PA 白色",
+      "en": "barbed fitting Elbow Barbed Fitting BL BL-64F-PA-W 809349 6.4 mm 6.4 mm PA White",
       "es": "barbed fitting Elbow Barbed Fitting BL BL-64F-PA-W 809349 6.4 mm 6.4 mm PA 白色",
       "fr": "barbed fitting Elbow Barbed Fitting BL BL-64F-PA-W 809349 6.4 mm 6.4 mm PA 白色",
       "ko": "barbed fitting Elbow Barbed Fitting BL BL-64F-PA-W 809349 6.4 mm 6.4 mm PA 白色",
@@ -3514,11 +3514,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "L型倒刺接头\n适用9.5 mm内径软管\nPA材质，白色",
-      "en": "Elbow Barbed Fitting\nTube ID: 9.5 mm\nPA body | 白色",
-      "es": "Elbow Barbed Fitting\nTube ID: 9.5 mm\nPA body | 白色",
-      "fr": "Elbow Barbed Fitting\nTube ID: 9.5 mm\nPA body | 白色",
-      "ko": "Elbow Barbed Fitting\nTube ID: 9.5 mm\nPA body | 白色",
-      "ru": "Elbow Barbed Fitting\nTube ID: 9.5 mm\nPA body | 白色"
+      "en": "Elbow Barbed Fitting\nTube ID: 9.5 mm\nPA body | White",
+      "es": "Elbow Barbed Fitting\nTube ID: 9.5 mm\nPA body | White",
+      "fr": "Elbow Barbed Fitting\nTube ID: 9.5 mm\nPA body | White",
+      "ko": "Elbow Barbed Fitting\nTube ID: 9.5 mm\nPA body | White",
+      "ru": "Elbow Barbed Fitting\nTube ID: 9.5 mm\nPA body | White"
     },
     "filters": {
       "filter01": "L型",
@@ -3543,7 +3543,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 20133,
     "searchKeywords": {
       "zh": "倒刺接头 L型倒刺接头 BL BL-95D-PA-W 809350 9.5 mm 9.5 mm PA 白色",
-      "en": "barbed fitting Elbow Barbed Fitting BL BL-95D-PA-W 809350 9.5 mm 9.5 mm PA 白色",
+      "en": "barbed fitting Elbow Barbed Fitting BL BL-95D-PA-W 809350 9.5 mm 9.5 mm PA White",
       "es": "barbed fitting Elbow Barbed Fitting BL BL-95D-PA-W 809350 9.5 mm 9.5 mm PA 白色",
       "fr": "barbed fitting Elbow Barbed Fitting BL BL-95D-PA-W 809350 9.5 mm 9.5 mm PA 白色",
       "ko": "barbed fitting Elbow Barbed Fitting BL BL-95D-PA-W 809350 9.5 mm 9.5 mm PA 白色",
@@ -3572,11 +3572,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "L型倒刺接头\n适用1.6 mm内径软管\nPP材质，本色",
-      "en": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "es": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "fr": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "ko": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "ru": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色"
+      "en": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "es": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "fr": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "ko": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "ru": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "L型",
@@ -3601,7 +3601,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 20134,
     "searchKeywords": {
       "zh": "倒刺接头 L型倒刺接头 BL BL-16F-PP-N 809357 1.6 mm 1.6 mm PP 本色",
-      "en": "barbed fitting Elbow Barbed Fitting BL BL-16F-PP-N 809357 1.6 mm 1.6 mm PP 本色",
+      "en": "barbed fitting Elbow Barbed Fitting BL BL-16F-PP-N 809357 1.6 mm 1.6 mm PP Natural",
       "es": "barbed fitting Elbow Barbed Fitting BL BL-16F-PP-N 809357 1.6 mm 1.6 mm PP 本色",
       "fr": "barbed fitting Elbow Barbed Fitting BL BL-16F-PP-N 809357 1.6 mm 1.6 mm PP 本色",
       "ko": "barbed fitting Elbow Barbed Fitting BL BL-16F-PP-N 809357 1.6 mm 1.6 mm PP 本色",
@@ -3630,11 +3630,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "L型倒刺接头\n适用2.4 mm内径软管\nPP材质，本色",
-      "en": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "es": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "fr": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "ko": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "ru": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色"
+      "en": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "es": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "fr": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "ko": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "ru": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "L型",
@@ -3659,7 +3659,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 20135,
     "searchKeywords": {
       "zh": "倒刺接头 L型倒刺接头 BL BL-24F-PP-N 809358 2.4 mm 2.4 mm PP 本色",
-      "en": "barbed fitting Elbow Barbed Fitting BL BL-24F-PP-N 809358 2.4 mm 2.4 mm PP 本色",
+      "en": "barbed fitting Elbow Barbed Fitting BL BL-24F-PP-N 809358 2.4 mm 2.4 mm PP Natural",
       "es": "barbed fitting Elbow Barbed Fitting BL BL-24F-PP-N 809358 2.4 mm 2.4 mm PP 本色",
       "fr": "barbed fitting Elbow Barbed Fitting BL BL-24F-PP-N 809358 2.4 mm 2.4 mm PP 本色",
       "ko": "barbed fitting Elbow Barbed Fitting BL BL-24F-PP-N 809358 2.4 mm 2.4 mm PP 本色",
@@ -3688,11 +3688,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "L型倒刺接头\n适用3.2 mm内径软管\nPP材质，本色",
-      "en": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "es": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "fr": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "ko": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "ru": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色"
+      "en": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "es": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "fr": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "ko": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "ru": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "L型",
@@ -3717,7 +3717,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 20136,
     "searchKeywords": {
       "zh": "倒刺接头 L型倒刺接头 BL BL-32F-PP-N 809359 3.2 mm 3.2 mm PP 本色",
-      "en": "barbed fitting Elbow Barbed Fitting BL BL-32F-PP-N 809359 3.2 mm 3.2 mm PP 本色",
+      "en": "barbed fitting Elbow Barbed Fitting BL BL-32F-PP-N 809359 3.2 mm 3.2 mm PP Natural",
       "es": "barbed fitting Elbow Barbed Fitting BL BL-32F-PP-N 809359 3.2 mm 3.2 mm PP 本色",
       "fr": "barbed fitting Elbow Barbed Fitting BL BL-32F-PP-N 809359 3.2 mm 3.2 mm PP 本色",
       "ko": "barbed fitting Elbow Barbed Fitting BL BL-32F-PP-N 809359 3.2 mm 3.2 mm PP 本色",
@@ -3746,11 +3746,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "L型倒刺接头\n适用4.0 mm内径软管\nPP材质，本色",
-      "en": "Elbow Barbed Fitting\nTube ID: 4.0 mm\nPP body | 本色",
-      "es": "Elbow Barbed Fitting\nTube ID: 4.0 mm\nPP body | 本色",
-      "fr": "Elbow Barbed Fitting\nTube ID: 4.0 mm\nPP body | 本色",
-      "ko": "Elbow Barbed Fitting\nTube ID: 4.0 mm\nPP body | 本色",
-      "ru": "Elbow Barbed Fitting\nTube ID: 4.0 mm\nPP body | 本色"
+      "en": "Elbow Barbed Fitting\nTube ID: 4.0 mm\nPP body | Natural",
+      "es": "Elbow Barbed Fitting\nTube ID: 4.0 mm\nPP body | Natural",
+      "fr": "Elbow Barbed Fitting\nTube ID: 4.0 mm\nPP body | Natural",
+      "ko": "Elbow Barbed Fitting\nTube ID: 4.0 mm\nPP body | Natural",
+      "ru": "Elbow Barbed Fitting\nTube ID: 4.0 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "L型",
@@ -3775,7 +3775,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 20137,
     "searchKeywords": {
       "zh": "倒刺接头 L型倒刺接头 BL BL-40F-PP-N 809360 4.0 mm 4.0 mm PP 本色",
-      "en": "barbed fitting Elbow Barbed Fitting BL BL-40F-PP-N 809360 4.0 mm 4.0 mm PP 本色",
+      "en": "barbed fitting Elbow Barbed Fitting BL BL-40F-PP-N 809360 4.0 mm 4.0 mm PP Natural",
       "es": "barbed fitting Elbow Barbed Fitting BL BL-40F-PP-N 809360 4.0 mm 4.0 mm PP 本色",
       "fr": "barbed fitting Elbow Barbed Fitting BL BL-40F-PP-N 809360 4.0 mm 4.0 mm PP 本色",
       "ko": "barbed fitting Elbow Barbed Fitting BL BL-40F-PP-N 809360 4.0 mm 4.0 mm PP 本色",
@@ -3804,11 +3804,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "L型倒刺接头\n适用6.4 mm内径软管\nPP材质，本色",
-      "en": "Elbow Barbed Fitting\nTube ID: 6.4 mm\nPP body | 本色",
-      "es": "Elbow Barbed Fitting\nTube ID: 6.4 mm\nPP body | 本色",
-      "fr": "Elbow Barbed Fitting\nTube ID: 6.4 mm\nPP body | 本色",
-      "ko": "Elbow Barbed Fitting\nTube ID: 6.4 mm\nPP body | 本色",
-      "ru": "Elbow Barbed Fitting\nTube ID: 6.4 mm\nPP body | 本色"
+      "en": "Elbow Barbed Fitting\nTube ID: 6.4 mm\nPP body | Natural",
+      "es": "Elbow Barbed Fitting\nTube ID: 6.4 mm\nPP body | Natural",
+      "fr": "Elbow Barbed Fitting\nTube ID: 6.4 mm\nPP body | Natural",
+      "ko": "Elbow Barbed Fitting\nTube ID: 6.4 mm\nPP body | Natural",
+      "ru": "Elbow Barbed Fitting\nTube ID: 6.4 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "L型",
@@ -3833,7 +3833,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 20138,
     "searchKeywords": {
       "zh": "倒刺接头 L型倒刺接头 BL BL-64F-PP-N 809361 6.4 mm 6.4 mm PP 本色",
-      "en": "barbed fitting Elbow Barbed Fitting BL BL-64F-PP-N 809361 6.4 mm 6.4 mm PP 本色",
+      "en": "barbed fitting Elbow Barbed Fitting BL BL-64F-PP-N 809361 6.4 mm 6.4 mm PP Natural",
       "es": "barbed fitting Elbow Barbed Fitting BL BL-64F-PP-N 809361 6.4 mm 6.4 mm PP 本色",
       "fr": "barbed fitting Elbow Barbed Fitting BL BL-64F-PP-N 809361 6.4 mm 6.4 mm PP 本色",
       "ko": "barbed fitting Elbow Barbed Fitting BL BL-64F-PP-N 809361 6.4 mm 6.4 mm PP 本色",
@@ -3862,11 +3862,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "L型倒刺接头\n适用9.5 mm内径软管\nPP材质，本色",
-      "en": "Elbow Barbed Fitting\nTube ID: 9.5 mm\nPP body | 本色",
-      "es": "Elbow Barbed Fitting\nTube ID: 9.5 mm\nPP body | 本色",
-      "fr": "Elbow Barbed Fitting\nTube ID: 9.5 mm\nPP body | 本色",
-      "ko": "Elbow Barbed Fitting\nTube ID: 9.5 mm\nPP body | 本色",
-      "ru": "Elbow Barbed Fitting\nTube ID: 9.5 mm\nPP body | 本色"
+      "en": "Elbow Barbed Fitting\nTube ID: 9.5 mm\nPP body | Natural",
+      "es": "Elbow Barbed Fitting\nTube ID: 9.5 mm\nPP body | Natural",
+      "fr": "Elbow Barbed Fitting\nTube ID: 9.5 mm\nPP body | Natural",
+      "ko": "Elbow Barbed Fitting\nTube ID: 9.5 mm\nPP body | Natural",
+      "ru": "Elbow Barbed Fitting\nTube ID: 9.5 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "L型",
@@ -3891,7 +3891,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 20139,
     "searchKeywords": {
       "zh": "倒刺接头 L型倒刺接头 BL BL-95D-PP-N 809362 9.5 mm 9.5 mm PP 本色",
-      "en": "barbed fitting Elbow Barbed Fitting BL BL-95D-PP-N 809362 9.5 mm 9.5 mm PP 本色",
+      "en": "barbed fitting Elbow Barbed Fitting BL BL-95D-PP-N 809362 9.5 mm 9.5 mm PP Natural",
       "es": "barbed fitting Elbow Barbed Fitting BL BL-95D-PP-N 809362 9.5 mm 9.5 mm PP 本色",
       "fr": "barbed fitting Elbow Barbed Fitting BL BL-95D-PP-N 809362 9.5 mm 9.5 mm PP 本色",
       "ko": "barbed fitting Elbow Barbed Fitting BL BL-95D-PP-N 809362 9.5 mm 9.5 mm PP 本色",
@@ -3920,11 +3920,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "L型倒刺接头\n适用1.6 mm内径软管\nPP材质，本色",
-      "en": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "es": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "fr": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "ko": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "ru": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色"
+      "en": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "es": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "fr": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "ko": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "ru": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "L型",
@@ -3949,7 +3949,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 20140,
     "searchKeywords": {
       "zh": "倒刺接头 L型倒刺接头 BL BL-16D-PP-N 809632 1.6 mm 1.6 mm PP 本色",
-      "en": "barbed fitting Elbow Barbed Fitting BL BL-16D-PP-N 809632 1.6 mm 1.6 mm PP 本色",
+      "en": "barbed fitting Elbow Barbed Fitting BL BL-16D-PP-N 809632 1.6 mm 1.6 mm PP Natural",
       "es": "barbed fitting Elbow Barbed Fitting BL BL-16D-PP-N 809632 1.6 mm 1.6 mm PP 本色",
       "fr": "barbed fitting Elbow Barbed Fitting BL BL-16D-PP-N 809632 1.6 mm 1.6 mm PP 本色",
       "ko": "barbed fitting Elbow Barbed Fitting BL BL-16D-PP-N 809632 1.6 mm 1.6 mm PP 本色",
@@ -3978,11 +3978,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "L型倒刺接头\n适用1.6 mm内径软管\nPA材质，白色",
-      "en": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色",
-      "es": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色",
-      "fr": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色",
-      "ko": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色",
-      "ru": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色"
+      "en": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPA body | White",
+      "es": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPA body | White",
+      "fr": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPA body | White",
+      "ko": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPA body | White",
+      "ru": "Elbow Barbed Fitting\nTube ID: 1.6 mm\nPA body | White"
     },
     "filters": {
       "filter01": "L型",
@@ -4007,7 +4007,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 20141,
     "searchKeywords": {
       "zh": "倒刺接头 L型倒刺接头 BL BL-16D-PA-W 809633 1.6 mm 1.6 mm PA 白色",
-      "en": "barbed fitting Elbow Barbed Fitting BL BL-16D-PA-W 809633 1.6 mm 1.6 mm PA 白色",
+      "en": "barbed fitting Elbow Barbed Fitting BL BL-16D-PA-W 809633 1.6 mm 1.6 mm PA White",
       "es": "barbed fitting Elbow Barbed Fitting BL BL-16D-PA-W 809633 1.6 mm 1.6 mm PA 白色",
       "fr": "barbed fitting Elbow Barbed Fitting BL BL-16D-PA-W 809633 1.6 mm 1.6 mm PA 白色",
       "ko": "barbed fitting Elbow Barbed Fitting BL BL-16D-PA-W 809633 1.6 mm 1.6 mm PA 白色",
@@ -4036,11 +4036,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "L型倒刺接头\n适用2.4 mm内径软管\nPP材质，本色",
-      "en": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "es": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "fr": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "ko": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "ru": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色"
+      "en": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "es": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "fr": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "ko": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "ru": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "L型",
@@ -4065,7 +4065,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 20142,
     "searchKeywords": {
       "zh": "倒刺接头 L型倒刺接头 BL BL-24D-PP-N 809634 2.4 mm 2.4 mm PP 本色",
-      "en": "barbed fitting Elbow Barbed Fitting BL BL-24D-PP-N 809634 2.4 mm 2.4 mm PP 本色",
+      "en": "barbed fitting Elbow Barbed Fitting BL BL-24D-PP-N 809634 2.4 mm 2.4 mm PP Natural",
       "es": "barbed fitting Elbow Barbed Fitting BL BL-24D-PP-N 809634 2.4 mm 2.4 mm PP 本色",
       "fr": "barbed fitting Elbow Barbed Fitting BL BL-24D-PP-N 809634 2.4 mm 2.4 mm PP 本色",
       "ko": "barbed fitting Elbow Barbed Fitting BL BL-24D-PP-N 809634 2.4 mm 2.4 mm PP 本色",
@@ -4094,11 +4094,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "L型倒刺接头\n适用2.4 mm内径软管\nPA材质，白色",
-      "en": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色",
-      "es": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色",
-      "fr": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色",
-      "ko": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色",
-      "ru": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色"
+      "en": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPA body | White",
+      "es": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPA body | White",
+      "fr": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPA body | White",
+      "ko": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPA body | White",
+      "ru": "Elbow Barbed Fitting\nTube ID: 2.4 mm\nPA body | White"
     },
     "filters": {
       "filter01": "L型",
@@ -4123,7 +4123,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 20143,
     "searchKeywords": {
       "zh": "倒刺接头 L型倒刺接头 BL BL-24D-PA-W 809635 2.4 mm 2.4 mm PA 白色",
-      "en": "barbed fitting Elbow Barbed Fitting BL BL-24D-PA-W 809635 2.4 mm 2.4 mm PA 白色",
+      "en": "barbed fitting Elbow Barbed Fitting BL BL-24D-PA-W 809635 2.4 mm 2.4 mm PA White",
       "es": "barbed fitting Elbow Barbed Fitting BL BL-24D-PA-W 809635 2.4 mm 2.4 mm PA 白色",
       "fr": "barbed fitting Elbow Barbed Fitting BL BL-24D-PA-W 809635 2.4 mm 2.4 mm PA 白色",
       "ko": "barbed fitting Elbow Barbed Fitting BL BL-24D-PA-W 809635 2.4 mm 2.4 mm PA 白色",
@@ -4152,11 +4152,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "L型倒刺接头\n适用3.2 mm内径软管\nPP材质，本色",
-      "en": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "es": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "fr": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "ko": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "ru": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色"
+      "en": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "es": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "fr": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "ko": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "ru": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "L型",
@@ -4181,7 +4181,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 20144,
     "searchKeywords": {
       "zh": "倒刺接头 L型倒刺接头 BL BL-32D-PP-N 809636 3.2 mm 3.2 mm PP 本色",
-      "en": "barbed fitting Elbow Barbed Fitting BL BL-32D-PP-N 809636 3.2 mm 3.2 mm PP 本色",
+      "en": "barbed fitting Elbow Barbed Fitting BL BL-32D-PP-N 809636 3.2 mm 3.2 mm PP Natural",
       "es": "barbed fitting Elbow Barbed Fitting BL BL-32D-PP-N 809636 3.2 mm 3.2 mm PP 本色",
       "fr": "barbed fitting Elbow Barbed Fitting BL BL-32D-PP-N 809636 3.2 mm 3.2 mm PP 本色",
       "ko": "barbed fitting Elbow Barbed Fitting BL BL-32D-PP-N 809636 3.2 mm 3.2 mm PP 本色",
@@ -4210,11 +4210,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "L型倒刺接头\n适用3.2 mm内径软管\nPA材质，白色",
-      "en": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色",
-      "es": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色",
-      "fr": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色",
-      "ko": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色",
-      "ru": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色"
+      "en": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPA body | White",
+      "es": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPA body | White",
+      "fr": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPA body | White",
+      "ko": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPA body | White",
+      "ru": "Elbow Barbed Fitting\nTube ID: 3.2 mm\nPA body | White"
     },
     "filters": {
       "filter01": "L型",
@@ -4239,7 +4239,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 20145,
     "searchKeywords": {
       "zh": "倒刺接头 L型倒刺接头 BL BL-32D-PA-W 809637 3.2 mm 3.2 mm PA 白色",
-      "en": "barbed fitting Elbow Barbed Fitting BL BL-32D-PA-W 809637 3.2 mm 3.2 mm PA 白色",
+      "en": "barbed fitting Elbow Barbed Fitting BL BL-32D-PA-W 809637 3.2 mm 3.2 mm PA White",
       "es": "barbed fitting Elbow Barbed Fitting BL BL-32D-PA-W 809637 3.2 mm 3.2 mm PA 白色",
       "fr": "barbed fitting Elbow Barbed Fitting BL BL-32D-PA-W 809637 3.2 mm 3.2 mm PA 白色",
       "ko": "barbed fitting Elbow Barbed Fitting BL BL-32D-PA-W 809637 3.2 mm 3.2 mm PA 白色",
@@ -4268,11 +4268,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "L型异径倒刺接头\n适用1.6 mm转2.4 mm内径软管\nPP材质，本色",
-      "en": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPP body | 本色",
-      "es": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPP body | 本色",
-      "fr": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPP body | 本色",
-      "ko": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPP body | 本色",
-      "ru": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPP body | 本色"
+      "en": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPP body | Natural",
+      "es": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPP body | Natural",
+      "fr": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPP body | Natural",
+      "ko": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPP body | Natural",
+      "ru": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "L型",
@@ -4297,7 +4297,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 20146,
     "searchKeywords": {
       "zh": "倒刺接头 L型倒刺接头 BL BL-16D-24D-PP-N 809638 1.6 mm 2.4 mm PP 本色",
-      "en": "barbed fitting Elbow Barbed Fitting BL BL-16D-24D-PP-N 809638 1.6 mm 2.4 mm PP 本色",
+      "en": "barbed fitting Elbow Barbed Fitting BL BL-16D-24D-PP-N 809638 1.6 mm 2.4 mm PP Natural",
       "es": "barbed fitting Elbow Barbed Fitting BL BL-16D-24D-PP-N 809638 1.6 mm 2.4 mm PP 本色",
       "fr": "barbed fitting Elbow Barbed Fitting BL BL-16D-24D-PP-N 809638 1.6 mm 2.4 mm PP 本色",
       "ko": "barbed fitting Elbow Barbed Fitting BL BL-16D-24D-PP-N 809638 1.6 mm 2.4 mm PP 本色",
@@ -4326,11 +4326,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "L型异径倒刺接头\n适用1.6 mm转2.4 mm内径软管\nPA材质，白色",
-      "en": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPA body | 白色",
-      "es": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPA body | 白色",
-      "fr": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPA body | 白色",
-      "ko": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPA body | 白色",
-      "ru": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPA body | 白色"
+      "en": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPA body | White",
+      "es": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPA body | White",
+      "fr": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPA body | White",
+      "ko": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPA body | White",
+      "ru": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm\nPA body | White"
     },
     "filters": {
       "filter01": "L型",
@@ -4355,7 +4355,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 20147,
     "searchKeywords": {
       "zh": "倒刺接头 L型倒刺接头 BL BL-16D-24D-PA-W 809639 1.6 mm 2.4 mm PA 白色",
-      "en": "barbed fitting Elbow Barbed Fitting BL BL-16D-24D-PA-W 809639 1.6 mm 2.4 mm PA 白色",
+      "en": "barbed fitting Elbow Barbed Fitting BL BL-16D-24D-PA-W 809639 1.6 mm 2.4 mm PA White",
       "es": "barbed fitting Elbow Barbed Fitting BL BL-16D-24D-PA-W 809639 1.6 mm 2.4 mm PA 白色",
       "fr": "barbed fitting Elbow Barbed Fitting BL BL-16D-24D-PA-W 809639 1.6 mm 2.4 mm PA 白色",
       "ko": "barbed fitting Elbow Barbed Fitting BL BL-16D-24D-PA-W 809639 1.6 mm 2.4 mm PA 白色",
@@ -4384,11 +4384,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "L型异径倒刺接头\n适用2.4 mm转3.2 mm内径软管\nPP材质，本色",
-      "en": "Elbow Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPP body | 本色",
-      "es": "Elbow Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPP body | 本色",
-      "fr": "Elbow Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPP body | 本色",
-      "ko": "Elbow Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPP body | 本色",
-      "ru": "Elbow Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPP body | 本色"
+      "en": "Elbow Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPP body | Natural",
+      "es": "Elbow Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPP body | Natural",
+      "fr": "Elbow Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPP body | Natural",
+      "ko": "Elbow Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPP body | Natural",
+      "ru": "Elbow Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "L型",
@@ -4413,7 +4413,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 20148,
     "searchKeywords": {
       "zh": "倒刺接头 L型倒刺接头 BL BL-24D-32D-PP-N 809640 2.4 mm 3.2 mm PP 本色",
-      "en": "barbed fitting Elbow Barbed Fitting BL BL-24D-32D-PP-N 809640 2.4 mm 3.2 mm PP 本色",
+      "en": "barbed fitting Elbow Barbed Fitting BL BL-24D-32D-PP-N 809640 2.4 mm 3.2 mm PP Natural",
       "es": "barbed fitting Elbow Barbed Fitting BL BL-24D-32D-PP-N 809640 2.4 mm 3.2 mm PP 本色",
       "fr": "barbed fitting Elbow Barbed Fitting BL BL-24D-32D-PP-N 809640 2.4 mm 3.2 mm PP 本色",
       "ko": "barbed fitting Elbow Barbed Fitting BL BL-24D-32D-PP-N 809640 2.4 mm 3.2 mm PP 本色",
@@ -4442,11 +4442,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "L型异径倒刺接头\n适用2.4 mm转3.2 mm内径软管\nPA材质，白色",
-      "en": "Elbow Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPA body | 白色",
-      "es": "Elbow Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPA body | 白色",
-      "fr": "Elbow Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPA body | 白色",
-      "ko": "Elbow Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPA body | 白色",
-      "ru": "Elbow Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPA body | 白色"
+      "en": "Elbow Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPA body | White",
+      "es": "Elbow Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPA body | White",
+      "fr": "Elbow Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPA body | White",
+      "ko": "Elbow Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPA body | White",
+      "ru": "Elbow Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm\nPA body | White"
     },
     "filters": {
       "filter01": "L型",
@@ -4471,7 +4471,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 20149,
     "searchKeywords": {
       "zh": "倒刺接头 L型倒刺接头 BL BL-24D-32D-PA-W 809641 2.4 mm 3.2 mm PA 白色",
-      "en": "barbed fitting Elbow Barbed Fitting BL BL-24D-32D-PA-W 809641 2.4 mm 3.2 mm PA 白色",
+      "en": "barbed fitting Elbow Barbed Fitting BL BL-24D-32D-PA-W 809641 2.4 mm 3.2 mm PA White",
       "es": "barbed fitting Elbow Barbed Fitting BL BL-24D-32D-PA-W 809641 2.4 mm 3.2 mm PA 白色",
       "fr": "barbed fitting Elbow Barbed Fitting BL BL-24D-32D-PA-W 809641 2.4 mm 3.2 mm PA 白色",
       "ko": "barbed fitting Elbow Barbed Fitting BL BL-24D-32D-PA-W 809641 2.4 mm 3.2 mm PA 白色",
@@ -4500,11 +4500,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "L型异径倒刺接头\n适用1.6 mm转3.2 mm内径软管\nPP材质，本色",
-      "en": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPP body | 本色",
-      "es": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPP body | 本色",
-      "fr": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPP body | 本色",
-      "ko": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPP body | 本色",
-      "ru": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPP body | 本色"
+      "en": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPP body | Natural",
+      "es": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPP body | Natural",
+      "fr": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPP body | Natural",
+      "ko": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPP body | Natural",
+      "ru": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "L型",
@@ -4529,7 +4529,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 20150,
     "searchKeywords": {
       "zh": "倒刺接头 L型倒刺接头 BL BL-16D-32D-PP-N 809642 1.6 mm 3.2 mm PP 本色",
-      "en": "barbed fitting Elbow Barbed Fitting BL BL-16D-32D-PP-N 809642 1.6 mm 3.2 mm PP 本色",
+      "en": "barbed fitting Elbow Barbed Fitting BL BL-16D-32D-PP-N 809642 1.6 mm 3.2 mm PP Natural",
       "es": "barbed fitting Elbow Barbed Fitting BL BL-16D-32D-PP-N 809642 1.6 mm 3.2 mm PP 本色",
       "fr": "barbed fitting Elbow Barbed Fitting BL BL-16D-32D-PP-N 809642 1.6 mm 3.2 mm PP 本色",
       "ko": "barbed fitting Elbow Barbed Fitting BL BL-16D-32D-PP-N 809642 1.6 mm 3.2 mm PP 本色",
@@ -4558,11 +4558,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "L型异径倒刺接头\n适用1.6 mm转3.2 mm内径软管\nPA材质，白色",
-      "en": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPA body | 白色",
-      "es": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPA body | 白色",
-      "fr": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPA body | 白色",
-      "ko": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPA body | 白色",
-      "ru": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPA body | 白色"
+      "en": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPA body | White",
+      "es": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPA body | White",
+      "fr": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPA body | White",
+      "ko": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPA body | White",
+      "ru": "Elbow Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm\nPA body | White"
     },
     "filters": {
       "filter01": "L型",
@@ -4587,7 +4587,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 20151,
     "searchKeywords": {
       "zh": "倒刺接头 L型倒刺接头 BL BL-16D-32D-PA-W 809643 1.6 mm 3.2 mm PA 白色",
-      "en": "barbed fitting Elbow Barbed Fitting BL BL-16D-32D-PA-W 809643 1.6 mm 3.2 mm PA 白色",
+      "en": "barbed fitting Elbow Barbed Fitting BL BL-16D-32D-PA-W 809643 1.6 mm 3.2 mm PA White",
       "es": "barbed fitting Elbow Barbed Fitting BL BL-16D-32D-PA-W 809643 1.6 mm 3.2 mm PA 白色",
       "fr": "barbed fitting Elbow Barbed Fitting BL BL-16D-32D-PA-W 809643 1.6 mm 3.2 mm PA 白色",
       "ko": "barbed fitting Elbow Barbed Fitting BL BL-16D-32D-PA-W 809643 1.6 mm 3.2 mm PA 白色",
@@ -4616,11 +4616,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "L型倒刺接头\n适用12.7 mm内径软管\nPP材质，本色",
-      "en": "Elbow Barbed Fitting\nTube ID: 12.7 mm\nPP body | 本色",
-      "es": "Elbow Barbed Fitting\nTube ID: 12.7 mm\nPP body | 本色",
-      "fr": "Elbow Barbed Fitting\nTube ID: 12.7 mm\nPP body | 本色",
-      "ko": "Elbow Barbed Fitting\nTube ID: 12.7 mm\nPP body | 本色",
-      "ru": "Elbow Barbed Fitting\nTube ID: 12.7 mm\nPP body | 本色"
+      "en": "Elbow Barbed Fitting\nTube ID: 12.7 mm\nPP body | Natural",
+      "es": "Elbow Barbed Fitting\nTube ID: 12.7 mm\nPP body | Natural",
+      "fr": "Elbow Barbed Fitting\nTube ID: 12.7 mm\nPP body | Natural",
+      "ko": "Elbow Barbed Fitting\nTube ID: 12.7 mm\nPP body | Natural",
+      "ru": "Elbow Barbed Fitting\nTube ID: 12.7 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "L型",
@@ -4645,7 +4645,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 20152,
     "searchKeywords": {
       "zh": "倒刺接头 L型倒刺接头 BL BL-127V-PP-N 809645 12.7 mm 12.7 mm PP 本色",
-      "en": "barbed fitting Elbow Barbed Fitting BL BL-127V-PP-N 809645 12.7 mm 12.7 mm PP 本色",
+      "en": "barbed fitting Elbow Barbed Fitting BL BL-127V-PP-N 809645 12.7 mm 12.7 mm PP Natural",
       "es": "barbed fitting Elbow Barbed Fitting BL BL-127V-PP-N 809645 12.7 mm 12.7 mm PP 本色",
       "fr": "barbed fitting Elbow Barbed Fitting BL BL-127V-PP-N 809645 12.7 mm 12.7 mm PP 本色",
       "ko": "barbed fitting Elbow Barbed Fitting BL BL-127V-PP-N 809645 12.7 mm 12.7 mm PP 本色",
@@ -4674,11 +4674,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "L型倒刺接头\n适用16.0 mm内径软管\nPP材质，本色",
-      "en": "Elbow Barbed Fitting\nTube ID: 16.0 mm\nPP body | 本色",
-      "es": "Elbow Barbed Fitting\nTube ID: 16.0 mm\nPP body | 本色",
-      "fr": "Elbow Barbed Fitting\nTube ID: 16.0 mm\nPP body | 本色",
-      "ko": "Elbow Barbed Fitting\nTube ID: 16.0 mm\nPP body | 本色",
-      "ru": "Elbow Barbed Fitting\nTube ID: 16.0 mm\nPP body | 本色"
+      "en": "Elbow Barbed Fitting\nTube ID: 16.0 mm\nPP body | Natural",
+      "es": "Elbow Barbed Fitting\nTube ID: 16.0 mm\nPP body | Natural",
+      "fr": "Elbow Barbed Fitting\nTube ID: 16.0 mm\nPP body | Natural",
+      "ko": "Elbow Barbed Fitting\nTube ID: 16.0 mm\nPP body | Natural",
+      "ru": "Elbow Barbed Fitting\nTube ID: 16.0 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "L型",
@@ -4703,7 +4703,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 20153,
     "searchKeywords": {
       "zh": "倒刺接头 L型倒刺接头 BL BL-160-PP-N 809881 16.0 mm 16.0 mm PP 本色",
-      "en": "barbed fitting Elbow Barbed Fitting BL BL-160-PP-N 809881 16.0 mm 16.0 mm PP 本色",
+      "en": "barbed fitting Elbow Barbed Fitting BL BL-160-PP-N 809881 16.0 mm 16.0 mm PP Natural",
       "es": "barbed fitting Elbow Barbed Fitting BL BL-160-PP-N 809881 16.0 mm 16.0 mm PP 本色",
       "fr": "barbed fitting Elbow Barbed Fitting BL BL-160-PP-N 809881 16.0 mm 16.0 mm PP 本色",
       "ko": "barbed fitting Elbow Barbed Fitting BL BL-160-PP-N 809881 16.0 mm 16.0 mm PP 本色",
@@ -4732,11 +4732,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型倒刺接头\n适用1.6 mm内径软管\nPP材质，本色",
-      "en": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "es": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "fr": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "ko": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "ru": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色"
+      "en": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "es": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "fr": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "ko": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "ru": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "T型",
@@ -4762,7 +4762,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30055,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-16F-PP-N 809309 1.6 mm 1.6 mm 1.6 mm PP 本色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-16F-PP-N 809309 1.6 mm 1.6 mm 1.6 mm PP 本色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-16F-PP-N 809309 1.6 mm 1.6 mm 1.6 mm PP Natural",
       "es": "barbed fitting Tee Barbed Fitting BT BT-16F-PP-N 809309 1.6 mm 1.6 mm 1.6 mm PP 本色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-16F-PP-N 809309 1.6 mm 1.6 mm 1.6 mm PP 本色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-16F-PP-N 809309 1.6 mm 1.6 mm 1.6 mm PP 本色",
@@ -4791,11 +4791,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型倒刺接头\n适用2.4 mm内径软管\nPP材质，本色",
-      "en": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "es": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "fr": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "ko": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "ru": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色"
+      "en": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "es": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "fr": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "ko": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "ru": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "T型",
@@ -4821,7 +4821,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30056,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-24F-PP-N 809310 2.4 mm 2.4 mm 2.4 mm PP 本色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-24F-PP-N 809310 2.4 mm 2.4 mm 2.4 mm PP 本色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-24F-PP-N 809310 2.4 mm 2.4 mm 2.4 mm PP Natural",
       "es": "barbed fitting Tee Barbed Fitting BT BT-24F-PP-N 809310 2.4 mm 2.4 mm 2.4 mm PP 本色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-24F-PP-N 809310 2.4 mm 2.4 mm 2.4 mm PP 本色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-24F-PP-N 809310 2.4 mm 2.4 mm 2.4 mm PP 本色",
@@ -4850,11 +4850,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型倒刺接头\n适用3.2 mm内径软管\nPP材质，本色",
-      "en": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "es": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "fr": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "ko": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "ru": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色"
+      "en": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "es": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "fr": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "ko": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "ru": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "T型",
@@ -4880,7 +4880,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30057,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-32F-PP-N 809311 3.2 mm 3.2 mm 3.2 mm PP 本色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-32F-PP-N 809311 3.2 mm 3.2 mm 3.2 mm PP 本色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-32F-PP-N 809311 3.2 mm 3.2 mm 3.2 mm PP Natural",
       "es": "barbed fitting Tee Barbed Fitting BT BT-32F-PP-N 809311 3.2 mm 3.2 mm 3.2 mm PP 本色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-32F-PP-N 809311 3.2 mm 3.2 mm 3.2 mm PP 本色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-32F-PP-N 809311 3.2 mm 3.2 mm 3.2 mm PP 本色",
@@ -4909,11 +4909,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型倒刺接头\n适用2.4 mm内径软管\nPA材质，白色",
-      "en": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色",
-      "es": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色",
-      "fr": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色",
-      "ko": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色",
-      "ru": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色"
+      "en": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPA body | White",
+      "es": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPA body | White",
+      "fr": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPA body | White",
+      "ko": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPA body | White",
+      "ru": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPA body | White"
     },
     "filters": {
       "filter01": "T型",
@@ -4939,7 +4939,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30058,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-24F-PA-W 809327 2.4 mm 2.4 mm 2.4 mm PA 白色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-24F-PA-W 809327 2.4 mm 2.4 mm 2.4 mm PA 白色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-24F-PA-W 809327 2.4 mm 2.4 mm 2.4 mm PA White",
       "es": "barbed fitting Tee Barbed Fitting BT BT-24F-PA-W 809327 2.4 mm 2.4 mm 2.4 mm PA 白色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-24F-PA-W 809327 2.4 mm 2.4 mm 2.4 mm PA 白色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-24F-PA-W 809327 2.4 mm 2.4 mm 2.4 mm PA 白色",
@@ -4968,11 +4968,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型倒刺接头\n适用1.6 mm内径软管\nPA材质，白色",
-      "en": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色",
-      "es": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色",
-      "fr": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色",
-      "ko": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色",
-      "ru": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色"
+      "en": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPA body | White",
+      "es": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPA body | White",
+      "fr": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPA body | White",
+      "ko": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPA body | White",
+      "ru": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPA body | White"
     },
     "filters": {
       "filter01": "T型",
@@ -4998,7 +4998,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30059,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-16F-PA-W 809337 1.6 mm 1.6 mm 1.6 mm PA 白色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-16F-PA-W 809337 1.6 mm 1.6 mm 1.6 mm PA 白色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-16F-PA-W 809337 1.6 mm 1.6 mm 1.6 mm PA White",
       "es": "barbed fitting Tee Barbed Fitting BT BT-16F-PA-W 809337 1.6 mm 1.6 mm 1.6 mm PA 白色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-16F-PA-W 809337 1.6 mm 1.6 mm 1.6 mm PA 白色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-16F-PA-W 809337 1.6 mm 1.6 mm 1.6 mm PA 白色",
@@ -5027,11 +5027,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型倒刺接头\n适用3.2 mm内径软管\nPA材质，白色",
-      "en": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色",
-      "es": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色",
-      "fr": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色",
-      "ko": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色",
-      "ru": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色"
+      "en": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPA body | White",
+      "es": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPA body | White",
+      "fr": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPA body | White",
+      "ko": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPA body | White",
+      "ru": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPA body | White"
     },
     "filters": {
       "filter01": "T型",
@@ -5057,7 +5057,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30060,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-32F-PA-W 809338 3.2 mm 3.2 mm 3.2 mm PA 白色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-32F-PA-W 809338 3.2 mm 3.2 mm 3.2 mm PA 白色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-32F-PA-W 809338 3.2 mm 3.2 mm 3.2 mm PA White",
       "es": "barbed fitting Tee Barbed Fitting BT BT-32F-PA-W 809338 3.2 mm 3.2 mm 3.2 mm PA 白色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-32F-PA-W 809338 3.2 mm 3.2 mm 3.2 mm PA 白色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-32F-PA-W 809338 3.2 mm 3.2 mm 3.2 mm PA 白色",
@@ -5086,11 +5086,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型倒刺接头\n适用4.0 mm内径软管\nPP材质，本色",
-      "en": "Tee Barbed Fitting\nTube ID: 4.0 mm\nPP body | 本色",
-      "es": "Tee Barbed Fitting\nTube ID: 4.0 mm\nPP body | 本色",
-      "fr": "Tee Barbed Fitting\nTube ID: 4.0 mm\nPP body | 本色",
-      "ko": "Tee Barbed Fitting\nTube ID: 4.0 mm\nPP body | 本色",
-      "ru": "Tee Barbed Fitting\nTube ID: 4.0 mm\nPP body | 本色"
+      "en": "Tee Barbed Fitting\nTube ID: 4.0 mm\nPP body | Natural",
+      "es": "Tee Barbed Fitting\nTube ID: 4.0 mm\nPP body | Natural",
+      "fr": "Tee Barbed Fitting\nTube ID: 4.0 mm\nPP body | Natural",
+      "ko": "Tee Barbed Fitting\nTube ID: 4.0 mm\nPP body | Natural",
+      "ru": "Tee Barbed Fitting\nTube ID: 4.0 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "T型",
@@ -5116,7 +5116,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30061,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-40C-PP-N 809438 4.0 mm 4.0 mm 4.0 mm PP 本色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-40C-PP-N 809438 4.0 mm 4.0 mm 4.0 mm PP 本色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-40C-PP-N 809438 4.0 mm 4.0 mm 4.0 mm PP Natural",
       "es": "barbed fitting Tee Barbed Fitting BT BT-40C-PP-N 809438 4.0 mm 4.0 mm 4.0 mm PP 本色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-40C-PP-N 809438 4.0 mm 4.0 mm 4.0 mm PP 本色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-40C-PP-N 809438 4.0 mm 4.0 mm 4.0 mm PP 本色",
@@ -5145,11 +5145,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型倒刺接头\n适用4.0 mm内径软管\nPA材质，白色",
-      "en": "Tee Barbed Fitting\nTube ID: 4.0 mm\nPA body | 白色",
-      "es": "Tee Barbed Fitting\nTube ID: 4.0 mm\nPA body | 白色",
-      "fr": "Tee Barbed Fitting\nTube ID: 4.0 mm\nPA body | 白色",
-      "ko": "Tee Barbed Fitting\nTube ID: 4.0 mm\nPA body | 白色",
-      "ru": "Tee Barbed Fitting\nTube ID: 4.0 mm\nPA body | 白色"
+      "en": "Tee Barbed Fitting\nTube ID: 4.0 mm\nPA body | White",
+      "es": "Tee Barbed Fitting\nTube ID: 4.0 mm\nPA body | White",
+      "fr": "Tee Barbed Fitting\nTube ID: 4.0 mm\nPA body | White",
+      "ko": "Tee Barbed Fitting\nTube ID: 4.0 mm\nPA body | White",
+      "ru": "Tee Barbed Fitting\nTube ID: 4.0 mm\nPA body | White"
     },
     "filters": {
       "filter01": "T型",
@@ -5175,7 +5175,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30062,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-40C-PA-W 809439 4.0 mm 4.0 mm 4.0 mm PA 白色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-40C-PA-W 809439 4.0 mm 4.0 mm 4.0 mm PA 白色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-40C-PA-W 809439 4.0 mm 4.0 mm 4.0 mm PA White",
       "es": "barbed fitting Tee Barbed Fitting BT BT-40C-PA-W 809439 4.0 mm 4.0 mm 4.0 mm PA 白色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-40C-PA-W 809439 4.0 mm 4.0 mm 4.0 mm PA 白色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-40C-PA-W 809439 4.0 mm 4.0 mm 4.0 mm PA 白色",
@@ -5204,11 +5204,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型倒刺接头\n适用6.4 mm内径软管\nPP材质，本色",
-      "en": "Tee Barbed Fitting\nTube ID: 6.4 mm\nPP body | 本色",
-      "es": "Tee Barbed Fitting\nTube ID: 6.4 mm\nPP body | 本色",
-      "fr": "Tee Barbed Fitting\nTube ID: 6.4 mm\nPP body | 本色",
-      "ko": "Tee Barbed Fitting\nTube ID: 6.4 mm\nPP body | 本色",
-      "ru": "Tee Barbed Fitting\nTube ID: 6.4 mm\nPP body | 本色"
+      "en": "Tee Barbed Fitting\nTube ID: 6.4 mm\nPP body | Natural",
+      "es": "Tee Barbed Fitting\nTube ID: 6.4 mm\nPP body | Natural",
+      "fr": "Tee Barbed Fitting\nTube ID: 6.4 mm\nPP body | Natural",
+      "ko": "Tee Barbed Fitting\nTube ID: 6.4 mm\nPP body | Natural",
+      "ru": "Tee Barbed Fitting\nTube ID: 6.4 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "T型",
@@ -5234,7 +5234,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30063,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-64C-PP-N 809440 6.4 mm 6.4 mm 6.4 mm PP 本色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-64C-PP-N 809440 6.4 mm 6.4 mm 6.4 mm PP 本色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-64C-PP-N 809440 6.4 mm 6.4 mm 6.4 mm PP Natural",
       "es": "barbed fitting Tee Barbed Fitting BT BT-64C-PP-N 809440 6.4 mm 6.4 mm 6.4 mm PP 本色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-64C-PP-N 809440 6.4 mm 6.4 mm 6.4 mm PP 本色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-64C-PP-N 809440 6.4 mm 6.4 mm 6.4 mm PP 本色",
@@ -5263,11 +5263,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型倒刺接头\n适用6.4 mm内径软管\nPA材质，白色",
-      "en": "Tee Barbed Fitting\nTube ID: 6.4 mm\nPA body | 白色",
-      "es": "Tee Barbed Fitting\nTube ID: 6.4 mm\nPA body | 白色",
-      "fr": "Tee Barbed Fitting\nTube ID: 6.4 mm\nPA body | 白色",
-      "ko": "Tee Barbed Fitting\nTube ID: 6.4 mm\nPA body | 白色",
-      "ru": "Tee Barbed Fitting\nTube ID: 6.4 mm\nPA body | 白色"
+      "en": "Tee Barbed Fitting\nTube ID: 6.4 mm\nPA body | White",
+      "es": "Tee Barbed Fitting\nTube ID: 6.4 mm\nPA body | White",
+      "fr": "Tee Barbed Fitting\nTube ID: 6.4 mm\nPA body | White",
+      "ko": "Tee Barbed Fitting\nTube ID: 6.4 mm\nPA body | White",
+      "ru": "Tee Barbed Fitting\nTube ID: 6.4 mm\nPA body | White"
     },
     "filters": {
       "filter01": "T型",
@@ -5293,7 +5293,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30064,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-64C-PA-W 809441 6.4 mm 6.4 mm 6.4 mm PA 白色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-64C-PA-W 809441 6.4 mm 6.4 mm 6.4 mm PA 白色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-64C-PA-W 809441 6.4 mm 6.4 mm 6.4 mm PA White",
       "es": "barbed fitting Tee Barbed Fitting BT BT-64C-PA-W 809441 6.4 mm 6.4 mm 6.4 mm PA 白色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-64C-PA-W 809441 6.4 mm 6.4 mm 6.4 mm PA 白色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-64C-PA-W 809441 6.4 mm 6.4 mm 6.4 mm PA 白色",
@@ -5322,11 +5322,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型倒刺接头\n适用9.5 mm内径软管\nPP材质，本色",
-      "en": "Tee Barbed Fitting\nTube ID: 9.5 mm\nPP body | 本色",
-      "es": "Tee Barbed Fitting\nTube ID: 9.5 mm\nPP body | 本色",
-      "fr": "Tee Barbed Fitting\nTube ID: 9.5 mm\nPP body | 本色",
-      "ko": "Tee Barbed Fitting\nTube ID: 9.5 mm\nPP body | 本色",
-      "ru": "Tee Barbed Fitting\nTube ID: 9.5 mm\nPP body | 本色"
+      "en": "Tee Barbed Fitting\nTube ID: 9.5 mm\nPP body | Natural",
+      "es": "Tee Barbed Fitting\nTube ID: 9.5 mm\nPP body | Natural",
+      "fr": "Tee Barbed Fitting\nTube ID: 9.5 mm\nPP body | Natural",
+      "ko": "Tee Barbed Fitting\nTube ID: 9.5 mm\nPP body | Natural",
+      "ru": "Tee Barbed Fitting\nTube ID: 9.5 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "T型",
@@ -5352,7 +5352,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30065,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-95X-PP-N 809442 9.5 mm 9.5 mm 9.5 mm PP 本色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-95X-PP-N 809442 9.5 mm 9.5 mm 9.5 mm PP 本色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-95X-PP-N 809442 9.5 mm 9.5 mm 9.5 mm PP Natural",
       "es": "barbed fitting Tee Barbed Fitting BT BT-95X-PP-N 809442 9.5 mm 9.5 mm 9.5 mm PP 本色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-95X-PP-N 809442 9.5 mm 9.5 mm 9.5 mm PP 本色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-95X-PP-N 809442 9.5 mm 9.5 mm 9.5 mm PP 本色",
@@ -5381,11 +5381,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型倒刺接头\n适用9.5 mm内径软管\nPA材质，白色",
-      "en": "Tee Barbed Fitting\nTube ID: 9.5 mm\nPA body | 白色",
-      "es": "Tee Barbed Fitting\nTube ID: 9.5 mm\nPA body | 白色",
-      "fr": "Tee Barbed Fitting\nTube ID: 9.5 mm\nPA body | 白色",
-      "ko": "Tee Barbed Fitting\nTube ID: 9.5 mm\nPA body | 白色",
-      "ru": "Tee Barbed Fitting\nTube ID: 9.5 mm\nPA body | 白色"
+      "en": "Tee Barbed Fitting\nTube ID: 9.5 mm\nPA body | White",
+      "es": "Tee Barbed Fitting\nTube ID: 9.5 mm\nPA body | White",
+      "fr": "Tee Barbed Fitting\nTube ID: 9.5 mm\nPA body | White",
+      "ko": "Tee Barbed Fitting\nTube ID: 9.5 mm\nPA body | White",
+      "ru": "Tee Barbed Fitting\nTube ID: 9.5 mm\nPA body | White"
     },
     "filters": {
       "filter01": "T型",
@@ -5411,7 +5411,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30066,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-95X-PA-W 809443 9.5 mm 9.5 mm 9.5 mm PA 白色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-95X-PA-W 809443 9.5 mm 9.5 mm 9.5 mm PA 白色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-95X-PA-W 809443 9.5 mm 9.5 mm 9.5 mm PA White",
       "es": "barbed fitting Tee Barbed Fitting BT BT-95X-PA-W 809443 9.5 mm 9.5 mm 9.5 mm PA 白色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-95X-PA-W 809443 9.5 mm 9.5 mm 9.5 mm PA 白色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-95X-PA-W 809443 9.5 mm 9.5 mm 9.5 mm PA 白色",
@@ -5440,11 +5440,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型异径倒刺接头\n适用3.2 / 3.2 / 1.6 mm内径软管\nPP材质，本色",
-      "en": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 1.6 mm\nPP body | 本色",
-      "es": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 1.6 mm\nPP body | 本色",
-      "fr": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 1.6 mm\nPP body | 本色",
-      "ko": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 1.6 mm\nPP body | 本色",
-      "ru": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 1.6 mm\nPP body | 本色"
+      "en": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 1.6 mm\nPP body | Natural",
+      "es": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 1.6 mm\nPP body | Natural",
+      "fr": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 1.6 mm\nPP body | Natural",
+      "ko": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 1.6 mm\nPP body | Natural",
+      "ru": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 1.6 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "T型",
@@ -5470,7 +5470,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30067,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-32D-32D-16D-PP-N 809444 3.2 mm 3.2 mm 1.6 mm PP 本色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-32D-32D-16D-PP-N 809444 3.2 mm 3.2 mm 1.6 mm PP 本色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-32D-32D-16D-PP-N 809444 3.2 mm 3.2 mm 1.6 mm PP Natural",
       "es": "barbed fitting Tee Barbed Fitting BT BT-32D-32D-16D-PP-N 809444 3.2 mm 3.2 mm 1.6 mm PP 本色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-32D-32D-16D-PP-N 809444 3.2 mm 3.2 mm 1.6 mm PP 本色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-32D-32D-16D-PP-N 809444 3.2 mm 3.2 mm 1.6 mm PP 本色",
@@ -5499,11 +5499,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型异径倒刺接头\n适用3.2 / 3.2 / 1.6 mm内径软管\nPA材质，白色",
-      "en": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 1.6 mm\nPA body | 白色",
-      "es": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 1.6 mm\nPA body | 白色",
-      "fr": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 1.6 mm\nPA body | 白色",
-      "ko": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 1.6 mm\nPA body | 白色",
-      "ru": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 1.6 mm\nPA body | 白色"
+      "en": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 1.6 mm\nPA body | White",
+      "es": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 1.6 mm\nPA body | White",
+      "fr": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 1.6 mm\nPA body | White",
+      "ko": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 1.6 mm\nPA body | White",
+      "ru": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 1.6 mm\nPA body | White"
     },
     "filters": {
       "filter01": "T型",
@@ -5529,7 +5529,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30068,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-32D-32D-16D-PA-W 809445 3.2 mm 3.2 mm 1.6 mm PA 白色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-32D-32D-16D-PA-W 809445 3.2 mm 3.2 mm 1.6 mm PA 白色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-32D-32D-16D-PA-W 809445 3.2 mm 3.2 mm 1.6 mm PA White",
       "es": "barbed fitting Tee Barbed Fitting BT BT-32D-32D-16D-PA-W 809445 3.2 mm 3.2 mm 1.6 mm PA 白色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-32D-32D-16D-PA-W 809445 3.2 mm 3.2 mm 1.6 mm PA 白色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-32D-32D-16D-PA-W 809445 3.2 mm 3.2 mm 1.6 mm PA 白色",
@@ -5558,11 +5558,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型异径倒刺接头\n适用2.4 / 2.4 / 1.6 mm内径软管\nPP材质，本色",
-      "en": "Tee Barbed Fitting\nTube ID: 2.4 mm / 2.4 mm / 1.6 mm\nPP body | 本色",
-      "es": "Tee Barbed Fitting\nTube ID: 2.4 mm / 2.4 mm / 1.6 mm\nPP body | 本色",
-      "fr": "Tee Barbed Fitting\nTube ID: 2.4 mm / 2.4 mm / 1.6 mm\nPP body | 本色",
-      "ko": "Tee Barbed Fitting\nTube ID: 2.4 mm / 2.4 mm / 1.6 mm\nPP body | 本色",
-      "ru": "Tee Barbed Fitting\nTube ID: 2.4 mm / 2.4 mm / 1.6 mm\nPP body | 本色"
+      "en": "Tee Barbed Fitting\nTube ID: 2.4 mm / 2.4 mm / 1.6 mm\nPP body | Natural",
+      "es": "Tee Barbed Fitting\nTube ID: 2.4 mm / 2.4 mm / 1.6 mm\nPP body | Natural",
+      "fr": "Tee Barbed Fitting\nTube ID: 2.4 mm / 2.4 mm / 1.6 mm\nPP body | Natural",
+      "ko": "Tee Barbed Fitting\nTube ID: 2.4 mm / 2.4 mm / 1.6 mm\nPP body | Natural",
+      "ru": "Tee Barbed Fitting\nTube ID: 2.4 mm / 2.4 mm / 1.6 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "T型",
@@ -5588,7 +5588,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30069,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-24D-24D-16D-PP-N 809446 2.4 mm 2.4 mm 1.6 mm PP 本色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-24D-24D-16D-PP-N 809446 2.4 mm 2.4 mm 1.6 mm PP 本色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-24D-24D-16D-PP-N 809446 2.4 mm 2.4 mm 1.6 mm PP Natural",
       "es": "barbed fitting Tee Barbed Fitting BT BT-24D-24D-16D-PP-N 809446 2.4 mm 2.4 mm 1.6 mm PP 本色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-24D-24D-16D-PP-N 809446 2.4 mm 2.4 mm 1.6 mm PP 本色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-24D-24D-16D-PP-N 809446 2.4 mm 2.4 mm 1.6 mm PP 本色",
@@ -5617,11 +5617,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型异径倒刺接头\n适用2.4 / 2.4 / 1.6 mm内径软管\nPA材质，白色",
-      "en": "Tee Barbed Fitting\nTube ID: 2.4 mm / 2.4 mm / 1.6 mm\nPA body | 白色",
-      "es": "Tee Barbed Fitting\nTube ID: 2.4 mm / 2.4 mm / 1.6 mm\nPA body | 白色",
-      "fr": "Tee Barbed Fitting\nTube ID: 2.4 mm / 2.4 mm / 1.6 mm\nPA body | 白色",
-      "ko": "Tee Barbed Fitting\nTube ID: 2.4 mm / 2.4 mm / 1.6 mm\nPA body | 白色",
-      "ru": "Tee Barbed Fitting\nTube ID: 2.4 mm / 2.4 mm / 1.6 mm\nPA body | 白色"
+      "en": "Tee Barbed Fitting\nTube ID: 2.4 mm / 2.4 mm / 1.6 mm\nPA body | White",
+      "es": "Tee Barbed Fitting\nTube ID: 2.4 mm / 2.4 mm / 1.6 mm\nPA body | White",
+      "fr": "Tee Barbed Fitting\nTube ID: 2.4 mm / 2.4 mm / 1.6 mm\nPA body | White",
+      "ko": "Tee Barbed Fitting\nTube ID: 2.4 mm / 2.4 mm / 1.6 mm\nPA body | White",
+      "ru": "Tee Barbed Fitting\nTube ID: 2.4 mm / 2.4 mm / 1.6 mm\nPA body | White"
     },
     "filters": {
       "filter01": "T型",
@@ -5647,7 +5647,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30070,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-24D-24D-16D-PA-W 809447 2.4 mm 2.4 mm 1.6 mm PA 白色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-24D-24D-16D-PA-W 809447 2.4 mm 2.4 mm 1.6 mm PA 白色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-24D-24D-16D-PA-W 809447 2.4 mm 2.4 mm 1.6 mm PA White",
       "es": "barbed fitting Tee Barbed Fitting BT BT-24D-24D-16D-PA-W 809447 2.4 mm 2.4 mm 1.6 mm PA 白色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-24D-24D-16D-PA-W 809447 2.4 mm 2.4 mm 1.6 mm PA 白色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-24D-24D-16D-PA-W 809447 2.4 mm 2.4 mm 1.6 mm PA 白色",
@@ -5676,11 +5676,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型异径倒刺接头\n适用3.2 / 3.2 / 2.4 mm内径软管\nPP材质，本色",
-      "en": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 2.4 mm\nPP body | 本色",
-      "es": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 2.4 mm\nPP body | 本色",
-      "fr": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 2.4 mm\nPP body | 本色",
-      "ko": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 2.4 mm\nPP body | 本色",
-      "ru": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 2.4 mm\nPP body | 本色"
+      "en": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 2.4 mm\nPP body | Natural",
+      "es": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 2.4 mm\nPP body | Natural",
+      "fr": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 2.4 mm\nPP body | Natural",
+      "ko": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 2.4 mm\nPP body | Natural",
+      "ru": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 2.4 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "T型",
@@ -5706,7 +5706,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30071,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-32D-32D-24D-PP-N 809448 3.2 mm 3.2 mm 2.4 mm PP 本色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-32D-32D-24D-PP-N 809448 3.2 mm 3.2 mm 2.4 mm PP 本色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-32D-32D-24D-PP-N 809448 3.2 mm 3.2 mm 2.4 mm PP Natural",
       "es": "barbed fitting Tee Barbed Fitting BT BT-32D-32D-24D-PP-N 809448 3.2 mm 3.2 mm 2.4 mm PP 本色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-32D-32D-24D-PP-N 809448 3.2 mm 3.2 mm 2.4 mm PP 本色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-32D-32D-24D-PP-N 809448 3.2 mm 3.2 mm 2.4 mm PP 本色",
@@ -5735,11 +5735,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型异径倒刺接头\n适用3.2 / 3.2 / 2.4 mm内径软管\nPA材质，白色",
-      "en": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 2.4 mm\nPA body | 白色",
-      "es": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 2.4 mm\nPA body | 白色",
-      "fr": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 2.4 mm\nPA body | 白色",
-      "ko": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 2.4 mm\nPA body | 白色",
-      "ru": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 2.4 mm\nPA body | 白色"
+      "en": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 2.4 mm\nPA body | White",
+      "es": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 2.4 mm\nPA body | White",
+      "fr": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 2.4 mm\nPA body | White",
+      "ko": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 2.4 mm\nPA body | White",
+      "ru": "Tee Barbed Fitting\nTube ID: 3.2 mm / 3.2 mm / 2.4 mm\nPA body | White"
     },
     "filters": {
       "filter01": "T型",
@@ -5765,7 +5765,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30072,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-32D-32D-24D-PA-W 809449 3.2 mm 3.2 mm 2.4 mm PA 白色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-32D-32D-24D-PA-W 809449 3.2 mm 3.2 mm 2.4 mm PA 白色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-32D-32D-24D-PA-W 809449 3.2 mm 3.2 mm 2.4 mm PA White",
       "es": "barbed fitting Tee Barbed Fitting BT BT-32D-32D-24D-PA-W 809449 3.2 mm 3.2 mm 2.4 mm PA 白色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-32D-32D-24D-PA-W 809449 3.2 mm 3.2 mm 2.4 mm PA 白色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-32D-32D-24D-PA-W 809449 3.2 mm 3.2 mm 2.4 mm PA 白色",
@@ -5794,11 +5794,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型异径倒刺接头\n适用6.4 / 6.4 / 3.2 mm内径软管\nPP材质，本色",
-      "en": "Tee Barbed Fitting\nTube ID: 6.4 mm / 6.4 mm / 3.2 mm\nPP body | 本色",
-      "es": "Tee Barbed Fitting\nTube ID: 6.4 mm / 6.4 mm / 3.2 mm\nPP body | 本色",
-      "fr": "Tee Barbed Fitting\nTube ID: 6.4 mm / 6.4 mm / 3.2 mm\nPP body | 本色",
-      "ko": "Tee Barbed Fitting\nTube ID: 6.4 mm / 6.4 mm / 3.2 mm\nPP body | 本色",
-      "ru": "Tee Barbed Fitting\nTube ID: 6.4 mm / 6.4 mm / 3.2 mm\nPP body | 本色"
+      "en": "Tee Barbed Fitting\nTube ID: 6.4 mm / 6.4 mm / 3.2 mm\nPP body | Natural",
+      "es": "Tee Barbed Fitting\nTube ID: 6.4 mm / 6.4 mm / 3.2 mm\nPP body | Natural",
+      "fr": "Tee Barbed Fitting\nTube ID: 6.4 mm / 6.4 mm / 3.2 mm\nPP body | Natural",
+      "ko": "Tee Barbed Fitting\nTube ID: 6.4 mm / 6.4 mm / 3.2 mm\nPP body | Natural",
+      "ru": "Tee Barbed Fitting\nTube ID: 6.4 mm / 6.4 mm / 3.2 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "T型",
@@ -5824,7 +5824,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30073,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-64D-64D-32D-PP-N 809450 6.4 mm 6.4 mm 3.2 mm PP 本色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-64D-64D-32D-PP-N 809450 6.4 mm 6.4 mm 3.2 mm PP 本色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-64D-64D-32D-PP-N 809450 6.4 mm 6.4 mm 3.2 mm PP Natural",
       "es": "barbed fitting Tee Barbed Fitting BT BT-64D-64D-32D-PP-N 809450 6.4 mm 6.4 mm 3.2 mm PP 本色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-64D-64D-32D-PP-N 809450 6.4 mm 6.4 mm 3.2 mm PP 本色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-64D-64D-32D-PP-N 809450 6.4 mm 6.4 mm 3.2 mm PP 本色",
@@ -5853,11 +5853,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型异径倒刺接头\n适用6.4 / 6.4 / 3.2 mm内径软管\nPA材质，白色",
-      "en": "Tee Barbed Fitting\nTube ID: 6.4 mm / 6.4 mm / 3.2 mm\nPA body | 白色",
-      "es": "Tee Barbed Fitting\nTube ID: 6.4 mm / 6.4 mm / 3.2 mm\nPA body | 白色",
-      "fr": "Tee Barbed Fitting\nTube ID: 6.4 mm / 6.4 mm / 3.2 mm\nPA body | 白色",
-      "ko": "Tee Barbed Fitting\nTube ID: 6.4 mm / 6.4 mm / 3.2 mm\nPA body | 白色",
-      "ru": "Tee Barbed Fitting\nTube ID: 6.4 mm / 6.4 mm / 3.2 mm\nPA body | 白色"
+      "en": "Tee Barbed Fitting\nTube ID: 6.4 mm / 6.4 mm / 3.2 mm\nPA body | White",
+      "es": "Tee Barbed Fitting\nTube ID: 6.4 mm / 6.4 mm / 3.2 mm\nPA body | White",
+      "fr": "Tee Barbed Fitting\nTube ID: 6.4 mm / 6.4 mm / 3.2 mm\nPA body | White",
+      "ko": "Tee Barbed Fitting\nTube ID: 6.4 mm / 6.4 mm / 3.2 mm\nPA body | White",
+      "ru": "Tee Barbed Fitting\nTube ID: 6.4 mm / 6.4 mm / 3.2 mm\nPA body | White"
     },
     "filters": {
       "filter01": "T型",
@@ -5883,7 +5883,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30074,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-64D-64D-32D-PA-W 809451 6.4 mm 6.4 mm 3.2 mm PA 白色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-64D-64D-32D-PA-W 809451 6.4 mm 6.4 mm 3.2 mm PA 白色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-64D-64D-32D-PA-W 809451 6.4 mm 6.4 mm 3.2 mm PA White",
       "es": "barbed fitting Tee Barbed Fitting BT BT-64D-64D-32D-PA-W 809451 6.4 mm 6.4 mm 3.2 mm PA 白色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-64D-64D-32D-PA-W 809451 6.4 mm 6.4 mm 3.2 mm PA 白色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-64D-64D-32D-PA-W 809451 6.4 mm 6.4 mm 3.2 mm PA 白色",
@@ -5912,11 +5912,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型异径倒刺接头\n适用2.4 / 3.2 / 3.2 mm内径软管\nPP材质，本色",
-      "en": "Tee Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm / 3.2 mm\nPP body | 本色",
-      "es": "Tee Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm / 3.2 mm\nPP body | 本色",
-      "fr": "Tee Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm / 3.2 mm\nPP body | 本色",
-      "ko": "Tee Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm / 3.2 mm\nPP body | 本色",
-      "ru": "Tee Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm / 3.2 mm\nPP body | 本色"
+      "en": "Tee Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm / 3.2 mm\nPP body | Natural",
+      "es": "Tee Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm / 3.2 mm\nPP body | Natural",
+      "fr": "Tee Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm / 3.2 mm\nPP body | Natural",
+      "ko": "Tee Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm / 3.2 mm\nPP body | Natural",
+      "ru": "Tee Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm / 3.2 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "T型",
@@ -5942,7 +5942,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30075,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-24D-32D-32D-PP-N 809452 2.4 mm 3.2 mm 3.2 mm PP 本色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-24D-32D-32D-PP-N 809452 2.4 mm 3.2 mm 3.2 mm PP 本色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-24D-32D-32D-PP-N 809452 2.4 mm 3.2 mm 3.2 mm PP Natural",
       "es": "barbed fitting Tee Barbed Fitting BT BT-24D-32D-32D-PP-N 809452 2.4 mm 3.2 mm 3.2 mm PP 本色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-24D-32D-32D-PP-N 809452 2.4 mm 3.2 mm 3.2 mm PP 本色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-24D-32D-32D-PP-N 809452 2.4 mm 3.2 mm 3.2 mm PP 本色",
@@ -5971,11 +5971,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型异径倒刺接头\n适用2.4 / 3.2 / 3.2 mm内径软管\nPA材质，白色",
-      "en": "Tee Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm / 3.2 mm\nPA body | 白色",
-      "es": "Tee Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm / 3.2 mm\nPA body | 白色",
-      "fr": "Tee Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm / 3.2 mm\nPA body | 白色",
-      "ko": "Tee Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm / 3.2 mm\nPA body | 白色",
-      "ru": "Tee Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm / 3.2 mm\nPA body | 白色"
+      "en": "Tee Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm / 3.2 mm\nPA body | White",
+      "es": "Tee Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm / 3.2 mm\nPA body | White",
+      "fr": "Tee Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm / 3.2 mm\nPA body | White",
+      "ko": "Tee Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm / 3.2 mm\nPA body | White",
+      "ru": "Tee Barbed Fitting\nTube ID: 2.4 mm / 3.2 mm / 3.2 mm\nPA body | White"
     },
     "filters": {
       "filter01": "T型",
@@ -6001,7 +6001,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30076,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-24D-32D-32D-PA-W 809453 2.4 mm 3.2 mm 3.2 mm PA 白色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-24D-32D-32D-PA-W 809453 2.4 mm 3.2 mm 3.2 mm PA 白色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-24D-32D-32D-PA-W 809453 2.4 mm 3.2 mm 3.2 mm PA White",
       "es": "barbed fitting Tee Barbed Fitting BT BT-24D-32D-32D-PA-W 809453 2.4 mm 3.2 mm 3.2 mm PA 白色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-24D-32D-32D-PA-W 809453 2.4 mm 3.2 mm 3.2 mm PA 白色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-24D-32D-32D-PA-W 809453 2.4 mm 3.2 mm 3.2 mm PA 白色",
@@ -6030,11 +6030,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型异径倒刺接头\n适用3.2 / 1.6 / 1.6 mm内径软管\nPP材质，本色",
-      "en": "Tee Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPP body | 本色",
-      "es": "Tee Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPP body | 本色",
-      "fr": "Tee Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPP body | 本色",
-      "ko": "Tee Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPP body | 本色",
-      "ru": "Tee Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPP body | 本色"
+      "en": "Tee Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPP body | Natural",
+      "es": "Tee Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPP body | Natural",
+      "fr": "Tee Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPP body | Natural",
+      "ko": "Tee Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPP body | Natural",
+      "ru": "Tee Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "T型",
@@ -6060,7 +6060,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30077,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-32D-16D-16D-PP-N 809454 3.2 mm 1.6 mm 1.6 mm PP 本色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-32D-16D-16D-PP-N 809454 3.2 mm 1.6 mm 1.6 mm PP 本色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-32D-16D-16D-PP-N 809454 3.2 mm 1.6 mm 1.6 mm PP Natural",
       "es": "barbed fitting Tee Barbed Fitting BT BT-32D-16D-16D-PP-N 809454 3.2 mm 1.6 mm 1.6 mm PP 本色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-32D-16D-16D-PP-N 809454 3.2 mm 1.6 mm 1.6 mm PP 本色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-32D-16D-16D-PP-N 809454 3.2 mm 1.6 mm 1.6 mm PP 本色",
@@ -6089,11 +6089,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型异径倒刺接头\n适用3.2 / 1.6 / 1.6 mm内径软管\nPA材质，白色",
-      "en": "Tee Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPA body | 白色",
-      "es": "Tee Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPA body | 白色",
-      "fr": "Tee Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPA body | 白色",
-      "ko": "Tee Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPA body | 白色",
-      "ru": "Tee Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPA body | 白色"
+      "en": "Tee Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPA body | White",
+      "es": "Tee Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPA body | White",
+      "fr": "Tee Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPA body | White",
+      "ko": "Tee Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPA body | White",
+      "ru": "Tee Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPA body | White"
     },
     "filters": {
       "filter01": "T型",
@@ -6119,7 +6119,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30078,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-32D-16D-16D-PA-W 809455 3.2 mm 1.6 mm 1.6 mm PA 白色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-32D-16D-16D-PA-W 809455 3.2 mm 1.6 mm 1.6 mm PA 白色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-32D-16D-16D-PA-W 809455 3.2 mm 1.6 mm 1.6 mm PA White",
       "es": "barbed fitting Tee Barbed Fitting BT BT-32D-16D-16D-PA-W 809455 3.2 mm 1.6 mm 1.6 mm PA 白色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-32D-16D-16D-PA-W 809455 3.2 mm 1.6 mm 1.6 mm PA 白色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-32D-16D-16D-PA-W 809455 3.2 mm 1.6 mm 1.6 mm PA 白色",
@@ -6148,11 +6148,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型异径倒刺接头\n适用3.2 / 2.4 / 2.4 mm内径软管\nPP材质，本色",
-      "en": "Tee Barbed Fitting\nTube ID: 3.2 mm / 2.4 mm / 2.4 mm\nPP body | 本色",
-      "es": "Tee Barbed Fitting\nTube ID: 3.2 mm / 2.4 mm / 2.4 mm\nPP body | 本色",
-      "fr": "Tee Barbed Fitting\nTube ID: 3.2 mm / 2.4 mm / 2.4 mm\nPP body | 本色",
-      "ko": "Tee Barbed Fitting\nTube ID: 3.2 mm / 2.4 mm / 2.4 mm\nPP body | 本色",
-      "ru": "Tee Barbed Fitting\nTube ID: 3.2 mm / 2.4 mm / 2.4 mm\nPP body | 本色"
+      "en": "Tee Barbed Fitting\nTube ID: 3.2 mm / 2.4 mm / 2.4 mm\nPP body | Natural",
+      "es": "Tee Barbed Fitting\nTube ID: 3.2 mm / 2.4 mm / 2.4 mm\nPP body | Natural",
+      "fr": "Tee Barbed Fitting\nTube ID: 3.2 mm / 2.4 mm / 2.4 mm\nPP body | Natural",
+      "ko": "Tee Barbed Fitting\nTube ID: 3.2 mm / 2.4 mm / 2.4 mm\nPP body | Natural",
+      "ru": "Tee Barbed Fitting\nTube ID: 3.2 mm / 2.4 mm / 2.4 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "T型",
@@ -6178,7 +6178,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30079,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-32D-24D-24D-PP-N 809456 3.2 mm 2.4 mm 2.4 mm PP 本色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-32D-24D-24D-PP-N 809456 3.2 mm 2.4 mm 2.4 mm PP 本色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-32D-24D-24D-PP-N 809456 3.2 mm 2.4 mm 2.4 mm PP Natural",
       "es": "barbed fitting Tee Barbed Fitting BT BT-32D-24D-24D-PP-N 809456 3.2 mm 2.4 mm 2.4 mm PP 本色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-32D-24D-24D-PP-N 809456 3.2 mm 2.4 mm 2.4 mm PP 本色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-32D-24D-24D-PP-N 809456 3.2 mm 2.4 mm 2.4 mm PP 本色",
@@ -6207,11 +6207,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型异径倒刺接头\n适用3.2 / 2.4 / 2.4 mm内径软管\nPA材质，白色",
-      "en": "Tee Barbed Fitting\nTube ID: 3.2 mm / 2.4 mm / 2.4 mm\nPA body | 白色",
-      "es": "Tee Barbed Fitting\nTube ID: 3.2 mm / 2.4 mm / 2.4 mm\nPA body | 白色",
-      "fr": "Tee Barbed Fitting\nTube ID: 3.2 mm / 2.4 mm / 2.4 mm\nPA body | 白色",
-      "ko": "Tee Barbed Fitting\nTube ID: 3.2 mm / 2.4 mm / 2.4 mm\nPA body | 白色",
-      "ru": "Tee Barbed Fitting\nTube ID: 3.2 mm / 2.4 mm / 2.4 mm\nPA body | 白色"
+      "en": "Tee Barbed Fitting\nTube ID: 3.2 mm / 2.4 mm / 2.4 mm\nPA body | White",
+      "es": "Tee Barbed Fitting\nTube ID: 3.2 mm / 2.4 mm / 2.4 mm\nPA body | White",
+      "fr": "Tee Barbed Fitting\nTube ID: 3.2 mm / 2.4 mm / 2.4 mm\nPA body | White",
+      "ko": "Tee Barbed Fitting\nTube ID: 3.2 mm / 2.4 mm / 2.4 mm\nPA body | White",
+      "ru": "Tee Barbed Fitting\nTube ID: 3.2 mm / 2.4 mm / 2.4 mm\nPA body | White"
     },
     "filters": {
       "filter01": "T型",
@@ -6237,7 +6237,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30080,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-32D-24D-24D-PA-W 809457 3.2 mm 2.4 mm 2.4 mm PA 白色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-32D-24D-24D-PA-W 809457 3.2 mm 2.4 mm 2.4 mm PA 白色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-32D-24D-24D-PA-W 809457 3.2 mm 2.4 mm 2.4 mm PA White",
       "es": "barbed fitting Tee Barbed Fitting BT BT-32D-24D-24D-PA-W 809457 3.2 mm 2.4 mm 2.4 mm PA 白色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-32D-24D-24D-PA-W 809457 3.2 mm 2.4 mm 2.4 mm PA 白色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-32D-24D-24D-PA-W 809457 3.2 mm 2.4 mm 2.4 mm PA 白色",
@@ -6266,11 +6266,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型异径倒刺接头\n适用3.2 / 6.4 / 6.4 mm内径软管\nPP材质，本色",
-      "en": "Tee Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm / 6.4 mm\nPP body | 本色",
-      "es": "Tee Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm / 6.4 mm\nPP body | 本色",
-      "fr": "Tee Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm / 6.4 mm\nPP body | 本色",
-      "ko": "Tee Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm / 6.4 mm\nPP body | 本色",
-      "ru": "Tee Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm / 6.4 mm\nPP body | 本色"
+      "en": "Tee Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm / 6.4 mm\nPP body | Natural",
+      "es": "Tee Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm / 6.4 mm\nPP body | Natural",
+      "fr": "Tee Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm / 6.4 mm\nPP body | Natural",
+      "ko": "Tee Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm / 6.4 mm\nPP body | Natural",
+      "ru": "Tee Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm / 6.4 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "T型",
@@ -6296,7 +6296,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30081,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-32D-64T-64T-PP-N 809458 3.2 mm 6.4 mm 6.4 mm PP 本色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-32D-64T-64T-PP-N 809458 3.2 mm 6.4 mm 6.4 mm PP 本色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-32D-64T-64T-PP-N 809458 3.2 mm 6.4 mm 6.4 mm PP Natural",
       "es": "barbed fitting Tee Barbed Fitting BT BT-32D-64T-64T-PP-N 809458 3.2 mm 6.4 mm 6.4 mm PP 本色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-32D-64T-64T-PP-N 809458 3.2 mm 6.4 mm 6.4 mm PP 本色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-32D-64T-64T-PP-N 809458 3.2 mm 6.4 mm 6.4 mm PP 本色",
@@ -6325,11 +6325,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型异径倒刺接头\n适用3.2 / 6.4 / 6.4 mm内径软管\nPA材质，白色",
-      "en": "Tee Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm / 6.4 mm\nPA body | 白色",
-      "es": "Tee Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm / 6.4 mm\nPA body | 白色",
-      "fr": "Tee Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm / 6.4 mm\nPA body | 白色",
-      "ko": "Tee Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm / 6.4 mm\nPA body | 白色",
-      "ru": "Tee Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm / 6.4 mm\nPA body | 白色"
+      "en": "Tee Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm / 6.4 mm\nPA body | White",
+      "es": "Tee Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm / 6.4 mm\nPA body | White",
+      "fr": "Tee Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm / 6.4 mm\nPA body | White",
+      "ko": "Tee Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm / 6.4 mm\nPA body | White",
+      "ru": "Tee Barbed Fitting\nTube ID: 3.2 mm / 6.4 mm / 6.4 mm\nPA body | White"
     },
     "filters": {
       "filter01": "T型",
@@ -6355,7 +6355,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30082,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-32D-64T-64T-PA-W 809459 3.2 mm 6.4 mm 6.4 mm PA 白色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-32D-64T-64T-PA-W 809459 3.2 mm 6.4 mm 6.4 mm PA 白色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-32D-64T-64T-PA-W 809459 3.2 mm 6.4 mm 6.4 mm PA White",
       "es": "barbed fitting Tee Barbed Fitting BT BT-32D-64T-64T-PA-W 809459 3.2 mm 6.4 mm 6.4 mm PA 白色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-32D-64T-64T-PA-W 809459 3.2 mm 6.4 mm 6.4 mm PA 白色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-32D-64T-64T-PA-W 809459 3.2 mm 6.4 mm 6.4 mm PA 白色",
@@ -6384,11 +6384,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型异径倒刺接头\n适用6.4 / 9.5 / 9.5 mm内径软管\nPP材质，本色",
-      "en": "Tee Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm / 9.5 mm\nPP body | 本色",
-      "es": "Tee Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm / 9.5 mm\nPP body | 本色",
-      "fr": "Tee Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm / 9.5 mm\nPP body | 本色",
-      "ko": "Tee Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm / 9.5 mm\nPP body | 本色",
-      "ru": "Tee Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm / 9.5 mm\nPP body | 本色"
+      "en": "Tee Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm / 9.5 mm\nPP body | Natural",
+      "es": "Tee Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm / 9.5 mm\nPP body | Natural",
+      "fr": "Tee Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm / 9.5 mm\nPP body | Natural",
+      "ko": "Tee Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm / 9.5 mm\nPP body | Natural",
+      "ru": "Tee Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm / 9.5 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "T型",
@@ -6414,7 +6414,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30083,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-64V-95V-95V-PP-N 809460 6.4 mm 9.5 mm 9.5 mm PP 本色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-64V-95V-95V-PP-N 809460 6.4 mm 9.5 mm 9.5 mm PP 本色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-64V-95V-95V-PP-N 809460 6.4 mm 9.5 mm 9.5 mm PP Natural",
       "es": "barbed fitting Tee Barbed Fitting BT BT-64V-95V-95V-PP-N 809460 6.4 mm 9.5 mm 9.5 mm PP 本色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-64V-95V-95V-PP-N 809460 6.4 mm 9.5 mm 9.5 mm PP 本色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-64V-95V-95V-PP-N 809460 6.4 mm 9.5 mm 9.5 mm PP 本色",
@@ -6443,11 +6443,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型异径倒刺接头\n适用6.4 / 9.5 / 9.5 mm内径软管\nPA材质，白色",
-      "en": "Tee Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm / 9.5 mm\nPA body | 白色",
-      "es": "Tee Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm / 9.5 mm\nPA body | 白色",
-      "fr": "Tee Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm / 9.5 mm\nPA body | 白色",
-      "ko": "Tee Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm / 9.5 mm\nPA body | 白色",
-      "ru": "Tee Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm / 9.5 mm\nPA body | 白色"
+      "en": "Tee Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm / 9.5 mm\nPA body | White",
+      "es": "Tee Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm / 9.5 mm\nPA body | White",
+      "fr": "Tee Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm / 9.5 mm\nPA body | White",
+      "ko": "Tee Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm / 9.5 mm\nPA body | White",
+      "ru": "Tee Barbed Fitting\nTube ID: 6.4 mm / 9.5 mm / 9.5 mm\nPA body | White"
     },
     "filters": {
       "filter01": "T型",
@@ -6473,7 +6473,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30084,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-64V-95V-95V-PA-W 809461 6.4 mm 9.5 mm 9.5 mm PA 白色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-64V-95V-95V-PA-W 809461 6.4 mm 9.5 mm 9.5 mm PA 白色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-64V-95V-95V-PA-W 809461 6.4 mm 9.5 mm 9.5 mm PA White",
       "es": "barbed fitting Tee Barbed Fitting BT BT-64V-95V-95V-PA-W 809461 6.4 mm 9.5 mm 9.5 mm PA 白色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-64V-95V-95V-PA-W 809461 6.4 mm 9.5 mm 9.5 mm PA 白色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-64V-95V-95V-PA-W 809461 6.4 mm 9.5 mm 9.5 mm PA 白色",
@@ -6502,11 +6502,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型异径倒刺接头\n适用2.4 / 1.6 / 1.6 mm内径软管\nPP材质，本色",
-      "en": "Tee Barbed Fitting\nTube ID: 2.4 mm / 1.6 mm / 1.6 mm\nPP body | 本色",
-      "es": "Tee Barbed Fitting\nTube ID: 2.4 mm / 1.6 mm / 1.6 mm\nPP body | 本色",
-      "fr": "Tee Barbed Fitting\nTube ID: 2.4 mm / 1.6 mm / 1.6 mm\nPP body | 本色",
-      "ko": "Tee Barbed Fitting\nTube ID: 2.4 mm / 1.6 mm / 1.6 mm\nPP body | 本色",
-      "ru": "Tee Barbed Fitting\nTube ID: 2.4 mm / 1.6 mm / 1.6 mm\nPP body | 本色"
+      "en": "Tee Barbed Fitting\nTube ID: 2.4 mm / 1.6 mm / 1.6 mm\nPP body | Natural",
+      "es": "Tee Barbed Fitting\nTube ID: 2.4 mm / 1.6 mm / 1.6 mm\nPP body | Natural",
+      "fr": "Tee Barbed Fitting\nTube ID: 2.4 mm / 1.6 mm / 1.6 mm\nPP body | Natural",
+      "ko": "Tee Barbed Fitting\nTube ID: 2.4 mm / 1.6 mm / 1.6 mm\nPP body | Natural",
+      "ru": "Tee Barbed Fitting\nTube ID: 2.4 mm / 1.6 mm / 1.6 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "T型",
@@ -6532,7 +6532,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30085,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-24-16-16-PP-N 806197 2.4 mm 1.6 mm 1.6 mm PP 本色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-24-16-16-PP-N 806197 2.4 mm 1.6 mm 1.6 mm PP 本色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-24-16-16-PP-N 806197 2.4 mm 1.6 mm 1.6 mm PP Natural",
       "es": "barbed fitting Tee Barbed Fitting BT BT-24-16-16-PP-N 806197 2.4 mm 1.6 mm 1.6 mm PP 本色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-24-16-16-PP-N 806197 2.4 mm 1.6 mm 1.6 mm PP 本色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-24-16-16-PP-N 806197 2.4 mm 1.6 mm 1.6 mm PP 本色",
@@ -6561,11 +6561,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型倒刺接头\n适用1.6 mm内径软管\nPP材质，本色",
-      "en": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "es": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "fr": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "ko": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "ru": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色"
+      "en": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "es": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "fr": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "ko": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "ru": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "T型",
@@ -6591,7 +6591,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30086,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-16D-PP-N 809521 1.6 mm 1.6 mm 1.6 mm PP 本色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-16D-PP-N 809521 1.6 mm 1.6 mm 1.6 mm PP 本色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-16D-PP-N 809521 1.6 mm 1.6 mm 1.6 mm PP Natural",
       "es": "barbed fitting Tee Barbed Fitting BT BT-16D-PP-N 809521 1.6 mm 1.6 mm 1.6 mm PP 本色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-16D-PP-N 809521 1.6 mm 1.6 mm 1.6 mm PP 本色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-16D-PP-N 809521 1.6 mm 1.6 mm 1.6 mm PP 本色",
@@ -6620,11 +6620,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型倒刺接头\n适用1.6 mm内径软管\nPA材质，白色",
-      "en": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色",
-      "es": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色",
-      "fr": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色",
-      "ko": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色",
-      "ru": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色"
+      "en": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPA body | White",
+      "es": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPA body | White",
+      "fr": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPA body | White",
+      "ko": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPA body | White",
+      "ru": "Tee Barbed Fitting\nTube ID: 1.6 mm\nPA body | White"
     },
     "filters": {
       "filter01": "T型",
@@ -6650,7 +6650,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30087,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-16D-PA-W 809545 1.6 mm 1.6 mm 1.6 mm PA 白色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-16D-PA-W 809545 1.6 mm 1.6 mm 1.6 mm PA 白色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-16D-PA-W 809545 1.6 mm 1.6 mm 1.6 mm PA White",
       "es": "barbed fitting Tee Barbed Fitting BT BT-16D-PA-W 809545 1.6 mm 1.6 mm 1.6 mm PA 白色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-16D-PA-W 809545 1.6 mm 1.6 mm 1.6 mm PA 白色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-16D-PA-W 809545 1.6 mm 1.6 mm 1.6 mm PA 白色",
@@ -6679,11 +6679,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型倒刺接头\n适用2.4 mm内径软管\nPP材质，本色",
-      "en": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "es": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "fr": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "ko": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "ru": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色"
+      "en": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "es": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "fr": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "ko": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "ru": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "T型",
@@ -6709,7 +6709,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30088,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-24D-PP-N 809610 2.4 mm 2.4 mm 2.4 mm PP 本色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-24D-PP-N 809610 2.4 mm 2.4 mm 2.4 mm PP 本色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-24D-PP-N 809610 2.4 mm 2.4 mm 2.4 mm PP Natural",
       "es": "barbed fitting Tee Barbed Fitting BT BT-24D-PP-N 809610 2.4 mm 2.4 mm 2.4 mm PP 本色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-24D-PP-N 809610 2.4 mm 2.4 mm 2.4 mm PP 本色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-24D-PP-N 809610 2.4 mm 2.4 mm 2.4 mm PP 本色",
@@ -6738,11 +6738,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型倒刺接头\n适用2.4 mm内径软管\nPA材质，白色",
-      "en": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色",
-      "es": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色",
-      "fr": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色",
-      "ko": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色",
-      "ru": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色"
+      "en": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPA body | White",
+      "es": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPA body | White",
+      "fr": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPA body | White",
+      "ko": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPA body | White",
+      "ru": "Tee Barbed Fitting\nTube ID: 2.4 mm\nPA body | White"
     },
     "filters": {
       "filter01": "T型",
@@ -6768,7 +6768,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30089,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-24D-PA-W 809611 2.4 mm 2.4 mm 2.4 mm PA 白色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-24D-PA-W 809611 2.4 mm 2.4 mm 2.4 mm PA 白色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-24D-PA-W 809611 2.4 mm 2.4 mm 2.4 mm PA White",
       "es": "barbed fitting Tee Barbed Fitting BT BT-24D-PA-W 809611 2.4 mm 2.4 mm 2.4 mm PA 白色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-24D-PA-W 809611 2.4 mm 2.4 mm 2.4 mm PA 白色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-24D-PA-W 809611 2.4 mm 2.4 mm 2.4 mm PA 白色",
@@ -6797,11 +6797,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型倒刺接头\n适用3.2 mm内径软管\nPP材质，本色",
-      "en": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "es": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "fr": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "ko": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "ru": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色"
+      "en": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "es": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "fr": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "ko": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "ru": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "T型",
@@ -6827,7 +6827,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30090,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-32D-PP-N 809621 3.2 mm 3.2 mm 3.2 mm PP 本色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-32D-PP-N 809621 3.2 mm 3.2 mm 3.2 mm PP 本色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-32D-PP-N 809621 3.2 mm 3.2 mm 3.2 mm PP Natural",
       "es": "barbed fitting Tee Barbed Fitting BT BT-32D-PP-N 809621 3.2 mm 3.2 mm 3.2 mm PP 本色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-32D-PP-N 809621 3.2 mm 3.2 mm 3.2 mm PP 本色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-32D-PP-N 809621 3.2 mm 3.2 mm 3.2 mm PP 本色",
@@ -6856,11 +6856,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型倒刺接头\n适用3.2 mm内径软管\nPA材质，白色",
-      "en": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色",
-      "es": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色",
-      "fr": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色",
-      "ko": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色",
-      "ru": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色"
+      "en": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPA body | White",
+      "es": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPA body | White",
+      "fr": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPA body | White",
+      "ko": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPA body | White",
+      "ru": "Tee Barbed Fitting\nTube ID: 3.2 mm\nPA body | White"
     },
     "filters": {
       "filter01": "T型",
@@ -6886,7 +6886,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30091,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-32D-PA-W 809622 3.2 mm 3.2 mm 3.2 mm PA 白色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-32D-PA-W 809622 3.2 mm 3.2 mm 3.2 mm PA 白色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-32D-PA-W 809622 3.2 mm 3.2 mm 3.2 mm PA White",
       "es": "barbed fitting Tee Barbed Fitting BT BT-32D-PA-W 809622 3.2 mm 3.2 mm 3.2 mm PA 白色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-32D-PA-W 809622 3.2 mm 3.2 mm 3.2 mm PA 白色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-32D-PA-W 809622 3.2 mm 3.2 mm 3.2 mm PA 白色",
@@ -6915,11 +6915,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型倒刺接头\n适用12.7 mm内径软管\nPP材质，本色",
-      "en": "Tee Barbed Fitting\nTube ID: 12.7 mm\nPP body | 本色",
-      "es": "Tee Barbed Fitting\nTube ID: 12.7 mm\nPP body | 本色",
-      "fr": "Tee Barbed Fitting\nTube ID: 12.7 mm\nPP body | 本色",
-      "ko": "Tee Barbed Fitting\nTube ID: 12.7 mm\nPP body | 本色",
-      "ru": "Tee Barbed Fitting\nTube ID: 12.7 mm\nPP body | 本色"
+      "en": "Tee Barbed Fitting\nTube ID: 12.7 mm\nPP body | Natural",
+      "es": "Tee Barbed Fitting\nTube ID: 12.7 mm\nPP body | Natural",
+      "fr": "Tee Barbed Fitting\nTube ID: 12.7 mm\nPP body | Natural",
+      "ko": "Tee Barbed Fitting\nTube ID: 12.7 mm\nPP body | Natural",
+      "ru": "Tee Barbed Fitting\nTube ID: 12.7 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "T型",
@@ -6945,7 +6945,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30092,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-127V-PP-N 809644 12.7 mm 12.7 mm 12.7 mm PP 本色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-127V-PP-N 809644 12.7 mm 12.7 mm 12.7 mm PP 本色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-127V-PP-N 809644 12.7 mm 12.7 mm 12.7 mm PP Natural",
       "es": "barbed fitting Tee Barbed Fitting BT BT-127V-PP-N 809644 12.7 mm 12.7 mm 12.7 mm PP 本色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-127V-PP-N 809644 12.7 mm 12.7 mm 12.7 mm PP 本色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-127V-PP-N 809644 12.7 mm 12.7 mm 12.7 mm PP 本色",
@@ -6974,11 +6974,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型异径倒刺接头\n适用1.6 / 2.4 / 2.4 mm内径软管\nPP材质，本色",
-      "en": "Tee Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm / 2.4 mm\nPP body | 本色",
-      "es": "Tee Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm / 2.4 mm\nPP body | 本色",
-      "fr": "Tee Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm / 2.4 mm\nPP body | 本色",
-      "ko": "Tee Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm / 2.4 mm\nPP body | 本色",
-      "ru": "Tee Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm / 2.4 mm\nPP body | 本色"
+      "en": "Tee Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm / 2.4 mm\nPP body | Natural",
+      "es": "Tee Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm / 2.4 mm\nPP body | Natural",
+      "fr": "Tee Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm / 2.4 mm\nPP body | Natural",
+      "ko": "Tee Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm / 2.4 mm\nPP body | Natural",
+      "ru": "Tee Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm / 2.4 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "T型",
@@ -7004,7 +7004,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30093,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-16D-24D-24D-PP-N 809287 1.6 mm 2.4 mm 2.4 mm PP 本色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-16D-24D-24D-PP-N 809287 1.6 mm 2.4 mm 2.4 mm PP 本色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-16D-24D-24D-PP-N 809287 1.6 mm 2.4 mm 2.4 mm PP Natural",
       "es": "barbed fitting Tee Barbed Fitting BT BT-16D-24D-24D-PP-N 809287 1.6 mm 2.4 mm 2.4 mm PP 本色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-16D-24D-24D-PP-N 809287 1.6 mm 2.4 mm 2.4 mm PP 本色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-16D-24D-24D-PP-N 809287 1.6 mm 2.4 mm 2.4 mm PP 本色",
@@ -7033,11 +7033,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型异径倒刺接头\n适用1.6 / 2.4 / 2.4 mm内径软管\nPA材质，白色",
-      "en": "Tee Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm / 2.4 mm\nPA body | 白色",
-      "es": "Tee Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm / 2.4 mm\nPA body | 白色",
-      "fr": "Tee Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm / 2.4 mm\nPA body | 白色",
-      "ko": "Tee Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm / 2.4 mm\nPA body | 白色",
-      "ru": "Tee Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm / 2.4 mm\nPA body | 白色"
+      "en": "Tee Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm / 2.4 mm\nPA body | White",
+      "es": "Tee Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm / 2.4 mm\nPA body | White",
+      "fr": "Tee Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm / 2.4 mm\nPA body | White",
+      "ko": "Tee Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm / 2.4 mm\nPA body | White",
+      "ru": "Tee Barbed Fitting\nTube ID: 1.6 mm / 2.4 mm / 2.4 mm\nPA body | White"
     },
     "filters": {
       "filter01": "T型",
@@ -7063,7 +7063,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30094,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-16D-24D-24D-PA-W 809410 1.6 mm 2.4 mm 2.4 mm PA 白色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-16D-24D-24D-PA-W 809410 1.6 mm 2.4 mm 2.4 mm PA 白色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-16D-24D-24D-PA-W 809410 1.6 mm 2.4 mm 2.4 mm PA White",
       "es": "barbed fitting Tee Barbed Fitting BT BT-16D-24D-24D-PA-W 809410 1.6 mm 2.4 mm 2.4 mm PA 白色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-16D-24D-24D-PA-W 809410 1.6 mm 2.4 mm 2.4 mm PA 白色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-16D-24D-24D-PA-W 809410 1.6 mm 2.4 mm 2.4 mm PA 白色",
@@ -7092,11 +7092,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型异径倒刺接头\n适用1.6 / 3.2 / 3.2 mm内径软管\nPA材质，白色",
-      "en": "Tee Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm / 3.2 mm\nPA body | 白色",
-      "es": "Tee Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm / 3.2 mm\nPA body | 白色",
-      "fr": "Tee Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm / 3.2 mm\nPA body | 白色",
-      "ko": "Tee Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm / 3.2 mm\nPA body | 白色",
-      "ru": "Tee Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm / 3.2 mm\nPA body | 白色"
+      "en": "Tee Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm / 3.2 mm\nPA body | White",
+      "es": "Tee Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm / 3.2 mm\nPA body | White",
+      "fr": "Tee Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm / 3.2 mm\nPA body | White",
+      "ko": "Tee Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm / 3.2 mm\nPA body | White",
+      "ru": "Tee Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm / 3.2 mm\nPA body | White"
     },
     "filters": {
       "filter01": "T型",
@@ -7122,7 +7122,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30095,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-16D-32D-32D-PA-W 809842 1.6 mm 3.2 mm 3.2 mm PA 白色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-16D-32D-32D-PA-W 809842 1.6 mm 3.2 mm 3.2 mm PA 白色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-16D-32D-32D-PA-W 809842 1.6 mm 3.2 mm 3.2 mm PA White",
       "es": "barbed fitting Tee Barbed Fitting BT BT-16D-32D-32D-PA-W 809842 1.6 mm 3.2 mm 3.2 mm PA 白色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-16D-32D-32D-PA-W 809842 1.6 mm 3.2 mm 3.2 mm PA 白色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-16D-32D-32D-PA-W 809842 1.6 mm 3.2 mm 3.2 mm PA 白色",
@@ -7151,11 +7151,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型异径倒刺接头\n适用1.6 / 3.2 / 3.2 mm内径软管\nPP材质，本色",
-      "en": "Tee Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm / 3.2 mm\nPP body | 本色",
-      "es": "Tee Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm / 3.2 mm\nPP body | 本色",
-      "fr": "Tee Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm / 3.2 mm\nPP body | 本色",
-      "ko": "Tee Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm / 3.2 mm\nPP body | 本色",
-      "ru": "Tee Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm / 3.2 mm\nPP body | 本色"
+      "en": "Tee Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm / 3.2 mm\nPP body | Natural",
+      "es": "Tee Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm / 3.2 mm\nPP body | Natural",
+      "fr": "Tee Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm / 3.2 mm\nPP body | Natural",
+      "ko": "Tee Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm / 3.2 mm\nPP body | Natural",
+      "ru": "Tee Barbed Fitting\nTube ID: 1.6 mm / 3.2 mm / 3.2 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "T型",
@@ -7181,7 +7181,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30096,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-16D-32D-32D-PP-N 809851 1.6 mm 3.2 mm 3.2 mm PP 本色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-16D-32D-32D-PP-N 809851 1.6 mm 3.2 mm 3.2 mm PP 本色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-16D-32D-32D-PP-N 809851 1.6 mm 3.2 mm 3.2 mm PP Natural",
       "es": "barbed fitting Tee Barbed Fitting BT BT-16D-32D-32D-PP-N 809851 1.6 mm 3.2 mm 3.2 mm PP 本色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-16D-32D-32D-PP-N 809851 1.6 mm 3.2 mm 3.2 mm PP 本色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-16D-32D-32D-PP-N 809851 1.6 mm 3.2 mm 3.2 mm PP 本色",
@@ -7210,11 +7210,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型倒刺接头\n适用4.8 mm内径软管\nPP材质，本色",
-      "en": "Tee Barbed Fitting\nTube ID: 4.8 mm\nPP body | 本色",
-      "es": "Tee Barbed Fitting\nTube ID: 4.8 mm\nPP body | 本色",
-      "fr": "Tee Barbed Fitting\nTube ID: 4.8 mm\nPP body | 本色",
-      "ko": "Tee Barbed Fitting\nTube ID: 4.8 mm\nPP body | 本色",
-      "ru": "Tee Barbed Fitting\nTube ID: 4.8 mm\nPP body | 本色"
+      "en": "Tee Barbed Fitting\nTube ID: 4.8 mm\nPP body | Natural",
+      "es": "Tee Barbed Fitting\nTube ID: 4.8 mm\nPP body | Natural",
+      "fr": "Tee Barbed Fitting\nTube ID: 4.8 mm\nPP body | Natural",
+      "ko": "Tee Barbed Fitting\nTube ID: 4.8 mm\nPP body | Natural",
+      "ru": "Tee Barbed Fitting\nTube ID: 4.8 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "T型",
@@ -7240,7 +7240,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30097,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-48D-PP-N 809863 4.8 mm 4.8 mm 4.8 mm PP 本色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-48D-PP-N 809863 4.8 mm 4.8 mm 4.8 mm PP 本色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-48D-PP-N 809863 4.8 mm 4.8 mm 4.8 mm PP Natural",
       "es": "barbed fitting Tee Barbed Fitting BT BT-48D-PP-N 809863 4.8 mm 4.8 mm 4.8 mm PP 本色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-48D-PP-N 809863 4.8 mm 4.8 mm 4.8 mm PP 本色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-48D-PP-N 809863 4.8 mm 4.8 mm 4.8 mm PP 本色",
@@ -7269,11 +7269,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "T型倒刺接头\n适用7.9 mm内径软管\nPP材质，本色",
-      "en": "Tee Barbed Fitting\nTube ID: 7.9 mm\nPP body | 本色",
-      "es": "Tee Barbed Fitting\nTube ID: 7.9 mm\nPP body | 本色",
-      "fr": "Tee Barbed Fitting\nTube ID: 7.9 mm\nPP body | 本色",
-      "ko": "Tee Barbed Fitting\nTube ID: 7.9 mm\nPP body | 本色",
-      "ru": "Tee Barbed Fitting\nTube ID: 7.9 mm\nPP body | 本色"
+      "en": "Tee Barbed Fitting\nTube ID: 7.9 mm\nPP body | Natural",
+      "es": "Tee Barbed Fitting\nTube ID: 7.9 mm\nPP body | Natural",
+      "fr": "Tee Barbed Fitting\nTube ID: 7.9 mm\nPP body | Natural",
+      "ko": "Tee Barbed Fitting\nTube ID: 7.9 mm\nPP body | Natural",
+      "ru": "Tee Barbed Fitting\nTube ID: 7.9 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "T型",
@@ -7299,7 +7299,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 30098,
     "searchKeywords": {
       "zh": "倒刺接头 T型倒刺接头 BT BT-79D-PP-N 809865 7.9 mm 7.9 mm 7.9 mm PP 本色",
-      "en": "barbed fitting Tee Barbed Fitting BT BT-79D-PP-N 809865 7.9 mm 7.9 mm 7.9 mm PP 本色",
+      "en": "barbed fitting Tee Barbed Fitting BT BT-79D-PP-N 809865 7.9 mm 7.9 mm 7.9 mm PP Natural",
       "es": "barbed fitting Tee Barbed Fitting BT BT-79D-PP-N 809865 7.9 mm 7.9 mm 7.9 mm PP 本色",
       "fr": "barbed fitting Tee Barbed Fitting BT BT-79D-PP-N 809865 7.9 mm 7.9 mm 7.9 mm PP 本色",
       "ko": "barbed fitting Tee Barbed Fitting BT BT-79D-PP-N 809865 7.9 mm 7.9 mm 7.9 mm PP 本色",
@@ -7328,11 +7328,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Y型倒刺接头\n适用1.6 mm内径软管\nPP材质，本色",
-      "en": "Y Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "es": "Y Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "fr": "Y Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "ko": "Y Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "ru": "Y Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色"
+      "en": "Y Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "es": "Y Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "fr": "Y Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "ko": "Y Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "ru": "Y Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "Y型",
@@ -7358,7 +7358,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 40099,
     "searchKeywords": {
       "zh": "倒刺接头 Y型倒刺接头 BY BY-16F-PP-N 809294 1.6 mm 1.6 mm 1.6 mm PP 本色",
-      "en": "barbed fitting Y Barbed Fitting BY BY-16F-PP-N 809294 1.6 mm 1.6 mm 1.6 mm PP 本色",
+      "en": "barbed fitting Y Barbed Fitting BY BY-16F-PP-N 809294 1.6 mm 1.6 mm 1.6 mm PP Natural",
       "es": "barbed fitting Y Barbed Fitting BY BY-16F-PP-N 809294 1.6 mm 1.6 mm 1.6 mm PP 本色",
       "fr": "barbed fitting Y Barbed Fitting BY BY-16F-PP-N 809294 1.6 mm 1.6 mm 1.6 mm PP 本色",
       "ko": "barbed fitting Y Barbed Fitting BY BY-16F-PP-N 809294 1.6 mm 1.6 mm 1.6 mm PP 本色",
@@ -7387,11 +7387,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Y型倒刺接头\n适用2.4 mm内径软管\nPP材质，本色",
-      "en": "Y Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "es": "Y Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "fr": "Y Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "ko": "Y Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "ru": "Y Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色"
+      "en": "Y Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "es": "Y Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "fr": "Y Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "ko": "Y Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "ru": "Y Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "Y型",
@@ -7417,7 +7417,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 40100,
     "searchKeywords": {
       "zh": "倒刺接头 Y型倒刺接头 BY BY-24F-PP-N 809295 2.4 mm 2.4 mm 2.4 mm PP 本色",
-      "en": "barbed fitting Y Barbed Fitting BY BY-24F-PP-N 809295 2.4 mm 2.4 mm 2.4 mm PP 本色",
+      "en": "barbed fitting Y Barbed Fitting BY BY-24F-PP-N 809295 2.4 mm 2.4 mm 2.4 mm PP Natural",
       "es": "barbed fitting Y Barbed Fitting BY BY-24F-PP-N 809295 2.4 mm 2.4 mm 2.4 mm PP 本色",
       "fr": "barbed fitting Y Barbed Fitting BY BY-24F-PP-N 809295 2.4 mm 2.4 mm 2.4 mm PP 本色",
       "ko": "barbed fitting Y Barbed Fitting BY BY-24F-PP-N 809295 2.4 mm 2.4 mm 2.4 mm PP 本色",
@@ -7446,11 +7446,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Y型倒刺接头\n适用3.2 mm内径软管\nPP材质，本色",
-      "en": "Y Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "es": "Y Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "fr": "Y Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "ko": "Y Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "ru": "Y Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色"
+      "en": "Y Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "es": "Y Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "fr": "Y Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "ko": "Y Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "ru": "Y Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "Y型",
@@ -7476,7 +7476,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 40101,
     "searchKeywords": {
       "zh": "倒刺接头 Y型倒刺接头 BY BY-32F-PP-N 809296 3.2 mm 3.2 mm 3.2 mm PP 本色",
-      "en": "barbed fitting Y Barbed Fitting BY BY-32F-PP-N 809296 3.2 mm 3.2 mm 3.2 mm PP 本色",
+      "en": "barbed fitting Y Barbed Fitting BY BY-32F-PP-N 809296 3.2 mm 3.2 mm 3.2 mm PP Natural",
       "es": "barbed fitting Y Barbed Fitting BY BY-32F-PP-N 809296 3.2 mm 3.2 mm 3.2 mm PP 本色",
       "fr": "barbed fitting Y Barbed Fitting BY BY-32F-PP-N 809296 3.2 mm 3.2 mm 3.2 mm PP 本色",
       "ko": "barbed fitting Y Barbed Fitting BY BY-32F-PP-N 809296 3.2 mm 3.2 mm 3.2 mm PP 本色",
@@ -7505,11 +7505,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Y型倒刺接头\n适用4.0 mm内径软管\nPP材质，本色",
-      "en": "Y Barbed Fitting\nTube ID: 4.0 mm\nPP body | 本色",
-      "es": "Y Barbed Fitting\nTube ID: 4.0 mm\nPP body | 本色",
-      "fr": "Y Barbed Fitting\nTube ID: 4.0 mm\nPP body | 本色",
-      "ko": "Y Barbed Fitting\nTube ID: 4.0 mm\nPP body | 本色",
-      "ru": "Y Barbed Fitting\nTube ID: 4.0 mm\nPP body | 本色"
+      "en": "Y Barbed Fitting\nTube ID: 4.0 mm\nPP body | Natural",
+      "es": "Y Barbed Fitting\nTube ID: 4.0 mm\nPP body | Natural",
+      "fr": "Y Barbed Fitting\nTube ID: 4.0 mm\nPP body | Natural",
+      "ko": "Y Barbed Fitting\nTube ID: 4.0 mm\nPP body | Natural",
+      "ru": "Y Barbed Fitting\nTube ID: 4.0 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "Y型",
@@ -7535,7 +7535,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 40102,
     "searchKeywords": {
       "zh": "倒刺接头 Y型倒刺接头 BY BY-40D-PP-N 809297 4.0 mm 4.0 mm 4.0 mm PP 本色",
-      "en": "barbed fitting Y Barbed Fitting BY BY-40D-PP-N 809297 4.0 mm 4.0 mm 4.0 mm PP 本色",
+      "en": "barbed fitting Y Barbed Fitting BY BY-40D-PP-N 809297 4.0 mm 4.0 mm 4.0 mm PP Natural",
       "es": "barbed fitting Y Barbed Fitting BY BY-40D-PP-N 809297 4.0 mm 4.0 mm 4.0 mm PP 本色",
       "fr": "barbed fitting Y Barbed Fitting BY BY-40D-PP-N 809297 4.0 mm 4.0 mm 4.0 mm PP 本色",
       "ko": "barbed fitting Y Barbed Fitting BY BY-40D-PP-N 809297 4.0 mm 4.0 mm 4.0 mm PP 本色",
@@ -7564,11 +7564,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Y型倒刺接头\n适用6.4 mm内径软管\nPP材质，本色",
-      "en": "Y Barbed Fitting\nTube ID: 6.4 mm\nPP body | 本色",
-      "es": "Y Barbed Fitting\nTube ID: 6.4 mm\nPP body | 本色",
-      "fr": "Y Barbed Fitting\nTube ID: 6.4 mm\nPP body | 本色",
-      "ko": "Y Barbed Fitting\nTube ID: 6.4 mm\nPP body | 本色",
-      "ru": "Y Barbed Fitting\nTube ID: 6.4 mm\nPP body | 本色"
+      "en": "Y Barbed Fitting\nTube ID: 6.4 mm\nPP body | Natural",
+      "es": "Y Barbed Fitting\nTube ID: 6.4 mm\nPP body | Natural",
+      "fr": "Y Barbed Fitting\nTube ID: 6.4 mm\nPP body | Natural",
+      "ko": "Y Barbed Fitting\nTube ID: 6.4 mm\nPP body | Natural",
+      "ru": "Y Barbed Fitting\nTube ID: 6.4 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "Y型",
@@ -7594,7 +7594,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 40103,
     "searchKeywords": {
       "zh": "倒刺接头 Y型倒刺接头 BY BY-64F-PP-N 809298 6.4 mm 6.4 mm 6.4 mm PP 本色",
-      "en": "barbed fitting Y Barbed Fitting BY BY-64F-PP-N 809298 6.4 mm 6.4 mm 6.4 mm PP 本色",
+      "en": "barbed fitting Y Barbed Fitting BY BY-64F-PP-N 809298 6.4 mm 6.4 mm 6.4 mm PP Natural",
       "es": "barbed fitting Y Barbed Fitting BY BY-64F-PP-N 809298 6.4 mm 6.4 mm 6.4 mm PP 本色",
       "fr": "barbed fitting Y Barbed Fitting BY BY-64F-PP-N 809298 6.4 mm 6.4 mm 6.4 mm PP 本色",
       "ko": "barbed fitting Y Barbed Fitting BY BY-64F-PP-N 809298 6.4 mm 6.4 mm 6.4 mm PP 本色",
@@ -7623,11 +7623,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Y型倒刺接头\n适用2.4 mm内径软管\nPA材质，白色",
-      "en": "Y Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色",
-      "es": "Y Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色",
-      "fr": "Y Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色",
-      "ko": "Y Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色",
-      "ru": "Y Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色"
+      "en": "Y Barbed Fitting\nTube ID: 2.4 mm\nPA body | White",
+      "es": "Y Barbed Fitting\nTube ID: 2.4 mm\nPA body | White",
+      "fr": "Y Barbed Fitting\nTube ID: 2.4 mm\nPA body | White",
+      "ko": "Y Barbed Fitting\nTube ID: 2.4 mm\nPA body | White",
+      "ru": "Y Barbed Fitting\nTube ID: 2.4 mm\nPA body | White"
     },
     "filters": {
       "filter01": "Y型",
@@ -7653,7 +7653,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 40104,
     "searchKeywords": {
       "zh": "倒刺接头 Y型倒刺接头 BY BY-24F-PA-W 809326 2.4 mm 2.4 mm 2.4 mm PA 白色",
-      "en": "barbed fitting Y Barbed Fitting BY BY-24F-PA-W 809326 2.4 mm 2.4 mm 2.4 mm PA 白色",
+      "en": "barbed fitting Y Barbed Fitting BY BY-24F-PA-W 809326 2.4 mm 2.4 mm 2.4 mm PA White",
       "es": "barbed fitting Y Barbed Fitting BY BY-24F-PA-W 809326 2.4 mm 2.4 mm 2.4 mm PA 白色",
       "fr": "barbed fitting Y Barbed Fitting BY BY-24F-PA-W 809326 2.4 mm 2.4 mm 2.4 mm PA 白色",
       "ko": "barbed fitting Y Barbed Fitting BY BY-24F-PA-W 809326 2.4 mm 2.4 mm 2.4 mm PA 白色",
@@ -7682,11 +7682,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Y型倒刺接头\n适用1.6 mm内径软管\nPA材质，白色",
-      "en": "Y Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色",
-      "es": "Y Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色",
-      "fr": "Y Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色",
-      "ko": "Y Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色",
-      "ru": "Y Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色"
+      "en": "Y Barbed Fitting\nTube ID: 1.6 mm\nPA body | White",
+      "es": "Y Barbed Fitting\nTube ID: 1.6 mm\nPA body | White",
+      "fr": "Y Barbed Fitting\nTube ID: 1.6 mm\nPA body | White",
+      "ko": "Y Barbed Fitting\nTube ID: 1.6 mm\nPA body | White",
+      "ru": "Y Barbed Fitting\nTube ID: 1.6 mm\nPA body | White"
     },
     "filters": {
       "filter01": "Y型",
@@ -7712,7 +7712,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 40105,
     "searchKeywords": {
       "zh": "倒刺接头 Y型倒刺接头 BY BY-16F-PA-W 809334 1.6 mm 1.6 mm 1.6 mm PA 白色",
-      "en": "barbed fitting Y Barbed Fitting BY BY-16F-PA-W 809334 1.6 mm 1.6 mm 1.6 mm PA 白色",
+      "en": "barbed fitting Y Barbed Fitting BY BY-16F-PA-W 809334 1.6 mm 1.6 mm 1.6 mm PA White",
       "es": "barbed fitting Y Barbed Fitting BY BY-16F-PA-W 809334 1.6 mm 1.6 mm 1.6 mm PA 白色",
       "fr": "barbed fitting Y Barbed Fitting BY BY-16F-PA-W 809334 1.6 mm 1.6 mm 1.6 mm PA 白色",
       "ko": "barbed fitting Y Barbed Fitting BY BY-16F-PA-W 809334 1.6 mm 1.6 mm 1.6 mm PA 白色",
@@ -7741,11 +7741,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Y型倒刺接头\n适用3.2 mm内径软管\nPA材质，白色",
-      "en": "Y Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色",
-      "es": "Y Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色",
-      "fr": "Y Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色",
-      "ko": "Y Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色",
-      "ru": "Y Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色"
+      "en": "Y Barbed Fitting\nTube ID: 3.2 mm\nPA body | White",
+      "es": "Y Barbed Fitting\nTube ID: 3.2 mm\nPA body | White",
+      "fr": "Y Barbed Fitting\nTube ID: 3.2 mm\nPA body | White",
+      "ko": "Y Barbed Fitting\nTube ID: 3.2 mm\nPA body | White",
+      "ru": "Y Barbed Fitting\nTube ID: 3.2 mm\nPA body | White"
     },
     "filters": {
       "filter01": "Y型",
@@ -7771,7 +7771,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 40106,
     "searchKeywords": {
       "zh": "倒刺接头 Y型倒刺接头 BY BY-32F-PA-W 809335 3.2 mm 3.2 mm 3.2 mm PA 白色",
-      "en": "barbed fitting Y Barbed Fitting BY BY-32F-PA-W 809335 3.2 mm 3.2 mm 3.2 mm PA 白色",
+      "en": "barbed fitting Y Barbed Fitting BY BY-32F-PA-W 809335 3.2 mm 3.2 mm 3.2 mm PA White",
       "es": "barbed fitting Y Barbed Fitting BY BY-32F-PA-W 809335 3.2 mm 3.2 mm 3.2 mm PA 白色",
       "fr": "barbed fitting Y Barbed Fitting BY BY-32F-PA-W 809335 3.2 mm 3.2 mm 3.2 mm PA 白色",
       "ko": "barbed fitting Y Barbed Fitting BY BY-32F-PA-W 809335 3.2 mm 3.2 mm 3.2 mm PA 白色",
@@ -7800,11 +7800,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Y型倒刺接头\n适用6.4 mm内径软管\nPA材质，白色",
-      "en": "Y Barbed Fitting\nTube ID: 6.4 mm\nPA body | 白色",
-      "es": "Y Barbed Fitting\nTube ID: 6.4 mm\nPA body | 白色",
-      "fr": "Y Barbed Fitting\nTube ID: 6.4 mm\nPA body | 白色",
-      "ko": "Y Barbed Fitting\nTube ID: 6.4 mm\nPA body | 白色",
-      "ru": "Y Barbed Fitting\nTube ID: 6.4 mm\nPA body | 白色"
+      "en": "Y Barbed Fitting\nTube ID: 6.4 mm\nPA body | White",
+      "es": "Y Barbed Fitting\nTube ID: 6.4 mm\nPA body | White",
+      "fr": "Y Barbed Fitting\nTube ID: 6.4 mm\nPA body | White",
+      "ko": "Y Barbed Fitting\nTube ID: 6.4 mm\nPA body | White",
+      "ru": "Y Barbed Fitting\nTube ID: 6.4 mm\nPA body | White"
     },
     "filters": {
       "filter01": "Y型",
@@ -7830,7 +7830,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 40107,
     "searchKeywords": {
       "zh": "倒刺接头 Y型倒刺接头 BY BY-64F-PA-W 809336 6.4 mm 6.4 mm 6.4 mm PA 白色",
-      "en": "barbed fitting Y Barbed Fitting BY BY-64F-PA-W 809336 6.4 mm 6.4 mm 6.4 mm PA 白色",
+      "en": "barbed fitting Y Barbed Fitting BY BY-64F-PA-W 809336 6.4 mm 6.4 mm 6.4 mm PA White",
       "es": "barbed fitting Y Barbed Fitting BY BY-64F-PA-W 809336 6.4 mm 6.4 mm 6.4 mm PA 白色",
       "fr": "barbed fitting Y Barbed Fitting BY BY-64F-PA-W 809336 6.4 mm 6.4 mm 6.4 mm PA 白色",
       "ko": "barbed fitting Y Barbed Fitting BY BY-64F-PA-W 809336 6.4 mm 6.4 mm 6.4 mm PA 白色",
@@ -7859,11 +7859,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Y型倒刺接头\n适用4.8 mm内径软管\nPP材质，本色",
-      "en": "Y Barbed Fitting\nTube ID: 4.8 mm\nPP body | 本色",
-      "es": "Y Barbed Fitting\nTube ID: 4.8 mm\nPP body | 本色",
-      "fr": "Y Barbed Fitting\nTube ID: 4.8 mm\nPP body | 本色",
-      "ko": "Y Barbed Fitting\nTube ID: 4.8 mm\nPP body | 本色",
-      "ru": "Y Barbed Fitting\nTube ID: 4.8 mm\nPP body | 本色"
+      "en": "Y Barbed Fitting\nTube ID: 4.8 mm\nPP body | Natural",
+      "es": "Y Barbed Fitting\nTube ID: 4.8 mm\nPP body | Natural",
+      "fr": "Y Barbed Fitting\nTube ID: 4.8 mm\nPP body | Natural",
+      "ko": "Y Barbed Fitting\nTube ID: 4.8 mm\nPP body | Natural",
+      "ru": "Y Barbed Fitting\nTube ID: 4.8 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "Y型",
@@ -7889,7 +7889,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 40108,
     "searchKeywords": {
       "zh": "倒刺接头 Y型倒刺接头 BY BY-48F-PP-N 809341 4.8 mm 4.8 mm 4.8 mm PP 本色",
-      "en": "barbed fitting Y Barbed Fitting BY BY-48F-PP-N 809341 4.8 mm 4.8 mm 4.8 mm PP 本色",
+      "en": "barbed fitting Y Barbed Fitting BY BY-48F-PP-N 809341 4.8 mm 4.8 mm 4.8 mm PP Natural",
       "es": "barbed fitting Y Barbed Fitting BY BY-48F-PP-N 809341 4.8 mm 4.8 mm 4.8 mm PP 本色",
       "fr": "barbed fitting Y Barbed Fitting BY BY-48F-PP-N 809341 4.8 mm 4.8 mm 4.8 mm PP 本色",
       "ko": "barbed fitting Y Barbed Fitting BY BY-48F-PP-N 809341 4.8 mm 4.8 mm 4.8 mm PP 本色",
@@ -7918,11 +7918,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Y型倒刺接头\n适用4.8 mm内径软管\nPA材质，白色",
-      "en": "Y Barbed Fitting\nTube ID: 4.8 mm\nPA body | 白色",
-      "es": "Y Barbed Fitting\nTube ID: 4.8 mm\nPA body | 白色",
-      "fr": "Y Barbed Fitting\nTube ID: 4.8 mm\nPA body | 白色",
-      "ko": "Y Barbed Fitting\nTube ID: 4.8 mm\nPA body | 白色",
-      "ru": "Y Barbed Fitting\nTube ID: 4.8 mm\nPA body | 白色"
+      "en": "Y Barbed Fitting\nTube ID: 4.8 mm\nPA body | White",
+      "es": "Y Barbed Fitting\nTube ID: 4.8 mm\nPA body | White",
+      "fr": "Y Barbed Fitting\nTube ID: 4.8 mm\nPA body | White",
+      "ko": "Y Barbed Fitting\nTube ID: 4.8 mm\nPA body | White",
+      "ru": "Y Barbed Fitting\nTube ID: 4.8 mm\nPA body | White"
     },
     "filters": {
       "filter01": "Y型",
@@ -7948,7 +7948,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 40109,
     "searchKeywords": {
       "zh": "倒刺接头 Y型倒刺接头 BY BY-48F-PA-W 809343 4.8 mm 4.8 mm 4.8 mm PA 白色",
-      "en": "barbed fitting Y Barbed Fitting BY BY-48F-PA-W 809343 4.8 mm 4.8 mm 4.8 mm PA 白色",
+      "en": "barbed fitting Y Barbed Fitting BY BY-48F-PA-W 809343 4.8 mm 4.8 mm 4.8 mm PA White",
       "es": "barbed fitting Y Barbed Fitting BY BY-48F-PA-W 809343 4.8 mm 4.8 mm 4.8 mm PA 白色",
       "fr": "barbed fitting Y Barbed Fitting BY BY-48F-PA-W 809343 4.8 mm 4.8 mm 4.8 mm PA 白色",
       "ko": "barbed fitting Y Barbed Fitting BY BY-48F-PA-W 809343 4.8 mm 4.8 mm 4.8 mm PA 白色",
@@ -7977,11 +7977,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Y型倒刺接头\n适用4.0 mm内径软管\nPA材质，白色",
-      "en": "Y Barbed Fitting\nTube ID: 4.0 mm\nPA body | 白色",
-      "es": "Y Barbed Fitting\nTube ID: 4.0 mm\nPA body | 白色",
-      "fr": "Y Barbed Fitting\nTube ID: 4.0 mm\nPA body | 白色",
-      "ko": "Y Barbed Fitting\nTube ID: 4.0 mm\nPA body | 白色",
-      "ru": "Y Barbed Fitting\nTube ID: 4.0 mm\nPA body | 白色"
+      "en": "Y Barbed Fitting\nTube ID: 4.0 mm\nPA body | White",
+      "es": "Y Barbed Fitting\nTube ID: 4.0 mm\nPA body | White",
+      "fr": "Y Barbed Fitting\nTube ID: 4.0 mm\nPA body | White",
+      "ko": "Y Barbed Fitting\nTube ID: 4.0 mm\nPA body | White",
+      "ru": "Y Barbed Fitting\nTube ID: 4.0 mm\nPA body | White"
     },
     "filters": {
       "filter01": "Y型",
@@ -8007,7 +8007,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 40110,
     "searchKeywords": {
       "zh": "倒刺接头 Y型倒刺接头 BY BY-40D-PA-W 809369 4.0 mm 4.0 mm 4.0 mm PA 白色",
-      "en": "barbed fitting Y Barbed Fitting BY BY-40D-PA-W 809369 4.0 mm 4.0 mm 4.0 mm PA 白色",
+      "en": "barbed fitting Y Barbed Fitting BY BY-40D-PA-W 809369 4.0 mm 4.0 mm 4.0 mm PA White",
       "es": "barbed fitting Y Barbed Fitting BY BY-40D-PA-W 809369 4.0 mm 4.0 mm 4.0 mm PA 白色",
       "fr": "barbed fitting Y Barbed Fitting BY BY-40D-PA-W 809369 4.0 mm 4.0 mm 4.0 mm PA 白色",
       "ko": "barbed fitting Y Barbed Fitting BY BY-40D-PA-W 809369 4.0 mm 4.0 mm 4.0 mm PA 白色",
@@ -8036,11 +8036,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Y型异径倒刺接头\n适用2.4 / 1.6 / 1.6 mm内径软管\nPP材质，本色",
-      "en": "Y Barbed Fitting\nTube ID: 2.4 mm / 1.6 mm / 1.6 mm\nPP body | 本色",
-      "es": "Y Barbed Fitting\nTube ID: 2.4 mm / 1.6 mm / 1.6 mm\nPP body | 本色",
-      "fr": "Y Barbed Fitting\nTube ID: 2.4 mm / 1.6 mm / 1.6 mm\nPP body | 本色",
-      "ko": "Y Barbed Fitting\nTube ID: 2.4 mm / 1.6 mm / 1.6 mm\nPP body | 本色",
-      "ru": "Y Barbed Fitting\nTube ID: 2.4 mm / 1.6 mm / 1.6 mm\nPP body | 本色"
+      "en": "Y Barbed Fitting\nTube ID: 2.4 mm / 1.6 mm / 1.6 mm\nPP body | Natural",
+      "es": "Y Barbed Fitting\nTube ID: 2.4 mm / 1.6 mm / 1.6 mm\nPP body | Natural",
+      "fr": "Y Barbed Fitting\nTube ID: 2.4 mm / 1.6 mm / 1.6 mm\nPP body | Natural",
+      "ko": "Y Barbed Fitting\nTube ID: 2.4 mm / 1.6 mm / 1.6 mm\nPP body | Natural",
+      "ru": "Y Barbed Fitting\nTube ID: 2.4 mm / 1.6 mm / 1.6 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "Y型",
@@ -8066,7 +8066,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 40111,
     "searchKeywords": {
       "zh": "倒刺接头 Y型倒刺接头 BY BY-24D-16D-16D-PP-N 809380 2.4 mm 1.6 mm 1.6 mm PP 本色",
-      "en": "barbed fitting Y Barbed Fitting BY BY-24D-16D-16D-PP-N 809380 2.4 mm 1.6 mm 1.6 mm PP 本色",
+      "en": "barbed fitting Y Barbed Fitting BY BY-24D-16D-16D-PP-N 809380 2.4 mm 1.6 mm 1.6 mm PP Natural",
       "es": "barbed fitting Y Barbed Fitting BY BY-24D-16D-16D-PP-N 809380 2.4 mm 1.6 mm 1.6 mm PP 本色",
       "fr": "barbed fitting Y Barbed Fitting BY BY-24D-16D-16D-PP-N 809380 2.4 mm 1.6 mm 1.6 mm PP 本色",
       "ko": "barbed fitting Y Barbed Fitting BY BY-24D-16D-16D-PP-N 809380 2.4 mm 1.6 mm 1.6 mm PP 本色",
@@ -8095,11 +8095,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Y型异径倒刺接头\n适用2.4 / 1.6 / 1.6 mm内径软管\nPA材质，白色",
-      "en": "Y Barbed Fitting\nTube ID: 2.4 mm / 1.6 mm / 1.6 mm\nPA body | 白色",
-      "es": "Y Barbed Fitting\nTube ID: 2.4 mm / 1.6 mm / 1.6 mm\nPA body | 白色",
-      "fr": "Y Barbed Fitting\nTube ID: 2.4 mm / 1.6 mm / 1.6 mm\nPA body | 白色",
-      "ko": "Y Barbed Fitting\nTube ID: 2.4 mm / 1.6 mm / 1.6 mm\nPA body | 白色",
-      "ru": "Y Barbed Fitting\nTube ID: 2.4 mm / 1.6 mm / 1.6 mm\nPA body | 白色"
+      "en": "Y Barbed Fitting\nTube ID: 2.4 mm / 1.6 mm / 1.6 mm\nPA body | White",
+      "es": "Y Barbed Fitting\nTube ID: 2.4 mm / 1.6 mm / 1.6 mm\nPA body | White",
+      "fr": "Y Barbed Fitting\nTube ID: 2.4 mm / 1.6 mm / 1.6 mm\nPA body | White",
+      "ko": "Y Barbed Fitting\nTube ID: 2.4 mm / 1.6 mm / 1.6 mm\nPA body | White",
+      "ru": "Y Barbed Fitting\nTube ID: 2.4 mm / 1.6 mm / 1.6 mm\nPA body | White"
     },
     "filters": {
       "filter01": "Y型",
@@ -8125,7 +8125,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 40112,
     "searchKeywords": {
       "zh": "倒刺接头 Y型倒刺接头 BY BY-24D-16D-16D-PA-W 809381 2.4 mm 1.6 mm 1.6 mm PA 白色",
-      "en": "barbed fitting Y Barbed Fitting BY BY-24D-16D-16D-PA-W 809381 2.4 mm 1.6 mm 1.6 mm PA 白色",
+      "en": "barbed fitting Y Barbed Fitting BY BY-24D-16D-16D-PA-W 809381 2.4 mm 1.6 mm 1.6 mm PA White",
       "es": "barbed fitting Y Barbed Fitting BY BY-24D-16D-16D-PA-W 809381 2.4 mm 1.6 mm 1.6 mm PA 白色",
       "fr": "barbed fitting Y Barbed Fitting BY BY-24D-16D-16D-PA-W 809381 2.4 mm 1.6 mm 1.6 mm PA 白色",
       "ko": "barbed fitting Y Barbed Fitting BY BY-24D-16D-16D-PA-W 809381 2.4 mm 1.6 mm 1.6 mm PA 白色",
@@ -8154,11 +8154,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Y型倒刺接头\n适用3.2 mm内径软管\nPP材质，本色",
-      "en": "Y Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "es": "Y Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "fr": "Y Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "ko": "Y Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "ru": "Y Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色"
+      "en": "Y Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "es": "Y Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "fr": "Y Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "ko": "Y Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "ru": "Y Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "Y型",
@@ -8184,7 +8184,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 40113,
     "searchKeywords": {
       "zh": "倒刺接头 Y型倒刺接头 BY BY-32D-PP-N 809430 3.2 mm 3.2 mm 3.2 mm PP 本色",
-      "en": "barbed fitting Y Barbed Fitting BY BY-32D-PP-N 809430 3.2 mm 3.2 mm 3.2 mm PP 本色",
+      "en": "barbed fitting Y Barbed Fitting BY BY-32D-PP-N 809430 3.2 mm 3.2 mm 3.2 mm PP Natural",
       "es": "barbed fitting Y Barbed Fitting BY BY-32D-PP-N 809430 3.2 mm 3.2 mm 3.2 mm PP 本色",
       "fr": "barbed fitting Y Barbed Fitting BY BY-32D-PP-N 809430 3.2 mm 3.2 mm 3.2 mm PP 本色",
       "ko": "barbed fitting Y Barbed Fitting BY BY-32D-PP-N 809430 3.2 mm 3.2 mm 3.2 mm PP 本色",
@@ -8213,11 +8213,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Y型倒刺接头\n适用3.2 mm内径软管\nPA材质，白色",
-      "en": "Y Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色",
-      "es": "Y Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色",
-      "fr": "Y Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色",
-      "ko": "Y Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色",
-      "ru": "Y Barbed Fitting\nTube ID: 3.2 mm\nPA body | 白色"
+      "en": "Y Barbed Fitting\nTube ID: 3.2 mm\nPA body | White",
+      "es": "Y Barbed Fitting\nTube ID: 3.2 mm\nPA body | White",
+      "fr": "Y Barbed Fitting\nTube ID: 3.2 mm\nPA body | White",
+      "ko": "Y Barbed Fitting\nTube ID: 3.2 mm\nPA body | White",
+      "ru": "Y Barbed Fitting\nTube ID: 3.2 mm\nPA body | White"
     },
     "filters": {
       "filter01": "Y型",
@@ -8243,7 +8243,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 40114,
     "searchKeywords": {
       "zh": "倒刺接头 Y型倒刺接头 BY BY-32D-PA-W 809431 3.2 mm 3.2 mm 3.2 mm PA 白色",
-      "en": "barbed fitting Y Barbed Fitting BY BY-32D-PA-W 809431 3.2 mm 3.2 mm 3.2 mm PA 白色",
+      "en": "barbed fitting Y Barbed Fitting BY BY-32D-PA-W 809431 3.2 mm 3.2 mm 3.2 mm PA White",
       "es": "barbed fitting Y Barbed Fitting BY BY-32D-PA-W 809431 3.2 mm 3.2 mm 3.2 mm PA 白色",
       "fr": "barbed fitting Y Barbed Fitting BY BY-32D-PA-W 809431 3.2 mm 3.2 mm 3.2 mm PA 白色",
       "ko": "barbed fitting Y Barbed Fitting BY BY-32D-PA-W 809431 3.2 mm 3.2 mm 3.2 mm PA 白色",
@@ -8272,11 +8272,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Y型倒刺接头\n适用9.5 mm内径软管\nPP材质，本色",
-      "en": "Y Barbed Fitting\nTube ID: 9.5 mm\nPP body | 本色",
-      "es": "Y Barbed Fitting\nTube ID: 9.5 mm\nPP body | 本色",
-      "fr": "Y Barbed Fitting\nTube ID: 9.5 mm\nPP body | 本色",
-      "ko": "Y Barbed Fitting\nTube ID: 9.5 mm\nPP body | 本色",
-      "ru": "Y Barbed Fitting\nTube ID: 9.5 mm\nPP body | 本色"
+      "en": "Y Barbed Fitting\nTube ID: 9.5 mm\nPP body | Natural",
+      "es": "Y Barbed Fitting\nTube ID: 9.5 mm\nPP body | Natural",
+      "fr": "Y Barbed Fitting\nTube ID: 9.5 mm\nPP body | Natural",
+      "ko": "Y Barbed Fitting\nTube ID: 9.5 mm\nPP body | Natural",
+      "ru": "Y Barbed Fitting\nTube ID: 9.5 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "Y型",
@@ -8302,7 +8302,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 40115,
     "searchKeywords": {
       "zh": "倒刺接头 Y型倒刺接头 BY BY-95X-PP-N 809432 9.5 mm 9.5 mm 9.5 mm PP 本色",
-      "en": "barbed fitting Y Barbed Fitting BY BY-95X-PP-N 809432 9.5 mm 9.5 mm 9.5 mm PP 本色",
+      "en": "barbed fitting Y Barbed Fitting BY BY-95X-PP-N 809432 9.5 mm 9.5 mm 9.5 mm PP Natural",
       "es": "barbed fitting Y Barbed Fitting BY BY-95X-PP-N 809432 9.5 mm 9.5 mm 9.5 mm PP 本色",
       "fr": "barbed fitting Y Barbed Fitting BY BY-95X-PP-N 809432 9.5 mm 9.5 mm 9.5 mm PP 本色",
       "ko": "barbed fitting Y Barbed Fitting BY BY-95X-PP-N 809432 9.5 mm 9.5 mm 9.5 mm PP 本色",
@@ -8331,11 +8331,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Y型倒刺接头\n适用9.5 mm内径软管\nPA材质，白色",
-      "en": "Y Barbed Fitting\nTube ID: 9.5 mm\nPA body | 白色",
-      "es": "Y Barbed Fitting\nTube ID: 9.5 mm\nPA body | 白色",
-      "fr": "Y Barbed Fitting\nTube ID: 9.5 mm\nPA body | 白色",
-      "ko": "Y Barbed Fitting\nTube ID: 9.5 mm\nPA body | 白色",
-      "ru": "Y Barbed Fitting\nTube ID: 9.5 mm\nPA body | 白色"
+      "en": "Y Barbed Fitting\nTube ID: 9.5 mm\nPA body | White",
+      "es": "Y Barbed Fitting\nTube ID: 9.5 mm\nPA body | White",
+      "fr": "Y Barbed Fitting\nTube ID: 9.5 mm\nPA body | White",
+      "ko": "Y Barbed Fitting\nTube ID: 9.5 mm\nPA body | White",
+      "ru": "Y Barbed Fitting\nTube ID: 9.5 mm\nPA body | White"
     },
     "filters": {
       "filter01": "Y型",
@@ -8361,7 +8361,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 40116,
     "searchKeywords": {
       "zh": "倒刺接头 Y型倒刺接头 BY BY-95X-PA-W 809433 9.5 mm 9.5 mm 9.5 mm PA 白色",
-      "en": "barbed fitting Y Barbed Fitting BY BY-95X-PA-W 809433 9.5 mm 9.5 mm 9.5 mm PA 白色",
+      "en": "barbed fitting Y Barbed Fitting BY BY-95X-PA-W 809433 9.5 mm 9.5 mm 9.5 mm PA White",
       "es": "barbed fitting Y Barbed Fitting BY BY-95X-PA-W 809433 9.5 mm 9.5 mm 9.5 mm PA 白色",
       "fr": "barbed fitting Y Barbed Fitting BY BY-95X-PA-W 809433 9.5 mm 9.5 mm 9.5 mm PA 白色",
       "ko": "barbed fitting Y Barbed Fitting BY BY-95X-PA-W 809433 9.5 mm 9.5 mm 9.5 mm PA 白色",
@@ -8390,11 +8390,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Y型异径倒刺接头\n适用3.2 / 1.6 / 1.6 mm内径软管\nPP材质，本色",
-      "en": "Y Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPP body | 本色",
-      "es": "Y Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPP body | 本色",
-      "fr": "Y Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPP body | 本色",
-      "ko": "Y Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPP body | 本色",
-      "ru": "Y Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPP body | 本色"
+      "en": "Y Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPP body | Natural",
+      "es": "Y Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPP body | Natural",
+      "fr": "Y Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPP body | Natural",
+      "ko": "Y Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPP body | Natural",
+      "ru": "Y Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "Y型",
@@ -8420,7 +8420,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 40117,
     "searchKeywords": {
       "zh": "倒刺接头 Y型倒刺接头 BY BY-32D-16D-16D-PP-N 809434 3.2 mm 1.6 mm 1.6 mm PP 本色",
-      "en": "barbed fitting Y Barbed Fitting BY BY-32D-16D-16D-PP-N 809434 3.2 mm 1.6 mm 1.6 mm PP 本色",
+      "en": "barbed fitting Y Barbed Fitting BY BY-32D-16D-16D-PP-N 809434 3.2 mm 1.6 mm 1.6 mm PP Natural",
       "es": "barbed fitting Y Barbed Fitting BY BY-32D-16D-16D-PP-N 809434 3.2 mm 1.6 mm 1.6 mm PP 本色",
       "fr": "barbed fitting Y Barbed Fitting BY BY-32D-16D-16D-PP-N 809434 3.2 mm 1.6 mm 1.6 mm PP 本色",
       "ko": "barbed fitting Y Barbed Fitting BY BY-32D-16D-16D-PP-N 809434 3.2 mm 1.6 mm 1.6 mm PP 本色",
@@ -8449,11 +8449,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Y型异径倒刺接头\n适用3.2 / 1.6 / 1.6 mm内径软管\nPA材质，白色",
-      "en": "Y Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPA body | 白色",
-      "es": "Y Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPA body | 白色",
-      "fr": "Y Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPA body | 白色",
-      "ko": "Y Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPA body | 白色",
-      "ru": "Y Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPA body | 白色"
+      "en": "Y Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPA body | White",
+      "es": "Y Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPA body | White",
+      "fr": "Y Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPA body | White",
+      "ko": "Y Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPA body | White",
+      "ru": "Y Barbed Fitting\nTube ID: 3.2 mm / 1.6 mm / 1.6 mm\nPA body | White"
     },
     "filters": {
       "filter01": "Y型",
@@ -8479,7 +8479,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 40118,
     "searchKeywords": {
       "zh": "倒刺接头 Y型倒刺接头 BY BY-32D-16D-16D-PA-W 809435 3.2 mm 1.6 mm 1.6 mm PA 白色",
-      "en": "barbed fitting Y Barbed Fitting BY BY-32D-16D-16D-PA-W 809435 3.2 mm 1.6 mm 1.6 mm PA 白色",
+      "en": "barbed fitting Y Barbed Fitting BY BY-32D-16D-16D-PA-W 809435 3.2 mm 1.6 mm 1.6 mm PA White",
       "es": "barbed fitting Y Barbed Fitting BY BY-32D-16D-16D-PA-W 809435 3.2 mm 1.6 mm 1.6 mm PA 白色",
       "fr": "barbed fitting Y Barbed Fitting BY BY-32D-16D-16D-PA-W 809435 3.2 mm 1.6 mm 1.6 mm PA 白色",
       "ko": "barbed fitting Y Barbed Fitting BY BY-32D-16D-16D-PA-W 809435 3.2 mm 1.6 mm 1.6 mm PA 白色",
@@ -8508,11 +8508,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Y型异径倒刺接头\n适用6.4 / 3.2 / 3.2 mm内径软管\nPP材质，本色",
-      "en": "Y Barbed Fitting\nTube ID: 6.4 mm / 3.2 mm / 3.2 mm\nPP body | 本色",
-      "es": "Y Barbed Fitting\nTube ID: 6.4 mm / 3.2 mm / 3.2 mm\nPP body | 本色",
-      "fr": "Y Barbed Fitting\nTube ID: 6.4 mm / 3.2 mm / 3.2 mm\nPP body | 本色",
-      "ko": "Y Barbed Fitting\nTube ID: 6.4 mm / 3.2 mm / 3.2 mm\nPP body | 本色",
-      "ru": "Y Barbed Fitting\nTube ID: 6.4 mm / 3.2 mm / 3.2 mm\nPP body | 本色"
+      "en": "Y Barbed Fitting\nTube ID: 6.4 mm / 3.2 mm / 3.2 mm\nPP body | Natural",
+      "es": "Y Barbed Fitting\nTube ID: 6.4 mm / 3.2 mm / 3.2 mm\nPP body | Natural",
+      "fr": "Y Barbed Fitting\nTube ID: 6.4 mm / 3.2 mm / 3.2 mm\nPP body | Natural",
+      "ko": "Y Barbed Fitting\nTube ID: 6.4 mm / 3.2 mm / 3.2 mm\nPP body | Natural",
+      "ru": "Y Barbed Fitting\nTube ID: 6.4 mm / 3.2 mm / 3.2 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "Y型",
@@ -8538,7 +8538,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 40119,
     "searchKeywords": {
       "zh": "倒刺接头 Y型倒刺接头 BY BY-64D-32D-32D-PP-N 809436 6.4 mm 3.2 mm 3.2 mm PP 本色",
-      "en": "barbed fitting Y Barbed Fitting BY BY-64D-32D-32D-PP-N 809436 6.4 mm 3.2 mm 3.2 mm PP 本色",
+      "en": "barbed fitting Y Barbed Fitting BY BY-64D-32D-32D-PP-N 809436 6.4 mm 3.2 mm 3.2 mm PP Natural",
       "es": "barbed fitting Y Barbed Fitting BY BY-64D-32D-32D-PP-N 809436 6.4 mm 3.2 mm 3.2 mm PP 本色",
       "fr": "barbed fitting Y Barbed Fitting BY BY-64D-32D-32D-PP-N 809436 6.4 mm 3.2 mm 3.2 mm PP 本色",
       "ko": "barbed fitting Y Barbed Fitting BY BY-64D-32D-32D-PP-N 809436 6.4 mm 3.2 mm 3.2 mm PP 本色",
@@ -8567,11 +8567,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Y型异径倒刺接头\n适用6.4 / 3.2 / 3.2 mm内径软管\nPA材质，白色",
-      "en": "Y Barbed Fitting\nTube ID: 6.4 mm / 3.2 mm / 3.2 mm\nPA body | 白色",
-      "es": "Y Barbed Fitting\nTube ID: 6.4 mm / 3.2 mm / 3.2 mm\nPA body | 白色",
-      "fr": "Y Barbed Fitting\nTube ID: 6.4 mm / 3.2 mm / 3.2 mm\nPA body | 白色",
-      "ko": "Y Barbed Fitting\nTube ID: 6.4 mm / 3.2 mm / 3.2 mm\nPA body | 白色",
-      "ru": "Y Barbed Fitting\nTube ID: 6.4 mm / 3.2 mm / 3.2 mm\nPA body | 白色"
+      "en": "Y Barbed Fitting\nTube ID: 6.4 mm / 3.2 mm / 3.2 mm\nPA body | White",
+      "es": "Y Barbed Fitting\nTube ID: 6.4 mm / 3.2 mm / 3.2 mm\nPA body | White",
+      "fr": "Y Barbed Fitting\nTube ID: 6.4 mm / 3.2 mm / 3.2 mm\nPA body | White",
+      "ko": "Y Barbed Fitting\nTube ID: 6.4 mm / 3.2 mm / 3.2 mm\nPA body | White",
+      "ru": "Y Barbed Fitting\nTube ID: 6.4 mm / 3.2 mm / 3.2 mm\nPA body | White"
     },
     "filters": {
       "filter01": "Y型",
@@ -8597,7 +8597,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 40120,
     "searchKeywords": {
       "zh": "倒刺接头 Y型倒刺接头 BY BY-64D-32D-32D-PA-W 809437 6.4 mm 3.2 mm 3.2 mm PA 白色",
-      "en": "barbed fitting Y Barbed Fitting BY BY-64D-32D-32D-PA-W 809437 6.4 mm 3.2 mm 3.2 mm PA 白色",
+      "en": "barbed fitting Y Barbed Fitting BY BY-64D-32D-32D-PA-W 809437 6.4 mm 3.2 mm 3.2 mm PA White",
       "es": "barbed fitting Y Barbed Fitting BY BY-64D-32D-32D-PA-W 809437 6.4 mm 3.2 mm 3.2 mm PA 白色",
       "fr": "barbed fitting Y Barbed Fitting BY BY-64D-32D-32D-PA-W 809437 6.4 mm 3.2 mm 3.2 mm PA 白色",
       "ko": "barbed fitting Y Barbed Fitting BY BY-64D-32D-32D-PA-W 809437 6.4 mm 3.2 mm 3.2 mm PA 白色",
@@ -8626,11 +8626,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Y型倒刺接头\n适用2.4 mm内径软管\nPP材质，本色",
-      "en": "Y Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "es": "Y Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "fr": "Y Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "ko": "Y Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "ru": "Y Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色"
+      "en": "Y Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "es": "Y Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "fr": "Y Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "ko": "Y Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "ru": "Y Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "Y型",
@@ -8656,7 +8656,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 40121,
     "searchKeywords": {
       "zh": "倒刺接头 Y型倒刺接头 BY BY-24D-PP-N 809608 2.4 mm 2.4 mm 2.4 mm PP 本色",
-      "en": "barbed fitting Y Barbed Fitting BY BY-24D-PP-N 809608 2.4 mm 2.4 mm 2.4 mm PP 本色",
+      "en": "barbed fitting Y Barbed Fitting BY BY-24D-PP-N 809608 2.4 mm 2.4 mm 2.4 mm PP Natural",
       "es": "barbed fitting Y Barbed Fitting BY BY-24D-PP-N 809608 2.4 mm 2.4 mm 2.4 mm PP 本色",
       "fr": "barbed fitting Y Barbed Fitting BY BY-24D-PP-N 809608 2.4 mm 2.4 mm 2.4 mm PP 本色",
       "ko": "barbed fitting Y Barbed Fitting BY BY-24D-PP-N 809608 2.4 mm 2.4 mm 2.4 mm PP 本色",
@@ -8685,11 +8685,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Y型倒刺接头\n适用2.4 mm内径软管\nPA材质，白色",
-      "en": "Y Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色",
-      "es": "Y Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色",
-      "fr": "Y Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色",
-      "ko": "Y Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色",
-      "ru": "Y Barbed Fitting\nTube ID: 2.4 mm\nPA body | 白色"
+      "en": "Y Barbed Fitting\nTube ID: 2.4 mm\nPA body | White",
+      "es": "Y Barbed Fitting\nTube ID: 2.4 mm\nPA body | White",
+      "fr": "Y Barbed Fitting\nTube ID: 2.4 mm\nPA body | White",
+      "ko": "Y Barbed Fitting\nTube ID: 2.4 mm\nPA body | White",
+      "ru": "Y Barbed Fitting\nTube ID: 2.4 mm\nPA body | White"
     },
     "filters": {
       "filter01": "Y型",
@@ -8715,7 +8715,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 40122,
     "searchKeywords": {
       "zh": "倒刺接头 Y型倒刺接头 BY BY-24D-PA-W 809609 2.4 mm 2.4 mm 2.4 mm PA 白色",
-      "en": "barbed fitting Y Barbed Fitting BY BY-24D-PA-W 809609 2.4 mm 2.4 mm 2.4 mm PA 白色",
+      "en": "barbed fitting Y Barbed Fitting BY BY-24D-PA-W 809609 2.4 mm 2.4 mm 2.4 mm PA White",
       "es": "barbed fitting Y Barbed Fitting BY BY-24D-PA-W 809609 2.4 mm 2.4 mm 2.4 mm PA 白色",
       "fr": "barbed fitting Y Barbed Fitting BY BY-24D-PA-W 809609 2.4 mm 2.4 mm 2.4 mm PA 白色",
       "ko": "barbed fitting Y Barbed Fitting BY BY-24D-PA-W 809609 2.4 mm 2.4 mm 2.4 mm PA 白色",
@@ -8744,11 +8744,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Y型倒刺接头\n适用1.6 mm内径软管\nPP材质，本色",
-      "en": "Y Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "es": "Y Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "fr": "Y Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "ko": "Y Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "ru": "Y Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色"
+      "en": "Y Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "es": "Y Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "fr": "Y Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "ko": "Y Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "ru": "Y Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "Y型",
@@ -8774,7 +8774,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 40123,
     "searchKeywords": {
       "zh": "倒刺接头 Y型倒刺接头 BY BY-16D-PP-N 809623 1.6 mm 1.6 mm 1.6 mm PP 本色",
-      "en": "barbed fitting Y Barbed Fitting BY BY-16D-PP-N 809623 1.6 mm 1.6 mm 1.6 mm PP 本色",
+      "en": "barbed fitting Y Barbed Fitting BY BY-16D-PP-N 809623 1.6 mm 1.6 mm 1.6 mm PP Natural",
       "es": "barbed fitting Y Barbed Fitting BY BY-16D-PP-N 809623 1.6 mm 1.6 mm 1.6 mm PP 本色",
       "fr": "barbed fitting Y Barbed Fitting BY BY-16D-PP-N 809623 1.6 mm 1.6 mm 1.6 mm PP 本色",
       "ko": "barbed fitting Y Barbed Fitting BY BY-16D-PP-N 809623 1.6 mm 1.6 mm 1.6 mm PP 本色",
@@ -8803,11 +8803,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Y型倒刺接头\n适用1.6 mm内径软管\nPA材质，白色",
-      "en": "Y Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色",
-      "es": "Y Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色",
-      "fr": "Y Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色",
-      "ko": "Y Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色",
-      "ru": "Y Barbed Fitting\nTube ID: 1.6 mm\nPA body | 白色"
+      "en": "Y Barbed Fitting\nTube ID: 1.6 mm\nPA body | White",
+      "es": "Y Barbed Fitting\nTube ID: 1.6 mm\nPA body | White",
+      "fr": "Y Barbed Fitting\nTube ID: 1.6 mm\nPA body | White",
+      "ko": "Y Barbed Fitting\nTube ID: 1.6 mm\nPA body | White",
+      "ru": "Y Barbed Fitting\nTube ID: 1.6 mm\nPA body | White"
     },
     "filters": {
       "filter01": "Y型",
@@ -8833,7 +8833,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 40124,
     "searchKeywords": {
       "zh": "倒刺接头 Y型倒刺接头 BY BY-16D-PA-W 809624 1.6 mm 1.6 mm 1.6 mm PA 白色",
-      "en": "barbed fitting Y Barbed Fitting BY BY-16D-PA-W 809624 1.6 mm 1.6 mm 1.6 mm PA 白色",
+      "en": "barbed fitting Y Barbed Fitting BY BY-16D-PA-W 809624 1.6 mm 1.6 mm 1.6 mm PA White",
       "es": "barbed fitting Y Barbed Fitting BY BY-16D-PA-W 809624 1.6 mm 1.6 mm 1.6 mm PA 白色",
       "fr": "barbed fitting Y Barbed Fitting BY BY-16D-PA-W 809624 1.6 mm 1.6 mm 1.6 mm PA 白色",
       "ko": "barbed fitting Y Barbed Fitting BY BY-16D-PA-W 809624 1.6 mm 1.6 mm 1.6 mm PA 白色",
@@ -8862,11 +8862,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Y型倒刺接头\n适用12.7 mm内径软管\nPP材质，本色",
-      "en": "Y Barbed Fitting\nTube ID: 12.7 mm\nPP body | 本色",
-      "es": "Y Barbed Fitting\nTube ID: 12.7 mm\nPP body | 本色",
-      "fr": "Y Barbed Fitting\nTube ID: 12.7 mm\nPP body | 本色",
-      "ko": "Y Barbed Fitting\nTube ID: 12.7 mm\nPP body | 本色",
-      "ru": "Y Barbed Fitting\nTube ID: 12.7 mm\nPP body | 本色"
+      "en": "Y Barbed Fitting\nTube ID: 12.7 mm\nPP body | Natural",
+      "es": "Y Barbed Fitting\nTube ID: 12.7 mm\nPP body | Natural",
+      "fr": "Y Barbed Fitting\nTube ID: 12.7 mm\nPP body | Natural",
+      "ko": "Y Barbed Fitting\nTube ID: 12.7 mm\nPP body | Natural",
+      "ru": "Y Barbed Fitting\nTube ID: 12.7 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "Y型",
@@ -8892,7 +8892,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 40125,
     "searchKeywords": {
       "zh": "倒刺接头 Y型倒刺接头 BY BY-127V-PP-N 809646 12.7 mm 12.7 mm 12.7 mm PP 本色",
-      "en": "barbed fitting Y Barbed Fitting BY BY-127V-PP-N 809646 12.7 mm 12.7 mm 12.7 mm PP 本色",
+      "en": "barbed fitting Y Barbed Fitting BY BY-127V-PP-N 809646 12.7 mm 12.7 mm 12.7 mm PP Natural",
       "es": "barbed fitting Y Barbed Fitting BY BY-127V-PP-N 809646 12.7 mm 12.7 mm 12.7 mm PP 本色",
       "fr": "barbed fitting Y Barbed Fitting BY BY-127V-PP-N 809646 12.7 mm 12.7 mm 12.7 mm PP 本色",
       "ko": "barbed fitting Y Barbed Fitting BY BY-127V-PP-N 809646 12.7 mm 12.7 mm 12.7 mm PP 本色",
@@ -8921,11 +8921,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Y型异径倒刺接头\n适用6.4 / 4.0 / 4.0 mm内径软管\nPP材质，本色",
-      "en": "Y Barbed Fitting\nTube ID: 6.4 mm / 4.0 mm / 4.0 mm\nPP body | 本色",
-      "es": "Y Barbed Fitting\nTube ID: 6.4 mm / 4.0 mm / 4.0 mm\nPP body | 本色",
-      "fr": "Y Barbed Fitting\nTube ID: 6.4 mm / 4.0 mm / 4.0 mm\nPP body | 本色",
-      "ko": "Y Barbed Fitting\nTube ID: 6.4 mm / 4.0 mm / 4.0 mm\nPP body | 本色",
-      "ru": "Y Barbed Fitting\nTube ID: 6.4 mm / 4.0 mm / 4.0 mm\nPP body | 本色"
+      "en": "Y Barbed Fitting\nTube ID: 6.4 mm / 4.0 mm / 4.0 mm\nPP body | Natural",
+      "es": "Y Barbed Fitting\nTube ID: 6.4 mm / 4.0 mm / 4.0 mm\nPP body | Natural",
+      "fr": "Y Barbed Fitting\nTube ID: 6.4 mm / 4.0 mm / 4.0 mm\nPP body | Natural",
+      "ko": "Y Barbed Fitting\nTube ID: 6.4 mm / 4.0 mm / 4.0 mm\nPP body | Natural",
+      "ru": "Y Barbed Fitting\nTube ID: 6.4 mm / 4.0 mm / 4.0 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "Y型",
@@ -8951,7 +8951,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 40126,
     "searchKeywords": {
       "zh": "倒刺接头 Y型倒刺接头 BY BY-64-40-40-PP-N 806208 6.4 mm 4.0 mm 4.0 mm PP 本色",
-      "en": "barbed fitting Y Barbed Fitting BY BY-64-40-40-PP-N 806208 6.4 mm 4.0 mm 4.0 mm PP 本色",
+      "en": "barbed fitting Y Barbed Fitting BY BY-64-40-40-PP-N 806208 6.4 mm 4.0 mm 4.0 mm PP Natural",
       "es": "barbed fitting Y Barbed Fitting BY BY-64-40-40-PP-N 806208 6.4 mm 4.0 mm 4.0 mm PP 本色",
       "fr": "barbed fitting Y Barbed Fitting BY BY-64-40-40-PP-N 806208 6.4 mm 4.0 mm 4.0 mm PP 本色",
       "ko": "barbed fitting Y Barbed Fitting BY BY-64-40-40-PP-N 806208 6.4 mm 4.0 mm 4.0 mm PP 本色",
@@ -8980,11 +8980,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Y型倒刺接头\n适用7.9 mm内径软管\nPP材质，本色",
-      "en": "Y Barbed Fitting\nTube ID: 7.9 mm\nPP body | 本色",
-      "es": "Y Barbed Fitting\nTube ID: 7.9 mm\nPP body | 本色",
-      "fr": "Y Barbed Fitting\nTube ID: 7.9 mm\nPP body | 本色",
-      "ko": "Y Barbed Fitting\nTube ID: 7.9 mm\nPP body | 本色",
-      "ru": "Y Barbed Fitting\nTube ID: 7.9 mm\nPP body | 本色"
+      "en": "Y Barbed Fitting\nTube ID: 7.9 mm\nPP body | Natural",
+      "es": "Y Barbed Fitting\nTube ID: 7.9 mm\nPP body | Natural",
+      "fr": "Y Barbed Fitting\nTube ID: 7.9 mm\nPP body | Natural",
+      "ko": "Y Barbed Fitting\nTube ID: 7.9 mm\nPP body | Natural",
+      "ru": "Y Barbed Fitting\nTube ID: 7.9 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "Y型",
@@ -9010,7 +9010,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 40127,
     "searchKeywords": {
       "zh": "倒刺接头 Y型倒刺接头 BY BY-79-PP-N 806282 7.9 mm 7.9 mm 7.9 mm PP 本色",
-      "en": "barbed fitting Y Barbed Fitting BY BY-79-PP-N 806282 7.9 mm 7.9 mm 7.9 mm PP 本色",
+      "en": "barbed fitting Y Barbed Fitting BY BY-79-PP-N 806282 7.9 mm 7.9 mm 7.9 mm PP Natural",
       "es": "barbed fitting Y Barbed Fitting BY BY-79-PP-N 806282 7.9 mm 7.9 mm 7.9 mm PP 本色",
       "fr": "barbed fitting Y Barbed Fitting BY BY-79-PP-N 806282 7.9 mm 7.9 mm 7.9 mm PP 本色",
       "ko": "barbed fitting Y Barbed Fitting BY BY-79-PP-N 806282 7.9 mm 7.9 mm 7.9 mm PP 本色",
@@ -9039,11 +9039,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "π型四通倒刺接头\n适用1.6 mm内径软管\nPP材质，本色",
-      "en": "Pi-shaped Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "es": "Pi-shaped Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "fr": "Pi-shaped Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "ko": "Pi-shaped Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "ru": "Pi-shaped Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色"
+      "en": "Pi-shaped Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "es": "Pi-shaped Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "fr": "Pi-shaped Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "ko": "Pi-shaped Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "ru": "Pi-shaped Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "π型",
@@ -9067,7 +9067,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 50160,
     "searchKeywords": {
       "zh": "倒刺接头 π型倒刺接头 BF4 BF4-16-PP-N 806224 1.6 mm PP 本色",
-      "en": "barbed fitting Pi-shaped Barbed Fitting BF4 BF4-16-PP-N 806224 1.6 mm PP 本色",
+      "en": "barbed fitting Pi-shaped Barbed Fitting BF4 BF4-16-PP-N 806224 1.6 mm PP Natural",
       "es": "barbed fitting Pi-shaped Barbed Fitting BF4 BF4-16-PP-N 806224 1.6 mm PP 本色",
       "fr": "barbed fitting Pi-shaped Barbed Fitting BF4 BF4-16-PP-N 806224 1.6 mm PP 本色",
       "ko": "barbed fitting Pi-shaped Barbed Fitting BF4 BF4-16-PP-N 806224 1.6 mm PP 本色",
@@ -9096,11 +9096,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "π型四通倒刺接头\n适用2.4 mm内径软管\nPP材质，本色",
-      "en": "Pi-shaped Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "es": "Pi-shaped Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "fr": "Pi-shaped Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "ko": "Pi-shaped Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "ru": "Pi-shaped Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色"
+      "en": "Pi-shaped Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "es": "Pi-shaped Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "fr": "Pi-shaped Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "ko": "Pi-shaped Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "ru": "Pi-shaped Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "π型",
@@ -9124,7 +9124,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 50161,
     "searchKeywords": {
       "zh": "倒刺接头 π型倒刺接头 BF4 BF4-24-PP-N 806055 2.4 mm PP 本色",
-      "en": "barbed fitting Pi-shaped Barbed Fitting BF4 BF4-24-PP-N 806055 2.4 mm PP 本色",
+      "en": "barbed fitting Pi-shaped Barbed Fitting BF4 BF4-24-PP-N 806055 2.4 mm PP Natural",
       "es": "barbed fitting Pi-shaped Barbed Fitting BF4 BF4-24-PP-N 806055 2.4 mm PP 本色",
       "fr": "barbed fitting Pi-shaped Barbed Fitting BF4 BF4-24-PP-N 806055 2.4 mm PP 本色",
       "ko": "barbed fitting Pi-shaped Barbed Fitting BF4 BF4-24-PP-N 806055 2.4 mm PP 本色",
@@ -9153,11 +9153,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "π型四通倒刺接头\n适用3.2 mm内径软管\nPP材质，本色",
-      "en": "Pi-shaped Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "es": "Pi-shaped Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "fr": "Pi-shaped Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "ko": "Pi-shaped Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "ru": "Pi-shaped Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色"
+      "en": "Pi-shaped Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "es": "Pi-shaped Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "fr": "Pi-shaped Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "ko": "Pi-shaped Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "ru": "Pi-shaped Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "π型",
@@ -9181,7 +9181,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 50162,
     "searchKeywords": {
       "zh": "倒刺接头 π型倒刺接头 BF4 BF4-32-PP-N 806189 3.2 mm PP 本色",
-      "en": "barbed fitting Pi-shaped Barbed Fitting BF4 BF4-32-PP-N 806189 3.2 mm PP 本色",
+      "en": "barbed fitting Pi-shaped Barbed Fitting BF4 BF4-32-PP-N 806189 3.2 mm PP Natural",
       "es": "barbed fitting Pi-shaped Barbed Fitting BF4 BF4-32-PP-N 806189 3.2 mm PP 本色",
       "fr": "barbed fitting Pi-shaped Barbed Fitting BF4 BF4-32-PP-N 806189 3.2 mm PP 本色",
       "ko": "barbed fitting Pi-shaped Barbed Fitting BF4 BF4-32-PP-N 806189 3.2 mm PP 本色",
@@ -9210,11 +9210,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "十字型四通倒刺接头\n适用1.6 mm内径软管\nPP材质，本色",
-      "en": "Cross Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "es": "Cross Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "fr": "Cross Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "ko": "Cross Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色",
-      "ru": "Cross Barbed Fitting\nTube ID: 1.6 mm\nPP body | 本色"
+      "en": "Cross Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "es": "Cross Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "fr": "Cross Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "ko": "Cross Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural",
+      "ru": "Cross Barbed Fitting\nTube ID: 1.6 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "十字型",
@@ -9238,7 +9238,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 60163,
     "searchKeywords": {
       "zh": "倒刺接头 十字型倒刺接头 BX4 BX4-16-PP-N 806220 1.6 mm PP 本色",
-      "en": "barbed fitting Cross Barbed Fitting BX4 BX4-16-PP-N 806220 1.6 mm PP 本色",
+      "en": "barbed fitting Cross Barbed Fitting BX4 BX4-16-PP-N 806220 1.6 mm PP Natural",
       "es": "barbed fitting Cross Barbed Fitting BX4 BX4-16-PP-N 806220 1.6 mm PP 本色",
       "fr": "barbed fitting Cross Barbed Fitting BX4 BX4-16-PP-N 806220 1.6 mm PP 本色",
       "ko": "barbed fitting Cross Barbed Fitting BX4 BX4-16-PP-N 806220 1.6 mm PP 本色",
@@ -9267,11 +9267,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "十字型四通倒刺接头\n适用2.4 mm内径软管\nPP材质，本色",
-      "en": "Cross Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "es": "Cross Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "fr": "Cross Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "ko": "Cross Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色",
-      "ru": "Cross Barbed Fitting\nTube ID: 2.4 mm\nPP body | 本色"
+      "en": "Cross Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "es": "Cross Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "fr": "Cross Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "ko": "Cross Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural",
+      "ru": "Cross Barbed Fitting\nTube ID: 2.4 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "十字型",
@@ -9295,7 +9295,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 60164,
     "searchKeywords": {
       "zh": "倒刺接头 十字型倒刺接头 BX4 BX4-24-PP-N 806192 2.4 mm PP 本色",
-      "en": "barbed fitting Cross Barbed Fitting BX4 BX4-24-PP-N 806192 2.4 mm PP 本色",
+      "en": "barbed fitting Cross Barbed Fitting BX4 BX4-24-PP-N 806192 2.4 mm PP Natural",
       "es": "barbed fitting Cross Barbed Fitting BX4 BX4-24-PP-N 806192 2.4 mm PP 本色",
       "fr": "barbed fitting Cross Barbed Fitting BX4 BX4-24-PP-N 806192 2.4 mm PP 本色",
       "ko": "barbed fitting Cross Barbed Fitting BX4 BX4-24-PP-N 806192 2.4 mm PP 本色",
@@ -9324,11 +9324,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "十字型四通倒刺接头\n适用3.2 mm内径软管\nPP材质，本色",
-      "en": "Cross Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "es": "Cross Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "fr": "Cross Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "ko": "Cross Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色",
-      "ru": "Cross Barbed Fitting\nTube ID: 3.2 mm\nPP body | 本色"
+      "en": "Cross Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "es": "Cross Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "fr": "Cross Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "ko": "Cross Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural",
+      "ru": "Cross Barbed Fitting\nTube ID: 3.2 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "十字型",
@@ -9352,7 +9352,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 60165,
     "searchKeywords": {
       "zh": "倒刺接头 十字型倒刺接头 BX4 BX4-32-PP-N 806221 3.2 mm PP 本色",
-      "en": "barbed fitting Cross Barbed Fitting BX4 BX4-32-PP-N 806221 3.2 mm PP 本色",
+      "en": "barbed fitting Cross Barbed Fitting BX4 BX4-32-PP-N 806221 3.2 mm PP Natural",
       "es": "barbed fitting Cross Barbed Fitting BX4 BX4-32-PP-N 806221 3.2 mm PP 本色",
       "fr": "barbed fitting Cross Barbed Fitting BX4 BX4-32-PP-N 806221 3.2 mm PP 本色",
       "ko": "barbed fitting Cross Barbed Fitting BX4 BX4-32-PP-N 806221 3.2 mm PP 本色",
@@ -9381,11 +9381,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "倒刺堵头\n适用1.6 mm内径软管\nPP材质，本色",
-      "en": "Barbed Plug\nTube ID: 1.6 mm\nPP body | 本色",
-      "es": "Barbed Plug\nTube ID: 1.6 mm\nPP body | 本色",
-      "fr": "Barbed Plug\nTube ID: 1.6 mm\nPP body | 本色",
-      "ko": "Barbed Plug\nTube ID: 1.6 mm\nPP body | 本色",
-      "ru": "Barbed Plug\nTube ID: 1.6 mm\nPP body | 本色"
+      "en": "Barbed Plug\nTube ID: 1.6 mm\nPP body | Natural",
+      "es": "Barbed Plug\nTube ID: 1.6 mm\nPP body | Natural",
+      "fr": "Barbed Plug\nTube ID: 1.6 mm\nPP body | Natural",
+      "ko": "Barbed Plug\nTube ID: 1.6 mm\nPP body | Natural",
+      "ru": "Barbed Plug\nTube ID: 1.6 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "倒刺堵头",
@@ -9409,7 +9409,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 70154,
     "searchKeywords": {
       "zh": "倒刺接头 倒刺堵头 BBL BBL-16D-PP-N 809283 1.6 mm PP 本色",
-      "en": "barbed fitting Barbed Plug BBL BBL-16D-PP-N 809283 1.6 mm PP 本色",
+      "en": "barbed fitting Barbed Plug BBL BBL-16D-PP-N 809283 1.6 mm PP Natural",
       "es": "barbed fitting Barbed Plug BBL BBL-16D-PP-N 809283 1.6 mm PP 本色",
       "fr": "barbed fitting Barbed Plug BBL BBL-16D-PP-N 809283 1.6 mm PP 本色",
       "ko": "barbed fitting Barbed Plug BBL BBL-16D-PP-N 809283 1.6 mm PP 本色",
@@ -9438,11 +9438,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "倒刺堵头\n适用2.4 mm内径软管\nPP材质，本色",
-      "en": "Barbed Plug\nTube ID: 2.4 mm\nPP body | 本色",
-      "es": "Barbed Plug\nTube ID: 2.4 mm\nPP body | 本色",
-      "fr": "Barbed Plug\nTube ID: 2.4 mm\nPP body | 本色",
-      "ko": "Barbed Plug\nTube ID: 2.4 mm\nPP body | 本色",
-      "ru": "Barbed Plug\nTube ID: 2.4 mm\nPP body | 本色"
+      "en": "Barbed Plug\nTube ID: 2.4 mm\nPP body | Natural",
+      "es": "Barbed Plug\nTube ID: 2.4 mm\nPP body | Natural",
+      "fr": "Barbed Plug\nTube ID: 2.4 mm\nPP body | Natural",
+      "ko": "Barbed Plug\nTube ID: 2.4 mm\nPP body | Natural",
+      "ru": "Barbed Plug\nTube ID: 2.4 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "倒刺堵头",
@@ -9466,7 +9466,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 70155,
     "searchKeywords": {
       "zh": "倒刺接头 倒刺堵头 BBL BBL-24D-PP-N 809284 2.4 mm PP 本色",
-      "en": "barbed fitting Barbed Plug BBL BBL-24D-PP-N 809284 2.4 mm PP 本色",
+      "en": "barbed fitting Barbed Plug BBL BBL-24D-PP-N 809284 2.4 mm PP Natural",
       "es": "barbed fitting Barbed Plug BBL BBL-24D-PP-N 809284 2.4 mm PP 本色",
       "fr": "barbed fitting Barbed Plug BBL BBL-24D-PP-N 809284 2.4 mm PP 本色",
       "ko": "barbed fitting Barbed Plug BBL BBL-24D-PP-N 809284 2.4 mm PP 本色",
@@ -9495,11 +9495,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "倒刺堵头\n适用3.2 mm内径软管\nPP材质，本色",
-      "en": "Barbed Plug\nTube ID: 3.2 mm\nPP body | 本色",
-      "es": "Barbed Plug\nTube ID: 3.2 mm\nPP body | 本色",
-      "fr": "Barbed Plug\nTube ID: 3.2 mm\nPP body | 本色",
-      "ko": "Barbed Plug\nTube ID: 3.2 mm\nPP body | 本色",
-      "ru": "Barbed Plug\nTube ID: 3.2 mm\nPP body | 本色"
+      "en": "Barbed Plug\nTube ID: 3.2 mm\nPP body | Natural",
+      "es": "Barbed Plug\nTube ID: 3.2 mm\nPP body | Natural",
+      "fr": "Barbed Plug\nTube ID: 3.2 mm\nPP body | Natural",
+      "ko": "Barbed Plug\nTube ID: 3.2 mm\nPP body | Natural",
+      "ru": "Barbed Plug\nTube ID: 3.2 mm\nPP body | Natural"
     },
     "filters": {
       "filter01": "倒刺堵头",
@@ -9523,7 +9523,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 70156,
     "searchKeywords": {
       "zh": "倒刺接头 倒刺堵头 BBL BBL-32D-PP-N 809285 3.2 mm PP 本色",
-      "en": "barbed fitting Barbed Plug BBL BBL-32D-PP-N 809285 3.2 mm PP 本色",
+      "en": "barbed fitting Barbed Plug BBL BBL-32D-PP-N 809285 3.2 mm PP Natural",
       "es": "barbed fitting Barbed Plug BBL BBL-32D-PP-N 809285 3.2 mm PP 本色",
       "fr": "barbed fitting Barbed Plug BBL BBL-32D-PP-N 809285 3.2 mm PP 本色",
       "ko": "barbed fitting Barbed Plug BBL BBL-32D-PP-N 809285 3.2 mm PP 本色",
@@ -9552,11 +9552,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "倒刺堵头\n适用1.6 mm内径软管\nPA材质，白色",
-      "en": "Barbed Plug\nTube ID: 1.6 mm\nPA body | 白色",
-      "es": "Barbed Plug\nTube ID: 1.6 mm\nPA body | 白色",
-      "fr": "Barbed Plug\nTube ID: 1.6 mm\nPA body | 白色",
-      "ko": "Barbed Plug\nTube ID: 1.6 mm\nPA body | 白色",
-      "ru": "Barbed Plug\nTube ID: 1.6 mm\nPA body | 白色"
+      "en": "Barbed Plug\nTube ID: 1.6 mm\nPA body | White",
+      "es": "Barbed Plug\nTube ID: 1.6 mm\nPA body | White",
+      "fr": "Barbed Plug\nTube ID: 1.6 mm\nPA body | White",
+      "ko": "Barbed Plug\nTube ID: 1.6 mm\nPA body | White",
+      "ru": "Barbed Plug\nTube ID: 1.6 mm\nPA body | White"
     },
     "filters": {
       "filter01": "倒刺堵头",
@@ -9580,7 +9580,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 70157,
     "searchKeywords": {
       "zh": "倒刺接头 倒刺堵头 BBL BBL-16D-PA-W 809406 1.6 mm PA 白色",
-      "en": "barbed fitting Barbed Plug BBL BBL-16D-PA-W 809406 1.6 mm PA 白色",
+      "en": "barbed fitting Barbed Plug BBL BBL-16D-PA-W 809406 1.6 mm PA White",
       "es": "barbed fitting Barbed Plug BBL BBL-16D-PA-W 809406 1.6 mm PA 白色",
       "fr": "barbed fitting Barbed Plug BBL BBL-16D-PA-W 809406 1.6 mm PA 白色",
       "ko": "barbed fitting Barbed Plug BBL BBL-16D-PA-W 809406 1.6 mm PA 白色",
@@ -9609,11 +9609,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "倒刺堵头\n适用2.4 mm内径软管\nPA材质，白色",
-      "en": "Barbed Plug\nTube ID: 2.4 mm\nPA body | 白色",
-      "es": "Barbed Plug\nTube ID: 2.4 mm\nPA body | 白色",
-      "fr": "Barbed Plug\nTube ID: 2.4 mm\nPA body | 白色",
-      "ko": "Barbed Plug\nTube ID: 2.4 mm\nPA body | 白色",
-      "ru": "Barbed Plug\nTube ID: 2.4 mm\nPA body | 白色"
+      "en": "Barbed Plug\nTube ID: 2.4 mm\nPA body | White",
+      "es": "Barbed Plug\nTube ID: 2.4 mm\nPA body | White",
+      "fr": "Barbed Plug\nTube ID: 2.4 mm\nPA body | White",
+      "ko": "Barbed Plug\nTube ID: 2.4 mm\nPA body | White",
+      "ru": "Barbed Plug\nTube ID: 2.4 mm\nPA body | White"
     },
     "filters": {
       "filter01": "倒刺堵头",
@@ -9637,7 +9637,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 70158,
     "searchKeywords": {
       "zh": "倒刺接头 倒刺堵头 BBL BBL-24D-PA-W 809407 2.4 mm PA 白色",
-      "en": "barbed fitting Barbed Plug BBL BBL-24D-PA-W 809407 2.4 mm PA 白色",
+      "en": "barbed fitting Barbed Plug BBL BBL-24D-PA-W 809407 2.4 mm PA White",
       "es": "barbed fitting Barbed Plug BBL BBL-24D-PA-W 809407 2.4 mm PA 白色",
       "fr": "barbed fitting Barbed Plug BBL BBL-24D-PA-W 809407 2.4 mm PA 白色",
       "ko": "barbed fitting Barbed Plug BBL BBL-24D-PA-W 809407 2.4 mm PA 白色",
@@ -9666,11 +9666,11 @@ export const barbedFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "倒刺堵头\n适用3.2 mm内径软管\nPA材质，白色",
-      "en": "Barbed Plug\nTube ID: 3.2 mm\nPA body | 白色",
-      "es": "Barbed Plug\nTube ID: 3.2 mm\nPA body | 白色",
-      "fr": "Barbed Plug\nTube ID: 3.2 mm\nPA body | 白色",
-      "ko": "Barbed Plug\nTube ID: 3.2 mm\nPA body | 白色",
-      "ru": "Barbed Plug\nTube ID: 3.2 mm\nPA body | 白色"
+      "en": "Barbed Plug\nTube ID: 3.2 mm\nPA body | White",
+      "es": "Barbed Plug\nTube ID: 3.2 mm\nPA body | White",
+      "fr": "Barbed Plug\nTube ID: 3.2 mm\nPA body | White",
+      "ko": "Barbed Plug\nTube ID: 3.2 mm\nPA body | White",
+      "ru": "Barbed Plug\nTube ID: 3.2 mm\nPA body | White"
     },
     "filters": {
       "filter01": "倒刺堵头",
@@ -9694,7 +9694,7 @@ export const barbedFittingSelectionProducts =
     "sortOrder": 70159,
     "searchKeywords": {
       "zh": "倒刺接头 倒刺堵头 BBL BBL-32D-PA-W 809408 3.2 mm PA 白色",
-      "en": "barbed fitting Barbed Plug BBL BBL-32D-PA-W 809408 3.2 mm PA 白色",
+      "en": "barbed fitting Barbed Plug BBL BBL-32D-PA-W 809408 3.2 mm PA White",
       "es": "barbed fitting Barbed Plug BBL BBL-32D-PA-W 809408 3.2 mm PA 白色",
       "fr": "barbed fitting Barbed Plug BBL BBL-32D-PA-W 809408 3.2 mm PA 白色",
       "ko": "barbed fitting Barbed Plug BBL BBL-32D-PA-W 809408 3.2 mm PA 白色",
@@ -9743,12 +9743,12 @@ export const barbedFittingFilterLabels =
     "productTypeId": "barbed-fittings",
     "filterKey": "filter02",
     "label": {
-      "zh": "接口1内径",
-      "en": "Port 1 ID",
-      "es": "Port 1 ID",
-      "fr": "Port 1 ID",
-      "ko": "Port 1 ID",
-      "ru": "Port 1 ID"
+      "zh": "接管内径1",
+      "en": "Barb 1 ID",
+      "es": "Barb 1 ID",
+      "fr": "Barb 1 ID",
+      "ko": "Barb 1 ID",
+      "ru": "Barb 1 ID"
     },
     "inputType": "single",
     "sortOrder": 20,
@@ -9759,12 +9759,12 @@ export const barbedFittingFilterLabels =
     "productTypeId": "barbed-fittings",
     "filterKey": "filter03",
     "label": {
-      "zh": "接口2内径",
-      "en": "Port 2 ID",
-      "es": "Port 2 ID",
-      "fr": "Port 2 ID",
-      "ko": "Port 2 ID",
-      "ru": "Port 2 ID"
+      "zh": "接管内径2",
+      "en": "Barb 2 ID",
+      "es": "Barb 2 ID",
+      "fr": "Barb 2 ID",
+      "ko": "Barb 2 ID",
+      "ru": "Barb 2 ID"
     },
     "inputType": "single",
     "sortOrder": 30,
@@ -9775,12 +9775,12 @@ export const barbedFittingFilterLabels =
     "productTypeId": "barbed-fittings",
     "filterKey": "filter04",
     "label": {
-      "zh": "接口3内径",
-      "en": "Port 3 ID",
-      "es": "Port 3 ID",
-      "fr": "Port 3 ID",
-      "ko": "Port 3 ID",
-      "ru": "Port 3 ID"
+      "zh": "接管内径3",
+      "en": "Barb 3 ID",
+      "es": "Barb 3 ID",
+      "fr": "Barb 3 ID",
+      "ko": "Barb 3 ID",
+      "ru": "Barb 3 ID"
     },
     "inputType": "single",
     "sortOrder": 40,

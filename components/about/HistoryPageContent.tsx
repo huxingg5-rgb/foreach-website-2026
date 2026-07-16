@@ -210,7 +210,7 @@ export default function HistoryPageContent({
           说明：
           具体交互仍然由 HistoryTimeline 客户端组件负责
       ================================ */}
-      <HistoryTimeline items={historyItems} />
+      <HistoryTimeline items={historyItems} locale={locale} />
 
       {/* ================================
           时间轴结束后的纯图片 Banner
@@ -228,4 +228,4 @@ export default function HistoryPageContent({
       />
     </main>
   );
-} 
+}

@@ -523,10 +523,16 @@ function CountUpNumber({
   );
 }
 
-export default function AboutForeachClient() {
+type AboutForeachClientProps = {
+  initialLocale?: Locale;
+};
+
+export default function AboutForeachClient({
+  initialLocale = "zh-CN",
+}: AboutForeachClientProps) {
   const pathname = usePathname();
 
-  const [locale, setLocale] = useState<Locale>("zh-CN");
+  const [locale, setLocale] = useState<Locale>(initialLocale);
 
     /* 面包屑链接：中文不带语言前缀，其他语言带 /en /es /fr /ko /ru */
   const homeHref = locale === "zh-CN" ? "/" : `/${locale}`;

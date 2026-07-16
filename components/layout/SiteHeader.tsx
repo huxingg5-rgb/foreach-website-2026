@@ -42,6 +42,15 @@ type OpenPanel = "none" | "language" | "mobileNav";
 // 说明：这里必须和 proxy.ts 里的 LOCALE_COOKIE_NAME 保持一致
 const LOCALE_COOKIE_NAME = "foreach_locale";
 
+const ENGLISH_LANGUAGE_LABELS: Record<LocaleCode, string> = {
+  "zh-CN": "Chinese",
+  en: "English",
+  es: "Spanish",
+  fr: "French",
+  ko: "Korean",
+  ru: "Russian",
+};
+
 /* ================================
    语言路径前缀配置
    说明：
@@ -998,7 +1007,9 @@ const isFittingReplacementDetailPage =
                       handleLanguageItemClick(event, language.code, language.href)
                     }
                   >
-                    {language.label}
+                    {currentLocale === "en"
+                      ? ENGLISH_LANGUAGE_LABELS[language.code]
+                      : language.label}
                   </a>
                 ))}
               </div>
@@ -1316,9 +1327,9 @@ const isFittingReplacementDetailPage =
                                     {productMeta.title}
                                   </strong>
 
-                                  <span className="site-nav-product-desc">
-                                    {productMeta.description}
-                                  </span>
+                                  {activeMegaItem.key !== "applications" && productMeta.description ? (
+                                    <span className="site-nav-product-desc">{productMeta.description}</span>
+                                  ) : null}
                                 </Link>
                               );
 

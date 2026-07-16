@@ -5,10 +5,13 @@
 
 import type { Metadata } from "next";
 
+import ApplicationEnglishClient from "@/components/applications/ApplicationEnglishClient";
 import AnalyticalInstrumentsApplicationClient from "@/components/applications/analytical-instruments/AnalyticalInstrumentsApplicationClient";
+import { createEnglishApplicationData } from "@/data/applications/application-english";
 import { getAnalyticalInstrumentsApplicationPageData } from "@/services/applications/analytical-instruments/getAnalyticalInstrumentsApplicationPageData";
 
 import "@/app/applications/analytical-instruments/analytical-instruments-application.css";
+import "@/app/applications/ivd/ivd-application.css";
 
 const ENABLED_LOCALES = ["en", "es", "fr", "ko", "ru"] as const;
 
@@ -33,6 +36,14 @@ export default async function AnalyticalInstrumentsApplicationLocalePage({
 }: AnalyticalInstrumentsApplicationLocalePageProps) {
   const { locale } = await params;
   const data = getAnalyticalInstrumentsApplicationPageData(locale);
+
+  if (locale === "en") {
+    return (
+      <ApplicationEnglishClient
+        data={createEnglishApplicationData("analytical-instruments", data)}
+      />
+    );
+  }
 
   return <AnalyticalInstrumentsApplicationClient data={data} />;
 }

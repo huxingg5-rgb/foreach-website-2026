@@ -205,6 +205,7 @@ export default function TechnicalArticlesClient({
                   categoryLabel={getCategoryLabel(pageData, article.category)}
                   tags={getArticleTags(article, pageData.locale)}
                   href={getArticleHref(pageData.locale, article.slug)}
+                  locale={pageData.locale}
                 />
               ))}
             </div>
@@ -223,7 +224,10 @@ export default function TechnicalArticlesClient({
       <SupportCtaComponent
         title={pageData.bottomBanner.title}
         description={pageData.bottomBanner.description}
-        buttonText={pageData.bottomBanner.actions[0]?.label ?? "联系我们"}
+        buttonText={
+          pageData.bottomBanner.actions[0]?.label ??
+          (isChinesePage(pageData.locale) ? "联系我们" : "Contact Us")
+        }
         href={pageData.bottomBanner.actions[0]?.href ?? "/contact"}
       />
     </main>
@@ -235,6 +239,7 @@ interface TechnicalArticleCardProps {
   categoryLabel: string;
   tags: string[];
   href: string;
+  locale: string;
 }
 
 function TechnicalArticleCard({
@@ -242,6 +247,7 @@ function TechnicalArticleCard({
   categoryLabel,
   tags,
   href,
+  locale,
 }: TechnicalArticleCardProps) {
   return (
     <Link className="technicalArticleCard" href={href}>
@@ -258,12 +264,12 @@ function TechnicalArticleCard({
         <h3 className="technicalArticleCard__title">{article.title}</h3>
 
         <div className="technicalArticleCard__meta">
-          <span>分类：</span>
+          <span>{isChinesePage(locale) ? "分类：" : "Category:"}</span>
           <strong>{categoryLabel}</strong>
         </div>
 
         <div className="technicalArticleCard__tags">
-          <span>标签：</span>
+          <span>{isChinesePage(locale) ? "标签：" : "Tags:"}</span>
           <div className="technicalArticleCard__tagList">
             {tags.map((tag) => (
               <span key={tag} className="technicalArticleCard__tag">

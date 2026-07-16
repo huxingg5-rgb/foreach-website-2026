@@ -99,10 +99,10 @@ export default async function LocaleAboutForeachPage({
     notFound();
   }
 
-  return <AboutForeachClient />;
+  return <AboutForeachClient initialLocale={locale} />;
 }
 
 /* 判断当前 URL 语言是否允许访问 */
 function isAboutForeachLocale(locale: string): locale is AboutForeachLocale {
   return ABOUT_FOREACH_LOCALES.includes(locale as AboutForeachLocale);
-} 
+}

@@ -37,8 +37,8 @@ export default function ProductPageSkeleton({
   return (
     <section
       className={styles.shell}
-      aria-label="页面加载中"
       aria-busy="true"
+      aria-hidden="true"
     >
       <div className={styles.breadcrumbBar}>
         <div className={styles.container}>

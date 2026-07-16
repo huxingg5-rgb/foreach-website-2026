@@ -26,6 +26,8 @@ type ProductModelViewerProps = {
 
   /* 3D 模型文件路径 */
   modelUrl?: string;
+
+  locale?: "zh" | "en";
 };
 
 export default function ProductModelViewer({
@@ -33,6 +35,7 @@ export default function ProductModelViewer({
   modelName,
   productModel,
   modelUrl,
+  locale = "zh",
 }: ProductModelViewerProps) {
   const [isModelViewerReady, setIsModelViewerReady] = useState(false);
 
@@ -71,7 +74,9 @@ export default function ProductModelViewer({
   if (!modelUrl) {
     return (
       <div className={styles.modelViewerFallback}>
-        暂未配置 3D 模型文件
+        {locale === "en"
+          ? "No public 3D model is available for this product."
+          : "暂未配置 3D 模型文件"}
       </div>
     );
   }
@@ -79,7 +84,7 @@ export default function ProductModelViewer({
   if (!isModelViewerReady) {
     return (
       <div className={styles.modelViewerFallback}>
-        3D 模型加载中...
+        {locale === "en" ? "Loading 3D model..." : "3D 模型加载中..."}
       </div>
     );
   }

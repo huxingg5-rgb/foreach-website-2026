@@ -39,9 +39,13 @@ import type { HistoryMilestone } from "@/data/historyMilestones";
 type HistoryTimelineProps = {
   /* 发展历程数据列表 */
   items: HistoryMilestone[];
+  locale: string;
 };
 
-export default function HistoryTimeline({ items }: HistoryTimelineProps) {
+export default function HistoryTimeline({
+  items,
+  locale,
+}: HistoryTimelineProps) {
   /* 保存每一行年份节点的 DOM，用于滚动进入动效 */
   const rowRefs = useRef<Array<HTMLElement | null>>([]);
 
@@ -76,7 +80,10 @@ export default function HistoryTimeline({ items }: HistoryTimelineProps) {
   }, []);
 
   return (
-    <section className="about-history-section" aria-label="恒永达发展历程">
+    <section
+      className="about-history-section"
+      aria-label={locale === "zh-CN" ? "恒永达发展历程" : "FOREACH milestones"}
+    >
       <div className="about-history-container">
         {/* 中间竖线 */}
         <div className="about-history-center-line" aria-hidden="true" />
@@ -103,7 +110,7 @@ export default function HistoryTimeline({ items }: HistoryTimelineProps) {
                   - reverse 情况：左边是文字
               */}
               <div className="about-history-col about-history-col--left">
-                {isReverse ? renderText(item) : renderImage(item)}
+                {isReverse ? renderText(item, locale) : renderImage(item)}
               </div>
 
               {/* 中间圆点 */}
@@ -114,7 +121,7 @@ export default function HistoryTimeline({ items }: HistoryTimelineProps) {
                   - reverse 情况：右边是图片
               */}
               <div className="about-history-col about-history-col--right">
-                {isReverse ? renderImage(item) : renderText(item)}
+                {isReverse ? renderImage(item) : renderText(item, locale)}
               </div>
             </article>
           );
@@ -157,10 +164,13 @@ function renderImage(item: HistoryMilestone) {
    3. 不使用 1、2、3
    4. 不使用项目符号
 ========================================================= */
-function renderText(item: HistoryMilestone) {
+function renderText(item: HistoryMilestone, locale: string) {
   return (
     <div className="about-history-text">
-      <h2 className="about-history-year">{item.year}年</h2>
+      <h2 className="about-history-year">
+        {item.year}
+        {locale === "zh-CN" ? "年" : ""}
+      </h2>
 
       <ul className="about-history-list">
         {item.events.map((event) => (

@@ -110,7 +110,9 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${pageData.product.foreachModel}｜${SERIES_CONFIG.productName}｜FOREACH`,
+    title: `${pageData.product.foreachModel}｜${
+      locale === "en" ? "Fitting Product" : SERIES_CONFIG.productName
+    }｜FOREACH`,
     description: `View product code, compatible models, model details, and 2D drawing information for ${pageData.product.foreachModel}.`,
   };
 }
@@ -138,4 +140,4 @@ export default async function FittingReplacementLocaleDetailPage({
   }
 
   return <FittingReplacementDetail data={pageData} />;
-} 
+}

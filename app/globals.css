@@ -18127,3 +18127,241 @@ html body .home-honor-image img {
   }
 }
 /* HOME_HONOR_SECTION_UP_25PX_END */
+
+/* BARBED_PORT_SQUARE_MULTI_START */
+/*
+ * 倒刺接头接管内径专属筛选：
+ * 保持多选逻辑，将圆形选择控件改成正方形复选框。
+ */
+.filter-panel[data-product-type-id="barbed-fittings"]
+  .barbed-port-option.is-multi
+  .filter-check {
+  border-radius: 2px !important;
+}
+
+/*
+ * 防止倒刺专属样式或公共单选样式再次覆盖成圆形。
+ */
+.filter-panel[data-product-type-id="barbed-fittings"]
+  .barbed-port-option
+  .filter-check {
+  border-radius: 2px !important;
+}
+/* BARBED_PORT_SQUARE_MULTI_END */
+
+/* BEGIN: DATASHEET MOBILE AUTO FLOAT LAYOUT */
+
+/*
+  手机端规格书最终布局：
+
+  1. 产品图保持当前宽度，高度按图片比例自动生成
+  2. 标题和分类位于图片右侧
+  3. 参数信息自动从图片或标题的最低位置之后开始
+  4. 参数和说明文案占满整行
+  5. 卡片高度完全由实际内容决定，不设置固定高度
+*/
+@media (max-width: 767px) {
+  html body .datasheets-page .datasheet-row {
+    display: block !important;
+
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+
+    padding: 0 0 18px !important;
+    overflow: hidden !important;
+
+    box-sizing: border-box !important;
+  }
+
+  /*
+    产品图只固定宽度。
+    不固定高度，不设置 min-height。
+  */
+  html body .datasheets-page .product-thumb {
+    float: left !important;
+
+    width: 96px !important;
+    min-width: 96px !important;
+    max-width: 96px !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    margin: 0 16px 0 0 !important;
+    padding: 0 !important;
+
+    border-radius: 0 !important;
+    overflow: visible !important;
+
+    background: #ffffff !important;
+    box-sizing: border-box !important;
+  }
+
+  html body .datasheets-page .product-thumb img {
+    display: block !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    object-fit: contain !important;
+    object-position: center top !important;
+  }
+
+  /*
+    恢复普通文档流。
+    标题和分类会自然排在浮动图片右侧。
+  */
+  html body .datasheets-page .row-main {
+    display: block !important;
+
+    width: auto !important;
+    min-width: 0 !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin: 0 !important;
+    padding: 16px 14px 0 0 !important;
+
+    overflow: visible !important;
+    box-sizing: border-box !important;
+  }
+
+  html body .datasheets-page .row-title-line {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+
+    width: auto !important;
+    min-width: 0 !important;
+
+    margin: 0 !important;
+  }
+
+  html body .datasheets-page .row-title {
+    width: auto !important;
+    max-width: 100% !important;
+
+    overflow-wrap: anywhere !important;
+  }
+
+  html body .datasheets-page .row-label {
+    width: fit-content !important;
+  }
+
+  /*
+    clear: both 会自动寻找图片和标题中更高的一方。
+    不再依赖固定高度。
+  */
+  html body .datasheets-page .row-meta {
+    clear: both !important;
+
+    display: flex !important;
+    flex-wrap: wrap !important;
+
+    width: 100% !important;
+    min-width: 0 !important;
+
+    margin: 0 !important;
+    padding: 18px 20px 0 !important;
+
+    box-sizing: border-box !important;
+  }
+
+  html body .datasheets-page .row-desc {
+    clear: both !important;
+
+    display: block !important;
+
+    width: 100% !important;
+    min-width: 0 !important;
+
+    margin: 0 !important;
+    padding: 16px 20px 22px !important;
+
+    box-sizing: border-box !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  html body .datasheets-page .row-actions {
+    clear: both !important;
+
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+
+    width: 100% !important;
+    min-width: 0 !important;
+
+    gap: 14px !important;
+
+    margin: 0 !important;
+    padding: 0 20px !important;
+
+    box-sizing: border-box !important;
+  }
+
+  html body .datasheets-page .row-link,
+  html body .datasheets-page .row-download,
+  html body .datasheets-page .row-custom {
+    width: 100% !important;
+    min-width: 0 !important;
+
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /*
+    确保卡片正确包住浮动图片。
+  */
+  html body .datasheets-page .datasheet-row::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@media (max-width: 420px) {
+  html body .datasheets-page .product-thumb {
+    width: 88px !important;
+    min-width: 88px !important;
+    max-width: 88px !important;
+
+    margin-right: 13px !important;
+  }
+
+  html body .datasheets-page .row-main {
+    padding:
+      14px
+      11px
+      0
+      0 !important;
+  }
+
+  html body .datasheets-page .row-meta {
+    padding:
+      16px
+      14px
+      0 !important;
+  }
+
+  html body .datasheets-page .row-desc {
+    padding:
+      14px
+      14px
+      18px !important;
+  }
+
+  html body .datasheets-page .row-actions {
+    padding:
+      0
+      14px !important;
+  }
+}
+
+/* END: DATASHEET MOBILE AUTO FLOAT LAYOUT */

@@ -31,7 +31,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通带阀快插接头\n适配1.6mm接管内径\nPOM材质，可穿板",
-      "en": "Q20公端直通带阀快插接头\\n适配1.6 mm螺纹接口\\nPOM材质，可穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nTube I.D.: 1.6 mm\nPOM housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -86,7 +86,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通带阀快插接头\n适配1.6mm接管内径\nPP材质，可穿板",
-      "en": "Q20公端直通带阀快插接头\\n适配1.6 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nTube I.D.: 1.6 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -141,7 +141,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通不带阀快插接头\n适配1.6mm接管内径\nPOM材质，可穿板",
-      "en": "Q20公端直通不带阀快插接头\\n适配1.6 mm螺纹接口\\nPOM材质，可穿板"
+      "en": "Male In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 1.6 mm\nPOM housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -196,7 +196,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通不带阀快插接头\n适配1.6mm接管内径\nPP材质，可穿板",
-      "en": "Q20公端直通不带阀快插接头\\n适配1.6 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Male In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 1.6 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -251,7 +251,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通带阀快插接头\n适配1.6mm接管内径\nPOM材质，非穿板",
-      "en": "Q20公端直通带阀快插接头\\n适配1.6 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nTube I.D.: 1.6 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -306,7 +306,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通带阀快插接头\n适配1.6mm接管内径\nPP材质，非穿板",
-      "en": "Q20公端直通带阀快插接头\\n适配1.6 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nTube I.D.: 1.6 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -361,7 +361,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通不带阀快插接头\n适配1.6mm接管内径\nPOM材质，非穿板",
-      "en": "Q20公端直通不带阀快插接头\\n适配1.6 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Male In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 1.6 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -416,7 +416,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通不带阀快插接头\n适配1.6mm接管内径\nPP材质，非穿板",
-      "en": "Q20公端直通不带阀快插接头\\n适配1.6 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Male In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 1.6 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -471,7 +471,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通带阀快插接头\n适配1.6mm接管内径\nPOM材质，可穿板",
-      "en": "Q20母端直通带阀快插接头\\n适配1.6 mm螺纹接口\\nPOM材质，可穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nTube I.D.: 1.6 mm\nPOM housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -526,7 +526,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通带阀快插接头\n适配1.6mm接管内径\nPP材质，可穿板",
-      "en": "Q20母端直通带阀快插接头\\n适配1.6 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nTube I.D.: 1.6 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -581,7 +581,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通不带阀快插接头\n适配1.6mm接管内径\nPOM材质，可穿板",
-      "en": "Q20母端直通不带阀快插接头\\n适配1.6 mm螺纹接口\\nPOM材质，可穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 1.6 mm\nPOM housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -636,7 +636,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通不带阀快插接头\n适配1.6mm接管内径\nPP材质，可穿板",
-      "en": "Q20母端直通不带阀快插接头\\n适配1.6 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 1.6 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -691,7 +691,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通带阀快插接头\n适配1.6mm接管内径\nPOM材质，非穿板",
-      "en": "Q20母端直通带阀快插接头\\n适配1.6 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nTube I.D.: 1.6 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -746,7 +746,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通带阀快插接头\n适配1.6mm接管内径\nPP材质，非穿板",
-      "en": "Q20母端直通带阀快插接头\\n适配1.6 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nTube I.D.: 1.6 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -801,7 +801,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通不带阀快插接头\n适配1.6mm接管内径\nPOM材质，非穿板",
-      "en": "Q20母端直通不带阀快插接头\\n适配1.6 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 1.6 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -856,7 +856,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通不带阀快插接头\n适配1.6mm接管内径\nPP材质，非穿板",
-      "en": "Q20母端直通不带阀快插接头\\n适配1.6 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 1.6 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -911,7 +911,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通带阀快插接头\n适配3.2mm接管内径\nPOM材质，可穿板",
-      "en": "Q20公端直通带阀快插接头\\n适配3.2 mm螺纹接口\\nPOM材质，可穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nTube I.D.: 3.2 mm\nPOM housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -966,7 +966,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通带阀快插接头\n适配3.2mm接管内径\nPP材质，可穿板",
-      "en": "Q20公端直通带阀快插接头\\n适配3.2 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nTube I.D.: 3.2 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -1021,7 +1021,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通不带阀快插接头\n适配3.2mm接管内径\nPOM材质，可穿板",
-      "en": "Q20公端直通不带阀快插接头\\n适配3.2 mm螺纹接口\\nPOM材质，可穿板"
+      "en": "Male In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 3.2 mm\nPOM housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -1076,7 +1076,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通不带阀快插接头\n适配3.2mm接管内径\nPP材质，可穿板",
-      "en": "Q20公端直通不带阀快插接头\\n适配3.2 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Male In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 3.2 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -1131,7 +1131,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端L型带阀快插接头\n适配3.2mm接管内径\nPOM材质，非穿板",
-      "en": "Q20公端L型带阀快插接头\\n适配3.2 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Male Elbow Valved Quick-Connect Fitting\nTube I.D.: 3.2 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -1186,7 +1186,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端L型带阀快插接头\n适配3.2mm接管内径\nPP材质，非穿板",
-      "en": "Q20公端L型带阀快插接头\\n适配3.2 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Male Elbow Valved Quick-Connect Fitting\nTube I.D.: 3.2 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -1241,7 +1241,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通带阀快插接头\n适配3.2mm接管内径\nPOM材质，非穿板",
-      "en": "Q20公端直通带阀快插接头\\n适配3.2 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nTube I.D.: 3.2 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -1296,7 +1296,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通带阀快插接头\n适配3.2mm接管内径\nPOM材质，非穿板",
-      "en": "Q20公端直通带阀快插接头\\n适配3.2 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nTube I.D.: 3.2 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -1351,7 +1351,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通带阀快插接头\n适配3.2mm接管内径\nPP材质，非穿板",
-      "en": "Q20公端直通带阀快插接头\\n适配3.2 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nTube I.D.: 3.2 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -1406,7 +1406,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端L型不带阀快插接头\n适配3.2mm接管内径\nPOM材质，非穿板",
-      "en": "Q20公端L型不带阀快插接头\\n适配3.2 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Male Elbow Non-Valved Quick-Connect Fitting\nTube I.D.: 3.2 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -1461,7 +1461,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端L型不带阀快插接头\n适配3.2mm接管内径\nPP材质，非穿板",
-      "en": "Q20公端L型不带阀快插接头\\n适配3.2 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Male Elbow Non-Valved Quick-Connect Fitting\nTube I.D.: 3.2 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -1516,7 +1516,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通不带阀快插接头\n适配3.2mm接管内径\nPOM材质，非穿板",
-      "en": "Q20公端直通不带阀快插接头\\n适配3.2 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Male In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 3.2 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -1571,7 +1571,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通不带阀快插接头\n适配3.2mm接管内径\nPP材质，非穿板",
-      "en": "Q20公端直通不带阀快插接头\\n适配3.2 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Male In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 3.2 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -1626,7 +1626,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通带阀快插接头\n适配3.2mm接管内径\nPOM材质，可穿板",
-      "en": "Q20母端直通带阀快插接头\\n适配3.2 mm螺纹接口\\nPOM材质，可穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nTube I.D.: 3.2 mm\nPOM housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -1681,7 +1681,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通带阀快插接头\n适配3.2mm接管内径\nPP材质，可穿板",
-      "en": "Q20母端直通带阀快插接头\\n适配3.2 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nTube I.D.: 3.2 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -1736,7 +1736,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通不带阀快插接头\n适配3.2mm接管内径\nPOM材质，可穿板",
-      "en": "Q20母端直通不带阀快插接头\\n适配3.2 mm螺纹接口\\nPOM材质，可穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 3.2 mm\nPOM housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -1791,7 +1791,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通不带阀快插接头\n适配3.2mm接管内径\nPP材质，可穿板",
-      "en": "Q20母端直通不带阀快插接头\\n适配3.2 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 3.2 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -1846,7 +1846,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端L型带阀快插接头\n适配3.2mm接管内径\nPOM材质，非穿板",
-      "en": "Q20母端L型带阀快插接头\\n适配3.2 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Female Elbow Valved Quick-Connect Fitting\nTube I.D.: 3.2 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -1901,7 +1901,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端L型带阀快插接头\n适配3.2mm接管内径\nPP材质，非穿板",
-      "en": "Q20母端L型带阀快插接头\\n适配3.2 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Female Elbow Valved Quick-Connect Fitting\nTube I.D.: 3.2 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -1956,7 +1956,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通带阀快插接头\n适配3.2mm接管内径\nPOM材质，非穿板",
-      "en": "Q20母端直通带阀快插接头\\n适配3.2 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nTube I.D.: 3.2 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -2011,7 +2011,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通带阀快插接头\n适配3.2mm接管内径\nPOM材质，非穿板",
-      "en": "Q20母端直通带阀快插接头\\n适配3.2 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nTube I.D.: 3.2 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -2066,7 +2066,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通带阀快插接头\n适配3.2mm接管内径\nPP材质，非穿板",
-      "en": "Q20母端直通带阀快插接头\\n适配3.2 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nTube I.D.: 3.2 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -2121,7 +2121,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端L型不带阀快插接头\n适配3.2mm接管内径\nPOM材质，非穿板",
-      "en": "Q20母端L型不带阀快插接头\\n适配3.2 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Female Elbow Non-Valved Quick-Connect Fitting\nTube I.D.: 3.2 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -2176,7 +2176,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端L型不带阀快插接头\n适配3.2mm接管内径\nPP材质，非穿板",
-      "en": "Q20母端L型不带阀快插接头\\n适配3.2 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Female Elbow Non-Valved Quick-Connect Fitting\nTube I.D.: 3.2 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -2231,7 +2231,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通不带阀快插接头\n适配3.2mm接管内径\nPOM材质，非穿板",
-      "en": "Q20母端直通不带阀快插接头\\n适配3.2 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 3.2 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -2286,7 +2286,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通不带阀快插接头\n适配3.2mm接管内径\nPP材质，非穿板",
-      "en": "Q20母端直通不带阀快插接头\\n适配3.2 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 3.2 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -2341,7 +2341,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通带阀快插接头\n适配4.8mm接管内径\nPOM材质，可穿板",
-      "en": "Q20公端直通带阀快插接头\\n适配4.8 mm螺纹接口\\nPOM材质，可穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nTube I.D.: 4.8 mm\nPOM housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -2396,7 +2396,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通带阀快插接头\n适配4.8mm接管内径\nPP材质，可穿板",
-      "en": "Q20公端直通带阀快插接头\\n适配4.8 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nTube I.D.: 4.8 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -2451,7 +2451,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通不带阀快插接头\n适配4.8mm接管内径\nPOM材质，可穿板",
-      "en": "Q20公端直通不带阀快插接头\\n适配4.8 mm螺纹接口\\nPOM材质，可穿板"
+      "en": "Male In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 4.8 mm\nPOM housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -2506,7 +2506,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通不带阀快插接头\n适配4.8mm接管内径\nPP材质，可穿板",
-      "en": "Q20公端直通不带阀快插接头\\n适配4.8 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Male In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 4.8 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -2561,7 +2561,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通带阀快插接头\n适配4.8mm接管内径\nPOM材质，非穿板",
-      "en": "Q20公端直通带阀快插接头\\n适配4.8 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nTube I.D.: 4.8 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -2616,7 +2616,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通带阀快插接头\n适配4.8mm接管内径\nPP材质，非穿板",
-      "en": "Q20公端直通带阀快插接头\\n适配4.8 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nTube I.D.: 4.8 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -2671,7 +2671,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通不带阀快插接头\n适配4.8mm接管内径\nPOM材质，非穿板",
-      "en": "Q20公端直通不带阀快插接头\\n适配4.8 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Male In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 4.8 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -2726,7 +2726,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通不带阀快插接头\n适配4.8mm接管内径\nPP材质，非穿板",
-      "en": "Q20公端直通不带阀快插接头\\n适配4.8 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Male In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 4.8 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -2781,7 +2781,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通带阀快插接头\n适配4.8mm接管内径\nPOM材质，可穿板",
-      "en": "Q20母端直通带阀快插接头\\n适配4.8 mm螺纹接口\\nPOM材质，可穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nTube I.D.: 4.8 mm\nPOM housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -2836,7 +2836,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通带阀快插接头\n适配4.8mm接管内径\nPP材质，可穿板",
-      "en": "Q20母端直通带阀快插接头\\n适配4.8 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nTube I.D.: 4.8 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -2891,7 +2891,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通不带阀快插接头\n适配4.8mm接管内径\nPOM材质，可穿板",
-      "en": "Q20母端直通不带阀快插接头\\n适配4.8 mm螺纹接口\\nPOM材质，可穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 4.8 mm\nPOM housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -2946,7 +2946,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通不带阀快插接头\n适配4.8mm接管内径\nPP材质，可穿板",
-      "en": "Q20母端直通不带阀快插接头\\n适配4.8 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 4.8 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -3001,7 +3001,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通带阀快插接头\n适配4.8mm接管内径\nPOM材质，非穿板",
-      "en": "Q20母端直通带阀快插接头\\n适配4.8 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nTube I.D.: 4.8 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -3056,7 +3056,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通带阀快插接头\n适配4.8mm接管内径\nPP材质，非穿板",
-      "en": "Q20母端直通带阀快插接头\\n适配4.8 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nTube I.D.: 4.8 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -3111,7 +3111,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通不带阀快插接头\n适配4.8mm接管内径\nPOM材质，非穿板",
-      "en": "Q20母端直通不带阀快插接头\\n适配4.8 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 4.8 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -3166,7 +3166,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通不带阀快插接头\n适配4.8mm接管内径\nPP材质，非穿板",
-      "en": "Q20母端直通不带阀快插接头\\n适配4.8 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 4.8 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -3221,7 +3221,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通带阀快插接头\n适配6.4mm接管内径\nPOM材质，可穿板",
-      "en": "Q20公端直通带阀快插接头\\n适配6.4 mm螺纹接口\\nPOM材质，可穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPOM housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -3276,7 +3276,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通带阀快插接头\n适配6.4mm接管内径\nPP材质，可穿板",
-      "en": "Q20公端直通带阀快插接头\\n适配6.4 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -3331,7 +3331,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通不带阀快插接头\n适配6.4mm接管内径\nPOM材质，可穿板",
-      "en": "Q20公端直通不带阀快插接头\\n适配6.4 mm螺纹接口\\nPOM材质，可穿板"
+      "en": "Male In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPOM housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -3386,7 +3386,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通不带阀快插接头\n适配6.4mm接管内径\nPP材质，可穿板",
-      "en": "Q20公端直通不带阀快插接头\\n适配6.4 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Male In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -3441,7 +3441,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端L型带阀快插接头\n适配6.4mm接管内径\nPOM材质，非穿板",
-      "en": "Q20公端L型带阀快插接头\\n适配6.4 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Male Elbow Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -3496,7 +3496,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端L型带阀快插接头\n适配6.4mm接管内径\nPP材质，非穿板",
-      "en": "Q20公端L型带阀快插接头\\n适配6.4 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Male Elbow Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -3551,7 +3551,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通带阀快插接头\n适配6.4mm接管内径\nPOM材质，非穿板",
-      "en": "Q20公端直通带阀快插接头\\n适配6.4 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -3606,7 +3606,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通带阀快插接头\n适配6.4mm接管内径\nPP材质，非穿板",
-      "en": "Q20公端直通带阀快插接头\\n适配6.4 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -3661,7 +3661,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端L型不带阀快插接头\n适配6.4mm接管内径\nPOM材质，非穿板",
-      "en": "Q20公端L型不带阀快插接头\\n适配6.4 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Male Elbow Non-Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -3716,7 +3716,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端L型不带阀快插接头\n适配6.4mm接管内径\nPP材质，非穿板",
-      "en": "Q20公端L型不带阀快插接头\\n适配6.4 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Male Elbow Non-Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -3771,7 +3771,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通不带阀快插接头\n适配6.4mm接管内径\nPOM材质，非穿板",
-      "en": "Q20公端直通不带阀快插接头\\n适配6.4 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Male In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -3826,7 +3826,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通不带阀快插接头\n适配6.4mm接管内径\nPP材质，非穿板",
-      "en": "Q20公端直通不带阀快插接头\\n适配6.4 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Male In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -3881,7 +3881,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通带阀快插接头\n适配6.4mm接管内径\nPOM材质，可穿板",
-      "en": "Q20母端直通带阀快插接头\\n适配6.4 mm螺纹接口\\nPOM材质，可穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPOM housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -3936,7 +3936,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通带阀快插接头\n适配6.4mm接管内径\nPP材质，可穿板",
-      "en": "Q20母端直通带阀快插接头\\n适配6.4 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -3991,7 +3991,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通不带阀快插接头\n适配6.4mm接管内径\nPOM材质，可穿板",
-      "en": "Q20母端直通不带阀快插接头\\n适配6.4 mm螺纹接口\\nPOM材质，可穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPOM housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -4046,7 +4046,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通不带阀快插接头\n适配6.4mm接管内径\nPP材质，可穿板",
-      "en": "Q20母端直通不带阀快插接头\\n适配6.4 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -4101,7 +4101,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端L型带阀快插接头\n适配6.4mm接管内径\nPOM材质，非穿板",
-      "en": "Q20母端L型带阀快插接头\\n适配6.4 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Female Elbow Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -4156,7 +4156,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端L型带阀快插接头\n适配6.4mm接管内径\nPP材质，非穿板",
-      "en": "Q20母端L型带阀快插接头\\n适配6.4 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Female Elbow Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -4211,7 +4211,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通带阀快插接头\n适配6.4mm接管内径\nPOM材质，非穿板",
-      "en": "Q20母端直通带阀快插接头\\n适配6.4 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -4266,7 +4266,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通带阀快插接头\n适配6.4mm接管内径\nPP材质，非穿板",
-      "en": "Q20母端直通带阀快插接头\\n适配6.4 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -4321,7 +4321,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端L型不带阀快插接头\n适配6.4mm接管内径\nPOM材质，非穿板",
-      "en": "Q20母端L型不带阀快插接头\\n适配6.4 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Female Elbow Non-Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -4376,7 +4376,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端L型不带阀快插接头\n适配6.4mm接管内径\nPP材质，非穿板",
-      "en": "Q20母端L型不带阀快插接头\\n适配6.4 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Female Elbow Non-Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -4431,7 +4431,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通不带阀快插接头\n适配6.4mm接管内径\nPOM材质，非穿板",
-      "en": "Q20母端直通不带阀快插接头\\n适配6.4 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -4486,7 +4486,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通不带阀快插接头\n适配6.4mm接管内径\nPP材质，非穿板",
-      "en": "Q20母端直通不带阀快插接头\\n适配6.4 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -4541,7 +4541,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通带阀快插接头\n适配1/8\"-27 NPT螺纹接口\nPOM材质，非穿板",
-      "en": "Q20公端直通带阀快插接头\\n适配1/8\"-27 NPT螺纹接口\\nPOM材质，非穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nThread: 1/8\\\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -4596,7 +4596,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通带阀快插接头\n适配1/8\"-27 NPT螺纹接口\nPP材质，非穿板",
-      "en": "Q20公端直通带阀快插接头\\n适配1/8\"-27 NPT螺纹接口\\nPP材质，非穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nThread: 1/8\\\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -4651,7 +4651,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通不带阀快插接头\n适配1/8\"-27 NPT螺纹接口\nPOM材质，非穿板",
-      "en": "Q20公端直通不带阀快插接头\\n适配1/8\"-27 NPT螺纹接口\\nPOM材质，非穿板"
+      "en": "Male In-line Non-Valved Quick-Connect Fitting\nThread: 1/8\\\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -4706,7 +4706,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通不带阀快插接头\n适配1/8\"-27 NPT螺纹接口\nPP材质，非穿板",
-      "en": "Q20公端直通不带阀快插接头\\n适配1/8\"-27 NPT螺纹接口\\nPP材质，非穿板"
+      "en": "Male In-line Non-Valved Quick-Connect Fitting\nThread: 1/8\\\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -4761,7 +4761,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通带阀快插接头\n适配1/8\"-27 NPT螺纹接口\nPOM材质，非穿板",
-      "en": "Q20母端直通带阀快插接头\\n适配1/8\"-27 NPT螺纹接口\\nPOM材质，非穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nThread: 1/8\\\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -4816,7 +4816,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通带阀快插接头\n适配1/8\"-27 NPT螺纹接口\nPP材质，非穿板",
-      "en": "Q20母端直通带阀快插接头\\n适配1/8\"-27 NPT螺纹接口\\nPP材质，非穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nThread: 1/8\\\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -4871,7 +4871,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通不带阀快插接头\n适配1/8\"-27 NPT螺纹接口\nPOM材质，非穿板",
-      "en": "Q20母端直通不带阀快插接头\\n适配1/8\"-27 NPT螺纹接口\\nPOM材质，非穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nThread: 1/8\\\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -4926,7 +4926,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通不带阀快插接头\n适配1/8\"-27 NPT螺纹接口\nPP材质，非穿板",
-      "en": "Q20母端直通不带阀快插接头\\n适配1/8\"-27 NPT螺纹接口\\nPP材质，非穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nThread: 1/8\\\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -4981,7 +4981,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通带阀快插接头\n适配R1/8（BSPT）螺纹接口\nPOM材质，非穿板",
-      "en": "Q20母端直通带阀快插接头\\n适配R1/8（BSPT）螺纹接口\\nPOM材质，非穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nThread: R1/8（BSPT）\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -5036,7 +5036,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通带阀快插接头\n适配R1/8（BSPT）螺纹接口\nPP材质，非穿板",
-      "en": "Q20母端直通带阀快插接头\\n适配R1/8（BSPT）螺纹接口\\nPP材质，非穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nThread: R1/8（BSPT）\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -5091,7 +5091,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通不带阀快插接头\n适配R1/8（BSPT）螺纹接口\nPOM材质，非穿板",
-      "en": "Q20母端直通不带阀快插接头\\n适配R1/8（BSPT）螺纹接口\\nPOM材质，非穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nThread: R1/8（BSPT）\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -5146,7 +5146,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通不带阀快插接头\n适配R1/8（BSPT）螺纹接口\nPP材质，非穿板",
-      "en": "Q20母端直通不带阀快插接头\\n适配R1/8（BSPT）螺纹接口\\nPP材质，非穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nThread: R1/8（BSPT）\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -5201,7 +5201,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通带阀快插接头\n适配1/4\"-28 UNF螺纹接口\nPOM材质，非穿板",
-      "en": "Q20公端直通带阀快插接头\\n适配1/4\"-28 UNF螺纹接口\\nPOM材质，非穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nThread: 1/4\\\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -5256,7 +5256,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20公端直通带阀快插接头\n适配1/4\"-28 UNF螺纹接口\nPP材质，非穿板",
-      "en": "Q20公端直通带阀快插接头\\n适配1/4\"-28 UNF螺纹接口\\nPP材质，非穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nThread: 1/4\\\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -5311,7 +5311,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通带阀快插接头\n适配1/4\"-28 UNF螺纹接口\nPOM材质，可穿板",
-      "en": "Q20母端直通带阀快插接头\\n适配1/4\"-28 UNF螺纹接口\\nPOM材质，可穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nThread: 1/4\\\nPOM housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -5366,7 +5366,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q20母端直通带阀快插接头\n适配1/4\"-28 UNF螺纹接口\nPP材质，可穿板",
-      "en": "Q20母端直通带阀快插接头\\n适配1/4\"-28 UNF螺纹接口\\nPP材质，可穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nThread: 1/4\\\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q20",
@@ -5421,7 +5421,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40公端直通带阀快插接头\n适配6.4mm接管内径\nPOM材质，可穿板",
-      "en": "Q40公端直通带阀快插接头\\n适配6.4 mm螺纹接口\\nPOM材质，可穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPOM housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -5476,7 +5476,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40公端直通带阀快插接头\n适配6.4mm接管内径\nPP材质，可穿板",
-      "en": "Q40公端直通带阀快插接头\\n适配6.4 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -5531,7 +5531,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40公端直通不带阀快插接头\n适配6.4mm接管内径\nPOM材质，可穿板",
-      "en": "Q40公端直通不带阀快插接头\\n适配6.4 mm螺纹接口\\nPOM材质，可穿板"
+      "en": "Male In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPOM housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -5586,7 +5586,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40公端直通不带阀快插接头\n适配6.4mm接管内径\nPP材质，可穿板",
-      "en": "Q40公端直通不带阀快插接头\\n适配6.4 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Male In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -5641,7 +5641,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40公端L型带阀快插接头\n适配6.4mm接管内径\nPOM材质，非穿板",
-      "en": "Q40公端L型带阀快插接头\\n适配6.4 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Male Elbow Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -5696,7 +5696,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40公端L型带阀快插接头\n适配6.4mm接管内径\nPP材质，非穿板",
-      "en": "Q40公端L型带阀快插接头\\n适配6.4 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Male Elbow Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -5751,7 +5751,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40公端直通带阀快插接头\n适配6.4mm接管内径\nPOM材质，非穿板",
-      "en": "Q40公端直通带阀快插接头\\n适配6.4 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -5806,7 +5806,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40公端直通带阀快插接头\n适配6.4mm接管内径\nPP材质，非穿板",
-      "en": "Q40公端直通带阀快插接头\\n适配6.4 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -5861,7 +5861,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40公端直通不带阀快插接头\n适配6.4mm接管内径\nPOM材质，非穿板",
-      "en": "Q40公端直通不带阀快插接头\\n适配6.4 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Male In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -5916,7 +5916,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40公端直通不带阀快插接头\n适配6.4mm接管内径\nPP材质，非穿板",
-      "en": "Q40公端直通不带阀快插接头\\n适配6.4 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Male In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -5971,7 +5971,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40母端直通带阀快插接头\n适配6.4mm接管内径\nPOM材质，可穿板",
-      "en": "Q40母端直通带阀快插接头\\n适配6.4 mm螺纹接口\\nPOM材质，可穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPOM housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -6026,7 +6026,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40母端直通带阀快插接头\n适配6.4mm接管内径\nPP材质，可穿板",
-      "en": "Q40母端直通带阀快插接头\\n适配6.4 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -6081,7 +6081,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40母端直通不带阀快插接头\n适配6.4mm接管内径\nPOM材质，可穿板",
-      "en": "Q40母端直通不带阀快插接头\\n适配6.4 mm螺纹接口\\nPOM材质，可穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPOM housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -6136,7 +6136,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40母端直通不带阀快插接头\n适配6.4mm接管内径\nPP材质，可穿板",
-      "en": "Q40母端直通不带阀快插接头\\n适配6.4 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -6191,7 +6191,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40母端直通带阀快插接头\n适配6.4mm接管内径\nPOM材质，非穿板",
-      "en": "Q40母端直通带阀快插接头\\n适配6.4 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -6246,7 +6246,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40母端直通带阀快插接头\n适配6.4mm接管内径\nPP材质，非穿板",
-      "en": "Q40母端直通带阀快插接头\\n适配6.4 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -6301,7 +6301,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40母端直通不带阀快插接头\n适配6.4mm接管内径\nPOM材质，非穿板",
-      "en": "Q40母端直通不带阀快插接头\\n适配6.4 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -6356,7 +6356,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40母端直通不带阀快插接头\n适配6.4mm接管内径\nPP材质，非穿板",
-      "en": "Q40母端直通不带阀快插接头\\n适配6.4 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 6.4 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -6411,7 +6411,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40公端直通带阀快插接头\n适配7.9mm接管内径\nPOM材质，可穿板",
-      "en": "Q40公端直通带阀快插接头\\n适配7.9 mm螺纹接口\\nPOM材质，可穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nTube I.D.: 7.9 mm\nPOM housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -6466,7 +6466,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40公端直通带阀快插接头\n适配7.9mm接管内径\nPP材质，可穿板",
-      "en": "Q40公端直通带阀快插接头\\n适配7.9 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nTube I.D.: 7.9 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -6521,7 +6521,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40公端直通不带阀快插接头\n适配7.9mm接管内径\nPOM材质，可穿板",
-      "en": "Q40公端直通不带阀快插接头\\n适配7.9 mm螺纹接口\\nPOM材质，可穿板"
+      "en": "Male In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 7.9 mm\nPOM housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -6576,7 +6576,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40公端直通不带阀快插接头\n适配7.9mm接管内径\nPP材质，可穿板",
-      "en": "Q40公端直通不带阀快插接头\\n适配7.9 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Male In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 7.9 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -6631,7 +6631,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40公端直通带阀快插接头\n适配7.9mm接管内径\nPOM材质，非穿板",
-      "en": "Q40公端直通带阀快插接头\\n适配7.9 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nTube I.D.: 7.9 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -6686,7 +6686,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40公端直通带阀快插接头\n适配7.9mm接管内径\nPP材质，非穿板",
-      "en": "Q40公端直通带阀快插接头\\n适配7.9 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nTube I.D.: 7.9 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -6741,7 +6741,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40公端直通不带阀快插接头\n适配7.9mm接管内径\nPOM材质，非穿板",
-      "en": "Q40公端直通不带阀快插接头\\n适配7.9 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Male In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 7.9 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -6796,7 +6796,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40公端直通不带阀快插接头\n适配7.9mm接管内径\nPP材质，非穿板",
-      "en": "Q40公端直通不带阀快插接头\\n适配7.9 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Male In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 7.9 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -6851,7 +6851,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40母端直通带阀快插接头\n适配7.9mm接管内径\nPOM材质，可穿板",
-      "en": "Q40母端直通带阀快插接头\\n适配7.9 mm螺纹接口\\nPOM材质，可穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nTube I.D.: 7.9 mm\nPOM housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -6906,7 +6906,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40母端直通带阀快插接头\n适配7.9mm接管内径\nPP材质，可穿板",
-      "en": "Q40母端直通带阀快插接头\\n适配7.9 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nTube I.D.: 7.9 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -6961,7 +6961,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40母端直通不带阀快插接头\n适配7.9mm接管内径\nPOM材质，可穿板",
-      "en": "Q40母端直通不带阀快插接头\\n适配7.9 mm螺纹接口\\nPOM材质，可穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 7.9 mm\nPOM housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -7016,7 +7016,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40母端直通不带阀快插接头\n适配7.9mm接管内径\nPP材质，可穿板",
-      "en": "Q40母端直通不带阀快插接头\\n适配7.9 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 7.9 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -7071,7 +7071,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40母端直通带阀快插接头\n适配7.9mm接管内径\nPOM材质，非穿板",
-      "en": "Q40母端直通带阀快插接头\\n适配7.9 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nTube I.D.: 7.9 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -7126,7 +7126,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40母端直通带阀快插接头\n适配7.9mm接管内径\nPP材质，非穿板",
-      "en": "Q40母端直通带阀快插接头\\n适配7.9 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nTube I.D.: 7.9 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -7181,7 +7181,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40母端直通不带阀快插接头\n适配7.9mm接管内径\nPOM材质，非穿板",
-      "en": "Q40母端直通不带阀快插接头\\n适配7.9 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 7.9 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -7236,7 +7236,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40母端直通不带阀快插接头\n适配7.9mm接管内径\nPP材质，非穿板",
-      "en": "Q40母端直通不带阀快插接头\\n适配7.9 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 7.9 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -7291,7 +7291,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40公端直通带阀快插接头\n适配9.5mm接管内径\nPOM材质，可穿板",
-      "en": "Q40公端直通带阀快插接头\\n适配9.5 mm螺纹接口\\nPOM材质，可穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nTube I.D.: 9.5 mm\nPOM housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -7346,7 +7346,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40公端直通带阀快插接头\n适配9.5mm接管内径\nPP材质，可穿板",
-      "en": "Q40公端直通带阀快插接头\\n适配9.5 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nTube I.D.: 9.5 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -7401,7 +7401,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40公端直通不带阀快插接头\n适配9.5mm接管内径\nPOM材质，可穿板",
-      "en": "Q40公端直通不带阀快插接头\\n适配9.5 mm螺纹接口\\nPOM材质，可穿板"
+      "en": "Male In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 9.5 mm\nPOM housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -7456,7 +7456,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40公端直通不带阀快插接头\n适配9.5mm接管内径\nPP材质，可穿板",
-      "en": "Q40公端直通不带阀快插接头\\n适配9.5 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Male In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 9.5 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -7511,7 +7511,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40公端直通带阀快插接头\n适配9.5mm接管内径\nPOM材质，非穿板",
-      "en": "Q40公端直通带阀快插接头\\n适配9.5 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nTube I.D.: 9.5 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -7566,7 +7566,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40公端直通带阀快插接头\n适配9.5mm接管内径\nPP材质，非穿板",
-      "en": "Q40公端直通带阀快插接头\\n适配9.5 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nTube I.D.: 9.5 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -7621,7 +7621,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40公端L型不带阀快插接头\n适配9.5mm接管内径\nPOM材质，非穿板",
-      "en": "Q40公端L型不带阀快插接头\\n适配9.5 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Male Elbow Non-Valved Quick-Connect Fitting\nTube I.D.: 9.5 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -7676,7 +7676,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40公端L型不带阀快插接头\n适配9.5mm接管内径\nPP材质，非穿板",
-      "en": "Q40公端L型不带阀快插接头\\n适配9.5 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Male Elbow Non-Valved Quick-Connect Fitting\nTube I.D.: 9.5 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -7731,7 +7731,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40公端直通不带阀快插接头\n适配9.5mm接管内径\nPOM材质，非穿板",
-      "en": "Q40公端直通不带阀快插接头\\n适配9.5 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Male In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 9.5 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -7786,7 +7786,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40公端直通不带阀快插接头\n适配9.5mm接管内径\nPP材质，非穿板",
-      "en": "Q40公端直通不带阀快插接头\\n适配9.5 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Male In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 9.5 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -7841,7 +7841,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40母端直通带阀快插接头\n适配9.5mm接管内径\nPOM材质，可穿板",
-      "en": "Q40母端直通带阀快插接头\\n适配9.5 mm螺纹接口\\nPOM材质，可穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nTube I.D.: 9.5 mm\nPOM housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -7896,7 +7896,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40母端直通带阀快插接头\n适配9.5mm接管内径\nPP材质，可穿板",
-      "en": "Q40母端直通带阀快插接头\\n适配9.5 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nTube I.D.: 9.5 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -7951,7 +7951,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40母端直通不带阀快插接头\n适配9.5mm接管内径\nPOM材质，可穿板",
-      "en": "Q40母端直通不带阀快插接头\\n适配9.5 mm螺纹接口\\nPOM材质，可穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 9.5 mm\nPOM housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -8006,7 +8006,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40母端直通不带阀快插接头\n适配9.5mm接管内径\nPP材质，可穿板",
-      "en": "Q40母端直通不带阀快插接头\\n适配9.5 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 9.5 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -8061,7 +8061,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40母端直通带阀快插接头\n适配9.5mm接管内径\nPOM材质，非穿板",
-      "en": "Q40母端直通带阀快插接头\\n适配9.5 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nTube I.D.: 9.5 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -8116,7 +8116,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40母端直通带阀快插接头\n适配9.5mm接管内径\nPP材质，非穿板",
-      "en": "Q40母端直通带阀快插接头\\n适配9.5 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nTube I.D.: 9.5 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -8171,7 +8171,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40母端直通不带阀快插接头\n适配9.5mm接管内径\nPOM材质，非穿板",
-      "en": "Q40母端直通不带阀快插接头\\n适配9.5 mm螺纹接口\\nPOM材质，非穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 9.5 mm\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -8226,7 +8226,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40母端直通不带阀快插接头\n适配9.5mm接管内径\nPP材质，非穿板",
-      "en": "Q40母端直通不带阀快插接头\\n适配9.5 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 9.5 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -8281,7 +8281,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40公端直通带阀快插接头\n适配1/4\"-18 NPT螺纹接口\nPOM材质，非穿板",
-      "en": "Q40公端直通带阀快插接头\\n适配1/4\"-18 NPT螺纹接口\\nPOM材质，非穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nThread: 1/4\\\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -8336,7 +8336,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40公端直通带阀快插接头\n适配1/4\"-18 NPT螺纹接口\nPP材质，非穿板",
-      "en": "Q40公端直通带阀快插接头\\n适配1/4\"-18 NPT螺纹接口\\nPP材质，非穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nThread: 1/4\\\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -8391,7 +8391,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40母端直通带阀快插接头\n适配1/4\"-18 NPT螺纹接口\nPOM材质，非穿板",
-      "en": "Q40母端直通带阀快插接头\\n适配1/4\"-18 NPT螺纹接口\\nPOM材质，非穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nThread: 1/4\\\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -8446,7 +8446,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40母端直通带阀快插接头\n适配1/4\"-18 NPT螺纹接口\nPP材质，非穿板",
-      "en": "Q40母端直通带阀快插接头\\n适配1/4\"-18 NPT螺纹接口\\nPP材质，非穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nThread: 1/4\\\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -8501,7 +8501,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40母端直通不带阀快插接头\n适配1/4\"-18 NPT螺纹接口\nPOM材质，非穿板",
-      "en": "Q40母端直通不带阀快插接头\\n适配1/4\"-18 NPT螺纹接口\\nPOM材质，非穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nThread: 1/4\\\nPOM housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -8556,7 +8556,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q40母端直通不带阀快插接头\n适配1/4\"-18 NPT螺纹接口\nPP材质，非穿板",
-      "en": "Q40母端直通不带阀快插接头\\n适配1/4\"-18 NPT螺纹接口\\nPP材质，非穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nThread: 1/4\\\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q40",
@@ -8611,7 +8611,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q60公端L型带阀快插接头\n适配9.5mm接管内径\nPP材质，非穿板",
-      "en": "Q60公端L型带阀快插接头\\n适配9.5 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Male Elbow Valved Quick-Connect Fitting\nTube I.D.: 9.5 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q60",
@@ -8666,7 +8666,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q60公端直通带阀快插接头\n适配9.5mm接管内径\nPP材质，非穿板",
-      "en": "Q60公端直通带阀快插接头\\n适配9.5 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nTube I.D.: 9.5 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q60",
@@ -8721,7 +8721,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q60公端L型不带阀快插接头\n适配9.5mm接管内径\nPP材质，非穿板",
-      "en": "Q60公端L型不带阀快插接头\\n适配9.5 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Male Elbow Non-Valved Quick-Connect Fitting\nTube I.D.: 9.5 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q60",
@@ -8776,7 +8776,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q60公端直通不带阀快插接头\n适配9.5mm接管内径\nPP材质，非穿板",
-      "en": "Q60公端直通不带阀快插接头\\n适配9.5 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Male In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 9.5 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q60",
@@ -8831,7 +8831,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q60母端L型带阀快插接头\n适配9.5mm接管内径\nPP材质，可穿板",
-      "en": "Q60母端L型带阀快插接头\\n适配9.5 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Female Elbow Valved Quick-Connect Fitting\nTube I.D.: 9.5 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q60",
@@ -8886,7 +8886,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q60母端直通带阀快插接头\n适配9.5mm接管内径\nPP材质，可穿板",
-      "en": "Q60母端直通带阀快插接头\\n适配9.5 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nTube I.D.: 9.5 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q60",
@@ -8941,7 +8941,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q60母端L型不带阀快插接头\n适配9.5mm接管内径\nPP材质，可穿板",
-      "en": "Q60母端L型不带阀快插接头\\n适配9.5 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Female Elbow Non-Valved Quick-Connect Fitting\nTube I.D.: 9.5 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q60",
@@ -8996,7 +8996,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q60母端直通不带阀快插接头\n适配9.5mm接管内径\nPP材质，可穿板",
-      "en": "Q60母端直通不带阀快插接头\\n适配9.5 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 9.5 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q60",
@@ -9051,7 +9051,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q60母端直通带阀快插接头\n适配9.5mm接管内径\nPP材质，非穿板",
-      "en": "Q60母端直通带阀快插接头\\n适配9.5 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nTube I.D.: 9.5 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q60",
@@ -9106,7 +9106,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q60母端直通不带阀快插接头\n适配9.5mm接管内径\nPP材质，非穿板",
-      "en": "Q60母端直通不带阀快插接头\\n适配9.5 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 9.5 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q60",
@@ -9161,7 +9161,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q60公端L型带阀快插接头\n适配12.7mm接管内径\nPP材质，非穿板",
-      "en": "Q60公端L型带阀快插接头\\n适配12.7 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Male Elbow Valved Quick-Connect Fitting\nTube I.D.: 12.7 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q60",
@@ -9216,7 +9216,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q60公端直通带阀快插接头\n适配12.7mm接管内径\nPP材质，非穿板",
-      "en": "Q60公端直通带阀快插接头\\n适配12.7 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nTube I.D.: 12.7 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q60",
@@ -9271,7 +9271,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q60公端L型不带阀快插接头\n适配12.7mm接管内径\nPP材质，非穿板",
-      "en": "Q60公端L型不带阀快插接头\\n适配12.7 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Male Elbow Non-Valved Quick-Connect Fitting\nTube I.D.: 12.7 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q60",
@@ -9326,7 +9326,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q60公端直通不带阀快插接头\n适配12.7mm接管内径\nPP材质，非穿板",
-      "en": "Q60公端直通不带阀快插接头\\n适配12.7 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Male In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 12.7 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q60",
@@ -9381,7 +9381,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q60母端L型带阀快插接头\n适配12.7mm接管内径\nPP材质，可穿板",
-      "en": "Q60母端L型带阀快插接头\\n适配12.7 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Female Elbow Valved Quick-Connect Fitting\nTube I.D.: 12.7 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q60",
@@ -9436,7 +9436,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q60母端直通带阀快插接头\n适配12.7mm接管内径\nPP材质，可穿板",
-      "en": "Q60母端直通带阀快插接头\\n适配12.7 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nTube I.D.: 12.7 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q60",
@@ -9491,7 +9491,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q60母端L型不带阀快插接头\n适配12.7mm接管内径\nPP材质，可穿板",
-      "en": "Q60母端L型不带阀快插接头\\n适配12.7 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Female Elbow Non-Valved Quick-Connect Fitting\nTube I.D.: 12.7 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q60",
@@ -9546,7 +9546,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q60母端直通不带阀快插接头\n适配12.7mm接管内径\nPP材质，可穿板",
-      "en": "Q60母端直通不带阀快插接头\\n适配12.7 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 12.7 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q60",
@@ -9601,7 +9601,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q60母端L型带阀快插接头\n适配12.7mm接管内径\nPP材质，非穿板",
-      "en": "Q60母端L型带阀快插接头\\n适配12.7 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Female Elbow Valved Quick-Connect Fitting\nTube I.D.: 12.7 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q60",
@@ -9656,7 +9656,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q60母端直通带阀快插接头\n适配12.7mm接管内径\nPP材质，非穿板",
-      "en": "Q60母端直通带阀快插接头\\n适配12.7 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nTube I.D.: 12.7 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q60",
@@ -9711,7 +9711,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q60母端直通不带阀快插接头\n适配12.7mm接管内径\nPP材质，非穿板",
-      "en": "Q60母端直通不带阀快插接头\\n适配12.7 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 12.7 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q60",
@@ -9766,7 +9766,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q60公端直通带阀快插接头\n适配19.0mm接管内径\nPP材质，非穿板",
-      "en": "Q60公端直通带阀快插接头\\n适配19.0 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nTube I.D.: 19.0 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q60",
@@ -9821,7 +9821,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q60公端直通不带阀快插接头\n适配19.0mm接管内径\nPP材质，非穿板",
-      "en": "Q60公端直通不带阀快插接头\\n适配19.0 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Male In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 19.0 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q60",
@@ -9876,7 +9876,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q60母端直通带阀快插接头\n适配19.0mm接管内径\nPP材质，可穿板",
-      "en": "Q60母端直通带阀快插接头\\n适配19.0 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nTube I.D.: 19.0 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q60",
@@ -9931,7 +9931,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q60母端直通不带阀快插接头\n适配19.0mm接管内径\nPP材质，可穿板",
-      "en": "Q60母端直通不带阀快插接头\\n适配19.0 mm螺纹接口\\nPP材质，可穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 19.0 mm\nPP housing | Panel Mount"
     },
     "filters": {
       "filter01": "Q60",
@@ -9986,7 +9986,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q60母端直通带阀快插接头\n适配19.0mm接管内径\nPP材质，非穿板",
-      "en": "Q60母端直通带阀快插接头\\n适配19.0 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nTube I.D.: 19.0 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q60",
@@ -10041,7 +10041,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q60母端直通不带阀快插接头\n适配19.0mm接管内径\nPP材质，非穿板",
-      "en": "Q60母端直通不带阀快插接头\\n适配19.0 mm螺纹接口\\nPP材质，非穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nTube I.D.: 19.0 mm\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q60",
@@ -10096,7 +10096,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q60公端直通带阀快插接头\n适配1/2\"-14 NPT螺纹接口\nPP材质，非穿板",
-      "en": "Q60公端直通带阀快插接头\\n适配1/2\"-14 NPT螺纹接口\\nPP材质，非穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nThread: 1/2\\\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q60",
@@ -10151,7 +10151,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q60公端直通不带阀快插接头\n适配1/2\"-14 NPT螺纹接口\nPP材质，非穿板",
-      "en": "Q60公端直通不带阀快插接头\\n适配1/2\"-14 NPT螺纹接口\\nPP材质，非穿板"
+      "en": "Male In-line Non-Valved Quick-Connect Fitting\nThread: 1/2\\\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q60",
@@ -10206,7 +10206,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q60母端直通带阀快插接头\n适配1/2\"-14 NPT螺纹接口\nPP材质，非穿板",
-      "en": "Q60母端直通带阀快插接头\\n适配1/2\"-14 NPT螺纹接口\\nPP材质，非穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nThread: 1/2\\\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q60",
@@ -10261,7 +10261,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q60母端直通不带阀快插接头\n适配1/2\"-14 NPT螺纹接口\nPP材质，非穿板",
-      "en": "Q60母端直通不带阀快插接头\\n适配1/2\"-14 NPT螺纹接口\\nPP材质，非穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nThread: 1/2\\\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q60",
@@ -10316,7 +10316,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q60公端直通带阀快插接头\n适配3/8\"-18 NPT螺纹接口\nPP材质，非穿板",
-      "en": "Q60公端直通带阀快插接头\\n适配3/8\"-18 NPT螺纹接口\\nPP材质，非穿板"
+      "en": "Male In-line Valved Quick-Connect Fitting\nThread: 3/8\\\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q60",
@@ -10371,7 +10371,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q60公端直通不带阀快插接头\n适配3/8\"-18 NPT螺纹接口\nPP材质，非穿板",
-      "en": "Q60公端直通不带阀快插接头\\n适配3/8\"-18 NPT螺纹接口\\nPP材质，非穿板"
+      "en": "Male In-line Non-Valved Quick-Connect Fitting\nThread: 3/8\\\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q60",
@@ -10426,7 +10426,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q60母端直通带阀快插接头\n适配3/8\"-18 NPT螺纹接口\nPP材质，非穿板",
-      "en": "Q60母端直通带阀快插接头\\n适配3/8\"-18 NPT螺纹接口\\nPP材质，非穿板"
+      "en": "Female In-line Valved Quick-Connect Fitting\nThread: 3/8\\\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q60",
@@ -10481,7 +10481,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "cardSubtitle": {
       "zh": "Q60母端直通不带阀快插接头\n适配3/8\"-18 NPT螺纹接口\nPP材质，非穿板",
-      "en": "Q60母端直通不带阀快插接头\\n适配3/8\"-18 NPT螺纹接口\\nPP材质，非穿板"
+      "en": "Female In-line Non-Valved Quick-Connect Fitting\nThread: 3/8\\\nPP housing | Non-Panel Mount"
     },
     "filters": {
       "filter01": "Q60",

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -416,6 +416,36 @@ const DEFAULT_CATEGORIES: ProductSelectionCategoryItem[] = [
   },
 ];
 
+const ENGLISH_CATEGORY_DESCRIPTIONS: Record<string, string> = {
+  pumps:
+    "Select a base configuration by pump type, series, volume range, and key operating requirements.",
+  valves:
+    "Select a base configuration by valve type, series, flow path, positions, and materials.",
+  needles:
+    "Select a base configuration by probe or needle type, dimensions, and application.",
+  fittings:
+    "Select a base configuration by fitting type, tube size, thread, and material.",
+  tubing:
+    "Select a base configuration by tubing material, outside diameter, inside diameter, and application requirements.",
+  control:
+    "Select a base configuration by control method, drive type, and system interface.",
+};
+
+function getCategoryDescription(
+  locale: SelectionLocale,
+  categoryId: string,
+  fallback: string
+) {
+  if (locale === "en") {
+    return (
+      ENGLISH_CATEGORY_DESCRIPTIONS[categoryId] ||
+      "Select a base configuration by product type, series, and key requirements."
+    );
+  }
+
+  return fallback;
+}
+
 function getText(
   locale: SelectionLocale,
   value: Partial<Record<SelectionLocale, string>> | undefined,
@@ -443,9 +473,12 @@ function getCategoryItems(locale: SelectionLocale) {
       return {
         id: item.id,
         label: getText(locale, item.label, fallback?.label || item.id),
-        description:
+        description: getCategoryDescription(
+          locale,
+          item.id,
           fallback?.description ||
-          "根据产品类型、系列和筛选条件选择基础配置。",
+            "根据产品类型、系列和筛选条件选择基础配置。"
+        ),
         sortOrder: item.sortOrder,
       };
     });
@@ -453,7 +486,15 @@ function getCategoryItems(locale: SelectionLocale) {
   const categoryMap = new Map<string, ProductSelectionCategoryItem>();
 
   DEFAULT_CATEGORIES.forEach((category) => {
-    categoryMap.set(category.id, category);
+    categoryMap.set(category.id, {
+      ...category,
+      label: getTaxonomyLabel(locale, category.id),
+      description: getCategoryDescription(
+        locale,
+        category.id,
+        String(category.description || "")
+      ),
+    });
   });
 
   generatedCategories.forEach((category) => {
@@ -907,6 +948,63 @@ function normalizeFinalProductDetailHref(
 
 
 function makeDetailHref(product: ProductSelectionProduct) {
+  /* FEMALE_THREAD_ADAPTER_DETAIL_HREF_START */
+  /*
+   * 内螺纹互转接头详情地址：
+   *
+   * /products/fittings/female-thread-adapters/[detailSlug]
+   *
+   * 避免错误回退为：
+   * /products/fittings/[detailSlug]
+   */
+  if (
+    String(
+      (product as any)?.categoryId ||
+      ""
+    ).trim() === "fittings" &&
+    String(
+      (product as any)?.productTypeId ||
+      ""
+    ).trim() === "female-thread-adapters"
+  ) {
+    const existingHref = String(
+      (product as any)?.detailHref ||
+      (product as any)?.href ||
+      ""
+    ).trim();
+
+    if (
+      existingHref.includes(
+        "/products/fittings/female-thread-adapters/"
+      )
+    ) {
+      return existingHref;
+    }
+
+    const rawSlug = String(
+      (product as any)?.detailSlug ||
+      (product as any)?.routeSlug ||
+      (product as any)?.slug ||
+      ""
+    ).trim();
+
+    const detailSlug =
+      rawSlug
+        .split("/")
+        .filter(Boolean)
+        .pop()
+        ?.trim()
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "") ||
+      "";
+
+    return detailSlug
+      ? `/products/fittings/female-thread-adapters/${detailSlug}`
+      : "/products/fittings/female-thread-adapters";
+  }
+  /* FEMALE_THREAD_ADAPTER_DETAIL_HREF_END */
+
 
   /* FILTER_CHECK_VALVE_DETAIL_HREF_START */
 
@@ -1346,7 +1444,82 @@ function makeDetailHref(product: ProductSelectionProduct) {
 
   /* THREAD_TO_BARBED_DETAIL_HREF_END */
 
-  /* BULKHEAD_BARBED_DETAIL_HREF_START */
+  
+    /* LUER_FITTING_DETAIL_HREF_START */
+
+    /*
+     * 鲁尔接头详情链接：
+     *
+     * 正确结构：
+     * /products/fittings/luer-fittings/[detailSlug]
+     *
+     * 不允许回退成：
+     * /products/fittings/[detailSlug]
+     */
+    {
+      const rawProductTypeId =
+        String(
+          (product as any)
+            ?.productTypeId ||
+          ""
+        ).trim();
+
+      const rawExistingHref =
+        String(
+          (product as any)
+            ?.detailHref ||
+          (product as any)
+            ?.href ||
+          ""
+        ).trim();
+
+      const isLuerFitting =
+        rawProductTypeId ===
+          "luer-fittings" ||
+        rawExistingHref.includes(
+          "/products/fittings/luer-fittings"
+        );
+
+      if (isLuerFitting) {
+        if (
+          rawExistingHref.includes(
+            "/products/fittings/luer-fittings/"
+          )
+        ) {
+          return rawExistingHref;
+        }
+
+        const rawDetailSlug =
+          String(
+            (product as any)
+              ?.detailSlug ||
+            (product as any)
+              ?.routeSlug ||
+            (product as any)
+              ?.slug ||
+            ""
+          )
+            .trim()
+            .toLowerCase()
+            .replace(
+              /[^a-z0-9]+/g,
+              "-"
+            )
+            .replace(
+              /^-+|-+$/g,
+              ""
+            );
+
+        return rawDetailSlug
+          ? "/products/fittings/luer-fittings/" +
+              rawDetailSlug
+          : "/products/fittings/luer-fittings";
+      }
+    }
+
+    /* LUER_FITTING_DETAIL_HREF_END */
+
+/* BULKHEAD_BARBED_DETAIL_HREF_START */
 
   /*
    * 穿板倒刺接头与六角螺母具体型号详情链接。
@@ -2214,8 +2387,66 @@ function getProductFilterGroupLayout(
   productTypeId: string,
   filterKey: SelectionFilterKey
 ): ProductSelectionFilterGroup["layout"] | undefined {
+  /* FEMALE_THREAD_ADAPTER_STRUCTURE_TWO_COLUMN_START */
+  /*
+   * Female Thread Adapters：
+   * Structure 中的 2-Way / 3-Way 两个一排。
+   */
+  if (
+    productTypeId ===
+      "female-thread-adapters" &&
+    filterKey ===
+      "filter01"
+  ) {
+    return "two";
+  }
+  /* FEMALE_THREAD_ADAPTER_STRUCTURE_TWO_COLUMN_END */
 
-  /* BULKHEAD_BARBED_TWO_COLUMN_LAYOUT_START */
+
+  /* QUICK_CONNECT_SERIES_TWO_COLUMN_START */
+/*
+ * 快插接头两列布局：
+ *
+ * filter01 = Product Series
+ * Q20 / Q40 / Q60 两个一排
+ *
+ * filter04 = Mounting
+ * Panel Mount / Non-Panel Mount 两个一排
+ */
+if (
+  productTypeId ===
+    "quick-connect-fittings" &&
+  (
+    filterKey ===
+      "filter01" ||
+    filterKey ===
+      "filter04"
+  )
+) {
+  return "two";
+}
+/* QUICK_CONNECT_SERIES_TWO_COLUMN_END */
+
+
+        /* BARBED_FITTING_TWO_COLUMN_LAYOUT_START */
+      /*
+       * 倒刺接头：
+       * filter05 = Body Material
+       * filter06 = Color
+       * 两组筛选均显示为两个一排。
+       */
+      if (
+        productTypeId === "barbed-fittings" &&
+        (
+          filterKey === "filter05" ||
+          filterKey === "filter06"
+        )
+      ) {
+        return "two";
+      }
+      /* BARBED_FITTING_TWO_COLUMN_LAYOUT_END */
+
+      /* BULKHEAD_BARBED_TWO_COLUMN_LAYOUT_START */
   if (productTypeId === "bulkhead-barbed-fittings") {
     return "two";
   }
@@ -2554,7 +2785,13 @@ const [searchKeyword, setSearchKeyword] = useState("");
       );
     }
 
-    return options;
+    return options.map((option) => ({
+      ...option,
+      label: getLocalizedFilterOptionLabel(
+        option.label || option.value,
+        locale
+      ),
+    }));
 
     /* FITTING_PRODUCT_TYPE_OPTIONS_SORT_END */
   }, [activeCategoryId, categoryProducts, locale]);
@@ -2789,7 +3026,8 @@ const [searchKeyword, setSearchKeyword] = useState("");
    */
   const activeProductTypeIntro = getProductTypeIntroByIds(
     activeCategoryId,
-    activeProductTypeId
+    activeProductTypeId,
+    locale
   );
   const selectedTagItems = useMemo<ProductSelectionSelectedTag[]>(() => {
     const tags: ProductSelectionSelectedTag[] = [];
@@ -3042,7 +3280,9 @@ const [searchKeyword, setSearchKeyword] = useState("");
     );
 
     if (productTypeHref) {
-      router.push(productTypeHref);
+      router.push(
+        localizeProductDetailHref(productTypeHref)
+      );
       return;
     }
 
@@ -3125,7 +3365,9 @@ const [searchKeyword, setSearchKeyword] = useState("");
        */
       const nextHref = isAlreadySelected
         ? productTypeHref
-        : seriesHref;
+          ? localizeProductDetailHref(productTypeHref)
+          : productTypeHref
+        : localizeProductDetailHref(seriesHref);
 
       if (nextHref) {
         const normalizedHref = nextHref.endsWith("/")
@@ -3946,7 +4188,9 @@ function isFilterOptionActive(
       );
 
       if (productTypeHref) {
-        router.push(productTypeHref);
+        router.push(
+          localizeProductDetailHref(productTypeHref)
+        );
         return;
       }
     }
@@ -3989,6 +4233,20 @@ function isFilterOptionActive(
     setSearchKeyword("");
     setMobileOpenFilterGroups(getDefaultMobileOpenFilterGroups(firstProductTypeId));
   }
+
+  function localizeProductDetailHref(href: string) {
+    if (
+      locale !== "en" ||
+      !href.startsWith("/") ||
+      href.startsWith(`/${locale}/`) ||
+      href === `/${locale}`
+    ) {
+      return href;
+    }
+
+    return `/${locale}${href}`;
+  }
+
   function createProductCartItem(
     product: ProductSelectionProduct
   ): SelectionCartItemInput {
@@ -3996,7 +4254,7 @@ function isFilterOptionActive(
 
     return {
       sourceType: "pump-selection",
-      sourceLabel: "产品中心",
+      sourceLabel: locale === "zh" ? "产品中心" : "Products",
       productName: getTaxonomyLabel(locale, String(product.productTypeId || "")),
       productCode: product.productId,
       foreachModel: title,
@@ -4036,7 +4294,7 @@ function isFilterOptionActive(
 
         return undefined;
       })(),
-      detailHref: makeDetailHref(product),
+      detailHref: localizeProductDetailHref(makeDetailHref(product)),
     };
   }
 
@@ -4175,7 +4433,14 @@ function isFilterOptionActive(
                     getSubtitle={(product) =>
                       getText(locale, product.cardSubtitle, "")
                     }
-                    getDetailHref={(product) => normalizeFinalProductDetailHref(product, makeDetailHref(product))}
+                    getDetailHref={(product) =>
+                      localizeProductDetailHref(
+                        normalizeFinalProductDetailHref(
+                          product,
+                          makeDetailHref(product)
+                        )
+                      )
+                    }
                     onToggleList={toggleProductInList}
                   />
 

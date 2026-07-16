@@ -86,10 +86,13 @@ export interface CompanyInfoFormValue {
    组件参数
 ========================================================= */
 interface CompanyInfoRequestModalProps {
+  /* 当前界面语言；未传时保持现有中文行为 */
+  locale?: string;
+
   /* 是否打开弹窗 */
   isOpen: boolean;
 
-  /* 
+  /*
      弹窗顶部小标题
 
      说明：
@@ -183,6 +186,7 @@ function getEmailCodeRemainingSeconds() {
    通用公司信息申请弹窗
 ========================================================= */
 export default function CompanyInfoRequestModal({
+  locale = "zh-CN",
   isOpen,
   eyebrow,
   title,
@@ -197,6 +201,8 @@ export default function CompanyInfoRequestModal({
   onClose,
   onSubmitPreview,
 }: CompanyInfoRequestModalProps) {
+  const isEnglish = locale === "en";
+
   const [formValue, setFormValue] =
     useState<CompanyInfoFormValue>(EMPTY_FORM_VALUE);
 
@@ -289,7 +295,11 @@ export default function CompanyInfoRequestModal({
   ========================================================= */
   function handleSendEmailCode() {
     if (!formValue.email.trim()) {
-      setFormError("请先填写邮箱，再发送验证码。");
+      setFormError(
+        isEnglish
+          ? "Enter your email address before requesting a verification code."
+          : "请先填写邮箱，再发送验证码。",
+      );
       return;
     }
 
@@ -324,17 +334,29 @@ export default function CompanyInfoRequestModal({
 
     if (enableEmailVerification) {
       if (!hasEmailCodeSent) {
-        setFormError("请先发送邮箱验证码。");
+        setFormError(
+          isEnglish
+            ? "Request an email verification code first."
+            : "请先发送邮箱验证码。",
+        );
         return;
       }
 
       if (!formValue.emailCode.trim()) {
-        setFormError("请输入邮箱验证码。");
+        setFormError(
+          isEnglish
+            ? "Enter the email verification code."
+            : "请输入邮箱验证码。",
+        );
         return;
       }
 
       if (formValue.emailCode.trim() !== TEST_EMAIL_CODE) {
-        setFormError("测试版验证码不正确，请输入 123456。");
+        setFormError(
+          isEnglish
+            ? "The test verification code is incorrect. Enter 123456."
+            : "测试版验证码不正确，请输入 123456。",
+        );
         return;
       }
     }
@@ -349,14 +371,14 @@ export default function CompanyInfoRequestModal({
       <button
         className={styles.modalMask}
         type="button"
-        aria-label="关闭弹窗"
+        aria-label={isEnglish ? "Close dialog" : "关闭弹窗"}
         onClick={onClose}
       />
 
       <section className={styles.modal} aria-label={title}>
         <div className={styles.modalHead}>
           <div>
-            {/* 
+            {/*
               顶部小标题
               说明：
               1. 有 eyebrow 时才显示
@@ -368,7 +390,11 @@ export default function CompanyInfoRequestModal({
             <p>{description}</p>
           </div>
 
-          <button type="button" onClick={onClose} aria-label="关闭弹窗">
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label={isEnglish ? "Close dialog" : "关闭弹窗"}
+          >
             ×
           </button>
         </div>
@@ -381,7 +407,7 @@ export default function CompanyInfoRequestModal({
 
             <div className={styles.successActions}>
               <button type="button" onClick={onClose}>
-                返回清单
+                {isEnglish ? "Return to List" : "返回清单"}
               </button>
             </div>
           </div>
@@ -389,14 +415,15 @@ export default function CompanyInfoRequestModal({
           <form className={styles.form} onSubmit={handleSubmit}>
             <div className={styles.summary}>
               <div>
-                <span>申请项目</span>
+                <span>{isEnglish ? "Requested Items" : "申请项目"}</span>
                 <strong>{items.length}</strong>
-                <em>项</em>
+                <em>{isEnglish ? "items" : "项"}</em>
               </div>
 
               <p>
-                请确认需要申请的资料项目，并填写公司信息。当前邮箱验证码为测试版，
-                不会发送真实邮件。
+                {isEnglish
+                  ? "Confirm the requested resources and enter your company information. The current verification code is for front-end testing and no email will be sent."
+                  : "请确认需要申请的资料项目，并填写公司信息。当前邮箱验证码为测试版，不会发送真实邮件。"}
               </p>
             </div>
 
@@ -436,13 +463,17 @@ export default function CompanyInfoRequestModal({
 
             <div className={styles.fields}>
               <label className={styles.emailField}>
-                <span>邮箱 *</span>
+                <span>{isEnglish ? "Email *" : "邮箱 *"}</span>
 
                 <div className={styles.emailInputGroup}>
                   <input
                     type="email"
                     value={formValue.email}
-                    placeholder="请输入接收资料的邮箱"
+                    placeholder={
+                      isEnglish
+                        ? "Email address for receiving the requested files"
+                        : "请输入接收资料的邮箱"
+                    }
                     required={hasItems}
                     onChange={(event) => {
                       updateField("email", event.target.value);
@@ -457,25 +488,36 @@ export default function CompanyInfoRequestModal({
                     {emailCodeCountdown > 0
                       ? `${emailCodeCountdown}s`
                       : hasEmailCodeSent
-                        ? "重新发送"
-                        : "发送验证码"}
+                        ? isEnglish
+                          ? "Resend"
+                          : "重新发送"
+                        : isEnglish
+                          ? "Send Code"
+                          : "发送验证码"}
                   </button>
                 </div>
 
                 {enableEmailVerification && hasEmailCodeSent ? (
                   <em className={styles.emailCodeHint}>
-                    测试验证码：{TEST_EMAIL_CODE}
+                    {isEnglish ? "Test code: " : "测试验证码："}
+                    {TEST_EMAIL_CODE}
                   </em>
                 ) : null}
               </label>
 
               {enableEmailVerification ? (
                 <label>
-                  <span>邮箱验证码 *</span>
+                  <span>
+                    {isEnglish ? "Email Verification Code *" : "邮箱验证码 *"}
+                  </span>
                   <input
                     type="text"
                     value={formValue.emailCode}
-                    placeholder="请输入邮箱验证码"
+                    placeholder={
+                      isEnglish
+                        ? "Enter the email verification code"
+                        : "请输入邮箱验证码"
+                    }
                     required={hasItems}
                     onChange={(event) => {
                       updateField("emailCode", event.target.value);
@@ -485,11 +527,13 @@ export default function CompanyInfoRequestModal({
               ) : null}
 
               <label>
-                <span>姓名 *</span>
+                <span>{isEnglish ? "Name *" : "姓名 *"}</span>
                 <input
                   type="text"
                   value={formValue.name}
-                  placeholder="请输入联系人姓名"
+                  placeholder={
+                    isEnglish ? "Contact name" : "请输入联系人姓名"
+                  }
                   required={hasItems}
                   onChange={(event) => {
                     updateField("name", event.target.value);
@@ -498,11 +542,13 @@ export default function CompanyInfoRequestModal({
               </label>
 
               <label>
-                <span>公司名称 *</span>
+                <span>{isEnglish ? "Company *" : "公司名称 *"}</span>
                 <input
                   type="text"
                   value={formValue.company}
-                  placeholder="请输入公司名称"
+                  placeholder={
+                    isEnglish ? "Company name" : "请输入公司名称"
+                  }
                   required={hasItems}
                   onChange={(event) => {
                     updateField("company", event.target.value);
@@ -511,11 +557,13 @@ export default function CompanyInfoRequestModal({
               </label>
 
               <label>
-                <span>国家 / 地区</span>
+                <span>{isEnglish ? "Country / Region" : "国家 / 地区"}</span>
                 <input
                   type="text"
                   value={formValue.country}
-                  placeholder="请输入国家或地区"
+                  placeholder={
+                    isEnglish ? "Country or region" : "请输入国家或地区"
+                  }
                   onChange={(event) => {
                     updateField("country", event.target.value);
                   }}
@@ -523,11 +571,15 @@ export default function CompanyInfoRequestModal({
               </label>
 
               <label>
-                <span>电话 / WhatsApp</span>
+                <span>{isEnglish ? "Phone / WhatsApp" : "电话 / WhatsApp"}</span>
                 <input
                   type="text"
                   value={formValue.phone}
-                  placeholder="选填，便于进一步沟通"
+                  placeholder={
+                    isEnglish
+                      ? "Optional contact number"
+                      : "选填，便于进一步沟通"
+                  }
                   onChange={(event) => {
                     updateField("phone", event.target.value);
                   }}
@@ -535,10 +587,14 @@ export default function CompanyInfoRequestModal({
               </label>
 
               <label className={styles.fieldWide}>
-                <span>备注说明</span>
+                <span>{isEnglish ? "Notes" : "备注说明"}</span>
                 <textarea
                   value={formValue.message}
-                  placeholder="可补充应用场景、资料用途或其他需求"
+                  placeholder={
+                    isEnglish
+                      ? "Application, intended use, or other requirements"
+                      : "可补充应用场景、资料用途或其他需求"
+                  }
                   rows={4}
                   onChange={(event) => {
                     updateField("message", event.target.value);
@@ -565,7 +621,7 @@ export default function CompanyInfoRequestModal({
                 type="button"
                 onClick={onClose}
               >
-                返回清单
+                {isEnglish ? "Return to List" : "返回清单"}
               </button>
             </div>
           </form>
@@ -573,4 +629,4 @@ export default function CompanyInfoRequestModal({
       </section>
     </div>
   );
-} 
+}

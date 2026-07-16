@@ -5,10 +5,13 @@
 
 import type { Metadata } from "next";
 
+import ApplicationEnglishClient from "@/components/applications/ApplicationEnglishClient";
 import SyntheticBiologyApplicationClient from "@/components/applications/synthetic-biology/SyntheticBiologyApplicationClient";
+import { createEnglishApplicationData } from "@/data/applications/application-english";
 import { getSyntheticBiologyApplicationPageData } from "@/services/applications/synthetic-biology/getSyntheticBiologyApplicationPageData";
 
 import "@/app/applications/synthetic-biology/synthetic-biology-application.css";
+import "@/app/applications/ivd/ivd-application.css";
 
 const ENABLED_LOCALES = ["en", "es", "fr", "ko", "ru"] as const;
 
@@ -33,6 +36,14 @@ export default async function SyntheticBiologyApplicationLocalePage({
 }: SyntheticBiologyApplicationLocalePageProps) {
   const { locale } = await params;
   const data = getSyntheticBiologyApplicationPageData(locale);
+
+  if (locale === "en") {
+    return (
+      <ApplicationEnglishClient
+        data={createEnglishApplicationData("synthetic-biology", data)}
+      />
+    );
+  }
 
   return <SyntheticBiologyApplicationClient data={data} />;
 }

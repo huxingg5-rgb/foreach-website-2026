@@ -12,6 +12,7 @@ type HomeCompanyVideoProps = { // 定义 HomeCompanyVideo 组件接收的参数�
   videoAriaLabel: string; // 视频区域的无障碍说明文字，方便浏览器和搜索引擎理解
   videoPlayAriaLabel: string; // 播放按钮的无障碍说明文字
   posterAlt: string; // 视频封面图片的 alt 文字，方便 SEO 和无障碍识别
+  fallbackText?: string; // 浏览器无法播放视频时显示的多语言提示
 }; // HomeCompanyVideoProps 参数类型定义结束
 
 export default function HomeCompanyVideo({ // 定义并导出 HomeCompanyVideo 公司视频组件
@@ -20,6 +21,7 @@ export default function HomeCompanyVideo({ // 定义并导出 HomeCompanyVideo �
   videoAriaLabel, // 接收视频区域无障碍说明
   videoPlayAriaLabel, // 接收播放按钮无障碍说明
   posterAlt, // 接收视频封面图片 alt 文案
+  fallbackText = "当前浏览器不支持视频播放。",
 }: HomeCompanyVideoProps) { // HomeCompanyVideo 组件参数定义结束
   const companyVideoRef = useRef<HTMLVideoElement | null>(null); // 创建 video 标签引用，用于点击封面后控制视频播放
 
@@ -59,7 +61,7 @@ export default function HomeCompanyVideo({ // 定义并导出 HomeCompanyVideo �
           }
         }}
       >
-        当前浏览器不支持视频播放。
+        {fallbackText}
       </video>
 
       {/* 公司介绍视频封面层 */}

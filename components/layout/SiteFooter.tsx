@@ -1,9 +1,10 @@
 ﻿"use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-import type { LocaleCode } from "@/lib/i18n";
+import { getLocaleFromPathname, type LocaleCode } from "@/lib/i18n";
 
 import {
   getSiteFooterHref,
@@ -11,18 +12,57 @@ import {
   siteFooterData,
 } from "@/data/site-footer";
 
+import styles from "./SiteFooterSocial.module.css";
+
 type SiteFooterProps = {
-  locale: LocaleCode;
+  locale?: LocaleCode;
 };
 
+const englishSocialLinks = [
+  {
+    key: "linkedin",
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/102748876/",
+    icon: "/images/social-media/international/linkedin.svg",
+  },
+  {
+    key: "youtube",
+    label: "YouTube",
+    href: "https://www.youtube.com/@ForeachFluid",
+    icon: "/images/social-media/international/youtube.svg",
+  },
+  {
+    key: "facebook",
+    label: "Facebook",
+    href: "https://www.facebook.com/people/Foreach-Technology/61586049132811/",
+    icon: "/images/social-media/international/facebook.svg",
+  },
+  {
+    key: "instagram",
+    label: "Instagram",
+    href: "https://www.instagram.com/foreachtechnology/",
+    icon: "/images/social-media/international/instagram.svg",
+  },
+  {
+    key: "x",
+    label: "X",
+    href: "https://x.com/ForeachFluid",
+    icon: "/images/social-media/international/x.svg",
+  },
+] as const;
+
 export default function SiteFooter({ locale }: SiteFooterProps) {
+  const pathname = usePathname();
+  const activeLocale = locale ?? getLocaleFromPathname(pathname);
+  const showEnglishSocialLinks = activeLocale === "en";
   const [openColumn, setOpenColumn] = useState("");
 
-  const mapHref = getSiteFooterHref(siteFooterData.mapHref, locale);
-  const emailHref = getSiteFooterHref(siteFooterData.emailHref, locale);
-  const phoneHref = getSiteFooterHref(siteFooterData.phoneHref, locale);
-  const icpText = getSiteFooterText(siteFooterData.icp, locale);
-  const icpHref = getSiteFooterHref(siteFooterData.icpHref, locale);
+  const mapHref = getSiteFooterHref(siteFooterData.mapHref, activeLocale);
+  const emailHref = getSiteFooterHref(siteFooterData.emailHref, activeLocale);
+  const phoneHref = getSiteFooterHref(siteFooterData.phoneHref, activeLocale);
+  const icpText = getSiteFooterText(siteFooterData.icp, activeLocale);
+  const icpHref = getSiteFooterHref(siteFooterData.icpHref, activeLocale);
+  const labelSeparator = activeLocale === "zh-CN" ? "：" : ": ";
 
   return (
     <footer className="site-footer">
@@ -31,7 +71,7 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
           <div className="site-footer__nav-wrap">
             {siteFooterData.columns.map((column) => {
               const isOpen = openColumn === column.key;
-              const columnTitle = getSiteFooterText(column.title, locale);
+              const columnTitle = getSiteFooterText(column.title, activeLocale);
 
               return (
                 <nav
@@ -51,8 +91,8 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
                   <ul className="site-footer__list">
                     {column.links.map((link) => (
                       <li key={link.key}>
-                        <Link href={getSiteFooterHref(link.href, locale)}>
-                          {getSiteFooterText(link.label, locale)}
+                        <Link href={getSiteFooterHref(link.href, activeLocale)}>
+                          {getSiteFooterText(link.label, activeLocale)}
                         </Link>
                       </li>
                     ))}
@@ -65,63 +105,105 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
           <div className="site-footer__right">
             <div className="site-footer__contact">
               <p className="site-footer__company">
-                {getSiteFooterText(siteFooterData.companyName, locale)}
+                {getSiteFooterText(siteFooterData.companyName, activeLocale)}
               </p>
 
               <p className="site-footer__contact-text">
-                {getSiteFooterText(siteFooterData.addressLabel, locale)}：
-                {getSiteFooterText(siteFooterData.address, locale)}
+                {getSiteFooterText(siteFooterData.addressLabel, activeLocale)}
+                {labelSeparator}
+                {getSiteFooterText(siteFooterData.address, activeLocale)}
                 <a
                   className="site-footer__map-link"
                   href={mapHref}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {getSiteFooterText(siteFooterData.mapLabel, locale)}
+                  {getSiteFooterText(siteFooterData.mapLabel, activeLocale)}
                 </a>
               </p>
 
               <p className="site-footer__contact-text">
-                {getSiteFooterText(siteFooterData.emailLabel, locale)}：
+                {getSiteFooterText(siteFooterData.emailLabel, activeLocale)}
+                {labelSeparator}
                 <a className="site-footer__contact-link" href={emailHref}>
-                  {getSiteFooterText(siteFooterData.email, locale)}
+                  {getSiteFooterText(siteFooterData.email, activeLocale)}
                 </a>
               </p>
 
               <p className="site-footer__contact-text">
-                {getSiteFooterText(siteFooterData.phoneLabel, locale)}：
+                {getSiteFooterText(siteFooterData.phoneLabel, activeLocale)}
+                {labelSeparator}
                 <a className="site-footer__contact-link" href={phoneHref}>
-                  {getSiteFooterText(siteFooterData.phone, locale)}
+                  {getSiteFooterText(siteFooterData.phone, activeLocale)}
                 </a>
               </p>
             </div>
 
-            <div className="site-footer__qrcode-area">
-              <div className="site-footer__qr-row">
-                {siteFooterData.qrCodes.map((item) => {
-                  const label = getSiteFooterText(item.label, locale);
-                  const imageSrc = item.image ? getSiteFooterHref(item.image, locale) : "";
-
-                  return (
-                    <div className="site-footer__qrcode-item" key={item.key}>
-                      <div className="site-footer__qrcode-box">
-                        {imageSrc ? (
-                          <img src={imageSrc} alt={`${label}二维码`} loading="lazy" />
-                        ) : (
-                          <>
-                            {label}
-                            <br />
-                            {getSiteFooterText(siteFooterData.qrCodePlaceholder, locale)}
-                          </>
-                        )}
-                      </div>
-
-                      <span className="site-footer__qrcode-label">{label}</span>
-                    </div>
-                  );
-                })}
+            {showEnglishSocialLinks ? (
+              <div
+                className={"site-footer__qrcode-area " + styles.socialArea}
+              >
+                <div
+                  className={styles.socialRow}
+                  aria-label="FOREACH social media"
+                >
+                  {englishSocialLinks.map((item) => (
+                    <a
+                      className={styles.socialLink}
+                      href={item.href}
+                      key={item.key}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={"Visit FOREACH on " + item.label}
+                      title={item.label}
+                    >
+                      <img
+                        className={styles.socialIcon}
+                        src={item.icon}
+                        alt=""
+                        loading="lazy"
+                        aria-hidden="true"
+                      />
+                    </a>
+                  ))}
+                </div>
               </div>
-            </div>
+            ) : (
+              <div className="site-footer__qrcode-area">
+                <div className="site-footer__qr-row">
+                  {siteFooterData.qrCodes.map((item) => {
+                    const label = getSiteFooterText(item.label, activeLocale);
+                    const imageSrc = item.image ? getSiteFooterHref(item.image, activeLocale) : "";
+  
+                    return (
+                      <div className="site-footer__qrcode-item" key={item.key}>
+                        <div className="site-footer__qrcode-box">
+                          {imageSrc ? (
+                            <img
+                              src={imageSrc}
+                              alt={
+                                activeLocale === "zh-CN"
+                                  ? `${label}二维码`
+                                  : `${label} QR code`
+                              }
+                              loading="lazy"
+                            />
+                          ) : (
+                            <>
+                              {label}
+                              <br />
+                              {getSiteFooterText(siteFooterData.qrCodePlaceholder, activeLocale)}
+                            </>
+                          )}
+                        </div>
+  
+                        <span className="site-footer__qrcode-label">{label}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -142,10 +224,11 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
               </p>
             ) : null}
 
-            <p>{getSiteFooterText(siteFooterData.copyright, locale)}</p>
+            <p>{getSiteFooterText(siteFooterData.copyright, activeLocale)}</p>
           </div>
         </div>
       </div>
     </footer>
   );
 }
+

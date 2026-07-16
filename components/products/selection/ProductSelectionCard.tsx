@@ -150,6 +150,22 @@ function normalizeCardDetailHref(product: ProductSelectionProductItem, href: str
   return rawHref || "/products";
 }
 
+function localizeCardDetailHref(
+  href: string,
+  locale: SelectionLocale,
+): string {
+  if (
+    locale === "zh" ||
+    !href.startsWith("/") ||
+    href.startsWith(`/${locale}/`) ||
+    href === `/${locale}`
+  ) {
+    return href;
+  }
+
+  return `/${locale}${href}`;
+}
+
 
 export default function ProductSelectionCard({
   product,
@@ -167,7 +183,10 @@ export default function ProductSelectionCard({
   const cardText = CARD_TEXT[locale];
   const safeTitle = toDisplayText(title) || product.productId;
   const safeSubtitle = toDisplayText(subtitle);
-  const safeDetailHref = normalizeCardDetailHref(product, detailHref);
+  const safeDetailHref = localizeCardDetailHref(
+    normalizeCardDetailHref(product, detailHref),
+    locale,
+  );
   const cardSpecs = getProductCardSpecs(product, locale)
     .map((spec) => toDisplayText(spec))
     .filter(Boolean);

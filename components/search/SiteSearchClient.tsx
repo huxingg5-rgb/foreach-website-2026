@@ -50,6 +50,106 @@ const MODULE_TEXT: Record<
   },
 };
 
+const MODULE_TEXT_EN: typeof MODULE_TEXT = {
+  products: {
+    title: "Products",
+    description: "Product models, product codes, names, and detail pages.",
+    empty: "No matching products were found.",
+  },
+  "compatible-models": {
+    title: "Compatible Model Search",
+    description: "Find the corresponding FOREACH product for an existing model.",
+    empty: "No matching compatible models were found.",
+  },
+  datasheets: {
+    title: "Datasheets",
+    description: "Product datasheets, document titles, and related keywords.",
+    empty: "No matching datasheets were found.",
+  },
+};
+
+const ENGLISH_RESULT_DESCRIPTIONS: Record<SiteSearchModule, string> = {
+  products: "View product details and selection information.",
+  "compatible-models": "View the corresponding FOREACH compatible product.",
+  datasheets: "View or download the available product datasheet.",
+};
+
+function containsHan(value: string): boolean {
+  return /[\u3400-\u9fff]/.test(value);
+}
+
+function getPathLabel(href: string): string {
+  const segment = href
+    .split(/[?#]/)[0]
+    .split("/")
+    .filter(Boolean)
+    .at(-1);
+
+  if (!segment) {
+    return "FOREACH";
+  }
+
+  return decodeURIComponent(segment)
+    .split(/[-_]+/)
+    .filter(Boolean)
+    .map((word) =>
+      /^[a-z]+$/.test(word)
+        ? word.charAt(0).toUpperCase() + word.slice(1)
+        : word.toUpperCase()
+    )
+    .join(" ");
+}
+
+function getLocalizedResultHref(href: string, locale: string): string {
+  if (
+    !href.startsWith("/") ||
+    href.startsWith("/downloads/") ||
+    locale === "zh-CN" ||
+    locale === "zh"
+  ) {
+    return href;
+  }
+
+  const firstSegment = href.split("/").filter(Boolean)[0];
+
+  if (["en", "es", "fr", "ko", "ru"].includes(firstSegment ?? "")) {
+    return href;
+  }
+
+  return `/${locale}${href}`;
+}
+
+function getEnglishSearchItem(item: SiteSearchItem): SiteSearchItem {
+  const title = !containsHan(item.title)
+    ? item.title
+    : item.model || item.productCode || getPathLabel(item.href);
+  const subtitle = item.subtitle && !containsHan(item.subtitle)
+    ? item.subtitle
+    : item.model && item.model !== title
+      ? `Model: ${item.model}`
+      : undefined;
+
+  return {
+    ...item,
+    title,
+    subtitle,
+    description: ENGLISH_RESULT_DESCRIPTIONS[item.module],
+    href: getLocalizedResultHref(item.href, "en"),
+    actionLabel:
+      item.module === "datasheets"
+        ? "View Datasheet"
+        : item.module === "compatible-models"
+          ? "View Compatible Product"
+          : "View Product",
+    keywords: [
+      ...item.keywords,
+      title,
+      item.href.split(/[/?#_-]+/).join(" "),
+      MODULE_TEXT_EN[item.module].title,
+    ],
+  };
+}
+
 function normalize(value: string): string {
   return value
     .trim()
@@ -96,7 +196,13 @@ function getLocalizedSearchPath(locale: string) {
     : `/${locale}/search`;
 }
 
-function SearchResultItem({ item }: { item: SiteSearchItem }) {
+function SearchResultItem({
+  item,
+  isEnglish,
+}: {
+  item: SiteSearchItem;
+  isEnglish: boolean;
+}) {
   return (
     <a className="site-search-result-card" href={item.href}>
       {item.image ? (
@@ -128,7 +234,7 @@ function SearchResultItem({ item }: { item: SiteSearchItem }) {
         ) : null}
 
         <span className="site-search-result-action">
-          {item.actionLabel ?? "查看详情"}
+          {item.actionLabel ?? (isEnglish ? "View Details" : "查看详情")}
           <span aria-hidden="true">→</span>
         </span>
       </div>
@@ -144,6 +250,8 @@ export default function SiteSearchClient({
 
   const queryFromUrl = searchParams.get("q")?.trim() ?? "";
   const [inputValue, setInputValue] = useState(queryFromUrl);
+  const isEnglish = locale === "en";
+  const moduleText = isEnglish ? MODULE_TEXT_EN : MODULE_TEXT;
 
   const groupedResults = useMemo(() => {
     const result: Record<SiteSearchModule, SiteSearchItem[]> = {
@@ -154,7 +262,10 @@ export default function SiteSearchClient({
 
     if (!queryFromUrl) return result;
 
-    for (const item of siteSearchIndex) {
+    for (const sourceItem of siteSearchIndex) {
+      const item = isEnglish
+        ? getEnglishSearchItem(sourceItem)
+        : sourceItem;
       const score = scoreItem(item, queryFromUrl);
       if (score <= 0) continue;
 
@@ -164,19 +275,19 @@ export default function SiteSearchClient({
       } as SiteSearchItem & { __score: number });
     }
 
-    for (const module of MODULE_ORDER) {
-      result[module] = result[module]
+    for (const moduleId of MODULE_ORDER) {
+      result[moduleId] = result[moduleId]
         .sort((a, b) => {
           const scoreA = (a as SiteSearchItem & { __score: number }).__score;
           const scoreB = (b as SiteSearchItem & { __score: number }).__score;
 
-          return scoreB - scoreA || a.title.localeCompare(b.title, "zh-CN");
+          return scoreB - scoreA || a.title.localeCompare(b.title, isEnglish ? "en" : "zh-CN");
         })
         .slice(0, 24);
     }
 
     return result;
-  }, [queryFromUrl]);
+  }, [isEnglish, queryFromUrl]);
 
   const totalResults = MODULE_ORDER.reduce((sum, module) => {
     return sum + groupedResults[module].length;
@@ -200,22 +311,28 @@ export default function SiteSearchClient({
       <section className="site-search-hero">
         <div className="site-search-container">
           <p className="site-search-eyebrow">FOREACH SEARCH</p>
-          <h1>全站搜索</h1>
+          <h1>{isEnglish ? "Site Search" : "全站搜索"}</h1>
           <p>
-            搜索产品、型号、兼容型号和规格书，并在对应模块中查看结果。
+            {isEnglish
+              ? "Search products, models, compatible models, and datasheets across the FOREACH website."
+              : "搜索产品、型号、兼容型号和规格书，并在对应模块中查看结果。"}
           </p>
 
           <form className="site-search-form" onSubmit={handleSubmit}>
             <input
               type="search"
               value={inputValue}
-              placeholder="搜索产品、型号、兼容型号或规格书"
-              aria-label="全站搜索"
+              placeholder={
+                isEnglish
+                  ? "Search products, models, compatible models, or datasheets"
+                  : "搜索产品、型号、兼容型号或规格书"
+              }
+              aria-label={isEnglish ? "Site search" : "全站搜索"}
               onChange={(event) => {
                 setInputValue(event.target.value);
               }}
             />
-            <button type="submit">搜索</button>
+            <button type="submit">{isEnglish ? "Search" : "搜索"}</button>
           </form>
         </div>
       </section>
@@ -223,33 +340,43 @@ export default function SiteSearchClient({
       <div className="site-search-container site-search-content">
         {!queryFromUrl ? (
           <section className="site-search-initial">
-            <h2>请输入搜索关键词</h2>
+            <h2>{isEnglish ? "Enter a search term" : "请输入搜索关键词"}</h2>
             <p>
-              例如：Q2002、PMC1702、柱塞泵、隔膜泵规格书。
+              {isEnglish
+                ? "For example: Q2002, PMC1702, plunger pump, or diaphragm pump datasheet."
+                : "例如：Q2002、PMC1702、柱塞泵、隔膜泵规格书。"}
             </p>
           </section>
         ) : (
           <>
             <div className="site-search-summary">
               <div>
-                <span>搜索关键词</span>
+                <span>{isEnglish ? "Search Term" : "搜索关键词"}</span>
                 <strong>{queryFromUrl}</strong>
               </div>
-              <p>共找到 {totalResults} 条结果</p>
+              <p>
+                {isEnglish
+                  ? `${totalResults} results found`
+                  : `共找到 ${totalResults} 条结果`}
+              </p>
             </div>
 
             {totalResults === 0 ? (
               <section className="site-search-no-result">
-                <h2>没有找到匹配结果</h2>
+                <h2>
+                  {isEnglish ? "No matching results" : "没有找到匹配结果"}
+                </h2>
                 <p>
-                  请检查型号是否完整，或尝试产品名称、系列名称及其他关键词。
+                  {isEnglish
+                    ? "Check the model number or try a product name, series, or another keyword."
+                    : "请检查型号是否完整，或尝试产品名称、系列名称及其他关键词。"}
                 </p>
               </section>
             ) : null}
 
             {MODULE_ORDER.map((module) => {
               const items = groupedResults[module];
-              const text = MODULE_TEXT[module];
+              const text = moduleText[module];
 
               return (
                 <section
@@ -262,7 +389,9 @@ export default function SiteSearchClient({
                       <h2>{text.title}</h2>
                       <p>{text.description}</p>
                     </div>
-                    <span>{items.length} 条</span>
+                    <span>
+                      {isEnglish ? items.length : `${items.length} 条`}
+                    </span>
                   </div>
 
                   {items.length > 0 ? (
@@ -270,6 +399,7 @@ export default function SiteSearchClient({
                       {items.map((item) => (
                         <SearchResultItem
                           item={item}
+                          isEnglish={isEnglish}
                           key={item.id}
                         />
                       ))}

@@ -20,6 +20,7 @@
       app/[locale]/products/pumps/plunger-pumps/[slug]/page.tsx
 ========================================================= */
 
+import type { Metadata } from "next";
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
 
@@ -43,6 +44,22 @@ export function generateStaticParams() {
   return PRODUCT_LOCALES.map((locale) => ({
     locale,
   }));
+}
+
+export async function generateMetadata({
+  params,
+}: ProductsLocalePageProps): Promise<Metadata> {
+  const { locale } = await params;
+
+  if (locale !== "en") {
+    return {};
+  }
+
+  return {
+    title: "Products | FOREACH",
+    description:
+      "Explore FOREACH pumps, valves, probes and needles, fittings, tubing, sensors, and control modules for precision fluid handling.",
+  };
 }
 
 export default async function ProductsLocalePage({

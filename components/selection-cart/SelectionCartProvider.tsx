@@ -22,6 +22,9 @@ import {
   useState,
   type ReactNode,
 } from "react";
+import { usePathname } from "next/navigation";
+
+import { getLocaleFromPathname } from "@/lib/i18n";
 
 import type {
   SelectionCartItem,
@@ -129,34 +132,52 @@ function normalizeLegacyFittingItems(rawItems: unknown): SelectionCartItem[] {
 /* =========================================================
    生成复制文本
 ========================================================= */
-function buildCartText(items: SelectionCartItem[]) {
+function buildCartText(
+  items: SelectionCartItem[],
+  isEnglish: boolean,
+) {
   if (items.length === 0) {
-    return "暂无选型产品";
+    return isEnglish
+      ? "No products selected"
+      : "暂无选型产品";
   }
 
   const lines = items.map((item, index) => {
     const isPumpSelection = item.sourceType === "pump-selection";
+    const sourceLabel = isEnglish
+      ? isPumpSelection
+        ? "Products"
+        : "Fitting Replacement Search"
+      : item.sourceLabel;
 
     if (isPumpSelection) {
       return [
         `#${index + 1}`,
-        `来源：${item.sourceLabel}`,
-        `产品类型：${item.productName}`,
-        `产品型号：${item.foreachModel}`,
-        `数量：${item.quantity}`,
-        `2D 图纸：${item.needDrawing ? "需要" : "暂不需要"}`,
+        `${isEnglish ? "Source" : "来源"}: ${sourceLabel}`,
+        `${isEnglish ? "Product Type" : "产品类型"}: ${item.productName}`,
+        `${isEnglish ? "Product Model" : "产品型号"}: ${item.foreachModel}`,
+        `${isEnglish ? "Quantity" : "数量"}: ${item.quantity}`,
+        `${isEnglish ? "2D Drawing" : "2D 图纸"}: ${
+          item.needDrawing
+            ? isEnglish ? "Required" : "需要"
+            : isEnglish ? "Not Required" : "暂不需要"
+        }`,
       ].join("\n");
     }
 
     return [
       `#${index + 1}`,
-      `来源：${item.sourceLabel}`,
-      `产品：${item.productName}`,
-      `商品编码：${item.productCode}`,
-      `恒永达型号：${item.foreachModel}`,
-      `兼容编码：${item.competitorModels.join(" / ") || "-"}`,
-      `数量：${item.quantity}`,
-      `2D 图纸：${item.needDrawing ? "需要" : "暂不需要"}`,
+      `${isEnglish ? "Source" : "来源"}: ${sourceLabel}`,
+      `${isEnglish ? "Product" : "产品"}: ${item.productName}`,
+      `${isEnglish ? "Product Code" : "商品编码"}: ${item.productCode}`,
+      `${isEnglish ? "FOREACH Model" : "恒永达型号"}: ${item.foreachModel}`,
+      `${isEnglish ? "Compatible Models" : "兼容编码"}: ${item.competitorModels.join(" / ") || "-"}`,
+      `${isEnglish ? "Quantity" : "数量"}: ${item.quantity}`,
+      `${isEnglish ? "2D Drawing" : "2D 图纸"}: ${
+        item.needDrawing
+          ? isEnglish ? "Required" : "需要"
+          : isEnglish ? "Not Required" : "暂不需要"
+      }`,
     ].join("\n");
   });
 
@@ -167,6 +188,9 @@ export function SelectionCartProvider({
 }: {
   children: ReactNode;
 }) {
+  const pathname = usePathname();
+  const isEnglish = getLocaleFromPathname(pathname) === "en";
+
   const [items, setItems] = useState<SelectionCartItem[]>([]);
   const [isOpen, setIsOpen] = useState(false);
   const [hasMounted, setHasMounted] = useState(false);
@@ -281,7 +305,11 @@ export function SelectionCartProvider({
   }
 
   function clearCart() {
-    const confirmed = window.confirm("确认清空当前选型清单？");
+    const confirmed = window.confirm(
+      isEnglish
+        ? "Clear the current product selection list?"
+        : "确认清空当前选型清单？",
+    );
 
     if (!confirmed) return;
 
@@ -324,11 +352,15 @@ export function SelectionCartProvider({
   }
 
   async function copyCartText() {
-    const text = buildCartText(items);
+    const text = buildCartText(items, isEnglish);
 
     try {
       await window.navigator.clipboard.writeText(text);
-      window.alert("清单已复制");
+      window.alert(
+        isEnglish
+          ? "Selection list copied"
+          : "清单已复制",
+      );
     } catch {
       window.alert(text);
     }
@@ -336,11 +368,17 @@ export function SelectionCartProvider({
 
   function generatePdfList() {
     if (items.length === 0) {
-      window.alert("当前清单为空，请先加入产品。");
+      window.alert(
+        isEnglish
+          ? "The selection list is empty. Add a product first."
+          : "当前清单为空，请先加入产品。",
+      );
       return;
     }
 
-    setPrintTime(new Date().toLocaleString());
+    setPrintTime(
+      new Date().toLocaleString(isEnglish ? "en-US" : "zh-CN"),
+    );
 
     window.setTimeout(() => {
       window.print();
@@ -363,7 +401,7 @@ export function SelectionCartProvider({
       generatePdfList,
       printTime,
     };
-  }, [items, isOpen, printTime]);
+  }, [isEnglish, items, isOpen, printTime]);
 
   return (
     <SelectionCartContext.Provider value={contextValue}>

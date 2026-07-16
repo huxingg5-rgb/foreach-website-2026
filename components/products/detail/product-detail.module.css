@@ -2220,3 +2220,61 @@
   color: #ffffff !important;
 }
 /* ===== FOREACH product detail button pressed state END ===== */
+
+/* ENGLISH_DETAIL_GALLERY_COMPACT_ARROWS
+ * 英文详情页左右按钮与缩略图保持在同一行。
+ * 不使用绝对定位，不影响中文详情页。
+ */
+.thumbRow[data-detail-locale="en"] {
+  position: static;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  width: max-content;
+  max-width: 100%;
+  min-height: 0;
+  padding: 0;
+  overflow: visible;
+}
+
+.thumbRow[data-detail-locale="en"] > .thumbArrow:first-child,
+.thumbRow[data-detail-locale="en"] > .thumbArrow:last-child {
+  position: static !important;
+  inset: auto !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  margin: 0 !important;
+  line-height: 1;
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform: none !important;
+  pointer-events: auto;
+}
+/* ENGLISH_DETAIL_GALLERY_COMPACT_ARROWS_END */
+
+/* ENGLISH_DETAIL_GALLERY_RIGHT_ARROW_POSITION
+ * 英文详情页：
+ * 左箭头与缩略图保持原位置，
+ * 右箭头移动到图库区域右侧。
+ */
+.thumbRow[data-detail-locale="en"] {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+}
+
+.thumbRow[data-detail-locale="en"] > .thumbArrow:last-child {
+  margin-left: auto !important;
+  margin-right: 36px !important;
+}
+/* ENGLISH_DETAIL_GALLERY_RIGHT_ARROW_POSITION_END */

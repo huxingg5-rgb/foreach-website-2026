@@ -21,8 +21,9 @@ export function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
-  title: "流阻计算器｜恒永达",
-  description: "管内流动阻尼计算工具，支持多流体、动态行数、双向计算和低雷诺数自动修正。",
+  title: "Fluid Resistance Calculator | FOREACH",
+  description:
+    "Calculate pressure drop or flow rate for multi-segment fluid paths with tubing, valves, fittings and other resistance elements.",
 };
 
 function isSupportedLocale(locale: string): locale is SupportedLocale {
@@ -50,26 +51,28 @@ export default async function FluidResistanceIntlPage({
         }}
       >
         <div className="technicalArticlesHero__inner">
-          <h1 className={`technicalArticlesHero__title ${calculatorStyles.heroTitle}`}>管内流动阻尼计算工具 V2.1</h1>
+          <h1 className={`technicalArticlesHero__title ${calculatorStyles.heroTitle}`}>
+            Flow Resistance Calculator V2.1
+          </h1>
           <p className={`technicalArticlesHero__description ${calculatorStyles.heroDescription}`}>
-            多流体支持 | 动态行数 | 双向计算 | 低雷诺数自动修正
+            Multiple fluids | Dynamic rows | Bidirectional calculation | Low-Reynolds-number correction
           </p>
         </div>
       </section>
       <SiteBreadcrumb
-        ariaLabel="面包屑导航"
+        ariaLabel="Breadcrumb"
         variant="bar"
         items={[
-          { label: "首页", href: prefix },
-          { label: "资源中心", href: `${prefix}/resources/datasheets` },
-          { label: "流阻计算器" },
+          { label: "Home", href: prefix },
+          { label: "Resources", href: `${prefix}/resources` },
+          { label: "Fluid Resistance Calculator" },
         ]}
       />
       <FluidResistanceCalculator locale={locale} />
       <ResourceSupportCta
-        title="需要恒永达协助确认计算结果？"
-        description="如需液路参数复核、产品选型或工程应用支持，请联系我们。恒永达可结合介质、流量、压力、管路及元件参数协助您进一步确认。"
-        buttonText="联系我们"
+        title="Need help reviewing your calculation?"
+        description="Contact FOREACH for fluid-path parameter review, product selection or application support. Our engineers can assess the fluid, flow rate, pressure, tubing and component data with you."
+        buttonText="Contact Us"
         href={`${prefix}/contact`}
       />
     </main>

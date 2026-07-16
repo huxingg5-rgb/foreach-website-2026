@@ -29,7 +29,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "固定公鲁尔芯子\n适配1.6mm内径软管\nPP材质",
-      "en": "固定公鲁尔芯子\n适配1.6mm内径软管\nPP材质"
+      "en": "Male Luer Stationary Lock\nFits 1.6 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔芯子",
@@ -58,7 +58,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "固定公鲁尔芯子\n适配1.6mm内径软管\nPA材质",
-      "en": "固定公鲁尔芯子\n适配1.6mm内径软管\nPA材质"
+      "en": "Male Luer Stationary Lock\nFits 1.6 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔芯子",
@@ -87,7 +87,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "固定公鲁尔芯子\n适配2.4mm内径软管\nPP材质",
-      "en": "固定公鲁尔芯子\n适配2.4mm内径软管\nPP材质"
+      "en": "Male Luer Stationary Lock\nFits 2.4 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔芯子",
@@ -116,7 +116,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "固定公鲁尔芯子\n适配2.4mm内径软管\nPA材质",
-      "en": "固定公鲁尔芯子\n适配2.4mm内径软管\nPA材质"
+      "en": "Male Luer Stationary Lock\nFits 2.4 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔芯子",
@@ -145,7 +145,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "固定公鲁尔芯子\n适配3.2mm内径软管\nPP材质",
-      "en": "固定公鲁尔芯子\n适配3.2mm内径软管\nPP材质"
+      "en": "Male Luer Stationary Lock\nFits 3.2 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔芯子",
@@ -174,7 +174,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "固定公鲁尔芯子\n适配3.2mm内径软管\nPA材质",
-      "en": "固定公鲁尔芯子\n适配3.2mm内径软管\nPA材质"
+      "en": "Male Luer Stationary Lock\nFits 3.2 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔芯子",
@@ -203,7 +203,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转公鲁尔芯子\n适配1.6mm内径软管\nPP材质",
-      "en": "旋转公鲁尔芯子\n适配1.6mm内径软管\nPP材质"
+      "en": "Male Luer Rotating Lock\nFits 1.6 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔芯子",
@@ -232,7 +232,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转公鲁尔芯子\n适配1.6mm内径软管\nPA材质",
-      "en": "旋转公鲁尔芯子\n适配1.6mm内径软管\nPA材质"
+      "en": "Male Luer Rotating Lock\nFits 1.6 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔芯子",
@@ -261,7 +261,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转公鲁尔芯子\n适配1.6mm内径软管\nPVDF材质",
-      "en": "旋转公鲁尔芯子\n适配1.6mm内径软管\nPVDF材质"
+      "en": "Male Luer Rotating Lock\nFits 1.6 mm ID tubing\nPVDF material"
     },
     "filters": {
       "filter01": "公鲁尔芯子",
@@ -290,7 +290,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转公鲁尔芯子\n适配2.4mm内径软管\nPP材质",
-      "en": "旋转公鲁尔芯子\n适配2.4mm内径软管\nPP材质"
+      "en": "Male Luer Rotating Lock\nFits 2.4 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔芯子",
@@ -319,7 +319,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转公鲁尔芯子\n适配2.4mm内径软管\nPA材质",
-      "en": "旋转公鲁尔芯子\n适配2.4mm内径软管\nPA材质"
+      "en": "Male Luer Rotating Lock\nFits 2.4 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔芯子",
@@ -348,7 +348,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转公鲁尔芯子\n适配2.4mm内径软管\nPVDF材质",
-      "en": "旋转公鲁尔芯子\n适配2.4mm内径软管\nPVDF材质"
+      "en": "Male Luer Rotating Lock\nFits 2.4 mm ID tubing\nPVDF material"
     },
     "filters": {
       "filter01": "公鲁尔芯子",
@@ -377,7 +377,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转公鲁尔芯子\n适配3.2mm内径软管\nPP材质",
-      "en": "旋转公鲁尔芯子\n适配3.2mm内径软管\nPP材质"
+      "en": "Male Luer Rotating Lock\nFits 3.2 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔芯子",
@@ -406,7 +406,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转公鲁尔芯子\n适配3.2mm内径软管\nPA材质",
-      "en": "旋转公鲁尔芯子\n适配3.2mm内径软管\nPA材质"
+      "en": "Male Luer Rotating Lock\nFits 3.2 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔芯子",
@@ -435,7 +435,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转公鲁尔芯子\n适配3.2mm内径软管\nPVDF材质",
-      "en": "旋转公鲁尔芯子\n适配3.2mm内径软管\nPVDF材质"
+      "en": "Male Luer Rotating Lock\nFits 3.2 mm ID tubing\nPVDF material"
     },
     "filters": {
       "filter01": "公鲁尔芯子",
@@ -464,7 +464,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配1.6mm内径软管\nPP材质",
-      "en": "旋转锁圈公鲁尔接头\n适配1.6mm内径软管\nPP材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 1.6 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -493,7 +493,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配1.6mm内径软管\nPP材质",
-      "en": "旋转锁圈公鲁尔接头\n适配1.6mm内径软管\nPP材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 1.6 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -522,7 +522,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配1.6mm内径软管\nPP材质",
-      "en": "旋转锁圈公鲁尔接头\n适配1.6mm内径软管\nPP材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 1.6 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -551,7 +551,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配1.6mm内径软管\nPP材质",
-      "en": "旋转锁圈公鲁尔接头\n适配1.6mm内径软管\nPP材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 1.6 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -580,7 +580,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配1.6mm内径软管\nPP材质",
-      "en": "旋转锁圈公鲁尔接头\n适配1.6mm内径软管\nPP材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 1.6 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -609,7 +609,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配1.6mm内径软管\nPP材质",
-      "en": "旋转锁圈公鲁尔接头\n适配1.6mm内径软管\nPP材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 1.6 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -638,7 +638,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配1.6mm内径软管\nPP材质",
-      "en": "旋转锁圈公鲁尔接头\n适配1.6mm内径软管\nPP材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 1.6 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -667,7 +667,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配1.6mm内径软管\nPP材质",
-      "en": "旋转锁圈公鲁尔接头\n适配1.6mm内径软管\nPP材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 1.6 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -696,7 +696,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配2.4mm内径软管\nPP材质",
-      "en": "旋转锁圈公鲁尔接头\n适配2.4mm内径软管\nPP材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 2.4 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -725,7 +725,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配2.4mm内径软管\nPP材质",
-      "en": "旋转锁圈公鲁尔接头\n适配2.4mm内径软管\nPP材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 2.4 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -754,7 +754,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配2.4mm内径软管\nPP材质",
-      "en": "旋转锁圈公鲁尔接头\n适配2.4mm内径软管\nPP材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 2.4 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -783,7 +783,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配2.4mm内径软管\nPP材质",
-      "en": "旋转锁圈公鲁尔接头\n适配2.4mm内径软管\nPP材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 2.4 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -812,7 +812,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配2.4mm内径软管\nPP材质",
-      "en": "旋转锁圈公鲁尔接头\n适配2.4mm内径软管\nPP材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 2.4 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -841,7 +841,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配2.4mm内径软管\nPP材质",
-      "en": "旋转锁圈公鲁尔接头\n适配2.4mm内径软管\nPP材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 2.4 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -870,7 +870,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配2.4mm内径软管\nPP材质",
-      "en": "旋转锁圈公鲁尔接头\n适配2.4mm内径软管\nPP材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 2.4 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -899,7 +899,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配2.4mm内径软管\nPP材质",
-      "en": "旋转锁圈公鲁尔接头\n适配2.4mm内径软管\nPP材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 2.4 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -928,7 +928,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配3.2mm内径软管\nPP材质",
-      "en": "旋转锁圈公鲁尔接头\n适配3.2mm内径软管\nPP材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 3.2 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -957,7 +957,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配3.2mm内径软管\nPP材质",
-      "en": "旋转锁圈公鲁尔接头\n适配3.2mm内径软管\nPP材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 3.2 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -986,7 +986,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配3.2mm内径软管\nPP材质",
-      "en": "旋转锁圈公鲁尔接头\n适配3.2mm内径软管\nPP材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 3.2 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -1015,7 +1015,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配3.2mm内径软管\nPP材质",
-      "en": "旋转锁圈公鲁尔接头\n适配3.2mm内径软管\nPP材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 3.2 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -1044,7 +1044,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配3.2mm内径软管\nPP材质",
-      "en": "旋转锁圈公鲁尔接头\n适配3.2mm内径软管\nPP材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 3.2 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -1073,7 +1073,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配3.2mm内径软管\nPP材质",
-      "en": "旋转锁圈公鲁尔接头\n适配3.2mm内径软管\nPP材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 3.2 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -1102,7 +1102,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配3.2mm内径软管\nPP材质",
-      "en": "旋转锁圈公鲁尔接头\n适配3.2mm内径软管\nPP材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 3.2 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -1131,7 +1131,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配2.4mm内径软管\nPA材质",
-      "en": "旋转锁圈公鲁尔接头\n适配2.4mm内径软管\nPA材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 2.4 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -1160,7 +1160,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配2.4mm内径软管\nPA材质",
-      "en": "旋转锁圈公鲁尔接头\n适配2.4mm内径软管\nPA材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 2.4 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -1189,7 +1189,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配3.2mm内径软管\nPA材质",
-      "en": "旋转锁圈公鲁尔接头\n适配3.2mm内径软管\nPA材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 3.2 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -1218,7 +1218,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配1.6mm内径软管\nPA材质",
-      "en": "旋转锁圈公鲁尔接头\n适配1.6mm内径软管\nPA材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 1.6 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -1247,7 +1247,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配1.6mm内径软管\nPA材质",
-      "en": "旋转锁圈公鲁尔接头\n适配1.6mm内径软管\nPA材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 1.6 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -1276,7 +1276,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配1.6mm内径软管\nPA材质",
-      "en": "旋转锁圈公鲁尔接头\n适配1.6mm内径软管\nPA材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 1.6 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -1305,7 +1305,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配1.6mm内径软管\nPA材质",
-      "en": "旋转锁圈公鲁尔接头\n适配1.6mm内径软管\nPA材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 1.6 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -1334,7 +1334,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配1.6mm内径软管\nPA材质",
-      "en": "旋转锁圈公鲁尔接头\n适配1.6mm内径软管\nPA材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 1.6 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -1363,7 +1363,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配1.6mm内径软管\nPA材质",
-      "en": "旋转锁圈公鲁尔接头\n适配1.6mm内径软管\nPA材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 1.6 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -1392,7 +1392,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配1.6mm内径软管\nPA材质",
-      "en": "旋转锁圈公鲁尔接头\n适配1.6mm内径软管\nPA材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 1.6 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -1421,7 +1421,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配2.4mm内径软管\nPA材质",
-      "en": "旋转锁圈公鲁尔接头\n适配2.4mm内径软管\nPA材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 2.4 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -1450,7 +1450,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配2.4mm内径软管\nPA材质",
-      "en": "旋转锁圈公鲁尔接头\n适配2.4mm内径软管\nPA材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 2.4 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -1479,7 +1479,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配2.4mm内径软管\nPA材质",
-      "en": "旋转锁圈公鲁尔接头\n适配2.4mm内径软管\nPA材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 2.4 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -1508,7 +1508,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配2.4mm内径软管\nPA材质",
-      "en": "旋转锁圈公鲁尔接头\n适配2.4mm内径软管\nPA材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 2.4 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -1537,7 +1537,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配2.4mm内径软管\nPA材质",
-      "en": "旋转锁圈公鲁尔接头\n适配2.4mm内径软管\nPA材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 2.4 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -1566,7 +1566,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配3.2mm内径软管\nPA材质",
-      "en": "旋转锁圈公鲁尔接头\n适配3.2mm内径软管\nPA材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 3.2 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -1595,7 +1595,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配3.2mm内径软管\nPA材质",
-      "en": "旋转锁圈公鲁尔接头\n适配3.2mm内径软管\nPA材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 3.2 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -1624,7 +1624,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配3.2mm内径软管\nPA材质",
-      "en": "旋转锁圈公鲁尔接头\n适配3.2mm内径软管\nPA材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 3.2 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -1653,7 +1653,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配3.2mm内径软管\nPA材质",
-      "en": "旋转锁圈公鲁尔接头\n适配3.2mm内径软管\nPA材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 3.2 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -1682,7 +1682,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配3.2mm内径软管\nPA材质",
-      "en": "旋转锁圈公鲁尔接头\n适配3.2mm内径软管\nPA材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 3.2 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -1711,7 +1711,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配2.4mm内径软管\nPP材质",
-      "en": "旋转锁圈公鲁尔接头\n适配2.4mm内径软管\nPP材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 2.4 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -1740,7 +1740,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配3.2mm内径软管\nPP材质",
-      "en": "旋转锁圈公鲁尔接头\n适配3.2mm内径软管\nPP材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 3.2 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -1769,7 +1769,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配3.2mm内径软管\nPA材质",
-      "en": "旋转锁圈公鲁尔接头\n适配3.2mm内径软管\nPA材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 3.2 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -1798,7 +1798,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "旋转锁圈公鲁尔接头\n适配3.2mm内径软管\nPVDF材质",
-      "en": "旋转锁圈公鲁尔接头\n适配3.2mm内径软管\nPVDF材质"
+      "en": "Male Luer Rotating Lock Ring Fitting\nFits 3.2 mm ID tubing\nPVDF material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -1827,7 +1827,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "固定锁圈公鲁尔接头\n适配1.6mm内径软管\nPP材质",
-      "en": "固定锁圈公鲁尔接头\n适配1.6mm内径软管\nPP材质"
+      "en": "Male Luer Stationary Lock Ring Fitting\nFits 1.6 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -1856,7 +1856,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "固定锁圈公鲁尔接头\n适配2.4mm内径软管\nPP材质",
-      "en": "固定锁圈公鲁尔接头\n适配2.4mm内径软管\nPP材质"
+      "en": "Male Luer Stationary Lock Ring Fitting\nFits 2.4 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -1885,7 +1885,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "固定锁圈公鲁尔接头\n适配3.2mm内径软管\nPP材质",
-      "en": "固定锁圈公鲁尔接头\n适配3.2mm内径软管\nPP材质"
+      "en": "Male Luer Stationary Lock Ring Fitting\nFits 3.2 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -1914,7 +1914,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "固定锁圈公鲁尔接头\n适配3.2mm内径软管\nPP材质",
-      "en": "固定锁圈公鲁尔接头\n适配3.2mm内径软管\nPP材质"
+      "en": "Male Luer Stationary Lock Ring Fitting\nFits 3.2 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -1943,7 +1943,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "固定锁圈公鲁尔接头\n适配3.2mm内径软管\nPP材质",
-      "en": "固定锁圈公鲁尔接头\n适配3.2mm内径软管\nPP材质"
+      "en": "Male Luer Stationary Lock Ring Fitting\nFits 3.2 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -1972,7 +1972,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "固定锁圈公鲁尔接头\n适配1.6mm内径软管\nPP材质",
-      "en": "固定锁圈公鲁尔接头\n适配1.6mm内径软管\nPP材质"
+      "en": "Male Luer Stationary Lock Ring Fitting\nFits 1.6 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -2001,7 +2001,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "固定锁圈公鲁尔接头\n适配1.6mm内径软管\nPP材质",
-      "en": "固定锁圈公鲁尔接头\n适配1.6mm内径软管\nPP材质"
+      "en": "Male Luer Stationary Lock Ring Fitting\nFits 1.6 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -2030,7 +2030,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "固定锁圈公鲁尔接头\n适配1.6mm内径软管\nPP材质",
-      "en": "固定锁圈公鲁尔接头\n适配1.6mm内径软管\nPP材质"
+      "en": "Male Luer Stationary Lock Ring Fitting\nFits 1.6 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -2059,7 +2059,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "固定锁圈公鲁尔接头\n适配1.6mm内径软管\nPP材质",
-      "en": "固定锁圈公鲁尔接头\n适配1.6mm内径软管\nPP材质"
+      "en": "Male Luer Stationary Lock Ring Fitting\nFits 1.6 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -2088,7 +2088,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "固定锁圈公鲁尔接头\n适配1.6mm内径软管\nPP材质",
-      "en": "固定锁圈公鲁尔接头\n适配1.6mm内径软管\nPP材质"
+      "en": "Male Luer Stationary Lock Ring Fitting\nFits 1.6 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -2117,7 +2117,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "固定锁圈公鲁尔接头\n适配1.6mm内径软管\nPP材质",
-      "en": "固定锁圈公鲁尔接头\n适配1.6mm内径软管\nPP材质"
+      "en": "Male Luer Stationary Lock Ring Fitting\nFits 1.6 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -2146,7 +2146,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "固定锁圈公鲁尔接头\n适配1.6mm内径软管\nPP材质",
-      "en": "固定锁圈公鲁尔接头\n适配1.6mm内径软管\nPP材质"
+      "en": "Male Luer Stationary Lock Ring Fitting\nFits 1.6 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -2175,7 +2175,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "固定锁圈公鲁尔接头\n适配2.4mm内径软管\nPP材质",
-      "en": "固定锁圈公鲁尔接头\n适配2.4mm内径软管\nPP材质"
+      "en": "Male Luer Stationary Lock Ring Fitting\nFits 2.4 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -2204,7 +2204,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "固定锁圈公鲁尔接头\n适配2.4mm内径软管\nPP材质",
-      "en": "固定锁圈公鲁尔接头\n适配2.4mm内径软管\nPP材质"
+      "en": "Male Luer Stationary Lock Ring Fitting\nFits 2.4 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -2233,7 +2233,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "固定锁圈公鲁尔接头\n适配2.4mm内径软管\nPP材质",
-      "en": "固定锁圈公鲁尔接头\n适配2.4mm内径软管\nPP材质"
+      "en": "Male Luer Stationary Lock Ring Fitting\nFits 2.4 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -2262,7 +2262,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "固定锁圈公鲁尔接头\n适配2.4mm内径软管\nPP材质",
-      "en": "固定锁圈公鲁尔接头\n适配2.4mm内径软管\nPP材质"
+      "en": "Male Luer Stationary Lock Ring Fitting\nFits 2.4 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -2291,7 +2291,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "固定锁圈公鲁尔接头\n适配2.4mm内径软管\nPP材质",
-      "en": "固定锁圈公鲁尔接头\n适配2.4mm内径软管\nPP材质"
+      "en": "Male Luer Stationary Lock Ring Fitting\nFits 2.4 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -2320,7 +2320,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "固定锁圈公鲁尔接头\n适配2.4mm内径软管\nPP材质",
-      "en": "固定锁圈公鲁尔接头\n适配2.4mm内径软管\nPP材质"
+      "en": "Male Luer Stationary Lock Ring Fitting\nFits 2.4 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -2349,7 +2349,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "固定锁圈公鲁尔接头\n适配2.4mm内径软管\nPP材质",
-      "en": "固定锁圈公鲁尔接头\n适配2.4mm内径软管\nPP材质"
+      "en": "Male Luer Stationary Lock Ring Fitting\nFits 2.4 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -2378,7 +2378,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "固定锁圈公鲁尔接头\n适配3.2mm内径软管\nPP材质",
-      "en": "固定锁圈公鲁尔接头\n适配3.2mm内径软管\nPP材质"
+      "en": "Male Luer Stationary Lock Ring Fitting\nFits 3.2 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -2407,7 +2407,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "固定锁圈公鲁尔接头\n适配3.2mm内径软管\nPP材质",
-      "en": "固定锁圈公鲁尔接头\n适配3.2mm内径软管\nPP材质"
+      "en": "Male Luer Stationary Lock Ring Fitting\nFits 3.2 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -2436,7 +2436,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "固定锁圈公鲁尔接头\n适配3.2mm内径软管\nPP材质",
-      "en": "固定锁圈公鲁尔接头\n适配3.2mm内径软管\nPP材质"
+      "en": "Male Luer Stationary Lock Ring Fitting\nFits 3.2 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -2465,7 +2465,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "固定锁圈公鲁尔接头\n适配3.2mm内径软管\nPP材质",
-      "en": "固定锁圈公鲁尔接头\n适配3.2mm内径软管\nPP材质"
+      "en": "Male Luer Stationary Lock Ring Fitting\nFits 3.2 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -2494,7 +2494,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "固定锁圈公鲁尔接头\n适配3.2mm内径软管\nPP材质",
-      "en": "固定锁圈公鲁尔接头\n适配3.2mm内径软管\nPP材质"
+      "en": "Male Luer Stationary Lock Ring Fitting\nFits 3.2 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -2523,7 +2523,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "一体式公鲁尔接头\n适配3.2mm内径软管\nPP材质",
-      "en": "一体式公鲁尔接头\n适配3.2mm内径软管\nPP材质"
+      "en": "Male Luer Integral Lock Ring Fitting\nFits 3.2 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -2552,7 +2552,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "一体式公鲁尔接头\n适配3.2mm内径软管\nPA材质",
-      "en": "一体式公鲁尔接头\n适配3.2mm内径软管\nPA材质"
+      "en": "Male Luer Integral Lock Ring Fitting\nFits 3.2 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -2581,7 +2581,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "一体式公鲁尔接头\n适配3.2mm内径软管\nPA材质",
-      "en": "一体式公鲁尔接头\n适配3.2mm内径软管\nPA材质"
+      "en": "Male Luer Integral Lock Ring Fitting\nFits 3.2 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -2610,7 +2610,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "一体式公鲁尔接头\n适配3.2mm内径软管\nPA材质",
-      "en": "一体式公鲁尔接头\n适配3.2mm内径软管\nPA材质"
+      "en": "Male Luer Integral Lock Ring Fitting\nFits 3.2 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -2639,7 +2639,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "一体式公鲁尔接头\n适配3.2mm内径软管\nPA材质",
-      "en": "一体式公鲁尔接头\n适配3.2mm内径软管\nPA材质"
+      "en": "Male Luer Integral Lock Ring Fitting\nFits 3.2 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -2668,7 +2668,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "一体式公鲁尔接头\n适配3.2mm内径软管\nPA材质",
-      "en": "一体式公鲁尔接头\n适配3.2mm内径软管\nPA材质"
+      "en": "Male Luer Integral Lock Ring Fitting\nFits 3.2 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -2697,7 +2697,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "一体式公鲁尔接头\n适配3.2mm内径软管\nPA材质",
-      "en": "一体式公鲁尔接头\n适配3.2mm内径软管\nPA材质"
+      "en": "Male Luer Integral Lock Ring Fitting\nFits 3.2 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -2726,7 +2726,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "一体式公鲁尔接头\n适配3.2mm内径软管\nPA材质",
-      "en": "一体式公鲁尔接头\n适配3.2mm内径软管\nPA材质"
+      "en": "Male Luer Integral Lock Ring Fitting\nFits 3.2 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -2755,7 +2755,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "一体式公鲁尔接头\n适配3.2mm内径软管\nPP材质",
-      "en": "一体式公鲁尔接头\n适配3.2mm内径软管\nPP材质"
+      "en": "Male Luer Integral Lock Ring Fitting\nFits 3.2 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -2784,7 +2784,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "一体式公鲁尔接头\n适配3.2mm内径软管\nPP材质",
-      "en": "一体式公鲁尔接头\n适配3.2mm内径软管\nPP材质"
+      "en": "Male Luer Integral Lock Ring Fitting\nFits 3.2 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -2813,7 +2813,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "一体式公鲁尔接头\n适配3.2mm内径软管\nPP材质",
-      "en": "一体式公鲁尔接头\n适配3.2mm内径软管\nPP材质"
+      "en": "Male Luer Integral Lock Ring Fitting\nFits 3.2 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -2842,7 +2842,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "一体式公鲁尔接头\n适配3.2mm内径软管\nPP材质",
-      "en": "一体式公鲁尔接头\n适配3.2mm内径软管\nPP材质"
+      "en": "Male Luer Integral Lock Ring Fitting\nFits 3.2 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -2871,7 +2871,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "一体式公鲁尔接头\n适配1.6mm内径软管\nPP材质",
-      "en": "一体式公鲁尔接头\n适配1.6mm内径软管\nPP材质"
+      "en": "Male Luer Integral Lock Ring Fitting\nFits 1.6 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -2900,7 +2900,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "一体式公鲁尔接头\n适配1.6mm内径软管\nPA材质",
-      "en": "一体式公鲁尔接头\n适配1.6mm内径软管\nPA材质"
+      "en": "Male Luer Integral Lock Ring Fitting\nFits 1.6 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -2929,7 +2929,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "一体式公鲁尔接头\n适配1.6mm内径软管\nPA材质",
-      "en": "一体式公鲁尔接头\n适配1.6mm内径软管\nPA材质"
+      "en": "Male Luer Integral Lock Ring Fitting\nFits 1.6 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -2958,7 +2958,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "一体式公鲁尔接头\n适配1.6mm内径软管\nPA材质",
-      "en": "一体式公鲁尔接头\n适配1.6mm内径软管\nPA材质"
+      "en": "Male Luer Integral Lock Ring Fitting\nFits 1.6 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -2987,7 +2987,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "一体式公鲁尔接头\n适配1.6mm内径软管\nPA材质",
-      "en": "一体式公鲁尔接头\n适配1.6mm内径软管\nPA材质"
+      "en": "Male Luer Integral Lock Ring Fitting\nFits 1.6 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -3016,7 +3016,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "一体式公鲁尔接头\n适配1.6mm内径软管\nPA材质",
-      "en": "一体式公鲁尔接头\n适配1.6mm内径软管\nPA材质"
+      "en": "Male Luer Integral Lock Ring Fitting\nFits 1.6 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -3045,7 +3045,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "一体式公鲁尔接头\n适配1.6mm内径软管\nPA材质",
-      "en": "一体式公鲁尔接头\n适配1.6mm内径软管\nPA材质"
+      "en": "Male Luer Integral Lock Ring Fitting\nFits 1.6 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -3074,7 +3074,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "一体式公鲁尔接头\n适配1.6mm内径软管\nPA材质",
-      "en": "一体式公鲁尔接头\n适配1.6mm内径软管\nPA材质"
+      "en": "Male Luer Integral Lock Ring Fitting\nFits 1.6 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -3103,7 +3103,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "一体式公鲁尔接头\n适配2.4mm内径软管\nPP材质",
-      "en": "一体式公鲁尔接头\n适配2.4mm内径软管\nPP材质"
+      "en": "Male Luer Integral Lock Ring Fitting\nFits 2.4 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -3132,7 +3132,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "一体式公鲁尔接头\n适配2.4mm内径软管\nPA材质",
-      "en": "一体式公鲁尔接头\n适配2.4mm内径软管\nPA材质"
+      "en": "Male Luer Integral Lock Ring Fitting\nFits 2.4 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -3161,7 +3161,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "一体式公鲁尔接头\n适配2.4mm内径软管\nPA材质",
-      "en": "一体式公鲁尔接头\n适配2.4mm内径软管\nPA材质"
+      "en": "Male Luer Integral Lock Ring Fitting\nFits 2.4 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -3190,7 +3190,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "一体式公鲁尔接头\n适配2.4mm内径软管\nPA材质",
-      "en": "一体式公鲁尔接头\n适配2.4mm内径软管\nPA材质"
+      "en": "Male Luer Integral Lock Ring Fitting\nFits 2.4 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -3219,7 +3219,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "一体式公鲁尔接头\n适配2.4mm内径软管\nPA材质",
-      "en": "一体式公鲁尔接头\n适配2.4mm内径软管\nPA材质"
+      "en": "Male Luer Integral Lock Ring Fitting\nFits 2.4 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -3248,7 +3248,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "一体式公鲁尔接头\n适配2.4mm内径软管\nPA材质",
-      "en": "一体式公鲁尔接头\n适配2.4mm内径软管\nPA材质"
+      "en": "Male Luer Integral Lock Ring Fitting\nFits 2.4 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -3277,7 +3277,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "一体式公鲁尔接头\n适配2.4mm内径软管\nPA材质",
-      "en": "一体式公鲁尔接头\n适配2.4mm内径软管\nPA材质"
+      "en": "Male Luer Integral Lock Ring Fitting\nFits 2.4 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -3306,7 +3306,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "一体式公鲁尔接头\n适配2.4mm内径软管\nPA材质",
-      "en": "一体式公鲁尔接头\n适配2.4mm内径软管\nPA材质"
+      "en": "Male Luer Integral Lock Ring Fitting\nFits 2.4 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "公鲁尔接头",
@@ -3335,7 +3335,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "母鲁尔接头\n适配1.6mm内径软管\nPP材质",
-      "en": "母鲁尔接头\n适配1.6mm内径软管\nPP材质"
+      "en": "Female Luer Integral Fitting\nFits 1.6 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "母鲁尔接头",
@@ -3364,7 +3364,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "母鲁尔接头\n适配1.6mm内径软管\nPA材质",
-      "en": "母鲁尔接头\n适配1.6mm内径软管\nPA材质"
+      "en": "Female Luer Integral Fitting\nFits 1.6 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "母鲁尔接头",
@@ -3393,7 +3393,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "母鲁尔接头\n适配2.4mm内径软管\nPP材质",
-      "en": "母鲁尔接头\n适配2.4mm内径软管\nPP材质"
+      "en": "Female Luer Integral Fitting\nFits 2.4 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "母鲁尔接头",
@@ -3422,7 +3422,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "母鲁尔接头\n适配2.4mm内径软管\nPA材质",
-      "en": "母鲁尔接头\n适配2.4mm内径软管\nPA材质"
+      "en": "Female Luer Integral Fitting\nFits 2.4 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "母鲁尔接头",
@@ -3451,7 +3451,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "母鲁尔接头\n适配3.2mm内径软管\nPP材质",
-      "en": "母鲁尔接头\n适配3.2mm内径软管\nPP材质"
+      "en": "Female Luer Integral Fitting\nFits 3.2 mm ID tubing\nPP material"
     },
     "filters": {
       "filter01": "母鲁尔接头",
@@ -3480,7 +3480,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "母鲁尔接头\n适配3.2mm内径软管\nPA材质",
-      "en": "母鲁尔接头\n适配3.2mm内径软管\nPA材质"
+      "en": "Female Luer Integral Fitting\nFits 3.2 mm ID tubing\nPA material"
     },
     "filters": {
       "filter01": "母鲁尔接头",
@@ -3509,7 +3509,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "穿板母鲁尔接头\n1/4-28 UNF穿板连接｜适配1.6mm内径软管\nPP材质",
-      "en": "穿板母鲁尔接头\n1/4-28 UNF穿板连接｜适配1.6mm内径软管\nPP材质"
+      "en": "Female Luer Panel Mount Fitting\nPP material\nFits 1.6 mm ID tubing"
     },
     "filters": {
       "filter01": "穿板母鲁尔接头",
@@ -3539,7 +3539,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "穿板母鲁尔接头\n1/4-28 UNF穿板连接｜适配1.6mm内径软管\nPA材质",
-      "en": "穿板母鲁尔接头\n1/4-28 UNF穿板连接｜适配1.6mm内径软管\nPA材质"
+      "en": "Female Luer Panel Mount Fitting\nPA material\nFits 1.6 mm ID tubing"
     },
     "filters": {
       "filter01": "穿板母鲁尔接头",
@@ -3569,7 +3569,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "穿板母鲁尔接头\n1/4-28 UNF穿板连接｜适配2.4mm内径软管\nPP材质",
-      "en": "穿板母鲁尔接头\n1/4-28 UNF穿板连接｜适配2.4mm内径软管\nPP材质"
+      "en": "Female Luer Panel Mount Fitting\nPP material\nFits 2.4 mm ID tubing"
     },
     "filters": {
       "filter01": "穿板母鲁尔接头",
@@ -3599,7 +3599,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "穿板母鲁尔接头\n1/4-28 UNF穿板连接｜适配2.4mm内径软管\nPA材质",
-      "en": "穿板母鲁尔接头\n1/4-28 UNF穿板连接｜适配2.4mm内径软管\nPA材质"
+      "en": "Female Luer Panel Mount Fitting\nPA material\nFits 2.4 mm ID tubing"
     },
     "filters": {
       "filter01": "穿板母鲁尔接头",
@@ -3629,7 +3629,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "穿板母鲁尔接头\n1/4-28 UNF穿板连接｜适配3.2mm内径软管\nPP材质",
-      "en": "穿板母鲁尔接头\n1/4-28 UNF穿板连接｜适配3.2mm内径软管\nPP材质"
+      "en": "Female Luer Panel Mount Fitting\nPP material\nFits 3.2 mm ID tubing"
     },
     "filters": {
       "filter01": "穿板母鲁尔接头",
@@ -3659,7 +3659,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "穿板母鲁尔接头\n1/4-28 UNF穿板连接｜适配3.2mm内径软管\nPVDF材质",
-      "en": "穿板母鲁尔接头\n1/4-28 UNF穿板连接｜适配3.2mm内径软管\nPVDF材质"
+      "en": "Female Luer Panel Mount Fitting\nPVDF material\nFits 3.2 mm ID tubing"
     },
     "filters": {
       "filter01": "穿板母鲁尔接头",
@@ -3689,7 +3689,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "穿板母鲁尔接头\n1/4-28 UNF穿板连接｜适配3.2mm内径软管\nPA材质",
-      "en": "穿板母鲁尔接头\n1/4-28 UNF穿板连接｜适配3.2mm内径软管\nPA材质"
+      "en": "Female Luer Panel Mount Fitting\nPA material\nFits 3.2 mm ID tubing"
     },
     "filters": {
       "filter01": "穿板母鲁尔接头",
@@ -3719,7 +3719,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "鲁尔接头识别色环\n用于鲁尔接头颜色区分\nPP材质｜本色",
-      "en": "鲁尔接头识别色环\n用于鲁尔接头颜色区分\nPP材质｜本色"
+      "en": "Color Coding Ring\nPP material"
     },
     "filters": {
       "filter01": "色环",
@@ -3747,7 +3747,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "鲁尔接头识别色环\n用于鲁尔接头颜色区分\nPA材质｜白色",
-      "en": "鲁尔接头识别色环\n用于鲁尔接头颜色区分\nPA材质｜白色"
+      "en": "Color Coding Ring\nPA material"
     },
     "filters": {
       "filter01": "色环",
@@ -3775,7 +3775,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "鲁尔接头识别色环\n用于鲁尔接头颜色区分\nPA材质｜黑色",
-      "en": "鲁尔接头识别色环\n用于鲁尔接头颜色区分\nPA材质｜黑色"
+      "en": "Color Coding Ring\nPA material"
     },
     "filters": {
       "filter01": "色环",
@@ -3803,7 +3803,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "鲁尔接头识别色环\n用于鲁尔接头颜色区分\nPA材质｜红色",
-      "en": "鲁尔接头识别色环\n用于鲁尔接头颜色区分\nPA材质｜红色"
+      "en": "Color Coding Ring\nPA material"
     },
     "filters": {
       "filter01": "色环",
@@ -3831,7 +3831,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "鲁尔接头识别色环\n用于鲁尔接头颜色区分\nPA材质｜绿色",
-      "en": "鲁尔接头识别色环\n用于鲁尔接头颜色区分\nPA材质｜绿色"
+      "en": "Color Coding Ring\nPA material"
     },
     "filters": {
       "filter01": "色环",
@@ -3859,7 +3859,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "鲁尔接头识别色环\n用于鲁尔接头颜色区分\nPA材质｜蓝色",
-      "en": "鲁尔接头识别色环\n用于鲁尔接头颜色区分\nPA材质｜蓝色"
+      "en": "Color Coding Ring\nPA material"
     },
     "filters": {
       "filter01": "色环",
@@ -3887,7 +3887,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "鲁尔接头识别色环\n用于鲁尔接头颜色区分\nPA材质｜橙色",
-      "en": "鲁尔接头识别色环\n用于鲁尔接头颜色区分\nPA材质｜橙色"
+      "en": "Color Coding Ring\nPA material"
     },
     "filters": {
       "filter01": "色环",
@@ -3915,7 +3915,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "鲁尔接头识别色环\n用于鲁尔接头颜色区分\nPA材质｜黄色",
-      "en": "鲁尔接头识别色环\n用于鲁尔接头颜色区分\nPA材质｜黄色"
+      "en": "Color Coding Ring\nPA material"
     },
     "filters": {
       "filter01": "色环",
@@ -3943,7 +3943,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "鲁尔内螺纹套\n鲁尔内螺纹连接\nPP材质",
-      "en": "鲁尔内螺纹套\n鲁尔内螺纹连接\nPP材质"
+      "en": "Luer Lock Ring\nPP material"
     },
     "filters": {
       "filter01": "鲁尔内螺纹套",
@@ -3971,7 +3971,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "鲁尔内螺纹套\n鲁尔内螺纹连接\nPA材质",
-      "en": "鲁尔内螺纹套\n鲁尔内螺纹连接\nPA材质"
+      "en": "Luer Lock Ring\nPA material"
     },
     "filters": {
       "filter01": "鲁尔内螺纹套",
@@ -3999,7 +3999,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "鲁尔内螺纹套\n鲁尔内螺纹连接\nPA材质",
-      "en": "鲁尔内螺纹套\n鲁尔内螺纹连接\nPA材质"
+      "en": "Luer Lock Ring\nPA material"
     },
     "filters": {
       "filter01": "鲁尔内螺纹套",
@@ -4027,7 +4027,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "鲁尔内螺纹套\n鲁尔内螺纹连接\nPA材质",
-      "en": "鲁尔内螺纹套\n鲁尔内螺纹连接\nPA材质"
+      "en": "Luer Lock Ring\nPA material"
     },
     "filters": {
       "filter01": "鲁尔内螺纹套",
@@ -4055,7 +4055,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "鲁尔内螺纹套\n鲁尔内螺纹连接\nPA材质",
-      "en": "鲁尔内螺纹套\n鲁尔内螺纹连接\nPA材质"
+      "en": "Luer Lock Ring\nPA material"
     },
     "filters": {
       "filter01": "鲁尔内螺纹套",
@@ -4083,7 +4083,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "鲁尔内螺纹套\n鲁尔内螺纹连接\nPA材质",
-      "en": "鲁尔内螺纹套\n鲁尔内螺纹连接\nPA材质"
+      "en": "Luer Lock Ring\nPA material"
     },
     "filters": {
       "filter01": "鲁尔内螺纹套",
@@ -4111,7 +4111,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "鲁尔内螺纹套\n鲁尔内螺纹连接\nPA材质",
-      "en": "鲁尔内螺纹套\n鲁尔内螺纹连接\nPA材质"
+      "en": "Luer Lock Ring\nPA material"
     },
     "filters": {
       "filter01": "鲁尔内螺纹套",
@@ -4139,7 +4139,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "鲁尔内螺纹套\n鲁尔内螺纹连接\nPA材质",
-      "en": "鲁尔内螺纹套\n鲁尔内螺纹连接\nPA材质"
+      "en": "Luer Lock Ring\nPA material"
     },
     "filters": {
       "filter01": "鲁尔内螺纹套",
@@ -4167,7 +4167,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "鲁尔滚花螺母\n1/4-28 UNF螺纹连接\nPP材质",
-      "en": "鲁尔滚花螺母\n1/4-28 UNF螺纹连接\nPP材质"
+      "en": "Panel Mount Lock Nut\nPP material"
     },
     "filters": {
       "filter01": "滚花螺母",
@@ -4196,7 +4196,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "鲁尔滚花螺母\n1/4-28 UNF螺纹连接\nPA材质",
-      "en": "鲁尔滚花螺母\n1/4-28 UNF螺纹连接\nPA材质"
+      "en": "Panel Mount Lock Nut\nPA material"
     },
     "filters": {
       "filter01": "滚花螺母",
@@ -4225,7 +4225,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "鲁尔滚花螺母\n1/4-28 UNF螺纹连接\nPA材质",
-      "en": "鲁尔滚花螺母\n1/4-28 UNF螺纹连接\nPA材质"
+      "en": "Panel Mount Lock Nut\nPA material"
     },
     "filters": {
       "filter01": "滚花螺母",
@@ -4254,7 +4254,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "鲁尔滚花螺母\n1/4-28 UNF螺纹连接\nPA材质",
-      "en": "鲁尔滚花螺母\n1/4-28 UNF螺纹连接\nPA材质"
+      "en": "Panel Mount Lock Nut\nPA material"
     },
     "filters": {
       "filter01": "滚花螺母",
@@ -4283,7 +4283,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "鲁尔滚花螺母\n1/4-28 UNF螺纹连接\nPA材质",
-      "en": "鲁尔滚花螺母\n1/4-28 UNF螺纹连接\nPA材质"
+      "en": "Panel Mount Lock Nut\nPA material"
     },
     "filters": {
       "filter01": "滚花螺母",
@@ -4312,7 +4312,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "鲁尔滚花螺母\n1/4-28 UNF螺纹连接\nPA材质",
-      "en": "鲁尔滚花螺母\n1/4-28 UNF螺纹连接\nPA材质"
+      "en": "Panel Mount Lock Nut\nPA material"
     },
     "filters": {
       "filter01": "滚花螺母",
@@ -4341,7 +4341,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "鲁尔滚花螺母\n1/4-28 UNF螺纹连接\nPA材质",
-      "en": "鲁尔滚花螺母\n1/4-28 UNF螺纹连接\nPA材质"
+      "en": "Panel Mount Lock Nut\nPA material"
     },
     "filters": {
       "filter01": "滚花螺母",
@@ -4370,7 +4370,7 @@ export const luerFittingSelectionProducts:
     },
     "cardSubtitle": {
       "zh": "鲁尔滚花螺母\n1/4-28 UNF螺纹连接\nPA材质",
-      "en": "鲁尔滚花螺母\n1/4-28 UNF螺纹连接\nPA材质"
+      "en": "Panel Mount Lock Nut\nPA material"
     },
     "filters": {
       "filter01": "滚花螺母",
