@@ -1,0 +1,99 @@
+﻿英文规格书正式接入报告
+生成时间：2026-07-16 16:19:39
+
+项目目录：F:\WebsiteProjects\foreach-website-2026
+源目录：H:\01-官网项目\04_资源中心\规格书页面\英文产品规格书
+英文数据：F:\WebsiteProjects\foreach-website-2026\data\resources\datasheets.en.ts
+数据备份：F:\WebsiteProjects\foreach-website-2026\data\resources\datasheets.en.ts.bak_english_datasheets_20260716_161939
+
+已接入 PDF：17
+页面条目：18（含 Probe Series 定制入口）
+
+未接入：HPP、HRV、LLD、TDS、PV、6VMK、SSTP 等未确认或官网不展示的资料。
+
+============================================================
+标题：EA Piston Pump Datasheet
+源文件：H:\01-官网项目\04_资源中心\规格书页面\英文产品规格书\10.120B-柱塞泵\PS-120B-2507-00001_001_en_EA Piston Pump Specification Sheet.pdf
+目标文件：F:\WebsiteProjects\foreach-website-2026\public\downloads\resources\datasheets\en\Pumps\ps-120b-2507-00001-001-en-ea-piston-pump.pdf
+下载地址：/downloads/resources/datasheets/en/Pumps/ps-120b-2507-00001-001-en-ea-piston-pump.pdf
+
+标题：EAS Piston Pump Datasheet
+源文件：H:\01-官网项目\04_资源中心\规格书页面\英文产品规格书\10.120B-柱塞泵\PS-120B-2507-00002_001_en_EAS Piston Pump Specification Sheet.pdf
+目标文件：F:\WebsiteProjects\foreach-website-2026\public\downloads\resources\datasheets\en\Pumps\ps-120b-2507-00002-001-en-eas-piston-pump.pdf
+下载地址：/downloads/resources/datasheets/en/Pumps/ps-120b-2507-00002-001-en-eas-piston-pump.pdf
+
+标题：SM Piston Pump Datasheet
+源文件：H:\01-官网项目\04_资源中心\规格书页面\英文产品规格书\10.120B-柱塞泵\PS-120B-2507-00004_001_en_SM Piston Pump Specification Sheet.pdf
+目标文件：F:\WebsiteProjects\foreach-website-2026\public\downloads\resources\datasheets\en\Pumps\ps-120b-2507-00004-001-en-sm-piston-pump.pdf
+下载地址：/downloads/resources/datasheets/en/Pumps/ps-120b-2507-00004-001-en-sm-piston-pump.pdf
+
+标题：RPL-P6.35 / RPL-P15 Valveless Pump Datasheet
+源文件：H:\01-官网项目\04_资源中心\规格书页面\英文产品规格书\3.121B-无阀泵\PS-121B-2507-00001_001_en_RPL Valveless Pump Specification Sheet.pdf
+目标文件：F:\WebsiteProjects\foreach-website-2026\public\downloads\resources\datasheets\en\Pumps\ps-121b-2507-00001-001-en-rpl-valveless-pump.pdf
+下载地址：/downloads/resources/datasheets/en/Pumps/ps-121b-2507-00001-001-en-rpl-valveless-pump.pdf
+
+标题：SMTP2 / SMTP4 Pipetting Pump Datasheet
+源文件：H:\01-官网项目\04_资源中心\规格书页面\英文产品规格书\5.130A-移液泵\PS-130A-2507-00001_001_en_SMTP Pipetting Pump Specification Sheet.pdf
+目标文件：F:\WebsiteProjects\foreach-website-2026\public\downloads\resources\datasheets\en\Pumps\ps-130a-2507-00001-001-en-smtp2-smtp4-pipetting-pump.pdf
+下载地址：/downloads/resources/datasheets/en/Pumps/ps-130a-2507-00001-001-en-smtp2-smtp4-pipetting-pump.pdf
+
+标题：HLD3 Syringe Pump with Rotary Valve Datasheet
+源文件：H:\01-官网项目\04_资源中心\规格书页面\英文产品规格书\6.130B-注射泵\PS-130B-2507-00001_001_en_HLD3 Syringe Pump Specification Sheet.pdf
+目标文件：F:\WebsiteProjects\foreach-website-2026\public\downloads\resources\datasheets\en\Pumps\ps-130b-2507-00001-001-en-hld3-syringe-pump-rotary-valve.pdf
+下载地址：/downloads/resources/datasheets/en/Pumps/ps-130b-2507-00001-001-en-hld3-syringe-pump-rotary-valve.pdf
+
+标题：HLD6 Syringe Pump with Rotary Valve Datasheet
+源文件：H:\01-官网项目\04_资源中心\规格书页面\英文产品规格书\6.130B-注射泵\PS-130B-2507-00002_001_en_HLD6 Syringe Pump Specification Sheet.pdf
+目标文件：F:\WebsiteProjects\foreach-website-2026\public\downloads\resources\datasheets\en\Pumps\ps-130b-2507-00002-001-en-hld6-syringe-pump-rotary-valve.pdf
+下载地址：/downloads/resources/datasheets/en/Pumps/ps-130b-2507-00002-001-en-hld6-syringe-pump-rotary-valve.pdf
+
+标题：HMD3 Syringe Pump with Solenoid Valve Datasheet
+源文件：H:\01-官网项目\04_资源中心\规格书页面\英文产品规格书\6.130B-注射泵\PS-130B-2507-00003_001_en_HMD3 Syringe Pump Specification Sheet.pdf
+目标文件：F:\WebsiteProjects\foreach-website-2026\public\downloads\resources\datasheets\en\Pumps\ps-130b-2507-00003-001-en-hmd3-syringe-pump-solenoid-valve.pdf
+下载地址：/downloads/resources/datasheets/en/Pumps/ps-130b-2507-00003-001-en-hmd3-syringe-pump-solenoid-valve.pdf
+
+标题：HMD6 Syringe Pump with Solenoid Valve Datasheet
+源文件：H:\01-官网项目\04_资源中心\规格书页面\英文产品规格书\6.130B-注射泵\PS-130B-2507-00004_001_en_HMD6 Syringe Pump Specification Sheet.pdf
+目标文件：F:\WebsiteProjects\foreach-website-2026\public\downloads\resources\datasheets\en\Pumps\ps-130b-2507-00004-001-en-hmd6-syringe-pump-solenoid-valve.pdf
+下载地址：/downloads/resources/datasheets/en/Pumps/ps-130b-2507-00004-001-en-hmd6-syringe-pump-solenoid-valve.pdf
+
+标题：DPL30 Diaphragm Pump Datasheet
+源文件：H:\01-官网项目\04_资源中心\规格书页面\英文产品规格书\7.150B-隔膜泵\PS-150B-2507-00001_001_en_DPL30 Diaphragm Pump Specification Sheet.pdf
+目标文件：F:\WebsiteProjects\foreach-website-2026\public\downloads\resources\datasheets\en\Pumps\ps-150b-2507-00001-001-en-dpl30-diaphragm-pump.pdf
+下载地址：/downloads/resources/datasheets/en/Pumps/ps-150b-2507-00001-001-en-dpl30-diaphragm-pump.pdf
+
+标题：DPL60 Diaphragm Pump Datasheet
+源文件：H:\01-官网项目\04_资源中心\规格书页面\英文产品规格书\7.150B-隔膜泵\PS-150B-2507-00002_001_en_DPL60 Diaphragm Pump Specification Sheet.pdf
+目标文件：F:\WebsiteProjects\foreach-website-2026\public\downloads\resources\datasheets\en\Pumps\ps-150b-2507-00002-001-en-dpl60-diaphragm-pump.pdf
+下载地址：/downloads/resources/datasheets/en/Pumps/ps-150b-2507-00002-001-en-dpl60-diaphragm-pump.pdf
+
+标题：MRV3 Multi-Channel Rotary Valve Datasheet
+源文件：H:\01-官网项目\04_资源中心\规格书页面\英文产品规格书\1.120C-旋转阀\PS-120C-2507-00003_001_en_MRV3 Multi-channel Rotary Valve Specification Sheet.pdf
+目标文件：F:\WebsiteProjects\foreach-website-2026\public\downloads\resources\datasheets\en\Valves\ps-120c-2507-00003-001-en-mrv3-multi-channel-rotary-valve.pdf
+下载地址：/downloads/resources/datasheets/en/Valves/ps-120c-2507-00003-001-en-mrv3-multi-channel-rotary-valve.pdf
+
+标题：HP 2-Position, 6-Port with Vent High-Pressure Valve Datasheet
+源文件：H:\01-官网项目\04_资源中心\规格书页面\英文产品规格书\1.120C-旋转阀\PS-120C-2604-00001_001_en_HP 2-Position, 6-Port with vent High-Pressure Valve Specification Sheet.pdf
+目标文件：F:\WebsiteProjects\foreach-website-2026\public\downloads\resources\datasheets\en\Valves\ps-120c-2604-00001-001-en-hp-2-position-6-port-with-vent-high-pressure-valve.pdf
+下载地址：/downloads/resources/datasheets/en/Valves/ps-120c-2604-00001-001-en-hp-2-position-6-port-with-vent-high-pressure-valve.pdf
+
+标题：6010 Solenoid Valve Datasheet
+源文件：H:\01-官网项目\04_资源中心\规格书页面\英文产品规格书\4.122A-电磁阀\PS-122A-2507-00001_001_en_6010 Solenoid Valve Specification Sheet.pdf
+目标文件：F:\WebsiteProjects\foreach-website-2026\public\downloads\resources\datasheets\en\Valves\ps-122a-2507-00001-001-en-6010-solenoid-valve.pdf
+下载地址：/downloads/resources/datasheets/en/Valves/ps-122a-2507-00001-001-en-6010-solenoid-valve.pdf
+
+标题：Fittings & Tubing Catalog
+源文件：H:\01-官网项目\04_资源中心\规格书页面\英文产品规格书\FITTINGS_AND_TUBING_CATALOGA02.pdf
+目标文件：F:\WebsiteProjects\foreach-website-2026\public\downloads\resources\datasheets\en\Tubing-and-Fittings\fittings-and-tubing-catalog-a02.pdf
+下载地址：/downloads/resources/datasheets/en/Tubing-and-Fittings/fittings-and-tubing-catalog-a02.pdf
+
+标题：ABD Air Bubble Detector Datasheet
+源文件：H:\01-官网项目\04_资源中心\规格书页面\英文产品规格书\8.110B-传感器\PS-110B-2507-00001_001_en_ABD Air Bubble Detector Specification Sheet.pdf
+目标文件：F:\WebsiteProjects\foreach-website-2026\public\downloads\resources\datasheets\en\Smart-Control-Modules\ps-110b-2507-00001-001-en-abd-air-bubble-detector.pdf
+下载地址：/downloads/resources/datasheets/en/Smart-Control-Modules/ps-110b-2507-00001-001-en-abd-air-bubble-detector.pdf
+
+标题：PDM5 Pressure Sensor User Manual
+源文件：H:\01-官网项目\04_资源中心\规格书页面\英文产品规格书\8.110B-传感器\PS-110B-2507-00002_001_en_PDM5 Pressure Sensor Specification Sheet.pdf
+目标文件：F:\WebsiteProjects\foreach-website-2026\public\downloads\resources\datasheets\en\Smart-Control-Modules\ps-110b-2507-00002-001-en-pdm5-pressure-sensor-user-manual.pdf
+下载地址：/downloads/resources/datasheets/en/Smart-Control-Modules/ps-110b-2507-00002-001-en-pdm5-pressure-sensor-user-manual.pdf
+
