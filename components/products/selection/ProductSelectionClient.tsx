@@ -453,7 +453,11 @@ function getText(
 ) {
   if (!value) return fallback;
 
-  return value[locale] || value.zh || value.en || fallback;
+  if (locale === "zh") {
+    return value.zh || value.en || fallback;
+  }
+
+  return value[locale] || value.en || value.zh || fallback;
 }
 
 function getTaxonomyLabel(locale: SelectionLocale, id: string) {
@@ -4236,15 +4240,15 @@ function isFilterOptionActive(
 
   function localizeProductDetailHref(href: string) {
     if (
-      locale !== "en" ||
+      locale === "zh" ||
       !href.startsWith("/") ||
-      href.startsWith(`/${locale}/`) ||
-      href === `/${locale}`
+      href.startsWith("/en/") ||
+      href === "/en"
     ) {
       return href;
     }
 
-    return `/${locale}${href}`;
+    return `/en${href}`;
   }
 
   function createProductCartItem(

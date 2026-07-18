@@ -157,13 +157,13 @@ function localizeCardDetailHref(
   if (
     locale === "zh" ||
     !href.startsWith("/") ||
-    href.startsWith(`/${locale}/`) ||
-    href === `/${locale}`
+    href.startsWith("/en/") ||
+    href === "/en"
   ) {
     return href;
   }
 
-  return `/${locale}${href}`;
+  return `/en${href}`;
 }
 
 

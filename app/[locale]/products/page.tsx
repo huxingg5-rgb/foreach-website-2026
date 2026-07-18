@@ -34,6 +34,34 @@ const PRODUCT_LOCALES = ["en", "es", "fr", "ko", "ru"] as const;
 
 type ProductLocale = (typeof PRODUCT_LOCALES)[number];
 
+const PRODUCT_METADATA: Record<ProductLocale, Metadata> = {
+  en: {
+    title: "Precision Fluid Handling Products | FOREACH",
+    description:
+      "Explore FOREACH pumps, valves, probes and needles, fittings, tubing, sensors, and control modules for precision fluid handling in IVD, analytical instruments, and laboratory automation.",
+  },
+  es: {
+    title: "Productos para el manejo preciso de fluidos | FOREACH",
+    description:
+      "Explore bombas, válvulas, agujas, conectores, tubos, sensores y módulos de control FOREACH para el manejo preciso de fluidos en IVD, instrumentación analítica y automatización de laboratorios.",
+  },
+  fr: {
+    title: "Produits de gestion précise des fluides | FOREACH",
+    description:
+      "Découvrez les pompes, vannes, aiguilles, raccords, tubes, capteurs et modules de commande FOREACH pour la gestion précise des fluides en IVD, instrumentation analytique et automatisation de laboratoire.",
+  },
+  ko: {
+    title: "정밀 유체 제어 제품 | FOREACH",
+    description:
+      "IVD, 분석 장비 및 실험실 자동화를 위한 FOREACH 정밀 유체 제어 펌프, 밸브, 니들, 피팅, 튜브, 센서 및 제어 모듈을 확인하세요.",
+  },
+  ru: {
+    title: "Компоненты для точного управления жидкостями | FOREACH",
+    description:
+      "Ознакомьтесь с насосами, клапанами, иглами, фитингами, трубками, датчиками и модулями управления FOREACH для IVD, аналитических приборов и лабораторной автоматизации.",
+  },
+};
+
 type ProductsLocalePageProps = {
   params: Promise<{
     locale: string;
@@ -51,15 +79,11 @@ export async function generateMetadata({
 }: ProductsLocalePageProps): Promise<Metadata> {
   const { locale } = await params;
 
-  if (locale !== "en") {
+  if (!PRODUCT_LOCALES.includes(locale as ProductLocale)) {
     return {};
   }
 
-  return {
-    title: "Products | FOREACH",
-    description:
-      "Explore FOREACH pumps, valves, probes and needles, fittings, tubing, sensors, and control modules for precision fluid handling.",
-  };
+  return PRODUCT_METADATA[locale as ProductLocale];
 }
 
 export default async function ProductsLocalePage({

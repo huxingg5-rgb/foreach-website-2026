@@ -221,13 +221,29 @@ function t(
 function localizedPath(path: string): LocalizedHref {
   const normalizedPath = path.startsWith("/") ? path : `/${path}`;
 
+  const localizedProductPath = (locale: "es" | "fr" | "ko" | "ru") => {
+    const categoryMatch = normalizedPath.match(
+      /^\/products\/(pumps|valves|tubing|fittings|probes)$/
+    );
+
+    if (categoryMatch) {
+      return `/${locale}/products?category=${categoryMatch[1]}`;
+    }
+
+    if (normalizedPath.startsWith("/products/")) {
+      return `/en${normalizedPath}`;
+    }
+
+    return `/${locale}${normalizedPath === "/" ? "" : normalizedPath}`;
+  };
+
   return {
     "zh-CN": normalizedPath,
     en: `/en${normalizedPath === "/" ? "" : normalizedPath}`,
-    es: `/es${normalizedPath === "/" ? "" : normalizedPath}`,
-    fr: `/fr${normalizedPath === "/" ? "" : normalizedPath}`,
-    ko: `/ko${normalizedPath === "/" ? "" : normalizedPath}`,
-    ru: `/ru${normalizedPath === "/" ? "" : normalizedPath}`,
+    es: localizedProductPath("es"),
+    fr: localizedProductPath("fr"),
+    ko: localizedProductPath("ko"),
+    ru: localizedProductPath("ru"),
   };
 }
 
