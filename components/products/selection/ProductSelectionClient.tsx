@@ -385,6 +385,7 @@ const TARGET_LOCALE_A11Y_TEXT: Partial<
       productTypeOverviewSuffix: string;
       currentPrefix: string;
       paginationAriaLabel: string;
+      barbedPortLabel: string;
     }
   >
 > = {
@@ -393,24 +394,28 @@ const TARGET_LOCALE_A11Y_TEXT: Partial<
     productTypeOverviewSuffix: ": descripción general del tipo de producto",
     currentPrefix: "Actual: ",
     paginationAriaLabel: "Paginación de productos",
+    barbedPortLabel: "Diámetro interior de espiga",
   },
   fr: {
     breadcrumbAriaLabel: "Fil d’Ariane",
     productTypeOverviewSuffix: " : présentation du type de produit",
     currentPrefix: "Sélection actuelle : ",
     paginationAriaLabel: "Pagination des produits",
+    barbedPortLabel: "Diamètre intérieur de cannelure",
   },
   ko: {
     breadcrumbAriaLabel: "이동 경로",
     productTypeOverviewSuffix: " 제품 유형 개요",
     currentPrefix: "현재 선택: ",
     paginationAriaLabel: "제품 페이지 탐색",
+    barbedPortLabel: "바브 내경",
   },
   ru: {
     breadcrumbAriaLabel: "Навигационная цепочка",
     productTypeOverviewSuffix: ": обзор типа продукции",
     currentPrefix: "Текущий выбор: ",
     paginationAriaLabel: "Навигация по страницам продукции",
+    barbedPortLabel: "Внутренний диаметр штуцера",
   },
 };
 
@@ -468,6 +473,300 @@ const ENGLISH_CATEGORY_DESCRIPTIONS: Record<string, string> = {
     "Select a base configuration by control method, drive type, and system interface.",
 };
 
+const TARGET_CATEGORY_DESCRIPTIONS: Record<
+  "es" | "fr" | "ko" | "ru",
+  Record<string, string>
+> = {
+  es: {
+    pumps: "Seleccione una configuración base según el tipo de bomba, la serie, el rango de volumen y los requisitos operativos principales.",
+    valves: "Seleccione una configuración base según el tipo de válvula, la serie, el circuito de flujo, las posiciones y los materiales.",
+    needles: "Seleccione una configuración base según el tipo de sonda o aguja, sus dimensiones y la aplicación.",
+    fittings: "Seleccione una configuración base según el tipo de racor, el diámetro del tubo, la rosca y el material.",
+    tubing: "Seleccione una configuración base según el material del tubo, los diámetros exterior e interior y los requisitos de la aplicación.",
+    control: "Seleccione una configuración base según el método de control, el tipo de accionamiento y la interfaz del sistema.",
+  },
+  fr: {
+    pumps: "Sélectionnez une configuration de base selon le type de pompe, la série, la plage de volume et les principales exigences de fonctionnement.",
+    valves: "Sélectionnez une configuration de base selon le type de vanne, la série, le circuit d'écoulement, le nombre de positions et les matériaux.",
+    needles: "Sélectionnez une configuration de base selon le type de sonde ou d'aiguille, ses dimensions et l'application.",
+    fittings: "Sélectionnez une configuration de base selon le type de raccord, le diamètre du tube, le filetage et le matériau.",
+    tubing: "Sélectionnez une configuration de base selon le matériau du tube, ses diamètres extérieur et intérieur et les exigences de l'application.",
+    control: "Sélectionnez une configuration de base selon le mode de commande, le type d'entraînement et l'interface système.",
+  },
+  ko: {
+    pumps: "펌프 유형, 시리즈, 용량 범위 및 주요 운전 요구 사항에 따라 기본 구성을 선택하십시오.",
+    valves: "밸브 유형, 시리즈, 유로, 포지션 수 및 재질에 따라 기본 구성을 선택하십시오.",
+    needles: "프로브 또는 니들 유형, 치수 및 적용 분야에 따라 기본 구성을 선택하십시오.",
+    fittings: "피팅 유형, 튜브 규격, 나사 및 재질에 따라 기본 구성을 선택하십시오.",
+    tubing: "튜빙 재질, 외경, 내경 및 적용 요구 사항에 따라 기본 구성을 선택하십시오.",
+    control: "제어 방식, 구동 유형 및 시스템 인터페이스에 따라 기본 구성을 선택하십시오.",
+  },
+  ru: {
+    pumps: "Выберите базовую конфигурацию по типу насоса, серии, диапазону объема и основным рабочим требованиям.",
+    valves: "Выберите базовую конфигурацию по типу клапана, серии, схеме потока, числу позиций и материалам.",
+    needles: "Выберите базовую конфигурацию по типу зонда или иглы, размерам и области применения.",
+    fittings: "Выберите базовую конфигурацию по типу фитинга, размеру трубки, резьбе и материалу.",
+    tubing: "Выберите базовую конфигурацию по материалу трубки, наружному и внутреннему диаметрам и требованиям применения.",
+    control: "Выберите базовую конфигурацию по способу управления, типу привода и системному интерфейсу.",
+  },
+};
+
+const TARGET_UI_LABEL_TRANSLATIONS: Record<
+  "es" | "fr" | "ko" | "ru",
+  Record<string, string>
+> = {
+  es: {
+    Pumps: "Bombas",
+    Valves: "Válvulas",
+    Probes: "Sondas",
+    Fittings: "Racores",
+    Tubing: "Tubos",
+    Control: "Control",
+    "Plunger Pump": "Bomba de émbolo",
+    "Diaphragm Pump": "Bomba de diafragma",
+    "Pipette Pump": "Bomba de pipeteo",
+    "Valveless Pump": "Bomba sin válvulas",
+    "Syringe Pump": "Bomba de jeringa",
+    "EA Standard Plunger Pump": "Bomba de émbolo estándar EA",
+    Series: "Serie",
+    Volume: "Volumen",
+    "Pump Head Material": "Material del cabezal de la bomba",
+    "Barbed Fittings": "Racores de espiga",
+    Structure: "Estructura",
+    "Barb 1 ID": "Diámetro interior de espiga 1",
+    "Barb 2 ID": "Diámetro interior de espiga 2",
+    "Barb 3 ID": "Diámetro interior de espiga 3",
+    "Body Material": "Material del cuerpo",
+    Color: "Color",
+    "Bulkhead Barbed Fittings": "Racores de espiga pasamuros",
+    "Product Structure": "Estructura del producto",
+    "Thread Size": "Tamaño de rosca",
+    "Tube ID": "Diámetro interior del tubo",
+    Material: "Material",
+    "Diaphragm Pumps": "Bombas de diafragma",
+    "Pump Type": "Tipo de bomba",
+    "Motor Type": "Tipo de motor",
+    "Flow Rate": "Caudal",
+    Pressure: "Presión",
+    Thread: "Rosca",
+    "Flow Path Diameter": "Diámetro del conducto",
+    "Female Thread Adapters": "Adaptadores de rosca hembra",
+    "Product Type": "Tipo de producto",
+    "Filter Type": "Tipo de filtro",
+    "Filter Media": "Medio filtrante",
+    "Filtration Rating": "Grado de filtración",
+    "Seal Type": "Tipo de sello",
+    "Diaphragm Material": "Material del diafragma",
+    "Tube ID / Thread": "DI del tubo / rosca",
+    "Filters & Check Valves": "Filtros y válvulas de retención",
+    "Product Series": "Serie de producto",
+    "Tube OD": "Diámetro exterior del tubo",
+    "Hard Tube Fittings": "Racores para tubo rígido",
+    "Tube Inner Diameter": "Diámetro interior del tubo",
+    "Luer Fittings": "Racores Luer",
+    "Tube I.D. or Thread": "DI del tubo o rosca",
+    "Male / Female": "Macho / hembra",
+    Mounting: "Montaje",
+    "Valve Configuration": "Configuración de válvula",
+    Shape: "Forma",
+    "Housing Material": "Material de la carcasa",
+    "Quick-connect Fittings": "Racores de conexión rápida",
+    "Thread to Barb Fittings": "Racores de rosca a espiga",
+    "Connection Structure": "Estructura de conexión",
+    "Sealing Method": "Método de sellado",
+    "Tubing ID": "Diámetro interior del tubo",
+  },
+  fr: {
+    Pumps: "Pompes",
+    Valves: "Vannes",
+    Probes: "Sondes",
+    Fittings: "Raccords",
+    Tubing: "Tubes",
+    Control: "Commande",
+    "Plunger Pump": "Pompe à piston",
+    "Diaphragm Pump": "Pompe à membrane",
+    "Pipette Pump": "Pompe de pipetage",
+    "Valveless Pump": "Pompe sans clapet",
+    "Syringe Pump": "Pompe à seringue",
+    "EA Standard Plunger Pump": "Pompe à piston standard EA",
+    Series: "Série",
+    Volume: "Volume",
+    "Pump Head Material": "Matériau de la tête de pompe",
+    "Barbed Fittings": "Raccords cannelés",
+    Structure: "Structure",
+    "Barb 1 ID": "Diamètre intérieur de cannelure 1",
+    "Barb 2 ID": "Diamètre intérieur de cannelure 2",
+    "Barb 3 ID": "Diamètre intérieur de cannelure 3",
+    "Body Material": "Matériau du corps",
+    Color: "Couleur",
+    "Bulkhead Barbed Fittings": "Raccords cannelés traversée de cloison",
+    "Product Structure": "Structure du produit",
+    "Thread Size": "Dimension du filetage",
+    "Tube ID": "Diamètre intérieur du tube",
+    Material: "Matériau",
+    "Diaphragm Pumps": "Pompes à membrane",
+    "Pump Type": "Type de pompe",
+    "Motor Type": "Type de moteur",
+    "Flow Rate": "Débit",
+    Pressure: "Pression",
+    Thread: "Filetage",
+    "Flow Path Diameter": "Diamètre du passage",
+    "Female Thread Adapters": "Adaptateurs à filetage femelle",
+    "Product Type": "Type de produit",
+    "Filter Type": "Type de filtre",
+    "Filter Media": "Média filtrant",
+    "Filtration Rating": "Seuil de filtration",
+    "Seal Type": "Type de joint",
+    "Diaphragm Material": "Matériau de la membrane",
+    "Tube ID / Thread": "DI du tube / filetage",
+    "Filters & Check Valves": "Filtres et clapets anti-retour",
+    "Product Series": "Série de produits",
+    "Tube OD": "Diamètre extérieur du tube",
+    "Hard Tube Fittings": "Raccords pour tubes rigides",
+    "Tube Inner Diameter": "Diamètre intérieur du tube",
+    "Luer Fittings": "Raccords Luer",
+    "Tube I.D. or Thread": "DI du tube ou filetage",
+    "Male / Female": "Mâle / femelle",
+    Mounting: "Montage",
+    "Valve Configuration": "Configuration de vanne",
+    Shape: "Forme",
+    "Housing Material": "Matériau du boîtier",
+    "Quick-connect Fittings": "Raccords rapides",
+    "Thread to Barb Fittings": "Raccords filetés vers cannelure",
+    "Connection Structure": "Structure de raccordement",
+    "Sealing Method": "Méthode d'étanchéité",
+    "Tubing ID": "Diamètre intérieur du tube",
+  },
+  ko: {
+    Pumps: "펌프",
+    Valves: "밸브",
+    Probes: "프로브",
+    Fittings: "피팅",
+    Tubing: "튜빙",
+    Control: "제어",
+    "Plunger Pump": "플런저 펌프",
+    "Diaphragm Pump": "다이어프램 펌프",
+    "Pipette Pump": "피펫팅 펌프",
+    "Valveless Pump": "밸브리스 펌프",
+    "Syringe Pump": "시린지 펌프",
+    "EA Standard Plunger Pump": "EA 표준 플런저 펌프",
+    Series: "시리즈",
+    Volume: "용량",
+    "Pump Head Material": "펌프 헤드 재질",
+    "Barbed Fittings": "바브 피팅",
+    Structure: "구조",
+    "Barb 1 ID": "바브 1 내경",
+    "Barb 2 ID": "바브 2 내경",
+    "Barb 3 ID": "바브 3 내경",
+    "Body Material": "본체 재질",
+    Color: "색상",
+    "Bulkhead Barbed Fittings": "벌크헤드 바브 피팅",
+    "Product Structure": "제품 구조",
+    "Thread Size": "나사 규격",
+    "Tube ID": "튜브 내경",
+    Material: "재질",
+    "Diaphragm Pumps": "다이어프램 펌프",
+    "Pump Type": "펌프 유형",
+    "Motor Type": "모터 유형",
+    "Flow Rate": "유량",
+    Pressure: "압력",
+    Thread: "나사",
+    "Flow Path Diameter": "유로 직경",
+    "Female Thread Adapters": "암나사 어댑터",
+    "Product Type": "제품 유형",
+    "Filter Type": "필터 유형",
+    "Filter Media": "필터 매체",
+    "Filtration Rating": "여과 정밀도",
+    "Seal Type": "씰 유형",
+    "Diaphragm Material": "다이어프램 재질",
+    "Tube ID / Thread": "튜브 내경 / 나사",
+    "Filters & Check Valves": "필터 및 체크 밸브",
+    "Product Series": "제품 시리즈",
+    "Tube OD": "튜브 외경",
+    "Hard Tube Fittings": "경질 튜브 피팅",
+    "Tube Inner Diameter": "튜브 내경",
+    "Luer Fittings": "루어 피팅",
+    "Tube I.D. or Thread": "튜브 내경 또는 나사",
+    "Male / Female": "수형 / 암형",
+    Mounting: "장착 방식",
+    "Valve Configuration": "밸브 구성",
+    Shape: "형상",
+    "Housing Material": "하우징 재질",
+    "Quick-connect Fittings": "퀵 커넥트 피팅",
+    "Thread to Barb Fittings": "나사-바브 피팅",
+    "Connection Structure": "연결 구조",
+    "Sealing Method": "밀봉 방식",
+    "Tubing ID": "튜빙 내경",
+  },
+  ru: {
+    Pumps: "Насосы",
+    Valves: "Клапаны",
+    Probes: "Зонды",
+    Fittings: "Фитинги",
+    Tubing: "Трубки",
+    Control: "Управление",
+    "Plunger Pump": "Плунжерный насос",
+    "Diaphragm Pump": "Мембранный насос",
+    "Pipette Pump": "Пипетирующий насос",
+    "Valveless Pump": "Бесклапанный насос",
+    "Syringe Pump": "Шприцевой насос",
+    "EA Standard Plunger Pump": "Стандартный плунжерный насос EA",
+    Series: "Серия",
+    Volume: "Объем",
+    "Pump Head Material": "Материал головки насоса",
+    "Barbed Fittings": "Штуцерные фитинги",
+    Structure: "Конструкция",
+    "Barb 1 ID": "Внутренний диаметр штуцера 1",
+    "Barb 2 ID": "Внутренний диаметр штуцера 2",
+    "Barb 3 ID": "Внутренний диаметр штуцера 3",
+    "Body Material": "Материал корпуса",
+    Color: "Цвет",
+    "Bulkhead Barbed Fittings": "Панельные штуцерные фитинги",
+    "Product Structure": "Конструкция изделия",
+    "Thread Size": "Размер резьбы",
+    "Tube ID": "Внутренний диаметр трубки",
+    Material: "Материал",
+    "Diaphragm Pumps": "Мембранные насосы",
+    "Pump Type": "Тип насоса",
+    "Motor Type": "Тип двигателя",
+    "Flow Rate": "Расход",
+    Pressure: "Давление",
+    Thread: "Резьба",
+    "Flow Path Diameter": "Диаметр проходного канала",
+    "Female Thread Adapters": "Переходники с внутренней резьбой",
+    "Product Type": "Тип продукции",
+    "Filter Type": "Тип фильтра",
+    "Filter Media": "Фильтрующий материал",
+    "Filtration Rating": "Тонкость фильтрации",
+    "Seal Type": "Тип уплотнения",
+    "Diaphragm Material": "Материал мембраны",
+    "Tube ID / Thread": "ВД трубки / резьба",
+    "Filters & Check Valves": "Фильтры и обратные клапаны",
+    "Product Series": "Серия продукции",
+    "Tube OD": "Наружный диаметр трубки",
+    "Hard Tube Fittings": "Фитинги для жестких трубок",
+    "Tube Inner Diameter": "Внутренний диаметр трубки",
+    "Luer Fittings": "Фитинги Люэра",
+    "Tube I.D. or Thread": "ВД трубки или резьба",
+    "Male / Female": "Наружный / внутренний",
+    Mounting: "Монтаж",
+    "Valve Configuration": "Конфигурация клапана",
+    Shape: "Форма",
+    "Housing Material": "Материал корпуса",
+    "Quick-connect Fittings": "Быстроразъемные фитинги",
+    "Thread to Barb Fittings": "Резьбовые штуцерные фитинги",
+    "Connection Structure": "Конструкция соединения",
+    "Sealing Method": "Способ уплотнения",
+    "Tubing ID": "Внутренний диаметр трубки",
+  },
+};
+
+function getTargetUiLabel(locale: SelectionLocale, value: string) {
+  if (locale === "zh" || locale === "en") return value;
+
+  return TARGET_UI_LABEL_TRANSLATIONS[locale]?.[value] || value;
+}
+
 function getCategoryDescription(
   locale: SelectionLocale,
   categoryId: string,
@@ -477,6 +776,13 @@ function getCategoryDescription(
     return (
       ENGLISH_CATEGORY_DESCRIPTIONS[categoryId] ||
       "Select a base configuration by product type, series, and key requirements."
+    );
+  }
+
+  if (locale !== "zh") {
+    return (
+      TARGET_CATEGORY_DESCRIPTIONS[locale]?.[categoryId] ||
+      getTargetUiLabel(locale, fallback)
     );
   }
 
@@ -494,7 +800,9 @@ function getText(
     return value.zh || value.en || fallback;
   }
 
-  return value[locale] || value.en || value.zh || fallback;
+  const localizedValue = value[locale] || value.en || value.zh || fallback;
+
+  return getTargetUiLabel(locale, localizedValue);
 }
 
 function getTaxonomyLabel(locale: SelectionLocale, id: string) {
@@ -4460,6 +4768,7 @@ function isFilterOptionActive(
               filterGroups={filterGroups}
               mobileOpenFilterGroups={mobileOpenFilterGroups}
               currentPrefix={targetLocaleA11yText?.currentPrefix}
+              barbedPortLabel={targetLocaleA11yText?.barbedPortLabel}
               onToggleMobileGroup={toggleMobileFilterGroup}
               isOptionActive={isFilterOptionActive}
               isOptionDisabled={isProductFilterOptionDisabled}

@@ -14,6 +14,7 @@ type ProductFilterPanelProps = {
   mobileOpenFilterGroups?: Record<string, boolean>;
   emptyText: string;
   currentPrefix?: string;
+  barbedPortLabel?: string;
   resetButtonText?: string;
   submitButtonText?: string;
   onToggleMobileGroup?: (
@@ -258,6 +259,7 @@ export default function ProductFilterPanel({
   mobileOpenFilterGroups,
   emptyText,
   currentPrefix,
+  barbedPortLabel,
   onToggleMobileGroup,
   isOptionActive,
   isOptionDisabled,
@@ -327,7 +329,7 @@ export default function ProductFilterPanel({
                   }
                 >
                   <span>
-                        {/[\u3400-\u9fff]/.test(
+                        {barbedPortLabel || /[\u3400-\u9fff]/.test(
                           filterGroups.find(
                             (item) =>
                               item.key === "filter02"

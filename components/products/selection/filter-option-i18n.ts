@@ -791,6 +791,12 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
     ko: "필터 및 체크 밸브",
     ru: "Фильтры и обратные клапаны",
   },
+  "Pipette Pump": {
+    es: "Bomba de pipeteo",
+    fr: "Pompe de pipetage",
+    ko: "피펫팅 펌프",
+    ru: "Пипетирующий насос",
+  },
 
 };
 
@@ -805,7 +811,13 @@ function normalizeProductFilterLocale(locale?: string): ProductFilterLocale {
 export function getLocalizedFilterOptionLabel(value: string | number | null | undefined, locale?: string): string {
   const rawValue = String(value ?? "");
   const normalizedLocale = normalizeProductFilterLocale(locale);
-  const localized = FILTER_OPTION_LABELS[rawValue];
+  const localized =
+    FILTER_OPTION_LABELS[rawValue] ||
+    (normalizedLocale !== "zh" && normalizedLocale !== "en"
+      ? Object.values(FILTER_OPTION_LABELS).find(
+          (labelMap) => labelMap.en === rawValue
+        )
+      : undefined);
 
   if (!localized) {
     return rawValue;
