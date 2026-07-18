@@ -176,10 +176,10 @@ export const headerI18n: Record<LocaleCode, HeaderText> = {
 // 3. 后期如果接后台 / CMS，可以从接口读取这些字段
 export const homeI18n: Record<LocaleCode, HomeText> = {
   "zh-CN": {
-    heroTitleLine1: "微流体系统核心零部件",
-    heroTitleLine2: "液路系统解决方案供应商",
+    heroTitleLine1: "微流体系统核心部件",
+    heroTitleLine2: "精密液路解决方案",
     heroSubtitle:
-      "专注于泵、阀、传感器、管路、连接件、采样针及驱动控制模块，为 IVD、生命科学、高端分析仪器、合成生物和实验室自动化提供系统级流体控制支持。",
+      "提供泵、阀、传感器、管路、接头、采样针及控制模块，服务于体外诊断、生命科学、分析仪器、合成生物和实验室自动化。",
     productButton: "查看产品中心",
     contactButton: "联系技术支持",
     testTitle: "从核心部件到液路系统",
@@ -188,10 +188,10 @@ export const homeI18n: Record<LocaleCode, HomeText> = {
   },
 
   en: {
-    heroTitleLine1: "Core Components for Microfluidic Systems",
-    heroTitleLine2: "Fluidic System Solution Provider",
+    heroTitleLine1: "Core Components for",
+    heroTitleLine2: "Microfluidic Systems",
     heroSubtitle:
-      "Focused on pumps, valves, sensors, tubing, fittings, sampling probes, and drive control modules, FOREACH provides system-level fluid control support for IVD, life sciences, high-end analytical instruments, synthetic biology, and laboratory automation.",
+      "Pumps, valves, sensors, tubing, fittings, sampling needles, and control modules for IVD, life sciences, analytical instruments, synthetic biology, and laboratory automation.",
     productButton: "View Products",
     contactButton: "Contact Support",
     testTitle: "From Core Components to Fluidic Systems",
@@ -200,10 +200,10 @@ export const homeI18n: Record<LocaleCode, HomeText> = {
   },
 
   es: {
-    heroTitleLine1: "Componentes clave para sistemas microfluídicos",
-    heroTitleLine2: "Proveedor de soluciones fluídicas",
+    heroTitleLine1: "Componentes microfluídicos esenciales",
+    heroTitleLine2: "",
     heroSubtitle:
-      "FOREACH se centra en bombas, válvulas, sensores, tubos, conectores, agujas de muestreo y módulos de control, proporcionando soporte fluídico a nivel de sistema para IVD, ciencias de la vida, instrumentos analíticos avanzados, biología sintética y automatización de laboratorios.",
+      "Bombas, válvulas, sensores, tubos, conectores, agujas de muestreo y módulos de control para diagnóstico in vitro, ciencias de la vida, instrumentación analítica, biología sintética y automatización de laboratorios.",
     productButton: "Ver productos",
     contactButton: "Contactar soporte",
     testTitle: "De componentes clave a sistemas fluídicos",
@@ -212,10 +212,10 @@ export const homeI18n: Record<LocaleCode, HomeText> = {
   },
 
   fr: {
-    heroTitleLine1: "Composants clés pour systèmes microfluidiques",
-    heroTitleLine2: "Fournisseur de solutions fluidiques",
+    heroTitleLine1: "Composants microfluidiques essentiels",
+    heroTitleLine2: "",
     heroSubtitle:
-      "FOREACH se concentre sur les pompes, vannes, capteurs, tubes, raccords, aiguilles de prélèvement et modules de contrôle, afin de fournir un support fluidique au niveau système pour l’IVD, les sciences de la vie, les instruments d’analyse avancés, la biologie synthétique et l’automatisation de laboratoire.",
+      "Pompes, vannes, capteurs, tubes, raccords, aiguilles de prélèvement et modules de commande pour le diagnostic in vitro, les sciences de la vie, l’instrumentation analytique, la biologie de synthèse et l’automatisation des laboratoires.",
     productButton: "Voir les produits",
     contactButton: "Contacter le support",
     testTitle: "Des composants clés aux systèmes fluidiques",
@@ -224,10 +224,10 @@ export const homeI18n: Record<LocaleCode, HomeText> = {
   },
 
   ko: {
-    heroTitleLine1: "마이크로플루이딕 시스템 핵심 부품",
-    heroTitleLine2: "유체 시스템 솔루션 공급업체",
+    heroTitleLine1: "미세유체 시스템을 위한",
+    heroTitleLine2: "핵심 부품",
     heroSubtitle:
-      "FOREACH는 펌프, 밸브, 센서, 튜빙, 피팅, 샘플링 프로브 및 구동 제어 모듈을 중심으로 IVD, 생명과학, 고급 분석 장비, 합성생물학 및 실험실 자동화를 위한 시스템 수준의 유체 제어 지원을 제공합니다.",
+      "체외진단, 생명과학, 분석기기, 합성생물학 및 실험실 자동화를 위한 펌프, 밸브, 센서, 튜브, 피팅, 샘플링 니들 및 제어 모듈을 제공합니다.",
     productButton: "제품 보기",
     contactButton: "기술 지원 문의",
     testTitle: "핵심 부품에서 유체 시스템까지",
@@ -236,10 +236,10 @@ export const homeI18n: Record<LocaleCode, HomeText> = {
   },
 
   ru: {
-    heroTitleLine1: "Ключевые компоненты для микрофлюидных систем",
-    heroTitleLine2: "Поставщик решений для жидкостных систем",
+    heroTitleLine1: "Ключевые компоненты микрофлюидных систем",
+    heroTitleLine2: "",
     heroSubtitle:
-      "FOREACH специализируется на насосах, клапанах, датчиках, трубках, соединителях, пробоотборных иглах и модулях управления, предоставляя системную поддержку управления жидкостями для IVD, наук о жизни, высокоточных аналитических приборов, синтетической биологии и лабораторной автоматизации.",
+      "Насосы, клапаны, датчики, трубки, соединители, пробоотборные иглы и модули управления для IVD, наук о жизни, аналитических приборов, синтетической биологии и лабораторной автоматизации.",
     productButton: "Смотреть продукцию",
     contactButton: "Связаться с поддержкой",
     testTitle: "От ключевых компонентов к жидкостным системам",

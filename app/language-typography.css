@@ -1249,5 +1249,23 @@ html[lang="ru"] .site-header span {
     box-shadow !important;
 } 
 
+/* 首页首屏：西/法/俄文案按完整单词换行。 */
+html[lang="es"] .home-hero-title,
+html[lang="es"] .home-hero-subtitle,
+html[lang="fr"] .home-hero-title,
+html[lang="fr"] .home-hero-subtitle,
+html[lang="ru"] .home-hero-title,
+html[lang="ru"] .home-hero-subtitle {
+  hyphens: none;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+html[lang="es"] .home-hero-title,
+html[lang="fr"] .home-hero-title,
+html[lang="ru"] .home-hero-title {
+  text-wrap: balance;
+}
+
 
 

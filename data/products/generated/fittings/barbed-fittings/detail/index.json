@@ -214,7 +214,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 0
+    "sourceIndex": 0,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00030-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00030-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00030-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00030-C.pdf",
+      "sourcePartNumber": "443-01-00030",
+      "structureModel": "BA-16F",
+      "matchRule": "商品编码 809276 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -431,7 +440,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 1
+    "sourceIndex": 1,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00031-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00031-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00031-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00031-C.pdf",
+      "sourcePartNumber": "443-01-00031",
+      "structureModel": "BA-24F",
+      "matchRule": "商品编码 809277 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -648,7 +666,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 2
+    "sourceIndex": 2,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00032-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00032-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00032-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00032-C.pdf",
+      "sourcePartNumber": "443-01-00032",
+      "structureModel": "BA-32F",
+      "matchRule": "商品编码 809278 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -865,7 +892,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 3
+    "sourceIndex": 3,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00033-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00033-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00033-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00033-C.pdf",
+      "sourcePartNumber": "443-01-00033",
+      "structureModel": "BA-40F",
+      "matchRule": "商品编码 809279 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -1094,7 +1130,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 4
+    "sourceIndex": 4,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00042-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00042-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00042-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00042-C.pdf",
+      "sourcePartNumber": "443-01-00042",
+      "structureModel": "BA-16F-24F",
+      "matchRule": "商品编码 809288 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -1323,7 +1368,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 5
+    "sourceIndex": 5,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00043-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00043-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00043-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00043-C.pdf",
+      "sourcePartNumber": "443-01-00043",
+      "structureModel": "BA-24F-32F",
+      "matchRule": "商品编码 809289 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -1540,7 +1594,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 6
+    "sourceIndex": 6,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00076-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00076-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00076-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00076-C.pdf",
+      "sourcePartNumber": "443-01-00076",
+      "structureModel": "BA-16F",
+      "matchRule": "商品编码 809321 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -1769,7 +1832,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 7
+    "sourceIndex": 7,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00078-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00078-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00078-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00078-C.pdf",
+      "sourcePartNumber": "443-01-00078",
+      "structureModel": "BA-16F-24F",
+      "matchRule": "商品编码 809322 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -1986,7 +2058,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 8
+    "sourceIndex": 8,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00079-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00079-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00079-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00079-C.pdf",
+      "sourcePartNumber": "443-01-00079",
+      "structureModel": "BA-24F",
+      "matchRule": "商品编码 809324 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -2215,7 +2296,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 9
+    "sourceIndex": 9,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00080-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00080-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00080-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00080-C.pdf",
+      "sourcePartNumber": "443-01-00080",
+      "structureModel": "BA-24F-32F",
+      "matchRule": "商品编码 809325 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -2432,7 +2522,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 10
+    "sourceIndex": 10,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00084-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00084-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00084-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00084-C.pdf",
+      "sourcePartNumber": "443-01-00084",
+      "structureModel": "BA-32F",
+      "matchRule": "商品编码 809328 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -2649,7 +2748,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 11
+    "sourceIndex": 11,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00085-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00085-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00085-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00085-C.pdf",
+      "sourcePartNumber": "443-01-00085",
+      "structureModel": "BA-40F",
+      "matchRule": "商品编码 809329 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -2878,7 +2986,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 12
+    "sourceIndex": 12,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00086-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00086-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00086-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00086-C.pdf",
+      "sourcePartNumber": "443-01-00086",
+      "structureModel": "BA-16F-32F",
+      "matchRule": "商品编码 809330 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -3107,7 +3224,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 13
+    "sourceIndex": 13,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00088-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00088-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00088-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00088-C.pdf",
+      "sourcePartNumber": "443-01-00088",
+      "structureModel": "BA-16F-32F",
+      "matchRule": "商品编码 809332 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -3336,7 +3462,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 14
+    "sourceIndex": 14,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00126-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00126-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00126-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00126-C.pdf",
+      "sourcePartNumber": "443-01-00126",
+      "structureModel": "BA-32C-64C",
+      "matchRule": "商品编码 809371 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -3565,7 +3700,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 15
+    "sourceIndex": 15,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00127-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00127-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00127-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00127-C.pdf",
+      "sourcePartNumber": "443-01-00127",
+      "structureModel": "BA-32C-64C",
+      "matchRule": "商品编码 809370 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -3794,7 +3938,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 16
+    "sourceIndex": 16,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00130-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00130-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00130-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00130-C.pdf",
+      "sourcePartNumber": "443-01-00130",
+      "structureModel": "BA-32V-40V",
+      "matchRule": "商品编码 809374 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -4023,7 +4176,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 17
+    "sourceIndex": 17,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00131-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00131-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00131-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00131-C.pdf",
+      "sourcePartNumber": "443-01-00131",
+      "structureModel": "BA-32V-40V",
+      "matchRule": "商品编码 809375 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -4252,7 +4414,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 18
+    "sourceIndex": 18,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00132-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00132-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00132-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00132-C.pdf",
+      "sourcePartNumber": "443-01-00132",
+      "structureModel": "BA-24V-40V",
+      "matchRule": "商品编码 809376 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -4481,7 +4652,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 19
+    "sourceIndex": 19,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00133-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00133-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00133-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00133-C.pdf",
+      "sourcePartNumber": "443-01-00133",
+      "structureModel": "BA-24V-40V",
+      "matchRule": "商品编码 809377 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -4710,7 +4890,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 20
+    "sourceIndex": 20,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00134-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00134-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00134-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00134-C.pdf",
+      "sourcePartNumber": "443-01-00134",
+      "structureModel": "BA-64V-79V",
+      "matchRule": "商品编码 809378 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -4939,7 +5128,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 21
+    "sourceIndex": 21,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00135-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00135-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00135-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00135-C.pdf",
+      "sourcePartNumber": "443-01-00135",
+      "structureModel": "BA-64V-79V",
+      "matchRule": "商品编码 809379 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -5156,7 +5354,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 22
+    "sourceIndex": 22,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00001-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00001-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00001-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00001-C.pdf",
+      "sourcePartNumber": "443-02-00001",
+      "structureModel": "BA-64C",
+      "matchRule": "商品编码 809424 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -5373,7 +5580,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 23
+    "sourceIndex": 23,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00002-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00002-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00002-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00002-C.pdf",
+      "sourcePartNumber": "443-02-00002",
+      "structureModel": "BA-64C",
+      "matchRule": "商品编码 809425 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -5602,7 +5818,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 24
+    "sourceIndex": 24,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00003-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00003-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00003-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00003-C.pdf",
+      "sourcePartNumber": "443-02-00003",
+      "structureModel": "BA-64V-95V",
+      "matchRule": "商品编码 809426 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -5831,7 +6056,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 25
+    "sourceIndex": 25,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00004-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00004-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00004-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00004-C.pdf",
+      "sourcePartNumber": "443-02-00004",
+      "structureModel": "BA-64V-95V",
+      "matchRule": "商品编码 809427 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -6060,7 +6294,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 26
+    "sourceIndex": 26,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00005-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00005-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00005-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00005-C.pdf",
+      "sourcePartNumber": "443-02-00005",
+      "structureModel": "BA-64X-127X",
+      "matchRule": "商品编码 809428 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -6289,7 +6532,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 27
+    "sourceIndex": 27,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00006-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00006-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00006-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00006-C.pdf",
+      "sourcePartNumber": "443-02-00006",
+      "structureModel": "BA-64X-127X",
+      "matchRule": "商品编码 809429 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -6506,7 +6758,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 28
+    "sourceIndex": 28,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00131-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00131-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00131-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00131-C.pdf",
+      "sourcePartNumber": "443-02-00131",
+      "structureModel": "BA-16C",
+      "matchRule": "商品编码 809547 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -6735,7 +6996,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 29
+    "sourceIndex": 29,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00187-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00187-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00187-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00187-C.pdf",
+      "sourcePartNumber": "443-02-00187",
+      "structureModel": "BA-16D-24D",
+      "matchRule": "商品编码 809604 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -6964,7 +7234,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 30
+    "sourceIndex": 30,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00188-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00188-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00188-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00188-C.pdf",
+      "sourcePartNumber": "443-02-00188",
+      "structureModel": "BA-16D-24D",
+      "matchRule": "商品编码 809605 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -7193,7 +7472,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 31
+    "sourceIndex": 31,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00189-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00189-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00189-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00189-C.pdf",
+      "sourcePartNumber": "443-02-00189",
+      "structureModel": "BA-24D-32D",
+      "matchRule": "商品编码 809606 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -7422,7 +7710,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 32
+    "sourceIndex": 32,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00190-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00190-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00190-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00190-C.pdf",
+      "sourcePartNumber": "443-02-00190",
+      "structureModel": "BA-24D-32D",
+      "matchRule": "商品编码 809607 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -7639,7 +7936,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 33
+    "sourceIndex": 33,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00204-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00204-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00204-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00204-C.pdf",
+      "sourcePartNumber": "443-02-00204",
+      "structureModel": "BA-24D",
+      "matchRule": "商品编码 809625 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -7856,7 +8162,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 34
+    "sourceIndex": 34,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00205-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00205-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00205-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00205-C.pdf",
+      "sourcePartNumber": "443-02-00205",
+      "structureModel": "BA-24D",
+      "matchRule": "商品编码 809626 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -8073,7 +8388,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 35
+    "sourceIndex": 35,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00206-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00206-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00206-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00206-C.pdf",
+      "sourcePartNumber": "443-02-00206",
+      "structureModel": "BA-32D",
+      "matchRule": "商品编码 809627 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -8290,7 +8614,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 36
+    "sourceIndex": 36,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00207-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00207-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00207-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00207-C.pdf",
+      "sourcePartNumber": "443-02-00207",
+      "structureModel": "BA-32D",
+      "matchRule": "商品编码 809628 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -8519,7 +8852,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 37
+    "sourceIndex": 37,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00208-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00208-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00208-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00208-C.pdf",
+      "sourcePartNumber": "443-02-00208",
+      "structureModel": "BA-16D-32D",
+      "matchRule": "商品编码 809629 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -8748,7 +9090,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 38
+    "sourceIndex": 38,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00209-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00209-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00209-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00209-C.pdf",
+      "sourcePartNumber": "443-02-00209",
+      "structureModel": "BA-16D-32D",
+      "matchRule": "商品编码 809630 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -8965,7 +9316,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 39
+    "sourceIndex": 39,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00286-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00286-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00286-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00286-C.pdf",
+      "sourcePartNumber": "443-02-00286",
+      "structureModel": "BA-16C",
+      "matchRule": "商品编码 809300 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -9423,7 +9783,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 41
+    "sourceIndex": 41,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00475-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00475-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00475-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00475-C.pdf",
+      "sourcePartNumber": "443-02-00475",
+      "structureModel": "BA-24C-48C",
+      "matchRule": "商品编码 809519 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -9652,7 +10021,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 42
+    "sourceIndex": 42,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00476-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00476-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00476-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00476-C.pdf",
+      "sourcePartNumber": "443-02-00476",
+      "structureModel": "BA-24C-48C",
+      "matchRule": "商品编码 809520 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -9881,7 +10259,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 43
+    "sourceIndex": 43,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00602-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00602-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00602-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00602-C.pdf",
+      "sourcePartNumber": "443-02-00602",
+      "structureModel": "BA-16V-40V",
+      "matchRule": "商品编码 809843 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -12605,7 +12992,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 128
+    "sourceIndex": 128,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00101-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00101-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00101-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00101-C.pdf",
+      "sourcePartNumber": "443-01-00101",
+      "structureModel": "BL-16F",
+      "matchRule": "商品编码 809345 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -12822,7 +13218,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 129
+    "sourceIndex": 129,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00102-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00102-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00102-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00102-C.pdf",
+      "sourcePartNumber": "443-01-00102",
+      "structureModel": "BL-24F",
+      "matchRule": "商品编码 809346 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -13256,7 +13661,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 131
+    "sourceIndex": 131,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00104-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00104-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00104-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00104-C.pdf",
+      "sourcePartNumber": "443-01-00104",
+      "structureModel": "BL-40F",
+      "matchRule": "商品编码 809348 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -13473,7 +13887,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 132
+    "sourceIndex": 132,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00105-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00105-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00105-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00105-C.pdf",
+      "sourcePartNumber": "443-01-00105",
+      "structureModel": "BL-64F",
+      "matchRule": "商品编码 809349 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -13690,7 +14113,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 133
+    "sourceIndex": 133,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00106-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00106-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00106-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00106-C.pdf",
+      "sourcePartNumber": "443-01-00106",
+      "structureModel": "BL-95D",
+      "matchRule": "商品编码 809350 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -13907,7 +14339,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 134
+    "sourceIndex": 134,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00113-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00113-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00113-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00113-C.pdf",
+      "sourcePartNumber": "443-01-00113",
+      "structureModel": "BL-16F",
+      "matchRule": "商品编码 809357 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -14124,7 +14565,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 135
+    "sourceIndex": 135,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00114-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00114-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00114-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00114-C.pdf",
+      "sourcePartNumber": "443-01-00114",
+      "structureModel": "BL-24F",
+      "matchRule": "商品编码 809358 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -14558,7 +15008,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 137
+    "sourceIndex": 137,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00116-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00116-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00116-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00116-C.pdf",
+      "sourcePartNumber": "443-01-00116",
+      "structureModel": "BL-40F",
+      "matchRule": "商品编码 809360 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -14775,7 +15234,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 138
+    "sourceIndex": 138,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00117-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00117-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00117-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00117-C.pdf",
+      "sourcePartNumber": "443-01-00117",
+      "structureModel": "BL-64F",
+      "matchRule": "商品编码 809361 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -14992,7 +15460,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 139
+    "sourceIndex": 139,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00118-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00118-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00118-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00118-C.pdf",
+      "sourcePartNumber": "443-01-00118",
+      "structureModel": "BL-95D",
+      "matchRule": "商品编码 809362 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -15209,7 +15686,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 140
+    "sourceIndex": 140,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00211-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00211-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00211-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00211-C.pdf",
+      "sourcePartNumber": "443-02-00211",
+      "structureModel": "BL-16D",
+      "matchRule": "商品编码 809632 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -15426,7 +15912,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 141
+    "sourceIndex": 141,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00212-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00212-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00212-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00212-C.pdf",
+      "sourcePartNumber": "443-02-00212",
+      "structureModel": "BL-16D",
+      "matchRule": "商品编码 809633 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -15643,7 +16138,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 142
+    "sourceIndex": 142,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00213-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00213-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00213-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00213-C.pdf",
+      "sourcePartNumber": "443-02-00213",
+      "structureModel": "BL-24D",
+      "matchRule": "商品编码 809634 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -15860,7 +16364,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 143
+    "sourceIndex": 143,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00214-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00214-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00214-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00214-C.pdf",
+      "sourcePartNumber": "443-02-00214",
+      "structureModel": "BL-24D",
+      "matchRule": "商品编码 809635 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -16077,7 +16590,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 144
+    "sourceIndex": 144,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00215-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00215-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00215-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00215-C.pdf",
+      "sourcePartNumber": "443-02-00215",
+      "structureModel": "BL-32D",
+      "matchRule": "商品编码 809636 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -16294,7 +16816,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 145
+    "sourceIndex": 145,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00216-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00216-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00216-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00216-C.pdf",
+      "sourcePartNumber": "443-02-00216",
+      "structureModel": "BL-32D",
+      "matchRule": "商品编码 809637 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -16523,7 +17054,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 146
+    "sourceIndex": 146,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00217-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00217-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00217-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00217-C.pdf",
+      "sourcePartNumber": "443-02-00217",
+      "structureModel": "BL-16D-24D",
+      "matchRule": "商品编码 809638 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -16752,7 +17292,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 147
+    "sourceIndex": 147,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00218-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00218-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00218-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00218-C.pdf",
+      "sourcePartNumber": "443-02-00218",
+      "structureModel": "BL-16D-24D",
+      "matchRule": "商品编码 809639 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -16981,7 +17530,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 148
+    "sourceIndex": 148,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00219-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00219-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00219-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00219-C.pdf",
+      "sourcePartNumber": "443-02-00219",
+      "structureModel": "BL-24D-32D",
+      "matchRule": "商品编码 809640 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -17210,7 +17768,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 149
+    "sourceIndex": 149,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00220-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00220-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00220-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00220-C.pdf",
+      "sourcePartNumber": "443-02-00220",
+      "structureModel": "BL-24D-32D",
+      "matchRule": "商品编码 809641 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -17439,7 +18006,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 150
+    "sourceIndex": 150,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00221-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00221-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00221-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00221-C.pdf",
+      "sourcePartNumber": "443-02-00221",
+      "structureModel": "BL-16D-32D",
+      "matchRule": "商品编码 809642 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -17668,7 +18244,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 151
+    "sourceIndex": 151,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00222-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00222-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00222-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00222-C.pdf",
+      "sourcePartNumber": "443-02-00222",
+      "structureModel": "BL-16D-32D",
+      "matchRule": "商品编码 809643 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -17885,7 +18470,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 152
+    "sourceIndex": 152,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00224-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00224-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00224-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00224-C.pdf",
+      "sourcePartNumber": "443-02-00224",
+      "structureModel": "BL-127V",
+      "matchRule": "商品编码 809645 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -18536,7 +19130,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 56
+    "sourceIndex": 56,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00064-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00064-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00064-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00064-C.pdf",
+      "sourcePartNumber": "443-01-00064",
+      "structureModel": "BT-24F",
+      "matchRule": "商品编码 809310 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -18753,7 +19356,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 57
+    "sourceIndex": 57,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00065-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00065-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00065-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00065-C.pdf",
+      "sourcePartNumber": "443-01-00065",
+      "structureModel": "BT-32F",
+      "matchRule": "商品编码 809311 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -18970,7 +19582,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 58
+    "sourceIndex": 58,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00082-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00082-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00082-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00082-C.pdf",
+      "sourcePartNumber": "443-01-00082",
+      "structureModel": "BT-24F",
+      "matchRule": "商品编码 809327 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -19187,7 +19808,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 59
+    "sourceIndex": 59,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00093-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00093-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00093-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00093-C.pdf",
+      "sourcePartNumber": "443-01-00093",
+      "structureModel": "BT-16F",
+      "matchRule": "商品编码 809337 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -19404,7 +20034,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 60
+    "sourceIndex": 60,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00094-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00094-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00094-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00094-C.pdf",
+      "sourcePartNumber": "443-01-00094",
+      "structureModel": "BT-32F",
+      "matchRule": "商品编码 809338 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -19621,7 +20260,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 61
+    "sourceIndex": 61,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00015-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00015-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00015-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00015-C.pdf",
+      "sourcePartNumber": "443-02-00015",
+      "structureModel": "BT-40C",
+      "matchRule": "商品编码 809438 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -19838,7 +20486,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 62
+    "sourceIndex": 62,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00016-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00016-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00016-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00016-C.pdf",
+      "sourcePartNumber": "443-02-00016",
+      "structureModel": "BT-40C",
+      "matchRule": "商品编码 809439 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -20055,7 +20712,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 63
+    "sourceIndex": 63,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00017-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00017-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00017-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00017-C.pdf",
+      "sourcePartNumber": "443-02-00017",
+      "structureModel": "BT-64C",
+      "matchRule": "商品编码 809440 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -20272,7 +20938,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 64
+    "sourceIndex": 64,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00018-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00018-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00018-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00018-C.pdf",
+      "sourcePartNumber": "443-02-00018",
+      "structureModel": "BT-64C",
+      "matchRule": "商品编码 809441 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -20489,7 +21164,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 65
+    "sourceIndex": 65,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00019-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00019-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00019-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00019-C.pdf",
+      "sourcePartNumber": "443-02-00019",
+      "structureModel": "BT-95X",
+      "matchRule": "商品编码 809442 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -20706,7 +21390,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 66
+    "sourceIndex": 66,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00020-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00020-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00020-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00020-C.pdf",
+      "sourcePartNumber": "443-02-00020",
+      "structureModel": "BT-95X",
+      "matchRule": "商品编码 809443 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -20947,7 +21640,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 67
+    "sourceIndex": 67,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00021-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00021-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00021-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00021-C.pdf",
+      "sourcePartNumber": "443-02-00021",
+      "structureModel": "BT-32D-32D-16D",
+      "matchRule": "商品编码 809444 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -21188,7 +21890,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 68
+    "sourceIndex": 68,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00022-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00022-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00022-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00022-C.pdf",
+      "sourcePartNumber": "443-02-00022",
+      "structureModel": "BT-32D-32D-16D",
+      "matchRule": "商品编码 809445 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -21429,7 +22140,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 69
+    "sourceIndex": 69,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00023-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00023-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00023-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00023-C.pdf",
+      "sourcePartNumber": "443-02-00023",
+      "structureModel": "BT-24D-24D-16D",
+      "matchRule": "商品编码 809446 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -21670,7 +22390,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 70
+    "sourceIndex": 70,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00024-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00024-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00024-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00024-C.pdf",
+      "sourcePartNumber": "443-02-00024",
+      "structureModel": "BT-24D-24D-16D",
+      "matchRule": "商品编码 809447 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -21911,7 +22640,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 71
+    "sourceIndex": 71,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00025-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00025-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00025-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00025-C.pdf",
+      "sourcePartNumber": "443-02-00025",
+      "structureModel": "BT-32D-32D-24D",
+      "matchRule": "商品编码 809448 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -22152,7 +22890,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 72
+    "sourceIndex": 72,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00026-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00026-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00026-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00026-C.pdf",
+      "sourcePartNumber": "443-02-00026",
+      "structureModel": "BT-32D-32D-24D",
+      "matchRule": "商品编码 809449 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -22393,7 +23140,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 73
+    "sourceIndex": 73,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00027-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00027-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00027-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00027-C.pdf",
+      "sourcePartNumber": "443-02-00027",
+      "structureModel": "BT-64D-64D-32D",
+      "matchRule": "商品编码 809450 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -22634,7 +23390,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 74
+    "sourceIndex": 74,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00028-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00028-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00028-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00028-C.pdf",
+      "sourcePartNumber": "443-02-00028",
+      "structureModel": "BT-64D-64D-32D",
+      "matchRule": "商品编码 809451 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -22875,7 +23640,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 75
+    "sourceIndex": 75,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00029-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00029-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00029-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00029-C.pdf",
+      "sourcePartNumber": "443-02-00029",
+      "structureModel": "BT-24D-32D-32D",
+      "matchRule": "商品编码 809452 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -23116,7 +23890,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 76
+    "sourceIndex": 76,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00030-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00030-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00030-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00030-C.pdf",
+      "sourcePartNumber": "443-02-00030",
+      "structureModel": "BT-24D-32D-32D",
+      "matchRule": "商品编码 809453 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -23357,7 +24140,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 77
+    "sourceIndex": 77,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00031-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00031-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00031-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00031-C.pdf",
+      "sourcePartNumber": "443-02-00031",
+      "structureModel": "BT-32D-16D-16D",
+      "matchRule": "商品编码 809454 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -23598,7 +24390,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 78
+    "sourceIndex": 78,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00032-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00032-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00032-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00032-C.pdf",
+      "sourcePartNumber": "443-02-00032",
+      "structureModel": "BT-32D-16D-16D",
+      "matchRule": "商品编码 809455 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -23839,7 +24640,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 79
+    "sourceIndex": 79,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00033-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00033-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00033-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00033-C.pdf",
+      "sourcePartNumber": "443-02-00033",
+      "structureModel": "BT-32D-24D-24D",
+      "matchRule": "商品编码 809456 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -24080,7 +24890,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 80
+    "sourceIndex": 80,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00034-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00034-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00034-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00034-C.pdf",
+      "sourcePartNumber": "443-02-00034",
+      "structureModel": "BT-32D-24D-24D",
+      "matchRule": "商品编码 809457 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -24321,7 +25140,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 81
+    "sourceIndex": 81,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00035-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00035-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00035-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00035-C.pdf",
+      "sourcePartNumber": "443-02-00035",
+      "structureModel": "BT-32D-64T-64T",
+      "matchRule": "商品编码 809458 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -24562,7 +25390,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 82
+    "sourceIndex": 82,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00036-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00036-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00036-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00036-C.pdf",
+      "sourcePartNumber": "443-02-00036",
+      "structureModel": "BT-32D-64T-64T",
+      "matchRule": "商品编码 809459 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -24803,7 +25640,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 83
+    "sourceIndex": 83,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00037-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00037-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00037-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00037-C.pdf",
+      "sourcePartNumber": "443-02-00037",
+      "structureModel": "BT-64V-95V-95V",
+      "matchRule": "商品编码 809460 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -25044,7 +25890,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 84
+    "sourceIndex": 84,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00038-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00038-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00038-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00038-C.pdf",
+      "sourcePartNumber": "443-02-00038",
+      "structureModel": "BT-64V-95V-95V",
+      "matchRule": "商品编码 809461 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -25502,7 +26357,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 86
+    "sourceIndex": 86,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00100-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00100-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00100-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00100-C.pdf",
+      "sourcePartNumber": "443-02-00100",
+      "structureModel": "BT-16D",
+      "matchRule": "商品编码 809521 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -25719,7 +26583,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 87
+    "sourceIndex": 87,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00130-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00130-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00130-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00130-C.pdf",
+      "sourcePartNumber": "443-02-00130",
+      "structureModel": "BT-16D",
+      "matchRule": "商品编码 809545 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -25936,7 +26809,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 88
+    "sourceIndex": 88,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00193-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00193-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00193-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00193-C.pdf",
+      "sourcePartNumber": "443-02-00193",
+      "structureModel": "BT-24D",
+      "matchRule": "商品编码 809610 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -26153,7 +27035,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 89
+    "sourceIndex": 89,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00194-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00194-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00194-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00194-C.pdf",
+      "sourcePartNumber": "443-02-00194",
+      "structureModel": "BT-24D",
+      "matchRule": "商品编码 809611 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -26370,7 +27261,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 90
+    "sourceIndex": 90,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00200-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00200-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00200-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00200-C.pdf",
+      "sourcePartNumber": "443-02-00200",
+      "structureModel": "BT-32D",
+      "matchRule": "商品编码 809621 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -26587,7 +27487,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 91
+    "sourceIndex": 91,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00201-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00201-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00201-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00201-C.pdf",
+      "sourcePartNumber": "443-02-00201",
+      "structureModel": "BT-32D",
+      "matchRule": "商品编码 809622 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -26804,7 +27713,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 92
+    "sourceIndex": 92,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00223-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00223-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00223-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00223-C.pdf",
+      "sourcePartNumber": "443-02-00223",
+      "structureModel": "BT-127V",
+      "matchRule": "商品编码 809644 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -27045,7 +27963,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 93
+    "sourceIndex": 93,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00315-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00315-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00315-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00315-C.pdf",
+      "sourcePartNumber": "443-02-00315",
+      "structureModel": "BT-16D-24D-24D",
+      "matchRule": "商品编码 809287 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -27527,7 +28454,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 95
+    "sourceIndex": 95,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00601-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00601-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00601-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00601-C.pdf",
+      "sourcePartNumber": "443-02-00601",
+      "structureModel": "BT-16D-32D-32D",
+      "matchRule": "商品编码 809842 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -28419,7 +29355,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 99
+    "sourceIndex": 99,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00048-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00048-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00048-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00048-C.pdf",
+      "sourcePartNumber": "443-01-00048",
+      "structureModel": "BY-16F",
+      "matchRule": "商品编码 809294 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -28636,7 +29581,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 100
+    "sourceIndex": 100,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00049-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00049-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00049-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00049-C.pdf",
+      "sourcePartNumber": "443-01-00049",
+      "structureModel": "BY-24F",
+      "matchRule": "商品编码 809295 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -28853,7 +29807,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 101
+    "sourceIndex": 101,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00050-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00050-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00050-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00050-C.pdf",
+      "sourcePartNumber": "443-01-00050",
+      "structureModel": "BY-32F",
+      "matchRule": "商品编码 809296 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -29070,7 +30033,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 102
+    "sourceIndex": 102,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00051-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00051-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00051-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00051-C.pdf",
+      "sourcePartNumber": "443-01-00051",
+      "structureModel": "BY-40D",
+      "matchRule": "商品编码 809297 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -29287,7 +30259,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 103
+    "sourceIndex": 103,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00052-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00052-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00052-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00052-C.pdf",
+      "sourcePartNumber": "443-01-00052",
+      "structureModel": "BY-64F",
+      "matchRule": "商品编码 809298 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -29504,7 +30485,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 104
+    "sourceIndex": 104,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00081-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00081-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00081-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00081-C.pdf",
+      "sourcePartNumber": "443-01-00081",
+      "structureModel": "BY-24F",
+      "matchRule": "商品编码 809326 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -29721,7 +30711,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 105
+    "sourceIndex": 105,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00089-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00089-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00089-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00089-C.pdf",
+      "sourcePartNumber": "443-01-00089",
+      "structureModel": "BY-16F",
+      "matchRule": "商品编码 809334 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -29938,7 +30937,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 106
+    "sourceIndex": 106,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00091-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00091-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00091-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00091-C.pdf",
+      "sourcePartNumber": "443-01-00091",
+      "structureModel": "BY-32F",
+      "matchRule": "商品编码 809335 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -30155,7 +31163,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 107
+    "sourceIndex": 107,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00092-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00092-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00092-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00092-C.pdf",
+      "sourcePartNumber": "443-01-00092",
+      "structureModel": "BY-64F",
+      "matchRule": "商品编码 809336 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -30372,7 +31389,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 108
+    "sourceIndex": 108,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00097-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00097-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00097-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00097-C.pdf",
+      "sourcePartNumber": "443-01-00097",
+      "structureModel": "BY-48F",
+      "matchRule": "商品编码 809341 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -30589,7 +31615,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 109
+    "sourceIndex": 109,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00099-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00099-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00099-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00099-C.pdf",
+      "sourcePartNumber": "443-01-00099",
+      "structureModel": "BY-48F",
+      "matchRule": "商品编码 809343 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -30806,7 +31841,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 110
+    "sourceIndex": 110,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00125-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00125-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00125-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00125-C.pdf",
+      "sourcePartNumber": "443-01-00125",
+      "structureModel": "BY-40D",
+      "matchRule": "商品编码 809369 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -31047,7 +32091,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 111
+    "sourceIndex": 111,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00136-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00136-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00136-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00136-C.pdf",
+      "sourcePartNumber": "443-01-00136",
+      "structureModel": "BY-24D-16D-16D",
+      "matchRule": "商品编码 809380 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -31288,7 +32341,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 112
+    "sourceIndex": 112,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00137-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-01-00137-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-01-00137-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-01-00137-C.pdf",
+      "sourcePartNumber": "443-01-00137",
+      "structureModel": "BY-24D-16D-16D",
+      "matchRule": "商品编码 809381 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -31505,7 +32567,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 113
+    "sourceIndex": 113,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00007-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00007-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00007-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00007-C.pdf",
+      "sourcePartNumber": "443-02-00007",
+      "structureModel": "BY-32D",
+      "matchRule": "商品编码 809430 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -31722,7 +32793,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 114
+    "sourceIndex": 114,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00008-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00008-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00008-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00008-C.pdf",
+      "sourcePartNumber": "443-02-00008",
+      "structureModel": "BY-32D",
+      "matchRule": "商品编码 809431 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -31939,7 +33019,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 115
+    "sourceIndex": 115,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00009-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00009-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00009-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00009-C.pdf",
+      "sourcePartNumber": "443-02-00009",
+      "structureModel": "BY-95X",
+      "matchRule": "商品编码 809432 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -32156,7 +33245,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 116
+    "sourceIndex": 116,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00010-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00010-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00010-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00010-C.pdf",
+      "sourcePartNumber": "443-02-00010",
+      "structureModel": "BY-95X",
+      "matchRule": "商品编码 809433 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -32397,7 +33495,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 117
+    "sourceIndex": 117,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00011-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00011-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00011-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00011-C.pdf",
+      "sourcePartNumber": "443-02-00011",
+      "structureModel": "BY-32D-16D-16D",
+      "matchRule": "商品编码 809434 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -32638,7 +33745,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 118
+    "sourceIndex": 118,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00012-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00012-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00012-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00012-C.pdf",
+      "sourcePartNumber": "443-02-00012",
+      "structureModel": "BY-32D-16D-16D",
+      "matchRule": "商品编码 809435 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -32879,7 +33995,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 119
+    "sourceIndex": 119,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00013-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00013-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00013-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00013-C.pdf",
+      "sourcePartNumber": "443-02-00013",
+      "structureModel": "BY-64D-32D-32D",
+      "matchRule": "商品编码 809436 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -33337,7 +34462,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 121
+    "sourceIndex": 121,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00191-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00191-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00191-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00191-C.pdf",
+      "sourcePartNumber": "443-02-00191",
+      "structureModel": "BY-24D",
+      "matchRule": "商品编码 809608 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -33554,7 +34688,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 122
+    "sourceIndex": 122,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00192-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00192-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00192-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00192-C.pdf",
+      "sourcePartNumber": "443-02-00192",
+      "structureModel": "BY-24D",
+      "matchRule": "商品编码 809609 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -33771,7 +34914,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 123
+    "sourceIndex": 123,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00202-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00202-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00202-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00202-C.pdf",
+      "sourcePartNumber": "443-02-00202",
+      "structureModel": "BY-16D",
+      "matchRule": "商品编码 809623 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -33988,7 +35140,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 124
+    "sourceIndex": 124,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00203-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00203-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00203-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00203-C.pdf",
+      "sourcePartNumber": "443-02-00203",
+      "structureModel": "BY-16D",
+      "matchRule": "商品编码 809624 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -34205,7 +35366,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 125
+    "sourceIndex": 125,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00225-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00225-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00225-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00225-C.pdf",
+      "sourcePartNumber": "443-02-00225",
+      "structureModel": "BY-127V",
+      "matchRule": "商品编码 809646 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -36182,7 +37352,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 154
+    "sourceIndex": 154,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00311-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00311-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00311-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00311-C.pdf",
+      "sourcePartNumber": "443-02-00311",
+      "structureModel": "BBL-16D",
+      "matchRule": "商品编码 809283 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -36399,7 +37578,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 155
+    "sourceIndex": 155,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00312-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00312-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00312-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00312-C.pdf",
+      "sourcePartNumber": "443-02-00312",
+      "structureModel": "BBL-24D",
+      "matchRule": "商品编码 809284 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -36616,7 +37804,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 156
+    "sourceIndex": 156,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00313-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00313-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00313-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00313-C.pdf",
+      "sourcePartNumber": "443-02-00313",
+      "structureModel": "BBL-32D",
+      "matchRule": "商品编码 809285 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",
@@ -37050,7 +38247,16 @@
       "applications": "常见应用",
       "faq": "常见问题"
     },
-    "sourceIndex": 158
+    "sourceIndex": 158,
+    "drawingPdfUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00353-C.pdf",
+    "drawingUrl": "/documents/products/fittings/barbed-fittings/drawings/443-02-00353-C.pdf",
+    "drawingPdf": "/documents/products/fittings/barbed-fittings/drawings/443-02-00353-C.pdf",
+    "drawingSource": {
+      "sourceFile": "443-02-00353-C.pdf",
+      "sourcePartNumber": "443-02-00353",
+      "structureModel": "BBL-24D",
+      "matchRule": "商品编码 809407 精确匹配"
+    }
   },
   {
     "sourceType": "fitting-detail",

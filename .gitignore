@@ -79,3 +79,19 @@ private-assets/**/*.pdf
 # Private product assets
 private-assets/**/*.dwg
 private-assets/**/*.dxf
+_backup/
+_backup/
+**/_backup/
+**/backup/
+**/backups/
+**/*.bak
+**/*.bak-*
+**/*.bak_*
+**/*.backup
+**/*.backup-*
+**/*.backup_*
+**/*-backup-*
+**/*_backup_*
+**/*.orig
+**/*.rej
+**/*.tmp

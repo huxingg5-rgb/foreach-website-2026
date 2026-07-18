@@ -286,38 +286,133 @@ export default async function ValveDetailPage({ params }: ValveDetailPageProps) 
   return (
     <div data-valve-detail-page="true">
       {/*
-        VALVE_DETAIL_CTA_SAFE_SPACING_20260708
+        VALVE_DETAIL_FAQ_CTA_FIXED_FINAL_20260718
 
-        阀系列详情页底部间距修正：
-        1. 不再对蓝色 CTA 使用负 margin，避免文字被压住
-        2. 只压缩 FAQ 区块底部空白
-        3. 只作用于阀系列详情页，不影响泵系列详情页
+        阀系列详情页最终布局：
+        - FAQ 展开不推动 Footer
+        - CTA 背景全屏铺满
+        - CTA 内容与正文居中对齐
       */}
       <style
         dangerouslySetInnerHTML={{
           __html: `
-            [data-valve-detail-page="true"] [class*="bottomCta"],
-            [data-valve-detail-page="true"] [class*="BottomCta"],
-            [data-valve-detail-page="true"] [class*="customInquiryCta"],
-            [data-valve-detail-page="true"] [class*="CustomInquiryCta"] {
-              margin-top: 0 !important;
-              transform: none !important;
-              position: relative !important;
-              top: auto !important;
+            /* 允许全屏 CTA 穿出详情页内容容器 */
+            [data-valve-detail-page="true"],
+            [data-valve-detail-page="true"] main,
+            [data-valve-detail-page="true"] main > div,
+            [data-valve-detail-page="true"] [class*="page"]:has([class*="plungerBottomCta"]),
+            [data-valve-detail-page="true"] [class*="container"]:has([class*="plungerBottomCta"]),
+            [data-valve-detail-page="true"] [class*="detailSection"]:has([class*="plungerBottomCta"]) {
               overflow: visible !important;
             }
 
-            [data-valve-detail-page="true"] [class*="faqSection"],
-            [data-valve-detail-page="true"] [class*="FaqSection"],
-            [data-valve-detail-page="true"] section:has([class*="faq"]),
-            [data-valve-detail-page="true"] section:has([class*="Faq"]) {
-              padding-bottom: 36px !important;
+            /*
+             * FAQ 固定区域：
+             * 折叠或展开时总高度不变，
+             * 所以下方 CTA 和 Footer 不会上下跳动。
+             */
+            [data-valve-detail-page="true"] [class*="faqSection"] {
+              position: relative !important;
+              height: 560px !important;
+              min-height: 560px !important;
+              max-height: 560px !important;
+              margin-top: 36px !important;
               margin-bottom: 0 !important;
+              padding-top: 0 !important;
+              padding-bottom: 0 !important;
+              overflow: hidden !important;
+              transform: none !important;
+            }
+
+            [data-valve-detail-page="true"] [class*="faqList"] {
+              margin-bottom: 0 !important;
+            }
+
+            /* 限制单条答案展开高度，保持在预留区域中 */
+            [data-valve-detail-page="true"] [class*="faqItemOpen"] [class*="faqAnswerWrap"] {
+              max-height: 190px !important;
+            }
+
+            /*
+             * CTA 外层：
+             * 背景使用整个浏览器宽度，
+             * 不受正文容器宽度限制。
+             */
+            [data-valve-detail-page="true"] [class*="plungerBottomCta"]:not([class*="Inner"]):not([class*="Text"]):not([class*="Button"]) {
+              position: relative !important;
+              left: 50% !important;
+              width: 100vw !important;
+              max-width: none !important;
+              margin-top: 0 !important;
+              margin-right: -50vw !important;
+              margin-bottom: 0 !important;
+              margin-left: -50vw !important;
+              transform: none !important;
+              box-sizing: border-box !important;
+              overflow: hidden !important;
+            }
+
+            /* CTA 内容恢复到官网正文宽度并居中 */
+            [data-valve-detail-page="true"] [class*="plungerBottomCtaInner"] {
+              display: grid !important;
+              width: min(calc(100% - 48px), 1180px) !important;
+              max-width: 1180px !important;
+              min-height: 250px !important;
+              margin: 0 auto !important;
+              padding: 58px 0 !important;
+              grid-template-columns: minmax(0, 1fr) auto !important;
+              gap: 48px !important;
+              align-items: center !important;
+              box-sizing: border-box !important;
+              transform: none !important;
+            }
+
+            [data-valve-detail-page="true"] [class*="plungerBottomCtaText"] {
+              min-width: 0 !important;
+              margin: 0 !important;
+              padding: 0 !important;
+              transform: none !important;
+            }
+
+            [data-valve-detail-page="true"] [class*="plungerBottomCtaButton"] {
+              position: static !important;
+              margin: 0 !important;
+              transform: none !important;
+            }
+
+            /* CTA 后直接进入 Footer，不保留额外白色间距 */
+            [data-valve-detail-page="true"] [class*="page"]:has([class*="plungerBottomCta"]),
+            [data-valve-detail-page="true"] [class*="container"]:has([class*="plungerBottomCta"]),
+            [data-valve-detail-page="true"] [class*="detailSection"]:has([class*="plungerBottomCta"]) {
+              padding-bottom: 0 !important;
+              margin-bottom: 0 !important;
+            }
+
+            @media (max-width: 768px) {
+              [data-valve-detail-page="true"] [class*="faqSection"] {
+                height: 680px !important;
+                min-height: 680px !important;
+                max-height: 680px !important;
+                margin-top: 28px !important;
+              }
+
+              [data-valve-detail-page="true"] [class*="faqItemOpen"] [class*="faqAnswerWrap"] {
+                max-height: 260px !important;
+              }
+
+              [data-valve-detail-page="true"] [class*="plungerBottomCtaInner"] {
+                width: calc(100% - 48px) !important;
+                min-height: 250px !important;
+                padding: 40px 0 !important;
+                grid-template-columns: minmax(0, 1fr) !important;
+                gap: 22px !important;
+              }
             }
           `,
         }}
       />
-      {
+
+{
         /*
           VALVE_DETAIL_CTA_OFFSET_REMOVED
 
@@ -325,19 +420,7 @@ export default async function ValveDetailPage({ params }: ValveDetailPageProps) 
           不再使用多组叠加选择器，避免蓝色 CTA 内部文字被顶上去。
         */
       }
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
-            [data-valve-detail-page="true"] [class*="bottomCta"],
-            [data-valve-detail-page="true"] [class*="BottomCta"],
-            [data-valve-detail-page="true"] [class*="customInquiryCta"],
-            [data-valve-detail-page="true"] [class*="CustomInquiryCta"] {
-              margin-top: -65px !important;
-            }
-          `,
-        }}
-      />
-      <ProductDetailView data={toClientData(detail)} />
+<ProductDetailView data={toClientData(detail)} />
     </div>
   );
 }

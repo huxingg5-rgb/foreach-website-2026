@@ -1,4 +1,4 @@
-/* =========================================================
+﻿/* =========================================================
    getPumpSeriesProductDetailAdapter.ts
    恒永达官网｜泵系列数据库数据 → 原详情页数据结构适配器
 
@@ -184,6 +184,103 @@ function publicPathExists(webPath: string) {
   );
 
   return nodeFs.existsSync(localPath);
+}
+
+function normalizePublicWebPath(value: unknown) {
+  const rawPath = toText(value);
+
+  if (!rawPath) {
+    return "";
+  }
+
+  const pathOnly = rawPath.split("#")[0].split("?")[0];
+
+  const normalizedPath = pathOnly
+    .replace(/\\/g, "/")
+    .replace(/^\/?public\//i, "/");
+
+  return normalizedPath.startsWith("/")
+    ? normalizedPath
+    : `/${normalizedPath}`;
+}
+
+function getDiaphragmDrawingFallback(record: any) {
+  const slug = toText(
+    record?.slug ||
+      record?.productId ||
+      record?.internalModelRef
+  ).toLowerCase();
+
+  const fallbackBySlug: Record<string, string> = {
+    "dpgl800-gas-liquid-diaphragm-pump":
+      "/documents/products/pumps/diaphragm-pumps/dpgl800/drawings/dpgl800-gas-liquid-diaphragm-pump-2d-drawing.pdf",
+
+    "dpgl800-24bs6-ep-ps-gas-liquid-diaphragm-pump":
+      "/documents/products/pumps/diaphragm-pumps/dpgl800/drawings/dpgl800-24bs6-ep-ps-gas-liquid-diaphragm-pump-2d-drawing.pdf",
+
+    "dpgl800-24bs6-ff-ps-gas-liquid-diaphragm-pump":
+      "/documents/products/pumps/diaphragm-pumps/dpgl800/drawings/dpgl800-24bs6-ff-ps-gas-liquid-diaphragm-pump-2d-drawing.pdf",
+
+    "dpl30-24bb-ep-ps-liquid-diaphragm-pump":
+      "/documents/products/pumps/diaphragm-pumps/dpl30/drawings/dpl30-brushed-liquid-diaphragm-pump-2d-drawing.pdf",
+
+    "dpl30-24db-ep-ps-liquid-diaphragm-pump":
+      "/documents/products/pumps/diaphragm-pumps/dpl30/drawings/dpl30-brushless-liquid-diaphragm-pump-2d-drawing.pdf",
+
+    "dpl30h-24bs-ep-ps-liquid-diaphragm-pump":
+      "/documents/products/pumps/diaphragm-pumps/dpl30h/drawings/dpl30h-brushed-liquid-diaphragm-pump-2d-drawing.pdf",
+
+    "dpl30h-24ds-ep-ps-liquid-diaphragm-pump":
+      "/documents/products/pumps/diaphragm-pumps/dpl30h/drawings/dpl30h-brushless-liquid-diaphragm-pump-2d-drawing.pdf",
+
+    "dpl60-24bb-ep-ps-liquid-diaphragm-pump":
+      "/documents/products/pumps/diaphragm-pumps/dpl60/drawings/dpl60-brushed-liquid-diaphragm-pump-2d-drawing.pdf",
+
+    "dpl60-24db-ep-ps-liquid-diaphragm-pump":
+      "/documents/products/pumps/diaphragm-pumps/dpl60/drawings/dpl60-brushless-liquid-diaphragm-pump-2d-drawing.pdf",
+  };
+
+  return fallbackBySlug[slug] || "";
+}
+
+function resolveExistingDrawing2dUrl(
+  record: any,
+  resources: any
+) {
+  const configuredCandidates = uniqueList([
+    resources?.drawing2dUrl,
+    resources?.drawingPdfUrl,
+    resources?.partDrawingUrl,
+    resources?.drawingUrl,
+    resources?.drawingPdf,
+    resources?.drawing2d,
+    record?.drawing2dUrl,
+    record?.drawingPdfUrl,
+    record?.partDrawingUrl,
+    record?.drawingUrl,
+    record?.drawingPdf,
+    record?.drawing2d,
+  ])
+    .map(normalizePublicWebPath)
+    .filter(Boolean);
+
+  for (const candidate of configuredCandidates) {
+    if (publicPathExists(candidate)) {
+      return candidate;
+    }
+  }
+
+  const diaphragmFallback =
+    getDiaphragmDrawingFallback(record);
+
+  if (
+    diaphragmFallback &&
+    publicPathExists(diaphragmFallback)
+  ) {
+    return diaphragmFallback;
+  }
+
+  return "";
 }
 
 function resolveFallbackImage(record: any) {

@@ -142,8 +142,8 @@ const lifeScienceCard: HomeFlowApplicationCard = {
       label: {
         "zh-CN": "采样针",
         en: "Sampling Probe",
-        es: "Aguja de muestreo",
-        fr: "Aiguille de prélèvement",
+        es: "Sonda de muestreo",
+        fr: "Sonde de prélèvement",
         ko: "샘플링 프로브",
         ru: "Пробоотборная игла",
       },
@@ -215,10 +215,10 @@ const syntheticBiologyCard: HomeFlowApplicationCard = {
       label: {
         "zh-CN": "电磁阀",
         en: "Solenoid Valve",
-        es: "Válvula solenoide",
+        es: "Electroválvula",
         fr: "Électrovanne",
         ko: "솔레노이드 밸브",
-        ru: "Соленоидный клапан",
+        ru: "Электромагнитный клапан",
       },
     },
     {
@@ -374,8 +374,8 @@ const analyticalInstrumentsCard: HomeFlowApplicationCard = {
         en: "Piston Pump",
         es: "Bomba de pistón",
         fr: "Pompe à piston",
-        ko: "피스톤 펌프",
-        ru: "Поршневой насос",
+        ko: "플런저 펌프",
+        ru: "Плунжерный насос",
       },
     },
     {
@@ -445,10 +445,10 @@ const ivdCard: HomeFlowApplicationCard = {
       label: {
         "zh-CN": "电磁阀",
         en: "Solenoid Valve",
-        es: "Válvula solenoide",
+        es: "Electroválvula",
         fr: "Électrovanne",
         ko: "솔레노이드 밸브",
-        ru: "Соленоидный клапан",
+        ru: "Электромагнитный клапан",
       },
     },
     {
@@ -541,9 +541,9 @@ export const homeApplicationFlowData = {
     en:
       "For IVD, life sciences, synthetic biology, high-end analytical instruments, and laboratory automation, FOREACH provides integrated fluidic support covering pumps, valves, sensors, tubing, fittings, sampling probes, and related core components.",
     es:
-      "Para IVD, ciencias de la vida, biología sintética, instrumentos analíticos avanzados y automatización de laboratorios, FOREACH ofrece soporte fluídico integrado con bombas, válvulas, sensores, tubos, conectores, agujas de muestreo y componentes clave.",
+      "Para IVD, ciencias de la vida, biología sintética, instrumentos analíticos avanzados y automatización de laboratorios, FOREACH ofrece soporte fluídico integrado con bombas, válvulas, sensores, tubos, conectores, sondas de muestreo y componentes clave.",
     fr:
-      "Pour l’IVD, les sciences de la vie, la biologie synthétique, les instruments d’analyse avancés et l’automatisation de laboratoire, FOREACH fournit un support fluidique intégré couvrant pompes, vannes, capteurs, tubes, raccords, aiguilles de prélèvement et composants clés.",
+      "Pour l’IVD, les sciences de la vie, la biologie synthétique, les instruments d’analyse avancés et l’automatisation de laboratoire, FOREACH fournit un support fluidique intégré couvrant pompes, vannes, capteurs, tubes, raccords, sondes de prélèvement et composants clés.",
     ko:
       "IVD, 생명과학, 합성생물학, 고급 분석 장비 및 실험실 자동화를 위해 FOREACH는 펌프, 밸브, 센서, 튜빙, 피팅, 샘플링 프로브 등 핵심 유체 부품을 포함한 통합 유체 제어 지원을 제공합니다.",
     ru:

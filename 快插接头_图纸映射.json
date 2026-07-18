@@ -1,0 +1,1944 @@
+{
+  "sourceWorkbook": "快插接头_已对应图纸.xlsx",
+  "rules": {
+    "ignoreHousingMaterial": true,
+    "ignoreORingMaterial": true,
+    "notes": "同结构产品允许共用2D图纸；以商品编码映射为最终官网关联键。"
+  },
+  "summary": {
+    "mappedProductCount": 171,
+    "uniqueDrawingPdfCount": 140,
+    "exactMatchCount": 122,
+    "sharedStructureMatchCount": 49,
+    "q20Count": 88,
+    "q40Count": 59,
+    "q60Count": 24
+  },
+  "mappings": [
+    {
+      "productCode": "839001",
+      "websiteStructuralModel": "Q2001-SNX-S",
+      "drawingStructuralModel": "Q2001-SNX-S",
+      "pdfFile": "515-00-03518-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03518-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839045",
+      "websiteStructuralModel": "Q2001-SNX-S",
+      "drawingStructuralModel": "Q2001-SNX-S",
+      "pdfFile": "515-00-03518-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03518-C.pdf",
+        "515-00-03557-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839002",
+      "websiteStructuralModel": "Q2002-SNX-S",
+      "drawingStructuralModel": "Q2002-SNX-S",
+      "pdfFile": "515-00-03097-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03097-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839046",
+      "websiteStructuralModel": "Q2002-SNX-S",
+      "drawingStructuralModel": "Q2002-SNX-S",
+      "pdfFile": "515-00-03558-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03558-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839003",
+      "websiteStructuralModel": "Q2003-SNX-S",
+      "drawingStructuralModel": "Q2003-SNX-S",
+      "pdfFile": "515-00-03521-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03521-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839047",
+      "websiteStructuralModel": "Q2003-SNX-S",
+      "drawingStructuralModel": "Q2003-SNX-S",
+      "pdfFile": "515-00-03521-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03521-C.pdf",
+        "515-00-03559-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839004",
+      "websiteStructuralModel": "Q2004-SNX-S",
+      "drawingStructuralModel": "Q2004-SNX-S",
+      "pdfFile": "515-00-03522-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03522-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839048",
+      "websiteStructuralModel": "Q2004-SNX-S",
+      "drawingStructuralModel": "Q2004-SNX-S",
+      "pdfFile": "515-00-03560-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03560-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839005",
+      "websiteStructuralModel": "Q2002-SNX-L",
+      "drawingStructuralModel": "Q2002-SNX-L",
+      "pdfFile": "515-00-03523-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03523-C.pdf",
+        "515-00-03561-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839049",
+      "websiteStructuralModel": "Q2002-SNX-L",
+      "drawingStructuralModel": "Q2002-SNX-L",
+      "pdfFile": "515-00-03561-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03561-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839006",
+      "websiteStructuralModel": "Q2004-SNX-L",
+      "drawingStructuralModel": "Q2004-SNX-L",
+      "pdfFile": "515-00-03524-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03524-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839050",
+      "websiteStructuralModel": "Q2004-SNX-L",
+      "drawingStructuralModel": "Q2004-SNX-L",
+      "pdfFile": "515-00-03562-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03562-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839007",
+      "websiteStructuralModel": "Q2018N-SNX-S",
+      "drawingStructuralModel": "Q2018N-SNX-S",
+      "pdfFile": "515-00-03525-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03525-C.pdf",
+        "515-00-03563-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839051",
+      "websiteStructuralModel": "Q2018N-SNX-S",
+      "drawingStructuralModel": "Q2018N-SNX-S",
+      "pdfFile": "515-00-03525-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03525-C.pdf",
+        "515-00-03563-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839008",
+      "websiteStructuralModel": "Q2001-SMX-S",
+      "drawingStructuralModel": "Q2001-SMX-S",
+      "pdfFile": "515-00-03526-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03526-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839052",
+      "websiteStructuralModel": "Q2001-SMX-S",
+      "drawingStructuralModel": "Q2001-SMX-S",
+      "pdfFile": "515-00-03526-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03526-C.pdf",
+        "515-00-03564-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839009",
+      "websiteStructuralModel": "Q2002-SMX-S",
+      "drawingStructuralModel": "Q2002-SMX-S",
+      "pdfFile": "515-00-03095-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03095-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839053",
+      "websiteStructuralModel": "Q2002-SMX-S",
+      "drawingStructuralModel": "Q2002-SMX-S",
+      "pdfFile": "515-00-03095-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03095-C.pdf",
+        "515-00-03565-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839010",
+      "websiteStructuralModel": "Q2003-SMX-S",
+      "drawingStructuralModel": "Q2003-SMX-S",
+      "pdfFile": "515-00-03527-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03527-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839054",
+      "websiteStructuralModel": "Q2003-SMX-S",
+      "drawingStructuralModel": "Q2003-SMX-S",
+      "pdfFile": "515-00-03527-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03527-C.pdf",
+        "515-00-03566-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839011",
+      "websiteStructuralModel": "Q2004-SMX-S",
+      "drawingStructuralModel": "Q2004-SMX-S",
+      "pdfFile": "515-00-03528-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03528-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839055",
+      "websiteStructuralModel": "Q2004-SMX-S",
+      "drawingStructuralModel": "Q2004-SMX-S",
+      "pdfFile": "515-00-03528-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03528-C.pdf",
+        "515-00-03567-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839012",
+      "websiteStructuralModel": "Q2001-PNX-S",
+      "drawingStructuralModel": "Q2001-PNX-S",
+      "pdfFile": "515-00-03529-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03529-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839056",
+      "websiteStructuralModel": "Q2001-PNX-S",
+      "drawingStructuralModel": "Q2001-PNX-S",
+      "pdfFile": "515-00-03529-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03529-C.pdf",
+        "515-00-03568-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839013",
+      "websiteStructuralModel": "Q2002-PNX-S",
+      "drawingStructuralModel": "Q2002-PNX-S",
+      "pdfFile": "515-00-03101-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03101-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839057",
+      "websiteStructuralModel": "Q2002-PNX-S",
+      "drawingStructuralModel": "Q2002-PNX-S",
+      "pdfFile": "515-00-03101-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03101-C.pdf",
+        "515-00-03569-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839014",
+      "websiteStructuralModel": "Q2003-PNX-S",
+      "drawingStructuralModel": "Q2003-PNX-S",
+      "pdfFile": "515-00-03530-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03530-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839058",
+      "websiteStructuralModel": "Q2003-PNX-S",
+      "drawingStructuralModel": "Q2003-PNX-S",
+      "pdfFile": "515-00-03530-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03530-C.pdf",
+        "515-00-03570-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839015",
+      "websiteStructuralModel": "Q2004-PNX-S",
+      "drawingStructuralModel": "Q2004-PNX-S",
+      "pdfFile": "515-00-03531-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03531-C.pdf",
+        "515-00-03571-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839059",
+      "websiteStructuralModel": "Q2004-PNX-S",
+      "drawingStructuralModel": "Q2004-PNX-S",
+      "pdfFile": "515-00-03531-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03531-C.pdf",
+        "515-00-03571-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839016",
+      "websiteStructuralModel": "Q2002-PNX-L",
+      "drawingStructuralModel": "Q2002-PNX-L",
+      "pdfFile": "515-00-03532-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03532-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839060",
+      "websiteStructuralModel": "Q2002-PNX-L",
+      "drawingStructuralModel": "Q2002-PNX-L",
+      "pdfFile": "515-00-03572-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03572-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839017",
+      "websiteStructuralModel": "Q2004-PNX-L",
+      "drawingStructuralModel": "Q2004-PNX-L",
+      "pdfFile": "515-00-03533-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03533-C.pdf",
+        "515-00-03573-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839061",
+      "websiteStructuralModel": "Q2004-PNX-L",
+      "drawingStructuralModel": "Q2004-PNX-L",
+      "pdfFile": "515-00-03573-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03573-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839018",
+      "websiteStructuralModel": "Q2018N-PNX-S",
+      "drawingStructuralModel": "Q2018N-PNX-S",
+      "pdfFile": "515-00-03534-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03534-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839062",
+      "websiteStructuralModel": "Q2018N-PNX-S",
+      "drawingStructuralModel": "Q2018N-PNX-S",
+      "pdfFile": "515-00-03574-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03574-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839019",
+      "websiteStructuralModel": "Q2001-PMX-S",
+      "drawingStructuralModel": "Q2001-PMX-S",
+      "pdfFile": "515-00-03535-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03535-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839063",
+      "websiteStructuralModel": "Q2001-PMX-S",
+      "drawingStructuralModel": "Q2001-PMX-S",
+      "pdfFile": "515-00-03575-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03575-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839020",
+      "websiteStructuralModel": "Q2002-PMX-S",
+      "drawingStructuralModel": "Q2002-PMX-S",
+      "pdfFile": "515-00-03099-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03099-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839064",
+      "websiteStructuralModel": "Q2002-PMX-S",
+      "drawingStructuralModel": "Q2002-PMX-S",
+      "pdfFile": "515-00-03576-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03576-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839021",
+      "websiteStructuralModel": "Q2003-PMX-S",
+      "drawingStructuralModel": "Q2003-PMX-S",
+      "pdfFile": "515-00-03537-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03537-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839065",
+      "websiteStructuralModel": "Q2003-PMX-S",
+      "drawingStructuralModel": "Q2003-PMX-S",
+      "pdfFile": "515-00-03537-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03537-C.pdf",
+        "515-00-03577-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839022",
+      "websiteStructuralModel": "Q2004-PMX-S",
+      "drawingStructuralModel": "Q2004-PMX-S",
+      "pdfFile": "515-00-03538-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03538-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839066",
+      "websiteStructuralModel": "Q2004-PMX-S",
+      "drawingStructuralModel": "Q2004-PMX-S",
+      "pdfFile": "515-00-03578-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03578-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839023",
+      "websiteStructuralModel": "Q2001-SNV-S",
+      "drawingStructuralModel": "Q2001-SNV-S",
+      "pdfFile": "515-00-03536-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03536-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839067",
+      "websiteStructuralModel": "Q2001-SNV-S",
+      "drawingStructuralModel": "Q2001-SNV-S",
+      "pdfFile": "515-00-03536-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03536-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839024",
+      "websiteStructuralModel": "Q2002-SNV-S",
+      "drawingStructuralModel": "Q2002-SNV-S",
+      "pdfFile": "515-00-03096-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03096-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839068",
+      "websiteStructuralModel": "Q2002-SNV-S",
+      "drawingStructuralModel": "Q2002-SNV-S",
+      "pdfFile": "515-00-03580-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03580-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839025",
+      "websiteStructuralModel": "Q2003-SNV-S",
+      "drawingStructuralModel": "Q2003-SNV-S",
+      "pdfFile": "515-00-03539-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03539-C.pdf",
+        "515-00-03581-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839069",
+      "websiteStructuralModel": "Q2003-SNV-S",
+      "drawingStructuralModel": "Q2003-SNV-S",
+      "pdfFile": "515-00-03581-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03581-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839026",
+      "websiteStructuralModel": "Q2004-SNV-S",
+      "drawingStructuralModel": "Q2004-SNV-S",
+      "pdfFile": "515-00-03540-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03540-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839070",
+      "websiteStructuralModel": "Q2004-SNV-S",
+      "drawingStructuralModel": "Q2004-SNV-S",
+      "pdfFile": "515-00-03540-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03540-C.pdf",
+        "515-00-03582-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839027",
+      "websiteStructuralModel": "Q2002-SNV-L",
+      "drawingStructuralModel": "Q2002-SNV-L",
+      "pdfFile": "515-00-03541-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03541-C.pdf",
+        "515-00-03583-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839071",
+      "websiteStructuralModel": "Q2002-SNV-L",
+      "drawingStructuralModel": "Q2002-SNV-L",
+      "pdfFile": "515-00-03583-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03583-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839028",
+      "websiteStructuralModel": "Q2004-SNV-L",
+      "drawingStructuralModel": "Q2004-SNV-L",
+      "pdfFile": "515-00-03584-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03584-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839072",
+      "websiteStructuralModel": "Q2004-SNV-L",
+      "drawingStructuralModel": "Q2004-SNV-L",
+      "pdfFile": "515-00-03584-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03584-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839029",
+      "websiteStructuralModel": "Q2018N-SNV-S",
+      "drawingStructuralModel": "Q2018N-SNV-S",
+      "pdfFile": "515-00-03543-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03543-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839073",
+      "websiteStructuralModel": "Q2018N-SNV-S",
+      "drawingStructuralModel": "Q2018N-SNV-S",
+      "pdfFile": "515-00-03585-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03585-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839030",
+      "websiteStructuralModel": "Q2001-SMV-S",
+      "drawingStructuralModel": "Q2001-SMV-S",
+      "pdfFile": "515-00-03544-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03544-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839074",
+      "websiteStructuralModel": "Q2001-SMV-S",
+      "drawingStructuralModel": "Q2001-SMV-S",
+      "pdfFile": "515-00-03586-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03586-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839031",
+      "websiteStructuralModel": "Q2002-SMV-S",
+      "drawingStructuralModel": "Q2002-SMV-S",
+      "pdfFile": "515-00-03094-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03094-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839075",
+      "websiteStructuralModel": "Q2002-SMV-S",
+      "drawingStructuralModel": "Q2002-SMV-S",
+      "pdfFile": "515-00-03094-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03094-C.pdf",
+        "515-00-03458-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839032",
+      "websiteStructuralModel": "Q2003-SMV-S",
+      "drawingStructuralModel": "Q2003-SMV-S",
+      "pdfFile": "515-00-03545-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03545-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839076",
+      "websiteStructuralModel": "Q2003-SMV-S",
+      "drawingStructuralModel": "Q2003-SMV-S",
+      "pdfFile": "515-00-03545-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03545-C.pdf",
+        "515-00-03587-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839033",
+      "websiteStructuralModel": "Q2004-SMV-S",
+      "drawingStructuralModel": "Q2004-SMV-S",
+      "pdfFile": "515-00-03546-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03546-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839077",
+      "websiteStructuralModel": "Q2004-SMV-S",
+      "drawingStructuralModel": "Q2004-SMV-S",
+      "pdfFile": "515-00-03546-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03546-C.pdf",
+        "515-00-03588-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839034",
+      "websiteStructuralModel": "Q2001-PNV-S",
+      "drawingStructuralModel": "Q2001-PNV-S",
+      "pdfFile": "515-00-03547-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03547-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839078",
+      "websiteStructuralModel": "Q2001-PNV-S",
+      "drawingStructuralModel": "Q2001-PNV-S",
+      "pdfFile": "515-00-03589-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03589-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839035",
+      "websiteStructuralModel": "Q2002-PNV-S",
+      "drawingStructuralModel": "Q2002-PNV-S",
+      "pdfFile": "515-00-03100-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03100-C.pdf",
+        "515-00-03590-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839079",
+      "websiteStructuralModel": "Q2002-PNV-S",
+      "drawingStructuralModel": "Q2002-PNV-S",
+      "pdfFile": "515-00-03100-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03100-C.pdf",
+        "515-00-03590-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839036",
+      "websiteStructuralModel": "Q2003-PNV-S",
+      "drawingStructuralModel": "Q2003-PNV-S",
+      "pdfFile": "515-00-03548-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03548-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839080",
+      "websiteStructuralModel": "Q2003-PNV-S",
+      "drawingStructuralModel": "Q2003-PNV-S",
+      "pdfFile": "515-00-03591-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03591-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839037",
+      "websiteStructuralModel": "Q2004-PNV-S",
+      "drawingStructuralModel": "Q2004-PNV-S",
+      "pdfFile": "515-00-03549-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03549-C.pdf",
+        "515-00-03592-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839081",
+      "websiteStructuralModel": "Q2004-PNV-S",
+      "drawingStructuralModel": "Q2004-PNV-S",
+      "pdfFile": "515-00-03592-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03592-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839038",
+      "websiteStructuralModel": "Q2002-PNV-L",
+      "drawingStructuralModel": "Q2002-PNV-L",
+      "pdfFile": "515-00-03550-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03550-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839082",
+      "websiteStructuralModel": "Q2002-PNV-L",
+      "drawingStructuralModel": "Q2002-PNV-L",
+      "pdfFile": "515-00-03593-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03593-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839039",
+      "websiteStructuralModel": "Q2004-PNV-L",
+      "drawingStructuralModel": "Q2004-PNV-L",
+      "pdfFile": "515-00-03551-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03551-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839083",
+      "websiteStructuralModel": "Q2004-PNV-L",
+      "drawingStructuralModel": "Q2004-PNV-L",
+      "pdfFile": "515-00-03594-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03594-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839040",
+      "websiteStructuralModel": "Q2018N-PNV-S",
+      "drawingStructuralModel": "Q2018N-PNV-S",
+      "pdfFile": "515-00-03552-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03552-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839084",
+      "websiteStructuralModel": "Q2018N-PNV-S",
+      "drawingStructuralModel": "Q2018N-PNV-S",
+      "pdfFile": "515-00-03595-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03595-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839041",
+      "websiteStructuralModel": "Q2001-PMV-S",
+      "drawingStructuralModel": "Q2001-PMV-S",
+      "pdfFile": "515-00-03553-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03553-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839085",
+      "websiteStructuralModel": "Q2001-PMV-S",
+      "drawingStructuralModel": "Q2001-PMV-S",
+      "pdfFile": "515-00-03553-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03553-C.pdf",
+        "515-00-03596-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839042",
+      "websiteStructuralModel": "Q2002-PMV-S",
+      "drawingStructuralModel": "Q2002-PMV-S",
+      "pdfFile": "515-00-03098-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03098-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839086",
+      "websiteStructuralModel": "Q2002-PMV-S",
+      "drawingStructuralModel": "Q2002-PMV-S",
+      "pdfFile": "515-00-03459-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03459-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839043",
+      "websiteStructuralModel": "Q2003-PMV-S",
+      "drawingStructuralModel": "Q2003-PMV-S",
+      "pdfFile": "515-00-03554-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03554-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839087",
+      "websiteStructuralModel": "Q2003-PMV-S",
+      "drawingStructuralModel": "Q2003-PMV-S",
+      "pdfFile": "515-00-03597-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03597-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839044",
+      "websiteStructuralModel": "Q2004-PMV-S",
+      "drawingStructuralModel": "Q2004-PMV-S",
+      "pdfFile": "515-00-03555-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03555-C.pdf"
+      ]
+    },
+    {
+      "productCode": "839088",
+      "websiteStructuralModel": "Q2004-PMV-S",
+      "drawingStructuralModel": "Q2004-PMV-S",
+      "pdfFile": "515-00-03598-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03598-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849001",
+      "websiteStructuralModel": "Q4004-SNX-S",
+      "drawingStructuralModel": "Q4004-SNX-S",
+      "pdfFile": "515-00-03599-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03599-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849035",
+      "websiteStructuralModel": "Q4004-SNX-S",
+      "drawingStructuralModel": "Q4004-SNX-S",
+      "pdfFile": "515-00-03599-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03599-C.pdf",
+        "515-00-03624-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849002",
+      "websiteStructuralModel": "Q4005-SNX-S",
+      "drawingStructuralModel": "Q4005-SNX-S",
+      "pdfFile": "515-00-03600-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03600-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849036",
+      "websiteStructuralModel": "Q4005-SNX-S",
+      "drawingStructuralModel": "Q4005-SNX-S",
+      "pdfFile": "515-00-03625-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03625-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849003",
+      "websiteStructuralModel": "Q4006-SNX-S",
+      "drawingStructuralModel": "Q4006-SNX-S",
+      "pdfFile": "515-00-03105-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03105-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849037",
+      "websiteStructuralModel": "Q4006-SNX-S",
+      "drawingStructuralModel": "Q4006-SNX-S",
+      "pdfFile": "515-00-03105-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03105-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849006",
+      "websiteStructuralModel": "Q4014N-SNX-S",
+      "drawingStructuralModel": "Q4014N-SNX-S",
+      "pdfFile": "515-00-03603-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03603-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849040",
+      "websiteStructuralModel": "Q4014N-SNX-S",
+      "drawingStructuralModel": "Q4014N-SNX-S",
+      "pdfFile": "515-00-03629-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "人工复核标题栏",
+      "sameStructureAvailableDrawings": [
+        "515-00-03629-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849007",
+      "websiteStructuralModel": "Q4004-SMX-S",
+      "drawingStructuralModel": "Q4004-SMX-S",
+      "pdfFile": "515-00-03604-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03604-C.pdf",
+        "515-00-03630-C.pdf",
+        "515-00-03636-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849041",
+      "websiteStructuralModel": "Q4004-SMX-S",
+      "drawingStructuralModel": "Q4004-SMX-S",
+      "pdfFile": "515-00-03630-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03630-C.pdf",
+        "515-00-03636-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849008",
+      "websiteStructuralModel": "Q4005-SMX-S",
+      "drawingStructuralModel": "Q4005-SMX-S",
+      "pdfFile": "515-00-03605-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03605-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849042",
+      "websiteStructuralModel": "Q4005-SMX-S",
+      "drawingStructuralModel": "Q4005-SMX-S",
+      "pdfFile": "515-00-03631-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03631-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849009",
+      "websiteStructuralModel": "Q4006-SMX-S",
+      "drawingStructuralModel": "Q4006-SMX-S",
+      "pdfFile": "515-00-03103-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03103-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849043",
+      "websiteStructuralModel": "Q4006-SMX-S",
+      "drawingStructuralModel": "Q4006-SMX-S",
+      "pdfFile": "515-00-03632-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03632-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849010",
+      "websiteStructuralModel": "Q4004-PNX-S",
+      "drawingStructuralModel": "Q4004-PNX-S",
+      "pdfFile": "515-00-03606-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03606-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849044",
+      "websiteStructuralModel": "Q4004-PNX-S",
+      "drawingStructuralModel": "Q4004-PNX-S",
+      "pdfFile": "515-00-03633-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03633-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849011",
+      "websiteStructuralModel": "Q4005-PNX-S",
+      "drawingStructuralModel": "Q4005-PNX-S",
+      "pdfFile": "515-00-03607-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03607-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849045",
+      "websiteStructuralModel": "Q4005-PNX-S",
+      "drawingStructuralModel": "Q4005-PNX-S",
+      "pdfFile": "515-00-03634-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03634-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849012",
+      "websiteStructuralModel": "Q4006-PNX-S",
+      "drawingStructuralModel": "Q4006-PNX-S",
+      "pdfFile": "515-00-03109-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03109-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849046",
+      "websiteStructuralModel": "Q4006-PNX-S",
+      "drawingStructuralModel": "Q4006-PNX-S",
+      "pdfFile": "515-00-03635-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03635-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849013",
+      "websiteStructuralModel": "Q4006-PNX-L",
+      "drawingStructuralModel": "Q4006-PNX-L",
+      "pdfFile": "515-00-03608-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03608-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849047",
+      "websiteStructuralModel": "Q4006-PNX-L",
+      "drawingStructuralModel": "Q4006-PNX-L",
+      "pdfFile": "515-00-03608-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03608-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849015",
+      "websiteStructuralModel": "Q4004-PMX-S",
+      "drawingStructuralModel": "Q4004-PMX-S",
+      "pdfFile": "515-00-03610-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03610-C.pdf",
+        "515-00-03638-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849049",
+      "websiteStructuralModel": "Q4004-PMX-S",
+      "drawingStructuralModel": "Q4004-PMX-S",
+      "pdfFile": "515-00-03638-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03638-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849071",
+      "websiteStructuralModel": "Q4004-PMX-S",
+      "drawingStructuralModel": "Q4004-PMX-S",
+      "pdfFile": "515-00-03610-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03610-C.pdf",
+        "515-00-03638-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849016",
+      "websiteStructuralModel": "Q4005-PMX-S",
+      "drawingStructuralModel": "Q4005-PMX-S",
+      "pdfFile": "515-00-03611-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03611-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849050",
+      "websiteStructuralModel": "Q4005-PMX-S",
+      "drawingStructuralModel": "Q4005-PMX-S",
+      "pdfFile": "515-00-03611-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03611-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849017",
+      "websiteStructuralModel": "Q4006-PMX-S",
+      "drawingStructuralModel": "Q4006-PMX-S",
+      "pdfFile": "515-00-03107-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03107-C.pdf",
+        "515-00-03640-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849051",
+      "websiteStructuralModel": "Q4006-PMX-S",
+      "drawingStructuralModel": "Q4006-PMX-S",
+      "pdfFile": "515-00-03640-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03640-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849018",
+      "websiteStructuralModel": "Q4004-SNV-S",
+      "drawingStructuralModel": "Q4004-SNV-S",
+      "pdfFile": "515-00-03612-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03612-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849052",
+      "websiteStructuralModel": "Q4004-SNV-S",
+      "drawingStructuralModel": "Q4004-SNV-S",
+      "pdfFile": "515-00-03612-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03612-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849019",
+      "websiteStructuralModel": "Q4005-SNV-S",
+      "drawingStructuralModel": "Q4005-SNV-S",
+      "pdfFile": "515-00-03613-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03613-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849053",
+      "websiteStructuralModel": "Q4005-SNV-S",
+      "drawingStructuralModel": "Q4005-SNV-S",
+      "pdfFile": "515-00-03613-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03613-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849020",
+      "websiteStructuralModel": "Q4006-SNV-S",
+      "drawingStructuralModel": "Q4006-SNV-S",
+      "pdfFile": "515-00-03104-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03104-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849054",
+      "websiteStructuralModel": "Q4006-SNV-S",
+      "drawingStructuralModel": "Q4006-SNV-S",
+      "pdfFile": "515-00-03643-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03643-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849023",
+      "websiteStructuralModel": "Q4014N-SNV-S",
+      "drawingStructuralModel": "Q4014N-SNV-S",
+      "pdfFile": "515-00-03616-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "人工复核标题栏",
+      "sameStructureAvailableDrawings": [
+        "515-00-03616-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849057",
+      "websiteStructuralModel": "Q4014N-SNV-S",
+      "drawingStructuralModel": "Q4014N-SNV-S",
+      "pdfFile": "515-00-03616-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "人工复核标题栏",
+      "sameStructureAvailableDrawings": [
+        "515-00-03616-C.pdf",
+        "515-00-03646-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849024",
+      "websiteStructuralModel": "Q4004-SMV-S",
+      "drawingStructuralModel": "Q4004-SMV-S",
+      "pdfFile": "515-00-03617-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03617-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849058",
+      "websiteStructuralModel": "Q4004-SMV-S",
+      "drawingStructuralModel": "Q4004-SMV-S",
+      "pdfFile": "515-00-03647-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03647-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849025",
+      "websiteStructuralModel": "Q4005-SMV-S",
+      "drawingStructuralModel": "Q4005-SMV-S",
+      "pdfFile": "515-00-03648-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "人工复核标题栏",
+      "sameStructureAvailableDrawings": [
+        "515-00-03648-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849059",
+      "websiteStructuralModel": "Q4005-SMV-S",
+      "drawingStructuralModel": "Q4005-SMV-S",
+      "pdfFile": "515-00-03648-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "人工复核标题栏",
+      "sameStructureAvailableDrawings": [
+        "515-00-03648-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849026",
+      "websiteStructuralModel": "Q4006-SMV-S",
+      "drawingStructuralModel": "Q4006-SMV-S",
+      "pdfFile": "515-00-03102-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03102-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849060",
+      "websiteStructuralModel": "Q4006-SMV-S",
+      "drawingStructuralModel": "Q4006-SMV-S",
+      "pdfFile": "515-00-03460-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03460-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849027",
+      "websiteStructuralModel": "Q4004-PNV-S",
+      "drawingStructuralModel": "Q4004-PNV-S",
+      "pdfFile": "515-00-03619-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03619-C.pdf",
+        "515-00-03649-C.pdf",
+        "515-00-03654-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849061",
+      "websiteStructuralModel": "Q4004-PNV-S",
+      "drawingStructuralModel": "Q4004-PNV-S",
+      "pdfFile": "515-00-03654-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03654-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849028",
+      "websiteStructuralModel": "Q4005-PNV-S",
+      "drawingStructuralModel": "Q4005-PNV-S",
+      "pdfFile": "515-00-03620-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03620-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849062",
+      "websiteStructuralModel": "Q4005-PNV-S",
+      "drawingStructuralModel": "Q4005-PNV-S",
+      "pdfFile": "515-00-03650-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03650-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849029",
+      "websiteStructuralModel": "Q4006-PNV-S",
+      "drawingStructuralModel": "Q4006-PNV-S",
+      "pdfFile": "515-00-03108-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03108-C.pdf",
+        "515-00-03618-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849063",
+      "websiteStructuralModel": "Q4006-PNV-S",
+      "drawingStructuralModel": "Q4006-PNV-S",
+      "pdfFile": "515-00-03651-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03651-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849030",
+      "websiteStructuralModel": "Q4004-PNV-L",
+      "drawingStructuralModel": "Q4004-PNV-L",
+      "pdfFile": "515-00-03621-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03621-C.pdf",
+        "515-00-03639-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849064",
+      "websiteStructuralModel": "Q4004-PNV-L",
+      "drawingStructuralModel": "Q4004-PNV-L",
+      "pdfFile": "515-00-03652-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03652-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849031",
+      "websiteStructuralModel": "Q4014N-PNV-S",
+      "drawingStructuralModel": "Q4014N-PNV-S",
+      "pdfFile": "515-00-03364-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "人工复核标题栏",
+      "sameStructureAvailableDrawings": [
+        "515-00-03364-C.pdf",
+        "515-00-03626-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849065",
+      "websiteStructuralModel": "Q4014N-PNV-S",
+      "drawingStructuralModel": "Q4014N-PNV-S",
+      "pdfFile": "515-00-03364-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "人工复核标题栏",
+      "sameStructureAvailableDrawings": [
+        "515-00-03364-C.pdf",
+        "515-00-03461-C.pdf",
+        "515-00-03626-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849032",
+      "websiteStructuralModel": "Q4004-PMV-S",
+      "drawingStructuralModel": "Q4004-PMV-S",
+      "pdfFile": "515-00-03622-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03622-C.pdf",
+        "515-00-03641-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849066",
+      "websiteStructuralModel": "Q4004-PMV-S",
+      "drawingStructuralModel": "Q4004-PMV-S",
+      "pdfFile": "515-00-03653-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03653-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849033",
+      "websiteStructuralModel": "Q4005-PMV-S",
+      "drawingStructuralModel": "Q4005-PMV-S",
+      "pdfFile": "515-00-03623-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03623-C.pdf",
+        "515-00-03642-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849067",
+      "websiteStructuralModel": "Q4005-PMV-S",
+      "drawingStructuralModel": "Q4005-PMV-S",
+      "pdfFile": "515-00-03623-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03623-C.pdf",
+        "515-00-03642-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849034",
+      "websiteStructuralModel": "Q4006-PMV-S",
+      "drawingStructuralModel": "Q4006-PMV-S",
+      "pdfFile": "515-00-03106-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03106-C.pdf"
+      ]
+    },
+    {
+      "productCode": "849068",
+      "websiteStructuralModel": "Q4006-PMV-S",
+      "drawingStructuralModel": "Q4006-PMV-S",
+      "pdfFile": "515-00-03655-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03655-C.pdf"
+      ]
+    },
+    {
+      "productCode": "869001",
+      "websiteStructuralModel": "Q6006-SNX-S",
+      "drawingStructuralModel": "Q6006-SNX-S",
+      "pdfFile": "515-00-03656-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03656-C.pdf"
+      ]
+    },
+    {
+      "productCode": "869002",
+      "websiteStructuralModel": "Q6008-SNX-S",
+      "drawingStructuralModel": "Q6008-SNX-S",
+      "pdfFile": "515-00-03657-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03657-C.pdf"
+      ]
+    },
+    {
+      "productCode": "869003",
+      "websiteStructuralModel": "Q6012-SNX-S",
+      "drawingStructuralModel": "Q6012-SNX-S",
+      "pdfFile": "515-00-03658-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03658-C.pdf"
+      ]
+    },
+    {
+      "productCode": "869006",
+      "websiteStructuralModel": "Q6006-SMX-S",
+      "drawingStructuralModel": "Q6006-SMX-S",
+      "pdfFile": "515-00-03661-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03661-C.pdf"
+      ]
+    },
+    {
+      "productCode": "869007",
+      "websiteStructuralModel": "Q6008-SMX-S",
+      "drawingStructuralModel": "Q6008-SMX-S",
+      "pdfFile": "515-00-03662-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03662-C.pdf"
+      ]
+    },
+    {
+      "productCode": "869008",
+      "websiteStructuralModel": "Q6012-SMX-S",
+      "drawingStructuralModel": "Q6012-SMX-S",
+      "pdfFile": "515-00-03663-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03663-C.pdf"
+      ]
+    },
+    {
+      "productCode": "869012",
+      "websiteStructuralModel": "Q6006-PNX-L",
+      "drawingStructuralModel": "Q6006-PNX-L",
+      "pdfFile": "515-00-03667-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03667-C.pdf"
+      ]
+    },
+    {
+      "productCode": "869013",
+      "websiteStructuralModel": "Q6008-PNX-L",
+      "drawingStructuralModel": "Q6008-PNX-L",
+      "pdfFile": "515-00-03668-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03668-C.pdf"
+      ]
+    },
+    {
+      "productCode": "869014",
+      "websiteStructuralModel": "Q6038N-PNX-S",
+      "drawingStructuralModel": "Q6038N-PNX-S",
+      "pdfFile": "515-00-03669-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "人工复核标题栏",
+      "sameStructureAvailableDrawings": [
+        "515-00-03669-C.pdf"
+      ]
+    },
+    {
+      "productCode": "869015",
+      "websiteStructuralModel": "Q6012N-PNX-S",
+      "drawingStructuralModel": "Q6012N-PNX-S",
+      "pdfFile": "515-00-03670-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "人工复核标题栏",
+      "sameStructureAvailableDrawings": [
+        "515-00-03670-C.pdf"
+      ]
+    },
+    {
+      "productCode": "869018",
+      "websiteStructuralModel": "Q6006-SMX-L",
+      "drawingStructuralModel": "Q6006-SMX-L",
+      "pdfFile": "515-00-03673-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03673-C.pdf"
+      ]
+    },
+    {
+      "productCode": "869019",
+      "websiteStructuralModel": "Q6008-SMX-L",
+      "drawingStructuralModel": "Q6008-SMX-L",
+      "pdfFile": "515-00-03674-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03674-C.pdf"
+      ]
+    },
+    {
+      "productCode": "869020",
+      "websiteStructuralModel": "Q6006-SMV-L",
+      "drawingStructuralModel": "Q6006-SMV-L",
+      "pdfFile": "515-00-03675-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03675-C.pdf"
+      ]
+    },
+    {
+      "productCode": "869021",
+      "websiteStructuralModel": "Q6006-SNV-S",
+      "drawingStructuralModel": "Q6006-SNV-S",
+      "pdfFile": "515-00-03676-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03676-C.pdf"
+      ]
+    },
+    {
+      "productCode": "869022",
+      "websiteStructuralModel": "Q6008-SNV-S",
+      "drawingStructuralModel": "Q6008-SNV-S",
+      "pdfFile": "515-00-03331-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03331-C.pdf"
+      ]
+    },
+    {
+      "productCode": "869023",
+      "websiteStructuralModel": "Q6012-SNV-S",
+      "drawingStructuralModel": "Q6012-SNV-S",
+      "pdfFile": "515-00-03677-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03677-C.pdf"
+      ]
+    },
+    {
+      "productCode": "869026",
+      "websiteStructuralModel": "Q6006-SMV-S",
+      "drawingStructuralModel": "Q6006-SMV-S",
+      "pdfFile": "515-00-03679-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03679-C.pdf"
+      ]
+    },
+    {
+      "productCode": "869027",
+      "websiteStructuralModel": "Q6008-SMV-S",
+      "drawingStructuralModel": "Q6008-SMV-S",
+      "pdfFile": "515-00-03680-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03680-C.pdf"
+      ]
+    },
+    {
+      "productCode": "869028",
+      "websiteStructuralModel": "Q6012-SMV-S",
+      "drawingStructuralModel": "Q6012-SMV-S",
+      "pdfFile": "515-00-03681-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03681-C.pdf"
+      ]
+    },
+    {
+      "productCode": "869032",
+      "websiteStructuralModel": "Q6006-PNV-L",
+      "drawingStructuralModel": "Q6006-PNV-L",
+      "pdfFile": "515-00-03684-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "标题栏商品编码",
+      "sameStructureAvailableDrawings": [
+        "515-00-03684-C.pdf"
+      ]
+    },
+    {
+      "productCode": "869033",
+      "websiteStructuralModel": "Q6008-PNV-L",
+      "drawingStructuralModel": "Q6008-PNV-L",
+      "pdfFile": "515-00-03330-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03330-C.pdf"
+      ]
+    },
+    {
+      "productCode": "869034",
+      "websiteStructuralModel": "Q6038N-PNV-S",
+      "drawingStructuralModel": "Q6038N-PNV-S",
+      "pdfFile": "515-00-03437-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "人工复核标题栏",
+      "sameStructureAvailableDrawings": [
+        "515-00-03437-C.pdf"
+      ]
+    },
+    {
+      "productCode": "869035",
+      "websiteStructuralModel": "Q6012N-PNV-S",
+      "drawingStructuralModel": "Q6012N-PNV-S",
+      "pdfFile": "515-00-03685-C.pdf",
+      "matchResult": "结构型号匹配（忽略外壳/O圈材质）",
+      "matchBasis": "人工复核标题栏",
+      "sameStructureAvailableDrawings": [
+        "515-00-03685-C.pdf"
+      ]
+    },
+    {
+      "productCode": "869036",
+      "websiteStructuralModel": "Q6008-SMV-L",
+      "drawingStructuralModel": "Q6008-SMV-L",
+      "pdfFile": "515-00-03686-C.pdf",
+      "matchResult": "商品编码精确匹配",
+      "matchBasis": "OCR型号",
+      "sameStructureAvailableDrawings": [
+        "515-00-03686-C.pdf"
+      ]
+    }
+  ]
+}

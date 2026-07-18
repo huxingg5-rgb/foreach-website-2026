@@ -1,4 +1,4 @@
-﻿/* =========================================================
+/* =========================================================
    fitting-replacement.css
    鎭掓案杈惧畼缃戯綔鎺ュご鏇夸唬鏌ヨ椤甸潰涓撶敤鏍峰紡
 
@@ -920,6 +920,9 @@
   width: 100% !important;
   min-width: 0;
   min-height: 0;
+  box-sizing: border-box;
+  padding: 6px !important;
+  background: #ffffff !important;
 }
 
 .fitting-replacement-page .frp-compatible-card-image {
@@ -929,7 +932,7 @@
   box-sizing: border-box;
   padding: 24px;
   overflow: hidden;
-  background: #f4f7fa;
+  background: #ffffff;
 }
 
 .fitting-replacement-page .frp-compatible-card-visual {

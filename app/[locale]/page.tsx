@@ -92,19 +92,79 @@ type LocalePageProps = {
   }>;
 };
 
+const homeMetadata: Record<
+  Exclude<LocaleCode, "zh-CN">,
+  { title: string; description: string; openGraphLocale: string }
+> = {
+  en: {
+    title: "FOREACH | Microfluidic Components and Fluidic Solutions",
+    description:
+      "FOREACH develops pumps, valves, probes, fittings, tubing, sensors, and control modules for IVD, life sciences, analytical instruments, synthetic biology, and laboratory automation.",
+    openGraphLocale: "en_US",
+  },
+  es: {
+    title: "FOREACH | Componentes microfluídicos y soluciones fluídicas",
+    description:
+      "FOREACH desarrolla bombas, válvulas, sondas, conexiones, tubos, sensores y módulos de control para IVD, ciencias de la vida, instrumentación analítica, biología sintética y automatización de laboratorio.",
+    openGraphLocale: "es_ES",
+  },
+  fr: {
+    title: "FOREACH | Composants microfluidiques et solutions fluidiques",
+    description:
+      "FOREACH développe des pompes, vannes, sondes, raccords, tubes, capteurs et modules de contrôle pour l’IVD, les sciences de la vie, l’instrumentation analytique, la biologie synthétique et l’automatisation de laboratoire.",
+    openGraphLocale: "fr_FR",
+  },
+  ko: {
+    title: "FOREACH | 미세유체 부품 및 유체 시스템 솔루션",
+    description:
+      "FOREACH는 IVD, 생명과학, 분석 장비, 합성생물학 및 실험실 자동화를 위한 펌프, 밸브, 프로브, 피팅, 튜빙, 센서와 제어 모듈을 개발합니다.",
+    openGraphLocale: "ko_KR",
+  },
+  ru: {
+    title: "FOREACH | Компоненты и решения для микрофлюидных систем",
+    description:
+      "FOREACH разрабатывает насосы, клапаны, пробоотборные иглы, фитинги, трубки, датчики и модули управления для IVD, наук о жизни, аналитических приборов, синтетической биологии и лабораторной автоматизации.",
+    openGraphLocale: "ru_RU",
+  },
+};
+
+const homeLanguageLinks = {
+  "zh-CN": "https://www.foreachtek.com/",
+  en: "https://www.foreachtek.com/en/",
+  es: "https://www.foreachtek.com/es/",
+  fr: "https://www.foreachtek.com/fr/",
+  ko: "https://www.foreachtek.com/ko/",
+  ru: "https://www.foreachtek.com/ru/",
+};
+
 export async function generateMetadata({
   params,
 }: LocalePageProps): Promise<Metadata> {
   const { locale } = await params;
 
-  if (locale !== "en") {
+  const currentLocale = getLocaleFromRouteSegment(locale);
+
+  if (!currentLocale || currentLocale === "zh-CN") {
     return {};
   }
 
+  const currentMetadata = homeMetadata[currentLocale];
+  const canonical = homeLanguageLinks[currentLocale];
+
   return {
-    title: "FOREACH | Microfluidic Components and Fluidic Solutions",
-    description:
-      "FOREACH develops pumps, valves, probes, fittings, tubing, sensors, and control modules for IVD, life sciences, analytical instruments, synthetic biology, and laboratory automation.",
+    title: currentMetadata.title,
+    description: currentMetadata.description,
+    alternates: {
+      canonical,
+      languages: homeLanguageLinks,
+    },
+    openGraph: {
+      title: currentMetadata.title,
+      description: currentMetadata.description,
+      url: canonical,
+      locale: currentMetadata.openGraphLocale,
+      type: "website",
+    },
   };
 }
 

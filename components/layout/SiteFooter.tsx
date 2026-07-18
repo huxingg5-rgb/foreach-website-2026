@@ -91,7 +91,9 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
                   <ul className="site-footer__list">
                     {column.links.map((link) => (
                       <li key={link.key}>
-                        <Link href={getSiteFooterHref(link.href, activeLocale)}>
+                        <Link
+                          href={getSiteFooterHref(link.href, activeLocale)}
+                        >
                           {getSiteFooterText(link.label, activeLocale)}
                         </Link>
                       </li>
@@ -108,7 +110,7 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
                 {getSiteFooterText(siteFooterData.companyName, activeLocale)}
               </p>
 
-              <p className="site-footer__contact-text">
+              <p className="site-footer__contact-text site-footer__address">
                 {getSiteFooterText(siteFooterData.addressLabel, activeLocale)}
                 {labelSeparator}
                 {getSiteFooterText(siteFooterData.address, activeLocale)}

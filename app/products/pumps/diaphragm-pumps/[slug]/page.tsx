@@ -154,6 +154,94 @@ function findMediaUrlByType(detail: DiaphragmDetail, keyword: string) {
   return publicSrcFromFullPath(media?.fullPath);
 }
 
+function findPreferredDiaphragmMainImageUrl(
+  detail: DiaphragmDetail,
+  extraIdentity = "",
+) {
+  /*
+   * 只使用当前详情页自身的信息判断版本。
+   * 不直接遍历全部 modelConfigurations，
+   * 因为系列数据中通常同时包含有刷和无刷型号。
+   */
+  const pageIdentity = [
+    extraIdentity,
+    detail.slug,
+    detail.path,
+    detail.title,
+    detail.displayName,
+    detail.modelDisplay,
+    detail.seo?.title,
+    detail.seo?.pageTitle,
+    detail.seo?.path,
+  ]
+    .map((value) => getText(value).toUpperCase())
+    .filter(Boolean)
+    .join(" ");
+
+  const mainMedia = (detail.media || []).filter((item) => {
+    return (
+      getText(item.resourceType).includes("主图") &&
+      shouldUseMedia(item)
+    );
+  });
+
+  if (mainMedia.length === 0) {
+    return "";
+  }
+
+  const wantsBrushless =
+    pageIdentity.includes("无刷") ||
+    pageIdentity.includes("BRUSHLESS") ||
+    pageIdentity.includes("24BB") ||
+    pageIdentity.includes("24BS");
+
+  const wantsBrushed =
+    !wantsBrushless &&
+    (
+      pageIdentity.includes("有刷") ||
+      pageIdentity.includes("BRUSHED") ||
+      pageIdentity.includes("24DB") ||
+      pageIdentity.includes("24DS")
+    );
+
+  const preferredKeywords = wantsBrushless
+    ? ["无刷", "BRUSHLESS", "24BB", "24BS"]
+    : wantsBrushed
+      ? ["有刷", "BRUSHED", "24DB", "24DS"]
+      : [];
+
+  if (preferredKeywords.length > 0) {
+    const matchedMedia = mainMedia.find((item) => {
+      const mediaIdentity = [
+        item.resourceId,
+        item.version,
+        item.displayName,
+        item.fileName,
+        item.fullPath,
+        item.alt,
+        item.caption,
+      ]
+        .map((value) => getText(value).toUpperCase())
+        .filter(Boolean)
+        .join(" ");
+
+      return preferredKeywords.some((keyword) => {
+        return mediaIdentity.includes(keyword);
+      });
+    });
+
+    if (matchedMedia?.fullPath) {
+      return publicSrcFromFullPath(matchedMedia.fullPath);
+    }
+  }
+
+  /*
+   * 系列通用页面没有明确写有刷或无刷时，
+   * 继续使用媒体数组中的第一张主图。
+   */
+  return publicSrcFromFullPath(mainMedia[0]?.fullPath);
+}
+
 function splitApplications(value?: string) {
   return String(value || "")
     .split(/[、,，]/)
@@ -344,6 +432,144 @@ function findDiaphragmMediaUrlByPathKeywords(detail: DiaphragmDetail, keywords: 
 }
 
 
+
+function findPreferredDiaphragmResourceUrl(
+  detail: DiaphragmDetail,
+  resourceTypeKeywords: string[],
+  extraIdentity = "",
+) {
+  /*
+   * 根据当前详情页的型号、标题、slug 和 SEO 信息，
+   * 判断当前页面属于有刷版还是无刷版。
+   */
+  const pageIdentity = [
+    extraIdentity,
+    detail.slug,
+    detail.path,
+    detail.title,
+    detail.displayName,
+    detail.modelDisplay,
+    detail.seo?.title,
+    detail.seo?.pageTitle,
+    detail.seo?.path,
+  ]
+    .map((value) => getText(value).toUpperCase())
+    .filter(Boolean)
+    .join(" ");
+
+  const wantsBrushless =
+    pageIdentity.includes("无刷") ||
+    pageIdentity.includes("BRUSHLESS") ||
+    pageIdentity.includes("24BB") ||
+    pageIdentity.includes("24BS");
+
+  const wantsBrushed =
+    !wantsBrushless &&
+    (
+      pageIdentity.includes("有刷") ||
+      pageIdentity.includes("BRUSHED") ||
+      pageIdentity.includes("24DB") ||
+      pageIdentity.includes("24DS")
+    );
+
+  const candidates = (detail.media || []).filter((item) => {
+    if (!shouldUseMedia(item)) {
+      return false;
+    }
+
+    const resourceType = getText(
+      item.resourceType
+    ).toUpperCase();
+
+    return resourceTypeKeywords.some((keyword) => {
+      return resourceType.includes(
+        keyword.toUpperCase()
+      );
+    });
+  });
+
+  if (candidates.length === 0) {
+    return "";
+  }
+
+  function getMediaIdentity(item: DiaphragmMedia) {
+    return [
+      item.resourceId,
+      item.version,
+      item.displayName,
+      item.resourceType,
+      item.fileName,
+      item.path,
+      item.fullPath,
+      item.alt,
+      item.caption,
+    ]
+      .map((value) => getText(value).toUpperCase())
+      .filter(Boolean)
+      .join(" ");
+  }
+
+  let selected: DiaphragmMedia | undefined;
+
+  if (wantsBrushless) {
+    selected = candidates.find((item) => {
+      const identity = getMediaIdentity(item);
+
+      return (
+        identity.includes("无刷") ||
+        identity.includes("BRUSHLESS") ||
+        identity.includes("24BB") ||
+        identity.includes("24BS")
+      );
+    });
+
+    /*
+     * 当前页面明确是无刷版时，
+     * 找不到无刷文件就返回空值，
+     * 不允许错误回退到有刷文件。
+     */
+    if (!selected) {
+      return "";
+    }
+  } else if (wantsBrushed) {
+    selected = candidates.find((item) => {
+      const identity = getMediaIdentity(item);
+
+      return (
+        identity.includes("有刷") ||
+        identity.includes("BRUSHED") ||
+        identity.includes("24DB") ||
+        identity.includes("24DS")
+      );
+    });
+
+    /*
+     * 当前页面明确是有刷版时，
+     * 找不到有刷文件也不跨版本回退。
+     */
+    if (!selected) {
+      return "";
+    }
+  } else {
+    /*
+     * 系列通用页面未指定电机版本时，
+     * 保留原来的第一项逻辑。
+     */
+    selected = candidates[0];
+  }
+
+  if (!selected) {
+    return "";
+  }
+
+  return toPublicAssetHref(
+    (selected as any).url ||
+    selected.fullPath ||
+    selected.path ||
+    selected.fileName
+  );
+}
+
 function getCleanDiaphragmModelCode(detail: DiaphragmDetail) {
   const text = [
     detail.modelDisplay,
@@ -457,17 +683,29 @@ function adaptToProductDetailClientData(detail: DiaphragmDetail) {
   const seriesTypeLabel = getSeriesTypeLabel(detail);
 
   const mainImageUrl =
-    findMediaUrlByType(detail, "主图") ||
+    findPreferredDiaphragmMainImageUrl(
+      detail,
+      [cleanModelCode, seoProductTitle].filter(Boolean).join(" "),
+    ) ||
     findDiaphragmMediaUrlByPathKeywords(detail, ["images"]);
 
   const drawing2dUrl =
-    findMediaUrlByType(detail, "2D") ||
-    findMediaUrlByType(detail, "零件图") ||
-    findDiaphragmMediaUrlByPathKeywords(detail, ["drawings", ".pdf"]);
+    findPreferredDiaphragmResourceUrl(
+      detail,
+      ["2D", "零件图"],
+      [cleanModelCode, seoProductTitle]
+        .filter(Boolean)
+        .join(" "),
+    );
 
   const model3dUrl =
-    findMediaUrlByType(detail, "3D") ||
-    findDiaphragmMediaUrlByPathKeywords(detail, ["models", ".glb"]);
+    findPreferredDiaphragmResourceUrl(
+      detail,
+      ["3D"],
+      [cleanModelCode, seoProductTitle]
+        .filter(Boolean)
+        .join(" "),
+    );
 
   const curveImageUrl =
     findMediaUrlByType(detail, "曲线") ||

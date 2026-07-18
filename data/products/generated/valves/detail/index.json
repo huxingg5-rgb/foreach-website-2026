@@ -208,21 +208,19 @@
     "slug": "high-pressure-valves",
     "productTypeId": "high-pressure-valves",
     "productTypeName": "高压阀",
-    "title": "HP 三位七通高压阀",
-    "modelName": "HP 三位七通高压阀",
+    "title": "HP 二位六通带排气高压旋转阀",
+    "modelName": "HP 二位六通带排气高压旋转阀",
     "image": "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp",
-    "description": "HP 三位七通高压阀用于 HPLC 自动进样和分析仪器高压液路中的路径切换，可在进样、排气、旁路和清洗等液路状态之间进行切换。该阀采用三位七通结构，最大工作压力 25MPa，接口规格 10-32UNF，通道直径 0.4mm，内体积 0.8μL，适用于对耐压、密封可靠性、低内体积和阀位切换稳定性有要求的高压分析液路模块。实际选型时需结合流动相或样品介质、系统压力、接口形式、切换逻辑和安装空间确认。",
+    "description": "HP 二位六通带排气高压旋转阀（HP-26SSU3204）用于 HPLC 自动进样模块中的注液、抽样和系统排气控制。该阀最大工作压力为 25 MPa，采用 10-32 UNF 接口、0.4 mm 通道和 0.8 μL 内体积，相邻流道切换时间为 100 ms。定子采用 SUS316L，转子采用高分子材料，适合对耐压、低内体积和排气能力有要求的高压分析液路。",
     "commonApplications": [
-      "HPLC自动进样",
-      "高压流路切换",
+      "HPLC 自动进样",
+      "注液与抽样流路切换",
       "系统排气",
-      "样品旁路",
-      "高压分析模块",
-      "低内体积液路"
+      "分析仪器高压液路控制"
     ],
     "advantages": [
       "最大工作压力 25MPa，适合高压分析液路和 HPLC 自动进样场景",
-      "三位七通结构，可覆盖进样、抽样、排气等多种液路状态切换",
+      "二位六通带独立排气位置，可覆盖进样、抽样、排气等多种液路状态切换",
       "通道直径 0.4mm，内体积 0.8μL，适合低滞留体积高压流路",
       "接口规格 10-32UNF，适配常见高压分析仪器液路连接方式",
       "SUS316L 定子与高分子转子组合，兼顾高压密封和流路切换",
@@ -231,166 +229,150 @@
     "specs": [
       {
         "label": "产品型号",
-        "value": "HP-37SSU3204"
-      },
-      {
-        "label": "额定电压",
-        "value": "24V"
-      },
-      {
-        "label": "额定电流",
-        "value": "2A"
-      },
-      {
-        "label": "额定功率",
-        "value": "48W"
-      },
-      {
-        "label": "电机减速比",
-        "value": "5:1"
+        "value": "HP-26SSU3204"
       },
       {
         "label": "规格参数",
-        "value": "三位七通"
-      },
-      {
-        "label": "外形尺寸",
-        "value": "长×宽×高：42mm×42mm×123.5mm"
-      },
-      {
-        "label": "安装尺寸及螺纹参数",
-        "value": "定位（长×宽)：19mm×20mm 、定形（螺纹规格×螺纹深度）：M3×10mm"
-      },
-      {
-        "label": "接口规格",
-        "value": "10-32UNF"
+        "value": "二位六通带排气"
       },
       {
         "label": "最大工作压力",
-        "value": "25MPa"
+        "value": "25 MPa"
+      },
+      {
+        "label": "接口规格",
+        "value": "10-32 UNF"
       },
       {
         "label": "通道直径",
-        "value": "0.4mm"
-      },
-      {
-        "label": "相邻流道切换时间",
-        "value": "100ms"
-      },
-      {
-        "label": "使用寿命",
-        "value": "15万cycles（纯水）"
-      },
-      {
-        "label": "工作噪音",
-        "value": "＜60dB"
+        "value": "0.4 mm"
       },
       {
         "label": "内体积",
-        "value": "0.8µL"
+        "value": "0.8 μL"
       },
       {
-        "label": "触液材料-定子",
-        "value": "SUS316L"
+        "label": "相邻流道切换时间",
+        "value": "100 ms"
       },
       {
-        "label": "触液材料-转子",
-        "value": "高分子材料"
+        "label": "使用寿命",
+        "value": "150,000 cycles（纯水）"
       },
       {
-        "label": "环境温度",
-        "value": "0∽40℃（无冷凝）"
+        "label": "额定电压",
+        "value": "24 V"
       },
       {
-        "label": "环境湿度",
-        "value": "0-93%±3RH at 40℃（无冷凝）"
-      },
-      {
-        "label": "储运温度",
-        "value": "-40∽55℃（无结冰、无冷凝）"
+        "label": "触液材料",
+        "value": "定子 SUS316L；转子为高分子材料"
       }
     ],
     "faq": [
       {
-        "question": "HP 三位七通高压阀适合哪些高压液路？",
-        "answer": "HP 高压阀适合 HPLC 自动进样、高压样品切换、系统排气、样品旁路和分析仪器高压流路模块。"
+        "question": "为什么称为“二位六通带排气”，功能说明中却有三个工作位置？",
+        "answer": "“二位六通”指注液位和抽样位两组主要六通流路。产品另外设置独立排气位置，通过 3-7 流道实现系统排气。因此官网名称按照规格书使用“二位六通带排气”，功能上包含注液、抽样和排气三个工作状态。"
       },
       {
-        "question": "25MPa 高压阀选型时最重要的参数是什么？",
-        "answer": "需要确认最大工作压力、流动相或样品介质、接口规格、阀位切换逻辑、内体积要求、安装尺寸和控制方式。"
+        "question": "HP 二位六通带排气高压旋转阀适合哪些应用？",
+        "answer": "该阀主要用于 HPLC 自动进样模块中的注液、抽样、高压流路切换和系统排气，也可用于分析仪器中需要低内体积和高耐压能力的液路控制模块。"
       },
       {
-        "question": "0.8μL 内体积适合什么场景？",
-        "answer": "0.8μL 内体积适合对残留、滞留体积和样品扩散敏感的高压分析液路，常见于自动进样和检测前端流路切换。"
+        "question": "该高压旋转阀的最大工作压力和接口规格是多少？",
+        "answer": "最大工作压力为 25 MPa，接口规格为 10-32 UNF。10-32 UNF 接口需配合相应的锥形系列接头使用。"
       },
       {
-        "question": "为什么高压阀按定制配置展示？",
-        "answer": "高压阀与系统压力、接口、介质兼容性、阀位切换状态和整机安装空间强相关，需要结合客户高压液路方案确认。"
+        "question": "0.4 mm 通道和 0.8 μL 内体积有什么作用？",
+        "answer": "较小的通道和内体积有助于减少液体滞留、样品扩散和不同液体之间的混合，适合对进样稳定性和系统残留较为敏感的 HPLC 高压液路。"
+      },
+      {
+        "question": "阀位切换时间和使用寿命是多少？",
+        "answer": "相邻流道切换时间为 100 ms。恒永达实验室在纯水、转子速度 100 RPM 条件下测试的使用寿命为 150,000 cycles，其中注液位、抽样位和排气位的完整切换计为一个周期。实际寿命会受到介质、压力和运行条件影响。"
+      },
+      {
+        "question": "高压旋转阀的触液材料是什么？",
+        "answer": "定子采用 SUS316L，转子采用高分子材料。实际使用前仍需根据流动相、样品和清洗液确认材料兼容性。"
       }
     ],
-    "seoTitle": "HP三位七通高压阀｜25MPa高压流路切换阀｜恒永达 FOREACH",
-    "seoDescription": "HP三位七通高压阀用于HPLC自动进样和分析仪器高压液路路径切换，最大工作压力25MPa，接口10-32UNF，通道直径0.4mm，内体积0.8μL，适用于进样、排气、旁路和清洗等高压液路状态切换。",
+    "seoTitle": "HP 二位六通带排气高压旋转阀｜25 MPa｜FOREACH",
+    "seoDescription": "HP-26SSU3204 二位六通带排气高压旋转阀，最大工作压力 25 MPa，10-32 UNF 接口，0.4 mm 通道，0.8 μL 内体积，用于 HPLC 自动进样与系统排气。",
     "searchKeywords": [
-      "HP三位七通高压阀",
+      "HP二位六通带排气高压旋转阀",
       "HP高压阀",
       "25MPa高压阀",
       "HPLC自动进样阀",
       "高压流路切换阀",
       "10-32UNF高压阀",
-      "三位七通阀"
+      "二位六通带排气阀"
     ],
-    "h1Title": "HP 三位七通高压阀",
-    "pageTitle": "HP 三位七通高压阀",
+    "h1Title": "HP 二位六通带排气高压旋转阀",
+    "pageTitle": "HP 二位六通带排气高压旋转阀",
     "bottomCtaTitle": "需要确认 HP 高压阀压力、接口和阀位方案？",
-    "bottomCtaDescription": "请提供最大工作压力、流动相或样品介质、10-32UNF 接口需求、进样/抽样/排气切换逻辑、内体积要求和安装空间，FOREACH 可协助确认 HP 三位七通高压阀配置。",
+    "bottomCtaDescription": "请提供最大工作压力、流动相或样品介质、10-32UNF 接口需求、进样/抽样/排气切换逻辑、内体积要求和安装空间，FOREACH 可协助确认 HP 二位六通带排气高压旋转阀配置。",
     "bottomCtaButtonText": "联系工程师",
     "bottomCtaHref": "/contact",
     "customInquiryTitle": "需要确认 HP 高压阀压力、接口和阀位方案？",
-    "customInquiryDescription": "请提供最大工作压力、流动相或样品介质、10-32UNF 接口需求、进样/抽样/排气切换逻辑、内体积要求和安装空间，FOREACH 可协助确认 HP 三位七通高压阀配置。",
+    "customInquiryDescription": "请提供最大工作压力、流动相或样品介质、10-32UNF 接口需求、进样/抽样/排气切换逻辑、内体积要求和安装空间，FOREACH 可协助确认 HP 二位六通带排气高压旋转阀配置。",
     "customInquiryButtonText": "联系工程师",
     "customInquiryHref": "/contact",
-    "imageAlt": "HP 25MPa三位七通高压阀",
+    "imageAlt": "HP 二位六通带排气高压旋转阀",
     "additionalImages": [],
     "images": [
       "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp"
     ],
     "thumbnails": [],
-    "name": "HP 三位七通高压阀",
-    "productName": "HP 三位七通高压阀",
+    "name": "HP 二位六通带排气高压旋转阀",
+    "productName": "HP 二位六通带排气高压旋转阀",
     "faqs": [
       {
-        "question": "HP 三位七通高压阀适合哪些高压液路？",
-        "answer": "HP 高压阀适合 HPLC 自动进样、高压样品切换、系统排气、样品旁路和分析仪器高压流路模块。"
+        "question": "为什么称为“二位六通带排气”，功能说明中却有三个工作位置？",
+        "answer": "“二位六通”指注液位和抽样位两组主要六通流路。产品另外设置独立排气位置，通过 3-7 流道实现系统排气。因此官网名称按照规格书使用“二位六通带排气”，功能上包含注液、抽样和排气三个工作状态。"
       },
       {
-        "question": "25MPa 高压阀选型时最重要的参数是什么？",
-        "answer": "需要确认最大工作压力、流动相或样品介质、接口规格、阀位切换逻辑、内体积要求、安装尺寸和控制方式。"
+        "question": "HP 二位六通带排气高压旋转阀适合哪些应用？",
+        "answer": "该阀主要用于 HPLC 自动进样模块中的注液、抽样、高压流路切换和系统排气，也可用于分析仪器中需要低内体积和高耐压能力的液路控制模块。"
       },
       {
-        "question": "0.8μL 内体积适合什么场景？",
-        "answer": "0.8μL 内体积适合对残留、滞留体积和样品扩散敏感的高压分析液路，常见于自动进样和检测前端流路切换。"
+        "question": "该高压旋转阀的最大工作压力和接口规格是多少？",
+        "answer": "最大工作压力为 25 MPa，接口规格为 10-32 UNF。10-32 UNF 接口需配合相应的锥形系列接头使用。"
       },
       {
-        "question": "为什么高压阀按定制配置展示？",
-        "answer": "高压阀与系统压力、接口、介质兼容性、阀位切换状态和整机安装空间强相关，需要结合客户高压液路方案确认。"
+        "question": "0.4 mm 通道和 0.8 μL 内体积有什么作用？",
+        "answer": "较小的通道和内体积有助于减少液体滞留、样品扩散和不同液体之间的混合，适合对进样稳定性和系统残留较为敏感的 HPLC 高压液路。"
+      },
+      {
+        "question": "阀位切换时间和使用寿命是多少？",
+        "answer": "相邻流道切换时间为 100 ms。恒永达实验室在纯水、转子速度 100 RPM 条件下测试的使用寿命为 150,000 cycles，其中注液位、抽样位和排气位的完整切换计为一个周期。实际寿命会受到介质、压力和运行条件影响。"
+      },
+      {
+        "question": "高压旋转阀的触液材料是什么？",
+        "answer": "定子采用 SUS316L，转子采用高分子材料。实际使用前仍需根据流动相、样品和清洗液确认材料兼容性。"
       }
     ],
     "faqItems": [
       {
-        "question": "HP 三位七通高压阀适合哪些高压液路？",
-        "answer": "HP 高压阀适合 HPLC 自动进样、高压样品切换、系统排气、样品旁路和分析仪器高压流路模块。"
+        "question": "为什么称为“二位六通带排气”，功能说明中却有三个工作位置？",
+        "answer": "“二位六通”指注液位和抽样位两组主要六通流路。产品另外设置独立排气位置，通过 3-7 流道实现系统排气。因此官网名称按照规格书使用“二位六通带排气”，功能上包含注液、抽样和排气三个工作状态。"
       },
       {
-        "question": "25MPa 高压阀选型时最重要的参数是什么？",
-        "answer": "需要确认最大工作压力、流动相或样品介质、接口规格、阀位切换逻辑、内体积要求、安装尺寸和控制方式。"
+        "question": "HP 二位六通带排气高压旋转阀适合哪些应用？",
+        "answer": "该阀主要用于 HPLC 自动进样模块中的注液、抽样、高压流路切换和系统排气，也可用于分析仪器中需要低内体积和高耐压能力的液路控制模块。"
       },
       {
-        "question": "0.8μL 内体积适合什么场景？",
-        "answer": "0.8μL 内体积适合对残留、滞留体积和样品扩散敏感的高压分析液路，常见于自动进样和检测前端流路切换。"
+        "question": "该高压旋转阀的最大工作压力和接口规格是多少？",
+        "answer": "最大工作压力为 25 MPa，接口规格为 10-32 UNF。10-32 UNF 接口需配合相应的锥形系列接头使用。"
       },
       {
-        "question": "为什么高压阀按定制配置展示？",
-        "answer": "高压阀与系统压力、接口、介质兼容性、阀位切换状态和整机安装空间强相关，需要结合客户高压液路方案确认。"
+        "question": "0.4 mm 通道和 0.8 μL 内体积有什么作用？",
+        "answer": "较小的通道和内体积有助于减少液体滞留、样品扩散和不同液体之间的混合，适合对进样稳定性和系统残留较为敏感的 HPLC 高压液路。"
+      },
+      {
+        "question": "阀位切换时间和使用寿命是多少？",
+        "answer": "相邻流道切换时间为 100 ms。恒永达实验室在纯水、转子速度 100 RPM 条件下测试的使用寿命为 150,000 cycles，其中注液位、抽样位和排气位的完整切换计为一个周期。实际寿命会受到介质、压力和运行条件影响。"
+      },
+      {
+        "question": "高压旋转阀的触液材料是什么？",
+        "answer": "定子采用 SUS316L，转子采用高分子材料。实际使用前仍需根据流动相、样品和清洗液确认材料兼容性。"
       }
     ],
     "mainImage": "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp",
@@ -401,7 +383,324 @@
     "imageCard": "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp",
     "galleryImages": [
       "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp"
-    ]
+    ],
+    "titleEn": "HP 2-Position, 6-Port High-Pressure Rotary Valve with Vent",
+    "modelNameEn": "HP 2-Position, 6-Port High-Pressure Rotary Valve with Vent",
+    "descriptionEn": "The HP 2-position, 6-port high-pressure rotary valve with vent (HP-26SSU3204) controls loading, sampling, and system venting in HPLC autosampler modules. It is rated for a maximum operating pressure of 25 MPa and features 10-32 UNF ports, a 0.4 mm channel diameter, a 0.8 μL internal volume, and 100 ms adjacent-channel switching. The stator is SUS316L and the rotor is made from a polymer material. The valve is suited to high-pressure analytical fluid paths that require pressure resistance, low internal volume, and reliable venting.",
+    "summary": "二位六通带独立排气位置，最大工作压力 25 MPa，内体积 0.8 μL。",
+    "commonApplicationsEn": [
+      "HPLC autosampling",
+      "Load and sample flow-path switching",
+      "System venting",
+      "High-pressure fluid control in analytical instruments"
+    ],
+    "specifications": [
+      {
+        "label": "产品型号",
+        "value": "HP-26SSU3204"
+      },
+      {
+        "label": "规格参数",
+        "value": "二位六通带排气"
+      },
+      {
+        "label": "最大工作压力",
+        "value": "25 MPa"
+      },
+      {
+        "label": "接口规格",
+        "value": "10-32 UNF"
+      },
+      {
+        "label": "通道直径",
+        "value": "0.4 mm"
+      },
+      {
+        "label": "内体积",
+        "value": "0.8 μL"
+      },
+      {
+        "label": "相邻流道切换时间",
+        "value": "100 ms"
+      },
+      {
+        "label": "使用寿命",
+        "value": "150,000 cycles（纯水）"
+      },
+      {
+        "label": "额定电压",
+        "value": "24 V"
+      },
+      {
+        "label": "触液材料",
+        "value": "定子 SUS316L；转子为高分子材料"
+      }
+    ],
+    "technicalSpecifications": [
+      {
+        "label": "产品型号",
+        "value": "HP-26SSU3204"
+      },
+      {
+        "label": "规格参数",
+        "value": "二位六通带排气"
+      },
+      {
+        "label": "最大工作压力",
+        "value": "25 MPa"
+      },
+      {
+        "label": "接口规格",
+        "value": "10-32 UNF"
+      },
+      {
+        "label": "通道直径",
+        "value": "0.4 mm"
+      },
+      {
+        "label": "内体积",
+        "value": "0.8 μL"
+      },
+      {
+        "label": "相邻流道切换时间",
+        "value": "100 ms"
+      },
+      {
+        "label": "使用寿命",
+        "value": "150,000 cycles（纯水）"
+      },
+      {
+        "label": "额定电压",
+        "value": "24 V"
+      },
+      {
+        "label": "触液材料",
+        "value": "定子 SUS316L；转子为高分子材料"
+      }
+    ],
+    "faqsEn": [
+      {
+        "question": "Why is the valve described as 2-position, 6-port when its operating sequence includes three positions?",
+        "answer": "The two primary six-port flow configurations are the load position and the sample position. A separate vent position connects ports 3 and 7 for system venting. The product name therefore follows the specification wording: 2-position, 6-port with vent."
+      },
+      {
+        "question": "What applications is the HP 2-position, 6-port high-pressure rotary valve with vent designed for?",
+        "answer": "It is designed for loading, sampling, high-pressure flow-path switching, and system venting in HPLC autosampler modules. It can also be integrated into analytical instruments that require high pressure resistance and low internal volume."
+      },
+      {
+        "question": "What are the maximum operating pressure and port specification?",
+        "answer": "The maximum operating pressure is 25 MPa, and the port specification is 10-32 UNF. The ports are intended for use with compatible tapered fittings."
+      },
+      {
+        "question": "What are the benefits of the 0.4 mm channel and 0.8 μL internal volume?",
+        "answer": "The small channel diameter and internal volume help reduce fluid retention, sample dispersion, carryover, and cross-mixing. This is useful in HPLC fluid paths that are sensitive to injection stability and residual volume."
+      },
+      {
+        "question": "What are the switching time and service-life ratings?",
+        "answer": "Adjacent-channel switching time is 100 ms. FOREACH laboratory testing recorded 150,000 cycles using pure water at a rotor speed of 100 RPM. One complete cycle includes switching through the load, sample, and vent positions. Actual service life depends on the medium, pressure, and operating conditions."
+      },
+      {
+        "question": "What are the wetted materials of the high-pressure rotary valve?",
+        "answer": "The stator is SUS316L, and the rotor is made from a polymer material. Material compatibility should be confirmed for the mobile phase, sample, and cleaning solution before use."
+      }
+    ],
+    "faqItemsEn": [
+      {
+        "question": "Why is the valve described as 2-position, 6-port when its operating sequence includes three positions?",
+        "answer": "The two primary six-port flow configurations are the load position and the sample position. A separate vent position connects ports 3 and 7 for system venting. The product name therefore follows the specification wording: 2-position, 6-port with vent."
+      },
+      {
+        "question": "What applications is the HP 2-position, 6-port high-pressure rotary valve with vent designed for?",
+        "answer": "It is designed for loading, sampling, high-pressure flow-path switching, and system venting in HPLC autosampler modules. It can also be integrated into analytical instruments that require high pressure resistance and low internal volume."
+      },
+      {
+        "question": "What are the maximum operating pressure and port specification?",
+        "answer": "The maximum operating pressure is 25 MPa, and the port specification is 10-32 UNF. The ports are intended for use with compatible tapered fittings."
+      },
+      {
+        "question": "What are the benefits of the 0.4 mm channel and 0.8 μL internal volume?",
+        "answer": "The small channel diameter and internal volume help reduce fluid retention, sample dispersion, carryover, and cross-mixing. This is useful in HPLC fluid paths that are sensitive to injection stability and residual volume."
+      },
+      {
+        "question": "What are the switching time and service-life ratings?",
+        "answer": "Adjacent-channel switching time is 100 ms. FOREACH laboratory testing recorded 150,000 cycles using pure water at a rotor speed of 100 RPM. One complete cycle includes switching through the load, sample, and vent positions. Actual service life depends on the medium, pressure, and operating conditions."
+      },
+      {
+        "question": "What are the wetted materials of the high-pressure rotary valve?",
+        "answer": "The stator is SUS316L, and the rotor is made from a polymer material. Material compatibility should be confirmed for the mobile phase, sample, and cleaning solution before use."
+      }
+    ],
+    "seoTitleEn": "HP 2-Position, 6-Port High-Pressure Rotary Valve with Vent | FOREACH",
+    "seoDescriptionEn": "HP-26SSU3204 high-pressure rotary valve with vent for HPLC autosampling. Rated to 25 MPa with 10-32 UNF ports, a 0.4 mm channel, 0.8 μL internal volume, and 100 ms switching.",
+    "h1TitleEn": "HP 2-Position, 6-Port High-Pressure Rotary Valve with Vent",
+    "pageTitleEn": "HP 2-Position, 6-Port High-Pressure Rotary Valve with Vent",
+    "displayNameEn": "HP 2-Position, 6-Port High-Pressure Rotary Valve with Vent",
+    "nameEn": "HP 2-Position, 6-Port High-Pressure Rotary Valve with Vent",
+    "productNameEn": "HP 2-Position, 6-Port High-Pressure Rotary Valve with Vent",
+    "imageAltEn": "HP 2-Position, 6-Port High-Pressure Rotary Valve with Vent",
+    "modelEn": "Contact us for a custom configuration",
+    "specsEn": [
+      {
+        "label": "Product Model",
+        "value": "HP-26SSU3204"
+      },
+      {
+        "label": "Configuration",
+        "value": "2-position, 6-port with vent"
+      },
+      {
+        "label": "Maximum Operating Pressure",
+        "value": "25 MPa"
+      },
+      {
+        "label": "Port Specification",
+        "value": "10-32 UNF"
+      },
+      {
+        "label": "Channel Diameter",
+        "value": "0.4 mm"
+      },
+      {
+        "label": "Internal Volume",
+        "value": "0.8 μL"
+      },
+      {
+        "label": "Adjacent-Channel Switching Time",
+        "value": "100 ms"
+      },
+      {
+        "label": "Service Life",
+        "value": "150,000 cycles using pure water"
+      },
+      {
+        "label": "Rated Voltage",
+        "value": "24 V"
+      },
+      {
+        "label": "Wetted Materials",
+        "value": "Stator: SUS316L; rotor: polymer material"
+      }
+    ],
+    "specificationsEn": [
+      {
+        "label": "Product Model",
+        "value": "HP-26SSU3204"
+      },
+      {
+        "label": "Configuration",
+        "value": "2-position, 6-port with vent"
+      },
+      {
+        "label": "Maximum Operating Pressure",
+        "value": "25 MPa"
+      },
+      {
+        "label": "Port Specification",
+        "value": "10-32 UNF"
+      },
+      {
+        "label": "Channel Diameter",
+        "value": "0.4 mm"
+      },
+      {
+        "label": "Internal Volume",
+        "value": "0.8 μL"
+      },
+      {
+        "label": "Adjacent-Channel Switching Time",
+        "value": "100 ms"
+      },
+      {
+        "label": "Service Life",
+        "value": "150,000 cycles using pure water"
+      },
+      {
+        "label": "Rated Voltage",
+        "value": "24 V"
+      },
+      {
+        "label": "Wetted Materials",
+        "value": "Stator: SUS316L; rotor: polymer material"
+      }
+    ],
+    "technicalSpecificationsEn": [
+      {
+        "label": "Product Model",
+        "value": "HP-26SSU3204"
+      },
+      {
+        "label": "Configuration",
+        "value": "2-position, 6-port with vent"
+      },
+      {
+        "label": "Maximum Operating Pressure",
+        "value": "25 MPa"
+      },
+      {
+        "label": "Port Specification",
+        "value": "10-32 UNF"
+      },
+      {
+        "label": "Channel Diameter",
+        "value": "0.4 mm"
+      },
+      {
+        "label": "Internal Volume",
+        "value": "0.8 μL"
+      },
+      {
+        "label": "Adjacent-Channel Switching Time",
+        "value": "100 ms"
+      },
+      {
+        "label": "Service Life",
+        "value": "150,000 cycles using pure water"
+      },
+      {
+        "label": "Rated Voltage",
+        "value": "24 V"
+      },
+      {
+        "label": "Wetted Materials",
+        "value": "Stator: SUS316L; rotor: polymer material"
+      }
+    ],
+    "faqEn": [
+      {
+        "question": "Why is the valve described as 2-position, 6-port when its operating sequence includes three positions?",
+        "answer": "The two primary six-port flow configurations are the load position and the sample position. A separate vent position connects ports 3 and 7 for system venting. The product name therefore follows the specification wording: 2-position, 6-port with vent."
+      },
+      {
+        "question": "What applications is the HP 2-position, 6-port high-pressure rotary valve with vent designed for?",
+        "answer": "It is designed for loading, sampling, high-pressure flow-path switching, and system venting in HPLC autosampler modules. It can also be integrated into analytical instruments that require high pressure resistance and low internal volume."
+      },
+      {
+        "question": "What are the maximum operating pressure and port specification?",
+        "answer": "The maximum operating pressure is 25 MPa, and the port specification is 10-32 UNF. The ports are intended for use with compatible tapered fittings."
+      },
+      {
+        "question": "What are the benefits of the 0.4 mm channel and 0.8 μL internal volume?",
+        "answer": "The small channel diameter and internal volume help reduce fluid retention, sample dispersion, carryover, and cross-mixing. This is useful in HPLC fluid paths that are sensitive to injection stability and residual volume."
+      },
+      {
+        "question": "What are the switching time and service-life ratings?",
+        "answer": "Adjacent-channel switching time is 100 ms. FOREACH laboratory testing recorded 150,000 cycles using pure water at a rotor speed of 100 RPM. One complete cycle includes switching through the load, sample, and vent positions. Actual service life depends on the medium, pressure, and operating conditions."
+      },
+      {
+        "question": "What are the wetted materials of the high-pressure rotary valve?",
+        "answer": "The stator is SUS316L, and the rotor is made from a polymer material. Material compatibility should be confirmed for the mobile phase, sample, and cleaning solution before use."
+      }
+    ],
+    "seoEn": {
+      "title": "HP 2-Position, 6-Port High-Pressure Rotary Valve with Vent | FOREACH",
+      "description": "HP-26SSU3204 high-pressure rotary valve with vent for HPLC autosampling. Rated to 25 MPa with 10-32 UNF ports, a 0.4 mm channel, 0.8 μL internal volume, and 100 ms switching."
+    },
+    "bottomCtaTitleEn": "Need help confirming the HP valve pressure, ports, and switching sequence?",
+    "bottomCtaDescriptionEn": "Share the maximum operating pressure, mobile phase or sample medium, 10-32 UNF connection requirements, load/sample/vent switching logic, internal-volume target, and installation space. FOREACH can help confirm the suitable HP valve configuration.",
+    "bottomCtaButtonTextEn": "Contact an Engineer",
+    "customInquiryTitleEn": "Need help confirming the HP valve pressure, ports, and switching sequence?",
+    "customInquiryDescriptionEn": "Share the maximum operating pressure, mobile phase or sample medium, 10-32 UNF connection requirements, load/sample/vent switching logic, internal-volume target, and installation space. FOREACH can help confirm the suitable HP valve configuration.",
+    "customInquiryButtonTextEn": "Contact an Engineer"
   },
   {
     "slug": "solenoid-valves",
