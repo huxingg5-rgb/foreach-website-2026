@@ -8,7 +8,7 @@
    当前方案：
    1. 管理联系我们页面的需求提交表单
    2. 管理姓名、公司、邮箱、电话、需求类型、产品类型、当前阶段等字段
-   3. 管理邮箱验证码前端测试逻辑
+   3. 调用 Vercel API 发送并验证真实邮箱验证码
    4. 管理附件上传、附件显示和附件删除
    5. 提交后使用 buildContactPdfHtml.ts 生成 A4 需求单 HTML
    6. 使用隐藏 iframe 调出浏览器打印 / 保存 PDF 窗口
@@ -16,8 +16,8 @@
    8. buildContactPdfDocument.ts 可以先保留，但本文件不再使用它
 
    注意：
-   1. 当前验证码仍然是前端测试验证码
-   2. 正式上线后再接真实验证码接口和后台提交接口
+   1. 邮箱验证码由 Vercel API 和 Resend 真实发送
+   2. 询盘提交后由 Vercel API 发送公司通知和客户确认邮件
 ========================================================= */
 
 "use client";
@@ -38,6 +38,291 @@ type ContactInquiryFormProps = {
   data: ContactPageData; // 当前语言页面数据
   presetRequestType?: string; // 外部卡片点击后传进来的需求类型
 };
+
+type InquiryApiResponse = {
+  success: boolean;
+  error?: string;
+  referenceId?: string;
+};
+
+class InquiryApiError extends Error {
+  code: string;
+  status: number;
+
+  constructor(code: string, status: number) {
+    super(code);
+
+    this.name = "InquiryApiError";
+    this.code = code;
+    this.status = status;
+  }
+}
+
+async function postInquiryApi(
+  pathname: string,
+  payload: Record<string, unknown>,
+): Promise<InquiryApiResponse> {
+  let response: Response;
+
+  try {
+    response = await fetch(pathname, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      cache: "no-store",
+      body: JSON.stringify(payload),
+    });
+  } catch {
+    throw new InquiryApiError(
+      "network_error",
+      0,
+    );
+  }
+
+  let result: InquiryApiResponse;
+
+  try {
+    result =
+      (await response.json()) as InquiryApiResponse;
+  } catch {
+    result = {
+      success: false,
+      error: "invalid_response",
+    };
+  }
+
+  if (!response.ok || !result.success) {
+    throw new InquiryApiError(
+      result.error || "request_failed",
+      response.status,
+    );
+  }
+
+  return result;
+}
+
+type InquiryRuntimeLocale =
+  | "zh-CN"
+  | "en"
+  | "es"
+  | "fr"
+  | "ko"
+  | "ru";
+
+type InquiryRuntimeText = {
+  codeSent: string;
+  sendTooFrequently: string;
+  codeIncorrect: string;
+  codeExpired: string;
+  emailNotVerified: string;
+  networkError: string;
+  configurationError: string;
+  genericError: string;
+};
+
+const INQUIRY_RUNTIME_TEXT: Record<
+  InquiryRuntimeLocale,
+  InquiryRuntimeText
+> = {
+  "zh-CN": {
+    codeSent: "验证码已发送，请查收邮箱。",
+    sendTooFrequently:
+      "验证码发送过于频繁，请在 60 秒后重试。",
+    codeIncorrect:
+      "验证码不正确，请重新检查后填写。",
+    codeExpired:
+      "验证码不存在或已过期，请重新发送。",
+    emailNotVerified:
+      "邮箱验证状态不存在或已过期，请重新验证。",
+    networkError:
+      "网络连接失败，请检查网络后重试。",
+    configurationError:
+      "邮件服务尚未配置完成，请联系网站管理员。",
+    genericError:
+      "操作失败，请稍后重试，或直接通过邮箱联系我们。",
+  },
+
+  en: {
+    codeSent:
+      "The verification code has been sent. Please check your email.",
+    sendTooFrequently:
+      "Please wait 60 seconds before requesting another code.",
+    codeIncorrect:
+      "The verification code is incorrect. Please check it and try again.",
+    codeExpired:
+      "The verification code is missing or has expired. Please request a new one.",
+    emailNotVerified:
+      "Your email verification has expired. Please verify your email again.",
+    networkError:
+      "The network request failed. Please check your connection and try again.",
+    configurationError:
+      "The email service has not been configured. Please contact the website administrator.",
+    genericError:
+      "The operation failed. Please try again later or contact us by email.",
+  },
+
+  es: {
+    codeSent:
+      "El código de verificación se ha enviado. Revise su correo electrónico.",
+    sendTooFrequently:
+      "Espere 60 segundos antes de solicitar otro código.",
+    codeIncorrect:
+      "El código de verificación es incorrecto. Revíselo e inténtelo de nuevo.",
+    codeExpired:
+      "El código no existe o ha caducado. Solicite uno nuevo.",
+    emailNotVerified:
+      "La verificación del correo ha caducado. Verifique su correo de nuevo.",
+    networkError:
+      "La solicitud de red ha fallado. Compruebe su conexión e inténtelo de nuevo.",
+    configurationError:
+      "El servicio de correo aún no está configurado. Contacte con el administrador.",
+    genericError:
+      "La operación ha fallado. Inténtelo más tarde o contáctenos por correo.",
+  },
+
+  fr: {
+    codeSent:
+      "Le code de vérification a été envoyé. Consultez votre boîte de réception.",
+    sendTooFrequently:
+      "Veuillez attendre 60 secondes avant de demander un nouveau code.",
+    codeIncorrect:
+      "Le code de vérification est incorrect. Vérifiez-le et réessayez.",
+    codeExpired:
+      "Le code est introuvable ou a expiré. Demandez un nouveau code.",
+    emailNotVerified:
+      "La vérification de votre adresse e-mail a expiré. Veuillez recommencer.",
+    networkError:
+      "La requête réseau a échoué. Vérifiez votre connexion et réessayez.",
+    configurationError:
+      "Le service d’e-mail n’est pas encore configuré. Contactez l’administrateur.",
+    genericError:
+      "L’opération a échoué. Réessayez plus tard ou contactez-nous par e-mail.",
+  },
+
+  ko: {
+    codeSent:
+      "인증 코드가 전송되었습니다. 이메일을 확인해 주세요.",
+    sendTooFrequently:
+      "새 코드를 요청하기 전에 60초 동안 기다려 주세요.",
+    codeIncorrect:
+      "인증 코드가 올바르지 않습니다. 다시 확인해 주세요.",
+    codeExpired:
+      "인증 코드가 없거나 만료되었습니다. 새 코드를 요청해 주세요.",
+    emailNotVerified:
+      "이메일 인증이 만료되었습니다. 다시 인증해 주세요.",
+    networkError:
+      "네트워크 요청에 실패했습니다. 연결 상태를 확인해 주세요.",
+    configurationError:
+      "이메일 서비스 설정이 완료되지 않았습니다. 관리자에게 문의해 주세요.",
+    genericError:
+      "작업에 실패했습니다. 잠시 후 다시 시도하거나 이메일로 문의해 주세요.",
+  },
+
+  ru: {
+    codeSent:
+      "Код подтверждения отправлен. Проверьте электронную почту.",
+    sendTooFrequently:
+      "Подождите 60 секунд перед повторным запросом кода.",
+    codeIncorrect:
+      "Код подтверждения указан неверно. Проверьте его и повторите попытку.",
+    codeExpired:
+      "Код отсутствует или истёк. Запросите новый код.",
+    emailNotVerified:
+      "Подтверждение электронной почты истекло. Выполните проверку повторно.",
+    networkError:
+      "Ошибка сетевого запроса. Проверьте подключение и повторите попытку.",
+    configurationError:
+      "Почтовый сервис ещё не настроен. Обратитесь к администратору сайта.",
+    genericError:
+      "Не удалось выполнить операцию. Повторите попытку позже или напишите нам.",
+  },
+};
+
+function getInquiryRuntimeLocale():
+  InquiryRuntimeLocale {
+  if (typeof document === "undefined") {
+    return "zh-CN";
+  }
+
+  const rawLocale =
+    document.documentElement.lang
+      .trim()
+      .toLowerCase();
+
+  if (rawLocale.startsWith("zh")) {
+    return "zh-CN";
+  }
+
+  if (rawLocale.startsWith("es")) {
+    return "es";
+  }
+
+  if (rawLocale.startsWith("fr")) {
+    return "fr";
+  }
+
+  if (rawLocale.startsWith("ko")) {
+    return "ko";
+  }
+
+  if (rawLocale.startsWith("ru")) {
+    return "ru";
+  }
+
+  return "en";
+}
+
+function getInquiryRuntimeText():
+  InquiryRuntimeText {
+  return INQUIRY_RUNTIME_TEXT[
+    getInquiryRuntimeLocale()
+  ];
+}
+
+function getInquiryApiErrorMessage(
+  error: unknown,
+  data: ContactPageData,
+): string {
+  const runtimeText =
+    getInquiryRuntimeText();
+
+  const errorCode =
+    error instanceof InquiryApiError
+      ? error.code
+      : "unknown_error";
+
+  switch (errorCode) {
+    case "invalid_email":
+      return data.form.alerts.invalidEmail;
+
+    case "send_too_frequently":
+      return runtimeText.sendTooFrequently;
+
+    case "invalid_verification_data":
+    case "verification_code_incorrect":
+      return runtimeText.codeIncorrect;
+
+    case "verification_code_missing":
+    case "verification_code_invalid":
+    case "verification_code_expired":
+      return runtimeText.codeExpired;
+
+    case "email_not_verified":
+    case "email_verification_expired":
+      return runtimeText.emailNotVerified;
+
+    case "storage_not_configured":
+    case "email_service_not_configured":
+      return runtimeText.configurationError;
+
+    case "network_error":
+      return runtimeText.networkError;
+
+    default:
+      return runtimeText.genericError;
+  }
+}
 
 /* =========================================================
    表单初始值
@@ -185,9 +470,13 @@ export default function ContactInquiryForm({
 
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
 
-  const [mockEmailCode, setMockEmailCode] = useState("");
+  const [emailCodeSent, setEmailCodeSent] = useState(false);
 
   const [emailCodeVerified, setEmailCodeVerified] = useState(false);
+
+  const [isSendingCode, setIsSendingCode] = useState(false);
+
+  const [isVerifyingCode, setIsVerifyingCode] = useState(false);
 
   const [emailTip, setEmailTip] = useState(data.form.emailVerification.tip);
 
@@ -200,6 +489,8 @@ export default function ContactInquiryForm({
   const [internalArchiveFileName, setInternalArchiveFileName] = useState("");
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const [referenceId, setReferenceId] = useState("");
 
   /* =========================================================
      同步外部传入的需求类型
@@ -232,8 +523,16 @@ export default function ContactInquiryForm({
 
     if (name === "email") {
       setEmailCodeVerified(false);
-      setMockEmailCode("");
-      setEmailTip(data.form.emailVerification.tip);
+      setEmailCodeSent(false);
+
+      setFormData((prev) => ({
+        ...prev,
+        emailCode: "",
+      }));
+
+      setEmailTip(
+        data.form.emailVerification.tip,
+      );
     }
 
     if (showSuccessModal) {
@@ -241,85 +540,198 @@ export default function ContactInquiryForm({
     }
   }
 
+
   /* =========================================================
-     发送邮箱验证码
-     当前为前端测试逻辑：
-     1. 验证码来自 contact.zh.ts 等数据文件里的 mockCode
-     2. 正式上线后改成后端接口发送真实验证码
+     发送真实邮箱验证码
+
+     接口：
+     POST /api/inquiry/send-code/
   ========================================================= */
 
-  function handleSendEmailCode() {
+  async function handleSendEmailCode() {
+    if (isSendingCode || sendCountdown > 0) {
+      return;
+    }
+
     const email = formData.email.trim();
 
     if (!email) {
-      window.alert(data.form.alerts.emailRequired);
+      window.alert(
+        data.form.alerts.emailRequired,
+      );
+
       return;
     }
 
-    const emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailReg =
+      /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!emailReg.test(email)) {
-      window.alert(data.form.alerts.invalidEmail);
+      window.alert(
+        data.form.alerts.invalidEmail,
+      );
+
       return;
     }
 
-    const code = data.form.emailVerification.mockCode;
-
-    setMockEmailCode(code);
+    setIsSendingCode(true);
     setEmailCodeVerified(false);
-    setEmailTip(`${data.form.emailVerification.codeSentTip}${code}`);
-    setSendCountdown(60);
+    setEmailCodeSent(false);
 
-    const timer = window.setInterval(() => {
-      setSendCountdown((prev) => {
-        if (prev <= 1) {
-          window.clearInterval(timer);
-          return 0;
-        }
+    try {
+      await postInquiryApi(
+        "/api/inquiry/send-code/",
+        {
+          email,
+        },
+      );
 
-        return prev - 1;
-      });
-    }, 1000);
+      setEmailCodeSent(true);
+
+      setFormData((prev) => ({
+        ...prev,
+        emailCode: "",
+      }));
+
+      setEmailTip(
+        getInquiryRuntimeText().codeSent,
+      );
+
+      setSendCountdown(60);
+
+      const timer =
+        window.setInterval(() => {
+          setSendCountdown((prev) => {
+            if (prev <= 1) {
+              window.clearInterval(timer);
+
+              return 0;
+            }
+
+            return prev - 1;
+          });
+        }, 1000);
+    } catch (error) {
+      const message =
+        getInquiryApiErrorMessage(
+          error,
+          data,
+        );
+
+      setEmailCodeSent(false);
+      setEmailCodeVerified(false);
+      setEmailTip(message);
+
+      window.alert(message);
+    } finally {
+      setIsSendingCode(false);
+    }
   }
 
+
   /* =========================================================
-     验证邮箱验证码
+     验证真实邮箱验证码
+
+     接口：
+     POST /api/inquiry/verify-code/
   ========================================================= */
 
-  function handleVerifyEmailCode() {
-    if (verifyCountdown > 0) return;
-
-    if (!mockEmailCode) {
-      window.alert(data.form.alerts.sendCodeFirst);
+  async function handleVerifyEmailCode() {
+    if (
+      isVerifyingCode ||
+      verifyCountdown > 0
+    ) {
       return;
     }
 
-    if (!formData.emailCode.trim()) {
-      window.alert(data.form.alerts.codeRequired);
+    if (!emailCodeSent) {
+      window.alert(
+        data.form.alerts.sendCodeFirst,
+      );
+
       return;
     }
 
-    if (formData.emailCode.trim() !== mockEmailCode) {
+    const email =
+      formData.email.trim();
+
+    const code =
+      formData.emailCode.trim();
+
+    if (!code) {
+      window.alert(
+        data.form.alerts.codeRequired,
+      );
+
+      return;
+    }
+
+    setIsVerifyingCode(true);
+
+    try {
+      await postInquiryApi(
+        "/api/inquiry/verify-code/",
+        {
+          email,
+          code,
+        },
+      );
+
+      setEmailCodeVerified(true);
+
+      setEmailTip(
+        data.form.emailVerification.verifiedTip,
+      );
+    } catch (error) {
+      const message =
+        getInquiryApiErrorMessage(
+          error,
+          data,
+        );
+
       setEmailCodeVerified(false);
-      setEmailTip(`${data.form.emailVerification.invalidCodeTip}${mockEmailCode}`);
-      setVerifyCountdown(60);
+      setEmailTip(message);
 
-      const timer = window.setInterval(() => {
-        setVerifyCountdown((prev) => {
-          if (prev <= 1) {
-            window.clearInterval(timer);
-            return 0;
-          }
+      const errorCode =
+        error instanceof InquiryApiError
+          ? error.code
+          : "";
 
-          return prev - 1;
-        });
-      }, 1000);
+      if (
+        errorCode ===
+          "verification_code_missing" ||
+        errorCode ===
+          "verification_code_invalid" ||
+        errorCode ===
+          "verification_code_expired"
+      ) {
+        setEmailCodeSent(false);
+      }
 
-      return;
+      if (
+        errorCode ===
+        "verification_code_incorrect"
+      ) {
+        setVerifyCountdown(5);
+
+        const timer =
+          window.setInterval(() => {
+            setVerifyCountdown((prev) => {
+              if (prev <= 1) {
+                window.clearInterval(timer);
+
+                return 0;
+              }
+
+              return prev - 1;
+            });
+          }, 1000);
+      }
+
+      window.alert(message);
+    } finally {
+      setIsVerifyingCode(false);
     }
-
-    setEmailCodeVerified(true);
-    setEmailTip(data.form.emailVerification.verifiedTip);
   }
 
   /* =========================================================
@@ -433,67 +845,172 @@ export default function ContactInquiryForm({
     return true;
   }
 
+
   /* =========================================================
-     表单提交
-     当前阶段：
-     1. 校验邮箱验证码
-     2. 生成需求单号
-     3. 生成 PDF 文件名
-     4. 调出浏览器打印 / 保存 PDF 窗口
+     提交真实询盘
+
+     执行顺序：
+     1. 检查邮箱验证状态
+     2. 把询盘内容提交至 Vercel API
+     3. 后端向公司和客户发送邮件
+     4. 邮件发送成功后生成并打印需求单
      5. 显示提交成功弹窗
 
-     后续接后台：
-     1. 先把表单数据和附件提交给后台
-     2. 后台保存成功后，再生成 / 打印 PDF
+     接口：
+     POST /api/inquiry/submit/
   ========================================================= */
 
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(
+    event: FormEvent<HTMLFormElement>,
+  ) {
     event.preventDefault();
 
-    if (isSubmitting) return;
+    if (isSubmitting) {
+      return;
+    }
 
-    if (!mockEmailCode) {
-      window.alert(data.form.alerts.sendCodeFirst);
+    if (!emailCodeSent) {
+      window.alert(
+        data.form.alerts.sendCodeFirst,
+      );
+
       return;
     }
 
     if (!emailCodeVerified) {
-      window.alert(data.form.alerts.verifyEmailFirst);
+      window.alert(
+        data.form.alerts.verifyEmailFirst,
+      );
+
       return;
     }
 
-    const generatedFileName = createInternalArchiveFileName(formData);
-
-    const requestNumber = createRequestNumber();
+    const generatedFileName =
+      createInternalArchiveFileName(
+        formData,
+      );
 
     const currentLang =
       typeof document !== "undefined"
-        ? document.documentElement.lang || "zh-CN"
+        ? document.documentElement.lang ||
+          "zh-CN"
         : "zh-CN";
 
-    const createdAtText = new Date().toLocaleString(currentLang, {
-      hour12: false,
-    });
+    const createdAtText =
+      new Date().toLocaleString(
+        currentLang,
+        {
+          hour12: false,
+        },
+      );
 
-    setInternalArchiveFileName(generatedFileName);
+    setInternalArchiveFileName(
+      generatedFileName,
+    );
 
     setIsSubmitting(true);
 
     try {
-      const printStarted = printRequirementFromHiddenIframe(
+      const apiResult =
+        await postInquiryApi(
+          "/api/inquiry/submit/",
+          {
+            name: formData.name,
+            company: formData.company,
+            email: formData.email,
+            phone: formData.phone,
+            requestType:
+              formData.requestType,
+            productType:
+              formData.productType,
+            targetModel:
+              formData.targetModel,
+            projectStage:
+              formData.projectStage,
+            message: formData.message,
+            locale: currentLang,
+            attachments:
+              selectedFiles.map(
+                (file) => ({
+                  name: file.name,
+                  type:
+                    file.type ||
+                    "application/octet-stream",
+                  size: file.size,
+                }),
+              ),
+          },
+        );
+
+      const nextReferenceId =
+        apiResult.referenceId || "";
+
+      const requestNumber =
+        nextReferenceId
+          ? "FOREACH-" +
+            nextReferenceId
+          : createRequestNumber();
+
+      setReferenceId(
+        nextReferenceId,
+      );
+
+      /*
+       * 邮件已经发送成功。
+       * 接下来生成浏览器打印版需求单。
+       */
+      printRequirementFromHiddenIframe(
         generatedFileName,
         requestNumber,
         createdAtText,
       );
 
-      if (!printStarted) {
-        return;
-      }
+      /*
+       * 后端提交成功后，邮箱验证状态会被消耗。
+       * 前端同步重置验证状态，避免重复提交。
+       */
+      setEmailCodeVerified(false);
+      setEmailCodeSent(false);
+
+      setFormData((prev) => ({
+        ...prev,
+        emailCode: "",
+      }));
+
+      setEmailTip(
+        data.form.emailVerification.tip,
+      );
 
       setShowSuccessModal(true);
     } catch (error) {
-      console.error("需求单生成失败：", error);
-      window.alert("需求单生成失败，请稍后重试，或直接通过邮箱联系我们。");
+      const message =
+        getInquiryApiErrorMessage(
+          error,
+          data,
+        );
+
+      const errorCode =
+        error instanceof InquiryApiError
+          ? error.code
+          : "";
+
+      if (
+        errorCode ===
+          "email_not_verified" ||
+        errorCode ===
+          "email_verification_expired"
+      ) {
+        setEmailCodeVerified(false);
+        setEmailCodeSent(false);
+        setEmailTip(message);
+      }
+
+      console.error(
+        "询盘提交失败：",
+        error,
+      );
+
+      window.alert(message);
     } finally {
       setIsSubmitting(false);
     }
@@ -563,11 +1080,19 @@ export default function ContactInquiryForm({
                 className="contact-mini-button"
                 type="button"
                 onClick={handleSendEmailCode}
-                disabled={sendCountdown > 0 || isSubmitting}
+                disabled={
+                  sendCountdown > 0 ||
+                  isSubmitting ||
+                  isSendingCode ||
+                  isVerifyingCode
+                }
               >
-                {sendCountdown > 0
-                  ? `${sendCountdown}${data.form.actions.resendCountdownSuffix}`
-                  : data.form.emailVerification.sendButton}
+                {isSendingCode
+                  ? data.form.emailVerification.sendButton + "..."
+                  : sendCountdown > 0
+                    ? String(sendCountdown) +
+                      data.form.actions.resendCountdownSuffix
+                    : data.form.emailVerification.sendButton}
               </button>
 
               <input
@@ -583,13 +1108,22 @@ export default function ContactInquiryForm({
                 className="contact-mini-button"
                 type="button"
                 onClick={handleVerifyEmailCode}
-                disabled={verifyCountdown > 0 || emailCodeVerified || isSubmitting}
+                disabled={
+                  verifyCountdown > 0 ||
+                  emailCodeVerified ||
+                  isSubmitting ||
+                  isVerifyingCode ||
+                  !emailCodeSent
+                }
               >
-                {emailCodeVerified
-                  ? data.form.actions.emailVerified
-                  : verifyCountdown > 0
-                    ? `${verifyCountdown}${data.form.actions.retryCountdownSuffix}`
-                    : data.form.emailVerification.verifyButton}
+                {isVerifyingCode
+                  ? data.form.emailVerification.verifyButton + "..."
+                  : emailCodeVerified
+                    ? data.form.actions.emailVerified
+                    : verifyCountdown > 0
+                      ? String(verifyCountdown) +
+                        data.form.actions.retryCountdownSuffix
+                      : data.form.emailVerification.verifyButton}
               </button>
             </div>
 
@@ -754,7 +1288,9 @@ export default function ContactInquiryForm({
             type="submit"
             disabled={isSubmitting}
           >
-            {isSubmitting ? "正在生成需求单..." : data.form.submitButton}
+            {isSubmitting
+              ? data.form.submitButton + "..."
+              : data.form.submitButton}
           </button>
         </div>
       </form>
@@ -778,6 +1314,13 @@ export default function ContactInquiryForm({
             <h3>{data.form.successModal.title}</h3>
 
             <p>{data.form.successModal.description}</p>
+
+            {referenceId ? (
+              <p>
+                <strong>Reference:</strong>{" "}
+                {referenceId}
+              </p>
+            ) : null}
 
             <button
               className="contact-success-button"
