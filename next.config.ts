@@ -1,24 +1,18 @@
 /* =========================================================
    next.config.ts
-   恒永达官网｜Next.js 配置文件
+   恒永达官网｜Vercel 部署配置
 
    说明：
-   1. 当前为了适配 Cloudflare Pages 免费版，使用静态导出 output: "export"
-   2. 静态导出不会生成 Cloudflare Worker，因此不会触发 Worker 体积限制
-   3. images.unoptimized 是必须的，否则 next/image 在静态导出时可能报错
-   4. trailingSlash: true 用于让导出路径生成 index.html 目录结构
-      例如：
-      /resources/technical-articles
-      对应：
-      out/resources/technical-articles/index.html
-   5. 这样更适合 Cloudflare Pages 这类静态托管平台
+   1. Vercel 分支不再使用 output: "export"
+   2. 页面仍会尽可能生成静态页面
+   3. /app/api 下的询盘接口由 Vercel Functions 运行
+   4. trailingSlash 保留原官网 URL 结构
+   5. images.unoptimized 保留现有图片加载方式
 ========================================================= */
 
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export",
-
   trailingSlash: true,
 
   images: {
