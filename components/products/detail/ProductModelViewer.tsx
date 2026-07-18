@@ -27,7 +27,34 @@ type ProductModelViewerProps = {
   /* 3D 模型文件路径 */
   modelUrl?: string;
 
-  locale?: "zh" | "en";
+  locale?: "zh" | "en" | "es" | "fr" | "ko" | "ru";
+};
+
+const MODEL_VIEWER_COPY = {
+  zh: {
+    unavailable: "暂未配置 3D 模型文件",
+    loading: "3D 模型加载中...",
+  },
+  en: {
+    unavailable: "No public 3D model is available for this product.",
+    loading: "Loading 3D model...",
+  },
+  es: {
+    unavailable: "No hay un modelo 3D público disponible para este producto.",
+    loading: "Cargando el modelo 3D...",
+  },
+  fr: {
+    unavailable: "Aucun modèle 3D public n’est disponible pour ce produit.",
+    loading: "Chargement du modèle 3D...",
+  },
+  ko: {
+    unavailable: "이 제품에 공개된 3D 모델이 없습니다.",
+    loading: "3D 모델 불러오는 중...",
+  },
+  ru: {
+    unavailable: "Для этого продукта нет общедоступной 3D-модели.",
+    loading: "Загрузка 3D-модели...",
+  },
 };
 
 export default function ProductModelViewer({
@@ -38,6 +65,7 @@ export default function ProductModelViewer({
   locale = "zh",
 }: ProductModelViewerProps) {
   const [isModelViewerReady, setIsModelViewerReady] = useState(false);
+  const viewerCopy = MODEL_VIEWER_COPY[locale];
 
   const finalProductName = productModel || modelName || slug || "Product";
 
@@ -74,9 +102,7 @@ export default function ProductModelViewer({
   if (!modelUrl) {
     return (
       <div className={styles.modelViewerFallback}>
-        {locale === "en"
-          ? "No public 3D model is available for this product."
-          : "暂未配置 3D 模型文件"}
+        {viewerCopy.unavailable}
       </div>
     );
   }
@@ -84,7 +110,7 @@ export default function ProductModelViewer({
   if (!isModelViewerReady) {
     return (
       <div className={styles.modelViewerFallback}>
-        {locale === "en" ? "Loading 3D model..." : "3D 模型加载中..."}
+        {viewerCopy.loading}
       </div>
     );
   }

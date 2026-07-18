@@ -52,6 +52,10 @@ import {
   hardTubeFittingTaxonomyItems,
 } from "@/data/products/selection/hard-tube-fitting-selection.generated";
 import {
+  localizeProductCardSubtitle,
+  localizeProductCardTitle,
+} from "@/data/products/selection/card-copy/product-card-copy.intl";
+import {
   barbedFittingFilterLabels,
   barbedFittingSelectionProducts,
   barbedFittingTaxonomyItems,
@@ -516,6 +520,7 @@ const TARGET_UI_LABEL_TRANSLATIONS: Record<
   Record<string, string>
 > = {
   es: {
+    "check-valves": "Válvulas antirretorno",
     Pumps: "Bombas",
     Valves: "Válvulas",
     Probes: "Sondas",
@@ -577,6 +582,7 @@ const TARGET_UI_LABEL_TRANSLATIONS: Record<
     "Tubing ID": "Diámetro interior del tubo",
   },
   fr: {
+    "check-valves": "Clapets anti-retour",
     Pumps: "Pompes",
     Valves: "Vannes",
     Probes: "Sondes",
@@ -638,6 +644,7 @@ const TARGET_UI_LABEL_TRANSLATIONS: Record<
     "Tubing ID": "Diamètre intérieur du tube",
   },
   ko: {
+    "check-valves": "체크 밸브",
     Pumps: "펌프",
     Valves: "밸브",
     Probes: "프로브",
@@ -699,6 +706,7 @@ const TARGET_UI_LABEL_TRANSLATIONS: Record<
     "Tubing ID": "튜빙 내경",
   },
   ru: {
+    "check-valves": "Обратные клапаны",
     Pumps: "Насосы",
     Valves: "Клапаны",
     Probes: "Зонды",
@@ -2927,28 +2935,36 @@ export default function ProductSelectionClient({
 
   const categoryItems = useMemo(() => getCategoryItems(locale), [locale]);
 
+  const isTargetProductLocale = Boolean(targetLocaleA11yText);
+  const requestedInitialCategoryId =
+    isTargetProductLocale &&
+    requestedCategoryId &&
+    categoryItems.some((category) => category.id === requestedCategoryId)
+      ? requestedCategoryId
+      : undefined;
+  const resolvedInitialCategoryId =
+    requestedInitialCategoryId ||
+    initialCategoryId ||
+    categoryItems[0]?.id ||
+    "pumps";
+
   const [activeCategoryId, setActiveCategoryId] = useState(() => {
-    return initialCategoryId || categoryItems[0]?.id || "pumps";
+    return resolvedInitialCategoryId;
   });
 
   const [activeProductTypeId, setActiveProductTypeId] = useState(() => {
-    const initialActiveCategoryId =
-      initialCategoryId || categoryItems[0]?.id || "pumps";
-
     return initialProductTypeId ||
-        getCategoryDefaultProductTypeId(initialActiveCategoryId);
+        getCategoryDefaultProductTypeId(resolvedInitialCategoryId);
   });
 
   const [selectedFilters, setSelectedFilters] = useState<SelectedFilterMap>(
     () => {
-      const initialActiveCategoryId =
-        initialCategoryId || categoryItems[0]?.id || "pumps";
       const initialActiveProductTypeId =
         initialProductTypeId ||
-        getCategoryDefaultProductTypeId(initialActiveCategoryId);
+        getCategoryDefaultProductTypeId(resolvedInitialCategoryId);
 
       return getInitialSelectedFilters(
-        initialActiveCategoryId,
+        resolvedInitialCategoryId,
         initialActiveProductTypeId,
         initialFilters
       );
@@ -2973,11 +2989,9 @@ const [searchKeyword, setSearchKeyword] = useState("");
   const [mobileOpenFilterGroups, setMobileOpenFilterGroups] = useState<
     Record<string, boolean>
   >(() => {
-    const initialActiveCategoryId =
-      initialCategoryId || categoryItems[0]?.id || "pumps";
     const initialActiveProductTypeId =
       initialProductTypeId ||
-        getCategoryDefaultProductTypeId(initialActiveCategoryId);
+        getCategoryDefaultProductTypeId(resolvedInitialCategoryId);
 
     return getDefaultMobileOpenFilterGroups(initialActiveProductTypeId);
   });
@@ -3396,11 +3410,12 @@ const [searchKeyword, setSearchKeyword] = useState("");
       tags.push({
         key: "productType",
         value: activeProductTypeId,
-        label:
+        label: getTargetUiLabel(
+          locale,
           productTypeOptions.find(
             (option) => option.value === activeProductTypeId
-          )?.label ||
-          getTaxonomyLabel(locale, activeProductTypeId),
+          )?.label || getTaxonomyLabel(locale, activeProductTypeId),
+        ),
       });
     }
 
@@ -4594,14 +4609,20 @@ function isFilterOptionActive(
     setMobileOpenFilterGroups(getDefaultMobileOpenFilterGroups(firstProductTypeId));
   }
 
-  function localizeProductDetailHref(href: string) {
+  function localizeProductDetailHref(
+    href: string,
+    product?: ProductSelectionProduct,
+  ) {
     if (
       locale === "zh" ||
       !href.startsWith("/") ||
-      href.startsWith("/en/") ||
-      href === "/en"
+      /^\/(?:en|es|fr|ko|ru)(?:\/|$)/.test(href)
     ) {
       return href;
+    }
+
+    if (["es", "fr", "ko", "ru"].includes(locale)) {
+      return `/${locale}${href}`;
     }
 
     return `/en${href}`;
@@ -4801,17 +4822,26 @@ function isFilterOptionActive(
                     addToListText={pageText.addToList}
                     addedToListText={pageText.addedToList}
                     getTitle={(product) =>
-                      getText(locale, product.cardTitle, product.productId)
+                      localizeProductCardTitle(
+                        product,
+                        locale,
+                        getText(locale, product.cardTitle, product.productId),
+                      )
                     }
                     getSubtitle={(product) =>
-                      getText(locale, product.cardSubtitle, "")
+                      localizeProductCardSubtitle(
+                        product,
+                        locale,
+                        getText(locale, product.cardSubtitle, ""),
+                      )
                     }
                     getDetailHref={(product) =>
                       localizeProductDetailHref(
                         normalizeFinalProductDetailHref(
                           product,
                           makeDetailHref(product)
-                        )
+                        ),
+                        product,
                       )
                     }
                     onToggleList={toggleProductInList}

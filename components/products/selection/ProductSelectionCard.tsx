@@ -153,14 +153,18 @@ function normalizeCardDetailHref(product: ProductSelectionProductItem, href: str
 function localizeCardDetailHref(
   href: string,
   locale: SelectionLocale,
+  product: ProductSelectionProductItem,
 ): string {
   if (
     locale === "zh" ||
     !href.startsWith("/") ||
-    href.startsWith("/en/") ||
-    href === "/en"
+    /^\/(?:en|es|fr|ko|ru)(?:\/|$)/.test(href)
   ) {
     return href;
+  }
+
+  if (["es", "fr", "ko", "ru"].includes(locale)) {
+    return `/${locale}${href}`;
   }
 
   return `/en${href}`;
@@ -186,6 +190,7 @@ export default function ProductSelectionCard({
   const safeDetailHref = localizeCardDetailHref(
     normalizeCardDetailHref(product, detailHref),
     locale,
+    product,
   );
   const cardSpecs = getProductCardSpecs(product, locale)
     .map((spec) => toDisplayText(spec))

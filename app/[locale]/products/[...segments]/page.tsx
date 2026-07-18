@@ -15,6 +15,11 @@ import type { ProductRouteInitialFilters } from "@/data/products/selection/produ
 
 import ProductDetailRoutePage from "@/app/products/[category]/[slug]/page";
 import ProductsSeriesRoutePage from "@/app/products/[category]/[slug]/[seriesSlug]/page";
+import {
+  HARD_TUBE_TARGET_LOCALES,
+  isHardTubeTargetLocale,
+} from "@/data/products/detail/hard-tube-fitting-detail.intl";
+import { getTargetProductMetadataCopy } from "@/data/products/detail/product-detail.target.intl";
 import BarbedFittingDetailPage from "@/app/products/fittings/barbed-fittings/[slug]/page";
 import BulkheadBarbedFittingDetailPage from "@/app/products/fittings/bulkhead-barbed-fittings/[slug]/page";
 import CheckValveDetailPage from "@/app/products/fittings/check-valves/[slug]/page";
@@ -81,6 +86,11 @@ const allEnglishProductDetailRoutes:
     ...luerEnglishProductDetailRoutes,
   ];
 
+const targetOnlySelectionRoutes = [
+  ["control"],
+  ["fittings", "check-valves"],
+] as const;
+
 /* LUER_ENGLISH_DETAIL_ROUTES_END */
 
 const ROUTE_TITLES: Record<string, string> = {
@@ -109,10 +119,25 @@ const ROUTE_TITLES: Record<string, string> = {
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return allEnglishProductDetailRoutes.map((segments) => ({
+  const englishParams = allEnglishProductDetailRoutes.map((segments) => ({
     locale: "en",
     segments: [...segments],
   }));
+  const targetLocaleParams = allEnglishProductDetailRoutes
+    .flatMap((segments) =>
+      HARD_TUBE_TARGET_LOCALES.map((locale) => ({
+        locale,
+        segments: [...segments],
+      })),
+    );
+  const targetOnlySelectionParams = targetOnlySelectionRoutes.flatMap((segments) =>
+    HARD_TUBE_TARGET_LOCALES.map((locale) => ({
+      locale,
+      segments: [...segments],
+    })),
+  );
+
+  return [...englishParams, ...targetLocaleParams, ...targetOnlySelectionParams];
 }
 
 function titleFromSlug(slug: string) {
@@ -135,19 +160,27 @@ function getRouteTitle(segments: string[]) {
   return ROUTE_TITLES[lastSegment] || titleFromSlug(lastSegment);
 }
 
-function routeExists(segments: string[]) {
+function routeExists(locale: string, segments: string[]) {
   const routeKey = segments.join("/");
 
-  return allEnglishProductDetailRoutes.some(
+  const exists = allEnglishProductDetailRoutes.some(
     (route) => route.join("/") === routeKey
   );
+
+  const targetOnlyExists = isHardTubeTargetLocale(locale) && targetOnlySelectionRoutes.some(
+    (route) => route.join("/") === routeKey,
+  );
+
+  return (exists && (locale === "en" || isHardTubeTargetLocale(locale))) || targetOnlyExists;
 }
 
 function renderSelectionPage({
+  locale,
   categoryId,
   productTypeId,
   initialFilters,
 }: {
+  locale: string;
   categoryId: string;
   productTypeId?: string;
   initialFilters?: ProductRouteInitialFilters;
@@ -155,7 +188,7 @@ function renderSelectionPage({
   return (
     <Suspense fallback={<ProductPageSkeleton variant="selection" />}>
       <ProductSelectionClient
-        locale="en"
+        locale={locale as "en" | "es" | "fr" | "ko" | "ru"}
         initialCategoryId={categoryId}
         initialProductTypeId={productTypeId}
         initialFilters={initialFilters}
@@ -169,35 +202,49 @@ export async function generateMetadata({
 }: ProductLocaleRoutePageProps): Promise<Metadata> {
   const { locale, segments } = await params;
 
-  if (locale !== "en" || !routeExists(segments)) {
+  if (!routeExists(locale, segments)) {
     return {};
   }
 
   const title = getRouteTitle(segments);
-  const canonicalPath = `/en/products/${segments.join("/")}/`;
+  const productModel = isHardTubeTargetLocale(locale)
+    ? String(segments.at(-1) || title).toUpperCase()
+    : title;
+  const canonicalPath = `/${locale}/products/${segments.join("/")}/`;
+  const englishPath = `/en/products/${segments.join("/")}/`;
   const isDetailRoute = segments.length >= 2;
-  const description = isDetailRoute
+  const targetMetadata = isHardTubeTargetLocale(locale)
+    ? getTargetProductMetadataCopy(segments, locale)
+    : null;
+  const metadataTitle = targetMetadata?.title || `${title} | FOREACH`;
+  const description = targetMetadata?.description || (isDetailRoute
     ? `Explore ${title} specifications, materials, interfaces, model configurations, and fluidic applications from FOREACH.`
-    : `Explore FOREACH ${title} for precision fluid handling in IVD, life science, analytical instrumentation, and laboratory automation.`;
+    : `Explore FOREACH ${title} for precision fluid handling in IVD, life science, analytical instrumentation, and laboratory automation.`);
   const keywords = Array.from(
     new Set([
       title,
+      productModel,
       "FOREACH",
       "precision fluid handling",
       "microfluidic components",
       "fluidic systems",
+      ...(targetMetadata?.keywords || []),
       ...(isDetailRoute ? ["product specifications", "model configurations"] : []),
     ])
   );
 
   return {
-    title: `${title} | FOREACH`,
+    title: metadataTitle,
     description,
     keywords,
     alternates: {
       canonical: canonicalPath,
       languages: {
-        "en-US": canonicalPath,
+        "en-US": englishPath,
+        ...(locale === "es" ? { "es-ES": canonicalPath } : {}),
+        ...(locale === "fr" ? { "fr-FR": canonicalPath } : {}),
+        ...(locale === "ko" ? { "ko-KR": canonicalPath } : {}),
+        ...(locale === "ru" ? { "ru-RU": canonicalPath } : {}),
       },
     },
     robots: {
@@ -206,15 +253,19 @@ export async function generateMetadata({
     },
     openGraph: {
       type: "website",
-      locale: "en_US",
+      locale:
+        locale === "es" ? "es_ES" :
+        locale === "fr" ? "fr_FR" :
+        locale === "ko" ? "ko_KR" :
+        locale === "ru" ? "ru_RU" : "en_US",
       url: canonicalPath,
       siteName: "FOREACH",
-      title: `${title} | FOREACH`,
+      title: metadataTitle,
       description,
     },
     twitter: {
       card: "summary",
-      title: `${title} | FOREACH`,
+      title: metadataTitle,
       description,
     },
   };
@@ -225,13 +276,20 @@ export default async function ProductLocaleRoutePage({
 }: ProductLocaleRoutePageProps) {
   const { locale, segments } = await params;
 
-  if (locale !== "en" || !routeExists(segments)) {
+  if (!routeExists(locale, segments)) {
     notFound();
   }
 
   const [category, slug, seriesSlug] = segments;
 
   if (segments.length === 1) {
+    if (category === "control" && isHardTubeTargetLocale(locale)) {
+      return renderSelectionPage({
+        locale,
+        categoryId: "control",
+      });
+    }
+
     const categoryRoute = resolveCategoryRoute(category);
 
     if (!categoryRoute) {
@@ -239,15 +297,29 @@ export default async function ProductLocaleRoutePage({
     }
 
     return renderSelectionPage({
+      locale,
       categoryId: categoryRoute.categoryId,
     });
   }
 
   if (segments.length === 2) {
+    if (
+      category === "fittings" &&
+      slug === "check-valves" &&
+      isHardTubeTargetLocale(locale)
+    ) {
+      return renderSelectionPage({
+        locale,
+        categoryId: "fittings",
+        productTypeId: "check-valves",
+      });
+    }
+
     const productTypeRoute = resolveProductTypeRoute(category, slug);
 
     if (productTypeRoute) {
       return renderSelectionPage({
+        locale,
         categoryId: productTypeRoute.categoryId,
         productTypeId: productTypeRoute.productTypeId,
       });
@@ -295,6 +367,7 @@ export default async function ProductLocaleRoutePage({
 
   if (seriesRoute) {
     return renderSelectionPage({
+      locale,
       categoryId: seriesRoute.categoryId,
       productTypeId: seriesRoute.productTypeId,
       initialFilters: seriesRoute.initialFilters,

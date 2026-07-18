@@ -419,6 +419,12 @@ function getLocalizedHref(
     return href;
   }
 
+  if (["es", "fr", "ko", "ru"].includes(locale)) {
+    if (href === "/products" || href.startsWith("/products/")) {
+      return `/${locale}${href}`;
+    }
+  }
+
   const firstSegment = href
     .split("/")
     .filter(Boolean)[0];

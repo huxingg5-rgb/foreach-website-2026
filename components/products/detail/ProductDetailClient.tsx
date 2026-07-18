@@ -26,6 +26,11 @@ import { useMemo, useState } from "react";
 
 import type { CSSProperties, MouseEvent } from "react";
 import { localizeProductDetailData } from "@/data/products/detail/product-detail.intl";
+import {
+  HARD_TUBE_DETAIL_COPY,
+  isHardTubeTargetLocale,
+} from "@/data/products/detail/hard-tube-fitting-detail.intl";
+import { localizeTargetProductDetailData } from "@/data/products/detail/product-detail.target.intl";
 import type { ProductDetailPageData } from "@/data/products/detail/product-detail.types";
 import ProductModelViewer from "./ProductModelViewer";
 
@@ -299,6 +304,10 @@ function getDisplayModelText(data: any): string {
     return "XXX-XXX-XX-XX";
   }
 
+  if (isHardTubeTargetLocale(String(data?.__locale || ""))) {
+    return data?.displayModel || data?.model || "";
+  }
+
   if (isCustomInquiryMode(data)) {
     return data?.__locale === "en"
       ? "Contact us for a custom configuration"
@@ -366,6 +375,18 @@ function isHardTubeFittingDetailData(data: any): boolean {
 }
 
 function getModelActionText(data: any): string {
+  const targetLocale = String(data?.__locale || "");
+
+  if (isHardTubeTargetLocale(targetLocale)) {
+    return targetLocale === "es"
+      ? "Seleccionar modelo"
+      : targetLocale === "fr"
+        ? "Sélectionner un modèle"
+        : targetLocale === "ko"
+          ? "모델 선택"
+          : "Выбрать модель";
+  }
+
   if (isTubingDetailData(data)) {
     return data?.__locale === "en" ? "Select a Model" : "选择型号";
   }
@@ -613,8 +634,26 @@ function getTubingBottomCtaData(data: any) {
 }
 
 function getPlungerPumpBottomCta(data: any) {
+  if (isHardTubeTargetLocale(String(data?.__locale || ""))) {
+    return {
+      title: data.bottomCtaTitle,
+      desc: data.bottomCtaDescription || data.bottomCtaDesc,
+      button: data.bottomCtaButtonText || data.bottomCtaButton,
+      href: data.bottomCtaHref,
+    };
+  }
+
   /* FITTING_BOTTOM_CTA_20260717 */
   if (isFittingDetailData(data)) {
+    if (isHardTubeTargetLocale(String(data?.__locale || ""))) {
+      return {
+        title: data.bottomCtaTitle,
+        desc: data.bottomCtaDescription || data.bottomCtaDesc,
+        button: data.bottomCtaButtonText || data.bottomCtaButton,
+        href: data.bottomCtaHref,
+      };
+    }
+
     if (data?.__locale === "en") {
       return {
         title:
@@ -774,14 +813,13 @@ if (isCustomInquiryMode(data)) {
   );
 }
 
-function localizeInternalHref(value: unknown, isEnglish: boolean): string {
+function localizeInternalHref(value: unknown, localePrefix: string): string {
   const href = String(value || "").trim();
 
   if (
-    !isEnglish ||
+    !localePrefix ||
     !href.startsWith("/") ||
-    href.startsWith("/en/") ||
-    href === "/en" ||
+    /^\/(?:en|es|fr|ko|ru)(?:\/|$)/.test(href) ||
     href.startsWith("/assets/") ||
     href.startsWith("/images/") ||
     href.startsWith("/_next/") ||
@@ -790,16 +828,16 @@ function localizeInternalHref(value: unknown, isEnglish: boolean): string {
     return href;
   }
 
-  return `/en${href}`;
+  return `${localePrefix}${href}`;
 }
 
 
 function PlungerPumpBottomCta({
   data,
-  isEnglish,
+  localePrefix,
 }: {
   data: any;
-  isEnglish: boolean;
+  localePrefix: string;
 }) {
   const cta = getPlungerPumpBottomCta(data);
 
@@ -819,7 +857,7 @@ function PlungerPumpBottomCta({
         </div>
         <a
           className={styles.plungerBottomCtaButton}
-          href={localizeInternalHref(cta.href, isEnglish)}
+          href={localizeInternalHref(cta.href, localePrefix)}
         >
           {cta.button}
         </a>
@@ -1038,21 +1076,38 @@ export default function ProductDetailClient({
 }: ProductDetailClientProps) {
   const pathname = usePathname();
   const isEnglish = pathname === "/en" || pathname.startsWith("/en/");
+  const pathnameLocale = String(pathname || "")
+    .split("/")
+    .filter(Boolean)[0] || "";
+  const targetLocale = isHardTubeTargetLocale(pathnameLocale)
+    ? pathnameLocale
+    : null;
+  const isTargetLanguage = Boolean(targetLocale);
+  const isLocalizedDetail = isEnglish || isTargetLanguage;
+  const localePrefix = isEnglish
+    ? "/en"
+    : targetLocale
+      ? `/${targetLocale}`
+      : "";
   const data = useMemo(
     () =>
-      isEnglish
+      targetLocale
+        ? localizeTargetProductDetailData(sourceData, targetLocale, pathname || "")
+        : isEnglish
         ? localizeProductDetailData(sourceData)
         : sourceData,
-    [isEnglish, sourceData]
+    [isEnglish, pathname, sourceData, targetLocale]
   );
   const structuredData = useMemo(
     () =>
-      isEnglish
+      isLocalizedDetail
         ? buildProductStructuredData(data, pathname || "/")
         : null,
-    [data, isEnglish, pathname]
+    [data, isLocalizedDetail, pathname]
   );
-  const copy = isEnglish
+  const copy = targetLocale
+    ? HARD_TUBE_DETAIL_COPY[targetLocale]
+    : isEnglish
     ? {
         breadcrumb: "Breadcrumb navigation",
         home: "Home",
@@ -1088,6 +1143,15 @@ export default function ProductDetailClient({
         shape: "Shape",
         housingMaterial: "Housing Material",
         faq: "Frequently Asked Questions",
+        selectModel: "Select a Model",
+        reselect: "Reselect",
+        detailSourceLabel: "Product Detail Page",
+        no2d: "No 2D Drawing",
+        no2dYet: "2D Drawing Not Available Yet",
+        requestDrawing: 'To request a 2D drawing for this product, please click “Add Drawing” above.',
+        drawingLoading: "Loading drawing...",
+        drawingPreview: "Preview Drawing",
+        drawingDescription: (model: string) => `View the technical drawing for ${model}.`,
       }
     : {
         breadcrumb: "面包屑导航",
@@ -1124,6 +1188,15 @@ export default function ProductDetailClient({
         shape: "形状",
         housingMaterial: "外壳材质",
         faq: "常见问题",
+        selectModel: "选择型号",
+        reselect: "重新选型",
+        detailSourceLabel: "产品详情页",
+        no2d: "无2D图纸",
+        no2dYet: "2D 图纸暂未上传",
+        requestDrawing: '如需该产品的 2D 图纸，请点击上方“添加图纸”按钮提交需求。',
+        drawingLoading: "图纸加载中...",
+        drawingPreview: "预览图纸",
+        drawingDescription: (model: string) => `查看 ${model} 的技术图纸。`,
       };
     const { addItem, getItem, toggleDrawingNeed, removeItem } = useSelectionCart();
 
@@ -1484,7 +1557,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
     return {
       sourceType:
         detailCartSourceType,
-      sourceLabel: isEnglish ? "Product Detail Page" : "产品详情页",
+      sourceLabel: copy.detailSourceLabel,
       productName:
         resolvedProductName,
       productCode,
@@ -1502,8 +1575,8 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
       detailHref:
         data.detailHref ||
         data.href ||
-        (isEnglish && fallbackDetailHref
-          ? `/en${fallbackDetailHref}`
+        (isLocalizedDetail && fallbackDetailHref
+          ? `${localePrefix}${fallbackDetailHref}`
           : fallbackDetailHref),
     };
   }
@@ -2079,11 +2152,11 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
       breadcrumbItems={[
         {
           label: copy.home,
-          href: isEnglish ? "/en/" : "/",
+          href: localePrefix ? `${localePrefix}/` : "/",
         },
         {
           label: copy.products,
-          href: isEnglish ? "/en/products/" : "/products/",
+          href: localePrefix ? `${localePrefix}/products/` : "/products/",
         },
         {
           label: data.model,
@@ -2215,7 +2288,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
             {showThumbnailRow ? (
               <div
                 data-product-thumb-row="true"
-                data-detail-locale={isEnglish ? "en" : "zh"}
+                data-detail-locale={isLocalizedDetail ? "en" : "zh"}
                 className={styles.thumbRow}
                 aria-label={copy.thumbnails}
               >
@@ -2359,12 +2432,12 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
 
             <div className={styles.application}>
               <p className={styles.applicationTitle}>
-                {isEnglish
+                {isLocalizedDetail
                   ? copy.applications
                   : getDbSectionTitle("applications", copy.applications)}
               </p>
               <p className={styles.applicationText}>
-                {data.commonApplications.join(isEnglish ? ", " : "、")}
+                {data.commonApplications.join(isLocalizedDetail ? ", " : "、")}
               </p>
             </div>
 
@@ -2456,7 +2529,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
 
                       const href = localizeInternalHref(
                         getModelActionHref(data),
-                        isEnglish,
+                        localePrefix,
                       );
 
                       if (isCustomInquiryMode(data)) {
@@ -2469,12 +2542,10 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                   >
                     {isTubingConfiguratorEnabled &&
                     selectedTubingVariant
-                      ? isEnglish
-                        ? "Reselect"
-                        : "重新选型"
-                      : getModelActionText(
-                          data
-                        )}
+                      ? copy.reselect
+                      : isTargetLanguage
+                        ? copy.selectModel
+                        : getModelActionText(data)}
                   </button>
                 </div>
 
@@ -2628,7 +2699,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                   slug={data.slug}
                   modelName={data.model}
                   modelUrl={(data as any).model3dUrl || (data as any).resources?.model3dUrl}
-                  locale={isEnglish ? "en" : "zh"}
+                  locale={targetLocale || (isEnglish ? "en" : "zh")}
                 />
               </div>
             </div>
@@ -2646,12 +2717,12 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                   pdfPreviewUrl={getProductDrawingPreviewUrl(data.slug, (data as any).drawing2dUrl || (data as any).drawingPdfUrl || (data as any).partDrawingUrl || (data as any).resources?.drawing2dUrl)}
                   documentTitle={data.model}
                   text={
-                    isEnglish
+                    isLocalizedDetail
                       ? {
-                          title: "Technical Drawing",
-                          loadingLabel: "Loading drawing...",
-                          previewButton: "Preview Drawing",
-                          description: `View the technical drawing for ${data.model}.`,
+                          title: copy.technicalDrawing,
+                          loadingLabel: copy.drawingLoading,
+                          previewButton: copy.drawingPreview,
+                          description: copy.drawingDescription(data.model),
                         }
                       : undefined
                   }
@@ -2670,12 +2741,8 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                     <h3 className={styles.noDrawingTitle}>
                       {isTubingDetailData(data) ||
                       isProbeDetailData(data)
-                        ? isEnglish
-                          ? "No 2D Drawing"
-                          : "无2D图纸"
-                        : isEnglish
-                          ? "2D Drawing Not Available Yet"
-                          : "2D 图纸暂未上传"}
+                        ? copy.no2d
+                        : copy.no2dYet}
                     </h3>
 
                     {!isTubingDetailData(data) &&
@@ -2685,9 +2752,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                           styles.noDrawingDescription
                         }
                       >
-                        {isEnglish
-                          ? 'To request a 2D drawing for this product, please click “Add Drawing” above.'
-                          : '如需该产品的 2D 图纸，请点击上方“添加图纸”按钮提交需求。'}
+                        {copy.requestDrawing}
                       </p>
                     ) : null}
                   </div>
@@ -2769,7 +2834,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
 <section className={styles.faqSection}>
             <div className={styles.faqHeader}>
               <h2>
-                {isEnglish
+                {isLocalizedDetail
                   ? copy.faq
                   : getDbSectionTitle("faq", copy.faq)}
               </h2>
@@ -2821,7 +2886,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
             </div>
           </section>
 
-          <PlungerPumpBottomCta data={data} isEnglish={isEnglish} />
+          <PlungerPumpBottomCta data={data} localePrefix={localePrefix} />
           </>
         ) : null}
 

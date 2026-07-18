@@ -168,6 +168,14 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
     ko: "RPL 단일 헤드 밸브리스 펌프",
     ru: "Одноголовочный бесклапанный насос RPL",
   },
+  "RPL 无阀泵": {
+    zh: "RPL 无阀泵",
+    en: "RPL Valveless Pump",
+    es: "Bomba sin válvulas RPL",
+    fr: "Pompe sans valve RPL",
+    ko: "RPL 무밸브 펌프",
+    ru: "Бесклапанный насос RPL",
+  },
   "DRPL 双头无阀泵": {
     zh: "DRPL 双头无阀泵",
     en: "DRPL Dual-Head Valveless Pump",

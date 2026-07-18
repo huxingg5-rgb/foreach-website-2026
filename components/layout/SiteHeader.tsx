@@ -66,6 +66,27 @@ const LOCALE_PATH_PREFIXES = ["en", "es", "fr", "ko", "ru"] as const;
 
 type LocalePathPrefix = (typeof LOCALE_PATH_PREFIXES)[number];
 
+const PRODUCT_FALLBACK_LOCALES = ["es", "fr", "ko", "ru"] as const;
+
+type ProductFallbackLocale = (typeof PRODUCT_FALLBACK_LOCALES)[number];
+
+function isProductFallbackLocale(
+  localeCode: LocaleCode,
+): localeCode is ProductFallbackLocale {
+  return PRODUCT_FALLBACK_LOCALES.includes(
+    localeCode as ProductFallbackLocale,
+  );
+}
+
+function getProductCategoryFromPath(pathname: string) {
+  const pathWithoutLocale = stripLocalePrefixFromPath(pathname);
+  const categoryMatch = pathWithoutLocale.match(
+    /^\/products\/(pumps|valves|tubing|fittings|probes|control)\/?$/,
+  );
+
+  return categoryMatch?.[1] ?? "";
+}
+
 /* ================================
    判断某个字符串是否是官网语言前缀
    例子：
@@ -159,6 +180,15 @@ function getLocalePathPrefix(localeCode: LocaleCode) {
 ================================ */
 function buildLocalizedPathname(pathname: string, localeCode: LocaleCode) {
   const pathWithoutLocale = stripLocalePrefixFromPath(pathname);
+
+  if (isProductFallbackLocale(localeCode)) {
+    if (
+      pathWithoutLocale === "/products" ||
+      pathWithoutLocale.startsWith("/products/")
+    ) {
+      return `/${localeCode}${pathWithoutLocale}`;
+    }
+  }
 
   const localePrefix = getLocalePathPrefix(localeCode);
 
@@ -779,6 +809,14 @@ const isFittingReplacementDetailPage =
 
       nextSearchParams.delete("lang");
       nextSearchParams.delete("locale");
+
+      const productCategory = getProductCategoryFromPath(
+        window.location.pathname,
+      );
+
+      if (isProductFallbackLocale(localeCode) && productCategory) {
+        nextSearchParams.set("category", productCategory);
+      }
 
       const nextSearch = nextSearchParams.toString();
 
