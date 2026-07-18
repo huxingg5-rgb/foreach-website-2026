@@ -41,6 +41,95 @@ const GLOBAL_CART_STORAGE_KEY = "foreach_global_selection_cart_v1";
 */
 const LEGACY_FITTING_CART_STORAGE_KEY = "foreach_fitting_replacement_cart_v1";
 
+const TARGET_CART_TEXT: Record<
+  "es" | "fr" | "ko" | "ru",
+  Record<string, string>
+> = {
+  es: {
+    "No products selected": "No hay productos seleccionados",
+    Products: "Productos",
+    "Fitting Replacement Search": "Búsqueda de racores equivalentes",
+    Source: "Origen",
+    "Product Type": "Tipo de producto",
+    "Product Model": "Modelo de producto",
+    Quantity: "Cantidad",
+    "2D Drawing": "Plano 2D",
+    Required: "Requerido",
+    "Not Required": "No requerido",
+    Product: "Producto",
+    "Product Code": "Código de producto",
+    "FOREACH Model": "Modelo FOREACH",
+    "Compatible Models": "Modelos compatibles",
+    "Clear the current product selection list?": "¿Desea vaciar la lista de selección de productos actual?",
+    "Selection list copied": "Lista de selección copiada",
+    "The selection list is empty. Add a product first.": "La lista de selección está vacía. Añada primero un producto.",
+  },
+  fr: {
+    "No products selected": "Aucun produit sélectionné",
+    Products: "Produits",
+    "Fitting Replacement Search": "Recherche de raccords équivalents",
+    Source: "Source",
+    "Product Type": "Type de produit",
+    "Product Model": "Modèle de produit",
+    Quantity: "Quantité",
+    "2D Drawing": "Plan 2D",
+    Required: "Requis",
+    "Not Required": "Non requis",
+    Product: "Produit",
+    "Product Code": "Code produit",
+    "FOREACH Model": "Modèle FOREACH",
+    "Compatible Models": "Modèles compatibles",
+    "Clear the current product selection list?": "Vider la liste de sélection de produits actuelle ?",
+    "Selection list copied": "Liste de sélection copiée",
+    "The selection list is empty. Add a product first.": "La liste de sélection est vide. Ajoutez d'abord un produit.",
+  },
+  ko: {
+    "No products selected": "선택한 제품이 없습니다",
+    Products: "제품",
+    "Fitting Replacement Search": "피팅 대체품 검색",
+    Source: "출처",
+    "Product Type": "제품 유형",
+    "Product Model": "제품 모델",
+    Quantity: "수량",
+    "2D Drawing": "2D 도면",
+    Required: "필요",
+    "Not Required": "불필요",
+    Product: "제품",
+    "Product Code": "제품 코드",
+    "FOREACH Model": "FOREACH 모델",
+    "Compatible Models": "호환 모델",
+    "Clear the current product selection list?": "현재 제품 선정 목록을 비우시겠습니까?",
+    "Selection list copied": "제품 선정 목록을 복사했습니다",
+    "The selection list is empty. Add a product first.": "제품 선정 목록이 비어 있습니다. 먼저 제품을 추가하십시오.",
+  },
+  ru: {
+    "No products selected": "Продукция не выбрана",
+    Products: "Продукция",
+    "Fitting Replacement Search": "Поиск аналогов фитингов",
+    Source: "Источник",
+    "Product Type": "Тип продукции",
+    "Product Model": "Модель продукции",
+    Quantity: "Количество",
+    "2D Drawing": "2D-чертеж",
+    Required: "Требуется",
+    "Not Required": "Не требуется",
+    Product: "Продукция",
+    "Product Code": "Код продукции",
+    "FOREACH Model": "Модель FOREACH",
+    "Compatible Models": "Совместимые модели",
+    "Clear the current product selection list?": "Очистить текущий список выбранной продукции?",
+    "Selection list copied": "Список выбранной продукции скопирован",
+    "The selection list is empty. Add a product first.": "Список выбранной продукции пуст. Сначала добавьте продукцию.",
+  },
+};
+
+function getCartText(locale: string, english: string, chinese: string) {
+  if (locale === "en") return english;
+  if (locale === "zh-CN") return chinese;
+
+  return TARGET_CART_TEXT[locale as "es" | "fr" | "ko" | "ru"]?.[english] || english;
+}
+
 interface SelectionCartContextValue {
   items: SelectionCartItem[];
   isOpen: boolean;
@@ -134,49 +223,47 @@ function normalizeLegacyFittingItems(rawItems: unknown): SelectionCartItem[] {
 ========================================================= */
 function buildCartText(
   items: SelectionCartItem[],
-  isEnglish: boolean,
+  locale: string,
 ) {
   if (items.length === 0) {
-    return isEnglish
-      ? "No products selected"
-      : "暂无选型产品";
+    return getCartText(locale, "No products selected", "暂无选型产品");
   }
 
   const lines = items.map((item, index) => {
     const isPumpSelection = item.sourceType === "pump-selection";
-    const sourceLabel = isEnglish
-      ? isPumpSelection
-        ? "Products"
-        : "Fitting Replacement Search"
-      : item.sourceLabel;
+    const sourceLabel = getCartText(
+      locale,
+      isPumpSelection ? "Products" : "Fitting Replacement Search",
+      item.sourceLabel,
+    );
 
     if (isPumpSelection) {
       return [
         `#${index + 1}`,
-        `${isEnglish ? "Source" : "来源"}: ${sourceLabel}`,
-        `${isEnglish ? "Product Type" : "产品类型"}: ${item.productName}`,
-        `${isEnglish ? "Product Model" : "产品型号"}: ${item.foreachModel}`,
-        `${isEnglish ? "Quantity" : "数量"}: ${item.quantity}`,
-        `${isEnglish ? "2D Drawing" : "2D 图纸"}: ${
+        `${getCartText(locale, "Source", "来源")}: ${sourceLabel}`,
+        `${getCartText(locale, "Product Type", "产品类型")}: ${item.productName}`,
+        `${getCartText(locale, "Product Model", "产品型号")}: ${item.foreachModel}`,
+        `${getCartText(locale, "Quantity", "数量")}: ${item.quantity}`,
+        `${getCartText(locale, "2D Drawing", "2D 图纸")}: ${
           item.needDrawing
-            ? isEnglish ? "Required" : "需要"
-            : isEnglish ? "Not Required" : "暂不需要"
+            ? getCartText(locale, "Required", "需要")
+            : getCartText(locale, "Not Required", "暂不需要")
         }`,
       ].join("\n");
     }
 
     return [
       `#${index + 1}`,
-      `${isEnglish ? "Source" : "来源"}: ${sourceLabel}`,
-      `${isEnglish ? "Product" : "产品"}: ${item.productName}`,
-      `${isEnglish ? "Product Code" : "商品编码"}: ${item.productCode}`,
-      `${isEnglish ? "FOREACH Model" : "恒永达型号"}: ${item.foreachModel}`,
-      `${isEnglish ? "Compatible Models" : "兼容编码"}: ${item.competitorModels.join(" / ") || "-"}`,
-      `${isEnglish ? "Quantity" : "数量"}: ${item.quantity}`,
-      `${isEnglish ? "2D Drawing" : "2D 图纸"}: ${
+      `${getCartText(locale, "Source", "来源")}: ${sourceLabel}`,
+      `${getCartText(locale, "Product", "产品")}: ${item.productName}`,
+      `${getCartText(locale, "Product Code", "商品编码")}: ${item.productCode}`,
+      `${getCartText(locale, "FOREACH Model", "恒永达型号")}: ${item.foreachModel}`,
+      `${getCartText(locale, "Compatible Models", "兼容编码")}: ${item.competitorModels.join(" / ") || "-"}`,
+      `${getCartText(locale, "Quantity", "数量")}: ${item.quantity}`,
+      `${getCartText(locale, "2D Drawing", "2D 图纸")}: ${
         item.needDrawing
-          ? isEnglish ? "Required" : "需要"
-          : isEnglish ? "Not Required" : "暂不需要"
+          ? getCartText(locale, "Required", "需要")
+          : getCartText(locale, "Not Required", "暂不需要")
       }`,
     ].join("\n");
   });
@@ -189,7 +276,7 @@ export function SelectionCartProvider({
   children: ReactNode;
 }) {
   const pathname = usePathname();
-  const isEnglish = getLocaleFromPathname(pathname) === "en";
+  const locale = getLocaleFromPathname(pathname);
 
   const [items, setItems] = useState<SelectionCartItem[]>([]);
   const [isOpen, setIsOpen] = useState(false);
@@ -306,9 +393,11 @@ export function SelectionCartProvider({
 
   function clearCart() {
     const confirmed = window.confirm(
-      isEnglish
-        ? "Clear the current product selection list?"
-        : "确认清空当前选型清单？",
+      getCartText(
+        locale,
+        "Clear the current product selection list?",
+        "确认清空当前选型清单？",
+      ),
     );
 
     if (!confirmed) return;
@@ -352,14 +441,12 @@ export function SelectionCartProvider({
   }
 
   async function copyCartText() {
-    const text = buildCartText(items, isEnglish);
+    const text = buildCartText(items, locale);
 
     try {
       await window.navigator.clipboard.writeText(text);
       window.alert(
-        isEnglish
-          ? "Selection list copied"
-          : "清单已复制",
+        getCartText(locale, "Selection list copied", "清单已复制"),
       );
     } catch {
       window.alert(text);
@@ -369,15 +456,25 @@ export function SelectionCartProvider({
   function generatePdfList() {
     if (items.length === 0) {
       window.alert(
-        isEnglish
-          ? "The selection list is empty. Add a product first."
-          : "当前清单为空，请先加入产品。",
+        getCartText(
+          locale,
+          "The selection list is empty. Add a product first.",
+          "当前清单为空，请先加入产品。",
+        ),
       );
       return;
     }
 
     setPrintTime(
-      new Date().toLocaleString(isEnglish ? "en-US" : "zh-CN"),
+      new Date().toLocaleString(
+        locale === "zh-CN"
+          ? "zh-CN"
+          : locale === "en"
+            ? "en-US"
+            : locale === "ko"
+              ? "ko-KR"
+              : locale,
+      ),
     );
 
     window.setTimeout(() => {
@@ -401,7 +498,7 @@ export function SelectionCartProvider({
       generatePdfList,
       printTime,
     };
-  }, [isEnglish, items, isOpen, printTime]);
+  }, [items, isOpen, locale, printTime]);
 
   return (
     <SelectionCartContext.Provider value={contextValue}>

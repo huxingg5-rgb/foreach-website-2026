@@ -5,6 +5,7 @@ type ProductSelectionPaginationProps = {
   totalPages: number;
   previousText: string;
   nextText: string;
+  ariaLabel?: string;
   onPageChange: (page: number) => void;
 };
 
@@ -13,6 +14,7 @@ export default function ProductSelectionPagination({
   totalPages,
   previousText,
   nextText,
+  ariaLabel,
   onPageChange,
 }: ProductSelectionPaginationProps) {
   if (totalPages <= 1) {
@@ -20,7 +22,7 @@ export default function ProductSelectionPagination({
   }
 
   return (
-    <nav className="product-pagination" aria-label="产品分页">
+    <nav className="product-pagination" aria-label={ariaLabel || "产品分页"}>
       <button
         className="product-page-button"
         type="button"

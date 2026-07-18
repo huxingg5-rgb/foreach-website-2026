@@ -43,20 +43,20 @@ const CARD_TEXT: Record<
     specsAriaSuffix: "key specifications",
   },
   es: {
-    imagePlaceholder: "No image",
-    specsAriaSuffix: "key specifications",
+    imagePlaceholder: "Imagen no disponible",
+    specsAriaSuffix: "especificaciones principales",
   },
   fr: {
-    imagePlaceholder: "No image",
-    specsAriaSuffix: "key specifications",
+    imagePlaceholder: "Image non disponible",
+    specsAriaSuffix: "caractéristiques principales",
   },
   ko: {
-    imagePlaceholder: "No image",
-    specsAriaSuffix: "key specifications",
+    imagePlaceholder: "이미지 없음",
+    specsAriaSuffix: "주요 사양",
   },
   ru: {
-    imagePlaceholder: "No image",
-    specsAriaSuffix: "key specifications",
+    imagePlaceholder: "Изображение отсутствует",
+    specsAriaSuffix: "основные характеристики",
   },
 };
 

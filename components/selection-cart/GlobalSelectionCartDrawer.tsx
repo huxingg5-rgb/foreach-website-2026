@@ -26,7 +26,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { createPortal } from "react-dom";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import CompanyInfoRequestModal, {
   type CompanyInfoFormValue,
@@ -51,6 +51,200 @@ const PDF_HEADER_GRAPHIC_SRC =
 
 const PDF_FOOTER_GRAPHIC_SRC =
   "/images/contact-cooperation/pdf/request-form-footer-graphic.svg";
+
+const TARGET_CART_TRANSLATIONS: Record<
+  "es" | "fr" | "ko" | "ru",
+  Record<string, string>
+> = {
+  es: {
+    "Product Type": "Tipo de producto",
+    "Product Model": "Modelo de producto",
+    Quantity: "Cantidad",
+    "Product Code": "Código de producto",
+    "Compatible Models": "Modelos compatibles",
+    "FOREACH Product Selection List": "Lista de selección de productos FOREACH",
+    "This list is generated from the selected models for model confirmation, quotation discussions, and technical review.": "Esta lista se genera a partir de los modelos seleccionados y sirve para confirmar modelos, solicitar presupuestos y realizar revisiones técnicas internas.",
+    Generated: "Generado",
+    Products: "Productos",
+    items: "elementos",
+    "Drawing Requests": "Planos solicitados",
+    "No.": "N.º",
+    Source: "Origen",
+    Product: "Producto",
+    "Related Information": "Información relacionada",
+    Model: "Modelo",
+    "2D Drawing": "Plano 2D",
+    "No products selected": "No hay productos seleccionados",
+    "Configured Product": "Producto configurado",
+    Required: "Requerido",
+    "Not Required": "No requerido",
+    Top: "Arriba",
+    List: "Lista",
+    "Close selection list": "Cerrar la lista de selección",
+    "Product selection list": "Lista de selección de productos",
+    "Product Selection List": "Lista de selección de productos",
+    "Confirm models, quantities, and drawing requirements before submitting or generating a PDF list.": "Confirme los modelos, las cantidades y los planos necesarios antes de enviar la solicitud o generar la lista en PDF.",
+    "Select a model and add it to the list.": "Seleccione un modelo y añádalo a la lista.",
+    "Remove product": "Eliminar producto",
+    "Open product details in a new window": "Abrir los detalles del producto en una ventana nueva",
+    "Drawing Added": "Plano añadido",
+    "Add Drawing": "Añadir plano",
+    "List Notes": "Notas de la lista",
+    "Adding a product does not automatically request a drawing. Mark the required models here or on the product page; only marked models will be included in the drawing request.": "Añadir un producto no solicita automáticamente su plano. Marque aquí o en la página del producto los modelos necesarios; solo los modelos marcados se incluirán en la solicitud de planos.",
+    "Request Drawings": "Solicitar planos",
+    "Generate PDF List": "Generar lista en PDF",
+    "Copy List": "Copiar lista",
+    Clear: "Vaciar",
+    "Confirm the models that require drawings and provide your contact information.": "Confirme los modelos para los que necesita planos e indique sus datos de contacto.",
+    "No drawings requested": "No se han solicitado planos",
+    "Return to the list and select Add Drawing for each required model before submitting the request.": "Vuelva a la lista y seleccione Añadir plano para cada modelo antes de enviar la solicitud.",
+    "Submit Drawing Request": "Enviar solicitud de planos",
+    "Drawing Request Submitted": "Solicitud de planos enviada",
+    "This is currently a front-end preview. Once the email service is connected, the request will be reviewed and the relevant drawings will be sent after confirmation.": "Esta función es actualmente una vista previa. Cuando se conecte el servicio de correo, la solicitud se revisará y los planos correspondientes se enviarán tras su confirmación.",
+    "Fitting Replacement Search": "Búsqueda de racores equivalentes",
+  },
+  fr: {
+    "Product Type": "Type de produit",
+    "Product Model": "Modèle de produit",
+    Quantity: "Quantité",
+    "Product Code": "Code produit",
+    "Compatible Models": "Modèles compatibles",
+    "FOREACH Product Selection List": "Liste de sélection de produits FOREACH",
+    "This list is generated from the selected models for model confirmation, quotation discussions, and technical review.": "Cette liste est générée à partir des modèles sélectionnés pour confirmer les références, préparer les échanges de devis et effectuer la validation technique interne.",
+    Generated: "Généré le",
+    Products: "Produits",
+    items: "éléments",
+    "Drawing Requests": "Plans demandés",
+    "No.": "N°",
+    Source: "Source",
+    Product: "Produit",
+    "Related Information": "Informations associées",
+    Model: "Modèle",
+    "2D Drawing": "Plan 2D",
+    "No products selected": "Aucun produit sélectionné",
+    "Configured Product": "Produit configuré",
+    Required: "Requis",
+    "Not Required": "Non requis",
+    Top: "Haut",
+    List: "Liste",
+    "Close selection list": "Fermer la liste de sélection",
+    "Product selection list": "Liste de sélection de produits",
+    "Product Selection List": "Liste de sélection de produits",
+    "Confirm models, quantities, and drawing requirements before submitting or generating a PDF list.": "Confirmez les modèles, les quantités et les plans requis avant l'envoi ou la génération de la liste PDF.",
+    "Select a model and add it to the list.": "Sélectionnez un modèle et ajoutez-le à la liste.",
+    "Remove product": "Retirer le produit",
+    "Open product details in a new window": "Ouvrir les détails du produit dans une nouvelle fenêtre",
+    "Drawing Added": "Plan ajouté",
+    "Add Drawing": "Ajouter le plan",
+    "List Notes": "Remarques sur la liste",
+    "Adding a product does not automatically request a drawing. Mark the required models here or on the product page; only marked models will be included in the drawing request.": "L'ajout d'un produit ne demande pas automatiquement son plan. Marquez les modèles requis ici ou sur leur page produit ; seuls les modèles marqués seront inclus dans la demande de plans.",
+    "Request Drawings": "Demander des plans",
+    "Generate PDF List": "Générer la liste PDF",
+    "Copy List": "Copier la liste",
+    Clear: "Vider",
+    "Confirm the models that require drawings and provide your contact information.": "Confirmez les modèles nécessitant des plans et renseignez vos coordonnées.",
+    "No drawings requested": "Aucun plan demandé",
+    "Return to the list and select Add Drawing for each required model before submitting the request.": "Revenez à la liste et sélectionnez Ajouter le plan pour chaque modèle requis avant d'envoyer la demande.",
+    "Submit Drawing Request": "Envoyer la demande de plans",
+    "Drawing Request Submitted": "Demande de plans envoyée",
+    "This is currently a front-end preview. Once the email service is connected, the request will be reviewed and the relevant drawings will be sent after confirmation.": "Cette fonction est actuellement proposée en aperçu. Une fois le service de messagerie connecté, la demande sera examinée et les plans concernés seront envoyés après confirmation.",
+    "Fitting Replacement Search": "Recherche de raccords équivalents",
+  },
+  ko: {
+    "Product Type": "제품 유형",
+    "Product Model": "제품 모델",
+    Quantity: "수량",
+    "Product Code": "제품 코드",
+    "Compatible Models": "호환 모델",
+    "FOREACH Product Selection List": "FOREACH 제품 선정 목록",
+    "This list is generated from the selected models for model confirmation, quotation discussions, and technical review.": "이 목록은 선택한 모델을 기준으로 생성되며 모델 확인, 견적 협의 및 내부 기술 검토에 사용됩니다.",
+    Generated: "생성 일시",
+    Products: "제품",
+    items: "개",
+    "Drawing Requests": "도면 요청",
+    "No.": "번호",
+    Source: "출처",
+    Product: "제품",
+    "Related Information": "관련 정보",
+    Model: "모델",
+    "2D Drawing": "2D 도면",
+    "No products selected": "선택한 제품이 없습니다",
+    "Configured Product": "구성 제품",
+    Required: "필요",
+    "Not Required": "불필요",
+    Top: "맨 위",
+    List: "목록",
+    "Close selection list": "제품 선정 목록 닫기",
+    "Product selection list": "제품 선정 목록",
+    "Product Selection List": "제품 선정 목록",
+    "Confirm models, quantities, and drawing requirements before submitting or generating a PDF list.": "요청을 제출하거나 PDF 목록을 생성하기 전에 모델, 수량 및 도면 필요 여부를 확인하십시오.",
+    "Select a model and add it to the list.": "모델을 선택하여 목록에 추가하십시오.",
+    "Remove product": "제품 삭제",
+    "Open product details in a new window": "새 창에서 제품 상세 정보 열기",
+    "Drawing Added": "도면 추가됨",
+    "Add Drawing": "도면 추가",
+    "List Notes": "목록 안내",
+    "Adding a product does not automatically request a drawing. Mark the required models here or on the product page; only marked models will be included in the drawing request.": "제품을 목록에 추가해도 도면이 자동으로 요청되지는 않습니다. 여기 또는 제품 페이지에서 필요한 모델을 표시하면 표시된 모델만 도면 요청에 포함됩니다.",
+    "Request Drawings": "도면 요청",
+    "Generate PDF List": "PDF 목록 생성",
+    "Copy List": "목록 복사",
+    Clear: "비우기",
+    "Confirm the models that require drawings and provide your contact information.": "도면이 필요한 모델을 확인하고 연락처 정보를 입력하십시오.",
+    "No drawings requested": "요청한 도면이 없습니다",
+    "Return to the list and select Add Drawing for each required model before submitting the request.": "목록으로 돌아가 필요한 각 모델에서 도면 추가를 선택한 후 요청을 제출하십시오.",
+    "Submit Drawing Request": "도면 요청 제출",
+    "Drawing Request Submitted": "도면 요청이 제출되었습니다",
+    "This is currently a front-end preview. Once the email service is connected, the request will be reviewed and the relevant drawings will be sent after confirmation.": "현재는 프런트엔드 미리보기 기능입니다. 이메일 서비스가 연결되면 요청을 검토하고 확인 후 관련 도면을 발송합니다.",
+    "Fitting Replacement Search": "피팅 대체품 검색",
+  },
+  ru: {
+    "Product Type": "Тип продукции",
+    "Product Model": "Модель продукции",
+    Quantity: "Количество",
+    "Product Code": "Код продукции",
+    "Compatible Models": "Совместимые модели",
+    "FOREACH Product Selection List": "Список выбранной продукции FOREACH",
+    "This list is generated from the selected models for model confirmation, quotation discussions, and technical review.": "Список сформирован на основе выбранных моделей и предназначен для подтверждения моделей, обсуждения коммерческого предложения и внутренней технической проверки.",
+    Generated: "Сформировано",
+    Products: "Продукция",
+    items: "поз.",
+    "Drawing Requests": "Запрошенные чертежи",
+    "No.": "№",
+    Source: "Источник",
+    Product: "Продукция",
+    "Related Information": "Связанная информация",
+    Model: "Модель",
+    "2D Drawing": "2D-чертеж",
+    "No products selected": "Продукция не выбрана",
+    "Configured Product": "Сконфигурированная продукция",
+    Required: "Требуется",
+    "Not Required": "Не требуется",
+    Top: "Наверх",
+    List: "Список",
+    "Close selection list": "Закрыть список выбранной продукции",
+    "Product selection list": "Список выбранной продукции",
+    "Product Selection List": "Список выбранной продукции",
+    "Confirm models, quantities, and drawing requirements before submitting or generating a PDF list.": "Перед отправкой или созданием списка PDF проверьте модели, количество и необходимость чертежей.",
+    "Select a model and add it to the list.": "Выберите модель и добавьте ее в список.",
+    "Remove product": "Удалить продукцию",
+    "Open product details in a new window": "Открыть сведения о продукции в новом окне",
+    "Drawing Added": "Чертеж добавлен",
+    "Add Drawing": "Добавить чертеж",
+    "List Notes": "Примечания к списку",
+    "Adding a product does not automatically request a drawing. Mark the required models here or on the product page; only marked models will be included in the drawing request.": "Добавление продукции не создает запрос чертежа автоматически. Отметьте необходимые модели здесь или на странице продукции; в запрос войдут только отмеченные модели.",
+    "Request Drawings": "Запросить чертежи",
+    "Generate PDF List": "Создать список PDF",
+    "Copy List": "Копировать список",
+    Clear: "Очистить",
+    "Confirm the models that require drawings and provide your contact information.": "Подтвердите модели, для которых нужны чертежи, и укажите контактные данные.",
+    "No drawings requested": "Чертежи не запрошены",
+    "Return to the list and select Add Drawing for each required model before submitting the request.": "Вернитесь к списку и выберите Добавить чертеж для каждой требуемой модели перед отправкой запроса.",
+    "Submit Drawing Request": "Отправить запрос чертежей",
+    "Drawing Request Submitted": "Запрос чертежей отправлен",
+    "This is currently a front-end preview. Once the email service is connected, the request will be reviewed and the relevant drawings will be sent after confirmation.": "Сейчас функция работает в режиме предварительного просмотра. После подключения почтового сервиса запрос будет рассмотрен, а соответствующие чертежи будут отправлены после подтверждения.",
+    "Fitting Replacement Search": "Поиск аналогов фитингов",
+  },
+};
 
 /* =========================================================
    预加载图片
@@ -89,11 +283,11 @@ function getEnglishCartSourceLabel(sourceType: string) {
 
 function getCartDetailHref(
   href: string | undefined,
-  isEnglish: boolean,
+  isInternational: boolean,
 ) {
   if (
     !href ||
-    !isEnglish ||
+    !isInternational ||
     !href.startsWith("/") ||
     href.startsWith("/en/") ||
     href === "/en"
@@ -108,6 +302,15 @@ export default function GlobalSelectionCartDrawer() {
   const pathname = usePathname();
   const locale = getLocaleFromPathname(pathname);
   const isEnglish = locale === "en";
+  const isInternational = locale !== "zh-CN";
+  const cartText = useCallback((english: string, chinese: string) => {
+    if (isEnglish) return english;
+    if (locale === "zh-CN") return chinese;
+
+    return TARGET_CART_TRANSLATIONS[
+      locale as "es" | "fr" | "ko" | "ru"
+    ]?.[english] || english;
+  }, [isEnglish, locale]);
 
   const {
     items,
@@ -171,18 +374,18 @@ export default function GlobalSelectionCartDrawer() {
         metaLines:
           item.sourceType === "pump-selection"
             ? [
-                `${isEnglish ? "Product Type" : "产品类型"}: ${item.productName}`,
-                `${isEnglish ? "Product Model" : "产品型号"}: ${item.foreachModel}`,
-                `${isEnglish ? "Quantity" : "数量"}: ${item.quantity}`,
+                `${cartText("Product Type", "产品类型")}: ${item.productName}`,
+                `${cartText("Product Model", "产品型号")}: ${item.foreachModel}`,
+                `${cartText("Quantity", "数量")}: ${item.quantity}`,
               ]
             : [
-                `${isEnglish ? "Product Code" : "商品编码"}: ${item.productCode}`,
-                `${isEnglish ? "Compatible Models" : "兼容编码"}: ${item.competitorModels.join(" / ") || "-"}`,
-                `${isEnglish ? "Quantity" : "数量"}: ${item.quantity}`,
+                `${cartText("Product Code", "商品编码")}: ${item.productCode}`,
+                `${cartText("Compatible Models", "兼容编码")}: ${item.competitorModels.join(" / ") || "-"}`,
+                `${cartText("Quantity", "数量")}: ${item.quantity}`,
               ],
       };
     });
-  }, [isEnglish, requestDrawingItems]);
+  }, [cartText, requestDrawingItems]);
 
   /* =========================================================
      右下角清单按钮轻动效
@@ -308,41 +511,42 @@ export default function GlobalSelectionCartDrawer() {
 
         <main className={styles.printContent}>
           <section className={styles.printTitleBlock}>
-            <h1>{isEnglish ? "FOREACH Product Selection List" : "恒永达选型清单"}</h1>
+            <h1>{cartText("FOREACH Product Selection List", "恒永达选型清单")}</h1>
             <p>
-              {isEnglish
-                ? "This list is generated from the selected models for model confirmation, quotation discussions, and technical review."
-                : "本清单根据客户选择的型号生成，用于型号确认、报价沟通及内部技术确认。"}
+              {cartText(
+                "This list is generated from the selected models for model confirmation, quotation discussions, and technical review.",
+                "本清单根据客户选择的型号生成，用于型号确认、报价沟通及内部技术确认。",
+              )}
             </p>
           </section>
 
           <section className={styles.printMetaGrid}>
             <div>
-              <span>{isEnglish ? "Generated" : "生成时间"}</span>
+              <span>{cartText("Generated", "生成时间")}</span>
               <strong>{printTime || "-"}</strong>
             </div>
 
             <div>
-              <span>{isEnglish ? "Products" : "产品数量"}</span>
-              <strong>{items.length} {isEnglish ? "items" : "项"}</strong>
+              <span>{cartText("Products", "产品数量")}</span>
+              <strong>{items.length} {cartText("items", "项")}</strong>
             </div>
 
             <div>
-              <span>{isEnglish ? "Drawing Requests" : "图纸需求"}</span>
-              <strong>{drawingNeedCount} {isEnglish ? "items" : "项"}</strong>
+              <span>{cartText("Drawing Requests", "图纸需求")}</span>
+              <strong>{drawingNeedCount} {cartText("items", "项")}</strong>
             </div>
           </section>
 
           <table className={styles.printTable}>
             <thead>
               <tr>
-                <th>{isEnglish ? "No." : "序号"}</th>
-                <th>{isEnglish ? "Source" : "来源"}</th>
-                <th>{isEnglish ? "Product" : "产品信息"}</th>
-                <th>{isEnglish ? "Related Information" : "关联信息"}</th>
-                <th>{isEnglish ? "Model" : "型号"}</th>
-                <th>{isEnglish ? "Quantity" : "数量"}</th>
-                <th>{isEnglish ? "2D Drawing" : "2D 图纸"}</th>
+                <th>{cartText("No.", "序号")}</th>
+                <th>{cartText("Source", "来源")}</th>
+                <th>{cartText("Product", "产品信息")}</th>
+                <th>{cartText("Related Information", "关联信息")}</th>
+                <th>{cartText("Model", "型号")}</th>
+                <th>{cartText("Quantity", "数量")}</th>
+                <th>{cartText("2D Drawing", "2D 图纸")}</th>
               </tr>
             </thead>
 
@@ -350,7 +554,7 @@ export default function GlobalSelectionCartDrawer() {
               {items.length === 0 ? (
                 <tr>
                   <td colSpan={7}>
-                    {isEnglish ? "No products selected" : "暂无选型产品"}
+                    {cartText("No products selected", "暂无选型产品")}
                   </td>
                 </tr>
               ) : (
@@ -359,9 +563,10 @@ export default function GlobalSelectionCartDrawer() {
                     <tr key={item.id}>
                       <td>{index + 1}</td>
                       <td>
-                        {isEnglish
-                          ? getEnglishCartSourceLabel(item.sourceType)
-                          : item.sourceLabel}
+                        {cartText(
+                          getEnglishCartSourceLabel(item.sourceType),
+                          item.sourceLabel,
+                        )}
                       </td>
                       <td>
                         {item.sourceType === "pump-selection"
@@ -370,17 +575,15 @@ export default function GlobalSelectionCartDrawer() {
                       </td>
                       <td>
                         {item.sourceType === "pump-selection"
-                          ? isEnglish
-                            ? "Configured Product"
-                            : "定制选型产品"
+                          ? cartText("Configured Product", "定制选型产品")
                           : item.competitorModels.join(" / ") || "-"}
                       </td>
                       <td>{item.foreachModel}</td>
                       <td>{item.quantity}</td>
                       <td>
                         {item.needDrawing
-                          ? isEnglish ? "Required" : "需要"
-                          : isEnglish ? "Not Required" : "暂不需要"}
+                          ? cartText("Required", "需要")
+                          : cartText("Not Required", "暂不需要")}
                       </td>
                     </tr>
                   );
@@ -417,11 +620,11 @@ export default function GlobalSelectionCartDrawer() {
             });
           }}
         >
-          {isEnglish ? "Top" : "顶部"}
+          {cartText("Top", "顶部")}
         </button>
 
         <button type="button" onClick={openCart}>
-          {isEnglish ? "List" : "清单"}
+          {cartText("List", "清单")}
           <span>{items.length}</span>
         </button>
       </div>
@@ -434,28 +637,29 @@ export default function GlobalSelectionCartDrawer() {
           <button
             className={styles.mask}
             type="button"
-            aria-label={isEnglish ? "Close selection list" : "关闭选型清单"}
+            aria-label={cartText("Close selection list", "关闭选型清单")}
             onClick={closeCart}
           />
 
           <aside
             className={styles.drawer}
-            aria-label={isEnglish ? "Product selection list" : "选型清单"}
+            aria-label={cartText("Product selection list", "选型清单")}
           >
             <div className={styles.head}>
               <div>
-                <h2>{isEnglish ? "Product Selection List" : "选型清单"}</h2>
+                <h2>{cartText("Product Selection List", "选型清单")}</h2>
                 <p>
-                  {isEnglish
-                    ? "Confirm models, quantities, and drawing requirements before submitting or generating a PDF list."
-                    : "确认型号、数量与图纸需求，后续可统一提交或生成资料包。"}
+                  {cartText(
+                    "Confirm models, quantities, and drawing requirements before submitting or generating a PDF list.",
+                    "确认型号、数量与图纸需求，后续可统一提交或生成资料包。",
+                  )}
                 </p>
               </div>
 
               <button
                 type="button"
                 onClick={closeCart}
-                aria-label={isEnglish ? "Close selection list" : "关闭选型清单"}
+                aria-label={cartText("Close selection list", "关闭选型清单")}
               >
                 ×
               </button>
@@ -464,25 +668,26 @@ export default function GlobalSelectionCartDrawer() {
             <div className={styles.body}>
               {items.length === 0 ? (
                 <div className={styles.empty}>
-                  {isEnglish ? "No products selected" : "暂无选型产品"}
+                  {cartText("No products selected", "暂无选型产品")}
                   <br />
-                  {isEnglish
-                    ? "Select a model and add it to the list."
-                    : "可先选择型号并加入清单"}
+                  {cartText(
+                    "Select a model and add it to the list.",
+                    "可先选择型号并加入清单",
+                  )}
                 </div>
               ) : (
                 <>
                   <div className={styles.summary}>
                     <div>
-                      <span>{isEnglish ? "Products" : "产品数量"}</span>
+                      <span>{cartText("Products", "产品数量")}</span>
                       <strong>{items.length}</strong>
-                      <em>{isEnglish ? "items" : "项"}</em>
+                      <em>{cartText("items", "项")}</em>
                     </div>
 
                     <div>
-                      <span>{isEnglish ? "Drawing Requests" : "图纸需求"}</span>
+                      <span>{cartText("Drawing Requests", "图纸需求")}</span>
                       <strong>{drawingNeedCount}</strong>
-                      <em>{isEnglish ? "items" : "项"}</em>
+                      <em>{cartText("items", "项")}</em>
                     </div>
                   </div>
 
@@ -493,7 +698,7 @@ export default function GlobalSelectionCartDrawer() {
                           <button
                             className={styles.removeButton}
                             type="button"
-                            aria-label={isEnglish ? "Remove product" : "删除该产品"}
+                            aria-label={cartText("Remove product", "删除该产品")}
                             onClick={() => {
                               removeItem(item.id);
                             }}
@@ -504,18 +709,19 @@ export default function GlobalSelectionCartDrawer() {
                           <div className={styles.itemHead}>
                             <div>
                               <span>
-                                {isEnglish
-                                  ? getEnglishCartSourceLabel(item.sourceType)
-                                  : item.sourceLabel}
+                                {cartText(
+                                  getEnglishCartSourceLabel(item.sourceType),
+                                  item.sourceLabel,
+                                )}
                               </span>
 
                               {item.detailHref && item.sourceType !== "pump-selection" ? (
                                 <Link
                                   className={styles.itemTitleLink}
-                                  href={getCartDetailHref(item.detailHref, isEnglish) ?? "#"}
+                                  href={getCartDetailHref(item.detailHref, isInternational) ?? "#"}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  title={isEnglish ? "Open product details in a new window" : "新窗口打开详情页"}
+                                  title={cartText("Open product details in a new window", "新窗口打开详情页")}
                                 >
                                   {item.foreachModel}
                                 </Link>
@@ -536,27 +742,27 @@ export default function GlobalSelectionCartDrawer() {
                               }}
                             >
                               {item.needDrawing
-                                ? isEnglish ? "Drawing Added" : "已添加图纸"
-                                : isEnglish ? "Add Drawing" : "添加图纸"}
+                                ? cartText("Drawing Added", "已添加图纸")
+                                : cartText("Add Drawing", "添加图纸")}
                             </button>
                           </div>
 
                           {item.sourceType === "pump-selection" ? (
                             <div className={styles.infoRow}>
-                              <span>{isEnglish ? "Product Type" : "产品类型"}</span>
+                              <span>{cartText("Product Type", "产品类型")}</span>
                               <strong>{item.productName}</strong>
                             </div>
                           ) : (
                             <>
                               <div className={styles.infoRow}>
-                                <span>{isEnglish ? "Compatible Models" : "兼容编码"}</span>
+                                <span>{cartText("Compatible Models", "兼容编码")}</span>
                                 <strong>
                                   {item.competitorModels.join(" / ") || "-"}
                                 </strong>
                               </div>
 
                               <div className={styles.infoRow}>
-                                <span>{isEnglish ? "Product Code" : "商品编码"}</span>
+                                <span>{cartText("Product Code", "商品编码")}</span>
                                 <strong>{item.productCode}</strong>
                               </div>
                             </>
@@ -564,7 +770,7 @@ export default function GlobalSelectionCartDrawer() {
 
                           <div className={styles.quantityRow}>
                             <label htmlFor={`global-cart-qty-${item.id}`}>
-                              {isEnglish ? "Quantity" : "数量"}
+                              {cartText("Quantity", "数量")}
                             </label>
 
                             <input
@@ -588,11 +794,12 @@ export default function GlobalSelectionCartDrawer() {
               )}
 
               <div className={styles.note}>
-                <strong>{isEnglish ? "List Notes" : "清单说明"}</strong>
+                <strong>{cartText("List Notes", "清单说明")}</strong>
                 <p>
-                  {isEnglish
-                    ? "Adding a product does not automatically request a drawing. Mark the required models here or on the product page; only marked models will be included in the drawing request."
-                    : "产品加入清单后不会默认发送图纸。需要图纸的型号，可在详情页或清单中切换。后续提交需求时，只会把标记“需要图纸”的型号纳入图纸发送范围。"}
+                  {cartText(
+                    "Adding a product does not automatically request a drawing. Mark the required models here or on the product page; only marked models will be included in the drawing request.",
+                    "产品加入清单后不会默认发送图纸。需要图纸的型号，可在详情页或清单中切换。后续提交需求时，只会把标记“需要图纸”的型号纳入图纸发送范围。",
+                  )}
                 </p>
               </div>
             </div>
@@ -603,7 +810,7 @@ export default function GlobalSelectionCartDrawer() {
                 type="button"
                 onClick={handleOpenDrawingRequestModal}
               >
-                {isEnglish ? "Request Drawings" : "申请图纸"}
+                {cartText("Request Drawings", "申请图纸")}
               </button>
 
               <button
@@ -611,7 +818,7 @@ export default function GlobalSelectionCartDrawer() {
                 type="button"
                 onClick={handleGeneratePdfList}
               >
-                {isEnglish ? "Generate PDF List" : "生成 PDF 清单"}
+                {cartText("Generate PDF List", "生成 PDF 清单")}
               </button>
 
               <button
@@ -619,7 +826,7 @@ export default function GlobalSelectionCartDrawer() {
                 type="button"
                 onClick={copyCartText}
               >
-                {isEnglish ? "Copy List" : "复制分享"}
+                {cartText("Copy List", "复制分享")}
               </button>
 
               <button
@@ -627,7 +834,7 @@ export default function GlobalSelectionCartDrawer() {
                 type="button"
                 onClick={clearCart}
               >
-                {isEnglish ? "Clear" : "清空"}
+                {cartText("Clear", "清空")}
               </button>
             </div>
           </aside>
@@ -640,25 +847,28 @@ export default function GlobalSelectionCartDrawer() {
       <CompanyInfoRequestModal
         locale={locale}
         isOpen={isDrawingRequestModalOpen}
-        title={isEnglish ? "Request Drawings" : "申请图纸"}
+        title={cartText("Request Drawings", "申请图纸")}
         description={
-          isEnglish
-            ? "Confirm the models that require drawings and provide your contact information."
-            : "请确认需要申请的图纸型号，并留下联系信息。"
+          cartText(
+            "Confirm the models that require drawings and provide your contact information.",
+            "请确认需要申请的图纸型号，并留下联系信息。",
+          )
         }
         items={drawingRequestModalItems}
-        emptyTitle={isEnglish ? "No drawings requested" : "当前还没有图纸需求"}
+        emptyTitle={cartText("No drawings requested", "当前还没有图纸需求")}
         emptyDescription={
-          isEnglish
-            ? "Return to the list and select Add Drawing for each required model before submitting the request."
-            : "请先回到清单，在需要图纸的型号旁点击“添加图纸”，再提交图纸申请。"
+          cartText(
+            "Return to the list and select Add Drawing for each required model before submitting the request.",
+            "请先回到清单，在需要图纸的型号旁点击“添加图纸”，再提交图纸申请。",
+          )
         }
-        submitLabel={isEnglish ? "Submit Drawing Request" : "提交申请图纸"}
-        successTitle={isEnglish ? "Drawing Request Submitted" : "图纸申请已提交"}
+        submitLabel={cartText("Submit Drawing Request", "提交申请图纸")}
+        successTitle={cartText("Drawing Request Submitted", "图纸申请已提交")}
         successDescription={
-          isEnglish
-            ? "This is currently a front-end preview. Once the email service is connected, the request will be reviewed and the relevant drawings will be sent after confirmation."
-            : "当前为前端视觉模拟。正式上线后，我们会通过邮件接口接收申请，并在确认信息后发送相关图纸资料。"
+          cartText(
+            "This is currently a front-end preview. Once the email service is connected, the request will be reviewed and the relevant drawings will be sent after confirmation.",
+            "当前为前端视觉模拟。正式上线后，我们会通过邮件接口接收申请，并在确认信息后发送相关图纸资料。",
+          )
         }
         enableEmailVerification
         onClose={() => {

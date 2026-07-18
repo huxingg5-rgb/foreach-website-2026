@@ -201,6 +201,12 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
     ko: "솔레노이드 밸브",
     ru: "Электромагнитный клапан",
   },
+  "阀系列": {
+    es: "Serie de válvulas",
+    fr: "Série de vannes",
+    ko: "밸브 시리즈",
+    ru: "Серия клапанов",
+  },
 
   "针系列": {
     zh: "针系列",
@@ -271,285 +277,519 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
   "标滚平底接头": {
     zh: "标滚平底接头",
     en: "Standard Flanged Fittings",
+    es: "Racores con brida estándar",
+    fr: "Raccords à collerette standard",
+    ko: "표준 플랜지 피팅",
+    ru: "Стандартные фланцевые фитинги",
   },
 
   "标准平底接头": {
     zh: "标准平底接头",
     en: "Standard Flanged Fittings",
+    es: "Racores con brida estándar",
+    fr: "Raccords à collerette standard",
+    ko: "표준 플랜지 피팅",
+    ru: "Стандартные фланцевые фитинги",
   },
 
   "紧凑平底接头": {
     zh: "紧凑平底接头",
     en: "Compact Flanged Fittings",
+    es: "Racores con brida compactos",
+    fr: "Raccords à collerette compacts",
+    ko: "컴팩트 플랜지 피팅",
+    ru: "Компактные фланцевые фитинги",
   },
 
   "标滚卡箍接头": {
     zh: "标滚卡箍接头",
     en: "Standard Ferrule Fittings",
+    es: "Racores con férula estándar",
+    fr: "Raccords à bague standard",
+    ko: "표준 페룰 피팅",
+    ru: "Стандартные фитинги с обжимной втулкой",
   },
 
   "标准卡箍接头": {
     zh: "标准卡箍接头",
     en: "Standard Ferrule Fittings",
+    es: "Racores con férula estándar",
+    fr: "Raccords à bague standard",
+    ko: "표준 페룰 피팅",
+    ru: "Стандартные фитинги с обжимной втулкой",
   },
 
   "紧凑卡箍接头": {
     zh: "紧凑卡箍接头",
     en: "Compact Ferrule Fittings",
+    es: "Racores con férula compactos",
+    fr: "Raccords à bague compacts",
+    ko: "컴팩트 페룰 피팅",
+    ru: "Компактные фитинги с обжимной втулкой",
   },
 
   "卡环接头": {
     zh: "卡环接头",
     en: "Snap Ring Fittings",
+    es: "Racores con anillo elástico",
+    fr: "Raccords à bague d'arrêt",
+    ko: "스냅 링 피팅",
+    ru: "Фитинги со стопорным кольцом",
   },
 
   "高压接头": {
     zh: "高压接头",
     en: "High-Pressure Fittings",
+    es: "Racores de alta presión",
+    fr: "Raccords haute pression",
+    ko: "고압 피팅",
+    ru: "Фитинги высокого давления",
   },
 
   "本色": {
     zh: "本色",
     en: "Natural",
+    es: "Natural",
+    fr: "Naturel",
+    ko: "내추럴",
+    ru: "Натуральный",
   },
 
   "黑色": {
     zh: "黑色",
     en: "Black",
+    es: "Negro",
+    fr: "Noir",
+    ko: "검정",
+    ru: "Черный",
   },
 
   "蓝色": {
     zh: "蓝色",
     en: "Blue",
+    es: "Azul",
+    fr: "Bleu",
+    ko: "파랑",
+    ru: "Синий",
   },
   "直通型": {
     zh: "直通型",
     en: "Straight Through",
+    es: "Recto",
+    fr: "Droit",
+    ko: "스트레이트형",
+    ru: "Прямой",
   },
 
   "L型": {
     zh: "L型",
     en: "Elbow",
+    es: "Codo",
+    fr: "Coude",
+    ko: "엘보형",
+    ru: "Угловой",
   },
 
   "T型": {
     zh: "T型",
     en: "Tee",
+    es: "En T",
+    fr: "En T",
+    ko: "T형",
+    ru: "Т-образный",
   },
 
   "Y型": {
     zh: "Y型",
     en: "Y",
+    es: "En Y",
+    fr: "En Y",
+    ko: "Y형",
+    ru: "Y-образный",
   },
 
   "π型": {
     zh: "π型",
     en: "π-Type",
+    es: "Tipo π",
+    fr: "Type π",
+    ko: "π형",
+    ru: "π-образный",
   },
 
   "十字型": {
     zh: "十字型",
     en: "Cross",
+    es: "En cruz",
+    fr: "En croix",
+    ko: "크로스형",
+    ru: "Крестообразный",
   },
 
   "倒刺堵头": {
     zh: "倒刺堵头",
     en: "Barbed Plug",
+    es: "Tapón de espiga",
+    fr: "Bouchon cannelé",
+    ko: "바브 플러그",
+    ru: "Штуцерная заглушка",
   },
 
   "白色": {
     zh: "白色",
     en: "White",
+    es: "Blanco",
+    fr: "Blanc",
+    ko: "흰색",
+    ru: "Белый",
   },
 
   "螺纹密封": {
     zh: "螺纹密封",
     en: "Thread Seal",
+    es: "Sellado de rosca",
+    fr: "Étanchéité par filetage",
+    ko: "나사 밀봉",
+    ru: "Резьбовое уплотнение",
   },
 
   "底面密封": {
     zh: "底面密封",
     en: "Bottom-Face Seal",
+    es: "Sellado por cara inferior",
+    fr: "Étanchéité par face d'appui",
+    ko: "바닥면 밀봉",
+    ru: "Уплотнение по торцевой поверхности",
   },
 
   "内螺纹转倒刺": {
     zh: "内螺纹转倒刺",
     en: "Female Thread to Barb",
+    es: "Rosca hembra a espiga",
+    fr: "Filetage femelle vers cannelure",
+    ko: "암나사-바브 변환",
+    ru: "Переход с внутренней резьбы на штуцер",
   },
 
   "可旋转直通型": {
     zh: "可旋转直通型",
     en: "Rotary Straight Through",
+    es: "Recto giratorio",
+    fr: "Droit orientable",
+    ko: "회전 스트레이트형",
+    ru: "Поворотный прямой",
   },
 
   "3.4 锥螺纹": {
     zh: "3.4 锥螺纹",
     en: "3.4 Tapered Thread",
+    es: "Rosca cónica 3.4",
+    fr: "Filetage conique 3.4",
+    ko: "3.4 테이퍼 나사",
+    ru: "Коническая резьба 3.4",
   },
 
   "LSL 固定芯子": {
     zh: "LSL 固定芯子",
     en: "Male Luer Stationary Lock",
+    es: "Cierre Luer macho fijo LSL",
+    fr: "Verrou Luer mâle fixe LSL",
+    ko: "LSL 수 Luer 고정 잠금",
+    ru: "Неподвижный фиксатор Luer male LSL",
   },
 
   "LRL 旋转芯子": {
     zh: "LRL 旋转芯子",
     en: "Male Luer Rotating Lock",
+    es: "Cierre Luer macho giratorio LRL",
+    fr: "Verrou Luer mâle rotatif LRL",
+    ko: "LRL 수 Luer 회전 잠금",
+    ru: "Поворотный фиксатор Luer male LRL",
   },
 
   "LPR 旋转锁圈": {
     zh: "LPR 旋转锁圈",
     en: "Male Luer Rotating Lock Ring Fitting",
+    es: "Racor Luer macho con anillo giratorio LPR",
+    fr: "Raccord Luer mâle à bague rotative LPR",
+    ko: "LPR 수 Luer 회전 잠금 링 피팅",
+    ru: "Фитинг Luer male с поворотным стопорным кольцом LPR",
   },
 
   "LPS 固定锁圈": {
     zh: "LPS 固定锁圈",
     en: "Male Luer Stationary Lock Ring Fitting",
+    es: "Racor Luer macho con anillo fijo LPS",
+    fr: "Raccord Luer mâle à bague fixe LPS",
+    ko: "LPS 수 Luer 고정 잠금 링 피팅",
+    ru: "Фитинг Luer male с неподвижным стопорным кольцом LPS",
   },
 
   "LP 一体式": {
     zh: "LP 一体式",
     en: "Male Luer Integral Lock Ring Fitting",
+    es: "Racor Luer macho con anillo integrado LP",
+    fr: "Raccord Luer mâle à bague intégrée LP",
+    ko: "LP 수 Luer 일체형 잠금 링 피팅",
+    ru: "Фитинг Luer male со встроенным стопорным кольцом LP",
   },
 
   "LS 母鲁尔": {
     zh: "LS 母鲁尔",
     en: "Female Luer Integral Fitting",
+    es: "Racor Luer hembra integral LS",
+    fr: "Raccord Luer femelle monobloc LS",
+    ko: "LS 암 Luer 일체형 피팅",
+    ru: "Цельный фитинг Luer female LS",
   },
 
   "PMLS 穿板母鲁尔": {
     zh: "PMLS 穿板母鲁尔",
     en: "Female Luer Panel Mount Fitting",
+    es: "Racor Luer hembra para panel PMLS",
+    fr: "Raccord Luer femelle traversée de panneau PMLS",
+    ko: "PMLS 패널 장착형 암 Luer 피팅",
+    ru: "Панельный фитинг Luer female PMLS",
   },
 
   "LCR 色环": {
     zh: "LCR 色环",
     en: "Color Coding Ring",
+    es: "Anillo de identificación por color LCR",
+    fr: "Bague de repérage couleur LCR",
+    ko: "LCR 컬러 코딩 링",
+    ru: "Цветовое маркировочное кольцо LCR",
   },
 
   "LPT 内螺纹套": {
     zh: "LPT 内螺纹套",
     en: "Luer Lock Ring",
+    es: "Anillo de bloqueo Luer LPT",
+    fr: "Bague de verrouillage Luer LPT",
+    ko: "LPT Luer 잠금 링",
+    ru: "Стопорное кольцо Luer LPT",
   },
 
   "LNS 滚花螺母": {
     zh: "LNS 滚花螺母",
     en: "Panel Mount Lock Nut",
+    es: "Tuerca de bloqueo para panel LNS",
+    fr: "Écrou de blocage pour panneau LNS",
+    ko: "LNS 패널 장착 잠금 너트",
+    ru: "Панельная стопорная гайка LNS",
   },
 
   "N - 本色": {
     zh: "N - 本色",
     en: "Natural",
+    es: "N - Natural",
+    fr: "N - Naturel",
+    ko: "N - 내추럴",
+    ru: "N - Натуральный",
   },
 
   "W - 白色": {
     zh: "W - 白色",
     en: "White",
+    es: "W - Blanco",
+    fr: "W - Blanc",
+    ko: "W - 흰색",
+    ru: "W - Белый",
   },
 
   "B - 黑色": {
     zh: "B - 黑色",
     en: "Black",
+    es: "B - Negro",
+    fr: "B - Noir",
+    ko: "B - 검정",
+    ru: "B - Черный",
   },
 
   "R - 红色": {
     zh: "R - 红色",
     en: "Red",
+    es: "R - Rojo",
+    fr: "R - Rouge",
+    ko: "R - 빨강",
+    ru: "R - Красный",
   },
 
   "G - 绿色": {
     zh: "G - 绿色",
     en: "Green",
+    es: "G - Verde",
+    fr: "G - Vert",
+    ko: "G - 초록",
+    ru: "G - Зеленый",
   },
 
   "U - 蓝色": {
     zh: "U - 蓝色",
     en: "Blue",
+    es: "U - Azul",
+    fr: "U - Bleu",
+    ko: "U - 파랑",
+    ru: "U - Синий",
   },
 
   "O - 橙色": {
     zh: "O - 橙色",
     en: "Orange",
+    es: "O - Naranja",
+    fr: "O - Orange",
+    ko: "O - 주황",
+    ru: "O - Оранжевый",
   },
 
   "Y - 黄色": {
     zh: "Y - 黄色",
     en: "Yellow",
+    es: "Y - Amarillo",
+    fr: "Y - Jaune",
+    ko: "Y - 노랑",
+    ru: "Y - Желтый",
   },
 
   "公端": {
     zh: "公端",
     en: "Male",
+    es: "Macho",
+    fr: "Mâle",
+    ko: "수형",
+    ru: "Штыревой",
   },
 
   "母端": {
     zh: "母端",
     en: "Female",
+    es: "Hembra",
+    fr: "Femelle",
+    ko: "암형",
+    ru: "Гнездовой",
   },
 
   "穿板": {
     zh: "穿板",
     en: "Panel Mount",
+    es: "Montaje en panel",
+    fr: "Montage sur panneau",
+    ko: "패널 장착",
+    ru: "Панельный монтаж",
   },
 
   "非穿板": {
     zh: "非穿板",
     en: "Non-Panel Mount",
+    es: "Sin montaje en panel",
+    fr: "Sans montage sur panneau",
+    ko: "비패널 장착",
+    ru: "Без панельного монтажа",
   },
 
   "带阀": {
     zh: "带阀",
     en: "Valved",
+    es: "Con válvula",
+    fr: "Avec clapet",
+    ko: "밸브형",
+    ru: "С клапаном",
   },
 
   "不带阀": {
     zh: "不带阀",
     en: "Non-Valved",
+    es: "Sin válvula",
+    fr: "Sans clapet",
+    ko: "무밸브형",
+    ru: "Без клапана",
   },
 
   "直通": {
     zh: "直通",
     en: "In-line",
+    es: "En línea",
+    fr: "En ligne",
+    ko: "인라인",
+    ru: "Прямоточный",
   },
 
   "弯头": {
     zh: "弯头",
     en: "Elbow",
+    es: "Codo",
+    fr: "Coude",
+    ko: "엘보",
+    ru: "Угловой",
   },
 
   "弯头型": {
     zh: "弯头型",
     en: "Elbow",
+    es: "Codo",
+    fr: "Coude",
+    ko: "엘보형",
+    ru: "Угловой",
   },
 
   "二通": {
     zh: "二通",
     en: "2-Way",
+    es: "2 vías",
+    fr: "2 voies",
+    ko: "2포트",
+    ru: "2-ходовой",
   },
 
   "三通": {
     zh: "三通",
     en: "3-Way",
+    es: "3 vías",
+    fr: "3 voies",
+    ko: "3포트",
+    ru: "3-ходовой",
   },
 
   "穿板倒刺接头": {
     zh: "穿板倒刺接头",
     en: "Bulkhead Barbed Fitting",
+    es: "Racor de espiga pasamuros",
+    fr: "Raccord cannelé traversée de cloison",
+    ko: "벌크헤드 바브 피팅",
+    ru: "Панельный штуцерный фитинг",
   },
 
   "六角螺母": {
     zh: "六角螺母",
     en: "Hex Nut",
+    es: "Tuerca hexagonal",
+    fr: "Écrou hexagonal",
+    ko: "육각 너트",
+    ru: "Шестигранная гайка",
   },
 
   "过滤器": {
     zh: "过滤器",
     en: "Filters",
+    es: "Filtros",
+    fr: "Filtres",
+    ko: "필터",
+    ru: "Фильтры",
   },
 
   "单向阀": {
     zh: "单向阀",
     en: "Check Valves",
+    es: "Válvulas de retención",
+    fr: "Clapets anti-retour",
+    ko: "체크 밸브",
+    ru: "Обратные клапаны",
+  },
+  "过滤器与单向阀": {
+    es: "Filtros y válvulas de retención",
+    fr: "Filtres et clapets anti-retour",
+    ko: "필터 및 체크 밸브",
+    ru: "Фильтры и обратные клапаны",
   },
 
 };

@@ -377,6 +377,43 @@ const PRODUCT_SELECTION_PAGE_TEXT: Record<SelectionLocale, import("./product-sel
   },
 };
 
+const TARGET_LOCALE_A11Y_TEXT: Partial<
+  Record<
+    SelectionLocale,
+    {
+      breadcrumbAriaLabel: string;
+      productTypeOverviewSuffix: string;
+      currentPrefix: string;
+      paginationAriaLabel: string;
+    }
+  >
+> = {
+  es: {
+    breadcrumbAriaLabel: "Navegación jerárquica",
+    productTypeOverviewSuffix: ": descripción general del tipo de producto",
+    currentPrefix: "Actual: ",
+    paginationAriaLabel: "Paginación de productos",
+  },
+  fr: {
+    breadcrumbAriaLabel: "Fil d’Ariane",
+    productTypeOverviewSuffix: " : présentation du type de produit",
+    currentPrefix: "Sélection actuelle : ",
+    paginationAriaLabel: "Pagination des produits",
+  },
+  ko: {
+    breadcrumbAriaLabel: "이동 경로",
+    productTypeOverviewSuffix: " 제품 유형 개요",
+    currentPrefix: "현재 선택: ",
+    paginationAriaLabel: "제품 페이지 탐색",
+  },
+  ru: {
+    breadcrumbAriaLabel: "Навигационная цепочка",
+    productTypeOverviewSuffix: ": обзор типа продукции",
+    currentPrefix: "Текущий выбор: ",
+    paginationAriaLabel: "Навигация по страницам продукции",
+  },
+};
+
 const DEFAULT_CATEGORIES: ProductSelectionCategoryItem[] = [
   {
     id: "pumps",
@@ -2578,6 +2615,7 @@ export default function ProductSelectionClient({
 
   const pageText =
     PRODUCT_SELECTION_PAGE_TEXT[locale] || PRODUCT_SELECTION_PAGE_TEXT.zh;
+  const targetLocaleA11yText = TARGET_LOCALE_A11Y_TEXT[locale];
 
   const categoryItems = useMemo(() => getCategoryItems(locale), [locale]);
 
@@ -2719,7 +2757,12 @@ const [searchKeyword, setSearchKeyword] = useState("");
             label:
               locale === "zh"
                 ? "过滤器与单向阀"
-                : "Filters & Check Valves",
+                : locale === "en"
+                  ? "Filters & Check Valves"
+                  : getLocalizedFilterOptionLabel(
+                      "过滤器与单向阀",
+                      locale
+                    ),
           }
         );
       }
@@ -2750,7 +2793,12 @@ const [searchKeyword, setSearchKeyword] = useState("");
           label:
             locale === "zh"
               ? "阀系列"
-              : "Valve Series",
+              : locale === "en"
+                ? "Valve Series"
+                : getLocalizedFilterOptionLabel(
+                    "阀系列",
+                    locale
+                  ),
         },
       ];
     }
@@ -4316,7 +4364,11 @@ function isFilterOptionActive(
   return (
     <div className="products-selection-page">
 <SitePageShell
-        breadcrumbAriaLabel={locale === "zh" ? "面包屑导航" : "Breadcrumb"}
+        breadcrumbAriaLabel={
+          locale === "zh"
+            ? "面包屑导航"
+            : targetLocaleA11yText?.breadcrumbAriaLabel || "Breadcrumb"
+        }
         breadcrumbItems={[
           {
             label: pageText.breadcrumbHome,
@@ -4354,7 +4406,14 @@ function isFilterOptionActive(
               <section
                 className="product-type-intro-module"
                 data-product-type-id={activeProductTypeId || ""}
-                aria-label={locale === "zh" ? `${activeProductTypeIntro.title}产品种类说明` : `${activeProductTypeIntro.title} product type overview`}
+                aria-label={
+                  locale === "zh"
+                    ? `${activeProductTypeIntro.title}产品种类说明`
+                    : `${activeProductTypeIntro.title}${
+                        targetLocaleA11yText?.productTypeOverviewSuffix ||
+                        " product type overview"
+                      }`
+                }
               >
                 <div className="product-type-intro-image">
                   <img
@@ -4400,6 +4459,7 @@ function isFilterOptionActive(
               activeProductTypeId={activeProductTypeId}
               filterGroups={filterGroups}
               mobileOpenFilterGroups={mobileOpenFilterGroups}
+              currentPrefix={targetLocaleA11yText?.currentPrefix}
               onToggleMobileGroup={toggleMobileFilterGroup}
               isOptionActive={isFilterOptionActive}
               isOptionDisabled={isProductFilterOptionDisabled}
@@ -4453,6 +4513,7 @@ function isFilterOptionActive(
                     totalPages={totalProductPages}
                     previousText={pageText.previousPage}
                     nextText={pageText.nextPage}
+                    ariaLabel={targetLocaleA11yText?.paginationAriaLabel}
                     onPageChange={setCurrentProductPage}
                   />
                 </>

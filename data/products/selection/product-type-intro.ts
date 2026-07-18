@@ -137,7 +137,7 @@ const productTypeIntroI18nMap: Record<string, ProductTypeIntroLocaleMap> = {
       title: "Serie de bombas de émbolo",
       paragraphs: [
         "Las bombas de émbolo FOREACH están diseñadas para manipulación precisa de líquidos en instrumentos analíticos automatizados, IVD, ciencias de la vida, automatización de laboratorio y equipos de análisis.",
-        "La serie cubre bombas de émbolo EA Standard, SM Miniature y TM Ultra-Compact, con selección según espacio del instrumento, volumen de dosificación, material del cabezal, fluidic port e integración del sistema.",
+        "La serie incluye las plataformas EA estándar, SM miniatura y TM ultracompacta. La selección se realiza según el espacio disponible, el volumen de dosificación, el material del cabezal, el puerto fluídico y los requisitos de integración del sistema.",
         "Las tarjetas muestran modelos base habituales. Para especificaciones completas, curvas de rendimiento y configuraciones opcionales, consulte la página de detalle o envíe una solicitud de selección para confirmación de ingeniería.",
       ],
       imageAlt:
@@ -147,7 +147,7 @@ const productTypeIntroI18nMap: Record<string, ProductTypeIntroLocaleMap> = {
       title: "Série de pompes à piston",
       paragraphs: [
         "Les pompes à piston FOREACH sont conçues pour la manipulation précise de liquides dans les instruments d'analyse automatisés, l'IVD, les sciences de la vie, l'automatisation de laboratoire et les systèmes de test analytique.",
-        "La gamme couvre les pompes à piston EA Standard, SM Miniature et TM Ultra-Compact, avec une sélection selon l'espace disponible, le volume de dosage, le matériau de tête de pompe, le fluidic port et les besoins d'intégration système.",
+        "La gamme comprend les plateformes EA standard, SM miniature et TM ultra-compacte. La sélection s'effectue selon l'espace disponible, le volume de dosage, le matériau de la tête de pompe, le raccord fluidique et les besoins d'intégration du système.",
         "Les cartes produits présentent les modèles de base courants. Pour les spécifications complètes, les courbes de performance et les options, consultez la page de détail ou envoyez une demande de sélection pour validation technique.",
       ],
       imageAlt:
@@ -157,7 +157,7 @@ const productTypeIntroI18nMap: Record<string, ProductTypeIntroLocaleMap> = {
       title: "플런저 펌프 시리즈",
       paragraphs: [
         "FOREACH 플런저 펌프는 IVD, 생명과학, 실험실 자동화 및 분석 장비의 정밀 액체 처리 공정에 맞춰 설계되었습니다.",
-        "EA Standard, SM Miniature, TM Ultra-Compact 플런저 펌프 플랫폼을 포함하며 장비 공간, 분주 용량, 펌프 헤드 소재, fluidic port, 시스템 통합 조건에 따라 선택할 수 있습니다.",
+        "EA 표준형, SM 소형 및 TM 초소형 플런저 펌프 플랫폼을 제공하며 장비 공간, 분주 용량, 펌프 헤드 소재, 유체 포트 및 시스템 통합 조건에 따라 선택할 수 있습니다.",
         "제품 카드는 일반적인 기본 모델을 보여줍니다. 전체 사양, 성능 곡선, 선택 구성을 확인하려면 상세 페이지를 보거나 엔지니어링 확인을 위해 선정 요청을 제출하십시오.",
       ],
       imageAlt:
@@ -166,12 +166,12 @@ const productTypeIntroI18nMap: Record<string, ProductTypeIntroLocaleMap> = {
     ru: {
       title: "Серия плунжерных насосов",
       paragraphs: [
-        "Плунжерные насосы FOREACH предназначены для точной работы с жидкостями в автоматизированных аналитических приборах, IVD, системах life science, лабораторной автоматизации и аналитического тестирования.",
-        "Линейка включает платформы EA Standard, SM Miniature и TM Ultra-Compact с подбором по месту установки, объему дозирования, материалу головки, fluidic port и требованиям системной интеграции.",
+        "Плунжерные насосы FOREACH предназначены для точной работы с жидкостями в автоматизированных аналитических приборах, системах IVD, биологических исследований и лабораторной автоматизации.",
+        "Линейка включает стандартную платформу EA, миниатюрную SM и сверхкомпактную TM. Подбор выполняется по месту установки, объему дозирования, материалу головки, типу гидравлического порта и требованиям системной интеграции.",
         "Карточки показывают распространенные базовые модели. Полные спецификации, кривые производительности и опции доступны на странице деталей либо через запрос подбора для инженерного подтверждения.",
       ],
       imageAlt:
-        "Серия плунжерных насосов FOREACH для точной работы с жидкостями в IVD, life science и лабораторной автоматизации",
+        "Серия плунжерных насосов FOREACH для точной работы с жидкостями в системах IVD, биологических исследований и лабораторной автоматизации",
     },
   },
 
@@ -190,7 +190,7 @@ const productTypeIntroI18nMap: Record<string, ProductTypeIntroLocaleMap> = {
       title: "Serie de bombas de diafragma",
       paragraphs: [
         "Las bombas de diafragma FOREACH se utilizan para aspiración de gas, transferencia de líquidos, ciclos de lavado, descarga de residuos y manejo de medios gas-líquido en instrumentos automatizados.",
-        "La serie incluye bombas de diafragma para gas, para líquido y para gas-líquido. La selección puede basarse en flow rate, pressure resistance, self-priming, diaphragm material, valve material y espacio de instalación.",
+        "La serie incluye bombas de diafragma para gas, líquidos y medios gas-líquido. La selección se realiza según el caudal, la resistencia a la presión, la capacidad de autocebado, el material del diafragma, el material de las válvulas y el espacio de instalación.",
         "Las tarjetas muestran configuraciones base habituales. Para parámetros completos y combinaciones de modelo, consulte la página de detalle o envíe una solicitud de selección.",
       ],
       imageAlt:
@@ -200,7 +200,7 @@ const productTypeIntroI18nMap: Record<string, ProductTypeIntroLocaleMap> = {
       title: "Série de pompes à membrane",
       paragraphs: [
         "Les pompes à membrane FOREACH prennent en charge l'aspiration de gaz, le transfert de liquides, les cycles de lavage, l'évacuation des déchets et la gestion de milieux gaz-liquide dans les instruments automatisés.",
-        "La gamme comprend des pompes à membrane pour gaz, liquides et gaz-liquide. La sélection peut se faire selon flow rate, pressure resistance, self-priming, diaphragm material, valve material et l'espace d'installation.",
+        "La gamme comprend des pompes à membrane pour gaz, liquides et milieux gaz-liquide. La sélection s'effectue selon le débit, la tenue en pression, la capacité d'auto-amorçage, le matériau de la membrane, le matériau des clapets et l'espace d'installation.",
         "Les cartes produits présentent les configurations de base courantes. Pour les paramètres complets et les combinaisons de modèles, consultez la page de détail ou envoyez une demande de sélection.",
       ],
       imageAlt:
@@ -210,7 +210,7 @@ const productTypeIntroI18nMap: Record<string, ProductTypeIntroLocaleMap> = {
       title: "다이어프램 펌프 시리즈",
       paragraphs: [
         "FOREACH 다이어프램 펌프는 자동화 장비 내부의 가스 흡입, 액체 이송, 세척 순환, 폐액 배출 및 기액 혼합 매체 처리에 사용됩니다.",
-        "가스 다이어프램 펌프, 액체 다이어프램 펌프, 기액 혼합 다이어프램 펌프로 구성되며 flow rate, pressure resistance, self-priming, diaphragm material, valve material, 설치 공간에 따라 선택할 수 있습니다.",
+        "가스용, 액체용 및 기액 혼합용 다이어프램 펌프로 구성되며 유량, 내압, 자흡 성능, 다이어프램 소재, 밸브 소재 및 설치 공간에 따라 선택할 수 있습니다.",
         "제품 카드는 일반적인 기본 구성을 보여줍니다. 전체 파라미터와 모델 조합은 상세 페이지에서 확인하거나 선정 요청을 제출하십시오.",
       ],
       imageAlt:
@@ -220,7 +220,7 @@ const productTypeIntroI18nMap: Record<string, ProductTypeIntroLocaleMap> = {
       title: "Серия мембранных насосов",
       paragraphs: [
         "Мембранные насосы FOREACH применяются для аспирации газа, переноса жидкостей, промывочных циклов, отвода отходов и работы с газожидкостными средами в автоматизированных приборах.",
-        "Линейка включает газовые, жидкостные и газожидкостные мембранные насосы. Подбор выполняется по flow rate, pressure resistance, self-priming, diaphragm material, valve material и монтажному пространству.",
+        "Линейка включает газовые, жидкостные и газожидкостные мембранные насосы. Подбор выполняется по расходу, допустимому давлению, способности к самовсасыванию, материалам мембраны и клапанов, а также по монтажному пространству.",
         "Карточки показывают распространенные базовые конфигурации. Полные параметры и комбинации моделей доступны на странице деталей или через запрос подбора.",
       ],
       imageAlt:
@@ -243,7 +243,7 @@ const productTypeIntroI18nMap: Record<string, ProductTypeIntroLocaleMap> = {
       title: "Serie de bombas de pipeteo",
       paragraphs: [
         "Las bombas de pipeteo FOREACH se usan para transferencia de muestras, dispensación de reactivos y manejo de microlíquidos en instrumentos automatizados, con desplazamiento de aire y puntas desechables para reducir residuos y contaminación cruzada.",
-        "La serie incluye bombas SMTP2 programmable gas displacement pipetting pump y SMTP4 gas displacement pipetting pump, con configuraciones base de 100 μL, 500 μL y 1000 μL.",
+        "La serie incluye la bomba de pipeteo programable por desplazamiento de aire SMTP2 y la bomba de pipeteo por desplazamiento de aire SMTP4, con configuraciones base de 100 μL, 500 μL y 1000 μL.",
         "Se admiten puntas desechables estándar y adaptadores personalizados, con varias longitudes de adaptador para confirmar la estructura del equipo y el flujo de pipeteo.",
       ],
       imageAlt:
@@ -253,7 +253,7 @@ const productTypeIntroI18nMap: Record<string, ProductTypeIntroLocaleMap> = {
       title: "Série de pompes de pipetage",
       paragraphs: [
         "Les pompes de pipetage FOREACH servent au transfert d'échantillons, à la distribution de réactifs et à la manipulation de micro-volumes dans les instruments automatisés, avec déplacement d'air et embouts jetables pour réduire les résidus et la contamination croisée.",
-        "La gamme comprend les pompes SMTP2 programmable gas displacement pipetting pump et SMTP4 gas displacement pipetting pump, couvrant les configurations de base 100 μL, 500 μL et 1000 μL.",
+        "La gamme comprend la pompe de pipetage programmable à déplacement d'air SMTP2 et la pompe de pipetage à déplacement d'air SMTP4, proposées en configurations de base de 100 μL, 500 μL et 1000 μL.",
         "Les embouts jetables courants et les adaptateurs personnalisés sont pris en charge, avec plusieurs longueurs d'adaptateur pour valider la structure de l'instrument et le flux de pipetage.",
       ],
       imageAlt:
@@ -263,7 +263,7 @@ const productTypeIntroI18nMap: Record<string, ProductTypeIntroLocaleMap> = {
       title: "피펫팅 펌프 시리즈",
       paragraphs: [
         "FOREACH 피펫팅 펌프는 자동화 장비의 샘플 이송, 시약 분주 및 미량 액체 처리에 사용되며 일회용 팁과 공기 치환 방식을 통해 잔류와 교차 오염 위험을 줄입니다.",
-        "SMTP2 programmable gas displacement pipetting pump와 SMTP4 gas displacement pipetting pump를 포함하며 100 μL, 500 μL, 1000 μL 기본 구성을 지원합니다.",
+        "SMTP2 프로그래머블 공기 치환식 피펫팅 펌프와 SMTP4 공기 치환식 피펫팅 펌프를 제공하며 100 μL, 500 μL 및 1000 μL 기본 구성을 지원합니다.",
         "일반 일회용 팁과 맞춤형 팁 어댑터를 지원하며 여러 어댑터 길이를 선택해 장비 구조와 피펫팅 공정을 확인할 수 있습니다.",
       ],
       imageAlt:
@@ -273,7 +273,7 @@ const productTypeIntroI18nMap: Record<string, ProductTypeIntroLocaleMap> = {
       title: "Серия пипетирующих насосов",
       paragraphs: [
         "Пипетирующие насосы FOREACH применяются для переноса образцов, дозирования реагентов и работы с микролитровыми объемами в автоматизированных приборах, используя воздушное вытеснение и одноразовые наконечники для снижения переноса и перекрестного загрязнения.",
-        "Линейка включает SMTP2 programmable gas displacement pipetting pump и SMTP4 gas displacement pipetting pump с базовыми конфигурациями 100 μL, 500 μL и 1000 μL.",
+        "Линейка включает программируемый пипетирующий насос SMTP2 с воздушным вытеснением и пипетирующий насос SMTP4 с воздушным вытеснением в базовых конфигурациях 100 μL, 500 μL и 1000 μL.",
         "Поддерживаются распространенные одноразовые наконечники и пользовательские адаптеры с несколькими вариантами длины для подтверждения конструкции прибора и сценария пипетирования.",
       ],
       imageAlt:
@@ -296,8 +296,8 @@ const productTypeIntroI18nMap: Record<string, ProductTypeIntroLocaleMap> = {
       title: "Serie de bombas de jeringa",
       paragraphs: [
         "Las bombas de jeringa FOREACH se usan para inyección de alta precisión, suministro de líquidos, control de gradiente y salida de flujo estable.",
-        "La selección puede basarse en syringe size, stroke resolution, speed range, control mode y espacio de instalación disponible.",
-        "Las configuraciones se confirman según los requisitos del proyecto, incluidos volume, port, wash port y mounting method.",
+        "La selección se realiza según el tamaño de la jeringa, la resolución de carrera, el rango de velocidad, el modo de control y el espacio de instalación disponible.",
+        "La capacidad, el puerto fluídico, el puerto de lavado y el método de montaje se confirman de acuerdo con los requisitos del proyecto.",
       ],
       imageAlt:
         "Serie de bombas de jeringa FOREACH para inyección de alta precisión, suministro de líquidos y flujo estable",
@@ -306,8 +306,8 @@ const productTypeIntroI18nMap: Record<string, ProductTypeIntroLocaleMap> = {
       title: "Série de pompes seringues",
       paragraphs: [
         "Les pompes seringues FOREACH sont utilisées pour l'injection haute précision, l'alimentation en liquide, le contrôle de gradient et une sortie de débit stable.",
-        "La sélection peut se faire selon syringe size, stroke resolution, speed range, control mode et l'espace d'installation disponible.",
-        "Les configurations sont confirmées selon les exigences du projet, notamment volume, port, wash port et mounting method.",
+        "La sélection s'effectue selon la taille de la seringue, la résolution de course, la plage de vitesse, le mode de commande et l'espace d'installation disponible.",
+        "La capacité, le raccord fluidique, le port de lavage et le mode de montage sont validés selon les exigences du projet.",
       ],
       imageAlt:
         "Série de pompes seringues FOREACH pour injection haute précision, alimentation en liquide et débit stable",
@@ -316,8 +316,8 @@ const productTypeIntroI18nMap: Record<string, ProductTypeIntroLocaleMap> = {
       title: "시린지 펌프 시리즈",
       paragraphs: [
         "FOREACH 시린지 펌프는 고정밀 주입, 액체 공급, 그래디언트 제어 및 안정적인 유량 출력에 사용됩니다.",
-        "syringe size, stroke resolution, speed range, control mode, 설치 공간에 따라 선택할 수 있습니다.",
-        "volume, port, wash port, mounting method를 포함한 구성은 프로젝트 요구사항에 따라 확인됩니다.",
+        "시린지 규격, 스트로크 분해능, 속도 범위, 제어 방식 및 설치 공간에 따라 제품을 선택할 수 있습니다.",
+        "용량, 유체 포트, 세척 포트 및 장착 방식은 프로젝트 요구사항에 따라 확정합니다.",
       ],
       imageAlt:
         "고정밀 주입, 액체 공급 및 안정적인 유량 출력을 위한 FOREACH 시린지 펌프 시리즈",
@@ -326,8 +326,8 @@ const productTypeIntroI18nMap: Record<string, ProductTypeIntroLocaleMap> = {
       title: "Серия шприцевых насосов",
       paragraphs: [
         "Шприцевые насосы FOREACH применяются для высокоточного ввода, подачи жидкости, градиентного управления и стабильного выходного потока.",
-        "Подбор может выполняться по syringe size, stroke resolution, speed range, control mode и доступному монтажному пространству.",
-        "Конфигурации подтверждаются по требованиям проекта, включая volume, port, wash port и mounting method.",
+        "Подбор выполняется по размеру шприца, разрешению хода, диапазону скорости, способу управления и доступному монтажному пространству.",
+        "Рабочий объем, гидравлический порт, промывочный порт и способ монтажа согласовываются с учетом требований проекта.",
       ],
       imageAlt:
         "Серия шприцевых насосов FOREACH для высокоточного ввода, подачи жидкости и стабильного потока",
@@ -348,9 +348,9 @@ const productTypeIntroI18nMap: Record<string, ProductTypeIntroLocaleMap> = {
     es: {
       title: "Serie de bombas sin válvulas",
       paragraphs: [
-        "Las bombas sin válvulas FOREACH admiten muestreo, titulación, llenado, dosificación y entrega proporcional en instrumentos analíticos automatizados, reduciendo el uso de solenoid valves externas y la complejidad del fluidic path.",
+        "Las bombas sin válvulas FOREACH permiten realizar muestreo, titulación, llenado, dosificación y suministro proporcional en instrumentos analíticos automatizados, reduciendo el uso de electroválvulas externas y la complejidad del circuito fluídico.",
         "La serie cubre plataformas de 12–80 μL/rev, 50–250 μL/rev y 300–1200 μL/rev, con opciones de entrega proporcional de doble cabezal de 1:9 a 1:19.",
-        "Todas las bombas sin válvulas se personalizan según el proyecto. Displacement, port, wash port y mounting method pueden confirmarse posteriormente.",
+        "Todas las bombas sin válvulas se configuran según el proyecto. El desplazamiento, el puerto fluídico, el puerto de lavado y el método de montaje se confirman de acuerdo con la aplicación.",
       ],
       imageAlt:
         "Serie de bombas sin válvulas FOREACH para manipulación precisa de líquidos en instrumentos compactos",
@@ -358,9 +358,9 @@ const productTypeIntroI18nMap: Record<string, ProductTypeIntroLocaleMap> = {
     fr: {
       title: "Série de pompes sans valve",
       paragraphs: [
-        "Les pompes sans valve FOREACH prennent en charge l'échantillonnage, la titration, le remplissage, le dosage et la distribution proportionnelle dans les instruments analytiques automatisés, tout en réduisant l'usage de solenoid valves externes et la complexité du fluidic path.",
+        "Les pompes sans clapet FOREACH assurent l'échantillonnage, le titrage, le remplissage, le dosage et la distribution proportionnelle dans les instruments d'analyse automatisés, tout en réduisant le recours aux électrovannes externes et la complexité du circuit fluidique.",
         "La gamme couvre les plateformes 12–80 μL/rev, 50–250 μL/rev et 300–1200 μL/rev, avec des options de distribution proportionnelle à double tête de 1:9 à 1:19.",
-        "Toutes les pompes sans valve sont personnalisées selon le projet. Displacement, port, wash port et mounting method peuvent être confirmés ensuite.",
+        "Toutes les pompes sans clapet sont configurées selon le projet. La cylindrée, le raccord fluidique, le port de lavage et le mode de montage sont validés en fonction de l'application.",
       ],
       imageAlt:
         "Série de pompes sans valve FOREACH pour la manipulation précise de liquides dans les instruments compacts",
@@ -368,22 +368,22 @@ const productTypeIntroI18nMap: Record<string, ProductTypeIntroLocaleMap> = {
     ko: {
       title: "밸브리스 펌프 시리즈",
       paragraphs: [
-        "FOREACH 밸브리스 펌프는 자동화 분석 장비의 샘플링, 적정, 충전, 정량 이송 및 비례 이송을 지원하며 외부 solenoid valve 사용과 fluidic path 복잡도를 줄입니다.",
+        "FOREACH 밸브리스 펌프는 자동 분석 장비의 샘플링, 적정, 충전, 정량 이송 및 비례 이송을 지원하며 외부 솔레노이드 밸브 사용과 유로 복잡도를 줄입니다.",
         "12–80 μL/rev, 50–250 μL/rev, 300–1200 μL/rev 배출량 플랫폼과 1:9~1:19 듀얼 헤드 비례 이송 옵션을 제공합니다.",
-        "모든 밸브리스 펌프는 프로젝트 요구사항에 따라 맞춤 구성됩니다. Displacement, port, wash port, mounting method는 추가 확인할 수 있습니다.",
+        "모든 밸브리스 펌프는 프로젝트 요구사항에 맞춰 구성됩니다. 배기량, 유체 포트, 세척 포트 및 장착 방식은 적용 조건에 따라 확정합니다.",
       ],
       imageAlt:
         "컴팩트 장비의 정밀 액체 처리를 위한 FOREACH 밸브리스 펌프 시리즈",
     },
     ru: {
-      title: "Серия безклапанных насосов",
+      title: "Серия бесклапанных насосов",
       paragraphs: [
-        "Безклапанные насосы FOREACH поддерживают отбор проб, титрование, наполнение, дозирование и пропорциональную подачу в автоматизированных аналитических приборах, снижая потребность во внешних solenoid valves и сложность fluidic path.",
+        "Бесклапанные насосы FOREACH обеспечивают отбор проб, титрование, наполнение, дозирование и пропорциональную подачу в автоматизированных аналитических приборах, уменьшая потребность во внешних электромагнитных клапанах и упрощая гидравлический тракт.",
         "Линейка охватывает платформы 12–80 μL/rev, 50–250 μL/rev и 300–1200 μL/rev, а также варианты двухголовочной пропорциональной подачи от 1:9 до 1:19.",
-        "Все безклапанные насосы настраиваются под требования проекта. Displacement, port, wash port и mounting method могут быть подтверждены дополнительно.",
+        "Все бесклапанные насосы конфигурируются под требования проекта. Рабочий объем, гидравлический порт, промывочный порт и способ монтажа согласовываются с учетом условий применения.",
       ],
       imageAlt:
-        "Серия безклапанных насосов FOREACH для точной работы с жидкостями в компактных приборах",
+        "Серия бесклапанных насосов FOREACH для точной работы с жидкостями в компактных приборах",
     },
   },
 
@@ -401,42 +401,42 @@ const productTypeIntroI18nMap: Record<string, ProductTypeIntroLocaleMap> = {
     es: {
       title: "Serie de bombas de alta presión",
       paragraphs: [
-        "Las bombas de alta presión FOREACH se usan en fluidic paths de instrumentos analíticos que requieren presión estable, pressure resistance y entrega continua.",
-        "La serie admite plataformas que necesitan salida de presión estable, precision flow control y liquid delivery confiable.",
-        "Las configuraciones pueden confirmarse por pressure range, flow requirements, material compatibility y system interface.",
+        "Las bombas de alta presión FOREACH se utilizan en circuitos fluídicos de instrumentos analíticos que requieren presión estable, resistencia a la presión y suministro continuo.",
+        "La serie está diseñada para plataformas que necesitan una salida de presión estable, control preciso del caudal y suministro fiable de líquidos.",
+        "La configuración se define según el rango de presión, los requisitos de caudal, la compatibilidad de materiales y la interfaz del sistema.",
       ],
       imageAlt:
-        "Serie de bombas de alta presión FOREACH para suministro estable a alta presión en fluidic paths de instrumentos analíticos",
+        "Serie de bombas de alta presión FOREACH para suministro estable en circuitos fluídicos de instrumentos analíticos",
     },
     fr: {
       title: "Série de pompes haute pression",
       paragraphs: [
-        "Les pompes haute pression FOREACH sont utilisées dans les fluidic paths d'instruments analytiques exigeant une pression stable, pressure resistance et une distribution continue.",
-        "La série prend en charge les plateformes nécessitant une sortie de pression stable, precision flow control et liquid delivery fiable.",
-        "Les configurations peuvent être confirmées selon pressure range, flow requirements, material compatibility et system interface.",
+        "Les pompes haute pression FOREACH sont destinées aux circuits fluidiques d'instruments d'analyse nécessitant une pression stable, une bonne tenue en pression et une alimentation continue.",
+        "La série répond aux plateformes qui exigent une pression de sortie stable, un contrôle précis du débit et une alimentation en liquide fiable.",
+        "La configuration est définie selon la plage de pression, le débit requis, la compatibilité des matériaux et l'interface du système.",
       ],
       imageAlt:
-        "Série de pompes haute pression FOREACH pour une distribution stable à haute pression dans les fluidic paths d'instruments analytiques",
+        "Série de pompes haute pression FOREACH pour une alimentation stable dans les circuits fluidiques d'instruments d'analyse",
     },
     ko: {
       title: "고압 펌프 시리즈",
       paragraphs: [
-        "FOREACH 고압 펌프는 안정적인 압력, pressure resistance, 연속 이송 성능이 필요한 분석 장비 fluidic path에 사용됩니다.",
-        "안정적인 압력 출력, precision flow control, 신뢰성 높은 liquid delivery가 필요한 장비 플랫폼을 지원합니다.",
-        "pressure range, flow requirements, material compatibility, system interface에 따라 구성을 확인할 수 있습니다.",
+        "FOREACH 고압 펌프는 안정적인 압력, 내압 성능 및 연속 이송이 필요한 분석 장비 유로에 사용됩니다.",
+        "안정적인 압력 출력, 정밀 유량 제어 및 신뢰성 높은 액체 이송이 필요한 장비 플랫폼에 적합합니다.",
+        "압력 범위, 요구 유량, 재질 호환성 및 시스템 인터페이스에 따라 구성을 확정합니다.",
       ],
       imageAlt:
-        "분석 장비 fluidic path의 안정적인 고압 이송을 위한 FOREACH 고압 펌프 시리즈",
+        "분석 장비 유로에서 안정적인 고압 이송을 제공하는 FOREACH 고압 펌프 시리즈",
     },
     ru: {
       title: "Серия насосов высокого давления",
       paragraphs: [
-        "Насосы высокого давления FOREACH используются в fluidic paths аналитических приборов, где требуется стабильное давление, pressure resistance и непрерывная подача.",
-        "Серия поддерживает платформы, которым необходимы стабильный выход давления, precision flow control и надежная liquid delivery.",
-        "Конфигурации могут подтверждаться по pressure range, flow requirements, material compatibility и system interface.",
+        "Насосы высокого давления FOREACH применяются в гидравлических трактах аналитических приборов, где требуются стабильное давление, стойкость к давлению и непрерывная подача.",
+        "Серия предназначена для платформ, которым необходимы стабильное выходное давление, точное регулирование расхода и надежная подача жидкости.",
+        "Конфигурация определяется по диапазону давления, требуемому расходу, совместимости материалов и системному интерфейсу.",
       ],
       imageAlt:
-        "Серия насосов высокого давления FOREACH для стабильной высоконапорной подачи в fluidic paths аналитических приборов",
+        "Серия насосов высокого давления FOREACH для стабильной подачи в гидравлических трактах аналитических приборов",
     },
   },
 };

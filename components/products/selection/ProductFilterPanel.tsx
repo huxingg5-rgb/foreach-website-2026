@@ -13,6 +13,7 @@ type ProductFilterPanelProps = {
   filterGroups: ProductSelectionFilterGroup[];
   mobileOpenFilterGroups?: Record<string, boolean>;
   emptyText: string;
+  currentPrefix?: string;
   resetButtonText?: string;
   submitButtonText?: string;
   onToggleMobileGroup?: (
@@ -256,6 +257,7 @@ export default function ProductFilterPanel({
   filterGroups,
   mobileOpenFilterGroups,
   emptyText,
+  currentPrefix,
   onToggleMobileGroup,
   isOptionActive,
   isOptionDisabled,
@@ -689,7 +691,7 @@ export default function ProductFilterPanel({
                   >
                     <span className="filter-check" />
                     <span>
-                      当前：{activeOption.label}
+                      {currentPrefix || "当前："}{activeOption.label}
                     </span>
                   </button>
                 </div>

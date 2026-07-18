@@ -51,6 +51,131 @@ const EMAIL_CODE_COOLDOWN_SECONDS = 60;
 const EMAIL_CODE_LAST_SENT_AT_KEY =
   "foreach_company_info_request_email_code_last_sent_at_v1";
 
+const TARGET_MODAL_TEXT: Record<
+  "es" | "fr" | "ko" | "ru",
+  Record<string, string>
+> = {
+  es: {
+    "Enter your email address before requesting a verification code.": "Introduzca su correo electrónico antes de solicitar un código de verificación.",
+    "Request an email verification code first.": "Solicite primero un código de verificación por correo electrónico.",
+    "Enter the email verification code.": "Introduzca el código de verificación enviado por correo electrónico.",
+    "The test verification code is incorrect. Enter 123456.": "El código de verificación de prueba es incorrecto. Introduzca 123456.",
+    "Close dialog": "Cerrar el cuadro de diálogo",
+    "Return to List": "Volver a la lista",
+    "Requested Items": "Elementos solicitados",
+    items: "elementos",
+    "Confirm the requested resources and enter your company information. The current verification code is for front-end testing and no email will be sent.": "Confirme los recursos solicitados e introduzca los datos de su empresa. El código de verificación actual es solo para pruebas de interfaz y no se enviará ningún correo electrónico.",
+    "Email *": "Correo electrónico *",
+    "Email address for receiving the requested files": "Correo electrónico para recibir los archivos solicitados",
+    Resend: "Reenviar",
+    "Send Code": "Enviar código",
+    "Test code: ": "Código de prueba: ",
+    "Email Verification Code *": "Código de verificación por correo *",
+    "Enter the email verification code": "Introduzca el código de verificación por correo",
+    "Name *": "Nombre *",
+    "Contact name": "Nombre de contacto",
+    "Company *": "Empresa *",
+    "Company name": "Nombre de la empresa",
+    "Country / Region": "País / Región",
+    "Country or region": "País o región",
+    "Phone / WhatsApp": "Teléfono / WhatsApp",
+    "Optional contact number": "Número de contacto opcional",
+    Notes: "Observaciones",
+    "Application, intended use, or other requirements": "Aplicación, uso previsto u otros requisitos",
+  },
+  fr: {
+    "Enter your email address before requesting a verification code.": "Saisissez votre adresse e-mail avant de demander un code de vérification.",
+    "Request an email verification code first.": "Demandez d'abord un code de vérification par e-mail.",
+    "Enter the email verification code.": "Saisissez le code de vérification reçu par e-mail.",
+    "The test verification code is incorrect. Enter 123456.": "Le code de vérification de test est incorrect. Saisissez 123456.",
+    "Close dialog": "Fermer la fenêtre",
+    "Return to List": "Revenir à la liste",
+    "Requested Items": "Éléments demandés",
+    items: "éléments",
+    "Confirm the requested resources and enter your company information. The current verification code is for front-end testing and no email will be sent.": "Confirmez les ressources demandées et renseignez les informations de votre entreprise. Le code de vérification actuel sert uniquement aux tests de l'interface et aucun e-mail ne sera envoyé.",
+    "Email *": "E-mail *",
+    "Email address for receiving the requested files": "Adresse e-mail destinée à recevoir les fichiers demandés",
+    Resend: "Renvoyer",
+    "Send Code": "Envoyer le code",
+    "Test code: ": "Code de test : ",
+    "Email Verification Code *": "Code de vérification par e-mail *",
+    "Enter the email verification code": "Saisissez le code de vérification par e-mail",
+    "Name *": "Nom *",
+    "Contact name": "Nom du contact",
+    "Company *": "Entreprise *",
+    "Company name": "Nom de l'entreprise",
+    "Country / Region": "Pays / Région",
+    "Country or region": "Pays ou région",
+    "Phone / WhatsApp": "Téléphone / WhatsApp",
+    "Optional contact number": "Numéro de contact facultatif",
+    Notes: "Remarques",
+    "Application, intended use, or other requirements": "Application, usage prévu ou autres exigences",
+  },
+  ko: {
+    "Enter your email address before requesting a verification code.": "인증 코드를 요청하기 전에 이메일 주소를 입력하십시오.",
+    "Request an email verification code first.": "먼저 이메일 인증 코드를 요청하십시오.",
+    "Enter the email verification code.": "이메일 인증 코드를 입력하십시오.",
+    "The test verification code is incorrect. Enter 123456.": "테스트 인증 코드가 올바르지 않습니다. 123456을 입력하십시오.",
+    "Close dialog": "대화 상자 닫기",
+    "Return to List": "목록으로 돌아가기",
+    "Requested Items": "요청 항목",
+    items: "개",
+    "Confirm the requested resources and enter your company information. The current verification code is for front-end testing and no email will be sent.": "요청 자료를 확인하고 회사 정보를 입력하십시오. 현재 인증 코드는 프런트엔드 테스트용이며 실제 이메일은 발송되지 않습니다.",
+    "Email *": "이메일 *",
+    "Email address for receiving the requested files": "요청 파일을 받을 이메일 주소",
+    Resend: "재전송",
+    "Send Code": "코드 전송",
+    "Test code: ": "테스트 코드: ",
+    "Email Verification Code *": "이메일 인증 코드 *",
+    "Enter the email verification code": "이메일 인증 코드를 입력하십시오",
+    "Name *": "이름 *",
+    "Contact name": "담당자 이름",
+    "Company *": "회사 *",
+    "Company name": "회사명",
+    "Country / Region": "국가 / 지역",
+    "Country or region": "국가 또는 지역",
+    "Phone / WhatsApp": "전화 / WhatsApp",
+    "Optional contact number": "선택 입력 연락처",
+    Notes: "비고",
+    "Application, intended use, or other requirements": "적용 분야, 사용 목적 또는 기타 요구 사항",
+  },
+  ru: {
+    "Enter your email address before requesting a verification code.": "Введите адрес электронной почты перед запросом кода подтверждения.",
+    "Request an email verification code first.": "Сначала запросите код подтверждения по электронной почте.",
+    "Enter the email verification code.": "Введите код подтверждения из электронного письма.",
+    "The test verification code is incorrect. Enter 123456.": "Тестовый код подтверждения неверен. Введите 123456.",
+    "Close dialog": "Закрыть диалоговое окно",
+    "Return to List": "Вернуться к списку",
+    "Requested Items": "Запрошенные позиции",
+    items: "поз.",
+    "Confirm the requested resources and enter your company information. The current verification code is for front-end testing and no email will be sent.": "Подтвердите запрашиваемые материалы и укажите сведения о компании. Текущий код подтверждения предназначен только для тестирования интерфейса, письмо отправлено не будет.",
+    "Email *": "Электронная почта *",
+    "Email address for receiving the requested files": "Адрес электронной почты для получения запрошенных файлов",
+    Resend: "Отправить повторно",
+    "Send Code": "Отправить код",
+    "Test code: ": "Тестовый код: ",
+    "Email Verification Code *": "Код подтверждения электронной почты *",
+    "Enter the email verification code": "Введите код подтверждения электронной почты",
+    "Name *": "Имя *",
+    "Contact name": "Имя контактного лица",
+    "Company *": "Компания *",
+    "Company name": "Название компании",
+    "Country / Region": "Страна / Регион",
+    "Country or region": "Страна или регион",
+    "Phone / WhatsApp": "Телефон / WhatsApp",
+    "Optional contact number": "Дополнительный контактный номер",
+    Notes: "Примечания",
+    "Application, intended use, or other requirements": "Область применения, назначение или другие требования",
+  },
+};
+
+function getModalText(locale: string, english: string, chinese: string) {
+  if (locale === "en") return english;
+  if (locale === "zh-CN") return chinese;
+
+  return TARGET_MODAL_TEXT[locale as "es" | "fr" | "ko" | "ru"]?.[english] || english;
+}
+
 /* =========================================================
    弹窗中展示的申请条目
 
@@ -201,7 +326,8 @@ export default function CompanyInfoRequestModal({
   onClose,
   onSubmitPreview,
 }: CompanyInfoRequestModalProps) {
-  const isEnglish = locale === "en";
+  const modalText = (english: string, chinese: string) =>
+    getModalText(locale, english, chinese);
 
   const [formValue, setFormValue] =
     useState<CompanyInfoFormValue>(EMPTY_FORM_VALUE);
@@ -296,9 +422,10 @@ export default function CompanyInfoRequestModal({
   function handleSendEmailCode() {
     if (!formValue.email.trim()) {
       setFormError(
-        isEnglish
-          ? "Enter your email address before requesting a verification code."
-          : "请先填写邮箱，再发送验证码。",
+        modalText(
+          "Enter your email address before requesting a verification code.",
+          "请先填写邮箱，再发送验证码。",
+        ),
       );
       return;
     }
@@ -335,27 +462,30 @@ export default function CompanyInfoRequestModal({
     if (enableEmailVerification) {
       if (!hasEmailCodeSent) {
         setFormError(
-          isEnglish
-            ? "Request an email verification code first."
-            : "请先发送邮箱验证码。",
+          modalText(
+            "Request an email verification code first.",
+            "请先发送邮箱验证码。",
+          ),
         );
         return;
       }
 
       if (!formValue.emailCode.trim()) {
         setFormError(
-          isEnglish
-            ? "Enter the email verification code."
-            : "请输入邮箱验证码。",
+          modalText(
+            "Enter the email verification code.",
+            "请输入邮箱验证码。",
+          ),
         );
         return;
       }
 
       if (formValue.emailCode.trim() !== TEST_EMAIL_CODE) {
         setFormError(
-          isEnglish
-            ? "The test verification code is incorrect. Enter 123456."
-            : "测试版验证码不正确，请输入 123456。",
+          modalText(
+            "The test verification code is incorrect. Enter 123456.",
+            "测试版验证码不正确，请输入 123456。",
+          ),
         );
         return;
       }
@@ -371,7 +501,7 @@ export default function CompanyInfoRequestModal({
       <button
         className={styles.modalMask}
         type="button"
-        aria-label={isEnglish ? "Close dialog" : "关闭弹窗"}
+        aria-label={modalText("Close dialog", "关闭弹窗")}
         onClick={onClose}
       />
 
@@ -393,7 +523,7 @@ export default function CompanyInfoRequestModal({
           <button
             type="button"
             onClick={onClose}
-            aria-label={isEnglish ? "Close dialog" : "关闭弹窗"}
+            aria-label={modalText("Close dialog", "关闭弹窗")}
           >
             ×
           </button>
@@ -407,7 +537,7 @@ export default function CompanyInfoRequestModal({
 
             <div className={styles.successActions}>
               <button type="button" onClick={onClose}>
-                {isEnglish ? "Return to List" : "返回清单"}
+                {modalText("Return to List", "返回清单")}
               </button>
             </div>
           </div>
@@ -415,15 +545,16 @@ export default function CompanyInfoRequestModal({
           <form className={styles.form} onSubmit={handleSubmit}>
             <div className={styles.summary}>
               <div>
-                <span>{isEnglish ? "Requested Items" : "申请项目"}</span>
+                <span>{modalText("Requested Items", "申请项目")}</span>
                 <strong>{items.length}</strong>
-                <em>{isEnglish ? "items" : "项"}</em>
+                <em>{modalText("items", "项")}</em>
               </div>
 
               <p>
-                {isEnglish
-                  ? "Confirm the requested resources and enter your company information. The current verification code is for front-end testing and no email will be sent."
-                  : "请确认需要申请的资料项目，并填写公司信息。当前邮箱验证码为测试版，不会发送真实邮件。"}
+                {modalText(
+                  "Confirm the requested resources and enter your company information. The current verification code is for front-end testing and no email will be sent.",
+                  "请确认需要申请的资料项目，并填写公司信息。当前邮箱验证码为测试版，不会发送真实邮件。",
+                )}
               </p>
             </div>
 
@@ -463,16 +594,17 @@ export default function CompanyInfoRequestModal({
 
             <div className={styles.fields}>
               <label className={styles.emailField}>
-                <span>{isEnglish ? "Email *" : "邮箱 *"}</span>
+                <span>{modalText("Email *", "邮箱 *")}</span>
 
                 <div className={styles.emailInputGroup}>
                   <input
                     type="email"
                     value={formValue.email}
                     placeholder={
-                      isEnglish
-                        ? "Email address for receiving the requested files"
-                        : "请输入接收资料的邮箱"
+                      modalText(
+                        "Email address for receiving the requested files",
+                        "请输入接收资料的邮箱",
+                      )
                     }
                     required={hasItems}
                     onChange={(event) => {
@@ -488,18 +620,14 @@ export default function CompanyInfoRequestModal({
                     {emailCodeCountdown > 0
                       ? `${emailCodeCountdown}s`
                       : hasEmailCodeSent
-                        ? isEnglish
-                          ? "Resend"
-                          : "重新发送"
-                        : isEnglish
-                          ? "Send Code"
-                          : "发送验证码"}
+                        ? modalText("Resend", "重新发送")
+                        : modalText("Send Code", "发送验证码")}
                   </button>
                 </div>
 
                 {enableEmailVerification && hasEmailCodeSent ? (
                   <em className={styles.emailCodeHint}>
-                    {isEnglish ? "Test code: " : "测试验证码："}
+                    {modalText("Test code: ", "测试验证码：")}
                     {TEST_EMAIL_CODE}
                   </em>
                 ) : null}
@@ -508,15 +636,16 @@ export default function CompanyInfoRequestModal({
               {enableEmailVerification ? (
                 <label>
                   <span>
-                    {isEnglish ? "Email Verification Code *" : "邮箱验证码 *"}
+                    {modalText("Email Verification Code *", "邮箱验证码 *")}
                   </span>
                   <input
                     type="text"
                     value={formValue.emailCode}
                     placeholder={
-                      isEnglish
-                        ? "Enter the email verification code"
-                        : "请输入邮箱验证码"
+                      modalText(
+                        "Enter the email verification code",
+                        "请输入邮箱验证码",
+                      )
                     }
                     required={hasItems}
                     onChange={(event) => {
@@ -527,12 +656,12 @@ export default function CompanyInfoRequestModal({
               ) : null}
 
               <label>
-                <span>{isEnglish ? "Name *" : "姓名 *"}</span>
+                <span>{modalText("Name *", "姓名 *")}</span>
                 <input
                   type="text"
                   value={formValue.name}
                   placeholder={
-                    isEnglish ? "Contact name" : "请输入联系人姓名"
+                    modalText("Contact name", "请输入联系人姓名")
                   }
                   required={hasItems}
                   onChange={(event) => {
@@ -542,12 +671,12 @@ export default function CompanyInfoRequestModal({
               </label>
 
               <label>
-                <span>{isEnglish ? "Company *" : "公司名称 *"}</span>
+                <span>{modalText("Company *", "公司名称 *")}</span>
                 <input
                   type="text"
                   value={formValue.company}
                   placeholder={
-                    isEnglish ? "Company name" : "请输入公司名称"
+                    modalText("Company name", "请输入公司名称")
                   }
                   required={hasItems}
                   onChange={(event) => {
@@ -557,12 +686,12 @@ export default function CompanyInfoRequestModal({
               </label>
 
               <label>
-                <span>{isEnglish ? "Country / Region" : "国家 / 地区"}</span>
+                <span>{modalText("Country / Region", "国家 / 地区")}</span>
                 <input
                   type="text"
                   value={formValue.country}
                   placeholder={
-                    isEnglish ? "Country or region" : "请输入国家或地区"
+                    modalText("Country or region", "请输入国家或地区")
                   }
                   onChange={(event) => {
                     updateField("country", event.target.value);
@@ -571,14 +700,15 @@ export default function CompanyInfoRequestModal({
               </label>
 
               <label>
-                <span>{isEnglish ? "Phone / WhatsApp" : "电话 / WhatsApp"}</span>
+                <span>{modalText("Phone / WhatsApp", "电话 / WhatsApp")}</span>
                 <input
                   type="text"
                   value={formValue.phone}
                   placeholder={
-                    isEnglish
-                      ? "Optional contact number"
-                      : "选填，便于进一步沟通"
+                    modalText(
+                      "Optional contact number",
+                      "选填，便于进一步沟通",
+                    )
                   }
                   onChange={(event) => {
                     updateField("phone", event.target.value);
@@ -587,13 +717,14 @@ export default function CompanyInfoRequestModal({
               </label>
 
               <label className={styles.fieldWide}>
-                <span>{isEnglish ? "Notes" : "备注说明"}</span>
+                <span>{modalText("Notes", "备注说明")}</span>
                 <textarea
                   value={formValue.message}
                   placeholder={
-                    isEnglish
-                      ? "Application, intended use, or other requirements"
-                      : "可补充应用场景、资料用途或其他需求"
+                    modalText(
+                      "Application, intended use, or other requirements",
+                      "可补充应用场景、资料用途或其他需求",
+                    )
                   }
                   rows={4}
                   onChange={(event) => {
@@ -621,7 +752,7 @@ export default function CompanyInfoRequestModal({
                 type="button"
                 onClick={onClose}
               >
-                {isEnglish ? "Return to List" : "返回清单"}
+                {modalText("Return to List", "返回清单")}
               </button>
             </div>
           </form>
