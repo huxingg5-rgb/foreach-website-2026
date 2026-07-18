@@ -1,21 +1,24 @@
-﻿import "@/app/contact/contact.css";
-// app/page.tsx
-// 涓枃榛樿棣栭〉鍏ュ彛
-//
-// 璇存槑锛?// 1. 涓枃榛樿璺緞鏄?/
-// 2. 涓嶅啀浣跨敤 /zh
-// 3. 棣栭〉鍐呭缁熶竴浜ょ粰 HomePageContent 缁勪欢娓叉煋
-// 4. defaultLocale 浠?data/languages.ts 璇诲彇锛岄伩鍏嶈瑷€浠ｇ爜鍒板鍐欐
+import "@/app/contact/contact.css";
 
-import HomePageContent from "@/components/home/HomePageContent"; // 寮曞叆棣栭〉鍐呭缁勪欢
-import { defaultLocale } from "@/data/languages"; // 寮曞叆榛樿璇█锛屽綋鍓嶆槸 zh-CN
+import HomePageContent from "@/components/home/HomePageContent";
+import HomeLanguageRedirect from "@/components/i18n/HomeLanguageRedirect";
+import { defaultLocale } from "@/data/languages";
 
 /**
- * HomePage
- * 涓枃榛樿棣栭〉
+ * 中文默认首页
  *
- * 璇存槑锛? * 1. 璁块棶 / 鏃舵樉绀轰腑鏂囬椤? * 2. locale 浼犲叆 zh-CN
+ * 说明：
+ * 1. 根路径 / 仍然是中文首页
+ * 2. HomeLanguageRedirect 只在根首页执行语言判断
+ * 3. 已有用户语言偏好时，优先使用用户选择
+ * 4. 没有语言偏好时，根据浏览器语言自动跳转
+ * 5. 浏览器语言不在支持范围时，默认进入英文 /en/
  */
 export default function HomePage() {
-  return <HomePageContent locale={defaultLocale} />;
+  return (
+    <>
+      <HomeLanguageRedirect />
+      <HomePageContent locale={defaultLocale} />
+    </>
+  );
 }
