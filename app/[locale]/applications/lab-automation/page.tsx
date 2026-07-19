@@ -7,15 +7,21 @@
 
    说明：
    1. 外语路径：/en/applications/lab-automation 等
-   2. 当前外语内容先复用中文占位，后续再补正式翻译
+   2. 英文沿用现有页面，西班牙语使用正式本地化内容
    3. generateStaticParams 用于静态导出
 ========================================================= */
 
 import type { Metadata } from "next";
 
 import ApplicationEnglishClient from "@/components/applications/ApplicationEnglishClient";
+import FrenchIndustryApplicationClient from "@/components/applications/FrenchIndustryApplicationClient";
+import RussianIndustryApplicationClient from "@/components/applications/RussianIndustryApplicationClient";
+import SpanishIndustryApplicationClient from "@/components/applications/SpanishIndustryApplicationClient";
 import LabAutomationApplicationClient from "@/components/applications/lab-automation/LabAutomationApplicationClient";
 import { createEnglishApplicationData } from "@/data/applications/application-english";
+import { createFrenchApplicationMetadata } from "@/data/applications/application-french-metadata";
+import { createRussianApplicationMetadata } from "@/data/applications/application-russian-metadata";
+import { createSpanishApplicationMetadata } from "@/data/applications/application-spanish-metadata";
 import { getLabAutomationApplicationPageData } from "@/services/applications/lab-automation/getLabAutomationApplicationPageData";
 
 import "@/app/applications/lab-automation/lab-automation-application.css";
@@ -33,11 +39,31 @@ export function generateStaticParams() {
   return ENABLED_LOCALES.map((locale) => ({ locale }));
 }
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   title: "Laboratory Automation Applications｜FOREACH",
   description:
     "FOREACH provides pumps, valves, fittings, tubing, sensors and fluidic system support for laboratory automation systems.",
 };
+
+export async function generateMetadata({
+  params,
+}: LabAutomationApplicationLocalePageProps): Promise<Metadata> {
+  const { locale } = await params;
+
+  if (locale === "es") {
+    return createSpanishApplicationMetadata("lab-automation");
+  }
+
+  if (locale === "fr") {
+    return createFrenchApplicationMetadata("lab-automation");
+  }
+
+  if (locale === "ru") {
+    return createRussianApplicationMetadata("lab-automation");
+  }
+
+  return defaultMetadata;
+}
 
 export default async function LabAutomationApplicationLocalePage({
   params,
@@ -49,6 +75,36 @@ export default async function LabAutomationApplicationLocalePage({
     return (
       <ApplicationEnglishClient
         data={createEnglishApplicationData("lab-automation", data)}
+      />
+    );
+  }
+
+  if (locale === "es") {
+    return (
+      <SpanishIndustryApplicationClient
+        data={data}
+        pageClassName="lab-automation-page"
+        applicationTabsAria="Tipos de equipos de automatización de laboratorio"
+      />
+    );
+  }
+
+  if (locale === "fr") {
+    return (
+      <FrenchIndustryApplicationClient
+        data={data}
+        pageClassName="lab-automation-page"
+        applicationTabsAria="Types d’équipements d’automatisation de laboratoire"
+      />
+    );
+  }
+
+  if (locale === "ru") {
+    return (
+      <RussianIndustryApplicationClient
+        data={data}
+        pageClassName="lab-automation-page"
+        applicationTabsAria="Типы оборудования для лабораторной автоматизации"
       />
     );
   }

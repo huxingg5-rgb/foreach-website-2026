@@ -1,18 +1,44 @@
-/* =========================================================
-   life-science-application.i18n.ts
-   恒永达官网｜生命科学应用领域外语数据占位
-
-   文件路径：
-   data/applications/life-science/life-science-application.i18n.ts
-
-   说明：
-   1. 第一阶段为了先跑通页面结构，外语页面暂时复用中文数据
-   2. 后续需要严谨翻译时，再替换为英文 / 西语 / 法语 / 韩语 / 俄语数据
-========================================================= */
-
 import type { LifeScienceApplicationPageData } from "./life-science-application.types";
+import { lifeScienceEsExactText } from "./life-science-application.es";
+import { lifeScienceFrExactText } from "./life-science-application.fr";
+import { lifeScienceRuExactText } from "./life-science-application.ru";
 import { lifeScienceApplicationZhData } from "./life-science-application.zh";
+import { translateFrenchApplicationData } from "../application-french";
+import { translateRussianApplicationData } from "../application-russian";
+import { translateSpanishApplicationData } from "../application-spanish";
 
-export function getLifeScienceApplicationIntlData(_locale: string): LifeScienceApplicationPageData {
+const lifeScienceApplicationEsData =
+  translateSpanishApplicationData<LifeScienceApplicationPageData>(
+    lifeScienceApplicationZhData,
+    lifeScienceEsExactText,
+  );
+
+const lifeScienceApplicationFrData =
+  translateFrenchApplicationData<LifeScienceApplicationPageData>(
+    lifeScienceApplicationZhData,
+    lifeScienceFrExactText,
+  );
+
+const lifeScienceApplicationRuData =
+  translateRussianApplicationData<LifeScienceApplicationPageData>(
+    lifeScienceApplicationZhData,
+    lifeScienceRuExactText,
+  );
+
+export function getLifeScienceApplicationIntlData(
+  locale: string,
+): LifeScienceApplicationPageData {
+  if (locale === "es") {
+    return lifeScienceApplicationEsData;
+  }
+
+  if (locale === "fr") {
+    return lifeScienceApplicationFrData;
+  }
+
+  if (locale === "ru") {
+    return lifeScienceApplicationRuData;
+  }
+
   return lifeScienceApplicationZhData;
 }
