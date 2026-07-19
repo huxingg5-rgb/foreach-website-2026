@@ -271,41 +271,73 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
   "标滚平底接头": {
     zh: "标滚平底接头",
     en: "Standard Flanged Fittings",
+    es: "Racores de brida estándar",
+    fr: "Raccords à bride standard",
+    ko: "표준 플랜지 피팅",
+    ru: "Стандартные фланцевые фитинги",
   },
 
   "标准平底接头": {
     zh: "标准平底接头",
     en: "Standard Flanged Fittings",
+    es: "Racores de brida estándar",
+    fr: "Raccords à bride standard",
+    ko: "표준 플랜지 피팅",
+    ru: "Стандартные фланцевые фитинги",
   },
 
   "紧凑平底接头": {
     zh: "紧凑平底接头",
     en: "Compact Flanged Fittings",
+    es: "Racores de brida compactos",
+    fr: "Raccords à bride compacts",
+    ko: "컴팩트 플랜지 피팅",
+    ru: "Компактные фланцевые фитинги",
   },
 
   "标滚卡箍接头": {
     zh: "标滚卡箍接头",
     en: "Standard Ferrule Fittings",
+    es: "Racores de férula estándar",
+    fr: "Raccords à bague standard",
+    ko: "표준 페룰 피팅",
+    ru: "Стандартные фитинги с обжимной втулкой",
   },
 
   "标准卡箍接头": {
     zh: "标准卡箍接头",
     en: "Standard Ferrule Fittings",
+    es: "Racores de férula estándar",
+    fr: "Raccords à bague standard",
+    ko: "표준 페룰 피팅",
+    ru: "Стандартные фитинги с обжимной втулкой",
   },
 
   "紧凑卡箍接头": {
     zh: "紧凑卡箍接头",
     en: "Compact Ferrule Fittings",
+    es: "Racores de férula compactos",
+    fr: "Raccords à bague compacts",
+    ko: "컴팩트 페룰 피팅",
+    ru: "Компактные фитинги с обжимной втулкой",
   },
 
   "卡环接头": {
     zh: "卡环接头",
     en: "Snap Ring Fittings",
+    es: "Racores con anillo de retención",
+    fr: "Raccords à anneau de retenue",
+    ko: "스냅링 피팅",
+    ru: "Фитинги со стопорным кольцом",
   },
 
   "高压接头": {
     zh: "高压接头",
     en: "High-Pressure Fittings",
+    es: "Racores de alta presión",
+    fr: "Raccords haute pression",
+    ko: "고압 피팅",
+    ru: "Фитинги высокого давления",
   },
 
   "本色": {
@@ -540,6 +572,15 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
   "六角螺母": {
     zh: "六角螺母",
     en: "Hex Nut",
+  },
+
+  "过滤器与单向阀": {
+    zh: "过滤器与单向阀",
+    en: "Filters & Check Valves",
+    es: "Filtros y válvulas de retención",
+    fr: "Filtres et clapets anti-retour",
+    ko: "필터 및 체크 밸브",
+    ru: "Фильтры и обратные клапаны",
   },
 
   "过滤器": {
