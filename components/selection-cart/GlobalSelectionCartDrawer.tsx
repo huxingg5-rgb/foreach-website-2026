@@ -32,6 +32,7 @@ import CompanyInfoRequestModal, {
   type CompanyInfoFormValue,
   type CompanyInfoRequestItem,
 } from "@/components/forms/company-info-request/CompanyInfoRequestModal";
+import { getDrawingRequestCopy } from "@/components/forms/company-info-request/copy";
 import { getLocaleFromPathname, isInternationalLocale, type LocaleCode } from "@/lib/i18n";
 import { getInternationalUiText } from "@/lib/international-ui";
 
@@ -111,6 +112,7 @@ export default function GlobalSelectionCartDrawer() {
   // 国际站尚未单独维护的清单术语统一回退英文，禁止回退中文。
   const isEnglish = isInternationalLocale(locale);
   const t = (text: string) => getInternationalUiText(locale, text);
+  const drawingCopy = getDrawingRequestCopy(locale);
 
   const {
     items,
@@ -729,25 +731,13 @@ export default function GlobalSelectionCartDrawer() {
         locale={locale}
         isOpen={isDrawingRequestModalOpen}
         title={isEnglish ? t("Request Drawings") : "申请图纸"}
-        description={
-          isEnglish
-            ? "Confirm the models that require drawings and provide your contact information."
-            : "请确认需要申请的图纸型号，并留下联系信息。"
-        }
+        description={drawingCopy.description}
         items={drawingRequestModalItems}
-        emptyTitle={isEnglish ? "No drawings requested" : "当前还没有图纸需求"}
-        emptyDescription={
-          isEnglish
-            ? "Return to the list and select Add Drawing for each required model before submitting the request."
-            : "请先回到清单，在需要图纸的型号旁点击“添加图纸”，再提交图纸申请。"
-        }
-        submitLabel={isEnglish ? "Submit Drawing Request" : "提交申请图纸"}
-        successTitle={isEnglish ? "Drawing Request Submitted" : "图纸申请已提交"}
-        successDescription={
-          isEnglish
-            ? "Your drawing request has been submitted successfully. A confirmation email has been sent, and our team will review the requested models before providing the relevant drawings."
-            : "图纸申请已成功发送，系统已向您的邮箱发送确认邮件。我们会审核申请型号，并在确认后提供相关图纸资料。"
-        }
+        emptyTitle={drawingCopy.emptyTitle}
+        emptyDescription={drawingCopy.emptyDescription}
+        submitLabel={drawingCopy.submit}
+        successTitle={drawingCopy.successTitle}
+        successDescription={drawingCopy.successDescription}
         enableEmailVerification
         onClose={() => {
           setIsDrawingRequestModalOpen(false);
