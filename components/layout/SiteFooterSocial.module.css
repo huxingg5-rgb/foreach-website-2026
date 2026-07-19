@@ -50,36 +50,37 @@
 /* =========================================================
    Footer 桌面端布局修正
 
-   1. Footer 与页面主体使用同一个 1320px 内容框架
-   2. 左侧固定为 5 个导航栏目
-   3. 右侧公司信息限制在框架内，并允许长地址正常换行
-   4. 不影响移动端原有折叠交互
+   说明：
+   1. 这些 class 来自全局 Footer 组件，因此使用 :global 选择器
+   2. Footer 内容限制在 1320px 公共内容框架内
+   3. 左侧为 5 个导航栏目，右侧公司信息固定在框架内
+   4. 长地址可以自然换行，不再把页面撑出横向滚动
 ========================================================= */
 
-.footer {
+:global(.site-footer) {
   width: 100%;
   overflow-x: clip;
 }
 
-.footerInner,
-.navWrap,
-.column,
-.right,
-.contact,
-.company,
-.contactText {
+:global(.site-footer__inner),
+:global(.site-footer__nav-wrap),
+:global(.site-footer__column),
+:global(.site-footer__right),
+:global(.site-footer__contact),
+:global(.site-footer__company),
+:global(.site-footer__contact-text) {
   min-width: 0;
   box-sizing: border-box;
 }
 
-.footerInner {
+:global(.site-footer__inner) {
   width: min(1320px, calc(100% - 56px)) !important;
   max-width: 1320px !important;
   margin-inline: auto !important;
 }
 
-.company,
-.contactText {
+:global(.site-footer__company),
+:global(.site-footer__contact-text) {
   max-width: 100%;
   white-space: normal !important;
   overflow-wrap: anywhere;
@@ -87,14 +88,14 @@
 }
 
 @media (min-width: 1101px) {
-  .footerInner {
+  :global(.site-footer__inner) {
     display: grid !important;
     grid-template-columns: minmax(0, 1fr) minmax(360px, 430px) !important;
     align-items: start !important;
     gap: clamp(44px, 4vw, 72px) !important;
   }
 
-  .navWrap {
+  :global(.site-footer__nav-wrap) {
     width: auto !important;
     max-width: none !important;
     display: grid !important;
@@ -103,13 +104,13 @@
     gap: clamp(20px, 2vw, 38px) !important;
   }
 
-  .column {
+  :global(.site-footer__column) {
     width: auto !important;
     max-width: none !important;
     margin: 0 !important;
   }
 
-  .right {
+  :global(.site-footer__right) {
     position: static !important;
     inset: auto !important;
     width: 100% !important;
@@ -121,50 +122,50 @@
     text-align: right !important;
   }
 
-  .contact {
+  :global(.site-footer__contact) {
     width: 100% !important;
     max-width: 100% !important;
   }
 
-  .company {
+  :global(.site-footer__company) {
     margin-inline: 0 !important;
     line-height: 1.35;
   }
 
-  .contactText {
+  :global(.site-footer__contact-text) {
     margin-inline: 0 !important;
     line-height: 1.75;
   }
 
-  .right .socialArea {
+  :global(.site-footer__right) .socialArea {
     width: 100% !important;
     justify-content: flex-end;
   }
 
-  .right .socialRow {
+  :global(.site-footer__right) .socialRow {
     justify-content: flex-end;
   }
 }
 
 @media (max-width: 1100px) {
-  .footerInner {
+  :global(.site-footer__inner) {
     width: min(100% - 40px, 1320px) !important;
   }
 
-  .right {
+  :global(.site-footer__right) {
     max-width: none !important;
   }
 }
 
 @media (max-width: 760px) {
-  .footerInner {
+  :global(.site-footer__inner) {
     width: calc(100% - 32px) !important;
   }
 
-  .right,
-  .contact,
-  .company,
-  .contactText {
+  :global(.site-footer__right),
+  :global(.site-footer__contact),
+  :global(.site-footer__company),
+  :global(.site-footer__contact-text) {
     text-align: left !important;
   }
 
