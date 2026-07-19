@@ -15,7 +15,7 @@
    5. 支持从清单点击型号进入对应详情页
    6. 点击加入清单 / 添加图纸后，不自动打开清单，只让右下角清单按钮轻微动效提示
    7. “申请图纸”弹窗使用通用 CompanyInfoRequestModal 组件
-   8. 当前阶段不真正发送邮件，后续再接 services/resources/requestDrawing.ts
+   8. 图纸申请使用正式邮箱验证码、Redis 验证状态和邮件提交接口
    9. 生成 PDF 清单：
       - 页眉使用 request-form-header-graphic.svg
       - 页脚使用 request-form-footer-graphic.svg
@@ -272,24 +272,109 @@ export default function GlobalSelectionCartDrawer() {
   }
 
   /* =========================================================
-     图纸申请模拟提交
+     图纸申请正式提交
 
-     说明：
-     1. 当前只打印数据，方便后续确认字段结构
-     2. 不发送邮件
-     3. 后续正式提交改为调用：
-        services/resources/requestDrawing.ts
+     流程：
+     1. 邮箱验证码已由 CompanyInfoRequestModal 校验
+     2. 将客户信息和图纸型号清单提交到正式询盘接口
+     3. 公司邮箱收到完整申请
+     4. 客户邮箱收到带申请编号的确认邮件
+     5. 提交成功后取消本次型号的图纸标记，但保留选型清单
   ========================================================= */
-  function handleSubmitDrawingRequest(formValue: CompanyInfoFormValue) {
-    const payload = {
-      customer: formValue,
-      drawingItems: requestDrawingItems,
-      fullCartItems: items,
+  async function handleSubmitDrawingRequest(
+    formValue: CompanyInfoFormValue,
+  ) {
+    if (requestDrawingItems.length === 0) {
+      throw new Error("required_fields_missing");
+    }
+
+    const requestedDrawingLines = requestDrawingItems.map(
+      (item, index) => {
+        if (item.sourceType === "pump-selection") {
+          return [
+            `${index + 1}. ${item.foreachModel}`,
+            `Product Type: ${item.productName}`,
+            `Product Model: ${item.foreachModel}`,
+            `Quantity: ${item.quantity}`,
+          ].join("\n");
+        }
+
+        return [
+          `${index + 1}. ${item.foreachModel}`,
+          `Product: ${item.productName}`,
+          `Product Code: ${item.productCode}`,
+          `Compatible Models: ${
+            item.competitorModels.join(" / ") || "-"
+          }`,
+          `Quantity: ${item.quantity}`,
+        ].join("\n");
+      },
+    );
+
+    const productTypeText = Array.from(
+      new Set(
+        requestDrawingItems.map((item) => item.productName),
+      ),
+    ).join(" / ");
+
+    const targetModelText = requestDrawingItems
+      .map((item) => item.foreachModel)
+      .join(" / ");
+
+    const requirementText = [
+      `Country / Region: ${formValue.country.trim() || "-"}`,
+      "",
+      "Requested Drawing Items:",
+      requestedDrawingLines.join("\n\n"),
+      formValue.message.trim()
+        ? `\nNotes:\n${formValue.message.trim()}`
+        : "",
+    ]
+      .filter(Boolean)
+      .join("\n");
+
+    const response = await fetch("/api/inquiry/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      credentials: "same-origin",
+      body: JSON.stringify({
+        name: formValue.name.trim(),
+        company: formValue.company.trim(),
+        email: formValue.email.trim(),
+        phone: formValue.phone.trim(),
+        requestType: "Drawing Request",
+        productType:
+          productTypeText.slice(0, 200) || "Selected Products",
+        targetModel: targetModelText.slice(0, 200),
+        projectStage: "Drawing Request Review",
+        message: requirementText,
+        locale,
+        attachments: [],
+      }),
+    });
+
+    const data = (await response
+      .json()
+      .catch(() => ({}))) as {
+      success?: boolean;
+      error?: string;
+      referenceId?: string;
     };
 
-    console.log("图纸申请前端模拟数据：", payload);
-  }
+    if (!response.ok || data.success !== true) {
+      throw new Error(data.error || "request_failed");
+    }
 
+    /*
+     * 只取消本次成功提交型号的图纸标记。
+     * 选型产品本身继续保留，便于客户后续生成 PDF 或提交报价需求。
+     */
+    requestDrawingItems.forEach((item) => {
+      toggleDrawingNeed(item.id, false);
+    });
+  }
   /* =========================================================
      打印区域
 
@@ -657,8 +742,8 @@ export default function GlobalSelectionCartDrawer() {
         successTitle={isEnglish ? "Drawing Request Submitted" : "图纸申请已提交"}
         successDescription={
           isEnglish
-            ? "This is currently a front-end preview. Once the email service is connected, the request will be reviewed and the relevant drawings will be sent after confirmation."
-            : "当前为前端视觉模拟。正式上线后，我们会通过邮件接口接收申请，并在确认信息后发送相关图纸资料。"
+            ? "Your drawing request has been submitted successfully. A confirmation email has been sent, and our team will review the requested models before providing the relevant drawings."
+            : "图纸申请已成功发送，系统已向您的邮箱发送确认邮件。我们会审核申请型号，并在确认后提供相关图纸资料。"
         }
         enableEmailVerification
         onClose={() => {

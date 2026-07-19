@@ -30,26 +30,136 @@ import { useEffect, useState, type FormEvent } from "react";
 
 import styles from "./CompanyInfoRequestModal.module.css";
 
-/* 测试版验证码
-   说明：
-   当前前端测试阶段固定为 123456。
-   后期接后端后，这里会删除，验证码由后端生成和校验。
-*/
-const TEST_EMAIL_CODE = "123456";
-
 /* 邮箱验证码冷却时间
    说明：
    当前设为 60 秒，也就是 1 分钟只能发送 1 次。
 */
 const EMAIL_CODE_COOLDOWN_SECONDS = 60;
 
-/* 测试版验证码发送时间缓存 key
-   说明：
-   1. 用于前端测试阶段限制 1 分钟内只能发送 1 次
-   2. 真实上线后应由后端限制发送频率
-*/
-const EMAIL_CODE_LAST_SENT_AT_KEY =
-  "foreach_company_info_request_email_code_last_sent_at_v1";
+type InquiryApiResponse = {
+  success?: boolean;
+  error?: string;
+  referenceId?: string;
+};
+
+/**
+ * 调用正式询盘接口。
+ *
+ * 说明：
+ * 1. 接口必须返回 JSON
+ * 2. HTTP 状态异常或 success 不为 true 时统一抛出错误码
+ * 3. 页面只显示友好错误信息，不显示服务端密钥等敏感信息
+ */
+async function postInquiryApi(
+  url: string,
+  payload: Record<string, unknown>,
+ ): Promise<InquiryApiResponse> {
+  const response = await fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    credentials: "same-origin",
+    body: JSON.stringify(payload),
+  });
+
+  const data = (await response
+    .json()
+    .catch(() => ({}))) as InquiryApiResponse;
+
+  if (!response.ok || data.success !== true) {
+    throw new Error(data.error || "request_failed");
+  }
+
+  return data;
+}
+
+/** 将服务端错误码转换成用户可理解的提示。 */
+function getInquiryErrorMessage(error: unknown, isEnglish: boolean) {
+  const errorCode =
+    error instanceof Error ? error.message : "request_failed";
+
+  const messages: Record<string, [string, string]> = {
+    invalid_email: [
+      "Please enter a valid email address.",
+      "请输入正确的邮箱地址。",
+    ],
+    send_too_frequently: [
+      "A verification code was sent recently. Please try again in 60 seconds.",
+      "验证码发送过于频繁，请在 60 秒后重新发送。",
+    ],
+    invalid_verification_data: [
+      "Enter the complete six-digit verification code.",
+      "请输入完整的六位邮箱验证码。",
+    ],
+    verification_code_missing: [
+      "The verification code is unavailable. Please request a new code.",
+      "验证码不存在或已失效，请重新发送验证码。",
+    ],
+    verification_code_expired: [
+      "The verification code has expired. Please request a new code.",
+      "验证码已过期，请重新发送验证码。",
+    ],
+    verification_code_incorrect: [
+      "The verification code is incorrect.",
+      "邮箱验证码不正确，请重新检查。",
+    ],
+    email_not_verified: [
+      "Please verify your email address again.",
+      "邮箱验证状态无效，请重新获取验证码。",
+    ],
+    email_verification_expired: [
+      "Email verification has expired. Please verify it again.",
+      "邮箱验证已过期，请重新获取验证码。",
+    ],
+    storage_not_configured: [
+      "The verification service is not configured. Please contact the website administrator.",
+      "验证码存储服务尚未配置，请联系网站管理员。",
+    ],
+    email_service_not_configured: [
+      "The email service is not configured. Please contact the website administrator.",
+      "邮件服务尚未配置，请联系网站管理员。",
+    ],
+    name_required: [
+      "Please enter your name.",
+      "请输入联系人姓名。",
+    ],
+    company_required: [
+      "Please enter your company name.",
+      "请输入公司名称。",
+    ],
+    required_fields_missing: [
+      "Please complete all required information.",
+      "请完整填写必填信息。",
+    ],
+    request_failed: [
+      "The request could not be completed. Please try again later.",
+      "请求未能完成，请稍后重新尝试。",
+    ],
+    server_error: [
+      "The server could not complete the request. Please try again later.",
+      "服务器暂时无法完成请求，请稍后重试。",
+    ],
+  };
+
+  const matchedMessage = messages[errorCode];
+
+  if (matchedMessage) {
+    return isEnglish ? matchedMessage[0] : matchedMessage[1];
+  }
+
+  if (
+    error instanceof Error &&
+    error.message &&
+    !/^[a-z0-9_]+$/i.test(error.message)
+  ) {
+    return error.message;
+  }
+
+  return isEnglish
+    ? "The request could not be completed. Please try again later."
+    : "请求未能完成，请稍后重新尝试。";
+}
 
 /* =========================================================
    弹窗中展示的申请条目
@@ -156,33 +266,6 @@ const EMPTY_FORM_VALUE: CompanyInfoFormValue = {
 };
 
 /* =========================================================
-   获取当前验证码剩余冷却时间
-
-   说明：
-   1. 当前是前端测试版逻辑
-   2. 通过 localStorage 记录上次点击“发送验证码”的时间
-   3. 如果 60 秒没到，则返回剩余秒数
-========================================================= */
-function getEmailCodeRemainingSeconds() {
-  if (typeof window === "undefined") return 0;
-
-  const lastSentAtText = window.localStorage.getItem(
-    EMAIL_CODE_LAST_SENT_AT_KEY,
-  );
-
-  if (!lastSentAtText) return 0;
-
-  const lastSentAt = Number(lastSentAtText);
-
-  if (!Number.isFinite(lastSentAt)) return 0;
-
-  const elapsedSeconds = Math.floor((Date.now() - lastSentAt) / 1000);
-  const remainingSeconds = EMAIL_CODE_COOLDOWN_SECONDS - elapsedSeconds;
-
-  return Math.max(0, remainingSeconds);
-}
-
-/* =========================================================
    通用公司信息申请弹窗
 ========================================================= */
 export default function CompanyInfoRequestModal({
@@ -217,6 +300,19 @@ export default function CompanyInfoRequestModal({
   /* 表单错误提示 */
   const [formError, setFormError] = useState("");
 
+  /* 正在发送验证码 */
+  const [isSendingEmailCode, setIsSendingEmailCode] = useState(false);
+
+  /* 正在校验验证码 */
+  const [isVerifyingEmailCode, setIsVerifyingEmailCode] = useState(false);
+
+  /* 正在正式提交申请 */
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  /* 当前邮箱是否已经通过服务端验证 */
+  const [isEmailVerified, setIsEmailVerified] = useState(false);
+  const [verifiedEmail, setVerifiedEmail] = useState("");
+
   const hasItems = items.length > 0;
 
   /* =========================================================
@@ -231,13 +327,16 @@ export default function CompanyInfoRequestModal({
   useEffect(() => {
     if (!isOpen) return;
 
-    const remainingSeconds = getEmailCodeRemainingSeconds();
-
     setFormValue(EMPTY_FORM_VALUE);
     setIsSubmitted(false);
-    setHasEmailCodeSent(remainingSeconds > 0);
-    setEmailCodeCountdown(remainingSeconds);
+    setHasEmailCodeSent(false);
+    setEmailCodeCountdown(0);
     setFormError("");
+    setIsSendingEmailCode(false);
+    setIsVerifyingEmailCode(false);
+    setIsSubmitting(false);
+    setIsEmailVerified(false);
+    setVerifiedEmail("");
   }, [isOpen]);
 
   /* =========================================================
@@ -271,30 +370,35 @@ export default function CompanyInfoRequestModal({
      更新表单字段
   ========================================================= */
   function updateField(field: keyof CompanyInfoFormValue, value: string) {
+    if (field === "email") {
+      setHasEmailCodeSent(false);
+      setEmailCodeCountdown(0);
+      setIsEmailVerified(false);
+      setVerifiedEmail("");
+    }
+
     setFormValue((currentValue) => {
       return {
         ...currentValue,
         [field]: value,
+        ...(field === "email" ? { emailCode: "" } : {}),
       };
     });
 
     setFormError("");
   }
-
   /* =========================================================
-     发送测试版邮箱验证码
+     发送正式邮箱验证码
 
-     说明：
-     1. 当前不发送真实邮件
-     2. 当前测试验证码固定为 123456
-     3. 点击后 60 秒内不能再次发送
-     4. 使用 localStorage 限制关闭弹窗后立刻再次发送
-     5. 后期这里会改成调用后端接口：
-        services/resources/requestDrawing.ts
-        或 services/common/sendEmailCode.ts
+     流程：
+     1. 调用 /api/inquiry/send-code
+     2. Resend 向客户邮箱发送真实六位验证码
+     3. Upstash Redis 保存验证码和 60 秒发送锁
   ========================================================= */
-  function handleSendEmailCode() {
-    if (!formValue.email.trim()) {
+  async function handleSendEmailCode() {
+    const email = formValue.email.trim();
+
+    if (!email) {
       setFormError(
         isEnglish
           ? "Enter your email address before requesting a verification code."
@@ -303,21 +407,24 @@ export default function CompanyInfoRequestModal({
       return;
     }
 
-    const remainingSeconds = getEmailCodeRemainingSeconds();
-
-    if (remainingSeconds > 0) {
-      setEmailCodeCountdown(remainingSeconds);
-      setHasEmailCodeSent(true);
-      return;
-    }
-
-    window.localStorage.setItem(EMAIL_CODE_LAST_SENT_AT_KEY, String(Date.now()));
-
-    setHasEmailCodeSent(true);
-    setEmailCodeCountdown(EMAIL_CODE_COOLDOWN_SECONDS);
+    setIsSendingEmailCode(true);
     setFormError("");
-  }
+    setIsEmailVerified(false);
+    setVerifiedEmail("");
 
+    try {
+      await postInquiryApi("/api/inquiry/send-code", {
+        email,
+      });
+
+      setHasEmailCodeSent(true);
+      setEmailCodeCountdown(EMAIL_CODE_COOLDOWN_SECONDS);
+    } catch (error) {
+      setFormError(getInquiryErrorMessage(error, isEnglish));
+    } finally {
+      setIsSendingEmailCode(false);
+    }
+  }
   /* =========================================================
      提交表单
 
@@ -330,10 +437,12 @@ export default function CompanyInfoRequestModal({
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    if (!hasItems) return;
+    if (!hasItems || isSubmitting) return;
+
+    const email = formValue.email.trim();
 
     if (enableEmailVerification) {
-      if (!hasEmailCodeSent) {
+      if (!hasEmailCodeSent && !isEmailVerified) {
         setFormError(
           isEnglish
             ? "Request an email verification code first."
@@ -342,7 +451,7 @@ export default function CompanyInfoRequestModal({
         return;
       }
 
-      if (!formValue.emailCode.trim()) {
+      if (!isEmailVerified && !formValue.emailCode.trim()) {
         setFormError(
           isEnglish
             ? "Enter the email verification code."
@@ -350,22 +459,53 @@ export default function CompanyInfoRequestModal({
         );
         return;
       }
-
-      if (formValue.emailCode.trim() !== TEST_EMAIL_CODE) {
-        setFormError(
-          isEnglish
-            ? "The test verification code is incorrect. Enter 123456."
-            : "测试版验证码不正确，请输入 123456。",
-        );
-        return;
-      }
     }
 
-    await onSubmitPreview?.(formValue);
+    setIsSubmitting(true);
+    setFormError("");
 
-    setIsSubmitted(true);
+    try {
+      const requiresVerification =
+        enableEmailVerification &&
+        (!isEmailVerified || verifiedEmail !== email);
+
+      if (requiresVerification) {
+        setIsVerifyingEmailCode(true);
+
+        await postInquiryApi("/api/inquiry/verify-code", {
+          email,
+          code: formValue.emailCode.trim(),
+        });
+
+        setIsEmailVerified(true);
+        setVerifiedEmail(email);
+      }
+
+      await onSubmitPreview?.({
+        ...formValue,
+        email,
+      });
+
+      setIsSubmitted(true);
+    } catch (error) {
+      const errorCode =
+        error instanceof Error ? error.message : "";
+
+      if (
+        errorCode === "email_not_verified" ||
+        errorCode === "email_verification_expired"
+      ) {
+        setIsEmailVerified(false);
+        setVerifiedEmail("");
+        setHasEmailCodeSent(false);
+      }
+
+      setFormError(getInquiryErrorMessage(error, isEnglish));
+    } finally {
+      setIsVerifyingEmailCode(false);
+      setIsSubmitting(false);
+    }
   }
-
   return (
     <div className={styles.modalLayer}>
       <button
@@ -422,8 +562,8 @@ export default function CompanyInfoRequestModal({
 
               <p>
                 {isEnglish
-                  ? "Confirm the requested resources and enter your company information. The current verification code is for front-end testing and no email will be sent."
-                  : "请确认需要申请的资料项目，并填写公司信息。当前邮箱验证码为测试版，不会发送真实邮件。"}
+                  ? "Confirm the requested resources and enter your company information. A six-digit verification code will be sent to your email address."
+                  : "请确认需要申请的资料项目并填写公司信息。六位验证码将发送至您填写的邮箱。"}
               </p>
             </div>
 
@@ -483,24 +623,38 @@ export default function CompanyInfoRequestModal({
                   <button
                     type="button"
                     onClick={handleSendEmailCode}
-                    disabled={!hasItems || emailCodeCountdown > 0}
+                    disabled={
+                      !hasItems ||
+                      emailCodeCountdown > 0 ||
+                      isSendingEmailCode ||
+                      isSubmitting
+                    }
                   >
-                    {emailCodeCountdown > 0
-                      ? `${emailCodeCountdown}s`
-                      : hasEmailCodeSent
-                        ? isEnglish
-                          ? "Resend"
-                          : "重新发送"
-                        : isEnglish
-                          ? "Send Code"
-                          : "发送验证码"}
+                    {isSendingEmailCode
+                      ? isEnglish
+                        ? "Sending..."
+                        : "发送中..."
+                      : emailCodeCountdown > 0
+                        ? `${emailCodeCountdown}s`
+                        : hasEmailCodeSent
+                          ? isEnglish
+                            ? "Resend"
+                            : "重新发送"
+                          : isEnglish
+                            ? "Send Code"
+                            : "发送验证码"}
                   </button>
                 </div>
 
                 {enableEmailVerification && hasEmailCodeSent ? (
                   <em className={styles.emailCodeHint}>
-                    {isEnglish ? "Test code: " : "测试验证码："}
-                    {TEST_EMAIL_CODE}
+                    {isEmailVerified
+                      ? isEnglish
+                        ? "Email verified."
+                        : "邮箱已验证。"
+                      : isEnglish
+                        ? "The verification code has been sent and is valid for 10 minutes."
+                        : "验证码已发送，有效期为 10 分钟。"}
                   </em>
                 ) : null}
               </label>
@@ -611,9 +765,21 @@ export default function CompanyInfoRequestModal({
               <button
                 className={styles.submitButton}
                 type="submit"
-                disabled={!hasItems}
+                disabled={
+                  !hasItems ||
+                  isSubmitting ||
+                  isSendingEmailCode
+                }
               >
-                {submitLabel}
+                {isSubmitting
+                  ? isEnglish
+                    ? isVerifyingEmailCode
+                      ? "Verifying..."
+                      : "Submitting..."
+                    : isVerifyingEmailCode
+                      ? "验证中..."
+                      : "提交中..."
+                  : submitLabel}
               </button>
 
               <button
