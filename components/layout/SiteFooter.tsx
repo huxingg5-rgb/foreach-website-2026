@@ -64,12 +64,17 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
   const icpHref = getSiteFooterHref(siteFooterData.icpHref, activeLocale);
   const labelSeparator = activeLocale === "zh-CN" ? "：" : ": ";
 
+  // Footer 不再显示独立首页栏目，只保留 5 个业务栏目。
+  const visibleColumns = siteFooterData.columns.filter(
+    (column) => column.key !== "home",
+  );
+
   return (
     <footer className="site-footer">
       <div className="site-footer__main">
         <div className="site-footer__inner">
           <div className="site-footer__nav-wrap">
-            {siteFooterData.columns.map((column) => {
+            {visibleColumns.map((column) => {
               const isOpen = openColumn === column.key;
               const columnTitle = getSiteFooterText(column.title, activeLocale);
 
@@ -174,7 +179,7 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
                   {siteFooterData.qrCodes.map((item) => {
                     const label = getSiteFooterText(item.label, activeLocale);
                     const imageSrc = item.image ? getSiteFooterHref(item.image, activeLocale) : "";
-  
+
                     return (
                       <div className="site-footer__qrcode-item" key={item.key}>
                         <div className="site-footer__qrcode-box">
@@ -196,7 +201,7 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
                             </>
                           )}
                         </div>
-  
+
                         <span className="site-footer__qrcode-label">{label}</span>
                       </div>
                     );
@@ -231,4 +236,3 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
     </footer>
   );
 }
-
