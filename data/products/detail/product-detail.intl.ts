@@ -3984,7 +3984,8 @@ export function localizeProductDetailData<T extends DetailRecord>(data: T): T {
   const model = inferModel(data, productName);
   const context = { model, productName };
   const localized = localizeValue(data, "root", context) as DetailRecord;
-
+
+
 
   /* ENGLISH_DETAIL_IMAGE_FIELDS_KEEP_SOURCE
    * 英文详情页只翻译文字。
@@ -4286,5 +4287,183 @@ export function localizeProductDetailData<T extends DetailRecord>(data: T): T {
   localized.customInquiryButtonText = localized.bottomCtaButtonText;
   localized.customInquiryHref = "/en/contact";
 
-  return localized as T;
+
+      /* FOREACH_EXPLICIT_EN_FIELDS_START */
+      /*
+       * 优先使用产品数据中人工维护的英文字段。
+       *
+       * 这段代码位于通用翻译逻辑之后，
+       * 因此可以覆盖机器拼接产生的残缺英文，
+       * 同时不影响没有独立英文内容的其他产品。
+       */
+      {
+        const explicitData =
+          data as Record<string, any>;
+
+        const explicitLocalized =
+          localized as Record<string, any>;
+
+        const explicitTitle =
+          explicitData.h1TitleEn ||
+          explicitData.pageTitleEn ||
+          explicitData.titleEn ||
+          explicitData.productNameEn ||
+          explicitData.modelNameEn;
+
+        if (explicitTitle) {
+          for (const key of [
+            "title",
+            "h1Title",
+            "pageTitle",
+            "displayName",
+            "name",
+            "productName",
+            "modelName",
+            "breadcrumbTitle",
+            "breadcrumbLabel",
+            "breadcrumbCurrent",
+          ]) {
+            explicitLocalized[key] =
+              String(explicitTitle);
+          }
+        }
+
+        if (explicitData.modelEn) {
+          explicitLocalized.model =
+            String(explicitData.modelEn);
+        }
+
+        if (explicitData.imageAltEn) {
+          explicitLocalized.imageAlt =
+            String(explicitData.imageAltEn);
+        }
+
+        if (explicitData.descriptionEn) {
+          explicitLocalized.description =
+            String(explicitData.descriptionEn);
+        }
+
+        if (
+          Array.isArray(
+            explicitData.commonApplicationsEn
+          )
+        ) {
+          explicitLocalized.commonApplications =
+            explicitData.commonApplicationsEn;
+        }
+
+        const explicitSpecs =
+          explicitData.specificationsEn ||
+          explicitData.specsEn ||
+          explicitData.technicalSpecificationsEn;
+
+        if (Array.isArray(explicitSpecs)) {
+          explicitLocalized.specs =
+            explicitSpecs;
+
+          explicitLocalized.specifications =
+            explicitSpecs;
+
+          explicitLocalized.technicalSpecifications =
+            explicitSpecs;
+        }
+
+        const explicitFaqs =
+          explicitData.faqsEn ||
+          explicitData.faqItemsEn ||
+          explicitData.faqEn;
+
+        if (Array.isArray(explicitFaqs)) {
+          const normalizedFaqs =
+            explicitFaqs
+              .map((item: any) => ({
+                question: String(
+                  item?.question ||
+                  item?.q ||
+                  ""
+                ).trim(),
+
+                answer: String(
+                  item?.answer ||
+                  item?.a ||
+                  ""
+                ).trim(),
+              }))
+              .filter(
+                (item: any) =>
+                  item.question &&
+                  item.answer
+              );
+
+          explicitLocalized.faqs =
+            normalizedFaqs;
+
+          explicitLocalized.faq =
+            normalizedFaqs;
+
+          explicitLocalized.faqItems =
+            normalizedFaqs;
+        }
+
+        if (
+          explicitData.bottomCtaTitleEn
+        ) {
+          explicitLocalized.bottomCtaTitle =
+            explicitData.bottomCtaTitleEn;
+
+          explicitLocalized.customInquiryTitle =
+            explicitData.bottomCtaTitleEn;
+        }
+
+        if (
+          explicitData.bottomCtaDescriptionEn
+        ) {
+          explicitLocalized.bottomCtaDescription =
+            explicitData.bottomCtaDescriptionEn;
+
+          explicitLocalized.bottomCtaDesc =
+            explicitData.bottomCtaDescriptionEn;
+
+          explicitLocalized.customInquiryDescription =
+            explicitData.bottomCtaDescriptionEn;
+        }
+
+        if (
+          explicitData.bottomCtaButtonTextEn
+        ) {
+          explicitLocalized.bottomCtaButtonText =
+            explicitData.bottomCtaButtonTextEn;
+
+          explicitLocalized.bottomCtaButton =
+            explicitData.bottomCtaButtonTextEn;
+
+          explicitLocalized.customInquiryButtonText =
+            explicitData.bottomCtaButtonTextEn;
+        }
+
+        if (
+          explicitData.seoEn &&
+          typeof explicitData.seoEn === "object"
+        ) {
+          explicitLocalized.seo = {
+            ...(explicitLocalized.seo || {}),
+            ...explicitData.seoEn,
+          };
+        }
+
+        if (explicitData.seoTitleEn) {
+          explicitLocalized.seoTitle =
+            explicitData.seoTitleEn;
+        }
+
+        if (
+          explicitData.seoDescriptionEn
+        ) {
+          explicitLocalized.seoDescription =
+            explicitData.seoDescriptionEn;
+        }
+      }
+      /* FOREACH_EXPLICIT_EN_FIELDS_END */
+
+      return localized as T;
 }

@@ -18,6 +18,7 @@
 export type SelectionCartSourceType =
   | "fitting-replacement"
   | "pump-selection"
+  | "tubing-selection"
   | "valve-selection"
   | "sensor-selection"
   | "custom";

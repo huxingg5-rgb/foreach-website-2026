@@ -26,8 +26,66 @@ import { useMemo, useState } from "react";
 
 import type { CSSProperties, MouseEvent } from "react";
 import { localizeProductDetailData } from "@/data/products/detail/product-detail.intl";
+import {
+  HARD_TUBE_DETAIL_COPY,
+  isHardTubeTargetLocale,
+} from "@/data/products/detail/hard-tube-fitting-detail.intl";
+import { localizeTargetProductDetailData } from "@/data/products/detail/product-detail.target.intl";
 import type { ProductDetailPageData } from "@/data/products/detail/product-detail.types";
 import ProductModelViewer from "./ProductModelViewer";
+
+/* PVC_TUBING_CONFIGURATOR_INTEGRATION_START */
+import {
+  ProductVariantConfigurator,
+} from "@/components/products/configurator";
+
+import type {
+  ProductConfiguratorVariant,
+} from "@/components/products/configurator";
+
+/* PVC_CONFIGURATOR_ENGLISH_START */
+import {
+  pvcTubingConfigurator,
+  pvcTubingConfiguratorEn,
+} from "@/data/products/configurator/pvc-tubing";
+/* PVC_CONFIGURATOR_ENGLISH_END */
+/* PVC_TUBING_CONFIGURATOR_INTEGRATION_END */
+
+/* TPU_TUBING_CONFIGURATOR_INTEGRATION_START */
+import {
+  tpuTubingConfigurator,
+  tpuTubingConfiguratorEn,
+} from "@/data/products/configurator/tpu-tubing";
+/* TPU_TUBING_CONFIGURATOR_INTEGRATION_END */
+
+/* FEP_TUBING_CONFIGURATOR_INTEGRATION_START */
+import {
+  fepTubingConfigurator,
+  fepTubingConfiguratorEn,
+} from "@/data/products/configurator/fep-tubing";
+/* FEP_TUBING_CONFIGURATOR_INTEGRATION_END */
+
+/* PTFE_TUBING_CONFIGURATOR_INTEGRATION_START */
+import {
+  ptfeTubingConfigurator,
+  ptfeTubingConfiguratorEn,
+} from "@/data/products/configurator/ptfe-tubing";
+/* PTFE_TUBING_CONFIGURATOR_INTEGRATION_END */
+
+/* PEEK_TUBING_CONFIGURATOR_INTEGRATION_START */
+import {
+  peekTubingConfigurator,
+  peekTubingConfiguratorEn,
+} from "@/data/products/configurator/peek-tubing";
+/* PEEK_TUBING_CONFIGURATOR_INTEGRATION_END */
+
+/* PFA_TUBING_CONFIGURATOR_INTEGRATION_START */
+import {
+  pfaTubingConfigurator,
+  pfaTubingConfiguratorEn,
+} from "@/data/products/configurator/pfa-tubing";
+/* PFA_TUBING_CONFIGURATOR_INTEGRATION_END */
+
 import styles from "./product-detail.module.css";
 
 type ProductDetailTab = "spec" | "model3d" | "drawing";
@@ -89,9 +147,165 @@ function isTubingDetailData(data: any): boolean {
   );
 }
 
+/* PVC_TUBING_DETAIL_DETECT_START */
+function isPvcTubingDetailData(
+  data: any
+): boolean {
+  const slug = String(
+    data?.slug || ""
+  )
+    .trim()
+    .toLowerCase();
+
+  return (
+    isTubingDetailData(data) &&
+    slug === "pvc-tubing"
+  );
+}
+/* PVC_TUBING_DETAIL_DETECT_END */
+
+/* TPU_TUBING_DETAIL_DETECT_START */
+function isTpuTubingDetailData(
+  data: any
+): boolean {
+  const slug = String(
+    data?.slug || ""
+  )
+    .trim()
+    .toLowerCase();
+
+  return (
+    isTubingDetailData(data) &&
+    slug === "tpu-tubing"
+  );
+}
+/* TPU_TUBING_DETAIL_DETECT_END */
+
+/* FEP_TUBING_DETAIL_DETECT_START */
+function isFepTubingDetailData(
+  data: any
+): boolean {
+  const slug = String(
+    data?.slug || ""
+  )
+    .trim()
+    .toLowerCase();
+
+  return (
+    isTubingDetailData(data) &&
+    slug === "fep-tubing"
+  );
+}
+/* FEP_TUBING_DETAIL_DETECT_END */
+
+/* PTFE_TUBING_DETAIL_DETECT_START */
+function isPtfeTubingDetailData(
+  data: any
+): boolean {
+  const slug = String(
+    data?.slug || ""
+  )
+    .trim()
+    .toLowerCase();
+
+  return (
+    isTubingDetailData(data) &&
+    slug === "ptfe-tubing"
+  );
+}
+/* PTFE_TUBING_DETAIL_DETECT_END */
+
+/* PEEK_TUBING_DETAIL_DETECT_START */
+function isPeekTubingDetailData(
+  data: any
+): boolean {
+  const slug = String(
+    data?.slug || ""
+  )
+    .trim()
+    .toLowerCase();
+
+  return (
+    isTubingDetailData(data) &&
+    slug === "peek-tubing"
+  );
+}
+/* PEEK_TUBING_DETAIL_DETECT_END */
+
+/* PFA_TUBING_DETAIL_DETECT_START */
+function isPfaTubingDetailData(
+  data: any
+): boolean {
+  const slug = String(
+    data?.slug || ""
+  )
+    .trim()
+    .toLowerCase();
+
+  return (
+    isTubingDetailData(data) &&
+    slug === "pfa-tubing"
+  );
+}
+/* PFA_TUBING_DETAIL_DETECT_END */
+
+function isFittingDetailData(data: any): boolean {
+  const categoryText = [
+    data?.sourceType,
+    data?.productCategory,
+    data?.productType,
+    data?.productTypeId,
+    data?.productTypeName,
+    data?.category,
+    data?.categoryId,
+    data?.categoryKey,
+    data?.series,
+    data?.seriesName,
+    data?.detailMode,
+    data?.slug,
+    data?.href,
+    data?.detailHref,
+  ]
+    .map((value) =>
+      String(value || "").trim().toLowerCase()
+    )
+    .filter(Boolean)
+    .join(" ");
+
+  const model = String(
+    data?.model ||
+      data?.displayModel ||
+      data?.modelDisplay ||
+      data?.foreachModel ||
+      ""
+  )
+    .trim()
+    .toUpperCase();
+
+  return (
+    categoryText.includes("fitting") ||
+    categoryText.includes("connector") ||
+    categoryText.includes("quick-connect") ||
+    categoryText.includes("hard-tube") ||
+    categoryText.includes("luer") ||
+    categoryText.includes("barbed") ||
+    categoryText.includes("thread-to-barbed") ||
+    categoryText.includes("female-thread-adapter") ||
+    categoryText.includes("bulkhead-barbed") ||
+    categoryText.includes("check-valve") ||
+    categoryText.includes("filter") ||
+    /^(Q20|Q40|Q60)/.test(model)
+  );
+}
+
+
 function getDisplayModelText(data: any): string {
   if (isTubingDetailData(data)) {
     return "XXX-XXX-XX-XX";
+  }
+
+  if (isHardTubeTargetLocale(String(data?.__locale || ""))) {
+    return data?.displayModel || data?.model || "";
   }
 
   if (isCustomInquiryMode(data)) {
@@ -104,7 +318,7 @@ function getDisplayModelText(data: any): string {
 }
 
 function isCustomInquiryMode(data: any): boolean {
-  
+
   if (
     isValvelessPumpDetailData(data) ||
     data?.isCustomOnly === true ||
@@ -161,6 +375,18 @@ function isHardTubeFittingDetailData(data: any): boolean {
 }
 
 function getModelActionText(data: any): string {
+  const targetLocale = String(data?.__locale || "");
+
+  if (isHardTubeTargetLocale(targetLocale)) {
+    return targetLocale === "es"
+      ? "Seleccionar modelo"
+      : targetLocale === "fr"
+        ? "Sélectionner un modèle"
+        : targetLocale === "ko"
+          ? "모델 선택"
+          : "Выбрать модель";
+  }
+
   if (isTubingDetailData(data)) {
     return data?.__locale === "en" ? "Select a Model" : "选择型号";
   }
@@ -408,6 +634,51 @@ function getTubingBottomCtaData(data: any) {
 }
 
 function getPlungerPumpBottomCta(data: any) {
+  if (isHardTubeTargetLocale(String(data?.__locale || ""))) {
+    return {
+      title: data.bottomCtaTitle,
+      desc: data.bottomCtaDescription || data.bottomCtaDesc,
+      button: data.bottomCtaButtonText || data.bottomCtaButton,
+      href: data.bottomCtaHref,
+    };
+  }
+
+  /* FITTING_BOTTOM_CTA_20260717 */
+  if (isFittingDetailData(data)) {
+    if (isHardTubeTargetLocale(String(data?.__locale || ""))) {
+      return {
+        title: data.bottomCtaTitle,
+        desc: data.bottomCtaDescription || data.bottomCtaDesc,
+        button: data.bottomCtaButtonText || data.bottomCtaButton,
+        href: data.bottomCtaHref,
+      };
+    }
+
+    if (data?.__locale === "en") {
+      return {
+        title:
+          "Fittings for volume orders and custom applications",
+        desc:
+          "FOREACH can support fitting selection, volume supply, and customization based on port type, tube size, material, sealing element, mounting structure, and application conditions.",
+        button:
+          "Contact Us",
+        href:
+          "/contact",
+      };
+    }
+
+    return {
+      title:
+        "接头支持批量采购与定制",
+      desc:
+        "恒永达可根据接口形式、管径、材质、密封件、安装结构及应用工况，提供接头选型、批量供货与定制支持。",
+      button:
+        "联系我们",
+      href:
+        "/contact",
+    };
+  }
+
   const tubingCta = getTubingBottomCtaData(data);
 
   if (tubingCta) {
@@ -542,14 +813,13 @@ if (isCustomInquiryMode(data)) {
   );
 }
 
-function localizeInternalHref(value: unknown, isEnglish: boolean): string {
+function localizeInternalHref(value: unknown, localePrefix: string): string {
   const href = String(value || "").trim();
 
   if (
-    !isEnglish ||
+    !localePrefix ||
     !href.startsWith("/") ||
-    href.startsWith("/en/") ||
-    href === "/en" ||
+    /^\/(?:en|es|fr|ko|ru)(?:\/|$)/.test(href) ||
     href.startsWith("/assets/") ||
     href.startsWith("/images/") ||
     href.startsWith("/_next/") ||
@@ -558,16 +828,16 @@ function localizeInternalHref(value: unknown, isEnglish: boolean): string {
     return href;
   }
 
-  return `/en${href}`;
+  return `${localePrefix}${href}`;
 }
 
 
 function PlungerPumpBottomCta({
   data,
-  isEnglish,
+  localePrefix,
 }: {
   data: any;
-  isEnglish: boolean;
+  localePrefix: string;
 }) {
   const cta = getPlungerPumpBottomCta(data);
 
@@ -576,7 +846,10 @@ function PlungerPumpBottomCta({
   }
 
   return (
-    <section className={styles.plungerBottomCta}>
+    <section
+      className={styles.plungerBottomCta}
+      data-product-bottom-cta="true"
+    >
       <div className={styles.plungerBottomCtaInner}>
         <div className={styles.plungerBottomCtaText}>
           <h2>{cta.title}</h2>
@@ -584,7 +857,7 @@ function PlungerPumpBottomCta({
         </div>
         <a
           className={styles.plungerBottomCtaButton}
-          href={localizeInternalHref(cta.href, isEnglish)}
+          href={localizeInternalHref(cta.href, localePrefix)}
         >
           {cta.button}
         </a>
@@ -803,21 +1076,38 @@ export default function ProductDetailClient({
 }: ProductDetailClientProps) {
   const pathname = usePathname();
   const isEnglish = pathname === "/en" || pathname.startsWith("/en/");
+  const pathnameLocale = String(pathname || "")
+    .split("/")
+    .filter(Boolean)[0] || "";
+  const targetLocale = isHardTubeTargetLocale(pathnameLocale)
+    ? pathnameLocale
+    : null;
+  const isTargetLanguage = Boolean(targetLocale);
+  const isLocalizedDetail = isEnglish || isTargetLanguage;
+  const localePrefix = isEnglish
+    ? "/en"
+    : targetLocale
+      ? `/${targetLocale}`
+      : "";
   const data = useMemo(
     () =>
-      isEnglish
+      targetLocale
+        ? localizeTargetProductDetailData(sourceData, targetLocale, pathname || "")
+        : isEnglish
         ? localizeProductDetailData(sourceData)
         : sourceData,
-    [isEnglish, sourceData]
+    [isEnglish, pathname, sourceData, targetLocale]
   );
   const structuredData = useMemo(
     () =>
-      isEnglish
+      isLocalizedDetail
         ? buildProductStructuredData(data, pathname || "/")
         : null,
-    [data, isEnglish, pathname]
+    [data, isLocalizedDetail, pathname]
   );
-  const copy = isEnglish
+  const copy = targetLocale
+    ? HARD_TUBE_DETAIL_COPY[targetLocale]
+    : isEnglish
     ? {
         breadcrumb: "Breadcrumb navigation",
         home: "Home",
@@ -853,6 +1143,15 @@ export default function ProductDetailClient({
         shape: "Shape",
         housingMaterial: "Housing Material",
         faq: "Frequently Asked Questions",
+        selectModel: "Select a Model",
+        reselect: "Reselect",
+        detailSourceLabel: "Product Detail Page",
+        no2d: "No 2D Drawing",
+        no2dYet: "2D Drawing Not Available Yet",
+        requestDrawing: 'To request a 2D drawing for this product, please click “Add Drawing” above.',
+        drawingLoading: "Loading drawing...",
+        drawingPreview: "Preview Drawing",
+        drawingDescription: (model: string) => `View the technical drawing for ${model}.`,
       }
     : {
         breadcrumb: "面包屑导航",
@@ -889,6 +1188,15 @@ export default function ProductDetailClient({
         shape: "形状",
         housingMaterial: "外壳材质",
         faq: "常见问题",
+        selectModel: "选择型号",
+        reselect: "重新选型",
+        detailSourceLabel: "产品详情页",
+        no2d: "无2D图纸",
+        no2dYet: "2D 图纸暂未上传",
+        requestDrawing: '如需该产品的 2D 图纸，请点击上方“添加图纸”按钮提交需求。',
+        drawingLoading: "图纸加载中...",
+        drawingPreview: "预览图纸",
+        drawingDescription: (model: string) => `查看 ${model} 的技术图纸。`,
       };
     const { addItem, getItem, toggleDrawingNeed, removeItem } = useSelectionCart();
 
@@ -900,6 +1208,161 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
     x: 50,
     y: 50,
   });
+
+  /* PVC_TUBING_CONFIGURATOR_STATE_START */
+  const [
+    isPvcConfiguratorOpen,
+    setIsPvcConfiguratorOpen,
+  ] = useState(false);
+
+  const [
+    selectedPvcVariant,
+    setSelectedPvcVariant,
+  ] =
+    useState<ProductConfiguratorVariant | null>(
+      null
+    );
+
+  const isPvcTubingDetail =
+    isPvcTubingDetailData(data);
+
+  /*
+   * 第一阶段先接入中文PVC管详情页。
+   * 避免英文页面暂时显示中文选型内容。
+   */
+  const isPvcTubingConfiguratorEnabled =
+    isPvcTubingDetail;
+  /* PVC_TUBING_CONFIGURATOR_STATE_END */
+
+  /* TPU_TUBING_CONFIGURATOR_STATE_START */
+  const [
+    isTpuConfiguratorOpen,
+    setIsTpuConfiguratorOpen,
+  ] = useState(false);
+
+  const [
+    selectedTpuVariant,
+    setSelectedTpuVariant,
+  ] =
+    useState<ProductConfiguratorVariant | null>(
+      null
+    );
+
+  const isTpuTubingDetail =
+    isTpuTubingDetailData(data);
+
+  const isTpuTubingConfiguratorEnabled =
+    isTpuTubingDetail;
+
+
+  /* FEP_TUBING_CONFIGURATOR_STATE_START */
+  const [
+    isFepConfiguratorOpen,
+    setIsFepConfiguratorOpen,
+  ] = useState(false);
+
+  const [
+    selectedFepVariant,
+    setSelectedFepVariant,
+  ] =
+    useState<ProductConfiguratorVariant | null>(
+      null
+    );
+
+  const isFepTubingDetail =
+    isFepTubingDetailData(data);
+
+  const isFepTubingConfiguratorEnabled =
+    isFepTubingDetail;
+  /* FEP_TUBING_CONFIGURATOR_STATE_END */
+
+
+  /* PTFE_TUBING_CONFIGURATOR_STATE_START */
+  const [
+    isPtfeConfiguratorOpen,
+    setIsPtfeConfiguratorOpen,
+  ] = useState(false);
+
+  const [
+    selectedPtfeVariant,
+    setSelectedPtfeVariant,
+  ] =
+    useState<ProductConfiguratorVariant | null>(
+      null
+    );
+
+  const isPtfeTubingDetail =
+    isPtfeTubingDetailData(data);
+
+  const isPtfeTubingConfiguratorEnabled =
+    isPtfeTubingDetail;
+  /* PTFE_TUBING_CONFIGURATOR_STATE_END */
+
+  /* PEEK_TUBING_CONFIGURATOR_STATE_START */
+  const [
+    isPeekConfiguratorOpen,
+    setIsPeekConfiguratorOpen,
+  ] = useState(false);
+
+  const [
+    selectedPeekVariant,
+    setSelectedPeekVariant,
+  ] =
+    useState<ProductConfiguratorVariant | null>(
+      null
+    );
+
+  const isPeekTubingDetail =
+    isPeekTubingDetailData(data);
+
+  const isPeekTubingConfiguratorEnabled =
+    isPeekTubingDetail;
+  /* PEEK_TUBING_CONFIGURATOR_STATE_END */
+
+  /* PFA_TUBING_CONFIGURATOR_STATE_START */
+  const [
+    isPfaConfiguratorOpen,
+    setIsPfaConfiguratorOpen,
+  ] = useState(false);
+
+  const [
+    selectedPfaVariant,
+    setSelectedPfaVariant,
+  ] =
+    useState<ProductConfiguratorVariant | null>(
+      null
+    );
+
+  const isPfaTubingDetail =
+    isPfaTubingDetailData(data);
+
+  const isPfaTubingConfiguratorEnabled =
+    isPfaTubingDetail;
+  /* PFA_TUBING_CONFIGURATOR_STATE_END */
+
+  const isTubingConfiguratorEnabled =
+    isPvcTubingConfiguratorEnabled ||
+    isTpuTubingConfiguratorEnabled ||
+    isFepTubingConfiguratorEnabled ||
+    isPtfeTubingConfiguratorEnabled ||
+    isPeekTubingConfiguratorEnabled ||
+    isPfaTubingConfiguratorEnabled;
+
+  const selectedTubingVariant =
+    isPvcTubingConfiguratorEnabled
+      ? selectedPvcVariant
+      : isTpuTubingConfiguratorEnabled
+        ? selectedTpuVariant
+        : isFepTubingConfiguratorEnabled
+          ? selectedFepVariant
+          : isPtfeTubingConfiguratorEnabled
+            ? selectedPtfeVariant
+            : isPeekTubingConfiguratorEnabled
+              ? selectedPeekVariant
+              : isPfaTubingConfiguratorEnabled
+                ? selectedPfaVariant
+                : null;
+  /* TPU_TUBING_CONFIGURATOR_STATE_END */
 
   const realImages = useMemo(() => {
     const images: string[] = [];
@@ -985,7 +1448,21 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
     setActiveThumb((current) => (current === 2 ? 0 : current + 1));
   }
 
+  const detailCartSourceType =
+    isTubingConfiguratorEnabled
+      ? "tubing-selection"
+      : "pump-selection";
+
   function getDetailCartProductCode() {
+    if (
+      isTubingConfiguratorEnabled
+    ) {
+      return (
+        selectedTubingVariant
+          ?.productCode || ""
+      );
+    }
+
     return String(
       data.modelDisplay ||
         data.displayModel ||
@@ -997,16 +1474,32 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
     ).trim();
   }
 
-  function createDetailCartItem(needDrawing: boolean): SelectionCartItemInput {
-    const productCode = getDetailCartProductCode();
-    const modelText = String(
-      data.modelDisplay ||
-        data.displayModel ||
-        data.foreachModel ||
-        data.model ||
-        data.title ||
-        productCode
-    ).trim();
+  function createDetailCartItem(
+    needDrawing: boolean,
+    tubingVariantOverride?: ProductConfiguratorVariant
+  ): SelectionCartItemInput {
+    const activeTubingVariant =
+      tubingVariantOverride ||
+      selectedTubingVariant;
+
+    const productCode =
+      isTubingConfiguratorEnabled
+        ? activeTubingVariant
+            ?.productCode || ""
+        : getDetailCartProductCode();
+
+    const modelText =
+      isTubingConfiguratorEnabled
+        ? activeTubingVariant?.model ||
+          ""
+        : String(
+            data.modelDisplay ||
+              data.displayModel ||
+              data.foreachModel ||
+              data.model ||
+              data.title ||
+              productCode
+          ).trim();
 
     const productName = isPlungerPumpDetailData(data)
       ? isEnglish
@@ -1030,6 +1523,25 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                   : "产品")
         ).trim();
 
+    const resolvedProductName =
+      isPvcTubingConfiguratorEnabled
+        ? isEnglish
+          ? "PVC Tubing"
+          : "PVC 管"
+        : isTpuTubingConfiguratorEnabled
+          ? isEnglish
+            ? "TPU Tubing"
+            : "TPU 管"
+        : isFepTubingConfiguratorEnabled
+          ? isEnglish
+            ? "FEP Tubing"
+            : "FEP 管"
+        : isPtfeTubingConfiguratorEnabled
+          ? isEnglish
+            ? "PTFE Tubing"
+            : "PTFE 管"
+          : productName;
+
     const fallbackDetailHref = data.slug
       ? isPlungerPumpDetailData(data)
         ? `/products/pumps/plunger-pumps/${data.slug}`
@@ -1043,9 +1555,11 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
       : "";
 
     return {
-      sourceType: "pump-selection",
-      sourceLabel: isEnglish ? "Product Detail Page" : "产品详情页",
-      productName,
+      sourceType:
+        detailCartSourceType,
+      sourceLabel: copy.detailSourceLabel,
+      productName:
+        resolvedProductName,
       productCode,
       foreachModel: modelText,
       competitorModels: [],
@@ -1061,14 +1575,18 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
       detailHref:
         data.detailHref ||
         data.href ||
-        (isEnglish && fallbackDetailHref
-          ? `/en${fallbackDetailHref}`
+        (isLocalizedDetail && fallbackDetailHref
+          ? `${localePrefix}${fallbackDetailHref}`
           : fallbackDetailHref),
     };
   }
 
-  
-  const currentDetailCartItem = getItem("pump-selection", getDetailCartProductCode());
+
+  const currentDetailCartItem =
+    getItem(
+      detailCartSourceType,
+      getDetailCartProductCode()
+    );
   const isDetailProductSelected = Boolean(currentDetailCartItem);
   const isDetailDrawingSelected = Boolean(currentDetailCartItem?.needDrawing);
 
@@ -1088,7 +1606,10 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
       return;
     }
 
-    const existingItem = getItem("pump-selection", item.productCode);
+    const existingItem = getItem(
+      detailCartSourceType,
+      item.productCode
+    );
 
     if (existingItem) {
       toggleDrawingNeed(existingItem.id, !existingItem.needDrawing);
@@ -1110,10 +1631,277 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
       return;
     }
 
-    const existingItem = getItem("pump-selection", item.productCode);
+    const existingItem = getItem(
+      detailCartSourceType,
+      item.productCode
+    );
 
     if (existingItem) {
       removeItem(existingItem.id);
+      return;
+    }
+
+    addItem(item);
+  }
+
+  function isPvcVariantSelected(
+    variant: ProductConfiguratorVariant
+  ): boolean {
+    return Boolean(
+      getItem(
+        "tubing-selection",
+        variant.productCode
+      )
+    );
+  }
+
+  function handleTogglePvcVariant(
+    variant: ProductConfiguratorVariant
+  ) {
+    const existingItem = getItem(
+      "tubing-selection",
+      variant.productCode
+    );
+
+    if (existingItem) {
+      removeItem(existingItem.id);
+      return;
+    }
+
+    const item = createDetailCartItem(
+      false,
+      variant
+    );
+
+    if (
+      !item.productCode ||
+      !item.foreachModel
+    ) {
+      console.warn(
+        "PVC管清单参数不完整",
+        variant
+      );
+
+      return;
+    }
+
+    addItem(item);
+  }
+
+  function isTpuVariantSelected(
+    variant: ProductConfiguratorVariant
+  ): boolean {
+    return Boolean(
+      getItem(
+        "tubing-selection",
+        variant.productCode
+      )
+    );
+  }
+
+  function handleToggleTpuVariant(
+    variant: ProductConfiguratorVariant
+  ) {
+    const existingItem = getItem(
+      "tubing-selection",
+      variant.productCode
+    );
+
+    if (existingItem) {
+      removeItem(existingItem.id);
+      return;
+    }
+
+    const item = createDetailCartItem(
+      false,
+      variant
+    );
+
+    if (
+      !item.productCode ||
+      !item.foreachModel
+    ) {
+      console.warn(
+        "TPU管清单参数不完整",
+        variant
+      );
+
+      return;
+    }
+
+    addItem(item);
+  }
+
+  function isFepVariantSelected(
+    variant: ProductConfiguratorVariant
+  ): boolean {
+    return Boolean(
+      getItem(
+        "tubing-selection",
+        variant.productCode
+      )
+    );
+  }
+
+  function handleToggleFepVariant(
+    variant: ProductConfiguratorVariant
+  ) {
+    const existingItem = getItem(
+      "tubing-selection",
+      variant.productCode
+    );
+
+    if (existingItem) {
+      removeItem(existingItem.id);
+      return;
+    }
+
+    const item = createDetailCartItem(
+      false,
+      variant
+    );
+
+    if (
+      !item.productCode ||
+      !item.foreachModel
+    ) {
+      console.warn(
+        "FEP管清单参数不完整",
+        variant
+      );
+
+      return;
+    }
+
+    addItem(item);
+  }
+
+  function isPtfeVariantSelected(
+    variant: ProductConfiguratorVariant
+  ): boolean {
+    return Boolean(
+      getItem(
+        "tubing-selection",
+        variant.productCode
+      )
+    );
+  }
+
+  function handleTogglePtfeVariant(
+    variant: ProductConfiguratorVariant
+  ) {
+    const existingItem = getItem(
+      "tubing-selection",
+      variant.productCode
+    );
+
+    if (existingItem) {
+      removeItem(existingItem.id);
+      return;
+    }
+
+    const item = createDetailCartItem(
+      false,
+      variant
+    );
+
+    if (
+      !item.productCode ||
+      !item.foreachModel
+    ) {
+      console.warn(
+        "PTFE管清单参数不完整",
+        variant
+      );
+
+      return;
+    }
+
+    addItem(item);
+  }
+
+  function isPeekVariantSelected(
+    variant: ProductConfiguratorVariant
+  ): boolean {
+    return Boolean(
+      getItem(
+        "tubing-selection",
+        variant.productCode
+      )
+    );
+  }
+
+  function handleTogglePeekVariant(
+    variant: ProductConfiguratorVariant
+  ) {
+    const existingItem = getItem(
+      "tubing-selection",
+      variant.productCode
+    );
+
+    if (existingItem) {
+      removeItem(existingItem.id);
+      return;
+    }
+
+    const item = createDetailCartItem(
+      false,
+      variant
+    );
+
+    if (
+      !item.productCode ||
+      !item.foreachModel
+    ) {
+      console.warn(
+        "PEEK管清单参数不完整",
+        variant
+      );
+
+      return;
+    }
+
+    addItem(item);
+  }
+
+  function isPfaVariantSelected(
+    variant: ProductConfiguratorVariant
+  ): boolean {
+    return Boolean(
+      getItem(
+        "tubing-selection",
+        variant.productCode
+      )
+    );
+  }
+
+  function handleTogglePfaVariant(
+    variant: ProductConfiguratorVariant
+  ) {
+    const existingItem = getItem(
+      "tubing-selection",
+      variant.productCode
+    );
+
+    if (existingItem) {
+      removeItem(existingItem.id);
+      return;
+    }
+
+    const item = createDetailCartItem(
+      false,
+      variant
+    );
+
+    if (
+      !item.productCode ||
+      !item.foreachModel
+    ) {
+      console.warn(
+        "PFA管清单参数不完整",
+        variant
+      );
+
       return;
     }
 
@@ -1130,16 +1918,245 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
           }}
         />
       ) : null}
+
+      {/* PVC_TUBING_CONFIGURATOR_RENDER_START */}
+      {isPvcTubingConfiguratorEnabled ? (
+        <ProductVariantConfigurator
+          open={
+            isPvcConfiguratorOpen
+          }
+          config={
+            isEnglish
+              ? pvcTubingConfiguratorEn
+              : pvcTubingConfigurator
+          }
+          value={
+            selectedPvcVariant
+          }
+          isVariantSelected={
+            isPvcVariantSelected
+          }
+          onToggleVariant={
+            handleTogglePvcVariant
+          }
+          onClose={() => {
+            setIsPvcConfiguratorOpen(
+              false
+            );
+          }}
+          onConfirm={(variant) => {
+            setSelectedPvcVariant(
+              variant
+            );
+
+            setIsPvcConfiguratorOpen(
+              false
+            );
+          }}
+        />
+      ) : null}
+      {/* PVC_TUBING_CONFIGURATOR_RENDER_END */}
+
+      {/* TPU_TUBING_CONFIGURATOR_RENDER_START */}
+      {isTpuTubingConfiguratorEnabled ? (
+        <ProductVariantConfigurator
+          open={
+            isTpuConfiguratorOpen
+          }
+          config={
+            isEnglish
+              ? tpuTubingConfiguratorEn
+              : tpuTubingConfigurator
+          }
+          value={
+            selectedTpuVariant
+          }
+          isVariantSelected={
+            isTpuVariantSelected
+          }
+          onToggleVariant={
+            handleToggleTpuVariant
+          }
+          onClose={() => {
+            setIsTpuConfiguratorOpen(
+              false
+            );
+          }}
+          onConfirm={(variant) => {
+            setSelectedTpuVariant(
+              variant
+            );
+
+            setIsTpuConfiguratorOpen(
+              false
+            );
+          }}
+        />
+      ) : null}
+      {/* TPU_TUBING_CONFIGURATOR_RENDER_END */}
+
+      {/* FEP_TUBING_CONFIGURATOR_RENDER_START */}
+      {isFepTubingConfiguratorEnabled ? (
+        <ProductVariantConfigurator
+          open={
+            isFepConfiguratorOpen
+          }
+          config={
+            isEnglish
+              ? fepTubingConfiguratorEn
+              : fepTubingConfigurator
+          }
+          value={
+            selectedFepVariant
+          }
+          isVariantSelected={
+            isFepVariantSelected
+          }
+          onToggleVariant={
+            handleToggleFepVariant
+          }
+          onClose={() => {
+            setIsFepConfiguratorOpen(
+              false
+            );
+          }}
+          onConfirm={(variant) => {
+            setSelectedFepVariant(
+              variant
+            );
+
+            setIsFepConfiguratorOpen(
+              false
+            );
+          }}
+        />
+      ) : null}
+      {/* FEP_TUBING_CONFIGURATOR_RENDER_END */}
+
+      {/* PTFE_TUBING_CONFIGURATOR_RENDER_START */}
+      {isPtfeTubingConfiguratorEnabled ? (
+        <ProductVariantConfigurator
+          open={
+            isPtfeConfiguratorOpen
+          }
+          config={
+            isEnglish
+              ? ptfeTubingConfiguratorEn
+              : ptfeTubingConfigurator
+          }
+          value={
+            selectedPtfeVariant
+          }
+          isVariantSelected={
+            isPtfeVariantSelected
+          }
+          onToggleVariant={
+            handleTogglePtfeVariant
+          }
+          onClose={() => {
+            setIsPtfeConfiguratorOpen(
+              false
+            );
+          }}
+          onConfirm={(variant) => {
+            setSelectedPtfeVariant(
+              variant
+            );
+
+            setIsPtfeConfiguratorOpen(
+              false
+            );
+          }}
+        />
+      ) : null}
+      {/* PTFE_TUBING_CONFIGURATOR_RENDER_END */}
+
+      {/* PEEK_TUBING_CONFIGURATOR_RENDER_START */}
+      {isPeekTubingConfiguratorEnabled ? (
+        <ProductVariantConfigurator
+          open={
+            isPeekConfiguratorOpen
+          }
+          config={
+            isEnglish
+              ? peekTubingConfiguratorEn
+              : peekTubingConfigurator
+          }
+          value={
+            selectedPeekVariant
+          }
+          isVariantSelected={
+            isPeekVariantSelected
+          }
+          onToggleVariant={
+            handleTogglePeekVariant
+          }
+          onClose={() => {
+            setIsPeekConfiguratorOpen(
+              false
+            );
+          }}
+          onConfirm={(variant) => {
+            setSelectedPeekVariant(
+              variant
+            );
+
+            setIsPeekConfiguratorOpen(
+              false
+            );
+          }}
+        />
+      ) : null}
+      {/* PEEK_TUBING_CONFIGURATOR_RENDER_END */}
+
+      {/* PFA_TUBING_CONFIGURATOR_RENDER_START */}
+      {isPfaTubingConfiguratorEnabled ? (
+        <ProductVariantConfigurator
+          open={
+            isPfaConfiguratorOpen
+          }
+          config={
+            isEnglish
+              ? pfaTubingConfiguratorEn
+              : pfaTubingConfigurator
+          }
+          value={
+            selectedPfaVariant
+          }
+          isVariantSelected={
+            isPfaVariantSelected
+          }
+          onToggleVariant={
+            handleTogglePfaVariant
+          }
+          onClose={() => {
+            setIsPfaConfiguratorOpen(
+              false
+            );
+          }}
+          onConfirm={(variant) => {
+            setSelectedPfaVariant(
+              variant
+            );
+
+            setIsPfaConfiguratorOpen(
+              false
+            );
+          }}
+        />
+      ) : null}
+      {/* PFA_TUBING_CONFIGURATOR_RENDER_END */}
+
 <SitePageShell
       breadcrumbAriaLabel={copy.breadcrumb}
       breadcrumbItems={[
         {
           label: copy.home,
-          href: isEnglish ? "/en/" : "/",
+          href: localePrefix ? `${localePrefix}/` : "/",
         },
         {
           label: copy.products,
-          href: isEnglish ? "/en/products/" : "/products/",
+          href: localePrefix ? `${localePrefix}/products/` : "/products/",
         },
         {
           label: data.model,
@@ -1148,7 +2165,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
     >
       <main className={styles.page} data-product-detail-page="true">
       <div className={styles.container}>
-        
+
         <section className={styles.productTop}>
           <div data-product-gallery="true" className={styles.gallery} aria-label={copy.gallery}>
             <div data-product-main-stage="true"
@@ -1271,7 +2288,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
             {showThumbnailRow ? (
               <div
                 data-product-thumb-row="true"
-                data-detail-locale={isEnglish ? "en" : "zh"}
+                data-detail-locale={isLocalizedDetail ? "en" : "zh"}
                 className={styles.thumbRow}
                 aria-label={copy.thumbnails}
               >
@@ -1415,12 +2432,12 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
 
             <div className={styles.application}>
               <p className={styles.applicationTitle}>
-                {isEnglish
+                {isLocalizedDetail
                   ? copy.applications
                   : getDbSectionTitle("applications", copy.applications)}
               </p>
               <p className={styles.applicationText}>
-                {data.commonApplications.join(isEnglish ? ", " : "、")}
+                {data.commonApplications.join(isLocalizedDetail ? ", " : "、")}
               </p>
             </div>
 
@@ -1429,15 +2446,90 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                 <div className={styles.modelCodeWrap}>
                   <div className={styles.modelCodeText}>
                     <span className={styles.modelLabel}>{copy.model}</span>
-                    <span className={styles.modelCode}>{getDisplayModelText(data)}</span>
+                    <span
+                      className={
+                        styles.modelCode
+                      }
+                    >
+                      {isTubingConfiguratorEnabled
+                        ? selectedTubingVariant
+                            ?.model ||
+                          getDisplayModelText(
+                            data
+                          )
+                        : getDisplayModelText(
+                            data
+                          )}
+                    </span>
                   </div>
                   <button
                     className={styles.button}
                     type="button"
                     onClick={() => {
+                      if (
+                        isPvcTubingConfiguratorEnabled
+                      ) {
+                        setIsPvcConfiguratorOpen(
+                          true
+                        );
+
+                        return;
+                      }
+
+                      if (
+                        isTpuTubingConfiguratorEnabled
+                      ) {
+                        setIsTpuConfiguratorOpen(
+                          true
+                        );
+
+                        return;
+                      }
+
+
+                      if (
+                        isFepTubingConfiguratorEnabled
+                      ) {
+                        setIsFepConfiguratorOpen(
+                          true
+                        );
+
+                        return;
+                      }
+
+                      if (
+                        isPtfeTubingConfiguratorEnabled
+                      ) {
+                        setIsPtfeConfiguratorOpen(
+                          true
+                        );
+
+                        return;
+                      }
+
+                      if (
+                        isPeekTubingConfiguratorEnabled
+                      ) {
+                        setIsPeekConfiguratorOpen(
+                          true
+                        );
+
+                        return;
+                      }
+
+                      if (
+                        isPfaTubingConfiguratorEnabled
+                      ) {
+                        setIsPfaConfiguratorOpen(
+                          true
+                        );
+
+                        return;
+                      }
+
                       const href = localizeInternalHref(
                         getModelActionHref(data),
-                        isEnglish,
+                        localePrefix,
                       );
 
                       if (isCustomInquiryMode(data)) {
@@ -1448,7 +2540,12 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                       window.open(href, "_blank", "noopener,noreferrer");
                     }}
                   >
-                    {getModelActionText(data)}
+                    {isTubingConfiguratorEnabled &&
+                    selectedTubingVariant
+                      ? copy.reselect
+                      : isTargetLanguage
+                        ? copy.selectModel
+                        : getModelActionText(data)}
                   </button>
                 </div>
 
@@ -1478,6 +2575,10 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                   <button
                     className={styles.button}
                     type="button"
+                    disabled={
+                      isTubingConfiguratorEnabled &&
+                      !selectedTubingVariant
+                    }
                     aria-pressed={isDetailDrawingSelected}
                     onClick={handleAddDrawing}
                   >
@@ -1498,6 +2599,10 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                 <button
                   className={styles.button}
                   type="button"
+                  disabled={
+                    isTubingConfiguratorEnabled &&
+                      !selectedTubingVariant
+                  }
                   aria-pressed={isDetailProductSelected}
                   onClick={handleAddList}
                 >
@@ -1594,7 +2699,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                   slug={data.slug}
                   modelName={data.model}
                   modelUrl={(data as any).model3dUrl || (data as any).resources?.model3dUrl}
-                  locale={isEnglish ? "en" : "zh"}
+                  locale={isLocalizedDetail ? "en" : "zh"}
                 />
               </div>
             </div>
@@ -1612,19 +2717,45 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                   pdfPreviewUrl={getProductDrawingPreviewUrl(data.slug, (data as any).drawing2dUrl || (data as any).drawingPdfUrl || (data as any).partDrawingUrl || (data as any).resources?.drawing2dUrl)}
                   documentTitle={data.model}
                   text={
-                    isEnglish
+                    isLocalizedDetail
                       ? {
-                          title: "Technical Drawing",
-                          loadingLabel: "Loading drawing...",
-                          previewButton: "Preview Drawing",
-                          description: `View the technical drawing for ${data.model}.`,
+                          title: copy.technicalDrawing,
+                          loadingLabel: copy.drawingLoading,
+                          previewButton: copy.drawingPreview,
+                          description: copy.drawingDescription(data.model),
                         }
                       : undefined
                   }
                 />
               ) : (
-                <div className={styles.panelBox}>
-                  {copy.noDrawing}
+                <div
+                  className={[
+                    styles.panelBox,
+                    styles.noDrawingState,
+                  ]
+                    .filter(Boolean)
+                    .join(" ")}
+                  data-product-drawing-empty-state="true"
+                >
+                  <div className={styles.noDrawingContent}>
+                    <h3 className={styles.noDrawingTitle}>
+                      {isTubingDetailData(data) ||
+                      isProbeDetailData(data)
+                        ? copy.no2d
+                        : copy.no2dYet}
+                    </h3>
+
+                    {!isTubingDetailData(data) &&
+                    !isProbeDetailData(data) ? (
+                      <p
+                        className={
+                          styles.noDrawingDescription
+                        }
+                      >
+                        {copy.requestDrawing}
+                      </p>
+                    ) : null}
+                  </div>
                 </div>
               )}
             </div>
@@ -1642,14 +2773,14 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                 {(data as any).modelTableTitle ||
                   copy.completeModels}
               </h2>
-        
+
               {(data as any).modelTableDescription ? (
                 <p>
                   {(data as any).modelTableDescription}
                 </p>
               ) : null}
             </div>
-        
+
             <div style={{ overflowX: "auto" }}>
               <table className={styles.specTable}>
                 <thead>
@@ -1664,7 +2795,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                     <th>{copy.housingMaterial}</th>
                   </tr>
                 </thead>
-        
+
                 <tbody>
                   {(data as any).modelRows.map(
                     (item: any) => {
@@ -1673,7 +2804,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                           item.model ||
                           ""
                       ).trim();
-        
+
                       return (
                         <tr
                           id={rowKey || undefined}
@@ -1703,7 +2834,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
 <section className={styles.faqSection}>
             <div className={styles.faqHeader}>
               <h2>
-                {isEnglish
+                {isLocalizedDetail
                   ? copy.faq
                   : getDbSectionTitle("faq", copy.faq)}
               </h2>
@@ -1755,7 +2886,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
             </div>
           </section>
 
-          <PlungerPumpBottomCta data={data} isEnglish={isEnglish} />
+          <PlungerPumpBottomCta data={data} localePrefix={localePrefix} />
           </>
         ) : null}
 

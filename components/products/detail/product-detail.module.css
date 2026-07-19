@@ -1,4 +1,4 @@
-/* =========================================================
+﻿/* =========================================================
    product-detail.module.css
    恒永达官网｜中文产品详情页
 
@@ -2278,3 +2278,63 @@
   margin-right: 36px !important;
 }
 /* ENGLISH_DETAIL_GALLERY_RIGHT_ARROW_POSITION_END */
+
+/* PRODUCT_DRAWING_EMPTY_STATE_START */
+
+/*
+ * 该元素同时拥有 panelBox 和 noDrawingState，
+ * 使用组合选择器避免原 panelBox 布局覆盖居中规则。
+ */
+.panelBox.noDrawingState {
+  display: flex;
+  width: 100%;
+  min-height: 420px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.noDrawingContent {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.noDrawingTitle {
+  margin: 0;
+  color: #173368;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.noDrawingDescription {
+  width: 100%;
+  max-width: 560px;
+  margin: 14px auto 0;
+  color: #596579;
+  font-size: 16px;
+  line-height: 1.75;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .panelBox.noDrawingState {
+    min-height: 320px;
+    padding: 40px 20px;
+  }
+
+  .noDrawingTitle {
+    font-size: 21px;
+  }
+
+  .noDrawingDescription {
+    font-size: 15px;
+  }
+}
+
+/* PRODUCT_DRAWING_EMPTY_STATE_END */
