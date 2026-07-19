@@ -47,7 +47,127 @@
   object-fit: contain;
 }
 
+/* =========================================================
+   Footer 桌面端布局修正
+
+   1. Footer 与页面主体使用同一个 1320px 内容框架
+   2. 左侧固定为 5 个导航栏目
+   3. 右侧公司信息限制在框架内，并允许长地址正常换行
+   4. 不影响移动端原有折叠交互
+========================================================= */
+
+.footer {
+  width: 100%;
+  overflow-x: clip;
+}
+
+.footerInner,
+.navWrap,
+.column,
+.right,
+.contact,
+.company,
+.contactText {
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.footerInner {
+  width: min(1320px, calc(100% - 56px)) !important;
+  max-width: 1320px !important;
+  margin-inline: auto !important;
+}
+
+.company,
+.contactText {
+  max-width: 100%;
+  white-space: normal !important;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+@media (min-width: 1101px) {
+  .footerInner {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 430px) !important;
+    align-items: start !important;
+    gap: clamp(44px, 4vw, 72px) !important;
+  }
+
+  .navWrap {
+    width: auto !important;
+    max-width: none !important;
+    display: grid !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    align-items: start !important;
+    gap: clamp(20px, 2vw, 38px) !important;
+  }
+
+  .column {
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+
+  .right {
+    position: static !important;
+    inset: auto !important;
+    width: 100% !important;
+    max-width: 430px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    justify-self: end !important;
+    transform: none !important;
+    text-align: right !important;
+  }
+
+  .contact {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .company {
+    margin-inline: 0 !important;
+    line-height: 1.35;
+  }
+
+  .contactText {
+    margin-inline: 0 !important;
+    line-height: 1.75;
+  }
+
+  .right .socialArea {
+    width: 100% !important;
+    justify-content: flex-end;
+  }
+
+  .right .socialRow {
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 1100px) {
+  .footerInner {
+    width: min(100% - 40px, 1320px) !important;
+  }
+
+  .right {
+    max-width: none !important;
+  }
+}
+
 @media (max-width: 760px) {
+  .footerInner {
+    width: calc(100% - 32px) !important;
+  }
+
+  .right,
+  .contact,
+  .company,
+  .contactText {
+    text-align: left !important;
+  }
+
   .socialRow {
     gap: 12px;
     flex-wrap: wrap;
