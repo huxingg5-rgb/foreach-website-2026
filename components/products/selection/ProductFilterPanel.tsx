@@ -13,6 +13,8 @@ type ProductFilterPanelProps = {
   filterGroups: ProductSelectionFilterGroup[];
   mobileOpenFilterGroups?: Record<string, boolean>;
   emptyText: string;
+  currentPrefix?: string;
+  barbedPortLabel?: string;
   resetButtonText?: string;
   submitButtonText?: string;
   onToggleMobileGroup?: (
@@ -256,6 +258,8 @@ export default function ProductFilterPanel({
   filterGroups,
   mobileOpenFilterGroups,
   emptyText,
+  currentPrefix,
+  barbedPortLabel,
   onToggleMobileGroup,
   isOptionActive,
   isOptionDisabled,
@@ -325,7 +329,7 @@ export default function ProductFilterPanel({
                   }
                 >
                   <span>
-                        {/[\u3400-\u9fff]/.test(
+                        {barbedPortLabel || /[\u3400-\u9fff]/.test(
                           filterGroups.find(
                             (item) =>
                               item.key === "filter02"
@@ -689,7 +693,7 @@ export default function ProductFilterPanel({
                   >
                     <span className="filter-check" />
                     <span>
-                      当前：{activeOption.label}
+                      {currentPrefix || "当前："}{activeOption.label}
                     </span>
                   </button>
                 </div>
