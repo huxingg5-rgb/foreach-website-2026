@@ -8,6 +8,8 @@ import {
   useState,
 } from "react";
 import { createPortal } from "react-dom";
+import { getInternationalUiText } from "@/lib/international-ui";
+import type { LocaleCode } from "@/lib/i18n";
 
 type SearchModule =
   | "products"
@@ -255,7 +257,7 @@ function getTechnicalText(value: string | undefined): string {
     .trim();
 }
 
-function getEnglishSearchItem(item: CompactSearchItem): CompactSearchItem {
+function getEnglishSearchItem(item: CompactSearchItem, locale: LocaleCode): CompactSearchItem {
   const technicalText = getTechnicalText(item.s);
   const title = !containsHan(item.t)
     ? item.t
@@ -272,8 +274,8 @@ function getEnglishSearchItem(item: CompactSearchItem): CompactSearchItem {
     ...item,
     t: title,
     s: subtitle,
-    d: ENGLISH_RESULT_DESCRIPTIONS[item.m],
-    a: MODULE_TEXT_EN[item.m].action,
+    d: getInternationalUiText(locale, ENGLISH_RESULT_DESCRIPTIONS[item.m]),
+    a: getInternationalUiText(locale, MODULE_TEXT_EN[item.m].action),
     x: [
       item.x,
       normalize(title),
@@ -443,8 +445,10 @@ export default function GlobalSearchPanel({
 }: GlobalSearchPanelProps) {
   // 国际语言优先使用英文索引内容作为回退，界面和结果链接保留当前 Locale。
   const isEnglish = locale !== "zh-CN" && locale !== "zh";
+  const activeLocale = locale as LocaleCode;
+  const t = (text: string) => getInternationalUiText(activeLocale, text);
   const moduleText = isEnglish
-    ? MODULE_TEXT_EN
+    ? Object.fromEntries(Object.entries(MODULE_TEXT_EN).map(([key, value]) => [key, { title: t(value.title), action: t(value.action) }])) as typeof MODULE_TEXT_EN
     : MODULE_TEXT;
   const suggestions = isEnglish
     ? INITIAL_SUGGESTIONS_EN
@@ -612,8 +616,8 @@ export default function GlobalSearchPanel({
       return items;
     }
 
-    return items.map(getEnglishSearchItem);
-  }, [isEnglish, items]);
+    return items.map((item) => getEnglishSearchItem(item, activeLocale));
+  }, [activeLocale, isEnglish, items]);
 
   const groupedResults = useMemo(() => {
     const grouped = new Map<
@@ -717,7 +721,7 @@ export default function GlobalSearchPanel({
       data-global-search-panel="true"
       aria-label={
         isEnglish
-          ? "Site search results"
+          ? t("Site search results")
           : "全站搜索结果"
       }
       style={{
@@ -733,13 +737,13 @@ export default function GlobalSearchPanel({
       <div className="global-search-panel-inner">
         <div className="global-search-panel-head">
           <div>
-            <span>{isEnglish ? "Site Search" : "全站搜索"}</span>
+            <span>{isEnglish ? t("Site Search") : "全站搜索"}</span>
 
             <strong>
               {query.trim()
                 ? `“${query.trim()}”`
                 : isEnglish
-                  ? "Search products and technical resources"
+                  ? t("Search products and technical resources")
                   : "搜索产品与技术资料"}
             </strong>
           </div>
@@ -751,7 +755,7 @@ export default function GlobalSearchPanel({
             loadState === "ready" ? (
               <span>
                 {isEnglish
-                  ? `${totalCount} results`
+                  ? `${totalCount} ${t("results")}`
                   : `共 ${totalCount} 条结果`}
               </span>
             ) : null}
@@ -761,7 +765,7 @@ export default function GlobalSearchPanel({
               type="button"
               aria-label={
                 isEnglish
-                  ? "Close site search"
+                  ? `${t("Close")} ${t("Site Search")}`
                   : "关闭全站搜索"
               }
               onClick={onClose}
@@ -775,7 +779,7 @@ export default function GlobalSearchPanel({
           <div className="global-search-start">
             <p>
               {isEnglish
-                ? "Search by product name, model, compatible model, datasheet, guide, or technical keyword."
+                ? t("Search by product name, model, compatible model, datasheet, guide, or technical keyword.")
                 : "输入产品名称、型号、兼容型号、规格书、教程或技术关键词。"}
             </p>
 
@@ -797,18 +801,18 @@ export default function GlobalSearchPanel({
           </div>
         ) : showLoading ? (
           <div className="global-search-status">
-            {isEnglish ? "Searching..." : "正在搜索……"}
+            {isEnglish ? t("Searching") : "正在搜索……"}
           </div>
         ) : queryTooShort ? (
           <div className="global-search-status">
             <strong>
               {isEnglish
-                ? "Enter another character"
+                ? t("Enter another character")
                 : "请继续输入关键词"}
             </strong>
             <p>
               {isEnglish
-                ? "Enter at least two letters or numbers."
+                ? t("Enter at least two letters or numbers.")
                 : "英文字母或数字至少输入 2 个字符；中文可输入 1 个字。"}
             </p>
           </div>
@@ -816,12 +820,12 @@ export default function GlobalSearchPanel({
           <div className="global-search-status">
             <strong>
               {isEnglish
-                ? "Search data could not be loaded"
+                ? t("Search data could not be loaded")
                 : "搜索数据加载失败"}
             </strong>
             <p>
               {isEnglish
-                ? "Refresh the page and try again."
+                ? t("Refresh the page and try again.")
                 : "请重新启动开发服务并刷新页面。"}
             </p>
           </div>
@@ -829,12 +833,12 @@ export default function GlobalSearchPanel({
           <div className="global-search-status">
             <strong>
               {isEnglish
-                ? "No matching results"
+                ? t("No matching results")
                 : "没有找到匹配结果"}
             </strong>
             <p>
               {isEnglish
-                ? "Check the model number or try a product name, series, material, or application keyword."
+                ? t("Check the model number or try a product name, series, material, or application keyword.")
                 : "请检查型号是否完整，或尝试产品名称、系列、材料及应用关键词。"}
             </p>
           </div>
@@ -991,10 +995,10 @@ export default function GlobalSearchPanel({
                     >
                       {allVisible
                         ? isEnglish
-                          ? "Show Less"
+                          ? t("Show Less")
                           : "收起结果"
                         : isEnglish
-                          ? `Show More (${moduleResults.length - visibleCount} remaining)`
+                          ? `${t("Show More")} (${moduleResults.length - visibleCount} ${t("remaining")})`
                           : `查看更多（剩余 ${
                               moduleResults.length -
                               visibleCount

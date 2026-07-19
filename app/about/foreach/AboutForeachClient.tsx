@@ -1,7 +1,8 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
+import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
+import { getAboutBreadcrumb } from "@/data/about-breadcrumb";
 
 /* =========================================================
    文件路径：
@@ -534,10 +535,13 @@ export default function AboutForeachClient({
 
   const [locale, setLocale] = useState<Locale>(initialLocale);
 
-    /* 面包屑链接：中文不带语言前缀，其他语言带 /en /es /fr /ko /ru */
-  const homeHref = locale === "zh-CN" ? "/" : `/${locale}`;
-  const aboutHref =
-    locale === "zh-CN" ? "/about/foreach" : `/${locale}/about/foreach`;
+  const breadcrumb = getAboutBreadcrumb(
+    locale,
+    getLocalizedText(
+      { "zh-CN": "关于恒永达", en: "About FOREACH", es: "Sobre FOREACH", fr: "À propos de FOREACH", ko: "FOREACH 소개", ru: "О FOREACH" },
+      locale,
+    ),
+  );
 
   useEffect(() => {
     const syncLocale = () => {
@@ -606,68 +610,11 @@ export default function AboutForeachClient({
           <p>{getLocalizedText(pageText.heroDescription, locale)}</p>
         </div>
       </section>
- <nav
+      <SiteBreadcrumb
         className="about-culture-breadcrumb"
-        aria-label={getLocalizedText(
-          {
-            "zh-CN": "面包屑导航",
-            en: "Breadcrumb",
-            es: "Ruta de navegación",
-            fr: "Fil d’Ariane",
-            ko: "브레드크럼",
-            ru: "Навигационная цепочка",
-          },
-          locale
-        )}
-      >
-        <div className="about-culture-breadcrumb-inner">
-          <Link href={homeHref}>
-            {getLocalizedText(
-              {
-                "zh-CN": "首页",
-                en: "Home",
-                es: "Inicio",
-                fr: "Accueil",
-                ko: "홈",
-                ru: "Главная",
-              },
-              locale
-            )}
-          </Link>
-
-          <span>/</span>
-
-          <Link href={aboutHref}>
-            {getLocalizedText(
-              {
-                "zh-CN": "关于我们",
-                en: "About Us",
-                es: "Sobre nosotros",
-                fr: "À propos",
-                ko: "회사 소개",
-                ru: "О нас",
-              },
-              locale
-            )}
-          </Link>
-
-          <span>/</span>
-
-          <strong>
-            {getLocalizedText(
-              {
-                "zh-CN": "关于恒永达",
-                en: "About FOREACH",
-                es: "Sobre FOREACH",
-                fr: "À propos de FOREACH",
-                ko: "FOREACH 소개",
-                ru: "О FOREACH",
-              },
-              locale
-            )}
-          </strong>
-        </div>
-      </nav>
+        ariaLabel={breadcrumb.ariaLabel}
+        items={breadcrumb.items}
+      />
       {/* ================================
           第二部分：恒永达介绍 + 视频
       ================================ */}

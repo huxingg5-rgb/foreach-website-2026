@@ -1,4 +1,6 @@
 import Image from "next/image";
+import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
+import { getAboutBreadcrumb } from "@/data/about-breadcrumb";
 import {
   aboutQualityImages,
   getAboutQualityContent,
@@ -31,6 +33,7 @@ export default function QualityPageContent({
      2. 英文取 en
      3. 其他语言如果暂时没填完整，会先回退到英文 */
   const content = getAboutQualityContent(locale);
+  const breadcrumb = getAboutBreadcrumb(locale, content.lifeTitle);
 
   return (
     <main className="quality-page">
@@ -58,6 +61,12 @@ export default function QualityPageContent({
           </div>
         </div>
       </section>
+
+      <SiteBreadcrumb
+        ariaLabel={breadcrumb.ariaLabel}
+        items={breadcrumb.items}
+        variant="bar"
+      />
 
       {/* ================================
           第二屏：质量生命线介绍
@@ -275,4 +284,4 @@ export default function QualityPageContent({
       </section>
     </main>
   );
-}  
+}

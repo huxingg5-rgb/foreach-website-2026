@@ -33,6 +33,7 @@ import CompanyInfoRequestModal, {
   type CompanyInfoRequestItem,
 } from "@/components/forms/company-info-request/CompanyInfoRequestModal";
 import { getLocaleFromPathname, isInternationalLocale, type LocaleCode } from "@/lib/i18n";
+import { getInternationalUiText } from "@/lib/international-ui";
 
 import styles from "./GlobalSelectionCartDrawer.module.css";
 import { useSelectionCart } from "./SelectionCartProvider";
@@ -109,6 +110,7 @@ export default function GlobalSelectionCartDrawer() {
   const locale = getLocaleFromPathname(pathname);
   // 国际站尚未单独维护的清单术语统一回退英文，禁止回退中文。
   const isEnglish = isInternationalLocale(locale);
+  const t = (text: string) => getInternationalUiText(locale, text);
 
   const {
     items,
@@ -172,18 +174,18 @@ export default function GlobalSelectionCartDrawer() {
         metaLines:
           item.sourceType === "pump-selection"
             ? [
-                `${isEnglish ? "Product Type" : "产品类型"}: ${item.productName}`,
-                `${isEnglish ? "Product Model" : "产品型号"}: ${item.foreachModel}`,
-                `${isEnglish ? "Quantity" : "数量"}: ${item.quantity}`,
+                `${isEnglish ? t("Product Type") : "产品类型"}: ${item.productName}`,
+                `${isEnglish ? t("Product Model") : "产品型号"}: ${item.foreachModel}`,
+                `${isEnglish ? t("Quantity") : "数量"}: ${item.quantity}`,
               ]
             : [
-                `${isEnglish ? "Product Code" : "商品编码"}: ${item.productCode}`,
-                `${isEnglish ? "Compatible Models" : "兼容编码"}: ${item.competitorModels.join(" / ") || "-"}`,
-                `${isEnglish ? "Quantity" : "数量"}: ${item.quantity}`,
+                `${isEnglish ? t("Product Code") : "商品编码"}: ${item.productCode}`,
+                `${isEnglish ? t("Compatible Models") : "兼容编码"}: ${item.competitorModels.join(" / ") || "-"}`,
+                `${isEnglish ? t("Quantity") : "数量"}: ${item.quantity}`,
               ],
       };
     });
-  }, [isEnglish, requestDrawingItems]);
+  }, [isEnglish, locale, requestDrawingItems]);
 
   /* =========================================================
      右下角清单按钮轻动效
@@ -503,11 +505,11 @@ export default function GlobalSelectionCartDrawer() {
             });
           }}
         >
-          {isEnglish ? "Top" : "顶部"}
+          {isEnglish ? t("Top") : "顶部"}
         </button>
 
         <button type="button" onClick={openCart}>
-          {isEnglish ? "List" : "清单"}
+          {isEnglish ? t("List") : "清单"}
           <span>{items.length}</span>
         </button>
       </div>
@@ -520,17 +522,17 @@ export default function GlobalSelectionCartDrawer() {
           <button
             className={styles.mask}
             type="button"
-            aria-label={isEnglish ? "Close selection list" : "关闭选型清单"}
+            aria-label={isEnglish ? `${t("Close")} ${t("Product Selection List")}` : "关闭选型清单"}
             onClick={closeCart}
           />
 
           <aside
             className={styles.drawer}
-            aria-label={isEnglish ? "Product selection list" : "选型清单"}
+            aria-label={isEnglish ? t("Product Selection List") : "选型清单"}
           >
             <div className={styles.head}>
               <div>
-                <h2>{isEnglish ? "Product Selection List" : "选型清单"}</h2>
+                <h2>{isEnglish ? t("Product Selection List") : "选型清单"}</h2>
                 <p>
                   {isEnglish
                     ? "Confirm models, quantities, and drawing requirements before submitting or generating a PDF list."
@@ -541,7 +543,7 @@ export default function GlobalSelectionCartDrawer() {
               <button
                 type="button"
                 onClick={closeCart}
-                aria-label={isEnglish ? "Close selection list" : "关闭选型清单"}
+                aria-label={isEnglish ? `${t("Close")} ${t("Product Selection List")}` : "关闭选型清单"}
               >
                 ×
               </button>
@@ -550,7 +552,7 @@ export default function GlobalSelectionCartDrawer() {
             <div className={styles.body}>
               {items.length === 0 ? (
                 <div className={styles.empty}>
-                  {isEnglish ? "No products selected" : "暂无选型产品"}
+                  {isEnglish ? t("No products selected") : "暂无选型产品"}
                   <br />
                   {isEnglish
                     ? "Select a model and add it to the list."
@@ -560,13 +562,13 @@ export default function GlobalSelectionCartDrawer() {
                 <>
                   <div className={styles.summary}>
                     <div>
-                      <span>{isEnglish ? "Products" : "产品数量"}</span>
+                      <span>{isEnglish ? t("ProductsCount") : "产品数量"}</span>
                       <strong>{items.length}</strong>
                       <em>{isEnglish ? "items" : "项"}</em>
                     </div>
 
                     <div>
-                      <span>{isEnglish ? "Drawing Requests" : "图纸需求"}</span>
+                      <span>{isEnglish ? t("Drawing Requests") : "图纸需求"}</span>
                       <strong>{drawingNeedCount}</strong>
                       <em>{isEnglish ? "items" : "项"}</em>
                     </div>
@@ -579,7 +581,7 @@ export default function GlobalSelectionCartDrawer() {
                           <button
                             className={styles.removeButton}
                             type="button"
-                            aria-label={isEnglish ? "Remove product" : "删除该产品"}
+                            aria-label={isEnglish ? t("Remove") : "删除该产品"}
                             onClick={() => {
                               removeItem(item.id);
                             }}
@@ -622,27 +624,27 @@ export default function GlobalSelectionCartDrawer() {
                               }}
                             >
                               {item.needDrawing
-                                ? isEnglish ? "Drawing Added" : "已添加图纸"
-                                : isEnglish ? "Add Drawing" : "添加图纸"}
+                                ? isEnglish ? t("Drawing Added") : "已添加图纸"
+                                : isEnglish ? t("Add Drawing") : "添加图纸"}
                             </button>
                           </div>
 
                           {item.sourceType === "pump-selection" ? (
                             <div className={styles.infoRow}>
-                              <span>{isEnglish ? "Product Type" : "产品类型"}</span>
+                              <span>{isEnglish ? t("Product Type") : "产品类型"}</span>
                               <strong>{item.productName}</strong>
                             </div>
                           ) : (
                             <>
                               <div className={styles.infoRow}>
-                                <span>{isEnglish ? "Compatible Models" : "兼容编码"}</span>
+                                <span>{isEnglish ? t("Compatible Models") : "兼容编码"}</span>
                                 <strong>
                                   {item.competitorModels.join(" / ") || "-"}
                                 </strong>
                               </div>
 
                               <div className={styles.infoRow}>
-                                <span>{isEnglish ? "Product Code" : "商品编码"}</span>
+                                <span>{isEnglish ? t("Product Code") : "商品编码"}</span>
                                 <strong>{item.productCode}</strong>
                               </div>
                             </>
@@ -650,7 +652,7 @@ export default function GlobalSelectionCartDrawer() {
 
                           <div className={styles.quantityRow}>
                             <label htmlFor={`global-cart-qty-${item.id}`}>
-                              {isEnglish ? "Quantity" : "数量"}
+                              {isEnglish ? t("Quantity") : "数量"}
                             </label>
 
                             <input
@@ -689,7 +691,7 @@ export default function GlobalSelectionCartDrawer() {
                 type="button"
                 onClick={handleOpenDrawingRequestModal}
               >
-                {isEnglish ? "Request Drawings" : "申请图纸"}
+                {isEnglish ? t("Request Drawings") : "申请图纸"}
               </button>
 
               <button
@@ -697,7 +699,7 @@ export default function GlobalSelectionCartDrawer() {
                 type="button"
                 onClick={handleGeneratePdfList}
               >
-                {isEnglish ? "Generate PDF List" : "生成 PDF 清单"}
+                {isEnglish ? t("Generate PDF List") : "生成 PDF 清单"}
               </button>
 
               <button
@@ -705,7 +707,7 @@ export default function GlobalSelectionCartDrawer() {
                 type="button"
                 onClick={copyCartText}
               >
-                {isEnglish ? "Copy List" : "复制分享"}
+                {isEnglish ? t("Copy List") : "复制分享"}
               </button>
 
               <button
@@ -713,7 +715,7 @@ export default function GlobalSelectionCartDrawer() {
                 type="button"
                 onClick={clearCart}
               >
-                {isEnglish ? "Clear" : "清空"}
+                {isEnglish ? t("Clear") : "清空"}
               </button>
             </div>
           </aside>
@@ -726,7 +728,7 @@ export default function GlobalSelectionCartDrawer() {
       <CompanyInfoRequestModal
         locale={locale}
         isOpen={isDrawingRequestModalOpen}
-        title={isEnglish ? "Request Drawings" : "申请图纸"}
+        title={isEnglish ? t("Request Drawings") : "申请图纸"}
         description={
           isEnglish
             ? "Confirm the models that require drawings and provide your contact information."

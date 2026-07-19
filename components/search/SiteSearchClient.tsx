@@ -12,6 +12,8 @@ import type {
   SiteSearchItem,
   SiteSearchModule,
 } from "@/data/search/site-search.types";
+import { getInternationalUiText } from "@/lib/international-ui";
+import type { LocaleCode } from "@/lib/i18n";
 
 import "./site-search.css";
 
@@ -120,6 +122,7 @@ function getLocalizedResultHref(href: string, locale: string): string {
 }
 
 function getEnglishSearchItem(item: SiteSearchItem, locale: string): SiteSearchItem {
+  const activeLocale = locale as LocaleCode;
   const title = !containsHan(item.title)
     ? item.title
     : item.model || item.productCode || getPathLabel(item.href);
@@ -133,14 +136,17 @@ function getEnglishSearchItem(item: SiteSearchItem, locale: string): SiteSearchI
     ...item,
     title,
     subtitle,
-    description: ENGLISH_RESULT_DESCRIPTIONS[item.module],
+    description: getInternationalUiText(
+      activeLocale,
+      ENGLISH_RESULT_DESCRIPTIONS[item.module],
+    ),
     href: getLocalizedResultHref(item.href, locale),
     actionLabel:
       item.module === "datasheets"
-        ? "View Datasheet"
+        ? getInternationalUiText(activeLocale, "View Datasheet")
         : item.module === "compatible-models"
-          ? "View Compatible Product"
-          : "View Product",
+          ? getInternationalUiText(activeLocale, "View Compatible Product")
+          : getInternationalUiText(activeLocale, "View Product"),
     keywords: [
       ...item.keywords,
       title,
@@ -199,9 +205,11 @@ function getLocalizedSearchPath(locale: string) {
 function SearchResultItem({
   item,
   isEnglish,
+  detailsLabel,
 }: {
   item: SiteSearchItem;
   isEnglish: boolean;
+  detailsLabel: string;
 }) {
   return (
     <a className="site-search-result-card" href={item.href}>
@@ -234,7 +242,7 @@ function SearchResultItem({
         ) : null}
 
         <span className="site-search-result-action">
-          {item.actionLabel ?? (isEnglish ? "View Details" : "查看详情")}
+          {item.actionLabel ?? (isEnglish ? detailsLabel : "查看详情")}
           <span aria-hidden="true">→</span>
         </span>
       </div>
@@ -252,7 +260,11 @@ export default function SiteSearchClient({
   const [inputValue, setInputValue] = useState(queryFromUrl);
   // 四国语言内容缺失时统一回退英文，禁止显示中文；路由仍保留当前 Locale。
   const isEnglish = locale !== "zh-CN" && locale !== "zh";
-  const moduleText = isEnglish ? MODULE_TEXT_EN : MODULE_TEXT;
+  const activeLocale = locale as LocaleCode;
+  const t = (text: string) => getInternationalUiText(activeLocale, text);
+  const moduleText = isEnglish
+    ? Object.fromEntries(Object.entries(MODULE_TEXT_EN).map(([key, value]) => [key, { title: t(value.title), description: t(value.description), empty: t(value.empty) }])) as typeof MODULE_TEXT_EN
+    : MODULE_TEXT;
 
   const groupedResults = useMemo(() => {
     const result: Record<SiteSearchModule, SiteSearchItem[]> = {
@@ -312,10 +324,10 @@ export default function SiteSearchClient({
       <section className="site-search-hero">
         <div className="site-search-container">
           <p className="site-search-eyebrow">FOREACH SEARCH</p>
-          <h1>{isEnglish ? "Site Search" : "全站搜索"}</h1>
+          <h1>{isEnglish ? t("Site Search") : "全站搜索"}</h1>
           <p>
             {isEnglish
-              ? "Search products, models, compatible models, and datasheets across the FOREACH website."
+              ? t("Search products, models, compatible models, and datasheets across the FOREACH website.")
               : "搜索产品、型号、兼容型号和规格书，并在对应模块中查看结果。"}
           </p>
 
@@ -325,15 +337,15 @@ export default function SiteSearchClient({
               value={inputValue}
               placeholder={
                 isEnglish
-                  ? "Search products, models, compatible models, or datasheets"
+                  ? t("Search products, models, compatible models, or datasheets")
                   : "搜索产品、型号、兼容型号或规格书"
               }
-              aria-label={isEnglish ? "Site search" : "全站搜索"}
+              aria-label={isEnglish ? t("Site Search") : "全站搜索"}
               onChange={(event) => {
                 setInputValue(event.target.value);
               }}
             />
-            <button type="submit">{isEnglish ? "Search" : "搜索"}</button>
+            <button type="submit">{isEnglish ? t("Search") : "搜索"}</button>
           </form>
         </div>
       </section>
@@ -341,10 +353,10 @@ export default function SiteSearchClient({
       <div className="site-search-container site-search-content">
         {!queryFromUrl ? (
           <section className="site-search-initial">
-            <h2>{isEnglish ? "Enter a search term" : "请输入搜索关键词"}</h2>
+            <h2>{isEnglish ? t("Enter a search term") : "请输入搜索关键词"}</h2>
             <p>
               {isEnglish
-                ? "For example: Q2002, PMC1702, plunger pump, or diaphragm pump datasheet."
+                ? t("For example: Q2002, PMC1702, plunger pump, or diaphragm pump datasheet.")
                 : "例如：Q2002、PMC1702、柱塞泵、隔膜泵规格书。"}
             </p>
           </section>
@@ -352,12 +364,12 @@ export default function SiteSearchClient({
           <>
             <div className="site-search-summary">
               <div>
-                <span>{isEnglish ? "Search Term" : "搜索关键词"}</span>
+                <span>{isEnglish ? t("Search Term") : "搜索关键词"}</span>
                 <strong>{queryFromUrl}</strong>
               </div>
               <p>
                 {isEnglish
-                  ? `${totalResults} results found`
+                  ? `${totalResults} ${t("results")}`
                   : `共找到 ${totalResults} 条结果`}
               </p>
             </div>
@@ -365,11 +377,11 @@ export default function SiteSearchClient({
             {totalResults === 0 ? (
               <section className="site-search-no-result">
                 <h2>
-                  {isEnglish ? "No matching results" : "没有找到匹配结果"}
+                  {isEnglish ? t("No matching results") : "没有找到匹配结果"}
                 </h2>
                 <p>
                   {isEnglish
-                    ? "Check the model number or try a product name, series, or another keyword."
+                    ? t("Check the model number or try a product name, series, or another keyword.")
                     : "请检查型号是否完整，或尝试产品名称、系列名称及其他关键词。"}
                 </p>
               </section>
@@ -401,6 +413,7 @@ export default function SiteSearchClient({
                         <SearchResultItem
                           item={item}
                           isEnglish={isEnglish}
+                          detailsLabel={t("View Details")}
                           key={item.id}
                         />
                       ))}

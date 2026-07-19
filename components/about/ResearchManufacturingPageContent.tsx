@@ -15,6 +15,8 @@
 "use client";
 
 import Image from "next/image";
+import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
+import { getAboutBreadcrumb } from "@/data/about-breadcrumb";
 import { useEffect, useRef, useState } from "react";
 
 import {
@@ -102,6 +104,7 @@ export default function ResearchManufacturingPageContent({
        从 data 文件中获取当前语言的页面文案
     ========================================================= */
     const text = getResearchManufacturingText(locale);
+    const breadcrumb = getAboutBreadcrumb(locale, text.hero.title);
 
     /* =========================================================
        三大中心卡片当前展开项
@@ -244,6 +247,12 @@ export default function ResearchManufacturingPageContent({
                     <div className="rm-hero-line" />
                 </div>
             </section>
+
+            <SiteBreadcrumb
+                ariaLabel={breadcrumb.ariaLabel}
+                items={breadcrumb.items}
+                variant="bar"
+            />
 
             {/* ================================
           第二屏：页面导入
@@ -516,4 +525,4 @@ export default function ResearchManufacturingPageContent({
             </section>
         </main>
     );
-} 
+}
