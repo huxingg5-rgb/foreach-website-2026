@@ -119,7 +119,7 @@ function getLocalizedResultHref(href: string, locale: string): string {
   return `/${locale}${href}`;
 }
 
-function getEnglishSearchItem(item: SiteSearchItem): SiteSearchItem {
+function getEnglishSearchItem(item: SiteSearchItem, locale: string): SiteSearchItem {
   const title = !containsHan(item.title)
     ? item.title
     : item.model || item.productCode || getPathLabel(item.href);
@@ -134,7 +134,7 @@ function getEnglishSearchItem(item: SiteSearchItem): SiteSearchItem {
     title,
     subtitle,
     description: ENGLISH_RESULT_DESCRIPTIONS[item.module],
-    href: getLocalizedResultHref(item.href, "en"),
+    href: getLocalizedResultHref(item.href, locale),
     actionLabel:
       item.module === "datasheets"
         ? "View Datasheet"
@@ -250,7 +250,8 @@ export default function SiteSearchClient({
 
   const queryFromUrl = searchParams.get("q")?.trim() ?? "";
   const [inputValue, setInputValue] = useState(queryFromUrl);
-  const isEnglish = locale === "en";
+  // 四国语言内容缺失时统一回退英文，禁止显示中文；路由仍保留当前 Locale。
+  const isEnglish = locale !== "zh-CN" && locale !== "zh";
   const moduleText = isEnglish ? MODULE_TEXT_EN : MODULE_TEXT;
 
   const groupedResults = useMemo(() => {
@@ -264,7 +265,7 @@ export default function SiteSearchClient({
 
     for (const sourceItem of siteSearchIndex) {
       const item = isEnglish
-        ? getEnglishSearchItem(sourceItem)
+        ? getEnglishSearchItem(sourceItem, locale)
         : sourceItem;
       const score = scoreItem(item, queryFromUrl);
       if (score <= 0) continue;
@@ -287,7 +288,7 @@ export default function SiteSearchClient({
     }
 
     return result;
-  }, [isEnglish, queryFromUrl]);
+  }, [isEnglish, locale, queryFromUrl]);
 
   const totalResults = MODULE_ORDER.reduce((sum, module) => {
     return sum + groupedResults[module].length;

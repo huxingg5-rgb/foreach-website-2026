@@ -12,6 +12,7 @@ import {
   resolveSeriesRoute,
 } from "@/data/products/selection/product-route-map";
 import type { ProductRouteInitialFilters } from "@/data/products/selection/product-route-map";
+import { isSupportedLocale, type LocaleCode } from "@/lib/i18n";
 
 import ProductDetailRoutePage from "@/app/products/[category]/[slug]/page";
 import ProductsSeriesRoutePage from "@/app/products/[category]/[slug]/[seriesSlug]/page";
@@ -108,11 +109,15 @@ const ROUTE_TITLES: Record<string, string> = {
 
 export const dynamicParams = false;
 
+const INTERNATIONAL_PRODUCT_LOCALES: LocaleCode[] = ["en", "es", "fr", "ko", "ru"];
+
 export function generateStaticParams() {
-  return allEnglishProductDetailRoutes.map((segments) => ({
-    locale: "en",
-    segments: [...segments],
-  }));
+  return INTERNATIONAL_PRODUCT_LOCALES.flatMap((locale) =>
+    allEnglishProductDetailRoutes.map((segments) => ({
+      locale,
+      segments: [...segments],
+    })),
+  );
 }
 
 function titleFromSlug(slug: string) {
@@ -169,12 +174,12 @@ export async function generateMetadata({
 }: ProductLocaleRoutePageProps): Promise<Metadata> {
   const { locale, segments } = await params;
 
-  if (locale !== "en" || !routeExists(segments)) {
+  if (!isSupportedLocale(locale) || locale === "zh-CN" || !routeExists(segments)) {
     return {};
   }
 
   const title = getRouteTitle(segments);
-  const canonicalPath = `/en/products/${segments.join("/")}/`;
+  const canonicalPath = `/${locale}/products/${segments.join("/")}/`;
   const isDetailRoute = segments.length >= 2;
   const description = isDetailRoute
     ? `Explore ${title} specifications, materials, interfaces, model configurations, and fluidic applications from FOREACH.`
@@ -197,7 +202,11 @@ export async function generateMetadata({
     alternates: {
       canonical: canonicalPath,
       languages: {
-        "en-US": canonicalPath,
+        "en-US": `/en/products/${segments.join("/")}/`,
+        "es": `/es/products/${segments.join("/")}/`,
+        "fr": `/fr/products/${segments.join("/")}/`,
+        "ko": `/ko/products/${segments.join("/")}/`,
+        "ru": `/ru/products/${segments.join("/")}/`,
       },
     },
     robots: {
@@ -225,7 +234,7 @@ export default async function ProductLocaleRoutePage({
 }: ProductLocaleRoutePageProps) {
   const { locale, segments } = await params;
 
-  if (locale !== "en" || !routeExists(segments)) {
+  if (!isSupportedLocale(locale) || locale === "zh-CN" || !routeExists(segments)) {
     notFound();
   }
 

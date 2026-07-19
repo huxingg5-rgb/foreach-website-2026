@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-import { getLocaleFromPathname, type LocaleCode } from "@/lib/i18n";
+import { getLocaleFromPathname, isInternationalLocale, type LocaleCode } from "@/lib/i18n";
 
 import {
   getSiteFooterHref,
@@ -54,7 +54,7 @@ const englishSocialLinks = [
 export default function SiteFooter({ locale }: SiteFooterProps) {
   const pathname = usePathname();
   const activeLocale = locale ?? getLocaleFromPathname(pathname);
-  const showEnglishSocialLinks = activeLocale === "en";
+  const showEnglishSocialLinks = isInternationalLocale(activeLocale);
   const [openColumn, setOpenColumn] = useState("");
 
   const mapHref = getSiteFooterHref(siteFooterData.mapHref, activeLocale);

@@ -10,7 +10,7 @@
 ========================================================= */
 
 import Image from "next/image";
-import Link from "next/link";
+import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
 import {
   aboutCulturePageText,
   brandActionItems,
@@ -126,25 +126,14 @@ export default function CulturePageContent({ locale }: CulturePageContentProps) 
           说明：
           沿用原页面 about-culture-breadcrumb 样式
       ================================ */}
-      <nav className="about-culture-breadcrumb" aria-label="Breadcrumb">
-        <div className="about-culture-container about-culture-breadcrumb-inner">
-          <Link href={getLocalizedHref(locale, "/")}>
-            {getCultureText(aboutCulturePageText.breadcrumbHome, locale)}
-          </Link>
-
-          <span>&gt;</span>
-
-          <Link href={getLocalizedHref(locale, "/about/foreach")}>
-            {getCultureText(aboutCulturePageText.breadcrumbAbout, locale)}
-          </Link>
-
-          <span>&gt;</span>
-
-          <strong>
-            {getCultureText(aboutCulturePageText.sectionTitle, locale)}
-          </strong>
-        </div>
-      </nav>
+      <SiteBreadcrumb
+        className="about-culture-breadcrumb"
+        items={[
+          { label: getCultureText(aboutCulturePageText.breadcrumbHome, locale), href: getLocalizedHref(locale, "/") },
+          { label: getCultureText(aboutCulturePageText.breadcrumbAbout, locale), href: getLocalizedHref(locale, "/about/foreach") },
+          { label: getCultureText(aboutCulturePageText.sectionTitle, locale) },
+        ]}
+      />
 
       {/* ================================
           页面标题
@@ -287,4 +276,4 @@ export default function CulturePageContent({ locale }: CulturePageContentProps) 
       </section>
     </main>
   );
-} 
+}

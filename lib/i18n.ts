@@ -270,6 +270,35 @@ export function isSupportedLocale(locale: string): locale is LocaleCode {
   return supportedLocales.includes(locale as LocaleCode);
 }
 
+export function isChineseLocale(locale: LocaleCode) {
+  return locale === "zh-CN";
+}
+
+export function isInternationalLocale(locale: LocaleCode) {
+  return !isChineseLocale(locale);
+}
+
+export function getDocumentLocale(locale: LocaleCode): "zh-CN" | "en" {
+  return isChineseLocale(locale) ? "zh-CN" : "en";
+}
+
+export function replacePathLocale(pathname: string, nextLocale: LocaleCode) {
+  const [pathWithQuery, hash = ""] = pathname.split("#", 2);
+  const [rawPath, query = ""] = pathWithQuery.split("?", 2);
+  const segments = rawPath.split("/").filter(Boolean);
+
+  if (segments[0] && isSupportedLocale(segments[0])) {
+    segments.shift();
+  }
+
+  if (nextLocale !== "zh-CN") {
+    segments.unshift(nextLocale);
+  }
+
+  const localizedPath = `/${segments.join("/")}` || "/";
+  return `${localizedPath}${query ? `?${query}` : ""}${hash ? `#${hash}` : ""}`;
+}
+
 /* ================================
    09. 获取语言首页路径
 ================================ */

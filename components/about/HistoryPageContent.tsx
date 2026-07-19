@@ -10,8 +10,8 @@
 ========================================================= */
 
 import type { CSSProperties } from "react";
-import Link from "next/link";
 import HistoryTimeline from "@/components/about/HistoryTimeline";
+import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
 import {
   getHistoryMilestones,
   getHistoryPageText,
@@ -176,22 +176,15 @@ export default function HistoryPageContent({
           1. 继续复用企业文化页面的面包屑样式
           2. 链接根据当前语言自动生成
       ================================ */}
-      <nav
+      <SiteBreadcrumb
         className="about-culture-breadcrumb"
-        aria-label={breadcrumb.ariaLabel}
-      >
-        <div className="about-culture-breadcrumb-inner">
-          <Link href={getLocalizedHref(locale, "/")}>{breadcrumb.home}</Link>
-          <span>/</span>
-
-          <Link href={getLocalizedHref(locale, "/about/foreach")}>
-            {breadcrumb.about}
-          </Link>
-          <span>/</span>
-
-          <strong>{breadcrumb.current}</strong>
-        </div>
-      </nav>
+        ariaLabel={breadcrumb.ariaLabel}
+        items={[
+          { label: breadcrumb.home, href: getLocalizedHref(locale, "/") },
+          { label: breadcrumb.about, href: getLocalizedHref(locale, "/about/foreach") },
+          { label: breadcrumb.current },
+        ]}
+      />
 
       {/* ================================
           页面标题区域

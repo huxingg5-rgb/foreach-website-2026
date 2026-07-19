@@ -17,7 +17,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
 
-  if (locale !== "en") {
+  if (!SEARCH_LOCALES.includes(locale)) {
     return {};
   }
 

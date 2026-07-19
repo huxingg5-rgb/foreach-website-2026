@@ -441,7 +441,8 @@ export default function GlobalSearchPanel({
   onQueryChange,
   onClose,
 }: GlobalSearchPanelProps) {
-  const isEnglish = locale === "en";
+  // 国际语言优先使用英文索引内容作为回退，界面和结果链接保留当前 Locale。
+  const isEnglish = locale !== "zh-CN" && locale !== "zh";
   const moduleText = isEnglish
     ? MODULE_TEXT_EN
     : MODULE_TEXT;

@@ -23,6 +23,39 @@ export type SiteFooterQrCode = {
   href?: SiteFooterHref;
 };
 
+const footerInternationalTranslations: Partial<
+  Record<Exclude<LocaleCode, "zh-CN" | "en">, Record<string, string>>
+> = {
+  es: {
+    Home: "Inicio", Products: "Productos", "Pump Series": "Bombas", "Valve Series": "Válvulas", "Probe Series": "Sondas y agujas", "Fitting Series": "Conectores", "Tubing Series": "Tubos", "Control Series": "Control inteligente",
+    Applications: "Aplicaciones", "Life Science": "Ciencias de la vida", "Lab Automation": "Automatización de laboratorio", "Analytical Instruments": "Instrumentos analíticos", "Environmental Monitoring": "Monitoreo ambiental", "Synthetic Biology": "Biología sintética",
+    Resources: "Recursos", Datasheets: "Fichas técnicas", "Fluid Resistance Calculator": "Calculadora de resistencia al flujo", "Fitting Replacement": "Sustitución de conectores", "Installation Guides": "Guías de instalación", "Material Compatibility": "Compatibilidad de materiales", "Technical Articles": "Artículos técnicos", "Company News": "Noticias de la empresa",
+    "About Us": "Quiénes somos", "About FOREACH": "Acerca de FOREACH", "R&D & Manufacturing": "I+D y fabricación", "Quality & Compliance": "Calidad y conformidad", History: "Historia", "FOREACH Culture": "Cultura FOREACH", "Contact Us": "Contacto", "Inquiry Form": "Formulario de consulta", "Contact Information": "Información de contacto",
+    Address: "Dirección", "View Map": "Ver mapa", Email: "Correo electrónico", Tel: "Tel.", Social: "Redes sociales",
+  },
+  fr: {
+    Home: "Accueil", Products: "Produits", "Pump Series": "Pompes", "Valve Series": "Vannes", "Probe Series": "Sondes et aiguilles", "Fitting Series": "Raccords", "Tubing Series": "Tubes", "Control Series": "Contrôle intelligent",
+    Applications: "Applications", "Life Science": "Sciences de la vie", "Lab Automation": "Automatisation de laboratoire", "Analytical Instruments": "Instruments analytiques", "Environmental Monitoring": "Surveillance environnementale", "Synthetic Biology": "Biologie synthétique",
+    Resources: "Ressources", Datasheets: "Fiches techniques", "Fluid Resistance Calculator": "Calculateur de résistance hydraulique", "Fitting Replacement": "Remplacement de raccords", "Installation Guides": "Guides d’installation", "Material Compatibility": "Compatibilité des matériaux", "Technical Articles": "Articles techniques", "Company News": "Actualités de l’entreprise",
+    "About Us": "À propos", "About FOREACH": "À propos de FOREACH", "R&D & Manufacturing": "R&D et fabrication", "Quality & Compliance": "Qualité et conformité", History: "Historique", "FOREACH Culture": "Culture FOREACH", "Contact Us": "Nous contacter", "Inquiry Form": "Formulaire de demande", "Contact Information": "Coordonnées",
+    Address: "Adresse", "View Map": "Voir la carte", Email: "E-mail", Tel: "Tél.", Social: "Réseaux sociaux",
+  },
+  ko: {
+    Home: "홈", Products: "제품", "Pump Series": "펌프", "Valve Series": "밸브", "Probe Series": "프로브 및 니들", "Fitting Series": "피팅", "Tubing Series": "튜빙", "Control Series": "스마트 제어",
+    Applications: "응용 분야", "Life Science": "생명과학", "Lab Automation": "실험실 자동화", "Analytical Instruments": "분석 기기", "Environmental Monitoring": "환경 모니터링", "Synthetic Biology": "합성생물학",
+    Resources: "자료 센터", Datasheets: "데이터시트", "Fluid Resistance Calculator": "유체 저항 계산기", "Fitting Replacement": "피팅 대체품 검색", "Installation Guides": "설치 가이드", "Material Compatibility": "재료 호환성", "Technical Articles": "기술 자료", "Company News": "회사 소식",
+    "About Us": "회사 소개", "About FOREACH": "FOREACH 소개", "R&D & Manufacturing": "연구개발 및 제조", "Quality & Compliance": "품질 및 규정 준수", History: "연혁", "FOREACH Culture": "FOREACH 문화", "Contact Us": "문의하기", "Inquiry Form": "문의 양식", "Contact Information": "연락처",
+    Address: "주소", "View Map": "지도 보기", Email: "이메일", Tel: "전화", Social: "소셜 미디어",
+  },
+  ru: {
+    Home: "Главная", Products: "Продукция", "Pump Series": "Насосы", "Valve Series": "Клапаны", "Probe Series": "Зонды и иглы", "Fitting Series": "Фитинги", "Tubing Series": "Трубки", "Control Series": "Интеллектуальное управление",
+    Applications: "Области применения", "Life Science": "Науки о жизни", "Lab Automation": "Лабораторная автоматизация", "Analytical Instruments": "Аналитические приборы", "Environmental Monitoring": "Экологический мониторинг", "Synthetic Biology": "Синтетическая биология",
+    Resources: "Ресурсы", Datasheets: "Технические описания", "Fluid Resistance Calculator": "Калькулятор гидравлического сопротивления", "Fitting Replacement": "Подбор замены фитингов", "Installation Guides": "Инструкции по установке", "Material Compatibility": "Совместимость материалов", "Technical Articles": "Технические статьи", "Company News": "Новости компании",
+    "About Us": "О компании", "About FOREACH": "О FOREACH", "R&D & Manufacturing": "НИОКР и производство", "Quality & Compliance": "Качество и соответствие", History: "История", "FOREACH Culture": "Культура FOREACH", "Contact Us": "Контакты", "Inquiry Form": "Форма запроса", "Contact Information": "Контактная информация",
+    Address: "Адрес", "View Map": "Открыть карту", Email: "Эл. почта", Tel: "Тел.", Social: "Социальные сети",
+  },
+};
+
 function href(path: string): SiteFooterHref {
   return { china: path, global: path };
 }
@@ -156,13 +189,15 @@ export function getSiteFooterText(text: SiteFooterText | string | undefined | nu
   const candidates = [
     text[locale],
     text[market],
-    text["zh-CN"],
     text.en,
-    text.china,
     text.global,
+    text["zh-CN"],
+    text.china,
   ];
+  const resolved = candidates.find((value) => value !== undefined) ?? "";
 
-  return candidates.find((value) => value !== undefined) ?? "";
+  if (locale === "zh-CN" || locale === "en") return resolved;
+  return footerInternationalTranslations[locale]?.[resolved] ?? resolved;
 }
 
 function shouldKeepHrefAsIs(value: string) {

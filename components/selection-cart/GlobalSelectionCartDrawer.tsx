@@ -32,7 +32,7 @@ import CompanyInfoRequestModal, {
   type CompanyInfoFormValue,
   type CompanyInfoRequestItem,
 } from "@/components/forms/company-info-request/CompanyInfoRequestModal";
-import { getLocaleFromPathname } from "@/lib/i18n";
+import { getLocaleFromPathname, isInternationalLocale, type LocaleCode } from "@/lib/i18n";
 
 import styles from "./GlobalSelectionCartDrawer.module.css";
 import { useSelectionCart } from "./SelectionCartProvider";
@@ -89,25 +89,26 @@ function getEnglishCartSourceLabel(sourceType: string) {
 
 function getCartDetailHref(
   href: string | undefined,
-  isEnglish: boolean,
+  locale: LocaleCode,
 ) {
   if (
     !href ||
-    !isEnglish ||
+    locale === "zh-CN" ||
     !href.startsWith("/") ||
-    href.startsWith("/en/") ||
-    href === "/en"
+    new RegExp(`^/${locale}(?:/|$)`).test(href)
   ) {
     return href;
   }
 
-  return `/en${href}`;
+  const unprefixedHref = href.replace(/^\/(?:en|es|fr|ko|ru)(?=\/|$)/, "");
+  return `/${locale}${unprefixedHref}`;
 }
 
 export default function GlobalSelectionCartDrawer() {
   const pathname = usePathname();
   const locale = getLocaleFromPathname(pathname);
-  const isEnglish = locale === "en";
+  // 国际站尚未单独维护的清单术语统一回退英文，禁止回退中文。
+  const isEnglish = isInternationalLocale(locale);
 
   const {
     items,
@@ -597,7 +598,7 @@ export default function GlobalSelectionCartDrawer() {
                               {item.detailHref && item.sourceType !== "pump-selection" ? (
                                 <Link
                                   className={styles.itemTitleLink}
-                                  href={getCartDetailHref(item.detailHref, isEnglish) ?? "#"}
+                                  href={getCartDetailHref(item.detailHref, locale) ?? "#"}
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   title={isEnglish ? "Open product details in a new window" : "新窗口打开详情页"}
