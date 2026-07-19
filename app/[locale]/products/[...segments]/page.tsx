@@ -149,10 +149,12 @@ function routeExists(segments: string[]) {
 }
 
 function renderSelectionPage({
+  locale,
   categoryId,
   productTypeId,
   initialFilters,
 }: {
+  locale: string;
   categoryId: string;
   productTypeId?: string;
   initialFilters?: ProductRouteInitialFilters;
@@ -160,7 +162,7 @@ function renderSelectionPage({
   return (
     <Suspense fallback={<ProductPageSkeleton variant="selection" />}>
       <ProductSelectionClient
-        locale="en"
+        locale={locale as "en" | "es" | "fr" | "ko" | "ru"}
         initialCategoryId={categoryId}
         initialProductTypeId={productTypeId}
         initialFilters={initialFilters}
@@ -248,6 +250,7 @@ export default async function ProductLocaleRoutePage({
     }
 
     return renderSelectionPage({
+      locale,
       categoryId: categoryRoute.categoryId,
     });
   }
@@ -257,6 +260,7 @@ export default async function ProductLocaleRoutePage({
 
     if (productTypeRoute) {
       return renderSelectionPage({
+        locale,
         categoryId: productTypeRoute.categoryId,
         productTypeId: productTypeRoute.productTypeId,
       });
@@ -304,6 +308,7 @@ export default async function ProductLocaleRoutePage({
 
   if (seriesRoute) {
     return renderSelectionPage({
+      locale,
       categoryId: seriesRoute.categoryId,
       productTypeId: seriesRoute.productTypeId,
       initialFilters: seriesRoute.initialFilters,

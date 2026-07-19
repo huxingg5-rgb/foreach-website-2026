@@ -43,20 +43,20 @@ const CARD_TEXT: Record<
     specsAriaSuffix: "key specifications",
   },
   es: {
-    imagePlaceholder: "No image",
-    specsAriaSuffix: "key specifications",
+    imagePlaceholder: "Imagen no disponible",
+    specsAriaSuffix: "especificaciones principales",
   },
   fr: {
-    imagePlaceholder: "No image",
-    specsAriaSuffix: "key specifications",
+    imagePlaceholder: "Image non disponible",
+    specsAriaSuffix: "caractéristiques principales",
   },
   ko: {
-    imagePlaceholder: "No image",
-    specsAriaSuffix: "key specifications",
+    imagePlaceholder: "이미지 없음",
+    specsAriaSuffix: "주요 사양",
   },
   ru: {
-    imagePlaceholder: "No image",
-    specsAriaSuffix: "key specifications",
+    imagePlaceholder: "Изображение отсутствует",
+    specsAriaSuffix: "основные характеристики",
   },
 };
 
@@ -153,17 +153,21 @@ function normalizeCardDetailHref(product: ProductSelectionProductItem, href: str
 function localizeCardDetailHref(
   href: string,
   locale: SelectionLocale,
+  product: ProductSelectionProductItem,
 ): string {
   if (
     locale === "zh" ||
     !href.startsWith("/") ||
-    href.startsWith(`/${locale}/`) ||
-    href === `/${locale}`
+    /^\/(?:en|es|fr|ko|ru)(?:\/|$)/.test(href)
   ) {
     return href;
   }
 
-  return `/${locale}${href}`;
+  if (["es", "fr", "ko", "ru"].includes(locale)) {
+    return `/${locale}${href}`;
+  }
+
+  return `/en${href}`;
 }
 
 
@@ -186,6 +190,7 @@ export default function ProductSelectionCard({
   const safeDetailHref = localizeCardDetailHref(
     normalizeCardDetailHref(product, detailHref),
     locale,
+    product,
   );
   const cardSpecs = getProductCardSpecs(product, locale)
     .map((spec) => toDisplayText(spec))

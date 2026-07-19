@@ -28,35 +28,63 @@ type ProductCardSpecKey =
 
 const PLUNGER_PUMP_CARD_SPEC_COPY: Record<
   ProductCardSpecKey,
-  Record<"zh" | "en", string>
+  Record<SelectionLocale, string>
 > = {
   port_1_4_28_m6: {
     zh: "接口方式：1/4-28 UNF / M6 接口可选",
     en: "1/4-28 UNF port; M6 optional",
+    es: "Puerto 1/4-28 UNF; M6 opcional",
+    fr: "Port 1/4-28 UNF ; M6 en option",
+    ko: "1/4-28 UNF 포트; M6 선택 사양",
+    ru: "Порт 1/4-28 UNF; M6 опционально",
   },
   port_6_40_unf: {
     zh: "接口方式：6-40 UNF 液路接口",
     en: "6-40 UNF port",
+    es: "Puerto 6-40 UNF",
+    fr: "Port 6-40 UNF",
+    ko: "6-40 UNF 포트",
+    ru: "Порт 6-40 UNF",
   },
   repeatability_cv_0_5: {
     zh: "重复性：(100% 满量程) CV < 0.5%",
     en: "CV <0.5% repeatability at full stroke",
+    es: "Repetibilidad CV <0,5 % a carrera completa",
+    fr: "Répétabilité CV < 0,5 % sur la course complète",
+    ko: "전체 행정 반복성 CV <0.5%",
+    ru: "Повторяемость CV <0,5 % на полном ходе",
   },
   resolution_2000: {
     zh: "满量程分辨率：2000 步",
     en: "2,000-step full-stroke resolution",
+    es: "Resolución de carrera completa: 2.000 pasos",
+    fr: "Résolution sur la course complète : 2 000 pas",
+    ko: "전체 행정 분해능 2,000스텝",
+    ru: "Разрешение полного хода: 2 000 шагов",
   },
   resolution_2000_2236: {
     zh: "满量程分辨率：2000 / 2236 Step",
     en: "2,000 / 2,236-step full-stroke resolution",
+    es: "Resolución de carrera completa: 2.000/2.236 pasos",
+    fr: "Résolution sur la course complète : 2 000/2 236 pas",
+    ko: "전체 행정 분해능 2,000/2,236스텝",
+    ru: "Разрешение полного хода: 2 000/2 236 шагов",
   },
   resolution_2540: {
     zh: "满量程分辨率：2540 Step",
     en: "2,540-step full-stroke resolution",
+    es: "Resolución de carrera completa: 2.540 pasos",
+    fr: "Résolution sur la course complète : 2 540 pas",
+    ko: "전체 행정 분해능 2,540스텝",
+    ru: "Разрешение полного хода: 2 540 шагов",
   },
   resolution_4000: {
     zh: "满量程分辨率：4000 Step",
     en: "4,000-step full-stroke resolution",
+    es: "Resolución de carrera completa: 4.000 pasos",
+    fr: "Résolution sur la course complète : 4 000 pas",
+    ko: "전체 행정 분해능 4,000스텝",
+    ru: "Разрешение полного хода: 4 000 шагов",
   },
 };
 
@@ -196,10 +224,6 @@ export const PLUNGER_PUMP_CARD_SPECS_BY_MODEL: Record<
   ],
 };
 
-function getSpecLocale(locale: SelectionLocale): "zh" | "en" {
-  return locale === "zh" ? "zh" : "en";
-}
-
 export function getProductCardSpecs(
   product: ProductSelectionProduct,
   locale: SelectionLocale = "zh"
@@ -219,10 +243,8 @@ export function getProductCardSpecs(
     (product as any).productName ||
     "";
 
-  const specLocale = getSpecLocale(locale);
-
   return (PLUNGER_PUMP_CARD_SPECS_BY_MODEL[model] || []).map((specKey) => ({
-    label: PLUNGER_PUMP_CARD_SPEC_COPY[specKey][specLocale],
+    label: PLUNGER_PUMP_CARD_SPEC_COPY[specKey][locale],
   }));
 }
 
