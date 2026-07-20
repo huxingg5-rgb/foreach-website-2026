@@ -45,11 +45,19 @@ function getArticleListHref(locale: string) {
   return `/${locale}/resources/technical-articles`;
 }
 
+const technicalDetailUi: Record<string, { back: string; contact: string }> = {
+  es: { back: "Volver a los artículos técnicos", contact: "Contactar" },
+  fr: { back: "Retour aux articles techniques", contact: "Nous contacter" },
+  ko: { back: "기술 자료 목록으로", contact: "문의하기" },
+  ru: { back: "Вернуться к техническим статьям", contact: "Связаться" },
+};
+
 export default function TechnicalArticleDetail({
   pageData,
   article,
 }: TechnicalArticleDetailProps) {
   const listHref = getArticleListHref(pageData.locale);
+  const ui = technicalDetailUi[pageData.locale];
 
   const breadcrumbs = pageData.breadcrumbs.map((item, index) => {
     const isLastItem = index === pageData.breadcrumbs.length - 1;
@@ -82,9 +90,9 @@ export default function TechnicalArticleDetail({
       <article className="technicalArticleDetail">
         <div className="technicalArticleDetail__header">
           <Link className="technicalArticleDetail__back" href={listHref}>
-            {isChinesePage(pageData.locale)
+            {ui?.back ?? (isChinesePage(pageData.locale)
               ? "返回技术文章列表"
-              : "Back to Technical Articles"}
+              : "Back to Technical Articles")}
           </Link>
 
           <h1 className="technicalArticleDetail__title">{article.title}</h1>
@@ -117,7 +125,7 @@ export default function TechnicalArticleDetail({
         description={pageData.bottomBanner.description}
         buttonText={
           pageData.bottomBanner.actions[0]?.label ??
-          (isChinesePage(pageData.locale) ? "联系我们" : "Contact Us")
+          (ui?.contact ?? (isChinesePage(pageData.locale) ? "联系我们" : "Contact Us"))
         }
         href={pageData.bottomBanner.actions[0]?.href ?? "/contact"}
       />

@@ -104,6 +104,36 @@ function getLocalizedText(
   return text[locale] || text.en || text.zh || "-";
 }
 
+const fittingDetailBreadcrumbLabels: Partial<Record<FittingReplacementLocale, string>> = {
+  es: "Ruta de navegación",
+  fr: "Fil d’Ariane",
+  ko: "이동 경로",
+  ru: "Навигационная цепочка",
+};
+
+const fittingDetailFieldLabels: Partial<
+  Record<
+    FittingReplacementLocale,
+    Partial<Record<FittingModelRule["fieldKey"], string>>
+  >
+> = {
+  es: {
+    valved: "Configuración de válvula",
+  },
+};
+
+function getLocalizedFieldName(
+  field: ReturnType<typeof getParsedFittingField>,
+  locale: FittingReplacementLocale
+) {
+  if (!field) return "-";
+
+  return (
+    fittingDetailFieldLabels[locale]?.[field.fieldKey] ??
+    getLocalizedText(field.fieldName, locale)
+  );
+}
+
 /* =========================================================
    详情页组件
 ========================================================= */
@@ -224,7 +254,10 @@ export default function FittingReplacementDetail({
         <div className="frd-container">
           <Breadcrumb
             items={normalizedBreadcrumbs}
-            ariaLabel={locale === "zh" ? "面包屑导航" : "Breadcrumb"}
+            ariaLabel={
+              fittingDetailBreadcrumbLabels[locale] ??
+              (locale === "zh" ? "面包屑导航" : "Breadcrumb")
+            }
           />
 
           <section className="frd-detail-section">
@@ -273,7 +306,7 @@ export default function FittingReplacementDetail({
                       return (
                         <tr key={`${leftKey}-${rightKey || "empty"}`}>
                           <td className="frd-label">
-                            {getLocalizedText(leftField?.fieldName, locale)}
+                            {getLocalizedFieldName(leftField, locale)}
                           </td>
 
                           <td className="frd-value">
@@ -283,10 +316,7 @@ export default function FittingReplacementDetail({
                           {rightField ? (
                             <>
                               <td className="frd-label">
-                                {getLocalizedText(
-                                  rightField.fieldName,
-                                  locale
-                                )}
+                                {getLocalizedFieldName(rightField, locale)}
                               </td>
 
                               <td className="frd-value">

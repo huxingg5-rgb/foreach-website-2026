@@ -75,11 +75,50 @@ export function generateStaticParams() {
    这里先统一使用英文 SEO。
    后续如果要做每种语言单独 SEO，可改成 generateMetadata。
 ========================================================= */
-export const metadata: Metadata = {
-    title: "Material Compatibility｜FOREACH",
-    description:
-        "FOREACH material compatibility reference for chemical media, engineering plastics, material properties, and compliance documentation.",
-};
+const materialCompatibilityMetadata = {
+    es: {
+        title: "Compatibilidad de materiales | FOREACH",
+        description:
+            "Consulte la compatibilidad entre medios químicos y plásticos de ingeniería, sus propiedades y la documentación de conformidad disponible.",
+    },
+    fr: {
+        title: "Compatibilité des matériaux | FOREACH",
+        description:
+            "Consultez la compatibilité entre milieux chimiques et plastiques techniques, leurs propriétés et les documents de conformité disponibles.",
+    },
+    ko: {
+        title: "재료 적합성 | FOREACH",
+        description:
+            "화학 매질과 엔지니어링 플라스틱의 적합성, 주요 재료 특성 및 제공 가능한 인증 자료를 확인하세요.",
+    },
+    ru: {
+        title: "Совместимость материалов | FOREACH",
+        description:
+            "Справочник по совместимости химических сред и инженерных пластиков, свойствам материалов и доступным документам соответствия.",
+    },
+} as const;
+
+export async function generateMetadata({
+    params,
+}: MaterialCompatibilityIntlPageProps): Promise<Metadata> {
+    const { locale } = await params;
+
+    if (!isSupportedLocale(locale)) return {};
+
+    if (locale === "en") {
+        return {
+            title: "Material Compatibility｜FOREACH",
+            description:
+                "FOREACH material compatibility reference for chemical media, engineering plastics, material properties, and compliance documentation.",
+        };
+    }
+
+    const localizedMetadata = materialCompatibilityMetadata[locale];
+    return {
+        ...localizedMetadata,
+        openGraph: localizedMetadata,
+    };
+}
 
 /* =========================================================
    判断 locale 是否有效
@@ -156,4 +195,4 @@ export default async function MaterialCompatibilityIntlPage({
             />
         </main>
     );
-} 
+}

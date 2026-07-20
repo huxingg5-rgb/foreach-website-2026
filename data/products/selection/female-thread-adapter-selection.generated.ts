@@ -505,7 +505,7 @@ export const femaleThreadAdapterSelectionProducts:
     },
     "imageCard": "",
     "detailSlug": "ut-m6-20-pp-n",
-    "status": "active",
+    "status": "hidden",
     "sortOrder": 17,
     "searchKeywords": {
       "zh": "三通内螺纹 T型 UT-M6-20-PP-N UT-M6-20-PP-N 809939 443-02-00713 二通-三通 UT T型三通 M6 2.0 mm PP 本色",
@@ -620,7 +620,7 @@ export const femaleThreadAdapterSelectionProducts:
     },
     "imageCard": "",
     "detailSlug": "pmbsn-m12-pa-b",
-    "status": "active",
+    "status": "hidden",
     "sortOrder": 21,
     "searchKeywords": {
       "zh": "六角螺母 PMBSN-M12-PA-B PMBSN-M12-PA-B 809033 330-04-00034 螺母 PMBSN 六角螺母 M12 PA 黑色",
@@ -649,7 +649,7 @@ export const femaleThreadAdapterSelectionProducts:
     },
     "imageCard": "",
     "detailSlug": "pu-u32-08-ss-n",
-    "status": "active",
+    "status": "hidden",
     "sortOrder": 22,
     "searchKeywords": {
       "zh": "高压内螺纹二通接头PU-U32-08-SS-N PU-U32-08-SS-N 809317 441-09-00083 高压二通 PU 高压二通 10-32 UNF 0.8 mm SS 本色",
@@ -678,7 +678,7 @@ export const femaleThreadAdapterSelectionProducts:
     },
     "imageCard": "",
     "detailSlug": "pu-u32-u28-08-ss-n",
-    "status": "active",
+    "status": "hidden",
     "sortOrder": 23,
     "searchKeywords": {
       "zh": "高压内螺纹二通接头PU-U32-U28-08-SS-N PU-U32-U28-08-SS-N 809659 441-09-00038 高压二通 PU 高压二通 10-32 UNF 1/4-28 UNF 0.8 mm SS 本色",
@@ -707,7 +707,7 @@ export const femaleThreadAdapterSelectionProducts:
     },
     "imageCard": "",
     "detailSlug": "put-u32-05-ss-n",
-    "status": "active",
+    "status": "hidden",
     "sortOrder": 24,
     "searchKeywords": {
       "zh": "高压内螺纹T型三通接头 PUT-U32-05-SS-N PUT-U32-05-SS-N 809664 441-09-00046 高压三通 PUT 高压T型三通 10-32 UNF 0.5 mm SS 本色",

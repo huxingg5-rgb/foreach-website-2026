@@ -8,12 +8,13 @@ import type { Metadata } from "next";
 import ApplicationEnglishClient from "@/components/applications/ApplicationEnglishClient";
 import FrenchIndustryApplicationClient from "@/components/applications/FrenchIndustryApplicationClient";
 import RussianIndustryApplicationClient from "@/components/applications/RussianIndustryApplicationClient";
-import SpanishIndustryApplicationClient from "@/components/applications/SpanishIndustryApplicationClient";
+import SpanishIndustryApplicationClient, { KOREAN_INDUSTRY_UI_TEXT } from "@/components/applications/SpanishIndustryApplicationClient";
 import SyntheticBiologyApplicationClient from "@/components/applications/synthetic-biology/SyntheticBiologyApplicationClient";
 import { createEnglishApplicationData } from "@/data/applications/application-english";
 import { createFrenchApplicationMetadata } from "@/data/applications/application-french-metadata";
 import { createRussianApplicationMetadata } from "@/data/applications/application-russian-metadata";
 import { createSpanishApplicationMetadata } from "@/data/applications/application-spanish-metadata";
+import { createKoreanApplicationMetadata } from "@/data/applications/application-korean-metadata";
 import { getSyntheticBiologyApplicationPageData } from "@/services/applications/synthetic-biology/getSyntheticBiologyApplicationPageData";
 
 import "@/app/applications/synthetic-biology/synthetic-biology-application.css";
@@ -48,6 +49,10 @@ export async function generateMetadata({
 
   if (locale === "fr") {
     return createFrenchApplicationMetadata("synthetic-biology");
+  }
+
+  if (locale === "ko") {
+    return createKoreanApplicationMetadata("synthetic-biology");
   }
 
   if (locale === "ru") {
@@ -87,6 +92,17 @@ export default async function SyntheticBiologyApplicationLocalePage({
         data={data}
         pageClassName="synthetic-biology-page"
         applicationTabsAria="Types de systèmes de biologie synthétique"
+      />
+    );
+  }
+
+  if (locale === "ko") {
+    return (
+      <SpanishIndustryApplicationClient
+        data={data}
+        pageClassName="synthetic-biology-page"
+        applicationTabsAria="합성생물학 시스템 유형"
+        uiText={KOREAN_INDUSTRY_UI_TEXT}
       />
     );
   }

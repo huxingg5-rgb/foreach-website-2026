@@ -10,6 +10,8 @@
 }
 
 .shellBreadcrumb {
+  width: 100% !important;
+  margin-left: 0 !important;
   padding-top: 28px !important;
   padding-bottom: 18px !important;
 }

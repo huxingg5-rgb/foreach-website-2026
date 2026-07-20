@@ -144,6 +144,14 @@ interface SelectionCartContextValue {
   changeQuantity: (id: string, quantity: number) => void;
   toggleDrawingNeed: (id: string, needDrawing: boolean) => void;
 
+  /*
+   * 批量设置当前清单中所有产品的图纸需求状态。
+   *
+   * 点击“申请图纸”时统一设置为 true；
+   * 提交成功后统一恢复为 false。
+   */
+  setAllDrawingNeeds: (needDrawing: boolean) => void;
+
   getItem: (
     sourceType: SelectionCartSourceType,
     productCode: string
@@ -431,6 +439,27 @@ export function SelectionCartProvider({
     });
   }
 
+  /*
+   * 批量设置当前选型清单中全部产品的图纸需求。
+   *
+   * 已经是目标状态的项目直接保留，
+   * 只有状态不一致的项目才创建新对象。
+   */
+  function setAllDrawingNeeds(needDrawing: boolean) {
+    setItems((prev) => {
+      return prev.map((item) => {
+        if (Boolean(item.needDrawing) === needDrawing) {
+          return item;
+        }
+
+        return {
+          ...item,
+          needDrawing,
+        };
+      });
+    });
+  }
+
   function getItem(sourceType: SelectionCartSourceType, productCode: string) {
     const id = buildCartItemId({
       sourceType,
@@ -493,6 +522,7 @@ export function SelectionCartProvider({
       clearCart,
       changeQuantity,
       toggleDrawingNeed,
+      setAllDrawingNeeds,
       getItem,
       copyCartText,
       generatePdfList,

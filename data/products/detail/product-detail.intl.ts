@@ -1500,7 +1500,7 @@ const ACTUAL_SPECIFICATION_VALUE_TRANSLATIONS: Record<string, string> = {
   "F\u7ea7": "Class F",
   "2.5W\uff080.11A\uff09": "2.5 W (0.11 A)",
   "\u9e2d\u5634\u5f0f": "Duckbill",
-  "\u4e09\u4f4d\u4e03\u901a": "3-position, 7-port",
+  "\u4e09\u4f4d\u4e03\u901a": "2-position, 6-port with vent",
   "\u9ad8\u5206\u5b50\u6750\u6599": "Polymer",
 };
 

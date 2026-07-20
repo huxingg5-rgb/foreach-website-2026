@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { usePathname } from "next/navigation";
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
 import { getAboutBreadcrumb } from "@/data/about-breadcrumb";
 
@@ -47,134 +46,6 @@ const SUPPORTED_LOCALES = ["zh-CN", "en", "es", "fr", "ko", "ru"] as const;
 type Locale = (typeof SUPPORTED_LOCALES)[number];
 
 type LocalizedText = Record<Locale, string>;
-
-/* =========================================================
-   语言识别
-   说明：
-   1. 优先读取网址第一段，例如 /en/about/foreach
-   2. 其次读取 Cookie，例如 NEXT_LOCALE / locale / lang
-   3. 再读取 html lang
-   4. 最后读取浏览器语言
-   5. 都没有时，默认中文 zh-CN
-========================================================= */
-const LOCALE_ALIAS_MAP: Record<string, Locale> = {
-  zh: "zh-CN",
-  "zh-cn": "zh-CN",
-  "zh-hans": "zh-CN",
-  "zh-hans-cn": "zh-CN",
-  cn: "zh-CN",
-
-  en: "en",
-  "en-us": "en",
-  "en-gb": "en",
-
-  es: "es",
-  "es-es": "es",
-  "es-mx": "es",
-
-  fr: "fr",
-  "fr-fr": "fr",
-
-  ko: "ko",
-  "ko-kr": "ko",
-
-  ru: "ru",
-  "ru-ru": "ru",
-};
-
-/* 把不同格式的语言值统一转为本站支持的语言 */
-function normalizeLocale(value?: string | null): Locale | null {
-  if (!value) return null;
-
-  const normalizedValue = value.trim().toLowerCase();
-
-  return LOCALE_ALIAS_MAP[normalizedValue] ?? null;
-}
-
-/* 读取 Cookie */
-function getCookieValue(name: string) {
-  if (typeof document === "undefined") return null;
-
-  const cookieItem = document.cookie
-    .split("; ")
-    .find((item) => item.startsWith(`${name}=`));
-
-  if (!cookieItem) return null;
-
-  return decodeURIComponent(cookieItem.split("=")[1] ?? "");
-}
-
-function getCurrentLocale(): Locale {
-  if (typeof window === "undefined") return "zh-CN";
-
-  /* 1. 从网址第一段读取，例如 /en/about/foreach */
-  const firstPathSegment = window.location.pathname
-    .split("/")
-    .filter(Boolean)[0];
-
-  const localeFromPath = normalizeLocale(firstPathSegment);
-
-  if (localeFromPath) return localeFromPath;
-
-  /* 2. 从 URL 参数读取，例如 /about/foreach?lang=en */
-  const searchParams = new URLSearchParams(window.location.search);
-
-  const localeFromQuery =
-    normalizeLocale(searchParams.get("lang")) ||
-    normalizeLocale(searchParams.get("locale"));
-
-  if (localeFromQuery) return localeFromQuery;
-
-  /* 3. 从 Cookie 读取，兼容不同命名方式 */
-  const cookieNames = [
-    "NEXT_LOCALE",
-    "locale",
-    "lang",
-    "site-locale",
-    "siteLocale",
-    "language",
-    "foreach-locale",
-    "foreach_locale",
-  ];
-
-  for (const cookieName of cookieNames) {
-    const localeFromCookie = normalizeLocale(getCookieValue(cookieName));
-
-    if (localeFromCookie) return localeFromCookie;
-  }
-
-  /* 4. 从 localStorage 读取，兼容前端语言切换 */
-  const storageNames = [
-    "NEXT_LOCALE",
-    "locale",
-    "lang",
-    "site-locale",
-    "siteLocale",
-    "language",
-    "foreach-locale",
-    "foreach_locale",
-  ];
-
-  for (const storageName of storageNames) {
-    const localeFromStorage = normalizeLocale(
-      window.localStorage.getItem(storageName)
-    );
-
-    if (localeFromStorage) return localeFromStorage;
-  }
-
-  /* 5. 从 html lang 读取 */
-  const localeFromHtml = normalizeLocale(document.documentElement.lang);
-
-  if (localeFromHtml) return localeFromHtml;
-
-  /* 6. 从浏览器语言读取 */
-  const localeFromNavigator = normalizeLocale(navigator.language);
-
-  if (localeFromNavigator) return localeFromNavigator;
-
-  return "zh-CN";
-}
 
 /* 读取多语言文本 */
 function getLocalizedText(text: LocalizedText, locale: Locale) {
@@ -531,9 +402,7 @@ type AboutForeachClientProps = {
 export default function AboutForeachClient({
   initialLocale = "zh-CN",
 }: AboutForeachClientProps) {
-  const pathname = usePathname();
-
-  const [locale, setLocale] = useState<Locale>(initialLocale);
+  const locale = initialLocale;
 
   const breadcrumb = getAboutBreadcrumb(
     locale,
@@ -542,33 +411,6 @@ export default function AboutForeachClient({
       locale,
     ),
   );
-
-  useEffect(() => {
-    const syncLocale = () => {
-      setLocale(getCurrentLocale());
-    };
-
-    syncLocale();
-
-    /*
-      说明：
-      1. pathname 改变时会重新同步语言
-      2. focus / popstate 用来兼容浏览器返回、前进
-      3. setInterval 用来兼容语言栏只改 Cookie / localStorage 但不刷新页面的情况
-    */
-    window.addEventListener("focus", syncLocale);
-    window.addEventListener("popstate", syncLocale);
-    window.addEventListener("foreach-locale-change", syncLocale);
-
-    const timer = window.setInterval(syncLocale, 300);
-
-    return () => {
-      window.removeEventListener("focus", syncLocale);
-      window.removeEventListener("popstate", syncLocale);
-      window.removeEventListener("foreach-locale-change", syncLocale);
-      window.clearInterval(timer);
-    };
-  }, [pathname]);
 
   const honorSummaryTitleLines = getLocalizedText(
     pageText.honorSummaryTitle,
@@ -611,9 +453,9 @@ export default function AboutForeachClient({
         </div>
       </section>
       <SiteBreadcrumb
-        className="about-culture-breadcrumb"
         ariaLabel={breadcrumb.ariaLabel}
         items={breadcrumb.items}
+        variant="bar"
       />
       {/* ================================
           第二部分：恒永达介绍 + 视频

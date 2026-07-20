@@ -40,6 +40,21 @@ const SupportCtaComponent =
 
 const NEWS_PAGE_SIZE = 9;
 
+const newsListUi: Record<string, {
+  search: string;
+  categoryFilters: string;
+  pagination: string;
+  previous: string;
+  next: string;
+  pageSummary: (page: number, totalPages: number, count: number) => string;
+  empty: string;
+}> = {
+  es: { search: "Buscar", categoryFilters: "Filtros de categorías de noticias", pagination: "Paginación de noticias", previous: "Anterior", next: "Siguiente", pageSummary: (page, total, count) => `Página ${page} de ${total}, ${count} noticias`, empty: "No se encontraron noticias. Pruebe otra palabra clave o categoría." },
+  fr: { search: "Rechercher", categoryFilters: "Filtres des catégories d’actualités", pagination: "Pagination des actualités", previous: "Précédente", next: "Suivante", pageSummary: (page, total, count) => `Page ${page} sur ${total}, ${count} actualités`, empty: "Aucune actualité correspondante. Essayez un autre mot-clé ou une autre catégorie." },
+  ko: { search: "검색", categoryFilters: "뉴스 분류 필터", pagination: "뉴스 페이지", previous: "이전", next: "다음", pageSummary: (page, total, count) => `${total}페이지 중 ${page}페이지, 총 ${count}건`, empty: "일치하는 뉴스가 없습니다. 다른 키워드나 분류를 선택하세요." },
+  ru: { search: "Найти", categoryFilters: "Фильтры категорий новостей", pagination: "Страницы новостей", previous: "Назад", next: "Далее", pageSummary: (page, total, count) => `Страница ${page} из ${total}, новостей: ${count}`, empty: "Подходящие новости не найдены. Измените запрос или категорию." },
+};
+
 function isChinesePage(locale: string) {
   return locale === "zh-CN";
 }
@@ -53,6 +68,7 @@ function getNewsHref(locale: string, slug: string) {
 }
 
 export default function NewsListClient({ pageData }: NewsListClientProps) {
+  const ui = newsListUi[pageData.locale];
   const [keyword, setKeyword] = useState("");
   const [activeCategory, setActiveCategory] = useState<"all" | NewsCategory>(
     "all"
@@ -116,7 +132,8 @@ export default function NewsListClient({ pageData }: NewsListClientProps) {
   const pageSummaryText =
     pageData.locale === "zh-CN"
       ? `第 ${safeCurrentPage} / ${totalPages} 页，共 ${filteredArticles.length} 条`
-      : `Page ${safeCurrentPage} of ${totalPages}, ${filteredArticles.length} items`;
+      : ui?.pageSummary(safeCurrentPage, totalPages, filteredArticles.length) ??
+        `Page ${safeCurrentPage} of ${totalPages}, ${filteredArticles.length} items`;
 
   return (
     <main className="newsPage">
@@ -144,7 +161,7 @@ export default function NewsListClient({ pageData }: NewsListClientProps) {
           onChange={handleKeywordChange}
           onSearch={handleKeywordChange}
           placeholder={pageData.search.placeholder}
-          searchButtonText={pageData.locale === "zh-CN" ? "搜索" : "Search"}
+          searchButtonText={ui?.search ?? (pageData.locale === "zh-CN" ? "搜索" : "Search")}
           showRecentKeywords={false}
         />
       </section>
@@ -158,7 +175,7 @@ export default function NewsListClient({ pageData }: NewsListClientProps) {
             aria-label={
               pageData.locale === "zh-CN"
                 ? "新闻分类筛选"
-                : "News category filters"
+                : ui?.categoryFilters ?? "News category filters"
             }
           >
             {pageData.categories.map((category) => (
@@ -196,7 +213,7 @@ export default function NewsListClient({ pageData }: NewsListClientProps) {
                 aria-label={
                   pageData.locale === "zh-CN"
                     ? "新闻分页"
-                    : "News pagination"
+                    : ui?.pagination ?? "News pagination"
                 }
               >
                 <button
@@ -205,7 +222,7 @@ export default function NewsListClient({ pageData }: NewsListClientProps) {
                   disabled={safeCurrentPage <= 1}
                   onClick={() => handlePageChange(safeCurrentPage - 1)}
                 >
-                  {pageData.locale === "zh-CN" ? "上一页" : "Previous"}
+                  {ui?.previous ?? (pageData.locale === "zh-CN" ? "上一页" : "Previous")}
                 </button>
 
                 <div className="newsPagination__numbers">
@@ -235,7 +252,7 @@ export default function NewsListClient({ pageData }: NewsListClientProps) {
                   disabled={safeCurrentPage >= totalPages}
                   onClick={() => handlePageChange(safeCurrentPage + 1)}
                 >
-                  {pageData.locale === "zh-CN" ? "下一页" : "Next"}
+                  {ui?.next ?? (pageData.locale === "zh-CN" ? "下一页" : "Next")}
                 </button>
 
                 <span className="newsPagination__summary">
@@ -246,7 +263,7 @@ export default function NewsListClient({ pageData }: NewsListClientProps) {
           </>
         ) : (
           <div className="newsEmpty">
-            <p>没有找到匹配的新闻，请更换关键词或分类。</p>
+            <p>{ui?.empty ?? "没有找到匹配的新闻，请更换关键词或分类。"}</p>
           </div>
         )}
       </section>

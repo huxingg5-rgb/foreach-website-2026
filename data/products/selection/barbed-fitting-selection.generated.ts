@@ -2668,7 +2668,7 @@ export const barbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "barbed-fittings",
     "detailHref": "/products/fittings/barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 45,
     "sortOrder": 10045,
     "searchKeywords": {
@@ -2726,7 +2726,7 @@ export const barbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "barbed-fittings",
     "detailHref": "/products/fittings/barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 46,
     "sortOrder": 10046,
     "searchKeywords": {
@@ -2784,7 +2784,7 @@ export const barbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "barbed-fittings",
     "detailHref": "/products/fittings/barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 47,
     "sortOrder": 10047,
     "searchKeywords": {
@@ -2842,7 +2842,7 @@ export const barbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "barbed-fittings",
     "detailHref": "/products/fittings/barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 48,
     "sortOrder": 10048,
     "searchKeywords": {
@@ -2900,7 +2900,7 @@ export const barbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "barbed-fittings",
     "detailHref": "/products/fittings/barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 49,
     "sortOrder": 10049,
     "searchKeywords": {
@@ -2958,7 +2958,7 @@ export const barbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "barbed-fittings",
     "detailHref": "/products/fittings/barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 50,
     "sortOrder": 10050,
     "searchKeywords": {
@@ -3016,7 +3016,7 @@ export const barbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "barbed-fittings",
     "detailHref": "/products/fittings/barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 51,
     "sortOrder": 10051,
     "searchKeywords": {
@@ -3074,7 +3074,7 @@ export const barbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "barbed-fittings",
     "detailHref": "/products/fittings/barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 52,
     "sortOrder": 10052,
     "searchKeywords": {
@@ -3132,7 +3132,7 @@ export const barbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "barbed-fittings",
     "detailHref": "/products/fittings/barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 53,
     "sortOrder": 10053,
     "searchKeywords": {
@@ -3190,7 +3190,7 @@ export const barbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "barbed-fittings",
     "detailHref": "/products/fittings/barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 54,
     "sortOrder": 10054,
     "searchKeywords": {
@@ -4698,7 +4698,7 @@ export const barbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "barbed-fittings",
     "detailHref": "/products/fittings/barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 153,
     "sortOrder": 20153,
     "searchKeywords": {
@@ -6527,7 +6527,7 @@ export const barbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "barbed-fittings",
     "detailHref": "/products/fittings/barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 85,
     "sortOrder": 30085,
     "searchKeywords": {
@@ -7235,7 +7235,7 @@ export const barbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "barbed-fittings",
     "detailHref": "/products/fittings/barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 97,
     "sortOrder": 30097,
     "searchKeywords": {
@@ -7294,7 +7294,7 @@ export const barbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "barbed-fittings",
     "detailHref": "/products/fittings/barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 98,
     "sortOrder": 30098,
     "searchKeywords": {
@@ -8946,7 +8946,7 @@ export const barbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "barbed-fittings",
     "detailHref": "/products/fittings/barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 126,
     "sortOrder": 40126,
     "searchKeywords": {
@@ -9005,7 +9005,7 @@ export const barbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "barbed-fittings",
     "detailHref": "/products/fittings/barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 127,
     "sortOrder": 40127,
     "searchKeywords": {
@@ -9062,7 +9062,7 @@ export const barbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "barbed-fittings",
     "detailHref": "/products/fittings/barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 160,
     "sortOrder": 50160,
     "searchKeywords": {
@@ -9119,7 +9119,7 @@ export const barbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "barbed-fittings",
     "detailHref": "/products/fittings/barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 161,
     "sortOrder": 50161,
     "searchKeywords": {
@@ -9176,7 +9176,7 @@ export const barbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "barbed-fittings",
     "detailHref": "/products/fittings/barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 162,
     "sortOrder": 50162,
     "searchKeywords": {
@@ -9233,7 +9233,7 @@ export const barbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "barbed-fittings",
     "detailHref": "/products/fittings/barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 163,
     "sortOrder": 60163,
     "searchKeywords": {
@@ -9290,7 +9290,7 @@ export const barbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "barbed-fittings",
     "detailHref": "/products/fittings/barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 164,
     "sortOrder": 60164,
     "searchKeywords": {
@@ -9347,7 +9347,7 @@ export const barbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "barbed-fittings",
     "detailHref": "/products/fittings/barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 165,
     "sortOrder": 60165,
     "searchKeywords": {

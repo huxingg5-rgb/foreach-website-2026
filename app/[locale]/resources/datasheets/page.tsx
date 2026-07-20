@@ -44,6 +44,29 @@ const SUPPORTED_FOREIGN_RESOURCE_LOCALES = [
   "ru",
 ] as const;
 
+const datasheetAccessibilityLabels = {
+  es: {
+    breadcrumb: "Ruta de navegación",
+    categoryFilter: "Filtro de categoría de producto",
+    thumbnail: " miniatura",
+  },
+  fr: {
+    breadcrumb: "Fil d’Ariane",
+    categoryFilter: "Filtre de catégorie de produits",
+    thumbnail: " — miniature",
+  },
+  ru: {
+    breadcrumb: "Навигационная цепочка",
+    categoryFilter: "Фильтр по категории продукции",
+    thumbnail: " — миниатюра",
+  },
+  ko: {
+    breadcrumb: "경로 탐색",
+    categoryFilter: "제품 카테고리 필터",
+    thumbnail: " 썸네일",
+  },
+} as const;
+
 type SupportedForeignResourceLocale =
   (typeof SUPPORTED_FOREIGN_RESOURCE_LOCALES)[number];
 
@@ -106,13 +129,15 @@ export async function generateMetadata({
 
   const pageData = await getDatasheetsPageData(locale as DatasheetLocale);
 
-  return {
+  const metadata = {
     title:
       locale === "en"
         ? "Resources | FOREACH"
         : pageData.pageText.seo.title,
     description: pageData.pageText.seo.description,
   };
+
+  return locale === "en" ? metadata : { ...metadata, openGraph: metadata };
 }
 
 /* =========================================================
@@ -141,6 +166,9 @@ export default async function LocalizedResourcesPage({
       pageText={pageData.pageText}
       filterOptions={pageData.filterOptions}
       datasheetItems={pageData.datasheetItems}
+      accessibilityLabels={
+        locale === "en" ? undefined : datasheetAccessibilityLabels[locale]
+      }
     />
   );
-} 
+}

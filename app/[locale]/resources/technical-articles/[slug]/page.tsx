@@ -58,8 +58,11 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${article.seoTitle ?? article.title}｜Technical Articles｜FOREACH`,
+    title: locale === "en"
+      ? `${article.seoTitle ?? article.title}｜Technical Articles｜FOREACH`
+      : `${article.seoTitle ?? article.title}｜FOREACH`,
     description: article.seoDescription ?? article.summary,
+    ...(locale === "en" ? {} : { openGraph: { title: `${article.seoTitle ?? article.title}｜FOREACH`, description: article.seoDescription ?? article.summary } }),
   };
 }
 

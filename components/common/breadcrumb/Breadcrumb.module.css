@@ -10,12 +10,12 @@
 
 .breadcrumb {
   display: flex;
-  width: 100vw;
+  width: 100%;
   min-height: 24px;
-  margin-left: calc(50% - 50vw);
+  margin-left: 0;
   padding:
     18px
-    max(32px, calc((100vw - 1600px) / 2));
+    max(32px, calc((100% - 1600px) / 2));
   align-items: center;
   flex-wrap: wrap;
   gap: 8px;

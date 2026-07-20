@@ -72,13 +72,6 @@ export function getSiteFooterApiPath(locale: LocaleCode) {
 export const siteFooterData = {
   columns: [
     {
-      key: "home",
-      title: { china: "首页", global: "Home" },
-      links: [
-        { key: "home", label: { china: "首页", global: "Home" }, href: href("/") },
-      ],
-    },
-    {
       key: "products",
       title: { china: "产品中心", global: "Products" },
       links: [

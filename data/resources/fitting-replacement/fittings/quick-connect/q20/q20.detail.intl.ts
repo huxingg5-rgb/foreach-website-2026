@@ -183,6 +183,7 @@ export const fittingReplacementQuickConnectQ20DetailIntl = {
 
     drawingPreview: {
       title: "Plano 2D",
+      iframeTitle: "Plano PDF 2D del producto",
       loadingLabel: "Cargando plano 2D...",
       previewButton: "Previsualizar plano",
       description:
@@ -245,6 +246,7 @@ export const fittingReplacementQuickConnectQ20DetailIntl = {
 
     drawingPreview: {
       title: "Plan 2D",
+      iframeTitle: "Plan PDF 2D du produit",
       loadingLabel: "Chargement du plan 2D...",
       previewButton: "Prévisualiser le plan",
       description:
@@ -308,6 +310,7 @@ export const fittingReplacementQuickConnectQ20DetailIntl = {
 
     drawingPreview: {
       title: "2D 도면",
+      iframeTitle: "제품 2D PDF 도면",
       loadingLabel: "2D 도면을 불러오는 중...",
       previewButton: "도면 미리보기",
       description: "도면 파일이 필요한 경우 선정 목록에 추가해 주세요.",
@@ -368,6 +371,7 @@ export const fittingReplacementQuickConnectQ20DetailIntl = {
 
     drawingPreview: {
       title: "2D-чертеж",
+      iframeTitle: "2D-чертеж изделия в PDF",
       loadingLabel: "Загрузка 2D-чертежа...",
       previewButton: "Просмотреть чертеж",
       description:
@@ -414,4 +418,4 @@ export function getFittingReplacementQuickConnectQ20DetailIntl(
   }
 
   return fittingReplacementQuickConnectQ20DetailIntl.en;
-} 
+}

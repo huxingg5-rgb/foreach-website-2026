@@ -16,12 +16,13 @@ import type { Metadata } from "next";
 import ApplicationEnglishClient from "@/components/applications/ApplicationEnglishClient";
 import FrenchIndustryApplicationClient from "@/components/applications/FrenchIndustryApplicationClient";
 import RussianIndustryApplicationClient from "@/components/applications/RussianIndustryApplicationClient";
-import SpanishIndustryApplicationClient from "@/components/applications/SpanishIndustryApplicationClient";
+import SpanishIndustryApplicationClient, { KOREAN_INDUSTRY_UI_TEXT } from "@/components/applications/SpanishIndustryApplicationClient";
 import LabAutomationApplicationClient from "@/components/applications/lab-automation/LabAutomationApplicationClient";
 import { createEnglishApplicationData } from "@/data/applications/application-english";
 import { createFrenchApplicationMetadata } from "@/data/applications/application-french-metadata";
 import { createRussianApplicationMetadata } from "@/data/applications/application-russian-metadata";
 import { createSpanishApplicationMetadata } from "@/data/applications/application-spanish-metadata";
+import { createKoreanApplicationMetadata } from "@/data/applications/application-korean-metadata";
 import { getLabAutomationApplicationPageData } from "@/services/applications/lab-automation/getLabAutomationApplicationPageData";
 
 import "@/app/applications/lab-automation/lab-automation-application.css";
@@ -56,6 +57,10 @@ export async function generateMetadata({
 
   if (locale === "fr") {
     return createFrenchApplicationMetadata("lab-automation");
+  }
+
+  if (locale === "ko") {
+    return createKoreanApplicationMetadata("lab-automation");
   }
 
   if (locale === "ru") {
@@ -95,6 +100,17 @@ export default async function LabAutomationApplicationLocalePage({
         data={data}
         pageClassName="lab-automation-page"
         applicationTabsAria="Types d’équipements d’automatisation de laboratoire"
+      />
+    );
+  }
+
+  if (locale === "ko") {
+    return (
+      <SpanishIndustryApplicationClient
+        data={data}
+        pageClassName="lab-automation-page"
+        applicationTabsAria="실험실 자동화 장비 유형"
+        uiText={KOREAN_INDUSTRY_UI_TEXT}
       />
     );
   }

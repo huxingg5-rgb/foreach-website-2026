@@ -16,12 +16,13 @@ import type { Metadata } from "next";
 import ApplicationEnglishClient from "@/components/applications/ApplicationEnglishClient";
 import FrenchIndustryApplicationClient from "@/components/applications/FrenchIndustryApplicationClient";
 import RussianIndustryApplicationClient from "@/components/applications/RussianIndustryApplicationClient";
-import SpanishIndustryApplicationClient from "@/components/applications/SpanishIndustryApplicationClient";
+import SpanishIndustryApplicationClient, { KOREAN_INDUSTRY_UI_TEXT } from "@/components/applications/SpanishIndustryApplicationClient";
 import LifeScienceApplicationClient from "@/components/applications/life-science/LifeScienceApplicationClient";
 import { createEnglishApplicationData } from "@/data/applications/application-english";
 import { createFrenchApplicationMetadata } from "@/data/applications/application-french-metadata";
 import { createRussianApplicationMetadata } from "@/data/applications/application-russian-metadata";
 import { createSpanishApplicationMetadata } from "@/data/applications/application-spanish-metadata";
+import { createKoreanApplicationMetadata } from "@/data/applications/application-korean-metadata";
 import { getLifeScienceApplicationPageData } from "@/services/applications/life-science/getLifeScienceApplicationPageData";
 
 import "@/app/applications/life-science/life-science-application.css";
@@ -56,6 +57,10 @@ export async function generateMetadata({
 
   if (locale === "fr") {
     return createFrenchApplicationMetadata("life-science");
+  }
+
+  if (locale === "ko") {
+    return createKoreanApplicationMetadata("life-science");
   }
 
   if (locale === "ru") {
@@ -95,6 +100,17 @@ export default async function LifeScienceApplicationLocalePage({
         data={data}
         pageClassName="life-science-page"
         applicationTabsAria="Types d’applications en sciences de la vie"
+      />
+    );
+  }
+
+  if (locale === "ko") {
+    return (
+      <SpanishIndustryApplicationClient
+        data={data}
+        pageClassName="life-science-page"
+        applicationTabsAria="생명과학 응용 유형"
+        uiText={KOREAN_INDUSTRY_UI_TEXT}
       />
     );
   }

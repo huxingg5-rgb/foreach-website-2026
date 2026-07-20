@@ -1,0 +1,7 @@
+﻿"数据文件","数据行","商品编码","产品ID","型号","FOREACH型号","产品型号","兼容型号","标题","产品类型","产品系列","图片"
+"data/resources/fitting-replacement/all-compatible-products.generated.ts","14","126007","","","CV-BV-32-PP-N","","","","单向阀","CV","/images/resources/selection-support/fitting-replacement/compatible-model-placeholder.svg"
+"data/resources/fitting-replacement/all-compatible-products.generated.ts","29","126009","","","CV-BV-48-PP-N","","","","单向阀","CV","/images/resources/selection-support/fitting-replacement/compatible-model-placeholder.svg"
+"data/resources/fitting-replacement/all-compatible-products.generated.ts","44","126011","","","CV-BV-64-PP-N","","","","单向阀","CV","/images/resources/selection-support/fitting-replacement/compatible-model-placeholder.svg"
+"data/resources/fitting-replacement/compatible-models.generated.ts","35","126007","","","CV-BV-32-PP-N","","","单向阀 膜片式 CV-BV-32-PP-N 126007","单向阀","CV",""
+"data/resources/fitting-replacement/compatible-models.generated.ts","58","126009","","","CV-BV-48-PP-N","","","单向阀 膜片式 CV-BV-48-PP-N 126009","单向阀","CV",""
+"data/resources/fitting-replacement/compatible-models.generated.ts","81","126011","","","CV-BV-64-PP-N","","","单向阀 膜片式 CV-BV-64-PP-N 126011","单向阀","CV",""

@@ -26,6 +26,7 @@
   --btn-radius: 8px;
 
   width: 100%;
+  overflow-x: clip;
   min-height: 100vh;
   padding: 82px 0 72px;
   background: #ffffff;

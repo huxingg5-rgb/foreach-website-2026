@@ -20,7 +20,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { installationGuideZhData } from "@/data/resources/installation-guide/installation-guide.zh";
+import { getInstallationGuidePageData } from "@/services/resources/installation-guide/getInstallationGuidePageData";
 
 const INSTALLATION_GUIDE_DETAIL_LOCALES = ["en", "es", "fr", "ko", "ru"] as const;
 
@@ -34,10 +34,27 @@ type InstallationGuideIntlDetailPageProps = {
   }>;
 };
 
-export const metadata: Metadata = {
-  title: "Installation Guide Detail｜FOREACH",
-  description: "FOREACH product installation guide detail page.",
-};
+export async function generateMetadata({
+  params,
+}: InstallationGuideIntlDetailPageProps): Promise<Metadata> {
+  const { locale, slug } = await params;
+
+  if (locale === "en") {
+    return {
+      title: "Installation Guide Detail｜FOREACH",
+      description: "FOREACH product installation guide detail page.",
+    };
+  }
+
+  const guide = getInstallationGuidePageData(locale).guides.find((item) => item.id === slug);
+  if (!guide) return {};
+
+  return {
+    title: `${guide.title}｜FOREACH`,
+    description: guide.description,
+    openGraph: { title: `${guide.title}｜FOREACH`, description: guide.description },
+  };
+}
 
 /* =========================================================
    静态导出参数
@@ -49,8 +66,9 @@ export const metadata: Metadata = {
 ========================================================= */
 
 export function generateStaticParams() {
+  const guides = getInstallationGuidePageData("en").guides;
   return INSTALLATION_GUIDE_DETAIL_LOCALES.flatMap((locale) => {
-    return installationGuideZhData.guides.map((guide) => ({
+    return guides.map((guide) => ({
       locale,
       slug: guide.id,
     }));
@@ -66,7 +84,7 @@ export default async function InstallationGuideIntlDetailPage({
     notFound();
   }
 
-  const currentGuide = installationGuideZhData.guides.find((guide) => {
+  const currentGuide = getInstallationGuidePageData(locale).guides.find((guide) => {
     return guide.id === slug;
   });
 
@@ -86,4 +104,4 @@ export default async function InstallationGuideIntlDetailPage({
       </div>
     </main>
   );
-} 
+}

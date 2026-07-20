@@ -6,6 +6,7 @@ import { lifeScienceApplicationZhData } from "./life-science-application.zh";
 import { translateFrenchApplicationData } from "../application-french";
 import { translateRussianApplicationData } from "../application-russian";
 import { translateSpanishApplicationData } from "../application-spanish";
+import { translateKoreanApplicationData } from "../application-korean.generated";
 
 const lifeScienceApplicationEsData =
   translateSpanishApplicationData<LifeScienceApplicationPageData>(
@@ -25,6 +26,11 @@ const lifeScienceApplicationRuData =
     lifeScienceRuExactText,
   );
 
+const lifeScienceApplicationKoData =
+  translateKoreanApplicationData<LifeScienceApplicationPageData>(
+    lifeScienceApplicationZhData,
+  );
+
 export function getLifeScienceApplicationIntlData(
   locale: string,
 ): LifeScienceApplicationPageData {
@@ -34,6 +40,10 @@ export function getLifeScienceApplicationIntlData(
 
   if (locale === "fr") {
     return lifeScienceApplicationFrData;
+  }
+
+  if (locale === "ko") {
+    return lifeScienceApplicationKoData;
   }
 
   if (locale === "ru") {

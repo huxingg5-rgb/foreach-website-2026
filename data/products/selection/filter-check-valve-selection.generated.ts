@@ -72,7 +72,7 @@ export const filterCheckValveSelectionProducts =
     "selectionHref": "/products/fittings/filters",
     "needDrawing": true,
     "needModel3d": false,
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 6,
     "sortOrder": 470003,
     "searchKeywords": {
@@ -216,7 +216,7 @@ export const filterCheckValveSelectionProducts =
     "selectionHref": "/products/fittings/filters",
     "needDrawing": false,
     "needModel3d": false,
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 9,
     "sortOrder": 470005,
     "searchKeywords": {
@@ -360,7 +360,7 @@ export const filterCheckValveSelectionProducts =
     "selectionHref": "/products/fittings/filters",
     "needDrawing": true,
     "needModel3d": false,
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 11,
     "sortOrder": 470007,
     "searchKeywords": {
@@ -432,7 +432,7 @@ export const filterCheckValveSelectionProducts =
     "selectionHref": "/products/fittings/filters",
     "needDrawing": true,
     "needModel3d": true,
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 12,
     "sortOrder": 470008,
     "searchKeywords": {
@@ -504,7 +504,7 @@ export const filterCheckValveSelectionProducts =
     "selectionHref": "/products/fittings/filters",
     "needDrawing": true,
     "needModel3d": true,
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 13,
     "sortOrder": 470009,
     "searchKeywords": {
@@ -576,7 +576,7 @@ export const filterCheckValveSelectionProducts =
     "selectionHref": "/products/fittings/filters",
     "needDrawing": true,
     "needModel3d": false,
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 14,
     "sortOrder": 470010,
     "searchKeywords": {
@@ -648,7 +648,7 @@ export const filterCheckValveSelectionProducts =
     "selectionHref": "/products/fittings/filters",
     "needDrawing": false,
     "needModel3d": true,
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 15,
     "sortOrder": 470011,
     "searchKeywords": {
@@ -721,7 +721,7 @@ export const filterCheckValveSelectionProducts =
     "selectionHref": "/products/fittings/filters",
     "needDrawing": true,
     "needModel3d": true,
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 16,
     "sortOrder": 470012,
     "searchKeywords": {
@@ -793,7 +793,7 @@ export const filterCheckValveSelectionProducts =
     "selectionHref": "/products/fittings/filters",
     "needDrawing": false,
     "needModel3d": false,
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 17,
     "sortOrder": 470013,
     "searchKeywords": {
@@ -867,7 +867,7 @@ export const filterCheckValveSelectionProducts =
     "selectionHref": "/products/fittings/filters",
     "needDrawing": true,
     "needModel3d": false,
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 18,
     "sortOrder": 470014,
     "searchKeywords": {
@@ -939,7 +939,7 @@ export const filterCheckValveSelectionProducts =
     "selectionHref": "/products/fittings/filters",
     "needDrawing": false,
     "needModel3d": false,
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 19,
     "sortOrder": 470015,
     "searchKeywords": {
@@ -1011,7 +1011,7 @@ export const filterCheckValveSelectionProducts =
     "selectionHref": "/products/fittings/filters",
     "needDrawing": true,
     "needModel3d": true,
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 22,
     "sortOrder": 470016,
     "searchKeywords": {
@@ -1083,7 +1083,7 @@ export const filterCheckValveSelectionProducts =
     "selectionHref": "/products/fittings/filters",
     "needDrawing": true,
     "needModel3d": true,
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 23,
     "sortOrder": 470017,
     "searchKeywords": {
@@ -1155,7 +1155,7 @@ export const filterCheckValveSelectionProducts =
     "selectionHref": "/products/fittings/filters",
     "needDrawing": true,
     "needModel3d": false,
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 24,
     "sortOrder": 470018,
     "searchKeywords": {
@@ -1229,7 +1229,7 @@ export const filterCheckValveSelectionProducts =
     "selectionHref": "/products/fittings/filters",
     "needDrawing": true,
     "needModel3d": false,
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 25,
     "sortOrder": 470019,
     "searchKeywords": {
@@ -1305,7 +1305,7 @@ export const filterCheckValveSelectionProducts =
     "selectionHref": "/products/fittings/filters",
     "needDrawing": true,
     "needModel3d": false,
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 26,
     "sortOrder": 470020,
     "searchKeywords": {
@@ -1379,7 +1379,7 @@ export const filterCheckValveSelectionProducts =
     "selectionHref": "/products/fittings/filters",
     "needDrawing": true,
     "needModel3d": false,
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 27,
     "sortOrder": 470021,
     "searchKeywords": {
@@ -1451,7 +1451,7 @@ export const filterCheckValveSelectionProducts =
     "selectionHref": "/products/fittings/filters",
     "needDrawing": true,
     "needModel3d": false,
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 28,
     "sortOrder": 470022,
     "searchKeywords": {
@@ -1523,7 +1523,7 @@ export const filterCheckValveSelectionProducts =
     "selectionHref": "/products/fittings/filters",
     "needDrawing": true,
     "needModel3d": false,
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 29,
     "sortOrder": 470023,
     "searchKeywords": {
@@ -1595,7 +1595,7 @@ export const filterCheckValveSelectionProducts =
     "selectionHref": "/products/fittings/filters",
     "needDrawing": true,
     "needModel3d": false,
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 30,
     "sortOrder": 470024,
     "searchKeywords": {
@@ -1667,7 +1667,7 @@ export const filterCheckValveSelectionProducts =
     "selectionHref": "/products/fittings/filters",
     "needDrawing": true,
     "needModel3d": false,
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 31,
     "sortOrder": 470025,
     "searchKeywords": {
@@ -1739,7 +1739,7 @@ export const filterCheckValveSelectionProducts =
     "selectionHref": "/products/fittings/filters",
     "needDrawing": false,
     "needModel3d": false,
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 32,
     "sortOrder": 470026,
     "searchKeywords": {
@@ -1811,7 +1811,7 @@ export const filterCheckValveSelectionProducts =
     "selectionHref": "/products/fittings/filters",
     "needDrawing": false,
     "needModel3d": false,
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 33,
     "sortOrder": 470027,
     "searchKeywords": {
@@ -1883,7 +1883,7 @@ export const filterCheckValveSelectionProducts =
     "selectionHref": "/products/fittings/filters",
     "needDrawing": true,
     "needModel3d": false,
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 34,
     "sortOrder": 470028,
     "searchKeywords": {
@@ -2027,7 +2027,7 @@ export const filterCheckValveSelectionProducts =
     "selectionHref": "/products/fittings/filters",
     "needDrawing": false,
     "needModel3d": false,
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 37,
     "sortOrder": 470030,
     "searchKeywords": {
@@ -2099,7 +2099,7 @@ export const filterCheckValveSelectionProducts =
     "selectionHref": "/products/fittings/filters",
     "needDrawing": true,
     "needModel3d": false,
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 38,
     "sortOrder": 470031,
     "searchKeywords": {
@@ -2171,7 +2171,7 @@ export const filterCheckValveSelectionProducts =
     "selectionHref": "/products/fittings/filters",
     "needDrawing": true,
     "needModel3d": true,
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 39,
     "sortOrder": 470032,
     "searchKeywords": {
@@ -2243,7 +2243,7 @@ export const filterCheckValveSelectionProducts =
     "selectionHref": "/products/fittings/filters",
     "needDrawing": false,
     "needModel3d": false,
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 40,
     "sortOrder": 470033,
     "searchKeywords": {

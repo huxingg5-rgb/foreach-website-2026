@@ -30,11 +30,8 @@ import { notFound } from "next/navigation";
 
 import DatasheetsClient from "@/components/resources/DatasheetsClient";
 
-import {
-  datasheetEnFilterOptions,
-  datasheetEnItems,
-  datasheetsEnPageText,
-} from "@/data/resources/datasheets.en";
+import type { DatasheetLocale } from "@/data/resources/datasheets.types";
+import { getDatasheetsPageData } from "@/services/resources/getDatasheetsPageData";
 
 import "@/app/resources/datasheets/datasheets.css";
 
@@ -102,52 +99,51 @@ function isSupportedResourceLocale(
    4. /ru/resources 的联系按钮应该跳 /ru/contact
 ========================================================= */
 
-function getForeignResourcesPageText(locale: SupportedResourceLocale) {
-  return {
-    ...datasheetsEnPageText,
+const resourcesMetadata = {
+  es: {
+    title: "Centro de recursos | FOREACH",
+    description:
+      "Consulte fichas técnicas, herramientas de selección, guías de instalación, compatibilidad de materiales, artículos técnicos y noticias de FOREACH.",
+  },
+  fr: {
+    title: "Centre de ressources | FOREACH",
+    description:
+      "Consultez les fiches techniques, outils de sélection, guides d’installation, données de compatibilité, articles techniques et actualités FOREACH.",
+  },
+  ru: {
+    title: "Центр ресурсов | FOREACH",
+    description:
+      "Спецификации, инструменты подбора, руководства по установке, данные о совместимости материалов, технические статьи и новости FOREACH.",
+  },
+  ko: {
+    title: "자료실 | FOREACH",
+    description:
+      "FOREACH 제품 사양서, 선정 도구, 설치 가이드, 소재 호환성 자료, 기술 문서 및 뉴스를 확인하세요.",
+  },
+} as const;
 
-    breadcrumb: {
-      ...datasheetsEnPageText.breadcrumb,
-      homeHref: `/${locale}`,
-
-      /*
-         注意：
-         这里指向当前资源中心首页。
-         现在 app/[locale]/resources/page.tsx 已经补齐，
-         所以 /es/resources /fr/resources /ko/resources /ru/resources 都能打开。
-      */
-      resourcesHref: `/${locale}/resources`,
-    },
-
-    support: {
-      ...datasheetsEnPageText.support,
-      buttonHref: `/${locale}/contact?type=datasheet`,
-    },
-  };
-}
-
-/* =========================================================
-   getForeignDatasheetItems
-   生成外语规格书列表数据
-
-   说明：
-   1. 所有外语资源中心首页暂时统一显示英文规格书数据
-   2. PDF 下载路径继续使用英文 PDF
-   3. 定制类联系入口根据 locale 跳到对应语言联系页
-========================================================= */
-
-function getForeignDatasheetItems(locale: SupportedResourceLocale) {
-  return datasheetEnItems.map((item) => {
-    if (item.actionType === "custom") {
-      return {
-        ...item,
-        downloadHref: `/${locale}/contact?type=custom-probe`,
-      };
-    }
-
-    return item;
-  });
-}
+const resourcesAccessibilityLabels = {
+  es: {
+    breadcrumb: "Ruta de navegación",
+    categoryFilter: "Filtro de categoría de producto",
+    thumbnail: " miniatura",
+  },
+  fr: {
+    breadcrumb: "Fil d’Ariane",
+    categoryFilter: "Filtre de catégorie de produits",
+    thumbnail: " — miniature",
+  },
+  ru: {
+    breadcrumb: "Навигационная цепочка",
+    categoryFilter: "Фильтр по категории продукции",
+    thumbnail: " — миниатюра",
+  },
+  ko: {
+    breadcrumb: "경로 탐색",
+    categoryFilter: "제품 카테고리 필터",
+    thumbnail: " 썸네일",
+  },
+} as const;
 
 /* =========================================================
    页面 SEO
@@ -165,10 +161,19 @@ export async function generateMetadata({
     return {};
   }
 
+  if (locale === "en") {
+    return {
+      title: "Resources | FOREACH Fluid",
+      description:
+        "Access FOREACH product datasheets, selection support, installation guides, material compatibility information, FAQs, and company news.",
+    };
+  }
+
+  const localizedMetadata = resourcesMetadata[locale];
+
   return {
-    title: "Resources | FOREACH Fluid",
-    description:
-      "Access FOREACH product datasheets, selection support, installation guides, material compatibility information, FAQs, and company news.",
+    ...localizedMetadata,
+    openGraph: localizedMetadata,
   };
 }
 
@@ -186,11 +191,16 @@ export default async function LocalizedResourcesPage({
     notFound();
   }
 
+  const pageData = await getDatasheetsPageData(locale as DatasheetLocale);
+
   return (
     <DatasheetsClient
-      pageText={getForeignResourcesPageText(locale)}
-      filterOptions={datasheetEnFilterOptions}
-      datasheetItems={getForeignDatasheetItems(locale)}
+      pageText={pageData.pageText}
+      filterOptions={pageData.filterOptions}
+      datasheetItems={pageData.datasheetItems}
+      accessibilityLabels={
+        locale === "en" ? undefined : resourcesAccessibilityLabels[locale]
+      }
     />
   );
 }

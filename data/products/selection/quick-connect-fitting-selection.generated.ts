@@ -1254,7 +1254,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "imageCard": "/images/products/FIT/Quick connector_200x200_01_v001.jpg",
     "detailSlug": "quick-connect-fittings",
-    "status": "active",
+    "status": "inactive",
     "sortOrder": 440038,
     "searchKeywords": {
       "zh": "快插接头 Q20 Q2002-PNV-SACF 839091 3.2 mm 公端 非穿板 带阀 直通 POM FKM",
@@ -1969,7 +1969,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "imageCard": "/images/products/FIT/Quick connector_200x200_01_v001.jpg",
     "detailSlug": "quick-connect-fittings",
-    "status": "active",
+    "status": "inactive",
     "sortOrder": 440037,
     "searchKeywords": {
       "zh": "快插接头 Q20 Q2002-SNV-SACF 839092 3.2 mm 母端 非穿板 带阀 直通 POM FKM",
@@ -4994,7 +4994,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "imageCard": "/images/products/FIT/Quick connector_200x200_01_v001.jpg",
     "detailSlug": "quick-connect-fittings",
-    "status": "active",
+    "status": "inactive",
     "sortOrder": 440096,
     "searchKeywords": {
       "zh": "快插接头 Q20 Q2018T-SNV-SACN 839109 R1/8（BSPT） 母端 非穿板 带阀 直通 POM NBR",
@@ -5049,7 +5049,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "imageCard": "/images/products/FIT/Quick connector_200x200_01_v001.jpg",
     "detailSlug": "quick-connect-fittings",
-    "status": "active",
+    "status": "inactive",
     "sortOrder": 440094,
     "searchKeywords": {
       "zh": "快插接头 Q20 Q2018T-SNV-SPPE 839097 R1/8（BSPT） 母端 非穿板 带阀 直通 PP EPDM",
@@ -5104,7 +5104,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "imageCard": "/images/products/FIT/Quick connector_200x200_01_v001.jpg",
     "detailSlug": "quick-connect-fittings",
-    "status": "active",
+    "status": "inactive",
     "sortOrder": 440097,
     "searchKeywords": {
       "zh": "快插接头 Q20 Q2018T-SNX-SACN 839110 R1/8（BSPT） 母端 非穿板 不带阀 直通 POM NBR",
@@ -5159,7 +5159,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "imageCard": "/images/products/FIT/Quick connector_200x200_01_v001.jpg",
     "detailSlug": "quick-connect-fittings",
-    "status": "active",
+    "status": "inactive",
     "sortOrder": 440095,
     "searchKeywords": {
       "zh": "快插接头 Q20 Q2018T-SNX-SPPE 839104 R1/8（BSPT） 母端 非穿板 不带阀 直通 PP EPDM",
@@ -5214,7 +5214,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "imageCard": "/images/products/FIT/Quick connector_200x200_01_v001.jpg",
     "detailSlug": "quick-connect-fittings",
-    "status": "active",
+    "status": "inactive",
     "sortOrder": 440093,
     "searchKeywords": {
       "zh": "快插接头 Q20 Q2028U-PNV-SACN 839108 1/4\"-28 UNF 公端 非穿板 带阀 直通 POM NBR",
@@ -5269,7 +5269,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "imageCard": "/images/products/FIT/Quick connector_200x200_01_v001.jpg",
     "detailSlug": "quick-connect-fittings",
-    "status": "active",
+    "status": "inactive",
     "sortOrder": 440091,
     "searchKeywords": {
       "zh": "快插接头 Q20 Q2028U-PNV-SPPE 839106 1/4\"-28 UNF 公端 非穿板 带阀 直通 PP EPDM",
@@ -5324,7 +5324,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "imageCard": "/images/products/FIT/Quick connector_200x200_01_v001.jpg",
     "detailSlug": "quick-connect-fittings",
-    "status": "active",
+    "status": "inactive",
     "sortOrder": 440092,
     "searchKeywords": {
       "zh": "快插接头 Q20 Q2028U-SMV-SACN 839107 1/4\"-28 UNF 母端 穿板 带阀 直通 POM NBR",
@@ -5379,7 +5379,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "imageCard": "/images/products/FIT/Quick connector_200x200_01_v001.jpg",
     "detailSlug": "quick-connect-fittings",
-    "status": "active",
+    "status": "inactive",
     "sortOrder": 440090,
     "searchKeywords": {
       "zh": "快插接头 Q20 Q2028U-SMV-SPPE 839105 1/4\"-28 UNF 母端 穿板 带阀 直通 PP EPDM",
@@ -6204,7 +6204,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4004-snv-sacn-main.jpg",
     "detailSlug": "quick-connect-fittings",
-    "status": "active",
+    "status": "inactive",
     "sortOrder": 440120,
     "searchKeywords": {
       "zh": "快插接头 Q40 Q4004-SNV-SACN 849018 6.4 mm 母端 非穿板 带阀 直通 POM NBR",
@@ -6259,7 +6259,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4004-snv-sppe-main.jpg",
     "detailSlug": "quick-connect-fittings",
-    "status": "active",
+    "status": "inactive",
     "sortOrder": 440142,
     "searchKeywords": {
       "zh": "快插接头 Q40 Q4004-SNV-SPPE 849052 6.4 mm 母端 非穿板 带阀 直通 PP EPDM",
@@ -8679,7 +8679,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "imageCard": "/images/products/FIT/Quick connector_200x200_01_v001.jpg",
     "detailSlug": "quick-connect-fittings",
-    "status": "active",
+    "status": "inactive",
     "sortOrder": 440170,
     "searchKeywords": {
       "zh": "快插接头 Q60 Q6006-PNV-SPPE 869029 9.5 mm 公端 非穿板 带阀 直通 PP EPDM",
@@ -8789,7 +8789,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "imageCard": "/images/products/FIT/Quick connector_200x200_01_v001.jpg",
     "detailSlug": "quick-connect-fittings",
-    "status": "active",
+    "status": "inactive",
     "sortOrder": 440165,
     "searchKeywords": {
       "zh": "快插接头 Q60 Q6006-PNX-SPPE 869009 9.5 mm 公端 非穿板 不带阀 直通 PP EPDM",
@@ -10219,7 +10219,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "imageCard": "/images/products/FIT/Quick connector_200x200_01_v001.jpg",
     "detailSlug": "quick-connect-fittings",
-    "status": "active",
+    "status": "inactive",
     "sortOrder": 440180,
     "searchKeywords": {
       "zh": "快插接头 Q60 Q6012N-SNV-SPPE 869025 1/2\"-14 NPT 母端 非穿板 带阀 直通 PP EPDM",
@@ -10274,7 +10274,7 @@ export const quickConnectFittingSelectionProducts =
     },
     "imageCard": "/images/products/FIT/Quick connector_200x200_01_v001.jpg",
     "detailSlug": "quick-connect-fittings",
-    "status": "active",
+    "status": "inactive",
     "sortOrder": 440172,
     "searchKeywords": {
       "zh": "快插接头 Q60 Q6012N-SNX-SPPE 869005 1/2\"-14 NPT 母端 非穿板 不带阀 直通 PP EPDM",

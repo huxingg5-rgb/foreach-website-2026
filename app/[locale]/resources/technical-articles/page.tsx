@@ -34,11 +34,17 @@ export function generateStaticParams() {
   }));
 }
 
-export const metadata: Metadata = {
-  title: "Technical Articles｜Resources｜FOREACH",
-  description:
-    "FOREACH technical articles about product selection, material compatibility, tubing connections, sealing methods and microfluidic system applications.",
-};
+export async function generateMetadata({ params }: TechnicalArticlesIntlPageProps): Promise<Metadata> {
+  const { locale } = await params;
+  const pageData = getTechnicalArticlesPageData(locale);
+  const sectionLabels: Record<TechnicalArticleLocale, string> = {
+    "zh-CN": "资源中心", en: "Resources", es: "Recursos", fr: "Ressources", ko: "자료", ru: "Ресурсы",
+  };
+  const metadata = locale === "en"
+    ? { title: "Technical Articles｜Resources｜FOREACH", description: "FOREACH technical articles about product selection, material compatibility, tubing connections, sealing methods and microfluidic system applications." }
+    : { title: `${pageData.hero.title}｜${sectionLabels[locale]}｜FOREACH`, description: pageData.hero.description };
+  return locale === "en" ? metadata : { ...metadata, openGraph: metadata };
+}
 
 export default async function TechnicalArticlesIntlPage({
   params,

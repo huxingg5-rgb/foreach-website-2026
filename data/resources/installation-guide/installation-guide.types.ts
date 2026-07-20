@@ -56,6 +56,17 @@ export type InstallationGuideCard = {
 export type InstallationGuidePageData = {
   locale: InstallationGuideLocale;
 
+  ui?: {
+    breadcrumbAriaLabel: string;
+    breadcrumbHome: string;
+    breadcrumbResources: string;
+    breadcrumbCurrent: string;
+    productCategory: string;
+    tags: string;
+    emptyTitle: string;
+    emptyDescription: string;
+  };
+
   hero: {
     kicker: string;
     title: string;

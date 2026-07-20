@@ -119,14 +119,14 @@ const valveProducts = [
     productTypeId: "高压阀",
     productTypeLabel: "高压阀",
 
-    model: "HP 三位七通高压阀",
-    title: "HP 三位七通高压阀",
-    name: "HP 三位七通高压阀",
-    productName: "HP 三位七通高压阀",
+    model: "HP 二位六通带排气高压旋转阀",
+    title: "HP 二位六通带排气高压旋转阀",
+    name: "HP 二位六通带排气高压旋转阀",
+    productName: "HP 二位六通带排气高压旋转阀",
 
     cardTitle: {
-      zh: "HP 三位七通高压阀",
-      en: "HP Three-position Seven-port High-pressure Valve",
+      zh: "HP 二位六通带排气高压旋转阀",
+      en: "HP 2-Position 6-Port with Vent High-Pressure Rotary Valve",
       es: "Válvula de alta presión HP de tres posiciones y siete puertos",
       fr: "Valve haute pression HP trois positions sept ports",
       ko: "HP 3위치 7포트 고압 밸브",
@@ -134,8 +134,8 @@ const valveProducts = [
     },
 
     cardSubtitle: {
-      zh: "三位七通高压流路控制\n25MPa，10-32UNF 接口\n适用于 HPLC 自动进样与排气场景",
-      en: "Three-position seven-port high-pressure flow control\n25MPa, 10-32UNF port\nFor HPLC autosampling and venting",
+      zh: "二位六通主流路切换与独立排气控制\n25MPa，10-32UNF 接口\n适用于 HPLC 自动进样与排气场景",
+      en: "2-position, 6-port with vent high-pressure flow control\n25MPa, 10-32UNF port\nFor HPLC autosampling and venting",
       es: "Control de flujo de alta presión de tres posiciones y siete puertos\n25MPa, puerto 10-32UNF\nPara automuestreo HPLC y ventilación",
       fr: "Contrôle de débit haute pression trois positions sept ports\n25MPa, port 10-32UNF\nPour autosampling HPLC et purge",
       ko: "3위치 7포트 고압 유로 제어\n25MPa, 10-32UNF 포트\nHPLC 자동 샘플링 및 배기용",
@@ -145,16 +145,16 @@ const valveProducts = [
     image: "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp",
     imagePath: "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp",
     imageUrl: "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp",
-    imageAlt: "HP 三位七通高压阀",
+    imageAlt: "HP 二位六通带排气高压旋转阀",
 
-    subtitle: "三位七通高压流路控制，适用于 HPLC 自动进样与排气场景",
+    subtitle: "二位六通主流路切换与独立排气控制，适用于 HPLC 自动进样与排气场景",
     description:
-      "HP 三位七通高压阀用于 HPLC 自动进样、高压流路切换、系统排气和分析仪器高压液路模块。",
+      "HP 二位六通带排气高压旋转阀用于 HPLC 自动进样、高压流路切换、系统排气和分析仪器高压液路模块。",
 
     summary:
-      "三位七通结构，最大工作压力 25MPa，接口 10-32UNF。",
+      "二位六通主流路结构，并设置独立排气位置，最大工作压力 25MPa，接口 10-32UNF。",
 
-    tags: ["25MPa", "三位七通", "HPLC"],
+    tags: ["25MPa", "二位六通带排气", "HPLC"],
 
     specs: [
       { label: "最大工作压力", value: "25MPa" },

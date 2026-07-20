@@ -38,6 +38,7 @@ import { getInternationalUiText } from "@/lib/international-ui";
 
 import styles from "./GlobalSelectionCartDrawer.module.css";
 import { useSelectionCart } from "./SelectionCartProvider";
+import { getSelectionCartCopy } from "./selection-cart.i18n";
 
 /* =========================================================
    PDF 页眉 / 页脚 SVG 路径
@@ -83,12 +84,6 @@ function preloadPrintImage(src: string) {
   });
 }
 
-function getEnglishCartSourceLabel(sourceType: string) {
-  return sourceType === "pump-selection"
-    ? "Products"
-    : "Fitting Replacement Search";
-}
-
 function getCartDetailHref(
   href: string | undefined,
   locale: LocaleCode,
@@ -113,6 +108,7 @@ export default function GlobalSelectionCartDrawer() {
   const isEnglish = isInternationalLocale(locale);
   const t = (text: string) => getInternationalUiText(locale, text);
   const drawingCopy = getDrawingRequestCopy(locale);
+  const cartCopy = getSelectionCartCopy(locale);
 
   const {
     items,
@@ -121,6 +117,7 @@ export default function GlobalSelectionCartDrawer() {
     closeCart,
     changeQuantity,
     toggleDrawingNeed,
+    setAllDrawingNeeds,
     removeItem,
     clearCart,
     copyCartText,
@@ -234,6 +231,19 @@ export default function GlobalSelectionCartDrawer() {
      3. 不使用浏览器 alert，体验更像官网表单
   ========================================================= */
   function handleOpenDrawingRequestModal() {
+    /*
+     * “申请图纸”代表客户希望为当前清单统一申请图纸。
+     *
+     * 因此点击后：
+     * 1. 把当前清单全部标记为需要图纸
+     * 2. 弹窗会通过同一个 SelectionCartProvider 读取这些型号
+     * 3. 弹窗项目数量与当前产品清单数量保持一致
+     * 4. 弹窗有项目后，发送验证码按钮自动解除禁用
+     */
+    if (items.length > 0) {
+      setAllDrawingNeeds(true);
+    }
+
     setIsDrawingRequestModalOpen(true);
   }
 
@@ -376,9 +386,7 @@ export default function GlobalSelectionCartDrawer() {
      * 只取消本次成功提交型号的图纸标记。
      * 选型产品本身继续保留，便于客户后续生成 PDF 或提交报价需求。
      */
-    requestDrawingItems.forEach((item) => {
-      toggleDrawingNeed(item.id, false);
-    });
+    setAllDrawingNeeds(false);
   }
   /* =========================================================
      打印区域
@@ -393,46 +401,42 @@ export default function GlobalSelectionCartDrawer() {
       <div className={styles.printPage}>
         {/* PDF 正式页眉 SVG */}
         <header className={styles.printGraphicHeader}>
-          <img src={PDF_HEADER_GRAPHIC_SRC} alt="FOREACH PDF Header" />
+          <img src={PDF_HEADER_GRAPHIC_SRC} alt={cartCopy.pdfHeaderAlt} />
         </header>
 
         <main className={styles.printContent}>
           <section className={styles.printTitleBlock}>
-            <h1>{isEnglish ? "FOREACH Product Selection List" : "恒永达选型清单"}</h1>
-            <p>
-              {isEnglish
-                ? "This list is generated from the selected models for model confirmation, quotation discussions, and technical review."
-                : "本清单根据客户选择的型号生成，用于型号确认、报价沟通及内部技术确认。"}
-            </p>
+            <h1>{cartCopy.printTitle}</h1>
+            <p>{cartCopy.printDescription}</p>
           </section>
 
           <section className={styles.printMetaGrid}>
             <div>
-              <span>{isEnglish ? "Generated" : "生成时间"}</span>
+              <span>{cartCopy.generated}</span>
               <strong>{printTime || "-"}</strong>
             </div>
 
             <div>
-              <span>{isEnglish ? "Products" : "产品数量"}</span>
-              <strong>{items.length} {isEnglish ? "items" : "项"}</strong>
+              <span>{cartCopy.productsCount}</span>
+              <strong>{items.length} {cartCopy.itemUnit}</strong>
             </div>
 
             <div>
-              <span>{isEnglish ? "Drawing Requests" : "图纸需求"}</span>
-              <strong>{drawingNeedCount} {isEnglish ? "items" : "项"}</strong>
+              <span>{cartCopy.drawingRequests}</span>
+              <strong>{drawingNeedCount} {cartCopy.itemUnit}</strong>
             </div>
           </section>
 
           <table className={styles.printTable}>
             <thead>
               <tr>
-                <th>{isEnglish ? "No." : "序号"}</th>
-                <th>{isEnglish ? "Source" : "来源"}</th>
-                <th>{isEnglish ? "Product" : "产品信息"}</th>
-                <th>{isEnglish ? "Related Information" : "关联信息"}</th>
-                <th>{isEnglish ? "Model" : "型号"}</th>
-                <th>{isEnglish ? "Quantity" : "数量"}</th>
-                <th>{isEnglish ? "2D Drawing" : "2D 图纸"}</th>
+                <th>{cartCopy.number}</th>
+                <th>{cartCopy.source}</th>
+                <th>{cartCopy.product}</th>
+                <th>{cartCopy.relatedInformation}</th>
+                <th>{cartCopy.model}</th>
+                <th>{isEnglish ? t("Quantity") : "数量"}</th>
+                <th>{cartCopy.drawing}</th>
               </tr>
             </thead>
 
@@ -440,7 +444,7 @@ export default function GlobalSelectionCartDrawer() {
               {items.length === 0 ? (
                 <tr>
                   <td colSpan={7}>
-                    {isEnglish ? "No products selected" : "暂无选型产品"}
+                    {isEnglish ? t("No products selected") : "暂无选型产品"}
                   </td>
                 </tr>
               ) : (
@@ -449,9 +453,9 @@ export default function GlobalSelectionCartDrawer() {
                     <tr key={item.id}>
                       <td>{index + 1}</td>
                       <td>
-                        {isEnglish
-                          ? getEnglishCartSourceLabel(item.sourceType)
-                          : item.sourceLabel}
+                        {item.sourceType === "pump-selection"
+                          ? cartCopy.sourceLabels.products
+                          : cartCopy.sourceLabels.fittingReplacement}
                       </td>
                       <td>
                         {item.sourceType === "pump-selection"
@@ -460,17 +464,15 @@ export default function GlobalSelectionCartDrawer() {
                       </td>
                       <td>
                         {item.sourceType === "pump-selection"
-                          ? isEnglish
-                            ? "Configured Product"
-                            : "定制选型产品"
+                          ? cartCopy.configuredProduct
                           : item.competitorModels.join(" / ") || "-"}
                       </td>
                       <td>{item.foreachModel}</td>
                       <td>{item.quantity}</td>
                       <td>
                         {item.needDrawing
-                          ? isEnglish ? "Required" : "需要"
-                          : isEnglish ? "Not Required" : "暂不需要"}
+                          ? cartCopy.required
+                          : cartCopy.notRequired}
                       </td>
                     </tr>
                   );
@@ -482,7 +484,7 @@ export default function GlobalSelectionCartDrawer() {
 
         {/* PDF 正式页脚 SVG */}
         <footer className={styles.printGraphicFooter}>
-          <img src={PDF_FOOTER_GRAPHIC_SRC} alt="FOREACH PDF Footer" />
+          <img src={PDF_FOOTER_GRAPHIC_SRC} alt={cartCopy.pdfFooterAlt} />
         </footer>
       </div>
     </section>
@@ -535,11 +537,7 @@ export default function GlobalSelectionCartDrawer() {
             <div className={styles.head}>
               <div>
                 <h2>{isEnglish ? t("Product Selection List") : "选型清单"}</h2>
-                <p>
-                  {isEnglish
-                    ? "Confirm models, quantities, and drawing requirements before submitting or generating a PDF list."
-                    : "确认型号、数量与图纸需求，后续可统一提交或生成资料包。"}
-                </p>
+                <p>{cartCopy.headerDescription}</p>
               </div>
 
               <button
@@ -556,23 +554,21 @@ export default function GlobalSelectionCartDrawer() {
                 <div className={styles.empty}>
                   {isEnglish ? t("No products selected") : "暂无选型产品"}
                   <br />
-                  {isEnglish
-                    ? "Select a model and add it to the list."
-                    : "可先选择型号并加入清单"}
+                  {cartCopy.emptyHint}
                 </div>
               ) : (
                 <>
                   <div className={styles.summary}>
                     <div>
-                      <span>{isEnglish ? t("ProductsCount") : "产品数量"}</span>
+                      <span>{cartCopy.productsCount}</span>
                       <strong>{items.length}</strong>
-                      <em>{isEnglish ? "items" : "项"}</em>
+                      <em>{cartCopy.itemUnit}</em>
                     </div>
 
                     <div>
-                      <span>{isEnglish ? t("Drawing Requests") : "图纸需求"}</span>
+                      <span>{cartCopy.drawingRequests}</span>
                       <strong>{drawingNeedCount}</strong>
-                      <em>{isEnglish ? "items" : "项"}</em>
+                      <em>{cartCopy.itemUnit}</em>
                     </div>
                   </div>
 
@@ -594,9 +590,9 @@ export default function GlobalSelectionCartDrawer() {
                           <div className={styles.itemHead}>
                             <div>
                               <span>
-                                {isEnglish
-                                  ? getEnglishCartSourceLabel(item.sourceType)
-                                  : item.sourceLabel}
+                                {item.sourceType === "pump-selection"
+                                  ? cartCopy.sourceLabels.products
+                                  : cartCopy.sourceLabels.fittingReplacement}
                               </span>
 
                               {item.detailHref && item.sourceType !== "pump-selection" ? (
@@ -605,7 +601,7 @@ export default function GlobalSelectionCartDrawer() {
                                   href={getCartDetailHref(item.detailHref, locale) ?? "#"}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  title={isEnglish ? "Open product details in a new window" : "新窗口打开详情页"}
+                                  title={cartCopy.openDetailsTitle}
                                 >
                                   {item.foreachModel}
                                 </Link>
@@ -678,12 +674,8 @@ export default function GlobalSelectionCartDrawer() {
               )}
 
               <div className={styles.note}>
-                <strong>{isEnglish ? "List Notes" : "清单说明"}</strong>
-                <p>
-                  {isEnglish
-                    ? "Adding a product does not automatically request a drawing. Mark the required models here or on the product page; only marked models will be included in the drawing request."
-                    : "产品加入清单后不会默认发送图纸。需要图纸的型号，可在详情页或清单中切换。后续提交需求时，只会把标记“需要图纸”的型号纳入图纸发送范围。"}
-                </p>
+                <strong>{cartCopy.noteTitle}</strong>
+                <p>{cartCopy.noteDescription}</p>
               </div>
             </div>
 

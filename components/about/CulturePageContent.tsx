@@ -11,6 +11,7 @@
 
 import Image from "next/image";
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
+import { getAboutBreadcrumb } from "@/data/about-breadcrumb";
 import {
   aboutCulturePageText,
   brandActionItems,
@@ -33,18 +34,6 @@ type CulturePageContentProps = {
    1. 中文默认不加语言前缀
    2. 英文、西语、法语、韩语、俄语自动加语言前缀
 ================================ */
-function getLocalizedHref(locale: AboutCultureLocale, href: string) {
-  if (locale === "zh-CN") {
-    return href;
-  }
-
-  if (href === "/") {
-    return `/${locale}`;
-  }
-
-  return `/${locale}${href}`;
-}
-
 /* ================================
    恒永达文化核心图标组件
    说明：
@@ -104,6 +93,11 @@ function CultureCoreIcon({ icon }: { icon: "vision" | "values" | "conduct" }) {
 }
 
 export default function CulturePageContent({ locale }: CulturePageContentProps) {
+  const breadcrumb = getAboutBreadcrumb(
+    locale,
+    getCultureText(aboutCulturePageText.sectionTitle, locale),
+  );
+
   return (
     <main className="about-culture-page">
       {/* ================================
@@ -127,12 +121,9 @@ export default function CulturePageContent({ locale }: CulturePageContentProps) 
           沿用原页面 about-culture-breadcrumb 样式
       ================================ */}
       <SiteBreadcrumb
-        className="about-culture-breadcrumb"
-        items={[
-          { label: getCultureText(aboutCulturePageText.breadcrumbHome, locale), href: getLocalizedHref(locale, "/") },
-          { label: getCultureText(aboutCulturePageText.breadcrumbAbout, locale), href: getLocalizedHref(locale, "/about/foreach") },
-          { label: getCultureText(aboutCulturePageText.sectionTitle, locale) },
-        ]}
+        ariaLabel={breadcrumb.ariaLabel}
+        items={breadcrumb.items}
+        variant="bar"
       />
 
       {/* ================================

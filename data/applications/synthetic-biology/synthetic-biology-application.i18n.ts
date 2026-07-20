@@ -6,6 +6,7 @@ import { syntheticBiologyApplicationZhData } from "./synthetic-biology-applicati
 import { translateFrenchApplicationData } from "../application-french";
 import { translateRussianApplicationData } from "../application-russian";
 import { translateSpanishApplicationData } from "../application-spanish";
+import { translateKoreanApplicationData } from "../application-korean.generated";
 
 const syntheticBiologyApplicationEsData =
   translateSpanishApplicationData<SyntheticBiologyApplicationPageData>(
@@ -25,6 +26,11 @@ const syntheticBiologyApplicationRuData =
     syntheticBiologyRuExactText,
   );
 
+const syntheticBiologyApplicationKoData =
+  translateKoreanApplicationData<SyntheticBiologyApplicationPageData>(
+    syntheticBiologyApplicationZhData,
+  );
+
 export function getSyntheticBiologyApplicationIntlData(
   locale: string,
 ): SyntheticBiologyApplicationPageData {
@@ -34,6 +40,10 @@ export function getSyntheticBiologyApplicationIntlData(
 
   if (locale === "fr") {
     return syntheticBiologyApplicationFrData;
+  }
+
+  if (locale === "ko") {
+    return syntheticBiologyApplicationKoData;
   }
 
   if (locale === "ru") {

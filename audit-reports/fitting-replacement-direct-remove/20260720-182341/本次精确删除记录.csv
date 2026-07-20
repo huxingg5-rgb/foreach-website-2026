@@ -1,0 +1,7 @@
+﻿"序号","数据文件","商品编码","FOREACH型号","兼容型号","标题","匹配方式"
+"1","data/resources/fitting-replacement/all-compatible-products.generated.ts","126007","CV-BV-32-PP-N","","","商品编码/产品ID"
+"2","data/resources/fitting-replacement/all-compatible-products.generated.ts","126009","CV-BV-48-PP-N","","","商品编码/产品ID"
+"3","data/resources/fitting-replacement/all-compatible-products.generated.ts","126011","CV-BV-64-PP-N","","","商品编码/产品ID"
+"4","data/resources/fitting-replacement/compatible-models.generated.ts","126007","CV-BV-32-PP-N","","","商品编码/产品ID"
+"5","data/resources/fitting-replacement/compatible-models.generated.ts","126009","CV-BV-48-PP-N","","","商品编码/产品ID"
+"6","data/resources/fitting-replacement/compatible-models.generated.ts","126011","CV-BV-64-PP-N","","","商品编码/产品ID"

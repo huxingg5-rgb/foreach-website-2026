@@ -6,6 +6,7 @@ import { labAutomationApplicationZhData } from "./lab-automation-application.zh"
 import { translateFrenchApplicationData } from "../application-french";
 import { translateRussianApplicationData } from "../application-russian";
 import { translateSpanishApplicationData } from "../application-spanish";
+import { translateKoreanApplicationData } from "../application-korean.generated";
 
 const labAutomationApplicationEsData =
   translateSpanishApplicationData<LabAutomationApplicationPageData>(
@@ -25,6 +26,11 @@ const labAutomationApplicationRuData =
     labAutomationRuExactText,
   );
 
+const labAutomationApplicationKoData =
+  translateKoreanApplicationData<LabAutomationApplicationPageData>(
+    labAutomationApplicationZhData,
+  );
+
 export function getLabAutomationApplicationIntlData(
   locale: string,
 ): LabAutomationApplicationPageData {
@@ -34,6 +40,10 @@ export function getLabAutomationApplicationIntlData(
 
   if (locale === "fr") {
     return labAutomationApplicationFrData;
+  }
+
+  if (locale === "ko") {
+    return labAutomationApplicationKoData;
   }
 
   if (locale === "ru") {

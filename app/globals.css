@@ -15402,14 +15402,14 @@ html body nav[aria-label*="breadcrumb"] em {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
   padding-top: 0 !important;
-  padding-bottom: 18px !important;
+  padding-bottom: 0 !important;
 }
 
 @media (max-width: 680px) {
   [data-product-breadcrumb-shell="true"] {
     margin-top: 0 !important;
     padding-top: 0 !important;
-    padding-bottom: 18px !important;
+    padding-bottom: 0 !important;
   }
 }
 /* PRODUCT_LOCAL_BREADCRUMB_SPACING_END */
@@ -15700,125 +15700,152 @@ html body nav[aria-label*="breadcrumb"] em {
 }
 /* ===== Footer QR one-row override END ===== */
 /* ===== Footer QR width fix START ===== */
+/* =========================================================
+   Footer 框架最终修正
 
-/* 闂傚倸鍊搁崐鎼佸磹妞嬪海鐭嗗〒姘ｅ亾妤犵偛顦甸弫鎾绘偐閸愯弓鐢婚梻渚€娼чˇ顐﹀疾濞戙垹纾奸柕濞炬櫆閻撴稓鈧箍鍎辨鎼佺嵁閺嶎厽鐓熼柕鍫濐槺閻ｆ椽鏌＄仦鍓ф创妞ゃ垺娲熼弫鎰板幢濞嗘ɑ袨闂傚倷鐒﹂幃鍫曞磹閺囥垹纾归柛褎顨呴拑鐔兼煥閻斿搫孝缂佲偓閸愵喗鐓忓┑鐐茬仢閸旀鏌涚€ｎ偅宕岀€规洜顭堣灃闁逞屽墰缁牓宕掗悙瀵稿幈闂侀潧顦介崰鏍ㄦ櫠椤栫偞鐓熼柟鎯ь嚟濞叉挳鏌＄仦鍓с€掑ù鐙呯畵瀹曟粏顦撮柣鎾茬窔濮婃椽骞栭悙娴嬪亾閹版澘纾婚柟鎯у绾句粙鏌涚仦鍓ф噮闁告柨绉归弻娑㈡倷鐠哄搫鎯為梺鐟扮畭閸ㄥ綊鍩為幋锕€骞㈡繛鍡樺姈椤旀洟姊绘担铏瑰笡妞ゎ厼鐗撻、姘愁槼閻庨潧銈搁幃鈺冪磼濡厧骞堥梻浣告惈濞层垽宕濆畝鍕祦闁哄稁鐓堝▓浠嬫煟閹邦垰鐨洪弫鍫濃攽椤旂》榫氭繛鍜冪秮楠炲啯瀵奸弶鎴犱紜闂佺绻愰幊搴ㄋ夊鑸碘拻闁稿本鐟︾粊鐗堛亜閺囩喓澧电€规洝顫夐幆鏃堟晲閸曨剙濯伴梻浣稿悑娴滀粙宕曢弻銉﹀仧妞ゆ劧闄勯埛鎺楁煕鐏炲墽鎳呴柛鏂跨Ч閹绮☉妯诲櫧闁活厽鐟╅弻鐔告綇妤ｅ啯顎嶉梺绋垮椤ㄥ﹪寮诲☉姘勃闁告挆鈧Σ鍫濐渻閵堝棙绀嬪ù婊冪埣瀵顓兼径濠佺炊闂佸憡娲﹂崜娆忊枍閿濆洨纾藉ù锝嗗絻娴滈箖姊虹粙鎸庢拱濠㈣娲熷畷鎴﹀箻閼姐倕绁﹂梺鍓茬厛閸犳牗鎱ㄦ惔銊︾厽閹兼番鍨归崵顒勬煕閿濆繒绉鐐叉瀹曟帒顫濇潏銊︾暦闂備線鈧偛鑻晶鐗堜繆閸欏濮嶆鐐搭焽閳ь剚绋掗敋妞ゅ孩鎹囧娲川婵犲啫闉嶉悷婊勬緲閸燁偊鍩㈤幘璇查唶闁哄洨鍟块幏铏圭磽閸屾瑧鍔嶆い顓炴处閺呭爼顢楅崒婊咃紲濡炪倖鏌ㄩ妶鎼佸矗閸曨剦娈介柣鎰絻閺嗭絾銇勯姀鈥冲摵闁糕斁鍋撳銈嗗笒鐎氥劑鍩€椤戣法绐旂€殿喗鎸虫慨鈧柍鈺佸暞閻濇娊姊绘担鍛婂暈濞撴碍顨婂畷褰掓焼瀹ュ棗鍓ㄩ悗骞垮劚椤︿即鍩涢幒鎳ㄥ綊鏁愰崶褍濡洪梺鎼炲€愰崑鎾绘⒒娴ｅ壊鍚旈柡澶婄仢椤洭鎮楃憴鍕缂佽鐗撻悰顕€骞掑Δ鈧猾宥夋煃瑜滈崜鐔风暦閹达箑鍐€妞ゆ挾鍋熸鍥⒑閸撴彃浜濈痪鏉跨Т閳诲秹宕卞☉娆戝幈?*/
-.site-footer__right {
-  flex: 0 0 520px !important;
-  width: 520px !important;
-  max-width: 520px !important;
-  min-width: 520px !important;
+   说明：
+   1. Home 栏目删除后，PC 导航改为 5 列
+   2. 取消右侧公司信息 520px / 440px 强制固定宽度
+   3. 右侧宽度由 Footer Grid 自动分配
+   4. 长公司名称和地址允许正常换行
+   5. 不修改手机端 Footer 手风琴结构
+========================================================= */
+
+.site-footer__inner > *,
+.site-footer__nav-wrap,
+.site-footer__right,
+.site-footer__contact {
+  min-width: 0;
 }
 
-/* 濠电姷鏁告慨鐑藉极閹间礁纾绘繛鎴欏灪閸嬨倝鏌曟繛褍鍟悘濠囨倵閸忓浜鹃梺鍛婃处閸撴瑩宕滈崼鏇熲拺缂備焦蓱鐏忣參鏌￠埀顒傜磼濡鍔呭銈庡幗閸ㄥ爼寮查鍫熲拺闂侇偆鍋涢懟顖涙櫠鐎涙﹩娈介柣鎰级椤ユ粍銇勯幘鐐藉仮鐎规洖宕灒濞撴凹鍨崑鎾诲箻閸撲胶锛濇繛杈剧到婢瑰﹪宕曡箛鏃傜閻忓繑鐗戦崑鎾诲棘閵夛妇浜栨俊鐐€栫敮鎺斺偓姘煎弮閸╂盯骞嬮悩鐢碉紲濡炪倖鐗楃粙鎺旂矆閸愨晝绠鹃柛娑卞幗閸犳﹢鏌＄仦鍓ф创闁诡喒鏅犻幊鐘活敄椤愮姴鈧妲愰幒妤婃晪闁告侗鍘肩粻娲倵閸偅绶查悗姘嵆閻涱噣宕堕澶嬫櫌闂佺琚崐鏍叿闂傚倷娴囬褎顨ラ崫銉т笉鐎广儱顦壕鍧楁煕濡ゅ啩绱虫繛宸簼閺呮繈鏌涚仦鍓ь暡閺夊牆鐗撳Λ鍛搭敃閵忊€愁槱濠电偛寮剁划搴㈢珶閺囩喓闄勯柛娑橈功閸樼敻姊绘笟鍥у伎缂佺姵鍨堕弲鍫曨敊婵劒绨婚棅顐㈡搐閿曘儱鈻嶉崱娑欑厪闁搞儜鍐句純閻庢鍣崳锝夊春閳ь剚銇勯幒鍡椾壕濡炪値鍋勭换妤呭Φ閹版澘绠抽柟瀵稿Х閺?*/
-.site-footer__qrcode-area {
-  width: 100% !important;
-  max-width: none !important;
-  display: flex !important;
-  justify-content: center !important;
+/* 公司名称和地址不得撑破父级框架 */
+.site-footer__company,
+.site-footer__contact-text {
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
-/* 濠电姷鏁告慨鐑藉极閹间礁纾婚柣鎰惈閸ㄥ倿鏌涢锝嗙缂佺姳鍗抽弻鐔兼⒒鐎垫瓕绠為梺鎼炲労閸擄箓寮€ｎ喗鐓冪憸婊堝礈閻斿鍤曢柤濮愬€撳▽顏嗙磼濞戞﹩鍎戦柛娆忔濮婃椽宕ㄦ繝鍐槱闂佸憡鐟ユ鍝ュ弲闂佸綊妫块悞锕傚磹閻㈠憡鐓曢煫鍥ㄦ惄濡茬霉濠婂牏鐣烘慨濠冩そ閺屽懘鎮欓懠璺侯伃婵犫拃灞芥珝闁圭缍侀獮鍥敇濠娾偓缁ㄥ姊洪崫鍕妞ゃ劌鎳忕粋宥嗐偅閸愨斁鎷洪柣鐘叉礌閳ь剙纾禒鈺冪磽娴ｅ壊妲洪柡浣割煼閻涱喛绠涘☉妯虹獩闂佸搫顦伴崹鐢电玻濞戞瑧绡€闁汇垽娼у瓭闁诲孩鍝庨崝鎴濈暦閹达綆妯勫┑顔硷龚濞咃綁骞忛悩璇茬煑濠㈣泛锕ラ弫顏呬繆閻愵亜鈧倝宕戦崟顖€鍥偨缁嬭法鐣鹃悗鍏夊亾闁告洖鐏氶弲鈺呮⒑閸涘﹥瀵欓柛鎰╁姀琚濋梻鍌氬€风粈浣革耿闁秵鎯為幖娣妼缁愭鏌″搴′簽濞?*/
-.site-footer__qr-row {
-  width: 390px !important;
-  max-width: 390px !important;
-  display: grid !important;
-  grid-template-columns: repeat(3, 112px) !important;
-  gap: 18px !important;
-  justify-content: center !important;
-  align-items: start !important;
-  flex-wrap: nowrap !important;
+/* 901px 以上为五个 Footer 导航栏目 */
+@media (min-width: 901px) {
+  .site-footer__nav-wrap {
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  }
 }
 
-/* 闂傚倸鍊搁崐鎼佸磹妞嬪海鐭嗗〒姘ｅ亾妤犵偛顦甸弫鎾绘偐椤旂懓浜鹃柛鎰靛枛楠炪垺淇婇悙瀛樼婵＄偘绮欓悰顔锯偓锝庡枟閺呮粓鏌ｉ敐鍛板閻㈩垱鎸荤换婵嬫偨闂堟刀銏ゆ煥閺囨ê鈧鍩€椤掍礁鍤柛锝忕秮婵℃挳宕ㄧ€涙ê娈ゅ銈嗗灱濡嫭绂嶆ィ鍐╃厱闊洦鎼╁Σ绋棵瑰鍫㈢暫婵﹥妞介弻鍛存倷閼艰泛顏繝鈷€灞芥珝闁圭缍侀獮鍥敇濠娾偓缁ㄥ姊洪崫鍕妞ゃ劌鎳忕粋宥嗐偅閸愨斁鎷洪柣鐘叉礌閳ь剙纾禒鈺冪磽娴ｅ壊妲洪柡浣告憸閸掓帡顢橀姀鈥充簻闂佺粯鎸稿ù鐑藉礉閿曗偓椤啴濡堕崱妤冪懆闁诲孩鍑归崜婵堟崲濮樿埖鐓熼幖杈剧磿閻ｎ參鏌涙惔銊ゆ喚閽樻繃銇勯弽顐沪闁稿﹤鍢查埞鎴︽偐閸欏顦╅梺缁樻尰濞叉鎹㈠┑瀣棃婵炴垶鐟Λ鐐差渻閵堝懏绂嬮柛瀣躬瀵鏁撻悩鎻掕€块梺鍝勬川閸嬫稓绮婇鈧铏规嫚閳ヨ櫕鐏嶅銈冨妼閻楀棝鍩ユ径鎰仺缂佸鐏濈粣娑橆渻閵堝棙绀€闁瑰啿绻樿棢濠㈣埖鍔栭埛?*/
-.site-footer__qrcode-item {
-  width: 112px !important;
-  min-width: 112px !important;
-  max-width: 112px !important;
-  text-align: center !important;
-}
+/* PC 端：左侧五个导航栏目，右侧公司信息 */
+@media (min-width: 1201px) {
+  .site-footer__inner {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(340px, 420px) !important;
 
-/* 濠电姷鏁告慨鐑藉极閹间礁纾绘繛鎴欏灪閸嬨倝鏌曟繛褍鍟悘濠囨倵閸忓浜鹃梺鍛婃处閸撴瑩宕滈崼鏇熲拺缂備焦蓱鐏忣參鏌￠埀顒傜磼濡鍔呭銈庡幗閸ㄥ爼寮查鍫熲拺闂侇偆鍋涢懟顖涙櫠鐎涙﹩娈介柣鎰级椤ユ粍銇勯幘鐐藉仮鐎规洖宕灒濞撴凹鍨崑鎾诲箻缂佹鍘介梺缁樏鍓佺矆瀹€鍕厱闁规儳顕粻鐐碘偓?*/
-.site-footer__qrcode-box {
-  width: 112px !important;
-  height: 112px !important;
-  box-sizing: border-box !important;
-}
+    gap: clamp(36px, 4vw, 64px) !important;
+    align-items: start !important;
+  }
 
-/* 濠电姷鏁告慨鐑藉极閹间礁纾绘繛鎴欏灪閸嬨倝鏌曟繛褍鍟悘濠囨倵閸忓浜鹃梺鍛婃处閸撴瑩宕滈崼鏇熲拺缂備焦蓱鐏忣參鏌￠埀顒傜磼濡鍔呭銈庡幗閸ㄥ爼寮查鍫熲拺闂侇偆鍋涢懟顖涙櫠鐎涙﹩娈介柣鎰级椤ユ粍銇勯幘鐐藉仮鐎规洖宕灒濞撴凹鍨崑鎾诲箻缂佹ǚ鎷洪梺鍛婄☉閿曪箓鍩ユ径鎰叆闁哄浂浜為悾鐢告煏閸℃鍤囨い銏★耿婵偓闁抽敮鍋撻柟?*/
-.site-footer__qrcode-box img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: contain !important;
-  display: block !important;
-}
-
-.site-footer__qrcode-label {
-  display: block !important;
-  margin-top: 10px !important;
-  line-height: 1.4 !important;
-}
-
-/* 濠电姷鏁告慨鐑藉极閹间礁纾婚柣鎰惈閸ㄥ倿鏌涢锝嗙缂佺姴缍婇弻宥夊传閸曨剙娅ｉ梺绋胯閸斿矁鐏冮梺鎸庣箓閹冲酣寮抽悙鐑樼厱閻庯絻鍔岄埀顒佺箞瀵鎮㈢悰鈥充壕闁汇垺顔栭悞鍓т焊韫囨挴鏀介柣鎰皺閻掓儳霉濠婂簼閭柟顕嗙節椤㈡洟鏁冮埀顒勬倷婵犲洦鐓忓┑鐘茬箳閻ｉ亶鏌￠崱姗嗘當妞ゎ亜鍟存俊鍫曞幢濡厧寮冲┑掳鍊楁慨鐢稿箖閸岀偛鏄ラ柕澶涚畱缁剁偤鏌熼柇锕€澧版い鏃€甯″楦裤亹閹烘繃娈ョ紓浣插亾濞撴埃鍋撶€规洘绮撻獮搴ㄦ嚍閵夈垺瀚奸柣搴ゎ潐濞叉牕霉閸岀偛纾块柣妯肩帛閻撴洟鏌曟繛鍨姢缂佸鍎ら妵鍕閳ュ啿鎽垫繝纰夌磿閸忔﹢宕洪埄鍐瘈闁告劏鏅滈悵锕傛⒒閸屾瑧顦﹂柟璇х節楠炴劙宕卞☉妯虹獩濡炪倖鐗徊鎯х摥闂傚倸鍊搁崐宄懊归崶顒夋晪鐟滃繘骞戦姀銈呯疀妞ゆ棁妫勬惔濠囨⒑瑜版帒浜伴柛娆忛閳绘挻绂掔€ｎ剙褰勯梺鎼炲劘閸斿秶绮堥崘鈹夸簻妞ゆ劧绲剧粈鍐磼缂佹绠炴俊顐㈠暙閳藉鈻庤箛锝喰熸繝鐢靛У椤旀牠宕归柆宥呯闁规儼妫勯拑鐔哥箾閹存瑥鐏╅柣鎺撴そ閺屾盯骞囬妸锔界彇濡炪倧瀵岄崣鍐潖閸濆娊铏规嫚閹绘帞顔戠紓鍌欐祰椤曆囧磹閸婄喆浜瑰〒姘ｅ亾婵﹥妞介獮鏍倷閹绘帒顫戦梻浣告啞閺屻劌霉妞嬪骸鍨濆┑鐘宠壘閸愨偓濡炪倖鎸鹃崰搴ㄥ焵椤掑倹鏆柡灞剧洴閳ワ箓骞嬪┑鍛嚬闂備焦濞婇弨閬嶅礉濡ゅ啯顫曢柟鐑樻煛閸嬫捇鏁愭惔婵囧枤濠碘剝褰冨﹢閬嶅焵椤掆偓閻忔艾顭垮Ο灏栧亾濮樼厧骞橀柟骞垮灩閳规垹鈧綆浜為敍婊冣攽閻樻墠鍫ュ磻閹惧墎纾?*/
-@media (max-width: 1280px) {
   .site-footer__right {
-    flex: 0 0 440px !important;
-    width: 440px !important;
-    max-width: 440px !important;
-    min-width: 440px !important;
-  }
-
-  .site-footer__qr-row {
-    width: 348px !important;
-    max-width: 348px !important;
-    grid-template-columns: repeat(3, 100px) !important;
-    gap: 14px !important;
-  }
-
-  .site-footer__qrcode-item,
-  .site-footer__qrcode-box {
-    width: 100px !important;
-    min-width: 100px !important;
-    max-width: 100px !important;
-  }
-
-  .site-footer__qrcode-box {
-    height: 100px !important;
-  }
-}
-
-/* 闂傚倸鍊搁崐鎼佸磹妞嬪海鐭嗗ù锝堟缁€濠傗攽閻樻彃浜為柣鎺旀櫕閹叉悂寮崼娑掑亾娓氣偓瀵粙顢橀悙鑼垛偓鍨攽閿涘嫬浠х紒顕呭灦瀵偊鎮╃紒妯锋嫼闂備緡鍋嗛崑娑㈡嚐椤栨稒娅犻柟娈垮枤绾惧ジ寮堕崼娑樺婵炴惌鍠氶埀顒侇問閸ｎ噣宕抽敐澶屽祦閻庯綆浜栭弨浠嬫煕椤愶絿鐭岄柡浣哄亾缁绘繈鎮介棃娴舵盯鏌熷畡鏉挎殻鐎规洏鍔戦、妯衡槈濞嗘垟鍋撴导瀛樼厽閹兼番鍊ゅ鎰箾閸欏鑰块柕鍡楀暣瀹曞崬鈽夊Ο纰卞數闂備礁鎲℃笟妤呭垂閾忣偁浠氶柟鎯板Г閸婄敻鏌ㄥ┑鍡欏嚬缂併劌鍚嬬换娑㈠川椤撱劏鍚┑顔硷功缁垶骞忛崨瀛樺€绘俊顖滃劋閻ｎ剛绱撻崒娆掑厡濠殿喖顕划鏃堟偡閹殿喗娈鹃柣鐔哥懃鐎氼噣姊介崟顖涚厵闁兼祴鏅涙禍褰掓煕?*/
-@media (max-width: 768px) {
-  .site-footer__right {
-    flex: none !important;
+    flex: 0 1 auto !important;
     width: 100% !important;
-    max-width: none !important;
     min-width: 0 !important;
+    max-width: 420px !important;
+
+    justify-self: end !important;
+    justify-items: end !important;
+  }
+
+  .site-footer__contact {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: right !important;
   }
 
   .site-footer__qrcode-area {
-    justify-content: flex-start !important;
+    width: auto !important;
+    max-width: 100% !important;
+
+    justify-self: end !important;
+    justify-items: end !important;
+    justify-content: flex-end !important;
   }
 
   .site-footer__qr-row {
-    width: 100% !important;
-    max-width: none !important;
-    grid-template-columns: repeat(3, 92px) !important;
-    gap: 12px !important;
-    justify-content: flex-start !important;
-  }
-
-  .site-footer__qrcode-item,
-  .site-footer__qrcode-box {
-    width: 92px !important;
-    min-width: 92px !important;
-    max-width: 92px !important;
-  }
-
-  .site-footer__qrcode-box {
-    height: 92px !important;
+    width: auto !important;
+    max-width: 100% !important;
+    justify-content: end !important;
   }
 }
 
+/* 中等屏幕：公司信息放到导航下方 */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .site-footer__inner {
+    grid-template-columns: 1fr !important;
+    gap: 34px !important;
+  }
+
+  .site-footer__right {
+    flex: none !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+
+    justify-self: stretch !important;
+    justify-items: start !important;
+  }
+
+  .site-footer__contact {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: left !important;
+  }
+
+  .site-footer__qrcode-area {
+    width: 100% !important;
+
+    justify-self: start !important;
+    justify-items: start !important;
+    justify-content: flex-start !important;
+  }
+}
+
+/* 手机端取消所有强制宽度 */
+@media (max-width: 900px) {
+  .site-footer__right {
+    flex: none !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+  }
+}
+
+/* 小屏幕二维码改成两列，避免横向溢出 */
+@media (max-width: 520px) {
+  .site-footer__qr-row {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    display: grid !important;
+    grid-template-columns:
+      repeat(2, minmax(0, 96px)) !important;
+
+    gap: 12px !important;
+    justify-content: start !important;
+    flex-wrap: wrap !important;
+  }
+
+  .site-footer__qrcode-item {
+    width: 96px !important;
+    min-width: 0 !important;
+    max-width: 96px !important;
+  }
+
+  .site-footer__qrcode-box {
+    width: 96px !important;
+    height: 96px !important;
+    min-width: 0 !important;
+    max-width: 96px !important;
+  }
+}
 /* ===== Footer QR width fix END ===== */
 
 /* =========================================================

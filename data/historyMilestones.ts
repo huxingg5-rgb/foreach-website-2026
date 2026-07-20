@@ -424,7 +424,7 @@ const historyMilestoneSources: HistoryMilestoneSource[] = [
         "Industry-university-research experimental base established with Southern University of Science and Technology",
         "Establecimiento de una base experimental de industria-universidad-investigación con Southern University of Science and Technology",
         "Création d’une base expérimentale industrie-université-recherche avec la Southern University of Science and Technology",
-        "남방과학기술대학교-恒永达 산학연 실험기지 설립",
+        "남방과학기술대학교-FOREACH 산학연 실험기지 설립",
         "Создана экспериментальная база сотрудничества промышленности, университета и исследований с Southern University of Science and Technology"
       ),
       t(
@@ -749,4 +749,4 @@ export function getHistoryMilestones(
     events: item.events.map((event) => getLocalizedText(event, locale)),
     enabled: item.enabled,
   }));
-} 
+}

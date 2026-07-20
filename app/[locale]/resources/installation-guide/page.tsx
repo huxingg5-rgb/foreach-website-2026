@@ -61,11 +61,29 @@ export function generateStaticParams() {
   }));
 }
 
-export const metadata: Metadata = {
-  title: "Installation Guide｜FOREACH",
-  description:
-    "View FOREACH product installation, setup, calibration and troubleshooting guides.",
+const INSTALLATION_METADATA: Record<
+  Exclude<InstallationGuideLocaleParam, "en">,
+  { title: string; description: string }
+> = {
+  es: { title: "Guías de instalación｜FOREACH", description: "Consulte las guías de instalación, configuración, calibración y solución de problemas de los productos FOREACH." },
+  fr: { title: "Guides d’installation｜FOREACH", description: "Consultez les guides d’installation, de configuration, d’étalonnage et de dépannage des produits FOREACH." },
+  ko: { title: "설치 가이드｜FOREACH", description: "FOREACH 제품의 설치, 설정, 교정 및 문제 해결 가이드를 확인하세요." },
+  ru: { title: "Руководства по монтажу｜FOREACH", description: "Руководства по монтажу, настройке, калибровке и устранению неисправностей продукции FOREACH." },
 };
+
+export async function generateMetadata({
+  params,
+}: InstallationGuideIntlPageProps): Promise<Metadata> {
+  const { locale } = await params;
+  const metadata = locale === "en"
+    ? {
+        title: "Installation Guide｜FOREACH",
+        description: "View FOREACH product installation, setup, calibration and troubleshooting guides.",
+      }
+    : INSTALLATION_METADATA[locale];
+
+  return locale === "en" ? metadata : { ...metadata, openGraph: metadata };
+}
 
 export default async function InstallationGuideIntlPage({
   params,
@@ -94,4 +112,4 @@ export default async function InstallationGuideIntlPage({
       <InstallationGuideClient pageData={pageData} />
     </>
   );
-} 
+}

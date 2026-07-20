@@ -6,6 +6,7 @@ import { environmentalMonitoringApplicationZhData } from "./environmental-monito
 import { translateFrenchApplicationData } from "../application-french";
 import { translateRussianApplicationData } from "../application-russian";
 import { translateSpanishApplicationData } from "../application-spanish";
+import { translateKoreanApplicationData } from "../application-korean.generated";
 
 const environmentalMonitoringApplicationEsData =
   translateSpanishApplicationData<EnvironmentalMonitoringApplicationPageData>(
@@ -25,6 +26,11 @@ const environmentalMonitoringApplicationRuData =
     environmentalMonitoringRuExactText,
   );
 
+const environmentalMonitoringApplicationKoData =
+  translateKoreanApplicationData<EnvironmentalMonitoringApplicationPageData>(
+    environmentalMonitoringApplicationZhData,
+  );
+
 export function getEnvironmentalMonitoringApplicationIntlData(
   locale: string,
 ): EnvironmentalMonitoringApplicationPageData {
@@ -34,6 +40,10 @@ export function getEnvironmentalMonitoringApplicationIntlData(
 
   if (locale === "fr") {
     return environmentalMonitoringApplicationFrData;
+  }
+
+  if (locale === "ko") {
+    return environmentalMonitoringApplicationKoData;
   }
 
   if (locale === "ru") {

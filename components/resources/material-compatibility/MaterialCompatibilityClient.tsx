@@ -116,6 +116,7 @@ export default function MaterialCompatibilityClient({
         breadcrumbCurrent: "材料兼容",
         searchButtonText: "搜索",
         recentLabel: "常用搜索",
+        noteLabel: "注：",
         compatibilityTitle: "材料兼容性表",
         compatibilityDesc: "常见化学介质与工程塑料材料的兼容性参考。",
         compatibilityNote:
@@ -139,13 +140,38 @@ export default function MaterialCompatibilityClient({
         emptyFeatures: "暂无匹配材料，请更换关键词。",
         emptyCertification: "暂无匹配认证资料，请更换关键词或联系销售确认。",
       }
-    : {
+    : data.ui
+      ? {
+          breadcrumbAriaLabel: data.ui.breadcrumbAriaLabel,
+          breadcrumbHome: data.ui.breadcrumbHome,
+          breadcrumbResources: data.ui.breadcrumbResources,
+          breadcrumbCurrent: data.ui.breadcrumbCurrent,
+          searchButtonText: data.ui.searchButtonText,
+          recentLabel: data.ui.recentLabel,
+          noteLabel: data.ui.noteLabel,
+          compatibilityTitle: data.ui.tableCopy.compatibility.title,
+          compatibilityDesc: data.ui.tableCopy.compatibility.description,
+          compatibilityNote: data.ui.tableCopy.compatibility.note,
+          featuresTitle: data.ui.tableCopy.features.title,
+          featuresDesc: data.ui.tableCopy.features.description,
+          featuresNote: data.ui.tableCopy.features.note,
+          certificationTitle: data.ui.tableCopy.certification.title,
+          certificationDesc: data.ui.tableCopy.certification.description,
+          certificationNote: data.ui.tableCopy.certification.note,
+          chemicalMedium: data.ui.compatibilityTable.chemicalMedium,
+          featureColumns: data.ui.featureTable.columns,
+          emptyCompatibility: data.ui.compatibilityTable.emptyText,
+          emptyFeatures: data.ui.featureTable.emptyText,
+          emptyCertification: data.ui.certificationTable.emptyText,
+        }
+      : {
         breadcrumbAriaLabel: "Breadcrumb",
         breadcrumbHome: "Home",
         breadcrumbResources: "Resources",
         breadcrumbCurrent: "Material Compatibility",
         searchButtonText: "Search",
         recentLabel: "Common Searches",
+        noteLabel: "Note: ",
         compatibilityTitle: "Material Compatibility Table",
         compatibilityDesc:
           "Reference compatibility data for common chemical media and engineering plastics.",
@@ -358,7 +384,7 @@ export default function MaterialCompatibilityClient({
           ===================================================== */}
           <div className="material-compatibility-panel">
             <div className="material-compatibility-note">
-              <strong>{isChinesePage ? "注：" : "Note: "}</strong>
+              <strong>{commonCopy.noteLabel}</strong>
               {tableCopy.note}
             </div>
 
@@ -551,4 +577,4 @@ function CertificationTable({
       </table>
     </div>
   );
-} 
+}

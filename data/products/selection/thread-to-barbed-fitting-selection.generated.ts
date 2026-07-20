@@ -59,7 +59,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 1,
     "sortOrder": 20000,
     "searchKeywords": {
@@ -189,7 +189,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 3,
     "sortOrder": 20002,
     "searchKeywords": {
@@ -254,7 +254,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 4,
     "sortOrder": 20003,
     "searchKeywords": {
@@ -1229,7 +1229,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 19,
     "sortOrder": 20018,
     "searchKeywords": {
@@ -1294,7 +1294,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 20,
     "sortOrder": 20019,
     "searchKeywords": {
@@ -1359,7 +1359,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 21,
     "sortOrder": 20020,
     "searchKeywords": {
@@ -1424,7 +1424,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 22,
     "sortOrder": 20021,
     "searchKeywords": {
@@ -1489,7 +1489,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 23,
     "sortOrder": 20022,
     "searchKeywords": {
@@ -1554,7 +1554,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 24,
     "sortOrder": 20023,
     "searchKeywords": {
@@ -1619,7 +1619,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 25,
     "sortOrder": 20024,
     "searchKeywords": {
@@ -1684,7 +1684,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 26,
     "sortOrder": 20025,
     "searchKeywords": {
@@ -1749,7 +1749,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 27,
     "sortOrder": 20026,
     "searchKeywords": {
@@ -2074,7 +2074,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 32,
     "sortOrder": 20031,
     "searchKeywords": {
@@ -2139,7 +2139,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 33,
     "sortOrder": 20032,
     "searchKeywords": {
@@ -2204,7 +2204,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 34,
     "sortOrder": 20033,
     "searchKeywords": {
@@ -2269,7 +2269,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 35,
     "sortOrder": 20034,
     "searchKeywords": {
@@ -2334,7 +2334,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 36,
     "sortOrder": 20035,
     "searchKeywords": {
@@ -2399,7 +2399,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 37,
     "sortOrder": 20036,
     "searchKeywords": {
@@ -2464,7 +2464,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 38,
     "sortOrder": 20037,
     "searchKeywords": {
@@ -2529,7 +2529,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 39,
     "sortOrder": 20038,
     "searchKeywords": {
@@ -2594,7 +2594,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 40,
     "sortOrder": 20039,
     "searchKeywords": {
@@ -2919,7 +2919,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 45,
     "sortOrder": 20044,
     "searchKeywords": {
@@ -2984,7 +2984,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 46,
     "sortOrder": 20045,
     "searchKeywords": {
@@ -3049,7 +3049,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 47,
     "sortOrder": 20046,
     "searchKeywords": {
@@ -3114,7 +3114,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 48,
     "sortOrder": 20047,
     "searchKeywords": {
@@ -3179,7 +3179,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 49,
     "sortOrder": 20048,
     "searchKeywords": {
@@ -3244,7 +3244,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 50,
     "sortOrder": 20049,
     "searchKeywords": {
@@ -3309,7 +3309,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 51,
     "sortOrder": 20050,
     "searchKeywords": {
@@ -3374,7 +3374,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 52,
     "sortOrder": 20051,
     "searchKeywords": {
@@ -3439,7 +3439,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 53,
     "sortOrder": 20052,
     "searchKeywords": {
@@ -3504,7 +3504,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 54,
     "sortOrder": 20053,
     "searchKeywords": {
@@ -3569,7 +3569,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 55,
     "sortOrder": 20054,
     "searchKeywords": {
@@ -5064,7 +5064,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 78,
     "sortOrder": 20077,
     "searchKeywords": {
@@ -5129,7 +5129,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 79,
     "sortOrder": 20078,
     "searchKeywords": {
@@ -5194,7 +5194,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 80,
     "sortOrder": 20079,
     "searchKeywords": {
@@ -5259,7 +5259,7 @@ export const threadToBarbedFittingSelectionProducts =
     "imageCard": "/images/logo/foreach-logo-color.svg",
     "detailSlug": "thread-to-barbed-fittings",
     "detailHref": "/products/fittings/thread-to-barbed-fittings",
-    "status": "active",
+    "status": "hidden",
     "sourceIndex": 81,
     "sortOrder": 20080,
     "searchKeywords": {

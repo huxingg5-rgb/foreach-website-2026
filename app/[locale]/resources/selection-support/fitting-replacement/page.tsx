@@ -98,10 +98,19 @@ export async function generateMetadata({
     locale
   );
 
-  return {
-    title: `${pageData.banner.title}｜Selection Support｜FOREACH`,
+  const sectionLabels = {
+    en: "Selection Support",
+    es: "Asistencia para la selección",
+    fr: "Aide à la sélection",
+    ko: "선정 지원",
+    ru: "Поддержка подбора",
+  } as const;
+  const metadata = {
+    title: `${pageData.banner.title}｜${sectionLabels[locale]}｜FOREACH`,
     description: pageData.banner.description,
   };
+
+  return locale === "en" ? metadata : { ...metadata, openGraph: metadata };
 }
 
 /* =========================================================
@@ -122,4 +131,4 @@ export default async function FittingReplacementLocalePage({
   );
 
   return <FittingReplacementHome data={pageData} />;
-} 
+}

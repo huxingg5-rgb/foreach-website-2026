@@ -208,10 +208,10 @@
     "slug": "high-pressure-valves",
     "productTypeId": "high-pressure-valves",
     "productTypeName": "高压阀",
-    "title": "HP 三位七通高压阀",
-    "modelName": "HP 三位七通高压阀",
+    "title": "HP 二位六通带排气高压旋转阀",
+    "modelName": "HP 二位六通带排气高压旋转阀",
     "image": "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp",
-    "description": "HP 三位七通高压阀用于 HPLC 自动进样和分析仪器高压液路中的路径切换，可在进样、排气、旁路和清洗等液路状态之间进行切换。该阀采用三位七通结构，最大工作压力 25MPa，接口规格 10-32UNF，通道直径 0.4mm，内体积 0.8μL，适用于对耐压、密封可靠性、低内体积和阀位切换稳定性有要求的高压分析液路模块。实际选型时需结合流动相或样品介质、系统压力、接口形式、切换逻辑和安装空间确认。",
+    "description": "HP 二位六通带排气高压旋转阀用于 HPLC 自动进样和分析仪器高压液路中的路径切换，可完成注液位、进样位之间的高压流路切换，并通过独立排气位置完成排气。该阀采用二位六通主流路结构，并设置独立排气位置，最大工作压力 25MPa，接口规格 10-32UNF，通道直径 0.4mm，内体积 0.8μL，适用于对耐压、密封可靠性、低内体积和阀位切换稳定性有要求的高压分析液路模块。实际选型时需结合流动相或样品介质、系统压力、接口形式、切换逻辑和安装空间确认。",
     "commonApplications": [
       "HPLC自动进样",
       "高压流路切换",
@@ -222,7 +222,7 @@
     ],
     "advantages": [
       "最大工作压力 25MPa，适合高压分析液路和 HPLC 自动进样场景",
-      "三位七通结构，可覆盖进样、抽样、排气等多种液路状态切换",
+      "二位六通主流路结构，并设置独立排气位置，可覆盖进样、抽样、排气等多种液路状态切换",
       "通道直径 0.4mm，内体积 0.8μL，适合低滞留体积高压流路",
       "接口规格 10-32UNF，适配常见高压分析仪器液路连接方式",
       "SUS316L 定子与高分子转子组合，兼顾高压密封和流路切换",
@@ -231,7 +231,7 @@
     "specs": [
       {
         "label": "产品型号",
-        "value": "HP-37SSU3204"
+        "value": "HP-26SSU3204"
       },
       {
         "label": "额定电压",
@@ -251,7 +251,7 @@
       },
       {
         "label": "规格参数",
-        "value": "三位七通"
+        "value": "二位六通带排气"
       },
       {
         "label": "外形尺寸",
@@ -312,7 +312,7 @@
     ],
     "faq": [
       {
-        "question": "HP 三位七通高压阀适合哪些高压液路？",
+        "question": "HP 二位六通带排气高压旋转阀适合哪些高压液路？",
         "answer": "HP 高压阀适合 HPLC 自动进样、高压样品切换、系统排气、样品旁路和分析仪器高压流路模块。"
       },
       {
@@ -328,38 +328,38 @@
         "answer": "高压阀与系统压力、接口、介质兼容性、阀位切换状态和整机安装空间强相关，需要结合客户高压液路方案确认。"
       }
     ],
-    "seoTitle": "HP三位七通高压阀｜25MPa高压流路切换阀｜恒永达 FOREACH",
-    "seoDescription": "HP三位七通高压阀用于HPLC自动进样和分析仪器高压液路路径切换，最大工作压力25MPa，接口10-32UNF，通道直径0.4mm，内体积0.8μL，适用于进样、排气、旁路和清洗等高压液路状态切换。",
+    "seoTitle": "HP 二位六通带排气高压旋转阀｜25MPa高压流路切换阀｜恒永达 FOREACH",
+    "seoDescription": "HP 二位六通带排气高压旋转阀用于HPLC自动进样和分析仪器高压液路路径切换，最大工作压力25MPa，接口10-32UNF，通道直径0.4mm，内体积0.8μL，适用于进样、排气、旁路和清洗等高压液路状态切换。",
     "searchKeywords": [
-      "HP三位七通高压阀",
+      "HP 二位六通带排气高压旋转阀",
       "HP高压阀",
       "25MPa高压阀",
       "HPLC自动进样阀",
       "高压流路切换阀",
       "10-32UNF高压阀",
-      "三位七通阀"
+      "二位六通带排气阀"
     ],
-    "h1Title": "HP 三位七通高压阀",
-    "pageTitle": "HP 三位七通高压阀",
+    "h1Title": "HP 二位六通带排气高压旋转阀",
+    "pageTitle": "HP 二位六通带排气高压旋转阀",
     "bottomCtaTitle": "需要确认 HP 高压阀压力、接口和阀位方案？",
-    "bottomCtaDescription": "请提供最大工作压力、流动相或样品介质、10-32UNF 接口需求、进样/抽样/排气切换逻辑、内体积要求和安装空间，FOREACH 可协助确认 HP 三位七通高压阀配置。",
+    "bottomCtaDescription": "请提供最大工作压力、流动相或样品介质、10-32UNF 接口需求、进样/抽样/排气切换逻辑、内体积要求和安装空间，FOREACH 可协助确认 HP 二位六通带排气高压旋转阀配置。",
     "bottomCtaButtonText": "联系工程师",
     "bottomCtaHref": "/contact",
     "customInquiryTitle": "需要确认 HP 高压阀压力、接口和阀位方案？",
-    "customInquiryDescription": "请提供最大工作压力、流动相或样品介质、10-32UNF 接口需求、进样/抽样/排气切换逻辑、内体积要求和安装空间，FOREACH 可协助确认 HP 三位七通高压阀配置。",
+    "customInquiryDescription": "请提供最大工作压力、流动相或样品介质、10-32UNF 接口需求、进样/抽样/排气切换逻辑、内体积要求和安装空间，FOREACH 可协助确认 HP 二位六通带排气高压旋转阀配置。",
     "customInquiryButtonText": "联系工程师",
     "customInquiryHref": "/contact",
-    "imageAlt": "HP 25MPa三位七通高压阀",
+    "imageAlt": "HP 25MPa二位六通带排气高压阀",
     "additionalImages": [],
     "images": [
       "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp"
     ],
     "thumbnails": [],
-    "name": "HP 三位七通高压阀",
-    "productName": "HP 三位七通高压阀",
+    "name": "HP 二位六通带排气高压旋转阀",
+    "productName": "HP 二位六通带排气高压旋转阀",
     "faqs": [
       {
-        "question": "HP 三位七通高压阀适合哪些高压液路？",
+        "question": "HP 二位六通带排气高压旋转阀适合哪些高压液路？",
         "answer": "HP 高压阀适合 HPLC 自动进样、高压样品切换、系统排气、样品旁路和分析仪器高压流路模块。"
       },
       {
@@ -377,7 +377,7 @@
     ],
     "faqItems": [
       {
-        "question": "HP 三位七通高压阀适合哪些高压液路？",
+        "question": "HP 二位六通带排气高压旋转阀适合哪些高压液路？",
         "answer": "HP 高压阀适合 HPLC 自动进样、高压样品切换、系统排气、样品旁路和分析仪器高压流路模块。"
       },
       {

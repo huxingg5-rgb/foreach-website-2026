@@ -14,6 +14,37 @@ export async function getFittingReplacementHomeData(
 ): Promise<FittingReplacementPageData> {
   const pageText = getFittingReplacementQuickConnectQ20PageIntl(locale);
   const isZh = locale === "zh" || locale === "zh-CN";
+  const isTranslatedLocale = ["es", "fr", "ko", "ru"].includes(locale);
+
+  if (isTranslatedLocale) {
+    return {
+      ...fittingReplacementQuickConnectQ20ZhData,
+
+      products: fittingReplacementAllCompatibleProducts,
+
+      banner: {
+        ...pageText.banner,
+      },
+
+      breadcrumbs: pageText.breadcrumbs.map((item) => ({
+        ...item,
+      })),
+
+      search: {
+        ...pageText.search,
+      },
+
+      homeText: {
+        tabs: { ...pageText.homeText.tabs },
+        history: { ...pageText.homeText.history },
+        guide: { ...pageText.homeText.guide },
+        productSection: { ...pageText.homeText.productSection },
+        productCard: { ...pageText.homeText.productCard },
+        emptyResult: { ...pageText.homeText.emptyResult },
+        pagination: { ...pageText.homeText.pagination },
+      },
+    };
+  }
 
   return {
     ...fittingReplacementQuickConnectQ20ZhData,
@@ -76,7 +107,7 @@ export async function getFittingReplacementHomeData(
       },
 
       productCard: {
-        productName: isZh ? "FOREACH 接头产品" : "FOREACH Fitting",
+        productName: isZh ? "FOREACH 接头" : "FOREACH Fitting",
         productCode: isZh ? "商品编码：" : "Product code:",
         foreachModel: isZh ? "FOREACH 型号：" : "FOREACH model:",
         compatibleModels: isZh ? "兼容型号：" : "Compatible models:",

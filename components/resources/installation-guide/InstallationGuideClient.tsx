@@ -59,21 +59,33 @@ export default function InstallationGuideClient({
   ========================================================= */
   const isChinesePage = pageData.locale === "zh-CN";
   const localePrefix = isChinesePage ? "" : `/${pageData.locale}`;
+  const ui = pageData.ui ?? {
+    breadcrumbAriaLabel: isChinesePage ? "面包屑导航" : "Breadcrumb",
+    breadcrumbHome: isChinesePage ? "首页" : "Home",
+    breadcrumbResources: isChinesePage ? "资源中心" : "Resources",
+    breadcrumbCurrent: isChinesePage ? "安装教程" : "Installation Guide",
+    productCategory: isChinesePage ? "产品分类：" : "Product Category: ",
+    tags: isChinesePage ? "标签：" : "Tags: ",
+    emptyTitle: isChinesePage ? "暂无匹配教程" : "No matching guides found",
+    emptyDescription: isChinesePage
+      ? "可以更换关键词，或选择其他产品系列查看。"
+      : "Try another keyword or select a different product series.",
+  };
 
   /* =========================================================
      面包屑数据
   ========================================================= */
   const breadcrumbItems = [
     {
-      label: isChinesePage ? "首页" : "Home",
+      label: ui.breadcrumbHome,
       href: `${localePrefix || ""}/`,
     },
     {
-      label: isChinesePage ? "资源中心" : "Resources",
+      label: ui.breadcrumbResources,
       href: `${localePrefix}/resources`,
     },
     {
-      label: isChinesePage ? "安装教程" : "Installation Guide",
+      label: ui.breadcrumbCurrent,
     },
   ];
 
@@ -171,7 +183,7 @@ export default function InstallationGuideClient({
           面包屑导航
       ===================================================== */}
       <SiteBreadcrumb
-        ariaLabel={isChinesePage ? "面包屑导航" : "Breadcrumb"}
+        ariaLabel={ui.breadcrumbAriaLabel}
         variant="bar"
         items={breadcrumbItems}
       />
@@ -285,13 +297,13 @@ export default function InstallationGuideClient({
                       <div className="installation-guide-card-info">
                         <div>
                           <strong>
-                            {isChinesePage ? "产品分类：" : "Product Category: "}
+                            {ui.productCategory}
                           </strong>
                           <b>{getCategoryName(guide.category)}</b>
                         </div>
 
                         <div>
-                          <strong>{isChinesePage ? "标签：" : "Tags: "}</strong>
+                          <strong>{ui.tags}</strong>
                           <span className="installation-guide-tags">
                             {guide.tags.map((tag: string) => (
                               <span key={tag}>{tag}</span>
@@ -307,12 +319,10 @@ export default function InstallationGuideClient({
           ) : (
             <div className="installation-guide-empty">
               <strong>
-                {isChinesePage ? "暂无匹配教程" : "No matching guides found"}
+                {ui.emptyTitle}
               </strong>
               <span>
-                {isChinesePage
-                  ? "可以更换关键词，或选择其他产品系列查看。"
-                  : "Try another keyword or select a different product series."}
+                {ui.emptyDescription}
               </span>
             </div>
           )}
@@ -323,13 +333,27 @@ export default function InstallationGuideClient({
           全屏宽度底部支持 Banner
       ===================================================== */}
       <ResourceSupportCta
-        title={isChinesePage ? "没有找到对应教程？" : "Need another guide?"}
+        title={
+          isChinesePage
+            ? "没有找到对应教程？"
+            : pageData.locale === "en"
+              ? "Need another guide?"
+              : pageData.support.title
+        }
         description={
           isChinesePage
             ? "如果您不确定产品安装方式、调试步骤或参数设置方法，可以提交产品型号、应用场景或问题说明，FOREACH 技术团队将为您提供支持。"
-            : "Send us the product model, application, or issue details, and the FOREACH technical team will help with installation, commissioning, or parameter setup."
+            : pageData.locale === "en"
+              ? "Send us the product model, application, or issue details, and the FOREACH technical team will help with installation, commissioning, or parameter setup."
+              : pageData.support.description
         }
-        buttonText={isChinesePage ? "提交教程需求" : "Request a Guide"}
+        buttonText={
+          isChinesePage
+            ? "提交教程需求"
+            : pageData.locale === "en"
+              ? "Request a Guide"
+              : pageData.support.buttonText
+        }
         href={`${localePrefix}/contact`}
       />
     </main>

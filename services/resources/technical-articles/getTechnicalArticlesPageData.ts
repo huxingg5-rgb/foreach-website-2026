@@ -11,6 +11,7 @@
 
 import { technicalArticlesZhData } from "@/data/resources/technical-articles/technical-articles.zh";
 import { technicalArticlesIntlData } from "@/data/resources/technical-articles/technical-articles.intl";
+import { localizeTechnicalArticles } from "@/data/resources/technical-articles/technical-articles.translations";
 
 import type {
   TechnicalArticleLocale,
@@ -73,6 +74,10 @@ export function getTechnicalArticlesPageData(
 ): TechnicalArticlesPageData {
   if (isChineseLocale(locale)) {
     return technicalArticlesZhData;
+  }
+
+  if (locale !== "en") {
+    return localizeTechnicalArticles(locale, technicalArticlesIntlData);
   }
 
   return getLocalizedIntlTechnicalArticlesData(locale);

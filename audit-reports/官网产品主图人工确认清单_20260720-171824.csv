@@ -1,0 +1,2 @@
+﻿"序号","产品名称","产品编码","型号","Slug","产品类别/系列","检查结果","主图字段","主图引用路径","实际匹配路径","数据文件","数据位置","建议动作"
+"1","Q20 快插接头","","","","","主图为变量或导入对象，需人工确认","imagePath","","","components/selection-cart/SelectionCartProvider.tsx","components/selection-cart/SelectionCartProvider.tsx 第 205 行","需要人工检查图片导入变量或动态映射"

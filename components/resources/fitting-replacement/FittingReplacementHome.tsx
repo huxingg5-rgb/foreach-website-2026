@@ -56,6 +56,31 @@ function getLocaleFromBreadcrumbs(
   return href?.split("/")[1] ?? "zh";
 }
 
+function getLocalizedProductDetailHref(
+  href: string | undefined,
+  locale: string
+) {
+  if (!href) return undefined;
+
+  const isChinese = locale === "zh" || locale === "zh-CN";
+  const isExternalOrProtocolRelative =
+    !href.startsWith("/") || href.startsWith("//");
+  const alreadyLocalized = /^\/(en|es|fr|ko|ru)(\/|$)/.test(href);
+
+  if (isChinese || isExternalOrProtocolRelative || alreadyLocalized) {
+    return href;
+  }
+
+  return `/${locale}${href}`;
+}
+
+const fittingHomeUi: Record<string, { breadcrumb: string; queryLabel: string }> = {
+  es: { breadcrumb: "Ruta de navegación", queryLabel: "Modelo consultado: " },
+  fr: { breadcrumb: "Fil d’Ariane", queryLabel: "Modèle recherché : " },
+  ko: { breadcrumb: "이동 경로", queryLabel: "검색 모델: " },
+  ru: { breadcrumb: "Навигационная цепочка", queryLabel: "Искомая модель: " },
+};
+
 function findProductsByCompatibleModel(
   products: FittingReplacementProduct[],
   keyword: string
@@ -94,6 +119,7 @@ export default function FittingReplacementHome({
 
   const homeText = data.homeText;
   const pageLocale = getLocaleFromBreadcrumbs(data.breadcrumbs);
+  const localizedUi = fittingHomeUi[pageLocale];
 
   const exampleModels = useMemo(() => {
     const unique = new Map<string, string>();
@@ -147,9 +173,14 @@ export default function FittingReplacementHome({
   }
 
   function handleOpenDetail(product: FittingReplacementProduct) {
-    if (!product.detailHref) return;
+    const detailHref = getLocalizedProductDetailHref(
+      product.detailHref,
+      pageLocale
+    );
 
-    window.open(product.detailHref, "_blank", "noopener,noreferrer");
+    if (!detailHref) return;
+
+    window.open(detailHref, "_blank", "noopener,noreferrer");
   }
 
   function handleToggleCart(product: FittingReplacementProduct) {
@@ -175,7 +206,7 @@ export default function FittingReplacementHome({
       needDrawing: false,
       imagePath: product.imagePath,
       detailHref:
-        product.detailHref ??
+        getLocalizedProductDetailHref(product.detailHref, pageLocale) ??
         (pageLocale === "zh"
           ? SERIES_CONFIG.homeHref
           : `/${pageLocale}${SERIES_CONFIG.homeHref}`),
@@ -201,7 +232,7 @@ export default function FittingReplacementHome({
           <Breadcrumb
             items={data.breadcrumbs}
             ariaLabel={
-              pageLocale === "zh" ? "面包屑导航" : "Breadcrumb"
+              localizedUi?.breadcrumb ?? (pageLocale === "zh" ? "面包屑导航" : "Breadcrumb")
             }
           />
         </div>
@@ -212,6 +243,11 @@ export default function FittingReplacementHome({
               <input
                 className="frp-search-input"
                 type="search"
+                aria-label={
+                  ["es", "fr", "ko", "ru"].includes(pageLocale)
+                    ? data.search.placeholder
+                    : undefined
+                }
                 value={searchValue}
                 placeholder={data.search.placeholder}
                 onChange={(event) => {
@@ -283,7 +319,7 @@ export default function FittingReplacementHome({
                     </h2>
                     <p>
                       {hasSearch
-                        ? `查询型号：${submittedKeyword}`
+                        ? `${localizedUi?.queryLabel ?? "查询型号："}${submittedKeyword}`
                         : homeText?.productSection.description ??
                           "输入兼容型号后，可查看匹配产品并加入清单。"}
                     </p>

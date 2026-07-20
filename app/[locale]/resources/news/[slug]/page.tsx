@@ -342,8 +342,11 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${article.seoTitle ?? article.title}｜Company News｜FOREACH`,
+    title: locale === "en"
+      ? `${article.seoTitle ?? article.title}｜Company News｜FOREACH`
+      : `${article.seoTitle ?? article.title}｜FOREACH`,
     description: article.seoDescription ?? article.summary,
+    ...(locale === "en" ? {} : { openGraph: { title: `${article.seoTitle ?? article.title}｜FOREACH`, description: article.seoDescription ?? article.summary } }),
   };
 }
 
@@ -398,4 +401,4 @@ export default async function NewsIntlArticlePage({
 />
     </div>
   );
-} 
+}

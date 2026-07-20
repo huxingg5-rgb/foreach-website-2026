@@ -8,12 +8,13 @@ import type { Metadata } from "next";
 import ApplicationEnglishClient from "@/components/applications/ApplicationEnglishClient";
 import FrenchIndustryApplicationClient from "@/components/applications/FrenchIndustryApplicationClient";
 import RussianIndustryApplicationClient from "@/components/applications/RussianIndustryApplicationClient";
-import SpanishIndustryApplicationClient from "@/components/applications/SpanishIndustryApplicationClient";
+import SpanishIndustryApplicationClient, { KOREAN_INDUSTRY_UI_TEXT } from "@/components/applications/SpanishIndustryApplicationClient";
 import AnalyticalInstrumentsApplicationClient from "@/components/applications/analytical-instruments/AnalyticalInstrumentsApplicationClient";
 import { createEnglishApplicationData } from "@/data/applications/application-english";
 import { createFrenchApplicationMetadata } from "@/data/applications/application-french-metadata";
 import { createRussianApplicationMetadata } from "@/data/applications/application-russian-metadata";
 import { createSpanishApplicationMetadata } from "@/data/applications/application-spanish-metadata";
+import { createKoreanApplicationMetadata } from "@/data/applications/application-korean-metadata";
 import { getAnalyticalInstrumentsApplicationPageData } from "@/services/applications/analytical-instruments/getAnalyticalInstrumentsApplicationPageData";
 
 import "@/app/applications/analytical-instruments/analytical-instruments-application.css";
@@ -48,6 +49,10 @@ export async function generateMetadata({
 
   if (locale === "fr") {
     return createFrenchApplicationMetadata("analytical-instruments");
+  }
+
+  if (locale === "ko") {
+    return createKoreanApplicationMetadata("analytical-instruments");
   }
 
   if (locale === "ru") {
@@ -87,6 +92,17 @@ export default async function AnalyticalInstrumentsApplicationLocalePage({
         data={data}
         pageClassName="analytical-instruments-page"
         applicationTabsAria="Types d’instruments analytiques"
+      />
+    );
+  }
+
+  if (locale === "ko") {
+    return (
+      <SpanishIndustryApplicationClient
+        data={data}
+        pageClassName="analytical-instruments-page"
+        applicationTabsAria="분석 장비 유형"
+        uiText={KOREAN_INDUSTRY_UI_TEXT}
       />
     );
   }

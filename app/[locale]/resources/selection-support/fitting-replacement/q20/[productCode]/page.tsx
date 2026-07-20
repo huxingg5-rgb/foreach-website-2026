@@ -109,12 +109,26 @@ export async function generateMetadata({
     };
   }
 
-  return {
-    title: `${pageData.product.foreachModel}｜${
-      locale === "en" ? "Fitting Product" : SERIES_CONFIG.productName
-    }｜FOREACH`,
-    description: `View product code, compatible models, model details, and 2D drawing information for ${pageData.product.foreachModel}.`,
+  const productLabels = {
+    en: "Fitting Product",
+    es: "Producto de racores",
+    fr: "Produit de raccordement",
+    ko: "피팅 제품",
+    ru: "Фитинг",
+  } as const;
+  const descriptions = {
+    en: `View product code, compatible models, model details, and 2D drawing information for ${pageData.product.foreachModel}.`,
+    es: `Consulte el código de producto, los modelos compatibles, los detalles del modelo y el plano 2D de ${pageData.product.foreachModel}.`,
+    fr: `Consultez le code produit, les modèles compatibles, les détails du modèle et le plan 2D de ${pageData.product.foreachModel}.`,
+    ko: `${pageData.product.foreachModel}의 제품 코드, 호환 모델, 모델 세부 정보 및 2D 도면 정보를 확인하세요.`,
+    ru: `Код изделия, совместимые модели, характеристики и сведения о 2D-чертеже ${pageData.product.foreachModel}.`,
+  } as const;
+  const metadata = {
+    title: `${pageData.product.foreachModel}｜${productLabels[locale]}｜FOREACH`,
+    description: descriptions[locale],
   };
+
+  return locale === "en" ? metadata : { ...metadata, openGraph: metadata };
 }
 
 /* =========================================================

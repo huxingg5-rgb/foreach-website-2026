@@ -51,6 +51,11 @@ type DatasheetsClientProps = {
   pageText: DatasheetsPageText;
   filterOptions: DatasheetFilterOption[];
   datasheetItems: DatasheetItem[];
+  accessibilityLabels?: {
+    breadcrumb: string;
+    categoryFilter: string;
+    thumbnail: string;
+  };
 };
 
 /* =========================================================
@@ -82,6 +87,7 @@ export default function DatasheetsClient({
   pageText,
   filterOptions,
   datasheetItems,
+  accessibilityLabels,
 }: DatasheetsClientProps) {
   /* 搜索关键词 */
   const [searchKeyword, setSearchKeyword] = useState("");
@@ -160,7 +166,10 @@ export default function DatasheetsClient({
       {/* ================================
           2. 面包屑导航
       ================================= */}
-      <section className="breadcrumb-bar" aria-label="Breadcrumb">
+      <section
+        className="breadcrumb-bar"
+        aria-label={accessibilityLabels?.breadcrumb ?? "Breadcrumb"}
+      >
         <div className="breadcrumb-bar-inner">
           <Link href={pageText.breadcrumb.homeHref ?? "/"}>
             {pageText.breadcrumb.home}
@@ -203,7 +212,9 @@ export default function DatasheetsClient({
         <div className="datasheets-category-bar">
           <div
             className="filter-row section-filter-row"
-            aria-label="Product category filter"
+            aria-label={
+              accessibilityLabels?.categoryFilter ?? "Product category filter"
+            }
           >
             {filterOptions.map((item) => (
               <button
@@ -242,7 +253,12 @@ export default function DatasheetsClient({
               <article className="datasheet-row" key={item.id}>
                 {/* 左侧产品缩略图 */}
                 <div className="product-thumb">
-                  <img src={item.image} alt={`${item.title} thumbnail`} />
+                  <img
+                    src={item.image}
+                    alt={`${item.title}${
+                      accessibilityLabels?.thumbnail ?? " thumbnail"
+                    }`}
+                  />
                 </div>
 
                 {/* 中间文字信息 */}
@@ -335,4 +351,4 @@ export default function DatasheetsClient({
       </section>
     </main>
   );
-} 
+}

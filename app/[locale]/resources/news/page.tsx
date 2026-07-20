@@ -40,11 +40,17 @@ export function generateStaticParams() {
   }));
 }
 
-export const metadata: Metadata = {
-  title: "News｜Resources｜FOREACH",
-  description:
-    "Follow FOREACH updates in exhibitions, company development, technology innovation, quality systems and important announcements.",
-};
+export async function generateMetadata({ params }: NewsIntlPageProps): Promise<Metadata> {
+  const { locale } = await params;
+  const pageData = getNewsPageData(locale);
+  const sectionLabels: Record<NewsLocale, string> = {
+    "zh-CN": "资源中心", en: "Resources", es: "Recursos", fr: "Ressources", ko: "자료", ru: "Ресурсы",
+  };
+  const metadata = locale === "en"
+    ? { title: "News｜Resources｜FOREACH", description: "Follow FOREACH updates in exhibitions, company development, technology innovation, quality systems and important announcements." }
+    : { title: `${pageData.hero.title}｜${sectionLabels[locale]}｜FOREACH`, description: pageData.hero.description };
+  return locale === "en" ? metadata : { ...metadata, openGraph: metadata };
+}
 
 export default async function NewsIntlPage({ params }: NewsIntlPageProps) {
   const { locale } = await params;
@@ -56,4 +62,4 @@ export default async function NewsIntlPage({ params }: NewsIntlPageProps) {
   const pageData = getNewsPageData(locale);
 
   return <NewsListClient pageData={pageData} />;
-} 
+}

@@ -40,6 +40,23 @@ const BreadcrumbComponent =
 const SupportCtaComponent =
   ResourceSupportCta as ComponentType<SharedComponentProps>;
 
+const technicalArticlesUi: Record<string, {
+  search: string;
+  recent: string;
+  recentKeywords: string[];
+  categories: string;
+  empty: string;
+  category: string;
+  tags: string;
+  tagGroups: Record<TechnicalArticleCategory, string[]>;
+  contact: string;
+}> = {
+  es: { search: "Buscar", recent: "Recientes", recentKeywords: ["Racores", "PEEK", "Compatibilidad", "Bomba de émbolo", "IVD"], categories: "Categorías", empty: "No se encontraron artículos técnicos. Pruebe otra palabra clave o categoría.", category: "Categoría:", tags: "Etiquetas:", tagGroups: { "fittings-tubing": ["Racores", "Tubos", "Sellado"], "pumps-valves": ["Bombas", "Válvulas", "Control"], "materials-compatibility": ["Materiales", "Compatibilidad", "Selección"], applications: ["Aplicación", "Sistema", "Selección"] }, contact: "Contactar" },
+  fr: { search: "Rechercher", recent: "Récentes", recentKeywords: ["Raccords", "PEEK", "Compatibilité", "Pompe à piston", "IVD"], categories: "Catégories", empty: "Aucun article technique correspondant. Essayez un autre mot-clé ou une autre catégorie.", category: "Catégorie :", tags: "Étiquettes :", tagGroups: { "fittings-tubing": ["Raccords", "Tubes", "Étanchéité"], "pumps-valves": ["Pompes", "Vannes", "Commande"], "materials-compatibility": ["Matériaux", "Compatibilité", "Sélection"], applications: ["Application", "Système", "Sélection"] }, contact: "Nous contacter" },
+  ko: { search: "검색", recent: "최근 검색", recentKeywords: ["피팅", "PEEK", "호환성", "플런저 펌프", "IVD"], categories: "기술 분류", empty: "일치하는 기술 자료가 없습니다. 다른 키워드나 분류를 선택하세요.", category: "분류:", tags: "태그:", tagGroups: { "fittings-tubing": ["피팅", "튜브", "밀봉"], "pumps-valves": ["펌프", "밸브", "제어"], "materials-compatibility": ["재질", "호환성", "선정"], applications: ["적용", "시스템", "선정"] }, contact: "문의하기" },
+  ru: { search: "Найти", recent: "Недавние", recentKeywords: ["Фитинги", "PEEK", "Совместимость", "Плунжерный насос", "IVD"], categories: "Категории", empty: "Подходящие технические статьи не найдены. Измените запрос или категорию.", category: "Категория:", tags: "Метки:", tagGroups: { "fittings-tubing": ["Фитинги", "Трубки", "Уплотнение"], "pumps-valves": ["Насосы", "Клапаны", "Управление"], "materials-compatibility": ["Материалы", "Совместимость", "Подбор"], applications: ["Применение", "Система", "Подбор"] }, contact: "Связаться" },
+};
+
 function isChinesePage(locale: string) {
   return locale === "zh-CN";
 }
@@ -63,6 +80,9 @@ function getCategoryLabel(
 }
 
 function getArticleTags(article: TechnicalArticleItem, locale: string) {
+  const localizedTags = technicalArticlesUi[locale]?.tagGroups[article.category];
+  if (localizedTags) return localizedTags;
+
   if (locale === "zh-CN") {
     if (article.category === "fittings-tubing") {
       return ["接头", "管路", "密封"];
@@ -97,6 +117,7 @@ function getArticleTags(article: TechnicalArticleItem, locale: string) {
 export default function TechnicalArticlesClient({
   pageData,
 }: TechnicalArticlesClientProps) {
+  const ui = technicalArticlesUi[pageData.locale];
   const [keyword, setKeyword] = useState("");
   const [activeCategory, setActiveCategory] = useState<
     "all" | TechnicalArticleCategory
@@ -157,12 +178,12 @@ export default function TechnicalArticlesClient({
           onChange={setKeyword}
           onSearch={setKeyword}
           placeholder={pageData.search.placeholder}
-          searchButtonText={pageData.locale === "zh-CN" ? "搜索" : "Search"}
-          recentLabel={pageData.locale === "zh-CN" ? "最近搜索" : "Recent"}
+          searchButtonText={ui?.search ?? (pageData.locale === "zh-CN" ? "搜索" : "Search")}
+          recentLabel={ui?.recent ?? (pageData.locale === "zh-CN" ? "最近搜索" : "Recent")}
           recentKeywords={
-            pageData.locale === "zh-CN"
+            ui?.recentKeywords ?? (pageData.locale === "zh-CN"
               ? ["接头", "PEEK", "材料兼容", "柱塞泵", "IVD"]
-              : ["Fittings", "PEEK", "Compatibility", "Plunger Pump", "IVD"]
+              : ["Fittings", "PEEK", "Compatibility", "Plunger Pump", "IVD"])
           }
           showRecentKeywords
         />
@@ -171,7 +192,7 @@ export default function TechnicalArticlesClient({
       <section className="technicalArticlesContentSection">
         <aside className="technicalArticlesSidebar">
           <h2 className="technicalArticlesSidebar__title">
-            {pageData.locale === "zh-CN" ? "技术分类" : "Categories"}
+            {ui?.categories ?? (pageData.locale === "zh-CN" ? "技术分类" : "Categories")}
           </h2>
 
           <div className="technicalArticlesSidebar__list">
@@ -206,15 +227,17 @@ export default function TechnicalArticlesClient({
                   tags={getArticleTags(article, pageData.locale)}
                   href={getArticleHref(pageData.locale, article.slug)}
                   locale={pageData.locale}
+                  categoryText={ui?.category}
+                  tagsText={ui?.tags}
                 />
               ))}
             </div>
           ) : (
             <div className="technicalArticlesEmpty">
               <p>
-                {pageData.locale === "zh-CN"
+                {ui?.empty ?? (pageData.locale === "zh-CN"
                   ? "没有找到匹配的技术文章，请更换关键词或分类。"
-                  : "No matching technical articles found. Please try another keyword or category."}
+                  : "No matching technical articles found. Please try another keyword or category.")}
               </p>
             </div>
           )}
@@ -226,7 +249,7 @@ export default function TechnicalArticlesClient({
         description={pageData.bottomBanner.description}
         buttonText={
           pageData.bottomBanner.actions[0]?.label ??
-          (isChinesePage(pageData.locale) ? "联系我们" : "Contact Us")
+          (ui?.contact ?? (isChinesePage(pageData.locale) ? "联系我们" : "Contact Us"))
         }
         href={pageData.bottomBanner.actions[0]?.href ?? "/contact"}
       />
@@ -240,6 +263,8 @@ interface TechnicalArticleCardProps {
   tags: string[];
   href: string;
   locale: string;
+  categoryText?: string;
+  tagsText?: string;
 }
 
 function TechnicalArticleCard({
@@ -248,6 +273,8 @@ function TechnicalArticleCard({
   tags,
   href,
   locale,
+  categoryText,
+  tagsText,
 }: TechnicalArticleCardProps) {
   return (
     <Link className="technicalArticleCard" href={href}>
@@ -264,12 +291,12 @@ function TechnicalArticleCard({
         <h3 className="technicalArticleCard__title">{article.title}</h3>
 
         <div className="technicalArticleCard__meta">
-          <span>{isChinesePage(locale) ? "分类：" : "Category:"}</span>
+          <span>{categoryText ?? (isChinesePage(locale) ? "分类：" : "Category:")}</span>
           <strong>{categoryLabel}</strong>
         </div>
 
         <div className="technicalArticleCard__tags">
-          <span>{isChinesePage(locale) ? "标签：" : "Tags:"}</span>
+          <span>{tagsText ?? (isChinesePage(locale) ? "标签：" : "Tags:")}</span>
           <div className="technicalArticleCard__tagList">
             {tags.map((tag) => (
               <span key={tag} className="technicalArticleCard__tag">

@@ -15,6 +15,7 @@
 
 import { newsZhData } from "@/data/resources/news/news.zh";
 import { newsIntlData } from "@/data/resources/news/news.intl";
+import { localizeNews } from "@/data/resources/news/news.translations";
 
 import type {
   NewsLocale,
@@ -78,5 +79,9 @@ export function getNewsPageData(locale: NewsLocale): NewsPageData {
     return newsZhData;
   }
 
+  if (locale !== "en") {
+    return localizeNews(locale, newsIntlData);
+  }
+
   return getLocalizedIntlNewsData(locale);
-} 
+}

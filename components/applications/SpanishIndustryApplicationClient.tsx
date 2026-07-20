@@ -69,6 +69,37 @@ type SpanishIndustryApplicationClientProps = {
   data: SpanishIndustryApplicationData;
   pageClassName: string;
   applicationTabsAria: string;
+  uiText?: Partial<IndustryUiText>;
+};
+
+type IndustryUiText = {
+  breadcrumbAria: string;
+  moduleNavigationAria: string;
+  primaryCapability: string;
+  applicationAdvantages: string;
+  problemsSolved: string;
+  viewProductSeries: string;
+  consultEngineer: string;
+};
+
+const SPANISH_UI_TEXT: IndustryUiText = {
+  breadcrumbAria: "Ruta de navegación",
+  moduleNavigationAria: "Navegación por módulos fluídicos",
+  primaryCapability: "Capacidad principal:",
+  applicationAdvantages: "Ventajas de aplicación",
+  problemsSolved: "Problemas que ayuda a resolver",
+  viewProductSeries: "Ver series de productos",
+  consultEngineer: "Consultar a un ingeniero",
+};
+
+export const KOREAN_INDUSTRY_UI_TEXT: IndustryUiText = {
+  breadcrumbAria: "이동 경로",
+  moduleNavigationAria: "유로 모듈 탐색",
+  primaryCapability: "핵심 기능:",
+  applicationAdvantages: "적용 장점",
+  problemsSolved: "해결 가능한 문제",
+  viewProductSeries: "제품 시리즈 보기",
+  consultEngineer: "엔지니어에게 문의",
 };
 
 function getApplicationKeyFromUrl() {
@@ -83,7 +114,9 @@ export default function SpanishIndustryApplicationClient({
   data,
   pageClassName,
   applicationTabsAria,
+  uiText,
 }: SpanishIndustryApplicationClientProps) {
+  const ui = { ...SPANISH_UI_TEXT, ...uiText };
   const firstApplication = data.applications[0];
   const [activeApplicationKey, setActiveApplicationKey] = useState(
     firstApplication?.key ?? "",
@@ -189,7 +222,7 @@ export default function SpanishIndustryApplicationClient({
       </section>
 
       <SiteBreadcrumb
-        ariaLabel="Ruta de navegación"
+        ariaLabel={ui.breadcrumbAria}
         items={data.breadcrumb}
         variant="bar"
       />
@@ -261,7 +294,7 @@ export default function SpanishIndustryApplicationClient({
           <div className="ivd-ability-layout ivd-ability-layout-top">
             <nav
               className="ivd-module-nav ivd-module-nav-top"
-              aria-label="Navegación por módulos fluídicos"
+              aria-label={ui.moduleNavigationAria}
             >
               <div className="ivd-module-nav-list">
                 {activeApplication.modules.map((module) => {
@@ -333,7 +366,7 @@ export default function SpanishIndustryApplicationClient({
 
                       <div className="ivd-product-detail">
                         <p className="ivd-detail-head">
-                          <b>Capacidad principal:</b> {product.ability}
+                          <b>{ui.primaryCapability}</b> {product.ability}
                         </p>
 
                         <div className="ivd-param-row">
@@ -346,12 +379,12 @@ export default function SpanishIndustryApplicationClient({
 
                         <div className="ivd-detail-grid">
                           <div className="ivd-detail-box">
-                            <b>Ventajas de aplicación</b>
+                            <b>{ui.applicationAdvantages}</b>
                             <span>{product.advantage}</span>
                           </div>
 
                           <div className="ivd-detail-box">
-                            <b>Problemas que ayuda a resolver</b>
+                            <b>{ui.problemsSolved}</b>
                             <span>{product.solves}</span>
                           </div>
                         </div>
@@ -361,13 +394,13 @@ export default function SpanishIndustryApplicationClient({
                             className="ivd-product-action"
                             href={data.productHref}
                           >
-                            Ver series de productos
+                            {ui.viewProductSeries}
                           </Link>
                           <Link
                             className="ivd-product-action"
                             href={data.contactHref}
                           >
-                            Consultar a un ingeniero
+                            {ui.consultEngineer}
                           </Link>
                         </div>
                       </div>

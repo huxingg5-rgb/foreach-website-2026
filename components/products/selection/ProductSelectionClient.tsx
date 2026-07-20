@@ -155,7 +155,55 @@ const selectionProducts = [
   ...syringePumpSelectionProducts,
   ...controlModuleSelectionProducts,
 ].filter((product, index, array) => {
-  return index === array.findIndex((item) => item.productId === product.productId);
+  /*
+   * FITTING_ONLY_STATUS_MERGE_START
+   *
+   * hidden 状态合并只允许作用于接头系列。
+   * 阀、针、泵、管路、智控等非接头类别保持原来的去重逻辑。
+   */
+  const isFittingProduct =
+    product.categoryId === "fittings";
+
+  if (!isFittingProduct) {
+    return (
+      index ===
+      array.findIndex((item) => {
+        return item.productId === product.productId;
+      })
+    );
+  }
+
+  const hasHiddenFittingRecord =
+    array.some((item) => {
+      return (
+        item.productId === product.productId &&
+        item.categoryId === "fittings" &&
+        item.status === "hidden"
+      );
+    });
+
+  if (hasHiddenFittingRecord) {
+    return false;
+  }
+
+  if (product.status !== "active") {
+    return false;
+  }
+
+  return (
+    index ===
+    array.findIndex((item) => {
+      return (
+        item.productId === product.productId &&
+        item.categoryId === "fittings" &&
+        item.status === "active"
+      );
+    })
+  );
+
+  /*
+   * FITTING_ONLY_STATUS_MERGE_END
+   */
 });
 
 const selectionTaxonomyItems = [

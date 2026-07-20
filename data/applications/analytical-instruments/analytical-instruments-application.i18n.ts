@@ -6,6 +6,7 @@ import { analyticalInstrumentsApplicationZhData } from "./analytical-instruments
 import { translateFrenchApplicationData } from "../application-french";
 import { translateRussianApplicationData } from "../application-russian";
 import { translateSpanishApplicationData } from "../application-spanish";
+import { translateKoreanApplicationData } from "../application-korean.generated";
 
 const analyticalInstrumentsApplicationEsData =
   translateSpanishApplicationData<AnalyticalInstrumentsApplicationPageData>(
@@ -25,6 +26,11 @@ const analyticalInstrumentsApplicationRuData =
     analyticalInstrumentsRuExactText,
   );
 
+const analyticalInstrumentsApplicationKoData =
+  translateKoreanApplicationData<AnalyticalInstrumentsApplicationPageData>(
+    analyticalInstrumentsApplicationZhData,
+  );
+
 export function getAnalyticalInstrumentsApplicationIntlData(
   locale: string,
 ): AnalyticalInstrumentsApplicationPageData {
@@ -34,6 +40,10 @@ export function getAnalyticalInstrumentsApplicationIntlData(
 
   if (locale === "fr") {
     return analyticalInstrumentsApplicationFrData;
+  }
+
+  if (locale === "ko") {
+    return analyticalInstrumentsApplicationKoData;
   }
 
   if (locale === "ru") {

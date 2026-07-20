@@ -1809,7 +1809,7 @@ export const luerFittingSelectionProducts:
     },
     "imageCard": "",
     "detailSlug": "lpr-32-pv-n",
-    "status": "active",
+    "status": "hidden",
     "sortOrder": 62,
     "searchKeywords": {
       "zh": "旋转锁圈公鲁尔接头 LPR-32-PV-N LPR-32-PV-N 809932 443-02-00697 公鲁尔接头 LPR 旋转锁圈公鲁尔接头 3.2 mm PVDF 本色",

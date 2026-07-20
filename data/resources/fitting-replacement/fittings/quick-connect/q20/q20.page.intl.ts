@@ -83,7 +83,7 @@ export const fittingReplacementQuickConnectQ20PageIntl = {
       },
 
       productCard: {
-        productName: "Q20 快插接头",
+        productName: "FOREACH 接头",
         productCode: "商品编码：",
         foreachModel: "恒永达型号：",
         compatibleModels: "兼容编码：",
@@ -164,7 +164,7 @@ export const fittingReplacementQuickConnectQ20PageIntl = {
       },
 
       productCard: {
-        productName: "Q20 Quick-connect Fitting",
+        productName: "FOREACH Fitting",
         productCode: "Product Code:",
         foreachModel: "FOREACH Model:",
         compatibleModels: "Compatible Models:",
@@ -245,7 +245,7 @@ export const fittingReplacementQuickConnectQ20PageIntl = {
       },
 
       productCard: {
-        productName: "Conector Q20",
+        productName: "Racor FOREACH",
         productCode: "Código:",
         foreachModel: "Modelo:",
         compatibleModels: "Compatibles:",
@@ -326,7 +326,7 @@ export const fittingReplacementQuickConnectQ20PageIntl = {
       },
 
       productCard: {
-        productName: "Raccord Q20",
+        productName: "Raccord FOREACH",
         productCode: "Code :",
         foreachModel: "Modèle :",
         compatibleModels: "Compatibles :",
@@ -407,7 +407,7 @@ export const fittingReplacementQuickConnectQ20PageIntl = {
       },
 
       productCard: {
-        productName: "Q20 퀵 커넥트 피팅",
+        productName: "FOREACH 피팅",
         productCode: "제품 코드:",
         foreachModel: "FOREACH 모델:",
         compatibleModels: "호환 코드:",
@@ -487,7 +487,7 @@ export const fittingReplacementQuickConnectQ20PageIntl = {
       },
 
       productCard: {
-        productName: "Фитинг Q20",
+        productName: "Фитинг FOREACH",
         productCode: "Код:",
         foreachModel: "Модель:",
         compatibleModels: "Аналоги:",
@@ -528,4 +528,4 @@ export function getFittingReplacementQuickConnectQ20PageIntl(
   }
 
   return fittingReplacementQuickConnectQ20PageIntl.en;
-} 
+}

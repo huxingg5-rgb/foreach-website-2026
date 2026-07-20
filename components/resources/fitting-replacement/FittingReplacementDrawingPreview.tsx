@@ -24,6 +24,7 @@ const DRAWING_PREVIEW_LOADING_TIME = 1200;
 
 interface FittingReplacementDrawingPreviewText {
   readonly title: string;
+  readonly iframeTitle?: string;
   readonly loadingLabel: string;
   readonly previewButton: string;
   readonly description: string;
@@ -75,7 +76,7 @@ export default function FittingReplacementDrawingPreview({
           key={drawingPdfPreviewHref}
           src={drawingPdfPreviewHref}
           className="frd-drawing-object is-visible"
-          title={`${productModel} 2D PDF drawing`}
+          title={text.iframeTitle ?? `${productModel} 2D PDF drawing`}
           loading="eager"
           onLoad={() => {
             setIsDrawingLoading(false);
@@ -100,4 +101,4 @@ export default function FittingReplacementDrawingPreview({
       </div>
     </section>
   );
-} 
+}

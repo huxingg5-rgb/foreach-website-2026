@@ -12,6 +12,7 @@
 import type { CSSProperties } from "react";
 import HistoryTimeline from "@/components/about/HistoryTimeline";
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
+import { getAboutBreadcrumb } from "@/data/about-breadcrumb";
 import {
   getHistoryMilestones,
   getHistoryPageText,
@@ -58,79 +59,6 @@ const historyBottomBanner = {
    1. 先在组件里集中管理
    2. 后续如果想进一步规范，也可以移动到 data/historyMilestones.ts
 ================================ */
-const breadcrumbText = {
-  "zh-CN": {
-    home: "首页",
-    about: "关于我们",
-    current: "发展历程",
-    ariaLabel: "面包屑导航",
-  },
-  en: {
-    home: "Home",
-    about: "About Us",
-    current: "Milestones",
-    ariaLabel: "Breadcrumb",
-  },
-  es: {
-    home: "Inicio",
-    about: "Sobre nosotros",
-    current: "Historia",
-    ariaLabel: "Ruta de navegación",
-  },
-  fr: {
-    home: "Accueil",
-    about: "À propos",
-    current: "Historique",
-    ariaLabel: "Fil d’Ariane",
-  },
-  ko: {
-    home: "홈",
-    about: "회사 소개",
-    current: "연혁",
-    ariaLabel: "이동 경로",
-  },
-  ru: {
-    home: "Главная",
-    about: "О нас",
-    current: "История",
-    ariaLabel: "Навигационная цепочка",
-  },
-} as const;
-
-/* ================================
-   生成多语言链接
-   说明：
-   1. 中文默认不加 /zh-CN
-   2. 其他语言加 /en、/es、/fr、/ko、/ru
-================================ */
-function getLocalizedHref(locale: HistoryPageLocale, href: string) {
-  if (locale === "zh-CN") {
-    return href;
-  }
-
-  return `/${locale}${href}`;
-}
-
-/* ================================
-   获取面包屑文案
-   说明：
-   如果语言异常，默认回到中文
-================================ */
-function getBreadcrumbText(locale: HistoryPageLocale) {
-  if (
-    locale === "zh-CN" ||
-    locale === "en" ||
-    locale === "es" ||
-    locale === "fr" ||
-    locale === "ko" ||
-    locale === "ru"
-  ) {
-    return breadcrumbText[locale];
-  }
-
-  return breadcrumbText["zh-CN"];
-}
-
 export default function HistoryPageContent({
   locale,
 }: HistoryPageContentProps) {
@@ -149,7 +77,10 @@ export default function HistoryPageContent({
     .filter((item) => item.enabled)
     .sort((a, b) => b.year - a.year);
 
-  const breadcrumb = getBreadcrumbText(locale);
+  const breadcrumb = getAboutBreadcrumb(
+    locale,
+    `${pageText.titleMain}${pageText.titleAccent}`,
+  );
 
   return (
     <main className="about-history-page">
@@ -177,13 +108,9 @@ export default function HistoryPageContent({
           2. 链接根据当前语言自动生成
       ================================ */}
       <SiteBreadcrumb
-        className="about-culture-breadcrumb"
         ariaLabel={breadcrumb.ariaLabel}
-        items={[
-          { label: breadcrumb.home, href: getLocalizedHref(locale, "/") },
-          { label: breadcrumb.about, href: getLocalizedHref(locale, "/about/foreach") },
-          { label: breadcrumb.current },
-        ]}
+        items={breadcrumb.items}
+        variant="bar"
       />
 
       {/* ================================
