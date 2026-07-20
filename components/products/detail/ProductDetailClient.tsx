@@ -1084,6 +1084,8 @@ export default function ProductDetailClient({
     : null;
   const isTargetLanguage = Boolean(targetLocale);
   const isLocalizedDetail = isEnglish || isTargetLanguage;
+  const configuratorLocale =
+    targetLocale || (isEnglish ? "en" : "zh");
   const localePrefix = isEnglish
     ? "/en"
     : targetLocale
@@ -1922,11 +1924,12 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
       {/* PVC_TUBING_CONFIGURATOR_RENDER_START */}
       {isPvcTubingConfiguratorEnabled ? (
         <ProductVariantConfigurator
+          locale={configuratorLocale}
           open={
             isPvcConfiguratorOpen
           }
           config={
-            isEnglish
+            isLocalizedDetail
               ? pvcTubingConfiguratorEn
               : pvcTubingConfigurator
           }
@@ -1960,11 +1963,12 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
       {/* TPU_TUBING_CONFIGURATOR_RENDER_START */}
       {isTpuTubingConfiguratorEnabled ? (
         <ProductVariantConfigurator
+          locale={configuratorLocale}
           open={
             isTpuConfiguratorOpen
           }
           config={
-            isEnglish
+            isLocalizedDetail
               ? tpuTubingConfiguratorEn
               : tpuTubingConfigurator
           }
@@ -1998,11 +2002,12 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
       {/* FEP_TUBING_CONFIGURATOR_RENDER_START */}
       {isFepTubingConfiguratorEnabled ? (
         <ProductVariantConfigurator
+          locale={configuratorLocale}
           open={
             isFepConfiguratorOpen
           }
           config={
-            isEnglish
+            isLocalizedDetail
               ? fepTubingConfiguratorEn
               : fepTubingConfigurator
           }
@@ -2036,11 +2041,12 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
       {/* PTFE_TUBING_CONFIGURATOR_RENDER_START */}
       {isPtfeTubingConfiguratorEnabled ? (
         <ProductVariantConfigurator
+          locale={configuratorLocale}
           open={
             isPtfeConfiguratorOpen
           }
           config={
-            isEnglish
+            isLocalizedDetail
               ? ptfeTubingConfiguratorEn
               : ptfeTubingConfigurator
           }
@@ -2074,11 +2080,12 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
       {/* PEEK_TUBING_CONFIGURATOR_RENDER_START */}
       {isPeekTubingConfiguratorEnabled ? (
         <ProductVariantConfigurator
+          locale={configuratorLocale}
           open={
             isPeekConfiguratorOpen
           }
           config={
-            isEnglish
+            isLocalizedDetail
               ? peekTubingConfiguratorEn
               : peekTubingConfigurator
           }
@@ -2112,11 +2119,12 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
       {/* PFA_TUBING_CONFIGURATOR_RENDER_START */}
       {isPfaTubingConfiguratorEnabled ? (
         <ProductVariantConfigurator
+          locale={configuratorLocale}
           open={
             isPfaConfiguratorOpen
           }
           config={
-            isEnglish
+            isLocalizedDetail
               ? pfaTubingConfiguratorEn
               : pfaTubingConfigurator
           }

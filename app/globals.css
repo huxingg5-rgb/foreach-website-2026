@@ -18392,3 +18392,513 @@ html body .home-honor-image img {
 }
 
 /* END: DATASHEET MOBILE AUTO FLOAT LAYOUT */
+
+
+/* =========================================================
+   首页首屏｜PC 视频滚动切换静态图
+   仅作用于 1001px 及以上，手机端保持原样
+========================================================= */
+/* =========================================================
+   首页 PC 首屏｜第一次滚轮立即显示字幕
+
+   初始：
+   - 只显示视频
+
+   第一次向下滚轮：
+   - 标题立即开始出现
+   - 副标题延迟 0.08 秒
+   - 按钮延迟 0.16 秒
+
+   后续继续滚动：
+   - 视频切换为静态图
+========================================================= */
+
+/* =========================================================
+   首页 PC 首屏｜一次滚轮触发完整动画
+
+   0：视频，无网页字幕
+   1：第一次滚轮后显示网页字幕
+   2：1.2 秒后切换静态图，网页字幕隐藏
+
+   手机端继续使用原有 Hero。
+========================================================= */
+
+/* =========================================================
+   首页 PC 首屏｜文字常驻与滚轮可逆
+
+   阶段 0：视频，无文字
+   阶段 1：视频，有文字
+   阶段 2：静态图，有文字
+
+   向上滚轮可按相反顺序退回。
+========================================================= */
+
+/* =========================================================
+   首页 PC 首屏｜静态图和文字同时出现
+
+   初始：
+   - 视频
+   - 无网页文字
+
+   第一次向下滚轮：
+   - 静态图、标题、副标题、按钮同时淡入
+
+   向上滚轮：
+   - 静态图和文字同时淡出
+   - 返回视频
+========================================================= */
+/* HOME_HERO_IMAGE_TEXT_TOGETHER_CSS_START */
+
+.home-hero-static-image {
+  display: none;
+}
+
+@media (min-width: 1001px) {
+  .home-hero-scroll-shell {
+    position: relative;
+
+    width: 100%;
+    height: 100vh !important;
+    min-height: 100vh;
+
+    background: #050b15;
+  }
+
+  .home-hero-scroll-shell
+    .home-hero {
+    position: relative !important;
+    top: auto !important;
+
+    width: 100%;
+    height: 100vh !important;
+    min-height: 100vh !important;
+
+    overflow: hidden;
+    isolation: isolate;
+
+    background: #050b15;
+  }
+
+  .home-hero-scroll-shell
+    .home-hero-video {
+    z-index: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover !important;
+    object-position:
+      center center !important;
+
+    opacity:
+      var(
+        --home-hero-video-opacity,
+        1
+      ) !important;
+
+    transform: none !important;
+
+    transition:
+      opacity 0.48s ease !important;
+
+    will-change: opacity;
+  }
+
+  .home-hero-scroll-shell
+    .home-hero-static-image {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover !important;
+    object-position:
+      center center !important;
+
+    opacity:
+      var(
+        --home-hero-static-opacity,
+        0
+      );
+
+    transform: none !important;
+
+    transition:
+      opacity 0.48s ease !important;
+
+    pointer-events: none;
+
+    will-change: opacity;
+  }
+
+  .home-hero-scroll-shell
+    .home-hero-overlay {
+    z-index: 2;
+
+    opacity:
+      var(
+        --home-hero-overlay-opacity,
+        0.08
+      ) !important;
+
+    transition:
+      opacity 0.48s ease !important;
+  }
+
+  .home-hero-scroll-shell
+    .home-hero-inner {
+    position: relative;
+    z-index: 3;
+  }
+
+  /*
+   * 图片、标题、副标题和按钮：
+   * 使用相同持续时间和相同延迟，
+   * 确保同时开始、同时完成。
+   */
+  .home-hero-scroll-shell
+    .home-hero-title,
+  .home-hero-scroll-shell
+    .home-hero-subtitle,
+  .home-hero-scroll-shell
+    .home-hero-actions {
+    transition:
+      opacity 0.48s ease,
+      transform 0.48s
+        cubic-bezier(
+          0.22,
+          1,
+          0.36,
+          1
+        ) !important;
+
+    transition-delay:
+      0s !important;
+
+    will-change:
+      opacity,
+      transform;
+  }
+
+  .home-hero-scroll-shell
+    .home-hero-title {
+    opacity:
+      var(
+        --home-hero-title-opacity,
+        0
+      ) !important;
+
+    transform:
+      translateY(
+        var(
+          --home-hero-title-shift,
+          24px
+        )
+      );
+  }
+
+  .home-hero-scroll-shell
+    .home-hero-subtitle {
+    opacity:
+      var(
+        --home-hero-subtitle-opacity,
+        0
+      ) !important;
+
+    transform:
+      translateY(
+        var(
+          --home-hero-subtitle-shift,
+          24px
+        )
+      );
+  }
+
+  .home-hero-scroll-shell
+    .home-hero-actions {
+    opacity:
+      var(
+        --home-hero-actions-opacity,
+        0
+      ) !important;
+
+    transform:
+      translateY(
+        var(
+          --home-hero-actions-shift,
+          24px
+        )
+      );
+
+    pointer-events:
+      var(
+        --home-hero-content-pointer-events,
+        none
+      );
+  }
+}
+
+@media
+  (min-width: 1001px) and
+  (prefers-reduced-motion: reduce) {
+  .home-hero-scroll-shell
+    .home-hero-video {
+    opacity: 0 !important;
+  }
+
+  .home-hero-scroll-shell
+    .home-hero-static-image,
+  .home-hero-scroll-shell
+    .home-hero-title,
+  .home-hero-scroll-shell
+    .home-hero-subtitle,
+  .home-hero-scroll-shell
+    .home-hero-actions {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* HOME_HERO_IMAGE_TEXT_TOGETHER_CSS_END */
+
+/* HOME_HERO_DESKTOP_FONT_FIX_START */
+
+/* =========================================================
+   首页外语首屏｜1920px及以下桌面端标题排版修复
+
+   目标：
+   1. 缩小英文、西班牙语、法语、韩语、俄语标题
+   2. 保留既有的两行标题结构
+   3. 禁止俄语、西班牙语等单词中间自动断开
+   4. 副标题限制在产品图左侧的安全区域
+========================================================= */
+
+@media (min-width: 1001px) and (max-width: 1920px) {
+
+  /* 五种外语首页Hero主标题 */
+  :is(
+    html[lang^="en"],
+    html[lang^="es"],
+    html[lang^="fr"],
+    html[lang^="ko"],
+    html[lang^="ru"]
+  ) body [data-home-hero-title="true"] {
+    /*
+     * 1920px时约为52px；
+     * 较窄桌面端最低为44px。
+     */
+    font-size: clamp(44px, 2.7vw, 52px) !important;
+    line-height: 1.14 !important;
+
+    /*
+     * 保留代码中的原始换行，
+     * 但禁止同一标题行内部再次换行。
+     */
+    white-space: nowrap !important;
+
+    /*
+     * 禁止外语单词内部出现：
+     * solucio-nes
+     * реше-ния
+     */
+    -webkit-hyphens: none !important;
+    hyphens: none !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+
+    /*
+     * 标题区域保持在左侧安全空间。
+     */
+    width: max-content;
+    max-width: min(920px, 52vw) !important;
+  }
+
+  /*
+   * 同时覆盖标题内部可能存在的span，
+   * 避免旧样式在子节点上重新开启断词。
+   */
+  :is(
+    html[lang^="en"],
+    html[lang^="es"],
+    html[lang^="fr"],
+    html[lang^="ko"],
+    html[lang^="ru"]
+  ) body [data-home-hero-title="true"] > * {
+    white-space: nowrap !important;
+    -webkit-hyphens: none !important;
+    hyphens: none !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+  }
+
+  /* 五种外语首页Hero副标题 */
+  :is(
+    html[lang^="en"],
+    html[lang^="es"],
+    html[lang^="fr"],
+    html[lang^="ko"],
+    html[lang^="ru"]
+  ) body [data-home-hero-subtitle="true"] {
+    width: 100%;
+    max-width: min(760px, 44vw) !important;
+
+    white-space: normal !important;
+    -webkit-hyphens: none !important;
+    hyphens: none !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+  }
+}
+
+/*
+ * 1600px以下桌面端再稍微缩小，
+ * 避免导航和右侧产品图压缩左侧文字空间。
+ */
+@media (min-width: 1001px) and (max-width: 1599px) {
+
+  :is(
+    html[lang^="en"],
+    html[lang^="es"],
+    html[lang^="fr"],
+    html[lang^="ko"],
+    html[lang^="ru"]
+  ) body [data-home-hero-title="true"] {
+    font-size: clamp(40px, 3vw, 46px) !important;
+    max-width: min(760px, 51vw) !important;
+  }
+
+  :is(
+    html[lang^="en"],
+    html[lang^="es"],
+    html[lang^="fr"],
+    html[lang^="ko"],
+    html[lang^="ru"]
+  ) body [data-home-hero-subtitle="true"] {
+    max-width: min(680px, 43vw) !important;
+  }
+}
+
+/* HOME_HERO_DESKTOP_FONT_FIX_END */
+
+/* HOME_HERO_2K_I18N_LAYOUT_START */
+
+/* =========================================================
+   首页外语首屏｜2K与高缩放桌面屏适配
+
+   两种情况下触发：
+   1. 浏览器CSS宽度大于1920px
+   2. 浏览器宽度大于1600px，并且系统缩放不低于125%
+
+   第二条用于解决2K显示器开启125%或150%缩放后，
+   浏览器实际宽度不足1921px的问题。
+========================================================= */
+
+@media
+  (min-width: 1921px),
+  (min-width: 1600px) and (min-resolution: 1.25dppx) {
+
+  /* 英文、西班牙语、法语、韩语和俄语首页标题 */
+  :is(
+    html[lang^="en"],
+    html[lang^="es"],
+    html[lang^="fr"],
+    html[lang^="ko"],
+    html[lang^="ru"]
+  ) body [data-home-hero-title="true"] {
+    /*
+     * 高缩放2K屏下至少保持74px。
+     * 浏览器宽度增加时逐步放大，最大88px。
+     */
+    font-size: clamp(74px, 3.8vw, 88px) !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.018em !important;
+
+    /*
+     * 按最长标题行自然展开，
+     * 保留两个文案字段形成的两行结构。
+     */
+    display: block !important;
+    width: max-content !important;
+    min-width: max-content !important;
+    max-width: none !important;
+
+    white-space: nowrap !important;
+
+    -webkit-hyphens: none !important;
+    -moz-hyphens: none !important;
+    -ms-hyphens: none !important;
+    hyphens: none !important;
+
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    word-wrap: normal !important;
+  }
+
+  /* 覆盖标题内部的span等节点，禁止重新断行 */
+  :is(
+    html[lang^="en"],
+    html[lang^="es"],
+    html[lang^="fr"],
+    html[lang^="ko"],
+    html[lang^="ru"]
+  ) body [data-home-hero-title="true"] * {
+    white-space: nowrap !important;
+
+    -webkit-hyphens: none !important;
+    -moz-hyphens: none !important;
+    -ms-hyphens: none !important;
+    hyphens: none !important;
+
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    word-wrap: normal !important;
+
+    max-width: none !important;
+  }
+
+  /* 外语首页副标题 */
+  :is(
+    html[lang^="en"],
+    html[lang^="es"],
+    html[lang^="fr"],
+    html[lang^="ko"],
+    html[lang^="ru"]
+  ) body [data-home-hero-subtitle="true"] {
+    font-size: clamp(21px, 1.15vw, 26px) !important;
+    line-height: 1.55 !important;
+
+    width: 100% !important;
+    max-width: min(980px, 44vw) !important;
+
+    white-space: normal !important;
+
+    -webkit-hyphens: none !important;
+    hyphens: none !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+  }
+
+  /* Hero按钮文字同步放大 */
+  :is(
+    html[lang^="en"],
+    html[lang^="es"],
+    html[lang^="fr"],
+    html[lang^="ko"],
+    html[lang^="ru"]
+  ) body [data-home-hero-subtitle="true"] ~ :is(a, button),
+  :is(
+    html[lang^="en"],
+    html[lang^="es"],
+    html[lang^="fr"],
+    html[lang^="ko"],
+    html[lang^="ru"]
+  ) body [data-home-hero-subtitle="true"] ~ * :is(a, button) {
+    font-size: 17px !important;
+  }
+}
+
+/* HOME_HERO_2K_I18N_LAYOUT_END */

@@ -17,6 +17,10 @@ import {
   normalizeConfiguratorSelection,
   updateConfiguratorSelection,
 } from "./product-variant-configurator.engine";
+import {
+  localizeProductConfiguratorConfig,
+  localizeProductConfiguratorValue,
+} from "./product-variant-configurator.i18n";
 
 import type {
   ProductConfiguratorSelection,
@@ -47,13 +51,23 @@ const DEFAULT_UI_TEXT = {
 
 export default function ProductVariantConfigurator({
   open,
-  config,
+  config: sourceConfig,
+  locale = "zh",
   value,
   onClose,
   onConfirm,
   isVariantSelected,
   onToggleVariant,
 }: ProductVariantConfiguratorProps) {
+  const config = useMemo(
+    () =>
+      localizeProductConfiguratorConfig(
+        sourceConfig,
+        locale
+      ),
+    [locale, sourceConfig]
+  );
+
   const uiText = {
     ...DEFAULT_UI_TEXT,
     ...config.uiText,
@@ -231,10 +245,13 @@ export default function ProductVariantConfigurator({
           : config.productName,
         ...config.dimensions.map(
           (dimension) =>
-            formatConfiguratorValue(
-              selection[dimension.key],
-              dimension.unit,
-              dimension.precision
+            localizeProductConfiguratorValue(
+              formatConfiguratorValue(
+                selection[dimension.key],
+                dimension.unit,
+                dimension.precision
+              ),
+              locale
             )
         ),
       ]
@@ -245,6 +262,7 @@ export default function ProductVariantConfigurator({
       config,
       selection,
       hasAnySelection,
+      locale,
     ]
   );
 
@@ -366,12 +384,15 @@ export default function ProductVariantConfigurator({
                     </span>
 
                     <b>
-                      {formatConfiguratorValue(
-                        selection[
-                          dimension.key
-                        ],
-                        dimension.unit,
-                        dimension.precision
+                      {localizeProductConfiguratorValue(
+                        formatConfiguratorValue(
+                          selection[
+                            dimension.key
+                          ],
+                          dimension.unit,
+                          dimension.precision
+                        ),
+                        locale
                       )}
                     </b>
                   </div>
@@ -403,12 +424,15 @@ export default function ProductVariantConfigurator({
                     <span>{row.label}</span>
 
                     <b>
-                      {formatConfiguratorValue(
-                        matchingVariant?.result?.[
-                          row.key
-                        ],
-                        row.unit,
-                        row.precision
+                      {localizeProductConfiguratorValue(
+                        formatConfiguratorValue(
+                          matchingVariant?.result?.[
+                            row.key
+                          ],
+                          row.unit,
+                          row.precision
+                        ),
+                        locale
                       )}
                     </b>
                   </div>
@@ -561,10 +585,13 @@ export default function ProductVariantConfigurator({
                                   />
 
                                   <span>
-                                    {formatConfiguratorValue(
-                                      optionValue,
-                                      dimension.unit,
-                                      dimension.precision
+                                    {localizeProductConfiguratorValue(
+                                      formatConfiguratorValue(
+                                        optionValue,
+                                        dimension.unit,
+                                        dimension.precision
+                                      ),
+                                      locale
                                     )}
                                   </span>
                                 </button>

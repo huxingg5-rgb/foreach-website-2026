@@ -168,6 +168,14 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
     ko: "RPL 단일 헤드 밸브리스 펌프",
     ru: "Одноголовочный бесклапанный насос RPL",
   },
+  "RPL 无阀泵": {
+    zh: "RPL 无阀泵",
+    en: "RPL Single-Head Valveless Pump",
+    es: "Bomba sin válvulas de un cabezal RPL",
+    fr: "Pompe sans valve mono-tête RPL",
+    ko: "RPL 단일 헤드 밸브리스 펌프",
+    ru: "Одноголовочный бесклапанный насос RPL",
+  },
   "DRPL 双头无阀泵": {
     zh: "DRPL 双头无阀泵",
     en: "DRPL Dual-Head Valveless Pump",
@@ -357,21 +365,37 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
   "直通型": {
     zh: "直通型",
     en: "Straight Through",
+    es: "Paso recto",
+    fr: "Passage droit",
+    ko: "직선형",
+    ru: "Прямое соединение",
   },
 
   "L型": {
     zh: "L型",
     en: "Elbow",
+    es: "Codo",
+    fr: "Coudé",
+    ko: "엘보형",
+    ru: "Угловое соединение",
   },
 
   "T型": {
     zh: "T型",
     en: "Tee",
+    es: "T",
+    fr: "Té",
+    ko: "T형",
+    ru: "Тройник",
   },
 
   "Y型": {
     zh: "Y型",
     en: "Y",
+    es: "Y",
+    fr: "Y",
+    ko: "Y형",
+    ru: "Y-образное соединение",
   },
 
   "π型": {
@@ -387,6 +411,10 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
   "倒刺堵头": {
     zh: "倒刺堵头",
     en: "Barbed Plug",
+    es: "Tapón con espiga",
+    fr: "Bouchon cannelé",
+    ko: "바브 플러그",
+    ru: "Штуцерная заглушка",
   },
 
   "白色": {
@@ -397,76 +425,136 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
   "螺纹密封": {
     zh: "螺纹密封",
     en: "Thread Seal",
+    es: "Sellado por rosca",
+    fr: "Étanchéité filetée",
+    ko: "나사 밀봉",
+    ru: "Резьбовое уплотнение",
   },
 
   "底面密封": {
     zh: "底面密封",
     en: "Bottom-Face Seal",
+    es: "Sellado frontal inferior",
+    fr: "Étanchéité par face inférieure",
+    ko: "바닥면 밀봉",
+    ru: "Уплотнение по нижнему торцу",
   },
 
   "内螺纹转倒刺": {
     zh: "内螺纹转倒刺",
     en: "Female Thread to Barb",
+    es: "Rosca hembra a espiga",
+    fr: "Filetage femelle vers cannelure",
+    ko: "암나사-바브 연결",
+    ru: "Переход с внутренней резьбы на штуцер",
   },
 
   "可旋转直通型": {
     zh: "可旋转直通型",
     en: "Rotary Straight Through",
+    es: "Paso recto giratorio",
+    fr: "Passage droit rotatif",
+    ko: "회전식 직선형",
+    ru: "Поворотное прямое соединение",
   },
 
   "3.4 锥螺纹": {
     zh: "3.4 锥螺纹",
     en: "3.4 Tapered Thread",
+    es: "Rosca cónica 3.4",
+    fr: "Filetage conique 3.4",
+    ko: "3.4 테이퍼 나사",
+    ru: "Коническая резьба 3.4",
   },
 
   "LSL 固定芯子": {
     zh: "LSL 固定芯子",
     en: "Male Luer Stationary Lock",
+    es: "Conector Luer macho fijo",
+    fr: "Raccord Luer mâle fixe",
+    ko: "고정형 수 루어 커넥터",
+    ru: "Неподвижный штекерный разъём Люэра",
   },
 
   "LRL 旋转芯子": {
     zh: "LRL 旋转芯子",
     en: "Male Luer Rotating Lock",
+    es: "Conector Luer macho giratorio",
+    fr: "Raccord Luer mâle rotatif",
+    ko: "회전형 수 루어 커넥터",
+    ru: "Поворотный штекерный разъём Люэра",
   },
 
   "LPR 旋转锁圈": {
     zh: "LPR 旋转锁圈",
     en: "Male Luer Rotating Lock Ring Fitting",
+    es: "Conector Luer macho con anillo de bloqueo giratorio",
+    fr: "Raccord Luer mâle à bague de verrouillage rotative",
+    ko: "회전 잠금 링형 수 루어 피팅",
+    ru: "Штекерный фитинг Люэра с поворотным стопорным кольцом",
   },
 
   "LPS 固定锁圈": {
     zh: "LPS 固定锁圈",
     en: "Male Luer Stationary Lock Ring Fitting",
+    es: "Conector Luer macho con anillo de bloqueo fijo",
+    fr: "Raccord Luer mâle à bague de verrouillage fixe",
+    ko: "고정 잠금 링형 수 루어 피팅",
+    ru: "Штекерный фитинг Люэра с неподвижным стопорным кольцом",
   },
 
   "LP 一体式": {
     zh: "LP 一体式",
     en: "Male Luer Integral Lock Ring Fitting",
+    es: "Conector Luer macho con anillo de bloqueo integrado",
+    fr: "Raccord Luer mâle à bague de verrouillage intégrée",
+    ko: "일체형 잠금 링 수 루어 피팅",
+    ru: "Цельный штекерный фитинг Люэра со стопорным кольцом",
   },
 
   "LS 母鲁尔": {
     zh: "LS 母鲁尔",
     en: "Female Luer Integral Fitting",
+    es: "Conector Luer hembra integrado",
+    fr: "Raccord Luer femelle monobloc",
+    ko: "일체형 암 루어 피팅",
+    ru: "Цельный гнездовой фитинг Люэра",
   },
 
   "PMLS 穿板母鲁尔": {
     zh: "PMLS 穿板母鲁尔",
     en: "Female Luer Panel Mount Fitting",
+    es: "Conector Luer hembra para montaje en panel",
+    fr: "Raccord Luer femelle traversant",
+    ko: "패널 장착형 암 루어 피팅",
+    ru: "Панельный гнездовой фитинг Люэра",
   },
 
   "LCR 色环": {
     zh: "LCR 色环",
     en: "Color Coding Ring",
+    es: "Anillo de codificación por colores",
+    fr: "Bague de codage couleur",
+    ko: "색상 식별 링",
+    ru: "Цветовое маркировочное кольцо",
   },
 
   "LPT 内螺纹套": {
     zh: "LPT 内螺纹套",
     en: "Luer Lock Ring",
+    es: "Anillo de bloqueo Luer",
+    fr: "Bague de verrouillage Luer",
+    ko: "루어 잠금 링",
+    ru: "Стопорное кольцо Люэра",
   },
 
   "LNS 滚花螺母": {
     zh: "LNS 滚花螺母",
     en: "Panel Mount Lock Nut",
+    es: "Tuerca de bloqueo para montaje en panel",
+    fr: "Écrou de blocage pour montage sur panneau",
+    ko: "패널 장착용 잠금 너트",
+    ru: "Панельная стопорная гайка",
   },
 
   "N - 本色": {
@@ -557,21 +645,37 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
   "二通": {
     zh: "二通",
     en: "2-Way",
+    es: "2 vías",
+    fr: "2 voies",
+    ko: "2방향",
+    ru: "2-ходовой",
   },
 
   "三通": {
     zh: "三通",
     en: "3-Way",
+    es: "3 vías",
+    fr: "3 voies",
+    ko: "3방향",
+    ru: "3-ходовой",
   },
 
   "穿板倒刺接头": {
     zh: "穿板倒刺接头",
     en: "Bulkhead Barbed Fitting",
+    es: "Racor de espiga pasamuros",
+    fr: "Raccord cannelé traversant",
+    ko: "벌크헤드 바브 피팅",
+    ru: "Проходной штуцер",
   },
 
   "六角螺母": {
     zh: "六角螺母",
     en: "Hex Nut",
+    es: "Tuerca hexagonal",
+    fr: "Écrou hexagonal",
+    ko: "육각 너트",
+    ru: "Шестигранная гайка",
   },
 
   "过滤器与单向阀": {
@@ -586,11 +690,19 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
   "过滤器": {
     zh: "过滤器",
     en: "Filters",
+    es: "Filtros",
+    fr: "Filtres",
+    ko: "필터",
+    ru: "Фильтры",
   },
 
   "单向阀": {
     zh: "单向阀",
     en: "Check Valves",
+    es: "Válvulas de retención",
+    fr: "Clapets anti-retour",
+    ko: "체크 밸브",
+    ru: "Обратные клапаны",
   },
 
 };

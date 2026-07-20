@@ -188,10 +188,10 @@ export const homeI18n: Record<LocaleCode, HomeText> = {
   },
 
   en: {
-    heroTitleLine1: "Core Components for Microfluidic Systems",
-    heroTitleLine2: "Fluidic System Solution Provider",
+    heroTitleLine1: "Microfluidic Components",
+    heroTitleLine2: "& Fluidic Solutions",
     heroSubtitle:
-      "Focused on pumps, valves, sensors, tubing, fittings, sampling probes, and drive control modules, FOREACH provides system-level fluid control support for IVD, life sciences, high-end analytical instruments, synthetic biology, and laboratory automation.",
+      "Precision fluid control components and system support for diagnostics, life science and laboratory automation.",
     productButton: "View Products",
     contactButton: "Contact Support",
     testTitle: "From Core Components to Fluidic Systems",
@@ -200,10 +200,10 @@ export const homeI18n: Record<LocaleCode, HomeText> = {
   },
 
   es: {
-    heroTitleLine1: "Componentes clave para sistemas microfluídicos",
-    heroTitleLine2: "Proveedor de soluciones fluídicas",
+    heroTitleLine1: "Componentes y soluciones",
+    heroTitleLine2: "microfluídicas",
     heroSubtitle:
-      "FOREACH se centra en bombas, válvulas, sensores, tubos, conectores, agujas de muestreo y módulos de control, proporcionando soporte fluídico a nivel de sistema para IVD, ciencias de la vida, instrumentos analíticos avanzados, biología sintética y automatización de laboratorios.",
+      "Control de fluidos y soporte de sistemas para diagnóstico, ciencias de la vida y automatización de laboratorio.",
     productButton: "Ver productos",
     contactButton: "Contactar soporte",
     testTitle: "De componentes clave a sistemas fluídicos",
@@ -212,10 +212,10 @@ export const homeI18n: Record<LocaleCode, HomeText> = {
   },
 
   fr: {
-    heroTitleLine1: "Composants clés pour systèmes microfluidiques",
-    heroTitleLine2: "Fournisseur de solutions fluidiques",
+    heroTitleLine1: "Composants et solutions",
+    heroTitleLine2: "microfluidiques",
     heroSubtitle:
-      "FOREACH se concentre sur les pompes, vannes, capteurs, tubes, raccords, aiguilles de prélèvement et modules de contrôle, afin de fournir un support fluidique au niveau système pour l’IVD, les sciences de la vie, les instruments d’analyse avancés, la biologie synthétique et l’automatisation de laboratoire.",
+      "Contrôle précis des fluides et support système pour le diagnostic, les sciences de la vie et l’automatisation de laboratoire.",
     productButton: "Voir les produits",
     contactButton: "Contacter le support",
     testTitle: "Des composants clés aux systèmes fluidiques",
@@ -224,10 +224,10 @@ export const homeI18n: Record<LocaleCode, HomeText> = {
   },
 
   ko: {
-    heroTitleLine1: "마이크로플루이딕 시스템 핵심 부품",
-    heroTitleLine2: "유체 시스템 솔루션 공급업체",
+    heroTitleLine1: "미세유체 부품 및",
+    heroTitleLine2: "유체 솔루션",
     heroSubtitle:
-      "FOREACH는 펌프, 밸브, 센서, 튜빙, 피팅, 샘플링 프로브 및 구동 제어 모듈을 중심으로 IVD, 생명과학, 고급 분석 장비, 합성생물학 및 실험실 자동화를 위한 시스템 수준의 유체 제어 지원을 제공합니다.",
+      "진단, 생명과학 및 실험실 자동화를 위한 정밀 유체 제어 부품과 시스템 지원을 제공합니다.",
     productButton: "제품 보기",
     contactButton: "기술 지원 문의",
     testTitle: "핵심 부품에서 유체 시스템까지",
@@ -236,10 +236,10 @@ export const homeI18n: Record<LocaleCode, HomeText> = {
   },
 
   ru: {
-    heroTitleLine1: "Ключевые компоненты для микрофлюидных систем",
-    heroTitleLine2: "Поставщик решений для жидкостных систем",
+    heroTitleLine1: "Компоненты и решения",
+    heroTitleLine2: "для микрофлюидики",
     heroSubtitle:
-      "FOREACH специализируется на насосах, клапанах, датчиках, трубках, соединителях, пробоотборных иглах и модулях управления, предоставляя системную поддержку управления жидкостями для IVD, наук о жизни, высокоточных аналитических приборов, синтетической биологии и лабораторной автоматизации.",
+      "Компоненты управления жидкостями и системная поддержка для диагностики, наук о жизни и лабораторной автоматизации.",
     productButton: "Смотреть продукцию",
     contactButton: "Связаться с поддержкой",
     testTitle: "От ключевых компонентов к жидкостным системам",

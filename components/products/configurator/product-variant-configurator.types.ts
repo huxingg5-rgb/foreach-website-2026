@@ -2,6 +2,14 @@ export type ProductConfiguratorValue =
   | string
   | number;
 
+export type ProductConfiguratorLocale =
+  | "zh"
+  | "en"
+  | "es"
+  | "fr"
+  | "ko"
+  | "ru";
+
 export type ProductConfiguratorSelection =
   Record<string, ProductConfiguratorValue>;
 
@@ -98,6 +106,7 @@ export type ProductConfiguratorConfig = {
 export type ProductVariantConfiguratorProps = {
   open: boolean;
   config: ProductConfiguratorConfig;
+  locale?: ProductConfiguratorLocale;
   value?: ProductConfiguratorVariant | null;
   onClose: () => void;
   onConfirm: (

@@ -1021,3 +1021,30 @@
 }
 /* COMPATIBLE_MODEL_FULL_WIDTH_SEARCH_END */
 
+/* =========================================================
+   接头兼容型号查询页面｜删除 Banner 下方多余 24px 空白
+
+   说明：
+   1. 原 .frp-main 使用 padding: 24px 0 110px
+   2. 顶部 24px 会在 Banner 与面包屑之间形成多余空白
+   3. 只限制在 .fitting-replacement-page，避免影响其他复用页面
+========================================================= */
+/* FITTING_REPLACEMENT_REMOVE_TOP_GAP_START */
+.fitting-replacement-page .frp-main {
+  padding-top: 0;
+}
+/* FITTING_REPLACEMENT_REMOVE_TOP_GAP_END */
+
+/* =========================================================
+   接头兼容型号查询页面｜兼容产品区域顶部增加 24px 空白
+
+   说明：
+   1. 搜索区域结束后增加一段清晰的白色留白
+   2. “兼容产品”标题整体向下移动 24px
+   3. 只作用于接头兼容型号查询页面
+========================================================= */
+/* FITTING_REPLACEMENT_CARD_SECTION_TOP_GAP_START */
+.fitting-replacement-page .frp-card-section {
+  padding-top: 24px;
+}
+/* FITTING_REPLACEMENT_CARD_SECTION_TOP_GAP_END */
