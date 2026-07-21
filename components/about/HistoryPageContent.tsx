@@ -40,7 +40,7 @@ type HistoryPageContentProps = {
    2. 后续如果改成 webp，只需要改这里
 ================================ */
 const historyBanner = {
-  image: "/images/about/history/history-banner.jpg",
+  image: "/images/about/about-banner-desktop.webp",
 };
 
 /* ================================
@@ -145,7 +145,18 @@ export default function HistoryPageContent({
             "--history-bottom-banner-image": `url("${historyBottomBanner.image}")`,
           } as CSSProperties
         }
-      />
+      >
+        <p
+          className="about-history-bottom-slogan"
+          aria-label="MAKE FLOW EASY"
+        >
+          <span>MAKE</span>
+          <span className="about-history-bottom-slogan-flow">
+            FLOW
+          </span>
+          <span>EASY</span>
+        </p>
+      </section>
     </main>
   );
 }

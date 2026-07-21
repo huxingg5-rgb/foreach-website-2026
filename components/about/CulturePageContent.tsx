@@ -109,6 +109,12 @@ export default function CulturePageContent({ locale }: CulturePageContentProps) 
         className="about-culture-banner"
         aria-label={getCultureText(aboutCulturePageText.bannerTitle, locale)}
       >
+      {/* 恒永达文化 Banner 真实背景图 */}
+      <div
+        className="about-culture-banner-photo"
+        aria-hidden="true"
+      />
+
         <div className="about-culture-container about-culture-banner-inner">
           <h1>{getCultureText(aboutCulturePageText.bannerTitle, locale)}</h1>
           <p>{getCultureText(aboutCulturePageText.bannerDesc, locale)}</p>

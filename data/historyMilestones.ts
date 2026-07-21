@@ -212,7 +212,7 @@ const historyMilestoneSources: HistoryMilestoneSource[] = [
   {
     id: "2025",
     year: 2025,
-    image: "/images/about/history/history-2025.jpg",
+    image: "/images/about/history/history-2025-certificate-clean.webp",
     imageAlt: t(
       "恒永达 2025 年发展历程配图",
       "FOREACH 2025 milestone image",
@@ -245,7 +245,7 @@ const historyMilestoneSources: HistoryMilestoneSource[] = [
   {
     id: "2024",
     year: 2024,
-    image: "/images/about/history/history-2024.jpg",
+    image: "/images/about/history/history-2024-certificate-clean.webp",
     imageAlt: t(
       "恒永达 2024 年发展历程配图",
       "FOREACH 2024 milestone image",
@@ -294,7 +294,7 @@ const historyMilestoneSources: HistoryMilestoneSource[] = [
   {
     id: "2023",
     year: 2023,
-    image: "/images/about/history/history-2023.jpg",
+    image: "",
     imageAlt: t(
       "恒永达 2023 年发展历程配图",
       "FOREACH 2023 milestone image",
@@ -343,7 +343,7 @@ const historyMilestoneSources: HistoryMilestoneSource[] = [
   {
     id: "2022",
     year: 2022,
-    image: "/images/about/history/history-2022.jpg",
+    image: "",
     imageAlt: t(
       "恒永达 2022 年发展历程配图",
       "FOREACH 2022 milestone image",
@@ -392,7 +392,7 @@ const historyMilestoneSources: HistoryMilestoneSource[] = [
   {
     id: "2020",
     year: 2020,
-    image: "/images/about/history/history-2020.jpg",
+    image: "",
     imageAlt: t(
       "恒永达 2020 年发展历程配图",
       "FOREACH 2020 milestone image",
@@ -441,7 +441,7 @@ const historyMilestoneSources: HistoryMilestoneSource[] = [
   {
     id: "2019",
     year: 2019,
-    image: "/images/about/history/history-2019.jpg",
+    image: "",
     imageAlt: t(
       "恒永达 2019 年发展历程配图",
       "FOREACH 2019 milestone image",
@@ -482,7 +482,7 @@ const historyMilestoneSources: HistoryMilestoneSource[] = [
   {
     id: "2018",
     year: 2018,
-    image: "/images/about/history/history-2018.jpg",
+    image: "",
     imageAlt: t(
       "恒永达 2018 年发展历程配图",
       "FOREACH 2018 milestone image",
@@ -523,7 +523,7 @@ const historyMilestoneSources: HistoryMilestoneSource[] = [
   {
     id: "2017",
     year: 2017,
-    image: "/images/about/history/history-2017.jpg",
+    image: "",
     imageAlt: t(
       "恒永达 2017 年发展历程配图",
       "FOREACH 2017 milestone image",
@@ -572,7 +572,7 @@ const historyMilestoneSources: HistoryMilestoneSource[] = [
   {
     id: "2016",
     year: 2016,
-    image: "/images/about/history/history-2016.jpg",
+    image: "/images/about/history/history-2016-certificate-clean.webp",
     imageAlt: t(
       "恒永达 2016 年发展历程配图",
       "FOREACH 2016 milestone image",
@@ -621,7 +621,7 @@ const historyMilestoneSources: HistoryMilestoneSource[] = [
   {
     id: "2015",
     year: 2015,
-    image: "/images/about/history/history-2015.jpg",
+    image: "",
     imageAlt: t(
       "恒永达 2015 年发展历程配图",
       "FOREACH 2015 milestone image",
@@ -662,7 +662,7 @@ const historyMilestoneSources: HistoryMilestoneSource[] = [
   {
     id: "2014",
     year: 2014,
-    image: "/images/about/history/history-2014.jpg",
+    image: "",
     imageAlt: t(
       "恒永达 2014 年发展历程配图",
       "FOREACH 2014 milestone image",
@@ -687,7 +687,7 @@ const historyMilestoneSources: HistoryMilestoneSource[] = [
   {
     id: "2013",
     year: 2013,
-    image: "/images/about/history/history-2013.jpg",
+    image: "",
     imageAlt: t(
       "恒永达 2013 年发展历程配图",
       "FOREACH 2013 milestone image",
@@ -712,7 +712,7 @@ const historyMilestoneSources: HistoryMilestoneSource[] = [
   {
     id: "2012",
     year: 2012,
-    image: "/images/about/history/history-2012.jpg",
+    image: "",
     imageAlt: t(
       "恒永达 2012 年发展历程配图",
       "FOREACH 2012 milestone image",

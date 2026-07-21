@@ -11,7 +11,7 @@ public/images/about/history/history-2026.jpg
 {
   id: "2026",
   year: 2026,
-  image: "/images/about/history/history-2026.jpg",
+  image: "",
   imageAlt: "恒永达 2026 年发展历程配图",
   imageSide: "left",
   events: [
@@ -140,29 +140,31 @@ export default function HistoryTimeline({
    4. aspect-ratio 保证图片不变形
 ========================================================= */
 function renderImage(item: HistoryMilestone) {
+  /*
+   * 图片为空时不生成图片区。
+   * 证书和荣誉图片使用真实 img，
+   * 通过 object-fit: contain 保证完整显示。
+   */
+  if (!item.image) {
+    return null;
+  }
+
   return (
-    <div
-      className="about-history-image"
-      role="img"
-      aria-label={item.imageAlt}
-      style={{
-        backgroundImage: `
-          linear-gradient(rgba(23, 51, 104, 0.08), rgba(23, 51, 104, 0.08)),
-          url("${item.image}"),
-          linear-gradient(135deg, #dce7f5 0%, #8ea9c8 100%)
-        `,
-      }}
-    />
+    <div className="about-history-image">
+      <img
+        src={item.image}
+        alt={item.imageAlt}
+        loading="lazy"
+        decoding="async"
+        draggable={false}
+        className="about-history-image-file"
+      />
+    </div>
   );
 }
 
 /* =========================================================
    渲染文字区域
-   说明：
-   1. 年份为主标题
-   2. 多条事件直接分行展示
-   3. 不使用 1、2、3
-   4. 不使用项目符号
 ========================================================= */
 function renderText(item: HistoryMilestone, locale: string) {
   return (

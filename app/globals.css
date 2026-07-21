@@ -18902,3 +18902,425 @@ html body .home-honor-image img {
 }
 
 /* HOME_HERO_2K_I18N_LAYOUT_END */
+
+/* ABOUT_CULTURE_REAL_BANNER_START */
+
+/* =========================================================
+   恒永达文化 Banner 真实图片层
+
+   图片：
+   /images/about/about-banner-desktop.webp
+========================================================= */
+
+.about-culture-banner {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+
+  /* 清除原来的抽象渐变背景 */
+  background: #173368 !important;
+  background-image: none !important;
+}
+
+/* 清除原 Banner 伪元素中的网格、圆形和渐变 */
+.about-culture-banner::before,
+.about-culture-banner::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  background-image: none !important;
+}
+
+/* 新增的真实 Banner 图片层 */
+.about-culture-banner-photo {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  display: block !important;
+  pointer-events: none !important;
+
+  background-color: #173368 !important;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(12, 35, 78, 0.80) 0%,
+      rgba(12, 35, 78, 0.62) 36%,
+      rgba(12, 35, 78, 0.28) 67%,
+      rgba(12, 35, 78, 0.10) 100%
+    ),
+    url("/images/about/about-banner-desktop.webp") !important;
+
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Banner 文案必须显示在图片上方 */
+.about-culture-banner-inner {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* 隐藏原 Banner 内可能存在的网格和几何装饰 */
+.about-culture-banner > [class*="grid"],
+.about-culture-banner > [class*="circle"],
+.about-culture-banner > [class*="pattern"],
+.about-culture-banner > [class*="graphic"],
+.about-culture-banner > [class*="geometry"],
+.about-culture-banner > [class*="decoration"],
+.about-culture-banner > [class*="decor"] {
+  display: none !important;
+}
+
+/* 手机端保持文字清晰 */
+@media (max-width: 767px) {
+  .about-culture-banner-photo {
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(12, 35, 78, 0.84) 0%,
+        rgba(12, 35, 78, 0.68) 60%,
+        rgba(12, 35, 78, 0.42) 100%
+      ),
+      url("/images/about/about-banner-desktop.webp") !important;
+
+    background-position: center center !important;
+  }
+}
+
+/* ABOUT_CULTURE_REAL_BANNER_END */
+
+/* HISTORY_TIMELINE_EMPTY_IMAGE_STYLE_START */
+
+/* =========================================================
+   发展历程没有图片时：
+   1. 不保留蓝色图片区
+   2. 收紧该年份上下高度
+========================================================= */
+
+.about-history-row:has(
+  > .about-history-col:empty
+) {
+  min-height: 220px;
+}
+
+.about-history-row
+  > .about-history-col:empty {
+  min-height: 0;
+}
+
+@media (max-width: 860px) {
+  .about-history-row:has(
+    > .about-history-col:empty
+  ) {
+    min-height: auto;
+  }
+}
+
+/* HISTORY_TIMELINE_EMPTY_IMAGE_STYLE_END */
+
+/* HISTORY_TIMELINE_REAL_IMAGE_START */
+
+/* =========================================================
+   发展历程真实图片显示规则
+
+   1. 图片完整显示
+   2. 不裁切
+   3. 不拉伸
+   4. 不使用背景图
+========================================================= */
+
+.about-history-image {
+  position: relative;
+  z-index: 2;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9;
+
+  overflow: hidden;
+  background: #ffffff !important;
+  background-image: none !important;
+}
+
+/* 真实证书或荣誉图片 */
+.about-history-image-file {
+  display: block !important;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  max-width: 100% !important;
+  max-height: 100% !important;
+
+  object-fit: contain !important;
+  object-position: center center !important;
+
+  background: #ffffff;
+}
+
+/* 防止全局 img 样式把图片重新改成 cover */
+.about-history-image > img.about-history-image-file {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+/*
+ * 关闭图片悬停放大。
+ * 放大时虽然图片本身没有裁切，
+ * 但视觉上会产生边缘被截掉的感觉。
+ */
+.about-history-row.is-visible
+  .about-history-image:hover,
+.about-history-row.is-visible:has(.about-history-text:hover)
+  .about-history-image {
+  transform: translate3d(0, 0, 0) scale(1) !important;
+  filter: none !important;
+}
+
+/* 平板和手机端同样完整显示 */
+@media (max-width: 860px) {
+  .about-history-image {
+    aspect-ratio: 16 / 10;
+  }
+
+  .about-history-image-file {
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+}
+
+/* HISTORY_TIMELINE_REAL_IMAGE_END */
+
+/* HISTORY_TIMELINE_REMOVE_IMAGE_WHITESPACE_START */
+
+/* =========================================================
+   发展历程证书图片取消固定 16:9 留白
+
+   容器高度跟随图片真实比例，
+   因此不会裁切，也不会产生上下或左右白色空白。
+========================================================= */
+
+.about-history-image,
+.about-history-row--reverse .about-history-image {
+  display: block !important;
+
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+
+  /* 取消旧样式中的固定 16:9 */
+  aspect-ratio: auto !important;
+
+  /* 取消白色容器背景 */
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+
+  overflow: visible !important;
+}
+
+/* 图片按照自身比例完整显示 */
+.about-history-image > img.about-history-image-file,
+.about-history-image-file {
+  display: block !important;
+
+  width: 100% !important;
+  height: auto !important;
+
+  max-width: 100% !important;
+  max-height: none !important;
+
+  object-fit: contain !important;
+  object-position: center center !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  background: transparent !important;
+}
+
+/* 手机端也不再恢复固定比例 */
+@media (max-width: 860px) {
+  .about-history-image,
+  .about-history-row--reverse .about-history-image {
+    height: auto !important;
+    aspect-ratio: auto !important;
+  }
+
+  .about-history-image-file {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+/* HISTORY_TIMELINE_REMOVE_IMAGE_WHITESPACE_END */
+
+/* HISTORY_CERTIFICATE_TRANSPARENT_CANVAS_START */
+
+/* 发展历程证书图片按真实比例显示，不添加白色容器 */
+.about-history-image,
+.about-history-row--reverse .about-history-image {
+  display: block !important;
+
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+
+  aspect-ratio: auto !important;
+
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+
+  overflow: visible !important;
+}
+
+.about-history-image
+  > img.about-history-image-file {
+  display: block !important;
+
+  width: 100% !important;
+  height: auto !important;
+
+  max-width: 100% !important;
+  max-height: none !important;
+
+  object-fit: contain !important;
+  object-position: center center !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  background: transparent !important;
+}
+
+/* HISTORY_CERTIFICATE_TRANSPARENT_CANVAS_END */
+
+/* HISTORY_BOTTOM_MAKE_FLOW_EASY_START */
+
+/* =========================================================
+   发展历程底部品牌文案
+
+   MAKE：白色
+   FLOW：品牌荧光色
+   EASY：白色
+========================================================= */
+
+.about-history-bottom-banner {
+  position: relative !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  width: 100% !important;
+  height: 460px !important;
+  margin: 72px auto 0 !important;
+
+  /*
+   * 底部只保留深蓝背景和品牌文案，
+   * 不再显示原来的背景图片。
+   */
+  background:
+    linear-gradient(
+      135deg,
+      #071b3a 0%,
+      #173368 100%
+    ) !important;
+
+  overflow: hidden;
+}
+
+/* 唯一文案 */
+.about-history-bottom-slogan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.28em;
+
+  margin: 0;
+  padding: 0 24px;
+
+  color: #ffffff;
+
+  font-size: clamp(
+    64px,
+    6.2vw,
+    112px
+  );
+
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* FLOW 使用品牌荧光色 */
+.about-history-bottom-slogan-flow {
+  color: #09e9b4;
+}
+
+/* 手机端 */
+@media (max-width: 860px) {
+  .about-history-bottom-banner {
+    height: 260px !important;
+    margin-top: 48px !important;
+  }
+
+  .about-history-bottom-slogan {
+    gap: 0.22em;
+    padding: 0 16px;
+
+    font-size: clamp(
+      34px,
+      9vw,
+      58px
+    );
+
+    letter-spacing: 0.02em;
+  }
+}
+
+/* HISTORY_BOTTOM_MAKE_FLOW_EASY_END */
+
+/* HISTORY_BOTTOM_SLOGAN_SIZE_START */
+
+/* 桌面端：缩小 MAKE FLOW EASY */
+.about-history-bottom-slogan {
+  gap: 0.22em !important;
+
+  font-size: clamp(
+    42px,
+    3.8vw,
+    68px
+  ) !important;
+
+  font-weight: 700;
+  letter-spacing: 0.035em !important;
+}
+
+/* 手机端 */
+@media (max-width: 860px) {
+  .about-history-bottom-slogan {
+    gap: 0.18em !important;
+
+    font-size: clamp(
+      28px,
+      7vw,
+      42px
+    ) !important;
+
+    letter-spacing: 0.02em !important;
+  }
+}
+
+/* HISTORY_BOTTOM_SLOGAN_SIZE_END */
