@@ -1,0 +1,13 @@
+图片放置说明
+
+页面：TPU 管
+路由：/products/tubing/tpu-tubing
+
+请把主图放到：
+public/images/products/tubing/tpu-tubing/tpu-tubing-main.webp
+
+可选角度图：
+public/images/products/tubing/tpu-tubing/tpu-tubing-view-02.webp
+public/images/products/tubing/tpu-tubing/tpu-tubing-view-03.webp
+public/images/products/tubing/tpu-tubing/tpu-tubing-view-04.webp
+public/images/products/tubing/tpu-tubing/tpu-tubing-view-05.webp

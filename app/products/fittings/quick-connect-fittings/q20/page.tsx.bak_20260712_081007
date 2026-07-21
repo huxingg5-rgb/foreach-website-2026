@@ -1,0 +1,572 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+
+import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
+import quickConnectRowsJson from "@/data/products/generated/fittings/quick-connect-fittings/index.json";
+
+type QuickConnectRow = {
+  sourceType?: string;
+  productId?: string;
+  productType?: string;
+  series?: string;
+  foreachModel?: string;
+  productCode?: string;
+  modelSeries?: string;
+  tubeOrThread?: string;
+  gender?: string;
+  panelMount?: string;
+  valved?: string;
+  shape?: string;
+  housingMaterial?: string;
+  sealingRingMaterial?: string;
+  hasDrawing2d?: boolean;
+  hasModel3d?: boolean;
+};
+
+const allRows =
+  quickConnectRowsJson as QuickConnectRow[];
+
+const q20Rows =
+  allRows.filter(
+    (item) =>
+      String(
+        item.series ||
+        item.modelSeries ||
+        ""
+      )
+        .trim()
+        .toUpperCase() ===
+      "Q20"
+  );
+
+function uniqueValues(
+  values: Array<
+    string | undefined
+  >
+) {
+  return Array.from(
+    new Set(
+      values
+        .map(
+          (value) =>
+            String(
+              value || ""
+            ).trim()
+        )
+        .filter(Boolean)
+    )
+  );
+}
+
+function normalizeConnection(
+  value: string
+) {
+  const text =
+    String(
+      value || ""
+    ).trim();
+
+  const metricMatch =
+    text.match(
+      /[（(]\s*(\d+(?:\.\d+)?)\s*mm\s*[）)]/i
+    );
+
+  if (
+    metricMatch
+  ) {
+    return (
+      metricMatch[1] +
+      " mm"
+    );
+  }
+
+  return text;
+}
+
+function sortConnections(
+  values: string[]
+) {
+  return [
+    ...values,
+  ].sort(
+    (
+      left,
+      right
+    ) => {
+      const leftMetric =
+        left.match(
+          /^(\d+(?:\.\d+)?)\s*mm$/i
+        );
+
+      const rightMetric =
+        right.match(
+          /^(\d+(?:\.\d+)?)\s*mm$/i
+        );
+
+      if (
+        leftMetric &&
+        rightMetric
+      ) {
+        return (
+          Number(
+            leftMetric[1]
+          ) -
+          Number(
+            rightMetric[1]
+          )
+        );
+      }
+
+      if (
+        leftMetric
+      ) {
+        return -1;
+      }
+
+      if (
+        rightMetric
+      ) {
+        return 1;
+      }
+
+      return left.localeCompare(
+        right,
+        "zh-CN"
+      );
+    }
+  );
+}
+
+function joinValues(
+  values: string[]
+) {
+  return values.length
+    ? values.join("、")
+    : "以具体型号为准";
+}
+
+const connections =
+  sortConnections(
+    uniqueValues(
+      q20Rows.map(
+        (item) =>
+          normalizeConnection(
+            item.tubeOrThread ||
+            ""
+          )
+      )
+    )
+  );
+
+const genders =
+  uniqueValues(
+    q20Rows.map(
+      (item) =>
+        item.gender
+    )
+  );
+
+const panelMounts =
+  uniqueValues(
+    q20Rows.map(
+      (item) =>
+        item.panelMount
+    )
+  );
+
+const valveOptions =
+  uniqueValues(
+    q20Rows.map(
+      (item) =>
+        item.valved
+    )
+  );
+
+const shapes =
+  uniqueValues(
+    q20Rows.map(
+      (item) =>
+        item.shape
+    )
+  );
+
+const housingMaterials =
+  uniqueValues(
+    q20Rows.map(
+      (item) =>
+        item.housingMaterial
+    )
+  );
+
+const sealMaterials =
+  uniqueValues(
+    q20Rows.map(
+      (item) =>
+        item.sealingRingMaterial
+    )
+  );
+
+const drawingCount =
+  q20Rows.filter(
+    (item) =>
+      item.hasDrawing2d
+  ).length;
+
+const model3dCount =
+  q20Rows.filter(
+    (item) =>
+      item.hasModel3d
+  ).length;
+
+const q20Images = [
+  "/images/resources/selection-support/fitting-replacement/q20/products/Q2001-PMV-SACN.webp",
+  "/images/resources/selection-support/fitting-replacement/q20/products/Q2002-PNV-LACN.webp",
+  "/images/resources/selection-support/fitting-replacement/q20/products/Q2003-SNV-SACN.webp",
+  "/images/resources/selection-support/fitting-replacement/q20/products/Q2018N-PNV-SACN.webp",
+];
+
+const selectionHref =
+  "/products/fittings/quick-connect-fittings";
+
+const detailHref =
+  "/products/fittings/quick-connect-fittings/q20";
+
+const specs = [
+  {
+    label:
+      "在售型号数量",
+    value:
+      `${q20Rows.length}个`,
+  },
+  {
+    label:
+      "接管内径或螺纹",
+    value:
+      joinValues(
+        connections
+      ),
+  },
+  {
+    label:
+      "公母端",
+    value:
+      joinValues(
+        genders
+      ),
+  },
+  {
+    label:
+      "安装方式",
+    value:
+      joinValues(
+        panelMounts
+      ),
+  },
+  {
+    label:
+      "阀门配置",
+    value:
+      joinValues(
+        valveOptions
+      ),
+  },
+  {
+    label:
+      "形状",
+    value:
+      joinValues(
+        shapes
+      ),
+  },
+  {
+    label:
+      "外壳材质",
+    value:
+      joinValues(
+        housingMaterials
+      ),
+  },
+  {
+    label:
+      "密封圈材质",
+    value:
+      joinValues(
+        sealMaterials
+      ),
+  },
+  {
+    label:
+      "二维图纸",
+    value:
+      `${drawingCount}个型号已配置`,
+  },
+  {
+    label:
+      "三维模型",
+    value:
+      `${model3dCount}个型号已配置`,
+  },
+];
+
+const faqs = [
+  {
+    question:
+      "Q20系列目前有多少个在售型号？",
+    answer:
+      `当前在售清单共收录${q20Rows.length}个Q20快插接头型号，可根据接管内径或螺纹、公母端、安装方式、阀门配置、形状和外壳材质进行筛选。`,
+  },
+  {
+    question:
+      "Q20快插接头如何选择公端和母端？",
+    answer:
+      "公端与母端需要配套连接。选型时应先确认设备端和管路端所需的连接角色，再确定接口尺寸、阀门配置和安装方式。",
+  },
+  {
+    question:
+      "带阀和不带阀有什么区别？",
+    answer:
+      "带阀型号在接头断开时可关闭流路，适用于需要减少液体泄漏或空气进入的液路；不带阀型号结构更直接，应根据系统的断开方式和流路要求选择。",
+  },
+  {
+    question:
+      "穿板型号适合什么安装方式？",
+    answer:
+      "穿板型号适用于安装在设备面板、机壳或固定支架上；非穿板型号通常用于管路中的直接连接。",
+  },
+  {
+    question:
+      "Q20系列是否同时提供直通和L型结构？",
+    answer:
+      `当前在售型号包含${joinValues(
+        shapes
+      )}结构，具体可选组合以型号筛选结果为准。`,
+  },
+  {
+    question:
+      "如何获取具体型号的二维图或三维模型？",
+    answer:
+      "先在快插接头选型页面确定具体型号并加入清单，再提交图纸、三维模型或技术资料需求。不同型号的资料配置情况可能不同。",
+  },
+];
+
+const detailData = {
+  sourceType:
+    "quick-connect-series-detail",
+
+  category:
+    "fittings",
+
+  categoryId:
+    "fittings",
+
+  categoryLabel:
+    "接头系列",
+
+  productTypeId:
+    "quick-connect-fittings",
+
+  productTypeName:
+    "快插接头",
+
+  productTypeLabel:
+    "快插接头",
+
+  productId:
+    "quick-connect-q20",
+
+  productCode:
+    "Q20",
+
+  seriesId:
+    "q20",
+
+  seriesName:
+    "Q20",
+
+  slug:
+    "q20",
+
+  detailSlug:
+    "q20",
+
+  model:
+    "Q20 快插接头系列",
+
+  modelDisplay:
+    `Q20系列｜${q20Rows.length}个在售型号`,
+
+  displayModel:
+    `Q20系列｜${q20Rows.length}个在售型号`,
+
+  foreachModel:
+    "Q20",
+
+  name:
+    "Q20快插接头",
+
+  title:
+    "Q20 快插接头系列",
+
+  description:
+    `Q20快插接头系列目前包含${q20Rows.length}个在售型号，可组合接管或螺纹接口、公端或母端、带阀或不带阀、穿板或非穿板，以及直通或L型结构。用户可根据液路接口、设备安装空间和断开方式完成型号筛选。`,
+
+  advantages: [
+    `${q20Rows.length}个在售型号`,
+    "公端与母端可选",
+    "带阀与不带阀可选",
+    "直通与L型可选",
+  ],
+
+  commonApplications: [
+    "微流体液路",
+    "IVD设备",
+    "分析仪器",
+    "实验室自动化",
+  ],
+
+  mainImage:
+    q20Images[0],
+
+  image:
+    q20Images[0],
+
+  heroImage:
+    q20Images[0],
+
+  imageCard:
+    q20Images[0],
+
+  additionalImages:
+    q20Images.slice(
+      1
+    ),
+
+  imageAlt:
+    "Q20快插接头系列",
+
+  mainImageAlt:
+    "Q20快插接头系列",
+
+  detailMode:
+    "selection",
+
+  hideModelAction:
+    false,
+
+  showConfigurator:
+    true,
+
+  showDatasheetRequest:
+    false,
+
+  showDrawingRequest:
+    false,
+
+  show3DRequest:
+    false,
+
+  drawing2dUrl:
+    "",
+
+  drawingPdfUrl:
+    "",
+
+  model3dUrl:
+    "",
+
+  resources: {},
+
+  specSeriesKey:
+    "quick-connect-q20",
+
+  specs,
+
+  specifications:
+    specs,
+
+  faqs,
+
+  detailHref,
+
+  href:
+    detailHref,
+
+  selectionHref,
+
+  modelSelectionHref:
+    selectionHref,
+
+  breadcrumbs: [
+    {
+      label:
+        "首页",
+      href:
+        "/",
+    },
+    {
+      label:
+        "产品中心",
+      href:
+        "/products",
+    },
+    {
+      label:
+        "接头系列",
+      href:
+        "/products/fittings",
+    },
+    {
+      label:
+        "快插接头",
+      href:
+        selectionHref,
+    },
+    {
+      label:
+        "Q20系列",
+      href:
+        detailHref,
+    },
+  ],
+
+  seo: {
+    title:
+      "Q20 快插接头系列｜FOREACH 恒永达",
+
+    description:
+      `Q20快插接头系列共${q20Rows.length}个在售型号，支持不同接管内径或螺纹、公母端、阀门配置、安装方式、形状和外壳材质组合。`,
+  },
+
+  sectionTitleMap: {
+    spec:
+      "Q20系列选型范围",
+
+    faq:
+      "Q20快插接头常见问题",
+  },
+};
+
+export const metadata: Metadata = {
+  title:
+    "Q20 快插接头系列｜FOREACH 恒永达",
+
+  description:
+    `Q20快插接头系列共${q20Rows.length}个在售型号，支持接管或螺纹、公母端、带阀或不带阀、穿板或非穿板等组合。`,
+};
+
+export default function Q20QuickConnectDetailPage() {
+  if (
+    q20Rows.length ===
+    0
+  ) {
+    notFound();
+  }
+
+  return (
+    <ProductDetailClient
+      data={
+        detailData as any
+      }
+    />
+  );
+}

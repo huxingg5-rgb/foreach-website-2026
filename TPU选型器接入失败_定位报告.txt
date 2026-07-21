@@ -1,0 +1,1011 @@
+
+==================================================
+一、目标文件状态
+==================================================
+已找到：F:\WebsiteProjects\foreach-website-2026\components\products\detail\ProductDetailClient.tsx
+大小：62559 字节
+修改时间：07/17/2026 21:20:39
+
+已找到：F:\WebsiteProjects\foreach-website-2026\data\products\configurator\tpu-tubing.ts
+大小：9020 字节
+修改时间：07/17/2026 21:58:48
+
+
+==================================================
+二、TPU数据文件检查
+==================================================
+识别到商品编码数量：13
+通过：tpuTubingConfigurator
+通过：tpuTubingConfiguratorEn
+通过：TS2-TPU-T-25-40-30M
+通过：TS2-TPU-T-70-100-30M
+
+==================================================
+三、是否已经产生TPU部分接入代码
+==================================================
+没有找到匹配内容。
+
+==================================================
+四、现有PVC选型器关键结构
+==================================================
+
+----- 第 34-74 行 -----
+   34:   ProductVariantConfigurator,
+   35: } from "@/components/products/configurator";
+   36: 
+   37: import type {
+   38:   ProductConfiguratorVariant,
+   39: } from "@/components/products/configurator";
+   40: 
+   41: /* PVC_CONFIGURATOR_ENGLISH_START */
+   42: import {
+   43:   pvcTubingConfigurator,
+   44:   pvcTubingConfiguratorEn,
+   45: } from "@/data/products/configurator/pvc-tubing";
+   46: /* PVC_CONFIGURATOR_ENGLISH_END */
+   47: /* PVC_TUBING_CONFIGURATOR_INTEGRATION_END */
+   48: 
+   49: import styles from "./product-detail.module.css";
+   50: 
+   51: type ProductDetailTab = "spec" | "model3d" | "drawing";
+   52: 
+   53: type ProductDetailClientProps = {
+   54:   data: ProductDetailPageData & Record<string, any>;
+   55: };
+   56: 
+   57: type ZoomStyle = CSSProperties & {
+   58:   "--zoom-x"?: string;
+   59:   "--zoom-y"?: string;
+   60: };
+   61: 
+   62: function getProductDrawingPreviewUrl(slug: string, configuredUrl?: string) {
+   63:   const normalizedConfiguredUrl = configuredUrl?.trim();
+   64: 
+   65:   if (normalizedConfiguredUrl) {
+   66:     return normalizedConfiguredUrl.includes("#")
+   67:       ? normalizedConfiguredUrl
+   68:       : normalizedConfiguredUrl + "#toolbar=0&navpanes=0&scrollbar=1";
+   69:   }
+   70: 
+   71:   const normalizedSlug = slug.trim().toLowerCase();
+   72:   const match = normalizedSlug.match(/^(ea|sm|tm)-(\d+)/);
+   73: 
+   74:   if (!match) {
+
+----- 第 113-153 行 -----
+  113: ): boolean {
+  114:   const slug = String(
+  115:     data?.slug || ""
+  116:   )
+  117:     .trim()
+  118:     .toLowerCase();
+  119: 
+  120:   return (
+  121:     isTubingDetailData(data) &&
+  122:     slug === "pvc-tubing"
+  123:   );
+  124: }
+  125: /* PVC_TUBING_DETAIL_DETECT_END */
+  126: 
+  127: function isFittingDetailData(data: any): boolean {
+  128:   const categoryText = [
+  129:     data?.sourceType,
+  130:     data?.productCategory,
+  131:     data?.productType,
+  132:     data?.productTypeId,
+  133:     data?.productTypeName,
+  134:     data?.category,
+  135:     data?.categoryId,
+  136:     data?.categoryKey,
+  137:     data?.series,
+  138:     data?.seriesName,
+  139:     data?.detailMode,
+  140:     data?.slug,
+  141:     data?.href,
+  142:     data?.detailHref,
+  143:   ]
+  144:     .map((value) =>
+  145:       String(value || "").trim().toLowerCase()
+  146:     )
+  147:     .filter(Boolean)
+  148:     .join(" ");
+  149: 
+  150:   const model = String(
+  151:     data?.model ||
+  152:       data?.displayModel ||
+  153:       data?.modelDisplay ||
+
+----- 第 1014-1070 行 -----
+ 1014:   const [zoomPosition, setZoomPosition] = useState({
+ 1015:     x: 50,
+ 1016:     y: 50,
+ 1017:   });
+ 1018: 
+ 1019:   /* PVC_TUBING_CONFIGURATOR_STATE_START */
+ 1020:   const [
+ 1021:     isPvcConfiguratorOpen,
+ 1022:     setIsPvcConfiguratorOpen,
+ 1023:   ] = useState(false);
+ 1024: 
+ 1025:   const [
+ 1026:     selectedPvcVariant,
+ 1027:     setSelectedPvcVariant,
+ 1028:   ] =
+ 1029:     useState<ProductConfiguratorVariant | null>(
+ 1030:       null
+ 1031:     );
+ 1032: 
+ 1033:   const isPvcTubingDetail =
+ 1034:     isPvcTubingDetailData(data);
+ 1035: 
+ 1036:   /*
+ 1037:    * 第一阶段先接入中文PVC管详情页。
+ 1038:    * 避免英文页面暂时显示中文选型内容。
+ 1039:    */
+ 1040:   const isPvcTubingConfiguratorEnabled =
+ 1041:     isPvcTubingDetail;
+ 1042:   /* PVC_TUBING_CONFIGURATOR_STATE_END */
+ 1043: 
+ 1044:   const realImages = useMemo(() => {
+ 1045:     const images: string[] = [];
+ 1046: 
+ 1047:     if (data.mainImage) {
+ 1048:       images.push(data.mainImage);
+ 1049:     }
+ 1050: 
+ 1051:     data.additionalImages.forEach((image) => {
+ 1052:       if (image && !images.includes(image)) {
+ 1053:         images.push(image);
+ 1054:       }
+ 1055:     });
+ 1056: 
+ 1057:     return images;
+ 1058:   }, [data.additionalImages, data.mainImage]);
+ 1059: 
+ 1060:   const hasRealImages = realImages.length > 0;
+ 1061:   const activeRealImage = hasRealImages
+ 1062:     ? realImages[Math.min(activeThumb, realImages.length - 1)]
+ 1063:     : null;
+ 1064: 
+ 1065:   /*
+ 1066:    * 正式数据中：
+ 1067:    * 只有主图且没有附属图时，不显示缩略图栏。
+ 1068:    *
+ 1069:    * 当前测试数据尚未连接选型主图，因此保留 HTML 原型中的
+ 1070:    * 三个 SVG 缩略图，便于核对版式。
+
+----- 第 1116-1431 行 -----
+ 1116: 
+ 1117:   function handleNextThumb() {
+ 1118:     if (hasRealImages) {
+ 1119:       setActiveThumb((current) =>
+ 1120:         current === realImages.length - 1 ? 0 : current + 1,
+ 1121:       );
+ 1122:       return;
+ 1123:     }
+ 1124: 
+ 1125:     setActiveThumb((current) => (current === 2 ? 0 : current + 1));
+ 1126:   }
+ 1127: 
+ 1128:   const detailCartSourceType =
+ 1129:     isPvcTubingConfiguratorEnabled
+ 1130:       ? "tubing-selection"
+ 1131:       : "pump-selection";
+ 1132: 
+ 1133:   function getDetailCartProductCode() {
+ 1134:     if (
+ 1135:       isPvcTubingConfiguratorEnabled
+ 1136:     ) {
+ 1137:       return (
+ 1138:         selectedPvcVariant
+ 1139:           ?.productCode || ""
+ 1140:       );
+ 1141:     }
+ 1142: 
+ 1143:     return String(
+ 1144:       data.modelDisplay ||
+ 1145:         data.displayModel ||
+ 1146:         data.foreachModel ||
+ 1147:         data.model ||
+ 1148:         data.productCode ||
+ 1149:         data.slug ||
+ 1150:         ""
+ 1151:     ).trim();
+ 1152:   }
+ 1153: 
+ 1154:   function createDetailCartItem(
+ 1155:     needDrawing: boolean,
+ 1156:     pvcVariantOverride?: ProductConfiguratorVariant
+ 1157:   ): SelectionCartItemInput {
+ 1158:     const activePvcVariant =
+ 1159:       pvcVariantOverride ||
+ 1160:       selectedPvcVariant;
+ 1161: 
+ 1162:     const productCode =
+ 1163:       isPvcTubingConfiguratorEnabled
+ 1164:         ? activePvcVariant
+ 1165:             ?.productCode || ""
+ 1166:         : getDetailCartProductCode();
+ 1167: 
+ 1168:     const modelText =
+ 1169:       isPvcTubingConfiguratorEnabled
+ 1170:         ? activePvcVariant?.model ||
+ 1171:           ""
+ 1172:         : String(
+ 1173:             data.modelDisplay ||
+ 1174:               data.displayModel ||
+ 1175:               data.foreachModel ||
+ 1176:               data.model ||
+ 1177:               data.title ||
+ 1178:               productCode
+ 1179:           ).trim();
+ 1180: 
+ 1181:     const productName = isPlungerPumpDetailData(data)
+ 1182:       ? isEnglish
+ 1183:         ? "Plunger Pump"
+ 1184:         : "柱塞泵"
+ 1185:       : String(
+ 1186:           data.productTypeName ||
+ 1187:             data.productTypeLabel ||
+ 1188:             data.seriesName ||
+ 1189:             data.series ||
+ 1190:             (isDiaphragmPumpDetailData(data)
+ 1191:               ? isEnglish
+ 1192:                 ? "Diaphragm Pump"
+ 1193:                 : "隔膜泵"
+ 1194:               : isPipettingPumpDetailData(data)
+ 1195:                 ? isEnglish
+ 1196:                   ? "Pipetting Pump"
+ 1197:                   : "移液泵"
+ 1198:                 : isEnglish
+ 1199:                   ? "Product"
+ 1200:                   : "产品")
+ 1201:         ).trim();
+ 1202: 
+ 1203:     const resolvedProductName =
+ 1204:       isPvcTubingConfiguratorEnabled
+ 1205:         ? isEnglish
+ 1206:           ? "PVC Tubing"
+ 1207:           : "PVC 管"
+ 1208:         : productName;
+ 1209: 
+ 1210:     const fallbackDetailHref = data.slug
+ 1211:       ? isPlungerPumpDetailData(data)
+ 1212:         ? `/products/pumps/plunger-pumps/${data.slug}`
+ 1213:         : isDiaphragmPumpDetailData(data)
+ 1214:           ? `/products/pumps/diaphragm-pumps/${data.slug}`
+ 1215:           : isPipettingPumpDetailData(data)
+ 1216:             ? `/products/pumps/pipetting-pumps/${data.slug}`
+ 1217:             : isTubingDetailData(data)
+ 1218:               ? `/products/tubing/${data.slug}`
+ 1219:               : ""
+ 1220:       : "";
+ 1221: 
+ 1222:     return {
+ 1223:       sourceType:
+ 1224:         detailCartSourceType,
+ 1225:       sourceLabel: isEnglish ? "Product Detail Page" : "产品详情页",
+ 1226:       productName:
+ 1227:         resolvedProductName,
+ 1228:       productCode,
+ 1229:       foreachModel: modelText,
+ 1230:       competitorModels: [],
+ 1231:       quantity: 1,
+ 1232:       needDrawing,
+ 1233:       imagePath:
+ 1234:         data.imageCard ||
+ 1235:         data.image ||
+ 1236:         data.imageUrl ||
+ 1237:         data.mainImage ||
+ 1238:         data.heroImage ||
+ 1239:         "",
+ 1240:       detailHref:
+ 1241:         data.detailHref ||
+ 1242:         data.href ||
+ 1243:         (isEnglish && fallbackDetailHref
+ 1244:           ? `/en${fallbackDetailHref}`
+ 1245:           : fallbackDetailHref),
+ 1246:     };
+ 1247:   }
+ 1248: 
+ 1249:   
+ 1250:   const currentDetailCartItem =
+ 1251:     getItem(
+ 1252:       detailCartSourceType,
+ 1253:       getDetailCartProductCode()
+ 1254:     );
+ 1255:   const isDetailProductSelected = Boolean(currentDetailCartItem);
+ 1256:   const isDetailDrawingSelected = Boolean(currentDetailCartItem?.needDrawing);
+ 1257: 
+ 1258:   function handleOpenConfigurator() {
+ 1259:     console.info("配置选择端口预留", data.slug);
+ 1260:   }
+ 1261: 
+ 1262:   function handleAddDatasheet() {
+ 1263:     console.info("添加规格书端口预留", data.slug);
+ 1264:   }
+ 1265: 
+ 1266:   function handleAddDrawing() {
+ 1267:     const item = createDetailCartItem(true);
+ 1268: 
+ 1269:     if (!item.productCode || !item.foreachModel) {
+ 1270:       console.warn("详情页清单参数不完整", data);
+ 1271:       return;
+ 1272:     }
+ 1273: 
+ 1274:     const existingItem = getItem(
+ 1275:       detailCartSourceType,
+ 1276:       item.productCode
+ 1277:     );
+ 1278: 
+ 1279:     if (existingItem) {
+ 1280:       toggleDrawingNeed(existingItem.id, !existingItem.needDrawing);
+ 1281:       return;
+ 1282:     }
+ 1283: 
+ 1284:     addItem(item);
+ 1285:   }
+ 1286: 
+ 1287:   function handleRequest3DFile() {
+ 1288:     console.info("申请3D文件端口预留", data.slug);
+ 1289:   }
+ 1290: 
+ 1291:   function handleAddList() {
+ 1292:     const item = createDetailCartItem(false);
+ 1293: 
+ 1294:     if (!item.productCode || !item.foreachModel) {
+ 1295:       console.warn("详情页清单参数不完整", data);
+ 1296:       return;
+ 1297:     }
+ 1298: 
+ 1299:     const existingItem = getItem(
+ 1300:       detailCartSourceType,
+ 1301:       item.productCode
+ 1302:     );
+ 1303: 
+ 1304:     if (existingItem) {
+ 1305:       removeItem(existingItem.id);
+ 1306:       return;
+ 1307:     }
+ 1308: 
+ 1309:     addItem(item);
+ 1310:   }
+ 1311: 
+ 1312:   function isPvcVariantSelected(
+ 1313:     variant: ProductConfiguratorVariant
+ 1314:   ): boolean {
+ 1315:     return Boolean(
+ 1316:       getItem(
+ 1317:         "tubing-selection",
+ 1318:         variant.productCode
+ 1319:       )
+ 1320:     );
+ 1321:   }
+ 1322: 
+ 1323:   function handleTogglePvcVariant(
+ 1324:     variant: ProductConfiguratorVariant
+ 1325:   ) {
+ 1326:     const existingItem = getItem(
+ 1327:       "tubing-selection",
+ 1328:       variant.productCode
+ 1329:     );
+ 1330: 
+ 1331:     if (existingItem) {
+ 1332:       removeItem(existingItem.id);
+ 1333:       return;
+ 1334:     }
+ 1335: 
+ 1336:     const item = createDetailCartItem(
+ 1337:       false,
+ 1338:       variant
+ 1339:     );
+ 1340: 
+ 1341:     if (
+ 1342:       !item.productCode ||
+ 1343:       !item.foreachModel
+ 1344:     ) {
+ 1345:       console.warn(
+ 1346:         "PVC管清单参数不完整",
+ 1347:         variant
+ 1348:       );
+ 1349: 
+ 1350:       return;
+ 1351:     }
+ 1352: 
+ 1353:     addItem(item);
+ 1354:   }
+ 1355: 
+ 1356:   return (
+ 1357:     <div data-product-breadcrumb-shell="true">
+ 1358:       {structuredData ? (
+ 1359:         <script
+ 1360:           type="application/ld+json"
+ 1361:           dangerouslySetInnerHTML={{
+ 1362:             __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+ 1363:           }}
+ 1364:         />
+ 1365:       ) : null}
+ 1366: 
+ 1367:       {/* PVC_TUBING_CONFIGURATOR_RENDER_START */}
+ 1368:       {isPvcTubingConfiguratorEnabled ? (
+ 1369:         <ProductVariantConfigurator
+ 1370:           open={
+ 1371:             isPvcConfiguratorOpen
+ 1372:           }
+ 1373:           config={
+ 1374:             isEnglish
+ 1375:               ? pvcTubingConfiguratorEn
+ 1376:               : pvcTubingConfigurator
+ 1377:           }
+ 1378:           value={
+ 1379:             selectedPvcVariant
+ 1380:           }
+ 1381:           isVariantSelected={
+ 1382:             isPvcVariantSelected
+ 1383:           }
+ 1384:           onToggleVariant={
+ 1385:             handleTogglePvcVariant
+ 1386:           }
+ 1387:           onClose={() => {
+ 1388:             setIsPvcConfiguratorOpen(
+ 1389:               false
+ 1390:             );
+ 1391:           }}
+ 1392:           onConfirm={(variant) => {
+ 1393:             setSelectedPvcVariant(
+ 1394:               variant
+ 1395:             );
+ 1396: 
+ 1397:             setIsPvcConfiguratorOpen(
+ 1398:               false
+ 1399:             );
+ 1400:           }}
+ 1401:         />
+ 1402:       ) : null}
+ 1403:       {/* PVC_TUBING_CONFIGURATOR_RENDER_END */}
+ 1404: 
+ 1405: <SitePageShell
+ 1406:       breadcrumbAriaLabel={copy.breadcrumb}
+ 1407:       breadcrumbItems={[
+ 1408:         {
+ 1409:           label: copy.home,
+ 1410:           href: isEnglish ? "/en/" : "/",
+ 1411:         },
+ 1412:         {
+ 1413:           label: copy.products,
+ 1414:           href: isEnglish ? "/en/products/" : "/products/",
+ 1415:         },
+ 1416:         {
+ 1417:           label: data.model,
+ 1418:         },
+ 1419:       ]}
+ 1420:     >
+ 1421:       <main className={styles.page} data-product-detail-page="true">
+ 1422:       <div className={styles.container}>
+ 1423:         
+ 1424:         <section className={styles.productTop}>
+ 1425:           <div data-product-gallery="true" className={styles.gallery} aria-label={copy.gallery}>
+ 1426:             <div data-product-main-stage="true"
+ 1427:               className={[
+ 1428:                 styles.mainImage,
+ 1429:                 isZooming ? styles.isZooming : "",
+ 1430:               ]
+ 1431:                 .filter(Boolean)
+
+----- 第 1697-1838 行 -----
+ 1697:             </div>
+ 1698: 
+ 1699:             <div className={styles.operationArea}>
+ 1700:               <div data-product-model-row="true" className={styles.modelLine}>
+ 1701:                 <div className={styles.modelCodeWrap}>
+ 1702:                   <div className={styles.modelCodeText}>
+ 1703:                     <span className={styles.modelLabel}>{copy.model}</span>
+ 1704:                     <span
+ 1705:                       className={
+ 1706:                         styles.modelCode
+ 1707:                       }
+ 1708:                     >
+ 1709:                       {isPvcTubingConfiguratorEnabled
+ 1710:                         ? selectedPvcVariant
+ 1711:                             ?.model ||
+ 1712:                           getDisplayModelText(
+ 1713:                             data
+ 1714:                           )
+ 1715:                         : getDisplayModelText(
+ 1716:                             data
+ 1717:                           )}
+ 1718:                     </span>
+ 1719:                   </div>
+ 1720:                   <button
+ 1721:                     className={styles.button}
+ 1722:                     type="button"
+ 1723:                     onClick={() => {
+ 1724:                       if (
+ 1725:                         isPvcTubingConfiguratorEnabled
+ 1726:                       ) {
+ 1727:                         setIsPvcConfiguratorOpen(
+ 1728:                           true
+ 1729:                         );
+ 1730: 
+ 1731:                         return;
+ 1732:                       }
+ 1733: 
+ 1734:                       const href = localizeInternalHref(
+ 1735:                         getModelActionHref(data),
+ 1736:                         isEnglish,
+ 1737:                       );
+ 1738: 
+ 1739:                       if (isCustomInquiryMode(data)) {
+ 1740:                         window.location.href = href;
+ 1741:                         return;
+ 1742:                       }
+ 1743: 
+ 1744:                       window.open(href, "_blank", "noopener,noreferrer");
+ 1745:                     }}
+ 1746:                   >
+ 1747:                     {isPvcTubingConfiguratorEnabled &&
+ 1748:                     selectedPvcVariant
+ 1749:                       ? isEnglish
+ 1750:                         ? "Reselect"
+ 1751:                         : "重新选型"
+ 1752:                       : getModelActionText(
+ 1753:                           data
+ 1754:                         )}
+ 1755:                   </button>
+ 1756:                 </div>
+ 1757: 
+ 1758:                 {data.showConfigurator ? (
+ 1759:                   <button
+ 1760:                     className={styles.button}
+ 1761:                     type="button"
+ 1762:                     onClick={handleOpenConfigurator}
+ 1763:                   >
+ 1764:                     {copy.configurator}
+ 1765:                   </button>
+ 1766:                 ) : null}
+ 1767:               </div>
+ 1768: 
+ 1769:               <div data-product-action-grid="true" className={styles.actionRow}>
+ 1770:                 {data.showDatasheetRequest ? (
+ 1771:                   <button
+ 1772:                     className={styles.button}
+ 1773:                     type="button"
+ 1774:                     onClick={handleAddDatasheet}
+ 1775:                   >
+ 1776:                     {copy.datasheet}
+ 1777:                   </button>
+ 1778:                 ) : null}
+ 1779: 
+ 1780:                 {data.showDrawingRequest ? (
+ 1781:                   <button
+ 1782:                     className={styles.button}
+ 1783:                     type="button"
+ 1784:                     disabled={
+ 1785:                       isPvcTubingConfiguratorEnabled &&
+ 1786:                       !selectedPvcVariant
+ 1787:                     }
+ 1788:                     aria-pressed={isDetailDrawingSelected}
+ 1789:                     onClick={handleAddDrawing}
+ 1790:                   >
+ 1791:                     {isDetailDrawingSelected ? copy.drawingAdded : copy.drawing}
+ 1792:                   </button>
+ 1793:                 ) : null}
+ 1794: 
+ 1795:                 {data.show3DRequest ? (
+ 1796:                   <button
+ 1797:                     className={styles.button}
+ 1798:                     type="button"
+ 1799:                     onClick={handleRequest3DFile}
+ 1800:                   >
+ 1801:                     {copy.request3d}
+ 1802:                   </button>
+ 1803:                 ) : null}
+ 1804: 
+ 1805:                 <button
+ 1806:                   className={styles.button}
+ 1807:                   type="button"
+ 1808:                   disabled={
+ 1809:                     isPvcTubingConfiguratorEnabled &&
+ 1810:                     !selectedPvcVariant
+ 1811:                   }
+ 1812:                   aria-pressed={isDetailProductSelected}
+ 1813:                   onClick={handleAddList}
+ 1814:                 >
+ 1815:                   {isDetailProductSelected ? copy.addedToList : copy.addToList}
+ 1816:                 </button>
+ 1817:               </div>
+ 1818:             </div>
+ 1819:           </div>
+ 1820:         </section>
+ 1821: 
+ 1822:         <section className={styles.detailSection}>
+ 1823:           <nav className={styles.tabNav} aria-label={copy.tabs}>
+ 1824:             <button
+ 1825:               className={[
+ 1826:                 styles.tabButton,
+ 1827:                 activeTab === "spec" ? styles.isActive : "",
+ 1828:               ]
+ 1829:                 .filter(Boolean)
+ 1830:                 .join(" ")}
+ 1831:               type="button"
+ 1832:               onClick={() => setActiveTab("spec")}
+ 1833:             >
+ 1834:               {copy.specifications}
+ 1835:             </button>
+ 1836: 
+ 1837:             <button
+ 1838:               className={[
+
+==================================================
+五、详情页型号按钮和禁用状态
+==================================================
+
+----- 第 167-201 行 -----
+  167:     categoryText.includes("thread-to-barbed") ||
+  168:     categoryText.includes("female-thread-adapter") ||
+  169:     categoryText.includes("bulkhead-barbed") ||
+  170:     categoryText.includes("check-valve") ||
+  171:     categoryText.includes("filter") ||
+  172:     /^(Q20|Q40|Q60)/.test(model)
+  173:   );
+  174: }
+  175: 
+  176: 
+  177: function getDisplayModelText(data: any): string {
+  178:   if (isTubingDetailData(data)) {
+  179:     return "XXX-XXX-XX-XX";
+  180:   }
+  181: 
+  182:   if (isCustomInquiryMode(data)) {
+  183:     return data?.__locale === "en"
+  184:       ? "Contact us for a custom configuration"
+  185:       : "定制配置请联系我们";
+  186:   }
+  187: 
+  188:   return (data as any).displayModel || data.model || "";
+  189: }
+  190: 
+  191: function isCustomInquiryMode(data: any): boolean {
+  192:   
+  193:   if (
+  194:     isValvelessPumpDetailData(data) ||
+  195:     data?.isCustomOnly === true ||
+  196:     data?.showCustomInquiryCta === true
+  197:   ) {
+  198:     return true;
+  199:   }
+  200: const detailMode = String(
+  201:     data?.detailMode ||
+
+----- 第 238-272 行 -----
+  238: function isHardTubeFittingDetailData(data: any): boolean {
+  239:   return (
+  240:     data?.sourceType === "fitting-detail" ||
+  241:     (
+  242:       data?.categoryId === "fittings" &&
+  243:       data?.productTypeId === "hard-tube-fittings"
+  244:     )
+  245:   );
+  246: }
+  247: 
+  248: function getModelActionText(data: any): string {
+  249:   if (isTubingDetailData(data)) {
+  250:     return data?.__locale === "en" ? "Select a Model" : "选择型号";
+  251:   }
+  252: 
+  253:   if (data?.__locale === "en") {
+  254:     return isCustomInquiryMode(data) ? "Contact Us" : "Select a Model";
+  255:   }
+  256: 
+  257:   return isCustomInquiryMode(data) ? "联系我们" : "型号选择";
+  258: }
+  259: 
+  260: function isPlungerPumpDetailData(data: any): boolean {
+  261:   const text = JSON.stringify(data || {}).toLowerCase();
+  262: 
+  263:   return (
+  264:     text.includes("柱塞泵") ||
+  265:     text.includes("plunger pump") ||
+  266:     text.includes("plunger-pumps") ||
+  267:     text.includes("piston pump") ||
+  268:     text.includes("ea-") ||
+  269:     text.includes("eas-") ||
+  270:     text.includes("sm-") ||
+  271:     text.includes("tm-")
+  272:   );
+
+----- 第 1012-1046 行 -----
+ 1012:   const [activeThumb, setActiveThumb] = useState(0);
+ 1013:   const [isZooming, setIsZooming] = useState(false);
+ 1014:   const [zoomPosition, setZoomPosition] = useState({
+ 1015:     x: 50,
+ 1016:     y: 50,
+ 1017:   });
+ 1018: 
+ 1019:   /* PVC_TUBING_CONFIGURATOR_STATE_START */
+ 1020:   const [
+ 1021:     isPvcConfiguratorOpen,
+ 1022:     setIsPvcConfiguratorOpen,
+ 1023:   ] = useState(false);
+ 1024: 
+ 1025:   const [
+ 1026:     selectedPvcVariant,
+ 1027:     setSelectedPvcVariant,
+ 1028:   ] =
+ 1029:     useState<ProductConfiguratorVariant | null>(
+ 1030:       null
+ 1031:     );
+ 1032: 
+ 1033:   const isPvcTubingDetail =
+ 1034:     isPvcTubingDetailData(data);
+ 1035: 
+ 1036:   /*
+ 1037:    * 第一阶段先接入中文PVC管详情页。
+ 1038:    * 避免英文页面暂时显示中文选型内容。
+ 1039:    */
+ 1040:   const isPvcTubingConfiguratorEnabled =
+ 1041:     isPvcTubingDetail;
+ 1042:   /* PVC_TUBING_CONFIGURATOR_STATE_END */
+ 1043: 
+ 1044:   const realImages = useMemo(() => {
+ 1045:     const images: string[] = [];
+ 1046: 
+
+----- 第 1256-1315 行 -----
+ 1256:   const isDetailDrawingSelected = Boolean(currentDetailCartItem?.needDrawing);
+ 1257: 
+ 1258:   function handleOpenConfigurator() {
+ 1259:     console.info("配置选择端口预留", data.slug);
+ 1260:   }
+ 1261: 
+ 1262:   function handleAddDatasheet() {
+ 1263:     console.info("添加规格书端口预留", data.slug);
+ 1264:   }
+ 1265: 
+ 1266:   function handleAddDrawing() {
+ 1267:     const item = createDetailCartItem(true);
+ 1268: 
+ 1269:     if (!item.productCode || !item.foreachModel) {
+ 1270:       console.warn("详情页清单参数不完整", data);
+ 1271:       return;
+ 1272:     }
+ 1273: 
+ 1274:     const existingItem = getItem(
+ 1275:       detailCartSourceType,
+ 1276:       item.productCode
+ 1277:     );
+ 1278: 
+ 1279:     if (existingItem) {
+ 1280:       toggleDrawingNeed(existingItem.id, !existingItem.needDrawing);
+ 1281:       return;
+ 1282:     }
+ 1283: 
+ 1284:     addItem(item);
+ 1285:   }
+ 1286: 
+ 1287:   function handleRequest3DFile() {
+ 1288:     console.info("申请3D文件端口预留", data.slug);
+ 1289:   }
+ 1290: 
+ 1291:   function handleAddList() {
+ 1292:     const item = createDetailCartItem(false);
+ 1293: 
+ 1294:     if (!item.productCode || !item.foreachModel) {
+ 1295:       console.warn("详情页清单参数不完整", data);
+ 1296:       return;
+ 1297:     }
+ 1298: 
+ 1299:     const existingItem = getItem(
+ 1300:       detailCartSourceType,
+ 1301:       item.productCode
+ 1302:     );
+ 1303: 
+ 1304:     if (existingItem) {
+ 1305:       removeItem(existingItem.id);
+ 1306:       return;
+ 1307:     }
+ 1308: 
+ 1309:     addItem(item);
+ 1310:   }
+ 1311: 
+ 1312:   function isPvcVariantSelected(
+ 1313:     variant: ProductConfiguratorVariant
+ 1314:   ): boolean {
+ 1315:     return Boolean(
+
+----- 第 1378-1421 行 -----
+ 1378:           value={
+ 1379:             selectedPvcVariant
+ 1380:           }
+ 1381:           isVariantSelected={
+ 1382:             isPvcVariantSelected
+ 1383:           }
+ 1384:           onToggleVariant={
+ 1385:             handleTogglePvcVariant
+ 1386:           }
+ 1387:           onClose={() => {
+ 1388:             setIsPvcConfiguratorOpen(
+ 1389:               false
+ 1390:             );
+ 1391:           }}
+ 1392:           onConfirm={(variant) => {
+ 1393:             setSelectedPvcVariant(
+ 1394:               variant
+ 1395:             );
+ 1396: 
+ 1397:             setIsPvcConfiguratorOpen(
+ 1398:               false
+ 1399:             );
+ 1400:           }}
+ 1401:         />
+ 1402:       ) : null}
+ 1403:       {/* PVC_TUBING_CONFIGURATOR_RENDER_END */}
+ 1404: 
+ 1405: <SitePageShell
+ 1406:       breadcrumbAriaLabel={copy.breadcrumb}
+ 1407:       breadcrumbItems={[
+ 1408:         {
+ 1409:           label: copy.home,
+ 1410:           href: isEnglish ? "/en/" : "/",
+ 1411:         },
+ 1412:         {
+ 1413:           label: copy.products,
+ 1414:           href: isEnglish ? "/en/products/" : "/products/",
+ 1415:         },
+ 1416:         {
+ 1417:           label: data.model,
+ 1418:         },
+ 1419:       ]}
+ 1420:     >
+ 1421:       <main className={styles.page} data-product-detail-page="true">
+
+----- 第 1702-1837 行 -----
+ 1702:                   <div className={styles.modelCodeText}>
+ 1703:                     <span className={styles.modelLabel}>{copy.model}</span>
+ 1704:                     <span
+ 1705:                       className={
+ 1706:                         styles.modelCode
+ 1707:                       }
+ 1708:                     >
+ 1709:                       {isPvcTubingConfiguratorEnabled
+ 1710:                         ? selectedPvcVariant
+ 1711:                             ?.model ||
+ 1712:                           getDisplayModelText(
+ 1713:                             data
+ 1714:                           )
+ 1715:                         : getDisplayModelText(
+ 1716:                             data
+ 1717:                           )}
+ 1718:                     </span>
+ 1719:                   </div>
+ 1720:                   <button
+ 1721:                     className={styles.button}
+ 1722:                     type="button"
+ 1723:                     onClick={() => {
+ 1724:                       if (
+ 1725:                         isPvcTubingConfiguratorEnabled
+ 1726:                       ) {
+ 1727:                         setIsPvcConfiguratorOpen(
+ 1728:                           true
+ 1729:                         );
+ 1730: 
+ 1731:                         return;
+ 1732:                       }
+ 1733: 
+ 1734:                       const href = localizeInternalHref(
+ 1735:                         getModelActionHref(data),
+ 1736:                         isEnglish,
+ 1737:                       );
+ 1738: 
+ 1739:                       if (isCustomInquiryMode(data)) {
+ 1740:                         window.location.href = href;
+ 1741:                         return;
+ 1742:                       }
+ 1743: 
+ 1744:                       window.open(href, "_blank", "noopener,noreferrer");
+ 1745:                     }}
+ 1746:                   >
+ 1747:                     {isPvcTubingConfiguratorEnabled &&
+ 1748:                     selectedPvcVariant
+ 1749:                       ? isEnglish
+ 1750:                         ? "Reselect"
+ 1751:                         : "重新选型"
+ 1752:                       : getModelActionText(
+ 1753:                           data
+ 1754:                         )}
+ 1755:                   </button>
+ 1756:                 </div>
+ 1757: 
+ 1758:                 {data.showConfigurator ? (
+ 1759:                   <button
+ 1760:                     className={styles.button}
+ 1761:                     type="button"
+ 1762:                     onClick={handleOpenConfigurator}
+ 1763:                   >
+ 1764:                     {copy.configurator}
+ 1765:                   </button>
+ 1766:                 ) : null}
+ 1767:               </div>
+ 1768: 
+ 1769:               <div data-product-action-grid="true" className={styles.actionRow}>
+ 1770:                 {data.showDatasheetRequest ? (
+ 1771:                   <button
+ 1772:                     className={styles.button}
+ 1773:                     type="button"
+ 1774:                     onClick={handleAddDatasheet}
+ 1775:                   >
+ 1776:                     {copy.datasheet}
+ 1777:                   </button>
+ 1778:                 ) : null}
+ 1779: 
+ 1780:                 {data.showDrawingRequest ? (
+ 1781:                   <button
+ 1782:                     className={styles.button}
+ 1783:                     type="button"
+ 1784:                     disabled={
+ 1785:                       isPvcTubingConfiguratorEnabled &&
+ 1786:                       !selectedPvcVariant
+ 1787:                     }
+ 1788:                     aria-pressed={isDetailDrawingSelected}
+ 1789:                     onClick={handleAddDrawing}
+ 1790:                   >
+ 1791:                     {isDetailDrawingSelected ? copy.drawingAdded : copy.drawing}
+ 1792:                   </button>
+ 1793:                 ) : null}
+ 1794: 
+ 1795:                 {data.show3DRequest ? (
+ 1796:                   <button
+ 1797:                     className={styles.button}
+ 1798:                     type="button"
+ 1799:                     onClick={handleRequest3DFile}
+ 1800:                   >
+ 1801:                     {copy.request3d}
+ 1802:                   </button>
+ 1803:                 ) : null}
+ 1804: 
+ 1805:                 <button
+ 1806:                   className={styles.button}
+ 1807:                   type="button"
+ 1808:                   disabled={
+ 1809:                     isPvcTubingConfiguratorEnabled &&
+ 1810:                     !selectedPvcVariant
+ 1811:                   }
+ 1812:                   aria-pressed={isDetailProductSelected}
+ 1813:                   onClick={handleAddList}
+ 1814:                 >
+ 1815:                   {isDetailProductSelected ? copy.addedToList : copy.addToList}
+ 1816:                 </button>
+ 1817:               </div>
+ 1818:             </div>
+ 1819:           </div>
+ 1820:         </section>
+ 1821: 
+ 1822:         <section className={styles.detailSection}>
+ 1823:           <nav className={styles.tabNav} aria-label={copy.tabs}>
+ 1824:             <button
+ 1825:               className={[
+ 1826:                 styles.tabButton,
+ 1827:                 activeTab === "spec" ? styles.isActive : "",
+ 1828:               ]
+ 1829:                 .filter(Boolean)
+ 1830:                 .join(" ")}
+ 1831:               type="button"
+ 1832:               onClick={() => setActiveTab("spec")}
+ 1833:             >
+ 1834:               {copy.specifications}
+ 1835:             </button>
+ 1836: 
+ 1837:             <button
+
+==================================================
+六、当前Git状态
+==================================================
+ M components/products/detail/ProductDetailClient.tsx
+?? data/products/configurator/tpu-tubing.ts
+
+==================================================
+七、当前TypeScript检查
+==================================================
+退出代码：0
+
+TypeScript检查没有输出。

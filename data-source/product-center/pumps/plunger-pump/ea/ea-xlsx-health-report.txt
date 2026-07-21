@@ -1,0 +1,32 @@
+============================================================
+EA XLSX health check
+Time: 2026-06-13 12:22:21
+============================================================
+
+File: F:\WebsiteProjects\foreach-website-2026\data-source\product-center\pumps\plunger-pump\ea\01_EA常规柱塞泵_详情页资料_zh.xlsx
+Exists: True
+Length: 9146
+Header: 25 50 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Kind: Unknown
+ZIP error: 使用“3”个参数调用“.ctor”时发生异常:“找不到中央目录结尾记录。”
+Repair: failed
+Excel created a file, but it is still not a valid XLSX: 使用“3”个参数调用“.ctor”时发生异常:“找不到中央目录结尾记录。”
+
+File: F:\WebsiteProjects\foreach-website-2026\data-source\product-center\pumps\plunger-pump\ea\02_EA常规柱塞泵_规格参数_zh.xlsx
+Exists: True
+Length: 22315
+Header: 25 50 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Kind: Unknown
+ZIP error: 使用“3”个参数调用“.ctor”时发生异常:“找不到中央目录结尾记录。”
+Repair: failed
+Excel created a file, but it is still not a valid XLSX: 使用“3”个参数调用“.ctor”时发生异常:“找不到中央目录结尾记录。”
+
+File: F:\WebsiteProjects\foreach-website-2026\data-source\product-center\pumps\plunger-pump\ea\ea-selection.xlsx
+Exists: True
+Length: 24039
+Header: 00 00 5B 00 E5 8B 87 65 F6 4E 3A 4E 11 62 F8 53
+Kind: Unknown
+ZIP error: 使用“3”个参数调用“.ctor”时发生异常:“找不到中央目录结尾记录。”
+Repair: failed
+Excel created a file, but it is still not a valid XLSX: 使用“3”个参数调用“.ctor”时发生异常:“找不到中央目录结尾记录。”
+

@@ -1,0 +1,160 @@
+﻿Cloudflare Pages 输出文件审查报告
+生成时间：2026-07-19 00:26:33
+项目路径：F:\WebsiteProjects\foreach-website-2026
+输出路径：F:\WebsiteProjects\foreach-website-2026\out
+
+===== 一、总体情况 =====
+文件总数：27053
+目录总数：11392
+总体积：596.65 MB
+Cloudflare Free 上限：20000
+超过上限：7053
+需要至少减少：7053 个文件
+
+HTML 文件：2397
+TXT 文件：23138
+JSON 文件：2
+JavaScript 文件：54
+CSS 文件：22
+图片文件：1234
+
+===== 二、一级目录文件数量 =====
+
+Directory    Files Size     
+---------    ----- ----     
+en           10359 127.81 MB
+products     10252 110.41 MB
+images        1247 125.21 MB
+fr             999 10.71 MB 
+es             999 10.67 MB 
+ko             999 10.66 MB 
+ru             999 10.98 MB 
+resources      776 8.52 MB  
+_next           77 7.20 MB  
+documents       70 3.83 MB  
+assets          60 10.39 MB 
+downloads       56 47.19 MB 
+applications    54 968.04 KB
+about           45 540.31 KB
+contact         17 186.98 KB
+(out 根目录)       15 193.75 KB
+models          10 108.73 MB
+search           9 1.18 MB  
+_not-found       8 68.03 KB 
+search-data      1 1.22 MB  
+404              1 28.76 KB
+
+===== 三、文件最多的二级目录（前 50） =====
+
+Directory                        Files Size     
+---------                        ----- ----     
+en\products                       9369 117.20 MB
+products\fittings                 9197 98.04 MB 
+images\products                    949 57.73 MB 
+products\pumps                     870 10.13 MB 
+es\resources                       844 8.61 MB  
+ko\resources                       844 8.61 MB  
+ru\resources                       844 8.82 MB  
+en\resources                       844 8.66 MB  
+fr\resources                       844 8.64 MB  
+resources\selection-support        430 4.52 MB  
+resources\technical-articles       129 1.20 MB  
+resources\news                     119 1.63 MB  
+images\resources                   104 4.82 MB  
+_next\static                        77 7.20 MB  
+documents\products                  70 3.83 MB  
+products\tubing                     69 766.21 KB
+ko\applications                     60 987.47 KB
+ru\applications                     60 991.91 KB
+en\applications                     60 969.32 KB
+fr\applications                     60 988.38 KB
+assets\products                     60 10.39 MB 
+es\applications                     60 988.09 KB
+resources\installation-guide        59 435.04 KB
+images\about                        57 12.06 MB 
+downloads\resources                 56 47.19 MB 
+images\applications                 54 11.72 MB 
+fr\about                            50 571.26 KB
+ru\about                            50 615.83 KB
+es\about                            50 568.51 KB
+en\about                            50 571.02 KB
+ko\about                            50 559.36 KB
+products\probes                     49 633.57 KB
+products\valves                     39 566.56 KB
+images\application-center           30 279.65 KB
+products\control                    20 235.13 KB
+fr\contact                          19 285.17 KB
+ru\contact                          19 327.61 KB
+es\contact                          19 281.94 KB
+ko\contact                          19 278.04 KB
+images\home                         19 37.99 MB 
+en\contact                          19 275.59 KB
+(out 根目录)                           15 193.75 KB
+images\resource                     13 114.44 KB
+images\contact-cooperation          12 396.45 KB
+resources\calculators               10 92.10 KB 
+models\products                     10 108.73 MB
+applications\ivd                     9 177.28 KB
+resources\datasheets                 9 107.75 KB
+resources\material-compatibility     9 191.22 KB
+contact\distributor                  9 79.49 KB
+
+===== 四、文件扩展名统计 =====
+
+Extension                               Files Size     
+---------                               ----- ----     
+.txt                                    23138 156.03 MB
+.html                                    2397 135.45 MB
+.jpg                                      829 37.21 MB 
+.webp                                     355 31.97 MB 
+.pdf                                      172 55.22 MB 
+.js                                        54 6.52 MB  
+.png                                       35 37.75 MB 
+.glb                                       25 115.18 MB
+.css                                       22 667.58 KB
+.svg                                       15 17.78 KB 
+.gitkeep                                    3 9 B      
+.json                                       2 1.22 MB  
+.mp4                                        2 18.26 MB 
+.ico                                        2 50.65 KB 
+.md                                         1 1.63 KB  
+.bak_fix_search_display_20260713_152325     1 1.12 MB
+
+===== 五、最大的 30 个文件 =====
+
+Size     Path                                                                                                             
+----     ----                                                                                                             
+18.33 MB models\products\pumps\diaphragm-pumps\dpgl800\dpgl800-24bs6-ff-ps-gas-liquid-diaphragm-pump.glb                  
+18.33 MB models\products\pumps\diaphragm-pumps\dpgl800\dpgl800-gas-liquid-diaphragm-pump.glb                              
+18.33 MB models\products\pumps\diaphragm-pumps\dpgl800\dpgl800-24bs6-ep-ps-gas-liquid-diaphragm-pump.glb                  
+13.31 MB images\home\foreach-company-intro.mp4                                                                            
+11.76 MB models\products\pumps\diaphragm-pumps\dpl30h\dpl30h-brushless-liquid-diaphragm-pump.glb                          
+11.54 MB models\products\pumps\diaphragm-pumps\dpl30h\dpl30h-brushed-liquid-diaphragm-pump.glb                            
+10.48 MB downloads\resources\datasheets\zh-CN\Tubing-and-Fittings\foreach-fittings-and-elastomer-tubing-catalog-a02-cn.pdf
+10.29 MB downloads\resources\datasheets\en\Tubing-and-Fittings\fittings-and-tubing-catalog-a02.pdf                        
+7.77 MB  models\products\pumps\diaphragm-pumps\dpl30\dpl30-brushless-liquid-diaphragm-pump.glb                            
+7.63 MB  models\products\pumps\diaphragm-pumps\dpl60\dpl60-brushless-liquid-diaphragm-pump.glb                            
+7.52 MB  models\products\pumps\diaphragm-pumps\dpl30\dpl30-brushed-liquid-diaphragm-pump.glb                              
+7.52 MB  models\products\pumps\diaphragm-pumps\dpl60\dpl60-brushed-liquid-diaphragm-pump.glb                              
+4.95 MB  images\home\home-banner-desktop.mp4                                                                              
+4.58 MB  downloads\resources\datasheets\zh-CN\Pumps\ps-150b-2412-00001-a03-cn-dpl30-diaphragm-pump.pdf                    
+4.56 MB  images\home\company-honors-original\gazelle-enterprise.png                                                       
+3.80 MB  images\about\foreach\company-video-poster-square.png                                                             
+3.36 MB  images\home\company-honors-original\national-high-tech.png                                                       
+2.48 MB  images\home\tv-foreach.png                                                                                       
+2.04 MB  downloads\resources\datasheets\zh-CN\Pumps\ps-120b-013-001-cn-sm-piston-pump.pdf                                 
+2.02 MB  _next\static\chunks\110xu2-wswdco.js                                                                             
+2.00 MB  images\home\company-honors-original\iso-9001.png                                                                 
+2.00 MB  images\products\probes\wash-probes\foreach-wash-probe-03.png                                                     
+1.81 MB  downloads\resources\datasheets\zh-CN\Pumps\ps-121b-011-a01-cn-rpl-p635-valveless-pump.pdf                        
+1.73 MB  images\home\company-honors-original\iso-13485.png                                                                
+1.66 MB  images\home\company-honors-original\engineering-center.png                                                       
+1.54 MB  _next\static\chunks\0jvdutc987qmq.js                                                                             
+1.38 MB  images\products\probes\wash-probes\foreach-wash-probe-05.png                                                     
+1.25 MB  downloads\resources\datasheets\en\Pumps\ps-120b-2507-00001-001-en-ea-piston-pump.pdf                             
+1.22 MB  search-data\global-search-index.v2.json                                                                          
+1.20 MB  images\products\probes\sampling-probes\foreach-sampling-probe-03.png
+
+===== 六、初步判断 =====
+当前 out 文件数量超过 Cloudflare Free 上限。
+下一步应重点检查文件最多的一级、二级目录，确认是否存在重复语言路由、重复产品详情页或大量重复静态资源。

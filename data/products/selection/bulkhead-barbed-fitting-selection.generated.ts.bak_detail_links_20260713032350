@@ -1,0 +1,1160 @@
+/* =========================================================
+   穿板倒刺接头与六角螺母选型数据
+   PMB：权威Excel 08_穿板倒刺接头
+   PMBSN：用户提供的正式资料页
+========================================================= */
+
+export const bulkheadBarbedFittingSelectionProducts =
+[
+  {
+    "productId": "809462",
+    "productCode": "809462",
+    "categoryId": "fittings",
+    "category": "fittings",
+    "productTypeId": "bulkhead-barbed-fittings",
+    "productType": "bulkhead-barbed-fittings",
+    "seriesId": "pmb",
+    "seriesName": {
+      "zh": "穿板倒刺接头",
+      "en": "PMB Bulkhead Barbed Fitting",
+      "es": "PMB Bulkhead Barbed Fitting",
+      "fr": "PMB Bulkhead Barbed Fitting",
+      "ko": "PMB Bulkhead Barbed Fitting",
+      "ru": "PMB Bulkhead Barbed Fitting"
+    },
+    "model": "PMB-U28-24D-PP-N",
+    "displayModel": "PMB-U28-24D-PP-N",
+    "name": {
+      "zh": "穿板倒刺接头",
+      "en": "Bulkhead Barbed Fitting",
+      "es": "Bulkhead Barbed Fitting",
+      "fr": "Bulkhead Barbed Fitting",
+      "ko": "Bulkhead Barbed Fitting",
+      "ru": "Bulkhead Barbed Fitting"
+    },
+    "title": {
+      "zh": "穿板倒刺接头",
+      "en": "Bulkhead Barbed Fitting",
+      "es": "Bulkhead Barbed Fitting",
+      "fr": "Bulkhead Barbed Fitting",
+      "ko": "Bulkhead Barbed Fitting",
+      "ru": "Bulkhead Barbed Fitting"
+    },
+    "displayName": {
+      "zh": "穿板倒刺接头",
+      "en": "Bulkhead Barbed Fitting",
+      "es": "Bulkhead Barbed Fitting",
+      "fr": "Bulkhead Barbed Fitting",
+      "ko": "Bulkhead Barbed Fitting",
+      "ru": "Bulkhead Barbed Fitting"
+    },
+    "cardTitle": {
+      "zh": "PMB-U28-24D-PP-N",
+      "en": "PMB-U28-24D-PP-N",
+      "es": "PMB-U28-24D-PP-N",
+      "fr": "PMB-U28-24D-PP-N",
+      "ko": "PMB-U28-24D-PP-N",
+      "ru": "PMB-U28-24D-PP-N"
+    },
+    "cardSubtitle": {
+      "zh": "穿板倒刺接头\n1/4-28 UNF螺纹，壳体材质为PP\n适配2.4 mm接管内径",
+      "en": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PP housing\nFor 2.4 mm tube ID",
+      "es": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PP housing\nFor 2.4 mm tube ID",
+      "fr": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PP housing\nFor 2.4 mm tube ID",
+      "ko": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PP housing\nFor 2.4 mm tube ID",
+      "ru": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PP housing\nFor 2.4 mm tube ID"
+    },
+    "image": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-24d-pp-n-main.jpg",
+    "imagePath": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-24d-pp-n-main.jpg",
+    "imageUrl": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-24d-pp-n-main.jpg",
+    "imageAlt": {
+      "zh": "PMB-U28-24D-PP-N 穿板倒刺接头",
+      "en": "PMB-U28-24D-PP-N bulkhead barbed fitting",
+      "es": "PMB-U28-24D-PP-N bulkhead barbed fitting",
+      "fr": "PMB-U28-24D-PP-N bulkhead barbed fitting",
+      "ko": "PMB-U28-24D-PP-N bulkhead barbed fitting",
+      "ru": "PMB-U28-24D-PP-N bulkhead barbed fitting"
+    },
+    "filters": {
+      "filter01": "穿板倒刺接头",
+      "filter02": "1/4-28 UNF",
+      "filter04": "PP",
+      "filter05": "本色",
+      "filter03": "2.4 mm"
+    },
+    "detailHref": "/products/fittings/bulkhead-barbed-fittings/pmb-u28-24d-pp-n",
+    "href": "/products/fittings/bulkhead-barbed-fittings/pmb-u28-24d-pp-n",
+    "selectionHref": "/products/fittings/bulkhead-barbed-fittings",
+    "searchKeywords": {
+      "zh": "PMB-U28-24D-PP-N 809462 穿板倒刺接头 1/4-28 UNF 2.4 mm PP 本色",
+      "en": "PMB-U28-24D-PP-N 809462 bulkhead barbed fitting 1/4-28 UNF 2.4 mm PP 本色",
+      "es": "PMB-U28-24D-PP-N 809462 bulkhead barbed fitting 1/4-28 UNF 2.4 mm PP 本色",
+      "fr": "PMB-U28-24D-PP-N 809462 bulkhead barbed fitting 1/4-28 UNF 2.4 mm PP 本色",
+      "ko": "PMB-U28-24D-PP-N 809462 bulkhead barbed fitting 1/4-28 UNF 2.4 mm PP 本色",
+      "ru": "PMB-U28-24D-PP-N 809462 bulkhead barbed fitting 1/4-28 UNF 2.4 mm PP 本色"
+    },
+    "sortOrder": 1,
+    "imageCard": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-24d-pp-n-main.jpg",
+    "detailSlug": "pmb-u28-24d-pp-n",
+    "status": "active",
+    "sourceType": "bulkhead-barbed-selection",
+    "sourceIndex": 0
+  },
+  {
+    "productId": "809463",
+    "productCode": "809463",
+    "categoryId": "fittings",
+    "category": "fittings",
+    "productTypeId": "bulkhead-barbed-fittings",
+    "productType": "bulkhead-barbed-fittings",
+    "seriesId": "pmb",
+    "seriesName": {
+      "zh": "穿板倒刺接头",
+      "en": "PMB Bulkhead Barbed Fitting",
+      "es": "PMB Bulkhead Barbed Fitting",
+      "fr": "PMB Bulkhead Barbed Fitting",
+      "ko": "PMB Bulkhead Barbed Fitting",
+      "ru": "PMB Bulkhead Barbed Fitting"
+    },
+    "model": "PMB-U28-32D-PP-N",
+    "displayModel": "PMB-U28-32D-PP-N",
+    "name": {
+      "zh": "穿板倒刺接头",
+      "en": "Bulkhead Barbed Fitting",
+      "es": "Bulkhead Barbed Fitting",
+      "fr": "Bulkhead Barbed Fitting",
+      "ko": "Bulkhead Barbed Fitting",
+      "ru": "Bulkhead Barbed Fitting"
+    },
+    "title": {
+      "zh": "穿板倒刺接头",
+      "en": "Bulkhead Barbed Fitting",
+      "es": "Bulkhead Barbed Fitting",
+      "fr": "Bulkhead Barbed Fitting",
+      "ko": "Bulkhead Barbed Fitting",
+      "ru": "Bulkhead Barbed Fitting"
+    },
+    "displayName": {
+      "zh": "穿板倒刺接头",
+      "en": "Bulkhead Barbed Fitting",
+      "es": "Bulkhead Barbed Fitting",
+      "fr": "Bulkhead Barbed Fitting",
+      "ko": "Bulkhead Barbed Fitting",
+      "ru": "Bulkhead Barbed Fitting"
+    },
+    "cardTitle": {
+      "zh": "PMB-U28-32D-PP-N",
+      "en": "PMB-U28-32D-PP-N",
+      "es": "PMB-U28-32D-PP-N",
+      "fr": "PMB-U28-32D-PP-N",
+      "ko": "PMB-U28-32D-PP-N",
+      "ru": "PMB-U28-32D-PP-N"
+    },
+    "cardSubtitle": {
+      "zh": "穿板倒刺接头\n1/4-28 UNF螺纹，壳体材质为PP\n适配3.2 mm接管内径",
+      "en": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PP housing\nFor 3.2 mm tube ID",
+      "es": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PP housing\nFor 3.2 mm tube ID",
+      "fr": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PP housing\nFor 3.2 mm tube ID",
+      "ko": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PP housing\nFor 3.2 mm tube ID",
+      "ru": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PP housing\nFor 3.2 mm tube ID"
+    },
+    "image": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-32d-pp-n-main.jpg",
+    "imagePath": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-32d-pp-n-main.jpg",
+    "imageUrl": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-32d-pp-n-main.jpg",
+    "imageAlt": {
+      "zh": "PMB-U28-32D-PP-N 穿板倒刺接头",
+      "en": "PMB-U28-32D-PP-N bulkhead barbed fitting",
+      "es": "PMB-U28-32D-PP-N bulkhead barbed fitting",
+      "fr": "PMB-U28-32D-PP-N bulkhead barbed fitting",
+      "ko": "PMB-U28-32D-PP-N bulkhead barbed fitting",
+      "ru": "PMB-U28-32D-PP-N bulkhead barbed fitting"
+    },
+    "filters": {
+      "filter01": "穿板倒刺接头",
+      "filter02": "1/4-28 UNF",
+      "filter04": "PP",
+      "filter05": "本色",
+      "filter03": "3.2 mm"
+    },
+    "detailHref": "/products/fittings/bulkhead-barbed-fittings/pmb-u28-32d-pp-n",
+    "href": "/products/fittings/bulkhead-barbed-fittings/pmb-u28-32d-pp-n",
+    "selectionHref": "/products/fittings/bulkhead-barbed-fittings",
+    "searchKeywords": {
+      "zh": "PMB-U28-32D-PP-N 809463 穿板倒刺接头 1/4-28 UNF 3.2 mm PP 本色",
+      "en": "PMB-U28-32D-PP-N 809463 bulkhead barbed fitting 1/4-28 UNF 3.2 mm PP 本色",
+      "es": "PMB-U28-32D-PP-N 809463 bulkhead barbed fitting 1/4-28 UNF 3.2 mm PP 本色",
+      "fr": "PMB-U28-32D-PP-N 809463 bulkhead barbed fitting 1/4-28 UNF 3.2 mm PP 本色",
+      "ko": "PMB-U28-32D-PP-N 809463 bulkhead barbed fitting 1/4-28 UNF 3.2 mm PP 本色",
+      "ru": "PMB-U28-32D-PP-N 809463 bulkhead barbed fitting 1/4-28 UNF 3.2 mm PP 本色"
+    },
+    "sortOrder": 2,
+    "imageCard": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-32d-pp-n-main.jpg",
+    "detailSlug": "pmb-u28-32d-pp-n",
+    "status": "active",
+    "sourceType": "bulkhead-barbed-selection",
+    "sourceIndex": 1
+  },
+  {
+    "productId": "809496",
+    "productCode": "809496",
+    "categoryId": "fittings",
+    "category": "fittings",
+    "productTypeId": "bulkhead-barbed-fittings",
+    "productType": "bulkhead-barbed-fittings",
+    "seriesId": "pmb",
+    "seriesName": {
+      "zh": "穿板倒刺接头",
+      "en": "PMB Bulkhead Barbed Fitting",
+      "es": "PMB Bulkhead Barbed Fitting",
+      "fr": "PMB Bulkhead Barbed Fitting",
+      "ko": "PMB Bulkhead Barbed Fitting",
+      "ru": "PMB Bulkhead Barbed Fitting"
+    },
+    "model": "PMB-U28-24D-PA-W",
+    "displayModel": "PMB-U28-24D-PA-W",
+    "name": {
+      "zh": "穿板倒刺接头",
+      "en": "Bulkhead Barbed Fitting",
+      "es": "Bulkhead Barbed Fitting",
+      "fr": "Bulkhead Barbed Fitting",
+      "ko": "Bulkhead Barbed Fitting",
+      "ru": "Bulkhead Barbed Fitting"
+    },
+    "title": {
+      "zh": "穿板倒刺接头",
+      "en": "Bulkhead Barbed Fitting",
+      "es": "Bulkhead Barbed Fitting",
+      "fr": "Bulkhead Barbed Fitting",
+      "ko": "Bulkhead Barbed Fitting",
+      "ru": "Bulkhead Barbed Fitting"
+    },
+    "displayName": {
+      "zh": "穿板倒刺接头",
+      "en": "Bulkhead Barbed Fitting",
+      "es": "Bulkhead Barbed Fitting",
+      "fr": "Bulkhead Barbed Fitting",
+      "ko": "Bulkhead Barbed Fitting",
+      "ru": "Bulkhead Barbed Fitting"
+    },
+    "cardTitle": {
+      "zh": "PMB-U28-24D-PA-W",
+      "en": "PMB-U28-24D-PA-W",
+      "es": "PMB-U28-24D-PA-W",
+      "fr": "PMB-U28-24D-PA-W",
+      "ko": "PMB-U28-24D-PA-W",
+      "ru": "PMB-U28-24D-PA-W"
+    },
+    "cardSubtitle": {
+      "zh": "穿板倒刺接头\n1/4-28 UNF螺纹，壳体材质为PA\n适配2.4 mm接管内径",
+      "en": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PA housing\nFor 2.4 mm tube ID",
+      "es": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PA housing\nFor 2.4 mm tube ID",
+      "fr": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PA housing\nFor 2.4 mm tube ID",
+      "ko": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PA housing\nFor 2.4 mm tube ID",
+      "ru": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PA housing\nFor 2.4 mm tube ID"
+    },
+    "image": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-24d-pa-w-main.jpg",
+    "imagePath": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-24d-pa-w-main.jpg",
+    "imageUrl": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-24d-pa-w-main.jpg",
+    "imageAlt": {
+      "zh": "PMB-U28-24D-PA-W 穿板倒刺接头",
+      "en": "PMB-U28-24D-PA-W bulkhead barbed fitting",
+      "es": "PMB-U28-24D-PA-W bulkhead barbed fitting",
+      "fr": "PMB-U28-24D-PA-W bulkhead barbed fitting",
+      "ko": "PMB-U28-24D-PA-W bulkhead barbed fitting",
+      "ru": "PMB-U28-24D-PA-W bulkhead barbed fitting"
+    },
+    "filters": {
+      "filter01": "穿板倒刺接头",
+      "filter02": "1/4-28 UNF",
+      "filter04": "PA",
+      "filter05": "白色",
+      "filter03": "2.4 mm"
+    },
+    "detailHref": "/products/fittings/bulkhead-barbed-fittings/pmb-u28-24d-pa-w",
+    "href": "/products/fittings/bulkhead-barbed-fittings/pmb-u28-24d-pa-w",
+    "selectionHref": "/products/fittings/bulkhead-barbed-fittings",
+    "searchKeywords": {
+      "zh": "PMB-U28-24D-PA-W 809496 穿板倒刺接头 1/4-28 UNF 2.4 mm PA 白色",
+      "en": "PMB-U28-24D-PA-W 809496 bulkhead barbed fitting 1/4-28 UNF 2.4 mm PA 白色",
+      "es": "PMB-U28-24D-PA-W 809496 bulkhead barbed fitting 1/4-28 UNF 2.4 mm PA 白色",
+      "fr": "PMB-U28-24D-PA-W 809496 bulkhead barbed fitting 1/4-28 UNF 2.4 mm PA 白色",
+      "ko": "PMB-U28-24D-PA-W 809496 bulkhead barbed fitting 1/4-28 UNF 2.4 mm PA 白色",
+      "ru": "PMB-U28-24D-PA-W 809496 bulkhead barbed fitting 1/4-28 UNF 2.4 mm PA 白色"
+    },
+    "sortOrder": 3,
+    "imageCard": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-24d-pa-w-main.jpg",
+    "detailSlug": "pmb-u28-24d-pa-w",
+    "status": "active",
+    "sourceType": "bulkhead-barbed-selection",
+    "sourceIndex": 2
+  },
+  {
+    "productId": "809497",
+    "productCode": "809497",
+    "categoryId": "fittings",
+    "category": "fittings",
+    "productTypeId": "bulkhead-barbed-fittings",
+    "productType": "bulkhead-barbed-fittings",
+    "seriesId": "pmb",
+    "seriesName": {
+      "zh": "穿板倒刺接头",
+      "en": "PMB Bulkhead Barbed Fitting",
+      "es": "PMB Bulkhead Barbed Fitting",
+      "fr": "PMB Bulkhead Barbed Fitting",
+      "ko": "PMB Bulkhead Barbed Fitting",
+      "ru": "PMB Bulkhead Barbed Fitting"
+    },
+    "model": "PMB-U28-32D-PA-W",
+    "displayModel": "PMB-U28-32D-PA-W",
+    "name": {
+      "zh": "穿板倒刺接头",
+      "en": "Bulkhead Barbed Fitting",
+      "es": "Bulkhead Barbed Fitting",
+      "fr": "Bulkhead Barbed Fitting",
+      "ko": "Bulkhead Barbed Fitting",
+      "ru": "Bulkhead Barbed Fitting"
+    },
+    "title": {
+      "zh": "穿板倒刺接头",
+      "en": "Bulkhead Barbed Fitting",
+      "es": "Bulkhead Barbed Fitting",
+      "fr": "Bulkhead Barbed Fitting",
+      "ko": "Bulkhead Barbed Fitting",
+      "ru": "Bulkhead Barbed Fitting"
+    },
+    "displayName": {
+      "zh": "穿板倒刺接头",
+      "en": "Bulkhead Barbed Fitting",
+      "es": "Bulkhead Barbed Fitting",
+      "fr": "Bulkhead Barbed Fitting",
+      "ko": "Bulkhead Barbed Fitting",
+      "ru": "Bulkhead Barbed Fitting"
+    },
+    "cardTitle": {
+      "zh": "PMB-U28-32D-PA-W",
+      "en": "PMB-U28-32D-PA-W",
+      "es": "PMB-U28-32D-PA-W",
+      "fr": "PMB-U28-32D-PA-W",
+      "ko": "PMB-U28-32D-PA-W",
+      "ru": "PMB-U28-32D-PA-W"
+    },
+    "cardSubtitle": {
+      "zh": "穿板倒刺接头\n1/4-28 UNF螺纹，壳体材质为PA\n适配3.2 mm接管内径",
+      "en": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PA housing\nFor 3.2 mm tube ID",
+      "es": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PA housing\nFor 3.2 mm tube ID",
+      "fr": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PA housing\nFor 3.2 mm tube ID",
+      "ko": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PA housing\nFor 3.2 mm tube ID",
+      "ru": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PA housing\nFor 3.2 mm tube ID"
+    },
+    "image": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-32d-pa-w-main.jpg",
+    "imagePath": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-32d-pa-w-main.jpg",
+    "imageUrl": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-32d-pa-w-main.jpg",
+    "imageAlt": {
+      "zh": "PMB-U28-32D-PA-W 穿板倒刺接头",
+      "en": "PMB-U28-32D-PA-W bulkhead barbed fitting",
+      "es": "PMB-U28-32D-PA-W bulkhead barbed fitting",
+      "fr": "PMB-U28-32D-PA-W bulkhead barbed fitting",
+      "ko": "PMB-U28-32D-PA-W bulkhead barbed fitting",
+      "ru": "PMB-U28-32D-PA-W bulkhead barbed fitting"
+    },
+    "filters": {
+      "filter01": "穿板倒刺接头",
+      "filter02": "1/4-28 UNF",
+      "filter04": "PA",
+      "filter05": "白色",
+      "filter03": "3.2 mm"
+    },
+    "detailHref": "/products/fittings/bulkhead-barbed-fittings/pmb-u28-32d-pa-w",
+    "href": "/products/fittings/bulkhead-barbed-fittings/pmb-u28-32d-pa-w",
+    "selectionHref": "/products/fittings/bulkhead-barbed-fittings",
+    "searchKeywords": {
+      "zh": "PMB-U28-32D-PA-W 809497 穿板倒刺接头 1/4-28 UNF 3.2 mm PA 白色",
+      "en": "PMB-U28-32D-PA-W 809497 bulkhead barbed fitting 1/4-28 UNF 3.2 mm PA 白色",
+      "es": "PMB-U28-32D-PA-W 809497 bulkhead barbed fitting 1/4-28 UNF 3.2 mm PA 白色",
+      "fr": "PMB-U28-32D-PA-W 809497 bulkhead barbed fitting 1/4-28 UNF 3.2 mm PA 白色",
+      "ko": "PMB-U28-32D-PA-W 809497 bulkhead barbed fitting 1/4-28 UNF 3.2 mm PA 白色",
+      "ru": "PMB-U28-32D-PA-W 809497 bulkhead barbed fitting 1/4-28 UNF 3.2 mm PA 白色"
+    },
+    "sortOrder": 4,
+    "imageCard": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-32d-pa-w-main.jpg",
+    "detailSlug": "pmb-u28-32d-pa-w",
+    "status": "active",
+    "sourceType": "bulkhead-barbed-selection",
+    "sourceIndex": 3
+  },
+  {
+    "productId": "809304",
+    "productCode": "809304",
+    "categoryId": "fittings",
+    "category": "fittings",
+    "productTypeId": "bulkhead-barbed-fittings",
+    "productType": "bulkhead-barbed-fittings",
+    "seriesId": "pmb",
+    "seriesName": {
+      "zh": "穿板倒刺接头",
+      "en": "PMB Bulkhead Barbed Fitting",
+      "es": "PMB Bulkhead Barbed Fitting",
+      "fr": "PMB Bulkhead Barbed Fitting",
+      "ko": "PMB Bulkhead Barbed Fitting",
+      "ru": "PMB Bulkhead Barbed Fitting"
+    },
+    "model": "PMB-U28-16D-PP-N",
+    "displayModel": "PMB-U28-16D-PP-N",
+    "name": {
+      "zh": "穿板倒刺接头",
+      "en": "Bulkhead Barbed Fitting",
+      "es": "Bulkhead Barbed Fitting",
+      "fr": "Bulkhead Barbed Fitting",
+      "ko": "Bulkhead Barbed Fitting",
+      "ru": "Bulkhead Barbed Fitting"
+    },
+    "title": {
+      "zh": "穿板倒刺接头",
+      "en": "Bulkhead Barbed Fitting",
+      "es": "Bulkhead Barbed Fitting",
+      "fr": "Bulkhead Barbed Fitting",
+      "ko": "Bulkhead Barbed Fitting",
+      "ru": "Bulkhead Barbed Fitting"
+    },
+    "displayName": {
+      "zh": "穿板倒刺接头",
+      "en": "Bulkhead Barbed Fitting",
+      "es": "Bulkhead Barbed Fitting",
+      "fr": "Bulkhead Barbed Fitting",
+      "ko": "Bulkhead Barbed Fitting",
+      "ru": "Bulkhead Barbed Fitting"
+    },
+    "cardTitle": {
+      "zh": "PMB-U28-16D-PP-N",
+      "en": "PMB-U28-16D-PP-N",
+      "es": "PMB-U28-16D-PP-N",
+      "fr": "PMB-U28-16D-PP-N",
+      "ko": "PMB-U28-16D-PP-N",
+      "ru": "PMB-U28-16D-PP-N"
+    },
+    "cardSubtitle": {
+      "zh": "穿板倒刺接头\n1/4-28 UNF螺纹，壳体材质为PP\n适配1.6 mm接管内径",
+      "en": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PP housing\nFor 1.6 mm tube ID",
+      "es": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PP housing\nFor 1.6 mm tube ID",
+      "fr": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PP housing\nFor 1.6 mm tube ID",
+      "ko": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PP housing\nFor 1.6 mm tube ID",
+      "ru": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PP housing\nFor 1.6 mm tube ID"
+    },
+    "image": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-16d-pp-n-main.jpg",
+    "imagePath": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-16d-pp-n-main.jpg",
+    "imageUrl": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-16d-pp-n-main.jpg",
+    "imageAlt": {
+      "zh": "PMB-U28-16D-PP-N 穿板倒刺接头",
+      "en": "PMB-U28-16D-PP-N bulkhead barbed fitting",
+      "es": "PMB-U28-16D-PP-N bulkhead barbed fitting",
+      "fr": "PMB-U28-16D-PP-N bulkhead barbed fitting",
+      "ko": "PMB-U28-16D-PP-N bulkhead barbed fitting",
+      "ru": "PMB-U28-16D-PP-N bulkhead barbed fitting"
+    },
+    "filters": {
+      "filter01": "穿板倒刺接头",
+      "filter02": "1/4-28 UNF",
+      "filter04": "PP",
+      "filter05": "本色",
+      "filter03": "1.6 mm"
+    },
+    "detailHref": "/products/fittings/bulkhead-barbed-fittings/pmb-u28-16d-pp-n",
+    "href": "/products/fittings/bulkhead-barbed-fittings/pmb-u28-16d-pp-n",
+    "selectionHref": "/products/fittings/bulkhead-barbed-fittings",
+    "searchKeywords": {
+      "zh": "PMB-U28-16D-PP-N 809304 穿板倒刺接头 1/4-28 UNF 1.6 mm PP 本色",
+      "en": "PMB-U28-16D-PP-N 809304 bulkhead barbed fitting 1/4-28 UNF 1.6 mm PP 本色",
+      "es": "PMB-U28-16D-PP-N 809304 bulkhead barbed fitting 1/4-28 UNF 1.6 mm PP 本色",
+      "fr": "PMB-U28-16D-PP-N 809304 bulkhead barbed fitting 1/4-28 UNF 1.6 mm PP 本色",
+      "ko": "PMB-U28-16D-PP-N 809304 bulkhead barbed fitting 1/4-28 UNF 1.6 mm PP 本色",
+      "ru": "PMB-U28-16D-PP-N 809304 bulkhead barbed fitting 1/4-28 UNF 1.6 mm PP 本色"
+    },
+    "sortOrder": 5,
+    "imageCard": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-16d-pp-n-main.jpg",
+    "detailSlug": "pmb-u28-16d-pp-n",
+    "status": "active",
+    "sourceType": "bulkhead-barbed-selection",
+    "sourceIndex": 4
+  },
+  {
+    "productId": "809517",
+    "productCode": "809517",
+    "categoryId": "fittings",
+    "category": "fittings",
+    "productTypeId": "bulkhead-barbed-fittings",
+    "productType": "bulkhead-barbed-fittings",
+    "seriesId": "pmb",
+    "seriesName": {
+      "zh": "穿板倒刺接头",
+      "en": "PMB Bulkhead Barbed Fitting",
+      "es": "PMB Bulkhead Barbed Fitting",
+      "fr": "PMB Bulkhead Barbed Fitting",
+      "ko": "PMB Bulkhead Barbed Fitting",
+      "ru": "PMB Bulkhead Barbed Fitting"
+    },
+    "model": "PMB-U28-16D-PA-W",
+    "displayModel": "PMB-U28-16D-PA-W",
+    "name": {
+      "zh": "穿板倒刺接头",
+      "en": "Bulkhead Barbed Fitting",
+      "es": "Bulkhead Barbed Fitting",
+      "fr": "Bulkhead Barbed Fitting",
+      "ko": "Bulkhead Barbed Fitting",
+      "ru": "Bulkhead Barbed Fitting"
+    },
+    "title": {
+      "zh": "穿板倒刺接头",
+      "en": "Bulkhead Barbed Fitting",
+      "es": "Bulkhead Barbed Fitting",
+      "fr": "Bulkhead Barbed Fitting",
+      "ko": "Bulkhead Barbed Fitting",
+      "ru": "Bulkhead Barbed Fitting"
+    },
+    "displayName": {
+      "zh": "穿板倒刺接头",
+      "en": "Bulkhead Barbed Fitting",
+      "es": "Bulkhead Barbed Fitting",
+      "fr": "Bulkhead Barbed Fitting",
+      "ko": "Bulkhead Barbed Fitting",
+      "ru": "Bulkhead Barbed Fitting"
+    },
+    "cardTitle": {
+      "zh": "PMB-U28-16D-PA-W",
+      "en": "PMB-U28-16D-PA-W",
+      "es": "PMB-U28-16D-PA-W",
+      "fr": "PMB-U28-16D-PA-W",
+      "ko": "PMB-U28-16D-PA-W",
+      "ru": "PMB-U28-16D-PA-W"
+    },
+    "cardSubtitle": {
+      "zh": "穿板倒刺接头\n1/4-28 UNF螺纹，壳体材质为PA\n适配1.6 mm接管内径",
+      "en": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PA housing\nFor 1.6 mm tube ID",
+      "es": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PA housing\nFor 1.6 mm tube ID",
+      "fr": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PA housing\nFor 1.6 mm tube ID",
+      "ko": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PA housing\nFor 1.6 mm tube ID",
+      "ru": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PA housing\nFor 1.6 mm tube ID"
+    },
+    "image": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-16d-pa-w-main.jpg",
+    "imagePath": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-16d-pa-w-main.jpg",
+    "imageUrl": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-16d-pa-w-main.jpg",
+    "imageAlt": {
+      "zh": "PMB-U28-16D-PA-W 穿板倒刺接头",
+      "en": "PMB-U28-16D-PA-W bulkhead barbed fitting",
+      "es": "PMB-U28-16D-PA-W bulkhead barbed fitting",
+      "fr": "PMB-U28-16D-PA-W bulkhead barbed fitting",
+      "ko": "PMB-U28-16D-PA-W bulkhead barbed fitting",
+      "ru": "PMB-U28-16D-PA-W bulkhead barbed fitting"
+    },
+    "filters": {
+      "filter01": "穿板倒刺接头",
+      "filter02": "1/4-28 UNF",
+      "filter04": "PA",
+      "filter05": "白色",
+      "filter03": "1.6 mm"
+    },
+    "detailHref": "/products/fittings/bulkhead-barbed-fittings/pmb-u28-16d-pa-w",
+    "href": "/products/fittings/bulkhead-barbed-fittings/pmb-u28-16d-pa-w",
+    "selectionHref": "/products/fittings/bulkhead-barbed-fittings",
+    "searchKeywords": {
+      "zh": "PMB-U28-16D-PA-W 809517 穿板倒刺接头 1/4-28 UNF 1.6 mm PA 白色",
+      "en": "PMB-U28-16D-PA-W 809517 bulkhead barbed fitting 1/4-28 UNF 1.6 mm PA 白色",
+      "es": "PMB-U28-16D-PA-W 809517 bulkhead barbed fitting 1/4-28 UNF 1.6 mm PA 白色",
+      "fr": "PMB-U28-16D-PA-W 809517 bulkhead barbed fitting 1/4-28 UNF 1.6 mm PA 白色",
+      "ko": "PMB-U28-16D-PA-W 809517 bulkhead barbed fitting 1/4-28 UNF 1.6 mm PA 白色",
+      "ru": "PMB-U28-16D-PA-W 809517 bulkhead barbed fitting 1/4-28 UNF 1.6 mm PA 白色"
+    },
+    "sortOrder": 6,
+    "imageCard": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-16d-pa-w-main.jpg",
+    "detailSlug": "pmb-u28-16d-pa-w",
+    "status": "active",
+    "sourceType": "bulkhead-barbed-selection",
+    "sourceIndex": 5
+  },
+  {
+    "productId": "806233",
+    "productCode": "806233",
+    "categoryId": "fittings",
+    "category": "fittings",
+    "productTypeId": "bulkhead-barbed-fittings",
+    "productType": "bulkhead-barbed-fittings",
+    "seriesId": "pmb",
+    "seriesName": {
+      "zh": "穿板倒刺接头",
+      "en": "PMB Bulkhead Barbed Fitting",
+      "es": "PMB Bulkhead Barbed Fitting",
+      "fr": "PMB Bulkhead Barbed Fitting",
+      "ko": "PMB Bulkhead Barbed Fitting",
+      "ru": "PMB Bulkhead Barbed Fitting"
+    },
+    "model": "PMB-M6-40-PP-N",
+    "displayModel": "PMB-M6-40-PP-N",
+    "name": {
+      "zh": "穿板倒刺接头",
+      "en": "Bulkhead Barbed Fitting",
+      "es": "Bulkhead Barbed Fitting",
+      "fr": "Bulkhead Barbed Fitting",
+      "ko": "Bulkhead Barbed Fitting",
+      "ru": "Bulkhead Barbed Fitting"
+    },
+    "title": {
+      "zh": "穿板倒刺接头",
+      "en": "Bulkhead Barbed Fitting",
+      "es": "Bulkhead Barbed Fitting",
+      "fr": "Bulkhead Barbed Fitting",
+      "ko": "Bulkhead Barbed Fitting",
+      "ru": "Bulkhead Barbed Fitting"
+    },
+    "displayName": {
+      "zh": "穿板倒刺接头",
+      "en": "Bulkhead Barbed Fitting",
+      "es": "Bulkhead Barbed Fitting",
+      "fr": "Bulkhead Barbed Fitting",
+      "ko": "Bulkhead Barbed Fitting",
+      "ru": "Bulkhead Barbed Fitting"
+    },
+    "cardTitle": {
+      "zh": "PMB-M6-40-PP-N",
+      "en": "PMB-M6-40-PP-N",
+      "es": "PMB-M6-40-PP-N",
+      "fr": "PMB-M6-40-PP-N",
+      "ko": "PMB-M6-40-PP-N",
+      "ru": "PMB-M6-40-PP-N"
+    },
+    "cardSubtitle": {
+      "zh": "穿板倒刺接头\nM6螺纹，壳体材质为PP\n适配4.0 mm接管内径",
+      "en": "Bulkhead Barbed Fitting\nM6 thread, PP housing\nFor 4.0 mm tube ID",
+      "es": "Bulkhead Barbed Fitting\nM6 thread, PP housing\nFor 4.0 mm tube ID",
+      "fr": "Bulkhead Barbed Fitting\nM6 thread, PP housing\nFor 4.0 mm tube ID",
+      "ko": "Bulkhead Barbed Fitting\nM6 thread, PP housing\nFor 4.0 mm tube ID",
+      "ru": "Bulkhead Barbed Fitting\nM6 thread, PP housing\nFor 4.0 mm tube ID"
+    },
+    "image": "/images/logo/foreach-logo-color.svg",
+    "imagePath": "/images/logo/foreach-logo-color.svg",
+    "imageUrl": "/images/logo/foreach-logo-color.svg",
+    "imageAlt": {
+      "zh": "PMB-M6-40-PP-N 穿板倒刺接头",
+      "en": "PMB-M6-40-PP-N bulkhead barbed fitting",
+      "es": "PMB-M6-40-PP-N bulkhead barbed fitting",
+      "fr": "PMB-M6-40-PP-N bulkhead barbed fitting",
+      "ko": "PMB-M6-40-PP-N bulkhead barbed fitting",
+      "ru": "PMB-M6-40-PP-N bulkhead barbed fitting"
+    },
+    "filters": {
+      "filter01": "穿板倒刺接头",
+      "filter02": "M6",
+      "filter04": "PP",
+      "filter05": "本色",
+      "filter03": "4.0 mm"
+    },
+    "detailHref": "/products/fittings/bulkhead-barbed-fittings/pmb-m6-40-pp-n",
+    "href": "/products/fittings/bulkhead-barbed-fittings/pmb-m6-40-pp-n",
+    "selectionHref": "/products/fittings/bulkhead-barbed-fittings",
+    "searchKeywords": {
+      "zh": "PMB-M6-40-PP-N 806233 穿板倒刺接头 M6 4.0 mm PP 本色",
+      "en": "PMB-M6-40-PP-N 806233 bulkhead barbed fitting M6 4.0 mm PP 本色",
+      "es": "PMB-M6-40-PP-N 806233 bulkhead barbed fitting M6 4.0 mm PP 本色",
+      "fr": "PMB-M6-40-PP-N 806233 bulkhead barbed fitting M6 4.0 mm PP 本色",
+      "ko": "PMB-M6-40-PP-N 806233 bulkhead barbed fitting M6 4.0 mm PP 本色",
+      "ru": "PMB-M6-40-PP-N 806233 bulkhead barbed fitting M6 4.0 mm PP 本色"
+    },
+    "sortOrder": 7,
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "detailSlug": "pmb-m6-40-pp-n",
+    "status": "active",
+    "sourceType": "bulkhead-barbed-selection",
+    "sourceIndex": 6
+  },
+  {
+    "productId": "806235",
+    "productCode": "806235",
+    "categoryId": "fittings",
+    "category": "fittings",
+    "productTypeId": "bulkhead-barbed-fittings",
+    "productType": "bulkhead-barbed-fittings",
+    "seriesId": "pmb",
+    "seriesName": {
+      "zh": "穿板倒刺接头",
+      "en": "PMB Bulkhead Barbed Fitting",
+      "es": "PMB Bulkhead Barbed Fitting",
+      "fr": "PMB Bulkhead Barbed Fitting",
+      "ko": "PMB Bulkhead Barbed Fitting",
+      "ru": "PMB Bulkhead Barbed Fitting"
+    },
+    "model": "PMB-M10-64-PP-N",
+    "displayModel": "PMB-M10-64-PP-N",
+    "name": {
+      "zh": "穿板倒刺接头",
+      "en": "Bulkhead Barbed Fitting",
+      "es": "Bulkhead Barbed Fitting",
+      "fr": "Bulkhead Barbed Fitting",
+      "ko": "Bulkhead Barbed Fitting",
+      "ru": "Bulkhead Barbed Fitting"
+    },
+    "title": {
+      "zh": "穿板倒刺接头",
+      "en": "Bulkhead Barbed Fitting",
+      "es": "Bulkhead Barbed Fitting",
+      "fr": "Bulkhead Barbed Fitting",
+      "ko": "Bulkhead Barbed Fitting",
+      "ru": "Bulkhead Barbed Fitting"
+    },
+    "displayName": {
+      "zh": "穿板倒刺接头",
+      "en": "Bulkhead Barbed Fitting",
+      "es": "Bulkhead Barbed Fitting",
+      "fr": "Bulkhead Barbed Fitting",
+      "ko": "Bulkhead Barbed Fitting",
+      "ru": "Bulkhead Barbed Fitting"
+    },
+    "cardTitle": {
+      "zh": "PMB-M10-64-PP-N",
+      "en": "PMB-M10-64-PP-N",
+      "es": "PMB-M10-64-PP-N",
+      "fr": "PMB-M10-64-PP-N",
+      "ko": "PMB-M10-64-PP-N",
+      "ru": "PMB-M10-64-PP-N"
+    },
+    "cardSubtitle": {
+      "zh": "穿板倒刺接头\nM10螺纹，壳体材质为PP\n适配6.4 mm接管内径",
+      "en": "Bulkhead Barbed Fitting\nM10 thread, PP housing\nFor 6.4 mm tube ID",
+      "es": "Bulkhead Barbed Fitting\nM10 thread, PP housing\nFor 6.4 mm tube ID",
+      "fr": "Bulkhead Barbed Fitting\nM10 thread, PP housing\nFor 6.4 mm tube ID",
+      "ko": "Bulkhead Barbed Fitting\nM10 thread, PP housing\nFor 6.4 mm tube ID",
+      "ru": "Bulkhead Barbed Fitting\nM10 thread, PP housing\nFor 6.4 mm tube ID"
+    },
+    "image": "/images/logo/foreach-logo-color.svg",
+    "imagePath": "/images/logo/foreach-logo-color.svg",
+    "imageUrl": "/images/logo/foreach-logo-color.svg",
+    "imageAlt": {
+      "zh": "PMB-M10-64-PP-N 穿板倒刺接头",
+      "en": "PMB-M10-64-PP-N bulkhead barbed fitting",
+      "es": "PMB-M10-64-PP-N bulkhead barbed fitting",
+      "fr": "PMB-M10-64-PP-N bulkhead barbed fitting",
+      "ko": "PMB-M10-64-PP-N bulkhead barbed fitting",
+      "ru": "PMB-M10-64-PP-N bulkhead barbed fitting"
+    },
+    "filters": {
+      "filter01": "穿板倒刺接头",
+      "filter02": "M10",
+      "filter04": "PP",
+      "filter05": "本色",
+      "filter03": "6.4 mm"
+    },
+    "detailHref": "/products/fittings/bulkhead-barbed-fittings/pmb-m10-64-pp-n",
+    "href": "/products/fittings/bulkhead-barbed-fittings/pmb-m10-64-pp-n",
+    "selectionHref": "/products/fittings/bulkhead-barbed-fittings",
+    "searchKeywords": {
+      "zh": "PMB-M10-64-PP-N 806235 穿板倒刺接头 M10 6.4 mm PP 本色",
+      "en": "PMB-M10-64-PP-N 806235 bulkhead barbed fitting M10 6.4 mm PP 本色",
+      "es": "PMB-M10-64-PP-N 806235 bulkhead barbed fitting M10 6.4 mm PP 本色",
+      "fr": "PMB-M10-64-PP-N 806235 bulkhead barbed fitting M10 6.4 mm PP 本色",
+      "ko": "PMB-M10-64-PP-N 806235 bulkhead barbed fitting M10 6.4 mm PP 本色",
+      "ru": "PMB-M10-64-PP-N 806235 bulkhead barbed fitting M10 6.4 mm PP 本色"
+    },
+    "sortOrder": 8,
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "detailSlug": "pmb-m10-64-pp-n",
+    "status": "active",
+    "sourceType": "bulkhead-barbed-selection",
+    "sourceIndex": 7
+  },
+  {
+    "productId": "806236",
+    "productCode": "806236",
+    "categoryId": "fittings",
+    "category": "fittings",
+    "productTypeId": "bulkhead-barbed-fittings",
+    "productType": "bulkhead-barbed-fittings",
+    "seriesId": "pmb",
+    "seriesName": {
+      "zh": "穿板倒刺接头",
+      "en": "PMB Bulkhead Barbed Fitting",
+      "es": "PMB Bulkhead Barbed Fitting",
+      "fr": "PMB Bulkhead Barbed Fitting",
+      "ko": "PMB Bulkhead Barbed Fitting",
+      "ru": "PMB Bulkhead Barbed Fitting"
+    },
+    "model": "PMB-M12-79-PP-N",
+    "displayModel": "PMB-M12-79-PP-N",
+    "name": {
+      "zh": "穿板倒刺接头",
+      "en": "Bulkhead Barbed Fitting",
+      "es": "Bulkhead Barbed Fitting",
+      "fr": "Bulkhead Barbed Fitting",
+      "ko": "Bulkhead Barbed Fitting",
+      "ru": "Bulkhead Barbed Fitting"
+    },
+    "title": {
+      "zh": "穿板倒刺接头",
+      "en": "Bulkhead Barbed Fitting",
+      "es": "Bulkhead Barbed Fitting",
+      "fr": "Bulkhead Barbed Fitting",
+      "ko": "Bulkhead Barbed Fitting",
+      "ru": "Bulkhead Barbed Fitting"
+    },
+    "displayName": {
+      "zh": "穿板倒刺接头",
+      "en": "Bulkhead Barbed Fitting",
+      "es": "Bulkhead Barbed Fitting",
+      "fr": "Bulkhead Barbed Fitting",
+      "ko": "Bulkhead Barbed Fitting",
+      "ru": "Bulkhead Barbed Fitting"
+    },
+    "cardTitle": {
+      "zh": "PMB-M12-79-PP-N",
+      "en": "PMB-M12-79-PP-N",
+      "es": "PMB-M12-79-PP-N",
+      "fr": "PMB-M12-79-PP-N",
+      "ko": "PMB-M12-79-PP-N",
+      "ru": "PMB-M12-79-PP-N"
+    },
+    "cardSubtitle": {
+      "zh": "穿板倒刺接头\nM12螺纹，壳体材质为PP\n适配7.9 mm接管内径",
+      "en": "Bulkhead Barbed Fitting\nM12 thread, PP housing\nFor 7.9 mm tube ID",
+      "es": "Bulkhead Barbed Fitting\nM12 thread, PP housing\nFor 7.9 mm tube ID",
+      "fr": "Bulkhead Barbed Fitting\nM12 thread, PP housing\nFor 7.9 mm tube ID",
+      "ko": "Bulkhead Barbed Fitting\nM12 thread, PP housing\nFor 7.9 mm tube ID",
+      "ru": "Bulkhead Barbed Fitting\nM12 thread, PP housing\nFor 7.9 mm tube ID"
+    },
+    "image": "/images/logo/foreach-logo-color.svg",
+    "imagePath": "/images/logo/foreach-logo-color.svg",
+    "imageUrl": "/images/logo/foreach-logo-color.svg",
+    "imageAlt": {
+      "zh": "PMB-M12-79-PP-N 穿板倒刺接头",
+      "en": "PMB-M12-79-PP-N bulkhead barbed fitting",
+      "es": "PMB-M12-79-PP-N bulkhead barbed fitting",
+      "fr": "PMB-M12-79-PP-N bulkhead barbed fitting",
+      "ko": "PMB-M12-79-PP-N bulkhead barbed fitting",
+      "ru": "PMB-M12-79-PP-N bulkhead barbed fitting"
+    },
+    "filters": {
+      "filter01": "穿板倒刺接头",
+      "filter02": "M12",
+      "filter04": "PP",
+      "filter05": "本色",
+      "filter03": "7.9 mm"
+    },
+    "detailHref": "/products/fittings/bulkhead-barbed-fittings/pmb-m12-79-pp-n",
+    "href": "/products/fittings/bulkhead-barbed-fittings/pmb-m12-79-pp-n",
+    "selectionHref": "/products/fittings/bulkhead-barbed-fittings",
+    "searchKeywords": {
+      "zh": "PMB-M12-79-PP-N 806236 穿板倒刺接头 M12 7.9 mm PP 本色",
+      "en": "PMB-M12-79-PP-N 806236 bulkhead barbed fitting M12 7.9 mm PP 本色",
+      "es": "PMB-M12-79-PP-N 806236 bulkhead barbed fitting M12 7.9 mm PP 本色",
+      "fr": "PMB-M12-79-PP-N 806236 bulkhead barbed fitting M12 7.9 mm PP 本色",
+      "ko": "PMB-M12-79-PP-N 806236 bulkhead barbed fitting M12 7.9 mm PP 本色",
+      "ru": "PMB-M12-79-PP-N 806236 bulkhead barbed fitting M12 7.9 mm PP 本色"
+    },
+    "sortOrder": 9,
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "detailSlug": "pmb-m12-79-pp-n",
+    "status": "active",
+    "sourceType": "bulkhead-barbed-selection",
+    "sourceIndex": 8
+  },
+  {
+    "productId": "809498",
+    "productCode": "809498",
+    "categoryId": "fittings",
+    "category": "fittings",
+    "productTypeId": "bulkhead-barbed-fittings",
+    "productType": "bulkhead-barbed-fittings",
+    "seriesId": "pmbsn",
+    "seriesName": {
+      "zh": "六角螺母",
+      "en": "Hex Nut",
+      "es": "Hex Nut",
+      "fr": "Hex Nut",
+      "ko": "Hex Nut",
+      "ru": "Hex Nut"
+    },
+    "model": "PMBSN-U28-PA-W",
+    "displayModel": "PMBSN-U28-PA-W",
+    "name": {
+      "zh": "六角螺母",
+      "en": "Hex Nut",
+      "es": "Hex Nut",
+      "fr": "Hex Nut",
+      "ko": "Hex Nut",
+      "ru": "Hex Nut"
+    },
+    "title": {
+      "zh": "六角螺母",
+      "en": "Hex Nut",
+      "es": "Hex Nut",
+      "fr": "Hex Nut",
+      "ko": "Hex Nut",
+      "ru": "Hex Nut"
+    },
+    "displayName": {
+      "zh": "六角螺母",
+      "en": "Hex Nut",
+      "es": "Hex Nut",
+      "fr": "Hex Nut",
+      "ko": "Hex Nut",
+      "ru": "Hex Nut"
+    },
+    "cardTitle": {
+      "zh": "PMBSN-U28-PA-W",
+      "en": "PMBSN-U28-PA-W",
+      "es": "PMBSN-U28-PA-W",
+      "fr": "PMBSN-U28-PA-W",
+      "ko": "PMBSN-U28-PA-W",
+      "ru": "PMBSN-U28-PA-W"
+    },
+    "cardSubtitle": {
+      "zh": "六角螺母\n1/4-28 UNF螺纹，螺母材质为PA\n用于穿板接头安装固定",
+      "en": "Hex Nut\n1/4-28 UNF thread, PA material\nFor bulkhead fitting installation",
+      "es": "Hex Nut\n1/4-28 UNF thread, PA material\nFor bulkhead fitting installation",
+      "fr": "Hex Nut\n1/4-28 UNF thread, PA material\nFor bulkhead fitting installation",
+      "ko": "Hex Nut\n1/4-28 UNF thread, PA material\nFor bulkhead fitting installation",
+      "ru": "Hex Nut\n1/4-28 UNF thread, PA material\nFor bulkhead fitting installation"
+    },
+    "image": "/images/products/fittings/bulkhead-barbed-fittings/products/pmbsn-u28-pa-w-main.jpg",
+    "imagePath": "/images/products/fittings/bulkhead-barbed-fittings/products/pmbsn-u28-pa-w-main.jpg",
+    "imageUrl": "/images/products/fittings/bulkhead-barbed-fittings/products/pmbsn-u28-pa-w-main.jpg",
+    "imageAlt": {
+      "zh": "PMBSN-U28-PA-W 六角螺母",
+      "en": "PMBSN-U28-PA-W hex nut",
+      "es": "PMBSN-U28-PA-W hex nut",
+      "fr": "PMBSN-U28-PA-W hex nut",
+      "ko": "PMBSN-U28-PA-W hex nut",
+      "ru": "PMBSN-U28-PA-W hex nut"
+    },
+    "filters": {
+      "filter01": "六角螺母",
+      "filter02": "1/4-28 UNF",
+      "filter04": "PA",
+      "filter05": "白色"
+    },
+    "detailHref": "/products/fittings/bulkhead-barbed-fittings/pmbsn-u28-pa-w",
+    "href": "/products/fittings/bulkhead-barbed-fittings/pmbsn-u28-pa-w",
+    "selectionHref": "/products/fittings/bulkhead-barbed-fittings",
+    "searchKeywords": {
+      "zh": "PMBSN-U28-PA-W 809498 六角螺母 1/4-28 UNF PA 白色",
+      "en": "PMBSN-U28-PA-W 809498 hex nut 1/4-28 UNF PA 白色",
+      "es": "PMBSN-U28-PA-W 809498 hex nut 1/4-28 UNF PA 白色",
+      "fr": "PMBSN-U28-PA-W 809498 hex nut 1/4-28 UNF PA 白色",
+      "ko": "PMBSN-U28-PA-W 809498 hex nut 1/4-28 UNF PA 白色",
+      "ru": "PMBSN-U28-PA-W 809498 hex nut 1/4-28 UNF PA 白色"
+    },
+    "sortOrder": 10,
+    "imageCard": "/images/products/fittings/bulkhead-barbed-fittings/products/pmbsn-u28-pa-w-main.jpg",
+    "detailSlug": "pmbsn-u28-pa-w",
+    "status": "active",
+    "sourceType": "bulkhead-barbed-selection",
+    "sourceIndex": 9
+  },
+  {
+    "productId": "809464",
+    "productCode": "809464",
+    "categoryId": "fittings",
+    "category": "fittings",
+    "productTypeId": "bulkhead-barbed-fittings",
+    "productType": "bulkhead-barbed-fittings",
+    "seriesId": "pmbsn",
+    "seriesName": {
+      "zh": "六角螺母",
+      "en": "Hex Nut",
+      "es": "Hex Nut",
+      "fr": "Hex Nut",
+      "ko": "Hex Nut",
+      "ru": "Hex Nut"
+    },
+    "model": "PMBSN-U28-PP-N",
+    "displayModel": "PMBSN-U28-PP-N",
+    "name": {
+      "zh": "六角螺母",
+      "en": "Hex Nut",
+      "es": "Hex Nut",
+      "fr": "Hex Nut",
+      "ko": "Hex Nut",
+      "ru": "Hex Nut"
+    },
+    "title": {
+      "zh": "六角螺母",
+      "en": "Hex Nut",
+      "es": "Hex Nut",
+      "fr": "Hex Nut",
+      "ko": "Hex Nut",
+      "ru": "Hex Nut"
+    },
+    "displayName": {
+      "zh": "六角螺母",
+      "en": "Hex Nut",
+      "es": "Hex Nut",
+      "fr": "Hex Nut",
+      "ko": "Hex Nut",
+      "ru": "Hex Nut"
+    },
+    "cardTitle": {
+      "zh": "PMBSN-U28-PP-N",
+      "en": "PMBSN-U28-PP-N",
+      "es": "PMBSN-U28-PP-N",
+      "fr": "PMBSN-U28-PP-N",
+      "ko": "PMBSN-U28-PP-N",
+      "ru": "PMBSN-U28-PP-N"
+    },
+    "cardSubtitle": {
+      "zh": "六角螺母\n1/4-28 UNF螺纹，螺母材质为PP\n用于穿板接头安装固定",
+      "en": "Hex Nut\n1/4-28 UNF thread, PP material\nFor bulkhead fitting installation",
+      "es": "Hex Nut\n1/4-28 UNF thread, PP material\nFor bulkhead fitting installation",
+      "fr": "Hex Nut\n1/4-28 UNF thread, PP material\nFor bulkhead fitting installation",
+      "ko": "Hex Nut\n1/4-28 UNF thread, PP material\nFor bulkhead fitting installation",
+      "ru": "Hex Nut\n1/4-28 UNF thread, PP material\nFor bulkhead fitting installation"
+    },
+    "image": "/images/products/fittings/bulkhead-barbed-fittings/products/pmbsn-u28-pp-n-main.jpg",
+    "imagePath": "/images/products/fittings/bulkhead-barbed-fittings/products/pmbsn-u28-pp-n-main.jpg",
+    "imageUrl": "/images/products/fittings/bulkhead-barbed-fittings/products/pmbsn-u28-pp-n-main.jpg",
+    "imageAlt": {
+      "zh": "PMBSN-U28-PP-N 六角螺母",
+      "en": "PMBSN-U28-PP-N hex nut",
+      "es": "PMBSN-U28-PP-N hex nut",
+      "fr": "PMBSN-U28-PP-N hex nut",
+      "ko": "PMBSN-U28-PP-N hex nut",
+      "ru": "PMBSN-U28-PP-N hex nut"
+    },
+    "filters": {
+      "filter01": "六角螺母",
+      "filter02": "1/4-28 UNF",
+      "filter04": "PP",
+      "filter05": "本色"
+    },
+    "detailHref": "/products/fittings/bulkhead-barbed-fittings/pmbsn-u28-pp-n",
+    "href": "/products/fittings/bulkhead-barbed-fittings/pmbsn-u28-pp-n",
+    "selectionHref": "/products/fittings/bulkhead-barbed-fittings",
+    "searchKeywords": {
+      "zh": "PMBSN-U28-PP-N 809464 六角螺母 1/4-28 UNF PP 本色",
+      "en": "PMBSN-U28-PP-N 809464 hex nut 1/4-28 UNF PP 本色",
+      "es": "PMBSN-U28-PP-N 809464 hex nut 1/4-28 UNF PP 本色",
+      "fr": "PMBSN-U28-PP-N 809464 hex nut 1/4-28 UNF PP 本色",
+      "ko": "PMBSN-U28-PP-N 809464 hex nut 1/4-28 UNF PP 本色",
+      "ru": "PMBSN-U28-PP-N 809464 hex nut 1/4-28 UNF PP 本色"
+    },
+    "sortOrder": 11,
+    "imageCard": "/images/products/fittings/bulkhead-barbed-fittings/products/pmbsn-u28-pp-n-main.jpg",
+    "detailSlug": "pmbsn-u28-pp-n",
+    "status": "active",
+    "sourceType": "bulkhead-barbed-selection",
+    "sourceIndex": 10
+  }
+] as any[];
+
+export const bulkheadBarbedFittingTaxonomyItems =
+[
+  {
+    "id": "fittings:bulkhead-barbed-fittings",
+    "categoryId": "fittings",
+    "categoryLabel": {
+      "zh": "接头系列",
+      "en": "Fittings",
+      "es": "Fittings",
+      "fr": "Fittings",
+      "ko": "Fittings",
+      "ru": "Fittings"
+    },
+    "productTypeId": "bulkhead-barbed-fittings",
+    "productTypeLabel": {
+      "zh": "穿板倒刺接头",
+      "en": "Bulkhead Barbed Fittings",
+      "es": "Bulkhead Barbed Fittings",
+      "fr": "Bulkhead Barbed Fittings",
+      "ko": "Bulkhead Barbed Fittings",
+      "ru": "Bulkhead Barbed Fittings"
+    },
+    "label": {
+      "zh": "穿板倒刺接头",
+      "en": "Bulkhead Barbed Fittings",
+      "es": "Bulkhead Barbed Fittings",
+      "fr": "Bulkhead Barbed Fittings",
+      "ko": "Bulkhead Barbed Fittings",
+      "ru": "Bulkhead Barbed Fittings"
+    },
+    "sortOrder": 65,
+    "visible": true
+  }
+] as any[];
+
+export const bulkheadBarbedFittingFilterLabels =
+[
+  {
+    "categoryId": "fittings",
+    "productTypeId": "bulkhead-barbed-fittings",
+    "filterKey": "filter01",
+    "label": {
+      "zh": "产品结构",
+      "en": "Product Structure",
+      "es": "Product Structure",
+      "fr": "Product Structure",
+      "ko": "Product Structure",
+      "ru": "Product Structure"
+    },
+    "inputType": "multiple",
+    "sortOrder": 10,
+    "visible": true
+  },
+  {
+    "categoryId": "fittings",
+    "productTypeId": "bulkhead-barbed-fittings",
+    "filterKey": "filter02",
+    "label": {
+      "zh": "螺纹规格",
+      "en": "Thread Size",
+      "es": "Thread Size",
+      "fr": "Thread Size",
+      "ko": "Thread Size",
+      "ru": "Thread Size"
+    },
+    "inputType": "multiple",
+    "sortOrder": 20,
+    "visible": true
+  },
+  {
+    "categoryId": "fittings",
+    "productTypeId": "bulkhead-barbed-fittings",
+    "filterKey": "filter03",
+    "label": {
+      "zh": "接管内径",
+      "en": "Tube ID",
+      "es": "Tube ID",
+      "fr": "Tube ID",
+      "ko": "Tube ID",
+      "ru": "Tube ID"
+    },
+    "inputType": "multiple",
+    "sortOrder": 30,
+    "visible": true
+  },
+  {
+    "categoryId": "fittings",
+    "productTypeId": "bulkhead-barbed-fittings",
+    "filterKey": "filter04",
+    "label": {
+      "zh": "材质",
+      "en": "Material",
+      "es": "Material",
+      "fr": "Material",
+      "ko": "Material",
+      "ru": "Material"
+    },
+    "inputType": "multiple",
+    "sortOrder": 40,
+    "visible": true
+  },
+  {
+    "categoryId": "fittings",
+    "productTypeId": "bulkhead-barbed-fittings",
+    "filterKey": "filter05",
+    "label": {
+      "zh": "颜色",
+      "en": "Color",
+      "es": "Color",
+      "fr": "Color",
+      "ko": "Color",
+      "ru": "Color"
+    },
+    "inputType": "multiple",
+    "sortOrder": 50,
+    "visible": true
+  }
+] as any[];

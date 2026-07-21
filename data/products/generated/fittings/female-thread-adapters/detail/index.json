@@ -1,0 +1,3943 @@
+[
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "female-thread-adapters",
+    "productTypeName": "方形二通内螺纹互转接头",
+    "productTypeLabel": "内螺纹互转接头",
+    "productId": "809484",
+    "productCode": "809484",
+    "seriesId": "us",
+    "seriesCode": "US",
+    "seriesName": "方形二通内螺纹互转接头",
+    "slug": "us-m6-05-ac-b",
+    "model": "US-M6-05-AC-B",
+    "name": "方形二通内螺纹互转接头",
+    "title": "方形二通内螺纹互转接头",
+    "displayName": "方形二通内螺纹互转接头",
+    "productName": "方形二通内螺纹互转接头",
+    "modelDisplay": "US-M6-05-AC-B",
+    "displayModel": "US-M6-05-AC-B",
+    "foreachModel": "US-M6-05-AC-B",
+    "description": "US-M6-05-AC-B是一款方形二通内螺纹互转接头，采用M6内螺纹接口，通径为0.5 mm，主体材质为AC，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "shortDescription": "US-M6-05-AC-B是一款方形二通内螺纹互转接头，采用M6内螺纹接口，通径为0.5 mm，主体材质为AC，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "heroDescription": "US-M6-05-AC-B是一款方形二通内螺纹互转接头，采用M6内螺纹接口，通径为0.5 mm，主体材质为AC，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "advantages": [
+      "连接结构：二通",
+      "螺纹规格：M6",
+      "通径：0.5 mm",
+      "材质：AC",
+      "颜色：黑色"
+    ],
+    "commonApplications": [
+      "仪器内部液路转接",
+      "泵阀与流路接口连接",
+      "IVD与分析仪器流路",
+      "实验室自动化设备液路"
+    ],
+    "mainImage": "/images/products/fittings/female-thread-adapters/products/US-M6-05-AC-B.jpg",
+    "image": "/images/products/fittings/female-thread-adapters/products/US-M6-05-AC-B.jpg",
+    "heroImage": "/images/products/fittings/female-thread-adapters/products/US-M6-05-AC-B.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/US-M6-05-AC-B.jpg",
+    "additionalImages": [],
+    "images": [
+      "/images/products/fittings/female-thread-adapters/products/US-M6-05-AC-B.jpg"
+    ],
+    "model3dUrl": "",
+    "modelUrl": "",
+    "drawingPdfUrl": "/documents/products/fittings/female-thread-adapters/drawings/US-M6-C.pdf",
+    "drawingUrl": "/documents/products/fittings/female-thread-adapters/drawings/US-M6-C.pdf",
+    "drawingPdf": "/documents/products/fittings/female-thread-adapters/drawings/US-M6-C.pdf",
+    "detailMode": "standard_model",
+    "specs": [
+      {
+        "label": "型号",
+        "value": "US-M6-05-AC-B"
+      },
+      {
+        "label": "商品编码",
+        "value": "809484"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "US"
+      },
+      {
+        "label": "连接结构",
+        "value": "二通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "M6"
+      },
+      {
+        "label": "通径",
+        "value": "0.5 mm"
+      },
+      {
+        "label": "材质",
+        "value": "AC"
+      },
+      {
+        "label": "颜色",
+        "value": "黑色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "US-M6-05-AC-B"
+      },
+      {
+        "label": "商品编码",
+        "value": "809484"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "US"
+      },
+      {
+        "label": "连接结构",
+        "value": "二通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "M6"
+      },
+      {
+        "label": "通径",
+        "value": "0.5 mm"
+      },
+      {
+        "label": "材质",
+        "value": "AC"
+      },
+      {
+        "label": "颜色",
+        "value": "黑色"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "二通和三通如何选择？",
+        "answer": "二通用于两路接口连接，三通用于一路分成两路或两路汇合，应根据液路结构选择。"
+      },
+      {
+        "question": "通径是否等于螺纹尺寸？",
+        "answer": "通径表示内部流道尺寸，螺纹规格表示接口连接标准，两者不是同一个参数。"
+      },
+      {
+        "question": "不同螺纹能否互转？",
+        "answer": "应以具体在售型号的接口组合为准，未列出的组合可提交定制需求。"
+      },
+      {
+        "question": "PP、PA和SS材质如何选择？",
+        "answer": "应结合介质兼容性、压力、温度和机械强度选择合适材质。"
+      },
+      {
+        "question": "能否提供二维图和三维模型？",
+        "answer": "已上传的资源会在详情页显示，暂未上传的型号可通过添加图纸或清单备注提交资料需求。"
+      }
+    ],
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "detailHref": "/products/fittings/female-thread-adapters/us-m6-05-ac-b",
+    "selectionHref": "/products/fittings/female-thread-adapters",
+    "configuratorHref": "/products/fittings/female-thread-adapters",
+    "modelSelectionHref": "/products/fittings/female-thread-adapters",
+    "resourceStatus": {
+      "model3d": "missing",
+      "drawing": "available"
+    },
+    "resourceMessages": {
+      "model3d": "暂无3D模型",
+      "drawing": "暂无二维图纸"
+    }
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "female-thread-adapters",
+    "productTypeName": "方形二通内螺纹互转接头",
+    "productTypeLabel": "内螺纹互转接头",
+    "productId": "809531",
+    "productCode": "809531",
+    "seriesId": "us",
+    "seriesCode": "US",
+    "seriesName": "方形二通内螺纹互转接头",
+    "slug": "us-m6-10-ac-b",
+    "model": "US-M6-10-AC-B",
+    "name": "方形二通内螺纹互转接头",
+    "title": "方形二通内螺纹互转接头",
+    "displayName": "方形二通内螺纹互转接头",
+    "productName": "方形二通内螺纹互转接头",
+    "modelDisplay": "US-M6-10-AC-B",
+    "displayModel": "US-M6-10-AC-B",
+    "foreachModel": "US-M6-10-AC-B",
+    "description": "US-M6-10-AC-B是一款方形二通内螺纹互转接头，采用M6内螺纹接口，通径为1.0 mm，主体材质为AC，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "shortDescription": "US-M6-10-AC-B是一款方形二通内螺纹互转接头，采用M6内螺纹接口，通径为1.0 mm，主体材质为AC，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "heroDescription": "US-M6-10-AC-B是一款方形二通内螺纹互转接头，采用M6内螺纹接口，通径为1.0 mm，主体材质为AC，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "advantages": [
+      "连接结构：二通",
+      "螺纹规格：M6",
+      "通径：1.0 mm",
+      "材质：AC",
+      "颜色：黑色"
+    ],
+    "commonApplications": [
+      "仪器内部液路转接",
+      "泵阀与流路接口连接",
+      "IVD与分析仪器流路",
+      "实验室自动化设备液路"
+    ],
+    "mainImage": "/images/products/fittings/female-thread-adapters/products/US-M6-10-AC-B.jpg",
+    "image": "/images/products/fittings/female-thread-adapters/products/US-M6-10-AC-B.jpg",
+    "heroImage": "/images/products/fittings/female-thread-adapters/products/US-M6-10-AC-B.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/US-M6-10-AC-B.jpg",
+    "additionalImages": [],
+    "images": [
+      "/images/products/fittings/female-thread-adapters/products/US-M6-10-AC-B.jpg"
+    ],
+    "model3dUrl": "",
+    "modelUrl": "",
+    "drawingPdfUrl": "/documents/products/fittings/female-thread-adapters/drawings/US-M6-C.pdf",
+    "drawingUrl": "/documents/products/fittings/female-thread-adapters/drawings/US-M6-C.pdf",
+    "drawingPdf": "/documents/products/fittings/female-thread-adapters/drawings/US-M6-C.pdf",
+    "detailMode": "standard_model",
+    "specs": [
+      {
+        "label": "型号",
+        "value": "US-M6-10-AC-B"
+      },
+      {
+        "label": "商品编码",
+        "value": "809531"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "US"
+      },
+      {
+        "label": "连接结构",
+        "value": "二通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "M6"
+      },
+      {
+        "label": "通径",
+        "value": "1.0 mm"
+      },
+      {
+        "label": "材质",
+        "value": "AC"
+      },
+      {
+        "label": "颜色",
+        "value": "黑色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "US-M6-10-AC-B"
+      },
+      {
+        "label": "商品编码",
+        "value": "809531"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "US"
+      },
+      {
+        "label": "连接结构",
+        "value": "二通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "M6"
+      },
+      {
+        "label": "通径",
+        "value": "1.0 mm"
+      },
+      {
+        "label": "材质",
+        "value": "AC"
+      },
+      {
+        "label": "颜色",
+        "value": "黑色"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "二通和三通如何选择？",
+        "answer": "二通用于两路接口连接，三通用于一路分成两路或两路汇合，应根据液路结构选择。"
+      },
+      {
+        "question": "通径是否等于螺纹尺寸？",
+        "answer": "通径表示内部流道尺寸，螺纹规格表示接口连接标准，两者不是同一个参数。"
+      },
+      {
+        "question": "不同螺纹能否互转？",
+        "answer": "应以具体在售型号的接口组合为准，未列出的组合可提交定制需求。"
+      },
+      {
+        "question": "PP、PA和SS材质如何选择？",
+        "answer": "应结合介质兼容性、压力、温度和机械强度选择合适材质。"
+      },
+      {
+        "question": "能否提供二维图和三维模型？",
+        "answer": "已上传的资源会在详情页显示，暂未上传的型号可通过添加图纸或清单备注提交资料需求。"
+      }
+    ],
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "detailHref": "/products/fittings/female-thread-adapters/us-m6-10-ac-b",
+    "selectionHref": "/products/fittings/female-thread-adapters",
+    "configuratorHref": "/products/fittings/female-thread-adapters",
+    "modelSelectionHref": "/products/fittings/female-thread-adapters",
+    "resourceStatus": {
+      "model3d": "missing",
+      "drawing": "available"
+    },
+    "resourceMessages": {
+      "model3d": "暂无3D模型",
+      "drawing": "暂无二维图纸"
+    }
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "female-thread-adapters",
+    "productTypeName": "方形二通内螺纹互转接头",
+    "productTypeLabel": "内螺纹互转接头",
+    "productId": "809532",
+    "productCode": "809532",
+    "seriesId": "us",
+    "seriesCode": "US",
+    "seriesName": "方形二通内螺纹互转接头",
+    "slug": "us-m6-15-ac-b",
+    "model": "US-M6-15-AC-B",
+    "name": "方形二通内螺纹互转接头",
+    "title": "方形二通内螺纹互转接头",
+    "displayName": "方形二通内螺纹互转接头",
+    "productName": "方形二通内螺纹互转接头",
+    "modelDisplay": "US-M6-15-AC-B",
+    "displayModel": "US-M6-15-AC-B",
+    "foreachModel": "US-M6-15-AC-B",
+    "description": "US-M6-15-AC-B是一款方形二通内螺纹互转接头，采用M6内螺纹接口，通径为1.5 mm，主体材质为AC，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "shortDescription": "US-M6-15-AC-B是一款方形二通内螺纹互转接头，采用M6内螺纹接口，通径为1.5 mm，主体材质为AC，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "heroDescription": "US-M6-15-AC-B是一款方形二通内螺纹互转接头，采用M6内螺纹接口，通径为1.5 mm，主体材质为AC，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "advantages": [
+      "连接结构：二通",
+      "螺纹规格：M6",
+      "通径：1.5 mm",
+      "材质：AC",
+      "颜色：黑色"
+    ],
+    "commonApplications": [
+      "仪器内部液路转接",
+      "泵阀与流路接口连接",
+      "IVD与分析仪器流路",
+      "实验室自动化设备液路"
+    ],
+    "mainImage": "/images/products/fittings/female-thread-adapters/products/US-M6-15-AC-B.jpg",
+    "image": "/images/products/fittings/female-thread-adapters/products/US-M6-15-AC-B.jpg",
+    "heroImage": "/images/products/fittings/female-thread-adapters/products/US-M6-15-AC-B.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/US-M6-15-AC-B.jpg",
+    "additionalImages": [],
+    "images": [
+      "/images/products/fittings/female-thread-adapters/products/US-M6-15-AC-B.jpg"
+    ],
+    "model3dUrl": "",
+    "modelUrl": "",
+    "drawingPdfUrl": "/documents/products/fittings/female-thread-adapters/drawings/US-M6-C.pdf",
+    "drawingUrl": "/documents/products/fittings/female-thread-adapters/drawings/US-M6-C.pdf",
+    "drawingPdf": "/documents/products/fittings/female-thread-adapters/drawings/US-M6-C.pdf",
+    "detailMode": "standard_model",
+    "specs": [
+      {
+        "label": "型号",
+        "value": "US-M6-15-AC-B"
+      },
+      {
+        "label": "商品编码",
+        "value": "809532"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "US"
+      },
+      {
+        "label": "连接结构",
+        "value": "二通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "M6"
+      },
+      {
+        "label": "通径",
+        "value": "1.5 mm"
+      },
+      {
+        "label": "材质",
+        "value": "AC"
+      },
+      {
+        "label": "颜色",
+        "value": "黑色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "US-M6-15-AC-B"
+      },
+      {
+        "label": "商品编码",
+        "value": "809532"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "US"
+      },
+      {
+        "label": "连接结构",
+        "value": "二通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "M6"
+      },
+      {
+        "label": "通径",
+        "value": "1.5 mm"
+      },
+      {
+        "label": "材质",
+        "value": "AC"
+      },
+      {
+        "label": "颜色",
+        "value": "黑色"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "二通和三通如何选择？",
+        "answer": "二通用于两路接口连接，三通用于一路分成两路或两路汇合，应根据液路结构选择。"
+      },
+      {
+        "question": "通径是否等于螺纹尺寸？",
+        "answer": "通径表示内部流道尺寸，螺纹规格表示接口连接标准，两者不是同一个参数。"
+      },
+      {
+        "question": "不同螺纹能否互转？",
+        "answer": "应以具体在售型号的接口组合为准，未列出的组合可提交定制需求。"
+      },
+      {
+        "question": "PP、PA和SS材质如何选择？",
+        "answer": "应结合介质兼容性、压力、温度和机械强度选择合适材质。"
+      },
+      {
+        "question": "能否提供二维图和三维模型？",
+        "answer": "已上传的资源会在详情页显示，暂未上传的型号可通过添加图纸或清单备注提交资料需求。"
+      }
+    ],
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "detailHref": "/products/fittings/female-thread-adapters/us-m6-15-ac-b",
+    "selectionHref": "/products/fittings/female-thread-adapters",
+    "configuratorHref": "/products/fittings/female-thread-adapters",
+    "modelSelectionHref": "/products/fittings/female-thread-adapters",
+    "resourceStatus": {
+      "model3d": "missing",
+      "drawing": "available"
+    },
+    "resourceMessages": {
+      "model3d": "暂无3D模型",
+      "drawing": "暂无二维图纸"
+    }
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "female-thread-adapters",
+    "productTypeName": "方形二通内螺纹互转接头",
+    "productTypeLabel": "内螺纹互转接头",
+    "productId": "809533",
+    "productCode": "809533",
+    "seriesId": "us",
+    "seriesCode": "US",
+    "seriesName": "方形二通内螺纹互转接头",
+    "slug": "us-m6-05-pp-n",
+    "model": "US-M6-05-PP-N",
+    "name": "方形二通内螺纹互转接头",
+    "title": "方形二通内螺纹互转接头",
+    "displayName": "方形二通内螺纹互转接头",
+    "productName": "方形二通内螺纹互转接头",
+    "modelDisplay": "US-M6-05-PP-N",
+    "displayModel": "US-M6-05-PP-N",
+    "foreachModel": "US-M6-05-PP-N",
+    "description": "US-M6-05-PP-N是一款方形二通内螺纹互转接头，采用M6内螺纹接口，通径为0.5 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "shortDescription": "US-M6-05-PP-N是一款方形二通内螺纹互转接头，采用M6内螺纹接口，通径为0.5 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "heroDescription": "US-M6-05-PP-N是一款方形二通内螺纹互转接头，采用M6内螺纹接口，通径为0.5 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "advantages": [
+      "连接结构：二通",
+      "螺纹规格：M6",
+      "通径：0.5 mm",
+      "材质：PP",
+      "颜色：本色"
+    ],
+    "commonApplications": [
+      "仪器内部液路转接",
+      "泵阀与流路接口连接",
+      "IVD与分析仪器流路",
+      "实验室自动化设备液路"
+    ],
+    "mainImage": "/images/products/fittings/female-thread-adapters/products/US-M6-05-PP-N.jpg",
+    "image": "/images/products/fittings/female-thread-adapters/products/US-M6-05-PP-N.jpg",
+    "heroImage": "/images/products/fittings/female-thread-adapters/products/US-M6-05-PP-N.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/US-M6-05-PP-N.jpg",
+    "additionalImages": [],
+    "images": [
+      "/images/products/fittings/female-thread-adapters/products/US-M6-05-PP-N.jpg"
+    ],
+    "model3dUrl": "",
+    "modelUrl": "",
+    "drawingPdfUrl": "/documents/products/fittings/female-thread-adapters/drawings/US-M6-C.pdf",
+    "drawingUrl": "/documents/products/fittings/female-thread-adapters/drawings/US-M6-C.pdf",
+    "drawingPdf": "/documents/products/fittings/female-thread-adapters/drawings/US-M6-C.pdf",
+    "detailMode": "standard_model",
+    "specs": [
+      {
+        "label": "型号",
+        "value": "US-M6-05-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809533"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "US"
+      },
+      {
+        "label": "连接结构",
+        "value": "二通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "M6"
+      },
+      {
+        "label": "通径",
+        "value": "0.5 mm"
+      },
+      {
+        "label": "材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "US-M6-05-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809533"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "US"
+      },
+      {
+        "label": "连接结构",
+        "value": "二通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "M6"
+      },
+      {
+        "label": "通径",
+        "value": "0.5 mm"
+      },
+      {
+        "label": "材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "二通和三通如何选择？",
+        "answer": "二通用于两路接口连接，三通用于一路分成两路或两路汇合，应根据液路结构选择。"
+      },
+      {
+        "question": "通径是否等于螺纹尺寸？",
+        "answer": "通径表示内部流道尺寸，螺纹规格表示接口连接标准，两者不是同一个参数。"
+      },
+      {
+        "question": "不同螺纹能否互转？",
+        "answer": "应以具体在售型号的接口组合为准，未列出的组合可提交定制需求。"
+      },
+      {
+        "question": "PP、PA和SS材质如何选择？",
+        "answer": "应结合介质兼容性、压力、温度和机械强度选择合适材质。"
+      },
+      {
+        "question": "能否提供二维图和三维模型？",
+        "answer": "已上传的资源会在详情页显示，暂未上传的型号可通过添加图纸或清单备注提交资料需求。"
+      }
+    ],
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "detailHref": "/products/fittings/female-thread-adapters/us-m6-05-pp-n",
+    "selectionHref": "/products/fittings/female-thread-adapters",
+    "configuratorHref": "/products/fittings/female-thread-adapters",
+    "modelSelectionHref": "/products/fittings/female-thread-adapters",
+    "resourceStatus": {
+      "model3d": "missing",
+      "drawing": "available"
+    },
+    "resourceMessages": {
+      "model3d": "暂无3D模型",
+      "drawing": "暂无二维图纸"
+    }
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "female-thread-adapters",
+    "productTypeName": "方形二通内螺纹互转接头",
+    "productTypeLabel": "内螺纹互转接头",
+    "productId": "809534",
+    "productCode": "809534",
+    "seriesId": "us",
+    "seriesCode": "US",
+    "seriesName": "方形二通内螺纹互转接头",
+    "slug": "us-m6-10-pp-n",
+    "model": "US-M6-10-PP-N",
+    "name": "方形二通内螺纹互转接头",
+    "title": "方形二通内螺纹互转接头",
+    "displayName": "方形二通内螺纹互转接头",
+    "productName": "方形二通内螺纹互转接头",
+    "modelDisplay": "US-M6-10-PP-N",
+    "displayModel": "US-M6-10-PP-N",
+    "foreachModel": "US-M6-10-PP-N",
+    "description": "US-M6-10-PP-N是一款方形二通内螺纹互转接头，采用M6内螺纹接口，通径为1.0 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "shortDescription": "US-M6-10-PP-N是一款方形二通内螺纹互转接头，采用M6内螺纹接口，通径为1.0 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "heroDescription": "US-M6-10-PP-N是一款方形二通内螺纹互转接头，采用M6内螺纹接口，通径为1.0 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "advantages": [
+      "连接结构：二通",
+      "螺纹规格：M6",
+      "通径：1.0 mm",
+      "材质：PP",
+      "颜色：本色"
+    ],
+    "commonApplications": [
+      "仪器内部液路转接",
+      "泵阀与流路接口连接",
+      "IVD与分析仪器流路",
+      "实验室自动化设备液路"
+    ],
+    "mainImage": "/images/products/fittings/female-thread-adapters/products/US-M6-10-PP-N.jpg",
+    "image": "/images/products/fittings/female-thread-adapters/products/US-M6-10-PP-N.jpg",
+    "heroImage": "/images/products/fittings/female-thread-adapters/products/US-M6-10-PP-N.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/US-M6-10-PP-N.jpg",
+    "additionalImages": [],
+    "images": [
+      "/images/products/fittings/female-thread-adapters/products/US-M6-10-PP-N.jpg"
+    ],
+    "model3dUrl": "",
+    "modelUrl": "",
+    "drawingPdfUrl": "/documents/products/fittings/female-thread-adapters/drawings/US-M6-C.pdf",
+    "drawingUrl": "/documents/products/fittings/female-thread-adapters/drawings/US-M6-C.pdf",
+    "drawingPdf": "/documents/products/fittings/female-thread-adapters/drawings/US-M6-C.pdf",
+    "detailMode": "standard_model",
+    "specs": [
+      {
+        "label": "型号",
+        "value": "US-M6-10-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809534"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "US"
+      },
+      {
+        "label": "连接结构",
+        "value": "二通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "M6"
+      },
+      {
+        "label": "通径",
+        "value": "1.0 mm"
+      },
+      {
+        "label": "材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "US-M6-10-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809534"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "US"
+      },
+      {
+        "label": "连接结构",
+        "value": "二通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "M6"
+      },
+      {
+        "label": "通径",
+        "value": "1.0 mm"
+      },
+      {
+        "label": "材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "二通和三通如何选择？",
+        "answer": "二通用于两路接口连接，三通用于一路分成两路或两路汇合，应根据液路结构选择。"
+      },
+      {
+        "question": "通径是否等于螺纹尺寸？",
+        "answer": "通径表示内部流道尺寸，螺纹规格表示接口连接标准，两者不是同一个参数。"
+      },
+      {
+        "question": "不同螺纹能否互转？",
+        "answer": "应以具体在售型号的接口组合为准，未列出的组合可提交定制需求。"
+      },
+      {
+        "question": "PP、PA和SS材质如何选择？",
+        "answer": "应结合介质兼容性、压力、温度和机械强度选择合适材质。"
+      },
+      {
+        "question": "能否提供二维图和三维模型？",
+        "answer": "已上传的资源会在详情页显示，暂未上传的型号可通过添加图纸或清单备注提交资料需求。"
+      }
+    ],
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "detailHref": "/products/fittings/female-thread-adapters/us-m6-10-pp-n",
+    "selectionHref": "/products/fittings/female-thread-adapters",
+    "configuratorHref": "/products/fittings/female-thread-adapters",
+    "modelSelectionHref": "/products/fittings/female-thread-adapters",
+    "resourceStatus": {
+      "model3d": "missing",
+      "drawing": "available"
+    },
+    "resourceMessages": {
+      "model3d": "暂无3D模型",
+      "drawing": "暂无二维图纸"
+    }
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "female-thread-adapters",
+    "productTypeName": "方形二通内螺纹互转接头",
+    "productTypeLabel": "内螺纹互转接头",
+    "productId": "809516",
+    "productCode": "809516",
+    "seriesId": "us",
+    "seriesCode": "US",
+    "seriesName": "方形二通内螺纹互转接头",
+    "slug": "us-m6-15-pp-n",
+    "model": "US-M6-15-PP-N",
+    "name": "方形二通内螺纹互转接头",
+    "title": "方形二通内螺纹互转接头",
+    "displayName": "方形二通内螺纹互转接头",
+    "productName": "方形二通内螺纹互转接头",
+    "modelDisplay": "US-M6-15-PP-N",
+    "displayModel": "US-M6-15-PP-N",
+    "foreachModel": "US-M6-15-PP-N",
+    "description": "US-M6-15-PP-N是一款方形二通内螺纹互转接头，采用M6内螺纹接口，通径为1.5 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "shortDescription": "US-M6-15-PP-N是一款方形二通内螺纹互转接头，采用M6内螺纹接口，通径为1.5 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "heroDescription": "US-M6-15-PP-N是一款方形二通内螺纹互转接头，采用M6内螺纹接口，通径为1.5 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "advantages": [
+      "连接结构：二通",
+      "螺纹规格：M6",
+      "通径：1.5 mm",
+      "材质：PP",
+      "颜色：本色"
+    ],
+    "commonApplications": [
+      "仪器内部液路转接",
+      "泵阀与流路接口连接",
+      "IVD与分析仪器流路",
+      "实验室自动化设备液路"
+    ],
+    "mainImage": "/images/products/fittings/female-thread-adapters/products/US-M6-15-PP-N.jpg",
+    "image": "/images/products/fittings/female-thread-adapters/products/US-M6-15-PP-N.jpg",
+    "heroImage": "/images/products/fittings/female-thread-adapters/products/US-M6-15-PP-N.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/US-M6-15-PP-N.jpg",
+    "additionalImages": [],
+    "images": [
+      "/images/products/fittings/female-thread-adapters/products/US-M6-15-PP-N.jpg"
+    ],
+    "model3dUrl": "",
+    "modelUrl": "",
+    "drawingPdfUrl": "/documents/products/fittings/female-thread-adapters/drawings/US-M6-C.pdf",
+    "drawingUrl": "/documents/products/fittings/female-thread-adapters/drawings/US-M6-C.pdf",
+    "drawingPdf": "/documents/products/fittings/female-thread-adapters/drawings/US-M6-C.pdf",
+    "detailMode": "standard_model",
+    "specs": [
+      {
+        "label": "型号",
+        "value": "US-M6-15-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809516"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "US"
+      },
+      {
+        "label": "连接结构",
+        "value": "二通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "M6"
+      },
+      {
+        "label": "通径",
+        "value": "1.5 mm"
+      },
+      {
+        "label": "材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "US-M6-15-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809516"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "US"
+      },
+      {
+        "label": "连接结构",
+        "value": "二通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "M6"
+      },
+      {
+        "label": "通径",
+        "value": "1.5 mm"
+      },
+      {
+        "label": "材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "二通和三通如何选择？",
+        "answer": "二通用于两路接口连接，三通用于一路分成两路或两路汇合，应根据液路结构选择。"
+      },
+      {
+        "question": "通径是否等于螺纹尺寸？",
+        "answer": "通径表示内部流道尺寸，螺纹规格表示接口连接标准，两者不是同一个参数。"
+      },
+      {
+        "question": "不同螺纹能否互转？",
+        "answer": "应以具体在售型号的接口组合为准，未列出的组合可提交定制需求。"
+      },
+      {
+        "question": "PP、PA和SS材质如何选择？",
+        "answer": "应结合介质兼容性、压力、温度和机械强度选择合适材质。"
+      },
+      {
+        "question": "能否提供二维图和三维模型？",
+        "answer": "已上传的资源会在详情页显示，暂未上传的型号可通过添加图纸或清单备注提交资料需求。"
+      }
+    ],
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "detailHref": "/products/fittings/female-thread-adapters/us-m6-15-pp-n",
+    "selectionHref": "/products/fittings/female-thread-adapters",
+    "configuratorHref": "/products/fittings/female-thread-adapters",
+    "modelSelectionHref": "/products/fittings/female-thread-adapters",
+    "resourceStatus": {
+      "model3d": "missing",
+      "drawing": "available"
+    },
+    "resourceMessages": {
+      "model3d": "暂无3D模型",
+      "drawing": "暂无二维图纸"
+    }
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "female-thread-adapters",
+    "productTypeName": "穿板二通内螺纹互转接头",
+    "productTypeLabel": "内螺纹互转接头",
+    "productId": "809525",
+    "productCode": "809525",
+    "seriesId": "pmu",
+    "seriesCode": "PMU",
+    "seriesName": "穿板二通内螺纹互转接头",
+    "slug": "pmu-m12-u28-20-pp-n",
+    "model": "PMU-M12-U28-20-PP-N",
+    "name": "穿板二通内螺纹互转接头",
+    "title": "穿板二通内螺纹互转接头",
+    "displayName": "穿板二通内螺纹互转接头",
+    "productName": "穿板二通内螺纹互转接头",
+    "modelDisplay": "PMU-M12-U28-20-PP-N",
+    "displayModel": "PMU-M12-U28-20-PP-N",
+    "foreachModel": "PMU-M12-U28-20-PP-N",
+    "description": "PMU-M12-U28-20-PP-N是一款穿板二通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为2.0 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "shortDescription": "PMU-M12-U28-20-PP-N是一款穿板二通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为2.0 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "heroDescription": "PMU-M12-U28-20-PP-N是一款穿板二通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为2.0 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "advantages": [
+      "连接结构：二通",
+      "螺纹规格：1/4-28 UNF",
+      "通径：2.0 mm",
+      "材质：PP",
+      "颜色：本色"
+    ],
+    "commonApplications": [
+      "仪器内部液路转接",
+      "泵阀与流路接口连接",
+      "IVD与分析仪器流路",
+      "实验室自动化设备液路"
+    ],
+    "mainImage": "/images/products/fittings/female-thread-adapters/products/PMU-M12-U28-20-PP-N.jpg",
+    "image": "/images/products/fittings/female-thread-adapters/products/PMU-M12-U28-20-PP-N.jpg",
+    "heroImage": "/images/products/fittings/female-thread-adapters/products/PMU-M12-U28-20-PP-N.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/PMU-M12-U28-20-PP-N.jpg",
+    "additionalImages": [],
+    "images": [
+      "/images/products/fittings/female-thread-adapters/products/PMU-M12-U28-20-PP-N.jpg"
+    ],
+    "model3dUrl": "",
+    "modelUrl": "",
+    "drawingPdfUrl": "/documents/products/fittings/female-thread-adapters/drawings/443-02-00104-C.pdf",
+    "drawingUrl": "/documents/products/fittings/female-thread-adapters/drawings/443-02-00104-C.pdf",
+    "drawingPdf": "/documents/products/fittings/female-thread-adapters/drawings/443-02-00104-C.pdf",
+    "detailMode": "standard_model",
+    "specs": [
+      {
+        "label": "型号",
+        "value": "PMU-M12-U28-20-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809525"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "PMU"
+      },
+      {
+        "label": "连接结构",
+        "value": "二通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "1/4-28 UNF"
+      },
+      {
+        "label": "通径",
+        "value": "2.0 mm"
+      },
+      {
+        "label": "材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "PMU-M12-U28-20-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809525"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "PMU"
+      },
+      {
+        "label": "连接结构",
+        "value": "二通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "1/4-28 UNF"
+      },
+      {
+        "label": "通径",
+        "value": "2.0 mm"
+      },
+      {
+        "label": "材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "二通和三通如何选择？",
+        "answer": "二通用于两路接口连接，三通用于一路分成两路或两路汇合，应根据液路结构选择。"
+      },
+      {
+        "question": "通径是否等于螺纹尺寸？",
+        "answer": "通径表示内部流道尺寸，螺纹规格表示接口连接标准，两者不是同一个参数。"
+      },
+      {
+        "question": "不同螺纹能否互转？",
+        "answer": "应以具体在售型号的接口组合为准，未列出的组合可提交定制需求。"
+      },
+      {
+        "question": "PP、PA和SS材质如何选择？",
+        "answer": "应结合介质兼容性、压力、温度和机械强度选择合适材质。"
+      },
+      {
+        "question": "能否提供二维图和三维模型？",
+        "answer": "已上传的资源会在详情页显示，暂未上传的型号可通过添加图纸或清单备注提交资料需求。"
+      }
+    ],
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "detailHref": "/products/fittings/female-thread-adapters/pmu-m12-u28-20-pp-n",
+    "selectionHref": "/products/fittings/female-thread-adapters",
+    "configuratorHref": "/products/fittings/female-thread-adapters",
+    "modelSelectionHref": "/products/fittings/female-thread-adapters",
+    "resourceStatus": {
+      "model3d": "missing",
+      "drawing": "available"
+    },
+    "resourceMessages": {
+      "model3d": "暂无3D模型",
+      "drawing": "暂无二维图纸"
+    }
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "female-thread-adapters",
+    "productTypeName": "直通二通内螺纹互转接头",
+    "productTypeLabel": "内螺纹互转接头",
+    "productId": "809195",
+    "productCode": "809195",
+    "seriesId": "u",
+    "seriesCode": "U",
+    "seriesName": "直通二通内螺纹互转接头",
+    "slug": "u-u28-20-pp-n",
+    "model": "U-U28-20-PP-N",
+    "name": "直通二通内螺纹互转接头",
+    "title": "直通二通内螺纹互转接头",
+    "displayName": "直通二通内螺纹互转接头",
+    "productName": "直通二通内螺纹互转接头",
+    "modelDisplay": "U-U28-20-PP-N",
+    "displayModel": "U-U28-20-PP-N",
+    "foreachModel": "U-U28-20-PP-N",
+    "description": "U-U28-20-PP-N是一款直通二通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为2.0 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "shortDescription": "U-U28-20-PP-N是一款直通二通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为2.0 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "heroDescription": "U-U28-20-PP-N是一款直通二通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为2.0 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "advantages": [
+      "连接结构：二通",
+      "螺纹规格：1/4-28 UNF",
+      "通径：2.0 mm",
+      "材质：PP",
+      "颜色：本色"
+    ],
+    "commonApplications": [
+      "仪器内部液路转接",
+      "泵阀与流路接口连接",
+      "IVD与分析仪器流路",
+      "实验室自动化设备液路"
+    ],
+    "mainImage": "/images/products/fittings/female-thread-adapters/products/U-U28-20-PP-N.jpg",
+    "image": "/images/products/fittings/female-thread-adapters/products/U-U28-20-PP-N.jpg",
+    "heroImage": "/images/products/fittings/female-thread-adapters/products/U-U28-20-PP-N.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/U-U28-20-PP-N.jpg",
+    "additionalImages": [],
+    "images": [
+      "/images/products/fittings/female-thread-adapters/products/U-U28-20-PP-N.jpg"
+    ],
+    "model3dUrl": "",
+    "modelUrl": "",
+    "drawingPdfUrl": "/documents/products/fittings/female-thread-adapters/drawings/U系列-C.pdf",
+    "drawingUrl": "/documents/products/fittings/female-thread-adapters/drawings/U系列-C.pdf",
+    "drawingPdf": "/documents/products/fittings/female-thread-adapters/drawings/U系列-C.pdf",
+    "detailMode": "standard_model",
+    "specs": [
+      {
+        "label": "型号",
+        "value": "U-U28-20-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809195"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "U"
+      },
+      {
+        "label": "连接结构",
+        "value": "二通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "1/4-28 UNF"
+      },
+      {
+        "label": "通径",
+        "value": "2.0 mm"
+      },
+      {
+        "label": "材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "U-U28-20-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809195"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "U"
+      },
+      {
+        "label": "连接结构",
+        "value": "二通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "1/4-28 UNF"
+      },
+      {
+        "label": "通径",
+        "value": "2.0 mm"
+      },
+      {
+        "label": "材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "二通和三通如何选择？",
+        "answer": "二通用于两路接口连接，三通用于一路分成两路或两路汇合，应根据液路结构选择。"
+      },
+      {
+        "question": "通径是否等于螺纹尺寸？",
+        "answer": "通径表示内部流道尺寸，螺纹规格表示接口连接标准，两者不是同一个参数。"
+      },
+      {
+        "question": "不同螺纹能否互转？",
+        "answer": "应以具体在售型号的接口组合为准，未列出的组合可提交定制需求。"
+      },
+      {
+        "question": "PP、PA和SS材质如何选择？",
+        "answer": "应结合介质兼容性、压力、温度和机械强度选择合适材质。"
+      },
+      {
+        "question": "能否提供二维图和三维模型？",
+        "answer": "已上传的资源会在详情页显示，暂未上传的型号可通过添加图纸或清单备注提交资料需求。"
+      }
+    ],
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "detailHref": "/products/fittings/female-thread-adapters/u-u28-20-pp-n",
+    "selectionHref": "/products/fittings/female-thread-adapters",
+    "configuratorHref": "/products/fittings/female-thread-adapters",
+    "modelSelectionHref": "/products/fittings/female-thread-adapters",
+    "resourceStatus": {
+      "model3d": "missing",
+      "drawing": "available"
+    },
+    "resourceMessages": {
+      "model3d": "暂无3D模型",
+      "drawing": "暂无二维图纸"
+    }
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "female-thread-adapters",
+    "productTypeName": "直通二通内螺纹互转接头",
+    "productTypeLabel": "内螺纹互转接头",
+    "productId": "809192",
+    "productCode": "809192",
+    "seriesId": "u",
+    "seriesCode": "U",
+    "seriesName": "直通二通内螺纹互转接头",
+    "slug": "u-u28-20-ac-b",
+    "model": "U-U28-20-AC-B",
+    "name": "直通二通内螺纹互转接头",
+    "title": "直通二通内螺纹互转接头",
+    "displayName": "直通二通内螺纹互转接头",
+    "productName": "直通二通内螺纹互转接头",
+    "modelDisplay": "U-U28-20-AC-B",
+    "displayModel": "U-U28-20-AC-B",
+    "foreachModel": "U-U28-20-AC-B",
+    "description": "U-U28-20-AC-B是一款直通二通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为2.0 mm，主体材质为AC，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "shortDescription": "U-U28-20-AC-B是一款直通二通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为2.0 mm，主体材质为AC，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "heroDescription": "U-U28-20-AC-B是一款直通二通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为2.0 mm，主体材质为AC，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "advantages": [
+      "连接结构：二通",
+      "螺纹规格：1/4-28 UNF",
+      "通径：2.0 mm",
+      "材质：AC",
+      "颜色：黑色"
+    ],
+    "commonApplications": [
+      "仪器内部液路转接",
+      "泵阀与流路接口连接",
+      "IVD与分析仪器流路",
+      "实验室自动化设备液路"
+    ],
+    "mainImage": "/images/products/fittings/female-thread-adapters/products/U-U28-20-AC-B.jpg",
+    "image": "/images/products/fittings/female-thread-adapters/products/U-U28-20-AC-B.jpg",
+    "heroImage": "/images/products/fittings/female-thread-adapters/products/U-U28-20-AC-B.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/U-U28-20-AC-B.jpg",
+    "additionalImages": [],
+    "images": [
+      "/images/products/fittings/female-thread-adapters/products/U-U28-20-AC-B.jpg"
+    ],
+    "model3dUrl": "",
+    "modelUrl": "",
+    "drawingPdfUrl": "/documents/products/fittings/female-thread-adapters/drawings/U系列-C.pdf",
+    "drawingUrl": "/documents/products/fittings/female-thread-adapters/drawings/U系列-C.pdf",
+    "drawingPdf": "/documents/products/fittings/female-thread-adapters/drawings/U系列-C.pdf",
+    "detailMode": "standard_model",
+    "specs": [
+      {
+        "label": "型号",
+        "value": "U-U28-20-AC-B"
+      },
+      {
+        "label": "商品编码",
+        "value": "809192"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "U"
+      },
+      {
+        "label": "连接结构",
+        "value": "二通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "1/4-28 UNF"
+      },
+      {
+        "label": "通径",
+        "value": "2.0 mm"
+      },
+      {
+        "label": "材质",
+        "value": "AC"
+      },
+      {
+        "label": "颜色",
+        "value": "黑色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "U-U28-20-AC-B"
+      },
+      {
+        "label": "商品编码",
+        "value": "809192"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "U"
+      },
+      {
+        "label": "连接结构",
+        "value": "二通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "1/4-28 UNF"
+      },
+      {
+        "label": "通径",
+        "value": "2.0 mm"
+      },
+      {
+        "label": "材质",
+        "value": "AC"
+      },
+      {
+        "label": "颜色",
+        "value": "黑色"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "二通和三通如何选择？",
+        "answer": "二通用于两路接口连接，三通用于一路分成两路或两路汇合，应根据液路结构选择。"
+      },
+      {
+        "question": "通径是否等于螺纹尺寸？",
+        "answer": "通径表示内部流道尺寸，螺纹规格表示接口连接标准，两者不是同一个参数。"
+      },
+      {
+        "question": "不同螺纹能否互转？",
+        "answer": "应以具体在售型号的接口组合为准，未列出的组合可提交定制需求。"
+      },
+      {
+        "question": "PP、PA和SS材质如何选择？",
+        "answer": "应结合介质兼容性、压力、温度和机械强度选择合适材质。"
+      },
+      {
+        "question": "能否提供二维图和三维模型？",
+        "answer": "已上传的资源会在详情页显示，暂未上传的型号可通过添加图纸或清单备注提交资料需求。"
+      }
+    ],
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "detailHref": "/products/fittings/female-thread-adapters/u-u28-20-ac-b",
+    "selectionHref": "/products/fittings/female-thread-adapters",
+    "configuratorHref": "/products/fittings/female-thread-adapters",
+    "modelSelectionHref": "/products/fittings/female-thread-adapters",
+    "resourceStatus": {
+      "model3d": "missing",
+      "drawing": "available"
+    },
+    "resourceMessages": {
+      "model3d": "暂无3D模型",
+      "drawing": "暂无二维图纸"
+    }
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "female-thread-adapters",
+    "productTypeName": "直通二通内螺纹互转接头",
+    "productTypeLabel": "内螺纹互转接头",
+    "productId": "809198",
+    "productCode": "809198",
+    "seriesId": "u",
+    "seriesCode": "U",
+    "seriesName": "直通二通内螺纹互转接头",
+    "slug": "u-u28-20-ps-b",
+    "model": "U-U28-20-PS-B",
+    "name": "直通二通内螺纹互转接头",
+    "title": "直通二通内螺纹互转接头",
+    "displayName": "直通二通内螺纹互转接头",
+    "productName": "直通二通内螺纹互转接头",
+    "modelDisplay": "U-U28-20-PS-B",
+    "displayModel": "U-U28-20-PS-B",
+    "foreachModel": "U-U28-20-PS-B",
+    "description": "U-U28-20-PS-B是一款直通二通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为2.0 mm，主体材质为PS，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "shortDescription": "U-U28-20-PS-B是一款直通二通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为2.0 mm，主体材质为PS，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "heroDescription": "U-U28-20-PS-B是一款直通二通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为2.0 mm，主体材质为PS，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "advantages": [
+      "连接结构：二通",
+      "螺纹规格：1/4-28 UNF",
+      "通径：2.0 mm",
+      "材质：PS",
+      "颜色：黑色"
+    ],
+    "commonApplications": [
+      "仪器内部液路转接",
+      "泵阀与流路接口连接",
+      "IVD与分析仪器流路",
+      "实验室自动化设备液路"
+    ],
+    "mainImage": "/images/products/fittings/female-thread-adapters/products/U-U28-20-PS-B.jpg",
+    "image": "/images/products/fittings/female-thread-adapters/products/U-U28-20-PS-B.jpg",
+    "heroImage": "/images/products/fittings/female-thread-adapters/products/U-U28-20-PS-B.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/U-U28-20-PS-B.jpg",
+    "additionalImages": [],
+    "images": [
+      "/images/products/fittings/female-thread-adapters/products/U-U28-20-PS-B.jpg"
+    ],
+    "model3dUrl": "",
+    "modelUrl": "",
+    "drawingPdfUrl": "/documents/products/fittings/female-thread-adapters/drawings/U系列-C.pdf",
+    "drawingUrl": "/documents/products/fittings/female-thread-adapters/drawings/U系列-C.pdf",
+    "drawingPdf": "/documents/products/fittings/female-thread-adapters/drawings/U系列-C.pdf",
+    "detailMode": "standard_model",
+    "specs": [
+      {
+        "label": "型号",
+        "value": "U-U28-20-PS-B"
+      },
+      {
+        "label": "商品编码",
+        "value": "809198"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "U"
+      },
+      {
+        "label": "连接结构",
+        "value": "二通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "1/4-28 UNF"
+      },
+      {
+        "label": "通径",
+        "value": "2.0 mm"
+      },
+      {
+        "label": "材质",
+        "value": "PS"
+      },
+      {
+        "label": "颜色",
+        "value": "黑色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "U-U28-20-PS-B"
+      },
+      {
+        "label": "商品编码",
+        "value": "809198"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "U"
+      },
+      {
+        "label": "连接结构",
+        "value": "二通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "1/4-28 UNF"
+      },
+      {
+        "label": "通径",
+        "value": "2.0 mm"
+      },
+      {
+        "label": "材质",
+        "value": "PS"
+      },
+      {
+        "label": "颜色",
+        "value": "黑色"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "二通和三通如何选择？",
+        "answer": "二通用于两路接口连接，三通用于一路分成两路或两路汇合，应根据液路结构选择。"
+      },
+      {
+        "question": "通径是否等于螺纹尺寸？",
+        "answer": "通径表示内部流道尺寸，螺纹规格表示接口连接标准，两者不是同一个参数。"
+      },
+      {
+        "question": "不同螺纹能否互转？",
+        "answer": "应以具体在售型号的接口组合为准，未列出的组合可提交定制需求。"
+      },
+      {
+        "question": "PP、PA和SS材质如何选择？",
+        "answer": "应结合介质兼容性、压力、温度和机械强度选择合适材质。"
+      },
+      {
+        "question": "能否提供二维图和三维模型？",
+        "answer": "已上传的资源会在详情页显示，暂未上传的型号可通过添加图纸或清单备注提交资料需求。"
+      }
+    ],
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "detailHref": "/products/fittings/female-thread-adapters/u-u28-20-ps-b",
+    "selectionHref": "/products/fittings/female-thread-adapters",
+    "configuratorHref": "/products/fittings/female-thread-adapters",
+    "modelSelectionHref": "/products/fittings/female-thread-adapters",
+    "resourceStatus": {
+      "model3d": "missing",
+      "drawing": "available"
+    },
+    "resourceMessages": {
+      "model3d": "暂无3D模型",
+      "drawing": "暂无二维图纸"
+    }
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "female-thread-adapters",
+    "productTypeName": "直通二通内螺纹互转接头",
+    "productTypeLabel": "内螺纹互转接头",
+    "productId": "809197",
+    "productCode": "809197",
+    "seriesId": "u",
+    "seriesCode": "U",
+    "seriesName": "直通二通内螺纹互转接头",
+    "slug": "u-m6-20-pp-n",
+    "model": "U-M6-20-PP-N",
+    "name": "直通二通内螺纹互转接头",
+    "title": "直通二通内螺纹互转接头",
+    "displayName": "直通二通内螺纹互转接头",
+    "productName": "直通二通内螺纹互转接头",
+    "modelDisplay": "U-M6-20-PP-N",
+    "displayModel": "U-M6-20-PP-N",
+    "foreachModel": "U-M6-20-PP-N",
+    "description": "U-M6-20-PP-N是一款直通二通内螺纹互转接头，采用M6内螺纹接口，通径为2.0 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "shortDescription": "U-M6-20-PP-N是一款直通二通内螺纹互转接头，采用M6内螺纹接口，通径为2.0 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "heroDescription": "U-M6-20-PP-N是一款直通二通内螺纹互转接头，采用M6内螺纹接口，通径为2.0 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "advantages": [
+      "连接结构：二通",
+      "螺纹规格：M6",
+      "通径：2.0 mm",
+      "材质：PP",
+      "颜色：本色"
+    ],
+    "commonApplications": [
+      "仪器内部液路转接",
+      "泵阀与流路接口连接",
+      "IVD与分析仪器流路",
+      "实验室自动化设备液路"
+    ],
+    "mainImage": "/images/products/fittings/female-thread-adapters/products/U-M6-20-PP-N.jpg",
+    "image": "/images/products/fittings/female-thread-adapters/products/U-M6-20-PP-N.jpg",
+    "heroImage": "/images/products/fittings/female-thread-adapters/products/U-M6-20-PP-N.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/U-M6-20-PP-N.jpg",
+    "additionalImages": [],
+    "images": [
+      "/images/products/fittings/female-thread-adapters/products/U-M6-20-PP-N.jpg"
+    ],
+    "model3dUrl": "",
+    "modelUrl": "",
+    "drawingPdfUrl": "/documents/products/fittings/female-thread-adapters/drawings/U系列-C.pdf",
+    "drawingUrl": "/documents/products/fittings/female-thread-adapters/drawings/U系列-C.pdf",
+    "drawingPdf": "/documents/products/fittings/female-thread-adapters/drawings/U系列-C.pdf",
+    "detailMode": "standard_model",
+    "specs": [
+      {
+        "label": "型号",
+        "value": "U-M6-20-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809197"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "U"
+      },
+      {
+        "label": "连接结构",
+        "value": "二通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "M6"
+      },
+      {
+        "label": "通径",
+        "value": "2.0 mm"
+      },
+      {
+        "label": "材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "U-M6-20-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809197"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "U"
+      },
+      {
+        "label": "连接结构",
+        "value": "二通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "M6"
+      },
+      {
+        "label": "通径",
+        "value": "2.0 mm"
+      },
+      {
+        "label": "材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "二通和三通如何选择？",
+        "answer": "二通用于两路接口连接，三通用于一路分成两路或两路汇合，应根据液路结构选择。"
+      },
+      {
+        "question": "通径是否等于螺纹尺寸？",
+        "answer": "通径表示内部流道尺寸，螺纹规格表示接口连接标准，两者不是同一个参数。"
+      },
+      {
+        "question": "不同螺纹能否互转？",
+        "answer": "应以具体在售型号的接口组合为准，未列出的组合可提交定制需求。"
+      },
+      {
+        "question": "PP、PA和SS材质如何选择？",
+        "answer": "应结合介质兼容性、压力、温度和机械强度选择合适材质。"
+      },
+      {
+        "question": "能否提供二维图和三维模型？",
+        "answer": "已上传的资源会在详情页显示，暂未上传的型号可通过添加图纸或清单备注提交资料需求。"
+      }
+    ],
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "detailHref": "/products/fittings/female-thread-adapters/u-m6-20-pp-n",
+    "selectionHref": "/products/fittings/female-thread-adapters",
+    "configuratorHref": "/products/fittings/female-thread-adapters",
+    "modelSelectionHref": "/products/fittings/female-thread-adapters",
+    "resourceStatus": {
+      "model3d": "missing",
+      "drawing": "available"
+    },
+    "resourceMessages": {
+      "model3d": "暂无3D模型",
+      "drawing": "暂无二维图纸"
+    }
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "female-thread-adapters",
+    "productTypeName": "直通二通内螺纹互转接头",
+    "productTypeLabel": "内螺纹互转接头",
+    "productId": "809194",
+    "productCode": "809194",
+    "seriesId": "u",
+    "seriesCode": "U",
+    "seriesName": "直通二通内螺纹互转接头",
+    "slug": "u-m6-20-ac-b",
+    "model": "U-M6-20-AC-B",
+    "name": "直通二通内螺纹互转接头",
+    "title": "直通二通内螺纹互转接头",
+    "displayName": "直通二通内螺纹互转接头",
+    "productName": "直通二通内螺纹互转接头",
+    "modelDisplay": "U-M6-20-AC-B",
+    "displayModel": "U-M6-20-AC-B",
+    "foreachModel": "U-M6-20-AC-B",
+    "description": "U-M6-20-AC-B是一款直通二通内螺纹互转接头，采用M6内螺纹接口，通径为2.0 mm，主体材质为AC，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "shortDescription": "U-M6-20-AC-B是一款直通二通内螺纹互转接头，采用M6内螺纹接口，通径为2.0 mm，主体材质为AC，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "heroDescription": "U-M6-20-AC-B是一款直通二通内螺纹互转接头，采用M6内螺纹接口，通径为2.0 mm，主体材质为AC，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "advantages": [
+      "连接结构：二通",
+      "螺纹规格：M6",
+      "通径：2.0 mm",
+      "材质：AC",
+      "颜色：黑色"
+    ],
+    "commonApplications": [
+      "仪器内部液路转接",
+      "泵阀与流路接口连接",
+      "IVD与分析仪器流路",
+      "实验室自动化设备液路"
+    ],
+    "mainImage": "/images/products/fittings/female-thread-adapters/products/U-M6-20-AC-B.jpg",
+    "image": "/images/products/fittings/female-thread-adapters/products/U-M6-20-AC-B.jpg",
+    "heroImage": "/images/products/fittings/female-thread-adapters/products/U-M6-20-AC-B.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/U-M6-20-AC-B.jpg",
+    "additionalImages": [],
+    "images": [
+      "/images/products/fittings/female-thread-adapters/products/U-M6-20-AC-B.jpg"
+    ],
+    "model3dUrl": "",
+    "modelUrl": "",
+    "drawingPdfUrl": "/documents/products/fittings/female-thread-adapters/drawings/U系列-C.pdf",
+    "drawingUrl": "/documents/products/fittings/female-thread-adapters/drawings/U系列-C.pdf",
+    "drawingPdf": "/documents/products/fittings/female-thread-adapters/drawings/U系列-C.pdf",
+    "detailMode": "standard_model",
+    "specs": [
+      {
+        "label": "型号",
+        "value": "U-M6-20-AC-B"
+      },
+      {
+        "label": "商品编码",
+        "value": "809194"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "U"
+      },
+      {
+        "label": "连接结构",
+        "value": "二通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "M6"
+      },
+      {
+        "label": "通径",
+        "value": "2.0 mm"
+      },
+      {
+        "label": "材质",
+        "value": "AC"
+      },
+      {
+        "label": "颜色",
+        "value": "黑色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "U-M6-20-AC-B"
+      },
+      {
+        "label": "商品编码",
+        "value": "809194"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "U"
+      },
+      {
+        "label": "连接结构",
+        "value": "二通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "M6"
+      },
+      {
+        "label": "通径",
+        "value": "2.0 mm"
+      },
+      {
+        "label": "材质",
+        "value": "AC"
+      },
+      {
+        "label": "颜色",
+        "value": "黑色"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "二通和三通如何选择？",
+        "answer": "二通用于两路接口连接，三通用于一路分成两路或两路汇合，应根据液路结构选择。"
+      },
+      {
+        "question": "通径是否等于螺纹尺寸？",
+        "answer": "通径表示内部流道尺寸，螺纹规格表示接口连接标准，两者不是同一个参数。"
+      },
+      {
+        "question": "不同螺纹能否互转？",
+        "answer": "应以具体在售型号的接口组合为准，未列出的组合可提交定制需求。"
+      },
+      {
+        "question": "PP、PA和SS材质如何选择？",
+        "answer": "应结合介质兼容性、压力、温度和机械强度选择合适材质。"
+      },
+      {
+        "question": "能否提供二维图和三维模型？",
+        "answer": "已上传的资源会在详情页显示，暂未上传的型号可通过添加图纸或清单备注提交资料需求。"
+      }
+    ],
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "detailHref": "/products/fittings/female-thread-adapters/u-m6-20-ac-b",
+    "selectionHref": "/products/fittings/female-thread-adapters",
+    "configuratorHref": "/products/fittings/female-thread-adapters",
+    "modelSelectionHref": "/products/fittings/female-thread-adapters",
+    "resourceStatus": {
+      "model3d": "missing",
+      "drawing": "available"
+    },
+    "resourceMessages": {
+      "model3d": "暂无3D模型",
+      "drawing": "暂无二维图纸"
+    }
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "female-thread-adapters",
+    "productTypeName": "T型三通内螺纹互转接头",
+    "productTypeLabel": "内螺纹互转接头",
+    "productId": "809697",
+    "productCode": "809697",
+    "seriesId": "ut",
+    "seriesCode": "UT",
+    "seriesName": "T型三通内螺纹互转接头",
+    "slug": "ut-u28-15-pp-n",
+    "model": "UT-U28-15-PP-N",
+    "name": "T型三通内螺纹互转接头",
+    "title": "T型三通内螺纹互转接头",
+    "displayName": "T型三通内螺纹互转接头",
+    "productName": "T型三通内螺纹互转接头",
+    "modelDisplay": "UT-U28-15-PP-N",
+    "displayModel": "UT-U28-15-PP-N",
+    "foreachModel": "UT-U28-15-PP-N",
+    "description": "UT-U28-15-PP-N是一款T型三通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为1.5 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "shortDescription": "UT-U28-15-PP-N是一款T型三通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为1.5 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "heroDescription": "UT-U28-15-PP-N是一款T型三通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为1.5 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "advantages": [
+      "连接结构：三通",
+      "螺纹规格：1/4-28 UNF",
+      "通径：1.5 mm",
+      "材质：PP",
+      "颜色：本色"
+    ],
+    "commonApplications": [
+      "仪器内部液路转接",
+      "泵阀与流路接口连接",
+      "IVD与分析仪器流路",
+      "实验室自动化设备液路"
+    ],
+    "mainImage": "/images/products/fittings/female-thread-adapters/products/UT-U28-15-PP-N.jpg",
+    "image": "/images/products/fittings/female-thread-adapters/products/UT-U28-15-PP-N.jpg",
+    "heroImage": "/images/products/fittings/female-thread-adapters/products/UT-U28-15-PP-N.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/UT-U28-15-PP-N.jpg",
+    "additionalImages": [],
+    "images": [
+      "/images/products/fittings/female-thread-adapters/products/UT-U28-15-PP-N.jpg"
+    ],
+    "model3dUrl": "",
+    "modelUrl": "",
+    "drawingPdfUrl": "/documents/products/fittings/female-thread-adapters/drawings/UT系列-C.pdf",
+    "drawingUrl": "/documents/products/fittings/female-thread-adapters/drawings/UT系列-C.pdf",
+    "drawingPdf": "/documents/products/fittings/female-thread-adapters/drawings/UT系列-C.pdf",
+    "detailMode": "standard_model",
+    "specs": [
+      {
+        "label": "型号",
+        "value": "UT-U28-15-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809697"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "UT"
+      },
+      {
+        "label": "连接结构",
+        "value": "三通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "1/4-28 UNF"
+      },
+      {
+        "label": "通径",
+        "value": "1.5 mm"
+      },
+      {
+        "label": "材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "UT-U28-15-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809697"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "UT"
+      },
+      {
+        "label": "连接结构",
+        "value": "三通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "1/4-28 UNF"
+      },
+      {
+        "label": "通径",
+        "value": "1.5 mm"
+      },
+      {
+        "label": "材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "二通和三通如何选择？",
+        "answer": "二通用于两路接口连接，三通用于一路分成两路或两路汇合，应根据液路结构选择。"
+      },
+      {
+        "question": "通径是否等于螺纹尺寸？",
+        "answer": "通径表示内部流道尺寸，螺纹规格表示接口连接标准，两者不是同一个参数。"
+      },
+      {
+        "question": "不同螺纹能否互转？",
+        "answer": "应以具体在售型号的接口组合为准，未列出的组合可提交定制需求。"
+      },
+      {
+        "question": "PP、PA和SS材质如何选择？",
+        "answer": "应结合介质兼容性、压力、温度和机械强度选择合适材质。"
+      },
+      {
+        "question": "能否提供二维图和三维模型？",
+        "answer": "已上传的资源会在详情页显示，暂未上传的型号可通过添加图纸或清单备注提交资料需求。"
+      }
+    ],
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "detailHref": "/products/fittings/female-thread-adapters/ut-u28-15-pp-n",
+    "selectionHref": "/products/fittings/female-thread-adapters",
+    "configuratorHref": "/products/fittings/female-thread-adapters",
+    "modelSelectionHref": "/products/fittings/female-thread-adapters",
+    "resourceStatus": {
+      "model3d": "missing",
+      "drawing": "available"
+    },
+    "resourceMessages": {
+      "model3d": "暂无3D模型",
+      "drawing": "暂无二维图纸"
+    }
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "female-thread-adapters",
+    "productTypeName": "T型三通内螺纹互转接头",
+    "productTypeLabel": "内螺纹互转接头",
+    "productId": "809518",
+    "productCode": "809518",
+    "seriesId": "ut",
+    "seriesCode": "UT",
+    "seriesName": "T型三通内螺纹互转接头",
+    "slug": "ut-u28-20-pp-n",
+    "model": "UT-U28-20-PP-N",
+    "name": "T型三通内螺纹互转接头",
+    "title": "T型三通内螺纹互转接头",
+    "displayName": "T型三通内螺纹互转接头",
+    "productName": "T型三通内螺纹互转接头",
+    "modelDisplay": "UT-U28-20-PP-N",
+    "displayModel": "UT-U28-20-PP-N",
+    "foreachModel": "UT-U28-20-PP-N",
+    "description": "UT-U28-20-PP-N是一款T型三通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为2.0 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "shortDescription": "UT-U28-20-PP-N是一款T型三通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为2.0 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "heroDescription": "UT-U28-20-PP-N是一款T型三通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为2.0 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "advantages": [
+      "连接结构：三通",
+      "螺纹规格：1/4-28 UNF",
+      "通径：2.0 mm",
+      "材质：PP",
+      "颜色：本色"
+    ],
+    "commonApplications": [
+      "仪器内部液路转接",
+      "泵阀与流路接口连接",
+      "IVD与分析仪器流路",
+      "实验室自动化设备液路"
+    ],
+    "mainImage": "/images/products/fittings/female-thread-adapters/products/UT-U28-20-PP-N.jpg",
+    "image": "/images/products/fittings/female-thread-adapters/products/UT-U28-20-PP-N.jpg",
+    "heroImage": "/images/products/fittings/female-thread-adapters/products/UT-U28-20-PP-N.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/UT-U28-20-PP-N.jpg",
+    "additionalImages": [],
+    "images": [
+      "/images/products/fittings/female-thread-adapters/products/UT-U28-20-PP-N.jpg"
+    ],
+    "model3dUrl": "",
+    "modelUrl": "",
+    "drawingPdfUrl": "/documents/products/fittings/female-thread-adapters/drawings/UT系列-C.pdf",
+    "drawingUrl": "/documents/products/fittings/female-thread-adapters/drawings/UT系列-C.pdf",
+    "drawingPdf": "/documents/products/fittings/female-thread-adapters/drawings/UT系列-C.pdf",
+    "detailMode": "standard_model",
+    "specs": [
+      {
+        "label": "型号",
+        "value": "UT-U28-20-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809518"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "UT"
+      },
+      {
+        "label": "连接结构",
+        "value": "三通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "1/4-28 UNF"
+      },
+      {
+        "label": "通径",
+        "value": "2.0 mm"
+      },
+      {
+        "label": "材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "UT-U28-20-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809518"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "UT"
+      },
+      {
+        "label": "连接结构",
+        "value": "三通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "1/4-28 UNF"
+      },
+      {
+        "label": "通径",
+        "value": "2.0 mm"
+      },
+      {
+        "label": "材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "二通和三通如何选择？",
+        "answer": "二通用于两路接口连接，三通用于一路分成两路或两路汇合，应根据液路结构选择。"
+      },
+      {
+        "question": "通径是否等于螺纹尺寸？",
+        "answer": "通径表示内部流道尺寸，螺纹规格表示接口连接标准，两者不是同一个参数。"
+      },
+      {
+        "question": "不同螺纹能否互转？",
+        "answer": "应以具体在售型号的接口组合为准，未列出的组合可提交定制需求。"
+      },
+      {
+        "question": "PP、PA和SS材质如何选择？",
+        "answer": "应结合介质兼容性、压力、温度和机械强度选择合适材质。"
+      },
+      {
+        "question": "能否提供二维图和三维模型？",
+        "answer": "已上传的资源会在详情页显示，暂未上传的型号可通过添加图纸或清单备注提交资料需求。"
+      }
+    ],
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "detailHref": "/products/fittings/female-thread-adapters/ut-u28-20-pp-n",
+    "selectionHref": "/products/fittings/female-thread-adapters",
+    "configuratorHref": "/products/fittings/female-thread-adapters",
+    "modelSelectionHref": "/products/fittings/female-thread-adapters",
+    "resourceStatus": {
+      "model3d": "missing",
+      "drawing": "available"
+    },
+    "resourceMessages": {
+      "model3d": "暂无3D模型",
+      "drawing": "暂无二维图纸"
+    }
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "female-thread-adapters",
+    "productTypeName": "T型三通内螺纹互转接头",
+    "productTypeLabel": "内螺纹互转接头",
+    "productId": "809631",
+    "productCode": "809631",
+    "seriesId": "ut",
+    "seriesCode": "UT",
+    "seriesName": "T型三通内螺纹互转接头",
+    "slug": "ut-u28-15-ps-b",
+    "model": "UT-U28-15-PS-B",
+    "name": "T型三通内螺纹互转接头",
+    "title": "T型三通内螺纹互转接头",
+    "displayName": "T型三通内螺纹互转接头",
+    "productName": "T型三通内螺纹互转接头",
+    "modelDisplay": "UT-U28-15-PS-B",
+    "displayModel": "UT-U28-15-PS-B",
+    "foreachModel": "UT-U28-15-PS-B",
+    "description": "UT-U28-15-PS-B是一款T型三通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为1.5 mm，主体材质为PS，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "shortDescription": "UT-U28-15-PS-B是一款T型三通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为1.5 mm，主体材质为PS，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "heroDescription": "UT-U28-15-PS-B是一款T型三通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为1.5 mm，主体材质为PS，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "advantages": [
+      "连接结构：三通",
+      "螺纹规格：1/4-28 UNF",
+      "通径：1.5 mm",
+      "材质：PS",
+      "颜色：黑色"
+    ],
+    "commonApplications": [
+      "仪器内部液路转接",
+      "泵阀与流路接口连接",
+      "IVD与分析仪器流路",
+      "实验室自动化设备液路"
+    ],
+    "mainImage": "/images/products/fittings/female-thread-adapters/products/UT-U28-15-PS-B.jpg",
+    "image": "/images/products/fittings/female-thread-adapters/products/UT-U28-15-PS-B.jpg",
+    "heroImage": "/images/products/fittings/female-thread-adapters/products/UT-U28-15-PS-B.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/UT-U28-15-PS-B.jpg",
+    "additionalImages": [],
+    "images": [
+      "/images/products/fittings/female-thread-adapters/products/UT-U28-15-PS-B.jpg"
+    ],
+    "model3dUrl": "",
+    "modelUrl": "",
+    "drawingPdfUrl": "/documents/products/fittings/female-thread-adapters/drawings/UT系列-C.pdf",
+    "drawingUrl": "/documents/products/fittings/female-thread-adapters/drawings/UT系列-C.pdf",
+    "drawingPdf": "/documents/products/fittings/female-thread-adapters/drawings/UT系列-C.pdf",
+    "detailMode": "standard_model",
+    "specs": [
+      {
+        "label": "型号",
+        "value": "UT-U28-15-PS-B"
+      },
+      {
+        "label": "商品编码",
+        "value": "809631"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "UT"
+      },
+      {
+        "label": "连接结构",
+        "value": "三通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "1/4-28 UNF"
+      },
+      {
+        "label": "通径",
+        "value": "1.5 mm"
+      },
+      {
+        "label": "材质",
+        "value": "PS"
+      },
+      {
+        "label": "颜色",
+        "value": "黑色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "UT-U28-15-PS-B"
+      },
+      {
+        "label": "商品编码",
+        "value": "809631"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "UT"
+      },
+      {
+        "label": "连接结构",
+        "value": "三通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "1/4-28 UNF"
+      },
+      {
+        "label": "通径",
+        "value": "1.5 mm"
+      },
+      {
+        "label": "材质",
+        "value": "PS"
+      },
+      {
+        "label": "颜色",
+        "value": "黑色"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "二通和三通如何选择？",
+        "answer": "二通用于两路接口连接，三通用于一路分成两路或两路汇合，应根据液路结构选择。"
+      },
+      {
+        "question": "通径是否等于螺纹尺寸？",
+        "answer": "通径表示内部流道尺寸，螺纹规格表示接口连接标准，两者不是同一个参数。"
+      },
+      {
+        "question": "不同螺纹能否互转？",
+        "answer": "应以具体在售型号的接口组合为准，未列出的组合可提交定制需求。"
+      },
+      {
+        "question": "PP、PA和SS材质如何选择？",
+        "answer": "应结合介质兼容性、压力、温度和机械强度选择合适材质。"
+      },
+      {
+        "question": "能否提供二维图和三维模型？",
+        "answer": "已上传的资源会在详情页显示，暂未上传的型号可通过添加图纸或清单备注提交资料需求。"
+      }
+    ],
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "detailHref": "/products/fittings/female-thread-adapters/ut-u28-15-ps-b",
+    "selectionHref": "/products/fittings/female-thread-adapters",
+    "configuratorHref": "/products/fittings/female-thread-adapters",
+    "modelSelectionHref": "/products/fittings/female-thread-adapters",
+    "resourceStatus": {
+      "model3d": "missing",
+      "drawing": "available"
+    },
+    "resourceMessages": {
+      "model3d": "暂无3D模型",
+      "drawing": "暂无二维图纸"
+    }
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "female-thread-adapters",
+    "productTypeName": "T型三通内螺纹互转接头",
+    "productTypeLabel": "内螺纹互转接头",
+    "productId": "809698",
+    "productCode": "809698",
+    "seriesId": "ut",
+    "seriesCode": "UT",
+    "seriesName": "T型三通内螺纹互转接头",
+    "slug": "ut-u28-20-ps-b",
+    "model": "UT-U28-20-PS-B",
+    "name": "T型三通内螺纹互转接头",
+    "title": "T型三通内螺纹互转接头",
+    "displayName": "T型三通内螺纹互转接头",
+    "productName": "T型三通内螺纹互转接头",
+    "modelDisplay": "UT-U28-20-PS-B",
+    "displayModel": "UT-U28-20-PS-B",
+    "foreachModel": "UT-U28-20-PS-B",
+    "description": "UT-U28-20-PS-B是一款T型三通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为2.0 mm，主体材质为PS，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "shortDescription": "UT-U28-20-PS-B是一款T型三通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为2.0 mm，主体材质为PS，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "heroDescription": "UT-U28-20-PS-B是一款T型三通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为2.0 mm，主体材质为PS，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "advantages": [
+      "连接结构：三通",
+      "螺纹规格：1/4-28 UNF",
+      "通径：2.0 mm",
+      "材质：PS",
+      "颜色：黑色"
+    ],
+    "commonApplications": [
+      "仪器内部液路转接",
+      "泵阀与流路接口连接",
+      "IVD与分析仪器流路",
+      "实验室自动化设备液路"
+    ],
+    "mainImage": "/images/products/fittings/female-thread-adapters/products/UT-U28-20-PS-B.jpg",
+    "image": "/images/products/fittings/female-thread-adapters/products/UT-U28-20-PS-B.jpg",
+    "heroImage": "/images/products/fittings/female-thread-adapters/products/UT-U28-20-PS-B.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/UT-U28-20-PS-B.jpg",
+    "additionalImages": [],
+    "images": [
+      "/images/products/fittings/female-thread-adapters/products/UT-U28-20-PS-B.jpg"
+    ],
+    "model3dUrl": "",
+    "modelUrl": "",
+    "drawingPdfUrl": "/documents/products/fittings/female-thread-adapters/drawings/UT系列-C.pdf",
+    "drawingUrl": "/documents/products/fittings/female-thread-adapters/drawings/UT系列-C.pdf",
+    "drawingPdf": "/documents/products/fittings/female-thread-adapters/drawings/UT系列-C.pdf",
+    "detailMode": "standard_model",
+    "specs": [
+      {
+        "label": "型号",
+        "value": "UT-U28-20-PS-B"
+      },
+      {
+        "label": "商品编码",
+        "value": "809698"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "UT"
+      },
+      {
+        "label": "连接结构",
+        "value": "三通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "1/4-28 UNF"
+      },
+      {
+        "label": "通径",
+        "value": "2.0 mm"
+      },
+      {
+        "label": "材质",
+        "value": "PS"
+      },
+      {
+        "label": "颜色",
+        "value": "黑色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "UT-U28-20-PS-B"
+      },
+      {
+        "label": "商品编码",
+        "value": "809698"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "UT"
+      },
+      {
+        "label": "连接结构",
+        "value": "三通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "1/4-28 UNF"
+      },
+      {
+        "label": "通径",
+        "value": "2.0 mm"
+      },
+      {
+        "label": "材质",
+        "value": "PS"
+      },
+      {
+        "label": "颜色",
+        "value": "黑色"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "二通和三通如何选择？",
+        "answer": "二通用于两路接口连接，三通用于一路分成两路或两路汇合，应根据液路结构选择。"
+      },
+      {
+        "question": "通径是否等于螺纹尺寸？",
+        "answer": "通径表示内部流道尺寸，螺纹规格表示接口连接标准，两者不是同一个参数。"
+      },
+      {
+        "question": "不同螺纹能否互转？",
+        "answer": "应以具体在售型号的接口组合为准，未列出的组合可提交定制需求。"
+      },
+      {
+        "question": "PP、PA和SS材质如何选择？",
+        "answer": "应结合介质兼容性、压力、温度和机械强度选择合适材质。"
+      },
+      {
+        "question": "能否提供二维图和三维模型？",
+        "answer": "已上传的资源会在详情页显示，暂未上传的型号可通过添加图纸或清单备注提交资料需求。"
+      }
+    ],
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "detailHref": "/products/fittings/female-thread-adapters/ut-u28-20-ps-b",
+    "selectionHref": "/products/fittings/female-thread-adapters",
+    "configuratorHref": "/products/fittings/female-thread-adapters",
+    "modelSelectionHref": "/products/fittings/female-thread-adapters",
+    "resourceStatus": {
+      "model3d": "missing",
+      "drawing": "available"
+    },
+    "resourceMessages": {
+      "model3d": "暂无3D模型",
+      "drawing": "暂无二维图纸"
+    }
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "female-thread-adapters",
+    "productTypeName": "T型三通内螺纹互转接头",
+    "productTypeLabel": "内螺纹互转接头",
+    "productId": "809939",
+    "productCode": "809939",
+    "seriesId": "ut",
+    "seriesCode": "UT",
+    "seriesName": "T型三通内螺纹互转接头",
+    "slug": "ut-m6-20-pp-n",
+    "model": "UT-M6-20-PP-N",
+    "name": "T型三通内螺纹互转接头",
+    "title": "T型三通内螺纹互转接头",
+    "displayName": "T型三通内螺纹互转接头",
+    "productName": "T型三通内螺纹互转接头",
+    "modelDisplay": "UT-M6-20-PP-N",
+    "displayModel": "UT-M6-20-PP-N",
+    "foreachModel": "UT-M6-20-PP-N",
+    "description": "UT-M6-20-PP-N是一款T型三通内螺纹互转接头，采用M6内螺纹接口，通径为2.0 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "shortDescription": "UT-M6-20-PP-N是一款T型三通内螺纹互转接头，采用M6内螺纹接口，通径为2.0 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "heroDescription": "UT-M6-20-PP-N是一款T型三通内螺纹互转接头，采用M6内螺纹接口，通径为2.0 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "advantages": [
+      "连接结构：三通",
+      "螺纹规格：M6",
+      "通径：2.0 mm",
+      "材质：PP",
+      "颜色：本色"
+    ],
+    "commonApplications": [
+      "仪器内部液路转接",
+      "泵阀与流路接口连接",
+      "IVD与分析仪器流路",
+      "实验室自动化设备液路"
+    ],
+    "mainImage": "",
+    "image": "",
+    "heroImage": "",
+    "imageCard": "",
+    "additionalImages": [],
+    "images": [],
+    "model3dUrl": "",
+    "modelUrl": "",
+    "drawingPdfUrl": "/documents/products/fittings/female-thread-adapters/drawings/UT系列-C.pdf",
+    "drawingUrl": "/documents/products/fittings/female-thread-adapters/drawings/UT系列-C.pdf",
+    "drawingPdf": "/documents/products/fittings/female-thread-adapters/drawings/UT系列-C.pdf",
+    "detailMode": "standard_model",
+    "specs": [
+      {
+        "label": "型号",
+        "value": "UT-M6-20-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809939"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "UT"
+      },
+      {
+        "label": "连接结构",
+        "value": "三通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "M6"
+      },
+      {
+        "label": "通径",
+        "value": "2.0 mm"
+      },
+      {
+        "label": "材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "UT-M6-20-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809939"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "UT"
+      },
+      {
+        "label": "连接结构",
+        "value": "三通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "M6"
+      },
+      {
+        "label": "通径",
+        "value": "2.0 mm"
+      },
+      {
+        "label": "材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "二通和三通如何选择？",
+        "answer": "二通用于两路接口连接，三通用于一路分成两路或两路汇合，应根据液路结构选择。"
+      },
+      {
+        "question": "通径是否等于螺纹尺寸？",
+        "answer": "通径表示内部流道尺寸，螺纹规格表示接口连接标准，两者不是同一个参数。"
+      },
+      {
+        "question": "不同螺纹能否互转？",
+        "answer": "应以具体在售型号的接口组合为准，未列出的组合可提交定制需求。"
+      },
+      {
+        "question": "PP、PA和SS材质如何选择？",
+        "answer": "应结合介质兼容性、压力、温度和机械强度选择合适材质。"
+      },
+      {
+        "question": "能否提供二维图和三维模型？",
+        "answer": "已上传的资源会在详情页显示，暂未上传的型号可通过添加图纸或清单备注提交资料需求。"
+      }
+    ],
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "detailHref": "/products/fittings/female-thread-adapters/ut-m6-20-pp-n",
+    "selectionHref": "/products/fittings/female-thread-adapters",
+    "configuratorHref": "/products/fittings/female-thread-adapters",
+    "modelSelectionHref": "/products/fittings/female-thread-adapters",
+    "resourceStatus": {
+      "model3d": "missing",
+      "drawing": "available"
+    },
+    "resourceMessages": {
+      "model3d": "暂无3D模型",
+      "drawing": "暂无二维图纸"
+    }
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "female-thread-adapters",
+    "productTypeName": "Y型三通内螺纹互转接头",
+    "productTypeLabel": "内螺纹互转接头",
+    "productId": "809308",
+    "productCode": "809308",
+    "seriesId": "uy",
+    "seriesCode": "UY",
+    "seriesName": "Y型三通内螺纹互转接头",
+    "slug": "uy-u28-10-pp-n",
+    "model": "UY-U28-10-PP-N",
+    "name": "Y型三通内螺纹互转接头",
+    "title": "Y型三通内螺纹互转接头",
+    "displayName": "Y型三通内螺纹互转接头",
+    "productName": "Y型三通内螺纹互转接头",
+    "modelDisplay": "UY-U28-10-PP-N",
+    "displayModel": "UY-U28-10-PP-N",
+    "foreachModel": "UY-U28-10-PP-N",
+    "description": "UY-U28-10-PP-N是一款Y型三通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为1.0 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "shortDescription": "UY-U28-10-PP-N是一款Y型三通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为1.0 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "heroDescription": "UY-U28-10-PP-N是一款Y型三通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为1.0 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "advantages": [
+      "连接结构：三通",
+      "螺纹规格：1/4-28 UNF",
+      "通径：1.0 mm",
+      "材质：PP",
+      "颜色：本色"
+    ],
+    "commonApplications": [
+      "仪器内部液路转接",
+      "泵阀与流路接口连接",
+      "IVD与分析仪器流路",
+      "实验室自动化设备液路"
+    ],
+    "mainImage": "/images/products/fittings/female-thread-adapters/products/UY-U28-10-PP-N.jpg",
+    "image": "/images/products/fittings/female-thread-adapters/products/UY-U28-10-PP-N.jpg",
+    "heroImage": "/images/products/fittings/female-thread-adapters/products/UY-U28-10-PP-N.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/UY-U28-10-PP-N.jpg",
+    "additionalImages": [],
+    "images": [
+      "/images/products/fittings/female-thread-adapters/products/UY-U28-10-PP-N.jpg"
+    ],
+    "model3dUrl": "",
+    "modelUrl": "",
+    "drawingPdfUrl": "/documents/products/fittings/female-thread-adapters/drawings/UY系列-C.pdf",
+    "drawingUrl": "/documents/products/fittings/female-thread-adapters/drawings/UY系列-C.pdf",
+    "drawingPdf": "/documents/products/fittings/female-thread-adapters/drawings/UY系列-C.pdf",
+    "detailMode": "standard_model",
+    "specs": [
+      {
+        "label": "型号",
+        "value": "UY-U28-10-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809308"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "UY"
+      },
+      {
+        "label": "连接结构",
+        "value": "三通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "1/4-28 UNF"
+      },
+      {
+        "label": "通径",
+        "value": "1.0 mm"
+      },
+      {
+        "label": "材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "UY-U28-10-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809308"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "UY"
+      },
+      {
+        "label": "连接结构",
+        "value": "三通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "1/4-28 UNF"
+      },
+      {
+        "label": "通径",
+        "value": "1.0 mm"
+      },
+      {
+        "label": "材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "二通和三通如何选择？",
+        "answer": "二通用于两路接口连接，三通用于一路分成两路或两路汇合，应根据液路结构选择。"
+      },
+      {
+        "question": "通径是否等于螺纹尺寸？",
+        "answer": "通径表示内部流道尺寸，螺纹规格表示接口连接标准，两者不是同一个参数。"
+      },
+      {
+        "question": "不同螺纹能否互转？",
+        "answer": "应以具体在售型号的接口组合为准，未列出的组合可提交定制需求。"
+      },
+      {
+        "question": "PP、PA和SS材质如何选择？",
+        "answer": "应结合介质兼容性、压力、温度和机械强度选择合适材质。"
+      },
+      {
+        "question": "能否提供二维图和三维模型？",
+        "answer": "已上传的资源会在详情页显示，暂未上传的型号可通过添加图纸或清单备注提交资料需求。"
+      }
+    ],
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "detailHref": "/products/fittings/female-thread-adapters/uy-u28-10-pp-n",
+    "selectionHref": "/products/fittings/female-thread-adapters",
+    "configuratorHref": "/products/fittings/female-thread-adapters",
+    "modelSelectionHref": "/products/fittings/female-thread-adapters",
+    "resourceStatus": {
+      "model3d": "missing",
+      "drawing": "available"
+    },
+    "resourceMessages": {
+      "model3d": "暂无3D模型",
+      "drawing": "暂无二维图纸"
+    }
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "female-thread-adapters",
+    "productTypeName": "Y型三通内螺纹互转接头",
+    "productTypeLabel": "内螺纹互转接头",
+    "productId": "809491",
+    "productCode": "809491",
+    "seriesId": "uy",
+    "seriesCode": "UY",
+    "seriesName": "Y型三通内螺纹互转接头",
+    "slug": "uy-u28-15-pp-n",
+    "model": "UY-U28-15-PP-N",
+    "name": "Y型三通内螺纹互转接头",
+    "title": "Y型三通内螺纹互转接头",
+    "displayName": "Y型三通内螺纹互转接头",
+    "productName": "Y型三通内螺纹互转接头",
+    "modelDisplay": "UY-U28-15-PP-N",
+    "displayModel": "UY-U28-15-PP-N",
+    "foreachModel": "UY-U28-15-PP-N",
+    "description": "UY-U28-15-PP-N是一款Y型三通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为1.5 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "shortDescription": "UY-U28-15-PP-N是一款Y型三通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为1.5 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "heroDescription": "UY-U28-15-PP-N是一款Y型三通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为1.5 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "advantages": [
+      "连接结构：三通",
+      "螺纹规格：1/4-28 UNF",
+      "通径：1.5 mm",
+      "材质：PP",
+      "颜色：本色"
+    ],
+    "commonApplications": [
+      "仪器内部液路转接",
+      "泵阀与流路接口连接",
+      "IVD与分析仪器流路",
+      "实验室自动化设备液路"
+    ],
+    "mainImage": "/images/products/fittings/female-thread-adapters/products/UY-U28-15-PP-N.jpg",
+    "image": "/images/products/fittings/female-thread-adapters/products/UY-U28-15-PP-N.jpg",
+    "heroImage": "/images/products/fittings/female-thread-adapters/products/UY-U28-15-PP-N.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/UY-U28-15-PP-N.jpg",
+    "additionalImages": [],
+    "images": [
+      "/images/products/fittings/female-thread-adapters/products/UY-U28-15-PP-N.jpg"
+    ],
+    "model3dUrl": "",
+    "modelUrl": "",
+    "drawingPdfUrl": "/documents/products/fittings/female-thread-adapters/drawings/UY系列-C.pdf",
+    "drawingUrl": "/documents/products/fittings/female-thread-adapters/drawings/UY系列-C.pdf",
+    "drawingPdf": "/documents/products/fittings/female-thread-adapters/drawings/UY系列-C.pdf",
+    "detailMode": "standard_model",
+    "specs": [
+      {
+        "label": "型号",
+        "value": "UY-U28-15-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809491"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "UY"
+      },
+      {
+        "label": "连接结构",
+        "value": "三通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "1/4-28 UNF"
+      },
+      {
+        "label": "通径",
+        "value": "1.5 mm"
+      },
+      {
+        "label": "材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "UY-U28-15-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809491"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "UY"
+      },
+      {
+        "label": "连接结构",
+        "value": "三通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "1/4-28 UNF"
+      },
+      {
+        "label": "通径",
+        "value": "1.5 mm"
+      },
+      {
+        "label": "材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "二通和三通如何选择？",
+        "answer": "二通用于两路接口连接，三通用于一路分成两路或两路汇合，应根据液路结构选择。"
+      },
+      {
+        "question": "通径是否等于螺纹尺寸？",
+        "answer": "通径表示内部流道尺寸，螺纹规格表示接口连接标准，两者不是同一个参数。"
+      },
+      {
+        "question": "不同螺纹能否互转？",
+        "answer": "应以具体在售型号的接口组合为准，未列出的组合可提交定制需求。"
+      },
+      {
+        "question": "PP、PA和SS材质如何选择？",
+        "answer": "应结合介质兼容性、压力、温度和机械强度选择合适材质。"
+      },
+      {
+        "question": "能否提供二维图和三维模型？",
+        "answer": "已上传的资源会在详情页显示，暂未上传的型号可通过添加图纸或清单备注提交资料需求。"
+      }
+    ],
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "detailHref": "/products/fittings/female-thread-adapters/uy-u28-15-pp-n",
+    "selectionHref": "/products/fittings/female-thread-adapters",
+    "configuratorHref": "/products/fittings/female-thread-adapters",
+    "modelSelectionHref": "/products/fittings/female-thread-adapters",
+    "resourceStatus": {
+      "model3d": "missing",
+      "drawing": "available"
+    },
+    "resourceMessages": {
+      "model3d": "暂无3D模型",
+      "drawing": "暂无二维图纸"
+    }
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "female-thread-adapters",
+    "productTypeName": "Y型三通内螺纹互转接头",
+    "productTypeLabel": "内螺纹互转接头",
+    "productId": "809790",
+    "productCode": "809790",
+    "seriesId": "uy",
+    "seriesCode": "UY",
+    "seriesName": "Y型三通内螺纹互转接头",
+    "slug": "uy-u28-20-pp-n",
+    "model": "UY-U28-20-PP-N",
+    "name": "Y型三通内螺纹互转接头",
+    "title": "Y型三通内螺纹互转接头",
+    "displayName": "Y型三通内螺纹互转接头",
+    "productName": "Y型三通内螺纹互转接头",
+    "modelDisplay": "UY-U28-20-PP-N",
+    "displayModel": "UY-U28-20-PP-N",
+    "foreachModel": "UY-U28-20-PP-N",
+    "description": "UY-U28-20-PP-N是一款Y型三通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为2.0 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "shortDescription": "UY-U28-20-PP-N是一款Y型三通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为2.0 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "heroDescription": "UY-U28-20-PP-N是一款Y型三通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为2.0 mm，主体材质为PP，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "advantages": [
+      "连接结构：三通",
+      "螺纹规格：1/4-28 UNF",
+      "通径：2.0 mm",
+      "材质：PP",
+      "颜色：本色"
+    ],
+    "commonApplications": [
+      "仪器内部液路转接",
+      "泵阀与流路接口连接",
+      "IVD与分析仪器流路",
+      "实验室自动化设备液路"
+    ],
+    "mainImage": "/images/products/fittings/female-thread-adapters/products/UY-U28-20-PP-N.jpg",
+    "image": "/images/products/fittings/female-thread-adapters/products/UY-U28-20-PP-N.jpg",
+    "heroImage": "/images/products/fittings/female-thread-adapters/products/UY-U28-20-PP-N.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/UY-U28-20-PP-N.jpg",
+    "additionalImages": [],
+    "images": [
+      "/images/products/fittings/female-thread-adapters/products/UY-U28-20-PP-N.jpg"
+    ],
+    "model3dUrl": "",
+    "modelUrl": "",
+    "drawingPdfUrl": "/documents/products/fittings/female-thread-adapters/drawings/UY系列-C.pdf",
+    "drawingUrl": "/documents/products/fittings/female-thread-adapters/drawings/UY系列-C.pdf",
+    "drawingPdf": "/documents/products/fittings/female-thread-adapters/drawings/UY系列-C.pdf",
+    "detailMode": "standard_model",
+    "specs": [
+      {
+        "label": "型号",
+        "value": "UY-U28-20-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809790"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "UY"
+      },
+      {
+        "label": "连接结构",
+        "value": "三通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "1/4-28 UNF"
+      },
+      {
+        "label": "通径",
+        "value": "2.0 mm"
+      },
+      {
+        "label": "材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "UY-U28-20-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809790"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "UY"
+      },
+      {
+        "label": "连接结构",
+        "value": "三通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "1/4-28 UNF"
+      },
+      {
+        "label": "通径",
+        "value": "2.0 mm"
+      },
+      {
+        "label": "材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "二通和三通如何选择？",
+        "answer": "二通用于两路接口连接，三通用于一路分成两路或两路汇合，应根据液路结构选择。"
+      },
+      {
+        "question": "通径是否等于螺纹尺寸？",
+        "answer": "通径表示内部流道尺寸，螺纹规格表示接口连接标准，两者不是同一个参数。"
+      },
+      {
+        "question": "不同螺纹能否互转？",
+        "answer": "应以具体在售型号的接口组合为准，未列出的组合可提交定制需求。"
+      },
+      {
+        "question": "PP、PA和SS材质如何选择？",
+        "answer": "应结合介质兼容性、压力、温度和机械强度选择合适材质。"
+      },
+      {
+        "question": "能否提供二维图和三维模型？",
+        "answer": "已上传的资源会在详情页显示，暂未上传的型号可通过添加图纸或清单备注提交资料需求。"
+      }
+    ],
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "detailHref": "/products/fittings/female-thread-adapters/uy-u28-20-pp-n",
+    "selectionHref": "/products/fittings/female-thread-adapters",
+    "configuratorHref": "/products/fittings/female-thread-adapters",
+    "modelSelectionHref": "/products/fittings/female-thread-adapters",
+    "resourceStatus": {
+      "model3d": "missing",
+      "drawing": "available"
+    },
+    "resourceMessages": {
+      "model3d": "暂无3D模型",
+      "drawing": "暂无二维图纸"
+    }
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "female-thread-adapters",
+    "productTypeName": "内螺纹六角螺母",
+    "productTypeLabel": "内螺纹互转接头",
+    "productId": "809033",
+    "productCode": "809033",
+    "seriesId": "pmbsn",
+    "seriesCode": "PMBSN",
+    "seriesName": "内螺纹六角螺母",
+    "slug": "pmbsn-m12-pa-b",
+    "model": "PMBSN-M12-PA-B",
+    "name": "内螺纹六角螺母",
+    "title": "内螺纹六角螺母",
+    "displayName": "内螺纹六角螺母",
+    "productName": "内螺纹六角螺母",
+    "modelDisplay": "PMBSN-M12-PA-B",
+    "displayModel": "PMBSN-M12-PA-B",
+    "foreachModel": "PMBSN-M12-PA-B",
+    "description": "PMBSN-M12-PA-B是一款内螺纹六角螺母，采用M12内螺纹接口，主体材质为PA，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "shortDescription": "PMBSN-M12-PA-B是一款内螺纹六角螺母，采用M12内螺纹接口，主体材质为PA，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "heroDescription": "PMBSN-M12-PA-B是一款内螺纹六角螺母，采用M12内螺纹接口，主体材质为PA，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "advantages": [
+      "连接结构：二通",
+      "螺纹规格：M12",
+      "材质：PA",
+      "颜色：黑色"
+    ],
+    "commonApplications": [
+      "仪器内部液路转接",
+      "泵阀与流路接口连接",
+      "IVD与分析仪器流路",
+      "实验室自动化设备液路"
+    ],
+    "mainImage": "",
+    "image": "",
+    "heroImage": "",
+    "imageCard": "",
+    "additionalImages": [],
+    "images": [],
+    "model3dUrl": "",
+    "modelUrl": "",
+    "drawingPdfUrl": "",
+    "drawingUrl": "",
+    "drawingPdf": "",
+    "detailMode": "standard_model",
+    "specs": [
+      {
+        "label": "型号",
+        "value": "PMBSN-M12-PA-B"
+      },
+      {
+        "label": "商品编码",
+        "value": "809033"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "PMBSN"
+      },
+      {
+        "label": "连接结构",
+        "value": "二通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "M12"
+      },
+      {
+        "label": "材质",
+        "value": "PA"
+      },
+      {
+        "label": "颜色",
+        "value": "黑色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "PMBSN-M12-PA-B"
+      },
+      {
+        "label": "商品编码",
+        "value": "809033"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "PMBSN"
+      },
+      {
+        "label": "连接结构",
+        "value": "二通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "M12"
+      },
+      {
+        "label": "材质",
+        "value": "PA"
+      },
+      {
+        "label": "颜色",
+        "value": "黑色"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "二通和三通如何选择？",
+        "answer": "二通用于两路接口连接，三通用于一路分成两路或两路汇合，应根据液路结构选择。"
+      },
+      {
+        "question": "通径是否等于螺纹尺寸？",
+        "answer": "通径表示内部流道尺寸，螺纹规格表示接口连接标准，两者不是同一个参数。"
+      },
+      {
+        "question": "不同螺纹能否互转？",
+        "answer": "应以具体在售型号的接口组合为准，未列出的组合可提交定制需求。"
+      },
+      {
+        "question": "PP、PA和SS材质如何选择？",
+        "answer": "应结合介质兼容性、压力、温度和机械强度选择合适材质。"
+      },
+      {
+        "question": "能否提供二维图和三维模型？",
+        "answer": "已上传的资源会在详情页显示，暂未上传的型号可通过添加图纸或清单备注提交资料需求。"
+      }
+    ],
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "detailHref": "/products/fittings/female-thread-adapters/pmbsn-m12-pa-b",
+    "selectionHref": "/products/fittings/female-thread-adapters",
+    "configuratorHref": "/products/fittings/female-thread-adapters",
+    "modelSelectionHref": "/products/fittings/female-thread-adapters",
+    "resourceStatus": {
+      "model3d": "missing",
+      "drawing": "missing"
+    },
+    "resourceMessages": {
+      "model3d": "暂无3D模型",
+      "drawing": "暂无二维图纸"
+    }
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "female-thread-adapters",
+    "productTypeName": "高压二通内螺纹互转接头",
+    "productTypeLabel": "内螺纹互转接头",
+    "productId": "809317",
+    "productCode": "809317",
+    "seriesId": "pu",
+    "seriesCode": "PU",
+    "seriesName": "高压二通内螺纹互转接头",
+    "slug": "pu-u32-08-ss-n",
+    "model": "PU-U32-08-SS-N",
+    "name": "高压二通内螺纹互转接头",
+    "title": "高压二通内螺纹互转接头",
+    "displayName": "高压二通内螺纹互转接头",
+    "productName": "高压二通内螺纹互转接头",
+    "modelDisplay": "PU-U32-08-SS-N",
+    "displayModel": "PU-U32-08-SS-N",
+    "foreachModel": "PU-U32-08-SS-N",
+    "description": "PU-U32-08-SS-N是一款高压二通内螺纹互转接头，采用10-32 UNF内螺纹接口，通径为0.8 mm，主体材质为SS，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "shortDescription": "PU-U32-08-SS-N是一款高压二通内螺纹互转接头，采用10-32 UNF内螺纹接口，通径为0.8 mm，主体材质为SS，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "heroDescription": "PU-U32-08-SS-N是一款高压二通内螺纹互转接头，采用10-32 UNF内螺纹接口，通径为0.8 mm，主体材质为SS，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "advantages": [
+      "连接结构：二通",
+      "螺纹规格：10-32 UNF",
+      "通径：0.8 mm",
+      "材质：SS",
+      "颜色：本色"
+    ],
+    "commonApplications": [
+      "仪器内部液路转接",
+      "泵阀与流路接口连接",
+      "IVD与分析仪器流路",
+      "实验室自动化设备液路"
+    ],
+    "mainImage": "",
+    "image": "",
+    "heroImage": "",
+    "imageCard": "",
+    "additionalImages": [],
+    "images": [],
+    "model3dUrl": "",
+    "modelUrl": "",
+    "drawingPdfUrl": "",
+    "drawingUrl": "",
+    "drawingPdf": "",
+    "detailMode": "standard_model",
+    "specs": [
+      {
+        "label": "型号",
+        "value": "PU-U32-08-SS-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809317"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "PU"
+      },
+      {
+        "label": "连接结构",
+        "value": "二通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "10-32 UNF"
+      },
+      {
+        "label": "通径",
+        "value": "0.8 mm"
+      },
+      {
+        "label": "材质",
+        "value": "SS"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "PU-U32-08-SS-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809317"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "PU"
+      },
+      {
+        "label": "连接结构",
+        "value": "二通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "10-32 UNF"
+      },
+      {
+        "label": "通径",
+        "value": "0.8 mm"
+      },
+      {
+        "label": "材质",
+        "value": "SS"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "二通和三通如何选择？",
+        "answer": "二通用于两路接口连接，三通用于一路分成两路或两路汇合，应根据液路结构选择。"
+      },
+      {
+        "question": "通径是否等于螺纹尺寸？",
+        "answer": "通径表示内部流道尺寸，螺纹规格表示接口连接标准，两者不是同一个参数。"
+      },
+      {
+        "question": "不同螺纹能否互转？",
+        "answer": "应以具体在售型号的接口组合为准，未列出的组合可提交定制需求。"
+      },
+      {
+        "question": "PP、PA和SS材质如何选择？",
+        "answer": "应结合介质兼容性、压力、温度和机械强度选择合适材质。"
+      },
+      {
+        "question": "能否提供二维图和三维模型？",
+        "answer": "已上传的资源会在详情页显示，暂未上传的型号可通过添加图纸或清单备注提交资料需求。"
+      }
+    ],
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "detailHref": "/products/fittings/female-thread-adapters/pu-u32-08-ss-n",
+    "selectionHref": "/products/fittings/female-thread-adapters",
+    "configuratorHref": "/products/fittings/female-thread-adapters",
+    "modelSelectionHref": "/products/fittings/female-thread-adapters",
+    "resourceStatus": {
+      "model3d": "missing",
+      "drawing": "missing"
+    },
+    "resourceMessages": {
+      "model3d": "暂无3D模型",
+      "drawing": "暂无二维图纸"
+    }
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "female-thread-adapters",
+    "productTypeName": "高压二通内螺纹互转接头",
+    "productTypeLabel": "内螺纹互转接头",
+    "productId": "809659",
+    "productCode": "809659",
+    "seriesId": "pu",
+    "seriesCode": "PU",
+    "seriesName": "高压二通内螺纹互转接头",
+    "slug": "pu-u32-u28-08-ss-n",
+    "model": "PU-U32-U28-08-SS-N",
+    "name": "高压二通内螺纹互转接头",
+    "title": "高压二通内螺纹互转接头",
+    "displayName": "高压二通内螺纹互转接头",
+    "productName": "高压二通内螺纹互转接头",
+    "modelDisplay": "PU-U32-U28-08-SS-N",
+    "displayModel": "PU-U32-U28-08-SS-N",
+    "foreachModel": "PU-U32-U28-08-SS-N",
+    "description": "PU-U32-U28-08-SS-N是一款高压二通内螺纹互转接头，采用10-32 UNF、1/4-28 UNF内螺纹接口，通径为0.8 mm，主体材质为SS，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "shortDescription": "PU-U32-U28-08-SS-N是一款高压二通内螺纹互转接头，采用10-32 UNF、1/4-28 UNF内螺纹接口，通径为0.8 mm，主体材质为SS，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "heroDescription": "PU-U32-U28-08-SS-N是一款高压二通内螺纹互转接头，采用10-32 UNF、1/4-28 UNF内螺纹接口，通径为0.8 mm，主体材质为SS，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "advantages": [
+      "连接结构：二通",
+      "螺纹规格：10-32 UNF、1/4-28 UNF",
+      "通径：0.8 mm",
+      "材质：SS",
+      "颜色：本色"
+    ],
+    "commonApplications": [
+      "仪器内部液路转接",
+      "泵阀与流路接口连接",
+      "IVD与分析仪器流路",
+      "实验室自动化设备液路"
+    ],
+    "mainImage": "",
+    "image": "",
+    "heroImage": "",
+    "imageCard": "",
+    "additionalImages": [],
+    "images": [],
+    "model3dUrl": "",
+    "modelUrl": "",
+    "drawingPdfUrl": "",
+    "drawingUrl": "",
+    "drawingPdf": "",
+    "detailMode": "standard_model",
+    "specs": [
+      {
+        "label": "型号",
+        "value": "PU-U32-U28-08-SS-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809659"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "PU"
+      },
+      {
+        "label": "连接结构",
+        "value": "二通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "10-32 UNF、1/4-28 UNF"
+      },
+      {
+        "label": "通径",
+        "value": "0.8 mm"
+      },
+      {
+        "label": "材质",
+        "value": "SS"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "PU-U32-U28-08-SS-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809659"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "PU"
+      },
+      {
+        "label": "连接结构",
+        "value": "二通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "10-32 UNF、1/4-28 UNF"
+      },
+      {
+        "label": "通径",
+        "value": "0.8 mm"
+      },
+      {
+        "label": "材质",
+        "value": "SS"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "二通和三通如何选择？",
+        "answer": "二通用于两路接口连接，三通用于一路分成两路或两路汇合，应根据液路结构选择。"
+      },
+      {
+        "question": "通径是否等于螺纹尺寸？",
+        "answer": "通径表示内部流道尺寸，螺纹规格表示接口连接标准，两者不是同一个参数。"
+      },
+      {
+        "question": "不同螺纹能否互转？",
+        "answer": "应以具体在售型号的接口组合为准，未列出的组合可提交定制需求。"
+      },
+      {
+        "question": "PP、PA和SS材质如何选择？",
+        "answer": "应结合介质兼容性、压力、温度和机械强度选择合适材质。"
+      },
+      {
+        "question": "能否提供二维图和三维模型？",
+        "answer": "已上传的资源会在详情页显示，暂未上传的型号可通过添加图纸或清单备注提交资料需求。"
+      }
+    ],
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "detailHref": "/products/fittings/female-thread-adapters/pu-u32-u28-08-ss-n",
+    "selectionHref": "/products/fittings/female-thread-adapters",
+    "configuratorHref": "/products/fittings/female-thread-adapters",
+    "modelSelectionHref": "/products/fittings/female-thread-adapters",
+    "resourceStatus": {
+      "model3d": "missing",
+      "drawing": "missing"
+    },
+    "resourceMessages": {
+      "model3d": "暂无3D模型",
+      "drawing": "暂无二维图纸"
+    }
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "female-thread-adapters",
+    "productTypeName": "高压T型三通内螺纹互转接头",
+    "productTypeLabel": "内螺纹互转接头",
+    "productId": "809664",
+    "productCode": "809664",
+    "seriesId": "put",
+    "seriesCode": "PUT",
+    "seriesName": "高压T型三通内螺纹互转接头",
+    "slug": "put-u32-05-ss-n",
+    "model": "PUT-U32-05-SS-N",
+    "name": "高压T型三通内螺纹互转接头",
+    "title": "高压T型三通内螺纹互转接头",
+    "displayName": "高压T型三通内螺纹互转接头",
+    "productName": "高压T型三通内螺纹互转接头",
+    "modelDisplay": "PUT-U32-05-SS-N",
+    "displayModel": "PUT-U32-05-SS-N",
+    "foreachModel": "PUT-U32-05-SS-N",
+    "description": "PUT-U32-05-SS-N是一款高压T型三通内螺纹互转接头，采用10-32 UNF内螺纹接口，通径为0.5 mm，主体材质为SS，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "shortDescription": "PUT-U32-05-SS-N是一款高压T型三通内螺纹互转接头，采用10-32 UNF内螺纹接口，通径为0.5 mm，主体材质为SS，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "heroDescription": "PUT-U32-05-SS-N是一款高压T型三通内螺纹互转接头，采用10-32 UNF内螺纹接口，通径为0.5 mm，主体材质为SS，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "advantages": [
+      "连接结构：三通",
+      "螺纹规格：10-32 UNF",
+      "通径：0.5 mm",
+      "材质：SS",
+      "颜色：本色"
+    ],
+    "commonApplications": [
+      "仪器内部液路转接",
+      "泵阀与流路接口连接",
+      "IVD与分析仪器流路",
+      "实验室自动化设备液路"
+    ],
+    "mainImage": "",
+    "image": "",
+    "heroImage": "",
+    "imageCard": "",
+    "additionalImages": [],
+    "images": [],
+    "model3dUrl": "",
+    "modelUrl": "",
+    "drawingPdfUrl": "",
+    "drawingUrl": "",
+    "drawingPdf": "",
+    "detailMode": "standard_model",
+    "specs": [
+      {
+        "label": "型号",
+        "value": "PUT-U32-05-SS-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809664"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "PUT"
+      },
+      {
+        "label": "连接结构",
+        "value": "三通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "10-32 UNF"
+      },
+      {
+        "label": "通径",
+        "value": "0.5 mm"
+      },
+      {
+        "label": "材质",
+        "value": "SS"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "PUT-U32-05-SS-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809664"
+      },
+      {
+        "label": "产品类别",
+        "value": "内螺纹互转接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "PUT"
+      },
+      {
+        "label": "连接结构",
+        "value": "三通"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "10-32 UNF"
+      },
+      {
+        "label": "通径",
+        "value": "0.5 mm"
+      },
+      {
+        "label": "材质",
+        "value": "SS"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "二通和三通如何选择？",
+        "answer": "二通用于两路接口连接，三通用于一路分成两路或两路汇合，应根据液路结构选择。"
+      },
+      {
+        "question": "通径是否等于螺纹尺寸？",
+        "answer": "通径表示内部流道尺寸，螺纹规格表示接口连接标准，两者不是同一个参数。"
+      },
+      {
+        "question": "不同螺纹能否互转？",
+        "answer": "应以具体在售型号的接口组合为准，未列出的组合可提交定制需求。"
+      },
+      {
+        "question": "PP、PA和SS材质如何选择？",
+        "answer": "应结合介质兼容性、压力、温度和机械强度选择合适材质。"
+      },
+      {
+        "question": "能否提供二维图和三维模型？",
+        "answer": "已上传的资源会在详情页显示，暂未上传的型号可通过添加图纸或清单备注提交资料需求。"
+      }
+    ],
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "detailHref": "/products/fittings/female-thread-adapters/put-u32-05-ss-n",
+    "selectionHref": "/products/fittings/female-thread-adapters",
+    "configuratorHref": "/products/fittings/female-thread-adapters",
+    "modelSelectionHref": "/products/fittings/female-thread-adapters",
+    "resourceStatus": {
+      "model3d": "missing",
+      "drawing": "missing"
+    },
+    "resourceMessages": {
+      "model3d": "暂无3D模型",
+      "drawing": "暂无二维图纸"
+    }
+  }
+]

@@ -1,0 +1,613 @@
+﻿2D 图纸最终架构核查报告
+生成时间：2026-07-17 11:16:03
+项目目录：F:\WebsiteProjects\foreach-website-2026
+
+============================================================
+一、ProductDetailClient 图纸地址推导逻辑
+============================================================
+文件：F:\WebsiteProjects\foreach-website-2026\components\products\detail\ProductDetailClient.tsx
+   35: type ProductDetailClientProps = {
+   36:   data: ProductDetailPageData & Record<string, any>;
+   37: };
+   38: 
+   39: type ZoomStyle = CSSProperties & {
+   40:   "--zoom-x"?: string;
+   41:   "--zoom-y"?: string;
+   42: };
+   43: 
+   44: function getProductDrawingPreviewUrl(slug: string, configuredUrl?: string) {
+   45:   const normalizedConfiguredUrl = configuredUrl?.trim();
+   46: 
+   47:   if (normalizedConfiguredUrl) {
+   48:     return normalizedConfiguredUrl.includes("#")
+   49:       ? normalizedConfiguredUrl
+   50:       : normalizedConfiguredUrl + "#toolbar=0&navpanes=0&scrollbar=1";
+   51:   }
+   52: 
+   53:   const normalizedSlug = slug.trim().toLowerCase();
+   54:   const match = normalizedSlug.match(/^(ea|sm|tm)-(\d+)/);
+   55: 
+   56:   if (!match) {
+   57:     return "";
+   58:   }
+   59: 
+   60:   const seriesCode = match[1];
+   61:   const seriesUpper = seriesCode.toUpperCase();
+   62:   const capacityCode = String(Number(match[2])).padStart(4, "0") + "UL";
+   63: 
+   64:   return (
+   65:     "/assets/products/" +
+   66:     seriesCode +
+   67:     "/2d-drawings/" +
+   68:     seriesUpper +
+   69:     "-" +
+   70:     capacityCode +
+   71:     ".pdf#toolbar=0&navpanes=0&scrollbar=1"
+   72:   );
+   73: }
+   74: 
+   75: function isPlungerPumpDisplayModel(value: unknown): boolean {
+   76:   const model = String(value || "").trim();
+   77: 
+   78:   return /^(EA|SM|TM)-/i.test(model);
+   79: }
+   80: 
+   81: 
+   82: function isTubingDetailData(data: any): boolean {
+   83:   return (
+   84:     data?.productCategory === "tubing" ||
+   85:     data?.productType === "tubing" ||
+   86:     data?.category === "tubing" ||
+   87:     data?.detailMode === "material_selection" ||
+   88:     (typeof data?.slug === "string" && data.slug.includes("-tubing"))
+   89:   );
+   90: }
+
+============================================================
+二、ProductDetailClient 图纸显示条件
+============================================================
+文件：F:\WebsiteProjects\foreach-website-2026\components\products\detail\ProductDetailClient.tsx
+ 1590:                   className={styles.panelBox}
+ 1591:                   data-product-model3d-panel="true"
+ 1592:                 >
+ 1593:                 <ProductModelViewer
+ 1594:                   slug={data.slug}
+ 1595:                   modelName={data.model}
+ 1596:                   modelUrl={(data as any).model3dUrl || (data as any).resources?.model3dUrl}
+ 1597:                   locale={isEnglish ? "en" : "zh"}
+ 1598:                 />
+ 1599:               </div>
+ 1600:             </div>
+ 1601: 
+ 1602:             <div
+ 1603:               className={[
+ 1604:                 styles.panel,
+ 1605:                 activeTab === "drawing" ? styles.isActive : "",
+ 1606:               ]
+ 1607:                 .filter(Boolean)
+ 1608:                 .join(" ")}
+ 1609:             >
+ 1610:               {getProductDrawingPreviewUrl(data.slug, (data as any).drawing2dUrl || (data as any).drawingPdfUrl || (data as any).partDrawingUrl || (data as any).resources?.drawing2dUrl) ? (
+ 1611:                 <PdfDrawingPreview
+ 1612:                   pdfPreviewUrl={getProductDrawingPreviewUrl(data.slug, (data as any).drawing2dUrl || (data as any).drawingPdfUrl || (data as any).partDrawingUrl || (data as any).resources?.drawing2dUrl)}
+ 1613:                   documentTitle={data.model}
+ 1614:                   text={
+ 1615:                     isEnglish
+ 1616:                       ? {
+ 1617:                           title: "Technical Drawing",
+ 1618:                           loadingLabel: "Loading drawing...",
+ 1619:                           previewButton: "Preview Drawing",
+ 1620:                           description: `View the technical drawing for ${data.model}.`,
+ 1621:                         }
+ 1622:                       : undefined
+ 1623:                   }
+ 1624:                 />
+ 1625:               ) : (
+ 1626:                 <div className={styles.panelBox}>
+ 1627:                   {copy.noDrawing}
+ 1628:                 </div>
+ 1629:               )}
+ 1630:             </div>
+ 1631:           </div>
+ 1632:         </section>
+ 1633:         {/* QUICK_CONNECT_SERIES_MODEL_TABLE_START */}
+ 1634:         {Array.isArray((data as any).modelRows) &&
+ 1635:         (data as any).modelRows.length > 0 ? (
+ 1636:           <section
+ 1637:             id="model-selection"
+ 1638:             className={styles.faqSection}
+ 1639:           >
+ 1640:             <div className={styles.faqHeader}>
+ 1641:               <h2>
+ 1642:                 {(data as any).modelTableTitle ||
+ 1643:                   copy.completeModels}
+ 1644:               </h2>
+ 1645:         
+
+============================================================
+三、快插接头图纸配置逻辑
+============================================================
+文件：F:\WebsiteProjects\foreach-website-2026\data\products\detail\getQuickConnectSeriesDetailData.ts
+  580:       "多种安装结构可选",
+  581:     ],
+  582: 
+  583:     commonApplications: [
+  584:       "微流体液路",
+  585:       "IVD设备",
+  586:       "分析仪器",
+  587:       "实验室自动化",
+  588:     ],
+  589: 
+  590:     mainImage:
+  591:       images[0],
+  592: 
+  593:     image:
+  594:       images[0],
+  595: 
+  596:     heroImage:
+  597:       images[0],
+  598: 
+  599:     imageCard:
+  600:       images[0],
+  601: 
+  602:     additionalImages:
+  603:       images.slice(1),
+  604: 
+  605:     imageAlt:
+  606:       `${series}快插接头系列`,
+  607: 
+  608:     mainImageAlt:
+  609:       `${series}快插接头系列`,
+  610: 
+  611:     detailMode:
+  612:       "selection",
+  613: 
+  614:     hideModelAction:
+  615:       false,
+  616: 
+  617:     showConfigurator:
+  618:       true,
+  619: 
+  620:     showDatasheetRequest:
+  621:       false,
+  622: 
+  623:     showDrawingRequest:
+  624:       false,
+  625: 
+  626:     show3DRequest:
+  627:       false,
+  628: 
+  629:     drawing2dUrl:
+  630:       "",
+  631: 
+  632:     drawingPdfUrl:
+  633:       "",
+  634: 
+  635:     model3dUrl:
+  636:       "",
+  637: 
+  638:     resources: {},
+  639: 
+  640:     specSeriesKey:
+  641:       `quick-connect-${slug}`,
+  642: 
+  643:     specs,
+  644: 
+  645:     specifications:
+  646:       specs,
+  647: 
+  648:     /* QUICK_CONNECT_SERIES_MODEL_TABLE_DATA */
+  649:     modelRows,
+  650: 
+  651:     modelTableTitle:
+  652:       `${series}系列完整型号`,
+  653: 
+  654:     modelTableDescription:
+  655:       `当前共${rows.length}个在售型号。点击筛选页面中的查看详情，可直接定位到对应型号。`,
+  656:     faqs,
+  657:     detailHref,
+  658: 
+  659:     href:
+  660:       detailHref,
+  661: 
+  662:     selectionHref,
+  663: 
+  664:     modelSelectionHref:
+  665:       selectionHref,
+  666: 
+  667:     breadcrumbs: [
+  668:       {
+  669:         label:
+  670:           "首页",
+
+============================================================
+四、泵详情 Adapter 图纸处理逻辑
+============================================================
+文件：F:\WebsiteProjects\foreach-website-2026\services\products\adapters\getPumpSeriesProductDetailAdapter.ts
+    1: /* =========================================================
+    2:    getPumpSeriesProductDetailAdapter.ts
+    3:    恒永达官网｜泵系列数据库数据 → 原详情页数据结构适配器
+    4: 
+    5:    说明：
+    6:    1. Excel / generated 是正式资料来源
+    7:    2. 本文件只做字段映射，不重新创作文案
+    8:    3. 中文页面只读取中文正文、中文参数、中文 FAQ
+    9:    4. 英文内容保留给未来英文详情页，不进入中文详情页
+   10:    5. 图片和 FAQ 增加强兜底，避免前端拿不到数据
+   11: ========================================================= */
+   12: 
+   13: import nodeFs from "node:fs";
+   14: import nodePath from "node:path";
+   15: 
+   16: import type {
+   17:   ProductDetailPageData,
+   18:   ProductSpecItem,
+   19: } from "@/data/products/detail/product-detail.types";
+   20: import { getPumpSeriesDetailData } from "@/services/products/getPumpSeriesDetailData";
+   21: 
+   22: function toText(value: unknown) {
+   23:   return String(value || "").trim();
+   24: }
+   25: 
+   26: function uniqueList(items: unknown[]) {
+   27:   return Array.from(new Set(items.map(toText).filter(Boolean)));
+   28: }
+   29: 
+   30: function hasChinese(text: string) {
+   31:   return /[\u4e00-\u9fa5]/.test(toText(text));
+   32: }
+   33: 
+   34: function isMostlyEnglish(text: string) {
+   35:   const value = toText(text);
+   36: 
+   37:   if (!value) {
+   38:     return false;
+   39:   }
+   40: 
+   41:   const englishChars = (value.match(/[A-Za-z]/g) || []).length;
+   42:   const chineseChars = (value.match(/[\u4e00-\u9fa5]/g) || []).length;
+   43: 
+   44:   return englishChars > 20 && englishChars > chineseChars * 2;
+   45: }
+   46: 
+   47: function isEnglishLabel(label: string) {
+   48:   const value = toText(label);
+   49: 
+   50:   if (!value) {
+   51:     return false;
+   52:   }
+   53: 
+   54:   return /^[A-Za-z][A-Za-z\s%/().-]+$/.test(value);
+   55: }
+   56: 
+   57: function normalizeFootnotes(items: any[]) {
+   58:   return Array.from(
+   59:     new Set(
+   60:       items
+   61:         .map((item: any) => {
+   62:           if (typeof item === "string") {
+   63:             return toText(item);
+   64:           }
+   65: 
+   66:           return toText(item?.noteZh || item?.noteEn);
+   67:         })
+   68:         .filter(Boolean)
+   69:     )
+   70:   );
+   71: }
+   72: 
+   73: function getLocalizedContent(record: any, locale: "zh" | "en") {
+   74:   const content = record?.content || {};
+   75: 
+   76:   if (content?.[locale]) {
+   77:     return content[locale];
+   78:   }
+   79: 
+   80:   return content;
+   81: }
+   82: 
+   83: function getContentCandidates(record: any, locale: "zh" | "en") {
+   84:   const content = record?.content || {};
+   85:   const localizedContent = getLocalizedContent(record, locale);
+   86: 
+   87:   const candidates = [
+   88:     localizedContent,
+   89:     content?.[locale],
+   90:     content,
+   91:     record,
+   92:   ].filter(Boolean);
+   93: 
+   94:   return Array.from(new Set(candidates));
+   95: }
+   96: 
+   97: function getFirstObject(candidates: any[], key: string) {
+   98:   for (const item of candidates) {
+   99:     if (item?.[key] && typeof item[key] === "object") {
+  100:       return item[key];
+  101:     }
+  102:   }
+  103: 
+  104:   return {};
+  105: }
+  106: 
+  107: function getFirstText(candidates: any[], paths: string[][], locale: "zh" | "en") {
+  108:   for (const item of candidates) {
+  109:     for (const path of paths) {
+  110:       let value = item;
+  111: 
+  112:       for (const key of path) {
+  113:         value = value?.[key];
+  114:       }
+  115: 
+  116:       const text = toText(value);
+  117: 
+  118:       if (!text) {
+  119:         continue;
+  120:       }
+  121: 
+  122:       if (locale === "zh" && isMostlyEnglish(text)) {
+  123:         continue;
+  124:       }
+  125: 
+  126:       return text;
+  127:     }
+  128:   }
+  129: 
+  130:   return "";
+  131: }
+  132: 
+  133: function getDetailImageBlock(content: any) {
+  134:   const imageBlocks = Array.isArray(content?.images) ? content.images : [];
+  135: 
+  136:   return (
+  137:     imageBlocks.find((item: any) => item.imageUsage === "detailImages") ||
+  138:     imageBlocks.find((item: any) => item.imageUsage === "mainImage") ||
+  139:     imageBlocks.find((item: any) => item.imageUsage === "detail") ||
+  140:     imageBlocks[0] ||
+  141:     null
+  142:   );
+  143: }
+  144: 
+  145: function getImagesFromContent(content: any) {
+  146:   const detailImageBlock = getDetailImageBlock(content);
+  147:   const images = Array.isArray(detailImageBlock?.images)
+  148:     ? detailImageBlock.images
+  149:     : [];
+  150: 
+  151:   return images
+  152:     .map((item: any) => toText(item.src || item.url || item.imageUrl))
+  153:     .filter(Boolean)
+  154:     .filter((src: string) => !src.includes("product-placeholder"));
+  155: }
+  156: 
+  157: function getProductId(record: any) {
+  158:   return toText(record.internalModelRef || record.productId || record.slug).toLowerCase();
+  159: }
+  160: 
+  161: function getSeriesCode(record: any) {
+  162:   const productId = getProductId(record);
+  163:   return toText(record.seriesCode || productId.split("-")[0]).toLowerCase();
+  164: }
+  165: 
+  166: function getCapacityNumber(record: any) {
+  167:   const productId = getProductId(record);
+  168:   const capacity = toText(record.capacity || productId.split("-")[1]);
+  169:   const match = capacity.match(/\d+/);
+  170: 
+  171:   return match ? match[0] : "";
+  172: }
+  173: 
+  174: function getMaterial(record: any) {
+  175:   const productId = getProductId(record);
+  176:   return toText(record.material || productId.split("-")[2]).toLowerCase();
+  177: }
+  178: 
+  179: function publicPathExists(webPath: string) {
+  180:   const localPath = nodePath.join(
+  181:     process.cwd(),
+  182:     "public",
+  183:     webPath.replace(/^\//, "")
+  184:   );
+  185: 
+  186:   return nodeFs.existsSync(localPath);
+  187: }
+  188: 
+  189: function resolveFallbackImage(record: any) {
+  190:   const seriesCode = getSeriesCode(record);
+  191:   const capacity = getCapacityNumber(record);
+  192:   const material = getMaterial(record);
+  193: 
+  194:   const candidates = [
+  195:     `/images/products/pumps/plunger-pump/${seriesCode}/pump-${seriesCode}-${capacity}ul-${material}.webp`,
+  196:     `/images/products/pumps/plunger-pump/${seriesCode}/pump-${seriesCode}-${capacity}ul-pmma.webp`,
+  197:     `/images/products/pumps/plunger-pump/${seriesCode}/pump-${seriesCode}-${capacity}ul-peek.webp`,
+  198:   ].filter((item) => !item.includes("--") && !item.includes("undefined"));
+  199: 
+  200:   for (const candidate of candidates) {
+  201:     if (publicPathExists(candidate)) {
+  202:       return candidate;
+  203:     }
+  204:   }
+  205: 
+  206:   const seriesDir = nodePath.join(
+  207:     process.cwd(),
+  208:     "public",
+  209:     "images",
+  210:     "products",
+  211:     "pumps",
+  212:     "plunger-pump",
+  213:     seriesCode
+  214:   );
+  215: 
+  216:   if (nodeFs.existsSync(seriesDir)) {
+  217:     const firstImage = nodeFs
+  218:       .readdirSync(seriesDir)
+  219:       .filter((name) => /^pump-.*\.webp$/i.test(name))
+  220:       .sort()[0];
+  221: 
+  222:     if (firstImage) {
+  223:       return `/images/products/pumps/plunger-pump/${seriesCode}/${firstImage}`;
+  224:     }
+  225:   }
+  226: 
+  227:   return "/images/products/common/product-placeholder.svg";
+  228: }
+  229: 
+  230: function getDetailImages(record: any, content: any) {
+  231:   const contentImages = getImagesFromContent(content);
+  232: 
+  233:   if (contentImages.length > 0) {
+  234:     return contentImages;
+  235:   }
+  236: 
+  237:   const fallbackImage = resolveFallbackImage(record);
+  238: 
+  239:   return fallbackImage ? [fallbackImage] : [];
+  240: }
+  241: 
+  242: function getDetailImageCaption(content: any) {
+  243:   const detailImageBlock = getDetailImageBlock(content);
+  244:   const images = Array.isArray(detailImageBlock?.images)
+  245:     ? detailImageBlock.images
+  246:     : [];
+  247: 
+  248:   return toText(images[0]?.caption);
+  249: }
+  250: 
+  251: function getDetailImageFootnotes(content: any) {
+  252:   const detailImageBlock = getDetailImageBlock(content);
+  253:   const footnotes = Array.isArray(detailImageBlock?.footnotes)
+  254:     ? detailImageBlock.footnotes
+  255:     : [];
+  256: 
+  257:   return normalizeFootnotes(footnotes);
+  258: }
+  259: 
+  260: function dedupeSpecs(specs: ProductSpecItem[]) {
+
+============================================================
+五、public 中现有泵类 PDF
+============================================================
+数量：43
+public\assets\products\ea\2d-drawings\EA-0020ML.pdf
+public\assets\products\ea\2d-drawings\EA-0050UL.pdf
+public\assets\products\ea\2d-drawings\EA-0100UL.pdf
+public\assets\products\ea\2d-drawings\EA-0250UL.pdf
+public\assets\products\ea\2d-drawings\EA-0500UL.pdf
+public\assets\products\ea\2d-drawings\EA-10000UL.pdf
+public\assets\products\ea\2d-drawings\EA-1000UL.pdf
+public\assets\products\ea\2d-drawings\EA-2500UL.pdf
+public\assets\products\ea\2d-drawings\EA-5000UL.pdf
+public\assets\products\sm\2d-drawings\SM-0050UL.pdf
+public\assets\products\sm\2d-drawings\SM-0100UL.pdf
+public\assets\products\sm\2d-drawings\SM-0250UL.pdf
+public\assets\products\sm\2d-drawings\SM-0500UL.pdf
+public\assets\products\sm\2d-drawings\SM-1000UL.pdf
+public\assets\products\tm\2d-drawings\TM-0050UL.pdf
+public\assets\products\tm\2d-drawings\TM-0100UL.pdf
+public\assets\products\tm\2d-drawings\TM-0250UL.pdf
+public\assets\products\tm\2d-drawings\TM-0500UL.pdf
+public\documents\products\pumps\diaphragm-pumps\dpgl800\drawings\dpgl800-24bs6-ep-ps-gas-liquid-diaphragm-pump-2d-drawing.pdf
+public\documents\products\pumps\diaphragm-pumps\dpgl800\drawings\dpgl800-24bs6-ff-ps-gas-liquid-diaphragm-pump-2d-drawing.pdf
+public\documents\products\pumps\diaphragm-pumps\dpgl800\drawings\dpgl800-gas-liquid-diaphragm-pump-2d-drawing.pdf
+public\documents\products\pumps\diaphragm-pumps\dpl30\drawings\dpl30-brushed-liquid-diaphragm-pump-2d-drawing.pdf
+public\documents\products\pumps\diaphragm-pumps\dpl30\drawings\dpl30-brushless-liquid-diaphragm-pump-2d-drawing.pdf
+public\documents\products\pumps\diaphragm-pumps\dpl30h\drawings\dpl30h-brushed-liquid-diaphragm-pump-2d-drawing.pdf
+public\documents\products\pumps\diaphragm-pumps\dpl30h\drawings\dpl30h-brushless-liquid-diaphragm-pump-2d-drawing.pdf
+public\documents\products\pumps\diaphragm-pumps\dpl60\drawings\dpl60-brushed-liquid-diaphragm-pump-2d-drawing.pdf
+public\documents\products\pumps\diaphragm-pumps\dpl60\drawings\dpl60-brushless-liquid-diaphragm-pump-2d-drawing.pdf
+public\downloads\resources\datasheets\en\Pumps\ps-120b-2507-00001-001-en-ea-piston-pump.pdf
+public\downloads\resources\datasheets\en\Pumps\ps-120b-2507-00002-001-en-eas-piston-pump.pdf
+public\downloads\resources\datasheets\en\Pumps\ps-120b-2507-00004-001-en-sm-piston-pump.pdf
+public\downloads\resources\datasheets\en\Pumps\ps-121b-2507-00001-001-en-rpl-valveless-pump.pdf
+public\downloads\resources\datasheets\en\Pumps\ps-130a-2507-00001-001-en-smtp2-smtp4-pipetting-pump.pdf
+public\downloads\resources\datasheets\en\Pumps\ps-130b-2507-00001-001-en-hld3-syringe-pump-rotary-valve.pdf
+public\downloads\resources\datasheets\en\Pumps\ps-130b-2507-00002-001-en-hld6-syringe-pump-rotary-valve.pdf
+public\downloads\resources\datasheets\en\Pumps\ps-130b-2507-00003-001-en-hmd3-syringe-pump-solenoid-valve.pdf
+public\downloads\resources\datasheets\en\Pumps\ps-130b-2507-00004-001-en-hmd6-syringe-pump-solenoid-valve.pdf
+public\downloads\resources\datasheets\en\Pumps\ps-150b-2507-00001-001-en-dpl30-diaphragm-pump.pdf
+public\downloads\resources\datasheets\en\Pumps\ps-150b-2507-00002-001-en-dpl60-diaphragm-pump.pdf
+public\downloads\resources\datasheets\zh-CN\Pumps\ps-120b-013-001-cn-sm-piston-pump.pdf
+public\downloads\resources\datasheets\zh-CN\Pumps\ps-121b-011-a01-cn-rpl-p635-valveless-pump.pdf
+public\downloads\resources\datasheets\zh-CN\Pumps\ps-150b-2412-00001-a03-cn-dpl30-diaphragm-pump.pdf
+public\downloads\resources\datasheets\zh-CN\Pumps\ps-sdrv-001-007-cn-hmd6-syringe-pump.pdf
+public\downloads\resources\datasheets\zh-CN\Pumps\ps-sdrv-007-003-cn-hmd3-syringe-pump.pdf
+
+============================================================
+六、public 中现有快插接头 PDF
+============================================================
+数量：31
+public\downloads\resources\selection-support\fitting-replacement\q20\drawings\Q2001-PMV-SACN.pdf
+public\downloads\resources\selection-support\fitting-replacement\q20\drawings\Q2001-PMV-SPPE.pdf
+public\downloads\resources\selection-support\fitting-replacement\q20\drawings\Q2001-PMX-SACN.pdf
+public\downloads\resources\selection-support\fitting-replacement\q20\drawings\Q2001-PMX-SPPE.pdf
+public\downloads\resources\selection-support\fitting-replacement\q20\drawings\Q2001-PNV-SACN.pdf
+public\downloads\resources\selection-support\fitting-replacement\q20\drawings\Q2001-PNV-SPPE.pdf
+public\downloads\resources\selection-support\fitting-replacement\q20\drawings\Q2001-PNX-SACE.pdf
+public\downloads\resources\selection-support\fitting-replacement\q20\drawings\Q2001-PNX-SACN.pdf
+public\downloads\resources\selection-support\fitting-replacement\q20\drawings\Q2001-PNX-SPPE.pdf
+public\downloads\resources\selection-support\fitting-replacement\q20\drawings\Q2001-SMV-SACN.pdf
+public\downloads\resources\selection-support\fitting-replacement\q20\drawings\Q2001-SMV-SPPE.pdf
+public\downloads\resources\selection-support\fitting-replacement\q20\drawings\Q2001-SMX-SACN.pdf
+public\downloads\resources\selection-support\fitting-replacement\q20\drawings\Q2001-SMX-SPPE.pdf
+public\downloads\resources\selection-support\fitting-replacement\q20\drawings\Q2001-SNV-SACN.pdf
+public\downloads\resources\selection-support\fitting-replacement\q20\drawings\Q2001-SNV-SPPE.pdf
+public\downloads\resources\selection-support\fitting-replacement\q20\drawings\Q2001-SNX-SACN.pdf
+public\downloads\resources\selection-support\fitting-replacement\q20\drawings\Q2001-SNX-SPPE.pdf
+public\downloads\resources\selection-support\fitting-replacement\q20\drawings\Q2002-PMV-SACN.pdf
+public\downloads\resources\selection-support\fitting-replacement\q20\drawings\Q2002-PMV-SPPE.pdf
+public\downloads\resources\selection-support\fitting-replacement\q20\drawings\Q2002-PMX-SACE.pdf
+public\downloads\resources\selection-support\fitting-replacement\q20\drawings\Q2002-PMX-SACN.pdf
+public\downloads\resources\selection-support\fitting-replacement\q20\drawings\Q2002-PMX-SPPE.pdf
+public\downloads\resources\selection-support\fitting-replacement\q20\drawings\Q2002-PNV-LACN.pdf
+public\downloads\resources\selection-support\fitting-replacement\q20\drawings\Q2002-PNV-LPPE.pdf
+public\downloads\resources\selection-support\fitting-replacement\q20\drawings\Q2002-PNV-SACN.pdf
+public\downloads\resources\selection-support\fitting-replacement\q20\drawings\Q2002-PNV-SPPE.pdf
+public\downloads\resources\selection-support\fitting-replacement\q20\drawings\Q2002-PNX-LACN.pdf
+public\downloads\resources\selection-support\fitting-replacement\q20\drawings\Q2002-PNX-LPPE.pdf
+public\downloads\resources\selection-support\fitting-replacement\q20\drawings\Q2002-PNX-SACE.pdf
+public\downloads\resources\selection-support\fitting-replacement\q20\drawings\Q2002-PNX-SACN.pdf
+public\downloads\resources\selection-support\fitting-replacement\q20\drawings\Q2002-PNX-SPPE.pdf
+
+============================================================
+七、12 个泵图纸名称的全项目搜索
+============================================================
+
+关键词：smtp2
+匹配数量：1
+public\downloads\resources\datasheets\en\Pumps\ps-130a-2507-00001-001-en-smtp2-smtp4-pipetting-pump.pdf
+
+关键词：smtp4
+匹配数量：1
+public\downloads\resources\datasheets\en\Pumps\ps-130a-2507-00001-001-en-smtp2-smtp4-pipetting-pump.pdf
+
+关键词：hld3
+匹配数量：1
+public\downloads\resources\datasheets\en\Pumps\ps-130b-2507-00001-001-en-hld3-syringe-pump-rotary-valve.pdf
+
+关键词：hld6
+匹配数量：1
+public\downloads\resources\datasheets\en\Pumps\ps-130b-2507-00002-001-en-hld6-syringe-pump-rotary-valve.pdf
+
+关键词：hmd3
+匹配数量：2
+public\downloads\resources\datasheets\en\Pumps\ps-130b-2507-00003-001-en-hmd3-syringe-pump-solenoid-valve.pdf
+public\downloads\resources\datasheets\zh-CN\Pumps\ps-sdrv-007-003-cn-hmd3-syringe-pump.pdf
+
+关键词：hmd6
+匹配数量：2
+public\downloads\resources\datasheets\en\Pumps\ps-130b-2507-00004-001-en-hmd6-syringe-pump-solenoid-valve.pdf
+public\downloads\resources\datasheets\zh-CN\Pumps\ps-sdrv-001-007-cn-hmd6-syringe-pump.pdf
+
+关键词：drpl
+匹配数量：0
+
+关键词：rpl-p15
+匹配数量：0
+
+关键词：rpl-p4
+匹配数量：0
+
+关键词：rpl-p635
+匹配数量：1
+public\downloads\resources\datasheets\zh-CN\Pumps\ps-121b-011-a01-cn-rpl-p635-valveless-pump.pdf

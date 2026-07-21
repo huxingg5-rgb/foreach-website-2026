@@ -1,0 +1,486 @@
+/* =========================================================
+   ProductPageSkeleton.module.css
+   恒永达官网｜产品中心与产品详情页加载骨架
+========================================================= */
+
+.shell {
+  width: 100%;
+  min-width: 0;
+  min-height: 900px;
+  padding-top: 82px;
+  background: #ffffff;
+}
+
+.container {
+  width: min(1600px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.block {
+  position: relative;
+  overflow: hidden;
+  background: #edf1f6;
+}
+
+.block::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.72) 50%,
+    transparent 100%
+  );
+  animation: productSkeletonShimmer 1.4s ease-in-out infinite;
+}
+
+@keyframes productSkeletonShimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.breadcrumbBar {
+  border-bottom: 1px solid rgba(23, 51, 104, 0.14);
+  background: #ffffff;
+}
+
+.breadcrumbLine {
+  width: 210px;
+  height: 18px;
+  margin: 28px 0 18px;
+}
+
+.searchBand {
+  display: flex;
+  min-height: 90px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(23, 51, 104, 0.1);
+  background: #f4f7fb;
+}
+
+.searchBox {
+  width: min(760px, calc(100% - 32px));
+  height: 46px;
+}
+
+.categoryTabs {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+  margin: 28px 0 24px;
+}
+
+.categoryTab {
+  height: 46px;
+}
+
+.selectionLayout {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+  padding-bottom: 80px;
+}
+
+.filterPanel {
+  min-height: 620px;
+  padding: 22px 18px;
+  border: 1px solid rgba(23, 51, 104, 0.14);
+}
+
+.filterTitle {
+  width: 54%;
+  height: 22px;
+  margin-bottom: 28px;
+}
+
+.filterGroup {
+  padding: 18px 0;
+  border-top: 1px solid rgba(23, 51, 104, 0.1);
+}
+
+.filterLabel {
+  width: 42%;
+  height: 16px;
+  margin-bottom: 16px;
+}
+
+.filterOption {
+  width: 86%;
+  height: 14px;
+  margin-bottom: 12px;
+}
+
+.filterOptionShort {
+  width: 64%;
+  height: 14px;
+}
+
+.selectionMain {
+  min-width: 0;
+}
+
+.toolbar {
+  display: flex;
+  min-height: 46px;
+  margin-bottom: 18px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.toolbarTitle {
+  width: 220px;
+  height: 20px;
+}
+
+.toolbarButton {
+  width: 108px;
+  height: 36px;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.productCard {
+  min-width: 0;
+  padding: 14px 14px 16px;
+  border: 1px solid rgba(23, 51, 104, 0.14);
+  background: #ffffff;
+}
+
+.cardImage {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  margin-bottom: 16px;
+}
+
+.cardTitle {
+  width: 72%;
+  height: 20px;
+  margin-bottom: 12px;
+}
+
+.cardMeta {
+  width: 88%;
+  height: 14px;
+  margin-bottom: 18px;
+}
+
+.cardButton {
+  width: 100%;
+  height: 38px;
+}
+
+.detailHero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.14fr) minmax(380px, 0.86fr);
+  gap: 56px;
+  padding: 40px 0 48px;
+}
+
+.detailMedia,
+.detailInfo {
+  min-width: 0;
+}
+
+.detailImage {
+  width: 100%;
+  min-height: 520px;
+}
+
+.thumbnailRow {
+  display: flex;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.thumbnail {
+  width: 82px;
+  height: 82px;
+}
+
+.detailInfo {
+  padding-top: 10px;
+}
+
+.detailEyebrow {
+  width: 120px;
+  height: 16px;
+  margin-bottom: 18px;
+}
+
+.detailTitle {
+  width: 82%;
+  height: 34px;
+  margin-bottom: 12px;
+}
+
+.detailTitleShort {
+  width: 56%;
+  height: 34px;
+  margin-bottom: 34px;
+}
+
+.detailTextGroup {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 34px;
+}
+
+.detailText {
+  width: 100%;
+  height: 16px;
+}
+
+.detailTextShort {
+  width: 74%;
+  height: 16px;
+}
+
+.detailModelRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 126px;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.detailModel,
+.detailConfigButton {
+  height: 44px;
+}
+
+.detailActionRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.25fr;
+  gap: 10px;
+}
+
+.detailAction,
+.detailActionWide {
+  height: 42px;
+}
+
+.detailTabs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid rgba(23, 51, 104, 0.14);
+  border-bottom: 1px solid rgba(23, 51, 104, 0.14);
+}
+
+.detailTab {
+  height: 58px;
+  border-right: 1px solid #ffffff;
+}
+
+.detailPanel {
+  min-height: 420px;
+  padding: 34px 0 80px;
+}
+
+.panelHeading {
+  width: 180px;
+  height: 24px;
+  margin-bottom: 22px;
+}
+
+.specRow {
+  display: grid;
+  grid-template-columns: 34% minmax(0, 1fr);
+  min-height: 52px;
+  border-top: 1px solid rgba(23, 51, 104, 0.1);
+  align-items: center;
+}
+
+.specLabel {
+  width: 62%;
+  height: 15px;
+}
+
+.specValue {
+  width: 54%;
+  height: 15px;
+}
+
+@media (max-width: 1280px) {
+  .cardGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .detailHero {
+    gap: 36px;
+  }
+}
+
+@media (max-width: 900px) {
+  .shell {
+    min-height: 760px;
+    padding-top: 70px;
+  }
+
+  .container {
+    width: min(100%, calc(100% - 32px));
+  }
+
+  .breadcrumbLine {
+    margin-top: 18px;
+  }
+
+  .categoryTabs {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .selectionLayout {
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .cardGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .detailHero {
+    grid-template-columns: 1fr;
+  }
+
+  .detailImage {
+    min-height: 460px;
+  }
+}
+
+@media (max-width: 680px) {
+  .shell {
+    min-height: 680px;
+  }
+
+  .container {
+    width: calc(100% - 24px);
+  }
+
+  .breadcrumbLine {
+    width: 150px;
+    height: 15px;
+    margin: 12px 0 14px;
+  }
+
+  .searchBand {
+    min-height: 82px;
+  }
+
+  .searchBox {
+    width: calc(100% - 24px);
+    height: 44px;
+  }
+
+  .categoryTabs {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    margin: 18px 0;
+  }
+
+  .categoryTab {
+    height: 40px;
+  }
+
+  .selectionLayout {
+    display: block;
+    padding-bottom: 48px;
+  }
+
+  .filterPanel {
+    min-height: 170px;
+    margin-bottom: 18px;
+    padding: 16px 14px;
+  }
+
+  .filterGroup:nth-of-type(n + 3) {
+    display: none;
+  }
+
+  .toolbar {
+    margin-bottom: 14px;
+  }
+
+  .toolbarTitle {
+    width: 160px;
+  }
+
+  .cardGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .productCard {
+    padding: 8px 8px 12px;
+  }
+
+  .cardImage {
+    margin-bottom: 12px;
+  }
+
+  .cardGrid .productCard:nth-child(n + 7) {
+    display: none;
+  }
+
+  .detailHero {
+    gap: 26px;
+    padding: 22px 0 34px;
+  }
+
+  .detailImage {
+    min-height: 360px;
+  }
+
+  .thumbnail {
+    width: 66px;
+    height: 66px;
+  }
+
+  .detailInfo {
+    padding-top: 0;
+  }
+
+  .detailTitle,
+  .detailTitleShort {
+    height: 28px;
+  }
+
+  .detailModelRow {
+    grid-template-columns: minmax(0, 1fr) 106px;
+  }
+
+  .detailActionRow {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .detailActionWide {
+    grid-column: 1 / -1;
+  }
+
+  .detailTabs {
+    grid-template-columns: repeat(4, minmax(92px, 1fr));
+    overflow-x: auto;
+  }
+
+  .detailPanel {
+    min-height: 340px;
+    padding-bottom: 48px;
+  }
+
+  .specRow {
+    grid-template-columns: 40% minmax(0, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .block::after {
+    animation: none;
+  }
+}

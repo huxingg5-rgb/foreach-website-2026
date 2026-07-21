@@ -1,0 +1,517 @@
+﻿"use client";
+
+import {
+  Fragment,
+  type ReactNode,
+  useDeferredValue,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
+
+import type {
+  GlobalSearchItem,
+  GlobalSearchModule,
+} from "@/data/search/global-search-overlay.types";
+
+type GlobalSearchPanelProps = {
+  isOpen: boolean;
+  query: string;
+  locale: string;
+  onQueryChange: (value: string) => void;
+  onClose: () => void;
+};
+
+type ScoredItem = {
+  item: GlobalSearchItem;
+  score: number;
+};
+
+const DEFAULT_VISIBLE_COUNT = 6;
+const LOAD_MORE_COUNT = 6;
+
+const MODULE_ORDER: GlobalSearchModule[] = [
+  "products",
+  "compatible-models",
+  "datasheets",
+  "installation-guides",
+  "technical-articles",
+  "material-compatibility",
+  "applications",
+  "news",
+  "pages",
+];
+
+const MODULE_TEXT: Record<
+  GlobalSearchModule,
+  {
+    title: string;
+    action: string;
+  }
+> = {
+  products: {
+    title: "产品中心",
+    action: "查看产品",
+  },
+  "compatible-models": {
+    title: "兼容型号查询",
+    action: "查看兼容产品",
+  },
+  datasheets: {
+    title: "规格书下载",
+    action: "查看规格书",
+  },
+  "installation-guides": {
+    title: "安装教程",
+    action: "查看教程",
+  },
+  "technical-articles": {
+    title: "技术文章",
+    action: "阅读文章",
+  },
+  "material-compatibility": {
+    title: "材料兼容性",
+    action: "查看材料信息",
+  },
+  applications: {
+    title: "应用领域",
+    action: "查看应用",
+  },
+  news: {
+    title: "新闻资讯",
+    action: "查看新闻",
+  },
+  pages: {
+    title: "网站页面",
+    action: "打开页面",
+  },
+};
+
+const INITIAL_SUGGESTIONS = [
+  "Q2002",
+  "PMC1702",
+  "柱塞泵",
+  "PEEK",
+  "接头安装",
+  "ADLM",
+];
+
+function normalize(value: string): string {
+  return value
+    .trim()
+    .toUpperCase()
+    .replace(/[‐‑‒–—―﹘﹣－]/g, "-")
+    .replace(/\s+/g, "");
+}
+
+function scoreItem(
+  item: GlobalSearchItem,
+  query: string
+): number {
+  const normalizedQuery = normalize(query);
+
+  if (!normalizedQuery) return 0;
+
+  const title = normalize(item.title);
+  const model = normalize(item.model ?? "");
+  const productCode = normalize(item.productCode ?? "");
+  const subtitle = normalize(item.subtitle ?? "");
+  const description = normalize(item.description ?? "");
+  const keywords = (item.keywords ?? []).map(normalize);
+
+  let score = 0;
+
+  if (title === normalizedQuery) score += 1200;
+  if (model === normalizedQuery) score += 1150;
+  if (productCode === normalizedQuery) score += 1100;
+
+  if (
+    item.module === "compatible-models" &&
+    title === normalizedQuery
+  ) {
+    score += 600;
+  }
+
+  if (title.startsWith(normalizedQuery)) score += 600;
+  if (model.startsWith(normalizedQuery)) score += 560;
+  if (productCode.startsWith(normalizedQuery)) score += 520;
+
+  if (title.includes(normalizedQuery)) score += 320;
+  if (model.includes(normalizedQuery)) score += 300;
+  if (productCode.includes(normalizedQuery)) score += 280;
+  if (subtitle.includes(normalizedQuery)) score += 180;
+  if (description.includes(normalizedQuery)) score += 120;
+
+  for (const keyword of keywords) {
+    if (keyword === normalizedQuery) {
+      score += 180;
+    } else if (keyword.startsWith(normalizedQuery)) {
+      score += 100;
+    } else if (keyword.includes(normalizedQuery)) {
+      score += 45;
+    }
+  }
+
+  return score;
+}
+
+function escapeRegExp(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function highlightText(
+  value: string,
+  query: string
+): ReactNode {
+  const keyword = query.trim();
+
+  if (!keyword) return value;
+
+  const parts = value.split(
+    new RegExp(`(${escapeRegExp(keyword)})`, "ig")
+  );
+
+  return parts.map((part, index) => {
+    if (part.toLowerCase() === keyword.toLowerCase()) {
+      return <mark key={`${part}-${index}`}>{part}</mark>;
+    }
+
+    return <Fragment key={`${part}-${index}`}>{part}</Fragment>;
+  });
+}
+
+function getLocalizedHref(
+  href: string,
+  locale: string
+): string {
+  if (
+    !href.startsWith("/") ||
+    href.startsWith("/downloads/") ||
+    locale === "zh-CN" ||
+    locale === "zh"
+  ) {
+    return href;
+  }
+
+  const firstSegment = href.split("/").filter(Boolean)[0];
+
+  if (["en", "es", "fr", "ko", "ru"].includes(firstSegment ?? "")) {
+    return href;
+  }
+
+  return `/${locale}${href}`;
+}
+
+export default function GlobalSearchPanel({
+  isOpen,
+  query,
+  locale,
+  onQueryChange,
+  onClose,
+}: GlobalSearchPanelProps) {
+  const deferredQuery = useDeferredValue(query);
+  const [items, setItems] = useState<GlobalSearchItem[] | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [headerBottom, setHeaderBottom] = useState(84);
+  const [visibleCounts, setVisibleCounts] = useState<
+    Partial<Record<GlobalSearchModule, number>>
+  >({});
+
+  useEffect(() => {
+    if (!isOpen || items || isLoading) return;
+
+    let cancelled = false;
+
+    setIsLoading(true);
+
+    import("@/data/search/global-search-overlay-index.generated")
+      .then((module) => {
+        if (!cancelled) {
+          setItems(module.globalSearchOverlayIndex);
+        }
+      })
+      .finally(() => {
+        if (!cancelled) {
+          setIsLoading(false);
+        }
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [isOpen, isLoading, items]);
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    function updateHeaderBottom() {
+      const header = document.querySelector(".site-header");
+      const nextBottom =
+        header?.getBoundingClientRect().bottom ?? 84;
+
+      setHeaderBottom(Math.max(0, nextBottom));
+    }
+
+    updateHeaderBottom();
+
+    window.addEventListener("resize", updateHeaderBottom);
+    document.body.classList.add("global-search-lock");
+
+    return () => {
+      window.removeEventListener("resize", updateHeaderBottom);
+      document.body.classList.remove("global-search-lock");
+    };
+  }, [isOpen]);
+
+  useEffect(() => {
+    setVisibleCounts({});
+  }, [deferredQuery]);
+
+  const groupedResults = useMemo(() => {
+    const grouped = new Map<GlobalSearchModule, ScoredItem[]>();
+
+    for (const module of MODULE_ORDER) {
+      grouped.set(module, []);
+    }
+
+    const keyword = deferredQuery.trim();
+
+    if (!keyword || !items) return grouped;
+
+    for (const item of items) {
+      const score = scoreItem(item, keyword);
+
+      if (score <= 0) continue;
+
+      grouped.get(item.module)?.push({
+        item,
+        score,
+      });
+    }
+
+    for (const module of MODULE_ORDER) {
+      const moduleItems = grouped.get(module) ?? [];
+
+      moduleItems.sort((a, b) => {
+        return (
+          b.score - a.score ||
+          a.item.title.localeCompare(b.item.title, "zh-CN")
+        );
+      });
+
+      grouped.set(module, moduleItems);
+    }
+
+    return grouped;
+  }, [deferredQuery, items]);
+
+  const visibleModules = MODULE_ORDER.filter((module) => {
+    return (groupedResults.get(module)?.length ?? 0) > 0;
+  });
+
+  const totalCount = visibleModules.reduce((sum, module) => {
+    return sum + (groupedResults.get(module)?.length ?? 0);
+  }, 0);
+
+  if (!isOpen) return null;
+
+  return (
+    <>
+      <button
+        className="global-search-backdrop"
+        type="button"
+        aria-label="关闭全站搜索"
+        style={{ top: headerBottom }}
+        onClick={onClose}
+      />
+
+      <section
+        className="global-search-panel"
+        aria-label="全站搜索结果"
+        style={{
+          top: headerBottom,
+          maxHeight: `calc(100vh - ${headerBottom}px)`,
+        }}
+      >
+        <div className="global-search-panel-inner">
+          <header className="global-search-panel-head">
+            <div>
+              <span>全站搜索</span>
+              <strong>
+                {deferredQuery.trim()
+                  ? `“${deferredQuery.trim()}”`
+                  : "搜索产品与技术资料"}
+              </strong>
+            </div>
+
+            <div className="global-search-panel-head-actions">
+              {deferredQuery.trim() ? (
+                <span>共 {totalCount} 条结果</span>
+              ) : null}
+
+              <button
+                className="global-search-close"
+                type="button"
+                aria-label="关闭全站搜索"
+                onClick={onClose}
+              >
+                ×
+              </button>
+            </div>
+          </header>
+
+          {!deferredQuery.trim() ? (
+            <div className="global-search-start">
+              <p>
+                输入产品名称、型号、兼容型号、规格书、教程或技术关键词。
+              </p>
+
+              <div className="global-search-suggestions">
+                {INITIAL_SUGGESTIONS.map((suggestion) => (
+                  <button
+                    type="button"
+                    key={suggestion}
+                    onClick={() => onQueryChange(suggestion)}
+                  >
+                    {suggestion}
+                  </button>
+                ))}
+              </div>
+            </div>
+          ) : isLoading || !items ? (
+            <div className="global-search-status">
+              正在加载全站搜索数据……
+            </div>
+          ) : totalCount === 0 ? (
+            <div className="global-search-status">
+              <strong>没有找到匹配结果</strong>
+              <p>
+                请检查型号是否完整，或尝试产品名称、系列、材料及应用关键词。
+              </p>
+            </div>
+          ) : (
+            <div
+              className="global-search-modules"
+              aria-live="polite"
+            >
+              {visibleModules.map((module) => {
+                const moduleResults =
+                  groupedResults.get(module) ?? [];
+
+                const visibleCount =
+                  visibleCounts[module] ??
+                  DEFAULT_VISIBLE_COUNT;
+
+                const visibleResults =
+                  moduleResults.slice(0, visibleCount);
+
+                const allVisible =
+                  visibleCount >= moduleResults.length;
+
+                return (
+                  <section
+                    className="global-search-module"
+                    key={module}
+                  >
+                    <div className="global-search-module-head">
+                      <h2>{MODULE_TEXT[module].title}</h2>
+                      <span>{moduleResults.length} 条</span>
+                    </div>
+
+                    <div className="global-search-result-grid">
+                      {visibleResults.map(({ item }) => (
+                        <a
+                          className="global-search-result"
+                          href={getLocalizedHref(
+                            item.href,
+                            locale
+                          )}
+                          key={item.id}
+                          onClick={onClose}
+                        >
+                          {item.image ? (
+                            <span className="global-search-result-image">
+                              <img
+                                src={item.image}
+                                alt=""
+                                loading="lazy"
+                              />
+                            </span>
+                          ) : (
+                            <span
+                              className="global-search-result-image global-search-result-image-empty"
+                              aria-hidden="true"
+                            >
+                              F
+                            </span>
+                          )}
+
+                          <span className="global-search-result-copy">
+                            <strong>
+                              {highlightText(
+                                item.title,
+                                deferredQuery
+                              )}
+                            </strong>
+
+                            {item.subtitle ? (
+                              <span className="global-search-result-subtitle">
+                                {highlightText(
+                                  item.subtitle,
+                                  deferredQuery
+                                )}
+                              </span>
+                            ) : null}
+
+                            {item.description ? (
+                              <span className="global-search-result-description">
+                                {item.description}
+                              </span>
+                            ) : null}
+
+                            <span className="global-search-result-action">
+                              {item.actionLabel ??
+                                MODULE_TEXT[module].action}
+                              <span aria-hidden="true">→</span>
+                            </span>
+                          </span>
+                        </a>
+                      ))}
+                    </div>
+
+                    {moduleResults.length >
+                    DEFAULT_VISIBLE_COUNT ? (
+                      <button
+                        className="global-search-more"
+                        type="button"
+                        onClick={() => {
+                          setVisibleCounts((current) => ({
+                            ...current,
+                            [module]: allVisible
+                              ? DEFAULT_VISIBLE_COUNT
+                              : Math.min(
+                                  moduleResults.length,
+                                  visibleCount +
+                                    LOAD_MORE_COUNT
+                                ),
+                          }));
+                        }}
+                      >
+                        {allVisible
+                          ? "收起结果"
+                          : `查看更多（剩余 ${
+                              moduleResults.length -
+                              visibleCount
+                            } 条）`}
+                      </button>
+                    ) : null}
+                  </section>
+                );
+              })}
+            </div>
+          )}
+        </div>
+      </section>
+    </>
+  );
+}

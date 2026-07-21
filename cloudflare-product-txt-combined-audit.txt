@@ -1,0 +1,36 @@
+﻿中英文产品叶子页 TXT 联合模拟统计
+生成时间：2026-07-19 00:33:46
+
+当前 out 文件总数：27053
+
+英文产品叶子详情页：889
+英文候选 TXT：5334
+
+中文接头型号详情页：828
+中文接头候选 TXT：4968
+
+候选 TXT 合计：10302
+模拟处理后文件总数：16751
+Cloudflare Free 上限：20000
+距离上限剩余：3249
+
+===== 分组统计 =====
+
+Group   Pages TxtFiles
+-----   ----- --------
+英文产品叶子页   889     5334
+中文接头型号页   828     4968
+
+===== 中文接头类型统计 =====
+
+ProductType               Pages TxtFiles
+-----------               ----- --------
+quick-connect-fittings      194     1164
+barbed-fittings             166      996
+luer-fittings               151      906
+hard-tube-fittings          147      882
+thread-to-barbed-fittings   101      606
+female-thread-adapters       24      144
+filters                      18      108
+check-valves                 16       96
+bulkhead-barbed-fittings     11       66

@@ -1,0 +1,32 @@
+﻿文件：.\components\products\detail\ProductDetailClient.tsx
+检查时间：2026-07-17 10:47:31
+
+===== 一、关键词位置 =====
+[getProductDrawingPreviewUrl] 第 44 行：function getProductDrawingPreviewUrl(slug: string, configuredUrl?: string) {
+[getProductDrawingPreviewUrl] 第 1610 行：{getProductDrawingPreviewUrl(data.slug, (data as any).drawing2dUrl || (data as any).drawingPdfUrl || (data as any).partDrawingUrl || (data as any).resources?.drawing2dUrl) ? (
+[getProductDrawingPreviewUrl] 第 1612 行：pdfPreviewUrl={getProductDrawingPreviewUrl(data.slug, (data as any).drawing2dUrl || (data as any).drawingPdfUrl || (data as any).partDrawingUrl || (data as any).resources?.drawing2dUrl)}
+
+[drawing2dUrl] 第 1610 行：{getProductDrawingPreviewUrl(data.slug, (data as any).drawing2dUrl || (data as any).drawingPdfUrl || (data as any).partDrawingUrl || (data as any).resources?.drawing2dUrl) ? (
+[drawing2dUrl] 第 1612 行：pdfPreviewUrl={getProductDrawingPreviewUrl(data.slug, (data as any).drawing2dUrl || (data as any).drawingPdfUrl || (data as any).partDrawingUrl || (data as any).resources?.drawing2dUrl)}
+
+[PdfDrawingPreview] 第 23 行：import PdfDrawingPreview from "@/components/common/PdfDrawingPreview";
+[PdfDrawingPreview] 第 1611 行：<PdfDrawingPreview
+
+[noDrawing] 第 845 行：noDrawing: "No public technical drawing is available for this product.",
+[noDrawing] 第 881 行：noDrawing: "当前产品尚未配置公开零件图。",
+[noDrawing] 第 1627 行：{copy.noDrawing}
+
+[Technical Drawing] 第 844 行：technicalDrawing: "Technical Drawing",
+[Technical Drawing] 第 845 行：noDrawing: "No public technical drawing is available for this product.",
+[Technical Drawing] 第 1617 行：title: "Technical Drawing",
+[Technical Drawing] 第 1620 行：description: `View the technical drawing for ${data.model}.`,
+
+[联系我们] 第 100 行：: "定制配置请联系我们";
+[联系我们] 第 172 行：return isCustomInquiryMode(data) ? "联系我们" : "型号选择";
+[联系我们] 第 494 行：desc: "如果您不确定具体型号，可根据介质类型、流量、耐压、自吸能力、膜片材质、阀片材质、泵头材质、接口方式和安装空间等信息联系我们。恒永达可协助您确认适合自动化仪器液路的隔膜泵配置。",
+[联系我们] 第 512 行：desc: "如果您不确定具体型号，可根据量程、吸头规格、液面检测方式、堵塞检测需求、通讯接口、安装空间和控制方式等信息联系我们。恒永达可协助您确认适合自动化仪器液体处理模块的移液泵配置。",
+
+[Contact Us] 第 99 行：? "Contact us for a custom configuration"
+[Contact Us] 第 169 行：return isCustomInquiryMode(data) ? "Contact Us" : "Select a Model";
+
+===== 二、相关代码上下文 =====

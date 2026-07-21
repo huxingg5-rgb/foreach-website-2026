@@ -1,0 +1,611 @@
+
+==================================================
+一、临时备份位置
+==================================================
+C:\Users\Administrator\AppData\Local\Temp\foreach-pvc-selector-20260717_173349
+
+==================================================
+二、ProductFilterPanel 当前选项渲染
+==================================================
+  520: 
+  521:           /* MOBILE_FILTER_COLLAPSE_V2_START */
+  522: 
+  523:           /*
+  524:            * 接头产品种类继续使用原有独立状态。
+  525:            * 其他筛选组使用手机端展开状态。
+  526:            * PC端由CSS保持正常显示。
+  527:            */
+  528:           const isGroupOpen =
+  529:             isCollapsibleProductType
+  530:               ? isFittingProductTypeOpen
+  531:               : Boolean(
+  532:                   mobileOpenFilterGroups?.[
+  533:                     group.key
+  534:                   ]
+  535:                 );
+  536: 
+  537:           /* MOBILE_FILTER_COLLAPSE_V2_END */
+  538: 
+  539:           const groupClassName = `filter-group${
+  540:             isProductTypeGroup
+  541:               ? " product-type-filter-group"
+  542:               : ""
+  543:           }${
+  544:             isCollapsibleProductType
+  545:               ? " fittings-product-type-filter-group"
+  546:               : ""
+  547:           }${isGroupOpen ? " is-mobile-open" : ""}`;
+  548: 
+  549:           const handleToggleGroup = () => {
+  550:             if (isCollapsibleProductType) {
+  551:               setIsFittingProductTypeOpen(
+  552:                 (current) => !current
+  553:               );
+  554: 
+  555:               return;
+  556:             }
+  557: 
+  558:             onToggleMobileGroup?.(
+  559:               group.key
+  560:             );
+  561:           };
+  562: 
+  563:           /*
+  564:            * THREAD_TO_BARBED_GENERIC_DISABLED_RENDER
+  565:            *
+  566:            * 普通筛选按钮支持：
+  567:            * - 灰色禁用状态
+  568:            * - disabled 属性
+  569:            * - aria-disabled
+  570:            * - 禁止触发筛选事件
+  571:            */
+  572:           const renderOptions = () => (
+  573:             <div className={filterOptionsClass}>
+  574:               {group.options.map((option) => {
+  575:                 const active = isOptionActive(
+  576:                   group,
+  577:                   option.value
+  578:                 );
+  579: 
+  580:                 const disabled =
+  581:                   !active &&
+  582:                   Boolean(
+  583:                     isOptionDisabled?.(
+  584:                       group,
+  585:                       option.value
+  586:                     )
+  587:                   );
+  588: 
+  589:                 return (
+  590:                   <button
+  591:                     className={[
+  592:                       "filter-option",
+  593:                       optionTypeClass,
+  594:                       active ? "active" : "",
+  595:                       disabled
+  596:                         ? "is-disabled"
+  597:                         : "",
+  598:                     ]
+  599:                       .filter(Boolean)
+  600:                       .join(" ")}
+  601:                     type="button"
+  602:                     key={option.value}
+  603:                     disabled={disabled}
+  604:                     aria-disabled={disabled}
+  605:                     onClick={() => {
+  606:                       if (disabled) {
+  607:                         return;
+  608:                       }
+  609: 
+  610:                       onFilterChange(
+  611:                         group,
+  612:                         option.value
+  613:                       );
+  614: 
+  615:                       /*
+  616:                        * 手机端选择任意筛选项后，
+  617:                        * 自动收起当前筛选组。
+  618:                        */
+  619:                       if (
+  620:                         isCollapsibleProductType
+  621:                       ) {
+  622:                         setIsFittingProductTypeOpen(
+  623:                           false
+  624:                         );
+  625:                       }
+  626:                       else if (
+  627:                         mobileOpenFilterGroups?.[
+  628:                           group.key
+  629:                         ]
+  630:                       ) {
+  631:                         onToggleMobileGroup?.(
+  632:                           group.key
+  633:                         );
+  634:                       }
+  635:                     }}
+  636:                   >
+  637:                     <span className="filter-check" />
+  638:                     <span>{option.label}</span>
+  639:                   </button>
+  640:                 );
+
+==================================================
+三、筛选页面选项的真实CSS
+==================================================
+
+----- 选择器关键词：.filter-option -----
+未找到
+
+----- 选择器关键词：.filter-option:hover -----
+未找到
+
+----- 选择器关键词：.filter-option.active -----
+未找到
+
+----- 选择器关键词：.filter-option.is-disabled -----
+未找到
+
+----- 选择器关键词：.filter-option:disabled -----
+未找到
+
+----- 选择器关键词：.filter-option-type -----
+未找到
+
+----- 选择器关键词：.filter-options -----
+未找到
+
+==================================================
+四、全局品牌变量
+==================================================
+
+----- 选择器关键词：:root -----
+@import "tailwindcss"; /* 闂傚倸鍊搁崐鎼佸磹瀹勬噴褰掑炊椤掑鏅悷婊冪箻閸┾偓妞ゆ帊鑳堕埢鎾绘煛閸涱垰鈻堥柕鍡曠閳诲酣骞橀崘鎻掓暏婵＄偑鍊栭幐楣冨磻閻斿吋鍋橀柕澶堝劗閺€浠嬪箳閹惰棄纾归柟鐗堟緲绾惧鏌熼崜褏甯涢柛瀣€块弻鏇㈠醇濠垫劖效闂佺粯鎸荤粙鎾诲焵椤掆偓缁犲秹宕曟潏顭戞闁归棿鑳跺畵渚€鏌″搴″箺闁?Tailwind CSS 闂傚倸鍊搁崐鎼佸磹閹间礁纾归柟闂寸绾惧綊鏌ｉ幋锝呅撻柛銈呭閺屾盯骞橀懠顒€濡介梺绋跨箲缁捇寮诲☉銏╂晝闁挎繂妫涢ˇ銉╂⒑濮瑰洤鈧繄绮婚弽顓炶摕闁挎繂顦粻娑欍亜閹捐泛袨闁稿鍋ゅ娲传閸曢潧鍓扮紓浣割槸缂嶅﹤顕ｆ繝姘╅柕澶堝灪閺傗偓闂備胶纭跺褔寮插鍡椻偓鎾⒒閸屾瑧绐旈柍褜鍓涢崑娑㈡嚐椤栫偛鍌ㄩ柛婵勫劤绾惧ジ鏌ら梹鎰シ濠㈣锕㈤弻锝夋晲閸パ冨箣婵犵鍓濋悺鏇⑺囬鈧弻娑氣偓锝庡亝鐏忣參鏌嶉挊澶樻Ц闁宠绉归、妯款槺缂併劌顭烽弻宥囩磼濡纾冲Δ鐘靛仜椤戝寮崒婊勫枂闁挎繂妫楅褰掓⒒閸屾瑧顦﹂柛姘儐缁傚秵绂掔€ｎ亞锛熼悗骞垮劚椤︿粙寮崒鐐寸厱闁冲搫瀚涵鐐箾瀹割喖寮柕鍡曠閳藉濮€閳ユ枼鍋撴繝姘厱闁靛鍨哄▍鍥煃?*/
+
+/* =========================================================
+   app/globals.css
+   FOREACH 闂傚倸鍊搁崐鎼佸磹閹间礁纾圭€瑰嫭鍣磋ぐ鎺戠倞妞ゆ帒顦伴弲顏堟偡濠婂啰效闁挎繄鍋涢埞鎴犫偓锝庡亝濞呭洭姊虹粙璺ㄧ効濠碘€虫川缁瑨绠涢弮鍌滅槇闂侀潧楠忕徊浠嬫偂閹扮増鐓曢柡鍌濇硶缁犲鏌涢埞鎯т壕婵＄偑鍊栫敮鎺楁晝閿曞倹鍋╅柣銏㈩暯閸嬫挾鎲撮崟顒傤槬闂佺粯鐗曢妶绋跨暦濞差亝鏅搁柣妯垮皺椤︺劌顪冮妶鍛缂佸鏁搁悷褎绻濋悽闈浶ラ柡浣告啞閹便劍瀵奸弶鎴濈€繝闈涘€婚…鍫ュ及閵夆晜鐓涚€广儱楠搁獮鏍磼閳ь剚寰勯幇顓犲幐闂佹悶鍎弲娑樻毄闂備焦妞块崢鐓幬涘┑瀣摕婵炴垶顭囬弳鍡涙煃瑜滈崜鐔风暦閹达附鍊烽柣鎴灻禍妤呮椤愩垺澶勯柟鍛婃尦瀵劍绂掔€ｎ偆鍘介梺褰掑亰閸ㄤ即鎯冮崫鍔藉綊鎮╅鑲╀紙闂佸搫鏈惄顖氼嚕椤掑倹瀚氭繛鏉戭儏娴滈箖鏌″搴′簼鐎规洖寮剁换婵嬫濞戝崬鍓伴梺缁樺笒閻忔岸濡甸崟顖氱鐎广儱娴傚Σ顔碱渻閵堝棙绀嬪ù婊冪埣楠炲啫螖閳ь剟鍩ユ径濞炬瀻婵☆垳鍘ф慨娲⒒娴ｅ憡鍟為拑閬嶆煙椤旂厧鈧潡鐛崘銊庢棃宕ㄩ姘便偊闂備礁澹婇悡鍫ュ窗閺嶃劍鍙忛幖娣妽閳锋垿鏌ｉ悢鍛婄凡闁哄棗宕灃闁绘ɑ顔栭悞鍓р偓瑙勬尭鐎氭澘顫忓ú顏呭亗閹兼惌鍠楃紞妤呮⒑缁嬪尅鏀绘い銊ョ墛缁旂喖寮撮悢娲闂佸憡绋戦敃锕傚储閻㈠憡鈷戦柛锔诲幘鐢盯鎮介妤佹珚鐎规洘娲熼獮瀣偐閻㈢绱查梻浣瑰▕閺侇噣宕戦幘缁樼厱閻庯綆鍋呭畷宀勬煛瀹€瀣ɑ闁诡垱妫冩慨鈧柍杞扮劍濞呮盯姊绘笟鈧鑽ょ礊閸℃稑闂柨婵嗘噽閺嗭附绻濇繝鍌滃闁稿瀚—鍐偓锝庝簻椤掋垺绻涢崼銉х暫婵﹥妞藉畷婊堝箵閹哄秶鍑规繝鐢靛仜瀵爼鏁冮姀鐙€鍤曢柟缁樺俯閻撱儵鏌涘☉鍗炵仯闁挎稒绮岄埞鎴︽倷閺夋垹浠搁梺鎸庢磵閺呯姴鐣烽弴锛勭杸闁?
+
+   闂傚倸鍊搁崐鎼佸磹閹间礁纾归柟闂寸绾剧懓顪冪€ｎ亝鎹ｉ柣顓炴閵嗘帒顫濋敐鍛婵°倗濮烽崑鐐烘偋閻樻眹鈧線寮撮姀鈩冩珖闂侀€炲苯澧板瑙勬礋瀹曠兘顢橀悩纰夌床闂佽鍑界紞鍡涘磻閹捐埖顫曢柍鍝勫€荤粻鍓р偓鐟板閸犳洜鑺辨總鍛婄厸闁告侗鍠氶崣鈧梺鍝勬湰缁嬫垿鍩ユ径鎰煑婵☆垳鍘ч崵顒勬⒒娴ｇ瓔鍤欏Δ鐘虫倐閳ワ箑鐣￠柇锔界稁濠电偛妯婃禍婵嬎夐崼鐔虹闁瑰鍋為惃鎴︽煟閿濆鐣烘慨濠冩そ瀹曘劍绻濋崘銊╃€虹紓鍌欐祰椤曆囧疮閺夋垹鏆︽慨姗嗗幘缁♀偓闂佸憡娲忛崝灞剧閻愵剛绠鹃柟瀵稿仧閹虫劙鏌ｉ幒鏃€娅曠紒杈ㄥ浮閸╋箓鍩€椤掑嫬纾婚柟鐐灱閺€浠嬫煟濡櫣浠涢柡鍡忔櫅閳规垿顢欓懞銉ュ攭閻庤娲橀崝姗€濡甸幇鏉跨闁硅揪闄勯敍妤佺節閻㈤潧浠滄俊顖氾攻缁傚秴鈹戠€ｎ偄浜楀┑鐐村灟閸ㄦ椽鎮￠弴銏＄厓闁宠桨绀侀弸銈嗙箾閸噥鐒界紒杈ㄥ浮閹晛顔忛鎯ф倯闂?
+   1. 缂傚倸鍊搁崐鎼佸磹閹间礁纾归柟闂寸绾惧綊鏌熼梻瀵割槮缁炬儳缍婇弻锝夊箣閿濆憛鎾绘煕閵堝懎顏柡灞诲€濋獮鏍ㄦ媴鐟欏嫰鏁梻浣规偠閸斿秴螞閸愵喖绠栨俊銈呮噺椤ュ牊绻涢幋鐐垫噧闁哄棗鐗嗛—鍐Χ鎼粹€茬凹濠电偠灏欓崰鏍ь嚕婵犳碍鏅搁柣妯垮皺閸婄偤姊洪棃娑辨Ф闁稿氦娅曠粋鎺楁嚃閳哄啰锛濇繛杈剧到閹碱偅鐗庨梻浣虹帛椤ㄥ棗煤閻旂厧鏄ラ柣鎰惈缁狅綁鏌ㄩ弮鍥棄濞存粌缍婂娲川婵犲嫭鍣у銈忕細閸楁娊鐛崘銊㈡瀻闁瑰濮烽敍婵囩箾鏉堝墽绋荤憸鏉垮暞缁傚秵銈ｉ崘鈹炬嫼缂備礁顑堝▔鏇㈡倶闁秵鐓曢悗锝庡墮娴犻亶鏌熼娆嶅€楅悿鈧梺鍦檸閸ㄩ亶寮埀顒勬⒒娴ｈ櫣甯涢柛鏃€鐗犲畷褰掓偨缁嬭法鏌堝銈嗙墱閸嬫盯姊婚婊勫枑闁绘鐗嗙粭姘舵煕鐎ｅ墎鍒伴棁澶愭煥濠靛棙鍣洪悹鎰剁節閺屾稑鈻庣仦鎴掑婵犵數濮甸鏍窗閺嶎厽鏅濋柕濞垮劗閺嬪秹鏌ㄥ┑鍡╂Ц缂佲偓瀹€鍕厸鐎广儱楠搁獮鏍煕濡や礁鈻曢柡宀嬬秮瀵剟骞愭惔銏犳瀾闁荤喐绮嶅姗€鎮ф繝鍕床婵犻潧顑嗛崑銊╂⒒閸喓鈼ョ紒顔肩埣濮婇缚銇愰幒鎾存殸闂佹悶鍔屽﹢鍗炍ｉ幇鐗堝€烽悗闈涙憸閹虫繈姊洪柅鐐茶嫰婢ь垰菐閸パ嶅姛闁逞屽墯缁嬫帡鈥﹂崶顒佸仭鐟滅増甯楅悡鍐喐濠婂牆绀堟繛鍡樻尰閸嬧晠鏌ｉ幋锝嗩棄閹喖姊虹€圭姵銆冮柤瀹犲煐椤ㄣ儵宕堕浣叉嫼闂佽崵鍠愭竟鍡涘箺閻樼數纾奸悹鍥ㄥ絻閳ь剙鐏濋锝夘敃閿曗偓鍥存繝銏ｆ硾椤戝洭宕㈡禒瀣厵闁煎湱澧楄ぐ褏绱掗弻銉х暫鐎规洜鏁婚崺鈧い鎺戝閻撶喖骞栧ǎ顒€鐏╅柛銈庡墴閺屾稑螣閸忓吋鐝紓渚囧枓閺呯娀骞冮姀銈嗗亗閹肩话銈傚亾閸喒鏀介柣鎰级椤ョ偤鏌涢弮鈧ú鐔风暦閵忥絻浜归柟鐑樻尨閹锋椽姊绘笟鍥т簽闁稿鐩幊鐔碱敍濞戞瑦鐝烽柣搴㈢⊕钃遍柛娆忕箰閳规垿鎮╅幓鎺撴闂侀潧娲︾换鍐╃┍婵犲浂鏁冮柕蹇曞У濞堫參姊虹€圭姵顥夋い锔诲灦閸┿垺鎯旈埈銉у枎鐓ょ紓浣癸公妤犲繒绱撻崒姘偓鎼佸磹閹间礁纾瑰瀣婵ジ鏌＄仦璇插姎缁炬儳顭烽弻鐔煎礈瑜嶆禒娲煃瑜滈崜姘辨暜閹烘缍栨繝闈涱儐閺呮煡鏌涘☉鍗炲妞ゃ儲鑹鹃埞鎴炲箠闁稿﹥顨嗛幈銊╂倻閽樺锛涢梺缁樺姉閸庛倝宕戠€ｎ喗鐓熼柟閭﹀幘婢瑰鏌涢妷顔荤暗濞存粌缍婇弻鐔兼倻濡鏆楅梺鍛婏耿濞佳団€旈崘顔嘉ч柛鈩冾焽閸樹粙姊洪崨濠冪叆闁活厼鍊块悰顔界節閸屻倕鎮戦梺鍛婁緱娴滄繈鎮￠姀鐙€娓婚柕鍫濇噽缁犱即鏌ｅΔ鈧敃顏堝箖閿熺姴顫呴柍銉ㄥ皺缁犳艾顪冮妶鍡欏闁荤喆鍔戦、妤呮偄闂€鎰畾闂佽壈澹堥崺鏍敂閻樼數纾奸弶鍫涘妼缁楁氨鈧灚婢樼€氼剝鐏掗梺缁樺灦椤洩銇愭惔銏㈢瘈婵炲牆鐏濋弸娑㈡煥閺囶亜顩柛鎺撳浮椤㈡盯鎮欓懠顒夊數闂備礁鎲＄粙鎴︽偤閵娾晛纾婚柨鐔哄У閻撴瑦绻涢崼婵堜虎闁哄鍊濋弻鏇㈠醇閵夘喗顥栫紓浣介哺閹瑰洤鐣烽幒鎴旀瀻闁圭儤鍨电敮顖滅磽閸屾瑧璐伴柛锝庡櫍瀹曞湱鎹勯搹瑙勬濠电娀娼уΛ宀勫几鎼淬劍鐓欓柟瑙勫姈绾墽绱掓笟濠勭暤婵☆偄鎳橀、鏇㈠閳ユ剚妲辩紓鍌欑椤戝棝宕归崷顓炲灊濠电姵鑹惧敮闂佹寧妫佸銊ц姳婵犳碍鈷戦柛婵嗗閺嗘瑩鏌涙繝鍌滅Ш鐎规洜鏁婚崺鈧い鎺嶈兌缁犻箖鎮楀☉娆樼劷闁活厼鐭傞弻娑氣偓锝庡亝鐏忕敻鏌熼獮鍨仼闁
+
+:root {
+    --mobile-header-height: 60px;
+  }
+
+
+----- 选择器关键词：.product-selection-page -----
+未找到
+
+==================================================
+五、加入清单字段结构
+==================================================
+    1: /* =========================================================
+    2:    selection-cart.types.ts
+    3:    恒永达官网｜全局选型清单类型定义
+    4: 
+    5:    文件路径：
+    6:    components/selection-cart/selection-cart.types.ts
+    7: 
+    8:    作用：
+    9:    1. 定义全站统一选型清单的数据结构
+   10:    2. 后续接头、泵、阀、传感器等产品都可以加入同一个清单
+   11:    3. 当前先服务：接头型号替代查询
+   12: ========================================================= */
+   13: 
+   14: /* 清单来源类型
+   15:    说明：
+   16:    后续如果增加泵、阀、传感器，可以继续扩展字符串。
+   17: */
+   18: export type SelectionCartSourceType =
+   19:   | "fitting-replacement"
+   20:   | "pump-selection"
+   21:   | "valve-selection"
+   22:   | "sensor-selection"
+   23:   | "custom";
+   24: 
+   25: /* 全局清单单项 */
+   26: export interface SelectionCartItem {
+   27:   /* 全局唯一 ID，建议格式：sourceType:productCode */
+   28:   id: string;
+   29: 
+   30:   /* 来源模块 */
+   31:   sourceType: SelectionCartSourceType;
+   32: 
+   33:   /* 来源模块中文名称，例如：接头型号替代查询 */
+   34:   sourceLabel: string;
+   35: 
+   36:   /* 产品分类名称，例如：Q20 快插接头 */
+   37:   productName: string;
+   38: 
+   39:   /* 商品编码，例如：839034 */
+   40:   productCode: string;
+   41: 
+   42:   /* 恒永达型号，例如：Q2001-PNV-SACN */
+   43:   foreachModel: string;
+   44: 
+   45:   /* 兼容编码，例如：A0015 / B0004 / C0004 */
+   46:   competitorModels: string[];
+   47: 
+   48:   /* 数量 */
+   49:   quantity: number;
+   50: 
+   51:   /* 是否需要 2D 图纸 */
+   52:   needDrawing: boolean;
+   53: 
+   54:   /* 产品详情页链接 */
+   55:   detailHref?: string;
+   56: 
+   57:   /* 产品图片路径 */
+   58:   imagePath?: string;
+   59: }
+   60: 
+   61: /* 加入清单时的输入结构
+   62:    说明：
+   63:    id 和 quantity 可以自动补齐。
+   64: */
+   65: export type SelectionCartItemInput = Omit<
+   66:   SelectionCartItem,
+   67:   "id" | "quantity"
+   68: > & {
+   69:   id?: string;
+   70:   quantity?: number;
+   71: }; 
+
+==================================================
+六、详情页清单对象生成代码
+==================================================
+ 1060:         current === realImages.length - 1 ? 0 : current + 1,
+ 1061:       );
+ 1062:       return;
+ 1063:     }
+ 1064: 
+ 1065:     setActiveThumb((current) => (current === 2 ? 0 : current + 1));
+ 1066:   }
+ 1067: 
+ 1068:   function getDetailCartProductCode() {
+ 1069:     return String(
+ 1070:       data.modelDisplay ||
+ 1071:         data.displayModel ||
+ 1072:         data.foreachModel ||
+ 1073:         data.model ||
+ 1074:         data.productCode ||
+ 1075:         data.slug ||
+ 1076:         ""
+ 1077:     ).trim();
+ 1078:   }
+ 1079: 
+ 1080:   function createDetailCartItem(needDrawing: boolean): SelectionCartItemInput {
+ 1081:     const productCode = getDetailCartProductCode();
+ 1082:     const modelText = String(
+ 1083:       data.modelDisplay ||
+ 1084:         data.displayModel ||
+ 1085:         data.foreachModel ||
+ 1086:         data.model ||
+ 1087:         data.title ||
+ 1088:         productCode
+ 1089:     ).trim();
+ 1090: 
+ 1091:     const productName = isPlungerPumpDetailData(data)
+ 1092:       ? isEnglish
+ 1093:         ? "Plunger Pump"
+ 1094:         : "柱塞泵"
+ 1095:       : String(
+ 1096:           data.productTypeName ||
+ 1097:             data.productTypeLabel ||
+ 1098:             data.seriesName ||
+ 1099:             data.series ||
+ 1100:             (isDiaphragmPumpDetailData(data)
+ 1101:               ? isEnglish
+ 1102:                 ? "Diaphragm Pump"
+ 1103:                 : "隔膜泵"
+ 1104:               : isPipettingPumpDetailData(data)
+ 1105:                 ? isEnglish
+ 1106:                   ? "Pipetting Pump"
+ 1107:                   : "移液泵"
+ 1108:                 : isEnglish
+ 1109:                   ? "Product"
+ 1110:                   : "产品")
+ 1111:         ).trim();
+ 1112: 
+ 1113:     const fallbackDetailHref = data.slug
+ 1114:       ? isPlungerPumpDetailData(data)
+ 1115:         ? `/products/pumps/plunger-pumps/${data.slug}`
+ 1116:         : isDiaphragmPumpDetailData(data)
+ 1117:           ? `/products/pumps/diaphragm-pumps/${data.slug}`
+ 1118:           : isPipettingPumpDetailData(data)
+ 1119:             ? `/products/pumps/pipetting-pumps/${data.slug}`
+ 1120:             : isTubingDetailData(data)
+ 1121:               ? `/products/tubing/${data.slug}`
+ 1122:               : ""
+ 1123:       : "";
+ 1124: 
+ 1125:     return {
+ 1126:       sourceType: "pump-selection",
+ 1127:       sourceLabel: isEnglish ? "Product Detail Page" : "产品详情页",
+ 1128:       productName,
+ 1129:       productCode,
+ 1130:       foreachModel: modelText,
+ 1131:       competitorModels: [],
+ 1132:       quantity: 1,
+ 1133:       needDrawing,
+ 1134:       imagePath:
+ 1135:         data.imageCard ||
+ 1136:         data.image ||
+ 1137:         data.imageUrl ||
+ 1138:         data.mainImage ||
+ 1139:         data.heroImage ||
+ 1140:         "",
+ 1141:       detailHref:
+ 1142:         data.detailHref ||
+ 1143:         data.href ||
+ 1144:         (isEnglish && fallbackDetailHref
+ 1145:           ? `/en${fallbackDetailHref}`
+ 1146:           : fallbackDetailHref),
+ 1147:     };
+ 1148:   }
+ 1149: 
+ 1150:   
+ 1151:   const currentDetailCartItem = getItem("pump-selection", getDetailCartProductCode());
+ 1152:   const isDetailProductSelected = Boolean(currentDetailCartItem);
+ 1153:   const isDetailDrawingSelected = Boolean(currentDetailCartItem?.needDrawing);
+ 1154: 
+ 1155:   function handleOpenConfigurator() {
+ 1156:     console.info("配置选择端口预留", data.slug);
+ 1157:   }
+ 1158: 
+ 1159:   function handleAddDatasheet() {
+ 1160:     console.info("添加规格书端口预留", data.slug);
+ 1161:   }
+ 1162: 
+ 1163:   function handleAddDrawing() {
+ 1164:     const item = createDetailCartItem(true);
+ 1165: 
+ 1166:     if (!item.productCode || !item.foreachModel) {
+ 1167:       console.warn("详情页清单参数不完整", data);
+ 1168:       return;
+ 1169:     }
+ 1170: 
+ 1171:     const existingItem = getItem("pump-selection", item.productCode);
+ 1172: 
+ 1173:     if (existingItem) {
+ 1174:       toggleDrawingNeed(existingItem.id, !existingItem.needDrawing);
+ 1175:       return;
+ 1176:     }
+ 1177: 
+ 1178:     addItem(item);
+ 1179:   }
+ 1180: 
+ 1181:   function handleRequest3DFile() {
+ 1182:     console.info("申请3D文件端口预留", data.slug);
+ 1183:   }
+ 1184: 
+ 1185:   function handleAddList() {
+ 1186:     const item = createDetailCartItem(false);
+ 1187: 
+ 1188:     if (!item.productCode || !item.foreachModel) {
+ 1189:       console.warn("详情页清单参数不完整", data);
+ 1190:       return;
+ 1191:     }
+ 1192: 
+ 1193:     const existingItem = getItem("pump-selection", item.productCode);
+ 1194: 
+ 1195:     if (existingItem) {
+ 1196:       removeItem(existingItem.id);
+ 1197:       return;
+ 1198:     }
+ 1199: 
+ 1200:     addItem(item);
+ 1201:   }
+ 1202: 
+ 1203:   return (
+ 1204:     <div data-product-breadcrumb-shell="true">
+ 1205:       {structuredData ? (
+ 1206:         <script
+ 1207:           type="application/ld+json"
+ 1208:           dangerouslySetInnerHTML={{
+ 1209:             __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+ 1210:           }}
+
+==================================================
+七、详情页型号和按钮区域
+==================================================
+ 1480:                 >
+ 1481:                   ›
+ 1482:                 </button>
+ 1483:               </div>
+ 1484:             ) : null}
+ 1485:           </div>
+ 1486: 
+ 1487:           <div className={styles.productInfo}>
+ 1488:             <div className={styles.titleGroup}>
+ 1489:               <h1 className={styles.productModelTitle}>{data.model}</h1>
+ 1490:             </div>
+ 1491: 
+ 1492:             <p className={styles.productDesc}>
+ 1493:               {(data as any).description || (Array.isArray(data.advantages) ? data.advantages.join("") : "")}
+ 1494:             </p>
+ 1495: 
+ 1496:             <div className={styles.application}>
+ 1497:               <p className={styles.applicationTitle}>
+ 1498:                 {isEnglish
+ 1499:                   ? copy.applications
+ 1500:                   : getDbSectionTitle("applications", copy.applications)}
+ 1501:               </p>
+ 1502:               <p className={styles.applicationText}>
+ 1503:                 {data.commonApplications.join(isEnglish ? ", " : "、")}
+ 1504:               </p>
+ 1505:             </div>
+ 1506: 
+ 1507:             <div className={styles.operationArea}>
+ 1508:               <div data-product-model-row="true" className={styles.modelLine}>
+ 1509:                 <div className={styles.modelCodeWrap}>
+ 1510:                   <div className={styles.modelCodeText}>
+ 1511:                     <span className={styles.modelLabel}>{copy.model}</span>
+ 1512:                     <span className={styles.modelCode}>{getDisplayModelText(data)}</span>
+ 1513:                   </div>
+ 1514:                   <button
+ 1515:                     className={styles.button}
+ 1516:                     type="button"
+ 1517:                     onClick={() => {
+ 1518:                       const href = localizeInternalHref(
+ 1519:                         getModelActionHref(data),
+ 1520:                         isEnglish,
+ 1521:                       );
+ 1522: 
+ 1523:                       if (isCustomInquiryMode(data)) {
+ 1524:                         window.location.href = href;
+ 1525:                         return;
+ 1526:                       }
+ 1527: 
+ 1528:                       window.open(href, "_blank", "noopener,noreferrer");
+ 1529:                     }}
+ 1530:                   >
+ 1531:                     {getModelActionText(data)}
+ 1532:                   </button>
+ 1533:                 </div>
+ 1534: 
+ 1535:                 {data.showConfigurator ? (
+ 1536:                   <button
+ 1537:                     className={styles.button}
+ 1538:                     type="button"
+ 1539:                     onClick={handleOpenConfigurator}
+ 1540:                   >
+ 1541:                     {copy.configurator}
+ 1542:                   </button>
+ 1543:                 ) : null}
+ 1544:               </div>
+ 1545: 
+ 1546:               <div data-product-action-grid="true" className={styles.actionRow}>
+ 1547:                 {data.showDatasheetRequest ? (
+ 1548:                   <button
+ 1549:                     className={styles.button}
+ 1550:                     type="button"
+ 1551:                     onClick={handleAddDatasheet}
+ 1552:                   >
+ 1553:                     {copy.datasheet}
+ 1554:                   </button>
+ 1555:                 ) : null}
+ 1556: 
+ 1557:                 {data.showDrawingRequest ? (
+ 1558:                   <button
+ 1559:                     className={styles.button}
+ 1560:                     type="button"
+ 1561:                     aria-pressed={isDetailDrawingSelected}
+ 1562:                     onClick={handleAddDrawing}
+ 1563:                   >
+ 1564:                     {isDetailDrawingSelected ? copy.drawingAdded : copy.drawing}
+ 1565:                   </button>
+ 1566:                 ) : null}
+ 1567: 
+ 1568:                 {data.show3DRequest ? (
+ 1569:                   <button
+ 1570:                     className={styles.button}
+ 1571:                     type="button"
+ 1572:                     onClick={handleRequest3DFile}
+ 1573:                   >
+ 1574:                     {copy.request3d}
+ 1575:                   </button>
+ 1576:                 ) : null}
+ 1577: 
+ 1578:                 <button
+ 1579:                   className={styles.button}
+ 1580:                   type="button"
+ 1581:                   aria-pressed={isDetailProductSelected}
+ 1582:                   onClick={handleAddList}
+ 1583:                 >
+ 1584:                   {isDetailProductSelected ? copy.addedToList : copy.addToList}
+ 1585:                 </button>
+ 1586:               </div>
+ 1587:             </div>
+ 1588:           </div>
+ 1589:         </section>
+ 1590: 
+ 1591:         <section className={styles.detailSection}>
+ 1592:           <nav className={styles.tabNav} aria-label={copy.tabs}>
+ 1593:             <button
+ 1594:               className={[
+ 1595:                 styles.tabButton,
+
+==================================================
+八、PVC详情数据开头
+==================================================
+    1: [
+    2:   {
+    3:     "slug": "pvc-tubing",
+    4:     "title": "PVC 管",
+    5:     "name": "PVC 管",
+    6:     "model": "PVC 管",
+    7:     "h1Title": "PVC 管",
+    8:     "pageTitle": "PVC 管",
+    9:     "displayModel": "按材质与尺寸选型",
+   10:     "productCategory": "tubing",
+   11:     "productType": "tubing",
+   12:     "productTypeLabel": "管路系列",
+   13:     "category": "tubing",
+   14:     "detailMode": "material_selection",
+   15:     "image": "/images/products/tubing/pvc-tubing/pvc-tubing-main.webp",
+   16:     "additionalImages": [],
+   17:     "images": [
+   18:       "/images/products/tubing/pvc-tubing/pvc-tubing-main.webp"
+   19:     ],
+   20:     "thumbnails": [],
+   21:     "description": "PVC 管采用聚氯乙烯（PVC）材质，内径范围覆盖 1.6mm~19.1mm，工作温度范围为 -42℃~75℃。可按项目需求提供 RoHS 等材料合规资料，具体文件随材质与项目要求确认。",
+   22:     "shortDescription": "聚氯乙烯（PVC），内径范围 1.6mm~19.1mm，工作温度 -42℃~75℃。",
+   23:     "commonApplications": [
+   24:       "试剂输送",
+   25:       "样本路径",
+   26:       "设备内部管路",
+   27:       "泵阀连接",
+   28:       "流体系统集成"
+   29:     ],
+   30:     "features": [
+   31:       "按材质与尺寸选型",
+   32:       "适用于设备内部液路连接",
+   33:       "可结合接头、泵阀和压力范围确认",
+   34:       "支持工程师协助评估流阻与压降"
+   35:     ],
+   36:     "specsTitle": "规格",
+   37:     "specTitle": "规格",
+   38:     "specificationTitle": "规格",
+   39:     "specs": [
+   40:       {
+   41:         "label": "密度（g/cm³）",
+   42:         "value": "1.18"
+   43:       },
+   44:       {
+   45:         "label": "拉伸强度（Mpa）",
+   46:         "value": "14.3"
+   47:       },
+   48:       {
+   49:         "label": "弯曲强度（Mpa）",
+   50:         "value": "68"
+   51:       },
+   52:       {
+   53:         "label": "介电常数（KV/mm）",
+   54:         "value": "4"
+   55:       },
+   56:       {
+   57:         "label": "吸水性（%）",
+   58:         "value": "0.12"
+   59:       },
+   60:       {
+   61:         "label": "工作温度（℃）",
+   62:         "value": "-42~75"
+   63:       },
+   64:       {
+   65:         "label": "线膨胀系数（cm/cm/℃）",
+   66:         "value": "6X10⁻⁵"
+   67:       },
+   68:       {
+   69:         "label": "融化温度（℃）",
+   70:         "value": "185"
+   71:       },
+   72:       {
+   73:         "label": "低温脆化（℃）",
+   74:         "value": "-46"
+   75:       },
+   76:       {
+   77:         "label": "硬度（Shore A）",
+   78:         "value": "55、65"
+   79:       }
+   80:     ],

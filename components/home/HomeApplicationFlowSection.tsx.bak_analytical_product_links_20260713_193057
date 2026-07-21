@@ -1,0 +1,825 @@
+// components/home/HomeApplicationFlowSection.tsx
+"use client"; // 这一块需要监听滚动、点击、hover 和未来接口请求，所以必须是客户端组件
+
+import Link from "next/link";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
+
+import { getLocaleAnchorPath, type LocaleCode } from "@/lib/i18n";
+
+import {
+  getHomeApplicationFlowApiPath, // 引入首页第二屏后端接口路径生成函数
+  getHomeFlowText, // 根据当前语言读取对应文字
+  homeApplicationFlowData, // 首页第二屏本地数据
+} from "@/data/home-application-flow"; // 首页第二屏数据文件路径
+
+/* ================================
+   组件参数类型
+================================ */
+type HomeApplicationFlowSectionProps = {
+  locale: LocaleCode; // 当前语言，例如 zh-CN / en / es / fr / ko / ru
+};
+
+/* ================================
+   首页应用领域数据类型
+
+   说明：
+   1. 这里直接复用本地数据 homeApplicationFlowData 的类型
+   2. 以后后端返回的数据结构也建议尽量保持这个格式
+   3. 这样前端组件不用大改，只需要换数据来源
+================================ */
+type HomeApplicationFlowData = typeof homeApplicationFlowData;
+
+/* ================================
+   后端接口返回格式预留
+
+   说明：
+   以后后端可以返回下面两种格式之一：
+
+   方式一：
+   {
+     "data": { ...完整的 homeApplicationFlowData 结构... }
+   }
+
+   方式二：
+   { ...完整的 homeApplicationFlowData 结构... }
+================================ */
+type BackendHomeApplicationFlowResponse =
+  | {
+      data?: HomeApplicationFlowData;
+    }
+  | HomeApplicationFlowData;
+
+/* ================================
+   本次已经放入 public 目录的 5 张 JPG 图片
+
+   真实路径：
+   F:\WebsiteProjects\foreach-website-2026\public\images\applications\
+
+   注意：
+   1. Next.js 访问 public 目录时，不需要写 public
+   2. 正确写法是 /images/applications/xxx.jpg
+   3. 错误写法是 /public/images/applications/xxx.jpg
+================================ */
+const LOCAL_APPLICATION_IMAGE_PATHS = {
+  ivd: "/images/applications/application-ivd.jpg",
+  lifeScience: "/images/applications/application-life-science.jpg",
+  syntheticBiology: "/images/applications/application-synthetic-biology.jpg",
+  analyticalInstruments:
+    "/images/applications/application-analytical-instruments.jpg",
+  labAutomation: "/images/applications/application-lab-automation.jpg",
+};
+
+/* ================================
+   判断是否为普通对象
+
+   说明：
+   用于简单判断后端返回的数据是不是对象，避免接口异常时报错。
+================================ */
+function isPlainObject(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null && !Array.isArray(value);
+}
+
+/* ================================
+   后端数据简单校验
+
+   说明：
+   1. 这里不是严格校验，只做最基础的结构判断
+   2. 如果接口返回不完整，就继续使用本地数据
+   3. 这样第一阶段前端上线更稳定
+================================ */
+function normalizeBackendFlowData(
+  payload: BackendHomeApplicationFlowResponse | unknown,
+): HomeApplicationFlowData | null {
+  const possibleData =
+    isPlainObject(payload) && isPlainObject(payload.data)
+      ? payload.data
+      : payload;
+
+  if (!isPlainObject(possibleData)) {
+    return null;
+  }
+
+  const maybeData = possibleData as Partial<HomeApplicationFlowData>;
+
+  const hasApplicationCards = Array.isArray(maybeData.applicationCards);
+  const hasMobileApplicationCards = Array.isArray(
+    maybeData.mobileApplicationCards,
+  );
+  const hasProcessCards = Array.isArray(maybeData.processCards);
+  const hasTvData = isPlainObject(maybeData.tv);
+  const hasSectionId = typeof maybeData.sectionId === "string";
+
+  if (
+    !hasApplicationCards ||
+    !hasMobileApplicationCards ||
+    !hasProcessCards ||
+    !hasTvData ||
+    !hasSectionId
+  ) {
+    return null;
+  }
+
+  return maybeData as HomeApplicationFlowData;
+}
+
+/* ================================
+   根据应用 key / className 匹配本地图片
+
+   说明：
+   1. 你给的数据文件里，key 可能是：
+      ivd / life-science / synthetic-biology / analytical-instruments / lab-automation
+   2. 也可能写成驼峰：
+      lifeScience / syntheticBiology / labAutomation
+   3. 所以这里做了兼容判断，避免因为命名不同导致图片不显示
+================================ */
+function getLocalApplicationImagePath(cardKey: string, className?: string) {
+  const normalizedName = `${cardKey} ${className ?? ""}`
+    .toLowerCase()
+    .replaceAll("_", "-");
+
+  if (
+    normalizedName.includes("ivd") ||
+    normalizedName.includes("diagnostic") ||
+    normalizedName.includes("diagnostics")
+  ) {
+    return LOCAL_APPLICATION_IMAGE_PATHS.ivd;
+  }
+
+  if (
+    normalizedName.includes("life-science") ||
+    normalizedName.includes("lifescience")
+  ) {
+    return LOCAL_APPLICATION_IMAGE_PATHS.lifeScience;
+  }
+
+  if (
+    normalizedName.includes("synthetic-biology") ||
+    normalizedName.includes("syntheticbiology")
+  ) {
+    return LOCAL_APPLICATION_IMAGE_PATHS.syntheticBiology;
+  }
+
+  if (
+    normalizedName.includes("analytical") ||
+    normalizedName.includes("analysis") ||
+    normalizedName.includes("instrument")
+  ) {
+    return LOCAL_APPLICATION_IMAGE_PATHS.analyticalInstruments;
+  }
+
+  if (
+    normalizedName.includes("lab-automation") ||
+    normalizedName.includes("laboratory-automation") ||
+    normalizedName.includes("labautomation") ||
+    normalizedName.includes("automation")
+  ) {
+    return LOCAL_APPLICATION_IMAGE_PATHS.labAutomation;
+  }
+
+  return null;
+}
+
+/* ================================
+   最终决定应用卡片使用哪张图
+
+   说明：
+   1. 当前阶段：优先使用本地这 5 张 JPG 图
+   2. 未来后端启用后：优先使用后端返回的 image 字段
+   3. 如果后端没有返回 image，则继续回退到本地图片或数据文件里的图片
+================================ */
+function resolveApplicationImagePath(
+  card: {
+    key: string;
+    className?: string;
+    image: string;
+  },
+  isUsingBackendData: boolean,
+) {
+  if (isUsingBackendData && card.image) {
+    return card.image;
+  }
+
+  const localImagePath = getLocalApplicationImagePath(card.key, card.className);
+
+  return localImagePath || card.image;
+}
+
+/* ================================
+   限制数值范围
+
+   说明：
+   把数值限制在 min 和 max 之间。
+================================ */
+function clamp(value: number, min: number, max: number) {
+  return Math.min(Math.max(value, min), max);
+}
+
+/* ================================
+   区间映射函数
+
+   说明：
+   把滚动进度映射成动画进度。
+================================ */
+function mapRange(
+  value: number,
+  inMin: number,
+  inMax: number,
+  outMin: number,
+  outMax: number,
+) {
+  const progress = clamp((value - inMin) / (inMax - inMin), 0, 1);
+
+  return outMin + (outMax - outMin) * progress;
+}
+
+/* ================================
+   卡片图片背景
+
+   说明：
+   1. 图片会强制铺满卡片
+   2. backgroundSize: "cover" 表示裁切铺满，不留空白
+   3. backgroundPosition: "center center" 表示从图片中心裁切
+================================ */
+function createCardImageBackground(imagePath: string): CSSProperties {
+  return {
+    backgroundImage: `url("${imagePath}")`,
+    backgroundSize: "cover",
+    backgroundPosition: "center center",
+    backgroundRepeat: "no-repeat",
+  };
+}
+
+/* ================================
+   PC 端电视机背景图
+
+   说明：
+   1. 这里叠加深蓝遮罩
+   2. 图片强制 cover，避免右侧电视图露出空白
+================================ */
+function createTvBackground(imagePath: string): CSSProperties {
+  return {
+    backgroundImage: `
+      linear-gradient(135deg, rgba(3, 18, 42, 0.62), rgba(0, 38, 86, 0.72)),
+      url("${imagePath}")
+    `,
+    backgroundSize: "cover",
+    backgroundPosition: "center center",
+    backgroundRepeat: "no-repeat",
+  };
+}
+
+/* ================================
+   手机端电视展示屏背景图
+
+   说明：
+   1. 如果是图片路径，就叠加深蓝遮罩
+   2. 如果是渐变背景，就直接使用渐变
+   3. 图片强制铺满手机端展示区域
+================================ */
+function createMobileTvBackground(imagePath: string): CSSProperties {
+  const isGradient =
+    imagePath.startsWith("linear-gradient") ||
+    imagePath.startsWith("radial-gradient");
+
+  if (isGradient) {
+    return {
+      backgroundImage: imagePath,
+      backgroundSize: "cover",
+      backgroundPosition: "center center",
+      backgroundRepeat: "no-repeat",
+    };
+  }
+
+  return {
+    backgroundImage: `url("${imagePath}")`,
+    backgroundSize: "cover",
+    backgroundPosition: "center center",
+    backgroundRepeat: "no-repeat",
+  };
+}
+
+/* ================================
+   判断是否为手机 / 触摸设备
+
+   说明：
+   1. 手机端旧卡片点击放大逻辑会用到
+   2. PC 端继续使用 hover 效果
+================================ */
+function isTouchLikeDevice() {
+  if (typeof window === "undefined") {
+    return false;
+  }
+
+  return window.matchMedia(
+    "(hover: none), (pointer: coarse), (max-width: 768px)",
+  ).matches;
+}
+
+/**
+ * HomeApplicationFlowSection
+ * 首页第二屏：应用领域 × 核心部件
+ *
+ * 当前版本说明：
+ * 1. PC 端：电视机 + 5 张漂浮卡片 + 滚动动画
+ * 2. 手机端：电视展示屏 + 应用按钮切换
+ * 3. 应用图片已换为 public/images/applications 下的 JPG 图片
+ * 4. 已预留后端接口：
+ *    /api/home/application-flow?locale=zh-CN
+ *
+ * 后端接入方式：
+ * 1. 当前默认使用本地数据，保证前端第一阶段稳定上线
+ * 2. 以后后端做好后，在 .env.local 里增加：
+ *    NEXT_PUBLIC_ENABLE_HOME_APPLICATION_FLOW_API=true
+ * 3. 后端返回完整数据后，前端会自动用接口数据覆盖本地数据
+ */
+export default function HomeApplicationFlowSection({
+  locale,
+}: HomeApplicationFlowSectionProps) {
+  const sectionRef = useRef<HTMLElement | null>(null); // 第二屏区域
+  const tvStageRef = useRef<HTMLDivElement | null>(null); // PC 端电视舞台区域
+
+  // 应用领域模块当前使用的数据
+  // 默认先使用本地 data/home-application-flow.ts，避免接口未完成时报错
+  const [flowData, setFlowData] = useState<HomeApplicationFlowData>(
+    homeApplicationFlowData,
+  );
+
+  // 标记当前数据是否来自后端
+  // 用途：后端启用后，让后端 image 字段优先生效
+  const [isUsingBackendData, setIsUsingBackendData] = useState(false);
+
+  // 旧手机端点击放大卡片逻辑保留，避免影响原来代码
+  const [activeCardKey, setActiveCardKey] = useState<string | null>(null);
+
+  // 上方入口按钮默认不选中，点击后才显示选中状态
+  const [activeMobileAction, setActiveMobileAction] = useState<
+    "applications" | "products" | null
+  >(null);
+
+  // 手机端当前选中的应用按钮下标，默认也不选中
+  const [activeMobileIndex, setActiveMobileIndex] = useState<number | null>(
+    null,
+  );
+
+  // 手机端切换动效状态
+  const [isMobileChanging, setIsMobileChanging] = useState(false);
+
+  // 根据当前语言生成按钮链接
+  const applicationsHref = getLocaleAnchorPath(locale, "applications");
+  const productsHref = getLocaleAnchorPath(locale, "products");
+
+  // 手机端应用卡片数据
+  // 说明：
+  // 1. 数据来自 flowData
+  // 2. flowData 默认是本地数据，未来可以由后端接口覆盖
+  const mobileApplicationCards = flowData.mobileApplicationCards;
+
+  // 当前手机端选中的应用卡片
+  // 默认展示第一张内容，但页面初始不选中任何行业按钮
+  const displayedMobileIndex = activeMobileIndex ?? 0;
+
+  const activeMobileApplication =
+    mobileApplicationCards[displayedMobileIndex] ||
+    mobileApplicationCards[0];
+
+  /* ================================
+     后端接口预留
+
+     说明：
+     1. 第一阶段不强制请求后端，避免接口没有时一直报 404
+     2. 等后端做好后，在 .env.local 里打开：
+        NEXT_PUBLIC_ENABLE_HOME_APPLICATION_FLOW_API=true
+     3. 接口地址预留：
+        /api/home/application-flow?locale=zh-CN
+  ================================ */
+  useEffect(() => {
+    const shouldUseBackend =
+      process.env.NEXT_PUBLIC_ENABLE_HOME_APPLICATION_FLOW_API === "true";
+
+    if (!shouldUseBackend) {
+      return;
+    }
+
+    const controller = new AbortController();
+
+    async function loadBackendFlowData() {
+      try {
+            const response = await fetch(getHomeApplicationFlowApiPath(locale), 
+            { // 请求首页第二屏后端接口，接口路径从 data 文件统一生成
+            method: "GET",
+            signal: controller.signal,
+            cache: "no-store",
+          },
+        );
+
+        if (!response.ok) {
+          return;
+        }
+
+        const payload = (await response.json()) as unknown;
+        const backendData = normalizeBackendFlowData(payload);
+
+        if (!backendData) {
+          return;
+        }
+
+        setFlowData(backendData);
+        setIsUsingBackendData(true);
+      } catch (error) {
+        // AbortError 是组件卸载或语言切换时主动取消请求，不需要提示
+        if (error instanceof DOMException && error.name === "AbortError") {
+          return;
+        }
+
+        // 接口异常时，继续使用本地数据，避免页面崩掉
+        setFlowData(homeApplicationFlowData);
+        setIsUsingBackendData(false);
+      }
+    }
+
+    loadBackendFlowData();
+
+    return () => {
+      controller.abort();
+    };
+  }, [locale]);
+
+  useEffect(() => {
+    let animationFrameId = 0;
+
+    function updateProductShowcase() {
+      const section = sectionRef.current;
+      const tvStage = tvStageRef.current;
+
+      if (!section || !tvStage) {
+        return;
+      }
+
+      const rect = section.getBoundingClientRect();
+
+      const viewportHeight =
+        window.innerHeight || document.documentElement.clientHeight;
+
+      const scrollDistance = section.offsetHeight - viewportHeight;
+
+      if (scrollDistance <= 0) {
+        return;
+      }
+
+      const progress = clamp(-rect.top / scrollDistance, 0, 1);
+
+      const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+      const shrink = isMobile
+        ? mapRange(progress, 0.34, 0.9, 0, 1)
+        : mapRange(progress, 0.08, 0.7, 0, 1);
+
+      const fade = isMobile
+        ? mapRange(progress, 0.64, 0.95, 0, 1)
+        : shrink;
+
+      const slogan = isMobile
+        ? mapRange(progress, 0.78, 0.98, 0, 1)
+        : mapRange(progress, 0.58, 0.9, 0, 1);
+
+      tvStage.style.setProperty("--shrink", shrink.toFixed(4));
+      tvStage.style.setProperty("--fade", fade.toFixed(4));
+      tvStage.style.setProperty("--slogan", slogan.toFixed(4));
+
+      if (fade > 0.92) {
+        tvStage.classList.add("is-finished");
+      } else {
+        tvStage.classList.remove("is-finished");
+      }
+    }
+
+    function requestUpdate() {
+      window.cancelAnimationFrame(animationFrameId);
+      animationFrameId = window.requestAnimationFrame(updateProductShowcase);
+    }
+
+    requestUpdate();
+
+    window.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("resize", requestUpdate);
+
+    return () => {
+      window.cancelAnimationFrame(animationFrameId);
+      window.removeEventListener("scroll", requestUpdate);
+      window.removeEventListener("resize", requestUpdate);
+    };
+  }, []);
+
+  /* ================================
+     旧手机端点击卡片逻辑
+
+     说明：
+     这部分先保留，避免影响你原来的 PC / 旧手机交互逻辑。
+  ================================ */
+  function handleCardClick(cardKey: string) {
+    if (!isTouchLikeDevice()) {
+      return;
+    }
+
+    setActiveCardKey((currentKey) => {
+      if (currentKey === cardKey) {
+        return null;
+      }
+
+      return cardKey;
+    });
+  }
+
+  function handleStageClick() {
+    if (!isTouchLikeDevice()) {
+      return;
+    }
+
+    setActiveCardKey(null);
+  }
+
+  function getMobileFillClass(cardKey: string) {
+    if (!activeCardKey || activeCardKey === cardKey) {
+      return "";
+    }
+
+    const otherCards = flowData.applicationCards.filter(
+      (card) => card.key !== activeCardKey,
+    );
+
+    const fillIndex = otherCards.findIndex((card) => card.key === cardKey) + 1;
+
+    if (fillIndex <= 0) {
+      return "";
+    }
+
+    return `mobile-fill-${fillIndex}`;
+  }
+
+  /* ================================
+     手机端应用按钮切换
+
+     说明：
+     1. 点击按钮后切换电视屏幕内容
+     2. 加 170ms 动效，和 H5 预览保持一致
+  ================================ */
+  function handleMobileApplicationChange(nextIndex: number) {
+    if (nextIndex === activeMobileIndex) {
+      return;
+    }
+
+    setIsMobileChanging(true);
+
+    window.setTimeout(() => {
+      setActiveMobileIndex(nextIndex);
+      setIsMobileChanging(false);
+    }, 170);
+  }
+
+  return (
+    <section ref={sectionRef} className="home-flow-section" id={flowData.sectionId}>
+      <div className="home-flow-sticky">
+        <div className="home-flow-inner">
+          {/* 左侧文案区 */}
+          <div className="home-flow-copy">
+            <h2 className="home-flow-title">
+              {getHomeFlowText(flowData.titleLine1, locale)}
+
+              <br />
+
+              {getHomeFlowText(flowData.titleLine2, locale)}
+            </h2>
+
+            <p className="home-flow-desc">
+              {getHomeFlowText(flowData.description, locale)}
+            </p>
+
+            <div className="home-flow-capability-row">
+              {flowData.capabilityTags.map((tag) => (
+                <span key={tag.key}>
+                  {getHomeFlowText(tag.label, locale)}
+                </span>
+              ))}
+            </div>
+
+            <div className="home-flow-actions">
+              <Link
+                href={applicationsHref}
+                className={
+                  activeMobileAction === "applications"
+                    ? "home-flow-btn is-active"
+                    : "home-flow-btn"
+                }
+                onClick={() => setActiveMobileAction("applications")}
+              >
+                {getHomeFlowText(flowData.actions.applicationsLabel, locale)}
+              </Link>
+
+              <Link
+                href={productsHref}
+                className={
+                  activeMobileAction === "products"
+                    ? "home-flow-btn is-active"
+                    : "home-flow-btn"
+                }
+                onClick={() => setActiveMobileAction("products")}
+              >
+                {getHomeFlowText(flowData.actions.productsLabel, locale)}
+              </Link>
+            </div>
+          </div>
+
+          {/* PC 端右侧电视舞台 */}
+          <div
+            ref={tvStageRef}
+            className="home-flow-tv-stage"
+            onClick={handleStageClick}
+          >
+            <div className="home-flow-tv-frame">
+              <div className="home-flow-tv-screen">
+                <div
+                  className="home-flow-tv-image"
+                  style={createTvBackground(flowData.tv.image)}
+                />
+
+                <div className="home-flow-tv-grid" />
+
+                <div className="home-flow-tv-slogan">
+                  {flowData.tv.sloganPrefix}{" "}
+                  <span>{flowData.tv.sloganHighlight}</span>{" "}
+                  {flowData.tv.sloganSuffix}
+                </div>
+              </div>
+            </div>
+
+            {flowData.applicationCards.map((card) => {
+              const isActive = activeCardKey === card.key;
+              const mobileFillClass = getMobileFillClass(card.key);
+
+              const resolvedCardImage = resolveApplicationImagePath(
+                {
+                  key: card.key,
+                  className: card.className,
+                  image: card.image,
+                },
+                isUsingBackendData,
+              );
+
+              return (
+                <article
+                  key={card.key}
+                  className={[
+                    "home-flow-industry-card",
+                    card.className,
+                    isActive ? "is-touch-active" : "",
+                    mobileFillClass,
+                  ]
+                    .filter(Boolean)
+                    .join(" ")}
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    handleCardClick(card.key);
+                  }}
+                >
+                  <div
+                    className={`home-flow-industry-image image-${card.className}`}
+                    style={createCardImageBackground(resolvedCardImage)}
+                    aria-label={getHomeFlowText(card.imageAlt, locale)}
+                  />
+
+                  <h3>{getHomeFlowText(card.title, locale)}</h3>
+
+                  <p>{getHomeFlowText(card.description, locale)}</p>
+
+                  <div className="home-flow-tags">
+                    {card.tags.map((tag) => (
+                      <span key={tag.key}>
+                        {getHomeFlowText(tag.label, locale)}
+                      </span>
+                    ))}
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+
+          {/* 手机端应用展示：电视展示屏 + 应用按钮 */}
+          <div
+            className="home-flow-mobile-stage"
+            aria-label={getHomeFlowText(
+              flowData.ariaLabels.mobileApplications,
+              locale,
+            )}
+          >
+            <section
+              className="home-flow-mobile-tv-card"
+              aria-label={getHomeFlowText(
+                flowData.ariaLabels.applicationScreen,
+                locale,
+              )}
+            >
+              <div className="home-flow-mobile-tv-screen">
+                <div
+                  className={
+                    isMobileChanging
+                      ? "home-flow-mobile-tv-image-layer is-changing"
+                      : "home-flow-mobile-tv-image-layer"
+                  }
+                  style={createMobileTvBackground(
+                    resolveApplicationImagePath(
+                      {
+                        key: activeMobileApplication.key,
+                        image: activeMobileApplication.image,
+                      },
+                      isUsingBackendData,
+                    ),
+                  )}
+                />
+
+                <div
+                  className={
+                    isMobileChanging
+                      ? "home-flow-mobile-tv-content is-changing"
+                      : "home-flow-mobile-tv-content"
+                  }
+                >
+                  <div className="home-flow-mobile-tv-topline">
+                    <span className="home-flow-mobile-tv-current-index">
+                      {String(displayedMobileIndex + 1).padStart(2, "0")} /{" "}
+                      {String(mobileApplicationCards.length).padStart(2, "0")}
+                    </span>
+
+                    <span className="home-flow-mobile-tv-mini-slogan">
+                      {flowData.tv.sloganPrefix}{" "}
+                      <span>{flowData.tv.sloganHighlight}</span>{" "}
+                      {flowData.tv.sloganSuffix}
+                    </span>
+                  </div>
+
+                  <div className="home-flow-mobile-tv-main">
+                    <h3 className="home-flow-mobile-tv-title">
+                      {getHomeFlowText(activeMobileApplication.title, locale)}
+                    </h3>
+
+                    <p className="home-flow-mobile-tv-desc">
+                      {getHomeFlowText(
+                        activeMobileApplication.description,
+                        locale,
+                      )}
+                    </p>
+
+                    <div className="home-flow-mobile-tv-tags">
+                      {activeMobileApplication.tags.map((tag) => (
+                        <span key={tag.key}>
+                          {getHomeFlowText(tag.label, locale)}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section
+              className="home-flow-mobile-app-tabs-wrap"
+              aria-label={getHomeFlowText(
+                flowData.ariaLabels.applicationTabs,
+                locale,
+              )}
+            >
+              <div className="home-flow-mobile-app-tabs">
+                {mobileApplicationCards.map((item, index) => (
+                  <button
+                    key={item.key}
+                    type="button"
+                    className={
+                      index === activeMobileIndex
+                        ? "home-flow-mobile-app-tab is-active"
+                        : "home-flow-mobile-app-tab"
+                    }
+                    onClick={() => handleMobileApplicationChange(index)}
+                  >
+                    {getHomeFlowText(item.title, locale)}
+                  </button>
+                ))}
+              </div>
+            </section>
+          </div>
+        </div>
+
+        {/* 底部流程卡片 */}
+        <div className="home-flow-process-gallery">
+          <div className="home-flow-process-grid">
+            {flowData.processCards.map((card) => (
+              <div className="home-flow-process-card" key={card.key}>
+                <strong>{getHomeFlowText(card.title, locale)}</strong>
+
+                <span>{getHomeFlowText(card.description, locale)}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

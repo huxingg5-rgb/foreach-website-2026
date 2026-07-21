@@ -1,0 +1,71 @@
+﻿中文规格书正式接入报告
+生成时间：2026-07-16 17:03:42
+
+项目目录：F:\WebsiteProjects\foreach-website-2026
+中文源目录：\\192.168.1.4\sales\03-市场管理\M02品牌推广\04_网站\收集产品规格书\中文产品规格书
+数据文件：F:\WebsiteProjects\foreach-website-2026\data\resources\datasheets.zh.ts
+数据备份：F:\WebsiteProjects\foreach-website-2026\data\resources\datasheets.zh.ts.bak_chinese_datasheets_20260716_170341
+
+已接入中文PDF：7
+页面条目：8（含针系列来图定制入口）
+
+本次未接入：EA、EAS、SMTP2/SMTP4、HLD3、HLD6、DPL60、MRV3、6010、ABD、PDM5等当前目录中没有对应中文PDF的产品。
+未接入：HRV、PV、TDS、6VMK等不属于当前确认产品范围的旧资料。
+
+============================================================
+标题：SM 柱塞泵规格书
+版本：001
+更新：2020-08
+源文件：\\192.168.1.4\sales\03-市场管理\M02品牌推广\04_网站\收集产品规格书\中文产品规格书\10.120B-柱塞泵\PS-120B-013_001_cn_HaloFlx-SM规格书.pdf
+目标文件：F:\WebsiteProjects\foreach-website-2026\public\downloads\resources\datasheets\zh-CN\Pumps\ps-120b-013-001-cn-sm-piston-pump.pdf
+下载地址：/downloads/resources/datasheets/zh-CN/Pumps/ps-120b-013-001-cn-sm-piston-pump.pdf
+产品图片：/images/products/pumps/plunger-pump/sm/pump-sm-1000ul-pmma.webp
+
+标题：RPL-P6.35 系列无阀泵规格书
+版本：A01
+更新：2022-03
+源文件：\\192.168.1.4\sales\03-市场管理\M02品牌推广\04_网站\收集产品规格书\中文产品规格书\3.121B-无阀泵\PS-121B-011_A01_cn_RPL-P6.35系列无阀泵产品规格书.pdf
+目标文件：F:\WebsiteProjects\foreach-website-2026\public\downloads\resources\datasheets\zh-CN\Pumps\ps-121b-011-a01-cn-rpl-p635-valveless-pump.pdf
+下载地址：/downloads/resources/datasheets/zh-CN/Pumps/ps-121b-011-a01-cn-rpl-p635-valveless-pump.pdf
+产品图片：/images/products/pumps/valveless-pumps/foreach-rpl-p635-valveless-pump.webp
+
+标题：HMD3 电磁阀注射泵规格书
+版本：003
+更新：2022-08
+源文件：\\192.168.1.4\sales\03-市场管理\M02品牌推广\04_网站\收集产品规格书\中文产品规格书\6.130B-注射泵\PS-SDRV-007_003_cn_HMD3注射泵产品规格书.pdf
+目标文件：F:\WebsiteProjects\foreach-website-2026\public\downloads\resources\datasheets\zh-CN\Pumps\ps-sdrv-007-003-cn-hmd3-syringe-pump.pdf
+下载地址：/downloads/resources/datasheets/zh-CN/Pumps/ps-sdrv-007-003-cn-hmd3-syringe-pump.pdf
+产品图片：/images/products/pumps/syringe-pumps/foreach-hmd3-solenoid-valve-syringe-pump.webp
+
+标题：HMD6 电磁阀注射泵规格书
+版本：007
+更新：2022-08
+源文件：\\192.168.1.4\sales\03-市场管理\M02品牌推广\04_网站\收集产品规格书\中文产品规格书\6.130B-注射泵\PS-SDRV-001_007_cn_HMD6系列注射泵产品规格书.pdf
+目标文件：F:\WebsiteProjects\foreach-website-2026\public\downloads\resources\datasheets\zh-CN\Pumps\ps-sdrv-001-007-cn-hmd6-syringe-pump.pdf
+下载地址：/downloads/resources/datasheets/zh-CN/Pumps/ps-sdrv-001-007-cn-hmd6-syringe-pump.pdf
+产品图片：/images/products/pumps/syringe-pumps/foreach-hmd6-solenoid-valve-syringe-pump.webp
+
+标题：DPL30 隔膜泵规格书
+版本：A03
+更新：2026-03
+源文件：\\192.168.1.4\sales\03-市场管理\M02品牌推广\04_网站\收集产品规格书\中文产品规格书\7.150B-隔膜泵\PS-150B-2412-00001_A03_cn_DPL30规格书.pdf
+目标文件：F:\WebsiteProjects\foreach-website-2026\public\downloads\resources\datasheets\zh-CN\Pumps\ps-150b-2412-00001-a03-cn-dpl30-diaphragm-pump.pdf
+下载地址：/downloads/resources/datasheets/zh-CN/Pumps/ps-150b-2412-00001-a03-cn-dpl30-diaphragm-pump.pdf
+产品图片：/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushed-liquid-diaphragm-pump-main.webp
+
+标题：HP 二位六通带排气高压阀规格书
+版本：A00
+更新：2026-06
+源文件：\\192.168.1.4\sales\03-市场管理\M02品牌推广\04_网站\收集产品规格书\中文产品规格书\1.120C-旋转阀\PS-120C-2604-00001_A00_cn_HP二位六通带排气高压旋转阀规格书.pdf
+目标文件：F:\WebsiteProjects\foreach-website-2026\public\downloads\resources\datasheets\zh-CN\Valves\ps-120c-2604-00001-a00-cn-hp-2-position-6-port-high-pressure-valve.pdf
+下载地址：/downloads/resources/datasheets/zh-CN/Valves/ps-120c-2604-00001-a00-cn-hp-2-position-6-port-high-pressure-valve.pdf
+产品图片：/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp
+
+标题：连接件及橡塑管产品目录
+版本：A02
+更新：2026-07
+源文件：\\192.168.1.4\sales\03-市场管理\M02品牌推广\04_网站\收集产品规格书\中文产品规格书\恒永达连接件及橡塑管产品目录_A02.pdf
+目标文件：F:\WebsiteProjects\foreach-website-2026\public\downloads\resources\datasheets\zh-CN\Tubing-and-Fittings\foreach-fittings-and-elastomer-tubing-catalog-a02-cn.pdf
+下载地址：/downloads/resources/datasheets/zh-CN/Tubing-and-Fittings/foreach-fittings-and-elastomer-tubing-catalog-a02-cn.pdf
+产品图片：/images/products/fittings/barbed-fittings/products/ba-16c-pa-w-main.jpg
+

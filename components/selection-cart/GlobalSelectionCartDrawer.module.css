@@ -1,0 +1,793 @@
+/* =========================================================
+   GlobalSelectionCartDrawer.module.css
+   恒永达官网｜全局选型清单抽屉样式
+
+   文件路径：
+   components/selection-cart/GlobalSelectionCartDrawer.module.css
+
+   说明：
+   1. 只服务全局选型清单组件
+   2. 不写入 app/globals.css
+   3. 清单抽屉全站只挂载一次
+   4. 首页、详情页、后续产品页共用这一套样式
+   5. 打印 PDF：
+      - 使用 request-form-header-graphic.svg 作为正式页眉
+      - 使用 request-form-footer-graphic.svg 作为正式页脚
+      - 不额外添加 Logo
+      - 打印区域通过 portal 挂到 body 下，避免多页空白
+========================================================= */
+
+/* =========================================================
+   右下角浮动入口
+========================================================= */
+
+.floatingActions {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  z-index: 8000;
+  display: grid;
+  gap: 10px;
+  justify-items: end;
+}
+
+.floatingActions.hidden {
+  display: none;
+}
+
+.floatingActions button {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(23, 51, 104, 0.22);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.96);
+  color: #173368;
+  font-size: 14px;
+  line-height: 1.1;
+  font-weight: 900;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(23, 51, 104, 0.12);
+  backdrop-filter: blur(14px);
+  transition:
+    transform 0.18s ease,
+    background 0.18s ease,
+    color 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.floatingActions button:first-child {
+  background: rgba(255, 255, 255, 0.94);
+  color: rgba(23, 51, 104, 0.82);
+  box-shadow: 0 8px 22px rgba(23, 51, 104, 0.08);
+}
+
+.floatingActions button:last-child {
+  border-color: #173368;
+  background: #173368;
+  color: #ffffff;
+}
+
+.floatingActions button:hover {
+  transform: translateY(-2px);
+  border-color: #173368;
+  background: #173368;
+  color: #09e9b4;
+  box-shadow: 0 16px 34px rgba(23, 51, 104, 0.18);
+}
+
+.floatingActions button:last-child:hover {
+  border-color: #09e9b4;
+  background: #09e9b4;
+  color: #173368;
+}
+
+.floatingActions span {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ffffff;
+  border-radius: 999px;
+  background: #09e9b4;
+  color: #173368;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 900;
+  box-shadow: 0 6px 14px rgba(23, 51, 104, 0.16);
+}
+
+.floatingActions button:last-child:hover span {
+  background: #173368;
+  color: #09e9b4;
+}
+
+/* =========================================================
+   加入清单后的轻动效
+========================================================= */
+
+.floatingActions.bump button:last-child {
+  animation: selectionCartBump 0.42s ease;
+}
+
+.floatingActions.bump span {
+  animation: selectionCartBadgeBump 0.42s ease;
+}
+
+@keyframes selectionCartBump {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+
+  35% {
+    transform: translateY(-3px) scale(1.06);
+  }
+
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes selectionCartBadgeBump {
+  0% {
+    transform: scale(1);
+  }
+
+  35% {
+    transform: scale(1.22);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* =========================================================
+   遮罩
+========================================================= */
+
+.mask {
+  position: fixed;
+  inset: 0;
+  z-index: 8998;
+  border: 0;
+  background: rgba(15, 28, 52, 0.36);
+  cursor: pointer;
+}
+
+/* =========================================================
+   抽屉主体
+========================================================= */
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 8999;
+  width: min(520px, 100vw);
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background: #ffffff;
+  box-shadow: -20px 0 50px rgba(15, 28, 52, 0.16);
+}
+
+/* =========================================================
+   抽屉顶部
+========================================================= */
+
+.head {
+  min-height: 96px;
+  padding: 22px 24px 18px;
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  border-bottom: 1px solid rgba(23, 51, 104, 0.12);
+  background: #173368;
+  color: #ffffff;
+}
+
+.head h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 1.15;
+  font-weight: 900;
+}
+
+.head p {
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.head > button {
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 0;
+  background: transparent;
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.head > button:hover {
+  border-color: #09e9b4;
+  color: #09e9b4;
+}
+
+/* =========================================================
+   抽屉内容
+========================================================= */
+
+.body {
+  padding: 18px 20px 120px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #ffffff;
+}
+
+.empty {
+  min-height: 150px;
+  display: grid;
+  place-items: center;
+  border: 1px dashed rgba(23, 51, 104, 0.18);
+  background: #f6f8fb;
+  color: #5e6b80;
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* =========================================================
+   摘要
+========================================================= */
+
+.summary {
+  margin-bottom: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.summary div {
+  min-height: 74px;
+  padding: 14px 16px;
+  border: 1px solid rgba(23, 51, 104, 0.12);
+  background: #f6f8fb;
+}
+
+.summary span {
+  display: block;
+  margin-bottom: 6px;
+  color: #5e6b80;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.summary strong {
+  color: #173368;
+  font-size: 26px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.summary em {
+  margin-left: 4px;
+  color: #5e6b80;
+  font-size: 12px;
+  font-style: normal;
+}
+
+/* =========================================================
+   清单列表
+========================================================= */
+
+.list {
+  display: grid;
+  gap: 12px;
+}
+
+.item {
+  position: relative;
+  padding: 16px 56px 16px 16px;
+  border: 1px solid rgba(23, 51, 104, 0.14);
+  background: #ffffff;
+  box-shadow: 0 10px 24px rgba(23, 51, 104, 0.06);
+}
+
+.removeButton {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(23, 51, 104, 0.14);
+  border-radius: 5px;
+  background: #ffffff;
+  color: #173368;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.removeButton:hover {
+  background: #173368;
+  border-color: #173368;
+  color: #09e9b4;
+}
+
+.itemHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.itemHead span {
+  display: block;
+  margin-bottom: 4px;
+  color: #7a8598;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.itemHead h3 {
+  margin: 0;
+  color: #173368;
+  font-size: 19px;
+  line-height: 1.25;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+/* =========================================================
+   清单型号链接
+========================================================= */
+
+.itemTitleLink {
+  display: inline-flex;
+  color: #173368;
+  font-size: 19px;
+  line-height: 1.25;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  text-decoration: none;
+  transition:
+    color 0.18s ease,
+    text-decoration-color 0.18s ease;
+}
+
+.itemTitleLink:hover {
+  color: #09e9b4;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+/* =========================================================
+   图纸需求按钮
+========================================================= */
+
+.drawingButton {
+  flex: 0 0 auto;
+  height: 30px;
+  padding: 0 12px;
+  border: 1px solid rgba(23, 51, 104, 0.28);
+  border-radius: 5px;
+  background: #ffffff;
+  color: #173368;
+  font-size: 12px;
+  line-height: 28px;
+  font-weight: 900;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background 0.18s ease,
+    color 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.drawingButton:hover,
+.drawingButton.active {
+  border-color: #173368;
+  background: #173368;
+  color: #09e9b4;
+}
+
+/* =========================================================
+   信息行
+========================================================= */
+
+.infoRow {
+  margin-top: 9px;
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 12px;
+  align-items: baseline;
+}
+
+.infoRow span {
+  color: #7a8598;
+  font-size: 12px;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.infoRow strong {
+  min-width: 0;
+  color: #173368;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 800;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+/* =========================================================
+   数量
+========================================================= */
+
+.quantityRow {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(23, 51, 104, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantityRow label {
+  color: #5e6b80;
+  font-size: 13px;
+  line-height: 1;
+}
+
+.quantityRow input {
+  width: 82px;
+  height: 34px;
+  border: 1px solid rgba(23, 51, 104, 0.2);
+  border-radius: 5px;
+  background: #ffffff;
+  color: #173368;
+  font-size: 15px;
+  font-weight: 900;
+  text-align: center;
+  outline: none;
+}
+
+.quantityRow input:focus {
+  border-color: #09e9b4;
+}
+
+/* =========================================================
+   说明
+========================================================= */
+
+.note {
+  margin-top: 18px;
+  padding: 14px 16px 14px 18px;
+  border-left: 4px solid #09e9b4;
+  background: #f6f8fb;
+}
+
+.note strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #173368;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.note p {
+  margin: 0;
+  color: #5e6b80;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   抽屉底部按钮
+========================================================= */
+
+.footer {
+  padding: 14px 20px 18px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  border-top: 1px solid rgba(23, 51, 104, 0.12);
+  background: #ffffff;
+}
+
+.requestDrawingButton,
+.primaryButton,
+.secondaryButton {
+  height: 42px;
+  border: 1px solid rgba(23, 51, 104, 0.26);
+  border-radius: 5px;
+  background: #ffffff;
+  color: #173368;
+  font-size: 14px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: none;
+  transition:
+    background 0.18s ease,
+    color 0.18s ease,
+    border-color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.requestDrawingButton:hover,
+.requestDrawingButton:focus-visible,
+.requestDrawingButton:active,
+.primaryButton:hover,
+.primaryButton:focus-visible,
+.primaryButton:active,
+.secondaryButton:hover,
+.secondaryButton:focus-visible,
+.secondaryButton:active {
+  border-color: #173368;
+  background: #173368;
+  color: #09e9b4;
+  transform: translateY(-1px);
+}
+
+.requestDrawingButton,
+.primaryButton {
+  border-color: rgba(23, 51, 104, 0.32);
+}
+
+.secondaryButton {
+  border-color: rgba(23, 51, 104, 0.22);
+}
+
+/* =========================================================
+   打印区域默认隐藏
+========================================================= */
+
+.printArea {
+  display: none;
+}
+
+/* =========================================================
+   打印 PDF 样式
+   说明：
+   1. 使用 A4 页面尺寸
+   2. 页眉使用 request-form-header-graphic.svg
+   3. 页脚使用 request-form-footer-graphic.svg
+   4. 打印区域是 body 下的独立 portal，避免多页空白
+========================================================= */
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  :global(html.selection-cart-printing),
+  :global(body.selection-cart-printing) {
+    width: 210mm !important;
+    height: 297mm !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+  }
+
+  /*
+     关键：
+     打印时隐藏 body 下除打印根节点以外的所有直接子元素。
+     因为打印区域已经通过 createPortal 挂到 body 下，
+     所以不会被父级页面高度影响，也不会打印出多页空白。
+  */
+  :global(body.selection-cart-printing > *:not(.selection-cart-print-root)) {
+    display: none !important;
+  }
+
+  :global(body.selection-cart-printing .selection-cart-print-root) {
+    display: block !important;
+  }
+
+  .printArea {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: block !important;
+    width: 210mm;
+    height: 297mm;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    overflow: hidden;
+  }
+
+  .printPage {
+    position: relative;
+    width: 210mm;
+    height: 297mm;
+    margin: 0;
+    padding: 0;
+    color: #14233d;
+    background: #ffffff;
+    overflow: hidden;
+  }
+
+  /* =========================================================
+     PDF 正式页眉 SVG
+  ========================================================= */
+
+  .printGraphicHeader {
+    width: 100%;
+    height: 38mm;
+    overflow: hidden;
+  }
+
+  .printGraphicHeader img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center top;
+  }
+
+  .printContent {
+    padding: 6mm 14mm 32mm;
+  }
+
+  .printTitleBlock h1 {
+    margin: 0;
+    color: #173368;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 900;
+  }
+
+  .printTitleBlock p {
+    margin: 8px 0 0;
+    color: #5e6b80;
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .printMetaGrid {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid rgba(23, 51, 104, 0.18);
+  }
+
+  .printMetaGrid div {
+    padding: 10px 12px;
+    border-right: 1px solid rgba(23, 51, 104, 0.18);
+  }
+
+  .printMetaGrid div:last-child {
+    border-right: 0;
+  }
+
+  .printMetaGrid span {
+    display: block;
+    color: #5e6b80;
+    font-size: 11px;
+  }
+
+  .printMetaGrid strong {
+    display: block;
+    margin-top: 4px;
+    color: #173368;
+    font-size: 13px;
+    font-weight: 900;
+  }
+
+  .printTable {
+    width: 100%;
+    margin-top: 16px;
+    border-collapse: collapse;
+  }
+
+  .printTable th,
+  .printTable td {
+    padding: 8px 7px;
+    border: 1px solid rgba(23, 51, 104, 0.22);
+    color: #14233d;
+    font-size: 10.5px;
+    line-height: 1.45;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .printTable th {
+    background: #f6f8fb;
+    color: #173368;
+    font-weight: 900;
+  }
+
+  /* =========================================================
+     PDF 正式页脚 SVG
+  ========================================================= */
+
+  .printGraphicFooter {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 24mm;
+    overflow: hidden;
+  }
+
+  .printGraphicFooter img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+  }
+}
+
+/* =========================================================
+   移动端
+========================================================= */
+
+@media (max-width: 720px) {
+  .floatingActions {
+    right: 14px;
+    bottom: 14px;
+    gap: 8px;
+  }
+
+  .floatingActions button {
+    width: 52px;
+    height: 52px;
+    font-size: 13px;
+  }
+
+  .floatingActions span {
+    top: -6px;
+    right: -6px;
+    min-width: 20px;
+    height: 20px;
+    font-size: 11px;
+  }
+
+  .drawer {
+    width: 100vw;
+  }
+
+  .body {
+    padding: 16px 16px 120px;
+  }
+
+  .footer {
+    grid-template-columns: 1fr;
+  }
+
+  .itemHead {
+    display: grid;
+    gap: 8px;
+  }
+
+  .drawingButton {
+    width: fit-content;
+  }
+
+  .infoRow {
+    grid-template-columns: 64px minmax(0, 1fr);
+  }
+}

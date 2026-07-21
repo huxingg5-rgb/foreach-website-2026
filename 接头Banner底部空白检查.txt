@@ -1,0 +1,1443 @@
+﻿接头 Banner 底部空白检查
+生成时间：2026-07-17 13:43:25
+项目目录：F:\WebsiteProjects\foreach-website-2026
+
+============================================================
+一、Banner 渲染位置与父级容器
+============================================================
+文件：F:\WebsiteProjects\foreach-website-2026\components\products\detail\ProductDetailClient.tsx
+
+------------------------------------------------------------
+    1191: 
+    1192:     if (existingItem) {
+    1193:       removeItem(existingItem.id);
+    1194:       return;
+    1195:     }
+    1196: 
+    1197:     addItem(item);
+    1198:   }
+    1199: 
+    1200:   return (
+    1201:     <div data-product-breadcrumb-shell="true">
+    1202:       {structuredData ? (
+    1203:         <script
+    1204:           type="application/ld+json"
+    1205:           dangerouslySetInnerHTML={{
+    1206:             __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+    1207:           }}
+    1208:         />
+    1209:       ) : null}
+    1210: <SitePageShell
+    1211:       breadcrumbAriaLabel={copy.breadcrumb}
+    1212:       breadcrumbItems={[
+    1213:         {
+    1214:           label: copy.home,
+    1215:           href: isEnglish ? "/en/" : "/",
+    1216:         },
+    1217:         {
+    1218:           label: copy.products,
+    1219:           href: isEnglish ? "/en/products/" : "/products/",
+    1220:         },
+    1221:         {
+    1222:           label: data.model,
+    1223:         },
+    1224:       ]}
+    1225:     >
+>>  1226:       <main className={styles.page} data-product-detail-page="true">
+    1227:       <div className={styles.container}>
+    1228:         
+    1229:         <section className={styles.productTop}>
+    1230:           <div data-product-gallery="true" className={styles.gallery} aria-label={copy.gallery}>
+    1231:             <div data-product-main-stage="true"
+    1232:               className={[
+    1233:                 styles.mainImage,
+    1234:                 isZooming ? styles.isZooming : "",
+    1235:               ]
+    1236:                 .filter(Boolean)
+    1237:                 .join(" ")}
+    1238:               style={zoomStyle}
+    1239:               onMouseEnter={() => setIsZooming(true)}
+    1240:               onMouseLeave={() => setIsZooming(false)}
+    1241:               onMouseMove={handleMainImageMove}
+    1242:             >
+    1243:               {activeRealImage ? (
+    1244:                 <img data-product-main-image="true"
+    1245:                   src={activeRealImage}
+    1246:                   alt={(data as any).imageAltEn || (data as any).mainImageAlt || (data as any).imageAlt || `${data.model} ${data.name}`}
+    1247:                 />
+    1248:               ) : (
+    1249:                 <svg
+    1250:                   className={styles.pumpSvg}
+    1251:                   viewBox="0 0 520 310"
+    1252:                   aria-hidden="true"
+    1253:                 >
+    1254:                   <g transform="translate(34, 84)">
+    1255:                     <rect
+    1256:                       x="0"
+    1257:                       y="52"
+    1258:                       width="54"
+    1259:                       height="20"
+    1260:                       fill="#ffffff"
+    1261:                       stroke="#d7dee8"
+    1262:                       strokeWidth="2"
+    1263:                     />
+    1264:                     <rect
+    1265:                       x="54"
+    1266:                       y="33"
+    1267:                       width="72"
+    1268:                       height="58"
+    1269:                       fill="#ffffff"
+    1270:                       stroke="#d7dee8"
+    1271:                       strokeWidth="2"
+
+------------------------------------------------------------
+    1832:                       .join(" ")}
+    1833:                     key={`${item.question}-${index}`}
+    1834:                   >
+    1835:                     <button
+    1836:                       className={styles.faqQuestion}
+    1837:                       type="button"
+    1838:                       aria-expanded={isOpen}
+    1839:                       onClick={() =>
+    1840:                         setOpenFaqIndex(isOpen ? null : index)
+    1841:                       }
+    1842:                     >
+    1843:                       <span className={styles.faqQuestionText}>
+    1844:                         {item.question}
+    1845:                       </span>
+    1846:                       <span
+    1847:                         className={styles.faqToggle}
+    1848:                         aria-hidden="true"
+    1849:                       >
+    1850:                         {isOpen ? "−" : "+"}
+    1851:                       </span>
+    1852:                     </button>
+    1853:                     <div
+    1854:                       className={styles.faqAnswerWrap}
+    1855:                       aria-hidden={!isOpen}
+    1856:                     >
+    1857:                       <p className={styles.faqAnswer}>
+    1858:                         {item.answer}
+    1859:                       </p>
+    1860:                     </div>
+    1861:                   </article>
+    1862:                 );
+    1863:               })}
+    1864:             </div>
+    1865:           </section>
+    1866: 
+>>  1867:           <PlungerPumpBottomCta data={data} isEnglish={isEnglish} />
+    1868:           </>
+    1869:         ) : null}
+    1870: 
+    1871:       </div>
+>>  1872:     </main>
+>>  1873:     </SitePageShell>
+    1874: </div>
+    1875:   );
+    1876: }
+
+============================================================
+二、Banner 本身样式
+============================================================
+文件：F:\WebsiteProjects\foreach-website-2026\components\products\detail\product-detail.module.css
+
+------------------------------------------------------------
+    1342:   font-weight: 400;
+    1343:   justify-content: flex-start !important;
+    1344:   white-space: normal !important;
+    1345: }
+    1346: 
+    1347: .specPanelClean .specTable tr[data-product-spec-row="true"]:hover th,
+    1348: .specPanelClean .specTable tr[data-product-spec-row="true"]:hover td {
+    1349:   background-color: rgba(0, 214, 170, 0.055) !important;
+    1350: }
+    1351: 
+    1352: /* ===== FOREACH plunger bottom CTA END ===== */
+    1353: 
+    1354: /* ===== FOREACH plunger bottom CTA START ===== */
+    1355: /*
+    1356:   柱塞泵详情页底部 CTA 最终样式：
+    1357:   - 背景全屏
+    1358:   - 内容限制在详情页内容宽度内
+    1359:   - CTA 与 Footer 无白色空隙
+    1360:   - 按钮 hover 不上移
+    1361: */
+>>  1362: .plungerBottomCta {
+    1363:   position: relative;
+    1364:   left: 50%;
+    1365:   width: 100vw;
+    1366:   max-width: none;
+    1367:   margin-top: 0;
+    1368:   margin-right: -50vw;
+    1369:   margin-bottom: 0 !important;
+    1370:   margin-left: -50vw;
+    1371:   background:
+    1372:     linear-gradient(90deg, rgba(10, 42, 86, 0.96), rgba(18, 65, 121, 0.88)),
+    1373:     url("/images/applications/life-science/life-science-cta-bg.webp");
+    1374:   background-size: cover;
+    1375:   background-position: center;
+    1376:   overflow: hidden;
+    1377: }
+    1378: 
+>>  1379: .plungerBottomCtaInner {
+    1380:   display: grid;
+    1381:   width: min(calc(100% - 48px), var(--page-width, 1180px));
+    1382:   min-height: 250px;
+    1383:   margin: 0 auto;
+    1384:   padding: 58px 0;
+    1385:   grid-template-columns: minmax(0, 1fr) auto;
+    1386:   gap: 48px;
+    1387:   align-items: center;
+    1388:   box-sizing: border-box;
+    1389: }
+    1390: 
+>>  1391: .plungerBottomCtaText h2 {
+    1392:   margin: 0 0 14px;
+    1393:   color: #ffffff;
+    1394:   font-size: 30px;
+    1395:   line-height: 1.28;
+    1396:   font-weight: 700;
+    1397:   letter-spacing: -0.02em;
+    1398: }
+    1399: 
+>>  1400: .plungerBottomCtaText p {
+    1401:   max-width: 900px;
+    1402:   margin: 0;
+    1403:   color: rgba(255, 255, 255, 0.78);
+    1404:   font-size: 15px;
+    1405:   line-height: 1.8;
+    1406:   font-weight: 400;
+    1407: }
+    1408: 
+>>  1409: .plungerBottomCtaButton {
+    1410:   display: inline-flex;
+    1411:   min-width: 132px;
+    1412:   height: 42px;
+    1413:   padding: 0 24px;
+    1414:   align-items: center;
+    1415:   justify-content: center;
+    1416:   border-radius: 6px;
+    1417:   background: #ffffff;
+    1418:   color: #173368;
+    1419:   font-size: 14px;
+    1420:   font-weight: 700;
+    1421:   text-decoration: none;
+    1422:   white-space: nowrap;
+    1423:   transition:
+    1424:     background 0.18s ease,
+    1425:     color 0.18s ease;
+    1426: }
+    1427: 
+>>  1428: .plungerBottomCtaButton:hover {
+    1429:   background: #09e9b4;
+    1430:   color: #072653;
+    1431:   transform: none;
+    1432: }
+    1433: 
+>>  1434: .page:has(.plungerBottomCta),
+>>  1435: .container:has(.plungerBottomCta),
+>>  1436: .detailSection:has(.plungerBottomCta) {
+    1437:   padding-bottom: 0 !important;
+    1438:   margin-bottom: 0 !important;
+    1439: }
+    1440: 
+    1441: @media (max-width: 768px) {
+>>  1442:   .plungerBottomCta {
+    1443:     margin-top: 0;
+    1444:   }
+    1445: 
+>>  1446:   .plungerBottomCtaInner {
+    1447:     width: calc(100% - 48px);
+    1448:     min-height: 250px;
+    1449:     padding: 40px 0;
+    1450:     grid-template-columns: minmax(0, 1fr);
+    1451:     gap: 22px;
+    1452:   }
+    1453: 
+>>  1454:   .plungerBottomCtaText h2 {
+    1455:     font-size: 24px;
+    1456:   }
+    1457: 
+>>  1458:   .plungerBottomCtaText p {
+    1459:     font-size: 14px;
+    1460:   }
+    1461: 
+>>  1462:   .plungerBottomCtaButton {
+    1463:     width: fit-content;
+    1464:   }
+    1465: }
+    1466: /* ===== FOREACH plunger bottom CTA END ===== */
+    1467: 
+    1468: /* ===== FOREACH restore FAQ final style START ===== */
+    1469: /*
+    1470:   FAQ 最终稳定版：
+    1471:   - 使用固定 height，不再使用 min-height
+    1472:   - FAQ 展开只在预留区域内变化，不推动下方 CTA/Footer
+    1473:   - 不继续叠加，只替换本块
+    1474: */
+    1475: .faqSection {
+    1476:   height: 660px !important;
+    1477:   min-height: 660px !important;
+    1478:   margin-top: 48px !important;
+    1479:   margin-bottom: 0 !important;
+    1480:   padding-top: 0 !important;
+    1481:   padding-bottom: 0 !important;
+    1482:   border-top: 0 !important;
+    1483:   overflow: visible !important;
+    1484: }
+    1485: 
+    1486: .faqHeader {
+    1487:   margin-bottom: 18px !important;
+    1488: }
+    1489: 
+    1490: .faqHeader h2 {
+    1491:   margin: 0 !important;
+    1492:   color: #111111 !important;
+    1493:   font-size: 26px !important;
+    1494:   line-height: 1.25 !important;
+    1495:   font-weight: 600 !important;
+    1496:   letter-spacing: -0.01em !important;
+    1497: }
+    1498: 
+    1499: .faqHeader p {
+    1500:   display: none !important;
+    1501: }
+    1502: 
+    1503: .faqList {
+    1504:   border-top: 1px solid #dbe3ee !important;
+    1505:   overflow: visible !important;
+    1506: }
+    1507: 
+
+------------------------------------------------------------
+    2164: /* ===== FOREACH product detail FAQ fixed area final START ===== */
+    2165: .faqSection {
+    2166:   height: 560px !important;
+    2167:   min-height: 560px !important;
+    2168:   margin-top: 36px !important;
+    2169:   margin-bottom: 50px !important;
+    2170:   padding-top: 0 !important;
+    2171:   padding-bottom: 0 !important;
+    2172:   overflow: hidden !important;
+    2173: }
+    2174: 
+    2175: .faqList {
+    2176:   margin-bottom: 0 !important;
+    2177:   overflow: visible !important;
+    2178: }
+    2179: 
+    2180: .faqItemOpen .faqAnswerWrap {
+    2181:   max-height: 190px !important;
+    2182: }
+    2183: 
+>>  2184: .plungerBottomCta {
+    2185:   margin-top: 0 !important;
+    2186: }
+    2187: 
+>>  2188: .plungerBottomCtaInner {
+    2189:   min-height: 250px !important;
+    2190:   padding: 58px 0 !important;
+    2191: }
+    2192: 
+    2193: @media (max-width: 768px) {
+    2194:   .faqSection {
+    2195:     height: 520px !important;
+    2196:     min-height: 520px !important;
+    2197:     margin-top: 28px !important;
+    2198:     margin-bottom: 42px !important;
+    2199:   }
+    2200: 
+    2201:   .faqItemOpen .faqAnswerWrap {
+    2202:     max-height: 220px !important;
+    2203:   }
+    2204: }
+    2205: /* ===== FOREACH product detail FAQ fixed area final END ===== */
+    2206: 
+    2207: 
+    2208: 
+    2209: /* ===== FOREACH product detail button pressed state START ===== */
+    2210: /* 详情页按钮选中态：保持原按钮结构，只在 aria-pressed=true 时显示已选中 */
+    2211: .button[aria-pressed="true"] {
+    2212:   background: var(--brand-blue, #005bac) !important;
+    2213:   border-color: var(--brand-blue, #005bac) !important;
+    2214:   color: #ffffff !important;
+    2215: }
+    2216: 
+    2217: .button[aria-pressed="true"]:hover {
+    2218:   background: var(--brand-blue, #005bac) !important;
+    2219:   border-color: var(--brand-blue, #005bac) !important;
+    2220:   color: #ffffff !important;
+    2221: }
+    2222: /* ===== FOREACH product detail button pressed state END ===== */
+    2223: 
+    2224: /* ENGLISH_DETAIL_GALLERY_COMPACT_ARROWS
+    2225:  * 英文详情页左右按钮与缩略图保持在同一行。
+    2226:  * 不使用绝对定位，不影响中文详情页。
+    2227:  */
+    2228: .thumbRow[data-detail-locale="en"] {
+    2229:   position: static;
+    2230:   display: inline-flex;
+    2231:   align-items: center;
+    2232:   justify-content: flex-start;
+    2233:   flex-wrap: nowrap;
+
+============================================================
+三、产品详情父级容器样式
+============================================================
+文件：F:\WebsiteProjects\foreach-website-2026\components\products\detail\product-detail.module.css
+
+------------------------------------------------------------
+       1: /* =========================================================
+       2:    product-detail.module.css
+       3:    恒永达官网｜中文产品详情页
+       4: 
+       5:    本文件严格对应用户提供的 HTML 样式。
+       6:    除固定顶部导航所需的顶部偏移外，不调整原始设计。
+       7: ========================================================= */
+       8: 
+>>     9: .page {
+      10:   --blue: #173368;
+      11:   --blue-dark: #10264f;
+      12:   --cyan: #09e9b4;
+      13: 
+      14:   --black: #111111;
+      15:   --text: #263241;
+      16:   --sub: #536274;
+      17:   --muted: #7c8796;
+      18: 
+      19:   --line: #d8dee8;
+      20:   --line-light: #e8edf4;
+      21:   --soft: #f7f9fc;
+      22:   --soft-blue: #f1f5fa;
+      23:   --white: #ffffff;
+      24: 
+      25:   --page-width: 1180px;
+      26:   --btn-radius: 8px;
+      27: 
+      28:   width: 100%;
+      29:   min-height: 100vh;
+      30:   padding: 82px 0 72px;
+      31:   background: #ffffff;
+      32:   color: var(--black);
+      33: }
+      34: 
+>>    35: .page *,
+>>    36: .page *::before,
+>>    37: .page *::after {
+      38:   box-sizing: border-box;
+      39: }
+      40: 
+>>    41: .page button {
+      42:   font: inherit;
+      43:   cursor: pointer;
+      44: }
+      45: 
+      46: .container {
+      47:   width: min(calc(100% - 96px), var(--page-width));
+      48:   margin: 0 auto;
+      49: }
+      50: 
+      51: /* =========================================================
+      52:    首屏产品区域
+      53: ========================================================= */
+      54: 
+      55: .productTop {
+      56:   display: grid;
+      57:   grid-template-columns: 430px minmax(0, 1fr);
+      58:   gap: 64px;
+      59:   margin-top: 32px;
+      60:   align-items: start;
+      61: }
+      62: 
+      63: /* =========================================================
+      64:    左侧产品图
+      65: ========================================================= */
+      66: 
+      67: .gallery {
+      68:   width: 100%;
+      69: }
+      70: 
+>>    71: .mainImage {
+      72:   position: relative;
+      73:   display: flex;
+      74:   width: 100%;
+      75:   height: 360px;
+      76:   overflow: visible;
+      77:   align-items: center;
+      78:   justify-content: center;
+      79:   border: 0;
+      80:   background: #ffffff;
+      81:   cursor: zoom-in;
+      82: }
+      83: 
+>>    84: .mainImage .pumpSvg,
+>>    85: .mainImage img {
+      86:   transform-origin: var(--zoom-x, 50%) var(--zoom-y, 50%);
+      87:   transition: transform 0.22s ease;
+      88:   will-change: transform;
+      89: }
+      90: 
+>>    91: .mainImage.isZooming .pumpSvg,
+>>    92: .mainImage.isZooming img {
+      93:   transform: scale(1.55);
+      94: }
+      95: 
+>>    96: .mainImage img {
+      97:   display: block;
+      98:   width: 360px;
+      99:   max-width: 86%;
+     100:   height: 100%;
+     101:   object-fit: contain;
+     102: }
+     103: 
+     104: .pumpSvg {
+     105:   display: block;
+     106:   width: 360px;
+     107:   max-width: 86%;
+     108:   height: auto;
+     109: }
+     110: 
+     111: .thumbRow {
+     112:   display: grid;
+     113:   grid-template-columns: 24px repeat(3, 1fr) 24px;
+     114:   height: 96px;
+     115:   margin-top: 12px;
+     116:   gap: 6px;
+     117: }
+     118: 
+     119: .thumbArrow,
+     120: .thumb {
+     121:   padding: 0;
+
+------------------------------------------------------------
+     193: }
+     194: 
+     195: /* =========================================================
+     196:    右侧产品信息
+     197: ========================================================= */
+     198: 
+     199: .productInfo {
+     200:   max-width: 680px;
+     201:   padding-top: 8px;
+     202: }
+     203: 
+     204: .titleGroup {
+>>   205:   padding-bottom: 18px;
+     206:   border-bottom: 1px solid var(--line-light);
+     207: }
+     208: 
+     209: .productModelTitle {
+     210:   margin: 0;
+     211:   color: var(--blue);
+     212:   font-size: 38px;
+     213:   line-height: 1.08;
+     214:   font-weight: 900;
+     215:   letter-spacing: -0.035em;
+     216: }
+     217: 
+     218: .productName {
+     219:   margin: 8px 0 0;
+     220:   color: #111111;
+     221:   font-size: 24px;
+     222:   line-height: 1.2;
+     223:   font-weight: 800;
+     224:   letter-spacing: -0.02em;
+     225: }
+     226: 
+     227: .productDesc {
+     228:   max-width: 640px;
+     229:   margin: 18px 0 0;
+     230:   color: #111111;
+
+------------------------------------------------------------
+     493:   }
+     494: 
+     495:   .operationArea {
+     496:     margin-top: 40px;
+     497:   }
+     498: 
+     499:   .tabNav {
+     500:     gap: 38px;
+     501:   }
+     502: }
+     503: 
+     504: @media (max-width: 680px) {
+>>   505:   .page {
+     506:     padding-top: 70px;
+     507:   }
+     508: 
+     509:   .container {
+     510:     width: min(calc(100% - 28px), var(--page-width));
+     511:   }
+     512: 
+>>   513:   .mainImage {
+     514:     height: 300px;
+     515:     cursor: default;
+     516:   }
+     517: 
+>>   518:   .mainImage.isZooming .pumpSvg,
+>>   519:   .mainImage.isZooming img {
+     520:     transform: none;
+     521:   }
+     522: 
+     523:   .pumpSvg {
+     524:     width: 360px;
+     525:   }
+     526: 
+     527:   .thumbRow {
+     528:     height: 78px;
+     529:   }
+     530: 
+     531:   .productModelTitle {
+     532:     font-size: 26px;
+     533:     line-height: 1.18;
+     534:     letter-spacing: -0.025em;
+     535:   }
+     536: 
+     537:   .productName {
+     538:     font-size: 24px;
+     539:   }
+     540: 
+     541:   .productDesc,
+     542:   .applicationText {
+     543:     font-size: 15px;
+     544:     line-height: 1.72;
+
+------------------------------------------------------------
+     658:     font-size: 15px !important;
+     659:     line-height: 1.4 !important;
+     660:     font-weight: 400;
+     661:     text-align: center;
+     662:   }
+     663: }
+     664: 
+     665: /* =========================================================
+     666:    2K 屏幕
+     667: ========================================================= */
+     668: 
+     669: @media (min-width: 1800px) {
+>>   670:   .page {
+     671:     --page-width: 1600px;
+     672:   }
+     673: 
+     674:   .productTop {
+     675:     grid-template-columns: 520px minmax(0, 1fr);
+     676:     margin-top: 32px;
+     677:     gap: 88px;
+     678:   }
+     679: 
+>>   680:   .mainImage {
+     681:     height: 420px;
+     682:   }
+     683: 
+     684:   .pumpSvg,
+>>   685:   .mainImage img {
+     686:     width: 430px;
+     687:   }
+     688: 
+     689:   .productInfo {
+     690:     max-width: none;
+     691:   }
+     692: 
+     693:   .productDesc {
+     694:     max-width: 860px;
+     695:   }
+     696: }
+     697: 
+     698: /* =========================================================
+     699:    SitePageShell 产品详情重置
+     700: ========================================================= */
+     701: 
+>>   702: .page {
+     703:   padding-top: 0 !important;
+     704: }
+     705: 
+     706: .productTop {
+     707:   margin-top: 0 !important;
+     708: }
+     709: 
+     710: @media (max-width: 760px) {
+>>   711:   .page {
+     712:     padding-top: 0 !important;
+     713:   }
+     714: }
+     715: 
+     716: @media (max-width: 680px) {
+>>   717:   .page {
+     718:     padding-top: 0 !important;
+     719:   }
+     720: }
+     721: 
+     722: /* =========================================================
+     723:    首屏右栏与缩略图箭头
+     724: ========================================================= */
+     725: 
+     726: .productTop {
+     727:   align-items: stretch;
+     728: }
+     729: 
+     730: .productInfo {
+     731:   display: flex;
+     732:   min-height: 100%;
+     733:   flex-direction: column;
+     734: }
+     735: 
+     736: .operationArea {
+     737:   position: relative;
+     738:   display: flex;
+     739:   flex: 1 1 auto;
+     740:   flex-direction: column;
+     741:   margin-top: 120px !important;
+     742:   padding-top: 0 !important;
+
+------------------------------------------------------------
+    1168:     height: 42px !important;
+    1169:     padding-right: 14px !important;
+    1170:     padding-left: 14px !important;
+    1171:     flex: 0 0 auto !important;
+    1172:     white-space: nowrap !important;
+    1173:   }
+    1174: }
+    1175: 
+    1176: /* =========================================================
+    1177:    面包屑横线下方间距
+    1178: ========================================================= */
+    1179: 
+>>  1180: .page {
+    1181:   padding-top: 24px !important;
+    1182:   box-sizing: border-box;
+    1183: }
+    1184: 
+    1185: @media (max-width: 1080px) {
+>>  1186:   .page {
+    1187:     padding-top: 24px !important;
+    1188:   }
+    1189: }
+    1190: 
+    1191: @media (max-width: 680px) {
+>>  1192:   .page {
+    1193:     padding-top: 24px !important;
+    1194:   }
+    1195: }
+    1196: 
+    1197: 
+    1198: 
+    1199: 
+    1200: 
+    1201: /* ===== FOREACH product detail tab final clean START ===== */
+    1202: 
+    1203: /*
+    1204:   产品详情页资料 Tab 最终样式：
+    1205:   - 居中
+    1206:   - 字号接近“型号：EA-100-PMMA”
+    1207:   - 文字与下方横线拉开距离
+    1208:   - 不使用背景色
+    1209: */
+    1210: 
+    1211: .tabNav {
+    1212:   justify-content: center !important;
+    1213:   gap: 76px !important;
+    1214:   border-bottom: 1px solid #dbe3ee !important;
+>>  1215:   padding-bottom: 10px !important;
+>>  1216:   margin-bottom: 12px !important;
+    1217: }
+    1218: 
+    1219: .tabNav .tabButton {
+    1220:   position: relative !important;
+    1221:   min-width: auto !important;
+    1222:   padding: 0 6px !important;
+    1223:   border: 0 !important;
+    1224:   background: transparent !important;
+    1225:   color: #111111 !important;
+    1226:   font-size: 24px !important;
+    1227:   font-weight: 500 !important;
+    1228:   line-height: 1.2 !important;
+    1229:   cursor: pointer !important;
+    1230: }
+    1231: 
+    1232: .tabNav .tabButton:hover {
+    1233:   color: #00b894 !important;
+    1234:   background: transparent !important;
+    1235: }
+    1236: 
+    1237: .tabNav .tabButton.isActive {
+    1238:   color: #00cfa5 !important;
+    1239:   font-weight: 500;
+    1240:   background: transparent !important;
+    1241: }
+
+------------------------------------------------------------
+    1357:   - 背景全屏
+    1358:   - 内容限制在详情页内容宽度内
+    1359:   - CTA 与 Footer 无白色空隙
+    1360:   - 按钮 hover 不上移
+    1361: */
+    1362: .plungerBottomCta {
+    1363:   position: relative;
+    1364:   left: 50%;
+    1365:   width: 100vw;
+    1366:   max-width: none;
+    1367:   margin-top: 0;
+    1368:   margin-right: -50vw;
+>>  1369:   margin-bottom: 0 !important;
+    1370:   margin-left: -50vw;
+    1371:   background:
+    1372:     linear-gradient(90deg, rgba(10, 42, 86, 0.96), rgba(18, 65, 121, 0.88)),
+    1373:     url("/images/applications/life-science/life-science-cta-bg.webp");
+    1374:   background-size: cover;
+    1375:   background-position: center;
+    1376:   overflow: hidden;
+    1377: }
+    1378: 
+    1379: .plungerBottomCtaInner {
+    1380:   display: grid;
+    1381:   width: min(calc(100% - 48px), var(--page-width, 1180px));
+    1382:   min-height: 250px;
+    1383:   margin: 0 auto;
+    1384:   padding: 58px 0;
+    1385:   grid-template-columns: minmax(0, 1fr) auto;
+    1386:   gap: 48px;
+    1387:   align-items: center;
+    1388:   box-sizing: border-box;
+    1389: }
+    1390: 
+    1391: .plungerBottomCtaText h2 {
+    1392:   margin: 0 0 14px;
+    1393:   color: #ffffff;
+    1394:   font-size: 30px;
+
+------------------------------------------------------------
+    1422:   white-space: nowrap;
+    1423:   transition:
+    1424:     background 0.18s ease,
+    1425:     color 0.18s ease;
+    1426: }
+    1427: 
+    1428: .plungerBottomCtaButton:hover {
+    1429:   background: #09e9b4;
+    1430:   color: #072653;
+    1431:   transform: none;
+    1432: }
+    1433: 
+>>  1434: .page:has(.plungerBottomCta),
+    1435: .container:has(.plungerBottomCta),
+    1436: .detailSection:has(.plungerBottomCta) {
+>>  1437:   padding-bottom: 0 !important;
+>>  1438:   margin-bottom: 0 !important;
+    1439: }
+    1440: 
+    1441: @media (max-width: 768px) {
+    1442:   .plungerBottomCta {
+    1443:     margin-top: 0;
+    1444:   }
+    1445: 
+    1446:   .plungerBottomCtaInner {
+    1447:     width: calc(100% - 48px);
+    1448:     min-height: 250px;
+    1449:     padding: 40px 0;
+    1450:     grid-template-columns: minmax(0, 1fr);
+    1451:     gap: 22px;
+    1452:   }
+    1453: 
+    1454:   .plungerBottomCtaText h2 {
+    1455:     font-size: 24px;
+    1456:   }
+    1457: 
+    1458:   .plungerBottomCtaText p {
+    1459:     font-size: 14px;
+    1460:   }
+    1461: 
+    1462:   .plungerBottomCtaButton {
+    1463:     width: fit-content;
+
+------------------------------------------------------------
+    1467: 
+    1468: /* ===== FOREACH restore FAQ final style START ===== */
+    1469: /*
+    1470:   FAQ 最终稳定版：
+    1471:   - 使用固定 height，不再使用 min-height
+    1472:   - FAQ 展开只在预留区域内变化，不推动下方 CTA/Footer
+    1473:   - 不继续叠加，只替换本块
+    1474: */
+    1475: .faqSection {
+    1476:   height: 660px !important;
+    1477:   min-height: 660px !important;
+    1478:   margin-top: 48px !important;
+>>  1479:   margin-bottom: 0 !important;
+    1480:   padding-top: 0 !important;
+>>  1481:   padding-bottom: 0 !important;
+    1482:   border-top: 0 !important;
+    1483:   overflow: visible !important;
+    1484: }
+    1485: 
+    1486: .faqHeader {
+>>  1487:   margin-bottom: 18px !important;
+    1488: }
+    1489: 
+    1490: .faqHeader h2 {
+    1491:   margin: 0 !important;
+    1492:   color: #111111 !important;
+    1493:   font-size: 26px !important;
+    1494:   line-height: 1.25 !important;
+    1495:   font-weight: 600 !important;
+    1496:   letter-spacing: -0.01em !important;
+    1497: }
+    1498: 
+    1499: .faqHeader p {
+    1500:   display: none !important;
+    1501: }
+    1502: 
+    1503: .faqList {
+    1504:   border-top: 1px solid #dbe3ee !important;
+    1505:   overflow: visible !important;
+    1506: }
+    1507: 
+    1508: .faqItem {
+    1509:   border-bottom: 1px solid #dbe3ee !important;
+    1510:   background: #ffffff !important;
+    1511: }
+    1512: 
+
+------------------------------------------------------------
+    1573:   max-width: 1080px !important;
+    1574:   color: #111111 !important;
+    1575:   font-size: 15px !important;
+    1576:   line-height: 1.8 !important;
+    1577:   font-weight: 400 !important;
+    1578: }
+    1579: 
+    1580: @media (max-width: 768px) {
+    1581:   .faqSection {
+    1582:     height: 620px !important;
+    1583:     min-height: 620px !important;
+    1584:     margin-top: 36px !important;
+>>  1585:     margin-bottom: 0 !important;
+    1586:   }
+    1587: 
+    1588:   .faqHeader h2 {
+    1589:     font-size: 24px !important;
+    1590:   }
+    1591: 
+    1592:   .faqQuestion {
+    1593:     min-height: 60px !important;
+    1594:     padding: 0 16px !important;
+    1595:     grid-template-columns: minmax(0, 1fr) 30px !important;
+    1596:     gap: 14px !important;
+    1597:   }
+    1598: 
+    1599:   .faqQuestionText {
+    1600:     font-size: 16px !important;
+    1601:   }
+    1602: 
+    1603:   .faqToggle {
+    1604:     width: 28px !important;
+    1605:     height: 28px !important;
+    1606:     font-size: 22px !important;
+    1607:   }
+    1608: 
+    1609:   .faqAnswer {
+    1610:     padding: 0 52px 20px 16px !important;
+
+------------------------------------------------------------
+    1668:     max-width: 72px !important;
+    1669:     height: 72px !important;
+    1670:     flex: 0 0 72px !important;
+    1671:     flex-basis: 72px !important;
+    1672:   }
+    1673: 
+    1674:   .container .thumbRow > .thumbArrow {
+    1675:     width: 28px !important;
+    1676:     min-width: 28px !important;
+    1677:   }
+    1678: 
+    1679:   .container .titleGroup {
+>>  1680:     padding-bottom: 14px !important;
+    1681:   }
+    1682: 
+    1683:   .container .productModelTitle {
+    1684:     font-size: 28px !important;
+    1685:     line-height: 1.18 !important;
+    1686:     letter-spacing: -0.02em !important;
+    1687:   }
+    1688: 
+    1689:   .container .productInfo p {
+    1690:     margin-top: 0 !important;
+>>  1691:     margin-bottom: 14px !important;
+    1692:     font-size: 17px !important;
+    1693:     line-height: 1.72 !important;
+    1694:   }
+    1695: 
+    1696:   .container .operationArea {
+    1697:     margin-top: 18px !important;
+    1698:     padding-top: 16px !important;
+    1699:   }
+    1700: 
+    1701:   .container [data-product-model-row="true"],
+    1702:   .container .modelLine {
+    1703:     width: 100% !important;
+    1704:     display: flex !important;
+    1705:     flex-direction: column !important;
+    1706:     flex-wrap: nowrap !important;
+    1707:     align-items: stretch !important;
+    1708:     justify-content: flex-start !important;
+    1709:     gap: 12px !important;
+    1710:   }
+    1711: 
+    1712:   .container .modelCodeWrap {
+    1713:     width: 100% !important;
+    1714:     min-width: 0 !important;
+    1715:     flex: 0 0 auto !important;
+    1716:     flex-direction: row !important;
+
+------------------------------------------------------------
+    1759:   }
+    1760: 
+    1761:   .container .detailSection {
+    1762:     margin-top: 42px !important;
+    1763:   }
+    1764: 
+    1765:   .container .tabNav {
+    1766:     width: 100% !important;
+    1767:     height: 48px !important;
+    1768:     justify-content: space-between !important;
+    1769:     gap: 0 !important;
+    1770:     overflow: visible !important;
+>>  1771:     margin-bottom: 12px !important;
+    1772:   }
+    1773: 
+    1774:   .container .tabNav .tabButton {
+    1775:     height: 48px !important;
+    1776:     flex: 0 0 auto !important;
+    1777:     padding-right: 4px !important;
+    1778:     padding-left: 4px !important;
+    1779:     font-size: 22px !important;
+    1780:     line-height: 1 !important;
+    1781:   }
+    1782: 
+    1783:   .container .specPanelClean {
+    1784:     width: 100% !important;
+    1785:     max-width: 100% !important;
+    1786:     padding: 0 !important;
+    1787:     overflow: visible !important;
+    1788:   }
+    1789: 
+    1790:   .container .specPanelClean .specTable {
+    1791:     display: block !important;
+    1792:     width: 100% !important;
+    1793:     max-width: 100% !important;
+    1794:     min-width: 0 !important;
+    1795:     table-layout: fixed !important;
+    1796:     overflow: visible !important;
+
+------------------------------------------------------------
+    1815:   .container .specPanelClean .specTable th,
+    1816:   .container .specPanelClean .specTable td {
+    1817:     display: flex !important;
+    1818:     width: auto !important;
+    1819:     max-width: 100% !important;
+    1820:     min-width: 0 !important;
+    1821:     min-height: 48px !important;
+    1822:     height: auto !important;
+    1823:     align-items: center !important;
+    1824:     justify-content: flex-start !important;
+    1825:     box-sizing: border-box !important;
+    1826:     padding-top: 12px !important;
+>>  1827:     padding-bottom: 12px !important;
+    1828:     text-align: left !important;
+    1829:     vertical-align: middle !important;
+    1830:     white-space: normal !important;
+    1831:     word-break: break-word !important;
+    1832:     overflow-wrap: anywhere !important;
+    1833:     font-size: 15px !important;
+    1834:     line-height: 1.55 !important;
+    1835:   }
+    1836: 
+    1837:   .container .specPanelClean .specTable th {
+    1838:     padding-left: 12px !important;
+    1839:     padding-right: 10px !important;
+    1840:     font-weight: 500 !important;
+    1841:   }
+    1842: 
+    1843:   .container .specPanelClean .specTable td {
+    1844:     padding-left: 14px !important;
+    1845:     padding-right: 12px !important;
+    1846:     font-weight: 400 !important;
+    1847:   }
+    1848: }
+    1849: 
+    1850: @media (max-width: 420px) {
+    1851:   .container [data-product-main-stage="true"] {
+    1852:     height: 270px !important;
+
+------------------------------------------------------------
+    1876:   .container .tabNav .tabButton {
+    1877:     font-size: 20px !important;
+    1878:   }
+    1879: 
+    1880:   .container .specPanelClean .specTable tr[data-product-spec-row="true"] {
+    1881:     grid-template-columns: minmax(96px, 38%) minmax(0, 1fr) !important;
+    1882:   }
+    1883: 
+    1884:   .container .specPanelClean .specTable th,
+    1885:   .container .specPanelClean .specTable td {
+    1886:     min-height: 46px !important;
+    1887:     padding-top: 10px !important;
+>>  1888:     padding-bottom: 10px !important;
+    1889:     font-size: 14px !important;
+    1890:     line-height: 1.5 !important;
+    1891:   }
+    1892: 
+    1893:   .container .specPanelClean .specTable th {
+    1894:     padding-left: 10px !important;
+    1895:     padding-right: 8px !important;
+    1896:   }
+    1897: 
+    1898:   .container .specPanelClean .specTable td {
+    1899:     padding-left: 12px !important;
+    1900:     padding-right: 10px !important;
+    1901:   }
+    1902: }
+    1903: 
+    1904: /* ===== FOREACH mobile detail alignment END ===== */
+    1905: 
+    1906: /* ===== FOREACH mobile model line center START ===== */
+    1907: /*
+    1908:   手机端型号行垂直居中修复：
+    1909:   - 不改颜色
+    1910:   - 不改按钮样式
+    1911:   - 只修正“型号文字”和“联系我们按钮”的垂直对齐
+    1912: */
+    1913: 
+
+------------------------------------------------------------
+    1935:     display: inline-flex !important;
+    1936:     align-items: center !important;
+    1937:     line-height: 1.25 !important;
+    1938:   }
+    1939: 
+    1940:   .container .modelCodeWrap .button {
+    1941:     display: inline-flex !important;
+    1942:     align-items: center !important;
+    1943:     justify-content: center !important;
+    1944:     flex: 0 0 auto !important;
+    1945:     align-self: center !important;
+    1946:     margin-top: 0 !important;
+>>  1947:     margin-bottom: 0 !important;
+    1948:     transform: none !important;
+    1949:   }
+    1950: }
+    1951: 
+    1952: @media (max-width: 420px) {
+    1953:   .container .modelCodeWrap {
+    1954:     gap: 8px !important;
+    1955:   }
+    1956: 
+    1957:   .container .modelCodeWrap .button {
+    1958:     min-width: 112px !important;
+    1959:   }
+    1960: }
+    1961: 
+    1962: /* ===== FOREACH mobile model line center END ===== */
+    1963: 
+    1964: /* ===== FOREACH mobile action gap START ===== */
+    1965: /*
+    1966:   手机端操作区间距微调：
+    1967:   - 不改按钮样式
+    1968:   - 不改颜色
+    1969:   - 只增加“型号/联系我们”和“添加图纸/加入清单”之间的空隙
+    1970: */
+    1971: 
+    1972: @media (max-width: 768px) {
+    1973:   .container .modelCodeWrap {
+>>  1974:     margin-bottom: 14px !important;
+    1975:   }
+    1976: }
+    1977: 
+    1978: @media (max-width: 420px) {
+    1979:   .container .modelCodeWrap {
+>>  1980:     margin-bottom: 12px !important;
+    1981:   }
+    1982: }
+    1983: 
+    1984: /* ===== FOREACH mobile action gap END ===== */
+    1985: 
+    1986: /* ===== FOREACH 3d model global height START ===== */
+    1987: /*
+    1988:   3D 模型全端高度修复：
+    1989:   - 不是手机端专用
+    1990:   - 不改颜色
+    1991:   - 不改 Tab 样式
+    1992:   - 不改整体视觉
+    1993:   - 只给 3D 模型容器和 model-viewer 明确高度
+    1994: */
+    1995: 
+    1996: .container .modelViewerCanvasWrap {
+    1997:   display: block !important;
+    1998:   width: 100% !important;
+    1999:   max-width: 100% !important;
+    2000:   min-width: 0 !important;
+    2001:   height: 560px !important;
+    2002:   min-height: 560px !important;
+    2003:   max-height: 560px !important;
+    2004:   box-sizing: border-box !important;
+    2005:   overflow: hidden !important;
+
+------------------------------------------------------------
+    2157: 
+    2158: 
+    2159: 
+    2160: 
+    2161: 
+    2162: 
+    2163: 
+    2164: /* ===== FOREACH product detail FAQ fixed area final START ===== */
+    2165: .faqSection {
+    2166:   height: 560px !important;
+    2167:   min-height: 560px !important;
+    2168:   margin-top: 36px !important;
+>>  2169:   margin-bottom: 50px !important;
+    2170:   padding-top: 0 !important;
+>>  2171:   padding-bottom: 0 !important;
+    2172:   overflow: hidden !important;
+    2173: }
+    2174: 
+    2175: .faqList {
+>>  2176:   margin-bottom: 0 !important;
+    2177:   overflow: visible !important;
+    2178: }
+    2179: 
+    2180: .faqItemOpen .faqAnswerWrap {
+    2181:   max-height: 190px !important;
+    2182: }
+    2183: 
+    2184: .plungerBottomCta {
+    2185:   margin-top: 0 !important;
+    2186: }
+    2187: 
+    2188: .plungerBottomCtaInner {
+    2189:   min-height: 250px !important;
+    2190:   padding: 58px 0 !important;
+    2191: }
+    2192: 
+    2193: @media (max-width: 768px) {
+    2194:   .faqSection {
+    2195:     height: 520px !important;
+    2196:     min-height: 520px !important;
+    2197:     margin-top: 28px !important;
+>>  2198:     margin-bottom: 42px !important;
+    2199:   }
+    2200: 
+    2201:   .faqItemOpen .faqAnswerWrap {
+    2202:     max-height: 220px !important;
+    2203:   }
+    2204: }
+    2205: /* ===== FOREACH product detail FAQ fixed area final END ===== */
+    2206: 
+    2207: 
+    2208: 
+    2209: /* ===== FOREACH product detail button pressed state START ===== */
+    2210: /* 详情页按钮选中态：保持原按钮结构，只在 aria-pressed=true 时显示已选中 */
+    2211: .button[aria-pressed="true"] {
+    2212:   background: var(--brand-blue, #005bac) !important;
+    2213:   border-color: var(--brand-blue, #005bac) !important;
+    2214:   color: #ffffff !important;
+    2215: }
+    2216: 
+    2217: .button[aria-pressed="true"]:hover {
+    2218:   background: var(--brand-blue, #005bac) !important;
+    2219:   border-color: var(--brand-blue, #005bac) !important;
+    2220:   color: #ffffff !important;
+    2221: }
+    2222: /* ===== FOREACH product detail button pressed state END ===== */
+    2223: 
+
+============================================================
+四、SitePageShell 页面结构
+============================================================
+文件：F:\WebsiteProjects\foreach-website-2026\components\layout\SitePageShell.tsx
+
+------------------------------------------------------------
+       1: /* =========================================================
+       2:    SitePageShell.tsx
+       3:    恒永达官网｜无 Banner 页面公共框架
+       4: 
+       5:    当前接入：
+       6:    1. 产品中心
+       7:    2. 产品详情页
+       8: 
+       9:    后续新建的无 Banner 页面可继续复用。
+      10:    之前已经完成的其他页面暂不修改。
+      11: ========================================================= */
+      12: 
+      13: import type { ReactNode } from "react";
+      14: 
+      15: import SiteBreadcrumb, {
+      16:   type SiteBreadcrumbItem,
+      17: } from "@/components/common/SiteBreadcrumb";
+      18: 
+      19: import styles from "./SitePageShell.module.css";
+      20: 
+      21: type SitePageShellProps = {
+>>    22:   children: ReactNode;
+      23:   breadcrumbItems: SiteBreadcrumbItem[];
+      24:   breadcrumbAriaLabel?: string;
+>>    25:   className?: string;
+      26: };
+      27: 
+      28: export default function SitePageShell({
+>>    29:   children,
+      30:   breadcrumbItems,
+      31:   breadcrumbAriaLabel = "Breadcrumb",
+>>    32:   className = "",
+      33: }: SitePageShellProps) {
+      34:   return (
+      35:     <div
+>>    36:       className={[styles.shell, className]
+      37:         .filter(Boolean)
+      38:         .join(" ")}
+      39:     >
+      40:       <SiteBreadcrumb
+      41:         items={breadcrumbItems}
+      42:         ariaLabel={breadcrumbAriaLabel}
+      43:         variant="bar"
+>>    44:         className={styles.shellBreadcrumb}
+      45:       />
+      46: 
+>>    47:       <div className={styles.content}>{children}</div>
+      48:     </div>
+      49:   );
+      50: }
+
+============================================================
+五、Footer 相关样式
+============================================================
+
+文件：components\common\product-card\ProductBasicCard.module.css
+  第 207 行：margin-top: 10px;
+  第 219 行：margin-top: 10px;
+  第 227 行：margin-top: 12px;
+  第 260 行：margin-top: 12px;
+  第 281 行：margin-top: 12px;
+  第 289 行：margin-top: auto;
+  第 290 行：padding-top: 18px;
+  第 355 行：.footer {
+  第 356 行：margin-top: 14px;
+
+文件：components\common\ApplicationPageSkeleton.module.css
+  第 47 行：padding-top: 82px;
+  第 240 行：padding-top: 70px;
+
+文件：components\common\PdfDrawingPreview.module.css
+  第 13 行：margin-top: 0;
+  第 14 行：padding-top: 0;
+
+文件：components\common\ProductPageSkeleton.module.css
+  第 10 行：padding-top: 82px;
+  第 202 行：margin-top: 14px;
+  第 211 行：padding-top: 10px;
+  第 325 行：padding-top: 70px;
+  第 333 行：margin-top: 18px;
+  第 447 行：padding-top: 0;
+
+文件：components\forms\company-info-request\CompanyInfoRequestModal.module.css
+  第 144 行：margin-top: 4px;
+  第 333 行：margin-top: 14px;
+  第 348 行：margin-top: 20px;
+  第 419 行：margin-top: 24px;
+
+文件：components\layout\SitePageShell.module.css
+  第 9 行：padding-top: 82px;
+  第 13 行：padding-top: 28px !important;
+  第 19 行：padding-top: 0;
+  第 24 行：padding-top: 60px;
+  第 28 行：margin-top: 0 !important;
+  第 29 行：padding-top: 12px !important;
+
+文件：components\products\detail\product-detail.module.css
+  第 59 行：margin-top: 32px;
+  第 115 行：margin-top: 12px;
+  第 201 行：padding-top: 8px;
+  第 237 行：margin-top: 28px;
+  第 261 行：margin-top: 52px;
+  第 262 行：padding-top: 24px;
+  第 331 行：margin-top: 24px;
+  第 346 行：margin-top: 64px;
+  第 397 行：padding-top: 14px;
+  第 483 行：margin-top: 32px;
+  第 496 行：margin-top: 40px;
+  第 506 行：padding-top: 70px;
+  第 676 行：margin-top: 32px;
+  第 703 行：padding-top: 0 !important;
+  第 707 行：margin-top: 0 !important;
+  第 712 行：padding-top: 0 !important;
+  第 718 行：padding-top: 0 !important;
+  第 741 行：margin-top: 120px !important;
+  第 742 行：padding-top: 0 !important;
+  第 761 行：margin-top: auto !important;
+  第 818 行：margin-top: 24px !important;
+  第 827 行：margin-top: 18px !important;
+  第 841 行：margin-top: 12px;
+  第 1181 行：padding-top: 24px !important;
+  第 1187 行：padding-top: 24px !important;
+  第 1193 行：padding-top: 24px !important;
+  第 1359 行：- CTA 与 Footer 无白色空隙
+  第 1367 行：margin-top: 0;
+  第 1443 行：margin-top: 0;
+  第 1472 行：- FAQ 展开只在预留区域内变化，不推动下方 CTA/Footer
+  第 1478 行：margin-top: 48px !important;
+  第 1480 行：padding-top: 0 !important;
+  第 1584 行：margin-top: 36px !important;
+  第 1627 行：margin-top: 0 !important;
+  第 1690 行：margin-top: 0 !important;
+  第 1697 行：margin-top: 18px !important;
+  第 1698 行：padding-top: 16px !important;
+  第 1762 行：margin-top: 42px !important;
+  第 1826 行：padding-top: 12px !important;
+  第 1887 行：padding-top: 10px !important;
+  第 1946 行：margin-top: 0 !important;
+  第 2168 行：margin-top: 36px !important;
+  第 2170 行：padding-top: 0 !important;
+  第 2185 行：margin-top: 0 !important;
+  第 2197 行：margin-top: 28px !important;
+
+文件：components\resources\fluid-resistance\FluidResistanceCalculator.module.css
+  第 550 行：margin-top: 16px;
+
+文件：components\resources\news\NewsArticleClient.module.css
+  第 120 行：margin-top: 20px;
+  第 185 行：margin-top: 48px;
+  第 217 行：margin-top: 8px;
+  第 233 行：padding-top: 30px;
+  第 290 行：margin-top: 12px;
+  第 392 行：margin-top: 18px;
+  第 396 行：margin-top: 22px;
+  第 414 行：margin-top: 36px;
+
+文件：components\resources\ResourceSupportCta.module.css
+  第 18 行：margin-top: 72px;
+
+文件：components\search\site-search.css
+  第 45 行：margin-top: 30px;
+  第 77 行：padding-top: 38px;
+  第 133 行：margin-top: 28px;
+  第 137 行：padding-top: 44px;
+  第 141 行：margin-top: 44px;
+  第 256 行：margin-top: auto;
+  第 257 行：padding-top: 14px;
+  第 303 行：margin-top: 10px;
+
+文件：components\selection-cart\GlobalSelectionCartDrawer.module.css
+  第 15 行：- 使用 request-form-footer-graphic.svg 作为正式页脚
+  第 418 行：margin-top: 9px;
+  第 447 行：margin-top: 14px;
+  第 448 行：padding-top: 12px;
+  第 483 行：margin-top: 18px;
+  第 508 行：.footer {
+  第 573 行：3. 页脚使用 request-form-footer-graphic.svg
+  第 669 行：margin-top: 16px;
+  第 692 行：margin-top: 4px;
+  第 700 行：margin-top: 16px;
+  第 725 行：.printGraphicFooter {
+  第 735 行：.printGraphicFooter img {
+  第 777 行：.footer {

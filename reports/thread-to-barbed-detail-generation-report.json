@@ -1,0 +1,1064 @@
+{
+  "generatedAt": "2026-07-12T13:16:17.313Z",
+  "sourceWorkbook": "F:\\WebsiteProjects\\foreach-website-2026\\data-source\\product-center\\fittings\\FRGD-140D-2606-0002_001_cn_连接件标品在售清单.xlsx",
+  "sourceSheet": "05_螺纹转倒刺接头",
+  "selectionCount": 101,
+  "excelRecordCount": 101,
+  "generatedDetailCount": 101,
+  "copiedJpgCount": 82,
+  "missingJpgCount": 19,
+  "copiedPdfCount": 0,
+  "missingPdfCount": 101,
+  "detailOutputPath": "F:\\WebsiteProjects\\foreach-website-2026\\data\\products\\generated\\fittings\\thread-to-barbed-fittings\\detail\\index.json",
+  "jpgTargetDir": "F:\\WebsiteProjects\\foreach-website-2026\\public\\images\\products\\fittings\\thread-to-barbed-fittings\\details",
+  "pdfTargetDir": "F:\\WebsiteProjects\\foreach-website-2026\\public\\documents\\products\\fittings\\thread-to-barbed-fittings\\drawings",
+  "copiedJpg": [
+    {
+      "model": "SA-U32-32F-PP-N",
+      "sourceFileName": "SA-U32-32F-PP-N.jpg",
+      "targetFileName": "sa-u32-32f-pp-n.jpg"
+    },
+    {
+      "model": "SA-U32-32F-PA-W",
+      "sourceFileName": "SA-U32-32F-PA-W.jpg",
+      "targetFileName": "sa-u32-32f-pa-w.jpg"
+    },
+    {
+      "model": "SAL-U32-16D-PP-N",
+      "sourceFileName": "SAL-U32-16D-PP-N.jpg",
+      "targetFileName": "sal-u32-16d-pp-n.jpg"
+    },
+    {
+      "model": "SAL-U32-16D-PA-W",
+      "sourceFileName": "SAL-U32-16D-PA-W.jpg",
+      "targetFileName": "sal-u32-16d-pa-w.jpg"
+    },
+    {
+      "model": "SAL-U32-32D-PP-N",
+      "sourceFileName": "SAL-U32-32D-PP-N.jpg",
+      "targetFileName": "sal-u32-32d-pp-n.jpg"
+    },
+    {
+      "model": "SAL-U32-32D-PA-W",
+      "sourceFileName": "SAL-U32-32D-PA-W.jpg",
+      "targetFileName": "sal-u32-32d-pa-w.jpg"
+    },
+    {
+      "model": "SAL-U28-16D-PP-N",
+      "sourceFileName": "SAL-U28-16D-PP-N.jpg",
+      "targetFileName": "sal-u28-16d-pp-n.jpg"
+    },
+    {
+      "model": "SAL-U28-16D-PA-W",
+      "sourceFileName": "SAL-U28-16D-PA-W.jpg",
+      "targetFileName": "sal-u28-16d-pa-w.jpg"
+    },
+    {
+      "model": "SAL-U28-32D-PP-N",
+      "sourceFileName": "SAL-U28-32D-PP-N.jpg",
+      "targetFileName": "sal-u28-32d-pp-n.jpg"
+    },
+    {
+      "model": "SAL-U28-32D-PA-W",
+      "sourceFileName": "SAL-U28-32D-PA-W.jpg",
+      "targetFileName": "sal-u28-32d-pa-w.jpg"
+    },
+    {
+      "model": "SA-U28-16D-PP-N",
+      "sourceFileName": "SA-U28-16D-PP-N.jpg",
+      "targetFileName": "sa-u28-16d-pp-n.jpg"
+    },
+    {
+      "model": "SA-U28-24D-PP-N",
+      "sourceFileName": "SA-U28-24D-PP-N.jpg",
+      "targetFileName": "sa-u28-24d-pp-n.jpg"
+    },
+    {
+      "model": "SA-U28-32D-PP-N",
+      "sourceFileName": "SA-U28-32D-PP-N.jpg",
+      "targetFileName": "sa-u28-32d-pp-n.jpg"
+    },
+    {
+      "model": "SA-U28-40D-PP-N",
+      "sourceFileName": "SA-U28-40D-PP-N.jpg",
+      "targetFileName": "sa-u28-40d-pp-n.jpg"
+    },
+    {
+      "model": "SA-U28-48D-PP-N",
+      "sourceFileName": "SA-U28-48D-PP-N.jpg",
+      "targetFileName": "sa-u28-48d-pp-n.jpg"
+    },
+    {
+      "model": "SA-1/8NPT-24C-PP-N",
+      "sourceFileName": "SA-18NPT-24C-PP-N.jpg",
+      "targetFileName": "sa-1-8npt-24c-pp-n.jpg"
+    },
+    {
+      "model": "SA-1/8NPT-32C-PP-N",
+      "sourceFileName": "SA-18NPT-32C-PP-N.jpg",
+      "targetFileName": "sa-1-8npt-32c-pp-n.jpg"
+    },
+    {
+      "model": "SA-1/8NPT-40C-PP-N",
+      "sourceFileName": "SA-18NPT-40C-PP-N.jpg",
+      "targetFileName": "sa-1-8npt-40c-pp-n.jpg"
+    },
+    {
+      "model": "SA-1/8NPT-48C-PP-N",
+      "sourceFileName": "SA-18NPT-48C-PP-N.jpg",
+      "targetFileName": "sa-1-8npt-48c-pp-n.jpg"
+    },
+    {
+      "model": "SA-1/8NPT-64C-PP-N",
+      "sourceFileName": "SA-18NPT-64C-PP-N.jpg",
+      "targetFileName": "sa-1-8npt-64c-pp-n.jpg"
+    },
+    {
+      "model": "SAL-1/8NPT-64D-PP-N",
+      "sourceFileName": "SAL-18NPT-64D-PP-N.jpg",
+      "targetFileName": "sal-1-8npt-64d-pp-n.jpg"
+    },
+    {
+      "model": "SA-1/4NPT-32D-PP-N",
+      "sourceFileName": "SA-14NPT-32D-PP-N.jpg",
+      "targetFileName": "sa-1-4npt-32d-pp-n.jpg"
+    },
+    {
+      "model": "SA-1/4NPT-64D-PP-N",
+      "sourceFileName": "SA-14NPT-64D-PP-N.jpg",
+      "targetFileName": "sa-1-4npt-64d-pp-n.jpg"
+    },
+    {
+      "model": "SA-1/4NPT-95D-PP-N",
+      "sourceFileName": "SA-14NPT-95D-PP-N.jpg",
+      "targetFileName": "sa-1-4npt-95d-pp-n.jpg"
+    },
+    {
+      "model": "SA-U28-24D-PA-W",
+      "sourceFileName": "SA-U28-24D-PA-W.jpg",
+      "targetFileName": "sa-u28-24d-pa-w.jpg"
+    },
+    {
+      "model": "SA-U28-40D-PA-W",
+      "sourceFileName": "SA-U28-40D-PA-W.jpg",
+      "targetFileName": "sa-u28-40d-pa-w.jpg"
+    },
+    {
+      "model": "SA-U28-32D-PA-W",
+      "sourceFileName": "SA-U28-32D-PA-W.jpg",
+      "targetFileName": "sa-u28-32d-pa-w.jpg"
+    },
+    {
+      "model": "SA-U28-48D-PA-W",
+      "sourceFileName": "SA-U28-48D-PA-W.jpg",
+      "targetFileName": "sa-u28-48d-pa-w.jpg"
+    },
+    {
+      "model": "SA-1/8NPT-24C-PA-W",
+      "sourceFileName": "SA-18NPT-24C-PA-W.jpg",
+      "targetFileName": "sa-1-8npt-24c-pa-w.jpg"
+    },
+    {
+      "model": "SA-1/8NPT-32C-PA-W",
+      "sourceFileName": "SA-18NPT-32C-PA-W.jpg",
+      "targetFileName": "sa-1-8npt-32c-pa-w.jpg"
+    },
+    {
+      "model": "SA-1/8NPT-40C-PA-W",
+      "sourceFileName": "SA-18NPT-40C-PA-W.jpg",
+      "targetFileName": "sa-1-8npt-40c-pa-w.jpg"
+    },
+    {
+      "model": "SA-1/8NPT-48C-PA-W",
+      "sourceFileName": "SA-18NPT-48C-PA-W.jpg",
+      "targetFileName": "sa-1-8npt-48c-pa-w.jpg"
+    },
+    {
+      "model": "SA-1/8NPT-64C-PA-W",
+      "sourceFileName": "SA-18NPT-64C-PA-W.jpg",
+      "targetFileName": "sa-1-8npt-64c-pa-w.jpg"
+    },
+    {
+      "model": "SAL-1/8NPT-64D-PA-W",
+      "sourceFileName": "SAL-18NPT-64D-PA-W.jpg",
+      "targetFileName": "sal-1-8npt-64d-pa-w.jpg"
+    },
+    {
+      "model": "SA-1/4NPT-64D-PA-W",
+      "sourceFileName": "SA-14NPT-64D-PA-W.jpg",
+      "targetFileName": "sa-1-4npt-64d-pa-w.jpg"
+    },
+    {
+      "model": "SA-1/4NPT-95D-PA-W",
+      "sourceFileName": "SA-14NPT-95D-PA-W.jpg",
+      "targetFileName": "sa-1-4npt-95d-pa-w.jpg"
+    },
+    {
+      "model": "SA-X32-32D-PA-W",
+      "sourceFileName": "SA-X32-32D-PA-W.jpg",
+      "targetFileName": "sa-x32-32d-pa-w.jpg"
+    },
+    {
+      "model": "SA-X32-24D-PP-N",
+      "sourceFileName": "SA-X32-24D-PP-N.jpg",
+      "targetFileName": "sa-x32-24d-pp-n.jpg"
+    },
+    {
+      "model": "SA-X32-24D-PA-W",
+      "sourceFileName": "SA-X32-24D-PA-W.jpg",
+      "targetFileName": "sa-x32-24d-pa-w.jpg"
+    },
+    {
+      "model": "SA-X32-32D-PP-N",
+      "sourceFileName": "SA-X32-32D-PP-N.jpg",
+      "targetFileName": "sa-x32-32d-pp-n.jpg"
+    },
+    {
+      "model": "SB-U28-16-PP-N",
+      "sourceFileName": "SB-U28-16-PP-N.jpg",
+      "targetFileName": "sb-u28-16-pp-n.jpg"
+    },
+    {
+      "model": "SB-U28-24-PP-N",
+      "sourceFileName": "SB-U28-24-PP-N.jpg",
+      "targetFileName": "sb-u28-24-pp-n.jpg"
+    },
+    {
+      "model": "SB-U28-32-PP-N",
+      "sourceFileName": "SB-U28-32-PP-N.jpg",
+      "targetFileName": "sb-u28-32-pp-n.jpg"
+    },
+    {
+      "model": "SB-U28-40-PP-N",
+      "sourceFileName": "SB-U28-40-PP-N.jpg",
+      "targetFileName": "sb-u28-40-pp-n.jpg"
+    },
+    {
+      "model": "SB-M6-16-PP-N",
+      "sourceFileName": "SB-M6-16-PP-N.jpg",
+      "targetFileName": "sb-m6-16-pp-n.jpg"
+    },
+    {
+      "model": "SB-M6-24-PP-N",
+      "sourceFileName": "SB-M6-24-PP-N.jpg",
+      "targetFileName": "sb-m6-24-pp-n.jpg"
+    },
+    {
+      "model": "SB-M6-32-PP-N",
+      "sourceFileName": "SB-M6-32-PP-N.jpg",
+      "targetFileName": "sb-m6-32-pp-n.jpg"
+    },
+    {
+      "model": "SB-M6-40-PP-N",
+      "sourceFileName": "SB-M6-40-PP-N.jpg",
+      "targetFileName": "sb-m6-40-pp-n.jpg"
+    },
+    {
+      "model": "SB-U28-16-AC-B",
+      "sourceFileName": "SB-U28-16-AC-B.jpg",
+      "targetFileName": "sb-u28-16-ac-b.jpg"
+    },
+    {
+      "model": "SB-U28-24-AC-B",
+      "sourceFileName": "SB-U28-24-AC-B.jpg",
+      "targetFileName": "sb-u28-24-ac-b.jpg"
+    },
+    {
+      "model": "SB-U28-32-AC-B",
+      "sourceFileName": "SB-U28-32-AC-B.jpg",
+      "targetFileName": "sb-u28-32-ac-b.jpg"
+    },
+    {
+      "model": "SB-U28-40-AC-B",
+      "sourceFileName": "SB-U28-40-AC-B.jpg",
+      "targetFileName": "sb-u28-40-ac-b.jpg"
+    },
+    {
+      "model": "SB-M6-24-AC-B",
+      "sourceFileName": "SB-M6-24-AC-B.jpg",
+      "targetFileName": "sb-m6-24-ac-b.jpg"
+    },
+    {
+      "model": "SB-M6-40-AC-B",
+      "sourceFileName": "SB-M6-40-AC-B.jpg",
+      "targetFileName": "sb-m6-40-ac-b.jpg"
+    },
+    {
+      "model": "SB-U28-16-PV-N",
+      "sourceFileName": "SB-U28-16-PV-N.jpg",
+      "targetFileName": "sb-u28-16-pv-n.jpg"
+    },
+    {
+      "model": "SB-U28-24-PV-N",
+      "sourceFileName": "SB-U28-24-PV-N.jpg",
+      "targetFileName": "sb-u28-24-pv-n.jpg"
+    },
+    {
+      "model": "SB-U28-32-PV-N",
+      "sourceFileName": "SB-U28-32-PV-N.jpg",
+      "targetFileName": "sb-u28-32-pv-n.jpg"
+    },
+    {
+      "model": "SB-U28-40-PV-N",
+      "sourceFileName": "SB-U28-40-PV-N.jpg",
+      "targetFileName": "sb-u28-40-pv-n.jpg"
+    },
+    {
+      "model": "SB-M6-16-PV-N",
+      "sourceFileName": "SB-M6-16-PV-N.jpg",
+      "targetFileName": "sb-m6-16-pv-n.jpg"
+    },
+    {
+      "model": "SB-M6-24-PV-N",
+      "sourceFileName": "SB-M6-24-PV-N.jpg",
+      "targetFileName": "sb-m6-24-pv-n.jpg"
+    },
+    {
+      "model": "SB-M6-32-PV-N",
+      "sourceFileName": "SB-M6-32-PV-N.jpg",
+      "targetFileName": "sb-m6-32-pv-n.jpg"
+    },
+    {
+      "model": "SB-M6-40-PV-N",
+      "sourceFileName": "SB-M6-40-PV-N.jpg",
+      "targetFileName": "sb-m6-40-pv-n.jpg"
+    },
+    {
+      "model": "SB-M5-24D-PP-N",
+      "sourceFileName": "SB-M5-24D-PP-N.jpg",
+      "targetFileName": "sb-m5-24d-pp-n.jpg"
+    },
+    {
+      "model": "SB-M5-32D-PP-N",
+      "sourceFileName": "SB-M5-32D-PP-N.jpg",
+      "targetFileName": "sb-m5-32d-pp-n.jpg"
+    },
+    {
+      "model": "SB-M5-40D-PP-N",
+      "sourceFileName": "SB-M5-40D-PP-N.jpg",
+      "targetFileName": "sb-m5-40d-pp-n.jpg"
+    },
+    {
+      "model": "SB-M5-24D-PA-W",
+      "sourceFileName": "SB-M5-24D-PA-W.jpg",
+      "targetFileName": "sb-m5-24d-pa-w.jpg"
+    },
+    {
+      "model": "SB-M5-32D-PA-W",
+      "sourceFileName": "SB-M5-32D-PA-W.jpg",
+      "targetFileName": "sb-m5-32d-pa-w.jpg"
+    },
+    {
+      "model": "SB-M5-40D-PA-W",
+      "sourceFileName": "SB-M5-40D-PA-W.jpg",
+      "targetFileName": "sb-m5-40d-pa-w.jpg"
+    },
+    {
+      "model": "SB-M5-16D-PP-N",
+      "sourceFileName": "SB-M5-16D-PP-N.jpg",
+      "targetFileName": "sb-m5-16d-pp-n.jpg"
+    },
+    {
+      "model": "SB-M5-16D-PA-W",
+      "sourceFileName": "SB-M5-16D-PA-W.jpg",
+      "targetFileName": "sb-m5-16d-pa-w.jpg"
+    },
+    {
+      "model": "SBS-M6-24D-PP-N",
+      "sourceFileName": "SBS-M6-24D-PP-N.jpg",
+      "targetFileName": "sbs-m6-24d-pp-n.jpg"
+    },
+    {
+      "model": "SBS-M6-32D-PP-N",
+      "sourceFileName": "SBS-M6-32D-PP-N.jpg",
+      "targetFileName": "sbs-m6-32d-pp-n.jpg"
+    },
+    {
+      "model": "SBS-M6-24D-PA-W",
+      "sourceFileName": "SBS-M6-24D-PA-W.jpg",
+      "targetFileName": "sbs-m6-24d-pa-w.jpg"
+    },
+    {
+      "model": "SBS-M6-32D-PA-W",
+      "sourceFileName": "SBS-M6-32D-PA-W.jpg",
+      "targetFileName": "sbs-m6-32d-pa-w.jpg"
+    },
+    {
+      "model": "SBR-U28-16-PP-N",
+      "sourceFileName": "SBR-U28-16-PP-N.jpg",
+      "targetFileName": "sbr-u28-16-pp-n.jpg"
+    },
+    {
+      "model": "SBR-U28-24-PP-N",
+      "sourceFileName": "SBR-U28-24-PP-N.jpg",
+      "targetFileName": "sbr-u28-24-pp-n.jpg"
+    },
+    {
+      "model": "SBR-U28-32-PP-N",
+      "sourceFileName": "SBR-U28-32-PP-N.jpg",
+      "targetFileName": "sbr-u28-32-pp-n.jpg"
+    },
+    {
+      "model": "SC-U28-16D-PP-N",
+      "sourceFileName": "SC-U28-16D-PP-N.jpg",
+      "targetFileName": "sc-u28-16d-pp-n.jpg"
+    },
+    {
+      "model": "SC-U28-24D-PP-N",
+      "sourceFileName": "SC-U28-24D-PP-N.jpg",
+      "targetFileName": "sc-u28-24d-pp-n.jpg"
+    },
+    {
+      "model": "SC-U28-32D-PP-N",
+      "sourceFileName": "SC-U28-32D-PP-N.jpg",
+      "targetFileName": "sc-u28-32d-pp-n.jpg"
+    },
+    {
+      "model": "SC-M6-16-PP-N",
+      "sourceFileName": "SC-M6-16-PP-N.jpg",
+      "targetFileName": "sc-m6-16-pp-n.jpg"
+    },
+    {
+      "model": "SC-M6-32-PP-N",
+      "sourceFileName": "SC-M6-32-PP-N.jpg",
+      "targetFileName": "sc-m6-32-pp-n.jpg"
+    }
+  ],
+  "missingJpg": [
+    {
+      "model": "SA-U32-24F-PP-N",
+      "productCode": "809268",
+      "excluded": true
+    },
+    {
+      "model": "SA-U32-24F-PA-W",
+      "productCode": "809323",
+      "excluded": true
+    },
+    {
+      "model": "SA-U32-16F-PA-W",
+      "productCode": "809339",
+      "excluded": true
+    },
+    {
+      "model": "SA-U32-24F-PV-N",
+      "productCode": "809826",
+      "excluded": false
+    },
+    {
+      "model": "SA-3/8NPT-127-PP-N",
+      "productCode": "839936",
+      "excluded": false
+    },
+    {
+      "model": "SA-U32-16D-PP-N",
+      "productCode": "809948",
+      "excluded": false
+    },
+    {
+      "model": "SA-U32-16D-PA-W",
+      "productCode": "809952",
+      "excluded": false
+    },
+    {
+      "model": "SA-G1/8-40C-PV-N",
+      "productCode": "809490",
+      "excluded": false
+    },
+    {
+      "model": "SA-G1/8-40C-PV-N(O圈FKM)",
+      "productCode": "809546",
+      "excluded": false
+    },
+    {
+      "model": "SA-G1/8-64C-PP-N（带O圈）",
+      "productCode": "809034",
+      "excluded": false
+    },
+    {
+      "model": "SA-G1/8-40C-PV-N（带O圈）",
+      "productCode": "809867",
+      "excluded": false
+    },
+    {
+      "model": "SA-G1/8-40C-PP-N（带O圈）",
+      "productCode": "809868",
+      "excluded": false
+    },
+    {
+      "model": "SA-G1/8-64C-PV-N（带O圈）",
+      "productCode": "809873",
+      "excluded": false
+    },
+    {
+      "model": "SA-G1/8-64C-PP-N（带O圈）",
+      "productCode": "809924",
+      "excluded": false
+    },
+    {
+      "model": "SA-G1/8-64C-PK-N（带o圈）",
+      "productCode": "809953",
+      "excluded": false
+    },
+    {
+      "model": "SB-U28-16-PP-W",
+      "productCode": "809004",
+      "excluded": false
+    },
+    {
+      "model": "SB-U28-32-PP-W",
+      "productCode": "809011",
+      "excluded": false
+    },
+    {
+      "model": "SB-M6-16-PP-W",
+      "productCode": "809018",
+      "excluded": false
+    },
+    {
+      "model": "SB-M6-32-PP-W",
+      "productCode": "809025",
+      "excluded": false
+    }
+  ],
+  "copiedPdf": [],
+  "missingPdf": [
+    {
+      "model": "SA-U32-24F-PP-N",
+      "productCode": "809268",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-U32-32F-PP-N",
+      "productCode": "809269",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-U32-24F-PA-W",
+      "productCode": "809323",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-U32-16F-PA-W",
+      "productCode": "809339",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-U32-32F-PA-W",
+      "productCode": "809340",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SAL-U32-16D-PP-N",
+      "productCode": "809382",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SAL-U32-16D-PA-W",
+      "productCode": "809383",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SAL-U32-32D-PP-N",
+      "productCode": "809384",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SAL-U32-32D-PA-W",
+      "productCode": "809385",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SAL-U28-16D-PP-N",
+      "productCode": "809386",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SAL-U28-16D-PA-W",
+      "productCode": "809387",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SAL-U28-32D-PP-N",
+      "productCode": "809388",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SAL-U28-32D-PA-W",
+      "productCode": "809389",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-U28-16D-PP-N",
+      "productCode": "809465",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-U28-24D-PP-N",
+      "productCode": "809466",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-U28-32D-PP-N",
+      "productCode": "809467",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-U28-40D-PP-N",
+      "productCode": "809468",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-U28-48D-PP-N",
+      "productCode": "809469",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-1/8NPT-24C-PP-N",
+      "productCode": "809470",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-1/8NPT-32C-PP-N",
+      "productCode": "809471",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-1/8NPT-40C-PP-N",
+      "productCode": "809472",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-1/8NPT-48C-PP-N",
+      "productCode": "809473",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-1/8NPT-64C-PP-N",
+      "productCode": "809474",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SAL-1/8NPT-64D-PP-N",
+      "productCode": "809475",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-1/4NPT-32D-PP-N",
+      "productCode": "809476",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-1/4NPT-64D-PP-N",
+      "productCode": "809477",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-1/4NPT-95D-PP-N",
+      "productCode": "809478",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-U28-24D-PA-W",
+      "productCode": "809494",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-U28-40D-PA-W",
+      "productCode": "809495",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-U28-32D-PA-W",
+      "productCode": "809500",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-U28-48D-PA-W",
+      "productCode": "809501",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-1/8NPT-24C-PA-W",
+      "productCode": "809502",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-1/8NPT-32C-PA-W",
+      "productCode": "809503",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-1/8NPT-40C-PA-W",
+      "productCode": "809504",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-1/8NPT-48C-PA-W",
+      "productCode": "809505",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-1/8NPT-64C-PA-W",
+      "productCode": "809506",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SAL-1/8NPT-64D-PA-W",
+      "productCode": "809507",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-1/4NPT-64D-PA-W",
+      "productCode": "809509",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-1/4NPT-95D-PA-W",
+      "productCode": "809510",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-U32-24F-PV-N",
+      "productCode": "809826",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-X32-32D-PA-W",
+      "productCode": "809835",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-X32-24D-PP-N",
+      "productCode": "809836",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-X32-24D-PA-W",
+      "productCode": "809847",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-X32-32D-PP-N",
+      "productCode": "809848",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-3/8NPT-127-PP-N",
+      "productCode": "839936",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-U32-16D-PP-N",
+      "productCode": "809948",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-U32-16D-PA-W",
+      "productCode": "809952",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-G1/8-40C-PV-N",
+      "productCode": "809490",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-G1/8-40C-PV-N(O圈FKM)",
+      "productCode": "809546",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-G1/8-64C-PP-N（带O圈）",
+      "productCode": "809034",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-G1/8-40C-PV-N（带O圈）",
+      "productCode": "809867",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-G1/8-40C-PP-N（带O圈）",
+      "productCode": "809868",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-G1/8-64C-PV-N（带O圈）",
+      "productCode": "809873",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-G1/8-64C-PP-N（带O圈）",
+      "productCode": "809924",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SA-G1/8-64C-PK-N（带o圈）",
+      "productCode": "809953",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SB-U28-16-PP-N",
+      "productCode": "809003",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SB-U28-24-PP-N",
+      "productCode": "809007",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SB-U28-32-PP-N",
+      "productCode": "809010",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SB-U28-40-PP-N",
+      "productCode": "809014",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SB-M6-16-PP-N",
+      "productCode": "809017",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SB-M6-24-PP-N",
+      "productCode": "809021",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SB-M6-32-PP-N",
+      "productCode": "809024",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SB-M6-40-PP-N",
+      "productCode": "809028",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SB-U28-16-AC-B",
+      "productCode": "809002",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SB-U28-24-AC-B",
+      "productCode": "809006",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SB-U28-32-AC-B",
+      "productCode": "809009",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SB-U28-40-AC-B",
+      "productCode": "809013",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SB-M6-24-AC-B",
+      "productCode": "809020",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SB-M6-40-AC-B",
+      "productCode": "809027",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SB-U28-16-PV-N",
+      "productCode": "809001",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SB-U28-24-PV-N",
+      "productCode": "809005",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SB-U28-32-PV-N",
+      "productCode": "809008",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SB-U28-40-PV-N",
+      "productCode": "809012",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SB-M6-16-PV-N",
+      "productCode": "809015",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SB-M6-24-PV-N",
+      "productCode": "809019",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SB-M6-32-PV-N",
+      "productCode": "809022",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SB-M6-40-PV-N",
+      "productCode": "809026",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SB-U28-16-PP-W",
+      "productCode": "809004",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SB-U28-32-PP-W",
+      "productCode": "809011",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SB-M6-16-PP-W",
+      "productCode": "809018",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SB-M6-32-PP-W",
+      "productCode": "809025",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SB-M5-24D-PP-N",
+      "productCode": "809479",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SB-M5-32D-PP-N",
+      "productCode": "809480",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SB-M5-40D-PP-N",
+      "productCode": "809481",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SB-M5-24D-PA-W",
+      "productCode": "809511",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SB-M5-32D-PA-W",
+      "productCode": "809512",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SB-M5-40D-PA-W",
+      "productCode": "809513",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SB-M5-16D-PP-N",
+      "productCode": "809647",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SB-M5-16D-PA-W",
+      "productCode": "809301",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SBS-M6-24D-PP-N",
+      "productCode": "809302",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SBS-M6-32D-PP-N",
+      "productCode": "809303",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SBS-M6-24D-PA-W",
+      "productCode": "809535",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SBS-M6-32D-PA-W",
+      "productCode": "809536",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SBR-U28-16-PP-N",
+      "productCode": "809528",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SBR-U28-24-PP-N",
+      "productCode": "809529",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SBR-U28-32-PP-N",
+      "productCode": "809530",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SC-U28-16D-PP-N",
+      "productCode": "809522",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SC-U28-24D-PP-N",
+      "productCode": "809523",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SC-U28-32D-PP-N",
+      "productCode": "809524",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SC-M6-16-PP-N",
+      "productCode": "809292",
+      "drawingCode": "√"
+    },
+    {
+      "model": "SC-M6-32-PP-N",
+      "productCode": "809293",
+      "drawingCode": "√"
+    }
+  ],
+  "examples": [
+    {
+      "model": "SA-U32-24F-PP-N",
+      "slug": "sa-u32-24f-pp-n",
+      "mainImage": "",
+      "drawingPdfUrl": ""
+    },
+    {
+      "model": "SA-U32-32F-PP-N",
+      "slug": "sa-u32-32f-pp-n",
+      "mainImage": "/images/products/fittings/thread-to-barbed-fittings/details/sa-u32-32f-pp-n.jpg",
+      "drawingPdfUrl": ""
+    },
+    {
+      "model": "SA-U32-24F-PA-W",
+      "slug": "sa-u32-24f-pa-w",
+      "mainImage": "",
+      "drawingPdfUrl": ""
+    },
+    {
+      "model": "SA-U32-16F-PA-W",
+      "slug": "sa-u32-16f-pa-w",
+      "mainImage": "",
+      "drawingPdfUrl": ""
+    },
+    {
+      "model": "SA-U32-32F-PA-W",
+      "slug": "sa-u32-32f-pa-w",
+      "mainImage": "/images/products/fittings/thread-to-barbed-fittings/details/sa-u32-32f-pa-w.jpg",
+      "drawingPdfUrl": ""
+    }
+  ]
+}

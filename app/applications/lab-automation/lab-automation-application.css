@@ -1,0 +1,49 @@
+/* =========================================================
+   lab-automation-application.css
+   恒永达官网｜实验室自动化应用领域页面样式
+
+   文件路径：
+   app/applications/lab-automation/lab-automation-application.css
+
+   说明：
+   1. 实验室自动化页面复用 IVD 应用页样式
+   2. 应用领域页面保持统一模板，只换数据和图片
+   3. 本文件只补实验室自动化自己的背景图
+========================================================= */
+
+@import "../ivd/ivd-application.css";
+
+/* =========================================================
+   实验室自动化 Banner
+   说明：
+   1. Banner 只保留主题文字
+   2. 不显示右侧分类卡片
+   3. 图片可后续直接替换同名 webp
+========================================================= */
+
+.lab-automation-page .ivd-hero {
+  background-image:
+    linear-gradient(105deg, rgba(12, 34, 70, 0.88) 0%, rgba(23, 51, 104, 0.60) 42%, rgba(23, 51, 104, 0.18) 100%),
+    radial-gradient(circle at 82% 26%, rgba(9, 233, 180, 0.16), transparent 34%),
+    url("/images/applications/lab-automation/lab-automation-hero-bg-1920x800-v001.webp") !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.lab-automation-page .ivd-instrument-focus-bg {
+  background-image:
+    linear-gradient(120deg, rgba(12, 34, 70, 0.92), rgba(23, 51, 104, 0.74)),
+    radial-gradient(circle at 76% 25%, rgba(9, 233, 180, 0.20), transparent 34%),
+    url("/images/applications/lab-automation/lab-automation-focus-bg-1920x680-v001.webp") !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.lab-automation-page .ivd-cta {
+  background-image:
+    linear-gradient(105deg, rgba(12, 34, 70, 0.98), rgba(23, 51, 104, 0.90)),
+    radial-gradient(circle at 82% 24%, rgba(9, 233, 180, 0.20), transparent 32%),
+    url("/images/applications/lab-automation/lab-automation-cta-bg-1920x520-v001.webp") !important;
+  background-size: cover !important;
+  background-position: center !important;
+}

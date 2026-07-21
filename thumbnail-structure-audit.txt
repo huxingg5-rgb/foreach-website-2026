@@ -1,0 +1,692 @@
+============================================================
+Thumbnail Structure Audit
+============================================================
+TSX: components\products\detail\ProductDetailClient.tsx
+CSS: components\products\detail\product-detail.module.css
+
+BUTTON 1
+className : {styles.thumbArrow}
+aria-label: "上一张"
+onClick   : {handlePreviousThumb}
+line      : 279
+
+Ancestor chain:
+  <div> | className={styles.thumbRow} | aria-label="缩略图区域" | line=278
+    <div> | className={styles.gallery} | aria-label="产品图片区域" | line=159
+      <section> | className={styles.productTop} | line=158
+        <div> | className={styles.container} | line=156
+          <main> | className={styles.page} | line=155
+            <SitePageShell> | line=139
+
+BUTTON 2
+className : {styles.thumbArrow}
+aria-label: "下一张"
+onClick   : {handleNextThumb}
+line      : 396
+
+Ancestor chain:
+  <div> | className={styles.thumbRow} | aria-label="缩略图区域" | line=278
+    <div> | className={styles.gallery} | aria-label="产品图片区域" | line=159
+      <section> | className={styles.productTop} | line=158
+        <div> | className={styles.container} | line=156
+          <main> | className={styles.page} | line=155
+            <SitePageShell> | line=139
+
+============================================================
+Relevant TSX excerpt: lines 240-430
+============================================================
+
+L 240:                       strokeWidth="2"
+L 241:                     />
+L 242:                     <rect
+L 243:                       x="80"
+L 244:                       y="38"
+L 245:                       width="9"
+L 246:                       height="48"
+L 247:                       fill="#173368"
+L 248:                     />
+L 249:                     <rect
+L 250:                       x="94"
+L 251:                       y="38"
+L 252:                       width="9"
+L 253:                       height="48"
+L 254:                       fill="#173368"
+L 255:                     />
+L 256:                     <line
+L 257:                       x1="202"
+L 258:                       y1="24"
+L 259:                       x2="236"
+L 260:                       y2="100"
+L 261:                       stroke="#d7dee8"
+L 262:                       strokeWidth="4"
+L 263:                     />
+L 264:                     <line
+L 265:                       x1="214"
+L 266:                       y1="24"
+L 267:                       x2="248"
+L 268:                       y2="100"
+L 269:                       stroke="#d7dee8"
+L 270:                       strokeWidth="4"
+L 271:                     />
+L 272:                   </g>
+L 273:                 </svg>
+L 274:               )}
+L 275:             </div>
+L 276: 
+L 277:             {showThumbnailRow ? (
+L 278:               <div className={styles.thumbRow} aria-label="缩略图区域">
+L 279:                 <button
+L 280:                   className={styles.thumbArrow}
+L 281:                   type="button"
+L 282:                   aria-label="上一张"
+L 283:                   onClick={handlePreviousThumb}
+L 284:                 >
+L 285:                   ‹
+L 286:                 </button>
+L 287: 
+L 288:                 {hasRealImages ? (
+L 289:                   realImages.slice(0, 3).map((image, index) => (
+L 290:                     <button
+L 291:                       key={`${image}-${index}`}
+L 292:                       className={[
+L 293:                         styles.thumb,
+L 294:                         activeThumb === index ? styles.isActive : "",
+L 295:                       ]
+L 296:                         .filter(Boolean)
+L 297:                         .join(" ")}
+L 298:                       type="button"
+L 299:                       onClick={() => setActiveThumb(index)}
+L 300:                     >
+L 301:                       <img src={image} alt="" />
+L 302:                     </button>
+L 303:                   ))
+L 304:                 ) : (
+L 305:                   <>
+L 306:                     <button
+L 307:                       className={[
+L 308:                         styles.thumb,
+L 309:                         activeThumb === 0 ? styles.isActive : "",
+L 310:                       ]
+L 311:                         .filter(Boolean)
+L 312:                         .join(" ")}
+L 313:                       type="button"
+L 314:                       aria-label="主视图"
+L 315:                       onClick={() => setActiveThumb(0)}
+L 316:                     >
+L 317:                       <svg viewBox="0 0 120 70" aria-hidden="true">
+L 318:                         <rect
+L 319:                           x="18"
+L 320:                           y="28"
+L 321:                           width="84"
+L 322:                           height="16"
+L 323:                           fill="#ffffff"
+L 324:                           stroke="#d7dee8"
+L 325:                           strokeWidth="2"
+L 326:                         />
+L 327:                         <path
+L 328:                           d="M72 20 L94 20 L104 30 L104 40 L94 50 L72 50 Z"
+L 329:                           fill="#173368"
+L 330:                         />
+L 331:                       </svg>
+L 332:                     </button>
+L 333: 
+L 334:                     <button
+L 335:                       className={[
+L 336:                         styles.thumb,
+L 337:                         activeThumb === 1 ? styles.isActive : "",
+L 338:                       ]
+L 339:                         .filter(Boolean)
+L 340:                         .join(" ")}
+L 341:                       type="button"
+L 342:                       aria-label="侧视图"
+L 343:                       onClick={() => setActiveThumb(1)}
+L 344:                     >
+L 345:                       <svg viewBox="0 0 120 70" aria-hidden="true">
+L 346:                         <rect
+L 347:                           x="26"
+L 348:                           y="19"
+L 349:                           width="54"
+L 350:                           height="32"
+L 351:                           fill="#ffffff"
+L 352:                           stroke="#d7dee8"
+L 353:                           strokeWidth="2"
+L 354:                         />
+L 355:                         <rect
+L 356:                           x="80"
+L 357:                           y="15"
+L 358:                           width="18"
+L 359:                           height="40"
+L 360:                           fill="#173368"
+L 361:                         />
+L 362:                       </svg>
+L 363:                     </button>
+L 364: 
+L 365:                     <button
+L 366:                       className={[
+L 367:                         styles.thumb,
+L 368:                         activeThumb === 2 ? styles.isActive : "",
+L 369:                       ]
+L 370:                         .filter(Boolean)
+L 371:                         .join(" ")}
+L 372:                       type="button"
+L 373:                       aria-label="接口细节"
+L 374:                       onClick={() => setActiveThumb(2)}
+L 375:                     >
+L 376:                       <svg viewBox="0 0 120 70" aria-hidden="true">
+L 377:                         <circle
+L 378:                           cx="60"
+L 379:                           cy="35"
+L 380:                           r="22"
+L 381:                           fill="#ffffff"
+L 382:                           stroke="#d7dee8"
+L 383:                           strokeWidth="2"
+L 384:                         />
+L 385:                         <circle
+L 386:                           cx="60"
+L 387:                           cy="35"
+L 388:                           r="7"
+L 389:                           fill="#173368"
+L 390:                         />
+L 391:                       </svg>
+L 392:                     </button>
+L 393:                   </>
+L 394:                 )}
+L 395: 
+L 396:                 <button
+L 397:                   className={styles.thumbArrow}
+L 398:                   type="button"
+L 399:                   aria-label="下一张"
+L 400:                   onClick={handleNextThumb}
+L 401:                 >
+L 402:                   ›
+L 403:                 </button>
+L 404:               </div>
+L 405:             ) : null}
+L 406:           </div>
+L 407: 
+L 408:           <div className={styles.productInfo}>
+L 409:             <div className={styles.titleGroup}>
+L 410:               <h1 className={styles.productModelTitle}>{data.model}</h1>
+L 411:               <div className={styles.productName}>{data.name}</div>
+L 412:             </div>
+L 413: 
+L 414:             <p className={styles.productDesc}>
+L 415:               {data.advantages.join("")}
+L 416:             </p>
+L 417: 
+L 418:             <div className={styles.application}>
+L 419:               <p className={styles.applicationTitle}>常见应用：</p>
+L 420:               <p className={styles.applicationText}>
+L 421:                 {data.commonApplications.join("、")}
+L 422:               </p>
+L 423:             </div>
+L 424: 
+L 425:             <div className={styles.operationArea}>
+L 426:               <div className={styles.modelLine}>
+L 427:                 <div className={styles.modelCodeWrap}>
+L 428:                   <span className={styles.modelLabel}>型号：</span>
+L 429:                   <span className={styles.modelCode}>{data.model}</span>
+L 430:                 </div>
+
+============================================================
+Relevant CSS rules
+============================================================
+
+L  71: ========================================================= */
+L  72: 
+L  73: .gallery {
+L  74:   width: 100%;
+L  75: }
+L  76: 
+L  77: .mainImage {
+L  78:   width: 100%;
+L  79:   height: 360px;
+L  80:   border: 0;
+L  81:   background: #ffffff;
+L  82:   position: relative;
+L  83:   overflow: hidden;
+------------------------------------------------------------
+L 115: }
+L 116: 
+L 117: .thumbRow {
+L 118:   margin-top: 12px;
+L 119:   height: 96px;
+L 120:   display: grid;
+L 121:   grid-template-columns: 24px repeat(3, 1fr) 24px;
+L 122:   gap: 6px;
+L 123: }
+L 124: 
+L 125: .thumbArrow,
+L 126: .thumb {
+L 127:   border: 1px solid var(--line);
+------------------------------------------------------------
+L 123: }
+L 124: 
+L 125: .thumbArrow,
+L 126: .thumb {
+L 127:   border: 1px solid var(--line);
+L 128:   background: #ffffff;
+L 129:   color: var(--blue);
+L 130:   padding: 0;
+L 131:   border-radius: 0;
+L 132: }
+L 133: 
+L 134: .thumbArrow {
+L 135:   display: flex;
+------------------------------------------------------------
+L 124: 
+L 125: .thumbArrow,
+L 126: .thumb {
+L 127:   border: 1px solid var(--line);
+L 128:   background: #ffffff;
+L 129:   color: var(--blue);
+L 130:   padding: 0;
+L 131:   border-radius: 0;
+L 132: }
+L 133: 
+L 134: .thumbArrow {
+L 135:   display: flex;
+L 136:   align-items: center;
+------------------------------------------------------------
+L 132: }
+L 133: 
+L 134: .thumbArrow {
+L 135:   display: flex;
+L 136:   align-items: center;
+L 137:   justify-content: center;
+L 138:   font-size: 26px;
+L 139:   line-height: 1;
+L 140:   font-weight: 900;
+L 141:   transition:
+L 142:     background 0.18s ease,
+L 143:     color 0.18s ease,
+L 144:     border-color 0.18s ease;
+------------------------------------------------------------
+L 145: }
+L 146: 
+L 147: .thumbArrow:hover,
+L 148: .thumbArrow:active {
+L 149:   border-color: var(--blue);
+L 150:   background: var(--blue);
+L 151:   color: var(--cyan);
+L 152: }
+L 153: 
+L 154: .thumb {
+L 155:   position: relative;
+L 156:   overflow: hidden;
+L 157:   display: flex;
+------------------------------------------------------------
+L 146: 
+L 147: .thumbArrow:hover,
+L 148: .thumbArrow:active {
+L 149:   border-color: var(--blue);
+L 150:   background: var(--blue);
+L 151:   color: var(--cyan);
+L 152: }
+L 153: 
+L 154: .thumb {
+L 155:   position: relative;
+L 156:   overflow: hidden;
+L 157:   display: flex;
+L 158:   align-items: center;
+------------------------------------------------------------
+L 152: }
+L 153: 
+L 154: .thumb {
+L 155:   position: relative;
+L 156:   overflow: hidden;
+L 157:   display: flex;
+L 158:   align-items: center;
+L 159:   justify-content: center;
+L 160:   transition:
+L 161:     border-color 0.18s ease,
+L 162:     background 0.18s ease;
+L 163: }
+L 164: 
+------------------------------------------------------------
+L 163: }
+L 164: 
+L 165: .thumb::after {
+L 166:   content: "";
+L 167:   position: absolute;
+L 168:   left: 0;
+L 169:   right: 0;
+L 170:   bottom: 0;
+L 171:   height: 0;
+L 172:   background: var(--cyan);
+L 173:   transition: height 0.18s ease;
+L 174: }
+L 175: 
+------------------------------------------------------------
+L 174: }
+L 175: 
+L 176: .thumb.isActive {
+L 177:   border-color: var(--cyan);
+L 178: }
+L 179: 
+L 180: .thumb.isActive::after {
+L 181:   height: 5px;
+L 182: }
+L 183: 
+L 184: .thumb svg {
+L 185:   width: 78%;
+L 186:   height: auto;
+------------------------------------------------------------
+L 178: }
+L 179: 
+L 180: .thumb.isActive::after {
+L 181:   height: 5px;
+L 182: }
+L 183: 
+L 184: .thumb svg {
+L 185:   width: 78%;
+L 186:   height: auto;
+L 187:   display: block;
+L 188: }
+L 189: 
+L 190: .thumb img {
+------------------------------------------------------------
+L 182: }
+L 183: 
+L 184: .thumb svg {
+L 185:   width: 78%;
+L 186:   height: auto;
+L 187:   display: block;
+L 188: }
+L 189: 
+L 190: .thumb img {
+L 191:   width: 78%;
+L 192:   height: 78%;
+L 193:   object-fit: contain;
+L 194:   display: block;
+------------------------------------------------------------
+L 188: }
+L 189: 
+L 190: .thumb img {
+L 191:   width: 78%;
+L 192:   height: 78%;
+L 193:   object-fit: contain;
+L 194:   display: block;
+L 195: }
+L 196: 
+L 197: .thumb:hover {
+L 198:   border-color: var(--cyan);
+L 199: }
+L 200: 
+------------------------------------------------------------
+L 195: }
+L 196: 
+L 197: .thumb:hover {
+L 198:   border-color: var(--cyan);
+L 199: }
+L 200: 
+L 201: /* =========================================================
+L 202:    右侧产品信息
+L 203: ========================================================= */
+L 204: 
+L 205: .productInfo {
+L 206:   padding-top: 8px;
+L 207:   max-width: 680px;
+------------------------------------------------------------
+L 487:   }
+L 488: 
+L 489:   .gallery {
+L 490:     max-width: 460px;
+L 491:   }
+L 492: 
+L 493:   .productInfo {
+L 494:     max-width: 100%;
+L 495:   }
+L 496: 
+L 497:   .operationArea {
+L 498:     margin-top: 40px;
+L 499:   }
+------------------------------------------------------------
+L 531:   }
+L 532: 
+L 533:   .thumbRow {
+L 534:     height: 78px;
+L 535:   }
+L 536: 
+L 537:   .productModelTitle {
+L 538:     font-size: 30px;
+L 539:   }
+L 540: 
+L 541:   .productName {
+L 542:     font-size: 21px;
+L 543:   }
+------------------------------------------------------------
+L 683: 
+L 684:    已确认真实 JSX：
+L 685:    - 上一张：className={styles.thumbArrow}
+L 686:    - 下一张：className={styles.thumbArrow}
+L 687: 
+L 688:    修正：
+L 689:    1. 两个 .thumbArrow 固定为相同宽度
+L 690:    2. 上一张靠左，下一张靠右
+L 691:    3. ‹ › 符号加粗并向下微调
+L 692:    4. operationArea 整体保持下移 120px
+L 693:    5. 横线单独上移 18px
+L 694: ========================================================= */
+L 695: 
+------------------------------------------------------------
+L 684:    已确认真实 JSX：
+L 685:    - 上一张：className={styles.thumbArrow}
+L 686:    - 下一张：className={styles.thumbArrow}
+L 687: 
+L 688:    修正：
+L 689:    1. 两个 .thumbArrow 固定为相同宽度
+L 690:    2. 上一张靠左，下一张靠右
+L 691:    3. ‹ › 符号加粗并向下微调
+L 692:    4. operationArea 整体保持下移 120px
+L 693:    5. 横线单独上移 18px
+L 694: ========================================================= */
+L 695: 
+L 696: /* ---------- 首屏右栏布局 ---------- */
+------------------------------------------------------------
+L 687: 
+L 688:    修正：
+L 689:    1. 两个 .thumbArrow 固定为相同宽度
+L 690:    2. 上一张靠左，下一张靠右
+L 691:    3. ‹ › 符号加粗并向下微调
+L 692:    4. operationArea 整体保持下移 120px
+L 693:    5. 横线单独上移 18px
+L 694: ========================================================= */
+L 695: 
+L 696: /* ---------- 首屏右栏布局 ---------- */
+L 697: 
+L 698: .productTop {
+L 699:   align-items: stretch;
+------------------------------------------------------------
+L 742: /* ---------- 真实左右缩略图按钮 ---------- */
+L 743: 
+L 744: .thumbArrow {
+L 745:   display: flex !important;
+L 746:   width: 28px !important;
+L 747:   min-width: 28px !important;
+L 748:   max-width: 28px !important;
+L 749:   padding: 3px 0 0 !important;
+L 750:   margin: 0 !important;
+L 751:   flex: 0 0 28px !important;
+L 752:   align-items: center !important;
+L 753:   justify-content: center !important;
+L 754:   border: 1px solid rgba(23, 51, 104, 0.16);
+------------------------------------------------------------
+L 767: 
+L 768: /* 按真实 aria-label 分别固定左右位置 */
+L 769: .thumbArrow[aria-label="上一张"] {
+L 770:   justify-self: start !important;
+L 771: }
+L 772: 
+L 773: .thumbArrow[aria-label="下一张"] {
+L 774:   justify-self: end !important;
+L 775: }
+L 776: 
+L 777: .thumbArrow:hover,
+L 778: .thumbArrow:active {
+L 779:   border-color: #173368 !important;
+------------------------------------------------------------
+L 771: }
+L 772: 
+L 773: .thumbArrow[aria-label="下一张"] {
+L 774:   justify-self: end !important;
+L 775: }
+L 776: 
+L 777: .thumbArrow:hover,
+L 778: .thumbArrow:active {
+L 779:   border-color: #173368 !important;
+L 780:   background: #173368 !important;
+L 781:   color: #09e9b4 !important;
+L 782: }
+L 783: 
+------------------------------------------------------------
+L 775: }
+L 776: 
+L 777: .thumbArrow:hover,
+L 778: .thumbArrow:active {
+L 779:   border-color: #173368 !important;
+L 780:   background: #173368 !important;
+L 781:   color: #09e9b4 !important;
+L 782: }
+L 783: 
+L 784: /* 点击后不持续保持深蓝背景 */
+L 785: .thumbArrow:focus:not(:hover),
+L 786: .thumbArrow:focus-visible:not(:hover) {
+L 787:   background: #ffffff !important;
+------------------------------------------------------------
+L 776: 
+L 777: .thumbArrow:hover,
+L 778: .thumbArrow:active {
+L 779:   border-color: #173368 !important;
+L 780:   background: #173368 !important;
+L 781:   color: #09e9b4 !important;
+L 782: }
+L 783: 
+L 784: /* 点击后不持续保持深蓝背景 */
+L 785: .thumbArrow:focus:not(:hover),
+L 786: .thumbArrow:focus-visible:not(:hover) {
+L 787:   background: #ffffff !important;
+L 788:   color: #173368 !important;
+------------------------------------------------------------
+L 783: 
+L 784: /* 点击后不持续保持深蓝背景 */
+L 785: .thumbArrow:focus:not(:hover),
+L 786: .thumbArrow:focus-visible:not(:hover) {
+L 787:   background: #ffffff !important;
+L 788:   color: #173368 !important;
+L 789:   outline: 1px solid #173368;
+L 790:   outline-offset: -1px;
+L 791: }
+L 792: 
+L 793: /* ---------- 移动端恢复自然页面流 ---------- */
+L 794: 
+L 795: @media (max-width: 980px) {
+------------------------------------------------------------
+L 784: /* 点击后不持续保持深蓝背景 */
+L 785: .thumbArrow:focus:not(:hover),
+L 786: .thumbArrow:focus-visible:not(:hover) {
+L 787:   background: #ffffff !important;
+L 788:   color: #173368 !important;
+L 789:   outline: 1px solid #173368;
+L 790:   outline-offset: -1px;
+L 791: }
+L 792: 
+L 793: /* ---------- 移动端恢复自然页面流 ---------- */
+L 794: 
+L 795: @media (max-width: 980px) {
+L 796:   .productInfo {
+------------------------------------------------------------
+L 821:    缩略图导航铺满主图预览宽度
+L 822: 
+L 823:    真实父容器：.thumbRow
+L 824:    布局：左按钮 | 自适应缩略图区 | 右按钮
+L 825: ========================================================= */
+L 826: 
+L 827: .thumbRow {
+L 828:   display: flex !important;
+L 829:   width: 100% !important;
+L 830:   max-width: none !important;
+L 831:   min-width: 0 !important;
+L 832:   align-self: stretch !important;
+L 833:   align-items: stretch !important;
+------------------------------------------------------------
+L 825: ========================================================= */
+L 826: 
+L 827: .thumbRow {
+L 828:   display: flex !important;
+L 829:   width: 100% !important;
+L 830:   max-width: none !important;
+L 831:   min-width: 0 !important;
+L 832:   align-self: stretch !important;
+L 833:   align-items: stretch !important;
+L 834:   justify-content: flex-start !important;
+L 835:   gap: 6px !important;
+L 836:   box-sizing: border-box;
+L 837: }
+------------------------------------------------------------
+L 837: }
+L 838: 
+L 839: .thumbRow > .thumbArrow {
+L 840:   width: 28px !important;
+L 841:   min-width: 28px !important;
+L 842:   max-width: 28px !important;
+L 843:   flex: 0 0 28px !important;
+L 844: }
+L 845: 
+L 846: /*
+L 847:  * 两个按钮之间的直接子容器自动占满剩余空间，
+L 848:  * 因此下一张按钮固定在主图预览最右侧。
+L 849:  */
+------------------------------------------------------------
+L 848:  * 因此下一张按钮固定在主图预览最右侧。
+L 849:  */
+L 850: .thumbRow > :not(.thumbArrow) {
+L 851:   min-width: 0 !important;
+L 852:   flex: 1 1 auto !important;
+L 853: }
+L 854: 
+L 855: /* 明确固定左右两个真实按钮的位置 */
+L 856: .thumbRow > .thumbArrow[aria-label="上一张"] {
+L 857:   order: 1;
+L 858: }
+L 859: 
+L 860: .thumbRow > :not(.thumbArrow) {
+------------------------------------------------------------
+L 854: 
+L 855: /* 明确固定左右两个真实按钮的位置 */
+L 856: .thumbRow > .thumbArrow[aria-label="上一张"] {
+L 857:   order: 1;
+L 858: }
+L 859: 
+L 860: .thumbRow > :not(.thumbArrow) {
+L 861:   order: 2;
+L 862: }
+L 863: 
+L 864: .thumbRow > .thumbArrow[aria-label="下一张"] {
+L 865:   order: 3;
+L 866:   margin-left: auto !important;
+------------------------------------------------------------
+L 858: }
+L 859: 
+L 860: .thumbRow > :not(.thumbArrow) {
+L 861:   order: 2;
+L 862: }
+L 863: 
+L 864: .thumbRow > .thumbArrow[aria-label="下一张"] {
+L 865:   order: 3;
+L 866:   margin-left: auto !important;
+L 867: }
+L 868: 
+L 869: /* PRODUCT_DETAIL_THUMB_ROW_FULL_WIDTH_END */
+L 870: 
+------------------------------------------------------------
+L 862: }
+L 863: 
+L 864: .thumbRow > .thumbArrow[aria-label="下一张"] {
+L 865:   order: 3;
+L 866:   margin-left: auto !important;
+L 867: }
+L 868: 
+L 869: /* PRODUCT_DETAIL_THUMB_ROW_FULL_WIDTH_END */
+L 870: 
+------------------------------------------------------------

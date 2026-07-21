@@ -1,0 +1,99 @@
+{
+  "sourceFile": "data-source/product-center/pumps/FOREACH_隔膜泵系列_产品数据源.xlsx",
+  "generatedAt": "2026-07-06T12:52:53.211Z",
+  "seriesCount": 4,
+  "selectionCardCount": 8,
+  "specRowCount": 121,
+  "modelConfigCount": 27,
+  "faqCount": 6,
+  "mediaCount": 30,
+  "routeCount": 11,
+  "namingRules": [
+    {
+      "资源类型": "系列详情页slug",
+      "命名规则": "{series}-liquid-diaphragm-pump / {series}-gas-liquid-diaphragm-pump",
+      "示例": "dpl30-liquid-diaphragm-pump",
+      "说明": "路由必须英文；中文名称单独放页面标题。"
+    },
+    {
+      "资源类型": "配置预留页slug",
+      "命名规则": "{series}-brushed-liquid-diaphragm-pump / {series}-brushless-liquid-diaphragm-pump",
+      "示例": "dpl30-brushless-liquid-diaphragm-pump",
+      "说明": "按有刷/无刷拆分，不细分 12V/24V。"
+    },
+    {
+      "资源类型": "主图",
+      "命名规则": "{series}-{motor}-{product-type}-main.webp",
+      "示例": "dpl30-brushed-liquid-diaphragm-pump-main.webp",
+      "说明": "用于首屏主图和缩略图。"
+    },
+    {
+      "资源类型": "3D模型",
+      "命名规则": "{series}-{motor}-{product-type}.glb",
+      "示例": "dpl30-brushless-liquid-diaphragm-pump.glb",
+      "说明": "用于 3D 模型 Tab。"
+    },
+    {
+      "资源类型": "2D/外形尺寸图",
+      "命名规则": "{series}-{motor}-{product-type}-2d-drawing.pdf",
+      "示例": "dpl30-brushed-liquid-diaphragm-pump-2d-drawing.pdf",
+      "说明": "用于零件图 Tab。"
+    },
+    {
+      "资源类型": "曲线图",
+      "命名规则": "{series}-{product-type}-flow-pressure-curve.webp",
+      "示例": "dpl30-liquid-diaphragm-pump-flow-pressure-curve.webp",
+      "说明": "用于规格 Tab 的流量-压力曲线。"
+    },
+    {
+      "资源类型": "建压曲线",
+      "命名规则": "{series}-{product-type}-5l-pressure-curve.webp",
+      "示例": "dpgl800-gas-liquid-diaphragm-pump-5l-pressure-curve.webp",
+      "说明": "仅 DPGL800 需要。"
+    },
+    {
+      "资源类型": "规格书",
+      "命名规则": "{series}-{product-type}-datasheet-cn.pdf",
+      "示例": "dpl30-liquid-diaphragm-pump-datasheet-cn.pdf",
+      "说明": "中文规格书下载文件。"
+    },
+    {
+      "资源类型": "ALT 文本",
+      "命名规则": "英文产品名 + 资源用途 + 核心参数",
+      "示例": "DPL30 brushless liquid diaphragm pump, 300 mL/min, 100 kPa",
+      "说明": "ALT 与中文可见图注分开。"
+    },
+    {
+      "资源类型": "可见图注",
+      "命名规则": "图号 + 中文产品名 + 资源描述",
+      "示例": "图 4 DPL30-24(12)BB 无刷电机版本外形尺寸图",
+      "说明": "前台可见图注使用中文。"
+    }
+  ],
+  "series": [
+    {
+      "seriesId": "DPL30",
+      "slug": "dpl30-liquid-diaphragm-pump",
+      "title": "DPL30 液体隔膜泵",
+      "path": "/products/pumps/diaphragm-pumps/dpl30-liquid-diaphragm-pump"
+    },
+    {
+      "seriesId": "DPL60",
+      "slug": "dpl60-liquid-diaphragm-pump",
+      "title": "DPL60 液体隔膜泵",
+      "path": "/products/pumps/diaphragm-pumps/dpl60-liquid-diaphragm-pump"
+    },
+    {
+      "seriesId": "DPL30H",
+      "slug": "dpl30h-liquid-diaphragm-pump",
+      "title": "DPL30H 液体隔膜泵",
+      "path": "/products/pumps/diaphragm-pumps/dpl30h-liquid-diaphragm-pump"
+    },
+    {
+      "seriesId": "DPGL800",
+      "slug": "dpgl800-gas-liquid-diaphragm-pump",
+      "title": "DPGL800 气液混合隔膜泵",
+      "path": "/products/pumps/diaphragm-pumps/dpgl800-gas-liquid-diaphragm-pump"
+    }
+  ]
+}

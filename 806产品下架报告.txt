@@ -1,0 +1,77 @@
+806 产品下架报告
+执行时间：2026/7/17 16:16:38
+项目目录：F:\WebsiteProjects\foreach-website-2026
+清单产品数：21
+移除的数据项：99
+修改文件数：5
+删除独立数据文件数：0
+构建结果：未通过
+是否已自动恢复：是
+备份目录：F:\WebsiteProjects\foreach-website-2026\.local-backups\downlist-806-2026-07-17T08-16-33-947Z
+
+一、下架产品
+1. 806033 | BA-32-64-PP-N | ba-32-64-pp-n
+2. 806036 | BA-24-40-PP-N | ba-24-40-pp-n
+3. 806037 | BA-40-64-PP-N | ba-40-64-pp-n
+4. 806055 | BF4-24-PP-N | bf4-24-pp-n
+5. 806147 | BA-32-48-PP-N | ba-32-48-pp-n
+6. 806148 | BA-32-95-PP-N | ba-32-95-pp-n
+7. 806189 | BF4-32-PP-N | bf4-32-pp-n
+8. 806192 | BX4-24-PP-N | bx4-24-pp-n
+9. 806197 | BT-24-16-16-PP-N | bt-24-16-16-pp-n
+10. 806201 | BA-127-PP-N | ba-127-pp-n
+11. 806208 | BY-64-40-40-PP-N | by-64-40-40-pp-n
+12. 806220 | BX4-16-PP-N | bx4-16-pp-n
+13. 806221 | BX4-32-PP-N | bx4-32-pp-n
+14. 806224 | BF4-16-PP-N | bf4-16-pp-n
+15. 806233 | PMB-M6-40-PP-N | pmb-m6-40-pp-n
+16. 806235 | PMB-M10-64-PP-N | pmb-m10-64-pp-n
+17. 806236 | PMB-M12-79-PP-N | pmb-m12-79-pp-n
+18. 806256 | BA-95-127-PP-N | ba-95-127-pp-n
+19. 806272 | BA-40-79-AC-W | ba-40-79-ac-w
+20. 806276 | BA-48-95-PP-N | ba-48-95-pp-n
+21. 806282 | BY-79-PP-N | by-79-pp-n
+
+二、修改文件
+data/products/generated/fittings/barbed-fittings/detail/index.json
+data/products/generated/fittings/bulkhead-barbed-fittings/detail/index.json
+data/products/product-detail-routes.generated.ts
+data/products/selection/barbed-fitting-selection.generated.ts
+data/search/site-search-index.generated.ts
+
+三、删除的数据文件
+无
+
+四、移除记录
+data/products/generated/fittings/barbed-fittings/detail/index.json | 删除：806037
+data/products/generated/fittings/barbed-fittings/detail/index.json | 删除：806148
+data/products/generated/fittings/barbed-fittings/detail/index.json | 删除：806276
+data/products/generated/fittings/barbed-fittings/detail/index.json | 删除：806036
+data/products/generated/fittings/barbed-fittings/detail/index.json | 删除：806033
+data/products/generated/fittings/barbed-fittings/detail/index.json | 删除：806201
+data/products/generated/fittings/barbed-fittings/detail/index.json | 删除：806256
+data/products/generated/fittings/barbed-fittings/detail/index.json | 删除：806272
+data/products/generated/fittings/barbed-fittings/detail/index.json | 删除：806147
+data/products/generated/fittings/barbed-fittings/detail/index.json | 删除：806197
+data/products/generated/fittings/barbed-fittings/detail/index.json | 删除：806208
+data/products/generated/fittings/barbed-fittings/detail/index.json | 删除：806282
+data/products/generated/fittings/barbed-fittings/detail/index.json | 删除：806224
+data/products/generated/fittings/barbed-fittings/detail/index.json | 删除：806055
+data/products/generated/fittings/barbed-fittings/detail/index.json | 删除：806189
+data/products/generated/fittings/barbed-fittings/detail/index.json | 删除：806220
+data/products/generated/fittings/barbed-fittings/detail/index.json | 删除：806192
+data/products/generated/fittings/barbed-fittings/detail/index.json | 删除：806221
+data/products/generated/fittings/bulkhead-barbed-fittings/detail/index.json | 删除：806233
+data/products/generated/fittings/bulkhead-barbed-fittings/detail/index.json | 删除：806235
+data/products/generated/fittings/bulkhead-barbed-fittings/detail/index.json | 删除：806236
+data/products/product-detail-routes.generated.ts | 删除生成数据项：21
+data/products/selection/barbed-fitting-selection.generated.ts | 删除生成数据项：18
+data/search/site-search-index.generated.ts | 删除生成数据项：39
+
+五、源码中剩余匹配（仅供核对）
+无
+
+六、构建产物中剩余匹配
+无
+
+说明：本脚本只下架产品数据、筛选项、详情路由和搜索索引，不删除产品图片、PDF 或其他资源文件。

@@ -1,0 +1,303 @@
+/* =========================================================
+   ApplicationPageSkeleton.module.css
+   恒永达官网｜应用领域页面加载骨架
+========================================================= */
+
+.page {
+  width: 100%;
+  min-width: 0;
+  min-height: 1200px;
+  background: #ffffff;
+}
+
+.container {
+  width: min(1600px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.block {
+  position: relative;
+  overflow: hidden;
+  background: #e9eef4;
+}
+
+.block::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.75) 50%,
+    transparent 100%
+  );
+  animation: applicationSkeletonShimmer 1.4s ease-in-out infinite;
+}
+
+@keyframes applicationSkeletonShimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.banner {
+  position: relative;
+  height: 450px;
+  padding-top: 82px;
+  background: #dfe7ef;
+}
+
+.bannerOverlay {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  background: linear-gradient(
+    90deg,
+    rgba(23, 51, 104, 0.2),
+    rgba(23, 51, 104, 0.04)
+  );
+}
+
+.bannerTitle {
+  width: min(520px, 72%);
+  height: 44px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.bannerSubtitle {
+  width: min(680px, 88%);
+  height: 20px;
+  background: rgba(255, 255, 255, 0.56);
+}
+
+.navBand {
+  border-bottom: 1px solid rgba(23, 51, 104, 0.12);
+  background: #ffffff;
+}
+
+.navItems {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+  padding: 20px 0;
+}
+
+.navItem {
+  height: 42px;
+}
+
+.introSection {
+  padding: 74px 0 44px;
+  text-align: center;
+}
+
+.sectionEyebrow {
+  width: 110px;
+  height: 14px;
+  margin: 0 auto 16px;
+}
+
+.sectionTitle {
+  width: min(480px, 68%);
+  height: 34px;
+  margin: 0 auto 26px;
+}
+
+.sectionTitleWide {
+  width: min(620px, 78%);
+  height: 34px;
+  margin: 0 auto 30px;
+}
+
+.introLines {
+  display: grid;
+  justify-items: center;
+  gap: 11px;
+}
+
+.introLine {
+  width: min(900px, 82%);
+  height: 15px;
+}
+
+.introLineShort {
+  width: min(620px, 62%);
+  height: 15px;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  padding-bottom: 86px;
+}
+
+.featureCard {
+  min-width: 0;
+  border: 1px solid rgba(23, 51, 104, 0.12);
+  background: #ffffff;
+}
+
+.featureImage {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+}
+
+.featureContent {
+  padding: 24px;
+}
+
+.featureNumber {
+  width: 44px;
+  height: 14px;
+  margin-bottom: 18px;
+}
+
+.featureTitle {
+  width: 64%;
+  height: 23px;
+  margin-bottom: 18px;
+}
+
+.featureText {
+  width: 100%;
+  height: 14px;
+  margin-bottom: 10px;
+}
+
+.featureTextShort {
+  width: 74%;
+  height: 14px;
+}
+
+.sceneSection {
+  padding: 80px 0 100px;
+  border-top: 1px solid rgba(23, 51, 104, 0.1);
+}
+
+.sceneGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.sceneCard {
+  min-width: 0;
+  border: 1px solid rgba(23, 51, 104, 0.12);
+  background: #ffffff;
+}
+
+.sceneImage {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.sceneContent {
+  padding: 22px;
+}
+
+.sceneIndex {
+  width: 34px;
+  height: 13px;
+  margin-bottom: 14px;
+}
+
+.sceneTitle {
+  width: 68%;
+  height: 21px;
+  margin-bottom: 14px;
+}
+
+.sceneText {
+  width: 88%;
+  height: 14px;
+}
+
+@media (max-width: 1000px) {
+  .navItems {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .featureGrid,
+  .sceneGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .page {
+    min-height: 900px;
+  }
+
+  .container {
+    width: calc(100% - 24px);
+  }
+
+  .banner {
+    height: 360px;
+    padding-top: 70px;
+  }
+
+  .bannerTitle {
+    width: 78%;
+    height: 34px;
+  }
+
+  .bannerSubtitle {
+    width: 92%;
+    height: 17px;
+  }
+
+  .navItems {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    padding: 14px 0;
+  }
+
+  .navItem {
+    height: 38px;
+  }
+
+  .introSection {
+    padding: 50px 0 32px;
+  }
+
+  .featureGrid,
+  .sceneGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .featureGrid {
+    gap: 16px;
+    padding-bottom: 56px;
+  }
+
+  .featureGrid .featureCard:nth-child(n + 3) {
+    display: none;
+  }
+
+  .sceneSection {
+    padding: 56px 0 64px;
+  }
+
+  .sceneGrid {
+    gap: 14px;
+  }
+
+  .sceneGrid .sceneCard:nth-child(n + 4) {
+    display: none;
+  }
+
+  .featureContent,
+  .sceneContent {
+    padding: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .block::after {
+    animation: none;
+  }
+}

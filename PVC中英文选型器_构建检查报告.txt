@@ -1,0 +1,357 @@
+
+==================================================
+一、检查通用文案类型
+==================================================
+已找到：F:\WebsiteProjects\foreach-website-2026\components\products\configurator\product-variant-configurator.types.ts
+通过：ProductConfiguratorUiText
+通过：uiText 配置字段
+
+==================================================
+二、检查通用组件中英文文案能力
+==================================================
+已找到：F:\WebsiteProjects\foreach-website-2026\components\products\configurator\ProductVariantConfigurator.tsx
+通过：中文默认文案
+通过：配置文案合并
+通过：加入清单文案
+通过：确认并返回文案
+
+==================================================
+三、检查英文PVC配置
+==================================================
+已找到：F:\WebsiteProjects\foreach-website-2026\data\products\configurator\pvc-tubing.ts
+通过：英文配置对象
+通过：英文标题
+通过：英文硬度
+通过：英文内径
+通过：英文外径
+通过：英文加入清单
+通过：英文包装单位转换
+
+==================================================
+四、检查详情页英文启用状态
+==================================================
+已找到：F:\WebsiteProjects\foreach-website-2026\components\products\detail\ProductDetailClient.tsx
+通过：导入英文PVC配置
+通过：中英文配置切换
+通过：英文PVC清单名称
+通过：英文重新选型文案
+
+==================================================
+五、TypeScript检查
+==================================================
+退出代码：0
+
+==================================================
+六、Next.js完整构建检查
+==================================================
+退出代码：0
+
+标准输出：
+> foreach-website-2026@0.1.0 build
+> next build
+
+▲ Next.js 16.2.6 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 7.8s
+  Running TypeScript ...
+  Finished TypeScript in 7.0s ...
+  Collecting page data using 23 workers ...
+  Generating static pages using 23 workers (0/2397) ...
+  Generating static pages using 23 workers (599/2397) 
+  Generating static pages using 23 workers (1198/2397) 
+  Generating static pages using 23 workers (1797/2397) 
+✓ Generating static pages using 23 workers (2397/2397) in 9.0s
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ● /[locale]
+│ ├ /en
+│ ├ /es
+│ ├ /fr
+│ └ [+2 more paths]
+├ ● /[locale]/about/culture
+│ ├ /en/about/culture
+│ ├ /es/about/culture
+│ ├ /fr/about/culture
+│ └ [+2 more paths]
+├ ● /[locale]/about/foreach
+│ ├ /en/about/foreach
+│ ├ /es/about/foreach
+│ ├ /fr/about/foreach
+│ └ [+2 more paths]
+├ ● /[locale]/about/history
+│ ├ /en/about/history
+│ ├ /es/about/history
+│ ├ /fr/about/history
+│ └ [+2 more paths]
+├ ● /[locale]/about/quality
+│ ├ /en/about/quality
+│ ├ /es/about/quality
+│ ├ /fr/about/quality
+│ └ [+2 more paths]
+├ ● /[locale]/about/research-manufacturing
+│ ├ /en/about/research-manufacturing
+│ ├ /es/about/research-manufacturing
+│ ├ /fr/about/research-manufacturing
+│ └ [+2 more paths]
+├ ● /[locale]/applications/analytical-instruments
+│ ├ /en/applications/analytical-instruments
+│ ├ /es/applications/analytical-instruments
+│ ├ /fr/applications/analytical-instruments
+│ └ [+2 more paths]
+├ ● /[locale]/applications/environmental-monitoring
+│ ├ /en/applications/environmental-monitoring
+│ ├ /es/applications/environmental-monitoring
+│ ├ /fr/applications/environmental-monitoring
+│ └ [+2 more paths]
+├ ● /[locale]/applications/ivd
+│ ├ /en/applications/ivd
+│ ├ /es/applications/ivd
+│ ├ /fr/applications/ivd
+│ └ [+2 more paths]
+├ ● /[locale]/applications/lab-automation
+│ ├ /en/applications/lab-automation
+│ ├ /es/applications/lab-automation
+│ ├ /fr/applications/lab-automation
+│ └ [+2 more paths]
+├ ● /[locale]/applications/life-science
+│ ├ /en/applications/life-science
+│ ├ /es/applications/life-science
+│ ├ /fr/applications/life-science
+│ └ [+2 more paths]
+├ ● /[locale]/applications/synthetic-biology
+│ ├ /en/applications/synthetic-biology
+│ ├ /es/applications/synthetic-biology
+│ ├ /fr/applications/synthetic-biology
+│ └ [+2 more paths]
+├ ● /[locale]/contact
+│ ├ /en/contact
+│ ├ /es/contact
+│ ├ /fr/contact
+│ └ [+2 more paths]
+├ ● /[locale]/contact/distributor
+│ ├ /en/contact/distributor
+│ ├ /es/contact/distributor
+│ ├ /fr/contact/distributor
+│ └ [+2 more paths]
+├ ● /[locale]/products
+│ ├ /en/products
+│ ├ /es/products
+│ ├ /fr/products
+│ └ [+2 more paths]
+├ ● /[locale]/products/[...segments]
+│ ├ /en/products/control/abd-air-bubble-detector
+│ ├ /en/products/control/pdm5-pressure-sensor
+│ ├ /en/products/fittings
+│ └ [+933 more paths]
+├ ● /[locale]/resources
+│ ├ /en/resources
+│ ├ /es/resources
+│ ├ /fr/resources
+│ └ [+2 more paths]
+├ ● /[locale]/resources/calculators/fluid-resistance
+│ ├ /en/resources/calculators/fluid-resistance
+│ ├ /es/resources/calculators/fluid-resistance
+│ ├ /fr/resources/calculators/fluid-resistance
+│ └ [+2 more paths]
+├ ● /[locale]/resources/datasheets
+│ ├ /en/resources/datasheets
+│ ├ /es/resources/datasheets
+│ ├ /fr/resources/datasheets
+│ └ [+2 more paths]
+├ ● /[locale]/resources/installation-guide
+│ ├ /en/resources/installation-guide
+│ ├ /es/resources/installation-guide
+│ ├ /fr/resources/installation-guide
+│ └ [+2 more paths]
+├ ● /[locale]/resources/installation-guide/[slug]
+│ ├ /en/resources/installation-guide/hard-tube-fitting-guide
+│ ├ /en/resources/installation-guide/plunger-pump-install-guide
+│ ├ /en/resources/installation-guide/diaphragm-pump-guide
+│ └ [+22 more paths]
+├ ● /[locale]/resources/material-compatibility
+│ ├ /en/resources/material-compatibility
+│ ├ /es/resources/material-compatibility
+│ ├ /fr/resources/material-compatibility
+│ └ [+2 more paths]
+├ ● /[locale]/resources/news
+│ ├ /en/resources/news
+│ ├ /es/resources/news
+│ ├ /fr/resources/news
+│ └ [+2 more paths]
+├ ● /[locale]/resources/news/[slug]
+│ ├ /en/resources/news/adlm-2026
+│ ├ /en/resources/news/me-supply-chain-expo-2026
+│ ├ /en/resources/news/guangzhou-high-med-expo-2026
+│ └ [+52 more paths]
+├ ● /[locale]/resources/selection-support/fitting-replacement
+│ ├ /en/resources/selection-support/fitting-replacement
+│ ├ /es/resources/selection-support/fitting-replacement
+│ ├ /fr/resources/selection-support/fitting-replacement
+│ └ [+2 more paths]
+├ ● /[locale]/resources/selection-support/fitting-replacement/q20/[productCode]
+│ ├ /en/resources/selection-support/fitting-replacement/q20/839041
+│ ├ /en/resources/selection-support/fitting-replacement/q20/839130
+│ ├ /en/resources/selection-support/fitting-replacement/q20/839019
+│ └ [+172 more paths]
+├ ● /[locale]/resources/technical-articles
+│ ├ /en/resources/technical-articles
+│ ├ /es/resources/technical-articles
+│ ├ /fr/resources/technical-articles
+│ └ [+2 more paths]
+├ ● /[locale]/resources/technical-articles/[slug]
+│ ├ /en/resources/technical-articles/selecting-microfluidic-fittings
+│ ├ /en/resources/technical-articles/peek-ptfe-pfa-material-differences
+│ ├ /en/resources/technical-articles/low-pressure-vs-high-pressure-fittings
+│ └ [+57 more paths]
+├ ● /[locale]/search
+│ ├ /en/search
+│ ├ /es/search
+│ ├ /fr/search
+│ └ [+2 more paths]
+├ ○ /about/culture
+├ ○ /about/foreach
+├ ○ /about/history
+├ ○ /about/quality
+├ ○ /about/research-manufacturing
+├ ○ /applications/analytical-instruments
+├ ○ /applications/environmental-monitoring
+├ ○ /applications/ivd
+├ ○ /applications/lab-automation
+├ ○ /applications/life-science
+├ ○ /applications/synthetic-biology
+├ ○ /contact
+├ ○ /contact/distributor
+├ ○ /products
+├ ● /products/[category]
+│ ├ /products/pumps
+│ ├ /products/valves
+│ ├ /products/tubing
+│ └ [+2 more paths]
+├ ● /products/[category]/[slug]
+│ ├ /products/pumps/plunger-pumps
+│ ├ /products/pumps/diaphragm-pumps
+│ ├ /products/pumps/pipetting-pumps
+│ └ [+32 more paths]
+├ ● /products/[category]/[slug]/[seriesSlug]
+│ ├ /products/pumps/plunger-pumps/ea-standard-piston-pumps
+│ ├ /products/pumps/plunger-pumps/sm-miniature-piston-pumps
+│ ├ /products/pumps/plunger-pumps/tm-ultra-compact-piston-pumps
+│ └ [+426 more paths]
+├ ● /products/fittings/barbed-fittings/[slug]
+│ ├ /products/fittings/barbed-fittings/ba-16f-pp-n
+│ ├ /products/fittings/barbed-fittings/ba-24f-pp-n
+│ ├ /products/fittings/barbed-fittings/ba-32f-pp-n
+│ └ [+163 more paths]
+├ ● /products/fittings/bulkhead-barbed-fittings/[slug]
+│ ├ /products/fittings/bulkhead-barbed-fittings/pmb-u28-24d-pp-n
+│ ├ /products/fittings/bulkhead-barbed-fittings/pmb-u28-32d-pp-n
+│ ├ /products/fittings/bulkhead-barbed-fittings/pmb-u28-24d-pa-w
+│ └ [+8 more paths]
+├ ● /products/fittings/check-valves/[slug]
+│ ├ /products/fittings/check-valves/cv-de-16-pv-n
+│ ├ /products/fittings/check-valves/cv-bv-32-pp-n
+│ ├ /products/fittings/check-valves/cv-bv-48-pp-n
+│ └ [+13 more paths]
+├ ● /products/fittings/filters/[slug]
+│ ├ /products/fittings/filters/g-178-64-pa-v
+│ ├ /products/fittings/filters/g-178-48-pa-v
+│ ├ /products/fittings/filters/g-178-32-pa-v
+│ └ [+15 more paths]
+├ ● /products/fittings/quick-connect-fittings/[slug]
+│ ├ /products/fittings/quick-connect-fittings/q2001-pmv-sacn
+│ ├ /products/fittings/quick-connect-fittings/q2001-pmv-sppe
+│ ├ /products/fittings/quick-connect-fittings/q2001-pmx-sacn
+│ └ [+188 more paths]
+├ ○ /products/fittings/quick-connect-fittings/q20
+├ ○ /products/fittings/quick-connect-fittings/q40
+├ ○ /products/fittings/quick-connect-fittings/q60
+├ ● /products/probes/[slug]
+│ ├ /products/probes/sampling-probes
+│ ├ /products/probes/piercing-probes
+│ ├ /products/probes/wash-probes
+│ └ /products/probes/stirring-paddles
+├ ● /products/pumps/diaphragm-pumps/[slug]
+│ ├ /products/pumps/diaphragm-pumps/dpl30-liquid-diaphragm-pump
+│ ├ /products/pumps/diaphragm-pumps/dpl60-liquid-diaphragm-pump
+│ ├ /products/pumps/diaphragm-pumps/dpl30h-liquid-diaphragm-pump
+│ └ [+9 more paths]
+├ ● /products/pumps/pipetting-pumps/[slug]
+│ ├ /products/pumps/pipetting-pumps/smtp2-1000ul
+│ ├ /products/pumps/pipetting-pumps/smtp4-100ul
+│ └ /products/pumps/pipetting-pumps/smtp4-500ul
+├ ● /products/pumps/plunger-pumps/[slug]
+│ ├ /products/pumps/plunger-pumps/ea-100-pmma
+│ ├ /products/pumps/plunger-pumps/ea-100-peek
+│ ├ /products/pumps/plunger-pumps/ea-250-pmma
+│ └ [+30 more paths]
+├ ● /products/pumps/syringe-pumps/[slug]
+│ ├ /products/pumps/syringe-pumps/hmd3-30mm-solenoid-syringe-pump
+│ ├ /products/pumps/syringe-pumps/hmd6-60mm-solenoid-syringe-pump
+│ ├ /products/pumps/syringe-pumps/hld3-30mm-rotary-valve-syringe-pump
+│ └ /products/pumps/syringe-pumps/hld6-60mm-rotary-valve-syringe-pump
+├ ● /products/pumps/valveless-pumps/[slug]
+│ ├ /products/pumps/valveless-pumps/rpl-p4
+│ ├ /products/pumps/valveless-pumps/rpl-p635
+│ ├ /products/pumps/valveless-pumps/rpl-p15
+│ └ [+2 more paths]
+├ ○ /products/tubing/fep-tubing
+├ ○ /products/tubing/peek-tubing
+├ ○ /products/tubing/pfa-tubing
+├ ○ /products/tubing/ptfe-tubing
+├ ○ /products/tubing/pvc-tubing
+├ ○ /products/tubing/tpu-tubing
+├ ● /products/valves/[slug]
+│ ├ /products/valves/rotary-valves
+│ ├ /products/valves/high-pressure-valves
+│ └ /products/valves/solenoid-valves
+├ ○ /resources
+├ ○ /resources/calculators/fluid-resistance
+├ ○ /resources/datasheets
+├ ○ /resources/installation-guide
+├ ● /resources/installation-guide/[slug]
+│ ├ /resources/installation-guide/hard-tube-fitting-guide
+│ ├ /resources/installation-guide/plunger-pump-install-guide
+│ ├ /resources/installation-guide/diaphragm-pump-guide
+│ └ [+2 more paths]
+├ ○ /resources/material-compatibility
+├ ○ /resources/news
+├ ● /resources/news/[slug]
+│ ├ /resources/news/adlm-2026
+│ ├ /resources/news/me-supply-chain-expo-2026
+│ ├ /resources/news/guangzhou-high-med-expo-2026
+│ └ [+8 more paths]
+├ ○ /resources/selection-support/fitting-replacement
+├ ● /resources/selection-support/fitting-replacement/q20/[productCode]
+│ ├ /resources/selection-support/fitting-replacement/q20/839041
+│ ├ /resources/selection-support/fitting-replacement/q20/839130
+│ ├ /resources/selection-support/fitting-replacement/q20/839019
+│ └ [+32 more paths]
+├ ○ /resources/technical-articles
+├ ● /resources/technical-articles/[slug]
+│ ├ /resources/technical-articles/selecting-microfluidic-fittings
+│ ├ /resources/technical-articles/peek-ptfe-pfa-material-differences
+│ ├ /resources/technical-articles/low-pressure-vs-high-pressure-fittings
+│ └ [+9 more paths]
+└ ○ /search
+
+
+○  (Static)  prerendered as static content
+●  (SSG)     prerendered as static HTML (uses generateStaticParams)
+
+==================================================
+七、检查结论
+==================================================
+全部检查通过，可以进入中英文浏览器交互测试。
+
+==================================================
+八、本次相关Git状态
+==================================================
+M components/products/detail/ProductDetailClient.tsx
+ M components/selection-cart/selection-cart.types.ts
+?? components/products/configurator/
+?? data/products/configurator/
