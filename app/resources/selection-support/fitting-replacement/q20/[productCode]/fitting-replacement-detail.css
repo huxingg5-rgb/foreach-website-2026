@@ -1,0 +1,675 @@
+﻿/* =========================================================
+   fitting-replacement-detail.css
+   恒永达官网｜Q20 接头替代查询详情页样式
+
+   文件路径：
+   app/resources/selection-support/fitting-replacement/q20/[productCode]/fitting-replacement-detail.css
+
+   说明：
+   1. 只服务 Q20 接头替代查询详情页
+   2. 不写入 app/globals.css
+   3. 详情页主体、参数表、操作按钮、2D 图纸预览、FAQ 都在这里维护
+   4. 页面公共 Header、右侧清单、PDF 打印等其它全局能力由其它组件负责
+   5. 详情页内容宽度通过 .frd-container 控制，避免内容满屏铺开
+========================================================= */
+
+/* =========================================================
+   页面基础
+========================================================= */
+
+.fitting-replacement-detail-page {
+  min-height: 100vh;
+  background: #ffffff;
+  color: #14233d;
+}
+
+.frd-main {
+  padding: 112px 0 110px;
+  background: #ffffff;
+}
+
+/* =========================================================
+   详情页内容容器
+
+   说明：
+   1. 控制详情页内容最大宽度
+   2. 与接头替代查询首页 .frp-container 保持一致
+   3. 修复面包屑、产品详情、2D 图纸区域满屏铺开的问题
+========================================================= */
+
+.frd-container {
+  width: min(1240px, calc(100% - 56px));
+  margin: 0 auto;
+}
+
+/* =========================================================
+   详情页主体
+========================================================= */
+
+.frd-detail-section {
+  padding-top: 28px;
+}
+
+.frd-detail-layout {
+  display: grid;
+  grid-template-columns: 390px minmax(0, 1fr);
+  gap: 42px;
+  align-items: start;
+}
+
+/* =========================================================
+   左侧产品图片
+========================================================= */
+
+.frd-product-visual {
+  min-height: 390px;
+  display: grid;
+  place-items: center;
+  background: #ffffff;
+}
+
+.frd-product-visual img {
+  width: auto;
+  max-width: 96%;
+  max-height: 360px;
+  object-fit: contain;
+}
+
+/* =========================================================
+   右侧产品信息
+========================================================= */
+
+.frd-info-area {
+  min-width: 0;
+}
+
+.frd-title-block {
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(23, 51, 104, 0.14);
+}
+
+.frd-title-block h2 {
+  margin: 0;
+  color: #173368;
+  font-size: 34px;
+  line-height: 1.15;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+/* =========================================================
+   参数表
+========================================================= */
+
+.frd-compact-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  border: 1px solid rgba(23, 51, 104, 0.18);
+  background: #ffffff;
+}
+
+.frd-compact-table td {
+  height: 46px;
+  padding: 0 14px;
+  border: 1px solid rgba(23, 51, 104, 0.18);
+  vertical-align: middle;
+}
+
+.frd-head-row td {
+  height: 64px;
+  background: #f6f8fb;
+}
+
+.frd-label {
+  width: 18%;
+  background: #f6f8fb;
+  color: #5e6b80;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.frd-value {
+  width: 32%;
+  color: #173368;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.frd-head-row .frd-label {
+  color: #14233d;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.frd-head-row .frd-value {
+  color: #111111;
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+.frd-empty {
+  background: #ffffff;
+}
+
+/* =========================================================
+   操作按钮区域
+   包含：
+   1. 加入清单
+   2. 添加图纸
+========================================================= */
+
+.frd-detail-action-row {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.frd-add-button,
+.frd-drawing-toggle-button {
+  min-width: 126px;
+  height: 42px;
+  padding: 0 18px;
+  border: 1px solid rgba(23, 51, 104, 0.28);
+  border-radius: 5px;
+  background: #ffffff;
+  color: #173368;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+  transition:
+    background 0.18s ease,
+    color 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.frd-add-button:hover,
+.frd-add-button:active,
+.frd-add-button:focus-visible,
+.frd-drawing-toggle-button:hover,
+.frd-drawing-toggle-button:active,
+.frd-drawing-toggle-button:focus-visible {
+  border-color: #173368;
+  background: #173368;
+  color: #09e9b4;
+}
+
+.frd-add-button.is-added,
+.frd-add-button.is-added:hover,
+.frd-add-button.is-added:active,
+.frd-add-button.is-added:focus-visible,
+.frd-drawing-toggle-button.is-active,
+.frd-drawing-toggle-button.is-active:hover,
+.frd-drawing-toggle-button.is-active:active,
+.frd-drawing-toggle-button.is-active:focus-visible {
+  border-color: #173368;
+  background: #173368;
+  color: #09e9b4;
+}
+
+/* =========================================================
+   2D 图纸预览区域
+
+   说明：
+   1. 服务 FittingReplacementDrawingPreview.tsx
+   2. 默认显示“点击预览图纸”封面
+   3. 点击后显示 PDF iframe
+   4. iframe 逻辑由组件控制
+========================================================= */
+
+.frd-drawing-section {
+  margin-top: 54px;
+  padding-top: 26px;
+  border-top: 1px solid rgba(23, 51, 104, 0.14);
+  background: #ffffff;
+}
+
+.frd-drawing-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.frd-drawing-head h2 {
+  margin: 0;
+  color: #173368;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.frd-drawing-head p {
+  margin: 10px 0 0;
+  max-width: 760px;
+  color: #5e6b80;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.frd-drawing-viewer {
+  width: 100%;
+  height: 680px;
+  position: relative;
+  border: 1px solid rgba(23, 51, 104, 0.18);
+  background: #f6f8fb;
+  overflow: hidden;
+}
+
+.frd-drawing-object {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+  background: #ffffff;
+}
+
+.frd-drawing-object.is-visible {
+  display: block;
+}
+
+/* =========================================================
+   2D 图纸预览封面
+========================================================= */
+
+.frd-drawing-preview-card {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  width: 100%;
+  min-height: 260px;
+  padding: 42px 24px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 12px;
+  border: 0;
+  background: #f6f8fb;
+  color: #173368;
+  cursor: pointer;
+  text-align: center;
+  transition:
+    border-color 0.18s ease,
+    background 0.18s ease;
+}
+
+.frd-drawing-preview-card:hover {
+  background: #ffffff;
+}
+
+.frd-drawing-play-icon {
+  width: 74px;
+  height: 74px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2px;
+  border: 2px solid #173368;
+  border-radius: 50%;
+  background: #ffffff;
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.frd-drawing-play-icon::before {
+  content: "";
+  width: 0;
+  height: 0;
+  margin-left: 5px;
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent;
+  border-left: 20px solid #173368;
+  transition: border-left-color 0.18s ease;
+}
+
+.frd-drawing-preview-card:hover .frd-drawing-play-icon {
+  background: #173368;
+  border-color: #173368;
+  transform: scale(1.04);
+}
+
+.frd-drawing-preview-card:hover .frd-drawing-play-icon::before {
+  border-left-color: #09e9b4;
+}
+
+.frd-drawing-preview-card strong {
+  display: block;
+  color: #173368;
+  font-size: 18px;
+  line-height: 1.35;
+  font-weight: 900;
+}
+
+.frd-drawing-preview-card em {
+  display: block;
+  max-width: 460px;
+  color: #5e6b80;
+  font-size: 14px;
+  line-height: 1.7;
+  font-style: normal;
+}
+
+.frd-drawing-fallback {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  display: grid;
+  place-items: center;
+  color: #5e6b80;
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* =========================================================
+   FAQ 常见问题
+========================================================= */
+
+.frd-faq-section {
+  margin-top: 72px;
+  padding-top: 42px;
+  border-top: 1px solid rgba(23, 51, 104, 0.14);
+}
+
+.frd-faq-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+/* FAQ 标题说明 */
+
+.frd-faq-heading {
+  position: static;
+  max-width: 760px;
+}
+
+.frd-faq-heading span {
+  display: inline-flex;
+  margin-bottom: 10px;
+  color: #09e9b4;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.frd-faq-heading h2 {
+  margin: 0;
+  color: #173368;
+  font-size: 34px;
+  line-height: 1.15;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.frd-faq-heading p {
+  margin: 14px 0 0;
+  max-width: 720px;
+  color: #5e6b80;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* FAQ 列表 */
+
+.frd-faq-list {
+  width: 100%;
+  max-width: 100%;
+  border-top: 1px solid rgba(23, 51, 104, 0.16);
+}
+
+.frd-faq-item {
+  border-bottom: 1px solid rgba(23, 51, 104, 0.16);
+  background: #ffffff;
+}
+
+.frd-faq-question {
+  width: 100%;
+  min-height: 72px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 12px minmax(0, 1fr) 42px;
+  gap: 20px;
+  align-items: center;
+  border: 0;
+  background: transparent;
+  color: #173368;
+  text-align: left;
+  cursor: pointer;
+}
+
+.frd-faq-question::before {
+  width: auto;
+  height: auto;
+  display: inline-block;
+  justify-self: start;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: rgba(23, 51, 104, 0.42);
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.frd-faq-item:nth-child(1) .frd-faq-question::before {
+  content: "1";
+}
+
+.frd-faq-item:nth-child(2) .frd-faq-question::before {
+  content: "2";
+}
+
+.frd-faq-item:nth-child(3) .frd-faq-question::before {
+  content: "3";
+}
+
+.frd-faq-item:nth-child(4) .frd-faq-question::before {
+  content: "4";
+}
+
+.frd-faq-item:nth-child(5) .frd-faq-question::before {
+  content: "5";
+}
+
+.frd-faq-item:nth-child(6) .frd-faq-question::before {
+  content: "6";
+}
+
+.frd-faq-item.is-active .frd-faq-question::before,
+.frd-faq-question:hover::before {
+  color: #09e9b4;
+}
+
+.frd-faq-question span {
+  color: #173368;
+  font-size: 18px;
+  line-height: 1.45;
+  font-weight: 900;
+}
+
+.frd-faq-question em {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: end;
+  border: 1px solid rgba(23, 51, 104, 0.22);
+  border-radius: 5px;
+  color: #173368;
+  font-size: 18px;
+  line-height: 1;
+  font-style: normal;
+  font-weight: 900;
+  transition:
+    background 0.18s ease,
+    color 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.frd-faq-question:hover em,
+.frd-faq-item.is-active .frd-faq-question em {
+  border-color: #173368;
+  background: #173368;
+  color: #09e9b4;
+}
+
+.frd-faq-answer {
+  padding: 0 64px 26px 32px;
+}
+
+.frd-faq-answer p {
+  max-width: 900px;
+  margin: 0;
+  color: #5e6b80;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+/* =========================================================
+   响应式
+========================================================= */
+
+@media (max-width: 1080px) {
+  .frd-detail-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .frd-product-visual {
+    min-height: 300px;
+  }
+
+  .frd-product-visual img {
+    max-height: 300px;
+  }
+
+  .frd-faq-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .frd-faq-heading {
+    position: static;
+  }
+
+  .frd-faq-heading p {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 720px) {
+  .frd-main {
+    padding-top: 88px;
+  }
+
+  .frd-container {
+    width: min(1240px, calc(100% - 28px));
+  }
+
+  .frd-title-block h2 {
+    font-size: 26px;
+  }
+
+  .frd-compact-table,
+  .frd-compact-table tbody,
+  .frd-compact-table tr,
+  .frd-compact-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .frd-compact-table td {
+    min-height: 42px;
+    height: auto;
+    padding: 12px 14px;
+  }
+
+  .frd-empty {
+    display: none !important;
+  }
+
+  .frd-detail-action-row {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .frd-add-button,
+  .frd-drawing-toggle-button {
+    width: 100%;
+  }
+
+  .frd-drawing-section {
+    margin-top: 48px;
+    padding-top: 32px;
+  }
+
+  .frd-drawing-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .frd-drawing-preview-card {
+    min-height: 220px;
+    padding: 28px 20px;
+  }
+
+  .frd-drawing-viewer {
+    height: 520px;
+  }
+
+  .frd-faq-section {
+    margin-top: 54px;
+    padding-top: 32px;
+  }
+
+  .frd-faq-layout {
+    gap: 24px;
+  }
+
+  .frd-faq-heading h2 {
+    font-size: 28px;
+  }
+
+  .frd-faq-question {
+    min-height: 64px;
+    grid-template-columns: 34px minmax(0, 1fr) 34px;
+    gap: 14px;
+  }
+
+  .frd-faq-question::before {
+    font-size: 16px;
+  }
+
+  .frd-faq-question span {
+    font-size: 16px;
+  }
+
+  .frd-faq-question em {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+
+  .frd-faq-answer {
+    padding: 0 0 22px;
+  }
+
+  .frd-faq-answer p {
+    font-size: 14px;
+  }
+} 

@@ -1,0 +1,68 @@
+{
+  "generatedAt": "2026-07-12T15:54:47.413Z",
+  "sourceWorkbook": "F:\\WebsiteProjects\\foreach-website-2026\\data-source\\product-center\\fittings\\FRGD-140D-2606-0002_001_cn_连接件标品在售清单.xlsx",
+  "sourceSheet": "03_鲁尔接头",
+  "productCount": 151,
+  "seriesCounts": {
+    "LSL": 6,
+    "LRL": 9,
+    "LPR": 47,
+    "LPS": 24,
+    "LP": 28,
+    "LS": 6,
+    "PMLS": 7,
+    "LCR": 8,
+    "LPT": 8,
+    "LNS": 8
+  },
+  "productTypeCounts": {
+    "公鲁尔芯子": 15,
+    "公鲁尔接头": 99,
+    "母鲁尔接头": 6,
+    "穿板母鲁尔接头": 7,
+    "色环": 8,
+    "鲁尔内螺纹套": 8,
+    "滚花螺母": 8
+  },
+  "filterValueCounts": {
+    "filter01": 7,
+    "filter02": 10,
+    "filter03": 3,
+    "filter04": 1,
+    "filter05": 3,
+    "filter06": 8
+  },
+  "sourceImageCount": 152,
+  "matchedProductImageCount": 150,
+  "missingProductImageCount": 1,
+  "missingImages": [
+    {
+      "excelRow": 64,
+      "productCode": "809932",
+      "model": "LPR-32-PV-N",
+      "fullModel": "旋转锁圈公鲁尔接头 LPR-32-PV-N"
+    }
+  ],
+  "unusedImages": [
+    "LP-32D-PA-N.jpg",
+    "LPBL-PA-W.jpg",
+    "LPBL-PP-N.jpg"
+  ],
+  "sourcePdfCount": 56,
+  "mappedProductDrawingCount": 151,
+  "uniqueCopiedPdfCount": 55,
+  "missingProductDrawingCount": 0,
+  "missingDrawings": [],
+  "unusedDrawings": [
+    "443-02-00314-C.pdf"
+  ],
+  "outputTsPath": "F:\\WebsiteProjects\\foreach-website-2026\\data\\products\\selection\\luer-fitting-selection.generated.ts",
+  "outputAssetMapPath": "F:\\WebsiteProjects\\foreach-website-2026\\data\\products\\selection\\luer-fitting-asset-map.generated.json",
+  "imageTargetDir": "F:\\WebsiteProjects\\foreach-website-2026\\public\\images\\products\\fittings\\luer-fittings\\products",
+  "drawingTargetDir": "F:\\WebsiteProjects\\foreach-website-2026\\public\\documents\\products\\fittings\\luer-fittings\\drawings",
+  "outputBackups": [
+    "F:\\WebsiteProjects\\foreach-website-2026\\data\\products\\selection\\luer-fitting-selection.generated.ts.bak_20260712155447",
+    "F:\\WebsiteProjects\\foreach-website-2026\\data\\products\\selection\\luer-fitting-selection.summary.json.bak_20260712155447",
+    "F:\\WebsiteProjects\\foreach-website-2026\\data\\products\\selection\\luer-fitting-asset-map.generated.json.bak_20260712155447"
+  ]
+}

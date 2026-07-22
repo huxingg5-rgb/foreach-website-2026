@@ -1,0 +1,466 @@
+{
+  "seriesId": "DPL60",
+  "slug": "dpl60-liquid-diaphragm-pump",
+  "category": "液体隔膜泵",
+  "title": "DPL60 液体隔膜泵",
+  "displayName": "DPL60 液体隔膜泵",
+  "path": "/products/pumps/diaphragm-pumps/dpl60-liquid-diaphragm-pump",
+  "description": "DPL60 液体隔膜泵是一款适用于较高流量液体输送场景的隔膜泵，主要用于仪器内部清洗液输送、废液抽排、管路冲洗、液体循环和快速排液模块。与 DPL30 相比，DPL60 在相同 100 kPa 额定压力等级下提供更高流量，更适合对输送速度、清洗效率和排液效率要求更高的设备系统。\n\nDPL60 系列额定流量为 600 mL/min，额定压力为 100 kPa，自吸高度为 3 mH₂O，支持有刷电机和无刷电机配置。该系列可用于体外诊断设备、实验室自动化设备、生命科学仪器和分析检测系统中的清洗、排液、供液和液路循环模块。",
+  "commonApplications": "清洗液输送、废液抽排、管路冲洗、液体循环、快速排液",
+  "modelDisplay": "型号：DPL60 标准型号",
+  "modelButtonText": "型号配置",
+  "status": "基础版",
+  "seo": {
+    "type": "配置预留页",
+    "slug": "dpl60-brushless-liquid-diaphragm-pump",
+    "path": "/products/pumps/diaphragm-pumps/dpl60-brushless-liquid-diaphragm-pump",
+    "title": "DPL60 无刷液体隔膜泵｜600 mL/min 100 kPa｜FOREACH",
+    "description": "DPL60 无刷液体隔膜泵适用于需要长寿命和连续运行的高流量液体输送模块，流量 600 mL/min，额定压力 100 kPa。",
+    "pageTitle": "DPL60 无刷液体隔膜泵",
+    "status": "后续预留",
+    "note": ""
+  },
+  "specifications": [
+    {
+      "tableName": "有刷电机规格参数",
+      "parameter": "电机类型",
+      "value": "直流有刷电机",
+      "note": ""
+    },
+    {
+      "tableName": "有刷电机规格参数",
+      "parameter": "产品类型",
+      "value": "液体隔膜泵",
+      "note": ""
+    },
+    {
+      "tableName": "有刷电机规格参数",
+      "parameter": "额定电压",
+      "value": "DC 24V ±10% / DC 12V ±10%",
+      "note": ""
+    },
+    {
+      "tableName": "有刷电机规格参数",
+      "parameter": "额定功率",
+      "value": "≤8.4 W",
+      "note": ""
+    },
+    {
+      "tableName": "有刷电机规格参数",
+      "parameter": "空载流量",
+      "value": "600 mL/min",
+      "note": ""
+    },
+    {
+      "tableName": "有刷电机规格参数",
+      "parameter": "额定压力",
+      "value": "100 kPa",
+      "note": ""
+    },
+    {
+      "tableName": "有刷电机规格参数",
+      "parameter": "自吸高度",
+      "value": "3 mH₂O",
+      "note": ""
+    },
+    {
+      "tableName": "有刷电机规格参数",
+      "parameter": "工作介质",
+      "value": "纯化水，其他液体介质需实际评估",
+      "note": ""
+    },
+    {
+      "tableName": "有刷电机规格参数",
+      "parameter": "介质温度",
+      "value": "+5℃～+40℃",
+      "note": ""
+    },
+    {
+      "tableName": "有刷电机规格参数",
+      "parameter": "接管规格",
+      "value": "可接内径 3.2 mm 软管",
+      "note": ""
+    },
+    {
+      "tableName": "有刷电机规格参数",
+      "parameter": "噪音",
+      "value": "≤80 dB",
+      "note": ""
+    },
+    {
+      "tableName": "有刷电机规格参数",
+      "parameter": "工作环境温度",
+      "value": "+5℃～+40℃",
+      "note": ""
+    },
+    {
+      "tableName": "有刷电机规格参数",
+      "parameter": "工作环境相对湿度",
+      "value": "30%–85% RH（无冷凝）",
+      "note": ""
+    },
+    {
+      "tableName": "有刷电机规格参数",
+      "parameter": "泵头材质",
+      "value": "PPS",
+      "note": ""
+    },
+    {
+      "tableName": "有刷电机规格参数",
+      "parameter": "膜片材质",
+      "value": "EPDM / PTFE",
+      "note": "型号配置以选型表为准。"
+    },
+    {
+      "tableName": "有刷电机规格参数",
+      "parameter": "阀片材质",
+      "value": "EPDM / FFKM",
+      "note": ""
+    },
+    {
+      "tableName": "有刷电机规格参数",
+      "parameter": "寿命",
+      "value": "3,000 h",
+      "note": "额定电压、连续运行"
+    },
+    {
+      "tableName": "无刷电机规格参数",
+      "parameter": "电机类型",
+      "value": "直流无刷电机",
+      "note": ""
+    },
+    {
+      "tableName": "无刷电机规格参数",
+      "parameter": "产品类型",
+      "value": "液体隔膜泵",
+      "note": ""
+    },
+    {
+      "tableName": "无刷电机规格参数",
+      "parameter": "额定电压",
+      "value": "DC 24V ±10% / DC 12V ±10%",
+      "note": ""
+    },
+    {
+      "tableName": "无刷电机规格参数",
+      "parameter": "额定功率",
+      "value": "≤8.4 W",
+      "note": ""
+    },
+    {
+      "tableName": "无刷电机规格参数",
+      "parameter": "空载流量",
+      "value": "600 mL/min",
+      "note": ""
+    },
+    {
+      "tableName": "无刷电机规格参数",
+      "parameter": "额定压力",
+      "value": "100 kPa",
+      "note": ""
+    },
+    {
+      "tableName": "无刷电机规格参数",
+      "parameter": "自吸高度",
+      "value": "3 mH₂O",
+      "note": ""
+    },
+    {
+      "tableName": "无刷电机规格参数",
+      "parameter": "工作介质",
+      "value": "纯化水，其他液体介质需实际评估",
+      "note": ""
+    },
+    {
+      "tableName": "无刷电机规格参数",
+      "parameter": "介质温度",
+      "value": "+5℃～+40℃",
+      "note": ""
+    },
+    {
+      "tableName": "无刷电机规格参数",
+      "parameter": "接管规格",
+      "value": "可接内径 3.2 mm 软管",
+      "note": ""
+    },
+    {
+      "tableName": "无刷电机规格参数",
+      "parameter": "噪音",
+      "value": "≤80 dB",
+      "note": ""
+    },
+    {
+      "tableName": "无刷电机规格参数",
+      "parameter": "工作环境温度",
+      "value": "+5℃～+40℃",
+      "note": ""
+    },
+    {
+      "tableName": "无刷电机规格参数",
+      "parameter": "工作环境相对湿度",
+      "value": "30%–85% RH（无冷凝）",
+      "note": ""
+    },
+    {
+      "tableName": "无刷电机规格参数",
+      "parameter": "泵头材质",
+      "value": "PPS",
+      "note": ""
+    },
+    {
+      "tableName": "无刷电机规格参数",
+      "parameter": "膜片材质",
+      "value": "EPDM / PTFE",
+      "note": "型号配置以选型表为准。"
+    },
+    {
+      "tableName": "无刷电机规格参数",
+      "parameter": "阀片材质",
+      "value": "EPDM / FFKM",
+      "note": ""
+    },
+    {
+      "tableName": "无刷电机规格参数",
+      "parameter": "寿命",
+      "value": "10,000 h",
+      "note": "额定电压、连续运行"
+    }
+  ],
+  "modelConfigurations": [
+    {
+      "itemCode": "459003",
+      "model": "DPL60-24DB-EP/PS",
+      "category": "液体隔膜泵",
+      "motorType": "直流有刷电机",
+      "voltage": "24V",
+      "connectionType": "倒刺端口",
+      "portDirection": "向上（默认）",
+      "diaphragm": "EPDM",
+      "valvePlate": "EPDM",
+      "pumpHead": "PPS",
+      "detailSlug": "dpl60-liquid-diaphragm-pump",
+      "reservedModelSlug": "dpl60-24db-ep-ps-liquid-diaphragm-pump",
+      "note": "选型页基础型号"
+    },
+    {
+      "itemCode": "459004",
+      "model": "DPL60-24BB-EP/PS",
+      "category": "液体隔膜泵",
+      "motorType": "直流无刷电机",
+      "voltage": "24V",
+      "connectionType": "倒刺端口",
+      "portDirection": "向上（默认）",
+      "diaphragm": "EPDM",
+      "valvePlate": "EPDM",
+      "pumpHead": "PPS",
+      "detailSlug": "dpl60-liquid-diaphragm-pump",
+      "reservedModelSlug": "dpl60-24bb-ep-ps-liquid-diaphragm-pump",
+      "note": "选型页基础型号"
+    },
+    {
+      "itemCode": "459015",
+      "model": "DPL60-12DB-EP/PS",
+      "category": "液体隔膜泵",
+      "motorType": "直流有刷电机",
+      "voltage": "12V",
+      "connectionType": "倒刺端口",
+      "portDirection": "向上（默认）",
+      "diaphragm": "EPDM",
+      "valvePlate": "EPDM",
+      "pumpHead": "PPS",
+      "detailSlug": "dpl60-liquid-diaphragm-pump",
+      "reservedModelSlug": "dpl60-12db-ep-ps-liquid-diaphragm-pump",
+      "note": ""
+    },
+    {
+      "itemCode": "459016",
+      "model": "DPL60-12BB-EP/PS",
+      "category": "液体隔膜泵",
+      "motorType": "直流无刷电机",
+      "voltage": "12V",
+      "connectionType": "倒刺端口",
+      "portDirection": "向上（默认）",
+      "diaphragm": "EPDM",
+      "valvePlate": "EPDM",
+      "pumpHead": "PPS",
+      "detailSlug": "dpl60-liquid-diaphragm-pump",
+      "reservedModelSlug": "dpl60-12bb-ep-ps-liquid-diaphragm-pump",
+      "note": ""
+    },
+    {
+      "itemCode": "459030",
+      "model": "DPL60-24DB-FF/PS",
+      "category": "液体隔膜泵",
+      "motorType": "直流有刷电机",
+      "voltage": "24V",
+      "connectionType": "倒刺端口",
+      "portDirection": "向上（默认）",
+      "diaphragm": "PTFE",
+      "valvePlate": "FFKM",
+      "pumpHead": "PPS",
+      "detailSlug": "dpl60-liquid-diaphragm-pump",
+      "reservedModelSlug": "dpl60-24db-ff-ps-liquid-diaphragm-pump",
+      "note": ""
+    },
+    {
+      "itemCode": "459031",
+      "model": "DPL60-24BB-FF/PS",
+      "category": "液体隔膜泵",
+      "motorType": "直流无刷电机",
+      "voltage": "24V",
+      "connectionType": "倒刺端口",
+      "portDirection": "向上（默认）",
+      "diaphragm": "PTFE",
+      "valvePlate": "FFKM",
+      "pumpHead": "PPS",
+      "detailSlug": "dpl60-liquid-diaphragm-pump",
+      "reservedModelSlug": "dpl60-24bb-ff-ps-liquid-diaphragm-pump",
+      "note": ""
+    },
+    {
+      "itemCode": "459032",
+      "model": "DPL60-12DB-FF/PS",
+      "category": "液体隔膜泵",
+      "motorType": "直流有刷电机",
+      "voltage": "12V",
+      "connectionType": "倒刺端口",
+      "portDirection": "向上（默认）",
+      "diaphragm": "PTFE",
+      "valvePlate": "FFKM",
+      "pumpHead": "PPS",
+      "detailSlug": "dpl60-liquid-diaphragm-pump",
+      "reservedModelSlug": "dpl60-12db-ff-ps-liquid-diaphragm-pump",
+      "note": ""
+    },
+    {
+      "itemCode": "459033",
+      "model": "DPL60-12BB-FF/PS",
+      "category": "液体隔膜泵",
+      "motorType": "直流无刷电机",
+      "voltage": "12V",
+      "connectionType": "倒刺端口",
+      "portDirection": "向上（默认）",
+      "diaphragm": "PTFE",
+      "valvePlate": "FFKM",
+      "pumpHead": "PPS",
+      "detailSlug": "dpl60-liquid-diaphragm-pump",
+      "reservedModelSlug": "dpl60-12bb-ff-ps-liquid-diaphragm-pump",
+      "note": ""
+    }
+  ],
+  "faqs": [],
+  "media": [
+    {
+      "resourceId": "dpl60-brushed-main",
+      "version": "有刷",
+      "displayName": "DPL60 有刷液体隔膜泵",
+      "resourceType": "主图",
+      "pagePosition": "首屏主图/缩略图",
+      "fileName": "dpl60-brushed-liquid-diaphragm-pump-main.webp",
+      "path": "/public/images/products/pumps/diaphragm-pumps/dpl60/images/",
+      "fullPath": "public/images/products/pumps/diaphragm-pumps/dpl60/images/dpl60-brushed-liquid-diaphragm-pump-main.webp",
+      "alt": "DPL60 brushed liquid diaphragm pump, 600 mL/min, 100 kPa",
+      "caption": "图 1 DPL60 有刷液体隔膜泵外观图",
+      "sourcePdfPage": "DPL60 PDF P3",
+      "status": ""
+    },
+    {
+      "resourceId": "dpl60-brushless-main",
+      "version": "无刷",
+      "displayName": "DPL60 无刷液体隔膜泵",
+      "resourceType": "主图",
+      "pagePosition": "首屏主图/缩略图",
+      "fileName": "dpl60-brushless-liquid-diaphragm-pump-main.webp",
+      "path": "/public/images/products/pumps/diaphragm-pumps/dpl60/images/",
+      "fullPath": "public/images/products/pumps/diaphragm-pumps/dpl60/images/dpl60-brushless-liquid-diaphragm-pump-main.webp",
+      "alt": "DPL60 brushless liquid diaphragm pump, 600 mL/min, 100 kPa",
+      "caption": "图 2 DPL60 无刷液体隔膜泵外观图",
+      "sourcePdfPage": "DPL60 PDF P4",
+      "status": ""
+    },
+    {
+      "resourceId": "dpl60-brushed-3d",
+      "version": "有刷",
+      "displayName": "DPL60 有刷液体隔膜泵",
+      "resourceType": "3D模型",
+      "pagePosition": "3D模型Tab",
+      "fileName": "dpl60-brushed-liquid-diaphragm-pump.glb",
+      "path": "/public/models/products/pumps/diaphragm-pumps/dpl60/",
+      "fullPath": "public/models/products/pumps/diaphragm-pumps/dpl60/dpl60-brushed-liquid-diaphragm-pump.glb",
+      "alt": "DPL60 brushed liquid diaphragm pump 3D model",
+      "caption": "DPL60 有刷电机版本 3D 模型预览",
+      "sourcePdfPage": "DPL60 PDF P3",
+      "status": "待放置GLB"
+    },
+    {
+      "resourceId": "dpl60-brushless-3d",
+      "version": "无刷",
+      "displayName": "DPL60 无刷液体隔膜泵",
+      "resourceType": "3D模型",
+      "pagePosition": "3D模型Tab",
+      "fileName": "dpl60-brushless-liquid-diaphragm-pump.glb",
+      "path": "/public/models/products/pumps/diaphragm-pumps/dpl60/",
+      "fullPath": "public/models/products/pumps/diaphragm-pumps/dpl60/dpl60-brushless-liquid-diaphragm-pump.glb",
+      "alt": "DPL60 brushless liquid diaphragm pump 3D model",
+      "caption": "DPL60 无刷电机版本 3D 模型预览",
+      "sourcePdfPage": "DPL60 PDF P4",
+      "status": "待放置GLB"
+    },
+    {
+      "resourceId": "dpl60-brushed-2d",
+      "version": "有刷",
+      "displayName": "DPL60 有刷液体隔膜泵",
+      "resourceType": "2D/外形尺寸图",
+      "pagePosition": "零件图Tab",
+      "fileName": "dpl60-brushed-liquid-diaphragm-pump-2d-drawing.pdf",
+      "path": "/public/documents/products/pumps/diaphragm-pumps/dpl60/drawings/",
+      "fullPath": "public/documents/products/pumps/diaphragm-pumps/dpl60/drawings/dpl60-brushed-liquid-diaphragm-pump-2d-drawing.pdf",
+      "alt": "DPL60 brushed liquid diaphragm pump 2D dimension drawing",
+      "caption": "图 3 DPL60-24(12)DB 有刷电机版本外形尺寸图",
+      "sourcePdfPage": "DPL60 PDF P3",
+      "status": ""
+    },
+    {
+      "resourceId": "dpl60-brushless-2d",
+      "version": "无刷",
+      "displayName": "DPL60 无刷液体隔膜泵",
+      "resourceType": "2D/外形尺寸图",
+      "pagePosition": "零件图Tab",
+      "fileName": "dpl60-brushless-liquid-diaphragm-pump-2d-drawing.pdf",
+      "path": "/public/documents/products/pumps/diaphragm-pumps/dpl60/drawings/",
+      "fullPath": "public/documents/products/pumps/diaphragm-pumps/dpl60/drawings/dpl60-brushless-liquid-diaphragm-pump-2d-drawing.pdf",
+      "alt": "DPL60 brushless liquid diaphragm pump 2D dimension drawing",
+      "caption": "图 4 DPL60-24(12)BB 无刷电机版本外形尺寸图",
+      "sourcePdfPage": "DPL60 PDF P4",
+      "status": ""
+    },
+    {
+      "resourceId": "dpl60-flow-pressure-curve",
+      "version": "系列",
+      "displayName": "DPL60 液体隔膜泵",
+      "resourceType": "流量-压力曲线",
+      "pagePosition": "规格Tab/曲线区",
+      "fileName": "dpl60-liquid-diaphragm-pump-flow-pressure-curve.webp",
+      "path": "/public/images/products/pumps/diaphragm-pumps/dpl60/curves/",
+      "fullPath": "public/images/products/pumps/diaphragm-pumps/dpl60/curves/dpl60-liquid-diaphragm-pump-flow-pressure-curve.webp",
+      "alt": "DPL60 liquid diaphragm pump flow pressure curve",
+      "caption": "图 5 DPL60 流量-压力曲线",
+      "sourcePdfPage": "DPL60 PDF P5",
+      "status": ""
+    },
+    {
+      "resourceId": "dpl60-datasheet",
+      "version": "系列",
+      "displayName": "DPL60 液体隔膜泵",
+      "resourceType": "规格书PDF",
+      "pagePosition": "下载区",
+      "fileName": "dpl60-liquid-diaphragm-pump-datasheet-cn.pdf",
+      "path": "/public/documents/products/pumps/diaphragm-pumps/dpl60/datasheets/",
+      "fullPath": "public/documents/products/pumps/diaphragm-pumps/dpl60/datasheets/dpl60-liquid-diaphragm-pump-datasheet-cn.pdf",
+      "alt": "DPL60 liquid diaphragm pump datasheet PDF",
+      "caption": "DPL60 液体隔膜泵规格书",
+      "sourcePdfPage": "DPL60 PDF",
+      "status": ""
+    }
+  ]
+}

@@ -1,0 +1,453 @@
+/* =========================================================
+   NewsArticleClient.module.css
+   恒永达官网｜新闻详情页主体样式
+
+   文件路径：
+   components/resources/news/NewsArticleClient.module.css
+
+   说明：
+   1. 只服务 NewsArticleClient.tsx
+   2. 不修改公共 Top 栏
+   3. 不修改统一面包屑
+   4. 主题图只放在正文外面
+   5. 正文里面没有图，就不显示图
+   6. 标题、主图、正文、上一篇下一篇统一使用网页内容宽度
+========================================================= */
+
+/* =========================================================
+   1. 页面基础
+========================================================= */
+
+.page {
+  --news-blue: #173368;
+  --news-cyan: #09e9b4;
+  --news-text: #14233d;
+  --news-sub: #5e6b80;
+  --news-muted: #8b96a8;
+  --news-line: rgba(23, 51, 104, 0.14);
+  --news-soft: #f6f8fb;
+
+  /* 和资源型页面宽度保持一致，适配 2K 屏 */
+  --news-content-width: 1600px;
+
+  background: #ffffff;
+  color: var(--news-text);
+}
+
+.page * {
+  box-sizing: border-box;
+}
+
+.page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 统一内容宽度 */
+.container {
+  width: min(var(--news-content-width), calc(100% - 56px));
+  margin: 0 auto;
+}
+
+/* =========================================================
+   2. 文章标题区
+========================================================= */
+
+.article {
+  background: #ffffff;
+}
+
+/* 文章标题区
+   说明：
+   1. 面包屑已经在 page.tsx 中显示
+   2. 这里不需要再留太大的顶部距离
+   3. 减少“< 返回”上方空白
+*/
+.header {
+  padding: 26px 0 38px;
+  background: #ffffff;
+}
+
+/* 返回新闻列表 */
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 18px;
+  color: #6b7890;
+  font-size: 14px;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.backLink:hover {
+  color: var(--news-blue);
+}
+
+/* 分类标签
+   说明：
+   1. 当前 NewsArticleClient.tsx 已经不再渲染 category
+   2. 这里保留样式，后期如果需要恢复分类标签可以继续使用
+*/
+.category {
+  width: fit-content;
+  height: 28px;
+  padding: 0 14px;
+  margin-bottom: 22px;
+  display: inline-flex;
+  align-items: center;
+  background: rgba(9, 233, 180, 0.18);
+  color: var(--news-blue);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* 标题：继续缩小字号，让新闻详情页更稳重 */
+.title {
+  max-width: 1280px;
+  margin: 0;
+  color: var(--news-blue);
+  font-size: clamp(28px, 2.45vw, 38px);
+  line-height: 1.18;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+/* 日期 */
+.date {
+  display: block;
+  margin-top: 20px;
+  color: var(--news-muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* 摘要 */
+.summary {
+  max-width: 1280px;
+  margin: 24px 0 0;
+  color: var(--news-sub);
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+/* =========================================================
+   3. 主题图区域
+
+   说明：
+   1. 主题图单独放在正文外面
+   2. 如果 article.coverImage 为空，组件不会渲染这个区域
+   3. 不强制把正文图片或卡片图塞进正文
+========================================================= */
+
+.coverSection {
+  padding: 8px 0 56px;
+  background: #ffffff;
+}
+
+.cover {
+  position: relative;
+  width: 100%;
+  height: clamp(400px, 35vw, 620px);
+  margin: 0;
+  overflow: hidden;
+  background: var(--news-soft);
+}
+
+.cover img {
+  object-fit: cover;
+}
+
+/* =========================================================
+   4. 正文区域
+
+   说明：
+   1. 正文宽度和整个网页内容宽度一致
+   2. 不单独设置 860px / 920px
+   3. 正文里没有图就不显示图
+========================================================= */
+
+.contentSection {
+  padding: 0 0 72px;
+  background: #ffffff;
+}
+
+.content {
+  width: 100%;
+}
+
+.contentBlock {
+  max-width: 1280px;
+}
+
+.contentBlock + .contentBlock {
+  margin-top: 48px;
+}
+
+.contentBlock h2 {
+  margin: 0 0 18px;
+  color: var(--news-blue);
+  font-size: clamp(26px, 2vw, 34px);
+  line-height: 1.25;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.contentBlock p {
+  margin: 0 0 20px;
+  color: var(--news-sub);
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.contentBlock p:last-child {
+  margin-bottom: 0;
+}
+
+.contentBlock ul {
+  margin: 14px 0 0;
+  padding-left: 22px;
+  color: var(--news-sub);
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.contentBlock li + li {
+  margin-top: 8px;
+}
+
+/* =========================================================
+   5. 上一篇 / 下一篇
+========================================================= */
+
+.pagerSection {
+  padding: 0 0 72px;
+  background: #ffffff;
+}
+
+.pagerGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  padding-top: 30px;
+  border-top: 1px solid var(--news-line);
+}
+
+.pagerCard {
+  position: relative;
+  min-height: 136px;
+  padding: 24px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid var(--news-line);
+  background: #ffffff;
+  transition:
+    background 0.22s ease,
+    border-color 0.22s ease,
+    transform 0.22s ease;
+}
+
+.pagerCard::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--news-cyan);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.24s ease;
+}
+
+.pagerCard:hover {
+  background: #f9fbfd;
+  border-color: rgba(23, 51, 104, 0.28);
+  transform: translateY(-2px);
+}
+
+.pagerCard:hover::before {
+  transform: scaleY(1);
+}
+
+.pagerCard span {
+  margin-bottom: 10px;
+  color: var(--news-muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.pagerCard strong {
+  color: var(--news-blue);
+  font-size: 20px;
+  line-height: 1.45;
+  font-weight: 900;
+}
+
+.pagerCard em {
+  margin-top: 12px;
+  color: var(--news-muted);
+  font-size: 13px;
+  font-style: normal;
+}
+
+.nextPagerCard {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.nextPagerCard::before {
+  left: auto;
+  right: 0;
+}
+
+.emptyPagerCard {
+  cursor: default;
+  opacity: 0.56;
+}
+
+.emptyPagerCard:hover {
+  background: #ffffff;
+  transform: none;
+}
+
+.emptyPagerCard:hover::before {
+  transform: scaleY(0);
+}
+
+/* =========================================================
+   6. 底部联系我们 Banner 外层
+
+   说明：
+   1. Banner 本体继续使用已有 ResourceSupportCta
+   2. 这里仅控制它和新闻详情页之间的衔接
+   3. 不在这里重写 CTA Banner 结构
+========================================================= */
+
+.supportSection {
+  background: #ffffff;
+}
+
+/* =========================================================
+   7. 新闻详情页｜底部 CTA 按钮文字颜色修正
+
+   说明：
+   1. 底部 CTA 仍然引用公共 ResourceSupportCta 模块
+   2. 这里不改公共模块，只在新闻详情页局部覆盖
+   3. 白色按钮内部文字统一改为品牌深蓝色
+   4. hover 时也保持深蓝色，避免文字变白看不清
+========================================================= */
+
+.supportSection :global(a),
+.supportSection :global(button) {
+  color: #173368 !important;
+}
+
+.supportSection :global(a:hover),
+.supportSection :global(button:hover) {
+  color: #173368 !important;
+}
+
+/* =========================================================
+   8. 响应式
+========================================================= */
+
+@media (max-width: 1080px) {
+  .header {
+    padding: 24px 0 36px;
+  }
+
+  .title {
+    max-width: 100%;
+  }
+
+  .summary,
+  .contentBlock {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 760px) {
+  .container {
+    width: min(100% - 36px, var(--news-content-width));
+  }
+
+  .header {
+    padding: 22px 0 30px;
+  }
+
+  .backLink {
+    margin-bottom: 16px;
+  }
+
+  .title {
+    font-size: clamp(28px, 8vw, 36px);
+    line-height: 1.18;
+    letter-spacing: -0.03em;
+  }
+
+  .date {
+    margin-top: 18px;
+  }
+
+  .summary {
+    margin-top: 22px;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .coverSection {
+    padding-bottom: 42px;
+  }
+
+  .cover {
+    height: 260px;
+  }
+
+  .contentSection {
+    padding-bottom: 54px;
+  }
+
+  .contentBlock + .contentBlock {
+    margin-top: 36px;
+  }
+
+  .contentBlock h2 {
+    font-size: 24px;
+  }
+
+  .contentBlock p,
+  .contentBlock ul {
+    font-size: 16px;
+    line-height: 1.85;
+  }
+
+  .pagerSection {
+    padding-bottom: 54px;
+  }
+
+  .pagerGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .pagerCard {
+    min-height: 124px;
+    padding: 22px;
+  }
+
+  .pagerCard strong {
+    font-size: 18px;
+  }
+
+  .nextPagerCard {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .nextPagerCard::before {
+    left: 0;
+    right: auto;
+  }
+} 

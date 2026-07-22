@@ -1,0 +1,184 @@
+/* =========================================================
+   PdfDrawingPreview.module.css
+   恒永达官网｜公共 PDF 图纸在线预览
+========================================================= */
+
+.scope {
+  width: 100%;
+  min-width: 0;
+}
+
+.scope :global(.frd-drawing-section) {
+  width: 100%;
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+  background: #ffffff;
+}
+
+.scope :global(.frd-drawing-head) {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.scope :global(.frd-drawing-head h2) {
+  margin: 0;
+  color: #173368;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.scope :global(.frd-drawing-viewer) {
+  position: relative;
+  width: 100%;
+  height: 680px;
+  overflow: hidden;
+  border: 1px solid rgba(23, 51, 104, 0.18);
+  background: #f6f8fb;
+}
+
+.scope :global(.frd-drawing-object) {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #ffffff;
+}
+
+.scope :global(.frd-drawing-object.is-visible) {
+  display: block;
+}
+
+.scope :global(.frd-drawing-preview-card) {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  display: grid;
+  width: 100%;
+  min-height: 260px;
+  padding: 42px 24px;
+
+  place-items: center;
+  align-content: center;
+  gap: 12px;
+
+  border: 0;
+  background: #f6f8fb;
+  color: #173368;
+
+  cursor: pointer;
+  text-align: center;
+
+  transition:
+    border-color 0.18s ease,
+    background 0.18s ease;
+}
+
+.scope :global(.frd-drawing-preview-card:hover) {
+  background: #ffffff;
+}
+
+.scope :global(.frd-drawing-play-icon) {
+  position: relative;
+
+  display: inline-flex;
+  width: 74px;
+  height: 74px;
+  margin-bottom: 2px;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid #173368;
+  border-radius: 50%;
+  background: #ffffff;
+
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.scope :global(.frd-drawing-play-icon::before) {
+  content: "";
+
+  width: 0;
+  height: 0;
+  margin-left: 5px;
+
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent;
+  border-left: 20px solid #173368;
+
+  transition: border-left-color 0.18s ease;
+}
+
+.scope
+  :global(.frd-drawing-preview-card:hover)
+  :global(.frd-drawing-play-icon) {
+  border-color: #173368;
+  background: #173368;
+  transform: scale(1.04);
+}
+
+.scope
+  :global(.frd-drawing-preview-card:hover)
+  :global(.frd-drawing-play-icon::before) {
+  border-left-color: #09e9b4;
+}
+
+.scope :global(.frd-drawing-preview-card strong) {
+  display: block;
+  color: #173368;
+  font-size: 18px;
+  line-height: 1.35;
+  font-weight: 900;
+}
+
+.scope :global(.frd-drawing-preview-card em) {
+  display: block;
+  max-width: 460px;
+  color: #5e6b80;
+  font-size: 14px;
+  line-height: 1.7;
+  font-style: normal;
+}
+
+@media (max-width: 680px) {
+  .scope :global(.frd-drawing-head) {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .scope :global(.frd-drawing-head h2) {
+    font-size: 20px;
+  }
+
+  .scope :global(.frd-drawing-viewer) {
+    height: 520px;
+  }
+
+  .scope :global(.frd-drawing-preview-card) {
+    min-height: 220px;
+    padding: 28px 20px;
+  }
+
+  .scope :global(.frd-drawing-play-icon) {
+    width: 64px;
+    height: 64px;
+  }
+
+  .scope :global(.frd-drawing-preview-card strong) {
+    font-size: 17px;
+  }
+
+  .scope :global(.frd-drawing-preview-card em) {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,133 @@
+/* 资源中心所有列表与工具页共用的顶部 Banner 尺寸和文字规范。 */
+.resource-center-banner.resource-center-banner {
+  position: relative;
+  isolation: isolate;
+  height: 520px !important;
+  min-height: 520px !important;
+  overflow: hidden;
+  color: #ffffff;
+  background-color: #173368;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+/* 清除各旧 Banner 独立装饰层，统一使用同一层深蓝遮罩。 */
+.resource-center-banner.resource-center-banner.resource-center-banner::before {
+  content: "" !important;
+  display: block !important;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 1 !important;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(6, 26, 58, 0.9) 0%,
+    rgba(10, 34, 78, 0.76) 40%,
+    rgba(10, 34, 78, 0.42) 68%,
+    rgba(10, 34, 78, 0.2) 100%
+  ) !important;
+}
+
+.resource-center-banner.resource-center-banner.resource-center-banner::after {
+  content: none !important;
+  display: none !important;
+}
+
+.datasheets-page .resource-center-banner .datasheets-hero-overlay {
+  display: none !important;
+}
+
+/* 清除旧样式中写入背景的独立渐变，只保留各页面自己的背景图片。 */
+.installation-guide-hero.resource-center-banner {
+  background-image: url("/images/resources/installation-guide/banner/resources-installation-guide-banner-1920x1080-v001.webp") !important;
+}
+
+.material-compatibility-banner.resource-center-banner {
+  background-image: url("/images/resources/material-compatibility/banner/resources-material-compatibility-banner-yellow-clear-pellets-1920x520-v001.webp") !important;
+}
+
+.frp-hero.resource-center-banner {
+  background-image: url("/images/resources/selection-support/banner/resources-selection-support-fitting-replacement-banner-1920x520-v001.webp") !important;
+}
+
+.resource-center-banner .resource-center-banner__inner.resource-center-banner__inner {
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+  width: min(1600px, calc(100% - 64px));
+  height: 520px !important;
+  min-height: 520px !important;
+  margin: 0 auto;
+  padding: 168px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.resource-center-banner .resource-center-banner__content.resource-center-banner__content {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1080px;
+  margin: 0;
+  padding: 0;
+}
+
+.resource-center-banner .resource-center-banner__eyebrow.resource-center-banner__eyebrow {
+  display: none;
+}
+
+.resource-center-banner .resource-center-banner__title.resource-center-banner__title {
+  max-width: 1080px;
+  margin: 0;
+  color: #ffffff;
+  font-size: 64px;
+  line-height: 1.08;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.resource-center-banner .resource-center-banner__description.resource-center-banner__description {
+  max-width: 860px;
+  margin: 24px 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 18px;
+  line-height: 1.8;
+  letter-spacing: normal;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 760px) {
+  .resource-center-banner.resource-center-banner,
+  .resource-center-banner .resource-center-banner__inner.resource-center-banner__inner {
+    height: 520px !important;
+    min-height: 520px !important;
+  }
+
+  .resource-center-banner .resource-center-banner__inner.resource-center-banner__inner {
+    width: calc(100% - 32px);
+    padding-top: 142px;
+  }
+
+  .resource-center-banner .resource-center-banner__content.resource-center-banner__content {
+    max-width: 100%;
+  }
+
+  .resource-center-banner .resource-center-banner__title.resource-center-banner__title {
+    max-width: 100%;
+    font-size: 40px;
+    line-height: 1.12;
+  }
+
+  .resource-center-banner .resource-center-banner__description.resource-center-banner__description {
+    max-width: 100%;
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+}

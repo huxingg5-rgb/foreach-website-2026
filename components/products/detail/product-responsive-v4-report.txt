@@ -1,0 +1,15 @@
+Product responsive V4
+=====================
+
+Breadcrumb files found: 0
+
+data-product-gallery: <div> in components\products\detail\ProductDetailClient.tsx line 159
+data-product-main-stage: <div> in components\products\detail\ProductDetailClient.tsx line 160
+data-product-main-image: <img> in components\products\detail\ProductDetailClient.tsx line 173
+data-product-thumb-row: <div> in components\products\detail\ProductDetailClient.tsx line 278
+data-product-model-row: <div> in components\products\detail\ProductDetailClient.tsx line 426
+data-product-action-grid: <div> in components\products\detail\ProductDetailClient.tsx line 443
+data-product-spec-row: <tr> in components\products\detail\ProductDetailClient.tsx line 546
+
+Warnings:
+No product detail/selection breadcrumb component was found. Responsive detail styles will still be applied.
