@@ -79,3 +79,20 @@ private-assets/**/*.pdf
 # Private product assets
 private-assets/**/*.dwg
 private-assets/**/*.dxf
+node_modules/
+.next/
+out/
+dist/
+build/
+coverage/
+.turbo/
+.vercel/
+.env
+.env.local
+.env.*.local
+*.log
+~$*.xlsx
+~$*.xlsm
+~$*.docx
+~$*.pptx
+Thumbs.db
