@@ -1,0 +1,103 @@
+/* =========================================================
+   life-science-application.css
+   恒永达官网｜生命科学应用领域页面样式
+
+   文件路径：
+   app/applications/life-science/life-science-application.css
+
+   说明：
+   1. 方案 A：复用 IVD 应用页样式
+   2. 当前应用详情页本质是一套模板，不同页面只换数据
+   3. 不把应用页样式堆到 app/globals.css
+========================================================= */
+
+@import "../ivd/ivd-application.css";
+
+/* =========================================================
+   正确面包屑样式
+   说明：
+   1. 不沿用 IVD 当前错误面包屑 class
+   2. 生命科学页面单独使用 application-breadcrumb
+   3. 后续可抽成全站统一 Breadcrumb 组件
+========================================================= */
+
+.application-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 26px;
+}
+
+.application-breadcrumb a {
+  color: rgba(255, 255, 255, 0.68);
+  transition: color 0.22s ease;
+}
+
+.application-breadcrumb a:hover {
+  color: #09e9b4;
+}
+
+.application-breadcrumb span {
+  color: rgba(255, 255, 255, 0.38);
+}
+
+.application-breadcrumb strong {
+  color: #09e9b4;
+  font-weight: 600;
+}
+
+/* =========================================================
+   生命科学页面背景图
+   说明：
+   1. 先预留真实图片路径
+   2. 脚本会先复制 IVD 图片作为临时占位
+   3. 后续替换同名 webp 即可
+========================================================= */
+
+.life-science-page .ivd-hero {
+  background-image:
+    linear-gradient(105deg, rgba(12, 34, 70, 0.98), rgba(23, 51, 104, 0.88)),
+    radial-gradient(circle at 82% 26%, rgba(9, 233, 180, 0.22), transparent 34%),
+    url("/images/applications/life-science/life-science-hero-bg-1920x800-v001.webp") !important;
+  background-size: cover;
+  background-position: center;
+}
+
+.life-science-page .ivd-instrument-focus-bg {
+  background-image:
+    linear-gradient(120deg, rgba(12, 34, 70, 0.92), rgba(23, 51, 104, 0.74)),
+    radial-gradient(circle at 76% 25%, rgba(9, 233, 180, 0.20), transparent 34%),
+    url("/images/applications/life-science/life-science-focus-bg-1920x680-v001.webp") !important;
+  background-size: cover;
+  background-position: center;
+}
+
+.life-science-page .ivd-cta {
+  background-image:
+    linear-gradient(105deg, rgba(12, 34, 70, 0.98), rgba(23, 51, 104, 0.90)),
+    radial-gradient(circle at 82% 24%, rgba(9, 233, 180, 0.20), transparent 32%),
+    url("/images/applications/life-science/life-science-cta-bg-1920x520-v001.webp") !important;
+  background-size: cover;
+  background-position: center;
+}
+/* =========================================================
+   Life Science Banner V11｜主题化精简版
+   说明：
+   1. 生命科学 Banner 只保留主题文字
+   2. 不显示右侧分类卡片
+   3. 背景独立于 IVD
+   4. 遮罩调浅，避免视觉过重
+========================================================= */
+
+.life-science-page .ivd-hero {
+  background-image:
+    linear-gradient(105deg, rgba(12, 34, 70, 0.88) 0%, rgba(23, 51, 104, 0.60) 42%, rgba(23, 51, 104, 0.18) 100%),
+    radial-gradient(circle at 82% 26%, rgba(9, 233, 180, 0.16), transparent 34%),
+    url("/images/applications/life-science/life-science-hero-bg-1920x800-v001.webp") !important;
+  background-size: cover !important;
+  background-position: center !important;
+}

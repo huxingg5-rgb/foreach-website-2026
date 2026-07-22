@@ -1,0 +1,143 @@
+﻿===== getProductDrawingPreviewUrl：第 35–70 行 =====
+   35: type ProductDetailClientProps = {
+   36:   data: ProductDetailPageData & Record<string, any>;
+   37: };
+   38: 
+   39: type ZoomStyle = CSSProperties & {
+   40:   "--zoom-x"?: string;
+   41:   "--zoom-y"?: string;
+   42: };
+   43: 
+   44: function getProductDrawingPreviewUrl(slug: string, configuredUrl?: string) {
+   45:   const normalizedConfiguredUrl = configuredUrl?.trim();
+   46: 
+   47:   if (normalizedConfiguredUrl) {
+   48:     return normalizedConfiguredUrl.includes("#")
+   49:       ? normalizedConfiguredUrl
+   50:       : normalizedConfiguredUrl + "#toolbar=0&navpanes=0&scrollbar=1";
+   51:   }
+   52: 
+   53:   const normalizedSlug = slug.trim().toLowerCase();
+   54:   const match = normalizedSlug.match(/^(ea|sm|tm)-(\d+)/);
+   55: 
+   56:   if (!match) {
+   57:     return "";
+   58:   }
+   59: 
+   60:   const seriesCode = match[1];
+   61:   const seriesUpper = seriesCode.toUpperCase();
+   62:   const capacityCode = String(Number(match[2])).padStart(4, "0") + "UL";
+   63: 
+   64:   return (
+   65:     "/assets/products/" +
+   66:     seriesCode +
+   67:     "/2d-drawings/" +
+   68:     seriesUpper +
+   69:     "-" +
+   70:     capacityCode +
+
+===== 中英文提示文案：第 835–890 行 =====
+  835:         datasheet: "Add Datasheet",
+  836:         drawing: "Add Drawing",
+  837:         drawingAdded: "Drawing Added",
+  838:         request3d: "Request 3D File",
+  839:         addToList: "Add to List",
+  840:         addedToList: "Added to List",
+  841:         tabs: "Product resources",
+  842:         specifications: "Specifications",
+  843:         model3d: "3D Model",
+  844:         technicalDrawing: "Technical Drawing",
+  845:         noDrawing: "No public technical drawing is available for this product.",
+  846:         completeModels: "Complete Model Numbers",
+  847:         foreachModel: "FOREACH Model",
+  848:         productCode: "Product Code",
+  849:         connection: "Tube ID or Thread",
+  850:         gender: "Gender",
+  851:         mounting: "Mounting Method",
+  852:         valved: "Valve Configuration",
+  853:         shape: "Shape",
+  854:         housingMaterial: "Housing Material",
+  855:         faq: "Frequently Asked Questions",
+  856:       }
+  857:     : {
+  858:         breadcrumb: "面包屑导航",
+  859:         home: "首页",
+  860:         products: "产品中心",
+  861:         gallery: "产品图片区域",
+  862:         thumbnails: "缩略图区域",
+  863:         previous: "上一张",
+  864:         next: "下一张",
+  865:         frontView: "主视图",
+  866:         sideView: "侧视图",
+  867:         portDetail: "接口细节",
+  868:         applications: "常见应用：",
+  869:         model: "型号：",
+  870:         configurator: "配置选择",
+  871:         datasheet: "添加规格书",
+  872:         drawing: "添加图纸",
+  873:         drawingAdded: "已添加图纸",
+  874:         request3d: "申请3D文件",
+  875:         addToList: "加入清单",
+  876:         addedToList: "已加入清单",
+  877:         tabs: "产品资料切换",
+  878:         specifications: "规格",
+  879:         model3d: "3D模型",
+  880:         technicalDrawing: "零件图",
+  881:         noDrawing: "当前产品尚未配置公开零件图。",
+  882:         completeModels: "完整型号",
+  883:         foreachModel: "恒永达型号",
+  884:         productCode: "商品编码",
+  885:         connection: "接管内径或螺纹",
+  886:         gender: "公母端",
+  887:         mounting: "安装方式",
+  888:         valved: "阀门配置",
+  889:         shape: "形状",
+  890:         housingMaterial: "外壳材质",
+
+===== 2D 图纸渲染区域：第 1595–1640 行 =====
+ 1595:                   modelName={data.model}
+ 1596:                   modelUrl={(data as any).model3dUrl || (data as any).resources?.model3dUrl}
+ 1597:                   locale={isEnglish ? "en" : "zh"}
+ 1598:                 />
+ 1599:               </div>
+ 1600:             </div>
+ 1601: 
+ 1602:             <div
+ 1603:               className={[
+ 1604:                 styles.panel,
+ 1605:                 activeTab === "drawing" ? styles.isActive : "",
+ 1606:               ]
+ 1607:                 .filter(Boolean)
+ 1608:                 .join(" ")}
+ 1609:             >
+ 1610:               {getProductDrawingPreviewUrl(data.slug, (data as any).drawing2dUrl || (data as any).drawingPdfUrl || (data as any).partDrawingUrl || (data as any).resources?.drawing2dUrl) ? (
+ 1611:                 <PdfDrawingPreview
+ 1612:                   pdfPreviewUrl={getProductDrawingPreviewUrl(data.slug, (data as any).drawing2dUrl || (data as any).drawingPdfUrl || (data as any).partDrawingUrl || (data as any).resources?.drawing2dUrl)}
+ 1613:                   documentTitle={data.model}
+ 1614:                   text={
+ 1615:                     isEnglish
+ 1616:                       ? {
+ 1617:                           title: "Technical Drawing",
+ 1618:                           loadingLabel: "Loading drawing...",
+ 1619:                           previewButton: "Preview Drawing",
+ 1620:                           description: `View the technical drawing for ${data.model}.`,
+ 1621:                         }
+ 1622:                       : undefined
+ 1623:                   }
+ 1624:                 />
+ 1625:               ) : (
+ 1626:                 <div className={styles.panelBox}>
+ 1627:                   {copy.noDrawing}
+ 1628:                 </div>
+ 1629:               )}
+ 1630:             </div>
+ 1631:           </div>
+ 1632:         </section>
+ 1633:         {/* QUICK_CONNECT_SERIES_MODEL_TABLE_START */}
+ 1634:         {Array.isArray((data as any).modelRows) &&
+ 1635:         (data as any).modelRows.length > 0 ? (
+ 1636:           <section
+ 1637:             id="model-selection"
+ 1638:             className={styles.faqSection}
+ 1639:           >
+ 1640:             <div className={styles.faqHeader}>

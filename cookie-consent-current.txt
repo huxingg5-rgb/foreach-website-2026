@@ -1,0 +1,1220 @@
+
+============================================================
+FILE: components\privacy\CookieConsent.tsx
+============================================================
+
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import {
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
+
+import {
+  getLocaleFromPathname,
+  type LocaleCode,
+} from "@/lib/i18n";
+
+import {
+  OPEN_COOKIE_SETTINGS_EVENT_NAME,
+  readCookieConsent,
+  removeGoogleAnalyticsCookies,
+  type CookieConsentState,
+  writeCookieConsent,
+} from "@/lib/privacy/cookie-consent";
+
+import styles from "./CookieConsent.module.css";
+
+type ConsentCopy = {
+  bannerTitle: string;
+  bannerDescription: string;
+  privacyPolicy: string;
+  rejectOptional: string;
+  customize: string;
+  acceptAll: string;
+  settingsTitle: string;
+  settingsDescription: string;
+  necessaryTitle: string;
+  necessaryDescription: string;
+  alwaysActive: string;
+  analyticsTitle: string;
+  analyticsDescription: string;
+  saveChoices: string;
+  close: string;
+};
+
+const copyByLocale: Record<LocaleCode, ConsentCopy> = {
+  "zh-CN": {
+    bannerTitle: "我们重视您的隐私",
+    bannerDescription:
+      "我们使用必要技术保障网站正常运行，并在您同意后使用 Google Analytics 了解网站使用情况。",
+    privacyPolicy: "隐私政策",
+    rejectOptional: "拒绝可选项",
+    customize: "自定义设置",
+    acceptAll: "全部接受",
+    settingsTitle: "Cookie 设置",
+    settingsDescription:
+      "您可以选择是否允许分析 Cookie。必要 Cookie 用于保存隐私选择和保障网站基本功能，无法关闭。",
+    necessaryTitle: "必要 Cookie",
+    necessaryDescription:
+      "用于维持网站基本功能，并保存您的 Cookie 同意选择。",
+    alwaysActive: "始终启用",
+    analyticsTitle: "分析 Cookie",
+    analyticsDescription:
+      "帮助我们通过 Google Analytics 了解页面访问和功能使用情况，以改进网站。",
+    saveChoices: "保存选择",
+    close: "关闭",
+  },
+  en: {
+    bannerTitle: "We value your privacy",
+    bannerDescription:
+      "We use essential technologies to keep the website working and, with your consent, Google Analytics to understand website usage.",
+    privacyPolicy: "Privacy Policy",
+    rejectOptional: "Reject optional",
+    customize: "Customize",
+    acceptAll: "Accept all",
+    settingsTitle: "Cookie settings",
+    settingsDescription:
+      "You can choose whether to allow analytics cookies. Essential cookies support core website functions and save your privacy choices.",
+    necessaryTitle: "Essential cookies",
+    necessaryDescription:
+      "Used for core website functions and to remember your cookie preferences.",
+    alwaysActive: "Always active",
+    analyticsTitle: "Analytics cookies",
+    analyticsDescription:
+      "Help us understand page visits and feature usage through Google Analytics so we can improve the website.",
+    saveChoices: "Save choices",
+    close: "Close",
+  },
+  es: {
+    bannerTitle: "Valoramos su privacidad",
+    bannerDescription:
+      "Utilizamos tecnologías esenciales para el funcionamiento del sitio y, con su consentimiento, Google Analytics para comprender su uso.",
+    privacyPolicy: "Política de privacidad",
+    rejectOptional: "Rechazar opcionales",
+    customize: "Personalizar",
+    acceptAll: "Aceptar todo",
+    settingsTitle: "Configuración de cookies",
+    settingsDescription:
+      "Puede decidir si permite las cookies analíticas. Las cookies esenciales mantienen las funciones básicas y guardan sus preferencias.",
+    necessaryTitle: "Cookies esenciales",
+    necessaryDescription:
+      "Se utilizan para las funciones básicas del sitio y para recordar sus preferencias.",
+    alwaysActive: "Siempre activas",
+    analyticsTitle: "Cookies analíticas",
+    analyticsDescription:
+      "Nos ayudan a comprender las visitas y el uso de funciones mediante Google Analytics.",
+    saveChoices: "Guardar selección",
+    close: "Cerrar",
+  },
+  fr: {
+    bannerTitle: "Nous respectons votre vie privée",
+    bannerDescription:
+      "Nous utilisons des technologies essentielles au fonctionnement du site et, avec votre accord, Google Analytics pour comprendre son utilisation.",
+    privacyPolicy: "Politique de confidentialité",
+    rejectOptional: "Refuser les options",
+    customize: "Personnaliser",
+    acceptAll: "Tout accepter",
+    settingsTitle: "Paramètres des cookies",
+    settingsDescription:
+      "Vous pouvez choisir d’autoriser ou non les cookies analytiques. Les cookies essentiels assurent les fonctions de base et mémorisent vos choix.",
+    necessaryTitle: "Cookies essentiels",
+    necessaryDescription:
+      "Utilisés pour les fonctions essentielles du site et pour mémoriser vos préférences.",
+    alwaysActive: "Toujours actifs",
+    analyticsTitle: "Cookies analytiques",
+    analyticsDescription:
+      "Ils nous aident à comprendre les visites et l’utilisation des fonctionnalités grâce à Google Analytics.",
+    saveChoices: "Enregistrer",
+    close: "Fermer",
+  },
+  ko: {
+    bannerTitle: "개인정보를 소중히 보호합니다",
+    bannerDescription:
+      "웹사이트의 정상적인 운영을 위해 필수 기술을 사용하며, 동의한 경우 Google Analytics를 통해 이용 현황을 파악합니다.",
+    privacyPolicy: "개인정보 처리방침",
+    rejectOptional: "선택 항목 거부",
+    customize: "설정",
+    acceptAll: "모두 허용",
+    settingsTitle: "쿠키 설정",
+    settingsDescription:
+      "분석 쿠키 허용 여부를 선택할 수 있습니다. 필수 쿠키는 기본 기능과 개인정보 설정 저장에 사용됩니다.",
+    necessaryTitle: "필수 쿠키",
+    necessaryDescription:
+      "웹사이트의 기본 기능과 쿠키 선택 사항 저장에 사용됩니다.",
+    alwaysActive: "항상 활성화",
+    analyticsTitle: "분석 쿠키",
+    analyticsDescription:
+      "Google Analytics를 통해 페이지 방문과 기능 사용 현황을 파악하여 웹사이트를 개선합니다.",
+    saveChoices: "선택 저장",
+    close: "닫기",
+  },
+  ru: {
+    bannerTitle: "Мы ценим вашу конфиденциальность",
+    bannerDescription:
+      "Мы используем необходимые технологии для работы сайта и, с вашего согласия, Google Analytics для анализа его использования.",
+    privacyPolicy: "Политика конфиденциальности",
+    rejectOptional: "Отклонить необязательные",
+    customize: "Настроить",
+    acceptAll: "Принять все",
+    settingsTitle: "Настройки Cookie",
+    settingsDescription:
+      "Вы можете разрешить или запретить аналитические Cookie. Необходимые Cookie поддерживают основные функции и сохраняют ваш выбор.",
+    necessaryTitle: "Необходимые Cookie",
+    necessaryDescription:
+      "Используются для основных функций сайта и сохранения ваших настроек.",
+    alwaysActive: "Всегда активны",
+    analyticsTitle: "Аналитические Cookie",
+    analyticsDescription:
+      "Помогают анализировать посещения и использование функций через Google Analytics.",
+    saveChoices: "Сохранить выбор",
+    close: "Закрыть",
+  },
+};
+
+function getPrivacyPolicyHref(locale: LocaleCode) {
+  if (locale === "zh-CN") {
+    return "/privacy-policy";
+  }
+
+  return `/${locale}/privacy-policy`;
+}
+
+export default function CookieConsent() {
+  const pathname = usePathname();
+  const locale = getLocaleFromPathname(pathname);
+  const copy = copyByLocale[locale];
+
+  const [isReady, setIsReady] = useState(false);
+  const [consent, setConsent] =
+    useState<CookieConsentState | null>(null);
+  const [settingsOpen, setSettingsOpen] =
+    useState(false);
+  const [draftAnalytics, setDraftAnalytics] =
+    useState(false);
+
+  const privacyPolicyHref = useMemo(
+    () => getPrivacyPolicyHref(locale),
+    [locale],
+  );
+
+  useEffect(() => {
+    const storedConsent = readCookieConsent();
+
+    setConsent(storedConsent);
+    setDraftAnalytics(storedConsent?.analytics ?? false);
+    setIsReady(true);
+  }, []);
+
+  useEffect(() => {
+    function handleOpenSettings() {
+      const storedConsent = readCookieConsent();
+
+      setConsent(storedConsent);
+      setDraftAnalytics(storedConsent?.analytics ?? false);
+      setSettingsOpen(true);
+    }
+
+    window.addEventListener(
+      OPEN_COOKIE_SETTINGS_EVENT_NAME,
+      handleOpenSettings,
+    );
+
+    return () => {
+      window.removeEventListener(
+        OPEN_COOKIE_SETTINGS_EVENT_NAME,
+        handleOpenSettings,
+      );
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!settingsOpen) {
+      return;
+    }
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setSettingsOpen(false);
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [settingsOpen]);
+
+  function saveConsent(analytics: boolean) {
+    const nextConsent = writeCookieConsent(analytics);
+
+    if (!analytics) {
+      removeGoogleAnalyticsCookies();
+    }
+
+    setConsent(nextConsent);
+    setDraftAnalytics(analytics);
+    setSettingsOpen(false);
+  }
+
+  function openSettings() {
+    setDraftAnalytics(consent?.analytics ?? false);
+    setSettingsOpen(true);
+  }
+
+  if (!isReady) {
+    return null;
+  }
+
+  const showBanner = !consent && !settingsOpen;
+
+  return (
+    <>
+      {showBanner ? (
+        <section
+          className={styles.banner}
+          aria-label={copy.bannerTitle}
+        >
+          <h2 className={styles.title}>
+            {copy.bannerTitle}
+          </h2>
+
+          <p className={styles.description}>
+            {copy.bannerDescription}{" "}
+            <Link
+              className={styles.policyLink}
+              href={privacyPolicyHref}
+            >
+              {copy.privacyPolicy}
+            </Link>
+          </p>
+
+          <div className={styles.actions}>
+            <button
+              className={`${styles.button} ${styles.buttonSecondary}`}
+              type="button"
+              onClick={() => saveConsent(false)}
+            >
+              {copy.rejectOptional}
+            </button>
+
+            <button
+              className={`${styles.button} ${styles.buttonSecondary}`}
+              type="button"
+              onClick={openSettings}
+            >
+              {copy.customize}
+            </button>
+
+            <button
+              className={`${styles.button} ${styles.buttonPrimary}`}
+              type="button"
+              onClick={() => saveConsent(true)}
+            >
+              {copy.acceptAll}
+            </button>
+          </div>
+        </section>
+      ) : null}
+
+      {settingsOpen ? (
+        <div
+          className={styles.overlay}
+          role="presentation"
+          onMouseDown={(event) => {
+            if (event.target === event.currentTarget) {
+              setSettingsOpen(false);
+            }
+          }}
+        >
+          <section
+            className={styles.dialog}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="foreach-cookie-settings-title"
+          >
+            <header className={styles.dialogHeader}>
+              <h2
+                className={styles.dialogTitle}
+                id="foreach-cookie-settings-title"
+              >
+                {copy.settingsTitle}
+              </h2>
+
+              <button
+                className={styles.closeButton}
+                type="button"
+                aria-label={copy.close}
+                onClick={() => setSettingsOpen(false)}
+              >
+                ×
+              </button>
+            </header>
+
+            <div className={styles.dialogBody}>
+              <p className={styles.intro}>
+                {copy.settingsDescription}{" "}
+                <Link
+                  className={styles.policyLink}
+                  href={privacyPolicyHref}
+                >
+                  {copy.privacyPolicy}
+                </Link>
+              </p>
+
+              <div className={styles.category}>
+                <div>
+                  <h3 className={styles.categoryTitle}>
+                    {copy.necessaryTitle}
+                  </h3>
+
+                  <p className={styles.categoryDescription}>
+                    {copy.necessaryDescription}
+                  </p>
+                </div>
+
+                <span className={styles.alwaysActive}>
+                  {copy.alwaysActive}
+                </span>
+              </div>
+
+              <div className={styles.category}>
+                <div>
+                  <h3 className={styles.categoryTitle}>
+                    {copy.analyticsTitle}
+                  </h3>
+
+                  <p className={styles.categoryDescription}>
+                    {copy.analyticsDescription}
+                  </p>
+                </div>
+
+                <label className={styles.toggle}>
+                  <input
+                    className={styles.toggleInput}
+                    type="checkbox"
+                    checked={draftAnalytics}
+                    aria-label={copy.analyticsTitle}
+                    onChange={(event) =>
+                      setDraftAnalytics(event.target.checked)
+                    }
+                  />
+
+                  <span
+                    className={styles.toggleTrack}
+                    aria-hidden="true"
+                  />
+                </label>
+              </div>
+            </div>
+
+            <footer className={styles.dialogFooter}>
+              <button
+                className={`${styles.button} ${styles.buttonSecondary}`}
+                type="button"
+                onClick={() => saveConsent(false)}
+              >
+                {copy.rejectOptional}
+              </button>
+
+              <button
+                className={`${styles.button} ${styles.buttonSecondary}`}
+                type="button"
+                onClick={() => saveConsent(draftAnalytics)}
+              >
+                {copy.saveChoices}
+              </button>
+
+              <button
+                className={`${styles.button} ${styles.buttonPrimary}`}
+                type="button"
+                onClick={() => saveConsent(true)}
+              >
+                {copy.acceptAll}
+              </button>
+            </footer>
+          </section>
+        </div>
+      ) : null}
+    </>
+  );
+}
+
+
+============================================================
+FILE: components\privacy\CookieConsent.module.css
+============================================================
+
+.banner {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 10000;
+  width: min(520px, calc(100vw - 48px));
+  padding: 24px;
+  border: 1px solid rgba(23, 51, 104, 0.16);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 20px 60px rgba(11, 27, 58, 0.18);
+  color: #173368;
+}
+
+.title {
+  margin: 0;
+  color: #173368;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.description {
+  margin: 12px 0 0;
+  color: #4c5d77;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.policyLink {
+  color: #173368;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.button {
+  min-height: 44px;
+  padding: 10px 18px;
+  border: 1px solid #173368;
+  border-radius: 7px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease;
+}
+
+.buttonSecondary {
+  background: #ffffff;
+  color: #173368;
+}
+
+.buttonSecondary:hover {
+  background: #f1f5f9;
+}
+
+.buttonPrimary {
+  border-color: #09e9b4;
+  background: #09e9b4;
+  color: #173368;
+}
+
+.buttonPrimary:hover {
+  border-color: #19f7c1;
+  background: #19f7c1;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10010;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(7, 18, 42, 0.58);
+}
+
+.dialog {
+  width: min(640px, 100%);
+  max-height: min(760px, calc(100vh - 48px));
+  overflow-y: auto;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 24px 80px rgba(3, 15, 38, 0.28);
+  color: #173368;
+}
+
+.dialogHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 26px 28px 20px;
+  border-bottom: 1px solid #dce4ef;
+}
+
+.dialogTitle {
+  margin: 0;
+  color: #173368;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.closeButton {
+  display: grid;
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #173368;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  background: #f1f5f9;
+}
+
+.dialogBody {
+  padding: 24px 28px;
+}
+
+.intro {
+  margin: 0 0 22px;
+  color: #4c5d77;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.category {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 20px;
+  padding: 20px 0;
+  border-top: 1px solid #e2e8f0;
+}
+
+.category:first-of-type {
+  border-top: 0;
+}
+
+.categoryTitle {
+  margin: 0;
+  color: #173368;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.categoryDescription {
+  margin: 7px 0 0;
+  color: #607089;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.alwaysActive {
+  align-self: center;
+  color: #173368;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.toggle {
+  position: relative;
+  align-self: center;
+  width: 52px;
+  height: 30px;
+}
+
+.toggleInput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.toggleTrack {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: #b8c3d1;
+  cursor: pointer;
+  transition: background-color 160ms ease;
+}
+
+.toggleTrack::after {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ffffff;
+  content: "";
+  transition: transform 160ms ease;
+}
+
+.toggleInput:checked + .toggleTrack {
+  background: #09e9b4;
+}
+
+.toggleInput:checked + .toggleTrack::after {
+  transform: translateX(22px);
+}
+
+.toggleInput:focus-visible + .toggleTrack {
+  outline: 3px solid rgba(9, 233, 180, 0.32);
+  outline-offset: 3px;
+}
+
+.dialogFooter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 20px 28px 26px;
+  border-top: 1px solid #dce4ef;
+}
+
+@media (max-width: 640px) {
+  .banner {
+    right: 12px;
+    bottom: 12px;
+    width: calc(100vw - 24px);
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .overlay {
+    align-items: end;
+    padding: 0;
+  }
+
+  .dialog {
+    width: 100%;
+    max-height: 90vh;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .dialogHeader,
+  .dialogBody,
+  .dialogFooter {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .category {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 14px;
+  }
+
+  .dialogFooter {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+/* Cookie 按钮最终品牌色覆盖 */
+
+/* 拒绝可选项、保存选择：默认白底深蓝字 */
+.buttonSecondary {
+  border-color: #173368 !important;
+  background: #ffffff !important;
+  color: #173368 !important;
+}
+
+/* 拒绝可选项、保存选择：悬停深蓝底荧光字 */
+.buttonSecondary:hover {
+  border-color: #173368 !important;
+  background: #173368 !important;
+  color: #09e9b4 !important;
+}
+
+/* 全部接受：默认深蓝底荧光字 */
+.buttonPrimary {
+  border-color: #173368 !important;
+  background: #173368 !important;
+  color: #09e9b4 !important;
+}
+
+/* 全部接受：悬停荧光底深蓝字 */
+.buttonPrimary:hover {
+  border-color: #09e9b4 !important;
+  background: #09e9b4 !important;
+  color: #173368 !important;
+}
+/* Cookie 关闭按钮最终品牌样式 */
+
+/* 按钮容器 */
+.closeButton {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex: 0 0 auto;
+
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  min-height: 38px;
+
+  margin: 0;
+  padding: 0 !important;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+
+  background: #ffffff;
+  color: #173368;
+
+  /* 隐藏原来的文字 ×，改用伪元素绘制 */
+  font-size: 0 !important;
+  line-height: 0 !important;
+
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    transform 120ms ease;
+}
+
+/* 使用两条线绘制 X，保证严格居中 */
+.closeButton::before,
+.closeButton::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 15px;
+  height: 2px;
+
+  border-radius: 999px;
+  background: currentColor;
+
+  content: "";
+  transform-origin: center;
+  pointer-events: none;
+}
+
+.closeButton::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.closeButton::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* 鼠标悬停：品牌深蓝底 + 荧光色 X */
+.closeButton:hover {
+  border-color: #173368 !important;
+  background: #173368 !important;
+  color: #09e9b4 !important;
+}
+
+/* 键盘操作焦点 */
+.closeButton:focus-visible {
+  border-color: #173368;
+  outline: 3px solid rgba(9, 233, 180, 0.35);
+  outline-offset: 3px;
+}
+
+/* 点击反馈 */
+.closeButton:active {
+  border-color: #173368 !important;
+  background: #173368 !important;
+  color: #09e9b4 !important;
+  transform: translateY(1px);
+}
+
+============================================================
+FILE: lib\privacy\cookie-consent.ts
+============================================================
+
+/* =========================================================
+   lib/privacy/cookie-consent.ts
+   FOREACH 官网 Cookie 同意状态管理
+
+   说明：
+   1. 仅在浏览器中读取和写入同意状态
+   2. 不使用 Next.js 服务端 cookies()
+   3. 同意状态 Cookie 属于维持用户隐私选择所需的必要 Cookie
+   4. 分析权限关闭时，尝试清除 Google Analytics Cookie
+========================================================= */
+
+export const COOKIE_CONSENT_COOKIE_NAME =
+  "foreach_cookie_consent_v1";
+
+export const COOKIE_CONSENT_EVENT_NAME =
+  "foreach:cookie-consent-updated";
+
+export const OPEN_COOKIE_SETTINGS_EVENT_NAME =
+  "foreach:open-cookie-settings";
+
+export type CookieConsentState = {
+  version: 1;
+  analytics: boolean;
+  updatedAt: string;
+};
+
+const COOKIE_MAX_AGE_SECONDS = 60 * 60 * 24 * 180;
+
+function isBrowser() {
+  return typeof window !== "undefined" && typeof document !== "undefined";
+}
+
+export function readCookieConsent(): CookieConsentState | null {
+  if (!isBrowser()) {
+    return null;
+  }
+
+  const cookiePrefix = `${COOKIE_CONSENT_COOKIE_NAME}=`;
+
+  const cookieItem = document.cookie
+    .split(";")
+    .map((item) => item.trim())
+    .find((item) => item.startsWith(cookiePrefix));
+
+  if (!cookieItem) {
+    return null;
+  }
+
+  try {
+    const rawValue = cookieItem.slice(cookiePrefix.length);
+    const parsedValue = JSON.parse(
+      decodeURIComponent(rawValue),
+    ) as Partial<CookieConsentState>;
+
+    if (
+      parsedValue.version !== 1 ||
+      typeof parsedValue.analytics !== "boolean"
+    ) {
+      return null;
+    }
+
+    return {
+      version: 1,
+      analytics: parsedValue.analytics,
+      updatedAt:
+        typeof parsedValue.updatedAt === "string"
+          ? parsedValue.updatedAt
+          : "",
+    };
+  } catch {
+    return null;
+  }
+}
+
+export function writeCookieConsent(
+  analytics: boolean,
+): CookieConsentState {
+  const nextConsent: CookieConsentState = {
+    version: 1,
+    analytics,
+    updatedAt: new Date().toISOString(),
+  };
+
+  if (!isBrowser()) {
+    return nextConsent;
+  }
+
+  const secureAttribute =
+    window.location.protocol === "https:" ? "; Secure" : "";
+
+  document.cookie = [
+    `${COOKIE_CONSENT_COOKIE_NAME}=${encodeURIComponent(
+      JSON.stringify(nextConsent),
+    )}`,
+    "Path=/",
+    `Max-Age=${COOKIE_MAX_AGE_SECONDS}`,
+    "SameSite=Lax",
+    secureAttribute,
+  ]
+    .filter(Boolean)
+    .join("; ");
+
+  window.dispatchEvent(
+    new CustomEvent<CookieConsentState>(
+      COOKIE_CONSENT_EVENT_NAME,
+      {
+        detail: nextConsent,
+      },
+    ),
+  );
+
+  return nextConsent;
+}
+
+function expireCookie(
+  cookieName: string,
+  domain?: string,
+) {
+  if (!isBrowser()) {
+    return;
+  }
+
+  const domainAttribute = domain
+    ? `; Domain=${domain}`
+    : "";
+
+  document.cookie =
+    `${cookieName}=; Path=/; Max-Age=0; SameSite=Lax${domainAttribute}`;
+}
+
+export function removeGoogleAnalyticsCookies() {
+  if (!isBrowser()) {
+    return;
+  }
+
+  const analyticsCookieNames = document.cookie
+    .split(";")
+    .map((item) => item.trim().split("=")[0])
+    .filter(
+      (name) =>
+        name === "_ga" ||
+        name === "_gid" ||
+        name.startsWith("_ga_"),
+    );
+
+  const hostname = window.location.hostname;
+  const domainCandidates = new Set<string | undefined>([
+    undefined,
+    hostname,
+    `.${hostname}`,
+  ]);
+
+  for (const cookieName of analyticsCookieNames) {
+    for (const domain of domainCandidates) {
+      expireCookie(cookieName, domain);
+    }
+  }
+}
+
+export function openCookieSettings() {
+  if (!isBrowser()) {
+    return;
+  }
+
+  window.dispatchEvent(
+    new Event(OPEN_COOKIE_SETTINGS_EVENT_NAME),
+  );
+}
+
+============================================================
+FILE: components\analytics\GoogleAnalytics.tsx
+============================================================
+
+"use client";
+
+import Script from "next/script";
+import { usePathname } from "next/navigation";
+import {
+  useEffect,
+  useRef,
+  useState,
+} from "react";
+
+import {
+  COOKIE_CONSENT_EVENT_NAME,
+  readCookieConsent,
+  type CookieConsentState,
+} from "@/lib/privacy/cookie-consent";
+
+type GtagFunction = (
+  command: string,
+  targetOrAction: string | Date,
+  parameters?: Record<string, unknown>,
+) => void;
+
+declare global {
+  interface Window {
+    dataLayer?: unknown[];
+    gtag?: GtagFunction;
+  }
+}
+
+const measurementId =
+  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() ?? "";
+
+export default function GoogleAnalytics() {
+  const pathname = usePathname();
+
+  const [analyticsAllowed, setAnalyticsAllowed] =
+    useState(false);
+  const [tagReady, setTagReady] = useState(false);
+
+  const configuredRef = useRef(false);
+  const previousPageRef = useRef("");
+
+  useEffect(() => {
+    const storedConsent = readCookieConsent();
+
+    setAnalyticsAllowed(storedConsent?.analytics === true);
+
+    function handleConsentUpdated(event: Event) {
+      const customEvent =
+        event as CustomEvent<CookieConsentState>;
+
+      setAnalyticsAllowed(
+        customEvent.detail?.analytics === true,
+      );
+    }
+
+    window.addEventListener(
+      COOKIE_CONSENT_EVENT_NAME,
+      handleConsentUpdated,
+    );
+
+    return () => {
+      window.removeEventListener(
+        COOKIE_CONSENT_EVENT_NAME,
+        handleConsentUpdated,
+      );
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!measurementId) {
+      return;
+    }
+
+    const disableKey = `ga-disable-${measurementId}`;
+
+    // 使用 Reflect.set 写入 GA4 的动态禁用标识，
+    // 避免 TypeScript 要求 Window 提供字符串索引签名。
+    Reflect.set(
+      window,
+      disableKey,
+      !analyticsAllowed,
+    );
+
+    if (!analyticsAllowed) {
+      configuredRef.current = false;
+      previousPageRef.current = "";
+
+      if (typeof window.gtag === "function") {
+        window.gtag("consent", "update", {
+          analytics_storage: "denied",
+          ad_storage: "denied",
+          ad_user_data: "denied",
+          ad_personalization: "denied",
+        });
+      }
+
+      return;
+    }
+
+    if (typeof window.gtag === "function") {
+      setTagReady(true);
+    }
+  }, [analyticsAllowed]);
+
+  useEffect(() => {
+    if (
+      !analyticsAllowed ||
+      !tagReady ||
+      !measurementId ||
+      typeof window.gtag !== "function"
+    ) {
+      return;
+    }
+
+    if (!configuredRef.current) {
+      window.gtag("consent", "update", {
+        analytics_storage: "granted",
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+      });
+
+      window.gtag("config", measurementId, {
+        send_page_view: false,
+      });
+
+      configuredRef.current = true;
+    }
+
+    const pagePath =
+      pathname +
+      window.location.search +
+      window.location.hash;
+
+    if (previousPageRef.current === pagePath) {
+      return;
+    }
+
+    previousPageRef.current = pagePath;
+
+    const timer = window.setTimeout(() => {
+      if (typeof window.gtag !== "function") {
+        return;
+      }
+
+      window.gtag("event", "page_view", {
+        page_title: document.title,
+        page_location: window.location.href,
+        page_path: pagePath,
+      });
+    }, 0);
+
+    return () => {
+      window.clearTimeout(timer);
+    };
+  }, [analyticsAllowed, pathname, tagReady]);
+
+  if (!analyticsAllowed || !measurementId) {
+    return null;
+  }
+
+  return (
+    <>
+      <Script
+        id="foreach-google-analytics-init"
+        strategy="afterInteractive"
+      >
+        {`
+          window.dataLayer = window.dataLayer || [];
+          window.gtag = window.gtag || function () {
+            window.dataLayer.push(arguments);
+          };
+          window.gtag('js', new Date());
+        `}
+      </Script>
+
+      <Script
+        id="foreach-google-analytics"
+        src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
+        strategy="afterInteractive"
+        onReady={() => setTagReady(true)}
+      />
+    </>
+  );
+}

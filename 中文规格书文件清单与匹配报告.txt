@@ -1,0 +1,141 @@
+﻿中文规格书文件清单与匹配报告
+生成时间：2026-07-16 16:56:10
+
+项目目录：F:\WebsiteProjects\foreach-website-2026
+中文规格书目录：\\192.168.1.4\sales\03-市场管理\M02品牌推广\04_网站\收集产品规格书\中文产品规格书
+中文数据文件：F:\WebsiteProjects\foreach-website-2026\data\resources\datasheets.zh.ts
+
+源目录 PDF 总数：11
+目标产品范围：17
+当前中文页面数据 ID 数：12
+
+说明：
+1. 本次只检查和匹配，没有复制 PDF，也没有修改官网。
+2. 中文页面将与已确认的英文页面保持同一产品范围。
+3. 中文与英文 PDF 独立管理，不因英文存在就自动使用中文文件。
+4. 最终图片将复用产品中心图片，不使用旧的规格书通用缩略图。
+
+============================================================
+
+[1] EA 柱塞泵规格书
+ID：ea-piston-pump
+结果：未找到候选 PDF
+
+[2] EAS 柱塞泵规格书
+ID：eas-piston-pump
+结果：未找到候选 PDF
+
+[3] SM 柱塞泵规格书
+ID：sm-piston-pump
+结果：未找到候选 PDF
+
+[4] RPL-P6.35 / RPL-P15 无阀泵规格书
+ID：rpl-p635-p15-valveless-pump
+候选数量：1
+
+候选 1
+匹配分数：45
+文件名：PS-121B-011_A01_cn_RPL-P6.35系列无阀泵产品规格书.pdf
+相对路径：3.121B-无阀泵\PS-121B-011_A01_cn_RPL-P6.35系列无阀泵产品规格书.pdf
+大小：1.82 MB
+修改时间：2022-03-30 16:41:09
+
+[5] SMTP2 / SMTP4 移液泵规格书
+ID：smtp2-smtp4-pipetting-pump
+结果：未找到候选 PDF
+
+[6] HLD3 旋转阀注射泵规格书
+ID：hld3-syringe-pump
+结果：未找到候选 PDF
+
+[7] HLD6 旋转阀注射泵规格书
+ID：hld6-syringe-pump
+结果：未找到候选 PDF
+
+[8] HMD3 电磁阀注射泵规格书
+ID：hmd3-syringe-pump
+结果：未找到候选 PDF
+
+[9] HMD6 电磁阀注射泵规格书
+ID：hmd6-syringe-pump
+结果：未找到候选 PDF
+
+[10] DPL30 隔膜泵规格书
+ID：dpl30-diaphragm-pump
+结果：未找到候选 PDF
+
+[11] DPL60 隔膜泵规格书
+ID：dpl60-diaphragm-pump
+结果：未找到候选 PDF
+
+[12] MRV3 多通道旋转阀规格书
+ID：mrv3-multi-channel-rotary-valve
+结果：未找到候选 PDF
+
+[13] HP 两位六通带泄压高压阀规格书
+ID：hp-2-position-6-port-high-pressure-valve
+候选数量：2
+
+候选 1
+匹配分数：25
+文件名：PS-120C-2604-00001_A00_cn_HP二位六通带排气高压旋转阀规格书.pdf
+相对路径：1.120C-旋转阀\PS-120C-2604-00001_A00_cn_HP二位六通带排气高压旋转阀规格书.pdf
+大小：0.73 MB
+修改时间：2026-06-04 14:50:50
+
+候选 2
+匹配分数：25
+文件名：PS-120C-007_001_cn_HRV高压阀产品规格书.pdf
+相对路径：1.120C-旋转阀\PS-120C-007_001_cn_HRV高压阀产品规格书.pdf
+大小：0.81 MB
+修改时间：2024-12-26 14:25:41
+
+[14] 6010 电磁阀规格书
+ID：6010-solenoid-valve
+结果：未找到候选 PDF
+
+[15] 连接件与管路产品目录
+ID：fittings-and-tubing-catalog
+候选数量：1
+
+候选 1
+匹配分数：45
+文件名：恒永达连接件及橡塑管产品目录_A02.pdf
+相对路径：恒永达连接件及橡塑管产品目录_A02.pdf
+大小：10.49 MB
+修改时间：2026-07-16 16:55:18
+
+[16] ABD 气泡检测模块规格书
+ID：abd-air-bubble-detector
+结果：未找到候选 PDF
+
+[17] PDM5 压力传感器使用手册
+ID：pdm5-pressure-sensor
+结果：未找到候选 PDF
+
+============================================================
+未匹配到17个目标产品的其他 PDF
+============================================================
+10.120B-柱塞泵\PS-120B-013_001_cn_HaloFlx-SM规格书.pdf
+2.121A-夹管阀\PS-121A-001_A03_cn_PV系列夹管阀规格书.pdf
+6.130B-注射泵\PS-SDRV-001_007_cn_HMD6系列注射泵产品规格书.pdf
+6.130B-注射泵\PS-SDRV-007_003_cn_HMD3注射泵产品规格书.pdf
+7.150B-隔膜泵\PS-150B-2412-00001_A03_cn_DPL30规格书.pdf
+8.110B-传感器\PS-110B-012_003_cn_TDS水质检测模块产品规格书.pdf
+9.120A -电磁阀\PS-120A-003_001_cn_6VMK系列电磁阀规格书.pdf
+
+============================================================
+当前中文页面数据 ID
+============================================================
+plunger-pump
+valveless-pump
+diaphragm-pump
+high-pressure-pump
+syringe-pump
+rotary-valve
+high-pressure-valve
+solenoid-valve
+sample-probe
+tubing-fitting
+pressure-sensor
+bubble-detector

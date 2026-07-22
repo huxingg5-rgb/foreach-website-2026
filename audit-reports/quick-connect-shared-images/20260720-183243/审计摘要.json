@@ -1,0 +1,34 @@
+{
+  "generatedAt": "2026-07-20T10:32:43.665Z",
+  "selectionFile": "data/products/selection/quick-connect-fitting-selection.generated.ts",
+  "totalQuickConnectRecords": 198,
+  "activeRecords": 182,
+  "missingOrPlaceholderRecords": 7,
+  "validImageRecords": 175,
+  "sharedImageGroups": 0,
+  "sameStructureSharedGroups": 0,
+  "differentStructureSharedGroups": 0,
+  "sameStructureRows": 0,
+  "differentStructureCandidateRows": 0,
+  "imageMapSummary": {
+    "exists": true,
+    "parsed": true,
+    "generatedAt": "2026-07-12T17:04:51.609Z",
+    "rawKeys": [
+      "generatedAt",
+      "sourceDirectory",
+      "targetDirectory",
+      "productTypeId",
+      "sourceImageCount",
+      "importedImageCount",
+      "unmatchedImageCount",
+      "unmatchedImages",
+      "items"
+    ]
+  },
+  "existingOfflineHelper": {
+    "exists": true,
+    "importedByClient": false
+  },
+  "sourceHashBefore": "73c9312daa9937298f767d1e2a60578ec101cc51117ee90081ddc6e7ca80eb6d"
+}

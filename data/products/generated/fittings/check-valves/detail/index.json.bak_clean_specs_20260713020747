@@ -1,0 +1,4097 @@
+[
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "check-valves",
+    "productTypeName": "鸭嘴式单向阀",
+    "productTypeLabel": "单向阀",
+    "productId": "126006",
+    "productCode": "126006",
+    "productIds": [
+      "126006"
+    ],
+    "productCodes": [
+      "126006"
+    ],
+    "internalCodes": [
+      "382-12-00029"
+    ],
+    "seriesId": "cv",
+    "seriesName": "鸭嘴式单向阀",
+    "slug": "cv-de-16-pv-n",
+    "model": "CV-DE-16-PV-N",
+    "hasStandardModel": true,
+    "name": "鸭嘴式单向阀",
+    "title": "鸭嘴式单向阀",
+    "displayName": "鸭嘴式单向阀",
+    "productName": "鸭嘴式单向阀",
+    "modelDisplay": "CV-DE-16-PV-N",
+    "displayModel": "CV-DE-16-PV-N",
+    "foreachModel": "CV-DE-16-PV-N",
+    "description": "CV-DE-16-PV-N是一款鸭嘴式单向阀，接口规格为1.6 mm，主体材质为PVDF。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "shortDescription": "CV-DE-16-PV-N是一款鸭嘴式单向阀，接口规格为1.6 mm，主体材质为PVDF。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "heroDescription": "CV-DE-16-PV-N是一款鸭嘴式单向阀，接口规格为1.6 mm，主体材质为PVDF。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "advantages": [
+      "鸭嘴式单向阀",
+      "接口规格 1.6 mm",
+      "PVDF材质",
+      "用于液路防回流"
+    ],
+    "commonApplications": [
+      "泵出口防回流",
+      "试剂液路单向控制",
+      "分析仪器流路方向控制",
+      "液路模块压力保持"
+    ],
+    "mainImage": "/images/logo/foreach-logo-color.svg",
+    "image": "/images/logo/foreach-logo-color.svg",
+    "imagePath": "/images/logo/foreach-logo-color.svg",
+    "imageUrl": "/images/logo/foreach-logo-color.svg",
+    "heroImage": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "additionalImages": [],
+    "images": [],
+    "thumbnails": [],
+    "imageAlt": "CV-DE-16-PV-N 鸭嘴式单向阀",
+    "mainImageAlt": "CV-DE-16-PV-N 鸭嘴式单向阀",
+    "detailMode": "standard_model",
+    "hideModelAction": false,
+    "showConfigurator": false,
+    "showDatasheetRequest": false,
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "drawing2dUrl": "",
+    "drawingPdfUrl": "",
+    "resources": {},
+    "specs": [
+      {
+        "label": "型号",
+        "value": "CV-DE-16-PV-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "126006"
+      },
+      {
+        "label": "料号",
+        "value": "382-12-00029"
+      },
+      {
+        "label": "产品类别",
+        "value": "单向阀"
+      },
+      {
+        "label": "产品结构",
+        "value": "鸭嘴式单向阀"
+      },
+      {
+        "label": "产品系列",
+        "value": "CV"
+      },
+      {
+        "label": "接口规格",
+        "value": "1.6 mm"
+      },
+      {
+        "label": "主体材质",
+        "value": "PVDF"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "CV-DE-16-PV-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "126006"
+      },
+      {
+        "label": "料号",
+        "value": "382-12-00029"
+      },
+      {
+        "label": "产品类别",
+        "value": "单向阀"
+      },
+      {
+        "label": "产品结构",
+        "value": "鸭嘴式单向阀"
+      },
+      {
+        "label": "产品系列",
+        "value": "CV"
+      },
+      {
+        "label": "接口规格",
+        "value": "1.6 mm"
+      },
+      {
+        "label": "主体材质",
+        "value": "PVDF"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specGroups": [
+      {
+        "title": "技术参数",
+        "items": [
+          {
+            "label": "型号",
+            "value": "CV-DE-16-PV-N"
+          },
+          {
+            "label": "商品编码",
+            "value": "126006"
+          },
+          {
+            "label": "料号",
+            "value": "382-12-00029"
+          },
+          {
+            "label": "产品类别",
+            "value": "单向阀"
+          },
+          {
+            "label": "产品结构",
+            "value": "鸭嘴式单向阀"
+          },
+          {
+            "label": "产品系列",
+            "value": "CV"
+          },
+          {
+            "label": "接口规格",
+            "value": "1.6 mm"
+          },
+          {
+            "label": "主体材质",
+            "value": "PVDF"
+          },
+          {
+            "label": "颜色",
+            "value": "本色"
+          }
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "CV-DE-16-PV-N采用什么单向阀结构？",
+        "answer": "该产品为鸭嘴式单向阀。不同结构在开启特性、流量和介质适配方面可能存在差异。"
+      },
+      {
+        "question": "CV-DE-16-PV-N的接口规格是什么？",
+        "answer": "当前记录的接口规格为1.6 mm，装配前还需要确认配套管路尺寸。"
+      },
+      {
+        "question": "单向阀安装时是否需要注意流向？",
+        "answer": "需要。安装时应按照产品标识或图纸确认入口和出口方向，反向安装可能导致液路无法正常工作。"
+      },
+      {
+        "question": "PVDF材质是否适合目标介质？",
+        "answer": "需要结合介质成分、温度、压力、清洁要求和寿命要求综合确认。"
+      },
+      {
+        "question": "CV-DE-16-PV-N是否可以申请二维图纸？",
+        "answer": "可以将当前产品加入清单并添加图纸需求，由工程师根据商品编码和料号核对资料版本。"
+      }
+    ],
+    "faq": [
+      {
+        "question": "CV-DE-16-PV-N采用什么单向阀结构？",
+        "answer": "该产品为鸭嘴式单向阀。不同结构在开启特性、流量和介质适配方面可能存在差异。"
+      },
+      {
+        "question": "CV-DE-16-PV-N的接口规格是什么？",
+        "answer": "当前记录的接口规格为1.6 mm，装配前还需要确认配套管路尺寸。"
+      },
+      {
+        "question": "单向阀安装时是否需要注意流向？",
+        "answer": "需要。安装时应按照产品标识或图纸确认入口和出口方向，反向安装可能导致液路无法正常工作。"
+      },
+      {
+        "question": "PVDF材质是否适合目标介质？",
+        "answer": "需要结合介质成分、温度、压力、清洁要求和寿命要求综合确认。"
+      },
+      {
+        "question": "CV-DE-16-PV-N是否可以申请二维图纸？",
+        "answer": "可以将当前产品加入清单并添加图纸需求，由工程师根据商品编码和料号核对资料版本。"
+      }
+    ],
+    "detailHref": "/products/fittings/check-valves/cv-de-16-pv-n",
+    "href": "/products/fittings/check-valves/cv-de-16-pv-n",
+    "selectionHref": "/products/fittings/filters",
+    "contactHref": "/contact",
+    "bottomCta": {
+      "title": "需要确认单向阀规格？",
+      "description": "提交接口规格、介质、流量、压力、开启条件和安装方向，由工程师协助确认适用产品。",
+      "buttonText": "联系工程师",
+      "href": "/contact"
+    },
+    "seo": {
+      "title": "CV-DE-16-PV-N 鸭嘴式单向阀 | FOREACH",
+      "description": "CV-DE-16-PV-N是一款鸭嘴式单向阀，接口规格为1.6 mm，主体材质为PVDF。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。"
+    },
+    "sectionTitleMap": {
+      "specification": "规格参数",
+      "applications": "常见应用",
+      "faq": "常见问题"
+    },
+    "sourceRows": [
+      24
+    ],
+    "sourceIndex": 24
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "check-valves",
+    "productTypeName": "膜片式单向阀",
+    "productTypeLabel": "单向阀",
+    "productId": "126007",
+    "productCode": "126007",
+    "productIds": [
+      "126007"
+    ],
+    "productCodes": [
+      "126007"
+    ],
+    "internalCodes": [
+      "382-12-00030"
+    ],
+    "seriesId": "cv",
+    "seriesName": "膜片式单向阀",
+    "slug": "cv-bv-32-pp-n",
+    "model": "CV-BV-32-PP-N",
+    "hasStandardModel": true,
+    "name": "膜片式单向阀",
+    "title": "膜片式单向阀",
+    "displayName": "膜片式单向阀",
+    "productName": "膜片式单向阀",
+    "modelDisplay": "CV-BV-32-PP-N",
+    "displayModel": "CV-BV-32-PP-N",
+    "foreachModel": "CV-BV-32-PP-N",
+    "description": "CV-BV-32-PP-N是一款膜片式单向阀，接口规格为3.2 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "shortDescription": "CV-BV-32-PP-N是一款膜片式单向阀，接口规格为3.2 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "heroDescription": "CV-BV-32-PP-N是一款膜片式单向阀，接口规格为3.2 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "advantages": [
+      "膜片式单向阀",
+      "接口规格 3.2 mm",
+      "PP材质",
+      "用于液路防回流"
+    ],
+    "commonApplications": [
+      "泵出口防回流",
+      "试剂液路单向控制",
+      "分析仪器流路方向控制",
+      "液路模块压力保持"
+    ],
+    "mainImage": "/images/logo/foreach-logo-color.svg",
+    "image": "/images/logo/foreach-logo-color.svg",
+    "imagePath": "/images/logo/foreach-logo-color.svg",
+    "imageUrl": "/images/logo/foreach-logo-color.svg",
+    "heroImage": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "additionalImages": [],
+    "images": [],
+    "thumbnails": [],
+    "imageAlt": "CV-BV-32-PP-N 膜片式单向阀",
+    "mainImageAlt": "CV-BV-32-PP-N 膜片式单向阀",
+    "detailMode": "standard_model",
+    "hideModelAction": false,
+    "showConfigurator": false,
+    "showDatasheetRequest": false,
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "drawing2dUrl": "",
+    "drawingPdfUrl": "",
+    "resources": {},
+    "specs": [
+      {
+        "label": "型号",
+        "value": "CV-BV-32-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "126007"
+      },
+      {
+        "label": "料号",
+        "value": "382-12-00030"
+      },
+      {
+        "label": "产品类别",
+        "value": "单向阀"
+      },
+      {
+        "label": "产品结构",
+        "value": "膜片式单向阀"
+      },
+      {
+        "label": "产品系列",
+        "value": "CV"
+      },
+      {
+        "label": "接口规格",
+        "value": "3.2 mm"
+      },
+      {
+        "label": "主体材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      },
+      {
+        "label": "关联型号",
+        "value": "HAX18-PP0"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "CV-BV-32-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "126007"
+      },
+      {
+        "label": "料号",
+        "value": "382-12-00030"
+      },
+      {
+        "label": "产品类别",
+        "value": "单向阀"
+      },
+      {
+        "label": "产品结构",
+        "value": "膜片式单向阀"
+      },
+      {
+        "label": "产品系列",
+        "value": "CV"
+      },
+      {
+        "label": "接口规格",
+        "value": "3.2 mm"
+      },
+      {
+        "label": "主体材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      },
+      {
+        "label": "关联型号",
+        "value": "HAX18-PP0"
+      }
+    ],
+    "specGroups": [
+      {
+        "title": "技术参数",
+        "items": [
+          {
+            "label": "型号",
+            "value": "CV-BV-32-PP-N"
+          },
+          {
+            "label": "商品编码",
+            "value": "126007"
+          },
+          {
+            "label": "料号",
+            "value": "382-12-00030"
+          },
+          {
+            "label": "产品类别",
+            "value": "单向阀"
+          },
+          {
+            "label": "产品结构",
+            "value": "膜片式单向阀"
+          },
+          {
+            "label": "产品系列",
+            "value": "CV"
+          },
+          {
+            "label": "接口规格",
+            "value": "3.2 mm"
+          },
+          {
+            "label": "主体材质",
+            "value": "PP"
+          },
+          {
+            "label": "颜色",
+            "value": "本色"
+          },
+          {
+            "label": "关联型号",
+            "value": "HAX18-PP0"
+          }
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "CV-BV-32-PP-N采用什么单向阀结构？",
+        "answer": "该产品为膜片式单向阀。不同结构在开启特性、流量和介质适配方面可能存在差异。"
+      },
+      {
+        "question": "CV-BV-32-PP-N的接口规格是什么？",
+        "answer": "当前记录的接口规格为3.2 mm，装配前还需要确认配套管路尺寸。"
+      },
+      {
+        "question": "单向阀安装时是否需要注意流向？",
+        "answer": "需要。安装时应按照产品标识或图纸确认入口和出口方向，反向安装可能导致液路无法正常工作。"
+      },
+      {
+        "question": "PP材质是否适合目标介质？",
+        "answer": "需要结合介质成分、温度、压力、清洁要求和寿命要求综合确认。"
+      },
+      {
+        "question": "CV-BV-32-PP-N是否可以申请二维图纸？",
+        "answer": "可以将当前产品加入清单并添加图纸需求，由工程师根据商品编码和料号核对资料版本。"
+      }
+    ],
+    "faq": [
+      {
+        "question": "CV-BV-32-PP-N采用什么单向阀结构？",
+        "answer": "该产品为膜片式单向阀。不同结构在开启特性、流量和介质适配方面可能存在差异。"
+      },
+      {
+        "question": "CV-BV-32-PP-N的接口规格是什么？",
+        "answer": "当前记录的接口规格为3.2 mm，装配前还需要确认配套管路尺寸。"
+      },
+      {
+        "question": "单向阀安装时是否需要注意流向？",
+        "answer": "需要。安装时应按照产品标识或图纸确认入口和出口方向，反向安装可能导致液路无法正常工作。"
+      },
+      {
+        "question": "PP材质是否适合目标介质？",
+        "answer": "需要结合介质成分、温度、压力、清洁要求和寿命要求综合确认。"
+      },
+      {
+        "question": "CV-BV-32-PP-N是否可以申请二维图纸？",
+        "answer": "可以将当前产品加入清单并添加图纸需求，由工程师根据商品编码和料号核对资料版本。"
+      }
+    ],
+    "detailHref": "/products/fittings/check-valves/cv-bv-32-pp-n",
+    "href": "/products/fittings/check-valves/cv-bv-32-pp-n",
+    "selectionHref": "/products/fittings/filters",
+    "contactHref": "/contact",
+    "bottomCta": {
+      "title": "需要确认单向阀规格？",
+      "description": "提交接口规格、介质、流量、压力、开启条件和安装方向，由工程师协助确认适用产品。",
+      "buttonText": "联系工程师",
+      "href": "/contact"
+    },
+    "seo": {
+      "title": "CV-BV-32-PP-N 膜片式单向阀 | FOREACH",
+      "description": "CV-BV-32-PP-N是一款膜片式单向阀，接口规格为3.2 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。"
+    },
+    "sectionTitleMap": {
+      "specification": "规格参数",
+      "applications": "常见应用",
+      "faq": "常见问题"
+    },
+    "sourceRows": [
+      25
+    ],
+    "sourceIndex": 25
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "check-valves",
+    "productTypeName": "膜片式单向阀",
+    "productTypeLabel": "单向阀",
+    "productId": "126009",
+    "productCode": "126009",
+    "productIds": [
+      "126009",
+      "126028"
+    ],
+    "productCodes": [
+      "126009",
+      "126028"
+    ],
+    "internalCodes": [
+      "382-12-00032",
+      "382-12-00053"
+    ],
+    "seriesId": "cv",
+    "seriesName": "膜片式单向阀",
+    "slug": "cv-bv-48-pp-n",
+    "model": "CV-BV-48-PP-N",
+    "hasStandardModel": true,
+    "name": "膜片式单向阀",
+    "title": "膜片式单向阀",
+    "displayName": "膜片式单向阀",
+    "productName": "膜片式单向阀",
+    "modelDisplay": "CV-BV-48-PP-N",
+    "displayModel": "CV-BV-48-PP-N",
+    "foreachModel": "CV-BV-48-PP-N",
+    "description": "CV-BV-48-PP-N是一款膜片式单向阀，接口规格为4.8 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "shortDescription": "CV-BV-48-PP-N是一款膜片式单向阀，接口规格为4.8 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "heroDescription": "CV-BV-48-PP-N是一款膜片式单向阀，接口规格为4.8 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "advantages": [
+      "膜片式单向阀",
+      "接口规格 4.8 mm",
+      "PP材质",
+      "用于液路防回流"
+    ],
+    "commonApplications": [
+      "泵出口防回流",
+      "试剂液路单向控制",
+      "分析仪器流路方向控制",
+      "液路模块压力保持"
+    ],
+    "mainImage": "/images/logo/foreach-logo-color.svg",
+    "image": "/images/logo/foreach-logo-color.svg",
+    "imagePath": "/images/logo/foreach-logo-color.svg",
+    "imageUrl": "/images/logo/foreach-logo-color.svg",
+    "heroImage": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "additionalImages": [],
+    "images": [],
+    "thumbnails": [],
+    "imageAlt": "CV-BV-48-PP-N 膜片式单向阀",
+    "mainImageAlt": "CV-BV-48-PP-N 膜片式单向阀",
+    "detailMode": "standard_model",
+    "hideModelAction": false,
+    "showConfigurator": false,
+    "showDatasheetRequest": false,
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "drawing2dUrl": "",
+    "drawingPdfUrl": "",
+    "resources": {},
+    "specs": [
+      {
+        "label": "型号",
+        "value": "CV-BV-48-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "126009 / 126028"
+      },
+      {
+        "label": "料号",
+        "value": "382-12-00032 / 382-12-00053"
+      },
+      {
+        "label": "产品类别",
+        "value": "单向阀"
+      },
+      {
+        "label": "产品结构",
+        "value": "膜片式单向阀"
+      },
+      {
+        "label": "产品系列",
+        "value": "CV"
+      },
+      {
+        "label": "接口规格",
+        "value": "4.8 mm"
+      },
+      {
+        "label": "主体材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      },
+      {
+        "label": "关联型号",
+        "value": "HAX14-PP0"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "CV-BV-48-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "126009 / 126028"
+      },
+      {
+        "label": "料号",
+        "value": "382-12-00032 / 382-12-00053"
+      },
+      {
+        "label": "产品类别",
+        "value": "单向阀"
+      },
+      {
+        "label": "产品结构",
+        "value": "膜片式单向阀"
+      },
+      {
+        "label": "产品系列",
+        "value": "CV"
+      },
+      {
+        "label": "接口规格",
+        "value": "4.8 mm"
+      },
+      {
+        "label": "主体材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      },
+      {
+        "label": "关联型号",
+        "value": "HAX14-PP0"
+      }
+    ],
+    "specGroups": [
+      {
+        "title": "技术参数",
+        "items": [
+          {
+            "label": "型号",
+            "value": "CV-BV-48-PP-N"
+          },
+          {
+            "label": "商品编码",
+            "value": "126009 / 126028"
+          },
+          {
+            "label": "料号",
+            "value": "382-12-00032 / 382-12-00053"
+          },
+          {
+            "label": "产品类别",
+            "value": "单向阀"
+          },
+          {
+            "label": "产品结构",
+            "value": "膜片式单向阀"
+          },
+          {
+            "label": "产品系列",
+            "value": "CV"
+          },
+          {
+            "label": "接口规格",
+            "value": "4.8 mm"
+          },
+          {
+            "label": "主体材质",
+            "value": "PP"
+          },
+          {
+            "label": "颜色",
+            "value": "本色"
+          },
+          {
+            "label": "关联型号",
+            "value": "HAX14-PP0"
+          }
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "CV-BV-48-PP-N采用什么单向阀结构？",
+        "answer": "该产品为膜片式单向阀。不同结构在开启特性、流量和介质适配方面可能存在差异。"
+      },
+      {
+        "question": "CV-BV-48-PP-N的接口规格是什么？",
+        "answer": "当前记录的接口规格为4.8 mm，装配前还需要确认配套管路尺寸。"
+      },
+      {
+        "question": "单向阀安装时是否需要注意流向？",
+        "answer": "需要。安装时应按照产品标识或图纸确认入口和出口方向，反向安装可能导致液路无法正常工作。"
+      },
+      {
+        "question": "PP材质是否适合目标介质？",
+        "answer": "需要结合介质成分、温度、压力、清洁要求和寿命要求综合确认。"
+      },
+      {
+        "question": "CV-BV-48-PP-N是否可以申请二维图纸？",
+        "answer": "可以将当前产品加入清单并添加图纸需求，由工程师根据商品编码和料号核对资料版本。"
+      }
+    ],
+    "faq": [
+      {
+        "question": "CV-BV-48-PP-N采用什么单向阀结构？",
+        "answer": "该产品为膜片式单向阀。不同结构在开启特性、流量和介质适配方面可能存在差异。"
+      },
+      {
+        "question": "CV-BV-48-PP-N的接口规格是什么？",
+        "answer": "当前记录的接口规格为4.8 mm，装配前还需要确认配套管路尺寸。"
+      },
+      {
+        "question": "单向阀安装时是否需要注意流向？",
+        "answer": "需要。安装时应按照产品标识或图纸确认入口和出口方向，反向安装可能导致液路无法正常工作。"
+      },
+      {
+        "question": "PP材质是否适合目标介质？",
+        "answer": "需要结合介质成分、温度、压力、清洁要求和寿命要求综合确认。"
+      },
+      {
+        "question": "CV-BV-48-PP-N是否可以申请二维图纸？",
+        "answer": "可以将当前产品加入清单并添加图纸需求，由工程师根据商品编码和料号核对资料版本。"
+      }
+    ],
+    "detailHref": "/products/fittings/check-valves/cv-bv-48-pp-n",
+    "href": "/products/fittings/check-valves/cv-bv-48-pp-n",
+    "selectionHref": "/products/fittings/filters",
+    "contactHref": "/contact",
+    "bottomCta": {
+      "title": "需要确认单向阀规格？",
+      "description": "提交接口规格、介质、流量、压力、开启条件和安装方向，由工程师协助确认适用产品。",
+      "buttonText": "联系工程师",
+      "href": "/contact"
+    },
+    "seo": {
+      "title": "CV-BV-48-PP-N 膜片式单向阀 | FOREACH",
+      "description": "CV-BV-48-PP-N是一款膜片式单向阀，接口规格为4.8 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。"
+    },
+    "sectionTitleMap": {
+      "specification": "规格参数",
+      "applications": "常见应用",
+      "faq": "常见问题"
+    },
+    "sourceRows": [
+      26,
+      35
+    ],
+    "sourceIndex": 26
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "check-valves",
+    "productTypeName": "膜片式单向阀",
+    "productTypeLabel": "单向阀",
+    "productId": "126011",
+    "productCode": "126011",
+    "productIds": [
+      "126011"
+    ],
+    "productCodes": [
+      "126011"
+    ],
+    "internalCodes": [
+      "382-12-00034"
+    ],
+    "seriesId": "cv",
+    "seriesName": "膜片式单向阀",
+    "slug": "cv-bv-64-pp-n",
+    "model": "CV-BV-64-PP-N",
+    "hasStandardModel": true,
+    "name": "膜片式单向阀",
+    "title": "膜片式单向阀",
+    "displayName": "膜片式单向阀",
+    "productName": "膜片式单向阀",
+    "modelDisplay": "CV-BV-64-PP-N",
+    "displayModel": "CV-BV-64-PP-N",
+    "foreachModel": "CV-BV-64-PP-N",
+    "description": "CV-BV-64-PP-N是一款膜片式单向阀，接口规格为6.4 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "shortDescription": "CV-BV-64-PP-N是一款膜片式单向阀，接口规格为6.4 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "heroDescription": "CV-BV-64-PP-N是一款膜片式单向阀，接口规格为6.4 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "advantages": [
+      "膜片式单向阀",
+      "接口规格 6.4 mm",
+      "PP材质",
+      "用于液路防回流"
+    ],
+    "commonApplications": [
+      "泵出口防回流",
+      "试剂液路单向控制",
+      "分析仪器流路方向控制",
+      "液路模块压力保持"
+    ],
+    "mainImage": "/images/logo/foreach-logo-color.svg",
+    "image": "/images/logo/foreach-logo-color.svg",
+    "imagePath": "/images/logo/foreach-logo-color.svg",
+    "imageUrl": "/images/logo/foreach-logo-color.svg",
+    "heroImage": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "additionalImages": [],
+    "images": [],
+    "thumbnails": [],
+    "imageAlt": "CV-BV-64-PP-N 膜片式单向阀",
+    "mainImageAlt": "CV-BV-64-PP-N 膜片式单向阀",
+    "detailMode": "standard_model",
+    "hideModelAction": false,
+    "showConfigurator": false,
+    "showDatasheetRequest": false,
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "drawing2dUrl": "",
+    "drawingPdfUrl": "",
+    "resources": {},
+    "specs": [
+      {
+        "label": "型号",
+        "value": "CV-BV-64-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "126011"
+      },
+      {
+        "label": "料号",
+        "value": "382-12-00034"
+      },
+      {
+        "label": "产品类别",
+        "value": "单向阀"
+      },
+      {
+        "label": "产品结构",
+        "value": "膜片式单向阀"
+      },
+      {
+        "label": "产品系列",
+        "value": "CV"
+      },
+      {
+        "label": "接口规格",
+        "value": "6.4 mm"
+      },
+      {
+        "label": "主体材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      },
+      {
+        "label": "关联型号",
+        "value": "HAX24-PP0"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "CV-BV-64-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "126011"
+      },
+      {
+        "label": "料号",
+        "value": "382-12-00034"
+      },
+      {
+        "label": "产品类别",
+        "value": "单向阀"
+      },
+      {
+        "label": "产品结构",
+        "value": "膜片式单向阀"
+      },
+      {
+        "label": "产品系列",
+        "value": "CV"
+      },
+      {
+        "label": "接口规格",
+        "value": "6.4 mm"
+      },
+      {
+        "label": "主体材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      },
+      {
+        "label": "关联型号",
+        "value": "HAX24-PP0"
+      }
+    ],
+    "specGroups": [
+      {
+        "title": "技术参数",
+        "items": [
+          {
+            "label": "型号",
+            "value": "CV-BV-64-PP-N"
+          },
+          {
+            "label": "商品编码",
+            "value": "126011"
+          },
+          {
+            "label": "料号",
+            "value": "382-12-00034"
+          },
+          {
+            "label": "产品类别",
+            "value": "单向阀"
+          },
+          {
+            "label": "产品结构",
+            "value": "膜片式单向阀"
+          },
+          {
+            "label": "产品系列",
+            "value": "CV"
+          },
+          {
+            "label": "接口规格",
+            "value": "6.4 mm"
+          },
+          {
+            "label": "主体材质",
+            "value": "PP"
+          },
+          {
+            "label": "颜色",
+            "value": "本色"
+          },
+          {
+            "label": "关联型号",
+            "value": "HAX24-PP0"
+          }
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "CV-BV-64-PP-N采用什么单向阀结构？",
+        "answer": "该产品为膜片式单向阀。不同结构在开启特性、流量和介质适配方面可能存在差异。"
+      },
+      {
+        "question": "CV-BV-64-PP-N的接口规格是什么？",
+        "answer": "当前记录的接口规格为6.4 mm，装配前还需要确认配套管路尺寸。"
+      },
+      {
+        "question": "单向阀安装时是否需要注意流向？",
+        "answer": "需要。安装时应按照产品标识或图纸确认入口和出口方向，反向安装可能导致液路无法正常工作。"
+      },
+      {
+        "question": "PP材质是否适合目标介质？",
+        "answer": "需要结合介质成分、温度、压力、清洁要求和寿命要求综合确认。"
+      },
+      {
+        "question": "CV-BV-64-PP-N是否可以申请二维图纸？",
+        "answer": "可以将当前产品加入清单并添加图纸需求，由工程师根据商品编码和料号核对资料版本。"
+      }
+    ],
+    "faq": [
+      {
+        "question": "CV-BV-64-PP-N采用什么单向阀结构？",
+        "answer": "该产品为膜片式单向阀。不同结构在开启特性、流量和介质适配方面可能存在差异。"
+      },
+      {
+        "question": "CV-BV-64-PP-N的接口规格是什么？",
+        "answer": "当前记录的接口规格为6.4 mm，装配前还需要确认配套管路尺寸。"
+      },
+      {
+        "question": "单向阀安装时是否需要注意流向？",
+        "answer": "需要。安装时应按照产品标识或图纸确认入口和出口方向，反向安装可能导致液路无法正常工作。"
+      },
+      {
+        "question": "PP材质是否适合目标介质？",
+        "answer": "需要结合介质成分、温度、压力、清洁要求和寿命要求综合确认。"
+      },
+      {
+        "question": "CV-BV-64-PP-N是否可以申请二维图纸？",
+        "answer": "可以将当前产品加入清单并添加图纸需求，由工程师根据商品编码和料号核对资料版本。"
+      }
+    ],
+    "detailHref": "/products/fittings/check-valves/cv-bv-64-pp-n",
+    "href": "/products/fittings/check-valves/cv-bv-64-pp-n",
+    "selectionHref": "/products/fittings/filters",
+    "contactHref": "/contact",
+    "bottomCta": {
+      "title": "需要确认单向阀规格？",
+      "description": "提交接口规格、介质、流量、压力、开启条件和安装方向，由工程师协助确认适用产品。",
+      "buttonText": "联系工程师",
+      "href": "/contact"
+    },
+    "seo": {
+      "title": "CV-BV-64-PP-N 膜片式单向阀 | FOREACH",
+      "description": "CV-BV-64-PP-N是一款膜片式单向阀，接口规格为6.4 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。"
+    },
+    "sectionTitleMap": {
+      "specification": "规格参数",
+      "applications": "常见应用",
+      "faq": "常见问题"
+    },
+    "sourceRows": [
+      27
+    ],
+    "sourceIndex": 27
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "check-valves",
+    "productTypeName": "膜片式单向阀",
+    "productTypeLabel": "单向阀",
+    "productId": "126012",
+    "productCode": "126012",
+    "productIds": [
+      "126012"
+    ],
+    "productCodes": [
+      "126012"
+    ],
+    "internalCodes": [
+      "382-12-00035"
+    ],
+    "seriesId": "cv",
+    "seriesName": "膜片式单向阀",
+    "slug": "cv-be-64-pp-n",
+    "model": "CV-BE-64-PP-N",
+    "hasStandardModel": true,
+    "name": "膜片式单向阀",
+    "title": "膜片式单向阀",
+    "displayName": "膜片式单向阀",
+    "productName": "膜片式单向阀",
+    "modelDisplay": "CV-BE-64-PP-N",
+    "displayModel": "CV-BE-64-PP-N",
+    "foreachModel": "CV-BE-64-PP-N",
+    "description": "CV-BE-64-PP-N是一款膜片式单向阀，接口规格为6.4 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "shortDescription": "CV-BE-64-PP-N是一款膜片式单向阀，接口规格为6.4 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "heroDescription": "CV-BE-64-PP-N是一款膜片式单向阀，接口规格为6.4 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "advantages": [
+      "膜片式单向阀",
+      "接口规格 6.4 mm",
+      "PP材质",
+      "用于液路防回流"
+    ],
+    "commonApplications": [
+      "泵出口防回流",
+      "试剂液路单向控制",
+      "分析仪器流路方向控制",
+      "液路模块压力保持"
+    ],
+    "mainImage": "/images/logo/foreach-logo-color.svg",
+    "image": "/images/logo/foreach-logo-color.svg",
+    "imagePath": "/images/logo/foreach-logo-color.svg",
+    "imageUrl": "/images/logo/foreach-logo-color.svg",
+    "heroImage": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "additionalImages": [],
+    "images": [],
+    "thumbnails": [],
+    "imageAlt": "CV-BE-64-PP-N 膜片式单向阀",
+    "mainImageAlt": "CV-BE-64-PP-N 膜片式单向阀",
+    "detailMode": "standard_model",
+    "hideModelAction": false,
+    "showConfigurator": false,
+    "showDatasheetRequest": false,
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "drawing2dUrl": "",
+    "drawingPdfUrl": "",
+    "resources": {},
+    "specs": [
+      {
+        "label": "型号",
+        "value": "CV-BE-64-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "126012"
+      },
+      {
+        "label": "料号",
+        "value": "382-12-00035"
+      },
+      {
+        "label": "产品类别",
+        "value": "单向阀"
+      },
+      {
+        "label": "产品结构",
+        "value": "膜片式单向阀"
+      },
+      {
+        "label": "产品系列",
+        "value": "CV"
+      },
+      {
+        "label": "接口规格",
+        "value": "6.4 mm"
+      },
+      {
+        "label": "主体材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "CV-BE-64-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "126012"
+      },
+      {
+        "label": "料号",
+        "value": "382-12-00035"
+      },
+      {
+        "label": "产品类别",
+        "value": "单向阀"
+      },
+      {
+        "label": "产品结构",
+        "value": "膜片式单向阀"
+      },
+      {
+        "label": "产品系列",
+        "value": "CV"
+      },
+      {
+        "label": "接口规格",
+        "value": "6.4 mm"
+      },
+      {
+        "label": "主体材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specGroups": [
+      {
+        "title": "技术参数",
+        "items": [
+          {
+            "label": "型号",
+            "value": "CV-BE-64-PP-N"
+          },
+          {
+            "label": "商品编码",
+            "value": "126012"
+          },
+          {
+            "label": "料号",
+            "value": "382-12-00035"
+          },
+          {
+            "label": "产品类别",
+            "value": "单向阀"
+          },
+          {
+            "label": "产品结构",
+            "value": "膜片式单向阀"
+          },
+          {
+            "label": "产品系列",
+            "value": "CV"
+          },
+          {
+            "label": "接口规格",
+            "value": "6.4 mm"
+          },
+          {
+            "label": "主体材质",
+            "value": "PP"
+          },
+          {
+            "label": "颜色",
+            "value": "本色"
+          }
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "CV-BE-64-PP-N采用什么单向阀结构？",
+        "answer": "该产品为膜片式单向阀。不同结构在开启特性、流量和介质适配方面可能存在差异。"
+      },
+      {
+        "question": "CV-BE-64-PP-N的接口规格是什么？",
+        "answer": "当前记录的接口规格为6.4 mm，装配前还需要确认配套管路尺寸。"
+      },
+      {
+        "question": "单向阀安装时是否需要注意流向？",
+        "answer": "需要。安装时应按照产品标识或图纸确认入口和出口方向，反向安装可能导致液路无法正常工作。"
+      },
+      {
+        "question": "PP材质是否适合目标介质？",
+        "answer": "需要结合介质成分、温度、压力、清洁要求和寿命要求综合确认。"
+      },
+      {
+        "question": "CV-BE-64-PP-N是否可以申请二维图纸？",
+        "answer": "可以将当前产品加入清单并添加图纸需求，由工程师根据商品编码和料号核对资料版本。"
+      }
+    ],
+    "faq": [
+      {
+        "question": "CV-BE-64-PP-N采用什么单向阀结构？",
+        "answer": "该产品为膜片式单向阀。不同结构在开启特性、流量和介质适配方面可能存在差异。"
+      },
+      {
+        "question": "CV-BE-64-PP-N的接口规格是什么？",
+        "answer": "当前记录的接口规格为6.4 mm，装配前还需要确认配套管路尺寸。"
+      },
+      {
+        "question": "单向阀安装时是否需要注意流向？",
+        "answer": "需要。安装时应按照产品标识或图纸确认入口和出口方向，反向安装可能导致液路无法正常工作。"
+      },
+      {
+        "question": "PP材质是否适合目标介质？",
+        "answer": "需要结合介质成分、温度、压力、清洁要求和寿命要求综合确认。"
+      },
+      {
+        "question": "CV-BE-64-PP-N是否可以申请二维图纸？",
+        "answer": "可以将当前产品加入清单并添加图纸需求，由工程师根据商品编码和料号核对资料版本。"
+      }
+    ],
+    "detailHref": "/products/fittings/check-valves/cv-be-64-pp-n",
+    "href": "/products/fittings/check-valves/cv-be-64-pp-n",
+    "selectionHref": "/products/fittings/filters",
+    "contactHref": "/contact",
+    "bottomCta": {
+      "title": "需要确认单向阀规格？",
+      "description": "提交接口规格、介质、流量、压力、开启条件和安装方向，由工程师协助确认适用产品。",
+      "buttonText": "联系工程师",
+      "href": "/contact"
+    },
+    "seo": {
+      "title": "CV-BE-64-PP-N 膜片式单向阀 | FOREACH",
+      "description": "CV-BE-64-PP-N是一款膜片式单向阀，接口规格为6.4 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。"
+    },
+    "sectionTitleMap": {
+      "specification": "规格参数",
+      "applications": "常见应用",
+      "faq": "常见问题"
+    },
+    "sourceRows": [
+      28
+    ],
+    "sourceIndex": 28
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "check-valves",
+    "productTypeName": "膜片式单向阀",
+    "productTypeLabel": "单向阀",
+    "productId": "126013",
+    "productCode": "126013",
+    "productIds": [
+      "126013"
+    ],
+    "productCodes": [
+      "126013"
+    ],
+    "internalCodes": [
+      "382-12-00036"
+    ],
+    "seriesId": "cv",
+    "seriesName": "膜片式单向阀",
+    "slug": "cv-bv-79-pp-n",
+    "model": "CV-BV-79-PP-N",
+    "hasStandardModel": true,
+    "name": "膜片式单向阀",
+    "title": "膜片式单向阀",
+    "displayName": "膜片式单向阀",
+    "productName": "膜片式单向阀",
+    "modelDisplay": "CV-BV-79-PP-N",
+    "displayModel": "CV-BV-79-PP-N",
+    "foreachModel": "CV-BV-79-PP-N",
+    "description": "CV-BV-79-PP-N是一款膜片式单向阀，接口规格为7.9 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "shortDescription": "CV-BV-79-PP-N是一款膜片式单向阀，接口规格为7.9 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "heroDescription": "CV-BV-79-PP-N是一款膜片式单向阀，接口规格为7.9 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "advantages": [
+      "膜片式单向阀",
+      "接口规格 7.9 mm",
+      "PP材质",
+      "用于液路防回流"
+    ],
+    "commonApplications": [
+      "泵出口防回流",
+      "试剂液路单向控制",
+      "分析仪器流路方向控制",
+      "液路模块压力保持"
+    ],
+    "mainImage": "/images/logo/foreach-logo-color.svg",
+    "image": "/images/logo/foreach-logo-color.svg",
+    "imagePath": "/images/logo/foreach-logo-color.svg",
+    "imageUrl": "/images/logo/foreach-logo-color.svg",
+    "heroImage": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "additionalImages": [],
+    "images": [],
+    "thumbnails": [],
+    "imageAlt": "CV-BV-79-PP-N 膜片式单向阀",
+    "mainImageAlt": "CV-BV-79-PP-N 膜片式单向阀",
+    "detailMode": "standard_model",
+    "hideModelAction": false,
+    "showConfigurator": false,
+    "showDatasheetRequest": false,
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "drawing2dUrl": "",
+    "drawingPdfUrl": "",
+    "resources": {},
+    "specs": [
+      {
+        "label": "型号",
+        "value": "CV-BV-79-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "126013"
+      },
+      {
+        "label": "料号",
+        "value": "382-12-00036"
+      },
+      {
+        "label": "产品类别",
+        "value": "单向阀"
+      },
+      {
+        "label": "产品结构",
+        "value": "膜片式单向阀"
+      },
+      {
+        "label": "产品系列",
+        "value": "CV"
+      },
+      {
+        "label": "接口规格",
+        "value": "7.9 mm"
+      },
+      {
+        "label": "主体材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "CV-BV-79-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "126013"
+      },
+      {
+        "label": "料号",
+        "value": "382-12-00036"
+      },
+      {
+        "label": "产品类别",
+        "value": "单向阀"
+      },
+      {
+        "label": "产品结构",
+        "value": "膜片式单向阀"
+      },
+      {
+        "label": "产品系列",
+        "value": "CV"
+      },
+      {
+        "label": "接口规格",
+        "value": "7.9 mm"
+      },
+      {
+        "label": "主体材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specGroups": [
+      {
+        "title": "技术参数",
+        "items": [
+          {
+            "label": "型号",
+            "value": "CV-BV-79-PP-N"
+          },
+          {
+            "label": "商品编码",
+            "value": "126013"
+          },
+          {
+            "label": "料号",
+            "value": "382-12-00036"
+          },
+          {
+            "label": "产品类别",
+            "value": "单向阀"
+          },
+          {
+            "label": "产品结构",
+            "value": "膜片式单向阀"
+          },
+          {
+            "label": "产品系列",
+            "value": "CV"
+          },
+          {
+            "label": "接口规格",
+            "value": "7.9 mm"
+          },
+          {
+            "label": "主体材质",
+            "value": "PP"
+          },
+          {
+            "label": "颜色",
+            "value": "本色"
+          }
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "CV-BV-79-PP-N采用什么单向阀结构？",
+        "answer": "该产品为膜片式单向阀。不同结构在开启特性、流量和介质适配方面可能存在差异。"
+      },
+      {
+        "question": "CV-BV-79-PP-N的接口规格是什么？",
+        "answer": "当前记录的接口规格为7.9 mm，装配前还需要确认配套管路尺寸。"
+      },
+      {
+        "question": "单向阀安装时是否需要注意流向？",
+        "answer": "需要。安装时应按照产品标识或图纸确认入口和出口方向，反向安装可能导致液路无法正常工作。"
+      },
+      {
+        "question": "PP材质是否适合目标介质？",
+        "answer": "需要结合介质成分、温度、压力、清洁要求和寿命要求综合确认。"
+      },
+      {
+        "question": "CV-BV-79-PP-N是否可以申请二维图纸？",
+        "answer": "可以将当前产品加入清单并添加图纸需求，由工程师根据商品编码和料号核对资料版本。"
+      }
+    ],
+    "faq": [
+      {
+        "question": "CV-BV-79-PP-N采用什么单向阀结构？",
+        "answer": "该产品为膜片式单向阀。不同结构在开启特性、流量和介质适配方面可能存在差异。"
+      },
+      {
+        "question": "CV-BV-79-PP-N的接口规格是什么？",
+        "answer": "当前记录的接口规格为7.9 mm，装配前还需要确认配套管路尺寸。"
+      },
+      {
+        "question": "单向阀安装时是否需要注意流向？",
+        "answer": "需要。安装时应按照产品标识或图纸确认入口和出口方向，反向安装可能导致液路无法正常工作。"
+      },
+      {
+        "question": "PP材质是否适合目标介质？",
+        "answer": "需要结合介质成分、温度、压力、清洁要求和寿命要求综合确认。"
+      },
+      {
+        "question": "CV-BV-79-PP-N是否可以申请二维图纸？",
+        "answer": "可以将当前产品加入清单并添加图纸需求，由工程师根据商品编码和料号核对资料版本。"
+      }
+    ],
+    "detailHref": "/products/fittings/check-valves/cv-bv-79-pp-n",
+    "href": "/products/fittings/check-valves/cv-bv-79-pp-n",
+    "selectionHref": "/products/fittings/filters",
+    "contactHref": "/contact",
+    "bottomCta": {
+      "title": "需要确认单向阀规格？",
+      "description": "提交接口规格、介质、流量、压力、开启条件和安装方向，由工程师协助确认适用产品。",
+      "buttonText": "联系工程师",
+      "href": "/contact"
+    },
+    "seo": {
+      "title": "CV-BV-79-PP-N 膜片式单向阀 | FOREACH",
+      "description": "CV-BV-79-PP-N是一款膜片式单向阀，接口规格为7.9 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。"
+    },
+    "sectionTitleMap": {
+      "specification": "规格参数",
+      "applications": "常见应用",
+      "faq": "常见问题"
+    },
+    "sourceRows": [
+      29
+    ],
+    "sourceIndex": 29
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "check-valves",
+    "productTypeName": "膜片式单向阀",
+    "productTypeLabel": "单向阀",
+    "productId": "126014",
+    "productCode": "126014",
+    "productIds": [
+      "126014"
+    ],
+    "productCodes": [
+      "126014"
+    ],
+    "internalCodes": [
+      "382-12-00037"
+    ],
+    "seriesId": "cv",
+    "seriesName": "膜片式单向阀",
+    "slug": "cv-be-79-pp-n",
+    "model": "CV-BE-79-PP-N",
+    "hasStandardModel": true,
+    "name": "膜片式单向阀",
+    "title": "膜片式单向阀",
+    "displayName": "膜片式单向阀",
+    "productName": "膜片式单向阀",
+    "modelDisplay": "CV-BE-79-PP-N",
+    "displayModel": "CV-BE-79-PP-N",
+    "foreachModel": "CV-BE-79-PP-N",
+    "description": "CV-BE-79-PP-N是一款膜片式单向阀，接口规格为7.9 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "shortDescription": "CV-BE-79-PP-N是一款膜片式单向阀，接口规格为7.9 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "heroDescription": "CV-BE-79-PP-N是一款膜片式单向阀，接口规格为7.9 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "advantages": [
+      "膜片式单向阀",
+      "接口规格 7.9 mm",
+      "PP材质",
+      "用于液路防回流"
+    ],
+    "commonApplications": [
+      "泵出口防回流",
+      "试剂液路单向控制",
+      "分析仪器流路方向控制",
+      "液路模块压力保持"
+    ],
+    "mainImage": "/images/logo/foreach-logo-color.svg",
+    "image": "/images/logo/foreach-logo-color.svg",
+    "imagePath": "/images/logo/foreach-logo-color.svg",
+    "imageUrl": "/images/logo/foreach-logo-color.svg",
+    "heroImage": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "additionalImages": [],
+    "images": [],
+    "thumbnails": [],
+    "imageAlt": "CV-BE-79-PP-N 膜片式单向阀",
+    "mainImageAlt": "CV-BE-79-PP-N 膜片式单向阀",
+    "detailMode": "standard_model",
+    "hideModelAction": false,
+    "showConfigurator": false,
+    "showDatasheetRequest": false,
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "drawing2dUrl": "",
+    "drawingPdfUrl": "",
+    "resources": {},
+    "specs": [
+      {
+        "label": "型号",
+        "value": "CV-BE-79-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "126014"
+      },
+      {
+        "label": "料号",
+        "value": "382-12-00037"
+      },
+      {
+        "label": "产品类别",
+        "value": "单向阀"
+      },
+      {
+        "label": "产品结构",
+        "value": "膜片式单向阀"
+      },
+      {
+        "label": "产品系列",
+        "value": "CV"
+      },
+      {
+        "label": "接口规格",
+        "value": "7.9 mm"
+      },
+      {
+        "label": "主体材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "CV-BE-79-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "126014"
+      },
+      {
+        "label": "料号",
+        "value": "382-12-00037"
+      },
+      {
+        "label": "产品类别",
+        "value": "单向阀"
+      },
+      {
+        "label": "产品结构",
+        "value": "膜片式单向阀"
+      },
+      {
+        "label": "产品系列",
+        "value": "CV"
+      },
+      {
+        "label": "接口规格",
+        "value": "7.9 mm"
+      },
+      {
+        "label": "主体材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specGroups": [
+      {
+        "title": "技术参数",
+        "items": [
+          {
+            "label": "型号",
+            "value": "CV-BE-79-PP-N"
+          },
+          {
+            "label": "商品编码",
+            "value": "126014"
+          },
+          {
+            "label": "料号",
+            "value": "382-12-00037"
+          },
+          {
+            "label": "产品类别",
+            "value": "单向阀"
+          },
+          {
+            "label": "产品结构",
+            "value": "膜片式单向阀"
+          },
+          {
+            "label": "产品系列",
+            "value": "CV"
+          },
+          {
+            "label": "接口规格",
+            "value": "7.9 mm"
+          },
+          {
+            "label": "主体材质",
+            "value": "PP"
+          },
+          {
+            "label": "颜色",
+            "value": "本色"
+          }
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "CV-BE-79-PP-N采用什么单向阀结构？",
+        "answer": "该产品为膜片式单向阀。不同结构在开启特性、流量和介质适配方面可能存在差异。"
+      },
+      {
+        "question": "CV-BE-79-PP-N的接口规格是什么？",
+        "answer": "当前记录的接口规格为7.9 mm，装配前还需要确认配套管路尺寸。"
+      },
+      {
+        "question": "单向阀安装时是否需要注意流向？",
+        "answer": "需要。安装时应按照产品标识或图纸确认入口和出口方向，反向安装可能导致液路无法正常工作。"
+      },
+      {
+        "question": "PP材质是否适合目标介质？",
+        "answer": "需要结合介质成分、温度、压力、清洁要求和寿命要求综合确认。"
+      },
+      {
+        "question": "CV-BE-79-PP-N是否可以申请二维图纸？",
+        "answer": "可以将当前产品加入清单并添加图纸需求，由工程师根据商品编码和料号核对资料版本。"
+      }
+    ],
+    "faq": [
+      {
+        "question": "CV-BE-79-PP-N采用什么单向阀结构？",
+        "answer": "该产品为膜片式单向阀。不同结构在开启特性、流量和介质适配方面可能存在差异。"
+      },
+      {
+        "question": "CV-BE-79-PP-N的接口规格是什么？",
+        "answer": "当前记录的接口规格为7.9 mm，装配前还需要确认配套管路尺寸。"
+      },
+      {
+        "question": "单向阀安装时是否需要注意流向？",
+        "answer": "需要。安装时应按照产品标识或图纸确认入口和出口方向，反向安装可能导致液路无法正常工作。"
+      },
+      {
+        "question": "PP材质是否适合目标介质？",
+        "answer": "需要结合介质成分、温度、压力、清洁要求和寿命要求综合确认。"
+      },
+      {
+        "question": "CV-BE-79-PP-N是否可以申请二维图纸？",
+        "answer": "可以将当前产品加入清单并添加图纸需求，由工程师根据商品编码和料号核对资料版本。"
+      }
+    ],
+    "detailHref": "/products/fittings/check-valves/cv-be-79-pp-n",
+    "href": "/products/fittings/check-valves/cv-be-79-pp-n",
+    "selectionHref": "/products/fittings/filters",
+    "contactHref": "/contact",
+    "bottomCta": {
+      "title": "需要确认单向阀规格？",
+      "description": "提交接口规格、介质、流量、压力、开启条件和安装方向，由工程师协助确认适用产品。",
+      "buttonText": "联系工程师",
+      "href": "/contact"
+    },
+    "seo": {
+      "title": "CV-BE-79-PP-N 膜片式单向阀 | FOREACH",
+      "description": "CV-BE-79-PP-N是一款膜片式单向阀，接口规格为7.9 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。"
+    },
+    "sectionTitleMap": {
+      "specification": "规格参数",
+      "applications": "常见应用",
+      "faq": "常见问题"
+    },
+    "sourceRows": [
+      30
+    ],
+    "sourceIndex": 30
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "check-valves",
+    "productTypeName": "膜片式单向阀",
+    "productTypeLabel": "单向阀",
+    "productId": "126016",
+    "productCode": "126016",
+    "productIds": [
+      "126016"
+    ],
+    "productCodes": [
+      "126016"
+    ],
+    "internalCodes": [
+      "382-12-00039"
+    ],
+    "seriesId": "cv",
+    "seriesName": "膜片式单向阀",
+    "slug": "cv-be-95-pp-n",
+    "model": "CV-BE-95-PP-N",
+    "hasStandardModel": true,
+    "name": "膜片式单向阀",
+    "title": "膜片式单向阀",
+    "displayName": "膜片式单向阀",
+    "productName": "膜片式单向阀",
+    "modelDisplay": "CV-BE-95-PP-N",
+    "displayModel": "CV-BE-95-PP-N",
+    "foreachModel": "CV-BE-95-PP-N",
+    "description": "CV-BE-95-PP-N是一款膜片式单向阀，接口规格为9.5 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "shortDescription": "CV-BE-95-PP-N是一款膜片式单向阀，接口规格为9.5 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "heroDescription": "CV-BE-95-PP-N是一款膜片式单向阀，接口规格为9.5 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "advantages": [
+      "膜片式单向阀",
+      "接口规格 9.5 mm",
+      "PP材质",
+      "用于液路防回流"
+    ],
+    "commonApplications": [
+      "泵出口防回流",
+      "试剂液路单向控制",
+      "分析仪器流路方向控制",
+      "液路模块压力保持"
+    ],
+    "mainImage": "/images/logo/foreach-logo-color.svg",
+    "image": "/images/logo/foreach-logo-color.svg",
+    "imagePath": "/images/logo/foreach-logo-color.svg",
+    "imageUrl": "/images/logo/foreach-logo-color.svg",
+    "heroImage": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "additionalImages": [],
+    "images": [],
+    "thumbnails": [],
+    "imageAlt": "CV-BE-95-PP-N 膜片式单向阀",
+    "mainImageAlt": "CV-BE-95-PP-N 膜片式单向阀",
+    "detailMode": "standard_model",
+    "hideModelAction": false,
+    "showConfigurator": false,
+    "showDatasheetRequest": false,
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "drawing2dUrl": "",
+    "drawingPdfUrl": "",
+    "resources": {},
+    "specs": [
+      {
+        "label": "型号",
+        "value": "CV-BE-95-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "126016"
+      },
+      {
+        "label": "料号",
+        "value": "382-12-00039"
+      },
+      {
+        "label": "产品类别",
+        "value": "单向阀"
+      },
+      {
+        "label": "产品结构",
+        "value": "膜片式单向阀"
+      },
+      {
+        "label": "产品系列",
+        "value": "CV"
+      },
+      {
+        "label": "接口规格",
+        "value": "9.5 mm"
+      },
+      {
+        "label": "主体材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "CV-BE-95-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "126016"
+      },
+      {
+        "label": "料号",
+        "value": "382-12-00039"
+      },
+      {
+        "label": "产品类别",
+        "value": "单向阀"
+      },
+      {
+        "label": "产品结构",
+        "value": "膜片式单向阀"
+      },
+      {
+        "label": "产品系列",
+        "value": "CV"
+      },
+      {
+        "label": "接口规格",
+        "value": "9.5 mm"
+      },
+      {
+        "label": "主体材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specGroups": [
+      {
+        "title": "技术参数",
+        "items": [
+          {
+            "label": "型号",
+            "value": "CV-BE-95-PP-N"
+          },
+          {
+            "label": "商品编码",
+            "value": "126016"
+          },
+          {
+            "label": "料号",
+            "value": "382-12-00039"
+          },
+          {
+            "label": "产品类别",
+            "value": "单向阀"
+          },
+          {
+            "label": "产品结构",
+            "value": "膜片式单向阀"
+          },
+          {
+            "label": "产品系列",
+            "value": "CV"
+          },
+          {
+            "label": "接口规格",
+            "value": "9.5 mm"
+          },
+          {
+            "label": "主体材质",
+            "value": "PP"
+          },
+          {
+            "label": "颜色",
+            "value": "本色"
+          }
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "CV-BE-95-PP-N采用什么单向阀结构？",
+        "answer": "该产品为膜片式单向阀。不同结构在开启特性、流量和介质适配方面可能存在差异。"
+      },
+      {
+        "question": "CV-BE-95-PP-N的接口规格是什么？",
+        "answer": "当前记录的接口规格为9.5 mm，装配前还需要确认配套管路尺寸。"
+      },
+      {
+        "question": "单向阀安装时是否需要注意流向？",
+        "answer": "需要。安装时应按照产品标识或图纸确认入口和出口方向，反向安装可能导致液路无法正常工作。"
+      },
+      {
+        "question": "PP材质是否适合目标介质？",
+        "answer": "需要结合介质成分、温度、压力、清洁要求和寿命要求综合确认。"
+      },
+      {
+        "question": "CV-BE-95-PP-N是否可以申请二维图纸？",
+        "answer": "可以将当前产品加入清单并添加图纸需求，由工程师根据商品编码和料号核对资料版本。"
+      }
+    ],
+    "faq": [
+      {
+        "question": "CV-BE-95-PP-N采用什么单向阀结构？",
+        "answer": "该产品为膜片式单向阀。不同结构在开启特性、流量和介质适配方面可能存在差异。"
+      },
+      {
+        "question": "CV-BE-95-PP-N的接口规格是什么？",
+        "answer": "当前记录的接口规格为9.5 mm，装配前还需要确认配套管路尺寸。"
+      },
+      {
+        "question": "单向阀安装时是否需要注意流向？",
+        "answer": "需要。安装时应按照产品标识或图纸确认入口和出口方向，反向安装可能导致液路无法正常工作。"
+      },
+      {
+        "question": "PP材质是否适合目标介质？",
+        "answer": "需要结合介质成分、温度、压力、清洁要求和寿命要求综合确认。"
+      },
+      {
+        "question": "CV-BE-95-PP-N是否可以申请二维图纸？",
+        "answer": "可以将当前产品加入清单并添加图纸需求，由工程师根据商品编码和料号核对资料版本。"
+      }
+    ],
+    "detailHref": "/products/fittings/check-valves/cv-be-95-pp-n",
+    "href": "/products/fittings/check-valves/cv-be-95-pp-n",
+    "selectionHref": "/products/fittings/filters",
+    "contactHref": "/contact",
+    "bottomCta": {
+      "title": "需要确认单向阀规格？",
+      "description": "提交接口规格、介质、流量、压力、开启条件和安装方向，由工程师协助确认适用产品。",
+      "buttonText": "联系工程师",
+      "href": "/contact"
+    },
+    "seo": {
+      "title": "CV-BE-95-PP-N 膜片式单向阀 | FOREACH",
+      "description": "CV-BE-95-PP-N是一款膜片式单向阀，接口规格为9.5 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。"
+    },
+    "sectionTitleMap": {
+      "specification": "规格参数",
+      "applications": "常见应用",
+      "faq": "常见问题"
+    },
+    "sourceRows": [
+      31
+    ],
+    "sourceIndex": 31
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "check-valves",
+    "productTypeName": "膜片式单向阀",
+    "productTypeLabel": "单向阀",
+    "productId": "126025",
+    "productCode": "126025",
+    "productIds": [
+      "126025"
+    ],
+    "productCodes": [
+      "126025"
+    ],
+    "internalCodes": [
+      "382-12-00046"
+    ],
+    "seriesId": "cv",
+    "seriesName": "膜片式单向阀",
+    "slug": "cv-bf-16-pv-n",
+    "model": "CV-BF-16-PV-N",
+    "hasStandardModel": true,
+    "name": "膜片式单向阀",
+    "title": "膜片式单向阀",
+    "displayName": "膜片式单向阀",
+    "productName": "膜片式单向阀",
+    "modelDisplay": "CV-BF-16-PV-N",
+    "displayModel": "CV-BF-16-PV-N",
+    "foreachModel": "CV-BF-16-PV-N",
+    "description": "CV-BF-16-PV-N是一款膜片式单向阀，接口规格为1.6 mm，主体材质为PVDF。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "shortDescription": "CV-BF-16-PV-N是一款膜片式单向阀，接口规格为1.6 mm，主体材质为PVDF。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "heroDescription": "CV-BF-16-PV-N是一款膜片式单向阀，接口规格为1.6 mm，主体材质为PVDF。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "advantages": [
+      "膜片式单向阀",
+      "接口规格 1.6 mm",
+      "PVDF材质",
+      "用于液路防回流"
+    ],
+    "commonApplications": [
+      "泵出口防回流",
+      "试剂液路单向控制",
+      "分析仪器流路方向控制",
+      "液路模块压力保持"
+    ],
+    "mainImage": "/images/logo/foreach-logo-color.svg",
+    "image": "/images/logo/foreach-logo-color.svg",
+    "imagePath": "/images/logo/foreach-logo-color.svg",
+    "imageUrl": "/images/logo/foreach-logo-color.svg",
+    "heroImage": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "additionalImages": [],
+    "images": [],
+    "thumbnails": [],
+    "imageAlt": "CV-BF-16-PV-N 膜片式单向阀",
+    "mainImageAlt": "CV-BF-16-PV-N 膜片式单向阀",
+    "detailMode": "standard_model",
+    "hideModelAction": false,
+    "showConfigurator": false,
+    "showDatasheetRequest": false,
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "drawing2dUrl": "",
+    "drawingPdfUrl": "",
+    "resources": {},
+    "specs": [
+      {
+        "label": "型号",
+        "value": "CV-BF-16-PV-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "126025"
+      },
+      {
+        "label": "料号",
+        "value": "382-12-00046"
+      },
+      {
+        "label": "产品类别",
+        "value": "单向阀"
+      },
+      {
+        "label": "产品结构",
+        "value": "膜片式单向阀"
+      },
+      {
+        "label": "产品系列",
+        "value": "CV"
+      },
+      {
+        "label": "接口规格",
+        "value": "1.6 mm"
+      },
+      {
+        "label": "主体材质",
+        "value": "PVDF"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "CV-BF-16-PV-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "126025"
+      },
+      {
+        "label": "料号",
+        "value": "382-12-00046"
+      },
+      {
+        "label": "产品类别",
+        "value": "单向阀"
+      },
+      {
+        "label": "产品结构",
+        "value": "膜片式单向阀"
+      },
+      {
+        "label": "产品系列",
+        "value": "CV"
+      },
+      {
+        "label": "接口规格",
+        "value": "1.6 mm"
+      },
+      {
+        "label": "主体材质",
+        "value": "PVDF"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specGroups": [
+      {
+        "title": "技术参数",
+        "items": [
+          {
+            "label": "型号",
+            "value": "CV-BF-16-PV-N"
+          },
+          {
+            "label": "商品编码",
+            "value": "126025"
+          },
+          {
+            "label": "料号",
+            "value": "382-12-00046"
+          },
+          {
+            "label": "产品类别",
+            "value": "单向阀"
+          },
+          {
+            "label": "产品结构",
+            "value": "膜片式单向阀"
+          },
+          {
+            "label": "产品系列",
+            "value": "CV"
+          },
+          {
+            "label": "接口规格",
+            "value": "1.6 mm"
+          },
+          {
+            "label": "主体材质",
+            "value": "PVDF"
+          },
+          {
+            "label": "颜色",
+            "value": "本色"
+          }
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "CV-BF-16-PV-N采用什么单向阀结构？",
+        "answer": "该产品为膜片式单向阀。不同结构在开启特性、流量和介质适配方面可能存在差异。"
+      },
+      {
+        "question": "CV-BF-16-PV-N的接口规格是什么？",
+        "answer": "当前记录的接口规格为1.6 mm，装配前还需要确认配套管路尺寸。"
+      },
+      {
+        "question": "单向阀安装时是否需要注意流向？",
+        "answer": "需要。安装时应按照产品标识或图纸确认入口和出口方向，反向安装可能导致液路无法正常工作。"
+      },
+      {
+        "question": "PVDF材质是否适合目标介质？",
+        "answer": "需要结合介质成分、温度、压力、清洁要求和寿命要求综合确认。"
+      },
+      {
+        "question": "CV-BF-16-PV-N是否可以申请二维图纸？",
+        "answer": "可以将当前产品加入清单并添加图纸需求，由工程师根据商品编码和料号核对资料版本。"
+      }
+    ],
+    "faq": [
+      {
+        "question": "CV-BF-16-PV-N采用什么单向阀结构？",
+        "answer": "该产品为膜片式单向阀。不同结构在开启特性、流量和介质适配方面可能存在差异。"
+      },
+      {
+        "question": "CV-BF-16-PV-N的接口规格是什么？",
+        "answer": "当前记录的接口规格为1.6 mm，装配前还需要确认配套管路尺寸。"
+      },
+      {
+        "question": "单向阀安装时是否需要注意流向？",
+        "answer": "需要。安装时应按照产品标识或图纸确认入口和出口方向，反向安装可能导致液路无法正常工作。"
+      },
+      {
+        "question": "PVDF材质是否适合目标介质？",
+        "answer": "需要结合介质成分、温度、压力、清洁要求和寿命要求综合确认。"
+      },
+      {
+        "question": "CV-BF-16-PV-N是否可以申请二维图纸？",
+        "answer": "可以将当前产品加入清单并添加图纸需求，由工程师根据商品编码和料号核对资料版本。"
+      }
+    ],
+    "detailHref": "/products/fittings/check-valves/cv-bf-16-pv-n",
+    "href": "/products/fittings/check-valves/cv-bf-16-pv-n",
+    "selectionHref": "/products/fittings/filters",
+    "contactHref": "/contact",
+    "bottomCta": {
+      "title": "需要确认单向阀规格？",
+      "description": "提交接口规格、介质、流量、压力、开启条件和安装方向，由工程师协助确认适用产品。",
+      "buttonText": "联系工程师",
+      "href": "/contact"
+    },
+    "seo": {
+      "title": "CV-BF-16-PV-N 膜片式单向阀 | FOREACH",
+      "description": "CV-BF-16-PV-N是一款膜片式单向阀，接口规格为1.6 mm，主体材质为PVDF。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。"
+    },
+    "sectionTitleMap": {
+      "specification": "规格参数",
+      "applications": "常见应用",
+      "faq": "常见问题"
+    },
+    "sourceRows": [
+      32
+    ],
+    "sourceIndex": 32
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "check-valves",
+    "productTypeName": "鸭嘴式单向阀",
+    "productTypeLabel": "单向阀",
+    "productId": "126026",
+    "productCode": "126026",
+    "productIds": [
+      "126026"
+    ],
+    "productCodes": [
+      "126026"
+    ],
+    "internalCodes": [
+      "382-12-00051"
+    ],
+    "seriesId": "cv",
+    "seriesName": "鸭嘴式单向阀",
+    "slug": "cv-de-24-pv-n",
+    "model": "CV-DE-24-PV-N",
+    "hasStandardModel": true,
+    "name": "鸭嘴式单向阀",
+    "title": "鸭嘴式单向阀",
+    "displayName": "鸭嘴式单向阀",
+    "productName": "鸭嘴式单向阀",
+    "modelDisplay": "CV-DE-24-PV-N",
+    "displayModel": "CV-DE-24-PV-N",
+    "foreachModel": "CV-DE-24-PV-N",
+    "description": "CV-DE-24-PV-N是一款鸭嘴式单向阀，接口规格为2.4 mm，主体材质为PVDF。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "shortDescription": "CV-DE-24-PV-N是一款鸭嘴式单向阀，接口规格为2.4 mm，主体材质为PVDF。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "heroDescription": "CV-DE-24-PV-N是一款鸭嘴式单向阀，接口规格为2.4 mm，主体材质为PVDF。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "advantages": [
+      "鸭嘴式单向阀",
+      "接口规格 2.4 mm",
+      "PVDF材质",
+      "用于液路防回流"
+    ],
+    "commonApplications": [
+      "泵出口防回流",
+      "试剂液路单向控制",
+      "分析仪器流路方向控制",
+      "液路模块压力保持"
+    ],
+    "mainImage": "/images/logo/foreach-logo-color.svg",
+    "image": "/images/logo/foreach-logo-color.svg",
+    "imagePath": "/images/logo/foreach-logo-color.svg",
+    "imageUrl": "/images/logo/foreach-logo-color.svg",
+    "heroImage": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "additionalImages": [],
+    "images": [],
+    "thumbnails": [],
+    "imageAlt": "CV-DE-24-PV-N 鸭嘴式单向阀",
+    "mainImageAlt": "CV-DE-24-PV-N 鸭嘴式单向阀",
+    "detailMode": "standard_model",
+    "hideModelAction": false,
+    "showConfigurator": false,
+    "showDatasheetRequest": false,
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "drawing2dUrl": "",
+    "drawingPdfUrl": "",
+    "resources": {},
+    "specs": [
+      {
+        "label": "型号",
+        "value": "CV-DE-24-PV-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "126026"
+      },
+      {
+        "label": "料号",
+        "value": "382-12-00051"
+      },
+      {
+        "label": "产品类别",
+        "value": "单向阀"
+      },
+      {
+        "label": "产品结构",
+        "value": "鸭嘴式单向阀"
+      },
+      {
+        "label": "产品系列",
+        "value": "CV"
+      },
+      {
+        "label": "接口规格",
+        "value": "2.4 mm"
+      },
+      {
+        "label": "主体材质",
+        "value": "PVDF"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "CV-DE-24-PV-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "126026"
+      },
+      {
+        "label": "料号",
+        "value": "382-12-00051"
+      },
+      {
+        "label": "产品类别",
+        "value": "单向阀"
+      },
+      {
+        "label": "产品结构",
+        "value": "鸭嘴式单向阀"
+      },
+      {
+        "label": "产品系列",
+        "value": "CV"
+      },
+      {
+        "label": "接口规格",
+        "value": "2.4 mm"
+      },
+      {
+        "label": "主体材质",
+        "value": "PVDF"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specGroups": [
+      {
+        "title": "技术参数",
+        "items": [
+          {
+            "label": "型号",
+            "value": "CV-DE-24-PV-N"
+          },
+          {
+            "label": "商品编码",
+            "value": "126026"
+          },
+          {
+            "label": "料号",
+            "value": "382-12-00051"
+          },
+          {
+            "label": "产品类别",
+            "value": "单向阀"
+          },
+          {
+            "label": "产品结构",
+            "value": "鸭嘴式单向阀"
+          },
+          {
+            "label": "产品系列",
+            "value": "CV"
+          },
+          {
+            "label": "接口规格",
+            "value": "2.4 mm"
+          },
+          {
+            "label": "主体材质",
+            "value": "PVDF"
+          },
+          {
+            "label": "颜色",
+            "value": "本色"
+          }
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "CV-DE-24-PV-N采用什么单向阀结构？",
+        "answer": "该产品为鸭嘴式单向阀。不同结构在开启特性、流量和介质适配方面可能存在差异。"
+      },
+      {
+        "question": "CV-DE-24-PV-N的接口规格是什么？",
+        "answer": "当前记录的接口规格为2.4 mm，装配前还需要确认配套管路尺寸。"
+      },
+      {
+        "question": "单向阀安装时是否需要注意流向？",
+        "answer": "需要。安装时应按照产品标识或图纸确认入口和出口方向，反向安装可能导致液路无法正常工作。"
+      },
+      {
+        "question": "PVDF材质是否适合目标介质？",
+        "answer": "需要结合介质成分、温度、压力、清洁要求和寿命要求综合确认。"
+      },
+      {
+        "question": "CV-DE-24-PV-N是否可以申请二维图纸？",
+        "answer": "可以将当前产品加入清单并添加图纸需求，由工程师根据商品编码和料号核对资料版本。"
+      }
+    ],
+    "faq": [
+      {
+        "question": "CV-DE-24-PV-N采用什么单向阀结构？",
+        "answer": "该产品为鸭嘴式单向阀。不同结构在开启特性、流量和介质适配方面可能存在差异。"
+      },
+      {
+        "question": "CV-DE-24-PV-N的接口规格是什么？",
+        "answer": "当前记录的接口规格为2.4 mm，装配前还需要确认配套管路尺寸。"
+      },
+      {
+        "question": "单向阀安装时是否需要注意流向？",
+        "answer": "需要。安装时应按照产品标识或图纸确认入口和出口方向，反向安装可能导致液路无法正常工作。"
+      },
+      {
+        "question": "PVDF材质是否适合目标介质？",
+        "answer": "需要结合介质成分、温度、压力、清洁要求和寿命要求综合确认。"
+      },
+      {
+        "question": "CV-DE-24-PV-N是否可以申请二维图纸？",
+        "answer": "可以将当前产品加入清单并添加图纸需求，由工程师根据商品编码和料号核对资料版本。"
+      }
+    ],
+    "detailHref": "/products/fittings/check-valves/cv-de-24-pv-n",
+    "href": "/products/fittings/check-valves/cv-de-24-pv-n",
+    "selectionHref": "/products/fittings/filters",
+    "contactHref": "/contact",
+    "bottomCta": {
+      "title": "需要确认单向阀规格？",
+      "description": "提交接口规格、介质、流量、压力、开启条件和安装方向，由工程师协助确认适用产品。",
+      "buttonText": "联系工程师",
+      "href": "/contact"
+    },
+    "seo": {
+      "title": "CV-DE-24-PV-N 鸭嘴式单向阀 | FOREACH",
+      "description": "CV-DE-24-PV-N是一款鸭嘴式单向阀，接口规格为2.4 mm，主体材质为PVDF。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。"
+    },
+    "sectionTitleMap": {
+      "specification": "规格参数",
+      "applications": "常见应用",
+      "faq": "常见问题"
+    },
+    "sourceRows": [
+      33
+    ],
+    "sourceIndex": 33
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "check-valves",
+    "productTypeName": "鸭嘴式单向阀",
+    "productTypeLabel": "单向阀",
+    "productId": "126027",
+    "productCode": "126027",
+    "productIds": [
+      "126027"
+    ],
+    "productCodes": [
+      "126027"
+    ],
+    "internalCodes": [
+      "382-12-00052"
+    ],
+    "seriesId": "cv",
+    "seriesName": "鸭嘴式单向阀",
+    "slug": "cv-de-32-pv-n",
+    "model": "CV-DE-32-PV-N",
+    "hasStandardModel": true,
+    "name": "鸭嘴式单向阀",
+    "title": "鸭嘴式单向阀",
+    "displayName": "鸭嘴式单向阀",
+    "productName": "鸭嘴式单向阀",
+    "modelDisplay": "CV-DE-32-PV-N",
+    "displayModel": "CV-DE-32-PV-N",
+    "foreachModel": "CV-DE-32-PV-N",
+    "description": "CV-DE-32-PV-N是一款鸭嘴式单向阀，接口规格为3.2 mm，主体材质为PVDF。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "shortDescription": "CV-DE-32-PV-N是一款鸭嘴式单向阀，接口规格为3.2 mm，主体材质为PVDF。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "heroDescription": "CV-DE-32-PV-N是一款鸭嘴式单向阀，接口规格为3.2 mm，主体材质为PVDF。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "advantages": [
+      "鸭嘴式单向阀",
+      "接口规格 3.2 mm",
+      "PVDF材质",
+      "用于液路防回流"
+    ],
+    "commonApplications": [
+      "泵出口防回流",
+      "试剂液路单向控制",
+      "分析仪器流路方向控制",
+      "液路模块压力保持"
+    ],
+    "mainImage": "/images/logo/foreach-logo-color.svg",
+    "image": "/images/logo/foreach-logo-color.svg",
+    "imagePath": "/images/logo/foreach-logo-color.svg",
+    "imageUrl": "/images/logo/foreach-logo-color.svg",
+    "heroImage": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "additionalImages": [],
+    "images": [],
+    "thumbnails": [],
+    "imageAlt": "CV-DE-32-PV-N 鸭嘴式单向阀",
+    "mainImageAlt": "CV-DE-32-PV-N 鸭嘴式单向阀",
+    "detailMode": "standard_model",
+    "hideModelAction": false,
+    "showConfigurator": false,
+    "showDatasheetRequest": false,
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "drawing2dUrl": "",
+    "drawingPdfUrl": "",
+    "resources": {},
+    "specs": [
+      {
+        "label": "型号",
+        "value": "CV-DE-32-PV-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "126027"
+      },
+      {
+        "label": "料号",
+        "value": "382-12-00052"
+      },
+      {
+        "label": "产品类别",
+        "value": "单向阀"
+      },
+      {
+        "label": "产品结构",
+        "value": "鸭嘴式单向阀"
+      },
+      {
+        "label": "产品系列",
+        "value": "CV"
+      },
+      {
+        "label": "接口规格",
+        "value": "3.2 mm"
+      },
+      {
+        "label": "主体材质",
+        "value": "PVDF"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "CV-DE-32-PV-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "126027"
+      },
+      {
+        "label": "料号",
+        "value": "382-12-00052"
+      },
+      {
+        "label": "产品类别",
+        "value": "单向阀"
+      },
+      {
+        "label": "产品结构",
+        "value": "鸭嘴式单向阀"
+      },
+      {
+        "label": "产品系列",
+        "value": "CV"
+      },
+      {
+        "label": "接口规格",
+        "value": "3.2 mm"
+      },
+      {
+        "label": "主体材质",
+        "value": "PVDF"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specGroups": [
+      {
+        "title": "技术参数",
+        "items": [
+          {
+            "label": "型号",
+            "value": "CV-DE-32-PV-N"
+          },
+          {
+            "label": "商品编码",
+            "value": "126027"
+          },
+          {
+            "label": "料号",
+            "value": "382-12-00052"
+          },
+          {
+            "label": "产品类别",
+            "value": "单向阀"
+          },
+          {
+            "label": "产品结构",
+            "value": "鸭嘴式单向阀"
+          },
+          {
+            "label": "产品系列",
+            "value": "CV"
+          },
+          {
+            "label": "接口规格",
+            "value": "3.2 mm"
+          },
+          {
+            "label": "主体材质",
+            "value": "PVDF"
+          },
+          {
+            "label": "颜色",
+            "value": "本色"
+          }
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "CV-DE-32-PV-N采用什么单向阀结构？",
+        "answer": "该产品为鸭嘴式单向阀。不同结构在开启特性、流量和介质适配方面可能存在差异。"
+      },
+      {
+        "question": "CV-DE-32-PV-N的接口规格是什么？",
+        "answer": "当前记录的接口规格为3.2 mm，装配前还需要确认配套管路尺寸。"
+      },
+      {
+        "question": "单向阀安装时是否需要注意流向？",
+        "answer": "需要。安装时应按照产品标识或图纸确认入口和出口方向，反向安装可能导致液路无法正常工作。"
+      },
+      {
+        "question": "PVDF材质是否适合目标介质？",
+        "answer": "需要结合介质成分、温度、压力、清洁要求和寿命要求综合确认。"
+      },
+      {
+        "question": "CV-DE-32-PV-N是否可以申请二维图纸？",
+        "answer": "可以将当前产品加入清单并添加图纸需求，由工程师根据商品编码和料号核对资料版本。"
+      }
+    ],
+    "faq": [
+      {
+        "question": "CV-DE-32-PV-N采用什么单向阀结构？",
+        "answer": "该产品为鸭嘴式单向阀。不同结构在开启特性、流量和介质适配方面可能存在差异。"
+      },
+      {
+        "question": "CV-DE-32-PV-N的接口规格是什么？",
+        "answer": "当前记录的接口规格为3.2 mm，装配前还需要确认配套管路尺寸。"
+      },
+      {
+        "question": "单向阀安装时是否需要注意流向？",
+        "answer": "需要。安装时应按照产品标识或图纸确认入口和出口方向，反向安装可能导致液路无法正常工作。"
+      },
+      {
+        "question": "PVDF材质是否适合目标介质？",
+        "answer": "需要结合介质成分、温度、压力、清洁要求和寿命要求综合确认。"
+      },
+      {
+        "question": "CV-DE-32-PV-N是否可以申请二维图纸？",
+        "answer": "可以将当前产品加入清单并添加图纸需求，由工程师根据商品编码和料号核对资料版本。"
+      }
+    ],
+    "detailHref": "/products/fittings/check-valves/cv-de-32-pv-n",
+    "href": "/products/fittings/check-valves/cv-de-32-pv-n",
+    "selectionHref": "/products/fittings/filters",
+    "contactHref": "/contact",
+    "bottomCta": {
+      "title": "需要确认单向阀规格？",
+      "description": "提交接口规格、介质、流量、压力、开启条件和安装方向，由工程师协助确认适用产品。",
+      "buttonText": "联系工程师",
+      "href": "/contact"
+    },
+    "seo": {
+      "title": "CV-DE-32-PV-N 鸭嘴式单向阀 | FOREACH",
+      "description": "CV-DE-32-PV-N是一款鸭嘴式单向阀，接口规格为3.2 mm，主体材质为PVDF。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。"
+    },
+    "sectionTitleMap": {
+      "specification": "规格参数",
+      "applications": "常见应用",
+      "faq": "常见问题"
+    },
+    "sourceRows": [
+      34
+    ],
+    "sourceIndex": 34
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "check-valves",
+    "productTypeName": "膜片式单向阀",
+    "productTypeLabel": "单向阀",
+    "productId": "129001",
+    "productCode": "129001",
+    "productIds": [
+      "129001"
+    ],
+    "productCodes": [
+      "129001"
+    ],
+    "internalCodes": [
+      "443-02-00281"
+    ],
+    "seriesId": "cv",
+    "seriesName": "膜片式单向阀",
+    "slug": "cv-be-32-pp-n",
+    "model": "CV-BE-32-PP-N",
+    "hasStandardModel": true,
+    "name": "膜片式单向阀",
+    "title": "膜片式单向阀",
+    "displayName": "膜片式单向阀",
+    "productName": "膜片式单向阀",
+    "modelDisplay": "CV-BE-32-PP-N",
+    "displayModel": "CV-BE-32-PP-N",
+    "foreachModel": "CV-BE-32-PP-N",
+    "description": "CV-BE-32-PP-N是一款膜片式单向阀，接口规格为3.2 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "shortDescription": "CV-BE-32-PP-N是一款膜片式单向阀，接口规格为3.2 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "heroDescription": "CV-BE-32-PP-N是一款膜片式单向阀，接口规格为3.2 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "advantages": [
+      "膜片式单向阀",
+      "接口规格 3.2 mm",
+      "PP材质",
+      "用于液路防回流"
+    ],
+    "commonApplications": [
+      "泵出口防回流",
+      "试剂液路单向控制",
+      "分析仪器流路方向控制",
+      "液路模块压力保持"
+    ],
+    "mainImage": "/images/products/fittings/check-valves/products/cv-be-32-pp-n-main.jpg",
+    "image": "/images/products/fittings/check-valves/products/cv-be-32-pp-n-main.jpg",
+    "imagePath": "/images/products/fittings/check-valves/products/cv-be-32-pp-n-main.jpg",
+    "imageUrl": "/images/products/fittings/check-valves/products/cv-be-32-pp-n-main.jpg",
+    "heroImage": "/images/products/fittings/check-valves/products/cv-be-32-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/check-valves/products/cv-be-32-pp-n-main.jpg",
+    "additionalImages": [],
+    "images": [],
+    "thumbnails": [],
+    "imageAlt": "CV-BE-32-PP-N 膜片式单向阀",
+    "mainImageAlt": "CV-BE-32-PP-N 膜片式单向阀",
+    "detailMode": "standard_model",
+    "hideModelAction": false,
+    "showConfigurator": false,
+    "showDatasheetRequest": false,
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "drawing2dUrl": "/resources/drawings/fittings/check-valves/cv-be-32-pp-n-443-02-00281-drawing.pdf",
+    "drawingPdfUrl": "/resources/drawings/fittings/check-valves/cv-be-32-pp-n-443-02-00281-drawing.pdf",
+    "resources": {
+      "drawings": [
+        {
+          "label": "二维图纸 443-02-00281",
+          "href": "/resources/drawings/fittings/check-valves/cv-be-32-pp-n-443-02-00281-drawing.pdf"
+        }
+      ]
+    },
+    "specs": [
+      {
+        "label": "型号",
+        "value": "CV-BE-32-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "129001"
+      },
+      {
+        "label": "料号",
+        "value": "443-02-00281"
+      },
+      {
+        "label": "产品类别",
+        "value": "单向阀"
+      },
+      {
+        "label": "产品结构",
+        "value": "膜片式单向阀"
+      },
+      {
+        "label": "产品系列",
+        "value": "CV"
+      },
+      {
+        "label": "接口规格",
+        "value": "3.2 mm"
+      },
+      {
+        "label": "主体材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "CV-BE-32-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "129001"
+      },
+      {
+        "label": "料号",
+        "value": "443-02-00281"
+      },
+      {
+        "label": "产品类别",
+        "value": "单向阀"
+      },
+      {
+        "label": "产品结构",
+        "value": "膜片式单向阀"
+      },
+      {
+        "label": "产品系列",
+        "value": "CV"
+      },
+      {
+        "label": "接口规格",
+        "value": "3.2 mm"
+      },
+      {
+        "label": "主体材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specGroups": [
+      {
+        "title": "技术参数",
+        "items": [
+          {
+            "label": "型号",
+            "value": "CV-BE-32-PP-N"
+          },
+          {
+            "label": "商品编码",
+            "value": "129001"
+          },
+          {
+            "label": "料号",
+            "value": "443-02-00281"
+          },
+          {
+            "label": "产品类别",
+            "value": "单向阀"
+          },
+          {
+            "label": "产品结构",
+            "value": "膜片式单向阀"
+          },
+          {
+            "label": "产品系列",
+            "value": "CV"
+          },
+          {
+            "label": "接口规格",
+            "value": "3.2 mm"
+          },
+          {
+            "label": "主体材质",
+            "value": "PP"
+          },
+          {
+            "label": "颜色",
+            "value": "本色"
+          }
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "CV-BE-32-PP-N采用什么单向阀结构？",
+        "answer": "该产品为膜片式单向阀。不同结构在开启特性、流量和介质适配方面可能存在差异。"
+      },
+      {
+        "question": "CV-BE-32-PP-N的接口规格是什么？",
+        "answer": "当前记录的接口规格为3.2 mm，装配前还需要确认配套管路尺寸。"
+      },
+      {
+        "question": "单向阀安装时是否需要注意流向？",
+        "answer": "需要。安装时应按照产品标识或图纸确认入口和出口方向，反向安装可能导致液路无法正常工作。"
+      },
+      {
+        "question": "PP材质是否适合目标介质？",
+        "answer": "需要结合介质成分、温度、压力、清洁要求和寿命要求综合确认。"
+      },
+      {
+        "question": "CV-BE-32-PP-N是否可以申请二维图纸？",
+        "answer": "当前型号已有可关联的二维图纸，正式使用前应核对商品编码和图纸版本。"
+      }
+    ],
+    "faq": [
+      {
+        "question": "CV-BE-32-PP-N采用什么单向阀结构？",
+        "answer": "该产品为膜片式单向阀。不同结构在开启特性、流量和介质适配方面可能存在差异。"
+      },
+      {
+        "question": "CV-BE-32-PP-N的接口规格是什么？",
+        "answer": "当前记录的接口规格为3.2 mm，装配前还需要确认配套管路尺寸。"
+      },
+      {
+        "question": "单向阀安装时是否需要注意流向？",
+        "answer": "需要。安装时应按照产品标识或图纸确认入口和出口方向，反向安装可能导致液路无法正常工作。"
+      },
+      {
+        "question": "PP材质是否适合目标介质？",
+        "answer": "需要结合介质成分、温度、压力、清洁要求和寿命要求综合确认。"
+      },
+      {
+        "question": "CV-BE-32-PP-N是否可以申请二维图纸？",
+        "answer": "当前型号已有可关联的二维图纸，正式使用前应核对商品编码和图纸版本。"
+      }
+    ],
+    "detailHref": "/products/fittings/check-valves/cv-be-32-pp-n",
+    "href": "/products/fittings/check-valves/cv-be-32-pp-n",
+    "selectionHref": "/products/fittings/filters",
+    "contactHref": "/contact",
+    "bottomCta": {
+      "title": "需要确认单向阀规格？",
+      "description": "提交接口规格、介质、流量、压力、开启条件和安装方向，由工程师协助确认适用产品。",
+      "buttonText": "联系工程师",
+      "href": "/contact"
+    },
+    "seo": {
+      "title": "CV-BE-32-PP-N 膜片式单向阀 | FOREACH",
+      "description": "CV-BE-32-PP-N是一款膜片式单向阀，接口规格为3.2 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。"
+    },
+    "sectionTitleMap": {
+      "specification": "规格参数",
+      "applications": "常见应用",
+      "faq": "常见问题"
+    },
+    "sourceRows": [
+      36
+    ],
+    "sourceIndex": 36
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "check-valves",
+    "productTypeName": "膜片式单向阀",
+    "productTypeLabel": "单向阀",
+    "productId": "129002",
+    "productCode": "129002",
+    "productIds": [
+      "129002"
+    ],
+    "productCodes": [
+      "129002"
+    ],
+    "internalCodes": [
+      "443-02-00289"
+    ],
+    "seriesId": "cv",
+    "seriesName": "膜片式单向阀",
+    "slug": "cv-be-32-pv-n",
+    "model": "CV-BE-32-PV-N",
+    "hasStandardModel": true,
+    "name": "膜片式单向阀",
+    "title": "膜片式单向阀",
+    "displayName": "膜片式单向阀",
+    "productName": "膜片式单向阀",
+    "modelDisplay": "CV-BE-32-PV-N",
+    "displayModel": "CV-BE-32-PV-N",
+    "foreachModel": "CV-BE-32-PV-N",
+    "description": "CV-BE-32-PV-N是一款膜片式单向阀，接口规格为3.2 mm，主体材质为PVDF。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "shortDescription": "CV-BE-32-PV-N是一款膜片式单向阀，接口规格为3.2 mm，主体材质为PVDF。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "heroDescription": "CV-BE-32-PV-N是一款膜片式单向阀，接口规格为3.2 mm，主体材质为PVDF。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "advantages": [
+      "膜片式单向阀",
+      "接口规格 3.2 mm",
+      "PVDF材质",
+      "用于液路防回流"
+    ],
+    "commonApplications": [
+      "泵出口防回流",
+      "试剂液路单向控制",
+      "分析仪器流路方向控制",
+      "液路模块压力保持"
+    ],
+    "mainImage": "/images/logo/foreach-logo-color.svg",
+    "image": "/images/logo/foreach-logo-color.svg",
+    "imagePath": "/images/logo/foreach-logo-color.svg",
+    "imageUrl": "/images/logo/foreach-logo-color.svg",
+    "heroImage": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "additionalImages": [],
+    "images": [],
+    "thumbnails": [],
+    "imageAlt": "CV-BE-32-PV-N 膜片式单向阀",
+    "mainImageAlt": "CV-BE-32-PV-N 膜片式单向阀",
+    "detailMode": "standard_model",
+    "hideModelAction": false,
+    "showConfigurator": false,
+    "showDatasheetRequest": false,
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "drawing2dUrl": "",
+    "drawingPdfUrl": "",
+    "resources": {},
+    "specs": [
+      {
+        "label": "型号",
+        "value": "CV-BE-32-PV-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "129002"
+      },
+      {
+        "label": "料号",
+        "value": "443-02-00289"
+      },
+      {
+        "label": "产品类别",
+        "value": "单向阀"
+      },
+      {
+        "label": "产品结构",
+        "value": "膜片式单向阀"
+      },
+      {
+        "label": "产品系列",
+        "value": "CV"
+      },
+      {
+        "label": "接口规格",
+        "value": "3.2 mm"
+      },
+      {
+        "label": "主体材质",
+        "value": "PVDF"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "CV-BE-32-PV-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "129002"
+      },
+      {
+        "label": "料号",
+        "value": "443-02-00289"
+      },
+      {
+        "label": "产品类别",
+        "value": "单向阀"
+      },
+      {
+        "label": "产品结构",
+        "value": "膜片式单向阀"
+      },
+      {
+        "label": "产品系列",
+        "value": "CV"
+      },
+      {
+        "label": "接口规格",
+        "value": "3.2 mm"
+      },
+      {
+        "label": "主体材质",
+        "value": "PVDF"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specGroups": [
+      {
+        "title": "技术参数",
+        "items": [
+          {
+            "label": "型号",
+            "value": "CV-BE-32-PV-N"
+          },
+          {
+            "label": "商品编码",
+            "value": "129002"
+          },
+          {
+            "label": "料号",
+            "value": "443-02-00289"
+          },
+          {
+            "label": "产品类别",
+            "value": "单向阀"
+          },
+          {
+            "label": "产品结构",
+            "value": "膜片式单向阀"
+          },
+          {
+            "label": "产品系列",
+            "value": "CV"
+          },
+          {
+            "label": "接口规格",
+            "value": "3.2 mm"
+          },
+          {
+            "label": "主体材质",
+            "value": "PVDF"
+          },
+          {
+            "label": "颜色",
+            "value": "本色"
+          }
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "CV-BE-32-PV-N采用什么单向阀结构？",
+        "answer": "该产品为膜片式单向阀。不同结构在开启特性、流量和介质适配方面可能存在差异。"
+      },
+      {
+        "question": "CV-BE-32-PV-N的接口规格是什么？",
+        "answer": "当前记录的接口规格为3.2 mm，装配前还需要确认配套管路尺寸。"
+      },
+      {
+        "question": "单向阀安装时是否需要注意流向？",
+        "answer": "需要。安装时应按照产品标识或图纸确认入口和出口方向，反向安装可能导致液路无法正常工作。"
+      },
+      {
+        "question": "PVDF材质是否适合目标介质？",
+        "answer": "需要结合介质成分、温度、压力、清洁要求和寿命要求综合确认。"
+      },
+      {
+        "question": "CV-BE-32-PV-N是否可以申请二维图纸？",
+        "answer": "可以将当前产品加入清单并添加图纸需求，由工程师根据商品编码和料号核对资料版本。"
+      }
+    ],
+    "faq": [
+      {
+        "question": "CV-BE-32-PV-N采用什么单向阀结构？",
+        "answer": "该产品为膜片式单向阀。不同结构在开启特性、流量和介质适配方面可能存在差异。"
+      },
+      {
+        "question": "CV-BE-32-PV-N的接口规格是什么？",
+        "answer": "当前记录的接口规格为3.2 mm，装配前还需要确认配套管路尺寸。"
+      },
+      {
+        "question": "单向阀安装时是否需要注意流向？",
+        "answer": "需要。安装时应按照产品标识或图纸确认入口和出口方向，反向安装可能导致液路无法正常工作。"
+      },
+      {
+        "question": "PVDF材质是否适合目标介质？",
+        "answer": "需要结合介质成分、温度、压力、清洁要求和寿命要求综合确认。"
+      },
+      {
+        "question": "CV-BE-32-PV-N是否可以申请二维图纸？",
+        "answer": "可以将当前产品加入清单并添加图纸需求，由工程师根据商品编码和料号核对资料版本。"
+      }
+    ],
+    "detailHref": "/products/fittings/check-valves/cv-be-32-pv-n",
+    "href": "/products/fittings/check-valves/cv-be-32-pv-n",
+    "selectionHref": "/products/fittings/filters",
+    "contactHref": "/contact",
+    "bottomCta": {
+      "title": "需要确认单向阀规格？",
+      "description": "提交接口规格、介质、流量、压力、开启条件和安装方向，由工程师协助确认适用产品。",
+      "buttonText": "联系工程师",
+      "href": "/contact"
+    },
+    "seo": {
+      "title": "CV-BE-32-PV-N 膜片式单向阀 | FOREACH",
+      "description": "CV-BE-32-PV-N是一款膜片式单向阀，接口规格为3.2 mm，主体材质为PVDF。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。"
+    },
+    "sectionTitleMap": {
+      "specification": "规格参数",
+      "applications": "常见应用",
+      "faq": "常见问题"
+    },
+    "sourceRows": [
+      37
+    ],
+    "sourceIndex": 37
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "check-valves",
+    "productTypeName": "膜片式单向阀",
+    "productTypeLabel": "单向阀",
+    "productId": "129003",
+    "productCode": "129003",
+    "productIds": [
+      "129003"
+    ],
+    "productCodes": [
+      "129003"
+    ],
+    "internalCodes": [
+      "443-02-00494"
+    ],
+    "seriesId": "cv",
+    "seriesName": "膜片式单向阀",
+    "slug": "cv-bf-32-pp-n",
+    "model": "CV-BF-32-PP-N",
+    "hasStandardModel": true,
+    "name": "膜片式单向阀",
+    "title": "膜片式单向阀",
+    "displayName": "膜片式单向阀",
+    "productName": "膜片式单向阀",
+    "modelDisplay": "CV-BF-32-PP-N",
+    "displayModel": "CV-BF-32-PP-N",
+    "foreachModel": "CV-BF-32-PP-N",
+    "description": "CV-BF-32-PP-N是一款膜片式单向阀，接口规格为3.2 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "shortDescription": "CV-BF-32-PP-N是一款膜片式单向阀，接口规格为3.2 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "heroDescription": "CV-BF-32-PP-N是一款膜片式单向阀，接口规格为3.2 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "advantages": [
+      "膜片式单向阀",
+      "接口规格 3.2 mm",
+      "PP材质",
+      "用于液路防回流"
+    ],
+    "commonApplications": [
+      "泵出口防回流",
+      "试剂液路单向控制",
+      "分析仪器流路方向控制",
+      "液路模块压力保持"
+    ],
+    "mainImage": "/images/logo/foreach-logo-color.svg",
+    "image": "/images/logo/foreach-logo-color.svg",
+    "imagePath": "/images/logo/foreach-logo-color.svg",
+    "imageUrl": "/images/logo/foreach-logo-color.svg",
+    "heroImage": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "additionalImages": [],
+    "images": [],
+    "thumbnails": [],
+    "imageAlt": "CV-BF-32-PP-N 膜片式单向阀",
+    "mainImageAlt": "CV-BF-32-PP-N 膜片式单向阀",
+    "detailMode": "standard_model",
+    "hideModelAction": false,
+    "showConfigurator": false,
+    "showDatasheetRequest": false,
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "drawing2dUrl": "",
+    "drawingPdfUrl": "",
+    "resources": {},
+    "specs": [
+      {
+        "label": "型号",
+        "value": "CV-BF-32-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "129003"
+      },
+      {
+        "label": "料号",
+        "value": "443-02-00494"
+      },
+      {
+        "label": "产品类别",
+        "value": "单向阀"
+      },
+      {
+        "label": "产品结构",
+        "value": "膜片式单向阀"
+      },
+      {
+        "label": "产品系列",
+        "value": "CV"
+      },
+      {
+        "label": "接口规格",
+        "value": "3.2 mm"
+      },
+      {
+        "label": "主体材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "CV-BF-32-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "129003"
+      },
+      {
+        "label": "料号",
+        "value": "443-02-00494"
+      },
+      {
+        "label": "产品类别",
+        "value": "单向阀"
+      },
+      {
+        "label": "产品结构",
+        "value": "膜片式单向阀"
+      },
+      {
+        "label": "产品系列",
+        "value": "CV"
+      },
+      {
+        "label": "接口规格",
+        "value": "3.2 mm"
+      },
+      {
+        "label": "主体材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specGroups": [
+      {
+        "title": "技术参数",
+        "items": [
+          {
+            "label": "型号",
+            "value": "CV-BF-32-PP-N"
+          },
+          {
+            "label": "商品编码",
+            "value": "129003"
+          },
+          {
+            "label": "料号",
+            "value": "443-02-00494"
+          },
+          {
+            "label": "产品类别",
+            "value": "单向阀"
+          },
+          {
+            "label": "产品结构",
+            "value": "膜片式单向阀"
+          },
+          {
+            "label": "产品系列",
+            "value": "CV"
+          },
+          {
+            "label": "接口规格",
+            "value": "3.2 mm"
+          },
+          {
+            "label": "主体材质",
+            "value": "PP"
+          },
+          {
+            "label": "颜色",
+            "value": "本色"
+          }
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "CV-BF-32-PP-N采用什么单向阀结构？",
+        "answer": "该产品为膜片式单向阀。不同结构在开启特性、流量和介质适配方面可能存在差异。"
+      },
+      {
+        "question": "CV-BF-32-PP-N的接口规格是什么？",
+        "answer": "当前记录的接口规格为3.2 mm，装配前还需要确认配套管路尺寸。"
+      },
+      {
+        "question": "单向阀安装时是否需要注意流向？",
+        "answer": "需要。安装时应按照产品标识或图纸确认入口和出口方向，反向安装可能导致液路无法正常工作。"
+      },
+      {
+        "question": "PP材质是否适合目标介质？",
+        "answer": "需要结合介质成分、温度、压力、清洁要求和寿命要求综合确认。"
+      },
+      {
+        "question": "CV-BF-32-PP-N是否可以申请二维图纸？",
+        "answer": "可以将当前产品加入清单并添加图纸需求，由工程师根据商品编码和料号核对资料版本。"
+      }
+    ],
+    "faq": [
+      {
+        "question": "CV-BF-32-PP-N采用什么单向阀结构？",
+        "answer": "该产品为膜片式单向阀。不同结构在开启特性、流量和介质适配方面可能存在差异。"
+      },
+      {
+        "question": "CV-BF-32-PP-N的接口规格是什么？",
+        "answer": "当前记录的接口规格为3.2 mm，装配前还需要确认配套管路尺寸。"
+      },
+      {
+        "question": "单向阀安装时是否需要注意流向？",
+        "answer": "需要。安装时应按照产品标识或图纸确认入口和出口方向，反向安装可能导致液路无法正常工作。"
+      },
+      {
+        "question": "PP材质是否适合目标介质？",
+        "answer": "需要结合介质成分、温度、压力、清洁要求和寿命要求综合确认。"
+      },
+      {
+        "question": "CV-BF-32-PP-N是否可以申请二维图纸？",
+        "answer": "可以将当前产品加入清单并添加图纸需求，由工程师根据商品编码和料号核对资料版本。"
+      }
+    ],
+    "detailHref": "/products/fittings/check-valves/cv-bf-32-pp-n",
+    "href": "/products/fittings/check-valves/cv-bf-32-pp-n",
+    "selectionHref": "/products/fittings/filters",
+    "contactHref": "/contact",
+    "bottomCta": {
+      "title": "需要确认单向阀规格？",
+      "description": "提交接口规格、介质、流量、压力、开启条件和安装方向，由工程师协助确认适用产品。",
+      "buttonText": "联系工程师",
+      "href": "/contact"
+    },
+    "seo": {
+      "title": "CV-BF-32-PP-N 膜片式单向阀 | FOREACH",
+      "description": "CV-BF-32-PP-N是一款膜片式单向阀，接口规格为3.2 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。"
+    },
+    "sectionTitleMap": {
+      "specification": "规格参数",
+      "applications": "常见应用",
+      "faq": "常见问题"
+    },
+    "sourceRows": [
+      38
+    ],
+    "sourceIndex": 38
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "check-valves",
+    "productTypeName": "膜片式单向阀",
+    "productTypeLabel": "单向阀",
+    "productId": "129004",
+    "productCode": "129004",
+    "productIds": [
+      "129004"
+    ],
+    "productCodes": [
+      "129004"
+    ],
+    "internalCodes": [
+      "443-02-00694"
+    ],
+    "seriesId": "cv",
+    "seriesName": "膜片式单向阀",
+    "slug": "cv-be-24-pp-n",
+    "model": "CV-BE-24-PP-N",
+    "hasStandardModel": true,
+    "name": "膜片式单向阀",
+    "title": "膜片式单向阀",
+    "displayName": "膜片式单向阀",
+    "productName": "膜片式单向阀",
+    "modelDisplay": "CV-BE-24-PP-N",
+    "displayModel": "CV-BE-24-PP-N",
+    "foreachModel": "CV-BE-24-PP-N",
+    "description": "CV-BE-24-PP-N是一款膜片式单向阀，接口规格为2.4 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "shortDescription": "CV-BE-24-PP-N是一款膜片式单向阀，接口规格为2.4 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "heroDescription": "CV-BE-24-PP-N是一款膜片式单向阀，接口规格为2.4 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "advantages": [
+      "膜片式单向阀",
+      "接口规格 2.4 mm",
+      "PP材质",
+      "用于液路防回流"
+    ],
+    "commonApplications": [
+      "泵出口防回流",
+      "试剂液路单向控制",
+      "分析仪器流路方向控制",
+      "液路模块压力保持"
+    ],
+    "mainImage": "/images/logo/foreach-logo-color.svg",
+    "image": "/images/logo/foreach-logo-color.svg",
+    "imagePath": "/images/logo/foreach-logo-color.svg",
+    "imageUrl": "/images/logo/foreach-logo-color.svg",
+    "heroImage": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "additionalImages": [],
+    "images": [],
+    "thumbnails": [],
+    "imageAlt": "CV-BE-24-PP-N 膜片式单向阀",
+    "mainImageAlt": "CV-BE-24-PP-N 膜片式单向阀",
+    "detailMode": "standard_model",
+    "hideModelAction": false,
+    "showConfigurator": false,
+    "showDatasheetRequest": false,
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "drawing2dUrl": "",
+    "drawingPdfUrl": "",
+    "resources": {},
+    "specs": [
+      {
+        "label": "型号",
+        "value": "CV-BE-24-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "129004"
+      },
+      {
+        "label": "料号",
+        "value": "443-02-00694"
+      },
+      {
+        "label": "产品类别",
+        "value": "单向阀"
+      },
+      {
+        "label": "产品结构",
+        "value": "膜片式单向阀"
+      },
+      {
+        "label": "产品系列",
+        "value": "CV"
+      },
+      {
+        "label": "接口规格",
+        "value": "2.4 mm"
+      },
+      {
+        "label": "主体材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "CV-BE-24-PP-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "129004"
+      },
+      {
+        "label": "料号",
+        "value": "443-02-00694"
+      },
+      {
+        "label": "产品类别",
+        "value": "单向阀"
+      },
+      {
+        "label": "产品结构",
+        "value": "膜片式单向阀"
+      },
+      {
+        "label": "产品系列",
+        "value": "CV"
+      },
+      {
+        "label": "接口规格",
+        "value": "2.4 mm"
+      },
+      {
+        "label": "主体材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specGroups": [
+      {
+        "title": "技术参数",
+        "items": [
+          {
+            "label": "型号",
+            "value": "CV-BE-24-PP-N"
+          },
+          {
+            "label": "商品编码",
+            "value": "129004"
+          },
+          {
+            "label": "料号",
+            "value": "443-02-00694"
+          },
+          {
+            "label": "产品类别",
+            "value": "单向阀"
+          },
+          {
+            "label": "产品结构",
+            "value": "膜片式单向阀"
+          },
+          {
+            "label": "产品系列",
+            "value": "CV"
+          },
+          {
+            "label": "接口规格",
+            "value": "2.4 mm"
+          },
+          {
+            "label": "主体材质",
+            "value": "PP"
+          },
+          {
+            "label": "颜色",
+            "value": "本色"
+          }
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "CV-BE-24-PP-N采用什么单向阀结构？",
+        "answer": "该产品为膜片式单向阀。不同结构在开启特性、流量和介质适配方面可能存在差异。"
+      },
+      {
+        "question": "CV-BE-24-PP-N的接口规格是什么？",
+        "answer": "当前记录的接口规格为2.4 mm，装配前还需要确认配套管路尺寸。"
+      },
+      {
+        "question": "单向阀安装时是否需要注意流向？",
+        "answer": "需要。安装时应按照产品标识或图纸确认入口和出口方向，反向安装可能导致液路无法正常工作。"
+      },
+      {
+        "question": "PP材质是否适合目标介质？",
+        "answer": "需要结合介质成分、温度、压力、清洁要求和寿命要求综合确认。"
+      },
+      {
+        "question": "CV-BE-24-PP-N是否可以申请二维图纸？",
+        "answer": "可以将当前产品加入清单并添加图纸需求，由工程师根据商品编码和料号核对资料版本。"
+      }
+    ],
+    "faq": [
+      {
+        "question": "CV-BE-24-PP-N采用什么单向阀结构？",
+        "answer": "该产品为膜片式单向阀。不同结构在开启特性、流量和介质适配方面可能存在差异。"
+      },
+      {
+        "question": "CV-BE-24-PP-N的接口规格是什么？",
+        "answer": "当前记录的接口规格为2.4 mm，装配前还需要确认配套管路尺寸。"
+      },
+      {
+        "question": "单向阀安装时是否需要注意流向？",
+        "answer": "需要。安装时应按照产品标识或图纸确认入口和出口方向，反向安装可能导致液路无法正常工作。"
+      },
+      {
+        "question": "PP材质是否适合目标介质？",
+        "answer": "需要结合介质成分、温度、压力、清洁要求和寿命要求综合确认。"
+      },
+      {
+        "question": "CV-BE-24-PP-N是否可以申请二维图纸？",
+        "answer": "可以将当前产品加入清单并添加图纸需求，由工程师根据商品编码和料号核对资料版本。"
+      }
+    ],
+    "detailHref": "/products/fittings/check-valves/cv-be-24-pp-n",
+    "href": "/products/fittings/check-valves/cv-be-24-pp-n",
+    "selectionHref": "/products/fittings/filters",
+    "contactHref": "/contact",
+    "bottomCta": {
+      "title": "需要确认单向阀规格？",
+      "description": "提交接口规格、介质、流量、压力、开启条件和安装方向，由工程师协助确认适用产品。",
+      "buttonText": "联系工程师",
+      "href": "/contact"
+    },
+    "seo": {
+      "title": "CV-BE-24-PP-N 膜片式单向阀 | FOREACH",
+      "description": "CV-BE-24-PP-N是一款膜片式单向阀，接口规格为2.4 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。"
+    },
+    "sectionTitleMap": {
+      "specification": "规格参数",
+      "applications": "常见应用",
+      "faq": "常见问题"
+    },
+    "sourceRows": [
+      39
+    ],
+    "sourceIndex": 39
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "check-valves",
+    "productTypeName": "膜片式单向阀",
+    "productTypeLabel": "单向阀",
+    "productId": "129005",
+    "productCode": "129005",
+    "productIds": [
+      "129005"
+    ],
+    "productCodes": [
+      "129005"
+    ],
+    "internalCodes": [
+      "443-02-00744"
+    ],
+    "seriesId": "cv",
+    "seriesName": "膜片式单向阀",
+    "slug": "cv-bf-32-pp-b",
+    "model": "CV-BF-32-PP-B",
+    "hasStandardModel": true,
+    "name": "膜片式单向阀",
+    "title": "膜片式单向阀",
+    "displayName": "膜片式单向阀",
+    "productName": "膜片式单向阀",
+    "modelDisplay": "CV-BF-32-PP-B",
+    "displayModel": "CV-BF-32-PP-B",
+    "foreachModel": "CV-BF-32-PP-B",
+    "description": "CV-BF-32-PP-B是一款膜片式单向阀，接口规格为3.2 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "shortDescription": "CV-BF-32-PP-B是一款膜片式单向阀，接口规格为3.2 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "heroDescription": "CV-BF-32-PP-B是一款膜片式单向阀，接口规格为3.2 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。",
+    "advantages": [
+      "膜片式单向阀",
+      "接口规格 3.2 mm",
+      "PP材质",
+      "用于液路防回流"
+    ],
+    "commonApplications": [
+      "泵出口防回流",
+      "试剂液路单向控制",
+      "分析仪器流路方向控制",
+      "液路模块压力保持"
+    ],
+    "mainImage": "/images/logo/foreach-logo-color.svg",
+    "image": "/images/logo/foreach-logo-color.svg",
+    "imagePath": "/images/logo/foreach-logo-color.svg",
+    "imageUrl": "/images/logo/foreach-logo-color.svg",
+    "heroImage": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "additionalImages": [],
+    "images": [],
+    "thumbnails": [],
+    "imageAlt": "CV-BF-32-PP-B 膜片式单向阀",
+    "mainImageAlt": "CV-BF-32-PP-B 膜片式单向阀",
+    "detailMode": "standard_model",
+    "hideModelAction": false,
+    "showConfigurator": false,
+    "showDatasheetRequest": false,
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "drawing2dUrl": "",
+    "drawingPdfUrl": "",
+    "resources": {},
+    "specs": [
+      {
+        "label": "型号",
+        "value": "CV-BF-32-PP-B"
+      },
+      {
+        "label": "商品编码",
+        "value": "129005"
+      },
+      {
+        "label": "料号",
+        "value": "443-02-00744"
+      },
+      {
+        "label": "产品类别",
+        "value": "单向阀"
+      },
+      {
+        "label": "产品结构",
+        "value": "膜片式单向阀"
+      },
+      {
+        "label": "产品系列",
+        "value": "CV"
+      },
+      {
+        "label": "接口规格",
+        "value": "3.2 mm"
+      },
+      {
+        "label": "主体材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "B色代码"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "CV-BF-32-PP-B"
+      },
+      {
+        "label": "商品编码",
+        "value": "129005"
+      },
+      {
+        "label": "料号",
+        "value": "443-02-00744"
+      },
+      {
+        "label": "产品类别",
+        "value": "单向阀"
+      },
+      {
+        "label": "产品结构",
+        "value": "膜片式单向阀"
+      },
+      {
+        "label": "产品系列",
+        "value": "CV"
+      },
+      {
+        "label": "接口规格",
+        "value": "3.2 mm"
+      },
+      {
+        "label": "主体材质",
+        "value": "PP"
+      },
+      {
+        "label": "颜色",
+        "value": "B色代码"
+      }
+    ],
+    "specGroups": [
+      {
+        "title": "技术参数",
+        "items": [
+          {
+            "label": "型号",
+            "value": "CV-BF-32-PP-B"
+          },
+          {
+            "label": "商品编码",
+            "value": "129005"
+          },
+          {
+            "label": "料号",
+            "value": "443-02-00744"
+          },
+          {
+            "label": "产品类别",
+            "value": "单向阀"
+          },
+          {
+            "label": "产品结构",
+            "value": "膜片式单向阀"
+          },
+          {
+            "label": "产品系列",
+            "value": "CV"
+          },
+          {
+            "label": "接口规格",
+            "value": "3.2 mm"
+          },
+          {
+            "label": "主体材质",
+            "value": "PP"
+          },
+          {
+            "label": "颜色",
+            "value": "B色代码"
+          }
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "CV-BF-32-PP-B采用什么单向阀结构？",
+        "answer": "该产品为膜片式单向阀。不同结构在开启特性、流量和介质适配方面可能存在差异。"
+      },
+      {
+        "question": "CV-BF-32-PP-B的接口规格是什么？",
+        "answer": "当前记录的接口规格为3.2 mm，装配前还需要确认配套管路尺寸。"
+      },
+      {
+        "question": "单向阀安装时是否需要注意流向？",
+        "answer": "需要。安装时应按照产品标识或图纸确认入口和出口方向，反向安装可能导致液路无法正常工作。"
+      },
+      {
+        "question": "PP材质是否适合目标介质？",
+        "answer": "需要结合介质成分、温度、压力、清洁要求和寿命要求综合确认。"
+      },
+      {
+        "question": "CV-BF-32-PP-B是否可以申请二维图纸？",
+        "answer": "可以将当前产品加入清单并添加图纸需求，由工程师根据商品编码和料号核对资料版本。"
+      }
+    ],
+    "faq": [
+      {
+        "question": "CV-BF-32-PP-B采用什么单向阀结构？",
+        "answer": "该产品为膜片式单向阀。不同结构在开启特性、流量和介质适配方面可能存在差异。"
+      },
+      {
+        "question": "CV-BF-32-PP-B的接口规格是什么？",
+        "answer": "当前记录的接口规格为3.2 mm，装配前还需要确认配套管路尺寸。"
+      },
+      {
+        "question": "单向阀安装时是否需要注意流向？",
+        "answer": "需要。安装时应按照产品标识或图纸确认入口和出口方向，反向安装可能导致液路无法正常工作。"
+      },
+      {
+        "question": "PP材质是否适合目标介质？",
+        "answer": "需要结合介质成分、温度、压力、清洁要求和寿命要求综合确认。"
+      },
+      {
+        "question": "CV-BF-32-PP-B是否可以申请二维图纸？",
+        "answer": "可以将当前产品加入清单并添加图纸需求，由工程师根据商品编码和料号核对资料版本。"
+      }
+    ],
+    "detailHref": "/products/fittings/check-valves/cv-bf-32-pp-b",
+    "href": "/products/fittings/check-valves/cv-bf-32-pp-b",
+    "selectionHref": "/products/fittings/filters",
+    "contactHref": "/contact",
+    "bottomCta": {
+      "title": "需要确认单向阀规格？",
+      "description": "提交接口规格、介质、流量、压力、开启条件和安装方向，由工程师协助确认适用产品。",
+      "buttonText": "联系工程师",
+      "href": "/contact"
+    },
+    "seo": {
+      "title": "CV-BF-32-PP-B 膜片式单向阀 | FOREACH",
+      "description": "CV-BF-32-PP-B是一款膜片式单向阀，接口规格为3.2 mm，主体材质为PP。用于限制流体反向流动、降低回流风险并保持液路方向稳定。实际选型时应结合介质、流量、开启条件、工作压力、温度和安装方向确认。"
+    },
+    "sectionTitleMap": {
+      "specification": "规格参数",
+      "applications": "常见应用",
+      "faq": "常见问题"
+    },
+    "sourceRows": [
+      40
+    ],
+    "sourceIndex": 40
+  }
+]

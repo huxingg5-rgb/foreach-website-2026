@@ -1,0 +1,165 @@
+/* 关于我们各页面共用的顶部 Banner 模板。 */
+.about-center-banner.about-center-banner {
+  position: relative;
+  isolation: isolate;
+  box-sizing: border-box;
+  display: block !important;
+  height: 520px !important;
+  min-height: 520px !important;
+  overflow: hidden;
+  color: #ffffff;
+  background-color: #173368;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+/* 所有页面统一使用同一层深蓝遮罩。 */
+.about-center-banner.about-center-banner.about-center-banner::before {
+  content: "" !important;
+  display: block !important;
+  position: absolute;
+  inset: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  transform: none !important;
+  z-index: 1;
+  opacity: 1 !important;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(6, 26, 58, 0.9) 0%,
+    rgba(10, 34, 78, 0.76) 40%,
+    rgba(10, 34, 78, 0.42) 68%,
+    rgba(10, 34, 78, 0.2) 100%
+  ) !important;
+}
+
+.about-center-banner.about-center-banner.about-center-banner::after {
+  content: none !important;
+  display: none !important;
+  width: auto !important;
+  height: auto !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* 清除旧页面各自的遮罩和装饰线，避免重复叠加。 */
+.about-center-banner .quality-policy-hero-overlay,
+.about-center-banner .rm-hero-overlay,
+.about-center-banner .rm-hero-line {
+  display: none !important;
+}
+
+/* 企业文化旧背景层含独立渐变，这里只保留原背景图片。 */
+.about-center-banner .about-culture-banner-photo.about-culture-banner-photo {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-image: url("/images/about/about-banner-desktop.webp") !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+/* 发展历程旧背景把渐变写进 background，统一后只保留图片。 */
+.about-history-inner-banner.about-center-banner {
+  background:
+    var(--history-banner-image) center center / cover no-repeat,
+    #173368 !important;
+}
+
+.about-center-banner > img,
+.about-center-banner .about-foreach-hero-bg,
+.about-center-banner .quality-policy-hero-image,
+.about-center-banner .rm-hero-image {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+
+/* 桌面端文字起点、内容宽度和排版固定为同一模板。 */
+.about-center-banner .about-center-banner__inner.about-center-banner__inner {
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+  width: min(1600px, calc(100% - 64px));
+  height: 520px !important;
+  min-height: 520px !important;
+  margin: 0 auto;
+  padding: 168px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: #ffffff;
+}
+
+.about-center-banner .about-center-banner__title.about-center-banner__title {
+  max-width: 1080px;
+  margin: 0;
+  color: #ffffff;
+  font-size: 64px;
+  line-height: 1.08;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  text-align: left;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.about-center-banner .about-center-banner__title.about-center-banner__title span {
+  display: inline;
+  color: inherit;
+}
+
+.about-center-banner .about-center-banner__description.about-center-banner__description {
+  max-width: 860px;
+  margin: 24px 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 18px;
+  line-height: 1.8;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-align: left;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 760px) {
+  .about-center-banner.about-center-banner,
+  .about-center-banner .about-center-banner__inner.about-center-banner__inner {
+    height: 520px !important;
+    min-height: 520px !important;
+  }
+
+  .about-center-banner .about-center-banner__inner.about-center-banner__inner {
+    width: calc(100% - 32px);
+    padding-top: 142px;
+  }
+
+  .about-center-banner .about-center-banner__title.about-center-banner__title {
+    max-width: 100%;
+    font-size: 40px;
+    line-height: 1.12;
+  }
+
+  .about-center-banner .about-center-banner__description.about-center-banner__description {
+    max-width: 100%;
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+}

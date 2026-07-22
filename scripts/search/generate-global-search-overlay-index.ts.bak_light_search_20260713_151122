@@ -1,0 +1,671 @@
+﻿import fs from "node:fs";
+import path from "node:path";
+import { pathToFileURL } from "node:url";
+
+import { siteSearchIndex } from "../../data/search/site-search-index.generated";
+
+import type {
+  GlobalSearchItem,
+  GlobalSearchModule,
+} from "../../data/search/global-search-overlay.types";
+
+const ROOT = process.cwd();
+
+const OUTPUT_PATH = path.join(
+  ROOT,
+  "data",
+  "search",
+  "global-search-overlay-index.generated.ts"
+);
+
+function text(value: unknown): string {
+  if (value === null || value === undefined) return "";
+  return String(value).trim();
+}
+
+function normalize(value: string): string {
+  return value
+    .toUpperCase()
+    .replace(/[‐‑‒–—―﹘﹣－]/g, "-")
+    .replace(/\s+/g, "");
+}
+
+function isNonEmptyString(
+  value: string | undefined | null
+): value is string {
+  return Boolean(value);
+}
+
+function cleanImage(image: unknown): string {
+  const value = text(image);
+
+  if (!value.startsWith("/")) return "";
+
+  if (
+    value.includes("/images/logo/") ||
+    value.endsWith("foreach-logo-color.svg")
+  ) {
+    return "";
+  }
+
+  return value;
+}
+
+function flattenStrings(
+  value: unknown,
+  result: string[] = [],
+  seen = new WeakSet<object>()
+): string[] {
+  if (typeof value === "string") {
+    const trimmed = value.trim();
+
+    if (trimmed) result.push(trimmed);
+
+    return result;
+  }
+
+  if (
+    typeof value === "number" ||
+    typeof value === "boolean"
+  ) {
+    result.push(String(value));
+    return result;
+  }
+
+  if (!value || typeof value !== "object") {
+    return result;
+  }
+
+  if (seen.has(value as object)) {
+    return result;
+  }
+
+  seen.add(value as object);
+
+  if (Array.isArray(value)) {
+    for (const item of value) {
+      flattenStrings(item, result, seen);
+    }
+
+    return result;
+  }
+
+  for (const child of Object.values(value as Record<string, unknown>)) {
+    flattenStrings(child, result, seen);
+  }
+
+  return result;
+}
+
+function uniqueKeywords(values: Array<string | undefined | null>): string[] {
+  const result = new Map<string, string>();
+
+  for (const value of values.filter(isNonEmptyString)) {
+    const normalized = normalize(value);
+
+    if (normalized && !result.has(normalized)) {
+      result.set(normalized, value);
+    }
+  }
+
+  return [...result.values()];
+}
+
+async function importModule(relativePath: string) {
+  const fullPath = path.join(ROOT, relativePath);
+
+  if (!fs.existsSync(fullPath)) return null;
+
+  return import(
+    `${pathToFileURL(fullPath).href}?globalSearch=${Date.now()}-${Math.random()}`
+  );
+}
+
+function firstExportedObject(
+  importedModule: Record<string, unknown> | null
+): Record<string, unknown> | null {
+  if (!importedModule) return null;
+
+  for (const value of Object.values(importedModule)) {
+    if (
+      value &&
+      typeof value === "object" &&
+      !Array.isArray(value)
+    ) {
+      return value as Record<string, unknown>;
+    }
+  }
+
+  return null;
+}
+
+function getNestedString(
+  object: Record<string, unknown> | null,
+  paths: string[][]
+): string {
+  if (!object) return "";
+
+  for (const pathParts of paths) {
+    let current: unknown = object;
+
+    for (const part of pathParts) {
+      if (
+        !current ||
+        typeof current !== "object" ||
+        Array.isArray(current)
+      ) {
+        current = undefined;
+        break;
+      }
+
+      current = (current as Record<string, unknown>)[part];
+    }
+
+    const value = text(current);
+
+    if (value) return value;
+  }
+
+  return "";
+}
+
+function convertExistingItems(): GlobalSearchItem[] {
+  return siteSearchIndex.map((item) => ({
+    ...item,
+    module: item.module as GlobalSearchModule,
+    keywords: uniqueKeywords([
+      item.title,
+      item.subtitle,
+      item.description,
+      item.model,
+      item.productCode,
+      ...(item.keywords ?? []),
+    ]),
+  }));
+}
+
+async function loadInstallationGuides(): Promise<GlobalSearchItem[]> {
+  const imported = await importModule(
+    "data/resources/installation-guide/installation-guide.zh.ts"
+  );
+
+  const data = firstExportedObject(imported);
+  const guides = Array.isArray(data?.guides)
+    ? data.guides
+    : [];
+
+  return guides.flatMap((rawGuide) => {
+    if (!rawGuide || typeof rawGuide !== "object") return [];
+
+    const guide = rawGuide as Record<string, unknown>;
+    const id = text(guide.id);
+    const title = text(guide.title);
+
+    if (!id || !title) return [];
+
+    return [{
+      id: `installation-guide:${id}`,
+      module: "installation-guides" as const,
+      title,
+      subtitle: [
+        text(guide.category),
+        text(guide.series),
+      ].filter(isNonEmptyString).join(" · "),
+      description: text(guide.description),
+      href: `/resources/installation-guide/${id}`,
+      actionLabel: "查看教程",
+      keywords: uniqueKeywords([
+        title,
+        text(guide.description),
+        ...flattenStrings(guide.tags),
+        ...flattenStrings(guide.keywords),
+        ...flattenStrings(guide.steps),
+      ]),
+    }];
+  });
+}
+
+async function loadTechnicalArticles(): Promise<GlobalSearchItem[]> {
+  const imported = await importModule(
+    "data/resources/technical-articles/technical-articles.zh.ts"
+  );
+
+  const data = firstExportedObject(imported);
+  const articles = Array.isArray(data?.articles)
+    ? data.articles
+    : [];
+
+  return articles.flatMap((rawArticle) => {
+    if (!rawArticle || typeof rawArticle !== "object") return [];
+
+    const article = rawArticle as Record<string, unknown>;
+    const slug = text(article.slug || article.id);
+    const title = text(article.title);
+
+    if (!slug || !title) return [];
+
+    return [{
+      id: `technical-article:${slug}`,
+      module: "technical-articles" as const,
+      title,
+      subtitle: [
+        text(article.category),
+        text(article.date),
+      ].filter(isNonEmptyString).join(" · "),
+      description: text(article.summary),
+      href: `/resources/technical-articles/${slug}`,
+      image: cleanImage(article.coverImage),
+      actionLabel: "阅读文章",
+      keywords: uniqueKeywords([
+        title,
+        text(article.summary),
+        text(article.category),
+        text(article.date),
+        ...flattenStrings(article.content),
+      ]),
+    }];
+  });
+}
+
+async function loadNews(): Promise<GlobalSearchItem[]> {
+  const imported = await importModule(
+    "data/resources/news/news.zh.ts"
+  );
+
+  const data = firstExportedObject(imported);
+  const articles = Array.isArray(data?.articles)
+    ? data.articles
+    : [];
+
+  return articles.flatMap((rawArticle) => {
+    if (!rawArticle || typeof rawArticle !== "object") return [];
+
+    const article = rawArticle as Record<string, unknown>;
+    const slug = text(article.slug || article.id);
+    const title = text(article.title);
+
+    if (!slug || !title) return [];
+
+    return [{
+      id: `news:${slug}`,
+      module: "news" as const,
+      title,
+      subtitle: [
+        text(article.category),
+        text(article.date),
+      ].filter(isNonEmptyString).join(" · "),
+      description: text(article.summary),
+      href: `/resources/news/${slug}`,
+      image: cleanImage(article.coverImage),
+      actionLabel: "查看新闻",
+      keywords: uniqueKeywords([
+        title,
+        text(article.summary),
+        text(article.category),
+        text(article.date),
+        ...flattenStrings(article.content),
+      ]),
+    }];
+  });
+}
+
+async function loadMaterialCompatibility(): Promise<GlobalSearchItem[]> {
+  const imported = await importModule(
+    "data/resources/material-compatibility/material-compatibility.zh.ts"
+  );
+
+  const data = firstExportedObject(imported);
+
+  if (!data) return [];
+
+  const items: GlobalSearchItem[] = [];
+
+  const pageTitle =
+    getNestedString(data, [
+      ["banner", "title"],
+      ["hero", "title"],
+    ]) || "材料兼容与可靠选型";
+
+  const pageDescription =
+    getNestedString(data, [
+      ["banner", "description"],
+      ["hero", "description"],
+    ]);
+
+  items.push({
+    id: "material-compatibility:page",
+    module: "material-compatibility",
+    title: pageTitle,
+    description: pageDescription,
+    href: "/resources/material-compatibility",
+    actionLabel: "查看材料兼容",
+    keywords: uniqueKeywords([
+      pageTitle,
+      pageDescription,
+      ...flattenStrings(data.searchCopy),
+      ...flattenStrings(data.tabs),
+      ...flattenStrings(data.materialColumns),
+      ...flattenStrings(data),
+    ]),
+  });
+
+  const materialColumns = Array.isArray(data.materialColumns)
+    ? data.materialColumns
+    : [];
+
+  for (const rawMaterial of materialColumns) {
+    const material = text(rawMaterial);
+
+    if (!material) continue;
+
+    items.push({
+      id: `material:${normalize(material)}`,
+      module: "material-compatibility",
+      title: `${material} 材料兼容与特性`,
+      subtitle: "材料兼容性",
+      description: `查看 ${material} 的介质兼容、材料特性及相关选型信息。`,
+      href:
+        "/resources/material-compatibility" +
+        `?tab=features&q=${encodeURIComponent(material)}`,
+      actionLabel: "查看材料",
+      keywords: uniqueKeywords([
+        material,
+        `${material}材料`,
+        "材料特性",
+        "化学兼容",
+      ]),
+    });
+  }
+
+  const rows = Array.isArray(data.compatibilityRows)
+    ? data.compatibilityRows
+    : [];
+
+  for (const rawRow of rows) {
+    if (!rawRow || typeof rawRow !== "object") continue;
+
+    const row = rawRow as Record<string, unknown>;
+    const name = text(row.name);
+
+    if (!name) continue;
+
+    items.push({
+      id: `chemical:${normalize(name)}`,
+      module: "material-compatibility",
+      title: name,
+      subtitle: "化学介质兼容性",
+      description: "查看该介质与常用工程材料的兼容性参考。",
+      href:
+        "/resources/material-compatibility" +
+        `?tab=compatibility&q=${encodeURIComponent(name)}`,
+      actionLabel: "查看兼容表",
+      keywords: uniqueKeywords([
+        name,
+        ...flattenStrings(row.values),
+        ...flattenStrings(data.materialColumns),
+      ]),
+    });
+  }
+
+  return items;
+}
+
+type ApplicationSource = {
+  path: string;
+  href: string;
+  fallbackTitle: string;
+};
+
+const APPLICATION_SOURCES: ApplicationSource[] = [
+  {
+    path:
+      "data/applications/analytical-instruments/analytical-instruments-application.zh.ts",
+    href: "/applications/analytical-instruments",
+    fallbackTitle: "分析仪器",
+  },
+  {
+    path:
+      "data/applications/environmental-monitoring/environmental-monitoring-application.zh.ts",
+    href: "/applications/environmental-monitoring",
+    fallbackTitle: "环境监测",
+  },
+  {
+    path:
+      "data/applications/ivd/ivd-application.zh.ts",
+    href: "/applications/ivd",
+    fallbackTitle: "IVD",
+  },
+  {
+    path:
+      "data/applications/lab-automation/lab-automation-application.zh.ts",
+    href: "/applications/lab-automation",
+    fallbackTitle: "实验室自动化",
+  },
+  {
+    path:
+      "data/applications/life-science/life-science-application.zh.ts",
+    href: "/applications/life-science",
+    fallbackTitle: "生命科学",
+  },
+  {
+    path:
+      "data/applications/synthetic-biology/synthetic-biology-application.zh.ts",
+    href: "/applications/synthetic-biology",
+    fallbackTitle: "合成生物",
+  },
+];
+
+async function loadApplications(): Promise<GlobalSearchItem[]> {
+  const items: GlobalSearchItem[] = [];
+
+  for (const source of APPLICATION_SOURCES) {
+    const imported = await importModule(source.path);
+    const data = firstExportedObject(imported);
+
+    if (!data) continue;
+
+    const title =
+      getNestedString(data, [
+        ["hero", "title"],
+        ["banner", "title"],
+      ]) || source.fallbackTitle;
+
+    const description =
+      getNestedString(data, [
+        ["hero", "description"],
+        ["banner", "description"],
+      ]);
+
+    const image =
+      getNestedString(data, [
+        ["hero", "backgroundImage"],
+        ["hero", "image"],
+        ["banner", "image"],
+      ]);
+
+    items.push({
+      id: `application:${source.href}`,
+      module: "applications",
+      title,
+      subtitle: source.fallbackTitle,
+      description,
+      href: source.href,
+      image: cleanImage(image),
+      actionLabel: "查看应用",
+      keywords: uniqueKeywords([
+        source.fallbackTitle,
+        title,
+        description,
+        ...flattenStrings(data),
+      ]),
+    });
+  }
+
+  return items;
+}
+
+function loadSitePages(): GlobalSearchItem[] {
+  const pages = [
+    {
+      id: "about-foreach",
+      title: "公司介绍",
+      description: "了解 FOREACH 恒永达的发展、定位与微流体业务。",
+      href: "/about/foreach",
+      keywords: ["公司介绍", "恒永达", "FOREACH", "企业简介"],
+    },
+    {
+      id: "about-quality",
+      title: "质量体系",
+      description: "了解恒永达质量体系、认证与质量管理能力。",
+      href: "/about/quality",
+      keywords: ["质量体系", "ISO 9001", "ISO 13485", "CE", "RoHS"],
+    },
+    {
+      id: "about-history",
+      title: "发展历程",
+      description: "了解恒永达的发展历程与关键节点。",
+      href: "/about/history",
+      keywords: ["发展历程", "公司历史", "里程碑"],
+    },
+    {
+      id: "about-research",
+      title: "研发与制造",
+      description: "了解恒永达研发、生产制造与工程能力。",
+      href: "/about/research-manufacturing",
+      keywords: ["研发制造", "生产能力", "研发中心", "制造"],
+    },
+    {
+      id: "about-culture",
+      title: "企业文化",
+      description: "了解恒永达企业文化与价值观。",
+      href: "/about/culture",
+      keywords: ["企业文化", "价值观"],
+    },
+    {
+      id: "contact",
+      title: "联系我们",
+      description: "提交产品、型号、资料或项目需求。",
+      href: "/contact",
+      keywords: ["联系我们", "询盘", "技术支持", "提交需求"],
+    },
+    {
+      id: "distributor",
+      title: "经销商合作",
+      description: "了解 FOREACH 恒永达经销商合作方式。",
+      href: "/contact/distributor",
+      keywords: ["经销商", "代理商", "渠道合作", "合作伙伴"],
+    },
+  ];
+
+  return pages.map((page) => ({
+    ...page,
+    module: "pages" as const,
+    actionLabel: "打开页面",
+  }));
+}
+
+function deduplicate(items: GlobalSearchItem[]): GlobalSearchItem[] {
+  const map = new Map<string, GlobalSearchItem>();
+
+  for (const item of items) {
+    const key = [
+      item.module,
+      item.href,
+      normalize(item.title),
+      normalize(item.model ?? ""),
+      item.productCode ?? "",
+    ].join("::");
+
+    const existing = map.get(key);
+
+    if (!existing) {
+      map.set(key, item);
+      continue;
+    }
+
+    const existingScore =
+      (existing.image ? 2 : 0) +
+      (existing.description ? 1 : 0);
+
+    const itemScore =
+      (item.image ? 2 : 0) +
+      (item.description ? 1 : 0);
+
+    if (itemScore > existingScore) {
+      map.set(key, item);
+    }
+  }
+
+  return [...map.values()];
+}
+
+function buildOutput(items: GlobalSearchItem[]): string {
+  const serializedItems = JSON.stringify(items);
+  const serializedLiteral = JSON.stringify(serializedItems);
+
+  return `/* =========================================================
+   global-search-overlay-index.generated.ts
+   恒永达官网｜顶部全站搜索面板索引
+
+   自动生成，请勿手动修改。
+   使用 JSON.parse 避免 TypeScript 推导超大联合类型。
+========================================================= */
+
+import type { GlobalSearchItem } from "./global-search-overlay.types";
+
+const globalSearchOverlayIndexJson = ${serializedLiteral};
+
+export const globalSearchOverlayIndex =
+  JSON.parse(globalSearchOverlayIndexJson) as GlobalSearchItem[];
+`;
+}
+
+async function main() {
+  const [
+    installationGuides,
+    technicalArticles,
+    materialCompatibility,
+    applications,
+    news,
+  ] = await Promise.all([
+    loadInstallationGuides(),
+    loadTechnicalArticles(),
+    loadMaterialCompatibility(),
+    loadApplications(),
+    loadNews(),
+  ]);
+
+  const items = deduplicate([
+    ...convertExistingItems(),
+    ...installationGuides,
+    ...technicalArticles,
+    ...materialCompatibility,
+    ...applications,
+    ...news,
+    ...loadSitePages(),
+  ]);
+
+  fs.mkdirSync(path.dirname(OUTPUT_PATH), { recursive: true });
+  fs.writeFileSync(OUTPUT_PATH, buildOutput(items), "utf8");
+
+  const counts = items.reduce<Record<string, number>>(
+    (result, item) => {
+      result[item.module] = (result[item.module] ?? 0) + 1;
+      return result;
+    },
+    {}
+  );
+
+  console.log("============================================");
+  console.log("顶部全站搜索面板索引生成完成");
+
+  for (const [module, count] of Object.entries(counts)) {
+    console.log(`${module}: ${count}`);
+  }
+
+  console.log(`总计：${items.length}`);
+  console.log(`输出：${OUTPUT_PATH}`);
+  console.log("============================================");
+}
+
+main();

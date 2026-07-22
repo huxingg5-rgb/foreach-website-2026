@@ -1,0 +1,376 @@
+[
+  {
+    "sourceFile": "441-09-00039-C.pdf",
+    "publicUrl": "/assets/products/fittings/hard-tube-fittings/2d-drawings/441-09-00039-c.pdf",
+    "matchRule": "Excel同一行料号 441-09-00039",
+    "confidence": 1000,
+    "matchedModels": [],
+    "matchedProductCodes": []
+  },
+  {
+    "sourceFile": "441-09-00040-C.pdf",
+    "publicUrl": "/assets/products/fittings/hard-tube-fittings/2d-drawings/441-09-00040-c.pdf",
+    "matchRule": "Excel同一行料号 441-09-00040",
+    "confidence": 1000,
+    "matchedModels": [
+      "PNC6-U32-16-PK-N"
+    ],
+    "matchedProductCodes": [
+      "809661"
+    ]
+  },
+  {
+    "sourceFile": "441-09-00046-C.pdf",
+    "publicUrl": "/assets/products/fittings/hard-tube-fittings/2d-drawings/441-09-00046-c.pdf",
+    "matchRule": "Excel同一行料号 441-09-00046",
+    "confidence": 1000,
+    "matchedModels": [],
+    "matchedProductCodes": []
+  },
+  {
+    "sourceFile": "441-09-00083-C.pdf",
+    "publicUrl": "/assets/products/fittings/hard-tube-fittings/2d-drawings/441-09-00083-c.pdf",
+    "matchRule": "Excel同一行料号 441-09-00083",
+    "confidence": 1000,
+    "matchedModels": [],
+    "matchedProductCodes": []
+  },
+  {
+    "sourceFile": "443-02-00478-C.pdf",
+    "publicUrl": "/assets/products/fittings/hard-tube-fittings/2d-drawings/443-02-00478-c.pdf",
+    "matchRule": "Excel同一行料号 443-02-00478",
+    "confidence": 1000,
+    "matchedModels": [
+      "PNC-U32-16-PK-N"
+    ],
+    "matchedProductCodes": [
+      "809791"
+    ]
+  },
+  {
+    "sourceFile": "HBL-M6.pdf",
+    "publicUrl": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hbl-m6.pdf",
+    "matchRule": "HBL系列 + M6螺纹",
+    "confidence": 900,
+    "matchedModels": [],
+    "matchedProductCodes": []
+  },
+  {
+    "sourceFile": "HBL-U28.pdf",
+    "publicUrl": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hbl-u28.pdf",
+    "matchRule": "HBL系列 + U28螺纹",
+    "confidence": 900,
+    "matchedModels": [],
+    "matchedProductCodes": []
+  },
+  {
+    "sourceFile": "HBL6-M6.pdf",
+    "publicUrl": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hbl6-m6.pdf",
+    "matchRule": "HBL6系列 + M6螺纹",
+    "confidence": 900,
+    "matchedModels": [],
+    "matchedProductCodes": []
+  },
+  {
+    "sourceFile": "HBL6-U28.pdf",
+    "publicUrl": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hbl6-u28.pdf",
+    "matchRule": "HBL6系列 + U28螺纹",
+    "confidence": 900,
+    "matchedModels": [],
+    "matchedProductCodes": []
+  },
+  {
+    "sourceFile": "HF6系列紧凑卡箍接头.pdf",
+    "publicUrl": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hf6-compact-ferrule.pdf",
+    "matchRule": "HF6系列 + 卡箍结构",
+    "confidence": 850,
+    "matchedModels": [],
+    "matchedProductCodes": []
+  },
+  {
+    "sourceFile": "HF6系列紧凑平底接头.pdf",
+    "publicUrl": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hf6-compact-flat-bottom.pdf",
+    "matchRule": "HF6系列 + 平底结构",
+    "confidence": 850,
+    "matchedModels": [
+      "HF6-M6-20-PK-N",
+      "HF6-M6-20-PS-B",
+      "HF6-M6-20-PV-N",
+      "HF6-M6-25-PK-N",
+      "HF6-M6-25-PS-B",
+      "HF6-M6-25-PV-N",
+      "HF6-M6-32-PK-N",
+      "HF6-M6-32-PS-B",
+      "HF6-M6-32-PV-N",
+      "HF6-U28-20-PK-N",
+      "HF6-U28-20-PS-B",
+      "HF6-U28-20-PV-N",
+      "HF6-U28-25-PK-N",
+      "HF6-U28-25-PS-B",
+      "HF6-U28-25-PV-N",
+      "HF6-U28-32-PK-N",
+      "HF6-U28-32-PS-B",
+      "HF6-U28-32-PV-N"
+    ],
+    "matchedProductCodes": [
+      "809723",
+      "809759",
+      "809758",
+      "809724",
+      "809761",
+      "809760",
+      "809725",
+      "809763",
+      "809762",
+      "809720",
+      "809753",
+      "809752",
+      "809721",
+      "809755",
+      "809754",
+      "809722",
+      "809757",
+      "809756"
+    ]
+  },
+  {
+    "sourceFile": "HF系列标滚卡箍接头.pdf",
+    "publicUrl": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hf-standard-ferrule.pdf",
+    "matchRule": "HF系列 + 卡箍结构",
+    "confidence": 850,
+    "matchedModels": [],
+    "matchedProductCodes": []
+  },
+  {
+    "sourceFile": "HF系列标滚平底接头.pdf",
+    "publicUrl": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hf-standard-flat-bottom.pdf",
+    "matchRule": "HF系列 + 平底结构",
+    "confidence": 850,
+    "matchedModels": [
+      "HF-M6-20-PK-N",
+      "HF-M6-20-PS-B",
+      "HF-M6-20-PV-N",
+      "HF-M6-25-PK-N",
+      "HF-M6-25-PS-B",
+      "HF-M6-25-PV-N",
+      "HF-M6-32-PK-N",
+      "HF-M6-32-PS-B",
+      "HF-M6-32-PV-N",
+      "HF-U28-20-PK-N",
+      "HF-U28-20-PS-B",
+      "HF-U28-20-PV-N",
+      "HF-U28-25-PK-N",
+      "HF-U28-25-PS-B",
+      "HF-U28-25-PV-N",
+      "HF-U28-32-PK-N",
+      "HF-U28-32-PS-B",
+      "HF-U28-32-PV-N"
+    ],
+    "matchedProductCodes": [
+      "809717",
+      "809747",
+      "809746",
+      "809718",
+      "809749",
+      "809748",
+      "809719",
+      "809751",
+      "809750",
+      "809714",
+      "809741",
+      "809740",
+      "809715",
+      "809743",
+      "809742",
+      "809716",
+      "809745",
+      "809744"
+    ]
+  },
+  {
+    "sourceFile": "HFL-M6.pdf",
+    "publicUrl": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hfl-m6.pdf",
+    "matchRule": "HFL系列 + M6螺纹",
+    "confidence": 900,
+    "matchedModels": [
+      "HFL-M6-16-PV-B",
+      "HFL-M6-16-PV-N",
+      "HFL-M6-20-PV-B",
+      "HFL-M6-20-PV-N",
+      "HFL-M6-25-PV-B",
+      "HFL-M6-25-PV-N",
+      "HFL-M6-30-PV-B",
+      "HFL-M6-30-PV-N",
+      "HFL-M6-32-PV-B",
+      "HFL-M6-32-PV-N"
+    ],
+    "matchedProductCodes": [
+      "809421",
+      "809032",
+      "809044",
+      "809043",
+      "809422",
+      "809054",
+      "809049",
+      "809048",
+      "809423",
+      "809037"
+    ]
+  },
+  {
+    "sourceFile": "HFL-U28.pdf",
+    "publicUrl": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hfl-u28.pdf",
+    "matchRule": "HFL系列 + U28螺纹",
+    "confidence": 900,
+    "matchedModels": [
+      "HFL-U28-16-PV-B",
+      "HFL-U28-16-PV-N",
+      "HFL-U28-20-PV-B",
+      "HFL-U28-20-PV-N",
+      "HFL-U28-25-PV-B",
+      "HFL-U28-25-PV-N",
+      "HFL-U28-30-PV-B",
+      "HFL-U28-30-PV-N",
+      "HFL-U28-32-PV-B",
+      "HFL-U28-32-PV-N"
+    ],
+    "matchedProductCodes": [
+      "809391",
+      "809030",
+      "809041",
+      "809040",
+      "809392",
+      "809052",
+      "809394",
+      "809047",
+      "809393",
+      "809035"
+    ]
+  },
+  {
+    "sourceFile": "HFL6-M6.pdf",
+    "publicUrl": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hfl6-m6.pdf",
+    "matchRule": "HFL6系列 + M6螺纹",
+    "confidence": 900,
+    "matchedModels": [
+      "HFL6-M6-16-PS-B",
+      "HFL6-M6-20-PS-B",
+      "HFL6-M6-25-PS-B",
+      "HFL6-M6-25-PS-U",
+      "HFL6-M6-30-PS-B",
+      "HFL6-M6-32-PS-B"
+    ],
+    "matchedProductCodes": [
+      "809058",
+      "809078",
+      "809098",
+      "809549",
+      "809088",
+      "809068"
+    ]
+  },
+  {
+    "sourceFile": "HFL6-U28.pdf",
+    "publicUrl": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hfl6-u28.pdf",
+    "matchRule": "HFL6系列 + U28螺纹",
+    "confidence": 900,
+    "matchedModels": [
+      "HFL6-U28-16-PS-B",
+      "HFL6-U28-16-PS-U",
+      "HFL6-U28-20-PS-B",
+      "HFL6-U28-20-PS-U",
+      "HFL6-U28-25-PS-B",
+      "HFL6-U28-30-PS-B",
+      "HFL6-U28-32-PS-B"
+    ],
+    "matchedProductCodes": [
+      "809057",
+      "809550",
+      "809077",
+      "809551",
+      "809097",
+      "809087",
+      "809067"
+    ]
+  },
+  {
+    "sourceFile": "HNF-M6.pdf",
+    "publicUrl": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hnf-m6.pdf",
+    "matchRule": "HNF系列 + M6螺纹",
+    "confidence": 900,
+    "matchedModels": [
+      "HNF-M6-16-PV-B",
+      "HNF-M6-16-PV-N",
+      "HNF-M6-20-PV-B",
+      "HNF-M6-20-PV-N",
+      "HNF-M6-25-PV-B",
+      "HNF-M6-25-PV-N",
+      "HNF-M6-30-PV-B",
+      "HNF-M6-30-PV-N",
+      "HNF-M6-32-PV-B",
+      "HNF-M6-32-PV-N"
+    ],
+    "matchedProductCodes": [
+      "809401",
+      "809108",
+      "809415",
+      "809116",
+      "809413",
+      "809124",
+      "809416",
+      "809120",
+      "809414",
+      "809112"
+    ]
+  },
+  {
+    "sourceFile": "HNF-U28.pdf",
+    "publicUrl": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hnf-u28.pdf",
+    "matchRule": "HNF系列 + U28螺纹",
+    "confidence": 900,
+    "matchedModels": [
+      "HNF-U28-16-PV-B",
+      "HNF-U28-16-PV-N",
+      "HNF-U28-20-PV-B",
+      "HNF-U28-20-PV-N",
+      "HNF-U28-25-PV-B",
+      "HNF-U28-25-PV-N",
+      "HNF-U28-30-PV-B",
+      "HNF-U28-30-PV-N",
+      "HNF-U28-32-PV-B",
+      "HNF-U28-32-PV-N"
+    ],
+    "matchedProductCodes": [
+      "809395",
+      "809107",
+      "809398",
+      "809115",
+      "809396",
+      "809123",
+      "809399",
+      "809119",
+      "809397",
+      "809111"
+    ]
+  },
+  {
+    "sourceFile": "HNF6-M6.pdf",
+    "publicUrl": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hnf6-m6.pdf",
+    "matchRule": "HNF6系列 + M6螺纹",
+    "confidence": 900,
+    "matchedModels": [
+      "HNF6-M6-16-PS-B",
+      "HNF6-M6-20-PS-B",
+      "HNF6-M6-25-PS-B",
+      "HNF6-M6-30-PS-B",
+      "HNF6-M6-32-PS-B"
+    ],
+    "matchedProductCodes": [
+      "809128",
+      "809148",
+      "809168",
+      "809158",
+      "809138"
+    ]
+  }
+]

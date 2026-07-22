@@ -1,0 +1,140 @@
+﻿import type { ProductSelectionProduct, ProductSelectionFilterLabel } from "./product-selection.types";
+
+export const diaphragmPumpSelectionProducts = [
+  {
+    "productId": "diaphragm-dpl30-brushed",
+    "id": "diaphragm-dpl30-brushed",
+    "categoryId": "pumps",
+    "categorySlug": "pumps",
+    "productTypeId": "diaphragm-pump",
+    "productTypeSlug": "diaphragm-pumps",
+    "seriesId": "dpl30-liquid-diaphragm-pump",
+    "seriesSlug": "dpl30-liquid-diaphragm-pump",
+    "detailSlug": "dpl30-24db-ep-ps-liquid-diaphragm-pump",
+    "cardTitle": {
+      "zh": "DPL30-24DB-EP/PS",
+      "en": "DPL30-24DB-EP/PS"
+    },
+    "cardSubtitle": {
+      "zh": "有刷电机\n300 mL/min\n寿命 3000 h",
+      "en": "Brushed motor\n300 mL/min\nService life 3000 h"
+    },
+    "imageCard": "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushed-liquid-diaphragm-pump-main.webp",
+    "imageAlt": {
+      "zh": "DPL30 brushed liquid diaphragm pump, 300 mL/min, 100 kPa",
+      "en": "DPL30 brushed liquid diaphragm pump, 300 mL/min, 100 kPa"
+    },
+    "categoryName": {
+      "zh": "泵",
+      "en": "Pumps"
+    },
+    "productTypeName": {
+      "zh": "隔膜泵",
+      "en": "Diaphragm Pumps"
+    },
+    "seriesName": {
+      "zh": "液泵",
+      "en": "Liquid Pumps"
+    },
+    "filters": {
+      "productType": "diaphragm-pump",
+      "filter01": "液泵",
+      "filter02": "有刷电机",
+      "filter03": "300 mL/min",
+      "filter04": "100 kPa",
+      "series": "dpl30-liquid-diaphragm-pump",
+      "motorType": "有刷电机",
+      "flowRate": "300 mL/min",
+      "pressure": "100 kPa",
+      "serviceLife": "3000 h"
+    },
+    "filter01": "液泵",
+    "filter02": "有刷电机",
+    "filter03": "300 mL/min",
+    "filter04": "100 kPa",
+    "motorType": "有刷电机",
+    "flowRate": "300 mL/min",
+    "pressure": "100 kPa",
+    "serviceLife": "3000 h",
+    "tags": [
+      "有刷电机",
+      "300 mL/min",
+      "100 kPa",
+      "寿命 3000 h"
+    ],
+    "needDrawing": true,
+    "needModel3d": true,
+    "source": "diaphragm-pump-xlsx",
+    "reservedConfigSlug": "dpl30-brushed-liquid-diaphragm-pump"
+  },
+  {
+    "productId": "diaphragm-dpl30-brushless",
+    "id": "diaphragm-dpl30-brushless",
+    "categoryId": "pumps",
+    "categorySlug": "pumps",
+    "productTypeId": "diaphragm-pump",
+    "productTypeSlug": "diaphragm-pumps",
+    "seriesId": "dpl30-liquid-diaphragm-pump",
+    "seriesSlug": "dpl30-liquid-diaphragm-pump",
+    "detailSlug": "dpl30-24bb-ep-ps-liquid-diaphragm-pump",
+    "cardTitle": {
+      "zh": "DPL30-24BB-EP/PS",
+      "en": "DPL30-24BB-EP/PS"
+    },
+    "cardSubtitle": {
+      "zh": "无刷电机\n300 mL/min\n寿命 10000 h",
+      "en": "Brushless motor\n300 mL/min\nService life 10000 h"
+    },
+    "imageCard": "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushless-liquid-diaphragm-pump-main.webp",
+    "imageAlt": {
+      "zh": "DPL30 brushless liquid diaphragm pump, 300 mL/min, 100 kPa",
+      "en": "DPL30 brushless liquid diaphragm pump, 300 mL/min, 100 kPa"
+    },
+    "categoryName": {
+      "zh": "泵",
+      "en": "Pumps"
+    },
+    "productTypeName": {
+      "zh": "隔膜泵",
+      "en": "Diaphragm Pumps"
+    },
+    "seriesName": {
+      "zh": "液泵",
+      "en": "Liquid Pumps"
+    },
+    "filters": {
+      "productType": "diaphragm-pump",
+      "filter01": "液泵",
+      "filter02": "无刷电机",
+      "filter03": "300 mL/min",
+      "filter04": "100 kPa",
+      "series": "dpl30-liquid-diaphragm-pump",
+      "motorType": "无刷电机",
+      "flowRate": "300 mL/min",
+      "pressure": "100 kPa",
+      "serviceLife": "10000 h"
+    },
+    "filter01": "液泵",
+    "filter02": "无刷电机",
+    "filter03": "300 mL/min",
+    "filter04": "100 kPa",
+    "motorType": "无刷电机",
+    "flowRate": "300 mL/min",
+    "pressure": "100 kPa",
+    "serviceLife": "10000 h",
+    "tags": [
+      "无刷电机",
+      "300 mL/min",
+      "100 kPa",
+      "寿命 10000 h"
+    ],
+    "needDrawing": true,
+    "needModel3d": true,
+    "source": "diaphragm-pump-xlsx",
+    "reservedConfigSlug": "dpl30-brushless-liquid-diaphragm-pump"
+  },
+  {
+    "productId": "diaphragm-dpl60-brushed",
+    "id": "diaphragm-dpl60-brushed",
+    "categoryId": "pumps",
+    "categorySlug": "pumps",

@@ -1,0 +1,33 @@
+Vercel 邮件与询盘环境变量
+
+以下变量需要在 Vercel 项目中配置：
+
+1. Resend 邮件配置
+
+RESEND_API_KEY=
+INQUIRY_FROM_EMAIL=FOREACH Website <website@已在Resend验证的发信域名>
+INQUIRY_TO_EMAIL=公司接收询盘的邮箱
+
+2. Upstash Redis 配置
+
+UPSTASH_REDIS_REST_URL=
+UPSTASH_REDIS_REST_TOKEN=
+
+说明：
+
+RESEND_API_KEY
+- 来自 Resend 的 API Keys 页面
+- 必须设置为 Vercel Secret
+
+INQUIRY_FROM_EMAIL
+- 用于发送验证码、询盘通知和客户确认邮件
+- 域名必须已经在 Resend 验证通过
+
+INQUIRY_TO_EMAIL
+- 公司内部接收官网询盘的邮箱
+- 可以是销售邮箱、市场邮箱或公共业务邮箱
+
+UPSTASH_REDIS_REST_URL
+UPSTASH_REDIS_REST_TOKEN
+- 连接 Vercel Marketplace 中的 Upstash Redis 后自动生成
+- 不得写入 GitHub

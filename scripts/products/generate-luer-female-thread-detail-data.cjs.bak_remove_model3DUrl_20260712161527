@@ -1,0 +1,1327 @@
+﻿const fs = require("fs");
+const path = require("path");
+
+const root = process.cwd();
+
+const targets = [
+  {
+    id: "luer-fittings",
+    exportName: "luerFittingSelectionProducts",
+    selectionPath: path.join(
+      root,
+      "data",
+      "products",
+      "selection",
+      "luer-fitting-selection.generated.ts"
+    ),
+    assetMapPath: path.join(
+      root,
+      "data",
+      "products",
+      "selection",
+      "luer-fitting-asset-map.generated.json"
+    ),
+    detailOutputPath: path.join(
+      root,
+      "data",
+      "products",
+      "generated",
+      "fittings",
+      "luer-fittings",
+      "detail",
+      "index.json"
+    ),
+    routeMapOutputPath: path.join(
+      root,
+      "data",
+      "products",
+      "selection",
+      "luer-fitting-detail-route-map.generated.ts"
+    ),
+    productTypeLabel: "鲁尔接头",
+  },
+  {
+    id: "female-thread-adapters",
+    exportName: "femaleThreadAdapterSelectionProducts",
+    selectionPath: path.join(
+      root,
+      "data",
+      "products",
+      "selection",
+      "female-thread-adapter-selection.generated.ts"
+    ),
+    assetMapPath: path.join(
+      root,
+      "data",
+      "products",
+      "selection",
+      "female-thread-adapter-asset-map.generated.json"
+    ),
+    detailOutputPath: path.join(
+      root,
+      "data",
+      "products",
+      "generated",
+      "fittings",
+      "female-thread-adapters",
+      "detail",
+      "index.json"
+    ),
+    routeMapOutputPath: path.join(
+      root,
+      "data",
+      "products",
+      "selection",
+      "female-thread-adapter-detail-route-map.generated.ts"
+    ),
+    productTypeLabel: "内螺纹互转接头",
+  },
+];
+
+const luerSeriesNames = {
+  LSL: "固定公鲁尔芯子",
+  LRL: "旋转公鲁尔芯子",
+  LPR: "旋转锁圈公鲁尔接头",
+  LPS: "固定锁圈公鲁尔接头",
+  LP: "一体式公鲁尔接头",
+  LS: "母鲁尔接头",
+  PMLS: "穿板母鲁尔接头",
+  LCR: "鲁尔接头识别色环",
+  LPT: "鲁尔内螺纹套",
+  LNS: "鲁尔滚花螺母",
+};
+
+const femaleSeriesNames = {
+  US: "方形二通内螺纹互转接头",
+  PMU: "穿板二通内螺纹互转接头",
+  U: "直通二通内螺纹互转接头",
+  UT: "T型三通内螺纹互转接头",
+  UY: "Y型三通内螺纹互转接头",
+  PMBSN: "内螺纹六角螺母",
+  PU: "高压二通内螺纹互转接头",
+  PUT: "高压T型三通内螺纹互转接头",
+};
+
+function text(value) {
+  return value == null
+    ? ""
+    : String(value).trim();
+}
+
+function ensureParent(filePath) {
+  fs.mkdirSync(
+    path.dirname(filePath),
+    {
+      recursive: true,
+    }
+  );
+}
+
+function backupIfExists(filePath) {
+  if (!fs.existsSync(filePath)) {
+    return "";
+  }
+
+  const stamp = new Date()
+    .toISOString()
+    .replace(/[-:TZ.]/g, "")
+    .slice(0, 14);
+
+  const backupPath =
+    `${filePath}.bak_${stamp}`;
+
+  fs.copyFileSync(
+    filePath,
+    backupPath
+  );
+
+  return backupPath;
+}
+
+function readJson(
+  filePath,
+  fallback
+) {
+  if (!fs.existsSync(filePath)) {
+    return fallback;
+  }
+
+  return JSON.parse(
+    fs.readFileSync(
+      filePath,
+      "utf8"
+    )
+  );
+}
+
+function extractJsonArray(
+  source,
+  exportName
+) {
+  const marker =
+    `export const ${exportName}`;
+
+  const markerIndex =
+    source.indexOf(marker);
+
+  if (markerIndex < 0) {
+    throw new Error(
+      `未找到导出：${exportName}`
+    );
+  }
+
+  const assignmentIndex =
+    source.indexOf(
+      "=",
+      markerIndex
+    );
+
+  if (assignmentIndex < 0) {
+    throw new Error(
+      `${exportName} 没有找到赋值符号。`
+    );
+  }
+
+  const arrayStart =
+    source.indexOf(
+      "[",
+      assignmentIndex
+    );
+
+  if (arrayStart < 0) {
+    throw new Error(
+      `${exportName} 没有数组起点。`
+    );
+  }
+
+  let depth = 0;
+  let quote = "";
+  let escaped = false;
+
+  for (
+    let index = arrayStart;
+    index < source.length;
+    index += 1
+  ) {
+    const char =
+      source[index];
+
+    if (quote) {
+      if (escaped) {
+        escaped = false;
+        continue;
+      }
+
+      if (char === "\\") {
+        escaped = true;
+        continue;
+      }
+
+      if (char === quote) {
+        quote = "";
+      }
+
+      continue;
+    }
+
+    if (
+      char === '"' ||
+      char === "'"
+    ) {
+      quote = char;
+      continue;
+    }
+
+    if (char === "[") {
+      depth += 1;
+      continue;
+    }
+
+    if (char === "]") {
+      depth -= 1;
+
+      if (depth === 0) {
+        return JSON.parse(
+          source.slice(
+            arrayStart,
+            index + 1
+          )
+        );
+      }
+    }
+  }
+
+  throw new Error(
+    `${exportName} 数组没有正常结束。`
+  );
+}
+
+function localizedText(value) {
+  if (typeof value === "string") {
+    return text(value);
+  }
+
+  return text(
+    value?.zh ||
+    value?.en ||
+    ""
+  );
+}
+
+function normalizeSlug(value) {
+  return text(value)
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function cleanFilterValue(value) {
+  return text(value)
+    .split("|")
+    .map(
+      (item) =>
+        item.trim()
+    )
+    .filter(Boolean)
+    .join("、");
+}
+
+function removeCodePrefix(value) {
+  return cleanFilterValue(value)
+    .replace(
+      /^[A-Z0-9]+\s*-\s*/,
+      ""
+    );
+}
+
+function getSeriesCode(product) {
+  const seriesId =
+    text(product.seriesId)
+      .toUpperCase();
+
+  if (seriesId) {
+    return seriesId;
+  }
+
+  return localizedText(
+    product.cardTitle
+  )
+    .split("-")[0]
+    .toUpperCase();
+}
+
+function toAssetEntries(rawMap) {
+  if (Array.isArray(rawMap)) {
+    return rawMap;
+  }
+
+  if (
+    rawMap &&
+    typeof rawMap === "object"
+  ) {
+    return Object.values(
+      rawMap
+    );
+  }
+
+  return [];
+}
+
+function findAsset(
+  assetEntries,
+  productCode,
+  model
+) {
+  const code =
+    text(productCode);
+
+  const upperModel =
+    text(model).toUpperCase();
+
+  return (
+    assetEntries.find(
+      (item) =>
+        text(
+          item?.productCode ||
+          item?.productId
+        ) === code
+    ) ||
+    assetEntries.find(
+      (item) =>
+        text(
+          item?.model ||
+          item?.fullModel ||
+          item?.foreachModel
+        ).toUpperCase() ===
+        upperModel
+    ) ||
+    {}
+  );
+}
+
+function firstNonEmpty(
+  object,
+  keys
+) {
+  for (const key of keys) {
+    const value =
+      text(object?.[key]);
+
+    if (value) {
+      return value;
+    }
+  }
+
+  return "";
+}
+
+function getImagePath(
+  product,
+  asset
+) {
+  return (
+    text(product.imageCard) ||
+    firstNonEmpty(
+      asset,
+      [
+        "imageCard",
+        "mainImage",
+        "image",
+        "imageUrl",
+      ]
+    )
+  );
+}
+
+function getDrawingPath(asset) {
+  return firstNonEmpty(
+    asset,
+    [
+      "drawingPdfUrl",
+      "drawingUrl",
+      "drawingPdf",
+      "pdfUrl",
+      "detailDrawingUrl",
+    ]
+  );
+}
+
+function getModel3dPath(asset) {
+  return firstNonEmpty(
+    asset,
+    [
+      "model3dUrl",
+      "model3DUrl",
+      "modelUrl",
+      "glbUrl",
+      "model3d",
+    ]
+  );
+}
+
+function createFaqs(
+  productTypeId
+) {
+  if (
+    productTypeId ===
+    "luer-fittings"
+  ) {
+    return [
+      {
+        question:
+          "公鲁尔和母鲁尔如何选择？",
+        answer:
+          "应根据对接端接口形式选择公鲁尔或母鲁尔，并确认是否需要锁圈结构。",
+      },
+      {
+        question:
+          "锁圈式和一体式鲁尔接头有什么区别？",
+        answer:
+          "锁圈式适合需要旋紧固定的连接，一体式结构更紧凑，应结合装配空间和使用方式选择。",
+      },
+      {
+        question:
+          "接管尺寸如何确认？",
+        answer:
+          "接管尺寸按软管内径匹配，同时应核对软管材质、硬度和实际装配松紧度。",
+      },
+      {
+        question:
+          "不同材质如何选择？",
+        answer:
+          "应根据介质兼容性、温度、强度和洁净要求选择PP、PA或PVDF等材质。",
+      },
+      {
+        question:
+          "颜色是否可以定制？",
+        answer:
+          "标准颜色以在售型号为准，其他颜色需求可在提交清单时说明。",
+      },
+    ];
+  }
+
+  return [
+    {
+      question:
+        "二通和三通如何选择？",
+      answer:
+        "二通用于两路接口连接，三通用于一路分成两路或两路汇合，应根据液路结构选择。",
+    },
+    {
+      question:
+        "通径是否等于螺纹尺寸？",
+      answer:
+        "通径表示内部流道尺寸，螺纹规格表示接口连接标准，两者不是同一个参数。",
+    },
+    {
+      question:
+        "不同螺纹能否互转？",
+      answer:
+        "应以具体在售型号的接口组合为准，未列出的组合可提交定制需求。",
+    },
+    {
+      question:
+        "PP、PA和SS材质如何选择？",
+      answer:
+        "应结合介质兼容性、压力、温度和机械强度选择合适材质。",
+    },
+    {
+      question:
+        "能否提供二维图和三维模型？",
+      answer:
+        "已上传的资源会在详情页显示，暂未上传的型号可通过添加图纸或清单备注提交资料需求。",
+    },
+  ];
+}
+
+function createApplications(
+  productTypeId,
+  seriesCode
+) {
+  if (
+    productTypeId ===
+    "luer-fittings"
+  ) {
+    return [
+      "软管与鲁尔接口连接",
+      "仪器内部液路连接",
+      "IVD与分析仪器流路",
+      "实验室自动化设备液路",
+    ];
+  }
+
+  return [
+    "仪器内部液路转接",
+    "泵阀与流路接口连接",
+    "IVD与分析仪器流路",
+    "实验室自动化设备液路",
+  ];
+}
+
+function createBaseDetail({
+  product,
+  asset,
+  model,
+  productCode,
+  slug,
+  seriesCode,
+  seriesName,
+  productTypeId,
+  productTypeLabel,
+  description,
+  specs,
+}) {
+  const mainImage =
+    getImagePath(
+      product,
+      asset
+    );
+
+  const drawingPdfUrl =
+    getDrawingPath(asset);
+
+  const model3dUrl =
+    getModel3dPath(asset);
+
+  const detailHref =
+    `/products/fittings/${productTypeId}/${slug}`;
+
+  const selectionHref =
+    `/products/fittings/${productTypeId}`;
+
+  return {
+    sourceType:
+      "fitting-detail",
+
+    category:
+      "fittings",
+
+    categoryId:
+      "fittings",
+
+    categoryLabel:
+      "接头系列",
+
+    productTypeId,
+
+    productTypeName:
+      seriesName,
+
+    productTypeLabel,
+
+    productId:
+      productCode,
+
+    productCode,
+
+    seriesId:
+      seriesCode.toLowerCase(),
+
+    seriesCode,
+
+    seriesName,
+
+    slug,
+
+    model,
+
+    name:
+      seriesName,
+
+    title:
+      seriesName,
+
+    displayName:
+      seriesName,
+
+    productName:
+      seriesName,
+
+    modelDisplay:
+      model,
+
+    displayModel:
+      model,
+
+    foreachModel:
+      model,
+
+    description,
+
+    shortDescription:
+      description,
+
+    heroDescription:
+      description,
+
+    advantages:
+      specs
+        .slice(4)
+        .map(
+          (item) =>
+            `${item.label}：${item.value}`
+        ),
+
+    commonApplications:
+      createApplications(
+        productTypeId,
+        seriesCode
+      ),
+
+    mainImage,
+
+    image:
+      mainImage,
+
+    heroImage:
+      mainImage,
+
+    imageCard:
+      mainImage,
+
+    additionalImages: [],
+
+    images:
+      mainImage
+        ? [mainImage]
+        : [],
+
+    model3dUrl,
+
+    model3DUrl:
+      model3dUrl,
+
+    modelUrl:
+      model3dUrl,
+
+    drawingPdfUrl,
+
+    drawingUrl:
+      drawingPdfUrl,
+
+    drawingPdf:
+      drawingPdfUrl,
+
+    detailMode:
+      "standard_model",
+
+    specs,
+
+    specifications:
+      specs,
+
+    faqs:
+      createFaqs(
+        productTypeId
+      ),
+
+    showDrawingRequest:
+      true,
+
+    show3DRequest:
+      false,
+
+    detailHref,
+
+    selectionHref,
+
+    configuratorHref:
+      selectionHref,
+
+    modelSelectionHref:
+      selectionHref,
+
+    resourceStatus: {
+      model3d:
+        model3dUrl
+          ? "available"
+          : "missing",
+
+      drawing:
+        drawingPdfUrl
+          ? "available"
+          : "missing",
+    },
+
+    resourceMessages: {
+      model3d:
+        "暂无3D模型",
+
+      drawing:
+        "暂无二维图纸",
+    },
+  };
+}
+
+function createLuerDetail(
+  product,
+  asset
+) {
+  const model =
+    localizedText(
+      product.cardTitle
+    );
+
+  const productCode =
+    text(
+      product.productCode ||
+      product.productId
+    );
+
+  const seriesCode =
+    getSeriesCode(product);
+
+  const subtitleLines =
+    localizedText(
+      product.cardSubtitle
+    ).split("\n");
+
+  const seriesName =
+    luerSeriesNames[
+      seriesCode
+    ] ||
+    subtitleLines[0] ||
+    "鲁尔接头";
+
+  const tubeInnerDiameter =
+    cleanFilterValue(
+      product.filters?.filter03
+    );
+
+  const thread =
+    cleanFilterValue(
+      product.filters?.filter04
+    );
+
+  const material =
+    cleanFilterValue(
+      product.filters?.filter05
+    );
+
+  const color =
+    removeCodePrefix(
+      product.filters?.filter06
+    );
+
+  const slug =
+    normalizeSlug(
+      product.detailSlug ||
+      model
+    );
+
+  const descriptionParts = [
+    `${model}是一款${seriesName}`,
+
+    thread
+      ? `采用${thread}螺纹连接`
+      : "",
+
+    tubeInnerDiameter
+      ? `适配${tubeInnerDiameter}内径软管`
+      : "",
+
+    material
+      ? `主体材质为${material}`
+      : "",
+
+    "适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路连接",
+  ].filter(Boolean);
+
+  const specs = [
+    {
+      label: "型号",
+      value: model,
+    },
+    {
+      label: "商品编码",
+      value: productCode,
+    },
+    {
+      label: "产品类别",
+      value: "鲁尔接头",
+    },
+    {
+      label: "产品系列",
+      value: seriesCode,
+    },
+    {
+      label: "鲁尔结构",
+      value: seriesName,
+    },
+
+    thread
+      ? {
+          label: "螺纹规格",
+          value: thread,
+        }
+      : null,
+
+    tubeInnerDiameter
+      ? {
+          label: "接管内径",
+          value:
+            tubeInnerDiameter,
+        }
+      : null,
+
+    material
+      ? {
+          label: "材质",
+          value: material,
+        }
+      : null,
+
+    color
+      ? {
+          label: "颜色",
+          value: color,
+        }
+      : null,
+  ].filter(Boolean);
+
+  return createBaseDetail({
+    product,
+    asset,
+    model,
+    productCode,
+    slug,
+    seriesCode,
+    seriesName,
+
+    productTypeId:
+      "luer-fittings",
+
+    productTypeLabel:
+      "鲁尔接头",
+
+    description:
+      `${descriptionParts.join("，")}。`,
+
+    specs,
+  });
+}
+
+function createFemaleDetail(
+  product,
+  asset
+) {
+  const model =
+    localizedText(
+      product.cardTitle
+    );
+
+  const productCode =
+    text(
+      product.productCode ||
+      product.productId
+    );
+
+  const seriesCode =
+    getSeriesCode(product);
+
+  const seriesName =
+    femaleSeriesNames[
+      seriesCode
+    ] ||
+    "内螺纹互转接头";
+
+  const structure =
+    cleanFilterValue(
+      product.filters?.filter01
+    );
+
+  const thread =
+    cleanFilterValue(
+      product.filters?.filter02
+    );
+
+  const flowDiameter =
+    cleanFilterValue(
+      product.filters?.filter03
+    );
+
+  const material =
+    cleanFilterValue(
+      product.filters?.filter04
+    );
+
+  const color =
+    removeCodePrefix(
+      product.filters?.filter05
+    );
+
+  const slug =
+    normalizeSlug(
+      product.detailSlug ||
+      model
+    );
+
+  const descriptionParts = [
+    `${model}是一款${seriesName}`,
+
+    thread
+      ? `采用${thread}内螺纹接口`
+      : "",
+
+    flowDiameter
+      ? `通径为${flowDiameter}`
+      : "",
+
+    material
+      ? `主体材质为${material}`
+      : "",
+
+    "适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接",
+  ].filter(Boolean);
+
+  const specs = [
+    {
+      label: "型号",
+      value: model,
+    },
+    {
+      label: "商品编码",
+      value: productCode,
+    },
+    {
+      label: "产品类别",
+      value:
+        "内螺纹互转接头",
+    },
+    {
+      label: "产品系列",
+      value: seriesCode,
+    },
+
+    structure
+      ? {
+          label: "连接结构",
+          value: structure,
+        }
+      : null,
+
+    thread
+      ? {
+          label: "螺纹规格",
+          value: thread,
+        }
+      : null,
+
+    flowDiameter
+      ? {
+          label: "通径",
+          value:
+            flowDiameter,
+        }
+      : null,
+
+    material
+      ? {
+          label: "材质",
+          value: material,
+        }
+      : null,
+
+    color
+      ? {
+          label: "颜色",
+          value: color,
+        }
+      : null,
+  ].filter(Boolean);
+
+  return createBaseDetail({
+    product,
+    asset,
+    model,
+    productCode,
+    slug,
+    seriesCode,
+    seriesName,
+
+    productTypeId:
+      "female-thread-adapters",
+
+    productTypeLabel:
+      "内螺纹互转接头",
+
+    description:
+      `${descriptionParts.join("，")}。`,
+
+    specs,
+  });
+}
+
+function createRouteMapSource(
+  target,
+  details
+) {
+  const byProductCode = {};
+  const byModel = {};
+
+  for (const detail of details) {
+    byProductCode[
+      detail.productCode
+    ] =
+      detail.detailHref;
+
+    byModel[
+      detail.model
+    ] =
+      detail.detailHref;
+  }
+
+  const prefix =
+    target.id ===
+    "luer-fittings"
+      ? "luerFitting"
+      : "femaleThreadAdapter";
+
+  return `/*
+ * 自动生成：${target.productTypeLabel}详情路由映射
+ *
+ * 数据源：
+ * ${path.relative(root, target.detailOutputPath).replace(/\\/g, "/")}
+ *
+ * 请勿手工修改。
+ */
+
+export const ${prefix}DetailHrefByProductCode:
+  Record<string, string> =
+${JSON.stringify(byProductCode, null, 2)};
+
+export const ${prefix}DetailHrefByModel:
+  Record<string, string> =
+${JSON.stringify(byModel, null, 2)};
+`;
+}
+
+const report = {
+  generatedAt:
+    new Date().toISOString(),
+
+  targets: [],
+};
+
+for (const target of targets) {
+  if (
+    !fs.existsSync(
+      target.selectionPath
+    )
+  ) {
+    throw new Error(
+      `未找到选型数据：${target.selectionPath}`
+    );
+  }
+
+  const selectionSource =
+    fs.readFileSync(
+      target.selectionPath,
+      "utf8"
+    );
+
+  const products =
+    extractJsonArray(
+      selectionSource,
+      target.exportName
+    );
+
+  const rawAssetMap =
+    readJson(
+      target.assetMapPath,
+      {}
+    );
+
+  const assetEntries =
+    toAssetEntries(
+      rawAssetMap
+    );
+
+  const details =
+    products.map(
+      (product) => {
+        const model =
+          localizedText(
+            product.cardTitle
+          );
+
+        const productCode =
+          text(
+            product.productCode ||
+            product.productId
+          );
+
+        const asset =
+          findAsset(
+            assetEntries,
+            productCode,
+            model
+          );
+
+        return target.id ===
+          "luer-fittings"
+          ? createLuerDetail(
+              product,
+              asset
+            )
+          : createFemaleDetail(
+              product,
+              asset
+            );
+      }
+    );
+
+  const expectedCount =
+    target.id ===
+    "luer-fittings"
+      ? 151
+      : 24;
+
+  if (
+    details.length !==
+    expectedCount
+  ) {
+    throw new Error(
+      `${target.productTypeLabel}详情数量错误：${details.length}/${expectedCount}`
+    );
+  }
+
+  const slugCounts = {};
+
+  for (const detail of details) {
+    slugCounts[detail.slug] =
+      (slugCounts[detail.slug] || 0) +
+      1;
+  }
+
+  const duplicateSlugs =
+    Object.entries(
+      slugCounts
+    ).filter(
+      ([, count]) =>
+        count > 1
+    );
+
+  if (
+    duplicateSlugs.length
+  ) {
+    throw new Error(
+      `${target.productTypeLabel}存在重复slug：${JSON.stringify(duplicateSlugs)}`
+    );
+  }
+
+  ensureParent(
+    target.detailOutputPath
+  );
+
+  ensureParent(
+    target.routeMapOutputPath
+  );
+
+  const backups = [
+    backupIfExists(
+      target.detailOutputPath
+    ),
+    backupIfExists(
+      target.routeMapOutputPath
+    ),
+  ].filter(Boolean);
+
+  fs.writeFileSync(
+    target.detailOutputPath,
+    JSON.stringify(
+      details,
+      null,
+      2
+    ) + "\n",
+    "utf8"
+  );
+
+  fs.writeFileSync(
+    target.routeMapOutputPath,
+    createRouteMapSource(
+      target,
+      details
+    ),
+    "utf8"
+  );
+
+  report.targets.push({
+    productTypeId:
+      target.id,
+
+    count:
+      details.length,
+
+    withImage:
+      details.filter(
+        (item) =>
+          item.mainImage
+      ).length,
+
+    withDrawing:
+      details.filter(
+        (item) =>
+          item.drawingPdfUrl
+      ).length,
+
+    withModel3d:
+      details.filter(
+        (item) =>
+          item.model3dUrl
+      ).length,
+
+    detailOutputPath:
+      target.detailOutputPath,
+
+    routeMapOutputPath:
+      target.routeMapOutputPath,
+
+    backups,
+
+    samples:
+      details
+        .slice(0, 3)
+        .map(
+          (item) => ({
+            model:
+              item.model,
+
+            name:
+              item.name,
+
+            description:
+              item.description,
+
+            specs:
+              item.specs,
+
+            detailHref:
+              item.detailHref,
+          })
+        ),
+  });
+}
+
+const reportPath = path.join(
+  root,
+  "reports",
+  "luer-female-thread-detail-generation-report.json"
+);
+
+ensureParent(reportPath);
+
+fs.writeFileSync(
+  reportPath,
+  JSON.stringify(
+    report,
+    null,
+    2
+  ) + "\n",
+  "utf8"
+);
+
+console.log("");
+console.log(
+  "============================================"
+);
+console.log(
+  "两类接头详情数据生成完成"
+);
+console.log(
+  "============================================"
+);
+
+for (
+  const item
+  of report.targets
+) {
+  console.log("");
+  console.log(
+    `${item.productTypeId}：${item.count}`
+  );
+  console.log(
+    `有主图：${item.withImage}`
+  );
+  console.log(
+    `有二维图：${item.withDrawing}`
+  );
+  console.log(
+    `有3D模型：${item.withModel3d}`
+  );
+}
+
+console.log("");
+console.log(
+  "报告："
+);
+console.log(
+  reportPath
+);
+console.log("");
+console.log(
+  "本步骤只生成详情数据和路由映射。"
+);
+console.log(
+  "尚未修改公共动态路由和卡片跳转。"
+);

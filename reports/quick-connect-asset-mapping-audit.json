@@ -1,0 +1,4233 @@
+{
+  "createdAt": "2026-07-12T12:15:52.191Z",
+  "assetRoot": "H:\\01-官网项目\\02_产品中心\\fit\\Quick connector",
+  "excelPath": "data-source/product-center/fittings/FRGD-140D-2606-0002_001_cn_连接件标品在售清单.xlsx",
+  "sheetName": "04_快插接头",
+  "detectedColumns": {
+    "model": "恒永达型号",
+    "productCode": "商品编码",
+    "drawing2d": "2D图编码",
+    "model3d": "3D图编码"
+  },
+  "excelHeaders": [
+    "产品类型",
+    "产品系列",
+    "恒永达型号",
+    "商品编码",
+    "竞品型号",
+    "__EMPTY",
+    "__EMPTY_1",
+    "__EMPTY_2",
+    "__EMPTY_3",
+    "2D图编码",
+    "3D图编码"
+  ],
+  "counts": {
+    "excelRows": 192,
+    "validQuickConnectRows": 191,
+    "series": {
+      "Q20": 98,
+      "Q40": 58,
+      "Q60": 35
+    },
+    "totalFiles": 351,
+    "images": 182,
+    "pdfs": 168,
+    "model3d": 0,
+    "other": 1,
+    "matchedImageRows": 177,
+    "matchedPdfRows": 0,
+    "matched3dRows": 0,
+    "missingImageRows": 14,
+    "missingPdfRows": 191,
+    "multipleImageRows": 0,
+    "multiplePdfRows": 0,
+    "unmatchedFiles": 174
+  },
+  "mappings": [
+    {
+      "sourceRow": 3,
+      "model": "Q2001-SNX-SACN",
+      "productCode": "839001",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2001-SNX-SACN-1.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 4,
+      "model": "Q2002-SNX-SACN",
+      "productCode": "839002",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2002-SNX-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 5,
+      "model": "Q2003-SNX-SACN",
+      "productCode": "839003",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2003-SNX-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 6,
+      "model": "Q2004-SNX-SACN",
+      "productCode": "839004",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2004-SNX-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 7,
+      "model": "Q2002-SNX-LACN",
+      "productCode": "839005",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2002-SNX-LACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 8,
+      "model": "Q2004-SNX-LACN",
+      "productCode": "839006",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2004-SNX-LACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 9,
+      "model": "Q2018N-SNX-SACN",
+      "productCode": "839007",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2018N-SNX-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 10,
+      "model": "Q2001-SMX-SACN",
+      "productCode": "839008",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2001-SMX-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 11,
+      "model": "Q2002-SMX-SACN",
+      "productCode": "839009",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2002-SMX-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 12,
+      "model": "Q2003-SMX-SACN",
+      "productCode": "839010",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2003-SMX-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 13,
+      "model": "Q2004-SMX-SACN",
+      "productCode": "839011",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2004-SMX-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 14,
+      "model": "Q2001-PMX-SACN",
+      "productCode": "839019",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2001-PMX-SACN-1.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 15,
+      "model": "Q2002-PMX-SACN",
+      "productCode": "839020",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2002-PMX-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 16,
+      "model": "Q2003-PMX-SACN",
+      "productCode": "839021",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2003-PMX-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 17,
+      "model": "Q2004-PMX-SACN",
+      "productCode": "839022",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2004-PMX-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 18,
+      "model": "Q2001-SNV-SACN",
+      "productCode": "839023",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2001-SNV-SACN-1.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 19,
+      "model": "Q2002-SNV-SACN",
+      "productCode": "839024",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2002-SNV-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 20,
+      "model": "Q2003-SNV-SACN",
+      "productCode": "839025",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2003-SNV-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 21,
+      "model": "Q2004-SNV-SACN",
+      "productCode": "839026",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2004-SNV-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 22,
+      "model": "Q2002-SNV-LACN",
+      "productCode": "839027",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2002-SNV-LACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 23,
+      "model": "Q2004-SNV-LACN",
+      "productCode": "839028",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2004-SNV-LACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 24,
+      "model": "Q2018N-SNV-SACN",
+      "productCode": "839029",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2018N-SNV-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 25,
+      "model": "Q2001-SMV-SACN",
+      "productCode": "839030",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2001-SMV-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 26,
+      "model": "Q2002-SMV-SACN",
+      "productCode": "839031",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2002-SMV-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 27,
+      "model": "Q2003-SMV-SACN",
+      "productCode": "839032",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2003-SMV-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 28,
+      "model": "Q2004-SMV-SACN",
+      "productCode": "839033",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2004-SMV-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 29,
+      "model": "Q2001-PNV-SACN",
+      "productCode": "839034",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2001-PNV-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 30,
+      "model": "Q2002-PNV-SACN",
+      "productCode": "839035",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2002-PNV-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 31,
+      "model": "Q2003-PNV-SACN",
+      "productCode": "839036",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2003-PNV-SACN-1.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 32,
+      "model": "Q2004-PNV-SACN",
+      "productCode": "839037",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2004-PNV-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 33,
+      "model": "Q2002-PNV-LACN",
+      "productCode": "839038",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2002-PNV-LACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 34,
+      "model": "Q2004-PNV-LACN",
+      "productCode": "839039",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2004-PNV-LACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 35,
+      "model": "Q2018N-PNV-SACN",
+      "productCode": "839040",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2018N-PNV-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 36,
+      "model": "Q2001-PMV-SACN",
+      "productCode": "839041",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2001-PMV-SACN-1.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 37,
+      "model": "Q2002-PMV-SACN",
+      "productCode": "839042",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2002-PMV-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 38,
+      "model": "Q2003-PMV-SACN",
+      "productCode": "839043",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2003-PMV-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 39,
+      "model": "Q2004-PMV-SACN",
+      "productCode": "839044",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2004-PMV-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 40,
+      "model": "Q2002-SNV-SACF",
+      "productCode": "839092",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 41,
+      "model": "Q2002-PNV-SACF",
+      "productCode": "839091",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 42,
+      "model": "Q2001-PNX-SACN",
+      "productCode": "839012",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2001-PNX-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 43,
+      "model": "Q2002-PNX-SACN",
+      "productCode": "839013",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2002-PNX-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 44,
+      "model": "Q2003-PNX-SACN",
+      "productCode": "839014",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2003-PNX-SACN_2.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 45,
+      "model": "Q2004-PNX-SACN",
+      "productCode": "839015",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2004-PNX-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 46,
+      "model": "Q2002-PNX-LACN",
+      "productCode": "839016",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2002-PNX-LACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 47,
+      "model": "Q2004-PNX-LACN",
+      "productCode": "839017",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2004-PNX-LACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 48,
+      "model": "Q2018N-PNX-SACN",
+      "productCode": "839018",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2018N-PNX-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 49,
+      "model": "Q2001-SNX-SPPE",
+      "productCode": "839045",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2001-SNX-SPPE-1.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 50,
+      "model": "Q2002-SNX-SPPE",
+      "productCode": "839046",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2002-SNX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 51,
+      "model": "Q2003-SNX-SPPE",
+      "productCode": "839047",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2003-SNX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 52,
+      "model": "Q2004-SNX-SPPE",
+      "productCode": "839048",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2004-SNX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 53,
+      "model": "Q2002-SNX-LPPE",
+      "productCode": "839049",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2002-SNX-LPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 54,
+      "model": "Q2004-SNX-LPPE",
+      "productCode": "839050",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2004-SNX-LPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 55,
+      "model": "Q2018N-SNX-SPPE",
+      "productCode": "839051",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2018N-SNX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 56,
+      "model": "Q2001-SMX-SPPE",
+      "productCode": "839052",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2001-SMX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 57,
+      "model": "Q2002-SMX-SPPE",
+      "productCode": "839053",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2002-SMX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 58,
+      "model": "Q2003-SMX-SPPE",
+      "productCode": "839054",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2003-SMX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 59,
+      "model": "Q2004-SMX-SPPE",
+      "productCode": "839055",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2004-SMX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 60,
+      "model": "Q2001-PMX-SPPE",
+      "productCode": "839063",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2001-PMX-SPPE-1.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 61,
+      "model": "Q2002-PMX-SPPE",
+      "productCode": "839064",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2002-PMX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 62,
+      "model": "Q2003-PMX-SPPE",
+      "productCode": "839065",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2003-PMX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 63,
+      "model": "Q2004-PMX-SPPE",
+      "productCode": "839066",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2004-PMX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 64,
+      "model": "Q2001-SNV-SPPE",
+      "productCode": "839067",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2001-SNV-SPPE-1.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 65,
+      "model": "Q2002-SNV-SPPE",
+      "productCode": "839068",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2002-SNV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 66,
+      "model": "Q2003-SNV-SPPE",
+      "productCode": "839069",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2003-SNV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 67,
+      "model": "Q2004-SNV-SPPE",
+      "productCode": "839070",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2004-SNV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 68,
+      "model": "Q2002-SNV-LPPE",
+      "productCode": "839071",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2002-SNV-LPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 69,
+      "model": "Q2004-SNV-LPPE",
+      "productCode": "839072",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2004-SNV-LPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 70,
+      "model": "Q2018N-SNV-SPPE",
+      "productCode": "839073",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2018N-SNV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 71,
+      "model": "Q2001-SMV-SPPE",
+      "productCode": "839074",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2001-SMV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 72,
+      "model": "Q2002-SMV-SPPE",
+      "productCode": "839075",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2002-SMV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 73,
+      "model": "Q2003-SMV-SPPE",
+      "productCode": "839076",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2003-SMV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 74,
+      "model": "Q2004-SMV-SPPE",
+      "productCode": "839077",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2004-SMV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 75,
+      "model": "Q2001-PNV-SPPE",
+      "productCode": "839078",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2001-PNV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 76,
+      "model": "Q2002-PNV-SPPE",
+      "productCode": "839079",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2002-PNV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 77,
+      "model": "Q2003-PNV-SPPE",
+      "productCode": "839080",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2003-PNV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 78,
+      "model": "Q2004-PNV-SPPE",
+      "productCode": "839081",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2004-PNV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 79,
+      "model": "Q2002-PNV-LPPE",
+      "productCode": "839082",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2002-PNV-LPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 80,
+      "model": "Q2004-PNV-LPPE",
+      "productCode": "839083",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2004-PNV-LPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 81,
+      "model": "Q2018N-PNV-SPPE",
+      "productCode": "839084",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2018N-PNV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 82,
+      "model": "Q2001-PMV-SPPE",
+      "productCode": "839085",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2001-PMV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 83,
+      "model": "Q2002-PMV-SPPE",
+      "productCode": "839086",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2002-PMV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 84,
+      "model": "Q2003-PMV-SPPE",
+      "productCode": "839087",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2003-PMV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 85,
+      "model": "Q2004-PMV-SPPE",
+      "productCode": "839088",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2004-PMV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 86,
+      "model": "Q2001-PNX-SPPE",
+      "productCode": "839056",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2001-PNX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 87,
+      "model": "Q2002-PNX-SPPE",
+      "productCode": "839057",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2002-PNX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 88,
+      "model": "Q2003-PNX-SPPE",
+      "productCode": "839058",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2003-PNX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 89,
+      "model": "Q2004-PNX-SPPE",
+      "productCode": "839059",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2004-PNX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 90,
+      "model": "Q2002-PNX-LPPE",
+      "productCode": "839060",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2002-PNX-LPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 91,
+      "model": "Q2004-PNX-LPPE",
+      "productCode": "839061",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2004-PNX-LPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 92,
+      "model": "Q2018N-PNX-SPPE",
+      "productCode": "839062",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q2018N-PNX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 93,
+      "model": "Q2028U-SMV-SPPE",
+      "productCode": "839105",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 94,
+      "model": "Q2028U-PNV-SPPE",
+      "productCode": "839106",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 95,
+      "model": "Q2028U-SMV-SACN",
+      "productCode": "839107",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 96,
+      "model": "Q2028U-PNV-SACN",
+      "productCode": "839108",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 97,
+      "model": "Q2018T-SNV-SPPE",
+      "productCode": "839097",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 98,
+      "model": "Q2018T-SNX-SPPE",
+      "productCode": "839104",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 99,
+      "model": "Q2018T-SNV-SACN",
+      "productCode": "839109",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 100,
+      "model": "Q2018T-SNX-SACN",
+      "productCode": "839110",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 101,
+      "model": "Q4006-SMX-SACN",
+      "productCode": "849009",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4006-SMX-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 102,
+      "model": "Q4006-PMX-SACN",
+      "productCode": "849017",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4006-PMX-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 103,
+      "model": "Q4006-SMV-SACN",
+      "productCode": "849026",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4006-SMV-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 104,
+      "model": "Q4006-PNV-SACN",
+      "productCode": "849029",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4006-PNV-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 105,
+      "model": "Q4004-PNV-LACN",
+      "productCode": "849030",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4004-PNV-LACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 106,
+      "model": "Q4014N-PNV-SACN",
+      "productCode": "849031",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4014N-PNV-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 107,
+      "model": "Q4006-PMV-SACN",
+      "productCode": "849034",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4006-PMV-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 108,
+      "model": "Q4006-SMX-SPPE",
+      "productCode": "849043",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4006-SMX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 109,
+      "model": "Q4006-PMX-SPPE",
+      "productCode": "849051",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4006-PMX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 110,
+      "model": "Q4006-SMV-SPPE",
+      "productCode": "849060",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4006-SMV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 111,
+      "model": "Q4006-PNV-SPPE",
+      "productCode": "849063",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4006-PNV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 112,
+      "model": "Q4004-PNV-LPPE",
+      "productCode": "849064",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4004-PNV-LPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 113,
+      "model": "Q4014N-PNV-SPPE",
+      "productCode": "849065",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4014N-PNV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 114,
+      "model": "Q4006-PMV-SPPE",
+      "productCode": "849068",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4006-PMV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 115,
+      "model": "Q4004-PNX-SACN",
+      "productCode": "849010",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4004-PNX-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 116,
+      "model": "Q4005-PNX-SACN",
+      "productCode": "849011",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4005-PNX-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 117,
+      "model": "Q4006-PNX-SACN",
+      "productCode": "849012",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4006-PNX-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 118,
+      "model": "Q4006-PNX-LACN",
+      "productCode": "849013",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4006-PNX-LACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 119,
+      "model": "Q4004-SNX-SACN",
+      "productCode": "849001",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4004-SNX-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 120,
+      "model": "Q4005-SNX-SACN",
+      "productCode": "849002",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4005-SNX-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 121,
+      "model": "Q4006-SNX-SACN",
+      "productCode": "849003",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4006-SNX-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 122,
+      "model": "Q4014N-SNX-SACN",
+      "productCode": "849006",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4014N-SNX-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 123,
+      "model": "Q4004-SNV-SACN",
+      "productCode": "849018",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4004-SNV-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 124,
+      "model": "Q4005-SNV-SACN",
+      "productCode": "849019",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4005-SNV-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 125,
+      "model": "Q4006-SNV-SACN",
+      "productCode": "849020",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4006-SNV-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 126,
+      "model": "Q4014N-SNV-SACN",
+      "productCode": "849023",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4014N-SNV-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 127,
+      "model": "Q4004-SMX-SACN",
+      "productCode": "849007",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4004-SMX-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 128,
+      "model": "Q4005-SMX-SACN",
+      "productCode": "849008",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4005-SMX-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 129,
+      "model": "Q4004-PMX-SACN",
+      "productCode": "849015",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4004-PMX-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 130,
+      "model": "Q4005-PMX-SACN",
+      "productCode": "849016",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4005-PMX-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 131,
+      "model": "Q4004-SMV-SACN",
+      "productCode": "849024",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4004-SMV-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 132,
+      "model": "Q4005-SMV-SACN",
+      "productCode": "849025",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4005-SMV-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 133,
+      "model": "Q4004-PNV-SACN",
+      "productCode": "849027",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4004-PNV-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 134,
+      "model": "Q4005-PNV-SACN",
+      "productCode": "849028",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4005-PNV-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 135,
+      "model": "Q4004-PMV-SACN",
+      "productCode": "849032",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4004-PMV-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 136,
+      "model": "Q4005-PMV-SACN",
+      "productCode": "849033",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4005-PMV-SACN.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 137,
+      "model": "Q4004-PNX-SPPE",
+      "productCode": "849044",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4004-PNX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 138,
+      "model": "Q4005-PNX-SPPE",
+      "productCode": "849045",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4005-PNX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 139,
+      "model": "Q4006-PNX-SPPE",
+      "productCode": "849046",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4006-PNX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 140,
+      "model": "Q4006-PNX-LPPE",
+      "productCode": "849047",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4006-PNX-LPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 141,
+      "model": "Q4004-SNX-SPPE",
+      "productCode": "849035",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4004-SNX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 142,
+      "model": "Q4005-SNX-SPPE",
+      "productCode": "849036",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4005-SNX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 143,
+      "model": "Q4006-SNX-SPPE",
+      "productCode": "849037",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4006-SNX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 144,
+      "model": "Q4014N-SNX-SPPE",
+      "productCode": "849040",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4014N-SNX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 145,
+      "model": "Q4004-SNV-SPPE",
+      "productCode": "849052",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4004-SNV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 146,
+      "model": "Q4005-SNV-SPPE",
+      "productCode": "849053",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4005-SNV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 147,
+      "model": "Q4006-SNV-SPPE",
+      "productCode": "849054",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4006-SNV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 148,
+      "model": "Q4014N-SNV-SPPE",
+      "productCode": "849057",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4014N-SNV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 149,
+      "model": "Q4004-SMX-SPPE",
+      "productCode": "849041",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4004-SMX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 150,
+      "model": "Q4005-SMX-SPPE",
+      "productCode": "849042",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4005-SMX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 151,
+      "model": "Q4004-PMX-SPPE",
+      "productCode": "849049",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4004-PMX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 152,
+      "model": "Q4005-PMX-SPPE",
+      "productCode": "849050",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4005-PMX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 153,
+      "model": "Q4004-SMV-SPPE",
+      "productCode": "849058",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4004-SMV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 154,
+      "model": "Q4005-SMV-SPPE",
+      "productCode": "849059",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4005-SMV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 155,
+      "model": "Q4004-PNV-SPPE",
+      "productCode": "849061",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4004-PNV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 156,
+      "model": "Q4005-PNV-SPPE",
+      "productCode": "849062",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4005-PNV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 157,
+      "model": "Q4004-PMV-SPPE",
+      "productCode": "849066",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4004-PMV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 158,
+      "model": "Q4005-PMV-SPPE",
+      "productCode": "849067",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q4005-PMV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 159,
+      "model": "Q6008-PNV-LPPE",
+      "productCode": "869033",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q6008-PNV-LPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 160,
+      "model": "Q6008-SNV-SPPE",
+      "productCode": "869022",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q6008-SNV-SPPE-1.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 161,
+      "model": "Q6038N-SNV-SPPE",
+      "productCode": "869024",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q6038N-SNV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 162,
+      "model": "Q6008-PNV-SPPE",
+      "productCode": "869030",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q6008-PNV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 163,
+      "model": "Q6038N-PNV-SPPE",
+      "productCode": "869034",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q6038N-PNV-SPPE-1.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 164,
+      "model": "Q6008-SNV-LPPE",
+      "productCode": "869041",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q6008-SNV-LPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 165,
+      "model": "Q6006-SNX-SPPE",
+      "productCode": "869001",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q6006-SNX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 166,
+      "model": "Q6008-SNX-SPPE",
+      "productCode": "869002",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q6008-SNX-SPPE-1.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 167,
+      "model": "Q6038N-SNX-SPPE",
+      "productCode": "869004",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q6038N-SNX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 168,
+      "model": "Q6006-PNX-SPPE",
+      "productCode": "869009",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 169,
+      "model": "Q6008-PNX-SPPE",
+      "productCode": "869010",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q6008-PNX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 170,
+      "model": "Q6008-PNX-LPPE",
+      "productCode": "869013",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q6008-PNX-LPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 171,
+      "model": "Q6038N-PNX-SPPE",
+      "productCode": "869014",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q6038N-PNX-SPPE-1.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 172,
+      "model": "Q6006-SNV-SPPE",
+      "productCode": "869021",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q6006-SNV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 173,
+      "model": "Q6006-PNV-SPPE",
+      "productCode": "869029",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 174,
+      "model": "Q6012-SNX-SPPE",
+      "productCode": "869003",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q6012-SNX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 175,
+      "model": "Q6012N-SNX-SPPE",
+      "productCode": "869005",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 176,
+      "model": "Q6006-SMX-SPPE",
+      "productCode": "869006",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q6006-SMX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 177,
+      "model": "Q6008-SMX-SPPE",
+      "productCode": "869007",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q6008-SMX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 178,
+      "model": "Q6012-SMX-SPPE",
+      "productCode": "869008",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q6012-SMX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 179,
+      "model": "Q6006-SMX-LPPE",
+      "productCode": "869018",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q6006-SMX-LPPE-1.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 180,
+      "model": "Q6008-SMX-LPPE",
+      "productCode": "869019",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q6008-SMX-LPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 181,
+      "model": "Q6012-PNX-SPPE",
+      "productCode": "869011",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q6012-PNX-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 182,
+      "model": "Q6012-SNV-SPPE",
+      "productCode": "869023",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q6012-SNV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 183,
+      "model": "Q6012N-SNV-SPPE",
+      "productCode": "869025",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 184,
+      "model": "Q6006-SMV-SPPE",
+      "productCode": "869026",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q6006-SMV-SPPE-1.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 185,
+      "model": "Q6008-SMV-SPPE",
+      "productCode": "869027",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q6008-SMV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 186,
+      "model": "Q6012-SMV-SPPE",
+      "productCode": "869028",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q6012-SMV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 187,
+      "model": "Q6006-SMV-LPPE",
+      "productCode": "869020",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q6006-SMV-LPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 188,
+      "model": "Q6008-SMV-LPPE",
+      "productCode": "869036",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q6008-SMV-LPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 189,
+      "model": "Q6012-PNV-SPPE",
+      "productCode": "869031",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q6012-PNV-SPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 190,
+      "model": "Q6012N-PNV-SPPE",
+      "productCode": "869035",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q6012N-PNV-SPPE-1.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 191,
+      "model": "Q6012N-PNX-SPPE",
+      "productCode": "869015",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q6012N-PNX-SPPE-1.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 192,
+      "model": "Q6006-PNX-LPPE",
+      "productCode": "869012",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q6006-PNX-LPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    },
+    {
+      "sourceRow": 193,
+      "model": "Q6006-PNV-LPPE",
+      "productCode": "869032",
+      "drawing2dCode": "√",
+      "model3dCode": "√",
+      "imageMatches": [
+        "快插产品图片 _JPG/Q6006-PNV-LPPE.jpg"
+      ],
+      "pdfMatches": [],
+      "model3dMatches": []
+    }
+  ],
+  "missingImages": [
+    {
+      "sourceRow": 40,
+      "model": "Q2002-SNV-SACF",
+      "productCode": "839092"
+    },
+    {
+      "sourceRow": 41,
+      "model": "Q2002-PNV-SACF",
+      "productCode": "839091"
+    },
+    {
+      "sourceRow": 93,
+      "model": "Q2028U-SMV-SPPE",
+      "productCode": "839105"
+    },
+    {
+      "sourceRow": 94,
+      "model": "Q2028U-PNV-SPPE",
+      "productCode": "839106"
+    },
+    {
+      "sourceRow": 95,
+      "model": "Q2028U-SMV-SACN",
+      "productCode": "839107"
+    },
+    {
+      "sourceRow": 96,
+      "model": "Q2028U-PNV-SACN",
+      "productCode": "839108"
+    },
+    {
+      "sourceRow": 97,
+      "model": "Q2018T-SNV-SPPE",
+      "productCode": "839097"
+    },
+    {
+      "sourceRow": 98,
+      "model": "Q2018T-SNX-SPPE",
+      "productCode": "839104"
+    },
+    {
+      "sourceRow": 99,
+      "model": "Q2018T-SNV-SACN",
+      "productCode": "839109"
+    },
+    {
+      "sourceRow": 100,
+      "model": "Q2018T-SNX-SACN",
+      "productCode": "839110"
+    },
+    {
+      "sourceRow": 168,
+      "model": "Q6006-PNX-SPPE",
+      "productCode": "869009"
+    },
+    {
+      "sourceRow": 173,
+      "model": "Q6006-PNV-SPPE",
+      "productCode": "869029"
+    },
+    {
+      "sourceRow": 175,
+      "model": "Q6012N-SNX-SPPE",
+      "productCode": "869005"
+    },
+    {
+      "sourceRow": 183,
+      "model": "Q6012N-SNV-SPPE",
+      "productCode": "869025"
+    }
+  ],
+  "missingPdfs": [
+    {
+      "sourceRow": 3,
+      "model": "Q2001-SNX-SACN",
+      "productCode": "839001",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 4,
+      "model": "Q2002-SNX-SACN",
+      "productCode": "839002",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 5,
+      "model": "Q2003-SNX-SACN",
+      "productCode": "839003",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 6,
+      "model": "Q2004-SNX-SACN",
+      "productCode": "839004",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 7,
+      "model": "Q2002-SNX-LACN",
+      "productCode": "839005",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 8,
+      "model": "Q2004-SNX-LACN",
+      "productCode": "839006",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 9,
+      "model": "Q2018N-SNX-SACN",
+      "productCode": "839007",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 10,
+      "model": "Q2001-SMX-SACN",
+      "productCode": "839008",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 11,
+      "model": "Q2002-SMX-SACN",
+      "productCode": "839009",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 12,
+      "model": "Q2003-SMX-SACN",
+      "productCode": "839010",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 13,
+      "model": "Q2004-SMX-SACN",
+      "productCode": "839011",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 14,
+      "model": "Q2001-PMX-SACN",
+      "productCode": "839019",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 15,
+      "model": "Q2002-PMX-SACN",
+      "productCode": "839020",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 16,
+      "model": "Q2003-PMX-SACN",
+      "productCode": "839021",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 17,
+      "model": "Q2004-PMX-SACN",
+      "productCode": "839022",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 18,
+      "model": "Q2001-SNV-SACN",
+      "productCode": "839023",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 19,
+      "model": "Q2002-SNV-SACN",
+      "productCode": "839024",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 20,
+      "model": "Q2003-SNV-SACN",
+      "productCode": "839025",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 21,
+      "model": "Q2004-SNV-SACN",
+      "productCode": "839026",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 22,
+      "model": "Q2002-SNV-LACN",
+      "productCode": "839027",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 23,
+      "model": "Q2004-SNV-LACN",
+      "productCode": "839028",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 24,
+      "model": "Q2018N-SNV-SACN",
+      "productCode": "839029",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 25,
+      "model": "Q2001-SMV-SACN",
+      "productCode": "839030",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 26,
+      "model": "Q2002-SMV-SACN",
+      "productCode": "839031",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 27,
+      "model": "Q2003-SMV-SACN",
+      "productCode": "839032",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 28,
+      "model": "Q2004-SMV-SACN",
+      "productCode": "839033",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 29,
+      "model": "Q2001-PNV-SACN",
+      "productCode": "839034",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 30,
+      "model": "Q2002-PNV-SACN",
+      "productCode": "839035",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 31,
+      "model": "Q2003-PNV-SACN",
+      "productCode": "839036",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 32,
+      "model": "Q2004-PNV-SACN",
+      "productCode": "839037",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 33,
+      "model": "Q2002-PNV-LACN",
+      "productCode": "839038",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 34,
+      "model": "Q2004-PNV-LACN",
+      "productCode": "839039",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 35,
+      "model": "Q2018N-PNV-SACN",
+      "productCode": "839040",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 36,
+      "model": "Q2001-PMV-SACN",
+      "productCode": "839041",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 37,
+      "model": "Q2002-PMV-SACN",
+      "productCode": "839042",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 38,
+      "model": "Q2003-PMV-SACN",
+      "productCode": "839043",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 39,
+      "model": "Q2004-PMV-SACN",
+      "productCode": "839044",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 40,
+      "model": "Q2002-SNV-SACF",
+      "productCode": "839092",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 41,
+      "model": "Q2002-PNV-SACF",
+      "productCode": "839091",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 42,
+      "model": "Q2001-PNX-SACN",
+      "productCode": "839012",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 43,
+      "model": "Q2002-PNX-SACN",
+      "productCode": "839013",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 44,
+      "model": "Q2003-PNX-SACN",
+      "productCode": "839014",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 45,
+      "model": "Q2004-PNX-SACN",
+      "productCode": "839015",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 46,
+      "model": "Q2002-PNX-LACN",
+      "productCode": "839016",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 47,
+      "model": "Q2004-PNX-LACN",
+      "productCode": "839017",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 48,
+      "model": "Q2018N-PNX-SACN",
+      "productCode": "839018",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 49,
+      "model": "Q2001-SNX-SPPE",
+      "productCode": "839045",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 50,
+      "model": "Q2002-SNX-SPPE",
+      "productCode": "839046",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 51,
+      "model": "Q2003-SNX-SPPE",
+      "productCode": "839047",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 52,
+      "model": "Q2004-SNX-SPPE",
+      "productCode": "839048",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 53,
+      "model": "Q2002-SNX-LPPE",
+      "productCode": "839049",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 54,
+      "model": "Q2004-SNX-LPPE",
+      "productCode": "839050",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 55,
+      "model": "Q2018N-SNX-SPPE",
+      "productCode": "839051",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 56,
+      "model": "Q2001-SMX-SPPE",
+      "productCode": "839052",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 57,
+      "model": "Q2002-SMX-SPPE",
+      "productCode": "839053",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 58,
+      "model": "Q2003-SMX-SPPE",
+      "productCode": "839054",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 59,
+      "model": "Q2004-SMX-SPPE",
+      "productCode": "839055",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 60,
+      "model": "Q2001-PMX-SPPE",
+      "productCode": "839063",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 61,
+      "model": "Q2002-PMX-SPPE",
+      "productCode": "839064",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 62,
+      "model": "Q2003-PMX-SPPE",
+      "productCode": "839065",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 63,
+      "model": "Q2004-PMX-SPPE",
+      "productCode": "839066",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 64,
+      "model": "Q2001-SNV-SPPE",
+      "productCode": "839067",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 65,
+      "model": "Q2002-SNV-SPPE",
+      "productCode": "839068",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 66,
+      "model": "Q2003-SNV-SPPE",
+      "productCode": "839069",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 67,
+      "model": "Q2004-SNV-SPPE",
+      "productCode": "839070",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 68,
+      "model": "Q2002-SNV-LPPE",
+      "productCode": "839071",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 69,
+      "model": "Q2004-SNV-LPPE",
+      "productCode": "839072",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 70,
+      "model": "Q2018N-SNV-SPPE",
+      "productCode": "839073",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 71,
+      "model": "Q2001-SMV-SPPE",
+      "productCode": "839074",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 72,
+      "model": "Q2002-SMV-SPPE",
+      "productCode": "839075",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 73,
+      "model": "Q2003-SMV-SPPE",
+      "productCode": "839076",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 74,
+      "model": "Q2004-SMV-SPPE",
+      "productCode": "839077",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 75,
+      "model": "Q2001-PNV-SPPE",
+      "productCode": "839078",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 76,
+      "model": "Q2002-PNV-SPPE",
+      "productCode": "839079",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 77,
+      "model": "Q2003-PNV-SPPE",
+      "productCode": "839080",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 78,
+      "model": "Q2004-PNV-SPPE",
+      "productCode": "839081",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 79,
+      "model": "Q2002-PNV-LPPE",
+      "productCode": "839082",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 80,
+      "model": "Q2004-PNV-LPPE",
+      "productCode": "839083",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 81,
+      "model": "Q2018N-PNV-SPPE",
+      "productCode": "839084",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 82,
+      "model": "Q2001-PMV-SPPE",
+      "productCode": "839085",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 83,
+      "model": "Q2002-PMV-SPPE",
+      "productCode": "839086",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 84,
+      "model": "Q2003-PMV-SPPE",
+      "productCode": "839087",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 85,
+      "model": "Q2004-PMV-SPPE",
+      "productCode": "839088",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 86,
+      "model": "Q2001-PNX-SPPE",
+      "productCode": "839056",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 87,
+      "model": "Q2002-PNX-SPPE",
+      "productCode": "839057",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 88,
+      "model": "Q2003-PNX-SPPE",
+      "productCode": "839058",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 89,
+      "model": "Q2004-PNX-SPPE",
+      "productCode": "839059",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 90,
+      "model": "Q2002-PNX-LPPE",
+      "productCode": "839060",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 91,
+      "model": "Q2004-PNX-LPPE",
+      "productCode": "839061",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 92,
+      "model": "Q2018N-PNX-SPPE",
+      "productCode": "839062",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 93,
+      "model": "Q2028U-SMV-SPPE",
+      "productCode": "839105",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 94,
+      "model": "Q2028U-PNV-SPPE",
+      "productCode": "839106",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 95,
+      "model": "Q2028U-SMV-SACN",
+      "productCode": "839107",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 96,
+      "model": "Q2028U-PNV-SACN",
+      "productCode": "839108",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 97,
+      "model": "Q2018T-SNV-SPPE",
+      "productCode": "839097",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 98,
+      "model": "Q2018T-SNX-SPPE",
+      "productCode": "839104",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 99,
+      "model": "Q2018T-SNV-SACN",
+      "productCode": "839109",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 100,
+      "model": "Q2018T-SNX-SACN",
+      "productCode": "839110",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 101,
+      "model": "Q4006-SMX-SACN",
+      "productCode": "849009",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 102,
+      "model": "Q4006-PMX-SACN",
+      "productCode": "849017",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 103,
+      "model": "Q4006-SMV-SACN",
+      "productCode": "849026",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 104,
+      "model": "Q4006-PNV-SACN",
+      "productCode": "849029",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 105,
+      "model": "Q4004-PNV-LACN",
+      "productCode": "849030",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 106,
+      "model": "Q4014N-PNV-SACN",
+      "productCode": "849031",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 107,
+      "model": "Q4006-PMV-SACN",
+      "productCode": "849034",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 108,
+      "model": "Q4006-SMX-SPPE",
+      "productCode": "849043",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 109,
+      "model": "Q4006-PMX-SPPE",
+      "productCode": "849051",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 110,
+      "model": "Q4006-SMV-SPPE",
+      "productCode": "849060",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 111,
+      "model": "Q4006-PNV-SPPE",
+      "productCode": "849063",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 112,
+      "model": "Q4004-PNV-LPPE",
+      "productCode": "849064",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 113,
+      "model": "Q4014N-PNV-SPPE",
+      "productCode": "849065",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 114,
+      "model": "Q4006-PMV-SPPE",
+      "productCode": "849068",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 115,
+      "model": "Q4004-PNX-SACN",
+      "productCode": "849010",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 116,
+      "model": "Q4005-PNX-SACN",
+      "productCode": "849011",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 117,
+      "model": "Q4006-PNX-SACN",
+      "productCode": "849012",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 118,
+      "model": "Q4006-PNX-LACN",
+      "productCode": "849013",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 119,
+      "model": "Q4004-SNX-SACN",
+      "productCode": "849001",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 120,
+      "model": "Q4005-SNX-SACN",
+      "productCode": "849002",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 121,
+      "model": "Q4006-SNX-SACN",
+      "productCode": "849003",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 122,
+      "model": "Q4014N-SNX-SACN",
+      "productCode": "849006",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 123,
+      "model": "Q4004-SNV-SACN",
+      "productCode": "849018",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 124,
+      "model": "Q4005-SNV-SACN",
+      "productCode": "849019",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 125,
+      "model": "Q4006-SNV-SACN",
+      "productCode": "849020",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 126,
+      "model": "Q4014N-SNV-SACN",
+      "productCode": "849023",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 127,
+      "model": "Q4004-SMX-SACN",
+      "productCode": "849007",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 128,
+      "model": "Q4005-SMX-SACN",
+      "productCode": "849008",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 129,
+      "model": "Q4004-PMX-SACN",
+      "productCode": "849015",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 130,
+      "model": "Q4005-PMX-SACN",
+      "productCode": "849016",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 131,
+      "model": "Q4004-SMV-SACN",
+      "productCode": "849024",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 132,
+      "model": "Q4005-SMV-SACN",
+      "productCode": "849025",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 133,
+      "model": "Q4004-PNV-SACN",
+      "productCode": "849027",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 134,
+      "model": "Q4005-PNV-SACN",
+      "productCode": "849028",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 135,
+      "model": "Q4004-PMV-SACN",
+      "productCode": "849032",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 136,
+      "model": "Q4005-PMV-SACN",
+      "productCode": "849033",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 137,
+      "model": "Q4004-PNX-SPPE",
+      "productCode": "849044",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 138,
+      "model": "Q4005-PNX-SPPE",
+      "productCode": "849045",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 139,
+      "model": "Q4006-PNX-SPPE",
+      "productCode": "849046",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 140,
+      "model": "Q4006-PNX-LPPE",
+      "productCode": "849047",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 141,
+      "model": "Q4004-SNX-SPPE",
+      "productCode": "849035",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 142,
+      "model": "Q4005-SNX-SPPE",
+      "productCode": "849036",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 143,
+      "model": "Q4006-SNX-SPPE",
+      "productCode": "849037",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 144,
+      "model": "Q4014N-SNX-SPPE",
+      "productCode": "849040",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 145,
+      "model": "Q4004-SNV-SPPE",
+      "productCode": "849052",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 146,
+      "model": "Q4005-SNV-SPPE",
+      "productCode": "849053",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 147,
+      "model": "Q4006-SNV-SPPE",
+      "productCode": "849054",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 148,
+      "model": "Q4014N-SNV-SPPE",
+      "productCode": "849057",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 149,
+      "model": "Q4004-SMX-SPPE",
+      "productCode": "849041",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 150,
+      "model": "Q4005-SMX-SPPE",
+      "productCode": "849042",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 151,
+      "model": "Q4004-PMX-SPPE",
+      "productCode": "849049",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 152,
+      "model": "Q4005-PMX-SPPE",
+      "productCode": "849050",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 153,
+      "model": "Q4004-SMV-SPPE",
+      "productCode": "849058",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 154,
+      "model": "Q4005-SMV-SPPE",
+      "productCode": "849059",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 155,
+      "model": "Q4004-PNV-SPPE",
+      "productCode": "849061",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 156,
+      "model": "Q4005-PNV-SPPE",
+      "productCode": "849062",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 157,
+      "model": "Q4004-PMV-SPPE",
+      "productCode": "849066",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 158,
+      "model": "Q4005-PMV-SPPE",
+      "productCode": "849067",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 159,
+      "model": "Q6008-PNV-LPPE",
+      "productCode": "869033",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 160,
+      "model": "Q6008-SNV-SPPE",
+      "productCode": "869022",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 161,
+      "model": "Q6038N-SNV-SPPE",
+      "productCode": "869024",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 162,
+      "model": "Q6008-PNV-SPPE",
+      "productCode": "869030",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 163,
+      "model": "Q6038N-PNV-SPPE",
+      "productCode": "869034",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 164,
+      "model": "Q6008-SNV-LPPE",
+      "productCode": "869041",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 165,
+      "model": "Q6006-SNX-SPPE",
+      "productCode": "869001",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 166,
+      "model": "Q6008-SNX-SPPE",
+      "productCode": "869002",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 167,
+      "model": "Q6038N-SNX-SPPE",
+      "productCode": "869004",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 168,
+      "model": "Q6006-PNX-SPPE",
+      "productCode": "869009",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 169,
+      "model": "Q6008-PNX-SPPE",
+      "productCode": "869010",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 170,
+      "model": "Q6008-PNX-LPPE",
+      "productCode": "869013",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 171,
+      "model": "Q6038N-PNX-SPPE",
+      "productCode": "869014",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 172,
+      "model": "Q6006-SNV-SPPE",
+      "productCode": "869021",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 173,
+      "model": "Q6006-PNV-SPPE",
+      "productCode": "869029",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 174,
+      "model": "Q6012-SNX-SPPE",
+      "productCode": "869003",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 175,
+      "model": "Q6012N-SNX-SPPE",
+      "productCode": "869005",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 176,
+      "model": "Q6006-SMX-SPPE",
+      "productCode": "869006",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 177,
+      "model": "Q6008-SMX-SPPE",
+      "productCode": "869007",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 178,
+      "model": "Q6012-SMX-SPPE",
+      "productCode": "869008",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 179,
+      "model": "Q6006-SMX-LPPE",
+      "productCode": "869018",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 180,
+      "model": "Q6008-SMX-LPPE",
+      "productCode": "869019",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 181,
+      "model": "Q6012-PNX-SPPE",
+      "productCode": "869011",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 182,
+      "model": "Q6012-SNV-SPPE",
+      "productCode": "869023",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 183,
+      "model": "Q6012N-SNV-SPPE",
+      "productCode": "869025",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 184,
+      "model": "Q6006-SMV-SPPE",
+      "productCode": "869026",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 185,
+      "model": "Q6008-SMV-SPPE",
+      "productCode": "869027",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 186,
+      "model": "Q6012-SMV-SPPE",
+      "productCode": "869028",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 187,
+      "model": "Q6006-SMV-LPPE",
+      "productCode": "869020",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 188,
+      "model": "Q6008-SMV-LPPE",
+      "productCode": "869036",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 189,
+      "model": "Q6012-PNV-SPPE",
+      "productCode": "869031",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 190,
+      "model": "Q6012N-PNV-SPPE",
+      "productCode": "869035",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 191,
+      "model": "Q6012N-PNX-SPPE",
+      "productCode": "869015",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 192,
+      "model": "Q6006-PNX-LPPE",
+      "productCode": "869012",
+      "drawing2dCode": "√"
+    },
+    {
+      "sourceRow": 193,
+      "model": "Q6006-PNV-LPPE",
+      "productCode": "869032",
+      "drawing2dCode": "√"
+    }
+  ],
+  "multipleImageMatches": [],
+  "multiplePdfMatches": [],
+  "unmatchedFiles": [
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03094-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03095-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03096-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03097-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03098-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03099-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03100-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03101-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03102-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03103-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03104-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03105-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03106-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03107-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03108-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03109-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03330-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03331-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03364-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03437-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03458-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03459-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03460-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03461-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03518-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03521-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03522-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03523-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03524-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03525-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03526-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03527-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03528-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03529-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03530-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03531-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03532-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03533-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03534-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03535-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03536-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03537-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03538-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03539-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03540-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03541-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03543-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03544-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03545-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03546-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03547-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03548-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03549-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03550-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03551-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03552-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03553-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03554-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03555-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03557-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03558-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03559-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03560-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03561-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03562-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03563-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03564-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03565-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03566-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03567-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03568-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03569-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03570-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03571-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03572-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03573-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03574-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03575-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03576-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03577-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03578-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03580-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03581-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03582-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03583-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03584-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03585-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03586-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03587-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03588-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03589-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03590-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03591-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03592-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03593-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03594-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03595-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03596-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03597-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03598-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03599-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03600-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03603-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03604-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03605-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03606-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03607-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03608-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03610-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03611-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03612-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03613-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03616-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03617-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03618-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03619-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03620-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03621-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03622-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03623-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03624-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03625-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03626-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03629-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03630-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03631-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03632-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03633-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03634-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03635-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03636-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03638-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03639-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03640-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03641-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03642-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03643-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03646-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03647-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03648-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03649-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03650-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03651-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03652-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03653-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03654-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03655-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03656-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03657-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03658-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03661-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03662-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03663-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03667-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03668-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03669-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03670-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03673-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03674-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03675-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03676-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03677-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03679-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03680-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03681-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03684-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03685-C.pdf"
+    },
+    {
+      "type": "pdf",
+      "relativePath": "快插2D图纸_PDF/515-00-03686-C.pdf"
+    },
+    {
+      "type": "image",
+      "relativePath": "快插产品图片 _JPG/Q6006-PMV-SPPE.jpg"
+    },
+    {
+      "type": "image",
+      "relativePath": "快插产品图片 _JPG/Q6006-PMX-SPPE.jpg"
+    },
+    {
+      "type": "image",
+      "relativePath": "快插产品图片 _JPG/Q6008-SNX-LPPE.jpg"
+    },
+    {
+      "type": "image",
+      "relativePath": "快插产品图片 _JPG/Q6038-PNV-SPPE.jpg"
+    },
+    {
+      "type": "image",
+      "relativePath": "快插产品图片 _JPG/Q6038-PNX-SPPE.jpg"
+    },
+    {
+      "type": "other",
+      "relativePath": "快插产品图片 _JPG/Thumbs.db"
+    }
+  ]
+}

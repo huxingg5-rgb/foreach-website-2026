@@ -1,0 +1,2423 @@
+/*
+ * AUTO-GENERATED FILE.
+ * 数据源：
+ * F:\WebsiteProjects\foreach-website-2026\data-source\product-center\fittings\FRGD-140D-2606-0002_001_cn_连接件标品在售清单.xlsx
+ *
+ * Sheet：
+ * 06_单向阀、过滤器
+ *
+ * 请修改权威Excel后重新运行生成脚本，
+ * 不要直接手工修改本文件。
+ */
+
+export const filterCheckValveSelectionProducts =
+[
+  {
+    "productId": "136009",
+    "productCode": "136009",
+    "productCodes": [
+      "136009"
+    ],
+    "internalCodes": [
+      "382-10-00048"
+    ],
+    "sourceType": "filter-check-valve-selection",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "filters",
+    "productTypeName": "过滤器",
+    "seriesId": "f",
+    "seriesCode": "F",
+    "seriesName": "PE系列过滤器",
+    "model": "F-PE-10-24-PP-N",
+    "foreachModel": "F-PE-10-24-PP-N",
+    "hasStandardModel": true,
+    "competitorModels": [],
+    "cardTitle": {
+      "zh": "F-PE-10-24-PP-N",
+      "en": "F-PE-10-24-PP-N",
+      "es": "F-PE-10-24-PP-N",
+      "fr": "F-PE-10-24-PP-N",
+      "ko": "F-PE-10-24-PP-N",
+      "ru": "F-PE-10-24-PP-N"
+    },
+    "cardSubtitle": {
+      "zh": "HDPE 滤网材质过滤器\n过滤精度 10 μm，壳体材质为 PP\n适配 2.4 mm 接管内径",
+      "en": "HDPE Mesh Filter\nFiltration Rating: 10 μm; Housing Material: PP\nFits 2.4 mm ID tubing",
+      "es": "PE & PA Filter\nHDPE filter media · 10 μm\nTube ID 2.4 mm · PP body · 本色",
+      "fr": "PE & PA Filter\nHDPE filter media · 10 μm\nTube ID 2.4 mm · PP body · 本色",
+      "ko": "PE & PA Filter\nHDPE filter media · 10 μm\nTube ID 2.4 mm · PP body · 本色",
+      "ru": "PE & PA Filter\nHDPE filter media · 10 μm\nTube ID 2.4 mm · PP body · 本色"
+    },
+    "filters": {
+      "filter01": "过滤器",
+      "filter02": "PE&PA过滤器",
+      "filter03": "HDPE",
+      "filter04": "10 μm",
+      "filter05": "",
+      "filter06": "",
+      "filter07": "2.4 mm",
+      "filter08": "PP",
+      "filter09": "本色"
+    },
+    "structureCode": "PE",
+    "specificationCode": "10",
+    "portSize": "2.4 mm",
+    "materialCode": "PP",
+    "colorCode": "N",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "detailSlug": "f-pe-10-24-pp-n",
+    "detailHref": "/products/fittings/filters/f-pe-10-24-pp-n",
+    "href": "/products/fittings/filters/f-pe-10-24-pp-n",
+    "selectionHref": "/products/fittings/filters",
+    "needDrawing": true,
+    "needModel3d": false,
+    "status": "active",
+    "sourceIndex": 6,
+    "sortOrder": 470003,
+    "searchKeywords": {
+      "zh": "过滤器与单向阀 过滤器 PE系列过滤器 2.4 mm PP F-PE-10-24-PP-N 136009 过滤器与单向阀 过滤器 PE系列过滤器 F-PE-10-24-PP-N 136009 382-10-00048 2.4 mm PP PE系列过滤器 标准型 2.4 mm 2.4 mm PP 本色 过滤器 PE过滤器 HDPE 10 μm 2.4 mm PP 本色",
+      "en": "filters check valves filter PE系列过滤器 2.4 mm PP F-PE-10-24-PP-N 136009 filters check valves 过滤器 PE系列过滤器 F-PE-10-24-PP-N 136009 382-10-00048 2.4 mm PP PE Series Filter Standard 2.4 mm 2.4 mm PP Natural 过滤器 PE过滤器 HDPE 10 μm 2.4 mm PP 本色",
+      "es": "filters check valves 过滤器 PE系列过滤器 F-PE-10-24-PP-N 136009 382-10-00048 2.4 mm PP",
+      "fr": "filters check valves 过滤器 PE系列过滤器 F-PE-10-24-PP-N 136009 382-10-00048 2.4 mm PP",
+      "ko": "filters check valves 过滤器 PE系列过滤器 F-PE-10-24-PP-N 136009 382-10-00048 2.4 mm PP",
+      "ru": "filters check valves 过滤器 PE系列过滤器 F-PE-10-24-PP-N 136009 382-10-00048 2.4 mm PP"
+    }
+  },
+  {
+    "productId": "139001",
+    "productCode": "139001",
+    "productCodes": [
+      "139001"
+    ],
+    "internalCodes": [
+      "443-02-00282"
+    ],
+    "sourceType": "filter-check-valve-selection",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "filters",
+    "productTypeName": "过滤器",
+    "seriesId": "f",
+    "seriesCode": "F",
+    "seriesName": "PE系列过滤器",
+    "model": "F-PE-100-32-PP-N",
+    "foreachModel": "F-PE-100-32-PP-N",
+    "hasStandardModel": true,
+    "competitorModels": [],
+    "cardTitle": {
+      "zh": "F-PE-100-32-PP-N",
+      "en": "F-PE-100-32-PP-N",
+      "es": "F-PE-100-32-PP-N",
+      "fr": "F-PE-100-32-PP-N",
+      "ko": "F-PE-100-32-PP-N",
+      "ru": "F-PE-100-32-PP-N"
+    },
+    "cardSubtitle": {
+      "zh": "HDPE 滤网材质过滤器\n过滤精度 80–100 μm，壳体材质为 PP\n适配 3.2 mm 接管内径",
+      "en": "HDPE Mesh Filter\nFiltration Rating: 80–100 μm; Housing Material: PP\nFits 3.2 mm ID tubing",
+      "es": "PE & PA Filter\nHDPE filter media · 80–100 μm\nTube ID 3.2 mm · PP body · 本色",
+      "fr": "PE & PA Filter\nHDPE filter media · 80–100 μm\nTube ID 3.2 mm · PP body · 本色",
+      "ko": "PE & PA Filter\nHDPE filter media · 80–100 μm\nTube ID 3.2 mm · PP body · 本色",
+      "ru": "PE & PA Filter\nHDPE filter media · 80–100 μm\nTube ID 3.2 mm · PP body · 本色"
+    },
+    "filters": {
+      "filter01": "过滤器",
+      "filter02": "PE&PA过滤器",
+      "filter03": "HDPE",
+      "filter04": "80–100 μm",
+      "filter05": "",
+      "filter06": "",
+      "filter07": "3.2 mm",
+      "filter08": "PP",
+      "filter09": "本色"
+    },
+    "structureCode": "PE",
+    "specificationCode": "100",
+    "portSize": "3.2 mm",
+    "materialCode": "PP",
+    "colorCode": "N",
+    "imageCard": "/images/products/fittings/filters/products/f-pe-100-32-pp-n-main.jpg",
+    "detailSlug": "f-pe-100-32-pp-n",
+    "detailHref": "/products/fittings/filters/f-pe-100-32-pp-n",
+    "href": "/products/fittings/filters/f-pe-100-32-pp-n",
+    "selectionHref": "/products/fittings/filters",
+    "needDrawing": true,
+    "needModel3d": true,
+    "status": "active",
+    "sourceIndex": 8,
+    "sortOrder": 470004,
+    "searchKeywords": {
+      "zh": "过滤器与单向阀 过滤器 PE系列过滤器 3.2 mm PP F-PE-100-32-PP-N 139001 过滤器与单向阀 过滤器 PE系列过滤器 F-PE-100-32-PP-N 139001 443-02-00282 3.2 mm PP PE系列过滤器 标准型 3.2 mm 3.2 mm PP 本色 过滤器 PE过滤器 HDPE 80–100 μm 3.2 mm PP 本色",
+      "en": "filters check valves filter PE系列过滤器 3.2 mm PP F-PE-100-32-PP-N 139001 filters check valves 过滤器 PE系列过滤器 F-PE-100-32-PP-N 139001 443-02-00282 3.2 mm PP PE Series Filter Standard 3.2 mm 3.2 mm PP Natural 过滤器 PE过滤器 HDPE 80–100 μm 3.2 mm PP 本色",
+      "es": "filters check valves 过滤器 PE系列过滤器 F-PE-100-32-PP-N 139001 443-02-00282 3.2 mm PP",
+      "fr": "filters check valves 过滤器 PE系列过滤器 F-PE-100-32-PP-N 139001 443-02-00282 3.2 mm PP",
+      "ko": "filters check valves 过滤器 PE系列过滤器 F-PE-100-32-PP-N 139001 443-02-00282 3.2 mm PP",
+      "ru": "filters check valves 过滤器 PE系列过滤器 F-PE-100-32-PP-N 139001 443-02-00282 3.2 mm PP"
+    }
+  },
+  {
+    "productId": "139002",
+    "productCode": "139002",
+    "productCodes": [
+      "139002"
+    ],
+    "internalCodes": [
+      "443-02-00288"
+    ],
+    "sourceType": "filter-check-valve-selection",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "filters",
+    "productTypeName": "过滤器",
+    "seriesId": "f",
+    "seriesCode": "F",
+    "seriesName": "PE系列过滤器",
+    "model": "F-PE-100-32-PV-N",
+    "foreachModel": "F-PE-100-32-PV-N",
+    "hasStandardModel": true,
+    "competitorModels": [],
+    "cardTitle": {
+      "zh": "F-PE-100-32-PV-N",
+      "en": "F-PE-100-32-PV-N",
+      "es": "F-PE-100-32-PV-N",
+      "fr": "F-PE-100-32-PV-N",
+      "ko": "F-PE-100-32-PV-N",
+      "ru": "F-PE-100-32-PV-N"
+    },
+    "cardSubtitle": {
+      "zh": "HDPE 滤网材质过滤器\n过滤精度 80–100 μm，壳体材质为 PVDF\n适配 3.2 mm 接管内径",
+      "en": "HDPE Mesh Filter\nFiltration Rating: 80–100 μm; Housing Material: PVDF\nFits 3.2 mm ID tubing",
+      "es": "PE & PA Filter\nHDPE filter media · 80–100 μm\nTube ID 3.2 mm · PVDF body · 本色",
+      "fr": "PE & PA Filter\nHDPE filter media · 80–100 μm\nTube ID 3.2 mm · PVDF body · 本色",
+      "ko": "PE & PA Filter\nHDPE filter media · 80–100 μm\nTube ID 3.2 mm · PVDF body · 本色",
+      "ru": "PE & PA Filter\nHDPE filter media · 80–100 μm\nTube ID 3.2 mm · PVDF body · 本色"
+    },
+    "filters": {
+      "filter01": "过滤器",
+      "filter02": "PE&PA过滤器",
+      "filter03": "HDPE",
+      "filter04": "80–100 μm",
+      "filter05": "",
+      "filter06": "",
+      "filter07": "3.2 mm",
+      "filter08": "PVDF",
+      "filter09": "本色"
+    },
+    "structureCode": "PE",
+    "specificationCode": "100",
+    "portSize": "3.2 mm",
+    "materialCode": "PV",
+    "colorCode": "N",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "detailSlug": "f-pe-100-32-pv-n",
+    "detailHref": "/products/fittings/filters/f-pe-100-32-pv-n",
+    "href": "/products/fittings/filters/f-pe-100-32-pv-n",
+    "selectionHref": "/products/fittings/filters",
+    "needDrawing": false,
+    "needModel3d": false,
+    "status": "active",
+    "sourceIndex": 9,
+    "sortOrder": 470005,
+    "searchKeywords": {
+      "zh": "过滤器与单向阀 过滤器 PE系列过滤器 3.2 mm PVDF F-PE-100-32-PV-N 139002 过滤器与单向阀 过滤器 PE系列过滤器 F-PE-100-32-PV-N 139002 443-02-00288 3.2 mm PVDF PE系列过滤器 标准型 3.2 mm 3.2 mm PVDF 本色 过滤器 PE过滤器 HDPE 80–100 μm 3.2 mm PVDF 本色",
+      "en": "filters check valves filter PE系列过滤器 3.2 mm PVDF F-PE-100-32-PV-N 139002 filters check valves 过滤器 PE系列过滤器 F-PE-100-32-PV-N 139002 443-02-00288 3.2 mm PVDF PE Series Filter Standard 3.2 mm 3.2 mm PVDF Natural 过滤器 PE过滤器 HDPE 80–100 μm 3.2 mm PVDF 本色",
+      "es": "filters check valves 过滤器 PE系列过滤器 F-PE-100-32-PV-N 139002 443-02-00288 3.2 mm PVDF",
+      "fr": "filters check valves 过滤器 PE系列过滤器 F-PE-100-32-PV-N 139002 443-02-00288 3.2 mm PVDF",
+      "ko": "filters check valves 过滤器 PE系列过滤器 F-PE-100-32-PV-N 139002 443-02-00288 3.2 mm PVDF",
+      "ru": "filters check valves 过滤器 PE系列过滤器 F-PE-100-32-PV-N 139002 443-02-00288 3.2 mm PVDF"
+    }
+  },
+  {
+    "productId": "139003",
+    "productCode": "139003",
+    "productCodes": [
+      "139003"
+    ],
+    "internalCodes": [
+      "443-02-00455"
+    ],
+    "sourceType": "filter-check-valve-selection",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "filters",
+    "productTypeName": "过滤器",
+    "seriesId": "f",
+    "seriesCode": "F",
+    "seriesName": "PE系列过滤器",
+    "model": "F-PE-60-32-PP-N",
+    "foreachModel": "F-PE-60-32-PP-N",
+    "hasStandardModel": true,
+    "competitorModels": [],
+    "cardTitle": {
+      "zh": "F-PE-60-32-PP-N",
+      "en": "F-PE-60-32-PP-N",
+      "es": "F-PE-60-32-PP-N",
+      "fr": "F-PE-60-32-PP-N",
+      "ko": "F-PE-60-32-PP-N",
+      "ru": "F-PE-60-32-PP-N"
+    },
+    "cardSubtitle": {
+      "zh": "HDPE 滤网材质过滤器\n过滤精度 40–60 μm，壳体材质为 PP\n适配 3.2 mm 接管内径",
+      "en": "HDPE Mesh Filter\nFiltration Rating: 40–60 μm; Housing Material: PP\nFits 3.2 mm ID tubing",
+      "es": "PE & PA Filter\nHDPE filter media · 40–60 μm\nTube ID 3.2 mm · PP body · 本色",
+      "fr": "PE & PA Filter\nHDPE filter media · 40–60 μm\nTube ID 3.2 mm · PP body · 本色",
+      "ko": "PE & PA Filter\nHDPE filter media · 40–60 μm\nTube ID 3.2 mm · PP body · 本色",
+      "ru": "PE & PA Filter\nHDPE filter media · 40–60 μm\nTube ID 3.2 mm · PP body · 本色"
+    },
+    "filters": {
+      "filter01": "过滤器",
+      "filter02": "PE&PA过滤器",
+      "filter03": "HDPE",
+      "filter04": "40–60 μm",
+      "filter05": "",
+      "filter06": "",
+      "filter07": "3.2 mm",
+      "filter08": "PP",
+      "filter09": "本色"
+    },
+    "structureCode": "PE",
+    "specificationCode": "60",
+    "portSize": "3.2 mm",
+    "materialCode": "PP",
+    "colorCode": "N",
+    "imageCard": "/images/products/fittings/filters/products/f-pe-60-32-pp-n-main.jpg",
+    "detailSlug": "f-pe-60-32-pp-n",
+    "detailHref": "/products/fittings/filters/f-pe-60-32-pp-n",
+    "href": "/products/fittings/filters/f-pe-60-32-pp-n",
+    "selectionHref": "/products/fittings/filters",
+    "needDrawing": true,
+    "needModel3d": true,
+    "status": "active",
+    "sourceIndex": 10,
+    "sortOrder": 470006,
+    "searchKeywords": {
+      "zh": "过滤器与单向阀 过滤器 PE系列过滤器 3.2 mm PP F-PE-60-32-PP-N 139003 过滤器与单向阀 过滤器 PE系列过滤器 F-PE-60-32-PP-N 139003 443-02-00455 3.2 mm PP PE系列过滤器 标准型 3.2 mm 3.2 mm PP 本色 过滤器 PE过滤器 HDPE 40–60 μm 3.2 mm PP 本色",
+      "en": "filters check valves filter PE系列过滤器 3.2 mm PP F-PE-60-32-PP-N 139003 filters check valves 过滤器 PE系列过滤器 F-PE-60-32-PP-N 139003 443-02-00455 3.2 mm PP PE Series Filter Standard 3.2 mm 3.2 mm PP Natural 过滤器 PE过滤器 HDPE 40–60 μm 3.2 mm PP 本色",
+      "es": "filters check valves 过滤器 PE系列过滤器 F-PE-60-32-PP-N 139003 443-02-00455 3.2 mm PP",
+      "fr": "filters check valves 过滤器 PE系列过滤器 F-PE-60-32-PP-N 139003 443-02-00455 3.2 mm PP",
+      "ko": "filters check valves 过滤器 PE系列过滤器 F-PE-60-32-PP-N 139003 443-02-00455 3.2 mm PP",
+      "ru": "filters check valves 过滤器 PE系列过滤器 F-PE-60-32-PP-N 139003 443-02-00455 3.2 mm PP"
+    }
+  },
+  {
+    "productId": "139012",
+    "productCode": "139012",
+    "productCodes": [
+      "139012"
+    ],
+    "internalCodes": [
+      "443-02-00714"
+    ],
+    "sourceType": "filter-check-valve-selection",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "filters",
+    "productTypeName": "过滤器",
+    "seriesId": "f",
+    "seriesCode": "F",
+    "seriesName": "PA系列过滤器",
+    "model": "F-PA-150-32-PP-N",
+    "foreachModel": "F-PA-150-32-PP-N",
+    "hasStandardModel": true,
+    "competitorModels": [],
+    "cardTitle": {
+      "zh": "F-PA-150-32-PP-N",
+      "en": "F-PA-150-32-PP-N",
+      "es": "F-PA-150-32-PP-N",
+      "fr": "F-PA-150-32-PP-N",
+      "ko": "F-PA-150-32-PP-N",
+      "ru": "F-PA-150-32-PP-N"
+    },
+    "cardSubtitle": {
+      "zh": "PA 滤网材质过滤器\n过滤精度 150 μm，壳体材质为 PP\n适配 3.2 mm 接管内径",
+      "en": "PA Mesh Filter\nFiltration Rating: 150 μm; Housing Material: PP\nFits 3.2 mm ID tubing",
+      "es": "PE & PA Filter\nPA filter media · 150 μm\nTube ID 3.2 mm · PP body · 本色",
+      "fr": "PE & PA Filter\nPA filter media · 150 μm\nTube ID 3.2 mm · PP body · 本色",
+      "ko": "PE & PA Filter\nPA filter media · 150 μm\nTube ID 3.2 mm · PP body · 本色",
+      "ru": "PE & PA Filter\nPA filter media · 150 μm\nTube ID 3.2 mm · PP body · 本色"
+    },
+    "filters": {
+      "filter01": "过滤器",
+      "filter02": "PE&PA过滤器",
+      "filter03": "PA",
+      "filter04": "150 μm",
+      "filter05": "",
+      "filter06": "",
+      "filter07": "3.2 mm",
+      "filter08": "PP",
+      "filter09": "本色"
+    },
+    "structureCode": "PA",
+    "specificationCode": "150",
+    "portSize": "3.2 mm",
+    "materialCode": "PP",
+    "colorCode": "N",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "detailSlug": "f-pa-150-32-pp-n",
+    "detailHref": "/products/fittings/filters/f-pa-150-32-pp-n",
+    "href": "/products/fittings/filters/f-pa-150-32-pp-n",
+    "selectionHref": "/products/fittings/filters",
+    "needDrawing": true,
+    "needModel3d": false,
+    "status": "active",
+    "sourceIndex": 11,
+    "sortOrder": 470007,
+    "searchKeywords": {
+      "zh": "过滤器与单向阀 过滤器 PA系列过滤器 3.2 mm PP F-PA-150-32-PP-N 139012 过滤器与单向阀 过滤器 PA系列过滤器 F-PA-150-32-PP-N 139012 443-02-00714 3.2 mm PP PA系列过滤器 标准型 3.2 mm 3.2 mm PP 本色 过滤器 PA过滤器 PA 150 μm 3.2 mm PP 本色",
+      "en": "filters check valves filter PA系列过滤器 3.2 mm PP F-PA-150-32-PP-N 139012 filters check valves 过滤器 PA系列过滤器 F-PA-150-32-PP-N 139012 443-02-00714 3.2 mm PP PA Series Filter Standard 3.2 mm 3.2 mm PP Natural 过滤器 PA过滤器 PA 150 μm 3.2 mm PP 本色",
+      "es": "filters check valves 过滤器 PA系列过滤器 F-PA-150-32-PP-N 139012 443-02-00714 3.2 mm PP",
+      "fr": "filters check valves 过滤器 PA系列过滤器 F-PA-150-32-PP-N 139012 443-02-00714 3.2 mm PP",
+      "ko": "filters check valves 过滤器 PA系列过滤器 F-PA-150-32-PP-N 139012 443-02-00714 3.2 mm PP",
+      "ru": "filters check valves 过滤器 PA系列过滤器 F-PA-150-32-PP-N 139012 443-02-00714 3.2 mm PP"
+    }
+  },
+  {
+    "productId": "139014",
+    "productCode": "139014",
+    "productCodes": [
+      "139014"
+    ],
+    "internalCodes": [
+      "443-02-00736"
+    ],
+    "sourceType": "filter-check-valve-selection",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "filters",
+    "productTypeName": "过滤器",
+    "seriesId": "f",
+    "seriesCode": "F",
+    "seriesName": "PA系列过滤器",
+    "model": "F-PA-250-32D-PA-N",
+    "foreachModel": "F-PA-250-32D-PA-N",
+    "hasStandardModel": true,
+    "competitorModels": [],
+    "cardTitle": {
+      "zh": "F-PA-250-32D-PA-N",
+      "en": "F-PA-250-32D-PA-N",
+      "es": "F-PA-250-32D-PA-N",
+      "fr": "F-PA-250-32D-PA-N",
+      "ko": "F-PA-250-32D-PA-N",
+      "ru": "F-PA-250-32D-PA-N"
+    },
+    "cardSubtitle": {
+      "zh": "PA 滤网材质过滤器\n过滤精度 250 μm，壳体材质为 PA\n适配 3.2 mm 接管内径",
+      "en": "PA Mesh Filter\nFiltration Rating: 250 μm; Housing Material: PA\nFits 3.2 mm ID tubing",
+      "es": "PE & PA Filter\nPA filter media · 250 μm\nTube ID 3.2 mm · PA body · 本色",
+      "fr": "PE & PA Filter\nPA filter media · 250 μm\nTube ID 3.2 mm · PA body · 本色",
+      "ko": "PE & PA Filter\nPA filter media · 250 μm\nTube ID 3.2 mm · PA body · 本色",
+      "ru": "PE & PA Filter\nPA filter media · 250 μm\nTube ID 3.2 mm · PA body · 本色"
+    },
+    "filters": {
+      "filter01": "过滤器",
+      "filter02": "PE&PA过滤器",
+      "filter03": "PA",
+      "filter04": "250 μm",
+      "filter05": "",
+      "filter06": "",
+      "filter07": "3.2 mm",
+      "filter08": "PA",
+      "filter09": "本色"
+    },
+    "structureCode": "PA",
+    "specificationCode": "250",
+    "portSize": "3.2 mm（D型）",
+    "materialCode": "PA",
+    "colorCode": "N",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "detailSlug": "f-pa-250-32d-pa-n",
+    "detailHref": "/products/fittings/filters/f-pa-250-32d-pa-n",
+    "href": "/products/fittings/filters/f-pa-250-32d-pa-n",
+    "selectionHref": "/products/fittings/filters",
+    "needDrawing": true,
+    "needModel3d": true,
+    "status": "active",
+    "sourceIndex": 12,
+    "sortOrder": 470008,
+    "searchKeywords": {
+      "zh": "过滤器与单向阀 过滤器 PA系列过滤器 3.2 mm（D型） PA F-PA-250-32D-PA-N 139014 过滤器与单向阀 过滤器 PA系列过滤器 F-PA-250-32D-PA-N 139014 443-02-00736 3.2 mm（D型） PA PA系列过滤器 D型 3.2 mm 3.2 mm（D型） PA 本色 过滤器 PA过滤器 PA 250 μm 3.2 mm PA 本色",
+      "en": "filters check valves filter PA系列过滤器 3.2 mm（D型） PA F-PA-250-32D-PA-N 139014 filters check valves 过滤器 PA系列过滤器 F-PA-250-32D-PA-N 139014 443-02-00736 3.2 mm（D型） PA PA Series Filter D Type 3.2 mm 3.2 mm（D型） PA Natural 过滤器 PA过滤器 PA 250 μm 3.2 mm PA 本色",
+      "es": "filters check valves 过滤器 PA系列过滤器 F-PA-250-32D-PA-N 139014 443-02-00736 3.2 mm（D型） PA",
+      "fr": "filters check valves 过滤器 PA系列过滤器 F-PA-250-32D-PA-N 139014 443-02-00736 3.2 mm（D型） PA",
+      "ko": "filters check valves 过滤器 PA系列过滤器 F-PA-250-32D-PA-N 139014 443-02-00736 3.2 mm（D型） PA",
+      "ru": "filters check valves 过滤器 PA系列过滤器 F-PA-250-32D-PA-N 139014 443-02-00736 3.2 mm（D型） PA"
+    }
+  },
+  {
+    "productId": "139005",
+    "productCode": "139005",
+    "productCodes": [
+      "139005"
+    ],
+    "internalCodes": [
+      "515-00-04503"
+    ],
+    "sourceType": "filter-check-valve-selection",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "filters",
+    "productTypeName": "过滤器",
+    "seriesId": "f",
+    "seriesCode": "F",
+    "seriesName": "水循环过滤器",
+    "model": "F-SS-150-127-AC-N",
+    "foreachModel": "F-SS-150-127-AC-N",
+    "hasStandardModel": true,
+    "competitorModels": [],
+    "cardTitle": {
+      "zh": "F-SS-150-127-AC-N",
+      "en": "F-SS-150-127-AC-N",
+      "es": "F-SS-150-127-AC-N",
+      "fr": "F-SS-150-127-AC-N",
+      "ko": "F-SS-150-127-AC-N",
+      "ru": "F-SS-150-127-AC-N"
+    },
+    "cardSubtitle": {
+      "zh": "SUS 滤网材质过滤器\n过滤精度 150 μm，壳体材质为 AC\n适配 12.7 mm 接管内径",
+      "en": "SUS Mesh Filter\nFiltration Rating: 150 μm; Housing Material: AC\nFits 12.7 mm ID tubing",
+      "es": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 12.7 mm · AC body · 本色",
+      "fr": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 12.7 mm · AC body · 本色",
+      "ko": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 12.7 mm · AC body · 本色",
+      "ru": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 12.7 mm · AC body · 本色"
+    },
+    "filters": {
+      "filter01": "过滤器",
+      "filter02": "水循环过滤器",
+      "filter03": "SUS",
+      "filter04": "150 μm",
+      "filter05": "",
+      "filter06": "",
+      "filter07": "12.7 mm",
+      "filter08": "AC",
+      "filter09": "本色"
+    },
+    "structureCode": "SS",
+    "specificationCode": "150",
+    "portSize": "12.7 mm",
+    "materialCode": "AC",
+    "colorCode": "N",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "detailSlug": "f-ss-150-127-ac-n",
+    "detailHref": "/products/fittings/filters/f-ss-150-127-ac-n",
+    "href": "/products/fittings/filters/f-ss-150-127-ac-n",
+    "selectionHref": "/products/fittings/filters",
+    "needDrawing": true,
+    "needModel3d": true,
+    "status": "active",
+    "sourceIndex": 13,
+    "sortOrder": 470009,
+    "searchKeywords": {
+      "zh": "过滤器与单向阀 过滤器 水循环过滤器 12.7 mm AC F-SS-150-127-AC-N 139005 过滤器与单向阀 过滤器 水循环过滤器 F-SS-150-127-AC-N 139005 515-00-04503 12.7 mm AC 水循环过滤器 标准型 12.7 mm 12.7 mm AC 本色 过滤器 水循环过滤器 SUS 150 μm 12.7 mm AC 本色",
+      "en": "filters check valves filter 水循环过滤器 12.7 mm AC F-SS-150-127-AC-N 139005 filters check valves 过滤器 水循环过滤器 F-SS-150-127-AC-N 139005 515-00-04503 12.7 mm AC Water Circulation Filter Standard 12.7 mm 12.7 mm AC Natural 过滤器 水循环过滤器 SUS 150 μm 12.7 mm AC 本色",
+      "es": "filters check valves 过滤器 水循环过滤器 F-SS-150-127-AC-N 139005 515-00-04503 12.7 mm AC",
+      "fr": "filters check valves 过滤器 水循环过滤器 F-SS-150-127-AC-N 139005 515-00-04503 12.7 mm AC",
+      "ko": "filters check valves 过滤器 水循环过滤器 F-SS-150-127-AC-N 139005 515-00-04503 12.7 mm AC",
+      "ru": "filters check valves 过滤器 水循环过滤器 F-SS-150-127-AC-N 139005 515-00-04503 12.7 mm AC"
+    }
+  },
+  {
+    "productId": "139006",
+    "productCode": "139006",
+    "productCodes": [
+      "139006"
+    ],
+    "internalCodes": [
+      "515-00-04707"
+    ],
+    "sourceType": "filter-check-valve-selection",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "filters",
+    "productTypeName": "过滤器",
+    "seriesId": "f",
+    "seriesCode": "F",
+    "seriesName": "水循环过滤器",
+    "model": "F-SS-150-127D-AC-N",
+    "foreachModel": "F-SS-150-127D-AC-N",
+    "hasStandardModel": true,
+    "competitorModels": [],
+    "cardTitle": {
+      "zh": "F-SS-150-127D-AC-N",
+      "en": "F-SS-150-127D-AC-N",
+      "es": "F-SS-150-127D-AC-N",
+      "fr": "F-SS-150-127D-AC-N",
+      "ko": "F-SS-150-127D-AC-N",
+      "ru": "F-SS-150-127D-AC-N"
+    },
+    "cardSubtitle": {
+      "zh": "SUS 滤网材质过滤器\n过滤精度 150 μm，壳体材质为 AC\n适配 12.7 mm 接管内径",
+      "en": "SUS Mesh Filter\nFiltration Rating: 150 μm; Housing Material: AC\nFits 12.7 mm ID tubing",
+      "es": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 12.7 mm · AC body · 本色",
+      "fr": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 12.7 mm · AC body · 本色",
+      "ko": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 12.7 mm · AC body · 本色",
+      "ru": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 12.7 mm · AC body · 本色"
+    },
+    "filters": {
+      "filter01": "过滤器",
+      "filter02": "水循环过滤器",
+      "filter03": "SUS",
+      "filter04": "150 μm",
+      "filter05": "",
+      "filter06": "",
+      "filter07": "12.7 mm",
+      "filter08": "AC",
+      "filter09": "本色"
+    },
+    "structureCode": "SS",
+    "specificationCode": "150",
+    "portSize": "12.7 mm（D型）",
+    "materialCode": "AC",
+    "colorCode": "N",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "detailSlug": "f-ss-150-127d-ac-n",
+    "detailHref": "/products/fittings/filters/f-ss-150-127d-ac-n",
+    "href": "/products/fittings/filters/f-ss-150-127d-ac-n",
+    "selectionHref": "/products/fittings/filters",
+    "needDrawing": true,
+    "needModel3d": false,
+    "status": "active",
+    "sourceIndex": 14,
+    "sortOrder": 470010,
+    "searchKeywords": {
+      "zh": "过滤器与单向阀 过滤器 水循环过滤器 12.7 mm（D型） AC F-SS-150-127D-AC-N 139006 过滤器与单向阀 过滤器 水循环过滤器 F-SS-150-127D-AC-N 139006 515-00-04707 12.7 mm（D型） AC 水循环过滤器 D型 12.7 mm 12.7 mm（D型） AC 本色 过滤器 水循环过滤器 SUS 150 μm 12.7 mm AC 本色",
+      "en": "filters check valves filter 水循环过滤器 12.7 mm（D型） AC F-SS-150-127D-AC-N 139006 filters check valves 过滤器 水循环过滤器 F-SS-150-127D-AC-N 139006 515-00-04707 12.7 mm（D型） AC Water Circulation Filter D Type 12.7 mm 12.7 mm（D型） AC Natural 过滤器 水循环过滤器 SUS 150 μm 12.7 mm AC 本色",
+      "es": "filters check valves 过滤器 水循环过滤器 F-SS-150-127D-AC-N 139006 515-00-04707 12.7 mm（D型） AC",
+      "fr": "filters check valves 过滤器 水循环过滤器 F-SS-150-127D-AC-N 139006 515-00-04707 12.7 mm（D型） AC",
+      "ko": "filters check valves 过滤器 水循环过滤器 F-SS-150-127D-AC-N 139006 515-00-04707 12.7 mm（D型） AC",
+      "ru": "filters check valves 过滤器 水循环过滤器 F-SS-150-127D-AC-N 139006 515-00-04707 12.7 mm（D型） AC"
+    }
+  },
+  {
+    "productId": "139007",
+    "productCode": "139007",
+    "productCodes": [
+      "139007"
+    ],
+    "internalCodes": [
+      "515-00-04864"
+    ],
+    "sourceType": "filter-check-valve-selection",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "filters",
+    "productTypeName": "过滤器",
+    "seriesId": "f",
+    "seriesCode": "F",
+    "seriesName": "水循环过滤器",
+    "model": "F-SS-150-127-PP-N",
+    "foreachModel": "F-SS-150-127-PP-N",
+    "hasStandardModel": true,
+    "competitorModels": [],
+    "cardTitle": {
+      "zh": "F-SS-150-127-PP-N",
+      "en": "F-SS-150-127-PP-N",
+      "es": "F-SS-150-127-PP-N",
+      "fr": "F-SS-150-127-PP-N",
+      "ko": "F-SS-150-127-PP-N",
+      "ru": "F-SS-150-127-PP-N"
+    },
+    "cardSubtitle": {
+      "zh": "SUS 滤网材质过滤器\n过滤精度 150 μm，壳体材质为 PP\n适配 12.7 mm 接管内径",
+      "en": "SUS Mesh Filter\nFiltration Rating: 150 μm; Housing Material: PP\nFits 12.7 mm ID tubing",
+      "es": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 12.7 mm · PP body · 本色",
+      "fr": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 12.7 mm · PP body · 本色",
+      "ko": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 12.7 mm · PP body · 本色",
+      "ru": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 12.7 mm · PP body · 本色"
+    },
+    "filters": {
+      "filter01": "过滤器",
+      "filter02": "水循环过滤器",
+      "filter03": "SUS",
+      "filter04": "150 μm",
+      "filter05": "",
+      "filter06": "",
+      "filter07": "12.7 mm",
+      "filter08": "PP",
+      "filter09": "本色"
+    },
+    "structureCode": "SS",
+    "specificationCode": "150",
+    "portSize": "12.7 mm",
+    "materialCode": "PP",
+    "colorCode": "N",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "detailSlug": "f-ss-150-127-pp-n",
+    "detailHref": "/products/fittings/filters/f-ss-150-127-pp-n",
+    "href": "/products/fittings/filters/f-ss-150-127-pp-n",
+    "selectionHref": "/products/fittings/filters",
+    "needDrawing": false,
+    "needModel3d": true,
+    "status": "active",
+    "sourceIndex": 15,
+    "sortOrder": 470011,
+    "searchKeywords": {
+      "zh": "过滤器与单向阀 过滤器 水循环过滤器 12.7 mm PP F-SS-150-127-PP-N 139007 过滤器与单向阀 过滤器 水循环过滤器 F-SS-150-127-PP-N 139007 515-00-04864 12.7 mm PP 水循环过滤器 标准型 12.7 mm 12.7 mm PP 本色 过滤器 水循环过滤器 SUS 150 μm 12.7 mm PP 本色",
+      "en": "filters check valves filter 水循环过滤器 12.7 mm PP F-SS-150-127-PP-N 139007 filters check valves 过滤器 水循环过滤器 F-SS-150-127-PP-N 139007 515-00-04864 12.7 mm PP Water Circulation Filter Standard 12.7 mm 12.7 mm PP Natural 过滤器 水循环过滤器 SUS 150 μm 12.7 mm PP 本色",
+      "es": "filters check valves 过滤器 水循环过滤器 F-SS-150-127-PP-N 139007 515-00-04864 12.7 mm PP",
+      "fr": "filters check valves 过滤器 水循环过滤器 F-SS-150-127-PP-N 139007 515-00-04864 12.7 mm PP",
+      "ko": "filters check valves 过滤器 水循环过滤器 F-SS-150-127-PP-N 139007 515-00-04864 12.7 mm PP",
+      "ru": "filters check valves 过滤器 水循环过滤器 F-SS-150-127-PP-N 139007 515-00-04864 12.7 mm PP"
+    }
+  },
+  {
+    "productId": "139008",
+    "productCode": "139008",
+    "productCodes": [
+      "139008"
+    ],
+    "internalCodes": [
+      "515-00-04865",
+      "515-00-05699"
+    ],
+    "sourceType": "filter-check-valve-selection",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "filters",
+    "productTypeName": "过滤器",
+    "seriesId": "f",
+    "seriesCode": "F",
+    "seriesName": "水循环过滤器",
+    "model": "F-SS-150-127D-PP-N",
+    "foreachModel": "F-SS-150-127D-PP-N",
+    "hasStandardModel": true,
+    "competitorModels": [],
+    "cardTitle": {
+      "zh": "F-SS-150-127D-PP-N",
+      "en": "F-SS-150-127D-PP-N",
+      "es": "F-SS-150-127D-PP-N",
+      "fr": "F-SS-150-127D-PP-N",
+      "ko": "F-SS-150-127D-PP-N",
+      "ru": "F-SS-150-127D-PP-N"
+    },
+    "cardSubtitle": {
+      "zh": "SUS 滤网材质过滤器\n过滤精度 150 μm，壳体材质为 PP\n适配 12.7 mm 接管内径",
+      "en": "SUS Mesh Filter\nFiltration Rating: 150 μm; Housing Material: PP\nFits 12.7 mm ID tubing",
+      "es": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 12.7 mm · PP body · 本色",
+      "fr": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 12.7 mm · PP body · 本色",
+      "ko": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 12.7 mm · PP body · 本色",
+      "ru": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 12.7 mm · PP body · 本色"
+    },
+    "filters": {
+      "filter01": "过滤器",
+      "filter02": "水循环过滤器",
+      "filter03": "SUS",
+      "filter04": "150 μm",
+      "filter05": "",
+      "filter06": "",
+      "filter07": "12.7 mm",
+      "filter08": "PP",
+      "filter09": "本色"
+    },
+    "structureCode": "SS",
+    "specificationCode": "150",
+    "portSize": "12.7 mm（D型）",
+    "materialCode": "PP",
+    "colorCode": "N",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "detailSlug": "f-ss-150-127d-pp-n",
+    "detailHref": "/products/fittings/filters/f-ss-150-127d-pp-n",
+    "href": "/products/fittings/filters/f-ss-150-127d-pp-n",
+    "selectionHref": "/products/fittings/filters",
+    "needDrawing": true,
+    "needModel3d": true,
+    "status": "active",
+    "sourceIndex": 16,
+    "sortOrder": 470012,
+    "searchKeywords": {
+      "zh": "过滤器与单向阀 过滤器 水循环过滤器 12.7 mm（D型） PP F-SS-150-127D-PP-N 139008 过滤器与单向阀 过滤器 水循环过滤器 F-SS-150-127D-PP-N 139008 515-00-04865 515-00-05699 12.7 mm（D型） PP 水循环过滤器 D型 12.7 mm 12.7 mm（D型） PP 本色 过滤器 水循环过滤器 SUS 150 μm 12.7 mm PP 本色",
+      "en": "filters check valves filter 水循环过滤器 12.7 mm（D型） PP F-SS-150-127D-PP-N 139008 filters check valves 过滤器 水循环过滤器 F-SS-150-127D-PP-N 139008 515-00-04865 515-00-05699 12.7 mm（D型） PP Water Circulation Filter D Type 12.7 mm 12.7 mm（D型） PP Natural 过滤器 水循环过滤器 SUS 150 μm 12.7 mm PP 本色",
+      "es": "filters check valves 过滤器 水循环过滤器 F-SS-150-127D-PP-N 139008 515-00-04865 515-00-05699 12.7 mm（D型） PP",
+      "fr": "filters check valves 过滤器 水循环过滤器 F-SS-150-127D-PP-N 139008 515-00-04865 515-00-05699 12.7 mm（D型） PP",
+      "ko": "filters check valves 过滤器 水循环过滤器 F-SS-150-127D-PP-N 139008 515-00-04865 515-00-05699 12.7 mm（D型） PP",
+      "ru": "filters check valves 过滤器 水循环过滤器 F-SS-150-127D-PP-N 139008 515-00-04865 515-00-05699 12.7 mm（D型） PP"
+    }
+  },
+  {
+    "productId": "139011",
+    "productCode": "139011",
+    "productCodes": [
+      "139011"
+    ],
+    "internalCodes": [
+      "515-00-05427"
+    ],
+    "sourceType": "filter-check-valve-selection",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "filters",
+    "productTypeName": "过滤器",
+    "seriesId": "f",
+    "seriesCode": "F",
+    "seriesName": "水循环过滤器",
+    "model": "F-SS-150-79D-PP-N",
+    "foreachModel": "F-SS-150-79D-PP-N",
+    "hasStandardModel": true,
+    "competitorModels": [],
+    "cardTitle": {
+      "zh": "F-SS-150-79D-PP-N",
+      "en": "F-SS-150-79D-PP-N",
+      "es": "F-SS-150-79D-PP-N",
+      "fr": "F-SS-150-79D-PP-N",
+      "ko": "F-SS-150-79D-PP-N",
+      "ru": "F-SS-150-79D-PP-N"
+    },
+    "cardSubtitle": {
+      "zh": "SUS 滤网材质过滤器\n过滤精度 150 μm，壳体材质为 PP\n适配 7.9 mm 接管内径",
+      "en": "SUS Mesh Filter\nFiltration Rating: 150 μm; Housing Material: PP\nFits 7.9 mm ID tubing",
+      "es": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 7.9 mm · PP body · 本色",
+      "fr": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 7.9 mm · PP body · 本色",
+      "ko": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 7.9 mm · PP body · 本色",
+      "ru": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 7.9 mm · PP body · 本色"
+    },
+    "filters": {
+      "filter01": "过滤器",
+      "filter02": "水循环过滤器",
+      "filter03": "SUS",
+      "filter04": "150 μm",
+      "filter05": "",
+      "filter06": "",
+      "filter07": "7.9 mm",
+      "filter08": "PP",
+      "filter09": "本色"
+    },
+    "structureCode": "SS",
+    "specificationCode": "150",
+    "portSize": "7.9 mm（D型）",
+    "materialCode": "PP",
+    "colorCode": "N",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "detailSlug": "f-ss-150-79d-pp-n",
+    "detailHref": "/products/fittings/filters/f-ss-150-79d-pp-n",
+    "href": "/products/fittings/filters/f-ss-150-79d-pp-n",
+    "selectionHref": "/products/fittings/filters",
+    "needDrawing": false,
+    "needModel3d": false,
+    "status": "active",
+    "sourceIndex": 17,
+    "sortOrder": 470013,
+    "searchKeywords": {
+      "zh": "过滤器与单向阀 过滤器 水循环过滤器 7.9 mm（D型） PP F-SS-150-79D-PP-N 139011 过滤器与单向阀 过滤器 水循环过滤器 F-SS-150-79D-PP-N 139011 515-00-05427 7.9 mm（D型） PP 水循环过滤器 D型 7.9 mm 7.9 mm（D型） PP 本色 过滤器 水循环过滤器 SUS 150 μm 7.9 mm PP 本色",
+      "en": "filters check valves filter 水循环过滤器 7.9 mm（D型） PP F-SS-150-79D-PP-N 139011 filters check valves 过滤器 水循环过滤器 F-SS-150-79D-PP-N 139011 515-00-05427 7.9 mm（D型） PP Water Circulation Filter D Type 7.9 mm 7.9 mm（D型） PP Natural 过滤器 水循环过滤器 SUS 150 μm 7.9 mm PP 本色",
+      "es": "filters check valves 过滤器 水循环过滤器 F-SS-150-79D-PP-N 139011 515-00-05427 7.9 mm（D型） PP",
+      "fr": "filters check valves 过滤器 水循环过滤器 F-SS-150-79D-PP-N 139011 515-00-05427 7.9 mm（D型） PP",
+      "ko": "filters check valves 过滤器 水循环过滤器 F-SS-150-79D-PP-N 139011 515-00-05427 7.9 mm（D型） PP",
+      "ru": "filters check valves 过滤器 水循环过滤器 F-SS-150-79D-PP-N 139011 515-00-05427 7.9 mm（D型） PP"
+    }
+  },
+  {
+    "productId": "139013",
+    "productCode": "139013",
+    "productCodes": [
+      "139013",
+      "139016"
+    ],
+    "internalCodes": [
+      "515-00-05633",
+      "515-00-05756"
+    ],
+    "sourceType": "filter-check-valve-selection",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "filters",
+    "productTypeName": "过滤器",
+    "seriesId": "f",
+    "seriesCode": "F",
+    "seriesName": "水循环过滤器",
+    "model": "F-SS-150-95D-PP-N",
+    "foreachModel": "F-SS-150-95D-PP-N",
+    "hasStandardModel": true,
+    "competitorModels": [],
+    "cardTitle": {
+      "zh": "F-SS-150-95D-PP-N",
+      "en": "F-SS-150-95D-PP-N",
+      "es": "F-SS-150-95D-PP-N",
+      "fr": "F-SS-150-95D-PP-N",
+      "ko": "F-SS-150-95D-PP-N",
+      "ru": "F-SS-150-95D-PP-N"
+    },
+    "cardSubtitle": {
+      "zh": "SUS 滤网材质过滤器\n过滤精度 150 μm，壳体材质为 PP\n适配 9.5 mm 接管内径",
+      "en": "SUS Mesh Filter\nFiltration Rating: 150 μm; Housing Material: PP\nFits 9.5 mm ID tubing",
+      "es": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 9.5 mm · PP body · 本色",
+      "fr": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 9.5 mm · PP body · 本色",
+      "ko": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 9.5 mm · PP body · 本色",
+      "ru": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 9.5 mm · PP body · 本色"
+    },
+    "filters": {
+      "filter01": "过滤器",
+      "filter02": "水循环过滤器",
+      "filter03": "SUS",
+      "filter04": "150 μm",
+      "filter05": "",
+      "filter06": "",
+      "filter07": "9.5 mm",
+      "filter08": "PP",
+      "filter09": "本色"
+    },
+    "structureCode": "SS",
+    "specificationCode": "150",
+    "portSize": "9.5 mm（D型）",
+    "materialCode": "PP",
+    "colorCode": "N",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "detailSlug": "f-ss-150-95d-pp-n",
+    "detailHref": "/products/fittings/filters/f-ss-150-95d-pp-n",
+    "href": "/products/fittings/filters/f-ss-150-95d-pp-n",
+    "selectionHref": "/products/fittings/filters",
+    "needDrawing": true,
+    "needModel3d": false,
+    "status": "active",
+    "sourceIndex": 18,
+    "sortOrder": 470014,
+    "searchKeywords": {
+      "zh": "过滤器与单向阀 过滤器 水循环过滤器 9.5 mm（D型） PP F-SS-150-95D-PP-N 139013 139016 过滤器与单向阀 过滤器 水循环过滤器 F-SS-150-95D-PP-N 139013 139016 515-00-05633 515-00-05756 9.5 mm（D型） PP 水循环过滤器 D型 9.5 mm 9.5 mm（D型） PP 本色 过滤器 水循环过滤器 SUS 150 μm 9.5 mm PP 本色",
+      "en": "filters check valves filter 水循环过滤器 9.5 mm（D型） PP F-SS-150-95D-PP-N 139013 139016 filters check valves 过滤器 水循环过滤器 F-SS-150-95D-PP-N 139013 139016 515-00-05633 515-00-05756 9.5 mm（D型） PP Water Circulation Filter D Type 9.5 mm 9.5 mm（D型） PP Natural 过滤器 水循环过滤器 SUS 150 μm 9.5 mm PP 本色",
+      "es": "filters check valves 过滤器 水循环过滤器 F-SS-150-95D-PP-N 139013 139016 515-00-05633 515-00-05756 9.5 mm（D型） PP",
+      "fr": "filters check valves 过滤器 水循环过滤器 F-SS-150-95D-PP-N 139013 139016 515-00-05633 515-00-05756 9.5 mm（D型） PP",
+      "ko": "filters check valves 过滤器 水循环过滤器 F-SS-150-95D-PP-N 139013 139016 515-00-05633 515-00-05756 9.5 mm（D型） PP",
+      "ru": "filters check valves 过滤器 水循环过滤器 F-SS-150-95D-PP-N 139013 139016 515-00-05633 515-00-05756 9.5 mm（D型） PP"
+    }
+  },
+  {
+    "productId": "139015",
+    "productCode": "139015",
+    "productCodes": [
+      "139015"
+    ],
+    "internalCodes": [
+      "515-00-05674"
+    ],
+    "sourceType": "filter-check-valve-selection",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "filters",
+    "productTypeName": "过滤器",
+    "seriesId": "f",
+    "seriesCode": "F",
+    "seriesName": "水循环过滤器",
+    "model": "F-SS-150-191-PP-N",
+    "foreachModel": "F-SS-150-191-PP-N",
+    "hasStandardModel": true,
+    "competitorModels": [],
+    "cardTitle": {
+      "zh": "F-SS-150-191-PP-N",
+      "en": "F-SS-150-191-PP-N",
+      "es": "F-SS-150-191-PP-N",
+      "fr": "F-SS-150-191-PP-N",
+      "ko": "F-SS-150-191-PP-N",
+      "ru": "F-SS-150-191-PP-N"
+    },
+    "cardSubtitle": {
+      "zh": "SUS 滤网材质过滤器\n过滤精度 150 μm，壳体材质为 PP\n适配 19.1 mm 接管内径",
+      "en": "SUS Mesh Filter\nFiltration Rating: 150 μm; Housing Material: PP\nFits 19.1 mm ID tubing",
+      "es": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 19.1 mm · PP body · 本色",
+      "fr": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 19.1 mm · PP body · 本色",
+      "ko": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 19.1 mm · PP body · 本色",
+      "ru": "Water Circulation Filter\nSUS filter media · 150 μm\nTube ID 19.1 mm · PP body · 本色"
+    },
+    "filters": {
+      "filter01": "过滤器",
+      "filter02": "水循环过滤器",
+      "filter03": "SUS",
+      "filter04": "150 μm",
+      "filter05": "",
+      "filter06": "",
+      "filter07": "19.1 mm",
+      "filter08": "PP",
+      "filter09": "本色"
+    },
+    "structureCode": "SS",
+    "specificationCode": "150",
+    "portSize": "19.1 mm",
+    "materialCode": "PP",
+    "colorCode": "N",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "detailSlug": "f-ss-150-191-pp-n",
+    "detailHref": "/products/fittings/filters/f-ss-150-191-pp-n",
+    "href": "/products/fittings/filters/f-ss-150-191-pp-n",
+    "selectionHref": "/products/fittings/filters",
+    "needDrawing": false,
+    "needModel3d": false,
+    "status": "active",
+    "sourceIndex": 19,
+    "sortOrder": 470015,
+    "searchKeywords": {
+      "zh": "过滤器与单向阀 过滤器 水循环过滤器 19.1 mm PP F-SS-150-191-PP-N 139015 过滤器与单向阀 过滤器 水循环过滤器 F-SS-150-191-PP-N 139015 515-00-05674 19.1 mm PP 水循环过滤器 标准型 19.1 mm 19.1 mm PP 本色 过滤器 水循环过滤器 SUS 150 μm 19.1 mm PP 本色",
+      "en": "filters check valves filter 水循环过滤器 19.1 mm PP F-SS-150-191-PP-N 139015 filters check valves 过滤器 水循环过滤器 F-SS-150-191-PP-N 139015 515-00-05674 19.1 mm PP Water Circulation Filter Standard 19.1 mm 19.1 mm PP Natural 过滤器 水循环过滤器 SUS 150 μm 19.1 mm PP 本色",
+      "es": "filters check valves 过滤器 水循环过滤器 F-SS-150-191-PP-N 139015 515-00-05674 19.1 mm PP",
+      "fr": "filters check valves 过滤器 水循环过滤器 F-SS-150-191-PP-N 139015 515-00-05674 19.1 mm PP",
+      "ko": "filters check valves 过滤器 水循环过滤器 F-SS-150-191-PP-N 139015 515-00-05674 19.1 mm PP",
+      "ru": "filters check valves 过滤器 水循环过滤器 F-SS-150-191-PP-N 139015 515-00-05674 19.1 mm PP"
+    }
+  },
+  {
+    "productId": "139009",
+    "productCode": "139009",
+    "productCodes": [
+      "139009"
+    ],
+    "internalCodes": [
+      "515-01-03273"
+    ],
+    "sourceType": "filter-check-valve-selection",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "filters",
+    "productTypeName": "过滤器",
+    "seriesId": "f",
+    "seriesCode": "F",
+    "seriesName": "水循环过滤器组件",
+    "model": "139009",
+    "foreachModel": "",
+    "hasStandardModel": false,
+    "competitorModels": [],
+    "cardTitle": {
+      "zh": "139009 水循环过滤器组件",
+      "en": "139009 水循环过滤器组件",
+      "es": "139009 水循环过滤器组件",
+      "fr": "139009 水循环过滤器组件",
+      "ko": "139009 水循环过滤器组件",
+      "ru": "139009 水循环过滤器组件"
+    },
+    "cardSubtitle": {
+      "zh": "水循环过滤器组件\n壳体材质为 POM\n外形尺寸 86 × 48.8 mm",
+      "en": "Water Circulation Filter Assembly\nHousing Material: POM\nOverall Dimensions: 86 × 48.8 mm",
+      "es": "Water Circulation Filter Assembly\nPOM body",
+      "fr": "Water Circulation Filter Assembly\nPOM body",
+      "ko": "Water Circulation Filter Assembly\nPOM body",
+      "ru": "Water Circulation Filter Assembly\nPOM body"
+    },
+    "filters": {
+      "filter01": "过滤器",
+      "filter02": "水循环过滤器",
+      "filter03": "",
+      "filter04": "",
+      "filter05": "",
+      "filter06": "",
+      "filter07": "",
+      "filter08": "POM",
+      "filter09": ""
+    },
+    "structureCode": "COMPONENT",
+    "specificationCode": "86 × 48.8 mm",
+    "portSize": "86 × 48.8 mm",
+    "materialCode": "POM",
+    "colorCode": "",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "detailSlug": "filter-component-139009",
+    "detailHref": "/products/fittings/filters/filter-component-139009",
+    "href": "/products/fittings/filters/filter-component-139009",
+    "selectionHref": "/products/fittings/filters",
+    "needDrawing": true,
+    "needModel3d": true,
+    "status": "active",
+    "sourceIndex": 22,
+    "sortOrder": 470016,
+    "searchKeywords": {
+      "zh": "过滤器与单向阀 过滤器 水循环过滤器组件 86 × 48.8 mm POM 139009 139009 过滤器与单向阀 过滤器 水循环过滤器组件 139009 515-01-03273 86 × 48.8 mm POM 水循环过滤器组件 组件 86 × 48.8 mm POM 过滤器 水循环过滤器 POM",
+      "en": "filters check valves filter 水循环过滤器组件 86 × 48.8 mm POM 139009 139009 filters check valves 过滤器 水循环过滤器组件 139009 515-01-03273 86 × 48.8 mm POM Water Circulation Filter Assembly Assembly 86 × 48.8 mm POM 过滤器 水循环过滤器 POM",
+      "es": "filters check valves 过滤器 水循环过滤器组件 139009 515-01-03273 86 × 48.8 mm POM",
+      "fr": "filters check valves 过滤器 水循环过滤器组件 139009 515-01-03273 86 × 48.8 mm POM",
+      "ko": "filters check valves 过滤器 水循环过滤器组件 139009 515-01-03273 86 × 48.8 mm POM",
+      "ru": "filters check valves 过滤器 水循环过滤器组件 139009 515-01-03273 86 × 48.8 mm POM"
+    }
+  },
+  {
+    "productId": "139010",
+    "productCode": "139010",
+    "productCodes": [
+      "139010"
+    ],
+    "internalCodes": [
+      "515-01-03641"
+    ],
+    "sourceType": "filter-check-valve-selection",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "filters",
+    "productTypeName": "过滤器",
+    "seriesId": "f",
+    "seriesCode": "F",
+    "seriesName": "水循环过滤器组件",
+    "model": "139010",
+    "foreachModel": "",
+    "hasStandardModel": false,
+    "competitorModels": [],
+    "cardTitle": {
+      "zh": "139010 水循环过滤器组件",
+      "en": "139010 水循环过滤器组件",
+      "es": "139010 水循环过滤器组件",
+      "fr": "139010 水循环过滤器组件",
+      "ko": "139010 水循环过滤器组件",
+      "ru": "139010 水循环过滤器组件"
+    },
+    "cardSubtitle": {
+      "zh": "SUS 滤网材质过滤器组件\n过滤精度 150 μm，壳体材质为 PP\n适配 3/8-18 NPT 螺纹接口",
+      "en": "SUS Mesh Filter Assembly\nFiltration Rating: 150 μm; Housing Material: PP\nFits 3/8-18 NPT thread",
+      "es": "Water Circulation Filter Assembly\nSUS filter media · 150 μm\nThread 3/8-18 NPT · PP body · 本色",
+      "fr": "Water Circulation Filter Assembly\nSUS filter media · 150 μm\nThread 3/8-18 NPT · PP body · 本色",
+      "ko": "Water Circulation Filter Assembly\nSUS filter media · 150 μm\nThread 3/8-18 NPT · PP body · 本色",
+      "ru": "Water Circulation Filter Assembly\nSUS filter media · 150 μm\nThread 3/8-18 NPT · PP body · 本色"
+    },
+    "filters": {
+      "filter01": "过滤器",
+      "filter02": "水循环过滤器",
+      "filter03": "SUS",
+      "filter04": "150 μm",
+      "filter05": "",
+      "filter06": "",
+      "filter07": "3/8-18 NPT",
+      "filter08": "PP",
+      "filter09": "本色"
+    },
+    "structureCode": "COMPONENT",
+    "specificationCode": "78 × 46 mm",
+    "portSize": "78 × 46 mm",
+    "materialCode": "PP",
+    "colorCode": "N",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "detailSlug": "filter-component-139010",
+    "detailHref": "/products/fittings/filters/filter-component-139010",
+    "href": "/products/fittings/filters/filter-component-139010",
+    "selectionHref": "/products/fittings/filters",
+    "needDrawing": true,
+    "needModel3d": true,
+    "status": "active",
+    "sourceIndex": 23,
+    "sortOrder": 470017,
+    "searchKeywords": {
+      "zh": "过滤器与单向阀 过滤器 水循环过滤器组件 78 × 46 mm PP 139010 139010 过滤器与单向阀 过滤器 水循环过滤器组件 139010 515-01-03641 78 × 46 mm PP 水循环过滤器组件 组件 78 × 46 mm PP 本色 过滤器 水循环过滤器 SUS 150 μm 3/8-18 NPT PP 本色",
+      "en": "filters check valves filter 水循环过滤器组件 78 × 46 mm PP 139010 139010 filters check valves 过滤器 水循环过滤器组件 139010 515-01-03641 78 × 46 mm PP Water Circulation Filter Assembly Assembly 78 × 46 mm PP Natural 过滤器 水循环过滤器 SUS 150 μm 3/8-18 NPT PP 本色",
+      "es": "filters check valves 过滤器 水循环过滤器组件 139010 515-01-03641 78 × 46 mm PP",
+      "fr": "filters check valves 过滤器 水循环过滤器组件 139010 515-01-03641 78 × 46 mm PP",
+      "ko": "filters check valves 过滤器 水循环过滤器组件 139010 515-01-03641 78 × 46 mm PP",
+      "ru": "filters check valves 过滤器 水循环过滤器组件 139010 515-01-03641 78 × 46 mm PP"
+    }
+  },
+  {
+    "productId": "126006",
+    "productCode": "126006",
+    "productCodes": [
+      "126006"
+    ],
+    "internalCodes": [
+      "382-12-00029"
+    ],
+    "sourceType": "filter-check-valve-selection",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "check-valves",
+    "productTypeName": "单向阀",
+    "seriesId": "cv",
+    "seriesCode": "CV",
+    "seriesName": "鸭嘴式单向阀",
+    "model": "CV-DE-16-PV-N",
+    "foreachModel": "CV-DE-16-PV-N",
+    "hasStandardModel": true,
+    "competitorModels": [],
+    "cardTitle": {
+      "zh": "CV-DE-16-PV-N",
+      "en": "CV-DE-16-PV-N",
+      "es": "CV-DE-16-PV-N",
+      "fr": "CV-DE-16-PV-N",
+      "ko": "CV-DE-16-PV-N",
+      "ru": "CV-DE-16-PV-N"
+    },
+    "cardSubtitle": {
+      "zh": "鸭嘴式单向阀\n密封件材质为 EPDM，壳体材质为 PVDF\n适配 1.6 mm 接管内径",
+      "en": "Duckbill Check Valve\nSeal Material: EPDM; Housing Material: PVDF\nFits 1.6 mm ID tubing",
+      "es": "Duckbill Check Valve\nEPDM diaphragm · Tube ID 1.6 mm\nPVDF body · 本色",
+      "fr": "Duckbill Check Valve\nEPDM diaphragm · Tube ID 1.6 mm\nPVDF body · 本色",
+      "ko": "Duckbill Check Valve\nEPDM diaphragm · Tube ID 1.6 mm\nPVDF body · 本色",
+      "ru": "Duckbill Check Valve\nEPDM diaphragm · Tube ID 1.6 mm\nPVDF body · 本色"
+    },
+    "filters": {
+      "filter01": "单向阀",
+      "filter02": "",
+      "filter03": "",
+      "filter04": "",
+      "filter05": "鸭嘴式",
+      "filter06": "EPDM",
+      "filter07": "1.6 mm",
+      "filter08": "PVDF",
+      "filter09": "本色"
+    },
+    "structureCode": "DE",
+    "specificationCode": "DE",
+    "portSize": "1.6 mm",
+    "materialCode": "PV",
+    "colorCode": "N",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "detailSlug": "cv-de-16-pv-n",
+    "detailHref": "/products/fittings/check-valves/cv-de-16-pv-n",
+    "href": "/products/fittings/check-valves/cv-de-16-pv-n",
+    "selectionHref": "/products/fittings/filters",
+    "needDrawing": true,
+    "needModel3d": false,
+    "status": "active",
+    "sourceIndex": 24,
+    "sortOrder": 470018,
+    "searchKeywords": {
+      "zh": "过滤器与单向阀 单向阀 鸭嘴式单向阀 1.6 mm PVDF CV-DE-16-PV-N 126006 过滤器与单向阀 单向阀 鸭嘴式单向阀 CV-DE-16-PV-N 126006 382-12-00029 1.6 mm PVDF 鸭嘴式单向阀 标准型 1.6 mm 1.6 mm PVDF 本色 单向阀 鸭嘴式 EPDM 1.6 mm PVDF 本色",
+      "en": "filters check valves check valve 鸭嘴式单向阀 1.6 mm PVDF CV-DE-16-PV-N 126006 filters check valves 单向阀 鸭嘴式单向阀 CV-DE-16-PV-N 126006 382-12-00029 1.6 mm PVDF Duckbill Check Valve Standard 1.6 mm 1.6 mm PVDF Natural 单向阀 鸭嘴式 EPDM 1.6 mm PVDF 本色",
+      "es": "filters check valves 单向阀 鸭嘴式单向阀 CV-DE-16-PV-N 126006 382-12-00029 1.6 mm PVDF",
+      "fr": "filters check valves 单向阀 鸭嘴式单向阀 CV-DE-16-PV-N 126006 382-12-00029 1.6 mm PVDF",
+      "ko": "filters check valves 单向阀 鸭嘴式单向阀 CV-DE-16-PV-N 126006 382-12-00029 1.6 mm PVDF",
+      "ru": "filters check valves 单向阀 鸭嘴式单向阀 CV-DE-16-PV-N 126006 382-12-00029 1.6 mm PVDF"
+    }
+  },
+  {
+    "productId": "126007",
+    "productCode": "126007",
+    "productCodes": [
+      "126007"
+    ],
+    "internalCodes": [
+      "382-12-00030"
+    ],
+    "sourceType": "filter-check-valve-selection",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "check-valves",
+    "productTypeName": "单向阀",
+    "seriesId": "cv",
+    "seriesCode": "CV",
+    "seriesName": "膜片式单向阀",
+    "model": "CV-BV-32-PP-N",
+    "foreachModel": "CV-BV-32-PP-N",
+    "hasStandardModel": true,
+    "competitorModels": [
+      "HAX18-PP0"
+    ],
+    "cardTitle": {
+      "zh": "CV-BV-32-PP-N",
+      "en": "CV-BV-32-PP-N",
+      "es": "CV-BV-32-PP-N",
+      "fr": "CV-BV-32-PP-N",
+      "ko": "CV-BV-32-PP-N",
+      "ru": "CV-BV-32-PP-N"
+    },
+    "cardSubtitle": {
+      "zh": "膜片式单向阀\n膜片材质为 FKM，壳体材质为 PP\n适配 3.2 mm 接管内径",
+      "en": "Diaphragm Check Valve\nDiaphragm Material: FKM; Housing Material: PP\nFits 3.2 mm ID tubing",
+      "es": "Diaphragm Check Valve\nFKM diaphragm · Tube ID 3.2 mm\nPP body · 本色",
+      "fr": "Diaphragm Check Valve\nFKM diaphragm · Tube ID 3.2 mm\nPP body · 本色",
+      "ko": "Diaphragm Check Valve\nFKM diaphragm · Tube ID 3.2 mm\nPP body · 本色",
+      "ru": "Diaphragm Check Valve\nFKM diaphragm · Tube ID 3.2 mm\nPP body · 本色"
+    },
+    "filters": {
+      "filter01": "单向阀",
+      "filter02": "",
+      "filter03": "",
+      "filter04": "",
+      "filter05": "膜片式",
+      "filter06": "FKM",
+      "filter07": "3.2 mm",
+      "filter08": "PP",
+      "filter09": "本色"
+    },
+    "structureCode": "BV",
+    "specificationCode": "BV",
+    "portSize": "3.2 mm",
+    "materialCode": "PP",
+    "colorCode": "N",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "detailSlug": "cv-bv-32-pp-n",
+    "detailHref": "/products/fittings/check-valves/cv-bv-32-pp-n",
+    "href": "/products/fittings/check-valves/cv-bv-32-pp-n",
+    "selectionHref": "/products/fittings/filters",
+    "needDrawing": true,
+    "needModel3d": false,
+    "status": "active",
+    "sourceIndex": 25,
+    "sortOrder": 470019,
+    "searchKeywords": {
+      "zh": "过滤器与单向阀 单向阀 膜片式单向阀 3.2 mm PP CV-BV-32-PP-N 126007 过滤器与单向阀 单向阀 膜片式单向阀 CV-BV-32-PP-N 126007 382-12-00030 HAX18-PP0 3.2 mm PP 膜片式单向阀 标准型 3.2 mm 3.2 mm PP 本色 单向阀 膜片式 FKM 3.2 mm PP 本色",
+      "en": "filters check valves check valve 膜片式单向阀 3.2 mm PP CV-BV-32-PP-N 126007 filters check valves 单向阀 膜片式单向阀 CV-BV-32-PP-N 126007 382-12-00030 HAX18-PP0 3.2 mm PP Diaphragm Check Valve Standard 3.2 mm 3.2 mm PP Natural 单向阀 膜片式 FKM 3.2 mm PP 本色",
+      "es": "filters check valves 单向阀 膜片式单向阀 CV-BV-32-PP-N 126007 382-12-00030 HAX18-PP0 3.2 mm PP",
+      "fr": "filters check valves 单向阀 膜片式单向阀 CV-BV-32-PP-N 126007 382-12-00030 HAX18-PP0 3.2 mm PP",
+      "ko": "filters check valves 单向阀 膜片式单向阀 CV-BV-32-PP-N 126007 382-12-00030 HAX18-PP0 3.2 mm PP",
+      "ru": "filters check valves 单向阀 膜片式单向阀 CV-BV-32-PP-N 126007 382-12-00030 HAX18-PP0 3.2 mm PP"
+    }
+  },
+  {
+    "productId": "126009",
+    "productCode": "126009",
+    "productCodes": [
+      "126009",
+      "126028"
+    ],
+    "internalCodes": [
+      "382-12-00032",
+      "382-12-00053"
+    ],
+    "sourceType": "filter-check-valve-selection",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "check-valves",
+    "productTypeName": "单向阀",
+    "seriesId": "cv",
+    "seriesCode": "CV",
+    "seriesName": "膜片式单向阀",
+    "model": "CV-BV-48-PP-N",
+    "foreachModel": "CV-BV-48-PP-N",
+    "hasStandardModel": true,
+    "competitorModels": [
+      "HAX14-PP0"
+    ],
+    "cardTitle": {
+      "zh": "CV-BV-48-PP-N",
+      "en": "CV-BV-48-PP-N",
+      "es": "CV-BV-48-PP-N",
+      "fr": "CV-BV-48-PP-N",
+      "ko": "CV-BV-48-PP-N",
+      "ru": "CV-BV-48-PP-N"
+    },
+    "cardSubtitle": {
+      "zh": "膜片式单向阀\n膜片材质为 FKM，壳体材质为 PP\n适配 4.8 mm 接管内径",
+      "en": "Diaphragm Check Valve\nDiaphragm Material: FKM; Housing Material: PP\nFits 4.8 mm ID tubing",
+      "es": "Diaphragm Check Valve\nFKM diaphragm · Tube ID 4.8 mm\nPP body · 本色",
+      "fr": "Diaphragm Check Valve\nFKM diaphragm · Tube ID 4.8 mm\nPP body · 本色",
+      "ko": "Diaphragm Check Valve\nFKM diaphragm · Tube ID 4.8 mm\nPP body · 本色",
+      "ru": "Diaphragm Check Valve\nFKM diaphragm · Tube ID 4.8 mm\nPP body · 本色"
+    },
+    "filters": {
+      "filter01": "单向阀",
+      "filter02": "",
+      "filter03": "",
+      "filter04": "",
+      "filter05": "膜片式",
+      "filter06": "FKM",
+      "filter07": "4.8 mm",
+      "filter08": "PP",
+      "filter09": "本色"
+    },
+    "structureCode": "BV",
+    "specificationCode": "BV",
+    "portSize": "4.8 mm",
+    "materialCode": "PP",
+    "colorCode": "N",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "detailSlug": "cv-bv-48-pp-n",
+    "detailHref": "/products/fittings/check-valves/cv-bv-48-pp-n",
+    "href": "/products/fittings/check-valves/cv-bv-48-pp-n",
+    "selectionHref": "/products/fittings/filters",
+    "needDrawing": true,
+    "needModel3d": false,
+    "status": "active",
+    "sourceIndex": 26,
+    "sortOrder": 470020,
+    "searchKeywords": {
+      "zh": "过滤器与单向阀 单向阀 膜片式单向阀 4.8 mm PP CV-BV-48-PP-N 126009 126028 过滤器与单向阀 单向阀 膜片式单向阀 CV-BV-48-PP-N 126009 126028 382-12-00032 382-12-00053 HAX14-PP0 4.8 mm PP 膜片式单向阀 标准型 4.8 mm 4.8 mm PP 本色 单向阀 膜片式 FKM 4.8 mm PP 本色",
+      "en": "filters check valves check valve 膜片式单向阀 4.8 mm PP CV-BV-48-PP-N 126009 126028 filters check valves 单向阀 膜片式单向阀 CV-BV-48-PP-N 126009 126028 382-12-00032 382-12-00053 HAX14-PP0 4.8 mm PP Diaphragm Check Valve Standard 4.8 mm 4.8 mm PP Natural 单向阀 膜片式 FKM 4.8 mm PP 本色",
+      "es": "filters check valves 单向阀 膜片式单向阀 CV-BV-48-PP-N 126009 126028 382-12-00032 382-12-00053 HAX14-PP0 4.8 mm PP",
+      "fr": "filters check valves 单向阀 膜片式单向阀 CV-BV-48-PP-N 126009 126028 382-12-00032 382-12-00053 HAX14-PP0 4.8 mm PP",
+      "ko": "filters check valves 单向阀 膜片式单向阀 CV-BV-48-PP-N 126009 126028 382-12-00032 382-12-00053 HAX14-PP0 4.8 mm PP",
+      "ru": "filters check valves 单向阀 膜片式单向阀 CV-BV-48-PP-N 126009 126028 382-12-00032 382-12-00053 HAX14-PP0 4.8 mm PP"
+    }
+  },
+  {
+    "productId": "126011",
+    "productCode": "126011",
+    "productCodes": [
+      "126011"
+    ],
+    "internalCodes": [
+      "382-12-00034"
+    ],
+    "sourceType": "filter-check-valve-selection",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "check-valves",
+    "productTypeName": "单向阀",
+    "seriesId": "cv",
+    "seriesCode": "CV",
+    "seriesName": "膜片式单向阀",
+    "model": "CV-BV-64-PP-N",
+    "foreachModel": "CV-BV-64-PP-N",
+    "hasStandardModel": true,
+    "competitorModels": [
+      "HAX24-PP0"
+    ],
+    "cardTitle": {
+      "zh": "CV-BV-64-PP-N",
+      "en": "CV-BV-64-PP-N",
+      "es": "CV-BV-64-PP-N",
+      "fr": "CV-BV-64-PP-N",
+      "ko": "CV-BV-64-PP-N",
+      "ru": "CV-BV-64-PP-N"
+    },
+    "cardSubtitle": {
+      "zh": "膜片式单向阀\n膜片材质为 FKM，壳体材质为 PP\n适配 6.4 mm 接管内径",
+      "en": "Diaphragm Check Valve\nDiaphragm Material: FKM; Housing Material: PP\nFits 6.4 mm ID tubing",
+      "es": "Diaphragm Check Valve\nFKM diaphragm · Tube ID 6.4 mm\nPP body · 本色",
+      "fr": "Diaphragm Check Valve\nFKM diaphragm · Tube ID 6.4 mm\nPP body · 本色",
+      "ko": "Diaphragm Check Valve\nFKM diaphragm · Tube ID 6.4 mm\nPP body · 本色",
+      "ru": "Diaphragm Check Valve\nFKM diaphragm · Tube ID 6.4 mm\nPP body · 本色"
+    },
+    "filters": {
+      "filter01": "单向阀",
+      "filter02": "",
+      "filter03": "",
+      "filter04": "",
+      "filter05": "膜片式",
+      "filter06": "FKM",
+      "filter07": "6.4 mm",
+      "filter08": "PP",
+      "filter09": "本色"
+    },
+    "structureCode": "BV",
+    "specificationCode": "BV",
+    "portSize": "6.4 mm",
+    "materialCode": "PP",
+    "colorCode": "N",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "detailSlug": "cv-bv-64-pp-n",
+    "detailHref": "/products/fittings/check-valves/cv-bv-64-pp-n",
+    "href": "/products/fittings/check-valves/cv-bv-64-pp-n",
+    "selectionHref": "/products/fittings/filters",
+    "needDrawing": true,
+    "needModel3d": false,
+    "status": "active",
+    "sourceIndex": 27,
+    "sortOrder": 470021,
+    "searchKeywords": {
+      "zh": "过滤器与单向阀 单向阀 膜片式单向阀 6.4 mm PP CV-BV-64-PP-N 126011 过滤器与单向阀 单向阀 膜片式单向阀 CV-BV-64-PP-N 126011 382-12-00034 HAX24-PP0 6.4 mm PP 膜片式单向阀 标准型 6.4 mm 6.4 mm PP 本色 单向阀 膜片式 FKM 6.4 mm PP 本色",
+      "en": "filters check valves check valve 膜片式单向阀 6.4 mm PP CV-BV-64-PP-N 126011 filters check valves 单向阀 膜片式单向阀 CV-BV-64-PP-N 126011 382-12-00034 HAX24-PP0 6.4 mm PP Diaphragm Check Valve Standard 6.4 mm 6.4 mm PP Natural 单向阀 膜片式 FKM 6.4 mm PP 本色",
+      "es": "filters check valves 单向阀 膜片式单向阀 CV-BV-64-PP-N 126011 382-12-00034 HAX24-PP0 6.4 mm PP",
+      "fr": "filters check valves 单向阀 膜片式单向阀 CV-BV-64-PP-N 126011 382-12-00034 HAX24-PP0 6.4 mm PP",
+      "ko": "filters check valves 单向阀 膜片式单向阀 CV-BV-64-PP-N 126011 382-12-00034 HAX24-PP0 6.4 mm PP",
+      "ru": "filters check valves 单向阀 膜片式单向阀 CV-BV-64-PP-N 126011 382-12-00034 HAX24-PP0 6.4 mm PP"
+    }
+  },
+  {
+    "productId": "126012",
+    "productCode": "126012",
+    "productCodes": [
+      "126012"
+    ],
+    "internalCodes": [
+      "382-12-00035"
+    ],
+    "sourceType": "filter-check-valve-selection",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "check-valves",
+    "productTypeName": "单向阀",
+    "seriesId": "cv",
+    "seriesCode": "CV",
+    "seriesName": "膜片式单向阀",
+    "model": "CV-BE-64-PP-N",
+    "foreachModel": "CV-BE-64-PP-N",
+    "hasStandardModel": true,
+    "competitorModels": [],
+    "cardTitle": {
+      "zh": "CV-BE-64-PP-N",
+      "en": "CV-BE-64-PP-N",
+      "es": "CV-BE-64-PP-N",
+      "fr": "CV-BE-64-PP-N",
+      "ko": "CV-BE-64-PP-N",
+      "ru": "CV-BE-64-PP-N"
+    },
+    "cardSubtitle": {
+      "zh": "膜片式单向阀\n膜片材质为 EPDM，壳体材质为 PP\n适配 6.4 mm 接管内径",
+      "en": "Diaphragm Check Valve\nDiaphragm Material: EPDM; Housing Material: PP\nFits 6.4 mm ID tubing",
+      "es": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 6.4 mm\nPP body · 本色",
+      "fr": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 6.4 mm\nPP body · 本色",
+      "ko": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 6.4 mm\nPP body · 本色",
+      "ru": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 6.4 mm\nPP body · 本色"
+    },
+    "filters": {
+      "filter01": "单向阀",
+      "filter02": "",
+      "filter03": "",
+      "filter04": "",
+      "filter05": "膜片式",
+      "filter06": "EPDM",
+      "filter07": "6.4 mm",
+      "filter08": "PP",
+      "filter09": "本色"
+    },
+    "structureCode": "BE",
+    "specificationCode": "BE",
+    "portSize": "6.4 mm",
+    "materialCode": "PP",
+    "colorCode": "N",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "detailSlug": "cv-be-64-pp-n",
+    "detailHref": "/products/fittings/check-valves/cv-be-64-pp-n",
+    "href": "/products/fittings/check-valves/cv-be-64-pp-n",
+    "selectionHref": "/products/fittings/filters",
+    "needDrawing": true,
+    "needModel3d": false,
+    "status": "active",
+    "sourceIndex": 28,
+    "sortOrder": 470022,
+    "searchKeywords": {
+      "zh": "过滤器与单向阀 单向阀 膜片式单向阀 6.4 mm PP CV-BE-64-PP-N 126012 过滤器与单向阀 单向阀 膜片式单向阀 CV-BE-64-PP-N 126012 382-12-00035 6.4 mm PP 膜片式单向阀 标准型 6.4 mm 6.4 mm PP 本色 单向阀 膜片式 EPDM 6.4 mm PP 本色",
+      "en": "filters check valves check valve 膜片式单向阀 6.4 mm PP CV-BE-64-PP-N 126012 filters check valves 单向阀 膜片式单向阀 CV-BE-64-PP-N 126012 382-12-00035 6.4 mm PP Diaphragm Check Valve Standard 6.4 mm 6.4 mm PP Natural 单向阀 膜片式 EPDM 6.4 mm PP 本色",
+      "es": "filters check valves 单向阀 膜片式单向阀 CV-BE-64-PP-N 126012 382-12-00035 6.4 mm PP",
+      "fr": "filters check valves 单向阀 膜片式单向阀 CV-BE-64-PP-N 126012 382-12-00035 6.4 mm PP",
+      "ko": "filters check valves 单向阀 膜片式单向阀 CV-BE-64-PP-N 126012 382-12-00035 6.4 mm PP",
+      "ru": "filters check valves 单向阀 膜片式单向阀 CV-BE-64-PP-N 126012 382-12-00035 6.4 mm PP"
+    }
+  },
+  {
+    "productId": "126013",
+    "productCode": "126013",
+    "productCodes": [
+      "126013"
+    ],
+    "internalCodes": [
+      "382-12-00036"
+    ],
+    "sourceType": "filter-check-valve-selection",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "check-valves",
+    "productTypeName": "单向阀",
+    "seriesId": "cv",
+    "seriesCode": "CV",
+    "seriesName": "膜片式单向阀",
+    "model": "CV-BV-79-PP-N",
+    "foreachModel": "CV-BV-79-PP-N",
+    "hasStandardModel": true,
+    "competitorModels": [],
+    "cardTitle": {
+      "zh": "CV-BV-79-PP-N",
+      "en": "CV-BV-79-PP-N",
+      "es": "CV-BV-79-PP-N",
+      "fr": "CV-BV-79-PP-N",
+      "ko": "CV-BV-79-PP-N",
+      "ru": "CV-BV-79-PP-N"
+    },
+    "cardSubtitle": {
+      "zh": "膜片式单向阀\n膜片材质为 FKM，壳体材质为 PP\n适配 7.9 mm 接管内径",
+      "en": "Diaphragm Check Valve\nDiaphragm Material: FKM; Housing Material: PP\nFits 7.9 mm ID tubing",
+      "es": "Diaphragm Check Valve\nFKM diaphragm · Tube ID 7.9 mm\nPP body · 本色",
+      "fr": "Diaphragm Check Valve\nFKM diaphragm · Tube ID 7.9 mm\nPP body · 本色",
+      "ko": "Diaphragm Check Valve\nFKM diaphragm · Tube ID 7.9 mm\nPP body · 本色",
+      "ru": "Diaphragm Check Valve\nFKM diaphragm · Tube ID 7.9 mm\nPP body · 本色"
+    },
+    "filters": {
+      "filter01": "单向阀",
+      "filter02": "",
+      "filter03": "",
+      "filter04": "",
+      "filter05": "膜片式",
+      "filter06": "FKM",
+      "filter07": "7.9 mm",
+      "filter08": "PP",
+      "filter09": "本色"
+    },
+    "structureCode": "BV",
+    "specificationCode": "BV",
+    "portSize": "7.9 mm",
+    "materialCode": "PP",
+    "colorCode": "N",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "detailSlug": "cv-bv-79-pp-n",
+    "detailHref": "/products/fittings/check-valves/cv-bv-79-pp-n",
+    "href": "/products/fittings/check-valves/cv-bv-79-pp-n",
+    "selectionHref": "/products/fittings/filters",
+    "needDrawing": true,
+    "needModel3d": false,
+    "status": "active",
+    "sourceIndex": 29,
+    "sortOrder": 470023,
+    "searchKeywords": {
+      "zh": "过滤器与单向阀 单向阀 膜片式单向阀 7.9 mm PP CV-BV-79-PP-N 126013 过滤器与单向阀 单向阀 膜片式单向阀 CV-BV-79-PP-N 126013 382-12-00036 7.9 mm PP 膜片式单向阀 标准型 7.9 mm 7.9 mm PP 本色 单向阀 膜片式 FKM 7.9 mm PP 本色",
+      "en": "filters check valves check valve 膜片式单向阀 7.9 mm PP CV-BV-79-PP-N 126013 filters check valves 单向阀 膜片式单向阀 CV-BV-79-PP-N 126013 382-12-00036 7.9 mm PP Diaphragm Check Valve Standard 7.9 mm 7.9 mm PP Natural 单向阀 膜片式 FKM 7.9 mm PP 本色",
+      "es": "filters check valves 单向阀 膜片式单向阀 CV-BV-79-PP-N 126013 382-12-00036 7.9 mm PP",
+      "fr": "filters check valves 单向阀 膜片式单向阀 CV-BV-79-PP-N 126013 382-12-00036 7.9 mm PP",
+      "ko": "filters check valves 单向阀 膜片式单向阀 CV-BV-79-PP-N 126013 382-12-00036 7.9 mm PP",
+      "ru": "filters check valves 单向阀 膜片式单向阀 CV-BV-79-PP-N 126013 382-12-00036 7.9 mm PP"
+    }
+  },
+  {
+    "productId": "126014",
+    "productCode": "126014",
+    "productCodes": [
+      "126014"
+    ],
+    "internalCodes": [
+      "382-12-00037"
+    ],
+    "sourceType": "filter-check-valve-selection",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "check-valves",
+    "productTypeName": "单向阀",
+    "seriesId": "cv",
+    "seriesCode": "CV",
+    "seriesName": "膜片式单向阀",
+    "model": "CV-BE-79-PP-N",
+    "foreachModel": "CV-BE-79-PP-N",
+    "hasStandardModel": true,
+    "competitorModels": [],
+    "cardTitle": {
+      "zh": "CV-BE-79-PP-N",
+      "en": "CV-BE-79-PP-N",
+      "es": "CV-BE-79-PP-N",
+      "fr": "CV-BE-79-PP-N",
+      "ko": "CV-BE-79-PP-N",
+      "ru": "CV-BE-79-PP-N"
+    },
+    "cardSubtitle": {
+      "zh": "膜片式单向阀\n膜片材质为 EPDM，壳体材质为 PP\n适配 7.9 mm 接管内径",
+      "en": "Diaphragm Check Valve\nDiaphragm Material: EPDM; Housing Material: PP\nFits 7.9 mm ID tubing",
+      "es": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 7.9 mm\nPP body · 本色",
+      "fr": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 7.9 mm\nPP body · 本色",
+      "ko": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 7.9 mm\nPP body · 本色",
+      "ru": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 7.9 mm\nPP body · 本色"
+    },
+    "filters": {
+      "filter01": "单向阀",
+      "filter02": "",
+      "filter03": "",
+      "filter04": "",
+      "filter05": "膜片式",
+      "filter06": "EPDM",
+      "filter07": "7.9 mm",
+      "filter08": "PP",
+      "filter09": "本色"
+    },
+    "structureCode": "BE",
+    "specificationCode": "BE",
+    "portSize": "7.9 mm",
+    "materialCode": "PP",
+    "colorCode": "N",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "detailSlug": "cv-be-79-pp-n",
+    "detailHref": "/products/fittings/check-valves/cv-be-79-pp-n",
+    "href": "/products/fittings/check-valves/cv-be-79-pp-n",
+    "selectionHref": "/products/fittings/filters",
+    "needDrawing": true,
+    "needModel3d": false,
+    "status": "active",
+    "sourceIndex": 30,
+    "sortOrder": 470024,
+    "searchKeywords": {
+      "zh": "过滤器与单向阀 单向阀 膜片式单向阀 7.9 mm PP CV-BE-79-PP-N 126014 过滤器与单向阀 单向阀 膜片式单向阀 CV-BE-79-PP-N 126014 382-12-00037 7.9 mm PP 膜片式单向阀 标准型 7.9 mm 7.9 mm PP 本色 单向阀 膜片式 EPDM 7.9 mm PP 本色",
+      "en": "filters check valves check valve 膜片式单向阀 7.9 mm PP CV-BE-79-PP-N 126014 filters check valves 单向阀 膜片式单向阀 CV-BE-79-PP-N 126014 382-12-00037 7.9 mm PP Diaphragm Check Valve Standard 7.9 mm 7.9 mm PP Natural 单向阀 膜片式 EPDM 7.9 mm PP 本色",
+      "es": "filters check valves 单向阀 膜片式单向阀 CV-BE-79-PP-N 126014 382-12-00037 7.9 mm PP",
+      "fr": "filters check valves 单向阀 膜片式单向阀 CV-BE-79-PP-N 126014 382-12-00037 7.9 mm PP",
+      "ko": "filters check valves 单向阀 膜片式单向阀 CV-BE-79-PP-N 126014 382-12-00037 7.9 mm PP",
+      "ru": "filters check valves 单向阀 膜片式单向阀 CV-BE-79-PP-N 126014 382-12-00037 7.9 mm PP"
+    }
+  },
+  {
+    "productId": "126016",
+    "productCode": "126016",
+    "productCodes": [
+      "126016"
+    ],
+    "internalCodes": [
+      "382-12-00039"
+    ],
+    "sourceType": "filter-check-valve-selection",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "check-valves",
+    "productTypeName": "单向阀",
+    "seriesId": "cv",
+    "seriesCode": "CV",
+    "seriesName": "膜片式单向阀",
+    "model": "CV-BE-95-PP-N",
+    "foreachModel": "CV-BE-95-PP-N",
+    "hasStandardModel": true,
+    "competitorModels": [],
+    "cardTitle": {
+      "zh": "CV-BE-95-PP-N",
+      "en": "CV-BE-95-PP-N",
+      "es": "CV-BE-95-PP-N",
+      "fr": "CV-BE-95-PP-N",
+      "ko": "CV-BE-95-PP-N",
+      "ru": "CV-BE-95-PP-N"
+    },
+    "cardSubtitle": {
+      "zh": "膜片式单向阀\n膜片材质为 EPDM，壳体材质为 PP\n适配 9.5 mm 接管内径",
+      "en": "Diaphragm Check Valve\nDiaphragm Material: EPDM; Housing Material: PP\nFits 9.5 mm ID tubing",
+      "es": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 9.5 mm\nPP body · 本色",
+      "fr": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 9.5 mm\nPP body · 本色",
+      "ko": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 9.5 mm\nPP body · 本色",
+      "ru": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 9.5 mm\nPP body · 本色"
+    },
+    "filters": {
+      "filter01": "单向阀",
+      "filter02": "",
+      "filter03": "",
+      "filter04": "",
+      "filter05": "膜片式",
+      "filter06": "EPDM",
+      "filter07": "9.5 mm",
+      "filter08": "PP",
+      "filter09": "本色"
+    },
+    "structureCode": "BE",
+    "specificationCode": "BE",
+    "portSize": "9.5 mm",
+    "materialCode": "PP",
+    "colorCode": "N",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "detailSlug": "cv-be-95-pp-n",
+    "detailHref": "/products/fittings/check-valves/cv-be-95-pp-n",
+    "href": "/products/fittings/check-valves/cv-be-95-pp-n",
+    "selectionHref": "/products/fittings/filters",
+    "needDrawing": true,
+    "needModel3d": false,
+    "status": "active",
+    "sourceIndex": 31,
+    "sortOrder": 470025,
+    "searchKeywords": {
+      "zh": "过滤器与单向阀 单向阀 膜片式单向阀 9.5 mm PP CV-BE-95-PP-N 126016 过滤器与单向阀 单向阀 膜片式单向阀 CV-BE-95-PP-N 126016 382-12-00039 9.5 mm PP 膜片式单向阀 标准型 9.5 mm 9.5 mm PP 本色 单向阀 膜片式 EPDM 9.5 mm PP 本色",
+      "en": "filters check valves check valve 膜片式单向阀 9.5 mm PP CV-BE-95-PP-N 126016 filters check valves 单向阀 膜片式单向阀 CV-BE-95-PP-N 126016 382-12-00039 9.5 mm PP Diaphragm Check Valve Standard 9.5 mm 9.5 mm PP Natural 单向阀 膜片式 EPDM 9.5 mm PP 本色",
+      "es": "filters check valves 单向阀 膜片式单向阀 CV-BE-95-PP-N 126016 382-12-00039 9.5 mm PP",
+      "fr": "filters check valves 单向阀 膜片式单向阀 CV-BE-95-PP-N 126016 382-12-00039 9.5 mm PP",
+      "ko": "filters check valves 单向阀 膜片式单向阀 CV-BE-95-PP-N 126016 382-12-00039 9.5 mm PP",
+      "ru": "filters check valves 单向阀 膜片式单向阀 CV-BE-95-PP-N 126016 382-12-00039 9.5 mm PP"
+    }
+  },
+  {
+    "productId": "126025",
+    "productCode": "126025",
+    "productCodes": [
+      "126025"
+    ],
+    "internalCodes": [
+      "382-12-00046"
+    ],
+    "sourceType": "filter-check-valve-selection",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "check-valves",
+    "productTypeName": "单向阀",
+    "seriesId": "cv",
+    "seriesCode": "CV",
+    "seriesName": "膜片式单向阀",
+    "model": "CV-BF-16-PV-N",
+    "foreachModel": "CV-BF-16-PV-N",
+    "hasStandardModel": true,
+    "competitorModels": [],
+    "cardTitle": {
+      "zh": "CV-BF-16-PV-N",
+      "en": "CV-BF-16-PV-N",
+      "es": "CV-BF-16-PV-N",
+      "fr": "CV-BF-16-PV-N",
+      "ko": "CV-BF-16-PV-N",
+      "ru": "CV-BF-16-PV-N"
+    },
+    "cardSubtitle": {
+      "zh": "膜片式单向阀\n膜片材质为 FFKM，壳体材质为 PVDF\n适配 1.6 mm 接管内径",
+      "en": "Diaphragm Check Valve\nDiaphragm Material: FFKM; Housing Material: PVDF\nFits 1.6 mm ID tubing",
+      "es": "Diaphragm Check Valve\nFFKM diaphragm · Tube ID 1.6 mm\nPVDF body · 本色",
+      "fr": "Diaphragm Check Valve\nFFKM diaphragm · Tube ID 1.6 mm\nPVDF body · 本色",
+      "ko": "Diaphragm Check Valve\nFFKM diaphragm · Tube ID 1.6 mm\nPVDF body · 本色",
+      "ru": "Diaphragm Check Valve\nFFKM diaphragm · Tube ID 1.6 mm\nPVDF body · 本色"
+    },
+    "filters": {
+      "filter01": "单向阀",
+      "filter02": "",
+      "filter03": "",
+      "filter04": "",
+      "filter05": "膜片式",
+      "filter06": "FFKM",
+      "filter07": "1.6 mm",
+      "filter08": "PVDF",
+      "filter09": "本色"
+    },
+    "structureCode": "BF",
+    "specificationCode": "BF",
+    "portSize": "1.6 mm",
+    "materialCode": "PV",
+    "colorCode": "N",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "detailSlug": "cv-bf-16-pv-n",
+    "detailHref": "/products/fittings/check-valves/cv-bf-16-pv-n",
+    "href": "/products/fittings/check-valves/cv-bf-16-pv-n",
+    "selectionHref": "/products/fittings/filters",
+    "needDrawing": false,
+    "needModel3d": false,
+    "status": "active",
+    "sourceIndex": 32,
+    "sortOrder": 470026,
+    "searchKeywords": {
+      "zh": "过滤器与单向阀 单向阀 膜片式单向阀 1.6 mm PVDF CV-BF-16-PV-N 126025 过滤器与单向阀 单向阀 膜片式单向阀 CV-BF-16-PV-N 126025 382-12-00046 1.6 mm PVDF 膜片式单向阀 标准型 1.6 mm 1.6 mm PVDF 本色 单向阀 膜片式 FFKM 1.6 mm PVDF 本色",
+      "en": "filters check valves check valve 膜片式单向阀 1.6 mm PVDF CV-BF-16-PV-N 126025 filters check valves 单向阀 膜片式单向阀 CV-BF-16-PV-N 126025 382-12-00046 1.6 mm PVDF Diaphragm Check Valve Standard 1.6 mm 1.6 mm PVDF Natural 单向阀 膜片式 FFKM 1.6 mm PVDF 本色",
+      "es": "filters check valves 单向阀 膜片式单向阀 CV-BF-16-PV-N 126025 382-12-00046 1.6 mm PVDF",
+      "fr": "filters check valves 单向阀 膜片式单向阀 CV-BF-16-PV-N 126025 382-12-00046 1.6 mm PVDF",
+      "ko": "filters check valves 单向阀 膜片式单向阀 CV-BF-16-PV-N 126025 382-12-00046 1.6 mm PVDF",
+      "ru": "filters check valves 单向阀 膜片式单向阀 CV-BF-16-PV-N 126025 382-12-00046 1.6 mm PVDF"
+    }
+  },
+  {
+    "productId": "126026",
+    "productCode": "126026",
+    "productCodes": [
+      "126026"
+    ],
+    "internalCodes": [
+      "382-12-00051"
+    ],
+    "sourceType": "filter-check-valve-selection",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "check-valves",
+    "productTypeName": "单向阀",
+    "seriesId": "cv",
+    "seriesCode": "CV",
+    "seriesName": "鸭嘴式单向阀",
+    "model": "CV-DE-24-PV-N",
+    "foreachModel": "CV-DE-24-PV-N",
+    "hasStandardModel": true,
+    "competitorModels": [],
+    "cardTitle": {
+      "zh": "CV-DE-24-PV-N",
+      "en": "CV-DE-24-PV-N",
+      "es": "CV-DE-24-PV-N",
+      "fr": "CV-DE-24-PV-N",
+      "ko": "CV-DE-24-PV-N",
+      "ru": "CV-DE-24-PV-N"
+    },
+    "cardSubtitle": {
+      "zh": "鸭嘴式单向阀\n密封件材质为 EPDM，壳体材质为 PVDF\n适配 2.4 mm 接管内径",
+      "en": "Duckbill Check Valve\nSeal Material: EPDM; Housing Material: PVDF\nFits 2.4 mm ID tubing",
+      "es": "Duckbill Check Valve\nEPDM diaphragm · Tube ID 2.4 mm\nPVDF body · 本色",
+      "fr": "Duckbill Check Valve\nEPDM diaphragm · Tube ID 2.4 mm\nPVDF body · 本色",
+      "ko": "Duckbill Check Valve\nEPDM diaphragm · Tube ID 2.4 mm\nPVDF body · 本色",
+      "ru": "Duckbill Check Valve\nEPDM diaphragm · Tube ID 2.4 mm\nPVDF body · 本色"
+    },
+    "filters": {
+      "filter01": "单向阀",
+      "filter02": "",
+      "filter03": "",
+      "filter04": "",
+      "filter05": "鸭嘴式",
+      "filter06": "EPDM",
+      "filter07": "2.4 mm",
+      "filter08": "PVDF",
+      "filter09": "本色"
+    },
+    "structureCode": "DE",
+    "specificationCode": "DE",
+    "portSize": "2.4 mm",
+    "materialCode": "PV",
+    "colorCode": "N",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "detailSlug": "cv-de-24-pv-n",
+    "detailHref": "/products/fittings/check-valves/cv-de-24-pv-n",
+    "href": "/products/fittings/check-valves/cv-de-24-pv-n",
+    "selectionHref": "/products/fittings/filters",
+    "needDrawing": false,
+    "needModel3d": false,
+    "status": "active",
+    "sourceIndex": 33,
+    "sortOrder": 470027,
+    "searchKeywords": {
+      "zh": "过滤器与单向阀 单向阀 鸭嘴式单向阀 2.4 mm PVDF CV-DE-24-PV-N 126026 过滤器与单向阀 单向阀 鸭嘴式单向阀 CV-DE-24-PV-N 126026 382-12-00051 2.4 mm PVDF 鸭嘴式单向阀 标准型 2.4 mm 2.4 mm PVDF 本色 单向阀 鸭嘴式 EPDM 2.4 mm PVDF 本色",
+      "en": "filters check valves check valve 鸭嘴式单向阀 2.4 mm PVDF CV-DE-24-PV-N 126026 filters check valves 单向阀 鸭嘴式单向阀 CV-DE-24-PV-N 126026 382-12-00051 2.4 mm PVDF Duckbill Check Valve Standard 2.4 mm 2.4 mm PVDF Natural 单向阀 鸭嘴式 EPDM 2.4 mm PVDF 本色",
+      "es": "filters check valves 单向阀 鸭嘴式单向阀 CV-DE-24-PV-N 126026 382-12-00051 2.4 mm PVDF",
+      "fr": "filters check valves 单向阀 鸭嘴式单向阀 CV-DE-24-PV-N 126026 382-12-00051 2.4 mm PVDF",
+      "ko": "filters check valves 单向阀 鸭嘴式单向阀 CV-DE-24-PV-N 126026 382-12-00051 2.4 mm PVDF",
+      "ru": "filters check valves 单向阀 鸭嘴式单向阀 CV-DE-24-PV-N 126026 382-12-00051 2.4 mm PVDF"
+    }
+  },
+  {
+    "productId": "126027",
+    "productCode": "126027",
+    "productCodes": [
+      "126027"
+    ],
+    "internalCodes": [
+      "382-12-00052"
+    ],
+    "sourceType": "filter-check-valve-selection",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "check-valves",
+    "productTypeName": "单向阀",
+    "seriesId": "cv",
+    "seriesCode": "CV",
+    "seriesName": "鸭嘴式单向阀",
+    "model": "CV-DE-32-PV-N",
+    "foreachModel": "CV-DE-32-PV-N",
+    "hasStandardModel": true,
+    "competitorModels": [],
+    "cardTitle": {
+      "zh": "CV-DE-32-PV-N",
+      "en": "CV-DE-32-PV-N",
+      "es": "CV-DE-32-PV-N",
+      "fr": "CV-DE-32-PV-N",
+      "ko": "CV-DE-32-PV-N",
+      "ru": "CV-DE-32-PV-N"
+    },
+    "cardSubtitle": {
+      "zh": "鸭嘴式单向阀\n密封件材质为 EPDM，壳体材质为 PVDF\n适配 3.2 mm 接管内径",
+      "en": "Duckbill Check Valve\nSeal Material: EPDM; Housing Material: PVDF\nFits 3.2 mm ID tubing",
+      "es": "Duckbill Check Valve\nEPDM diaphragm · Tube ID 3.2 mm\nPVDF body · 本色",
+      "fr": "Duckbill Check Valve\nEPDM diaphragm · Tube ID 3.2 mm\nPVDF body · 本色",
+      "ko": "Duckbill Check Valve\nEPDM diaphragm · Tube ID 3.2 mm\nPVDF body · 本色",
+      "ru": "Duckbill Check Valve\nEPDM diaphragm · Tube ID 3.2 mm\nPVDF body · 本色"
+    },
+    "filters": {
+      "filter01": "单向阀",
+      "filter02": "",
+      "filter03": "",
+      "filter04": "",
+      "filter05": "鸭嘴式",
+      "filter06": "EPDM",
+      "filter07": "3.2 mm",
+      "filter08": "PVDF",
+      "filter09": "本色"
+    },
+    "structureCode": "DE",
+    "specificationCode": "DE",
+    "portSize": "3.2 mm",
+    "materialCode": "PV",
+    "colorCode": "N",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "detailSlug": "cv-de-32-pv-n",
+    "detailHref": "/products/fittings/check-valves/cv-de-32-pv-n",
+    "href": "/products/fittings/check-valves/cv-de-32-pv-n",
+    "selectionHref": "/products/fittings/filters",
+    "needDrawing": true,
+    "needModel3d": false,
+    "status": "active",
+    "sourceIndex": 34,
+    "sortOrder": 470028,
+    "searchKeywords": {
+      "zh": "过滤器与单向阀 单向阀 鸭嘴式单向阀 3.2 mm PVDF CV-DE-32-PV-N 126027 过滤器与单向阀 单向阀 鸭嘴式单向阀 CV-DE-32-PV-N 126027 382-12-00052 3.2 mm PVDF 鸭嘴式单向阀 标准型 3.2 mm 3.2 mm PVDF 本色 单向阀 鸭嘴式 EPDM 3.2 mm PVDF 本色",
+      "en": "filters check valves check valve 鸭嘴式单向阀 3.2 mm PVDF CV-DE-32-PV-N 126027 filters check valves 单向阀 鸭嘴式单向阀 CV-DE-32-PV-N 126027 382-12-00052 3.2 mm PVDF Duckbill Check Valve Standard 3.2 mm 3.2 mm PVDF Natural 单向阀 鸭嘴式 EPDM 3.2 mm PVDF 本色",
+      "es": "filters check valves 单向阀 鸭嘴式单向阀 CV-DE-32-PV-N 126027 382-12-00052 3.2 mm PVDF",
+      "fr": "filters check valves 单向阀 鸭嘴式单向阀 CV-DE-32-PV-N 126027 382-12-00052 3.2 mm PVDF",
+      "ko": "filters check valves 单向阀 鸭嘴式单向阀 CV-DE-32-PV-N 126027 382-12-00052 3.2 mm PVDF",
+      "ru": "filters check valves 单向阀 鸭嘴式单向阀 CV-DE-32-PV-N 126027 382-12-00052 3.2 mm PVDF"
+    }
+  },
+  {
+    "productId": "129001",
+    "productCode": "129001",
+    "productCodes": [
+      "129001"
+    ],
+    "internalCodes": [
+      "443-02-00281"
+    ],
+    "sourceType": "filter-check-valve-selection",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "check-valves",
+    "productTypeName": "单向阀",
+    "seriesId": "cv",
+    "seriesCode": "CV",
+    "seriesName": "膜片式单向阀",
+    "model": "CV-BE-32-PP-N",
+    "foreachModel": "CV-BE-32-PP-N",
+    "hasStandardModel": true,
+    "competitorModels": [],
+    "cardTitle": {
+      "zh": "CV-BE-32-PP-N",
+      "en": "CV-BE-32-PP-N",
+      "es": "CV-BE-32-PP-N",
+      "fr": "CV-BE-32-PP-N",
+      "ko": "CV-BE-32-PP-N",
+      "ru": "CV-BE-32-PP-N"
+    },
+    "cardSubtitle": {
+      "zh": "膜片式单向阀\n膜片材质为 EPDM，壳体材质为 PP\n适配 3.2 mm 接管内径",
+      "en": "Diaphragm Check Valve\nDiaphragm Material: EPDM; Housing Material: PP\nFits 3.2 mm ID tubing",
+      "es": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 3.2 mm\nPP body · 本色",
+      "fr": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 3.2 mm\nPP body · 本色",
+      "ko": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 3.2 mm\nPP body · 本色",
+      "ru": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 3.2 mm\nPP body · 本色"
+    },
+    "filters": {
+      "filter01": "单向阀",
+      "filter02": "",
+      "filter03": "",
+      "filter04": "",
+      "filter05": "膜片式",
+      "filter06": "EPDM",
+      "filter07": "3.2 mm",
+      "filter08": "PP",
+      "filter09": "本色"
+    },
+    "structureCode": "BE",
+    "specificationCode": "BE",
+    "portSize": "3.2 mm",
+    "materialCode": "PP",
+    "colorCode": "N",
+    "imageCard": "/images/products/fittings/check-valves/products/cv-be-32-pp-n-main.jpg",
+    "detailSlug": "cv-be-32-pp-n",
+    "detailHref": "/products/fittings/check-valves/cv-be-32-pp-n",
+    "href": "/products/fittings/check-valves/cv-be-32-pp-n",
+    "selectionHref": "/products/fittings/filters",
+    "needDrawing": true,
+    "needModel3d": true,
+    "status": "active",
+    "sourceIndex": 36,
+    "sortOrder": 470029,
+    "searchKeywords": {
+      "zh": "过滤器与单向阀 单向阀 膜片式单向阀 3.2 mm PP CV-BE-32-PP-N 129001 过滤器与单向阀 单向阀 膜片式单向阀 CV-BE-32-PP-N 129001 443-02-00281 3.2 mm PP 膜片式单向阀 标准型 3.2 mm 3.2 mm PP 本色 单向阀 膜片式 EPDM 3.2 mm PP 本色",
+      "en": "filters check valves check valve 膜片式单向阀 3.2 mm PP CV-BE-32-PP-N 129001 filters check valves 单向阀 膜片式单向阀 CV-BE-32-PP-N 129001 443-02-00281 3.2 mm PP Diaphragm Check Valve Standard 3.2 mm 3.2 mm PP Natural 单向阀 膜片式 EPDM 3.2 mm PP 本色",
+      "es": "filters check valves 单向阀 膜片式单向阀 CV-BE-32-PP-N 129001 443-02-00281 3.2 mm PP",
+      "fr": "filters check valves 单向阀 膜片式单向阀 CV-BE-32-PP-N 129001 443-02-00281 3.2 mm PP",
+      "ko": "filters check valves 单向阀 膜片式单向阀 CV-BE-32-PP-N 129001 443-02-00281 3.2 mm PP",
+      "ru": "filters check valves 单向阀 膜片式单向阀 CV-BE-32-PP-N 129001 443-02-00281 3.2 mm PP"
+    }
+  },
+  {
+    "productId": "129002",
+    "productCode": "129002",
+    "productCodes": [
+      "129002"
+    ],
+    "internalCodes": [
+      "443-02-00289"
+    ],
+    "sourceType": "filter-check-valve-selection",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "check-valves",
+    "productTypeName": "单向阀",
+    "seriesId": "cv",
+    "seriesCode": "CV",
+    "seriesName": "膜片式单向阀",
+    "model": "CV-BE-32-PV-N",
+    "foreachModel": "CV-BE-32-PV-N",
+    "hasStandardModel": true,
+    "competitorModels": [],
+    "cardTitle": {
+      "zh": "CV-BE-32-PV-N",
+      "en": "CV-BE-32-PV-N",
+      "es": "CV-BE-32-PV-N",
+      "fr": "CV-BE-32-PV-N",
+      "ko": "CV-BE-32-PV-N",
+      "ru": "CV-BE-32-PV-N"
+    },
+    "cardSubtitle": {
+      "zh": "膜片式单向阀\n膜片材质为 EPDM，壳体材质为 PVDF\n适配 3.2 mm 接管内径",
+      "en": "Diaphragm Check Valve\nDiaphragm Material: EPDM; Housing Material: PVDF\nFits 3.2 mm ID tubing",
+      "es": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 3.2 mm\nPVDF body · 本色",
+      "fr": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 3.2 mm\nPVDF body · 本色",
+      "ko": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 3.2 mm\nPVDF body · 本色",
+      "ru": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 3.2 mm\nPVDF body · 本色"
+    },
+    "filters": {
+      "filter01": "单向阀",
+      "filter02": "",
+      "filter03": "",
+      "filter04": "",
+      "filter05": "膜片式",
+      "filter06": "EPDM",
+      "filter07": "3.2 mm",
+      "filter08": "PVDF",
+      "filter09": "本色"
+    },
+    "structureCode": "BE",
+    "specificationCode": "BE",
+    "portSize": "3.2 mm",
+    "materialCode": "PV",
+    "colorCode": "N",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "detailSlug": "cv-be-32-pv-n",
+    "detailHref": "/products/fittings/check-valves/cv-be-32-pv-n",
+    "href": "/products/fittings/check-valves/cv-be-32-pv-n",
+    "selectionHref": "/products/fittings/filters",
+    "needDrawing": false,
+    "needModel3d": false,
+    "status": "active",
+    "sourceIndex": 37,
+    "sortOrder": 470030,
+    "searchKeywords": {
+      "zh": "过滤器与单向阀 单向阀 膜片式单向阀 3.2 mm PVDF CV-BE-32-PV-N 129002 过滤器与单向阀 单向阀 膜片式单向阀 CV-BE-32-PV-N 129002 443-02-00289 3.2 mm PVDF 膜片式单向阀 标准型 3.2 mm 3.2 mm PVDF 本色 单向阀 膜片式 EPDM 3.2 mm PVDF 本色",
+      "en": "filters check valves check valve 膜片式单向阀 3.2 mm PVDF CV-BE-32-PV-N 129002 filters check valves 单向阀 膜片式单向阀 CV-BE-32-PV-N 129002 443-02-00289 3.2 mm PVDF Diaphragm Check Valve Standard 3.2 mm 3.2 mm PVDF Natural 单向阀 膜片式 EPDM 3.2 mm PVDF 本色",
+      "es": "filters check valves 单向阀 膜片式单向阀 CV-BE-32-PV-N 129002 443-02-00289 3.2 mm PVDF",
+      "fr": "filters check valves 单向阀 膜片式单向阀 CV-BE-32-PV-N 129002 443-02-00289 3.2 mm PVDF",
+      "ko": "filters check valves 单向阀 膜片式单向阀 CV-BE-32-PV-N 129002 443-02-00289 3.2 mm PVDF",
+      "ru": "filters check valves 单向阀 膜片式单向阀 CV-BE-32-PV-N 129002 443-02-00289 3.2 mm PVDF"
+    }
+  },
+  {
+    "productId": "129003",
+    "productCode": "129003",
+    "productCodes": [
+      "129003"
+    ],
+    "internalCodes": [
+      "443-02-00494"
+    ],
+    "sourceType": "filter-check-valve-selection",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "check-valves",
+    "productTypeName": "单向阀",
+    "seriesId": "cv",
+    "seriesCode": "CV",
+    "seriesName": "膜片式单向阀",
+    "model": "CV-BF-32-PP-N",
+    "foreachModel": "CV-BF-32-PP-N",
+    "hasStandardModel": true,
+    "competitorModels": [],
+    "cardTitle": {
+      "zh": "CV-BF-32-PP-N",
+      "en": "CV-BF-32-PP-N",
+      "es": "CV-BF-32-PP-N",
+      "fr": "CV-BF-32-PP-N",
+      "ko": "CV-BF-32-PP-N",
+      "ru": "CV-BF-32-PP-N"
+    },
+    "cardSubtitle": {
+      "zh": "膜片式单向阀\n膜片材质为 FFKM，壳体材质为 PP\n适配 3.2 mm 接管内径",
+      "en": "Diaphragm Check Valve\nDiaphragm Material: FFKM; Housing Material: PP\nFits 3.2 mm ID tubing",
+      "es": "Diaphragm Check Valve\nFFKM diaphragm · Tube ID 3.2 mm\nPP body · 本色",
+      "fr": "Diaphragm Check Valve\nFFKM diaphragm · Tube ID 3.2 mm\nPP body · 本色",
+      "ko": "Diaphragm Check Valve\nFFKM diaphragm · Tube ID 3.2 mm\nPP body · 本色",
+      "ru": "Diaphragm Check Valve\nFFKM diaphragm · Tube ID 3.2 mm\nPP body · 本色"
+    },
+    "filters": {
+      "filter01": "单向阀",
+      "filter02": "",
+      "filter03": "",
+      "filter04": "",
+      "filter05": "膜片式",
+      "filter06": "FFKM",
+      "filter07": "3.2 mm",
+      "filter08": "PP",
+      "filter09": "本色"
+    },
+    "structureCode": "BF",
+    "specificationCode": "BF",
+    "portSize": "3.2 mm",
+    "materialCode": "PP",
+    "colorCode": "N",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "detailSlug": "cv-bf-32-pp-n",
+    "detailHref": "/products/fittings/check-valves/cv-bf-32-pp-n",
+    "href": "/products/fittings/check-valves/cv-bf-32-pp-n",
+    "selectionHref": "/products/fittings/filters",
+    "needDrawing": true,
+    "needModel3d": false,
+    "status": "active",
+    "sourceIndex": 38,
+    "sortOrder": 470031,
+    "searchKeywords": {
+      "zh": "过滤器与单向阀 单向阀 膜片式单向阀 3.2 mm PP CV-BF-32-PP-N 129003 过滤器与单向阀 单向阀 膜片式单向阀 CV-BF-32-PP-N 129003 443-02-00494 3.2 mm PP 膜片式单向阀 标准型 3.2 mm 3.2 mm PP 本色 单向阀 膜片式 FFKM 3.2 mm PP 本色",
+      "en": "filters check valves check valve 膜片式单向阀 3.2 mm PP CV-BF-32-PP-N 129003 filters check valves 单向阀 膜片式单向阀 CV-BF-32-PP-N 129003 443-02-00494 3.2 mm PP Diaphragm Check Valve Standard 3.2 mm 3.2 mm PP Natural 单向阀 膜片式 FFKM 3.2 mm PP 本色",
+      "es": "filters check valves 单向阀 膜片式单向阀 CV-BF-32-PP-N 129003 443-02-00494 3.2 mm PP",
+      "fr": "filters check valves 单向阀 膜片式单向阀 CV-BF-32-PP-N 129003 443-02-00494 3.2 mm PP",
+      "ko": "filters check valves 单向阀 膜片式单向阀 CV-BF-32-PP-N 129003 443-02-00494 3.2 mm PP",
+      "ru": "filters check valves 单向阀 膜片式单向阀 CV-BF-32-PP-N 129003 443-02-00494 3.2 mm PP"
+    }
+  },
+  {
+    "productId": "129004",
+    "productCode": "129004",
+    "productCodes": [
+      "129004"
+    ],
+    "internalCodes": [
+      "443-02-00694"
+    ],
+    "sourceType": "filter-check-valve-selection",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "check-valves",
+    "productTypeName": "单向阀",
+    "seriesId": "cv",
+    "seriesCode": "CV",
+    "seriesName": "膜片式单向阀",
+    "model": "CV-BE-24-PP-N",
+    "foreachModel": "CV-BE-24-PP-N",
+    "hasStandardModel": true,
+    "competitorModels": [],
+    "cardTitle": {
+      "zh": "CV-BE-24-PP-N",
+      "en": "CV-BE-24-PP-N",
+      "es": "CV-BE-24-PP-N",
+      "fr": "CV-BE-24-PP-N",
+      "ko": "CV-BE-24-PP-N",
+      "ru": "CV-BE-24-PP-N"
+    },
+    "cardSubtitle": {
+      "zh": "膜片式单向阀\n膜片材质为 EPDM，壳体材质为 PP\n适配 2.4 mm 接管内径",
+      "en": "Diaphragm Check Valve\nDiaphragm Material: EPDM; Housing Material: PP\nFits 2.4 mm ID tubing",
+      "es": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 2.4 mm\nPP body · 本色",
+      "fr": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 2.4 mm\nPP body · 本色",
+      "ko": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 2.4 mm\nPP body · 本色",
+      "ru": "Diaphragm Check Valve\nEPDM diaphragm · Tube ID 2.4 mm\nPP body · 本色"
+    },
+    "filters": {
+      "filter01": "单向阀",
+      "filter02": "",
+      "filter03": "",
+      "filter04": "",
+      "filter05": "膜片式",
+      "filter06": "EPDM",
+      "filter07": "2.4 mm",
+      "filter08": "PP",
+      "filter09": "本色"
+    },
+    "structureCode": "BE",
+    "specificationCode": "BE",
+    "portSize": "2.4 mm",
+    "materialCode": "PP",
+    "colorCode": "N",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "detailSlug": "cv-be-24-pp-n",
+    "detailHref": "/products/fittings/check-valves/cv-be-24-pp-n",
+    "href": "/products/fittings/check-valves/cv-be-24-pp-n",
+    "selectionHref": "/products/fittings/filters",
+    "needDrawing": true,
+    "needModel3d": true,
+    "status": "active",
+    "sourceIndex": 39,
+    "sortOrder": 470032,
+    "searchKeywords": {
+      "zh": "过滤器与单向阀 单向阀 膜片式单向阀 2.4 mm PP CV-BE-24-PP-N 129004 过滤器与单向阀 单向阀 膜片式单向阀 CV-BE-24-PP-N 129004 443-02-00694 2.4 mm PP 膜片式单向阀 标准型 2.4 mm 2.4 mm PP 本色 单向阀 膜片式 EPDM 2.4 mm PP 本色",
+      "en": "filters check valves check valve 膜片式单向阀 2.4 mm PP CV-BE-24-PP-N 129004 filters check valves 单向阀 膜片式单向阀 CV-BE-24-PP-N 129004 443-02-00694 2.4 mm PP Diaphragm Check Valve Standard 2.4 mm 2.4 mm PP Natural 单向阀 膜片式 EPDM 2.4 mm PP 本色",
+      "es": "filters check valves 单向阀 膜片式单向阀 CV-BE-24-PP-N 129004 443-02-00694 2.4 mm PP",
+      "fr": "filters check valves 单向阀 膜片式单向阀 CV-BE-24-PP-N 129004 443-02-00694 2.4 mm PP",
+      "ko": "filters check valves 单向阀 膜片式单向阀 CV-BE-24-PP-N 129004 443-02-00694 2.4 mm PP",
+      "ru": "filters check valves 单向阀 膜片式单向阀 CV-BE-24-PP-N 129004 443-02-00694 2.4 mm PP"
+    }
+  },
+  {
+    "productId": "129005",
+    "productCode": "129005",
+    "productCodes": [
+      "129005"
+    ],
+    "internalCodes": [
+      "443-02-00744"
+    ],
+    "sourceType": "filter-check-valve-selection",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "check-valves",
+    "productTypeName": "单向阀",
+    "seriesId": "cv",
+    "seriesCode": "CV",
+    "seriesName": "膜片式单向阀",
+    "model": "CV-BF-32-PP-B",
+    "foreachModel": "CV-BF-32-PP-B",
+    "hasStandardModel": true,
+    "competitorModels": [],
+    "cardTitle": {
+      "zh": "CV-BF-32-PP-B",
+      "en": "CV-BF-32-PP-B",
+      "es": "CV-BF-32-PP-B",
+      "fr": "CV-BF-32-PP-B",
+      "ko": "CV-BF-32-PP-B",
+      "ru": "CV-BF-32-PP-B"
+    },
+    "cardSubtitle": {
+      "zh": "膜片式单向阀\n膜片材质为 FFKM，壳体材质为 PP\n适配 3.2 mm 接管内径",
+      "en": "Diaphragm Check Valve\nDiaphragm Material: FFKM; Housing Material: PP\nFits 3.2 mm ID tubing",
+      "es": "Diaphragm Check Valve\nFFKM diaphragm · Tube ID 3.2 mm\nPP body · 黑色",
+      "fr": "Diaphragm Check Valve\nFFKM diaphragm · Tube ID 3.2 mm\nPP body · 黑色",
+      "ko": "Diaphragm Check Valve\nFFKM diaphragm · Tube ID 3.2 mm\nPP body · 黑色",
+      "ru": "Diaphragm Check Valve\nFFKM diaphragm · Tube ID 3.2 mm\nPP body · 黑色"
+    },
+    "filters": {
+      "filter01": "单向阀",
+      "filter02": "",
+      "filter03": "",
+      "filter04": "",
+      "filter05": "膜片式",
+      "filter06": "FFKM",
+      "filter07": "3.2 mm",
+      "filter08": "PP",
+      "filter09": "黑色"
+    },
+    "structureCode": "BF",
+    "specificationCode": "BF",
+    "portSize": "3.2 mm",
+    "materialCode": "PP",
+    "colorCode": "B",
+    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "detailSlug": "cv-bf-32-pp-b",
+    "detailHref": "/products/fittings/check-valves/cv-bf-32-pp-b",
+    "href": "/products/fittings/check-valves/cv-bf-32-pp-b",
+    "selectionHref": "/products/fittings/filters",
+    "needDrawing": false,
+    "needModel3d": false,
+    "status": "active",
+    "sourceIndex": 40,
+    "sortOrder": 470033,
+    "searchKeywords": {
+      "zh": "过滤器与单向阀 单向阀 膜片式单向阀 3.2 mm PP CV-BF-32-PP-B 129005 过滤器与单向阀 单向阀 膜片式单向阀 CV-BF-32-PP-B 129005 443-02-00744 3.2 mm PP 膜片式单向阀 标准型 3.2 mm 3.2 mm PP B色 单向阀 膜片式 FFKM 3.2 mm PP 黑色",
+      "en": "filters check valves check valve 膜片式单向阀 3.2 mm PP CV-BF-32-PP-B 129005 filters check valves 单向阀 膜片式单向阀 CV-BF-32-PP-B 129005 443-02-00744 3.2 mm PP Diaphragm Check Valve Standard 3.2 mm 3.2 mm PP B Color 单向阀 膜片式 FFKM 3.2 mm PP 黑色",
+      "es": "filters check valves 单向阀 膜片式单向阀 CV-BF-32-PP-B 129005 443-02-00744 3.2 mm PP",
+      "fr": "filters check valves 单向阀 膜片式单向阀 CV-BF-32-PP-B 129005 443-02-00744 3.2 mm PP",
+      "ko": "filters check valves 单向阀 膜片式单向阀 CV-BF-32-PP-B 129005 443-02-00744 3.2 mm PP",
+      "ru": "filters check valves 单向阀 膜片式单向阀 CV-BF-32-PP-B 129005 443-02-00744 3.2 mm PP"
+    }
+  }
+];
+
+export const filterCheckValveFilterLabels =
+[
+  {
+    "categoryId": "fittings",
+    "productTypeId": "filters",
+    "filterKey": "filter01",
+    "label": {
+      "zh": "产品类型",
+      "en": "Product Type",
+      "es": "Product Type",
+      "fr": "Product Type",
+      "ko": "Product Type",
+      "ru": "Product Type"
+    },
+    "inputType": "single",
+    "sortOrder": 10,
+    "visible": true
+  },
+  {
+    "categoryId": "fittings",
+    "productTypeId": "filters",
+    "filterKey": "filter02",
+    "label": {
+      "zh": "过滤器类型",
+      "en": "Filter Type",
+      "es": "Filter Type",
+      "fr": "Filter Type",
+      "ko": "Filter Type",
+      "ru": "Filter Type"
+    },
+    "inputType": "multiple",
+    "sortOrder": 20,
+    "visible": true
+  },
+  {
+    "categoryId": "fittings",
+    "productTypeId": "filters",
+    "filterKey": "filter03",
+    "label": {
+      "zh": "滤网材质",
+      "en": "Filter Media",
+      "es": "Filter Media",
+      "fr": "Filter Media",
+      "ko": "Filter Media",
+      "ru": "Filter Media"
+    },
+    "inputType": "multiple",
+    "sortOrder": 30,
+    "visible": true
+  },
+  {
+    "categoryId": "fittings",
+    "productTypeId": "filters",
+    "filterKey": "filter04",
+    "label": {
+      "zh": "过滤精度",
+      "en": "Filtration Rating",
+      "es": "Filtration Rating",
+      "fr": "Filtration Rating",
+      "ko": "Filtration Rating",
+      "ru": "Filtration Rating"
+    },
+    "inputType": "multiple",
+    "sortOrder": 40,
+    "visible": true
+  },
+  {
+    "categoryId": "fittings",
+    "productTypeId": "filters",
+    "filterKey": "filter05",
+    "label": {
+      "zh": "密封类型",
+      "en": "Seal Type",
+      "es": "Seal Type",
+      "fr": "Seal Type",
+      "ko": "Seal Type",
+      "ru": "Seal Type"
+    },
+    "inputType": "multiple",
+    "sortOrder": 50,
+    "visible": true
+  },
+  {
+    "categoryId": "fittings",
+    "productTypeId": "filters",
+    "filterKey": "filter06",
+    "label": {
+      "zh": "膜片材质",
+      "en": "Diaphragm Material",
+      "es": "Diaphragm Material",
+      "fr": "Diaphragm Material",
+      "ko": "Diaphragm Material",
+      "ru": "Diaphragm Material"
+    },
+    "inputType": "multiple",
+    "sortOrder": 60,
+    "visible": true
+  },
+  {
+    "categoryId": "fittings",
+    "productTypeId": "filters",
+    "filterKey": "filter07",
+    "label": {
+      "zh": "接管内径 / 螺纹类型",
+      "en": "Tube ID / Thread",
+      "es": "Tube ID / Thread",
+      "fr": "Tube ID / Thread",
+      "ko": "Tube ID / Thread",
+      "ru": "Tube ID / Thread"
+    },
+    "inputType": "multiple",
+    "sortOrder": 70,
+    "visible": true
+  },
+  {
+    "categoryId": "fittings",
+    "productTypeId": "filters",
+    "filterKey": "filter08",
+    "label": {
+      "zh": "材质",
+      "en": "Material",
+      "es": "Material",
+      "fr": "Material",
+      "ko": "Material",
+      "ru": "Material"
+    },
+    "inputType": "multiple",
+    "sortOrder": 80,
+    "visible": true
+  },
+  {
+    "categoryId": "fittings",
+    "productTypeId": "filters",
+    "filterKey": "filter09",
+    "label": {
+      "zh": "颜色",
+      "en": "Color",
+      "es": "Color",
+      "fr": "Color",
+      "ko": "Color",
+      "ru": "Color"
+    },
+    "inputType": "multiple",
+    "sortOrder": 90,
+    "visible": true
+  }
+];
+
+export const filterCheckValveTaxonomyItems =
+[
+  {
+    "type": "productType",
+    "id": "filters",
+    "label": {
+      "zh": "过滤器与单向阀",
+      "en": "Filters & Check Valves",
+      "es": "Filters & Check Valves",
+      "fr": "Filters & Check Valves",
+      "ko": "Filters & Check Valves",
+      "ru": "Filters & Check Valves"
+    },
+    "sortOrder": 470
+  }
+];

@@ -1,0 +1,55 @@
+﻿import type {
+  ProductSelectionProduct,
+  SelectionFilterKey,
+} from "@/data/products/selection/product-selection.types";
+
+export type ProductSelectionCategoryItem = {
+  id: string;
+  label: string;
+  description: string;
+  sortOrder: number;
+};
+
+export type ProductSelectionFilterOption = {
+  value: string;
+  label: string;
+};
+
+export type ProductSelectionFilterGroup = {
+  key: "productType" | SelectionFilterKey;
+  title: string;
+  inputType: "single" | "multiple";
+  options: ProductSelectionFilterOption[];
+  layout?: "one" | "two" | "three";
+};
+
+export type ProductSelectionSelectedTag = {
+  key: "productType" | SelectionFilterKey;
+  value: string;
+  label: string;
+};
+
+export type ProductSelectionProductItem = ProductSelectionProduct;
+
+export type ProductSelectionPageText = {
+  breadcrumbHome: string;
+  breadcrumbCurrent: string;
+  searchPlaceholder: string;
+  searchButton: string;
+  mobileCategoryPrefix: string;
+  productTypeLabel: string;
+  resultPrefix: string;
+  resultSuffix: string;
+  resetFilters: string;
+  submitRequirement: string;
+  detailButton: string;
+  addToList: string;
+  addedToList: string;
+  previousPage: string;
+  nextPage: string;
+  filterEmpty: string;
+  emptyTitle: string;
+  emptyDescription: string;
+};
+
+

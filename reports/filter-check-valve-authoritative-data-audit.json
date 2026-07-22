@@ -1,0 +1,1551 @@
+{
+  "generatedAt": "2026-07-13T00:05:18.979Z",
+  "workbookPath": "F:\\WebsiteProjects\\foreach-website-2026\\data-source\\product-center\\fittings\\FRGD-140D-2606-0002_001_cn_连接件标品在售清单.xlsx",
+  "sheetName": "06_单向阀、过滤器",
+  "headers": [
+    "产品类型",
+    "产品系列",
+    "料号",
+    "恒永达型号",
+    "商品编码",
+    "竞品型号 / 威路",
+    "CPC",
+    "EJ",
+    "ARK",
+    "润泽",
+    "2D图编码",
+    "3D图编码"
+  ],
+  "counts": {
+    "filters": 21,
+    "checkValves": 17,
+    "total": 38
+  },
+  "duplicateModels": [
+    [
+      {
+        "excelRow": 3,
+        "category": "过滤器",
+        "series": "G",
+        "internalCode": "382-10-00019",
+        "productName": "过滤器 G-178-64-PA-V 136003",
+        "productId": "136003",
+        "legacyModel": "",
+        "model": "G-178-64-PA-V",
+        "raw": {
+          "产品类型": "过滤器",
+          "产品系列": "G",
+          "料号": "382-10-00019",
+          "恒永达型号": "过滤器 G-178-64-PA-V 136003",
+          "商品编码": "136003",
+          "竞品型号 / 威路": "",
+          "CPC": "",
+          "EJ": "",
+          "ARK": "FAX84-NY0",
+          "润泽": "",
+          "2D图编码": "√",
+          "3D图编码": "√"
+        },
+        "assets": [
+          {
+            "filePath": "H:\\01-官网项目\\02_产品中心\\fit\\Filter & Check valve\\过滤器&单向阀2D图_JPG\\G-178-64-PA-V.jpg",
+            "fileName": "G-178-64-PA-V.jpg",
+            "extension": ".jpg"
+          }
+        ]
+      },
+      {
+        "excelRow": 7,
+        "category": "过滤器",
+        "series": "F",
+        "internalCode": "382-10-00049",
+        "productName": "过滤器 G-178-64-PA-V 136003",
+        "productId": "136003",
+        "legacyModel": "",
+        "model": "G-178-64-PA-V",
+        "raw": {
+          "产品类型": "过滤器",
+          "产品系列": "F",
+          "料号": "382-10-00049",
+          "恒永达型号": "过滤器 G-178-64-PA-V 136003",
+          "商品编码": "136003",
+          "竞品型号 / 威路": "",
+          "CPC": "",
+          "EJ": "",
+          "ARK": "FAX84-NY0",
+          "润泽": "",
+          "2D图编码": "×",
+          "3D图编码": "×"
+        },
+        "assets": [
+          {
+            "filePath": "H:\\01-官网项目\\02_产品中心\\fit\\Filter & Check valve\\过滤器&单向阀2D图_JPG\\G-178-64-PA-V.jpg",
+            "fileName": "G-178-64-PA-V.jpg",
+            "extension": ".jpg"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "excelRow": 16,
+        "category": "过滤器",
+        "series": "F",
+        "internalCode": "515-00-04865",
+        "productName": "水循环过滤器 F-SS-150-127D-PP-N 139008",
+        "productId": "139008",
+        "legacyModel": "",
+        "model": "F-SS-150-127D-PP-N",
+        "raw": {
+          "产品类型": "过滤器",
+          "产品系列": "F",
+          "料号": "515-00-04865",
+          "恒永达型号": "水循环过滤器 F-SS-150-127D-PP-N 139008",
+          "商品编码": "139008",
+          "竞品型号 / 威路": "",
+          "CPC": "",
+          "EJ": "",
+          "ARK": "",
+          "润泽": "",
+          "2D图编码": "√",
+          "3D图编码": "√"
+        },
+        "assets": []
+      },
+      {
+        "excelRow": 20,
+        "category": "过滤器",
+        "series": "F",
+        "internalCode": "515-00-05699",
+        "productName": "水循环过滤器 F-SS-150-127D-PP-N 139008",
+        "productId": "139008",
+        "legacyModel": "",
+        "model": "F-SS-150-127D-PP-N",
+        "raw": {
+          "产品类型": "过滤器",
+          "产品系列": "F",
+          "料号": "515-00-05699",
+          "恒永达型号": "水循环过滤器 F-SS-150-127D-PP-N 139008",
+          "商品编码": "139008",
+          "竞品型号 / 威路": "",
+          "CPC": "",
+          "EJ": "",
+          "ARK": "",
+          "润泽": "",
+          "2D图编码": "×",
+          "3D图编码": "×"
+        },
+        "assets": []
+      }
+    ],
+    [
+      {
+        "excelRow": 18,
+        "category": "过滤器",
+        "series": "F",
+        "internalCode": "515-00-05633",
+        "productName": "水循环过滤器 F-SS-150-95D-PP-N 139013",
+        "productId": "139013",
+        "legacyModel": "",
+        "model": "F-SS-150-95D-PP-N",
+        "raw": {
+          "产品类型": "过滤器",
+          "产品系列": "F",
+          "料号": "515-00-05633",
+          "恒永达型号": "水循环过滤器 F-SS-150-95D-PP-N 139013",
+          "商品编码": "139013",
+          "竞品型号 / 威路": "",
+          "CPC": "",
+          "EJ": "",
+          "ARK": "",
+          "润泽": "",
+          "2D图编码": "×",
+          "3D图编码": "×"
+        },
+        "assets": []
+      },
+      {
+        "excelRow": 21,
+        "category": "过滤器",
+        "series": "F",
+        "internalCode": "515-00-05756",
+        "productName": "水循环过滤器 F-SS-150-95D-PP-N 139016",
+        "productId": "139016",
+        "legacyModel": "",
+        "model": "F-SS-150-95D-PP-N",
+        "raw": {
+          "产品类型": "过滤器",
+          "产品系列": "F",
+          "料号": "515-00-05756",
+          "恒永达型号": "水循环过滤器 F-SS-150-95D-PP-N 139016",
+          "商品编码": "139016",
+          "竞品型号 / 威路": "",
+          "CPC": "",
+          "EJ": "",
+          "ARK": "",
+          "润泽": "",
+          "2D图编码": "√",
+          "3D图编码": "×"
+        },
+        "assets": []
+      }
+    ],
+    [
+      {
+        "excelRow": 26,
+        "category": "单向阀",
+        "series": "CV",
+        "internalCode": "382-12-00032",
+        "productName": "单向阀 膜片式 CV-BV-48-PP-N 126009",
+        "productId": "126009",
+        "legacyModel": "",
+        "model": "CV-BV-48-PP-N",
+        "raw": {
+          "产品类型": "单向阀",
+          "产品系列": "CV",
+          "料号": "382-12-00032",
+          "恒永达型号": "单向阀 膜片式 CV-BV-48-PP-N 126009",
+          "商品编码": "126009",
+          "竞品型号 / 威路": "",
+          "CPC": "",
+          "EJ": "",
+          "ARK": "HAX14-PP0",
+          "润泽": "",
+          "2D图编码": "√",
+          "3D图编码": "×"
+        },
+        "assets": [
+          {
+            "filePath": "H:\\01-官网项目\\02_产品中心\\fit\\Luer fitting\\luer 2D图纸\\一体式公鲁尔集合-C.pdf",
+            "fileName": "一体式公鲁尔集合-C.pdf",
+            "extension": ".pdf"
+          }
+        ]
+      },
+      {
+        "excelRow": 35,
+        "category": "单向阀",
+        "series": "CV",
+        "internalCode": "382-12-00053",
+        "productName": "单向阀 膜片式 CV-BV-48-PP-N 126028",
+        "productId": "126028",
+        "legacyModel": "",
+        "model": "CV-BV-48-PP-N",
+        "raw": {
+          "产品类型": "单向阀",
+          "产品系列": "CV",
+          "料号": "382-12-00053",
+          "恒永达型号": "单向阀 膜片式 CV-BV-48-PP-N 126028",
+          "商品编码": "126028",
+          "竞品型号 / 威路": "",
+          "CPC": "",
+          "EJ": "",
+          "ARK": "",
+          "润泽": "",
+          "2D图编码": "√",
+          "3D图编码": "×"
+        },
+        "assets": [
+          {
+            "filePath": "H:\\01-官网项目\\02_产品中心\\fit\\Luer fitting\\luer 2D图纸\\一体式公鲁尔集合-C.pdf",
+            "fileName": "一体式公鲁尔集合-C.pdf",
+            "extension": ".pdf"
+          }
+        ]
+      }
+    ]
+  ],
+  "duplicateProductIds": [
+    [
+      {
+        "excelRow": 3,
+        "category": "过滤器",
+        "series": "G",
+        "internalCode": "382-10-00019",
+        "productName": "过滤器 G-178-64-PA-V 136003",
+        "productId": "136003",
+        "legacyModel": "",
+        "model": "G-178-64-PA-V",
+        "raw": {
+          "产品类型": "过滤器",
+          "产品系列": "G",
+          "料号": "382-10-00019",
+          "恒永达型号": "过滤器 G-178-64-PA-V 136003",
+          "商品编码": "136003",
+          "竞品型号 / 威路": "",
+          "CPC": "",
+          "EJ": "",
+          "ARK": "FAX84-NY0",
+          "润泽": "",
+          "2D图编码": "√",
+          "3D图编码": "√"
+        },
+        "assets": [
+          {
+            "filePath": "H:\\01-官网项目\\02_产品中心\\fit\\Filter & Check valve\\过滤器&单向阀2D图_JPG\\G-178-64-PA-V.jpg",
+            "fileName": "G-178-64-PA-V.jpg",
+            "extension": ".jpg"
+          }
+        ]
+      },
+      {
+        "excelRow": 7,
+        "category": "过滤器",
+        "series": "F",
+        "internalCode": "382-10-00049",
+        "productName": "过滤器 G-178-64-PA-V 136003",
+        "productId": "136003",
+        "legacyModel": "",
+        "model": "G-178-64-PA-V",
+        "raw": {
+          "产品类型": "过滤器",
+          "产品系列": "F",
+          "料号": "382-10-00049",
+          "恒永达型号": "过滤器 G-178-64-PA-V 136003",
+          "商品编码": "136003",
+          "竞品型号 / 威路": "",
+          "CPC": "",
+          "EJ": "",
+          "ARK": "FAX84-NY0",
+          "润泽": "",
+          "2D图编码": "×",
+          "3D图编码": "×"
+        },
+        "assets": [
+          {
+            "filePath": "H:\\01-官网项目\\02_产品中心\\fit\\Filter & Check valve\\过滤器&单向阀2D图_JPG\\G-178-64-PA-V.jpg",
+            "fileName": "G-178-64-PA-V.jpg",
+            "extension": ".jpg"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "excelRow": 16,
+        "category": "过滤器",
+        "series": "F",
+        "internalCode": "515-00-04865",
+        "productName": "水循环过滤器 F-SS-150-127D-PP-N 139008",
+        "productId": "139008",
+        "legacyModel": "",
+        "model": "F-SS-150-127D-PP-N",
+        "raw": {
+          "产品类型": "过滤器",
+          "产品系列": "F",
+          "料号": "515-00-04865",
+          "恒永达型号": "水循环过滤器 F-SS-150-127D-PP-N 139008",
+          "商品编码": "139008",
+          "竞品型号 / 威路": "",
+          "CPC": "",
+          "EJ": "",
+          "ARK": "",
+          "润泽": "",
+          "2D图编码": "√",
+          "3D图编码": "√"
+        },
+        "assets": []
+      },
+      {
+        "excelRow": 20,
+        "category": "过滤器",
+        "series": "F",
+        "internalCode": "515-00-05699",
+        "productName": "水循环过滤器 F-SS-150-127D-PP-N 139008",
+        "productId": "139008",
+        "legacyModel": "",
+        "model": "F-SS-150-127D-PP-N",
+        "raw": {
+          "产品类型": "过滤器",
+          "产品系列": "F",
+          "料号": "515-00-05699",
+          "恒永达型号": "水循环过滤器 F-SS-150-127D-PP-N 139008",
+          "商品编码": "139008",
+          "竞品型号 / 威路": "",
+          "CPC": "",
+          "EJ": "",
+          "ARK": "",
+          "润泽": "",
+          "2D图编码": "×",
+          "3D图编码": "×"
+        },
+        "assets": []
+      }
+    ]
+  ],
+  "duplicateInternalCodes": [],
+  "missingModels": [
+    {
+      "excelRow": 22,
+      "category": "过滤器",
+      "series": "F",
+      "internalCode": "515-01-03273",
+      "productName": "水循环过滤器组件 86x48.8 POM 139009",
+      "productId": "139009",
+      "legacyModel": "",
+      "model": "",
+      "raw": {
+        "产品类型": "过滤器",
+        "产品系列": "F",
+        "料号": "515-01-03273",
+        "恒永达型号": "水循环过滤器组件 86x48.8 POM 139009",
+        "商品编码": "139009",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "",
+        "润泽": "",
+        "2D图编码": "√",
+        "3D图编码": "√"
+      },
+      "assets": []
+    },
+    {
+      "excelRow": 23,
+      "category": "过滤器",
+      "series": "F",
+      "internalCode": "515-01-03641",
+      "productName": "水循环过滤器组件 78x46 PP 本色 139010",
+      "productId": "139010",
+      "legacyModel": "",
+      "model": "",
+      "raw": {
+        "产品类型": "过滤器",
+        "产品系列": "F",
+        "料号": "515-01-03641",
+        "恒永达型号": "水循环过滤器组件 78x46 PP 本色 139010",
+        "商品编码": "139010",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "",
+        "润泽": "",
+        "2D图编码": "√",
+        "3D图编码": "√"
+      },
+      "assets": []
+    }
+  ],
+  "products": [
+    {
+      "excelRow": 3,
+      "category": "过滤器",
+      "series": "G",
+      "internalCode": "382-10-00019",
+      "productName": "过滤器 G-178-64-PA-V 136003",
+      "productId": "136003",
+      "legacyModel": "",
+      "model": "G-178-64-PA-V",
+      "raw": {
+        "产品类型": "过滤器",
+        "产品系列": "G",
+        "料号": "382-10-00019",
+        "恒永达型号": "过滤器 G-178-64-PA-V 136003",
+        "商品编码": "136003",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "FAX84-NY0",
+        "润泽": "",
+        "2D图编码": "√",
+        "3D图编码": "√"
+      },
+      "assets": [
+        {
+          "filePath": "H:\\01-官网项目\\02_产品中心\\fit\\Filter & Check valve\\过滤器&单向阀2D图_JPG\\G-178-64-PA-V.jpg",
+          "fileName": "G-178-64-PA-V.jpg",
+          "extension": ".jpg"
+        }
+      ]
+    },
+    {
+      "excelRow": 4,
+      "category": "过滤器",
+      "series": "G",
+      "internalCode": "382-10-00020",
+      "productName": "过滤器 G-178-48-PA-V 136004",
+      "productId": "136004",
+      "legacyModel": "",
+      "model": "G-178-48-PA-V",
+      "raw": {
+        "产品类型": "过滤器",
+        "产品系列": "G",
+        "料号": "382-10-00020",
+        "恒永达型号": "过滤器 G-178-48-PA-V 136004",
+        "商品编码": "136004",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "FAX86-NY0",
+        "润泽": "",
+        "2D图编码": "√",
+        "3D图编码": "√"
+      },
+      "assets": [
+        {
+          "filePath": "H:\\01-官网项目\\02_产品中心\\fit\\Filter & Check valve\\过滤器&单向阀2D图_JPG\\G-178-48-PA-V.jpg",
+          "fileName": "G-178-48-PA-V.jpg",
+          "extension": ".jpg"
+        }
+      ]
+    },
+    {
+      "excelRow": 5,
+      "category": "过滤器",
+      "series": "G",
+      "internalCode": "382-10-00021",
+      "productName": "过滤器 G-178-32-PA-V 136005",
+      "productId": "136005",
+      "legacyModel": "",
+      "model": "G-178-32-PA-V",
+      "raw": {
+        "产品类型": "过滤器",
+        "产品系列": "G",
+        "料号": "382-10-00021",
+        "恒永达型号": "过滤器 G-178-32-PA-V 136005",
+        "商品编码": "136005",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "FAX26-NY0",
+        "润泽": "",
+        "2D图编码": "√",
+        "3D图编码": "×"
+      },
+      "assets": [
+        {
+          "filePath": "H:\\01-官网项目\\02_产品中心\\fit\\Filter & Check valve\\过滤器&单向阀2D图_JPG\\G-178-32-PA-V.jpg",
+          "fileName": "G-178-32-PA-V.jpg",
+          "extension": ".jpg"
+        },
+        {
+          "filePath": "H:\\01-官网项目\\02_产品中心\\fit\\Filter & Check valve\\过滤器&单向阀2D图纸_PDF\\382-10-00021-C.pdf",
+          "fileName": "382-10-00021-C.pdf",
+          "extension": ".pdf"
+        }
+      ]
+    },
+    {
+      "excelRow": 6,
+      "category": "过滤器",
+      "series": "F",
+      "internalCode": "382-10-00048",
+      "productName": "过滤器 F-PE-10-24-PP-N 136009",
+      "productId": "136009",
+      "legacyModel": "",
+      "model": "F-PE-10-24-PP-N",
+      "raw": {
+        "产品类型": "过滤器",
+        "产品系列": "F",
+        "料号": "382-10-00048",
+        "恒永达型号": "过滤器 F-PE-10-24-PP-N 136009",
+        "商品编码": "136009",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "",
+        "润泽": "",
+        "2D图编码": "√",
+        "3D图编码": "×"
+      },
+      "assets": []
+    },
+    {
+      "excelRow": 7,
+      "category": "过滤器",
+      "series": "F",
+      "internalCode": "382-10-00049",
+      "productName": "过滤器 G-178-64-PA-V 136003",
+      "productId": "136003",
+      "legacyModel": "",
+      "model": "G-178-64-PA-V",
+      "raw": {
+        "产品类型": "过滤器",
+        "产品系列": "F",
+        "料号": "382-10-00049",
+        "恒永达型号": "过滤器 G-178-64-PA-V 136003",
+        "商品编码": "136003",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "FAX84-NY0",
+        "润泽": "",
+        "2D图编码": "×",
+        "3D图编码": "×"
+      },
+      "assets": [
+        {
+          "filePath": "H:\\01-官网项目\\02_产品中心\\fit\\Filter & Check valve\\过滤器&单向阀2D图_JPG\\G-178-64-PA-V.jpg",
+          "fileName": "G-178-64-PA-V.jpg",
+          "extension": ".jpg"
+        }
+      ]
+    },
+    {
+      "excelRow": 8,
+      "category": "过滤器",
+      "series": "F",
+      "internalCode": "443-02-00282",
+      "productName": "过滤器 F-PE-100-32-PP-N 139001",
+      "productId": "139001",
+      "legacyModel": "",
+      "model": "F-PE-100-32-PP-N",
+      "raw": {
+        "产品类型": "过滤器",
+        "产品系列": "F",
+        "料号": "443-02-00282",
+        "恒永达型号": "过滤器 F-PE-100-32-PP-N 139001",
+        "商品编码": "139001",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "",
+        "润泽": "",
+        "2D图编码": "√",
+        "3D图编码": "√"
+      },
+      "assets": [
+        {
+          "filePath": "H:\\01-官网项目\\02_产品中心\\fit\\Filter & Check valve\\过滤器&单向阀2D图_JPG\\F-PE-100-32-PP-N.jpg",
+          "fileName": "F-PE-100-32-PP-N.jpg",
+          "extension": ".jpg"
+        },
+        {
+          "filePath": "H:\\01-官网项目\\02_产品中心\\fit\\Filter & Check valve\\过滤器&单向阀2D图纸_PDF\\443-02-00282-C.pdf",
+          "fileName": "443-02-00282-C.pdf",
+          "extension": ".pdf"
+        }
+      ]
+    },
+    {
+      "excelRow": 9,
+      "category": "过滤器",
+      "series": "F",
+      "internalCode": "443-02-00288",
+      "productName": "过滤器 F-PE-100-32-PV-N 139002",
+      "productId": "139002",
+      "legacyModel": "",
+      "model": "F-PE-100-32-PV-N",
+      "raw": {
+        "产品类型": "过滤器",
+        "产品系列": "F",
+        "料号": "443-02-00288",
+        "恒永达型号": "过滤器 F-PE-100-32-PV-N 139002",
+        "商品编码": "139002",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "",
+        "润泽": "",
+        "2D图编码": "×",
+        "3D图编码": "×"
+      },
+      "assets": []
+    },
+    {
+      "excelRow": 10,
+      "category": "过滤器",
+      "series": "F",
+      "internalCode": "443-02-00455",
+      "productName": "过滤器 F-PE-60-32-PP-N 139003",
+      "productId": "139003",
+      "legacyModel": "",
+      "model": "F-PE-60-32-PP-N",
+      "raw": {
+        "产品类型": "过滤器",
+        "产品系列": "F",
+        "料号": "443-02-00455",
+        "恒永达型号": "过滤器 F-PE-60-32-PP-N 139003",
+        "商品编码": "139003",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "",
+        "润泽": "",
+        "2D图编码": "√",
+        "3D图编码": "√"
+      },
+      "assets": [
+        {
+          "filePath": "H:\\01-官网项目\\02_产品中心\\fit\\Filter & Check valve\\过滤器&单向阀2D图_JPG\\F-PE-60-32-PP-N.jpg",
+          "fileName": "F-PE-60-32-PP-N.jpg",
+          "extension": ".jpg"
+        }
+      ]
+    },
+    {
+      "excelRow": 11,
+      "category": "过滤器",
+      "series": "F",
+      "internalCode": "443-02-00714",
+      "productName": "过滤器 F-PA-150-32-PP-N 139012",
+      "productId": "139012",
+      "legacyModel": "",
+      "model": "F-PA-150-32-PP-N",
+      "raw": {
+        "产品类型": "过滤器",
+        "产品系列": "F",
+        "料号": "443-02-00714",
+        "恒永达型号": "过滤器 F-PA-150-32-PP-N 139012",
+        "商品编码": "139012",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "",
+        "润泽": "",
+        "2D图编码": "√",
+        "3D图编码": "×"
+      },
+      "assets": []
+    },
+    {
+      "excelRow": 12,
+      "category": "过滤器",
+      "series": "F",
+      "internalCode": "443-02-00736",
+      "productName": "过滤器 F-PA-250-32D-PA-N 139014",
+      "productId": "139014",
+      "legacyModel": "",
+      "model": "F-PA-250-32D-PA-N",
+      "raw": {
+        "产品类型": "过滤器",
+        "产品系列": "F",
+        "料号": "443-02-00736",
+        "恒永达型号": "过滤器 F-PA-250-32D-PA-N 139014",
+        "商品编码": "139014",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "",
+        "润泽": "",
+        "2D图编码": "√",
+        "3D图编码": "√"
+      },
+      "assets": []
+    },
+    {
+      "excelRow": 13,
+      "category": "过滤器",
+      "series": "F",
+      "internalCode": "515-00-04503",
+      "productName": "水循环过滤器 F-SS-150-127-AC-N 139005",
+      "productId": "139005",
+      "legacyModel": "",
+      "model": "F-SS-150-127-AC-N",
+      "raw": {
+        "产品类型": "过滤器",
+        "产品系列": "F",
+        "料号": "515-00-04503",
+        "恒永达型号": "水循环过滤器 F-SS-150-127-AC-N 139005",
+        "商品编码": "139005",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "",
+        "润泽": "",
+        "2D图编码": "√",
+        "3D图编码": "√"
+      },
+      "assets": [
+        {
+          "filePath": "H:\\01-官网项目\\02_产品中心\\fit\\Luer fitting\\luer 2D图纸\\一体式公鲁尔集合-C.pdf",
+          "fileName": "一体式公鲁尔集合-C.pdf",
+          "extension": ".pdf"
+        }
+      ]
+    },
+    {
+      "excelRow": 14,
+      "category": "过滤器",
+      "series": "F",
+      "internalCode": "515-00-04707",
+      "productName": "水循环过滤器 F-SS-150-127D-AC-N 139006",
+      "productId": "139006",
+      "legacyModel": "",
+      "model": "F-SS-150-127D-AC-N",
+      "raw": {
+        "产品类型": "过滤器",
+        "产品系列": "F",
+        "料号": "515-00-04707",
+        "恒永达型号": "水循环过滤器 F-SS-150-127D-AC-N 139006",
+        "商品编码": "139006",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "",
+        "润泽": "",
+        "2D图编码": "√",
+        "3D图编码": "×"
+      },
+      "assets": [
+        {
+          "filePath": "H:\\01-官网项目\\02_产品中心\\fit\\Luer fitting\\luer 2D图纸\\一体式公鲁尔集合-C.pdf",
+          "fileName": "一体式公鲁尔集合-C.pdf",
+          "extension": ".pdf"
+        }
+      ]
+    },
+    {
+      "excelRow": 15,
+      "category": "过滤器",
+      "series": "F",
+      "internalCode": "515-00-04864",
+      "productName": "水循环过滤器 F-SS-150-127-PP-N 139007",
+      "productId": "139007",
+      "legacyModel": "",
+      "model": "F-SS-150-127-PP-N",
+      "raw": {
+        "产品类型": "过滤器",
+        "产品系列": "F",
+        "料号": "515-00-04864",
+        "恒永达型号": "水循环过滤器 F-SS-150-127-PP-N 139007",
+        "商品编码": "139007",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "",
+        "润泽": "",
+        "2D图编码": "×",
+        "3D图编码": "√"
+      },
+      "assets": []
+    },
+    {
+      "excelRow": 16,
+      "category": "过滤器",
+      "series": "F",
+      "internalCode": "515-00-04865",
+      "productName": "水循环过滤器 F-SS-150-127D-PP-N 139008",
+      "productId": "139008",
+      "legacyModel": "",
+      "model": "F-SS-150-127D-PP-N",
+      "raw": {
+        "产品类型": "过滤器",
+        "产品系列": "F",
+        "料号": "515-00-04865",
+        "恒永达型号": "水循环过滤器 F-SS-150-127D-PP-N 139008",
+        "商品编码": "139008",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "",
+        "润泽": "",
+        "2D图编码": "√",
+        "3D图编码": "√"
+      },
+      "assets": []
+    },
+    {
+      "excelRow": 17,
+      "category": "过滤器",
+      "series": "F",
+      "internalCode": "515-00-05427",
+      "productName": "水循环过滤器 F-SS-150-79D-PP-N 139011",
+      "productId": "139011",
+      "legacyModel": "",
+      "model": "F-SS-150-79D-PP-N",
+      "raw": {
+        "产品类型": "过滤器",
+        "产品系列": "F",
+        "料号": "515-00-05427",
+        "恒永达型号": "水循环过滤器 F-SS-150-79D-PP-N 139011",
+        "商品编码": "139011",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "",
+        "润泽": "",
+        "2D图编码": "×",
+        "3D图编码": "×"
+      },
+      "assets": []
+    },
+    {
+      "excelRow": 18,
+      "category": "过滤器",
+      "series": "F",
+      "internalCode": "515-00-05633",
+      "productName": "水循环过滤器 F-SS-150-95D-PP-N 139013",
+      "productId": "139013",
+      "legacyModel": "",
+      "model": "F-SS-150-95D-PP-N",
+      "raw": {
+        "产品类型": "过滤器",
+        "产品系列": "F",
+        "料号": "515-00-05633",
+        "恒永达型号": "水循环过滤器 F-SS-150-95D-PP-N 139013",
+        "商品编码": "139013",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "",
+        "润泽": "",
+        "2D图编码": "×",
+        "3D图编码": "×"
+      },
+      "assets": []
+    },
+    {
+      "excelRow": 19,
+      "category": "过滤器",
+      "series": "F",
+      "internalCode": "515-00-05674",
+      "productName": "水循环过滤器 F-SS-150-191-PP-N 139015",
+      "productId": "139015",
+      "legacyModel": "",
+      "model": "F-SS-150-191-PP-N",
+      "raw": {
+        "产品类型": "过滤器",
+        "产品系列": "F",
+        "料号": "515-00-05674",
+        "恒永达型号": "水循环过滤器 F-SS-150-191-PP-N 139015",
+        "商品编码": "139015",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "",
+        "润泽": "",
+        "2D图编码": "×",
+        "3D图编码": "×"
+      },
+      "assets": []
+    },
+    {
+      "excelRow": 20,
+      "category": "过滤器",
+      "series": "F",
+      "internalCode": "515-00-05699",
+      "productName": "水循环过滤器 F-SS-150-127D-PP-N 139008",
+      "productId": "139008",
+      "legacyModel": "",
+      "model": "F-SS-150-127D-PP-N",
+      "raw": {
+        "产品类型": "过滤器",
+        "产品系列": "F",
+        "料号": "515-00-05699",
+        "恒永达型号": "水循环过滤器 F-SS-150-127D-PP-N 139008",
+        "商品编码": "139008",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "",
+        "润泽": "",
+        "2D图编码": "×",
+        "3D图编码": "×"
+      },
+      "assets": []
+    },
+    {
+      "excelRow": 21,
+      "category": "过滤器",
+      "series": "F",
+      "internalCode": "515-00-05756",
+      "productName": "水循环过滤器 F-SS-150-95D-PP-N 139016",
+      "productId": "139016",
+      "legacyModel": "",
+      "model": "F-SS-150-95D-PP-N",
+      "raw": {
+        "产品类型": "过滤器",
+        "产品系列": "F",
+        "料号": "515-00-05756",
+        "恒永达型号": "水循环过滤器 F-SS-150-95D-PP-N 139016",
+        "商品编码": "139016",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "",
+        "润泽": "",
+        "2D图编码": "√",
+        "3D图编码": "×"
+      },
+      "assets": []
+    },
+    {
+      "excelRow": 22,
+      "category": "过滤器",
+      "series": "F",
+      "internalCode": "515-01-03273",
+      "productName": "水循环过滤器组件 86x48.8 POM 139009",
+      "productId": "139009",
+      "legacyModel": "",
+      "model": "",
+      "raw": {
+        "产品类型": "过滤器",
+        "产品系列": "F",
+        "料号": "515-01-03273",
+        "恒永达型号": "水循环过滤器组件 86x48.8 POM 139009",
+        "商品编码": "139009",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "",
+        "润泽": "",
+        "2D图编码": "√",
+        "3D图编码": "√"
+      },
+      "assets": []
+    },
+    {
+      "excelRow": 23,
+      "category": "过滤器",
+      "series": "F",
+      "internalCode": "515-01-03641",
+      "productName": "水循环过滤器组件 78x46 PP 本色 139010",
+      "productId": "139010",
+      "legacyModel": "",
+      "model": "",
+      "raw": {
+        "产品类型": "过滤器",
+        "产品系列": "F",
+        "料号": "515-01-03641",
+        "恒永达型号": "水循环过滤器组件 78x46 PP 本色 139010",
+        "商品编码": "139010",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "",
+        "润泽": "",
+        "2D图编码": "√",
+        "3D图编码": "√"
+      },
+      "assets": []
+    },
+    {
+      "excelRow": 24,
+      "category": "单向阀",
+      "series": "CV",
+      "internalCode": "382-12-00029",
+      "productName": "单向阀 鸭嘴式 CV-DE-16-PV-N 126006",
+      "productId": "126006",
+      "legacyModel": "",
+      "model": "CV-DE-16-PV-N",
+      "raw": {
+        "产品类型": "单向阀",
+        "产品系列": "CV",
+        "料号": "382-12-00029",
+        "恒永达型号": "单向阀 鸭嘴式 CV-DE-16-PV-N 126006",
+        "商品编码": "126006",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "",
+        "润泽": "",
+        "2D图编码": "√",
+        "3D图编码": "×"
+      },
+      "assets": [
+        {
+          "filePath": "H:\\01-官网项目\\02_产品中心\\fit\\Luer fitting\\luer 2D图纸\\一体式公鲁尔集合-C.pdf",
+          "fileName": "一体式公鲁尔集合-C.pdf",
+          "extension": ".pdf"
+        }
+      ]
+    },
+    {
+      "excelRow": 25,
+      "category": "单向阀",
+      "series": "CV",
+      "internalCode": "382-12-00030",
+      "productName": "单向阀 膜片式 CV-BV-32-PP-N 126007",
+      "productId": "126007",
+      "legacyModel": "",
+      "model": "CV-BV-32-PP-N",
+      "raw": {
+        "产品类型": "单向阀",
+        "产品系列": "CV",
+        "料号": "382-12-00030",
+        "恒永达型号": "单向阀 膜片式 CV-BV-32-PP-N 126007",
+        "商品编码": "126007",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "HAX18-PP0",
+        "润泽": "",
+        "2D图编码": "√",
+        "3D图编码": "×"
+      },
+      "assets": [
+        {
+          "filePath": "H:\\01-官网项目\\02_产品中心\\fit\\Luer fitting\\luer 2D图纸\\一体式公鲁尔集合-C.pdf",
+          "fileName": "一体式公鲁尔集合-C.pdf",
+          "extension": ".pdf"
+        }
+      ]
+    },
+    {
+      "excelRow": 26,
+      "category": "单向阀",
+      "series": "CV",
+      "internalCode": "382-12-00032",
+      "productName": "单向阀 膜片式 CV-BV-48-PP-N 126009",
+      "productId": "126009",
+      "legacyModel": "",
+      "model": "CV-BV-48-PP-N",
+      "raw": {
+        "产品类型": "单向阀",
+        "产品系列": "CV",
+        "料号": "382-12-00032",
+        "恒永达型号": "单向阀 膜片式 CV-BV-48-PP-N 126009",
+        "商品编码": "126009",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "HAX14-PP0",
+        "润泽": "",
+        "2D图编码": "√",
+        "3D图编码": "×"
+      },
+      "assets": [
+        {
+          "filePath": "H:\\01-官网项目\\02_产品中心\\fit\\Luer fitting\\luer 2D图纸\\一体式公鲁尔集合-C.pdf",
+          "fileName": "一体式公鲁尔集合-C.pdf",
+          "extension": ".pdf"
+        }
+      ]
+    },
+    {
+      "excelRow": 27,
+      "category": "单向阀",
+      "series": "CV",
+      "internalCode": "382-12-00034",
+      "productName": "单向阀 膜片式 CV-BV-64-PP-N 126011",
+      "productId": "126011",
+      "legacyModel": "",
+      "model": "CV-BV-64-PP-N",
+      "raw": {
+        "产品类型": "单向阀",
+        "产品系列": "CV",
+        "料号": "382-12-00034",
+        "恒永达型号": "单向阀 膜片式 CV-BV-64-PP-N 126011",
+        "商品编码": "126011",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "HAX24-PP0",
+        "润泽": "",
+        "2D图编码": "√",
+        "3D图编码": "×"
+      },
+      "assets": [
+        {
+          "filePath": "H:\\01-官网项目\\02_产品中心\\fit\\Luer fitting\\luer 2D图纸\\一体式公鲁尔集合-C.pdf",
+          "fileName": "一体式公鲁尔集合-C.pdf",
+          "extension": ".pdf"
+        }
+      ]
+    },
+    {
+      "excelRow": 28,
+      "category": "单向阀",
+      "series": "CV",
+      "internalCode": "382-12-00035",
+      "productName": "单向阀 膜片式 CV-BE-64-PP-N 126012",
+      "productId": "126012",
+      "legacyModel": "",
+      "model": "CV-BE-64-PP-N",
+      "raw": {
+        "产品类型": "单向阀",
+        "产品系列": "CV",
+        "料号": "382-12-00035",
+        "恒永达型号": "单向阀 膜片式 CV-BE-64-PP-N 126012",
+        "商品编码": "126012",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "",
+        "润泽": "",
+        "2D图编码": "√",
+        "3D图编码": "×"
+      },
+      "assets": [
+        {
+          "filePath": "H:\\01-官网项目\\02_产品中心\\fit\\Luer fitting\\luer 2D图纸\\一体式公鲁尔集合-C.pdf",
+          "fileName": "一体式公鲁尔集合-C.pdf",
+          "extension": ".pdf"
+        }
+      ]
+    },
+    {
+      "excelRow": 29,
+      "category": "单向阀",
+      "series": "CV",
+      "internalCode": "382-12-00036",
+      "productName": "单向阀 膜片式 CV-BV-79-PP-N 126013",
+      "productId": "126013",
+      "legacyModel": "",
+      "model": "CV-BV-79-PP-N",
+      "raw": {
+        "产品类型": "单向阀",
+        "产品系列": "CV",
+        "料号": "382-12-00036",
+        "恒永达型号": "单向阀 膜片式 CV-BV-79-PP-N 126013",
+        "商品编码": "126013",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "",
+        "润泽": "",
+        "2D图编码": "√",
+        "3D图编码": "×"
+      },
+      "assets": [
+        {
+          "filePath": "H:\\01-官网项目\\02_产品中心\\fit\\Luer fitting\\luer 2D图纸\\一体式公鲁尔集合-C.pdf",
+          "fileName": "一体式公鲁尔集合-C.pdf",
+          "extension": ".pdf"
+        }
+      ]
+    },
+    {
+      "excelRow": 30,
+      "category": "单向阀",
+      "series": "CV",
+      "internalCode": "382-12-00037",
+      "productName": "单向阀 膜片式 CV-BE-79-PP-N 126014",
+      "productId": "126014",
+      "legacyModel": "",
+      "model": "CV-BE-79-PP-N",
+      "raw": {
+        "产品类型": "单向阀",
+        "产品系列": "CV",
+        "料号": "382-12-00037",
+        "恒永达型号": "单向阀 膜片式 CV-BE-79-PP-N 126014",
+        "商品编码": "126014",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "",
+        "润泽": "",
+        "2D图编码": "√",
+        "3D图编码": "×"
+      },
+      "assets": [
+        {
+          "filePath": "H:\\01-官网项目\\02_产品中心\\fit\\Luer fitting\\luer 2D图纸\\一体式公鲁尔集合-C.pdf",
+          "fileName": "一体式公鲁尔集合-C.pdf",
+          "extension": ".pdf"
+        }
+      ]
+    },
+    {
+      "excelRow": 31,
+      "category": "单向阀",
+      "series": "CV",
+      "internalCode": "382-12-00039",
+      "productName": "单向阀 膜片式 CV-BE-95-PP-N 126016",
+      "productId": "126016",
+      "legacyModel": "",
+      "model": "CV-BE-95-PP-N",
+      "raw": {
+        "产品类型": "单向阀",
+        "产品系列": "CV",
+        "料号": "382-12-00039",
+        "恒永达型号": "单向阀 膜片式 CV-BE-95-PP-N 126016",
+        "商品编码": "126016",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "",
+        "润泽": "",
+        "2D图编码": "√",
+        "3D图编码": "×"
+      },
+      "assets": [
+        {
+          "filePath": "H:\\01-官网项目\\02_产品中心\\fit\\Luer fitting\\luer 2D图纸\\一体式公鲁尔集合-C.pdf",
+          "fileName": "一体式公鲁尔集合-C.pdf",
+          "extension": ".pdf"
+        }
+      ]
+    },
+    {
+      "excelRow": 32,
+      "category": "单向阀",
+      "series": "CV",
+      "internalCode": "382-12-00046",
+      "productName": "单向阀 膜片式 CV-BF-16-PV-N 126025",
+      "productId": "126025",
+      "legacyModel": "",
+      "model": "CV-BF-16-PV-N",
+      "raw": {
+        "产品类型": "单向阀",
+        "产品系列": "CV",
+        "料号": "382-12-00046",
+        "恒永达型号": "单向阀 膜片式 CV-BF-16-PV-N 126025",
+        "商品编码": "126025",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "",
+        "润泽": "",
+        "2D图编码": "×",
+        "3D图编码": "×"
+      },
+      "assets": [
+        {
+          "filePath": "H:\\01-官网项目\\02_产品中心\\fit\\Luer fitting\\luer 2D图纸\\一体式公鲁尔集合-C.pdf",
+          "fileName": "一体式公鲁尔集合-C.pdf",
+          "extension": ".pdf"
+        }
+      ]
+    },
+    {
+      "excelRow": 33,
+      "category": "单向阀",
+      "series": "CV",
+      "internalCode": "382-12-00051",
+      "productName": "单向阀 鸭嘴式 CV-DE-24-PV-N 126026",
+      "productId": "126026",
+      "legacyModel": "",
+      "model": "CV-DE-24-PV-N",
+      "raw": {
+        "产品类型": "单向阀",
+        "产品系列": "CV",
+        "料号": "382-12-00051",
+        "恒永达型号": "单向阀 鸭嘴式 CV-DE-24-PV-N 126026",
+        "商品编码": "126026",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "",
+        "润泽": "",
+        "2D图编码": "×",
+        "3D图编码": "×"
+      },
+      "assets": [
+        {
+          "filePath": "H:\\01-官网项目\\02_产品中心\\fit\\Luer fitting\\luer 2D图纸\\一体式公鲁尔集合-C.pdf",
+          "fileName": "一体式公鲁尔集合-C.pdf",
+          "extension": ".pdf"
+        }
+      ]
+    },
+    {
+      "excelRow": 34,
+      "category": "单向阀",
+      "series": "CV",
+      "internalCode": "382-12-00052",
+      "productName": "单向阀 鸭嘴式 CV-DE-32-PV-N 126027",
+      "productId": "126027",
+      "legacyModel": "",
+      "model": "CV-DE-32-PV-N",
+      "raw": {
+        "产品类型": "单向阀",
+        "产品系列": "CV",
+        "料号": "382-12-00052",
+        "恒永达型号": "单向阀 鸭嘴式 CV-DE-32-PV-N 126027",
+        "商品编码": "126027",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "",
+        "润泽": "",
+        "2D图编码": "√",
+        "3D图编码": "×"
+      },
+      "assets": [
+        {
+          "filePath": "H:\\01-官网项目\\02_产品中心\\fit\\Luer fitting\\luer 2D图纸\\一体式公鲁尔集合-C.pdf",
+          "fileName": "一体式公鲁尔集合-C.pdf",
+          "extension": ".pdf"
+        }
+      ]
+    },
+    {
+      "excelRow": 35,
+      "category": "单向阀",
+      "series": "CV",
+      "internalCode": "382-12-00053",
+      "productName": "单向阀 膜片式 CV-BV-48-PP-N 126028",
+      "productId": "126028",
+      "legacyModel": "",
+      "model": "CV-BV-48-PP-N",
+      "raw": {
+        "产品类型": "单向阀",
+        "产品系列": "CV",
+        "料号": "382-12-00053",
+        "恒永达型号": "单向阀 膜片式 CV-BV-48-PP-N 126028",
+        "商品编码": "126028",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "",
+        "润泽": "",
+        "2D图编码": "√",
+        "3D图编码": "×"
+      },
+      "assets": [
+        {
+          "filePath": "H:\\01-官网项目\\02_产品中心\\fit\\Luer fitting\\luer 2D图纸\\一体式公鲁尔集合-C.pdf",
+          "fileName": "一体式公鲁尔集合-C.pdf",
+          "extension": ".pdf"
+        }
+      ]
+    },
+    {
+      "excelRow": 36,
+      "category": "单向阀",
+      "series": "CV",
+      "internalCode": "443-02-00281",
+      "productName": "单向阀 膜片式 CV-BE-32-PP-N 129001",
+      "productId": "129001",
+      "legacyModel": "",
+      "model": "CV-BE-32-PP-N",
+      "raw": {
+        "产品类型": "单向阀",
+        "产品系列": "CV",
+        "料号": "443-02-00281",
+        "恒永达型号": "单向阀 膜片式 CV-BE-32-PP-N 129001",
+        "商品编码": "129001",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "",
+        "润泽": "",
+        "2D图编码": "√",
+        "3D图编码": "√"
+      },
+      "assets": [
+        {
+          "filePath": "H:\\01-官网项目\\02_产品中心\\fit\\Filter & Check valve\\过滤器&单向阀2D图_JPG\\CV-BE-32-PP-N.jpg",
+          "fileName": "CV-BE-32-PP-N.jpg",
+          "extension": ".jpg"
+        },
+        {
+          "filePath": "H:\\01-官网项目\\02_产品中心\\fit\\Filter & Check valve\\过滤器&单向阀2D图纸_PDF\\443-02-00281-C.pdf",
+          "fileName": "443-02-00281-C.pdf",
+          "extension": ".pdf"
+        },
+        {
+          "filePath": "H:\\01-官网项目\\02_产品中心\\fit\\Luer fitting\\luer 2D图纸\\一体式公鲁尔集合-C.pdf",
+          "fileName": "一体式公鲁尔集合-C.pdf",
+          "extension": ".pdf"
+        }
+      ]
+    },
+    {
+      "excelRow": 37,
+      "category": "单向阀",
+      "series": "CV",
+      "internalCode": "443-02-00289",
+      "productName": "单向阀 膜片式 CV-BE-32-PV-N 129002",
+      "productId": "129002",
+      "legacyModel": "",
+      "model": "CV-BE-32-PV-N",
+      "raw": {
+        "产品类型": "单向阀",
+        "产品系列": "CV",
+        "料号": "443-02-00289",
+        "恒永达型号": "单向阀 膜片式 CV-BE-32-PV-N 129002",
+        "商品编码": "129002",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "",
+        "润泽": "",
+        "2D图编码": "×",
+        "3D图编码": "×"
+      },
+      "assets": [
+        {
+          "filePath": "H:\\01-官网项目\\02_产品中心\\fit\\Luer fitting\\luer 2D图纸\\一体式公鲁尔集合-C.pdf",
+          "fileName": "一体式公鲁尔集合-C.pdf",
+          "extension": ".pdf"
+        }
+      ]
+    },
+    {
+      "excelRow": 38,
+      "category": "单向阀",
+      "series": "CV",
+      "internalCode": "443-02-00494",
+      "productName": "单向阀 膜片式 CV-BF-32-PP-N 129003",
+      "productId": "129003",
+      "legacyModel": "",
+      "model": "CV-BF-32-PP-N",
+      "raw": {
+        "产品类型": "单向阀",
+        "产品系列": "CV",
+        "料号": "443-02-00494",
+        "恒永达型号": "单向阀 膜片式 CV-BF-32-PP-N 129003",
+        "商品编码": "129003",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "",
+        "润泽": "",
+        "2D图编码": "√",
+        "3D图编码": "×"
+      },
+      "assets": [
+        {
+          "filePath": "H:\\01-官网项目\\02_产品中心\\fit\\Luer fitting\\luer 2D图纸\\一体式公鲁尔集合-C.pdf",
+          "fileName": "一体式公鲁尔集合-C.pdf",
+          "extension": ".pdf"
+        }
+      ]
+    },
+    {
+      "excelRow": 39,
+      "category": "单向阀",
+      "series": "CV",
+      "internalCode": "443-02-00694",
+      "productName": "单向阀 膜片式 CV-BE-24-PP-N 129004",
+      "productId": "129004",
+      "legacyModel": "",
+      "model": "CV-BE-24-PP-N",
+      "raw": {
+        "产品类型": "单向阀",
+        "产品系列": "CV",
+        "料号": "443-02-00694",
+        "恒永达型号": "单向阀 膜片式 CV-BE-24-PP-N 129004",
+        "商品编码": "129004",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "",
+        "润泽": "",
+        "2D图编码": "√",
+        "3D图编码": "√"
+      },
+      "assets": [
+        {
+          "filePath": "H:\\01-官网项目\\02_产品中心\\fit\\Luer fitting\\luer 2D图纸\\一体式公鲁尔集合-C.pdf",
+          "fileName": "一体式公鲁尔集合-C.pdf",
+          "extension": ".pdf"
+        }
+      ]
+    },
+    {
+      "excelRow": 40,
+      "category": "单向阀",
+      "series": "CV",
+      "internalCode": "443-02-00744",
+      "productName": "单向阀 膜片式 CV-BF-32-PP-B 129005",
+      "productId": "129005",
+      "legacyModel": "",
+      "model": "CV-BF-32-PP-B",
+      "raw": {
+        "产品类型": "单向阀",
+        "产品系列": "CV",
+        "料号": "443-02-00744",
+        "恒永达型号": "单向阀 膜片式 CV-BF-32-PP-B 129005",
+        "商品编码": "129005",
+        "竞品型号 / 威路": "",
+        "CPC": "",
+        "EJ": "",
+        "ARK": "",
+        "润泽": "",
+        "2D图编码": "×",
+        "3D图编码": "×"
+      },
+      "assets": [
+        {
+          "filePath": "H:\\01-官网项目\\02_产品中心\\fit\\Luer fitting\\luer 2D图纸\\一体式公鲁尔集合-C.pdf",
+          "fileName": "一体式公鲁尔集合-C.pdf",
+          "extension": ".pdf"
+        }
+      ]
+    }
+  ]
+}

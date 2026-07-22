@@ -1,0 +1,20 @@
+HP 高压旋转阀规格修正报告
+时间：2026-07-19T12:32:31.610Z
+项目：F:\WebsiteProjects\foreach-website-2026
+备份：F:\WebsiteProjects\_foreach-backups\hp-valve-correction-20260719_203231
+
+正确规格：
+- 名称：HP 二位六通带排气高压旋转阀
+- 型号：HP-26SSU3204
+- 配置：二位六通带排气
+- 最大工作压力：25 MPa
+- 接口规格：10-32 UNF
+- 通道直径：0.4 mm
+- 内部体积：0.8 μL
+
+修改文件数：3
+- data\products\detail\product-detail.intl.ts
+- data\products\generated\valves\detail\index.json
+- data\products\selection\valve-selection.generated.ts
+
+剩余需要人工确认的展示项：0

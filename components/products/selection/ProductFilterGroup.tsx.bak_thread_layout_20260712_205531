@@ -1,0 +1,70 @@
+"use client";
+
+import type { ProductSelectionFilterGroup } from "./product-selection-ui.types";
+
+type ProductFilterGroupProps = {
+  group: ProductSelectionFilterGroup;
+  mobileOpen: boolean;
+  onToggleMobileGroup: (key: ProductSelectionFilterGroup["key"]) => void;
+  isOptionActive: (group: ProductSelectionFilterGroup, value: string) => boolean;
+  onFilterChange: (group: ProductSelectionFilterGroup, value: string) => void;
+};
+
+function getLayoutClass(group: ProductSelectionFilterGroup) {
+  if (group.key === "productType" || group.key === "filter01") {
+    return "one";
+  }
+
+  return "two";
+}
+
+export default function ProductFilterGroup({
+  group,
+  mobileOpen,
+  onToggleMobileGroup,
+  isOptionActive,
+  onFilterChange,
+}: ProductFilterGroupProps) {
+  const modeClass = group.inputType === "single" ? "is-single" : "is-multi";
+  const layoutClass = getLayoutClass(group);
+
+  return (
+    <div
+      className={`filter-group filter-group-${group.key} ${modeClass} layout-${layoutClass} ${
+        mobileOpen ? "is-mobile-open" : ""
+      }`}
+      data-filter-key={group.key}
+      data-filter-layout={layoutClass}
+      key={group.key}
+    >
+      <button
+        className="filter-group-title filter-group-trigger"
+        type="button"
+        onClick={() => onToggleMobileGroup(group.key)}
+      >
+        <span>{group.title}</span>
+        <span className="filter-group-symbol">{mobileOpen ? "-" : "+"}</span>
+      </button>
+
+      <div className={`filter-options ${layoutClass}`}>
+        {group.options.map((option) => {
+          const active = isOptionActive(group, option.value);
+
+          return (
+            <button
+              className={`filter-option filter-btn ${modeClass} ${
+                active ? "active" : ""
+              }`}
+              type="button"
+              key={option.value}
+              onClick={() => onFilterChange(group, option.value)}
+            >
+              <span className="filter-check filter-control" />
+              <span className="filter-option-text">{option.label}</span>
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}

@@ -1,0 +1,612 @@
+﻿"use client";
+
+/* =========================================================
+   ProductDetailClient.tsx
+   鎭掓案杈惧畼缃戯綔涓枃浜у搧璇︽儏椤?
+
+   閲嶈璇存槑锛?
+   1. 椤甸潰缁撴瀯涓ユ牸鎸夌収鐢ㄦ埛鎻愪緵鐨?HTML 杞崲銆?
+   2. 鏈粡瑕佹眰锛屼笉璋冩暣鍘熷甯冨眬銆侀棿璺濄€佸瓧鍙蜂笌瑙嗚銆?
+   3. 褰撳墠鏄庣‘鏀瑰姩浠呭寘鎷細
+      - 涓诲瀷鍙?EA-100-PMMA
+      - 娣诲姞瑙勬牸涔︽寜閽?
+      - 鐢宠3D鏂囦欢鎸夐挳
+      - 涓枃涓嶆樉绀轰繚淇?
+      - 涓诲浘鎮仠鏀惧ぇ
+      - 鎵€鏈変笟鍔℃寜閽彧鐣欑鍙?
+========================================================= */
+
+import SitePageShell from "@/components/layout/SitePageShell";
+import PdfDrawingPreview from "@/components/common/PdfDrawingPreview";
+import { useMemo, useState } from "react";
+
+import type { CSSProperties, MouseEvent } from "react";
+import type { ProductDetailPageData } from "@/data/products/detail/product-detail.types";
+import ProductModelViewer from "./ProductModelViewer";
+import styles from "./product-detail.module.css";
+
+type ProductDetailTab = "spec" | "model3d" | "drawing";
+
+type ProductDetailClientProps = {
+  data: ProductDetailPageData;
+};
+
+type ZoomStyle = CSSProperties & {
+  "--zoom-x"?: string;
+  "--zoom-y"?: string;
+};
+
+function getProductDrawingPreviewUrl(slug: string) {
+  const normalizedSlug = slug.trim().toLowerCase();
+  const eaMatch = normalizedSlug.match(/^ea-(\d+)/);
+
+  if (!eaMatch) {
+    return "";
+  }
+
+  return `/assets/products/ea/2d-drawings/ea-${eaMatch[1]}.pdf#toolbar=0&navpanes=0&scrollbar=1`;
+}
+export default function ProductDetailClient({
+  data,
+}: ProductDetailClientProps) {
+  const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
+  const [activeThumb, setActiveThumb] = useState(0);
+  const [isZooming, setIsZooming] = useState(false);
+  const [zoomPosition, setZoomPosition] = useState({
+    x: 50,
+    y: 50,
+  });
+
+  const realImages = useMemo(() => {
+    const images: string[] = [];
+
+    if (data.mainImage) {
+      images.push(data.mainImage);
+    }
+
+    data.additionalImages.forEach((image) => {
+      if (image && !images.includes(image)) {
+        images.push(image);
+      }
+    });
+
+    return images;
+  }, [data.additionalImages, data.mainImage]);
+
+  const hasRealImages = realImages.length > 0;
+  const activeRealImage = hasRealImages
+    ? realImages[Math.min(activeThumb, realImages.length - 1)]
+    : null;
+
+  /*
+   * 姝ｅ紡鏁版嵁涓細
+   * 鍙湁涓诲浘涓旀病鏈夐檮灞炲浘鏃讹紝涓嶆樉绀虹缉鐣ュ浘鏍忋€?
+   *
+   * 褰撳墠娴嬭瘯鏁版嵁灏氭湭杩炴帴閫夊瀷涓诲浘锛屽洜姝や繚鐣?HTML 鍘熷瀷涓殑
+   * 涓変釜 SVG 缂╃暐鍥撅紝渚夸簬鏍稿鐗堝紡銆?
+   */
+  const showThumbnailRow = hasRealImages
+    ? realImages.length > 0
+    : true;
+  const zoomStyle: ZoomStyle = {
+    "--zoom-x": `${zoomPosition.x}%`,
+    "--zoom-y": `${zoomPosition.y}%`,
+  };
+
+  function handleMainImageMove(event: MouseEvent<HTMLDivElement>) {
+    const rect = event.currentTarget.getBoundingClientRect();
+
+    const x = ((event.clientX - rect.left) / rect.width) * 100;
+    const y = ((event.clientY - rect.top) / rect.height) * 100;
+
+    setZoomPosition({
+      x: Math.max(0, Math.min(100, x)),
+      y: Math.max(0, Math.min(100, y)),
+    });
+  }
+
+  function handlePreviousThumb() {
+    if (hasRealImages) {
+      setActiveThumb((current) =>
+        current === 0 ? realImages.length - 1 : current - 1,
+      );
+      return;
+    }
+
+    setActiveThumb((current) => (current === 0 ? 2 : current - 1));
+  }
+
+  function handleNextThumb() {
+    if (hasRealImages) {
+      setActiveThumb((current) =>
+        current === realImages.length - 1 ? 0 : current + 1,
+      );
+      return;
+    }
+
+    setActiveThumb((current) => (current === 2 ? 0 : current + 1));
+  }
+
+  function handleOpenConfigurator() {
+    console.info("閰嶇疆閫夋嫨绔彛棰勭暀", data.slug);
+  }
+
+  function handleAddDatasheet() {
+    console.info("娣诲姞瑙勬牸涔︾鍙ｉ鐣?, data.slug);
+  }
+
+  function handleAddDrawing() {
+    console.info("娣诲姞鍥剧焊绔彛棰勭暀", data.slug);
+  }
+
+  function handleRequest3DFile() {
+    console.info("鐢宠3D鏂囦欢绔彛棰勭暀", data.slug);
+  }
+
+  function handleAddList() {
+    console.info("鍔犲叆娓呭崟绔彛棰勭暀", data.slug);
+  }
+
+  return (
+    <div data-product-breadcrumb-shell="true">
+<SitePageShell
+      breadcrumbAriaLabel="闈㈠寘灞戝鑸?
+      breadcrumbItems={[
+        {
+          label: "棣栭〉",
+          href: "/",
+        },
+        {
+          label: "浜у搧涓績",
+          href: "/products/",
+        },
+        {
+          label: data.model,
+        },
+      ]}
+    >
+      <main className={styles.page} data-product-detail-page="true">
+      <div className={styles.container}>
+        
+        <section className={styles.productTop}>
+          <div data-product-gallery="true" className={styles.gallery} aria-label="浜у搧鍥剧墖鍖哄煙">
+            <div data-product-main-stage="true"
+              className={[
+                styles.mainImage,
+                isZooming ? styles.isZooming : "",
+              ]
+                .filter(Boolean)
+                .join(" ")}
+              style={zoomStyle}
+              onMouseEnter={() => setIsZooming(true)}
+              onMouseLeave={() => setIsZooming(false)}
+              onMouseMove={handleMainImageMove}
+            >
+              {activeRealImage ? (
+                <img data-product-main-image="true"
+                  src={activeRealImage}
+                  alt={`${data.model} ${data.name}`}
+                />
+              ) : (
+                <svg
+                  className={styles.pumpSvg}
+                  viewBox="0 0 520 310"
+                  aria-hidden="true"
+                >
+                  <g transform="translate(34, 84)">
+                    <rect
+                      x="0"
+                      y="52"
+                      width="54"
+                      height="20"
+                      fill="#ffffff"
+                      stroke="#d7dee8"
+                      strokeWidth="2"
+                    />
+                    <rect
+                      x="54"
+                      y="33"
+                      width="72"
+                      height="58"
+                      fill="#ffffff"
+                      stroke="#d7dee8"
+                      strokeWidth="2"
+                    />
+                    <rect
+                      x="126"
+                      y="16"
+                      width="72"
+                      height="92"
+                      fill="#eef2f7"
+                      stroke="#d7dee8"
+                      strokeWidth="2"
+                    />
+                    <rect
+                      x="198"
+                      y="24"
+                      width="62"
+                      height="76"
+                      fill="#ffffff"
+                      stroke="#d7dee8"
+                      strokeWidth="2"
+                    />
+                    <path
+                      d="M260 24 L320 24 L342 48 L342 76 L320 100 L260 100 Z"
+                      fill="#173368"
+                    />
+                    <rect
+                      x="342"
+                      y="38"
+                      width="78"
+                      height="48"
+                      fill="#ffffff"
+                      stroke="#d7dee8"
+                      strokeWidth="2"
+                    />
+                    <rect
+                      x="420"
+                      y="52"
+                      width="48"
+                      height="20"
+                      fill="#ffffff"
+                      stroke="#d7dee8"
+                      strokeWidth="2"
+                    />
+                    <rect
+                      x="80"
+                      y="38"
+                      width="9"
+                      height="48"
+                      fill="#173368"
+                    />
+                    <rect
+                      x="94"
+                      y="38"
+                      width="9"
+                      height="48"
+                      fill="#173368"
+                    />
+                    <line
+                      x1="202"
+                      y1="24"
+                      x2="236"
+                      y2="100"
+                      stroke="#d7dee8"
+                      strokeWidth="4"
+                    />
+                    <line
+                      x1="214"
+                      y1="24"
+                      x2="248"
+                      y2="100"
+                      stroke="#d7dee8"
+                      strokeWidth="4"
+                    />
+                  </g>
+                </svg>
+              )}
+            </div>
+
+            {showThumbnailRow ? (
+              <div data-product-thumb-row="true" className={styles.thumbRow} aria-label="缂╃暐鍥惧尯鍩?>
+                <button
+                  className={styles.thumbArrow}
+                  type="button"
+                  aria-label="涓婁竴寮?
+                  onClick={handlePreviousThumb}
+                >
+                  鈥?
+                </button>
+
+                {hasRealImages ? (
+                  realImages.slice(0, 5).map((image, index) => (
+                    <button
+                      key={`${image}-${index}`}
+                      className={[
+                        styles.thumb,
+                        activeThumb === index ? styles.isActive : "",
+                      ]
+                        .filter(Boolean)
+                        .join(" ")}
+                      type="button"
+                      onClick={() => setActiveThumb(index)}
+                    >
+                      <img src={image} alt="" />
+                    </button>
+                  ))
+                ) : (
+                  <>
+                    <button
+                      className={[
+                        styles.thumb,
+                        activeThumb === 0 ? styles.isActive : "",
+                      ]
+                        .filter(Boolean)
+                        .join(" ")}
+                      type="button"
+                      aria-label="涓昏鍥?
+                      onClick={() => setActiveThumb(0)}
+                    >
+                      <svg viewBox="0 0 120 70" aria-hidden="true">
+                        <rect
+                          x="18"
+                          y="28"
+                          width="84"
+                          height="16"
+                          fill="#ffffff"
+                          stroke="#d7dee8"
+                          strokeWidth="2"
+                        />
+                        <path
+                          d="M72 20 L94 20 L104 30 L104 40 L94 50 L72 50 Z"
+                          fill="#173368"
+                        />
+                      </svg>
+                    </button>
+
+                    <button
+                      className={[
+                        styles.thumb,
+                        activeThumb === 1 ? styles.isActive : "",
+                      ]
+                        .filter(Boolean)
+                        .join(" ")}
+                      type="button"
+                      aria-label="渚ц鍥?
+                      onClick={() => setActiveThumb(1)}
+                    >
+                      <svg viewBox="0 0 120 70" aria-hidden="true">
+                        <rect
+                          x="26"
+                          y="19"
+                          width="54"
+                          height="32"
+                          fill="#ffffff"
+                          stroke="#d7dee8"
+                          strokeWidth="2"
+                        />
+                        <rect
+                          x="80"
+                          y="15"
+                          width="18"
+                          height="40"
+                          fill="#173368"
+                        />
+                      </svg>
+                    </button>
+
+                    <button
+                      className={[
+                        styles.thumb,
+                        activeThumb === 2 ? styles.isActive : "",
+                      ]
+                        .filter(Boolean)
+                        .join(" ")}
+                      type="button"
+                      aria-label="鎺ュ彛缁嗚妭"
+                      onClick={() => setActiveThumb(2)}
+                    >
+                      <svg viewBox="0 0 120 70" aria-hidden="true">
+                        <circle
+                          cx="60"
+                          cy="35"
+                          r="22"
+                          fill="#ffffff"
+                          stroke="#d7dee8"
+                          strokeWidth="2"
+                        />
+                        <circle
+                          cx="60"
+                          cy="35"
+                          r="7"
+                          fill="#173368"
+                        />
+                      </svg>
+                    </button>
+                  </>
+                )}
+
+                <button
+                  className={styles.thumbArrow}
+                  type="button"
+                  aria-label="涓嬩竴寮?
+                  onClick={handleNextThumb}
+                >
+                  鈥?
+                </button>
+              </div>
+            ) : null}
+          </div>
+
+          <div className={styles.productInfo}>
+            <div className={styles.titleGroup}>
+              <h1 className={styles.productModelTitle}>{data.model}</h1>
+              {/* 详情页顶部只显示具体型号，不再显示“常规柱塞泵”这类通用产品名称 */}
+              {/* <div className={styles.productName}>{data.name}</div> */}
+            </div>
+
+            <p className={styles.productDesc}>
+              {data.advantages.join("")}
+            </p>
+
+            <div className={styles.application}>
+              <p className={styles.applicationTitle}>甯歌搴旂敤锛?/p>
+              <p className={styles.applicationText}>
+                {data.commonApplications.join("銆?)}
+              </p>
+            </div>
+
+            <div className={styles.operationArea}>
+              <div data-product-model-row="true" className={styles.modelLine}>
+                <div className={styles.modelCodeWrap}>
+                  <span className={styles.modelLabel}>鍨嬪彿锛?/span>
+                  <span className={styles.modelCode}>{data.model}</span>
+                </div>
+
+                {data.showConfigurator ? (
+                  <button
+                    className={styles.button}
+                    type="button"
+                    onClick={handleOpenConfigurator}
+                  >
+                    閰嶇疆閫夋嫨
+                  </button>
+                ) : null}
+              </div>
+
+              <div data-product-action-grid="true" className={styles.actionRow}>
+                {data.showDatasheetRequest ? (
+                  <button
+                    className={styles.button}
+                    type="button"
+                    onClick={handleAddDatasheet}
+                  >
+                    娣诲姞瑙勬牸涔?
+                  </button>
+                ) : null}
+
+                {data.showDrawingRequest ? (
+                  <button
+                    className={styles.button}
+                    type="button"
+                    onClick={handleAddDrawing}
+                  >
+                    娣诲姞鍥剧焊
+                  </button>
+                ) : null}
+
+                {data.show3DRequest ? (
+                  <button
+                    className={styles.button}
+                    type="button"
+                    onClick={handleRequest3DFile}
+                  >
+                    鐢宠3D鏂囦欢
+                  </button>
+                ) : null}
+
+                <button
+                  className={styles.button}
+                  type="button"
+                  onClick={handleAddList}
+                >
+                  鍔犲叆娓呭崟
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.detailSection}>
+          <nav className={styles.tabNav} aria-label="浜у搧璧勬枡鍒囨崲">
+            <button
+              className={[
+                styles.tabButton,
+                activeTab === "spec" ? styles.isActive : "",
+              ]
+                .filter(Boolean)
+                .join(" ")}
+              type="button"
+              onClick={() => setActiveTab("spec")}
+            >
+              瑙勬牸
+            </button>
+
+            <button
+              className={[
+                styles.tabButton,
+                activeTab === "model3d" ? styles.isActive : "",
+              ]
+                .filter(Boolean)
+                .join(" ")}
+              type="button"
+              onClick={() => setActiveTab("model3d")}
+            >
+              3D妯″瀷
+            </button>
+
+            <button
+              className={[
+                styles.tabButton,
+                activeTab === "drawing" ? styles.isActive : "",
+              ]
+                .filter(Boolean)
+                .join(" ")}
+              type="button"
+              onClick={() => setActiveTab("drawing")}
+            >
+              闆朵欢鍥?
+            </button>
+          </nav>
+
+          <div className={styles.panelWrap}>
+            <div
+              className={[
+                styles.panel,
+                activeTab === "spec" ? styles.isActive : "",
+              ]
+                .filter(Boolean)
+                .join(" ")}
+            >
+              <div
+                className={[
+                  styles.panelBox,
+                  styles.specPanelClean,
+                ].join(" ")}
+              >
+                <table className={styles.specTable}>
+                  <tbody>
+                    {data.specs.map((item) => (
+                      <tr data-product-spec-row="true" key={`${item.label}-${item.value}`}>
+                        <th>{item.label}</th>
+                        <td>{item.value}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div
+              className={[
+                styles.panel,
+                activeTab === "model3d" ? styles.isActive : "",
+              ]
+                .filter(Boolean)
+                .join(" ")}
+            >
+              <div className={styles.panelBox}>
+                <ProductModelViewer
+                  slug={data.slug}
+                  modelName={data.model}
+                />
+              </div>
+            </div>
+
+            <div
+              className={[
+                styles.panel,
+                activeTab === "drawing" ? styles.isActive : "",
+              ]
+                .filter(Boolean)
+                .join(" ")}
+            >
+              {getProductDrawingPreviewUrl(data.slug) ? (
+                <PdfDrawingPreview
+                  pdfPreviewUrl={getProductDrawingPreviewUrl(data.slug)}
+                  documentTitle={data.model}
+                />
+              ) : (
+                <div className={styles.panelBox}>
+                  褰撳墠浜у搧灏氭湭閰嶇疆鍏紑 2D 闆朵欢鍥俱€?
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    </SitePageShell>
+</div>
+  );
+}

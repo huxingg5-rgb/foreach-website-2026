@@ -1,0 +1,426 @@
+/* =========================================================
+   material-compatibility.css
+   恒永达官网｜材料兼容页面专用样式
+
+   文件路径：
+   app/resources/material-compatibility/material-compatibility.css
+
+   说明：
+   1. 本文件只服务材料兼容页面
+   2. 不要放进 app/globals.css
+   3. Banner 高度按要求固定为 520px
+   4. 搜索栏本身使用已有 ResourceSearchBar 组件样式
+========================================================= */
+
+:root {
+  --mc-blue: #173368;
+  --mc-blue-deep: #10264f;
+  --mc-cyan: #09e9b4;
+  --mc-text: #14213d;
+  --mc-muted: #667085;
+  --mc-line: #d9e0ec;
+  --mc-soft: #f5f8fc;
+  --mc-row: #eef1f5;
+  --mc-white: #ffffff;
+  --mc-page-max: 1600px;
+}
+
+.material-compatibility-page {
+  background: #ffffff;
+  color: var(--mc-text);
+}
+
+/* =========================================================
+   Banner
+   说明：
+   1. 高度固定 520px
+   2. 保持深蓝 + 荧光青官网风格
+========================================================= */
+
+.material-compatibility-banner {
+  height: 520px;
+  min-height: 520px;
+  position: relative;
+  overflow: hidden;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(16, 38, 79, 0.88) 0%,
+      rgba(23, 51, 104, 0.72) 34%,
+      rgba(23, 51, 104, 0.22) 62%,
+      rgba(255, 255, 255, 0.08) 100%
+    ),
+    url("/images/resources/material-compatibility/banner/resources-material-compatibility-banner-yellow-clear-pellets-1920x520-v001.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.material-compatibility-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(16, 38, 79, 0.18) 0%,
+    rgba(16, 38, 79, 0.06) 48%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  pointer-events: none;
+}
+
+.material-compatibility-banner__inner {
+  width: min(var(--mc-page-max), calc(100% - 64px));
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================================================
+   Banner 文案区域
+   说明：
+   1. 放宽内容区宽度，避免西语标题过早换行
+   2. 桌面端标题强制一排显示
+   3. 小屏幕再恢复自动换行，避免溢出
+========================================================= */
+.material-compatibility-banner__content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1320px;
+  padding: 0 40px;
+}
+
+.material-compatibility-banner__content h1 {
+  margin: 0 0 24px;
+  max-width: none;
+  color: #ffffff;
+  font-size: clamp(56px, 4.4vw, 56px);
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+  font-weight: 600;
+  white-space: nowrap;
+} 
+
+.material-compatibility-banner__content h1 span {
+  display: inline;
+}
+
+.material-compatibility-banner__desc {
+  max-width: 860px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.material-compatibility-banner__desc {
+  max-width: 720px;
+  margin: 24px 0 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+/* =========================================================
+   主体区域
+========================================================= */
+
+.material-compatibility-main {
+  background: #ffffff;
+  padding: 48px 0 90px;
+}
+
+.material-compatibility-main__inner {
+  width: min(var(--mc-page-max), calc(100% - 64px));
+  margin: 0 auto;
+}
+
+/* =========================================================
+   三个切换按钮
+========================================================= */
+
+.material-compatibility-tabs {
+  width: min(800px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.material-compatibility-tab {
+  height: 58px;
+  border: 1px solid var(--mc-line);
+  border-left: none;
+  color: var(--mc-blue);
+  background: #ffffff;
+  font-size: 18px;
+  font-weight: 800;
+  transition: all 0.22s ease;
+}
+
+.material-compatibility-tab:first-child {
+  border-left: 1px solid var(--mc-line);
+}
+
+.material-compatibility-tab.is-active {
+  color: var(--mc-cyan);
+  background: var(--mc-blue);
+  border-color: #0b1f44;
+  box-shadow: inset 0 0 0 1px #0b1f44;
+}
+
+.material-compatibility-tab:not(.is-active):hover {
+  color: var(--mc-blue);
+  background: #f8fafc;
+  border-color: rgba(23, 51, 104, 0.28);
+}
+
+/* =========================================================
+   搜索栏外层
+   说明：
+   搜索栏内部样式由已有 ResourceSearchBar 组件控制。
+========================================================= */
+
+/* =========================================================
+   搜索栏外层
+   说明：
+   1. 搜索栏组件使用 ResourceSearchBar 
+   2. ResourceSearchBar 的 frp-* 样式来自已有查询页 CSS
+   3. 这里不重写搜索栏样式，只控制这一整块区域全屏铺开
+   4. 让灰色搜索背景和之前查询页一样左右满屏
+========================================================= */
+
+.material-compatibility-search {
+  width: 100vw;
+  margin: 24px 0 48px;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+/* =========================================================
+   表格标题
+========================================================= */
+
+.material-compatibility-head {
+  margin-bottom: 22px;
+}
+
+.material-compatibility-head h2 {
+  margin: 0;
+  color: var(--mc-blue);
+  font-size: 32px;
+  line-height: 1.25;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.material-compatibility-head p {
+  margin: 10px 0 0;
+  color: var(--mc-muted);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   表格面板
+========================================================= */
+
+.material-compatibility-panel {
+  background: #ffffff;
+  border: 1px solid var(--mc-line);
+}
+
+.material-compatibility-note {
+  padding: 16px 20px;
+  color: var(--mc-muted);
+  background: #f8fafc;
+  border-bottom: 1px solid var(--mc-line);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.material-compatibility-note strong {
+  color: var(--mc-blue);
+}
+
+.material-compatibility-table-wrap {
+  overflow-x: auto;
+}
+
+.material-compatibility-table {
+  width: 100%;
+  min-width: 1080px;
+  border-collapse: collapse;
+  background: #ffffff;
+}
+
+.material-compatibility-table th,
+.material-compatibility-table td {
+  height: 48px;
+  padding: 0 16px;
+  text-align: center;
+  white-space: nowrap;
+  border-bottom: 1px solid #ffffff;
+}
+
+.material-compatibility-table th {
+  color: #ffffff;
+  background: var(--mc-blue);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.material-compatibility-table th:first-child,
+.material-compatibility-table td:first-child {
+  text-align: left;
+  padding-left: 26px;
+  font-weight: 800;
+}
+
+.material-compatibility-table tbody tr:nth-child(odd) {
+  background: #ffffff;
+}
+
+.material-compatibility-table tbody tr:nth-child(even) {
+  background: var(--mc-row);
+}
+
+.material-compatibility-table tbody tr:hover {
+  background: rgba(9, 233, 180, 0.12);
+}
+
+/* 材料特性表文字较长，需要允许换行 */
+.material-compatibility-table--text th,
+.material-compatibility-table--text td {
+  white-space: normal;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   表格符号
+   说明：
+   这里不加任何背景色块，只保留文字颜色。
+========================================================= */
+
+.material-compatibility-mark {
+  display: inline-grid;
+  min-width: 38px;
+  height: 30px;
+  place-items: center;
+  color: #111827;
+  font-weight: 900;
+  background: transparent;
+}
+
+.material-compatibility-mark.is-good {
+  color: var(--mc-blue);
+}
+
+.material-compatibility-mark.is-caution {
+  color: #8a5a00;
+}
+
+.material-compatibility-mark.is-bad {
+  color: #9b1c1c;
+}
+
+.material-compatibility-table .is-empty td {
+  height: 96px;
+  color: var(--mc-muted);
+  background: #ffffff;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* =========================================================
+   响应式
+========================================================= */
+
+@media (max-width: 980px) {
+  .material-compatibility-banner {
+    height: 520px;
+    min-height: 520px;
+    background: linear-gradient(135deg, var(--mc-blue-deep), var(--mc-blue));
+  }
+
+  .material-compatibility-banner__inner,
+  .material-compatibility-main__inner {
+    width: calc(100% - 32px);
+  }
+
+  .material-compatibility-tabs {
+    grid-template-columns: 1fr;
+  }
+
+  .material-compatibility-tab {
+    border-left: 1px solid var(--mc-line);
+    border-top: none;
+  }
+
+  .material-compatibility-tab:first-child {
+    border-top: 1px solid var(--mc-line);
+  }
+}
+
+@media (max-width: 560px) {
+  .material-compatibility-banner {
+    height: 520px;
+    min-height: 520px;
+  }
+
+  .material-compatibility-banner h1 {
+    font-size: 38px;
+  }
+
+  .material-compatibility-banner__desc {
+    font-size: 16px;
+  }
+
+  .material-compatibility-main {
+    padding: 36px 0 70px;
+  }
+
+  .material-compatibility-tab {
+    height: 54px;
+    font-size: 16px;
+  }
+
+  .material-compatibility-head h2 {
+    font-size: 28px;
+  }
+} 
+
+@media (max-width: 1280px) {
+  .material-compatibility-banner__content {
+    max-width: 1000px;
+    padding: 0 32px;
+  }
+
+  .material-compatibility-banner__content h1 {
+    font-size: clamp(44px, 5.6vw, 72px);
+    white-space: normal;
+  }
+
+  .material-compatibility-banner__desc {
+    max-width: 760px;
+  }
+}
+
+@media (max-width: 768px) {
+  .material-compatibility-banner__content {
+    padding: 0 20px;
+  }
+
+  .material-compatibility-banner__content h1 {
+    margin-bottom: 18px;
+    font-size: clamp(32px, 9vw, 48px);
+    line-height: 1.14;
+  }
+
+  .material-compatibility-banner__desc {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+} 

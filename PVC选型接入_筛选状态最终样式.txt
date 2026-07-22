@@ -1,0 +1,479 @@
+
+==================================================
+一、筛选页品牌变量和页面基础
+==================================================
+ 1260: 
+ 1261: /* FOREACH_PRODUCTS_SELECTION_STANDARD_STYLE_START */
+ 1262: 
+ 1263: /* =========================================================
+ 1264:    浜у搧涓績閫夊瀷椤垫爣鍑嗘牱寮?
+ 1265: 
+ 1266:    璇存槑锛?
+ 1267:    1. 鍙傝€冩煴濉炴车閫夊瀷 H5 V7
+ 1268:    2. 鍙綔鐢ㄤ簬 .products-selection-page
+ 1269:    3. 浜у搧绫诲瀷 / 浜у搧绯诲垪鍗曞垪
+ 1270:    4. 閲忕▼ / 鏉愯川 / 瑙勬牸鍙傛暟涓ゅ垪
+ 1271:    5. 涓嶄娇鐢?!important锛岄伩鍏嶅悗缁淮鎶ゅ洶闅?
+ 1272: ========================================================= */
+ 1273: 
+ 1274: .products-selection-page {
+ 1275:   --brand-blue: #173368;
+ 1276:   --brand-cyan: #09e9b4;
+ 1277:   --text-main: #172033;
+ 1278:   --text-sub: #5f6b7a;
+ 1279:   --text-light: #8a96a8;
+ 1280:   --line: #e5ebf2;
+ 1281:   --bg-soft: #f6f9fc;
+ 1282:   background: #ffffff;
+ 1283: }
+ 1284: 
+ 1285: .products-selection-page .container {
+ 1286:   width: min(1320px, calc(100% - 56px));
+ 1287:   margin: 0 auto;
+ 1288: }
+ 1289: 
+ 1290: /* 椤堕儴鍒嗙被 */
+ 1291: .products-selection-page .category-tabs-wrap {
+ 1292:   padding: 16px 0 22px;
+ 1293:   border-bottom: 1px solid var(--line);
+ 1294:   background: #ffffff;
+ 1295: }
+ 1296: 
+ 1297: .products-selection-page .category-tabs {
+ 1298:   display: flex;
+ 1299:   align-items: center;
+ 1300:   gap: 12px;
+ 1301:   overflow-x: auto;
+ 1302: }
+ 1303: 
+ 1304: .products-selection-page .category-tab {
+ 1305:   min-height: 44px;
+ 1306:   padding: 0 22px;
+ 1307:   border-radius: 8px;
+ 1308:   border: 1px solid rgba(23, 51, 104, 0.16);
+ 1309:   background: #ffffff;
+ 1310:   color: var(--brand-blue);
+ 1311:   cursor: pointer;
+ 1312:   font-size: 15px;
+ 1313:   font-weight: 850;
+ 1314:   white-space: nowrap;
+ 1315:   transition:
+ 1316:     background 0.2s ease,
+ 1317:     border-color 0.2s ease,
+ 1318:     color 0.2s ease;
+ 1319: }
+ 1320: 
+ 1321: .products-selection-page .category-tab:hover,
+ 1322: .products-selection-page .category-tab.active {
+ 1323:   color: var(--brand-cyan);
+ 1324:   background: var(--brand-blue);
+ 1325:   border-color: var(--brand-blue);
+ 1326: }
+ 1327: 
+ 1328: .products-selection-page .mobile-category-trigger {
+ 1329:   display: none;
+ 1330: }
+ 1331: 
+ 1332: /* 涓诲竷灞€ */
+ 1333: .products-selection-page .selection-section {
+ 1334:   padding-top: 24px;
+ 1335: }
+
+==================================================
+二、筛选项默认、悬停、选中和圆点状态
+==================================================
+ 1390:   cursor: default;
+ 1391:   font-family: inherit;
+ 1392:   font-size: 14px;
+ 1393:   font-weight: 920;
+ 1394:   line-height: 1.35;
+ 1395:   text-align: left;
+ 1396: }
+ 1397: 
+ 1398: .products-selection-page .filter-group-symbol {
+ 1399:   display: none;
+ 1400: }
+ 1401: 
+ 1402: .products-selection-page .filter-options {
+ 1403:   display: grid;
+ 1404:   gap: 8px;
+ 1405:   padding: 0 12px 16px;
+ 1406: }
+ 1407: 
+ 1408: .products-selection-page .filter-options.one {
+ 1409:   grid-template-columns: 1fr;
+ 1410: }
+ 1411: 
+ 1412: .products-selection-page .filter-options.two {
+ 1413:   grid-template-columns: repeat(2, minmax(0, 1fr));
+ 1414: }
+ 1415: 
+ 1416: .products-selection-page .filter-option,
+ 1417: .products-selection-page .filter-btn {
+ 1418:   min-height: 42px;
+ 1419:   padding: 0 12px;
+ 1420:   display: flex;
+ 1421:   align-items: center;
+ 1422:   justify-content: flex-start;
+ 1423:   gap: 12px;
+ 1424:   border: 1px solid transparent;
+ 1425:   border-radius: 0;
+ 1426:   background: #f3f6f9;
+ 1427:   color: var(--text-main);
+ 1428:   cursor: pointer;
+ 1429:   font-family: inherit;
+ 1430:   font-size: 14px;
+ 1431:   font-weight: 780;
+ 1432:   line-height: 1.2;
+ 1433:   text-align: left;
+ 1434:   transition:
+ 1435:     background 0.18s ease,
+ 1436:     color 0.18s ease,
+ 1437:     border-color 0.18s ease;
+ 1438: }
+ 1439: 
+ 1440: .products-selection-page .filter-option:hover,
+ 1441: .products-selection-page .filter-btn:hover {
+ 1442:   background: #f8fffd;
+ 1443:   color: var(--brand-blue);
+ 1444: }
+ 1445: 
+ 1446: .products-selection-page .filter-option.active,
+ 1447: .products-selection-page .filter-btn.active {
+ 1448:   background: #eefbf7;
+ 1449:   color: var(--brand-blue);
+ 1450: }
+ 1451: 
+ 1452: .products-selection-page .filter-check,
+ 1453: .products-selection-page .filter-control {
+ 1454:   position: relative;
+ 1455:   width: 12px;
+ 1456:   height: 12px;
+ 1457:   flex: 0 0 auto;
+ 1458:   border: 1.5px solid #b9c5d3;
+ 1459:   background: #ffffff;
+ 1460:   transition:
+ 1461:     border-color 0.18s ease,
+ 1462:     background 0.18s ease,
+ 1463:     box-shadow 0.18s ease;
+ 1464: }
+ 1465: 
+ 1466: .products-selection-page .filter-btn.is-single .filter-control,
+ 1467: .products-selection-page .filter-option.is-single .filter-check {
+ 1468:   border-radius: 50%;
+ 1469: }
+ 1470: 
+ 1471: .products-selection-page .filter-btn.is-multi .filter-control,
+ 1472: .products-selection-page .filter-option.is-multi .filter-check {
+ 1473:   border-radius: 3px;
+ 1474: }
+ 1475: 
+ 1476: .products-selection-page .filter-btn:hover .filter-control,
+ 1477: .products-selection-page .filter-option:hover .filter-check {
+ 1478:   border-color: var(--brand-cyan);
+ 1479: }
+ 1480: 
+ 1481: .products-selection-page .filter-btn.active .filter-control,
+ 1482: .products-selection-page .filter-option.active .filter-check {
+ 1483:   background: var(--brand-cyan);
+ 1484:   border-color: var(--brand-cyan);
+ 1485:   box-shadow: 0 0 0 5px rgba(9, 233, 180, 0.14);
+ 1486: }
+ 1487: 
+ 1488: .products-selection-page .filter-btn.is-single.active .filter-control::after,
+ 1489: .products-selection-page .filter-option.is-single.active .filter-check::after {
+ 1490:   content: "";
+ 1491:   position: absolute;
+ 1492:   left: 50%;
+ 1493:   top: 50%;
+ 1494:   width: 5px;
+ 1495:   height: 5px;
+ 1496:   border-radius: 50%;
+ 1497:   background: #ffffff;
+ 1498:   transform: translate(-50%, -50%);
+ 1499: }
+ 1500: 
+ 1501: .products-selection-page .filter-btn.is-multi.active .filter-control::after,
+ 1502: .products-selection-page .filter-option.is-multi.active .filter-check::after {
+ 1503:   content: "\2713";
+ 1504:   position: absolute;
+ 1505:   left: 50%;
+ 1506:   top: 50%;
+ 1507:   color: var(--brand-blue);
+ 1508:   font-size: 10px;
+ 1509:   font-weight: 950;
+ 1510:   line-height: 1;
+ 1511:   transform: translate(-50%, -54%);
+ 1512: }
+ 1513: 
+ 1514: .products-selection-page .filter-panel-actions {
+ 1515:   display: grid;
+ 1516:   grid-template-columns: 1fr 1fr;
+ 1517:   gap: 10px;
+ 1518:   padding: 14px;
+ 1519:   background: #ffffff;
+ 1520: }
+ 1521: 
+ 1522: .products-selection-page .filter-panel-actions button {
+ 1523:   min-height: 40px;
+ 1524:   border-radius: 8px;
+ 1525:   border: 1px solid rgba(23, 51, 104, 0.16);
+
+==================================================
+三、筛选项布局和筛选组样式
+==================================================
+ 1840:     justify-content: space-between;
+ 1841:     border: 1px solid rgba(23, 51, 104, 0.16);
+ 1842:     border-radius: 8px;
+ 1843:     background: var(--brand-blue);
+ 1844:     color: var(--brand-cyan);
+ 1845:     font-size: 15px;
+ 1846:     font-weight: 900;
+ 1847:   }
+ 1848: 
+ 1849:   .products-selection-page .category-tabs {
+ 1850:     display: none;
+ 1851:     margin-top: 12px;
+ 1852:     grid-template-columns: repeat(2, minmax(0, 1fr));
+ 1853:     gap: 10px;
+ 1854:   }
+ 1855: 
+ 1856:   .products-selection-page .category-tabs-wrap.is-mobile-open .category-tabs {
+ 1857:     display: grid;
+ 1858:   }
+ 1859: 
+ 1860:   .products-selection-page .category-tab {
+ 1861:     width: 100%;
+ 1862:   }
+ 1863: 
+ 1864:   .products-selection-page .filter-group-title,
+ 1865:   .products-selection-page .filter-group-trigger {
+ 1866:     min-height: 52px;
+ 1867:     padding: 0 16px;
+ 1868:     cursor: pointer;
+ 1869:   }
+ 1870: 
+ 1871:   .products-selection-page .filter-group-symbol {
+ 1872:     display: inline-flex;
+ 1873:   }
+ 1874: 
+ 1875:   .products-selection-page .filter-group .filter-options {
+ 1876:     display: none;
+ 1877:     padding: 0 16px 16px;
+ 1878:   }
+ 1879: 
+ 1880:   .products-selection-page .filter-group.is-mobile-open .filter-options {
+ 1881:     display: grid;
+ 1882:   }
+ 1883: 
+ 1884:   .products-selection-page .filter-options.two {
+ 1885:     grid-template-columns: 1fr;
+ 1886:   }
+ 1887: 
+ 1888:   .products-selection-page .product-toolbar {
+ 1889:     align-items: flex-start;
+ 1890:     flex-direction: column;
+ 1891:   }
+ 1892: 
+ 1893:   .products-selection-page .product-grid {
+ 1894:     grid-template-columns: repeat(2, minmax(0, 1fr));
+ 1895:     gap: 12px;
+ 1896:   }
+ 1897: 
+ 1898:   .products-selection-page .product-card {
+ 1899:     min-height: auto;
+ 1900:   }
+ 1901: 
+ 1902:   .products-selection-page .product-image {
+ 1903:     width: 100%;
+ 1904:     aspect-ratio: 1 / 1;
+ 1905:     height: auto;
+
+==================================================
+四、后置禁用状态覆盖一
+==================================================
+ 3525:     .filter-options,
+ 3526:   .filter-panel[data-product-type-id="thread-to-barbed-fittings"]
+ 3527:     [data-filter-key="filter01"]
+ 3528:     .filter-options {
+ 3529:     grid-template-columns: minmax(0, 1fr) !important;
+ 3530:   }
+ 3531: }
+ 3532: 
+ 3533: /* THREAD_TO_BARBED_FILTER_LAYOUT_FINAL_END */
+ 3534: 
+ 3535: /* =========================================================
+ 3536:    THREAD_TO_BARBED_GENERIC_DISABLED_STYLE_START
+ 3537: 
+ 3538:    螺纹转倒刺接头：
+ 3539:    当前筛选组合中不存在的选项保留显示，
+ 3540:    但变灰并禁止点击。
+ 3541:    ========================================================= */
+ 3542: 
+ 3543: .products-selection-page
+ 3544:   .filter-panel[data-product-type-id="thread-to-barbed-fittings"]
+ 3545:   .filter-option.is-disabled,
+ 3546: .products-selection-page
+ 3547:   .filter-panel[data-product-type-id="thread-to-barbed-fittings"]
+ 3548:   .filter-option:disabled {
+ 3549:   border-color: #e4e8ed !important;
+ 3550:   background: #f1f3f6 !important;
+ 3551:   color: #a5adba !important;
+ 3552:   cursor: not-allowed !important;
+ 3553:   opacity: 1 !important;
+ 3554: }
+ 3555: 
+ 3556: .products-selection-page
+ 3557:   .filter-panel[data-product-type-id="thread-to-barbed-fittings"]
+ 3558:   .filter-option.is-disabled
+ 3559:   .filter-check,
+ 3560: .products-selection-page
+ 3561:   .filter-panel[data-product-type-id="thread-to-barbed-fittings"]
+ 3562:   .filter-option:disabled
+ 3563:   .filter-check {
+ 3564:   border-color: #c7ced8 !important;
+ 3565:   background: transparent !important;
+ 3566:   box-shadow: none !important;
+ 3567: }
+ 3568: 
+ 3569: .products-selection-page
+ 3570:   .filter-panel[data-product-type-id="thread-to-barbed-fittings"]
+ 3571:   .filter-option.is-disabled:hover,
+ 3572: .products-selection-page
+ 3573:   .filter-panel[data-product-type-id="thread-to-barbed-fittings"]
+ 3574:   .filter-option:disabled:hover {
+ 3575:   border-color: #e4e8ed !important;
+ 3576:   background: #f1f3f6 !important;
+ 3577:   color: #a5adba !important;
+ 3578:   transform: none !important;
+ 3579: }
+ 3580: 
+ 3581: /* THREAD_TO_BARBED_GENERIC_DISABLED_STYLE_END */
+ 3582: 
+ 3583: 
+ 3584: 
+ 3585: /* =========================================================
+
+==================================================
+五、后置禁用状态覆盖二
+==================================================
+ 3585: /* =========================================================
+ 3586:    LUER_FILTER_DISABLED_STYLE_START
+ 3587: 
+ 3588:    鲁尔接头无对应型号的筛选项：
+ 3589:    保留显示、灰色、不可点击。
+ 3590:    ========================================================= */
+ 3591: 
+ 3592: .filter-panel[data-product-type-id="luer-fittings"]
+ 3593:   .filter-option.is-disabled,
+ 3594: .filter-panel[data-product-type-id="luer-fittings"]
+ 3595:   .filter-option:disabled {
+ 3596:   border-color: #e4e8ed !important;
+ 3597:   background: #f1f3f6 !important;
+ 3598:   color: #a8b0bc !important;
+ 3599:   cursor: not-allowed !important;
+ 3600:   opacity: 1 !important;
+ 3601: }
+ 3602: 
+ 3603: .filter-panel[data-product-type-id="luer-fittings"]
+ 3604:   .filter-option.is-disabled
+ 3605:   .filter-check,
+ 3606: .filter-panel[data-product-type-id="luer-fittings"]
+ 3607:   .filter-option:disabled
+ 3608:   .filter-check {
+ 3609:   border-color: #cbd2dc !important;
+ 3610:   background: #e6e9ed !important;
+ 3611:   box-shadow: none !important;
+ 3612: }
+ 3613: 
+ 3614: .filter-panel[data-product-type-id="luer-fittings"]
+ 3615:   .filter-option.is-disabled:hover,
+ 3616: .filter-panel[data-product-type-id="luer-fittings"]
+ 3617:   .filter-option:disabled:hover {
+ 3618:   border-color: #e4e8ed !important;
+ 3619:   background: #f1f3f6 !important;
+ 3620:   color: #a8b0bc !important;
+ 3621:   transform: none !important;
+ 3622: }
+ 3623: 
+ 3624: /* LUER_FILTER_DISABLED_STYLE_END */
+ 3625: 
+ 3626: /* VALVE_SERIES_FILTER_THREE_COLUMNS_START */
+ 3627: 
+ 3628: /*
+ 3629:  * 阀系列的三个筛选项在PC端同一行显示。
+ 3630:  * 该规则只作用于阀系列，不影响泵、针、接头和其他筛选页面。
+
+==================================================
+六、移动端筛选选项布局
+==================================================
+ 3630:  * 该规则只作用于阀系列，不影响泵、针、接头和其他筛选页面。
+ 3631:  */
+ 3632: @media (min-width: 761px) {
+ 3633:   .products-selection-page
+ 3634:     .filter-panel[data-category-id="valves"]
+ 3635:     .product-type-filter-group
+ 3636:     .filter-options {
+ 3637:     grid-template-columns: repeat(
+ 3638:       3,
+ 3639:       minmax(0, 1fr)
+ 3640:     );
+ 3641:     gap: 6px;
+ 3642:   }
+ 3643: 
+ 3644:   .products-selection-page
+ 3645:     .filter-panel[data-category-id="valves"]
+ 3646:     .product-type-filter-group
+ 3647:     .filter-option {
+ 3648:     min-width: 0;
+ 3649:     padding-left: 8px;
+ 3650:     padding-right: 8px;
+ 3651:   }
+ 3652: }
+ 3653: 
+ 3654: /* VALVE_SERIES_FILTER_THREE_COLUMNS_END */
+ 3655: 
+ 3656: /* MOBILE_FILTER_COLLAPSE_V2_CSS_START */
+ 3657: 
+ 3658: /*
+ 3659:  * 手机端普通筛选组默认收起。
+ 3660:  */
+ 3661: @media (max-width: 760px) {
+ 3662:   .products-selection-page
+ 3663:     .filter-panel
+ 3664:     .filter-group:not(.is-mobile-open)
+ 3665:     .filter-options {
+ 3666:     display: none !important;
+ 3667:   }
+ 3668: 
+ 3669:   .products-selection-page
+ 3670:     .filter-panel
+ 3671:     .filter-group.is-mobile-open
+ 3672:     .filter-options {
+ 3673:     display: grid !important;
+ 3674:   }
+ 3675: 
+ 3676:   .products-selection-page
+ 3677:     .barbed-port-filter-wrapper {
+ 3678:     border-bottom: 1px solid var(--line);
+ 3679:   }
+ 3680: 
+ 3681:   .products-selection-page
+ 3682:     .barbed-port-mobile-trigger {
+ 3683:     display: flex !important;
+ 3684:   }
+ 3685: 
+ 3686:   .products-selection-page
+ 3687:     .barbed-port-filter-body {
+ 3688:     display: none !important;
+ 3689:   }
+ 3690: 
+
+==================================================
+七、文件尾部是否还有更高优先级覆盖
+==================================================
+ 4016: .filter-options {
+ 4082: > .filter-options,
+ 4086: > .filter-options,
+ 4090: > .filter-options,
+ 4094: > .filter-options {

@@ -1,0 +1,18 @@
+[
+  {
+    "from": "audit-reports/fitting-replacement-direct-remove/20260720-182341/构建失败时的修改文件/all-compatible-products.generated.ts",
+    "to": "audit-reports/fitting-replacement-direct-remove/20260720-182341/构建失败时的修改文件/all-compatible-products.generated.ts.txt"
+  },
+  {
+    "from": "audit-reports/fitting-replacement-direct-remove/20260720-182341/构建失败时的修改文件/compatible-models.generated.ts",
+    "to": "audit-reports/fitting-replacement-direct-remove/20260720-182341/构建失败时的修改文件/compatible-models.generated.ts.txt"
+  },
+  {
+    "from": "audit-reports/fitting-replacement-direct-remove/20260720-182502/构建失败时的修改文件/all-compatible-products.generated.ts",
+    "to": "audit-reports/fitting-replacement-direct-remove/20260720-182502/构建失败时的修改文件/all-compatible-products.generated.ts.txt"
+  },
+  {
+    "from": "audit-reports/fitting-replacement-direct-remove/20260720-182502/构建失败时的修改文件/compatible-models.generated.ts",
+    "to": "audit-reports/fitting-replacement-direct-remove/20260720-182502/构建失败时的修改文件/compatible-models.generated.ts.txt"
+  }
+]

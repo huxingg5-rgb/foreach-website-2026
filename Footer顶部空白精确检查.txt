@@ -1,0 +1,323 @@
+﻿Footer 顶部空白精确检查
+生成时间：2026-07-17 13:45:48
+SiteFooter：F:\WebsiteProjects\foreach-website-2026\components\layout\SiteFooter.tsx
+Footer CSS：F:\WebsiteProjects\foreach-website-2026\components\layout\SiteFooterSocial.module.css
+
+============================================================
+一、SiteFooter 根节点结构
+============================================================
+
+------------------------------------------------------------
+      48:     label: "X",
+      49:     href: "https://x.com/ForeachFluid",
+      50:     icon: "/images/social-media/international/x.svg",
+      51:   },
+      52: ] as const;
+      53: 
+      54: export default function SiteFooter({ locale }: SiteFooterProps) {
+      55:   const pathname = usePathname();
+      56:   const activeLocale = locale ?? getLocaleFromPathname(pathname);
+      57:   const showEnglishSocialLinks = activeLocale === "en";
+      58:   const [openColumn, setOpenColumn] = useState("");
+      59: 
+      60:   const mapHref = getSiteFooterHref(siteFooterData.mapHref, activeLocale);
+      61:   const emailHref = getSiteFooterHref(siteFooterData.emailHref, activeLocale);
+      62:   const phoneHref = getSiteFooterHref(siteFooterData.phoneHref, activeLocale);
+      63:   const icpText = getSiteFooterText(siteFooterData.icp, activeLocale);
+      64:   const icpHref = getSiteFooterHref(siteFooterData.icpHref, activeLocale);
+      65:   const labelSeparator = activeLocale === "zh-CN" ? "：" : ": ";
+      66: 
+      67:   return (
+>>    68:     <footer className="site-footer">
+      69:       <div className="site-footer__main">
+      70:         <div className="site-footer__inner">
+      71:           <div className="site-footer__nav-wrap">
+      72:             {siteFooterData.columns.map((column) => {
+      73:               const isOpen = openColumn === column.key;
+      74:               const columnTitle = getSiteFooterText(column.title, activeLocale);
+      75: 
+      76:               return (
+      77:                 <nav
+      78:                   key={column.key}
+      79:                   className={`site-footer__column ${isOpen ? "is-open" : ""}`}
+      80:                   aria-label={columnTitle}
+      81:                 >
+      82:                   <button
+      83:                     className="site-footer__title"
+      84:                     type="button"
+      85:                     aria-expanded={isOpen}
+      86:                     onClick={() => setOpenColumn(isOpen ? "" : column.key)}
+      87:                   >
+      88:                     {columnTitle}
+      89:                   </button>
+      90: 
+      91:                   <ul className="site-footer__list">
+      92:                     {column.links.map((link) => (
+      93:                       <li key={link.key}>
+      94:                         <Link href={getSiteFooterHref(link.href, activeLocale)}>
+      95:                           {getSiteFooterText(link.label, activeLocale)}
+      96:                         </Link>
+      97:                       </li>
+      98:                     ))}
+      99:                   </ul>
+     100:                 </nav>
+     101:               );
+     102:             })}
+     103:           </div>
+     104: 
+     105:           <div className="site-footer__right">
+     106:             <div className="site-footer__contact">
+     107:               <p className="site-footer__company">
+     108:                 {getSiteFooterText(siteFooterData.companyName, activeLocale)}
+     109:               </p>
+     110: 
+     111:               <p className="site-footer__contact-text">
+     112:                 {getSiteFooterText(siteFooterData.addressLabel, activeLocale)}
+     113:                 {labelSeparator}
+
+------------------------------------------------------------
+     127:                 {labelSeparator}
+     128:                 <a className="site-footer__contact-link" href={emailHref}>
+     129:                   {getSiteFooterText(siteFooterData.email, activeLocale)}
+     130:                 </a>
+     131:               </p>
+     132: 
+     133:               <p className="site-footer__contact-text">
+     134:                 {getSiteFooterText(siteFooterData.phoneLabel, activeLocale)}
+     135:                 {labelSeparator}
+     136:                 <a className="site-footer__contact-link" href={phoneHref}>
+     137:                   {getSiteFooterText(siteFooterData.phone, activeLocale)}
+     138:                 </a>
+     139:               </p>
+     140:             </div>
+     141: 
+     142:             {showEnglishSocialLinks ? (
+     143:               <div
+     144:                 className={"site-footer__qrcode-area " + styles.socialArea}
+     145:               >
+     146:                 <div
+>>   147:                   className={styles.socialRow}
+     148:                   aria-label="FOREACH social media"
+     149:                 >
+     150:                   {englishSocialLinks.map((item) => (
+     151:                     <a
+>>   152:                       className={styles.socialLink}
+     153:                       href={item.href}
+     154:                       key={item.key}
+     155:                       target="_blank"
+     156:                       rel="noopener noreferrer"
+     157:                       aria-label={"Visit FOREACH on " + item.label}
+     158:                       title={item.label}
+     159:                     >
+     160:                       <img
+>>   161:                         className={styles.socialIcon}
+     162:                         src={item.icon}
+     163:                         alt=""
+     164:                         loading="lazy"
+     165:                         aria-hidden="true"
+     166:                       />
+     167:                     </a>
+     168:                   ))}
+     169:                 </div>
+     170:               </div>
+     171:             ) : (
+     172:               <div className="site-footer__qrcode-area">
+     173:                 <div className="site-footer__qr-row">
+     174:                   {siteFooterData.qrCodes.map((item) => {
+     175:                     const label = getSiteFooterText(item.label, activeLocale);
+     176:                     const imageSrc = item.image ? getSiteFooterHref(item.image, activeLocale) : "";
+     177:   
+     178:                     return (
+     179:                       <div className="site-footer__qrcode-item" key={item.key}>
+     180:                         <div className="site-footer__qrcode-box">
+     181:                           {imageSrc ? (
+     182:                             <img
+     183:                               src={imageSrc}
+     184:                               alt={
+     185:                                 activeLocale === "zh-CN"
+     186:                                   ? `${label}二维码`
+     187:                                   : `${label} QR code`
+     188:                               }
+     189:                               loading="lazy"
+     190:                             />
+     191:                           ) : (
+     192:                             <>
+     193:                               {label}
+     194:                               <br />
+     195:                               {getSiteFooterText(siteFooterData.qrCodePlaceholder, activeLocale)}
+     196:                             </>
+     197:                           )}
+     198:                         </div>
+     199:   
+     200:                         <span className="site-footer__qrcode-label">{label}</span>
+     201:                       </div>
+     202:                     );
+     203:                   })}
+     204:                 </div>
+     205:               </div>
+     206:             )}
+
+------------------------------------------------------------
+     211:       <div className="site-footer__bottom">
+     212:         <div className="site-footer__bottom-inner">
+     213:           <div className="site-footer__bottom-left">
+     214:             {icpText ? (
+     215:               <p>
+     216:                 <a
+     217:                   className="site-footer__icp-link"
+     218:                   href={icpHref}
+     219:                   target="_blank"
+     220:                   rel="noreferrer"
+     221:                 >
+     222:                   {icpText}
+     223:                 </a>
+     224:               </p>
+     225:             ) : null}
+     226: 
+     227:             <p>{getSiteFooterText(siteFooterData.copyright, activeLocale)}</p>
+     228:           </div>
+     229:         </div>
+     230:       </div>
+>>   231:     </footer>
+     232:   );
+     233: }
+     234: 
+
+============================================================
+二、Footer 根样式和顶部间距
+============================================================
+
+------------------------------------------------------------
+       7: }
+       8: 
+       9: .socialRow {
+      10:   display: flex;
+      11:   align-items: center;
+      12:   gap: 14px;
+      13:   flex-wrap: nowrap;
+      14: }
+      15: 
+      16: .socialLink {
+      17:   width: 42px;
+      18:   height: 42px;
+      19:   display: inline-flex;
+      20:   align-items: center;
+      21:   justify-content: center;
+      22:   flex: 0 0 42px;
+      23:   border: 1px solid rgba(23, 51, 104, 0.16);
+      24:   border-radius: 8px;
+>>    25:   background: rgba(255, 255, 255, 0.78);
+      26:   transition:
+      27:     transform 0.18s ease,
+      28:     border-color 0.18s ease,
+      29:     background-color 0.18s ease;
+      30: }
+      31: 
+      32: .socialLink:hover {
+      33:   transform: translateY(-2px);
+      34:   border-color: #09e9b4;
+>>    35:   background: #ffffff;
+      36: }
+      37: 
+      38: .socialLink:focus-visible {
+      39:   outline: 2px solid #09e9b4;
+      40:   outline-offset: 3px;
+      41: }
+      42: 
+      43: .socialIcon {
+      44:   width: 26px;
+      45:   height: 26px;
+      46:   display: block;
+      47:   object-fit: contain;
+      48: }
+      49: 
+      50: @media (max-width: 760px) {
+      51:   .socialRow {
+      52:     gap: 12px;
+      53:     flex-wrap: wrap;
+      54:   }
+      55: 
+      56:   .socialLink {
+      57:     width: 40px;
+      58:     height: 40px;
+      59:     flex-basis: 40px;
+      60:   }
+      61: 
+      62:   .socialIcon {
+      63:     width: 24px;
+      64:     height: 24px;
+      65:   }
+      66: }
+
+============================================================
+三、Footer 内部容器间距
+============================================================
+
+------------------------------------------------------------
+       1: .socialArea {
+       2:   width: auto !important;
+       3:   min-width: 0;
+       4:   display: flex;
+       5:   align-items: flex-start;
+       6:   justify-content: flex-start;
+       7: }
+       8: 
+       9: .socialRow {
+      10:   display: flex;
+      11:   align-items: center;
+>>    12:   gap: 14px;
+      13:   flex-wrap: nowrap;
+      14: }
+      15: 
+      16: .socialLink {
+      17:   width: 42px;
+      18:   height: 42px;
+      19:   display: inline-flex;
+      20:   align-items: center;
+      21:   justify-content: center;
+      22:   flex: 0 0 42px;
+      23:   border: 1px solid rgba(23, 51, 104, 0.16);
+      24:   border-radius: 8px;
+      25:   background: rgba(255, 255, 255, 0.78);
+      26:   transition:
+      27:     transform 0.18s ease,
+      28:     border-color 0.18s ease,
+      29:     background-color 0.18s ease;
+      30: }
+      31: 
+      32: .socialLink:hover {
+      33:   transform: translateY(-2px);
+      34:   border-color: #09e9b4;
+      35:   background: #ffffff;
+      36: }
+      37: 
+      38: .socialLink:focus-visible {
+      39:   outline: 2px solid #09e9b4;
+      40:   outline-offset: 3px;
+      41: }
+      42: 
+      43: .socialIcon {
+      44:   width: 26px;
+      45:   height: 26px;
+      46:   display: block;
+      47:   object-fit: contain;
+      48: }
+      49: 
+      50: @media (max-width: 760px) {
+      51:   .socialRow {
+>>    52:     gap: 12px;
+      53:     flex-wrap: wrap;
+      54:   }
+      55: 
+      56:   .socialLink {
+      57:     width: 40px;
+      58:     height: 40px;
+      59:     flex-basis: 40px;
+      60:   }
+      61: 
+      62:   .socialIcon {
+      63:     width: 24px;
+      64:     height: 24px;
+      65:   }
+      66: }
+

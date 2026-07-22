@@ -1,0 +1,7028 @@
+/* =========================================================
+   compatible-models.generated.ts
+   恒永达官网｜接头兼容型号完整数据
+
+   自动生成，请勿手动修改。
+   数据源：
+   data-source/resources/fitting-replacement/
+   FRGD-140D-2606-0002_001_cn_连接件标品在售清单.xlsx
+========================================================= */
+
+export interface FittingCompatibleModelSource {
+  brand: string;
+  model: string;
+  normalizedModel: string;
+  sheet: string;
+  row: number;
+}
+
+export interface FittingCompatibleModelProduct {
+  productType: string;
+  productSeries: string;
+  productName: string;
+  foreachModel: string;
+  productCode: string;
+  compatibleModels: string[];
+  compatibleSources: FittingCompatibleModelSource[];
+  hasDrawing2d: boolean;
+  hasModel3d: boolean;
+  sourceSheet: string;
+  sourceRow: number;
+}
+
+export const fittingCompatibleModelProducts: FittingCompatibleModelProduct[] =
+[
+  {
+    "productType": "单向阀",
+    "productSeries": "CV",
+    "productName": "单向阀 膜片式 CV-BV-32-PP-N 126007",
+    "foreachModel": "CV-BV-32-PP-N",
+    "productCode": "126007",
+    "compatibleModels": [
+      "HAX18-PP0"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "ARK",
+        "model": "HAX18-PP0",
+        "normalizedModel": "HAX18-PP0",
+        "sheet": "06_单向阀、过滤器",
+        "row": 25
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "06_单向阀、过滤器",
+    "sourceRow": 25
+  },
+  {
+    "productType": "单向阀",
+    "productSeries": "CV",
+    "productName": "单向阀 膜片式 CV-BV-48-PP-N 126009",
+    "foreachModel": "CV-BV-48-PP-N",
+    "productCode": "126009",
+    "compatibleModels": [
+      "HAX14-PP0"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "ARK",
+        "model": "HAX14-PP0",
+        "normalizedModel": "HAX14-PP0",
+        "sheet": "06_单向阀、过滤器",
+        "row": 26
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "06_单向阀、过滤器",
+    "sourceRow": 26
+  },
+  {
+    "productType": "单向阀",
+    "productSeries": "CV",
+    "productName": "单向阀 膜片式 CV-BV-64-PP-N 126011",
+    "foreachModel": "CV-BV-64-PP-N",
+    "productCode": "126011",
+    "compatibleModels": [
+      "HAX24-PP0"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "ARK",
+        "model": "HAX24-PP0",
+        "normalizedModel": "HAX24-PP0",
+        "sheet": "06_单向阀、过滤器",
+        "row": 27
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "06_单向阀、过滤器",
+    "sourceRow": 27
+  },
+  {
+    "productType": "高压接头",
+    "productSeries": "FIT+HP",
+    "productName": "高压标准接头 PNC-U32-16-PK-N",
+    "foreachModel": "PNC-U32-16-PK-N",
+    "productCode": "809791",
+    "compatibleModels": [
+      "WK11G-10-32-K"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "润泽",
+        "model": "WK11G-10-32-K",
+        "normalizedModel": "WK11G-10-32-K",
+        "sheet": "01_硬管接头",
+        "row": 187
+      }
+    ],
+    "hasDrawing2d": false,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 187
+  },
+  {
+    "productType": "高压接头",
+    "productSeries": "FIT+HP",
+    "productName": "高压紧凑接头 PNC6-U32-16-PK-N",
+    "foreachModel": "PNC6-U32-16-PK-N",
+    "productCode": "809661",
+    "compatibleModels": [
+      "JR-5513",
+      "WK11F-10-32-K"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "VICI",
+        "model": "JR-5513",
+        "normalizedModel": "JR-5513",
+        "sheet": "01_硬管接头",
+        "row": 188
+      },
+      {
+        "brand": "润泽",
+        "model": "WK11F-10-32-K",
+        "normalizedModel": "WK11F-10-32-K",
+        "sheet": "01_硬管接头",
+        "row": 188
+      }
+    ],
+    "hasDrawing2d": false,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 188
+  },
+  {
+    "productType": "过滤器",
+    "productSeries": "G",
+    "productName": "过滤器 G-178-32-PA-V 136005",
+    "foreachModel": "G-178-32-PA-V",
+    "productCode": "136005",
+    "compatibleModels": [
+      "FAX26-NY0"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "ARK",
+        "model": "FAX26-NY0",
+        "normalizedModel": "FAX26-NY0",
+        "sheet": "06_单向阀、过滤器",
+        "row": 5
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "06_单向阀、过滤器",
+    "sourceRow": 5
+  },
+  {
+    "productType": "过滤器",
+    "productSeries": "G",
+    "productName": "过滤器 G-178-48-PA-V 136004",
+    "foreachModel": "G-178-48-PA-V",
+    "productCode": "136004",
+    "compatibleModels": [
+      "FAX86-NY0"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "ARK",
+        "model": "FAX86-NY0",
+        "normalizedModel": "FAX86-NY0",
+        "sheet": "06_单向阀、过滤器",
+        "row": 4
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "06_单向阀、过滤器",
+    "sourceRow": 4
+  },
+  {
+    "productType": "过滤器",
+    "productSeries": "G",
+    "productName": "过滤器 G-178-64-PA-V 136003",
+    "foreachModel": "G-178-64-PA-V",
+    "productCode": "136003",
+    "compatibleModels": [
+      "FAX84-NY0"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "ARK",
+        "model": "FAX84-NY0",
+        "normalizedModel": "FAX84-NY0",
+        "sheet": "06_单向阀、过滤器",
+        "row": 3
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "06_单向阀、过滤器",
+    "sourceRow": 3
+  },
+  {
+    "productType": "环保接头",
+    "productSeries": "FIT+H",
+    "productName": "标滚卡箍接头HNE-U28-32-PP-N",
+    "foreachModel": "标滚卡箍接头HNE-U28-32-PP-N",
+    "productCode": "809927",
+    "compatibleModels": [
+      "WD10A-28P"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "润泽",
+        "model": "WD10A-28P",
+        "normalizedModel": "WD10A-28P",
+        "sheet": "01_硬管接头",
+        "row": 69
+      }
+    ],
+    "hasDrawing2d": false,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 69
+  },
+  {
+    "productType": "环保接头",
+    "productSeries": "FIT+H",
+    "productName": "紧凑六方卡箍接头HNE6-U28-32-PS-B",
+    "foreachModel": "紧凑六方卡箍接头HNE6-U28-32-PS-B",
+    "productCode": "809922",
+    "compatibleModels": [
+      "WF06EL-28S-黑"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "润泽",
+        "model": "WF06EL-28S-黑",
+        "normalizedModel": "WF06EL-28S-黑",
+        "sheet": "01_硬管接头",
+        "row": 68
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 68
+  },
+  {
+    "productType": "旧版标滚平底接头",
+    "productSeries": "FIT+H",
+    "productName": "标滚平底接头 HFL-M6-16-PV-B",
+    "foreachModel": "HFL-M6-16-PV-B",
+    "productCode": "809421",
+    "compatibleModels": [
+      "P-982BLKx"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "IDEX",
+        "model": "P-982BLKx",
+        "normalizedModel": "P-982BLKX",
+        "sheet": "01_硬管接头",
+        "row": 18
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 18
+  },
+  {
+    "productType": "旧版标滚平底接头",
+    "productSeries": "FIT+H",
+    "productName": "标滚平底接头 HFL-M6-32-PV-B",
+    "foreachModel": "HFL-M6-32-PV-B",
+    "productCode": "809423",
+    "compatibleModels": [
+      "P-1082BLKx"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "IDEX",
+        "model": "P-1082BLKx",
+        "normalizedModel": "P-1082BLKX",
+        "sheet": "01_硬管接头",
+        "row": 22
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 22
+  },
+  {
+    "productType": "旧版标滚平底接头",
+    "productSeries": "FIT+H",
+    "productName": "标滚平底接头 HFL-U28-16-PV-B",
+    "foreachModel": "HFL-U28-16-PV-B",
+    "productCode": "809391",
+    "compatibleModels": [
+      "P-482BLK"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "IDEX",
+        "model": "P-482BLK",
+        "normalizedModel": "P-482BLK",
+        "sheet": "01_硬管接头",
+        "row": 13
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 13
+  },
+  {
+    "productType": "旧版标滚平底接头",
+    "productSeries": "FIT+H",
+    "productName": "标滚平底接头 HFL-U28-16-PV-N",
+    "foreachModel": "HFL-U28-16-PV-N",
+    "productCode": "809030",
+    "compatibleModels": [
+      "WF16G-1/4-28-V"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "润泽",
+        "model": "WF16G-1/4-28-V",
+        "normalizedModel": "WF16G-1/4-28-V",
+        "sheet": "01_硬管接头",
+        "row": 3
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 3
+  },
+  {
+    "productType": "旧版标滚平底接头",
+    "productSeries": "FIT+H",
+    "productName": "标滚平底接头 HFL-U28-20-PV-N",
+    "foreachModel": "HFL-U28-20-PV-N",
+    "productCode": "809040",
+    "compatibleModels": [
+      "WF20G-1/4-28-V"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "润泽",
+        "model": "WF20G-1/4-28-V",
+        "normalizedModel": "WF20G-1/4-28-V",
+        "sheet": "01_硬管接头",
+        "row": 5
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 5
+  },
+  {
+    "productType": "旧版标滚平底接头",
+    "productSeries": "FIT+H",
+    "productName": "标滚平底接头 HFL-U28-25-PV-N",
+    "foreachModel": "HFL-U28-25-PV-N",
+    "productCode": "809052",
+    "compatibleModels": [
+      "WF25G-1/4-28-V"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "润泽",
+        "model": "WF25G-1/4-28-V",
+        "normalizedModel": "WF25G-1/4-28-V",
+        "sheet": "01_硬管接头",
+        "row": 4
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 4
+  },
+  {
+    "productType": "旧版标滚平底接头",
+    "productSeries": "FIT+H",
+    "productName": "标滚平底接头 HFL-U28-30-PV-N",
+    "foreachModel": "HFL-U28-30-PV-N",
+    "productCode": "809047",
+    "compatibleModels": [
+      "WF30G-1/4-28-V"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "润泽",
+        "model": "WF30G-1/4-28-V",
+        "normalizedModel": "WF30G-1/4-28-V",
+        "sheet": "01_硬管接头",
+        "row": 6
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 6
+  },
+  {
+    "productType": "旧版标滚平底接头",
+    "productSeries": "FIT+H",
+    "productName": "标滚平底接头 HFL-U28-32-PV-N",
+    "foreachModel": "HFL-U28-32-PV-N",
+    "productCode": "809035",
+    "compatibleModels": [
+      "P-482G"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "IDEX",
+        "model": "P-482G",
+        "normalizedModel": "P-482G",
+        "sheet": "01_硬管接头",
+        "row": 7
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 7
+  },
+  {
+    "productType": "旧版紧凑卡箍接头",
+    "productSeries": "FIT+H",
+    "productName": "紧凑卡箍接头 HNF6-M6-16-PS-B",
+    "foreachModel": "HNF6-M6-16-PS-B",
+    "productCode": "809128",
+    "compatibleModels": [
+      "008NC16-CS6B"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "DIBA",
+        "model": "008NC16-CS6B",
+        "normalizedModel": "008NC16-CS6B",
+        "sheet": "01_硬管接头",
+        "row": 65
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 65
+  },
+  {
+    "productType": "旧版紧凑卡箍接头",
+    "productSeries": "FIT+H",
+    "productName": "紧凑卡箍接头 HNF6-M6-32-PS-B",
+    "foreachModel": "HNF6-M6-32-PS-B",
+    "productCode": "809138",
+    "compatibleModels": [
+      "008NC32-YC6U"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "DIBA",
+        "model": "008NC32-YC6U",
+        "normalizedModel": "008NC32-YC6U",
+        "sheet": "01_硬管接头",
+        "row": 62
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 62
+  },
+  {
+    "productType": "旧版紧凑卡箍接头",
+    "productSeries": "FIT+H",
+    "productName": "紧凑卡箍接头 HNF6-U28-16-PS-B",
+    "foreachModel": "HNF6-U28-16-PS-B",
+    "productCode": "809127",
+    "compatibleModels": [
+      "008NF16-YC5B",
+      "008NC16-CS5B"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "北昂",
+        "model": "008NF16-YC5B",
+        "normalizedModel": "008NF16-YC5B",
+        "sheet": "01_硬管接头",
+        "row": 60
+      },
+      {
+        "brand": "DIBA",
+        "model": "008NC16-CS5B",
+        "normalizedModel": "008NC16-CS5B",
+        "sheet": "01_硬管接头",
+        "row": 60
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 60
+  },
+  {
+    "productType": "旧版紧凑卡箍接头",
+    "productSeries": "FIT+H",
+    "productName": "紧凑卡箍接头 HNF6-U28-32-PS-B",
+    "foreachModel": "HNF6-U28-32-PS-B",
+    "productCode": "809137",
+    "compatibleModels": [
+      "008NF32-YC5B",
+      "008NC32-YC5U"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "北昂",
+        "model": "008NF32-YC5B",
+        "normalizedModel": "008NF32-YC5B",
+        "sheet": "01_硬管接头",
+        "row": 57
+      },
+      {
+        "brand": "DIBA",
+        "model": "008NC32-YC5U",
+        "normalizedModel": "008NC32-YC5U",
+        "sheet": "01_硬管接头",
+        "row": 57
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 57
+  },
+  {
+    "productType": "旧版紧凑平底接头",
+    "productSeries": "FIT+H",
+    "productName": "紧凑平底接头 HFL6-M6-16-PS-B",
+    "foreachModel": "HFL6-M6-16-PS-B",
+    "productCode": "809058",
+    "compatibleModels": [
+      "WF16N-M6"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "润泽",
+        "model": "WF16N-M6",
+        "normalizedModel": "WF16N-M6",
+        "sheet": "01_硬管接头",
+        "row": 52
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 52
+  },
+  {
+    "productType": "旧版紧凑平底接头",
+    "productSeries": "FIT+H",
+    "productName": "紧凑平底接头 HFL6-M6-20-PS-B",
+    "foreachModel": "HFL6-M6-20-PS-B",
+    "productCode": "809078",
+    "compatibleModels": [
+      "WF20N-M6"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "润泽",
+        "model": "WF20N-M6",
+        "normalizedModel": "WF20N-M6",
+        "sheet": "01_硬管接头",
+        "row": 49
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 49
+  },
+  {
+    "productType": "旧版紧凑平底接头",
+    "productSeries": "FIT+H",
+    "productName": "紧凑平底接头 HFL6-M6-25-PS-B",
+    "foreachModel": "HFL6-M6-25-PS-B",
+    "productCode": "809098",
+    "compatibleModels": [
+      "WF25N-M6"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "润泽",
+        "model": "WF25N-M6",
+        "normalizedModel": "WF25N-M6",
+        "sheet": "01_硬管接头",
+        "row": 51
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 51
+  },
+  {
+    "productType": "旧版紧凑平底接头",
+    "productSeries": "FIT+H",
+    "productName": "紧凑平底接头 HFL6-M6-30-PS-B",
+    "foreachModel": "HFL6-M6-30-PS-B",
+    "productCode": "809088",
+    "compatibleModels": [
+      "WF30N-M6"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "润泽",
+        "model": "WF30N-M6",
+        "normalizedModel": "WF30N-M6",
+        "sheet": "01_硬管接头",
+        "row": 48
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 48
+  },
+  {
+    "productType": "旧版紧凑平底接头",
+    "productSeries": "FIT+H",
+    "productName": "紧凑平底接头 HFL6-U28-16-PS-B",
+    "foreachModel": "HFL6-U28-16-PS-B",
+    "productCode": "809057",
+    "compatibleModels": [
+      "WF16N-1/4-28"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "润泽",
+        "model": "WF16N-1/4-28",
+        "normalizedModel": "WF16N-1/4-28",
+        "sheet": "01_硬管接头",
+        "row": 47
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 47
+  },
+  {
+    "productType": "旧版紧凑平底接头",
+    "productSeries": "FIT+H",
+    "productName": "紧凑平底接头 HFL6-U28-16-PS-U",
+    "foreachModel": "HFL6-U28-16-PS-U",
+    "productCode": "809550",
+    "compatibleModels": [
+      "008NF-YC5U"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "北昂",
+        "model": "008NF-YC5U",
+        "normalizedModel": "008NF-YC5U",
+        "sheet": "01_硬管接头",
+        "row": 54
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 54
+  },
+  {
+    "productType": "旧版紧凑平底接头",
+    "productSeries": "FIT+H",
+    "productName": "紧凑平底接头 HFL6-U28-20-PS-B",
+    "foreachModel": "HFL6-U28-20-PS-B",
+    "productCode": "809077",
+    "compatibleModels": [
+      "WF20N-1/4-28"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "润泽",
+        "model": "WF20N-1/4-28",
+        "normalizedModel": "WF20N-1/4-28",
+        "sheet": "01_硬管接头",
+        "row": 44
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 44
+  },
+  {
+    "productType": "旧版紧凑平底接头",
+    "productSeries": "FIT+H",
+    "productName": "紧凑平底接头 HFL6-U28-25-PS-B",
+    "foreachModel": "HFL6-U28-25-PS-B",
+    "productCode": "809097",
+    "compatibleModels": [
+      "WF25N-1/4-28"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "润泽",
+        "model": "WF25N-1/4-28",
+        "normalizedModel": "WF25N-1/4-28",
+        "sheet": "01_硬管接头",
+        "row": 46
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 46
+  },
+  {
+    "productType": "旧版紧凑平底接头",
+    "productSeries": "FIT+H",
+    "productName": "紧凑平底接头 HFL6-U28-30-PS-B",
+    "foreachModel": "HFL6-U28-30-PS-B",
+    "productCode": "809087",
+    "compatibleModels": [
+      "WF30N-1/4-28"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "润泽",
+        "model": "WF30N-1/4-28",
+        "normalizedModel": "WF30N-1/4-28",
+        "sheet": "01_硬管接头",
+        "row": 43
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 43
+  },
+  {
+    "productType": "卡箍",
+    "productSeries": "FIT+CL",
+    "productName": "卡箍 CL-0-16-ET-N",
+    "foreachModel": "CL-0-16-ET-N",
+    "productCode": "809201",
+    "compatibleModels": [
+      "008CZ16"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "北昂",
+        "model": "008CZ16",
+        "normalizedModel": "008CZ16",
+        "sheet": "01_硬管接头",
+        "row": 148
+      },
+      {
+        "brand": "DIBA",
+        "model": "008CZ16",
+        "normalizedModel": "008CZ16",
+        "sheet": "01_硬管接头",
+        "row": 148
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 148
+  },
+  {
+    "productType": "卡箍",
+    "productSeries": "FIT+CL",
+    "productName": "卡箍 CL-0-20-ET-N",
+    "foreachModel": "CL-0-20-ET-N",
+    "productCode": "809205",
+    "compatibleModels": [
+      "008CZ20",
+      "008CZ19"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "北昂",
+        "model": "008CZ20",
+        "normalizedModel": "008CZ20",
+        "sheet": "01_硬管接头",
+        "row": 150
+      },
+      {
+        "brand": "DIBA",
+        "model": "008CZ19",
+        "normalizedModel": "008CZ19",
+        "sheet": "01_硬管接头",
+        "row": 150
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 150
+  },
+  {
+    "productType": "卡箍",
+    "productSeries": "FIT+CL",
+    "productName": "卡箍 CL-0-25-ET-N",
+    "foreachModel": "CL-0-25-ET-N",
+    "productCode": "809207",
+    "compatibleModels": [
+      "008CZ25"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "北昂",
+        "model": "008CZ25",
+        "normalizedModel": "008CZ25",
+        "sheet": "01_硬管接头",
+        "row": 152
+      },
+      {
+        "brand": "DIBA",
+        "model": "008CZ25",
+        "normalizedModel": "008CZ25",
+        "sheet": "01_硬管接头",
+        "row": 152
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 152
+  },
+  {
+    "productType": "卡箍",
+    "productSeries": "FIT+CL",
+    "productName": "卡箍 CL-0-30-ET-N",
+    "foreachModel": "CL-0-30-ET-N",
+    "productCode": "809209",
+    "compatibleModels": [
+      "008CZ30"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "北昂",
+        "model": "008CZ30",
+        "normalizedModel": "008CZ30",
+        "sheet": "01_硬管接头",
+        "row": 154
+      },
+      {
+        "brand": "DIBA",
+        "model": "008CZ30",
+        "normalizedModel": "008CZ30",
+        "sheet": "01_硬管接头",
+        "row": 154
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 154
+  },
+  {
+    "productType": "卡箍",
+    "productSeries": "FIT+CL",
+    "productName": "卡箍 CL-0-32-ET-N",
+    "foreachModel": "CL-0-32-ET-N",
+    "productCode": "809203",
+    "compatibleModels": [
+      "008CZ32"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "北昂",
+        "model": "008CZ32",
+        "normalizedModel": "008CZ32",
+        "sheet": "01_硬管接头",
+        "row": 156
+      },
+      {
+        "brand": "DIBA",
+        "model": "008CZ32",
+        "normalizedModel": "008CZ32",
+        "sheet": "01_硬管接头",
+        "row": 156
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 156
+  },
+  {
+    "productType": "卡箍",
+    "productSeries": "FIT+CL",
+    "productName": "卡箍 CL-0X-16-ET-N",
+    "foreachModel": "CL-0X-16-ET-N",
+    "productCode": "809731",
+    "compatibleModels": [
+      "P-200x"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "IDEX",
+        "model": "P-200x",
+        "normalizedModel": "P-200X",
+        "sheet": "01_硬管接头",
+        "row": 158
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 158
+  },
+  {
+    "productType": "卡箍",
+    "productSeries": "FIT+CL",
+    "productName": "卡箍 CL-0X-20-ET-N",
+    "foreachModel": "CL-0X-20-ET-N",
+    "productCode": "809734",
+    "compatibleModels": [
+      "P-363Rx",
+      "YE-020-F"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "IDEX",
+        "model": "P-363Rx",
+        "normalizedModel": "P-363RX",
+        "sheet": "01_硬管接头",
+        "row": 160
+      },
+      {
+        "brand": "润泽",
+        "model": "YE-020-F",
+        "normalizedModel": "YE-020-F",
+        "sheet": "01_硬管接头",
+        "row": 160
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 160
+  },
+  {
+    "productType": "卡箍",
+    "productSeries": "FIT+CL",
+    "productName": "卡箍 CL-0X-25-ET-N",
+    "foreachModel": "CL-0X-25-ET-N",
+    "productCode": "809735",
+    "compatibleModels": [
+      "P-353x",
+      "YE-025-F"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "IDEX",
+        "model": "P-353x",
+        "normalizedModel": "P-353X",
+        "sheet": "01_硬管接头",
+        "row": 162
+      },
+      {
+        "brand": "润泽",
+        "model": "YE-025-F",
+        "normalizedModel": "YE-025-F",
+        "sheet": "01_硬管接头",
+        "row": 162
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 162
+  },
+  {
+    "productType": "卡箍",
+    "productSeries": "FIT+CL",
+    "productName": "卡箍 CL-0X-30-ET-N",
+    "foreachModel": "CL-0X-30-ET-N",
+    "productCode": "809736",
+    "compatibleModels": [
+      "P-343x",
+      "YE-030-F"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "IDEX",
+        "model": "P-343x",
+        "normalizedModel": "P-343X",
+        "sheet": "01_硬管接头",
+        "row": 164
+      },
+      {
+        "brand": "润泽",
+        "model": "YE-030-F",
+        "normalizedModel": "YE-030-F",
+        "sheet": "01_硬管接头",
+        "row": 164
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 164
+  },
+  {
+    "productType": "卡箍",
+    "productSeries": "FIT+CL",
+    "productName": "卡箍 CL-0X-32-ET-N",
+    "foreachModel": "CL-0X-32-ET-N",
+    "productCode": "809780",
+    "compatibleModels": [
+      "P-300x",
+      "YE-032-F"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "IDEX",
+        "model": "P-300x",
+        "normalizedModel": "P-300X",
+        "sheet": "01_硬管接头",
+        "row": 166
+      },
+      {
+        "brand": "润泽",
+        "model": "YE-032-F",
+        "normalizedModel": "YE-032-F",
+        "sheet": "01_硬管接头",
+        "row": 166
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 166
+  },
+  {
+    "productType": "卡环接头",
+    "productSeries": "FIT+H",
+    "productName": "标滚卡环接头 HSF-U28-16-PK-N 809937",
+    "foreachModel": "HSF-U28-16-PK-N",
+    "productCode": "809937",
+    "compatibleModels": [
+      "WF06B"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "润泽",
+        "model": "WF06B",
+        "normalizedModel": "WF06B",
+        "sheet": "01_硬管接头",
+        "row": 76
+      }
+    ],
+    "hasDrawing2d": false,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 76
+  },
+  {
+    "productType": "卡环接头",
+    "productSeries": "FIT+H",
+    "productName": "标滚卡环接头 HSF-U28-32-PEEK-N",
+    "foreachModel": "HSF-U28-32-PEEK-N",
+    "productCode": "809861",
+    "compatibleModels": [
+      "WD06B"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "润泽",
+        "model": "WD06B",
+        "normalizedModel": "WD06B",
+        "sheet": "01_硬管接头",
+        "row": 77
+      }
+    ],
+    "hasDrawing2d": false,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 77
+  },
+  {
+    "productType": "卡环接头",
+    "productSeries": "FIT+H",
+    "productName": "紧凑卡环接头 HSF6-U28-16-PS-B",
+    "foreachModel": "HSF6-U28-16-PS-B",
+    "productCode": "809814",
+    "compatibleModels": [
+      "WF16FL"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "润泽",
+        "model": "WF16FL",
+        "normalizedModel": "WF16FL",
+        "sheet": "01_硬管接头",
+        "row": 72
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 72
+  },
+  {
+    "productType": "卡环接头",
+    "productSeries": "FIT+H",
+    "productName": "紧凑卡环接头 HSF6-U28-32-PK-N 809828 短",
+    "foreachModel": "HSF6-U28-32-PK-N",
+    "productCode": "809828",
+    "compatibleModels": [
+      "WD01B-28K"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "润泽",
+        "model": "WD01B-28K",
+        "normalizedModel": "WD01B-28K",
+        "sheet": "01_硬管接头",
+        "row": 74
+      }
+    ],
+    "hasDrawing2d": false,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 74
+  },
+  {
+    "productType": "卡环接头",
+    "productSeries": "FIT+H",
+    "productName": "紧凑卡环接头 HSF6-U28-32-PS-B",
+    "foreachModel": "HSF6-U28-32-PS-B",
+    "productCode": "809815",
+    "compatibleModels": [
+      "WD32FL"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "润泽",
+        "model": "WD32FL",
+        "normalizedModel": "WD32FL",
+        "sheet": "01_硬管接头",
+        "row": 73
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 73
+  },
+  {
+    "productType": "卡环接头",
+    "productSeries": "FIT+H",
+    "productName": "紧凑卡环接头HSF6-U28-16-PK-N",
+    "foreachModel": "紧凑卡环接头HSF6-U28-16-PK-N",
+    "productCode": "809945",
+    "compatibleModels": [
+      "WF01B"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "润泽",
+        "model": "WF01B",
+        "normalizedModel": "WF01B",
+        "sheet": "01_硬管接头",
+        "row": 75
+      }
+    ],
+    "hasDrawing2d": false,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 75
+  },
+  {
+    "productType": "卡环套件",
+    "productSeries": "FIT+CL",
+    "productName": "卡环套件 CL-1-16 809654（两件套）",
+    "foreachModel": "CL-1-16",
+    "productCode": "809654",
+    "compatibleModels": [
+      "P-213x",
+      "P-232x"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "IDEX",
+        "model": "P-213x",
+        "normalizedModel": "P-213X",
+        "sheet": "01_硬管接头",
+        "row": 177
+      },
+      {
+        "brand": "IDEX",
+        "model": "P-232x",
+        "normalizedModel": "P-232X",
+        "sheet": "01_硬管接头",
+        "row": 177
+      }
+    ],
+    "hasDrawing2d": false,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 177
+  },
+  {
+    "productType": "卡环套件",
+    "productSeries": "FIT+CL",
+    "productName": "卡环套件 CL-1S-16 809801(两件套)",
+    "foreachModel": "CL-1S-16",
+    "productCode": "809801",
+    "compatibleModels": [
+      "P-250x和P-259x",
+      "008FK16",
+      "KCF-038SU316+YE-016F"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "IDEX",
+        "model": "P-250x和P-259x",
+        "normalizedModel": "P-250X和P-259X",
+        "sheet": "01_硬管接头",
+        "row": 182
+      },
+      {
+        "brand": "北昂",
+        "model": "008FK16",
+        "normalizedModel": "008FK16",
+        "sheet": "01_硬管接头",
+        "row": 182
+      },
+      {
+        "brand": "DIBA",
+        "model": "008FK16",
+        "normalizedModel": "008FK16",
+        "sheet": "01_硬管接头",
+        "row": 182
+      },
+      {
+        "brand": "润泽",
+        "model": "KCF-038SU316+YE-016F",
+        "normalizedModel": "KCF-038SU316+YE-016F",
+        "sheet": "01_硬管接头",
+        "row": 182
+      }
+    ],
+    "hasDrawing2d": false,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 182
+  },
+  {
+    "productType": "卡环套件",
+    "productSeries": "FIT+CL",
+    "productName": "卡环套件 CL-1S-20 809802 (两件套)",
+    "foreachModel": "CL-1S-20",
+    "productCode": "809802",
+    "compatibleModels": [
+      "008FK20",
+      "KCF-038SU316+YE-020F"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "北昂",
+        "model": "008FK20",
+        "normalizedModel": "008FK20",
+        "sheet": "01_硬管接头",
+        "row": 183
+      },
+      {
+        "brand": "润泽",
+        "model": "KCF-038SU316+YE-020F",
+        "normalizedModel": "KCF-038SU316+YE-020F",
+        "sheet": "01_硬管接头",
+        "row": 183
+      }
+    ],
+    "hasDrawing2d": false,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 183
+  },
+  {
+    "productType": "卡环套件",
+    "productSeries": "FIT+CL",
+    "productName": "卡环套件 CL-1S-25 809803 (两件套)",
+    "foreachModel": "CL-1S-25",
+    "productCode": "809803",
+    "compatibleModels": [
+      "008FK25",
+      "KCF-045SU316+YE-025F"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "北昂",
+        "model": "008FK25",
+        "normalizedModel": "008FK25",
+        "sheet": "01_硬管接头",
+        "row": 184
+      },
+      {
+        "brand": "润泽",
+        "model": "KCF-045SU316+YE-025F",
+        "normalizedModel": "KCF-045SU316+YE-025F",
+        "sheet": "01_硬管接头",
+        "row": 184
+      }
+    ],
+    "hasDrawing2d": false,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 184
+  },
+  {
+    "productType": "卡环套件",
+    "productSeries": "FIT+CL",
+    "productName": "卡环套件 CL-1S-30 809804 (两件套)",
+    "foreachModel": "CL-1S-30",
+    "productCode": "809804",
+    "compatibleModels": [
+      "008FK30",
+      "KCF-045SU316+YE-030F"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "北昂",
+        "model": "008FK30",
+        "normalizedModel": "008FK30",
+        "sheet": "01_硬管接头",
+        "row": 185
+      },
+      {
+        "brand": "润泽",
+        "model": "KCF-045SU316+YE-030F",
+        "normalizedModel": "KCF-045SU316+YE-030F",
+        "sheet": "01_硬管接头",
+        "row": 185
+      }
+    ],
+    "hasDrawing2d": false,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 185
+  },
+  {
+    "productType": "卡环套件",
+    "productSeries": "FIT+CL",
+    "productName": "卡环套件 CL-1S-32 809805 (两件套)",
+    "foreachModel": "CL-1S-32",
+    "productCode": "809805",
+    "compatibleModels": [
+      "P-350x和P-359x",
+      "008FK32",
+      "KCF-045SU316+YE-032F"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "IDEX",
+        "model": "P-350x和P-359x",
+        "normalizedModel": "P-350X和P-359X",
+        "sheet": "01_硬管接头",
+        "row": 186
+      },
+      {
+        "brand": "北昂",
+        "model": "008FK32",
+        "normalizedModel": "008FK32",
+        "sheet": "01_硬管接头",
+        "row": 186
+      },
+      {
+        "brand": "DIBA",
+        "model": "008FK32",
+        "normalizedModel": "008FK32",
+        "sheet": "01_硬管接头",
+        "row": 186
+      },
+      {
+        "brand": "润泽",
+        "model": "KCF-045SU316+YE-032F",
+        "normalizedModel": "KCF-045SU316+YE-032F",
+        "sheet": "01_硬管接头",
+        "row": 186
+      }
+    ],
+    "hasDrawing2d": false,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 186
+  },
+  {
+    "productType": "卡环套件",
+    "productSeries": "FIT+CL",
+    "productName": "卡环套件 CL-1X-16 809653（两件套）",
+    "foreachModel": "CL-1X-16",
+    "productCode": "809653",
+    "compatibleModels": [
+      "M-650x"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "IDEX",
+        "model": "M-650x",
+        "normalizedModel": "M-650X",
+        "sheet": "01_硬管接头",
+        "row": 176
+      }
+    ],
+    "hasDrawing2d": false,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 176
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2001-PMV-SACN",
+    "foreachModel": "Q2001-PMV-SACN",
+    "productCode": "839041",
+    "compatibleModels": [
+      "PMCD4201",
+      "20ACV-PB3-01"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD4201",
+        "normalizedModel": "PMCD4201",
+        "sheet": "04_快插接头",
+        "row": 36
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20ACV-PB3-01",
+        "normalizedModel": "20ACV-PB3-01",
+        "sheet": "04_快插接头",
+        "row": 36
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 36
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2001-PMV-SPPE",
+    "foreachModel": "Q2001-PMV-SPPE",
+    "productCode": "839085",
+    "compatibleModels": [
+      "PMCD420112"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD420112",
+        "normalizedModel": "PMCD420112",
+        "sheet": "04_快插接头",
+        "row": 82
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 82
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2001-PMX-SACN",
+    "foreachModel": "Q2001-PMX-SACN",
+    "productCode": "839019",
+    "compatibleModels": [
+      "PMC4201",
+      "20AC-PB3-01"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC4201",
+        "normalizedModel": "PMC4201",
+        "sheet": "04_快插接头",
+        "row": 14
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20AC-PB3-01",
+        "normalizedModel": "20AC-PB3-01",
+        "sheet": "04_快插接头",
+        "row": 14
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 14
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2001-PMX-SPPE",
+    "foreachModel": "Q2001-PMX-SPPE",
+    "productCode": "839063",
+    "compatibleModels": [
+      "PMC420112",
+      "20PP-PE3-01MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC420112",
+        "normalizedModel": "PMC420112",
+        "sheet": "04_快插接头",
+        "row": 60
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20PP-PE3-01MALD",
+        "normalizedModel": "20PP-PE3-01MALD",
+        "sheet": "04_快插接头",
+        "row": 60
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 60
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2001-PNV-SACN",
+    "foreachModel": "Q2001-PNV-SACN",
+    "productCode": "839034",
+    "compatibleModels": [
+      "PMCD2201",
+      "20ACV-PB2-01"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD2201",
+        "normalizedModel": "PMCD2201",
+        "sheet": "04_快插接头",
+        "row": 29
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20ACV-PB2-01",
+        "normalizedModel": "20ACV-PB2-01",
+        "sheet": "04_快插接头",
+        "row": 29
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 29
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2001-PNV-SPPE",
+    "foreachModel": "Q2001-PNV-SPPE",
+    "productCode": "839078",
+    "compatibleModels": [
+      "PMCD220112",
+      "20PPV-PE2-01MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD220112",
+        "normalizedModel": "PMCD220112",
+        "sheet": "04_快插接头",
+        "row": 75
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20PPV-PE2-01MALD",
+        "normalizedModel": "20PPV-PE2-01MALD",
+        "sheet": "04_快插接头",
+        "row": 75
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 75
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2001-PNX-SACN",
+    "foreachModel": "Q2001-PNX-SACN",
+    "productCode": "839012",
+    "compatibleModels": [
+      "PMC2201",
+      "20AC-PB2-01"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC2201",
+        "normalizedModel": "PMC2201",
+        "sheet": "04_快插接头",
+        "row": 42
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20AC-PB2-01",
+        "normalizedModel": "20AC-PB2-01",
+        "sheet": "04_快插接头",
+        "row": 42
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 42
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2001-PNX-SPPE",
+    "foreachModel": "Q2001-PNX-SPPE",
+    "productCode": "839056",
+    "compatibleModels": [
+      "PMC220112",
+      "20PP-PE2-01MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC220112",
+        "normalizedModel": "PMC220112",
+        "sheet": "04_快插接头",
+        "row": 86
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20PP-PE2-01MALD",
+        "normalizedModel": "20PP-PE2-01MALD",
+        "sheet": "04_快插接头",
+        "row": 86
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 86
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2001-SMV-SACN",
+    "foreachModel": "Q2001-SMV-SACN",
+    "productCode": "839030",
+    "compatibleModels": [
+      "PMCD1601",
+      "20ACV-SB3-01"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD1601",
+        "normalizedModel": "PMCD1601",
+        "sheet": "04_快插接头",
+        "row": 25
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20ACV-SB3-01",
+        "normalizedModel": "20ACV-SB3-01",
+        "sheet": "04_快插接头",
+        "row": 25
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 25
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2001-SMV-SPPE",
+    "foreachModel": "Q2001-SMV-SPPE",
+    "productCode": "839074",
+    "compatibleModels": [
+      "PMCD160112",
+      "20PPV-SE3-01MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD160112",
+        "normalizedModel": "PMCD160112",
+        "sheet": "04_快插接头",
+        "row": 71
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20PPV-SE3-01MALD",
+        "normalizedModel": "20PPV-SE3-01MALD",
+        "sheet": "04_快插接头",
+        "row": 71
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 71
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2001-SMX-SACN",
+    "foreachModel": "Q2001-SMX-SACN",
+    "productCode": "839008",
+    "compatibleModels": [
+      "PMC1601",
+      "20AC-S3-01"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC1601",
+        "normalizedModel": "PMC1601",
+        "sheet": "04_快插接头",
+        "row": 10
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20AC-S3-01",
+        "normalizedModel": "20AC-S3-01",
+        "sheet": "04_快插接头",
+        "row": 10
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 10
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2001-SMX-SPPE",
+    "foreachModel": "Q2001-SMX-SPPE",
+    "productCode": "839052",
+    "compatibleModels": [
+      "PMC160112",
+      "20PP-S3-01MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC160112",
+        "normalizedModel": "PMC160112",
+        "sheet": "04_快插接头",
+        "row": 56
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20PP-S3-01MALD",
+        "normalizedModel": "20PP-S3-01MALD",
+        "sheet": "04_快插接头",
+        "row": 56
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 56
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2001-SNV-SACN",
+    "foreachModel": "Q2001-SNV-SACN",
+    "productCode": "839023",
+    "compatibleModels": [
+      "PMCD1701",
+      "20ACV-SB2-01"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD1701",
+        "normalizedModel": "PMCD1701",
+        "sheet": "04_快插接头",
+        "row": 18
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20ACV-SB2-01",
+        "normalizedModel": "20ACV-SB2-01",
+        "sheet": "04_快插接头",
+        "row": 18
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 18
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2001-SNV-SPPE",
+    "foreachModel": "Q2001-SNV-SPPE",
+    "productCode": "839067",
+    "compatibleModels": [
+      "PMCD170112",
+      "20PPV-SE2-01MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD170112",
+        "normalizedModel": "PMCD170112",
+        "sheet": "04_快插接头",
+        "row": 64
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20PPV-SE2-01MALD",
+        "normalizedModel": "20PPV-SE2-01MALD",
+        "sheet": "04_快插接头",
+        "row": 64
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 64
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2001-SNX-SACN",
+    "foreachModel": "Q2001-SNX-SACN",
+    "productCode": "839001",
+    "compatibleModels": [
+      "PMC1701",
+      "20AC-S2-01"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC1701",
+        "normalizedModel": "PMC1701",
+        "sheet": "04_快插接头",
+        "row": 3
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20AC-S2-01",
+        "normalizedModel": "20AC-S2-01",
+        "sheet": "04_快插接头",
+        "row": 3
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 3
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2001-SNX-SPPE",
+    "foreachModel": "Q2001-SNX-SPPE",
+    "productCode": "839045",
+    "compatibleModels": [
+      "PMC170112",
+      "20PP-S2-01MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC170112",
+        "normalizedModel": "PMC170112",
+        "sheet": "04_快插接头",
+        "row": 49
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20PP-S2-01MALD",
+        "normalizedModel": "20PP-S2-01MALD",
+        "sheet": "04_快插接头",
+        "row": 49
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 49
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2002-PMV-SACN",
+    "foreachModel": "Q2002-PMV-SACN",
+    "productCode": "839042",
+    "compatibleModels": [
+      "PMCD4202",
+      "20ACV-PB3-02"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD4202",
+        "normalizedModel": "PMCD4202",
+        "sheet": "04_快插接头",
+        "row": 37
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20ACV-PB3-02",
+        "normalizedModel": "20ACV-PB3-02",
+        "sheet": "04_快插接头",
+        "row": 37
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 37
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2002-PMV-SPPE",
+    "foreachModel": "Q2002-PMV-SPPE",
+    "productCode": "839086",
+    "compatibleModels": [
+      "PMCD420212"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD420212",
+        "normalizedModel": "PMCD420212",
+        "sheet": "04_快插接头",
+        "row": 83
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 83
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2002-PMX-SACN",
+    "foreachModel": "Q2002-PMX-SACN",
+    "productCode": "839020",
+    "compatibleModels": [
+      "PMC4202",
+      "20AC-PB3-02"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC4202",
+        "normalizedModel": "PMC4202",
+        "sheet": "04_快插接头",
+        "row": 15
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20AC-PB3-02",
+        "normalizedModel": "20AC-PB3-02",
+        "sheet": "04_快插接头",
+        "row": 15
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 15
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2002-PMX-SPPE",
+    "foreachModel": "Q2002-PMX-SPPE",
+    "productCode": "839064",
+    "compatibleModels": [
+      "PMC420212",
+      "20PP-PE3-02MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC420212",
+        "normalizedModel": "PMC420212",
+        "sheet": "04_快插接头",
+        "row": 61
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20PP-PE3-02MALD",
+        "normalizedModel": "20PP-PE3-02MALD",
+        "sheet": "04_快插接头",
+        "row": 61
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 61
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2002-PNV-LACN",
+    "foreachModel": "Q2002-PNV-LACN",
+    "productCode": "839038",
+    "compatibleModels": [
+      "PMCD2302",
+      "20ACV-PB4-02"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD2302",
+        "normalizedModel": "PMCD2302",
+        "sheet": "04_快插接头",
+        "row": 33
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20ACV-PB4-02",
+        "normalizedModel": "20ACV-PB4-02",
+        "sheet": "04_快插接头",
+        "row": 33
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 33
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2002-PNV-LPPE",
+    "foreachModel": "Q2002-PNV-LPPE",
+    "productCode": "839082",
+    "compatibleModels": [
+      "PMCD230212",
+      "20PPV-PE4-02MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD230212",
+        "normalizedModel": "PMCD230212",
+        "sheet": "04_快插接头",
+        "row": 79
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20PPV-PE4-02MALD",
+        "normalizedModel": "20PPV-PE4-02MALD",
+        "sheet": "04_快插接头",
+        "row": 79
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 79
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2002-PNV-SACN",
+    "foreachModel": "Q2002-PNV-SACN",
+    "productCode": "839035",
+    "compatibleModels": [
+      "PMCD2202",
+      "20ACV-PB2-02"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD2202",
+        "normalizedModel": "PMCD2202",
+        "sheet": "04_快插接头",
+        "row": 30
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20ACV-PB2-02",
+        "normalizedModel": "20ACV-PB2-02",
+        "sheet": "04_快插接头",
+        "row": 30
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 30
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2002-PNV-SPPE",
+    "foreachModel": "Q2002-PNV-SPPE",
+    "productCode": "839079",
+    "compatibleModels": [
+      "PMCD220212",
+      "20PPV-PE2-02MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD220212",
+        "normalizedModel": "PMCD220212",
+        "sheet": "04_快插接头",
+        "row": 76
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20PPV-PE2-02MALD",
+        "normalizedModel": "20PPV-PE2-02MALD",
+        "sheet": "04_快插接头",
+        "row": 76
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 76
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2002-PNX-LACN",
+    "foreachModel": "Q2002-PNX-LACN",
+    "productCode": "839016",
+    "compatibleModels": [
+      "PMC2302",
+      "20AC-PB4-02"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC2302",
+        "normalizedModel": "PMC2302",
+        "sheet": "04_快插接头",
+        "row": 46
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20AC-PB4-02",
+        "normalizedModel": "20AC-PB4-02",
+        "sheet": "04_快插接头",
+        "row": 46
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 46
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2002-PNX-LPPE",
+    "foreachModel": "Q2002-PNX-LPPE",
+    "productCode": "839060",
+    "compatibleModels": [
+      "PMC230212",
+      "20PP-PE4-02MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC230212",
+        "normalizedModel": "PMC230212",
+        "sheet": "04_快插接头",
+        "row": 90
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20PP-PE4-02MALD",
+        "normalizedModel": "20PP-PE4-02MALD",
+        "sheet": "04_快插接头",
+        "row": 90
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 90
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2002-PNX-SACN",
+    "foreachModel": "Q2002-PNX-SACN",
+    "productCode": "839013",
+    "compatibleModels": [
+      "PMC2202",
+      "20AC-PB2-02"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC2202",
+        "normalizedModel": "PMC2202",
+        "sheet": "04_快插接头",
+        "row": 43
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20AC-PB2-02",
+        "normalizedModel": "20AC-PB2-02",
+        "sheet": "04_快插接头",
+        "row": 43
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 43
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2002-PNX-SPPE",
+    "foreachModel": "Q2002-PNX-SPPE",
+    "productCode": "839057",
+    "compatibleModels": [
+      "PMC220212",
+      "20PP-PE2-02MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC220212",
+        "normalizedModel": "PMC220212",
+        "sheet": "04_快插接头",
+        "row": 87
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20PP-PE2-02MALD",
+        "normalizedModel": "20PP-PE2-02MALD",
+        "sheet": "04_快插接头",
+        "row": 87
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 87
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2002-SMV-SACN",
+    "foreachModel": "Q2002-SMV-SACN",
+    "productCode": "839031",
+    "compatibleModels": [
+      "PMCD1602",
+      "20ACV-SB3-02"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD1602",
+        "normalizedModel": "PMCD1602",
+        "sheet": "04_快插接头",
+        "row": 26
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20ACV-SB3-02",
+        "normalizedModel": "20ACV-SB3-02",
+        "sheet": "04_快插接头",
+        "row": 26
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 26
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2002-SMV-SPPE",
+    "foreachModel": "Q2002-SMV-SPPE",
+    "productCode": "839075",
+    "compatibleModels": [
+      "PMCD160212",
+      "20PPV-SE3-02MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD160212",
+        "normalizedModel": "PMCD160212",
+        "sheet": "04_快插接头",
+        "row": 72
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20PPV-SE3-02MALD",
+        "normalizedModel": "20PPV-SE3-02MALD",
+        "sheet": "04_快插接头",
+        "row": 72
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 72
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2002-SMX-SACN",
+    "foreachModel": "Q2002-SMX-SACN",
+    "productCode": "839009",
+    "compatibleModels": [
+      "PMC1602",
+      "20AC-S3-02"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC1602",
+        "normalizedModel": "PMC1602",
+        "sheet": "04_快插接头",
+        "row": 11
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20AC-S3-02",
+        "normalizedModel": "20AC-S3-02",
+        "sheet": "04_快插接头",
+        "row": 11
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 11
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2002-SMX-SPPE",
+    "foreachModel": "Q2002-SMX-SPPE",
+    "productCode": "839053",
+    "compatibleModels": [
+      "PMC160212",
+      "20PP-S3-02MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC160212",
+        "normalizedModel": "PMC160212",
+        "sheet": "04_快插接头",
+        "row": 57
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20PP-S3-02MALD",
+        "normalizedModel": "20PP-S3-02MALD",
+        "sheet": "04_快插接头",
+        "row": 57
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 57
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2002-SNV-LACN",
+    "foreachModel": "Q2002-SNV-LACN",
+    "productCode": "839027",
+    "compatibleModels": [
+      "20ACV-SB4-02"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "LinkTech",
+        "model": "20ACV-SB4-02",
+        "normalizedModel": "20ACV-SB4-02",
+        "sheet": "04_快插接头",
+        "row": 22
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 22
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2002-SNV-SACN",
+    "foreachModel": "Q2002-SNV-SACN",
+    "productCode": "839024",
+    "compatibleModels": [
+      "PMCD1702",
+      "20ACV-SB2-02"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD1702",
+        "normalizedModel": "PMCD1702",
+        "sheet": "04_快插接头",
+        "row": 19
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20ACV-SB2-02",
+        "normalizedModel": "20ACV-SB2-02",
+        "sheet": "04_快插接头",
+        "row": 19
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 19
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2002-SNV-SPPE",
+    "foreachModel": "Q2002-SNV-SPPE",
+    "productCode": "839068",
+    "compatibleModels": [
+      "PMCD170212",
+      "20PPV-SE2-02MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD170212",
+        "normalizedModel": "PMCD170212",
+        "sheet": "04_快插接头",
+        "row": 65
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20PPV-SE2-02MALD",
+        "normalizedModel": "20PPV-SE2-02MALD",
+        "sheet": "04_快插接头",
+        "row": 65
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 65
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2002-SNX-LACN",
+    "foreachModel": "Q2002-SNX-LACN",
+    "productCode": "839005",
+    "compatibleModels": [
+      "20AC-S4-02"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "LinkTech",
+        "model": "20AC-S4-02",
+        "normalizedModel": "20AC-S4-02",
+        "sheet": "04_快插接头",
+        "row": 7
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 7
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2002-SNX-SACN",
+    "foreachModel": "Q2002-SNX-SACN",
+    "productCode": "839002",
+    "compatibleModels": [
+      "PMC1702",
+      "20AC-S2-02"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC1702",
+        "normalizedModel": "PMC1702",
+        "sheet": "04_快插接头",
+        "row": 4
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20AC-S2-02",
+        "normalizedModel": "20AC-S2-02",
+        "sheet": "04_快插接头",
+        "row": 4
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 4
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2002-SNX-SPPE",
+    "foreachModel": "Q2002-SNX-SPPE",
+    "productCode": "839046",
+    "compatibleModels": [
+      "PMC170212",
+      "20PP-S2-02MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC170212",
+        "normalizedModel": "PMC170212",
+        "sheet": "04_快插接头",
+        "row": 50
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20PP-S2-02MALD",
+        "normalizedModel": "20PP-S2-02MALD",
+        "sheet": "04_快插接头",
+        "row": 50
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 50
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2003-PMV-SACN",
+    "foreachModel": "Q2003-PMV-SACN",
+    "productCode": "839043",
+    "compatibleModels": [
+      "PMCD4203",
+      "20ACV-PB3-03"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD4203",
+        "normalizedModel": "PMCD4203",
+        "sheet": "04_快插接头",
+        "row": 38
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20ACV-PB3-03",
+        "normalizedModel": "20ACV-PB3-03",
+        "sheet": "04_快插接头",
+        "row": 38
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 38
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2003-PMV-SPPE",
+    "foreachModel": "Q2003-PMV-SPPE",
+    "productCode": "839087",
+    "compatibleModels": [
+      "PMCD420312"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD420312",
+        "normalizedModel": "PMCD420312",
+        "sheet": "04_快插接头",
+        "row": 84
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 84
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2003-PMX-SACN",
+    "foreachModel": "Q2003-PMX-SACN",
+    "productCode": "839021",
+    "compatibleModels": [
+      "PMC4203",
+      "20AC-PB3-03"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC4203",
+        "normalizedModel": "PMC4203",
+        "sheet": "04_快插接头",
+        "row": 16
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20AC-PB3-03",
+        "normalizedModel": "20AC-PB3-03",
+        "sheet": "04_快插接头",
+        "row": 16
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 16
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2003-PMX-SPPE",
+    "foreachModel": "Q2003-PMX-SPPE",
+    "productCode": "839065",
+    "compatibleModels": [
+      "PMC420312",
+      "20PP-PE3-03MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC420312",
+        "normalizedModel": "PMC420312",
+        "sheet": "04_快插接头",
+        "row": 62
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20PP-PE3-03MALD",
+        "normalizedModel": "20PP-PE3-03MALD",
+        "sheet": "04_快插接头",
+        "row": 62
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 62
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2003-PNV-SACN",
+    "foreachModel": "Q2003-PNV-SACN",
+    "productCode": "839036",
+    "compatibleModels": [
+      "PMCD2203",
+      "20ACV-PB2-03"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD2203",
+        "normalizedModel": "PMCD2203",
+        "sheet": "04_快插接头",
+        "row": 31
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20ACV-PB2-03",
+        "normalizedModel": "20ACV-PB2-03",
+        "sheet": "04_快插接头",
+        "row": 31
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 31
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2003-PNV-SPPE",
+    "foreachModel": "Q2003-PNV-SPPE",
+    "productCode": "839080",
+    "compatibleModels": [
+      "PMCD220312",
+      "20PPV-PE2-03MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD220312",
+        "normalizedModel": "PMCD220312",
+        "sheet": "04_快插接头",
+        "row": 77
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20PPV-PE2-03MALD",
+        "normalizedModel": "20PPV-PE2-03MALD",
+        "sheet": "04_快插接头",
+        "row": 77
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 77
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2003-PNX-SACN",
+    "foreachModel": "Q2003-PNX-SACN",
+    "productCode": "839014",
+    "compatibleModels": [
+      "PMC2203",
+      "20AC-PB2-03"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC2203",
+        "normalizedModel": "PMC2203",
+        "sheet": "04_快插接头",
+        "row": 44
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20AC-PB2-03",
+        "normalizedModel": "20AC-PB2-03",
+        "sheet": "04_快插接头",
+        "row": 44
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 44
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2003-PNX-SPPE",
+    "foreachModel": "Q2003-PNX-SPPE",
+    "productCode": "839058",
+    "compatibleModels": [
+      "PMC220312",
+      "20PP-PE2-03MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC220312",
+        "normalizedModel": "PMC220312",
+        "sheet": "04_快插接头",
+        "row": 88
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20PP-PE2-03MALD",
+        "normalizedModel": "20PP-PE2-03MALD",
+        "sheet": "04_快插接头",
+        "row": 88
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 88
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2003-SMV-SACN",
+    "foreachModel": "Q2003-SMV-SACN",
+    "productCode": "839032",
+    "compatibleModels": [
+      "PMCD1603",
+      "20ACV-SB3-03"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD1603",
+        "normalizedModel": "PMCD1603",
+        "sheet": "04_快插接头",
+        "row": 27
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20ACV-SB3-03",
+        "normalizedModel": "20ACV-SB3-03",
+        "sheet": "04_快插接头",
+        "row": 27
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 27
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2003-SMV-SPPE",
+    "foreachModel": "Q2003-SMV-SPPE",
+    "productCode": "839076",
+    "compatibleModels": [
+      "PMCD160312"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD160312",
+        "normalizedModel": "PMCD160312",
+        "sheet": "04_快插接头",
+        "row": 73
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 73
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2003-SMX-SACN",
+    "foreachModel": "Q2003-SMX-SACN",
+    "productCode": "839010",
+    "compatibleModels": [
+      "PMC1603",
+      "20AC-S3-03"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC1603",
+        "normalizedModel": "PMC1603",
+        "sheet": "04_快插接头",
+        "row": 12
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20AC-S3-03",
+        "normalizedModel": "20AC-S3-03",
+        "sheet": "04_快插接头",
+        "row": 12
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 12
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2003-SMX-SPPE",
+    "foreachModel": "Q2003-SMX-SPPE",
+    "productCode": "839054",
+    "compatibleModels": [
+      "PMC160312"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC160312",
+        "normalizedModel": "PMC160312",
+        "sheet": "04_快插接头",
+        "row": 58
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 58
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2003-SNV-SACN",
+    "foreachModel": "Q2003-SNV-SACN",
+    "productCode": "839025",
+    "compatibleModels": [
+      "PMCD1703",
+      "20ACV-SB2-03"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD1703",
+        "normalizedModel": "PMCD1703",
+        "sheet": "04_快插接头",
+        "row": 20
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20ACV-SB2-03",
+        "normalizedModel": "20ACV-SB2-03",
+        "sheet": "04_快插接头",
+        "row": 20
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 20
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2003-SNV-SPPE",
+    "foreachModel": "Q2003-SNV-SPPE",
+    "productCode": "839069",
+    "compatibleModels": [
+      "PMCD170312",
+      "20PPV-SE2-03MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD170312",
+        "normalizedModel": "PMCD170312",
+        "sheet": "04_快插接头",
+        "row": 66
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20PPV-SE2-03MALD",
+        "normalizedModel": "20PPV-SE2-03MALD",
+        "sheet": "04_快插接头",
+        "row": 66
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 66
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2003-SNX-SACN",
+    "foreachModel": "Q2003-SNX-SACN",
+    "productCode": "839003",
+    "compatibleModels": [
+      "PMC1703",
+      "20AC-S2-03"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC1703",
+        "normalizedModel": "PMC1703",
+        "sheet": "04_快插接头",
+        "row": 5
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20AC-S2-03",
+        "normalizedModel": "20AC-S2-03",
+        "sheet": "04_快插接头",
+        "row": 5
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 5
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2003-SNX-SPPE",
+    "foreachModel": "Q2003-SNX-SPPE",
+    "productCode": "839047",
+    "compatibleModels": [
+      "PMC170312",
+      "20PP-S2-03MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC170312",
+        "normalizedModel": "PMC170312",
+        "sheet": "04_快插接头",
+        "row": 51
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20PP-S2-03MALD",
+        "normalizedModel": "20PP-S2-03MALD",
+        "sheet": "04_快插接头",
+        "row": 51
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 51
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2004-PMV-SACN",
+    "foreachModel": "Q2004-PMV-SACN",
+    "productCode": "839044",
+    "compatibleModels": [
+      "PMCD4204",
+      "20ACV-PB3-04"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD4204",
+        "normalizedModel": "PMCD4204",
+        "sheet": "04_快插接头",
+        "row": 39
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20ACV-PB3-04",
+        "normalizedModel": "20ACV-PB3-04",
+        "sheet": "04_快插接头",
+        "row": 39
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 39
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2004-PMV-SPPE",
+    "foreachModel": "Q2004-PMV-SPPE",
+    "productCode": "839088",
+    "compatibleModels": [
+      "PMCD420412"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD420412",
+        "normalizedModel": "PMCD420412",
+        "sheet": "04_快插接头",
+        "row": 85
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 85
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2004-PMX-SACN",
+    "foreachModel": "Q2004-PMX-SACN",
+    "productCode": "839022",
+    "compatibleModels": [
+      "PMC4204",
+      "20AC-PB3-04"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC4204",
+        "normalizedModel": "PMC4204",
+        "sheet": "04_快插接头",
+        "row": 17
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20AC-PB3-04",
+        "normalizedModel": "20AC-PB3-04",
+        "sheet": "04_快插接头",
+        "row": 17
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 17
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2004-PMX-SPPE",
+    "foreachModel": "Q2004-PMX-SPPE",
+    "productCode": "839066",
+    "compatibleModels": [
+      "PMC420412",
+      "20PP-PE3-04MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC420412",
+        "normalizedModel": "PMC420412",
+        "sheet": "04_快插接头",
+        "row": 63
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20PP-PE3-04MALD",
+        "normalizedModel": "20PP-PE3-04MALD",
+        "sheet": "04_快插接头",
+        "row": 63
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 63
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2004-PNV-LACN",
+    "foreachModel": "Q2004-PNV-LACN",
+    "productCode": "839039",
+    "compatibleModels": [
+      "PMCD2304",
+      "20ACV-PB4-04"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD2304",
+        "normalizedModel": "PMCD2304",
+        "sheet": "04_快插接头",
+        "row": 34
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20ACV-PB4-04",
+        "normalizedModel": "20ACV-PB4-04",
+        "sheet": "04_快插接头",
+        "row": 34
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 34
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2004-PNV-LPPE",
+    "foreachModel": "Q2004-PNV-LPPE",
+    "productCode": "839083",
+    "compatibleModels": [
+      "PMCD230412",
+      "20PPV-PE4-04MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD230412",
+        "normalizedModel": "PMCD230412",
+        "sheet": "04_快插接头",
+        "row": 80
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20PPV-PE4-04MALD",
+        "normalizedModel": "20PPV-PE4-04MALD",
+        "sheet": "04_快插接头",
+        "row": 80
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 80
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2004-PNV-SACN",
+    "foreachModel": "Q2004-PNV-SACN",
+    "productCode": "839037",
+    "compatibleModels": [
+      "PMCD2204",
+      "20ACV-PB2-04"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD2204",
+        "normalizedModel": "PMCD2204",
+        "sheet": "04_快插接头",
+        "row": 32
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20ACV-PB2-04",
+        "normalizedModel": "20ACV-PB2-04",
+        "sheet": "04_快插接头",
+        "row": 32
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 32
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2004-PNV-SPPE",
+    "foreachModel": "Q2004-PNV-SPPE",
+    "productCode": "839081",
+    "compatibleModels": [
+      "PMCD220412",
+      "20PPV-PE2-04MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD220412",
+        "normalizedModel": "PMCD220412",
+        "sheet": "04_快插接头",
+        "row": 78
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20PPV-PE2-04MALD",
+        "normalizedModel": "20PPV-PE2-04MALD",
+        "sheet": "04_快插接头",
+        "row": 78
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 78
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2004-PNX-LACN",
+    "foreachModel": "Q2004-PNX-LACN",
+    "productCode": "839017",
+    "compatibleModels": [
+      "PMC2304",
+      "20AC-PB4-04"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC2304",
+        "normalizedModel": "PMC2304",
+        "sheet": "04_快插接头",
+        "row": 47
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20AC-PB4-04",
+        "normalizedModel": "20AC-PB4-04",
+        "sheet": "04_快插接头",
+        "row": 47
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 47
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2004-PNX-LPPE",
+    "foreachModel": "Q2004-PNX-LPPE",
+    "productCode": "839061",
+    "compatibleModels": [
+      "PMC230412",
+      "20PP-PE4-04MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC230412",
+        "normalizedModel": "PMC230412",
+        "sheet": "04_快插接头",
+        "row": 91
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20PP-PE4-04MALD",
+        "normalizedModel": "20PP-PE4-04MALD",
+        "sheet": "04_快插接头",
+        "row": 91
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 91
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2004-PNX-SACN",
+    "foreachModel": "Q2004-PNX-SACN",
+    "productCode": "839015",
+    "compatibleModels": [
+      "PMC2204",
+      "20AC-PB2-04"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC2204",
+        "normalizedModel": "PMC2204",
+        "sheet": "04_快插接头",
+        "row": 45
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20AC-PB2-04",
+        "normalizedModel": "20AC-PB2-04",
+        "sheet": "04_快插接头",
+        "row": 45
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 45
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2004-PNX-SPPE",
+    "foreachModel": "Q2004-PNX-SPPE",
+    "productCode": "839059",
+    "compatibleModels": [
+      "PMC220412",
+      "20PP-PE2-04MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC220412",
+        "normalizedModel": "PMC220412",
+        "sheet": "04_快插接头",
+        "row": 89
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20PP-PE2-04MALD",
+        "normalizedModel": "20PP-PE2-04MALD",
+        "sheet": "04_快插接头",
+        "row": 89
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 89
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2004-SMV-SACN",
+    "foreachModel": "Q2004-SMV-SACN",
+    "productCode": "839033",
+    "compatibleModels": [
+      "PMCD1604",
+      "20ACV-SB3-04"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD1604",
+        "normalizedModel": "PMCD1604",
+        "sheet": "04_快插接头",
+        "row": 28
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20ACV-SB3-04",
+        "normalizedModel": "20ACV-SB3-04",
+        "sheet": "04_快插接头",
+        "row": 28
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 28
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2004-SMV-SPPE",
+    "foreachModel": "Q2004-SMV-SPPE",
+    "productCode": "839077",
+    "compatibleModels": [
+      "PMCD160412",
+      "20PPV-SE3-04MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD160412",
+        "normalizedModel": "PMCD160412",
+        "sheet": "04_快插接头",
+        "row": 74
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20PPV-SE3-04MALD",
+        "normalizedModel": "20PPV-SE3-04MALD",
+        "sheet": "04_快插接头",
+        "row": 74
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 74
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2004-SMX-SACN",
+    "foreachModel": "Q2004-SMX-SACN",
+    "productCode": "839011",
+    "compatibleModels": [
+      "PMC1604",
+      "20AC-S3-04"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC1604",
+        "normalizedModel": "PMC1604",
+        "sheet": "04_快插接头",
+        "row": 13
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20AC-S3-04",
+        "normalizedModel": "20AC-S3-04",
+        "sheet": "04_快插接头",
+        "row": 13
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 13
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2004-SMX-SPPE",
+    "foreachModel": "Q2004-SMX-SPPE",
+    "productCode": "839055",
+    "compatibleModels": [
+      "PMC160412",
+      "20PP-S3-04MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC160412",
+        "normalizedModel": "PMC160412",
+        "sheet": "04_快插接头",
+        "row": 59
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20PP-S3-04MALD",
+        "normalizedModel": "20PP-S3-04MALD",
+        "sheet": "04_快插接头",
+        "row": 59
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 59
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2004-SNV-LACN",
+    "foreachModel": "Q2004-SNV-LACN",
+    "productCode": "839028",
+    "compatibleModels": [
+      "20ACV-SB4-04"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "LinkTech",
+        "model": "20ACV-SB4-04",
+        "normalizedModel": "20ACV-SB4-04",
+        "sheet": "04_快插接头",
+        "row": 23
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 23
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2004-SNV-SACN",
+    "foreachModel": "Q2004-SNV-SACN",
+    "productCode": "839026",
+    "compatibleModels": [
+      "PMCD1704",
+      "20ACV-SB2-04"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD1704",
+        "normalizedModel": "PMCD1704",
+        "sheet": "04_快插接头",
+        "row": 21
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20ACV-SB2-04",
+        "normalizedModel": "20ACV-SB2-04",
+        "sheet": "04_快插接头",
+        "row": 21
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 21
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2004-SNV-SPPE",
+    "foreachModel": "Q2004-SNV-SPPE",
+    "productCode": "839070",
+    "compatibleModels": [
+      "PMCD170412",
+      "20PPV-SE2-04MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD170412",
+        "normalizedModel": "PMCD170412",
+        "sheet": "04_快插接头",
+        "row": 67
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20PPV-SE2-04MALD",
+        "normalizedModel": "20PPV-SE2-04MALD",
+        "sheet": "04_快插接头",
+        "row": 67
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 67
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2004-SNX-LACN",
+    "foreachModel": "Q2004-SNX-LACN",
+    "productCode": "839006",
+    "compatibleModels": [
+      "20AC-S4-04"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "LinkTech",
+        "model": "20AC-S4-04",
+        "normalizedModel": "20AC-S4-04",
+        "sheet": "04_快插接头",
+        "row": 8
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 8
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2004-SNX-SACN",
+    "foreachModel": "Q2004-SNX-SACN",
+    "productCode": "839004",
+    "compatibleModels": [
+      "PMC1704",
+      "20AC-S2-04"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC1704",
+        "normalizedModel": "PMC1704",
+        "sheet": "04_快插接头",
+        "row": 6
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20AC-S2-04",
+        "normalizedModel": "20AC-S2-04",
+        "sheet": "04_快插接头",
+        "row": 6
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 6
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2004-SNX-SPPE",
+    "foreachModel": "Q2004-SNX-SPPE",
+    "productCode": "839048",
+    "compatibleModels": [
+      "PMC170412",
+      "20PP-S2-04MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC170412",
+        "normalizedModel": "PMC170412",
+        "sheet": "04_快插接头",
+        "row": 52
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20PP-S2-04MALD",
+        "normalizedModel": "20PP-S2-04MALD",
+        "sheet": "04_快插接头",
+        "row": 52
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 52
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2018N-PNV-SACN",
+    "foreachModel": "Q2018N-PNV-SACN",
+    "productCode": "839040",
+    "compatibleModels": [
+      "PMCD2402",
+      "20ACV-PB1-02"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD2402",
+        "normalizedModel": "PMCD2402",
+        "sheet": "04_快插接头",
+        "row": 35
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20ACV-PB1-02",
+        "normalizedModel": "20ACV-PB1-02",
+        "sheet": "04_快插接头",
+        "row": 35
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 35
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2018N-PNV-SPPE",
+    "foreachModel": "Q2018N-PNV-SPPE",
+    "productCode": "839084",
+    "compatibleModels": [
+      "PMCD240212",
+      "20PPV-PE1-02MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD240212",
+        "normalizedModel": "PMCD240212",
+        "sheet": "04_快插接头",
+        "row": 81
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20PPV-PE1-02MALD",
+        "normalizedModel": "20PPV-PE1-02MALD",
+        "sheet": "04_快插接头",
+        "row": 81
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 81
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2018N-PNX-SACN",
+    "foreachModel": "Q2018N-PNX-SACN",
+    "productCode": "839018",
+    "compatibleModels": [
+      "PMC2402",
+      "20AC-PB1-02"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC2402",
+        "normalizedModel": "PMC2402",
+        "sheet": "04_快插接头",
+        "row": 48
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20AC-PB1-02",
+        "normalizedModel": "20AC-PB1-02",
+        "sheet": "04_快插接头",
+        "row": 48
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 48
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2018N-PNX-SPPE",
+    "foreachModel": "Q2018N-PNX-SPPE",
+    "productCode": "839062",
+    "compatibleModels": [
+      "PMC240212",
+      "20PP-PE1-02MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC240212",
+        "normalizedModel": "PMC240212",
+        "sheet": "04_快插接头",
+        "row": 92
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20PP-PE1-02MALD",
+        "normalizedModel": "20PP-PE1-02MALD",
+        "sheet": "04_快插接头",
+        "row": 92
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 92
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2018T-SNV-SACN",
+    "foreachModel": "Q2018T-SNV-SACN",
+    "productCode": "839109",
+    "compatibleModels": [
+      "PMCD1002",
+      "20ACV-SB1-02"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD1002",
+        "normalizedModel": "PMCD1002",
+        "sheet": "04_快插接头",
+        "row": 99
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20ACV-SB1-02",
+        "normalizedModel": "20ACV-SB1-02",
+        "sheet": "04_快插接头",
+        "row": 99
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 99
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2018T-SNV-SPPE",
+    "foreachModel": "Q2018T-SNV-SPPE",
+    "productCode": "839097",
+    "compatibleModels": [
+      "PMCD100212",
+      "20PPV-SE1-02-MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMCD100212",
+        "normalizedModel": "PMCD100212",
+        "sheet": "04_快插接头",
+        "row": 97
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20PPV-SE1-02-MALD",
+        "normalizedModel": "20PPV-SE1-02-MALD",
+        "sheet": "04_快插接头",
+        "row": 97
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 97
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2018T-SNX-SACN",
+    "foreachModel": "Q2018T-SNX-SACN",
+    "productCode": "839110",
+    "compatibleModels": [
+      "PMC1002",
+      "20AC-S1-02"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC1002",
+        "normalizedModel": "PMC1002",
+        "sheet": "04_快插接头",
+        "row": 100
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20AC-S1-02",
+        "normalizedModel": "20AC-S1-02",
+        "sheet": "04_快插接头",
+        "row": 100
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 100
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q20",
+    "productName": "Q2018T-SNX-SPPE",
+    "foreachModel": "Q2018T-SNX-SPPE",
+    "productCode": "839104",
+    "compatibleModels": [
+      "PMC100212",
+      "20PP-S1-02-MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PMC100212",
+        "normalizedModel": "PMC100212",
+        "sheet": "04_快插接头",
+        "row": 98
+      },
+      {
+        "brand": "LinkTech",
+        "model": "20PP-S1-02-MALD",
+        "normalizedModel": "20PP-S1-02-MALD",
+        "sheet": "04_快插接头",
+        "row": 98
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 98
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4004-PMV-SACN",
+    "foreachModel": "Q4004-PMV-SACN",
+    "productCode": "849032",
+    "compatibleModels": [
+      "PLCD42004",
+      "40ACV-PB3-04"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLCD42004",
+        "normalizedModel": "PLCD42004",
+        "sheet": "04_快插接头",
+        "row": 135
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40ACV-PB3-04",
+        "normalizedModel": "40ACV-PB3-04",
+        "sheet": "04_快插接头",
+        "row": 135
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 135
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4004-PMV-SPPE",
+    "foreachModel": "Q4004-PMV-SPPE",
+    "productCode": "849066",
+    "compatibleModels": [
+      "PLCD4200412",
+      "40PPV-PE3-04MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLCD4200412",
+        "normalizedModel": "PLCD4200412",
+        "sheet": "04_快插接头",
+        "row": 157
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40PPV-PE3-04MALD",
+        "normalizedModel": "40PPV-PE3-04MALD",
+        "sheet": "04_快插接头",
+        "row": 157
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 157
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4004-PMX-SACN",
+    "foreachModel": "Q4004-PMX-SACN",
+    "productCode": "849015",
+    "compatibleModels": [
+      "PLC42004",
+      "40AC-PB3-04"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLC42004",
+        "normalizedModel": "PLC42004",
+        "sheet": "04_快插接头",
+        "row": 129
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40AC-PB3-04",
+        "normalizedModel": "40AC-PB3-04",
+        "sheet": "04_快插接头",
+        "row": 129
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 129
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4004-PMX-SPPE",
+    "foreachModel": "Q4004-PMX-SPPE",
+    "productCode": "849049",
+    "compatibleModels": [
+      "PLC4200412",
+      "40PP-PE3-04MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLC4200412",
+        "normalizedModel": "PLC4200412",
+        "sheet": "04_快插接头",
+        "row": 151
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40PP-PE3-04MALD",
+        "normalizedModel": "40PP-PE3-04MALD",
+        "sheet": "04_快插接头",
+        "row": 151
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 151
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4004-PNV-LACN",
+    "foreachModel": "Q4004-PNV-LACN",
+    "productCode": "849030",
+    "compatibleModels": [
+      "PLCD22004",
+      "40ACV-PB2-04"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLCD22004",
+        "normalizedModel": "PLCD22004",
+        "sheet": "04_快插接头",
+        "row": 105
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40ACV-PB2-04",
+        "normalizedModel": "40ACV-PB2-04",
+        "sheet": "04_快插接头",
+        "row": 105
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 105
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4004-PNV-LPPE",
+    "foreachModel": "Q4004-PNV-LPPE",
+    "productCode": "849064",
+    "compatibleModels": [
+      "PLCD2300412",
+      "40PPV-PE4-04MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLCD2300412",
+        "normalizedModel": "PLCD2300412",
+        "sheet": "04_快插接头",
+        "row": 112
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40PPV-PE4-04MALD",
+        "normalizedModel": "40PPV-PE4-04MALD",
+        "sheet": "04_快插接头",
+        "row": 112
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 112
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4004-PNV-SACN",
+    "foreachModel": "Q4004-PNV-SACN",
+    "productCode": "849027",
+    "compatibleModels": [
+      "PLCD22004",
+      "40ACV-PB3-04"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLCD22004",
+        "normalizedModel": "PLCD22004",
+        "sheet": "04_快插接头",
+        "row": 133
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40ACV-PB3-04",
+        "normalizedModel": "40ACV-PB3-04",
+        "sheet": "04_快插接头",
+        "row": 133
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 133
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4004-PNV-SPPE",
+    "foreachModel": "Q4004-PNV-SPPE",
+    "productCode": "849061",
+    "compatibleModels": [
+      "PLCD2200412",
+      "40PPV-PE2-04MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLCD2200412",
+        "normalizedModel": "PLCD2200412",
+        "sheet": "04_快插接头",
+        "row": 155
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40PPV-PE2-04MALD",
+        "normalizedModel": "40PPV-PE2-04MALD",
+        "sheet": "04_快插接头",
+        "row": 155
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 155
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4004-PNX-SACN",
+    "foreachModel": "Q4004-PNX-SACN",
+    "productCode": "849010",
+    "compatibleModels": [
+      "PLC22004",
+      "40AC-PB2-04"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLC22004",
+        "normalizedModel": "PLC22004",
+        "sheet": "04_快插接头",
+        "row": 115
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40AC-PB2-04",
+        "normalizedModel": "40AC-PB2-04",
+        "sheet": "04_快插接头",
+        "row": 115
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 115
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4004-PNX-SPPE",
+    "foreachModel": "Q4004-PNX-SPPE",
+    "productCode": "849044",
+    "compatibleModels": [
+      "PLC2200412",
+      "40PP-PE2-04MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLC2200412",
+        "normalizedModel": "PLC2200412",
+        "sheet": "04_快插接头",
+        "row": 137
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40PP-PE2-04MALD",
+        "normalizedModel": "40PP-PE2-04MALD",
+        "sheet": "04_快插接头",
+        "row": 137
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 137
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4004-SMV-SACN",
+    "foreachModel": "Q4004-SMV-SACN",
+    "productCode": "849024",
+    "compatibleModels": [
+      "PLCD16004",
+      "40ACV-SB3-04"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLCD16004",
+        "normalizedModel": "PLCD16004",
+        "sheet": "04_快插接头",
+        "row": 131
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40ACV-SB3-04",
+        "normalizedModel": "40ACV-SB3-04",
+        "sheet": "04_快插接头",
+        "row": 131
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 131
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4004-SMV-SPPE",
+    "foreachModel": "Q4004-SMV-SPPE",
+    "productCode": "849058",
+    "compatibleModels": [
+      "PLCD1600412",
+      "40PPV-SE3-04MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLCD1600412",
+        "normalizedModel": "PLCD1600412",
+        "sheet": "04_快插接头",
+        "row": 153
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40PPV-SE3-04MALD",
+        "normalizedModel": "40PPV-SE3-04MALD",
+        "sheet": "04_快插接头",
+        "row": 153
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 153
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4004-SMX-SACN",
+    "foreachModel": "Q4004-SMX-SACN",
+    "productCode": "849007",
+    "compatibleModels": [
+      "PLC16004",
+      "40AC-S3-04"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLC16004",
+        "normalizedModel": "PLC16004",
+        "sheet": "04_快插接头",
+        "row": 127
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40AC-S3-04",
+        "normalizedModel": "40AC-S3-04",
+        "sheet": "04_快插接头",
+        "row": 127
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 127
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4004-SMX-SPPE",
+    "foreachModel": "Q4004-SMX-SPPE",
+    "productCode": "849041",
+    "compatibleModels": [
+      "PLC1600412",
+      "40PP-S3-04MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLC1600412",
+        "normalizedModel": "PLC1600412",
+        "sheet": "04_快插接头",
+        "row": 149
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40PP-S3-04MALD",
+        "normalizedModel": "40PP-S3-04MALD",
+        "sheet": "04_快插接头",
+        "row": 149
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 149
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4004-SNV-SACN",
+    "foreachModel": "Q4004-SNV-SACN",
+    "productCode": "849018",
+    "compatibleModels": [
+      "PLCD17004",
+      "40ACV-SB2-04"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLCD17004",
+        "normalizedModel": "PLCD17004",
+        "sheet": "04_快插接头",
+        "row": 123
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40ACV-SB2-04",
+        "normalizedModel": "40ACV-SB2-04",
+        "sheet": "04_快插接头",
+        "row": 123
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 123
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4004-SNV-SPPE",
+    "foreachModel": "Q4004-SNV-SPPE",
+    "productCode": "849052",
+    "compatibleModels": [
+      "PLCD1700412",
+      "40PPV-SE2-04MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLCD1700412",
+        "normalizedModel": "PLCD1700412",
+        "sheet": "04_快插接头",
+        "row": 145
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40PPV-SE2-04MALD",
+        "normalizedModel": "40PPV-SE2-04MALD",
+        "sheet": "04_快插接头",
+        "row": 145
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 145
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4004-SNX-SACN",
+    "foreachModel": "Q4004-SNX-SACN",
+    "productCode": "849001",
+    "compatibleModels": [
+      "PLC17004",
+      "40AC-S2-04"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLC17004",
+        "normalizedModel": "PLC17004",
+        "sheet": "04_快插接头",
+        "row": 119
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40AC-S2-04",
+        "normalizedModel": "40AC-S2-04",
+        "sheet": "04_快插接头",
+        "row": 119
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 119
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4004-SNX-SPPE",
+    "foreachModel": "Q4004-SNX-SPPE",
+    "productCode": "849035",
+    "compatibleModels": [
+      "PLC1700412",
+      "40PP-S2-04MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLC1700412",
+        "normalizedModel": "PLC1700412",
+        "sheet": "04_快插接头",
+        "row": 141
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40PP-S2-04MALD",
+        "normalizedModel": "40PP-S2-04MALD",
+        "sheet": "04_快插接头",
+        "row": 141
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 141
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4005-PMV-SACN",
+    "foreachModel": "Q4005-PMV-SACN",
+    "productCode": "849033",
+    "compatibleModels": [
+      "PLCD42005",
+      "40ACV-PB3-05"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLCD42005",
+        "normalizedModel": "PLCD42005",
+        "sheet": "04_快插接头",
+        "row": 136
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40ACV-PB3-05",
+        "normalizedModel": "40ACV-PB3-05",
+        "sheet": "04_快插接头",
+        "row": 136
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 136
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4005-PMV-SPPE",
+    "foreachModel": "Q4005-PMV-SPPE",
+    "productCode": "849067",
+    "compatibleModels": [
+      "PLCD4200512"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLCD4200512",
+        "normalizedModel": "PLCD4200512",
+        "sheet": "04_快插接头",
+        "row": 158
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 158
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4005-PMX-SACN",
+    "foreachModel": "Q4005-PMX-SACN",
+    "productCode": "849016",
+    "compatibleModels": [
+      "PLC42005",
+      "40AC-PB3-05"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLC42005",
+        "normalizedModel": "PLC42005",
+        "sheet": "04_快插接头",
+        "row": 130
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40AC-PB3-05",
+        "normalizedModel": "40AC-PB3-05",
+        "sheet": "04_快插接头",
+        "row": 130
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 130
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4005-PMX-SPPE",
+    "foreachModel": "Q4005-PMX-SPPE",
+    "productCode": "849050",
+    "compatibleModels": [
+      "PLC4200512"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLC4200512",
+        "normalizedModel": "PLC4200512",
+        "sheet": "04_快插接头",
+        "row": 152
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 152
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4005-PNV-SACN",
+    "foreachModel": "Q4005-PNV-SACN",
+    "productCode": "849028",
+    "compatibleModels": [
+      "PLCD22005",
+      "40ACV-PB3-05"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLCD22005",
+        "normalizedModel": "PLCD22005",
+        "sheet": "04_快插接头",
+        "row": 134
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40ACV-PB3-05",
+        "normalizedModel": "40ACV-PB3-05",
+        "sheet": "04_快插接头",
+        "row": 134
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 134
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4005-PNV-SPPE",
+    "foreachModel": "Q4005-PNV-SPPE",
+    "productCode": "849062",
+    "compatibleModels": [
+      "PLCD2200512",
+      "40PPV-PE2-05MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLCD2200512",
+        "normalizedModel": "PLCD2200512",
+        "sheet": "04_快插接头",
+        "row": 156
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40PPV-PE2-05MALD",
+        "normalizedModel": "40PPV-PE2-05MALD",
+        "sheet": "04_快插接头",
+        "row": 156
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 156
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4005-PNX-SACN",
+    "foreachModel": "Q4005-PNX-SACN",
+    "productCode": "849011",
+    "compatibleModels": [
+      "PLC22005",
+      "40AC-PB2-05"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLC22005",
+        "normalizedModel": "PLC22005",
+        "sheet": "04_快插接头",
+        "row": 116
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40AC-PB2-05",
+        "normalizedModel": "40AC-PB2-05",
+        "sheet": "04_快插接头",
+        "row": 116
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 116
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4005-PNX-SPPE",
+    "foreachModel": "Q4005-PNX-SPPE",
+    "productCode": "849045",
+    "compatibleModels": [
+      "PLC2200512",
+      "40PP-PE2-05MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLC2200512",
+        "normalizedModel": "PLC2200512",
+        "sheet": "04_快插接头",
+        "row": 138
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40PP-PE2-05MALD",
+        "normalizedModel": "40PP-PE2-05MALD",
+        "sheet": "04_快插接头",
+        "row": 138
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 138
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4005-SMV-SACN",
+    "foreachModel": "Q4005-SMV-SACN",
+    "productCode": "849025",
+    "compatibleModels": [
+      "PLCD16005",
+      "40ACV-SB3-05"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLCD16005",
+        "normalizedModel": "PLCD16005",
+        "sheet": "04_快插接头",
+        "row": 132
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40ACV-SB3-05",
+        "normalizedModel": "40ACV-SB3-05",
+        "sheet": "04_快插接头",
+        "row": 132
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 132
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4005-SMV-SPPE",
+    "foreachModel": "Q4005-SMV-SPPE",
+    "productCode": "849059",
+    "compatibleModels": [
+      "PLCD1600512",
+      "40PPV-SE3-05MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLCD1600512",
+        "normalizedModel": "PLCD1600512",
+        "sheet": "04_快插接头",
+        "row": 154
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40PPV-SE3-05MALD",
+        "normalizedModel": "40PPV-SE3-05MALD",
+        "sheet": "04_快插接头",
+        "row": 154
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 154
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4005-SMX-SACN",
+    "foreachModel": "Q4005-SMX-SACN",
+    "productCode": "849008",
+    "compatibleModels": [
+      "PLC16005",
+      "40AC-S3-05"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLC16005",
+        "normalizedModel": "PLC16005",
+        "sheet": "04_快插接头",
+        "row": 128
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40AC-S3-05",
+        "normalizedModel": "40AC-S3-05",
+        "sheet": "04_快插接头",
+        "row": 128
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 128
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4005-SMX-SPPE",
+    "foreachModel": "Q4005-SMX-SPPE",
+    "productCode": "849042",
+    "compatibleModels": [
+      "PLC1600512",
+      "40PP-S3-05MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLC1600512",
+        "normalizedModel": "PLC1600512",
+        "sheet": "04_快插接头",
+        "row": 150
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40PP-S3-05MALD",
+        "normalizedModel": "40PP-S3-05MALD",
+        "sheet": "04_快插接头",
+        "row": 150
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 150
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4005-SNV-SACN",
+    "foreachModel": "Q4005-SNV-SACN",
+    "productCode": "849019",
+    "compatibleModels": [
+      "PLCD17005",
+      "40ACV-SB2-05"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLCD17005",
+        "normalizedModel": "PLCD17005",
+        "sheet": "04_快插接头",
+        "row": 124
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40ACV-SB2-05",
+        "normalizedModel": "40ACV-SB2-05",
+        "sheet": "04_快插接头",
+        "row": 124
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 124
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4005-SNV-SPPE",
+    "foreachModel": "Q4005-SNV-SPPE",
+    "productCode": "849053",
+    "compatibleModels": [
+      "PLCD1700512",
+      "40PPV-SE2-05MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLCD1700512",
+        "normalizedModel": "PLCD1700512",
+        "sheet": "04_快插接头",
+        "row": 146
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40PPV-SE2-05MALD",
+        "normalizedModel": "40PPV-SE2-05MALD",
+        "sheet": "04_快插接头",
+        "row": 146
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 146
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4005-SNX-SACN",
+    "foreachModel": "Q4005-SNX-SACN",
+    "productCode": "849002",
+    "compatibleModels": [
+      "PLC17005",
+      "40AC-S2-05"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLC17005",
+        "normalizedModel": "PLC17005",
+        "sheet": "04_快插接头",
+        "row": 120
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40AC-S2-05",
+        "normalizedModel": "40AC-S2-05",
+        "sheet": "04_快插接头",
+        "row": 120
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 120
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4005-SNX-SPPE",
+    "foreachModel": "Q4005-SNX-SPPE",
+    "productCode": "849036",
+    "compatibleModels": [
+      "PLC1700512",
+      "40PP-S2-05MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLC1700512",
+        "normalizedModel": "PLC1700512",
+        "sheet": "04_快插接头",
+        "row": 142
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40PP-S2-05MALD",
+        "normalizedModel": "40PP-S2-05MALD",
+        "sheet": "04_快插接头",
+        "row": 142
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 142
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4006-PMV-SACN",
+    "foreachModel": "Q4006-PMV-SACN",
+    "productCode": "849034",
+    "compatibleModels": [
+      "PLCD42006",
+      "40ACV-PB3-06"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLCD42006",
+        "normalizedModel": "PLCD42006",
+        "sheet": "04_快插接头",
+        "row": 107
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40ACV-PB3-06",
+        "normalizedModel": "40ACV-PB3-06",
+        "sheet": "04_快插接头",
+        "row": 107
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 107
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4006-PMV-SPPE",
+    "foreachModel": "Q4006-PMV-SPPE",
+    "productCode": "849068",
+    "compatibleModels": [
+      "PLCD4200612",
+      "40PPV-PE3-06MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLCD4200612",
+        "normalizedModel": "PLCD4200612",
+        "sheet": "04_快插接头",
+        "row": 114
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40PPV-PE3-06MALD",
+        "normalizedModel": "40PPV-PE3-06MALD",
+        "sheet": "04_快插接头",
+        "row": 114
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 114
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4006-PMX-SACN",
+    "foreachModel": "Q4006-PMX-SACN",
+    "productCode": "849017",
+    "compatibleModels": [
+      "PLC42006",
+      "40AC-PB3-06"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLC42006",
+        "normalizedModel": "PLC42006",
+        "sheet": "04_快插接头",
+        "row": 102
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40AC-PB3-06",
+        "normalizedModel": "40AC-PB3-06",
+        "sheet": "04_快插接头",
+        "row": 102
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 102
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4006-PMX-SPPE",
+    "foreachModel": "Q4006-PMX-SPPE",
+    "productCode": "849051",
+    "compatibleModels": [
+      "PLC4200612",
+      "40PP-PE3-06MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLC4200612",
+        "normalizedModel": "PLC4200612",
+        "sheet": "04_快插接头",
+        "row": 109
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40PP-PE3-06MALD",
+        "normalizedModel": "40PP-PE3-06MALD",
+        "sheet": "04_快插接头",
+        "row": 109
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 109
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4006-PNV-SACN",
+    "foreachModel": "Q4006-PNV-SACN",
+    "productCode": "849029",
+    "compatibleModels": [
+      "PLCD22006",
+      "40ACV-PB2-06"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLCD22006",
+        "normalizedModel": "PLCD22006",
+        "sheet": "04_快插接头",
+        "row": 104
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40ACV-PB2-06",
+        "normalizedModel": "40ACV-PB2-06",
+        "sheet": "04_快插接头",
+        "row": 104
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 104
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4006-PNV-SPPE",
+    "foreachModel": "Q4006-PNV-SPPE",
+    "productCode": "849063",
+    "compatibleModels": [
+      "PLCD2200612",
+      "40PPV-PE2-06MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLCD2200612",
+        "normalizedModel": "PLCD2200612",
+        "sheet": "04_快插接头",
+        "row": 111
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40PPV-PE2-06MALD",
+        "normalizedModel": "40PPV-PE2-06MALD",
+        "sheet": "04_快插接头",
+        "row": 111
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 111
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4006-PNX-LACN",
+    "foreachModel": "Q4006-PNX-LACN",
+    "productCode": "849013",
+    "compatibleModels": [
+      "PLC23006",
+      "40AC-PB4-06"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLC23006",
+        "normalizedModel": "PLC23006",
+        "sheet": "04_快插接头",
+        "row": 118
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40AC-PB4-06",
+        "normalizedModel": "40AC-PB4-06",
+        "sheet": "04_快插接头",
+        "row": 118
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 118
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4006-PNX-LPPE",
+    "foreachModel": "Q4006-PNX-LPPE",
+    "productCode": "849047",
+    "compatibleModels": [
+      "PLC2300612",
+      "40PP-PE4-06MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLC2300612",
+        "normalizedModel": "PLC2300612",
+        "sheet": "04_快插接头",
+        "row": 140
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40PP-PE4-06MALD",
+        "normalizedModel": "40PP-PE4-06MALD",
+        "sheet": "04_快插接头",
+        "row": 140
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 140
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4006-PNX-SACN",
+    "foreachModel": "Q4006-PNX-SACN",
+    "productCode": "849012",
+    "compatibleModels": [
+      "PLC22006",
+      "40AC-PB2-06"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLC22006",
+        "normalizedModel": "PLC22006",
+        "sheet": "04_快插接头",
+        "row": 117
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40AC-PB2-06",
+        "normalizedModel": "40AC-PB2-06",
+        "sheet": "04_快插接头",
+        "row": 117
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 117
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4006-PNX-SPPE",
+    "foreachModel": "Q4006-PNX-SPPE",
+    "productCode": "849046",
+    "compatibleModels": [
+      "PLC2200612",
+      "40PP-PE2-06MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLC2200612",
+        "normalizedModel": "PLC2200612",
+        "sheet": "04_快插接头",
+        "row": 139
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40PP-PE2-06MALD",
+        "normalizedModel": "40PP-PE2-06MALD",
+        "sheet": "04_快插接头",
+        "row": 139
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 139
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4006-SMV-SACN",
+    "foreachModel": "Q4006-SMV-SACN",
+    "productCode": "849026",
+    "compatibleModels": [
+      "PLCD16006",
+      "40ACV-SB3-06"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLCD16006",
+        "normalizedModel": "PLCD16006",
+        "sheet": "04_快插接头",
+        "row": 103
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40ACV-SB3-06",
+        "normalizedModel": "40ACV-SB3-06",
+        "sheet": "04_快插接头",
+        "row": 103
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 103
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4006-SMV-SPPE",
+    "foreachModel": "Q4006-SMV-SPPE",
+    "productCode": "849060",
+    "compatibleModels": [
+      "PLCD1600612",
+      "40PPV-SE3-06MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLCD1600612",
+        "normalizedModel": "PLCD1600612",
+        "sheet": "04_快插接头",
+        "row": 110
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40PPV-SE3-06MALD",
+        "normalizedModel": "40PPV-SE3-06MALD",
+        "sheet": "04_快插接头",
+        "row": 110
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 110
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4006-SMX-SACN",
+    "foreachModel": "Q4006-SMX-SACN",
+    "productCode": "849009",
+    "compatibleModels": [
+      "PLC16006",
+      "40AC-S3-06"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLC16006",
+        "normalizedModel": "PLC16006",
+        "sheet": "04_快插接头",
+        "row": 101
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40AC-S3-06",
+        "normalizedModel": "40AC-S3-06",
+        "sheet": "04_快插接头",
+        "row": 101
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 101
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4006-SMX-SPPE",
+    "foreachModel": "Q4006-SMX-SPPE",
+    "productCode": "849043",
+    "compatibleModels": [
+      "PLC1600612",
+      "40PP-S3-06MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLC1600612",
+        "normalizedModel": "PLC1600612",
+        "sheet": "04_快插接头",
+        "row": 108
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40PP-S3-06MALD",
+        "normalizedModel": "40PP-S3-06MALD",
+        "sheet": "04_快插接头",
+        "row": 108
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 108
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4006-SNV-SACN",
+    "foreachModel": "Q4006-SNV-SACN",
+    "productCode": "849020",
+    "compatibleModels": [
+      "PLCD17006",
+      "40ACV-SB2-06"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLCD17006",
+        "normalizedModel": "PLCD17006",
+        "sheet": "04_快插接头",
+        "row": 125
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40ACV-SB2-06",
+        "normalizedModel": "40ACV-SB2-06",
+        "sheet": "04_快插接头",
+        "row": 125
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 125
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4006-SNV-SPPE",
+    "foreachModel": "Q4006-SNV-SPPE",
+    "productCode": "849054",
+    "compatibleModels": [
+      "PLCD1700612",
+      "40PPV-SE2-06MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLCD1700612",
+        "normalizedModel": "PLCD1700612",
+        "sheet": "04_快插接头",
+        "row": 147
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40PPV-SE2-06MALD",
+        "normalizedModel": "40PPV-SE2-06MALD",
+        "sheet": "04_快插接头",
+        "row": 147
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 147
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4006-SNX-SACN",
+    "foreachModel": "Q4006-SNX-SACN",
+    "productCode": "849003",
+    "compatibleModels": [
+      "PLC17006",
+      "40AC-S2-06"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLC17006",
+        "normalizedModel": "PLC17006",
+        "sheet": "04_快插接头",
+        "row": 121
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40AC-S2-06",
+        "normalizedModel": "40AC-S2-06",
+        "sheet": "04_快插接头",
+        "row": 121
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 121
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4006-SNX-SPPE",
+    "foreachModel": "Q4006-SNX-SPPE",
+    "productCode": "849037",
+    "compatibleModels": [
+      "PLC1700612",
+      "40PP-S2-06MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLC1700612",
+        "normalizedModel": "PLC1700612",
+        "sheet": "04_快插接头",
+        "row": 143
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40PP-S2-06MALD",
+        "normalizedModel": "40PP-S2-06MALD",
+        "sheet": "04_快插接头",
+        "row": 143
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 143
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4014N-PNV-SACN",
+    "foreachModel": "Q4014N-PNV-SACN",
+    "productCode": "849031",
+    "compatibleModels": [
+      "PLCD24004",
+      "40ACV-PB1-04"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLCD24004",
+        "normalizedModel": "PLCD24004",
+        "sheet": "04_快插接头",
+        "row": 106
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40ACV-PB1-04",
+        "normalizedModel": "40ACV-PB1-04",
+        "sheet": "04_快插接头",
+        "row": 106
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 106
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4014N-PNV-SPPE",
+    "foreachModel": "Q4014N-PNV-SPPE",
+    "productCode": "849065",
+    "compatibleModels": [
+      "PLCD2400412",
+      "40PPV-PE1-04MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLCD2400412",
+        "normalizedModel": "PLCD2400412",
+        "sheet": "04_快插接头",
+        "row": 113
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40PPV-PE1-04MALD",
+        "normalizedModel": "40PPV-PE1-04MALD",
+        "sheet": "04_快插接头",
+        "row": 113
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 113
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4014N-SNV-SACN",
+    "foreachModel": "Q4014N-SNV-SACN",
+    "productCode": "849023",
+    "compatibleModels": [
+      "PLCD10004",
+      "40ACV-SB1-04"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLCD10004",
+        "normalizedModel": "PLCD10004",
+        "sheet": "04_快插接头",
+        "row": 126
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40ACV-SB1-04",
+        "normalizedModel": "40ACV-SB1-04",
+        "sheet": "04_快插接头",
+        "row": 126
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 126
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4014N-SNV-SPPE",
+    "foreachModel": "Q4014N-SNV-SPPE",
+    "productCode": "849057",
+    "compatibleModels": [
+      "PLCD1000412",
+      "40PPV-SE1-04MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLCD1000412",
+        "normalizedModel": "PLCD1000412",
+        "sheet": "04_快插接头",
+        "row": 148
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40PPV-SE1-04MALD",
+        "normalizedModel": "40PPV-SE1-04MALD",
+        "sheet": "04_快插接头",
+        "row": 148
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 148
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4014N-SNX-SACN",
+    "foreachModel": "Q4014N-SNX-SACN",
+    "productCode": "849006",
+    "compatibleModels": [
+      "PLC10004",
+      "40AC-S1-04"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLC10004",
+        "normalizedModel": "PLC10004",
+        "sheet": "04_快插接头",
+        "row": 122
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40AC-S1-04",
+        "normalizedModel": "40AC-S1-04",
+        "sheet": "04_快插接头",
+        "row": 122
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 122
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q40",
+    "productName": "Q4014N-SNX-SPPE",
+    "foreachModel": "Q4014N-SNX-SPPE",
+    "productCode": "849040",
+    "compatibleModels": [
+      "PLC1000412",
+      "40PP-S1-04MALD"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "PLC1000412",
+        "normalizedModel": "PLC1000412",
+        "sheet": "04_快插接头",
+        "row": 144
+      },
+      {
+        "brand": "LinkTech",
+        "model": "40PP-S1-04MALD",
+        "normalizedModel": "40PP-S1-04MALD",
+        "sheet": "04_快插接头",
+        "row": 144
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 144
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q60",
+    "productName": "Q6006-PNV-LPPE",
+    "foreachModel": "Q6006-PNV-LPPE",
+    "productCode": "869032",
+    "compatibleModels": [
+      "HFCD23612",
+      "60PPV-PE4-06"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "HFCD23612",
+        "normalizedModel": "HFCD23612",
+        "sheet": "04_快插接头",
+        "row": 193
+      },
+      {
+        "brand": "LinkTech",
+        "model": "60PPV-PE4-06",
+        "normalizedModel": "60PPV-PE4-06",
+        "sheet": "04_快插接头",
+        "row": 193
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 193
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q60",
+    "productName": "Q6006-PNV-SPPE",
+    "foreachModel": "Q6006-PNV-SPPE",
+    "productCode": "869029",
+    "compatibleModels": [
+      "HFCD22612",
+      "60PPV-PE2-06"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "HFCD22612",
+        "normalizedModel": "HFCD22612",
+        "sheet": "04_快插接头",
+        "row": 173
+      },
+      {
+        "brand": "LinkTech",
+        "model": "60PPV-PE2-06",
+        "normalizedModel": "60PPV-PE2-06",
+        "sheet": "04_快插接头",
+        "row": 173
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 173
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q60",
+    "productName": "Q6006-PNX-LPPE",
+    "foreachModel": "Q6006-PNX-LPPE",
+    "productCode": "869012",
+    "compatibleModels": [
+      "HFC23612",
+      "60PP-PE4-06"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "HFC23612",
+        "normalizedModel": "HFC23612",
+        "sheet": "04_快插接头",
+        "row": 192
+      },
+      {
+        "brand": "LinkTech",
+        "model": "60PP-PE4-06",
+        "normalizedModel": "60PP-PE4-06",
+        "sheet": "04_快插接头",
+        "row": 192
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 192
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q60",
+    "productName": "Q6006-PNX-SPPE",
+    "foreachModel": "Q6006-PNX-SPPE",
+    "productCode": "869009",
+    "compatibleModels": [
+      "HFC22612",
+      "60PP-PE2-06"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "HFC22612",
+        "normalizedModel": "HFC22612",
+        "sheet": "04_快插接头",
+        "row": 168
+      },
+      {
+        "brand": "LinkTech",
+        "model": "60PP-PE2-06",
+        "normalizedModel": "60PP-PE2-06",
+        "sheet": "04_快插接头",
+        "row": 168
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 168
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q60",
+    "productName": "Q6006-SMV-LPPE",
+    "foreachModel": "Q6006-SMV-LPPE",
+    "productCode": "869020",
+    "compatibleModels": [
+      "60PPV-SE22-06"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "LinkTech",
+        "model": "60PPV-SE22-06",
+        "normalizedModel": "60PPV-SE22-06",
+        "sheet": "04_快插接头",
+        "row": 187
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 187
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q60",
+    "productName": "Q6006-SMV-SPPE",
+    "foreachModel": "Q6006-SMV-SPPE",
+    "productCode": "869026",
+    "compatibleModels": [
+      "HFCD16612",
+      "60PPV-SE3-06"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "HFCD16612",
+        "normalizedModel": "HFCD16612",
+        "sheet": "04_快插接头",
+        "row": 184
+      },
+      {
+        "brand": "LinkTech",
+        "model": "60PPV-SE3-06",
+        "normalizedModel": "60PPV-SE3-06",
+        "sheet": "04_快插接头",
+        "row": 184
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 184
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q60",
+    "productName": "Q6006-SMX-LPPE",
+    "foreachModel": "Q6006-SMX-LPPE",
+    "productCode": "869018",
+    "compatibleModels": [
+      "60PP-S22-06"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "LinkTech",
+        "model": "60PP-S22-06",
+        "normalizedModel": "60PP-S22-06",
+        "sheet": "04_快插接头",
+        "row": 179
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 179
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q60",
+    "productName": "Q6006-SMX-SPPE",
+    "foreachModel": "Q6006-SMX-SPPE",
+    "productCode": "869006",
+    "compatibleModels": [
+      "HFC16612",
+      "60PP-S3-06"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "HFC16612",
+        "normalizedModel": "HFC16612",
+        "sheet": "04_快插接头",
+        "row": 176
+      },
+      {
+        "brand": "LinkTech",
+        "model": "60PP-S3-06",
+        "normalizedModel": "60PP-S3-06",
+        "sheet": "04_快插接头",
+        "row": 176
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 176
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q60",
+    "productName": "Q6006-SNV-SPPE",
+    "foreachModel": "Q6006-SNV-SPPE",
+    "productCode": "869021",
+    "compatibleModels": [
+      "HFCD17612",
+      "60PPV-SE2-06"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "HFCD17612",
+        "normalizedModel": "HFCD17612",
+        "sheet": "04_快插接头",
+        "row": 172
+      },
+      {
+        "brand": "LinkTech",
+        "model": "60PPV-SE2-06",
+        "normalizedModel": "60PPV-SE2-06",
+        "sheet": "04_快插接头",
+        "row": 172
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 172
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q60",
+    "productName": "Q6006-SNX-SPPE",
+    "foreachModel": "Q6006-SNX-SPPE",
+    "productCode": "869001",
+    "compatibleModels": [
+      "HFC17612",
+      "60PP-S2-06"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "HFC17612",
+        "normalizedModel": "HFC17612",
+        "sheet": "04_快插接头",
+        "row": 165
+      },
+      {
+        "brand": "LinkTech",
+        "model": "60PP-S2-06",
+        "normalizedModel": "60PP-S2-06",
+        "sheet": "04_快插接头",
+        "row": 165
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 165
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q60",
+    "productName": "Q6008-PNV-LPPE",
+    "foreachModel": "Q6008-PNV-LPPE",
+    "productCode": "869033",
+    "compatibleModels": [
+      "HFCD23812",
+      "60PPV-PE4-08"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "HFCD23812",
+        "normalizedModel": "HFCD23812",
+        "sheet": "04_快插接头",
+        "row": 159
+      },
+      {
+        "brand": "LinkTech",
+        "model": "60PPV-PE4-08",
+        "normalizedModel": "60PPV-PE4-08",
+        "sheet": "04_快插接头",
+        "row": 159
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 159
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q60",
+    "productName": "Q6008-PNV-SPPE",
+    "foreachModel": "Q6008-PNV-SPPE",
+    "productCode": "869030",
+    "compatibleModels": [
+      "HFCD22812",
+      "60PPV-PE2-08"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "HFCD22812",
+        "normalizedModel": "HFCD22812",
+        "sheet": "04_快插接头",
+        "row": 162
+      },
+      {
+        "brand": "LinkTech",
+        "model": "60PPV-PE2-08",
+        "normalizedModel": "60PPV-PE2-08",
+        "sheet": "04_快插接头",
+        "row": 162
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 162
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q60",
+    "productName": "Q6008-PNX-LPPE",
+    "foreachModel": "Q6008-PNX-LPPE",
+    "productCode": "869013",
+    "compatibleModels": [
+      "HFC23812",
+      "60PP-PE4-08"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "HFC23812",
+        "normalizedModel": "HFC23812",
+        "sheet": "04_快插接头",
+        "row": 170
+      },
+      {
+        "brand": "LinkTech",
+        "model": "60PP-PE4-08",
+        "normalizedModel": "60PP-PE4-08",
+        "sheet": "04_快插接头",
+        "row": 170
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 170
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q60",
+    "productName": "Q6008-PNX-SPPE",
+    "foreachModel": "Q6008-PNX-SPPE",
+    "productCode": "869010",
+    "compatibleModels": [
+      "HFC22812",
+      "60PP-PE2-08"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "HFC22812",
+        "normalizedModel": "HFC22812",
+        "sheet": "04_快插接头",
+        "row": 169
+      },
+      {
+        "brand": "LinkTech",
+        "model": "60PP-PE2-08",
+        "normalizedModel": "60PP-PE2-08",
+        "sheet": "04_快插接头",
+        "row": 169
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 169
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q60",
+    "productName": "Q6008-SMV-LPPE",
+    "foreachModel": "Q6008-SMV-LPPE",
+    "productCode": "869036",
+    "compatibleModels": [
+      "60PPV-SE22-08"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "LinkTech",
+        "model": "60PPV-SE22-08",
+        "normalizedModel": "60PPV-SE22-08",
+        "sheet": "04_快插接头",
+        "row": 188
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 188
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q60",
+    "productName": "Q6008-SMV-SPPE",
+    "foreachModel": "Q6008-SMV-SPPE",
+    "productCode": "869027",
+    "compatibleModels": [
+      "HFCD16812",
+      "60PPV-SE3-08"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "HFCD16812",
+        "normalizedModel": "HFCD16812",
+        "sheet": "04_快插接头",
+        "row": 185
+      },
+      {
+        "brand": "LinkTech",
+        "model": "60PPV-SE3-08",
+        "normalizedModel": "60PPV-SE3-08",
+        "sheet": "04_快插接头",
+        "row": 185
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 185
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q60",
+    "productName": "Q6008-SMX-LPPE",
+    "foreachModel": "Q6008-SMX-LPPE",
+    "productCode": "869019",
+    "compatibleModels": [
+      "60PP-S22-08"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "LinkTech",
+        "model": "60PP-S22-08",
+        "normalizedModel": "60PP-S22-08",
+        "sheet": "04_快插接头",
+        "row": 180
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 180
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q60",
+    "productName": "Q6008-SMX-SPPE",
+    "foreachModel": "Q6008-SMX-SPPE",
+    "productCode": "869007",
+    "compatibleModels": [
+      "HFC16812",
+      "60PP-S3-08"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "HFC16812",
+        "normalizedModel": "HFC16812",
+        "sheet": "04_快插接头",
+        "row": 177
+      },
+      {
+        "brand": "LinkTech",
+        "model": "60PP-S3-08",
+        "normalizedModel": "60PP-S3-08",
+        "sheet": "04_快插接头",
+        "row": 177
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 177
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q60",
+    "productName": "Q6008-SNV-SPPE",
+    "foreachModel": "Q6008-SNV-SPPE",
+    "productCode": "869022",
+    "compatibleModels": [
+      "HFCD17812",
+      "60PPV-SE2-08"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "HFCD17812",
+        "normalizedModel": "HFCD17812",
+        "sheet": "04_快插接头",
+        "row": 160
+      },
+      {
+        "brand": "LinkTech",
+        "model": "60PPV-SE2-08",
+        "normalizedModel": "60PPV-SE2-08",
+        "sheet": "04_快插接头",
+        "row": 160
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 160
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q60",
+    "productName": "Q6008-SNX-SPPE",
+    "foreachModel": "Q6008-SNX-SPPE",
+    "productCode": "869002",
+    "compatibleModels": [
+      "HFC17812",
+      "60PP-S2-08"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "HFC17812",
+        "normalizedModel": "HFC17812",
+        "sheet": "04_快插接头",
+        "row": 166
+      },
+      {
+        "brand": "LinkTech",
+        "model": "60PP-S2-08",
+        "normalizedModel": "60PP-S2-08",
+        "sheet": "04_快插接头",
+        "row": 166
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 166
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q60",
+    "productName": "Q6012-PNV-SPPE",
+    "foreachModel": "Q6012-PNV-SPPE",
+    "productCode": "869031",
+    "compatibleModels": [
+      "HFCD221212",
+      "60PPV-PE2-12"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "HFCD221212",
+        "normalizedModel": "HFCD221212",
+        "sheet": "04_快插接头",
+        "row": 189
+      },
+      {
+        "brand": "LinkTech",
+        "model": "60PPV-PE2-12",
+        "normalizedModel": "60PPV-PE2-12",
+        "sheet": "04_快插接头",
+        "row": 189
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 189
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q60",
+    "productName": "Q6012-PNX-SPPE",
+    "foreachModel": "Q6012-PNX-SPPE",
+    "productCode": "869011",
+    "compatibleModels": [
+      "HFC221212",
+      "60PP-PE2-12"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "HFC221212",
+        "normalizedModel": "HFC221212",
+        "sheet": "04_快插接头",
+        "row": 181
+      },
+      {
+        "brand": "LinkTech",
+        "model": "60PP-PE2-12",
+        "normalizedModel": "60PP-PE2-12",
+        "sheet": "04_快插接头",
+        "row": 181
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 181
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q60",
+    "productName": "Q6012-SMV-SPPE",
+    "foreachModel": "Q6012-SMV-SPPE",
+    "productCode": "869028",
+    "compatibleModels": [
+      "HFCD161212",
+      "60PPV-SE3-12"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "HFCD161212",
+        "normalizedModel": "HFCD161212",
+        "sheet": "04_快插接头",
+        "row": 186
+      },
+      {
+        "brand": "LinkTech",
+        "model": "60PPV-SE3-12",
+        "normalizedModel": "60PPV-SE3-12",
+        "sheet": "04_快插接头",
+        "row": 186
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 186
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q60",
+    "productName": "Q6012-SMX-SPPE",
+    "foreachModel": "Q6012-SMX-SPPE",
+    "productCode": "869008",
+    "compatibleModels": [
+      "HFC161212",
+      "60PP-S3-12"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "HFC161212",
+        "normalizedModel": "HFC161212",
+        "sheet": "04_快插接头",
+        "row": 178
+      },
+      {
+        "brand": "LinkTech",
+        "model": "60PP-S3-12",
+        "normalizedModel": "60PP-S3-12",
+        "sheet": "04_快插接头",
+        "row": 178
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 178
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q60",
+    "productName": "Q6012-SNV-SPPE",
+    "foreachModel": "Q6012-SNV-SPPE",
+    "productCode": "869023",
+    "compatibleModels": [
+      "HFCD171212",
+      "60PPV-SE2-12"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "HFCD171212",
+        "normalizedModel": "HFCD171212",
+        "sheet": "04_快插接头",
+        "row": 182
+      },
+      {
+        "brand": "LinkTech",
+        "model": "60PPV-SE2-12",
+        "normalizedModel": "60PPV-SE2-12",
+        "sheet": "04_快插接头",
+        "row": 182
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 182
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q60",
+    "productName": "Q6012-SNX-SPPE",
+    "foreachModel": "Q6012-SNX-SPPE",
+    "productCode": "869003",
+    "compatibleModels": [
+      "HFC171212",
+      "60PP-S2-12"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "HFC171212",
+        "normalizedModel": "HFC171212",
+        "sheet": "04_快插接头",
+        "row": 174
+      },
+      {
+        "brand": "LinkTech",
+        "model": "60PP-S2-12",
+        "normalizedModel": "60PP-S2-12",
+        "sheet": "04_快插接头",
+        "row": 174
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 174
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q60",
+    "productName": "Q6012N-PNV-SPPE",
+    "foreachModel": "Q6012N-PNV-SPPE",
+    "productCode": "869035",
+    "compatibleModels": [
+      "HFCD24812",
+      "60PPV-PE1-08"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "HFCD24812",
+        "normalizedModel": "HFCD24812",
+        "sheet": "04_快插接头",
+        "row": 190
+      },
+      {
+        "brand": "LinkTech",
+        "model": "60PPV-PE1-08",
+        "normalizedModel": "60PPV-PE1-08",
+        "sheet": "04_快插接头",
+        "row": 190
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 190
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q60",
+    "productName": "Q6012N-PNX-SPPE",
+    "foreachModel": "Q6012N-PNX-SPPE",
+    "productCode": "869015",
+    "compatibleModels": [
+      "HFC24812",
+      "60PP-PE1-08"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "HFC24812",
+        "normalizedModel": "HFC24812",
+        "sheet": "04_快插接头",
+        "row": 191
+      },
+      {
+        "brand": "LinkTech",
+        "model": "60PP-PE1-08",
+        "normalizedModel": "60PP-PE1-08",
+        "sheet": "04_快插接头",
+        "row": 191
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 191
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q60",
+    "productName": "Q6012N-SNV-SPPE",
+    "foreachModel": "Q6012N-SNV-SPPE",
+    "productCode": "869025",
+    "compatibleModels": [
+      "HFCD10812",
+      "60PPV-SE1-08"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "HFCD10812",
+        "normalizedModel": "HFCD10812",
+        "sheet": "04_快插接头",
+        "row": 183
+      },
+      {
+        "brand": "LinkTech",
+        "model": "60PPV-SE1-08",
+        "normalizedModel": "60PPV-SE1-08",
+        "sheet": "04_快插接头",
+        "row": 183
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 183
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q60",
+    "productName": "Q6012N-SNX-SPPE",
+    "foreachModel": "Q6012N-SNX-SPPE",
+    "productCode": "869005",
+    "compatibleModels": [
+      "HFC10812",
+      "60PP-S1-08"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "HFC10812",
+        "normalizedModel": "HFC10812",
+        "sheet": "04_快插接头",
+        "row": 175
+      },
+      {
+        "brand": "LinkTech",
+        "model": "60PP-S1-08",
+        "normalizedModel": "60PP-S1-08",
+        "sheet": "04_快插接头",
+        "row": 175
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 175
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q60",
+    "productName": "Q6038N-PNV-SPPE",
+    "foreachModel": "Q6038N-PNV-SPPE",
+    "productCode": "869034",
+    "compatibleModels": [
+      "HFCD24612",
+      "60PPV-PE1-06"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "HFCD24612",
+        "normalizedModel": "HFCD24612",
+        "sheet": "04_快插接头",
+        "row": 163
+      },
+      {
+        "brand": "LinkTech",
+        "model": "60PPV-PE1-06",
+        "normalizedModel": "60PPV-PE1-06",
+        "sheet": "04_快插接头",
+        "row": 163
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 163
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q60",
+    "productName": "Q6038N-PNX-SPPE",
+    "foreachModel": "Q6038N-PNX-SPPE",
+    "productCode": "869014",
+    "compatibleModels": [
+      "HFC24612",
+      "60PP-PE1-06"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "HFC24612",
+        "normalizedModel": "HFC24612",
+        "sheet": "04_快插接头",
+        "row": 171
+      },
+      {
+        "brand": "LinkTech",
+        "model": "60PP-PE1-06",
+        "normalizedModel": "60PP-PE1-06",
+        "sheet": "04_快插接头",
+        "row": 171
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 171
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q60",
+    "productName": "Q6038N-SNV-SPPE",
+    "foreachModel": "Q6038N-SNV-SPPE",
+    "productCode": "869024",
+    "compatibleModels": [
+      "HFCD10612",
+      "60PPV-SE1-06"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "HFCD10612",
+        "normalizedModel": "HFCD10612",
+        "sheet": "04_快插接头",
+        "row": 161
+      },
+      {
+        "brand": "LinkTech",
+        "model": "60PPV-SE1-06",
+        "normalizedModel": "60PPV-SE1-06",
+        "sheet": "04_快插接头",
+        "row": 161
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 161
+  },
+  {
+    "productType": "快插接头",
+    "productSeries": "Q60",
+    "productName": "Q6038N-SNX-SPPE",
+    "foreachModel": "Q6038N-SNX-SPPE",
+    "productCode": "869004",
+    "compatibleModels": [
+      "HFC10612",
+      "60PP-S1-06"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "CPC",
+        "model": "HFC10612",
+        "normalizedModel": "HFC10612",
+        "sheet": "04_快插接头",
+        "row": 167
+      },
+      {
+        "brand": "LinkTech",
+        "model": "60PP-S1-06",
+        "normalizedModel": "60PP-S1-06",
+        "sheet": "04_快插接头",
+        "row": 167
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": true,
+    "sourceSheet": "04_快插接头",
+    "sourceRow": 167
+  },
+  {
+    "productType": "新版标滚卡箍接头",
+    "productSeries": "FIT+H",
+    "productName": "标滚卡箍接头 HN-M6-16-PK-N",
+    "foreachModel": "HN-M6-16-PK-N",
+    "productCode": "809728",
+    "compatibleModels": [
+      "WF07B-M6K"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "润泽",
+        "model": "WF07B-M6K",
+        "normalizedModel": "WF07B-M6K",
+        "sheet": "01_硬管接头",
+        "row": 140
+      }
+    ],
+    "hasDrawing2d": false,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 140
+  },
+  {
+    "productType": "新版标滚卡箍接头",
+    "productSeries": "FIT+H",
+    "productName": "标滚卡箍接头 HN-M6-32-PK-N",
+    "foreachModel": "HN-M6-32-PK-N",
+    "productCode": "809729",
+    "compatibleModels": [
+      "WP07B-M6K"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "润泽",
+        "model": "WP07B-M6K",
+        "normalizedModel": "WP07B-M6K",
+        "sheet": "01_硬管接头",
+        "row": 141
+      }
+    ],
+    "hasDrawing2d": false,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 141
+  },
+  {
+    "productType": "新版标滚卡箍接头",
+    "productSeries": "FIT+H",
+    "productName": "标滚卡箍接头 HN-U28-16-PK-N",
+    "foreachModel": "HN-U28-16-PK-N",
+    "productCode": "809726",
+    "compatibleModels": [
+      "WF07B-28K"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "润泽",
+        "model": "WF07B-28K",
+        "normalizedModel": "WF07B-28K",
+        "sheet": "01_硬管接头",
+        "row": 132
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 132
+  },
+  {
+    "productType": "新版标滚卡箍接头",
+    "productSeries": "FIT+H",
+    "productName": "标滚卡箍接头 HN-U28-32-PK-N",
+    "foreachModel": "HN-U28-32-PK-N",
+    "productCode": "809727",
+    "compatibleModels": [
+      "WP07B-28K"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "润泽",
+        "model": "WP07B-28K",
+        "normalizedModel": "WP07B-28K",
+        "sheet": "01_硬管接头",
+        "row": 133
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 133
+  },
+  {
+    "productType": "新版紧凑卡箍接头",
+    "productSeries": "FIT+H",
+    "productName": "紧凑卡箍接头 HN6-M6-16-PK-N",
+    "foreachModel": "HN6-M6-16-PK-N",
+    "productCode": "809732",
+    "compatibleModels": [
+      "WF09B-M6K"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "润泽",
+        "model": "WF09B-M6K",
+        "normalizedModel": "WF09B-M6K",
+        "sheet": "01_硬管接头",
+        "row": 106
+      }
+    ],
+    "hasDrawing2d": false,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 106
+  },
+  {
+    "productType": "新版紧凑卡箍接头",
+    "productSeries": "FIT+H",
+    "productName": "紧凑卡箍接头 HN6-M6-32-PK-N",
+    "foreachModel": "HN6-M6-32-PK-N",
+    "productCode": "809733",
+    "compatibleModels": [
+      "WP08B-M6K"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "润泽",
+        "model": "WP08B-M6K",
+        "normalizedModel": "WP08B-M6K",
+        "sheet": "01_硬管接头",
+        "row": 107
+      }
+    ],
+    "hasDrawing2d": false,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 107
+  },
+  {
+    "productType": "新版紧凑卡箍接头",
+    "productSeries": "FIT+H",
+    "productName": "紧凑卡箍接头 HN6-U28-16-PK-N",
+    "foreachModel": "HN6-U28-16-PK-N",
+    "productCode": "809730",
+    "compatibleModels": [
+      "WF09B-28K"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "润泽",
+        "model": "WF09B-28K",
+        "normalizedModel": "WF09B-28K",
+        "sheet": "01_硬管接头",
+        "row": 97
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 97
+  },
+  {
+    "productType": "新版紧凑卡箍接头",
+    "productSeries": "FIT+H",
+    "productName": "紧凑卡箍接头 HN6-U28-32-PK-B",
+    "foreachModel": "HN6-U28-32-PK-B",
+    "productCode": "809923",
+    "compatibleModels": [
+      "WP08B-28K"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "润泽",
+        "model": "WP08B-28K",
+        "normalizedModel": "WP08B-28K",
+        "sheet": "01_硬管接头",
+        "row": 98
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 98
+  },
+  {
+    "productType": "新版紧凑平底接头",
+    "productSeries": "FIT+H",
+    "productName": "紧凑平底接头 HF6-U28-20-PS-B",
+    "foreachModel": "HF6-U28-20-PS-B",
+    "productCode": "809753",
+    "compatibleModels": [
+      "WF21B-1/4-S-黑"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "润泽",
+        "model": "WF21B-1/4-S-黑",
+        "normalizedModel": "WF21B-1/4-S-黑",
+        "sheet": "01_硬管接头",
+        "row": 84
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 84
+  },
+  {
+    "productType": "新版紧凑平底接头",
+    "productSeries": "FIT+H",
+    "productName": "紧凑平底接头 HF6-U28-25-PS-B",
+    "foreachModel": "HF6-U28-25-PS-B",
+    "productCode": "809755",
+    "compatibleModels": [
+      "WF26B-1/4-S-黑"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "润泽",
+        "model": "WF26B-1/4-S-黑",
+        "normalizedModel": "WF26B-1/4-S-黑",
+        "sheet": "01_硬管接头",
+        "row": 85
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 85
+  },
+  {
+    "productType": "新版紧凑平底接头",
+    "productSeries": "FIT+H",
+    "productName": "紧凑平底接头 HF6-U28-32-PS-B",
+    "foreachModel": "HF6-U28-32-PS-B",
+    "productCode": "809757",
+    "compatibleModels": [
+      "WF33B-1/4-S-黑"
+    ],
+    "compatibleSources": [
+      {
+        "brand": "润泽",
+        "model": "WF33B-1/4-S-黑",
+        "normalizedModel": "WF33B-1/4-S-黑",
+        "sheet": "01_硬管接头",
+        "row": 86
+      }
+    ],
+    "hasDrawing2d": true,
+    "hasModel3d": false,
+    "sourceSheet": "01_硬管接头",
+    "sourceRow": 86
+  }
+];
