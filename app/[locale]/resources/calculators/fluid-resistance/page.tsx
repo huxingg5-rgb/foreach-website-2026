@@ -55,17 +55,17 @@ export default async function FluidResistanceIntlPage({
   return (
     <main className="technicalArticlesPage">
       <section
-        className="technicalArticlesHero"
+        className="technicalArticlesHero resource-center-banner"
         style={{
           backgroundImage:
             "url(/images/resources/technical-articles/banner/resources-technical-articles-banner-1920x520-v001.webp)",
         }}
       >
-        <div className="technicalArticlesHero__inner">
-          <h1 className={`technicalArticlesHero__title ${calculatorStyles.heroTitle}`}>
+        <div className="technicalArticlesHero__inner resource-center-banner__inner">
+          <h1 className={`technicalArticlesHero__title ${calculatorStyles.heroTitle} resource-center-banner__title`}>
             {copy.heroTitle}
           </h1>
-          <p className={`technicalArticlesHero__description ${calculatorStyles.heroDescription}`}>
+          <p className={`technicalArticlesHero__description ${calculatorStyles.heroDescription} resource-center-banner__description`}>
             {copy.heroDescription}
           </p>
         </div>

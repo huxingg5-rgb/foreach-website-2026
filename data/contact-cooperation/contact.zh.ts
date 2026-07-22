@@ -157,7 +157,7 @@ export const contactZhData: ContactPageData = {
         placeholder: "请输入公司名称", // 公司名称输入框占位文字
       },
       phone: {
-        label: "电话 / WhatsApp", // 电话字段标签
+        label: "电话", // 电话字段标签
         placeholder: "便于快速联系，可选", // 电话输入框占位文字
       },
       targetModel: {
@@ -389,4 +389,4 @@ export const contactZhData: ContactPageData = {
       },
     },
   },
-}; 
+};

@@ -1,0 +1,449 @@
+/* =========================================================
+   Cookie 首次访问底部长条
+========================================================= */
+
+.banner {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10000;
+  border-top: 1px solid #dce4ef;
+  background: #ffffff;
+  box-shadow: 0 -10px 34px rgba(11, 27, 58, 0.12);
+  color: #173368;
+  animation: cookieBannerSlideUp 260ms cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+.bannerInner {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 32px;
+  width: min(1600px, calc(100% - 64px));
+  min-height: 92px;
+  margin: 0 auto;
+  padding: 18px 0;
+}
+
+.description {
+  margin: 0;
+  color: #4c5d77;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.policyLink,
+.settingsLink {
+  color: #173368;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.policyLink:hover,
+.settingsLink:hover {
+  color: #087f70;
+}
+
+.settingsLink {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+.linkSeparator {
+  color: #8a98ab;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.button {
+  min-height: 44px;
+  padding: 10px 18px;
+  border: 1px solid #173368;
+  border-radius: 7px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.25;
+  cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    transform 120ms ease;
+}
+
+.buttonSecondary {
+  border-color: #173368;
+  background: #ffffff;
+  color: #173368;
+}
+
+.buttonSecondary:hover {
+  border-color: #173368;
+  background: #173368;
+  color: #09e9b4;
+}
+
+.buttonPrimary {
+  border-color: #173368;
+  background: #173368;
+  color: #09e9b4;
+}
+
+.buttonPrimary:hover {
+  border-color: #09e9b4;
+  background: #09e9b4;
+  color: #173368;
+}
+
+.button:focus-visible,
+.settingsLink:focus-visible {
+  outline: 3px solid rgba(9, 233, 180, 0.35);
+  outline-offset: 3px;
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+@keyframes cookieBannerSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   详细 Cookie 设置面板
+========================================================= */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10010;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(7, 18, 42, 0.58);
+}
+
+.dialog {
+  width: min(640px, 100%);
+  max-height: min(760px, calc(100vh - 48px));
+  overflow-y: auto;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 24px 80px rgba(3, 15, 38, 0.28);
+  color: #173368;
+}
+
+.dialogHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 26px 28px 20px;
+  border-bottom: 1px solid #dce4ef;
+}
+
+.dialogTitle {
+  margin: 0;
+  color: #173368;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.closeButton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  min-height: 38px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #173368;
+  font-size: 0;
+  line-height: 0;
+  appearance: none;
+  cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    transform 120ms ease;
+}
+
+.closeButton::before,
+.closeButton::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  content: "";
+  transform-origin: center;
+  pointer-events: none;
+}
+
+.closeButton::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.closeButton::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.closeButton:hover {
+  border-color: #173368;
+  background: #173368;
+  color: #09e9b4;
+}
+
+.closeButton:focus-visible {
+  border-color: #173368;
+  outline: 3px solid rgba(9, 233, 180, 0.35);
+  outline-offset: 3px;
+}
+
+.closeButton:active {
+  transform: translateY(1px);
+}
+
+.dialogBody {
+  padding: 24px 28px;
+}
+
+.intro {
+  margin: 0 0 22px;
+  color: #4c5d77;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.category {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 20px;
+  padding: 20px 0;
+  border-top: 1px solid #e2e8f0;
+}
+
+.category:first-of-type {
+  border-top: 0;
+}
+
+.categoryTitle {
+  margin: 0;
+  color: #173368;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.categoryDescription {
+  margin: 7px 0 0;
+  color: #607089;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.alwaysActive {
+  align-self: center;
+  color: #173368;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.toggle {
+  position: relative;
+  align-self: center;
+  width: 52px;
+  height: 30px;
+}
+
+.toggleInput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.toggleTrack {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: #b8c3d1;
+  cursor: pointer;
+  transition: background-color 160ms ease;
+}
+
+.toggleTrack::after {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ffffff;
+  content: "";
+  transition: transform 160ms ease;
+}
+
+.toggleInput:checked + .toggleTrack {
+  background: #09e9b4;
+}
+
+.toggleInput:checked + .toggleTrack::after {
+  transform: translateX(22px);
+}
+
+.toggleInput:focus-visible + .toggleTrack {
+  outline: 3px solid rgba(9, 233, 180, 0.32);
+  outline-offset: 3px;
+}
+
+.dialogFooter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 20px 28px 26px;
+  border-top: 1px solid #dce4ef;
+}
+
+/* =========================================================
+   平板和手机
+========================================================= */
+
+@media (max-width: 900px) {
+  .bannerInner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    width: calc(100% - 32px);
+    min-height: 0;
+    padding: 18px 0;
+  }
+
+  .description {
+    padding-right: 4px;
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 640px) {
+  .bannerInner {
+    width: calc(100% - 24px);
+    gap: 14px;
+    padding: 16px 0;
+  }
+
+  .description {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .button {
+    min-height: 42px;
+    padding: 9px 10px;
+    font-size: 13px;
+  }
+
+
+  .overlay {
+    align-items: end;
+    padding: 0;
+  }
+
+  .dialog {
+    width: 100%;
+    max-height: 90vh;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .dialogHeader,
+  .dialogBody,
+  .dialogFooter {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .category {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 14px;
+  }
+
+  .dialogFooter {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .dialogFooter .button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .banner {
+    animation: none;
+  }
+
+  .button,
+  .closeButton,
+  .toggleTrack,
+  .toggleTrack::after {
+    transition: none;
+  }
+}
+
+/* Cookie 底部长条：拒绝按钮根据文字长度自动伸缩 */
+@media (min-width: 901px) {
+  .banner .actions .buttonSecondary {
+    width: auto;
+    min-width: 0;
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+}

@@ -64,3 +64,35 @@
     height: 24px;
   }
 }
+
+/* 仅放大全站 PC 端底部文字；1000px 及以下保持原有手机端字号。 */
+@media (min-width: 1001px) {
+  :global(.site-footer__title) {
+    font-size: 16px !important;
+  }
+
+  :global(.site-footer__list a) {
+    font-size: 14px !important;
+  }
+
+  :global(.site-footer__company) {
+    font-size: 26px !important;
+  }
+
+  :global(.site-footer__contact-text),
+  :global(.site-footer__map-link) {
+    font-size: 14px !important;
+  }
+
+  :global(.site-footer__qrcode-box),
+  :global(.site-footer__qrcode-label) {
+    font-size: 13px !important;
+  }
+
+  :global(.site-footer__bottom-left p),
+  :global(.site-footer__legal-link),
+  :global(.site-footer__cookie-button),
+  :global(.site-footer__legal-separator) {
+    font-size: 13px !important;
+  }
+}

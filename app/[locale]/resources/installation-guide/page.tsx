@@ -100,11 +100,11 @@ export default async function InstallationGuideIntlPage({
 
   return (
     <>
-      <section className="installation-guide-hero">
-        <div className="installation-guide-hero-inner">
-          <div className="installation-guide-hero-content">
-            <h1>{pageData.hero.title}</h1>
-            <p>{pageData.hero.description}</p>
+      <section className="installation-guide-hero resource-center-banner">
+        <div className="installation-guide-hero-inner resource-center-banner__inner">
+          <div className="installation-guide-hero-content resource-center-banner__content">
+            <h1 className="resource-center-banner__title">{pageData.hero.title}</h1>
+            <p className="resource-center-banner__description">{pageData.hero.description}</p>
           </div>
         </div>
       </section>

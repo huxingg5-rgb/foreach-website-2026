@@ -102,8 +102,8 @@ export const aboutQualityImages = {
   equipmentConfocal:
     "/images/about/quality-equipment/confocal-microscope.webp",
 
-  certificateIso13485: "/images/about/quality-certificates/iso-13485.webp",
-  certificateIso9001: "/images/about/quality-certificates/iso-9001.webp",
+  certificateIso13485: "/images/about/foreach/honors/honor-row2-iso13485.webp",
+  certificateIso9001: "/images/about/foreach/honors/honor-row2-iso9001.webp",
 };
 
 /* ================================
@@ -1003,4 +1003,4 @@ export function getAboutQualityContent(locale: string): AboutQualityPageData {
   }
 
   return aboutQualityContent["zh-CN"];
-}  
+}

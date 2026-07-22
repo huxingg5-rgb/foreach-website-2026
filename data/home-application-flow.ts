@@ -284,17 +284,6 @@ const labAutomationCard: HomeFlowApplicationCard = {
       },
     },
     {
-      key: "pinch-valve",
-      label: {
-        "zh-CN": "夹管阀",
-        en: "Pinch Valve",
-        es: "Válvula de pinza",
-        fr: "Vanne à pincement",
-        ko: "핀치 밸브",
-        ru: "Пережимной клапан",
-      },
-    },
-    {
       key: "sensor",
       label: {
         "zh-CN": "传感器",
@@ -452,17 +441,6 @@ const ivdCard: HomeFlowApplicationCard = {
       },
     },
     {
-      key: "pinch-valve",
-      label: {
-        "zh-CN": "夹管阀",
-        en: "Pinch Valve",
-        es: "Válvula de pinza",
-        fr: "Vanne à pincement",
-        ko: "핀치 밸브",
-        ru: "Пережимной клапан",
-      },
-    },
-    {
       key: "bubble-detector",
       label: {
         "zh-CN": "气泡检测器",
@@ -518,7 +496,7 @@ export const homeApplicationFlowData = {
      第二屏主标题
   ================================ */
   titleLine1: {
-    "zh-CN": "一套液路系统",
+    "zh-CN": "让流体系统",
     en: "One Fluidic System",
     es: "Un sistema fluídico",
     fr: "Un système fluidique",
@@ -527,7 +505,7 @@ export const homeApplicationFlowData = {
   },
 
   titleLine2: {
-    "zh-CN": "让复杂流动更简单",
+    "zh-CN": "更简单",
     en: "Make Complex Flow Easier",
     es: "Hace que el flujo complejo sea más simple",
     fr: "Rendre les flux complexes plus simples",

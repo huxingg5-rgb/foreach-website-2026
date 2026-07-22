@@ -282,7 +282,7 @@ export function buildContactPdfHtml({
   const isChinesePdf = isChineseLanguage(htmlLang);
 
   const phoneLabel = isChinesePdf
-    ? "电话 / 微信"
+    ? "电话"
     : data.form.fields.phone.label;
 
   const messagePages = splitMessageToPages(formData.message, notFilledText);
@@ -830,4 +830,4 @@ export function buildContactPdfHtml({
   ${attachmentPagesHtml}
 </body>
 </html>`;
-} 
+}

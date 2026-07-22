@@ -151,16 +151,16 @@ export default function TechnicalArticlesClient({
   return (
     <main className="technicalArticlesPage">
       <section
-        className="technicalArticlesHero"
+        className="technicalArticlesHero resource-center-banner"
         style={{
           backgroundImage: `url(${pageData.hero.backgroundImage})`,
         }}
       >
-        <div className="technicalArticlesHero__inner">
-          <h1 className="technicalArticlesHero__title">
+        <div className="technicalArticlesHero__inner resource-center-banner__inner">
+          <h1 className="technicalArticlesHero__title resource-center-banner__title">
             {pageData.hero.title}
           </h1>
-          <p className="technicalArticlesHero__description">
+          <p className="technicalArticlesHero__description resource-center-banner__description">
             {pageData.hero.description}
           </p>
         </div>

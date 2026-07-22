@@ -129,20 +129,23 @@ export const siteFooterData = {
     },
   ] satisfies SiteFooterColumn[],
 
-  companyName: { china: "深圳市恒永达科技股份有限公司", global: "Shenzhen FOREACH Technology Co., Ltd." },
+  companyName: {
+    china: "深圳市恒永达科技股份有限公司",
+    global: "Shenzhen Foreach Technology Co., Ltd.",
+  },
 
   addressLabel: { china: "地址", global: "Address" },
 
   address: {
     china: "广东省深圳市光明区玉塘街道玉律社区光侨大道1008号裕丰达工业园2栋1301",
-    global: "1301, Building 2, Yufengda Industrial Park, No. 1008 Guangqiao Avenue, Yulv Community, Yutang Subdistrict, Guangming District, Shenzhen, Guangdong, China",
+    global: "13th Floor, 2nd Building, Yufengda Industrial Park, 1008th Guang Qiao Boulevard, Guangming District, Shenzhen 518132 CHINA",
   },
 
   mapLabel: { china: "查看地图", global: "View Map" },
 
   mapHref: {
     china: "https://uri.amap.com/search?keyword=%E6%B7%B1%E5%9C%B3%E5%B8%82%E6%81%92%E6%B0%B8%E8%BE%BE%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8&city=%E6%B7%B1%E5%9C%B3",
-    global: "https://www.google.com/maps/search/?api=1&query=Shenzhen%20FOREACH%20Technology%20Co.%2C%20Ltd.%201301%20Building%202%20Yufengda%20Industrial%20Park%201008%20Guangqiao%20Avenue%20Guangming%20District%20Shenzhen",
+    global: "https://www.google.com/maps/search/?api=1&query=13th%20Floor%202nd%20Building%20Yufengda%20Industrial%20Park%201008th%20Guang%20Qiao%20Boulevard%20Guangming%20District%20Shenzhen%20518132%20China",
   },
 
   emailLabel: { china: "邮箱", global: "Email" },
@@ -170,7 +173,7 @@ export const siteFooterData = {
 
   copyright: {
     china: "© 2026 深圳市恒永达科技股份有限公司 版权所有",
-    global: "© 2026 Shenzhen FOREACH Technology Co., Ltd. All rights reserved.",
+    global: "© 2026 Shenzhen Foreach Technology Co., Ltd. All rights reserved.",
   },
 };
 

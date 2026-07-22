@@ -106,7 +106,7 @@ export default function CulturePageContent({ locale }: CulturePageContentProps) 
           className 沿用原页面 about-culture-banner
       ================================ */}
       <section
-        className="about-culture-banner"
+        className="about-culture-banner about-center-banner"
         aria-label={getCultureText(aboutCulturePageText.bannerTitle, locale)}
       >
       {/* 恒永达文化 Banner 真实背景图 */}
@@ -115,9 +115,13 @@ export default function CulturePageContent({ locale }: CulturePageContentProps) 
         aria-hidden="true"
       />
 
-        <div className="about-culture-container about-culture-banner-inner">
-          <h1>{getCultureText(aboutCulturePageText.bannerTitle, locale)}</h1>
-          <p>{getCultureText(aboutCulturePageText.bannerDesc, locale)}</p>
+        <div className="about-culture-container about-culture-banner-inner about-center-banner__inner">
+          <h1 className="about-center-banner__title">
+            {getCultureText(aboutCulturePageText.bannerTitle, locale)}
+          </h1>
+          <p className="about-center-banner__description">
+            {getCultureText(aboutCulturePageText.bannerDesc, locale)}
+          </p>
         </div>
       </section>
 

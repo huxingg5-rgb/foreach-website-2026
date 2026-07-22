@@ -8,10 +8,7 @@ import { useEffect, useRef, useState } from "react"; // 引入 React Hook，用�
 
 import HomeCompanyVideo from "@/components/home/HomeCompanyVideo"; // 引入公司介绍视频组件
 
-import { // 从 lib/i18n.ts 中引入多语言相关工具
-  getLocaleAnchorPath, // 根据当前语言生成锚点路径，例如中文 /#contact，英文 /en#contact
-  type LocaleCode, // 官网支持的语言代码类型
-} from "@/lib/i18n"; // 多语言工具文件路径
+import type { LocaleCode } from "@/lib/i18n"; // 官网支持的语言代码类型
 
 import { // 从 data/home-company-strength.ts 中引入公司实力模块数据
   getHomeCompanyText, // 公司实力模块多语言文字读取函数
@@ -57,7 +54,10 @@ export default function HomeCompanyStrengthSection({ // 定义并导出首页公
     metrics.map(() => 0), // 初始时每个数字都从 0 开始
   ); // animatedMetricValues 状态定义结束
 
-  const contactHref = getLocaleAnchorPath(locale, "contact"); // 生成联系我们按钮链接，中文为 /#contact，英文为 /en#contact
+  const aboutForeachHref =
+    locale === "zh-CN"
+      ? "/about/foreach"
+      : `/${locale}/about/foreach`;
 
   useEffect(() => { // 监听数据卡片是否进入视口的副作用开始
     const metricsGrid = metricsGridRef.current; // 获取数据卡片区域 DOM
@@ -183,7 +183,7 @@ export default function HomeCompanyStrengthSection({ // 定义并导出首页公
               </div> {/* 数据卡片网格结束 */}
 
               <div className="home-company-about-actions"> {/* 公司介绍按钮区域 */}
-                <Link className="home-company-primary-btn" href={contactHref}> {/* 联系我们按钮 */}
+                <Link className="home-company-primary-btn" href={aboutForeachHref}> {/* 查看更多按钮 */}
                   {getHomeCompanyText(aboutData.contactButton, locale)} {/* 联系我们按钮多语言文字 */}
                 </Link> {/* 联系我们按钮结束 */}
               </div> {/* 公司介绍按钮区域结束 */}

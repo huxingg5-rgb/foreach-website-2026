@@ -218,11 +218,11 @@ export default function FittingReplacementHome({
 
   return (
     <div className="fitting-replacement-page">
-      <section className="frp-hero">
-        <div className="frp-container frp-hero-inner">
-          <div>
-            <h1 className="frp-hero-title">{data.banner.title}</h1>
-            <p className="frp-hero-desc">{data.banner.description}</p>
+      <section className="frp-hero resource-center-banner">
+        <div className="frp-container frp-hero-inner resource-center-banner__inner">
+          <div className="resource-center-banner__content">
+            <h1 className="frp-hero-title resource-center-banner__title">{data.banner.title}</h1>
+            <p className="frp-hero-desc resource-center-banner__description">{data.banner.description}</p>
           </div>
         </div>
       </section>

@@ -1,0 +1,27 @@
+﻿Header 下拉菜单字体审计报告
+生成时间：2026-07-22 10:21:11
+项目路径：F:\WebsiteProjects\foreach-website-2026
+
+本报告仅检查，不修改任何文件。
+
+============================================================
+一、当前 Git 状态
+============================================================
+当前分支：feature/privacy-analytics-20260721
+
+未提交文件：
+ M app/globals.css
+ M app/layout.tsx
+ M components/home/HomeApplicationFlowSection.tsx
+ M components/i18n/HomeLanguageRedirect.tsx
+ M components/layout/SiteFooter.tsx
+ M components/layout/SiteHeader.tsx
+ M data/home-application-flow.ts
+?? _backup/
+?? _diagnostics/
+?? app/[locale]/privacy-policy/
+?? app/privacy-policy/
+?? components/analytics/
+?? components/privacy/
+?? lib/analytics/
+?? lib/privacy/

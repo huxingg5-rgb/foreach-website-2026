@@ -147,7 +147,7 @@ export default function DatasheetsClient({
       {/* ================================
           1. Banner
       ================================= */}
-      <section className="datasheets-hero">
+      <section className="datasheets-hero resource-center-banner">
         <img
           className="datasheets-hero-image"
           src={pageText.hero.image}
@@ -156,10 +156,10 @@ export default function DatasheetsClient({
 
         <div className="datasheets-hero-overlay" />
 
-        <div className="datasheets-hero-inner">
-          <h1 className="datasheets-hero-title">{pageText.hero.title}</h1>
+        <div className="datasheets-hero-inner resource-center-banner__inner">
+          <h1 className="datasheets-hero-title resource-center-banner__title">{pageText.hero.title}</h1>
 
-          <p className="datasheets-hero-desc">{pageText.hero.description}</p>
+          <p className="datasheets-hero-desc resource-center-banner__description">{pageText.hero.description}</p>
         </div>
       </section>
 

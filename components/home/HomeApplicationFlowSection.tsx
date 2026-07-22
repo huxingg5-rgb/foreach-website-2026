@@ -4,7 +4,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 
-import { getLocaleAnchorPath, type LocaleCode } from "@/lib/i18n";
+import type { LocaleCode } from "@/lib/i18n";
 
 import {
   getHomeApplicationFlowApiPath, // 引入首页第二屏后端接口路径生成函数
@@ -359,7 +359,7 @@ const HOME_FLOW_PRODUCT_PATHS: Record<string, string> = {
   /* 左侧五个能力标签 */
   "precision-pump": "/products/pumps",
   "fluid-control-valve": "/products/valves",
-  sensor: "/products",
+  sensor: "/products?category=control",
   "tubing-component": "/products/tubing",
   "tubing-components": "/products/tubing",
   "fluidic-connection": "/products/fittings",
@@ -373,22 +373,12 @@ const HOME_FLOW_PRODUCT_PATHS: Record<string, string> = {
   "plunger-pump": "/products/pumps/plunger-pumps",
   "valveless-pump": "/products/pumps/valveless-pumps",
 
-  /*
-   * 当前没有单独的“多通道泵”正式类型页，
-   * 先进入泵系列页面。
-   */
-  "multi-channel-pump": "/products/pumps",
+  "multi-channel-pump": "/products/pumps/syringe-pumps",
 
   /* 阀系列 */
   "rotary-valve": "/products/valves/rotary-valves",
   "high-pressure-valve": "/products/valves/high-pressure-valves",
   "solenoid-valve": "/products/valves/solenoid-valves",
-
-  /*
-   * 当前没有单独的夹管阀正式类型页，
-   * 先进入阀系列页面。
-   */
-  "pinch-valve": "/products/valves",
 
   /* 针系列 */
   "sampling-probe": "/products/probes/sampling-probes",
@@ -409,10 +399,10 @@ const HOME_FLOW_PRODUCT_PATHS: Record<string, string> = {
    * 但正式独立分类路由还没有建立。
    * 当前先进入产品中心，避免生成不存在的 URL。
    */
-  "pressure-sensor": "/products",
-  "bubble-detector": "/products",
-  "bubble-sensor": "/products",
-  "control-module": "/products",
+  "pressure-sensor": "/products?category=control",
+  "bubble-detector": "/products?category=control",
+  "bubble-sensor": "/products?category=control",
+  "control-module": "/products?category=control",
 };
 
 function getHomeFlowProductHref(
@@ -426,7 +416,7 @@ function getHomeFlowProductHref(
     return chinesePath;
   }
 
-  return `/${locale}/products`;
+  return `/${locale}${chinesePath}`;
 }
 
 /* HOME_FLOW_LINK_HELPERS_20260713_END */
@@ -679,11 +669,20 @@ export default function HomeApplicationFlowSection({
           {/* 左侧文案区 */}
           <div className="home-flow-copy">
             <h2 className="home-flow-title">
-              {getHomeFlowText(flowData.titleLine1, locale)}
+              {locale === "zh-CN" ? (
+                <>
+                  {getHomeFlowText(flowData.titleLine1, locale)}
+                  {getHomeFlowText(flowData.titleLine2, locale)}
+                </>
+              ) : (
+                <>
+                  {getHomeFlowText(flowData.titleLine1, locale)}
 
-              <br />
+                  <br />
 
-              {getHomeFlowText(flowData.titleLine2, locale)}
+                  {getHomeFlowText(flowData.titleLine2, locale)}
+                </>
+              )}
             </h2>
 
             <p className="home-flow-desc">

@@ -541,7 +541,19 @@ export default function CompanyInfoRequestModal({
             onClick={onClose}
             aria-label={copy.close}
           >
-            ×
+            <svg
+              viewBox="0 0 20 20"
+              width="18"
+              height="18"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+              focusable="false"
+              aria-hidden="true"
+            >
+              <path d="M5 5L15 15M15 5L5 15" />
+            </svg>
           </button>
         </div>
 
@@ -609,7 +621,10 @@ export default function CompanyInfoRequestModal({
 
             <div className={styles.fields}>
               <label className={styles.emailField}>
-                <span>{copy.email}</span>
+                <span>
+                  {copy.email.replace(/\s*\*$/, "")}
+                  <em className={styles.requiredMark}>*</em>
+                </span>
 
                 <div className={styles.emailInputGroup}>
                   <input
@@ -668,7 +683,8 @@ export default function CompanyInfoRequestModal({
               {enableEmailVerification ? (
                 <label>
                   <span>
-                    {copy.code}
+                    {copy.code.replace(/\s*\*$/, "")}
+                    <em className={styles.requiredMark}>*</em>
                   </span>
                   <input
                     type="text"
@@ -687,7 +703,10 @@ export default function CompanyInfoRequestModal({
               ) : null}
 
               <label>
-                <span>{copy.name}</span>
+                <span>
+                  {copy.name.replace(/\s*\*$/, "")}
+                  <em className={styles.requiredMark}>*</em>
+                </span>
                 <input
                   type="text"
                   value={formValue.name}
@@ -702,7 +721,10 @@ export default function CompanyInfoRequestModal({
               </label>
 
               <label>
-                <span>{copy.company}</span>
+                <span>
+                  {copy.company.replace(/\s*\*$/, "")}
+                  <em className={styles.requiredMark}>*</em>
+                </span>
                 <input
                   type="text"
                   value={formValue.company}

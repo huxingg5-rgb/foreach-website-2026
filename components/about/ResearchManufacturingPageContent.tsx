@@ -229,7 +229,7 @@ export default function ResearchManufacturingPageContent({
             {/* ================================
           第一屏：Banner
       ================================= */}
-            <section className="rm-hero">
+            <section className="rm-hero about-center-banner">
                 <Image
                     className="rm-hero-image"
                     src={researchManufacturingImages.banner}
@@ -241,9 +241,9 @@ export default function ResearchManufacturingPageContent({
 
                 <div className="rm-hero-overlay" />
 
-                <div className="rm-container rm-hero-inner">
-                    <h1 className="rm-hero-title">{text.hero.title}</h1>
-                    <p className="rm-hero-desc">{text.hero.desc}</p>
+                <div className="rm-container rm-hero-inner about-center-banner__inner">
+                    <h1 className="rm-hero-title about-center-banner__title">{text.hero.title}</h1>
+                    <p className="rm-hero-desc about-center-banner__description">{text.hero.desc}</p>
                     <div className="rm-hero-line" />
                 </div>
             </section>

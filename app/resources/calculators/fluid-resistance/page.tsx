@@ -16,15 +16,15 @@ export default function FluidResistancePage() {
   return (
     <main className="technicalArticlesPage">
       <section
-        className="technicalArticlesHero"
+        className="technicalArticlesHero resource-center-banner"
         style={{
           backgroundImage:
             "url(/images/resources/technical-articles/banner/resources-technical-articles-banner-1920x520-v001.webp)",
         }}
       >
-        <div className="technicalArticlesHero__inner">
-          <h1 className={`technicalArticlesHero__title ${calculatorStyles.heroTitle}`}>管内流动阻尼计算工具 V2.1</h1>
-          <p className={`technicalArticlesHero__description ${calculatorStyles.heroDescription}`}>
+        <div className="technicalArticlesHero__inner resource-center-banner__inner">
+          <h1 className={`technicalArticlesHero__title ${calculatorStyles.heroTitle} resource-center-banner__title`}>管内流动阻尼计算工具 V2.1</h1>
+          <p className={`technicalArticlesHero__description ${calculatorStyles.heroDescription} resource-center-banner__description`}>
             多流体支持 | 动态行数 | 双向计算 | 低雷诺数自动修正
           </p>
         </div>

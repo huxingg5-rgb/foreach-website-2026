@@ -256,7 +256,7 @@ export const datasheetZhItems: DatasheetItem[] = [
     update: "2026-07",
     description: "涵盖恒永达连接件、接头、橡塑管及常用管路组件的中文产品目录。",
     image:
-      "/images/products/fittings/barbed-fittings/products/ba-16c-pa-w-main.jpg",
+      "/images/resource/datasheets/thumbnails/resource-datasheet-thumb-tubing-fitting-v002.webp",
     productHref: "/products/",
     downloadHref:
       "/downloads/resources/datasheets/zh-CN/Tubing-and-Fittings/foreach-fittings-and-elastomer-tubing-catalog-a02-cn.pdf",

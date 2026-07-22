@@ -1436,7 +1436,7 @@ const applicationMegaDropdown: MegaDropdown = {
     "Все области применения →"
   ),
 
-  footerHref: anchorPath("applications"),
+  footerHref: localizedPath("/applications/ivd"),
 };
 
 /* ===== APPLICATION MEGA MENU DATA END ===== */
@@ -1471,11 +1471,16 @@ function getMobileCategoryHref(
   }
 
   const applicationCategoryRoutes: Record<string, string> = {
+    ivd: "/applications/ivd",
+    "life-science": "/applications/life-science",
     "laboratory-automation": "/applications/lab-automation",
+    "analytical-instruments": "/applications/analytical-instruments",
+    "environmental-monitoring": "/applications/environmental-monitoring",
+    "synthetic-biology": "/applications/synthetic-biology",
   };
 
   return localizedPath(
-    applicationCategoryRoutes[categoryKey] ?? `/applications/${categoryKey}`
+    applicationCategoryRoutes[categoryKey] ?? "/applications/ivd"
   );
 }
 

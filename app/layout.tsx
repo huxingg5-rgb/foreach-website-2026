@@ -1,4 +1,4 @@
-﻿/* =========================================================
+/* =========================================================
    app/layout.tsx
    恒永达官网｜全站根布局
 
@@ -21,6 +21,9 @@ import "./language-typography.css";
 
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
+
+import CookieConsent from "@/components/privacy/CookieConsent";
+import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 
 import { SelectionCartProvider } from "@/components/selection-cart/SelectionCartProvider";
 import GlobalSelectionCartDrawer from "@/components/selection-cart/GlobalSelectionCartDrawer";
@@ -55,19 +58,173 @@ export default function RootLayout({
 }) {
   return (
     <html lang="zh-CN" suppressHydrationWarning>
+      <head>
+        <Script id="foreach-document-language" strategy="beforeInteractive">
+                    {`
+                      (function () {
+                        var firstSegment = window.location.pathname.split('/').filter(Boolean)[0];
+                        var supported = ['en', 'es', 'fr', 'ko', 'ru'];
+                        document.documentElement.lang = supported.indexOf(firstSegment) >= 0
+                          ? firstSegment
+                          : 'zh-CN';
+                      })();
+                    `}
+                  </Script>
+      </head>
       <body>
+        <Script id="foreach-layout-interactions" strategy="afterInteractive">
+                    {`
+                      (function () {
+                        function updatePageScrolled() {
+                          var y =
+                            window.scrollY ||
+                            window.pageYOffset ||
+                            document.documentElement.scrollTop ||
+                            document.body.scrollTop ||
+                            0;
+
+                          document.documentElement.classList.toggle("page-scrolled", y > 1);
+                        }
+
+                        updatePageScrolled();
+
+                        window.addEventListener("scroll", updatePageScrolled, { passive: true });
+                        window.addEventListener("touchmove", updatePageScrolled, { passive: true });
+                        window.addEventListener("touchend", updatePageScrolled, { passive: true });
+
+                        document.addEventListener("click", function (event) {
+                          var target = event.target;
+
+                          if (!target || !target.closest) return;
+
+                          var menuButton = target.closest(".mobile-menu-btn");
+
+                          if (menuButton) {
+                            event.preventDefault();
+
+                            var openLanguageWrap = document.querySelector(".language-switcher-open");
+
+                            if (openLanguageWrap) {
+                              openLanguageWrap.classList.remove("language-switcher-open");
+
+                              var openLanguageButton = openLanguageWrap.querySelector(".language-current");
+
+                              if (openLanguageButton) {
+                                openLanguageButton.setAttribute("aria-expanded", "false");
+                              }
+                            }
+
+                            var nextMenuOpen =
+                              !document.documentElement.classList.contains("mobile-nav-open");
+
+                            document.documentElement.classList.toggle(
+                              "mobile-nav-open",
+                              nextMenuOpen
+                            );
+
+                            menuButton.setAttribute("aria-expanded", String(nextMenuOpen));
+                            return;
+                          }
+
+                          var languageButton = target.closest(".language-current");
+
+                          if (languageButton) {
+                            var isPc = window.matchMedia(
+                              "(hover: hover) and (pointer: fine)"
+                            ).matches;
+
+                            if (isPc) return;
+
+                            event.preventDefault();
+
+                            var languageWrap = languageButton.closest(".language-switcher");
+
+                            document.documentElement.classList.remove("mobile-nav-open");
+
+                            var openMenuButton = document.querySelector(".mobile-menu-btn");
+
+                            if (openMenuButton) {
+                              openMenuButton.setAttribute("aria-expanded", "false");
+                            }
+
+                            if (!languageWrap) return;
+
+                            var nextLanguageOpen =
+                              !languageWrap.classList.contains("language-switcher-open");
+
+                            languageWrap.classList.toggle(
+                              "language-switcher-open",
+                              nextLanguageOpen
+                            );
+
+                            languageButton.setAttribute(
+                              "aria-expanded",
+                              String(nextLanguageOpen)
+                            );
+
+                            return;
+                          }
+
+                          var mobileNavLink = target.closest(".mobile-nav-link");
+
+                          if (mobileNavLink) {
+                            document.documentElement.classList.remove("mobile-nav-open");
+
+                            var currentMenuButton = document.querySelector(".mobile-menu-btn");
+
+                            if (currentMenuButton) {
+                              currentMenuButton.setAttribute("aria-expanded", "false");
+                            }
+
+                            return;
+                          }
+
+                          var languageItem = target.closest(".language-menu-item");
+
+                          if (languageItem) {
+                            var currentLanguageWrap = languageItem.closest(".language-switcher");
+                            var currentLanguageButton =
+                              currentLanguageWrap &&
+                              currentLanguageWrap.querySelector(".language-current");
+
+                            var currentLanguageLabel =
+                              currentLanguageButton &&
+                              currentLanguageButton.querySelector(".language-current-label");
+
+                            if (currentLanguageLabel) {
+                              currentLanguageLabel.textContent = languageItem.textContent.trim();
+                            }
+
+                            if (currentLanguageWrap) {
+                              currentLanguageWrap.classList.remove("language-switcher-open");
+                            }
+
+                            if (currentLanguageButton) {
+                              currentLanguageButton.setAttribute("aria-expanded", "false");
+                            }
+
+                            return;
+                          }
+
+                          var activeLanguageWrap = document.querySelector(
+                            ".language-switcher-open"
+                          );
+
+                          if (activeLanguageWrap && !target.closest(".language-switcher")) {
+                            activeLanguageWrap.classList.remove("language-switcher-open");
+
+                            var activeLanguageButton =
+                              activeLanguageWrap.querySelector(".language-current");
+
+                            if (activeLanguageButton) {
+                              activeLanguageButton.setAttribute("aria-expanded", "false");
+                            }
+                          }
+                        });
+                      })();
+                    `}
+                  </Script>
         <SelectionCartProvider>
-          <Script id="foreach-document-language" strategy="beforeInteractive">
-            {`
-              (function () {
-                var firstSegment = window.location.pathname.split('/').filter(Boolean)[0];
-                var supported = ['en', 'es', 'fr', 'ko', 'ru'];
-                document.documentElement.lang = supported.indexOf(firstSegment) >= 0
-                  ? firstSegment
-                  : 'zh-CN';
-              })();
-            `}
-          </Script>
           {/* =================================================
               页面滚动、移动端菜单、语言菜单交互脚本
 
@@ -80,171 +237,23 @@ export default function RootLayout({
                  - 手机端菜单打开 / 关闭
                  - 手机端语言下拉打开 / 关闭
           ================================================= */}
-          <Script id="foreach-layout-interactions" strategy="afterInteractive">
-            {`
-              (function () {
-                function updatePageScrolled() {
-                  var y =
-                    window.scrollY ||
-                    window.pageYOffset ||
-                    document.documentElement.scrollTop ||
-                    document.body.scrollTop ||
-                    0;
-
-                  document.documentElement.classList.toggle("page-scrolled", y > 1);
-                }
-
-                updatePageScrolled();
-
-                window.addEventListener("scroll", updatePageScrolled, { passive: true });
-                window.addEventListener("touchmove", updatePageScrolled, { passive: true });
-                window.addEventListener("touchend", updatePageScrolled, { passive: true });
-
-                document.addEventListener("click", function (event) {
-                  var target = event.target;
-
-                  if (!target || !target.closest) return;
-
-                  var menuButton = target.closest(".mobile-menu-btn");
-
-                  if (menuButton) {
-                    event.preventDefault();
-
-                    var openLanguageWrap = document.querySelector(".language-switcher-open");
-
-                    if (openLanguageWrap) {
-                      openLanguageWrap.classList.remove("language-switcher-open");
-
-                      var openLanguageButton = openLanguageWrap.querySelector(".language-current");
-
-                      if (openLanguageButton) {
-                        openLanguageButton.setAttribute("aria-expanded", "false");
-                      }
-                    }
-
-                    var nextMenuOpen =
-                      !document.documentElement.classList.contains("mobile-nav-open");
-
-                    document.documentElement.classList.toggle(
-                      "mobile-nav-open",
-                      nextMenuOpen
-                    );
-
-                    menuButton.setAttribute("aria-expanded", String(nextMenuOpen));
-                    return;
-                  }
-
-                  var languageButton = target.closest(".language-current");
-
-                  if (languageButton) {
-                    var isPc = window.matchMedia(
-                      "(hover: hover) and (pointer: fine)"
-                    ).matches;
-
-                    if (isPc) return;
-
-                    event.preventDefault();
-
-                    var languageWrap = languageButton.closest(".language-switcher");
-
-                    document.documentElement.classList.remove("mobile-nav-open");
-
-                    var openMenuButton = document.querySelector(".mobile-menu-btn");
-
-                    if (openMenuButton) {
-                      openMenuButton.setAttribute("aria-expanded", "false");
-                    }
-
-                    if (!languageWrap) return;
-
-                    var nextLanguageOpen =
-                      !languageWrap.classList.contains("language-switcher-open");
-
-                    languageWrap.classList.toggle(
-                      "language-switcher-open",
-                      nextLanguageOpen
-                    );
-
-                    languageButton.setAttribute(
-                      "aria-expanded",
-                      String(nextLanguageOpen)
-                    );
-
-                    return;
-                  }
-
-                  var mobileNavLink = target.closest(".mobile-nav-link");
-
-                  if (mobileNavLink) {
-                    document.documentElement.classList.remove("mobile-nav-open");
-
-                    var currentMenuButton = document.querySelector(".mobile-menu-btn");
-
-                    if (currentMenuButton) {
-                      currentMenuButton.setAttribute("aria-expanded", "false");
-                    }
-
-                    return;
-                  }
-
-                  var languageItem = target.closest(".language-menu-item");
-
-                  if (languageItem) {
-                    var currentLanguageWrap = languageItem.closest(".language-switcher");
-                    var currentLanguageButton =
-                      currentLanguageWrap &&
-                      currentLanguageWrap.querySelector(".language-current");
-
-                    var currentLanguageLabel =
-                      currentLanguageButton &&
-                      currentLanguageButton.querySelector(".language-current-label");
-
-                    if (currentLanguageLabel) {
-                      currentLanguageLabel.textContent = languageItem.textContent.trim();
-                    }
-
-                    if (currentLanguageWrap) {
-                      currentLanguageWrap.classList.remove("language-switcher-open");
-                    }
-
-                    if (currentLanguageButton) {
-                      currentLanguageButton.setAttribute("aria-expanded", "false");
-                    }
-
-                    return;
-                  }
-
-                  var activeLanguageWrap = document.querySelector(
-                    ".language-switcher-open"
-                  );
-
-                  if (activeLanguageWrap && !target.closest(".language-switcher")) {
-                    activeLanguageWrap.classList.remove("language-switcher-open");
-
-                    var activeLanguageButton =
-                      activeLanguageWrap.querySelector(".language-current");
-
-                    if (activeLanguageButton) {
-                      activeLanguageButton.setAttribute("aria-expanded", "false");
-                    }
-                  }
-                });
-              })();
-            `}
-          </Script>
 
           <SiteHeader />
 
           {children}
 
-          {/* 
+          {/*
             当前静态导出版先固定中文 Footer。
             后续如果需要 Footer 也根据 /en、/fr 自动切换，
             再把语言判断放到具体页面或前端组件里处理。
           */}
           <SiteFooter />
 
-          {/* 
+          {/* Cookie 同意管理与用户同意后加载的 GA4 */}
+          <CookieConsent />
+          <GoogleAnalytics />
+
+          {/*
             全局选型清单抽屉
             说明：
             1. 全站只挂载一次
@@ -254,6 +263,7 @@ export default function RootLayout({
           <GlobalSelectionCartDrawer />
         </SelectionCartProvider>
       </body>
-    </html>
+
+</html>
   );
-} 
+}

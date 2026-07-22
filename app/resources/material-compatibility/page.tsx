@@ -55,19 +55,19 @@ export default async function MaterialCompatibilityPage() {
           1. Banner 高度由 material-compatibility.css 控制为 520px
           2. 当前不在这里写面包屑，后面接你已有的面包屑组件
       ===================================================== */}
-            <section className="material-compatibility-banner">
-                <div className="material-compatibility-banner__inner">
-                    <div className="material-compatibility-banner__content">
-                        <p className="material-compatibility-banner__eyebrow">
+            <section className="material-compatibility-banner resource-center-banner">
+                <div className="material-compatibility-banner__inner resource-center-banner__inner">
+                    <div className="material-compatibility-banner__content resource-center-banner__content">
+                        <p className="material-compatibility-banner__eyebrow resource-center-banner__eyebrow">
                             {pageData.banner.eyebrow}
                         </p>
 
-                        <h1>
+                        <h1 className="resource-center-banner__title">
                             {pageData.banner.title}
                             <span>{pageData.banner.highlight}</span>
                         </h1>
 
-                        <p className="material-compatibility-banner__desc">
+                        <p className="material-compatibility-banner__desc resource-center-banner__description">
                             {pageData.banner.description}
                         </p>
                     </div>

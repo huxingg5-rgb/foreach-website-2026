@@ -138,14 +138,14 @@ export default function NewsListClient({ pageData }: NewsListClientProps) {
   return (
     <main className="newsPage">
       <section
-        className="newsHero"
+        className="newsHero resource-center-banner"
         style={{
           backgroundImage: `url(${pageData.hero.backgroundImage})`,
         }}
       >
-        <div className="newsHero__inner">
-          <h1 className="newsHero__title">{pageData.hero.title}</h1>
-          <p className="newsHero__description">{pageData.hero.description}</p>
+        <div className="newsHero__inner resource-center-banner__inner">
+          <h1 className="newsHero__title resource-center-banner__title">{pageData.hero.title}</h1>
+          <p className="newsHero__description resource-center-banner__description">{pageData.hero.description}</p>
         </div>
       </section>
 

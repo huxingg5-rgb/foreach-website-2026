@@ -545,7 +545,19 @@ export default function GlobalSelectionCartDrawer() {
                 onClick={closeCart}
                 aria-label={isEnglish ? `${t("Close")} ${t("Product Selection List")}` : "关闭选型清单"}
               >
-                ×
+                <svg
+                  viewBox="0 0 20 20"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  focusable="false"
+                  aria-hidden="true"
+                >
+                  <path d="M5 5L15 15M15 5L5 15" />
+                </svg>
               </button>
             </div>
 

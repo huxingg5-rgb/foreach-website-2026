@@ -41,16 +41,6 @@ type OpenPanel = "none" | "language" | "mobileNav";
 // 语言偏好 Cookie 名称
 // 说明：这里必须和 proxy.ts 里的 LOCALE_COOKIE_NAME 保持一致
 const LOCALE_COOKIE_NAME = "foreach_locale";
-
-const ENGLISH_LANGUAGE_LABELS: Record<LocaleCode, string> = {
-  "zh-CN": "Chinese",
-  en: "English",
-  es: "Spanish",
-  fr: "French",
-  ko: "Korean",
-  ru: "Russian",
-};
-
 /* ================================
    语言路径前缀配置
    说明：
@@ -299,8 +289,115 @@ const isFittingReplacementDetailPage =
 
   // 搜索输入框，用于打开搜索模式后自动聚焦
   const searchInputRef = useRef<HTMLInputElement | null>(null);
+  // Header 元素，用于获取 Header 真实底边位置
+  const headerRef = useRef<HTMLElement | null>(null);
 
-  const isLanguageOpen = openPanel === "language"; // 判断语言菜单是否展开
+  // Language 按钮区域，用于获取菜单水平中心位置
+  const languageSwitcherRef = useRef<HTMLDivElement | null>(null);
+  // 语言菜单延迟关闭计时器
+  const languageCloseTimerRef =
+    useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // 判断语言菜单是否展开
+  const isLanguageOpen = openPanel === "language";
+    /* LANGUAGE_MENU_FIXED_POSITION_EFFECT
+     让语言菜单始终贴合实际 Header 底边。
+     不再依赖按钮高度或猜测固定像素。
+  */
+  useEffect(() => {
+    let animationFrameId = 0;
+
+    function updateLanguageMenuPosition() {
+      const headerElement = headerRef.current;
+      const languageElement = languageSwitcherRef.current;
+
+      if (!headerElement || !languageElement) {
+        return;
+      }
+
+      /*
+       * site-header 外层高度可能小于实际白色导航栏高度。
+       * 应读取 site-header-inner 的真实底边。
+       */
+      const headerInnerElement =
+        headerElement.querySelector<HTMLElement>(".site-header-inner");
+
+      const headerRect =
+        (headerInnerElement ?? headerElement).getBoundingClientRect();
+      const languageRect = languageElement.getBoundingClientRect();
+
+      const headerBottom = Math.max(
+        0,
+        Math.ceil(headerRect.bottom),
+      );
+
+      const languageCenter = Math.round(
+        languageRect.left + languageRect.width / 2,
+      );
+
+      headerElement.style.setProperty(
+        "--language-menu-fixed-top",
+        `${headerBottom}px`,
+      );
+
+      headerElement.style.setProperty(
+        "--language-menu-fixed-left",
+        `${languageCenter}px`,
+      );
+    }
+
+    function scheduleLanguageMenuPositionUpdate() {
+      window.cancelAnimationFrame(animationFrameId);
+
+      animationFrameId = window.requestAnimationFrame(
+        updateLanguageMenuPosition,
+      );
+    }
+
+    scheduleLanguageMenuPositionUpdate();
+
+    window.addEventListener(
+      "resize",
+      scheduleLanguageMenuPositionUpdate,
+    );
+
+    window.addEventListener(
+      "scroll",
+      scheduleLanguageMenuPositionUpdate,
+      { passive: true },
+    );
+
+    const resizeObserver =
+      typeof ResizeObserver !== "undefined"
+        ? new ResizeObserver(
+            scheduleLanguageMenuPositionUpdate,
+          )
+        : null;
+
+    if (headerRef.current) {
+      resizeObserver?.observe(headerRef.current);
+    }
+
+    if (languageSwitcherRef.current) {
+      resizeObserver?.observe(languageSwitcherRef.current);
+    }
+
+    return () => {
+      window.cancelAnimationFrame(animationFrameId);
+
+      window.removeEventListener(
+        "resize",
+        scheduleLanguageMenuPositionUpdate,
+      );
+
+      window.removeEventListener(
+        "scroll",
+        scheduleLanguageMenuPositionUpdate,
+      );
+
+      resizeObserver?.disconnect();
+    };
+  }, [isLanguageOpen]);
 
   const isMobileMenuOpen = openPanel === "mobileNav"; // 判断手机端导航是否展开
 
@@ -346,12 +443,19 @@ const isFittingReplacementDetailPage =
   const isProductCenterPage =
     normalizedPathWithoutLocale === "/products" ||
     normalizedPathWithoutLocale.startsWith("/products/");
+  /* ================================
+     隐私政策页面判断
+
+     隐私政策页面没有深色 Banner，
+     所以页面顶部需要直接使用白底 Header。
+  ================================ */
+  const isPrivacyPolicyPage =
+    normalizedPathWithoutLocale === "/privacy-policy";
 
   const shouldUseSolidHeader =
     isScrolled ||
-    isFittingReplacementDetailPage ||
-    isNewsArticlePage ||
-    isProductCenterPage ||
+    isFittingReplacementDetailPage || isNewsArticlePage || isProductCenterPage || isPrivacyPolicyPage ||
+    isPrivacyPolicyPage ||
     openPanel !== "none" ||
     Boolean(desktopMegaKey) ||
     isSearchOpen;
@@ -448,6 +552,16 @@ const isFittingReplacementDetailPage =
 
     if (item.key === "home") {
       return normalizedPathWithoutLocale === "/";
+    }
+
+    // “应用领域”的默认入口是 IVD，但其余应用分类是同级页面。
+    // 统一按 /applications 路由段判断，避免进入生命科学、实验室自动化等
+    // 页面后顶部栏目失去选中状态。
+    if (item.key === "applications") {
+      return (
+        normalizedPathWithoutLocale === "/applications" ||
+        normalizedPathWithoutLocale.startsWith("/applications/")
+      );
     }
 
     if (
@@ -626,24 +740,51 @@ const isFittingReplacementDetailPage =
      * PC 端鼠标进入语言栏时展开
      */
     function handleLanguageMouseEnter() {
-      if (isPcHoverDevice()) {
-        setIsSearchOpen(false);
-
-        setDesktopMegaKey(null);
-
-        setActiveMegaCategoryKey(null);
-
-        setOpenPanel("language");
+      if (!isPcHoverDevice()) {
+        return;
       }
+
+      /*
+       * 鼠标重新进入语言区域时，
+       * 取消此前尚未执行的延迟关闭。
+       */
+      if (languageCloseTimerRef.current !== null) {
+        clearTimeout(languageCloseTimerRef.current);
+        languageCloseTimerRef.current = null;
+      }
+
+      setIsSearchOpen(false);
+      setDesktopMegaKey(null);
+      setActiveMegaCategoryKey(null);
+      setOpenPanel("language");
     }
 
     /**
-     * PC 端鼠标离开语言栏时关闭
+     * PC 端鼠标离开语言栏时执行
+     *
+     * 延迟关闭可以避免鼠标经过按钮与下拉菜单之间时，
+     * 菜单立刻消失。
      */
     function handleLanguageMouseLeave() {
-      if (isPcHoverDevice()) {
-        setOpenPanel("none");
+      if (!isPcHoverDevice()) {
+        return;
       }
+
+      if (languageCloseTimerRef.current !== null) {
+        clearTimeout(languageCloseTimerRef.current);
+      }
+
+      languageCloseTimerRef.current = setTimeout(() => {
+        /*
+         * 只在当前仍是语言菜单时关闭。
+         * 避免计时器误关掉随后打开的其他面板。
+         */
+        setOpenPanel((currentPanel) =>
+          currentPanel === "language" ? "none" : currentPanel,
+        );
+
+        languageCloseTimerRef.current = null;
+      }, 240);
     }
 
     /**
@@ -651,6 +792,11 @@ const isFittingReplacementDetailPage =
      */
     function handleLanguageButtonClick(event: MouseEvent<HTMLButtonElement>) {
       event.preventDefault();
+
+      if (languageCloseTimerRef.current !== null) {
+        clearTimeout(languageCloseTimerRef.current);
+        languageCloseTimerRef.current = null;
+      }
 
       setIsSearchOpen(false);
 
@@ -791,6 +937,7 @@ const isFittingReplacementDetailPage =
 
     return (
       <header
+        ref={headerRef}
         className={`site-header ${headerLocaleClass} ${shouldUseSolidHeader ? "site-header-scrolled" : ""
           } ${isFittingReplacementDetailPage || isNewsArticlePage || isProductCenterPage
             ? "site-header-solid-page"
@@ -973,6 +1120,7 @@ const isFittingReplacementDetailPage =
 
             {/* 语言栏 */}
             <div
+              ref={languageSwitcherRef}
               className={`language-switcher ${isLanguageOpen ? "language-switcher-open" : ""
                 }`}
               onMouseEnter={handleLanguageMouseEnter}
@@ -994,12 +1142,12 @@ const isFittingReplacementDetailPage =
                 </span>
               </button>
 
-              <div className="language-details-menu">
+              <div className="language-details-menu site-nav-simple-dropdown">
                 {languageItems.map((language) => (
                   <a
                     key={language.code}
                     href={language.href}
-                    className={`language-details-item ${language.code === currentLocale
+                    className={`site-nav-simple-dropdown-link language-details-item ${language.code === currentLocale
                       ? "language-details-item-active"
                       : ""
                       }`}
@@ -1007,9 +1155,16 @@ const isFittingReplacementDetailPage =
                       handleLanguageItemClick(event, language.code, language.href)
                     }
                   >
-                    {currentLocale === "en"
-                      ? ENGLISH_LANGUAGE_LABELS[language.code]
-                      : language.label}
+                    <span
+                      className="language-details-item-label"
+                      style={{
+                        display: "block",
+                        width: "100%",
+                        textAlign: "center",
+                      }}
+                    >
+                      {language.label}
+                    </span>
                   </a>
                 ))}
               </div>

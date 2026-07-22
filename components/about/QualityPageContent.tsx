@@ -42,7 +42,10 @@ export default function QualityPageContent({
           图片：
           public/images/about/quality-banner.webp
       ================================ */}
-      <section className="quality-policy-hero" aria-label={content.heroTitle}>
+      <section
+        className="quality-policy-hero about-center-banner"
+        aria-label={content.heroTitle}
+      >
         <Image
           className="quality-policy-hero-image"
           src={aboutQualityImages.heroBanner}
@@ -54,10 +57,12 @@ export default function QualityPageContent({
 
         <div className="quality-policy-hero-overlay" aria-hidden="true" />
 
-        <div className="quality-policy-hero-inner">
+        <div className="quality-policy-hero-inner about-center-banner__inner">
           <div className="quality-policy-text">
-            <p>{content.heroTitle}</p>
-            <p>{content.heroSubtitle}</p>
+            <p className="about-center-banner__title">{content.heroTitle}</p>
+            <p className="about-center-banner__description">
+              {content.heroSubtitle}
+            </p>
           </div>
         </div>
       </section>

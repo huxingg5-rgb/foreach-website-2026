@@ -40,7 +40,7 @@ const SELECTION_CART_COPY: Record<LocaleCode, SelectionCartCopy> = {
     openDetailsTitle: "新窗口打开详情页",
     noteTitle: "清单说明",
     noteDescription:
-      "产品加入清单后不会默认发送图纸。需要图纸的型号，可在详情页或清单中切换。后续提交需求时，只会把标记“需要图纸”的型号纳入图纸发送范围。",
+      "1、清单保存在当前浏览器，清除数据或更换浏览器后可能丢失。\n2、图纸需单独勾选，仅发送标记“需要图纸”的型号。",
     printTitle: "恒永达选型清单",
     printDescription:
       "本清单根据客户选择的型号生成，用于型号确认、报价沟通及内部技术确认。",
@@ -71,7 +71,7 @@ const SELECTION_CART_COPY: Record<LocaleCode, SelectionCartCopy> = {
     openDetailsTitle: "Open product details in a new window",
     noteTitle: "List Notes",
     noteDescription:
-      "Adding a product does not automatically request a drawing. Mark the required models here or on the product page; only marked models will be included in the drawing request.",
+      "1. The list is saved in the current browser and may be lost if browser data is cleared or a different browser is used.\n2. Drawings must be selected separately. Only models marked “Drawing Required” will be sent.",
     printTitle: "FOREACH Product Selection List",
     printDescription:
       "This list is generated from the selected models for model confirmation, quotation discussions, and technical review.",
@@ -102,7 +102,7 @@ const SELECTION_CART_COPY: Record<LocaleCode, SelectionCartCopy> = {
     openDetailsTitle: "Abrir los detalles del producto en una ventana nueva",
     noteTitle: "Notas de la lista",
     noteDescription:
-      "Añadir un producto no solicita automáticamente su plano. Marque aquí o en la página del producto los modelos cuyos planos necesita; solo los modelos marcados se incluirán en la solicitud.",
+      "1. La lista se guarda en el navegador actual y puede perderse si borra los datos o cambia de navegador.\n2. Los planos deben seleccionarse por separado. Solo se enviarán los modelos marcados como «Plano requerido».",
     printTitle: "Lista de selección de productos FOREACH",
     printDescription:
       "Esta lista se genera a partir de los modelos seleccionados para confirmar modelos, preparar cotizaciones y realizar revisiones técnicas.",
@@ -133,7 +133,7 @@ const SELECTION_CART_COPY: Record<LocaleCode, SelectionCartCopy> = {
     openDetailsTitle: "Ouvrir les détails du produit dans une nouvelle fenêtre",
     noteTitle: "Notes de la liste",
     noteDescription:
-      "L’ajout d’un produit ne demande pas automatiquement son plan. Marquez ici ou sur la page du produit les modèles dont le plan est requis ; seuls les modèles marqués seront inclus dans la demande de plans.",
+      "1. La liste est enregistrée dans le navigateur actuel et peut être perdue si vous effacez les données ou changez de navigateur.\n2. Les plans doivent être sélectionnés séparément. Seuls les modèles marqués « Plan requis » seront envoyés.",
     printTitle: "Liste de sélection de produits FOREACH",
     printDescription:
       "Cette liste est générée à partir des modèles sélectionnés pour la confirmation des modèles, les échanges de devis et la revue technique.",
@@ -164,7 +164,7 @@ const SELECTION_CART_COPY: Record<LocaleCode, SelectionCartCopy> = {
     openDetailsTitle: "새 창에서 제품 상세 정보 열기",
     noteTitle: "목록 안내",
     noteDescription:
-      "제품을 목록에 추가해도 도면이 자동으로 요청되지는 않습니다. 필요한 모델을 여기 또는 제품 페이지에서 표시하세요. 표시된 모델만 도면 요청에 포함됩니다.",
+      "1. 목록은 현재 브라우저에 저장되며, 데이터를 삭제하거나 다른 브라우저를 사용하면 목록이 사라질 수 있습니다.\n2. 도면은 별도로 선택해야 하며, “도면 필요”로 표시된 모델만 전송됩니다.",
     printTitle: "FOREACH 제품 선택 목록",
     printDescription:
       "이 목록은 모델 확인, 견적 협의 및 기술 검토를 위해 선택한 모델을 기준으로 생성됩니다.",
@@ -195,7 +195,7 @@ const SELECTION_CART_COPY: Record<LocaleCode, SelectionCartCopy> = {
     openDetailsTitle: "Открыть сведения о продукте в новом окне",
     noteTitle: "Примечания к списку",
     noteDescription:
-      "Добавление продукта в список не означает автоматический запрос чертежа. Отметьте нужные модели здесь или на странице продукта; в запрос чертежей будут включены только отмеченные модели.",
+      "1. Список сохраняется в текущем браузере и может быть утрачен при очистке данных или использовании другого браузера.\n2. Чертежи необходимо отмечать отдельно. Будут отправлены только модели с отметкой «Требуется чертёж».",
     printTitle: "Список выбранных продуктов FOREACH",
     printDescription:
       "Этот список сформирован на основе выбранных моделей для подтверждения, согласования предложения и технической проверки.",

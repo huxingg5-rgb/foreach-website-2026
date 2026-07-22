@@ -198,12 +198,18 @@
   color: #ffffff;
 }
 
+.head > div:first-child {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
 .head h2 {
   margin: 0;
   color: #ffffff;
   font-size: 24px;
   line-height: 1.15;
   font-weight: 900;
+  overflow-wrap: anywhere;
 }
 
 .head p {
@@ -211,13 +217,23 @@
   color: rgba(255, 255, 255, 0.72);
   font-size: 13px;
   line-height: 1.6;
+  overflow-wrap: anywhere;
 }
 
 .head > button {
   width: 34px;
   height: 34px;
-  border: 1px solid rgba(255, 255, 255, 0.32);
-  border-radius: 0;
+  min-width: 34px;
+  min-height: 34px;
+  flex: 0 0 34px;
+  align-self: flex-start;
+  box-sizing: border-box;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.32);
+  border-radius: 7px;
   background: transparent;
   color: #ffffff;
   font-size: 24px;
@@ -417,7 +433,7 @@
 .infoRow {
   margin-top: 9px;
   display: grid;
-  grid-template-columns: 72px minmax(0, 1fr);
+  grid-template-columns: max-content minmax(0, 1fr);
   gap: 12px;
   align-items: baseline;
 }
@@ -426,7 +442,8 @@
   color: #7a8598;
   font-size: 12px;
   line-height: 1.5;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .infoRow strong {
@@ -499,6 +516,7 @@
   color: #5e6b80;
   font-size: 13px;
   line-height: 1.75;
+  white-space: pre-line;
 }
 
 /* =========================================================
@@ -788,6 +806,8 @@
   }
 
   .infoRow {
-    grid-template-columns: 64px minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2px;
+    align-items: start;
   }
 }

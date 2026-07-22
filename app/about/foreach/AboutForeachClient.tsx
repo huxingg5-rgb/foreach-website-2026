@@ -422,7 +422,7 @@ export default function AboutForeachClient({
       {/* ================================
           第一部分：Banner
       ================================ */}
-      <section className="about-foreach-hero">
+      <section className="about-foreach-hero about-center-banner">
         {/*
           Banner 背景图
           图片文件位置：
@@ -444,12 +444,14 @@ export default function AboutForeachClient({
           className="about-foreach-hero-bg"
         />
 
-        <div className="about-foreach-hero-content">
-          <h1>
+        <div className="about-foreach-hero-content about-center-banner__inner">
+          <h1 className="about-center-banner__title">
             <span>{getLocalizedText(pageText.heroTitle, locale)}</span>
           </h1>
 
-          <p>{getLocalizedText(pageText.heroDescription, locale)}</p>
+          <p className="about-center-banner__description">
+            {getLocalizedText(pageText.heroDescription, locale)}
+          </p>
         </div>
       </section>
       <SiteBreadcrumb

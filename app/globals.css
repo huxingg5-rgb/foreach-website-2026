@@ -5760,8 +5760,21 @@ html[lang="ru"] .home-hero-btn:hover {
 }
 
 .site-footer__list a:hover {
-  color: var(--brand-blue);
+  color: var(--brand-cyan);
   transform: translateX(2px);
+}
+
+.site-footer__contact-link,
+.site-footer__icp-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.site-footer__title:hover,
+.site-footer__contact-link:hover,
+.site-footer__icp-link:hover {
+  color: var(--brand-cyan);
 }
 
 .site-footer__right {
@@ -6980,7 +6993,7 @@ html[lang="ru"] .home-hero-btn:hover {
 
   .home-hero-btn {
     min-width: 120px !important;
-    height: 40px !important;
+    height: 36px !important;
     padding: 0 20px !important;
     font-size: 13px !important;
   }
@@ -7251,7 +7264,7 @@ html[lang="ru"] .home-hero-btn:hover {
 
   .home-company-primary-btn {
     min-width: 120px !important;
-    height: 40px !important;
+    height: 36px !important;
     padding: 0 24px !important;
     font-size: 13px !important;
   }
@@ -8093,7 +8106,7 @@ html[lang="ru"] .home-hero-btn:hover {
 
   .home-hero-btn {
     min-width: 120px !important;
-    height: 40px !important;
+    height: 36px !important;
     padding: 0 20px !important;
     font-size: 13px !important;
   }
@@ -8154,7 +8167,7 @@ html[lang="ru"] .home-hero-btn:hover {
   }
 
   .home-flow-btn {
-    height: 40px !important;
+    height: 36px !important;
     padding: 0 20px !important;
     font-size: 13px !important;
   }
@@ -8344,7 +8357,7 @@ html[lang="ru"] .home-hero-btn:hover {
 
   .home-company-primary-btn {
     min-width: 118px !important;
-    height: 40px !important;
+    height: 36px !important;
     padding: 0 22px !important;
     font-size: 13px !important;
   }
@@ -10088,7 +10101,7 @@ html[lang="ru"] .home-hero-btn:hover {
   /* 闂傚倸鍊搁崐宄懊归崶顒夋晪鐟滃繘鍩€椤掍胶鈻撻柡鍛箘閸掓帒鈻庨幘宕囶唺濠德板€愰崑鎾剁磼閳ь剚寰勭€ｂ晝绠氬銈嗙墬缁绘劖顨ヨ箛鎾佺懓顭ㄩ崘鈺勭闂侀€炲苯澧紒鐘茬Ч瀹曟洟鏌嗗畵銉ユ喘椤㈡稑顭ㄩ崟顐㈠箲闂備線鈧偛鑻晶瀛樻叏婵犲啯銇濈€规洦鍋婂畷鐔碱敆閳ь剛绮ｅ☉銏♀拺闁告縿鍎辨牎闂佸憡姊归悷鈺呯嵁閸愩剮鏃堝椽娴ｈ娅旈梻渚€鈧偛鑻晶瀛橆殽閻愭彃鏆欓摶鏍煃瑜滈崜鐔煎春閵夛箑绶炲┑鐐靛亾閻庤鈹戦埥鍡楃仴鐎规洜鏁诲鎶筋敇閻樼數锛濋梺绋挎湰閻熝呮嫻娴煎瓨鐓曢柣妯哄暱閸濊櫣鈧娲樺ú鐔镐繆閸洖鐐婇柍鍝勫暟閸橆垰鈹戦悩顔肩伇闁糕晜鐗犲畷婵嬪即閵忊€斥偓?*/
   .mobile-nav .mobile-nav-submenu-link {
     width: 100% !important;
-    min-height: 40px !important;
+    min-height: 36px !important;
     padding: 0 24px 0 42px !important;
     display: flex !important;
     align-items: center !important;
@@ -11336,72 +11349,121 @@ html[lang="ru"] .home-hero-btn:hover {
 
 
 /* ABOUT_FOREACH_HONOR_REFERENCE_LAYOUT_START */
+
+/* =========================================================
+   荣誉资质模块最终排版
+
+   桌面端结构：
+   1. 页面标题居中
+   2. 上半部分：左侧统计 + 右侧六张核心证书
+   3. 下半部分：八张 A4 证书横跨整个内容区
+   4. 不修改图片、文案和数据
+========================================================= */
+
 .about-foreach-honor-section {
-  padding: 92px 0 96px;
+  position: relative;
+  padding: 84px 0 100px;
+  overflow: hidden;
   background: #ffffff;
 }
 
+/*
+ * 荣誉资质模块使用独立宽版容器。
+ * 不修改其他“关于我们”模块的公共容器宽度。
+ */
+.about-foreach-honor-section > .about-foreach-container {
+  width: min(1600px, calc(100% - 96px));
+  max-width: none;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* 页面主标题 */
 .about-foreach-honor-title {
-  margin-bottom: 82px;
+  margin-bottom: 58px;
   text-align: center;
 }
 
 .about-foreach-honor-title h2 {
+  margin: 0;
   color: #173368;
-  font-size: clamp(40px, 3.6vw, 58px);
-  line-height: 1.1;
+  font-size: clamp(40px, 3vw, 56px);
   font-weight: 850;
+  line-height: 1.1;
   letter-spacing: 0;
 }
+
+/* =========================================================
+   上半部分：左侧统计 + 右侧证书
+========================================================= */
 
 .about-foreach-honor-layout {
   display: grid;
-  grid-template-columns: minmax(280px, 0.28fr) minmax(0, 0.72fr);
-  gap: clamp(44px, 5vw, 84px);
-  align-items: center;
+  grid-template-columns: minmax(420px, 0.32fr) minmax(0, 0.68fr);
+  column-gap: clamp(56px, 4.5vw, 80px);
+  align-items: start;
 }
 
+/* 左侧企业荣誉统计 */
 .about-foreach-honor-summary {
   min-width: 0;
-  margin-top: 0;
-  padding: 28px 0 0;
+  margin: 0;
+  padding: 0;
 }
 
 .about-foreach-honor-summary h3 {
+  margin: 0;
   color: #173368;
-  font-size: clamp(30px, 2.6vw, 44px);
-  line-height: 1.18;
+  font-size: clamp(32px, 2.2vw, 42px);
   font-weight: 750;
+  line-height: 1.2;
   letter-spacing: 0;
 }
 
+/* 三组数字保持同一行 */
 .about-foreach-honor-summary-stats {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(20px, 2.5vw, 42px);
-  max-width: 560px;
-  margin-top: clamp(42px, 5vw, 68px);
+  gap: clamp(20px, 2vw, 34px);
+  width: 100%;
+  max-width: 520px;
+  margin-top: clamp(46px, 4vw, 62px);
 }
 
+/* 每组数字与标签构成一个整体 */
 .about-foreach-honor-summary-stat {
   min-width: 0;
-  padding-right: 0;
-  border-right: none;
+  padding: 0;
+  border: 0;
+  text-align: left;
 }
 
+/*
+ * 数字与加号使用 inline-flex。
+ * 防止 10 和 +、96 和 + 被浏览器拆成两行。
+ */
 .about-foreach-honor-summary-number {
+  display: inline-flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  max-width: 100%;
   color: #173368;
-  font-size: clamp(56px, 5.4vw, 86px);
+  font-size: clamp(58px, 4.3vw, 74px);
   font-weight: 850;
   line-height: 0.95;
   letter-spacing: 0;
+  white-space: nowrap;
 }
 
 .about-foreach-honor-summary-plus {
+  display: inline-block;
+  flex: 0 0 auto;
+  margin-left: 3px;
   color: #173368;
-  margin-left: 4px;
   font-size: 0.34em;
   font-weight: 850;
+  line-height: 1;
+  transform: translateY(0.08em);
 }
 
 .about-foreach-honor-summary-label {
@@ -11410,33 +11472,42 @@ html[lang="ru"] .home-hero-btn:hover {
   font-size: 15px;
   font-weight: 750;
   line-height: 1.35;
+  white-space: nowrap;
 }
 
+/* 右侧核心证书区域 */
 .about-foreach-honor-board {
   min-width: 0;
 }
 
+/* 第一排：高新技术企业证书 + 两张 ISO */
 .about-foreach-honor-top-row {
   display: grid;
-  grid-template-columns: minmax(360px, 1.78fr) repeat(2, minmax(142px, 0.78fr));
-  gap: clamp(18px, 1.6vw, 28px);
+  grid-template-columns:
+    minmax(0, 1.9fr)
+    minmax(0, 0.95fr)
+    minmax(0, 0.95fr);
+  gap: clamp(16px, 1.4vw, 24px);
   align-items: stretch;
 }
 
+/* 高新技术企业证书 */
 .about-foreach-honor-main-cert {
+  position: relative;
   width: 100%;
-  height: auto;
-  aspect-ratio: 1.43 / 1;
+  height: clamp(250px, 17vw, 350px);
   margin: 0;
-  border: 8px solid #454b55;
+  overflow: hidden;
+  border: 7px solid #454b55;
   background: #ffffff;
-  box-shadow: 0 18px 42px rgba(7, 26, 58, 0.08);
+  box-shadow: 0 14px 34px rgba(7, 26, 58, 0.07);
 }
 
 .about-foreach-honor-main-cert::before {
   display: none;
 }
 
+/* 所有荣誉图片完整显示，不裁切 */
 .about-foreach-honor-main-cert-image,
 .about-foreach-honor-iso-cert,
 .about-foreach-honor-middle-image,
@@ -11447,90 +11518,132 @@ html[lang="ru"] .home-hero-btn:hover {
   object-fit: contain;
 }
 
+/* 两张 ISO 与主证书保持同一排高度 */
 .about-foreach-honor-iso-cert {
   min-width: 0;
-  background: #f5df53;
-  box-shadow: 0 12px 30px rgba(7, 26, 58, 0.06);
+  height: 100%;
+  background: transparent;
+  box-shadow: none;
 }
 
+/* 第二排：工程中心、瞪羚企业、小巨人企业 */
 .about-foreach-honor-middle-row {
   display: grid;
-  grid-template-columns: minmax(320px, 1.32fr) minmax(210px, 0.86fr) minmax(260px, 1fr);
-  gap: clamp(22px, 2vw, 32px);
-  align-items: stretch;
-  margin-top: clamp(40px, 4vw, 58px);
+  grid-template-columns:
+    minmax(0, 1.2fr)
+    minmax(0, 0.9fr)
+    minmax(0, 1.05fr);
+  gap: clamp(18px, 1.6vw, 26px);
+  align-items: center;
+  margin-top: clamp(26px, 2.4vw, 38px);
 }
 
 .about-foreach-honor-middle-image {
-  height: clamp(150px, 13vw, 230px);
-  background: #f7f8fb;
-  box-shadow: 0 12px 30px rgba(7, 26, 58, 0.06);
+  width: 100%;
+  height: clamp(150px, 10.5vw, 210px);
+  background: transparent;
+  box-shadow: none;
 }
+
+/* =========================================================
+   底部八张 A4 证书
+
+   该区域位于主布局外面，因此横跨左侧统计和右侧证书区域。
+========================================================= */
 
 .about-foreach-honor-a4-row {
   display: grid;
   grid-template-columns: repeat(8, minmax(0, 1fr));
-  gap: clamp(14px, 1.35vw, 24px);
-  width: 100%;
-  margin-top: clamp(56px, 5vw, 78px);
+  gap: clamp(14px, 1.25vw, 22px);
   align-items: start;
+  width: 100%;
+  margin-top: clamp(40px, 3.5vw, 54px);
+  padding: 0;
+  overflow: visible;
 }
 
 .about-foreach-honor-a4-card {
   min-width: 0;
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
+/*
+ * A4 图片只保留原始纸张比例。
+ * 不增加卡片边框、阴影或额外装饰。
+ */
 .about-foreach-honor-a4-image-wrap {
   position: relative;
   width: 100%;
   aspect-ratio: 210 / 297;
   overflow: hidden;
+  border: 0;
   background: #ffffff;
-  border: 1px solid rgba(17, 24, 39, 0.08);
-  box-shadow: 0 14px 32px rgba(7, 26, 58, 0.06);
+  box-shadow: none;
 }
 
 .about-foreach-honor-a4-image-wrap::before {
   display: none;
 }
 
+/* 当前 JSX 没有显示 h4，保留规则以防后续重新启用 */
+.about-foreach-honor-a4-card h4 {
+  margin: 8px 0 0;
+  color: #173368;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* =========================================================
+   中等桌面与平板横屏
+========================================================= */
+
 @media (max-width: 1280px) {
+  .about-foreach-honor-section > .about-foreach-container {
+    width: calc(100% - 64px);
+  }
+
   .about-foreach-honor-layout {
-    grid-template-columns: minmax(240px, 0.32fr) minmax(0, 0.68fr);
-    gap: 40px;
+    grid-template-columns: minmax(350px, 0.34fr) minmax(0, 0.66fr);
+    column-gap: 48px;
+  }
+
+  .about-foreach-honor-summary-number {
+    font-size: clamp(54px, 5vw, 66px);
   }
 
   .about-foreach-honor-top-row {
-    grid-template-columns: minmax(300px, 1.7fr) repeat(2, minmax(120px, 0.72fr));
-  }
-
-  .about-foreach-honor-middle-row {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns:
+      minmax(0, 1.8fr)
+      minmax(0, 0.9fr)
+      minmax(0, 0.9fr);
   }
 }
 
-@media (max-width: 980px) {
+/* =========================================================
+   平板：统计与证书改为上下排列
+========================================================= */
+
+@media (max-width: 1100px) {
   .about-foreach-honor-layout {
     grid-template-columns: 1fr;
+    gap: 52px;
   }
 
   .about-foreach-honor-summary {
-    padding-top: 0;
     text-align: center;
   }
 
   .about-foreach-honor-summary-stats {
+    max-width: 620px;
     margin-right: auto;
     margin-left: auto;
   }
 
-  .about-foreach-honor-top-row {
-    grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 0.8fr));
-  }
-
-  .about-foreach-honor-middle-row {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .about-foreach-honor-summary-stat {
+    text-align: center;
   }
 
   .about-foreach-honor-a4-row {
@@ -11538,20 +11651,37 @@ html[lang="ru"] .home-hero-btn:hover {
   }
 }
 
-@media (max-width: 640px) {
+/* =========================================================
+   手机与窄屏
+========================================================= */
+
+@media (max-width: 760px) {
   .about-foreach-honor-section {
     padding: 72px 0;
   }
 
+  .about-foreach-honor-section > .about-foreach-container {
+    width: calc(100% - 32px);
+  }
+
   .about-foreach-honor-title {
-    margin-bottom: 46px;
+    margin-bottom: 44px;
+  }
+
+  .about-foreach-honor-title h2 {
+    font-size: 36px;
   }
 
   .about-foreach-honor-layout {
     gap: 36px !important;
   }
 
+  .about-foreach-honor-summary h3 {
+    font-size: 28px;
+  }
+
   .about-foreach-honor-summary-stats {
+    display: grid !important;
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
     gap: 10px !important;
     width: 100% !important;
@@ -11561,28 +11691,45 @@ html[lang="ru"] .home-hero-btn:hover {
     overflow: visible !important;
   }
 
+  .about-foreach-honor-summary-stat {
+    min-width: 0;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+
   .about-foreach-honor-summary-number {
+    display: inline-flex !important;
+    flex-wrap: nowrap !important;
     font-size: 38px !important;
+    white-space: nowrap !important;
   }
 
   .about-foreach-honor-summary-label {
+    margin-top: 8px;
     font-size: 12px !important;
     white-space: normal !important;
   }
 
+  /*
+   * 手机端第一张横版证书占满一行，
+   * 两张 ISO 在下一行并排显示。
+   */
   .about-foreach-honor-top-row {
-    grid-template-columns: 1fr 1fr !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 12px !important;
   }
 
   .about-foreach-honor-main-cert {
     grid-column: 1 / -1;
+    height: auto;
+    aspect-ratio: 1.43 / 1;
     border-width: 5px;
   }
 
   .about-foreach-honor-iso-cert {
-    aspect-ratio: 210 / 297;
+    width: 100%;
     height: auto !important;
+    aspect-ratio: 210 / 297;
   }
 
   .about-foreach-honor-middle-row {
@@ -11592,11 +11739,13 @@ html[lang="ru"] .home-hero-btn:hover {
   }
 
   .about-foreach-honor-middle-image {
+    width: 100%;
     height: auto !important;
     aspect-ratio: 16 / 9;
   }
 
   .about-foreach-honor-a4-row {
+    display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 12px !important;
     width: 100% !important;
@@ -11606,6 +11755,9 @@ html[lang="ru"] .home-hero-btn:hover {
     overflow: visible !important;
   }
 }
+
+
+
 /* ABOUT_FOREACH_HONOR_REFERENCE_LAYOUT_END */
 
 /* =========================================================
@@ -19324,3 +19476,1027 @@ html body .home-honor-image img {
 }
 
 /* HISTORY_BOTTOM_SLOGAN_SIZE_END */
+
+/* =========================================================
+   Footer 隐私政策与 Cookie 设置入口
+   与备案号、版权信息保持同一视觉层级
+========================================================= */
+
+.site-footer__legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.site-footer__legal-link,
+.site-footer__cookie-button {
+  color: inherit !important;
+  font-family: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+  text-decoration: none;
+}
+
+.site-footer__cookie-button {
+  width: auto !important;
+  min-width: 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.site-footer__legal-link:hover,
+.site-footer__cookie-button:hover {
+  color: var(--brand-cyan) !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.site-footer__legal-link:focus-visible,
+.site-footer__cookie-button:focus-visible {
+  outline: 2px solid #09e9b4;
+  outline-offset: 3px;
+}
+
+.site-footer__legal-separator {
+  color: rgba(23, 51, 104, 0.36);
+}
+
+@media (max-width: 720px) {
+  .site-footer__legal-links {
+    gap: 7px;
+    font-size: 11px;
+  }
+}
+
+/* ABOUT_FOREACH_HONOR_FINAL_LARGE_START */
+
+/* =========================================================
+   荣誉资质图片最终排版
+
+   桌面端：
+   第一排固定高度：最高 340px
+   第二排固定高度：最高 210px
+   底部八张 A4 证书铺满整个宽版容器
+
+   同一排图片高度完全一致，
+   宽度根据图片原始比例自动生成。
+========================================================= */
+
+@media (min-width: 1101px) {
+
+  /* =======================================================
+     第一排：高新技术企业证书 + 两张 ISO
+  ======================================================= */
+
+  .about-foreach-honor-top-row {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+
+    width: 100% !important;
+
+    gap: clamp(18px, 1.25vw, 24px) !important;
+  }
+
+  /*
+   * 第一排三张证书使用完全相同的固定高度。
+   * clamp 可以兼容不同尺寸的桌面显示器。
+   */
+  .about-foreach-honor-main-cert,
+  .about-foreach-honor-iso-cert {
+    flex: 0 0 auto !important;
+
+    height: clamp(290px, 18vw, 340px) !important;
+
+    min-width: 0 !important;
+    min-height: 0 !important;
+    max-width: none !important;
+    max-height: none !important;
+
+    margin: 0 !important;
+
+    box-sizing: border-box !important;
+    align-self: stretch !important;
+  }
+
+  /*
+   * 主证书按照横版证书比例自动计算宽度。
+   * 边框包含在固定高度中。
+   */
+  .about-foreach-honor-main-cert {
+    width: auto !important;
+    aspect-ratio: 1.43 / 1 !important;
+  }
+
+  .about-foreach-honor-main-cert-image {
+    display: block !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    min-width: 0 !important;
+    min-height: 0 !important;
+
+    object-fit: contain !important;
+    object-position: center !important;
+  }
+
+  /*
+   * 两张 ISO 使用固定高度，
+   * 宽度根据图片自身比例自动生成。
+   */
+  .about-foreach-honor-iso-cert {
+    display: block !important;
+
+    width: auto !important;
+
+    aspect-ratio: auto !important;
+
+    object-fit: contain !important;
+    object-position: center !important;
+
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  /* =======================================================
+     第二排：三张企业荣誉
+  ======================================================= */
+
+  .about-foreach-honor-middle-row {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+
+    width: 100% !important;
+
+    gap: clamp(18px, 1.25vw, 24px) !important;
+
+    margin-top: clamp(26px, 2vw, 34px) !important;
+  }
+
+  /*
+   * 第二排三张横版荣誉使用完全相同的固定高度。
+   */
+  .about-foreach-honor-middle-image {
+    flex: 0 0 auto !important;
+
+    display: block !important;
+
+    width: auto !important;
+    height: clamp(180px, 11.5vw, 210px) !important;
+
+    min-width: 0 !important;
+    min-height: 0 !important;
+    max-width: none !important;
+    max-height: none !important;
+
+    margin: 0 !important;
+
+    aspect-ratio: auto !important;
+
+    object-fit: contain !important;
+    object-position: center !important;
+
+    background: transparent !important;
+    box-shadow: none !important;
+
+    align-self: stretch !important;
+  }
+
+  /* =======================================================
+     底部八张 A4 证书
+  ======================================================= */
+
+  .about-foreach-honor-a4-row {
+    display: grid !important;
+
+    grid-template-columns:
+      repeat(8, minmax(0, 1fr)) !important;
+
+    gap: clamp(12px, 1vw, 18px) !important;
+
+    width: 100% !important;
+    max-width: none !important;
+
+    margin-top: clamp(42px, 3.2vw, 54px) !important;
+
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  .about-foreach-honor-a4-card {
+    min-width: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /*
+   * 八张 A4 证书铺满整个内容区。
+   * 因为间距缩小，所以每张证书会比之前更大。
+   */
+  .about-foreach-honor-a4-image-wrap {
+    width: 100% !important;
+
+    aspect-ratio: 210 / 297 !important;
+
+    border: 0 !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+  }
+
+  .about-foreach-honor-a4-image {
+    display: block !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    object-fit: contain !important;
+    object-position: center !important;
+  }
+}
+
+/* =========================================================
+   1101px—1380px 中等桌面
+   保持同高，但适当降低固定高度，避免横向溢出
+========================================================= */
+
+@media (min-width: 1101px) and (max-width: 1380px) {
+
+  .about-foreach-honor-main-cert,
+  .about-foreach-honor-iso-cert {
+    height: clamp(250px, 18vw, 285px) !important;
+  }
+
+  .about-foreach-honor-middle-image {
+    height: clamp(150px, 11vw, 175px) !important;
+  }
+
+  .about-foreach-honor-top-row,
+  .about-foreach-honor-middle-row {
+    gap: 16px !important;
+  }
+}
+
+/* =========================================================
+   平板端
+========================================================= */
+
+@media (min-width: 761px) and (max-width: 1100px) {
+
+  .about-foreach-honor-top-row {
+    display: grid !important;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr)) !important;
+
+    gap: 16px !important;
+
+    align-items: stretch !important;
+  }
+
+  .about-foreach-honor-main-cert {
+    grid-column: 1 / -1;
+
+    width: 100% !important;
+    height: auto !important;
+
+    aspect-ratio: 1.43 / 1 !important;
+    box-sizing: border-box !important;
+  }
+
+  .about-foreach-honor-iso-cert {
+    width: 100% !important;
+    height: 310px !important;
+
+    object-fit: contain !important;
+  }
+
+  .about-foreach-honor-middle-row {
+    display: grid !important;
+
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr)) !important;
+
+    gap: 16px !important;
+  }
+
+  .about-foreach-honor-middle-image {
+    width: 100% !important;
+    height: 160px !important;
+
+    object-fit: contain !important;
+  }
+
+  .about-foreach-honor-a4-row {
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr)) !important;
+  }
+}
+
+/* =========================================================
+   手机端维持原来的两列响应式布局
+========================================================= */
+
+@media (max-width: 760px) {
+
+  .about-foreach-honor-main-cert {
+    width: 100% !important;
+    height: auto !important;
+
+    aspect-ratio: 1.43 / 1 !important;
+  }
+
+  .about-foreach-honor-iso-cert {
+    width: 100% !important;
+    height: auto !important;
+
+    aspect-ratio: 210 / 297 !important;
+  }
+
+  .about-foreach-honor-middle-image {
+    width: 100% !important;
+    height: auto !important;
+
+    aspect-ratio: 16 / 9 !important;
+  }
+
+  .about-foreach-honor-a4-row {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* ABOUT_FOREACH_HONOR_FINAL_LARGE_END */
+
+/* SITE_HEADER_PC_LOGO_SIZE_START */
+
+/* =========================================================
+   仅调整 PC 端 Header Logo
+
+   手机端不覆盖，继续使用原有响应式尺寸。
+========================================================= */
+
+/* 普通桌面、笔记本和平板横屏 */
+@media (min-width: 769px) and (max-width: 1440px) {
+  .site-header .site-header-inner > .site-logo {
+    width: 136px !important;
+    height: 31px !important;
+    min-width: 136px !important;
+    flex: 0 0 136px !important;
+    aspect-ratio: 386.88 / 87.43 !important;
+  }
+}
+
+/* 常规大屏桌面 */
+@media (min-width: 1441px) and (max-width: 1920px) {
+  .site-header .site-header-inner > .site-logo {
+    width: 160px !important;
+    height: 36px !important;
+    min-width: 160px !important;
+    flex: 0 0 160px !important;
+    aspect-ratio: 386.88 / 87.43 !important;
+  }
+}
+
+/* 2K 及以上屏幕 */
+@media (min-width: 1921px) {
+  .site-header .site-header-inner > .site-logo {
+    width: 208px !important;
+    height: 47px !important;
+    min-width: 208px !important;
+    flex: 0 0 208px !important;
+    aspect-ratio: 386.88 / 87.43 !important;
+  }
+}
+
+/*
+ * 白色 Logo、彩色 Logo、详情页彩色 Logo
+ * 全部跟随同一个 PC Logo 容器尺寸。
+ */
+@media (min-width: 769px) {
+  .site-header .site-logo > .site-logo-white,
+  .site-header .site-logo > .site-logo-color {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+    object-position: left center !important;
+  }
+}
+
+/* SITE_HEADER_PC_LOGO_SIZE_END */
+
+/* SIMPLE_DROPDOWN_MATCH_MEGA_TYPE_START */
+
+/* =========================================================
+   PC 端 simple dropdown 字体统一
+
+   适用范围：
+   - 所有语言的资源中心
+   - 所有语言的联系与合作
+   - 其他使用 simple dropdown 的菜单
+
+   与应用领域 Mega Menu 左侧分类保持一致：
+   - font-size: 16px
+   - font-weight: 700
+   - line-height: 1.18
+   - min-height: 54px
+========================================================= */
+
+@media (min-width: 1025px) {
+
+  /*
+   * 普通状态
+   * 使用更完整的选择器，覆盖前面的
+   * font-weight: 400 !important。
+   */
+  .site-header
+    .site-nav-simple-dropdown
+    .site-nav-simple-dropdown-link {
+    min-height: 54px !important;
+
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    line-height: 1.18 !important;
+    font-family: inherit !important;
+  }
+
+  /*
+   * 鼠标悬停、键盘聚焦和点击时，
+   * 字号、字重均不发生变化。
+   */
+  .site-header
+    .site-nav-simple-dropdown
+    .site-nav-simple-dropdown-link:hover,
+  .site-header
+    .site-nav-simple-dropdown
+    .site-nav-simple-dropdown-link:focus,
+  .site-header
+    .site-nav-simple-dropdown
+    .site-nav-simple-dropdown-link:focus-visible,
+  .site-header
+    .site-nav-simple-dropdown
+    .site-nav-simple-dropdown-link:active {
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    line-height: 1.18 !important;
+    font-family: inherit !important;
+  }
+}
+
+/* SIMPLE_DROPDOWN_MATCH_MEGA_TYPE_END */
+
+/* LANGUAGE_MENU_SHARED_DROPDOWN_START */
+
+/* =========================================================
+   语言菜单直接复用 simple dropdown
+
+   公共视觉来自：
+   - .site-nav-simple-dropdown
+   - .site-nav-simple-dropdown-link
+
+   本区块只处理语言菜单特有行为：
+   1. 显示与隐藏
+   2. 相对 Language 按钮居中
+   3. 当前语言状态
+   4. 手机端宽度
+========================================================= */
+
+/* ---------------------------------------------------------
+   默认隐藏
+--------------------------------------------------------- */
+
+.site-header
+  .language-switcher
+  .language-details-menu.site-nav-simple-dropdown {
+  display: none !important;
+
+  top: calc(100% + 30px) !important;
+
+  left: 50% !important;
+  right: auto !important;
+
+  inset-inline-start: 50% !important;
+  inset-inline-end: auto !important;
+
+  transform: translateX(-50%) !important;
+  translate: none !important;
+}
+
+/* ---------------------------------------------------------
+   展开时显示
+--------------------------------------------------------- */
+
+.site-header
+  .language-switcher-open
+  .language-details-menu.site-nav-simple-dropdown {
+  display: block !important;
+}
+
+/* ---------------------------------------------------------
+   语言选项
+   继续继承 simple dropdown link 的字号、字重和背景
+--------------------------------------------------------- */
+
+.site-header
+  .language-switcher
+  .language-details-menu.site-nav-simple-dropdown
+  .language-details-item.site-nav-simple-dropdown-link {
+  border-radius: 0 !important;
+
+  font-family: inherit !important;
+
+  text-align: center !important;
+  text-indent: 0 !important;
+}
+
+/* ---------------------------------------------------------
+   此前增加的语言名称 span
+--------------------------------------------------------- */
+
+.site-header
+  .language-switcher
+  .language-details-item
+  .language-details-item-label {
+  display: block !important;
+
+  width: 100% !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  color: inherit !important;
+  font: inherit !important;
+
+  text-align: center !important;
+  white-space: nowrap !important;
+}
+
+/* ---------------------------------------------------------
+   hover / focus
+   直接保持 simple dropdown 的白底荧光绿文字
+--------------------------------------------------------- */
+
+.site-header
+  .language-switcher
+  .language-details-item.site-nav-simple-dropdown-link:hover,
+.site-header
+  .language-switcher
+  .language-details-item.site-nav-simple-dropdown-link:focus-visible {
+  border-radius: 0 !important;
+
+  background: #ffffff !important;
+  color: #09e9b4 !important;
+
+  font-weight: 700 !important;
+}
+
+/* ---------------------------------------------------------
+   当前语言状态
+   与联系合作菜单 hover 状态保持一致
+--------------------------------------------------------- */
+
+.site-header
+  .language-switcher
+  .language-details-item-active,
+.site-header
+  .language-switcher
+  .language-details-item-active:hover {
+  border-radius: 0 !important;
+
+  background: #ffffff !important;
+  color: #09e9b4 !important;
+
+  font-weight: 700 !important;
+}
+
+/* ---------------------------------------------------------
+   Language 按钮与菜单之间的透明连接区域
+--------------------------------------------------------- */
+
+.site-header
+  .language-switcher::after {
+  left: 50% !important;
+  right: auto !important;
+
+  width: 260px !important;
+
+  transform: translateX(-50%) !important;
+  translate: none !important;
+}
+
+/* ---------------------------------------------------------
+   手机端
+--------------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+  .site-header
+    .language-switcher
+    .language-details-menu.site-nav-simple-dropdown {
+    top: calc(100% + 10px) !important;
+
+    width: min(260px, calc(100vw - 24px)) !important;
+    min-width: 0 !important;
+    max-width: calc(100vw - 24px) !important;
+  }
+
+  .site-header
+    .language-switcher::after {
+    width: min(260px, calc(100vw - 24px)) !important;
+    height: 10px !important;
+  }
+}
+
+/* LANGUAGE_MENU_SHARED_DROPDOWN_END */
+
+/* LANGUAGE_MENU_FINAL_COMPACT_START */
+
+/* =========================================================
+   语言菜单最终位置和尺寸
+
+   1. Language 区域撑满 Header 高度
+   2. 菜单 top: 100%，直接贴在 Header 底部
+   3. PC 宽度缩为 180px
+   4. 手机端宽度和文字单独适配
+========================================================= */
+
+/* ---------------------------------------------------------
+   一、让语言区域撑满 Header 高度
+
+   菜单的绝对定位参考仍是 language-switcher，
+   但 language-switcher 不再只有按钮自身高度。
+--------------------------------------------------------- */
+
+.site-header
+  .site-header-actions
+  .language-switcher {
+  position: relative !important;
+
+  align-self: stretch !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* ---------------------------------------------------------
+   二、菜单直接贴在 Header 底部
+--------------------------------------------------------- */
+
+.site-header
+  .language-switcher
+  .language-details-menu.site-nav-simple-dropdown {
+  top: 100% !important;
+  bottom: auto !important;
+
+  left: 50% !important;
+  right: auto !important;
+
+  inset-block-start: 100% !important;
+  inset-block-end: auto !important;
+  inset-inline-start: 50% !important;
+  inset-inline-end: auto !important;
+
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+
+  transform: translateX(-50%) !important;
+  translate: none !important;
+
+  /* PC 菜单不需要继承公共菜单的 260px 宽度 */
+  width: 180px !important;
+  min-width: 180px !important;
+  max-width: calc(100vw - 24px) !important;
+
+  padding-top: 6px !important;
+  padding-bottom: 8px !important;
+}
+
+/* ---------------------------------------------------------
+   三、PC 菜单项更紧凑
+--------------------------------------------------------- */
+
+.site-header
+  .language-switcher
+  .language-details-menu
+  .language-details-item.site-nav-simple-dropdown-link {
+  min-height: 48px !important;
+
+  padding-right: 16px !important;
+  padding-left: 16px !important;
+
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+
+  text-align: center !important;
+}
+
+/*
+ * 语言名称 span 继承菜单项字体，
+ * 防止内部 span 继续保留其他旧字号。
+ */
+.site-header
+  .language-switcher
+  .language-details-item
+  .language-details-item-label {
+  width: 100% !important;
+
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+
+  text-align: center !important;
+}
+
+/* ---------------------------------------------------------
+   四、已经没有可见空隙，不再需要很高的透明桥接区
+
+   延迟关闭由 SiteHeader.tsx 中的 240ms 定时器负责。
+--------------------------------------------------------- */
+
+.site-header
+  .language-switcher::after {
+  top: 100% !important;
+  bottom: auto !important;
+
+  left: 50% !important;
+  right: auto !important;
+
+  width: 180px !important;
+  height: 2px !important;
+
+  transform: translateX(-50%) !important;
+  translate: none !important;
+}
+
+/* =========================================================
+   手机端
+========================================================= */
+
+@media (max-width: 768px) {
+
+  /*
+   * 手机端导航与语言菜单共用同一套文字参数。
+   */
+  .site-header {
+    --mobile-header-nav-font-size: 14px;
+    --mobile-header-nav-font-weight: 600;
+    --mobile-header-nav-line-height: 1.3;
+  }
+
+  /*
+   * 手机端菜单宽度不使用 PC 的 180px。
+   */
+  .site-header
+    .language-switcher
+    .language-details-menu.site-nav-simple-dropdown {
+    top: 100% !important;
+
+    width: 168px !important;
+    min-width: 168px !important;
+    max-width: calc(100vw - 20px) !important;
+
+    padding-top: 5px !important;
+    padding-bottom: 6px !important;
+  }
+
+  /*
+   * 手机导航主栏目文字。
+   */
+  .site-header
+    .mobile-nav
+    .mobile-nav-summary-text,
+  .site-header
+    .mobile-nav
+    a,
+  .site-header
+    .mobile-nav
+    button {
+    font-size:
+      var(--mobile-header-nav-font-size) !important;
+
+    font-weight:
+      var(--mobile-header-nav-font-weight) !important;
+
+    line-height:
+      var(--mobile-header-nav-line-height) !important;
+  }
+
+  /*
+   * 手机端语言菜单文字与手机导航完全一致。
+   */
+  .site-header
+    .language-switcher
+    .language-details-menu
+    .language-details-item.site-nav-simple-dropdown-link {
+    min-height: 44px !important;
+
+    padding-right: 12px !important;
+    padding-left: 12px !important;
+
+    font-size:
+      var(--mobile-header-nav-font-size) !important;
+
+    font-weight:
+      var(--mobile-header-nav-font-weight) !important;
+
+    line-height:
+      var(--mobile-header-nav-line-height) !important;
+  }
+
+  .site-header
+    .language-switcher
+    .language-details-item
+    .language-details-item-label {
+    font-size:
+      var(--mobile-header-nav-font-size) !important;
+
+    font-weight:
+      var(--mobile-header-nav-font-weight) !important;
+
+    line-height:
+      var(--mobile-header-nav-line-height) !important;
+  }
+
+  .site-header
+    .language-switcher::after {
+    width: 168px !important;
+    height: 2px !important;
+  }
+}
+
+/* LANGUAGE_MENU_FINAL_COMPACT_END */
+
+/* LANGUAGE_MENU_PC_WIDTH_224_START */
+
+/* 所有语言的 PC 端语言菜单统一为 224px，仅修改宽度 */
+@media (min-width: 769px) {
+
+  html[lang]
+    body
+    .site-header
+    .site-header-actions
+    .language-switcher
+    .language-details-menu.site-nav-simple-dropdown {
+    box-sizing: border-box !important;
+
+    width: 224px !important;
+    min-width: 224px !important;
+    max-width: 224px !important;
+
+    inline-size: 224px !important;
+    min-inline-size: 224px !important;
+    max-inline-size: 224px !important;
+  }
+
+  /* 子选项不能根据文字长度把菜单重新撑宽 */
+  html[lang]
+    body
+    .site-header
+    .language-switcher
+    .language-details-menu.site-nav-simple-dropdown
+    .language-details-item.site-nav-simple-dropdown-link {
+    box-sizing: border-box !important;
+
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  html[lang]
+    body
+    .site-header
+    .language-switcher
+    .language-details-item
+    .language-details-item-label {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  /* 只同步透明连接区域宽度，不修改它的位置 */
+  html[lang]
+    body
+    .site-header
+    .language-switcher::after {
+    width: 224px !important;
+    min-width: 224px !important;
+    max-width: 224px !important;
+  }
+}
+
+/* LANGUAGE_MENU_PC_WIDTH_224_END */
+
+/* LANGUAGE_MENU_ALIGN_NAV_BOTTOM_START */
+
+/* =========================================================
+   PC 端语言菜单贴合整个 Header 底部
+
+   只修改垂直定位。
+   不修改菜单宽度、字体、项目高度和颜色。
+========================================================= */
+
+@media (min-width: 769px) {
+
+  /*
+   * 右侧操作区撑满整个 Header 高度。
+   */
+  .site-header
+    .site-header-inner
+    .site-header-actions {
+    align-self: stretch !important;
+
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  /*
+   * Language 区域也撑满整个 Header。
+   *
+   * 按钮本身仍然保持原来的高度，
+   * 只是外层定位容器覆盖完整 Header 高度。
+   */
+  .site-header
+    .site-header-actions
+    .language-switcher {
+    position: relative !important;
+
+    align-self: stretch !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /*
+   * 菜单从 language-switcher 的底边开始。
+   *
+   * 由于 language-switcher 已经和整个 Header 等高，
+   * 所以这里的 top: 100% 就是整个导航栏底部。
+   */
+  .site-header
+    .language-switcher
+    .language-details-menu,
+  .site-header
+    .language-switcher
+    .language-details-menu.site-nav-simple-dropdown {
+    position: absolute !important;
+
+    top: 100% !important;
+    bottom: auto !important;
+
+    inset-block-start: 100% !important;
+    inset-block-end: auto !important;
+
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+
+    /*
+     * 水平位置继续保持相对 Language 按钮居中。
+     */
+    left: 50% !important;
+    right: auto !important;
+
+    inset-inline-start: 50% !important;
+    inset-inline-end: auto !important;
+
+    transform: translateX(-50%) !important;
+    translate: none !important;
+  }
+
+  /*
+   * 菜单已经贴合 Header，
+   * 只保留很薄的鼠标连接区域。
+   */
+  .site-header
+    .language-switcher::after {
+    top: 100% !important;
+    bottom: auto !important;
+
+    height: 4px !important;
+  }
+}
+
+/* LANGUAGE_MENU_ALIGN_NAV_BOTTOM_END */

@@ -1,3 +1,5 @@
+import Script from "next/script";
+
 /**
  * HomeLanguageRedirect
  *
@@ -252,8 +254,9 @@ const HOME_LANGUAGE_REDIRECT_SCRIPT = String.raw`
 
 export default function HomeLanguageRedirect() {
   return (
-    <script
+    <Script
       id="foreach-home-language-redirect"
+      strategy="afterInteractive"
       dangerouslySetInnerHTML={{
         __html: HOME_LANGUAGE_REDIRECT_SCRIPT,
       }}

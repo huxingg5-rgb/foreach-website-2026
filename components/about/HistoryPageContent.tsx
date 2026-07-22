@@ -88,7 +88,7 @@ export default function HistoryPageContent({
           顶部小 Banner
       ================================ */}
       <section
-        className="about-history-inner-banner"
+        className="about-history-inner-banner about-center-banner"
         aria-label={pageText.topBannerAriaLabel}
         style={
           {
@@ -96,8 +96,8 @@ export default function HistoryPageContent({
           } as CSSProperties
         }
       >
-        <div className="about-history-inner-banner-content">
-          <p>{pageText.bannerDescription}</p>
+        <div className="about-history-inner-banner-content about-center-banner__inner">
+          <p className="about-center-banner__title">{pageText.bannerDescription}</p>
         </div>
       </section>
 

@@ -1,10 +1,11 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 import { getLocaleFromPathname, isInternationalLocale, type LocaleCode } from "@/lib/i18n";
+import { openCookieSettings } from "@/lib/privacy/cookie-consent";
 
 import {
   getSiteFooterHref,
@@ -51,6 +52,39 @@ const englishSocialLinks = [
   },
 ] as const;
 
+const footerLegalCopy: Record<
+  LocaleCode,
+  {
+    privacyPolicy: string;
+    cookieSettings: string;
+  }
+> = {
+  "zh-CN": {
+    privacyPolicy: "隐私政策",
+    cookieSettings: "Cookie 设置",
+  },
+  en: {
+    privacyPolicy: "Privacy Policy",
+    cookieSettings: "Cookie settings",
+  },
+  es: {
+    privacyPolicy: "Política de privacidad",
+    cookieSettings: "Configuración de cookies",
+  },
+  fr: {
+    privacyPolicy: "Politique de confidentialité",
+    cookieSettings: "Paramètres des cookies",
+  },
+  ko: {
+    privacyPolicy: "개인정보 처리방침",
+    cookieSettings: "쿠키 설정",
+  },
+  ru: {
+    privacyPolicy: "Политика конфиденциальности",
+    cookieSettings: "Настройки Cookie",
+  },
+};
+
 export default function SiteFooter({ locale }: SiteFooterProps) {
   const pathname = usePathname();
   const activeLocale = locale ?? getLocaleFromPathname(pathname);
@@ -63,6 +97,11 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
   const icpText = getSiteFooterText(siteFooterData.icp, activeLocale);
   const icpHref = getSiteFooterHref(siteFooterData.icpHref, activeLocale);
   const labelSeparator = activeLocale === "zh-CN" ? "：" : ": ";
+  const legalCopy = footerLegalCopy[activeLocale];
+  const privacyPolicyHref = getSiteFooterHref(
+    "/privacy-policy",
+    activeLocale,
+  );
 
   return (
     <footer className="site-footer">
@@ -225,6 +264,30 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
             ) : null}
 
             <p>{getSiteFooterText(siteFooterData.copyright, activeLocale)}</p>
+
+            <p className="site-footer__legal-links">
+              <Link
+                className="site-footer__legal-link"
+                href={privacyPolicyHref}
+              >
+                {legalCopy.privacyPolicy}
+              </Link>
+
+              <span
+                className="site-footer__legal-separator"
+                aria-hidden="true"
+              >
+                ·
+              </span>
+
+              <button
+                className="site-footer__cookie-button"
+                type="button"
+                onClick={openCookieSettings}
+              >
+                {legalCopy.cookieSettings}
+              </button>
+            </p>
           </div>
         </div>
       </div>

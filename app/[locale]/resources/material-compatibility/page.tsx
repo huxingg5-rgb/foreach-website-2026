@@ -160,23 +160,23 @@ export default async function MaterialCompatibilityIntlPage({
     return (
         <main className="material-compatibility-page">
             {/* Banner 区域 */}
-            <section className="material-compatibility-banner">
-                <div className="material-compatibility-banner__inner">
-                    <div className="material-compatibility-banner__content">
+            <section className="material-compatibility-banner resource-center-banner">
+                <div className="material-compatibility-banner__inner resource-center-banner__inner">
+                    <div className="material-compatibility-banner__content resource-center-banner__content">
                         {pageData.banner.eyebrow ? (
-                            <p className="material-compatibility-banner__eyebrow">
+                            <p className="material-compatibility-banner__eyebrow resource-center-banner__eyebrow">
                                 {pageData.banner.eyebrow}
                             </p>
                         ) : null}
 
-                        <h1>
+                        <h1 className="resource-center-banner__title">
                             {pageData.banner.title}
                             {pageData.banner.highlight ? (
                                 <span>{pageData.banner.highlight}</span>
                             ) : null}
                         </h1>
 
-                        <p className="material-compatibility-banner__desc">
+                        <p className="material-compatibility-banner__desc resource-center-banner__description">
                             {pageData.banner.description}
                         </p>
                     </div>
