@@ -1,0 +1,461 @@
+/* =========================================================
+   technical-articles.css
+   恒永达官网｜技术文章页面专用样式
+
+   说明：
+   1. 只服务技术文章列表页和详情页
+   2. 列表页版式参考安装教程页面
+   3. 搜索栏使用 ResourceSearchBar 共用组件
+========================================================= */
+
+.technicalArticlesPage {
+  background: #ffffff;
+  color: #173368;
+}
+
+/* =========================================================
+   Banner
+========================================================= */
+
+.technicalArticlesHero {
+  position: relative;
+  height: 520px;
+  min-height: 520px;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.technicalArticlesHero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(7, 24, 50, 0.24),
+    rgba(7, 24, 50, 0.08)
+  );
+}
+
+.technicalArticlesHero__inner {
+  position: relative;
+  z-index: 2;
+  width: min(1600px, calc(100% - 64px));
+  height: 520px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.technicalArticlesHero__title {
+  max-width: 860px;
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(46px, 5vw, 82px);
+  line-height: 1.04;
+  font-weight: 600;
+  letter-spacing: -0.055em;
+}
+
+.technicalArticlesHero__description {
+  max-width: 900px;
+  margin: 28px 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+/* =========================================================
+   搜索区
+========================================================= */
+
+.technicalArticlesSearchSection {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+}
+
+/* =========================================================
+   安装教程同款主体结构
+========================================================= */
+
+.technicalArticlesContentSection {
+  display: grid;
+  grid-template-columns: 360px minmax(0, 1fr);
+  gap: 54px;
+  width: min(1600px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 72px 0 96px;
+}
+
+/* =========================================================
+   左侧分类栏
+========================================================= */
+
+.technicalArticlesSidebar {
+  min-height: 640px;
+  padding: 30px 26px;
+  border: 1px solid rgba(23, 51, 104, 0.16);
+  background: #ffffff;
+}
+
+.technicalArticlesSidebar__title {
+  margin: 0 0 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(23, 51, 104, 0.12);
+  color: #173368;
+  font-size: 30px;
+  line-height: 1.18;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.technicalArticlesSidebar__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.technicalArticlesSidebar__button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 54px;
+  padding: 0 14px;
+  border: 0;
+  border-bottom: 1px solid rgba(23, 51, 104, 0.10);
+  background: #ffffff;
+  color: #173368;
+  font-size: 15px;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.technicalArticlesSidebar__button:hover {
+  color: #09e9b4;
+}
+
+.technicalArticlesSidebar__button.isActive {
+  border-radius: 6px;
+  background: #173368;
+  color: #09e9b4;
+  font-weight: 600;
+}
+
+.technicalArticlesSidebar__plus {
+  font-size: 26px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+/* =========================================================
+   右侧卡片区域
+========================================================= */
+
+.technicalArticlesMain {
+  min-width: 0;
+}
+
+.technicalArticlesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.technicalArticleCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 0;
+  border: 1px solid rgba(23, 51, 104, 0.16);
+  background: #ffffff;
+  color: inherit;
+  text-decoration: none;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.technicalArticleCard::before {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: transparent;
+  transition: background-color 0.2s ease;
+}
+
+.technicalArticleCard:hover,
+.technicalArticleCard:focus-visible {
+  border-color: #09e9b4;
+  transform: translateY(-3px);
+  outline: none;
+}
+
+.technicalArticleCard:hover::before,
+.technicalArticleCard:focus-visible::before {
+  background: #09e9b4;
+}
+
+.technicalArticleCard__image {
+  position: relative;
+  height: 210px;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.2), rgba(9,233,180,0.08)),
+    #edf2f7;
+}
+
+.technicalArticleCard__image img {
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.45s ease;
+}
+
+.technicalArticleCard:hover .technicalArticleCard__image img,
+.technicalArticleCard:focus-visible .technicalArticleCard__image img {
+  transform: scale(1.045);
+}
+
+.technicalArticleCard__body {
+  padding: 24px 22px 26px;
+}
+
+.technicalArticleCard__title {
+  margin: 0;
+  color: #173368;
+  font-size: 21px;
+  line-height: 1.42;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: color 0.2s ease;
+}
+
+.technicalArticleCard:hover .technicalArticleCard__title,
+.technicalArticleCard:focus-visible .technicalArticleCard__title {
+  color: #09e9b4;
+}
+
+.technicalArticleCard__meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  color: rgba(23, 51, 104, 0.62);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.technicalArticleCard__meta strong {
+  color: #173368;
+  font-weight: 700;
+}
+
+.technicalArticleCard__tags {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 12px;
+  color: rgba(23, 51, 104, 0.62);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.technicalArticleCard__tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.technicalArticleCard__tag {
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+  padding: 0 8px;
+  background: #f1f5fa;
+  color: #173368;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.technicalArticlesEmpty {
+  padding: 56px 32px;
+  border: 1px solid rgba(23, 51, 104, 0.12);
+  text-align: center;
+}
+
+.technicalArticlesEmpty p {
+  margin: 0;
+  color: rgba(23, 51, 104, 0.68);
+  font-size: 15px;
+}
+
+/* =========================================================
+   详情页
+========================================================= */
+
+.technicalArticleDetail {
+  width: min(1200px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 64px 0 96px;
+}
+
+.technicalArticleDetail__header {
+  max-width: 900px;
+  margin: 0 auto 42px;
+}
+
+.technicalArticleDetail__back {
+  display: inline-flex;
+  margin-bottom: 28px;
+  color: rgba(23, 51, 104, 0.68);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.technicalArticleDetail__back:hover {
+  color: #173368;
+}
+
+.technicalArticleDetail__title {
+  margin: 0;
+  color: #173368;
+  font-size: clamp(36px, 4.2vw, 64px);
+  line-height: 1.12;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+}
+
+.technicalArticleDetail__date {
+  display: block;
+  margin-top: 18px;
+  color: rgba(23, 51, 104, 0.52);
+  font-size: 14px;
+}
+
+.technicalArticleDetail__summary {
+  margin: 24px 0 0;
+  color: rgba(23, 51, 104, 0.72);
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.technicalArticleDetail__cover {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+  background: #edf2f7;
+}
+
+.technicalArticleDetail__cover img {
+  object-fit: cover;
+  object-position: center top;
+}
+
+.technicalArticleDetail__content {
+  max-width: 860px;
+  margin: 56px auto 0;
+}
+
+.technicalArticleDetail__block {
+  margin-top: 38px;
+}
+
+.technicalArticleDetail__block:first-child {
+  margin-top: 0;
+}
+
+.technicalArticleDetail__block h2 {
+  margin: 0 0 14px;
+  color: #173368;
+  font-size: 26px;
+  line-height: 1.35;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.technicalArticleDetail__block p {
+  margin: 0;
+  color: rgba(23, 51, 104, 0.76);
+  font-size: 16px;
+  line-height: 2;
+}
+
+/* =========================================================
+   响应式
+========================================================= */
+
+@media (max-width: 1280px) {
+  .technicalArticlesContentSection {
+    grid-template-columns: 300px minmax(0, 1fr);
+    gap: 36px;
+  }
+
+  .technicalArticlesGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .technicalArticlesContentSection {
+    grid-template-columns: 1fr;
+  }
+
+  .technicalArticlesSidebar {
+    min-height: auto;
+  }
+
+  .technicalArticlesSidebar__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .technicalArticlesSidebar__button {
+    border: 1px solid rgba(23, 51, 104, 0.12);
+  }
+}
+
+@media (max-width: 760px) {
+  .technicalArticlesHero,
+  .technicalArticlesHero__inner {
+    height: 520px;
+    min-height: 520px;
+  }
+
+  .technicalArticlesHero__inner,
+  .technicalArticlesContentSection,
+  .technicalArticleDetail {
+    width: calc(100% - 32px);
+  }
+
+  .technicalArticlesContentSection {
+    padding: 42px 0 76px;
+  }
+
+  .technicalArticlesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .technicalArticlesSidebar__list {
+    grid-template-columns: 1fr;
+  }
+
+  .technicalArticleDetail__cover {
+    height: 280px;
+  }
+}

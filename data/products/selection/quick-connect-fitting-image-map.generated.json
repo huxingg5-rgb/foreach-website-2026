@@ -1,0 +1,1464 @@
+{
+  "generatedAt": "2026-07-12T17:04:51.609Z",
+  "sourceDirectory": "H:\\01-官网项目\\02_产品中心\\fit\\Quick connector\\快插产品图片 _JPG",
+  "targetDirectory": "public/images/products/fittings/quick-connect-fittings/products",
+  "productTypeId": "quick-connect-fittings",
+  "sourceImageCount": 182,
+  "importedImageCount": 177,
+  "unmatchedImageCount": 5,
+  "unmatchedImages": [
+    {
+      "sourceName": "Q6006-PMV-SPPE.jpg",
+      "sourceModel": "Q6006-PMV-SPPE",
+      "modelKey": "Q6006PMVSPPE",
+      "selectionMatches": 0,
+      "detailMatches": 0
+    },
+    {
+      "sourceName": "Q6006-PMX-SPPE.jpg",
+      "sourceModel": "Q6006-PMX-SPPE",
+      "modelKey": "Q6006PMXSPPE",
+      "selectionMatches": 0,
+      "detailMatches": 0
+    },
+    {
+      "sourceName": "Q6008-SNX-LPPE.jpg",
+      "sourceModel": "Q6008-SNX-LPPE",
+      "modelKey": "Q6008SNXLPPE",
+      "selectionMatches": 0,
+      "detailMatches": 0
+    },
+    {
+      "sourceName": "Q6038-PNV-SPPE.jpg",
+      "sourceModel": "Q6038-PNV-SPPE",
+      "modelKey": "Q6038PNVSPPE",
+      "selectionMatches": 0,
+      "detailMatches": 0
+    },
+    {
+      "sourceName": "Q6038-PNX-SPPE.jpg",
+      "sourceModel": "Q6038-PNX-SPPE",
+      "modelKey": "Q6038PNXSPPE",
+      "selectionMatches": 0,
+      "detailMatches": 0
+    }
+  ],
+  "items": {
+    "Q2001-PMV-SACN": {
+      "productId": "839041",
+      "seriesId": "q20",
+      "slug": "q2001-pmv-sacn",
+      "sourceFile": "Q2001-PMV-SACN-1.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2001-pmv-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2001-pmv-sacn-main.jpg"
+    },
+    "Q2001-PMV-SPPE": {
+      "productId": "839085",
+      "seriesId": "q20",
+      "slug": "q2001-pmv-sppe",
+      "sourceFile": "Q2001-PMV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2001-pmv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2001-pmv-sppe-main.jpg"
+    },
+    "Q2001-PMX-SACN": {
+      "productId": "839019",
+      "seriesId": "q20",
+      "slug": "q2001-pmx-sacn",
+      "sourceFile": "Q2001-PMX-SACN-1.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2001-pmx-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2001-pmx-sacn-main.jpg"
+    },
+    "Q2001-PMX-SPPE": {
+      "productId": "839063",
+      "seriesId": "q20",
+      "slug": "q2001-pmx-sppe",
+      "sourceFile": "Q2001-PMX-SPPE-1.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2001-pmx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2001-pmx-sppe-main.jpg"
+    },
+    "Q2001-PNV-SACN": {
+      "productId": "839034",
+      "seriesId": "q20",
+      "slug": "q2001-pnv-sacn",
+      "sourceFile": "Q2001-PNV-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2001-pnv-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2001-pnv-sacn-main.jpg"
+    },
+    "Q2001-PNV-SPPE": {
+      "productId": "839078",
+      "seriesId": "q20",
+      "slug": "q2001-pnv-sppe",
+      "sourceFile": "Q2001-PNV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2001-pnv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2001-pnv-sppe-main.jpg"
+    },
+    "Q2001-PNX-SACN": {
+      "productId": "839012",
+      "seriesId": "q20",
+      "slug": "q2001-pnx-sacn",
+      "sourceFile": "Q2001-PNX-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2001-pnx-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2001-pnx-sacn-main.jpg"
+    },
+    "Q2001-PNX-SPPE": {
+      "productId": "839056",
+      "seriesId": "q20",
+      "slug": "q2001-pnx-sppe",
+      "sourceFile": "Q2001-PNX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2001-pnx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2001-pnx-sppe-main.jpg"
+    },
+    "Q2001-SMV-SACN": {
+      "productId": "839030",
+      "seriesId": "q20",
+      "slug": "q2001-smv-sacn",
+      "sourceFile": "Q2001-SMV-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2001-smv-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2001-smv-sacn-main.jpg"
+    },
+    "Q2001-SMV-SPPE": {
+      "productId": "839074",
+      "seriesId": "q20",
+      "slug": "q2001-smv-sppe",
+      "sourceFile": "Q2001-SMV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2001-smv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2001-smv-sppe-main.jpg"
+    },
+    "Q2001-SMX-SACN": {
+      "productId": "839008",
+      "seriesId": "q20",
+      "slug": "q2001-smx-sacn",
+      "sourceFile": "Q2001-SMX-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2001-smx-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2001-smx-sacn-main.jpg"
+    },
+    "Q2001-SMX-SPPE": {
+      "productId": "839052",
+      "seriesId": "q20",
+      "slug": "q2001-smx-sppe",
+      "sourceFile": "Q2001-SMX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2001-smx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2001-smx-sppe-main.jpg"
+    },
+    "Q2001-SNV-SACN": {
+      "productId": "839023",
+      "seriesId": "q20",
+      "slug": "q2001-snv-sacn",
+      "sourceFile": "Q2001-SNV-SACN-1.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2001-snv-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2001-snv-sacn-main.jpg"
+    },
+    "Q2001-SNV-SPPE": {
+      "productId": "839067",
+      "seriesId": "q20",
+      "slug": "q2001-snv-sppe",
+      "sourceFile": "Q2001-SNV-SPPE-1.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2001-snv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2001-snv-sppe-main.jpg"
+    },
+    "Q2001-SNX-SACN": {
+      "productId": "839001",
+      "seriesId": "q20",
+      "slug": "q2001-snx-sacn",
+      "sourceFile": "Q2001-SNX-SACN-1.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2001-snx-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2001-snx-sacn-main.jpg"
+    },
+    "Q2001-SNX-SPPE": {
+      "productId": "839045",
+      "seriesId": "q20",
+      "slug": "q2001-snx-sppe",
+      "sourceFile": "Q2001-SNX-SPPE-1.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2001-snx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2001-snx-sppe-main.jpg"
+    },
+    "Q2002-PMV-SACN": {
+      "productId": "839042",
+      "seriesId": "q20",
+      "slug": "q2002-pmv-sacn",
+      "sourceFile": "Q2002-PMV-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2002-pmv-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2002-pmv-sacn-main.jpg"
+    },
+    "Q2002-PMV-SPPE": {
+      "productId": "839086",
+      "seriesId": "q20",
+      "slug": "q2002-pmv-sppe",
+      "sourceFile": "Q2002-PMV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2002-pmv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2002-pmv-sppe-main.jpg"
+    },
+    "Q2002-PMX-SACN": {
+      "productId": "839020",
+      "seriesId": "q20",
+      "slug": "q2002-pmx-sacn",
+      "sourceFile": "Q2002-PMX-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2002-pmx-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2002-pmx-sacn-main.jpg"
+    },
+    "Q2002-PMX-SPPE": {
+      "productId": "839064",
+      "seriesId": "q20",
+      "slug": "q2002-pmx-sppe",
+      "sourceFile": "Q2002-PMX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2002-pmx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2002-pmx-sppe-main.jpg"
+    },
+    "Q2002-PNV-LACN": {
+      "productId": "839038",
+      "seriesId": "q20",
+      "slug": "q2002-pnv-lacn",
+      "sourceFile": "Q2002-PNV-LACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2002-pnv-lacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2002-pnv-lacn-main.jpg"
+    },
+    "Q2002-PNV-LPPE": {
+      "productId": "839082",
+      "seriesId": "q20",
+      "slug": "q2002-pnv-lppe",
+      "sourceFile": "Q2002-PNV-LPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2002-pnv-lppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2002-pnv-lppe-main.jpg"
+    },
+    "Q2002-PNV-SACN": {
+      "productId": "839035",
+      "seriesId": "q20",
+      "slug": "q2002-pnv-sacn",
+      "sourceFile": "Q2002-PNV-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2002-pnv-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2002-pnv-sacn-main.jpg"
+    },
+    "Q2002-PNV-SPPE": {
+      "productId": "839079",
+      "seriesId": "q20",
+      "slug": "q2002-pnv-sppe",
+      "sourceFile": "Q2002-PNV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2002-pnv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2002-pnv-sppe-main.jpg"
+    },
+    "Q2002-PNX-LACN": {
+      "productId": "839016",
+      "seriesId": "q20",
+      "slug": "q2002-pnx-lacn",
+      "sourceFile": "Q2002-PNX-LACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2002-pnx-lacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2002-pnx-lacn-main.jpg"
+    },
+    "Q2002-PNX-LPPE": {
+      "productId": "839060",
+      "seriesId": "q20",
+      "slug": "q2002-pnx-lppe",
+      "sourceFile": "Q2002-PNX-LPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2002-pnx-lppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2002-pnx-lppe-main.jpg"
+    },
+    "Q2002-PNX-SACN": {
+      "productId": "839013",
+      "seriesId": "q20",
+      "slug": "q2002-pnx-sacn",
+      "sourceFile": "Q2002-PNX-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2002-pnx-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2002-pnx-sacn-main.jpg"
+    },
+    "Q2002-PNX-SPPE": {
+      "productId": "839057",
+      "seriesId": "q20",
+      "slug": "q2002-pnx-sppe",
+      "sourceFile": "Q2002-PNX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2002-pnx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2002-pnx-sppe-main.jpg"
+    },
+    "Q2002-SMV-SACN": {
+      "productId": "839031",
+      "seriesId": "q20",
+      "slug": "q2002-smv-sacn",
+      "sourceFile": "Q2002-SMV-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2002-smv-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2002-smv-sacn-main.jpg"
+    },
+    "Q2002-SMV-SPPE": {
+      "productId": "839075",
+      "seriesId": "q20",
+      "slug": "q2002-smv-sppe",
+      "sourceFile": "Q2002-SMV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2002-smv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2002-smv-sppe-main.jpg"
+    },
+    "Q2002-SMX-SACN": {
+      "productId": "839009",
+      "seriesId": "q20",
+      "slug": "q2002-smx-sacn",
+      "sourceFile": "Q2002-SMX-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2002-smx-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2002-smx-sacn-main.jpg"
+    },
+    "Q2002-SMX-SPPE": {
+      "productId": "839053",
+      "seriesId": "q20",
+      "slug": "q2002-smx-sppe",
+      "sourceFile": "Q2002-SMX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2002-smx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2002-smx-sppe-main.jpg"
+    },
+    "Q2002-SNV-LACN": {
+      "productId": "839027",
+      "seriesId": "q20",
+      "slug": "q2002-snv-lacn",
+      "sourceFile": "Q2002-SNV-LACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2002-snv-lacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2002-snv-lacn-main.jpg"
+    },
+    "Q2002-SNV-LPPE": {
+      "productId": "839071",
+      "seriesId": "q20",
+      "slug": "q2002-snv-lppe",
+      "sourceFile": "Q2002-SNV-LPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2002-snv-lppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2002-snv-lppe-main.jpg"
+    },
+    "Q2002-SNV-SACN": {
+      "productId": "839024",
+      "seriesId": "q20",
+      "slug": "q2002-snv-sacn",
+      "sourceFile": "Q2002-SNV-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2002-snv-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2002-snv-sacn-main.jpg"
+    },
+    "Q2002-SNV-SPPE": {
+      "productId": "839068",
+      "seriesId": "q20",
+      "slug": "q2002-snv-sppe",
+      "sourceFile": "Q2002-SNV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2002-snv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2002-snv-sppe-main.jpg"
+    },
+    "Q2002-SNX-LACN": {
+      "productId": "839005",
+      "seriesId": "q20",
+      "slug": "q2002-snx-lacn",
+      "sourceFile": "Q2002-SNX-LACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2002-snx-lacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2002-snx-lacn-main.jpg"
+    },
+    "Q2002-SNX-LPPE": {
+      "productId": "839049",
+      "seriesId": "q20",
+      "slug": "q2002-snx-lppe",
+      "sourceFile": "Q2002-SNX-LPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2002-snx-lppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2002-snx-lppe-main.jpg"
+    },
+    "Q2002-SNX-SACN": {
+      "productId": "839002",
+      "seriesId": "q20",
+      "slug": "q2002-snx-sacn",
+      "sourceFile": "Q2002-SNX-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2002-snx-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2002-snx-sacn-main.jpg"
+    },
+    "Q2002-SNX-SPPE": {
+      "productId": "839046",
+      "seriesId": "q20",
+      "slug": "q2002-snx-sppe",
+      "sourceFile": "Q2002-SNX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2002-snx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2002-snx-sppe-main.jpg"
+    },
+    "Q2003-PMV-SACN": {
+      "productId": "839043",
+      "seriesId": "q20",
+      "slug": "q2003-pmv-sacn",
+      "sourceFile": "Q2003-PMV-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2003-pmv-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2003-pmv-sacn-main.jpg"
+    },
+    "Q2003-PMV-SPPE": {
+      "productId": "839087",
+      "seriesId": "q20",
+      "slug": "q2003-pmv-sppe",
+      "sourceFile": "Q2003-PMV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2003-pmv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2003-pmv-sppe-main.jpg"
+    },
+    "Q2003-PMX-SACN": {
+      "productId": "839021",
+      "seriesId": "q20",
+      "slug": "q2003-pmx-sacn",
+      "sourceFile": "Q2003-PMX-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2003-pmx-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2003-pmx-sacn-main.jpg"
+    },
+    "Q2003-PMX-SPPE": {
+      "productId": "839065",
+      "seriesId": "q20",
+      "slug": "q2003-pmx-sppe",
+      "sourceFile": "Q2003-PMX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2003-pmx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2003-pmx-sppe-main.jpg"
+    },
+    "Q2003-PNV-SACN": {
+      "productId": "839036",
+      "seriesId": "q20",
+      "slug": "q2003-pnv-sacn",
+      "sourceFile": "Q2003-PNV-SACN-1.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2003-pnv-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2003-pnv-sacn-main.jpg"
+    },
+    "Q2003-PNV-SPPE": {
+      "productId": "839080",
+      "seriesId": "q20",
+      "slug": "q2003-pnv-sppe",
+      "sourceFile": "Q2003-PNV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2003-pnv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2003-pnv-sppe-main.jpg"
+    },
+    "Q2003-PNX-SACN": {
+      "productId": "839014",
+      "seriesId": "q20",
+      "slug": "q2003-pnx-sacn",
+      "sourceFile": "Q2003-PNX-SACN_2.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2003-pnx-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2003-pnx-sacn-main.jpg"
+    },
+    "Q2003-PNX-SPPE": {
+      "productId": "839058",
+      "seriesId": "q20",
+      "slug": "q2003-pnx-sppe",
+      "sourceFile": "Q2003-PNX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2003-pnx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2003-pnx-sppe-main.jpg"
+    },
+    "Q2003-SMV-SACN": {
+      "productId": "839032",
+      "seriesId": "q20",
+      "slug": "q2003-smv-sacn",
+      "sourceFile": "Q2003-SMV-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2003-smv-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2003-smv-sacn-main.jpg"
+    },
+    "Q2003-SMV-SPPE": {
+      "productId": "839076",
+      "seriesId": "q20",
+      "slug": "q2003-smv-sppe",
+      "sourceFile": "Q2003-SMV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2003-smv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2003-smv-sppe-main.jpg"
+    },
+    "Q2003-SMX-SACN": {
+      "productId": "839010",
+      "seriesId": "q20",
+      "slug": "q2003-smx-sacn",
+      "sourceFile": "Q2003-SMX-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2003-smx-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2003-smx-sacn-main.jpg"
+    },
+    "Q2003-SMX-SPPE": {
+      "productId": "839054",
+      "seriesId": "q20",
+      "slug": "q2003-smx-sppe",
+      "sourceFile": "Q2003-SMX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2003-smx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2003-smx-sppe-main.jpg"
+    },
+    "Q2003-SNV-SACN": {
+      "productId": "839025",
+      "seriesId": "q20",
+      "slug": "q2003-snv-sacn",
+      "sourceFile": "Q2003-SNV-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2003-snv-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2003-snv-sacn-main.jpg"
+    },
+    "Q2003-SNV-SPPE": {
+      "productId": "839069",
+      "seriesId": "q20",
+      "slug": "q2003-snv-sppe",
+      "sourceFile": "Q2003-SNV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2003-snv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2003-snv-sppe-main.jpg"
+    },
+    "Q2003-SNX-SACN": {
+      "productId": "839003",
+      "seriesId": "q20",
+      "slug": "q2003-snx-sacn",
+      "sourceFile": "Q2003-SNX-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2003-snx-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2003-snx-sacn-main.jpg"
+    },
+    "Q2003-SNX-SPPE": {
+      "productId": "839047",
+      "seriesId": "q20",
+      "slug": "q2003-snx-sppe",
+      "sourceFile": "Q2003-SNX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2003-snx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2003-snx-sppe-main.jpg"
+    },
+    "Q2004-PMV-SACN": {
+      "productId": "839044",
+      "seriesId": "q20",
+      "slug": "q2004-pmv-sacn",
+      "sourceFile": "Q2004-PMV-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2004-pmv-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2004-pmv-sacn-main.jpg"
+    },
+    "Q2004-PMV-SPPE": {
+      "productId": "839088",
+      "seriesId": "q20",
+      "slug": "q2004-pmv-sppe",
+      "sourceFile": "Q2004-PMV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2004-pmv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2004-pmv-sppe-main.jpg"
+    },
+    "Q2004-PMX-SACN": {
+      "productId": "839022",
+      "seriesId": "q20",
+      "slug": "q2004-pmx-sacn",
+      "sourceFile": "Q2004-PMX-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2004-pmx-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2004-pmx-sacn-main.jpg"
+    },
+    "Q2004-PMX-SPPE": {
+      "productId": "839066",
+      "seriesId": "q20",
+      "slug": "q2004-pmx-sppe",
+      "sourceFile": "Q2004-PMX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2004-pmx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2004-pmx-sppe-main.jpg"
+    },
+    "Q2004-PNV-LACN": {
+      "productId": "839039",
+      "seriesId": "q20",
+      "slug": "q2004-pnv-lacn",
+      "sourceFile": "Q2004-PNV-LACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2004-pnv-lacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2004-pnv-lacn-main.jpg"
+    },
+    "Q2004-PNV-LPPE": {
+      "productId": "839083",
+      "seriesId": "q20",
+      "slug": "q2004-pnv-lppe",
+      "sourceFile": "Q2004-PNV-LPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2004-pnv-lppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2004-pnv-lppe-main.jpg"
+    },
+    "Q2004-PNV-SACN": {
+      "productId": "839037",
+      "seriesId": "q20",
+      "slug": "q2004-pnv-sacn",
+      "sourceFile": "Q2004-PNV-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2004-pnv-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2004-pnv-sacn-main.jpg"
+    },
+    "Q2004-PNV-SPPE": {
+      "productId": "839081",
+      "seriesId": "q20",
+      "slug": "q2004-pnv-sppe",
+      "sourceFile": "Q2004-PNV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2004-pnv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2004-pnv-sppe-main.jpg"
+    },
+    "Q2004-PNX-LACN": {
+      "productId": "839017",
+      "seriesId": "q20",
+      "slug": "q2004-pnx-lacn",
+      "sourceFile": "Q2004-PNX-LACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2004-pnx-lacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2004-pnx-lacn-main.jpg"
+    },
+    "Q2004-PNX-LPPE": {
+      "productId": "839061",
+      "seriesId": "q20",
+      "slug": "q2004-pnx-lppe",
+      "sourceFile": "Q2004-PNX-LPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2004-pnx-lppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2004-pnx-lppe-main.jpg"
+    },
+    "Q2004-PNX-SACN": {
+      "productId": "839015",
+      "seriesId": "q20",
+      "slug": "q2004-pnx-sacn",
+      "sourceFile": "Q2004-PNX-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2004-pnx-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2004-pnx-sacn-main.jpg"
+    },
+    "Q2004-PNX-SPPE": {
+      "productId": "839059",
+      "seriesId": "q20",
+      "slug": "q2004-pnx-sppe",
+      "sourceFile": "Q2004-PNX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2004-pnx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2004-pnx-sppe-main.jpg"
+    },
+    "Q2004-SMV-SACN": {
+      "productId": "839033",
+      "seriesId": "q20",
+      "slug": "q2004-smv-sacn",
+      "sourceFile": "Q2004-SMV-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2004-smv-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2004-smv-sacn-main.jpg"
+    },
+    "Q2004-SMV-SPPE": {
+      "productId": "839077",
+      "seriesId": "q20",
+      "slug": "q2004-smv-sppe",
+      "sourceFile": "Q2004-SMV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2004-smv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2004-smv-sppe-main.jpg"
+    },
+    "Q2004-SMX-SACN": {
+      "productId": "839011",
+      "seriesId": "q20",
+      "slug": "q2004-smx-sacn",
+      "sourceFile": "Q2004-SMX-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2004-smx-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2004-smx-sacn-main.jpg"
+    },
+    "Q2004-SMX-SPPE": {
+      "productId": "839055",
+      "seriesId": "q20",
+      "slug": "q2004-smx-sppe",
+      "sourceFile": "Q2004-SMX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2004-smx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2004-smx-sppe-main.jpg"
+    },
+    "Q2004-SNV-LACN": {
+      "productId": "839028",
+      "seriesId": "q20",
+      "slug": "q2004-snv-lacn",
+      "sourceFile": "Q2004-SNV-LACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2004-snv-lacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2004-snv-lacn-main.jpg"
+    },
+    "Q2004-SNV-LPPE": {
+      "productId": "839072",
+      "seriesId": "q20",
+      "slug": "q2004-snv-lppe",
+      "sourceFile": "Q2004-SNV-LPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2004-snv-lppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2004-snv-lppe-main.jpg"
+    },
+    "Q2004-SNV-SACN": {
+      "productId": "839026",
+      "seriesId": "q20",
+      "slug": "q2004-snv-sacn",
+      "sourceFile": "Q2004-SNV-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2004-snv-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2004-snv-sacn-main.jpg"
+    },
+    "Q2004-SNV-SPPE": {
+      "productId": "839070",
+      "seriesId": "q20",
+      "slug": "q2004-snv-sppe",
+      "sourceFile": "Q2004-SNV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2004-snv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2004-snv-sppe-main.jpg"
+    },
+    "Q2004-SNX-LACN": {
+      "productId": "839006",
+      "seriesId": "q20",
+      "slug": "q2004-snx-lacn",
+      "sourceFile": "Q2004-SNX-LACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2004-snx-lacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2004-snx-lacn-main.jpg"
+    },
+    "Q2004-SNX-LPPE": {
+      "productId": "839050",
+      "seriesId": "q20",
+      "slug": "q2004-snx-lppe",
+      "sourceFile": "Q2004-SNX-LPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2004-snx-lppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2004-snx-lppe-main.jpg"
+    },
+    "Q2004-SNX-SACN": {
+      "productId": "839004",
+      "seriesId": "q20",
+      "slug": "q2004-snx-sacn",
+      "sourceFile": "Q2004-SNX-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2004-snx-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2004-snx-sacn-main.jpg"
+    },
+    "Q2004-SNX-SPPE": {
+      "productId": "839048",
+      "seriesId": "q20",
+      "slug": "q2004-snx-sppe",
+      "sourceFile": "Q2004-SNX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2004-snx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2004-snx-sppe-main.jpg"
+    },
+    "Q2018N-PNV-SACN": {
+      "productId": "839040",
+      "seriesId": "q20",
+      "slug": "q2018n-pnv-sacn",
+      "sourceFile": "Q2018N-PNV-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2018n-pnv-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2018n-pnv-sacn-main.jpg"
+    },
+    "Q2018N-PNV-SPPE": {
+      "productId": "839084",
+      "seriesId": "q20",
+      "slug": "q2018n-pnv-sppe",
+      "sourceFile": "Q2018N-PNV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2018n-pnv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2018n-pnv-sppe-main.jpg"
+    },
+    "Q2018N-PNX-SACN": {
+      "productId": "839018",
+      "seriesId": "q20",
+      "slug": "q2018n-pnx-sacn",
+      "sourceFile": "Q2018N-PNX-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2018n-pnx-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2018n-pnx-sacn-main.jpg"
+    },
+    "Q2018N-PNX-SPPE": {
+      "productId": "839062",
+      "seriesId": "q20",
+      "slug": "q2018n-pnx-sppe",
+      "sourceFile": "Q2018N-PNX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2018n-pnx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2018n-pnx-sppe-main.jpg"
+    },
+    "Q2018N-SNV-SACN": {
+      "productId": "839029",
+      "seriesId": "q20",
+      "slug": "q2018n-snv-sacn",
+      "sourceFile": "Q2018N-SNV-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2018n-snv-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2018n-snv-sacn-main.jpg"
+    },
+    "Q2018N-SNV-SPPE": {
+      "productId": "839073",
+      "seriesId": "q20",
+      "slug": "q2018n-snv-sppe",
+      "sourceFile": "Q2018N-SNV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2018n-snv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2018n-snv-sppe-main.jpg"
+    },
+    "Q2018N-SNX-SACN": {
+      "productId": "839007",
+      "seriesId": "q20",
+      "slug": "q2018n-snx-sacn",
+      "sourceFile": "Q2018N-SNX-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2018n-snx-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2018n-snx-sacn-main.jpg"
+    },
+    "Q2018N-SNX-SPPE": {
+      "productId": "839051",
+      "seriesId": "q20",
+      "slug": "q2018n-snx-sppe",
+      "sourceFile": "Q2018N-SNX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q2018n-snx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q2018n-snx-sppe-main.jpg"
+    },
+    "Q4004-PMV-SACN": {
+      "productId": "849032",
+      "seriesId": "q40",
+      "slug": "q4004-pmv-sacn",
+      "sourceFile": "Q4004-PMV-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4004-pmv-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4004-pmv-sacn-main.jpg"
+    },
+    "Q4004-PMV-SPPE": {
+      "productId": "849066",
+      "seriesId": "q40",
+      "slug": "q4004-pmv-sppe",
+      "sourceFile": "Q4004-PMV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4004-pmv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4004-pmv-sppe-main.jpg"
+    },
+    "Q4004-PMX-SACN": {
+      "productId": "849015",
+      "seriesId": "q40",
+      "slug": "q4004-pmx-sacn",
+      "sourceFile": "Q4004-PMX-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4004-pmx-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4004-pmx-sacn-main.jpg"
+    },
+    "Q4004-PMX-SPPE": {
+      "productId": "849049",
+      "seriesId": "q40",
+      "slug": "q4004-pmx-sppe",
+      "sourceFile": "Q4004-PMX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4004-pmx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4004-pmx-sppe-main.jpg"
+    },
+    "Q4004-PNV-LACN": {
+      "productId": "849030",
+      "seriesId": "q40",
+      "slug": "q4004-pnv-lacn",
+      "sourceFile": "Q4004-PNV-LACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4004-pnv-lacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4004-pnv-lacn-main.jpg"
+    },
+    "Q4004-PNV-LPPE": {
+      "productId": "849064",
+      "seriesId": "q40",
+      "slug": "q4004-pnv-lppe",
+      "sourceFile": "Q4004-PNV-LPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4004-pnv-lppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4004-pnv-lppe-main.jpg"
+    },
+    "Q4004-PNV-SACN": {
+      "productId": "849027",
+      "seriesId": "q40",
+      "slug": "q4004-pnv-sacn",
+      "sourceFile": "Q4004-PNV-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4004-pnv-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4004-pnv-sacn-main.jpg"
+    },
+    "Q4004-PNV-SPPE": {
+      "productId": "849061",
+      "seriesId": "q40",
+      "slug": "q4004-pnv-sppe",
+      "sourceFile": "Q4004-PNV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4004-pnv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4004-pnv-sppe-main.jpg"
+    },
+    "Q4004-PNX-SACN": {
+      "productId": "849010",
+      "seriesId": "q40",
+      "slug": "q4004-pnx-sacn",
+      "sourceFile": "Q4004-PNX-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4004-pnx-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4004-pnx-sacn-main.jpg"
+    },
+    "Q4004-PNX-SPPE": {
+      "productId": "849044",
+      "seriesId": "q40",
+      "slug": "q4004-pnx-sppe",
+      "sourceFile": "Q4004-PNX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4004-pnx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4004-pnx-sppe-main.jpg"
+    },
+    "Q4004-SMV-SACN": {
+      "productId": "849024",
+      "seriesId": "q40",
+      "slug": "q4004-smv-sacn",
+      "sourceFile": "Q4004-SMV-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4004-smv-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4004-smv-sacn-main.jpg"
+    },
+    "Q4004-SMV-SPPE": {
+      "productId": "849058",
+      "seriesId": "q40",
+      "slug": "q4004-smv-sppe",
+      "sourceFile": "Q4004-SMV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4004-smv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4004-smv-sppe-main.jpg"
+    },
+    "Q4004-SMX-SACN": {
+      "productId": "849007",
+      "seriesId": "q40",
+      "slug": "q4004-smx-sacn",
+      "sourceFile": "Q4004-SMX-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4004-smx-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4004-smx-sacn-main.jpg"
+    },
+    "Q4004-SMX-SPPE": {
+      "productId": "849041",
+      "seriesId": "q40",
+      "slug": "q4004-smx-sppe",
+      "sourceFile": "Q4004-SMX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4004-smx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4004-smx-sppe-main.jpg"
+    },
+    "Q4004-SNV-SACN": {
+      "productId": "849018",
+      "seriesId": "q40",
+      "slug": "q4004-snv-sacn",
+      "sourceFile": "Q4004-SNV-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4004-snv-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4004-snv-sacn-main.jpg"
+    },
+    "Q4004-SNV-SPPE": {
+      "productId": "849052",
+      "seriesId": "q40",
+      "slug": "q4004-snv-sppe",
+      "sourceFile": "Q4004-SNV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4004-snv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4004-snv-sppe-main.jpg"
+    },
+    "Q4004-SNX-SACN": {
+      "productId": "849001",
+      "seriesId": "q40",
+      "slug": "q4004-snx-sacn",
+      "sourceFile": "Q4004-SNX-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4004-snx-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4004-snx-sacn-main.jpg"
+    },
+    "Q4004-SNX-SPPE": {
+      "productId": "849035",
+      "seriesId": "q40",
+      "slug": "q4004-snx-sppe",
+      "sourceFile": "Q4004-SNX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4004-snx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4004-snx-sppe-main.jpg"
+    },
+    "Q4005-PMV-SACN": {
+      "productId": "849033",
+      "seriesId": "q40",
+      "slug": "q4005-pmv-sacn",
+      "sourceFile": "Q4005-PMV-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4005-pmv-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4005-pmv-sacn-main.jpg"
+    },
+    "Q4005-PMV-SPPE": {
+      "productId": "849067",
+      "seriesId": "q40",
+      "slug": "q4005-pmv-sppe",
+      "sourceFile": "Q4005-PMV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4005-pmv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4005-pmv-sppe-main.jpg"
+    },
+    "Q4005-PMX-SACN": {
+      "productId": "849016",
+      "seriesId": "q40",
+      "slug": "q4005-pmx-sacn",
+      "sourceFile": "Q4005-PMX-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4005-pmx-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4005-pmx-sacn-main.jpg"
+    },
+    "Q4005-PMX-SPPE": {
+      "productId": "849050",
+      "seriesId": "q40",
+      "slug": "q4005-pmx-sppe",
+      "sourceFile": "Q4005-PMX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4005-pmx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4005-pmx-sppe-main.jpg"
+    },
+    "Q4005-PNV-SACN": {
+      "productId": "849028",
+      "seriesId": "q40",
+      "slug": "q4005-pnv-sacn",
+      "sourceFile": "Q4005-PNV-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4005-pnv-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4005-pnv-sacn-main.jpg"
+    },
+    "Q4005-PNV-SPPE": {
+      "productId": "849062",
+      "seriesId": "q40",
+      "slug": "q4005-pnv-sppe",
+      "sourceFile": "Q4005-PNV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4005-pnv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4005-pnv-sppe-main.jpg"
+    },
+    "Q4005-PNX-SACN": {
+      "productId": "849011",
+      "seriesId": "q40",
+      "slug": "q4005-pnx-sacn",
+      "sourceFile": "Q4005-PNX-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4005-pnx-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4005-pnx-sacn-main.jpg"
+    },
+    "Q4005-PNX-SPPE": {
+      "productId": "849045",
+      "seriesId": "q40",
+      "slug": "q4005-pnx-sppe",
+      "sourceFile": "Q4005-PNX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4005-pnx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4005-pnx-sppe-main.jpg"
+    },
+    "Q4005-SMV-SACN": {
+      "productId": "849025",
+      "seriesId": "q40",
+      "slug": "q4005-smv-sacn",
+      "sourceFile": "Q4005-SMV-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4005-smv-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4005-smv-sacn-main.jpg"
+    },
+    "Q4005-SMV-SPPE": {
+      "productId": "849059",
+      "seriesId": "q40",
+      "slug": "q4005-smv-sppe",
+      "sourceFile": "Q4005-SMV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4005-smv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4005-smv-sppe-main.jpg"
+    },
+    "Q4005-SMX-SACN": {
+      "productId": "849008",
+      "seriesId": "q40",
+      "slug": "q4005-smx-sacn",
+      "sourceFile": "Q4005-SMX-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4005-smx-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4005-smx-sacn-main.jpg"
+    },
+    "Q4005-SMX-SPPE": {
+      "productId": "849042",
+      "seriesId": "q40",
+      "slug": "q4005-smx-sppe",
+      "sourceFile": "Q4005-SMX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4005-smx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4005-smx-sppe-main.jpg"
+    },
+    "Q4005-SNV-SACN": {
+      "productId": "849019",
+      "seriesId": "q40",
+      "slug": "q4005-snv-sacn",
+      "sourceFile": "Q4005-SNV-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4005-snv-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4005-snv-sacn-main.jpg"
+    },
+    "Q4005-SNV-SPPE": {
+      "productId": "849053",
+      "seriesId": "q40",
+      "slug": "q4005-snv-sppe",
+      "sourceFile": "Q4005-SNV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4005-snv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4005-snv-sppe-main.jpg"
+    },
+    "Q4005-SNX-SACN": {
+      "productId": "849002",
+      "seriesId": "q40",
+      "slug": "q4005-snx-sacn",
+      "sourceFile": "Q4005-SNX-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4005-snx-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4005-snx-sacn-main.jpg"
+    },
+    "Q4005-SNX-SPPE": {
+      "productId": "849036",
+      "seriesId": "q40",
+      "slug": "q4005-snx-sppe",
+      "sourceFile": "Q4005-SNX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4005-snx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4005-snx-sppe-main.jpg"
+    },
+    "Q4006-PMV-SACN": {
+      "productId": "849034",
+      "seriesId": "q40",
+      "slug": "q4006-pmv-sacn",
+      "sourceFile": "Q4006-PMV-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4006-pmv-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4006-pmv-sacn-main.jpg"
+    },
+    "Q4006-PMV-SPPE": {
+      "productId": "849068",
+      "seriesId": "q40",
+      "slug": "q4006-pmv-sppe",
+      "sourceFile": "Q4006-PMV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4006-pmv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4006-pmv-sppe-main.jpg"
+    },
+    "Q4006-PMX-SACN": {
+      "productId": "849017",
+      "seriesId": "q40",
+      "slug": "q4006-pmx-sacn",
+      "sourceFile": "Q4006-PMX-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4006-pmx-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4006-pmx-sacn-main.jpg"
+    },
+    "Q4006-PMX-SPPE": {
+      "productId": "849051",
+      "seriesId": "q40",
+      "slug": "q4006-pmx-sppe",
+      "sourceFile": "Q4006-PMX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4006-pmx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4006-pmx-sppe-main.jpg"
+    },
+    "Q4006-PNV-SACN": {
+      "productId": "849029",
+      "seriesId": "q40",
+      "slug": "q4006-pnv-sacn",
+      "sourceFile": "Q4006-PNV-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4006-pnv-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4006-pnv-sacn-main.jpg"
+    },
+    "Q4006-PNV-SPPE": {
+      "productId": "849063",
+      "seriesId": "q40",
+      "slug": "q4006-pnv-sppe",
+      "sourceFile": "Q4006-PNV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4006-pnv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4006-pnv-sppe-main.jpg"
+    },
+    "Q4006-PNX-LACN": {
+      "productId": "849013",
+      "seriesId": "q40",
+      "slug": "q4006-pnx-lacn",
+      "sourceFile": "Q4006-PNX-LACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4006-pnx-lacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4006-pnx-lacn-main.jpg"
+    },
+    "Q4006-PNX-LPPE": {
+      "productId": "849047",
+      "seriesId": "q40",
+      "slug": "q4006-pnx-lppe",
+      "sourceFile": "Q4006-PNX-LPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4006-pnx-lppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4006-pnx-lppe-main.jpg"
+    },
+    "Q4006-PNX-SACN": {
+      "productId": "849012",
+      "seriesId": "q40",
+      "slug": "q4006-pnx-sacn",
+      "sourceFile": "Q4006-PNX-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4006-pnx-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4006-pnx-sacn-main.jpg"
+    },
+    "Q4006-PNX-SPPE": {
+      "productId": "849046",
+      "seriesId": "q40",
+      "slug": "q4006-pnx-sppe",
+      "sourceFile": "Q4006-PNX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4006-pnx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4006-pnx-sppe-main.jpg"
+    },
+    "Q4006-SMV-SACN": {
+      "productId": "849026",
+      "seriesId": "q40",
+      "slug": "q4006-smv-sacn",
+      "sourceFile": "Q4006-SMV-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4006-smv-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4006-smv-sacn-main.jpg"
+    },
+    "Q4006-SMV-SPPE": {
+      "productId": "849060",
+      "seriesId": "q40",
+      "slug": "q4006-smv-sppe",
+      "sourceFile": "Q4006-SMV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4006-smv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4006-smv-sppe-main.jpg"
+    },
+    "Q4006-SMX-SACN": {
+      "productId": "849009",
+      "seriesId": "q40",
+      "slug": "q4006-smx-sacn",
+      "sourceFile": "Q4006-SMX-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4006-smx-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4006-smx-sacn-main.jpg"
+    },
+    "Q4006-SMX-SPPE": {
+      "productId": "849043",
+      "seriesId": "q40",
+      "slug": "q4006-smx-sppe",
+      "sourceFile": "Q4006-SMX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4006-smx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4006-smx-sppe-main.jpg"
+    },
+    "Q4006-SNV-SACN": {
+      "productId": "849020",
+      "seriesId": "q40",
+      "slug": "q4006-snv-sacn",
+      "sourceFile": "Q4006-SNV-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4006-snv-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4006-snv-sacn-main.jpg"
+    },
+    "Q4006-SNV-SPPE": {
+      "productId": "849054",
+      "seriesId": "q40",
+      "slug": "q4006-snv-sppe",
+      "sourceFile": "Q4006-SNV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4006-snv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4006-snv-sppe-main.jpg"
+    },
+    "Q4006-SNX-SACN": {
+      "productId": "849003",
+      "seriesId": "q40",
+      "slug": "q4006-snx-sacn",
+      "sourceFile": "Q4006-SNX-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4006-snx-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4006-snx-sacn-main.jpg"
+    },
+    "Q4006-SNX-SPPE": {
+      "productId": "849037",
+      "seriesId": "q40",
+      "slug": "q4006-snx-sppe",
+      "sourceFile": "Q4006-SNX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4006-snx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4006-snx-sppe-main.jpg"
+    },
+    "Q4014N-PNV-SACN": {
+      "productId": "849031",
+      "seriesId": "q40",
+      "slug": "q4014n-pnv-sacn",
+      "sourceFile": "Q4014N-PNV-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4014n-pnv-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4014n-pnv-sacn-main.jpg"
+    },
+    "Q4014N-PNV-SPPE": {
+      "productId": "849065",
+      "seriesId": "q40",
+      "slug": "q4014n-pnv-sppe",
+      "sourceFile": "Q4014N-PNV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4014n-pnv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4014n-pnv-sppe-main.jpg"
+    },
+    "Q4014N-SNV-SACN": {
+      "productId": "849023",
+      "seriesId": "q40",
+      "slug": "q4014n-snv-sacn",
+      "sourceFile": "Q4014N-SNV-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4014n-snv-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4014n-snv-sacn-main.jpg"
+    },
+    "Q4014N-SNV-SPPE": {
+      "productId": "849057",
+      "seriesId": "q40",
+      "slug": "q4014n-snv-sppe",
+      "sourceFile": "Q4014N-SNV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4014n-snv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4014n-snv-sppe-main.jpg"
+    },
+    "Q4014N-SNX-SACN": {
+      "productId": "849006",
+      "seriesId": "q40",
+      "slug": "q4014n-snx-sacn",
+      "sourceFile": "Q4014N-SNX-SACN.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4014n-snx-sacn-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4014n-snx-sacn-main.jpg"
+    },
+    "Q4014N-SNX-SPPE": {
+      "productId": "849040",
+      "seriesId": "q40",
+      "slug": "q4014n-snx-sppe",
+      "sourceFile": "Q4014N-SNX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q4014n-snx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q4014n-snx-sppe-main.jpg"
+    },
+    "Q6006-PNV-LPPE": {
+      "productId": "869032",
+      "seriesId": "q60",
+      "slug": "q6006-pnv-lppe",
+      "sourceFile": "Q6006-PNV-LPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q6006-pnv-lppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q6006-pnv-lppe-main.jpg"
+    },
+    "Q6006-PNX-LPPE": {
+      "productId": "869012",
+      "seriesId": "q60",
+      "slug": "q6006-pnx-lppe",
+      "sourceFile": "Q6006-PNX-LPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q6006-pnx-lppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q6006-pnx-lppe-main.jpg"
+    },
+    "Q6006-SMV-LPPE": {
+      "productId": "869020",
+      "seriesId": "q60",
+      "slug": "q6006-smv-lppe",
+      "sourceFile": "Q6006-SMV-LPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q6006-smv-lppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q6006-smv-lppe-main.jpg"
+    },
+    "Q6006-SMV-SPPE": {
+      "productId": "869026",
+      "seriesId": "q60",
+      "slug": "q6006-smv-sppe",
+      "sourceFile": "Q6006-SMV-SPPE-1.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q6006-smv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q6006-smv-sppe-main.jpg"
+    },
+    "Q6006-SMX-LPPE": {
+      "productId": "869018",
+      "seriesId": "q60",
+      "slug": "q6006-smx-lppe",
+      "sourceFile": "Q6006-SMX-LPPE-1.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q6006-smx-lppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q6006-smx-lppe-main.jpg"
+    },
+    "Q6006-SMX-SPPE": {
+      "productId": "869006",
+      "seriesId": "q60",
+      "slug": "q6006-smx-sppe",
+      "sourceFile": "Q6006-SMX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q6006-smx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q6006-smx-sppe-main.jpg"
+    },
+    "Q6006-SNV-SPPE": {
+      "productId": "869021",
+      "seriesId": "q60",
+      "slug": "q6006-snv-sppe",
+      "sourceFile": "Q6006-SNV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q6006-snv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q6006-snv-sppe-main.jpg"
+    },
+    "Q6006-SNX-SPPE": {
+      "productId": "869001",
+      "seriesId": "q60",
+      "slug": "q6006-snx-sppe",
+      "sourceFile": "Q6006-SNX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q6006-snx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q6006-snx-sppe-main.jpg"
+    },
+    "Q6008-PNV-LPPE": {
+      "productId": "869033",
+      "seriesId": "q60",
+      "slug": "q6008-pnv-lppe",
+      "sourceFile": "Q6008-PNV-LPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q6008-pnv-lppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q6008-pnv-lppe-main.jpg"
+    },
+    "Q6008-PNV-SPPE": {
+      "productId": "869030",
+      "seriesId": "q60",
+      "slug": "q6008-pnv-sppe",
+      "sourceFile": "Q6008-PNV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q6008-pnv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q6008-pnv-sppe-main.jpg"
+    },
+    "Q6008-PNX-LPPE": {
+      "productId": "869013",
+      "seriesId": "q60",
+      "slug": "q6008-pnx-lppe",
+      "sourceFile": "Q6008-PNX-LPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q6008-pnx-lppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q6008-pnx-lppe-main.jpg"
+    },
+    "Q6008-PNX-SPPE": {
+      "productId": "869010",
+      "seriesId": "q60",
+      "slug": "q6008-pnx-sppe",
+      "sourceFile": "Q6008-PNX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q6008-pnx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q6008-pnx-sppe-main.jpg"
+    },
+    "Q6008-SMV-LPPE": {
+      "productId": "869036",
+      "seriesId": "q60",
+      "slug": "q6008-smv-lppe",
+      "sourceFile": "Q6008-SMV-LPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q6008-smv-lppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q6008-smv-lppe-main.jpg"
+    },
+    "Q6008-SMV-SPPE": {
+      "productId": "869027",
+      "seriesId": "q60",
+      "slug": "q6008-smv-sppe",
+      "sourceFile": "Q6008-SMV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q6008-smv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q6008-smv-sppe-main.jpg"
+    },
+    "Q6008-SMX-LPPE": {
+      "productId": "869019",
+      "seriesId": "q60",
+      "slug": "q6008-smx-lppe",
+      "sourceFile": "Q6008-SMX-LPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q6008-smx-lppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q6008-smx-lppe-main.jpg"
+    },
+    "Q6008-SMX-SPPE": {
+      "productId": "869007",
+      "seriesId": "q60",
+      "slug": "q6008-smx-sppe",
+      "sourceFile": "Q6008-SMX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q6008-smx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q6008-smx-sppe-main.jpg"
+    },
+    "Q6008-SNV-LPPE": {
+      "productId": "869041",
+      "seriesId": "q60",
+      "slug": "q6008-snv-lppe",
+      "sourceFile": "Q6008-SNV-LPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q6008-snv-lppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q6008-snv-lppe-main.jpg"
+    },
+    "Q6008-SNV-SPPE": {
+      "productId": "869022",
+      "seriesId": "q60",
+      "slug": "q6008-snv-sppe",
+      "sourceFile": "Q6008-SNV-SPPE-1.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q6008-snv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q6008-snv-sppe-main.jpg"
+    },
+    "Q6008-SNX-SPPE": {
+      "productId": "869002",
+      "seriesId": "q60",
+      "slug": "q6008-snx-sppe",
+      "sourceFile": "Q6008-SNX-SPPE-1.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q6008-snx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q6008-snx-sppe-main.jpg"
+    },
+    "Q6012-PNV-SPPE": {
+      "productId": "869031",
+      "seriesId": "q60",
+      "slug": "q6012-pnv-sppe",
+      "sourceFile": "Q6012-PNV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q6012-pnv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q6012-pnv-sppe-main.jpg"
+    },
+    "Q6012-PNX-SPPE": {
+      "productId": "869011",
+      "seriesId": "q60",
+      "slug": "q6012-pnx-sppe",
+      "sourceFile": "Q6012-PNX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q6012-pnx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q6012-pnx-sppe-main.jpg"
+    },
+    "Q6012-SMV-SPPE": {
+      "productId": "869028",
+      "seriesId": "q60",
+      "slug": "q6012-smv-sppe",
+      "sourceFile": "Q6012-SMV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q6012-smv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q6012-smv-sppe-main.jpg"
+    },
+    "Q6012-SMX-SPPE": {
+      "productId": "869008",
+      "seriesId": "q60",
+      "slug": "q6012-smx-sppe",
+      "sourceFile": "Q6012-SMX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q6012-smx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q6012-smx-sppe-main.jpg"
+    },
+    "Q6012-SNV-SPPE": {
+      "productId": "869023",
+      "seriesId": "q60",
+      "slug": "q6012-snv-sppe",
+      "sourceFile": "Q6012-SNV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q6012-snv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q6012-snv-sppe-main.jpg"
+    },
+    "Q6012-SNX-SPPE": {
+      "productId": "869003",
+      "seriesId": "q60",
+      "slug": "q6012-snx-sppe",
+      "sourceFile": "Q6012-SNX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q6012-snx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q6012-snx-sppe-main.jpg"
+    },
+    "Q6012N-PNV-SPPE": {
+      "productId": "869035",
+      "seriesId": "q60",
+      "slug": "q6012n-pnv-sppe",
+      "sourceFile": "Q6012N-PNV-SPPE-1.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q6012n-pnv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q6012n-pnv-sppe-main.jpg"
+    },
+    "Q6012N-PNX-SPPE": {
+      "productId": "869015",
+      "seriesId": "q60",
+      "slug": "q6012n-pnx-sppe",
+      "sourceFile": "Q6012N-PNX-SPPE-1.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q6012n-pnx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q6012n-pnx-sppe-main.jpg"
+    },
+    "Q6038N-PNV-SPPE": {
+      "productId": "869034",
+      "seriesId": "q60",
+      "slug": "q6038n-pnv-sppe",
+      "sourceFile": "Q6038N-PNV-SPPE-1.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q6038n-pnv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q6038n-pnv-sppe-main.jpg"
+    },
+    "Q6038N-PNX-SPPE": {
+      "productId": "869014",
+      "seriesId": "q60",
+      "slug": "q6038n-pnx-sppe",
+      "sourceFile": "Q6038N-PNX-SPPE-1.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q6038n-pnx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q6038n-pnx-sppe-main.jpg"
+    },
+    "Q6038N-SNV-SPPE": {
+      "productId": "869024",
+      "seriesId": "q60",
+      "slug": "q6038n-snv-sppe",
+      "sourceFile": "Q6038N-SNV-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q6038n-snv-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q6038n-snv-sppe-main.jpg"
+    },
+    "Q6038N-SNX-SPPE": {
+      "productId": "869004",
+      "seriesId": "q60",
+      "slug": "q6038n-snx-sppe",
+      "sourceFile": "Q6038N-SNX-SPPE.jpg",
+      "imageCard": "/images/products/fittings/quick-connect-fittings/products/q6038n-snx-sppe-main.jpg",
+      "mainImage": "/images/products/fittings/quick-connect-fittings/products/q6038n-snx-sppe-main.jpg"
+    }
+  }
+}

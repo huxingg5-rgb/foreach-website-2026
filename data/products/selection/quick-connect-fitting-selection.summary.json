@@ -1,0 +1,22 @@
+{
+  "generatedAt": "2026-07-11T23:03:05.024Z",
+  "workbook": "data-source\\product-center\\fittings\\FRGD-140D-2606-0002_001_cn_连接件标品在售清单.xlsx",
+  "sheetName": "04_快插接头",
+  "total": 191,
+  "counts": {
+    "Q20": 98,
+    "Q40": 58,
+    "Q60": 35
+  },
+  "unknownCodes": {
+    "tubeOrThread": [],
+    "gender": [],
+    "panelMount": [],
+    "valved": [],
+    "shape": [],
+    "housingMaterial": [
+      "PP"
+    ],
+    "sealingRingMaterial": []
+  }
+}

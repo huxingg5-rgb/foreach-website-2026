@@ -1,0 +1,33 @@
+/* =========================================================
+   environmental-monitoring-application.css
+   恒永达官网｜环保监测应用领域页面样式
+========================================================= */
+
+@import "../ivd/ivd-application.css";
+
+.environmental-monitoring-page .ivd-hero {
+  background-image:
+    linear-gradient(105deg, rgba(12, 34, 70, 0.88) 0%, rgba(23, 51, 104, 0.60) 42%, rgba(23, 51, 104, 0.18) 100%),
+    radial-gradient(circle at 82% 26%, rgba(9, 233, 180, 0.16), transparent 34%),
+    url("/images/applications/environmental-monitoring/environmental-monitoring-hero-bg-1920x800-v001.webp") !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.environmental-monitoring-page .ivd-instrument-focus-bg {
+  background-image:
+    linear-gradient(120deg, rgba(12, 34, 70, 0.92), rgba(23, 51, 104, 0.74)),
+    radial-gradient(circle at 76% 25%, rgba(9, 233, 180, 0.20), transparent 34%),
+    url("/images/applications/environmental-monitoring/environmental-monitoring-focus-bg-1920x680-v001.webp") !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.environmental-monitoring-page .ivd-cta {
+  background-image:
+    linear-gradient(105deg, rgba(12, 34, 70, 0.98), rgba(23, 51, 104, 0.90)),
+    radial-gradient(circle at 82% 24%, rgba(9, 233, 180, 0.20), transparent 32%),
+    url("/images/applications/environmental-monitoring/environmental-monitoring-cta-bg-1920x520-v001.webp") !important;
+  background-size: cover !important;
+  background-position: center !important;
+}

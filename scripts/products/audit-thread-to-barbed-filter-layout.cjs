@@ -1,0 +1,661 @@
+﻿/**
+ * 审计螺纹转倒刺接头筛选布局
+ *
+ * 只读取，不修改任何项目文件。
+ *
+ * 输出：
+ * reports/thread-to-barbed-filter-layout-audit.md
+ *
+ * 使用：
+ * node scripts/products/audit-thread-to-barbed-filter-layout.cjs
+ */
+
+const fs = require("fs");
+const path = require("path");
+const childProcess = require("child_process");
+
+const root = process.cwd();
+
+const files = {
+  client: path.join(
+    root,
+    "components",
+    "products",
+    "selection",
+    "ProductSelectionClient.tsx"
+  ),
+  panel: path.join(
+    root,
+    "components",
+    "products",
+    "selection",
+    "ProductFilterPanel.tsx"
+  ),
+  group: path.join(
+    root,
+    "components",
+    "products",
+    "selection",
+    "ProductFilterGroup.tsx"
+  ),
+  types: path.join(
+    root,
+    "components",
+    "products",
+    "selection",
+    "product-selection-ui.types.ts"
+  ),
+  css: path.join(
+    root,
+    "app",
+    "globals.css"
+  ),
+};
+
+const reportPath = path.join(
+  root,
+  "reports",
+  "thread-to-barbed-filter-layout-audit.md"
+);
+
+function read(filePath) {
+  if (!fs.existsSync(filePath)) {
+    return "";
+  }
+
+  return fs.readFileSync(filePath, "utf8");
+}
+
+function lineNumberAt(content, index) {
+  if (index < 0) {
+    return 0;
+  }
+
+  return content.slice(0, index).split(/\r?\n/).length;
+}
+
+function findAll(content, pattern) {
+  const result = [];
+  const regex = new RegExp(
+    pattern.source,
+    pattern.flags.includes("g")
+      ? pattern.flags
+      : pattern.flags + "g"
+  );
+
+  let match;
+
+  while ((match = regex.exec(content)) !== null) {
+    result.push({
+      index: match.index,
+      line: lineNumberAt(content, match.index),
+      text: match[0],
+      groups: match.slice(1),
+    });
+
+    if (match[0] === "") {
+      regex.lastIndex += 1;
+    }
+  }
+
+  return result;
+}
+
+function snippet(content, startLine, endLine) {
+  const lines = content.split(/\r?\n/);
+  const start = Math.max(1, startLine);
+  const end = Math.min(lines.length, endLine);
+
+  return lines
+    .slice(start - 1, end)
+    .map((line, index) => {
+      const number = String(start + index).padStart(5, " ");
+      return `${number}: ${line}`;
+    })
+    .join("\n");
+}
+
+function sectionForMatch(content, match, before = 5, after = 18) {
+  if (!match) {
+    return "未找到";
+  }
+
+  return snippet(
+    content,
+    match.line - before,
+    match.line + after
+  );
+}
+
+function bool(value) {
+  return value ? "✅ 是" : "❌ 否";
+}
+
+function runGit(command) {
+  try {
+    return childProcess
+      .execSync(command, {
+        cwd: root,
+        encoding: "utf8",
+        stdio: ["ignore", "pipe", "pipe"],
+      })
+      .trim();
+  } catch {
+    return "无法读取";
+  }
+}
+
+function extractGetLayoutClassBlock(content) {
+  const match = content.match(
+    /function\s+getLayoutClass\s*\([\s\S]*?\n\}/
+  );
+
+  if (!match) {
+    return null;
+  }
+
+  return {
+    index: match.index,
+    line: lineNumberAt(content, match.index),
+    text: match[0],
+  };
+}
+
+function getFilterGroupPushBlocks(content) {
+  return findAll(
+    content,
+    /groups\.push\s*\(\s*\{[\s\S]*?\}\s*\);/g
+  ).filter((item) =>
+    item.text.includes("inputType") &&
+    item.text.includes("options")
+  );
+}
+
+function getCssRuleMatches(content, selectorPattern) {
+  return findAll(
+    content,
+    new RegExp(
+      selectorPattern + String.raw`\s*\{[\s\S]*?\}`,
+      "g"
+    )
+  );
+}
+
+for (const [name, filePath] of Object.entries(files)) {
+  if (!fs.existsSync(filePath)) {
+    throw new Error(
+      `缺少检查文件 ${name}：${filePath}`
+    );
+  }
+}
+
+const client = read(files.client);
+const panel = read(files.panel);
+const group = read(files.group);
+const types = read(files.types);
+const css = read(files.css);
+
+const activeProductTypeInClientPanel =
+  /<ProductFilterPanel[\s\S]*?activeProductTypeId\s*=\s*\{activeProductTypeId\}/m.test(
+    client
+  );
+
+const panelPropDeclared =
+  /activeProductTypeId\??\s*:\s*string/.test(panel);
+
+const panelDestructured =
+  /function\s+ProductFilterPanel\s*\(\s*\{[\s\S]*?\bactiveProductTypeId\b[\s\S]*?\}\s*:\s*ProductFilterPanelProps/m.test(
+    panel
+  );
+
+const panelPassesToGroup =
+  /<ProductFilterGroup[\s\S]*?activeProductTypeId\s*=\s*\{activeProductTypeId\}/m.test(
+    panel
+  );
+
+const groupPropDeclared =
+  /activeProductTypeId\??\s*:\s*string/.test(group);
+
+const groupDestructured =
+  /function\s+ProductFilterGroup\s*\(\s*\{[\s\S]*?\bactiveProductTypeId\b[\s\S]*?\}\s*:\s*ProductFilterGroupProps/m.test(
+    group
+  );
+
+const getLayoutClassBlock =
+  extractGetLayoutClassBlock(group);
+
+const getLayoutUsesProductType =
+  Boolean(
+    getLayoutClassBlock &&
+      getLayoutClassBlock.text.includes(
+        "thread-to-barbed-fittings"
+      )
+  );
+
+const layoutCallUsesProductType =
+  /getLayoutClass\s*\(\s*group\s*,\s*activeProductTypeId\s*\)/m.test(
+    group
+  );
+
+const typeSupportsLayout =
+  /layout\??\s*:\s*"one"\s*\|\s*"two"(?:\s*\|\s*"three")?/.test(
+    types
+  );
+
+const groupUsesLayoutProperty =
+  Boolean(
+    getLayoutClassBlock &&
+      /group\.layout/.test(getLayoutClassBlock.text)
+  );
+
+const clientContainsProductSpecificLayout =
+  /thread-to-barbed-fittings[\s\S]{0,900}(?:filter01|filter02)[\s\S]{0,900}(?:layout|one|two|three)/m.test(
+    client
+  );
+
+const clientFilterBlocks =
+  getFilterGroupPushBlocks(client);
+
+const cssOne = getCssRuleMatches(
+  css,
+  String.raw`\.filter-options\.one`
+);
+
+const cssTwo = getCssRuleMatches(
+  css,
+  String.raw`\.filter-options\.two`
+);
+
+const cssThree = getCssRuleMatches(
+  css,
+  String.raw`\.filter-options\.three`
+);
+
+const cssLayoutOne = getCssRuleMatches(
+  css,
+  String.raw`\.layout-one`
+);
+
+const cssLayoutTwo = getCssRuleMatches(
+  css,
+  String.raw`\.layout-two`
+);
+
+const cssDataOne = getCssRuleMatches(
+  css,
+  String.raw`\[data-filter-layout=["']one["']\]`
+);
+
+const cssDataTwo = getCssRuleMatches(
+  css,
+  String.raw`\[data-filter-layout=["']two["']\]`
+);
+
+const filterOptionsBase = getCssRuleMatches(
+  css,
+  String.raw`\.filter-options`
+).slice(0, 10);
+
+const groupClassMatch = findAll(
+  group,
+  /className=\{`filter-group[\s\S]*?`\}/g
+)[0];
+
+const optionsClassMatch = findAll(
+  group,
+  /className=\{`filter-options[\s\S]*?`\}/g
+)[0];
+
+const panelCallMatch = findAll(
+  client,
+  /<ProductFilterPanel[\s\S]*?\/>/g
+)[0];
+
+const groupCallMatch = findAll(
+  panel,
+  /<ProductFilterGroup[\s\S]*?\/>/g
+)[0];
+
+const groupFunctionMatch = findAll(
+  group,
+  /export\s+default\s+function\s+ProductFilterGroup[\s\S]*?\)\s*\{/g
+)[0];
+
+const panelFunctionMatch = findAll(
+  panel,
+  /export\s+default\s+function\s+ProductFilterPanel[\s\S]*?\)\s*\{/g
+)[0];
+
+const typeMatch = findAll(
+  types,
+  /export\s+type\s+ProductSelectionFilterGroup\s*=\s*\{[\s\S]*?\};/g
+)[0];
+
+const diagnosis = [];
+
+if (!activeProductTypeInClientPanel) {
+  diagnosis.push(
+    "ProductSelectionClient 没有把 activeProductTypeId 传给 ProductFilterPanel。"
+  );
+}
+
+if (!panelPropDeclared || !panelDestructured) {
+  diagnosis.push(
+    "ProductFilterPanel 没有完整声明或解构 activeProductTypeId。"
+  );
+}
+
+if (!panelPassesToGroup) {
+  diagnosis.push(
+    "ProductFilterPanel 没有把 activeProductTypeId 继续传给 ProductFilterGroup。"
+  );
+}
+
+if (!groupPropDeclared || !groupDestructured) {
+  diagnosis.push(
+    "ProductFilterGroup 没有完整声明或解构 activeProductTypeId。"
+  );
+}
+
+if (!getLayoutUsesProductType) {
+  diagnosis.push(
+    "getLayoutClass 当前没有根据 thread-to-barbed-fittings 判断布局。"
+  );
+}
+
+if (!layoutCallUsesProductType) {
+  diagnosis.push(
+    "调用 getLayoutClass 时没有传 activeProductTypeId。"
+  );
+}
+
+if (
+  cssOne.length === 0 &&
+  cssLayoutOne.length === 0 &&
+  cssDataOne.length === 0
+) {
+  diagnosis.push(
+    "globals.css 中未找到明确的一列布局规则。"
+  );
+}
+
+if (
+  cssTwo.length === 0 &&
+  cssLayoutTwo.length === 0 &&
+  cssDataTwo.length === 0
+) {
+  diagnosis.push(
+    "globals.css 中未找到明确的两列布局规则。"
+  );
+}
+
+if (diagnosis.length === 0) {
+  diagnosis.push(
+    "TSX 传参链路和一列/两列 CSS 均已找到。若页面仍无变化，重点检查 CSS 后置覆盖、开发服务缓存或实际页面是否加载了另一套组件。"
+  );
+}
+
+const report = [];
+
+report.push("# 螺纹转倒刺接头筛选布局检查报告");
+report.push("");
+report.push(`生成时间：${new Date().toLocaleString("zh-CN")}`);
+report.push("");
+report.push("> 本报告只读取当前本地项目，没有修改任何代码。");
+report.push("");
+
+report.push("## 1. 项目状态");
+report.push("");
+report.push(`- 当前分支：\`${runGit("git branch --show-current")}\``);
+report.push(`- 最新提交：\`${runGit("git log -1 --oneline")}\``);
+report.push("");
+report.push("```text");
+report.push(runGit("git status --short") || "工作区无未提交修改");
+report.push("```");
+report.push("");
+
+report.push("## 2. 目标布局");
+report.push("");
+report.push("```text");
+report.push("密封方式：每个选项独占一整行");
+report.push("连接结构：两个选项一排");
+report.push("```");
+report.push("");
+
+report.push("## 3. 当前传参链路");
+report.push("");
+report.push(
+  `- ProductSelectionClient → ProductFilterPanel 传 activeProductTypeId：${bool(
+    activeProductTypeInClientPanel
+  )}`
+);
+report.push(
+  `- ProductFilterPanel props 声明 activeProductTypeId：${bool(
+    panelPropDeclared
+  )}`
+);
+report.push(
+  `- ProductFilterPanel 解构 activeProductTypeId：${bool(
+    panelDestructured
+  )}`
+);
+report.push(
+  `- ProductFilterPanel → ProductFilterGroup 传 activeProductTypeId：${bool(
+    panelPassesToGroup
+  )}`
+);
+report.push(
+  `- ProductFilterGroup props 声明 activeProductTypeId：${bool(
+    groupPropDeclared
+  )}`
+);
+report.push(
+  `- ProductFilterGroup 解构 activeProductTypeId：${bool(
+    groupDestructured
+  )}`
+);
+report.push(
+  `- getLayoutClass 判断 thread-to-barbed-fittings：${bool(
+    getLayoutUsesProductType
+  )}`
+);
+report.push(
+  `- getLayoutClass 调用时传 activeProductTypeId：${bool(
+    layoutCallUsesProductType
+  )}`
+);
+report.push("");
+
+report.push("## 4. layout 数据方案");
+report.push("");
+report.push(
+  `- ProductSelectionFilterGroup 类型支持 layout：${bool(
+    typeSupportsLayout
+  )}`
+);
+report.push(
+  `- ProductFilterGroup 使用 group.layout：${bool(
+    groupUsesLayoutProperty
+  )}`
+);
+report.push(
+  `- ProductSelectionClient 中存在螺纹转倒刺专属布局判断：${bool(
+    clientContainsProductSpecificLayout
+  )}`
+);
+report.push("");
+
+report.push("## 5. CSS 布局规则");
+report.push("");
+report.push(`- \`.filter-options.one\`：${cssOne.length} 处`);
+report.push(`- \`.filter-options.two\`：${cssTwo.length} 处`);
+report.push(`- \`.filter-options.three\`：${cssThree.length} 处`);
+report.push(`- \`.layout-one\`：${cssLayoutOne.length} 处`);
+report.push(`- \`.layout-two\`：${cssLayoutTwo.length} 处`);
+report.push(
+  `- \`[data-filter-layout="one"]\`：${cssDataOne.length} 处`
+);
+report.push(
+  `- \`[data-filter-layout="two"]\`：${cssDataTwo.length} 处`
+);
+report.push("");
+
+report.push("## 6. 初步判断");
+report.push("");
+diagnosis.forEach((item, index) => {
+  report.push(`${index + 1}. ${item}`);
+});
+report.push("");
+
+report.push("## 7. ProductSelectionClient 调用 ProductFilterPanel");
+report.push("");
+report.push("```tsx");
+report.push(
+  sectionForMatch(client, panelCallMatch, 4, 24)
+);
+report.push("```");
+report.push("");
+
+report.push("## 8. ProductFilterPanel props 与传参");
+report.push("");
+report.push("### 8.1 函数参数");
+report.push("");
+report.push("```tsx");
+report.push(
+  sectionForMatch(panel, panelFunctionMatch, 8, 24)
+);
+report.push("```");
+report.push("");
+report.push("### 8.2 调用 ProductFilterGroup");
+report.push("");
+report.push("```tsx");
+report.push(
+  sectionForMatch(panel, groupCallMatch, 4, 18)
+);
+report.push("```");
+report.push("");
+
+report.push("## 9. ProductFilterGroup 当前布局逻辑");
+report.push("");
+report.push("### 9.1 getLayoutClass");
+report.push("");
+report.push("```tsx");
+report.push(
+  getLayoutClassBlock
+    ? sectionForMatch(group, getLayoutClassBlock, 2, 25)
+    : "未找到"
+);
+report.push("```");
+report.push("");
+report.push("### 9.2 函数参数");
+report.push("");
+report.push("```tsx");
+report.push(
+  sectionForMatch(group, groupFunctionMatch, 4, 20)
+);
+report.push("```");
+report.push("");
+report.push("### 9.3 输出的 class 与 data 属性");
+report.push("");
+report.push("```tsx");
+report.push(
+  sectionForMatch(group, groupClassMatch, 4, 12)
+);
+report.push("");
+report.push(
+  sectionForMatch(group, optionsClassMatch, 4, 12)
+);
+report.push("```");
+report.push("");
+
+report.push("## 10. ProductSelectionFilterGroup 类型");
+report.push("");
+report.push("```ts");
+report.push(
+  sectionForMatch(types, typeMatch, 2, 18)
+);
+report.push("```");
+report.push("");
+
+report.push("## 11. ProductSelectionClient 筛选组生成代码");
+report.push("");
+if (clientFilterBlocks.length === 0) {
+  report.push("未找到 groups.push 筛选组代码。");
+} else {
+  clientFilterBlocks.slice(0, 3).forEach((item, index) => {
+    report.push(`### 代码块 ${index + 1}`);
+    report.push("");
+    report.push("```tsx");
+    report.push(sectionForMatch(client, item, 4, 35));
+    report.push("```");
+    report.push("");
+  });
+}
+
+report.push("## 12. globals.css 相关规则");
+report.push("");
+
+const cssMatches = [
+  ...cssOne,
+  ...cssTwo,
+  ...cssThree,
+  ...cssLayoutOne,
+  ...cssLayoutTwo,
+  ...cssDataOne,
+  ...cssDataTwo,
+  ...filterOptionsBase,
+]
+  .sort((a, b) => a.line - b.line)
+  .filter(
+    (item, index, array) =>
+      index ===
+      array.findIndex(
+        (entry) =>
+          entry.line === item.line &&
+          entry.text === item.text
+      )
+  );
+
+if (cssMatches.length === 0) {
+  report.push("未找到相关 CSS 规则。");
+} else {
+  cssMatches.forEach((item, index) => {
+    report.push(`### CSS ${index + 1}（第 ${item.line} 行附近）`);
+    report.push("");
+    report.push("```css");
+    report.push(sectionForMatch(css, item, 3, 14));
+    report.push("```");
+    report.push("");
+  });
+}
+
+report.push("## 13. 下一步修改原则");
+report.push("");
+report.push("完成检查后再决定使用哪一种方案：");
+report.push("");
+report.push("1. **组件传参方案**：把 productTypeId 传到 ProductFilterGroup，由 getLayoutClass 精准判断。");
+report.push("2. **数据 layout 方案**：由 ProductSelectionClient 给每个筛选组写入 layout。");
+report.push("3. 两种方案只保留一种，避免互相覆盖。");
+report.push("4. 修改前先确认 globals.css 中真正生效的是 `.filter-options.one/two`、`.layout-one/two`，还是 data 属性选择器。");
+report.push("5. 不修改接头筛选数据、产品图片、路由和详情页。");
+report.push("");
+
+fs.mkdirSync(
+  path.dirname(reportPath),
+  { recursive: true }
+);
+
+fs.writeFileSync(
+  reportPath,
+  report.join("\n") + "\n",
+  "utf8"
+);
+
+console.log("");
+console.log("============================================");
+console.log("筛选布局检查完成");
+console.log("============================================");
+console.log("本次未修改任何代码。");
+console.log(`报告：${reportPath}`);
+console.log("");
+

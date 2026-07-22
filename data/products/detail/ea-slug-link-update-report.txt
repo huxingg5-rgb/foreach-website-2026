@@ -1,0 +1,31 @@
+============================================================
+EA product-center detail link update
+============================================================
+
+Selection file: data\products\selection\product-selection.generated.ts
+Service file: services\products\detail\getProductDetailPageData.ts
+
+Old detailSlug values replaced: 14
+Canonical unique detailSlug values: 14
+Image filenames containing ul preserved: 14
+
+Canonical routes:
+/products/pumps/ea-100-peek
+/products/pumps/ea-100-pmma
+/products/pumps/ea-1000-peek
+/products/pumps/ea-1000-pmma
+/products/pumps/ea-10000-peek
+/products/pumps/ea-10000-pmma
+/products/pumps/ea-250-peek
+/products/pumps/ea-250-pmma
+/products/pumps/ea-2500-peek
+/products/pumps/ea-2500-pmma
+/products/pumps/ea-500-peek
+/products/pumps/ea-500-pmma
+/products/pumps/ea-5000-peek
+/products/pumps/ea-5000-pmma
+
+Notes:
+- Only detailSlug values were canonicalized.
+- Product image filenames still contain ul and were not renamed.
+- Old URLs such as ea-100ul-pmma are no longer valid routes.

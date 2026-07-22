@@ -1,0 +1,98 @@
+.socialArea {
+  width: auto !important;
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.socialRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: nowrap;
+}
+
+.socialLink {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 42px;
+  border: 1px solid rgba(23, 51, 104, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.78);
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    background-color 0.18s ease;
+}
+
+.socialLink:hover {
+  transform: translateY(-2px);
+  border-color: #09e9b4;
+  background: #ffffff;
+}
+
+.socialLink:focus-visible {
+  outline: 2px solid #09e9b4;
+  outline-offset: 3px;
+}
+
+.socialIcon {
+  width: 26px;
+  height: 26px;
+  display: block;
+  object-fit: contain;
+}
+
+@media (max-width: 760px) {
+  .socialRow {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .socialLink {
+    width: 40px;
+    height: 40px;
+    flex-basis: 40px;
+  }
+
+  .socialIcon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* 仅放大全站 PC 端底部文字；1000px 及以下保持原有手机端字号。 */
+@media (min-width: 1001px) {
+  :global(.site-footer__title) {
+    font-size: 16px !important;
+  }
+
+  :global(.site-footer__list a) {
+    font-size: 14px !important;
+  }
+
+  :global(.site-footer__company) {
+    font-size: 26px !important;
+  }
+
+  :global(.site-footer__contact-text),
+  :global(.site-footer__map-link) {
+    font-size: 14px !important;
+  }
+
+  :global(.site-footer__qrcode-box),
+  :global(.site-footer__qrcode-label) {
+    font-size: 13px !important;
+  }
+
+  :global(.site-footer__bottom-left p),
+  :global(.site-footer__legal-link),
+  :global(.site-footer__cookie-button),
+  :global(.site-footer__legal-separator) {
+    font-size: 13px !important;
+  }
+}
