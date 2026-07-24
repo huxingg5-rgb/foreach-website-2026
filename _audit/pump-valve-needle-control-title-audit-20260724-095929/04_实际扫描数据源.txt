@@ -1,0 +1,242 @@
+﻿产品系列	产品型号	数据源文件
+泵		data/products/generated/pumps/diaphragm-pumps/detail/dpgl800-gas-liquid-diaphragm-pump.json | data/products/generated/pumps/diaphragm-pumps/detail/index.json
+泵		data/products/generated/pumps/diaphragm-pumps/detail/dpgl800-gas-liquid-diaphragm-pump.json | data/products/generated/pumps/diaphragm-pumps/detail/index.json
+泵		data/products/generated/pumps/diaphragm-pumps/detail/dpl30-liquid-diaphragm-pump.json | data/products/generated/pumps/diaphragm-pumps/detail/index.json
+泵		data/products/generated/pumps/diaphragm-pumps/detail/dpl30-liquid-diaphragm-pump.json | data/products/generated/pumps/diaphragm-pumps/detail/index.json
+泵		data/products/generated/pumps/diaphragm-pumps/detail/dpl30h-liquid-diaphragm-pump.json | data/products/generated/pumps/diaphragm-pumps/detail/index.json
+泵		data/products/generated/pumps/diaphragm-pumps/detail/dpl30h-liquid-diaphragm-pump.json | data/products/generated/pumps/diaphragm-pumps/detail/index.json
+泵		data/products/generated/pumps/diaphragm-pumps/detail/dpl60-liquid-diaphragm-pump.json | data/products/generated/pumps/diaphragm-pumps/detail/index.json
+泵		data/products/generated/pumps/diaphragm-pumps/detail/dpl60-liquid-diaphragm-pump.json | data/products/generated/pumps/diaphragm-pumps/detail/index.json
+泵		data/products/generated/pumps/diaphragm-pumps/detail/index.json
+泵		data/products/generated/pumps/diaphragm-pumps/detail/index.json
+泵		data/products/generated/pumps/diaphragm-pumps/detail/index.json
+泵		data/products/generated/pumps/diaphragm-pumps/detail/index.json
+泵		data/products/generated/pumps/diaphragm-pumps/detail/index.json
+泵		data/products/generated/pumps/diaphragm-pumps/detail/index.json
+泵		data/products/generated/pumps/diaphragm-pumps/detail/index.json
+泵		data/products/generated/pumps/diaphragm-pumps/detail/index.json
+泵	DRPL-0109	data/products/generated/pumps/valveless-pumps/detail/index.json
+泵	DRPL-0119	data/products/generated/pumps/valveless-pumps/detail/index.json
+泵		data/products/generated/pumps/syringe-pumps/detail/index.json
+泵		data/products/generated/pumps/syringe-pumps/detail/index.json
+泵		data/products/generated/pumps/syringe-pumps/detail/index.json
+泵		data/products/generated/pumps/syringe-pumps/detail/index.json
+泵	RPL-P15	data/products/generated/pumps/valveless-pumps/detail/index.json
+泵	RPL-P4	data/products/generated/pumps/valveless-pumps/detail/index.json
+泵	RPL-P6.35	data/products/generated/pumps/valveless-pumps/detail/index.json
+泵	SMTP2-1000μL	data/products/generated/pumps/pipetting-pumps/detail/index.json
+泵	SMTP4-100μL	data/products/generated/pumps/pipetting-pumps/detail/index.json
+泵	SMTP4-500μL	data/products/generated/pumps/pipetting-pumps/detail/index.json
+阀		data/products/generated/valves/detail/index.json
+阀		data/products/generated/valves/detail/index.json
+阀		data/products/generated/valves/detail/index.json
+阀	CV-BE-24-PP-N	data/products/generated/fittings/check-valves/detail/index.json
+阀	CV-BE-32-PP-N	data/products/generated/fittings/check-valves/detail/index.json
+阀	CV-BE-32-PV-N	data/products/generated/fittings/check-valves/detail/index.json
+阀	CV-BE-64-PP-N	data/products/generated/fittings/check-valves/detail/index.json
+阀	CV-BE-79-PP-N	data/products/generated/fittings/check-valves/detail/index.json
+阀	CV-BE-95-PP-N	data/products/generated/fittings/check-valves/detail/index.json
+阀	CV-BF-16-PV-N	data/products/generated/fittings/check-valves/detail/index.json
+阀	CV-BF-32-PP-B	data/products/generated/fittings/check-valves/detail/index.json
+阀	CV-BF-32-PP-N	data/products/generated/fittings/check-valves/detail/index.json
+阀	CV-BV-32-PP-N	data/products/generated/fittings/check-valves/detail/index.json
+阀	CV-BV-48-PP-N	data/products/generated/fittings/check-valves/detail/index.json
+阀	CV-BV-64-PP-N	data/products/generated/fittings/check-valves/detail/index.json
+阀	CV-BV-79-PP-N	data/products/generated/fittings/check-valves/detail/index.json
+阀	CV-DE-16-PV-N	data/products/generated/fittings/check-valves/detail/index.json
+阀	CV-DE-24-PV-N	data/products/generated/fittings/check-valves/detail/index.json
+阀	CV-DE-32-PV-N	data/products/generated/fittings/check-valves/detail/index.json
+阀	Q2001-PMV-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2001-PMV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2001-PMX-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2001-PMX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2001-PNV-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2001-PNV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2001-PNX-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2001-PNX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2001-SMV-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2001-SMV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2001-SMX-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2001-SMX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2001-SNV-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2001-SNV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2001-SNX-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2001-SNX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2002-PMV-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2002-PMV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2002-PMX-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2002-PMX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2002-PNV-LACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2002-PNV-LPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2002-PNV-SACF	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2002-PNV-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2002-PNV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2002-PNX-LACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2002-PNX-LPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2002-PNX-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2002-PNX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2002-SMV-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2002-SMV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2002-SMX-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2002-SMX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2002-SNV-LACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2002-SNV-LPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2002-SNV-SACF	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2002-SNV-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2002-SNV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2002-SNX-LACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2002-SNX-LPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2002-SNX-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2002-SNX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2003-PMV-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2003-PMV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2003-PMX-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2003-PMX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2003-PNV-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2003-PNV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2003-PNX-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2003-PNX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2003-SMV-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2003-SMV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2003-SMX-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2003-SMX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2003-SNV-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2003-SNV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2003-SNX-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2003-SNX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2004-PMV-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2004-PMV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2004-PMX-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2004-PMX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2004-PNV-LACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2004-PNV-LPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2004-PNV-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2004-PNV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2004-PNX-LACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2004-PNX-LPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2004-PNX-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2004-PNX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2004-SMV-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2004-SMV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2004-SMX-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2004-SMX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2004-SNV-LACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2004-SNV-LPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2004-SNV-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2004-SNV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2004-SNX-LACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2004-SNX-LPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2004-SNX-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2004-SNX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2018N-PNV-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2018N-PNV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2018N-PNX-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2018N-PNX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2018N-SNV-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2018N-SNV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2018N-SNX-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2018N-SNX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2018T-SNV-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2018T-SNV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2018T-SNX-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2018T-SNX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2028U-PNV-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2028U-PNV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2028U-SMV-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q2028U-SMV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4004-PMV-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4004-PMV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4004-PMX-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4004-PMX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4004-PNV-LACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4004-PNV-LPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4004-PNV-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4004-PNV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4004-PNX-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4004-PNX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4004-SMV-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4004-SMV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4004-SMX-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4004-SMX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4004-SNV-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4004-SNV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4004-SNX-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4004-SNX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4005-PMV-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4005-PMV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4005-PMX-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4005-PMX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4005-PNV-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4005-PNV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4005-PNX-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4005-PNX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4005-SMV-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4005-SMV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4005-SMX-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4005-SMX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4005-SNV-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4005-SNV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4005-SNX-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4005-SNX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4006-PMV-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4006-PMV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4006-PMX-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4006-PMX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4006-PNV-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4006-PNV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4006-PNX-LACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4006-PNX-LPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4006-PNX-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4006-PNX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4006-SMV-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4006-SMV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4006-SMX-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4006-SMX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4006-SNV-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4006-SNV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4006-SNX-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4006-SNX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4014N-PNV-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4014N-PNV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4014N-SNV-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4014N-SNV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4014N-SNX-SACN	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q4014N-SNX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q6006-PNV-LPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q6006-PNV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q6006-PNX-LPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q6006-PNX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q6006-SMV-LPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q6006-SMV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q6006-SMX-LPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q6006-SMX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q6006-SNV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q6006-SNX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q6008-PNV-LPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q6008-PNV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q6008-PNX-LPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q6008-PNX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q6008-SMV-LPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q6008-SMV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q6008-SMX-LPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q6008-SMX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q6008-SNV-LPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q6008-SNV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q6008-SNX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q6012-PNV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q6012-PNX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q6012-SMV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q6012-SMX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q6012-SNV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q6012-SNX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q6012N-PNV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q6012N-PNX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q6012N-SNV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q6012N-SNX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q6038N-PNV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q6038N-PNX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q6038N-SNV-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+阀	Q6038N-SNX-SPPE	data/products/generated/fittings/quick-connect-fittings/detail/index.json
+针		data/products/generated/probes/detail/index.json
+针		data/products/generated/probes/detail/index.json
+针		data/products/generated/probes/detail/index.json

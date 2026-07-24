@@ -66,6 +66,47 @@ export const newsIntlData: NewsPageData = {
 
   articles: [
     {
+      id: "adlm-2026-team-departure",
+      slug: "adlm-2026-team-departure",
+      category: "exhibition",
+      title: "Meet FOREACH at ADLM 2026",
+      summary:
+        "FOREACH will exhibit at ADLM 2026 in Anaheim from July 26 to 30, 2026. Visit Booth 4105 to explore precision fluid control components and application-focused fluidic solutions for IVD, life science, analytical instruments, and laboratory automation.",
+      date: "2026-07-23",
+      coverImage: "/images/resources/news/articles/adlm-2026-team-departure/cover.webp",
+      isPinned: true,
+      content: [
+        {
+          title: "Meet FOREACH in Anaheim",
+          content:
+            "FOREACH will participate in ADLM 2026, taking place in Anaheim, California, from July 26 to 30, 2026.\n\nAt Booth 4105, our team will meet with instrument manufacturers, engineers, and industry partners to discuss fluid control challenges, component selection, and fluidic system integration.",
+        },
+        {
+          title: "What We Will Present",
+          content:
+            "Our exhibition portfolio will include precision pumps, miniature valves, fluidic fittings, tubing, pressure sensing, bubble detection, and customized fluidic solutions.\n\nThese products support critical fluidic functions such as accurate liquid metering, fluid transfer, flow-path switching, pressure monitoring, bubble detection, and reliable fluid connections.",
+        },
+        {
+          title: "Engineering Support for Instrument Applications",
+          content:
+            "FOREACH supports applications in in vitro diagnostics, life science, analytical instruments, and laboratory automation.\n\nBeyond supplying individual components, our engineering team assists customers with material compatibility, product selection, alternative component evaluation, and fluidic system integration.",
+        },
+        {
+          title: "Experience in Precision Fluid Control",
+          content:
+            "FOREACH continues to develop and industrialize precision fluid control technologies across pumps, valves, probes, fittings, tubing, sensors, and integrated fluidic solutions.\n\nThe company has received recognition in China for specialized innovation and high-growth development, reflecting its continued investment in product development, engineering capability, and manufacturing.",
+        },
+        {
+          title: "Visit Booth 4105",
+          content:
+            "Whether you are looking for a new fluidic component, an alternative to an existing product, or support with material compatibility and system integration, we welcome you to visit Booth 4105.\n\nEvent: ADLM 2026\nDate: July 26–30, 2026\nLocation: Anaheim, California, USA\nBooth: 4105\n\nWe look forward to meeting you in Anaheim.",
+        },
+      ],
+      seoTitle: "Meet FOREACH at ADLM 2026 | Booth 4105",
+      seoDescription:
+        "Visit FOREACH at Booth 4105 during ADLM 2026 in Anaheim and explore precision fluid control components and application-focused fluidic solutions.",
+    },
+    {
       id: "adlm-2026",
       slug: "adlm-2026",
       category: "exhibition",
@@ -106,7 +147,7 @@ export const newsIntlData: NewsPageData = {
       summary:
         "FOREACH will exhibit at the 2026 ME Supply Chain Expo at Booth 2-M46, presenting core products, technical capabilities, and multi-scenario application solutions.",
       date: "2026-03-27",
-      coverImage: "/images/resources/news/articles/me-supply-chain-expo-2026/cover.png",
+      coverImage: "/images/resources/news/articles/me-supply-chain-expo-2026/cover.webp",
       isPinned: true,
       content: [
         {
@@ -137,7 +178,7 @@ export const newsIntlData: NewsPageData = {
       summary:
         "FOREACH will exhibit at Guangzhou High Medical Expo 2026 from March 30 to April 1 at Booth B529.",
       date: "2026-03-26",
-      coverImage: "/images/resources/news/articles/guangzhou-high-med-expo-2026/cover.png",
+      coverImage: "/images/resources/news/articles/guangzhou-high-med-expo-2026/cover.webp",
       content: [
         {
           title: "Exhibition Information",
@@ -167,7 +208,7 @@ export const newsIntlData: NewsPageData = {
       summary:
         "FOREACH will exhibit at CACLP 2026 from March 21 to 23 at Booth 2-0424.",
       date: "2026-03-17",
-      coverImage: "/images/resources/news/articles/caclp-2026/cover.png",
+      coverImage: "/images/resources/news/articles/caclp-2026/cover.webp",
       isPinned: true,
       content: [
         {
@@ -198,7 +239,7 @@ export const newsIntlData: NewsPageData = {
       summary:
         "FOREACH will exhibit at WHX Labs Dubai 2026 at Booth H2.F34, presenting core microfluidic products, technical strengths, and application solutions.",
       date: "2026-02-07",
-      coverImage: "/images/resources/news/articles/whx-labs-dubai-2026/cover.png",
+      coverImage: "/images/resources/news/articles/whx-labs-dubai-2026/cover.webp",
       isPinned: true,
       content: [
         {

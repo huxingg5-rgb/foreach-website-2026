@@ -1,4 +1,4 @@
-﻿/* =========================================================
+/* =========================================================
    installation-guide.css
    恒永达官网｜安装教程页面专用样式
 
@@ -758,3 +758,863 @@
     font-size: 20px;
   }
 }
+
+/* INSTALLATION_GUIDE_MODAL_PLAYER_START */
+
+/* =========================================================
+   安装教程｜视频弹层
+
+   结构：
+   1. 上方视频
+   2. 下方教程主题
+
+   禁止：
+   1. 标题排列到视频右侧
+   2. 视频 cover 裁切
+   3. 视频比例拉伸
+========================================================= */
+
+.installation-guide-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 5000;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  background: rgba(5, 16, 38, 0.82);
+  backdrop-filter: blur(4px);
+}
+
+/*
+ * 强制弹层使用上下排列。
+ * 即使前面还有旧版 grid 或 flex 样式，也不能排成左右两列。
+ */
+.installation-guide-modal {
+  position: relative;
+  width: min(1280px, calc(100vw - 48px));
+  max-height: calc(100vh - 48px);
+  margin: auto;
+  padding: 0 !important;
+  border: 0;
+  border-radius: 12px;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  grid-template-columns: none !important;
+  background: #ffffff;
+  box-shadow:
+    0 28px 90px rgba(2, 13, 34, 0.5);
+  overflow: hidden;
+}
+
+/* =========================================================
+   关闭按钮
+========================================================= */
+
+.installation-guide-modal-close {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  z-index: 20;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.58);
+  cursor: pointer;
+}
+
+.installation-guide-modal-close:hover {
+  background: rgba(0, 0, 0, 0.86);
+}
+
+.installation-guide-modal-close span {
+  display: block;
+  margin-top: -3px;
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 300;
+}
+
+/* =========================================================
+   视频区域
+========================================================= */
+
+.installation-guide-modal-stage {
+  position: relative;
+  flex: 0 0 auto !important;
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  grid-column: 1 / -1 !important;
+  background: #000000;
+  overflow: hidden;
+}
+
+/*
+ * 本地视频使用视频自身比例。
+ */
+.installation-guide-modal-stage.is-video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 260px;
+}
+
+/*
+ * Bilibili 与 YouTube 采用标准播放器比例。
+ */
+.installation-guide-modal-stage.is-iframe,
+.installation-guide-modal-stage.is-empty {
+  aspect-ratio: 16 / 9;
+}
+
+/*
+ * 本地视频：
+ * 1. 宽度不超过弹层
+ * 2. 高度自动计算
+ * 3. 保持原始比例
+ * 4. 不裁切
+ */
+.installation-guide-modal-video {
+  display: block;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: calc(100vh - 145px);
+  margin: 0 auto;
+  background: #000000;
+  object-fit: contain !important;
+  object-position: center center;
+}
+
+/*
+ * 第三方视频播放器。
+ */
+.installation-guide-modal-iframe {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0;
+  background: #000000;
+}
+
+/* =========================================================
+   暂无视频提示
+========================================================= */
+
+.installation-guide-modal-empty {
+  position: absolute;
+  inset: 0;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.installation-guide-modal-empty span {
+  width: 64px;
+  height: 64px;
+  padding-left: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #09e9b4;
+  font-size: 24px;
+}
+
+.installation-guide-modal-empty strong {
+  max-width: 680px;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+/* =========================================================
+   视频下方主题
+
+   强制占据整行，不能出现在右侧。
+========================================================= */
+
+.installation-guide-modal-title {
+  position: relative;
+  flex: 0 0 auto !important;
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 14px 18px 17px !important;
+  grid-column: 1 / -1 !important;
+  border-top: 1px solid #e5e9ef;
+  background: #ffffff;
+}
+
+.installation-guide-modal-title h2 {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: #111827;
+  font-size: 20px;
+  line-height: 1.45;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+/*
+ * 清除旧版右侧文字区域可能残留的布局。
+ */
+.installation-guide-modal-copy {
+  display: none !important;
+}
+
+/* =========================================================
+   卡片由链接改成按钮后的基础样式
+========================================================= */
+
+button.installation-guide-card {
+  width: 100%;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  appearance: none;
+}
+
+.installation-guide-card-image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* =========================================================
+   手机端
+========================================================= */
+
+@media (max-width: 760px) {
+  .installation-guide-modal-backdrop {
+    padding: 10px;
+  }
+
+  .installation-guide-modal {
+    width: calc(100vw - 20px);
+    max-height: calc(100vh - 20px);
+    border-radius: 8px;
+  }
+
+  .installation-guide-modal-close {
+    right: 9px;
+    top: 9px;
+    width: 38px;
+    height: 38px;
+  }
+
+  .installation-guide-modal-close span {
+    font-size: 27px;
+  }
+
+  .installation-guide-modal-video {
+    max-height: calc(100vh - 105px);
+  }
+
+  .installation-guide-modal-title {
+    padding: 11px 13px 13px !important;
+  }
+
+  .installation-guide-modal-title h2 {
+    font-size: 17px;
+  }
+}
+
+/* INSTALLATION_GUIDE_MODAL_PLAYER_END */
+
+/* INSTALLATION_GUIDE_REAL_COVERS_START */
+
+/* 教程卡片使用导入的真实封面 */
+.installation-guide-card-image {
+  position: relative;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: cover !important;
+}
+
+/* 播放按钮始终位于封面正中央 */
+.installation-guide-card-play {
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+/* 删除卡片底部“视频暂未上传”等小字 */
+.installation-guide-card-action small {
+  display: none !important;
+}
+
+/* 没有小字后，避免底部留下多余空白 */
+.installation-guide-card-action {
+  min-height: 0 !important;
+}
+
+/* INSTALLATION_GUIDE_REAL_COVERS_END */
+
+/* INSTALLATION_GUIDE_MINIMAL_CARD_START */
+
+/* =========================================================
+   安装教程卡片最终结构
+
+   只保留：
+   1. 视频封面
+   2. 首页同款播放按钮
+   3. 视频主题
+
+   删除：
+   1. 产品分类
+   2. 标签
+   3. 点击观看
+   4. 多余底部空白
+========================================================= */
+
+/*
+ * 即使旧 JSX 或旧样式仍有残留，
+ * 也不显示分类、标签和操作文字。
+ */
+.installation-guide-card-info,
+.installation-guide-card-action {
+  display: none !important;
+}
+
+/* 卡片整体 */
+button.installation-guide-card,
+.installation-guide-card {
+  width: 100%;
+  padding: 0 !important;
+  border: 1px solid var(--installation-guide-line);
+  border-radius: 0;
+  display: block !important;
+  color: inherit;
+  background: #ffffff;
+  font: inherit;
+  text-align: left;
+  appearance: none;
+  overflow: hidden;
+}
+
+/* =========================================================
+   视频封面
+========================================================= */
+
+.installation-guide-card-image {
+  position: relative !important;
+  width: 100% !important;
+  aspect-ratio: 16 / 9;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-bottom: 1px solid
+    var(--installation-guide-soft-line);
+  display: block !important;
+  background-color: #eef3f7;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  overflow: hidden;
+}
+
+/*
+ * 去掉旧版可能存在的左上角三角形和装饰图形。
+ */
+.installation-guide-card-image::before,
+.installation-guide-card-image::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* =========================================================
+   首页同款播放按钮
+
+   深蓝圆形底 + 荧光绿色播放三角形。
+========================================================= */
+
+.installation-guide-card-play {
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  z-index: 5;
+  width: 66px !important;
+  height: 66px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 1px solid
+    rgba(255, 255, 255, 0.52) !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: transparent !important;
+  background:
+    rgba(23, 51, 104, 0.9) !important;
+  box-shadow:
+    0 10px 28px rgba(8, 28, 65, 0.24);
+  font-size: 0 !important;
+  line-height: 0 !important;
+  transform:
+    translate(-50%, -50%) !important;
+  transition:
+    transform 0.22s ease,
+    background 0.22s ease,
+    box-shadow 0.22s ease;
+  pointer-events: none;
+}
+
+/*
+ * 使用 CSS 绘制荧光绿色三角形。
+ */
+.installation-guide-card-play::before {
+  content: "" !important;
+  display: block !important;
+  width: 0;
+  height: 0;
+  margin-left: 5px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 17px solid
+    var(--installation-guide-cyan);
+}
+
+/*
+ * 卡片悬停时与首页视频按钮一致：
+ * 圆形按钮轻微放大，背景加深。
+ */
+.installation-guide-card:hover
+  .installation-guide-card-play,
+.installation-guide-card.is-active
+  .installation-guide-card-play {
+  background:
+    var(--installation-guide-blue) !important;
+  box-shadow:
+    0 14px 34px rgba(8, 28, 65, 0.32);
+  transform:
+    translate(-50%, -50%)
+    scale(1.08) !important;
+}
+
+/* =========================================================
+   标题
+========================================================= */
+
+.installation-guide-card-body {
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 20px 20px 22px !important;
+  display: block !important;
+}
+
+.installation-guide-card-body h3 {
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: var(--installation-guide-blue);
+  font-size: 20px;
+  line-height: 1.45;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+/*
+ * 当前选中和鼠标悬停时，
+ * 标题使用品牌荧光绿色。
+ */
+.installation-guide-card:hover
+  .installation-guide-card-body h3,
+.installation-guide-card.is-active
+  .installation-guide-card-body h3 {
+  color: #00b98a;
+}
+
+/* =========================================================
+   手机端
+========================================================= */
+
+@media (max-width: 760px) {
+  .installation-guide-card-play {
+    width: 56px !important;
+    height: 56px !important;
+  }
+
+  .installation-guide-card-play::before {
+    border-top-width: 8px;
+    border-bottom-width: 8px;
+    border-left-width: 14px;
+  }
+
+  .installation-guide-card-body {
+    padding: 16px 16px 18px !important;
+  }
+
+  .installation-guide-card-body h3 {
+    font-size: 18px;
+  }
+}
+
+/* INSTALLATION_GUIDE_MINIMAL_CARD_END */
+
+/* INSTALLATION_GUIDE_TAGS_AND_PLAY_REFINED_START */
+
+/* =========================================================
+   安装教程卡片最终显示规则
+
+   保留：
+   1. 封面
+   2. 播放按钮
+   3. 标题
+   4. 标签
+
+   去掉：
+   1. 产品分类
+   2. 点击观看
+========================================================= */
+
+.installation-guide-card-info,
+.installation-guide-card-action {
+  display: none !important;
+}
+
+/* =========================================================
+   播放按钮：中间白色三角形，外层圆更透明
+========================================================= */
+
+.installation-guide-card-play {
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  z-index: 5;
+  width: 66px !important;
+  height: 66px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 1px solid rgba(255, 255, 255, 0.32) !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: transparent !important;
+  background: rgba(23, 51, 104, 0.52) !important;
+  box-shadow: 0 10px 28px rgba(8, 28, 65, 0.14);
+  font-size: 0 !important;
+  line-height: 0 !important;
+  transform: translate(-50%, -50%) !important;
+  transition:
+    transform 0.22s ease,
+    background 0.22s ease,
+    box-shadow 0.22s ease;
+  pointer-events: none;
+}
+
+.installation-guide-card-play::before {
+  content: "" !important;
+  display: block !important;
+  width: 0;
+  height: 0;
+  margin-left: 5px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 17px solid #ffffff;
+}
+
+.installation-guide-card:hover
+  .installation-guide-card-play,
+.installation-guide-card.is-active
+  .installation-guide-card-play {
+  background: rgba(23, 51, 104, 0.72) !important;
+  box-shadow: 0 14px 34px rgba(8, 28, 65, 0.22);
+  transform:
+    translate(-50%, -50%)
+    scale(1.08) !important;
+}
+
+/* =========================================================
+   标题
+========================================================= */
+
+.installation-guide-card-body {
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 18px 20px 18px !important;
+  display: block !important;
+}
+
+.installation-guide-card-body h3 {
+  margin: 0 !important;
+  padding: 0 !important;
+  color: var(--installation-guide-blue);
+  font-size: 20px;
+  line-height: 1.45;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.installation-guide-card:hover
+  .installation-guide-card-body h3,
+.installation-guide-card.is-active
+  .installation-guide-card-body h3 {
+  color: #00b98a;
+}
+
+/* =========================================================
+   标签
+========================================================= */
+
+.installation-guide-card-tags {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.installation-guide-card-tags span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 26px;
+  padding: 4px 10px;
+  border: 1px solid #dbe4ef;
+  background: #f5f8fc;
+  color: var(--installation-guide-blue);
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   手机端
+========================================================= */
+
+@media (max-width: 760px) {
+  .installation-guide-card-play {
+    width: 56px !important;
+    height: 56px !important;
+  }
+
+  .installation-guide-card-play::before {
+    border-top-width: 8px;
+    border-bottom-width: 8px;
+    border-left-width: 14px;
+  }
+
+  .installation-guide-card-body {
+    padding: 16px 16px 16px !important;
+  }
+
+  .installation-guide-card-body h3 {
+    font-size: 18px;
+  }
+
+  .installation-guide-card-tags {
+    margin-top: 12px;
+    gap: 6px;
+  }
+
+  .installation-guide-card-tags span {
+    min-height: 24px;
+    padding: 3px 9px;
+    font-size: 11px;
+  }
+}
+
+/* INSTALLATION_GUIDE_TAGS_AND_PLAY_REFINED_END */
+/* INSTALLATION_GUIDE_STABLE_PLAY_BUTTON_START */
+
+/* =========================================================
+   教程卡片播放按钮稳定定位
+
+   处理原则：
+   1. 圆形始终固定在封面中心
+   2. 悬停时禁止缩放和位移
+   3. 三角形通过绝对定位锁定在圆形内部
+   4. 悬停只改变圆形背景透明度
+========================================================= */
+
+.installation-guide-card-play {
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+
+  width: 66px !important;
+  height: 66px !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  border-radius: 50% !important;
+
+  display: block !important;
+
+  background: rgba(23, 51, 104, 0.48) !important;
+  box-shadow: 0 8px 24px rgba(8, 28, 65, 0.16);
+
+  /*
+   * translate 只负责居中。
+   * 后续所有状态都不得修改 transform。
+   */
+  transform: translate(-50%, -50%) !important;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease !important;
+
+  pointer-events: none;
+}
+
+/*
+ * 白色三角形独立绝对定位。
+ * 稍微向右偏移，补偿三角形视觉重心。
+ */
+.installation-guide-card-play::before {
+  content: "" !important;
+
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+
+  display: block !important;
+  width: 0 !important;
+  height: 0 !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  border-top: 10px solid transparent !important;
+  border-bottom: 10px solid transparent !important;
+  border-left: 17px solid #ffffff !important;
+  border-right: 0 !important;
+
+  /*
+   * 向左移动约 38%，而不是 50%，
+   * 让三角形视觉中心与圆心一致。
+   */
+  transform: translate(-38%, -50%) !important;
+
+  transition: none !important;
+}
+
+/*
+ * 清除可能残留的第二个伪元素。
+ */
+.installation-guide-card-play::after {
+  content: none !important;
+  display: none !important;
+}
+
+/*
+ * 悬停和选中状态：
+ * 不允许 scale，也不改变位置。
+ * 只加深圆形透明度。
+ */
+.installation-guide-card:hover
+  .installation-guide-card-play,
+.installation-guide-card.is-active
+  .installation-guide-card-play {
+  background: rgba(23, 51, 104, 0.66) !important;
+  border-color: rgba(255, 255, 255, 0.48) !important;
+  box-shadow: 0 10px 28px rgba(8, 28, 65, 0.22);
+
+  transform: translate(-50%, -50%) !important;
+}
+
+/*
+ * 点击时也不产生缩放和位置变化。
+ */
+.installation-guide-card:active
+  .installation-guide-card-play {
+  transform: translate(-50%, -50%) !important;
+}
+
+/*
+ * 三角形在所有状态下保持固定。
+ */
+.installation-guide-card:hover
+  .installation-guide-card-play::before,
+.installation-guide-card.is-active
+  .installation-guide-card-play::before,
+.installation-guide-card:active
+  .installation-guide-card-play::before {
+  transform: translate(-38%, -50%) !important;
+}
+
+/* 手机端 */
+@media (max-width: 760px) {
+  .installation-guide-card-play {
+    width: 56px !important;
+    height: 56px !important;
+  }
+
+  .installation-guide-card-play::before {
+    border-top-width: 8px !important;
+    border-bottom-width: 8px !important;
+    border-left-width: 14px !important;
+  }
+}
+
+/* INSTALLATION_GUIDE_STABLE_PLAY_BUTTON_END */
+
+/* INSTALLATION_GUIDE_800_STABLE_COVER_START */
+
+/*
+ * 800 系列气液隔膜泵教程固定封面。
+ *
+ * 使用 data-guide-id 精确定位，
+ * 不再依赖初始化后可能被覆盖的内联背景。
+ */
+.installation-guide-card-image[data-guide-id="youtube-800-series-gas-liquid"] {
+  background-image:
+    url("/images/resources/installation-guide/youtube/800-series-gas-liquid-cover-fixed-v006.png") !important;
+
+  background-position:
+    center center !important;
+
+  background-repeat:
+    no-repeat !important;
+
+  background-size:
+    cover !important;
+
+  background-color:
+    #eef3f7 !important;
+}
+
+/*
+ * 鼠标悬停、点击及选中后，
+ * 仍保持同一张封面，不允许其他规则覆盖。
+ */
+.installation-guide-card:hover
+  .installation-guide-card-image[data-guide-id="youtube-800-series-gas-liquid"],
+.installation-guide-card:active
+  .installation-guide-card-image[data-guide-id="youtube-800-series-gas-liquid"],
+.installation-guide-card.is-active
+  .installation-guide-card-image[data-guide-id="youtube-800-series-gas-liquid"] {
+  background-image:
+    url("/images/resources/installation-guide/youtube/800-series-gas-liquid-cover-fixed-v006.png") !important;
+}
+
+/* INSTALLATION_GUIDE_800_STABLE_COVER_END */

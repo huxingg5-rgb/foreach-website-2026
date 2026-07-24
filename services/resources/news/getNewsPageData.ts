@@ -16,8 +16,10 @@
 import { newsZhData } from "@/data/resources/news/news.zh";
 import { newsIntlData } from "@/data/resources/news/news.intl";
 import { localizeNews } from "@/data/resources/news/news.translations";
+import { getQualityAndRecognitionArticles } from "@/data/resources/news/news.quality-updates";
 
 import type {
+  NewsArticle,
   NewsLocale,
   NewsPageData,
 } from "@/data/resources/news/news.types";
@@ -74,14 +76,81 @@ function getLocalizedIntlNewsData(locale: NewsLocale): NewsPageData {
   };
 }
 
-export function getNewsPageData(locale: NewsLocale): NewsPageData {
+/* NEWS_QUALITY_MERGE_HELPER_START */
+
+/*
+ * 合并质量体系、企业荣誉与生产制造专题新闻。
+ *
+ * 规则：
+ * 1. 如果新专题和原新闻 slug 相同，新专题覆盖原文章。
+ * 2. 合并完成后按照日期倒序排列。
+ * 3. 不修改原来的 news.zh.ts、news.intl.ts 和翻译索引。
+ */
+function mergeQualityAndRecognitionArticles(
+  pageData: NewsPageData,
+  locale: NewsLocale
+): NewsPageData {
+  const supplementalArticles =
+    getQualityAndRecognitionArticles(locale);
+
+  const supplementalSlugs = new Set(
+    supplementalArticles.map((article) => article.slug)
+  );
+
+  const retainedArticles = pageData.articles.filter(
+    (article) => !supplementalSlugs.has(article.slug)
+  );
+
+  const articles: NewsArticle[] = [
+    ...retainedArticles,
+    ...supplementalArticles,
+  ].sort((articleA, articleB) => {
+    const dateCompare =
+      articleB.date.localeCompare(articleA.date);
+
+    if (dateCompare !== 0) {
+      return dateCompare;
+    }
+
+    return (
+      Number(Boolean(articleB.isPinned)) -
+      Number(Boolean(articleA.isPinned))
+    );
+  });
+
+  return {
+    ...pageData,
+    articles,
+  };
+}
+
+/* NEWS_QUALITY_MERGE_HELPER_END */
+
+export function getNewsPageData(
+  locale: NewsLocale
+): NewsPageData {
   if (isChineseLocale(locale)) {
-    return newsZhData;
+    return mergeQualityAndRecognitionArticles(
+      newsZhData,
+      locale
+    );
   }
 
   if (locale !== "en") {
-    return localizeNews(locale, newsIntlData);
+    const localizedPageData =
+      localizeNews(locale, newsIntlData);
+
+    return mergeQualityAndRecognitionArticles(
+      localizedPageData,
+      locale
+    );
   }
 
-  return getLocalizedIntlNewsData(locale);
+  const englishPageData =
+    getLocalizedIntlNewsData(locale);
+
+  return mergeQualityAndRecognitionArticles(
+    englishPageData,
+    locale
+  );
 }

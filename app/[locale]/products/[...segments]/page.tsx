@@ -7,6 +7,9 @@ import ProductSelectionClient from "@/components/products/selection/ProductSelec
 import { englishProductDetailRoutes } from "@/data/products/product-detail-routes.generated";
 import luerDetailsJson from "@/data/products/generated/fittings/luer-fittings/detail/index.json";
 import {
+  isPublishedFittingDetailRoute,
+} from "@/data/products/selection/fitting-publication.generated";
+import {
   resolveCategoryRoute,
   resolveProductTypeRoute,
   resolveSeriesRoute,
@@ -80,7 +83,28 @@ const allEnglishProductDetailRoutes:
       ]
     ),
     ...luerEnglishProductDetailRoutes,
-  ];
+  ].filter((segments) => {
+    const [category, productTypeId, slug] = segments;
+
+    if (
+      category !== "fittings" ||
+      segments.length !== 3
+    ) {
+      return true;
+    }
+
+    if (
+      productTypeId === "quick-connect-fittings" &&
+      ["q20", "q40", "q60"].includes(slug)
+    ) {
+      return true;
+    }
+
+    return isPublishedFittingDetailRoute(
+      productTypeId,
+      slug
+    );
+  });
 
 /* LUER_ENGLISH_DETAIL_ROUTES_END */
 

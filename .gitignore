@@ -96,3 +96,12 @@ coverage/
 ~$*.docx
 ~$*.pptx
 Thumbs.db
+_backup/
+_diagnostics/
+*.bak_*
+*.backup
+*.old
+*.orig
+*.rej
+*.tmp
+~$*

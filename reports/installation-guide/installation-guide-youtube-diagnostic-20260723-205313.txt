@@ -1,0 +1,996 @@
+【一、安装教程数据文件】
+
+installation-guide.intl.ts    36.28 KB
+installation-guide.types.ts    2.07 KB
+installation-guide.zh.ts    5.8 KB
+
+【二、各语言数据结构】
+
+文件：data\resources\installation-guide\installation-guide.intl.ts
+----------------------------------------------------------------------------------------
+...
+    1: import type {
+    2:   InstallationGuideLocale,
+    3:   InstallationGuidePageData,
+    4: } from "./installation-guide.types";
+    5: 
+    6: const installationGuideEnglishData: Omit<InstallationGuidePageData, "locale"> = {
+    7:   hero: {
+    8:     kicker: "INSTALLATION GUIDE",
+    9:     title: "Product Installation and Operating Guides",
+   10:     description:
+   11:       "Find installation steps, setup instructions, calibration methods and troubleshooting guidance for FOREACH microfluidic products.",
+   12:   },
+   13:   search: {
+   14:     placeholder: "Enter a product name or model",
+...
+   24:   },
+   25:   sidebar: {
+   26:     title: "Product Series",
+   27:     tree: [
+   28:       { id: "all", type: "all", name: "All Guides", children: [] },
+   29:       {
+   30:         id: "fittings",
+   31:         type: "category",
+   32:         name: "Fittings and Tubing Connections",
+   33:         children: [],
+   34:       },
+   35:       {
+   36:         id: "pumps",
+   37:         type: "category",
+   38:         name: "Pumps",
+   39:         children: [
+   40:           { id: "plunger-pump", name: "Plunger Pumps" },
+   41:           { id: "diaphragm-pump", name: "Diaphragm Pumps" },
+   42:           { id: "valveless-pump", name: "Valveless Pumps" },
+   43:           { id: "syringe-pump", name: "Syringe Pumps" },
+   44:           { id: "high-pressure-pump", name: "High-Pressure Pumps" },
+   45:         ],
+   46:       },
+   47:       {
+   48:         id: "valves",
+   49:         type: "category",
+   50:         name: "Valves",
+   51:         children: [
+   52:           { id: "rotary-valve", name: "Rotary Valves" },
+   53:           { id: "solenoid-valve", name: "Solenoid Valves" },
+   54:           { id: "high-pressure-valve", name: "High-Pressure Valves" },
+   55:           { id: "pinch-valve", name: "Pinch Valves" },
+   56:         ],
+   57:       },
+   58:       { id: "sensors", type: "category", name: "Sensors", children: [] },
+   59:       {
+   60:         id: "quality-control",
+   61:         type: "category",
+   62:         name: "Quality Control",
+   63:         children: [],
+   64:       },
+   65:       { id: "needles", type: "category", name: "Probes and Needles", children: [] },
+   66:     ],
+   67:   },
+   68:   support: {
+   69:     title: "Cannot find the guide you need?",
+   70:     description:
+   71:       "Send us the product model, application details or drawings if you need help with installation, parameter setup or calibration. The FOREACH technical team will assist you.",
+   72:     buttonText: "Contact Technical Support",
+   73:     href: "/contact",
+   74:   },
+   75:   guides: [
+   76:     {
+   77:       id: "hard-tube-fitting-guide",
+   78:       title: "Rigid-Tubing Fitting Installation Guide",
+   79:       category: "fittings",
+   80:       series: "fittings",
+   81:       tags: ["Fittings", "Tubing", "Sealing"],
+   82:       description:
+   83:         "Instructions for inserting rigid tubing, tightening the fitting and checking the seal.",
+   84:       keywords: ["rigid tubing", "fitting", "Q20", "Q40", "Q60", "tubing", "seal"],
+   85:       videoPlatform: "youtube",
+   86:       steps: [
+   87:         {
+   88:           title: "Prepare the fitting and tubing",
+   89:           description:
+   90:             "Confirm that the tubing OD matches the fitting and that the cut end is square and clean.",
+   91:         },
+   92:         {
+   93:           title: "Insert the tubing",
+   94:           description:
+   95:             "Insert the tubing axially into the fitting without angling or forcing it.",
+   96:         },
+   97:         {
+   98:           title: "Tighten and inspect",
+   99:           description:
+  100:             "After tightening, check that the tubing is secure before running a fluid test.",
+  101:         },
+  102:       ],
+  103:     },
+  104:     {
+  105:       id: "plunger-pump-install-guide",
+  106:       title: "Plunger Pump Installation and Tubing Connections",
+  107:       category: "pumps",
+  108:       series: "plunger-pump",
+  109:       tags: ["Motor", "Wiring", "Commissioning"],
+  110:       description:
+  111:         "Guidance for mounting a plunger pump, connecting its inlet and outlet, routing tubing and performing an initial operating check.",
+  112:       keywords: ["plunger pump", "motor", "wiring", "installation", "commissioning", "tubing"],
+  113:       videoPlatform: "youtube",
+  114:       steps: [
+  115:         {
+  116:           title: "Confirm the mounting orientation",
+  117:           description:
+  118:             "Use the instrument layout to confirm the pump orientation and inlet and outlet positions.",
+  119:         },
+  120:         {
+  121:           title: "Connect the tubing",
+  122:           description:
+  123:             "Connect the inlet and outlet tubing and confirm that the fitting specifications match.",
+  124:         },
+  125:         {
+  126:           title: "Run an initial check",
+  127:           description:
+  128:             "Operate at low speed and check for bubbles, leakage or unusual noise.",
+  129:         },
+  130:       ],
+  131:     },
+  132:     {
+  133:       id: "diaphragm-pump-guide",
+  134:       title: "Diaphragm Pump Installation and Tubing Connections",
+  135:       category: "pumps",
+  136:       series: "diaphragm-pump",
+  137:       tags: ["Diaphragm Pump", "Tubing", "Mounting"],
+  138:       description:
+  139:         "Guidance for pump orientation, inlet and outlet connections, mounting and operating checks.",
+  140:       keywords: ["diaphragm pump", "DPL", "installation", "tubing", "connection"],
+  141:       videoPlatform: "youtube",
+  142:       steps: [
+  143:         {
+  144:           title: "Confirm the mounting orientation",
+  145:           description:
+  146:             "Use the pump markings to identify the inlet, outlet and mounting orientation.",
+  147:         },
+  148:         {
+  149:           title: "Connect the tubing",
+  150:           description: "Connect the inlet and outlet tubing and verify that the fittings are secure.",
+  151:         },
+  152:         {
+  153:           title: "Run an initial check",
+  154:           description:
+  155:             "Operate the pump briefly and observe suction, discharge and vibration.",
+  156:         },
+  157:       ],
+  158:     },
+  159:     {
+  160:       id: "solenoid-valve-guide",
+  161:       title: "Solenoid Valve Tubing Connection Guide",
+  162:       category: "valves",
+  163:       series: "solenoid-valve",
+  164:       tags: ["Valve Body", "Wiring", "Function Test"],
+  165:       description:
+  166:         "Instructions for identifying valve ports, connecting tubing and performing an on/off function test.",
+  167:       keywords: ["solenoid valve", "6010", "wiring", "valve body", "function test"],
+  168:       videoPlatform: "youtube",
+  169:       steps: [
+  170:         {
+  171:           title: "Identify the ports",
+  172:           description: "Confirm the inlet, outlet and drain port orientation.",
+  173:         },
+  174:         {
+  175:           title: "Connect the tubing",
+  176:           description: "Connect the tubing in the specified flow direction.",
+  177:         },
+  178:         {
+  179:           title: "Test valve operation",
+  180:           description: "Power the valve and perform an on/off test to confirm normal operation.",
+  181:         },
+  182:       ],
+  183:     },
+  184:     {
+  185:       id: "pressure-sensor-guide",
+  186:       title: "Pressure Sensor Installation Guide",
+  187:       category: "sensors",
+  188:       series: "sensors",
+  189:       tags: ["Signal", "Wiring", "Measurement"],
+  190:       description:
+  191:         "Instructions for sensor orientation, fluidic and electrical connections, and the initial reading check.",
+  192:       keywords: ["pressure sensor", "signal", "wiring", "measurement"],
+  193:       videoPlatform: "youtube",
+  194:       steps: [
+  195:         {
+  196:           title: "Confirm the installation position",
+  197:           description: "Select the sensor position according to the fluid-path direction.",
+  198:         },
+  199:         {
+  200:           title: "Connect the interfaces",
+  201:           description: "Connect the fluidic interface and signal cable.",
+  202:         },
+  203:         {
+  204:           title: "Check the signal",
+  205:           description: "Power the sensor and confirm that the initial reading is stable.",
+  206:         },
+  207:       ],
+  208:     },
+  209:   ],
+  210: };
+  211: 
+  212: type ForeignInstallationLocale = Exclude<InstallationGuideLocale, "zh-CN" | "en">;
+  213: 
+  214: type InstallationGuideTranslation = Pick<
+  215:   InstallationGuidePageData["guides"][number],
+  216:   "title" | "tags" | "description" | "keywords" | "steps"
+  217: >;
+  218: 
+  219: type InstallationGuideTranslationPack = {
+  220:   hero: InstallationGuidePageData["hero"];
+  221:   search: InstallationGuidePageData["search"];
+  222:   sidebarTitle: string;
+  223:   treeNames: Record<string, string>;
+  224:   support: Omit<InstallationGuidePageData["support"], "href">;
+  225:   ui: NonNullable<InstallationGuidePageData["ui"]>;
+  226:   guides: Record<string, InstallationGuideTranslation>;
+  227: };
+  228: 
+  229: const installationGuideTranslations: Record<
+  230:   ForeignInstallationLocale,
+  231:   InstallationGuideTranslationPack
+  232: > = {
+  233:   es: {
+  234:     hero: {
+  235:       kicker: "GUÍAS DE INSTALACIÓN",
+  236:       title: "Guías de instalación y funcionamiento de productos",
+  237:       description:
+  238:         "Consulte los pasos de instalación, la configuración, los métodos de calibración y la solución de problemas de los productos microfluídicos FOREACH.",
+  239:     },
+  240:     search: {
+  241:       placeholder: "Introduzca un producto o modelo",
+...
+  255:     },
+  256:     support: {
+  257:       title: "¿Necesita otra guía?",
+  258:       description: "Envíenos el modelo del producto, la aplicación o los detalles del problema y el equipo técnico de FOREACH le ayudará con la instalación, la puesta en marcha o la configuración de parámetros.",
+  259:       buttonText: "Solicitar una guía",
+  260:     },
+  261:     ui: {
+  262:       breadcrumbAriaLabel: "Ruta de navegación", breadcrumbHome: "Inicio", breadcrumbResources: "Recursos", breadcrumbCurrent: "Guías de instalación",
+  263:       productCategory: "Categoría de producto: ", tags: "Etiquetas: ", emptyTitle: "No se encontraron guías",
+  264:       emptyDescription: "Pruebe otra palabra clave o seleccione una serie de productos diferente.",
+  265:     },
+  266:     guides: {
+  267:       "hard-tube-fitting-guide": {
+  268:         title: "Guía de instalación de racores para tubos rígidos", tags: ["Racores", "Tubos", "Sellado"],
+  269:         description: "Instrucciones para insertar el tubo rígido, apretar el racor y comprobar el sellado.",
+  270:         keywords: ["tubo rígido", "racor", "Q20", "Q40", "Q60", "tubo", "sellado"],
+  271:         steps: [
+  272:           { title: "Prepare el racor y el tubo", description: "Compruebe que el diámetro exterior del tubo coincide con el racor y que el corte es recto y limpio." },
+  273:           { title: "Inserte el tubo", description: "Inserte el tubo axialmente en el racor, sin inclinarlo ni forzarlo." },
+  274:           { title: "Apriete e inspeccione", description: "Después de apretar, compruebe que el tubo esté firme antes de realizar una prueba con fluido." },
+  275:         ],
+  276:       },
+  277:       "plunger-pump-install-guide": {
+  278:         title: "Instalación y conexiones de tubos de una bomba de émbolo", tags: ["Motor", "Cableado", "Puesta en marcha"],
+  279:         description: "Orientación para montar una bomba de émbolo, conectar la entrada y la salida, tender los tubos y efectuar la comprobación inicial.",
+  280:         keywords: ["bomba de émbolo", "motor", "cableado", "instalación", "puesta en marcha", "tubos"],
+  281:         steps: [
+  282:           { title: "Confirme la orientación de montaje", description: "Utilice el plano del instrumento para confirmar la orientación de la bomba y las posiciones de entrada y salida." },
+  283:           { title: "Conecte los tubos", description: "Conecte los tubos de entrada y salida y compruebe que las especificaciones de los racores sean correctas." },
+  284:           { title: "Realice una comprobación inicial", description: "Haga funcionar la bomba a baja velocidad y compruebe si hay burbujas, fugas o ruidos anómalos." },
+  285:         ],
+  286:       },
+  287:       "diaphragm-pump-guide": {
+  288:         title: "Instalación y conexiones de tubos de una bomba de diafragma", tags: ["Bomba de diafragma", "Tubos", "Montaje"],
+  289:         description: "Orientación sobre la posición de la bomba, las conexiones de entrada y salida, el montaje y las comprobaciones de funcionamiento.",
+  290:         keywords: ["bomba de diafragma", "DPL", "instalación", "tubos", "conexión"],
+  291:         steps: [
+  292:           { title: "Confirme la orientación de montaje", description: "Utilice las marcas de la bomba para identificar la entrada, la salida y la orientación de montaje." },
+  293:           { title: "Conecte los tubos", description: "Conecte los tubos de entrada y salida y compruebe que los racores estén bien sujetos." },
+  294:           { title: "Realice una comprobación inicial", description: "Accione brevemente la bomba y observe la aspiración, la descarga y la vibración." },
+  295:         ],
+  296:       },
+  297:       "solenoid-valve-guide": {
+  298:         title: "Guía de conexión de tubos para electroválvulas", tags: ["Cuerpo de válvula", "Cableado", "Prueba funcional"],
+  299:         description: "Instrucciones para identificar los puertos de la válvula, conectar los tubos y realizar una prueba de apertura y cierre.",
+  300:         keywords: ["electroválvula", "6010", "cableado", "cuerpo de válvula", "prueba funcional"],
+  301:         steps: [
+  302:           { title: "Identifique los puertos", description: "Confirme la orientación de la entrada, la salida y el puerto de drenaje." },
+  303:           { title: "Conecte los tubos", description: "Conecte los tubos en la dirección de flujo especificada." },
+  304:           { title: "Pruebe el funcionamiento", description: "Alimente la válvula y realice una prueba de apertura y cierre para confirmar el funcionamiento normal." },
+  305:         ],
+  306:       },
+  307:       "pressure-sensor-guide": {
+  308:         title: "Guía de instalación del sensor de presión", tags: ["Señal", "Cableado", "Medición"],
+  309:         description: "Instrucciones sobre la orientación del sensor, las conexiones fluídicas y eléctricas y la comprobación de la lectura inicial.",
+  310:         keywords: ["sensor de presión", "señal", "cableado", "medición"],
+  311:         steps: [
+  312:           { title: "Confirme la posición de instalación", description: "Seleccione la posición del sensor de acuerdo con la dirección del circuito de fluido." },
+  313:           { title: "Conecte las interfaces", description: "Conecte la interfaz fluídica y el cable de señal." },
+  314:           { title: "Compruebe la señal", description: "Alimente el sensor y confirme que la lectura inicial sea estable." },
+  315:         ],
+  316:       },
+  317:     },
+  318:   },
+  319:   fr: {
+  320:     hero: {
+  321:       kicker: "GUIDES D’INSTALLATION",
+  322:       title: "Guides d’installation et d’utilisation des produits",
+  323:       description: "Retrouvez les étapes d’installation, les instructions de configuration, les méthodes d’étalonnage et le dépannage des produits microfluidiques FOREACH.",
+  324:     },
+  325:     search: {
+  326:       placeholder: "Saisissez un produit ou un modèle", buttonText: "Rechercher", recentLabel: "Recherches récentes",
+  327:       recentKeywords: ["Pompe à piston", "Q20", "Électrovanne", "Vanne haute pression", "Capteur de pression"],
+...
+  336:     },
+  337:     support: {
+  338:       title: "Besoin d’un autre guide ?", description: "Envoyez-nous le modèle du produit, l’application ou les détails du problème. L’équipe technique FOREACH vous aidera pour l’installation, la mise en service ou le réglage des paramètres.", buttonText: "Demander un guide",
+  339:     },
+  340:     ui: {
+  341:       breadcrumbAriaLabel: "Fil d’Ariane", breadcrumbHome: "Accueil", breadcrumbResources: "Ressources", breadcrumbCurrent: "Guides d’installation",
+  342:       productCategory: "Catégorie de produit : ", tags: "Étiquettes : ", emptyTitle: "Aucun guide correspondant",
+  343:       emptyDescription: "Essayez un autre mot-clé ou sélectionnez une autre série de produits.",
+  344:     },
+  345:     guides: {
+  346:       "hard-tube-fitting-guide": {
+  347:         title: "Guide d’installation des raccords pour tubes rigides", tags: ["Raccords", "Tubes", "Étanchéité"],
+  348:         description: "Instructions pour insérer un tube rigide, serrer le raccord et contrôler l’étanchéité.", keywords: ["tube rigide", "raccord", "Q20", "Q40", "Q60", "tube", "étanchéité"],
+  349:         steps: [
+  350:           { title: "Préparer le raccord et le tube", description: "Vérifiez que le diamètre extérieur du tube correspond au raccord et que la coupe est droite et propre." },
+  351:           { title: "Insérer le tube", description: "Insérez le tube dans l’axe du raccord, sans l’incliner ni le forcer." },
+  352:           { title: "Serrer et contrôler", description: "Après le serrage, vérifiez que le tube est bien maintenu avant d’effectuer un essai avec le fluide." },
+  353:         ],
+  354:       },
+  355:       "plunger-pump-install-guide": {
+  356:         title: "Installation et raccordement des tubes d’une pompe à piston", tags: ["Moteur", "Câblage", "Mise en service"],
+  357:         description: "Conseils pour monter une pompe à piston, raccorder l’entrée et la sortie, acheminer les tubes et effectuer le contrôle initial.", keywords: ["pompe à piston", "moteur", "câblage", "installation", "mise en service", "tubes"],
+  358:         steps: [
+  359:           { title: "Vérifier l’orientation de montage", description: "Utilisez le plan de l’instrument pour vérifier l’orientation de la pompe et la position de l’entrée et de la sortie." },
+  360:           { title: "Raccorder les tubes", description: "Raccordez les tubes d’entrée et de sortie et vérifiez que les raccords répondent aux spécifications." },
+  361:           { title: "Effectuer un contrôle initial", description: "Faites fonctionner la pompe à faible vitesse et recherchez les bulles, les fuites ou les bruits anormaux." },
+  362:         ],
+  363:       },
+  364:       "diaphragm-pump-guide": {
+  365:         title: "Installation et raccordement des tubes d’une pompe à membrane", tags: ["Pompe à membrane", "Tubes", "Montage"],
+  366:         description: "Conseils sur l’orientation de la pompe, les raccordements d’entrée et de sortie, le montage et les contrôles de fonctionnement.", keywords: ["pompe à membrane", "DPL", "installation", "tubes", "raccordement"],
+  367:         steps: [
+  368:           { title: "Vérifier l’orientation de montage", description: "Utilisez les repères de la pompe pour identifier l’entrée, la sortie et l’orientation de montage." },
+  369:           { title: "Raccorder les tubes", description: "Raccordez les tubes d’entrée et de sortie et vérifiez que les raccords sont bien fixés." },
+  370:           { title: "Effectuer un contrôle initial", description: "Faites brièvement fonctionner la pompe et observez l’aspiration, le refoulement et les vibrations." },
+  371:         ],
+  372:       },
+  373:       "solenoid-valve-guide": {
+  374:         title: "Guide de raccordement des tubes d’une électrovanne", tags: ["Corps de vanne", "Câblage", "Test fonctionnel"],
+  375:         description: "Instructions pour identifier les orifices de la vanne, raccorder les tubes et effectuer un test d’ouverture et de fermeture.", keywords: ["électrovanne", "6010", "câblage", "corps de vanne", "test fonctionnel"],
+  376:         steps: [
+  377:           { title: "Identifier les orifices", description: "Vérifiez l’orientation de l’entrée, de la sortie et de l’orifice de vidange." },
+  378:           { title: "Raccorder les tubes", description: "Raccordez les tubes dans le sens d’écoulement indiqué." },
+  379:           { title: "Tester le fonctionnement", description: "Alimentez la vanne et effectuez un test d’ouverture et de fermeture pour confirmer son fonctionnement normal." },
+  380:         ],
+  381:       },
+  382:       "pressure-sensor-guide": {
+  383:         title: "Guide d’installation du capteur de pression", tags: ["Signal", "Câblage", "Mesure"],
+  384:         description: "Instructions sur l’orientation du capteur, les connexions fluidiques et électriques et le contrôle de la valeur initiale.", keywords: ["capteur de pression", "signal", "câblage", "mesure"],
+  385:         steps: [
+  386:           { title: "Vérifier la position d’installation", description: "Choisissez la position du capteur en fonction du sens du circuit fluidique." },
+  387:           { title: "Raccorder les interfaces", description: "Raccordez l’interface fluidique et le câble de signal." },
+  388:           { title: "Contrôler le signal", description: "Alimentez le capteur et vérifiez que la valeur initiale est stable." },
+  389:         ],
+  390:       },
+  391:     },
+  392:   },
+  393:   ko: {
+  394:     hero: {
+  395:       kicker: "설치 가이드", title: "제품 설치 및 작동 가이드",
+  396:       description: "FOREACH 미세유체 제품의 설치 절차, 설정 지침, 교정 방법 및 문제 해결 정보를 확인하세요.",
+  397:     },
+  398:     search: {
+  399:       placeholder: "제품명 또는 모델을 입력하세요", buttonText: "검색", recentLabel: "최근 검색",
+  400:       recentKeywords: ["플런저 펌프", "Q20", "솔레노이드 밸브", "고압 밸브", "압력 센서"],
+...
+  408:     },
+  409:     support: {
+  410:       title: "다른 가이드가 필요하신가요?", description: "제품 모델, 적용 분야 또는 문제 내용을 보내 주시면 FOREACH 기술팀이 설치, 시운전 또는 파라미터 설정을 지원해 드립니다.", buttonText: "가이드 요청",
+  411:     },
+  412:     ui: {
+  413:       breadcrumbAriaLabel: "이동 경로", breadcrumbHome: "홈", breadcrumbResources: "자료", breadcrumbCurrent: "설치 가이드",
+  414:       productCategory: "제품 분류: ", tags: "태그: ", emptyTitle: "일치하는 가이드가 없습니다",
+  415:       emptyDescription: "다른 키워드를 사용하거나 다른 제품 시리즈를 선택하세요.",
+  416:     },
+  417:     guides: {
+  418:       "hard-tube-fitting-guide": {
+  419:         title: "경질 튜브 피팅 설치 가이드", tags: ["피팅", "튜브", "밀봉"],
+  420:         description: "경질 튜브 삽입, 피팅 체결 및 밀봉 확인 방법입니다.", keywords: ["경질 튜브", "피팅", "Q20", "Q40", "Q60", "튜브", "밀봉"],
+  421:         steps: [
+  422:           { title: "피팅과 튜브 준비", description: "튜브 외경이 피팅과 일치하고 절단면이 직각이며 깨끗한지 확인합니다." },
+  423:           { title: "튜브 삽입", description: "기울이거나 억지로 밀지 말고 튜브를 피팅 축 방향으로 삽입합니다." },
+  424:           { title: "체결 및 점검", description: "체결 후 유체 시험을 하기 전에 튜브가 단단히 고정되었는지 확인합니다." },
+  425:         ],
+  426:       },
+  427:       "plunger-pump-install-guide": {
+  428:         title: "플런저 펌프 설치 및 튜브 연결", tags: ["모터", "배선", "시운전"],
+  429:         description: "플런저 펌프 장착, 입출구 연결, 튜브 배치 및 초기 작동 점검 지침입니다.", keywords: ["플런저 펌프", "모터", "배선", "설치", "시운전", "튜브"],
+  430:         steps: [
+  431:           { title: "장착 방향 확인", description: "장비 배치도를 사용해 펌프 방향과 입구 및 출구 위치를 확인합니다." },
+  432:           { title: "튜브 연결", description: "입출구 튜브를 연결하고 피팅 사양이 일치하는지 확인합니다." },
+  433:           { title: "초기 점검 실행", description: "저속으로 작동하면서 기포, 누출 또는 이상 소음이 있는지 확인합니다." },
+  434:         ],
+  435:       },
+  436:       "diaphragm-pump-guide": {
+  437:         title: "다이어프램 펌프 설치 및 튜브 연결", tags: ["다이어프램 펌프", "튜브", "장착"],
+  438:         description: "펌프 방향, 입출구 연결, 장착 및 작동 점검 지침입니다.", keywords: ["다이어프램 펌프", "DPL", "설치", "튜브", "연결"],
+  439:         steps: [
+  440:           { title: "장착 방향 확인", description: "펌프 표시를 사용해 입구, 출구 및 장착 방향을 확인합니다." },
+  441:           { title: "튜브 연결", description: "입출구 튜브를 연결하고 피팅이 단단히 고정되었는지 확인합니다." },
+  442:           { title: "초기 점검 실행", description: "펌프를 잠시 작동하여 흡입, 토출 및 진동 상태를 관찰합니다." },
+  443:         ],
+  444:       },
+  445:       "solenoid-valve-guide": {
+  446:         title: "솔레노이드 밸브 튜브 연결 가이드", tags: ["밸브 본체", "배선", "기능 시험"],
+  447:         description: "밸브 포트 식별, 튜브 연결 및 개폐 기능 시험 방법입니다.", keywords: ["솔레노이드 밸브", "6010", "배선", "밸브 본체", "기능 시험"],
+  448:         steps: [
+  449:           { title: "포트 식별", description: "입구, 출구 및 배출 포트 방향을 확인합니다." },
+  450:           { title: "튜브 연결", description: "지정된 유동 방향에 맞게 튜브를 연결합니다." },
+  451:           { title: "밸브 작동 시험", description: "밸브에 전원을 공급하고 개폐 시험을 수행해 정상 작동을 확인합니다." },
+  452:         ],
+  453:       },
+  454:       "pressure-sensor-guide": {
+  455:         title: "압력 센서 설치 가이드", tags: ["신호", "배선", "측정"],
+  456:         description: "센서 방향, 유체 및 전기 연결, 초기 판독값 확인 방법입니다.", keywords: ["압력 센서", "신호", "배선", "측정"],
+  457:         steps: [
+  458:           { title: "설치 위치 확인", description: "유로 방향에 따라 센서 위치를 선택합니다." },
+  459:           { title: "인터페이스 연결", description: "유체 인터페이스와 신호 케이블을 연결합니다." },
+  460:           { title: "신호 확인", description: "센서에 전원을 공급하고 초기 판독값이 안정적인지 확인합니다." },
+  461:         ],
+  462:       },
+  463:     },
+  464:   },
+  465:   ru: {
+  466:     hero: {
+  467:       kicker: "РУКОВОДСТВА ПО МОНТАЖУ", title: "Руководства по монтажу и эксплуатации оборудования",
+  468:       description: "Инструкции по монтажу, настройке, калибровке и устранению неисправностей микрофлюидных изделий FOREACH.",
+  469:     },
+  470:     search: {
+  471:       placeholder: "Введите название или модель изделия", buttonText: "Найти", recentLabel: "Недавние запросы",
+  472:       recentKeywords: ["Плунжерный насос", "Q20", "Электромагнитный клапан", "Клапан высокого давления", "Датчик давления"],
+...
+  481:     },
+  482:     support: {
+  483:       title: "Нужно другое руководство?", description: "Сообщите модель изделия, область применения или подробности проблемы. Технические специалисты FOREACH помогут с монтажом, вводом в эксплуатацию и настройкой параметров.", buttonText: "Запросить руководство",
+  484:     },
+  485:     ui: {
+  486:       breadcrumbAriaLabel: "Навигационная цепочка", breadcrumbHome: "Главная", breadcrumbResources: "Ресурсы", breadcrumbCurrent: "Руководства по монтажу",
+  487:       productCategory: "Категория продукции: ", tags: "Метки: ", emptyTitle: "Подходящие руководства не найдены",
+  488:       emptyDescription: "Попробуйте другой запрос или выберите другую серию продукции.",
+  489:     },
+  490:     guides: {
+  491:       "hard-tube-fitting-guide": {
+  492:         title: "Руководство по монтажу фитингов для жёстких трубок", tags: ["Фитинги", "Трубки", "Герметизация"],
+  493:         description: "Инструкции по установке жёсткой трубки, затяжке фитинга и проверке герметичности.", keywords: ["жёсткая трубка", "фитинг", "Q20", "Q40", "Q60", "трубка", "герметичность"],
+  494:         steps: [
+  495:           { title: "Подготовьте фитинг и трубку", description: "Убедитесь, что наружный диаметр трубки соответствует фитингу, а срез выполнен ровно и чисто." },
+  496:           { title: "Вставьте трубку", description: "Вставьте трубку в фитинг по оси, не наклоняя и не прилагая чрезмерных усилий." },
+  497:           { title: "Затяните и проверьте", description: "После затяжки убедитесь, что трубка закреплена, прежде чем проводить испытание с рабочей средой." },
+  498:         ],
+  499:       },
+  500:       "plunger-pump-install-guide": {
+  501:         title: "Монтаж и подключение трубок плунжерного насоса", tags: ["Двигатель", "Электропроводка", "Ввод в эксплуатацию"],
+  502:         description: "Рекомендации по установке плунжерного насоса, подключению входа и выхода, прокладке трубок и первичной проверке.", keywords: ["плунжерный насос", "двигатель", "электропроводка", "монтаж", "ввод в эксплуатацию", "трубки"],
+  503:         steps: [
+  504:           { title: "Проверьте ориентацию при монтаже", description: "По компоновочному чертежу прибора проверьте ориентацию насоса и положение входа и выхода." },
+  505:           { title: "Подключите трубки", description: "Подключите входную и выходную трубки и убедитесь, что характеристики фитингов соответствуют требованиям." },
+  506:           { title: "Выполните первичную проверку", description: "Запустите насос на малой скорости и проверьте наличие пузырьков, утечек и постороннего шума." },
+  507:         ],
+  508:       },
+  509:       "diaphragm-pump-guide": {
+  510:         title: "Монтаж и подключение трубок мембранного насоса", tags: ["Мембранный насос", "Трубки", "Монтаж"],
+  511:         description: "Рекомендации по ориентации насоса, подключению входа и выхода, монтажу и проверке работы.", keywords: ["мембранный насос", "DPL", "монтаж", "трубки", "подключение"],
+  512:         steps: [
+  513:           { title: "Проверьте ориентацию при монтаже", description: "По маркировке насоса определите вход, выход и правильную ориентацию при монтаже." },
+  514:           { title: "Подключите трубки", description: "Подключите входную и выходную трубки и убедитесь, что фитинги надёжно закреплены." },
+  515:           { title: "Выполните первичную проверку", description: "Кратковременно запустите насос и проверьте всасывание, подачу и вибрацию." },
+  516:         ],
+  517:       },
+  518:       "solenoid-valve-guide": {
+  519:         title: "Руководство по подключению трубок электромагнитного клапана", tags: ["Корпус клапана", "Электропроводка", "Функциональная проверка"],
+  520:         description: "Инструкции по определению портов клапана, подключению трубок и проверке открытия и закрытия.", keywords: ["электромагнитный клапан", "6010", "электропроводка", "корпус клапана", "функциональная проверка"],
+  521:         steps: [
+  522:           { title: "Определите порты", description: "Проверьте ориентацию входа, выхода и дренажного порта." },
+  523:           { title: "Подключите трубки", description: "Подключите трубки в указанном направлении потока." },
+  524:           { title: "Проверьте работу клапана", description: "Подайте питание и выполните цикл открытия и закрытия, чтобы подтвердить нормальную работу." },
+  525:         ],
+  526:       },
+  527:       "pressure-sensor-guide": {
+  528:         title: "Руководство по монтажу датчика давления", tags: ["Сигнал", "Электропроводка", "Измерение"],
+  529:         description: "Инструкции по ориентации датчика, гидравлическому и электрическому подключению и проверке начального показания.", keywords: ["датчик давления", "сигнал", "электропроводка", "измерение"],
+  530:         steps: [
+  531:           { title: "Проверьте место установки", description: "Выберите положение датчика с учётом направления потока в гидравлическом контуре." },
+  532:           { title: "Подключите интерфейсы", description: "Подключите гидравлический интерфейс и сигнальный кабель." },
+  533:           { title: "Проверьте сигнал", description: "Подайте питание на датчик и убедитесь, что начальное показание стабильно." },
+  534:         ],
+  535:       },
+  536:     },
+  537:   },
+  538: };
+  539: 
+  540: export function getInstallationGuideIntlData(
+  541:   locale: InstallationGuideLocale,
+  542: ): InstallationGuidePageData {
+  543:   const prefix = `/${locale}`;
+  544: 
+  545:   if (locale !== "en" && locale !== "zh-CN") {
+  546:     const translation = installationGuideTranslations[locale];
+  547: 
+  548:     return {
+  549:       ...installationGuideEnglishData,
+  550:       locale,
+  551:       hero: translation.hero,
+  552:       search: translation.search,
+  553:       sidebar: {
+  554:         title: translation.sidebarTitle,
+  555:         tree: installationGuideEnglishData.sidebar.tree.map((item) => ({
+  556:           ...item,
+  557:           name: translation.treeNames[item.id] ?? item.name,
+  558:           children: item.children.map((child) => ({
+  559:             ...child,
+  560:             name: translation.treeNames[child.id] ?? child.name,
+...
+  564:       support: { ...translation.support, href: `${prefix}/contact` },
+  565:       ui: translation.ui,
+  566:       guides: installationGuideEnglishData.guides.map((guide) => ({
+  567:         ...guide,
+  568:         ...translation.guides[guide.id],
+  569:       })),
+  570:     };
+  571:   }
+  572: 
+  573:   return {
+  574:     ...installationGuideEnglishData,
+  575:     locale,
+  576:     support: {
+  577:       ...installationGuideEnglishData.support,
+  578:       href: `${prefix}/contact`,
+  579:     },
+  580:   };
+  581: }
+
+文件：data\resources\installation-guide\installation-guide.zh.ts
+----------------------------------------------------------------------------------------
+...
+   12: ========================================================= */
+   13: 
+   14: import type { InstallationGuidePageData } from "./installation-guide.types";
+   15: 
+   16: export const installationGuideZhData: InstallationGuidePageData = {
+   17:   locale: "zh-CN",
+   18: 
+   19:   hero: {
+   20:     kicker: "INSTALLATION GUIDE",
+   21:     title: "产品安装与使用教程",
+   22:     description:
+   23:       "查看 FOREACH 微流体产品的安装步骤、调试说明、校准方法与常见问题处理建议。",
+   24:   },
+   25: 
+   26:   search: {
+...
+   32: 
+   33:   sidebar: {
+   34:     title: "产品系列",
+   35:     tree: [
+   36:       {
+   37:         id: "all",
+   38:         type: "all",
+   39:         name: "全部教程",
+   40:         children: [],
+   41:       },
+   42:       {
+   43:         id: "fittings",
+   44:         type: "category",
+   45:         name: "接头及管路连接件",
+   46:         children: [],
+   47:       },
+   48:       {
+   49:         id: "pumps",
+   50:         type: "category",
+   51:         name: "泵类产品",
+   52:         children: [
+   53:           { id: "plunger-pump", name: "柱塞泵" },
+   54:           { id: "diaphragm-pump", name: "隔膜泵" },
+   55:           { id: "valveless-pump", name: "无阀泵" },
+   56:           { id: "syringe-pump", name: "注射泵" },
+   57:           { id: "high-pressure-pump", name: "高压泵" },
+   58:         ],
+   59:       },
+   60:       {
+   61:         id: "valves",
+   62:         type: "category",
+   63:         name: "阀类产品",
+   64:         children: [
+   65:           { id: "rotary-valve", name: "旋转阀" },
+   66:           { id: "solenoid-valve", name: "电磁阀" },
+   67:           { id: "high-pressure-valve", name: "高压阀" },
+   68:           { id: "pinch-valve", name: "夹管阀" },
+   69:         ],
+   70:       },
+   71:       {
+   72:         id: "sensors",
+   73:         type: "category",
+   74:         name: "传感器",
+   75:         children: [],
+   76:       },
+   77:       {
+   78:         id: "quality-control",
+   79:         type: "category",
+   80:         name: "质控",
+   81:         children: [],
+   82:       },
+   83:       {
+   84:         id: "needles",
+   85:         type: "category",
+   86:         name: "针",
+   87:         children: [],
+   88:       },
+   89:     ],
+...
+   91: 
+   92:   support: {
+   93:     title: "没有找到对应教程？",
+   94:     description:
+   95:       "如果您不确定产品安装方式、参数设置或校准方法，可以提交产品型号、应用场景或图纸资料，FOREACH 技术团队将为您提供支持。",
+   96:     buttonText: "联系技术支持",
+   97:     href: "/contact",
+   98:   },
+   99: 
+  100:   guides: [
+  101:     {
+  102:       id: "zh-tutorial-001-6cadad8155",
+  103:       title: "隔膜泵安装方式以及注意事项",
+  104:       category: "pumps",
+  105:       series: "diaphragm-pump",
+  106:       tags: ["隔膜泵","安装","注意事项"],
+  107:       description: "隔膜泵安装方式以及注意事项视频教程。",
+  108:       keywords: ["隔膜泵安装方式以及注意事项","隔膜泵","安装","注意事项","pumps","diaphragm-pump"],
+  109:       thumbnail: "/images/resources/installation-guide/zh/zh-tutorial-001-6cadad8155.png",
+  110:       videoPlatform: "none",
+  111:       videoUrl: "/videos/installation-guide/zh/zh-tutorial-001-6cadad8155.mp4",
+  112:       steps: [],
+  113:     },
+  114:     {
+  115:       id: "zh-tutorial-002-a92d2b71b4",
+  116:       title: "实测30H系列隔膜泵最高耐压",
+  117:       category: "pumps",
+  118:       series: "diaphragm-pump",
+  119:       tags: ["隔膜泵","耐压测试"],
+  120:       description: "实测30H系列隔膜泵最高耐压视频教程。",
+  121:       keywords: ["实测30H系列隔膜泵最高耐压","隔膜泵","耐压测试","pumps","diaphragm-pump"],
+  122:       thumbnail: "/images/resources/installation-guide/zh/zh-tutorial-002-a92d2b71b4.png",
+  123:       videoPlatform: "none",
+  124:       videoUrl: "/videos/installation-guide/zh/zh-tutorial-002-a92d2b71b4.mp4",
+  125:       steps: [],
+  126:     },
+  127:     {
+  128:       id: "zh-tutorial-003-57a6bc1c94",
+  129:       title: "实测60系列隔膜泵最高耐压",
+  130:       category: "pumps",
+  131:       series: "diaphragm-pump",
+  132:       tags: ["隔膜泵","耐压测试"],
+  133:       description: "实测60系列隔膜泵最高耐压视频教程。",
+  134:       keywords: ["实测60系列隔膜泵最高耐压","隔膜泵","耐压测试","pumps","diaphragm-pump"],
+  135:       thumbnail: "/images/resources/installation-guide/zh/zh-tutorial-003-57a6bc1c94.png",
+  136:       videoPlatform: "none",
+  137:       videoUrl: "/videos/installation-guide/zh/zh-tutorial-003-57a6bc1c94.mp4",
+  138:       steps: [],
+  139:     },
+  140:     {
+  141:       id: "zh-tutorial-004-5733a4bdad",
+  142:       title: "一句话教你如何选择隔膜泵",
+  143:       category: "pumps",
+  144:       series: "diaphragm-pump",
+  145:       tags: ["隔膜泵","选型"],
+  146:       description: "一句话教你如何选择隔膜泵视频教程。",
+  147:       keywords: ["一句话教你如何选择隔膜泵","隔膜泵","选型","pumps","diaphragm-pump"],
+  148:       thumbnail: "/images/resources/installation-guide/zh/zh-tutorial-004-5733a4bdad.png",
+  149:       videoPlatform: "none",
+  150:       videoUrl: "/videos/installation-guide/zh/zh-tutorial-004-5733a4bdad.mp4",
+  151:       steps: [],
+  152:     },
+  153:     {
+  154:       id: "zh-tutorial-005-c4e9e2aa2a",
+  155:       title: "有刷与无刷隔膜泵区别不只是寿命",
+  156:       category: "pumps",
+  157:       series: "diaphragm-pump",
+  158:       tags: ["隔膜泵","有刷与无刷"],
+  159:       description: "有刷与无刷隔膜泵区别不只是寿命视频教程。",
+  160:       keywords: ["有刷与无刷隔膜泵区别不只是寿命","隔膜泵","有刷与无刷","pumps","diaphragm-pump"],
+  161:       thumbnail: "/images/resources/installation-guide/zh/zh-tutorial-005-c4e9e2aa2a.png",
+  162:       videoPlatform: "none",
+  163:       videoUrl: "/videos/installation-guide/zh/zh-tutorial-005-c4e9e2aa2a.mp4",
+  164:       steps: [],
+  165:     }
+  166:   ],
+  167: };
+
+【三、教程类型定义】
+
+文件：data\resources\installation-guide\installation-guide.types.ts
+----------------------------------------------------------------------------------------
+...
+   39: };
+   40: 
+   41: export type InstallationGuideCard = {
+   42:   id: string;
+   43:   title: string;
+   44:   category: string;
+   45:   series: string;
+   46:   tags: string[];
+   47:   description: string;
+   48:   thumbnail?: string;
+   49:   videoPlatform?: "bilibili" | "youtube" | "none";
+   50:   videoUrl?: string;
+   51:   pdfUrl?: string;
+   52:   keywords: string[];
+   53:   steps: InstallationGuideStep[];
+   54: };
+   55: 
+   56: export type InstallationGuidePageData = {
+   57:   locale: InstallationGuideLocale;
+   58: 
+...
+   93:   };
+   94: 
+   95:   guides: InstallationGuideCard[];
+   96: };
+
+【四、播放器 YouTube 处理逻辑】
+
+文件：components\resources\installation-guide\InstallationGuideClient.tsx
+----------------------------------------------------------------------------------------
+...
+    9:    2. 页面上方增加视频播放器
+   10:    3. 点击卡片后切换视频并平滑滚动到播放器
+   11:    4. 支持本地视频、YouTube 和 Bilibili
+   12:    5. 当前播放卡片增加选中状态
+   13: ========================================================= */
+   14: 
+   15: import {
+   16:   useEffect,
+...
+   43: };
+   44: 
+   45: type PlayerSource =
+   46:   | {
+   47:       type: "video";
+   48:       src: string;
+   49:     }
+   50:   | {
+   51:       type: "iframe";
+   52:       src: string;
+   53:     }
+   54:   | {
+   55:       type: "empty";
+   56:       src: "";
+...
+  166: 
+  167: /* =========================================================
+  168:    YouTube 地址转嵌入地址
+  169: ========================================================= */
+  170: 
+  171: function getYouTubeEmbedUrl(
+  172:   sourceUrl: string,
+  173:   autoplay: boolean,
+  174: ) {
+  175:   if (sourceUrl.includes("youtube.com/embed/")) {
+  176:     return appendUrlParameters(sourceUrl, {
+  177:       autoplay: autoplay ? "1" : "0",
+  178:       rel: "0",
+  179:     });
+  180:   }
+...
+  183:     sourceUrl.match(/[?&]v=([^&]+)/)?.[1] ??
+  184:     sourceUrl.match(/youtu\.be\/([^?&/]+)/)?.[1] ??
+  185:     sourceUrl.match(/youtube\.com\/shorts\/([^?&/]+)/)?.[1];
+  186: 
+  187:   if (!videoId) {
+  188:     return sourceUrl;
+  189:   }
+  190: 
+  191:   return `https://www.youtube.com/embed/${videoId}?autoplay=${
+  192:     autoplay ? "1" : "0"
+  193:   }&rel=0`;
+  194: }
+  195: 
+  196: /* =========================================================
+...
+  198: ========================================================= */
+  199: 
+  200: function getBilibiliEmbedUrl(
+  201:   sourceUrl: string,
+  202:   autoplay: boolean,
+  203: ) {
+  204:   if (sourceUrl.includes("player.bilibili.com/player.html")) {
+  205:     return appendUrlParameters(sourceUrl, {
+...
+  242: ========================================================= */
+  243: 
+  244: function getGuidePlayerSource(
+  245:   guide: InstallationGuideCard | null,
+  246:   autoplay: boolean,
+  247: ): PlayerSource {
+  248:   const sourceUrl = String(guide?.videoUrl ?? "").trim();
+  249: 
+  250:   if (!sourceUrl) {
+  251:     return {
+  252:       type: "empty",
+  253:       src: "",
+...
+  255:   }
+  256: 
+  257:   if (guide?.videoPlatform === "youtube") {
+  258:     return {
+  259:       type: "iframe",
+  260:       src: getYouTubeEmbedUrl(sourceUrl, autoplay),
+  261:     };
+  262:   }
+  263: 
+  264:   if (guide?.videoPlatform === "bilibili") {
+  265:     return {
+  266:       type: "iframe",
+  267:       src: getBilibiliEmbedUrl(sourceUrl, autoplay),
+  268:     };
+  269:   }
+  270: 
+  271:   const isDirectVideo =
+  272:     sourceUrl.startsWith("/") ||
+...
+  281: 
+  282:   return {
+  283:     type: "iframe",
+  284:     src: sourceUrl,
+  285:   };
+  286: }
+  287: 
+  288: export default function InstallationGuideClient({
+...
+  302:   /*
+  303:    * 页面首次进入时：
+  304:    * 1. 优先选中第一条已经配置 videoUrl 的教程
+  305:    * 2. 如果暂时都没有视频，则选中第一条教程
+  306:    * 3. 首次加载不自动播放
+  307:    */
+  308:   const [selectedGuide, setSelectedGuide] =
+  309:     useState<InstallationGuideCard | null>(() => {
+  310:       return (
+  311:         pageData.guides.find((guide) =>
+  312:           Boolean(String(guide.videoUrl ?? "").trim()),
+  313:         ) ??
+  314:         pageData.guides[0] ??
+  315:         null
+  316:       );
+  317:     });
+...
+  440:    * 用户已经点击卡片，允许自动播放。
+  441:    */
+  442:   const activePlayerSource = useMemo(
+  443:     () =>
+  444:       getGuidePlayerSource(
+  445:         selectedGuide,
+  446:         playRequestId > 0,
+  447:       ),
+  448:     [selectedGuide, playRequestId],
+  449:   );
+  450: 
+  451:   /*
+  452:    * 本地视频切换后主动播放。
+  453:    * 默认 muted，避免浏览器阻止自动播放。
+...
+  455:   useEffect(() => {
+  456:     if (
+  457:       activePlayerSource.type !== "video" ||
+  458:       playRequestId === 0
+  459:     ) {
+  460:       return;
+  461:     }
+  462: 
+...
+  476:     });
+  477:   }, [
+  478:     activePlayerSource,
+  479:     playRequestId,
+  480:   ]);
+  481: 
+  482:   /*
+  483:    * 打开弹层时：
+...
+  575:      * 4. 不改变 URL，不跳转页面
+  576:      */
+  577:     setSelectedGuide(guide);
+  578:     setIsPlayerOpen(true);
+  579: 
+  580:     setPlayRequestId(
+  581:       (currentId) => currentId + 1,
+  582:     );
+...
+  720:                   const isSelected =
+  721:                     isPlayerOpen &&
+  722:                     selectedGuide?.id === guide.id;
+  723: return (
+  724:                     <button
+  725:                       key={guide.id}
+  726:                       type="button"
+  727:                       className={`installation-guide-card ${
+...
+  790:       ===================================================== */}
+  791: 
+  792:       {isPlayerOpen && selectedGuide ? (
+  793:         <div
+  794:           className="installation-guide-modal-backdrop"
+  795:           onMouseDown={closePlayer}
+  796:         >
+  797:           <section
+...
+  821:             <div
+  822:               className={`installation-guide-modal-stage ${
+  823:                 activePlayerSource.type === "iframe"
+  824:                   ? "is-iframe"
+  825:                   : activePlayerSource.type === "video"
+  826:                     ? "is-video"
+  827:                     : "is-empty"
+  828:               }`}
+  829:             >
+  830:               {activePlayerSource.type === "video" ? (
+  831:                 <video
+  832:                   key={`${selectedGuide.id}-${playRequestId}`}
+  833:                   ref={videoRef}
+  834:                   className="installation-guide-modal-video"
+  835:                   src={activePlayerSource.src}
+  836:                   controls
+  837:                   autoPlay
+  838:                   playsInline
+  839:                   preload="metadata"
+  840:                 />
+  841:               ) : null}
+  842: 
+  843:               {activePlayerSource.type === "iframe" ? (
+  844:                 <iframe
+  845:                   key={`${selectedGuide.id}-${playRequestId}`}
+  846:                   className="installation-guide-modal-iframe"
+  847:                   src={activePlayerSource.src}
+  848:                   title={selectedGuide.title}
+  849:                   allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+  850:                   allowFullScreen
+  851:                 />
+  852:               ) : null}
+  853: 
+  854:               {activePlayerSource.type === "empty" ? (
+  855:                 <div className="installation-guide-modal-empty">
+  856:                   <span aria-hidden="true">
+  857:                     ▶
+  858:                   </span>
+  859: 
+...
+  868:             <div className="installation-guide-modal-title">
+  869:               <h2 id="installation-guide-modal-title">
+  870:                 {selectedGuide.title}
+  871:               </h2>
+  872:             </div>
+  873:           </section>
+  874:         </div>
+  875:       ) : null}
+
+【五、关键字段统计】
+
+文件：installation-guide.intl.ts
+  locale：未找到 locale 字段
+  id 数量：21
+  thumbnail 数量：0
+  videoUrl 数量：0
+  YouTube 关键词数量：5
+
+文件：installation-guide.zh.ts
+  locale：zh-CN
+  id 数量：21
+  thumbnail 数量：5
+  videoUrl 数量：5
+  YouTube 关键词数量：0
+
+【六、检查是否已写入这 7 条 YouTube 视频】
+
+installation-guide.intl.ts：已写入 0/7
+
+installation-guide.zh.ts：已写入 0/7
+

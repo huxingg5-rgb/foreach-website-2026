@@ -1,6 +1,10 @@
 "use client";
 
 
+import {
+  getProductDetailTitleOverride,
+  type ProductDetailTitleLocale,
+} from "@/data/products/detail/product-detail-title-overrides";
 import { useSelectionCart } from "@/components/selection-cart/SelectionCartProvider";
 import type { SelectionCartItemInput } from "@/components/selection-cart/selection-cart.types";
 /* =========================================================
@@ -831,6 +835,71 @@ function localizeInternalHref(value: unknown, localePrefix: string): string {
   return `${localePrefix}${href}`;
 }
 
+const CUSTOM_PRODUCT_CATEGORY_IDS = new Set([
+  "pumps",
+  "valves",
+  "probes",
+  "control",
+]);
+
+const CUSTOM_PRODUCT_NOTICE_COPY = {
+  zh: {
+    notice: "该产品为定制品",
+    contact: "联系我们",
+  },
+  en: {
+    notice: "This product is custom-made",
+    contact: "Contact Us",
+  },
+  es: {
+    notice: "Este producto se fabrica a medida",
+    contact: "Contáctenos",
+  },
+  fr: {
+    notice: "Ce produit est fabriqué sur mesure",
+    contact: "Nous contacter",
+  },
+  ko: {
+    notice: "이 제품은 맞춤 제작 제품입니다",
+    contact: "문의하기",
+  },
+  ru: {
+    notice: "Этот продукт изготавливается на заказ",
+    contact: "Связаться с нами",
+  },
+} as const;
+
+function isCustomProductCategory(
+  pathname: string | null,
+  data: {
+    category?: unknown;
+    categoryId?: unknown;
+    productCategory?: unknown;
+  } | null | undefined,
+): boolean {
+  const pathSegments = String(pathname || "")
+    .split("/")
+    .filter(Boolean);
+  const productsIndex = pathSegments.indexOf("products");
+  const routeCategory =
+    productsIndex >= 0
+      ? String(pathSegments[productsIndex + 1] || "").toLowerCase()
+      : "";
+  const dataCategory = String(
+    data?.category ||
+      data?.categoryId ||
+      data?.productCategory ||
+      "",
+  )
+    .trim()
+    .toLowerCase();
+
+  return (
+    CUSTOM_PRODUCT_CATEGORY_IDS.has(routeCategory) ||
+    CUSTOM_PRODUCT_CATEGORY_IDS.has(dataCategory)
+  );
+}
+
 
 function PlungerPumpBottomCta({
   data,
@@ -1071,6 +1140,58 @@ function buildProductStructuredData(data: any, pathname: string) {
   };
 }
 
+/* ===== FOREACH SCOPED PRODUCT DISPLAY TITLE START ===== */
+
+type ProductDetailTargetLocale =
+  ProductDetailTitleLocale;
+
+function normalizeProductDisplayTitle(
+  value: unknown
+): string {
+  return String(value || "")
+    .replace(/\s+/g, " ")
+    .replace(
+      /\s*[|｜]\s*FOREACH\s*$/i,
+      ""
+    )
+    .trim();
+}
+
+function getScopedProductDisplayTitle(
+  data: any,
+  targetLocale: string | null | undefined,
+  pathname: string
+): string {
+  const currentTitle =
+    normalizeProductDisplayTitle(
+      data?.model
+    );
+
+  /*
+   * 英文由 data.__locale 判断；
+   * 西、法、韩、俄由 targetLocale 判断；
+   * 中文保持现有标题，不进入覆盖表。
+   */
+  const locale =
+    targetLocale ||
+    (
+      data?.__locale === "en"
+        ? "en"
+        : ""
+    );
+
+  const exactTitle =
+    getProductDetailTitleOverride(
+      data,
+      locale,
+      pathname
+    );
+
+  return exactTitle || currentTitle;
+}
+
+/* ===== FOREACH SCOPED PRODUCT DISPLAY TITLE END ===== */
+
 export default function ProductDetailClient({
   data: sourceData,
 }: ProductDetailClientProps) {
@@ -1100,6 +1221,31 @@ export default function ProductDetailClient({
         : sourceData,
     [isEnglish, pathname, sourceData, targetLocale]
   );
+  const isCustomProduct = isCustomProductCategory(pathname, data);
+  const customProductCopy =
+    CUSTOM_PRODUCT_NOTICE_COPY[
+      configuratorLocale as keyof typeof CUSTOM_PRODUCT_NOTICE_COPY
+    ] || CUSTOM_PRODUCT_NOTICE_COPY.zh;
+  const localizedContactHref = localizeInternalHref(
+    "/contact",
+    localePrefix,
+  );
+
+
+// ===== FOREACH TARGET PRODUCT DISPLAY TITLE START =====
+  /*
+   * 详情页显示标题：
+   * - 中文和英文继续使用原有 data.model；
+   * - es / fr / ko / ru 可使用专用完整标题；
+   * - 不改变型号选择区域的数据。
+   */
+  const displayProductTitle =
+    getScopedProductDisplayTitle(
+      data,
+      targetLocale,
+      String(data.model || "")
+    );
+  // ===== FOREACH TARGET PRODUCT DISPLAY TITLE END =====
   const structuredData = useMemo(
     () =>
       isLocalizedDetail
@@ -1466,11 +1612,12 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
     }
 
     return String(
-      data.modelDisplay ||
+      data.productCode ||
+        data.productId ||
+        data.modelDisplay ||
         data.displayModel ||
         data.foreachModel ||
         data.model ||
-        data.productCode ||
         data.slug ||
         ""
     ).trim();
@@ -2167,7 +2314,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
           href: localePrefix ? `${localePrefix}/products/` : "/products/",
         },
         {
-          label: data.model,
+          label: displayProductTitle,
         },
       ]}
     >
@@ -2296,7 +2443,6 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
             {showThumbnailRow ? (
               <div
                 data-product-thumb-row="true"
-                data-detail-locale={isLocalizedDetail ? "en" : "zh"}
                 className={styles.thumbRow}
                 aria-label={copy.thumbnails}
               >
@@ -2431,7 +2577,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
 
           <div className={styles.productInfo}>
             <div className={styles.titleGroup}>
-              <h1 className={styles.productModelTitle}>{data.model}</h1>
+              <h1 className={styles.productModelTitle}>{displayProductTitle}</h1>
             </div>
 
             <p className={styles.productDesc}>
@@ -2453,27 +2599,43 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
               <div data-product-model-row="true" className={styles.modelLine}>
                 <div className={styles.modelCodeWrap}>
                   <div className={styles.modelCodeText}>
-                    <span className={styles.modelLabel}>{copy.model}</span>
-                    <span
-                      className={
-                        styles.modelCode
-                      }
-                    >
-                      {isTubingConfiguratorEnabled
-                        ? selectedTubingVariant
-                            ?.model ||
-                          getDisplayModelText(
-                            data
-                          )
-                        : getDisplayModelText(
-                            data
-                          )}
-                    </span>
+                    {isCustomProduct ? (
+                      <>
+                        <span className={styles.modelLabel}>{copy.model}</span>
+                        <span className={styles.modelCode}>
+                          {customProductCopy.notice}
+                        </span>
+                      </>
+                    ) : (
+                      <>
+                        <span className={styles.modelLabel}>{copy.model}</span>
+                        <span
+                          className={
+                            styles.modelCode
+                          }
+                        >
+                          {isTubingConfiguratorEnabled
+                            ? selectedTubingVariant
+                                ?.model ||
+                              getDisplayModelText(
+                                data
+                              )
+                            : getDisplayModelText(
+                                data
+                              )}
+                        </span>
+                      </>
+                    )}
                   </div>
                   <button
                     className={styles.button}
                     type="button"
                     onClick={() => {
+                      if (isCustomProduct) {
+                        window.location.href = localizedContactHref;
+                        return;
+                      }
+
                       if (
                         isPvcTubingConfiguratorEnabled
                       ) {
@@ -2548,16 +2710,18 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                       window.open(href, "_blank", "noopener,noreferrer");
                     }}
                   >
-                    {isTubingConfiguratorEnabled &&
-                    selectedTubingVariant
-                      ? copy.reselect
-                      : isTargetLanguage
-                        ? copy.selectModel
-                        : getModelActionText(data)}
+                    {isCustomProduct
+                      ? customProductCopy.contact
+                      : isTubingConfiguratorEnabled &&
+                          selectedTubingVariant
+                        ? copy.reselect
+                        : isTargetLanguage
+                          ? copy.selectModel
+                          : getModelActionText(data)}
                   </button>
                 </div>
 
-                {data.showConfigurator ? (
+                {data.showConfigurator && !isCustomProduct ? (
                   <button
                     className={styles.button}
                     type="button"
@@ -2633,7 +2797,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
               type="button"
               onClick={() => setActiveTab("spec")}
             >
-              {copy.specifications}
+              {copy.specifications === "Технические характеристики" ? "Характеристики" : copy.specifications}
             </button>
 
             <button
@@ -2659,7 +2823,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
               type="button"
               onClick={() => setActiveTab("drawing")}
             >
-              {copy.technicalDrawing}
+              {copy.technicalDrawing.startsWith("Технический ") ? "Чертёж" : copy.technicalDrawing}
             </button>
           </nav>
 

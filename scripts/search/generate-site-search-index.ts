@@ -2,6 +2,13 @@
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 
+import {
+  getPublishedFittingProductByCode,
+} from "../../data/products/selection/fitting-publication.generated";
+import {
+  pumpSeriesSelectionCards,
+} from "../../data/products/generated/pumps/pump-series.selection.generated";
+
 import type {
   SiteSearchItem,
   SiteSearchModule,
@@ -96,6 +103,58 @@ function firstText(object: UnknownObject, keys: string[]): string {
   return "";
 }
 
+type PumpSearchProduct = {
+  detailHref: string;
+  model: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  imageCard: string;
+};
+
+function buildPumpSearchProductByHref() {
+  const products = new Map<string, PumpSearchProduct>();
+
+  for (const card of pumpSeriesSelectionCards) {
+    const detailHref = text(card.detailHref);
+    const imageCard = cleanImagePath(text(card.cardImage));
+    const content = card.content as UnknownObject | undefined;
+    const zhContent =
+      content &&
+      typeof content.zh === "object" &&
+      content.zh !== null
+        ? (content.zh as UnknownObject)
+        : null;
+
+    if (
+      !isProductHref(detailHref) ||
+      !imageCard ||
+      !zhContent ||
+      products.has(detailHref)
+    ) {
+      continue;
+    }
+
+    const slug =
+      detailHref.split("/").filter(Boolean).at(-1) ?? "";
+    const model = slug.toUpperCase();
+
+    products.set(detailHref, {
+      detailHref,
+      model,
+      title: firstText(zhContent, ["title"]) || model,
+      subtitle: firstText(zhContent, ["subtitle"]),
+      description: firstText(zhContent, ["description"]),
+      imageCard,
+    });
+  }
+
+  return products;
+}
+
+const pumpSearchProductByHref =
+  buildPumpSearchProductByHref();
+
 function getFiles(directory: string): string[] {
   if (!fs.existsSync(directory)) return [];
 
@@ -170,81 +229,122 @@ function collectProductItems(
   ]);
 
   if (isProductHref(href)) {
-    const model = firstText(object, [
+    const rawModel = firstText(object, [
       "foreachModel",
       "model",
       "modelNumber",
       "slug",
     ]);
 
-    const productCode = firstText(object, [
+    const rawProductCode = firstText(object, [
       "productCode",
+      "productId",
       "goodsCode",
       "sku",
     ]);
 
-    const title =
-      firstText(object, [
-        "title",
-        "productName",
-        "name",
-        "cardTitle",
-      ]) ||
-      model ||
-      productCode;
+    const isFittingRecord =
+      href.startsWith("/products/fittings/") ||
+      text(object.categoryId).toLowerCase() === "fittings" ||
+      sourceFile.replace(/\\/g, "/").includes("/fittings/");
 
-    const description = firstText(object, [
-      "description",
-      "summary",
-      "subtitle",
-      "cardSubtitle",
-    ]);
+    const formalFittingProduct =
+      isFittingRecord
+        ? getPublishedFittingProductByCode(rawProductCode)
+        : null;
+    const formalPumpProduct =
+      !isFittingRecord
+        ? pumpSearchProductByHref.get(href)
+        : null;
 
-    const image = cleanImagePath(
-      firstText(object, [
-        "imagePath",
-        "imageSrc",
-        "image",
-        "coverImage",
-        "mainImage",
-      ])
-    );
+    if (!isFittingRecord || formalFittingProduct) {
+      const model =
+        formalFittingProduct?.foreachModel ||
+        formalPumpProduct?.model ||
+        rawModel;
+      const finalHref =
+        formalFittingProduct?.detailHref ||
+        formalPumpProduct?.detailHref ||
+        href;
+      const productCode =
+        formalPumpProduct
+          ? ""
+          : rawProductCode;
 
-    const extraKeywords = firstText(object, [
-      "keywords",
-      "searchKeywords",
-      "tags",
-      "categoryLabel",
-      "seriesLabel",
-      "productType",
-      "productSeries",
-    ]);
+      const title =
+        formalPumpProduct?.title ||
+        firstText(object, [
+          "title",
+          "productName",
+          "name",
+          "cardTitle",
+        ]) ||
+        model ||
+        productCode;
 
-    if (title) {
-      result.push({
-        id: `product:${sourceFile}:${href}:${model || title}`,
-        module: "products",
-        title,
-        subtitle: model && model !== title
-          ? `型号：${model}`
-          : productCode
-            ? `商品编码：${productCode}`
-            : "",
-        description,
-        href,
-        image,
-        model,
-        productCode,
-        actionLabel: "查看产品",
-        keywords: [
+      const description =
+        formalPumpProduct?.description ||
+        firstText(object, [
+          "description",
+          "summary",
+          "subtitle",
+          "cardSubtitle",
+        ]);
+
+      const image = cleanImagePath(
+        formalFittingProduct?.imageCard ||
+          formalPumpProduct?.imageCard ||
+          firstText(object, [
+            "imageCard",
+            "imagePath",
+            "imageSrc",
+            "image",
+            "coverImage",
+            "mainImage",
+          ])
+      );
+
+      const extraKeywords = firstText(object, [
+        "keywords",
+        "searchKeywords",
+        "tags",
+        "categoryLabel",
+        "seriesLabel",
+        "productType",
+        "productSeries",
+      ]);
+
+      if (title) {
+        result.push({
+          id: `product:${sourceFile}:${finalHref}:${model || title}`,
+          module: "products",
           title,
+          subtitle:
+            formalPumpProduct?.subtitle ||
+            (
+              model && model !== title
+                ? `型号：${model}`
+                : productCode
+                  ? `商品编码：${productCode}`
+                  : ""
+            ),
+          description,
+          href: finalHref,
+          image,
           model,
           productCode,
-          description,
-          extraKeywords,
-          href,
-        ].filter(isNonEmptyString),
-      });
+          actionLabel: "查看产品",
+          keywords: [
+            title,
+            model,
+            productCode,
+            description,
+            formalPumpProduct?.subtitle,
+            extraKeywords,
+            finalHref,
+          ].filter(isNonEmptyString),
+        });
+      }
     }
   }
 
@@ -478,6 +578,29 @@ async function main() {
     ...compatibleItems,
     ...datasheetItems,
   ]);
+  const invalidProductImages = finalItems.filter((item) => {
+    if (item.module !== "products" || !item.image) {
+      return item.module === "products";
+    }
+
+    const imageFile = path.join(
+      ROOT,
+      "public",
+      ...item.image.replace(/^\/+/, "").split("/")
+    );
+
+    return !fs.existsSync(imageFile);
+  });
+
+  if (invalidProductImages.length > 0) {
+    throw new Error(
+      `产品搜索索引存在 ${invalidProductImages.length} 条缺失主图记录：` +
+      invalidProductImages
+        .slice(0, 10)
+        .map((item) => `${item.title} (${item.href})`)
+        .join("、")
+    );
+  }
 
   fs.mkdirSync(path.dirname(OUTPUT_PATH), { recursive: true });
   fs.writeFileSync(OUTPUT_PATH, buildOutput(finalItems), "utf8");

@@ -22,7 +22,8 @@ import {
 
 import "@/app/resources/technical-articles/technical-articles.css";
 
-import type { TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
+import type { TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
+import "@/app/resources/news/news.css";
 
 const SUPPORTED_LOCALES: TechnicalArticleLocale[] = ["en", "es", "fr", "ko", "ru"];
 

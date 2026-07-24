@@ -1,0 +1,50 @@
+﻿Q20 快插接头：产品中心与型号替代模块精确桥接审计
+生成时间：2026/7/24 11:40:19
+
+一、正式产品中心数据
+Q20：98
+Q40：58
+Q60：35
+
+二、旧型号替代模块数据
+Q20 替代页产品记录：84
+Q20 竞品替代映射记录：146
+
+三、竞品替代映射连接产品中心结果
+唯一匹配：84
+未匹配：62
+多重匹配：0
+
+四、替代页产品数据连接产品中心结果
+唯一匹配：84
+未匹配：0
+多重匹配：0
+
+五、产品中心中没有竞品替代映射的 Q20 产品
+14
+说明：该数量不代表数据错误，只表示这些正式产品目前没有配置竞品型号关系。
+
+六、模块导出概览
+产品中心正式选型数据：
+  - quickConnectFittingSelectionProducts (array, 191)
+  - quickConnectFittingFilterLabels (array, 7)
+  - quickConnectFittingTaxonomyItems (array, 4)
+竞品型号映射：
+  - fittingCompatibleModelProducts (array, 238)
+替代页产品数据：
+  - fittingReplacementAllCompatibleProducts (array, 238)
+系列配置：
+  - Q20_FITTING_REPLACEMENT_SERIES_CONFIG (object, 8)
+  - FITTING_REPLACEMENT_SERIES_CONFIG_MAP (object, 1)
+  - getFittingReplacementSeriesConfig (function)
+  - getFittingReplacementHomeHref (function)
+  - getFittingReplacementDetailHref (function)
+  - getFittingReplacementDrawingPdfHref (function)
+
+七、下一步判断规则
+1. 若竞品映射大部分可唯一匹配，应让替代 service 通过 productCode 优先、foreachModel 兜底读取产品中心正式数据。
+2. 若存在未匹配记录，先核对旧替代数据中的商品编码或 FOREACH 型号，不要自动猜测。
+3. Q40、Q60 只有正式产品数据，没有竞品对照表时，不应生成虚假的替代关系。
+4. 最终替代结果卡片应使用正式产品数据的标题、主图、规格和详情链接，竞品型号关系仍由 compatible-models.generated.ts 提供。
+
+本次只读取，没有修改网站源码。

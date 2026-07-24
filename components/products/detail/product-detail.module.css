@@ -1,4 +1,4 @@
-﻿/* =========================================================
+/* =========================================================
    product-detail.module.css
    恒永达官网｜中文产品详情页
 
@@ -24,6 +24,7 @@
 
   --page-width: 1180px;
   --btn-radius: 8px;
+  --content-section-gap: 28px;
 
   width: 100%;
   overflow-x: clip;
@@ -235,7 +236,7 @@
 }
 
 .application {
-  margin-top: 28px;
+  margin-top: var(--content-section-gap);
 }
 
 .applicationTitle {
@@ -259,7 +260,7 @@
 ========================================================= */
 
 .operationArea {
-  margin-top: 52px;
+  margin-top: calc(var(--content-section-gap) + 18px);
   padding-top: 24px;
   border-top: 1px solid var(--line-light);
 }
@@ -739,7 +740,8 @@
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
-  margin-top: 120px !important;
+  row-gap: var(--content-section-gap);
+  margin-top: calc(var(--content-section-gap) + 18px) !important;
   padding-top: 0 !important;
   border-top: 0 !important;
   box-sizing: border-box;
@@ -762,12 +764,18 @@
   margin-top: auto !important;
 }
 
+@media (min-width: 981px) and (max-width: 1440px) {
+  .operationArea {
+    margin-top: calc(var(--content-section-gap) + 18px) !important;
+  }
+}
+
 .thumbArrow {
   display: flex !important;
   width: 28px !important;
   min-width: 28px !important;
   max-width: 28px !important;
-  padding: 3px 0 0 !important;
+  padding: 0 !important;
   margin: 0 !important;
   flex: 0 0 28px !important;
   align-items: center !important;
@@ -785,11 +793,11 @@
     -0.4px 0 currentColor;
 }
 
-.thumbArrow[aria-label="上一张"] {
+.thumbArrow:first-child {
   justify-self: start !important;
 }
 
-.thumbArrow[aria-label="下一张"] {
+.thumbArrow:last-child {
   justify-self: end !important;
 }
 
@@ -806,6 +814,17 @@
   color: #173368 !important;
   outline: 1px solid #173368;
   outline-offset: -1px;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .thumbArrow:hover:not(:active),
+  .thumbArrow:focus:not(:active),
+  .thumbArrow:focus-visible:not(:active) {
+    border-color: rgba(23, 51, 104, 0.16) !important;
+    background: #ffffff !important;
+    color: #173368 !important;
+    outline: none;
+  }
 }
 
 @media (max-width: 980px) {
@@ -865,18 +884,18 @@
   min-width: 28px !important;
   max-width: 28px !important;
   height: 100% !important;
-  padding: 3px 0 0 !important;
+  padding: 0 !important;
   margin: 0 !important;
   flex: 0 0 28px !important;
   align-items: center !important;
   justify-content: center !important;
 }
 
-.thumbRow > .thumbArrow[aria-label="上一张"] {
+.thumbRow > .thumbArrow:first-child {
   left: 0 !important;
 }
 
-.thumbRow > .thumbArrow[aria-label="下一张"] {
+.thumbRow > .thumbArrow:last-child {
   right: 0 !important;
 }
 
@@ -2220,65 +2239,18 @@
   border-color: var(--brand-blue, #005bac) !important;
   color: #ffffff !important;
 }
+
+@media (hover: none), (pointer: coarse) {
+  .button:hover:not(:active):not([aria-pressed="true"]),
+  .button:focus:not(:active):not([aria-pressed="true"]),
+  .button:focus-visible:not(:active):not([aria-pressed="true"]) {
+    border-color: var(--blue) !important;
+    background: #ffffff !important;
+    color: var(--blue) !important;
+    outline: none;
+  }
+}
 /* ===== FOREACH product detail button pressed state END ===== */
-
-/* ENGLISH_DETAIL_GALLERY_COMPACT_ARROWS
- * 英文详情页左右按钮与缩略图保持在同一行。
- * 不使用绝对定位，不影响中文详情页。
- */
-.thumbRow[data-detail-locale="en"] {
-  position: static;
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-  width: max-content;
-  max-width: 100%;
-  min-height: 0;
-  padding: 0;
-  overflow: visible;
-}
-
-.thumbRow[data-detail-locale="en"] > .thumbArrow:first-child,
-.thumbRow[data-detail-locale="en"] > .thumbArrow:last-child {
-  position: static !important;
-  inset: auto !important;
-  top: auto !important;
-  right: auto !important;
-  bottom: auto !important;
-  left: auto !important;
-  display: inline-flex !important;
-  align-items: center;
-  justify-content: center;
-  flex: 0 0 auto;
-  margin: 0 !important;
-  line-height: 1;
-  visibility: visible !important;
-  opacity: 1 !important;
-  transform: none !important;
-  pointer-events: auto;
-}
-/* ENGLISH_DETAIL_GALLERY_COMPACT_ARROWS_END */
-
-/* ENGLISH_DETAIL_GALLERY_RIGHT_ARROW_POSITION
- * 英文详情页：
- * 左箭头与缩略图保持原位置，
- * 右箭头移动到图库区域右侧。
- */
-.thumbRow[data-detail-locale="en"] {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: none;
-}
-
-.thumbRow[data-detail-locale="en"] > .thumbArrow:last-child {
-  margin-left: auto !important;
-  margin-right: 36px !important;
-}
-/* ENGLISH_DETAIL_GALLERY_RIGHT_ARROW_POSITION_END */
 
 /* PRODUCT_DRAWING_EMPTY_STATE_START */
 
@@ -2339,3 +2311,85 @@
 }
 
 /* PRODUCT_DRAWING_EMPTY_STATE_END */
+
+/* ===== FOREACH MOBILE DETAIL TAB FONT START ===== */
+
+/*
+ * 产品详情页手机端三个资料标签：
+ * - 固定为三等分
+ * - 防止长外语标签挤出屏幕
+ * - PC 端不受影响
+ */
+@media (max-width: 768px) {
+  .container .tabNav {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    align-items: end !important;
+    justify-content: stretch !important;
+    gap: 0 !important;
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  .container .tabNav .tabButton {
+    width: 100% !important;
+    min-width: 0 !important;
+    height: 48px !important;
+    padding-right: 2px !important;
+    padding-left: 2px !important;
+    font-size: 15px !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+  }
+
+  /* 中文标签保持 16px */
+  :global(html[lang^="zh"]) .container .tabNav .tabButton {
+    font-size: 16px !important;
+  }
+
+  /* 俄文标签使用 14px，避免长单词拥挤 */
+  :global(html[lang^="ru"]) .container .tabNav .tabButton {
+    font-size: 14px !important;
+  }
+}
+
+/* ===== FOREACH MOBILE DETAIL TAB FONT END ===== */
+
+/* ===== FOREACH MOBILE TAB LINE ALIGN START ===== */
+
+/*
+ * 手机端 Tab 选中线位置修复：
+ * 将绿色选中线与 tabNav 的灰色 border-bottom 对齐。
+ */
+@media (max-width: 768px) {
+  .container .tabNav .tabButton::after {
+    bottom: -1px !important;
+  }
+}
+
+/* ===== FOREACH MOBILE TAB LINE ALIGN END ===== */
+
+/* ===== FOREACH MOBILE FAQ TITLE SAME AS MODEL START ===== */
+
+/*
+ * 手机端 FAQ 大标题与型号标题保持一致。
+ * 不影响 FAQ 问题、答案及电脑端样式。
+ */
+@media (max-width: 768px) {
+  .container .faqHeader h2 {
+    font-size: 20px !important;
+    line-height: 1.25 !important;
+    font-weight: 600 !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .container .faqHeader h2 {
+    font-size: 18px !important;
+    line-height: 1.25 !important;
+    font-weight: 600 !important;
+  }
+}
+
+/* ===== FOREACH MOBILE FAQ TITLE SAME AS MODEL END ===== */

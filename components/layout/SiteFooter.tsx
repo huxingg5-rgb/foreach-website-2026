@@ -104,7 +104,13 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
   );
 
   return (
-    <footer className="site-footer">
+    <footer
+      className={
+        activeLocale === "zh-CN"
+          ? `site-footer ${styles.chineseFooter}`
+          : "site-footer"
+      }
+    >
       <div className="site-footer__main">
         <div className="site-footer__inner">
           <div className="site-footer__nav-wrap">

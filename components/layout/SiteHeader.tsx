@@ -31,6 +31,7 @@ import {
   languageItems, // 语言切换菜单
   type LocaleCode, // 当前官网支持的语言类型
 } from "@/lib/i18n"; // 从 i18n 文件读取语言工具和语言文案
+import { getInternationalUiText } from "@/lib/international-ui";
 
 // 顶部栏展开面板类型
 // none：没有展开
@@ -201,6 +202,10 @@ export default function SiteHeader() {
       : `site-header-locale-${currentLocale}`;
 
   const headerText = headerI18n[currentLocale]; // 获取当前语言下的 Header 文案
+  const mobileSiteSearchLabel =
+    currentLocale === "zh-CN"
+      ? "全站搜索"
+      : getInternationalUiText(currentLocale, "Site Search");
 
   /* ================================
      当前路径去掉语言前缀
@@ -431,6 +436,27 @@ const isFittingReplacementDetailPage =
     newsPathSegments[1] === "news" &&
     Boolean(newsPathSegments[2]);
 
+
+  /* ================================
+     技术文章详情页判断
+
+     说明：
+     1. /resources/technical-articles 是技术文章列表页
+     2. /resources/technical-articles/[slug] 才是详情页
+     3. 详情页没有顶部 Banner，需要直接使用白底 Header
+     4. 多语言前缀已经通过 normalizedPathWithoutLocale 去除
+  ================================ */
+  const technicalArticlePathSegments =
+    normalizedPathWithoutLocale
+      .split("/")
+      .filter(Boolean);
+
+  const isTechnicalArticlePage =
+    technicalArticlePathSegments.length >= 3 &&
+    technicalArticlePathSegments[0] === "resources" &&
+    technicalArticlePathSegments[1] === "technical-articles" &&
+    Boolean(technicalArticlePathSegments[2]);
+
   /* ================================
      产品中心页面判断
 
@@ -454,7 +480,8 @@ const isFittingReplacementDetailPage =
 
   const shouldUseSolidHeader =
     isScrolled ||
-    isFittingReplacementDetailPage || isNewsArticlePage || isProductCenterPage || isPrivacyPolicyPage ||
+    isFittingReplacementDetailPage || isNewsArticlePage ||
+    isTechnicalArticlePage || isProductCenterPage || isPrivacyPolicyPage ||
     isPrivacyPolicyPage ||
     openPanel !== "none" ||
     Boolean(desktopMegaKey) ||
@@ -820,6 +847,28 @@ const isFittingReplacementDetailPage =
       setOpenPanel((currentPanel) =>
         currentPanel === "mobileNav" ? "none" : "mobileNav",
       );
+    }
+
+    /**
+     * 点击手机端菜单中的全站搜索入口
+     *
+     * 说明：
+     * 1. 复用 PC 端的搜索状态和同一份全站索引
+     * 2. 先关闭手机导航，避免菜单遮挡搜索结果层
+     * 3. 搜索结果层会在手机端显示自己的输入框
+     */
+    function handleMobileSearchButtonClick(
+      event: MouseEvent<HTMLButtonElement>,
+    ) {
+      event.preventDefault();
+
+      void preloadGlobalSearchIndex();
+
+      setOpenPanel("none");
+      setOpenMobileSectionKey(null);
+      setDesktopMegaKey(null);
+      setActiveMegaCategoryKey(null);
+      setIsSearchOpen(true);
     }
 
     /**
@@ -1291,6 +1340,25 @@ const isFittingReplacementDetailPage =
                     </Link>
                   );
                 })}
+
+                <button
+                  className="mobile-nav-search-button"
+                  type="button"
+                  aria-label={headerText.searchAriaLabel}
+                  aria-expanded={isSearchOpen}
+                  onMouseEnter={() => {
+                    void preloadGlobalSearchIndex();
+                  }}
+                  onFocus={() => {
+                    void preloadGlobalSearchIndex();
+                  }}
+                  onTouchStart={() => {
+                    void preloadGlobalSearchIndex();
+                  }}
+                  onClick={handleMobileSearchButtonClick}
+                >
+                  <span>{mobileSiteSearchLabel}</span>
+                </button>
               </nav>
             </div>
           </div>

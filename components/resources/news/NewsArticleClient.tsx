@@ -1,5 +1,7 @@
 "use client";
 
+import type { ReactNode } from "react";
+
 /* =========================================================
    NewsArticleClient.tsx
    恒永达官网｜新闻中心详情页客户端组件
@@ -30,6 +32,7 @@ import { usePathname } from "next/navigation";
 import ResourceSupportCta from "@/components/resources/ResourceSupportCta";
 
 import styles from "./NewsArticleClient.module.css";
+import Adlm2026DepartureArticle, { getAdlm2026DepartureSupportCopy } from "./articles/Adlm2026DepartureArticle";
 
 /* =========================================================
    新闻正文块类型
@@ -101,7 +104,8 @@ type NewsArticleClientProps = {
   pageData: NewsArticlePageData;
   previousArticle?: NewsPagerItem | null;
   nextArticle?: NewsPagerItem | null;
-};
+
+  children?: ReactNode;};
 
 /* =========================================================
    ResourceSupportCta 组件兼容类型
@@ -294,6 +298,7 @@ export default function NewsArticleClient({
   pageData,
   previousArticle,
   nextArticle,
+  children,
 }: NewsArticleClientProps) {
   const pathname = usePathname();
 
@@ -307,7 +312,8 @@ export default function NewsArticleClient({
      1. 优先使用当前语言默认路径
      2. 不再直接依赖 pageData.listHref，避免外语页面拿到中文路径
   */
-  const listHref = uiText.listHref;
+  const listHref = pageData.listHref ?? uiText.listHref;
+  const backText = pageData.backText ?? uiText.back;
 
   /* 上一篇 / 下一篇：优先使用 page.tsx 单独传入，其次使用 article 内部字段 */
   const previous = previousArticle ?? article.previous ?? null;
@@ -315,6 +321,78 @@ export default function NewsArticleClient({
 
   /* 底部 CTA：优先使用第一个 action */
   const primaryAction = pageData.bottomBanner.actions?.[0];
+  /* NEWS_THREE_DETAIL_IMAGES_START */
+
+  /*
+   * 以下配置只影响新闻详情页中的大图。
+   * 新闻列表卡片仍然使用文章原来的 coverImage。
+   */
+  const currentNewsSlug =
+    String(pathname || "")
+      .split("/")
+      .filter(Boolean)
+      .pop() ?? "";
+
+  const detailCoverImageMap: Record<string, string> = {
+    "national-little-giant-2024":
+      "/images/home/company-honors-original/little-giant.png",
+
+    "iso-13485-certification":
+      "/images/home/company-honors-original/iso-13485.png",
+
+    "iso-9001-certification":
+      "/images/home/company-honors-original/iso-9001.png",
+  };
+
+  const specialDetailCoverImage =
+    detailCoverImageMap[currentNewsSlug];
+
+  const detailCoverImage =
+    specialDetailCoverImage ?? article.coverImage;
+
+  const isSpecialDetailImage =
+    Boolean(specialDetailCoverImage);
+
+  /* NEWS_THREE_DETAIL_IMAGES_END */
+
+  /* ADLM_2026_DEPARTURE_ARTICLE_START */
+  const isAdlm2026DepartureArticle =
+    (article as { slug?: string }).slug ===
+      "adlm-2026-team-departure";
+
+  const adlm2026SupportCopy =
+    isAdlm2026DepartureArticle
+      ? getAdlm2026DepartureSupportCopy(locale)
+      : null;
+
+  const articleSupportTitle =
+    adlm2026SupportCopy?.title ??
+    pageData.bottomBanner.title;
+
+  const articleSupportDescription =
+    adlm2026SupportCopy?.description ??
+    pageData.bottomBanner.description;
+
+  const articleSupportActions =
+    adlm2026SupportCopy
+      ? [
+          {
+            label: adlm2026SupportCopy.buttonLabel,
+            href: adlm2026SupportCopy.href,
+          },
+        ]
+      : pageData.bottomBanner.actions ?? [];
+
+  const articleSupportButtonText =
+    adlm2026SupportCopy?.buttonLabel ??
+    primaryAction?.label ??
+    uiText.fallbackContact;
+
+  const articleSupportHref =
+    adlm2026SupportCopy?.href ??
+    primaryAction?.href ??
+    uiText.fallbackContactHref;
+  /* ADLM_2026_DEPARTURE_ARTICLE_END */
 
   return (
     <main className={styles.page}>
@@ -325,7 +403,7 @@ export default function NewsArticleClient({
         <header className={styles.header}>
           <div className={styles.container}>
             <Link className={styles.backLink} href={listHref}>
-              {`< ${uiText.back}`}
+              {`< ${backText}`}
             </Link>
 
             <h1 className={styles.title}>{article.title}</h1>
@@ -341,12 +419,18 @@ export default function NewsArticleClient({
         {/* =====================================================
             2. 新闻主题图
         ====================================================== */}
-        {article.coverImage ? (
+        {detailCoverImage ? (
           <section className={styles.coverSection}>
             <div className={styles.container}>
-              <figure className={styles.cover}>
+              <figure
+                  className={
+                    isSpecialDetailImage
+                      ? `${styles.cover} ${styles.coverContain}`
+                      : styles.cover
+                  }
+                >
                 <Image
-                  src={article.coverImage}
+                  src={detailCoverImage}
                   alt={article.coverAlt ?? article.title}
                   fill
                   priority
@@ -363,32 +447,44 @@ export default function NewsArticleClient({
         <section className={styles.contentSection}>
           <div className={styles.container}>
             <div className={styles.content}>
-              {article.content.map((block, index) => {
-                const paragraphs = splitParagraphs(
-                  block.content ?? block.text ?? "",
-                );
-
-                return (
-                  <section
-                    key={`${block.title ?? "news-block"}-${index}`}
-                    className={styles.contentBlock}
-                  >
-                    {block.title ? <h2>{block.title}</h2> : null}
-
-                    {paragraphs.map((paragraph, paragraphIndex) => (
-                      <p key={paragraphIndex}>{paragraph}</p>
-                    ))}
-
-                    {block.items && block.items.length > 0 ? (
-                      <ul>
-                        {block.items.map((item, itemIndex) => (
-                          <li key={itemIndex}>{item}</li>
-                        ))}
-                      </ul>
-                    ) : null}
-                  </section>
-                );
-              })}
+                            {/* TECHNICAL_ARTICLE_RICH_CONTENT_START */}
+              {children ? (
+                children
+              ) : (
+                <>
+                  {isAdlm2026DepartureArticle ? (
+                                  <Adlm2026DepartureArticle locale={locale} />
+                                ) : (
+                                  article.content.map((block, index) => {
+                                                  const paragraphs = splitParagraphs(
+                                                    block.content ?? block.text ?? "",
+                                                  );
+                                  
+                                                  return (
+                                                    <section
+                                                      key={`${block.title ?? "news-block"}-${index}`}
+                                                      className={styles.contentBlock}
+                                                    >
+                                                      {block.title ? <h2>{block.title}</h2> : null}
+                                  
+                                                      {paragraphs.map((paragraph, paragraphIndex) => (
+                                                        <p key={paragraphIndex}>{paragraph}</p>
+                                                      ))}
+                                  
+                                                      {block.items && block.items.length > 0 ? (
+                                                        <ul>
+                                                          {block.items.map((item, itemIndex) => (
+                                                            <li key={itemIndex}>{item}</li>
+                                                          ))}
+                                                        </ul>
+                                                      ) : null}
+                                                    </section>
+                                                  );
+                                                })
+                                )}
+                </>
+              )}
+              {/* TECHNICAL_ARTICLE_RICH_CONTENT_END */}
             </div>
           </div>
         </section>
@@ -422,15 +518,15 @@ export default function NewsArticleClient({
       ====================================================== */}
       <section className={styles.supportSection}>
         <SupportCtaComponent
-          title={pageData.bottomBanner.title}
-          description={pageData.bottomBanner.description}
-          actions={pageData.bottomBanner.actions ?? []}
-          buttonText={primaryAction?.label ?? uiText.fallbackContact}
-          buttonLabel={primaryAction?.label ?? uiText.fallbackContact}
-          href={primaryAction?.href ?? uiText.fallbackContactHref}
-          buttonHref={primaryAction?.href ?? uiText.fallbackContactHref}
+          title={articleSupportTitle}
+          description={articleSupportDescription}
+          actions={articleSupportActions}
+          buttonText={articleSupportButtonText}
+          buttonLabel={articleSupportButtonText}
+          href={articleSupportHref}
+          buttonHref={articleSupportHref}
         />
       </section>
     </main>
   );
-} 
+}

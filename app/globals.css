@@ -16308,7 +16308,7 @@ html body nav[aria-label*="breadcrumb"] em {
     position: relative !important;
     z-index: 1 !important;
     background: #ffffff !important;
-    box-shadow: none !important;
+    box-shadow: 0 22px 36px -10px rgba(10, 27, 58, 0.28) !important;
     filter: none !important;
     border: 1px solid rgba(23, 51, 104, 0.08) !important;
     border-top: 0 !important;
@@ -16548,6 +16548,39 @@ html body nav[aria-label*="breadcrumb"] em {
   .site-nav-mega-about.site-nav-mega-open .site-nav-product-title,
   .site-nav-mega-about.site-nav-mega-open .site-nav-product-desc {
     display: none !important;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .site-nav-mega-about.site-nav-mega-open .site-nav-mega-main {
+    grid-template-columns: minmax(220px, 280px) minmax(220px, 260px) !important;
+    column-gap: clamp(22px, 2vw, 28px) !important;
+    justify-content: start !important;
+    padding: 28px 32px !important;
+  }
+
+  .site-nav-mega-about.site-nav-mega-open .site-nav-mega-heading {
+    min-height: 200px !important;
+  }
+
+  .site-nav-mega-about.site-nav-mega-open .site-nav-mega-product-area {
+    justify-content: flex-start !important;
+    min-height: 200px !important;
+  }
+
+  .site-nav-mega-about.site-nav-mega-open .site-nav-product-image-box,
+  .site-nav-mega-about.site-nav-mega-open .site-nav-mega-single-image-box {
+    width: 100% !important;
+    max-width: 260px !important;
+    min-height: 200px !important;
+    height: 200px !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+
+  .site-nav-mega-about.site-nav-mega-open .site-nav-product-image,
+  .site-nav-mega-about.site-nav-mega-open .site-nav-mega-single-image {
+    height: 200px !important;
   }
 }
 /* ===== FOREACH ABOUT MEGA TEXT IMAGE LAYOUT END ===== */
@@ -19964,6 +19997,49 @@ html body .home-honor-image img {
   }
 }
 
+/*
+ * 1024–1440px 共用紧凑型下拉尺寸，
+ * 覆盖常见的 1280px 笔记本与平板横屏视口。
+ */
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .site-header
+    .site-nav-item-has-simple-dropdown
+    > .site-nav-simple-dropdown {
+    width: 300px !important;
+    min-width: 300px !important;
+  }
+
+  .site-header
+    .site-nav-item-has-simple-dropdown
+    > .site-nav-simple-dropdown
+    .site-nav-simple-dropdown-link {
+    min-height: 46px !important;
+    padding-right: 22px !important;
+    padding-left: 22px !important;
+    font-size: 14px !important;
+  }
+}
+
+/*
+ * 1024–1280px 与 1281–1440px 的页头高度不同，
+ * 分别沿用与各自页头底边对齐的偏移量。
+ */
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .site-header
+    .site-nav-item-has-simple-dropdown
+    > .site-nav-simple-dropdown {
+    top: calc(100% + 30px) !important;
+  }
+}
+
+@media (min-width: 1281px) and (max-width: 1440px) {
+  .site-header
+    .site-nav-item-has-simple-dropdown
+    > .site-nav-simple-dropdown {
+    top: calc(100% + 20px) !important;
+  }
+}
+
 /* SIMPLE_DROPDOWN_MATCH_MEGA_TYPE_END */
 
 /* LANGUAGE_MENU_SHARED_DROPDOWN_START */
@@ -20278,8 +20354,7 @@ html body .home-honor-image img {
     min-width: 168px !important;
     max-width: calc(100vw - 20px) !important;
 
-    padding-top: 5px !important;
-    padding-bottom: 6px !important;
+    padding: 5px 0 6px !important;
   }
 
   /*
@@ -20500,3 +20575,315 @@ html body .home-honor-image img {
 }
 
 /* LANGUAGE_MENU_ALIGN_NAV_BOTTOM_END */
+
+/* ===== FOREACH MOBILE BREADCRUMB SINGLE LINE START ===== */
+
+/*
+ * 产品详情页手机端面包屑单行显示。
+ *
+ * 真实结构：
+ * nav > div > span
+ *
+ * 前两个层级保持完整；
+ * 最后一级产品名称占用剩余空间并显示省略号。
+ *
+ * 本规则不修改面包屑高度及上下间距。
+ */
+@media (max-width: 768px) {
+  /*
+   * 限定在产品详情页外层，
+   * 避免影响资源中心、关于我们和应用领域页面。
+   */
+  [data-product-breadcrumb-shell="true"] nav {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  /*
+   * SiteBreadcrumb 的真实 inner 容器。
+   * 原样式 flex-wrap: wrap 导致产品名换到第二行。
+   */
+  [data-product-breadcrumb-shell="true"] nav > div {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+  }
+
+  /*
+   * Home 和 Products 固定显示，不参与压缩。
+   */
+  [data-product-breadcrumb-shell="true"] nav > div > span {
+    flex: 0 0 auto !important;
+    min-width: 0 !important;
+    white-space: nowrap !important;
+  }
+
+  /*
+   * 最后一级产品名称使用剩余宽度。
+   */
+  [data-product-breadcrumb-shell="true"] nav > div > span:last-child {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+  }
+
+  /*
+   * 省略号必须设置在实际承载产品名称的 strong 上。
+   */
+  [data-product-breadcrumb-shell="true"] nav > div > span:last-child > strong {
+    display: block !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+}
+
+/* ===== FOREACH MOBILE BREADCRUMB SINGLE LINE END ===== */
+
+/* ===== FOREACH MOBILE GLOBAL SEARCH START ===== */
+
+/*
+ * 手机导航中的搜索入口与 PC 端共用 GlobalSearchPanel。
+ * 默认隐藏移动端专用控件，避免改变桌面端导航布局。
+ */
+.mobile-nav-search-button,
+.global-search-mobile-form {
+  display: none;
+}
+
+/*
+ * 桌面端不生成额外的布局盒，保持原搜索标题栏的 sticky 行为。
+ */
+.global-search-panel-toolbar {
+  display: contents;
+}
+
+@media (max-width: 1000px) {
+  .mobile-nav-search-button {
+    width: 100%;
+    min-height: 56px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    border: 0;
+    border-bottom: 1px solid rgba(23, 51, 104, 0.12);
+    border-radius: 10px;
+    background: #ffffff;
+    color: #173368;
+    font: inherit;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .mobile-nav-search-button:hover,
+  .mobile-nav-search-button:focus-visible,
+  .mobile-nav-search-button:active {
+    background: #ffffff;
+    color: #173368;
+    outline: none;
+  }
+
+  .global-search-panel-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 7;
+    display: block;
+    padding-top: 2px;
+    background: #ffffff;
+  }
+
+  .global-search-mobile-form {
+    width: 100%;
+    height: 48px;
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr) 96px;
+    align-items: center;
+    margin-top: 14px;
+    margin-bottom: 13px;
+    overflow: hidden;
+    border: 1px solid rgba(23, 51, 104, 0.2);
+    border-radius: 8px;
+    background: #ffffff;
+    color: #173368;
+    transition:
+      border-color 0.18s ease,
+      box-shadow 0.18s ease;
+  }
+
+  .global-search-mobile-form:focus-within {
+    border-color: #09e9b4;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(9, 233, 180, 0.14);
+  }
+
+  .global-search-mobile-icon {
+    width: 17px;
+    height: 17px;
+    justify-self: center;
+  }
+
+  .global-search-mobile-input {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    padding: 0 8px 0 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #173368;
+    font: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  .global-search-mobile-input::placeholder {
+    color: rgba(23, 51, 104, 0.48);
+    font-weight: 500;
+  }
+
+  .global-search-mobile-input::-webkit-search-cancel-button {
+    display: none;
+  }
+
+  .global-search-mobile-submit {
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid #173368;
+    border-radius: 0 7px 7px 0;
+    background: #173368;
+    color: #ffffff;
+    font: inherit;
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 1.2;
+    cursor: pointer;
+    transition:
+      color 0.18s ease,
+      border-color 0.18s ease;
+  }
+
+  .global-search-mobile-submit:hover,
+  .global-search-mobile-submit:focus-visible {
+    border-color: #09e9b4;
+    color: #09e9b4;
+    outline: none;
+  }
+
+  /*
+   * 手机端由 toolbar 统一吸顶，标题栏本身取消 sticky，
+   * 避免搜索输入框和关闭按钮在滚动时相互覆盖。
+   */
+  .global-search-panel-toolbar .global-search-panel-head {
+    position: static !important;
+    top: auto !important;
+    align-items: center !important;
+  }
+
+  .global-search-panel-toolbar .global-search-panel-head > div:first-child,
+  .global-search-panel-toolbar .global-search-panel-head-actions,
+  .global-search-panel-toolbar .global-search-close {
+    align-self: center !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .mobile-nav-search-button {
+    min-height: 56px;
+  }
+}
+
+/* ===== FOREACH MOBILE GLOBAL SEARCH END ===== */
+/*
+ * 全站手机端按钮触摸反馈
+ *
+ * 1. 仅触摸 / 粗指针设备生效，PC 鼠标与键盘交互保持原样。
+ * 2. 按住时统一使用荧光绿背景和深蓝文字。
+ * 3. 松开后立即移除按压样式并失焦，按钮恢复自己的默认或业务状态。
+ */
+@media (hover: none), (pointer: coarse) {
+  :where(
+      button:not(:disabled),
+      input[type="button"]:not(:disabled),
+      input[type="submit"]:not(:disabled),
+      input[type="reset"]:not(:disabled),
+      [role="button"]:not([aria-disabled="true"]),
+      summary,
+      label[class*="button" i],
+      label[class*="btn" i],
+      a[class*="button" i],
+      a[class*="btn" i],
+      a[class*="cta" i],
+      a[class*="action" i]
+    ) {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  html body
+    [data-global-touch-pressed="true"][data-global-touch-pressed="true"] {
+    border-color: #09e9b4 !important;
+    background: #09e9b4 !important;
+    background-color: #09e9b4 !important;
+    color: #173368 !important;
+    outline-color: #09e9b4 !important;
+    box-shadow: none !important;
+    transform: translateY(1px) scale(0.99) !important;
+    transition-duration: 0.06s !important;
+  }
+
+  html body
+    [data-global-touch-pressed="true"][data-global-touch-pressed="true"]
+    :where(svg, path) {
+    color: #173368 !important;
+    stroke: currentColor;
+  }
+
+}
+
+/* Touch devices keep their native rest style after a tap. */
+html[data-global-touch-device="true"]
+  .global-search-mobile-submit:not([data-global-touch-pressed="true"]):hover,
+html[data-global-touch-device="true"]
+  .global-search-mobile-submit:not([data-global-touch-pressed="true"]):focus {
+  border-color: #173368 !important;
+  background: #173368 !important;
+  color: #ffffff !important;
+  transform: none !important;
+}
+
+html[data-global-touch-device="true"]
+  .global-search-close:not([data-global-touch-pressed="true"]):hover,
+html[data-global-touch-device="true"]
+  .global-search-close:not([data-global-touch-pressed="true"]):focus,
+html[data-global-touch-device="true"]
+  .global-search-more:not([data-global-touch-pressed="true"]):hover,
+html[data-global-touch-device="true"]
+  .global-search-more:not([data-global-touch-pressed="true"]):focus,
+html[data-global-touch-device="true"]
+  .global-search-suggestions
+  button:not([data-global-touch-pressed="true"]):hover,
+html[data-global-touch-device="true"]
+  .global-search-suggestions
+  button:not([data-global-touch-pressed="true"]):focus {
+  border-color: #173368 !important;
+  background: #ffffff !important;
+  color: #173368 !important;
+  transform: none !important;
+}

@@ -55,6 +55,14 @@ const pageTranslations: Record<ForeignLocale, {
 
 const articleTranslations: Record<ForeignLocale, readonly ArticleTranslation[]> = {
   es: [
+    [
+      "Guía práctica de ingeniería: corrección de Cv/Kv en microfluídica y restricciones de precisión",
+      "Los cálculos Cv/Kv convencionales parten de un régimen turbulento. En pasos muy pequeños y con números de Reynolds bajos pueden subestimar la pérdida real de presión. Esta guía ofrece un método práctico para selección e integración.",
+      "Cuándo deja de ser válida la relación cuadrática",
+      "En equipos IVD, instrumentos analíticos y automatización, los conductos de 0.1 a 0.5 mm pueden funcionar en régimen laminar o de transición. En estas condiciones, el coeficiente publicado no debe tratarse como una constante universal.",
+      "Corrección por Reynolds y geometría real",
+      "El factor Fᵣ permite adaptar el Cv/Kv a la condición de trabajo. Los microcanales largos deben evaluarse mediante fricción distribuida, mientras que los orificios cortos requieren una corrección de pérdidas locales.",
+    ],
     ["Cómo seleccionar racores adecuados para un sistema microfluídico", "Los racores influyen en el sellado, el montaje, el mantenimiento y la estabilidad. Deben elegirse según el tubo, la conexión, la presión, el fluido y el espacio disponible.", "Función de los racores en los sistemas fluídicos", "En un sistema microfluídico, los racores permiten transferir el fluido, sellar y unir la estructura. Los instrumentos IVD suelen exigir estabilidad y uniformidad a largo plazo, mientras que la automatización de laboratorio prioriza el montaje y el mantenimiento.", "Factores clave de selección", "Compruebe los diámetros del tubo y la compatibilidad de la interfaz. Confirme también si la conexión es para tubo rígido o flexible, con férula, brida o rosca, además de la presión, el fluido y las condiciones de mantenimiento."],
     ["Diferencias entre PEEK, PTFE y PFA en sistemas fluídicos", "PEEK, PTFE y PFA son materiales de alto rendimiento, pero difieren en resistencia mecánica y química, transparencia, flexibilidad y procesabilidad.", "Principales diferencias entre los tres materiales", "PEEK ofrece resistencia mecánica y a la presión; PTFE destaca por su inercia química y baja energía superficial; PFA combina resistencia química con cierta transparencia para aplicaciones que requieren inspección o limpieza.", "La compatibilidad depende de las condiciones reales", "Evalúe concentración, temperatura, tiempo de contacto, presión y método de limpieza. Para mezclas, altas temperaturas o inmersión prolongada se recomiendan pruebas de muestras y confirmación técnica."],
     ["Racores de baja y alta presión: diferencias clave", "Los racores de baja presión priorizan el montaje y el sellado; los de alta presión requieren una estructura, un diseño de sellado y una estabilidad más robustos.", "Requisitos de aplicación diferentes", "Los racores de baja presión se usan en transferencia de reactivos, lavado y manipulación general. Los de alta presión son habituales en instrumentos analíticos o sistemas sensibles a las variaciones de presión.", "La apariencia no basta para sustituirlos", "Aunque dos racores parezcan iguales, pueden diferir en presión nominal, sellado, tubo aplicable y montaje. Confirme el rango de presión y el conjunto completo de tubos."],
@@ -69,6 +77,14 @@ const articleTranslations: Record<ForeignLocale, readonly ArticleTranslation[]> 
     ["Cómo seleccionar racores de sustitución a partir de planos o muestras", "La sustitución requiere confirmar interfaz, sellado, material, presión y condiciones, además de las dimensiones exteriores.", "La sustitución no depende solo del aspecto", "Para mantenimiento o localización deben comprobarse dimensiones, rosca, tamaño del tubo, sellado, materiales mojados y presión.", "Los planos, muestras y condiciones ayudan", "Si solo hay una muestra, aporte fotos claras, dimensiones, tubo y fluido. Si hay planos, incluya dimensiones de interfaz, tolerancias y condiciones de montaje."],
   ],
   fr: [
+    [
+      "Guide d’ingénierie : limites et correction du Cv/Kv en microfluidique",
+      "Les calculs Cv/Kv classiques reposent sur un régime turbulent. Dans les passages de très faible diamètre et à bas nombre de Reynolds, ils peuvent sous-estimer la perte de charge. Cette méthode relie le coefficient publié au régime réel.",
+      "Pourquoi la loi quadratique atteint ses limites",
+      "Dans les instruments IVD et analytiques, les passages de 0.1 à 0.5 mm peuvent fonctionner en régime laminaire ou transitoire. Le Cv/Kv doit alors être considéré comme une donnée d’étalonnage et non comme une constante universelle.",
+      "Correction de Reynolds et géométrie du composant",
+      "Le facteur Fᵣ adapte le coefficient aux conditions réelles. Les microcanaux longs sont évalués par les pertes réparties, tandis que les orifices courts nécessitent une correction des pertes singulières.",
+    ],
     ["Comment choisir des raccords adaptés à un système microfluidique", "Les raccords influencent l’étanchéité, le montage, la maintenance et la stabilité. Le choix dépend du tube, de la connexion, de la pression, du fluide et de l’espace disponible.", "Rôle des raccords dans un système fluidique", "Les raccords assurent le transfert, l’étanchéité et la liaison structurelle. Les instruments IVD privilégient souvent la stabilité et la régularité, tandis que l’automatisation de laboratoire accorde plus d’importance au montage et à la maintenance.", "Principaux critères de sélection", "Vérifiez les diamètres du tube et la compatibilité de l’interface. Confirmez aussi le type de connexion, la pression, le fluide et les conditions de maintenance."],
     ["Différences entre PEEK, PTFE et PFA dans les systèmes fluidiques", "Ces matériaux haute performance diffèrent par leur résistance mécanique et chimique, leur transparence, leur souplesse et leur transformation.", "Principales différences", "Le PEEK offre résistance mécanique et tenue en pression ; le PTFE présente une excellente inertie chimique ; le PFA associe résistance chimique et transparence partielle.", "La compatibilité dépend des conditions réelles", "Évaluez concentration, température, durée de contact, pression et nettoyage. Pour les mélanges, températures élevées ou immersions longues, effectuez des essais."],
     ["Raccords basse et haute pression : différences essentielles", "Les raccords basse pression privilégient le montage et l’étanchéité ; les modèles haute pression exigent une structure et une stabilité renforcées.", "Des exigences d’application différentes", "La basse pression concerne le transfert de réactifs, le lavage et la manipulation courante. La haute pression intervient souvent dans les instruments analytiques.", "L’apparence ne suffit pas pour un remplacement", "Deux raccords similaires peuvent différer par la pression nominale, le joint, le tube et le montage. Confirmez la plage réelle et l’ensemble de la tuyauterie."],
@@ -83,6 +99,14 @@ const articleTranslations: Record<ForeignLocale, readonly ArticleTranslation[]> 
     ["Comment choisir des raccords de remplacement à partir de plans ou d’échantillons", "Le remplacement exige de confirmer l’interface, le joint, le matériau, la pression et les conditions, au-delà des dimensions extérieures.", "Pas seulement une question d’apparence", "Pour la maintenance ou la relocalisation, vérifiez dimensions, filetage, tube, joint, matériaux mouillés et pression.", "Plans, échantillons et conditions sont utiles", "Avec un échantillon, fournissez photos, dimensions, tube et fluide. Avec un plan, indiquez interfaces, tolérances et conditions de montage."],
   ],
   ko: [
+    [
+      "설계 실무 가이드: 미세유체 저레이놀즈수 조건의 Cv/Kv 보정",
+      "일반 Cv/Kv 계산은 난류 저항 영역을 전제로 합니다. 미세 유로와 낮은 레이놀즈수 조건에서는 실제 압력 손실을 낮게 평가할 수 있습니다. 본 자료는 장비 설계와 부품 선정에 적용할 수 있는 보정 방법을 설명합니다.",
+      "미세 유로에서 제곱 법칙이 달라지는 이유",
+      "IVD 및 분석기기의 0.1～0.5 mm 유로는 층류 또는 천이 영역에서 운전될 수 있습니다. 이 경우 표시된 Cv/Kv를 모든 조건에서 일정한 값으로 적용하면 안 됩니다.",
+      "레이놀즈수와 실제 형상을 이용한 보정",
+      "Fᵣ를 이용해 운전 조건의 유량계수를 계산합니다. 긴 미세 유로는 분포 마찰로, 짧은 오리피스는 국부 손실을 중심으로 평가해야 합니다.",
+    ],
     ["미세유체 시스템에 적합한 피팅 선정 방법", "피팅은 밀봉, 조립, 유지보수 및 장기 안정성에 영향을 줍니다. 튜브, 연결 방식, 압력, 유체 및 설치 공간을 함께 고려해야 합니다.", "유체 시스템에서 피팅의 역할", "피팅은 유체 이송, 밀봉 및 구조 연결을 담당합니다. IVD 장비는 장기 안정성과 일관성을, 실험실 자동화는 조립과 유지보수 편의성을 중시합니다.", "주요 선정 요소", "튜브 내외경과 인터페이스 호환성을 확인하고 경질·연질 튜브, 페룰, 플랜지 또는 나사 연결 방식과 압력, 유체, 유지보수 조건을 검토합니다."],
     ["유체 시스템에서 PEEK, PTFE 및 PFA의 차이", "세 재질은 고성능이지만 기계적 강도, 내화학성, 투명성, 유연성 및 가공 특성이 다릅니다.", "세 재질의 주요 차이", "PEEK는 강도와 내압성이 높고, PTFE는 화학적 불활성과 낮은 표면 에너지가 뛰어나며, PFA는 내화학성과 일정 수준의 투명성을 제공합니다.", "실제 조건에 따른 호환성", "농도, 온도, 접촉 시간, 압력 및 세척 방법을 함께 평가하십시오. 혼합 용매, 고온 또는 장기 침지에는 샘플 시험과 기술 확인이 권장됩니다."],
     ["저압 피팅과 고압 피팅의 주요 차이", "저압 피팅은 조립성과 밀봉 신뢰성을, 고압 피팅은 강한 구조와 밀봉 설계 및 압력 안정성을 중시합니다.", "서로 다른 적용 요구", "저압 피팅은 시약 이송과 세척에, 고압 피팅은 분석 장비나 압력 변동에 민감한 시스템에 주로 사용됩니다.", "외관만으로 대체할 수 없음", "모양이 비슷해도 정격 압력, 밀봉 구조, 적용 튜브 및 설치 방식이 다를 수 있으므로 실제 압력과 전체 튜브 조립체를 확인해야 합니다."],
@@ -97,6 +121,14 @@ const articleTranslations: Record<ForeignLocale, readonly ArticleTranslation[]> 
     ["도면 또는 샘플로 대체 피팅을 선정하는 방법", "외형 치수뿐 아니라 인터페이스, 밀봉 구조, 재질, 압력 및 적용 조건을 확인해야 합니다.", "외관만으로 선정하지 않기", "유지보수나 국산화에는 치수, 나사, 튜브 크기, 씰, 접액 재질과 압력을 모두 점검합니다.", "도면, 샘플과 적용 조건 활용", "샘플만 있으면 선명한 사진, 주요 치수, 튜브와 유체 정보를 제공하고 도면이 있으면 인터페이스 치수, 공차와 설치 조건을 포함합니다."],
   ],
   ru: [
+    [
+      "Инженерная практика: коррекция Cv/Kv в микрофлюидных каналах при низком числе Рейнольдса",
+      "Классические расчёты Cv/Kv основаны на турбулентном режиме. В каналах малого диаметра и при низком числе Рейнольдса они могут существенно занижать фактический перепад давления. В статье приведена практическая схема коррекции.",
+      "Почему квадратичный закон имеет ограниченную область применения",
+      "В диагностическом и аналитическом оборудовании каналы диаметром 0.1～0.5 mm могут работать в ламинарной или переходной области. Паспортный Cv/Kv необходимо связывать с условиями калибровки.",
+      "Коррекция по Reynolds и фактической геометрии",
+      "Коэффициент Fᵣ адаптирует пропускную способность к рабочему режиму. Для длинных каналов учитывают распределённое трение, а для коротких отверстий — местные потери.",
+    ],
     ["Как выбрать фитинги для микрофлюидной системы", "Фитинги влияют на герметичность, сборку, обслуживание и стабильность. Учитывайте трубку, соединение, давление, среду и место монтажа.", "Роль фитингов в гидравлической системе", "Фитинги обеспечивают перенос среды, герметизацию и конструктивное соединение. Для IVD важны стабильность и повторяемость, для лабораторной автоматизации — удобство сборки и обслуживания.", "Основные критерии выбора", "Проверьте диаметры трубки и совместимость интерфейса, способ соединения, давление, рабочую среду и условия обслуживания."],
     ["Различия PEEK, PTFE и PFA в гидравлических системах", "Эти высокоэффективные материалы различаются прочностью, химической стойкостью, прозрачностью, гибкостью и технологичностью.", "Главные различия", "PEEK обладает высокой прочностью и выдерживает давление; PTFE химически инертен; PFA сочетает химическую стойкость с некоторой прозрачностью.", "Совместимость зависит от условий", "Оценивайте концентрацию, температуру, контакт, давление и очистку. Для смесей, высокой температуры и длительного погружения нужны испытания."],
     ["Фитинги низкого и высокого давления: основные различия", "Для низкого давления важны удобство сборки и герметичность, для высокого — усиленная конструкция и стабильность.", "Разные требования к применению", "Низкое давление характерно для подачи реагентов и промывки, высокое — для аналитических приборов и чувствительных к колебаниям систем.", "Внешнего сходства недостаточно", "Похожие фитинги могут иметь разное номинальное давление, уплотнение, трубку и монтаж. Проверяйте реальный диапазон и весь трубопровод."],

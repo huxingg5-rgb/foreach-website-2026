@@ -1252,17 +1252,29 @@ export default function ContactInquiryForm({
         <div className="contact-submit-row">
           <p>{data.form.fileTip}</p>
 
-          <div className="contact-file-area">
-            <label className="contact-file-button">
-              {data.form.uploadButton}
-              <input
-                type="file"
-                multiple
-                accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.jpg,.jpeg,.png,.webp,.zip,.rar,.dxf,.dwg"
-                onChange={handleFileChange}
+          <div className="contact-submit-actions">
+            <div className="contact-submit-buttons">
+              <label className="contact-file-button">
+                {data.form.uploadButton}
+                <input
+                  type="file"
+                  multiple
+                  accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.jpg,.jpeg,.png,.webp,.zip,.rar,.dxf,.dwg"
+                  onChange={handleFileChange}
+                  disabled={isSubmitting}
+                />
+              </label>
+
+              <button
+                className="contact-submit-button"
+                type="submit"
                 disabled={isSubmitting}
-              />
-            </label>
+              >
+                {isSubmitting
+                  ? data.form.submitButton + "..."
+                  : data.form.submitButton}
+              </button>
+            </div>
 
             {selectedFiles.length > 0 ? (
               <div className="contact-file-list">
@@ -1282,16 +1294,6 @@ export default function ContactInquiryForm({
               </div>
             ) : null}
           </div>
-
-          <button
-            className="contact-submit-button"
-            type="submit"
-            disabled={isSubmitting}
-          >
-            {isSubmitting
-              ? data.form.submitButton + "..."
-              : data.form.submitButton}
-          </button>
         </div>
       </form>
 
@@ -1334,4 +1336,4 @@ export default function ContactInquiryForm({
       ) : null}
     </section>
   );
-} 
+}

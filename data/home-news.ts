@@ -142,7 +142,7 @@ export const homeNewsData = {
   ] satisfies HomeNewsTab[],
 
   featureNews: {
-    key: "whx-labs-dubai-2026",
+    key: "adlm-2026-team-departure",
     categoryKey: "exhibition",
     categoryLabel: {
       "zh-CN": "展会活动",
@@ -152,37 +152,38 @@ export const homeNewsData = {
       ko: "전시회",
       ru: "Выставки",
     },
-    date: "2026/02/07",
-    image: "/images/resources/news/articles/whx-labs-dubai-2026/cover.png",
+    date: "2026/07/23",
+    image:
+      "/images/resources/news/articles/adlm-2026-team-departure/cover.webp",
     title: {
-      "zh-CN": "迪拜实验室展｜期待在现场与您相见",
-      en: "FOREACH to Exhibit at WHX Labs Dubai 2026",
-      es: "FOREACH participará en WHX Labs Dubai 2026",
-      fr: "FOREACH participera au WHX Labs Dubai 2026",
-      ko: "FOREACH, WHX Labs Dubai 2026 참가",
-      ru: "FOREACH примет участие в WHX Labs Dubai 2026",
+      "zh-CN": "启程赴美｜恒永达参展团队即将亮相 ADLM 2026",
+      en: "Meet FOREACH at ADLM 2026",
+      es: "Conozca a FOREACH en ADLM 2026",
+      fr: "Rencontrez FOREACH à l’ADLM 2026",
+      ko: "ADLM 2026에서 FOREACH를 만나보세요",
+      ru: "Встретьтесь с FOREACH на выставке ADLM 2026",
     },
     description: {
       "zh-CN":
-        "恒永达将于 2026 年 2 月 10 日至 13 日参加迪拜实验室展，展位号 H2.F34，展示微流体核心产品、技术优势及多场景应用方案。",
+        "恒永达市场总监一行已启程赴美，将参加 ADLM 2026，并在 4105 展位展示微流体核心部件、流体连接产品及液路系统解决方案。",
       en:
-        "FOREACH will exhibit at WHX Labs Dubai 2026 at Booth H2.F34, presenting core microfluidic products, technical capabilities, and application solutions.",
+        "FOREACH will exhibit at ADLM 2026 in Anaheim from July 26 to 30, 2026. Visit Booth 4105 to explore precision fluid control components and application-focused fluidic solutions for IVD, life science, analytical instruments, and laboratory automation.",
       es:
-        "FOREACH presentará productos microfluídicos clave y soluciones de aplicación en WHX Labs Dubai 2026, Stand H2.F34.",
+        "FOREACH participará en ADLM 2026, que se celebrará del 26 al 30 de julio de 2026 en Anaheim, California. Le invitamos a visitar el stand 4105 para conocer nuestros componentes de control de fluidos y soluciones para sistemas fluídicos.",
       fr:
-        "FOREACH présentera ses composants microfluidiques clés et ses solutions d’application au WHX Labs Dubai 2026, stand H2.F34.",
+        "FOREACH participera à l’ADLM 2026, organisée du 26 au 30 juillet 2026 à Anaheim, en Californie. Retrouvez-nous au stand 4105 pour découvrir nos composants de contrôle des fluides et nos solutions destinées aux systèmes fluidiques.",
       ko:
-        "FOREACH는 WHX Labs Dubai 2026 H2.F34 부스에서 핵심 마이크로플루이딕 제품과 응용 솔루션을 선보입니다.",
+        "FOREACH는 2026년 7월 26일부터 30일까지 미국 캘리포니아 애너하임에서 개최되는 ADLM 2026에 참가합니다. 부스 4105에서 정밀 유체 제어 부품과 장비용 유로 솔루션을 확인해 보십시오.",
       ru:
-        "FOREACH представит ключевые микрофлюидные продукты и прикладные решения на WHX Labs Dubai 2026, стенд H2.F34.",
+        "FOREACH примет участие в выставке ADLM 2026, которая пройдет с 26 по 30 июля 2026 года в Анахайме, штат Калифорния. На стенде 4105 будут представлены компоненты для точного управления жидкостями и решения для интеграции жидкостных систем.",
     },
     href: {
-      "zh-CN": "/resources/news/whx-labs-dubai-2026",
-      en: "/en/resources/news/whx-labs-dubai-2026",
-      es: "/es/resources/news/whx-labs-dubai-2026",
-      fr: "/fr/resources/news/whx-labs-dubai-2026",
-      ko: "/ko/resources/news/whx-labs-dubai-2026",
-      ru: "/ru/resources/news/whx-labs-dubai-2026",
+      "zh-CN": "/resources/news/adlm-2026-team-departure",
+      en: "/en/resources/news/adlm-2026-team-departure",
+      es: "/es/resources/news/adlm-2026-team-departure",
+      fr: "/fr/resources/news/adlm-2026-team-departure",
+      ko: "/ko/resources/news/adlm-2026-team-departure",
+      ru: "/ru/resources/news/adlm-2026-team-departure",
     },
   } satisfies HomeNewsItem,
 
@@ -244,7 +245,7 @@ export const homeNewsData = {
         ru: "Выставки",
       },
       date: "2026/03/17",
-      image: "/images/resources/news/articles/caclp-2026/cover.png",
+      image: "/images/resources/news/articles/caclp-2026/cover.webp",
       title: {
         "zh-CN": "邀请函｜恒永达诚邀您参加 2026 CACLP",
         en: "Invitation: Meet FOREACH at CACLP 2026",
@@ -288,7 +289,7 @@ export const homeNewsData = {
         ru: "Выставки",
       },
       date: "2026/03/27",
-      image: "/images/resources/news/articles/me-supply-chain-expo-2026/cover.png",
+      image: "/images/resources/news/articles/me-supply-chain-expo-2026/cover.webp",
       title: {
         "zh-CN": "2026 ME 供应链生态展｜恒永达诚邀您的莅临指导",
         en: "FOREACH to Exhibit at 2026 ME Supply Chain Expo",
@@ -332,7 +333,7 @@ export const homeNewsData = {
         ru: "Выставки",
       },
       date: "2026/03/26",
-      image: "/images/resources/news/articles/guangzhou-high-med-expo-2026/cover.png",
+      image: "/images/resources/news/articles/guangzhou-high-med-expo-2026/cover.webp",
       title: {
         "zh-CN": "2026 广州高医展｜恒永达科技诚邀您莅临展位参观交流",
         en: "FOREACH Invitation to Guangzhou High Medical Expo 2026",

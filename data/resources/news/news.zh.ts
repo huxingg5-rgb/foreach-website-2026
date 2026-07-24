@@ -66,6 +66,57 @@ export const newsZhData: NewsPageData = {
 
   articles: [
     {
+      id: "adlm-2026-team-departure",
+      slug: "adlm-2026-team-departure",
+      category: "exhibition",
+      title: "启程赴美｜恒永达参展团队即将亮相 ADLM 2026",
+      summary:
+        "恒永达市场总监一行已启程赴美，将参加 ADLM 2026，并在 4105 展位展示微流体核心部件、流体连接产品及液路系统解决方案。",
+      date: "2026-07-23",
+      coverImage: "/images/resources/news/articles/adlm-2026-team-departure/cover.webp",
+      isPinned: true,
+      content: [
+        {
+          title: "恒永达将参加 ADLM 2026",
+          content:
+            "近日，恒永达市场总监一行启程赴美，将参加于 2026 年 7 月 26 日至 30 日在美国加利福尼亚州阿纳海姆举办的 ADLM 2026。\n\n本次展会，恒永达将在 4105 展位与来自体外诊断、生命科学、分析仪器和实验室自动化等领域的客户、工程师及行业伙伴进行现场交流。",
+        },
+        {
+          title: "展会信息",
+          content:
+            "展会：ADLM 2026\n时间：2026 年 7 月 26 日至 30 日\n地点：美国加利福尼亚州阿纳海姆\n展位：4105",
+        },
+        {
+          title: "展示微流体核心部件与液路解决方案",
+          content:
+            "展会期间，恒永达将集中展示面向仪器设备应用的微流体核心产品与液路解决方案，覆盖液体输送、精密计量、流路切换、压力监测、气泡检测及流体连接等关键环节。\n\n相关产品可应用于体外诊断、生命科学、分析仪器和实验室自动化等领域，为客户提供从核心部件选型、材料兼容到液路系统集成的支持。",
+        },
+        {
+          title: "长期专注微流体精密控制",
+          content:
+            "恒永达长期专注于微流体精密控制技术的研发与产业化，持续完善泵、阀、针、接头、管路、传感器及液路系统支持能力。\n\n围绕体外诊断、生命科学、实验室自动化、分析仪器及相关设备应用，恒永达持续为客户提供微流体核心部件、材料兼容支持、产品选型建议及定制化液路方案。",
+        },
+        {
+          title: "专业能力与成长实力获得持续认可",
+          content:
+            "凭借在技术研发、产品创新和产业化应用方面的持续积累，恒永达先后获评国家级专精特新“小巨人”企业和深圳市瞪羚企业，专业能力、创新能力和企业成长实力获得进一步认可。",
+        },
+        {
+          title: "为仪器应用提供更完整的工程支持",
+          content:
+            "通过稳定可靠的产品与面向应用的工程支持，恒永达帮助客户提升流体控制精度，简化液路系统集成，并满足仪器小型化、自动化和复杂流路设计需求。\n\n无论客户正在寻找微流体核心部件、现有产品的替代方案，还是需要解决材料兼容、产品选型、液路集成及定制开发等问题，恒永达团队都将结合具体应用需求提供相应支持。",
+        },
+        {
+          title: "诚邀莅临 4105 展位",
+          content:
+            "展会期间，恒永达团队将在 4105 展位与您面对面交流，共同探讨微流体核心部件、产品替代、材料兼容和液路系统集成等需求。\n\n期待在 ADLM 2026 与您相见。",
+        },
+      ],
+      seoTitle: "启程赴美｜恒永达参展团队即将亮相 ADLM 2026",
+      seoDescription:
+        "恒永达市场总监一行已启程赴美，将参加 ADLM 2026，并在 4105 展位展示精密泵、微型阀、流体连接件、管路、传感器及液路系统解决方案。",
+    },
+    {
       id: "adlm-2026",
       slug: "adlm-2026",
       category: "exhibition",
@@ -104,7 +155,7 @@ export const newsZhData: NewsPageData = {
       summary:
         "恒永达将参加 2026 ME 供应链生态展，展位号 2-M46，展示核心产品、技术能力及多场景应用方案。",
       date: "2026-03-27",
-      coverImage: "/images/resources/news/articles/me-supply-chain-expo-2026/cover.png",
+      coverImage: "/images/resources/news/articles/me-supply-chain-expo-2026/cover.webp",
       isPinned: true,
       content: [
         {
@@ -135,7 +186,7 @@ export const newsZhData: NewsPageData = {
       summary:
         "恒永达将于 2026 年 3 月 30 日至 4 月 1 日参加广州高医展，展位号 B529。",
       date: "2026-03-26",
-      coverImage: "/images/resources/news/articles/guangzhou-high-med-expo-2026/cover.png",
+      coverImage: "/images/resources/news/articles/guangzhou-high-med-expo-2026/cover.webp",
       content: [
         {
           title: "展会信息",
@@ -165,7 +216,7 @@ export const newsZhData: NewsPageData = {
       summary:
         "恒永达将于 2026 年 3 月 21 日至 23 日参加 CACLP，展位号 2-0424，欢迎新老客户莅临交流。",
       date: "2026-03-17",
-      coverImage: "/images/resources/news/articles/caclp-2026/cover.png",
+      coverImage: "/images/resources/news/articles/caclp-2026/cover.webp",
       isPinned: true,
       content: [
         {
@@ -196,7 +247,7 @@ export const newsZhData: NewsPageData = {
       summary:
         "恒永达将参加迪拜实验室展，展位号 H2.F34，展示核心产品、技术优势及多场景应用方案。",
       date: "2026-02-07",
-      coverImage: "/images/resources/news/articles/whx-labs-dubai-2026/cover.png",
+      coverImage: "/images/resources/news/articles/whx-labs-dubai-2026/cover.webp",
       isPinned: true,
       content: [
         {

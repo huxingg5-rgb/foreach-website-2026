@@ -70,6 +70,35 @@ export const technicalArticlesIntlData: TechnicalArticlesPageData = {
 
   articles: [
     {
+      id: "cv-kv-correction-for-microfluidics",
+      slug: "cv-kv-correction-for-microfluidics",
+      category: "pumps-valves",
+      title:
+        "Engineering Guide | Correcting Cv/Kv for Microfluidic and Precision Restriction Systems",
+      summary:
+        "Conventional Cv/Kv calculations assume a turbulent resistance regime. At microscale diameters and low Reynolds numbers, that assumption can substantially underpredict pressure drop. This guide presents a practical correction framework for fluidic-system and instrument engineers.",
+      date: "2026-07-23",
+      coverImage: defaultCoverImage,
+      content: [
+        {
+          title:
+            "Why conventional Cv/Kv calculations can fail at microscale",
+          content:
+            "Microfluidic passages can operate in laminar or transitional conditions where the standard square-law assumption no longer represents actual resistance. Published Cv/Kv values therefore need to be connected to the calibration flow regime.",
+        },
+        {
+          title:
+            "A practical Reynolds correction framework",
+          content:
+            "The effective coefficient can be expressed as Cv(Re)=Cv₀×Fᵣ(Re), while corrected pressure drop can be expressed as ΔPactual=ΔPcalc÷Fᵣ². Long passages and short restrictions require different resistance models.",
+        },
+      ],
+      seoTitle:
+        "Cv/Kv Correction for Low-Reynolds-Number Microfluidic Systems",
+      seoDescription:
+        "Learn why conventional Cv/Kv calculations can underpredict pressure drop in microfluidic systems and how Reynolds correction, Churchill friction factors and orifice corrections can be applied.",
+    },
+    {
       id: "selecting-microfluidic-fittings",
       slug: "selecting-microfluidic-fittings",
       category: "fittings-tubing",
@@ -77,7 +106,8 @@ export const technicalArticlesIntlData: TechnicalArticlesPageData = {
       summary:
         "Fittings affect sealing performance, assembly efficiency, maintenance convenience and long-term stability. Selection should consider tubing size, connection method, pressure, fluid media and installation space.",
       date: "2026-06-08",
-      coverImage: defaultCoverImage,
+      coverImage:
+        "/images/resources/technical-articles/covers/selecting-microfluidic-fittings.webp",
       content: [
         {
           title: "The role of fittings in fluidic systems",
@@ -99,7 +129,8 @@ export const technicalArticlesIntlData: TechnicalArticlesPageData = {
       summary:
         "PEEK, PTFE and PFA are common high-performance materials in microfluidic systems, but they differ in mechanical strength, chemical resistance, transparency, flexibility and processing characteristics.",
       date: "2026-06-07",
-      coverImage: defaultCoverImage,
+      coverImage:
+        "/images/resources/technical-articles/covers/peek-ptfe-pfa-material-differences.webp",
       content: [
         {
           title: "Main differences between the three materials",
@@ -121,7 +152,8 @@ export const technicalArticlesIntlData: TechnicalArticlesPageData = {
       summary:
         "Low-pressure fittings focus on assembly efficiency and sealing reliability, while high-pressure fittings require stronger structure, sealing design and pressure stability.",
       date: "2026-06-06",
-      coverImage: defaultCoverImage,
+      coverImage:
+        "/images/resources/technical-articles/covers/low-pressure-vs-high-pressure-fittings.webp",
       content: [
         {
           title: "Different application requirements",
@@ -143,7 +175,8 @@ export const technicalArticlesIntlData: TechnicalArticlesPageData = {
       summary:
         "Rigid tubing is suitable for stable and well-defined fluid paths, while flexible tubing is better for routing, bending and vibration-tolerant layouts.",
       date: "2026-06-05",
-      coverImage: defaultCoverImage,
+      coverImage:
+        "/images/resources/technical-articles/covers/rigid-tubing-vs-flexible-tubing.webp",
       content: [
         {
           title: "Structural differences",
@@ -165,7 +198,8 @@ export const technicalArticlesIntlData: TechnicalArticlesPageData = {
       summary:
         "Leakage may be caused by tubing mismatch, installation method, cutting quality, sealing component condition or system pressure, not only by the fitting itself.",
       date: "2026-06-04",
-      coverImage: defaultCoverImage,
+      coverImage:
+        "/images/resources/technical-articles/covers/common-fitting-sealing-failure-causes.webp",
       content: [
         {
           title: "Typical causes of leakage",
@@ -187,7 +221,8 @@ export const technicalArticlesIntlData: TechnicalArticlesPageData = {
       summary:
         "Micro plunger pump selection should consider dispensing volume, accuracy, repeatability, pressure range, interface type, drive method and communication protocol.",
       date: "2026-06-03",
-      coverImage: defaultCoverImage,
+      coverImage:
+        "/images/resources/technical-articles/covers/micro-plunger-pump-selection.webp",
       content: [
         {
           title: "Core parameters beyond volume range",
@@ -209,7 +244,8 @@ export const technicalArticlesIntlData: TechnicalArticlesPageData = {
       summary:
         "Solenoid valves control flow on/off, switching and distribution, making them important components for automated fluidic control.",
       date: "2026-06-02",
-      coverImage: defaultCoverImage,
+      coverImage:
+        "/images/resources/technical-articles/covers/solenoid-valves-in-microfluidic-systems.webp",
       content: [
         {
           title: "Flow path control",
@@ -231,7 +267,8 @@ export const technicalArticlesIntlData: TechnicalArticlesPageData = {
       summary:
         "A material compatibility table is useful for preliminary screening, but final selection should also consider temperature, concentration, pressure and contact time.",
       date: "2026-06-01",
-      coverImage: defaultCoverImage,
+      coverImage:
+        "/images/resources/technical-articles/covers/material-compatibility-table-reference.webp",
       content: [
         {
           title: "Compatibility tables are useful for screening",
@@ -253,7 +290,8 @@ export const technicalArticlesIntlData: TechnicalArticlesPageData = {
       summary:
         "IVD fluidic systems require accuracy, stability, cleanliness, material compatibility and maintainability. Individual component selection affects the whole system.",
       date: "2026-05-31",
-      coverImage: defaultCoverImage,
+      coverImage:
+        "/images/resources/technical-articles/covers/ivd-fluidic-system-selection-parameters.webp",
       content: [
         {
           title: "A fluidic system depends on multiple components",
@@ -275,7 +313,8 @@ export const technicalArticlesIntlData: TechnicalArticlesPageData = {
       summary:
         "Pressure, flow rate and material compatibility are three core factors in fluidic system design and should be evaluated together.",
       date: "2026-05-30",
-      coverImage: defaultCoverImage,
+      coverImage:
+        "/images/resources/technical-articles/covers/pressure-flow-material-compatibility.webp",
       content: [
         {
           title: "Three factors should be evaluated together",
@@ -297,7 +336,8 @@ export const technicalArticlesIntlData: TechnicalArticlesPageData = {
       summary:
         "The same product may perform differently in different applications. Selection should consider media, pressure, accuracy, space and maintenance requirements.",
       date: "2026-05-29",
-      coverImage: defaultCoverImage,
+      coverImage:
+        "/images/resources/technical-articles/covers/why-application-context-matters.webp",
       content: [
         {
           title: "Different applications have different requirements",
@@ -319,7 +359,8 @@ export const technicalArticlesIntlData: TechnicalArticlesPageData = {
       summary:
         "Replacement selection requires more than external dimensions. Interface specification, sealing structure, material, pressure and application conditions must be confirmed.",
       date: "2026-05-28",
-      coverImage: defaultCoverImage,
+      coverImage:
+        "/images/resources/technical-articles/covers/fitting-replacement-by-drawings-or-samples.webp",
       content: [
         {
           title: "Replacement selection is not only about appearance",

@@ -75,6 +75,56 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
 
   articles: [
     {
+      id: "cv-kv-correction-for-microfluidics",
+      slug: "cv-kv-correction-for-microfluidics",
+      category: "pumps-valves",
+      title: "工程实践｜微流控与精密节流场景 Cv/Kv 系数计算失真分析与修正指南",
+      summary:
+        "传统 Cv/Kv 计算通常建立在充分湍流和阻力平方区假设之上。在微小通径、低流速和低雷诺数工况下，直接套用可能明显低估实际压降。本文分析失真原因，并介绍雷诺修正、Churchill 摩擦因子及小孔节流修正方法。",
+      date: "2026-07-23",
+      coverImage: defaultCoverImage,
+      content: [
+        {
+          title: "传统 Cv/Kv 计算为什么会在微流控中失真",
+          content:
+            "传统工业计算通常建立在充分发展湍流和阻力平方区假设上。微流控系统常见通径只有 0.1～0.5 mm，工作雷诺数通常处于 10～10⁴，流动可能位于层流区、过渡区或水力光滑紊流区，直接使用传统平方律可能明显低估实际压降。",
+        },
+        {
+          title: "工业经典算法的适用边界",
+          content:
+            "经典手册本身已经通过液体粘度限制和气体临界压降规则划定了适用范围。当液体粘度高于 300 SSU，约 9°E 时，标称 Cv/Kv 需要重新调整。",
+        },
+        {
+          title: "雷诺修正系数 Fᵣ",
+          content:
+            "实际流量系数可表示为 Cv（Re）= Cv₀×Fᵣ（Re），实际压降可表示为 ΔPactual=ΔPcalc÷Fᵣ²。Fᵣ 小于 1 时，表示实际流通能力低于标定状态。",
+        },
+        {
+          title: "长微通道与毛细管的 Churchill 修正",
+          content:
+            "当沿程摩擦为主要阻力来源时，可使用 Churchill 统一摩擦因子覆盖层流、过渡区和紊流。光滑微通道的基准摩擦因子应结合实际可达到的标定雷诺数确定。",
+        },
+        {
+          title: "薄壁小孔和短孔的局部阻力修正",
+          content:
+            "对局部阻力主导的小孔节流元件，可根据流量系数与雷诺数关系建立连续修正。倒角、圆角、孔长和入口结构都会改变临界雷诺数。",
+        },
+        {
+          title: "工程设计红线",
+          content:
+            "低雷诺数不能直接使用平方律；光滑微通道不能套用大型工业管道经验值；过渡区应采用稳定的数值求解方法；局部损失必须符合真实几何；外部管路损失不能计入元件本征 Cv/Kv。",
+        },
+        {
+          title: "Python 核心计算实现",
+          content:
+            "文章提供 Churchill 摩擦因子、微通道标定流速、长通道雷诺修正及小孔节流修正的 Python 核心实现。",
+        },
+      ],
+      seoTitle: "微流控 Cv/Kv 计算失真原因与雷诺修正方法",
+      seoDescription:
+        "分析 Cv/Kv 公式在微小通径、低流速和低雷诺数工况下的误差来源，并介绍 Churchill 摩擦因子、雷诺修正系数和小孔节流修正方法。",
+    },
+    {
       id: "selecting-microfluidic-fittings",
       slug: "selecting-microfluidic-fittings",
       category: "fittings-tubing",
@@ -82,7 +132,8 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       summary:
         "管路连接件不仅影响液路系统的密封性，也会影响装配效率、维护便利性和长期稳定性。选择接头时，需要综合考虑管材尺寸、连接方式、使用压力、介质类型和安装空间。",
       date: "2026-06-08",
-      coverImage: defaultCoverImage,
+      coverImage:
+        "/images/resources/technical-articles/covers/selecting-microfluidic-fittings.webp",
       content: [
         {
           title: "管路连接件在系统中的作用",
@@ -104,7 +155,8 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       summary:
         "PEEK、PTFE、PFA 都是微流体系统中常见的高性能材料，但它们在机械强度、耐化学性、透明度、柔韧性和加工方式上存在明显差异。",
       date: "2026-06-07",
-      coverImage: defaultCoverImage,
+      coverImage:
+        "/images/resources/technical-articles/covers/peek-ptfe-pfa-material-differences.webp",
       content: [
         {
           title: "三种材料的主要差异",
@@ -126,7 +178,8 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       summary:
         "低压连接件更关注装配效率和密封可靠性，高压连接件则更强调结构强度、密封方式和耐压稳定性。两者不能简单互相替代。",
       date: "2026-06-06",
-      coverImage: defaultCoverImage,
+      coverImage:
+        "/images/resources/technical-articles/covers/low-pressure-vs-high-pressure-fittings.webp",
       content: [
         {
           title: "使用场景不同",
@@ -148,7 +201,8 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       summary:
         "硬管连接更适合尺寸稳定和定位明确的液路结构，软管连接则更适合需要弯曲、缓冲或灵活布管的场景。",
       date: "2026-06-05",
-      coverImage: defaultCoverImage,
+      coverImage:
+        "/images/resources/technical-articles/covers/rigid-tubing-vs-flexible-tubing.webp",
       content: [
         {
           title: "硬管与软管的结构特点",
@@ -170,7 +224,8 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       summary:
         "接头漏液不一定是接头本身问题，也可能与管材尺寸、安装方式、切管质量、密封件状态和系统压力有关。",
       date: "2026-06-04",
-      coverImage: defaultCoverImage,
+      coverImage:
+        "/images/resources/technical-articles/covers/common-fitting-sealing-failure-causes.webp",
       content: [
         {
           title: "常见密封失效原因",
@@ -192,7 +247,8 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       summary:
         "微量柱塞泵选型时，需要关注分配体积、精度、重复性、压力范围、接口形式、驱动方式和系统通信方式。",
       date: "2026-06-03",
-      coverImage: defaultCoverImage,
+      coverImage:
+        "/images/resources/technical-articles/covers/micro-plunger-pump-selection.webp",
       content: [
         {
           title: "核心参数不只是体积范围",
@@ -214,7 +270,8 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       summary:
         "电磁阀用于控制流路通断、切换和分配，是液路系统中实现自动化控制的重要部件。",
       date: "2026-06-02",
-      coverImage: defaultCoverImage,
+      coverImage:
+        "/images/resources/technical-articles/covers/solenoid-valves-in-microfluidic-systems.webp",
       content: [
         {
           title: "电磁阀承担流路控制功能",
@@ -236,7 +293,8 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       summary:
         "材料兼容表适合作为初步筛选工具，但不能完全替代实际工况验证。最终选型仍需结合温度、浓度、压力和接触时间判断。",
       date: "2026-06-01",
-      coverImage: defaultCoverImage,
+      coverImage:
+        "/images/resources/technical-articles/covers/material-compatibility-table-reference.webp",
       content: [
         {
           title: "材料兼容表适合做初筛",
@@ -258,7 +316,8 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       summary:
         "IVD 设备液路系统通常需要兼顾精度、稳定性、洁净度、材料兼容和长期维护成本。单个零部件的选择会影响整机液路表现。",
       date: "2026-05-31",
-      coverImage: defaultCoverImage,
+      coverImage:
+        "/images/resources/technical-articles/covers/ivd-fluidic-system-selection-parameters.webp",
       content: [
         {
           title: "液路系统由多个部件协同组成",
@@ -280,7 +339,8 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       summary:
         "耐压、流量和材料兼容是液路系统设计中的三个核心因素，它们相互影响，不能单独判断。",
       date: "2026-05-30",
-      coverImage: defaultCoverImage,
+      coverImage:
+        "/images/resources/technical-articles/covers/pressure-flow-material-compatibility.webp",
       content: [
         {
           title: "三个因素需要一起判断",
@@ -302,7 +362,8 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       summary:
         "同样的产品在不同应用场景下可能表现不同，因此微流体产品选型必须结合介质、压力、精度、安装空间和维护方式综合判断。",
       date: "2026-05-29",
-      coverImage: defaultCoverImage,
+      coverImage:
+        "/images/resources/technical-articles/covers/why-application-context-matters.webp",
       content: [
         {
           title: "不同应用对产品要求不同",
@@ -324,7 +385,8 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       summary:
         "接头替代选型不仅要看外形尺寸，还要确认接口规格、密封方式、材料、耐压和实际应用条件。",
       date: "2026-05-28",
-      coverImage: defaultCoverImage,
+      coverImage:
+        "/images/resources/technical-articles/covers/fitting-replacement-by-drawings-or-samples.webp",
       content: [
         {
           title: "替代选型不能只看外形",

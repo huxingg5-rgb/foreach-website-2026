@@ -452,41 +452,45 @@
 /* =========================================================
    新闻列表分页
    说明：
-   1. 新闻列表每页 9 条，PC 端对应 3 列 × 3 排
-   2. 这里只补分页样式，不影响新闻卡片原有布局
+   1. 新闻列表每页 6 条，PC 端对应 3 列 × 2 排
+   2. 分页视觉与产品中心保持一致，不影响新闻卡片原有布局
 ========================================================= */
 
 .newsPagination {
   width: 100%;
-  margin-top: 40px;
+  margin-top: 26px;
+  padding-bottom: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
+  gap: 14px;
 }
 
-.newsPagination__button,
-.newsPagination__number {
-  min-width: 40px;
-  height: 40px;
-  padding: 0 14px;
-  border: 1px solid rgba(23, 51, 104, 0.16);
+.newsPagination__button {
+  min-width: 88px;
+  height: 38px;
+  padding: 0 16px;
+  border: 1px solid rgba(23, 51, 104, 0.18);
   border-radius: 8px;
   background: #ffffff;
   color: #173368;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 850;
+  line-height: 1;
   cursor: pointer;
   transition:
-    background-color 0.18s ease,
-    color 0.18s ease,
-    border-color 0.18s ease;
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    opacity 0.2s ease;
 }
 
-.newsPagination__button:hover,
-.newsPagination__number:hover {
+.newsPagination__button:hover:not(:disabled),
+.newsPagination__button:focus-visible:not(:disabled) {
   border-color: #173368;
+  background: #173368;
+  color: #09e9b4;
+  outline: none;
 }
 
 .newsPagination__button:disabled {
@@ -494,36 +498,35 @@
   cursor: not-allowed;
 }
 
-.newsPagination__number.isActive {
-  border-color: #173368;
-  background: #173368;
-  color: #09e9b4;
-}
-
-.newsPagination__summary {
-  margin-left: 8px;
-  color: rgba(23, 51, 104, 0.62);
-  font-size: 13px;
+.newsPagination__status {
+  min-width: 58px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #173368;
+  font-size: 14px;
+  font-weight: 850;
+  line-height: 1;
   white-space: nowrap;
 }
 
 @media (max-width: 760px) {
   .newsPagination {
-    margin-top: 28px;
-    gap: 8px;
+    margin-top: 22px;
+    padding-bottom: 10px;
+    gap: 10px;
   }
 
-  .newsPagination__button,
-  .newsPagination__number {
-    min-width: 36px;
+  .newsPagination__button {
+    min-width: 78px;
     height: 36px;
-    padding: 0 10px;
+    padding: 0 12px;
+    border-radius: 8px;
     font-size: 13px;
   }
 
-  .newsPagination__summary {
-    width: 100%;
-    margin-left: 0;
-    text-align: center;
+  .newsPagination__status {
+    min-width: 48px;
+    font-size: 14px;
   }
 }

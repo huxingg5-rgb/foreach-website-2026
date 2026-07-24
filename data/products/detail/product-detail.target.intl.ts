@@ -286,6 +286,112 @@ function localizePath(value: unknown, locale: HardTubeTargetLocale, fallback: st
   return `/${locale}${path.replace(/^\/(?:en|es|fr|ko|ru)(?=\/|$)/, "")}`;
 }
 
+/* ===== FOREACH TARGET PRODUCT DETAIL TITLE OVERRIDES START ===== */
+
+/*
+ * 非中英文产品详情页完整标题覆盖。
+ *
+ * 说明：
+ * 1. 这里保存的是详情页 H1 和面包屑标题；
+ * 2. 不用于型号选择区域；
+ * 3. 型号区域仍然使用 foreachModel / productCode；
+ * 4. 后续其他产品需要特殊标题时，可继续在对应语言中增加。
+ */
+const TARGET_PRODUCT_DETAIL_TITLE_OVERRIDES: Record<
+  HardTubeTargetLocale,
+  Record<string, string>
+> = {
+  es: {
+    "rpl-p4":
+      "RPL-P4 12–80 μL/rev Bomba de pistón sin válvulas de bajo volumen",
+  },
+  fr: {
+    "rpl-p4":
+      "RPL-P4 12–80 μL/rev Pompe à piston sans clapet à faible volume",
+  },
+  ko: {
+    "rpl-p4":
+      "RPL-P4 12–80 μL/rev 저용량 무밸브 피스톤 펌프",
+  },
+  ru: {
+    "rpl-p4":
+      "RPL-P4 12–80 μL/rev Бесклапанный поршневой насос для малых объёмов",
+  },
+};
+
+/*
+ * 从产品详情数据中识别产品。
+ * 优先读取 slug 和产品编码，避免依赖已经翻译过的标题。
+ */
+function getTargetProductDetailTitleKey(data: any): string {
+  const candidates = [
+    data?.slug,
+    data?.productId,
+    data?.productCode,
+    data?.foreachModel,
+    data?.seriesId,
+    data?.seriesSlug,
+    data?.model,
+  ];
+
+  const normalized = candidates
+    .map((value) =>
+      String(value || "")
+        .trim()
+        .toLowerCase()
+    )
+    .filter(Boolean)
+    .join(" ");
+
+  if (normalized.includes("rpl-p4")) {
+    return "rpl-p4";
+  }
+
+  return "";
+}
+
+/*
+ * 返回目标语言详情页的显示标题。
+ *
+ * fallback 通常是当前 data.model：
+ * - 有专用标题时，返回本地化完整标题；
+ * - 没有专用标题时，保持原来的标题。
+ */
+export function getTargetProductDetailDisplayTitle(
+  data: any,
+  locale: HardTubeTargetLocale | null | undefined,
+  fallback = ""
+): string {
+  const fallbackTitle = String(
+    fallback ||
+      data?.title ||
+      data?.name ||
+      data?.model ||
+      data?.foreachModel ||
+      data?.productCode ||
+      ""
+  ).trim();
+
+  if (!locale || !isHardTubeTargetLocale(locale)) {
+    return fallbackTitle;
+  }
+
+  const productKey =
+    getTargetProductDetailTitleKey(data);
+
+  if (!productKey) {
+    return fallbackTitle;
+  }
+
+  return (
+    TARGET_PRODUCT_DETAIL_TITLE_OVERRIDES[locale]?.[
+      productKey
+    ] || fallbackTitle
+  );
+}
+
+/* ===== FOREACH TARGET PRODUCT DETAIL TITLE OVERRIDES END ===== */
+
 export function localizeTargetProductDetailData<T extends DetailRecord>(sourceData: T, locale: HardTubeTargetLocale, pathname = ""): T {
   const kind = inferKind(sourceData, pathname);
   if (kind === "hard-tube-fitting") {

@@ -21,6 +21,7 @@ import "./language-typography.css";
 
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
+import GlobalTouchInteractions from "@/components/layout/GlobalTouchInteractions";
 
 import CookieConsent from "@/components/privacy/CookieConsent";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
@@ -225,6 +226,8 @@ export default function RootLayout({
                     `}
                   </Script>
         <SelectionCartProvider>
+          <GlobalTouchInteractions />
+
           {/* =================================================
               页面滚动、移动端菜单、语言菜单交互脚本
 

@@ -17,6 +17,9 @@ import {
 import ProductPageSkeleton from "@/components/common/ProductPageSkeleton";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
 import ProductSelectionClient from "@/components/products/selection/ProductSelectionClient";
+import {
+  connectPublishedFittingProduct,
+} from "@/data/products/selection/connectPublishedFittingProduct";
 
 import {
   getSeriesRouteParams,
@@ -89,18 +92,42 @@ type ResolvedFittingDetail = {
 };
 
 const hardTubeDetails =
-  hardTubeDetailsJson as FittingDetailRecord[];
+  (hardTubeDetailsJson as FittingDetailRecord[]).flatMap(
+    (detail) => {
+      const connected =
+        connectPublishedFittingProduct(detail);
+      return connected ? [connected] : [];
+    }
+  );
 
 const threadToBarbedDetails =
-  threadToBarbedDetailsJson as FittingDetailRecord[];
+  (threadToBarbedDetailsJson as FittingDetailRecord[]).flatMap(
+    (detail) => {
+      const connected =
+        connectPublishedFittingProduct(detail);
+      return connected ? [connected] : [];
+    }
+  );
 
 /* LUER_FEMALE_DETAIL_COLLECTIONS_START */
 
 const luerDetails =
-  luerDetailsJson as FittingDetailRecord[];
+  (luerDetailsJson as FittingDetailRecord[]).flatMap(
+    (detail) => {
+      const connected =
+        connectPublishedFittingProduct(detail);
+      return connected ? [connected] : [];
+    }
+  );
 
 const femaleThreadDetails =
-  femaleThreadDetailsJson as FittingDetailRecord[];
+  (femaleThreadDetailsJson as FittingDetailRecord[]).flatMap(
+    (detail) => {
+      const connected =
+        connectPublishedFittingProduct(detail);
+      return connected ? [connected] : [];
+    }
+  );
 
 /* LUER_FEMALE_DETAIL_COLLECTIONS_END */
 

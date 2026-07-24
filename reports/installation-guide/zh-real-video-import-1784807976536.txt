@@ -1,0 +1,36 @@
+共导入 5 个中文教程视频
+
+1. 隔膜泵安装方式以及注意事项
+视频：隔膜泵安装方式以及注意事项.mp4
+网站视频：/videos/installation-guide/zh/zh-tutorial-001-6cadad8155.mp4
+封面：/images/resources/installation-guide/zh/zh-tutorial-001-6cadad8155.png
+分类：pumps
+系列：diaphragm-pump
+
+2. 实测30H系列隔膜泵最高耐压
+视频：实测30H系列隔膜泵最高耐压.mp4
+网站视频：/videos/installation-guide/zh/zh-tutorial-002-a92d2b71b4.mp4
+封面：/images/resources/installation-guide/zh/zh-tutorial-002-a92d2b71b4.png
+分类：pumps
+系列：diaphragm-pump
+
+3. 实测60系列隔膜泵最高耐压
+视频：实测60系列隔膜泵最高耐压.mp4
+网站视频：/videos/installation-guide/zh/zh-tutorial-003-57a6bc1c94.mp4
+封面：/images/resources/installation-guide/zh/zh-tutorial-003-57a6bc1c94.png
+分类：pumps
+系列：diaphragm-pump
+
+4. 一句话教你如何选择隔膜泵
+视频：一句话教你如何选择隔膜泵.mp4
+网站视频：/videos/installation-guide/zh/zh-tutorial-004-5733a4bdad.mp4
+封面：/images/resources/installation-guide/zh/zh-tutorial-004-5733a4bdad.png
+分类：pumps
+系列：diaphragm-pump
+
+5. 有刷与无刷隔膜泵区别不只是寿命
+视频：有刷与无刷隔膜泵区别不只是寿命.mp4
+网站视频：/videos/installation-guide/zh/zh-tutorial-005-c4e9e2aa2a.mp4
+封面：/images/resources/installation-guide/zh/zh-tutorial-005-c4e9e2aa2a.png
+分类：pumps
+系列：diaphragm-pump

@@ -1,4 +1,11 @@
 import quickConnectRowsJson from "@/data/products/generated/fittings/quick-connect-fittings/index.json";
+import {
+  quickConnectFittingSelectionProducts,
+} from "@/data/products/selection/quick-connect-fitting-selection.generated";
+import {
+  isPublishedFittingProduct,
+  isPublishedFittingProductCode,
+} from "@/data/products/selection/fitting-publication.generated";
 
 export type QuickConnectSeries =
   | "Q20"
@@ -38,7 +45,16 @@ type QuickConnectRow = {
 };
 
 const allRows =
-  quickConnectRowsJson as QuickConnectRow[];
+  (quickConnectRowsJson as QuickConnectRow[]).filter(
+    (row) =>
+      isPublishedFittingProductCode(row.productCode)
+  );
+
+const publishedQuickConnectProducts =
+  quickConnectFittingSelectionProducts.filter(
+    (product) =>
+      isPublishedFittingProduct(product)
+  );
 
 const supportedSeries =
   new Set<string>([
@@ -46,26 +62,6 @@ const supportedSeries =
     "Q40",
     "Q60",
   ]);
-
-const seriesImageMap: Record<
-  QuickConnectSeries,
-  string[]
-> = {
-  Q20: [
-    "/images/resources/selection-support/fitting-replacement/q20/products/Q2001-PMV-SACN.webp",
-    "/images/resources/selection-support/fitting-replacement/q20/products/Q2002-PNV-LACN.webp",
-    "/images/resources/selection-support/fitting-replacement/q20/products/Q2003-SNV-SACN.webp",
-    "/images/resources/selection-support/fitting-replacement/q20/products/Q2018N-PNV-SACN.webp",
-  ],
-
-  Q40: [
-    "/images/products/FIT/Quick connector_200x200_01_v001.jpg",
-  ],
-
-  Q60: [
-    "/images/products/FIT/Quick connector_200x200_01_v001.jpg",
-  ],
-};
 
 function cleanText(
   value: unknown
@@ -325,9 +321,15 @@ export function getQuickConnectSeriesDetailData(
     ).length;
 
   const images =
-    seriesImageMap[
-      series
-    ];
+    uniqueValues(
+      publishedQuickConnectProducts
+        .filter(
+          (product) =>
+            cleanText(product.seriesId).toUpperCase() ===
+            series
+        )
+        .map((product) => product.imageCard)
+    ).slice(0, 4);
   /* QUICK_CONNECT_SERIES_MODEL_ROWS
    *
    * 系列详情页完整型号表。

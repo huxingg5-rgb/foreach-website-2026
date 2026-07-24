@@ -40,6 +40,35 @@ const BreadcrumbComponent =
 const SupportCtaComponent =
   ResourceSupportCta as ComponentType<SharedComponentProps>;
 
+const TECHNICAL_ARTICLES_PAGE_SIZE = 6;
+
+const technicalArticlesPaginationUi: Record<string, {
+  pagination: string;
+  previous: string;
+  next: string;
+}> = {
+  es: {
+    pagination: "Paginación de artículos técnicos",
+    previous: "Anterior",
+    next: "Siguiente",
+  },
+  fr: {
+    pagination: "Pagination des articles techniques",
+    previous: "Précédente",
+    next: "Suivante",
+  },
+  ko: {
+    pagination: "기술 문서 페이지",
+    previous: "이전",
+    next: "다음",
+  },
+  ru: {
+    pagination: "Страницы технических статей",
+    previous: "Назад",
+    next: "Далее",
+  },
+};
+
 const technicalArticlesUi: Record<string, {
   search: string;
   recent: string;
@@ -122,6 +151,7 @@ export default function TechnicalArticlesClient({
   const [activeCategory, setActiveCategory] = useState<
     "all" | TechnicalArticleCategory
   >("all");
+  const [currentPage, setCurrentPage] = useState(1);
 
   const filteredArticles = useMemo(() => {
     const normalizedKeyword = keyword.trim().toLowerCase();
@@ -147,6 +177,41 @@ export default function TechnicalArticlesClient({
       return matchCategory && matchKeyword;
     });
   }, [activeCategory, keyword, pageData]);
+
+  const totalPages = Math.max(
+    1,
+    Math.ceil(filteredArticles.length / TECHNICAL_ARTICLES_PAGE_SIZE)
+  );
+
+  const safeCurrentPage = Math.min(currentPage, totalPages);
+
+  const pagedArticles = useMemo(() => {
+    const startIndex =
+      (safeCurrentPage - 1) * TECHNICAL_ARTICLES_PAGE_SIZE;
+    const endIndex = startIndex + TECHNICAL_ARTICLES_PAGE_SIZE;
+
+    return filteredArticles.slice(startIndex, endIndex);
+  }, [filteredArticles, safeCurrentPage]);
+
+  function handleKeywordChange(value: string) {
+    setKeyword(value);
+    setCurrentPage(1);
+  }
+
+  function handleCategoryChange(
+    category: "all" | TechnicalArticleCategory
+  ) {
+    setActiveCategory(category);
+    setCurrentPage(1);
+  }
+
+  function handlePageChange(page: number) {
+    const nextPage = Math.max(1, Math.min(page, totalPages));
+
+    setCurrentPage(nextPage);
+  }
+
+  const paginationUi = technicalArticlesPaginationUi[pageData.locale];
 
   return (
     <main className="technicalArticlesPage">
@@ -175,8 +240,8 @@ export default function TechnicalArticlesClient({
       <section className="technicalArticlesSearchSection">
         <ResourceSearchBar
           value={keyword}
-          onChange={setKeyword}
-          onSearch={setKeyword}
+          onChange={handleKeywordChange}
+          onSearch={handleKeywordChange}
           placeholder={pageData.search.placeholder}
           searchButtonText={ui?.search ?? (pageData.locale === "zh-CN" ? "搜索" : "Search")}
           recentLabel={ui?.recent ?? (pageData.locale === "zh-CN" ? "最近搜索" : "Recent")}
@@ -205,7 +270,7 @@ export default function TechnicalArticlesClient({
                     ? "technicalArticlesSidebar__button isActive"
                     : "technicalArticlesSidebar__button"
                 }
-                onClick={() => setActiveCategory(category.key)}
+                onClick={() => handleCategoryChange(category.key)}
               >
                 <span>{category.label}</span>
                 {category.key !== "all" && (
@@ -218,20 +283,64 @@ export default function TechnicalArticlesClient({
 
         <div className="technicalArticlesMain">
           {filteredArticles.length > 0 ? (
-            <div className="technicalArticlesGrid">
-              {filteredArticles.map((article) => (
-                <TechnicalArticleCard
-                  key={article.id}
-                  article={article}
-                  categoryLabel={getCategoryLabel(pageData, article.category)}
-                  tags={getArticleTags(article, pageData.locale)}
-                  href={getArticleHref(pageData.locale, article.slug)}
-                  locale={pageData.locale}
-                  categoryText={ui?.category}
-                  tagsText={ui?.tags}
-                />
-              ))}
-            </div>
+            <>
+              <div className="technicalArticlesGrid">
+                {pagedArticles.map((article) => (
+                  <TechnicalArticleCard
+                    key={article.id}
+                    article={article}
+                    categoryLabel={getCategoryLabel(pageData, article.category)}
+                    tags={getArticleTags(article, pageData.locale)}
+                    href={getArticleHref(pageData.locale, article.slug)}
+                    locale={pageData.locale}
+                    categoryText={ui?.category}
+                    tagsText={ui?.tags}
+                  />
+                ))}
+              </div>
+
+              {totalPages > 1 ? (
+                <nav
+                  className="technicalArticlesPagination"
+                  aria-label={
+                    pageData.locale === "zh-CN"
+                      ? "技术文章分页"
+                      : paginationUi?.pagination ??
+                        "Technical articles pagination"
+                  }
+                >
+                  <button
+                    type="button"
+                    className="technicalArticlesPagination__button"
+                    disabled={safeCurrentPage <= 1}
+                    onClick={() =>
+                      handlePageChange(safeCurrentPage - 1)
+                    }
+                  >
+                    {paginationUi?.previous ??
+                      (pageData.locale === "zh-CN"
+                        ? "上一页"
+                        : "Previous")}
+                  </button>
+
+                  <span className="technicalArticlesPagination__status">
+                    {safeCurrentPage} / {totalPages}
+                  </span>
+
+                  <button
+                    type="button"
+                    className="technicalArticlesPagination__button"
+                    disabled={safeCurrentPage >= totalPages}
+                    onClick={() =>
+                      handlePageChange(safeCurrentPage + 1)
+                    }
+                  >
+                    {paginationUi?.next ??
+                      (pageData.locale === "zh-CN" ? "下一页" : "Next")}
+                  </button>
+                </nav>
+              ) : null}
+            </>
           ) : (
             <div className="technicalArticlesEmpty">
               <p>

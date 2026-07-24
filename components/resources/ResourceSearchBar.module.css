@@ -12,13 +12,14 @@
 
 .searchPanel {
   position: relative;
-  left: 50%;
-  width: 100vw;
-  margin-left: -50vw;
+  width: 100%;
+  margin: 0;
   padding: 22px 0 20px;
   background: #f4f7fb;
   border-top: 1px solid rgba(23, 51, 104, 0.1);
   border-bottom: 1px solid rgba(23, 51, 104, 0.12);
+  box-shadow: 0 0 0 100vmax #f4f7fb;
+  clip-path: inset(0 -100vmax);
 }
 
 .searchRow {

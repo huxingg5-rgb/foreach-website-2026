@@ -920,6 +920,17 @@
   outline-offset: 3px !important;
 }
 
+@media (hover: none), (pointer: coarse) {
+  .ivd-btn:hover:not([data-global-touch-pressed="true"]),
+  .ivd-btn:focus:not([data-global-touch-pressed="true"]) {
+    background: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.72) !important;
+    color: #173368 !important;
+    transform: none !important;
+    outline: none !important;
+  }
+}
+
 /* ===== V11 CTA BUTTON PATCH END ===== */
 
 /* =========================================================

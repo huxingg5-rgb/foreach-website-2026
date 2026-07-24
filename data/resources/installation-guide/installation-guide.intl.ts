@@ -1,3 +1,4 @@
+import { getInstallationGuideYouTubeGuides } from "./installation-guide.youtube.generated";
 import type {
   InstallationGuideLocale,
   InstallationGuidePageData,
@@ -537,7 +538,7 @@ const installationGuideTranslations: Record<
   },
 };
 
-export function getInstallationGuideIntlData(
+function getInstallationGuideIntlBaseData(
   locale: InstallationGuideLocale,
 ): InstallationGuidePageData {
   const prefix = `/${locale}`;
@@ -579,3 +580,24 @@ export function getInstallationGuideIntlData(
     },
   };
 }
+
+/* INSTALLATION_GUIDE_YOUTUBE_OVERRIDE_START */
+
+/*
+ * 保留原来的外语界面翻译，
+ * 只替换页面中的教程卡片数据。
+ */
+export function getInstallationGuideIntlData(
+  locale: InstallationGuideLocale,
+): InstallationGuidePageData {
+  const baseData =
+    getInstallationGuideIntlBaseData(locale);
+
+  return {
+    ...baseData,
+    guides:
+      getInstallationGuideYouTubeGuides(locale),
+  };
+}
+
+/* INSTALLATION_GUIDE_YOUTUBE_OVERRIDE_END */

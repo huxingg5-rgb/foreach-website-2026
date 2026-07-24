@@ -1,0 +1,1134 @@
+技术文章多语言结构检查
+检查时间：2026-07-23 15:45:29
+项目路径：F:\WebsiteProjects\foreach-website-2026
+
+============================================================
+一、technical-articles.translations.ts
+============================================================
+
+    1: import type {
+    2:   TechnicalArticleLocale,
+    3:   TechnicalArticlesPageData,
+    4: } from "./technical-articles.types";
+    5: 
+    6: type ForeignLocale = Exclude<TechnicalArticleLocale, "zh-CN" | "en">;
+    7: type ArticleTranslation = readonly [string, string, string, string, string, string];
+    8: 
+    9: const pageTranslations: Record<ForeignLocale, {
+   10:   heroTitle: string;
+   11:   heroDescription: string;
+   12:   home: string;
+   13:   resources: string;
+   14:   current: string;
+   15:   search: string;
+   16:   categories: readonly [string, string, string, string, string];
+   17:   sectionTitle: string;
+   18:   bannerTitle: string;
+   19:   bannerDescription: string;
+   20:   contact: string;
+   21: }> = {
+   22:   es: {
+   23:     heroTitle: "Artículos técnicos",
+   24:     heroDescription: "Explore conocimientos técnicos de FOREACH sobre selección de productos, compatibilidad de materiales, conexiones de tubos, métodos de sellado y aplicaciones de sistemas microfluídicos.",
+   25:     home: "Inicio", resources: "Recursos", current: "Artículos técnicos", search: "Buscar artículos",
+   26:     categories: ["Todos", "Racores y tubos", "Bombas y válvulas", "Materiales y compatibilidad", "Aplicaciones"],
+   27:     sectionTitle: "Artículos técnicos", bannerTitle: "¿Necesita asistencia técnica para seleccionar productos?",
+   28:     bannerDescription: "Comparta con FOREACH el fluido, el rango de presión, el tamaño del tubo, las condiciones de aplicación o los planos para confirmar el producto adecuado.", contact: "Contactar",
+   29:   },
+   30:   fr: {
+   31:     heroTitle: "Articles techniques",
+   32:     heroDescription: "Découvrez l’expertise FOREACH sur la sélection des produits, la compatibilité des matériaux, les raccordements de tubes, l’étanchéité et les applications microfluidiques.",
+   33:     home: "Accueil", resources: "Ressources", current: "Articles techniques", search: "Rechercher des articles",
+   34:     categories: ["Tous", "Raccords et tubes", "Pompes et vannes", "Matériaux et compatibilité", "Applications"],
+   35:     sectionTitle: "Articles techniques", bannerTitle: "Besoin d’une assistance technique pour votre sélection ?",
+   36:     bannerDescription: "Communiquez à FOREACH le fluide, la plage de pression, la taille du tube, les conditions d’application ou les plans afin de confirmer le produit adapté.", contact: "Nous contacter",
+   37:   },
+   38:   ko: {
+   39:     heroTitle: "기술 자료",
+   40:     heroDescription: "제품 선정, 재질 호환성, 튜브 연결, 밀봉 방식 및 미세유체 시스템 적용에 관한 FOREACH의 기술 정보를 확인하세요.",
+   41:     home: "홈", resources: "자료", current: "기술 자료", search: "자료 검색",
+   42:     categories: ["전체", "피팅 및 튜브", "펌프 및 밸브", "재질 및 호환성", "적용 분야"],
+   43:     sectionTitle: "기술 자료", bannerTitle: "제품 선정에 기술 지원이 필요하신가요?",
+   44:     bannerDescription: "유체, 압력 범위, 튜브 크기, 적용 조건 또는 도면을 FOREACH에 보내 주시면 제품 매칭과 기술 확인을 지원합니다.", contact: "문의하기",
+   45:   },
+   46:   ru: {
+   47:     heroTitle: "Технические статьи",
+   48:     heroDescription: "Материалы FOREACH по подбору продукции, совместимости материалов, трубным соединениям, герметизации и применению микрофлюидных систем.",
+   49:     home: "Главная", resources: "Ресурсы", current: "Технические статьи", search: "Поиск статей",
+   50:     categories: ["Все", "Фитинги и трубки", "Насосы и клапаны", "Материалы и совместимость", "Применение"],
+   51:     sectionTitle: "Технические статьи", bannerTitle: "Нужна техническая помощь при подборе?",
+   52:     bannerDescription: "Сообщите FOREACH рабочую среду, диапазон давления, размер трубки, условия применения или приложите чертежи для подбора и технического подтверждения.", contact: "Связаться",
+   53:   },
+   54: };
+   55: 
+   56: const articleTranslations: Record<ForeignLocale, readonly ArticleTranslation[]> = {
+   57:   es: [
+   58:     ["Cómo seleccionar racores adecuados para un sistema microfluídico", "Los racores influyen en el sellado, el montaje, el mantenimiento y la estabilidad. Deben elegirse según el tubo, la conexión, la presión, el fluido y el espacio disponible.", "Función de los racores en los sistemas fluídicos", "En un sistema microfluídico, los racores permiten transferir el fluido, sellar y unir la estructura. Los instrumentos IVD suelen exigir estabilidad y uniformidad a largo plazo, mientras que la automatización de laboratorio prioriza el montaje y el mantenimiento.", "Factores clave de selección", "Compruebe los diámetros del tubo y la compatibilidad de la interfaz. Confirme también si la conexión es para tubo rígido o flexible, con férula, brida o rosca, además de la presión, el fluido y las condiciones de mantenimiento."],
+   59:     ["Diferencias entre PEEK, PTFE y PFA en sistemas fluídicos", "PEEK, PTFE y PFA son materiales de alto rendimiento, pero difieren en resistencia mecánica y química, transparencia, flexibilidad y procesabilidad.", "Principales diferencias entre los tres materiales", "PEEK ofrece resistencia mecánica y a la presión; PTFE destaca por su inercia química y baja energía superficial; PFA combina resistencia química con cierta transparencia para aplicaciones que requieren inspección o limpieza.", "La compatibilidad depende de las condiciones reales", "Evalúe concentración, temperatura, tiempo de contacto, presión y método de limpieza. Para mezclas, altas temperaturas o inmersión prolongada se recomiendan pruebas de muestras y confirmación técnica."],
+   60:     ["Racores de baja y alta presión: diferencias clave", "Los racores de baja presión priorizan el montaje y el sellado; los de alta presión requieren una estructura, un diseño de sellado y una estabilidad más robustos.", "Requisitos de aplicación diferentes", "Los racores de baja presión se usan en transferencia de reactivos, lavado y manipulación general. Los de alta presión son habituales en instrumentos analíticos o sistemas sensibles a las variaciones de presión.", "La apariencia no basta para sustituirlos", "Aunque dos racores parezcan iguales, pueden diferir en presión nominal, sellado, tubo aplicable y montaje. Confirme el rango de presión y el conjunto completo de tubos."],
+   61:     ["Tubos rígidos y flexibles en conexiones fluídicas", "Los tubos rígidos sirven para recorridos estables y definidos; los flexibles facilitan el encaminamiento, la curvatura y la tolerancia a vibraciones.", "Diferencias estructurales", "El tubo rígido conserva mejor las dimensiones y reduce la deformación. El flexible se curva con facilidad y se adapta a espacios limitados o recorridos variables.", "La selección depende del diseño del sistema", "En tubos rígidos cuide el corte, la profundidad de inserción y el sellado. En tubos flexibles evalúe elasticidad, fuerza de sujeción y envejecimiento."],
+   62:     ["Causas frecuentes de fallos de sellado en racores", "Las fugas pueden deberse al tubo, la instalación, el corte, las juntas o la presión del sistema, y no solo al racor.", "Causas típicas de fuga", "Entre las causas habituales están un tamaño de tubo incorrecto, corte irregular, inserción insuficiente, roscas flojas, juntas dañadas, incompatibilidad de materiales o presión excesiva.", "Pasos de diagnóstico recomendados", "Compruebe primero las especificaciones del tubo y el racor y después el extremo, la junta y la alineación. Con reactivos corrosivos o limpiadores, confirme la compatibilidad a largo plazo."],
+   63:     ["Parámetros clave para seleccionar una microbomba de émbolo", "La selección debe considerar volumen, precisión, repetibilidad, presión, interfaz, accionamiento y protocolo de comunicación.", "Parámetros esenciales además del volumen", "Estas bombas realizan aspiración, dosificación y transferencia cuantitativa en IVD, automatización e instrumentos analíticos. Tras el volumen y la precisión, evalúe presión, fluido, ciclo de trabajo y vida útil.", "Es importante la compatibilidad del sistema", "La bomba debe funcionar con válvulas, tubos, racores, sensores y lógica de control. La interfaz, el método de conexión y el protocolo de comunicación también condicionan la integración."],
+   64:     ["Función de las electroválvulas en sistemas microfluídicos", "Las electroválvulas controlan apertura, cierre, conmutación y distribución del flujo en sistemas automatizados.", "Control del circuito de fluido", "Se emplean para controlar reactivos, cambiar soluciones de lavado, descargar residuos y conmutar gas y líquido. Pueden ofrecer dos, tres o más vías según su estructura.", "Factores de selección", "Confirme canales, diámetro de paso, presión, tipo de fluido y material de sellado. Para medios corrosivos o con riesgo de cristalización, evalúe el cuerpo y la estabilidad a largo plazo."],
+   65:     ["¿Puede una tabla de compatibilidad ser la base final de selección?", "Una tabla resulta útil para el cribado inicial, pero la selección final también debe considerar temperatura, concentración, presión y tiempo de contacto.", "Las tablas son útiles para el cribado", "Se basan en la experiencia con materiales y sustancias habituales y permiten descartar opciones inadecuadas, pero una aplicación real puede incluir mezclas y condiciones distintas.", "Las condiciones complejas deben confirmarse", "Para disolventes mezclados, altas concentraciones, inmersión prolongada o alta temperatura, aporte información detallada y realice pruebas antes de la selección final."],
+   66:     ["Parámetros clave para seleccionar el sistema fluídico de un equipo IVD", "Un sistema IVD exige precisión, estabilidad, limpieza, compatibilidad y facilidad de mantenimiento; cada componente afecta al conjunto.", "El sistema depende de varios componentes", "Bombas, válvulas, tubos, racores, agujas y sensores deben trabajar juntos durante aspiración, dosificación, lavado, reacción y gestión de residuos.", "Parámetros y capacidad de suministro", "Evalúe precisión, repetibilidad, compatibilidad, burbujas, volumen muerto, residuos, interfaces y vida útil. Para producción en serie también importan la uniformidad y un suministro estable."],
+   67:     ["Comprender la presión, el caudal y la compatibilidad de materiales", "La presión, el caudal y la compatibilidad son tres factores esenciales que deben evaluarse conjuntamente.", "Los tres factores se evalúan juntos", "La presión fija el rango de trabajo, el caudal condiciona la eficiencia y la respuesta, y la compatibilidad determina la estabilidad de los componentes en contacto con el fluido.", "No se trata de maximizar un solo parámetro", "Un caudal mayor puede provocar variaciones de presión y exigir más al sellado, al tubo y a bombas y válvulas. Con medios corrosivos, confirme todos los materiales mojados."],
+   68:     ["Por qué importa el contexto de aplicación al seleccionar productos microfluídicos", "Un producto puede comportarse de forma distinta según la aplicación. Considere el fluido, la presión, la precisión, el espacio y el mantenimiento.", "Cada aplicación tiene requisitos diferentes", "IVD puede priorizar la estabilidad a largo plazo, mientras que los instrumentos analíticos pueden requerir mayor compatibilidad y pocos residuos.", "Más información mejora la selección", "Al solicitar una selección, indique el fluido, los rangos de presión y caudal, el tipo de conexión, el espacio de montaje y la aplicación prevista."],
+   69:     ["Cómo seleccionar racores de sustitución a partir de planos o muestras", "La sustitución requiere confirmar interfaz, sellado, material, presión y condiciones, además de las dimensiones exteriores.", "La sustitución no depende solo del aspecto", "Para mantenimiento o localización deben comprobarse dimensiones, rosca, tamaño del tubo, sellado, materiales mojados y presión.", "Los planos, muestras y condiciones ayudan", "Si solo hay una muestra, aporte fotos claras, dimensiones, tubo y fluido. Si hay planos, incluya dimensiones de interfaz, tolerancias y condiciones de montaje."],
+   70:   ],
+   71:   fr: [
+   72:     ["Comment choisir des raccords adaptés à un système microfluidique", "Les raccords influencent l’étanchéité, le montage, la maintenance et la stabilité. Le choix dépend du tube, de la connexion, de la pression, du fluide et de l’espace disponible.", "Rôle des raccords dans un système fluidique", "Les raccords assurent le transfert, l’étanchéité et la liaison structurelle. Les instruments IVD privilégient souvent la stabilité et la régularité, tandis que l’automatisation de laboratoire accorde plus d’importance au montage et à la maintenance.", "Principaux critères de sélection", "Vérifiez les diamètres du tube et la compatibilité de l’interface. Confirmez aussi le type de connexion, la pression, le fluide et les conditions de maintenance."],
+   73:     ["Différences entre PEEK, PTFE et PFA dans les systèmes fluidiques", "Ces matériaux haute performance diffèrent par leur résistance mécanique et chimique, leur transparence, leur souplesse et leur transformation.", "Principales différences", "Le PEEK offre résistance mécanique et tenue en pression ; le PTFE présente une excellente inertie chimique ; le PFA associe résistance chimique et transparence partielle.", "La compatibilité dépend des conditions réelles", "Évaluez concentration, température, durée de contact, pression et nettoyage. Pour les mélanges, températures élevées ou immersions longues, effectuez des essais."],
+   74:     ["Raccords basse et haute pression : différences essentielles", "Les raccords basse pression privilégient le montage et l’étanchéité ; les modèles haute pression exigent une structure et une stabilité renforcées.", "Des exigences d’application différentes", "La basse pression concerne le transfert de réactifs, le lavage et la manipulation courante. La haute pression intervient souvent dans les instruments analytiques.", "L’apparence ne suffit pas pour un remplacement", "Deux raccords similaires peuvent différer par la pression nominale, le joint, le tube et le montage. Confirmez la plage réelle et l’ensemble de la tuyauterie."],
+   75:     ["Tubes rigides ou souples dans les connexions fluidiques", "Le tube rigide convient aux circuits stables ; le tube souple facilite le cheminement, les courbes et l’absorption des vibrations.", "Différences structurelles", "Le tube rigide conserve mieux ses dimensions. Le tube souple se courbe facilement et s’adapte aux espaces réduits.", "Le choix dépend de l’implantation", "Pour un tube rigide, contrôlez coupe, insertion et étanchéité. Pour un tube souple, évaluez élasticité, serrage et vieillissement."],
+   76:     ["Causes courantes de défaut d’étanchéité des raccords", "Une fuite peut provenir du tube, du montage, de la coupe, des joints ou de la pression, et pas seulement du raccord.", "Causes typiques", "Diamètre incorrect, coupe irrégulière, insertion insuffisante, filetage desserré, joint endommagé, incompatibilité ou surpression sont des causes fréquentes.", "Dépannage recommandé", "Vérifiez les spécifications, puis l’extrémité du tube, le joint et l’alignement. Confirmez la compatibilité à long terme avec les réactifs corrosifs."],
+   77:     ["Paramètres clés pour choisir une micropompe à piston", "Le choix tient compte du volume, de la précision, de la répétabilité, de la pression, de l’interface, de l’entraînement et de la communication.", "Au-delà de la plage de volume", "Ces pompes assurent aspiration, dosage et transfert quantitatif. Après le volume et la précision, examinez pression, fluide, cycle et durée de vie.", "L’intégration système est essentielle", "La pompe doit être compatible avec les vannes, tubes, raccords, capteurs et la commande. Interface, connexion et protocole comptent aussi."],
+   78:     ["Rôle des électrovannes dans les systèmes microfluidiques", "Les électrovannes assurent l’ouverture, la fermeture, la commutation et la distribution automatisées du fluide.", "Commande du circuit fluidique", "Elles commandent les réactifs, le lavage, les déchets et la commutation gaz-liquide, avec deux, trois voies ou davantage.", "Critères de sélection", "Confirmez les voies, l’orifice, la pression, le fluide et le joint. Pour un milieu corrosif ou cristallisable, évaluez le corps et la stabilité à long terme."],
+   79:     ["Un tableau de compatibilité suffit-il pour la sélection finale ?", "Il aide au présélectionnement, mais la décision finale doit aussi tenir compte de la température, de la concentration, de la pression et du temps de contact.", "Un outil utile de présélection", "Les tableaux permettent d’écarter rapidement les matériaux inadaptés, mais les conditions réelles peuvent inclure des mélanges.", "Confirmer les conditions complexes", "Pour les solvants mélangés, fortes concentrations, immersions longues ou températures élevées, fournissez les détails et réalisez des essais."],
+   80:     ["Paramètres clés d’un système fluidique pour instrument IVD", "Un système IVD exige précision, stabilité, propreté, compatibilité et maintenance ; chaque composant influence l’ensemble.", "Plusieurs composants interdépendants", "Pompes, vannes, tubes, raccords, aiguilles et capteurs coopèrent pour l’aspiration, le dosage, le lavage, la réaction et les déchets.", "Paramètres et capacité d’approvisionnement", "Examinez précision, répétabilité, compatibilité, bulles, volume mort, résidus, interfaces et durée de vie. En série, régularité et disponibilité sont essentielles."],
+   81:     ["Comprendre pression, débit et compatibilité des matériaux", "Ces trois facteurs fondamentaux doivent être évalués ensemble lors de la conception.", "Trois facteurs indissociables", "La pression définit la plage de travail, le débit influence l’efficacité et la réponse, et la compatibilité détermine la stabilité au contact du fluide.", "Ne pas maximiser un seul paramètre", "Un débit supérieur peut créer des fluctuations et renforcer les exigences sur les joints, les tubes, les pompes et les vannes. Confirmez tous les matériaux mouillés."],
+   82:     ["Pourquoi le contexte d’application compte dans la sélection microfluidique", "Un même produit peut se comporter différemment selon l’application. Tenez compte du fluide, de la pression, de la précision, de l’espace et de la maintenance.", "Des exigences propres à chaque application", "L’IVD peut privilégier la stabilité, tandis que l’analyse instrumentale insiste sur la compatibilité et les faibles résidus.", "Des informations complètes améliorent la sélection", "Indiquez le fluide, les plages de pression et de débit, la connexion, l’espace de montage et l’application visée."],
+   83:     ["Comment choisir des raccords de remplacement à partir de plans ou d’échantillons", "Le remplacement exige de confirmer l’interface, le joint, le matériau, la pression et les conditions, au-delà des dimensions extérieures.", "Pas seulement une question d’apparence", "Pour la maintenance ou la relocalisation, vérifiez dimensions, filetage, tube, joint, matériaux mouillés et pression.", "Plans, échantillons et conditions sont utiles", "Avec un échantillon, fournissez photos, dimensions, tube et fluide. Avec un plan, indiquez interfaces, tolérances et conditions de montage."],
+   84:   ],
+   85:   ko: [
+   86:     ["미세유체 시스템에 적합한 피팅 선정 방법", "피팅은 밀봉, 조립, 유지보수 및 장기 안정성에 영향을 줍니다. 튜브, 연결 방식, 압력, 유체 및 설치 공간을 함께 고려해야 합니다.", "유체 시스템에서 피팅의 역할", "피팅은 유체 이송, 밀봉 및 구조 연결을 담당합니다. IVD 장비는 장기 안정성과 일관성을, 실험실 자동화는 조립과 유지보수 편의성을 중시합니다.", "주요 선정 요소", "튜브 내외경과 인터페이스 호환성을 확인하고 경질·연질 튜브, 페룰, 플랜지 또는 나사 연결 방식과 압력, 유체, 유지보수 조건을 검토합니다."],
+   87:     ["유체 시스템에서 PEEK, PTFE 및 PFA의 차이", "세 재질은 고성능이지만 기계적 강도, 내화학성, 투명성, 유연성 및 가공 특성이 다릅니다.", "세 재질의 주요 차이", "PEEK는 강도와 내압성이 높고, PTFE는 화학적 불활성과 낮은 표면 에너지가 뛰어나며, PFA는 내화학성과 일정 수준의 투명성을 제공합니다.", "실제 조건에 따른 호환성", "농도, 온도, 접촉 시간, 압력 및 세척 방법을 함께 평가하십시오. 혼합 용매, 고온 또는 장기 침지에는 샘플 시험과 기술 확인이 권장됩니다."],
+   88:     ["저압 피팅과 고압 피팅의 주요 차이", "저압 피팅은 조립성과 밀봉 신뢰성을, 고압 피팅은 강한 구조와 밀봉 설계 및 압력 안정성을 중시합니다.", "서로 다른 적용 요구", "저압 피팅은 시약 이송과 세척에, 고압 피팅은 분석 장비나 압력 변동에 민감한 시스템에 주로 사용됩니다.", "외관만으로 대체할 수 없음", "모양이 비슷해도 정격 압력, 밀봉 구조, 적용 튜브 및 설치 방식이 다를 수 있으므로 실제 압력과 전체 튜브 조립체를 확인해야 합니다."],
+   89:     ["유체 연결의 경질 튜브와 연질 튜브", "경질 튜브는 안정된 유로에, 연질 튜브는 배치, 굽힘 및 진동 허용이 필요한 구조에 적합합니다.", "구조적 차이", "경질 튜브는 치수 안정성이 높고 변형이 적습니다. 연질 튜브는 잘 휘어 제한된 공간에 적합합니다.", "시스템 배치에 따른 선정", "경질 튜브는 절단, 삽입 깊이와 밀봉을, 연질 튜브는 탄성, 체결력과 장기 노화를 고려합니다."],
+   90:     ["피팅 밀봉 불량의 일반적인 원인", "누출은 피팅 자체뿐 아니라 튜브 불일치, 설치, 절단, 밀봉 부품 또는 시스템 압력 때문에 발생할 수 있습니다.", "주요 누출 원인", "튜브 규격 불일치, 불균일한 절단, 삽입 부족, 느슨한 나사, 손상된 씰, 재질 비호환 또는 과압이 흔한 원인입니다.", "권장 점검 절차", "튜브와 피팅 사양을 먼저 확인하고 튜브 끝, 씰 상태와 정렬을 점검합니다. 부식성 시약에는 장기 호환성도 확인합니다."],
+   91:     ["마이크로 플런저 펌프 선정의 핵심 파라미터", "토출량, 정확도, 반복성, 압력, 인터페이스, 구동 방식과 통신 프로토콜을 고려해야 합니다.", "용량 범위 이외의 핵심 파라미터", "흡입, 분주와 정량 이송에 사용되므로 용량과 정확도에 이어 압력, 유체, 듀티 사이클과 수명을 평가합니다.", "시스템 단위 매칭의 중요성", "펌프는 밸브, 튜브, 피팅, 센서 및 제어 로직과 맞아야 하며 인터페이스, 연결 방식과 통신 프로토콜도 중요합니다."],
+   92:     ["미세유체 시스템에서 솔레노이드 밸브의 역할", "솔레노이드 밸브는 유로의 개폐, 전환과 분배를 제어하는 자동화 핵심 부품입니다.", "유로 제어", "시약 개폐, 세척액 전환, 폐액 배출 및 기액 전환에 사용되며 구조에 따라 2방향, 3방향 이상의 제어를 제공합니다.", "선정 요소", "채널, 오리피스, 압력, 유체와 씰 재질을 확인하십시오. 부식성 유체나 결정화 위험이 있으면 밸브 본체와 장기 안정성을 평가합니다."],
+   93:     ["재질 호환성 표를 최종 선정 기준으로 사용할 수 있을까?", "호환성 표는 1차 선별에 유용하지만 온도, 농도, 압력과 접촉 시간도 고려해야 합니다.", "선별에 유용한 호환성 표", "일반적인 경험을 바탕으로 부적합 재질을 빠르게 제외할 수 있지만 실제 적용에는 혼합 유체와 다른 조건이 있을 수 있습니다.", "복잡한 조건은 확인 필요", "혼합 용매, 고농도, 장기 침지 또는 고온 조건에서는 상세 유체 정보와 샘플 시험 후 최종 선정하십시오."],
+   94:     ["IVD 장비 유체 시스템 선정의 핵심 파라미터", "IVD 유체 시스템은 정확도, 안정성, 청정도, 재질 호환성과 유지보수성이 필요하며 각 부품이 전체에 영향을 줍니다.", "여러 부품으로 구성되는 유체 시스템", "펌프, 밸브, 튜브, 피팅, 니들과 센서가 함께 흡입, 분주, 세척, 반응 및 폐액 처리를 수행합니다.", "파라미터와 공급 능력", "정확도, 반복성, 호환성, 기포, 데드 볼륨, 잔류, 인터페이스와 수명을 평가합니다. 양산 장비는 일관성과 안정 공급도 중요합니다."],
+   95:     ["압력, 유량 및 재질 호환성 이해", "압력, 유량과 재질 호환성은 유체 시스템 설계에서 함께 평가해야 할 세 가지 핵심 요소입니다.", "함께 평가하는 세 요소", "압력은 작동 범위를, 유량은 이송 효율과 응답을, 호환성은 유체 접촉 부품의 장기 안정성을 결정합니다.", "한 파라미터만 극대화하지 않기", "유량이 높으면 압력 변동이 생겨 씰, 튜브, 펌프와 밸브 요구가 높아집니다. 부식성 유체는 모든 접액 재질을 확인합니다."],
+   96:     ["미세유체 제품 선정에서 적용 환경이 중요한 이유", "같은 제품도 적용 분야에 따라 성능이 달라질 수 있으므로 유체, 압력, 정확도, 공간과 유지보수를 고려해야 합니다.", "적용 분야별 요구 차이", "IVD는 장기 안정성을, 분석 장비는 재질 호환성과 낮은 잔류를 더 중시할 수 있습니다.", "정보가 많을수록 정확한 선정", "선정 요청 시 유체, 압력과 유량 범위, 연결 방식, 설치 공간 및 목표 적용 분야를 제공하십시오."],
+   97:     ["도면 또는 샘플로 대체 피팅을 선정하는 방법", "외형 치수뿐 아니라 인터페이스, 밀봉 구조, 재질, 압력 및 적용 조건을 확인해야 합니다.", "외관만으로 선정하지 않기", "유지보수나 국산화에는 치수, 나사, 튜브 크기, 씰, 접액 재질과 압력을 모두 점검합니다.", "도면, 샘플과 적용 조건 활용", "샘플만 있으면 선명한 사진, 주요 치수, 튜브와 유체 정보를 제공하고 도면이 있으면 인터페이스 치수, 공차와 설치 조건을 포함합니다."],
+   98:   ],
+   99:   ru: [
+  100:     ["Как выбрать фитинги для микрофлюидной системы", "Фитинги влияют на герметичность, сборку, обслуживание и стабильность. Учитывайте трубку, соединение, давление, среду и место монтажа.", "Роль фитингов в гидравлической системе", "Фитинги обеспечивают перенос среды, герметизацию и конструктивное соединение. Для IVD важны стабильность и повторяемость, для лабораторной автоматизации — удобство сборки и обслуживания.", "Основные критерии выбора", "Проверьте диаметры трубки и совместимость интерфейса, способ соединения, давление, рабочую среду и условия обслуживания."],
+  101:     ["Различия PEEK, PTFE и PFA в гидравлических системах", "Эти высокоэффективные материалы различаются прочностью, химической стойкостью, прозрачностью, гибкостью и технологичностью.", "Главные различия", "PEEK обладает высокой прочностью и выдерживает давление; PTFE химически инертен; PFA сочетает химическую стойкость с некоторой прозрачностью.", "Совместимость зависит от условий", "Оценивайте концентрацию, температуру, контакт, давление и очистку. Для смесей, высокой температуры и длительного погружения нужны испытания."],
+  102:     ["Фитинги низкого и высокого давления: основные различия", "Для низкого давления важны удобство сборки и герметичность, для высокого — усиленная конструкция и стабильность.", "Разные требования к применению", "Низкое давление характерно для подачи реагентов и промывки, высокое — для аналитических приборов и чувствительных к колебаниям систем.", "Внешнего сходства недостаточно", "Похожие фитинги могут иметь разное номинальное давление, уплотнение, трубку и монтаж. Проверяйте реальный диапазон и весь трубопровод."],
+  103:     ["Жёсткие и гибкие трубки в гидравлических соединениях", "Жёсткие трубки подходят для стабильных трасс, гибкие — для изгибов, прокладки и компенсации вибрации.", "Конструктивные различия", "Жёсткая трубка лучше сохраняет размеры, гибкая удобнее в ограниченном пространстве.", "Выбор зависит от компоновки", "Для жёсткой трубки важны качество среза, глубина установки и уплотнение; для гибкой — эластичность, усилие зажима и старение."],
+  104:     ["Типичные причины нарушения герметичности фитингов", "Утечка может быть связана с трубкой, монтажом, срезом, уплотнением или давлением, а не только с фитингом.", "Причины утечек", "Несоответствие размера, неровный срез, малая глубина, слабая резьба, повреждённое уплотнение, несовместимость и превышение давления — частые причины.", "Рекомендуемая диагностика", "Проверьте спецификации, конец трубки, уплотнение и соосность. Для агрессивных реагентов подтвердите долгосрочную совместимость."],
+  105:     ["Ключевые параметры выбора микроплунжерного насоса", "Учитывайте объём, точность, повторяемость, давление, интерфейс, привод и протокол связи.", "Параметры помимо диапазона объёма", "Насосы выполняют аспирацию, дозирование и количественную подачу. После объёма и точности оцените давление, среду, цикл и ресурс.", "Важно системное согласование", "Насос должен соответствовать клапанам, трубкам, фитингам, датчикам и логике управления. Важны также интерфейс, соединение и связь."],
+  106:     ["Роль электромагнитных клапанов в микрофлюидных системах", "Они управляют открытием, закрытием, переключением и распределением потока в автоматизированной системе.", "Управление гидравлическим контуром", "Клапаны управляют реагентами, промывкой, сливом и переключением газа и жидкости и могут иметь два, три и более каналов.", "Критерии выбора", "Проверьте каналы, отверстие, давление, среду и материал уплотнения. Для агрессивных и кристаллизующихся сред оцените корпус и стабильность."],
+  107:     ["Можно ли считать таблицу совместимости окончательным основанием выбора?", "Таблица полезна для первичного отбора, но нужно учитывать температуру, концентрацию, давление и время контакта.", "Таблицы помогают при отборе", "Они позволяют исключить явно неподходящие материалы, однако реальные условия могут включать смеси.", "Сложные условия требуют проверки", "Для смесей, высокой концентрации, длительного погружения и высокой температуры предоставьте подробности и проведите испытания."],
+  108:     ["Ключевые параметры гидравлической системы прибора IVD", "Для IVD нужны точность, стабильность, чистота, совместимость и ремонтопригодность; каждый компонент влияет на систему.", "Система состоит из многих компонентов", "Насосы, клапаны, трубки, фитинги, иглы и датчики совместно обеспечивают аспирацию, дозирование, промывку, реакцию и слив.", "Параметры и поставки", "Оценивайте точность, повторяемость, совместимость, пузырьки, мёртвый объём, остатки, интерфейсы и ресурс. Для серийного выпуска важны стабильные поставки."],
+  109:     ["Давление, расход и совместимость материалов", "Эти три ключевых фактора проектирования следует оценивать совместно.", "Три взаимосвязанных фактора", "Давление определяет рабочий диапазон, расход — эффективность и отклик, совместимость — стабильность деталей при контакте со средой.", "Не нужно максимизировать один параметр", "Высокий расход может вызвать колебания и повысить требования к уплотнениям, трубкам, насосам и клапанам. Проверяйте все смачиваемые материалы."],
+  110:     ["Почему условия применения важны при выборе микрофлюидной продукции", "Один продукт ведёт себя по-разному в разных задачах. Учитывайте среду, давление, точность, место и обслуживание.", "Разные применения — разные требования", "Для IVD важна долговременная стабильность, для аналитических приборов — совместимость и малый остаточный объём.", "Полная информация повышает точность выбора", "Укажите среду, диапазоны давления и расхода, способ соединения, место монтажа и назначение."],
+  111:     ["Как подобрать замену фитинга по чертежу или образцу", "Помимо внешних размеров нужно подтвердить интерфейс, уплотнение, материал, давление и условия применения.", "Внешнего вида недостаточно", "При обслуживании или локализации проверяйте размеры, резьбу, трубку, уплотнение, смачиваемые материалы и давление.", "Полезны чертежи, образцы и условия", "Для образца приложите фотографии, размеры, данные трубки и среды; для чертежа — интерфейсы, допуски и условия монтажа."],
+  112:   ],
+  113: };
+  114: 
+  115: export function localizeTechnicalArticles(
+  116:   locale: ForeignLocale,
+  117:   base: TechnicalArticlesPageData,
+  118: ): TechnicalArticlesPageData {
+  119:   const copy = pageTranslations[locale];
+  120:   const translations = articleTranslations[locale];
+  121: 
+  122:   return {
+  123:     ...base,
+  124:     locale,
+  125:     hero: { ...base.hero, title: copy.heroTitle, description: copy.heroDescription },
+  126:     breadcrumbs: [
+  127:       { label: copy.home, href: `/${locale}` },
+  128:       { label: copy.resources, href: `/${locale}/resources` },
+  129:       { label: copy.current },
+  130:     ],
+  131:     search: { placeholder: copy.search },
+  132:     categories: base.categories.map((category, index) => ({ ...category, label: copy.categories[index] ?? category.label })),
+  133:     sectionTitle: copy.sectionTitle,
+  134:     articles: base.articles.map((article, index) => {
+  135:       const translation = translations[index];
+  136:       if (!translation) return article;
+  137:       return {
+  138:         ...article,
+  139:         title: translation[0],
+  140:         summary: translation[1],
+  141:         content: [
+  142:           { title: translation[2], content: translation[3] },
+  143:           { title: translation[4], content: translation[5] },
+  144:         ],
+  145:         seoTitle: translation[0],
+  146:         seoDescription: translation[1],
+  147:       };
+  148:     }),
+  149:     bottomBanner: {
+  150:       title: copy.bannerTitle,
+  151:       description: copy.bannerDescription,
+  152:       actions: [{ label: copy.contact, href: `/${locale}/contact` }],
+  153:     },
+  154:   };
+  155: }
+
+============================================================
+二、technical-articles.intl.ts
+============================================================
+
+    1: /* =========================================================
+    2:    technical-articles.intl.ts
+    3:    FOREACH Website｜International Technical Articles Data
+    4: 
+    5:    说明：
+    6:    1. 外语第一版统一使用英文技术文章数据
+    7:    2. /en /es /fr /ko /ru 先复用英文内容
+    8:    3. 后续可按语言拆分
+    9: ========================================================= */
+   10: 
+   11: import type { TechnicalArticlesPageData } from "./technical-articles.types";
+   12: 
+   13: const technicalArticlesBannerImage =
+   14:   "/images/resources/technical-articles/banner/resources-technical-articles-banner-1920x520-v001.webp";
+   15: 
+   16: const defaultCoverImage = technicalArticlesBannerImage;
+   17: 
+   18: export const technicalArticlesIntlData: TechnicalArticlesPageData = {
+   19:   locale: "en",
+   20: 
+   21:   hero: {
+   22:     title: "Technical Articles",
+   23:     description:
+   24:       "Explore FOREACH technical insights about product selection, material compatibility, tubing connections, sealing methods and microfluidic system applications.",
+   25:     backgroundImage: technicalArticlesBannerImage,
+   26:   },
+   27: 
+   28:   breadcrumbs: [
+   29:     {
+   30:       label: "Home",
+   31:       href: "/en",
+   32:     },
+   33:     {
+   34:       label: "Resources",
+   35:       href: "/en/resources",
+   36:     },
+   37:     {
+   38:       label: "Technical Articles",
+   39:     },
+   40:   ],
+   41: 
+   42:   search: {
+   43:     placeholder: "Search articles",
+   44:   },
+   45: 
+   46:   categories: [
+   47:     {
+   48:       key: "all",
+   49:       label: "All",
+   50:     },
+   51:     {
+   52:       key: "fittings-tubing",
+   53:       label: "Fittings & Tubing",
+   54:     },
+   55:     {
+   56:       key: "pumps-valves",
+   57:       label: "Pumps & Valves",
+   58:     },
+   59:     {
+   60:       key: "materials-compatibility",
+   61:       label: "Materials & Compatibility",
+   62:     },
+   63:     {
+   64:       key: "applications",
+   65:       label: "Applications",
+   66:     },
+   67:   ],
+   68: 
+   69:   sectionTitle: "Technical Articles",
+   70: 
+   71:   articles: [
+   72:     {
+   73:       id: "selecting-microfluidic-fittings",
+   74:       slug: "selecting-microfluidic-fittings",
+   75:       category: "fittings-tubing",
+   76:       title: "How to Select Suitable Fittings for a Microfluidic System",
+   77:       summary:
+   78:         "Fittings affect sealing performance, assembly efficiency, maintenance convenience and long-term stability. Selection should consider tubing size, connection method, pressure, fluid media and installation space.",
+   79:       date: "2026-06-08",
+   80:       coverImage: defaultCoverImage,
+   81:       content: [
+   82:         {
+   83:           title: "The role of fittings in fluidic systems",
+   84:           content:
+   85:             "In a microfluidic system, fittings support fluid transfer, sealing and structural connection. Different applications place different requirements on fittings. IVD instruments often focus on long-term stability and batch consistency, while laboratory automation may focus more on assembly and maintenance convenience.",
+   86:         },
+   87:         {
+   88:           title: "Key factors for selection",
+   89:           content:
+   90:             "Fitting selection starts with tubing outer diameter, inner diameter and interface compatibility. The connection method, such as rigid tubing, flexible tubing, ferrule connection, flanged connection or threaded connection, also needs to be confirmed. Pressure, media compatibility and maintenance conditions should be considered for more demanding systems.",
+   91:         },
+   92:       ],
+   93:     },
+   94:     {
+   95:       id: "peek-ptfe-pfa-material-differences",
+   96:       slug: "peek-ptfe-pfa-material-differences",
+   97:       category: "materials-compatibility",
+   98:       title: "Differences Between PEEK, PTFE and PFA in Fluidic Systems",
+   99:       summary:
+  100:         "PEEK, PTFE and PFA are common high-performance materials in microfluidic systems, but they differ in mechanical strength, chemical resistance, transparency, flexibility and processing characteristics.",
+  101:       date: "2026-06-07",
+  102:       coverImage: defaultCoverImage,
+  103:       content: [
+  104:         {
+  105:           title: "Main differences between the three materials",
+  106:           content:
+  107:             "PEEK provides high mechanical strength and pressure resistance, making it suitable for applications requiring structural stability and wear resistance. PTFE offers excellent chemical inertness and low surface energy, but lower mechanical strength. PFA combines chemical resistance with a degree of transparency, making it useful where visual inspection or cleanliness is required.",
+  108:         },
+  109:         {
+  110:           title: "Material compatibility depends on actual conditions",
+  111:           content:
+  112:             "Material compatibility should be evaluated together with concentration, temperature, contact time, pressure and cleaning method. For mixed solvents, high temperatures or long-term immersion, sample testing and technical confirmation are recommended.",
+  113:         },
+  114:       ],
+  115:     },
+  116:     {
+  117:       id: "low-pressure-vs-high-pressure-fittings",
+  118:       slug: "low-pressure-vs-high-pressure-fittings",
+  119:       category: "fittings-tubing",
+  120:       title: "Low-Pressure vs. High-Pressure Fittings: Key Differences",
+  121:       summary:
+  122:         "Low-pressure fittings focus on assembly efficiency and sealing reliability, while high-pressure fittings require stronger structure, sealing design and pressure stability.",
+  123:       date: "2026-06-06",
+  124:       coverImage: defaultCoverImage,
+  125:       content: [
+  126:         {
+  127:           title: "Different application requirements",
+  128:           content:
+  129:             "Low-pressure fittings are commonly used for reagent transfer, washing lines and general fluid handling. High-pressure fittings are often used in analytical instruments or systems sensitive to pressure fluctuation, where structural strength and sealing design are more critical.",
+  130:         },
+  131:         {
+  132:           title: "Appearance alone is not enough for replacement",
+  133:           content:
+  134:             "Even when fittings look similar, their pressure rating, sealing structure, applicable tubing and installation method may differ. If pressure is involved, the actual pressure range and full tubing assembly should be confirmed.",
+  135:         },
+  136:       ],
+  137:     },
+  138:     {
+  139:       id: "rigid-tubing-vs-flexible-tubing",
+  140:       slug: "rigid-tubing-vs-flexible-tubing",
+  141:       category: "fittings-tubing",
+  142:       title: "Rigid Tubing vs. Flexible Tubing in Fluidic Connections",
+  143:       summary:
+  144:         "Rigid tubing is suitable for stable and well-defined fluid paths, while flexible tubing is better for routing, bending and vibration-tolerant layouts.",
+  145:       date: "2026-06-05",
+  146:       coverImage: defaultCoverImage,
+  147:       content: [
+  148:         {
+  149:           title: "Structural differences",
+  150:           content:
+  151:             "Rigid tubing usually provides better dimensional stability and lower deformation risk, making it suitable for systems requiring stable flow paths and volume control. Flexible tubing provides better bendability and is suitable for limited spaces or layouts requiring flexible routing.",
+  152:         },
+  153:         {
+  154:           title: "Selection depends on system layout",
+  155:           content:
+  156:             "Rigid tubing requires attention to cutting quality, insertion depth and sealing structure. Flexible tubing selection should consider elasticity, clamping force and aging during long-term use.",
+  157:         },
+  158:       ],
+  159:     },
+  160:     {
+  161:       id: "common-fitting-sealing-failure-causes",
+  162:       slug: "common-fitting-sealing-failure-causes",
+  163:       category: "fittings-tubing",
+  164:       title: "Common Causes of Fitting Sealing Failure",
+  165:       summary:
+  166:         "Leakage may be caused by tubing mismatch, installation method, cutting quality, sealing component condition or system pressure, not only by the fitting itself.",
+  167:       date: "2026-06-04",
+  168:       coverImage: defaultCoverImage,
+  169:       content: [
+  170:         {
+  171:           title: "Typical causes of leakage",
+  172:           content:
+  173:             "Common causes include tubing size mismatch, uneven cutting, insufficient insertion depth, loose threads, damaged seals, material incompatibility and system pressure beyond the applicable range.",
+  174:         },
+  175:         {
+  176:           title: "Recommended troubleshooting steps",
+  177:           content:
+  178:             "Check tubing and fitting specifications first, then inspect the tubing end, seal condition and connection alignment. If corrosive reagents or cleaning solutions are used, long-term material compatibility should also be confirmed.",
+  179:         },
+  180:       ],
+  181:     },
+  182:     {
+  183:       id: "micro-plunger-pump-selection",
+  184:       slug: "micro-plunger-pump-selection",
+  185:       category: "pumps-valves",
+  186:       title: "Key Parameters for Selecting a Micro Plunger Pump",
+  187:       summary:
+  188:         "Micro plunger pump selection should consider dispensing volume, accuracy, repeatability, pressure range, interface type, drive method and communication protocol.",
+  189:       date: "2026-06-03",
+  190:       coverImage: defaultCoverImage,
+  191:       content: [
+  192:         {
+  193:           title: "Core parameters beyond volume range",
+  194:           content:
+  195:             "Micro plunger pumps are used in IVD, laboratory automation and analytical instruments for aspiration, dispensing and quantitative transfer. Selection should start from volume range and accuracy, then consider pressure, media, duty cycle and lifetime.",
+  196:         },
+  197:         {
+  198:           title: "System-level matching is important",
+  199:           content:
+  200:             "The pump works as part of the fluidic system and must match valves, tubing, fittings, sensors and control logic. Interface type, connection method and communication protocol are also important for integration.",
+  201:         },
+  202:       ],
+  203:     },
+  204:     {
+  205:       id: "solenoid-valves-in-microfluidic-systems",
+  206:       slug: "solenoid-valves-in-microfluidic-systems",
+  207:       category: "pumps-valves",
+  208:       title: "The Role of Solenoid Valves in Microfluidic Systems",
+  209:       summary:
+  210:         "Solenoid valves control flow on/off, switching and distribution, making them important components for automated fluidic control.",
+  211:       date: "2026-06-02",
+  212:       coverImage: defaultCoverImage,
+  213:       content: [
+  214:         {
+  215:           title: "Flow path control",
+  216:           content:
+  217:             "Solenoid valves are used for reagent on/off control, wash solution switching, waste discharge and gas-liquid path switching. Depending on structure, they may provide two-way, three-way or more complex fluid path control.",
+  218:         },
+  219:         {
+  220:           title: "Selection factors",
+  221:           content:
+  222:             "Channel configuration, orifice size, pressure range, media type and sealing material should be confirmed. For corrosive media or crystallization risk, valve body material and long-term stability require further evaluation.",
+  223:         },
+  224:       ],
+  225:     },
+  226:     {
+  227:       id: "material-compatibility-table-reference",
+  228:       slug: "material-compatibility-table-reference",
+  229:       category: "materials-compatibility",
+  230:       title: "Can a Material Compatibility Table Be Used as the Final Selection Basis?",
+  231:       summary:
+  232:         "A material compatibility table is useful for preliminary screening, but final selection should also consider temperature, concentration, pressure and contact time.",
+  233:       date: "2026-06-01",
+  234:       coverImage: defaultCoverImage,
+  235:       content: [
+  236:         {
+  237:           title: "Compatibility tables are useful for screening",
+  238:           content:
+  239:             "Compatibility tables are usually based on common material and chemical media experience. They help quickly exclude obviously unsuitable materials, but real applications may involve mixed fluids and different operating conditions.",
+  240:         },
+  241:         {
+  242:           title: "Complex conditions need confirmation",
+  243:           content:
+  244:             "For mixed solvents, high concentration reagents, long-term immersion or high-temperature applications, detailed media information and sample testing are recommended before final selection.",
+  245:         },
+  246:       ],
+  247:     },
+  248:     {
+  249:       id: "ivd-fluidic-system-selection-parameters",
+  250:       slug: "ivd-fluidic-system-selection-parameters",
+  251:       category: "applications",
+  252:       title: "Key Parameters for Fluidic System Selection in IVD Instruments",
+  253:       summary:
+  254:         "IVD fluidic systems require accuracy, stability, cleanliness, material compatibility and maintainability. Individual component selection affects the whole system.",
+  255:       date: "2026-05-31",
+  256:       coverImage: defaultCoverImage,
+  257:       content: [
+  258:         {
+  259:           title: "A fluidic system depends on multiple components",
+  260:           content:
+  261:             "An IVD fluidic system usually includes pumps, valves, tubing, fittings, needles and sensors. These components must work together to support aspiration, dispensing, washing, reaction and waste handling.",
+  262:         },
+  263:         {
+  264:           title: "Parameters and supply capability",
+  265:           content:
+  266:             "Common concerns include dispensing accuracy, repeatability, material compatibility, bubble control, dead volume, residue, interface consistency and lifetime. For mass-production instruments, product consistency and stable supply are also important.",
+  267:         },
+  268:       ],
+  269:     },
+  270:     {
+  271:       id: "pressure-flow-material-compatibility",
+  272:       slug: "pressure-flow-material-compatibility",
+  273:       category: "applications",
+  274:       title: "Understanding Pressure, Flow Rate and Material Compatibility",
+  275:       summary:
+  276:         "Pressure, flow rate and material compatibility are three core factors in fluidic system design and should be evaluated together.",
+  277:       date: "2026-05-30",
+  278:       coverImage: defaultCoverImage,
+  279:       content: [
+  280:         {
+  281:           title: "Three factors should be evaluated together",
+  282:           content:
+  283:             "Pressure defines the operating range, flow rate affects transfer efficiency and response, and material compatibility determines long-term stability when components contact the fluid.",
+  284:         },
+  285:         {
+  286:           title: "System selection is not about maximizing one parameter",
+  287:           content:
+  288:             "Higher flow can introduce pressure fluctuation, which increases requirements for fitting sealing, tubing strength and pump-valve stability. If the media is corrosive, all wetted materials must also be confirmed.",
+  289:         },
+  290:       ],
+  291:     },
+  292:     {
+  293:       id: "why-application-context-matters",
+  294:       slug: "why-application-context-matters",
+  295:       category: "applications",
+  296:       title: "Why Application Context Matters in Microfluidic Product Selection",
+  297:       summary:
+  298:         "The same product may perform differently in different applications. Selection should consider media, pressure, accuracy, space and maintenance requirements.",
+  299:       date: "2026-05-29",
+  300:       coverImage: defaultCoverImage,
+  301:       content: [
+  302:         {
+  303:           title: "Different applications have different requirements",
+  304:           content:
+  305:             "Microfluidic products are used in IVD, life sciences, environmental monitoring, analytical instruments and laboratory automation. IVD systems may focus on long-term stability, while analytical instruments may focus more on material compatibility and low residue.",
+  306:         },
+  307:         {
+  308:           title: "More complete information improves selection accuracy",
+  309:           content:
+  310:             "When submitting selection requirements, customers are encouraged to provide media, pressure range, flow range, connection method, installation space and target application.",
+  311:         },
+  312:       ],
+  313:     },
+  314:     {
+  315:       id: "fitting-replacement-by-drawings-or-samples",
+  316:       slug: "fitting-replacement-by-drawings-or-samples",
+  317:       category: "fittings-tubing",
+  318:       title: "How to Select Replacement Fittings Based on Drawings or Samples",
+  319:       summary:
+  320:         "Replacement selection requires more than external dimensions. Interface specification, sealing structure, material, pressure and application conditions must be confirmed.",
+  321:       date: "2026-05-28",
+  322:       coverImage: defaultCoverImage,
+  323:       content: [
+  324:         {
+  325:           title: "Replacement selection is not only about appearance",
+  326:           content:
+  327:             "In maintenance, localization or supply chain optimization, customers often need replacement fittings based on existing samples or drawings. Dimensions, thread type, tubing size, sealing structure, wetted material and pressure should all be checked.",
+  328:         },
+  329:         {
+  330:           title: "Drawings, samples and application conditions are helpful",
+  331:           content:
+  332:             "If only a sample is available, clear photos, key dimensions, tubing and media information are recommended. If drawings are available, interface dimensions, tolerance requirements and installation conditions should be provided.",
+  333:         },
+  334:       ],
+  335:     },
+  336:   ],
+  337: 
+  338:   bottomBanner: {
+  339:     title: "Need technical support for product selection?",
+  340:     description:
+  341:       "Share your media, pressure range, tubing size, application conditions or drawings with FOREACH for product matching and technical confirmation.",
+  342:     actions: [
+  343:       {
+  344:         label: "Contact Us",
+  345:         href: "/contact",
+  346:       },
+  347:     ],
+  348:   },
+  349: };
+
+============================================================
+三、TechnicalArticleDetail.tsx
+============================================================
+
+    1: /* =========================================================
+    2:    TechnicalArticleDetail.tsx
+    3:    恒永达官网｜技术文章详情页适配组件
+    4: 
+    5:    说明：
+    6:    1. 技术文章仍然保留自己的栏目和 URL
+    7:    2. 打开后的详情页直接复用新闻中心 NewsArticleClient
+    8:    3. 不再维护独立的技术文章详情页样式
+    9:    4. 面包屑只显示栏目层级，不显示完整文章标题
+   10: ========================================================= */
+   11: 
+   12: import type { ComponentType } from "react";
+   13: 
+   14: import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
+   15: import NewsArticleClient from "@/components/resources/news/NewsArticleClient";
+   16: import CvKvMicrofluidicsArticle from "@/components/resources/technical-articles/articles/CvKvMicrofluidicsArticle";
+   17: 
+   18: import type {
+   19:   TechnicalArticleItem,
+   20:   TechnicalArticlesPageData,
+   21: } from "@/data/resources/technical-articles/technical-articles.types";
+   22: 
+   23: /* =========================================================
+   24:    支持的语言类型
+   25: 
+   26:    当前先处理中文详情路由，
+   27:    同时保留其他语言组件兼容能力。
+   28: ========================================================= */
+   29: 
+   30: type SupportedLocale =
+   31:   | "zh-CN"
+   32:   | "en"
+   33:   | "es"
+   34:   | "fr"
+   35:   | "ko"
+   36:   | "ru";
+   37: 
+   38: /* =========================================================
+   39:    上一篇 / 下一篇数据类型
+   40: ========================================================= */
+   41: 
+   42: export type TechnicalArticlePagerItem = {
+   43:   title: string;
+   44:   href: string;
+   45:   date?: string;
+   46: };
+   47: 
+   48: /* =========================================================
+   49:    组件 Props
+   50: ========================================================= */
+   51: 
+   52: interface TechnicalArticleDetailProps {
+   53:   pageData: TechnicalArticlesPageData;
+   54:   article: TechnicalArticleItem;
+   55:   previousArticle?: TechnicalArticlePagerItem | null;
+   56:   nextArticle?: TechnicalArticlePagerItem | null;
+   57: }
+   58: 
+   59: /* =========================================================
+   60:    公共面包屑兼容类型
+   61: ========================================================= */
+   62: 
+   63: type SharedComponentProps =
+   64:   Record<string, unknown>;
+   65: 
+   66: const BreadcrumbComponent =
+   67:   SiteBreadcrumb as ComponentType<SharedComponentProps>;
+   68: 
+   69: /* =========================================================
+   70:    语言处理
+   71: ========================================================= */
+   72: 
+   73: function normalizeLocale(
+   74:   locale: string
+   75: ): SupportedLocale {
+   76:   if (
+   77:     locale === "en" ||
+   78:     locale === "es" ||
+   79:     locale === "fr" ||
+   80:     locale === "ko" ||
+   81:     locale === "ru"
+   82:   ) {
+   83:     return locale;
+   84:   }
+   85: 
+   86:   return "zh-CN";
+   87: }
+   88: 
+   89: /* =========================================================
+   90:    获取技术文章列表地址
+   91: ========================================================= */
+   92: 
+   93: function getArticleListHref(
+   94:   locale: SupportedLocale
+   95: ) {
+   96:   if (locale === "zh-CN") {
+   97:     return "/resources/technical-articles";
+   98:   }
+   99: 
+  100:   return `/${locale}/resources/technical-articles`;
+  101: }
+  102: 
+  103: /* =========================================================
+  104:    获取返回按钮文案
+  105: ========================================================= */
+  106: 
+  107: function getBackText(
+  108:   locale: SupportedLocale
+  109: ) {
+  110:   if (locale === "en") {
+  111:     return "Back to Technical Articles";
+  112:   }
+  113: 
+  114:   if (locale === "es") {
+  115:     return "Volver a los artículos técnicos";
+  116:   }
+  117: 
+  118:   if (locale === "fr") {
+  119:     return "Retour aux articles techniques";
+  120:   }
+  121: 
+  122:   if (locale === "ko") {
+  123:     return "기술 문서 목록으로 돌아가기";
+  124:   }
+  125: 
+  126:   if (locale === "ru") {
+  127:     return "Назад к техническим статьям";
+  128:   }
+  129: 
+  130:   return "返回";
+  131: }
+  132: 
+  133: /* =========================================================
+  134:    TechnicalArticleDetail
+  135: ========================================================= */
+  136: 
+  137: export default function TechnicalArticleDetail({
+  138:   pageData,
+  139:   article,
+  140:   previousArticle,
+  141:   nextArticle,
+  142: }: TechnicalArticleDetailProps) {
+  143:   const locale =
+  144:     normalizeLocale(pageData.locale);
+  145: 
+  146:   const listHref =
+  147:     getArticleListHref(locale);
+  148: 
+  149:   /* -------------------------------------------------------
+  150:      面包屑只保留：
+  151:      首页 / 资源中心 / 技术文章
+  152: 
+  153:      不再把文章完整标题放进面包屑。
+  154:   ------------------------------------------------------- */
+  155: 
+  156:   const breadcrumbItems =
+  157:     pageData.breadcrumbs.map(
+  158:       (item, index) => {
+  159:         const isLastItem =
+  160:           index ===
+  161:           pageData.breadcrumbs.length - 1;
+  162: 
+  163:         if (isLastItem) {
+  164:           return {
+  165:             ...item,
+  166:             href: listHref,
+  167:           };
+  168:         }
+  169: 
+  170:         return item;
+  171:       }
+  172:     );
+  173: 
+  174:   const breadcrumbData = {
+  175:     items: breadcrumbItems,
+  176:     breadcrumbs: breadcrumbItems,
+  177:     breadcrumbItems,
+  178:   };
+  179: 
+  180:   /* -------------------------------------------------------
+  181:      将技术文章数据转换为新闻详情组件需要的格式
+  182:   ------------------------------------------------------- */
+  183: 
+  184:   const adaptedArticle = {
+  185:     category: article.category,
+  186:     title: article.title,
+  187:     date: article.date,
+  188:     summary: article.summary,
+  189:     coverImage: article.coverImage,
+  190:     coverAlt: article.title,
+  191: 
+  192:     content: article.content.map(
+  193:       (block) => ({
+  194:         title: block.title,
+  195:         content: block.content,
+  196:       })
+  197:     ),
+  198:   };
+  199: 
+  200:   /* -------------------------------------------------------
+  201:      新闻详情组件页面配置
+  202: 
+  203:      底部 CTA 继续使用技术文章页面自己的文案，
+  204:      返回地址和返回文字改为技术文章栏目。
+  205:   ------------------------------------------------------- */
+  206: 
+  207:   const adaptedPageData = {
+  208:     listHref,
+  209:     backText: getBackText(locale),
+  210:     bottomBanner: pageData.bottomBanner,
+  211:   };
+  212: 
+  213:   const articleBody =
+  214:     article.slug === "cv-kv-correction-for-microfluidics"
+  215:       ? <CvKvMicrofluidicsArticle />
+  216:       : null;
+  217:   return (
+  218:     <div className="newsArticleDetailPage">
+  219:       {/* 面包屑结构与新闻详情页一致 */}
+  220:       <div className="newsArticleBreadcrumbShell">
+  221:         <BreadcrumbComponent
+  222:           {...breadcrumbData}
+  223:         />
+  224:       </div>
+  225: 
+  226:       {/* 主体直接复用新闻详情组件 */}
+  227:       <NewsArticleClient
+  228:         locale={locale}
+  229:         article={adaptedArticle}
+  230:         pageData={adaptedPageData}
+  231:         previousArticle={previousArticle}
+  232:         nextArticle={nextArticle}>
+  233:         {articleBody}
+  234:       </NewsArticleClient>
+  235:     </div>
+  236:   );
+  237: }
+
+============================================================
+四、CvKvMicrofluidicsArticle.tsx
+============================================================
+
+    1: import styles from "../../news/NewsArticleClient.module.css";
+    2: 
+    3: const PIPE_REFERENCE_ROWS = [
+    4:   {
+    5:     diameter: "0.1 mm",
+    6:     reynolds: "200",
+    7:     friction: "0.320",
+    8:     assessment: "微流控极限，摩擦很大，计算结果偏安全",
+    9:   },
+   10:   {
+   11:     diameter: "0.5 mm",
+   12:     reynolds: "1100",
+   13:     friction: "0.058",
+   14:     assessment: "典型微通道标定工况",
+   15:   },
+   16:   {
+   17:     diameter: "1.0 mm",
+   18:     reynolds: "2700",
+   19:     friction: "0.029",
+   20:     assessment: "刚脱离层流区",
+   21:   },
+   22:   {
+   23:     diameter: "2.0 mm",
+   24:     reynolds: "8400",
+   25:     friction: "0.024",
+   26:     assessment: "由过渡区逐步进入紊流",
+   27:   },
+   28:   {
+   29:     diameter: "10.0 mm",
+   30:     reynolds: "78000",
+   31:     friction: "0.019",
+   32:     assessment: "接近完全湍流工况",
+   33:   },
+   34: ];
+   35: 
+   36: const ENGINEERING_RULES = [
+   37:   {
+   38:     title: "低雷诺数工况不能直接使用平方律",
+   39:     description:
+   40:       "当流动处于层流或过渡区时，阻力系数会随雷诺数变化，必须进行修正。",
+   41:   },
+   42:   {
+   43:     title: "光滑微通道不能套用大型工业管道经验值",
+   44:     description:
+   45:       "毫米级及更小通道的实际标定雷诺数，与大型工业管道存在明显差异。",
+   46:   },
+   47:   {
+   48:     title: "过渡区不宜使用简单迭代",
+   49:     description:
+   50:       "当雷诺数位于约 2000～4000 区间时，摩擦因子可能出现非单调变化，应使用更稳定的求解方法。",
+   51:   },
+   52:   {
+   53:     title: "局部损失必须符合真实几何边界",
+   54:     description:
+   55:       "等径直管连接不能机械加入大容器入口或出口的局部损失系数。",
+   56:   },
+   57:   {
+   58:     title: "外部管路损失不能计入元件本征 Cv/Kv",
+   59:     description:
+   60:       "测试时应扣除外部管路、接头和沿程摩擦造成的附加压降。",
+   61:   },
+   62: ];
+   63: 
+   64: const PYTHON_CODE = [
+   65:   "import numpy as np",
+   66:   "",
+   67:   "def churchill_f(Re, eps_d):",
+   68:   "    # Churchill 1977 统一摩擦因子公式",
+   69:   "    Re = max(Re, 1e-12)",
+   70:   "    A = (2.457 * np.log(",
+   71:   "        1.0 / ((7.0 / Re) ** 0.9 + 0.27 * eps_d)",
+   72:   "    )) ** 16",
+   73:   "    B = (37530.0 / Re) ** 16",
+   74:   "    return 8.0 * (",
+   75:   "        (8.0 / Re) ** 12 +",
+   76:   "        1.0 / (A + B) ** 1.5",
+   77:   "    ) ** (1.0 / 12.0)",
+   78:   "",
+   79:   "def v_cal_max(",
+   80:   "    d_mm,",
+   81:   "    v_micro=2.0,",
+   82:   "    v_macro=8.0,",
+   83:   "    d_c=3.0,",
+   84:   "    n=4,",
+   85:   "):",
+   86:   "    return v_macro + (v_micro - v_macro) / (",
+   87:   "        1.0 + (d_mm / d_c) ** n",
+   88:   "    ) ** 0.25",
+   89:   "",
+   90:   "def pipe_FR(",
+   91:   "    Re,",
+   92:   "    d_m,",
+   93:   "    rho,",
+   94:   "    mu,",
+   95:   "    eps_d,",
+   96:   "    L_over_d,",
+   97:   "    zeta_local=0.0,",
+   98:   "):",
+   99:   "    if eps_d >= 0.001:",
+  100:   "        f0 = churchill_f(1e9, eps_d)",
+  101:   "    else:",
+  102:   "        d_mm = d_m * 1000.0",
+  103:   "        v_max = v_cal_max(d_mm)",
+  104:   "        Re_cal = rho * v_max * d_m / mu",
+  105:   "        f0 = churchill_f(Re_cal, eps_d)",
+  106:   "",
+  107:   "    f_re = churchill_f(Re, eps_d)",
+  108:   "    K0 = f0 * L_over_d + zeta_local",
+  109:   "    K_re = f_re * L_over_d + zeta_local",
+  110:   "",
+  111:   "    return np.sqrt(K0 / K_re)",
+  112:   "",
+  113:   "def orifice_FR(Re, Re_c=30):",
+  114:   "    if Re < 0.01:",
+  115:   "        return np.sqrt(Re / Re_c)",
+  116:   "",
+  117:   "    return 1.0 / np.sqrt(1.0 + Re_c / Re)",
+  118: ].join("\n");
+  119: 
+  120: export default function CvKvMicrofluidicsArticle() {
+  121:   return (
+  122:     <>
+  123:       <article className={styles.contentBlock}>
+  124:         <h2>为什么传统 Cv/Kv 计算会在微流控中失真</h2>
+  125: 
+  126:         <p>
+  127:           在 IVD、分析仪器、实验室自动化和精密液路系统中，
+  128:           流体通常需要经过微型阀、微孔、毛细管和其他节流元件。
+  129:           Cv 或 Kv 是描述这些元件流通能力的重要参数。
+  130:         </p>
+  131: 
+  132:         <p>
+  133:           传统工业计算通常建立在充分发展湍流和阻力平方区假设上。
+  134:           在这一条件下，阻力系数近似保持不变，
+  135:           压降与流量的平方成正比。
+  136:         </p>
+  137: 
+  138:         <p>
+  139:           但微流控系统常见通径只有 0.1～0.5 mm，
+  140:           工作雷诺数通常处于 10～10⁴。
+  141:           流动可能位于层流区、过渡区或水力光滑紊流区，
+  142:           直接使用传统平方律可能明显低估实际压降。
+  143:         </p>
+  144: 
+  145:         <aside className={styles.technicalNotice}>
+  146:           微流控中的关键问题不是公式本身错误，
+  147:           而是实际工况已经超出了公式原本的适用边界。
+  148:         </aside>
+  149:       </article>
+  150: 
+  151:       <article className={styles.contentBlock}>
+  152:         <h2>工业经典算法的底层假设</h2>
+  153: 
+  154:         <p>
+  155:           传统图算因子法，本质上是把压差开方和介质比重修正
+  156:           转换为图表查询。还原后仍然是标准液体流量系数关系。
+  157:         </p>
+  158: 
+  159:         <div className={styles.pagerGrid}>
+  160:           <div className={styles.pagerCard}>
+  161:             <span>图算关系</span>
+  162:             <strong>Kv = Q ÷（Fgm × Fsg）</strong>
+  163:             <em>流量除以压差因子和比重因子。</em>
+  164:           </div>
+  165: 
+  166:           <div className={styles.pagerCard}>
+  167:             <span>压差因子</span>
+  168:             <strong>Fgm = √Δp</strong>
+  169:             <em>适用于以 m³/h 表示流量的图算关系。</em>
+  170:           </div>
+  171: 
+  172:           <div className={styles.pagerCard}>
+  173:             <span>比重因子</span>
+  174:             <strong>Fsg = 1 ÷ √SG</strong>
+  175:             <em>SG 表示介质相对密度。</em>
+  176:           </div>
+  177: 
+  178:           <div className={styles.pagerCard}>
+  179:             <span>还原公式</span>
+  180:             <strong>Kv = Q × √（SG ÷ Δp）</strong>
+  181:             <em>核心前提仍然是 Δp 与 Q² 成正比。</em>
+  182:           </div>
+  183:         </div>
+  184: 
+  185:         <p>
+  186:           经典手册本身已经给出了适用边界。
+  187:           当液体粘度高于 300 SSU，约等于 9°E 时，
+  188:           标称 Cv/Kv 需要重新调整。
+  189:           气体计算也通常通过临界压降规则限制平方律的使用范围。
+  190:         </p>
+  191:       </article>
+  192: 
+  193:       <article className={styles.contentBlock}>
+  194:         <h2>雷诺修正系数 Fᵣ</h2>
+  195: 
+  196:         <p>
+  197:           为描述低雷诺数下流通能力的衰减，
+  198:           可以引入雷诺修正系数 Fᵣ，
+  199:           将厂家标称流量系数换算为当前工况下的实际流量系数。
+  200:         </p>
+  201: 
+  202:         <div className={styles.pagerGrid}>
+  203:           <div className={styles.pagerCard}>
+  204:             <span>实际流量系数</span>
+  205:             <strong>Cv（Re）= Cv₀ × Fᵣ（Re）</strong>
+  206:             <em>Fᵣ 小于 1 时，实际流通能力低于标定状态。</em>
+  207:           </div>
+  208: 
+  209:           <div className={styles.pagerCard}>
+  210:             <span>实际压降</span>
+  211:             <strong>ΔPactual = ΔPcalc ÷ Fᵣ²</strong>
+  212:             <em>修正系数下降后，实际压降可能成倍增加。</em>
+  213:           </div>
+  214: 
+  215:           <div className={styles.pagerCard}>
+  216:             <span>本源定义</span>
+  217:             <strong>Fᵣ（Re）= √［K₀ ÷ K（Re）］</strong>
+  218:             <em>K₀ 为标定阻力系数，K（Re）为当前工况阻力系数。</em>
+  219:           </div>
+  220:         </div>
+  221:       </article>
+  222: 
+  223:       <article className={styles.contentBlock}>
+  224:         <h2>长微通道与毛细管：Churchill 法</h2>
+  225: 
+  226:         <p>
+  227:           当流道长径比 L/d 较大时，沿程摩擦通常是主要阻力来源。
+  228:           Churchill 公式可以用同一个连续表达式覆盖层流、
+  229:           过渡区和紊流，避免采用简单的人工分段。
+  230:         </p>
+  231: 
+  232:         <div className={styles.pagerGrid}>
+  233:           <div className={styles.pagerCard}>
+  234:             <span>长通道修正</span>
+  235:             <strong>
+  236:               Fᵣ = √［（f₀·L/d + ζlocal）÷
+  237:               （f（Re）·L/d + ζlocal）］
+  238:             </strong>
+  239:             <em>
+  240:               f₀ 为标定工况摩擦因子，f（Re）为实际工况摩擦因子。
+  241:             </em>
+  242:           </div>
+  243:         </div>
+  244: 
+  245:         <p>
+  246:           对粗糙管，可以根据高雷诺数极限确定基准摩擦因子。
+  247:           对实验室常见的光滑微通道，
+  248:           不应直接套用大型工业管道的高雷诺数极限值，
+  249:           而应结合测试台实际可达到的标定流速和雷诺数确定 f₀。
+  250:         </p>
+  251: 
+  252:         <div className={styles.technicalTableWrap}>
+  253:           <table className={styles.technicalTable}>
+  254:             <thead>
+  255:               <tr>
+  256:                 <th>管径</th>
+  257:                 <th>物理可及 Recal</th>
+  258:                 <th>对应 f₀</th>
+  259:                 <th>工程评估</th>
+  260:               </tr>
+  261:             </thead>
+  262: 
+  263:             <tbody>
+  264:               {PIPE_REFERENCE_ROWS.map((row) => (
+  265:                 <tr key={row.diameter}>
+  266:                   <td>{row.diameter}</td>
+  267:                   <td>{row.reynolds}</td>
+  268:                   <td>{row.friction}</td>
+  269:                   <td>{row.assessment}</td>
+  270:                 </tr>
+  271:               ))}
+  272:             </tbody>
+  273:           </table>
+  274:         </div>
+  275: 
+  276:         <aside className={styles.technicalNotice}>
+  277:           对 0.1 mm 光滑微通道错误采用约 0.018 的高雷诺数
+  278:           摩擦因子时，原稿计算显示阻力可能被低估约 18 倍。
+  279:         </aside>
+  280:       </article>
+  281: 
+  282:       <article className={styles.contentBlock}>
+  283:         <h2>薄壁小孔与短孔：局部阻力修正</h2>
+  284: 
+  285:         <p>
+  286:           对薄壁小孔、短孔和其他局部阻力主导的节流元件，
+  287:           可以根据流量系数与雷诺数的关系建立连续修正。
+  288:         </p>
+  289: 
+  290:         <div className={styles.pagerGrid}>
+  291:           <div className={styles.pagerCard}>
+  292:             <span>小孔修正</span>
+  293:             <strong>
+  294:               Fᵣ（Re）= 1 ÷ √（1 + Rec ÷ Re）
+  295:             </strong>
+  296:             <em>
+  297:               锐边薄壁小孔可以使用 Rec = 30 作为工程起点。
+  298:             </em>
+  299:           </div>
+  300: 
+  301:           <div className={styles.pagerCard}>
+  302:             <span>几何影响</span>
+  303:             <strong>倒角和圆角会改变临界雷诺数</strong>
+  304:             <em>
+  305:               圆角孔的 Rec 可能提高至约 200～400，
+  306:               最终参数需要结合具体结构和测试数据。
+  307:             </em>
+  308:           </div>
+  309:         </div>
+  310:       </article>
+  311: 
+  312:       <article className={styles.contentBlock}>
+  313:         <h2>工程设计中的五项红线</h2>
+  314: 
+  315:         <ol className={styles.technicalRuleList}>
+  316:           {ENGINEERING_RULES.map((rule) => (
+  317:             <li key={rule.title}>
+  318:               <strong>{rule.title}</strong>
+  319:               <p>{rule.description}</p>
+  320:             </li>
+  321:           ))}
+  322:         </ol>
+  323:       </article>
+  324: 
+  325:       <article className={styles.contentBlock}>
+  326:         <h2>Python 核心计算实现</h2>
+  327: 
+  328:         <p>
+  329:           以下代码保留了原稿中的三个核心部分：
+  330:           Churchill 摩擦因子、光滑微通道标定流速包络、
+  331:           长通道与小孔的雷诺修正。
+  332:         </p>
+  333: 
+  334:         <pre className={styles.technicalCode}>
+  335:           <code>{PYTHON_CODE}</code>
+  336:         </pre>
+  337: 
+  338:         <p>
+  339:           代码中的临界雷诺数、表面粗糙度、局部损失系数和
+  340:           标定流速仍需根据实际产品结构、介质条件及测试结果调整。
+  341:         </p>
+  342:       </article>
+  343: 
+  344:       <article className={styles.contentBlock}>
+  345:         <h2>结语</h2>
+  346: 
+  347:         <p>
+  348:           传统 Cv/Kv 图表与公式在宏观、高雷诺数工况下，
+  349:           仍然是高效的工程估算工具。
+  350:           但在微小通径、低流速和精密节流场景中，
+  351:           设计人员需要先判断流态和公式适用边界。
+  352:         </p>
+  353: 
+  354:         <p>
+  355:           当系统处于低雷诺数或过渡区时，
+  356:           应回到实际流道结构、摩擦因子和局部阻力，
+  357:           对标称流量系数进行修正，并结合真实工况完成验证。
+  358:         </p>
+  359: 
+  360:         <p>
+  361:           对于微流体系统而言，准确的流量与压降判断，
+  362:           最终要回到真实工况、元件结构和系统验证中。
+  363:           恒永达在泵、阀、接头、管材及传感器等微流体关键部件的
+  364:           研发与应用中，也将持续关注这类工程边界问题，
+  365:           为精密液路系统提供更稳定、可靠的产品与技术支持。
+  366:         </p>
+  367:       </article>
+  368:     </>
+  369:   );
+  370: }

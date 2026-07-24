@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
+import {
+  connectPublishedFittingProduct,
+} from "@/data/products/selection/connectPublishedFittingProduct";
 import detailsJson from "@/data/products/generated/fittings/bulkhead-barbed-fittings/detail/index.json";
 
 import "../../../products.css";
@@ -24,7 +27,12 @@ type PageProps = {
   params: Promise<{ slug: string }>;
 };
 
-const details = detailsJson as DetailRecord[];
+const details =
+  (detailsJson as DetailRecord[]).flatMap((detail) => {
+    const connected =
+      connectPublishedFittingProduct(detail);
+    return connected ? [connected] : [];
+  });
 
 const ProductDetailView =
   ProductDetailClient as unknown as ComponentType<{ data: any }>;

@@ -17,6 +17,9 @@ import {
 import { getProductTypeIntroByIds } from "@/data/products/selection/product-type-intro";
 import { getProductFilterOptions } from "@/data/products/selection/filter-rules/product-filter-rules.index";
 import {
+  isPublishedFittingProduct,
+} from "@/data/products/selection/fitting-publication.generated";
+import {
   selectionFilterLabels as baseSelectionFilterLabels,
   selectionProducts as baseSelectionProducts,
   selectionTaxonomyItems as baseSelectionTaxonomyItems,
@@ -171,6 +174,10 @@ const selectionProducts = [
         return item.productId === product.productId;
       })
     );
+  }
+
+  if (!isPublishedFittingProduct(product)) {
+    return false;
   }
 
   const hasHiddenFittingRecord =

@@ -19,6 +19,10 @@ import { fittingReplacementQuickConnectQ20ZhData } from "@/data/resources/fittin
 
 import { getFittingReplacementQuickConnectQ20DetailIntl } from "@/data/resources/fitting-replacement/fittings/quick-connect/q20/q20.detail.intl";
 
+import {
+  publishedFittingReplacementProducts,
+} from "@/services/resources/fitting-replacement/getPublishedFittingReplacementProducts";
+
 import type {
   FittingModelRule,
   FittingReplacementProduct,
@@ -76,20 +80,53 @@ interface FittingReplacementStaticDataSource {
    hardTube  = fittings / hard-tube
    barbed    = fittings / barbed
 ========================================================= */
+const publishedQ20ReplacementProducts =
+  publishedFittingReplacementProducts
+    .filter(
+      (product) =>
+        normalizeValue(product.productSeries) === "Q20"
+    )
+    .map((product) => {
+      const originalProduct =
+        fittingReplacementQuickConnectQ20ZhData.products.find(
+          (item) =>
+            normalizeValue(item.productCode) ===
+              normalizeValue(product.productCode) &&
+            normalizeValue(item.foreachModel) ===
+              normalizeValue(product.foreachModel)
+        );
+
+      return {
+        ...product,
+        packageText:
+          originalProduct?.packageText ?? product.packageText,
+        note:
+          originalProduct?.note ?? product.note,
+        drawingPdfPath:
+          originalProduct?.drawingPdfPath ??
+          product.drawingPdfPath,
+      };
+    });
+
+const publishedQ20ReplacementPageData = {
+  ...fittingReplacementQuickConnectQ20ZhData,
+  products: publishedQ20ReplacementProducts,
+};
+
 const FITTING_REPLACEMENT_STATIC_DATA_SOURCE_MAP: Record<
   FittingReplacementSeriesKey,
   FittingReplacementStaticDataSource
 > = {
   q20: {
-    pageData: fittingReplacementQuickConnectQ20ZhData,
+    pageData: publishedQ20ReplacementPageData,
   },
 };
 
 /* =========================================================
    统一处理编码
 ========================================================= */
-function normalizeValue(value: string) {
-  return value.trim().toUpperCase();
+function normalizeValue(value: unknown) {
+  return String(value ?? "").trim().toUpperCase();
 }
 
 /* =========================================================

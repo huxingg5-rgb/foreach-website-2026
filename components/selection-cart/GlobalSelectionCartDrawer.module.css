@@ -88,6 +88,29 @@
   color: #173368;
 }
 
+/*
+ * 触摸设备会在点击后保留 :hover 状态。
+ * Top 默认保持白底，仅在手指按下时显示深蓝点击反馈。
+ */
+@media (hover: none), (pointer: coarse) {
+  .floatingActions button:first-child:hover {
+    transform: none;
+    border-color: rgba(23, 51, 104, 0.22);
+    background: rgba(255, 255, 255, 0.94);
+    color: rgba(23, 51, 104, 0.82);
+    box-shadow: 0 8px 22px rgba(23, 51, 104, 0.08);
+  }
+
+  .floatingActions button:first-child:active {
+    transform: translateY(1px) scale(0.96);
+    border-color: #173368;
+    background: #173368;
+    color: #09e9b4;
+    box-shadow: 0 8px 18px rgba(23, 51, 104, 0.2);
+    transition-duration: 0.08s;
+  }
+}
+
 .floatingActions span {
   position: absolute;
   top: -7px;
@@ -809,5 +832,78 @@
     grid-template-columns: minmax(0, 1fr);
     gap: 2px;
     align-items: start;
+  }
+}
+
+/*
+ * 触屏浏览器可能在松手后继续保留 :hover / :focus。
+ * 公共清单组件中的操作按钮仅在按住时显示反馈；
+ * 真正的图纸选中状态仍由 .drawingButton.active 保持。
+ */
+@media (hover: none), (pointer: coarse) {
+  .floatingActions button:first-child:hover:not(:active),
+  .floatingActions button:first-child:focus:not(:active),
+  .floatingActions button:first-child:focus-visible:not(:active) {
+    transform: none;
+    border-color: rgba(23, 51, 104, 0.22);
+    background: rgba(255, 255, 255, 0.94);
+    color: rgba(23, 51, 104, 0.82);
+    box-shadow: 0 8px 22px rgba(23, 51, 104, 0.08);
+    outline: none;
+  }
+
+  .floatingActions button:last-child:hover:not(:active),
+  .floatingActions button:last-child:focus:not(:active),
+  .floatingActions button:last-child:focus-visible:not(:active) {
+    transform: none;
+    border-color: #173368;
+    background: #173368;
+    color: #ffffff;
+    box-shadow: 0 12px 30px rgba(23, 51, 104, 0.12);
+    outline: none;
+  }
+
+  .floatingActions button:last-child:hover:not(:active) span,
+  .floatingActions button:last-child:focus:not(:active) span,
+  .floatingActions button:last-child:focus-visible:not(:active) span {
+    background: #09e9b4;
+    color: #173368;
+  }
+
+  .head > button:hover:not(:active),
+  .head > button:focus:not(:active),
+  .head > button:focus-visible:not(:active) {
+    border-color: rgba(255, 255, 255, 0.32);
+    background: transparent;
+    color: #ffffff;
+    outline: none;
+  }
+
+  .removeButton:hover:not(:active),
+  .removeButton:focus:not(:active),
+  .removeButton:focus-visible:not(:active),
+  .drawingButton:hover:not(:active):not(.active),
+  .drawingButton:focus:not(:active):not(.active),
+  .drawingButton:focus-visible:not(:active):not(.active),
+  .requestDrawingButton:hover:not(:active),
+  .requestDrawingButton:focus:not(:active),
+  .requestDrawingButton:focus-visible:not(:active),
+  .primaryButton:hover:not(:active),
+  .primaryButton:focus:not(:active),
+  .primaryButton:focus-visible:not(:active),
+  .secondaryButton:hover:not(:active),
+  .secondaryButton:focus:not(:active),
+  .secondaryButton:focus-visible:not(:active) {
+    transform: none;
+    border-color: rgba(23, 51, 104, 0.22);
+    background: #ffffff;
+    color: #173368;
+    outline: none;
+  }
+
+  .drawingButton.active {
+    border-color: #173368;
+    background: #173368;
+    color: #09e9b4;
   }
 }

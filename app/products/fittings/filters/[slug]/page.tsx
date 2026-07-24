@@ -11,6 +11,9 @@ import {
 } from "next/navigation";
 
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
+import {
+  connectPublishedFittingProduct,
+} from "@/data/products/selection/connectPublishedFittingProduct";
 import detailsJson from "@/data/products/generated/fittings/filters/detail/index.json";
 
 import "../../../products.css";
@@ -35,7 +38,11 @@ type PageProps = {
 };
 
 const details =
-  detailsJson as DetailRecord[];
+  (detailsJson as DetailRecord[]).flatMap((detail) => {
+    const connected =
+      connectPublishedFittingProduct(detail);
+    return connected ? [connected] : [];
+  });
 
 const ProductDetailView =
   ProductDetailClient as unknown as ComponentType<{

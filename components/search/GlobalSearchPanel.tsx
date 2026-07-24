@@ -5,6 +5,7 @@ import {
   type ReactNode,
   useEffect,
   useMemo,
+  useRef,
   useState,
 } from "react";
 import { createPortal } from "react-dom";
@@ -75,7 +76,12 @@ export function preloadGlobalSearchIndex():
   }
 
   searchItemsPromise = fetch(SEARCH_INDEX_URL, {
-    cache: "force-cache",
+    /*
+      搜索索引使用固定文件名，内容会随产品与资讯更新。
+      必须向服务器重新验证，避免浏览器长期复用旧链接、
+      旧图片字段和缺失的新内容。
+    */
+    cache: "no-cache",
   })
     .then((response) => {
       if (!response.ok) {
@@ -476,6 +482,9 @@ export default function GlobalSearchPanel({
       Partial<Record<SearchModule, number>>
     >({});
 
+  const mobileSearchInputRef =
+    useRef<HTMLInputElement | null>(null);
+
   useEffect(() => {
     if (cachedSearchItems) {
       setItems(cachedSearchItems);
@@ -601,6 +610,27 @@ export default function GlobalSearchPanel({
       document.body.classList.remove(
         "global-search-lock"
       );
+    };
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (
+      !isOpen ||
+      typeof window === "undefined" ||
+      !window.matchMedia("(max-width: 1000px)").matches
+    ) {
+      return;
+    }
+
+    const animationFrameId =
+      window.requestAnimationFrame(() => {
+        mobileSearchInputRef.current?.focus({
+          preventScroll: true,
+        });
+      });
+
+    return () => {
+      window.cancelAnimationFrame(animationFrameId);
     };
   }, [isOpen]);
 
@@ -735,57 +765,110 @@ export default function GlobalSearchPanel({
       }}
     >
       <div className="global-search-panel-inner">
-        <div className="global-search-panel-head">
-          <div>
-            <span>{isEnglish ? t("Site Search") : "全站搜索"}</span>
+        <div className="global-search-panel-toolbar">
+          <div className="global-search-panel-head">
+            <div>
+              <strong>
+                {isEnglish
+                  ? t("Site Search")
+                  : "全站搜索"}
+              </strong>
+            </div>
 
-            <strong>
-              {query.trim()
-                ? `“${query.trim()}”`
-                : isEnglish
-                  ? t("Search products and technical resources")
-                  : "搜索产品与技术资料"}
-            </strong>
+            <div className="global-search-panel-head-actions">
+              {query.trim() &&
+              !showLoading &&
+              !queryTooShort &&
+              loadState === "ready" ? (
+                <span>
+                  {isEnglish
+                    ? `${totalCount} ${t("results")}`
+                    : `共 ${totalCount} 条结果`}
+                </span>
+              ) : null}
+
+              <button
+                className="global-search-close"
+                type="button"
+                aria-label={
+                  isEnglish
+                    ? `${t("Close")} ${t("Site Search")}`
+                    : "关闭全站搜索"
+                }
+                onClick={onClose}
+              >
+                <svg
+                  className="global-search-close-icon"
+                  viewBox="0 0 20 20"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  focusable="false"
+                  aria-hidden="true"
+                >
+                  <path d="M5 5L15 15M15 5L5 15" />
+                </svg>
+              </button>
+            </div>
           </div>
 
-          <div className="global-search-panel-head-actions">
-            {query.trim() &&
-            !showLoading &&
-            !queryTooShort &&
-            loadState === "ready" ? (
-              <span>
-                {isEnglish
-                  ? `${totalCount} ${t("results")}`
-                  : `共 ${totalCount} 条结果`}
-              </span>
-            ) : null}
+          <form
+            className="global-search-mobile-form"
+            role="search"
+            onSubmit={(event) => {
+              event.preventDefault();
 
-            <button
-              className="global-search-close"
-              type="button"
+              const formData =
+                new FormData(event.currentTarget);
+
+              const nextQuery = String(
+                formData.get(
+                  "mobile-site-search"
+                ) ?? ""
+              ).trim();
+
+              onQueryChange(nextQuery);
+              mobileSearchInputRef.current?.blur();
+            }}
+          >
+            <span
+              className="site-search-icon global-search-mobile-icon"
+              aria-hidden="true"
+            />
+
+            <input
+              key={query}
+              ref={mobileSearchInputRef}
+              className="global-search-mobile-input"
+              type="search"
+              name="mobile-site-search"
+              defaultValue={query}
+              placeholder={
+                isEnglish
+                  ? t("Search products and technical resources")
+                  : "搜索产品、型号与技术资料"
+              }
               aria-label={
                 isEnglish
-                  ? `${t("Close")} ${t("Site Search")}`
-                  : "关闭全站搜索"
+                  ? t("Site Search")
+                  : "全站搜索"
               }
-              onClick={onClose}
+              autoComplete="off"
+              enterKeyHint="search"
+            />
+
+            <button
+              className="global-search-mobile-submit"
+              type="submit"
             >
-              <svg
-                className="global-search-close-icon"
-                viewBox="0 0 20 20"
-                width="18"
-                height="18"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.8"
-                strokeLinecap="round"
-                focusable="false"
-                aria-hidden="true"
-              >
-                <path d="M5 5L15 15M15 5L5 15" />
-              </svg>
+              {isEnglish
+                ? t("Search")
+                : "搜索"}
             </button>
-          </div>
+          </form>
         </div>
 
         {!query.trim() ? (

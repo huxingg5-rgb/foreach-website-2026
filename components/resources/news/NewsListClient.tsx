@@ -6,7 +6,7 @@
 
    说明：
    1. 展示公司新闻列表
-   2. 每页显示 9 条新闻：PC 端对应 3 列 × 3 排
+   2. 每页显示 6 条新闻：PC 端对应 3 列 × 2 排
    3. 切换分类或搜索关键词时自动回到第 1 页
 ========================================================= */
 
@@ -38,7 +38,7 @@ const BreadcrumbComponent =
 const SupportCtaComponent =
   ResourceSupportCta as ComponentType<SharedComponentProps>;
 
-const NEWS_PAGE_SIZE = 9;
+const NEWS_PAGE_SIZE = 6;
 
 const newsListUi: Record<string, {
   search: string;
@@ -129,12 +129,6 @@ export default function NewsListClient({ pageData }: NewsListClientProps) {
     setCurrentPage(nextPage);
   }
 
-  const pageSummaryText =
-    pageData.locale === "zh-CN"
-      ? `第 ${safeCurrentPage} / ${totalPages} 页，共 ${filteredArticles.length} 条`
-      : ui?.pageSummary(safeCurrentPage, totalPages, filteredArticles.length) ??
-        `Page ${safeCurrentPage} of ${totalPages}, ${filteredArticles.length} items`;
-
   return (
     <main className="newsPage">
       <section
@@ -208,7 +202,7 @@ export default function NewsListClient({ pageData }: NewsListClientProps) {
             </div>
 
             {totalPages > 1 ? (
-              <div
+              <nav
                 className="newsPagination"
                 aria-label={
                   pageData.locale === "zh-CN"
@@ -225,26 +219,9 @@ export default function NewsListClient({ pageData }: NewsListClientProps) {
                   {ui?.previous ?? (pageData.locale === "zh-CN" ? "上一页" : "Previous")}
                 </button>
 
-                <div className="newsPagination__numbers">
-                  {Array.from({ length: totalPages }, (_, index) => {
-                    const page = index + 1;
-
-                    return (
-                      <button
-                        key={page}
-                        type="button"
-                        className={
-                          page === safeCurrentPage
-                            ? "newsPagination__number isActive"
-                            : "newsPagination__number"
-                        }
-                        onClick={() => handlePageChange(page)}
-                      >
-                        {page}
-                      </button>
-                    );
-                  })}
-                </div>
+                <span className="newsPagination__status">
+                  {safeCurrentPage} / {totalPages}
+                </span>
 
                 <button
                   type="button"
@@ -254,11 +231,7 @@ export default function NewsListClient({ pageData }: NewsListClientProps) {
                 >
                   {ui?.next ?? (pageData.locale === "zh-CN" ? "下一页" : "Next")}
                 </button>
-
-                <span className="newsPagination__summary">
-                  {pageSummaryText}
-                </span>
-              </div>
+              </nav>
             ) : null}
           </>
         ) : (

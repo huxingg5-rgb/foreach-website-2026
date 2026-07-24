@@ -459,6 +459,42 @@
   color: #173368;
 }
 
+@media (hover: none), (pointer: coarse) {
+  .modalHead > button:hover:not([data-global-touch-pressed="true"]),
+  .modalHead > button:focus:not([data-global-touch-pressed="true"]) {
+    border-color: rgba(255, 255, 255, 0.32);
+    background: transparent;
+    color: #ffffff;
+  }
+
+  .emailInputGroup
+    button:hover:not(:disabled):not([data-global-touch-pressed="true"]),
+  .emailInputGroup
+    button:focus:not(:disabled):not([data-global-touch-pressed="true"]) {
+    border-color: #173368;
+    background: #ffffff;
+    color: #173368;
+  }
+
+  .submitButton:hover:not([data-global-touch-pressed="true"]),
+  .submitButton:focus:not([data-global-touch-pressed="true"]),
+  .successActions
+    button:hover:not([data-global-touch-pressed="true"]),
+  .successActions
+    button:focus:not([data-global-touch-pressed="true"]) {
+    border-color: #173368;
+    background: #173368;
+    color: #ffffff;
+  }
+
+  .backButton:hover:not([data-global-touch-pressed="true"]),
+  .backButton:focus:not([data-global-touch-pressed="true"]) {
+    border-color: rgba(23, 51, 104, 0.22);
+    background: #ffffff;
+    color: #173368;
+  }
+}
+
 /* =========================================================
    移动端
 ========================================================= */

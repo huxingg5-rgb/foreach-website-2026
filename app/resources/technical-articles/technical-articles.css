@@ -153,6 +153,12 @@
   font-weight: 400;
 }
 
+@media (max-width: 720px) {
+  .technicalArticlesSidebar__plus {
+    font-size: 20px;
+  }
+}
+
 /* =========================================================
    右侧卡片区域
 ========================================================= */
@@ -307,6 +313,67 @@
    详情页
 ========================================================= */
 
+/* =========================================================
+   技术文章列表分页
+   说明：
+   1. 每页 6 条，PC 端对应 3 列 × 2 排
+   2. 视觉与产品中心分页保持一致
+========================================================= */
+
+.technicalArticlesPagination {
+  width: 100%;
+  margin-top: 26px;
+  padding-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.technicalArticlesPagination__button {
+  min-width: 88px;
+  height: 38px;
+  padding: 0 16px;
+  border: 1px solid rgba(23, 51, 104, 0.18);
+  border-radius: 8px;
+  background: #ffffff;
+  color: #173368;
+  font-size: 13px;
+  font-weight: 850;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.technicalArticlesPagination__button:hover:not(:disabled),
+.technicalArticlesPagination__button:focus-visible:not(:disabled) {
+  border-color: #173368;
+  background: #173368;
+  color: #09e9b4;
+  outline: none;
+}
+
+.technicalArticlesPagination__button:disabled {
+  opacity: 0.42;
+  cursor: not-allowed;
+}
+
+.technicalArticlesPagination__status {
+  min-width: 58px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #173368;
+  font-size: 14px;
+  font-weight: 850;
+  line-height: 1;
+  white-space: nowrap;
+}
+
 .technicalArticleDetail {
   width: min(1200px, calc(100% - 64px));
   margin: 0 auto;
@@ -431,6 +498,25 @@
 }
 
 @media (max-width: 760px) {
+  .technicalArticlesPagination {
+    margin-top: 22px;
+    padding-bottom: 10px;
+    gap: 10px;
+  }
+
+  .technicalArticlesPagination__button {
+    min-width: 78px;
+    height: 36px;
+    padding: 0 12px;
+    border-radius: 8px;
+    font-size: 13px;
+  }
+
+  .technicalArticlesPagination__status {
+    min-width: 48px;
+    font-size: 14px;
+  }
+
   .technicalArticlesHero,
   .technicalArticlesHero__inner {
     height: 520px;

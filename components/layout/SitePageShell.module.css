@@ -31,4 +31,58 @@
     padding-top: 12px !important;
     padding-bottom: 12px !important;
   }
-} 
+}
+
+/* ===== FOREACH PRODUCT MOBILE BREADCRUMB START ===== */
+
+/*
+ * 产品中心及产品详情页手机端面包屑：
+ * - 保持单行；
+ * - 前两级完整显示；
+ * - 最后一级超出显示省略号；
+ * - 不改变现有上下间距和高度。
+ */
+@media (max-width: 900px) {
+  .shellBreadcrumb {
+    min-width: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .shellBreadcrumb > div {
+    display: flex !important;
+    width: calc(100% - 36px) !important;
+    min-width: 0 !important;
+    max-width: 1600px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    gap: 0 !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+  }
+
+  .shellBreadcrumb > div > span {
+    flex: 0 0 auto !important;
+    min-width: 0 !important;
+    white-space: nowrap !important;
+  }
+
+  .shellBreadcrumb > div > span:last-child {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+  }
+
+  .shellBreadcrumb > div > span:last-child > strong {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+}
+
+/* ===== FOREACH PRODUCT MOBILE BREADCRUMB END ===== */

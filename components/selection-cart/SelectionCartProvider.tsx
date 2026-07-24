@@ -25,6 +25,9 @@ import {
 import { usePathname } from "next/navigation";
 
 import { getLocaleFromPathname } from "@/lib/i18n";
+import {
+  isPublishedFittingProductCode,
+} from "@/data/products/selection/fitting-publication.generated";
 
 import type {
   SelectionCartItem,
@@ -177,6 +180,22 @@ function buildCartItemId(item: {
   return `${item.sourceType}:${item.productCode}`;
 }
 
+function isPublishedCartItem(item: {
+  sourceType: SelectionCartSourceType;
+  productCode: string;
+  detailHref?: string;
+}) {
+  const isFittingItem =
+    item.sourceType === "fitting-replacement" ||
+    String(item.detailHref ?? "").includes("/products/fittings/") ||
+    String(item.detailHref ?? "").includes("/fitting-replacement/");
+
+  return (
+    !isFittingItem ||
+    isPublishedFittingProductCode(item.productCode)
+  );
+}
+
 /* =========================================================
    兼容旧版接头清单数据
 
@@ -201,6 +220,9 @@ function normalizeLegacyFittingItems(rawItems: unknown): SelectionCartItem[] {
       };
 
       if (!raw.productCode || !raw.foreachModel) return null;
+      if (!isPublishedFittingProductCode(raw.productCode)) {
+        return null;
+      }
 
       const normalizedItem: SelectionCartItem = {
         id: buildCartItemId({
@@ -306,13 +328,15 @@ export function SelectionCartProvider({
       }
 
         setItems(
-          parsedGlobalCart.map((item) => {
-            return {
-              ...item,
-              quantity: Math.max(1, Number(item.quantity || 1)),
-              needDrawing: Boolean(item.needDrawing),
-            };
-          })
+          parsedGlobalCart
+            .filter(isPublishedCartItem)
+            .map((item) => {
+              return {
+                ...item,
+                quantity: Math.max(1, Number(item.quantity || 1)),
+                needDrawing: Boolean(item.needDrawing),
+              };
+            })
         );
 
         setHasMounted(true);
@@ -359,6 +383,10 @@ export function SelectionCartProvider({
   }
 
   function addItem(input: SelectionCartItemInput) {
+    if (!isPublishedCartItem(input)) {
+      return;
+    }
+
     const id =
       input.id ||
       buildCartItemId({

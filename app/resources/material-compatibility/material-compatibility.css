@@ -194,10 +194,8 @@
 ========================================================= */
 
 .material-compatibility-search {
-  width: 100vw;
+  width: 100%;
   margin: 24px 0 48px;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
 }
 /* =========================================================
    表格标题
@@ -423,4 +421,4 @@
     font-size: 15px;
     line-height: 1.7;
   }
-} 
+}
