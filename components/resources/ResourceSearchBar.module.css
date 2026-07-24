@@ -142,3 +142,23 @@
     gap: 8px;
   }
 }
+
+@media (hover: none), (pointer: coarse) {
+  .searchButton:hover,
+  .searchButton:focus-visible,
+  .searchButton:active {
+    border-color: #173368;
+    background: #173368;
+    color: #ffffff;
+    outline: none;
+  }
+
+  .historyButton:hover,
+  .historyButton:focus-visible,
+  .historyButton:active {
+    border-color: rgba(23, 51, 104, 0.16);
+    background: #ffffff;
+    color: #173368;
+    outline: none;
+  }
+}

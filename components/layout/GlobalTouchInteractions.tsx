@@ -17,6 +17,13 @@ const TOUCH_CONTROL_SELECTOR = [
   'a[class*="action" i]',
 ].join(",");
 
+const TOUCH_PRESS_EXCLUSION_SELECTOR = [
+  ".site-footer",
+  ".products-selection-page",
+  '[data-touch-feedback="neutral"]',
+  '[class*="backdrop" i]',
+].join(",");
+
 const TOUCH_PRESSED_STYLES = {
   background: "#09e9b4",
   "border-color": "#09e9b4",
@@ -94,6 +101,11 @@ export default function GlobalTouchInteractions() {
         return;
       }
 
+      if (control.closest(TOUCH_PRESS_EXCLUSION_SELECTOR)) {
+        control.blur();
+        return;
+      }
+
       pressedControl = control;
       savedInlineStyles.set(
         control,
@@ -143,9 +155,19 @@ export default function GlobalTouchInteractions() {
       }, 0);
     }
 
+    function handleTouchEnd() {
+      const control = pressedControl;
+
+      clearPressedControl();
+      control?.blur();
+    }
+
     document.addEventListener("pointerdown", handlePointerDown, true);
     document.addEventListener("pointerup", handlePointerEnd, true);
     document.addEventListener("pointercancel", handlePointerEnd, true);
+    document.addEventListener("touchend", handleTouchEnd, true);
+    document.addEventListener("touchcancel", handleTouchEnd, true);
+    window.addEventListener("blur", clearPressedControl);
 
     return () => {
       clearPressedControl();
@@ -153,6 +175,9 @@ export default function GlobalTouchInteractions() {
       document.removeEventListener("pointerdown", handlePointerDown, true);
       document.removeEventListener("pointerup", handlePointerEnd, true);
       document.removeEventListener("pointercancel", handlePointerEnd, true);
+      document.removeEventListener("touchend", handleTouchEnd, true);
+      document.removeEventListener("touchcancel", handleTouchEnd, true);
+      window.removeEventListener("blur", clearPressedControl);
     };
   }, []);
 

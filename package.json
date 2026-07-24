@@ -1,36 +1,37 @@
 {
-  "name": "foreach-website-2026",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint",
-    "products:build-data": "node ./scripts/products/build-product-selection-data.js",
-    "products:check-data": "node ./scripts/products/check-product-selection-data.js",
-    "products:update": "npm run products:build-data && npm run products:check-data",
-    "products:build-plunger-detail": "node ./scripts/products/build-plunger-pump-detail-data.js",
-    "build:pump-series-data": "node scripts/products/build-pump-series-data.js && node scripts/products/apply-pump-series-faq-scope.js && node scripts/products/fix-pump-series-image-assets.js && node scripts/products/fix-pump-series-selection-card-assets.js",
-    "generate:diaphragm-pumps": "node scripts/products/generate-diaphragm-pump-data.js"
-  },
-  "dependencies": {
-    "@google/model-viewer": "^4.3.1",
-    "@upstash/redis": "^1.38.0",
-    "next": "16.2.6",
-    "react": "19.2.4",
-    "react-dom": "19.2.4",
-    "xlsx": "^0.18.5"
-  },
-  "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.2.6",
-    "tailwindcss": "^4",
-    "tsx": "^4.22.4",
-    "typescript": "^5"
-  }
+    "name":  "foreach-website-2026",
+    "version":  "0.1.0",
+    "private":  true,
+    "scripts":  {
+                    "dev":  "next dev",
+                    "build":  "next build",
+                    "start":  "next start",
+                    "lint":  "eslint",
+                    "products:build-data":  "node ./scripts/products/build-product-selection-data.js",
+                    "products:check-data":  "node ./scripts/products/check-product-selection-data.js",
+                    "products:update":  "npm run products:build-data \u0026\u0026 npm run products:check-data",
+                    "products:build-plunger-detail":  "node ./scripts/products/build-plunger-pump-detail-data.js",
+                    "build:pump-series-data":  "node scripts/products/build-pump-series-data.js \u0026\u0026 node scripts/products/apply-pump-series-faq-scope.js \u0026\u0026 node scripts/products/fix-pump-series-image-assets.js \u0026\u0026 node scripts/products/fix-pump-series-selection-card-assets.js",
+                    "generate:diaphragm-pumps":  "node scripts/products/generate-diaphragm-pump-data.js",
+                    "build:cloudflare":  "node scripts/cloudflare/build-pages.mjs"
+                },
+    "dependencies":  {
+                         "@google/model-viewer":  "^4.3.1",
+                         "@upstash/redis":  "^1.38.0",
+                         "next":  "16.2.6",
+                         "react":  "19.2.4",
+                         "react-dom":  "19.2.4",
+                         "xlsx":  "^0.18.5"
+                     },
+    "devDependencies":  {
+                            "@tailwindcss/postcss":  "^4",
+                            "@types/node":  "^20",
+                            "@types/react":  "^19",
+                            "@types/react-dom":  "^19",
+                            "eslint":  "^9",
+                            "eslint-config-next":  "16.2.6",
+                            "tailwindcss":  "^4",
+                            "tsx":  "^4.22.4",
+                            "typescript":  "^5"
+                        }
 }

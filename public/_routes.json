@@ -1,7 +1,9 @@
 {
   "version": 1,
   "include": [
-    "/api/inquiry/*"
+    "/api/inquiry/*",
+    "/_AMapService/*",
+    "/"
   ],
   "exclude": []
 }

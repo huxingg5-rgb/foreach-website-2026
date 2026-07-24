@@ -3779,9 +3779,11 @@
 
 @media (max-width: 760px) {
   /*
-   * Disable the old fitting product-type pseudo icon.
+   * Product Type 已经通过组件中的 filter-group-symbol 输出图标，
+   * 禁止再使用按钮自身的 ::after，避免两个来源同时显示。
    */
   .products-selection-page
+    .filter-panel
     .fittings-product-type-filter-group
     .product-type-filter-toggle::after {
     content: none !important;
@@ -3789,37 +3791,44 @@
   }
 
   /*
-   * Use one identical icon style for every mobile filter group.
+   * 所有手机端筛选项共用完全相同的 + / − 样式。
+   * 使用与 Product Type 一致的细体图标。
    */
   .products-selection-page
     .filter-panel
     .filter-group-trigger
-    .filter-group-symbol {
-    display: inline-flex !important;
-    width: 24px !important;
-    height: 24px !important;
-    flex: 0 0 24px !important;
-    align-items: center !important;
-    justify-content: center !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    color: var(--brand-blue) !important;
-    font-size: 26px !important;
-    font-weight: 800 !important;
-    line-height: 1 !important;
-  }
-
-  /*
-   * Extra specificity for the fitting product-type row.
-   */
+    .filter-group-symbol,
   .products-selection-page
-    .fittings-product-type-filter-group
+    .filter-panel
     .product-type-filter-toggle
     .filter-group-symbol {
     display: inline-flex !important;
-    font-size: 26px !important;
-    font-weight: 800 !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 22px !important;
+    min-width: 22px !important;
+    height: 22px !important;
+    flex: 0 0 22px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    color: var(--brand-blue, #173368) !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 24px !important;
+    font-style: normal !important;
+    font-weight: 300 !important;
     line-height: 1 !important;
+    letter-spacing: 0 !important;
+
+    text-align: center !important;
+    text-shadow: none !important;
+    transform: none !important;
+
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
   }
 }
 
@@ -4147,3 +4156,185 @@
 }
 
 /* PC_FILTER_FINAL_FORCE_OPEN_END */
+
+/* MOBILE_PRODUCT_CONTROLS_NO_FLUORESCENT_TOUCH_START */
+@media (max-width: 760px) {
+  .products-selection-page .mobile-category-trigger,
+  .products-selection-page .mobile-category-symbol {
+    color: #ffffff !important;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /*
+   * Match the compact plus/minus used by the mobile footer accordion.
+   */
+  .products-selection-page .mobile-category-symbol,
+  .products-selection-page .filter-panel .filter-group-symbol,
+  .products-selection-page
+    .filter-panel
+    .product-type-filter-toggle
+    .filter-group-symbol {
+    width: 22px !important;
+    height: 22px !important;
+    flex: 0 0 22px !important;
+    font-size: 24px !important;
+    font-weight: 300 !important;
+    line-height: 1 !important;
+  }
+
+  .products-selection-page
+    :is(.filter-group-trigger, .product-type-filter-toggle):is(
+      :hover,
+      :focus,
+      :focus-visible,
+      :active
+    ) {
+    border-color: transparent !important;
+    background: #ffffff !important;
+    color: var(--brand-blue, #173368) !important;
+    outline: none !important;
+    box-shadow: none !important;
+    transform: none !important;
+  }
+
+  .products-selection-page
+    :is(.category-tab.active, .category-tab:hover) {
+    border-color: var(--brand-blue, #173368) !important;
+    background: var(--brand-blue, #173368) !important;
+    color: #ffffff !important;
+  }
+
+  /*
+   * Mobile product cards are not selection controls. Sticky touch-hover must
+   * not change their border, accent bar, image scale, or title colour.
+   */
+  .products-selection-page
+    .product-card:is(
+      :hover,
+      :focus,
+      :focus-within,
+      .active,
+      .selected,
+      .is-selected,
+      [data-selected="true"]
+    ),
+  .products-selection-page
+    .product-card:has(
+      .list-toggle:is(
+        .active,
+        .is-active,
+        [aria-pressed="true"],
+        [data-active="true"]
+      )
+    ) {
+    border-color: var(--line, #dce4ef) !important;
+    box-shadow: none !important;
+    transform: none !important;
+  }
+
+  .products-selection-page
+    .product-card:is(:hover, :focus, :focus-within)
+    .selected-bar,
+  .products-selection-page
+    .product-card:has(
+      .list-toggle:is(
+        .active,
+        .is-active,
+        [aria-pressed="true"],
+        [data-active="true"]
+      )
+    )
+    .selected-bar {
+    opacity: 0 !important;
+    animation: none !important;
+    transform: scaleX(0) !important;
+  }
+
+  .products-selection-page
+    .product-card:is(:hover, :focus, :focus-within)
+    :is(.product-visual, .product-image img, .product-card-image img),
+  .products-selection-page
+    .product-card:has(
+      .list-toggle:is(
+        .active,
+        .is-active,
+        [aria-pressed="true"],
+        [data-active="true"]
+      )
+    )
+    :is(.product-visual, .product-image img, .product-card-image img) {
+    transform: none !important;
+  }
+
+  .products-selection-page
+    .product-card:is(
+      :hover,
+      :focus,
+      :focus-within,
+      .active,
+      .selected,
+      .is-selected,
+      [data-selected="true"]
+    )
+    :is(.product-title, h3, .product-card-title),
+  .products-selection-page
+    .product-card:has(
+      .list-toggle:is(
+        .active,
+        .is-active,
+        [aria-pressed="true"],
+        [data-active="true"]
+      )
+    )
+    :is(.product-title, h3, .product-card-title) {
+    color: var(--brand-blue, #173368) !important;
+  }
+
+  /*
+   * Touch browsers can retain :hover after a tap. Ordinary actions return to
+   * their neutral white state immediately after release.
+   */
+  .products-selection-page
+    :is(
+      .filter-action-btn,
+      .toolbar-reset,
+      .selected-tag button,
+      .product-link,
+      .list-toggle,
+      .product-page-button
+    ):is(:hover, :focus, :focus-visible):not(:active):not(.active) {
+    border-color: var(--brand-blue, #173368) !important;
+    background: #ffffff !important;
+    color: var(--brand-blue, #173368) !important;
+    outline: none !important;
+    box-shadow: none !important;
+    transform: none !important;
+  }
+
+  .products-selection-page
+    :is(
+      .filter-action-btn,
+      .toolbar-reset,
+      .selected-tag button,
+      .product-link,
+      .list-toggle,
+      .product-page-button
+    ):active:not(:disabled) {
+    border-color: var(--brand-blue, #173368) !important;
+    background: var(--brand-blue, #173368) !important;
+    color: #ffffff !important;
+    outline: none !important;
+    box-shadow: none !important;
+    transform: translateY(1px) !important;
+  }
+
+  .products-selection-page
+    .list-toggle.active {
+    border-color: var(--brand-blue, #173368) !important;
+    background: var(--brand-blue, #173368) !important;
+    color: #ffffff !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+/* MOBILE_PRODUCT_CONTROLS_NO_FLUORESCENT_TOUCH_END */

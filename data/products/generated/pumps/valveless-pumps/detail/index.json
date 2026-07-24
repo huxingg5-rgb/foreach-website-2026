@@ -35,11 +35,10 @@
         "imageAlt":  "FOREACH RPL-P4 12–80 μL/rev valveless ceramic piston pump for micro dispensing and titration",
         "mainImageAlt":  "FOREACH RPL-P4 12–80 μL/rev valveless ceramic piston pump for micro dispensing and titration",
         "model3dUrl":  "/models/products/pumps/valveless-pumps/foreach-rpl-p4-valveless-pump.glb",
-        "drawing2dUrl":  "/documents/products/pumps/valveless-pumps/2d-drawings/foreach-rpl-p4-valveless-pump-2d-drawing.pdf",
-        "drawingPdfUrl":  "/documents/products/pumps/valveless-pumps/2d-drawings/foreach-rpl-p4-valveless-pump-2d-drawing.pdf",
+
+
         "resources":  {
-                          "model3dUrl":  "/models/products/pumps/valveless-pumps/foreach-rpl-p4-valveless-pump.glb",
-                          "drawing2dUrl":  "/documents/products/pumps/valveless-pumps/2d-drawings/foreach-rpl-p4-valveless-pump-2d-drawing.pdf"
+                          "model3dUrl":  "/models/products/pumps/valveless-pumps/foreach-rpl-p4-valveless-pump.glb"
                       },
         "specs":  [
                       {

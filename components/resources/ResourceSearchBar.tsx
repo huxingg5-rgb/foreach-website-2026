@@ -75,7 +75,7 @@ export default function ResourceSearchBar({
     classNames.recentButton ?? styles.historyButton;
 
   return (
-    <section className={rootClassName}>
+    <section className={rootClassName} data-touch-feedback="neutral">
       <form className={formClassName} onSubmit={handleSubmit}>
         <input
           className={inputClassName}

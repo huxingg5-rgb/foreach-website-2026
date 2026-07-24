@@ -362,7 +362,7 @@ export default function NewsArticleClient({
 
   const adlm2026SupportCopy =
     isAdlm2026DepartureArticle
-      ? getAdlm2026DepartureSupportCopy(locale)
+      ? getAdlm2026DepartureSupportCopy(locale ?? getLocaleFromPathname(pathname))
       : null;
 
   const articleSupportTitle =
@@ -453,7 +453,7 @@ export default function NewsArticleClient({
               ) : (
                 <>
                   {isAdlm2026DepartureArticle ? (
-                                  <Adlm2026DepartureArticle locale={locale} />
+                                  <Adlm2026DepartureArticle locale={locale ?? getLocaleFromPathname(pathname)} />
                                 ) : (
                                   article.content.map((block, index) => {
                                                   const paragraphs = splitParagraphs(

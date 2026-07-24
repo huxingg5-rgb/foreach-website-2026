@@ -2443,6 +2443,21 @@ function inferModel(data: DetailRecord, productName: string) {
 }
 
 function localizeHref(value: string) {
+    /*
+     * STATIC_ASSET_LOCALE_PREFIX_GUARD
+     *
+     * public 目录资源使用网站根路径。
+     * 不允许变成 /en/documents 或 /fr/images。
+     */
+    if (
+      value.startsWith("/documents/") ||
+      value.startsWith("/images/") ||
+      value.startsWith("/models/") ||
+      value.startsWith("/videos/") ||
+      value.startsWith("/files/")
+    ) {
+      return value;
+    }
   if (
     !value.startsWith("/") ||
     value.startsWith("/en/") ||

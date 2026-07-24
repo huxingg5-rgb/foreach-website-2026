@@ -14,8 +14,9 @@
    7. 联系方式与地图文案由 page.tsx 服务端按语言传入，避免 Hydration mismatch
 
    注意：
-   1. 当前验证码仍然是前端测试验证码 123456
-   2. 正式上线后再接真实邮箱验证码接口和后台提交接口
+   1. 邮箱验证码使用 /api/inquiry/send-code 和 /verify-code
+   2. 表单提交使用 /api/inquiry/submit
+   3. 附件当前只提交文件名称、类型和大小，原文件不上传
 ========================================================= */
 
 import type { ChangeEvent, FormEvent } from "react";
@@ -195,7 +196,7 @@ export default function DistributorPageContent({
 
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
 
-  const [mockEmailCode, setMockEmailCode] = useState("");
+  const [emailCodeSent, setEmailCodeSent] = useState(false);
 
   const [emailCodeVerified, setEmailCodeVerified] = useState(false);
 
@@ -204,6 +205,10 @@ export default function DistributorPageContent({
   const [sendCountdown, setSendCountdown] = useState(0);
 
   const [verifyCountdown, setVerifyCountdown] = useState(0);
+
+  const [isSendingCode, setIsSendingCode] = useState(false);
+
+  const [isVerifyingCode, setIsVerifyingCode] = useState(false);
 
   const [showSuccessModal, setShowSuccessModal] = useState(false);
 
@@ -225,11 +230,12 @@ export default function DistributorPageContent({
     setFormValues((prevValues) => ({
       ...prevValues,
       [field]: value,
+      ...(field === "email" ? { emailCode: "" } : {}),
     }));
 
     if (field === "email") {
+      setEmailCodeSent(false);
       setEmailCodeVerified(false);
-      setMockEmailCode("");
       setEmailTip(content.form.emailTipDefault);
     }
 
@@ -239,11 +245,12 @@ export default function DistributorPageContent({
   }
 
   /* =========================================================
-     发送邮箱验证码
-     当前为前端测试逻辑，验证码固定为 123456
+     发送真实邮箱验证码
   ========================================================= */
 
-  function handleSendCode() {
+  async function handleSendCode() {
+    if (isSendingCode || sendCountdown > 0) return;
+
     const email = formValues.email.trim();
 
     if (!email) {
@@ -258,49 +265,48 @@ export default function DistributorPageContent({
       return;
     }
 
-    const code = "123456";
-
-    setMockEmailCode(code);
+    setIsSendingCode(true);
+    setEmailCodeSent(false);
     setEmailCodeVerified(false);
-    setEmailTip(`${content.toast.codeSent}${code}`);
-    setSendCountdown(60);
 
-    const timer = window.setInterval(() => {
-      setSendCountdown((prev) => {
-        if (prev <= 1) {
-          window.clearInterval(timer);
-          return 0;
+    try {
+      const response = await fetch("/api/inquiry/send-code/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "same-origin",
+        body: JSON.stringify({ email }),
+      });
+
+      const result = (await response.json().catch(() => ({}))) as {
+        success?: boolean;
+        error?: string;
+      };
+
+      if (!response.ok || result.success !== true) {
+        if (result.error === "send_too_frequently") {
+          setEmailTip(
+            "A verification code was sent recently. Please wait before trying again.",
+          );
+        } else {
+          setEmailTip(
+            "The verification email could not be sent. Please try again later.",
+          );
         }
 
-        return prev - 1;
-      });
-    }, 1000);
-  }
+        return;
+      }
 
-  /* =========================================================
-     验证邮箱验证码
-  ========================================================= */
+      setEmailCodeSent(true);
+      setEmailTip(
+        "Verification code sent. Please check your email.",
+      );
 
-  function handleVerifyCode() {
-    if (verifyCountdown > 0) return;
-
-    if (!mockEmailCode) {
-      window.alert(content.form.emailTipDefault);
-      return;
-    }
-
-    if (!formValues.emailCode.trim()) {
-      window.alert(content.form.codePlaceholder);
-      return;
-    }
-
-    if (formValues.emailCode.trim() !== mockEmailCode) {
-      setEmailCodeVerified(false);
-      setEmailTip(`${content.toast.wrongCode} Test code: ${mockEmailCode}`);
-      setVerifyCountdown(60);
+      setSendCountdown(60);
 
       const timer = window.setInterval(() => {
-        setVerifyCountdown((prev) => {
+        setSendCountdown((prev) => {
           if (prev <= 1) {
             window.clearInterval(timer);
             return 0;
@@ -309,12 +315,108 @@ export default function DistributorPageContent({
           return prev - 1;
         });
       }, 1000);
+    } catch (error) {
+      console.error(
+        "Distributor verification email failed:",
+        error,
+      );
 
+      setEmailTip(
+        "The verification email could not be sent. Please try again later.",
+      );
+    } finally {
+      setIsSendingCode(false);
+    }
+  }
+
+  /* =========================================================
+     验证真实邮箱验证码
+  ========================================================= */
+
+  async function handleVerifyCode() {
+    if (isVerifyingCode || verifyCountdown > 0) return;
+
+    const email = formValues.email.trim();
+    const code = formValues.emailCode.trim();
+
+    if (!emailCodeSent) {
+      window.alert(content.form.emailTipDefault);
       return;
     }
 
-    setEmailCodeVerified(true);
-    setEmailTip(content.form.emailTipVerified);
+    if (!code) {
+      window.alert(content.form.codePlaceholder);
+      return;
+    }
+
+    setIsVerifyingCode(true);
+
+    try {
+      const response = await fetch("/api/inquiry/verify-code/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "same-origin",
+        body: JSON.stringify({
+          email,
+          code,
+        }),
+      });
+
+      const result = (await response.json().catch(() => ({}))) as {
+        success?: boolean;
+        error?: string;
+      };
+
+      if (!response.ok || result.success !== true) {
+        setEmailCodeVerified(false);
+
+        if (
+          result.error === "verification_code_expired" ||
+          result.error === "verification_code_missing"
+        ) {
+          setEmailCodeSent(false);
+
+          setEmailTip(
+            "The verification code has expired. Please request a new code.",
+          );
+        } else {
+          setEmailTip(content.toast.wrongCode);
+        }
+
+        setVerifyCountdown(3);
+
+        const timer = window.setInterval(() => {
+          setVerifyCountdown((prev) => {
+            if (prev <= 1) {
+              window.clearInterval(timer);
+              return 0;
+            }
+
+            return prev - 1;
+          });
+        }, 1000);
+
+        return;
+      }
+
+      setEmailCodeVerified(true);
+      setEmailTip(content.form.emailTipVerified);
+    } catch (error) {
+      console.error(
+        "Distributor verification failed:",
+        error,
+      );
+
+      setEmailCodeVerified(false);
+
+      setEmailTip(
+        "The verification code could not be checked. Please try again later.",
+      );
+    } finally {
+      setIsVerifyingCode(false);
+    }
   }
 
   /* =========================================================
@@ -445,7 +547,7 @@ export default function DistributorPageContent({
 
     if (isSubmitting) return;
 
-    if (!mockEmailCode) {
+    if (!emailCodeSent) {
       window.alert(content.form.emailTipDefault);
       return;
     }
@@ -455,7 +557,8 @@ export default function DistributorPageContent({
       return;
     }
 
-    const generatedFileName = createInternalArchiveFileName(formValues);
+    const generatedFileName =
+      createInternalArchiveFileName(formValues);
 
     const requestNumber = createRequestNumber();
 
@@ -464,30 +567,126 @@ export default function DistributorPageContent({
         ? document.documentElement.lang || "en"
         : "en";
 
-    const createdAtText = new Date().toLocaleString(currentLang, {
-      hour12: false,
-    });
+    const createdAtText =
+      new Date().toLocaleString(currentLang, {
+        hour12: false,
+      });
 
     setInternalArchiveFileName(generatedFileName);
-
     setIsSubmitting(true);
 
     try {
-      const printStarted = printRequirementFromHiddenIframe(
-        generatedFileName,
-        requestNumber,
-        createdAtText,
-      );
+      const requirementText = [
+        `Country / Region: ${formValues.country.trim() || "-"}`,
+        `Company Website: ${formValues.website.trim() || "-"}`,
+        "",
+        formValues.requirement.trim(),
+      ].join("\n");
 
-      if (!printStarted) {
-        return;
+      const response = await fetch("/api/inquiry/submit/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "same-origin",
+        body: JSON.stringify({
+          name: formValues.contactName.trim(),
+          company: formValues.companyName.trim(),
+          email: formValues.email.trim(),
+          phone: formValues.phone.trim(),
+
+          requestType:
+            "Distributor Partnership",
+
+          productType:
+            formValues.productInterest.trim() ||
+            "Distributor Cooperation",
+
+          targetModel:
+            formValues.website.trim(),
+
+          projectStage:
+            formValues.industry.trim(),
+
+          region:
+            formValues.country.trim(),
+
+          application:
+            formValues.industry.trim(),
+
+          message:
+            requirementText,
+
+          locale:
+            currentLang,
+
+          attachments:
+            selectedFiles.map((file) => ({
+              name: file.name,
+              type:
+                file.type ||
+                "application/octet-stream",
+              size: file.size,
+            })),
+        }),
+      });
+
+      const result =
+        (await response
+          .json()
+          .catch(() => ({}))) as {
+          success?: boolean;
+          error?: string;
+          referenceId?: string;
+        };
+
+      if (
+        !response.ok ||
+        result.success !== true
+      ) {
+        if (
+          result.error === "email_not_verified" ||
+          result.error ===
+            "email_verification_expired"
+        ) {
+          setEmailCodeSent(false);
+          setEmailCodeVerified(false);
+
+          setEmailTip(
+            "Email verification has expired. Please request a new code.",
+          );
+        }
+
+        throw new Error(
+          result.error ||
+            "distributor_submit_failed",
+        );
       }
 
+      const printStarted =
+        printRequirementFromHiddenIframe(
+          generatedFileName,
+          result.referenceId || requestNumber,
+          createdAtText,
+        );
+
+      if (!printStarted) {
+        console.warn(
+          "Distributor PDF print window could not be opened.",
+        );
+      }
+
+      setEmailCodeSent(false);
+      setEmailCodeVerified(false);
       setShowSuccessModal(true);
     } catch (error) {
-      console.error("Distributor request PDF generation failed:", error);
+      console.error(
+        "Distributor request submission failed:",
+        error,
+      );
+
       window.alert(
-        "The request form could not be generated. Please try again later or contact us by email.",
+        "The distributor application could not be submitted. Please try again later or contact us by email.",
       );
     } finally {
       setIsSubmitting(false);
@@ -749,11 +948,13 @@ export default function DistributorPageContent({
                   <button
                     type="button"
                     onClick={handleSendCode}
-                    disabled={sendCountdown > 0 || isSubmitting}
+                    disabled={sendCountdown > 0 || isSendingCode || isSubmitting}
                   >
-                    {sendCountdown > 0
-                      ? `${sendCountdown}s`
-                      : content.form.sendCode}
+                    {isSendingCode
+                      ? "Sending..."
+                      : sendCountdown > 0
+                        ? `${sendCountdown}s`
+                        : content.form.sendCode}
                   </button>
 
                   <input
@@ -770,14 +971,19 @@ export default function DistributorPageContent({
                     type="button"
                     onClick={handleVerifyCode}
                     disabled={
-                      verifyCountdown > 0 || emailCodeVerified || isSubmitting
+                      verifyCountdown > 0 ||
+                      emailCodeVerified ||
+                      isVerifyingCode ||
+                      isSubmitting
                     }
                   >
-                    {emailCodeVerified
-                      ? content.form.verified
-                      : verifyCountdown > 0
-                        ? `${verifyCountdown}s`
-                        : content.form.verify}
+                    {isVerifyingCode
+                      ? "Verifying..."
+                      : emailCodeVerified
+                        ? content.form.verified
+                        : verifyCountdown > 0
+                          ? `${verifyCountdown}s`
+                          : content.form.verify}
                   </button>
                 </div>
 
@@ -872,7 +1078,7 @@ export default function DistributorPageContent({
                   className="distributor-submit-btn"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? "Generating..." : content.form.submitButton}
+                  {isSubmitting ? "Submitting..." : content.form.submitButton}
                 </button>
               </div>
 

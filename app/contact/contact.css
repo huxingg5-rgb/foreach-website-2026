@@ -1382,6 +1382,46 @@
         /* 鎵嬫満绔仈绯绘柟寮忓唴瀹归《閮ㄧ暀鐧藉噺灏?*/
     }
 
+    .contact-company-panel h3 {
+        padding: 20px 18px;
+        font-size: 20px;
+        line-height: 1.3;
+        letter-spacing: -0.02em;
+    }
+
+    .contact-company-panel h3 span {
+        margin-top: 6px;
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .contact-info-row {
+        grid-template-columns: 68px minmax(0, 1fr);
+        align-items: stretch;
+    }
+
+    .contact-info-row>div:first-child {
+        display: flex;
+        align-items: center;
+        padding: 13px 10px;
+        border-right: 1px solid var(--contact-line);
+        font-size: 11px;
+        line-height: 1.35;
+        white-space: normal;
+        overflow-wrap: anywhere;
+        word-break: normal;
+    }
+
+    .contact-info-row>div:last-child {
+        min-width: 0;
+        display: flex;
+        align-items: center;
+        padding: 13px 14px;
+        font-size: 13px;
+        line-height: 1.55;
+        overflow-wrap: anywhere;
+    }
+
     .contact-map-panel {
         min-height: 320px;
         /* 鎵嬫満绔綅缃ā鍧楅珮搴?*/
@@ -4222,3 +4262,18 @@
   }
 }
 /* CONTACT_MOBILE_GUIDE_TITLE_ROW_END */
+
+@media (max-width: 760px) {
+  .contact-submit-buttons {
+    grid-template-columns: minmax(90px, 0.65fr) minmax(0, 1.65fr);
+  }
+
+  .contact-submit-buttons :is(.contact-file-button, .contact-submit-button) {
+    height: 100%;
+    padding-inline: 8px;
+    font-size: 12px;
+    line-height: 1.25;
+    white-space: normal;
+    text-align: center;
+  }
+}

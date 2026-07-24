@@ -20887,3 +20887,34 @@ html[data-global-touch-device="true"]
   color: #173368 !important;
   transform: none !important;
 }
+
+/* Mobile footer accordion keeps only the plus/minus as its open indicator. */
+html[data-global-touch-device="true"]
+  .site-footer__title:not([data-global-touch-pressed="true"]):hover,
+html[data-global-touch-device="true"]
+  .site-footer__title:not([data-global-touch-pressed="true"]):focus {
+  border-color: transparent !important;
+  background: transparent !important;
+  color: var(--brand-blue) !important;
+  box-shadow: none !important;
+  transform: none !important;
+  outline: none !important;
+}
+
+@media (max-width: 900px) {
+  /* Compact contact details under the mobile footer navigation. */
+  .site-footer__contact {
+    gap: 4px !important;
+  }
+
+  .site-footer__company {
+    margin: 0 0 4px !important;
+    font-size: 20px !important;
+    line-height: 1.35 !important;
+  }
+
+  .site-footer__contact-text {
+    font-size: 12px !important;
+    line-height: 1.55 !important;
+  }
+}

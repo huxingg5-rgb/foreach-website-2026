@@ -134,17 +134,42 @@ export async function POST(request: Request): Promise<Response> {
     const company = cleanText(body.company, 160);
     const email = normalizeEmail(body.email);
     const phone = cleanText(body.phone, 100);
+
+    const region =
+      cleanText(body.region, 160);
+
+    /*
+     * 首页简版表单使用 product / application。
+     * 详细表单使用 productType / projectStage。
+     * 这里同时兼容两套字段。
+     */
+    const legacyProduct =
+      cleanText(body.product, 200);
+
+    const legacyApplication =
+      cleanText(body.application, 200);
+
     const requestType =
-      cleanText(body.requestType, 160);
+      cleanText(body.requestType, 160) ||
+      "Website Inquiry";
+
     const productType =
-      cleanText(body.productType, 200);
+      cleanText(body.productType, 200) ||
+      legacyProduct;
+
     const targetModel =
       cleanText(body.targetModel, 200);
+
     const projectStage =
-      cleanText(body.projectStage, 160);
-    const message = cleanText(body.message, 4_000);
+      cleanText(body.projectStage, 160) ||
+      legacyApplication;
+
+    const message =
+      cleanText(body.message, 4_000);
+
     const locale =
-      cleanText(body.locale, 20) || "unknown";
+      cleanText(body.locale, 20) ||
+      "unknown";
 
     const attachments =
       normalizeAttachments(body.attachments);
@@ -179,7 +204,7 @@ export async function POST(request: Request): Promise<Response> {
       );
     }
 
-    if (!requestType || !message) {
+    if (!productType || !message) {
       return jsonResponse(
         {
           success: false,
@@ -232,6 +257,7 @@ export async function POST(request: Request): Promise<Response> {
         company,
         email,
         phone,
+        region,
         requestType,
         productType,
         targetModel,
@@ -265,6 +291,7 @@ export async function POST(request: Request): Promise<Response> {
           ${buildTableRow("Company", company)}
           ${buildTableRow("Email", email)}
           ${buildTableRow("Phone / WhatsApp", phone)}
+          ${buildTableRow("Country / Region", region)}
           ${buildTableRow("Request Type", requestType)}
           ${buildTableRow("Product Type", productType)}
           ${buildTableRow("Target / Competitor Model", targetModel)}
@@ -330,6 +357,7 @@ export async function POST(request: Request): Promise<Response> {
       `Company: ${company}\n` +
       `Email: ${email}\n` +
       `Phone / WhatsApp: ${phone || "-"}\n` +
+      `Country / Region: ${region || "-"}\n` +
       `Request Type: ${requestType}\n` +
       `Product Type: ${productType || "-"}\n` +
       `Target Model: ${targetModel || "-"}\n` +

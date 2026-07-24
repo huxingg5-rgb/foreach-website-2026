@@ -496,6 +496,7 @@ export default function GlobalSelectionCartDrawer() {
           右下角浮动按钮
       ===================================================== */}
       <div
+        data-touch-feedback="neutral"
         className={`${styles.floatingActions} ${
           isOpen ? styles.hidden : ""
         } ${isCartButtonBumping ? styles.bump : ""}`}
@@ -525,6 +526,7 @@ export default function GlobalSelectionCartDrawer() {
         <>
           <button
             className={styles.mask}
+            data-touch-feedback="neutral"
             type="button"
             aria-label={isEnglish ? `${t("Close")} ${t("Product Selection List")}` : "关闭选型清单"}
             onClick={closeCart}
