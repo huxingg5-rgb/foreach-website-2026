@@ -1313,9 +1313,15 @@ export default function FluidResistanceCalculator({
                 </div>
               </div>
             </div>
-            <div className={styles.buttonStack}>
-              <button className={styles.primaryButton} type="button" onClick={runCalculation}>{t("Calculate", "开始计算")}</button>
-              <button className={styles.secondaryButton} type="button" onClick={exportExcel}>{t("Export Excel", "导出 Excel")}</button>
+            <div className={`${styles.buttonStack} ${styles.desktopButtonStack}`}>
+              <button
+                className={styles.secondaryButton}
+                type="button"
+                onClick={runCalculation}
+              >
+                {t("Calculate", "开始计算")}
+              </button>
+              <button className={styles.secondaryButton} type="button" onClick={exportExcel} data-mobile-export-button="true">{t("Export Excel", "导出 Excel")}</button>
             </div>
           </section>
         </aside>
@@ -1352,6 +1358,18 @@ export default function FluidResistanceCalculator({
                 </tbody>
               </table>
             </div>
+            {/* FLUID_MOBILE_ACTIONS_AFTER_TABLE_START */}
+            <div className={`${styles.buttonStack} ${styles.mobileButtonStack}`}>
+              <button
+                className={styles.secondaryButton}
+                type="button"
+                onClick={runCalculation}
+              >
+                {t("Calculate", "开始计算")}
+              </button>
+              <button className={styles.secondaryButton} type="button" onClick={exportExcel} data-mobile-export-button="true">{t("Export Excel", "导出 Excel")}</button>
+            </div>
+            {/* FLUID_MOBILE_ACTIONS_AFTER_TABLE_END */}
           </section>
 
           <section className={`${styles.panel} ${styles.resultPanel}`}>

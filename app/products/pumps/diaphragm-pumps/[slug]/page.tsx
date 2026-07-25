@@ -1,4 +1,4 @@
-﻿import { notFound } from "next/navigation";
+import { notFound } from "next/navigation";
 import type { ComponentType } from "react";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
 
@@ -442,6 +442,395 @@ function getDiaphragmSeoProductTitle(detail: DiaphragmDetail, cleanModelCode: st
   return parts.length > 0 ? parts.join(" ") : fallbackTitle;
 }
 
+// DIAPHRAGM_DETAIL_MAIN_IMAGE_MAPPING_START
+/*
+ * 根据当前隔膜泵详情数据中的型号、路由和标题，
+ * 从 media 数组中选择与当前产品对应的主图。
+ *
+ * 原来的逻辑只取第一个 resourceType 包含“主图”的资源，
+ * 同系列同时存在有刷和无刷主图时会出现错配。
+ */
+function getPreferredDiaphragmMainImageFileName(
+  detail: DiaphragmDetail
+) {
+  const identity = [
+    getText(detail.slug),
+    getText(detail.path),
+    getText(detail.modelDisplay),
+    getText(detail.title),
+    getText(detail.displayName),
+    getText(detail.seriesId),
+  ]
+    .join(" ")
+    .toLowerCase();
+
+  /*
+   * DPGL800 的 EP 与 FF 当前共用同一张产品主图。
+   * 两种型号的 2D 和 3D 仍分别对应。
+   */
+  if (identity.includes("dpgl800")) {
+    return "dpgl800-gas-liquid-diaphragm-pump-main.webp";
+  }
+
+  /*
+   * DPL30H 必须放在 DPL30 前面，
+   * 否则 dpl30h 会被 dpl30 的判断提前命中。
+   */
+  if (identity.includes("dpl30h")) {
+    if (
+      identity.includes("24bs") ||
+      identity.includes("brushless") ||
+      identity.includes("无刷")
+    ) {
+      return "dpl30h-brushless-liquid-diaphragm-pump-main.webp";
+    }
+
+    if (
+      identity.includes("24ds") ||
+      identity.includes("brushed") ||
+      identity.includes("有刷")
+    ) {
+      return "dpl30h-brushed-liquid-diaphragm-pump-main.webp";
+    }
+  }
+
+  if (identity.includes("dpl60")) {
+    if (
+      identity.includes("24bb") ||
+      identity.includes("brushless") ||
+      identity.includes("无刷")
+    ) {
+      return "dpl60-brushless-liquid-diaphragm-pump-main.webp";
+    }
+
+    if (
+      identity.includes("24db") ||
+      identity.includes("brushed") ||
+      identity.includes("有刷")
+    ) {
+      return "dpl60-brushed-liquid-diaphragm-pump-main.webp";
+    }
+  }
+
+  if (identity.includes("dpl30")) {
+    if (
+      identity.includes("24bb") ||
+      identity.includes("brushless") ||
+      identity.includes("无刷")
+    ) {
+      return "dpl30-brushless-liquid-diaphragm-pump-main.webp";
+    }
+
+    if (
+      identity.includes("24db") ||
+      identity.includes("brushed") ||
+      identity.includes("有刷")
+    ) {
+      return "dpl30-brushed-liquid-diaphragm-pump-main.webp";
+    }
+  }
+
+  /*
+   * 老的系列总览路由可能没有具体电机型号，
+   * 这种情况继续使用原来的主图回退逻辑。
+   */
+  return "";
+}
+
+function findPreferredDiaphragmMainImageUrl(
+  detail: DiaphragmDetail
+) {
+  const preferredFileName =
+    getPreferredDiaphragmMainImageFileName(detail);
+
+  if (preferredFileName) {
+    const preferredMedia = detail.media?.find((item) => {
+      const fileName = String(
+        item.fileName || ""
+      ).toLowerCase();
+
+      const fullPath = String(
+        item.fullPath || ""
+      )
+        .replaceAll("\\", "/")
+        .toLowerCase();
+
+      return (
+        fileName === preferredFileName ||
+        fullPath.endsWith(`/${preferredFileName}`)
+      );
+    });
+
+    if (preferredMedia) {
+      /*
+       * 复用页面原有的媒体 URL 转换逻辑，
+       * 不另外硬编码网站 URL。
+       */
+      const preferredDetail: DiaphragmDetail = {
+        ...detail,
+        media: [preferredMedia],
+      };
+
+      const preferredUrl =
+        findMediaUrlByType(
+          preferredDetail,
+          "主图"
+        ) ||
+        findDiaphragmMediaUrlByPathKeywords(
+          preferredDetail,
+          ["images"]
+        );
+
+      if (preferredUrl) {
+        return preferredUrl;
+      }
+    }
+  }
+
+  /*
+   * 未识别具体型号或目标媒体不存在时，
+   * 保留原有回退逻辑，避免详情页显示空白。
+   */
+  return (
+    findMediaUrlByType(detail, "主图") ||
+    findDiaphragmMediaUrlByPathKeywords(
+      detail,
+      ["images"]
+    )
+  );
+}
+// DIAPHRAGM_DETAIL_MAIN_IMAGE_MAPPING_END
+
+// DIAPHRAGM_DETAIL_2D_3D_MAPPING_START
+type DiaphragmPreferredAssetKind = "2D" | "3D";
+
+/*
+ * 根据详情页当前型号，返回唯一对应的 PDF 或 GLB 文件名。
+ *
+ * 原逻辑只取 media 数组中第一个 2D 或 3D，
+ * 同系列同时收录有刷和无刷资源时会发生错配。
+ */
+function getPreferredDiaphragmAssetFileName(
+  detail: DiaphragmDetail,
+  kind: DiaphragmPreferredAssetKind
+) {
+  const identity = [
+    getText(detail.slug),
+    getText(detail.path),
+    getText(detail.modelDisplay),
+    getText(detail.title),
+    getText(detail.displayName),
+    getText(detail.seriesId),
+  ]
+    .join(" ")
+    .toLowerCase();
+
+  /*
+   * DPGL800 必须按照 EP / FF 区分。
+   */
+  if (identity.includes("dpgl800")) {
+    const isFf =
+      identity.includes("24bs6-ff") ||
+      identity.includes("ff/ps") ||
+      identity.includes("-ff-");
+
+    if (isFf) {
+      return kind === "2D"
+        ? "dpgl800-24bs6-ff-ps-gas-liquid-diaphragm-pump-2d-drawing.pdf"
+        : "dpgl800-24bs6-ff-ps-gas-liquid-diaphragm-pump.glb";
+    }
+
+    const isEp =
+      identity.includes("24bs6-ep") ||
+      identity.includes("ep/ps") ||
+      identity.includes("-ep-");
+
+    if (isEp) {
+      return kind === "2D"
+        ? "dpgl800-24bs6-ep-ps-gas-liquid-diaphragm-pump-2d-drawing.pdf"
+        : "dpgl800-24bs6-ep-ps-gas-liquid-diaphragm-pump.glb";
+    }
+  }
+
+  /*
+   * DPL30H 必须放在 DPL30 前面，
+   * 防止 dpl30h 被误判为 dpl30。
+   */
+  if (identity.includes("dpl30h")) {
+    const isBrushless =
+      identity.includes("24bs") ||
+      identity.includes("brushless") ||
+      identity.includes("无刷");
+
+    if (isBrushless) {
+      return kind === "2D"
+        ? "dpl30h-brushless-liquid-diaphragm-pump-2d-drawing.pdf"
+        : "dpl30h-brushless-liquid-diaphragm-pump.glb";
+    }
+
+    const isBrushed =
+      identity.includes("24ds") ||
+      identity.includes("brushed") ||
+      identity.includes("有刷");
+
+    if (isBrushed) {
+      return kind === "2D"
+        ? "dpl30h-brushed-liquid-diaphragm-pump-2d-drawing.pdf"
+        : "dpl30h-brushed-liquid-diaphragm-pump.glb";
+    }
+  }
+
+  if (identity.includes("dpl60")) {
+    const isBrushless =
+      identity.includes("24bb") ||
+      identity.includes("brushless") ||
+      identity.includes("无刷");
+
+    if (isBrushless) {
+      return kind === "2D"
+        ? "dpl60-brushless-liquid-diaphragm-pump-2d-drawing.pdf"
+        : "dpl60-brushless-liquid-diaphragm-pump.glb";
+    }
+
+    const isBrushed =
+      identity.includes("24db") ||
+      identity.includes("brushed") ||
+      identity.includes("有刷");
+
+    if (isBrushed) {
+      return kind === "2D"
+        ? "dpl60-brushed-liquid-diaphragm-pump-2d-drawing.pdf"
+        : "dpl60-brushed-liquid-diaphragm-pump.glb";
+    }
+  }
+
+  if (identity.includes("dpl30")) {
+    const isBrushless =
+      identity.includes("24bb") ||
+      identity.includes("brushless") ||
+      identity.includes("无刷");
+
+    if (isBrushless) {
+      return kind === "2D"
+        ? "dpl30-brushless-liquid-diaphragm-pump-2d-drawing.pdf"
+        : "dpl30-brushless-liquid-diaphragm-pump.glb";
+    }
+
+    const isBrushed =
+      identity.includes("24db") ||
+      identity.includes("brushed") ||
+      identity.includes("有刷");
+
+    if (isBrushed) {
+      return kind === "2D"
+        ? "dpl30-brushed-liquid-diaphragm-pump-2d-drawing.pdf"
+        : "dpl30-brushed-liquid-diaphragm-pump.glb";
+    }
+  }
+
+  return "";
+}
+
+/*
+ * 从当前详情对象的 media 中找到指定文件，
+ * 再复用现有 URL 转换逻辑。
+ */
+function findPreferredDiaphragmAssetUrl(
+  detail: DiaphragmDetail,
+  kind: DiaphragmPreferredAssetKind
+) {
+  const preferredFileName =
+    getPreferredDiaphragmAssetFileName(
+      detail,
+      kind
+    );
+
+  if (preferredFileName) {
+    const preferredMedia = detail.media?.find((item) => {
+      const fileName = String(
+        item.fileName || ""
+      ).toLowerCase();
+
+      const fullPath = String(
+        item.fullPath || ""
+      )
+        .replace(/\\/g, "/")
+        .toLowerCase();
+
+      return (
+        fileName === preferredFileName ||
+        fullPath.endsWith(`/${preferredFileName}`)
+      );
+    });
+
+    if (preferredMedia) {
+      const preferredDetail: DiaphragmDetail = {
+        ...detail,
+        media: [preferredMedia],
+      };
+
+      if (kind === "2D") {
+        const preferred2dUrl =
+          findMediaUrlByType(
+            preferredDetail,
+            "2D"
+          ) ||
+          findMediaUrlByType(
+            preferredDetail,
+            "零件图"
+          ) ||
+          findDiaphragmMediaUrlByPathKeywords(
+            preferredDetail,
+            ["drawings", ".pdf"]
+          );
+
+        if (preferred2dUrl) {
+          return preferred2dUrl;
+        }
+      }
+
+      if (kind === "3D") {
+        const preferred3dUrl =
+          findMediaUrlByType(
+            preferredDetail,
+            "3D"
+          ) ||
+          findDiaphragmMediaUrlByPathKeywords(
+            preferredDetail,
+            ["models", ".glb"]
+          );
+
+        if (preferred3dUrl) {
+          return preferred3dUrl;
+        }
+      }
+    }
+  }
+
+  /*
+   * 旧系列总览路由没有具体型号时保留原有回退逻辑。
+   */
+  if (kind === "2D") {
+    return (
+      findMediaUrlByType(detail, "2D") ||
+      findMediaUrlByType(detail, "零件图") ||
+      findDiaphragmMediaUrlByPathKeywords(
+        detail,
+        ["drawings", ".pdf"]
+      )
+    );
+  }
+
+  return (
+    findMediaUrlByType(detail, "3D") ||
+    findDiaphragmMediaUrlByPathKeywords(
+      detail,
+      ["models", ".glb"]
+    )
+  );
+}
+// DIAPHRAGM_DETAIL_2D_3D_MAPPING_END
+
 function adaptToProductDetailClientData(detail: DiaphragmDetail) {
   const slug = normalizeSlug(detail.slug);
   const title = getText(detail.title || detail.displayName || detail.seriesId);
@@ -457,17 +846,19 @@ function adaptToProductDetailClientData(detail: DiaphragmDetail) {
   const seriesTypeLabel = getSeriesTypeLabel(detail);
 
   const mainImageUrl =
-    findMediaUrlByType(detail, "主图") ||
-    findDiaphragmMediaUrlByPathKeywords(detail, ["images"]);
+    findPreferredDiaphragmMainImageUrl(detail);
 
   const drawing2dUrl =
-    findMediaUrlByType(detail, "2D") ||
-    findMediaUrlByType(detail, "零件图") ||
-    findDiaphragmMediaUrlByPathKeywords(detail, ["drawings", ".pdf"]);
+    findPreferredDiaphragmAssetUrl(
+      detail,
+      "2D"
+    );
 
   const model3dUrl =
-    findMediaUrlByType(detail, "3D") ||
-    findDiaphragmMediaUrlByPathKeywords(detail, ["models", ".glb"]);
+    findPreferredDiaphragmAssetUrl(
+      detail,
+      "3D"
+    );
 
   const curveImageUrl =
     findMediaUrlByType(detail, "曲线") ||

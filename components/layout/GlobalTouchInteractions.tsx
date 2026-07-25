@@ -20,25 +20,11 @@ const TOUCH_CONTROL_SELECTOR = [
 const TOUCH_PRESS_EXCLUSION_SELECTOR = [
   ".site-footer",
   ".products-selection-page",
+  ".home-flow-mobile-app-tab",
+  ".mobile-nav-summary",
   '[data-touch-feedback="neutral"]',
   '[class*="backdrop" i]',
 ].join(",");
-
-const TOUCH_PRESSED_STYLES = {
-  background: "#09e9b4",
-  "border-color": "#09e9b4",
-  color: "#173368",
-  "outline-color": "#09e9b4",
-  "box-shadow": "none",
-  transform: "translateY(1px) scale(0.99)",
-  "transition-duration": "0ms",
-} as const;
-
-type SavedInlineStyle = {
-  property: string;
-  value: string;
-  priority: string;
-};
 
 function getTouchControl(target: EventTarget | null): HTMLElement | null {
   if (!(target instanceof Element)) {
@@ -61,7 +47,6 @@ export default function GlobalTouchInteractions() {
     document.documentElement.dataset.globalTouchDevice = "true";
 
     let pressedControl: HTMLElement | null = null;
-    const savedInlineStyles = new WeakMap<HTMLElement, SavedInlineStyle[]>();
 
     function isTouchPointer(event: PointerEvent) {
       return event.pointerType === "touch" || event.pointerType === "pen";
@@ -72,18 +57,6 @@ export default function GlobalTouchInteractions() {
         return;
       }
 
-      const savedStyles = savedInlineStyles.get(pressedControl) ?? [];
-
-      savedStyles.forEach(({ property, value, priority }) => {
-        if (value) {
-          pressedControl?.style.setProperty(property, value, priority);
-          return;
-        }
-
-        pressedControl?.style.removeProperty(property);
-      });
-
-      savedInlineStyles.delete(pressedControl);
       delete pressedControl.dataset.globalTouchPressed;
       pressedControl = null;
     }
@@ -107,25 +80,6 @@ export default function GlobalTouchInteractions() {
       }
 
       pressedControl = control;
-      savedInlineStyles.set(
-        control,
-        Object.keys(TOUCH_PRESSED_STYLES).map((property) => {
-          const typedProperty =
-            property as keyof typeof TOUCH_PRESSED_STYLES;
-
-          return {
-            property: typedProperty,
-            value: control.style.getPropertyValue(typedProperty),
-            priority: control.style.getPropertyPriority(typedProperty),
-          };
-        }),
-      );
-
-      Object.entries(TOUCH_PRESSED_STYLES).forEach(
-        ([property, value]) => {
-          control.style.setProperty(property, value, "important");
-        },
-      );
       control.dataset.globalTouchPressed = "true";
     }
 
