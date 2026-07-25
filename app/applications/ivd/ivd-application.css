@@ -1099,3 +1099,30 @@
     -webkit-line-clamp: 2 !important;
   }
 }
+
+/* APPLICATION_HERO_MOBILE_TYPOGRAPHY_START */
+/*
+ * 应用领域页面手机端 Banner 字号。
+ *
+ * 仅影响 760px 以下：
+ * - 主标题：28px
+ * - 说明文字：15px
+ *
+ * 电脑端不受影响。
+ */
+@media (max-width: 760px) {
+  .ivd-page .ivd-hero h1 {
+    max-width: 100% !important;
+    font-size: 28px !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.02em !important;
+  }
+
+  .ivd-page .ivd-hero p {
+    max-width: 100% !important;
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+    letter-spacing: 0 !important;
+  }
+}
+/* APPLICATION_HERO_MOBILE_TYPOGRAPHY_END */

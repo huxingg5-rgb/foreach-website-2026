@@ -1875,11 +1875,14 @@ html[lang="ru"] .home-hero-btn:hover {
     color 0.28s ease;
 }
 
-.home-flow-btn:hover {
-  transform: translateY(-2px);
-  color: var(--brand-accent, #00ffb2);
-  background: #061a3a;
-  border-color: #061a3a;
+/* 首页按钮 Hover 仅在鼠标设备生效 */
+@media (hover: hover) and (pointer: fine) {
+  .home-flow-btn:hover {
+    transform: translateY(-2px);
+    color: var(--brand-accent, #00ffb2);
+    background: #061a3a;
+    border-color: #061a3a;
+  }
 }
 
 /* ================================
@@ -2460,10 +2463,6 @@ html[lang="ru"] .home-hero-btn:hover {
     color: #00ffb2;
     background: #173368;
     border-color: #173368;
-  }
-
-  .home-flow-btn:active {
-    transform: scale(0.97);
   }
 
   .home-flow-tv-stage {
@@ -3905,7 +3904,7 @@ html[lang="ru"] .home-hero-btn:hover {
   .home-company-about-shell {
     width: min(100% - 32px, 640px);
 
-    padding-top: 64px;
+    padding-top: 24px;
     padding-bottom: 48px;
   }
 
@@ -4361,7 +4360,7 @@ html[lang="ru"] .home-hero-btn:hover {
   .home-company-about-section {
     height: auto;
     min-height: auto;
-    padding: 82px 0 42px;
+    padding: 32px 0 42px;
     overflow: visible;
   }
 
@@ -17753,41 +17752,25 @@ body.global-search-lock {
 /* HOME_FLOW_ACTION_CLICK_LAYER_20260713_END */
 
 /* HOME_FLOW_ACTION_TEXT_STATE_FINAL_START */
-
 /*
- * 首页第二屏两个主按钮最终状态修复。
+ * 首页第二屏按钮文字状态：
  *
- * 只控制文字颜色，不修改：
- * - 按钮尺寸
- * - 圆角
- * - 背景
- * - 边框
- * - 间距
- * - 原有 hover 位移动画
+ * 默认及访问后：深蓝文字
+ * 当前选中状态：荧光绿文字
+ *
+ * PC Hover 的颜色由原始 Hover 规则统一控制，
+ * 不再重复覆盖。
  */
-
-/* 默认状态，包括已经访问过的链接 */
 .home-flow-actions a.home-flow-btn:link,
 .home-flow-actions a.home-flow-btn:visited {
-  color: #061a3a !important;
+  color: #061a3a;
 }
 
-/* PC 鼠标悬停：保持原设计的深蓝底、荧光色文字 */
-@media (hover: hover) and (pointer: fine) {
-  .home-flow-actions a.home-flow-btn:hover,
-  .home-flow-actions a.home-flow-btn:link:hover,
-  .home-flow-actions a.home-flow-btn:visited:hover {
-    color: var(--brand-accent, #00ffb2) !important;
-  }
-}
-
-/* 兼容原来可能存在的选中状态 */
 .home-flow-actions a.home-flow-btn.is-active,
 .home-flow-actions a.home-flow-btn.is-active:link,
 .home-flow-actions a.home-flow-btn.is-active:visited {
-  color: #00ffb2 !important;
+  color: #09e9b4;
 }
-
 /* HOME_FLOW_ACTION_TEXT_STATE_FINAL_END */
 
 /* HOME_HONOR_CERTIFICATES_V1_START */
@@ -18505,12 +18488,12 @@ html body .home-honor-image img {
     clear: both !important;
 
     display: grid !important;
-    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
 
     width: 100% !important;
     min-width: 0 !important;
 
-    gap: 14px !important;
+    gap: 8px !important;
 
     margin: 0 !important;
     padding: 0 20px !important;
@@ -20834,24 +20817,25 @@ html body .home-honor-image img {
     ) {
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
+    transition-duration: 0ms !important;
+    transition-delay: 0ms !important;
   }
 
   html body
     [data-global-touch-pressed="true"][data-global-touch-pressed="true"] {
-    border-color: #09e9b4 !important;
-    background: #09e9b4 !important;
-    background-color: #09e9b4 !important;
-    color: #173368 !important;
-    outline-color: #09e9b4 !important;
+    border-color: #173368 !important;
+    background: #173368 !important;
+    background-color: #173368 !important;
+    color: #09e9b4 !important;
+    outline-color: #173368 !important;
     box-shadow: none !important;
-    transform: translateY(1px) scale(0.99) !important;
-    transition-duration: 0.06s !important;
+    transform: none !important;
   }
 
   html body
     [data-global-touch-pressed="true"][data-global-touch-pressed="true"]
     :where(svg, path) {
-    color: #173368 !important;
+    color: #09e9b4 !important;
     stroke: currentColor;
   }
 
@@ -20918,3 +20902,101 @@ html[data-global-touch-device="true"]
     line-height: 1.55 !important;
   }
 }
+
+/* DATASHEETS_FORCE_MOBILE_ACTIONS_ROW_START */
+/*
+  规格书下载页面手机端按钮最终覆盖。
+
+  DOM 结构：
+  main.datasheets-page
+    article.datasheet-row
+      div.row-actions
+        a.row-link
+        a.row-download / a.row-custom
+*/
+@media (max-width: 767px) {
+  html body
+    main.datasheets-page
+    article.datasheet-row
+    > .row-actions {
+    clear: both !important;
+    box-sizing: border-box !important;
+
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-auto-flow: column !important;
+
+    gap: 8px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 20px !important;
+  }
+
+  html body
+    main.datasheets-page
+    article.datasheet-row
+    > .row-actions
+    > .row-link,
+  html body
+    main.datasheets-page
+    article.datasheet-row
+    > .row-actions
+    > .row-download,
+  html body
+    main.datasheets-page
+    article.datasheet-row
+    > .row-actions
+    > .row-custom {
+    box-sizing: border-box !important;
+
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+
+    height: 44px !important;
+    margin: 0 !important;
+    padding: 0 8px !important;
+
+    white-space: nowrap !important;
+  }
+}
+
+/* 420px 以下保持原来的较小左右留白 */
+@media (max-width: 420px) {
+  html body
+    main.datasheets-page
+    article.datasheet-row
+    > .row-actions {
+    padding-right: 14px !important;
+    padding-left: 14px !important;
+  }
+}
+/* DATASHEETS_FORCE_MOBILE_ACTIONS_ROW_END */
+
+/* HOME_COMPANY_MOBILE_TOP_GAP_START */
+/*
+ * 首页“走进恒永达科技”手机端顶部间距。
+ *
+ * 原来两层顶部间距合计约 146px：
+ * 82px + 64px
+ *
+ * 现在压缩为约 56px：
+ * 32px + 24px
+ *
+ * 电脑端不受影响。
+ */
+@media (max-width: 768px) {
+  html body section#about.home-company-about-section {
+    padding-top: 32px !important;
+  }
+
+  html body
+    section#about.home-company-about-section
+    > .home-company-about-shell {
+    padding-top: 24px !important;
+  }
+}
+/* HOME_COMPANY_MOBILE_TOP_GAP_END */
+

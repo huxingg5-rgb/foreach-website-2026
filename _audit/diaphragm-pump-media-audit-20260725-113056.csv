@@ -1,0 +1,127 @@
+﻿"型号","详情Slug","系列","应有版本","卡片图片","详情图片","2D图纸","3D模型","问题"
+"diaphragm-dpl30-brushed","dpl30-24db-ep-ps-liquid-diaphragm-pump","DPL30","有刷","/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushed-liquid-diaphragm-pump-main.webp","dpl30-brushed-liquid-diaphragm-pump-main.webp
+public/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushed-liquid-diaphragm-pump-main.webp
+dpl30-brushless-liquid-diaphragm-pump-main.webp
+public/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushless-liquid-diaphragm-pump-main.webp","dpl30-brushed-liquid-diaphragm-pump-2d-drawing.pdf
+public/documents/products/pumps/diaphragm-pumps/dpl30/drawings/dpl30-brushed-liquid-diaphragm-pump-2d-drawing.pdf
+dpl30-brushless-liquid-diaphragm-pump-2d-drawing.pdf
+public/documents/products/pumps/diaphragm-pumps/dpl30/drawings/dpl30-brushless-liquid-diaphragm-pump-2d-drawing.pdf","dpl30-brushed-liquid-diaphragm-pump.glb
+public/models/products/pumps/diaphragm-pumps/dpl30/dpl30-brushed-liquid-diaphragm-pump.glb
+dpl30-brushless-liquid-diaphragm-pump.glb
+public/models/products/pumps/diaphragm-pumps/dpl30/dpl30-brushless-liquid-diaphragm-pump.glb","详情图片 dpl30-brushed-liquid-diaphragm-pump-main.webp：文件不存在
+详情图片 dpl30-brushless-liquid-diaphragm-pump-main.webp：有刷无刷错配：应为 有刷，实际为 无刷；文件不存在
+详情图片 public/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushless-liquid-diaphragm-pump-main.webp：有刷无刷错配：应为 有刷，实际为 无刷
+2D 图纸 dpl30-brushed-liquid-diaphragm-pump-2d-drawing.pdf：文件不存在
+2D 图纸 dpl30-brushless-liquid-diaphragm-pump-2d-drawing.pdf：有刷无刷错配：应为 有刷，实际为 无刷；文件不存在
+2D 图纸 public/documents/products/pumps/diaphragm-pumps/dpl30/drawings/dpl30-brushless-liquid-diaphragm-pump-2d-drawing.pdf：有刷无刷错配：应为 有刷，实际为 无刷
+3D 模型 dpl30-brushed-liquid-diaphragm-pump.glb：文件不存在
+3D 模型 dpl30-brushless-liquid-diaphragm-pump.glb：有刷无刷错配：应为 有刷，实际为 无刷；文件不存在
+3D 模型 public/models/products/pumps/diaphragm-pumps/dpl30/dpl30-brushless-liquid-diaphragm-pump.glb：有刷无刷错配：应为 有刷，实际为 无刷
+卡片图与详情图片版本不一致：卡片为 有刷，详情包含 有刷、无刷"
+"diaphragm-dpl30-brushless","dpl30-24bb-ep-ps-liquid-diaphragm-pump","DPL30","无刷","/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushless-liquid-diaphragm-pump-main.webp","dpl30-brushed-liquid-diaphragm-pump-main.webp
+public/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushed-liquid-diaphragm-pump-main.webp
+dpl30-brushless-liquid-diaphragm-pump-main.webp
+public/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushless-liquid-diaphragm-pump-main.webp","dpl30-brushed-liquid-diaphragm-pump-2d-drawing.pdf
+public/documents/products/pumps/diaphragm-pumps/dpl30/drawings/dpl30-brushed-liquid-diaphragm-pump-2d-drawing.pdf
+dpl30-brushless-liquid-diaphragm-pump-2d-drawing.pdf
+public/documents/products/pumps/diaphragm-pumps/dpl30/drawings/dpl30-brushless-liquid-diaphragm-pump-2d-drawing.pdf","dpl30-brushed-liquid-diaphragm-pump.glb
+public/models/products/pumps/diaphragm-pumps/dpl30/dpl30-brushed-liquid-diaphragm-pump.glb
+dpl30-brushless-liquid-diaphragm-pump.glb
+public/models/products/pumps/diaphragm-pumps/dpl30/dpl30-brushless-liquid-diaphragm-pump.glb","详情图片 dpl30-brushed-liquid-diaphragm-pump-main.webp：有刷无刷错配：应为 无刷，实际为 有刷；文件不存在
+详情图片 public/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushed-liquid-diaphragm-pump-main.webp：有刷无刷错配：应为 无刷，实际为 有刷
+详情图片 dpl30-brushless-liquid-diaphragm-pump-main.webp：文件不存在
+2D 图纸 dpl30-brushed-liquid-diaphragm-pump-2d-drawing.pdf：有刷无刷错配：应为 无刷，实际为 有刷；文件不存在
+2D 图纸 public/documents/products/pumps/diaphragm-pumps/dpl30/drawings/dpl30-brushed-liquid-diaphragm-pump-2d-drawing.pdf：有刷无刷错配：应为 无刷，实际为 有刷
+2D 图纸 dpl30-brushless-liquid-diaphragm-pump-2d-drawing.pdf：文件不存在
+3D 模型 dpl30-brushed-liquid-diaphragm-pump.glb：有刷无刷错配：应为 无刷，实际为 有刷；文件不存在
+3D 模型 public/models/products/pumps/diaphragm-pumps/dpl30/dpl30-brushed-liquid-diaphragm-pump.glb：有刷无刷错配：应为 无刷，实际为 有刷
+3D 模型 dpl30-brushless-liquid-diaphragm-pump.glb：文件不存在
+卡片图与详情图片版本不一致：卡片为 无刷，详情包含 有刷、无刷"
+"diaphragm-dpl60-brushed","dpl60-24db-ep-ps-liquid-diaphragm-pump","DPL60","有刷","/images/products/pumps/diaphragm-pumps/dpl60/images/dpl60-brushed-liquid-diaphragm-pump-main.webp","dpl60-brushed-liquid-diaphragm-pump-main.webp
+public/images/products/pumps/diaphragm-pumps/dpl60/images/dpl60-brushed-liquid-diaphragm-pump-main.webp
+dpl60-brushless-liquid-diaphragm-pump-main.webp
+public/images/products/pumps/diaphragm-pumps/dpl60/images/dpl60-brushless-liquid-diaphragm-pump-main.webp","dpl60-brushed-liquid-diaphragm-pump-2d-drawing.pdf
+public/documents/products/pumps/diaphragm-pumps/dpl60/drawings/dpl60-brushed-liquid-diaphragm-pump-2d-drawing.pdf
+dpl60-brushless-liquid-diaphragm-pump-2d-drawing.pdf
+public/documents/products/pumps/diaphragm-pumps/dpl60/drawings/dpl60-brushless-liquid-diaphragm-pump-2d-drawing.pdf","dpl60-brushed-liquid-diaphragm-pump.glb
+public/models/products/pumps/diaphragm-pumps/dpl60/dpl60-brushed-liquid-diaphragm-pump.glb
+dpl60-brushless-liquid-diaphragm-pump.glb
+public/models/products/pumps/diaphragm-pumps/dpl60/dpl60-brushless-liquid-diaphragm-pump.glb","详情图片 dpl60-brushed-liquid-diaphragm-pump-main.webp：文件不存在
+详情图片 dpl60-brushless-liquid-diaphragm-pump-main.webp：有刷无刷错配：应为 有刷，实际为 无刷；文件不存在
+详情图片 public/images/products/pumps/diaphragm-pumps/dpl60/images/dpl60-brushless-liquid-diaphragm-pump-main.webp：有刷无刷错配：应为 有刷，实际为 无刷
+2D 图纸 dpl60-brushed-liquid-diaphragm-pump-2d-drawing.pdf：文件不存在
+2D 图纸 dpl60-brushless-liquid-diaphragm-pump-2d-drawing.pdf：有刷无刷错配：应为 有刷，实际为 无刷；文件不存在
+2D 图纸 public/documents/products/pumps/diaphragm-pumps/dpl60/drawings/dpl60-brushless-liquid-diaphragm-pump-2d-drawing.pdf：有刷无刷错配：应为 有刷，实际为 无刷
+3D 模型 dpl60-brushed-liquid-diaphragm-pump.glb：文件不存在
+3D 模型 dpl60-brushless-liquid-diaphragm-pump.glb：有刷无刷错配：应为 有刷，实际为 无刷；文件不存在
+3D 模型 public/models/products/pumps/diaphragm-pumps/dpl60/dpl60-brushless-liquid-diaphragm-pump.glb：有刷无刷错配：应为 有刷，实际为 无刷
+卡片图与详情图片版本不一致：卡片为 有刷，详情包含 有刷、无刷"
+"diaphragm-dpl60-brushless","dpl60-24bb-ep-ps-liquid-diaphragm-pump","DPL60","无刷","/images/products/pumps/diaphragm-pumps/dpl60/images/dpl60-brushless-liquid-diaphragm-pump-main.webp","dpl60-brushed-liquid-diaphragm-pump-main.webp
+public/images/products/pumps/diaphragm-pumps/dpl60/images/dpl60-brushed-liquid-diaphragm-pump-main.webp
+dpl60-brushless-liquid-diaphragm-pump-main.webp
+public/images/products/pumps/diaphragm-pumps/dpl60/images/dpl60-brushless-liquid-diaphragm-pump-main.webp","dpl60-brushed-liquid-diaphragm-pump-2d-drawing.pdf
+public/documents/products/pumps/diaphragm-pumps/dpl60/drawings/dpl60-brushed-liquid-diaphragm-pump-2d-drawing.pdf
+dpl60-brushless-liquid-diaphragm-pump-2d-drawing.pdf
+public/documents/products/pumps/diaphragm-pumps/dpl60/drawings/dpl60-brushless-liquid-diaphragm-pump-2d-drawing.pdf","dpl60-brushed-liquid-diaphragm-pump.glb
+public/models/products/pumps/diaphragm-pumps/dpl60/dpl60-brushed-liquid-diaphragm-pump.glb
+dpl60-brushless-liquid-diaphragm-pump.glb
+public/models/products/pumps/diaphragm-pumps/dpl60/dpl60-brushless-liquid-diaphragm-pump.glb","详情图片 dpl60-brushed-liquid-diaphragm-pump-main.webp：有刷无刷错配：应为 无刷，实际为 有刷；文件不存在
+详情图片 public/images/products/pumps/diaphragm-pumps/dpl60/images/dpl60-brushed-liquid-diaphragm-pump-main.webp：有刷无刷错配：应为 无刷，实际为 有刷
+详情图片 dpl60-brushless-liquid-diaphragm-pump-main.webp：文件不存在
+2D 图纸 dpl60-brushed-liquid-diaphragm-pump-2d-drawing.pdf：有刷无刷错配：应为 无刷，实际为 有刷；文件不存在
+2D 图纸 public/documents/products/pumps/diaphragm-pumps/dpl60/drawings/dpl60-brushed-liquid-diaphragm-pump-2d-drawing.pdf：有刷无刷错配：应为 无刷，实际为 有刷
+2D 图纸 dpl60-brushless-liquid-diaphragm-pump-2d-drawing.pdf：文件不存在
+3D 模型 dpl60-brushed-liquid-diaphragm-pump.glb：有刷无刷错配：应为 无刷，实际为 有刷；文件不存在
+3D 模型 public/models/products/pumps/diaphragm-pumps/dpl60/dpl60-brushed-liquid-diaphragm-pump.glb：有刷无刷错配：应为 无刷，实际为 有刷
+3D 模型 dpl60-brushless-liquid-diaphragm-pump.glb：文件不存在
+卡片图与详情图片版本不一致：卡片为 无刷，详情包含 有刷、无刷"
+"diaphragm-dpl30h-brushed","dpl30h-24ds-ep-ps-liquid-diaphragm-pump","DPL30H","有刷","/images/products/pumps/diaphragm-pumps/dpl30h/images/dpl30h-brushed-liquid-diaphragm-pump-main.webp","dpl30h-brushed-liquid-diaphragm-pump-main.webp
+public/images/products/pumps/diaphragm-pumps/dpl30h/images/dpl30h-brushed-liquid-diaphragm-pump-main.webp
+dpl30h-brushless-liquid-diaphragm-pump-main.webp
+public/images/products/pumps/diaphragm-pumps/dpl30h/images/dpl30h-brushless-liquid-diaphragm-pump-main.webp","dpl30h-brushed-liquid-diaphragm-pump-2d-drawing.pdf
+public/documents/products/pumps/diaphragm-pumps/dpl30h/drawings/dpl30h-brushed-liquid-diaphragm-pump-2d-drawing.pdf
+dpl30h-brushless-liquid-diaphragm-pump-2d-drawing.pdf
+public/documents/products/pumps/diaphragm-pumps/dpl30h/drawings/dpl30h-brushless-liquid-diaphragm-pump-2d-drawing.pdf","dpl30h-brushed-liquid-diaphragm-pump.glb
+public/models/products/pumps/diaphragm-pumps/dpl30h/dpl30h-brushed-liquid-diaphragm-pump.glb
+dpl30h-brushless-liquid-diaphragm-pump.glb
+public/models/products/pumps/diaphragm-pumps/dpl30h/dpl30h-brushless-liquid-diaphragm-pump.glb","详情图片 dpl30h-brushed-liquid-diaphragm-pump-main.webp：文件不存在
+详情图片 dpl30h-brushless-liquid-diaphragm-pump-main.webp：有刷无刷错配：应为 有刷，实际为 无刷；文件不存在
+详情图片 public/images/products/pumps/diaphragm-pumps/dpl30h/images/dpl30h-brushless-liquid-diaphragm-pump-main.webp：有刷无刷错配：应为 有刷，实际为 无刷
+2D 图纸 dpl30h-brushed-liquid-diaphragm-pump-2d-drawing.pdf：文件不存在
+2D 图纸 dpl30h-brushless-liquid-diaphragm-pump-2d-drawing.pdf：有刷无刷错配：应为 有刷，实际为 无刷；文件不存在
+2D 图纸 public/documents/products/pumps/diaphragm-pumps/dpl30h/drawings/dpl30h-brushless-liquid-diaphragm-pump-2d-drawing.pdf：有刷无刷错配：应为 有刷，实际为 无刷
+3D 模型 dpl30h-brushed-liquid-diaphragm-pump.glb：文件不存在
+3D 模型 dpl30h-brushless-liquid-diaphragm-pump.glb：有刷无刷错配：应为 有刷，实际为 无刷；文件不存在
+3D 模型 public/models/products/pumps/diaphragm-pumps/dpl30h/dpl30h-brushless-liquid-diaphragm-pump.glb：有刷无刷错配：应为 有刷，实际为 无刷
+卡片图与详情图片版本不一致：卡片为 有刷，详情包含 有刷、无刷"
+"diaphragm-dpl30h-brushless","dpl30h-24bs-ep-ps-liquid-diaphragm-pump","DPL30H","无刷","/images/products/pumps/diaphragm-pumps/dpl30h/images/dpl30h-brushless-liquid-diaphragm-pump-main.webp","dpl30h-brushed-liquid-diaphragm-pump-main.webp
+public/images/products/pumps/diaphragm-pumps/dpl30h/images/dpl30h-brushed-liquid-diaphragm-pump-main.webp
+dpl30h-brushless-liquid-diaphragm-pump-main.webp
+public/images/products/pumps/diaphragm-pumps/dpl30h/images/dpl30h-brushless-liquid-diaphragm-pump-main.webp","dpl30h-brushed-liquid-diaphragm-pump-2d-drawing.pdf
+public/documents/products/pumps/diaphragm-pumps/dpl30h/drawings/dpl30h-brushed-liquid-diaphragm-pump-2d-drawing.pdf
+dpl30h-brushless-liquid-diaphragm-pump-2d-drawing.pdf
+public/documents/products/pumps/diaphragm-pumps/dpl30h/drawings/dpl30h-brushless-liquid-diaphragm-pump-2d-drawing.pdf","dpl30h-brushed-liquid-diaphragm-pump.glb
+public/models/products/pumps/diaphragm-pumps/dpl30h/dpl30h-brushed-liquid-diaphragm-pump.glb
+dpl30h-brushless-liquid-diaphragm-pump.glb
+public/models/products/pumps/diaphragm-pumps/dpl30h/dpl30h-brushless-liquid-diaphragm-pump.glb","详情图片 dpl30h-brushed-liquid-diaphragm-pump-main.webp：有刷无刷错配：应为 无刷，实际为 有刷；文件不存在
+详情图片 public/images/products/pumps/diaphragm-pumps/dpl30h/images/dpl30h-brushed-liquid-diaphragm-pump-main.webp：有刷无刷错配：应为 无刷，实际为 有刷
+详情图片 dpl30h-brushless-liquid-diaphragm-pump-main.webp：文件不存在
+2D 图纸 dpl30h-brushed-liquid-diaphragm-pump-2d-drawing.pdf：有刷无刷错配：应为 无刷，实际为 有刷；文件不存在
+2D 图纸 public/documents/products/pumps/diaphragm-pumps/dpl30h/drawings/dpl30h-brushed-liquid-diaphragm-pump-2d-drawing.pdf：有刷无刷错配：应为 无刷，实际为 有刷
+2D 图纸 dpl30h-brushless-liquid-diaphragm-pump-2d-drawing.pdf：文件不存在
+3D 模型 dpl30h-brushed-liquid-diaphragm-pump.glb：有刷无刷错配：应为 无刷，实际为 有刷；文件不存在
+3D 模型 public/models/products/pumps/diaphragm-pumps/dpl30h/dpl30h-brushed-liquid-diaphragm-pump.glb：有刷无刷错配：应为 无刷，实际为 有刷
+3D 模型 dpl30h-brushless-liquid-diaphragm-pump.glb：文件不存在
+卡片图与详情图片版本不一致：卡片为 无刷，详情包含 有刷、无刷"
+"diaphragm-dpgl800-ep","dpgl800-24bs6-ep-ps-gas-liquid-diaphragm-pump","DPGL800","无刷","/images/products/pumps/diaphragm-pumps/dpgl800/images/dpgl800-gas-liquid-diaphragm-pump-main.webp","dpgl800-gas-liquid-diaphragm-pump-main.webp
+public/images/products/pumps/diaphragm-pumps/dpgl800/images/dpgl800-gas-liquid-diaphragm-pump-main.webp","dpgl800-24bs6-ep-ps-gas-liquid-diaphragm-pump-2d-drawing.pdf
+public/documents/products/pumps/diaphragm-pumps/dpgl800/drawings/dpgl800-24bs6-ep-ps-gas-liquid-diaphragm-pump-2d-drawing.pdf","dpgl800-24bs6-ep-ps-gas-liquid-diaphragm-pump.glb
+public/models/products/pumps/diaphragm-pumps/dpgl800/dpgl800-24bs6-ep-ps-gas-liquid-diaphragm-pump.glb","详情图片 dpgl800-gas-liquid-diaphragm-pump-main.webp：文件不存在
+2D 图纸 dpgl800-24bs6-ep-ps-gas-liquid-diaphragm-pump-2d-drawing.pdf：文件不存在
+3D 模型 dpgl800-24bs6-ep-ps-gas-liquid-diaphragm-pump.glb：文件不存在"
+"diaphragm-dpgl800-ff","dpgl800-24bs6-ff-ps-gas-liquid-diaphragm-pump","DPGL800","无刷","/images/products/pumps/diaphragm-pumps/dpgl800/images/dpgl800-gas-liquid-diaphragm-pump-main.webp","dpgl800-gas-liquid-diaphragm-pump-main.webp
+public/images/products/pumps/diaphragm-pumps/dpgl800/images/dpgl800-gas-liquid-diaphragm-pump-main.webp","dpgl800-24bs6-ff-ps-gas-liquid-diaphragm-pump-2d-drawing.pdf
+public/documents/products/pumps/diaphragm-pumps/dpgl800/drawings/dpgl800-24bs6-ff-ps-gas-liquid-diaphragm-pump-2d-drawing.pdf","dpgl800-24bs6-ff-ps-gas-liquid-diaphragm-pump.glb
+public/models/products/pumps/diaphragm-pumps/dpgl800/dpgl800-24bs6-ff-ps-gas-liquid-diaphragm-pump.glb","详情图片 dpgl800-gas-liquid-diaphragm-pump-main.webp：文件不存在
+2D 图纸 dpgl800-24bs6-ff-ps-gas-liquid-diaphragm-pump-2d-drawing.pdf：文件不存在
+3D 模型 dpgl800-24bs6-ff-ps-gas-liquid-diaphragm-pump.glb：文件不存在"

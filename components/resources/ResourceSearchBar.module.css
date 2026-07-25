@@ -123,6 +123,8 @@
   .searchRow {
     grid-template-columns: minmax(0, 1fr) 96px;
     gap: 0;
+    width: 100%;
+    margin: 0;
   }
 
   .searchInput {

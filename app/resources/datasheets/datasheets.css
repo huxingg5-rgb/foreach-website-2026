@@ -413,14 +413,6 @@
   transition: transform var(--ease-normal);
 }
 
-.datasheets-page .datasheet-row:hover {
-  background: #f9fcfd;
-}
-
-.datasheets-page .datasheet-row:hover::before {
-  transform: scaleY(1);
-}
-
 .datasheets-page .product-thumb {
   position: relative;
   z-index: 1;
@@ -441,10 +433,6 @@
   object-position: center;
   display: block;
   transition: transform var(--ease-normal);
-}
-
-.datasheets-page .datasheet-row:hover .product-thumb img {
-  transform: scale(1.04);
 }
 
 .datasheets-page .row-main {
@@ -540,13 +528,21 @@
     border-color var(--ease-fast);
 }
 
-.datasheets-page .row-link:hover,
-.datasheets-page .row-download:hover,
-.datasheets-page .row-custom:hover {
-  background: var(--brand-blue);
-  color: var(--brand-cyan);
-  border-color: var(--brand-blue);
+/* DATASHEETS_ACTION_BUTTON_POINTER_HOVER_START */
+/*
+  只有真正支持鼠标悬停的设备才启用按钮 Hover。
+  手机和平板点击后不会残留 Hover 状态。
+*/
+@media (hover: hover) and (pointer: fine) {
+  .datasheets-page .row-link:hover,
+  .datasheets-page .row-download:hover,
+  .datasheets-page .row-custom:hover {
+    background: var(--brand-blue);
+    color: var(--brand-cyan);
+    border-color: var(--brand-blue);
+  }
 }
+/* DATASHEETS_ACTION_BUTTON_POINTER_HOVER_END */
 
 .datasheets-page .row-download svg {
   width: 15px;
@@ -890,3 +886,117 @@
 .datasheets-page {
   --content-width: 1600px;
 }
+
+/* DATASHEETS_POINTER_HOVER_ONLY_START */
+/*
+  规格书卡片交互规则：
+
+  只有真正支持鼠标悬停的设备才启用 Hover。
+  手机和平板点击卡片时不出现背景、绿色线和图片放大。
+*/
+@media (hover: hover) and (pointer: fine) {
+  .datasheets-page .datasheet-row:hover {
+    background: #f9fcfd;
+  }
+
+  .datasheets-page .datasheet-row:hover::before {
+    transform: scaleY(1);
+  }
+
+  .datasheets-page .datasheet-row:hover .product-thumb img {
+    transform: scale(1.04);
+  }
+}
+/* DATASHEETS_POINTER_HOVER_ONLY_END */
+
+/* DATASHEETS_MOBILE_CARD_NO_PRESS_MOVE_START */
+/*
+  手机端规格书卡片本体保持静止。
+
+  这里只处理 article.datasheet-row，
+  不处理卡片内部的查看产品、下载和来图定制按钮。
+*/
+@media (hover: none), (pointer: coarse) {
+  html body .datasheets-page .datasheet-row,
+  html body .datasheets-page .datasheet-row:hover,
+  html body .datasheets-page .datasheet-row:active,
+  html body .datasheets-page .datasheet-row:focus,
+  html body .datasheets-page .datasheet-row:focus-visible,
+  html body .datasheets-page .datasheet-row:focus-within {
+    border-left: 0 !important;
+
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
+    transform: none !important;
+    translate: none !important;
+    scale: none !important;
+
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+}
+/* DATASHEETS_MOBILE_CARD_NO_PRESS_MOVE_END */
+
+/* DATASHEETS_MOBILE_ACTION_PRESS_START */
+/*
+  规格书操作按钮手机端按压反馈：
+
+  1. 按住时显示深蓝底、荧光绿文字
+  2. 松开后立即恢复默认状态
+  3. 不产生缩放、位移或阴影变化
+  4. 防止触屏浏览器残留 hover / focus 状态
+*/
+@media (hover: none), (pointer: coarse) {
+  .datasheets-page .row-link,
+  .datasheets-page .row-download,
+  .datasheets-page .row-custom {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  /*
+    松开手指以后，即使浏览器残留 hover 或 focus，
+    也强制恢复按钮默认样式。
+  */
+  .datasheets-page .row-link:hover:not(:active),
+  .datasheets-page .row-link:focus:not(:active),
+  .datasheets-page .row-link:focus-visible:not(:active),
+  .datasheets-page .row-download:hover:not(:active),
+  .datasheets-page .row-download:focus:not(:active),
+  .datasheets-page .row-download:focus-visible:not(:active),
+  .datasheets-page .row-custom:hover:not(:active),
+  .datasheets-page .row-custom:focus:not(:active),
+  .datasheets-page .row-custom:focus-visible:not(:active) {
+    background: #ffffff !important;
+    color: var(--brand-blue) !important;
+    border-color: var(--brand-blue) !important;
+
+    transform: none !important;
+    translate: none !important;
+    scale: none !important;
+
+    box-shadow: none !important;
+    outline: none !important;
+  }
+
+  /*
+    只有手指正在按住按钮时显示点击反馈。
+  */
+  .datasheets-page .row-link:active,
+  .datasheets-page .row-download:active,
+  .datasheets-page .row-custom:active {
+    background: var(--brand-blue) !important;
+    color: var(--brand-cyan) !important;
+    border-color: var(--brand-blue) !important;
+
+    transform: none !important;
+    translate: none !important;
+    scale: none !important;
+
+    box-shadow: none !important;
+    outline: none !important;
+    transition-duration: 0ms !important;
+  }
+}
+/* DATASHEETS_MOBILE_ACTION_PRESS_END */

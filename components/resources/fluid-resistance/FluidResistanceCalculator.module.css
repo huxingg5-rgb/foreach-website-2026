@@ -251,11 +251,7 @@
   color: var(--brand-green);
 }
 
-.primaryButton:hover {
-  border-color: var(--brand-green);
-  background: var(--brand-green);
-  color: var(--brand-blue);
-}
+
 
 .secondaryButton,
 .actions button {
@@ -264,11 +260,7 @@
   color: var(--brand-blue);
 }
 
-.secondaryButton:hover,
-.actions button:hover {
-  background: var(--brand-blue);
-  color: var(--brand-green);
-}
+
 
 .workspace {
   display: grid;
@@ -311,11 +303,48 @@
   border-color: #e3b8bd;
   color: #a9303b;
 }
+/* ==========================================================
+   流阻计算器按钮设备交互修复
+   ========================================================== */
 
-.actions button.deleteButton:hover {
-  border-color: #a9303b;
-  background: #a9303b;
-  color: #fff;
+/* 电脑端：只有鼠标设备才启用悬停效果 */
+@media (min-width: 769px) and (hover: hover) and (pointer: fine) {
+  .primaryButton:hover {
+    border-color: var(--brand-green);
+    background: var(--brand-green);
+    color: var(--brand-blue);
+  }
+
+  .secondaryButton:hover,
+  .actions button:hover {
+    background: var(--brand-blue);
+    color: var(--brand-green);
+  }
+
+  /* 电脑端删除按钮悬停仍然保留红色 */
+  .actions button.deleteButton:hover {
+    border-color: #a9303b;
+    background: #a9303b;
+    color: #fff;
+  }
+}
+
+/* 手机端：按住时变色，松手后立即恢复 */
+@media (max-width: 768px) {
+  /* 只处理导出 Excel、添加行和删除选中行 */
+  .secondaryButton,
+  .actions button {
+    transition: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  .secondaryButton:active,
+  .actions button:active {
+    border-color: var(--brand-blue) !important;
+    background: var(--brand-blue) !important;
+    color: var(--brand-green) !important;
+  }
 }
 
 .inputTableWrap,
@@ -834,3 +863,101 @@
   }
 
 }
+
+/* FLUID_PRIMARY_BUTTON_MOBILE_PRESS_START */
+/*
+ * 流阻计算器开始计算按钮的独立手机端反馈。
+ *
+ * 默认、hover、focus：
+ * 深蓝底和荧光绿字。
+ *
+ * 手指真正按住时：
+ * 荧光绿底和深蓝字。
+ *
+ * 松手后由默认规则立即恢复。
+ */
+@media (hover: none), (pointer: coarse) {
+  .primaryButton,
+  .primaryButton:hover,
+  .primaryButton:focus,
+  .primaryButton:focus-visible {
+    transform: none !important;
+    transition: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+
+    border-color: #173368 !important;
+    background: #173368 !important;
+    color: #09e9b4 !important;
+
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  .primaryButton:active {
+    transform: none !important;
+    transition: none !important;
+    box-shadow: none !important;
+
+    border-color: #09e9b4 !important;
+    background: #09e9b4 !important;
+    color: #173368 !important;
+  }
+}
+/* FLUID_PRIMARY_BUTTON_MOBILE_PRESS_END */
+
+/* FLUID_MOBILE_ACTIONS_POSITION_START */
+/*
+ * 流阻计算器按钮位置：
+ *
+ * 电脑端：
+ * - 使用计算参数区域中的原按钮。
+ *
+ * 手机端：
+ * - 隐藏原按钮。
+ * - 在管路输入表格下方显示按钮。
+ */
+.mobileButtonStack {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktopButtonStack {
+    display: none !important;
+  }
+
+  .mobileButtonStack {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+
+    width: 100%;
+    margin: 0 !important;
+    padding: 16px 22px 20px;
+
+    box-sizing: border-box;
+    border-top: 1px solid rgba(23, 51, 104, 0.14);
+    background: #ffffff;
+  }
+
+  .mobileButtonStack > button {
+    width: 100%;
+    margin: 0 !important;
+    transform: none !important;
+  }
+}
+/* FLUID_MOBILE_ACTIONS_POSITION_END */
+
+/* FLUID_MOBILE_HIDE_EXPORT_START */
+/*
+ * 流阻计算器：
+ * 手机端暂时隐藏所有“导出 Excel”按钮。
+ *
+ * 电脑端继续保留原导出功能。
+ */
+@media (max-width: 768px) {
+  .page [data-mobile-export-button="true"] {
+    display: none !important;
+  }
+}
+/* FLUID_MOBILE_HIDE_EXPORT_END */
