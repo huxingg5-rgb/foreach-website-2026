@@ -26,7 +26,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { createPortal } from "react-dom";
-import { useEffect, useMemo, useRef, useState } from "react";
+import {
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type MouseEvent as ReactMouseEvent,
+  type PointerEvent as ReactPointerEvent,
+} from "react";
 
 import CompanyInfoRequestModal, {
   type CompanyInfoFormValue,
@@ -54,6 +61,9 @@ const PDF_HEADER_GRAPHIC_SRC =
 
 const PDF_FOOTER_GRAPHIC_SRC =
   "/images/contact-cooperation/pdf/request-form-footer-graphic.svg";
+
+const CLOSE_FEEDBACK_DURATION_MS =
+  220;
 
 /* =========================================================
    预加载图片
@@ -245,6 +255,28 @@ export default function GlobalSelectionCartDrawer() {
     }
 
     setIsDrawingRequestModalOpen(true);
+  }
+
+  function handleCloseCartButtonClick(
+    event: ReactMouseEvent<HTMLButtonElement>
+  ) {
+    event.currentTarget.setAttribute(
+      "data-global-touch-pressed",
+      "true"
+    );
+
+    window.setTimeout(() => {
+      closeCart();
+    }, CLOSE_FEEDBACK_DURATION_MS);
+  }
+
+  function handleCloseCartButtonPointerDown(
+    event: ReactPointerEvent<HTMLButtonElement>
+  ) {
+    event.currentTarget.setAttribute(
+      "data-global-touch-pressed",
+      "true"
+    );
   }
 
   /* =========================================================
@@ -544,7 +576,8 @@ export default function GlobalSelectionCartDrawer() {
 
               <button
                 type="button"
-                onClick={closeCart}
+                onPointerDown={handleCloseCartButtonPointerDown}
+                onClick={handleCloseCartButtonClick}
                 aria-label={isEnglish ? `${t("Close")} ${t("Product Selection List")}` : "关闭选型清单"}
               >
                 <svg
@@ -703,7 +736,7 @@ export default function GlobalSelectionCartDrawer() {
               </button>
 
               <button
-                className={styles.primaryButton}
+                className={`${styles.primaryButton} ${styles.desktopPdfAction}`}
                 type="button"
                 onClick={handleGeneratePdfList}
               >

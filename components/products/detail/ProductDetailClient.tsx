@@ -1540,9 +1540,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
    * 当前测试数据尚未连接选型主图，因此保留 HTML 原型中的
    * 三个 SVG 缩略图，便于核对版式。
    */
-  const showThumbnailRow = hasRealImages
-    ? realImages.length > 0
-    : true;
+  const showThumbnailRow = hasRealImages ? realImages.length > 0 : true;
   const zoomStyle: ZoomStyle = {
     "--zoom-x": `${zoomPosition.x}%`,
     "--zoom-y": `${zoomPosition.y}%`,

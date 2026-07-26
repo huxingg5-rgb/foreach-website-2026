@@ -269,6 +269,14 @@
   color: #09e9b4;
 }
 
+.head > button[data-global-touch-pressed="true"] {
+  border: 2px solid #09e9b4 !important;
+  background: #09e9b4 !important;
+  color: #173368 !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
 /* =========================================================
    抽屉内容
 ========================================================= */
@@ -816,7 +824,24 @@
   }
 
   .footer {
-    grid-template-columns: 1fr;
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+    gap: 10px;
+  }
+
+  .requestDrawingButton {
+    grid-column: 1 / -1;
+  }
+
+  /*
+   * 手机端不生成 PDF 清单按钮的布局盒。
+   * display:none 会同时移出焦点顺序和无障碍树，PC 端逻辑保持不变。
+   */
+  .desktopPdfAction {
+    display: none;
   }
 
   .itemHead {
@@ -868,6 +893,18 @@
   .floatingActions button:last-child:focus-visible:not(:active) span {
     background: #09e9b4;
     color: #173368;
+  }
+
+  /*
+   * 手机端关闭按钮按下时使用品牌荧光底和深蓝 X。
+   * 同时覆盖全站触摸反馈的默认深蓝底，松手后由全局交互层移除属性。
+   */
+  .head > button:active {
+    border: 2px solid #09e9b4 !important;
+    background: #09e9b4 !important;
+    color: #173368 !important;
+    box-shadow: none !important;
+    transform: none !important;
   }
 
   .head > button:hover:not(:active),

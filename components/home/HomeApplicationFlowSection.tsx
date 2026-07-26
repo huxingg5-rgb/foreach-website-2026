@@ -697,7 +697,7 @@ export default function HomeApplicationFlowSection({
       className="home-flow-inline-link"
       aria-label={getHomeFlowText(tag.label, locale)}
     >
-      <span>
+      <span className="brand-navy-button-motion">
         {getHomeFlowText(tag.label, locale)}
       </span>
     </Link>
@@ -714,7 +714,7 @@ export default function HomeApplicationFlowSection({
         ? "/applications/ivd"
         : `/${locale}/applications/ivd`
     }
-    className="home-flow-btn"
+    className="home-flow-btn brand-navy-button-motion"
     data-home-action="applications"
     onClick={(event) => {
       event.stopPropagation();
@@ -732,7 +732,7 @@ export default function HomeApplicationFlowSection({
         ? "/products"
         : `/${locale}/products`
     }
-    className="home-flow-btn"
+    className="home-flow-btn brand-navy-button-motion"
     data-home-action="products"
     onClick={(event) => {
       event.stopPropagation();

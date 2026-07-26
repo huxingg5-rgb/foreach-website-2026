@@ -163,3 +163,35 @@
     line-height: 1.7;
   }
 }
+
+/* ABOUT_CENTER_BANNER_MOBILE_420_START */
+/*
+  关于我们公共 Banner：
+
+  适用页面：
+  - 关于恒永达
+  - 企业文化
+  - 发展历程
+  - 质量体系
+  - 研发与制造
+
+  手机端 Banner 本体固定为 420px。
+*/
+@media (max-width: 760px) {
+  .about-center-banner.about-center-banner {
+    height: 420px !important;
+    min-height: 420px !important;
+    max-height: 420px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .about-center-banner
+    .about-center-banner__inner.about-center-banner__inner {
+    height: 420px !important;
+    min-height: 420px !important;
+    max-height: 420px !important;
+    box-sizing: border-box !important;
+  }
+}
+/* ABOUT_CENTER_BANNER_MOBILE_420_END */

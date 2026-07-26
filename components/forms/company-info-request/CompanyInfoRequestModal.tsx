@@ -26,7 +26,13 @@
    3. 当前只是为了先把前端流程和视觉跑通
 ========================================================= */
 
-import { useEffect, useState, type FormEvent } from "react";
+import {
+  useEffect,
+  useState,
+  type FormEvent,
+  type MouseEvent as ReactMouseEvent,
+  type PointerEvent as ReactPointerEvent,
+} from "react";
 
 import { getCompanyInfoRequestCopy } from "./copy";
 import styles from "./CompanyInfoRequestModal.module.css";
@@ -36,6 +42,9 @@ import styles from "./CompanyInfoRequestModal.module.css";
    当前设为 60 秒，也就是 1 分钟只能发送 1 次。
 */
 const EMAIL_CODE_COOLDOWN_SECONDS = 60;
+
+const CLOSE_FEEDBACK_DURATION_MS =
+  220;
 
 type InquiryApiResponse = {
   success?: boolean;
@@ -512,6 +521,29 @@ export default function CompanyInfoRequestModal({
       setIsSubmitting(false);
     }
   }
+
+  function handleCloseButtonClick(
+    event: ReactMouseEvent<HTMLButtonElement>
+  ) {
+    event.currentTarget.setAttribute(
+      "data-global-touch-pressed",
+      "true"
+    );
+
+    window.setTimeout(() => {
+      onClose();
+    }, CLOSE_FEEDBACK_DURATION_MS);
+  }
+
+  function handleCloseButtonPointerDown(
+    event: ReactPointerEvent<HTMLButtonElement>
+  ) {
+    event.currentTarget.setAttribute(
+      "data-global-touch-pressed",
+      "true"
+    );
+  }
+
   return (
     <div className={styles.modalLayer}>
       <button
@@ -538,7 +570,8 @@ export default function CompanyInfoRequestModal({
 
           <button
             type="button"
-            onClick={onClose}
+            onPointerDown={handleCloseButtonPointerDown}
+            onClick={handleCloseButtonClick}
             aria-label={copy.close}
           >
             <svg

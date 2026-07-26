@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useMemo, useState } from "react";
 
@@ -274,7 +274,13 @@ export default function FittingReplacementHome({
                 {homeText?.history.label ?? "示例型号"}
               </span>
 
-              {exampleModels.map((model) => {
+              {exampleModels
+                .filter(
+                  (model) =>
+                    model !== "P-982BLKx" &&
+                    model !== "P-1082BLKx"
+                )
+                .map((model) => {
                 return (
                   <button
                     className={`frp-history-button ${

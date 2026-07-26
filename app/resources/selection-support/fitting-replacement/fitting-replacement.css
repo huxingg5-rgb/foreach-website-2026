@@ -1,4 +1,4 @@
-﻿/* =========================================================
+/* =========================================================
    fitting-replacement.css
    鎭掓案杈惧畼缃戯綔鎺ュご鏇夸唬鏌ヨ椤甸潰涓撶敤鏍峰紡
 
@@ -1048,3 +1048,315 @@
   padding-top: 24px;
 }
 /* FITTING_REPLACEMENT_CARD_SECTION_TOP_GAP_END */
+/* FITTING_REPLACEMENT_MOBILE_SEARCH_REFINEMENT_START */
+/*
+  接头兼容型号查询页面优化：
+
+  1. 手机端搜索框改成与全站搜索一致的横向组合形式
+  2. 输入框与查询按钮放在同一个边框容器内
+  3. 示例型号缩小高度、字号和间距
+  4. 产品图片区域统一使用纯白色背景
+*/
+
+/* 产品图片区域：桌面端和手机端全部改成纯白色 */
+.fitting-replacement-page .frp-compatible-card-image {
+  background: #ffffff !important;
+}
+
+/* 手机端搜索区域 */
+@media (max-width: 720px) {
+  /*
+    搜索输入框和查询按钮保持同一行，
+    不再让查询按钮单独占据下一行。
+  */
+  .fitting-replacement-page .frp-search-row {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 88px !important;
+    gap: 0 !important;
+    width: 100% !important;
+    overflow: hidden;
+    border: 1px solid rgba(23, 51, 104, 0.2);
+    border-radius: 6px;
+    background: #ffffff;
+  }
+
+  /*
+    输入框取消独立边框和圆角，
+    使用外层搜索容器的统一边框。
+  */
+  .fitting-replacement-page .frp-search-input {
+    min-width: 0;
+    width: 100%;
+    height: 48px;
+    padding: 0 14px;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: #ffffff;
+    text-align: left;
+    font-size: 15px;
+    box-shadow: none !important;
+  }
+
+  .fitting-replacement-page .frp-search-input:focus {
+    border: 0 !important;
+    outline: none;
+    box-shadow: none !important;
+  }
+
+  /*
+    查询按钮改成手机端全站搜索同款：
+    位于输入框右侧、固定宽度、深蓝色背景。
+  */
+  .fitting-replacement-page .frp-search-button {
+    width: 88px;
+    height: 48px;
+    margin-top: 0 !important;
+    padding: 0 12px;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: #173368;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 48px;
+  }
+
+  .fitting-replacement-page .frp-search-button:hover,
+  .fitting-replacement-page .frp-search-button:active {
+    background: #173368;
+    color: #ffffff;
+  }
+
+  /*
+    示例型号区域收紧：
+    减少顶部距离、按钮高度和标签间距。
+  */
+  .fitting-replacement-page .frp-history-row {
+    width: 100% !important;
+    margin-top: 8px;
+    gap: 6px;
+    align-items: center;
+  }
+
+  .fitting-replacement-page .frp-history-label {
+    margin-right: 0;
+    font-size: 12px;
+    line-height: 26px;
+  }
+
+  .fitting-replacement-page .frp-history-button {
+    min-width: 0;
+    width: auto;
+    height: 26px;
+    padding: 0 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    line-height: 24px;
+    white-space: nowrap;
+  }
+
+  /* 手机端产品图片继续保持纯白色 */
+  .fitting-replacement-page .frp-compatible-card-image {
+    background: #ffffff !important;
+  }
+}
+/* FITTING_REPLACEMENT_MOBILE_SEARCH_REFINEMENT_END */
+/* FRP_MOBILE_TWO_ACTIONS_START */
+/*
+  接头兼容型号查询页：
+  手机端“查看详情”和“加入清单”保持同一排。
+*/
+@media (max-width: 720px) {
+  /*
+    按钮区域是产品卡片正文中的最后一个直接子元素。
+    这里只影响兼容型号查询页，不影响其他公共产品卡片。
+  */
+  .fitting-replacement-page
+    .frp-compatible-card-body
+    > div:last-child {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    width: 100%;
+    padding-top: 14px;
+  }
+
+  .fitting-replacement-page
+    .frp-compatible-card-body
+    > div:last-child
+    > button,
+  .fitting-replacement-page
+    .frp-compatible-card-body
+    > div:last-child
+    > a {
+    width: 100%;
+    min-width: 0;
+    height: 44px;
+    padding: 0 8px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+}
+/* FRP_MOBILE_TWO_ACTIONS_END */
+
+/* FRP_MOBILE_CARD_BUTTON_TOUCH_FIX_START */
+/*
+ * 接头兼容型号查询页手机端触摸修正：
+ *
+ * 1. 卡片按下时不位移、不缩放、不放大图片。
+ * 2. 普通按钮松手后恢复白底深蓝字。
+ * 3. 真正的“已加入清单”状态继续保持深蓝底荧光绿字。
+ */
+@media (max-width: 760px) {
+  /* ========================================================
+     一、取消产品卡片本体的点击和残留 Hover 动效
+  ======================================================== */
+
+  .fitting-replacement-page .frp-compatible-card,
+  .fitting-replacement-page .frp-compatible-card:hover,
+  .fitting-replacement-page .frp-compatible-card:active,
+  .fitting-replacement-page .frp-compatible-card:focus,
+  .fitting-replacement-page .frp-compatible-card:focus-within {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  /*
+   * 禁止卡片图片在手机端因父级 hover 而缩放。
+   */
+  .fitting-replacement-page
+    .frp-compatible-card
+    .frp-compatible-card-image,
+  .fitting-replacement-page
+    .frp-compatible-card
+    .frp-compatible-card-image img,
+  .fitting-replacement-page
+    .frp-compatible-card:hover
+    .frp-compatible-card-image,
+  .fitting-replacement-page
+    .frp-compatible-card:hover
+    .frp-compatible-card-image img,
+  .fitting-replacement-page
+    .frp-compatible-card:active
+    .frp-compatible-card-image,
+  .fitting-replacement-page
+    .frp-compatible-card:active
+    .frp-compatible-card-image img {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  /* ========================================================
+     二、按钮松手后取消粘住的 hover / focus 状态
+
+     排除：
+     - class 中含 active 的真实选中按钮
+     - aria-pressed=true 的真实选中按钮
+     - 手指当前仍在按住的按钮
+  ======================================================== */
+
+  .fitting-replacement-page
+    .frp-compatible-card
+    button:not([class*="active" i]):not([aria-pressed="true"])
+    :where(:hover, :focus, :focus-visible):not(:active),
+  .fitting-replacement-page
+    .frp-compatible-card
+    button:not([class*="active" i]):not([aria-pressed="true"])
+    [data-global-touch-pressed="false"] {
+    transform: none !important;
+  }
+
+  /*
+   * 上面的后代选择器只作为兼容保护。
+   * 下面才是真正针对按钮本身的恢复规则。
+   */
+  .fitting-replacement-page
+    .frp-compatible-card
+    button:not([class*="active" i]):not([aria-pressed="true"]):hover:not(:active):not([data-global-touch-pressed="true"]),
+  .fitting-replacement-page
+    .frp-compatible-card
+    button:not([class*="active" i]):not([aria-pressed="true"]):focus:not(:active):not([data-global-touch-pressed="true"]),
+  .fitting-replacement-page
+    .frp-compatible-card
+    button:not([class*="active" i]):not([aria-pressed="true"]):focus-visible:not(:active):not([data-global-touch-pressed="true"]) {
+    transform: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+
+    border-color: rgba(23, 51, 104, 0.28) !important;
+    background: #ffffff !important;
+    color: #173368 !important;
+  }
+
+  /* ========================================================
+     三、保留真正的“已加入清单”状态
+  ======================================================== */
+
+  .fitting-replacement-page
+    .frp-compatible-card
+    button[class*="active" i],
+  .fitting-replacement-page
+    .frp-compatible-card
+    button[aria-pressed="true"] {
+    transform: none !important;
+    box-shadow: none !important;
+
+    border-color: #173368 !important;
+    background: #173368 !important;
+    color: #09e9b4 !important;
+  }
+}
+/* FRP_MOBILE_CARD_BUTTON_TOUCH_FIX_END */
+
+/* FRP_MOBILE_PAGINATION_TOUCH_FIX_START */
+/*
+ * 接头兼容查询页手机端分页按钮：
+ * 按住时显示点击反馈，松手后立即恢复，
+ * 防止触屏浏览器残留 hover / focus。
+ */
+@media (hover: none), (pointer: coarse) {
+  /* 松手后的默认状态 */
+  .fitting-replacement-page
+    .frp-pagination
+    button:not(:disabled):hover:not(:active):not([data-global-touch-pressed="true"]),
+  .fitting-replacement-page
+    .frp-pagination
+    button:not(:disabled):focus:not(:active):not([data-global-touch-pressed="true"]),
+  .fitting-replacement-page
+    .frp-pagination
+    button:not(:disabled):focus-visible:not(:active):not([data-global-touch-pressed="true"]) {
+    transform: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+
+    border-color: rgba(23, 51, 104, 0.28) !important;
+    background: #ffffff !important;
+    color: #173368 !important;
+  }
+
+  /* 手指按住时的点击反馈 */
+  .fitting-replacement-page
+    .frp-pagination
+    button:not(:disabled):active,
+  .fitting-replacement-page
+    .frp-pagination
+    button:not(:disabled)[data-global-touch-pressed="true"] {
+    transform: none !important;
+    box-shadow: none !important;
+
+    border-color: #173368 !important;
+    background: #173368 !important;
+    color: #09e9b4 !important;
+  }
+
+  /* 保留分页禁用状态 */
+  .fitting-replacement-page
+    .frp-pagination
+    button:disabled {
+    transform: none !important;
+    box-shadow: none !important;
+    cursor: not-allowed !important;
+    opacity: 0.45 !important;
+  }
+}
+/* FRP_MOBILE_PAGINATION_TOUCH_FIX_END */

@@ -122,6 +122,14 @@
   color: #09e9b4;
 }
 
+.modalHead > button[data-global-touch-pressed="true"] {
+  border: 2px solid #09e9b4 !important;
+  background: #09e9b4 !important;
+  color: #173368 !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
 /* =========================================================
    表单区域
 ========================================================= */
@@ -460,6 +468,14 @@
 }
 
 @media (hover: none), (pointer: coarse) {
+  .modalHead > button:active {
+    border: 2px solid #09e9b4 !important;
+    background: #09e9b4 !important;
+    color: #173368 !important;
+    box-shadow: none !important;
+    transform: none !important;
+  }
+
   .modalHead > button:hover:not([data-global-touch-pressed="true"]),
   .modalHead > button:focus:not([data-global-touch-pressed="true"]) {
     border-color: rgba(255, 255, 255, 0.32);

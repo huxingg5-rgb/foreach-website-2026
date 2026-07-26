@@ -1077,7 +1077,7 @@ export default function ContactInquiryForm({
               />
 
               <button
-                className="contact-mini-button"
+                className="contact-mini-button brand-navy-button-motion"
                 type="button"
                 onClick={handleSendEmailCode}
                 disabled={
@@ -1105,7 +1105,7 @@ export default function ContactInquiryForm({
               />
 
               <button
-                className="contact-mini-button"
+                className="contact-mini-button brand-navy-button-motion"
                 type="button"
                 onClick={handleVerifyEmailCode}
                 disabled={
@@ -1254,7 +1254,7 @@ export default function ContactInquiryForm({
 
           <div className="contact-submit-actions">
             <div className="contact-submit-buttons">
-              <label className="contact-file-button">
+              <label className="contact-file-button brand-navy-button-motion">
                 {data.form.uploadButton}
                 <input
                   type="file"
@@ -1266,7 +1266,7 @@ export default function ContactInquiryForm({
               </label>
 
               <button
-                className="contact-submit-button"
+                className="contact-submit-button brand-navy-button-motion"
                 type="submit"
                 disabled={isSubmitting}
               >

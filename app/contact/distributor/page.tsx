@@ -78,13 +78,16 @@ export default function ChineseDistributorFallbackPage() {
             </p>
 
             <div className={styles.actions}>
-              <Link href="/contact" className={styles.primaryButton}>
+              <Link
+                href="/contact"
+                className={`${styles.primaryButton} brand-navy-button-motion`}
+              >
                 返回联系我们
               </Link>
 
               <Link
                 href="/en/contact/distributor"
-                className={styles.secondaryButton}
+                className={`${styles.secondaryButton} brand-navy-button-motion`}
               >
                 查看英文经销商页面
               </Link>
@@ -110,4 +113,4 @@ export default function ChineseDistributorFallbackPage() {
       </section>
     </main>
   );
-} 
+}
