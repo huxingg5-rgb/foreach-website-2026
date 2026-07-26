@@ -2,25 +2,22 @@
 
 /* =========================================================
    FittingReplacementDrawingPreview.tsx
-   恒永达官网｜接头详情页 2D 图纸预览组件
+   恒永达官网｜全局 2D 图纸预览组件
 
-   文件路径：
-   components/resources/fitting-replacement/FittingReplacementDrawingPreview.tsx
-
-   作用：
-   1. 进入详情页后立即挂载 iframe，让 2D PDF 图纸提前加载
-   2. 默认用“点击预览图纸”封面盖住 PDF
-   3. 用户点击封面后，仅隐藏封面，不重新加载 PDF
-   4. 不显示下载按钮
-   5. 文案从详情页 detailText.drawingPreview 传入，支持多语言
+   规则：
+   1. 桌面端继续使用 iframe 内嵌 PDF
+   2. 手机端使用 PDF.js 将 PDF 绘制到 Canvas
+   3. 手机端完全不挂载 iframe、object 或 embed
+   4. 后续所有复用本组件的 2D PDF 自动获得相同能力
 ========================================================= */
 
 import { useEffect, useState } from "react";
 
 import LoadingProgress from "@/components/common/LoadingProgress";
+import MobilePdfCanvasViewer from "@/components/common/MobilePdfCanvasViewer";
 
-/* PDF 加载遮罩兜底时间 */
 const DRAWING_PREVIEW_LOADING_TIME = 1200;
+const MOBILE_PDF_MEDIA_QUERY = "(max-width: 760px)";
 
 interface FittingReplacementDrawingPreviewText {
   readonly title: string;
@@ -36,6 +33,8 @@ interface FittingReplacementDrawingPreviewProps {
   text: FittingReplacementDrawingPreviewText;
 }
 
+type ViewerMode = "pending" | "mobile" | "desktop";
+
 export default function FittingReplacementDrawingPreview({
   drawingPdfPreviewHref,
   productModel,
@@ -43,9 +42,36 @@ export default function FittingReplacementDrawingPreview({
 }: FittingReplacementDrawingPreviewProps) {
   const [isDrawingPreviewVisible, setIsDrawingPreviewVisible] = useState(false);
   const [isDrawingLoading, setIsDrawingLoading] = useState(true);
+  const [viewerMode, setViewerMode] = useState<ViewerMode>("pending");
 
   useEffect(() => {
-    if (!isDrawingPreviewVisible || !isDrawingLoading) {
+    const mediaQuery = window.matchMedia(MOBILE_PDF_MEDIA_QUERY);
+    const updateViewerMode = () => {
+      setViewerMode(mediaQuery.matches ? "mobile" : "desktop");
+    };
+
+    updateViewerMode();
+
+    if (typeof mediaQuery.addEventListener === "function") {
+      mediaQuery.addEventListener("change", updateViewerMode);
+      return () => mediaQuery.removeEventListener("change", updateViewerMode);
+    }
+
+    mediaQuery.addListener(updateViewerMode);
+    return () => mediaQuery.removeListener(updateViewerMode);
+  }, []);
+
+  useEffect(() => {
+    setIsDrawingPreviewVisible(false);
+    setIsDrawingLoading(true);
+  }, [drawingPdfPreviewHref]);
+
+  useEffect(() => {
+    if (
+      viewerMode !== "desktop" ||
+      !isDrawingPreviewVisible ||
+      !isDrawingLoading
+    ) {
       return;
     }
 
@@ -53,35 +79,55 @@ export default function FittingReplacementDrawingPreview({
       setIsDrawingLoading(false);
     }, DRAWING_PREVIEW_LOADING_TIME);
 
-    return () => {
-      window.clearTimeout(loadingTimer);
-    };
-  }, [isDrawingPreviewVisible, isDrawingLoading]);
+    return () => window.clearTimeout(loadingTimer);
+  }, [isDrawingLoading, isDrawingPreviewVisible, viewerMode]);
+
+  const containsChinese = /[\u3400-\u9fff]/.test(
+    `${text.loadingLabel}${text.previewButton}${text.description}`,
+  );
+
+  const mobileErrorLabel = containsChinese
+    ? "图纸加载失败，请刷新页面后重试"
+    : "Unable to load the drawing. Refresh the page and try again.";
+
+  const mobilePageLabel = containsChinese ? "页" : "page";
 
   return (
     <section className="frd-drawing-section">
-<div className="frd-drawing-viewer">
-        <LoadingProgress
-          active={isDrawingPreviewVisible && isDrawingLoading}
-          label={text.loadingLabel}
-        />
+      <div className="frd-drawing-viewer">
+        {viewerMode === "desktop" ? (
+          <>
+            <LoadingProgress
+              active={isDrawingPreviewVisible && isDrawingLoading}
+              label={text.loadingLabel}
+            />
 
-        {/* 
-          PDF iframe 始终挂载：
-          1. 页面进入后立即开始加载 PDF
-          2. 封面只是盖在上面
-          3. 点击封面后隐藏封面，直接看到已加载的 PDF
-        */}
-        <iframe
-          key={drawingPdfPreviewHref}
-          src={drawingPdfPreviewHref}
-          className="frd-drawing-object is-visible"
-          title={text.iframeTitle ?? `${productModel} 2D PDF drawing`}
-          loading="eager"
-          onLoad={() => {
-            setIsDrawingLoading(false);
-          }}
-        />
+            <iframe
+              key={drawingPdfPreviewHref}
+              src={drawingPdfPreviewHref}
+              className="frd-drawing-object is-visible"
+              title={text.iframeTitle ?? `${productModel} 2D PDF drawing`}
+              loading="eager"
+              onLoad={() => {
+                setIsDrawingLoading(false);
+              }}
+            />
+          </>
+        ) : null}
+
+        {viewerMode === "mobile" && isDrawingPreviewVisible ? (
+          <MobilePdfCanvasViewer
+            pdfUrl={drawingPdfPreviewHref}
+            documentTitle={productModel}
+            loadingLabel={text.loadingLabel}
+            errorLabel={mobileErrorLabel}
+            pageLabel={mobilePageLabel}
+          />
+        ) : null}
+
+        {viewerMode === "pending" && isDrawingPreviewVisible ? (
+          <LoadingProgress active label={text.loadingLabel} />
+        ) : null}
 
         {!isDrawingPreviewVisible ? (
           <button
@@ -92,9 +138,7 @@ export default function FittingReplacementDrawingPreview({
             }}
           >
             <span className="frd-drawing-play-icon" aria-hidden="true" />
-
             <strong>{text.previewButton}</strong>
-
             <em>{text.description}</em>
           </button>
         ) : null}
