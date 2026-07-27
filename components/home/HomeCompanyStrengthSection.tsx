@@ -183,7 +183,7 @@ export default function HomeCompanyStrengthSection({ // 定义并导出首页公
               </div> {/* 数据卡片网格结束 */}
 
               <div className="home-company-about-actions"> {/* 公司介绍按钮区域 */}
-                <Link className="home-company-primary-btn" href={aboutForeachHref}> {/* 查看更多按钮 */}
+                <Link className="home-company-primary-btn brand-navy-button-motion" href={aboutForeachHref}> {/* 查看更多按钮 */}
                   {getHomeCompanyText(aboutData.contactButton, locale)} {/* 联系我们按钮多语言文字 */}
                 </Link> {/* 联系我们按钮结束 */}
               </div> {/* 公司介绍按钮区域结束 */}

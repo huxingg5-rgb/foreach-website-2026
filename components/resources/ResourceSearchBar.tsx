@@ -14,7 +14,10 @@
    4. 页面只负责传入 value / onChange / onSearch
 ========================================================= */
 
-import type { FormEvent } from "react";
+import {
+  useState,
+  type FormEvent,
+} from "react";
 
 import styles from "./ResourceSearchBar.module.css";
 
@@ -38,6 +41,7 @@ export type ResourceSearchBarProps = {
   recentKeywords?: string[];
   showRecentKeywords?: boolean;
   classNames?: ResourceSearchBarClassNames;
+  context?: "default" | "product-selection";
 };
 
 function normalizeKeyword(value: string) {
@@ -54,10 +58,21 @@ export default function ResourceSearchBar({
   recentKeywords = ["柱塞泵", "Q20", "电磁阀", "高压阀", "压力传感器"],
   showRecentKeywords = true,
   classNames = {},
+  context = "default",
 }: ResourceSearchBarProps) {
+  const [
+    isSubmitPressed,
+    setIsSubmitPressed,
+  ] = useState(false);
+
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    onSearch(value.trim());
+
+    const normalizedValue =
+      value.trim();
+
+    onChange(normalizedValue);
+    onSearch(normalizedValue);
   }
 
   function handleRecentKeywordClick(keyword: string) {
@@ -75,16 +90,47 @@ export default function ResourceSearchBar({
     classNames.recentButton ?? styles.historyButton;
 
   return (
-    <section className={rootClassName} data-touch-feedback="neutral">
+    <section
+      className={rootClassName}
+      data-search-context={context}
+      data-touch-feedback="neutral"
+    >
       <form className={formClassName} onSubmit={handleSubmit}>
         <input
           className={inputClassName}
+          type="search"
+          name="resource-search"
+          enterKeyHint="search"
+          autoComplete="off"
           value={value}
           placeholder={placeholder}
           onChange={(event) => onChange(event.target.value)}
         />
 
-        <button className={buttonClassName} type="submit">
+        <button
+          className={buttonClassName}
+          type="submit"
+          data-pressed={
+            isSubmitPressed
+              ? "true"
+              : "false"
+          }
+          onPointerDown={() => {
+            setIsSubmitPressed(true);
+          }}
+          onPointerUp={() => {
+            setIsSubmitPressed(false);
+          }}
+          onPointerCancel={() => {
+            setIsSubmitPressed(false);
+          }}
+          onPointerLeave={() => {
+            setIsSubmitPressed(false);
+          }}
+          onBlur={() => {
+            setIsSubmitPressed(false);
+          }}
+        >
           {searchButtonText}
         </button>
       </form>

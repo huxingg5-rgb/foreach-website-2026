@@ -47,7 +47,7 @@ export default function HomeNewsSection({ locale }: HomeNewsSectionProps) { // �
             </h2> {/* 新闻模块主标题结束 */}
           </div> {/* 新闻标题容器结束 */}
 
-          <nav // 新闻分类按钮导航开始
+          <nav hidden // 新闻分类按钮导航开始
             className="home-news-controls" // 新闻分类按钮区域 class
             aria-label={getHomeNewsText(homeNewsData.tabsAriaLabel, locale)} // 新闻分类按钮区域无障碍说明
           > {/* 新闻分类按钮导航开始标签结束 */}

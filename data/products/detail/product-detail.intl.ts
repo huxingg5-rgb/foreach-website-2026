@@ -4225,7 +4225,16 @@ export function localizeProductDetailData<T extends DetailRecord>(data: T): T {
     data.description || "",
     context
   );
-  localized.productTypeName = productName;
+  const valvelessSeries =
+    /^drpl(?:-|$)/i.test(String(data.slug || data.productCode || data.model || ""))
+      ? "DRPL"
+      : "RPL";
+  localized.productTypeName =
+    productName === "Valveless Piston Pump"
+      ? valvelessSeries === "DRPL"
+        ? "DRPL Dual-Head Valveless Pump"
+        : "RPL Valveless Pump"
+      : productName;
   localized.categoryLabel =
     productName.includes("Fitting") ||
     productName === "Inline Filter" ||

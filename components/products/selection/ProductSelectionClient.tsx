@@ -3043,7 +3043,10 @@ export default function ProductSelectionClient({
         .map((item) => item.productCode)
     );
   }, [selectionCartItems]);
-const [searchKeyword, setSearchKeyword] = useState("");
+  const [searchInputValue, setSearchInputValue] =
+    useState("");
+  const [searchKeyword, setSearchKeyword] =
+    useState("");
   const [mobileCategoryOpen, setMobileCategoryOpen] = useState(false);
   const [mobileOpenFilterGroups, setMobileOpenFilterGroups] = useState<
     Record<string, boolean>
@@ -3056,6 +3059,32 @@ const [searchKeyword, setSearchKeyword] = useState("");
   });
   const [currentProductPage, setCurrentProductPage] = useState(1);
   const [productsPageSize, setProductsPageSize] = useState(12);
+
+  function handleSearchInputChange(
+    value: string
+  ) {
+    setSearchInputValue(value);
+
+    if (!value.trim()) {
+      setSearchKeyword("");
+      setCurrentProductPage(1);
+    }
+  }
+
+  function handleProductSearch(
+    value: string
+  ) {
+    const normalizedValue =
+      value.trim();
+
+    setSearchInputValue(
+      normalizedValue
+    );
+    setSearchKeyword(
+      normalizedValue
+    );
+    setCurrentProductPage(1);
+  }
 
   const activeCategory = useMemo(() => {
     return (
@@ -3569,6 +3598,7 @@ const [searchKeyword, setSearchKeyword] = useState("");
             initialFilters
           )
     );
+    setSearchInputValue("");
     setSearchKeyword("");
     setMobileCategoryOpen(false);
     setMobileOpenFilterGroups(
@@ -3660,6 +3690,7 @@ const [searchKeyword, setSearchKeyword] = useState("");
     setActiveCategoryId(categoryId);
     setActiveProductTypeId(firstProductTypeId);
     setSelectedFilters(getDefaultSelectedFilters(categoryId, firstProductTypeId));
+    setSearchInputValue("");
     setSearchKeyword("");
     setMobileCategoryOpen(false);
     setMobileOpenFilterGroups(getDefaultMobileOpenFilterGroups(firstProductTypeId));
@@ -3687,6 +3718,10 @@ const [searchKeyword, setSearchKeyword] = useState("");
 
       setSelectedFilters(
         {}
+      );
+
+      setSearchInputValue(
+        ""
       );
 
       setSearchKeyword(
@@ -4664,6 +4699,7 @@ function isFilterOptionActive(
 
     setActiveProductTypeId(firstProductTypeId);
     setSelectedFilters(getDefaultSelectedFilters(activeCategoryId, firstProductTypeId));
+    setSearchInputValue("");
     setSearchKeyword("");
     setMobileOpenFilterGroups(getDefaultMobileOpenFilterGroups(firstProductTypeId));
   }
@@ -4770,12 +4806,13 @@ function isFilterOptionActive(
         <main className="products-main">
           <div className="products-container">
             <ResourceSearchBar
-              value={searchKeyword}
-              onChange={setSearchKeyword}
-              onSearch={(value) => setSearchKeyword(value)}
+              value={searchInputValue}
+              onChange={handleSearchInputChange}
+              onSearch={handleProductSearch}
               placeholder={pageText.searchPlaceholder}
               searchButtonText={pageText.searchButton}
               showRecentKeywords={false}
+              context="product-selection"
             />
 
             <ProductCategoryTabs

@@ -1,10 +1,17 @@
 "use client";
 
 ﻿
-import { useEffect, useRef, useState, type CSSProperties } from "react";
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  type CSSProperties,
+} from "react";
 // 杩欐槸鍏充簬 components/home/HomeHeroSection.tsx 鐨勬枃浠讹細鐢ㄤ簬绠＄悊棣栭〉绗竴灞?Hero 棣栧睆鍐呭
 // 杩欎釜鏂囦欢鐨勪綔鐢細鎶婇椤甸灞忎粠 HomePageContent.tsx 涓媶鍑烘潵锛屾柟渚垮悗缁淮鎶?
 
+import Image from "next/image";
 import Link from "next/link";
 
 import {
@@ -21,6 +28,11 @@ export default function HomeHeroSection({
   locale,
 }: HomeHeroSectionProps) {
   const homeText = homeI18n[locale];
+  const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
+  const [videoVisible, setVideoVisible] = useState(false);
+  const [videoFailed, setVideoFailed] = useState(false);
+  const posterRef = useRef<HTMLImageElement>(null);
+  const videoLoadScheduledRef = useRef(false);
 
   const productsHref = locale === "zh-CN" ? "/products" : `/${locale}/products`;
   const contactHref = locale === "zh-CN" ? "/contact" : `/${locale}/contact`;
@@ -161,6 +173,58 @@ export default function HomeHeroSection({
     };
   }, []);
 
+  const handlePosterLoad = useCallback(() => {
+    if (videoLoadScheduledRef.current) {
+      return;
+    }
+
+    videoLoadScheduledRef.current = true;
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        setShouldLoadVideo(true);
+      });
+    });
+  }, []);
+
+  useEffect(() => {
+    const poster = posterRef.current;
+
+    if (
+      poster?.complete &&
+      poster.naturalWidth > 0
+    ) {
+      handlePosterLoad();
+    }
+  }, [handlePosterLoad]);
+
+  const handleVideoPlaying = (
+    event: React.SyntheticEvent<HTMLVideoElement>
+  ) => {
+    const video = event.currentTarget;
+    const revealVideo = () => {
+      setVideoVisible(true);
+    };
+
+    if ("requestVideoFrameCallback" in video) {
+      video.requestVideoFrameCallback(() => {
+        revealVideo();
+      });
+      return;
+    }
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        revealVideo();
+      });
+    });
+  };
+
+  const handleVideoError = () => {
+    setVideoVisible(false);
+    setVideoFailed(true);
+  };
+
   const heroStyle = {
     "--home-hero-title-opacity":
       desktopHeroActive
@@ -183,7 +247,9 @@ export default function HomeHeroSection({
         : "0",
 
     "--home-hero-video-opacity":
-      desktopHeroActive
+      desktopHeroActive ||
+      !videoVisible ||
+      videoFailed
         ? "0"
         : "1",
 
@@ -229,22 +295,45 @@ return (
             ? "true"
             : "false"
         }>
-      <video
-        className="home-hero-video"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
+      <Image
+        ref={posterRef}
+        className={
+          videoFailed
+            ? "home-hero-poster home-hero-poster-restored"
+            : videoVisible
+              ? "home-hero-poster home-hero-poster-hidden"
+              : "home-hero-poster"
+        }
+        src="/images/home/hero/foreach-company-intro-main.webp"
+        alt=""
+        fill
+        sizes="100vw"
+        loading="eager"
+        fetchPriority="high"
+        onLoad={handlePosterLoad}
         aria-hidden="true"
-        tabIndex={-1}
-        disablePictureInPicture
-      >
-        <source
-          src="/images/home/home-banner-desktop.mp4?v=20260613"
-          type="video/mp4"
-        />
-      </video>
+      />
+
+      {shouldLoadVideo && !videoFailed && (
+        <video
+          className="home-hero-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          onPlaying={handleVideoPlaying}
+          onError={handleVideoError}
+          aria-hidden="true"
+          tabIndex={-1}
+          disablePictureInPicture
+        >
+          <source
+            src="/images/home/home-banner-desktop.mp4?v=20260613"
+            type="video/mp4"
+          />
+        </video>
+      )}
 
         <img
           className="home-hero-static-image"

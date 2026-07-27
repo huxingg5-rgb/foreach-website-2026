@@ -101,8 +101,8 @@
                           "label":  "陶瓷套件",
                           "name":  "陶瓷套件",
                           "title":  "陶瓷套件",
-                          "value":  "AL2O3",
-                          "content":  "AL2O3"
+                          "value":  "Al₂O₃",
+                          "content":  "Al₂O₃"
                       },
                       {
                           "label":  "工作液路接口",
@@ -175,7 +175,7 @@
         "isCustomOnly":  true,
         "isCustomInquiry":  true,
         "detailMode":  "custom_inquiry",
-        "productTypeName":  "无阀泵",
+        "productTypeName":  "RPL 无阀泵",
         "showDrawingRequest":  true,
         "show3DRequest":  false,
         "showDatasheetRequest":  false,
@@ -247,8 +247,8 @@
                                    "label":  "陶瓷套件",
                                    "name":  "陶瓷套件",
                                    "title":  "陶瓷套件",
-                                   "value":  "AL2O3",
-                                   "content":  "AL2O3"
+                                   "value":  "Al₂O₃",
+                                   "content":  "Al₂O₃"
                                },
                                {
                                    "label":  "工作液路接口",
@@ -343,8 +343,8 @@
                                                           "label":  "陶瓷套件",
                                                           "name":  "陶瓷套件",
                                                           "title":  "陶瓷套件",
-                                                          "value":  "AL2O3",
-                                                          "content":  "AL2O3"
+                                                          "value":  "Al₂O₃",
+                                                          "content":  "Al₂O₃"
                                                       },
                                                       {
                                                           "label":  "工作液路接口",
@@ -491,8 +491,8 @@
                           "label":  "陶瓷套件",
                           "name":  "陶瓷套件",
                           "title":  "陶瓷套件",
-                          "value":  "ZrO2",
-                          "content":  "ZrO2"
+                          "value":  "Al₂O₃",
+                          "content":  "Al₂O₃"
                       },
                       {
                           "label":  "工作液路接口",
@@ -571,7 +571,7 @@
         "isCustomOnly":  true,
         "isCustomInquiry":  true,
         "detailMode":  "custom_inquiry",
-        "productTypeName":  "无阀泵",
+        "productTypeName":  "RPL 无阀泵",
         "showDrawingRequest":  true,
         "show3DRequest":  false,
         "showDatasheetRequest":  false,
@@ -650,8 +650,8 @@
                                    "label":  "陶瓷套件",
                                    "name":  "陶瓷套件",
                                    "title":  "陶瓷套件",
-                                   "value":  "ZrO2",
-                                   "content":  "ZrO2"
+                                   "value":  "Al₂O₃",
+                                   "content":  "Al₂O₃"
                                },
                                {
                                    "label":  "工作液路接口",
@@ -760,8 +760,8 @@
                                                           "label":  "陶瓷套件",
                                                           "name":  "陶瓷套件",
                                                           "title":  "陶瓷套件",
-                                                          "value":  "ZrO2",
-                                                          "content":  "ZrO2"
+                                                          "value":  "Al₂O₃",
+                                                          "content":  "Al₂O₃"
                                                       },
                                                       {
                                                           "label":  "工作液路接口",
@@ -915,8 +915,8 @@
                           "label":  "陶瓷套件",
                           "name":  "陶瓷套件",
                           "title":  "陶瓷套件",
-                          "value":  "AL2O3",
-                          "content":  "AL2O3"
+                          "value":  "Al₂O₃",
+                          "content":  "Al₂O₃"
                       },
                       {
                           "label":  "工作液路接口",
@@ -994,7 +994,7 @@
         "isCustomOnly":  true,
         "isCustomInquiry":  true,
         "detailMode":  "custom_inquiry",
-        "productTypeName":  "无阀泵",
+        "productTypeName":  "RPL 无阀泵",
         "showDrawingRequest":  true,
         "show3DRequest":  false,
         "showDatasheetRequest":  false,
@@ -1073,8 +1073,8 @@
                                    "label":  "陶瓷套件",
                                    "name":  "陶瓷套件",
                                    "title":  "陶瓷套件",
-                                   "value":  "AL2O3",
-                                   "content":  "AL2O3"
+                                   "value":  "Al₂O₃",
+                                   "content":  "Al₂O₃"
                                },
                                {
                                    "label":  "工作液路接口",
@@ -1183,8 +1183,8 @@
                                                           "label":  "陶瓷套件",
                                                           "name":  "陶瓷套件",
                                                           "title":  "陶瓷套件",
-                                                          "value":  "AL2O3",
-                                                          "content":  "AL2O3"
+                                                          "value":  "Al₂O₃",
+                                                          "content":  "Al₂O₃"
                                                       },
                                                       {
                                                           "label":  "工作液路接口",
@@ -1317,20 +1317,20 @@
                           "label":  "转速",
                           "name":  "转速",
                           "title":  "转速",
-                          "value":  "60~300 RPM",
-                          "content":  "60~300 RPM"
+                          "value":  "60–300 rpm",
+                          "content":  "60–300 rpm"
                       },
                       {
-                          "label":  "流量 QMin，mL/Min",
-                          "name":  "流量 QMin，mL/Min",
-                          "title":  "流量 QMin，mL/Min",
+                          "label":  "流量 QMin，mL/min",
+                          "name":  "流量 QMin，mL/min",
+                          "title":  "流量 QMin，mL/min",
                           "value":  "60",
                           "content":  "60"
                       },
                       {
-                          "label":  "流量 QMax，mL/Min",
-                          "name":  "流量 QMax，mL/Min",
-                          "title":  "流量 QMax，mL/Min",
+                          "label":  "流量 QMax，mL/min",
+                          "name":  "流量 QMax，mL/min",
+                          "title":  "流量 QMax，mL/min",
                           "value":  "300",
                           "content":  "300"
                       },
@@ -1338,8 +1338,8 @@
                           "label":  "试剂A 工作液路接口",
                           "name":  "试剂A 工作液路接口",
                           "title":  "试剂A 工作液路接口",
-                          "value":  "1/4-28UNF-2B",
-                          "content":  "1/4-28UNF-2B"
+                          "value":  "1/4-28 UNF-2B",
+                          "content":  "1/4-28 UNF-2B"
                       },
                       {
                           "label":  "试剂B 工作液路接口",
@@ -1352,43 +1352,43 @@
                           "label":  "试剂A 清洗液路接口",
                           "name":  "试剂A 清洗液路接口",
                           "title":  "试剂A 清洗液路接口",
-                          "value":  "1/4-28UNF-2B",
-                          "content":  "1/4-28UNF-2B"
+                          "value":  "1/4-28 UNF-2B",
+                          "content":  "1/4-28 UNF-2B"
                       },
                       {
                           "label":  "试剂B 清洗液路接口",
                           "name":  "试剂B 清洗液路接口",
                           "title":  "试剂B 清洗液路接口",
-                          "value":  "1/4-28UNF-2B",
-                          "content":  "1/4-28UNF-2B"
+                          "value":  "1/4-28 UNF-2B",
+                          "content":  "1/4-28 UNF-2B"
                       },
                       {
                           "label":  "试剂A 端耐压",
                           "name":  "试剂A 端耐压",
                           "title":  "试剂A 端耐压",
-                          "value":  "Max：150kPa",
-                          "content":  "Max：150kPa"
+                          "value":  "Max 150 kPa",
+                          "content":  "Max 150 kPa"
                       },
                       {
                           "label":  "试剂B 端耐压",
                           "name":  "试剂B 端耐压",
                           "title":  "试剂B 端耐压",
-                          "value":  "Max：150kPa",
-                          "content":  "Max：150kPa"
+                          "value":  "Max 150 kPa",
+                          "content":  "Max 150 kPa"
                       },
                       {
                           "label":  "尺寸/mm",
                           "name":  "尺寸/mm",
                           "title":  "尺寸/mm",
-                          "value":  "L180xW83.7xH75",
-                          "content":  "L180xW83.7xH75"
+                          "value":  "180 × 83.7 × 75 mm",
+                          "content":  "180 × 83.7 × 75 mm"
                       },
                       {
                           "label":  "重量",
                           "name":  "重量",
                           "title":  "重量",
-                          "value":  "1536g",
-                          "content":  "1536g"
+                          "value":  "1536 g",
+                          "content":  "1536 g"
                       },
                       {
                           "label":  "准确性",
@@ -1408,8 +1408,8 @@
                           "label":  "寿命",
                           "name":  "寿命",
                           "title":  "寿命",
-                          "value":  "20,000,000 Cycles",
-                          "content":  "20,000,000 Cycles"
+                          "value":  "20,000,000 cycles",
+                          "content":  "20,000,000 cycles"
                       }
                   ],
         "specificationGroups":  [
@@ -1462,20 +1462,20 @@
                                                           "label":  "转速",
                                                           "name":  "转速",
                                                           "title":  "转速",
-                                                          "value":  "60~300 RPM",
-                                                          "content":  "60~300 RPM"
+                                                          "value":  "60–300 rpm",
+                                                          "content":  "60–300 rpm"
                                                       },
                                                       {
-                                                          "label":  "流量 QMin，mL/Min",
-                                                          "name":  "流量 QMin，mL/Min",
-                                                          "title":  "流量 QMin，mL/Min",
+                                                          "label":  "流量 QMin，mL/min",
+                                                          "name":  "流量 QMin，mL/min",
+                                                          "title":  "流量 QMin，mL/min",
                                                           "value":  "60",
                                                           "content":  "60"
                                                       },
                                                       {
-                                                          "label":  "流量 QMax，mL/Min",
-                                                          "name":  "流量 QMax，mL/Min",
-                                                          "title":  "流量 QMax，mL/Min",
+                                                          "label":  "流量 QMax，mL/min",
+                                                          "name":  "流量 QMax，mL/min",
+                                                          "title":  "流量 QMax，mL/min",
                                                           "value":  "300",
                                                           "content":  "300"
                                                       },
@@ -1483,8 +1483,8 @@
                                                           "label":  "试剂A 工作液路接口",
                                                           "name":  "试剂A 工作液路接口",
                                                           "title":  "试剂A 工作液路接口",
-                                                          "value":  "1/4-28UNF-2B",
-                                                          "content":  "1/4-28UNF-2B"
+                                                          "value":  "1/4-28 UNF-2B",
+                                                          "content":  "1/4-28 UNF-2B"
                                                       },
                                                       {
                                                           "label":  "试剂B 工作液路接口",
@@ -1497,43 +1497,43 @@
                                                           "label":  "试剂A 清洗液路接口",
                                                           "name":  "试剂A 清洗液路接口",
                                                           "title":  "试剂A 清洗液路接口",
-                                                          "value":  "1/4-28UNF-2B",
-                                                          "content":  "1/4-28UNF-2B"
+                                                          "value":  "1/4-28 UNF-2B",
+                                                          "content":  "1/4-28 UNF-2B"
                                                       },
                                                       {
                                                           "label":  "试剂B 清洗液路接口",
                                                           "name":  "试剂B 清洗液路接口",
                                                           "title":  "试剂B 清洗液路接口",
-                                                          "value":  "1/4-28UNF-2B",
-                                                          "content":  "1/4-28UNF-2B"
+                                                          "value":  "1/4-28 UNF-2B",
+                                                          "content":  "1/4-28 UNF-2B"
                                                       },
                                                       {
                                                           "label":  "试剂A 端耐压",
                                                           "name":  "试剂A 端耐压",
                                                           "title":  "试剂A 端耐压",
-                                                          "value":  "Max：150kPa",
-                                                          "content":  "Max：150kPa"
+                                                          "value":  "Max 150 kPa",
+                                                          "content":  "Max 150 kPa"
                                                       },
                                                       {
                                                           "label":  "试剂B 端耐压",
                                                           "name":  "试剂B 端耐压",
                                                           "title":  "试剂B 端耐压",
-                                                          "value":  "Max：150kPa",
-                                                          "content":  "Max：150kPa"
+                                                          "value":  "Max 150 kPa",
+                                                          "content":  "Max 150 kPa"
                                                       },
                                                       {
                                                           "label":  "尺寸/mm",
                                                           "name":  "尺寸/mm",
                                                           "title":  "尺寸/mm",
-                                                          "value":  "L180xW83.7xH75",
-                                                          "content":  "L180xW83.7xH75"
+                                                          "value":  "180 × 83.7 × 75 mm",
+                                                          "content":  "180 × 83.7 × 75 mm"
                                                       },
                                                       {
                                                           "label":  "重量",
                                                           "name":  "重量",
                                                           "title":  "重量",
-                                                          "value":  "1536g",
-                                                          "content":  "1536g"
+                                                          "value":  "1536 g",
+                                                          "content":  "1536 g"
                                                       },
                                                       {
                                                           "label":  "准确性",
@@ -1553,8 +1553,8 @@
                                                           "label":  "寿命",
                                                           "name":  "寿命",
                                                           "title":  "寿命",
-                                                          "value":  "20,000,000 Cycles",
-                                                          "content":  "20,000,000 Cycles"
+                                                          "value":  "20,000,000 cycles",
+                                                          "content":  "20,000,000 cycles"
                                                       }
                                                   ]
                                     }
@@ -1601,7 +1601,7 @@
         "isCustomOnly":  true,
         "isCustomInquiry":  true,
         "detailMode":  "custom_inquiry",
-        "productTypeName":  "无阀泵",
+        "productTypeName":  "DRPL 双头无阀泵",
         "showDrawingRequest":  true,
         "show3DRequest":  false,
         "showDatasheetRequest":  false,
@@ -1659,20 +1659,20 @@
                                    "label":  "转速",
                                    "name":  "转速",
                                    "title":  "转速",
-                                   "value":  "60~300 RPM",
-                                   "content":  "60~300 RPM"
+                                   "value":  "60–300 rpm",
+                                   "content":  "60–300 rpm"
                                },
                                {
-                                   "label":  "流量 QMin，mL/Min",
-                                   "name":  "流量 QMin，mL/Min",
-                                   "title":  "流量 QMin，mL/Min",
+                                   "label":  "流量 QMin，mL/min",
+                                   "name":  "流量 QMin，mL/min",
+                                   "title":  "流量 QMin，mL/min",
                                    "value":  "60",
                                    "content":  "60"
                                },
                                {
-                                   "label":  "流量 QMax，mL/Min",
-                                   "name":  "流量 QMax，mL/Min",
-                                   "title":  "流量 QMax，mL/Min",
+                                   "label":  "流量 QMax，mL/min",
+                                   "name":  "流量 QMax，mL/min",
+                                   "title":  "流量 QMax，mL/min",
                                    "value":  "300",
                                    "content":  "300"
                                },
@@ -1680,8 +1680,8 @@
                                    "label":  "试剂A 工作液路接口",
                                    "name":  "试剂A 工作液路接口",
                                    "title":  "试剂A 工作液路接口",
-                                   "value":  "1/4-28UNF-2B",
-                                   "content":  "1/4-28UNF-2B"
+                                   "value":  "1/4-28 UNF-2B",
+                                   "content":  "1/4-28 UNF-2B"
                                },
                                {
                                    "label":  "试剂B 工作液路接口",
@@ -1694,43 +1694,43 @@
                                    "label":  "试剂A 清洗液路接口",
                                    "name":  "试剂A 清洗液路接口",
                                    "title":  "试剂A 清洗液路接口",
-                                   "value":  "1/4-28UNF-2B",
-                                   "content":  "1/4-28UNF-2B"
+                                   "value":  "1/4-28 UNF-2B",
+                                   "content":  "1/4-28 UNF-2B"
                                },
                                {
                                    "label":  "试剂B 清洗液路接口",
                                    "name":  "试剂B 清洗液路接口",
                                    "title":  "试剂B 清洗液路接口",
-                                   "value":  "1/4-28UNF-2B",
-                                   "content":  "1/4-28UNF-2B"
+                                   "value":  "1/4-28 UNF-2B",
+                                   "content":  "1/4-28 UNF-2B"
                                },
                                {
                                    "label":  "试剂A 端耐压",
                                    "name":  "试剂A 端耐压",
                                    "title":  "试剂A 端耐压",
-                                   "value":  "Max：150kPa",
-                                   "content":  "Max：150kPa"
+                                   "value":  "Max 150 kPa",
+                                   "content":  "Max 150 kPa"
                                },
                                {
                                    "label":  "试剂B 端耐压",
                                    "name":  "试剂B 端耐压",
                                    "title":  "试剂B 端耐压",
-                                   "value":  "Max：150kPa",
-                                   "content":  "Max：150kPa"
+                                   "value":  "Max 150 kPa",
+                                   "content":  "Max 150 kPa"
                                },
                                {
                                    "label":  "尺寸/mm",
                                    "name":  "尺寸/mm",
                                    "title":  "尺寸/mm",
-                                   "value":  "L180xW83.7xH75",
-                                   "content":  "L180xW83.7xH75"
+                                   "value":  "180 × 83.7 × 75 mm",
+                                   "content":  "180 × 83.7 × 75 mm"
                                },
                                {
                                    "label":  "重量",
                                    "name":  "重量",
                                    "title":  "重量",
-                                   "value":  "1536g",
-                                   "content":  "1536g"
+                                   "value":  "1536 g",
+                                   "content":  "1536 g"
                                },
                                {
                                    "label":  "准确性",
@@ -1750,8 +1750,8 @@
                                    "label":  "寿命",
                                    "name":  "寿命",
                                    "title":  "寿命",
-                                   "value":  "20,000,000 Cycles",
-                                   "content":  "20,000,000 Cycles"
+                                   "value":  "20,000,000 cycles",
+                                   "content":  "20,000,000 cycles"
                                }
                            ],
         "selectionHref":  "/products/pumps/valveless-pumps",
@@ -1854,20 +1854,20 @@
                           "label":  "转速",
                           "name":  "转速",
                           "title":  "转速",
-                          "value":  "60~300 RPM",
-                          "content":  "60~300 RPM"
+                          "value":  "60–300 rpm",
+                          "content":  "60–300 rpm"
                       },
                       {
-                          "label":  "流量 QMin，mL/Min",
-                          "name":  "流量 QMin，mL/Min",
-                          "title":  "流量 QMin，mL/Min",
+                          "label":  "流量 QMin，mL/min",
+                          "name":  "流量 QMin，mL/min",
+                          "title":  "流量 QMin，mL/min",
                           "value":  "72",
                           "content":  "72"
                       },
                       {
-                          "label":  "流量 QMax，mL/Min",
-                          "name":  "流量 QMax，mL/Min",
-                          "title":  "流量 QMax，mL/Min",
+                          "label":  "流量 QMax，mL/min",
+                          "name":  "流量 QMax，mL/min",
+                          "title":  "流量 QMax，mL/min",
                           "value":  "360",
                           "content":  "360"
                       },
@@ -1875,8 +1875,8 @@
                           "label":  "试剂A 工作液路接口",
                           "name":  "试剂A 工作液路接口",
                           "title":  "试剂A 工作液路接口",
-                          "value":  "1/4-28UNF-2B",
-                          "content":  "1/4-28UNF-2B"
+                          "value":  "1/4-28 UNF-2B",
+                          "content":  "1/4-28 UNF-2B"
                       },
                       {
                           "label":  "试剂B 工作液路接口",
@@ -1889,43 +1889,43 @@
                           "label":  "试剂A 清洗液路接口",
                           "name":  "试剂A 清洗液路接口",
                           "title":  "试剂A 清洗液路接口",
-                          "value":  "1/4-28UNF-2B",
-                          "content":  "1/4-28UNF-2B"
+                          "value":  "1/4-28 UNF-2B",
+                          "content":  "1/4-28 UNF-2B"
                       },
                       {
                           "label":  "试剂B 清洗液路接口",
                           "name":  "试剂B 清洗液路接口",
                           "title":  "试剂B 清洗液路接口",
-                          "value":  "1/4-28UNF-2B",
-                          "content":  "1/4-28UNF-2B"
+                          "value":  "1/4-28 UNF-2B",
+                          "content":  "1/4-28 UNF-2B"
                       },
                       {
                           "label":  "试剂A 端耐压",
                           "name":  "试剂A 端耐压",
                           "title":  "试剂A 端耐压",
-                          "value":  "Max：150kPa",
-                          "content":  "Max：150kPa"
+                          "value":  "Max 150 kPa",
+                          "content":  "Max 150 kPa"
                       },
                       {
                           "label":  "试剂B 端耐压",
                           "name":  "试剂B 端耐压",
                           "title":  "试剂B 端耐压",
-                          "value":  "Max：150kPa",
-                          "content":  "Max：150kPa"
+                          "value":  "Max 150 kPa",
+                          "content":  "Max 150 kPa"
                       },
                       {
                           "label":  "尺寸/mm",
                           "name":  "尺寸/mm",
                           "title":  "尺寸/mm",
-                          "value":  "L180xW83.7xH75",
-                          "content":  "L180xW83.7xH75"
+                          "value":  "180 × 83.7 × 75 mm",
+                          "content":  "180 × 83.7 × 75 mm"
                       },
                       {
                           "label":  "重量",
                           "name":  "重量",
                           "title":  "重量",
-                          "value":  "1536g",
-                          "content":  "1536g"
+                          "value":  "1536 g",
+                          "content":  "1536 g"
                       },
                       {
                           "label":  "准确性",
@@ -1945,8 +1945,8 @@
                           "label":  "寿命",
                           "name":  "寿命",
                           "title":  "寿命",
-                          "value":  "20,000,000 Cycles",
-                          "content":  "20,000,000 Cycles"
+                          "value":  "20,000,000 cycles",
+                          "content":  "20,000,000 cycles"
                       }
                   ],
         "specificationGroups":  [
@@ -1999,20 +1999,20 @@
                                                           "label":  "转速",
                                                           "name":  "转速",
                                                           "title":  "转速",
-                                                          "value":  "60~300 RPM",
-                                                          "content":  "60~300 RPM"
+                                                          "value":  "60–300 rpm",
+                                                          "content":  "60–300 rpm"
                                                       },
                                                       {
-                                                          "label":  "流量 QMin，mL/Min",
-                                                          "name":  "流量 QMin，mL/Min",
-                                                          "title":  "流量 QMin，mL/Min",
+                                                          "label":  "流量 QMin，mL/min",
+                                                          "name":  "流量 QMin，mL/min",
+                                                          "title":  "流量 QMin，mL/min",
                                                           "value":  "72",
                                                           "content":  "72"
                                                       },
                                                       {
-                                                          "label":  "流量 QMax，mL/Min",
-                                                          "name":  "流量 QMax，mL/Min",
-                                                          "title":  "流量 QMax，mL/Min",
+                                                          "label":  "流量 QMax，mL/min",
+                                                          "name":  "流量 QMax，mL/min",
+                                                          "title":  "流量 QMax，mL/min",
                                                           "value":  "360",
                                                           "content":  "360"
                                                       },
@@ -2020,8 +2020,8 @@
                                                           "label":  "试剂A 工作液路接口",
                                                           "name":  "试剂A 工作液路接口",
                                                           "title":  "试剂A 工作液路接口",
-                                                          "value":  "1/4-28UNF-2B",
-                                                          "content":  "1/4-28UNF-2B"
+                                                          "value":  "1/4-28 UNF-2B",
+                                                          "content":  "1/4-28 UNF-2B"
                                                       },
                                                       {
                                                           "label":  "试剂B 工作液路接口",
@@ -2034,43 +2034,43 @@
                                                           "label":  "试剂A 清洗液路接口",
                                                           "name":  "试剂A 清洗液路接口",
                                                           "title":  "试剂A 清洗液路接口",
-                                                          "value":  "1/4-28UNF-2B",
-                                                          "content":  "1/4-28UNF-2B"
+                                                          "value":  "1/4-28 UNF-2B",
+                                                          "content":  "1/4-28 UNF-2B"
                                                       },
                                                       {
                                                           "label":  "试剂B 清洗液路接口",
                                                           "name":  "试剂B 清洗液路接口",
                                                           "title":  "试剂B 清洗液路接口",
-                                                          "value":  "1/4-28UNF-2B",
-                                                          "content":  "1/4-28UNF-2B"
+                                                          "value":  "1/4-28 UNF-2B",
+                                                          "content":  "1/4-28 UNF-2B"
                                                       },
                                                       {
                                                           "label":  "试剂A 端耐压",
                                                           "name":  "试剂A 端耐压",
                                                           "title":  "试剂A 端耐压",
-                                                          "value":  "Max：150kPa",
-                                                          "content":  "Max：150kPa"
+                                                          "value":  "Max 150 kPa",
+                                                          "content":  "Max 150 kPa"
                                                       },
                                                       {
                                                           "label":  "试剂B 端耐压",
                                                           "name":  "试剂B 端耐压",
                                                           "title":  "试剂B 端耐压",
-                                                          "value":  "Max：150kPa",
-                                                          "content":  "Max：150kPa"
+                                                          "value":  "Max 150 kPa",
+                                                          "content":  "Max 150 kPa"
                                                       },
                                                       {
                                                           "label":  "尺寸/mm",
                                                           "name":  "尺寸/mm",
                                                           "title":  "尺寸/mm",
-                                                          "value":  "L180xW83.7xH75",
-                                                          "content":  "L180xW83.7xH75"
+                                                          "value":  "180 × 83.7 × 75 mm",
+                                                          "content":  "180 × 83.7 × 75 mm"
                                                       },
                                                       {
                                                           "label":  "重量",
                                                           "name":  "重量",
                                                           "title":  "重量",
-                                                          "value":  "1536g",
-                                                          "content":  "1536g"
+                                                          "value":  "1536 g",
+                                                          "content":  "1536 g"
                                                       },
                                                       {
                                                           "label":  "准确性",
@@ -2090,8 +2090,8 @@
                                                           "label":  "寿命",
                                                           "name":  "寿命",
                                                           "title":  "寿命",
-                                                          "value":  "20,000,000 Cycles",
-                                                          "content":  "20,000,000 Cycles"
+                                                          "value":  "20,000,000 cycles",
+                                                          "content":  "20,000,000 cycles"
                                                       }
                                                   ]
                                     }
@@ -2138,7 +2138,7 @@
         "isCustomOnly":  true,
         "isCustomInquiry":  true,
         "detailMode":  "custom_inquiry",
-        "productTypeName":  "无阀泵",
+        "productTypeName":  "DRPL 双头无阀泵",
         "showDrawingRequest":  true,
         "show3DRequest":  false,
         "showDatasheetRequest":  false,
@@ -2196,20 +2196,20 @@
                                    "label":  "转速",
                                    "name":  "转速",
                                    "title":  "转速",
-                                   "value":  "60~300 RPM",
-                                   "content":  "60~300 RPM"
+                                   "value":  "60–300 rpm",
+                                   "content":  "60–300 rpm"
                                },
                                {
-                                   "label":  "流量 QMin，mL/Min",
-                                   "name":  "流量 QMin，mL/Min",
-                                   "title":  "流量 QMin，mL/Min",
+                                   "label":  "流量 QMin，mL/min",
+                                   "name":  "流量 QMin，mL/min",
+                                   "title":  "流量 QMin，mL/min",
                                    "value":  "72",
                                    "content":  "72"
                                },
                                {
-                                   "label":  "流量 QMax，mL/Min",
-                                   "name":  "流量 QMax，mL/Min",
-                                   "title":  "流量 QMax，mL/Min",
+                                   "label":  "流量 QMax，mL/min",
+                                   "name":  "流量 QMax，mL/min",
+                                   "title":  "流量 QMax，mL/min",
                                    "value":  "360",
                                    "content":  "360"
                                },
@@ -2217,8 +2217,8 @@
                                    "label":  "试剂A 工作液路接口",
                                    "name":  "试剂A 工作液路接口",
                                    "title":  "试剂A 工作液路接口",
-                                   "value":  "1/4-28UNF-2B",
-                                   "content":  "1/4-28UNF-2B"
+                                   "value":  "1/4-28 UNF-2B",
+                                   "content":  "1/4-28 UNF-2B"
                                },
                                {
                                    "label":  "试剂B 工作液路接口",
@@ -2231,43 +2231,43 @@
                                    "label":  "试剂A 清洗液路接口",
                                    "name":  "试剂A 清洗液路接口",
                                    "title":  "试剂A 清洗液路接口",
-                                   "value":  "1/4-28UNF-2B",
-                                   "content":  "1/4-28UNF-2B"
+                                   "value":  "1/4-28 UNF-2B",
+                                   "content":  "1/4-28 UNF-2B"
                                },
                                {
                                    "label":  "试剂B 清洗液路接口",
                                    "name":  "试剂B 清洗液路接口",
                                    "title":  "试剂B 清洗液路接口",
-                                   "value":  "1/4-28UNF-2B",
-                                   "content":  "1/4-28UNF-2B"
+                                   "value":  "1/4-28 UNF-2B",
+                                   "content":  "1/4-28 UNF-2B"
                                },
                                {
                                    "label":  "试剂A 端耐压",
                                    "name":  "试剂A 端耐压",
                                    "title":  "试剂A 端耐压",
-                                   "value":  "Max：150kPa",
-                                   "content":  "Max：150kPa"
+                                   "value":  "Max 150 kPa",
+                                   "content":  "Max 150 kPa"
                                },
                                {
                                    "label":  "试剂B 端耐压",
                                    "name":  "试剂B 端耐压",
                                    "title":  "试剂B 端耐压",
-                                   "value":  "Max：150kPa",
-                                   "content":  "Max：150kPa"
+                                   "value":  "Max 150 kPa",
+                                   "content":  "Max 150 kPa"
                                },
                                {
                                    "label":  "尺寸/mm",
                                    "name":  "尺寸/mm",
                                    "title":  "尺寸/mm",
-                                   "value":  "L180xW83.7xH75",
-                                   "content":  "L180xW83.7xH75"
+                                   "value":  "180 × 83.7 × 75 mm",
+                                   "content":  "180 × 83.7 × 75 mm"
                                },
                                {
                                    "label":  "重量",
                                    "name":  "重量",
                                    "title":  "重量",
-                                   "value":  "1536g",
-                                   "content":  "1536g"
+                                   "value":  "1536 g",
+                                   "content":  "1536 g"
                                },
                                {
                                    "label":  "准确性",
@@ -2287,8 +2287,8 @@
                                    "label":  "寿命",
                                    "name":  "寿命",
                                    "title":  "寿命",
-                                   "value":  "20,000,000 Cycles",
-                                   "content":  "20,000,000 Cycles"
+                                   "value":  "20,000,000 cycles",
+                                   "content":  "20,000,000 cycles"
                                }
                            ],
         "selectionHref":  "/products/pumps/valveless-pumps",

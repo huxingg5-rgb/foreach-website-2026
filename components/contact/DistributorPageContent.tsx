@@ -946,6 +946,7 @@ export default function DistributorPageContent({
                   />
 
                   <button
+                    className="brand-navy-button-motion"
                     type="button"
                     onClick={handleSendCode}
                     disabled={sendCountdown > 0 || isSendingCode || isSubmitting}
@@ -968,6 +969,7 @@ export default function DistributorPageContent({
                   />
 
                   <button
+                    className="brand-navy-button-motion"
                     type="button"
                     onClick={handleVerifyCode}
                     disabled={
@@ -1062,7 +1064,7 @@ export default function DistributorPageContent({
               <div className="distributor-submit-row">
                 <p>{content.form.uploadTip}</p>
 
-                <label className="distributor-upload-btn">
+                <label className="distributor-upload-btn brand-navy-button-motion">
                   {content.form.uploadButton}
                   <input
                     type="file"
@@ -1075,7 +1077,7 @@ export default function DistributorPageContent({
 
                 <button
                   type="submit"
-                  className="distributor-submit-btn"
+                  className="distributor-submit-btn brand-navy-button-motion"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Submitting..." : content.form.submitButton}
@@ -1206,4 +1208,4 @@ export default function DistributorPageContent({
       ) : null}
     </main>
   );
-} 
+}

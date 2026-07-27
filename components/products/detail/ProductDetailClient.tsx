@@ -37,6 +37,13 @@ import {
 import { localizeTargetProductDetailData } from "@/data/products/detail/product-detail.target.intl";
 import type { ProductDetailPageData } from "@/data/products/detail/product-detail.types";
 import ProductModelViewer from "./ProductModelViewer";
+import {
+  Pump2DFileCheckingDisplay,
+  Pump3DFileCheckingDisplay,
+  PumpUploadedFileGuard,
+  ThreeDFileNotUploadedDisplay,
+  TwoDFileNotUploadedDisplay,
+} from "./PumpFileUploadDisplay";
 
 /* PVC_TUBING_CONFIGURATOR_INTEGRATION_START */
 import {
@@ -475,6 +482,13 @@ function isSyringePumpDetailData(data: any): boolean {
     text.includes("hmd6") ||
     text.includes("hld3") ||
     text.includes("hld6")
+  );
+}
+
+function isPumpDetailData(data: Record<string, unknown>): boolean {
+  return (
+    data?.category === "pumps" ||
+    data?.productCategory === "pumps"
   );
 }
 
@@ -1221,6 +1235,20 @@ export default function ProductDetailClient({
         : sourceData,
     [isEnglish, pathname, sourceData, targetLocale]
   );
+  const pumpFileDisplayLocale = isLocalizedDetail ? "en" : "zh";
+  const isPumpDetail = isPumpDetailData(data);
+  const model3dUrl = String(
+    data.model3dUrl ||
+      data.resources?.model3dUrl ||
+      "",
+  ).trim();
+  const drawingPreviewUrl = getProductDrawingPreviewUrl(
+    data.slug,
+    data.drawing2dUrl ||
+      data.drawingPdfUrl ||
+      data.partDrawingUrl ||
+      data.resources?.drawing2dUrl,
+  );
   const isCustomProduct = isCustomProductCategory(pathname, data);
   const customProductCopy =
     CUSTOM_PRODUCT_NOTICE_COPY[
@@ -1540,9 +1568,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
    * 当前测试数据尚未连接选型主图，因此保留 HTML 原型中的
    * 三个 SVG 缩略图，便于核对版式。
    */
-  const showThumbnailRow = hasRealImages
-    ? realImages.length > 0
-    : true;
+  const showThumbnailRow = hasRealImages ? realImages.length > 0 : true;
   const zoomStyle: ZoomStyle = {
     "--zoom-x": `${zoomPosition.x}%`,
     "--zoom-y": `${zoomPosition.y}%`,
@@ -2867,12 +2893,36 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                   className={styles.panelBox}
                   data-product-model3d-panel="true"
                 >
-                <ProductModelViewer
-                  slug={data.slug}
-                  modelName={data.model}
-                  modelUrl={(data as any).model3dUrl || (data as any).resources?.model3dUrl}
-                  locale={isLocalizedDetail ? "en" : "zh"}
-                />
+                {isPumpDetail ? (
+                  <PumpUploadedFileGuard
+                    key={model3dUrl}
+                    fileUrl={model3dUrl}
+                    loadingFallback={
+                      <Pump3DFileCheckingDisplay
+                        locale={pumpFileDisplayLocale}
+                      />
+                    }
+                    missingFallback={
+                      <ThreeDFileNotUploadedDisplay
+                        locale={pumpFileDisplayLocale}
+                      />
+                    }
+                  >
+                    <ProductModelViewer
+                      slug={data.slug}
+                      modelName={data.model}
+                      modelUrl={model3dUrl}
+                      locale={pumpFileDisplayLocale}
+                    />
+                  </PumpUploadedFileGuard>
+                ) : (
+                  <ProductModelViewer
+                    slug={data.slug}
+                    modelName={data.model}
+                    modelUrl={model3dUrl}
+                    locale={pumpFileDisplayLocale}
+                  />
+                )}
               </div>
             </div>
 
@@ -2884,9 +2934,39 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                 .filter(Boolean)
                 .join(" ")}
             >
-              {getProductDrawingPreviewUrl(data.slug, (data as any).drawing2dUrl || (data as any).drawingPdfUrl || (data as any).partDrawingUrl || (data as any).resources?.drawing2dUrl) ? (
+              {isPumpDetail ? (
+                <PumpUploadedFileGuard
+                  key={drawingPreviewUrl}
+                  fileUrl={drawingPreviewUrl}
+                  loadingFallback={
+                    <Pump2DFileCheckingDisplay
+                      locale={pumpFileDisplayLocale}
+                    />
+                  }
+                  missingFallback={
+                    <TwoDFileNotUploadedDisplay
+                      locale={pumpFileDisplayLocale}
+                    />
+                  }
+                >
+                  <PdfDrawingPreview
+                    pdfPreviewUrl={drawingPreviewUrl}
+                    documentTitle={data.model}
+                    text={
+                      isLocalizedDetail
+                        ? {
+                            title: copy.technicalDrawing,
+                            loadingLabel: copy.drawingLoading,
+                            previewButton: copy.drawingPreview,
+                            description: copy.drawingDescription(data.model),
+                          }
+                        : undefined
+                    }
+                  />
+                </PumpUploadedFileGuard>
+              ) : drawingPreviewUrl ? (
                 <PdfDrawingPreview
-                  pdfPreviewUrl={getProductDrawingPreviewUrl(data.slug, (data as any).drawing2dUrl || (data as any).drawingPdfUrl || (data as any).partDrawingUrl || (data as any).resources?.drawing2dUrl)}
+                  pdfPreviewUrl={drawingPreviewUrl}
                   documentTitle={data.model}
                   text={
                     isLocalizedDetail
