@@ -1318,7 +1318,7 @@
   display: grid !important;
   grid-template-columns: 370px minmax(0, 1fr) !important;
   width: 100% !important;
-  min-height: 56px !important;
+  min-height: 42px !important;
   border-bottom: 1px solid #dbe3ee !important;
   transition: background-color 0.18s ease !important;
 }
@@ -1348,7 +1348,7 @@
 
 .specPanelClean .specTable th {  color: #111111;
 
-  padding: 14px 32px 14px 148px !important;
+  padding: 9px 32px 9px 148px !important;
   font-size: 16px !important;
   font-weight: 400;
   justify-content: flex-start !important;
@@ -1357,7 +1357,7 @@
 
 .specPanelClean .specTable td {  color: #111111;
 
-  padding: 14px 32px 14px 148px !important;
+  padding: 9px 32px 9px 148px !important;
   font-size: 17px !important;
   font-weight: 400;
   justify-content: flex-start !important;
@@ -2393,3 +2393,53 @@
 }
 
 /* ===== FOREACH MOBILE FAQ TITLE SAME AS MODEL END ===== */
+/* ===== FOREACH_SPEC_TABLE_TEXT_WRAP_START ===== */
+
+/*
+ * 产品详情页公共规格表文字换行：
+ * - 普通单行继续保持紧凑
+ * - 长标签和长参数自动换行
+ * - 多行内容自动增加行高
+ */
+.specPanelClean
+  .specTable
+  tr[data-product-spec-row="true"] {
+  height: auto !important;
+}
+
+.specPanelClean .specTable th,
+.specPanelClean .specTable td {
+  min-width: 0 !important;
+  height: auto !important;
+
+  white-space: normal !important;
+
+  overflow: visible !important;
+}
+
+.specPanelClean .specTable .specCellText {
+  display: block;
+
+  width: 100%;
+  min-width: 0;
+
+  white-space: normal;
+
+  word-break: normal;
+  overflow-wrap: anywhere;
+
+  line-height: 1.45;
+}
+
+/*
+ * 英文长单词在空间不足时允许断行，
+ * 但优先在正常空格处换行。
+ */
+:global(.language-layout--expanded)
+  .specPanelClean
+  .specTable
+  .specCellText {
+  hyphens: auto;
+}
+
+/* ===== FOREACH_SPEC_TABLE_TEXT_WRAP_END ===== */

@@ -363,10 +363,10 @@ export const contactZhData: ContactPageData = {
       title: "公司位置", // 地图模块标题
       address:
         "广东省深圳市光明区玉塘街道玉律社区光侨大道1008号裕丰达工业园2栋1301", // 公司详细地址
-      lng: 113.89827, // 高德地图经度
-      lat: 22.71063, // 高德地图纬度
+      lng: 113.891698, // 高德地图经度
+      lat: 22.719388, // 高德地图纬度
       mapUrl:
-        "https://www.amap.com/search?query=广东省深圳市光明区玉塘街道玉律社区光侨大道1008号裕丰达工业园2栋1301", // 高德地图外链
+        "https://uri.amap.com/marker?position=113.891698,22.719388&name=%E6%B7%B1%E5%9C%B3%E5%B8%82%E6%81%92%E6%B0%B8%E8%BE%BE%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8&src=foreachtek&coordinate=gaode&callnative=0", // 高德地图外链
     },
   },
 

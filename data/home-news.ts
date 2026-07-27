@@ -1,4 +1,4 @@
-﻿import type { LocaleCode } from "@/lib/i18n";
+import type { LocaleCode } from "@/lib/i18n";
 
 /* ================================
    首页资讯中心数据
@@ -289,7 +289,7 @@ export const homeNewsData = {
         ru: "Выставки",
       },
       date: "2026/03/27",
-      image: "/images/resources/news/articles/me-supply-chain-expo-2026/cover.webp",
+      image: "/images/resources/news/articles/me-supply-chain-expo-2026/me-2026-news.webp",
       title: {
         "zh-CN": "2026 ME 供应链生态展｜恒永达诚邀您的莅临指导",
         en: "FOREACH to Exhibit at 2026 ME Supply Chain Expo",

@@ -2872,8 +2872,16 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                   <tbody>
                     {data.specs.map((item) => (
                       <tr data-product-spec-row="true" key={`${item.label}-${item.value}`}>
-                        <th>{item.label}</th>
-                        <td>{item.value}</td>
+                        <th>
+                          <span className={styles.specCellText}>
+                            {item.label}
+                          </span>
+                        </th>
+                        <td>
+                          <span className={styles.specCellText}>
+                            {item.value}
+                          </span>
+                        </td>
                       </tr>
                     ))}
                   </tbody>

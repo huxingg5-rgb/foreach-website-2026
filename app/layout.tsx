@@ -265,6 +265,43 @@ export default function RootLayout({
           */}
           <GlobalSelectionCartDrawer />
         </SelectionCartProvider>
+        <Script
+          id="foreach-home-loader-seen-bootstrap"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (() => {
+                try {
+                  const searchParams =
+                    new URLSearchParams(
+                      window.location.search,
+                    );
+
+                  if (
+                    searchParams.get(
+                      "loaderPreview",
+                    ) === "1"
+                  ) {
+                    return;
+                  }
+
+                  if (
+                    window.localStorage.getItem(
+                      "foreach-home-loader-v1",
+                    ) === "shown"
+                  ) {
+                    document.documentElement
+                      .classList.add(
+                        "foreach-home-loader-seen-v1",
+                      );
+                  }
+                } catch {
+                  // localStorage 不可用时继续正常显示首页。
+                }
+              })();
+            `,
+          }}
+        />
       </body>
 
 </html>

@@ -83,6 +83,26 @@ function DownloadIcon() {
    规格书下载页面主体组件
 ========================================================= */
 
+/* =========================================================
+   getDatasheetFileName
+
+   下载后的文件名直接取自 PDF 路径最后一段。
+   不使用页面标题或翻译内容重新命名。
+========================================================= */
+function getDatasheetFileName(downloadHref: string) {
+  const pathWithoutQuery = downloadHref.split(/[?#]/, 1)[0];
+  const encodedFileName = pathWithoutQuery.split("/").pop();
+
+  if (!encodedFileName) {
+    return "datasheet.pdf";
+  }
+
+  try {
+    return decodeURIComponent(encodedFileName);
+  } catch {
+    return encodedFileName;
+  }
+}
 export default function DatasheetsClient({
   pageText,
   filterOptions,
@@ -308,9 +328,7 @@ export default function DatasheetsClient({
                     <a
                       className="row-download"
                       href={encodeURI(item.downloadHref)}
-                      download
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      download={getDatasheetFileName(item.downloadHref)}
                     >
                       {pageText.labels.download}
                       <DownloadIcon />
