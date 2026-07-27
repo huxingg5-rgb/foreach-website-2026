@@ -14,7 +14,7 @@ import type {
 import { Q20_FITTING_REPLACEMENT_SERIES_CONFIG } from "@/data/resources/fitting-replacement/fitting-replacement-series.config";
 
 const SERIES_CONFIG = Q20_FITTING_REPLACEMENT_SERIES_CONFIG;
-const PAGE_SIZE = 8;
+const PAGE_SIZE = 10;
 
 interface FittingReplacementHomeProps {
   data: FittingReplacementPageData;

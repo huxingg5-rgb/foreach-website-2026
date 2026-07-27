@@ -1,4 +1,4 @@
-﻿export type ControlModuleSpec = {
+export type ControlModuleSpec = {
   label: string;
   value: string;
 };
@@ -44,7 +44,7 @@ export const controlModuleDetails: ControlModuleDetail[] = [
     highlights: [
       "非接触式气泡 / 液滴检测",
       "适配 1.6–6.4 mm 透明软管外径",
-      "支持 TTL232 / Modbus RTU 通讯",
+      "支持 TTL / Modbus RTU 通讯",
       "支持 UART/TTL 数字信号、IO 模拟电压输出和 IO 数字报警输出",
       "气泡 / 液体检测尺寸 > 0.8 mm",
       "气泡检测响应时间 6 ms",
@@ -58,7 +58,7 @@ export const controlModuleDetails: ControlModuleDetail[] = [
       { label: "适配管材", value: "PU / PVC / PTFE / PFA / FEP 透明管" },
       { label: "检测介质", value: "Liquid / Gas" },
       { label: "可检测尺寸", value: "> 0.8 mm 宽度" },
-      { label: "通讯接口", value: "TTL232" },
+      { label: "通讯接口", value: "TTL" },
       { label: "通讯协议", value: "Modbus RTU" },
       { label: "输出方式", value: "UART/TTL 数字信号、IO 模拟电压 0–5V、IO 数字报警信号" },
       { label: "工作电压", value: "5V DC ±5%" },
@@ -80,7 +80,7 @@ export const controlModuleDetails: ControlModuleDetail[] = [
       },
       {
         question: "ABD 是否支持 Modbus RTU？",
-        answer: "支持。模块通讯接口为 TTL232，通讯协议支持 Modbus RTU。"
+        answer: "支持。模块通讯接口为 TTL，通讯协议支持 Modbus RTU。"
       },
       {
         question: "ABD 能否检测很小的微气泡？",
@@ -112,7 +112,7 @@ export const controlModuleDetails: ControlModuleDetail[] = [
       "自动化仪器状态监控"
     ],
     highlights: [
-      "压力范围 10–700 kPa",
+      "压力范围 10–1200 kPa",
       "I2C 数字输出",
       "PEEK 流道结构",
       "1/4-28 UNF 内螺纹接口",
@@ -123,7 +123,7 @@ export const controlModuleDetails: ControlModuleDetail[] = [
     ],
     specs: [
       { label: "产品类型", value: "压力检测模块" },
-      { label: "压力范围", value: "10–700 kPa" },
+      { label: "压力范围", value: "10–1200 kPa" },
       { label: "输出信号", value: "Digital" },
       { label: "通讯接口", value: "I2C" },
       { label: "默认 I2C 地址", value: "0x6D" },
@@ -151,7 +151,7 @@ export const controlModuleDetails: ControlModuleDetail[] = [
       },
       {
         question: "PDM5 的压力范围是多少？",
-        answer: "标准压力范围为 10–700 kPa。"
+        answer: "标准压力范围为 10–1200 kPa。"
       },
       {
         question: "PDM5 使用什么通讯方式？",

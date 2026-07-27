@@ -1,4 +1,4 @@
-﻿/* =========================================================
+/* =========================================================
    news.zh.ts
    恒永达官网｜中文公司新闻数据
 
@@ -155,7 +155,7 @@ export const newsZhData: NewsPageData = {
       summary:
         "恒永达将参加 2026 ME 供应链生态展，展位号 2-M46，展示核心产品、技术能力及多场景应用方案。",
       date: "2026-03-27",
-      coverImage: "/images/resources/news/articles/me-supply-chain-expo-2026/cover.webp",
+      coverImage: "/images/resources/news/articles/me-supply-chain-expo-2026/me-2026-news.webp",
       isPinned: true,
       content: [
         {

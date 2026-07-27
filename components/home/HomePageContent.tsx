@@ -1,10 +1,11 @@
-﻿// 杩欐槸鍏充簬 components/home/HomePageContent.tsx 鐨勬枃浠讹細鐢ㄤ簬绠＄悊棣栭〉鎵€鏈夋ā鍧楃殑鎺掑垪椤哄簭
+// 杩欐槸鍏充簬 components/home/HomePageContent.tsx 鐨勬枃浠讹細鐢ㄤ簬绠＄悊棣栭〉鎵€鏈夋ā鍧楃殑鎺掑垪椤哄簭
 // 杩欎釜鏂囦欢鐨勪綔鐢細鍙礋璐ｂ€滈椤电粨鏋勭粍鍚堚€濓紝涓嶇洿鎺ュ啓 Hero 棣栧睆鐨勫叿浣撳唴瀹?
 
 import HomeApplicationFlowSection from "@/components/home/HomeApplicationFlowSection"; // 寮曞叆棣栭〉绗簩灞忥細搴旂敤棰嗗煙 脳 鏍稿績閮ㄤ欢缁勪欢
 import HomeCompanyStrengthSection from "@/components/home/HomeCompanyStrengthSection"; // 寮曞叆棣栭〉绗笁 / 绗洓灞忥細鍏徃浠嬬粛涓庝紒涓氫紭鍔跨粍浠?
 import HomeHeroSection from "@/components/home/HomeHeroSection"; // 寮曞叆棣栭〉绗竴灞忥細Hero 棣栧睆缁勪欢
 import HomeContactInquirySection from "@/components/home/HomeContactInquirySection";
+import HomeEntryLoader from "@/components/home/HomeEntryLoader";
 import HomeNewsSection from "@/components/home/HomeNewsSection"; // 寮曞叆棣栭〉绗簲灞忥細璧勮涓績缁勪欢
 
 import { getLanguageTextLayoutClass } from "@/data/languages"; // 寮曞叆鏍规嵁褰撳墠璇█鑾峰彇鎺掔増 class 鐨勬柟娉?
@@ -49,6 +50,8 @@ export default function HomePageContent({ locale }: HomePageContentProps) {
 
   return (
     <div className={`site-page ${languageTextLayoutClass}`}>
+      {/* HOME_ENTRY_LOADER_COMPONENT */}
+      <HomeEntryLoader />
       <main>
         {/* 绗竴灞忥細Hero 棣栧睆鍖哄煙 */}
         <HomeHeroSection locale={locale} />
