@@ -54,6 +54,16 @@ const LOCALE_COOKIE_NAME = "foreach_locale";
    7. 这里不要直接拿 localeCode 拼 URL，避免以后语言代码变化导致路径错误
 ================================ */
 const LOCALE_PATH_PREFIXES = ["en", "es", "fr", "ko", "ru"] as const;
+const PUBLIC_TOP_LEVEL_PATH_SEGMENTS = new Set([
+  "about",
+  "api",
+  "applications",
+  "contact",
+  "privacy-policy",
+  "products",
+  "resources",
+  "search",
+]);
 
 type LocalePathPrefix = (typeof LOCALE_PATH_PREFIXES)[number];
 
@@ -234,6 +244,12 @@ export default function SiteHeader() {
 
     return currentPathWithoutLocale.replace(/\/+$/, "");
   }, [currentPathWithoutLocale]);
+
+  const topLevelPathSegment =
+    normalizedPathWithoutLocale.split("/").filter(Boolean)[0] ?? "";
+  const isUnknownTopLevelPath =
+    normalizedPathWithoutLocale !== "/" &&
+    !PUBLIC_TOP_LEVEL_PATH_SEGMENTS.has(topLevelPathSegment);
 
   /* ================================
      接头型号替代详情页判断
@@ -482,7 +498,7 @@ const isFittingReplacementDetailPage =
     isScrolled ||
     isFittingReplacementDetailPage || isNewsArticlePage ||
     isTechnicalArticlePage || isProductCenterPage || isPrivacyPolicyPage ||
-    isPrivacyPolicyPage ||
+    isUnknownTopLevelPath ||
     openPanel !== "none" ||
     Boolean(desktopMegaKey) ||
     isSearchOpen;

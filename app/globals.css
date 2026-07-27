@@ -18633,6 +18633,48 @@ html body .home-honor-image img {
 ========================================================= */
 /* HOME_HERO_IMAGE_TEXT_TOGETHER_CSS_START */
 
+.home-hero-poster {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1;
+
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+
+  object-fit: cover !important;
+  object-position:
+    center center !important;
+
+  opacity: 1;
+  transition:
+    opacity 0.5s ease;
+
+  pointer-events: none;
+  will-change: opacity;
+}
+
+.home-hero-poster-hidden {
+  opacity: 0;
+}
+
+.home-hero-poster-restored {
+  transition: none;
+}
+
+.home-hero-video {
+  opacity:
+    var(
+      --home-hero-video-opacity,
+      0
+    ) !important;
+
+  transition:
+    opacity 0.5s ease !important;
+
+  will-change: opacity;
+}
+
 .home-hero-static-image {
   display: none;
 }

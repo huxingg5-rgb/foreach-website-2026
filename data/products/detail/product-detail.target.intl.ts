@@ -4,6 +4,7 @@ import {
   localizeHardTubeFittingDetailData,
   type HardTubeTargetLocale,
 } from "./hard-tube-fitting-detail.intl";
+import { localizeProbeDetailData } from "./probe-detail.target.intl";
 
 type DetailRecord = Record<string, any>;
 type ProductKind =
@@ -34,6 +35,28 @@ const PRODUCT_NAMES: Record<HardTubeTargetLocale, Record<ProductKind, string>> =
     "plunger-pump": "плунжерный насос", "diaphragm-pump": "мембранный насос", "pipetting-pump": "пипетирующий насос", "syringe-pump": "шприцевой насос", "valveless-pump": "бесклапанный насос",
     "barbed-fitting": "штуцер", "bulkhead-barbed-fitting": "проходной штуцер", "hard-tube-fitting": "фитинг для жёстких трубок", "thread-to-barbed-fitting": "переходник резьба–штуцер", "quick-connect-fitting": "быстроразъёмное соединение", "luer-fitting": "фитинг Люэра", "female-thread-adapter": "адаптер с внутренней резьбой", filter: "линейный фильтр", "check-valve": "обратный клапан",
     tubing: "трубка для жидкостных систем", "rotary-valve": "поворотный клапан", "high-pressure-valve": "клапан высокого давления", "solenoid-valve": "электромагнитный клапан", "sampling-probe": "пробоотборная игла", "piercing-probe": "прокалывающая игла", "wash-probe": "промывочная игла", "mixing-paddle": "смесительная лопатка", "air-bubble-detector": "детектор воздушных пузырьков", "pressure-sensor": "датчик давления", product: "прецизионный компонент жидкостной системы",
+  },
+};
+
+const VALVELESS_PRODUCT_NAMES: Record<
+  HardTubeTargetLocale,
+  Record<"RPL" | "DRPL", string>
+> = {
+  es: {
+    RPL: "bomba sin válvulas RPL",
+    DRPL: "bomba sin válvulas de doble cabezal DRPL",
+  },
+  fr: {
+    RPL: "pompe sans valve RPL",
+    DRPL: "pompe sans valve à double tête DRPL",
+  },
+  ko: {
+    RPL: "RPL 무밸브 펌프",
+    DRPL: "DRPL 듀얼 헤드 무밸브 펌프",
+  },
+  ru: {
+    RPL: "бесклапанный насос RPL",
+    DRPL: "двухголовочный бесклапанный насос DRPL",
   },
 };
 
@@ -94,10 +117,10 @@ const EXTRA_SOURCE_SPEC_LABELS: Record<HardTubeTargetLocale, Record<string, stri
 };
 
 const EXTRA_SOURCE_VALUE_TERMS: Record<HardTubeTargetLocale, Record<string, string>> = {
-  es: { "液体隔膜泵": "Bomba de diafragma para líquidos", "纯化水，其他液体介质需实际评估": "Agua purificada; otros fluidos deben evaluarse", "可接内径 3.2 mm 软管": "Para tubo con diámetro interior de 3.2 mm", "公端": "Macho", "母端": "Hembra", "穿板": "Montaje en panel", "非穿板": "Sin montaje en panel", "带阀": "Con válvula", "不带阀": "Sin válvula", "直通": "Recto" },
-  fr: { "液体隔膜泵": "Pompe à membrane pour liquides", "纯化水，其他液体介质需实际评估": "Eau purifiée ; les autres fluides doivent être évalués", "可接内径 3.2 mm 软管": "Pour tube de diamètre intérieur 3,2 mm", "公端": "Mâle", "母端": "Femelle", "穿板": "Montage sur panneau", "非穿板": "Sans montage sur panneau", "带阀": "Avec valve", "不带阀": "Sans valve", "直通": "Droit" },
-  ko: { "液体隔膜泵": "액체 다이어프램 펌프", "纯化水，其他液体介质需实际评估": "정제수; 기타 유체는 실제 평가 필요", "可接内径 3.2 mm 软管": "내경 3.2 mm 튜브 적용", "公端": "수", "母端": "암", "穿板": "패널 장착", "非穿板": "비패널 장착", "带阀": "밸브 내장", "不带阀": "무밸브", "直通": "직선형" },
-  ru: { "液体隔膜泵": "Жидкостный мембранный насос", "纯化水，其他液体介质需实际评估": "Очищенная вода; другие жидкости требуют оценки", "可接内径 3.2 mm 软管": "Для трубки с внутренним диаметром 3,2 мм", "公端": "Штыревой", "母端": "Гнездовой", "穿板": "Панельный монтаж", "非穿板": "Непанельный монтаж", "带阀": "С клапаном", "不带阀": "Без клапана", "直通": "Прямой" },
+  es: { "液体隔膜泵": "Bomba de diafragma para líquidos", "RPL 无阀泵": "Bomba sin válvulas RPL", "纯化水，其他液体介质需实际评估": "Agua purificada; otros fluidos deben evaluarse", "可接内径 3.2 mm 软管": "Para tubo con diámetro interior de 3.2 mm", "公端": "Macho", "母端": "Hembra", "穿板": "Montaje en panel", "非穿板": "Sin montaje en panel", "带阀": "Con válvula", "不带阀": "Sin válvula", "直通": "Recto" },
+  fr: { "液体隔膜泵": "Pompe à membrane pour liquides", "RPL 无阀泵": "Pompe sans valve RPL", "纯化水，其他液体介质需实际评估": "Eau purifiée ; les autres fluides doivent être évalués", "可接内径 3.2 mm 软管": "Pour tube de diamètre intérieur 3,2 mm", "公端": "Mâle", "母端": "Femelle", "穿板": "Montage sur panneau", "非穿板": "Sans montage sur panneau", "带阀": "Avec valve", "不带阀": "Sans valve", "直通": "Droit" },
+  ko: { "液体隔膜泵": "액체 다이어프램 펌프", "RPL 无阀泵": "RPL 무밸브 펌프", "纯化水，其他液体介质需实际评估": "정제수; 기타 유체는 실제 평가 필요", "可接内径 3.2 mm 软管": "내경 3.2 mm 튜브 적용", "公端": "수", "母端": "암", "穿板": "패널 장착", "非穿板": "비패널 장착", "带阀": "밸브 내장", "不带阀": "무밸브", "直通": "직선형" },
+  ru: { "液体隔膜泵": "Жидкостный мембранный насос", "RPL 无阀泵": "Бесклапанный насос RPL", "纯化水，其他液体介质需实际评估": "Очищенная вода; другие жидкости требуют оценки", "可接内径 3.2 mm 软管": "Для трубки с внутренним диаметром 3,2 мм", "公端": "Штыревой", "母端": "Гнездовой", "穿板": "Панельный монтаж", "非穿板": "Непанельный монтаж", "带阀": "С клапаном", "不带阀": "Без клапана", "直通": "Прямой" },
 };
 
 const TUBING_SOURCE_SPEC_LABELS: Record<HardTubeTargetLocale, Record<string, string>> = {
@@ -113,7 +136,7 @@ const ADVANCED_SOURCE_SPEC_LABELS: Record<HardTubeTargetLocale, Record<string, s
     "检测方式": "Método de detección", "检测对象": "Objeto detectado", "适配管外径": "Diámetro exterior de tubo compatible", "适配管材": "Materiales de tubo compatibles", "检测介质": "Medio detectado", "可检测尺寸": "Tamaño mínimo detectable", "通讯协议": "Protocolo de comunicación", "输出方式": "Tipo de salida", "工作电压": "Tensión de funcionamiento", "工作电流": "Corriente de funcionamiento", "响应时间": "Tiempo de respuesta", "储存温度": "Temperatura de almacenamiento",
     "产品名称": "Nombre del producto", "移液方式": "Método de pipeteo", "标称量程": "Volumen nominal", "驱动设计": "Diseño del accionamiento", "定量分辨率": "Resolución de dosificación", "满量程步数": "Pasos de carrera completa", "液面探测": "Detección de nivel de líquido", "尖端堵塞检测": "Detección de obstrucción de punta", "吸头有无检测": "Detección de presencia de punta", "自动脱吸头": "Expulsión automática de punta", "级联能力": "Capacidad de conexión en cascada", "运行噪音": "Ruido de funcionamiento", "运行环境": "Entorno de funcionamiento", "存储环境": "Entorno de almacenamiento", "吸头适配": "Compatibilidad de puntas",
     "切阀时间": "Tiempo de conmutación de válvula", "阀结构": "Estructura de válvula", "量程（玻璃注射器）": "Rango de volumen (jeringa de vidrio)", "液量精确度（额定行程）": "Exactitud de volumen (carrera nominal)", "转阀耐压": "Presión nominal de la válvula rotativa", "通讯类型": "Interfaz de comunicación", "安装尺寸（长×宽×高）": "Dimensiones de instalación (L×An×Al)",
-    "稀释比": "Relación de dilución", "浓缩液份数": "Partes de concentrado", "稀释液份数": "Partes de diluyente", "浓缩液定量（μL）": "Volumen de concentrado (μL)", "稀释液定量（μL）": "Volumen de diluyente (μL)", "配液量（mL）": "Volumen preparado (mL)", "转速": "Velocidad de giro", "流量 QMin，mL/Min": "Caudal Qmin (mL/min)", "流量 QMax，mL/Min": "Caudal Qmax (mL/min)", "试剂A 工作液路接口": "Puerto de trabajo del reactivo A", "试剂B 工作液路接口": "Puerto de trabajo del reactivo B", "试剂A 清洗液路接口": "Puerto de lavado del reactivo A", "试剂B 清洗液路接口": "Puerto de lavado del reactivo B", "试剂A 端耐压": "Presión nominal del puerto A", "试剂B 端耐压": "Presión nominal del puerto B", "尺寸/mm": "Dimensiones (mm)",
+    "稀释比": "Relación de dilución", "浓缩液份数": "Partes de concentrado", "稀释液份数": "Partes de diluyente", "浓缩液定量（μL）": "Volumen de concentrado (μL)", "稀释液定量（μL）": "Volumen de diluyente (μL)", "配液量（mL）": "Volumen preparado (mL)", "转速": "Velocidad de giro", "流量 QMin，mL/min": "Caudal Qmin (mL/min)", "流量 QMax，mL/min": "Caudal Qmax (mL/min)", "试剂A 工作液路接口": "Puerto de trabajo del reactivo A", "试剂B 工作液路接口": "Puerto de trabajo del reactivo B", "试剂A 清洗液路接口": "Puerto de lavado del reactivo A", "试剂B 清洗液路接口": "Puerto de lavado del reactivo B", "试剂A 端耐压": "Presión nominal del puerto A", "试剂B 端耐压": "Presión nominal del puerto B", "尺寸/mm": "Dimensiones (mm)",
     "空载流量（单头）": "Caudal libre (un cabezal)", "最大正压": "Presión positiva máxima", "最大负压": "Vacío máximo", "接口": "Puerto",
   },
   fr: {
@@ -121,7 +144,7 @@ const ADVANCED_SOURCE_SPEC_LABELS: Record<HardTubeTargetLocale, Record<string, s
     "检测方式": "Méthode de détection", "检测对象": "Objet détecté", "适配管外径": "Diamètre extérieur de tube compatible", "适配管材": "Matériaux de tube compatibles", "检测介质": "Milieu détecté", "可检测尺寸": "Taille minimale détectable", "通讯协议": "Protocole de communication", "输出方式": "Type de sortie", "工作电压": "Tension de service", "工作电流": "Courant de service", "响应时间": "Temps de réponse", "储存温度": "Température de stockage",
     "产品名称": "Nom du produit", "移液方式": "Méthode de pipetage", "标称量程": "Volume nominal", "驱动设计": "Conception de l’entraînement", "定量分辨率": "Résolution de dosage", "满量程步数": "Nombre de pas sur la course complète", "液面探测": "Détection du niveau de liquide", "尖端堵塞检测": "Détection d’obstruction de l’embout", "吸头有无检测": "Détection de présence d’embout", "自动脱吸头": "Éjection automatique de l’embout", "级联能力": "Capacité de mise en cascade", "运行噪音": "Bruit de fonctionnement", "运行环境": "Environnement de fonctionnement", "存储环境": "Environnement de stockage", "吸头适配": "Compatibilité des embouts",
     "切阀时间": "Temps de commutation de la vanne", "阀结构": "Structure de la vanne", "量程（玻璃注射器）": "Plage de volume (seringue en verre)", "液量精确度（额定行程）": "Exactitude volumétrique (course nominale)", "转阀耐压": "Pression nominale de la vanne rotative", "通讯类型": "Interface de communication", "安装尺寸（长×宽×高）": "Dimensions d’installation (L×l×H)",
-    "稀释比": "Rapport de dilution", "浓缩液份数": "Parts de concentré", "稀释液份数": "Parts de diluant", "浓缩液定量（μL）": "Volume de concentré (μL)", "稀释液定量（μL）": "Volume de diluant (μL)", "配液量（mL）": "Volume préparé (mL)", "转速": "Vitesse de rotation", "流量 QMin，mL/Min": "Débit Qmin (mL/min)", "流量 QMax，mL/Min": "Débit Qmax (mL/min)", "试剂A 工作液路接口": "Port de service du réactif A", "试剂B 工作液路接口": "Port de service du réactif B", "试剂A 清洗液路接口": "Port de lavage du réactif A", "试剂B 清洗液路接口": "Port de lavage du réactif B", "试剂A 端耐压": "Pression nominale du port A", "试剂B 端耐压": "Pression nominale du port B", "尺寸/mm": "Dimensions (mm)",
+    "稀释比": "Rapport de dilution", "浓缩液份数": "Parts de concentré", "稀释液份数": "Parts de diluant", "浓缩液定量（μL）": "Volume de concentré (μL)", "稀释液定量（μL）": "Volume de diluant (μL)", "配液量（mL）": "Volume préparé (mL)", "转速": "Vitesse de rotation", "流量 QMin，mL/min": "Débit Qmin (mL/min)", "流量 QMax，mL/min": "Débit Qmax (mL/min)", "试剂A 工作液路接口": "Port de service du réactif A", "试剂B 工作液路接口": "Port de service du réactif B", "试剂A 清洗液路接口": "Port de lavage du réactif A", "试剂B 清洗液路接口": "Port de lavage du réactif B", "试剂A 端耐压": "Pression nominale du port A", "试剂B 端耐压": "Pression nominale du port B", "尺寸/mm": "Dimensions (mm)",
     "空载流量（单头）": "Débit libre (une tête)", "最大正压": "Pression positive maximale", "最大负压": "Vide maximal", "接口": "Port",
   },
   ko: {
@@ -129,7 +152,7 @@ const ADVANCED_SOURCE_SPEC_LABELS: Record<HardTubeTargetLocale, Record<string, s
     "检测方式": "검출 방식", "检测对象": "검출 대상", "适配管外径": "호환 튜브 외경", "适配管材": "호환 튜브 재질", "检测介质": "검출 매체", "可检测尺寸": "최소 검출 크기", "通讯协议": "통신 프로토콜", "输出方式": "출력 방식", "工作电压": "사용 전압", "工作电流": "사용 전류", "响应时间": "응답 시간", "储存温度": "보관 온도",
     "产品名称": "제품명", "移液方式": "피펫팅 방식", "标称量程": "공칭 용량", "驱动设计": "구동 설계", "定量分辨率": "분주 분해능", "满量程步数": "전체 행정 스텝 수", "液面探测": "액면 감지", "尖端堵塞检测": "팁 막힘 감지", "吸头有无检测": "팁 장착 감지", "自动脱吸头": "자동 팁 배출", "级联能力": "캐스케이드 연결 대수", "运行噪音": "동작 소음", "运行环境": "사용 환경", "存储环境": "보관 환경", "吸头适配": "팁 호환성",
     "切阀时间": "밸브 전환 시간", "阀结构": "밸브 구조", "量程（玻璃注射器）": "용량 범위(유리 주사기)", "液量精确度（额定行程）": "용량 정확도(정격 행정)", "转阀耐压": "로터리 밸브 정격 압력", "通讯类型": "통신 인터페이스", "安装尺寸（长×宽×高）": "설치 치수(L×W×H)",
-    "稀释比": "희석비", "浓缩液份数": "농축액 비율", "稀释液份数": "희석액 비율", "浓缩液定量（μL）": "농축액 용량(μL)", "稀释液定量（μL）": "희석액 용량(μL)", "配液量（mL）": "조제 용량(mL)", "转速": "회전 속도", "流量 QMin，mL/Min": "유량 Qmin(mL/min)", "流量 QMax，mL/Min": "유량 Qmax(mL/min)", "试剂A 工作液路接口": "시약 A 작동 유로 포트", "试剂B 工作液路接口": "시약 B 작동 유로 포트", "试剂A 清洗液路接口": "시약 A 세척 유로 포트", "试剂B 清洗液路接口": "시약 B 세척 유로 포트", "试剂A 端耐压": "시약 A 포트 정격 압력", "试剂B 端耐压": "시약 B 포트 정격 압력", "尺寸/mm": "치수(mm)",
+    "稀释比": "희석비", "浓缩液份数": "농축액 비율", "稀释液份数": "희석액 비율", "浓缩液定量（μL）": "농축액 용량(μL)", "稀释液定量（μL）": "희석액 용량(μL)", "配液量（mL）": "조제 용량(mL)", "转速": "회전 속도", "流量 QMin，mL/min": "유량 Qmin(mL/min)", "流量 QMax，mL/min": "유량 Qmax(mL/min)", "试剂A 工作液路接口": "시약 A 작동 유로 포트", "试剂B 工作液路接口": "시약 B 작동 유로 포트", "试剂A 清洗液路接口": "시약 A 세척 유로 포트", "试剂B 清洗液路接口": "시약 B 세척 유로 포트", "试剂A 端耐压": "시약 A 포트 정격 압력", "试剂B 端耐压": "시약 B 포트 정격 압력", "尺寸/mm": "치수(mm)",
     "空载流量（单头）": "무부하 유량(단일 헤드)", "最大正压": "최대 양압", "最大负压": "최대 진공압", "接口": "포트",
   },
   ru: {
@@ -137,7 +160,7 @@ const ADVANCED_SOURCE_SPEC_LABELS: Record<HardTubeTargetLocale, Record<string, s
     "检测方式": "Метод обнаружения", "检测对象": "Объект обнаружения", "适配管外径": "Совместимый наружный диаметр трубки", "适配管材": "Совместимые материалы трубки", "检测介质": "Контролируемая среда", "可检测尺寸": "Минимальный обнаруживаемый размер", "通讯协议": "Протокол связи", "输出方式": "Тип выхода", "工作电压": "Рабочее напряжение", "工作电流": "Рабочий ток", "响应时间": "Время отклика", "储存温度": "Температура хранения",
     "产品名称": "Наименование продукта", "移液方式": "Метод пипетирования", "标称量程": "Номинальный объём", "驱动设计": "Конструкция привода", "定量分辨率": "Разрешение дозирования", "满量程步数": "Количество шагов полного хода", "液面探测": "Определение уровня жидкости", "尖端堵塞检测": "Контроль засорения наконечника", "吸头有无检测": "Контроль наличия наконечника", "自动脱吸头": "Автоматический сброс наконечника", "级联能力": "Каскадное подключение", "运行噪音": "Рабочий шум", "运行环境": "Условия эксплуатации", "存储环境": "Условия хранения", "吸头适配": "Совместимость с наконечниками",
     "切阀时间": "Время переключения клапана", "阀结构": "Конструкция клапана", "量程（玻璃注射器）": "Диапазон объёма (стеклянный шприц)", "液量精确度（额定行程）": "Точность объёма (номинальный ход)", "转阀耐压": "Номинальное давление поворотного клапана", "通讯类型": "Интерфейс связи", "安装尺寸（长×宽×高）": "Монтажные размеры (Д×Ш×В)",
-    "稀释比": "Коэффициент разбавления", "浓缩液份数": "Доли концентрата", "稀释液份数": "Доли разбавителя", "浓缩液定量（μL）": "Объём концентрата (μL)", "稀释液定量（μL）": "Объём разбавителя (μL)", "配液量（mL）": "Приготовленный объём (mL)", "转速": "Частота вращения", "流量 QMin，mL/Min": "Расход Qmin (mL/min)", "流量 QMax，mL/Min": "Расход Qmax (mL/min)", "试剂A 工作液路接口": "Рабочий порт реагента A", "试剂B 工作液路接口": "Рабочий порт реагента B", "试剂A 清洗液路接口": "Промывочный порт реагента A", "试剂B 清洗液路接口": "Промывочный порт реагента B", "试剂A 端耐压": "Номинальное давление порта A", "试剂B 端耐压": "Номинальное давление порта B", "尺寸/mm": "Размеры (mm)",
+    "稀释比": "Коэффициент разбавления", "浓缩液份数": "Доли концентрата", "稀释液份数": "Доли разбавителя", "浓缩液定量（μL）": "Объём концентрата (μL)", "稀释液定量（μL）": "Объём разбавителя (μL)", "配液量（mL）": "Приготовленный объём (mL)", "转速": "Частота вращения", "流量 QMin，mL/min": "Расход Qmin (mL/min)", "流量 QMax，mL/min": "Расход Qmax (mL/min)", "试剂A 工作液路接口": "Рабочий порт реагента A", "试剂B 工作液路接口": "Рабочий порт реагента B", "试剂A 清洗液路接口": "Промывочный порт реагента A", "试剂B 清洗液路接口": "Промывочный порт реагента B", "试剂A 端耐压": "Номинальное давление порта A", "试剂B 端耐压": "Номинальное давление порта B", "尺寸/mm": "Размеры (mm)",
     "空载流量（单头）": "Свободный расход (одна головка)", "最大正压": "Максимальное положительное давление", "最大负压": "Максимальное разрежение", "接口": "Порт",
   },
 };
@@ -401,7 +424,7 @@ export function localizeTargetProductDetailData<T extends DetailRecord>(sourceDa
   }
 
   const english = localizeProductDetailData(sourceData) as DetailRecord;
-  const productName = PRODUCT_NAMES[locale][kind];
+  const genericProductName = PRODUCT_NAMES[locale][kind];
   const category = inferCategory(kind);
   const pathnameSlug = String(pathname).split("/").filter(Boolean).at(-1) || "";
   const cleanDisplayModel = [sourceData.displayModel, sourceData.modelDisplay, sourceData.foreachModel, sourceData.model, sourceData.productCode]
@@ -416,8 +439,13 @@ export function localizeTargetProductDetailData<T extends DetailRecord>(sourceDa
   const modelFromPath = (/\d/.test(cleanedPathnameSlug) || cleanedPathnameSlug !== pathnameSlug)
     ? cleanedPathnameSlug.toUpperCase().replace(/-EP-PS$/, "-EP/PS")
     : "";
-  const rawModel = String(tubingTitle || cleanDisplayModel || modelFromPath || sourceData.slug || productName).replace(/[.。]+$/, "").trim();
+  const rawModel = String(tubingTitle || cleanDisplayModel || modelFromPath || sourceData.slug || genericProductName).replace(/[.。]+$/, "").trim();
   const model = rawModel.replace(/\s+(Plunger|Diaphragm|Pipetting|Syringe|Valveless|Rotary|Solenoid|High-Pressure).*$/i, "").trim() || rawModel;
+  const valvelessSeries = /^DRPL(?:-|$)/i.test(model) ? "DRPL" : "RPL";
+  const productName =
+    kind === "valveless-pump"
+      ? VALVELESS_PRODUCT_NAMES[locale][valvelessSeries]
+      : genericProductName;
   const englishSpecs = Array.isArray(english.specs) ? english.specs : Array.isArray(english.specifications) ? english.specifications : [];
   const sourceSpecs = Array.isArray(sourceData.specs) ? sourceData.specs : Array.isArray(sourceData.specifications) ? sourceData.specifications : [];
   const plungerSpecKeys = ["标称容量", "当前展示泵头材质", "泵头材质可选范围", "柱塞材质可选范围", "液路接口", "行程", "推荐最高转速", "电机步距角", "导程", "满量程步数", "100%量程准确性", "100%量程重复性", "2%量程准确性", "2%量程重复性", "背隙", "设计寿命", "最大流体压力"];
@@ -445,7 +473,7 @@ export function localizeTargetProductDetailData<T extends DetailRecord>(sourceDa
   const ctaDescription = locale === "es" ? "Comparta el fluido, el rango de trabajo, los materiales, las conexiones, el método de control, la cantidad y los requisitos de instalación. El equipo de ingeniería de FOREACH le ayudará a confirmar una configuración adecuada." : locale === "fr" ? "Indiquez le fluide, la plage de fonctionnement, les matériaux, les raccordements, la commande, la quantité et les contraintes d’installation. L’équipe d’ingénierie FOREACH vous aidera à valider une configuration adaptée." : locale === "ko" ? "유체, 사용 범위, 재질, 연결 방식, 제어 방식, 수량 및 설치 요구 사항을 알려주시면 FOREACH 엔지니어링 팀이 적합한 구성을 확인해 드립니다." : "Сообщите рабочую жидкость, диапазон параметров, материалы, соединения, способ управления, количество и требования к монтажу. Инженеры FOREACH помогут подтвердить подходящую конфигурацию.";
   const ctaButton = locale === "es" ? "Contactar con un ingeniero" : locale === "fr" ? "Contacter un ingénieur" : locale === "ko" ? "엔지니어에게 문의" : "Связаться с инженером";
 
-  return {
+  const localized = {
     ...english,
     __locale: locale,
     model,
@@ -482,6 +510,22 @@ export function localizeTargetProductDetailData<T extends DetailRecord>(sourceDa
     customInquiryHref: `/${locale}/contact`,
     seo: { ...(english.seo || {}), title: `${model} ${productName} | FOREACH`, description },
   } as unknown as T;
+
+  if (
+    kind === "sampling-probe" ||
+    kind === "piercing-probe" ||
+    kind === "wash-probe" ||
+    kind === "mixing-paddle"
+  ) {
+    return localizeProbeDetailData(
+      sourceData,
+      localized,
+      locale,
+      pathname,
+    );
+  }
+
+  return localized;
 }
 
 export function getTargetProductMetadataCopy(segments: string[], locale: HardTubeTargetLocale) {
