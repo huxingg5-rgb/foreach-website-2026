@@ -176,8 +176,8 @@ export const headerI18n: Record<LocaleCode, HeaderText> = {
 // 3. 后期如果接后台 / CMS，可以从接口读取这些字段
 export const homeI18n: Record<LocaleCode, HomeText> = {
   "zh-CN": {
-    heroTitleLine1: "微流体系统核心零部件",
-    heroTitleLine2: "液路系统解决方案供应商",
+    heroTitleLine1: "微流体零部件及系统",
+    heroTitleLine2: "方案提供商",
     heroSubtitle:
       "专注于泵、阀、传感器、管路、连接件、采样针及驱动控制模块，为 IVD、生命科学、高端分析仪器、合成生物和实验室自动化提供系统级流体控制支持。",
     productButton: "查看产品中心",

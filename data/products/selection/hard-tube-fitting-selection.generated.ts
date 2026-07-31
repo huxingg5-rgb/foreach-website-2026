@@ -4212,7 +4212,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PEEK",
       "filter05": "本色"
     },
-    "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc-u32-16-pk-n-main.jpg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc-u32-16-pk-n-main.webp",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 145,
@@ -4241,7 +4241,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PEEK",
       "filter05": "本色"
     },
-    "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc6-u32-16-pk-n-main.jpg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc6-u32-16-pk-n-main.webp",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 146,
@@ -4270,13 +4270,106 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "SUS",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnf-u32-16-ss-n-main.webp",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 147,
     "searchKeywords": {
       "zh": "硬管接头 高压接头 PNF PNF-U32-16-SS-N 809696 515-00-02910 高压接头 10-32 UNF 1.6 mm SUS 本色",
       "en": "hard tube fitting High-pressure Fitting PNF PNF-U32-16-SS-N 809696 515-00-02910 10-32 UNF 1.6 mm Stainless Steel Natural"
+    }
+  },
+  {
+    "productId": "809317",
+    "categoryId": "fittings",
+    "productTypeId": "hard-tube-fittings",
+    "seriesId": "high-pressure-fitting",
+    "cardTitle": {
+      "zh": "PU-U32-08-SS-N",
+      "en": "PU-U32-08-SS-N"
+    },
+    "cardSubtitle": {
+      "zh": "耐压：25 MPa\n螺纹：10-32 UNF\n流道内径：0.8 mm",
+      "en": "Pressure rating: 25 MPa\nThread: 10-32 UNF\nFlow path ID: 0.8 mm"
+    },
+    "filters": {
+      "filter01": "高压接头",
+      "filter02": "10-32 UNF",
+      "filter03": "0.8 mm（ID）",
+      "filter04": "SUS",
+      "filter05": "本色"
+    },
+    "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pu-u32-08-ss-n-main.webp",
+    "detailSlug": "pu-u32-08-ss-n",
+    "detailHref": "/products/fittings/hard-tube-fittings/pu-u32-08-ss-n",
+    "href": "/products/fittings/hard-tube-fittings/pu-u32-08-ss-n",
+    "status": "active",
+    "sortOrder": 148,
+    "searchKeywords": {
+      "zh": "硬管接头 高压接头 PU PU-U32-08-SS-N 809317 441-09-00083 10-32 UNF 0.8 mm（ID） SUS 本色 25 MPa",
+      "en": "hard tube fitting high-pressure fitting PU PU-U32-08-SS-N 809317 441-09-00083 10-32 UNF 0.8 mm（ID） SUS natural 25 MPa"
+    }
+  },
+  {
+    "productId": "809659",
+    "categoryId": "fittings",
+    "productTypeId": "hard-tube-fittings",
+    "seriesId": "high-pressure-fitting",
+    "cardTitle": {
+      "zh": "PU-U32-U28-08-SS-N",
+      "en": "PU-U32-U28-08-SS-N"
+    },
+    "cardSubtitle": {
+      "zh": "耐压：25 MPa\n螺纹：10-32 UNF / 1/4-28 UNF\n流道内径：0.8 mm",
+      "en": "Pressure rating: 25 MPa\nThread: 10-32 UNF / 1/4-28 UNF\nFlow path ID: 0.8 mm"
+    },
+    "filters": {
+      "filter01": "高压接头",
+      "filter02": "10-32 UNF|1/4-28 UNF",
+      "filter03": "0.8 mm（ID）",
+      "filter04": "SUS",
+      "filter05": "本色"
+    },
+    "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pu-u32-u28-08-ss-n-main.webp",
+    "detailSlug": "pu-u32-u28-08-ss-n",
+    "detailHref": "/products/fittings/hard-tube-fittings/pu-u32-u28-08-ss-n",
+    "href": "/products/fittings/hard-tube-fittings/pu-u32-u28-08-ss-n",
+    "status": "active",
+    "sortOrder": 149,
+    "searchKeywords": {
+      "zh": "硬管接头 高压接头 PU PU-U32-U28-08-SS-N 809659 441-09-00038 10-32 UNF / 1/4-28 UNF 0.8 mm（ID） SUS 本色 25 MPa",
+      "en": "hard tube fitting high-pressure fitting PU PU-U32-U28-08-SS-N 809659 441-09-00038 10-32 UNF / 1/4-28 UNF 0.8 mm（ID） SUS natural 25 MPa"
+    }
+  },
+  {
+    "productId": "809664",
+    "categoryId": "fittings",
+    "productTypeId": "hard-tube-fittings",
+    "seriesId": "high-pressure-fitting",
+    "cardTitle": {
+      "zh": "PUT-U32-05-SS-N",
+      "en": "PUT-U32-05-SS-N"
+    },
+    "cardSubtitle": {
+      "zh": "耐压：25 MPa\n螺纹：10-32 UNF\n流道内径：0.5 mm",
+      "en": "Pressure rating: 25 MPa\nThread: 10-32 UNF\nFlow path ID: 0.5 mm"
+    },
+    "filters": {
+      "filter01": "高压接头",
+      "filter02": "10-32 UNF",
+      "filter03": "0.5 mm（ID）",
+      "filter04": "SUS",
+      "filter05": "本色"
+    },
+    "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/put-u32-05-ss-n-main.webp",
+    "detailSlug": "put-u32-05-ss-n",
+    "detailHref": "/products/fittings/hard-tube-fittings/put-u32-05-ss-n",
+    "href": "/products/fittings/hard-tube-fittings/put-u32-05-ss-n",
+    "status": "active",
+    "sortOrder": 150,
+    "searchKeywords": {
+      "zh": "硬管接头 高压接头 PUT PUT-U32-05-SS-N 809664 441-09-00046 10-32 UNF 0.5 mm（ID） SUS 本色 25 MPa",
+      "en": "hard tube fitting high-pressure fitting PUT PUT-U32-05-SS-N 809664 441-09-00046 10-32 UNF 0.5 mm（ID） SUS natural 25 MPa"
     }
   }
 ] as ProductSelectionProduct[];

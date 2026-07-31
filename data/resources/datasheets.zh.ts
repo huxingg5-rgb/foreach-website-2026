@@ -155,7 +155,7 @@ export const datasheetZhItems: DatasheetItem[] = [
     description: "SM 微型柱塞泵适用于紧凑型自动化仪器中的微量液体定量、分配与试剂加注。",
     image:
       "/images/products/pumps/plunger-pump/sm/pump-sm-1000ul-pmma.webp",
-    productHref: "/products/",
+    productHref: "/products/pumps/plunger-pumps/sm-miniature-piston-pumps",
     downloadHref:
       "/downloads/resources/datasheets/zh-CN/Pumps/ps-120b-013-001-cn-sm-piston-pump.pdf",
     actionType: "download",
@@ -172,7 +172,7 @@ export const datasheetZhItems: DatasheetItem[] = [
     description: "RPL-P6.35 系列无阀泵适用于自动化分析仪器中的微量定量、加样、滴定与液体输送。",
     image:
       "/images/products/pumps/valveless-pumps/foreach-rpl-p635-valveless-pump.webp",
-    productHref: "/products/",
+    productHref: "/products/pumps/valveless-pumps",
     downloadHref:
       "/downloads/resources/datasheets/zh-CN/Pumps/ps-121b-011-a01-cn-rpl-p635-valveless-pump.pdf",
     actionType: "download",
@@ -189,7 +189,7 @@ export const datasheetZhItems: DatasheetItem[] = [
     description: "HMD3 电磁阀注射泵采用30 mm行程，适用于自动化仪器中的高精度定量、分配与多通道液体处理。",
     image:
       "/images/products/pumps/syringe-pumps/foreach-hmd3-solenoid-valve-syringe-pump.webp",
-    productHref: "/products/",
+    productHref: "/products/pumps/syringe-pumps",
     downloadHref:
       "/downloads/resources/datasheets/zh-CN/Pumps/ps-sdrv-007-003-cn-hmd3-syringe-pump.pdf",
     actionType: "download",
@@ -206,7 +206,7 @@ export const datasheetZhItems: DatasheetItem[] = [
     description: "HMD6 电磁阀注射泵采用60 mm行程，适用于自动化仪器中的微升至毫升级定量与多通道液体操作。",
     image:
       "/images/products/pumps/syringe-pumps/foreach-hmd6-solenoid-valve-syringe-pump.webp",
-    productHref: "/products/",
+    productHref: "/products/pumps/syringe-pumps",
     downloadHref:
       "/downloads/resources/datasheets/zh-CN/Pumps/ps-sdrv-001-007-cn-hmd6-syringe-pump.pdf",
     actionType: "download",
@@ -223,7 +223,7 @@ export const datasheetZhItems: DatasheetItem[] = [
     description: "DPL30 隔膜泵适用于自动化仪器中的液体供给、自吸输送、清洗循环与废液处理。",
     image:
       "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushed-liquid-diaphragm-pump-main.webp",
-    productHref: "/products/",
+    productHref: "/products/pumps/diaphragm-pumps/liquid-diaphragm-pumps",
     downloadHref:
       "/downloads/resources/datasheets/zh-CN/Pumps/ps-150b-2412-00001-a03-cn-dpl30-diaphragm-pump.pdf",
     actionType: "download",
@@ -240,7 +240,7 @@ export const datasheetZhItems: DatasheetItem[] = [
     description: "HP二位六通带排气高压阀适用于高压液路切换、排气控制与精密流体管理。",
     image:
       "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp",
-    productHref: "/products/",
+    productHref: "/products/valves/high-pressure-valves",
     downloadHref:
       "/downloads/resources/datasheets/zh-CN/Valves/ps-120c-2604-00001-a00-cn-hp-2-position-6-port-high-pressure-valve.pdf",
     actionType: "download",
@@ -257,7 +257,7 @@ export const datasheetZhItems: DatasheetItem[] = [
     description: "涵盖恒永达连接件、接头、橡塑管及常用管路组件的中文产品目录。",
     image:
       "/images/resource/datasheets/thumbnails/resource-datasheet-thumb-tubing-fitting-v002.webp",
-    productHref: "/products/",
+    productHref: "/products/fittings",
     downloadHref:
       "/downloads/resources/datasheets/zh-CN/Tubing-and-Fittings/foreach-fittings-and-elastomer-tubing-catalog-a02-cn.pdf",
     actionType: "download",
@@ -274,7 +274,7 @@ export const datasheetZhItems: DatasheetItem[] = [
     description: "暂无规格书，支持根据图纸或样品进行定制沟通。",
     image:
       "/images/resource/datasheets/thumbnails/resource-datasheet-thumb-sample-probe-v001.webp",
-    productHref: "/products/",
+    productHref: "/products/probes",
     downloadHref: "/contact?type=custom-probe",
     actionType: "custom",
   },

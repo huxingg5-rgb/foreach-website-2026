@@ -461,7 +461,43 @@ export default function ProductFilterPanel({
             activeProductTypeId ===
             "female-thread-adapters";
 
-          const inferredShouldUseTwoColumns =
+          /* MATERIAL_COLOR_TWO_COLUMN_RULE_START */
+
+/*
+ * 材质与颜色筛选统一使用两列：
+ *
+ * 硬管接头：
+ * - filter04 主体材质
+ * - filter05 颜色
+ *
+ * 螺纹转倒刺接头：
+ * - filter04 / filter05 / filter06
+ *
+ * 继续使用现有 filter-options two 样式，
+ * 不新增新的 CSS 规则。
+ */
+const isMaterialColorTwoColumnGroup =
+  activeProductTypeId ===
+    "hard-tube-fittings"
+    ? (
+        group.key === "filter04" ||
+        group.key === "filter05"
+      )
+    : activeProductTypeId ===
+        "thread-to-barbed-fittings"
+      ? (
+          group.key === "filter04" ||
+          group.key === "filter05" ||
+          group.key === "filter06"
+        )
+      : false;
+
+/* MATERIAL_COLOR_TWO_COLUMN_RULE_END */
+
+const inferredShouldUseTwoColumns =
+  isMaterialColorTwoColumnGroup
+    ? true
+    :
             isFemaleThreadAdapter &&
             group.key === "filter01"
               ? false

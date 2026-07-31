@@ -22420,10 +22420,10 @@
       "样品前处理设备",
       "实验室自动化设备"
     ],
-    "mainImage": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc-u32-16-pk-n-main.jpg",
-    "image": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc-u32-16-pk-n-main.jpg",
-    "heroImage": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc-u32-16-pk-n-main.jpg",
-    "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc-u32-16-pk-n-main.jpg",
+    "mainImage": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc-u32-16-pk-n-main.webp",
+    "image": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc-u32-16-pk-n-main.webp",
+    "heroImage": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc-u32-16-pk-n-main.webp",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc-u32-16-pk-n-main.webp",
     "additionalImages": [],
     "imageAlt": "PNC-U32-16-PK-N 高压接头 PEEK",
     "detailMode": "standard_model",
@@ -22585,13 +22585,11 @@
       "样品前处理设备",
       "实验室自动化设备"
     ],
-    "mainImage": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc6-u32-16-pk-n-main.jpg",
-    "image": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc6-u32-16-pk-n-main.jpg",
-    "heroImage": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc6-u32-16-pk-n-main.jpg",
-    "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc6-u32-16-pk-n-main.jpg",
-    "additionalImages": [
-      "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc6-u32-16-pk-n-02.jpg"
-    ],
+    "mainImage": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc6-u32-16-pk-n-main.webp",
+    "image": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc6-u32-16-pk-n-main.webp",
+    "heroImage": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc6-u32-16-pk-n-main.webp",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc6-u32-16-pk-n-main.webp",
+    "additionalImages": [],
     "imageAlt": "PNC6-U32-16-PK-N 高压接头 PEEK",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -22752,10 +22750,10 @@
       "样品前处理设备",
       "实验室自动化设备"
     ],
-    "mainImage": "/images/logo/foreach-logo-color.svg",
-    "image": "/images/logo/foreach-logo-color.svg",
-    "heroImage": "/images/logo/foreach-logo-color.svg",
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "mainImage": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnf-u32-16-ss-n-main.webp",
+    "image": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnf-u32-16-ss-n-main.webp",
+    "heroImage": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnf-u32-16-ss-n-main.webp",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnf-u32-16-ss-n-main.webp",
     "additionalImages": [],
     "imageAlt": "PNF-U32-16-SS-N 高压接头 SUS",
     "detailMode": "standard_model",
@@ -22880,5 +22878,518 @@
       "applications": "常见应用：",
       "faq": "常见问题"
     }
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "hard-tube-fittings",
+    "productTypeName": "高压接头",
+    "productTypeLabel": "硬管接头",
+    "productId": "809317",
+    "productCode": "809317",
+    "seriesId": "high-pressure-fitting",
+    "seriesCode": "PU",
+    "seriesName": "高压接头",
+    "slug": "pu-u32-08-ss-n",
+    "model": "PU-U32-08-SS-N",
+    "name": "高压接头",
+    "title": "高压接头",
+    "displayName": "高压接头",
+    "productName": "高压接头",
+    "modelDisplay": "PU-U32-08-SS-N",
+    "displayModel": "PU-U32-08-SS-N",
+    "foreachModel": "PU-U32-08-SS-N",
+    "description": "PU-U32-08-SS-N是一款不锈钢高压接头，额定压力为25 MPa，采用10-32 UNF螺纹，流道内径为0.8 mm（ID）。适用于高压微流体液路、分析仪器、IVD设备及实验室自动化系统中的液路连接。",
+    "shortDescription": "PU-U32-08-SS-N是一款不锈钢高压接头，额定压力为25 MPa，采用10-32 UNF螺纹，流道内径为0.8 mm（ID）。适用于高压微流体液路、分析仪器、IVD设备及实验室自动化系统中的液路连接。",
+    "heroDescription": "PU-U32-08-SS-N是一款不锈钢高压接头，额定压力为25 MPa，采用10-32 UNF螺纹，流道内径为0.8 mm（ID）。适用于高压微流体液路、分析仪器、IVD设备及实验室自动化系统中的液路连接。",
+    "advantages": [
+      "耐压：25 MPa",
+      "螺纹规格：10-32 UNF",
+      "流道内径：0.8 mm（ID）",
+      "主体材质：SUS"
+    ],
+    "commonApplications": [
+      "高压微流体液路连接",
+      "泵阀与流体歧管连接",
+      "IVD与分析仪器液路",
+      "实验室自动化设备液路"
+    ],
+    "mainImage": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pu-u32-08-ss-n-main.webp",
+    "image": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pu-u32-08-ss-n-main.webp",
+    "heroImage": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pu-u32-08-ss-n-main.webp",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pu-u32-08-ss-n-main.webp",
+    "additionalImages": [],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pu-u32-08-ss-n-main.webp"
+    ],
+    "model3dUrl": "",
+    "modelUrl": "",
+    "drawingPdfUrl": "",
+    "drawingUrl": "",
+    "drawingPdf": "",
+    "detailMode": "standard_model",
+    "specs": [
+      {
+        "label": "型号",
+        "value": "PU-U32-08-SS-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809317"
+      },
+      {
+        "label": "产品类别",
+        "value": "硬管接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "高压接头"
+      },
+      {
+        "label": "耐压",
+        "value": "25 MPa"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "10-32 UNF"
+      },
+      {
+        "label": "流道内径",
+        "value": "0.8 mm（ID）"
+      },
+      {
+        "label": "主体材质",
+        "value": "SUS"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "PU-U32-08-SS-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809317"
+      },
+      {
+        "label": "产品类别",
+        "value": "硬管接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "高压接头"
+      },
+      {
+        "label": "耐压",
+        "value": "25 MPa"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "10-32 UNF"
+      },
+      {
+        "label": "流道内径",
+        "value": "0.8 mm（ID）"
+      },
+      {
+        "label": "主体材质",
+        "value": "SUS"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "PU-U32-08-SS-N的额定压力是多少？",
+        "answer": "PU-U32-08-SS-N的额定压力为25 MPa。实际使用时还需结合介质、温度、管路结构和压力波动确认安全余量。"
+      },
+      {
+        "question": "PU-U32-08-SS-N采用什么螺纹？",
+        "answer": "PU-U32-08-SS-N采用10-32 UNF螺纹。安装前应确认设备端口的螺纹规格和密封结构一致。"
+      },
+      {
+        "question": "PU-U32-08-SS-N的流道内径是多少？",
+        "answer": "PU-U32-08-SS-N的流道内径为0.8 mm（ID）。流道内径会影响压降、流速和系统死体积。"
+      },
+      {
+        "question": "不锈钢材质如何确认介质兼容性？",
+        "answer": "应根据介质类型、浓度、工作温度、接触时间和清洗方式综合确认不锈钢材质的兼容性。"
+      },
+      {
+        "question": "能否申请PU-U32-08-SS-N的二维图纸？",
+        "answer": "可以。将型号加入清单并标记需要图纸，工程团队会确认适用版本。"
+      }
+    ],
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "detailHref": "/products/fittings/hard-tube-fittings/pu-u32-08-ss-n",
+    "selectionHref": "/products/fittings/hard-tube-fittings",
+    "configuratorHref": "/products/fittings/hard-tube-fittings",
+    "modelSelectionHref": "/products/fittings/hard-tube-fittings",
+    "resourceStatus": {
+      "model3d": "missing",
+      "drawing": "missing"
+    },
+    "resourceMessages": {
+      "model3d": "暂无3D模型",
+      "drawing": "暂无二维图纸"
+    },
+    "specSeriesKey": "high-pressure-fitting",
+    "href": "/products/fittings/hard-tube-fittings/pu-u32-08-ss-n",
+    "seo": {
+      "title": "PU-U32-08-SS-N 高压接头 | FOREACH",
+      "description": "PU-U32-08-SS-N是一款不锈钢高压接头，额定压力为25 MPa，采用10-32 UNF螺纹，流道内径为0.8 mm（ID）。适用于高压微流体液路、分析仪器、IVD设备及实验室自动化系统中的液路连接。"
+    },
+    "imageAlt": "PU-U32-08-SS-N 高压接头 SUS"
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "hard-tube-fittings",
+    "productTypeName": "高压接头",
+    "productTypeLabel": "硬管接头",
+    "productId": "809659",
+    "productCode": "809659",
+    "seriesId": "high-pressure-fitting",
+    "seriesCode": "PU",
+    "seriesName": "高压接头",
+    "slug": "pu-u32-u28-08-ss-n",
+    "model": "PU-U32-U28-08-SS-N",
+    "name": "高压接头",
+    "title": "高压接头",
+    "displayName": "高压接头",
+    "productName": "高压接头",
+    "modelDisplay": "PU-U32-U28-08-SS-N",
+    "displayModel": "PU-U32-U28-08-SS-N",
+    "foreachModel": "PU-U32-U28-08-SS-N",
+    "description": "PU-U32-U28-08-SS-N是一款不锈钢高压接头，额定压力为25 MPa，采用10-32 UNF / 1/4-28 UNF螺纹，流道内径为0.8 mm（ID）。适用于高压微流体液路、分析仪器、IVD设备及实验室自动化系统中的液路连接。",
+    "shortDescription": "PU-U32-U28-08-SS-N是一款不锈钢高压接头，额定压力为25 MPa，采用10-32 UNF / 1/4-28 UNF螺纹，流道内径为0.8 mm（ID）。适用于高压微流体液路、分析仪器、IVD设备及实验室自动化系统中的液路连接。",
+    "heroDescription": "PU-U32-U28-08-SS-N是一款不锈钢高压接头，额定压力为25 MPa，采用10-32 UNF / 1/4-28 UNF螺纹，流道内径为0.8 mm（ID）。适用于高压微流体液路、分析仪器、IVD设备及实验室自动化系统中的液路连接。",
+    "advantages": [
+      "耐压：25 MPa",
+      "螺纹规格：10-32 UNF / 1/4-28 UNF",
+      "流道内径：0.8 mm（ID）",
+      "主体材质：SUS"
+    ],
+    "commonApplications": [
+      "高压微流体液路连接",
+      "泵阀与流体歧管连接",
+      "IVD与分析仪器液路",
+      "实验室自动化设备液路"
+    ],
+    "mainImage": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pu-u32-u28-08-ss-n-main.webp",
+    "image": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pu-u32-u28-08-ss-n-main.webp",
+    "heroImage": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pu-u32-u28-08-ss-n-main.webp",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pu-u32-u28-08-ss-n-main.webp",
+    "additionalImages": [],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pu-u32-u28-08-ss-n-main.webp"
+    ],
+    "model3dUrl": "",
+    "modelUrl": "",
+    "drawingPdfUrl": "",
+    "drawingUrl": "",
+    "drawingPdf": "",
+    "detailMode": "standard_model",
+    "specs": [
+      {
+        "label": "型号",
+        "value": "PU-U32-U28-08-SS-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809659"
+      },
+      {
+        "label": "产品类别",
+        "value": "硬管接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "高压接头"
+      },
+      {
+        "label": "耐压",
+        "value": "25 MPa"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "10-32 UNF / 1/4-28 UNF"
+      },
+      {
+        "label": "流道内径",
+        "value": "0.8 mm（ID）"
+      },
+      {
+        "label": "主体材质",
+        "value": "SUS"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "PU-U32-U28-08-SS-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809659"
+      },
+      {
+        "label": "产品类别",
+        "value": "硬管接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "高压接头"
+      },
+      {
+        "label": "耐压",
+        "value": "25 MPa"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "10-32 UNF / 1/4-28 UNF"
+      },
+      {
+        "label": "流道内径",
+        "value": "0.8 mm（ID）"
+      },
+      {
+        "label": "主体材质",
+        "value": "SUS"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "PU-U32-U28-08-SS-N的额定压力是多少？",
+        "answer": "PU-U32-U28-08-SS-N的额定压力为25 MPa。实际使用时还需结合介质、温度、管路结构和压力波动确认安全余量。"
+      },
+      {
+        "question": "PU-U32-U28-08-SS-N采用什么螺纹？",
+        "answer": "PU-U32-U28-08-SS-N采用10-32 UNF / 1/4-28 UNF螺纹。安装前应确认设备端口的螺纹规格和密封结构一致。"
+      },
+      {
+        "question": "PU-U32-U28-08-SS-N的流道内径是多少？",
+        "answer": "PU-U32-U28-08-SS-N的流道内径为0.8 mm（ID）。流道内径会影响压降、流速和系统死体积。"
+      },
+      {
+        "question": "不锈钢材质如何确认介质兼容性？",
+        "answer": "应根据介质类型、浓度、工作温度、接触时间和清洗方式综合确认不锈钢材质的兼容性。"
+      },
+      {
+        "question": "能否申请PU-U32-U28-08-SS-N的二维图纸？",
+        "answer": "可以。将型号加入清单并标记需要图纸，工程团队会确认适用版本。"
+      }
+    ],
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "detailHref": "/products/fittings/hard-tube-fittings/pu-u32-u28-08-ss-n",
+    "selectionHref": "/products/fittings/hard-tube-fittings",
+    "configuratorHref": "/products/fittings/hard-tube-fittings",
+    "modelSelectionHref": "/products/fittings/hard-tube-fittings",
+    "resourceStatus": {
+      "model3d": "missing",
+      "drawing": "missing"
+    },
+    "resourceMessages": {
+      "model3d": "暂无3D模型",
+      "drawing": "暂无二维图纸"
+    },
+    "specSeriesKey": "high-pressure-fitting",
+    "href": "/products/fittings/hard-tube-fittings/pu-u32-u28-08-ss-n",
+    "seo": {
+      "title": "PU-U32-U28-08-SS-N 高压接头 | FOREACH",
+      "description": "PU-U32-U28-08-SS-N是一款不锈钢高压接头，额定压力为25 MPa，采用10-32 UNF / 1/4-28 UNF螺纹，流道内径为0.8 mm（ID）。适用于高压微流体液路、分析仪器、IVD设备及实验室自动化系统中的液路连接。"
+    },
+    "imageAlt": "PU-U32-U28-08-SS-N 高压接头 SUS"
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "hard-tube-fittings",
+    "productTypeName": "高压接头",
+    "productTypeLabel": "硬管接头",
+    "productId": "809664",
+    "productCode": "809664",
+    "seriesId": "high-pressure-fitting",
+    "seriesCode": "PUT",
+    "seriesName": "高压接头",
+    "slug": "put-u32-05-ss-n",
+    "model": "PUT-U32-05-SS-N",
+    "name": "高压接头",
+    "title": "高压接头",
+    "displayName": "高压接头",
+    "productName": "高压接头",
+    "modelDisplay": "PUT-U32-05-SS-N",
+    "displayModel": "PUT-U32-05-SS-N",
+    "foreachModel": "PUT-U32-05-SS-N",
+    "description": "PUT-U32-05-SS-N是一款不锈钢高压接头，额定压力为25 MPa，采用10-32 UNF螺纹，流道内径为0.5 mm（ID）。适用于高压微流体液路、分析仪器、IVD设备及实验室自动化系统中的液路连接。",
+    "shortDescription": "PUT-U32-05-SS-N是一款不锈钢高压接头，额定压力为25 MPa，采用10-32 UNF螺纹，流道内径为0.5 mm（ID）。适用于高压微流体液路、分析仪器、IVD设备及实验室自动化系统中的液路连接。",
+    "heroDescription": "PUT-U32-05-SS-N是一款不锈钢高压接头，额定压力为25 MPa，采用10-32 UNF螺纹，流道内径为0.5 mm（ID）。适用于高压微流体液路、分析仪器、IVD设备及实验室自动化系统中的液路连接。",
+    "advantages": [
+      "耐压：25 MPa",
+      "螺纹规格：10-32 UNF",
+      "流道内径：0.5 mm（ID）",
+      "主体材质：SUS"
+    ],
+    "commonApplications": [
+      "高压微流体液路连接",
+      "泵阀与流体歧管连接",
+      "IVD与分析仪器液路",
+      "实验室自动化设备液路"
+    ],
+    "mainImage": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/put-u32-05-ss-n-main.webp",
+    "image": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/put-u32-05-ss-n-main.webp",
+    "heroImage": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/put-u32-05-ss-n-main.webp",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/put-u32-05-ss-n-main.webp",
+    "additionalImages": [],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/put-u32-05-ss-n-main.webp"
+    ],
+    "model3dUrl": "",
+    "modelUrl": "",
+    "drawingPdfUrl": "",
+    "drawingUrl": "",
+    "drawingPdf": "",
+    "detailMode": "standard_model",
+    "specs": [
+      {
+        "label": "型号",
+        "value": "PUT-U32-05-SS-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809664"
+      },
+      {
+        "label": "产品类别",
+        "value": "硬管接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "高压接头"
+      },
+      {
+        "label": "耐压",
+        "value": "25 MPa"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "10-32 UNF"
+      },
+      {
+        "label": "流道内径",
+        "value": "0.5 mm（ID）"
+      },
+      {
+        "label": "主体材质",
+        "value": "SUS"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "specifications": [
+      {
+        "label": "型号",
+        "value": "PUT-U32-05-SS-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809664"
+      },
+      {
+        "label": "产品类别",
+        "value": "硬管接头"
+      },
+      {
+        "label": "产品系列",
+        "value": "高压接头"
+      },
+      {
+        "label": "耐压",
+        "value": "25 MPa"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "10-32 UNF"
+      },
+      {
+        "label": "流道内径",
+        "value": "0.5 mm（ID）"
+      },
+      {
+        "label": "主体材质",
+        "value": "SUS"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "PUT-U32-05-SS-N的额定压力是多少？",
+        "answer": "PUT-U32-05-SS-N的额定压力为25 MPa。实际使用时还需结合介质、温度、管路结构和压力波动确认安全余量。"
+      },
+      {
+        "question": "PUT-U32-05-SS-N采用什么螺纹？",
+        "answer": "PUT-U32-05-SS-N采用10-32 UNF螺纹。安装前应确认设备端口的螺纹规格和密封结构一致。"
+      },
+      {
+        "question": "PUT-U32-05-SS-N的流道内径是多少？",
+        "answer": "PUT-U32-05-SS-N的流道内径为0.5 mm（ID）。流道内径会影响压降、流速和系统死体积。"
+      },
+      {
+        "question": "不锈钢材质如何确认介质兼容性？",
+        "answer": "应根据介质类型、浓度、工作温度、接触时间和清洗方式综合确认不锈钢材质的兼容性。"
+      },
+      {
+        "question": "能否申请PUT-U32-05-SS-N的二维图纸？",
+        "answer": "可以。将型号加入清单并标记需要图纸，工程团队会确认适用版本。"
+      }
+    ],
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "detailHref": "/products/fittings/hard-tube-fittings/put-u32-05-ss-n",
+    "selectionHref": "/products/fittings/hard-tube-fittings",
+    "configuratorHref": "/products/fittings/hard-tube-fittings",
+    "modelSelectionHref": "/products/fittings/hard-tube-fittings",
+    "resourceStatus": {
+      "model3d": "missing",
+      "drawing": "missing"
+    },
+    "resourceMessages": {
+      "model3d": "暂无3D模型",
+      "drawing": "暂无二维图纸"
+    },
+    "specSeriesKey": "high-pressure-fitting",
+    "href": "/products/fittings/hard-tube-fittings/put-u32-05-ss-n",
+    "seo": {
+      "title": "PUT-U32-05-SS-N 高压接头 | FOREACH",
+      "description": "PUT-U32-05-SS-N是一款不锈钢高压接头，额定压力为25 MPa，采用10-32 UNF螺纹，流道内径为0.5 mm（ID）。适用于高压微流体液路、分析仪器、IVD设备及实验室自动化系统中的液路连接。"
+    },
+    "imageAlt": "PUT-U32-05-SS-N 高压接头 SUS"
   }
 ]

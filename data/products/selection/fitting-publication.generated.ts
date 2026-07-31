@@ -35,7 +35,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "129001",
     "foreachModel": "CV-BE-32-PP-N",
-    "imageCard": "/images/products/fittings/check-valves/products/cv-be-32-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/check-valves/products/cv-be-32-pp-n-main.webp",
     "detailHref": "/products/fittings/check-valves/cv-be-32-pp-n",
     "productTypeId": "check-valves",
     "productType": "单向阀",
@@ -1091,6 +1091,16 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
     "productType": "",
     "productSeries": "lp",
     "seriesId": "lp"
+  },
+  {
+    "productCode": "809317",
+    "foreachModel": "PU-U32-08-SS-N",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pu-u32-08-ss-n-main.webp",
+    "detailHref": "/products/fittings/hard-tube-fittings/pu-u32-08-ss-n",
+    "productTypeId": "hard-tube-fittings",
+    "productType": "",
+    "productSeries": "high-pressure-fitting",
+    "seriesId": "high-pressure-fitting"
   },
   {
     "productCode": "809319",
@@ -3533,10 +3543,30 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
     "seriesId": "sb"
   },
   {
+    "productCode": "809659",
+    "foreachModel": "PU-U32-U28-08-SS-N",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pu-u32-u28-08-ss-n-main.webp",
+    "detailHref": "/products/fittings/hard-tube-fittings/pu-u32-u28-08-ss-n",
+    "productTypeId": "hard-tube-fittings",
+    "productType": "",
+    "productSeries": "high-pressure-fitting",
+    "seriesId": "high-pressure-fitting"
+  },
+  {
     "productCode": "809661",
     "foreachModel": "PNC6-U32-16-PK-N",
-    "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc6-u32-16-pk-n-main.jpg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc6-u32-16-pk-n-main.webp",
     "detailHref": "/products/fittings/hard-tube-fittings/pnc6-u32-16-pk-n",
+    "productTypeId": "hard-tube-fittings",
+    "productType": "",
+    "productSeries": "high-pressure-fitting",
+    "seriesId": "high-pressure-fitting"
+  },
+  {
+    "productCode": "809664",
+    "foreachModel": "PUT-U32-05-SS-N",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/put-u32-05-ss-n-main.webp",
+    "detailHref": "/products/fittings/hard-tube-fittings/put-u32-05-ss-n",
     "productTypeId": "hard-tube-fittings",
     "productType": "",
     "productSeries": "high-pressure-fitting",
@@ -3811,6 +3841,16 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
     "productType": "",
     "productSeries": "lpr",
     "seriesId": "lpr"
+  },
+  {
+    "productCode": "809696",
+    "foreachModel": "PNF-U32-16-SS-N",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnf-u32-16-ss-n-main.webp",
+    "detailHref": "/products/fittings/hard-tube-fittings/pnf-u32-16-ss-n",
+    "productTypeId": "hard-tube-fittings",
+    "productType": "",
+    "productSeries": "high-pressure-fitting",
+    "seriesId": "high-pressure-fitting"
   },
   {
     "productCode": "809697",
@@ -4495,7 +4535,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809791",
     "foreachModel": "PNC-U32-16-PK-N",
-    "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc-u32-16-pk-n-main.jpg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc-u32-16-pk-n-main.webp",
     "detailHref": "/products/fittings/hard-tube-fittings/pnc-u32-16-pk-n",
     "productTypeId": "hard-tube-fittings",
     "productType": "",
@@ -7175,14 +7215,6 @@ export const FITTING_OFFLINE_PRODUCTS: Array<{
     ]
   },
   {
-    "productCode": "809317",
-    "foreachModel": "PU-U32-08-SS-N",
-    "reasons": [
-      "NOT_ACTIVE",
-      "NO_MAIN_IMAGE"
-    ]
-  },
-  {
     "productCode": "809323",
     "foreachModel": "SA-U32-24F-PA-W",
     "reasons": [
@@ -7518,22 +7550,6 @@ export const FITTING_OFFLINE_PRODUCTS: Array<{
     ]
   },
   {
-    "productCode": "809659",
-    "foreachModel": "PU-U32-U28-08-SS-N",
-    "reasons": [
-      "NOT_ACTIVE",
-      "NO_MAIN_IMAGE"
-    ]
-  },
-  {
-    "productCode": "809664",
-    "foreachModel": "PUT-U32-05-SS-N",
-    "reasons": [
-      "NOT_ACTIVE",
-      "NO_MAIN_IMAGE"
-    ]
-  },
-  {
     "productCode": "809665",
     "foreachModel": "PMLS-U28-32D-PV-N",
     "reasons": [
@@ -7558,14 +7574,6 @@ export const FITTING_OFFLINE_PRODUCTS: Array<{
     "productCode": "809686",
     "foreachModel": "LPR-24-PP-O",
     "reasons": [
-      "SHARED_IMAGE"
-    ]
-  },
-  {
-    "productCode": "809696",
-    "foreachModel": "PNF-U32-16-SS-N",
-    "reasons": [
-      "LOGO_IMAGE",
       "SHARED_IMAGE"
     ]
   },
@@ -8240,14 +8248,14 @@ export const FITTING_OFFLINE_PRODUCTS: Array<{
 export const FITTING_PUBLICATION_SUMMARY =
 {
   "totalProductCodes": 866,
-  "publishedProductCodes": 630,
-  "offlineProductCodes": 236,
+  "publishedProductCodes": 634,
+  "offlineProductCodes": 232,
   "forced136": 4,
   "forced806": 21,
-  "invalidMainImage": 56,
-  "logoImage": 95,
+  "invalidMainImage": 53,
+  "logoImage": 94,
   "placeholderImage": 0,
-  "sharedImageProductCodes": 178,
+  "sharedImageProductCodes": 177,
   "fittingReplacementOfflineCodes": 44
 } as const;
 
@@ -8540,6 +8548,10 @@ const publishedDetailRouteKeySet = new Set(
   "hard-tube-fittings/hnf6-u28-32-ps-b",
   "hard-tube-fittings/pnc-u32-16-pk-n",
   "hard-tube-fittings/pnc6-u32-16-pk-n",
+  "hard-tube-fittings/pnf-u32-16-ss-n",
+  "hard-tube-fittings/pu-u32-08-ss-n",
+  "hard-tube-fittings/pu-u32-u28-08-ss-n",
+  "hard-tube-fittings/put-u32-05-ss-n",
   "luer-fittings/lcr-pa-b",
   "luer-fittings/lcr-pa-g",
   "luer-fittings/lcr-pa-o",

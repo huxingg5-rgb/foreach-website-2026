@@ -13,24 +13,32 @@ const FIELD_LABELS: Record<TargetSelectionLocale, Record<string, string>> = {
     Thread: "Rosca",
     "Tube OD": "Diámetro exterior del tubo",
     "Pressure rating": "Presión nominal",
+    "Flow path ID": "Diámetro interior del paso de flujo",
+    "Flow Path ID": "Diámetro interior del paso de flujo",
   },
   fr: {
     "Sealing method": "Méthode d’étanchéité",
     Thread: "Filetage",
     "Tube OD": "Diamètre extérieur du tube",
     "Pressure rating": "Pression nominale",
+    "Flow path ID": "Diamètre intérieur du passage de fluide",
+    "Flow Path ID": "Diamètre intérieur du passage de fluide",
   },
   ko: {
     "Sealing method": "밀봉 방식",
     Thread: "나사 규격",
     "Tube OD": "튜브 외경",
     "Pressure rating": "정격 압력",
+    "Flow path ID": "유로 내경",
+    "Flow Path ID": "유로 내경",
   },
   ru: {
     "Sealing method": "Способ уплотнения",
     Thread: "Резьба",
     "Tube OD": "Наружный диаметр трубки",
     "Pressure rating": "Номинальное давление",
+    "Flow path ID": "Внутренний диаметр проточного канала",
+    "Flow Path ID": "Внутренний диаметр проточного канала",
   },
 };
 

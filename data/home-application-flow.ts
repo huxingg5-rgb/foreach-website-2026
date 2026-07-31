@@ -84,15 +84,15 @@ const lifeScienceCard: HomeFlowApplicationCard = {
   description: {
     "zh-CN": "支持样本制备、微量液体转移、试剂制作与自动化实验流程。",
     en:
-      "Supporting sample preparation, micro-volume liquid transfer, reagent preparation, and automated laboratory workflows.",
+      "Sample preparation, micro-volume transfer, reagent handling, and automated workflows.",
     es:
-      "Soporta preparación de muestras, transferencia de microlíquidos, preparación de reactivos y flujos de trabajo automatizados.",
+      "Preparación de muestras, transferencia de microlitros, reactivos y flujos automatizados.",
     fr:
-      "Prend en charge la préparation d’échantillons, le transfert de micro-volumes, la préparation de réactifs et les flux de laboratoire automatisés.",
+      "Préparation d’échantillons, transfert de micro-volumes, réactifs et flux automatisés.",
     ko:
       "시료 준비, 미량 액체 이송, 시약 준비 및 자동화 실험 프로세스를 지원합니다.",
     ru:
-      "Поддерживает подготовку образцов, перенос микролитровых объемов, подготовку реагентов и автоматизированные лабораторные процессы.",
+      "Подготовка образцов, перенос микролитров, работа с реагентами и автоматизация.",
   },
   image: "/images/home/application-flow/life-science.jpg",
   imageAlt: {
@@ -123,7 +123,7 @@ const lifeScienceCard: HomeFlowApplicationCard = {
         es: "Bomba de pipeteo",
         fr: "Pompe de pipetage",
         ko: "피펫팅 펌프",
-        ru: "Пипетирующий насос",
+        ru: "Дозирующий насос",
       },
     },
     {
@@ -134,7 +134,7 @@ const lifeScienceCard: HomeFlowApplicationCard = {
         es: "Válvula rotativa",
         fr: "Vanne rotative",
         ko: "로터리 밸브",
-        ru: "Поворотный клапан",
+        ru: "Роторный клапан",
       },
     },
     {
@@ -145,7 +145,7 @@ const lifeScienceCard: HomeFlowApplicationCard = {
         es: "Aguja de muestreo",
         fr: "Aiguille de prélèvement",
         ko: "샘플링 프로브",
-        ru: "Пробоотборная игла",
+        ru: "Пробоотборник",
       },
     },
   ],
@@ -168,15 +168,15 @@ const syntheticBiologyCard: HomeFlowApplicationCard = {
   description: {
     "zh-CN": "支持多通道试剂分配、连续流体控制、培养液路与流路切换。",
     en:
-      "Supporting multi-channel reagent dispensing, continuous fluid control, culture fluidics, and flow path switching.",
+      "Multi-channel dispensing, continuous fluid control, culture lines, and flow switching.",
     es:
-      "Soporta distribución multicanal de reactivos, control continuo de fluidos, líneas de cultivo y conmutación de flujo.",
+      "Dosificación multicanal, control continuo, líneas de cultivo y conmutación de flujo.",
     fr:
-      "Prend en charge la distribution multicanal de réactifs, le contrôle continu des fluides, les circuits de culture et la commutation des voies fluidiques.",
+      "Distribution multicanal, contrôle continu, circuits de culture et commutation fluidique.",
     ko:
       "다채널 시약 분주, 연속 유체 제어, 배양 유로 및 유로 전환을 지원합니다.",
     ru:
-      "Поддерживает многоканальное дозирование реагентов, непрерывное управление жидкостями, контуры культивирования и переключение потоков.",
+      "Многоканальное дозирование, непрерывное управление, контуры культивирования и переключение потоков.",
   },
   image: "/images/home/application-flow/synthetic-biology.jpg",
   imageAlt: {
@@ -207,7 +207,7 @@ const syntheticBiologyCard: HomeFlowApplicationCard = {
         es: "Válvula rotativa",
         fr: "Vanne rotative",
         ko: "로터리 밸브",
-        ru: "Поворотный клапан",
+        ru: "Роторный клапан",
       },
     },
     {
@@ -218,7 +218,7 @@ const syntheticBiologyCard: HomeFlowApplicationCard = {
         es: "Válvula solenoide",
         fr: "Électrovanne",
         ko: "솔레노이드 밸브",
-        ru: "Соленоидный клапан",
+        ru: "Электроклапан",
       },
     },
     {
@@ -229,7 +229,7 @@ const syntheticBiologyCard: HomeFlowApplicationCard = {
         es: "Componentes de tubos",
         fr: "Composants de tubulure",
         ko: "튜빙 구성품",
-        ru: "Компоненты трубок",
+        ru: "Трубки",
       },
     },
   ],
@@ -252,15 +252,15 @@ const labAutomationCard: HomeFlowApplicationCard = {
   description: {
     "zh-CN": "面向自动加样、液体转移、废液处理与模块化液路集成。",
     en:
-      "For automated dispensing, liquid transfer, waste handling, and modular fluidic integration.",
+      "Automated dispensing, liquid transfer, waste handling, and modular fluidic integration.",
     es:
-      "Para dosificación automatizada, transferencia de líquidos, tratamiento de residuos e integración modular de sistemas fluídicos.",
+      "Dosificación automatizada, transferencia de líquidos, residuos e integración modular.",
     fr:
-      "Pour le dosage automatisé, le transfert de liquides, la gestion des déchets et l’intégration fluidique modulaire.",
+      "Dosage automatisé, transfert de liquides, gestion des déchets et intégration modulaire.",
     ko:
       "자동 분주, 액체 이송, 폐액 처리 및 모듈형 유체 시스템 통합에 적합합니다.",
     ru:
-      "Для автоматического дозирования, переноса жидкостей, обработки отходов и модульной интеграции жидкостных систем.",
+      "Автоматическое дозирование, перенос жидкостей, обработка отходов и модульная интеграция.",
   },
   image: "/images/home/application-flow/lab-automation.jpg",
   imageAlt: {
@@ -302,7 +302,7 @@ const labAutomationCard: HomeFlowApplicationCard = {
         es: "Componentes de tubos",
         fr: "Composants de tubulure",
         ko: "튜빙 구성품",
-        ru: "Компоненты трубок",
+        ru: "Трубки",
       },
     },
   ],
@@ -317,23 +317,23 @@ const analyticalInstrumentsCard: HomeFlowApplicationCard = {
   title: {
     "zh-CN": "高端分析仪器",
     en: "High-end Analytical Instruments",
-    es: "Instrumentos analíticos avanzados",
-    fr: "Instruments d’analyse avancés",
+    es: "Instrumentos analíticos",
+    fr: "Instruments d’analyse",
     ko: "고급 분석 장비",
-    ru: "Высокоточные аналитические приборы",
+    ru: "Аналитические приборы",
   },
   description: {
     "zh-CN": "用于高压进样、流路切换、压力监测和检测前处理。",
     en:
-      "For high-pressure injection, flow path switching, pressure monitoring, and pre-detection processing.",
+      "High-pressure injection, flow switching, pressure monitoring, and sample pretreatment.",
     es:
-      "Para inyección de alta presión, conmutación de vías de flujo, monitoreo de presión y preparación antes de la detección.",
+      "Inyección a alta presión, conmutación de flujo, control de presión y pretratamiento.",
     fr:
-      "Pour l’injection haute pression, la commutation des voies fluidiques, la surveillance de pression et le prétraitement avant détection.",
+      "Injection haute pression, commutation fluidique, contrôle de pression et prétraitement.",
     ko:
       "고압 주입, 유로 전환, 압력 모니터링 및 검출 전 처리에 사용됩니다.",
     ru:
-      "Для высоконапорного ввода проб, переключения потоков, контроля давления и подготовки перед анализом.",
+      "Ввод под высоким давлением, переключение потоков, контроль давления и подготовка проб.",
   },
   image: "/images/home/application-flow/analytical-instruments.jpg",
   imageAlt: {
@@ -353,7 +353,7 @@ const analyticalInstrumentsCard: HomeFlowApplicationCard = {
         es: "Válvula de alta presión",
         fr: "Vanne haute pression",
         ko: "고압 밸브",
-        ru: "Клапан высокого давления",
+        ru: "Высоконапорный клапан",
       },
     },
     {
@@ -409,15 +409,15 @@ const ivdCard: HomeFlowApplicationCard = {
   description: {
     "zh-CN": "用于样本处理、试剂分配、清洗废液、流路切换与状态监测。",
     en:
-      "For sample processing, reagent dispensing, washing, waste handling, flow path switching, and status monitoring.",
+      "Sample processing, reagent dispensing, washing, flow switching, and status monitoring.",
     es:
-      "Para procesamiento de muestras, distribución de reactivos, lavado, manejo de residuos, conmutación de flujo y monitoreo de estado.",
+      "Procesamiento de muestras, dosificación, lavado, conmutación y monitoreo.",
     fr:
-      "Pour le traitement des échantillons, la distribution de réactifs, le lavage, la gestion des déchets, la commutation des voies fluidiques et la surveillance d’état.",
+      "Traitement des échantillons, dosage, lavage, commutation et surveillance.",
     ko:
       "시료 처리, 시약 분주, 세척, 폐액 처리, 유로 전환 및 상태 모니터링에 사용됩니다.",
     ru:
-      "Для обработки образцов, дозирования реагентов, промывки, удаления отходов, переключения потоков и контроля состояния.",
+      "Обработка образцов, дозирование, промывка, переключение потоков и мониторинг.",
   },
   image: "/images/home/application-flow/ivd.jpg",
   imageAlt: {
@@ -437,7 +437,7 @@ const ivdCard: HomeFlowApplicationCard = {
         es: "Válvula solenoide",
         fr: "Électrovanne",
         ko: "솔레노이드 밸브",
-        ru: "Соленоидный клапан",
+        ru: "Электроклапан",
       },
     },
     {
@@ -497,35 +497,35 @@ export const homeApplicationFlowData = {
   ================================ */
   titleLine1: {
     "zh-CN": "让流体系统",
-    en: "One Fluidic System",
-    es: "Un sistema fluídico",
-    fr: "Un système fluidique",
+    en: "Fluidic System",
+    es: "Sistema fluídico",
+    fr: "Système fluidique",
     ko: "하나의 유체 시스템",
-    ru: "Единая жидкостная система",
+    ru: "Жидкостная",
   },
 
   titleLine2: {
     "zh-CN": "更简单",
-    en: "Make Complex Flow Easier",
-    es: "Hace que el flujo complejo sea más simple",
-    fr: "Rendre les flux complexes plus simples",
+    en: "Simplifies Complex Flow",
+    es: "Simplifica flujos complejos",
+    fr: "Simplifie les flux complexes",
     ko: "복잡한 유체 흐름을 더 쉽게",
-    ru: "Упрощает сложные потоки",
+    ru: "система проще",
   },
 
   description: {
     "zh-CN":
       "面向 IVD、生命科学、合成生物、高端分析仪器与实验室自动化设备，恒永达提供泵、阀、传感器、管路、连接件、采样针等核心液路组合支持。",
     en:
-      "For IVD, life sciences, synthetic biology, high-end analytical instruments, and laboratory automation, FOREACH provides integrated fluidic support covering pumps, valves, sensors, tubing, fittings, sampling probes, and related core components.",
+      "FOREACH provides integrated fluidic solutions for IVD, life sciences, synthetic biology, analytical instruments, and laboratory automation—from pumps and valves to sensors, tubing, and connections.",
     es:
-      "Para IVD, ciencias de la vida, biología sintética, instrumentos analíticos avanzados y automatización de laboratorios, FOREACH ofrece soporte fluídico integrado con bombas, válvulas, sensores, tubos, conectores, agujas de muestreo y componentes clave.",
+      "FOREACH ofrece soluciones fluídicas integradas para IVD, ciencias de la vida, biología sintética, instrumentación analítica y automatización de laboratorios, desde bombas y válvulas hasta sensores y conexiones.",
     fr:
-      "Pour l’IVD, les sciences de la vie, la biologie synthétique, les instruments d’analyse avancés et l’automatisation de laboratoire, FOREACH fournit un support fluidique intégré couvrant pompes, vannes, capteurs, tubes, raccords, aiguilles de prélèvement et composants clés.",
+      "FOREACH fournit des solutions fluidiques intégrées pour l’IVD, les sciences de la vie, la biologie synthétique, l’analyse et l’automatisation de laboratoire, des pompes et vannes aux capteurs et raccords.",
     ko:
       "IVD, 생명과학, 합성생물학, 고급 분석 장비 및 실험실 자동화를 위해 FOREACH는 펌프, 밸브, 센서, 튜빙, 피팅, 샘플링 프로브 등 핵심 유체 부품을 포함한 통합 유체 제어 지원을 제공합니다.",
     ru:
-      "Для IVD, наук о жизни, синтетической биологии, высокоточных аналитических приборов и лабораторной автоматизации FOREACH предоставляет интегрированную поддержку жидкостных систем, включая насосы, клапаны, датчики, трубки, соединители, пробоотборные иглы и другие ключевые компоненты.",
+      "FOREACH предлагает комплексные жидкостные решения для IVD, наук о жизни, синтетической биологии, аналитических приборов и автоматизации лабораторий — от насосов и клапанов до датчиков и соединений.",
   },
 
   /* ================================
@@ -540,7 +540,7 @@ export const homeApplicationFlowData = {
         es: "Bombas de precisión",
         fr: "Pompes de précision",
         ko: "정밀 펌프",
-        ru: "Прецизионные насосы",
+        ru: "Точные насосы",
       },
     },
     {
@@ -551,7 +551,7 @@ export const homeApplicationFlowData = {
         es: "Válvulas de control de fluidos",
         fr: "Vannes de contrôle des fluides",
         ko: "유체 제어 밸브",
-        ru: "Клапаны управления жидкостями",
+        ru: "Жидкостные клапаны",
       },
     },
     {
@@ -573,7 +573,7 @@ export const homeApplicationFlowData = {
         es: "Componentes de tubos",
         fr: "Composants de tubulure",
         ko: "튜빙 구성품",
-        ru: "Компоненты трубок",
+        ru: "Трубки",
       },
     },
     {
@@ -584,7 +584,7 @@ export const homeApplicationFlowData = {
         es: "Conexiones fluídicas",
         fr: "Connexions fluidiques",
         ko: "유체 연결",
-        ru: "Жидкостные соединения",
+        ru: "Соединения",
       },
     },
   ],
@@ -706,13 +706,13 @@ export const homeApplicationFlowData = {
         en:
           "Sample aspiration, transfer, mixing, pretreatment, and fluidic control before detection.",
         es:
-          "Aspiración, transferencia, mezcla, pretratamiento y control fluídico antes de la detección.",
+          "Aspiración, transferencia, mezcla, pretratamiento y control antes de la detección.",
         fr:
-          "Aspiration, transfert, mélange, prétraitement et contrôle fluidique avant détection.",
+          "Aspiration, transfert, mélange, prétraitement et contrôle avant détection.",
         ko:
           "시료 흡입, 이송, 혼합, 전처리 및 검출 전 유체 제어.",
         ru:
-          "Аспирация, перенос, смешивание, предварительная обработка и управление жидкостями перед анализом.",
+          "Аспирация, перенос, смешивание, предварительная обработка и контроль перед анализом.",
       },
     },
     {
@@ -730,13 +730,13 @@ export const homeApplicationFlowData = {
         en:
           "Micro-volume dosing, multi-channel dispensing, continuous supply, and stable distribution.",
         es:
-          "Dosificación de microlitros, dispensación multicanal, suministro continuo y distribución estable.",
+          "Dosificación de microlitros, dispensación multicanal y distribución estable.",
         fr:
-          "Dosage de micro-volumes, distribution multicanal, alimentation continue et distribution stable.",
+          "Dosage de micro-volumes, distribution multicanal et alimentation stable.",
         ko:
           "미량 정량, 다채널 분주, 연속 공급 및 안정적인 분배.",
         ru:
-          "Микродозирование, многоканальное дозирование, непрерывная подача и стабильное распределение.",
+          "Микродозирование, многоканальная подача и стабильное распределение.",
       },
     },
     {
@@ -744,8 +744,8 @@ export const homeApplicationFlowData = {
       title: {
         "zh-CN": "流路切换",
         en: "Flow Path Switching",
-        es: "Conmutación de vías de flujo",
-        fr: "Commutation des voies fluidiques",
+        es: "Conmutación de flujo",
+        fr: "Commutation fluidique",
         ko: "유로 전환",
         ru: "Переключение потоков",
       },
@@ -754,13 +754,13 @@ export const homeApplicationFlowData = {
         en:
           "Precise switching among multiple reagents, samples, and detection channels.",
         es:
-          "Conmutación precisa entre múltiples reactivos, muestras y canales de detección.",
+          "Conmutación precisa entre reactivos, muestras y canales de detección.",
         fr:
-          "Commutation précise entre plusieurs réactifs, échantillons et canaux de détection.",
+          "Commutation précise entre réactifs, échantillons et canaux de détection.",
         ko:
           "여러 시약, 시료 및 검출 채널 간의 정밀한 전환.",
         ru:
-          "Точное переключение между различными реагентами, образцами и каналами детекции.",
+          "Точное переключение между реагентами, образцами и каналами детекции.",
       },
     },
     {
@@ -776,15 +776,15 @@ export const homeApplicationFlowData = {
       description: {
         "zh-CN": "压力、气泡、电导率等关键液路状态监测与反馈。",
         en:
-          "Monitoring and feedback for key fluidic states such as pressure, bubbles, and conductivity.",
+          "Monitoring of pressure, bubbles, conductivity, and other key fluidic states.",
         es:
-          "Monitoreo y retroalimentación de estados fluídicos clave como presión, burbujas y conductividad.",
+          "Monitoreo de presión, burbujas, conductividad y otros estados clave.",
         fr:
-          "Surveillance et retour d’information sur les états fluidiques clés tels que la pression, les bulles et la conductivité.",
+          "Surveillance de la pression, des bulles, de la conductivité et des états clés.",
         ko:
           "압력, 기포, 전도도 등 주요 유체 상태에 대한 모니터링 및 피드백.",
         ru:
-          "Мониторинг и обратная связь по ключевым параметрам жидкостной системы, включая давление, пузырьки и проводимость.",
+          "Контроль давления, пузырьков, проводимости и других ключевых состояний.",
       },
     },
   ] satisfies HomeFlowProcessCard[],

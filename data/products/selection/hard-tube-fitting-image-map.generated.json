@@ -1229,23 +1229,57 @@
     ]
   },
   "PNC-U32-16-PK-N": {
-    "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc-u32-16-pk-n-main.jpg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc-u32-16-pk-n-main.webp",
     "images": [
-      "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc-u32-16-pk-n-main.jpg"
+      "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc-u32-16-pk-n-main.webp"
     ],
     "sourceFiles": [
-      "PNC-U32-16-PK-N.jpg"
+      "PNC-U32-16-PK-N.webp"
     ]
   },
   "PNC6-U32-16-PK-N": {
-    "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc6-u32-16-pk-n-main.jpg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc6-u32-16-pk-n-main.webp",
     "images": [
-      "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc6-u32-16-pk-n-main.jpg",
-      "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc6-u32-16-pk-n-02.jpg"
+      "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc6-u32-16-pk-n-main.webp"
     ],
     "sourceFiles": [
-      "PNC6-U32-16-PK-N-1.jpg",
-      "PNC6-U32-16-PK-N.jpg"
+      "PNC6-U32-16-PK-N.webp"
+    ]
+  },
+  "PNF-U32-16-SS-N": {
+    "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnf-u32-16-ss-n-main.webp",
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnf-u32-16-ss-n-main.webp"
+    ],
+    "sourceFiles": [
+      "PNF-U32-16-SS-N.webp"
+    ]
+  },
+  "PU-U32-08-SS-N": {
+    "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pu-u32-08-ss-n-main.webp",
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pu-u32-08-ss-n-main.webp"
+    ],
+    "sourceFiles": [
+      "PU-U32-08-SS-N.webp"
+    ]
+  },
+  "PU-U32-U28-08-SS-N": {
+    "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pu-u32-u28-08-ss-n-main.webp",
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pu-u32-u28-08-ss-n-main.webp"
+    ],
+    "sourceFiles": [
+      "PU-U32-U28-08-SS-N.webp"
+    ]
+  },
+  "PUT-U32-05-SS-N": {
+    "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/put-u32-05-ss-n-main.webp",
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/put-u32-05-ss-n-main.webp"
+    ],
+    "sourceFiles": [
+      "PUT-U32-05-SS-N.webp"
     ]
   }
 }

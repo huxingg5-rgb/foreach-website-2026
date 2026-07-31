@@ -1,4 +1,4 @@
-﻿/* =========================================================
+/* =========================================================
    product-filter-rules.shared.ts
    FOREACH 官网｜产品中心筛选规则通用工具
 
@@ -17,25 +17,64 @@ export function normalizeFilterText(value: unknown): string {
   return String(value ?? "").trim();
 }
 
+/* PRODUCT_FILTER_MULTI_VALUE_SPLIT_START */
+
+/*
+ * 一个产品字段允许用 | 保存多个筛选值。
+ *
+ * 例如：
+ * 10-32 UNF|1/4-28 UNF
+ *
+ * 筛选面板中必须拆成两个独立选项，
+ * 但产品本身仍可同时匹配这两个选项。
+ */
 export function getOptionsFromProducts(
   products: ProductSelectionProduct[],
   filterKey: SelectionFilterKey
 ): ProductFilterOption[] {
-  const optionMap = new Map<string, ProductFilterOption>();
+  const optionMap =
+    new Map<string, ProductFilterOption>();
 
   products.forEach((product) => {
-    const value = normalizeFilterText((product.filters || {})[filterKey]);
+    const rawValue =
+      normalizeFilterText(
+        (product.filters || {})[
+          filterKey
+        ]
+      );
 
-    if (!value || optionMap.has(value)) return;
+    if (!rawValue) {
+      return;
+    }
 
-    optionMap.set(value, {
-      value,
-      label: value,
-    });
+    rawValue
+      .split("|")
+      .map((item) =>
+        normalizeFilterText(item)
+      )
+      .filter(Boolean)
+      .forEach((value) => {
+        if (optionMap.has(value)) {
+          return;
+        }
+
+        optionMap.set(value, {
+          value,
+          label: value,
+        });
+      });
   });
 
-  return sortProductFilterOptions(Array.from(optionMap.values()), filterKey);
+  return sortProductFilterOptions(
+    Array.from(
+      optionMap.values()
+    ),
+    filterKey
+  );
 }
+
+/* PRODUCT_FILTER_MULTI_VALUE_SPLIT_END */
+
 
 function getCapacityNumber(value: string): number {
   const matched = value.match(/\d+(\.\d+)?/);
