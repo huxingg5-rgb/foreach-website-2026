@@ -579,8 +579,8 @@
       "/images/products/tubing/ptfe-tubing/ptfe-tubing-main.webp"
     ],
     "thumbnails": [],
-    "description": "PTFE 管采用聚四氟乙烯（PTFE）材质，内径范围覆盖 1.5mm~2.0mm，工作温度范围为 -200℃~260℃。可按项目需求提供 RoHS 等材料合规资料，具体文件随材质与项目要求确认。",
-    "shortDescription": "聚四氟乙烯（PTFE），内径范围 1.5mm~2.0mm，工作温度 -200℃~260℃。",
+    "description": "PTFE 管采用聚四氟乙烯（PTFE）材质，内径范围覆盖 0.5mm~4.0mm，工作温度范围为 -200℃~260℃。可按项目需求提供 RoHS 等材料合规资料，具体文件随材质与项目要求确认。",
+    "shortDescription": "聚四氟乙烯（PTFE），内径范围 0.5mm~4.0mm，工作温度 -200℃~260℃。",
     "commonApplications": [
       "试剂输送",
       "样本路径",
@@ -733,7 +733,7 @@
     "alt": "PTFE 管",
     "material": "PTFE",
     "materialFullName": "聚四氟乙烯（PTFE）",
-    "innerDiameterRange": "1.5mm~2.0mm",
+    "innerDiameterRange": "0.5mm~4.0mm",
     "workingTemperature": "-200℃~260℃",
     "imageUrl": "/images/products/tubing/ptfe-tubing/ptfe-tubing-main.webp",
     "imageCard": "/images/products/tubing/ptfe-tubing/ptfe-tubing-main.webp",

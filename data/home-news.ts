@@ -142,7 +142,7 @@ export const homeNewsData = {
   ] satisfies HomeNewsTab[],
 
   featureNews: {
-    key: "adlm-2026-team-departure",
+    key: "adlm-2026-onsite",
     categoryKey: "exhibition",
     categoryLabel: {
       "zh-CN": "展会活动",
@@ -152,38 +152,44 @@ export const homeNewsData = {
       ko: "전시회",
       ru: "Выставки",
     },
-    date: "2026/07/23",
+    date: "2026/07/30",
     image:
-      "/images/resources/news/articles/adlm-2026-team-departure/cover.webp",
+      "/images/resources/news/adlm-2026-onsite/001.webp",
     title: {
-      "zh-CN": "启程赴美｜恒永达参展团队即将亮相 ADLM 2026",
-      en: "Meet FOREACH at ADLM 2026",
-      es: "Conozca a FOREACH en ADLM 2026",
-      fr: "Rencontrez FOREACH à l’ADLM 2026",
-      ko: "ADLM 2026에서 FOREACH를 만나보세요",
-      ru: "Встретьтесь с FOREACH на выставке ADLM 2026",
+      "zh-CN":
+        "ADLM 2026现场直击｜恒永达亮相4105号展位",
+      en:
+        "Live from ADLM 2026 | Meet FOREACH at Booth 4105",
+      es:
+        "En directo desde ADLM 2026 | Visite a FOREACH en el stand 4105",
+      fr:
+        "En direct de l’ADLM 2026 | Retrouvez FOREACH au stand 4105",
+      ko:
+        "ADLM 2026 현장 소식 | FOREACH 부스 4105를 만나보세요",
+      ru:
+        "ADLM 2026: репортаж с выставки | FOREACH на стенде 4105",
     },
     description: {
       "zh-CN":
-        "恒永达市场总监一行已启程赴美，将参加 ADLM 2026，并在 4105 展位展示微流体核心部件、流体连接产品及液路系统解决方案。",
+        "ADLM 2026在美国加利福尼亚州阿纳海姆正式举行。恒永达团队已在4105号展位准备就绪，期待与全球临床诊断、生命科学、分析仪器及实验室自动化领域的行业伙伴现场交流。",
       en:
-        "FOREACH will exhibit at ADLM 2026 in Anaheim from July 26 to 30, 2026. Visit Booth 4105 to explore precision fluid control components and application-focused fluidic solutions for IVD, life science, analytical instruments, and laboratory automation.",
+        "ADLM 2026 is underway in Anaheim, California. The FOREACH team is ready at Booth 4105 to meet professionals from clinical diagnostics, life science, analytical instrumentation, and laboratory automation.",
       es:
-        "FOREACH participará en ADLM 2026, que se celebrará del 26 al 30 de julio de 2026 en Anaheim, California. Le invitamos a visitar el stand 4105 para conocer nuestros componentes de control de fluidos y soluciones para sistemas fluídicos.",
+        "ADLM 2026 ya está en marcha en Anaheim, California. El equipo de FOREACH le espera en el stand 4105 para conversar con profesionales del diagnóstico clínico, las ciencias de la vida, la instrumentación analítica y la automatización de laboratorios.",
       fr:
-        "FOREACH participera à l’ADLM 2026, organisée du 26 au 30 juillet 2026 à Anaheim, en Californie. Retrouvez-nous au stand 4105 pour découvrir nos composants de contrôle des fluides et nos solutions destinées aux systèmes fluidiques.",
+        "L’ADLM 2026 se tient actuellement à Anaheim, en Californie. L’équipe FOREACH vous accueille au stand 4105 pour échanger avec les professionnels du diagnostic clinique, des sciences de la vie, de l’instrumentation analytique et de l’automatisation des laboratoires.",
       ko:
-        "FOREACH는 2026년 7월 26일부터 30일까지 미국 캘리포니아 애너하임에서 개최되는 ADLM 2026에 참가합니다. 부스 4105에서 정밀 유체 제어 부품과 장비용 유로 솔루션을 확인해 보십시오.",
+        "ADLM 2026이 미국 캘리포니아 애너하임에서 진행 중입니다. FOREACH 팀은 부스 4105에서 임상 진단, 생명과학, 분석 기기 및 실험실 자동화 분야의 전문가들과 만날 준비를 마쳤습니다.",
       ru:
-        "FOREACH примет участие в выставке ADLM 2026, которая пройдет с 26 по 30 июля 2026 года в Анахайме, штат Калифорния. На стенде 4105 будут представлены компоненты для точного управления жидкостями и решения для интеграции жидкостных систем.",
+        "Выставка ADLM 2026 проходит в Анахайме, штат Калифорния. Команда FOREACH ждет специалистов в области клинической диагностики, наук о жизни, аналитического приборостроения и автоматизации лабораторий на стенде 4105.",
     },
     href: {
-      "zh-CN": "/resources/news/adlm-2026-team-departure",
-      en: "/en/resources/news/adlm-2026-team-departure",
-      es: "/es/resources/news/adlm-2026-team-departure",
-      fr: "/fr/resources/news/adlm-2026-team-departure",
-      ko: "/ko/resources/news/adlm-2026-team-departure",
-      ru: "/ru/resources/news/adlm-2026-team-departure",
+      "zh-CN": "/resources/news/adlm-2026-onsite",
+      en: "/en/resources/news/adlm-2026-onsite",
+      es: "/es/resources/news/adlm-2026-onsite",
+      fr: "/fr/resources/news/adlm-2026-onsite",
+      ko: "/ko/resources/news/adlm-2026-onsite",
+      ru: "/ru/resources/news/adlm-2026-onsite",
     },
   } satisfies HomeNewsItem,
 

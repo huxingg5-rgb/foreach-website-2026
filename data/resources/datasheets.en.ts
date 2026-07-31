@@ -115,7 +115,7 @@ export const datasheetEnItems: DatasheetItem[] = [
       "EA piston pumps for precise metering, dispensing, and automated liquid handling across capacities from 50 µL to 20 mL.",
     image:
       "/images/products/pumps/plunger-pump/ea/pump-ea-1000ul-pmma.webp",
-    productHref: "/en/products/",
+    productHref: "/en/products/pumps/plunger-pumps/ea-standard-piston-pumps",
     downloadHref:
       "/downloads/resources/datasheets/en/Pumps/ps-120b-2507-00001-001-en-ea-piston-pump.pdf",
     actionType: "download",
@@ -133,7 +133,7 @@ export const datasheetEnItems: DatasheetItem[] = [
       "EAS easy-deaeration piston pumps for precise liquid handling where fast priming and efficient bubble removal are important.",
     image:
       "/images/products/pumps/product-types/plunger-pumps/foreach-plunger-pumps-product-type-intro.webp",
-    productHref: "/en/products/",
+    productHref: "/en/products/pumps/plunger-pumps",
     downloadHref:
       "/downloads/resources/datasheets/en/Pumps/ps-120b-2507-00002-001-en-eas-piston-pump.pdf",
     actionType: "download",
@@ -151,7 +151,7 @@ export const datasheetEnItems: DatasheetItem[] = [
       "Compact SM piston pumps for precise small-volume dosing and integration into miniature automated instruments.",
     image:
       "/images/products/pumps/plunger-pump/sm/pump-sm-1000ul-pmma.webp",
-    productHref: "/en/products/",
+    productHref: "/en/products/pumps/plunger-pumps/sm-miniature-piston-pumps",
     downloadHref:
       "/downloads/resources/datasheets/en/Pumps/ps-120b-2507-00004-001-en-sm-piston-pump.pdf",
     actionType: "download",
@@ -169,7 +169,7 @@ export const datasheetEnItems: DatasheetItem[] = [
       "A combined datasheet for RPL-P6.35 and RPL-P15 valveless pumps, covering precision metering ranges from 50 µL to 1200 µL.",
     image:
       "/images/products/pumps/product-types/valveless-pumps/foreach-valveless-pumps-product-type-intro.webp",
-    productHref: "/en/products/",
+    productHref: "/en/products/pumps/valveless-pumps",
     downloadHref:
       "/downloads/resources/datasheets/en/Pumps/ps-121b-2507-00001-001-en-rpl-valveless-pump.pdf",
     actionType: "download",
@@ -187,7 +187,7 @@ export const datasheetEnItems: DatasheetItem[] = [
       "A combined datasheet for SMTP2 and SMTP4 air-displacement pipetting pumps used in automated sample and reagent handling.",
     image:
       "/images/products/pumps/product-types/pipetting-pumps/foreach-pipetting-pumps-product-type-intro.webp",
-    productHref: "/en/products/",
+    productHref: "/en/products/pumps/pipetting-pumps",
     downloadHref:
       "/downloads/resources/datasheets/en/Pumps/ps-130a-2507-00001-001-en-smtp2-smtp4-pipetting-pump.pdf",
     actionType: "download",
@@ -205,7 +205,7 @@ export const datasheetEnItems: DatasheetItem[] = [
       "HLD3 syringe pump with a 30 mm stroke and rotary-valve configurations for precise liquid handling.",
     image:
       "/images/products/pumps/syringe-pumps/foreach-hld3-rotary-valve-syringe-pump.webp",
-    productHref: "/en/products/",
+    productHref: "/en/products/pumps/syringe-pumps",
     downloadHref:
       "/downloads/resources/datasheets/en/Pumps/ps-130b-2507-00001-001-en-hld3-syringe-pump-rotary-valve.pdf",
     actionType: "download",
@@ -223,7 +223,7 @@ export const datasheetEnItems: DatasheetItem[] = [
       "HLD6 syringe pump with a 60 mm stroke and rotary-valve configurations for µL-to-mL liquid handling.",
     image:
       "/images/products/pumps/syringe-pumps/foreach-hld6-rotary-valve-syringe-pump.webp",
-    productHref: "/en/products/",
+    productHref: "/en/products/pumps/syringe-pumps",
     downloadHref:
       "/downloads/resources/datasheets/en/Pumps/ps-130b-2507-00002-001-en-hld6-syringe-pump-rotary-valve.pdf",
     actionType: "download",
@@ -241,7 +241,7 @@ export const datasheetEnItems: DatasheetItem[] = [
       "HMD3 syringe pump with a 30 mm stroke and integrated solenoid-valve configurations for automated dispensing.",
     image:
       "/images/products/pumps/syringe-pumps/foreach-hmd3-solenoid-valve-syringe-pump.webp",
-    productHref: "/en/products/",
+    productHref: "/en/products/pumps/syringe-pumps",
     downloadHref:
       "/downloads/resources/datasheets/en/Pumps/ps-130b-2507-00003-001-en-hmd3-syringe-pump-solenoid-valve.pdf",
     actionType: "download",
@@ -259,7 +259,7 @@ export const datasheetEnItems: DatasheetItem[] = [
       "HMD6 syringe pump with a 60 mm stroke and integrated solenoid valves for multi-channel liquid handling.",
     image:
       "/images/products/pumps/syringe-pumps/foreach-hmd6-solenoid-valve-syringe-pump.webp",
-    productHref: "/en/products/",
+    productHref: "/en/products/pumps/syringe-pumps",
     downloadHref:
       "/downloads/resources/datasheets/en/Pumps/ps-130b-2507-00004-001-en-hmd6-syringe-pump-solenoid-valve.pdf",
     actionType: "download",
@@ -277,7 +277,7 @@ export const datasheetEnItems: DatasheetItem[] = [
       "DPL30 diaphragm pump for compact liquid-transfer applications, with flow rates up to 300 mL/min.",
     image:
       "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushed-liquid-diaphragm-pump-main.webp",
-    productHref: "/en/products/",
+    productHref: "/en/products/pumps/diaphragm-pumps/liquid-diaphragm-pumps",
     downloadHref:
       "/downloads/resources/datasheets/en/Pumps/ps-150b-2507-00001-001-en-dpl30-diaphragm-pump.pdf",
     actionType: "download",
@@ -295,7 +295,7 @@ export const datasheetEnItems: DatasheetItem[] = [
       "DPL60 diaphragm pump for liquid supply and transfer applications, with flow rates up to 600 mL/min.",
     image:
       "/images/products/pumps/diaphragm-pumps/dpl60/images/dpl60-brushed-liquid-diaphragm-pump-main.webp",
-    productHref: "/en/products/",
+    productHref: "/en/products/pumps/diaphragm-pumps/liquid-diaphragm-pumps",
     downloadHref:
       "/downloads/resources/datasheets/en/Pumps/ps-150b-2507-00002-001-en-dpl60-diaphragm-pump.pdf",
     actionType: "download",
@@ -313,7 +313,7 @@ export const datasheetEnItems: DatasheetItem[] = [
       "MRV3 multi-channel rotary valve for multi-port flow-path switching, reagent distribution, and fluidic integration.",
     image:
       "/images/products/valves/rotary-valves/foreach-rotary-valve-main.webp",
-    productHref: "/en/products/",
+    productHref: "/en/products/valves/rotary-valves",
     downloadHref:
       "/downloads/resources/datasheets/en/Valves/ps-120c-2507-00003-001-en-mrv3-multi-channel-rotary-valve.pdf",
     actionType: "download",
@@ -331,7 +331,7 @@ export const datasheetEnItems: DatasheetItem[] = [
       "HP 2-position, 6-port high-pressure valve with a vent path for pressure-resistant liquid-path switching.",
     image:
       "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp",
-    productHref: "/en/products/",
+    productHref: "/en/products/valves/high-pressure-valves",
     downloadHref:
       "/downloads/resources/datasheets/en/Valves/ps-120c-2604-00001-001-en-hp-2-position-6-port-with-vent-high-pressure-valve.pdf",
     actionType: "download",
@@ -349,7 +349,7 @@ export const datasheetEnItems: DatasheetItem[] = [
       "6010 solenoid valve datasheet covering substrate, threaded, and barbed configurations for 2-way and 3-way control.",
     image:
       "/images/products/valves/solenoid-valves/foreach-solenoid-valve-main.webp",
-    productHref: "/en/products/",
+    productHref: "/en/products/valves/solenoid-valves",
     downloadHref:
       "/downloads/resources/datasheets/en/Valves/ps-122a-2507-00001-001-en-6010-solenoid-valve.pdf",
     actionType: "download",
@@ -367,7 +367,7 @@ export const datasheetEnItems: DatasheetItem[] = [
       "A combined English catalog covering FOREACH fittings, connectors, rigid tubing, flexible tubing, and tubing assemblies.",
     image:
       "/images/products/fittings/barbed-fittings/products/ba-16c-pa-w-main.jpg",
-    productHref: "/en/products/",
+    productHref: "/en/products/fittings",
     downloadHref:
       "/downloads/resources/datasheets/en/Tubing-and-Fittings/fittings-and-tubing-catalog-a02.pdf",
     actionType: "download",
@@ -421,7 +421,7 @@ export const datasheetEnItems: DatasheetItem[] = [
       "Datasheet is not currently available. Drawing-based customization is supported based on drawings or samples.",
     image:
       "/images/resource/datasheets/thumbnails/resource-datasheet-thumb-sample-probe-v001.webp",
-    productHref: "/en/products/",
+    productHref: "/en/products/probes",
     downloadHref: "/en/contact?type=custom-probe",
     actionType: "custom",
   },

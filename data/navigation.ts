@@ -1,4 +1,4 @@
-﻿/* ================================
+/* ================================
    navigation.ts
    官网顶部导航数据配置文件
 
@@ -420,7 +420,7 @@ const productMegaDropdown: MegaDropdown = {
           localizedPath("/products/pumps/valveless-pumps")
         ),
         productImage(
-          "/images/products/pumps/diaphragm-pump.jpg",
+          "/images/products/pumps/diaphragm-pump.webp",
           t("隔膜泵", "Diaphragm Pump", "Bomba de diafragma", "Pompe à membrane", "다이어프램 펌프", "Мембранный насос"),
           t("连续供液、清洗与废液处理", "Continuous supply, washing, and waste handling", "Suministro continuo, lavado y gestión de residuos", "Alimentation continue, lavage et gestion des déchets", "연속 공급, 세척 및 폐액 처리", "Непрерывная подача, промывка и обработка отходов"),
           localizedPath("/products/pumps/diaphragm-pumps")
@@ -1851,7 +1851,7 @@ const navigationItems: NavigationItem[] = [
       {
         key: "mobile-resource-installation-guide",
         label: t(
-          "安装教程",
+          "使用教程",
           "Installation Guides",
           "Guías de instalación",
           "Guides d’installation",

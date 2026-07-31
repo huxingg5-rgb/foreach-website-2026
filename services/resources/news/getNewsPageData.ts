@@ -17,6 +17,7 @@ import { newsZhData } from "@/data/resources/news/news.zh";
 import { newsIntlData } from "@/data/resources/news/news.intl";
 import { localizeNews } from "@/data/resources/news/news.translations";
 import { getQualityAndRecognitionArticles } from "@/data/resources/news/news.quality-updates";
+import { getAdlm2026OnsiteArticle } from "@/data/resources/news/adlm-2026-onsite";
 
 import type {
   NewsArticle,
@@ -79,7 +80,7 @@ function getLocalizedIntlNewsData(locale: NewsLocale): NewsPageData {
 /* NEWS_QUALITY_MERGE_HELPER_START */
 
 /*
- * 合并质量体系、企业荣誉与生产制造专题新闻。
+ * 合并独立维护的专题新闻。
  *
  * 规则：
  * 1. 如果新专题和原新闻 slug 相同，新专题覆盖原文章。
@@ -90,8 +91,10 @@ function mergeQualityAndRecognitionArticles(
   pageData: NewsPageData,
   locale: NewsLocale
 ): NewsPageData {
-  const supplementalArticles =
-    getQualityAndRecognitionArticles(locale);
+  const supplementalArticles = [
+    getAdlm2026OnsiteArticle(locale),
+    ...getQualityAndRecognitionArticles(locale),
+  ];
 
   const supplementalSlugs = new Set(
     supplementalArticles.map((article) => article.slug)

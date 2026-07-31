@@ -334,11 +334,11 @@
     /* 娓呴櫎鏍囬榛樿澶栬竟璺?*/
     color: var(--contact-blue);
     /* 鏍囬浣跨敤鍝佺墝娣辫摑鑹?*/
-    font-size: clamp(30px, 3vw, 44px);
+    font-size: clamp(30px, 5vw, 76px);
     /* 鍝嶅簲寮忔ā鍧楁爣棰樺瓧鍙?*/
     line-height: 1.18;
     /* 妯″潡鏍囬琛岄珮 */
-    font-weight: 850;
+    font-weight: 900;
     /* 妯″潡鏍囬鍔犵矖 */
     letter-spacing: -0.03em;
     /* 妯″潡鏍囬瀛楄窛鐣ユ敹绱?*/
@@ -4149,15 +4149,31 @@
 .contact-page.home-contact-inquiry-wrapper .home-contact-inquiry-form-section {
   background: #ffffff !important;
   padding-top: 72px;
+  padding-right: 0;
   padding-bottom: 88px;
+  padding-left: 0;
 }
 
 .contact-page.home-contact-inquiry-wrapper .contact-section-inner {
   background: transparent !important;
+  width: min(1600px, calc(100% - 80px));
+  max-width: none;
 }
 
 .contact-page.home-contact-inquiry-wrapper .contact-section-head {
   margin-bottom: 32px;
+}
+
+@media (min-width: 1281px) and (max-width: 1440px) {
+  .contact-page.home-contact-inquiry-wrapper .contact-section-inner {
+    width: min(1180px, calc(100% - 56px));
+  }
+}
+
+@media (max-width: 1280px) {
+  .contact-page.home-contact-inquiry-wrapper .contact-section-inner {
+    width: min(1180px, calc(100% - 44px));
+  }
 }
 
 @media (max-width: 768px) {
@@ -4165,6 +4181,10 @@
   .contact-page.home-contact-inquiry-wrapper .home-contact-inquiry-form-section {
     padding-top: 48px;
     padding-bottom: 64px;
+  }
+
+  .contact-page.home-contact-inquiry-wrapper .contact-section-inner {
+    width: min(680px, calc(100% - 28px));
   }
 }
 

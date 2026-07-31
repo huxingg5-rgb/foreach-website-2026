@@ -35,6 +35,7 @@ export interface NewsArticle {
   summary: string;
   date: string;
   coverImage: string;
+  coverAlt?: string;
   content: NewsArticleBlock[];
   seoTitle?: string;
   seoDescription?: string;
@@ -72,4 +73,4 @@ export interface NewsPageData {
     description: string;
     actions: NewsBottomBannerAction[];
   };
-} 
+}

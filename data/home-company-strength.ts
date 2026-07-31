@@ -347,7 +347,7 @@ contactButton: {
       这样比单纯写企业实力更有转化价值。
     */
     title: {
-      "zh-CN": "让复杂液路系统更稳定、更可控",
+      "zh-CN": "让液路系统更稳更可控",
       en: "Making Complex Fluidic Systems More Stable and Controllable",
       es: "Hacemos que los sistemas fluídicos complejos sean más estables y controlables",
       fr: "Rendre les systèmes fluidiques complexes plus stables et maîtrisables",
@@ -585,4 +585,4 @@ contactButton: {
 
 export function getHomeCompanyText(text: HomeCompanyText, locale: LocaleCode) {
   return text[locale] || text["zh-CN"] || text.en || "";
-} 
+}

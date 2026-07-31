@@ -43,7 +43,6 @@ export default function HomeCompanyStrengthSection({ // 定义并导出首页公
   const companyVideoData = aboutData.video; // 读取公司介绍视频数据，后期可由后端接口返回
   const metrics = homeCompanyStrengthData.metrics; // 读取公司数据卡片数据
   const honors = homeCompanyStrengthData.honors; // 读取公司能力与资质轮播数据
-  const advantagesSection = homeCompanyStrengthData.advantagesSection; // 读取企业优势标题区数据
   const advantages = homeCompanyStrengthData.advantages; // 读取企业优势卡片数据
 
   const metricsGridRef = useRef<HTMLDivElement | null>(null); // 数据卡片区域 DOM 引用，用于判断是否进入视口
@@ -227,22 +226,7 @@ export default function HomeCompanyStrengthSection({ // 定义并导出首页公
 
       <section // 第四屏：企业优势区域开始
         className="home-company-advantages-section" // 企业优势区域 class
-        aria-labelledby="advantages-title" // 绑定标题 id，提升无障碍语义
       > {/* 第四屏：企业优势区域开始标签结束 */}
-        <div className="home-advantages-head"> {/* 企业优势标题区域 */}
-          <p className="home-advantages-kicker"> {/* 企业优势小标签 */}
-            {getHomeCompanyText(advantagesSection.kicker, locale)} {/* 企业优势小标签多语言文字 */}
-          </p> {/* 企业优势小标签结束 */}
-
-          <h2 className="home-advantages-title" id="advantages-title"> {/* 企业优势主标题 */}
-            {getHomeCompanyText(advantagesSection.title, locale)} {/* 企业优势主标题多语言文字 */}
-          </h2> {/* 企业优势主标题结束 */}
-
-          <p className="home-advantages-desc"> {/* 企业优势描述 */}
-            {getHomeCompanyText(advantagesSection.description, locale)} {/* 企业优势描述多语言文字 */}
-          </p> {/* 企业优势描述结束 */}
-        </div> {/* 企业优势标题区域结束 */}
-
         <div className="home-advantage-panels"> {/* 企业优势卡片区域 */}
           {advantages.map((advantage) => ( // 遍历企业优势卡片
             <article // 单个企业优势卡片开始

@@ -1515,7 +1515,7 @@ const isFittingReplacementDetailPage =
                       <div key={card.key} className="site-nav-mega-product-group">
                         {displayProductImages.length > 0 ? (
                           <div className="site-nav-mega-product-grid">
-                            {displayProductImages.map((cardImage) => {
+                            {displayProductImages.map((cardImage, cardImageIndex) => {
                               const fallbackProductMeta =
                                 getProductImageDisplayMeta(
                                   cardImage.src,
@@ -1559,6 +1559,7 @@ const isFittingReplacementDetailPage =
                                       )}
                                       width={cardImage.width ?? 600}
                                       height={cardImage.height ?? 380}
+                                      loading={cardImageIndex === 0 ? "eager" : "lazy"}
                                     />
                                   </div>
 

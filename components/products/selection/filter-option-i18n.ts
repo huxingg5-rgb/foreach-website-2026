@@ -351,16 +351,28 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
   "本色": {
     zh: "本色",
     en: "Natural",
+    es: "Natural",
+    fr: "Naturel",
+    ko: "내추럴",
+    ru: "Натуральный",
   },
 
   "黑色": {
     zh: "黑色",
     en: "Black",
+    es: "Negro",
+    fr: "Noir",
+    ko: "검정",
+    ru: "Чёрный",
   },
 
   "蓝色": {
     zh: "蓝色",
     en: "Blue",
+    es: "Azul",
+    fr: "Bleu",
+    ko: "파랑",
+    ru: "Синий",
   },
   "直通型": {
     zh: "直通型",

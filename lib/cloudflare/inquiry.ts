@@ -49,6 +49,11 @@ export class InquiryRequestError extends Error {
   }
 }
 
+type ResendEmailAttachment = {
+  filename: string;
+  content: string;
+};
+
 type ResendEmailInput = {
   from: string;
   to: string | string[];
@@ -56,6 +61,7 @@ type ResendEmailInput = {
   html: string;
   text?: string;
   replyTo?: string;
+  attachments?: ResendEmailAttachment[];
   idempotencyKey?: string;
 };
 
@@ -320,6 +326,13 @@ export async function sendResendEmail(
 
   if (input.replyTo) {
     payload.reply_to = input.replyTo;
+  }
+
+  if (
+    input.attachments &&
+    input.attachments.length > 0
+  ) {
+    payload.attachments = input.attachments;
   }
 
   const response = await fetch("https://api.resend.com/emails", {

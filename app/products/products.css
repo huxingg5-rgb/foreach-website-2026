@@ -4338,3 +4338,98 @@
   }
 }
 /* MOBILE_PRODUCT_CONTROLS_NO_FLUORESCENT_TOUCH_END */
+
+/* UNIFIED_FILTER_DISABLED_VISUAL_START */
+
+/*
+ * 产品中心全部筛选项统一禁用视觉：
+ *
+ * 直接复用倒刺接头已有的灰色表现，
+ * 不按产品类型分别创建样式。
+ *
+ * 逻辑层判断没有真实型号后，会同时添加：
+ * - disabled 属性
+ * - is-disabled 类名
+ *
+ * 本区域只负责视觉，不修改筛选业务逻辑。
+ */
+.products-selection-page
+  .filter-panel
+  .filter-option.is-disabled,
+.products-selection-page
+  .filter-panel
+  .filter-option:disabled,
+.products-selection-page
+  .filter-panel
+  .filter-option[aria-disabled="true"] {
+  border-color: #e4e8ed !important;
+  background: #f1f3f6 !important;
+  color: #a8b0bc !important;
+  -webkit-text-fill-color: #a8b0bc !important;
+  cursor: not-allowed !important;
+  opacity: 1 !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/*
+ * 左侧小圆框同步变灰，
+ * 让用户一眼识别该选项当前不能选择。
+ */
+.products-selection-page
+  .filter-panel
+  .filter-option.is-disabled
+  .filter-check,
+.products-selection-page
+  .filter-panel
+  .filter-option:disabled
+  .filter-check,
+.products-selection-page
+  .filter-panel
+  .filter-option[aria-disabled="true"]
+  .filter-check {
+  border-color: #cbd2dc !important;
+  background: #e6e9ed !important;
+  box-shadow: none !important;
+}
+
+/*
+ * 禁用状态下不响应 hover、focus 和 active 的正常高亮。
+ */
+.products-selection-page
+  .filter-panel
+  .filter-option.is-disabled:hover,
+.products-selection-page
+  .filter-panel
+  .filter-option:disabled:hover,
+.products-selection-page
+  .filter-panel
+  .filter-option[aria-disabled="true"]:hover,
+.products-selection-page
+  .filter-panel
+  .filter-option.is-disabled:focus,
+.products-selection-page
+  .filter-panel
+  .filter-option:disabled:focus,
+.products-selection-page
+  .filter-panel
+  .filter-option[aria-disabled="true"]:focus,
+.products-selection-page
+  .filter-panel
+  .filter-option.is-disabled:active,
+.products-selection-page
+  .filter-panel
+  .filter-option:disabled:active,
+.products-selection-page
+  .filter-panel
+  .filter-option[aria-disabled="true"]:active {
+  border-color: #e4e8ed !important;
+  background: #f1f3f6 !important;
+  color: #a8b0bc !important;
+  -webkit-text-fill-color: #a8b0bc !important;
+  box-shadow: none !important;
+  transform: none !important;
+  outline: none !important;
+}
+
+/* UNIFIED_FILTER_DISABLED_VISUAL_END */

@@ -30,9 +30,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import ResourceSupportCta from "@/components/resources/ResourceSupportCta";
+import { getAdlm2026OnsiteCopy } from "@/data/resources/news/adlm-2026-onsite";
 
 import styles from "./NewsArticleClient.module.css";
 import Adlm2026DepartureArticle, { getAdlm2026DepartureSupportCopy } from "./articles/Adlm2026DepartureArticle";
+import Adlm2026OnsiteArticle from "./articles/Adlm2026OnsiteArticle";
 
 /* =========================================================
    新闻正文块类型
@@ -360,10 +362,26 @@ export default function NewsArticleClient({
     (article as { slug?: string }).slug ===
       "adlm-2026-team-departure";
 
-  const adlm2026SupportCopy =
+  const isAdlm2026OnsiteArticle =
+    (article as { slug?: string }).slug ===
+      "adlm-2026-onsite";
+
+  const adlm2026DepartureSupportCopy =
     isAdlm2026DepartureArticle
-      ? getAdlm2026DepartureSupportCopy(locale ?? getLocaleFromPathname(pathname))
+      ? getAdlm2026DepartureSupportCopy(currentLocale)
       : null;
+
+  const adlm2026OnsiteCopy =
+    isAdlm2026OnsiteArticle
+      ? getAdlm2026OnsiteCopy(currentLocale)
+      : null;
+
+  const adlm2026SupportCopy =
+    adlm2026OnsiteCopy?.support ??
+    adlm2026DepartureSupportCopy;
+
+  const articleSupportKicker =
+    adlm2026OnsiteCopy?.support.kicker;
 
   const articleSupportTitle =
     adlm2026SupportCopy?.title ??
@@ -426,7 +444,9 @@ export default function NewsArticleClient({
                   className={
                     isSpecialDetailImage
                       ? `${styles.cover} ${styles.coverContain}`
-                      : styles.cover
+                      : isAdlm2026OnsiteArticle
+                        ? `${styles.cover} ${styles.adlmOnsiteCover}`
+                        : styles.cover
                   }
                 >
                 <Image
@@ -453,7 +473,9 @@ export default function NewsArticleClient({
               ) : (
                 <>
                   {isAdlm2026DepartureArticle ? (
-                                  <Adlm2026DepartureArticle locale={locale ?? getLocaleFromPathname(pathname)} />
+                                  <Adlm2026DepartureArticle locale={currentLocale} />
+                                ) : isAdlm2026OnsiteArticle ? (
+                                  <Adlm2026OnsiteArticle locale={currentLocale} />
                                 ) : (
                                   article.content.map((block, index) => {
                                                   const paragraphs = splitParagraphs(
@@ -518,6 +540,7 @@ export default function NewsArticleClient({
       ====================================================== */}
       <section className={styles.supportSection}>
         <SupportCtaComponent
+          kicker={articleSupportKicker}
           title={articleSupportTitle}
           description={articleSupportDescription}
           actions={articleSupportActions}

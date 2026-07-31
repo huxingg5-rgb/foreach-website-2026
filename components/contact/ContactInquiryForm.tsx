@@ -60,19 +60,37 @@ class InquiryApiError extends Error {
 
 async function postInquiryApi(
   pathname: string,
-  payload: Record<string, unknown>,
+  payload:
+    | Record<string, unknown>
+    | FormData,
 ): Promise<InquiryApiResponse> {
   let response: Response;
 
+  const requestInit: RequestInit = {
+    method: "POST",
+    cache: "no-store",
+  };
+
+  if (payload instanceof FormData) {
+    /*
+     * 不能手动设置 Content-Type。
+     * 浏览器会自动生成 multipart boundary。
+     */
+    requestInit.body = payload;
+  } else {
+    requestInit.headers = {
+      "Content-Type": "application/json",
+    };
+
+    requestInit.body =
+      JSON.stringify(payload);
+  }
+
   try {
-    response = await fetch(pathname, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      cache: "no-store",
-      body: JSON.stringify(payload),
-    });
+    response = await fetch(
+      pathname,
+      requestInit,
+    );
   } catch {
     throw new InquiryApiError(
       "network_error",
@@ -851,7 +869,7 @@ export default function ContactInquiryForm({
 
      执行顺序：
      1. 检查邮箱验证状态
-     2. 把询盘内容提交至 Vercel API
+     2. 把询盘内容和附件提交至官网 API
      3. 后端向公司和客户发送邮件
      4. 邮件发送成功后生成并打印需求单
      5. 显示提交成功弹窗
@@ -911,35 +929,48 @@ export default function ContactInquiryForm({
     setIsSubmitting(true);
 
     try {
+      const submissionFormData =
+        new FormData();
+
+      const submissionFields:
+        Record<string, string> = {
+          name: formData.name,
+          company: formData.company,
+          email: formData.email,
+          phone: formData.phone,
+          requestType:
+            formData.requestType,
+          productType:
+            formData.productType,
+          targetModel:
+            formData.targetModel,
+          projectStage:
+            formData.projectStage,
+          message: formData.message,
+          locale: currentLang,
+        };
+
+      Object.entries(
+        submissionFields,
+      ).forEach(([key, value]) => {
+        submissionFormData.append(
+          key,
+          value,
+        );
+      });
+
+      selectedFiles.forEach((file) => {
+        submissionFormData.append(
+          "attachments",
+          file,
+          file.name,
+        );
+      });
+
       const apiResult =
         await postInquiryApi(
           "/api/inquiry/submit/",
-          {
-            name: formData.name,
-            company: formData.company,
-            email: formData.email,
-            phone: formData.phone,
-            requestType:
-              formData.requestType,
-            productType:
-              formData.productType,
-            targetModel:
-              formData.targetModel,
-            projectStage:
-              formData.projectStage,
-            message: formData.message,
-            locale: currentLang,
-            attachments:
-              selectedFiles.map(
-                (file) => ({
-                  name: file.name,
-                  type:
-                    file.type ||
-                    "application/octet-stream",
-                  size: file.size,
-                }),
-              ),
-          },
+          submissionFormData,
         );
 
       const nextReferenceId =
