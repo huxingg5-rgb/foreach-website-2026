@@ -42,6 +42,7 @@ import CompanyInfoRequestModal, {
 import { getDrawingRequestCopy } from "@/components/forms/company-info-request/copy";
 import { getLocaleFromPathname, isInternationalLocale, type LocaleCode } from "@/lib/i18n";
 import { getInternationalUiText } from "@/lib/international-ui";
+import { trackBeginInquiry } from "@/lib/analytics/track-event";
 
 import styles from "./GlobalSelectionCartDrawer.module.css";
 import { useSelectionCart } from "./SelectionCartProvider";
@@ -252,6 +253,13 @@ export default function GlobalSelectionCartDrawer() {
      */
     if (items.length > 0) {
       setAllDrawingNeeds(true);
+      trackBeginInquiry({
+        formId: "drawing_request_form",
+        formType: "drawing_request",
+        sourceSection: "global_selection_cart",
+        locale,
+        itemCount: items.length,
+      });
     }
 
     setIsDrawingRequestModalOpen(true);
@@ -778,6 +786,9 @@ export default function GlobalSelectionCartDrawer() {
         successTitle={drawingCopy.successTitle}
         successDescription={drawingCopy.successDescription}
         enableEmailVerification
+        analyticsFormId="drawing_request_form"
+        analyticsFormType="drawing_request"
+        analyticsSourceSection="global_selection_cart"
         onClose={() => {
           setIsDrawingRequestModalOpen(false);
         }}

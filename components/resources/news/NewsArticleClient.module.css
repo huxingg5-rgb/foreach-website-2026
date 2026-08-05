@@ -177,6 +177,27 @@
   width: 100%;
 }
 
+.technicalArticleBody {
+  width: 100%;
+  max-width: var(--news-content-width);
+  margin: 0 auto;
+}
+
+.technicalArticleBody .contentBlock {
+  max-width: none;
+}
+
+.technicalArticleBody .technicalTableWrap {
+  max-width: 1280px;
+  margin-inline: auto;
+}
+
+.technicalArticleBody .technicalTable th,
+.technicalArticleBody .technicalTable td {
+  padding: 8px 14px;
+  line-height: 1.5;
+}
+
 .contentBlock {
   max-width: 1280px;
 }

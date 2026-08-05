@@ -91,7 +91,7 @@ function findProductsByCompatibleModel(
 
   return products.filter((product) => {
     return product.competitorModels.some((compatibleModel) => {
-      return normalizeModel(compatibleModel) === normalizedKeyword;
+      return normalizeModel(compatibleModel).includes(normalizedKeyword);
     });
   });
 }
@@ -251,7 +251,10 @@ export default function FittingReplacementHome({
                 value={searchValue}
                 placeholder={data.search.placeholder}
                 onChange={(event) => {
-                  setSearchValue(event.target.value);
+                  const keyword = event.target.value;
+                  setSearchValue(keyword);
+                  setSubmittedKeyword(keyword.trim());
+                  setCurrentPage(1);
                 }}
                 onKeyDown={(event) => {
                   if (event.key === "Enter") {

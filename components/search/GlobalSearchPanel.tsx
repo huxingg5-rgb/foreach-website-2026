@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import {
   Fragment,
@@ -136,8 +136,8 @@ const MODULE_TEXT: Record<
     action: "查看规格书",
   },
   "installation-guides": {
-    title: "安装教程",
-    action: "查看教程",
+    title: "使用教程",
+    action: "查看使用教程",
   },
   "technical-articles": {
     title: "技术文章",
@@ -175,8 +175,8 @@ const MODULE_TEXT_EN: typeof MODULE_TEXT = {
     action: "View Datasheet",
   },
   "installation-guides": {
-    title: "Installation Guides",
-    action: "View Guide",
+    title: "Usage Guides",
+    action: "View Usage Guide",
   },
   "technical-articles": {
     title: "Technical Articles",
@@ -222,7 +222,7 @@ const ENGLISH_RESULT_DESCRIPTIONS: Record<SearchModule, string> = {
   products: "View product details and selection information.",
   "compatible-models": "View the corresponding FOREACH compatible product.",
   datasheets: "View or download the available product datasheet.",
-  "installation-guides": "View installation and commissioning guidance.",
+  "installation-guides": "View product usage, operation, installation, and commissioning guidance.",
   "technical-articles": "Read the full technical article.",
   "material-compatibility": "Review material compatibility information.",
   applications: "Explore the related fluid handling application.",
@@ -487,9 +487,14 @@ export default function GlobalSearchPanel({
 
   useEffect(() => {
     if (cachedSearchItems) {
-      setItems(cachedSearchItems);
-      setLoadState("ready");
-      return;
+      const cachedItemsTimer = window.setTimeout(() => {
+        setItems(cachedSearchItems);
+        setLoadState("ready");
+      }, 0);
+
+      return () => {
+        window.clearTimeout(cachedItemsTimer);
+      };
     }
 
     const idleWindow = window as IdleWindow;
@@ -543,7 +548,11 @@ export default function GlobalSearchPanel({
 
     let cancelled = false;
 
-    setLoadState("loading");
+    window.setTimeout(() => {
+      if (!cancelled) {
+        setLoadState("loading");
+      }
+    }, 0);
 
     void preloadGlobalSearchIndex()
       .then((loadedItems) => {
@@ -635,7 +644,13 @@ export default function GlobalSearchPanel({
   }, [isOpen]);
 
   useEffect(() => {
-    setVisibleCounts({});
+    const resetVisibleCountsTimer = window.setTimeout(() => {
+      setVisibleCounts({});
+    }, 0);
+
+    return () => {
+      window.clearTimeout(resetVisibleCountsTimer);
+    };
   }, [debouncedQuery]);
 
   const queryIsLongEnough =
@@ -987,6 +1002,16 @@ export default function GlobalSearchPanel({
                             item.h,
                             locale
                           )}
+                          data-analytics-resource-action={
+                            item.m === "datasheets" ? "view" : undefined
+                          }
+                          data-analytics-resource-type={
+                            item.m === "datasheets" ? "datasheet" : undefined
+                          }
+                          data-analytics-resource-file-type={
+                            item.m === "datasheets" ? "pdf" : undefined
+                          }
+                          data-analytics-section="global_search_results"
                           key={`${item.m}-${item.h}-${item.t}`}
                           onClick={(event) => {
                             /*
@@ -1010,12 +1035,12 @@ export default function GlobalSearchPanel({
                             const nextHref =
                               event.currentTarget.href;
 
-                            onClose();
                             window.location.assign(nextHref);
                           }}
                         >
                           {item.i ? (
                             <span className="global-search-result-image">
+                              {/* eslint-disable-next-line @next/next/no-img-element -- 搜索索引图片路径为运行时数据，保留原生延迟加载图片。 */}
                               <img
                                 src={item.i}
                                 alt=""

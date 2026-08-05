@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
-import type { ComponentType } from "react";
+import type { ComponentType, ReactNode } from "react";
+import RelatedResources from "@/components/common/related-resources/RelatedResources";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
 
 import detailsJson from "@/data/products/generated/pumps/diaphragm-pumps/detail/index.json";
@@ -61,6 +62,8 @@ type DiaphragmFaq = {
 type DiaphragmDetail = {
   seriesId: string;
   slug: string;
+  relationKeys?: string[];
+  relationPriority?: number;
   category?: string;
   title?: string;
   displayName?: string;
@@ -86,6 +89,7 @@ const details = detailsJson as DiaphragmDetail[];
 
 const ProductDetailView = ProductDetailClient as unknown as ComponentType<{
   data: any;
+  afterContent?: ReactNode;
 }>;
 
 function getText(value: unknown) {
@@ -1040,5 +1044,19 @@ export default async function DiaphragmPumpDetailPage({ params }: PageProps) {
     notFound();
   }
 
-  return <ProductDetailView data={data} />;
+  return (
+    <ProductDetailView
+      data={data}
+      afterContent={
+        <RelatedResources
+          key="product-related-resources"
+          sourceType="product"
+          sourceId={data.id}
+          sourceSlug={data.slug}
+          relationKeys={data.relationKeys}
+          locale="zh-CN"
+        />
+      }
+    />
+  );
 }

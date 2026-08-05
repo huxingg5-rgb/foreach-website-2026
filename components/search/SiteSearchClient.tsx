@@ -2,7 +2,9 @@
 
 import {
   FormEvent,
+  useEffect,
   useMemo,
+  useRef,
   useState,
 } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -14,6 +16,12 @@ import type {
 } from "@/data/search/site-search.types";
 import { getInternationalUiText } from "@/lib/international-ui";
 import type { LocaleCode } from "@/lib/i18n";
+import {
+  trackProductListView,
+  trackProductSelect,
+  trackSearchNoResults,
+  trackSiteSearch,
+} from "@/lib/analytics/track-event";
 
 import "./site-search.css";
 
@@ -206,13 +214,48 @@ function SearchResultItem({
   item,
   isEnglish,
   detailsLabel,
+  locale,
+  index,
 }: {
   item: SiteSearchItem;
   isEnglish: boolean;
   detailsLabel: string;
+  locale: string;
+  index: number;
 }) {
+  const listId = `site_search:${item.module}`;
+
   return (
-    <a className="site-search-result-card" href={item.href}>
+    <a
+      className="site-search-result-card"
+      href={item.href}
+      data-analytics-resource-action={
+        item.module === "datasheets" ? "view" : undefined
+      }
+      data-analytics-resource-id={
+        item.module === "datasheets" ? item.id : undefined
+      }
+      data-analytics-resource-type={
+        item.module === "datasheets" ? "datasheet" : undefined
+      }
+      data-analytics-resource-file-type={
+        item.module === "datasheets" ? "pdf" : undefined
+      }
+      data-analytics-section="site_search_results"
+      onClick={() => {
+        if (item.module === "datasheets") return;
+
+        trackProductSelect({
+          productId: item.productCode || item.model || item.id,
+          productName: item.title,
+          category: item.module,
+          listId,
+          listName: "site_search_results",
+          index,
+          locale,
+        });
+      }}
+    >
       {item.image ? (
         <div className="site-search-result-image">
           <img src={item.image} alt="" loading="lazy" />
@@ -258,6 +301,8 @@ export default function SiteSearchClient({
 
   const queryFromUrl = searchParams.get("q")?.trim() ?? "";
   const [inputValue, setInputValue] = useState(queryFromUrl);
+  const lastSearchSignatureRef = useRef("");
+  const lastListSignaturesRef = useRef<Record<string, string>>({});
   // 四国语言内容缺失时统一回退英文，禁止显示中文；路由仍保留当前 Locale。
   const isEnglish = locale !== "zh-CN" && locale !== "zh";
   const activeLocale = locale as LocaleCode;
@@ -305,6 +350,54 @@ export default function SiteSearchClient({
   const totalResults = MODULE_ORDER.reduce((sum, module) => {
     return sum + groupedResults[module].length;
   }, 0);
+
+  useEffect(() => {
+    if (!queryFromUrl) return;
+
+    const searchSignature = `${queryFromUrl}|${totalResults}`;
+    if (lastSearchSignatureRef.current !== searchSignature) {
+      lastSearchSignatureRef.current = searchSignature;
+      trackSiteSearch({
+        searchTerm: queryFromUrl,
+        searchLocation: "site_search",
+        locale,
+        resultCount: totalResults,
+      });
+
+      if (totalResults === 0) {
+        trackSearchNoResults({
+          searchTerm: queryFromUrl,
+          searchLocation: "site_search",
+          locale,
+        });
+      }
+    }
+
+    for (const resultModule of MODULE_ORDER) {
+      const items = groupedResults[resultModule];
+      if (items.length === 0) continue;
+
+      const signature = `${queryFromUrl}|${items.map((item) => item.id).join("|")}`;
+      if (lastListSignaturesRef.current[resultModule] === signature) continue;
+      lastListSignaturesRef.current[resultModule] = signature;
+
+      const listId = `site_search:${resultModule}`;
+      trackProductListView({
+        listId,
+        listName: "site_search_results",
+        locale,
+        products: items.map((item, index) => ({
+          productId: item.productCode || item.model || item.id,
+          productName: item.title,
+          category: resultModule,
+          listId,
+          listName: "site_search_results",
+          index,
+          locale,
+        })),
+      });
+    }
+  }, [groupedResults, locale, queryFromUrl, totalResults]);
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -409,11 +502,13 @@ export default function SiteSearchClient({
 
                   {items.length > 0 ? (
                     <div className="site-search-result-grid">
-                      {items.map((item) => (
+                      {items.map((item, index) => (
                         <SearchResultItem
                           item={item}
                           isEnglish={isEnglish}
                           detailsLabel={t("View Details")}
+                          locale={locale}
+                          index={index}
                           key={item.id}
                         />
                       ))}

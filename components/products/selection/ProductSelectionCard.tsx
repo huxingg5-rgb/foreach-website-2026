@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import type { ProductSelectionProductItem } from "./product-selection-ui.types";
 import type { SelectionLocale } from "@/data/products/selection/product-selection.types";
 import { getProductCardSpecs } from "@/data/products/selection/card-copy/plunger-pump-card-copy";
+import { trackProductSelect } from "@/lib/analytics/track-event";
 
 type ProductSelectionCardProps = {
   product: ProductSelectionProductItem;
@@ -15,6 +16,10 @@ type ProductSelectionCardProps = {
   detailButtonText: string;
   addToListText: string;
   addedToListText: string;
+  analyticsListId: string;
+  analyticsListName: string;
+  analyticsIndex: number;
+  showListAction?: boolean;
   onToggleList: (product: ProductSelectionProductItem) => void;
 };
 
@@ -180,6 +185,10 @@ export default function ProductSelectionCard({
   detailButtonText,
   addToListText,
   addedToListText,
+  analyticsListId,
+  analyticsListName,
+  analyticsIndex,
+  showListAction = true,
   onToggleList,
 }: ProductSelectionCardProps) {
   const pathname = usePathname();
@@ -222,19 +231,39 @@ export default function ProductSelectionCard({
         ) : null}
 
         <div className="product-actions">
-          <a className="product-link" href={safeDetailHref} target="_blank" rel="noopener noreferrer">
+          <a
+            className="product-link"
+            href={safeDetailHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => {
+              trackProductSelect({
+                productId: product.productId,
+                productName: safeTitle,
+                category: product.categoryId || product.category,
+                subcategory: product.productTypeId || product.productType,
+                series: product.seriesId || product.series,
+                listId: analyticsListId,
+                listName: analyticsListName,
+                index: analyticsIndex,
+                locale,
+              });
+            }}
+          >
             {detailButtonText}
           </a>
 
-          <button
-            className={isAdded ? "list-toggle active" : "list-toggle"}
-            type="button"
-            onClick={() => {
-              onToggleList(product);
-            }}
-          >
-            {isAdded ? addedToListText : addToListText}
-          </button>
+          {showListAction ? (
+            <button
+              className={isAdded ? "list-toggle active" : "list-toggle"}
+              type="button"
+              onClick={() => {
+                onToggleList(product);
+              }}
+            >
+              {isAdded ? addedToListText : addToListText}
+            </button>
+          ) : null}
         </div>
       </div>
     </article>

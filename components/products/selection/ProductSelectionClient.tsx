@@ -1,10 +1,16 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import ResourceSearchBar from "@/components/resources/ResourceSearchBar";
 import { useSelectionCart } from "@/components/selection-cart/SelectionCartProvider";
 import type { SelectionCartItemInput } from "@/components/selection-cart/selection-cart.types";
+import {
+  trackFilterApply,
+  trackProductListView,
+  trackSearchNoResults,
+  trackSiteSearch,
+} from "@/lib/analytics/track-event";
 
 import SitePageShell from "@/components/layout/SitePageShell";
 import {
@@ -885,6 +891,33 @@ function getTargetUiLabel(locale: SelectionLocale, value: string) {
   if (locale === "zh" || locale === "en") return value;
 
   return TARGET_UI_LABEL_TRANSLATIONS[locale]?.[value] || value;
+}
+
+function renderProductTypeIntroParagraph(paragraph: string) {
+  const legacyEmphasisText = "详情页查看或提交选型需求确认";
+  const paragraphWithEmphasis = paragraph.includes("**")
+    ? paragraph
+    : paragraph.replace(legacyEmphasisText, `**${legacyEmphasisText}**`);
+
+  return paragraphWithEmphasis
+    .split(/(\*\*[^*]+\*\*)/g)
+    .filter(Boolean)
+    .map((segment, index) => {
+      const isEmphasized = segment.startsWith("**") && segment.endsWith("**");
+
+      if (!isEmphasized) {
+        return segment;
+      }
+
+      return (
+        <strong
+          className="product-type-intro-emphasis"
+          key={`${index}-${segment}`}
+        >
+          {segment.slice(2, -2)}
+        </strong>
+      );
+    });
 }
 
 function getCategoryDescription(
@@ -3112,6 +3145,14 @@ export default function ProductSelectionClient({
   });
   const [currentProductPage, setCurrentProductPage] = useState(1);
   const [productsPageSize, setProductsPageSize] = useState(12);
+  const lastProductListSignatureRef = useRef("");
+  const productListViewTimerRef = useRef<number | null>(null);
+  const pendingSearchRef = useRef<string | null>(null);
+  const pendingFilterRef = useRef<{
+    filterCategory: string;
+    filterName: string;
+    filterValue: string | string[];
+  } | null>(null);
 
   function handleSearchInputChange(
     value: string
@@ -3129,6 +3170,26 @@ export default function ProductSelectionClient({
   ) {
     const normalizedValue =
       value.trim();
+
+    if (normalizedValue && normalizedValue === searchKeyword) {
+      trackSiteSearch({
+        searchTerm: normalizedValue,
+        searchLocation: "product_selection",
+        locale,
+        resultCount: matchedProducts.length,
+      });
+
+      if (matchedProducts.length === 0) {
+        trackSearchNoResults({
+          searchTerm: normalizedValue,
+          searchLocation: "product_selection",
+          locale,
+        });
+      }
+      return;
+    }
+
+    pendingSearchRef.current = normalizedValue || null;
 
     /*
      * 产品系列搜索逻辑：
@@ -3629,6 +3690,94 @@ export default function ProductSelectionClient({
     safeCurrentProductPage * productsPageSize
   );
 
+  const analyticsListId = [
+    "product_selection",
+    activeCategoryId,
+    activeProductTypeId || "all",
+    `page_${safeCurrentProductPage}`,
+  ].join(":");
+
+  useEffect(() => {
+    if (pagedProducts.length === 0) return;
+
+    const signature = `${analyticsListId}|${pagedProducts
+      .map((product) => product.productId)
+      .join("|")}`;
+
+    if (lastProductListSignatureRef.current === signature) return;
+
+    if (productListViewTimerRef.current !== null) {
+      window.clearTimeout(productListViewTimerRef.current);
+    }
+
+    productListViewTimerRef.current = window.setTimeout(() => {
+      productListViewTimerRef.current = null;
+
+      if (lastProductListSignatureRef.current === signature) return;
+      lastProductListSignatureRef.current = signature;
+
+      trackProductListView({
+        listId: analyticsListId,
+        listName: "product_selection_results",
+        locale,
+        products: pagedProducts.map((product, index) => ({
+          productId: product.productId,
+          productName: getText(locale, product.cardTitle, product.productId),
+          category: product.categoryId || product.category,
+          subcategory: product.productTypeId || product.productType,
+          series: product.seriesId || product.series,
+          listId: analyticsListId,
+          listName: "product_selection_results",
+          index: (safeCurrentProductPage - 1) * productsPageSize + index,
+          locale,
+        })),
+      });
+    }, 150);
+
+    return () => {
+      if (productListViewTimerRef.current !== null) {
+        window.clearTimeout(productListViewTimerRef.current);
+        productListViewTimerRef.current = null;
+      }
+    };
+  }, [analyticsListId, locale, pagedProducts, productsPageSize, safeCurrentProductPage]);
+
+  useEffect(() => {
+    const pendingSearch = pendingSearchRef.current;
+    if (!pendingSearch || pendingSearch !== searchKeyword.trim()) return;
+
+    trackSiteSearch({
+      searchTerm: pendingSearch,
+      searchLocation: "product_selection",
+      locale,
+      resultCount: matchedProducts.length,
+    });
+
+    if (matchedProducts.length === 0) {
+      trackSearchNoResults({
+        searchTerm: pendingSearch,
+        searchLocation: "product_selection",
+        locale,
+      });
+    }
+
+    pendingSearchRef.current = null;
+  }, [locale, matchedProducts.length, searchKeyword]);
+
+  useEffect(() => {
+    const pendingFilter = pendingFilterRef.current;
+    if (!pendingFilter) return;
+
+    trackFilterApply({
+      ...pendingFilter,
+      resultCount: matchedProducts.length,
+      sourceSection: "product_selection",
+      locale,
+    });
+
+    pendingFilterRef.current = null;
+  }, [locale, matchedProducts]);
+
   useEffect(() => {
     function updateProductsPageSize() {
       setProductsPageSize(getResponsiveProductPageSize());
@@ -3777,6 +3926,12 @@ export default function ProductSelectionClient({
     const firstProductTypeId =
       getCategoryDefaultProductTypeId(categoryId);
 
+    pendingFilterRef.current = {
+      filterCategory: "product_category",
+      filterName: "category_id",
+      filterValue: categoryId,
+    };
+
     setActiveCategoryId(categoryId);
     setActiveProductTypeId(firstProductTypeId);
     setSelectedFilters(getDefaultSelectedFilters(categoryId, firstProductTypeId));
@@ -3802,6 +3957,11 @@ export default function ProductSelectionClient({
      * 4. 清除上一个产品类型遗留的普通筛选条件
      */
     if (searchKeyword.trim()) {
+      pendingFilterRef.current = {
+        filterCategory: activeCategoryId,
+        filterName: "product_type_id",
+        filterValue: productTypeId || "all",
+      };
       setActiveProductTypeId(productTypeId);
       setSelectedFilters({});
       setMobileOpenFilterGroups(
@@ -3819,6 +3979,11 @@ export default function ProductSelectionClient({
       activeCategoryId ===
       "valves"
     ) {
+      pendingFilterRef.current = {
+        filterCategory: activeCategoryId,
+        filterName: "product_type_id",
+        filterValue: "valve-series",
+      };
       setActiveProductTypeId(
         "valve-series"
       );
@@ -3856,12 +4021,31 @@ export default function ProductSelectionClient({
     );
 
     if (productTypeHref) {
+      trackFilterApply({
+        filterCategory: activeCategoryId,
+        filterName: "product_type_id",
+        filterValue: productTypeId,
+        resultCount: categoryProducts.filter((product) =>
+          matchesActiveProductType(
+            activeCategoryId,
+            productTypeId,
+            String(product.productTypeId || ""),
+          ),
+        ).length,
+        sourceSection: "product_selection",
+        locale,
+      });
       router.push(
         localizeProductDetailHref(productTypeHref)
       );
       return;
     }
 
+    pendingFilterRef.current = {
+      filterCategory: activeCategoryId,
+      filterName: "product_type_id",
+      filterValue: productTypeId || "all",
+    };
     setActiveProductTypeId(productTypeId);
     setSelectedFilters(getDefaultSelectedFilters(activeCategoryId, productTypeId));
     setMobileOpenFilterGroups(getDefaultMobileOpenFilterGroups(productTypeId));
@@ -3891,6 +4075,25 @@ export default function ProductSelectionClient({
     }
 
     const filterKey = group.key as SelectionFilterKey;
+    const nextFilterValues = new Set(selectedFilters[filterKey] || []);
+
+    if (group.inputType === "single") {
+      const isRemovingOnlyValue =
+        nextFilterValues.size === 1 && nextFilterValues.has(value);
+      nextFilterValues.clear();
+      if (!isRemovingOnlyValue) nextFilterValues.add(value);
+    } else if (nextFilterValues.has(value)) {
+      nextFilterValues.delete(value);
+    } else {
+      nextFilterValues.add(value);
+    }
+
+    pendingFilterRef.current = {
+      filterCategory: activeCategoryId,
+      filterName: filterKey,
+      filterValue:
+        nextFilterValues.size > 0 ? Array.from(nextFilterValues) : "none",
+    };
 
     /*
      * 说明：
@@ -4518,6 +4721,11 @@ function isFilterOptionActive(
      */
 
     if (key === "productType") {
+      pendingFilterRef.current = {
+        filterCategory: activeCategoryId,
+        filterName: "product_type_id",
+        filterValue: "all",
+      };
       setActiveProductTypeId("");
       setSelectedFilters({});
       return;
@@ -4564,6 +4772,15 @@ function isFilterOptionActive(
 
     const filterKey = key as SelectionFilterKey;
 
+    const remainingValues = new Set(selectedFilters[filterKey] || []);
+    remainingValues.delete(value);
+    pendingFilterRef.current = {
+      filterCategory: activeCategoryId,
+      filterName: filterKey,
+      filterValue:
+        remainingValues.size > 0 ? Array.from(remainingValues) : "none",
+    };
+
     setSelectedFilters((current) => {
       const next = {
         ...current,
@@ -4585,6 +4802,11 @@ function isFilterOptionActive(
     const firstProductTypeId =
       getCategoryDefaultProductTypeId(activeCategoryId);
 
+    pendingFilterRef.current = {
+      filterCategory: activeCategoryId,
+      filterName: "all_filters",
+      filterValue: "default",
+    };
     setActiveProductTypeId(firstProductTypeId);
     setSelectedFilters(getDefaultSelectedFilters(activeCategoryId, firstProductTypeId));
     setSearchInputValue("");
@@ -4738,27 +4960,14 @@ function isFilterOptionActive(
 
                 <div className="product-type-intro-copy">
                   <h2>{activeProductTypeIntro.title}</h2>
-                  {activeProductTypeIntro.paragraphs.map((paragraph) => {
-                    const emphasisText = "详情页查看或提交选型需求确认";
-                    const emphasisIndex = paragraph.indexOf(emphasisText);
-
-                    if (emphasisIndex < 0) {
-                      return <p key={paragraph}>{paragraph}</p>;
-                    }
-
-                    return (
-                  <p key={paragraph}>
-                    {paragraph.slice(0, emphasisIndex)}
-                    <strong className="product-type-intro-emphasis">
-                      {emphasisText}
-                    </strong>
-                    {paragraph.slice(emphasisIndex + emphasisText.length)}
-                  </p>
-                );
-              })}
-            </div>
-          </section>
-        ) : null}
+                  {activeProductTypeIntro.paragraphs.map((paragraph) => (
+                    <p key={paragraph}>
+                      {renderProductTypeIntroParagraph(paragraph)}
+                    </p>
+                  ))}
+                </div>
+              </section>
+            ) : null}
         <section className="selection-section">
           <div className="selection-layout">
             <ProductFilterPanel
@@ -4827,6 +5036,11 @@ function isFilterOptionActive(
                         ),
                         product,
                       )
+                    }
+                    analyticsListId={analyticsListId}
+                    analyticsListName="product_selection_results"
+                    analyticsStartIndex={
+                      (safeCurrentProductPage - 1) * productsPageSize
                     }
                     onToggleList={toggleProductInList}
                   />

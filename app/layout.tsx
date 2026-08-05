@@ -25,10 +25,14 @@ import GlobalTouchInteractions from "@/components/layout/GlobalTouchInteractions
 
 import CookieConsent from "@/components/privacy/CookieConsent";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
+import AnalyticsInteractionTracker from "@/components/analytics/AnalyticsInteractionTracker";
 
 import { SelectionCartProvider } from "@/components/selection-cart/SelectionCartProvider";
 import GlobalSelectionCartDrawer from "@/components/selection-cart/GlobalSelectionCartDrawer";
 import "./products/products.css";
+
+const gaMeasurementId =
+  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() ?? "";
 
 /* =========================================================
    网站基础 SEO 信息
@@ -71,6 +75,24 @@ export default function RootLayout({
                       })();
                     `}
                   </Script>
+        {gaMeasurementId ? (
+          <Script id="foreach-google-analytics-consent-default" strategy="beforeInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              window.gtag = window.gtag || function () {
+                window.dataLayer.push(arguments);
+              };
+              window.__foreachGaReady = false;
+              window.gtag('consent', 'default', {
+                analytics_storage: 'denied',
+                ad_storage: 'denied',
+                ad_user_data: 'denied',
+                ad_personalization: 'denied'
+              });
+              window.gtag('js', new Date());
+            `}
+          </Script>
+        ) : null}
       </head>
       <body>
         <Script id="foreach-layout-interactions" strategy="afterInteractive">
@@ -227,6 +249,7 @@ export default function RootLayout({
                   </Script>
         <SelectionCartProvider>
           <GlobalTouchInteractions />
+          <AnalyticsInteractionTracker />
 
           {/* =================================================
               页面滚动、移动端菜单、语言菜单交互脚本

@@ -26,6 +26,11 @@ import { usePathname } from "next/navigation";
 
 import { getLocaleFromPathname } from "@/lib/i18n";
 import {
+  trackAddToInquiryList,
+  trackInquiryListView,
+  trackRemoveFromInquiryList,
+} from "@/lib/analytics/track-event";
+import {
   isPublishedFittingProductCode,
 } from "@/data/products/selection/fitting-publication.generated";
 
@@ -375,6 +380,19 @@ export function SelectionCartProvider({
   }, [items, hasMounted]);
 
   function openCart() {
+    if (!isOpen) {
+      trackInquiryListView({
+        locale,
+        sourceSection: "global_selection_cart",
+        products: items.map((item) => ({
+          productId: item.productCode,
+          productName: item.foreachModel,
+          productCategory: item.productName,
+          productSeries: item.sourceType,
+        })),
+      });
+    }
+
     setIsOpen(true);
   }
 
@@ -395,11 +413,12 @@ export function SelectionCartProvider({
       });
 
     const quantity = Math.max(1, Number(input.quantity || 1));
+    const existingItem = items.find((item) => item.id === id);
 
     setItems((prev) => {
-      const existingItem = prev.find((item) => item.id === id);
+      const currentItem = prev.find((item) => item.id === id);
 
-      if (existingItem) {
+      if (currentItem) {
         return prev.map((item) => {
           if (item.id !== id) return item;
 
@@ -421,10 +440,35 @@ export function SelectionCartProvider({
         },
       ];
     });
+
+    if (!existingItem) {
+      trackAddToInquiryList({
+        locale,
+        sourceSection: input.sourceType,
+        listSize: items.length + 1,
+        productId: input.productCode,
+        productName: input.foreachModel,
+        productCategory: input.productName,
+        productSeries: input.sourceType,
+      });
+    }
   }
 
   function removeItem(id: string) {
+    const removedItem = items.find((item) => item.id === id);
+    if (!removedItem) return;
+
     setItems((prev) => prev.filter((item) => item.id !== id));
+
+    trackRemoveFromInquiryList({
+      locale,
+      sourceSection: "global_selection_cart",
+      listSize: Math.max(0, items.length - 1),
+      productId: removedItem.productCode,
+      productName: removedItem.foreachModel,
+      productCategory: removedItem.productName,
+      productSeries: removedItem.sourceType,
+    });
   }
 
   function clearCart() {
@@ -439,6 +483,18 @@ export function SelectionCartProvider({
     if (!confirmed) return;
 
     setItems([]);
+
+    items.forEach((item, index) => {
+      trackRemoveFromInquiryList({
+        locale,
+        sourceSection: "global_selection_cart_clear",
+        listSize: Math.max(0, items.length - index - 1),
+        productId: item.productCode,
+        productName: item.foreachModel,
+        productCategory: item.productName,
+        productSeries: item.sourceType,
+      });
+    });
   }
 
   function changeQuantity(id: string, quantity: number) {

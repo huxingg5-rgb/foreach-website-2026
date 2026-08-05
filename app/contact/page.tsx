@@ -52,5 +52,5 @@ export const metadata: Metadata = {
 ========================================================= */
 
 export default function ContactPage() {
-  return <ContactPageContent data={contactZhData} />;
-} 
+  return <ContactPageContent data={contactZhData} locale="zh-CN" />;
+}

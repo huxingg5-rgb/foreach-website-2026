@@ -45,7 +45,7 @@
     /* 娴呯伆钃濋〉闈㈠垎鍖鸿儗鏅?*/
     --contact-bg-white: #ffffff;
     /* 鐧借壊鑳屾櫙 */
-    --contact-content-width: 1320px;
+    --contact-content-width: 1600px;
     /* 椤甸潰涓讳綋鍐呭鏈€澶у搴?*/
     --contact-radius: 8px;
     /* 椤甸潰鎸夐挳銆佽緭鍏ユ缁熶竴鍦嗚 */
@@ -1731,7 +1731,7 @@
   --distributor-muted: #8390a4;
   --distributor-line: rgba(23, 51, 104, 0.14);
   --distributor-line-light: rgba(23, 51, 104, 0.09);
-  --distributor-width: 1280px;
+  --distributor-width: 1600px;
 
   color: var(--distributor-text);
   background: var(--distributor-bg);

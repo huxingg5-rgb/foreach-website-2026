@@ -21,11 +21,13 @@
 
 "use client"; // 褰撳墠缁勪欢闇€瑕佹敮鎸佺偣鍑绘敮鎸佸崱鐗囧悗婊氬姩鍒拌〃鍗曪紝鎵€浠ヤ娇鐢ㄥ鎴风缁勪欢
 
-import { useState } from "react"; // 寮曞叆 React 鐘舵€佺鐞嗭紝鐢ㄤ簬璁板綍褰撳墠閫変腑鐨勯渶姹傜被鍨?
+import { useRef, useState } from "react"; // 寮曞叆 React 鐘舵€佺鐞嗭紝鐢ㄤ簬璁板綍褰撳墠閫変腑鐨勯渶姹傜被鍨?
 
-import type { ContactPageData } from "@/data/contact-cooperation"; // 寮曞叆鑱旂郴鎴戜滑椤甸潰鏁版嵁绫诲瀷
+import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
+import type { ContactLocale, ContactPageData } from "@/data/contact-cooperation"; // 寮曞叆鑱旂郴鎴戜滑椤甸潰鏁版嵁绫诲瀷
 import AmapBlock from "@/components/contact/AmapBlock"; // 寮曞叆楂樺痉鍦板浘缁勪欢
 import ContactFormSection from "@/components/contact/ContactFormSection";
+import { trackBeginInquiry } from "@/lib/analytics/track-event";
 
 /* =========================================================
    缁勪欢 Props 绫诲瀷
@@ -33,6 +35,19 @@ import ContactFormSection from "@/components/contact/ContactFormSection";
 
 type ContactPageContentProps = {
   data: ContactPageData; // 褰撳墠璇█鐨勮仈绯绘垜浠〉闈㈡暟鎹?
+  locale: ContactLocale;
+};
+
+const contactBreadcrumbCopy: Record<
+  ContactLocale,
+  { home: string; contact: string; ariaLabel: string }
+> = {
+  "zh-CN": { home: "首页", contact: "联系我们", ariaLabel: "面包屑导航" },
+  en: { home: "Home", contact: "Contact Us", ariaLabel: "Breadcrumb" },
+  es: { home: "Inicio", contact: "Contáctenos", ariaLabel: "Ruta de navegación" },
+  fr: { home: "Accueil", contact: "Contactez-nous", ariaLabel: "Fil d’Ariane" },
+  ko: { home: "홈", contact: "문의하기", ariaLabel: "이동 경로" },
+  ru: { home: "Главная", contact: "Свяжитесь с нами", ariaLabel: "Навигационная цепочка" },
 };
 
 /* =========================================================
@@ -57,10 +72,25 @@ function scrollToSection(targetId: string) {
    ContactPageContent 缁勪欢
 ========================================================= */
 
-export default function ContactPageContent({ data }: ContactPageContentProps) {
+export default function ContactPageContent({ data, locale }: ContactPageContentProps) {
+  const breadcrumbCopy = contactBreadcrumbCopy[locale];
+  const homeHref = locale === "zh-CN" ? "/" : `/${locale}/`;
   const [selectedRequestType, setSelectedRequestType] = useState(
     data.form.requestTypes[0] ?? "",
   ); // 褰撳墠閫変腑鐨勯渶姹傜被鍨嬶紝榛樿鍙栭渶姹傜被鍨嬬涓€涓€夐」
+  const inquiryStartedRef = useRef(false);
+
+  function trackContactFormEntry(sourceSection: string) {
+    if (inquiryStartedRef.current) return;
+
+    inquiryStartedRef.current = true;
+    trackBeginInquiry({
+      formId: "contact_inquiry_form",
+      formType: "general_inquiry",
+      sourceSection,
+      locale: document.documentElement.lang || "zh-CN",
+    });
+  }
 
   /* =========================================================
      鐐瑰嚮鏀寔鍐呭鍗＄墖
@@ -71,6 +101,7 @@ export default function ContactPageContent({ data }: ContactPageContentProps) {
 
   function handleSupportItemClick(requestType: string) {
     setSelectedRequestType(requestType); // 鏇存柊褰撳墠閫変腑鐨勯渶姹傜被鍨?
+    trackContactFormEntry("contact_support_card");
 
     window.setTimeout(() => {
       scrollToSection("form"); // 寤惰繜婊氬姩鍒拌〃鍗曪紝纭繚鐘舵€佸厛鏇存柊
@@ -105,7 +136,10 @@ export default function ContactPageContent({ data }: ContactPageContentProps) {
               <button
                 className="contact-button"
                 type="button"
-                onClick={() => scrollToSection("form")}
+                onClick={() => {
+                  trackContactFormEntry("contact_hero");
+                  scrollToSection("form");
+                }}
               >
                 {data.hero.buttons.form.label}
               </button>
@@ -113,6 +147,15 @@ export default function ContactPageContent({ data }: ContactPageContentProps) {
           </div>
         </div>
       </section>
+
+      <SiteBreadcrumb
+        ariaLabel={breadcrumbCopy.ariaLabel}
+        items={[
+          { label: breadcrumbCopy.home, href: homeHref },
+          { label: breadcrumbCopy.contact },
+        ]}
+        variant="bar"
+      />
 
       {/* =====================================================
           鏀寔鍐呭妯″潡
@@ -211,7 +254,10 @@ export default function ContactPageContent({ data }: ContactPageContentProps) {
             <button
               className="contact-button"
               type="button"
-              onClick={() => scrollToSection("form")}
+              onClick={() => {
+                trackContactFormEntry("contact_bottom_cta");
+                scrollToSection("form");
+              }}
             >
               {data.bottomCta.buttons.form.label}
             </button>

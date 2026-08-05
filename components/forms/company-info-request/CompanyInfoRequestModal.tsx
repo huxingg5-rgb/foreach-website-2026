@@ -28,12 +28,19 @@
 
 import {
   useEffect,
+  useRef,
   useState,
   type FormEvent,
   type MouseEvent as ReactMouseEvent,
   type PointerEvent as ReactPointerEvent,
 } from "react";
 
+import {
+  trackFormStart,
+  trackInquirySubmitError,
+  trackLeadGenerated,
+  type InquiryErrorType,
+} from "@/lib/analytics/track-event";
 import { getCompanyInfoRequestCopy } from "./copy";
 import styles from "./CompanyInfoRequestModal.module.css";
 
@@ -249,6 +256,11 @@ interface CompanyInfoRequestModalProps {
   /* 是否启用邮箱验证码 */
   enableEmailVerification?: boolean;
 
+  /* GA4 仅使用稳定的表单上下文，不传递用户填写内容。 */
+  analyticsFormId?: string;
+  analyticsFormType?: string;
+  analyticsSourceSection?: string;
+
   /* 关闭弹窗 */
   onClose: () => void;
 
@@ -291,6 +303,9 @@ export default function CompanyInfoRequestModal({
   successTitle,
   successDescription,
   enableEmailVerification = true,
+  analyticsFormId = "company_info_request_form",
+  analyticsFormType = "resource_request",
+  analyticsSourceSection = "company_info_request_modal",
   onClose,
   onSubmitPreview,
 }: CompanyInfoRequestModalProps) {
@@ -327,6 +342,8 @@ export default function CompanyInfoRequestModal({
   /* 当前邮箱是否已经通过服务端验证 */
   const [isEmailVerified, setIsEmailVerified] = useState(false);
   const [verifiedEmail, setVerifiedEmail] = useState("");
+  const formStartedRef = useRef(false);
+  const nativeValidationReportedRef = useRef(false);
 
   const hasItems = items.length > 0;
 
@@ -352,6 +369,7 @@ export default function CompanyInfoRequestModal({
     setIsSubmitting(false);
     setIsEmailVerified(false);
     setVerifiedEmail("");
+    formStartedRef.current = false;
   }, [isOpen]);
 
   /* =========================================================
@@ -385,6 +403,17 @@ export default function CompanyInfoRequestModal({
      更新表单字段
   ========================================================= */
   function updateField(field: keyof CompanyInfoFormValue, value: string) {
+    if (!formStartedRef.current) {
+      formStartedRef.current = true;
+      trackFormStart({
+        formId: analyticsFormId,
+        formType: analyticsFormType,
+        sourceSection: analyticsSourceSection,
+        locale,
+        itemCount: items.length,
+      });
+    }
+
     if (field === "email") {
       setHasEmailCodeSent(false);
       setEmailCodeCountdown(0);
@@ -401,6 +430,23 @@ export default function CompanyInfoRequestModal({
     });
 
     setFormError("");
+  }
+
+  function handleNativeValidationFailure() {
+    if (nativeValidationReportedRef.current) return;
+
+    nativeValidationReportedRef.current = true;
+    trackInquirySubmitError({
+      formId: analyticsFormId,
+      formType: analyticsFormType,
+      sourceSection: analyticsSourceSection,
+      locale,
+      errorType: "validation_error",
+      submissionStage: "client_validation",
+    });
+    window.setTimeout(() => {
+      nativeValidationReportedRef.current = false;
+    }, 0);
   }
   /* =========================================================
      发送正式邮箱验证码
@@ -463,6 +509,14 @@ export default function CompanyInfoRequestModal({
             ? copy.requestCodeFirst
             : "请先发送邮箱验证码。",
         );
+        trackInquirySubmitError({
+          formId: analyticsFormId,
+          formType: analyticsFormType,
+          sourceSection: analyticsSourceSection,
+          locale,
+          errorType: "captcha_error",
+          submissionStage: "email_verification",
+        });
         return;
       }
 
@@ -472,6 +526,14 @@ export default function CompanyInfoRequestModal({
             ? copy.enterCode
             : "请输入邮箱验证码。",
         );
+        trackInquirySubmitError({
+          formId: analyticsFormId,
+          formType: analyticsFormType,
+          sourceSection: analyticsSourceSection,
+          locale,
+          errorType: "captcha_error",
+          submissionStage: "email_verification",
+        });
         return;
       }
     }
@@ -502,6 +564,13 @@ export default function CompanyInfoRequestModal({
       });
 
       setIsSubmitted(true);
+      trackLeadGenerated({
+        formId: analyticsFormId,
+        formType: analyticsFormType,
+        sourceSection: analyticsSourceSection,
+        locale,
+      });
+      formStartedRef.current = false;
     } catch (error) {
       const errorCode =
         error instanceof Error ? error.message : "";
@@ -516,6 +585,34 @@ export default function CompanyInfoRequestModal({
       }
 
       setFormError(getLocalizedInquiryError(error));
+
+      let analyticsErrorType: InquiryErrorType = "api_error";
+
+      if (error instanceof TypeError) {
+        analyticsErrorType = "network_error";
+      } else if (
+        errorCode === "email_not_verified" ||
+        errorCode === "email_verification_expired" ||
+        errorCode === "invalid_verification_data"
+      ) {
+        analyticsErrorType = "captcha_error";
+      } else if (
+        errorCode === "send_too_frequently" ||
+        errorCode.includes("rate")
+      ) {
+        analyticsErrorType = "rate_limit";
+      } else if (errorCode.includes("attachment")) {
+        analyticsErrorType = "attachment_error";
+      }
+
+      trackInquirySubmitError({
+        formId: analyticsFormId,
+        formType: analyticsFormType,
+        sourceSection: analyticsSourceSection,
+        locale,
+        errorType: analyticsErrorType,
+        submissionStage: "api_submit",
+      });
     } finally {
       setIsVerifyingEmailCode(false);
       setIsSubmitting(false);
@@ -603,7 +700,11 @@ export default function CompanyInfoRequestModal({
             </div>
           </div>
         ) : (
-          <form className={styles.form} onSubmit={handleSubmit}>
+          <form
+            className={styles.form}
+            onSubmit={handleSubmit}
+            onInvalidCapture={handleNativeValidationFailure}
+          >
             <div className={styles.summary}>
               <div>
                 <span>{copy.requestedItems}</span>

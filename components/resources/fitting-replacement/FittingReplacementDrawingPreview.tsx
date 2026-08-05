@@ -270,6 +270,11 @@ export default function FittingReplacementDrawingPreview({
           <button
             className="frd-drawing-preview-card"
             type="button"
+            data-analytics-resource-action="view"
+            data-analytics-resource-id={`2d_drawing:${productModel.trim()}`}
+            data-analytics-resource-type="2d_drawing"
+            data-analytics-resource-file-type="pdf"
+            data-analytics-section="product_drawing_preview"
             onClick={() => {
               setIsDrawingPreviewVisible(
                 true

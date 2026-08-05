@@ -112,5 +112,5 @@ export default async function ContactIntlPage({
 
   const data = getContactIntlData(locale);
 
-  return <ContactPageContent data={data} />;
-} 
+  return <ContactPageContent data={data} locale={locale} />;
+}

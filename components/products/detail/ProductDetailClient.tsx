@@ -5,6 +5,10 @@ import {
   getProductDetailTitleOverride,
   type ProductDetailTitleLocale,
 } from "@/data/products/detail/product-detail-title-overrides";
+import {
+  applyDiaphragmPumpDetailCopy,
+  getDiaphragmPumpCopy,
+} from "@/data/products/detail/diaphragm-pump-copy";
 import { useSelectionCart } from "@/components/selection-cart/SelectionCartProvider";
 import type { SelectionCartItemInput } from "@/components/selection-cart/selection-cart.types";
 /* =========================================================
@@ -26,9 +30,9 @@ import type { SelectionCartItemInput } from "@/components/selection-cart/selecti
 import SitePageShell from "@/components/layout/SitePageShell";
 import PdfDrawingPreview from "@/components/common/PdfDrawingPreview";
 import { usePathname } from "next/navigation";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
-import type { CSSProperties, MouseEvent } from "react";
+import type { CSSProperties, MouseEvent, ReactNode } from "react";
 import { localizeProductDetailData } from "@/data/products/detail/product-detail.intl";
 import {
   HARD_TUBE_DETAIL_COPY,
@@ -36,6 +40,13 @@ import {
 } from "@/data/products/detail/hard-tube-fitting-detail.intl";
 import { localizeTargetProductDetailData } from "@/data/products/detail/product-detail.target.intl";
 import type { ProductDetailPageData } from "@/data/products/detail/product-detail.types";
+import {
+  trackBeginInquiry,
+  trackContactClick,
+  trackProductTabSelect,
+  trackProductView,
+  trackResourceView,
+} from "@/lib/analytics/track-event";
 import ProductModelViewer from "./ProductModelViewer";
 import {
   Pump2DFileCheckingDisplay,
@@ -103,6 +114,8 @@ type ProductDetailTab = "spec" | "model3d" | "drawing";
 
 type ProductDetailClientProps = {
   data: ProductDetailPageData & Record<string, any>;
+  analyticsProductId?: string;
+  afterContent?: ReactNode;
 };
 
 type ZoomStyle = CSSProperties & {
@@ -1208,6 +1221,8 @@ function getScopedProductDisplayTitle(
 
 export default function ProductDetailClient({
   data: sourceData,
+  analyticsProductId: explicitAnalyticsProductId,
+  afterContent,
 }: ProductDetailClientProps) {
   const pathname = usePathname();
   const isEnglish = pathname === "/en" || pathname.startsWith("/en/");
@@ -1227,13 +1242,19 @@ export default function ProductDetailClient({
       ? `/${targetLocale}`
       : "";
   const data = useMemo(
-    () =>
-      targetLocale
+    () => {
+      const localizedData = targetLocale
         ? localizeTargetProductDetailData(sourceData, targetLocale, pathname || "")
         : isEnglish
         ? localizeProductDetailData(sourceData)
-        : sourceData,
-    [isEnglish, pathname, sourceData, targetLocale]
+        : sourceData;
+
+      return applyDiaphragmPumpDetailCopy(
+        localizedData,
+        configuratorLocale,
+      );
+    },
+    [configuratorLocale, isEnglish, pathname, sourceData, targetLocale]
   );
   const pumpFileDisplayLocale = isLocalizedDetail ? "en" : "zh";
   const isPumpDetail = isPumpDetailData(data);
@@ -1267,7 +1288,9 @@ export default function ProductDetailClient({
    * - es / fr / ko / ru 可使用专用完整标题；
    * - 不改变型号选择区域的数据。
    */
+  const diaphragmCopy = getDiaphragmPumpCopy(data, configuratorLocale);
   const displayProductTitle =
+    diaphragmCopy?.title ||
     getScopedProductDisplayTitle(
       data,
       targetLocale,
@@ -1374,7 +1397,94 @@ export default function ProductDetailClient({
         drawingPreview: "预览图纸",
         drawingDescription: (model: string) => `查看 ${model} 的技术图纸。`,
       };
+  const productBreadcrumbItems = diaphragmCopy
+    ? [
+        {
+          label: diaphragmCopy.breadcrumbs[0],
+          href: localePrefix ? `${localePrefix}/` : "/",
+        },
+        {
+          label: diaphragmCopy.breadcrumbs[1],
+          href: localePrefix ? `${localePrefix}/products/` : "/products/",
+        },
+        {
+          label: diaphragmCopy.breadcrumbs[2],
+          href: localePrefix
+            ? `${localePrefix}/products/pumps/diaphragm-pumps/`
+            : "/products/pumps/diaphragm-pumps/",
+        },
+        {
+          label: diaphragmCopy.breadcrumbs[3],
+        },
+      ]
+    : [
+        {
+          label: copy.home,
+          href: localePrefix ? `${localePrefix}/` : "/",
+        },
+        {
+          label: copy.products,
+          href: localePrefix ? `${localePrefix}/products/` : "/products/",
+        },
+        {
+          label: displayProductTitle,
+        },
+      ];
     const { addItem, getItem, toggleDrawingNeed, removeItem } = useSelectionCart();
+
+  const analyticsProductId = String(
+    explicitAnalyticsProductId ||
+      sourceData.productId ||
+      sourceData.productCode ||
+      sourceData.slug ||
+      sourceData.model ||
+      "",
+  ).trim();
+  const analyticsProductCategory = String(
+    sourceData.categoryId ||
+      sourceData.category ||
+      sourceData.categoryLabel ||
+      "",
+  ).trim();
+  const analyticsProductSeries = String(
+    sourceData.seriesId ||
+      sourceData.series ||
+      sourceData.seriesName ||
+      sourceData.specSeriesKey ||
+      "",
+  ).trim();
+  const analyticsLocale = configuratorLocale;
+  const productViewKey = analyticsProductId
+    ? `${pathname || "/"}|${analyticsProductId}`
+    : "";
+  const lastProductViewKeyRef = useRef<string | null>(null);
+
+  useEffect(() => {
+    if (!productViewKey) return;
+
+    if (lastProductViewKeyRef.current === productViewKey) return;
+
+    trackProductView({
+      productId: analyticsProductId,
+      productName: displayProductTitle || data.model,
+      category: analyticsProductCategory,
+      subcategory: data.productTypeId || data.productType,
+      series: analyticsProductSeries,
+      locale: analyticsLocale,
+    });
+
+    lastProductViewKeyRef.current = productViewKey;
+  }, [
+    analyticsLocale,
+    analyticsProductCategory,
+    analyticsProductId,
+    analyticsProductSeries,
+    data.model,
+    data.productType,
+    data.productTypeId,
+    displayProductTitle,
+    productViewKey,
+  ]);
 
 const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
@@ -1638,7 +1748,8 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
     }
 
     return String(
-      data.productCode ||
+      analyticsProductId ||
+        data.productCode ||
         data.productId ||
         data.modelDisplay ||
         data.displayModel ||
@@ -1767,6 +1878,54 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
 
   function handleOpenConfigurator() {
     console.info("配置选择端口预留", data.slug);
+  }
+
+  function handleProductTabChange(nextTab: ProductDetailTab) {
+    if (nextTab === activeTab || !analyticsProductId) return;
+
+    setActiveTab(nextTab);
+
+    const tabName =
+      nextTab === "spec"
+        ? "specifications"
+        : nextTab === "model3d"
+          ? "3d"
+          : "2d";
+
+    trackProductTabSelect({
+      tabName,
+      productId: analyticsProductId,
+      productCategory: analyticsProductCategory,
+      productSeries: analyticsProductSeries,
+      locale: analyticsLocale,
+    });
+
+    const resource =
+      nextTab === "model3d" && model3dUrl
+        ? {
+            url: model3dUrl,
+            id: `${analyticsProductId}:model3d`,
+            type: "3d_model",
+          }
+        : nextTab === "drawing" && drawingPreviewUrl
+          ? {
+              url: drawingPreviewUrl,
+              id: `${analyticsProductId}:drawing2d`,
+              type: "2d_drawing",
+            }
+          : null;
+
+    if (!resource) return;
+
+    const fileType = resource.url.split(/[?#]/)[0].split(".").at(-1) || "";
+    trackResourceView({
+      resourceId: resource.id,
+      resourceType: resource.type,
+      fileType,
+      sourceSection: "product_detail_tabs",
+      locale: analyticsLocale,
+      productId: analyticsProductId,
+    });
   }
 
   function handleAddDatasheet() {
@@ -2330,19 +2489,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
 
 <SitePageShell
       breadcrumbAriaLabel={copy.breadcrumb}
-      breadcrumbItems={[
-        {
-          label: copy.home,
-          href: localePrefix ? `${localePrefix}/` : "/",
-        },
-        {
-          label: copy.products,
-          href: localePrefix ? `${localePrefix}/products/` : "/products/",
-        },
-        {
-          label: displayProductTitle,
-        },
-      ]}
+      breadcrumbItems={productBreadcrumbItems}
     >
       <main className={styles.page} data-product-detail-page="true">
       <div className={styles.container}>
@@ -2658,6 +2805,20 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                     type="button"
                     onClick={() => {
                       if (isCustomProduct) {
+                        trackContactClick({
+                          contactChannel: "contact_form",
+                          sourceSection: "product_detail",
+                          locale: analyticsLocale,
+                          productId: analyticsProductId,
+                        });
+                        trackBeginInquiry({
+                          formId: "contact_inquiry_form",
+                          formType: "product_inquiry",
+                          sourceSection: "product_detail",
+                          locale: analyticsLocale,
+                          productId: analyticsProductId,
+                          productCategory: analyticsProductCategory,
+                        });
                         window.location.href = localizedContactHref;
                         return;
                       }
@@ -2729,6 +2890,20 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                       );
 
                       if (isCustomInquiryMode(data)) {
+                        trackContactClick({
+                          contactChannel: "contact_form",
+                          sourceSection: "product_detail",
+                          locale: analyticsLocale,
+                          productId: analyticsProductId,
+                        });
+                        trackBeginInquiry({
+                          formId: "contact_inquiry_form",
+                          formType: "product_inquiry",
+                          sourceSection: "product_detail",
+                          locale: analyticsLocale,
+                          productId: analyticsProductId,
+                          productCategory: analyticsProductCategory,
+                        });
                         window.location.href = href;
                         return;
                       }
@@ -2821,7 +2996,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                 .filter(Boolean)
                 .join(" ")}
               type="button"
-              onClick={() => setActiveTab("spec")}
+              onClick={() => handleProductTabChange("spec")}
             >
               {copy.specifications === "Технические характеристики" ? "Характеристики" : copy.specifications}
             </button>
@@ -2834,7 +3009,15 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                 .filter(Boolean)
                 .join(" ")}
               type="button"
-              onClick={() => setActiveTab("model3d")}
+              data-analytics-resource-action="view"
+              data-analytics-resource-id={`${analyticsProductId}:model3d`}
+              data-analytics-resource-type="3d_model"
+              data-analytics-resource-file-type={
+                model3dUrl.split(/[?#]/)[0].split(".").at(-1) || "unknown"
+              }
+              data-analytics-section="product_detail_tabs"
+              data-analytics-skip="true"
+              onClick={() => handleProductTabChange("model3d")}
             >
               {copy.model3d}
             </button>
@@ -2847,7 +3030,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                 .filter(Boolean)
                 .join(" ")}
               type="button"
-              onClick={() => setActiveTab("drawing")}
+              onClick={() => handleProductTabChange("drawing")}
             >
               {copy.technicalDrawing.startsWith("Технический ") ? "Чертёж" : copy.technicalDrawing}
             </button>
@@ -3090,8 +3273,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
         {/* QUICK_CONNECT_SERIES_MODEL_TABLE_END */}
 
         {data.faqs && data.faqs.length > 0 ? (
-<>
-<section className={styles.faqSection}>
+          <section className={styles.faqSection}>
             <div className={styles.faqHeader}>
               <h2>
                 {isLocalizedDetail
@@ -3145,9 +3327,12 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
               })}
             </div>
           </section>
+        ) : null}
 
+        {afterContent}
+
+        {data.faqs && data.faqs.length > 0 ? (
           <PlungerPumpBottomCta data={data} localePrefix={localePrefix} />
-          </>
         ) : null}
 
       </div>

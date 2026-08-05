@@ -20,7 +20,7 @@
   --line-strong: rgba(23, 51, 104, 0.18);
   --bg: #f5f8fc;
   --white: #ffffff;
-  --max: 1360px;
+  --max: 1600px;
 
   color: var(--text);
   background: var(--white);

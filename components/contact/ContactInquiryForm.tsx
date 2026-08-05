@@ -22,13 +22,19 @@
 
 "use client";
 
-import { ChangeEvent, FormEvent, useEffect, useState } from "react";
+import { ChangeEvent, FormEvent, useEffect, useRef, useState } from "react";
 import type { ContactPageData } from "@/data/contact-cooperation";
 import {
   buildContactPdfHtml,
   formatFileSize,
   type ContactFormState,
 } from "@/components/contact/buildContactPdfHtml";
+import {
+  trackFormStart,
+  trackInquirySubmitError,
+  trackLeadGenerated,
+  type InquiryErrorType,
+} from "@/lib/analytics/track-event";
 
 /* =========================================================
    组件 Props 类型
@@ -509,6 +515,48 @@ export default function ContactInquiryForm({
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [referenceId, setReferenceId] = useState("");
+  const formStartedRef = useRef(false);
+  const nativeValidationReportedRef = useRef(false);
+
+  function getAnalyticsLocale() {
+    return document.documentElement.lang || "zh-CN";
+  }
+
+  function trackFirstFormInteraction() {
+    if (formStartedRef.current) return;
+
+    formStartedRef.current = true;
+    trackFormStart({
+      formId: "contact_inquiry_form",
+      formType: "general_inquiry",
+      sourceSection: "contact_form_section",
+      locale: getAnalyticsLocale(),
+    });
+  }
+
+  function trackSubmitFailure(
+    errorType: InquiryErrorType,
+    submissionStage: string,
+  ) {
+    trackInquirySubmitError({
+      formId: "contact_inquiry_form",
+      formType: "general_inquiry",
+      sourceSection: "contact_form_section",
+      locale: getAnalyticsLocale(),
+      errorType,
+      submissionStage,
+    });
+  }
+
+  function handleNativeValidationFailure() {
+    if (nativeValidationReportedRef.current) return;
+
+    nativeValidationReportedRef.current = true;
+    trackSubmitFailure("validation_error", "client_validation");
+    window.setTimeout(() => {
+      nativeValidationReportedRef.current = false;
+    }, 0);
+  }
 
   /* =========================================================
      同步外部传入的需求类型
@@ -532,6 +580,7 @@ export default function ContactInquiryForm({
   function handleFieldChange(
     event: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>,
   ) {
+    trackFirstFormInteraction();
     const { name, value } = event.target;
 
     setFormData((prev) => ({
@@ -757,6 +806,7 @@ export default function ContactInquiryForm({
   ========================================================= */
 
   function handleFileChange(event: ChangeEvent<HTMLInputElement>) {
+    trackFirstFormInteraction();
     const files = Array.from(event.target.files ?? []);
 
     const maxFileSize = 20 * 1024 * 1024;
@@ -891,6 +941,7 @@ export default function ContactInquiryForm({
       window.alert(
         data.form.alerts.sendCodeFirst,
       );
+      trackSubmitFailure("captcha_error", "email_verification");
 
       return;
     }
@@ -899,6 +950,7 @@ export default function ContactInquiryForm({
       window.alert(
         data.form.alerts.verifyEmailFirst,
       );
+      trackSubmitFailure("captcha_error", "email_verification");
 
       return;
     }
@@ -1013,6 +1065,13 @@ export default function ContactInquiryForm({
       );
 
       setShowSuccessModal(true);
+      trackLeadGenerated({
+        formId: "contact_inquiry_form",
+        formType: "general_inquiry",
+        sourceSection: "contact_form_section",
+        locale: currentLang,
+      });
+      formStartedRef.current = false;
     } catch (error) {
       const message =
         getInquiryApiErrorMessage(
@@ -1036,6 +1095,25 @@ export default function ContactInquiryForm({
         setEmailTip(message);
       }
 
+      let analyticsErrorType: InquiryErrorType = "api_error";
+
+      if (error instanceof TypeError) {
+        analyticsErrorType = "network_error";
+      } else if (error instanceof InquiryApiError) {
+        if (error.status === 429) {
+          analyticsErrorType = "rate_limit";
+        } else if (error.code.includes("attachment")) {
+          analyticsErrorType = "attachment_error";
+        } else if (
+          error.code === "email_not_verified" ||
+          error.code === "email_verification_expired"
+        ) {
+          analyticsErrorType = "captcha_error";
+        }
+      }
+
+      trackSubmitFailure(analyticsErrorType, "api_submit");
+
       console.error(
         "询盘提交失败：",
         error,
@@ -1053,7 +1131,11 @@ export default function ContactInquiryForm({
         <h3>{data.form.panelTitle}</h3>
       </div>
 
-      <form className="contact-form" onSubmit={handleSubmit}>
+      <form
+        className="contact-form"
+        onSubmit={handleSubmit}
+        onInvalidCapture={handleNativeValidationFailure}
+      >
         <div className="contact-form-grid">
           {/* 姓名 */}
           <div className="contact-field">

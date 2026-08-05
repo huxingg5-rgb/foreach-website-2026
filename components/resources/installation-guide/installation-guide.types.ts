@@ -34,6 +34,8 @@ export type InstallationGuideStep = {
 
 export type InstallationGuideCard = {
   id: string;
+  relationKeys?: string[];
+  relationPriority?: number;
   title: string;
   category: string;
   series: string;
@@ -71,4 +73,4 @@ export type InstallationGuidePageData = {
     href: string;
   };
   guides: InstallationGuideCard[];
-}; 
+};

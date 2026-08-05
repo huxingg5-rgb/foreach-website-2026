@@ -1,0 +1,533 @@
+.root {
+  --related-blue: #173368;
+  --related-cyan: #09e9b4;
+  --related-line: rgba(23, 51, 104, 0.14);
+  width: min(1600px, calc(100% - 56px));
+  margin: 0 auto 56px;
+  color: #14233d;
+}
+
+.section {
+  padding-top: 52px;
+  border-top: 1px solid var(--related-line);
+  background: #ffffff;
+}
+
+.section + .section {
+  margin-top: 44px;
+}
+
+/* 删除说明文字后，标题直接与资源轨道形成紧凑的垂直节奏。 */
+.headingRow {
+  min-width: 0;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.headingRow h2 {
+  margin: 0;
+  color: #111111;
+  font-size: 26px;
+  line-height: 1.25;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* 相关产品仍保留原说明，视频与文章区域不再渲染说明节点。 */
+.headingRow p {
+  max-width: 920px;
+  margin: 10px 0 0;
+  color: #637083;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.viewAll {
+  min-height: 38px;
+  padding: 0 15px;
+  border: 1px solid var(--related-blue);
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  color: var(--related-blue);
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: border-color 0.18s ease, color 0.18s ease;
+}
+
+.viewAll:hover,
+.viewAll:focus-visible {
+  border-color: var(--related-cyan);
+  color: var(--related-blue);
+  outline: none;
+}
+
+/*
+ * 横向轨道的按钮始终位于卡片区域两侧；无溢出时按钮保留但处于禁用状态。
+ * 这样既呈现清晰的滑动边界，也不会为了激活控件而制造无意义滚动。
+ */
+.trackShell {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.trackViewport {
+  min-width: 0;
+  flex: 1 1 auto;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-inline: contain;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  touch-action: pan-x pan-y;
+  padding: 5px 1px 8px;
+}
+
+.trackViewport::-webkit-scrollbar {
+  display: none;
+}
+
+.videoTrack {
+  grid-auto-columns: 300px;
+  column-gap: 18px;
+}
+
+.articleTrack {
+  grid-auto-columns: 300px;
+  column-gap: 18px;
+}
+
+.productTrack {
+  grid-auto-columns: 300px;
+  column-gap: 18px;
+}
+
+.trackItem {
+  min-width: 0;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.trackButton {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid rgba(23, 51, 104, 0.24);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 40px;
+  background: #ffffff;
+  color: var(--related-blue);
+  box-shadow: none;
+  cursor: pointer;
+  transition:
+    color 0.18s ease,
+    background-color 0.18s ease,
+    border-color 0.18s ease,
+    opacity 0.18s ease;
+}
+
+.trackButton span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  box-sizing: border-box;
+  border: solid currentColor;
+  border-width: 0 2px 2px 0;
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  transform-origin: center;
+}
+
+/* 使用等宽几何箭头，避免字体字形基线造成视觉上的上下偏移。 */
+.trackButtonPrevious span {
+  left: calc(50% + 1px);
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.trackButtonNext span {
+  left: calc(50% - 1px);
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.trackButton:hover:not(:disabled),
+.trackButton:focus-visible:not(:disabled) {
+  border-color: var(--related-blue);
+  background: var(--related-blue);
+  color: var(--related-cyan);
+  outline: none;
+}
+
+.trackButton:disabled {
+  opacity: 0.34;
+  cursor: default;
+}
+
+/* 视频紧凑变体只在关联轨道中覆盖尺寸，不影响教程中心默认卡片。 */
+.videoTrack :global(.installation-guide-card--related) {
+  width: 100%;
+  min-width: 0;
+  text-align: left;
+}
+
+.videoTrack
+  :global(.installation-guide-card--related .installation-guide-card-image) {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.videoTrack
+  :global(.installation-guide-card--related .installation-guide-card-body) {
+  min-height: 0 !important;
+  padding: 13px 15px 14px !important;
+}
+
+.videoTrack :global(.installation-guide-card--related h3) {
+  min-height: calc(1.35em * 2);
+  margin: 0 !important;
+  color: var(--related-blue);
+  font-size: 17px !important;
+  line-height: 1.35 !important;
+  letter-spacing: -0.02em;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
+
+.videoTrack
+  :global(.installation-guide-card--related .installation-guide-card-tags) {
+  margin-top: 10px;
+  gap: 6px;
+}
+
+.videoTrack
+  :global(.installation-guide-card--related .installation-guide-card-tags span) {
+  min-height: 23px;
+  padding: 3px 8px;
+  font-size: 12px;
+}
+
+.videoTrack
+  :global(.installation-guide-card--related .installation-guide-card-play) {
+  width: 52px !important;
+  height: 52px !important;
+}
+
+.videoTrack
+  :global(.installation-guide-card--related .installation-guide-card-play::before) {
+  border-top-width: 8px !important;
+  border-bottom-width: 8px !important;
+  border-left-width: 14px !important;
+}
+
+/*
+ * 相关文章变体按参考图使用标题、两行摘要和底部操作栏。
+ * 卡片仍然不显示封面、不使用大阴影，悬停时只改变强调文字颜色。
+ */
+.articleTrack :global(.technicalArticleCard--related) {
+  width: 100%;
+  height: 176px;
+  min-height: 176px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(23, 51, 104, 0.16);
+  background: #ffffff;
+  box-shadow: none;
+  transform: none;
+}
+
+.articleTrack :global(.technicalArticleCard--related:hover),
+.articleTrack :global(.technicalArticleCard--related:focus-visible) {
+  border-color: var(--related-cyan);
+  box-shadow: none;
+  transform: none;
+}
+
+.articleTrack :global(.technicalArticleCard--related .technicalArticleCard__title) {
+  min-height: calc(1.35em * 2);
+  margin: 0;
+  color: var(--related-blue);
+  font-size: 17px;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
+
+.articleTrack :global(.technicalArticleCard__relatedSummary) {
+  min-height: calc(1.55em * 2);
+  margin: 10px 0 0;
+  color: #667085;
+  font-size: 13px;
+  line-height: 1.55;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
+
+.articleTrack :global(.technicalArticleCard__relatedFooter) {
+  min-height: 20px;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  color: #7a8494;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.articleTrack :global(.technicalArticleCard__relatedAction) {
+  flex: 0 0 auto;
+  color: var(--related-blue);
+  font-size: 13px;
+  font-weight: 500;
+  transition: color 0.18s ease, transform 0.18s ease;
+}
+
+.articleTrack
+  :global(.technicalArticleCard--related:hover .technicalArticleCard__relatedAction),
+.articleTrack
+  :global(.technicalArticleCard--related:focus-visible .technicalArticleCard__relatedAction) {
+  color: var(--related-cyan);
+  transform: translateX(4px);
+}
+
+/*
+ * 技术文章页的相关产品复用视频轨道的固定宽度、间距和响应式断点。
+ * 卡片只保留产品图片与单行名称，不调用产品中心完整卡片样式。
+ */
+.relatedProductCard {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  border: 1px solid rgba(23, 51, 104, 0.16);
+  border-radius: 0;
+  display: block;
+  overflow: hidden;
+  background: #ffffff;
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.22s ease, border-color 0.22s ease;
+}
+
+.relatedProductCard::before {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  height: 4px;
+  background: transparent;
+  transition: background-color 0.22s ease;
+}
+
+.relatedProductCard:hover,
+.relatedProductCard:focus-visible {
+  border-color: var(--related-cyan);
+  transform: translateY(-4px);
+  outline: none;
+}
+
+.relatedProductCard:hover::before,
+.relatedProductCard:focus-visible::before {
+  background: var(--related-cyan);
+}
+
+.relatedProductImage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-bottom: 1px solid rgba(23, 51, 104, 0.1);
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.relatedProductImage img {
+  box-sizing: border-box;
+  padding: 0;
+  object-fit: contain;
+  transform: scale(1.14);
+}
+
+.relatedProductBody {
+  min-width: 0;
+  padding: 13px 15px 14px;
+}
+
+.relatedProductBody h3 {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  color: var(--related-blue);
+  font-size: 17px;
+  line-height: 1.35;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: color 0.18s ease;
+}
+
+.relatedProductCard:hover .relatedProductBody h3,
+.relatedProductCard:focus-visible .relatedProductBody h3 {
+  color: var(--related-cyan);
+}
+
+:global([data-product-detail-page="true"]) .root {
+  width: 100%;
+}
+
+@media (max-width: 1100px) {
+  .videoTrack {
+    grid-auto-columns: 280px;
+  }
+
+  .articleTrack {
+    grid-auto-columns: 280px;
+  }
+
+  .productTrack {
+    grid-auto-columns: 280px;
+  }
+}
+
+@media (max-width: 760px) {
+  .root {
+    width: min(100% - 36px, 1600px);
+    margin-bottom: 48px;
+  }
+
+  .section {
+    padding-top: 48px;
+  }
+
+  .section + .section {
+    margin-top: 42px;
+  }
+
+  .headingRow {
+    margin-bottom: 18px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .headingRow h2 {
+    font-size: 20px;
+  }
+
+  .trackShell {
+    gap: 0;
+  }
+
+  .videoTrack,
+  .articleTrack,
+  .productTrack {
+    grid-auto-columns: calc(100vw - 52px);
+    column-gap: 14px;
+  }
+
+  /* 手机端按钮叠放在轨道边缘，避免压缩单卡宽度。 */
+  .trackButton {
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    width: 34px;
+    height: 34px;
+    flex-basis: 34px;
+    transform: translateY(-50%);
+    box-shadow: 0 5px 16px rgba(23, 51, 104, 0.12);
+  }
+
+  .trackButtonPrevious {
+    left: 7px;
+  }
+
+  .trackButtonNext {
+    right: 7px;
+  }
+
+  .trackButton span {
+    width: 9px;
+    height: 9px;
+  }
+
+  .videoTrack
+    :global(.installation-guide-card--related .installation-guide-card-body) {
+    padding: 12px 14px 13px !important;
+  }
+
+  .videoTrack :global(.installation-guide-card--related h3) {
+    font-size: 16px !important;
+  }
+
+  .videoTrack
+    :global(.installation-guide-card--related .installation-guide-card-play) {
+    width: 46px !important;
+    height: 46px !important;
+  }
+
+  .articleTrack :global(.technicalArticleCard--related) {
+    height: 168px;
+    min-height: 168px;
+    padding: 18px;
+  }
+
+  .articleTrack :global(.technicalArticleCard--related .technicalArticleCard__title) {
+    font-size: 16px;
+  }
+
+  .articleTrack :global(.technicalArticleCard__relatedSummary) {
+    margin-top: 9px;
+    font-size: 13px;
+  }
+
+  .articleTrack :global(.technicalArticleCard__relatedFooter) {
+    font-size: 13px;
+  }
+
+  .relatedProductBody {
+    padding: 12px 14px 13px;
+  }
+
+  .relatedProductBody h3 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 420px) {
+  .headingRow h2 {
+    font-size: 18px;
+  }
+}

@@ -75,6 +75,41 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
 
   articles: [
     {
+      id: "dpl30-liquid-diaphragm-pump-selection-guide",
+      slug: "dpl30-liquid-diaphragm-pump-selection-guide",
+      relationKeys: ["series:dpl30"],
+      category: "pumps-valves",
+      title:
+        "300 mL/min液体隔膜泵怎么选？DPL30工作原理与型号选型指南",
+      summary: "",
+      date: "2026-08-04",
+
+      /*
+       * 第一阶段暂时沿用技术文章默认封面。
+       * 后续上传DPL30专属封面后，再替换这里。
+       */
+      coverImage:
+        "/images/resources/technical-articles/dpl30-liquid-diaphragm-pump/dpl30-article-cover.webp",
+
+      /*
+       * 完整正文由Dpl30LiquidDiaphragmPumpArticle组件渲染。
+       * 此处保留基础内容，兼容文章数据结构和后续CMS迁移。
+       */
+      content: [
+        {
+          title: "DPL30液体隔膜泵选型指南",
+          content:
+            "本文介绍DPL30液体隔膜泵的工作原理、技术参数、流量—压力关系、接液材料、有刷与无刷版本差异、型号编码及完整选型步骤。",
+        },
+      ],
+
+      seoTitle:
+        "300 mL/min液体隔膜泵怎么选？DPL30型号解析与选型指南",
+      seoDescription:
+        "了解恒永达DPL30液体隔膜泵的工作原理、300 mL/min空载流量、100 kPa额定压力、流量压力曲线、接液材料、有刷无刷版本及型号选型方法。",
+    },
+
+    {
       id: "cv-kv-correction-for-microfluidics",
       slug: "cv-kv-correction-for-microfluidics",
       category: "pumps-valves",

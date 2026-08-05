@@ -2,6 +2,7 @@ import type {
   ProductSelectionProduct,
   SelectionLocale,
 } from "@/data/products/selection/product-selection.types";
+import { getDiaphragmPumpCopy } from "@/data/products/detail/diaphragm-pump-copy";
 import { localizeHardTubeFittingCardSubtitle } from "./hard-tube-fitting-card-copy";
 
 type TargetLocale = Exclude<SelectionLocale, "zh" | "en">;
@@ -90,10 +91,13 @@ function replacePhrases(value: string, locale: TargetLocale) {
 }
 
 export function localizeProductCardTitle(
-  _product: ProductSelectionProduct,
+  product: ProductSelectionProduct,
   locale: SelectionLocale,
   title: string,
 ) {
+  const diaphragmCopy = getDiaphragmPumpCopy(product, locale);
+
+  if (diaphragmCopy) return diaphragmCopy.title;
   if (!isTargetLocale(locale) || !title) return title;
   return TITLE_COPY[locale][title] || replacePhrases(title, locale);
 }
@@ -103,6 +107,9 @@ export function localizeProductCardSubtitle(
   locale: SelectionLocale,
   subtitle: string,
 ) {
+  const diaphragmCopy = getDiaphragmPumpCopy(product, locale);
+
+  if (diaphragmCopy) return diaphragmCopy.cardParameters.join("\n");
   if (!isTargetLocale(locale) || !subtitle) return subtitle;
 
   const hardTubeLocalized = localizeHardTubeFittingCardSubtitle(product, locale, subtitle);

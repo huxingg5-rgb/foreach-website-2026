@@ -20,19 +20,30 @@
 ========================================================= */
 
 import type { ChangeEvent, FormEvent } from "react";
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 
 import AmapBlock from "@/components/contact/AmapBlock";
+import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
 
 import type { getContactIntlData } from "@/data/contact-cooperation/contact.intl";
 
-import type { DistributorPageData } from "@/data/contact-cooperation/distributor.intl";
+import type {
+  DistributorLocale,
+  DistributorPageData,
+} from "@/data/contact-cooperation/distributor.intl";
 
 import {
   buildDistributorPdfHtml,
   formatDistributorFileSize,
   type DistributorPdfFormState,
 } from "@/components/contact/buildDistributorPdfHtml";
+import {
+  trackBeginInquiry,
+  trackFormStart,
+  trackInquirySubmitError,
+  trackLeadGenerated,
+  type InquiryErrorType,
+} from "@/lib/analytics/track-event";
 
 /* =========================================================
    组件参数类型
@@ -48,6 +59,43 @@ import {
 type DistributorPageContentProps = {
   content: DistributorPageData;
   contactPageData: ReturnType<typeof getContactIntlData>;
+  locale: DistributorLocale;
+};
+
+const distributorBreadcrumbCopy: Record<
+  DistributorLocale,
+  { home: string; contact: string; distributor: string; ariaLabel: string }
+> = {
+  en: {
+    home: "Home",
+    contact: "Contact & Partnership",
+    distributor: "Become a Distributor",
+    ariaLabel: "Breadcrumb",
+  },
+  es: {
+    home: "Inicio",
+    contact: "Contacto y cooperación",
+    distributor: "Convertirse en distribuidor",
+    ariaLabel: "Ruta de navegación",
+  },
+  fr: {
+    home: "Accueil",
+    contact: "Contact et partenariat",
+    distributor: "Devenir distributeur",
+    ariaLabel: "Fil d’Ariane",
+  },
+  ko: {
+    home: "홈",
+    contact: "문의 및 협력",
+    distributor: "대리점 파트너십",
+    ariaLabel: "이동 경로",
+  },
+  ru: {
+    home: "Главная",
+    contact: "Контакты и сотрудничество",
+    distributor: "Стать дистрибьютором",
+    ariaLabel: "Навигационная цепочка",
+  },
 };
 
 /* =========================================================
@@ -190,7 +238,9 @@ function waitForIframeImages(iframeDocument: Document) {
 export default function DistributorPageContent({
   content,
   contactPageData,
+  locale,
 }: DistributorPageContentProps) {
+  const breadcrumbCopy = distributorBreadcrumbCopy[locale];
   const [formValues, setFormValues] =
     useState<DistributorFormValues>(initialFormValues);
 
@@ -215,6 +265,55 @@ export default function DistributorPageContent({
   const [internalArchiveFileName, setInternalArchiveFileName] = useState("");
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const formStartedRef = useRef(false);
+  const nativeValidationReportedRef = useRef(false);
+
+  function getAnalyticsLocale() {
+    return document.documentElement.lang || "en";
+  }
+
+  function trackFirstFormInteraction() {
+    if (formStartedRef.current) return;
+
+    formStartedRef.current = true;
+    const locale = getAnalyticsLocale();
+    trackBeginInquiry({
+      formId: "distributor_application_form",
+      formType: "distributor_application",
+      sourceSection: "distributor_form_panel",
+      locale,
+    });
+    trackFormStart({
+      formId: "distributor_application_form",
+      formType: "distributor_application",
+      sourceSection: "distributor_form_panel",
+      locale,
+    });
+  }
+
+  function trackSubmitFailure(
+    errorType: InquiryErrorType,
+    submissionStage: string,
+  ) {
+    trackInquirySubmitError({
+      formId: "distributor_application_form",
+      formType: "distributor_application",
+      sourceSection: "distributor_form_panel",
+      locale: getAnalyticsLocale(),
+      errorType,
+      submissionStage,
+    });
+  }
+
+  function handleNativeValidationFailure() {
+    if (nativeValidationReportedRef.current) return;
+
+    nativeValidationReportedRef.current = true;
+    trackSubmitFailure("validation_error", "client_validation");
+    window.setTimeout(() => {
+      nativeValidationReportedRef.current = false;
+    }, 0);
+  }
 
   /* 上传文件名称列表 */
   const fileNames = useMemo(
@@ -227,6 +326,7 @@ export default function DistributorPageContent({
   ========================================================= */
 
   function updateFormValue(field: keyof DistributorFormValues, value: string) {
+    trackFirstFormInteraction();
     setFormValues((prevValues) => ({
       ...prevValues,
       [field]: value,
@@ -424,6 +524,7 @@ export default function DistributorPageContent({
   ========================================================= */
 
   function handleFilesChange(event: ChangeEvent<HTMLInputElement>) {
+    trackFirstFormInteraction();
     const files = Array.from(event.target.files ?? []);
 
     const maxFileSize = 20 * 1024 * 1024;
@@ -549,11 +650,13 @@ export default function DistributorPageContent({
 
     if (!emailCodeSent) {
       window.alert(content.form.emailTipDefault);
+      trackSubmitFailure("captcha_error", "email_verification");
       return;
     }
 
     if (!emailCodeVerified) {
       window.alert(content.toast.needVerifyEmail);
+      trackSubmitFailure("captcha_error", "email_verification");
       return;
     }
 
@@ -679,6 +782,13 @@ export default function DistributorPageContent({
       setEmailCodeSent(false);
       setEmailCodeVerified(false);
       setShowSuccessModal(true);
+      trackLeadGenerated({
+        formId: "distributor_application_form",
+        formType: "distributor_application",
+        sourceSection: "distributor_form_panel",
+        locale: currentLang,
+      });
+      formStartedRef.current = false;
     } catch (error) {
       console.error(
         "Distributor request submission failed:",
@@ -688,6 +798,21 @@ export default function DistributorPageContent({
       window.alert(
         "The distributor application could not be submitted. Please try again later or contact us by email.",
       );
+
+      const errorCode = error instanceof Error ? error.message : "";
+      let analyticsErrorType: InquiryErrorType = "api_error";
+
+      if (error instanceof TypeError) {
+        analyticsErrorType = "network_error";
+      } else if (errorCode.includes("verification")) {
+        analyticsErrorType = "captcha_error";
+      } else if (errorCode.includes("rate") || errorCode.includes("frequent")) {
+        analyticsErrorType = "rate_limit";
+      } else if (errorCode.includes("attachment")) {
+        analyticsErrorType = "attachment_error";
+      }
+
+      trackSubmitFailure(analyticsErrorType, "api_submit");
     } finally {
       setIsSubmitting(false);
     }
@@ -730,6 +855,16 @@ export default function DistributorPageContent({
           </div>
         </div>
       </section>
+
+      <SiteBreadcrumb
+        ariaLabel={breadcrumbCopy.ariaLabel}
+        items={[
+          { label: breadcrumbCopy.home, href: `/${locale}/` },
+          { label: breadcrumbCopy.contact, href: `/${locale}/contact` },
+          { label: breadcrumbCopy.distributor },
+        ]}
+        variant="bar"
+      />
 
       {/* =====================================================
           合作优势
@@ -861,7 +996,11 @@ export default function DistributorPageContent({
           </aside>
 
           {/* 右侧合作申请表 */}
-          <form className="distributor-form-panel" onSubmit={handleSubmit}>
+          <form
+            className="distributor-form-panel"
+            onSubmit={handleSubmit}
+            onInvalidCapture={handleNativeValidationFailure}
+          >
             <h3>{content.form.title}</h3>
 
             <div className="distributor-form-grid">

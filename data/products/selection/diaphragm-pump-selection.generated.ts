@@ -4,6 +4,7 @@ export const diaphragmPumpSelectionProducts = [
   {
     "productId": "diaphragm-dpl30-brushed",
     "id": "diaphragm-dpl30-brushed",
+    "relationKeys": ["series:dpl30"],
     "categoryId": "pumps",
     "categorySlug": "pumps",
     "productTypeId": "diaphragm-pump",
@@ -70,6 +71,7 @@ export const diaphragmPumpSelectionProducts = [
   {
     "productId": "diaphragm-dpl30-brushless",
     "id": "diaphragm-dpl30-brushless",
+    "relationKeys": ["series:dpl30"],
     "categoryId": "pumps",
     "categorySlug": "pumps",
     "productTypeId": "diaphragm-pump",
@@ -136,6 +138,7 @@ export const diaphragmPumpSelectionProducts = [
   {
     "productId": "diaphragm-dpl60-brushed",
     "id": "diaphragm-dpl60-brushed",
+    "relationKeys": ["series:dpl60"],
     "categoryId": "pumps",
     "categorySlug": "pumps",
     "productTypeId": "diaphragm-pump",
@@ -202,6 +205,7 @@ export const diaphragmPumpSelectionProducts = [
   {
     "productId": "diaphragm-dpl60-brushless",
     "id": "diaphragm-dpl60-brushless",
+    "relationKeys": ["series:dpl60"],
     "categoryId": "pumps",
     "categorySlug": "pumps",
     "productTypeId": "diaphragm-pump",
@@ -268,6 +272,7 @@ export const diaphragmPumpSelectionProducts = [
   {
     "productId": "diaphragm-dpl30h-brushed",
     "id": "diaphragm-dpl30h-brushed",
+    "relationKeys": ["series:dpl30h"],
     "categoryId": "pumps",
     "categorySlug": "pumps",
     "productTypeId": "diaphragm-pump",
@@ -334,6 +339,7 @@ export const diaphragmPumpSelectionProducts = [
   {
     "productId": "diaphragm-dpl30h-brushless",
     "id": "diaphragm-dpl30h-brushless",
+    "relationKeys": ["series:dpl30h"],
     "categoryId": "pumps",
     "categorySlug": "pumps",
     "productTypeId": "diaphragm-pump",
