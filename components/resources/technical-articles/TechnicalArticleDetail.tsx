@@ -22,13 +22,6 @@ import type {
   TechnicalArticlesPageData,
 } from "@/data/resources/technical-articles/technical-articles.types";
 
-/* =========================================================
-   支持的语言类型
-
-   当前先处理中文详情路由，
-   同时保留其他语言组件兼容能力。
-========================================================= */
-
 type SupportedLocale =
   | "zh-CN"
   | "en"
@@ -37,19 +30,11 @@ type SupportedLocale =
   | "ko"
   | "ru";
 
-/* =========================================================
-   上一篇 / 下一篇数据类型
-========================================================= */
-
 export type TechnicalArticlePagerItem = {
   title: string;
   href: string;
   date?: string;
 };
-
-/* =========================================================
-   组件 Props
-========================================================= */
 
 interface TechnicalArticleDetailProps {
   pageData: TechnicalArticlesPageData;
@@ -58,23 +43,12 @@ interface TechnicalArticleDetailProps {
   nextArticle?: TechnicalArticlePagerItem | null;
 }
 
-/* =========================================================
-   公共面包屑兼容类型
-========================================================= */
-
-type SharedComponentProps =
-  Record<string, unknown>;
+type SharedComponentProps = Record<string, unknown>;
 
 const BreadcrumbComponent =
   SiteBreadcrumb as ComponentType<SharedComponentProps>;
 
-/* =========================================================
-   语言处理
-========================================================= */
-
-function normalizeLocale(
-  locale: string
-): SupportedLocale {
+function normalizeLocale(locale: string): SupportedLocale {
   if (
     locale === "en" ||
     locale === "es" ||
@@ -88,13 +62,7 @@ function normalizeLocale(
   return "zh-CN";
 }
 
-/* =========================================================
-   获取技术文章列表地址
-========================================================= */
-
-function getArticleListHref(
-  locale: SupportedLocale
-) {
+function getArticleListHref(locale: SupportedLocale) {
   if (locale === "zh-CN") {
     return "/resources/technical-articles";
   }
@@ -102,39 +70,14 @@ function getArticleListHref(
   return `/${locale}/resources/technical-articles`;
 }
 
-/* =========================================================
-   获取返回按钮文案
-========================================================= */
-
-function getBackText(
-  locale: SupportedLocale
-) {
-  if (locale === "en") {
-    return "Back";
-  }
-
-  if (locale === "es") {
-    return "Volver";
-  }
-
-  if (locale === "fr") {
-    return "Retour";
-  }
-
-  if (locale === "ko") {
-    return "뒤로";
-  }
-
-  if (locale === "ru") {
-    return "Назад";
-  }
-
+function getBackText(locale: SupportedLocale) {
+  if (locale === "en") return "Back";
+  if (locale === "es") return "Volver";
+  if (locale === "fr") return "Retour";
+  if (locale === "ko") return "뒤로";
+  if (locale === "ru") return "Назад";
   return "返回";
 }
-
-/* =========================================================
-   TechnicalArticleDetail
-========================================================= */
 
 export default function TechnicalArticleDetail({
   pageData,
@@ -142,36 +85,23 @@ export default function TechnicalArticleDetail({
   previousArticle,
   nextArticle,
 }: TechnicalArticleDetailProps) {
-  const locale =
-    normalizeLocale(pageData.locale);
+  const locale = normalizeLocale(pageData.locale);
+  const listHref = getArticleListHref(locale);
+  const isDpl30Article =
+    article.slug === "dpl30-liquid-diaphragm-pump-selection-guide";
 
-  const listHref =
-    getArticleListHref(locale);
+  const breadcrumbItems = pageData.breadcrumbs.map((item, index) => {
+    const isLastItem = index === pageData.breadcrumbs.length - 1;
 
-  /* -------------------------------------------------------
-     面包屑只保留：
-     首页 / 资源中心 / 技术文章
+    if (isLastItem) {
+      return {
+        ...item,
+        href: listHref,
+      };
+    }
 
-     不再把文章完整标题放进面包屑。
-  ------------------------------------------------------- */
-
-  const breadcrumbItems =
-    pageData.breadcrumbs.map(
-      (item, index) => {
-        const isLastItem =
-          index ===
-          pageData.breadcrumbs.length - 1;
-
-        if (isLastItem) {
-          return {
-            ...item,
-            href: listHref,
-          };
-        }
-
-        return item;
-      }
-    );
+    return item;
+  });
 
   const breadcrumbData = {
     items: breadcrumbItems,
@@ -179,32 +109,20 @@ export default function TechnicalArticleDetail({
     breadcrumbItems,
   };
 
-  /* -------------------------------------------------------
-     将技术文章数据转换为新闻详情组件需要的格式
-  ------------------------------------------------------- */
-
   const adaptedArticle = {
     category: article.category,
     title: article.title,
     date: article.date,
-    summary: article.summary,
+    // DPL30 的 summary 供列表和关联卡片自动读取正文首段；
+    // 详情页正文已经从同一首段开始，因此此处不重复显示摘要。
+    summary: isDpl30Article ? "" : article.summary,
     coverImage: article.coverImage,
     coverAlt: article.title,
-
-    content: article.content.map(
-      (block) => ({
-        title: block.title,
-        content: block.content,
-      })
-    ),
+    content: article.content.map((block) => ({
+      title: block.title,
+      content: block.content,
+    })),
   };
-
-  /* -------------------------------------------------------
-     新闻详情组件页面配置
-
-     底部 CTA 继续使用技术文章页面自己的文案，
-     返回地址和返回文字改为技术文章栏目。
-  ------------------------------------------------------- */
 
   const adaptedPageData = {
     listHref,
@@ -213,30 +131,18 @@ export default function TechnicalArticleDetail({
   };
 
   const articleBody =
-    article.slug === "cv-kv-correction-for-microfluidics"
-      ? (
-          <CvKvMicrofluidicsArticle
-            locale={locale}
-          />
-        )
-      : article.slug ===
-          "dpl30-liquid-diaphragm-pump-selection-guide"
-        ? (
-            <Dpl30LiquidDiaphragmPumpArticle
-              locale={locale}
-            />
-          )
-        : null;
+    article.slug === "cv-kv-correction-for-microfluidics" ? (
+      <CvKvMicrofluidicsArticle locale={locale} />
+    ) : isDpl30Article ? (
+      <Dpl30LiquidDiaphragmPumpArticle locale={locale} />
+    ) : null;
+
   return (
     <div className="newsArticleDetailPage" data-locale={locale}>
-      {/* 面包屑结构与新闻详情页一致 */}
       <div className="newsArticleBreadcrumbShell">
-        <BreadcrumbComponent
-          {...breadcrumbData}
-        />
+        <BreadcrumbComponent {...breadcrumbData} />
       </div>
 
-      {/* 主体直接复用新闻详情组件 */}
       <NewsArticleClient
         locale={locale}
         article={adaptedArticle}
