@@ -7,11 +7,18 @@
 
 "use client"; // 这个组件需要表单交互、验证码倒计时和接口请求，所以必须是客户端组件
 
-import { type FormEvent, useState } from "react"; // 引入表单事件类型和 useState 状态管理
+import { type FormEvent, useRef, useState } from "react"; // 引入表单事件类型和 useState 状态管理
 
 import { getCountdownLabel, isValidEmail } from "@/components/home/HomeInquiryUtils"; // 引入询盘模块工具函数：邮箱校验和验证码倒计时文字
 
 import type { LocaleCode } from "@/lib/i18n"; // 引入官网支持的语言代码类型，例如 zh-CN、en、es、fr、ko、ru
+import {
+  trackBeginInquiry,
+  trackFormStart,
+  trackInquirySubmitError,
+  trackLeadGenerated,
+  type InquiryErrorType,
+} from "@/lib/analytics/track-event";
 
 import { // 引入首页询盘模块的数据和多语言文字读取函数
   getHomeInquiryText, // 根据当前语言读取询盘模块文字
@@ -34,8 +41,41 @@ export default function HomeInquirySection({ locale }: HomeInquirySectionProps) 
   const [countdown, setCountdown] = useState(0); // 验证码倒计时秒数
   const [message, setMessage] = useState(""); // 页面提示信息，例如错误、成功、接口返回信息
   const [isSubmitting, setIsSubmitting] = useState(false); // 是否正在提交询盘，用于禁用提交按钮
+  const formStartedRef = useRef(false);
 
   const text = homeInquiryData; // 读取询盘模块本地数据，后期可替换为后端返回的数据
+
+  function handleFormInteraction() {
+    if (formStartedRef.current) return;
+
+    formStartedRef.current = true;
+    trackBeginInquiry({
+      formId: "home_inquiry_form",
+      formType: "general_inquiry",
+      sourceSection: "home_inquiry_section",
+      locale,
+    });
+    trackFormStart({
+      formId: "home_inquiry_form",
+      formType: "general_inquiry",
+      sourceSection: "home_inquiry_section",
+      locale,
+    });
+  }
+
+  function trackSubmitFailure(
+    errorType: InquiryErrorType,
+    submissionStage: string,
+  ) {
+    trackInquirySubmitError({
+      formId: "home_inquiry_form",
+      formType: "general_inquiry",
+      sourceSection: "home_inquiry_section",
+      locale,
+      errorType,
+      submissionStage,
+    });
+  }
 
   async function handleSendCode() { // 定义发送邮箱验证码函数，对接 /api/inquiry/send-code
     const emailInput = document.getElementById("email") as HTMLInputElement | null; // 获取邮箱输入框 DOM
@@ -169,36 +209,43 @@ export default function HomeInquirySection({ locale }: HomeInquirySectionProps) 
 
     if (!formData.name) { // 如果姓名为空
       setMessage(getHomeInquiryText(text.messages.requiredName, locale)); // 显示姓名必填提示
+      trackSubmitFailure("validation_error", "client_validation");
       return; // 阻止提交
     } // 姓名校验结束
 
     if (!formData.company) { // 如果公司名称为空
       setMessage(getHomeInquiryText(text.messages.requiredCompany, locale)); // 显示公司必填提示
+      trackSubmitFailure("validation_error", "client_validation");
       return; // 阻止提交
     } // 公司校验结束
 
     if (!isValidEmail(formData.email)) { // 如果邮箱格式不正确
       setMessage(getHomeInquiryText(text.messages.invalidEmail, locale)); // 显示邮箱格式错误提示
+      trackSubmitFailure("validation_error", "client_validation");
       return; // 阻止提交
     } // 邮箱校验结束
 
     if (!emailVerified) { // 如果邮箱还没有验证通过
       setMessage(getHomeInquiryText(text.messages.requiredEmailVerified, locale)); // 显示请先验证邮箱提示
+      trackSubmitFailure("captcha_error", "email_verification");
       return; // 阻止提交
     } // 邮箱验证状态校验结束
 
     if (!formData.product) { // 如果没有选择感兴趣产品
       setMessage(getHomeInquiryText(text.messages.requiredProduct, locale)); // 显示产品必选提示
+      trackSubmitFailure("validation_error", "client_validation");
       return; // 阻止提交
     } // 产品校验结束
 
     if (!formData.application) { // 如果没有选择应用领域
       setMessage(getHomeInquiryText(text.messages.requiredApplication, locale)); // 显示应用领域必选提示
+      trackSubmitFailure("validation_error", "client_validation");
       return; // 阻止提交
     } // 应用领域校验结束
 
     if (!formData.message) { // 如果需求描述为空
       setMessage(getHomeInquiryText(text.messages.requiredMessage, locale)); // 显示需求描述必填提示
+      trackSubmitFailure("validation_error", "client_validation");
       return; // 阻止提交
     } // 需求描述校验结束
 
@@ -219,6 +266,7 @@ export default function HomeInquirySection({ locale }: HomeInquirySectionProps) 
         setMessage( // 设置提交失败提示
           data.message || getHomeInquiryText(text.messages.submitFailed, locale), // 优先使用后端 message，否则使用前端默认提示
         ); // 设置失败提示结束
+        trackSubmitFailure("api_error", "api_submit");
         return; // 阻止继续执行
       } // 接口失败判断结束
 
@@ -231,8 +279,16 @@ export default function HomeInquirySection({ locale }: HomeInquirySectionProps) 
       setApplication(""); // 清空应用领域状态
       setOtherApplication(""); // 清空其他应用领域输入状态
       setEmailVerified(false); // 提交成功后重置邮箱验证状态
+      trackLeadGenerated({
+        formId: "home_inquiry_form",
+        formType: "general_inquiry",
+        sourceSection: "home_inquiry_section",
+        locale,
+      });
+      formStartedRef.current = false;
     } catch { // 捕获接口请求异常
       setMessage(getHomeInquiryText(text.messages.submitFailed, locale)); // 显示提交失败提示
+      trackSubmitFailure("network_error", "api_submit");
     } finally { // 无论成功失败都会执行
       setIsSubmitting(false); // 取消正在提交状态
     } // try / catch / finally 结束
@@ -283,7 +339,11 @@ export default function HomeInquirySection({ locale }: HomeInquirySectionProps) 
               </p>
             </div>
 
-            <form className="inquiry-form" onSubmit={handleSubmit}>
+            <form
+              className="inquiry-form"
+              onSubmit={handleSubmit}
+              onInputCapture={handleFormInteraction}
+            >
               <div className="form-grid-two">
                 <div className="field">
                   <label htmlFor="name">

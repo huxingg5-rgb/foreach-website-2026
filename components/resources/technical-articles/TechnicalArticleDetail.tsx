@@ -12,8 +12,10 @@
 import type { ComponentType } from "react";
 
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
+import RelatedResources from "@/components/common/related-resources/RelatedResources";
 import NewsArticleClient from "@/components/resources/news/NewsArticleClient";
 import CvKvMicrofluidicsArticle from "@/components/resources/technical-articles/articles/CvKvMicrofluidicsArticle";
+import Dpl30LiquidDiaphragmPumpArticle from "@/components/resources/technical-articles/articles/Dpl30LiquidDiaphragmPumpArticle";
 
 import type {
   TechnicalArticleItem,
@@ -212,8 +214,19 @@ export default function TechnicalArticleDetail({
 
   const articleBody =
     article.slug === "cv-kv-correction-for-microfluidics"
-      ? <CvKvMicrofluidicsArticle locale={locale} />
-      : null;
+      ? (
+          <CvKvMicrofluidicsArticle
+            locale={locale}
+          />
+        )
+      : article.slug ===
+          "dpl30-liquid-diaphragm-pump-selection-guide"
+        ? (
+            <Dpl30LiquidDiaphragmPumpArticle
+              locale={locale}
+            />
+          )
+        : null;
   return (
     <div className="newsArticleDetailPage" data-locale={locale}>
       {/* 面包屑结构与新闻详情页一致 */}
@@ -229,7 +242,18 @@ export default function TechnicalArticleDetail({
         article={adaptedArticle}
         pageData={adaptedPageData}
         previousArticle={previousArticle}
-        nextArticle={nextArticle}>
+        nextArticle={nextArticle}
+        afterContent={
+          <RelatedResources
+            key="technical-article-related-resources"
+            sourceType="article"
+            sourceId={article.id}
+            sourceSlug={article.slug}
+            relationKeys={article.relationKeys}
+            locale={locale}
+          />
+        }
+      >
         {articleBody}
       </NewsArticleClient>
     </div>

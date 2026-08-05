@@ -32,6 +32,7 @@ import {
   type LocaleCode, // 当前官网支持的语言类型
 } from "@/lib/i18n"; // 从 i18n 文件读取语言工具和语言文案
 import { getInternationalUiText } from "@/lib/international-ui";
+import { trackLanguageChange } from "@/lib/analytics/track-event";
 
 // 顶部栏展开面板类型
 // none：没有展开
@@ -916,6 +917,11 @@ const isFittingReplacementDetailPage =
 
       event.stopPropagation();
 
+      if (window.matchMedia("(max-width: 1000px)").matches) {
+        handleMobileSearchButtonClick(event);
+        return;
+      }
+
       setDesktopMegaKey(null);
 
       setActiveMegaCategoryKey(null);
@@ -956,6 +962,14 @@ const isFittingReplacementDetailPage =
       _homeHref: string,
     ) {
       event.preventDefault();
+
+      if (localeCode !== currentLocale) {
+        trackLanguageChange({
+          fromLocale: currentLocale,
+          toLocale: localeCode,
+          sourceSection: "site_header",
+        });
+      }
 
       // 保存语言偏好到浏览器本地
       localStorage.setItem(LOCALE_COOKIE_NAME, localeCode);

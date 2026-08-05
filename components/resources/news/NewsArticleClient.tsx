@@ -106,8 +106,9 @@ type NewsArticleClientProps = {
   pageData: NewsArticlePageData;
   previousArticle?: NewsPagerItem | null;
   nextArticle?: NewsPagerItem | null;
-
-  children?: ReactNode;};
+  children?: ReactNode;
+  afterContent?: ReactNode;
+};
 
 /* =========================================================
    ResourceSupportCta 组件兼容类型
@@ -301,6 +302,7 @@ export default function NewsArticleClient({
   previousArticle,
   nextArticle,
   children,
+  afterContent,
 }: NewsArticleClientProps) {
   const pathname = usePathname();
 
@@ -511,6 +513,8 @@ export default function NewsArticleClient({
           </div>
         </section>
       </article>
+
+      {afterContent}
 
       {/* =====================================================
           4. 上一篇 / 下一篇

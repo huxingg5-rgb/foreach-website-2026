@@ -127,6 +127,7 @@ export default async function DistributorPage({
     <DistributorPageContent
       content={content}
       contactPageData={contactPageData}
+      locale={locale}
     />
   );
 }

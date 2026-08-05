@@ -513,9 +513,9 @@ export const productTypeIntroMap: Record<string, ProductTypeIntroEntry> = {
     productTypeId: "diaphragm-pump",
     title: "隔膜泵系列",
     paragraphs: [
-      "恒永达隔膜泵系列适用于自动化仪器中的气体抽吸、液体输送、清洗循环、废液排放和气液混合介质抽排等场景。",
-      "产品按应用介质和工况分为气体隔膜泵、液体隔膜泵和气液混合隔膜泵三类，可根据流量、耐压、自吸能力、膜片材质、阀片材质和安装空间进行选型。",
-      "产品卡片仅展示常用基础配置，完整参数与型号组合请进入详情页查看或提交选型需求确认。",
+      "恒永达隔膜泵涵盖液体、气体及气液混合类型，适用于液体输送、气体抽吸、清洗循环、废液排放及气液混合等场景。",
+      "选型时可根据输送介质、目标流量、工作压力或真空度、自吸高度、电机类型、接液材质、接口形式及安装空间进行筛选。隔膜泵包括 DPL30 300 mL/min、DPL60 600 mL/min、DPGL800 6 L/min 等型号，可面向 IVD、实验室分析及医疗设备液路进行选型。",
+      "产品卡片展示常用配置，完整参数、尺寸图及规格书请进入产品详情页查看；如无法确定型号，可提交实际工况获取选型建议。",
     ],
     image: {
       src: "/images/products/pumps/product-types/diaphragm-pumps/foreach-diaphragm-pumps-product-type-intro.webp",

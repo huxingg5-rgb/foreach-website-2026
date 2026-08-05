@@ -13,6 +13,7 @@
 ========================================================= */
 
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import InstallationGuideClient from "@/components/resources/installation-guide/InstallationGuideClient";
 import { getInstallationGuidePageData } from "@/services/resources/installation-guide/getInstallationGuidePageData";
 
@@ -41,7 +42,9 @@ export default function InstallationGuidePage() {
         </div>
       </section>
 
-      <InstallationGuideClient pageData={pageData} />
+      <Suspense fallback={null}>
+        <InstallationGuideClient pageData={pageData} />
+      </Suspense>
     </>
   );
 } 

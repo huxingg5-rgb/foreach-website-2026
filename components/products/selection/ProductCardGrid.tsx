@@ -12,6 +12,9 @@ type ProductCardGridProps = {
   getTitle: (product: ProductSelectionProductItem) => string;
   getSubtitle: (product: ProductSelectionProductItem) => string;
   getDetailHref: (product: ProductSelectionProductItem) => string;
+  analyticsListId: string;
+  analyticsListName: string;
+  analyticsStartIndex: number;
   onToggleList: (product: ProductSelectionProductItem) => void;
 };
 
@@ -24,11 +27,14 @@ export default function ProductCardGrid({
   getTitle,
   getSubtitle,
   getDetailHref,
+  analyticsListId,
+  analyticsListName,
+  analyticsStartIndex,
   onToggleList,
 }: ProductCardGridProps) {
   return (
     <div className="product-grid">
-      {products.map((product) => {
+      {products.map((product, index) => {
         const title = getTitle(product);
         const subtitle = getSubtitle(product);
 
@@ -42,6 +48,9 @@ export default function ProductCardGrid({
             detailButtonText={detailButtonText}
             addToListText={addToListText}
             addedToListText={addedToListText}
+            analyticsListId={analyticsListId}
+            analyticsListName={analyticsListName}
+            analyticsIndex={analyticsStartIndex + index}
             key={product.productId}
             onToggleList={onToggleList}
           />

@@ -309,6 +309,46 @@
   background: #ffffff;
 }
 
+.installation-guide-relation-filter {
+  margin-bottom: 24px;
+  padding: 14px 16px;
+  border: 1px solid rgba(23, 51, 104, 0.16);
+  border-radius: 8px;
+  background: #f6f8fb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  color: var(--installation-guide-blue);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.installation-guide-relation-filter button {
+  min-height: 36px;
+  padding: 0 14px;
+  border: 1px solid var(--installation-guide-blue);
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--installation-guide-blue);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.installation-guide-relation-filter button:hover,
+.installation-guide-relation-filter button:focus-visible {
+  border-color: var(--installation-guide-cyan);
+  outline: none;
+}
+
+@media (max-width: 520px) {
+  .installation-guide-relation-filter {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
+
 .installation-guide-card-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

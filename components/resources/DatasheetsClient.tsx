@@ -329,6 +329,11 @@ export default function DatasheetsClient({
                       className="row-download"
                       href={encodeURI(item.downloadHref)}
                       download={getDatasheetFileName(item.downloadHref)}
+                      data-analytics-resource-action="download"
+                      data-analytics-resource-id={item.id}
+                      data-analytics-resource-type="datasheet"
+                      data-analytics-resource-file-type="pdf"
+                      data-analytics-section="datasheet_library"
                     >
                       {pageText.labels.download}
                       <DownloadIcon />

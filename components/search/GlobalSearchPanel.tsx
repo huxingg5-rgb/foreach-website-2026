@@ -987,6 +987,16 @@ export default function GlobalSearchPanel({
                             item.h,
                             locale
                           )}
+                          data-analytics-resource-action={
+                            item.m === "datasheets" ? "view" : undefined
+                          }
+                          data-analytics-resource-type={
+                            item.m === "datasheets" ? "datasheet" : undefined
+                          }
+                          data-analytics-resource-file-type={
+                            item.m === "datasheets" ? "pdf" : undefined
+                          }
+                          data-analytics-section="global_search_results"
                           key={`${item.m}-${item.h}-${item.t}`}
                           onClick={(event) => {
                             /*

@@ -31,6 +31,7 @@ type DetailRecord = Record<string, any>;
 
 const ProductDetailView = ProductDetailClient as unknown as ComponentType<{
   data: any;
+  analyticsProductId?: string;
 }>;
 
 const LEGACY_SLUG_ALIASES: Record<string, string> = {
@@ -217,7 +218,7 @@ function normalizeKey(value: unknown) {
     .replace(/^-+|-+$/g, "");
 }
 
-function findSelectionImageByDetail(detail: DetailRecord) {
+function findSelectionProductByDetail(detail: DetailRecord) {
   const detailKeys = [
     detail.model,
     detail.productId,
@@ -227,7 +228,7 @@ function findSelectionImageByDetail(detail: DetailRecord) {
     .map(normalizeKey)
     .filter(Boolean);
 
-  const matchedProduct = selectionProducts.find((product) => {
+  return selectionProducts.find((product) => {
     const productKeys = [
       getLocalizedSelectionText(product.cardTitle, "en"),
       getLocalizedSelectionText(product.cardTitle, "zh"),
@@ -239,8 +240,10 @@ function findSelectionImageByDetail(detail: DetailRecord) {
 
     return productKeys.some((key) => detailKeys.includes(key));
   });
+}
 
-  return getText(matchedProduct?.imageCard);
+function findSelectionImageByDetail(detail: DetailRecord) {
+  return getText(findSelectionProductByDetail(detail)?.imageCard);
 }
 
 function getImagePath(detail: DetailRecord) {
@@ -627,5 +630,17 @@ export default async function PlungerPumpDetailPage({ params }: PageProps) {
     notFound();
   }
 
-  return <ProductDetailView data={data} />;
+  const resolvedDetailSlug = resolveLegacySlug(resolvedParams.slug);
+  const analyticsProductId = getText(
+    selectionProducts.find(
+      (product) => normalizeSlug(product.detailSlug) === resolvedDetailSlug,
+    )?.productId,
+  );
+
+  return (
+    <ProductDetailView
+      data={data}
+      analyticsProductId={analyticsProductId}
+    />
+  );
 }

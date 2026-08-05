@@ -33,6 +33,8 @@ export type ProductSpecItem = {
 export type ProductDetailZhRecord = {
   category: ProductDetailCategory;
   slug: string;
+  relationKeys?: string[];
+  relationPriority?: number;
   model: string;
   name: string;
   advantages: string[];

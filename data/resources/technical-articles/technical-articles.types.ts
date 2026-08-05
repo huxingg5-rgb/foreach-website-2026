@@ -34,6 +34,8 @@ export interface TechnicalArticleBlock {
 export interface TechnicalArticleItem {
   id: string;
   slug: string;
+  relationKeys?: string[];
+  relationPriority?: number;
   category: TechnicalArticleCategory;
   title: string;
   summary: string;

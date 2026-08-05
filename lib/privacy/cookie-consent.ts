@@ -150,6 +150,15 @@ export function removeGoogleAnalyticsCookies() {
     `.${hostname}`,
   ]);
 
+  // GA cookies may be scoped to the registrable parent domain (for example
+  // .foreach-pump.com while the current host is www.foreach-pump.com).
+  const hostnameParts = hostname.split(".").filter(Boolean);
+  for (let index = 1; index < hostnameParts.length - 1; index += 1) {
+    const parentDomain = hostnameParts.slice(index).join(".");
+    domainCandidates.add(parentDomain);
+    domainCandidates.add(`.${parentDomain}`);
+  }
+
   for (const cookieName of analyticsCookieNames) {
     for (const domain of domainCandidates) {
       expireCookie(cookieName, domain);

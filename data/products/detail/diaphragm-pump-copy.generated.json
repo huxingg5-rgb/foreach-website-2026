@@ -1,0 +1,1610 @@
+{
+  "zh": {
+    "dpl30-brushed": {
+      "title": "DPL30系列有刷液体隔膜泵",
+      "cardParameters": [
+        "流量 300 mL/min",
+        "耐压 100 kPa",
+        "寿命 3000 h"
+      ],
+      "intro": "恒永达DPL30系列有刷液体隔膜泵用于液体输送，流量为300 mL/min，耐压为100 kPa，采用有刷电机，使用寿命为3000 h。产品适用于清洗液输送、试剂转移、废液排放、管路预充及液体循环，可应用于IVD、生命科学、实验室自动化和分析检测设备。实际流量会受到输送介质、工作压力及管路阻力影响，具体参数以页面下方规格表为准。",
+      "applications": "清洗液输送、试剂转移、废液排放、管路预充、液体循环",
+      "breadcrumbs": [
+        "首页",
+        "产品中心",
+        "隔膜泵",
+        "DPL30系列有刷液体隔膜泵"
+      ],
+      "faqs": [
+        {
+          "question": "DPL30系列有刷液体隔膜泵可以输送哪些液体？",
+          "answer": "可用于清洗液、试剂、废液及其他设备液路中的液体输送。实际使用前需要根据液体成分、浓度和温度确认膜片、阀片及泵头等接液材质的兼容性。"
+        },
+        {
+          "question": "DPL30系列有刷液体隔膜泵的流量和耐压是多少？",
+          "answer": "该产品流量为300 mL/min，耐压为100 kPa。实际流量会受到介质黏度、管路长度、管径、工作压力和液路阻力影响。"
+        },
+        {
+          "question": "DPL30系列有刷液体隔膜泵可以用于IVD设备吗？",
+          "answer": "可面向IVD、生命科学、实验室自动化和分析检测设备中的清洗、试剂转移、废液排放及液体循环需求进行选型。"
+        },
+        {
+          "question": "DPL30有刷版本适合什么使用条件？",
+          "answer": "有刷版本使用寿命为3000 h，适合对基础输送性能和成本控制有要求，并且连续运行时间相对有限的设备。"
+        },
+        {
+          "question": "DPL30系列有刷液体隔膜泵选型前需要提供哪些参数？",
+          "answer": "建议提供输送介质、目标流量、工作压力、吸程、运行时间、工作电压、管路尺寸、接液材质和安装空间。"
+        }
+      ]
+    },
+    "dpl30-brushless": {
+      "title": "DPL30系列无刷液体隔膜泵",
+      "cardParameters": [
+        "流量 300 mL/min",
+        "耐压 100 kPa",
+        "寿命 10000 h"
+      ],
+      "intro": "恒永达DPL30系列无刷液体隔膜泵用于液体输送，流量为300 mL/min，耐压为100 kPa，采用无刷电机，使用寿命为10000 h。产品适用于清洗液输送、试剂转移、废液排放、管路预充及液体循环，可应用于IVD、生命科学、实验室自动化和分析检测设备，适合对运行寿命和维护周期要求较高的设备。具体参数以页面下方规格表为准。",
+      "applications": "清洗液输送、试剂转移、废液排放、管路预充、液体循环",
+      "breadcrumbs": [
+        "首页",
+        "产品中心",
+        "隔膜泵",
+        "DPL30系列无刷液体隔膜泵"
+      ],
+      "faqs": [
+        {
+          "question": "DPL30系列无刷液体隔膜泵可以输送哪些液体？",
+          "answer": "可用于清洗液、试剂、废液及设备液路中的液体输送。选型前需要确认液体与膜片、阀片和泵头材质的兼容性。"
+        },
+        {
+          "question": "DPL30系列无刷液体隔膜泵的流量和耐压是多少？",
+          "answer": "该产品流量为300 mL/min，耐压为100 kPa。管路阻力和工作压力增加时，实际流量可能下降。"
+        },
+        {
+          "question": "DPL30无刷版本与有刷版本有什么区别？",
+          "answer": "无刷版本使用寿命为10000 h，有刷版本使用寿命为3000 h。无刷版本更适合连续运行时间较长或维护周期要求较高的设备。"
+        },
+        {
+          "question": "DPL30无刷版本可以用于IVD液路吗？",
+          "answer": "可面向IVD设备中的清洗液输送、试剂转移、废液排放、管路预充和液体循环需求进行选型。"
+        },
+        {
+          "question": "DPL30系列无刷液体隔膜泵选型时需要确认哪些工况？",
+          "answer": "需要确认输送介质、目标流量、压力、连续运行时间、启停频率、接液材质、工作电压、管路阻力和安装空间。"
+        }
+      ]
+    },
+    "dpl60-brushed": {
+      "title": "DPL60系列有刷液体隔膜泵",
+      "cardParameters": [
+        "流量 600 mL/min",
+        "耐压 100 kPa",
+        "寿命 3000 h"
+      ],
+      "intro": "恒永达DPL60系列有刷液体隔膜泵用于液体输送，流量为600 mL/min，耐压为100 kPa，采用有刷电机，使用寿命为3000 h。产品适用于清洗液输送、废液排放、管路预充及液体循环，可应用于IVD、生命科学、实验室自动化和分析检测设备。实际输送流量会受到介质性质、工作压力和管路阻力影响，具体参数以页面下方规格表为准。",
+      "applications": "清洗液输送、废液排放、管路预充、液体循环",
+      "breadcrumbs": [
+        "首页",
+        "产品中心",
+        "隔膜泵",
+        "DPL60系列有刷液体隔膜泵"
+      ],
+      "faqs": [
+        {
+          "question": "DPL60系列有刷液体隔膜泵适合哪些液体输送场景？",
+          "answer": "适合清洗液输送、废液排放、管路预充和液体循环等需要约600 mL/min流量的自动化设备。"
+        },
+        {
+          "question": "DPL60系列有刷液体隔膜泵的流量和耐压是多少？",
+          "answer": "该产品流量为600 mL/min，耐压为100 kPa。实际输送流量会受到介质性质和液路阻力影响。"
+        },
+        {
+          "question": "DPL60与DPL30应该如何选择？",
+          "answer": "DPL30流量为300 mL/min，DPL60流量为600 mL/min。应根据设备所需流量、管路阻力和运行时间选择。"
+        },
+        {
+          "question": "DPL60有刷版本的使用寿命是多少？",
+          "answer": "有刷电机版本使用寿命为3000 h，具体寿命还会受到负载、启停频率和运行环境影响。"
+        },
+        {
+          "question": "DPL60系列有刷液体隔膜泵可以用于废液排放吗？",
+          "answer": "可用于自动化设备中的废液排放，但应确认废液成分与接液材质兼容，并避免输送不适合泵体接液材料的液体。"
+        }
+      ]
+    },
+    "dpl60-brushless": {
+      "title": "DPL60系列无刷液体隔膜泵",
+      "cardParameters": [
+        "流量 600 mL/min",
+        "耐压 100 kPa",
+        "寿命 10000 h"
+      ],
+      "intro": "恒永达DPL60系列无刷液体隔膜泵用于液体输送，流量为600 mL/min，耐压为100 kPa，采用无刷电机，使用寿命为10000 h。产品适用于清洗液输送、废液排放、管路预充及液体循环，可应用于IVD、生命科学、实验室自动化和分析检测设备，适合运行时间较长或维护周期要求较高的设备。具体参数以页面下方规格表为准。",
+      "applications": "清洗液输送、废液排放、管路预充、液体循环",
+      "breadcrumbs": [
+        "首页",
+        "产品中心",
+        "隔膜泵",
+        "DPL60系列无刷液体隔膜泵"
+      ],
+      "faqs": [
+        {
+          "question": "DPL60系列无刷液体隔膜泵适合哪些设备？",
+          "answer": "可用于IVD、生命科学、实验室自动化和分析检测设备中的清洗、废液排放、管路预充和液体循环。"
+        },
+        {
+          "question": "DPL60无刷版本的流量和耐压是多少？",
+          "answer": "流量为600 mL/min，耐压为100 kPa。实际流量需要结合管路长度、管径、介质和工作压力确认。"
+        },
+        {
+          "question": "DPL60无刷版本适合连续运行吗？",
+          "answer": "无刷版本使用寿命为10000 h，更适合连续运行时间较长或维护周期要求较高的设备，但仍需根据具体工作制确认。"
+        },
+        {
+          "question": "DPL60和DPL30的主要区别是什么？",
+          "answer": "两者主要流量不同。DPL30为300 mL/min，DPL60为600 mL/min，应根据设备液路所需输送速度选择。"
+        },
+        {
+          "question": "DPL60系列无刷液体隔膜泵选型时为什么需要提供管路参数？",
+          "answer": "管路长度、内径、弯头数量和高度差都会产生液路阻力，从而影响隔膜泵的实际输送流量。"
+        }
+      ]
+    },
+    "dpl30h-brushed": {
+      "title": "DPL30H系列有刷高压液体隔膜泵",
+      "cardParameters": [
+        "流量 300 mL/min",
+        "耐压 600 kPa",
+        "寿命 3000 h"
+      ],
+      "intro": "恒永达DPL30H系列有刷高压液体隔膜泵用于较高压力条件下的液体输送，流量为300 mL/min，耐压为600 kPa，采用有刷电机，使用寿命为3000 h。产品适用于管路阻力较大、背压较高或需要稳定液体输送的自动化仪器，可应用于IVD、生命科学、实验室自动化和分析检测设备。实际性能会受到介质、管路及工作压力影响，具体参数以页面下方规格表为准。",
+      "applications": "高背压液体输送、清洗液输送、试剂转移、液体循环",
+      "breadcrumbs": [
+        "首页",
+        "产品中心",
+        "隔膜泵",
+        "DPL30H系列有刷高压液体隔膜泵"
+      ],
+      "faqs": [
+        {
+          "question": "DPL30H与普通DPL30有什么区别？",
+          "answer": "DPL30H属于高压液体隔膜泵，流量为300 mL/min，耐压为600 kPa；普通DPL30流量为300 mL/min，耐压为100 kPa。DPL30H更适合背压或管路阻力较高的液路。"
+        },
+        {
+          "question": "DPL30H有刷版本适合哪些应用？",
+          "answer": "适合需要克服较高管路阻力、较长液路或较高背压的清洗液输送、试剂转移和液体循环场景。"
+        },
+        {
+          "question": "DPL30H的实际流量会受到压力影响吗？",
+          "answer": "会。随着工作压力和液路阻力增加，实际流量可能下降，因此需要结合设备的实际压力条件进行测试。"
+        },
+        {
+          "question": "DPL30H有刷版本的使用寿命是多少？",
+          "answer": "有刷版本使用寿命为3000 h，具体寿命还与工作负载、启停频率和运行环境有关。"
+        },
+        {
+          "question": "什么情况下应该选择DPL30H高压液体隔膜泵？",
+          "answer": "当普通DPL30无法克服管路阻力，或者设备存在较高背压需求时，可以考虑DPL30H高压液体隔膜泵。"
+        }
+      ]
+    },
+    "dpl30h-brushless": {
+      "title": "DPL30H系列无刷高压液体隔膜泵",
+      "cardParameters": [
+        "流量 300 mL/min",
+        "耐压 600 kPa",
+        "寿命 10000 h"
+      ],
+      "intro": "恒永达DPL30H系列无刷高压液体隔膜泵用于较高压力条件下的液体输送，流量为300 mL/min，耐压为600 kPa，采用无刷电机，使用寿命为10000 h。产品适用于管路阻力较大、背压较高或连续运行时间较长的自动化仪器，可应用于IVD、生命科学、实验室自动化和分析检测设备。具体参数以页面下方规格表为准。",
+      "applications": "高背压液体输送、清洗液输送、试剂转移、液体循环",
+      "breadcrumbs": [
+        "首页",
+        "产品中心",
+        "隔膜泵",
+        "DPL30H系列无刷高压液体隔膜泵"
+      ],
+      "faqs": [
+        {
+          "question": "DPL30H无刷版本适合什么设备？",
+          "answer": "适合存在较高背压、较大管路阻力，同时对运行寿命和维护周期要求较高的自动化设备。"
+        },
+        {
+          "question": "DPL30H无刷版本的流量和耐压是多少？",
+          "answer": "流量为300 mL/min，耐压为600 kPa。实际性能需要结合介质、管路和工作压力确认。"
+        },
+        {
+          "question": "DPL30H无刷版本与有刷版本有什么区别？",
+          "answer": "两者流量和耐压相同，主要区别是电机类型和使用寿命。无刷版本使用寿命为10000 h，有刷版本使用寿命为3000 h。"
+        },
+        {
+          "question": "DPL30H无刷高压液体隔膜泵可以用于IVD设备吗？",
+          "answer": "可面向IVD、生命科学、实验室自动化和分析检测设备中的高背压液体输送需求进行选型。"
+        },
+        {
+          "question": "选购DPL30H高压液体隔膜泵需要提供哪些参数？",
+          "answer": "建议提供介质、目标流量、入口压力、出口压力、管路尺寸、运行时间、工作电压、接液材质和安装空间。"
+        }
+      ]
+    },
+    "dpgl800-brushless": {
+      "title": "DPGL800系列无刷气液混合隔膜泵",
+      "cardParameters": [
+        "流量 6 L/min",
+        "最大真空度 -90 kPa",
+        "寿命 10000 h"
+      ],
+      "intro": "恒永达DPGL800系列无刷气液混合隔膜泵可用于气体、液体及气液混合介质的抽吸和输送，流量为6 L/min，最大真空度为-90 kPa，采用无刷电机，使用寿命为10000 h。产品适用于废液抽排、气液混合介质输送、管路排空及需要较强抽吸能力的自动化设备。具体性能会受到介质状态、管路结构和工作负载影响，参数以页面下方规格表为准。",
+      "applications": "废液抽排、气液混合介质输送、管路排空、气体抽吸",
+      "breadcrumbs": [
+        "首页",
+        "产品中心",
+        "隔膜泵",
+        "DPGL800系列无刷气液混合隔膜泵"
+      ],
+      "faqs": [
+        {
+          "question": "DPGL800可以输送哪些介质？",
+          "answer": "DPGL800可用于气体、液体以及气液混合介质的抽吸和输送。实际使用前仍需确认介质与接液材质的兼容性。"
+        },
+        {
+          "question": "DPGL800的流量和最大真空度是多少？",
+          "answer": "该产品流量为6 L/min，最大真空度为-90 kPa。实际性能会受到介质状态、管路阻力和设备负载影响。"
+        },
+        {
+          "question": "DPGL800适合哪些应用？",
+          "answer": "可用于废液抽排、气液混合介质输送、管路排空和需要较强抽吸能力的自动化设备。"
+        },
+        {
+          "question": "DPGL800可以只抽液体吗？",
+          "answer": "产品可用于液体及气液混合介质输送，但是否适合具体液体，需要结合介质性质、工作时间和接液材质进行确认。"
+        },
+        {
+          "question": "DPGL800选型前需要提供哪些参数？",
+          "answer": "建议提供介质状态、液体比例、目标流量、所需真空度、管路尺寸、连续运行时间、工作电压及安装空间。"
+        }
+      ]
+    }
+  },
+  "en": {
+    "dpl30-brushed": {
+      "title": "DPL30 Series Brushed Liquid Diaphragm Pump",
+      "cardParameters": [
+        "Flow Rate 300 mL/min",
+        "Pressure Rating 100 kPa",
+        "Service Life 3000 h"
+      ],
+      "intro": "The FOREACH DPL30 Series Brushed Liquid Diaphragm Pump is designed for liquid transfer, with a flow rate of 300 mL/min, a pressure rating of 100 kPa, a brushed motor, and a service life of 3000 h. It is suitable for cleaning-solution transfer, reagent transfer, waste-liquid discharge, line priming, and liquid circulation, and can be selected for IVD, life science, laboratory automation, and analytical instrument applications. Actual flow may vary with the medium, operating pressure, and tubing resistance. Refer to the specification table below for detailed parameters.",
+      "applications": "Cleaning-solution transfer, reagent transfer, waste-liquid discharge, line priming, liquid circulation",
+      "breadcrumbs": [
+        "Home",
+        "Product Center",
+        "Diaphragm Pumps",
+        "DPL30 Series Brushed Liquid Diaphragm Pump"
+      ],
+      "faqs": [
+        {
+          "question": "What liquids can the DPL30 Series Brushed Liquid Diaphragm Pump transfer?",
+          "answer": "It can be used to transfer cleaning solutions, reagents, waste liquids, and other liquids in instrument fluid paths. Before use, confirm the compatibility of the liquid composition, concentration, and temperature with the diaphragm, valves, pump head, and other wetted materials."
+        },
+        {
+          "question": "What are the flow rate and pressure rating of the DPL30 Series Brushed Liquid Diaphragm Pump?",
+          "answer": "The flow rate is 300 mL/min and the pressure rating is 100 kPa. Actual flow may be affected by liquid viscosity, tubing length, tubing diameter, operating pressure, and fluid-path resistance."
+        },
+        {
+          "question": "Can the DPL30 Series Brushed Liquid Diaphragm Pump be used in IVD equipment?",
+          "answer": "It can be selected for cleaning, reagent transfer, waste-liquid discharge, and liquid-circulation functions in IVD, life science, laboratory automation, and analytical instruments."
+        },
+        {
+          "question": "What operating conditions are suitable for the brushed DPL30 version?",
+          "answer": "The brushed version has a service life of 3000 h and is suitable for equipment that requires basic transfer performance and cost control, with relatively limited continuous operating time."
+        },
+        {
+          "question": "What information is required before selecting the DPL30 Series Brushed Liquid Diaphragm Pump?",
+          "answer": "Provide the liquid medium, target flow rate, operating pressure, suction lift, operating time, supply voltage, tubing size, wetted-material requirements, and installation space."
+        }
+      ]
+    },
+    "dpl30-brushless": {
+      "title": "DPL30 Series Brushless Liquid Diaphragm Pump",
+      "cardParameters": [
+        "Flow Rate 300 mL/min",
+        "Pressure Rating 100 kPa",
+        "Service Life 10000 h"
+      ],
+      "intro": "The FOREACH DPL30 Series Brushless Liquid Diaphragm Pump is designed for liquid transfer, with a flow rate of 300 mL/min, a pressure rating of 100 kPa, a brushless motor, and a service life of 10000 h. It is suitable for cleaning-solution transfer, reagent transfer, waste-liquid discharge, line priming, and liquid circulation, and can be selected for IVD, life science, laboratory automation, and analytical instrument applications. It is suitable for equipment that requires a longer operating life and longer maintenance intervals. Refer to the specification table below for detailed parameters.",
+      "applications": "Cleaning-solution transfer, reagent transfer, waste-liquid discharge, line priming, liquid circulation",
+      "breadcrumbs": [
+        "Home",
+        "Product Center",
+        "Diaphragm Pumps",
+        "DPL30 Series Brushless Liquid Diaphragm Pump"
+      ],
+      "faqs": [
+        {
+          "question": "What liquids can the DPL30 Series Brushless Liquid Diaphragm Pump transfer?",
+          "answer": "It can be used to transfer cleaning solutions, reagents, waste liquids, and other liquids in instrument fluid paths. Before selection, confirm the compatibility of the liquid with the diaphragm, valves, pump head, and other wetted materials."
+        },
+        {
+          "question": "What are the flow rate and pressure rating of the DPL30 Series Brushless Liquid Diaphragm Pump?",
+          "answer": "The flow rate is 300 mL/min and the pressure rating is 100 kPa. Actual flow may decrease as tubing resistance and operating pressure increase."
+        },
+        {
+          "question": "What is the difference between the brushless and brushed DPL30 versions?",
+          "answer": "The brushless version has a service life of 10000 h, while the brushed version has a service life of 3000 h. The brushless version is more suitable for equipment with longer operating periods or longer maintenance-interval requirements."
+        },
+        {
+          "question": "Can the brushless DPL30 version be used in IVD fluid paths?",
+          "answer": "It can be selected for cleaning-solution transfer, reagent transfer, waste-liquid discharge, line priming, and liquid circulation in IVD equipment."
+        },
+        {
+          "question": "What operating conditions should be confirmed when selecting the DPL30 Series Brushless Liquid Diaphragm Pump?",
+          "answer": "Confirm the liquid medium, target flow rate, pressure, continuous operating time, start-stop frequency, wetted materials, supply voltage, tubing resistance, and installation space."
+        }
+      ]
+    },
+    "dpl60-brushed": {
+      "title": "DPL60 Series Brushed Liquid Diaphragm Pump",
+      "cardParameters": [
+        "Flow Rate 600 mL/min",
+        "Pressure Rating 100 kPa",
+        "Service Life 3000 h"
+      ],
+      "intro": "The FOREACH DPL60 Series Brushed Liquid Diaphragm Pump is designed for liquid transfer, with a flow rate of 600 mL/min, a pressure rating of 100 kPa, a brushed motor, and a service life of 3000 h. It is suitable for cleaning-solution transfer, waste-liquid discharge, line priming, and liquid circulation, and can be selected for IVD, life science, laboratory automation, and analytical instrument applications. Actual flow may vary with the medium, operating pressure, and tubing resistance. Refer to the specification table below for detailed parameters.",
+      "applications": "Cleaning-solution transfer, waste-liquid discharge, line priming, liquid circulation",
+      "breadcrumbs": [
+        "Home",
+        "Product Center",
+        "Diaphragm Pumps",
+        "DPL60 Series Brushed Liquid Diaphragm Pump"
+      ],
+      "faqs": [
+        {
+          "question": "What liquid-transfer applications are suitable for the DPL60 Series Brushed Liquid Diaphragm Pump?",
+          "answer": "It is suitable for cleaning-solution transfer, waste-liquid discharge, line priming, and liquid circulation in automated equipment requiring a flow rate of about 600 mL/min."
+        },
+        {
+          "question": "What are the flow rate and pressure rating of the DPL60 Series Brushed Liquid Diaphragm Pump?",
+          "answer": "The flow rate is 600 mL/min and the pressure rating is 100 kPa. Actual flow may be affected by the medium and fluid-path resistance."
+        },
+        {
+          "question": "How should I choose between DPL60 and DPL30?",
+          "answer": "DPL30 has a flow rate of 300 mL/min, while DPL60 has a flow rate of 600 mL/min. Select according to the required flow rate, tubing resistance, and operating time."
+        },
+        {
+          "question": "What is the service life of the brushed DPL60 version?",
+          "answer": "The brushed-motor version has a service life of 3000 h. Actual service life may also be affected by load, start-stop frequency, and operating environment."
+        },
+        {
+          "question": "Can the DPL60 Series Brushed Liquid Diaphragm Pump be used for waste-liquid discharge?",
+          "answer": "Yes, but the waste-liquid composition must be compatible with the wetted materials, and liquids that are unsuitable for the pump’s wetted materials should not be transferred."
+        }
+      ]
+    },
+    "dpl60-brushless": {
+      "title": "DPL60 Series Brushless Liquid Diaphragm Pump",
+      "cardParameters": [
+        "Flow Rate 600 mL/min",
+        "Pressure Rating 100 kPa",
+        "Service Life 10000 h"
+      ],
+      "intro": "The FOREACH DPL60 Series Brushless Liquid Diaphragm Pump is designed for liquid transfer, with a flow rate of 600 mL/min, a pressure rating of 100 kPa, a brushless motor, and a service life of 10000 h. It is suitable for cleaning-solution transfer, waste-liquid discharge, line priming, and liquid circulation, and can be selected for IVD, life science, laboratory automation, and analytical instrument applications. It is suitable for equipment that requires longer operating periods or longer maintenance intervals. Refer to the specification table below for detailed parameters.",
+      "applications": "Cleaning-solution transfer, waste-liquid discharge, line priming, liquid circulation",
+      "breadcrumbs": [
+        "Home",
+        "Product Center",
+        "Diaphragm Pumps",
+        "DPL60 Series Brushless Liquid Diaphragm Pump"
+      ],
+      "faqs": [
+        {
+          "question": "What equipment is suitable for the DPL60 Series Brushless Liquid Diaphragm Pump?",
+          "answer": "It can be used for cleaning, waste-liquid discharge, line priming, and liquid circulation in IVD, life science, laboratory automation, and analytical instruments."
+        },
+        {
+          "question": "What are the flow rate and pressure rating of the brushless DPL60 version?",
+          "answer": "The flow rate is 600 mL/min and the pressure rating is 100 kPa. Actual flow should be confirmed according to tubing length, tubing diameter, medium, and operating pressure."
+        },
+        {
+          "question": "Is the brushless DPL60 version suitable for continuous operation?",
+          "answer": "The brushless version has a service life of 10000 h and is more suitable for equipment with longer operating periods or longer maintenance intervals. The final selection should still be based on the actual duty cycle."
+        },
+        {
+          "question": "What is the main difference between DPL60 and DPL30?",
+          "answer": "The main difference is flow rate. DPL30 is 300 mL/min and DPL60 is 600 mL/min. Select according to the required transfer rate of the equipment fluid path."
+        },
+        {
+          "question": "Why are tubing parameters required when selecting the DPL60 Series Brushless Liquid Diaphragm Pump?",
+          "answer": "Tubing length, internal diameter, number of bends, and height difference all create fluid-path resistance and affect the actual pump flow rate."
+        }
+      ]
+    },
+    "dpl30h-brushed": {
+      "title": "DPL30H Series Brushed High-Pressure Liquid Diaphragm Pump",
+      "cardParameters": [
+        "Flow Rate 300 mL/min",
+        "Pressure Rating 600 kPa",
+        "Service Life 3000 h"
+      ],
+      "intro": "The FOREACH DPL30H Series Brushed High-Pressure Liquid Diaphragm Pump is designed for liquid transfer under higher-pressure conditions, with a flow rate of 300 mL/min, a pressure rating of 600 kPa, a brushed motor, and a service life of 3000 h. It is suitable for automated instruments with higher tubing resistance, higher back pressure, or stable liquid-transfer requirements, and can be selected for IVD, life science, laboratory automation, and analytical instrument applications. Actual performance may vary with the medium, tubing, and operating pressure. Refer to the specification table below for detailed parameters.",
+      "applications": "High-back-pressure liquid transfer, cleaning-solution transfer, reagent transfer, liquid circulation",
+      "breadcrumbs": [
+        "Home",
+        "Product Center",
+        "Diaphragm Pumps",
+        "DPL30H Series Brushed High-Pressure Liquid Diaphragm Pump"
+      ],
+      "faqs": [
+        {
+          "question": "What is the difference between DPL30H and the standard DPL30?",
+          "answer": "DPL30H is a high-pressure liquid diaphragm pump with a flow rate of 300 mL/min and a pressure rating of 600 kPa. The standard DPL30 has a flow rate of 300 mL/min and a pressure rating of 100 kPa. DPL30H is more suitable for fluid paths with higher back pressure or tubing resistance."
+        },
+        {
+          "question": "What applications are suitable for the brushed DPL30H version?",
+          "answer": "It is suitable for cleaning-solution transfer, reagent transfer, and liquid circulation where higher tubing resistance, longer fluid paths, or higher back pressure must be overcome."
+        },
+        {
+          "question": "Is the actual DPL30H flow rate affected by pressure?",
+          "answer": "Yes. Actual flow may decrease as operating pressure and fluid-path resistance increase, so testing should be performed under the equipment’s actual pressure conditions."
+        },
+        {
+          "question": "What is the service life of the brushed DPL30H version?",
+          "answer": "The brushed version has a service life of 3000 h. Actual service life may also be affected by load, start-stop frequency, and operating environment."
+        },
+        {
+          "question": "When should the DPL30H High-Pressure Liquid Diaphragm Pump be selected?",
+          "answer": "Consider DPL30H when the standard DPL30 cannot overcome fluid-path resistance or when the equipment has a higher back-pressure requirement."
+        }
+      ]
+    },
+    "dpl30h-brushless": {
+      "title": "DPL30H Series Brushless High-Pressure Liquid Diaphragm Pump",
+      "cardParameters": [
+        "Flow Rate 300 mL/min",
+        "Pressure Rating 600 kPa",
+        "Service Life 10000 h"
+      ],
+      "intro": "The FOREACH DPL30H Series Brushless High-Pressure Liquid Diaphragm Pump is designed for liquid transfer under higher-pressure conditions, with a flow rate of 300 mL/min, a pressure rating of 600 kPa, a brushless motor, and a service life of 10000 h. It is suitable for automated instruments with higher tubing resistance, higher back pressure, or longer continuous operating periods, and can be selected for IVD, life science, laboratory automation, and analytical instrument applications. Refer to the specification table below for detailed parameters.",
+      "applications": "High-back-pressure liquid transfer, cleaning-solution transfer, reagent transfer, liquid circulation",
+      "breadcrumbs": [
+        "Home",
+        "Product Center",
+        "Diaphragm Pumps",
+        "DPL30H Series Brushless High-Pressure Liquid Diaphragm Pump"
+      ],
+      "faqs": [
+        {
+          "question": "What equipment is suitable for the brushless DPL30H version?",
+          "answer": "It is suitable for automated equipment with higher back pressure or tubing resistance and higher requirements for operating life and maintenance intervals."
+        },
+        {
+          "question": "What are the flow rate and pressure rating of the brushless DPL30H version?",
+          "answer": "The flow rate is 300 mL/min and the pressure rating is 600 kPa. Actual performance should be confirmed according to the medium, tubing, and operating pressure."
+        },
+        {
+          "question": "What is the difference between the brushless and brushed DPL30H versions?",
+          "answer": "Both versions have the same flow rate and pressure rating. The main differences are motor type and service life. The brushless version has a service life of 10000 h, while the brushed version has a service life of 3000 h."
+        },
+        {
+          "question": "Can the DPL30H Series Brushless High-Pressure Liquid Diaphragm Pump be used in IVD equipment?",
+          "answer": "It can be selected for high-back-pressure liquid-transfer requirements in IVD, life science, laboratory automation, and analytical instruments."
+        },
+        {
+          "question": "What information is required when selecting a DPL30H High-Pressure Liquid Diaphragm Pump?",
+          "answer": "Provide the medium, target flow rate, inlet pressure, outlet pressure, tubing size, operating time, supply voltage, wetted materials, and installation space."
+        }
+      ]
+    },
+    "dpgl800-brushless": {
+      "title": "DPGL800 Series Brushless Gas-Liquid Diaphragm Pump",
+      "cardParameters": [
+        "Flow Rate 6 L/min",
+        "Maximum Vacuum -90 kPa",
+        "Service Life 10000 h"
+      ],
+      "intro": "The FOREACH DPGL800 Series Brushless Gas-Liquid Diaphragm Pump can be used to draw and transfer gas, liquid, and gas-liquid mixed media, with a flow rate of 6 L/min, a maximum vacuum of -90 kPa, a brushless motor, and a service life of 10000 h. It is suitable for waste-liquid extraction, gas-liquid mixed-media transfer, line evacuation, and automated equipment requiring strong suction performance. Actual performance may vary with the medium state, tubing configuration, and operating load. Refer to the specification table below for detailed parameters.",
+      "applications": "Waste-liquid extraction, gas-liquid mixed-media transfer, line evacuation, gas suction",
+      "breadcrumbs": [
+        "Home",
+        "Product Center",
+        "Diaphragm Pumps",
+        "DPGL800 Series Brushless Gas-Liquid Diaphragm Pump"
+      ],
+      "faqs": [
+        {
+          "question": "What media can the DPGL800 transfer?",
+          "answer": "DPGL800 can be used to draw and transfer gas, liquid, and gas-liquid mixed media. Before use, confirm the compatibility of the medium with the wetted materials."
+        },
+        {
+          "question": "What are the flow rate and maximum vacuum of the DPGL800?",
+          "answer": "The flow rate is 6 L/min and the maximum vacuum is -90 kPa. Actual performance may be affected by the medium state, tubing resistance, and equipment load."
+        },
+        {
+          "question": "What applications are suitable for the DPGL800?",
+          "answer": "It can be used for waste-liquid extraction, gas-liquid mixed-media transfer, line evacuation, and automated equipment requiring strong suction performance."
+        },
+        {
+          "question": "Can the DPGL800 pump liquid only?",
+          "answer": "It can be used for liquid and gas-liquid mixed-media transfer, but suitability for a specific liquid must be confirmed according to the medium properties, operating time, and wetted materials."
+        },
+        {
+          "question": "What information is required before selecting the DPGL800?",
+          "answer": "Provide the medium state, liquid ratio, target flow rate, required vacuum, tubing size, continuous operating time, supply voltage, and installation space."
+        }
+      ]
+    }
+  },
+  "es": {
+    "dpl30-brushed": {
+      "title": "Bomba de diafragma para líquidos con motor con escobillas serie DPL30",
+      "cardParameters": [
+        "Caudal 300 mL/min",
+        "Presión admisible 100 kPa",
+        "Vida útil 3000 h"
+      ],
+      "intro": "La bomba de diafragma para líquidos con motor con escobillas serie DPL30 de FOREACH está diseñada para el transporte de líquidos. Ofrece un caudal de 300 mL/min, una presión admisible de 100 kPa, utiliza un motor con escobillas y tiene una vida útil de 3000 h. Es adecuada para el transporte de soluciones de limpieza, la transferencia de reactivos, la descarga de líquidos residuales, el cebado de tuberías y la circulación de líquidos, y puede seleccionarse para equipos IVD, ciencias de la vida, automatización de laboratorio e instrumentos analíticos. El caudal real puede variar según el medio, la presión de trabajo y la resistencia de la tubería. Consulte la tabla de especificaciones inferior para ver los parámetros detallados.",
+      "applications": "Transporte de soluciones de limpieza, transferencia de reactivos, descarga de líquidos residuales, cebado de tuberías, circulación de líquidos",
+      "breadcrumbs": [
+        "Inicio",
+        "Centro de productos",
+        "Bombas de diafragma",
+        "Bomba de diafragma para líquidos con motor con escobillas serie DPL30"
+      ],
+      "faqs": [
+        {
+          "question": "¿Qué líquidos puede transportar la bomba de diafragma para líquidos con motor con escobillas serie DPL30?",
+          "answer": "Puede utilizarse para transportar soluciones de limpieza, reactivos, líquidos residuales y otros líquidos en los circuitos de los equipos. Antes del uso, debe confirmarse la compatibilidad de la composición, concentración y temperatura del líquido con la membrana, las válvulas, el cabezal de la bomba y los demás materiales en contacto con el fluido."
+        },
+        {
+          "question": "¿Cuáles son el caudal y la presión admisible de la bomba serie DPL30 con motor con escobillas?",
+          "answer": "El caudal es de 300 mL/min y la presión admisible es de 100 kPa. El caudal real puede verse afectado por la viscosidad del líquido, la longitud y el diámetro de la tubería, la presión de trabajo y la resistencia del circuito."
+        },
+        {
+          "question": "¿Puede utilizarse la bomba serie DPL30 con motor con escobillas en equipos IVD?",
+          "answer": "Puede seleccionarse para funciones de limpieza, transferencia de reactivos, descarga de líquidos residuales y circulación de líquidos en equipos IVD, ciencias de la vida, automatización de laboratorio e instrumentos analíticos."
+        },
+        {
+          "question": "¿Para qué condiciones de uso es adecuada la versión DPL30 con motor con escobillas?",
+          "answer": "La versión con escobillas tiene una vida útil de 3000 h y es adecuada para equipos que requieren prestaciones básicas de transporte y control de costes, con un tiempo de funcionamiento continuo relativamente limitado."
+        },
+        {
+          "question": "¿Qué datos deben facilitarse antes de seleccionar la bomba serie DPL30 con motor con escobillas?",
+          "answer": "Se recomienda facilitar el medio, el caudal objetivo, la presión de trabajo, la altura de aspiración, el tiempo de funcionamiento, la tensión de alimentación, el tamaño de la tubería, los requisitos de materiales en contacto con el fluido y el espacio de instalación."
+        }
+      ]
+    },
+    "dpl30-brushless": {
+      "title": "Bomba de diafragma para líquidos con motor sin escobillas serie DPL30",
+      "cardParameters": [
+        "Caudal 300 mL/min",
+        "Presión admisible 100 kPa",
+        "Vida útil 10000 h"
+      ],
+      "intro": "La bomba de diafragma para líquidos con motor sin escobillas serie DPL30 de FOREACH está diseñada para el transporte de líquidos. Ofrece un caudal de 300 mL/min, una presión admisible de 100 kPa, utiliza un motor sin escobillas y tiene una vida útil de 10000 h. Es adecuada para el transporte de soluciones de limpieza, la transferencia de reactivos, la descarga de líquidos residuales, el cebado de tuberías y la circulación de líquidos, y puede seleccionarse para equipos IVD, ciencias de la vida, automatización de laboratorio e instrumentos analíticos. Es adecuada para equipos que requieren una vida útil más larga y mayores intervalos de mantenimiento. Consulte la tabla de especificaciones inferior para ver los parámetros detallados.",
+      "applications": "Transporte de soluciones de limpieza, transferencia de reactivos, descarga de líquidos residuales, cebado de tuberías, circulación de líquidos",
+      "breadcrumbs": [
+        "Inicio",
+        "Centro de productos",
+        "Bombas de diafragma",
+        "Bomba de diafragma para líquidos con motor sin escobillas serie DPL30"
+      ],
+      "faqs": [
+        {
+          "question": "¿Qué líquidos puede transportar la bomba de diafragma para líquidos con motor sin escobillas serie DPL30?",
+          "answer": "Puede utilizarse para transportar soluciones de limpieza, reactivos, líquidos residuales y otros líquidos en los circuitos de los equipos. Antes de la selección, debe confirmarse la compatibilidad del líquido con la membrana, las válvulas, el cabezal de la bomba y los demás materiales en contacto con el fluido."
+        },
+        {
+          "question": "¿Cuáles son el caudal y la presión admisible de la bomba serie DPL30 con motor sin escobillas?",
+          "answer": "El caudal es de 300 mL/min y la presión admisible es de 100 kPa. El caudal real puede disminuir cuando aumentan la resistencia de la tubería y la presión de trabajo."
+        },
+        {
+          "question": "¿Cuál es la diferencia entre las versiones DPL30 con y sin escobillas?",
+          "answer": "La versión sin escobillas tiene una vida útil de 10000 h, mientras que la versión con escobillas tiene una vida útil de 3000 h. La versión sin escobillas es más adecuada para equipos con periodos de funcionamiento prolongados o mayores intervalos de mantenimiento."
+        },
+        {
+          "question": "¿Puede utilizarse la versión DPL30 sin escobillas en circuitos IVD?",
+          "answer": "Puede seleccionarse para el transporte de soluciones de limpieza, transferencia de reactivos, descarga de líquidos residuales, cebado de tuberías y circulación de líquidos en equipos IVD."
+        },
+        {
+          "question": "¿Qué condiciones de trabajo deben confirmarse al seleccionar la bomba serie DPL30 sin escobillas?",
+          "answer": "Deben confirmarse el medio, el caudal objetivo, la presión, el tiempo de funcionamiento continuo, la frecuencia de arranque y parada, los materiales en contacto con el fluido, la tensión de alimentación, la resistencia de la tubería y el espacio de instalación."
+        }
+      ]
+    },
+    "dpl60-brushed": {
+      "title": "Bomba de diafragma para líquidos con motor con escobillas serie DPL60",
+      "cardParameters": [
+        "Caudal 600 mL/min",
+        "Presión admisible 100 kPa",
+        "Vida útil 3000 h"
+      ],
+      "intro": "La bomba de diafragma para líquidos con motor con escobillas serie DPL60 de FOREACH está diseñada para el transporte de líquidos. Ofrece un caudal de 600 mL/min, una presión admisible de 100 kPa, utiliza un motor con escobillas y tiene una vida útil de 3000 h. Es adecuada para el transporte de soluciones de limpieza, la descarga de líquidos residuales, el cebado de tuberías y la circulación de líquidos, y puede seleccionarse para equipos IVD, ciencias de la vida, automatización de laboratorio e instrumentos analíticos. El caudal real puede variar según el medio, la presión de trabajo y la resistencia de la tubería. Consulte la tabla de especificaciones inferior para ver los parámetros detallados.",
+      "applications": "Transporte de soluciones de limpieza, descarga de líquidos residuales, cebado de tuberías, circulación de líquidos",
+      "breadcrumbs": [
+        "Inicio",
+        "Centro de productos",
+        "Bombas de diafragma",
+        "Bomba de diafragma para líquidos con motor con escobillas serie DPL60"
+      ],
+      "faqs": [
+        {
+          "question": "¿Para qué aplicaciones de transporte de líquidos es adecuada la bomba serie DPL60 con motor con escobillas?",
+          "answer": "Es adecuada para el transporte de soluciones de limpieza, la descarga de líquidos residuales, el cebado de tuberías y la circulación de líquidos en equipos automatizados que requieren un caudal aproximado de 600 mL/min."
+        },
+        {
+          "question": "¿Cuáles son el caudal y la presión admisible de la bomba serie DPL60 con motor con escobillas?",
+          "answer": "El caudal es de 600 mL/min y la presión admisible es de 100 kPa. El caudal real puede verse afectado por el medio y la resistencia del circuito."
+        },
+        {
+          "question": "¿Cómo elegir entre DPL60 y DPL30?",
+          "answer": "DPL30 ofrece un caudal de 300 mL/min y DPL60 un caudal de 600 mL/min. La selección debe realizarse según el caudal requerido, la resistencia de la tubería y el tiempo de funcionamiento."
+        },
+        {
+          "question": "¿Cuál es la vida útil de la versión DPL60 con motor con escobillas?",
+          "answer": "La versión con motor con escobillas tiene una vida útil de 3000 h. La vida útil real también puede verse afectada por la carga, la frecuencia de arranque y parada y el entorno de funcionamiento."
+        },
+        {
+          "question": "¿Puede utilizarse la bomba serie DPL60 con motor con escobillas para descargar líquidos residuales?",
+          "answer": "Sí, pero debe confirmarse la compatibilidad del líquido residual con los materiales en contacto con el fluido y no deben transportarse líquidos incompatibles con dichos materiales."
+        }
+      ]
+    },
+    "dpl60-brushless": {
+      "title": "Bomba de diafragma para líquidos con motor sin escobillas serie DPL60",
+      "cardParameters": [
+        "Caudal 600 mL/min",
+        "Presión admisible 100 kPa",
+        "Vida útil 10000 h"
+      ],
+      "intro": "La bomba de diafragma para líquidos con motor sin escobillas serie DPL60 de FOREACH está diseñada para el transporte de líquidos. Ofrece un caudal de 600 mL/min, una presión admisible de 100 kPa, utiliza un motor sin escobillas y tiene una vida útil de 10000 h. Es adecuada para el transporte de soluciones de limpieza, la descarga de líquidos residuales, el cebado de tuberías y la circulación de líquidos, y puede seleccionarse para equipos IVD, ciencias de la vida, automatización de laboratorio e instrumentos analíticos. Es adecuada para equipos con periodos de funcionamiento prolongados o mayores intervalos de mantenimiento. Consulte la tabla de especificaciones inferior para ver los parámetros detallados.",
+      "applications": "Transporte de soluciones de limpieza, descarga de líquidos residuales, cebado de tuberías, circulación de líquidos",
+      "breadcrumbs": [
+        "Inicio",
+        "Centro de productos",
+        "Bombas de diafragma",
+        "Bomba de diafragma para líquidos con motor sin escobillas serie DPL60"
+      ],
+      "faqs": [
+        {
+          "question": "¿Para qué equipos es adecuada la bomba serie DPL60 con motor sin escobillas?",
+          "answer": "Puede utilizarse para limpieza, descarga de líquidos residuales, cebado de tuberías y circulación de líquidos en equipos IVD, ciencias de la vida, automatización de laboratorio e instrumentos analíticos."
+        },
+        {
+          "question": "¿Cuáles son el caudal y la presión admisible de la versión DPL60 sin escobillas?",
+          "answer": "El caudal es de 600 mL/min y la presión admisible es de 100 kPa. El caudal real debe confirmarse según la longitud y el diámetro de la tubería, el medio y la presión de trabajo."
+        },
+        {
+          "question": "¿Es adecuada la versión DPL60 sin escobillas para funcionamiento continuo?",
+          "answer": "La versión sin escobillas tiene una vida útil de 10000 h y es más adecuada para equipos con periodos de funcionamiento prolongados o mayores intervalos de mantenimiento. La selección final debe basarse en el ciclo de trabajo real."
+        },
+        {
+          "question": "¿Cuál es la principal diferencia entre DPL60 y DPL30?",
+          "answer": "La principal diferencia es el caudal. DPL30 ofrece 300 mL/min y DPL60 ofrece 600 mL/min. Debe seleccionarse según la velocidad de transporte requerida por el circuito del equipo."
+        },
+        {
+          "question": "¿Por qué se necesitan los parámetros de la tubería al seleccionar la bomba serie DPL60 sin escobillas?",
+          "answer": "La longitud, el diámetro interior, el número de codos y la diferencia de altura generan resistencia en el circuito y afectan al caudal real de la bomba."
+        }
+      ]
+    },
+    "dpl30h-brushed": {
+      "title": "Bomba de diafragma para líquidos de alta presión con motor con escobillas serie DPL30H",
+      "cardParameters": [
+        "Caudal 300 mL/min",
+        "Presión admisible 600 kPa",
+        "Vida útil 3000 h"
+      ],
+      "intro": "La bomba de diafragma para líquidos de alta presión con motor con escobillas serie DPL30H de FOREACH está diseñada para transportar líquidos en condiciones de mayor presión. Ofrece un caudal de 300 mL/min, una presión admisible de 600 kPa, utiliza un motor con escobillas y tiene una vida útil de 3000 h. Es adecuada para instrumentos automatizados con una mayor resistencia de tubería, una contrapresión elevada o requisitos de transporte estable de líquidos, y puede seleccionarse para equipos IVD, ciencias de la vida, automatización de laboratorio e instrumentos analíticos. El rendimiento real puede variar según el medio, la tubería y la presión de trabajo. Consulte la tabla de especificaciones inferior para ver los parámetros detallados.",
+      "applications": "Transporte de líquidos con alta contrapresión, transporte de soluciones de limpieza, transferencia de reactivos, circulación de líquidos",
+      "breadcrumbs": [
+        "Inicio",
+        "Centro de productos",
+        "Bombas de diafragma",
+        "Bomba de diafragma para líquidos de alta presión con motor con escobillas serie DPL30H"
+      ],
+      "faqs": [
+        {
+          "question": "¿Cuál es la diferencia entre DPL30H y el DPL30 estándar?",
+          "answer": "DPL30H es una bomba de diafragma para líquidos de alta presión con un caudal de 300 mL/min y una presión admisible de 600 kPa. El DPL30 estándar ofrece 300 mL/min y una presión admisible de 100 kPa. DPL30H es más adecuado para circuitos con mayor contrapresión o resistencia de tubería."
+        },
+        {
+          "question": "¿Para qué aplicaciones es adecuada la versión DPL30H con motor con escobillas?",
+          "answer": "Es adecuada para el transporte de soluciones de limpieza, transferencia de reactivos y circulación de líquidos cuando es necesario superar una mayor resistencia de tubería, circuitos más largos o una contrapresión elevada."
+        },
+        {
+          "question": "¿La presión afecta al caudal real del DPL30H?",
+          "answer": "Sí. El caudal real puede disminuir cuando aumentan la presión de trabajo y la resistencia del circuito, por lo que deben realizarse pruebas con las condiciones reales de presión del equipo."
+        },
+        {
+          "question": "¿Cuál es la vida útil de la versión DPL30H con motor con escobillas?",
+          "answer": "La versión con escobillas tiene una vida útil de 3000 h. La vida útil real también puede verse afectada por la carga, la frecuencia de arranque y parada y el entorno de funcionamiento."
+        },
+        {
+          "question": "¿Cuándo debe seleccionarse la bomba DPL30H de alta presión?",
+          "answer": "Debe considerarse DPL30H cuando el DPL30 estándar no puede superar la resistencia del circuito o cuando el equipo requiere una contrapresión más alta."
+        }
+      ]
+    },
+    "dpl30h-brushless": {
+      "title": "Bomba de diafragma para líquidos de alta presión con motor sin escobillas serie DPL30H",
+      "cardParameters": [
+        "Caudal 300 mL/min",
+        "Presión admisible 600 kPa",
+        "Vida útil 10000 h"
+      ],
+      "intro": "La bomba de diafragma para líquidos de alta presión con motor sin escobillas serie DPL30H de FOREACH está diseñada para transportar líquidos en condiciones de mayor presión. Ofrece un caudal de 300 mL/min, una presión admisible de 600 kPa, utiliza un motor sin escobillas y tiene una vida útil de 10000 h. Es adecuada para instrumentos automatizados con una mayor resistencia de tubería, una contrapresión elevada o periodos prolongados de funcionamiento continuo, y puede seleccionarse para equipos IVD, ciencias de la vida, automatización de laboratorio e instrumentos analíticos. Consulte la tabla de especificaciones inferior para ver los parámetros detallados.",
+      "applications": "Transporte de líquidos con alta contrapresión, transporte de soluciones de limpieza, transferencia de reactivos, circulación de líquidos",
+      "breadcrumbs": [
+        "Inicio",
+        "Centro de productos",
+        "Bombas de diafragma",
+        "Bomba de diafragma para líquidos de alta presión con motor sin escobillas serie DPL30H"
+      ],
+      "faqs": [
+        {
+          "question": "¿Para qué equipos es adecuada la versión DPL30H sin escobillas?",
+          "answer": "Es adecuada para equipos automatizados con mayor contrapresión o resistencia de tubería y mayores requisitos de vida útil e intervalos de mantenimiento."
+        },
+        {
+          "question": "¿Cuáles son el caudal y la presión admisible de la versión DPL30H sin escobillas?",
+          "answer": "El caudal es de 300 mL/min y la presión admisible es de 600 kPa. El rendimiento real debe confirmarse según el medio, la tubería y la presión de trabajo."
+        },
+        {
+          "question": "¿Cuál es la diferencia entre las versiones DPL30H con y sin escobillas?",
+          "answer": "Ambas versiones tienen el mismo caudal y la misma presión admisible. Las principales diferencias son el tipo de motor y la vida útil. La versión sin escobillas tiene una vida útil de 10000 h y la versión con escobillas de 3000 h."
+        },
+        {
+          "question": "¿Puede utilizarse la bomba DPL30H sin escobillas en equipos IVD?",
+          "answer": "Puede seleccionarse para requisitos de transporte de líquidos con alta contrapresión en equipos IVD, ciencias de la vida, automatización de laboratorio e instrumentos analíticos."
+        },
+        {
+          "question": "¿Qué información debe facilitarse al seleccionar una bomba DPL30H de alta presión?",
+          "answer": "Debe facilitarse el medio, el caudal objetivo, la presión de entrada, la presión de salida, el tamaño de la tubería, el tiempo de funcionamiento, la tensión de alimentación, los materiales en contacto con el fluido y el espacio de instalación."
+        }
+      ]
+    },
+    "dpgl800-brushless": {
+      "title": "Bomba de diafragma sin escobillas para gas y líquido serie DPGL800",
+      "cardParameters": [
+        "Caudal 6 L/min",
+        "Vacío máximo -90 kPa",
+        "Vida útil 10000 h"
+      ],
+      "intro": "La bomba de diafragma sin escobillas para gas y líquido serie DPGL800 de FOREACH puede utilizarse para la aspiración y el transporte de gases, líquidos y medios mixtos gas-líquido. Ofrece un caudal de 6 L/min, un vacío máximo de -90 kPa, utiliza un motor sin escobillas y tiene una vida útil de 10000 h. Es adecuada para la extracción de líquidos residuales, el transporte de medios mixtos gas-líquido, el vaciado de tuberías y equipos automatizados que requieren una elevada capacidad de aspiración. El rendimiento real puede variar según el estado del medio, la configuración de la tubería y la carga de trabajo. Consulte la tabla de especificaciones inferior para ver los parámetros detallados.",
+      "applications": "Extracción de líquidos residuales, transporte de medios mixtos gas-líquido, vaciado de tuberías, aspiración de gases",
+      "breadcrumbs": [
+        "Inicio",
+        "Centro de productos",
+        "Bombas de diafragma",
+        "Bomba de diafragma sin escobillas para gas y líquido serie DPGL800"
+      ],
+      "faqs": [
+        {
+          "question": "¿Qué medios puede transportar la DPGL800?",
+          "answer": "DPGL800 puede utilizarse para aspirar y transportar gases, líquidos y medios mixtos gas-líquido. Antes del uso, debe confirmarse la compatibilidad del medio con los materiales en contacto con el fluido."
+        },
+        {
+          "question": "¿Cuáles son el caudal y el vacío máximo de la DPGL800?",
+          "answer": "El caudal es de 6 L/min y el vacío máximo es de -90 kPa. El rendimiento real puede verse afectado por el estado del medio, la resistencia de la tubería y la carga del equipo."
+        },
+        {
+          "question": "¿Para qué aplicaciones es adecuada la DPGL800?",
+          "answer": "Puede utilizarse para la extracción de líquidos residuales, el transporte de medios mixtos gas-líquido, el vaciado de tuberías y equipos automatizados que requieren una elevada capacidad de aspiración."
+        },
+        {
+          "question": "¿Puede la DPGL800 bombear únicamente líquido?",
+          "answer": "Puede utilizarse para líquidos y medios mixtos gas-líquido, pero la idoneidad para un líquido concreto debe confirmarse según sus propiedades, el tiempo de funcionamiento y los materiales en contacto con el fluido."
+        },
+        {
+          "question": "¿Qué datos deben facilitarse antes de seleccionar la DPGL800?",
+          "answer": "Se recomienda facilitar el estado del medio, la proporción de líquido, el caudal objetivo, el vacío requerido, el tamaño de la tubería, el tiempo de funcionamiento continuo, la tensión de alimentación y el espacio de instalación."
+        }
+      ]
+    }
+  },
+  "fr": {
+    "dpl30-brushed": {
+      "title": "Pompe à membrane pour liquides à moteur à balais série DPL30",
+      "cardParameters": [
+        "Débit 300 mL/min",
+        "Pression admissible 100 kPa",
+        "Durée de vie 3000 h"
+      ],
+      "intro": "La pompe à membrane pour liquides à moteur à balais série DPL30 de FOREACH est destinée au transfert de liquides. Elle offre un débit de 300 mL/min, une pression admissible de 100 kPa, utilise un moteur à balais et présente une durée de vie de 3000 h. Elle convient au transfert de solutions de lavage, au transfert de réactifs, à l’évacuation des liquides usagés, à l’amorçage des conduites et à la circulation de liquides, et peut être sélectionnée pour des équipements IVD, les sciences de la vie, l’automatisation de laboratoire et les instruments d’analyse. Le débit réel peut varier selon le fluide, la pression de fonctionnement et la résistance du circuit. Se reporter au tableau des spécifications ci-dessous pour les paramètres détaillés.",
+      "applications": "Transfert de solutions de lavage, transfert de réactifs, évacuation des liquides usagés, amorçage des conduites, circulation de liquides",
+      "breadcrumbs": [
+        "Accueil",
+        "Centre de produits",
+        "Pompes à membrane",
+        "Pompe à membrane pour liquides à moteur à balais série DPL30"
+      ],
+      "faqs": [
+        {
+          "question": "Quels liquides la pompe à membrane pour liquides à moteur à balais série DPL30 peut-elle transférer ?",
+          "answer": "Elle peut transférer des solutions de lavage, des réactifs, des liquides usagés et d’autres liquides dans les circuits fluidiques des équipements. Avant utilisation, vérifier la compatibilité de la composition, de la concentration et de la température du liquide avec la membrane, les clapets, la tête de pompe et les autres matériaux en contact avec le fluide."
+        },
+        {
+          "question": "Quels sont le débit et la pression admissible de la pompe série DPL30 à moteur à balais ?",
+          "answer": "Le débit est de 300 mL/min et la pression admissible est de 100 kPa. Le débit réel peut être influencé par la viscosité du liquide, la longueur et le diamètre des conduites, la pression de fonctionnement et la résistance du circuit."
+        },
+        {
+          "question": "La pompe série DPL30 à moteur à balais peut-elle être utilisée dans des équipements IVD ?",
+          "answer": "Elle peut être sélectionnée pour les fonctions de lavage, de transfert de réactifs, d’évacuation des liquides usagés et de circulation de liquides dans les équipements IVD, les sciences de la vie, l’automatisation de laboratoire et les instruments d’analyse."
+        },
+        {
+          "question": "Dans quelles conditions la version DPL30 à moteur à balais est-elle adaptée ?",
+          "answer": "La version à balais présente une durée de vie de 3000 h et convient aux équipements nécessitant des performances de transfert de base et une maîtrise des coûts, avec une durée de fonctionnement continu relativement limitée."
+        },
+        {
+          "question": "Quelles informations faut-il fournir avant de sélectionner la pompe série DPL30 à moteur à balais ?",
+          "answer": "Fournir le fluide, le débit cible, la pression de fonctionnement, la hauteur d’aspiration, la durée de fonctionnement, la tension d’alimentation, les dimensions des conduites, les exigences relatives aux matériaux en contact avec le fluide et l’espace d’installation."
+        }
+      ]
+    },
+    "dpl30-brushless": {
+      "title": "Pompe à membrane pour liquides à moteur sans balais série DPL30",
+      "cardParameters": [
+        "Débit 300 mL/min",
+        "Pression admissible 100 kPa",
+        "Durée de vie 10000 h"
+      ],
+      "intro": "La pompe à membrane pour liquides à moteur sans balais série DPL30 de FOREACH est destinée au transfert de liquides. Elle offre un débit de 300 mL/min, une pression admissible de 100 kPa, utilise un moteur sans balais et présente une durée de vie de 10000 h. Elle convient au transfert de solutions de lavage, au transfert de réactifs, à l’évacuation des liquides usagés, à l’amorçage des conduites et à la circulation de liquides, et peut être sélectionnée pour des équipements IVD, les sciences de la vie, l’automatisation de laboratoire et les instruments d’analyse. Elle convient aux équipements exigeant une durée de fonctionnement plus longue et des intervalles de maintenance plus espacés. Se reporter au tableau des spécifications ci-dessous pour les paramètres détaillés.",
+      "applications": "Transfert de solutions de lavage, transfert de réactifs, évacuation des liquides usagés, amorçage des conduites, circulation de liquides",
+      "breadcrumbs": [
+        "Accueil",
+        "Centre de produits",
+        "Pompes à membrane",
+        "Pompe à membrane pour liquides à moteur sans balais série DPL30"
+      ],
+      "faqs": [
+        {
+          "question": "Quels liquides la pompe à membrane pour liquides à moteur sans balais série DPL30 peut-elle transférer ?",
+          "answer": "Elle peut transférer des solutions de lavage, des réactifs, des liquides usagés et d’autres liquides dans les circuits fluidiques des équipements. Avant la sélection, vérifier la compatibilité du liquide avec la membrane, les clapets, la tête de pompe et les autres matériaux en contact avec le fluide."
+        },
+        {
+          "question": "Quels sont le débit et la pression admissible de la pompe série DPL30 à moteur sans balais ?",
+          "answer": "Le débit est de 300 mL/min et la pression admissible est de 100 kPa. Le débit réel peut diminuer lorsque la résistance des conduites et la pression de fonctionnement augmentent."
+        },
+        {
+          "question": "Quelle est la différence entre les versions DPL30 sans balais et à balais ?",
+          "answer": "La version sans balais présente une durée de vie de 10000 h, tandis que la version à balais présente une durée de vie de 3000 h. La version sans balais convient davantage aux équipements fonctionnant plus longtemps ou nécessitant des intervalles de maintenance plus espacés."
+        },
+        {
+          "question": "La version DPL30 sans balais peut-elle être utilisée dans des circuits IVD ?",
+          "answer": "Elle peut être sélectionnée pour le transfert de solutions de lavage, le transfert de réactifs, l’évacuation des liquides usagés, l’amorçage des conduites et la circulation de liquides dans les équipements IVD."
+        },
+        {
+          "question": "Quelles conditions de fonctionnement faut-il confirmer pour sélectionner la pompe série DPL30 sans balais ?",
+          "answer": "Confirmer le fluide, le débit cible, la pression, la durée de fonctionnement continu, la fréquence de démarrage et d’arrêt, les matériaux en contact avec le fluide, la tension d’alimentation, la résistance des conduites et l’espace d’installation."
+        }
+      ]
+    },
+    "dpl60-brushed": {
+      "title": "Pompe à membrane pour liquides à moteur à balais série DPL60",
+      "cardParameters": [
+        "Débit 600 mL/min",
+        "Pression admissible 100 kPa",
+        "Durée de vie 3000 h"
+      ],
+      "intro": "La pompe à membrane pour liquides à moteur à balais série DPL60 de FOREACH est destinée au transfert de liquides. Elle offre un débit de 600 mL/min, une pression admissible de 100 kPa, utilise un moteur à balais et présente une durée de vie de 3000 h. Elle convient au transfert de solutions de lavage, à l’évacuation des liquides usagés, à l’amorçage des conduites et à la circulation de liquides, et peut être sélectionnée pour des équipements IVD, les sciences de la vie, l’automatisation de laboratoire et les instruments d’analyse. Le débit réel peut varier selon le fluide, la pression de fonctionnement et la résistance du circuit. Se reporter au tableau des spécifications ci-dessous pour les paramètres détaillés.",
+      "applications": "Transfert de solutions de lavage, évacuation des liquides usagés, amorçage des conduites, circulation de liquides",
+      "breadcrumbs": [
+        "Accueil",
+        "Centre de produits",
+        "Pompes à membrane",
+        "Pompe à membrane pour liquides à moteur à balais série DPL60"
+      ],
+      "faqs": [
+        {
+          "question": "Pour quelles applications de transfert la pompe série DPL60 à moteur à balais est-elle adaptée ?",
+          "answer": "Elle convient au transfert de solutions de lavage, à l’évacuation des liquides usagés, à l’amorçage des conduites et à la circulation de liquides dans les équipements automatisés nécessitant un débit d’environ 600 mL/min."
+        },
+        {
+          "question": "Quels sont le débit et la pression admissible de la pompe série DPL60 à moteur à balais ?",
+          "answer": "Le débit est de 600 mL/min et la pression admissible est de 100 kPa. Le débit réel peut être influencé par le fluide et la résistance du circuit."
+        },
+        {
+          "question": "Comment choisir entre DPL60 et DPL30 ?",
+          "answer": "DPL30 offre un débit de 300 mL/min, tandis que DPL60 offre un débit de 600 mL/min. Le choix doit être effectué selon le débit requis, la résistance des conduites et la durée de fonctionnement."
+        },
+        {
+          "question": "Quelle est la durée de vie de la version DPL60 à moteur à balais ?",
+          "answer": "La version à moteur à balais présente une durée de vie de 3000 h. La durée de vie réelle peut également être influencée par la charge, la fréquence de démarrage et d’arrêt et l’environnement de fonctionnement."
+        },
+        {
+          "question": "La pompe série DPL60 à moteur à balais peut-elle être utilisée pour évacuer des liquides usagés ?",
+          "answer": "Oui, mais il faut vérifier la compatibilité du liquide usagé avec les matériaux en contact avec le fluide et éviter les liquides incompatibles avec ces matériaux."
+        }
+      ]
+    },
+    "dpl60-brushless": {
+      "title": "Pompe à membrane pour liquides à moteur sans balais série DPL60",
+      "cardParameters": [
+        "Débit 600 mL/min",
+        "Pression admissible 100 kPa",
+        "Durée de vie 10000 h"
+      ],
+      "intro": "La pompe à membrane pour liquides à moteur sans balais série DPL60 de FOREACH est destinée au transfert de liquides. Elle offre un débit de 600 mL/min, une pression admissible de 100 kPa, utilise un moteur sans balais et présente une durée de vie de 10000 h. Elle convient au transfert de solutions de lavage, à l’évacuation des liquides usagés, à l’amorçage des conduites et à la circulation de liquides, et peut être sélectionnée pour des équipements IVD, les sciences de la vie, l’automatisation de laboratoire et les instruments d’analyse. Elle convient aux équipements fonctionnant plus longtemps ou nécessitant des intervalles de maintenance plus espacés. Se reporter au tableau des spécifications ci-dessous pour les paramètres détaillés.",
+      "applications": "Transfert de solutions de lavage, évacuation des liquides usagés, amorçage des conduites, circulation de liquides",
+      "breadcrumbs": [
+        "Accueil",
+        "Centre de produits",
+        "Pompes à membrane",
+        "Pompe à membrane pour liquides à moteur sans balais série DPL60"
+      ],
+      "faqs": [
+        {
+          "question": "À quels équipements la pompe série DPL60 à moteur sans balais convient-elle ?",
+          "answer": "Elle peut être utilisée pour le lavage, l’évacuation des liquides usagés, l’amorçage des conduites et la circulation de liquides dans les équipements IVD, les sciences de la vie, l’automatisation de laboratoire et les instruments d’analyse."
+        },
+        {
+          "question": "Quels sont le débit et la pression admissible de la version DPL60 sans balais ?",
+          "answer": "Le débit est de 600 mL/min et la pression admissible est de 100 kPa. Le débit réel doit être confirmé en fonction de la longueur et du diamètre des conduites, du fluide et de la pression de fonctionnement."
+        },
+        {
+          "question": "La version DPL60 sans balais convient-elle à un fonctionnement continu ?",
+          "answer": "La version sans balais présente une durée de vie de 10000 h et convient davantage aux équipements fonctionnant plus longtemps ou nécessitant des intervalles de maintenance plus espacés. Le choix final doit toutefois être basé sur le cycle de fonctionnement réel."
+        },
+        {
+          "question": "Quelle est la principale différence entre DPL60 et DPL30 ?",
+          "answer": "La principale différence est le débit. DPL30 offre 300 mL/min et DPL60 offre 600 mL/min. Le choix doit être effectué selon la vitesse de transfert requise par le circuit de l’équipement."
+        },
+        {
+          "question": "Pourquoi faut-il fournir les paramètres des conduites pour sélectionner la pompe série DPL60 sans balais ?",
+          "answer": "La longueur, le diamètre intérieur, le nombre de coudes et la différence de hauteur créent une résistance du circuit et influencent le débit réel de la pompe."
+        }
+      ]
+    },
+    "dpl30h-brushed": {
+      "title": "Pompe à membrane haute pression pour liquides à moteur à balais série DPL30H",
+      "cardParameters": [
+        "Débit 300 mL/min",
+        "Pression admissible 600 kPa",
+        "Durée de vie 3000 h"
+      ],
+      "intro": "La pompe à membrane haute pression pour liquides à moteur à balais série DPL30H de FOREACH est destinée au transfert de liquides sous des conditions de pression plus élevées. Elle offre un débit de 300 mL/min, une pression admissible de 600 kPa, utilise un moteur à balais et présente une durée de vie de 3000 h. Elle convient aux instruments automatisés présentant une résistance de circuit élevée, une contre-pression importante ou des exigences de transfert stable, et peut être sélectionnée pour des équipements IVD, les sciences de la vie, l’automatisation de laboratoire et les instruments d’analyse. Les performances réelles peuvent varier selon le fluide, les conduites et la pression de fonctionnement. Se reporter au tableau des spécifications ci-dessous pour les paramètres détaillés.",
+      "applications": "Transfert de liquides sous forte contre-pression, transfert de solutions de lavage, transfert de réactifs, circulation de liquides",
+      "breadcrumbs": [
+        "Accueil",
+        "Centre de produits",
+        "Pompes à membrane",
+        "Pompe à membrane haute pression pour liquides à moteur à balais série DPL30H"
+      ],
+      "faqs": [
+        {
+          "question": "Quelle est la différence entre DPL30H et le DPL30 standard ?",
+          "answer": "DPL30H est une pompe à membrane haute pression pour liquides offrant un débit de 300 mL/min et une pression admissible de 600 kPa. Le DPL30 standard offre 300 mL/min et une pression admissible de 100 kPa. DPL30H convient davantage aux circuits présentant une contre-pression ou une résistance plus élevée."
+        },
+        {
+          "question": "Pour quelles applications la version DPL30H à moteur à balais est-elle adaptée ?",
+          "answer": "Elle convient au transfert de solutions de lavage, au transfert de réactifs et à la circulation de liquides lorsqu’il faut surmonter une résistance de circuit élevée, une conduite plus longue ou une contre-pression importante."
+        },
+        {
+          "question": "La pression influence-t-elle le débit réel du DPL30H ?",
+          "answer": "Oui. Le débit réel peut diminuer lorsque la pression de fonctionnement et la résistance du circuit augmentent. Des essais doivent donc être réalisés dans les conditions de pression réelles de l’équipement."
+        },
+        {
+          "question": "Quelle est la durée de vie de la version DPL30H à moteur à balais ?",
+          "answer": "La version à balais présente une durée de vie de 3000 h. La durée de vie réelle peut également être influencée par la charge, la fréquence de démarrage et d’arrêt et l’environnement de fonctionnement."
+        },
+        {
+          "question": "Quand faut-il sélectionner la pompe DPL30H haute pression ?",
+          "answer": "Il convient d’envisager DPL30H lorsque le DPL30 standard ne peut pas surmonter la résistance du circuit ou lorsque l’équipement nécessite une contre-pression plus élevée."
+        }
+      ]
+    },
+    "dpl30h-brushless": {
+      "title": "Pompe à membrane haute pression pour liquides à moteur sans balais série DPL30H",
+      "cardParameters": [
+        "Débit 300 mL/min",
+        "Pression admissible 600 kPa",
+        "Durée de vie 10000 h"
+      ],
+      "intro": "La pompe à membrane haute pression pour liquides à moteur sans balais série DPL30H de FOREACH est destinée au transfert de liquides sous des conditions de pression plus élevées. Elle offre un débit de 300 mL/min, une pression admissible de 600 kPa, utilise un moteur sans balais et présente une durée de vie de 10000 h. Elle convient aux instruments automatisés présentant une résistance de circuit élevée, une contre-pression importante ou de longues périodes de fonctionnement continu, et peut être sélectionnée pour des équipements IVD, les sciences de la vie, l’automatisation de laboratoire et les instruments d’analyse. Se reporter au tableau des spécifications ci-dessous pour les paramètres détaillés.",
+      "applications": "Transfert de liquides sous forte contre-pression, transfert de solutions de lavage, transfert de réactifs, circulation de liquides",
+      "breadcrumbs": [
+        "Accueil",
+        "Centre de produits",
+        "Pompes à membrane",
+        "Pompe à membrane haute pression pour liquides à moteur sans balais série DPL30H"
+      ],
+      "faqs": [
+        {
+          "question": "À quels équipements la version DPL30H sans balais convient-elle ?",
+          "answer": "Elle convient aux équipements automatisés présentant une contre-pression ou une résistance de circuit élevée et des exigences importantes en matière de durée de vie et d’intervalles de maintenance."
+        },
+        {
+          "question": "Quels sont le débit et la pression admissible de la version DPL30H sans balais ?",
+          "answer": "Le débit est de 300 mL/min et la pression admissible est de 600 kPa. Les performances réelles doivent être confirmées selon le fluide, les conduites et la pression de fonctionnement."
+        },
+        {
+          "question": "Quelle est la différence entre les versions DPL30H sans balais et à balais ?",
+          "answer": "Les deux versions présentent le même débit et la même pression admissible. Les principales différences concernent le type de moteur et la durée de vie. La version sans balais présente une durée de vie de 10000 h, tandis que la version à balais présente une durée de vie de 3000 h."
+        },
+        {
+          "question": "La pompe DPL30H sans balais peut-elle être utilisée dans des équipements IVD ?",
+          "answer": "Elle peut être sélectionnée pour les besoins de transfert de liquides sous forte contre-pression dans les équipements IVD, les sciences de la vie, l’automatisation de laboratoire et les instruments d’analyse."
+        },
+        {
+          "question": "Quelles informations faut-il fournir pour sélectionner une pompe DPL30H haute pression ?",
+          "answer": "Fournir le fluide, le débit cible, la pression d’entrée, la pression de sortie, les dimensions des conduites, la durée de fonctionnement, la tension d’alimentation, les matériaux en contact avec le fluide et l’espace d’installation."
+        }
+      ]
+    },
+    "dpgl800-brushless": {
+      "title": "Pompe à membrane sans balais pour gaz et liquides série DPGL800",
+      "cardParameters": [
+        "Débit 6 L/min",
+        "Vide maximal -90 kPa",
+        "Durée de vie 10000 h"
+      ],
+      "intro": "La pompe à membrane sans balais pour gaz et liquides série DPGL800 de FOREACH peut être utilisée pour l’aspiration et le transfert de gaz, de liquides et de mélanges gaz-liquide. Elle offre un débit de 6 L/min, un vide maximal de -90 kPa, utilise un moteur sans balais et présente une durée de vie de 10000 h. Elle convient à l’extraction des liquides usagés, au transfert de mélanges gaz-liquide, à l’évacuation des conduites et aux équipements automatisés nécessitant une forte capacité d’aspiration. Les performances réelles peuvent varier selon l’état du fluide, la configuration des conduites et la charge de fonctionnement. Se reporter au tableau des spécifications ci-dessous pour les paramètres détaillés.",
+      "applications": "Extraction des liquides usagés, transfert de mélanges gaz-liquide, évacuation des conduites, aspiration de gaz",
+      "breadcrumbs": [
+        "Accueil",
+        "Centre de produits",
+        "Pompes à membrane",
+        "Pompe à membrane sans balais pour gaz et liquides série DPGL800"
+      ],
+      "faqs": [
+        {
+          "question": "Quels fluides la DPGL800 peut-elle transférer ?",
+          "answer": "DPGL800 peut être utilisée pour aspirer et transférer des gaz, des liquides et des mélanges gaz-liquide. Avant utilisation, vérifier la compatibilité du fluide avec les matériaux en contact avec le fluide."
+        },
+        {
+          "question": "Quels sont le débit et le vide maximal de la DPGL800 ?",
+          "answer": "Le débit est de 6 L/min et le vide maximal est de -90 kPa. Les performances réelles peuvent être influencées par l’état du fluide, la résistance des conduites et la charge de l’équipement."
+        },
+        {
+          "question": "Pour quelles applications la DPGL800 est-elle adaptée ?",
+          "answer": "Elle peut être utilisée pour l’extraction des liquides usagés, le transfert de mélanges gaz-liquide, l’évacuation des conduites et les équipements automatisés nécessitant une forte capacité d’aspiration."
+        },
+        {
+          "question": "La DPGL800 peut-elle pomper uniquement du liquide ?",
+          "answer": "Elle peut être utilisée pour des liquides et des mélanges gaz-liquide, mais son adéquation à un liquide particulier doit être confirmée selon les propriétés du fluide, la durée de fonctionnement et les matériaux en contact avec le fluide."
+        },
+        {
+          "question": "Quelles informations faut-il fournir avant de sélectionner la DPGL800 ?",
+          "answer": "Fournir l’état du fluide, la proportion de liquide, le débit cible, le vide requis, les dimensions des conduites, la durée de fonctionnement continu, la tension d’alimentation et l’espace d’installation."
+        }
+      ]
+    }
+  },
+  "ko": {
+    "dpl30-brushed": {
+      "title": "DPL30 시리즈 브러시 모터 액체 다이어프램 펌프",
+      "cardParameters": [
+        "유량 300 mL/min",
+        "허용 압력 100 kPa",
+        "수명 3000 h"
+      ],
+      "intro": "FOREACH DPL30 시리즈 브러시 모터 액체 다이어프램 펌프는 액체 이송용 제품으로, 유량 300 mL/min, 허용 압력 100 kPa, 브러시 모터, 수명 3000 h 사양을 갖습니다. 세정액 이송, 시약 이송, 폐액 배출, 배관 프라이밍 및 액체 순환에 적합하며 IVD, 생명과학, 실험실 자동화 및 분석 장비에 적용할 수 있습니다. 실제 유량은 이송 매질, 작동 압력 및 배관 저항에 따라 달라질 수 있습니다. 자세한 사양은 아래 사양표를 참조하십시오.",
+      "applications": "세정액 이송, 시약 이송, 폐액 배출, 배관 프라이밍, 액체 순환",
+      "breadcrumbs": [
+        "홈",
+        "제품 센터",
+        "다이어프램 펌프",
+        "DPL30 시리즈 브러시 모터 액체 다이어프램 펌프"
+      ],
+      "faqs": [
+        {
+          "question": "DPL30 시리즈 브러시 모터 액체 다이어프램 펌프는 어떤 액체를 이송할 수 있습니까?",
+          "answer": "세정액, 시약, 폐액 및 장비 유로의 기타 액체 이송에 사용할 수 있습니다. 사용 전 액체의 성분, 농도 및 온도가 다이어프램, 밸브, 펌프 헤드 등 접액 재질과 호환되는지 확인해야 합니다."
+        },
+        {
+          "question": "DPL30 시리즈 브러시 모터 액체 다이어프램 펌프의 유량과 허용 압력은 얼마입니까?",
+          "answer": "유량은 300 mL/min이고 허용 압력은 100 kPa입니다. 실제 유량은 액체 점도, 배관 길이와 내경, 작동 압력 및 유로 저항의 영향을 받을 수 있습니다."
+        },
+        {
+          "question": "DPL30 시리즈 브러시 모터 액체 다이어프램 펌프를 IVD 장비에 사용할 수 있습니까?",
+          "answer": "IVD, 생명과학, 실험실 자동화 및 분석 장비의 세정, 시약 이송, 폐액 배출 및 액체 순환 용도로 선정할 수 있습니다."
+        },
+        {
+          "question": "DPL30 브러시 모터 버전은 어떤 사용 조건에 적합합니까?",
+          "answer": "브러시 모터 버전의 수명은 3000 h이며, 기본 이송 성능과 비용 관리가 중요하고 연속 운전 시간이 비교적 짧은 장비에 적합합니다."
+        },
+        {
+          "question": "DPL30 시리즈 브러시 모터 액체 다이어프램 펌프 선정 전에 어떤 정보를 제공해야 합니까?",
+          "answer": "이송 매질, 목표 유량, 작동 압력, 흡입 높이, 운전 시간, 공급 전압, 배관 규격, 접액 재질 요구사항 및 설치 공간을 제공하는 것이 좋습니다."
+        }
+      ]
+    },
+    "dpl30-brushless": {
+      "title": "DPL30 시리즈 브러시리스 모터 액체 다이어프램 펌프",
+      "cardParameters": [
+        "유량 300 mL/min",
+        "허용 압력 100 kPa",
+        "수명 10000 h"
+      ],
+      "intro": "FOREACH DPL30 시리즈 브러시리스 모터 액체 다이어프램 펌프는 액체 이송용 제품으로, 유량 300 mL/min, 허용 압력 100 kPa, 브러시리스 모터, 수명 10000 h 사양을 갖습니다. 세정액 이송, 시약 이송, 폐액 배출, 배관 프라이밍 및 액체 순환에 적합하며 IVD, 생명과학, 실험실 자동화 및 분석 장비에 적용할 수 있습니다. 긴 운전 수명과 긴 유지보수 주기가 필요한 장비에 적합합니다. 자세한 사양은 아래 사양표를 참조하십시오.",
+      "applications": "세정액 이송, 시약 이송, 폐액 배출, 배관 프라이밍, 액체 순환",
+      "breadcrumbs": [
+        "홈",
+        "제품 센터",
+        "다이어프램 펌프",
+        "DPL30 시리즈 브러시리스 모터 액체 다이어프램 펌프"
+      ],
+      "faqs": [
+        {
+          "question": "DPL30 시리즈 브러시리스 모터 액체 다이어프램 펌프는 어떤 액체를 이송할 수 있습니까?",
+          "answer": "세정액, 시약, 폐액 및 장비 유로의 기타 액체 이송에 사용할 수 있습니다. 선정 전에 액체가 다이어프램, 밸브, 펌프 헤드 등 접액 재질과 호환되는지 확인해야 합니다."
+        },
+        {
+          "question": "DPL30 시리즈 브러시리스 모터 액체 다이어프램 펌프의 유량과 허용 압력은 얼마입니까?",
+          "answer": "유량은 300 mL/min이고 허용 압력은 100 kPa입니다. 배관 저항과 작동 압력이 증가하면 실제 유량이 감소할 수 있습니다."
+        },
+        {
+          "question": "DPL30 브러시리스 버전과 브러시 버전의 차이는 무엇입니까?",
+          "answer": "브러시리스 버전의 수명은 10000 h이고 브러시 버전의 수명은 3000 h입니다. 브러시리스 버전은 운전 시간이 길거나 유지보수 주기를 늘려야 하는 장비에 더 적합합니다."
+        },
+        {
+          "question": "DPL30 브러시리스 버전을 IVD 유로에 사용할 수 있습니까?",
+          "answer": "IVD 장비의 세정액 이송, 시약 이송, 폐액 배출, 배관 프라이밍 및 액체 순환 용도로 선정할 수 있습니다."
+        },
+        {
+          "question": "DPL30 시리즈 브러시리스 모터 액체 다이어프램 펌프 선정 시 어떤 운전 조건을 확인해야 합니까?",
+          "answer": "이송 매질, 목표 유량, 압력, 연속 운전 시간, 기동 및 정지 빈도, 접액 재질, 공급 전압, 배관 저항 및 설치 공간을 확인해야 합니다."
+        }
+      ]
+    },
+    "dpl60-brushed": {
+      "title": "DPL60 시리즈 브러시 모터 액체 다이어프램 펌프",
+      "cardParameters": [
+        "유량 600 mL/min",
+        "허용 압력 100 kPa",
+        "수명 3000 h"
+      ],
+      "intro": "FOREACH DPL60 시리즈 브러시 모터 액체 다이어프램 펌프는 액체 이송용 제품으로, 유량 600 mL/min, 허용 압력 100 kPa, 브러시 모터, 수명 3000 h 사양을 갖습니다. 세정액 이송, 폐액 배출, 배관 프라이밍 및 액체 순환에 적합하며 IVD, 생명과학, 실험실 자동화 및 분석 장비에 적용할 수 있습니다. 실제 유량은 매질의 특성, 작동 압력 및 배관 저항에 따라 달라질 수 있습니다. 자세한 사양은 아래 사양표를 참조하십시오.",
+      "applications": "세정액 이송, 폐액 배출, 배관 프라이밍, 액체 순환",
+      "breadcrumbs": [
+        "홈",
+        "제품 센터",
+        "다이어프램 펌프",
+        "DPL60 시리즈 브러시 모터 액체 다이어프램 펌프"
+      ],
+      "faqs": [
+        {
+          "question": "DPL60 시리즈 브러시 모터 액체 다이어프램 펌프는 어떤 액체 이송 용도에 적합합니까?",
+          "answer": "약 600 mL/min의 유량이 필요한 자동화 장비의 세정액 이송, 폐액 배출, 배관 프라이밍 및 액체 순환에 적합합니다."
+        },
+        {
+          "question": "DPL60 시리즈 브러시 모터 액체 다이어프램 펌프의 유량과 허용 압력은 얼마입니까?",
+          "answer": "유량은 600 mL/min이고 허용 압력은 100 kPa입니다. 실제 유량은 매질의 특성과 유로 저항의 영향을 받을 수 있습니다."
+        },
+        {
+          "question": "DPL60과 DPL30은 어떻게 선택해야 합니까?",
+          "answer": "DPL30의 유량은 300 mL/min이고 DPL60의 유량은 600 mL/min입니다. 장비에 필요한 유량, 배관 저항 및 운전 시간에 따라 선택해야 합니다."
+        },
+        {
+          "question": "DPL60 브러시 모터 버전의 수명은 얼마입니까?",
+          "answer": "브러시 모터 버전의 수명은 3000 h입니다. 실제 수명은 부하, 기동 및 정지 빈도, 운전 환경의 영향도 받을 수 있습니다."
+        },
+        {
+          "question": "DPL60 시리즈 브러시 모터 액체 다이어프램 펌프를 폐액 배출에 사용할 수 있습니까?",
+          "answer": "사용할 수 있지만 폐액 성분과 접액 재질의 호환성을 확인해야 하며, 펌프의 접액 재질에 적합하지 않은 액체는 이송하지 않아야 합니다."
+        }
+      ]
+    },
+    "dpl60-brushless": {
+      "title": "DPL60 시리즈 브러시리스 모터 액체 다이어프램 펌프",
+      "cardParameters": [
+        "유량 600 mL/min",
+        "허용 압력 100 kPa",
+        "수명 10000 h"
+      ],
+      "intro": "FOREACH DPL60 시리즈 브러시리스 모터 액체 다이어프램 펌프는 액체 이송용 제품으로, 유량 600 mL/min, 허용 압력 100 kPa, 브러시리스 모터, 수명 10000 h 사양을 갖습니다. 세정액 이송, 폐액 배출, 배관 프라이밍 및 액체 순환에 적합하며 IVD, 생명과학, 실험실 자동화 및 분석 장비에 적용할 수 있습니다. 운전 시간이 길거나 유지보수 주기를 늘려야 하는 장비에 적합합니다. 자세한 사양은 아래 사양표를 참조하십시오.",
+      "applications": "세정액 이송, 폐액 배출, 배관 프라이밍, 액체 순환",
+      "breadcrumbs": [
+        "홈",
+        "제품 센터",
+        "다이어프램 펌프",
+        "DPL60 시리즈 브러시리스 모터 액체 다이어프램 펌프"
+      ],
+      "faqs": [
+        {
+          "question": "DPL60 시리즈 브러시리스 모터 액체 다이어프램 펌프는 어떤 장비에 적합합니까?",
+          "answer": "IVD, 생명과학, 실험실 자동화 및 분석 장비의 세정, 폐액 배출, 배관 프라이밍 및 액체 순환에 사용할 수 있습니다."
+        },
+        {
+          "question": "DPL60 브러시리스 버전의 유량과 허용 압력은 얼마입니까?",
+          "answer": "유량은 600 mL/min이고 허용 압력은 100 kPa입니다. 실제 유량은 배관 길이, 내경, 매질 및 작동 압력에 따라 확인해야 합니다."
+        },
+        {
+          "question": "DPL60 브러시리스 버전은 연속 운전에 적합합니까?",
+          "answer": "브러시리스 버전의 수명은 10000 h이며, 운전 시간이 길거나 유지보수 주기를 늘려야 하는 장비에 더 적합합니다. 최종 선정은 실제 운전 조건에 따라 확인해야 합니다."
+        },
+        {
+          "question": "DPL60과 DPL30의 주요 차이는 무엇입니까?",
+          "answer": "주요 차이는 유량입니다. DPL30은 300 mL/min, DPL60은 600 mL/min이며 장비 유로에 필요한 이송 속도에 따라 선택해야 합니다."
+        },
+        {
+          "question": "DPL60 시리즈 브러시리스 모터 액체 다이어프램 펌프 선정 시 배관 사양이 필요한 이유는 무엇입니까?",
+          "answer": "배관 길이, 내경, 엘보 수량 및 높이 차이는 모두 유로 저항을 발생시키며 펌프의 실제 유량에 영향을 줍니다."
+        }
+      ]
+    },
+    "dpl30h-brushed": {
+      "title": "DPL30H 시리즈 브러시 모터 고압 액체 다이어프램 펌프",
+      "cardParameters": [
+        "유량 300 mL/min",
+        "허용 압력 600 kPa",
+        "수명 3000 h"
+      ],
+      "intro": "FOREACH DPL30H 시리즈 브러시 모터 고압 액체 다이어프램 펌프는 비교적 높은 압력 조건에서 액체를 이송하는 제품으로, 유량 300 mL/min, 허용 압력 600 kPa, 브러시 모터, 수명 3000 h 사양을 갖습니다. 배관 저항이나 배압이 높거나 안정적인 액체 이송이 필요한 자동화 장비에 적합하며 IVD, 생명과학, 실험실 자동화 및 분석 장비에 적용할 수 있습니다. 실제 성능은 매질, 배관 및 작동 압력에 따라 달라질 수 있습니다. 자세한 사양은 아래 사양표를 참조하십시오.",
+      "applications": "고배압 액체 이송, 세정액 이송, 시약 이송, 액체 순환",
+      "breadcrumbs": [
+        "홈",
+        "제품 센터",
+        "다이어프램 펌프",
+        "DPL30H 시리즈 브러시 모터 고압 액체 다이어프램 펌프"
+      ],
+      "faqs": [
+        {
+          "question": "DPL30H와 일반 DPL30의 차이는 무엇입니까?",
+          "answer": "DPL30H는 유량 300 mL/min, 허용 압력 600 kPa의 고압 액체 다이어프램 펌프입니다. 일반 DPL30은 유량 300 mL/min, 허용 압력 100 kPa입니다. DPL30H는 배압이나 배관 저항이 높은 유로에 더 적합합니다."
+        },
+        {
+          "question": "DPL30H 브러시 모터 버전은 어떤 용도에 적합합니까?",
+          "answer": "높은 배관 저항, 긴 유로 또는 높은 배압을 극복해야 하는 세정액 이송, 시약 이송 및 액체 순환 용도에 적합합니다."
+        },
+        {
+          "question": "압력이 DPL30H의 실제 유량에 영향을 줍니까?",
+          "answer": "예. 작동 압력과 유로 저항이 증가하면 실제 유량이 감소할 수 있으므로 장비의 실제 압력 조건에서 시험해야 합니다."
+        },
+        {
+          "question": "DPL30H 브러시 모터 버전의 수명은 얼마입니까?",
+          "answer": "브러시 모터 버전의 수명은 3000 h입니다. 실제 수명은 부하, 기동 및 정지 빈도, 운전 환경의 영향도 받을 수 있습니다."
+        },
+        {
+          "question": "어떤 경우에 DPL30H 고압 액체 다이어프램 펌프를 선택해야 합니까?",
+          "answer": "일반 DPL30이 유로 저항을 극복하지 못하거나 장비에 높은 배압 요구가 있는 경우 DPL30H를 고려할 수 있습니다."
+        }
+      ]
+    },
+    "dpl30h-brushless": {
+      "title": "DPL30H 시리즈 브러시리스 모터 고압 액체 다이어프램 펌프",
+      "cardParameters": [
+        "유량 300 mL/min",
+        "허용 압력 600 kPa",
+        "수명 10000 h"
+      ],
+      "intro": "FOREACH DPL30H 시리즈 브러시리스 모터 고압 액체 다이어프램 펌프는 비교적 높은 압력 조건에서 액체를 이송하는 제품으로, 유량 300 mL/min, 허용 압력 600 kPa, 브러시리스 모터, 수명 10000 h 사양을 갖습니다. 배관 저항이나 배압이 높거나 연속 운전 시간이 긴 자동화 장비에 적합하며 IVD, 생명과학, 실험실 자동화 및 분석 장비에 적용할 수 있습니다. 자세한 사양은 아래 사양표를 참조하십시오.",
+      "applications": "고배압 액체 이송, 세정액 이송, 시약 이송, 액체 순환",
+      "breadcrumbs": [
+        "홈",
+        "제품 센터",
+        "다이어프램 펌프",
+        "DPL30H 시리즈 브러시리스 모터 고압 액체 다이어프램 펌프"
+      ],
+      "faqs": [
+        {
+          "question": "DPL30H 브러시리스 버전은 어떤 장비에 적합합니까?",
+          "answer": "높은 배압이나 배관 저항이 있고 운전 수명과 유지보수 주기에 대한 요구가 높은 자동화 장비에 적합합니다."
+        },
+        {
+          "question": "DPL30H 브러시리스 버전의 유량과 허용 압력은 얼마입니까?",
+          "answer": "유량은 300 mL/min이고 허용 압력은 600 kPa입니다. 실제 성능은 매질, 배관 및 작동 압력에 따라 확인해야 합니다."
+        },
+        {
+          "question": "DPL30H 브러시리스 버전과 브러시 버전의 차이는 무엇입니까?",
+          "answer": "두 버전의 유량과 허용 압력은 동일하며 주요 차이는 모터 유형과 수명입니다. 브러시리스 버전의 수명은 10000 h이고 브러시 버전의 수명은 3000 h입니다."
+        },
+        {
+          "question": "DPL30H 브러시리스 고압 액체 다이어프램 펌프를 IVD 장비에 사용할 수 있습니까?",
+          "answer": "IVD, 생명과학, 실험실 자동화 및 분석 장비의 고배압 액체 이송 요구에 맞춰 선정할 수 있습니다."
+        },
+        {
+          "question": "DPL30H 고압 액체 다이어프램 펌프 선정 시 어떤 정보를 제공해야 합니까?",
+          "answer": "매질, 목표 유량, 입구 압력, 출구 압력, 배관 규격, 운전 시간, 공급 전압, 접액 재질 및 설치 공간을 제공하는 것이 좋습니다."
+        }
+      ]
+    },
+    "dpgl800-brushless": {
+      "title": "DPGL800 시리즈 브러시리스 기액 혼합 다이어프램 펌프",
+      "cardParameters": [
+        "유량 6 L/min",
+        "최대 진공도 -90 kPa",
+        "수명 10000 h"
+      ],
+      "intro": "FOREACH DPGL800 시리즈 브러시리스 기액 혼합 다이어프램 펌프는 기체, 액체 및 기액 혼합 매질의 흡입과 이송에 사용할 수 있으며, 유량 6 L/min, 최대 진공도 -90 kPa, 브러시리스 모터, 수명 10000 h 사양을 갖습니다. 폐액 흡입 배출, 기액 혼합 매질 이송, 배관 배기 및 강한 흡입 성능이 필요한 자동화 장비에 적합합니다. 실제 성능은 매질 상태, 배관 구성 및 운전 부하에 따라 달라질 수 있습니다. 자세한 사양은 아래 사양표를 참조하십시오.",
+      "applications": "폐액 흡입 배출, 기액 혼합 매질 이송, 배관 배기, 기체 흡입",
+      "breadcrumbs": [
+        "홈",
+        "제품 센터",
+        "다이어프램 펌프",
+        "DPGL800 시리즈 브러시리스 기액 혼합 다이어프램 펌프"
+      ],
+      "faqs": [
+        {
+          "question": "DPGL800은 어떤 매질을 이송할 수 있습니까?",
+          "answer": "DPGL800은 기체, 액체 및 기액 혼합 매질의 흡입과 이송에 사용할 수 있습니다. 사용 전에 매질과 접액 재질의 호환성을 확인해야 합니다."
+        },
+        {
+          "question": "DPGL800의 유량과 최대 진공도는 얼마입니까?",
+          "answer": "유량은 6 L/min이고 최대 진공도는 -90 kPa입니다. 실제 성능은 매질 상태, 배관 저항 및 장비 부하의 영향을 받을 수 있습니다."
+        },
+        {
+          "question": "DPGL800은 어떤 용도에 적합합니까?",
+          "answer": "폐액 흡입 배출, 기액 혼합 매질 이송, 배관 배기 및 강한 흡입 성능이 필요한 자동화 장비에 사용할 수 있습니다."
+        },
+        {
+          "question": "DPGL800으로 액체만 이송할 수 있습니까?",
+          "answer": "액체 및 기액 혼합 매질 이송에 사용할 수 있지만 특정 액체에 적합한지는 매질 특성, 운전 시간 및 접액 재질에 따라 확인해야 합니다."
+        },
+        {
+          "question": "DPGL800 선정 전에 어떤 정보를 제공해야 합니까?",
+          "answer": "매질 상태, 액체 비율, 목표 유량, 필요한 진공도, 배관 규격, 연속 운전 시간, 공급 전압 및 설치 공간을 제공하는 것이 좋습니다."
+        }
+      ]
+    }
+  },
+  "ru": {
+    "dpl30-brushed": {
+      "title": "Жидкостный мембранный насос серии DPL30 с щёточным двигателем",
+      "cardParameters": [
+        "Расход 300 mL/min",
+        "Допустимое давление 100 kPa",
+        "Срок службы 3000 h"
+      ],
+      "intro": "Жидкостный мембранный насос серии DPL30 с щёточным двигателем FOREACH предназначен для перекачивания жидкостей. Расход составляет 300 mL/min, допустимое давление — 100 kPa, используется щёточный двигатель, срок службы — 3000 h. Насос подходит для подачи промывочных растворов, переноса реагентов, удаления отработанной жидкости, заполнения трубопровода и циркуляции жидкости и может применяться в системах IVD, оборудовании для биологических исследований, лабораторной автоматизации и аналитических приборах. Фактический расход может зависеть от среды, рабочего давления и гидравлического сопротивления трубопровода. Подробные параметры приведены в таблице характеристик ниже.",
+      "applications": "Подача промывочных растворов, перенос реагентов, удаление отработанной жидкости, заполнение трубопровода, циркуляция жидкости",
+      "breadcrumbs": [
+        "Главная",
+        "Каталог продукции",
+        "Мембранные насосы",
+        "Жидкостный мембранный насос серии DPL30 с щёточным двигателем"
+      ],
+      "faqs": [
+        {
+          "question": "Какие жидкости может перекачивать жидкостный мембранный насос серии DPL30 с щёточным двигателем?",
+          "answer": "Насос можно использовать для подачи промывочных растворов, реагентов, отработанной жидкости и других жидкостей в гидравлических контурах оборудования. Перед применением необходимо проверить совместимость состава, концентрации и температуры жидкости с мембраной, клапанами, головкой насоса и другими смачиваемыми материалами."
+        },
+        {
+          "question": "Каковы расход и допустимое давление насоса серии DPL30 с щёточным двигателем?",
+          "answer": "Расход составляет 300 mL/min, допустимое давление — 100 kPa. Фактический расход может зависеть от вязкости жидкости, длины и внутреннего диаметра трубок, рабочего давления и сопротивления контура."
+        },
+        {
+          "question": "Можно ли использовать насос серии DPL30 с щёточным двигателем в оборудовании IVD?",
+          "answer": "Насос можно подбирать для промывки, переноса реагентов, удаления отработанной жидкости и циркуляции жидкости в системах IVD, оборудовании для биологических исследований, лабораторной автоматизации и аналитических приборах."
+        },
+        {
+          "question": "Для каких условий подходит версия DPL30 с щёточным двигателем?",
+          "answer": "Срок службы щёточной версии составляет 3000 h. Она подходит для оборудования, где важны базовые характеристики перекачивания и контроль стоимости, а время непрерывной работы относительно невелико."
+        },
+        {
+          "question": "Какие данные нужны перед выбором насоса серии DPL30 с щёточным двигателем?",
+          "answer": "Рекомендуется предоставить сведения о перекачиваемой среде, требуемом расходе, рабочем давлении, высоте всасывания, времени работы, напряжении питания, размерах трубок, требованиях к смачиваемым материалам и доступном монтажном пространстве."
+        }
+      ]
+    },
+    "dpl30-brushless": {
+      "title": "Жидкостный мембранный насос серии DPL30 с бесщёточным двигателем",
+      "cardParameters": [
+        "Расход 300 mL/min",
+        "Допустимое давление 100 kPa",
+        "Срок службы 10000 h"
+      ],
+      "intro": "Жидкостный мембранный насос серии DPL30 с бесщёточным двигателем FOREACH предназначен для перекачивания жидкостей. Расход составляет 300 mL/min, допустимое давление — 100 kPa, используется бесщёточный двигатель, срок службы — 10000 h. Насос подходит для подачи промывочных растворов, переноса реагентов, удаления отработанной жидкости, заполнения трубопровода и циркуляции жидкости и может применяться в системах IVD, оборудовании для биологических исследований, лабораторной автоматизации и аналитических приборах. Он подходит для оборудования с повышенными требованиями к ресурсу и интервалам технического обслуживания. Подробные параметры приведены в таблице характеристик ниже.",
+      "applications": "Подача промывочных растворов, перенос реагентов, удаление отработанной жидкости, заполнение трубопровода, циркуляция жидкости",
+      "breadcrumbs": [
+        "Главная",
+        "Каталог продукции",
+        "Мембранные насосы",
+        "Жидкостный мембранный насос серии DPL30 с бесщёточным двигателем"
+      ],
+      "faqs": [
+        {
+          "question": "Какие жидкости может перекачивать жидкостный мембранный насос серии DPL30 с бесщёточным двигателем?",
+          "answer": "Насос можно использовать для подачи промывочных растворов, реагентов, отработанной жидкости и других жидкостей в контурах оборудования. Перед выбором необходимо проверить совместимость жидкости с мембраной, клапанами, головкой насоса и другими смачиваемыми материалами."
+        },
+        {
+          "question": "Каковы расход и допустимое давление насоса серии DPL30 с бесщёточным двигателем?",
+          "answer": "Расход составляет 300 mL/min, допустимое давление — 100 kPa. При увеличении сопротивления трубопровода и рабочего давления фактический расход может снижаться."
+        },
+        {
+          "question": "Чем отличаются версии DPL30 с бесщёточным и щёточным двигателями?",
+          "answer": "Срок службы бесщёточной версии составляет 10000 h, а щёточной версии — 3000 h. Бесщёточная версия лучше подходит для оборудования с длительной работой или увеличенными интервалами технического обслуживания."
+        },
+        {
+          "question": "Можно ли использовать бесщёточную версию DPL30 в контурах IVD?",
+          "answer": "Её можно подбирать для подачи промывочных растворов, переноса реагентов, удаления отработанной жидкости, заполнения трубопровода и циркуляции жидкости в оборудовании IVD."
+        },
+        {
+          "question": "Какие условия эксплуатации нужно уточнить при выборе насоса серии DPL30 с бесщёточным двигателем?",
+          "answer": "Необходимо уточнить среду, требуемый расход, давление, время непрерывной работы, частоту запусков и остановок, смачиваемые материалы, напряжение питания, сопротивление трубопровода и монтажное пространство."
+        }
+      ]
+    },
+    "dpl60-brushed": {
+      "title": "Жидкостный мембранный насос серии DPL60 с щёточным двигателем",
+      "cardParameters": [
+        "Расход 600 mL/min",
+        "Допустимое давление 100 kPa",
+        "Срок службы 3000 h"
+      ],
+      "intro": "Жидкостный мембранный насос серии DPL60 с щёточным двигателем FOREACH предназначен для перекачивания жидкостей. Расход составляет 600 mL/min, допустимое давление — 100 kPa, используется щёточный двигатель, срок службы — 3000 h. Насос подходит для подачи промывочных растворов, удаления отработанной жидкости, заполнения трубопровода и циркуляции жидкости и может применяться в системах IVD, оборудовании для биологических исследований, лабораторной автоматизации и аналитических приборах. Фактический расход может зависеть от свойств среды, рабочего давления и сопротивления трубопровода. Подробные параметры приведены в таблице характеристик ниже.",
+      "applications": "Подача промывочных растворов, удаление отработанной жидкости, заполнение трубопровода, циркуляция жидкости",
+      "breadcrumbs": [
+        "Главная",
+        "Каталог продукции",
+        "Мембранные насосы",
+        "Жидкостный мембранный насос серии DPL60 с щёточным двигателем"
+      ],
+      "faqs": [
+        {
+          "question": "Для каких задач перекачивания подходит насос серии DPL60 с щёточным двигателем?",
+          "answer": "Он подходит для подачи промывочных растворов, удаления отработанной жидкости, заполнения трубопровода и циркуляции жидкости в автоматизированном оборудовании, где требуется расход около 600 mL/min."
+        },
+        {
+          "question": "Каковы расход и допустимое давление насоса серии DPL60 с щёточным двигателем?",
+          "answer": "Расход составляет 600 mL/min, допустимое давление — 100 kPa. Фактический расход может зависеть от свойств среды и сопротивления контура."
+        },
+        {
+          "question": "Как выбрать между DPL60 и DPL30?",
+          "answer": "Расход DPL30 составляет 300 mL/min, а DPL60 — 600 mL/min. Выбор следует делать по требуемому расходу, сопротивлению трубопровода и времени работы."
+        },
+        {
+          "question": "Каков срок службы версии DPL60 с щёточным двигателем?",
+          "answer": "Срок службы версии с щёточным двигателем составляет 3000 h. Фактический ресурс также может зависеть от нагрузки, частоты запусков и остановок и условий эксплуатации."
+        },
+        {
+          "question": "Можно ли использовать насос серии DPL60 с щёточным двигателем для удаления отработанной жидкости?",
+          "answer": "Да, но необходимо проверить совместимость состава отработанной жидкости со смачиваемыми материалами и не перекачивать жидкости, несовместимые с этими материалами."
+        }
+      ]
+    },
+    "dpl60-brushless": {
+      "title": "Жидкостный мембранный насос серии DPL60 с бесщёточным двигателем",
+      "cardParameters": [
+        "Расход 600 mL/min",
+        "Допустимое давление 100 kPa",
+        "Срок службы 10000 h"
+      ],
+      "intro": "Жидкостный мембранный насос серии DPL60 с бесщёточным двигателем FOREACH предназначен для перекачивания жидкостей. Расход составляет 600 mL/min, допустимое давление — 100 kPa, используется бесщёточный двигатель, срок службы — 10000 h. Насос подходит для подачи промывочных растворов, удаления отработанной жидкости, заполнения трубопровода и циркуляции жидкости и может применяться в системах IVD, оборудовании для биологических исследований, лабораторной автоматизации и аналитических приборах. Он подходит для оборудования с длительным временем работы или увеличенными интервалами технического обслуживания. Подробные параметры приведены в таблице характеристик ниже.",
+      "applications": "Подача промывочных растворов, удаление отработанной жидкости, заполнение трубопровода, циркуляция жидкости",
+      "breadcrumbs": [
+        "Главная",
+        "Каталог продукции",
+        "Мембранные насосы",
+        "Жидкостный мембранный насос серии DPL60 с бесщёточным двигателем"
+      ],
+      "faqs": [
+        {
+          "question": "Для какого оборудования подходит насос серии DPL60 с бесщёточным двигателем?",
+          "answer": "Его можно использовать для промывки, удаления отработанной жидкости, заполнения трубопровода и циркуляции жидкости в системах IVD, оборудовании для биологических исследований, лабораторной автоматизации и аналитических приборах."
+        },
+        {
+          "question": "Каковы расход и допустимое давление бесщёточной версии DPL60?",
+          "answer": "Расход составляет 600 mL/min, допустимое давление — 100 kPa. Фактический расход следует подтверждать с учётом длины и диаметра трубок, среды и рабочего давления."
+        },
+        {
+          "question": "Подходит ли бесщёточная версия DPL60 для непрерывной работы?",
+          "answer": "Срок службы бесщёточной версии составляет 10000 h. Она лучше подходит для оборудования с длительной работой или увеличенными интервалами обслуживания, однако окончательный выбор должен учитывать фактический режим работы."
+        },
+        {
+          "question": "В чём основное различие между DPL60 и DPL30?",
+          "answer": "Основное различие — расход. DPL30 обеспечивает 300 mL/min, а DPL60 — 600 mL/min. Выбор следует делать по требуемой скорости перекачивания в контуре оборудования."
+        },
+        {
+          "question": "Почему при выборе насоса серии DPL60 с бесщёточным двигателем нужны параметры трубопровода?",
+          "answer": "Длина, внутренний диаметр, количество изгибов и перепад высот создают сопротивление контура и влияют на фактический расход насоса."
+        }
+      ]
+    },
+    "dpl30h-brushed": {
+      "title": "Высоконапорный жидкостный мембранный насос серии DPL30H с щёточным двигателем",
+      "cardParameters": [
+        "Расход 300 mL/min",
+        "Допустимое давление 600 kPa",
+        "Срок службы 3000 h"
+      ],
+      "intro": "Высоконапорный жидкостный мембранный насос серии DPL30H с щёточным двигателем FOREACH предназначен для перекачивания жидкостей при повышенном давлении. Расход составляет 300 mL/min, допустимое давление — 600 kPa, используется щёточный двигатель, срок службы — 3000 h. Насос подходит для автоматизированного оборудования с высоким сопротивлением трубопровода, повышенным противодавлением или требованиями к стабильной подаче жидкости и может применяться в системах IVD, оборудовании для биологических исследований, лабораторной автоматизации и аналитических приборах. Фактические характеристики могут зависеть от среды, трубопровода и рабочего давления. Подробные параметры приведены в таблице характеристик ниже.",
+      "applications": "Подача жидкости при высоком противодавлении, подача промывочных растворов, перенос реагентов, циркуляция жидкости",
+      "breadcrumbs": [
+        "Главная",
+        "Каталог продукции",
+        "Мембранные насосы",
+        "Высоконапорный жидкостный мембранный насос серии DPL30H с щёточным двигателем"
+      ],
+      "faqs": [
+        {
+          "question": "Чем DPL30H отличается от стандартного DPL30?",
+          "answer": "DPL30H — высоконапорный жидкостный мембранный насос с расходом 300 mL/min и допустимым давлением 600 kPa. Стандартный DPL30 имеет расход 300 mL/min и допустимое давление 100 kPa. DPL30H лучше подходит для контуров с высоким противодавлением или сопротивлением трубопровода."
+        },
+        {
+          "question": "Для каких задач подходит версия DPL30H с щёточным двигателем?",
+          "answer": "Она подходит для подачи промывочных растворов, переноса реагентов и циркуляции жидкости, когда необходимо преодолеть высокое сопротивление трубопровода, большую длину контура или повышенное противодавление."
+        },
+        {
+          "question": "Влияет ли давление на фактический расход DPL30H?",
+          "answer": "Да. При увеличении рабочего давления и сопротивления контура фактический расход может снижаться, поэтому испытания следует проводить при фактических условиях давления оборудования."
+        },
+        {
+          "question": "Каков срок службы версии DPL30H с щёточным двигателем?",
+          "answer": "Срок службы щёточной версии составляет 3000 h. Фактический ресурс также может зависеть от нагрузки, частоты запусков и остановок и условий эксплуатации."
+        },
+        {
+          "question": "Когда следует выбирать высоконапорный насос DPL30H?",
+          "answer": "DPL30H следует рассматривать, если стандартный DPL30 не может преодолеть сопротивление контура или если оборудование требует более высокого противодавления."
+        }
+      ]
+    },
+    "dpl30h-brushless": {
+      "title": "Высоконапорный жидкостный мембранный насос серии DPL30H с бесщёточным двигателем",
+      "cardParameters": [
+        "Расход 300 mL/min",
+        "Допустимое давление 600 kPa",
+        "Срок службы 10000 h"
+      ],
+      "intro": "Высоконапорный жидкостный мембранный насос серии DPL30H с бесщёточным двигателем FOREACH предназначен для перекачивания жидкостей при повышенном давлении. Расход составляет 300 mL/min, допустимое давление — 600 kPa, используется бесщёточный двигатель, срок службы — 10000 h. Насос подходит для автоматизированного оборудования с высоким сопротивлением трубопровода, повышенным противодавлением или длительным временем непрерывной работы и может применяться в системах IVD, оборудовании для биологических исследований, лабораторной автоматизации и аналитических приборах. Подробные параметры приведены в таблице характеристик ниже.",
+      "applications": "Подача жидкости при высоком противодавлении, подача промывочных растворов, перенос реагентов, циркуляция жидкости",
+      "breadcrumbs": [
+        "Главная",
+        "Каталог продукции",
+        "Мембранные насосы",
+        "Высоконапорный жидкостный мембранный насос серии DPL30H с бесщёточным двигателем"
+      ],
+      "faqs": [
+        {
+          "question": "Для какого оборудования подходит бесщёточная версия DPL30H?",
+          "answer": "Она подходит для автоматизированного оборудования с высоким противодавлением или сопротивлением трубопровода и повышенными требованиями к ресурсу и интервалам технического обслуживания."
+        },
+        {
+          "question": "Каковы расход и допустимое давление бесщёточной версии DPL30H?",
+          "answer": "Расход составляет 300 mL/min, допустимое давление — 600 kPa. Фактические характеристики следует подтверждать с учётом среды, трубопровода и рабочего давления."
+        },
+        {
+          "question": "Чем отличаются бесщёточная и щёточная версии DPL30H?",
+          "answer": "Обе версии имеют одинаковый расход и допустимое давление. Основные различия — тип двигателя и срок службы. Срок службы бесщёточной версии составляет 10000 h, а щёточной версии — 3000 h."
+        },
+        {
+          "question": "Можно ли использовать бесщёточный высоконапорный насос DPL30H в оборудовании IVD?",
+          "answer": "Его можно подбирать для задач перекачивания жидкостей при высоком противодавлении в системах IVD, оборудовании для биологических исследований, лабораторной автоматизации и аналитических приборах."
+        },
+        {
+          "question": "Какие данные нужны для выбора высоконапорного насоса DPL30H?",
+          "answer": "Рекомендуется предоставить сведения о среде, требуемом расходе, давлении на входе, давлении на выходе, размерах трубок, времени работы, напряжении питания, смачиваемых материалах и монтажном пространстве."
+        }
+      ]
+    },
+    "dpgl800-brushless": {
+      "title": "Бесщёточный мембранный насос серии DPGL800 для газожидкостных сред",
+      "cardParameters": [
+        "Расход 6 L/min",
+        "Максимальный вакуум -90 kPa",
+        "Срок службы 10000 h"
+      ],
+      "intro": "Бесщёточный мембранный насос серии DPGL800 для газожидкостных сред FOREACH предназначен для всасывания и перекачивания газа, жидкости и газожидкостных смесей. Расход составляет 6 L/min, максимальный вакуум — -90 kPa, используется бесщёточный двигатель, срок службы — 10000 h. Насос подходит для удаления отработанной жидкости, перекачивания газожидкостных смесей, опорожнения трубопроводов и автоматизированного оборудования, требующего высокой всасывающей способности. Фактические характеристики могут зависеть от состояния среды, конфигурации трубопровода и рабочей нагрузки. Подробные параметры приведены в таблице характеристик ниже.",
+      "applications": "Удаление отработанной жидкости, перекачивание газожидкостных смесей, опорожнение трубопроводов, всасывание газа",
+      "breadcrumbs": [
+        "Главная",
+        "Каталог продукции",
+        "Мембранные насосы",
+        "Бесщёточный мембранный насос серии DPGL800 для газожидкостных сред"
+      ],
+      "faqs": [
+        {
+          "question": "Какие среды может перекачивать DPGL800?",
+          "answer": "DPGL800 можно использовать для всасывания и перекачивания газа, жидкости и газожидкостных смесей. Перед применением необходимо проверить совместимость среды со смачиваемыми материалами."
+        },
+        {
+          "question": "Каковы расход и максимальный вакуум DPGL800?",
+          "answer": "Расход составляет 6 L/min, максимальный вакуум — -90 kPa. Фактические характеристики могут зависеть от состояния среды, сопротивления трубопровода и нагрузки оборудования."
+        },
+        {
+          "question": "Для каких применений подходит DPGL800?",
+          "answer": "Насос можно использовать для удаления отработанной жидкости, перекачивания газожидкостных смесей, опорожнения трубопроводов и в автоматизированном оборудовании, требующем высокой всасывающей способности."
+        },
+        {
+          "question": "Можно ли использовать DPGL800 только для жидкости?",
+          "answer": "Насос можно использовать для жидкости и газожидкостных смесей, но пригодность для конкретной жидкости необходимо подтвердить с учётом свойств среды, времени работы и смачиваемых материалов."
+        },
+        {
+          "question": "Какие данные нужны перед выбором DPGL800?",
+          "answer": "Рекомендуется предоставить сведения о состоянии среды, доле жидкости, требуемом расходе, необходимом вакууме, размерах трубок, времени непрерывной работы, напряжении питания и монтажном пространстве."
+        }
+      ]
+    }
+  }
+}

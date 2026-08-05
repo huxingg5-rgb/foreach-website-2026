@@ -100,6 +100,8 @@ export const installationGuideZhData: InstallationGuidePageData = {
   guides: [
     {
       id: "zh-tutorial-001-6cadad8155",
+      relationKeys: ["series:dpl30"],
+      relationPriority: 80,
       title: "隔膜泵安装方式以及注意事项",
       category: "pumps",
       series: "diaphragm-pump",
@@ -113,6 +115,7 @@ export const installationGuideZhData: InstallationGuidePageData = {
     },
     {
       id: "zh-tutorial-002-a92d2b71b4",
+      relationKeys: ["series:dpl30h"],
       title: "实测30H系列隔膜泵最高耐压",
       category: "pumps",
       series: "diaphragm-pump",
@@ -126,6 +129,7 @@ export const installationGuideZhData: InstallationGuidePageData = {
     },
     {
       id: "zh-tutorial-003-57a6bc1c94",
+      relationKeys: ["series:dpl60"],
       title: "实测60系列隔膜泵最高耐压",
       category: "pumps",
       series: "diaphragm-pump",
@@ -139,6 +143,8 @@ export const installationGuideZhData: InstallationGuidePageData = {
     },
     {
       id: "zh-tutorial-004-5733a4bdad",
+      relationKeys: ["series:dpl30"],
+      relationPriority: 100,
       title: "一句话教你如何选择隔膜泵",
       category: "pumps",
       series: "diaphragm-pump",
@@ -152,6 +158,8 @@ export const installationGuideZhData: InstallationGuidePageData = {
     },
     {
       id: "zh-tutorial-005-c4e9e2aa2a",
+      relationKeys: ["series:dpl30"],
+      relationPriority: 90,
       title: "有刷与无刷隔膜泵区别不只是寿命",
       category: "pumps",
       series: "diaphragm-pump",

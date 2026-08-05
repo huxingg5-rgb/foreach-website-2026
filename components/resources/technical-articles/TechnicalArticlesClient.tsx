@@ -15,12 +15,10 @@
 import { useMemo, useState } from "react";
 import type { ComponentType } from "react";
 
-import Image from "next/image";
-import Link from "next/link";
-
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
 import ResourceSearchBar from "@/components/resources/ResourceSearchBar";
 import ResourceSupportCta from "@/components/resources/ResourceSupportCta";
+import TechnicalArticleCard from "@/components/resources/technical-articles/TechnicalArticleCard";
 
 import type {
   TechnicalArticleCategory,
@@ -366,55 +364,3 @@ export default function TechnicalArticlesClient({
   );
 }
 
-interface TechnicalArticleCardProps {
-  article: TechnicalArticleItem;
-  categoryLabel: string;
-  tags: string[];
-  href: string;
-  locale: string;
-  categoryText?: string;
-  tagsText?: string;
-}
-
-function TechnicalArticleCard({
-  article,
-  categoryLabel,
-  tags,
-  href,
-  locale,
-  categoryText,
-  tagsText,
-}: TechnicalArticleCardProps) {
-  return (
-    <Link className="technicalArticleCard" href={href}>
-      <div className="technicalArticleCard__image">
-        <Image
-          src={article.coverImage}
-          alt={article.title}
-          fill
-          sizes="(max-width: 760px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        />
-      </div>
-
-      <div className="technicalArticleCard__body">
-        <h3 className="technicalArticleCard__title">{article.title}</h3>
-
-        <div className="technicalArticleCard__meta">
-          <span>{categoryText ?? (isChinesePage(locale) ? "分类：" : "Category:")}</span>
-          <strong>{categoryLabel}</strong>
-        </div>
-
-        <div className="technicalArticleCard__tags">
-          <span>{tagsText ?? (isChinesePage(locale) ? "标签：" : "Tags:")}</span>
-          <div className="technicalArticleCard__tagList">
-            {tags.map((tag) => (
-              <span key={tag} className="technicalArticleCard__tag">
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
-      </div>
-    </Link>
-  );
-}

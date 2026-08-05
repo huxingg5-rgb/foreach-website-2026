@@ -15050,6 +15050,52 @@ html[lang="ru"] .home-hero-btn:hover {
   border-width: 2px;
 }
 
+@media (max-width: 1000px) {
+  .site-search-trigger {
+    display: inline-flex;
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    border-width: 1px !important;
+    border-color: rgba(255, 255, 255, 0.34);
+  }
+
+  .site-header-scrolled .site-search-trigger,
+  .page-scrolled .site-search-trigger,
+  .site-header.header-panel-open .site-search-trigger {
+    color: #173368;
+    background: #f5f8fb;
+    border-color: rgba(23, 51, 104, 0.14);
+    border-width: 1px;
+  }
+
+  .site-header-search-open .site-search-trigger {
+    color: #061a3a;
+    background: #09e9b4;
+    border-color: #09e9b4;
+    border-width: 1px;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-search-trigger {
+    width: 36px;
+    height: 36px;
+    flex-basis: 36px;
+  }
+
+  .site-search-trigger .site-search-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .site-search-trigger .site-search-icon::after {
+    right: -4px;
+    bottom: -3px;
+    width: 5px;
+  }
+}
+
 /* =========================================================
    Header 闂傚倸鍊搁崐鎼佸磹閻戣姤鍤勯柛顐ｆ礀缁犵娀鏌熼幑鎰靛殭閻熸瑱绠撻幃妤呮晲鎼粹€愁潻闂佹悶鍔嶇换鍫ョ嵁閺嶎灔搴敆閳ь剚淇婇懖鈺冩／闁诡垎浣镐划闂佸搫鏈ú妯兼崲濞戙垹鍨傛い鏃傚帶椤ユ瑩姊绘担铏瑰笡婵﹤顭峰畷銏ｎ樄闁诡喗锚閻ｇ兘宕堕敐鍛闁荤喐鐟ョ€氼厾绮堥埀顒€鈹戦悙鑼勾闁告梹鍨挎俊瀛樼瑹閳ь剙鐣烽妸褉鍋撳☉娅辨岸骞忓ú顏呪拺闁革富鍙庨悞鐐箾閹绢噮妫戠紒顔碱煼瀵粙顢曢妶鍥风床婵＄偑鍊栧Λ渚€宕戦幇顓熸珡濠德板€楁慨鐑藉磻濞戙垹鐤い鎰堕檮閸嬧晠鏌ｉ幋锝嗩棄闁绘劕锕ラ妵鍕敇閻旈浠哥紓鍌氱У椤ㄥ﹤顫忕紒妯肩懝闁逞屽墮椤洩顦撮柟骞垮灲瀹曞崬顪冮～顔剧М鐎规洏鍔戝鍫曞箣閻樺弶鎲㈤梻鍌欑閹诧繝銆冮崼鐔奉嚤婵犻潧顭堟禍褰掓煙閻戞ɑ灏版繛鍛矒濮婃椽宕ㄦ繝浣虹箒闂佹悶鍔岀粔瑙勪繆閼搁潧绶為悗锝庡墮楠炴姊绘笟鈧褔鎮ч崱娑樼疇闊洦铔嬫径鎰€烽柣銏㈡暩閿涙粓鎮楅崗澶婁壕闂佸憡娲︽禍婵嬪窗濮橆剦娓婚柕鍫濆暙閻忣亪鏌ｉ悢婵嗘噹閸ㄦ繈鏌ｉ姀銏╂毌闁稿鎹囬弫鎰償濠靛牏娉块梺?
    闂傚倸鍊搁崐宄懊归崶褏鏆﹂柛顭戝亝閸欏繘鏌℃径瀣婵炲樊浜滃洿婵犮垼娉涢鍛闁秵鈷戦梻鍫熶緱閻掗箖鏌涙惔銏㈡噰闁轰焦鍔栧鍕節閸曢潧鎮堥梻鍌欑劍鐎笛兾涙担瑙勫弿闁靛牆鎳夐弸?
@@ -18875,11 +18921,7 @@ html body .home-honor-image img {
 
   .home-hero-scroll-shell
     .home-hero-title {
-    color:
-      var(
-        --brand-blue,
-        #173368
-      ) !important;
+    color: #ffffff !important;
 
     opacity:
       var(
@@ -18898,11 +18940,7 @@ html body .home-honor-image img {
 
   .home-hero-scroll-shell
     .home-hero-subtitle {
-    color:
-      var(
-        --brand-blue,
-        #173368
-      ) !important;
+    color: #ffffff !important;
 
     opacity:
       var(
@@ -19081,7 +19119,7 @@ html body .home-honor-image img {
     .home-hero-carousel
     .home-hero-btn {
     border:
-      2px solid
+      1px solid
       var(
         --brand-blue,
         #173368
@@ -21442,6 +21480,15 @@ html[data-global-touch-device="true"]
   }
 }
 
+/* Match the three header controls at the tablet header breakpoint. */
+@media (min-width: 769px) and (max-width: 1000px) {
+  .site-header
+    .language-summary {
+    height: 42px !important;
+    min-height: 42px !important;
+  }
+}
+
 /* Match the language selector outline to the search button. */
 @media (min-width: 1001px) and (max-width: 1920px) {
   .site-header
@@ -21592,25 +21639,30 @@ html[data-global-touch-device="true"]
 }
 /* HOME_FLOW_KOREAN_DESKTOP_LAYOUT_END */
 
-/* HOME_HERO_PRODUCT_WHITE_TEXT_START */
+/* HOME_HERO_TWO_BANNERS_VISUALS_START */
 @media (min-width: 1001px) {
   html body
     .home-hero-scroll-shell
     .home-hero-carousel
-    .home-hero-product-slide
     .home-hero-title[data-home-hero-title="true"],
   html body
     .home-hero-scroll-shell
     .home-hero-carousel
-    .home-hero-product-slide
     .home-hero-subtitle[data-home-hero-subtitle="true"] {
     color: #ffffff !important;
     text-shadow:
       0 2px 8px rgb(12 43 94 / 58%),
       0 1px 2px rgb(12 43 94 / 38%) !important;
   }
+
+  html body
+    .home-hero-scroll-shell
+    .home-hero-carousel
+    .home-hero-btn {
+    border-width: 1px !important;
+  }
 }
-/* HOME_HERO_PRODUCT_WHITE_TEXT_END */
+/* HOME_HERO_TWO_BANNERS_VISUALS_END */
 
 /* HOME_HERO_MOBILE_COPY_START */
 .home-hero-mobile-overlay,

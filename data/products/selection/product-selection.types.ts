@@ -41,6 +41,8 @@ export type LocalizedText =
 
 export type ProductSelectionProduct = {
   productId: string;
+  relationKeys?: string[];
+  relationPriority?: number;
 
   categoryId?: string;
   category?: string;
