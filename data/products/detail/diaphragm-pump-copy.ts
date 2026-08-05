@@ -28,6 +28,16 @@ type CopyByLocale = Record<SelectionLocale, CopyByKey>;
 
 const DIAPHRAGM_PUMP_COPY = copyJson as CopyByLocale;
 
+const DPL30_BRUSHED_MAIN_IMAGE =
+  "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushed-liquid-diaphragm-pump-main.webp";
+
+const DPL30_BRUSHED_DETAIL_IMAGES = [
+  "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushed-liquid-diaphragm-pump-barb-port-orientation.webp",
+  "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushed-liquid-diaphragm-pump-rear-mounting-view.webp",
+  "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushed-liquid-diaphragm-pump-side-mounting-view.webp",
+  "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushed-liquid-diaphragm-pump-top-view.webp",
+] as const;
+
 const IDENTITY_FIELDS = [
   "productId",
   "id",
@@ -135,16 +145,42 @@ export function getDiaphragmPumpCopy(
   return key ? DIAPHRAGM_PUMP_COPY[locale]?.[key] || null : null;
 }
 
+function getDiaphragmPumpGallery(
+  key: DiaphragmPumpCopyKey,
+  data: Record<string, unknown>,
+) {
+  if (key !== "dpl30-brushed") {
+    return null;
+  }
+
+  const configuredMainImage =
+    typeof data.mainImage === "string" && data.mainImage.trim()
+      ? data.mainImage.trim()
+      : DPL30_BRUSHED_MAIN_IMAGE;
+  const additionalImages = [...DPL30_BRUSHED_DETAIL_IMAGES];
+
+  return {
+    mainImage: configuredMainImage,
+    image: configuredMainImage,
+    imageUrl: configuredMainImage,
+    heroImage: configuredMainImage,
+    coverImage: configuredMainImage,
+    additionalImages,
+    galleryImages: [configuredMainImage, ...additionalImages],
+  };
+}
+
 export function applyDiaphragmPumpDetailCopy<
   T extends Record<string, unknown>,
 >(data: T, locale: SelectionLocale): T {
   const key = getDiaphragmPumpCopyKey(data);
   const copy = key ? DIAPHRAGM_PUMP_COPY[locale]?.[key] : null;
 
-  if (!copy) return data;
+  if (!copy || !key) return data;
 
   const applications = [copy.applications];
   const faqs = copy.faqs.map((item) => ({ ...item }));
+  const gallery = getDiaphragmPumpGallery(key, data);
 
   return {
     ...data,
@@ -160,5 +196,6 @@ export function applyDiaphragmPumpDetailCopy<
     faq: faqs,
     breadcrumbs: copy.breadcrumbs.map((label) => ({ label })),
     __diaphragmPumpCopyKey: key,
+    ...(gallery || {}),
   } as T;
 }
