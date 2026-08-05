@@ -13,6 +13,7 @@
 ========================================================= */
 
 import {
+  useEffect,
   useMemo,
   useState,
 } from "react";
@@ -114,7 +115,7 @@ export default function InstallationGuideClient({
       isChinesePage ? "资源中心" : "Resources",
 
     breadcrumbCurrent:
-      isChinesePage ? "安装教程" : "Installation Guide",
+      isChinesePage ? "使用教程" : "Usage Guide",
 
     productCategory:
       isChinesePage ? "产品分类：" : "Product Category: ",
@@ -137,6 +138,43 @@ export default function InstallationGuideClient({
   const relationKey = normalizeRelationKey(
     searchParams.get("relationKey") ?? "",
   );
+
+  /* SEARCH_GUIDE_AUTO_OPEN_20260805 */
+  const requestedGuideId =
+    searchParams.get("guide")?.trim() ?? "";
+
+  /*
+   * 从全站搜索进入时：
+   * 1. 保留现有使用教程页面
+   * 2. 根据 guide 参数查找对应教程
+   * 3. 自动打开现有视频播放器
+   * 4. 不创建新的详情页
+   */
+  useEffect(() => {
+    if (!requestedGuideId) {
+      return;
+    }
+
+    const requestedGuide = pageData.guides.find(
+      (guide) => guide.id === requestedGuideId,
+    );
+
+    if (!requestedGuide) {
+      return;
+    }
+
+    const openPlayerTimer = window.setTimeout(() => {
+      setSelectedGuide(requestedGuide);
+      setIsPlayerOpen(true);
+      setPlayRequestId(
+        (currentId) => currentId + 1,
+      );
+    }, 0);
+
+    return () => {
+      window.clearTimeout(openPlayerTimer);
+    };
+  }, [pageData.guides, requestedGuideId]);
 
   const breadcrumbItems = [
     {

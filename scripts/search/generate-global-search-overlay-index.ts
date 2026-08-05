@@ -1,4 +1,4 @@
-﻿import fs from "node:fs";
+import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 
@@ -245,14 +245,14 @@ function collectValuesByKeys(
 
 function convertExistingItems(): CompactSearchItem[] {
   return siteSearchIndex.flatMap((item) => {
-    const module = item.module as SearchModule;
+    const searchModule = item.module as SearchModule;
 
     if (
       ![
         "products",
         "compatible-models",
         "datasheets",
-      ].includes(module)
+      ].includes(searchModule)
     ) {
       return [];
     }
@@ -267,7 +267,7 @@ function convertExistingItems(): CompactSearchItem[] {
     const image = cleanImage(item.image);
 
     return [{
-      m: module,
+      m: searchModule,
       t: title,
       ...(subtitle ? { s: subtitle } : {}),
       ...(description ? { d: description } : {}),
@@ -319,15 +319,19 @@ async function loadInstallationGuides(): Promise<CompactSearchItem[]> {
       t: title,
       ...(subtitle ? { s: subtitle } : {}),
       ...(description ? { d: description } : {}),
-      h: `/resources/installation-guide/${id}`,
+      h: `/resources/installation-guide?guide=${encodeURIComponent(id)}`,
       x: buildSearchText([
         title,
         subtitle,
         description,
         guide.tags,
         guide.keywords,
+              "使用教程",
+        "安装教程",
+        "操作教程",
+        "视频教程",
       ]),
-      a: "查看教程",
+      a: "查看使用教程",
     }];
   });
 }

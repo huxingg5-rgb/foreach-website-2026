@@ -23,8 +23,8 @@ import "@/app/resources/selection-support/fitting-replacement/fitting-replacemen
 /* 安装教程页面自己的样式 */
 import "./installation-guide.css";
 export const metadata: Metadata = {
-  title: "安装教程｜FOREACH 恒永达",
-  description: "FOREACH 产品安装、调试与使用教程。",
+  title: "使用教程｜FOREACH 恒永达",
+  description: "FOREACH 产品使用、安装、调试与操作教程。",
 };
 
 export default function InstallationGuidePage() {
