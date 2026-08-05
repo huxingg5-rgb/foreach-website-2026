@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
 import { useCallback, useEffect, useRef, useState } from "react";
 
@@ -187,6 +188,27 @@ function ResourceTrack({
   );
 }
 
+function getLocaleFromPathname(
+  pathname: string | null,
+  fallbackLocale: RelatedResourcesLocale,
+): RelatedResourcesLocale {
+  const firstSegment = String(pathname || "")
+    .split("/")
+    .filter(Boolean)[0];
+
+  if (
+    firstSegment === "en" ||
+    firstSegment === "es" ||
+    firstSegment === "fr" ||
+    firstSegment === "ko" ||
+    firstSegment === "ru"
+  ) {
+    return firstSegment;
+  }
+
+  return pathname ? "zh-CN" : fallbackLocale;
+}
+
 function getLocalePrefix(locale: RelatedResourcesLocale) {
   return locale === "zh-CN" ? "" : `/${locale}`;
 }
@@ -281,8 +303,10 @@ export default function RelatedResources({
   sourceId,
   sourceSlug,
   relationKeys = [],
-  locale,
+  locale: localeProp,
 }: RelatedResourcesProps) {
+  const pathname = usePathname();
+  const locale = getLocaleFromPathname(pathname, localeProp);
   const [selectedVideo, setSelectedVideo] =
     useState<InstallationGuideCard | null>(null);
   const [playRequestId, setPlayRequestId] = useState(0);
