@@ -13,7 +13,7 @@
         "products:build-plunger-detail": "node ./scripts/products/build-plunger-pump-detail-data.js",
         "build:pump-series-data": "node scripts/products/build-pump-series-data.js && node scripts/products/apply-pump-series-faq-scope.js && node scripts/products/fix-pump-series-image-assets.js && node scripts/products/fix-pump-series-selection-card-assets.js",
         "generate:diaphragm-pumps": "node scripts/products/generate-diaphragm-pump-data.js",
-        "build:cloudflare": "node scripts/cloudflare/build-pages.mjs"
+        "build:cloudflare": "node scripts/cloudflare/build-pages.mjs && node scripts/seo/generate-sitemap.mjs"
     },
     "dependencies": {
         "@google/model-viewer": "^4.3.1",
