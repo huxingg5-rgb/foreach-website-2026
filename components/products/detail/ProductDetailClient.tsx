@@ -964,6 +964,18 @@ function PlungerPumpBottomCta({
 
 const PRODUCT_SITE_ORIGIN = "https://www.foreachtek.com";
 
+const PRODUCT_BREADCRUMB_COPY: Record<
+  string,
+  { home: string; products: string }
+> = {
+  "zh-CN": { home: "首页", products: "产品中心" },
+  en: { home: "Home", products: "Products" },
+  es: { home: "Inicio", products: "Productos" },
+  fr: { home: "Accueil", products: "Produits" },
+  ko: { home: "홈", products: "제품" },
+  ru: { home: "Главная", products: "Продукция" },
+};
+
 function toAbsoluteProductUrl(value: unknown) {
   const text = String(value || "").trim();
 
@@ -978,91 +990,20 @@ function toAbsoluteProductUrl(value: unknown) {
   return `${PRODUCT_SITE_ORIGIN}${text.startsWith("/") ? text : `/${text}`}`;
 }
 
-function collectProductImageUrls(data: any) {
-  const values: unknown[] = [
-    data.mainImage,
-    data.imageUrl,
-    data.image,
-    data.heroImage,
-    data.coverImage,
-    ...(Array.isArray(data.images) ? data.images : []),
-    ...(Array.isArray(data.galleryImages) ? data.galleryImages : []),
-  ];
+function getProductPageLocale(pathname: string) {
+  const firstSegment = pathname.split("/").filter(Boolean)[0] || "";
 
-  const urls = values
-    .flatMap((value) => {
-      if (typeof value === "string") {
-        return [value];
-      }
-
-      if (value && typeof value === "object") {
-        const item = value as Record<string, unknown>;
-        return [item.src, item.url, item.path, item.fullPath];
-      }
-
-      return [];
-    })
-    .map(toAbsoluteProductUrl)
-    .filter(Boolean);
-
-  return Array.from(new Set(urls));
+  return ["en", "es", "fr", "ko", "ru"].includes(firstSegment)
+    ? firstSegment
+    : "zh-CN";
 }
 
-function collectProductSpecifications(data: any) {
-  const source = Array.isArray(data.specs)
-    ? data.specs
-    : Array.isArray(data.specificationGroups)
-      ? data.specificationGroups
-      : [];
-  const rows: Array<{ name: string; value: string }> = [];
-
-  function visit(value: unknown) {
-    if (Array.isArray(value)) {
-      value.forEach(visit);
-      return;
-    }
-
-    if (!value || typeof value !== "object") {
-      return;
-    }
-
-    const item = value as Record<string, unknown>;
-    const name = String(
-      item.label || item.name || item.title || ""
-    ).trim();
-    const itemValue = String(
-      item.value || item.content || item.text || ""
-    ).trim();
-
-    if (name && itemValue) {
-      rows.push({ name, value: itemValue });
-    }
-
-    Object.entries(item).forEach(([key, child]) => {
-      if (!["label", "name", "title", "value", "content", "text"].includes(key)) {
-        visit(child);
-      }
-    });
-  }
-
-  visit(source);
-
-  return Array.from(
-    new Map(rows.map((row) => [`${row.name}::${row.value}`, row])).values()
-  );
-}
-
-function buildProductStructuredData(data: any, pathname: string) {
+function buildProductPageStructuredData(data: any, pathname: string) {
   const canonicalUrl = toAbsoluteProductUrl(pathname || "/");
   const productName = String(
     data.model || data.title || data.name || ""
   ).trim();
   const description = String(data.description || "").trim();
-  const imageUrls = collectProductImageUrls(data);
-  const applications = Array.isArray(data.commonApplications)
-    ? data.commonApplications.filter(Boolean).map(String)
-    : [];
-  const specifications = collectProductSpecifications(data);
   const faqs: Array<{ question: string; answer: string }> = Array.isArray(data.faqs)
     ? data.faqs
         .map((item: any) => ({
@@ -1073,64 +1014,66 @@ function buildProductStructuredData(data: any, pathname: string) {
           item.question && item.answer
         )
     : [];
-  const category = String(
-    data.categoryLabel || data.productTypeName || ""
-  ).trim();
-
-  const product: Record<string, unknown> = {
-    "@type": "Product",
-    "@id": `${canonicalUrl}#product`,
-    name: productName,
+  const locale = getProductPageLocale(pathname);
+  const localePrefix = locale === "zh-CN" ? "" : `/${locale}`;
+  const breadcrumbCopy =
+    PRODUCT_BREADCRUMB_COPY[locale] || PRODUCT_BREADCRUMB_COPY.en;
+  const organizationId = `${PRODUCT_SITE_ORIGIN}/#organization`;
+  const websiteId = `${PRODUCT_SITE_ORIGIN}/#website`;
+  const webpageId = `${canonicalUrl}#webpage`;
+  const breadcrumbId = `${canonicalUrl}#breadcrumb`;
+  const webPage: Record<string, unknown> = {
+    "@type": "WebPage",
+    "@id": webpageId,
     url: canonicalUrl,
-    description,
-    brand: {
-      "@type": "Brand",
-      name: "FOREACH",
+    name: productName,
+    inLanguage: locale,
+    isPartOf: {
+      "@id": websiteId,
     },
-    manufacturer: {
-      "@type": "Organization",
-      name: "Shenzhen FOREACH Technology Co., Ltd.",
-      url: PRODUCT_SITE_ORIGIN,
+    breadcrumb: {
+      "@id": breadcrumbId,
+    },
+    publisher: {
+      "@id": organizationId,
     },
   };
 
-  if (data.productCode || data.seriesCode) {
-    product.sku = String(data.productCode || data.seriesCode);
-  }
-
-  if (category) {
-    product.category = category;
-  }
-
-  if (imageUrls.length > 0) {
-    product.image = imageUrls;
-  }
-
-  if (specifications.length > 0) {
-    product.additionalProperty = specifications.map((item) => ({
-      "@type": "PropertyValue",
-      name: item.name,
-      value: item.value,
-    }));
+  if (description) {
+    webPage.description = description;
   }
 
   const graph: Record<string, unknown>[] = [
-    product,
+    {
+      "@type": "Organization",
+      "@id": organizationId,
+      name: "Shenzhen FOREACH Technology Co., Ltd.",
+      url: `${PRODUCT_SITE_ORIGIN}/`,
+    },
+    {
+      "@type": "WebSite",
+      "@id": websiteId,
+      url: `${PRODUCT_SITE_ORIGIN}/`,
+      name: "FOREACH",
+      publisher: {
+        "@id": organizationId,
+      },
+    },
     {
       "@type": "BreadcrumbList",
-      "@id": `${canonicalUrl}#breadcrumb`,
+      "@id": breadcrumbId,
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
-          name: "Home",
-          item: toAbsoluteProductUrl("/en/"),
+          name: breadcrumbCopy.home,
+          item: toAbsoluteProductUrl(`${localePrefix}/`),
         },
         {
           "@type": "ListItem",
           position: 2,
-          name: "Products",
-          item: toAbsoluteProductUrl("/en/products/"),
+          name: breadcrumbCopy.products,
+          item: toAbsoluteProductUrl(`${localePrefix}/products/`),
         },
         {
           "@type": "ListItem",
@@ -1140,12 +1083,16 @@ function buildProductStructuredData(data: any, pathname: string) {
         },
       ],
     },
+    webPage,
   ];
 
   if (faqs.length > 0) {
     graph.push({
       "@type": "FAQPage",
       "@id": `${canonicalUrl}#faq`,
+      isPartOf: {
+        "@id": webpageId,
+      },
       mainEntity: faqs.map((item) => ({
         "@type": "Question",
         name: item.question,
@@ -1155,10 +1102,6 @@ function buildProductStructuredData(data: any, pathname: string) {
         },
       })),
     });
-  }
-
-  if (applications.length > 0) {
-    product.keywords = applications.join(", ");
   }
 
   return {
@@ -1298,11 +1241,8 @@ export default function ProductDetailClient({
     );
   // ===== FOREACH TARGET PRODUCT DISPLAY TITLE END =====
   const structuredData = useMemo(
-    () =>
-      isLocalizedDetail
-        ? buildProductStructuredData(data, pathname || "/")
-        : null,
-    [data, isLocalizedDetail, pathname]
+    () => buildProductPageStructuredData(data, pathname || "/"),
+    [data, pathname]
   );
   const copy = targetLocale
     ? HARD_TUBE_DETAIL_COPY[targetLocale]

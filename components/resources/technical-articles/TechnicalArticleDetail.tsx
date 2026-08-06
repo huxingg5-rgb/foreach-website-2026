@@ -48,6 +48,118 @@ type SharedComponentProps = Record<string, unknown>;
 const BreadcrumbComponent =
   SiteBreadcrumb as ComponentType<SharedComponentProps>;
 
+const TECHNICAL_ARTICLE_SITE_ORIGIN = "https://www.foreachtek.com";
+
+function toAbsoluteTechnicalArticleUrl(value: string) {
+  if (/^https?:\/\//i.test(value)) {
+    return value;
+  }
+
+  return `${TECHNICAL_ARTICLE_SITE_ORIGIN}${value.startsWith("/") ? value : `/${value}`}`;
+}
+
+function getTechnicalArticleCanonicalUrl(
+  locale: SupportedLocale,
+  slug: string,
+) {
+  const localePrefix = locale === "zh-CN" ? "" : `/${locale}`;
+
+  return `${TECHNICAL_ARTICLE_SITE_ORIGIN}${localePrefix}/resources/technical-articles/${slug}/`;
+}
+
+function buildTechnicalArticleStructuredData(
+  pageData: TechnicalArticlesPageData,
+  article: TechnicalArticleItem,
+  locale: SupportedLocale,
+) {
+  const canonicalUrl = getTechnicalArticleCanonicalUrl(locale, article.slug);
+  const organizationId = `${TECHNICAL_ARTICLE_SITE_ORIGIN}/#organization`;
+  const websiteId = `${TECHNICAL_ARTICLE_SITE_ORIGIN}/#website`;
+  const webpageId = canonicalUrl;
+  const breadcrumbId = `${canonicalUrl}#breadcrumb`;
+  const articleId = `${canonicalUrl}#article`;
+  const description = String(
+    article.seoDescription ?? article.summary ?? "",
+  ).trim();
+  const categoryLabel =
+    pageData.categories.find((item) => item.key === article.category)?.label ??
+    pageData.sectionTitle;
+  const breadcrumbItems = pageData.breadcrumbs.map((item, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: item.label,
+    ...(item.href
+      ? { item: toAbsoluteTechnicalArticleUrl(item.href) }
+      : index === pageData.breadcrumbs.length - 1
+        ? { item: toAbsoluteTechnicalArticleUrl(getArticleListHref(locale)) }
+        : {}),
+  }));
+
+  breadcrumbItems.push({
+    "@type": "ListItem",
+    position: breadcrumbItems.length + 1,
+    name: article.title,
+    item: canonicalUrl,
+  });
+
+  const articleData: Record<string, unknown> = {
+    "@type": "Article",
+    "@id": articleId,
+    url: canonicalUrl,
+    headline: article.title,
+    ...(description ? { description } : {}),
+    ...(article.coverImage
+      ? { image: toAbsoluteTechnicalArticleUrl(article.coverImage) }
+      : {}),
+    ...(article.date ? { datePublished: article.date } : {}),
+    author: { "@id": organizationId },
+    publisher: { "@id": organizationId },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": webpageId,
+    },
+    inLanguage: locale,
+    articleSection: categoryLabel,
+    isAccessibleForFree: true,
+  };
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": organizationId,
+        name: "Shenzhen FOREACH Technology Co., Ltd.",
+        url: `${TECHNICAL_ARTICLE_SITE_ORIGIN}/`,
+      },
+      {
+        "@type": "WebSite",
+        "@id": websiteId,
+        url: `${TECHNICAL_ARTICLE_SITE_ORIGIN}/`,
+        name: "FOREACH",
+        publisher: { "@id": organizationId },
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": breadcrumbId,
+        itemListElement: breadcrumbItems,
+      },
+      {
+        "@type": "WebPage",
+        "@id": webpageId,
+        url: canonicalUrl,
+        name: article.title,
+        ...(description ? { description } : {}),
+        inLanguage: locale,
+        isPartOf: { "@id": websiteId },
+        publisher: { "@id": organizationId },
+        breadcrumb: { "@id": breadcrumbId },
+      },
+      articleData,
+    ],
+  };
+}
+
 function normalizeLocale(locale: string): SupportedLocale {
   if (
     locale === "en" ||
@@ -137,8 +249,20 @@ export default function TechnicalArticleDetail({
       <Dpl30LiquidDiaphragmPumpArticle locale={locale} />
     ) : null;
 
+  const structuredData = buildTechnicalArticleStructuredData(
+    pageData,
+    article,
+    locale,
+  );
+
   return (
     <div className="newsArticleDetailPage" data-locale={locale}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+        }}
+      />
       <div className="newsArticleBreadcrumbShell">
         <BreadcrumbComponent {...breadcrumbData} />
       </div>
