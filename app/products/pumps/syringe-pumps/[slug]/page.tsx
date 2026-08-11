@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
 import syringePumpDetails from "@/data/products/generated/pumps/syringe-pumps/detail/index.json";
+import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 
 type Detail = (typeof syringePumpDetails)[number];
 
@@ -85,6 +87,35 @@ export function generateStaticParams() {
   return (syringePumpDetails as Detail[]).map((detail) => ({
     slug: detail.slug,
   }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const detail = (syringePumpDetails as Detail[]).find(
+    (item) => item.slug === slug,
+  );
+
+  if (!detail) {
+    return {};
+  }
+
+  const data = toClientData(detail);
+  const title = `${data.title} | FOREACH`;
+
+  return {
+    title,
+    description: data.description,
+    ...buildProductSocialMetadata({
+      data,
+      title,
+      description: data.description,
+      canonicalUrl: `/products/pumps/syringe-pumps/${slug}/`,
+    }),
+  };
 }
 
 export default async function SyringePumpDetailPage({

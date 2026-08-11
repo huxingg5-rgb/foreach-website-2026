@@ -24,6 +24,7 @@ import { Suspense } from "react";
 import ProductPageSkeleton from "@/components/common/ProductPageSkeleton";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
 import ProductSelectionClient from "@/components/products/selection/ProductSelectionClient";
+import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 
 import {
   getProductTypeRouteParams,
@@ -203,11 +204,21 @@ export async function generateMetadata({
       return {};
     }
 
-    return {
-      title: `${detail.title} | FOREACH`,
-      description: Array.isArray(detail.intro)
+    const pageData = getControlModuleProductDetailData(detail);
+    const title = `${detail.title} | FOREACH`;
+    const description = Array.isArray(detail.intro)
         ? detail.intro.join(" ").slice(0, 160)
-        : detail.title,
+        : detail.title;
+
+    return {
+      title,
+      description,
+      ...buildProductSocialMetadata({
+        data: pageData,
+        title,
+        description,
+        canonicalUrl: `/products/${category}/${slug}/`,
+      }),
     };
   }
 
@@ -222,6 +233,11 @@ export async function generateMetadata({
 
   return {
     title: `${slug} | FOREACH`,
+    ...buildProductSocialMetadata({
+      data: pageData,
+      title: `${slug} | FOREACH`,
+      canonicalUrl: `/products/${category}/${slug}/`,
+    }),
   };
 }
 

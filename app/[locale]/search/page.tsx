@@ -25,6 +25,10 @@ export async function generateMetadata({
     title: "Search | FOREACH",
     description:
       "Search FOREACH products, applications, technical resources, and company information.",
+    robots: {
+      index: false,
+      follow: true,
+    },
   };
 }
 

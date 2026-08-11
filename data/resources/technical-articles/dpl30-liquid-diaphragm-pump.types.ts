@@ -3,6 +3,11 @@ import type { TechnicalArticleLocale } from "./technical-articles.types";
 export type Dpl30ThreeColumnRow = readonly [string, string, string];
 export type Dpl30TwoColumnRow = readonly [string, string];
 
+export type Dpl30FaqItem = {
+  question: string;
+  answer: string;
+};
+
 export type Dpl30SpecificationRow = {
   label: string;
   value?: string;

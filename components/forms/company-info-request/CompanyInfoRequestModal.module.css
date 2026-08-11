@@ -6,10 +6,10 @@
    components/forms/company-info-request/CompanyInfoRequestModal.module.css
 
    说明：
-   1. 只服务 CompanyInfoRequestModal 组件
+   1. 服务 CompanyInfoRequestModal 与产品详情 Request CAD
    2. 不写入 app/globals.css
-   3. 后续图纸申请、规格书申请、资料包申请都可以复用
-   4. 当前包含测试版邮箱验证码视觉样式
+   3. 图纸申请与 CAD 申请复用同一套表单视觉
+   4. 邮箱、验证码、错误态及移动端样式保持一致
 ========================================================= */
 
 /* =========================================================

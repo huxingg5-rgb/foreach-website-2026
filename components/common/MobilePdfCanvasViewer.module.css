@@ -52,6 +52,87 @@
   -webkit-touch-callout: none;
 }
 
+.controls {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 8px;
+}
+
+.controls button {
+  min-width: 0;
+  min-height: 46px;
+  box-sizing: border-box;
+  border: 1px solid #173368;
+  border-radius: 6px;
+  padding: 8px 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  background: #ffffff;
+  color: #173368;
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.35;
+  font-weight: 800;
+  white-space: nowrap;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.controls button:focus-visible:not(:disabled) {
+  border-color: #173368;
+  background: #173368;
+  color: #09e9b4;
+}
+
+.controls button:focus-visible {
+  outline: 3px solid rgba(9, 233, 180, 0.42);
+  outline-offset: 2px;
+}
+
+.controls button:active:not(:disabled) {
+  border-color: #173368;
+  background: #173368;
+  color: #09e9b4;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .controls button:hover:not(:disabled) {
+    border-color: #173368;
+    background: #173368;
+    color: #09e9b4;
+  }
+}
+
+.controls button:disabled {
+  border-color: rgba(23, 51, 104, 0.16);
+  background: #f7f9fc;
+  color: #9aa4b4;
+  cursor: not-allowed;
+}
+
+.controls button span {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .status,
 .error {
   min-height: 300px;
@@ -140,5 +221,10 @@
 
   .pages {
     gap: 10px;
+  }
+
+  .controls button {
+    padding: 8px 10px;
+    font-size: 13px;
   }
 }

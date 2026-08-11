@@ -74,6 +74,7 @@
 
   cursor: pointer;
   text-align: center;
+  text-decoration: none;
 
   transition:
     border-color 0.18s ease,

@@ -25,7 +25,6 @@
 
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Suspense } from "react";
 
 import InstallationGuideClient from "@/components/resources/installation-guide/InstallationGuideClient";
 import { getInstallationGuidePageData } from "@/services/resources/installation-guide/getInstallationGuidePageData";
@@ -110,9 +109,7 @@ export default async function InstallationGuideIntlPage({
         </div>
       </section>
 
-      <Suspense fallback={null}>
-        <InstallationGuideClient pageData={pageData} />
-      </Suspense>
+      <InstallationGuideClient pageData={pageData} />
     </>
   );
 }

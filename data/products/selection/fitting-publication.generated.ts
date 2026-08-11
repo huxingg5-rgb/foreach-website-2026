@@ -35,7 +35,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "129001",
     "foreachModel": "CV-BE-32-PP-N",
-    "imageCard": "/images/products/fittings/check-valves/products/cv-be-32-pp-n-main.webp",
+    "imageCard": "/images/products/fittings/check-valves/products/cv-be-32-pp-n-main.jpg",
     "detailHref": "/products/fittings/check-valves/cv-be-32-pp-n",
     "productTypeId": "check-valves",
     "productType": "单向阀",

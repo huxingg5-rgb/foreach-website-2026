@@ -3,6 +3,7 @@ import type { ComponentType } from "react";
 import { notFound } from "next/navigation";
 
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
+import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 import probeDetailData from "@/data/products/generated/probes/detail/index.json";
 
 type ProbeDetailRecord = {
@@ -225,6 +226,12 @@ export async function generateMetadata({ params }: ProbeDetailPageProps) {
   return {
     title: detail.seoTitle || detail.title + "｜" + detail.productTypeName + "｜恒永达 FOREACH",
     description: detail.seoDescription || detail.description,
+    ...buildProductSocialMetadata({
+      data: detail,
+      title: detail.seoTitle || detail.title,
+      description: detail.seoDescription || detail.description,
+      canonicalUrl: `/products/probes/${slug}/`,
+    }),
   };
 }
 

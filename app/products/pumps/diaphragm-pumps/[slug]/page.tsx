@@ -62,6 +62,8 @@ type DiaphragmFaq = {
 type DiaphragmDetail = {
   seriesId: string;
   slug: string;
+  datasheetId?: string;
+  cadRequestAvailable?: boolean;
   relationKeys?: string[];
   relationPriority?: number;
   category?: string;
@@ -1029,10 +1031,28 @@ export async function generateMetadata({ params }: PageProps) {
       data.description ||
       data.summary
   );
+  const metadataTitle = title.includes("FOREACH") ? title : `${title} | FOREACH`;
+  const socialImage = data.mainImage
+    ? new URL(data.mainImage, "https://www.foreachtek.com").toString()
+    : undefined;
 
   return {
-    title: title.includes("FOREACH") ? title : `${title} | FOREACH`,
+    title: metadataTitle,
     description,
+    openGraph: {
+      type: "website",
+      title: metadataTitle,
+      description,
+      ...(socialImage
+        ? { images: [{ url: socialImage, alt: data.imageAlt || title }] }
+        : {}),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: metadataTitle,
+      description,
+      ...(socialImage ? { images: [socialImage] } : {}),
+    },
   };
 }
 

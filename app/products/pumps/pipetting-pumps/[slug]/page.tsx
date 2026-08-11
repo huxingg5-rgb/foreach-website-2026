@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import type { ComponentType } from "react";
 import type { Metadata } from "next";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
+import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 
 import detailsJson from "@/data/products/generated/pumps/pipetting-pumps/detail/index.json";
 
@@ -208,6 +209,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: detail.seo?.title || `${detail.model} | FOREACH`,
     description: detail.seo?.description || detail.description || "",
+    ...buildProductSocialMetadata({
+      data: detail,
+      title: detail.seo?.title || `${detail.model} | FOREACH`,
+      description: detail.seo?.description || detail.description || "",
+      canonicalUrl: `/products/pumps/pipetting-pumps/${slug}/`,
+    }),
   };
 }
 

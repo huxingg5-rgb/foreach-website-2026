@@ -258,7 +258,7 @@ function SearchResultItem({
     >
       {item.image ? (
         <div className="site-search-result-image">
-          <img src={item.image} alt="" loading="lazy" />
+          <img src={item.image} alt={item.title} loading="lazy" />
         </div>
       ) : (
         <div

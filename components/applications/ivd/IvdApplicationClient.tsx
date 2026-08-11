@@ -15,8 +15,9 @@
 
 import Link from "next/link";
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
-import { useSearchParams } from "next/navigation";
-import { useEffect, useMemo, useState } from "react";
+import { Suspense, useCallback, useMemo, useState } from "react";
+
+import IvdApplicationSearchParamsSync from "./IvdApplicationSearchParamsSync";
 
 import type {
   IvdApplicationPageData,
@@ -31,28 +32,19 @@ type IvdApplicationClientProps = {
 export default function IvdApplicationClient({ data }: IvdApplicationClientProps) {
   const firstInstrument = data.instruments[0];
 
-  const searchParams = useSearchParams();
-  const requestedInstrumentKey = searchParams.get("instrument") ?? "";
-
-  const initialInstrument =
-    data.instruments.find((instrument) => instrument.key === requestedInstrumentKey) ??
-    firstInstrument;
-
-  const [activeInstrumentKey, setActiveInstrumentKey] = useState(initialInstrument?.key ?? "");
-  const [activeModuleKey, setActiveModuleKey] = useState(initialInstrument?.modules[0]?.key ?? "");
+  const [activeInstrumentKey, setActiveInstrumentKey] = useState(firstInstrument?.key ?? "");
+  const [activeModuleKey, setActiveModuleKey] = useState(firstInstrument?.modules[0]?.key ?? "");
   const [activeProductKey, setActiveProductKey] = useState(
-    initialInstrument?.modules[0]?.products[0] ?? "",
+    firstInstrument?.modules[0]?.products[0] ?? "",
   );
 
-  useEffect(() => {
-    const queryInstrumentKey = searchParams.get("instrument") ?? "";
-
-    if (!queryInstrumentKey) {
+  const handleSearchParamsChange = useCallback((instrumentKey?: string) => {
+    if (!instrumentKey) {
       return;
     }
 
     const matchedInstrument = data.instruments.find(
-      (instrument) => instrument.key === queryInstrumentKey,
+      (instrument) => instrument.key === instrumentKey,
     );
 
     if (!matchedInstrument) {
@@ -64,7 +56,7 @@ export default function IvdApplicationClient({ data }: IvdApplicationClientProps
     setActiveInstrumentKey(matchedInstrument.key);
     setActiveModuleKey(firstModule?.key ?? "");
     setActiveProductKey(firstModule?.products[0] ?? "");
-  }, [data.instruments, searchParams]);
+  }, [data.instruments]);
 
   const activeInstrument = useMemo<IvdInstrument>(() => {
     return data.instruments.find((instrument) => instrument.key === activeInstrumentKey) ?? data.instruments[0];
@@ -96,6 +88,9 @@ export default function IvdApplicationClient({ data }: IvdApplicationClientProps
 
   return (
     <main className="ivd-page">
+      <Suspense fallback={null}>
+        <IvdApplicationSearchParamsSync onChange={handleSearchParamsChange} />
+      </Suspense>
       {/* =====================================================
           Banner
           说明：

@@ -11,6 +11,7 @@ type PumpUploadedFileGuardProps = {
   fileUrl: string;
   loadingFallback: ReactNode;
   missingFallback: ReactNode;
+  renderChildrenWhileChecking?: boolean;
 };
 
 type FileNotUploadedDisplayProps = {
@@ -26,6 +27,7 @@ export function PumpUploadedFileGuard({
   fileUrl,
   loadingFallback,
   missingFallback,
+  renderChildrenWhileChecking = false,
 }: PumpUploadedFileGuardProps) {
   const checkUrl = getFileCheckUrl(fileUrl);
   const [availability, setAvailability] = useState<PumpFileAvailability>(
@@ -71,7 +73,7 @@ export function PumpUploadedFileGuard({
   }
 
   if (availability === "checking") {
-    return loadingFallback;
+    return renderChildrenWhileChecking ? children : loadingFallback;
   }
 
   return children;

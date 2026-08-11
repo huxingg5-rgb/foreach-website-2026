@@ -7,6 +7,7 @@ import {
 } from "next/navigation";
 
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
+import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 
 import {
   connectPublishedFittingProduct,
@@ -346,6 +347,13 @@ export async function generateMetadata({
       canonical:
         `/${locale}/products/fittings/hard-tube-fittings/${detail.slug}`,
     },
+
+    ...buildProductSocialMetadata({
+      data: detail,
+      title: `${detail.model} ${productTypeName} | FOREACH`,
+      description: detail.description || "",
+      canonicalUrl: `/${locale}/products/fittings/hard-tube-fittings/${detail.slug}/`,
+    }),
   };
 }
 

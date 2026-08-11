@@ -171,10 +171,34 @@ export async function POST(request: Request): Promise<Response> {
       cleanText(body.locale, 20) ||
       "unknown";
 
+    const productName =
+      cleanText(body.productName, 240);
+
+    const productSeries =
+      cleanText(body.productSeries, 200);
+
+    const productModel =
+      cleanText(body.productModel, 240);
+
+    const currentUrl =
+      cleanText(body.currentUrl, 2_048);
+
+    const isCadRequest =
+      requestType.toUpperCase() === "CAD";
+
+    const displayedName =
+      name || (isCadRequest ? "Customer" : "");
+
+    const displayedMessage =
+      message ||
+      (isCadRequest
+        ? "No additional CAD requirements provided."
+        : "");
+
     const attachments =
       normalizeAttachments(body.attachments);
 
-    if (!name) {
+    if (!name && !isCadRequest) {
       return jsonResponse(
         {
           success: false,
@@ -204,7 +228,7 @@ export async function POST(request: Request): Promise<Response> {
       );
     }
 
-    if (!productType || !message) {
+    if (!productType || (!message && !isCadRequest)) {
       return jsonResponse(
         {
           success: false,
@@ -264,6 +288,10 @@ export async function POST(request: Request): Promise<Response> {
         projectStage,
         message,
         locale,
+        productName,
+        productSeries,
+        productModel,
+        currentUrl,
         attachments,
       ]),
     );
@@ -287,7 +315,7 @@ export async function POST(request: Request): Promise<Response> {
         </p>
 
         <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border:1px solid #e1e7ee;border-collapse:collapse;font-size:14px;line-height:1.6;">
-          ${buildTableRow("Name", name)}
+          ${buildTableRow("Name", name || "-")}
           ${buildTableRow("Company", company)}
           ${buildTableRow("Email", email)}
           ${buildTableRow("Phone / WhatsApp", phone)}
@@ -297,7 +325,11 @@ export async function POST(request: Request): Promise<Response> {
           ${buildTableRow("Target / Competitor Model", targetModel)}
           ${buildTableRow("Project Stage", projectStage)}
           ${buildTableRow("Website Language", locale)}
-          ${buildTableRow("Requirement", message)}
+          ${buildTableRow("Product Name", productName)}
+          ${buildTableRow("Product Series", productSeries)}
+          ${buildTableRow("Product Model", productModel)}
+          ${buildTableRow("Current URL", currentUrl)}
+          ${buildTableRow("Requirement", displayedMessage)}
           ${buildTableRow("Selected Files", attachmentText)}
         </table>
 
@@ -317,7 +349,7 @@ export async function POST(request: Request): Promise<Response> {
       "Inquiry Received",
       `
         <p style="margin:0 0 18px;font-size:16px;line-height:1.7;color:#263a59;">
-          Dear ${escapeHtml(name)},
+          Dear ${escapeHtml(displayedName)},
         </p>
 
         <p style="margin:0 0 18px;font-size:16px;line-height:1.7;color:#263a59;">
@@ -353,7 +385,7 @@ export async function POST(request: Request): Promise<Response> {
     const notificationText =
       `New FOREACH website inquiry\n` +
       `Reference: ${referenceId}\n` +
-      `Name: ${name}\n` +
+      `Name: ${name || "-"}\n` +
       `Company: ${company}\n` +
       `Email: ${email}\n` +
       `Phone / WhatsApp: ${phone || "-"}\n` +
@@ -363,13 +395,17 @@ export async function POST(request: Request): Promise<Response> {
       `Target Model: ${targetModel || "-"}\n` +
       `Project Stage: ${projectStage || "-"}\n` +
       `Website Language: ${locale}\n` +
-      `Requirement: ${message}\n` +
+      `Product Name: ${productName || "-"}\n` +
+      `Product Series: ${productSeries || "-"}\n` +
+      `Product Model: ${productModel || "-"}\n` +
+      `Current URL: ${currentUrl || "-"}\n` +
+      `Requirement: ${displayedMessage || "-"}\n` +
       `Selected Files:\n${attachmentText}\n\n` +
       "The original files are not attached. " +
       "Ask the customer to reply with them if required.";
 
     const confirmationText =
-      `Dear ${name},\n\n` +
+      `Dear ${displayedName},\n\n` +
       "Thank you for contacting FOREACH. " +
       "We have received your inquiry.\n" +
       `Reference: ${referenceId}\n` +

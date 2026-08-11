@@ -19151,20 +19151,13 @@ html body .home-honor-image img {
     border-radius: 999px;
     background:
       rgba(
-        23,
-        51,
-        104,
-        0.28
+        255,
+        255,
+        255,
+        0.18
       );
 
-    box-shadow:
-      0 1px 5px
-      rgba(
-        255,
-        255,
-        255,
-        0.64
-      );
+    box-shadow: none;
 
     cursor: pointer;
 
@@ -19181,8 +19174,8 @@ html body .home-honor-image img {
     width: 58px;
     background:
       var(
-        --brand-blue,
-        #173368
+        --brand-cyan,
+        #09e9b4
       );
   }
 
@@ -19196,7 +19189,7 @@ html body .home-honor-image img {
     .home-hero-carousel-dot:focus-visible {
     outline: 2px solid
       var(
-        --brand-green,
+        --brand-cyan,
         #09e9b4
       );
     outline-offset: 4px;

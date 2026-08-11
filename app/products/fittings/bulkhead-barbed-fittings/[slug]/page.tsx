@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
+import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 import {
   connectPublishedFittingProduct,
 } from "@/data/products/selection/connectPublishedFittingProduct";
@@ -69,6 +70,12 @@ export async function generateMetadata({
     description:
       detail.seo?.description ||
       detail.description,
+    ...buildProductSocialMetadata({
+      data: detail,
+      title: detail.seo?.title || detail.model || detail.title || "FOREACH",
+      description: detail.seo?.description || detail.description,
+      canonicalUrl: `/products/fittings/bulkhead-barbed-fittings/${slug}/`,
+    }),
   };
 }
 

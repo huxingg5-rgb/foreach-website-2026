@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import ResourceSearchBar from "@/components/resources/ResourceSearchBar";
 import { useSelectionCart } from "@/components/selection-cart/SelectionCartProvider";
 import type { SelectionCartItemInput } from "@/components/selection-cart/selection-cart.types";
@@ -119,6 +119,7 @@ import ProductCategoryTabs from "./ProductCategoryTabs";
 import ProductEmptyState from "./ProductEmptyState";
 import ProductFilterPanel from "./ProductFilterPanel";
 import ProductSelectionPagination from "./ProductSelectionPagination";
+import ProductSelectionSearchParamsSync from "./ProductSelectionSearchParamsSync";
 import ProductSelectionToolbar from "./ProductSelectionToolbar";
 import { getLocalizedFilterOptionLabel } from "./filter-option-i18n";
 import {
@@ -3070,9 +3071,28 @@ export default function ProductSelectionClient({
   initialFilters,
 }: ProductSelectionClientProps) {
   const router = useRouter();
-  const searchParams = useSearchParams();
-  const requestedCategoryId = searchParams.get("category");
-  const requestedProductTypeId = searchParams.get("productType");
+  const [querySelection, setQuerySelection] = useState<{
+    categoryId?: string;
+    productTypeId?: string;
+  }>({});
+  const requestedCategoryId = querySelection.categoryId;
+  const requestedProductTypeId = querySelection.productTypeId;
+
+  const handleSearchParamsChange = useCallback(
+    (categoryId?: string, productTypeId?: string) => {
+      setQuerySelection((current) => {
+        if (
+          current.categoryId === categoryId &&
+          current.productTypeId === productTypeId
+        ) {
+          return current;
+        }
+
+        return { categoryId, productTypeId };
+      });
+    },
+    [],
+  );
 
   const pageText =
     PRODUCT_SELECTION_PAGE_TEXT[locale] || PRODUCT_SELECTION_PAGE_TEXT.zh;
@@ -4897,6 +4917,9 @@ function isFilterOptionActive(
 
   return (
     <div className="products-selection-page">
+      <Suspense fallback={null}>
+        <ProductSelectionSearchParamsSync onChange={handleSearchParamsChange} />
+      </Suspense>
 <SitePageShell
         breadcrumbAriaLabel={
           locale === "zh"

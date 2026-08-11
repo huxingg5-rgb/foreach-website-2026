@@ -2,6 +2,8 @@ import Image from "next/image";
 
 import {
   getDpl30ArticleCopy,
+  getDpl30ArticleFaq,
+  type Dpl30FaqItem,
   type Dpl30SpecificationRow,
   type Dpl30ThreeColumnRow,
   type Dpl30TwoColumnRow,
@@ -75,6 +77,43 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
     >
       {children}
     </h3>
+  );
+}
+
+function ArticleFaq({ items }: { items: readonly Dpl30FaqItem[] }) {
+  if (items.length === 0) {
+    return null;
+  }
+
+  return (
+    <section className={styles.contentBlock} aria-labelledby="dpl30-faq-title">
+      <h2 id="dpl30-faq-title">常见问题</h2>
+      <div style={{ display: "grid", gap: 12 }}>
+        {items.map((item) => (
+          <details
+            key={item.question}
+            style={{
+              border: "1px solid rgba(23, 51, 104, 0.14)",
+              borderRadius: 8,
+              padding: "0 18px",
+              background: "#ffffff",
+            }}
+          >
+            <summary
+              style={{
+                padding: "16px 0",
+                color: "#173368",
+                fontWeight: 700,
+                cursor: "pointer",
+              }}
+            >
+              {item.question}
+            </summary>
+            <p style={{ margin: "0 0 18px" }}>{item.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
   );
 }
 
@@ -251,6 +290,7 @@ export default function Dpl30LiquidDiaphragmPumpArticle({
   locale = "zh-CN",
 }: Dpl30LiquidDiaphragmPumpArticleProps) {
   const copy = getDpl30ArticleCopy(locale);
+  const faqItems = getDpl30ArticleFaq(locale);
 
   return (
     <div className={styles.technicalArticleBody}>
@@ -360,6 +400,8 @@ export default function Dpl30LiquidDiaphragmPumpArticle({
         <p>{copy.section11.paragraphs[0]}</p>
         <p>{copy.section11.paragraphs[1]}</p>
       </section>
+
+      <ArticleFaq items={faqItems} />
     </div>
   );
 }

@@ -17,6 +17,7 @@ import {
 import ProductPageSkeleton from "@/components/common/ProductPageSkeleton";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
 import ProductSelectionClient from "@/components/products/selection/ProductSelectionClient";
+import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 import {
   connectPublishedFittingProduct,
 } from "@/data/products/selection/connectPublishedFittingProduct";
@@ -545,20 +546,31 @@ export async function generateMetadata({
       detail,
       fallbackName,
     } = fittingDetail;
+    const pageData =
+      toFittingClientData(
+        fittingDetail
+      );
+    const title =
+      detail.seo?.title ||
+      `${detail.model} ${
+        detail.name ||
+        detail.title ||
+        fallbackName
+      } | FOREACH`;
+    const description =
+      detail.seo?.description ||
+      detail.description ||
+      "";
 
     return {
-      title:
-        detail.seo?.title ||
-        `${detail.model} ${
-          detail.name ||
-          detail.title ||
-          fallbackName
-        } | FOREACH`,
-
-      description:
-        detail.seo?.description ||
-        detail.description ||
-        "",
+      title,
+      description,
+      ...buildProductSocialMetadata({
+        data: pageData,
+        title,
+        description,
+        canonicalUrl: `/products/${category}/${slug}/${seriesSlug}/`,
+      }),
     };
   }
 

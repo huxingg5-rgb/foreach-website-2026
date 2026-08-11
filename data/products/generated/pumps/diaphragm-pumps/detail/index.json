@@ -1,6 +1,7 @@
 [
   {
     "seriesId": "DPL30",
+    "datasheetId": "dpl30-series-en",
     "relationKeys": ["series:dpl30"],
     "slug": "dpl30-liquid-diaphragm-pump",
     "category": "液体隔膜泵",
@@ -409,6 +410,7 @@
   },
   {
     "seriesId": "DPL60",
+    "datasheetId": "dpl60-series-en",
     "relationKeys": ["series:dpl60"],
     "slug": "dpl60-liquid-diaphragm-pump",
     "category": "液体隔膜泵",
@@ -1388,6 +1390,7 @@
   },
   {
     "seriesId": "DPL30",
+    "datasheetId": "dpl30-series-en",
     "relationKeys": ["series:dpl30"],
     "slug": "dpl30-24db-ep-ps-liquid-diaphragm-pump",
     "category": "液体隔膜泵",
@@ -1681,6 +1684,7 @@
   },
   {
     "seriesId": "DPL30",
+    "datasheetId": "dpl30-series-en",
     "relationKeys": ["series:dpl30"],
     "slug": "dpl30-24bb-ep-ps-liquid-diaphragm-pump",
     "category": "液体隔膜泵",
@@ -1974,6 +1978,7 @@
   },
   {
     "seriesId": "DPL60",
+    "datasheetId": "dpl60-series-en",
     "relationKeys": ["series:dpl60"],
     "slug": "dpl60-24db-ep-ps-liquid-diaphragm-pump",
     "category": "液体隔膜泵",
@@ -2255,6 +2260,7 @@
   },
   {
     "seriesId": "DPL60",
+    "datasheetId": "dpl60-series-en",
     "relationKeys": ["series:dpl60"],
     "slug": "dpl60-24bb-ep-ps-liquid-diaphragm-pump",
     "category": "液体隔膜泵",

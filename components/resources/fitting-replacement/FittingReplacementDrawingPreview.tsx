@@ -13,14 +13,18 @@
 
 import {
   useEffect,
+  useRef,
   useState,
 } from "react";
 
 import LoadingProgress from "@/components/common/LoadingProgress";
 import MobilePdfCanvasViewer from "@/components/common/MobilePdfCanvasViewer";
 
-const DRAWING_PREVIEW_LOADING_TIME =
-  1200;
+const DESKTOP_PDF_LOADING_TIMEOUT_MS =
+  15000;
+
+const DESKTOP_PDF_SETTLE_TIME_MS =
+  500;
 
 const MOBILE_PDF_MEDIA_QUERY =
   "(max-width: 760px)";
@@ -37,6 +41,17 @@ interface FittingReplacementDrawingPreviewProps {
   drawingPdfPreviewHref: string;
   productModel: string;
   text: FittingReplacementDrawingPreviewText;
+  initiallyVisible?: boolean;
+  previewHref?: string;
+  deferDesktopUntilOpen?: boolean;
+  showPreviewDescription?: boolean;
+  analyticsResourceId?: string;
+  analyticsResourceType?: string;
+  analyticsSection?: string;
+  previousPageLabel?: string;
+  nextPageLabel?: string;
+  previousPageVisibleLabel?: string;
+  nextPageVisibleLabel?: string;
 }
 
 type ViewerMode =
@@ -48,11 +63,25 @@ export default function FittingReplacementDrawingPreview({
   drawingPdfPreviewHref,
   productModel,
   text,
+  initiallyVisible = false,
+  previewHref,
+  deferDesktopUntilOpen = false,
+  showPreviewDescription = true,
+  analyticsResourceId = `2d_drawing:${productModel.trim()}`,
+  analyticsResourceType = "2d_drawing",
+  analyticsSection = "product_drawing_preview",
+  previousPageLabel,
+  nextPageLabel,
+  previousPageVisibleLabel,
+  nextPageVisibleLabel,
 }: FittingReplacementDrawingPreviewProps) {
+  const desktopLoadSettleTimerRef =
+    useRef<number | null>(null);
+
   const [
     isDrawingPreviewVisible,
     setIsDrawingPreviewVisible,
-  ] = useState(false);
+  ] = useState(initiallyVisible);
 
   const [
     isDrawingLoading,
@@ -72,50 +101,38 @@ export default function FittingReplacementDrawingPreview({
         MOBILE_PDF_MEDIA_QUERY
       );
 
-    const updateViewerMode =
-      () => {
+    // 首次进入页面时确定渲染方式，之后不再因 PC 浏览器缩放
+    // 或窗口宽度变化卸载 iframe 并切换到手机 Canvas。
+    const modeTimer =
+      window.setTimeout(() => {
         setViewerMode(
           mediaQuery.matches
             ? "mobile"
             : "desktop"
         );
-      };
-
-    updateViewerMode();
-
-    if (
-      typeof mediaQuery.addEventListener ===
-      "function"
-    ) {
-      mediaQuery.addEventListener(
-        "change",
-        updateViewerMode
-      );
-
-      return () => {
-        mediaQuery.removeEventListener(
-          "change",
-          updateViewerMode
-        );
-      };
-    }
-
-    mediaQuery.addListener(
-      updateViewerMode
-    );
+      }, 0);
 
     return () => {
-      mediaQuery.removeListener(
-        updateViewerMode
-      );
+      window.clearTimeout(modeTimer);
     };
   }, []);
 
   useEffect(() => {
     const resetTimer =
       window.setTimeout(() => {
+        if (
+          desktopLoadSettleTimerRef.current !==
+          null
+        ) {
+          window.clearTimeout(
+            desktopLoadSettleTimerRef.current
+          );
+          desktopLoadSettleTimerRef.current =
+            null;
+        }
+
         setIsDrawingPreviewVisible(
-          false
+          initiallyVisible
         );
 
         setIsDrawingLoading(
@@ -128,7 +145,7 @@ export default function FittingReplacementDrawingPreview({
         resetTimer
       );
     };
-  }, [drawingPdfPreviewHref]);
+  }, [drawingPdfPreviewHref, initiallyVisible]);
 
   useEffect(() => {
     if (
@@ -144,7 +161,7 @@ export default function FittingReplacementDrawingPreview({
         setIsDrawingLoading(
           false
         );
-      }, DRAWING_PREVIEW_LOADING_TIME);
+      }, DESKTOP_PDF_LOADING_TIMEOUT_MS);
 
     return () => {
       window.clearTimeout(timer);
@@ -154,6 +171,19 @@ export default function FittingReplacementDrawingPreview({
     isDrawingPreviewVisible,
     viewerMode,
   ]);
+
+  useEffect(() => {
+    return () => {
+      if (
+        desktopLoadSettleTimerRef.current !==
+        null
+      ) {
+        window.clearTimeout(
+          desktopLoadSettleTimerRef.current
+        );
+      }
+    };
+  }, []);
 
   const containsChinese =
     /[\u3400-\u9fff]/.test(
@@ -174,6 +204,18 @@ export default function FittingReplacementDrawingPreview({
     containsChinese
       ? "重新加载"
       : "Try again";
+
+  const resolvedPreviousPageLabel =
+    previousPageLabel ||
+    (containsChinese
+      ? "上一页"
+      : "Previous page");
+
+  const resolvedNextPageLabel =
+    nextPageLabel ||
+    (containsChinese
+      ? "下一页"
+      : "Next page");
 
   return (
     <section className="frd-drawing-section">
@@ -198,7 +240,8 @@ export default function FittingReplacementDrawingPreview({
             : undefined
         }
       >
-        {viewerMode === "desktop" ? (
+        {viewerMode === "desktop" &&
+        (!deferDesktopUntilOpen || isDrawingPreviewVisible) ? (
           <>
             <LoadingProgress
               active={
@@ -224,9 +267,23 @@ export default function FittingReplacementDrawingPreview({
               }
               loading="eager"
               onLoad={() => {
-                setIsDrawingLoading(
-                  false
-                );
+                if (
+                  desktopLoadSettleTimerRef.current !==
+                  null
+                ) {
+                  window.clearTimeout(
+                    desktopLoadSettleTimerRef.current
+                  );
+                }
+
+                desktopLoadSettleTimerRef.current =
+                  window.setTimeout(() => {
+                    setIsDrawingLoading(
+                      false
+                    );
+                    desktopLoadSettleTimerRef.current =
+                      null;
+                  }, DESKTOP_PDF_SETTLE_TIME_MS);
               }}
             />
           </>
@@ -253,6 +310,18 @@ export default function FittingReplacementDrawingPreview({
             pageLabel={
               pageLabel
             }
+            previousPageLabel={
+              resolvedPreviousPageLabel
+            }
+            nextPageLabel={
+              resolvedNextPageLabel
+            }
+            previousPageVisibleLabel={
+              previousPageVisibleLabel
+            }
+            nextPageVisibleLabel={
+              nextPageVisibleLabel
+            }
           />
         ) : null}
 
@@ -267,33 +336,68 @@ export default function FittingReplacementDrawingPreview({
         ) : null}
 
         {!isDrawingPreviewVisible ? (
-          <button
-            className="frd-drawing-preview-card"
-            type="button"
-            data-analytics-resource-action="view"
-            data-analytics-resource-id={`2d_drawing:${productModel.trim()}`}
-            data-analytics-resource-type="2d_drawing"
-            data-analytics-resource-file-type="pdf"
-            data-analytics-section="product_drawing_preview"
-            onClick={() => {
-              setIsDrawingPreviewVisible(
-                true
-              );
-            }}
-          >
-            <span
-              className="frd-drawing-play-icon"
-              aria-hidden="true"
-            />
+          previewHref ? (
+            <a
+              className="frd-drawing-preview-card"
+              href={previewHref}
+              data-analytics-resource-action="view"
+              data-analytics-resource-id={analyticsResourceId}
+              data-analytics-resource-type={analyticsResourceType}
+              data-analytics-resource-file-type="pdf"
+              data-analytics-section={analyticsSection}
+              onClick={(event) => {
+                event.preventDefault();
+                setIsDrawingPreviewVisible(
+                  true
+                );
+              }}
+            >
+              <span
+                className="frd-drawing-play-icon"
+                aria-hidden="true"
+              />
 
-            <strong>
-              {text.previewButton}
-            </strong>
+              <strong>
+                {text.previewButton}
+              </strong>
 
-            <em>
-              {text.description}
-            </em>
-          </button>
+              {showPreviewDescription && text.description ? (
+                <em>
+                  {text.description}
+                </em>
+              ) : null}
+            </a>
+          ) : (
+            <button
+              className="frd-drawing-preview-card"
+              type="button"
+              data-analytics-resource-action="view"
+              data-analytics-resource-id={analyticsResourceId}
+              data-analytics-resource-type={analyticsResourceType}
+              data-analytics-resource-file-type="pdf"
+              data-analytics-section={analyticsSection}
+              onClick={() => {
+                setIsDrawingPreviewVisible(
+                  true
+                );
+              }}
+            >
+              <span
+                className="frd-drawing-play-icon"
+                aria-hidden="true"
+              />
+
+              <strong>
+                {text.previewButton}
+              </strong>
+
+              {showPreviewDescription && text.description ? (
+                <em>
+                  {text.description}
+                </em>
+              ) : null}
+            </button>
+          )
         ) : null}
       </div>
     </section>

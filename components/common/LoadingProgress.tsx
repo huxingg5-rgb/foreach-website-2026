@@ -27,9 +27,19 @@ export default function LoadingProgress({
   if (!active) return null;
 
   return (
-    <div className={styles.loadingProgress} aria-live="polite">
+    <div
+      className={styles.loadingProgress}
+      role="status"
+      aria-live="polite"
+      aria-busy="true"
+    >
       <div className={styles.loadingProgressInner}>
-        <span>{label}</span>
+        <span
+          className={styles.loadingSpinner}
+          aria-hidden="true"
+        />
+
+        <strong>{label}</strong>
 
         <div className={styles.loadingTrack}>
           <div className={styles.loadingBar} />
@@ -37,4 +47,4 @@ export default function LoadingProgress({
       </div>
     </div>
   );
-} 
+}

@@ -16,6 +16,10 @@ import RelatedResources from "@/components/common/related-resources/RelatedResou
 import NewsArticleClient from "@/components/resources/news/NewsArticleClient";
 import CvKvMicrofluidicsArticle from "@/components/resources/technical-articles/articles/CvKvMicrofluidicsArticle";
 import Dpl30LiquidDiaphragmPumpArticle from "@/components/resources/technical-articles/articles/Dpl30LiquidDiaphragmPumpArticle";
+import {
+  getDpl30ArticleFaq,
+  type Dpl30FaqItem,
+} from "@/data/resources/technical-articles/dpl30-liquid-diaphragm-pump.article";
 
 import type {
   TechnicalArticleItem,
@@ -71,6 +75,7 @@ function buildTechnicalArticleStructuredData(
   pageData: TechnicalArticlesPageData,
   article: TechnicalArticleItem,
   locale: SupportedLocale,
+  faqItems: readonly Dpl30FaqItem[] = [],
 ) {
   const canonicalUrl = getTechnicalArticleCanonicalUrl(locale, article.slug);
   const organizationId = `${TECHNICAL_ARTICLE_SITE_ORIGIN}/#organization`;
@@ -123,9 +128,7 @@ function buildTechnicalArticleStructuredData(
     isAccessibleForFree: true,
   };
 
-  return {
-    "@context": "https://schema.org",
-    "@graph": [
+  const graph: Record<string, unknown>[] = [
       {
         "@type": "Organization",
         "@id": organizationId,
@@ -156,7 +159,27 @@ function buildTechnicalArticleStructuredData(
         breadcrumb: { "@id": breadcrumbId },
       },
       articleData,
-    ],
+    ];
+
+  if (faqItems.length > 0) {
+    graph.push({
+      "@type": "FAQPage",
+      "@id": `${canonicalUrl}#faq`,
+      isPartOf: { "@id": webpageId },
+      mainEntity: faqItems.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.answer,
+        },
+      })),
+    });
+  }
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": graph,
   };
 }
 
@@ -253,6 +276,7 @@ export default function TechnicalArticleDetail({
     pageData,
     article,
     locale,
+    isDpl30Article ? getDpl30ArticleFaq(locale) : [],
   );
 
   return (

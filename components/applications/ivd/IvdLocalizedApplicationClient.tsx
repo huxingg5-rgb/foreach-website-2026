@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
-import { useEffect, useMemo, useState } from "react";
+import { Suspense, useCallback, useMemo, useState } from "react";
 
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
+import IvdApplicationSearchParamsSync from "./IvdApplicationSearchParamsSync";
 import type {
   IvdApplicationPageData,
   IvdFluidicModule,
@@ -91,32 +91,24 @@ export default function IvdLocalizedApplicationClient({
   data,
 }: IvdLocalizedApplicationClientProps) {
   const firstInstrument = data.instruments[0];
-  const searchParams = useSearchParams();
-  const requestedInstrumentKey = searchParams.get("instrument") ?? "";
-  const initialInstrument =
-    data.instruments.find(
-      (instrument) => instrument.key === requestedInstrumentKey,
-    ) ?? firstInstrument;
 
   const [activeInstrumentKey, setActiveInstrumentKey] = useState(
-    initialInstrument?.key ?? "",
+    firstInstrument?.key ?? "",
   );
   const [activeModuleKey, setActiveModuleKey] = useState(
-    initialInstrument?.modules[0]?.key ?? "",
+    firstInstrument?.modules[0]?.key ?? "",
   );
   const [activeProductKey, setActiveProductKey] = useState(
-    initialInstrument?.modules[0]?.products[0] ?? "",
+    firstInstrument?.modules[0]?.products[0] ?? "",
   );
 
-  useEffect(() => {
-    const queryInstrumentKey = searchParams.get("instrument") ?? "";
-
-    if (!queryInstrumentKey) {
+  const handleSearchParamsChange = useCallback((instrumentKey?: string) => {
+    if (!instrumentKey) {
       return;
     }
 
     const matchedInstrument = data.instruments.find(
-      (instrument) => instrument.key === queryInstrumentKey,
+      (instrument) => instrument.key === instrumentKey,
     );
 
     if (!matchedInstrument) {
@@ -125,12 +117,10 @@ export default function IvdLocalizedApplicationClient({
 
     const firstModule = matchedInstrument.modules[0];
 
-    /* eslint-disable react-hooks/set-state-in-effect -- Synchronize the initial selection with the hydrated URL query. */
     setActiveInstrumentKey(matchedInstrument.key);
     setActiveModuleKey(firstModule?.key ?? "");
     setActiveProductKey(firstModule?.products[0] ?? "");
-    /* eslint-enable react-hooks/set-state-in-effect */
-  }, [data.instruments, searchParams]);
+  }, [data.instruments]);
 
   const activeInstrument = useMemo<IvdInstrument>(() => {
     return (
@@ -172,6 +162,9 @@ export default function IvdLocalizedApplicationClient({
 
   return (
     <main className="ivd-page">
+      <Suspense fallback={null}>
+        <IvdApplicationSearchParamsSync onChange={handleSearchParamsChange} />
+      </Suspense>
       <section
         className="ivd-hero"
         style={{ backgroundImage: `url(${data.hero.backgroundImage})` }}

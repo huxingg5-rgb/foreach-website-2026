@@ -6,6 +6,7 @@ import type { ComponentType } from "react";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
 import * as plungerPumpDetailModule from "@/data/products/detail/plunger-pump-detail.generated";
 import { selectionProducts } from "@/data/products/selection/product-selection.generated";
+import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 
 function getLocalizedSelectionText(
   value: string | { zh?: string; en?: string; [key: string]: string | undefined } | undefined,
@@ -619,6 +620,12 @@ export async function generateMetadata({ params }: PageProps) {
   return {
     title: title.includes("FOREACH") ? title : `${title} | FOREACH`,
     description,
+    ...buildProductSocialMetadata({
+      data: pageData,
+      title,
+      description,
+      canonicalUrl: `/products/pumps/plunger-pumps/${resolvedParams.slug}/`,
+    }),
   };
 }
 

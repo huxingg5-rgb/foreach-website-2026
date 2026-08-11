@@ -1948,7 +1948,7 @@ export const filterCheckValveSelectionProducts =
     "portSize": "3.2 mm",
     "materialCode": "PP",
     "colorCode": "N",
-    "imageCard": "/images/products/fittings/check-valves/products/cv-be-32-pp-n-main.webp",
+    "imageCard": "/images/products/fittings/check-valves/products/cv-be-32-pp-n-main.jpg",
     "detailSlug": "cv-be-32-pp-n",
     "detailHref": "/products/fittings/check-valves/cv-be-32-pp-n",
     "href": "/products/fittings/check-valves/cv-be-32-pp-n",

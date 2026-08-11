@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   title: "全站搜索｜FOREACH 恒永达",
   description:
     "搜索 FOREACH 恒永达产品、型号、兼容型号和产品规格书。",
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 export default function SearchPage() {

@@ -20,6 +20,10 @@ type MobilePdfCanvasViewerProps = {
   errorLabel?: string;
   retryLabel?: string;
   pageLabel?: string;
+  previousPageLabel?: string;
+  nextPageLabel?: string;
+  previousPageVisibleLabel?: string;
+  nextPageVisibleLabel?: string;
 };
 
 type ViewerStatus =
@@ -455,12 +459,22 @@ export default function MobilePdfCanvasViewer({
   errorLabel = "图纸加载失败，请刷新页面后重试",
   retryLabel = "重新加载",
   pageLabel = "页",
+  previousPageLabel = "上一页",
+  nextPageLabel = "下一页",
+  previousPageVisibleLabel = previousPageLabel,
+  nextPageVisibleLabel = nextPageLabel,
 }: MobilePdfCanvasViewerProps) {
   const viewerRef =
     useRef<HTMLDivElement | null>(null);
 
   const pagesRef =
     useRef<HTMLDivElement | null>(null);
+
+  const pdfDocumentRef =
+    useRef<PDFDocumentProxy | null>(null);
+
+  const shouldScrollToPageTopRef =
+    useRef(false);
 
   const [viewerWidth, setViewerWidth] =
     useState(0);
@@ -472,6 +486,15 @@ export default function MobilePdfCanvasViewer({
     useState("");
 
   const [retryVersion, setRetryVersion] =
+    useState(0);
+
+  const [documentVersion, setDocumentVersion] =
+    useState(0);
+
+  const [currentPage, setCurrentPage] =
+    useState(1);
+
+  const [totalPages, setTotalPages] =
     useState(0);
 
   useEffect(() => {
@@ -525,29 +548,13 @@ export default function MobilePdfCanvasViewer({
   }, []);
 
   useEffect(() => {
-    const pagesRoot = pagesRef.current;
-
-    if (
-      !pagesRoot ||
-      viewerWidth <= 0
-    ) {
-      return;
-    }
-
-    // 保存经过空值检查的容器引用，供异步渲染流程使用。
-    const pagesContainer = pagesRoot;
-
     let cancelled = false;
     let loadingTask:
       | PDFDocumentLoadingTask
       | null = null;
 
-    let pdfDocument:
+    let loadedPdfDocument:
       | PDFDocumentProxy
-      | null = null;
-
-    let activeRenderTask:
-      | RenderTask
       | null = null;
     let fetchTimeoutId: number | null =
       null;
@@ -555,13 +562,16 @@ export default function MobilePdfCanvasViewer({
     const fetchAbortController =
       new AbortController();
 
-    pagesContainer.replaceChildren();
+    pagesRef.current?.replaceChildren();
+    pdfDocumentRef.current = null;
 
-    setStatus("loading");
-    setProgressText("");
-
-    async function renderPdf() {
+    async function loadPdfDocument() {
       try {
+        setStatus("loading");
+        setProgressText("");
+        setCurrentPage(1);
+        setTotalPages(0);
+
         const pdfjs =
           await import(
             "pdfjs-dist/legacy/build/pdf.mjs"
@@ -591,167 +601,22 @@ export default function MobilePdfCanvasViewer({
             data: pdfBytes,
           });
 
-        pdfDocument =
+        loadedPdfDocument =
           await loadingTask.promise;
 
         if (cancelled) {
           return;
         }
 
-        const totalPages =
-          pdfDocument.numPages;
+        pdfDocumentRef.current =
+          loadedPdfDocument;
 
-        for (
-          let pageNumber = 1;
-          pageNumber <= totalPages;
-          pageNumber += 1
-        ) {
-          if (cancelled) {
-            return;
-          }
-
-          setProgressText(
-            `${pageNumber} / ${totalPages} ${pageLabel}`
-          );
-
-          const pdfPage =
-            await pdfDocument.getPage(
-              pageNumber
-            );
-
-          const originalViewport =
-            pdfPage.getViewport({
-              scale: 1,
-            });
-
-          // 始终服从手机容器宽度，避免窄屏被最小宽度撑出横向滚动。
-          const availableWidth =
-            Math.max(
-              1,
-              viewerWidth - 26
-            );
-
-          const cssScale =
-            availableWidth /
-            originalViewport.width;
-
-          const outputScale =
-            Math.min(
-              window.devicePixelRatio || 1,
-              2
-            );
-
-          const renderViewport =
-            pdfPage.getViewport({
-              scale:
-                cssScale *
-                outputScale,
-            });
-
-          const cssWidth =
-            Math.ceil(
-              renderViewport.width /
-                outputScale
-            );
-
-          const cssHeight =
-            Math.ceil(
-              renderViewport.height /
-                outputScale
-            );
-
-          const pageElement =
-            document.createElement(
-              "article"
-            );
-
-          pageElement.className =
-            styles.page;
-
-          pageElement.setAttribute(
-            "aria-label",
-            `${documentTitle} ${pageNumber} / ${totalPages} ${pageLabel}`
-          );
-
-          const pageNumberElement =
-            document.createElement(
-              "div"
-            );
-
-          pageNumberElement.className =
-            styles.pageNumber;
-
-          pageNumberElement.textContent =
-            `${pageNumber} / ${totalPages}`;
-
-          const canvas =
-            document.createElement(
-              "canvas"
-            );
-
-          canvas.className =
-            styles.canvas;
-
-          canvas.width =
-            Math.ceil(
-              renderViewport.width
-            );
-
-          canvas.height =
-            Math.ceil(
-              renderViewport.height
-            );
-
-          canvas.style.width =
-            `${cssWidth}px`;
-
-          canvas.style.height =
-            `${cssHeight}px`;
-
-          const canvasContext =
-            canvas.getContext(
-              "2d",
-              {
-                alpha: false,
-              }
-            );
-
-          if (!canvasContext) {
-            throw new Error(
-              "Canvas 2D context unavailable."
-            );
-          }
-
-          pageElement.appendChild(
-            pageNumberElement
-          );
-
-          pageElement.appendChild(
-            canvas
-          );
-
-          pagesContainer.appendChild(
-            pageElement
-          );
-
-          activeRenderTask =
-            pdfPage.render({
-              canvasContext,
-              viewport:
-                renderViewport,
-            });
-
-          await activeRenderTask.promise;
-
-          activeRenderTask = null;
-
-          pdfPage.cleanup();
-        }
-
-        if (!cancelled) {
-          setStatus("ready");
-          setProgressText("");
-        }
+        setTotalPages(
+          loadedPdfDocument.numPages
+        );
+        setDocumentVersion(
+          (current) => current + 1
+        );
       }
       catch (error) {
         if (cancelled) {
@@ -759,7 +624,7 @@ export default function MobilePdfCanvasViewer({
         }
 
         console.error(
-          "手机端 PDF 图纸渲染失败：",
+          "手机端 PDF 文件加载失败：",
           error
         );
 
@@ -777,7 +642,7 @@ export default function MobilePdfCanvasViewer({
       }
     }
 
-    void renderPdf();
+    void loadPdfDocument();
 
     return () => {
       cancelled = true;
@@ -790,26 +655,18 @@ export default function MobilePdfCanvasViewer({
       }
 
       if (
-        activeRenderTask &&
-        typeof activeRenderTask.cancel ===
+        loadedPdfDocument &&
+        typeof loadedPdfDocument.destroy ===
           "function"
       ) {
-        try {
-          activeRenderTask.cancel();
+        if (
+          pdfDocumentRef.current ===
+          loadedPdfDocument
+        ) {
+          pdfDocumentRef.current = null;
         }
-        catch {
-          // 忽略卸载期间的取消错误。
-        }
-      }
 
-      pagesContainer.replaceChildren();
-
-      if (
-        pdfDocument &&
-        typeof pdfDocument.destroy ===
-          "function"
-      ) {
-        void pdfDocument.destroy();
+        void loadedPdfDocument.destroy();
       }
       else if (
         loadingTask &&
@@ -820,10 +677,237 @@ export default function MobilePdfCanvasViewer({
       }
     };
   }, [
-    documentTitle,
-    pageLabel,
     pdfUrl,
     retryVersion,
+  ]);
+
+  useEffect(() => {
+    const pagesContainer =
+      pagesRef.current;
+    const pdfDocument =
+      pdfDocumentRef.current;
+
+    if (
+      !pagesContainer ||
+      !pdfDocument ||
+      documentVersion <= 0 ||
+      viewerWidth <= 0 ||
+      totalPages <= 0
+    ) {
+      return;
+    }
+
+    let cancelled = false;
+    let activeRenderTask:
+      | RenderTask
+      | null = null;
+
+    const activePagesContainer =
+      pagesContainer;
+    const activePdfDocument =
+      pdfDocument;
+
+    activePagesContainer.replaceChildren();
+
+    async function renderCurrentPage() {
+      try {
+        setStatus("loading");
+        setProgressText(
+          `${currentPage} / ${totalPages} ${pageLabel}`
+        );
+
+        const pdfPage =
+          await activePdfDocument.getPage(
+            currentPage
+          );
+
+        if (cancelled) {
+          pdfPage.cleanup();
+          return;
+        }
+
+        const originalViewport =
+          pdfPage.getViewport({
+            scale: 1,
+          });
+
+        // 始终服从手机容器宽度，避免窄屏被最小宽度撑出横向滚动。
+        const availableWidth =
+          Math.max(
+            1,
+            viewerWidth - 26
+          );
+
+        const cssScale =
+          availableWidth /
+          originalViewport.width;
+
+        const outputScale =
+          Math.min(
+            window.devicePixelRatio || 1,
+            2
+          );
+
+        const renderViewport =
+          pdfPage.getViewport({
+            scale:
+              cssScale *
+              outputScale,
+          });
+
+        const cssWidth =
+          Math.ceil(
+            renderViewport.width /
+              outputScale
+          );
+
+        const cssHeight =
+          Math.ceil(
+            renderViewport.height /
+              outputScale
+          );
+
+        const pageElement =
+          document.createElement(
+            "article"
+          );
+
+        pageElement.className =
+          styles.page;
+
+        pageElement.setAttribute(
+          "aria-label",
+          `${documentTitle} ${currentPage} / ${totalPages} ${pageLabel}`
+        );
+
+        const pageNumberElement =
+          document.createElement(
+            "div"
+          );
+
+        pageNumberElement.className =
+          styles.pageNumber;
+
+        pageNumberElement.textContent =
+          `${currentPage} / ${totalPages}`;
+
+        const canvas =
+          document.createElement(
+            "canvas"
+          );
+
+        canvas.className =
+          styles.canvas;
+
+        canvas.width =
+          Math.ceil(
+            renderViewport.width
+          );
+
+        canvas.height =
+          Math.ceil(
+            renderViewport.height
+          );
+
+        canvas.style.width =
+          `${cssWidth}px`;
+
+        canvas.style.height =
+          `${cssHeight}px`;
+
+        const canvasContext =
+          canvas.getContext(
+            "2d",
+            {
+              alpha: false,
+            }
+          );
+
+        if (!canvasContext) {
+          throw new Error(
+            "Canvas 2D context unavailable."
+          );
+        }
+
+        pageElement.appendChild(
+          pageNumberElement
+        );
+        pageElement.appendChild(
+          canvas
+        );
+        activePagesContainer.appendChild(
+          pageElement
+        );
+
+        activeRenderTask =
+          pdfPage.render({
+            canvasContext,
+            viewport:
+              renderViewport,
+          });
+
+        await activeRenderTask.promise;
+        activeRenderTask = null;
+
+        pdfPage.cleanup();
+
+        if (!cancelled) {
+          setStatus("ready");
+          setProgressText("");
+
+          if (shouldScrollToPageTopRef.current) {
+            shouldScrollToPageTopRef.current = false;
+
+            window.requestAnimationFrame(() => {
+              pageElement.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            });
+          }
+        }
+      }
+      catch (error) {
+        if (cancelled) {
+          return;
+        }
+
+        console.error(
+          "手机端 PDF 页面渲染失败：",
+          error
+        );
+
+        setStatus("error");
+        setProgressText("");
+      }
+    }
+
+    void renderCurrentPage();
+
+    return () => {
+      cancelled = true;
+
+      if (
+        activeRenderTask &&
+        typeof activeRenderTask.cancel ===
+          "function"
+      ) {
+        try {
+          activeRenderTask.cancel();
+        }
+        catch {
+          // 忽略切页或卸载期间的取消错误。
+        }
+      }
+
+      activePagesContainer.replaceChildren();
+    };
+  }, [
+    currentPage,
+    documentTitle,
+    documentVersion,
+    pageLabel,
+    totalPages,
     viewerWidth,
   ]);
 
@@ -881,7 +965,68 @@ export default function MobilePdfCanvasViewer({
         ref={pagesRef}
         className={styles.pages}
         aria-label={documentTitle}
+        aria-busy={status === "loading"}
       />
+
+      {totalPages > 0 && status !== "error" ? (
+        <nav
+          className={styles.controls}
+          aria-label={`${documentTitle} ${pageLabel}`}
+          data-mobile-pdf-pagination="true"
+          data-current-page={currentPage}
+          data-total-pages={totalPages}
+        >
+          <button
+            type="button"
+            disabled={
+              status === "loading" ||
+              currentPage <= 1
+            }
+            aria-label={previousPageLabel}
+            onClick={() => {
+              shouldScrollToPageTopRef.current = true;
+
+              setCurrentPage(
+                (current) =>
+                  Math.max(1, current - 1)
+              );
+            }}
+          >
+            <span aria-hidden="true">‹</span>
+            {previousPageVisibleLabel}
+          </button>
+
+          <output
+            className={styles.visuallyHidden}
+            aria-live="polite"
+          >
+            {currentPage} / {totalPages}
+          </output>
+
+          <button
+            type="button"
+            disabled={
+              status === "loading" ||
+              currentPage >= totalPages
+            }
+            aria-label={nextPageLabel}
+            onClick={() => {
+              shouldScrollToPageTopRef.current = true;
+
+              setCurrentPage(
+                (current) =>
+                  Math.min(
+                    totalPages,
+                    current + 1
+                  )
+              );
+            }}
+          >
+            {nextPageVisibleLabel}
+            <span aria-hidden="true">›</span>
+          </button>
+        </nav>
+      ) : null}
     </div>
   );
 }

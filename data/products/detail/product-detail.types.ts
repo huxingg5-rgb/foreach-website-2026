@@ -53,6 +53,19 @@ export type ProductDetailZhRecord = {
   show3DRequest: boolean;
 
   /**
+   * Optional registry key for a real product datasheet. Runtime locale logic
+   * decides whether the resource UI is rendered; Chinese detail pages ignore
+   * this field.
+   */
+  datasheetId?: string;
+
+  /**
+   * Defaults to available on non-Chinese product detail pages. Set false only
+   * when CAD requests are explicitly unavailable for a product.
+   */
+  cadRequestAvailable?: boolean;
+
+  /**
    * FAQ 第一版只预留，不渲染。
    */
   faqKey?: string;

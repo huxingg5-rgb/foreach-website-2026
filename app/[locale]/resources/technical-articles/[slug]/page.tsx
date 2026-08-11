@@ -58,12 +58,34 @@ export async function generateMetadata({
     return {};
   }
 
+  const metaTitle = locale === "en"
+    ? `${article.seoTitle ?? article.title}｜Technical Articles｜FOREACH`
+    : `${article.seoTitle ?? article.title}｜FOREACH`;
+  const description = article.seoDescription ?? article.summary;
+  const canonicalUrl =
+    `https://www.foreachtek.com/${locale}/resources/technical-articles/${slug}/`;
+  const socialImage = article.coverImage
+    ? new URL(article.coverImage, "https://www.foreachtek.com").toString()
+    : undefined;
+
   return {
-    title: locale === "en"
-      ? `${article.seoTitle ?? article.title}｜Technical Articles｜FOREACH`
-      : `${article.seoTitle ?? article.title}｜FOREACH`,
-    description: article.seoDescription ?? article.summary,
-    ...(locale === "en" ? {} : { openGraph: { title: `${article.seoTitle ?? article.title}｜FOREACH`, description: article.seoDescription ?? article.summary } }),
+    title: metaTitle,
+    description,
+    openGraph: {
+      type: "article",
+      url: canonicalUrl,
+      title: metaTitle,
+      description,
+      ...(socialImage
+        ? { images: [{ url: socialImage, alt: article.title }] }
+        : {}),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: metaTitle,
+      description,
+      ...(socialImage ? { images: [socialImage] } : {}),
+    },
   };
 }
 

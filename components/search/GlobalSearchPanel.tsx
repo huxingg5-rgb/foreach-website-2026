@@ -1043,7 +1043,7 @@ export default function GlobalSearchPanel({
                               {/* eslint-disable-next-line @next/next/no-img-element -- 搜索索引图片路径为运行时数据，保留原生延迟加载图片。 */}
                               <img
                                 src={item.i}
-                                alt=""
+                                alt={item.t}
                                 loading="lazy"
                               />
                             </span>

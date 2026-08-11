@@ -179,6 +179,12 @@ export async function generateMetadata({
     return {};
   }
 
+  const canonicalUrl =
+    `https://www.foreachtek.com/resources/technical-articles/${slug}/`;
+  const socialImage = article.coverImage
+    ? new URL(article.coverImage, "https://www.foreachtek.com").toString()
+    : undefined;
+
   return {
     title:
       `${article.seoTitle ?? article.title}｜技术文章｜FOREACH 恒永达`,
@@ -186,6 +192,23 @@ export async function generateMetadata({
     description:
       article.seoDescription ??
       article.summary,
+
+    openGraph: {
+      type: "article",
+      url: canonicalUrl,
+      title: article.seoTitle ?? article.title,
+      description: article.seoDescription ?? article.summary,
+      ...(socialImage
+        ? { images: [{ url: socialImage, alt: article.title }] }
+        : {}),
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: article.seoTitle ?? article.title,
+      description: article.seoDescription ?? article.summary,
+      ...(socialImage ? { images: [socialImage] } : {}),
+    },
   };
 }
 

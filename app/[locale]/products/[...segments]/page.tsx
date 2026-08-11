@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import ProductPageSkeleton from "@/components/common/ProductPageSkeleton";
 import ProductSelectionClient from "@/components/products/selection/ProductSelectionClient";
 import { englishProductDetailRoutes } from "@/data/products/product-detail-routes.generated";
+import { siteSearchIndex } from "@/data/search/site-search-index.generated";
 import luerDetailsJson from "@/data/products/generated/fittings/luer-fittings/detail/index.json";
 import {
   isPublishedFittingDetailRoute,
@@ -220,6 +221,15 @@ export async function generateMetadata({
       ...(isDetailRoute ? ["product specifications", "model configurations"] : []),
     ])
   );
+  const productPath = `/products/${segments.join("/")}`;
+  const socialImagePath = siteSearchIndex.find(
+    (item) =>
+      item.module === "products" &&
+      item.href.replace(/\/$/, "") === productPath,
+  )?.image;
+  const socialImage = socialImagePath
+    ? new URL(socialImagePath, "https://www.foreachtek.com").toString()
+    : undefined;
 
   return {
     title: `${title} | FOREACH`,
@@ -246,11 +256,15 @@ export async function generateMetadata({
       siteName: "FOREACH",
       title: `${title} | FOREACH`,
       description,
+      ...(socialImage
+        ? { images: [{ url: socialImage, alt: title }] }
+        : {}),
     },
     twitter: {
       card: "summary",
       title: `${title} | FOREACH`,
       description,
+      ...(socialImage ? { images: [socialImage] } : {}),
     },
   };
 }

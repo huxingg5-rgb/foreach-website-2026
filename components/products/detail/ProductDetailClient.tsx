@@ -29,6 +29,8 @@ import type { SelectionCartItemInput } from "@/components/selection-cart/selecti
 
 import SitePageShell from "@/components/layout/SitePageShell";
 import PdfDrawingPreview from "@/components/common/PdfDrawingPreview";
+import CadRequestModal from "./CadRequestModal";
+import ProductDatasheetPanel from "./ProductDatasheetPanel";
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 
@@ -40,6 +42,11 @@ import {
 } from "@/data/products/detail/hard-tube-fitting-detail.intl";
 import { localizeTargetProductDetailData } from "@/data/products/detail/product-detail.target.intl";
 import type { ProductDetailPageData } from "@/data/products/detail/product-detail.types";
+import {
+  getProductDatasheet,
+  getProductDetailResourceCopy,
+  isProductDetailResourceLocale,
+} from "@/data/products/detail/product-detail-resources";
 import {
   trackBeginInquiry,
   trackContactClick,
@@ -110,7 +117,7 @@ import {
 
 import styles from "./product-detail.module.css";
 
-type ProductDetailTab = "spec" | "model3d" | "drawing";
+type ProductDetailTab = "spec" | "model3d" | "drawing" | "datasheet";
 
 type ProductDetailClientProps = {
   data: ProductDetailPageData & Record<string, any>;
@@ -1004,6 +1011,23 @@ function buildProductPageStructuredData(data: any, pathname: string) {
     data.model || data.title || data.name || ""
   ).trim();
   const description = String(data.description || "").trim();
+  const productImages = Array.from(
+    new Set(
+      [
+        data.mainImage,
+        ...(Array.isArray(data.additionalImages) ? data.additionalImages : []),
+      ]
+        .map(toAbsoluteProductUrl)
+        .filter(Boolean),
+    ),
+  );
+  const rawProductModel = String(
+    data.modelDisplay || data.displayModel || data.modelCode || data.model || "",
+  ).trim();
+  const productModel = isDiaphragmPumpDetailData(data)
+    ? rawProductModel.replace(/[.,;，。；]+$/u, "").trim()
+    : rawProductModel;
+  const productSku = String(data.sku || data.productCode || "").trim();
   const faqs: Array<{ question: string; answer: string }> = Array.isArray(data.faqs)
     ? data.faqs
         .map((item: any) => ({
@@ -1022,6 +1046,7 @@ function buildProductPageStructuredData(data: any, pathname: string) {
   const websiteId = `${PRODUCT_SITE_ORIGIN}/#website`;
   const webpageId = `${canonicalUrl}#webpage`;
   const breadcrumbId = `${canonicalUrl}#breadcrumb`;
+  const productId = `${canonicalUrl}#product`;
   const webPage: Record<string, unknown> = {
     "@type": "WebPage",
     "@id": webpageId,
@@ -1036,6 +1061,9 @@ function buildProductPageStructuredData(data: any, pathname: string) {
     },
     publisher: {
       "@id": organizationId,
+    },
+    mainEntity: {
+      "@id": productId,
     },
   };
 
@@ -1084,6 +1112,26 @@ function buildProductPageStructuredData(data: any, pathname: string) {
       ],
     },
     webPage,
+    {
+      "@type": "Product",
+      "@id": productId,
+      name: productName,
+      url: canonicalUrl,
+      ...(description ? { description } : {}),
+      ...(productImages.length > 0 ? { image: productImages } : {}),
+      brand: {
+        "@type": "Brand",
+        name: "FOREACH",
+      },
+      manufacturer: {
+        "@id": organizationId,
+      },
+      ...(productModel ? { model: productModel } : {}),
+      ...(productSku ? { sku: productSku } : {}),
+      mainEntityOfPage: {
+        "@id": webpageId,
+      },
+    },
   ];
 
   if (faqs.length > 0) {
@@ -1177,6 +1225,12 @@ export default function ProductDetailClient({
     : null;
   const isTargetLanguage = Boolean(targetLocale);
   const isLocalizedDetail = isEnglish || isTargetLanguage;
+  const resourceLocale = isProductDetailResourceLocale(pathnameLocale)
+    ? pathnameLocale
+    : null;
+  const resourceCopy = resourceLocale
+    ? getProductDetailResourceCopy(resourceLocale)
+    : null;
   const configuratorLocale =
     targetLocale || (isEnglish ? "en" : "zh");
   const localePrefix = isEnglish
@@ -1199,6 +1253,12 @@ export default function ProductDetailClient({
     },
     [configuratorLocale, isEnglish, pathname, sourceData, targetLocale]
   );
+  const datasheet = resourceLocale
+    ? getProductDatasheet(sourceData.datasheetId)
+    : null;
+  const isCadRequestAvailable = Boolean(
+    resourceLocale && sourceData.cadRequestAvailable !== false,
+  );
   const pumpFileDisplayLocale = isLocalizedDetail ? "en" : "zh";
   const isPumpDetail = isPumpDetailData(data);
   const model3dUrl = String(
@@ -1213,6 +1273,7 @@ export default function ProductDetailClient({
       data.partDrawingUrl ||
       data.resources?.drawing2dUrl,
   );
+  const drawingDocumentUrl = drawingPreviewUrl.split("#", 1)[0];
   const isCustomProduct = isCustomProductCategory(pathname, data);
   const customProductCopy =
     CUSTOM_PRODUCT_NOTICE_COPY[
@@ -1427,8 +1488,10 @@ export default function ProductDetailClient({
   ]);
 
 const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
+  const [isCadRequestOpen, setIsCadRequestOpen] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
   const [activeThumb, setActiveThumb] = useState(0);
+  const thumbViewportRef = useRef<HTMLDivElement | null>(null);
   const [isZooming, setIsZooming] = useState(false);
   const [zoomPosition, setZoomPosition] = useState({
     x: 50,
@@ -1610,6 +1673,24 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
   const activeRealImage = hasRealImages
     ? realImages[Math.min(activeThumb, realImages.length - 1)]
     : null;
+  const productImageAlt = String(
+    (data as any).imageAltEn ||
+      (data as any).mainImageAlt ||
+      (data as any).imageAlt ||
+      displayProductTitle ||
+      `${data.model || ""} ${data.name || ""}`,
+  )
+    .replace(/\s+/g, " ")
+    .trim();
+  const galleryViewLabels = [copy.frontView, copy.sideView, copy.portDetail];
+  const getProductImageAlt = (index: number) => {
+    if (index === 0) {
+      return productImageAlt;
+    }
+
+    const viewLabel = galleryViewLabels[index] || String(index + 1);
+    return `${productImageAlt} - ${viewLabel}`;
+  };
 
   /*
    * 正式数据中：
@@ -1649,6 +1730,38 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
       y: Math.max(0, Math.min(100, y)),
     });
   }
+
+  useEffect(() => {
+    const viewport = thumbViewportRef.current;
+    const activeThumbnail = viewport?.querySelector<HTMLElement>(
+      `[data-product-thumb-index="${activeThumb}"]`,
+    );
+
+    if (!viewport || !activeThumbnail) {
+      return;
+    }
+
+    const viewportRect = viewport.getBoundingClientRect();
+    const thumbnailRect = activeThumbnail.getBoundingClientRect();
+    const isFullyVisible =
+      thumbnailRect.left >= viewportRect.left &&
+      thumbnailRect.right <= viewportRect.right;
+
+    if (isFullyVisible) {
+      return;
+    }
+
+    const targetScrollLeft =
+      viewport.scrollLeft +
+      thumbnailRect.left -
+      viewportRect.left -
+      (viewport.clientWidth - thumbnailRect.width) / 2;
+
+    viewport.scrollTo({
+      left: Math.max(0, targetScrollLeft),
+      behavior: "smooth",
+    });
+  }, [activeThumb, realImages.length]);
 
   function handlePreviousThumb() {
     if (hasRealImages) {
@@ -1821,16 +1934,20 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
   }
 
   function handleProductTabChange(nextTab: ProductDetailTab) {
-    if (nextTab === activeTab || !analyticsProductId) return;
+    if (nextTab === activeTab) return;
 
     setActiveTab(nextTab);
+
+    if (!analyticsProductId) return;
 
     const tabName =
       nextTab === "spec"
         ? "specifications"
         : nextTab === "model3d"
           ? "3d"
-          : "2d";
+          : nextTab === "drawing"
+            ? "2d"
+            : "datasheet";
 
     trackProductTabSelect({
       tabName,
@@ -1853,6 +1970,12 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
               id: `${analyticsProductId}:drawing2d`,
               type: "2d_drawing",
             }
+          : nextTab === "datasheet" && datasheet
+            ? {
+                url: datasheet.file,
+                id: `${analyticsProductId}:datasheet:${datasheet.id}`,
+                type: "datasheet",
+              }
           : null;
 
     if (!resource) return;
@@ -1895,6 +2018,19 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
 
   function handleRequest3DFile() {
     console.info("申请3D文件端口预留", data.slug);
+  }
+
+  function handleRequestCad() {
+    setIsCadRequestOpen(true);
+
+    trackBeginInquiry({
+      formId: "product_cad_request_form",
+      formType: "cad_request",
+      sourceSection: "product_detail",
+      locale: analyticsLocale,
+      productId: analyticsProductId,
+      productCategory: analyticsProductCategory,
+    });
   }
 
   function handleAddList() {
@@ -2193,6 +2329,30 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
         />
       ) : null}
 
+      {resourceLocale && isCadRequestOpen ? (
+        <CadRequestModal
+          locale={resourceLocale}
+          productName={String(
+            displayProductTitle || data.productName || data.name || "",
+          ).trim()}
+          productSeries={String(
+            sourceData.seriesName ||
+              sourceData.series ||
+              sourceData.seriesCode ||
+              sourceData.seriesId ||
+              "",
+          ).trim()}
+          productModel={String(
+            sourceData.modelDisplay ||
+              sourceData.displayModel ||
+              sourceData.foreachModel ||
+              sourceData.model ||
+              "",
+          ).trim()}
+          onClose={() => setIsCadRequestOpen(false)}
+        />
+      ) : null}
+
       {/* PVC_TUBING_CONFIGURATOR_RENDER_START */}
       {isPvcTubingConfiguratorEnabled ? (
         <ProductVariantConfigurator
@@ -2451,7 +2611,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
               {activeRealImage ? (
                 <img data-product-main-image="true"
                   src={activeRealImage}
-                  alt={(data as any).imageAltEn || (data as any).mainImageAlt || (data as any).imageAlt || `${data.model} ${data.name}`}
+                  alt={getProductImageAlt(activeThumb)}
                 />
               ) : (
                 <svg
@@ -2568,35 +2728,39 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                   ‹
                 </button>
 
-                {hasRealImages ? (
-                  realImages.slice(0, 5).map((image, index) => (
-                    <button
-                      key={`${image}-${index}`}
-                      className={[
-                        styles.thumb,
-                        activeThumb === index ? styles.isActive : "",
-                      ]
-                        .filter(Boolean)
-                        .join(" ")}
-                      type="button"
-                      onClick={() => setActiveThumb(index)}
-                    >
-                      <img src={image} alt="" />
-                    </button>
-                  ))
-                ) : (
-                  <>
-                    <button
-                      className={[
-                        styles.thumb,
-                        activeThumb === 0 ? styles.isActive : "",
-                      ]
-                        .filter(Boolean)
-                        .join(" ")}
-                      type="button"
-                      aria-label={copy.frontView}
-                      onClick={() => setActiveThumb(0)}
-                    >
+                <div ref={thumbViewportRef} className={styles.thumbViewport}>
+                  {hasRealImages ? (
+                    realImages.map((image, index) => (
+                      <button
+                        key={`${image}-${index}`}
+                        data-product-thumb-index={index}
+                        className={[
+                          styles.thumb,
+                          activeThumb === index ? styles.isActive : "",
+                        ]
+                          .filter(Boolean)
+                          .join(" ")}
+                        type="button"
+                        aria-label={getProductImageAlt(index)}
+                        onClick={() => setActiveThumb(index)}
+                      >
+                        <img src={image} alt={getProductImageAlt(index)} />
+                      </button>
+                    ))
+                  ) : (
+                    <>
+                      <button
+                        data-product-thumb-index={0}
+                        className={[
+                          styles.thumb,
+                          activeThumb === 0 ? styles.isActive : "",
+                        ]
+                          .filter(Boolean)
+                          .join(" ")}
+                        type="button"
+                        aria-label={copy.frontView}
+                        onClick={() => setActiveThumb(0)}
+                      >
                       <svg viewBox="0 0 120 70" aria-hidden="true">
                         <rect
                           x="18"
@@ -2612,19 +2776,20 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                           fill="#173368"
                         />
                       </svg>
-                    </button>
+                      </button>
 
-                    <button
-                      className={[
-                        styles.thumb,
-                        activeThumb === 1 ? styles.isActive : "",
-                      ]
-                        .filter(Boolean)
-                        .join(" ")}
-                      type="button"
-                      aria-label={copy.sideView}
-                      onClick={() => setActiveThumb(1)}
-                    >
+                      <button
+                        data-product-thumb-index={1}
+                        className={[
+                          styles.thumb,
+                          activeThumb === 1 ? styles.isActive : "",
+                        ]
+                          .filter(Boolean)
+                          .join(" ")}
+                        type="button"
+                        aria-label={copy.sideView}
+                        onClick={() => setActiveThumb(1)}
+                      >
                       <svg viewBox="0 0 120 70" aria-hidden="true">
                         <rect
                           x="26"
@@ -2643,19 +2808,20 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                           fill="#173368"
                         />
                       </svg>
-                    </button>
+                      </button>
 
-                    <button
-                      className={[
-                        styles.thumb,
-                        activeThumb === 2 ? styles.isActive : "",
-                      ]
-                        .filter(Boolean)
-                        .join(" ")}
-                      type="button"
-                      aria-label={copy.portDetail}
-                      onClick={() => setActiveThumb(2)}
-                    >
+                      <button
+                        data-product-thumb-index={2}
+                        className={[
+                          styles.thumb,
+                          activeThumb === 2 ? styles.isActive : "",
+                        ]
+                          .filter(Boolean)
+                          .join(" ")}
+                        type="button"
+                        aria-label={copy.portDetail}
+                        onClick={() => setActiveThumb(2)}
+                      >
                       <svg viewBox="0 0 120 70" aria-hidden="true">
                         <circle
                           cx="60"
@@ -2672,9 +2838,10 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                           fill="#173368"
                         />
                       </svg>
-                    </button>
-                  </>
-                )}
+                      </button>
+                    </>
+                  )}
+                </div>
 
                 <button
                   className={styles.thumbArrow}
@@ -2909,6 +3076,17 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                   </button>
                 ) : null}
 
+                {isCadRequestAvailable && resourceCopy ? (
+                  <button
+                    className={styles.button}
+                    type="button"
+                    aria-haspopup="dialog"
+                    onClick={handleRequestCad}
+                  >
+                    {resourceCopy.requestCad}
+                  </button>
+                ) : null}
+
                 <button
                   className={styles.button}
                   type="button"
@@ -2927,7 +3105,11 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
         </section>
 
         <section className={styles.detailSection}>
-          <nav className={styles.tabNav} aria-label={copy.tabs}>
+          <nav
+            className={styles.tabNav}
+            aria-label={copy.tabs}
+            data-has-datasheet-tab={resourceLocale ? "true" : undefined}
+          >
             <button
               className={[
                 styles.tabButton,
@@ -2974,6 +3156,21 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
             >
               {copy.technicalDrawing.startsWith("Технический ") ? "Чертёж" : copy.technicalDrawing}
             </button>
+
+            {resourceLocale && resourceCopy ? (
+              <button
+                className={[
+                  styles.tabButton,
+                  activeTab === "datasheet" ? styles.isActive : "",
+                ]
+                  .filter(Boolean)
+                  .join(" ")}
+                type="button"
+                onClick={() => handleProductTabChange("datasheet")}
+              >
+                {resourceCopy.datasheetTab}
+              </button>
+            ) : null}
           </nav>
 
           <div className={styles.panelWrap}>
@@ -3069,6 +3266,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                 <PumpUploadedFileGuard
                   key={drawingPreviewUrl}
                   fileUrl={drawingPreviewUrl}
+                  renderChildrenWhileChecking={Boolean(resourceLocale)}
                   loadingFallback={
                     <Pump2DFileCheckingDisplay
                       locale={pumpFileDisplayLocale}
@@ -3082,6 +3280,12 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                 >
                   <PdfDrawingPreview
                     pdfPreviewUrl={drawingPreviewUrl}
+                    previewHref={resourceLocale ? drawingDocumentUrl : undefined}
+                    deferDesktopUntilOpen={Boolean(resourceLocale)}
+                    previousPageLabel={resourceCopy?.previousPage}
+                    nextPageLabel={resourceCopy?.nextPage}
+                    previousPageVisibleLabel={resourceCopy?.previousPageShort}
+                    nextPageVisibleLabel={resourceCopy?.nextPageShort}
                     documentTitle={data.model}
                     text={
                       isLocalizedDetail
@@ -3098,6 +3302,12 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
               ) : drawingPreviewUrl ? (
                 <PdfDrawingPreview
                   pdfPreviewUrl={drawingPreviewUrl}
+                  previewHref={resourceLocale ? drawingDocumentUrl : undefined}
+                  deferDesktopUntilOpen={Boolean(resourceLocale)}
+                  previousPageLabel={resourceCopy?.previousPage}
+                  nextPageLabel={resourceCopy?.nextPage}
+                  previousPageVisibleLabel={resourceCopy?.previousPageShort}
+                  nextPageVisibleLabel={resourceCopy?.nextPageShort}
                   documentTitle={data.model}
                   text={
                     isLocalizedDetail
@@ -3142,6 +3352,27 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                 </div>
               )}
             </div>
+
+            {resourceLocale ? (
+              <div
+                className={[
+                  styles.panel,
+                  activeTab === "datasheet" ? styles.isActive : "",
+                ]
+                  .filter(Boolean)
+                  .join(" ")}
+              >
+                <div className={styles.panelBox}>
+                  <ProductDatasheetPanel
+                    datasheet={datasheet}
+                    fallbackTitle={String(
+                      displayProductTitle || data.model || data.name || "Product",
+                    ).trim()}
+                    locale={resourceLocale}
+                  />
+                </div>
+              </div>
+            ) : null}
           </div>
         </section>
         {/* QUICK_CONNECT_SERIES_MODEL_TABLE_START */}

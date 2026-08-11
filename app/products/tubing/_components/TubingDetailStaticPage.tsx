@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
 import tubingDetailData from "@/data/products/generated/tubing/detail/index.json";
+import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 
 type FaqItem = {
   question?: string;
@@ -145,6 +146,12 @@ export function getTubingMetadata(slug: string): Metadata {
   return {
     title: `${detail.title} | FOREACH 管路系列`,
     description: detail.description,
+    ...buildProductSocialMetadata({
+      data: detail,
+      title: detail.title,
+      description: detail.description,
+      canonicalUrl: `/products/tubing/${slug}/`,
+    }),
   };
 }
 

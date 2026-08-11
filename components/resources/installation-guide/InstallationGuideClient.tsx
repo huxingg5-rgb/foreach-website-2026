@@ -13,16 +13,21 @@
 ========================================================= */
 
 import {
+  Suspense,
+  useCallback,
   useEffect,
   useMemo,
   useState,
 } from "react";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
 import ResourceSearchBar from "@/components/resources/ResourceSearchBar";
 import ResourceSupportCta from "@/components/resources/ResourceSupportCta";
 import TutorialVideoCard from "@/components/resources/installation-guide/TutorialVideoCard";
+import InstallationGuideSearchParamsSync, {
+  type InstallationGuideSearchParamsSnapshot,
+} from "@/components/resources/installation-guide/InstallationGuideSearchParamsSync";
 import TutorialVideoPlayerModal, {
   getGuidePlayerSource,
 } from "@/components/resources/installation-guide/TutorialVideoPlayerModal";
@@ -55,8 +60,13 @@ export default function InstallationGuideClient({
 }: InstallationGuideClientProps) {
   const pathname = usePathname();
   const router = useRouter();
-  const searchParams = useSearchParams();
   const [keyword, setKeyword] = useState("");
+  const [searchParamsSnapshot, setSearchParamsSnapshot] =
+    useState<InstallationGuideSearchParamsSnapshot>({
+      relationKey: "",
+      guideId: "",
+      queryString: "",
+    });
 
   const [activeFilter, setActiveFilter] =
     useState<ActiveFilter>({
@@ -136,12 +146,28 @@ export default function InstallationGuideClient({
 
   const relatedResourcesUi = getRelatedResourcesText(pageData.locale);
   const relationKey = normalizeRelationKey(
-    searchParams.get("relationKey") ?? "",
+    searchParamsSnapshot.relationKey,
   );
 
   /* SEARCH_GUIDE_AUTO_OPEN_20260805 */
-  const requestedGuideId =
-    searchParams.get("guide")?.trim() ?? "";
+  const requestedGuideId = searchParamsSnapshot.guideId;
+
+  const handleSearchParamsChange = useCallback(
+    (snapshot: InstallationGuideSearchParamsSnapshot) => {
+      setSearchParamsSnapshot((current) => {
+        if (
+          current.relationKey === snapshot.relationKey &&
+          current.guideId === snapshot.guideId &&
+          current.queryString === snapshot.queryString
+        ) {
+          return current;
+        }
+
+        return snapshot;
+      });
+    },
+    [],
+  );
 
   /*
    * 从全站搜索进入时：
@@ -277,7 +303,9 @@ export default function InstallationGuideClient({
   }
 
   function clearRelationFilter() {
-    const nextSearchParams = new URLSearchParams(searchParams.toString());
+    const nextSearchParams = new URLSearchParams(
+      searchParamsSnapshot.queryString,
+    );
     nextSearchParams.delete("relationKey");
 
     const query = nextSearchParams.toString();
@@ -338,6 +366,12 @@ export default function InstallationGuideClient({
 
   return (
     <main className="installation-guide-page">
+      <Suspense fallback={null}>
+        <InstallationGuideSearchParamsSync
+          onChange={handleSearchParamsChange}
+        />
+      </Suspense>
+
       <SiteBreadcrumb
         ariaLabel={ui.breadcrumbAriaLabel}
         variant="bar"

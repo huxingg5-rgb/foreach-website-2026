@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
 import details from "@/data/products/generated/pumps/valveless-pumps/detail/index.json";
+import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 
 type ValvelessPumpDetail = (typeof details)[number];
 
@@ -37,6 +38,12 @@ export async function generateMetadata({
   return {
     title: detail.seo?.title || `${detail.title} | FOREACH`,
     description: detail.seo?.description || detail.description || detail.title,
+    ...buildProductSocialMetadata({
+      data: detail,
+      title: detail.seo?.title || `${detail.title} | FOREACH`,
+      description: detail.seo?.description || detail.description || detail.title,
+      canonicalUrl: `/products/pumps/valveless-pumps/${slug}/`,
+    }),
   };
 }
 

@@ -269,7 +269,13 @@ export function trackFilterApply(input: {
 }
 
 export function trackProductTabSelect(input: {
-  tabName: "specifications" | "3d" | "2d" | "faq" | "other";
+  tabName:
+    | "specifications"
+    | "3d"
+    | "2d"
+    | "datasheet"
+    | "faq"
+    | "other";
   productId: string;
   productCategory?: string;
   productSeries?: string;

@@ -24,21 +24,43 @@ type PdfDrawingPreviewText = {
 
 type PdfDrawingPreviewProps = {
   pdfPreviewUrl: string;
+  previewHref?: string;
   documentTitle: string;
   text?: Partial<PdfDrawingPreviewText>;
+  autoOpen?: boolean;
+  deferDesktopUntilOpen?: boolean;
+  showPreviewDescription?: boolean;
+  analyticsResourceId?: string;
+  analyticsResourceType?: string;
+  analyticsSection?: string;
+  previousPageLabel?: string;
+  nextPageLabel?: string;
+  previousPageVisibleLabel?: string;
+  nextPageVisibleLabel?: string;
 };
 
 export default function PdfDrawingPreview({
   pdfPreviewUrl,
+  previewHref,
   documentTitle,
   text = {},
+  autoOpen = false,
+  deferDesktopUntilOpen = false,
+  showPreviewDescription = true,
+  analyticsResourceId,
+  analyticsResourceType,
+  analyticsSection,
+  previousPageLabel,
+  nextPageLabel,
+  previousPageVisibleLabel,
+  nextPageVisibleLabel,
 }: PdfDrawingPreviewProps) {
   const resolvedText: PdfDrawingPreviewText = {
     title: text.title || "零件图",
     loadingLabel: text.loadingLabel || "图纸加载中",
     previewButton: text.previewButton || "点击预览图纸",
     description:
-      text.description ||
+      text.description ??
       `在线查看 ${documentTitle} 的零件图`,
   };
 
@@ -48,6 +70,17 @@ export default function PdfDrawingPreview({
         drawingPdfPreviewHref={pdfPreviewUrl}
         productModel={documentTitle}
         text={resolvedText}
+        initiallyVisible={autoOpen}
+        previewHref={previewHref}
+        deferDesktopUntilOpen={deferDesktopUntilOpen}
+        showPreviewDescription={showPreviewDescription}
+        analyticsResourceId={analyticsResourceId}
+        analyticsResourceType={analyticsResourceType}
+        analyticsSection={analyticsSection}
+        previousPageLabel={previousPageLabel}
+        nextPageLabel={nextPageLabel}
+        previousPageVisibleLabel={previousPageVisibleLabel}
+        nextPageVisibleLabel={nextPageVisibleLabel}
       />
     </div>
   );
