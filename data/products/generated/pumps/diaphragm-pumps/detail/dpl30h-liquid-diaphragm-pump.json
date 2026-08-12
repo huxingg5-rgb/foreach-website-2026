@@ -1,5 +1,8 @@
 {
   "seriesId": "DPL30H",
+  "relationKeys": [
+    "series:dpl30h"
+  ],
   "slug": "dpl30h-liquid-diaphragm-pump",
   "category": "液体隔膜泵",
   "title": "DPL30H 液体隔膜泵",
@@ -11,13 +14,13 @@
   "modelButtonText": "型号配置",
   "status": "基础版",
   "seo": {
-    "type": "配置预留页",
-    "slug": "dpl30h-brushless-liquid-diaphragm-pump",
-    "path": "/products/pumps/diaphragm-pumps/dpl30h-brushless-liquid-diaphragm-pump",
-    "title": "DPL30H 无刷液体隔膜泵｜300 mL/min 600 kPa｜FOREACH",
-    "description": "DPL30H 无刷液体隔膜泵适用于需要长寿命和较高压力输出的仪器液路系统，流量 300 mL/min，额定压力 600 kPa。",
-    "pageTitle": "DPL30H 无刷液体隔膜泵",
-    "status": "后续预留",
+    "type": "系列详情页",
+    "slug": "dpl30h-liquid-diaphragm-pump",
+    "path": "/products/pumps/diaphragm-pumps/dpl30h-liquid-diaphragm-pump",
+    "title": "DPL30H 有刷液体隔膜泵｜300 mL/min 600 kPa｜FOREACH",
+    "description": "DPL30H 有刷液体隔膜泵适用于较高出口压力液路系统，流量 300 mL/min，额定压力 600 kPa。",
+    "pageTitle": "DPL30H 有刷液体隔膜泵",
+    "status": "本期上线",
     "note": ""
   },
   "specifications": [
@@ -121,108 +124,6 @@
       "tableName": "有刷电机规格参数",
       "parameter": "寿命",
       "value": "3,000 h",
-      "note": "额定电压、连续运行"
-    },
-    {
-      "tableName": "无刷电机规格参数",
-      "parameter": "电机类型",
-      "value": "直流无刷电机",
-      "note": ""
-    },
-    {
-      "tableName": "无刷电机规格参数",
-      "parameter": "产品类型",
-      "value": "液体隔膜泵",
-      "note": ""
-    },
-    {
-      "tableName": "无刷电机规格参数",
-      "parameter": "额定电压",
-      "value": "DC 24V ±10% / DC 12V ±10%",
-      "note": ""
-    },
-    {
-      "tableName": "无刷电机规格参数",
-      "parameter": "额定功率",
-      "value": "≤7 W",
-      "note": ""
-    },
-    {
-      "tableName": "无刷电机规格参数",
-      "parameter": "空载流量",
-      "value": "300 mL/min",
-      "note": ""
-    },
-    {
-      "tableName": "无刷电机规格参数",
-      "parameter": "额定压力",
-      "value": "600 kPa",
-      "note": ""
-    },
-    {
-      "tableName": "无刷电机规格参数",
-      "parameter": "自吸高度",
-      "value": "3 mH₂O",
-      "note": ""
-    },
-    {
-      "tableName": "无刷电机规格参数",
-      "parameter": "工作介质",
-      "value": "纯化水，其他液体介质需实际评估",
-      "note": ""
-    },
-    {
-      "tableName": "无刷电机规格参数",
-      "parameter": "介质温度",
-      "value": "+5℃～+40℃",
-      "note": ""
-    },
-    {
-      "tableName": "无刷电机规格参数",
-      "parameter": "接管规格",
-      "value": "卡套接头，连接 6×4 mm（外径×内径）硬管",
-      "note": ""
-    },
-    {
-      "tableName": "无刷电机规格参数",
-      "parameter": "噪音",
-      "value": "≤80 dB",
-      "note": ""
-    },
-    {
-      "tableName": "无刷电机规格参数",
-      "parameter": "工作环境温度",
-      "value": "+5℃～+40℃",
-      "note": ""
-    },
-    {
-      "tableName": "无刷电机规格参数",
-      "parameter": "工作环境相对湿度",
-      "value": "30%–85% RH（无冷凝）",
-      "note": ""
-    },
-    {
-      "tableName": "无刷电机规格参数",
-      "parameter": "泵头材质",
-      "value": "PPS",
-      "note": ""
-    },
-    {
-      "tableName": "无刷电机规格参数",
-      "parameter": "膜片材质",
-      "value": "EPDM / PTFE",
-      "note": ""
-    },
-    {
-      "tableName": "无刷电机规格参数",
-      "parameter": "阀片材质",
-      "value": "EPDM / FFKM",
-      "note": ""
-    },
-    {
-      "tableName": "无刷电机规格参数",
-      "parameter": "寿命",
-      "value": "10,000 h",
       "note": "额定电压、连续运行"
     }
   ],

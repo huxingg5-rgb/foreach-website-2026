@@ -2,7 +2,9 @@
   {
     "seriesId": "DPL30",
     "datasheetId": "dpl30-series-en",
-    "relationKeys": ["series:dpl30"],
+    "relationKeys": [
+      "series:dpl30"
+    ],
     "slug": "dpl30-liquid-diaphragm-pump",
     "category": "液体隔膜泵",
     "title": "DPL30 液体隔膜泵",
@@ -14,14 +16,14 @@
     "modelButtonText": "型号配置",
     "status": "首版完整",
     "seo": {
-      "type": "配置预留页",
-      "slug": "dpl30-brushless-liquid-diaphragm-pump",
-      "path": "/products/pumps/diaphragm-pumps/dpl30-brushless-liquid-diaphragm-pump",
-      "title": "DPL30 无刷液体隔膜泵｜300 mL/min 100 kPa｜FOREACH",
-      "description": "DPL30 无刷液体隔膜泵适用于需要更长寿命和连续运行的仪器液路系统，流量 300 mL/min，额定压力 100 kPa。",
-      "pageTitle": "DPL30 无刷液体隔膜泵",
-      "status": "后续预留",
-      "note": "不细分 12V/24V"
+      "type": "系列详情页",
+      "slug": "dpl30-liquid-diaphragm-pump",
+      "path": "/products/pumps/diaphragm-pumps/dpl30-liquid-diaphragm-pump",
+      "title": "DPL30 有刷液体隔膜泵｜300 mL/min 100 kPa｜FOREACH",
+      "description": "DPL30 有刷液体隔膜泵适用于常规液体输送和成本敏感型应用，流量 300 mL/min，额定压力 100 kPa。",
+      "pageTitle": "DPL30 有刷液体隔膜泵",
+      "status": "本期上线",
+      "note": ""
     },
     "specifications": [
       {
@@ -411,7 +413,9 @@
   {
     "seriesId": "DPL60",
     "datasheetId": "dpl60-series-en",
-    "relationKeys": ["series:dpl60"],
+    "relationKeys": [
+      "series:dpl60"
+    ],
     "slug": "dpl60-liquid-diaphragm-pump",
     "category": "液体隔膜泵",
     "title": "DPL60 液体隔膜泵",
@@ -423,13 +427,13 @@
     "modelButtonText": "型号配置",
     "status": "基础版",
     "seo": {
-      "type": "配置预留页",
-      "slug": "dpl60-brushless-liquid-diaphragm-pump",
-      "path": "/products/pumps/diaphragm-pumps/dpl60-brushless-liquid-diaphragm-pump",
-      "title": "DPL60 无刷液体隔膜泵｜600 mL/min 100 kPa｜FOREACH",
-      "description": "DPL60 无刷液体隔膜泵适用于需要长寿命和连续运行的高流量液体输送模块，流量 600 mL/min，额定压力 100 kPa。",
-      "pageTitle": "DPL60 无刷液体隔膜泵",
-      "status": "后续预留",
+      "type": "系列详情页",
+      "slug": "dpl60-liquid-diaphragm-pump",
+      "path": "/products/pumps/diaphragm-pumps/dpl60-liquid-diaphragm-pump",
+      "title": "DPL60 有刷液体隔膜泵｜600 mL/min 100 kPa｜FOREACH",
+      "description": "DPL60 有刷液体隔膜泵适用于较高流量常规液体输送与排液场景，流量 600 mL/min，额定压力 100 kPa。",
+      "pageTitle": "DPL60 有刷液体隔膜泵",
+      "status": "本期上线",
       "note": ""
     },
     "specifications": [
@@ -776,7 +780,9 @@
   },
   {
     "seriesId": "DPL30H",
-    "relationKeys": ["series:dpl30h"],
+    "relationKeys": [
+      "series:dpl30h"
+    ],
     "slug": "dpl30h-liquid-diaphragm-pump",
     "category": "液体隔膜泵",
     "title": "DPL30H 液体隔膜泵",
@@ -788,13 +794,13 @@
     "modelButtonText": "型号配置",
     "status": "基础版",
     "seo": {
-      "type": "配置预留页",
-      "slug": "dpl30h-brushless-liquid-diaphragm-pump",
-      "path": "/products/pumps/diaphragm-pumps/dpl30h-brushless-liquid-diaphragm-pump",
-      "title": "DPL30H 无刷液体隔膜泵｜300 mL/min 600 kPa｜FOREACH",
-      "description": "DPL30H 无刷液体隔膜泵适用于需要长寿命和较高压力输出的仪器液路系统，流量 300 mL/min，额定压力 600 kPa。",
-      "pageTitle": "DPL30H 无刷液体隔膜泵",
-      "status": "后续预留",
+      "type": "系列详情页",
+      "slug": "dpl30h-liquid-diaphragm-pump",
+      "path": "/products/pumps/diaphragm-pumps/dpl30h-liquid-diaphragm-pump",
+      "title": "DPL30H 有刷液体隔膜泵｜300 mL/min 600 kPa｜FOREACH",
+      "description": "DPL30H 有刷液体隔膜泵适用于较高出口压力液路系统，流量 300 mL/min，额定压力 600 kPa。",
+      "pageTitle": "DPL30H 有刷液体隔膜泵",
+      "status": "本期上线",
       "note": ""
     },
     "specifications": [
@@ -1152,14 +1158,14 @@
     "modelButtonText": "型号配置",
     "status": "基础版",
     "seo": {
-      "type": "配置预留页",
-      "slug": "dpgl800-brushless-gas-liquid-diaphragm-pump",
-      "path": "/products/pumps/diaphragm-pumps/dpgl800-brushless-gas-liquid-diaphragm-pump",
+      "type": "系列详情页",
+      "slug": "dpgl800-gas-liquid-diaphragm-pump",
+      "path": "/products/pumps/diaphragm-pumps/dpgl800-gas-liquid-diaphragm-pump",
       "title": "DPGL800 无刷气液混合隔膜泵｜6 L/min｜FOREACH",
       "description": "DPGL800 无刷气液混合隔膜泵适用于气体抽吸、负压建立和气液混合物抽排，流量 6 L/min，最大负压＜-90 kPa。",
       "pageTitle": "DPGL800 无刷气液混合隔膜泵",
-      "status": "后续预留",
-      "note": "DPGL800 当前只有无刷基础结构"
+      "status": "本期上线",
+      "note": ""
     },
     "specifications": [
       {
@@ -1391,7 +1397,9 @@
   {
     "seriesId": "DPL30",
     "datasheetId": "dpl30-series-en",
-    "relationKeys": ["series:dpl30"],
+    "relationKeys": [
+      "series:dpl30"
+    ],
     "slug": "dpl30-24db-ep-ps-liquid-diaphragm-pump",
     "category": "液体隔膜泵",
     "title": "DPL30-24DB-EP/PS 液体隔膜泵",
@@ -1685,7 +1693,9 @@
   {
     "seriesId": "DPL30",
     "datasheetId": "dpl30-series-en",
-    "relationKeys": ["series:dpl30"],
+    "relationKeys": [
+      "series:dpl30"
+    ],
     "slug": "dpl30-24bb-ep-ps-liquid-diaphragm-pump",
     "category": "液体隔膜泵",
     "title": "DPL30-24BB-EP/PS 液体隔膜泵",
@@ -1979,7 +1989,9 @@
   {
     "seriesId": "DPL60",
     "datasheetId": "dpl60-series-en",
-    "relationKeys": ["series:dpl60"],
+    "relationKeys": [
+      "series:dpl60"
+    ],
     "slug": "dpl60-24db-ep-ps-liquid-diaphragm-pump",
     "category": "液体隔膜泵",
     "title": "DPL60-24DB-EP/PS 液体隔膜泵",
@@ -2261,7 +2273,9 @@
   {
     "seriesId": "DPL60",
     "datasheetId": "dpl60-series-en",
-    "relationKeys": ["series:dpl60"],
+    "relationKeys": [
+      "series:dpl60"
+    ],
     "slug": "dpl60-24bb-ep-ps-liquid-diaphragm-pump",
     "category": "液体隔膜泵",
     "title": "DPL60-24BB-EP/PS 液体隔膜泵",
@@ -2542,7 +2556,9 @@
   },
   {
     "seriesId": "DPL30H",
-    "relationKeys": ["series:dpl30h"],
+    "relationKeys": [
+      "series:dpl30h"
+    ],
     "slug": "dpl30h-24ds-ep-ps-liquid-diaphragm-pump",
     "category": "液体隔膜泵",
     "title": "DPL30H-24DS-EP/PS 液体隔膜泵",
@@ -2823,7 +2839,9 @@
   },
   {
     "seriesId": "DPL30H",
-    "relationKeys": ["series:dpl30h"],
+    "relationKeys": [
+      "series:dpl30h"
+    ],
     "slug": "dpl30h-24bs-ep-ps-liquid-diaphragm-pump",
     "category": "液体隔膜泵",
     "title": "DPL30H-24BS-EP/PS 液体隔膜泵",

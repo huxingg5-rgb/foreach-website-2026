@@ -11,14 +11,14 @@
   "modelButtonText": "型号配置",
   "status": "基础版",
   "seo": {
-    "type": "配置预留页",
-    "slug": "dpgl800-brushless-gas-liquid-diaphragm-pump",
-    "path": "/products/pumps/diaphragm-pumps/dpgl800-brushless-gas-liquid-diaphragm-pump",
+    "type": "系列详情页",
+    "slug": "dpgl800-gas-liquid-diaphragm-pump",
+    "path": "/products/pumps/diaphragm-pumps/dpgl800-gas-liquid-diaphragm-pump",
     "title": "DPGL800 无刷气液混合隔膜泵｜6 L/min｜FOREACH",
     "description": "DPGL800 无刷气液混合隔膜泵适用于气体抽吸、负压建立和气液混合物抽排，流量 6 L/min，最大负压＜-90 kPa。",
     "pageTitle": "DPGL800 无刷气液混合隔膜泵",
-    "status": "后续预留",
-    "note": "DPGL800 当前只有无刷基础结构"
+    "status": "本期上线",
+    "note": ""
   },
   "specifications": [
     {

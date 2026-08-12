@@ -4,6 +4,7 @@ const xlsx = require("xlsx");
 
 const SOURCE_FILE = "data-source/product-center/pumps/FOREACH_隔膜泵系列_产品数据源.xlsx";
 const OUT_DIR = "data/products/generated/pumps/diaphragm-pumps";
+const DETAIL_INDEX_FILE = path.join(OUT_DIR, "detail", "index.json");
 
 function n(v) {
   return String(v ?? "").trim();
@@ -15,7 +16,8 @@ function ensureDir(dir) {
 
 function writeJson(filePath, data) {
   ensureDir(path.dirname(filePath));
-  fs.writeFileSync(filePath, JSON.stringify(data, null, 2), "utf8");
+  const json = JSON.stringify(data, null, 2).replaceAll("\n", "\r\n");
+  fs.writeFileSync(filePath, json, "utf8");
 }
 
 function readSheet(wb, sheetName) {
@@ -46,6 +48,48 @@ function oneBy(rows, key) {
     if (v) map[v] = row;
   }
   return map;
+}
+
+function readExistingDetails() {
+  if (!fs.existsSync(DETAIL_INDEX_FILE)) return [];
+
+  const parsed = JSON.parse(fs.readFileSync(DETAIL_INDEX_FILE, "utf8"));
+  return Array.isArray(parsed) ? parsed : [];
+}
+
+function getMotorLabel(value) {
+  const text = n(value);
+
+  if (text.includes("无刷")) return "无刷";
+  if (text.includes("有刷")) return "有刷";
+
+  return "";
+}
+
+function checkDetailMotorConsistency(details) {
+  for (const detail of details) {
+    const motorLabel = getMotorLabel(detail.modelConfigurations?.[0]?.motorType);
+    const oppositeLabel = motorLabel === "有刷"
+      ? "无刷"
+      : motorLabel === "无刷"
+        ? "有刷"
+        : "";
+    const seoText = [
+      detail.seo?.title,
+      detail.seo?.description,
+      detail.seo?.pageTitle,
+    ].map(n).join(" ");
+
+    if (oppositeLabel && seoText.includes(oppositeLabel)) {
+      throw new Error(
+        `${detail.seriesId} 首个型号为${motorLabel}配置，但详情页 SEO 包含“${oppositeLabel}”`,
+      );
+    }
+
+    console.log(
+      `OK: ${detail.seriesId} 首个型号 ${detail.modelConfigurations?.[0]?.model || "-"} 与 SEO 电机事实一致`,
+    );
+  }
 }
 
 function publicFullPath(dir, file) {
@@ -177,14 +221,44 @@ function main() {
   const modelsBySeries = by(modelRows, "series_id");
   const faqsBySeries = by(faqRows, "series_id");
   const mediaBySeries = by(mediaRows, "series_id");
-  const routeBySeries = oneBy(routeRows, "series_id");
+  const routesBySeries = by(routeRows, "series_id");
+  const routeBySlug = oneBy(routeRows, "slug_EN");
+  const existingDetails = readExistingDetails();
+  const existingDetailBySlug = oneBy(existingDetails, "slug");
 
   const details = seriesRows.map(row => {
     const sid = row["series_id"];
-    const route = routeBySeries[sid] || {};
+    const seriesModels = modelsBySeries[sid] || [];
+    const existingDetail = existingDetailBySlug[row["slug"]] || {};
+    const primaryRoute = routeBySlug[row["slug"]] || {};
+    const primaryMotorType = n(seriesModels[0]?.["电机类型"]);
+    const motorLabel = getMotorLabel(primaryMotorType);
+    const seriesSpecifications = specsBySeries[sid] || [];
+    const primarySpecifications = motorLabel
+      ? seriesSpecifications.filter(item =>
+          n(item["规格表名称"]).includes(motorLabel)
+        )
+      : seriesSpecifications;
+    const seoCopyRoute = motorLabel
+      ? (routesBySeries[sid] || []).find(route =>
+          n(route["中文页面标题"]).includes(motorLabel)
+        ) || primaryRoute
+      : primaryRoute;
 
     return {
       seriesId: sid,
+      ...(n(existingDetail.datasheetId)
+        ? { datasheetId: n(existingDetail.datasheetId) }
+        : {}),
+      ...(typeof existingDetail.cadRequestAvailable === "boolean"
+        ? { cadRequestAvailable: existingDetail.cadRequestAvailable }
+        : {}),
+      ...(Array.isArray(existingDetail.relationKeys)
+        ? { relationKeys: existingDetail.relationKeys }
+        : {}),
+      ...(Number.isFinite(existingDetail.relationPriority)
+        ? { relationPriority: existingDetail.relationPriority }
+        : {}),
       slug: row["slug"],
       category: row["产品分类"],
       title: row["页面标题"],
@@ -196,22 +270,22 @@ function main() {
       modelButtonText: row["按钮文案"] || "型号配置",
       status: row["状态"],
       seo: {
-        type: route["页面类型"],
-        slug: route["slug_EN"] || row["slug"],
-        path: route["路径建议"] || row["路径建议"],
-        title: route["SEO标题_CN"] || row["页面标题"],
-        description: route["Meta描述_CN"] || "",
-        pageTitle: route["中文页面标题"] || row["页面标题"],
-        status: route["上线状态"] || row["状态"],
-        note: route["备注"] || "",
+        type: primaryRoute["页面类型"],
+        slug: primaryRoute["slug_EN"] || row["slug"],
+        path: primaryRoute["路径建议"] || row["路径建议"],
+        title: seoCopyRoute["SEO标题_CN"] || row["页面标题"],
+        description: seoCopyRoute["Meta描述_CN"] || "",
+        pageTitle: seoCopyRoute["中文页面标题"] || row["页面标题"],
+        status: primaryRoute["上线状态"] || row["状态"],
+        note: primaryRoute["备注"] || "",
       },
-      specifications: (specsBySeries[sid] || []).map(item => ({
+      specifications: primarySpecifications.map(item => ({
         tableName: item["规格表名称"],
         parameter: item["参数"],
         value: item["规格值"],
         note: item["备注"],
       })),
-      modelConfigurations: (modelsBySeries[sid] || []).map(item => ({
+      modelConfigurations: seriesModels.map(item => ({
         itemCode: item["商品编码"],
         model: item["产品型号"],
         category: item["产品分类"],
@@ -246,6 +320,14 @@ function main() {
         status: item["状态/备注"],
       })),
     };
+  });
+
+  checkDetailMotorConsistency(details);
+
+  const mainSeriesSlugs = new Set(details.map(item => item.slug));
+  const preservedModelDetails = existingDetails.filter(item => {
+    const slug = n(item.slug);
+    return slug && !mainSeriesSlugs.has(slug);
   });
 
   const cards = cardRows.map(row => ({
@@ -297,7 +379,7 @@ function main() {
     writeJson(path.join(OUT_DIR, "detail", `${detail.slug}.json`), detail);
   }
 
-  writeJson(path.join(OUT_DIR, "detail", "index.json"), details);
+  writeJson(DETAIL_INDEX_FILE, [...details, ...preservedModelDetails]);
   writeJson(path.join(OUT_DIR, "selection", "cards.json"), cards);
   writeJson(path.join(OUT_DIR, "routes", "routes.json"), routes);
   writeJson(path.join(OUT_DIR, "media", "media.json"), media);
@@ -305,6 +387,7 @@ function main() {
     sourceFile: SOURCE_FILE,
     generatedAt: new Date().toISOString(),
     seriesCount: details.length,
+    modelDetailCount: preservedModelDetails.length,
     selectionCardCount: cards.length,
     specRowCount: specRows.length,
     modelConfigCount: modelRows.length,
