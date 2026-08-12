@@ -64,6 +64,10 @@ export default function RootLayout({
   return (
     <html lang="zh-CN" suppressHydrationWarning>
       <head>
+        <meta
+          name="bytedance-verification-code"
+          content="xuvAY4ELXA9YlGkNyt5R"
+        />
         <Script id="foreach-document-language" strategy="beforeInteractive">
                     {`
                       (function () {
