@@ -17,7 +17,8 @@
                     "/api/inquiry/*",
                     "/_AMapService/*",
                     "/",
-                    "/baidu_verify_codeva-3SytZbh1AT.html"
+                    "/baidu_verify_codeva-3SytZbh1AT.html",
+                    "/ByteDanceVerify.html"
                 ],
     "exclude":  [
 

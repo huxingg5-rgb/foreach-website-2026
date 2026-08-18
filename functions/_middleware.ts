@@ -16,6 +16,8 @@ type LegacyRedirectHandler = (
 
 const BAIDU_VERIFY_PATH = "/baidu_verify_codeva-3SytZbh1AT.html";
 const BAIDU_VERIFY_CONTENT = "8fba1099a7a52a28564eca6114d2396c";
+const BYTEDANCE_VERIFY_PATH = "/ByteDanceVerify.html";
+const BYTEDANCE_VERIFY_CONTENT = "xuvAY4ELXA9YlGkNyt5R";
 const LEGACY_REDIRECTS = new Map<string, string>([
   ["/cn/history.aspx", "/"],
   ["/cn/NewsInfo.aspx", "/"],
@@ -61,6 +63,21 @@ export const onRequest: LegacyRedirectHandler = async ({
       },
     );
   }
+
+  // 今日头条站点文件验证必须保持原始 .html 地址，并直接返回 200。
+  if (requestUrl.pathname === BYTEDANCE_VERIFY_PATH) {
+    return new Response(
+      method === "HEAD" ? null : BYTEDANCE_VERIFY_CONTENT,
+      {
+        status: 200,
+        headers: {
+          "Content-Type": "text/html; charset=utf-8",
+          "Cache-Control": "no-store",
+        },
+      },
+    );
+  }
+
   const targetPath = LEGACY_REDIRECTS.get(requestUrl.pathname);
 
   if (!targetPath) {
