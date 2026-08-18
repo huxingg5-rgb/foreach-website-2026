@@ -4,19 +4,21 @@ import type {
 } from "./technical-articles.types";
 import { dpl30ArticleEnCopy } from "./dpl30-liquid-diaphragm-pump.en";
 import { dpl30ArticleEsCopy } from "./dpl30-liquid-diaphragm-pump.es";
-import { dpl30ArticleZhFaq } from "./dpl30-liquid-diaphragm-pump.faq.zh";
+import { dpl30ArticleFaqCopy } from "./dpl30-liquid-diaphragm-pump.faq";
 import { dpl30ArticleFrCopy } from "./dpl30-liquid-diaphragm-pump.fr";
 import { dpl30ArticleKoCopy } from "./dpl30-liquid-diaphragm-pump.ko";
 import { dpl30ArticleRuCopy } from "./dpl30-liquid-diaphragm-pump.ru";
 import {
   type Dpl30ArticleCopy,
   type Dpl30ArticleCopyMap,
+  type Dpl30FaqCopy,
   type Dpl30FaqItem,
 } from "./dpl30-liquid-diaphragm-pump.types";
 import { dpl30ArticleZhCopy } from "./dpl30-liquid-diaphragm-pump.zh";
 
 export type {
   Dpl30ArticleCopy,
+  Dpl30FaqCopy,
   Dpl30FaqItem,
   Dpl30SpecificationRow,
   Dpl30ThreeColumnRow,
@@ -48,7 +50,13 @@ export function getDpl30ArticleCopy(
 export function getDpl30ArticleFaq(
   locale: TechnicalArticleLocale,
 ): readonly Dpl30FaqItem[] {
-  return locale === "zh-CN" ? dpl30ArticleZhFaq : [];
+  return getDpl30ArticleFaqCopy(locale).items;
+}
+
+export function getDpl30ArticleFaqCopy(
+  locale: TechnicalArticleLocale,
+): Dpl30FaqCopy {
+  return dpl30ArticleFaqCopy[locale] ?? dpl30ArticleFaqCopy.en;
 }
 
 /**

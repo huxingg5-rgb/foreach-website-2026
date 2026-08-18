@@ -42,6 +42,19 @@ import "@/app/resources/news/news.css";
 const TECHNICAL_ARTICLE_LOCALE =
   "zh-CN" as const;
 
+function getTechnicalArticleLanguageLinks(slug: string) {
+  const basePath = `/resources/technical-articles/${slug}/`;
+
+  return {
+    "zh-CN": basePath,
+    en: `/en${basePath}`,
+    es: `/es${basePath}`,
+    fr: `/fr${basePath}`,
+    ko: `/ko${basePath}`,
+    ru: `/ru${basePath}`,
+  };
+}
+
 /* =========================================================
    页面参数
 ========================================================= */
@@ -181,31 +194,39 @@ export async function generateMetadata({
 
   const canonicalUrl =
     `https://www.foreachtek.com/resources/technical-articles/${slug}/`;
+  const seoTitle = article.seoTitle ?? article.title;
+  const metaTitle = /FOREACH|恒永达/i.test(seoTitle)
+    ? seoTitle
+    : `${seoTitle}｜技术文章｜FOREACH 恒永达`;
   const socialImage = article.coverImage
     ? new URL(article.coverImage, "https://www.foreachtek.com").toString()
     : undefined;
 
   return {
-    title:
-      `${article.seoTitle ?? article.title}｜技术文章｜FOREACH 恒永达`,
+    title: metaTitle,
 
     description:
       article.seoDescription ??
       article.summary,
 
+    alternates: {
+      canonical: `/resources/technical-articles/${slug}/`,
+      languages: getTechnicalArticleLanguageLinks(slug),
+    },
+
     openGraph: {
       type: "article",
       url: canonicalUrl,
-      title: article.seoTitle ?? article.title,
+      title: metaTitle,
       description: article.seoDescription ?? article.summary,
       ...(socialImage
-        ? { images: [{ url: socialImage, alt: article.title }] }
+        ? { images: [{ url: socialImage, alt: article.coverAlt ?? article.title }] }
         : {}),
     },
 
     twitter: {
       card: "summary_large_image",
-      title: article.seoTitle ?? article.title,
+      title: metaTitle,
       description: article.seoDescription ?? article.summary,
       ...(socialImage ? { images: [socialImage] } : {}),
     },

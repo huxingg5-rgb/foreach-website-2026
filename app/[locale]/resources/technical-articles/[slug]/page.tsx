@@ -27,6 +27,19 @@ import "@/app/resources/news/news.css";
 
 const SUPPORTED_LOCALES: TechnicalArticleLocale[] = ["en", "es", "fr", "ko", "ru"];
 
+function getTechnicalArticleLanguageLinks(slug: string) {
+  const basePath = `/resources/technical-articles/${slug}/`;
+
+  return {
+    "zh-CN": basePath,
+    en: `/en${basePath}`,
+    es: `/es${basePath}`,
+    fr: `/fr${basePath}`,
+    ko: `/ko${basePath}`,
+    ru: `/ru${basePath}`,
+  };
+}
+
 interface TechnicalArticleIntlDetailPageProps {
   params: Promise<{
     locale: TechnicalArticleLocale;
@@ -58,9 +71,12 @@ export async function generateMetadata({
     return {};
   }
 
-  const metaTitle = locale === "en"
-    ? `${article.seoTitle ?? article.title}｜Technical Articles｜FOREACH`
-    : `${article.seoTitle ?? article.title}｜FOREACH`;
+  const seoTitle = article.seoTitle ?? article.title;
+  const metaTitle = /FOREACH/i.test(seoTitle)
+    ? seoTitle
+    : locale === "en"
+      ? `${seoTitle}｜Technical Articles｜FOREACH`
+      : `${seoTitle}｜FOREACH`;
   const description = article.seoDescription ?? article.summary;
   const canonicalUrl =
     `https://www.foreachtek.com/${locale}/resources/technical-articles/${slug}/`;
@@ -71,13 +87,17 @@ export async function generateMetadata({
   return {
     title: metaTitle,
     description,
+    alternates: {
+      canonical: `/${locale}/resources/technical-articles/${slug}/`,
+      languages: getTechnicalArticleLanguageLinks(slug),
+    },
     openGraph: {
       type: "article",
       url: canonicalUrl,
       title: metaTitle,
       description,
       ...(socialImage
-        ? { images: [{ url: socialImage, alt: article.title }] }
+        ? { images: [{ url: socialImage, alt: article.coverAlt ?? article.title }] }
         : {}),
     },
     twitter: {

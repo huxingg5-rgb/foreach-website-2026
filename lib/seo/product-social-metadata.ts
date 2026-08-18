@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-
-const SITE_ORIGIN = "https://www.foreachtek.com";
+import { SITE_ORIGIN } from "@/lib/seo/site-url";
 
 type ProductMetadataSource = Record<string, unknown>;
 

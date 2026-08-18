@@ -86,7 +86,7 @@ export const defaultLocale: LocaleCode = "zh-CN";
 // 官网支持的语言列表
 // 说明：
 // 1. 中文默认路径是 "/"
-// 2. 其他语言路径分别是 /en、/es、/fr、/ko、/ru
+// 2. 其他语言路径分别是 /en/、/es/、/fr/、/ko/、/ru/
 // 3. enabled 可以控制某个语言是否暂时开放
 // 4. order 控制语言下拉菜单排序
 // 5. textLayout 控制页面排版密度
@@ -111,7 +111,7 @@ export const languages: LanguageItem[] = [
     code: "en", // 英文代码
     label: "English", // 前端显示名称
     nativeLabel: "English", // 原生语言名称
-    href: "/en", // 英文首页路径
+    href: "/en/", // 英文首页路径
     htmlLang: "en", // HTML lang
     hreflang: "en", // SEO hreflang
     direction: "ltr", // 英文从左到右
@@ -126,7 +126,7 @@ export const languages: LanguageItem[] = [
     code: "es", // 西班牙语代码
     label: "Español", // 前端显示名称
     nativeLabel: "Español", // 原生语言名称
-    href: "/es", // 西班牙语首页路径
+    href: "/es/", // 西班牙语首页路径
     htmlLang: "es", // HTML lang
     hreflang: "es", // SEO hreflang
     direction: "ltr", // 西班牙语从左到右
@@ -141,7 +141,7 @@ export const languages: LanguageItem[] = [
     code: "fr", // 法语代码
     label: "Français", // 前端显示名称
     nativeLabel: "Français", // 原生语言名称
-    href: "/fr", // 法语首页路径
+    href: "/fr/", // 法语首页路径
     htmlLang: "fr", // HTML lang
     hreflang: "fr", // SEO hreflang
     direction: "ltr", // 法语从左到右
@@ -156,7 +156,7 @@ export const languages: LanguageItem[] = [
     code: "ko", // 韩语代码
     label: "한국어", // 前端显示名称
     nativeLabel: "한국어", // 原生语言名称
-    href: "/ko", // 韩语首页路径
+    href: "/ko/", // 韩语首页路径
     htmlLang: "ko", // HTML lang
     hreflang: "ko", // SEO hreflang
     direction: "ltr", // 韩语从左到右
@@ -171,7 +171,7 @@ export const languages: LanguageItem[] = [
     code: "ru", // 俄语代码
     label: "Русский", // 前端显示名称
     nativeLabel: "Русский", // 原生语言名称
-    href: "/ru", // 俄语首页路径
+    href: "/ru/", // 俄语首页路径
     htmlLang: "ru", // HTML lang
     hreflang: "ru", // SEO hreflang
     direction: "ltr", // 俄语从左到右
@@ -259,8 +259,8 @@ export function getLanguageByCode(locale: LocaleCode) {
 // 根据语言代码获取首页路径
 // 说明：
 // 1. zh-CN 返回 /
-// 2. en 返回 /en
-// 3. es 返回 /es
+// 2. en 返回 /en/
+// 3. es 返回 /es/
 // 4. 后续语言路径统一从这里取
 export function getLanguageHomeHref(locale: LocaleCode) {
   return getLanguageByCode(locale).href;

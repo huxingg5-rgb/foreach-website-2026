@@ -84,20 +84,6 @@
     "alt": "DPL30H brushless liquid diaphragm pump, 300 mL/min, 600 kPa"
   },
   {
-    "cardId": "DPGL800-EP",
-    "category": "气液混合隔膜泵",
-    "series": "DPGL800 气液混合隔膜泵",
-    "title": "DPGL800-24BS6-EP/PS",
-    "description": "无刷电机 · 6 L/min · +30 kPa / ＜-90 kPa",
-    "flowRate": "6 L/min",
-    "pressure": "+30 kPa / ＜-90 kPa",
-    "motorType": "无刷电机",
-    "targetSeriesSlug": "dpgl800-gas-liquid-diaphragm-pump",
-    "reservedConfigSlug": "dpgl800-brushless-gas-liquid-diaphragm-pump",
-    "imageKey": "dpgl800-main",
-    "alt": "DPGL800 brushless gas liquid diaphragm pump, 6 L/min, +30 kPa and below -90 kPa"
-  },
-  {
     "cardId": "DPGL800-FF",
     "category": "气液混合隔膜泵",
     "series": "DPGL800 气液混合隔膜泵",

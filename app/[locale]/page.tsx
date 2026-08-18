@@ -52,7 +52,7 @@ function getLocaleFromRouteSegment(routeSegment: string): LocaleCode | null {
       return false;
     }
 
-    const segment = language.href.replace(/^\/+/, "");
+    const segment = language.href.replace(/^\/+|\/+$/g, "");
 
     return segment === routeSegment;
   });

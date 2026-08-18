@@ -29,6 +29,7 @@ import AnalyticsInteractionTracker from "@/components/analytics/AnalyticsInterac
 
 import { SelectionCartProvider } from "@/components/selection-cart/SelectionCartProvider";
 import GlobalSelectionCartDrawer from "@/components/selection-cart/GlobalSelectionCartDrawer";
+import { SITE_URL } from "@/lib/seo/site-url";
 import "./products/products.css";
 
 const gaMeasurementId =
@@ -41,6 +42,7 @@ const gaMeasurementId =
    后续每个页面可以在自己的 page.tsx 里单独设置 metadata
 ========================================================= */
 export const metadata: Metadata = {
+  metadataBase: SITE_URL,
   title: "恒永达 FOREACH 官网",
   description:
     "恒永达专注于微流体系统核心零部件与液路系统解决方案，服务 IVD、生命科学、高端分析仪器、合成生物和实验室自动化领域。",

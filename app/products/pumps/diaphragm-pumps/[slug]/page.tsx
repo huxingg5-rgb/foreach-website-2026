@@ -13,6 +13,7 @@ type PageParams = {
 
 type PageProps = {
   params: Promise<PageParams>;
+  locale?: "zh-CN" | "en" | "es" | "fr" | "ko" | "ru";
 };
 
 type DiaphragmMedia = {
@@ -1056,7 +1057,10 @@ export async function generateMetadata({ params }: PageProps) {
   };
 }
 
-export default async function DiaphragmPumpDetailPage({ params }: PageProps) {
+export default async function DiaphragmPumpDetailPage({
+  params,
+  locale = "zh-CN",
+}: PageProps) {
   const resolvedParams = await params;
   const data = getPreferredProductDetailData(resolvedParams.slug);
 
@@ -1074,7 +1078,7 @@ export default async function DiaphragmPumpDetailPage({ params }: PageProps) {
           sourceId={data.id}
           sourceSlug={data.slug}
           relationKeys={data.relationKeys}
-          locale="zh-CN"
+          locale={locale}
         />
       }
     />

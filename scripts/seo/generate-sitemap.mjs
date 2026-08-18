@@ -147,6 +147,49 @@ function isSystemRoute(route) {
   );
 }
 
+function isVerificationRoute(route) {
+  const firstSegment = route
+    .split("/")
+    .filter(Boolean)[0]
+    ?.toLowerCase() ?? "";
+
+  return (
+    firstSegment.startsWith("bytedanceverify") ||
+    firstSegment.startsWith("baidu_verify_code") ||
+    firstSegment.startsWith("googlesiteverification")
+  );
+}
+
+function extractAttributes(tag) {
+  const attributes = {};
+
+  for (const match of tag.matchAll(
+    /([:\w-]+)\s*=\s*(?:"([^"]*)"|'([^']*)')/g,
+  )) {
+    attributes[match[1].toLowerCase()] =
+      match[2] ?? match[3] ?? "";
+  }
+
+  return attributes;
+}
+
+function getCanonicalUrls(html) {
+  const canonicalValues = [];
+
+  for (const match of html.matchAll(/<link\b[^>]*>/gi)) {
+    const attributes = extractAttributes(match[0]);
+
+    if (
+      attributes.rel?.toLowerCase() === "canonical" &&
+      attributes.href
+    ) {
+      canonicalValues.push(attributes.href);
+    }
+  }
+
+  return canonicalValues;
+}
+
 function hasNoIndex(html) {
   return /<meta[^>]+name=["']robots["'][^>]+content=["'][^"']*\bnoindex\b/i.test(
     html,
@@ -272,7 +315,8 @@ async function main() {
     if (
       !route ||
       isSearchRoute(route) ||
-      isSystemRoute(route)
+      isSystemRoute(route) ||
+      isVerificationRoute(route)
     ) {
       if (route) {
         excludedRoutes.push(route);
@@ -290,7 +334,27 @@ async function main() {
       continue;
     }
 
-    routeMap.set(route, htmlFile);
+    const canonicalValues = getCanonicalUrls(html);
+    const expectedCanonical = new URL(
+      route,
+      siteOrigin,
+    ).toString();
+
+    if (
+      canonicalValues.length !== 1 ||
+      canonicalValues[0] !== expectedCanonical
+    ) {
+      throw new Error(
+        `页面 canonical 与静态路由不一致：${route}\n` +
+          `期望：${expectedCanonical}\n` +
+          `实际：${canonicalValues.join(", ") || "缺失"}`,
+      );
+    }
+
+    routeMap.set(route, {
+      htmlFile,
+      canonicalUrl: canonicalValues[0],
+    });
   }
 
   const routes = [...routeMap.keys()].sort(
@@ -319,10 +383,7 @@ async function main() {
       priority,
     } = getSeoSettings(route);
 
-    const url = new URL(
-      route,
-      siteOrigin,
-    ).toString();
+    const url = routeMap.get(route).canonicalUrl;
 
     return [
       "  <url>",

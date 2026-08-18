@@ -427,9 +427,23 @@ export function getInstallationGuideYouTubeGuides(
   return installationGuideYouTubeVideos.map(
     (video) => {
       const copy = copies[video.key];
+      const relationKeys =
+        video.key === "800-series-gas-liquid"
+          ? ["series:dpgl800"]
+          : video.key === "60-series-pressure"
+            ? ["series:dpl60"]
+            : video.key === "30h-series-pressure"
+              ? ["series:dpl30h"]
+              : video.key === "diaphragm-installation" ||
+                  video.key === "brushed-vs-brushless-lifespan" ||
+                  video.key === "motor-selection" ||
+                  video.key === "diaphragm-selection"
+                ? ["series:dpl30"]
+                : [];
 
       return {
         id: `youtube-${video.key}`,
+        relationKeys,
         title: copy.title,
         category: "pumps",
         series: "diaphragm-pump",

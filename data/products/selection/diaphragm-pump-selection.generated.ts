@@ -404,74 +404,9 @@ export const diaphragmPumpSelectionProducts = [
     "reservedConfigSlug": "dpl30h-brushless-liquid-diaphragm-pump"
   },
   {
-    "productId": "diaphragm-dpgl800-ep",
-    "id": "diaphragm-dpgl800-ep",
-    "categoryId": "pumps",
-    "categorySlug": "pumps",
-    "productTypeId": "diaphragm-pump",
-    "productTypeSlug": "diaphragm-pumps",
-    "seriesId": "dpgl800-gas-liquid-diaphragm-pump",
-    "seriesSlug": "dpgl800-gas-liquid-diaphragm-pump",
-    "detailSlug": "dpgl800-24bs6-ep-ps-gas-liquid-diaphragm-pump",
-    "cardTitle": {
-      "zh": "DPGL800-24BS6-EP/PS",
-      "en": "DPGL800-24BS6-EP/PS"
-    },
-    "cardSubtitle": {
-      "zh": "无刷电机\n6 L/min\n寿命 10000 h",
-      "en": "Brushless motor\n6 L/min\nService life 10000 h"
-    },
-    "imageCard": "/images/products/pumps/diaphragm-pumps/dpgl800/images/dpgl800-gas-liquid-diaphragm-pump-main.webp",
-    "imageAlt": {
-      "zh": "DPGL800 brushless gas liquid diaphragm pump, 6 L/min, +30 kPa and below -90 kPa",
-      "en": "DPGL800 brushless gas liquid diaphragm pump, 6 L/min, +30 kPa and below -90 kPa"
-    },
-    "categoryName": {
-      "zh": "泵",
-      "en": "Pumps"
-    },
-    "productTypeName": {
-      "zh": "隔膜泵",
-      "en": "Diaphragm Pumps"
-    },
-    "seriesName": {
-      "zh": "气液混合泵",
-      "en": "Gas-Liquid Pumps"
-    },
-    "filters": {
-      "productType": "diaphragm-pump",
-      "filter01": "气液混合泵",
-      "filter02": "无刷电机",
-      "filter03": "6 L/min",
-      "filter04": "30 kPa",
-      "series": "dpgl800-gas-liquid-diaphragm-pump",
-      "motorType": "无刷电机",
-      "flowRate": "6 L/min",
-      "pressure": "30 kPa",
-      "serviceLife": "10000 h"
-    },
-    "filter01": "气液混合泵",
-    "filter02": "无刷电机",
-    "filter03": "6 L/min",
-    "filter04": "30 kPa",
-    "motorType": "无刷电机",
-    "flowRate": "6 L/min",
-    "pressure": "30 kPa",
-    "serviceLife": "10000 h",
-    "tags": [
-      "无刷电机",
-      "6 L/min",
-      "30 kPa",
-      "寿命 10000 h"
-    ],
-    "needDrawing": true,
-    "needModel3d": true,
-    "source": "diaphragm-pump-xlsx",
-    "reservedConfigSlug": "dpgl800-brushless-gas-liquid-diaphragm-pump"
-  },
-  {
     "productId": "diaphragm-dpgl800-ff",
     "id": "diaphragm-dpgl800-ff",
+    "relationKeys": ["series:dpgl800"],
     "categoryId": "pumps",
     "categorySlug": "pumps",
     "productTypeId": "diaphragm-pump",

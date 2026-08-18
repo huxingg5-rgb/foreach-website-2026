@@ -1,3 +1,5 @@
+import { getLocalizedSiteHref } from "@/lib/seo/site-url";
+
 /* ================================
    navigation.ts
    官网顶部导航数据配置文件
@@ -220,12 +222,12 @@ function localizedPath(path: string): LocalizedHref {
   const normalizedPath = path.startsWith("/") ? path : `/${path}`;
 
   return {
-    "zh-CN": normalizedPath,
-    en: `/en${normalizedPath === "/" ? "" : normalizedPath}`,
-    es: `/es${normalizedPath === "/" ? "" : normalizedPath}`,
-    fr: `/fr${normalizedPath === "/" ? "" : normalizedPath}`,
-    ko: `/ko${normalizedPath === "/" ? "" : normalizedPath}`,
-    ru: `/ru${normalizedPath === "/" ? "" : normalizedPath}`,
+    "zh-CN": getLocalizedSiteHref(normalizedPath, "zh-CN"),
+    en: getLocalizedSiteHref(normalizedPath, "en"),
+    es: getLocalizedSiteHref(normalizedPath, "es"),
+    fr: getLocalizedSiteHref(normalizedPath, "fr"),
+    ko: getLocalizedSiteHref(normalizedPath, "ko"),
+    ru: getLocalizedSiteHref(normalizedPath, "ru"),
   };
 }
 

@@ -361,7 +361,10 @@ export default async function ProductLocaleRoutePage({
     }
 
     if (slug === "diaphragm-pumps") {
-      return DiaphragmPumpDetailPage({ params: detailParams });
+      return DiaphragmPumpDetailPage({
+        params: detailParams,
+        locale: locale as LocaleCode,
+      });
     }
 
     if (slug === "pipetting-pumps") {

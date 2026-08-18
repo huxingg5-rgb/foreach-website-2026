@@ -14,6 +14,18 @@ import {
   dpl30ArticleSlug,
   getDpl30TechnicalArticle,
 } from "@/data/resources/technical-articles/dpl30-liquid-diaphragm-pump.article";
+import {
+  dpl60ArticleSlug,
+  getDpl60TechnicalArticle,
+} from "@/data/resources/technical-articles/dpl60-liquid-diaphragm-pump.article";
+import {
+  dpgl800ArticleSlug,
+  getDpgl800TechnicalArticle,
+} from "@/data/resources/technical-articles/dpgl800-gas-liquid-diaphragm-pump.article";
+import {
+  dpl30hArticleSlug,
+  getDpl30hTechnicalArticle,
+} from "@/data/resources/technical-articles/dpl30h-high-pressure-liquid-diaphragm-pump.article";
 import { technicalArticlesIntlData } from "@/data/resources/technical-articles/technical-articles.intl";
 import { localizeTechnicalArticles } from "@/data/resources/technical-articles/technical-articles.translations";
 import type {
@@ -87,22 +99,103 @@ function withDpl30Article(
   };
 }
 
+function withDpl60Article(
+  locale: TechnicalArticleLocale,
+  pageData: TechnicalArticlesPageData,
+): TechnicalArticlesPageData {
+  const dpl60Article = getDpl60TechnicalArticle(locale);
+
+  return {
+    ...pageData,
+    locale,
+    articles: [
+      dpl60Article,
+      ...pageData.articles.filter(
+        (article) => article.slug !== dpl60ArticleSlug,
+      ),
+    ],
+  };
+}
+
+function withDpgl800Article(
+  locale: TechnicalArticleLocale,
+  pageData: TechnicalArticlesPageData,
+): TechnicalArticlesPageData {
+  const dpgl800Article = getDpgl800TechnicalArticle(locale);
+
+  return {
+    ...pageData,
+    locale,
+    articles: [
+      dpgl800Article,
+      ...pageData.articles.filter(
+        (article) => article.slug !== dpgl800ArticleSlug,
+      ),
+    ],
+  };
+}
+
+function withDpl30hArticle(
+  locale: TechnicalArticleLocale,
+  pageData: TechnicalArticlesPageData,
+): TechnicalArticlesPageData {
+  const dpl30hArticle = getDpl30hTechnicalArticle(locale);
+
+  return {
+    ...pageData,
+    locale,
+    articles: [
+      dpl30hArticle,
+      ...pageData.articles.filter(
+        (article) => article.slug !== dpl30hArticleSlug,
+      ),
+    ],
+  };
+}
+
 export function getTechnicalArticlesPageData(
   locale: TechnicalArticleLocale,
 ): TechnicalArticlesPageData {
   if (isChineseLocale(locale)) {
-    return withDpl30Article(locale, technicalArticlesZhData);
-  }
-
-  if (locale !== "en") {
-    return withDpl30Article(
+    return withDpl30hArticle(
       locale,
-      localizeTechnicalArticles(locale, technicalArticlesIntlData),
+      withDpgl800Article(
+        locale,
+        withDpl60Article(
+          locale,
+          withDpl30Article(locale, technicalArticlesZhData),
+        ),
+      ),
     );
   }
 
-  return withDpl30Article(
+  if (locale !== "en") {
+    return withDpl30hArticle(
+      locale,
+      withDpgl800Article(
+        locale,
+        withDpl60Article(
+          locale,
+          withDpl30Article(
+            locale,
+            localizeTechnicalArticles(locale, technicalArticlesIntlData),
+          ),
+        ),
+      ),
+    );
+  }
+
+  return withDpl30hArticle(
     locale,
-    getLocalizedIntlTechnicalArticlesData(locale),
+    withDpgl800Article(
+      locale,
+      withDpl60Article(
+        locale,
+        withDpl30Article(
+          locale,
+          getLocalizedIntlTechnicalArticlesData(locale),
+        ),
+      ),
+    ),
   );
 }

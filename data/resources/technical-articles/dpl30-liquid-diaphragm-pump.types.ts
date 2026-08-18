@@ -8,6 +8,11 @@ export type Dpl30FaqItem = {
   answer: string;
 };
 
+export type Dpl30FaqCopy = {
+  title: string;
+  items: readonly Dpl30FaqItem[];
+};
+
 export type Dpl30SpecificationRow = {
   label: string;
   value?: string;

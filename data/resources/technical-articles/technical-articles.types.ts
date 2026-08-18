@@ -41,6 +41,7 @@ export interface TechnicalArticleItem {
   summary: string;
   date: string;
   coverImage: string;
+  coverAlt?: string;
   content: TechnicalArticleBlock[];
   seoTitle?: string;
   seoDescription?: string;

@@ -14,6 +14,7 @@ import {
   getLocaleFromPathname as getLocaleFromPathnameFromLanguages, // 根据路径判断当前语言
   type LocaleCode, // 官网支持的语言代码类型
 } from "@/data/languages"; // 从统一语言配置文件读取语言信息
+import { normalizeSiteHref } from "@/lib/seo/site-url";
 
 // 重新导出 LocaleCode
 // 说明：其他文件如果从 lib/i18n.ts 引入 LocaleCode，可以继续使用
@@ -295,7 +296,7 @@ export function replacePathLocale(pathname: string, nextLocale: LocaleCode) {
     segments.unshift(nextLocale);
   }
 
-  const localizedPath = `/${segments.join("/")}` || "/";
+  const localizedPath = normalizeSiteHref(`/${segments.join("/")}` || "/");
   return `${localizedPath}${query ? `?${query}` : ""}${hash ? `#${hash}` : ""}`;
 }
 

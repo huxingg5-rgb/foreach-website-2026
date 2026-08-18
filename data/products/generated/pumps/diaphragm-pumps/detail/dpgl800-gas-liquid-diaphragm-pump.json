@@ -1,5 +1,8 @@
 {
   "seriesId": "DPGL800",
+  "relationKeys": [
+    "series:dpgl800"
+  ],
   "slug": "dpgl800-gas-liquid-diaphragm-pump",
   "category": "气液混合隔膜泵",
   "title": "DPGL800 气液混合隔膜泵",

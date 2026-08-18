@@ -1,5 +1,7 @@
 ﻿import type { LocaleCode } from "@/lib/i18n";
 
+import { getLocalizedSiteHref, normalizeSiteHref } from "@/lib/seo/site-url";
+
 export type SiteFooterMarket = "china" | "global";
 export type SiteFooterText = Partial<Record<SiteFooterMarket | LocaleCode, string>>;
 export type SiteFooterHref = Partial<Record<SiteFooterMarket | LocaleCode, string>>;
@@ -210,16 +212,8 @@ function shouldKeepHrefAsIs(value: string) {
 
 function localizeHref(value: string, locale: LocaleCode) {
   if (shouldKeepHrefAsIs(value)) return value;
-  if (locale === "zh-CN") return value;
-
-  const prefix = `/${locale}`;
-
-  if (value === "/") return prefix;
-  if (value.startsWith(`${prefix}/`) || value.startsWith(`${prefix}#`)) return value;
-  if (/^\/(en|es|fr|ko|ru)(\/|#|$)/.test(value)) return value;
-  if (value.startsWith("/#")) return `${prefix}${value.slice(1)}`;
-
-  return `${prefix}${value}`;
+  if (locale === "zh-CN") return normalizeSiteHref(value);
+  return getLocalizedSiteHref(value, locale);
 }
 
 export function getSiteFooterHref(value: SiteFooterHref | string | undefined | null, locale: LocaleCode) {

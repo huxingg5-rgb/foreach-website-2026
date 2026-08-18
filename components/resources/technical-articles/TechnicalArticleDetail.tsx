@@ -18,8 +18,17 @@ import CvKvMicrofluidicsArticle from "@/components/resources/technical-articles/
 import Dpl30LiquidDiaphragmPumpArticle from "@/components/resources/technical-articles/articles/Dpl30LiquidDiaphragmPumpArticle";
 import {
   getDpl30ArticleFaq,
-  type Dpl30FaqItem,
 } from "@/data/resources/technical-articles/dpl30-liquid-diaphragm-pump.article";
+import {
+  dpl60StandardModels,
+  getDpl60ArticleFaq,
+} from "@/data/resources/technical-articles/dpl60-liquid-diaphragm-pump.article";
+import {
+  dpgl800StandardModels,
+} from "@/data/resources/technical-articles/dpgl800-gas-liquid-diaphragm-pump.article";
+import {
+  dpl30hStandardModels,
+} from "@/data/resources/technical-articles/dpl30h-high-pressure-liquid-diaphragm-pump.article";
 
 import type {
   TechnicalArticleItem,
@@ -49,6 +58,22 @@ interface TechnicalArticleDetailProps {
 
 type SharedComponentProps = Record<string, unknown>;
 
+type TechnicalArticleFaqItem = {
+  question: string;
+  answer: string;
+};
+
+type TechnicalArticleProductItem = {
+  sku: string;
+  model: string;
+};
+
+type TechnicalArticleProductList = {
+  name: string;
+  category: string;
+  items: readonly TechnicalArticleProductItem[];
+};
+
 const BreadcrumbComponent =
   SiteBreadcrumb as ComponentType<SharedComponentProps>;
 
@@ -75,7 +100,8 @@ function buildTechnicalArticleStructuredData(
   pageData: TechnicalArticlesPageData,
   article: TechnicalArticleItem,
   locale: SupportedLocale,
-  faqItems: readonly Dpl30FaqItem[] = [],
+  faqItems: readonly TechnicalArticleFaqItem[] = [],
+  productList?: TechnicalArticleProductList,
 ) {
   const canonicalUrl = getTechnicalArticleCanonicalUrl(locale, article.slug);
   const organizationId = `${TECHNICAL_ARTICLE_SITE_ORIGIN}/#organization`;
@@ -177,6 +203,26 @@ function buildTechnicalArticleStructuredData(
     });
   }
 
+  if (productList && productList.items.length > 0) {
+    graph.push({
+      "@type": "ItemList",
+      "@id": `${canonicalUrl}#standard-models`,
+      name: productList.name,
+      numberOfItems: productList.items.length,
+      itemListElement: productList.items.map((item, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        item: {
+          "@type": "Product",
+          name: item.model,
+          sku: item.sku,
+          brand: { "@type": "Brand", name: "FOREACH" },
+          category: productList.category,
+        },
+      })),
+    });
+  }
+
   return {
     "@context": "https://schema.org",
     "@graph": graph,
@@ -224,6 +270,14 @@ export default function TechnicalArticleDetail({
   const listHref = getArticleListHref(locale);
   const isDpl30Article =
     article.slug === "dpl30-liquid-diaphragm-pump-selection-guide";
+  const isDpl60Article =
+    article.slug === "dpl60-liquid-diaphragm-pump-selection-guide";
+  const isDpgl800Article =
+    article.slug === "dpgl800-gas-liquid-diaphragm-pump-selection-guide";
+  const isDpl30hArticle =
+    article.slug === "dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide";
+  const isDedicatedPumpArticle =
+    isDpl30Article || isDpl30hArticle || isDpl60Article || isDpgl800Article;
 
   const breadcrumbItems = pageData.breadcrumbs.map((item, index) => {
     const isLastItem = index === pageData.breadcrumbs.length - 1;
@@ -250,9 +304,13 @@ export default function TechnicalArticleDetail({
     date: article.date,
     // DPL30 的 summary 供列表和关联卡片自动读取正文首段；
     // 详情页正文已经从同一首段开始，因此此处不重复显示摘要。
-    summary: isDpl30Article ? "" : article.summary,
+    summary: isDedicatedPumpArticle ? "" : article.summary,
     coverImage: article.coverImage,
-    coverAlt: article.title,
+    coverAlt:
+      article.coverAlt ??
+      (isDpl60Article
+        ? "FOREACH DPL60 brushed and brushless liquid diaphragm pumps, 600 mL/min"
+        : article.title),
     content: article.content.map((block) => ({
       title: block.title,
       content: block.content,
@@ -268,19 +326,57 @@ export default function TechnicalArticleDetail({
   const articleBody =
     article.slug === "cv-kv-correction-for-microfluidics" ? (
       <CvKvMicrofluidicsArticle locale={locale} />
-    ) : isDpl30Article ? (
-      <Dpl30LiquidDiaphragmPumpArticle locale={locale} />
+    ) : isDedicatedPumpArticle ? (
+      <Dpl30LiquidDiaphragmPumpArticle
+        locale={locale}
+        articleSeries={
+          isDpgl800Article
+            ? "dpgl800"
+            : isDpl30hArticle
+              ? "dpl30h"
+              : isDpl60Article
+                ? "dpl60"
+                : "dpl30"
+        }
+      />
     ) : null;
 
   const structuredData = buildTechnicalArticleStructuredData(
     pageData,
     article,
     locale,
-    isDpl30Article ? getDpl30ArticleFaq(locale) : [],
+    isDpl30Article
+      ? getDpl30ArticleFaq(locale)
+      : isDpl60Article
+        ? getDpl60ArticleFaq(locale)
+        : [],
+    isDpl30hArticle
+      ? {
+          name: "FOREACH DPL30H standard models",
+          category: "High-Pressure Liquid Diaphragm Pump",
+          items: dpl30hStandardModels,
+        }
+      : isDpl60Article
+      ? {
+          name: "FOREACH DPL60 standard models",
+          category: "Micro Liquid Diaphragm Pump",
+          items: dpl60StandardModels,
+        }
+      : isDpgl800Article
+        ? {
+            name: "FOREACH DPGL800 standard models",
+            category: "Gas-Liquid Diaphragm Pump",
+            items: dpgl800StandardModels,
+          }
+        : undefined,
   );
 
   return (
-    <div className="newsArticleDetailPage" data-locale={locale}>
+    <div
+      className="newsArticleDetailPage"
+      data-locale={locale}
+      data-article-slug={article.slug}
+    >
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

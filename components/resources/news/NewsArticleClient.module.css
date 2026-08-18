@@ -159,6 +159,23 @@
   object-fit: cover;
 }
 
+/* DPL30H 的原图是横向产品合影，详情页保持完整比例并适当收窄。 */
+:global(
+  .newsArticleDetailPage[data-article-slug="dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide"]
+) .cover {
+  width: min(100%, 1000px);
+  height: auto;
+  aspect-ratio: 2139 / 1011;
+  margin-inline: auto;
+  background: #ffffff;
+}
+
+:global(
+  .newsArticleDetailPage[data-article-slug="dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide"]
+) .cover img {
+  object-fit: contain;
+}
+
 /* =========================================================
    4. 正文区域
 
