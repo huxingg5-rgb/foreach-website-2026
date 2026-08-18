@@ -35,6 +35,7 @@ import {
 import {
   dpl30hStandardModels,
 } from "@/data/resources/technical-articles/dpl30h-high-pressure-liquid-diaphragm-pump.article";
+import { getProductDetailTitleOverride } from "@/data/products/detail/product-detail-title-overrides";
 
 import type {
   TechnicalArticleItem,
@@ -69,15 +70,9 @@ type TechnicalArticleFaqItem = {
   answer: string;
 };
 
-type TechnicalArticleProductItem = {
-  sku: string;
-  model: string;
-};
-
-type TechnicalArticleProductList = {
-  name: string;
-  category: string;
-  items: readonly TechnicalArticleProductItem[];
+type TechnicalArticleSubject = {
+  about: readonly string[];
+  mentions: readonly string[];
 };
 
 const BreadcrumbComponent =
@@ -107,7 +102,7 @@ function buildTechnicalArticleStructuredData(
   article: TechnicalArticleItem,
   locale: SupportedLocale,
   faqItems: readonly TechnicalArticleFaqItem[] = [],
-  productList?: TechnicalArticleProductList,
+  subject?: TechnicalArticleSubject,
   articleType: "Article" | "TechArticle" = "Article",
 ) {
   const canonicalUrl = getTechnicalArticleCanonicalUrl(locale, article.slug);
@@ -159,6 +154,22 @@ function buildTechnicalArticleStructuredData(
     inLanguage: locale,
     articleSection: categoryLabel,
     isAccessibleForFree: true,
+    ...(subject?.about.length
+      ? {
+          about: subject.about.map((name) => ({
+            "@type": "Thing",
+            name,
+          })),
+        }
+      : {}),
+    ...(subject?.mentions.length
+      ? {
+          mentions: subject.mentions.map((name) => ({
+            "@type": "Thing",
+            name,
+          })),
+        }
+      : {}),
   };
 
   const graph: Record<string, unknown>[] = [
@@ -190,6 +201,7 @@ function buildTechnicalArticleStructuredData(
         isPartOf: { "@id": websiteId },
         publisher: { "@id": organizationId },
         breadcrumb: { "@id": breadcrumbId },
+        mainEntity: { "@id": articleId },
       },
       articleData,
     ];
@@ -205,26 +217,6 @@ function buildTechnicalArticleStructuredData(
         acceptedAnswer: {
           "@type": "Answer",
           text: item.answer,
-        },
-      })),
-    });
-  }
-
-  if (productList && productList.items.length > 0) {
-    graph.push({
-      "@type": "ItemList",
-      "@id": `${canonicalUrl}#standard-models`,
-      name: productList.name,
-      numberOfItems: productList.items.length,
-      itemListElement: productList.items.map((item, index) => ({
-        "@type": "ListItem",
-        position: index + 1,
-        item: {
-          "@type": "Product",
-          name: item.model,
-          sku: item.sku,
-          brand: { "@type": "Brand", name: "FOREACH" },
-          category: productList.category,
         },
       })),
     });
@@ -265,6 +257,43 @@ function getBackText(locale: SupportedLocale) {
   if (locale === "ko") return "뒤로";
   if (locale === "ru") return "Назад";
   return "返回";
+}
+
+const DPL30_MENTIONED_MODELS = [
+  "DPL30-24DB-EP/PS",
+  "DPL30-24BB-EP/PS",
+] as const;
+
+const DIAPHRAGM_SERIES_SLUGS = {
+  dpl30: "dpl30-liquid-diaphragm-pump",
+  dpl30h: "dpl30h-liquid-diaphragm-pump",
+  dpl60: "dpl60-liquid-diaphragm-pump",
+  dpgl800: "dpgl800-gas-liquid-diaphragm-pump",
+} as const;
+
+const DIAPHRAGM_SERIES_ZH_NAMES = {
+  dpl30: "DPL30 液体隔膜泵",
+  dpl30h: "DPL30H 高压液体隔膜泵",
+  dpl60: "DPL60 液体隔膜泵",
+  dpgl800: "DPGL800 气液混合隔膜泵",
+} as const;
+
+type DiaphragmSeriesKey = keyof typeof DIAPHRAGM_SERIES_SLUGS;
+
+function getDiaphragmSeriesSchemaName(
+  series: DiaphragmSeriesKey,
+  locale: SupportedLocale,
+) {
+  if (locale === "zh-CN") {
+    return DIAPHRAGM_SERIES_ZH_NAMES[series];
+  }
+
+  return (
+    getProductDetailTitleOverride(
+      { slug: DIAPHRAGM_SERIES_SLUGS[series] },
+      locale,
+    ) || DIAPHRAGM_SERIES_ZH_NAMES[series]
+  );
 }
 
 export default function TechnicalArticleDetail({
@@ -374,6 +403,38 @@ export default function TechnicalArticleDetail({
       />
     ) : null;
 
+  const structuredDataSubject: TechnicalArticleSubject | undefined =
+    isDpl30Article
+      ? {
+          about: [getDiaphragmSeriesSchemaName("dpl30", locale)],
+          mentions: DPL30_MENTIONED_MODELS,
+        }
+      : isDpl30hArticle
+        ? {
+            about: [getDiaphragmSeriesSchemaName("dpl30h", locale)],
+            mentions: dpl30hStandardModels.map((item) => item.model),
+          }
+        : isDpl60Article
+          ? {
+              about: [getDiaphragmSeriesSchemaName("dpl60", locale)],
+              mentions: dpl60StandardModels.map((item) => item.model),
+            }
+          : isDpgl800Article
+            ? {
+                about: [getDiaphragmSeriesSchemaName("dpgl800", locale)],
+                mentions: dpgl800StandardModels.map((item) => item.model),
+              }
+            : isBrushlessWiringArticle
+              ? {
+                  about: (["dpl30", "dpl60", "dpl30h", "dpgl800"] as const).map(
+                    (series) => getDiaphragmSeriesSchemaName(series, locale),
+                  ),
+                  mentions: (["dpl30", "dpl60", "dpl30h", "dpgl800"] as const).map(
+                    (series) => getDiaphragmSeriesSchemaName(series, locale),
+                  ),
+                }
+              : undefined;
+
   const structuredData = buildTechnicalArticleStructuredData(
     pageData,
     article,
@@ -385,26 +446,8 @@ export default function TechnicalArticleDetail({
         : isBrushlessWiringArticle
           ? getBrushlessWiringArticleFaq(locale)
         : [],
-    isDpl30hArticle
-      ? {
-          name: "FOREACH DPL30H standard models",
-          category: "High-Pressure Liquid Diaphragm Pump",
-          items: dpl30hStandardModels,
-        }
-      : isDpl60Article
-      ? {
-          name: "FOREACH DPL60 standard models",
-          category: "Micro Liquid Diaphragm Pump",
-          items: dpl60StandardModels,
-        }
-      : isDpgl800Article
-        ? {
-            name: "FOREACH DPGL800 standard models",
-            category: "Gas-Liquid Diaphragm Pump",
-            items: dpgl800StandardModels,
-          }
-        : undefined,
-    isBrushlessWiringArticle ? "TechArticle" : "Article",
+    structuredDataSubject,
+    isDedicatedPumpArticle || isBrushlessWiringArticle ? "TechArticle" : "Article",
   );
 
   return (

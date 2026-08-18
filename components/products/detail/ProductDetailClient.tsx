@@ -1005,9 +1005,70 @@ function getProductPageLocale(pathname: string) {
     : "zh-CN";
 }
 
+function getCanonicalProductPageUrl(pathname: string) {
+  const absoluteUrl = toAbsoluteProductUrl(pathname || "/");
+
+  return absoluteUrl.endsWith("/") ? absoluteUrl : `${absoluteUrl}/`;
+}
+
+function getDiaphragmPumpSchemaModel(pathname: string, fallbackModel: string) {
+  const routeSlug = pathname
+    .split("?")[0]
+    .split("#")[0]
+    .split("/")
+    .filter(Boolean)
+    .at(-1)
+    ?.toLowerCase();
+  const modelFromRoute = String(routeSlug || "")
+    .replace(/-(?:gas-liquid|liquid|gas)-diaphragm-pump$/i, "")
+    .toUpperCase()
+    .replace(/-(EP|FF)-PS$/i, "-$1/PS")
+    .trim();
+
+  if (/^(?:DPL30H?|DPL60|DPGL800)(?:-|$)/.test(modelFromRoute)) {
+    return modelFromRoute;
+  }
+
+  return fallbackModel
+    .replace(/^型号\s*[:：]\s*/u, "")
+    .replace(/\s*标准型号\s*$/u, "")
+    .replace(/[.,;，。；]+$/u, "")
+    .trim();
+}
+
+function cleanProductSchemaName(value: unknown) {
+  return String(value || "")
+    .replace(/\s*[|｜]\s*FOREACH\s*$/i, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function getDiaphragmPumpSchemaName(
+  data: Record<string, unknown>,
+  pathname: string,
+  locale: string,
+  productModel: string,
+) {
+  const localizedTitle =
+    locale === "zh-CN"
+      ? ""
+      : getProductDetailTitleOverride(data, locale, pathname);
+  const configuredTitle =
+    locale === "zh-CN"
+      ? data.seoTitle || data.metaTitle || data.title || data.name || data.model
+      : localizedTitle || data.title || data.name || data.model;
+  const cleanTitle = cleanProductSchemaName(configuredTitle);
+
+  if (!productModel || cleanTitle.toUpperCase().includes(productModel.toUpperCase())) {
+    return cleanTitle;
+  }
+
+  return `${productModel} ${cleanTitle}`.trim();
+}
+
 function buildProductPageStructuredData(data: any, pathname: string) {
-  const canonicalUrl = toAbsoluteProductUrl(pathname || "/");
-  const productName = String(
+  const canonicalUrl = getCanonicalProductPageUrl(pathname);
+  const defaultProductName = String(
     data.model || data.title || data.name || ""
   ).trim();
   const description = String(data.description || "").trim();
@@ -1024,10 +1085,21 @@ function buildProductPageStructuredData(data: any, pathname: string) {
   const rawProductModel = String(
     data.modelDisplay || data.displayModel || data.modelCode || data.model || "",
   ).trim();
-  const productModel = isDiaphragmPumpDetailData(data)
-    ? rawProductModel.replace(/[.,;，。；]+$/u, "").trim()
+  const isDiaphragmPump =
+    /(?:^|\/)products\/pumps\/diaphragm-pumps\/[^/]+/i.test(pathname) &&
+    isDiaphragmPumpDetailData(data);
+  const productModel = isDiaphragmPump
+    ? getDiaphragmPumpSchemaModel(pathname, rawProductModel)
     : rawProductModel;
-  const productSku = String(data.sku || data.productCode || "").trim();
+  const locale = getProductPageLocale(pathname);
+  const productName = isDiaphragmPump
+    ? getDiaphragmPumpSchemaName(data, pathname, locale, productModel)
+    : defaultProductName;
+  const productSku = String(
+    isDiaphragmPump
+      ? data.sku || data.internalSku || ""
+      : data.sku || data.productCode || "",
+  ).trim();
   const faqs: Array<{ question: string; answer: string }> = Array.isArray(data.faqs)
     ? data.faqs
         .map((item: any) => ({
@@ -1038,7 +1110,6 @@ function buildProductPageStructuredData(data: any, pathname: string) {
           item.question && item.answer
         )
     : [];
-  const locale = getProductPageLocale(pathname);
   const localePrefix = locale === "zh-CN" ? "" : `/${locale}`;
   const breadcrumbCopy =
     PRODUCT_BREADCRUMB_COPY[locale] || PRODUCT_BREADCRUMB_COPY.en;
@@ -1046,7 +1117,7 @@ function buildProductPageStructuredData(data: any, pathname: string) {
   const websiteId = `${PRODUCT_SITE_ORIGIN}/#website`;
   const webpageId = `${canonicalUrl}#webpage`;
   const breadcrumbId = `${canonicalUrl}#breadcrumb`;
-  const productId = `${canonicalUrl}#product`;
+  const productId = `${canonicalUrl}#${isDiaphragmPump ? "product-model" : "product"}`;
   const webPage: Record<string, unknown> = {
     "@type": "WebPage",
     "@id": webpageId,
@@ -1113,7 +1184,7 @@ function buildProductPageStructuredData(data: any, pathname: string) {
     },
     webPage,
     {
-      "@type": "Product",
+      "@type": isDiaphragmPump ? "ProductModel" : "Product",
       "@id": productId,
       name: productName,
       url: canonicalUrl,
