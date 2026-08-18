@@ -17,7 +17,7 @@ type LegacyRedirectHandler = (
 const BAIDU_VERIFY_PATH = "/baidu_verify_codeva-3SytZbh1AT.html";
 const BAIDU_VERIFY_CONTENT = "8fba1099a7a52a28564eca6114d2396c";
 const BYTEDANCE_VERIFY_PATH = "/ByteDanceVerify.html";
-const BYTEDANCE_VERIFY_CONTENT = "xuvAY4ELXA9YlGkNyt5R";
+const BYTEDANCE_VERIFY_CONTENT = "ys91dEc0bPhktzcIz+Yb";
 const LEGACY_REDIRECTS = new Map<string, string>([
   ["/cn/history.aspx", "/"],
   ["/cn/NewsInfo.aspx", "/"],
