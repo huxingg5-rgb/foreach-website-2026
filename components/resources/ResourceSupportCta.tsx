@@ -30,6 +30,15 @@ type ResourceSupportCtaProps = {
 
   /* 按钮跳转地址 */
   href: string;
+
+  /*
+   * 可选多按钮数据。未传时继续使用原有 buttonText / href，保证所有
+   * 现有资源页面的展示和调用方式不变。
+   */
+  actions?: readonly {
+    label: string;
+    href: string;
+  }[];
 };
 
 export default function ResourceSupportCta({
@@ -38,7 +47,13 @@ export default function ResourceSupportCta({
   description,
   buttonText,
   href,
+  actions,
 }: ResourceSupportCtaProps) {
+  const resolvedActions =
+    actions && actions.length > 0
+      ? actions
+      : [{ label: buttonText, href }];
+
   return (
     <section className={styles.resourceSupportCta}>
       <div className={styles.inner}>
@@ -49,10 +64,25 @@ export default function ResourceSupportCta({
           <p>{description}</p>
         </div>
 
-        <Link className={styles.button} href={href}>
-          {buttonText}
-        </Link>
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            alignItems: "center",
+            gap: 12,
+          }}
+        >
+          {resolvedActions.map((action) => (
+            <Link
+              className={styles.button}
+              href={action.href}
+              key={`${action.href}-${action.label}`}
+            >
+              {action.label}
+            </Link>
+          ))}
+        </div>
       </div>
     </section>
   );
-} 
+}

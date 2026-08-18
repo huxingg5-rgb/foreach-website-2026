@@ -14,8 +14,14 @@ import type { ComponentType } from "react";
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
 import RelatedResources from "@/components/common/related-resources/RelatedResources";
 import NewsArticleClient from "@/components/resources/news/NewsArticleClient";
+import BrushlessDiaphragmPumpWiringArticle from "@/components/resources/technical-articles/articles/BrushlessDiaphragmPumpWiringArticle";
 import CvKvMicrofluidicsArticle from "@/components/resources/technical-articles/articles/CvKvMicrofluidicsArticle";
 import Dpl30LiquidDiaphragmPumpArticle from "@/components/resources/technical-articles/articles/Dpl30LiquidDiaphragmPumpArticle";
+import {
+  brushlessWiringArticleSlug,
+  getBrushlessWiringArticleCopy,
+  getBrushlessWiringArticleFaq,
+} from "@/data/resources/technical-articles/brushless-diaphragm-pump-2-wire-vs-5-wire.article";
 import {
   getDpl30ArticleFaq,
 } from "@/data/resources/technical-articles/dpl30-liquid-diaphragm-pump.article";
@@ -102,6 +108,7 @@ function buildTechnicalArticleStructuredData(
   locale: SupportedLocale,
   faqItems: readonly TechnicalArticleFaqItem[] = [],
   productList?: TechnicalArticleProductList,
+  articleType: "Article" | "TechArticle" = "Article",
 ) {
   const canonicalUrl = getTechnicalArticleCanonicalUrl(locale, article.slug);
   const organizationId = `${TECHNICAL_ARTICLE_SITE_ORIGIN}/#organization`;
@@ -134,7 +141,7 @@ function buildTechnicalArticleStructuredData(
   });
 
   const articleData: Record<string, unknown> = {
-    "@type": "Article",
+    "@type": articleType,
     "@id": articleId,
     url: canonicalUrl,
     headline: article.title,
@@ -276,8 +283,14 @@ export default function TechnicalArticleDetail({
     article.slug === "dpgl800-gas-liquid-diaphragm-pump-selection-guide";
   const isDpl30hArticle =
     article.slug === "dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide";
+  const isBrushlessWiringArticle =
+    article.slug === brushlessWiringArticleSlug;
   const isDedicatedPumpArticle =
     isDpl30Article || isDpl30hArticle || isDpl60Article || isDpgl800Article;
+  const brushlessWiringCopy = isBrushlessWiringArticle
+    ? getBrushlessWiringArticleCopy(locale)
+    : null;
+  const localePrefix = locale === "zh-CN" ? "" : `/${locale}`;
 
   const breadcrumbItems = pageData.breadcrumbs.map((item, index) => {
     const isLastItem = index === pageData.breadcrumbs.length - 1;
@@ -305,7 +318,10 @@ export default function TechnicalArticleDetail({
     // DPL30 的 summary 供列表和关联卡片自动读取正文首段；
     // 详情页正文已经从同一首段开始，因此此处不重复显示摘要。
     summary: isDedicatedPumpArticle ? "" : article.summary,
-    coverImage: article.coverImage,
+    // The new wiring article uses both confirmed photos inside the body. Keep
+    // the 2-wire photo for list cards and structured data without repeating it
+    // as an oversized detail-page cover.
+    coverImage: isBrushlessWiringArticle ? undefined : article.coverImage,
     coverAlt:
       article.coverAlt ??
       (isDpl60Article
@@ -320,11 +336,28 @@ export default function TechnicalArticleDetail({
   const adaptedPageData = {
     listHref,
     backText: getBackText(locale),
-    bottomBanner: pageData.bottomBanner,
+    bottomBanner: brushlessWiringCopy
+      ? {
+          title: brushlessWiringCopy.cta.title,
+          description: brushlessWiringCopy.cta.description,
+          actions: [
+            {
+              label: brushlessWiringCopy.cta.contactLabel,
+              href: `${localePrefix}/contact`,
+            },
+            {
+              label: brushlessWiringCopy.cta.productsLabel,
+              href: `${localePrefix}/products`,
+            },
+          ],
+        }
+      : pageData.bottomBanner,
   };
 
   const articleBody =
-    article.slug === "cv-kv-correction-for-microfluidics" ? (
+    isBrushlessWiringArticle ? (
+      <BrushlessDiaphragmPumpWiringArticle locale={locale} />
+    ) : article.slug === "cv-kv-correction-for-microfluidics" ? (
       <CvKvMicrofluidicsArticle locale={locale} />
     ) : isDedicatedPumpArticle ? (
       <Dpl30LiquidDiaphragmPumpArticle
@@ -349,6 +382,8 @@ export default function TechnicalArticleDetail({
       ? getDpl30ArticleFaq(locale)
       : isDpl60Article
         ? getDpl60ArticleFaq(locale)
+        : isBrushlessWiringArticle
+          ? getBrushlessWiringArticleFaq(locale)
         : [],
     isDpl30hArticle
       ? {
@@ -369,6 +404,7 @@ export default function TechnicalArticleDetail({
             items: dpgl800StandardModels,
           }
         : undefined,
+    isBrushlessWiringArticle ? "TechArticle" : "Article",
   );
 
   return (
