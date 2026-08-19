@@ -93,7 +93,7 @@ export const dpgl800ArticleFrCopy = {
     rows: [["3", "Droite", "Raccord et maintenance à droite"], ["6", "Bas", "Rayon de courbure inférieur"], ["9", "Gauche", "Raccord et maintenance à gauche"], ["C", "Haut", "Dégagement supérieur"]],
   },
   section9: {
-    title: "9. Codification DPGL800 et modèles standard actuels",
+    title: "9. Codification et interprétation du DPGL800",
     intro: "Le code complet décrit série, tension, moteur, raccord, orientation, matériaux mouillés et personnalisation.",
     modelCode: "DPGL800 - 24 - B - S - 6 - EP/PS - X",
     modelCodeDescription: "Série · tension · moteur sans balais · raccord fileté · orientation · matériaux membrane/clapet/tête · personnalisation",

@@ -5,7 +5,7 @@ export const dpl60ArticleKoCopy = {
     title: "600 mL/min 액체 다이어프램 펌프 선정: DPL60 유량·압력·모델 가이드",
     seoTitle: "600 mL/min 액체 다이어프램 펌프: DPL60 운전점과 모델 선정",
     seoDescription:
-      "FOREACH DPL60 소형 액체 다이어프램 펌프의 600 mL/min 무부하 유량, 100 kPa 정격 압력, 유량-압력 곡선, 모터, 접액 재질, 모델 코드와 8개 표준 SKU를 설명합니다.",
+      "FOREACH DPL60 소형 액체 다이어프램 펌프의 600 mL/min 무부하 유량, 100 kPa 정격 압력, 유량-압력 곡선, 모터, 접액 재질, 모델 코드, 구성 로직 및 선정 방법을 설명합니다.",
   },
   diagram: {
     ariaLabel: "DPL60 액체 다이어프램 펌프 운전점 설명",
@@ -135,7 +135,7 @@ export const dpl60ArticleKoCopy = {
       "브러시리스 모터 외형, 전체 길이와 하네스는 브러시형과 다릅니다. 동등 모터 자재 간 국부 치수 차이가 있을 수 있으므로 양산 버전을 확인하십시오.",
   },
   section8: {
-    title: "8. DPL60 모델 코드와 8개 표준 모델",
+    title: "8. DPL60 모델 코드와 해석",
     intro:
       "전체 코드는 시리즈, 전압, 모터, 배선, 연결, 포트 방향, 다이어프램/밸브/헤드 재질과 특수 사양을 나타냅니다.",
     noticeStrong: "DPL60 - 24 - D - 2 - B - C - EP/PS - X",

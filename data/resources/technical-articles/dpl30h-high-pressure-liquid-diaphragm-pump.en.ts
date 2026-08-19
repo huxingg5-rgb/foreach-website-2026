@@ -4,7 +4,7 @@ export const dpl30hArticleEnCopy: Dpl30hArticleCopy = {
   metadata: {
     title: "How to Select a High-Pressure Diaphragm Pump: DPL30H 300 mL/min and 600 kPa Guide",
     seoTitle: "DPL30H High-Pressure Diaphragm Pump Selection Guide | FOREACH",
-    seoDescription: "Select the FOREACH DPL30H by flow at target backpressure, 600 kPa rated pressure, 6×4 mm rigid tubing, motor, wetted materials and eight standard models.",
+    seoDescription: "Select the FOREACH DPL30H by flow at target backpressure, 600 kPa rated pressure, 6×4 mm rigid tubing, motor, wetted materials, model code and selection method.",
     coverAlt: "FOREACH DPL30H brushed and brushless high-pressure liquid diaphragm pumps with 6×4 mm rigid-tube fittings",
   },
   section1: {
@@ -139,7 +139,7 @@ export const dpl30hArticleEnCopy: Dpl30hArticleCopy = {
     noticeText: "Evaluate chemical identity, concentration, temperature, pressure, exposure time and target life; test samples when needed.",
   },
   section10: {
-    title: "10. Model code, eight standard models and selection sequence",
+    title: "10. Model code and complete selection sequence",
     intro: "DPL30H combines voltage, motor, connection, port direction, materials and customization in its model code.",
     modelCode: "DPL30H - 24 - D - S - C - EP/PS - X",
     modelCodeDescription: "This explanation applies to DPL30H only and is not inferred from DPL60 or another series.",

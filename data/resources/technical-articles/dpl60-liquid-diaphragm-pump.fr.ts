@@ -5,7 +5,7 @@ export const dpl60ArticleFrCopy = {
     title: "Comment choisir une pompe à membrane de 600 mL/min : guide DPL60 débit, pression et modèles",
     seoTitle: "Pompe à membrane 600 mL/min : point de fonctionnement et modèles DPL60",
     seoDescription:
-      "Guide de sélection de la pompe à membrane pour liquides FOREACH DPL60 : débit à vide 600 mL/min, pression nominale 100 kPa, courbe, moteurs, matériaux, codification et huit SKU.",
+      "Guide de sélection de la pompe à membrane pour liquides FOREACH DPL60 : débit à vide 600 mL/min, pression nominale 100 kPa, courbe, moteurs, matériaux, codification, logique de configuration et méthode de sélection.",
   },
   diagram: {
     ariaLabel: "Explication du point de fonctionnement de la pompe DPL60",
@@ -135,7 +135,7 @@ export const dpl60ArticleFrCopy = {
       "Le corps moteur, la longueur totale et le faisceau diffèrent. Confirmez la variante de production, car des moteurs équivalents peuvent présenter des différences locales de montage.",
   },
   section8: {
-    title: "8. Codification DPL60 et huit modèles standard",
+    title: "8. Codification et interprétation du DPL60",
     intro:
       "Le code complet identifie série, tension, moteur, nombre de fils, raccordement, orientation, matériaux membrane/clapet/tête et personnalisation.",
     noticeStrong: "DPL60 - 24 - D - 2 - B - C - EP/PS - X",

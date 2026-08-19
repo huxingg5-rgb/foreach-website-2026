@@ -4,7 +4,7 @@ export const dpl30hArticleEsCopy: Dpl30hArticleCopy = {
   metadata: {
     title: "Cómo elegir una bomba de diafragma de alta presión: guía DPL30H de 300 mL/min y 600 kPa",
     seoTitle: "Selección de la bomba de diafragma DPL30H de alta presión | FOREACH",
-    seoDescription: "Seleccione la FOREACH DPL30H por caudal a la contrapresión objetivo, presión nominal de 600 kPa, tubo rígido de 6×4 mm, motor, materiales y ocho modelos estándar.",
+    seoDescription: "Seleccione la FOREACH DPL30H por caudal a la contrapresión objetivo, presión nominal de 600 kPa, tubo rígido de 6×4 mm, motor, materiales, código del modelo y método de selección.",
     coverAlt: "Bombas de diafragma para líquidos DPL30H de alta presión, con motor con escobillas y sin escobillas y conexión para tubo rígido de 6×4 mm",
   },
   section1: {
@@ -134,7 +134,7 @@ export const dpl30hArticleEsCopy: Dpl30hArticleCopy = {
     noticeText: "Evalúe sustancia, concentración, temperatura, presión, exposición y vida objetivo; ensaye muestras cuando sea necesario.",
   },
   section10: {
-    title: "10. Código, ocho modelos estándar y secuencia de selección",
+    title: "10. Código del modelo y secuencia completa de selección",
     intro: "El código combina tensión, motor, conexión, orientación, materiales y personalización.",
     modelCode: "DPL30H - 24 - D - S - C - EP/PS - X",
     modelCodeDescription: "Esta lectura solo corresponde a DPL30H y no se deduce de DPL60.",

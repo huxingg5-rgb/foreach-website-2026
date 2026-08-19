@@ -4,7 +4,7 @@ export const dpl30hArticleKoCopy: Dpl30hArticleCopy = {
   metadata: {
     title: "고압 다이어프램 펌프는 어떻게 선택할까? DPL30H 300 mL/min 및 600 kPa 가이드",
     seoTitle: "DPL30H 고압 다이어프램 펌프 선정 가이드 | FOREACH",
-    seoDescription: "목표 배압에서의 유량, 정격 압력 600 kPa, 6×4 mm 경질 튜브, 모터, 접액 재질과 8개 표준 모델을 기준으로 FOREACH DPL30H를 선정합니다.",
+    seoDescription: "목표 배압에서의 유량, 정격 압력 600 kPa, 6×4 mm 경질 튜브, 모터, 접액 재질, 모델 코드 및 선정 방법을 기준으로 FOREACH DPL30H를 선정합니다.",
     coverAlt: "6×4 mm 경질 튜브 피팅이 적용된 FOREACH DPL30H 브러시 및 브러시리스 고압 액체 다이어프램 펌프",
   },
   section1: {
@@ -123,7 +123,7 @@ export const dpl30hArticleKoCopy: Dpl30hArticleCopy = {
     noticeText: "유체, 농도, 온도, 압력, 노출 시간과 목표 수명을 평가하고 필요하면 샘플 시험을 수행하십시오.",
   },
   section10: {
-    title: "10. 모델 코드, 8개 표준 모델과 선정 순서",
+    title: "10. 모델 코드와 전체 선정 순서",
     intro: "DPL30H 모델 코드는 전압, 모터, 연결, 포트 방향, 재질과 주문 사양을 조합합니다.",
     modelCode: "DPL30H - 24 - D - S - C - EP/PS - X",
     modelCodeDescription: "이 해석은 DPL30H에만 적용하며 DPL60에서 추론하지 않습니다.",

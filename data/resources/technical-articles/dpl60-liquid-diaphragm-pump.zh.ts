@@ -5,7 +5,7 @@ export const dpl60ArticleZhCopy = {
     title: "600 mL/min液体隔膜泵怎么选？DPL60流量、压力与型号指南",
     seoTitle: "600 mL/min液体隔膜泵怎么选？DPL60工作点与型号解析",
     seoDescription:
-      "了解FOREACH DPL60微型液体隔膜泵的600 mL/min空载流量、100 kPa额定压力、流量压力曲线、有刷无刷版本、接液材料、型号代码及8个标准SKU。",
+      "了解FOREACH DPL60微型液体隔膜泵的600 mL/min空载流量、100 kPa额定压力、流量压力曲线、有刷无刷版本、接液材料、型号编码、配置逻辑与选型方法。",
   },
   diagram: {
     ariaLabel: "DPL60液体隔膜泵工作点说明",
@@ -135,7 +135,7 @@ export const dpl60ArticleZhCopy = {
       "无刷版本的电机外形、总长度和线束配置与有刷版本不同；正式资料中的等效电机物料可能存在局部安装尺寸差异，量产设计前应确认实际版本。",
   },
   section8: {
-    title: "八、DPL60型号解析与8个标准型号",
+    title: "八、DPL60型号编码与解析",
     intro:
       "DPL60完整型号描述产品系列、工作电压、电机类型、出线方式、连接方式、接口方向、膜片 / 阀片 / 泵头材料和特殊定制。",
     noticeStrong: "DPL60 - 24 - D - 2 - B - C - EP/PS - X",

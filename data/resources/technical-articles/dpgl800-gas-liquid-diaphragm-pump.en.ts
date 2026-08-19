@@ -93,7 +93,7 @@ export const dpgl800ArticleEnCopy = {
     rows: [["3", "Right", "Right-side fitting and service clearance"], ["6", "Down", "Lower tube bend radius"], ["9", "Left", "Left-side fitting and service clearance"], ["C", "Up", "Upper tube and enclosure clearance"]],
   },
   section9: {
-    title: "9. DPGL800 model code and current standard models",
+    title: "9. DPGL800 model coding and interpretation",
     intro: "The complete code defines series, voltage, motor, connection, port direction, wetted materials and special customization.",
     modelCode: "DPGL800 - 24 - B - S - 6 - EP/PS - X",
     modelCodeDescription: "Series · voltage · brushless motor · threaded connection · port direction · diaphragm/valve/head materials · customization",

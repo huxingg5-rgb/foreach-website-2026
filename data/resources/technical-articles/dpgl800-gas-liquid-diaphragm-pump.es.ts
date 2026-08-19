@@ -93,7 +93,7 @@ export const dpgl800ArticleEsCopy = {
     rows: [["3", "Derecha", "Racor y mantenimiento a la derecha"], ["6", "Abajo", "Radio de curvatura inferior"], ["9", "Izquierda", "Racor y mantenimiento a la izquierda"], ["C", "Arriba", "Altura para tubo y carcasa"]],
   },
   section9: {
-    title: "9. Código del DPGL800 y modelos estándar actuales",
+    title: "9. Codificación e interpretación del DPGL800",
     intro: "El código completo identifica serie, tensión, motor, conexión, dirección, materiales mojados y personalización.",
     modelCode: "DPGL800 - 24 - B - S - 6 - EP/PS - X",
     modelCodeDescription: "Serie · tensión · motor sin escobillas · rosca · dirección · materiales de diafragma/válvula/cabezal · personalización",

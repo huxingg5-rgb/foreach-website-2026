@@ -5,7 +5,7 @@ export const dpgl800ArticleZhCopy = {
     title: "气液混合隔膜泵怎么选？从6 L/min、-90 kPa与建压时间看DPGL800",
     seoTitle: "气液混合隔膜泵怎么选？DPGL800 6 L/min、-90 kPa 与建压时间｜FOREACH",
     seoDescription:
-      "DPGL800气液混合隔膜泵选型指南：解释6 L/min气体空载流量、＜-90 kPa真空能力、30 kPa正压、5 L测试腔体建压时间、接液材料与标准型号。",
+      "DPGL800气液混合隔膜泵选型指南：解释6 L/min气体空载流量、＜-90 kPa真空能力、30 kPa正压、5 L测试腔体建压时间、接液材料、型号编码与选型方法。",
     coverAlt: "FOREACH DPGL800无刷气液混合隔膜泵产品外观，6 L/min、＜-90 kPa",
   },
   section1: {
@@ -107,7 +107,7 @@ export const dpgl800ArticleZhCopy = {
     ],
   },
   section9: {
-    title: "九、DPGL800型号解析与当前标准型号",
+    title: "九、DPGL800型号编码与解析",
     intro: "完整型号同时描述系列、电压、电机、连接形式、接口方向、接液材料和特殊定制。",
     modelCode: "DPGL800 - 24 - B - S - 6 - EP/PS - X",
     modelCodeDescription: "系列 · 电压 · 无刷电机 · 螺纹接口 · 接口方向 · 膜片/阀片/泵头材料 · 特殊定制",

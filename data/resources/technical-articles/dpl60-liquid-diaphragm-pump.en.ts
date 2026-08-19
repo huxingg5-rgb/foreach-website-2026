@@ -5,7 +5,7 @@ export const dpl60ArticleEnCopy = {
     title: "How to Select a 600 mL/min Liquid Diaphragm Pump: DPL60 Flow, Pressure and Model Guide",
     seoTitle: "600 mL/min Liquid Diaphragm Pump Selection: DPL60 Operating Point and Models",
     seoDescription:
-      "Select a FOREACH DPL60 miniature liquid diaphragm pump by no-load flow, 100 kPa rated pressure, flow-pressure curve, motor, wetted materials, model code and eight standard SKUs.",
+      "Select a FOREACH DPL60 miniature liquid diaphragm pump by no-load flow, 100 kPa rated pressure, flow-pressure curve, motor, wetted materials, model coding, configuration logic and selection method.",
   },
   diagram: {
     ariaLabel: "DPL60 liquid diaphragm pump operating-point explanation",
@@ -135,7 +135,7 @@ export const dpl60ArticleEnCopy = {
       "The brushless motor body, overall length and harness differ from the brushed version. Equivalent motor materials listed in formal documentation may have local mounting differences, so confirm the production version before release.",
   },
   section8: {
-    title: "8. DPL60 model code and eight standard models",
+    title: "8. DPL60 model coding and interpretation",
     intro:
       "A full DPL60 code identifies the series, voltage, motor, lead configuration, connection, port orientation, diaphragm/valve/head materials and any special customization.",
     noticeStrong: "DPL60 - 24 - D - 2 - B - C - EP/PS - X",

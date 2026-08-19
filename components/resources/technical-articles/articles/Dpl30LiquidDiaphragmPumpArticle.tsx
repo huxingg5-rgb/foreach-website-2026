@@ -477,12 +477,6 @@ function Dpgl800ArticleContent({
         <MultiColumnTable headers={copy.section9.headers} rows={copy.section9.rows} />
         <SectionTitle>{copy.section9.exampleTitle}</SectionTitle>
         <p>{copy.section9.exampleText}</p>
-        <SectionTitle>{copy.section9.standardModelsTitle}</SectionTitle>
-        <p>{copy.section9.standardModelsIntro}</p>
-        <MultiColumnTable
-          headers={copy.section9.standardModelHeaders}
-          rows={copy.section9.standardModelRows}
-        />
         <div className={styles.technicalNotice}>{copy.section9.notice}</div>
       </section>
 
@@ -663,12 +657,6 @@ function Dpl30hArticleContent({
           {copy.section10.modelCodeDescription}
         </div>
         <MultiColumnTable headers={copy.section10.headers} rows={copy.section10.rows} />
-        <SectionTitle>{copy.section10.standardModelsTitle}</SectionTitle>
-        <p>{copy.section10.standardModelsIntro}</p>
-        <MultiColumnTable
-          headers={copy.section10.standardModelHeaders}
-          rows={copy.section10.standardModelRows}
-        />
         <div className={styles.technicalNotice}>{copy.section10.notice}</div>
         <SectionTitle>{copy.section10.stepsTitle}</SectionTitle>
         <ol className={styles.technicalRuleList}>
@@ -857,16 +845,6 @@ export default function Dpl30LiquidDiaphragmPumpArticle({
           />
         ) : null}
         <div className={styles.technicalNotice}>{copy.section8.notice}</div>
-        {dpl60Copy ? (
-          <>
-            <SectionTitle>{dpl60Copy.section8.standardModelsTitle}</SectionTitle>
-            <p>{dpl60Copy.section8.standardModelsIntro}</p>
-            <MultiColumnTable
-              headers={dpl60Copy.section8.standardModelHeaders}
-              rows={dpl60Copy.section8.standardModelRows}
-            />
-          </>
-        ) : null}
       </section>
 
       <section className={styles.contentBlock}>

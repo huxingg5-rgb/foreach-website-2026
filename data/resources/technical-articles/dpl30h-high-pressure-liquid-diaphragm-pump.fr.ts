@@ -4,7 +4,7 @@ export const dpl30hArticleFrCopy: Dpl30hArticleCopy = {
   metadata: {
     title: "Comment choisir une pompe à membrane haute pression : guide DPL30H 300 mL/min et 600 kPa",
     seoTitle: "Sélection de la pompe à membrane haute pression DPL30H | FOREACH",
-    seoDescription: "Sélectionnez la FOREACH DPL30H selon le débit à la contre-pression cible, 600 kPa, le tube rigide 6×4 mm, le moteur, les matériaux et huit modèles standard.",
+    seoDescription: "Sélectionnez la FOREACH DPL30H selon le débit à la contre-pression cible, 600 kPa, le tube rigide 6×4 mm, le moteur, les matériaux, la codification et la méthode de sélection.",
     coverAlt: "Pompes à membrane liquide haute pression FOREACH DPL30H à moteur à balais et brushless avec raccord pour tube rigide 6×4 mm",
   },
   section1: {
@@ -123,7 +123,7 @@ export const dpl30hArticleFrCopy: Dpl30hArticleCopy = {
     noticeText: "Évaluez produit, concentration, température, pression, exposition et durée de vie ; testez des échantillons si nécessaire.",
   },
   section10: {
-    title: "10. Code, huit modèles standard et séquence de sélection",
+    title: "10. Codification et séquence complète de sélection",
     intro: "Le code combine tension, moteur, raccord, orientation, matériaux et personnalisation.",
     modelCode: "DPL30H - 24 - D - S - C - EP/PS - X",
     modelCodeDescription: "Cette lecture concerne uniquement DPL30H et n'est pas déduite de DPL60.",

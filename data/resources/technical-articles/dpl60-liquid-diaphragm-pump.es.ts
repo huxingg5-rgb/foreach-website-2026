@@ -5,7 +5,7 @@ export const dpl60ArticleEsCopy = {
     title: "Cómo seleccionar una bomba de diafragma de 600 mL/min: guía DPL60 de caudal, presión y modelos",
     seoTitle: "Selección de bomba de diafragma de 600 mL/min: punto de trabajo y modelos DPL60",
     seoDescription:
-      "Guía de la bomba de diafragma para líquidos FOREACH DPL60: caudal sin carga de 600 mL/min, presión nominal de 100 kPa, curva, motores, materiales, código y ocho SKU estándar.",
+      "Guía de la bomba de diafragma para líquidos FOREACH DPL60: caudal sin carga de 600 mL/min, presión nominal de 100 kPa, curva, motores, materiales, codificación, lógica de configuración y método de selección.",
   },
   diagram: {
     ariaLabel: "Explicación del punto de trabajo de la bomba DPL60",
@@ -135,7 +135,7 @@ export const dpl60ArticleEsCopy = {
       "El motor, la longitud total y el mazo difieren de la versión con escobillas. Confirme la variante de producción, ya que materiales de motor equivalentes pueden presentar diferencias locales de montaje.",
   },
   section8: {
-    title: "8. Código DPL60 y ocho modelos estándar",
+    title: "8. Codificación e interpretación del DPL60",
     intro:
       "El código completo identifica serie, tensión, motor, número de conductores, conexión, orientación, materiales de membrana/válvula/cabezal y personalización.",
     noticeStrong: "DPL60 - 24 - D - 2 - B - C - EP/PS - X",

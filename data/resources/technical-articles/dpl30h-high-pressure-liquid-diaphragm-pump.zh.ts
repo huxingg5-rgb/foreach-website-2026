@@ -4,7 +4,7 @@ export const dpl30hArticleZhCopy: Dpl30hArticleCopy = {
   metadata: {
     title: "高背压液路为什么需要高压隔膜泵？从300 mL/min、600 kPa与硬管连接看DPL30H",
     seoTitle: "DPL30H高压隔膜泵选型：300 mL/min、600 kPa与6×4 mm硬管 | FOREACH",
-    seoDescription: "从目标背压下的实际流量、600 kPa额定压力、6×4 mm硬管卡套连接、有刷/无刷电机、材料和8个标准型号说明FOREACH DPL30H高压液体隔膜泵选型。",
+    seoDescription: "从目标背压下的实际流量、600 kPa额定压力、6×4 mm硬管卡套连接、有刷/无刷电机、材料、型号编码与选型方法说明FOREACH DPL30H高压液体隔膜泵选型。",
     coverAlt: "FOREACH DPL30H有刷与无刷高压液体隔膜泵，配6×4 mm硬管卡套接头",
   },
   section1: {
@@ -139,7 +139,7 @@ export const dpl30hArticleZhCopy: Dpl30hArticleCopy = {
     noticeText: "请按介质名称、浓度、温度、压力、浸泡时间和目标寿命评估，必要时进行样件测试。",
   },
   section10: {
-    title: "十、型号编码、8个标准型号与完整选型步骤",
+    title: "十、型号编码与完整选型步骤",
     intro: "DPL30H通过电压、电机、连接、接口方向、材料和定制项组合型号。",
     modelCode: "DPL30H - 24 - D - S - C - EP/PS - X",
     modelCodeDescription: "以下解释仅用于DPL30H系列，不从DPL60或其他系列反推编码。",
