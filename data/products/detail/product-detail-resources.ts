@@ -24,15 +24,21 @@ export type ProductDatasheet = {
 export const PRODUCT_DATASHEETS: Record<string, ProductDatasheet> = {
   "dpl30-series-en": {
     id: "dpl30-series-en",
-    file: "/downloads/resources/datasheets/en/Pumps/ps-150b-2507-00001-001-en-dpl30-diaphragm-pump.pdf",
+    file: "/downloads/resources/datasheets/en/Pumps/ps-150b-2507-00001-a03-en-dpl30-diaphragm-pump.pdf",
     shortTitle: "DPL30",
     title: "DPL30 Diaphragm Pump Specification Sheet",
   },
   "dpl60-series-en": {
     id: "dpl60-series-en",
-    file: "/downloads/resources/datasheets/en/Pumps/ps-150b-2507-00002-001-en-dpl60-diaphragm-pump.pdf",
+    file: "/downloads/resources/datasheets/en/Pumps/ps-150b-2607-00001-a00-en-dpl60-diaphragm-pump.pdf",
     shortTitle: "DPL60",
     title: "DPL60 Diaphragm Pump Specification Sheet",
+  },
+  "dpgl800-series-en": {
+    id: "dpgl800-series-en",
+    file: "/downloads/resources/datasheets/en/Pumps/ps-150b-2608-00005-a00-en-dpgl800-gas-liquid-diaphragm-pump.pdf",
+    shortTitle: "DPGL800",
+    title: "DPGL800 Gas-Liquid Mixed Pump Specification Sheet",
   },
 };
 

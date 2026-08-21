@@ -271,15 +271,15 @@ export const datasheetEnItems: DatasheetItem[] = [
     title: "DPL30 Diaphragm Pump Datasheet",
     label: "Pumps",
     language: "English",
-    version: "001",
-    update: "2025-07",
+    version: "A03",
+    update: "2026-08",
     description:
       "DPL30 diaphragm pump for compact liquid-transfer applications, with flow rates up to 300 mL/min.",
     image:
       "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushed-liquid-diaphragm-pump-main.webp",
-    productHref: "/en/products/pumps/diaphragm-pumps/liquid-diaphragm-pumps",
+    productHref: "/en/products/pumps/diaphragm-pumps/dpl30-liquid-diaphragm-pump",
     downloadHref:
-      "/downloads/resources/datasheets/en/Pumps/ps-150b-2507-00001-001-en-dpl30-diaphragm-pump.pdf",
+      "/downloads/resources/datasheets/en/Pumps/ps-150b-2507-00001-a03-en-dpl30-diaphragm-pump.pdf",
     actionType: "download",
   },
   {
@@ -289,15 +289,33 @@ export const datasheetEnItems: DatasheetItem[] = [
     title: "DPL60 Diaphragm Pump Datasheet",
     label: "Pumps",
     language: "English",
-    version: "001",
-    update: "2025-07",
+    version: "A00",
+    update: "2026-07",
     description:
       "DPL60 diaphragm pump for liquid supply and transfer applications, with flow rates up to 600 mL/min.",
     image:
       "/images/products/pumps/diaphragm-pumps/dpl60/images/dpl60-brushed-liquid-diaphragm-pump-main.webp",
-    productHref: "/en/products/pumps/diaphragm-pumps/liquid-diaphragm-pumps",
+    productHref: "/en/products/pumps/diaphragm-pumps/dpl60-liquid-diaphragm-pump",
     downloadHref:
-      "/downloads/resources/datasheets/en/Pumps/ps-150b-2507-00002-001-en-dpl60-diaphragm-pump.pdf",
+      "/downloads/resources/datasheets/en/Pumps/ps-150b-2607-00001-a00-en-dpl60-diaphragm-pump.pdf",
+    actionType: "download",
+  },
+  {
+    id: "dpgl800-gas-liquid-diaphragm-pump",
+    category: "pump",
+    keywords: "DPGL800 gas liquid diaphragm pump 6 L min vacuum suction mixed media",
+    title: "DPGL800 Gas-Liquid Mixed Pump Datasheet",
+    label: "Pumps",
+    language: "English",
+    version: "A00",
+    update: "2026-08",
+    description:
+      "DPGL800 gas-liquid mixed diaphragm pump for vacuum generation, gas-liquid mixture transfer, waste aspiration, and instrument integration.",
+    image:
+      "/images/products/pumps/diaphragm-pumps/dpgl800/images/dpgl800-gas-liquid-diaphragm-pump-main.webp",
+    productHref: "/en/products/pumps/diaphragm-pumps/dpgl800-gas-liquid-diaphragm-pump",
+    downloadHref:
+      "/downloads/resources/datasheets/en/Pumps/ps-150b-2608-00005-a00-en-dpgl800-gas-liquid-diaphragm-pump.pdf",
     actionType: "download",
   },
   {
