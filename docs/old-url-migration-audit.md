@@ -1,4 +1,36 @@
-# Old URL → New URL Migration Audit
+# Old URL → New URL Migration Audit & Pilot Implementation
+
+## 2026-08-21 实施更新
+
+本节是当前状态；下方 2026-08-11 内容保留为实施前基线，不能再代表现状。
+
+### 已完成
+
+- 从旧 CMS 后台导出并核验 813 个旧产品 ID，建立 82 个栏目页、813 个产品页的旧 URL 清单。
+- 抓取新版站点 888 个中文 URL，其中 746 个产品 URL；通过自动匹配与人工核验形成第一版迁移表。
+- 在旧站 IIS 上仅上线 4 条隔膜泵试点 301；修改前的 `web.config` 已备份到 `wwwroot/url-migration-backup-20260821/`。
+- 四条旧 URL 均已验证为单跳 `301`，目标页返回 `200`；旧站首页与未配置产品 ID 仍保持原行为。
+
+| 旧 ID | 旧产品 | 中文新页面 |
+|---:|---|---|
+| 12634 | 300mL/min 液体隔膜泵（DPL30） | `/products/pumps/diaphragm-pumps/dpl30-liquid-diaphragm-pump/` |
+| 12635 | 300mL/min 高压液体隔膜泵（DPL30H） | `/products/pumps/diaphragm-pumps/dpl30h-liquid-diaphragm-pump/` |
+| 12636 | 600mL/min 液体隔膜泵（DPL60） | `/products/pumps/diaphragm-pumps/dpl60-liquid-diaphragm-pump/` |
+| 12637 | 6L/min 气液混合泵（DPGL800） | `/products/pumps/diaphragm-pumps/dpgl800-gas-liquid-diaphragm-pump/` |
+
+### 本仓库 v002 的作用范围
+
+- `functions/legacy-product-redirects.ts` 是四条试点映射的本地事实源，同时提供中英文目标。
+- `functions/_middleware.ts` 只对 `www.foreachtek.com`、`GET/HEAD`、精确的 `ProductInfo.aspx?Id=<已确认ID>` 返回 301；未知 ID、缺失 ID、其他 Host 和非读取请求全部放行。
+- `_routes.json` 明确让中英文 ProductInfo 进入 Function；`_redirects` 中原先“所有英文 ProductInfo 跳英文首页”的宽泛规则已删除。
+- `npm run seo:audit:legacy-products` 回归检查 4 个 ID、8 个中英文目标、未知 ID 放行及路由配置。
+- `.com.cn` 当前仍由旧站 IIS 执行已上线的四条 301；本仓库代码不声称接管该域名。未来迁移 DNS 或托管架构时再统一入口。
+
+### 后续上线原则
+
+剩余 ID 只有在旧 CMS 身份、新页面内容和目标 200 均核验后才可加入事实源。禁止把未知产品统一跳到首页，也禁止仅凭相似标题创建永久跳转。
+
+---
 
 审计日期：2026-08-11（Asia/Shanghai）  
 审计对象：`https://www.foreachtek.com/` 线上正式站点与当前项目中的迁移配置  
