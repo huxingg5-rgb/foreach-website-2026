@@ -30,6 +30,9 @@ import {
   brushlessWiringArticleSlug,
   getBrushlessWiringTechnicalArticle,
 } from "@/data/resources/technical-articles/brushless-diaphragm-pump-2-wire-vs-5-wire.article";
+import {
+  getDiaphragmPumpEngineeringArticles,
+} from "@/data/resources/technical-articles/diaphragm-pump-engineering-articles.article";
 import { technicalArticlesIntlData } from "@/data/resources/technical-articles/technical-articles.intl";
 import { localizeTechnicalArticles } from "@/data/resources/technical-articles/technical-articles.translations";
 import type {
@@ -176,19 +179,43 @@ function withBrushlessWiringArticle(
   };
 }
 
+function withDiaphragmPumpEngineeringArticles(
+  locale: TechnicalArticleLocale,
+  pageData: TechnicalArticlesPageData,
+): TechnicalArticlesPageData {
+  const engineeringArticles = getDiaphragmPumpEngineeringArticles(locale);
+  const engineeringSlugs = new Set(
+    engineeringArticles.map((article) => article.slug),
+  );
+
+  return {
+    ...pageData,
+    locale,
+    articles: [
+      ...engineeringArticles,
+      ...pageData.articles.filter(
+        (article) => !engineeringSlugs.has(article.slug),
+      ),
+    ],
+  };
+}
+
 export function getTechnicalArticlesPageData(
   locale: TechnicalArticleLocale,
 ): TechnicalArticlesPageData {
   if (isChineseLocale(locale)) {
-    return withBrushlessWiringArticle(
+    return withDiaphragmPumpEngineeringArticles(
       locale,
-      withDpl30hArticle(
+      withBrushlessWiringArticle(
         locale,
-        withDpgl800Article(
+        withDpl30hArticle(
           locale,
-          withDpl60Article(
+          withDpgl800Article(
             locale,
-            withDpl30Article(locale, technicalArticlesZhData),
+            withDpl60Article(
+              locale,
+              withDpl30Article(locale, technicalArticlesZhData),
+            ),
           ),
         ),
       ),
@@ -196,7 +223,30 @@ export function getTechnicalArticlesPageData(
   }
 
   if (locale !== "en") {
-    return withBrushlessWiringArticle(
+    return withDiaphragmPumpEngineeringArticles(
+      locale,
+      withBrushlessWiringArticle(
+        locale,
+        withDpl30hArticle(
+          locale,
+          withDpgl800Article(
+            locale,
+            withDpl60Article(
+              locale,
+              withDpl30Article(
+                locale,
+                localizeTechnicalArticles(locale, technicalArticlesIntlData),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  return withDiaphragmPumpEngineeringArticles(
+    locale,
+    withBrushlessWiringArticle(
       locale,
       withDpl30hArticle(
         locale,
@@ -206,25 +256,8 @@ export function getTechnicalArticlesPageData(
             locale,
             withDpl30Article(
               locale,
-              localizeTechnicalArticles(locale, technicalArticlesIntlData),
+              getLocalizedIntlTechnicalArticlesData(locale),
             ),
-          ),
-        ),
-      ),
-    );
-  }
-
-  return withBrushlessWiringArticle(
-    locale,
-    withDpl30hArticle(
-      locale,
-      withDpgl800Article(
-        locale,
-        withDpl60Article(
-          locale,
-          withDpl30Article(
-            locale,
-            getLocalizedIntlTechnicalArticlesData(locale),
           ),
         ),
       ),

@@ -16,6 +16,7 @@ import RelatedResources from "@/components/common/related-resources/RelatedResou
 import NewsArticleClient from "@/components/resources/news/NewsArticleClient";
 import BrushlessDiaphragmPumpWiringArticle from "@/components/resources/technical-articles/articles/BrushlessDiaphragmPumpWiringArticle";
 import CvKvMicrofluidicsArticle from "@/components/resources/technical-articles/articles/CvKvMicrofluidicsArticle";
+import DiaphragmPumpEngineeringArticle from "@/components/resources/technical-articles/articles/DiaphragmPumpEngineeringArticle";
 import Dpl30LiquidDiaphragmPumpArticle from "@/components/resources/technical-articles/articles/Dpl30LiquidDiaphragmPumpArticle";
 import {
   brushlessWiringArticleSlug,
@@ -25,6 +26,13 @@ import {
 import {
   getDpl30ArticleFaq,
 } from "@/data/resources/technical-articles/dpl30-liquid-diaphragm-pump.article";
+import {
+  diaphragmPumpFlowPressureCurveSlug,
+  getDiaphragmPumpEngineeringArticleCopy,
+  getDiaphragmPumpEngineeringArticleFaq,
+  isDiaphragmPumpEngineeringArticleSlug,
+  microDiaphragmPumpContinuousDutyLifeSlug,
+} from "@/data/resources/technical-articles/diaphragm-pump-engineering-articles.article";
 import {
   dpl60StandardModels,
   getDpl60ArticleFaq,
@@ -278,6 +286,39 @@ const DIAPHRAGM_SERIES_ZH_NAMES = {
   dpgl800: "DPGL800 气液混合隔膜泵",
 } as const;
 
+const ENGINEERING_ARTICLE_TOPIC_LABELS: Record<
+  SupportedLocale,
+  {
+    flowPressure: readonly string[];
+    continuousDuty: readonly string[];
+  }
+> = {
+  "zh-CN": {
+    flowPressure: ["流量—压力曲线", "泵曲线", "系统曲线", "工作点"],
+    continuousDuty: ["有刷直流电机", "无刷直流电机", "连续运行", "B10寿命"],
+  },
+  en: {
+    flowPressure: ["flow-pressure curve", "pump curve", "system curve", "operating point"],
+    continuousDuty: ["brushed DC motor", "brushless DC motor", "continuous duty", "B10 life"],
+  },
+  es: {
+    flowPressure: ["curva caudal-presión", "curva de bomba", "curva del sistema", "punto de trabajo"],
+    continuousDuty: ["motor CC con escobillas", "motor CC sin escobillas", "servicio continuo", "vida B10"],
+  },
+  fr: {
+    flowPressure: ["courbe débit-pression", "courbe de pompe", "courbe système", "point de fonctionnement"],
+    continuousDuty: ["moteur CC à balais", "moteur CC sans balais", "service continu", "durée de vie B10"],
+  },
+  ko: {
+    flowPressure: ["유량-압력 곡선", "펌프 곡선", "시스템 곡선", "작동점"],
+    continuousDuty: ["브러시 DC 모터", "브러시리스 DC 모터", "연속 운전", "B10 수명"],
+  },
+  ru: {
+    flowPressure: ["расходно-напорная характеристика", "характеристика насоса", "кривая системы", "рабочая точка"],
+    continuousDuty: ["щёточный двигатель постоянного тока", "бесщёточный двигатель постоянного тока", "непрерывный режим", "ресурс B10"],
+  },
+};
+
 type DiaphragmSeriesKey = keyof typeof DIAPHRAGM_SERIES_SLUGS;
 
 function getDiaphragmSeriesSchemaName(
@@ -314,10 +355,22 @@ export default function TechnicalArticleDetail({
     article.slug === "dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide";
   const isBrushlessWiringArticle =
     article.slug === brushlessWiringArticleSlug;
+  const diaphragmPumpEngineeringArticleSlug =
+    isDiaphragmPumpEngineeringArticleSlug(article.slug)
+      ? article.slug
+      : null;
+  const isDiaphragmPumpEngineeringArticle =
+    diaphragmPumpEngineeringArticleSlug !== null;
   const isDedicatedPumpArticle =
     isDpl30Article || isDpl30hArticle || isDpl60Article || isDpgl800Article;
   const brushlessWiringCopy = isBrushlessWiringArticle
     ? getBrushlessWiringArticleCopy(locale)
+    : null;
+  const diaphragmPumpEngineeringCopy = diaphragmPumpEngineeringArticleSlug
+    ? getDiaphragmPumpEngineeringArticleCopy(
+        diaphragmPumpEngineeringArticleSlug,
+        locale,
+      )
     : null;
   const localePrefix = locale === "zh-CN" ? "" : `/${locale}`;
 
@@ -350,7 +403,10 @@ export default function TechnicalArticleDetail({
     // The new wiring article uses both confirmed photos inside the body. Keep
     // the 2-wire photo for list cards and structured data without repeating it
     // as an oversized detail-page cover.
-    coverImage: isBrushlessWiringArticle ? undefined : article.coverImage,
+    coverImage:
+      isBrushlessWiringArticle || isDiaphragmPumpEngineeringArticle
+        ? undefined
+        : article.coverImage,
     coverAlt:
       article.coverAlt ??
       (isDpl60Article
@@ -365,7 +421,22 @@ export default function TechnicalArticleDetail({
   const adaptedPageData = {
     listHref,
     backText: getBackText(locale),
-    bottomBanner: brushlessWiringCopy
+    bottomBanner: diaphragmPumpEngineeringCopy
+      ? {
+          title: diaphragmPumpEngineeringCopy.cta.title,
+          description: diaphragmPumpEngineeringCopy.cta.description,
+          actions: [
+            {
+              label: diaphragmPumpEngineeringCopy.cta.contactLabel,
+              href: `${localePrefix}/contact`,
+            },
+            {
+              label: diaphragmPumpEngineeringCopy.cta.productsLabel,
+              href: `${localePrefix}/products/pumps/diaphragm-pumps`,
+            },
+          ],
+        }
+      : brushlessWiringCopy
       ? {
           title: brushlessWiringCopy.cta.title,
           description: brushlessWiringCopy.cta.description,
@@ -384,7 +455,12 @@ export default function TechnicalArticleDetail({
   };
 
   const articleBody =
-    isBrushlessWiringArticle ? (
+    diaphragmPumpEngineeringArticleSlug ? (
+      <DiaphragmPumpEngineeringArticle
+        articleSlug={diaphragmPumpEngineeringArticleSlug}
+        locale={locale}
+      />
+    ) : isBrushlessWiringArticle ? (
       <BrushlessDiaphragmPumpWiringArticle locale={locale} />
     ) : article.slug === "cv-kv-correction-for-microfluidics" ? (
       <CvKvMicrofluidicsArticle locale={locale} />
@@ -433,6 +509,24 @@ export default function TechnicalArticleDetail({
                     (series) => getDiaphragmSeriesSchemaName(series, locale),
                   ),
                 }
+              : article.slug === diaphragmPumpFlowPressureCurveSlug
+                ? {
+                    about: (["dpl30", "dpl60", "dpl30h"] as const).map(
+                      (series) => getDiaphragmSeriesSchemaName(series, locale),
+                    ),
+                    mentions: [
+                      ...ENGINEERING_ARTICLE_TOPIC_LABELS[locale].flowPressure,
+                    ],
+                  }
+                : article.slug === microDiaphragmPumpContinuousDutyLifeSlug
+                  ? {
+                      about: (["dpl30", "dpl60"] as const).map(
+                        (series) => getDiaphragmSeriesSchemaName(series, locale),
+                      ),
+                    mentions: [
+                        ...ENGINEERING_ARTICLE_TOPIC_LABELS[locale].continuousDuty,
+                      ],
+                    }
               : undefined;
 
   const structuredData = buildTechnicalArticleStructuredData(
@@ -445,9 +539,15 @@ export default function TechnicalArticleDetail({
         ? getDpl60ArticleFaq(locale)
         : isBrushlessWiringArticle
           ? getBrushlessWiringArticleFaq(locale)
+          : isDiaphragmPumpEngineeringArticle
+            ? getDiaphragmPumpEngineeringArticleFaq(article.slug, locale)
         : [],
     structuredDataSubject,
-    isDedicatedPumpArticle || isBrushlessWiringArticle ? "TechArticle" : "Article",
+    isDedicatedPumpArticle ||
+      isBrushlessWiringArticle ||
+      isDiaphragmPumpEngineeringArticle
+      ? "TechArticle"
+      : "Article",
   );
 
   return (

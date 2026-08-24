@@ -23,6 +23,7 @@ import {
   getTechnicalArticleData,
   getTechnicalArticleSlugs,
 } from "@/services/resources/technical-articles/getTechnicalArticleData";
+import type { TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
 
 /*
  * 保留技术文章列表页原有样式。
@@ -42,10 +43,18 @@ import "@/app/resources/news/news.css";
 const TECHNICAL_ARTICLE_LOCALE =
   "zh-CN" as const;
 
+const TECHNICAL_ARTICLE_LOCALES: TechnicalArticleLocale[] = [
+  "zh-CN",
+  "en",
+  "es",
+  "fr",
+  "ko",
+  "ru",
+];
+
 function getTechnicalArticleLanguageLinks(slug: string) {
   const basePath = `/resources/technical-articles/${slug}/`;
-
-  return {
+  const languageLinks: Record<string, string> = {
     "zh-CN": basePath,
     en: `/en${basePath}`,
     es: `/es${basePath}`,
@@ -53,6 +62,12 @@ function getTechnicalArticleLanguageLinks(slug: string) {
     ko: `/ko${basePath}`,
     ru: `/ru${basePath}`,
   };
+
+  return Object.fromEntries(
+    TECHNICAL_ARTICLE_LOCALES.filter((locale) =>
+      getTechnicalArticleData(locale, slug),
+    ).map((locale) => [locale, languageLinks[locale]]),
+  );
 }
 
 /* =========================================================
