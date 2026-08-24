@@ -1,0 +1,94 @@
+.figure {
+  width: min(100%, 1040px);
+  margin: 30px auto;
+}
+
+.photo {
+  display: block;
+  width: min(100%, 900px);
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.figure figcaption {
+  margin-top: 12px;
+  color: #8b96a8;
+  font-size: 13px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.sectionSubtitle {
+  margin: 30px 0 12px;
+  color: #173368;
+  font-size: clamp(20px, 1.5vw, 25px);
+  line-height: 1.35;
+  font-weight: 800;
+}
+
+.formula {
+  display: block;
+  margin-top: 8px;
+  color: #173368;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: clamp(18px, 1.6vw, 24px);
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.formulaNote {
+  display: block;
+  margin-top: 8px;
+  color: #667085;
+}
+
+.linkList {
+  display: grid;
+  gap: 12px;
+  margin: 24px 0 0;
+}
+
+.linkList p {
+  margin: 0;
+}
+
+.linkList a {
+  color: #173368;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.faqList {
+  display: grid;
+  gap: 16px;
+}
+
+.faqItem {
+  padding: 22px 24px;
+  border: 1px solid #d9e1ea;
+  background: #fff;
+}
+
+.faqItem h3 {
+  margin: 0 0 10px;
+  color: #173368;
+  font-size: 18px;
+  line-height: 1.45;
+  font-weight: 800;
+}
+
+.faqItem p {
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .figure {
+    margin-block: 24px;
+  }
+
+  .faqItem {
+    padding: 18px;
+  }
+}
