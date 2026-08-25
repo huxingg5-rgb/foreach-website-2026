@@ -27,10 +27,12 @@ import {
   getDpl30ArticleFaq,
 } from "@/data/resources/technical-articles/dpl30-liquid-diaphragm-pump.article";
 import {
+  brushedVsBrushlessDiaphragmPumpMotorLifeSlug,
   diaphragmPumpFlowPressureCurveSlug,
   getDiaphragmPumpEngineeringArticleCopy,
   getDiaphragmPumpEngineeringArticleFaq,
   isDiaphragmPumpEngineeringArticleSlug,
+  lifeScienceInstrumentDpl60SelectionSlug,
   microDiaphragmPumpContinuousDutyLifeSlug,
 } from "@/data/resources/technical-articles/diaphragm-pump-engineering-articles.article";
 import {
@@ -181,38 +183,38 @@ function buildTechnicalArticleStructuredData(
   };
 
   const graph: Record<string, unknown>[] = [
-      {
-        "@type": "Organization",
-        "@id": organizationId,
-        name: "Shenzhen FOREACH Technology Co., Ltd.",
-        url: `${TECHNICAL_ARTICLE_SITE_ORIGIN}/`,
-      },
-      {
-        "@type": "WebSite",
-        "@id": websiteId,
-        url: `${TECHNICAL_ARTICLE_SITE_ORIGIN}/`,
-        name: "FOREACH",
-        publisher: { "@id": organizationId },
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": breadcrumbId,
-        itemListElement: breadcrumbItems,
-      },
-      {
-        "@type": "WebPage",
-        "@id": webpageId,
-        url: canonicalUrl,
-        name: article.title,
-        ...(description ? { description } : {}),
-        inLanguage: locale,
-        isPartOf: { "@id": websiteId },
-        publisher: { "@id": organizationId },
-        breadcrumb: { "@id": breadcrumbId },
-        mainEntity: { "@id": articleId },
-      },
-      articleData,
-    ];
+    {
+      "@type": "Organization",
+      "@id": organizationId,
+      name: "Shenzhen FOREACH Technology Co., Ltd.",
+      url: `${TECHNICAL_ARTICLE_SITE_ORIGIN}/`,
+    },
+    {
+      "@type": "WebSite",
+      "@id": websiteId,
+      url: `${TECHNICAL_ARTICLE_SITE_ORIGIN}/`,
+      name: "FOREACH",
+      publisher: { "@id": organizationId },
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": breadcrumbId,
+      itemListElement: breadcrumbItems,
+    },
+    {
+      "@type": "WebPage",
+      "@id": webpageId,
+      url: canonicalUrl,
+      name: article.title,
+      ...(description ? { description } : {}),
+      inLanguage: locale,
+      isPartOf: { "@id": websiteId },
+      publisher: { "@id": organizationId },
+      breadcrumb: { "@id": breadcrumbId },
+      mainEntity: { "@id": articleId },
+    },
+    articleData,
+  ];
 
   if (faqItems.length > 0) {
     graph.push({
@@ -291,31 +293,45 @@ const ENGINEERING_ARTICLE_TOPIC_LABELS: Record<
   {
     flowPressure: readonly string[];
     continuousDuty: readonly string[];
+    motorLife: readonly string[];
+    lifeScience: readonly string[];
   }
 > = {
   "zh-CN": {
     flowPressure: ["流量—压力曲线", "泵曲线", "系统曲线", "工作点"],
     continuousDuty: ["有刷直流电机", "无刷直流电机", "连续运行", "B10寿命"],
+    motorLife: ["有刷电机", "无刷电机", "机械换向", "电子换向", "3000小时", "10000小时", "电刷磨损"],
+    lifeScience: ["生命科学仪器", "清洗液路", "废液液路", "自吸", "气液混合"],
   },
   en: {
     flowPressure: ["flow-pressure curve", "pump curve", "system curve", "operating point"],
     continuousDuty: ["brushed DC motor", "brushless DC motor", "continuous duty", "B10 life"],
+    motorLife: ["brushed motor", "brushless motor", "mechanical commutation", "electronic commutation", "3,000 operating hours", "10,000 operating hours", "brush wear"],
+    lifeScience: ["life-science instrument", "washing fluid path", "waste-fluid path", "self-priming", "gas-liquid mixture"],
   },
   es: {
     flowPressure: ["curva caudal-presión", "curva de bomba", "curva del sistema", "punto de trabajo"],
     continuousDuty: ["motor CC con escobillas", "motor CC sin escobillas", "servicio continuo", "vida B10"],
+    motorLife: ["motor con escobillas", "motor sin escobillas", "conmutación mecánica", "conmutación electrónica", "3000 horas de funcionamiento", "10 000 horas de funcionamiento", "desgaste de escobillas"],
+    lifeScience: ["instrumento de ciencias de la vida", "circuito de lavado", "circuito de residuos", "autocebado", "mezcla gas-líquido"],
   },
   fr: {
     flowPressure: ["courbe débit-pression", "courbe de pompe", "courbe système", "point de fonctionnement"],
     continuousDuty: ["moteur CC à balais", "moteur CC sans balais", "service continu", "durée de vie B10"],
+    motorLife: ["moteur à balais", "moteur sans balais", "commutation mécanique", "commutation électronique", "3 000 heures de fonctionnement", "10 000 heures de fonctionnement", "usure des balais"],
+    lifeScience: ["instrument de sciences de la vie", "circuit de lavage", "circuit d'effluents", "auto-amorçage", "mélange gaz-liquide"],
   },
   ko: {
     flowPressure: ["유량-압력 곡선", "펌프 곡선", "시스템 곡선", "작동점"],
     continuousDuty: ["브러시 DC 모터", "브러시리스 DC 모터", "연속 운전", "B10 수명"],
+    motorLife: ["브러시 모터", "브러시리스 모터", "기계식 정류", "전자식 정류", "3,000시간 운전", "10,000시간 운전", "브러시 마모"],
+    lifeScience: ["생명과학 장비", "세척 유로", "폐액 유로", "자흡", "기액 혼합"],
   },
   ru: {
     flowPressure: ["расходно-напорная характеристика", "характеристика насоса", "кривая системы", "рабочая точка"],
     continuousDuty: ["щёточный двигатель постоянного тока", "бесщёточный двигатель постоянного тока", "непрерывный режим", "ресурс B10"],
+    motorLife: ["щёточный двигатель", "бесщёточный двигатель", "механическая коммутация", "электронная коммутация", "3000 часов работы", "10 000 часов работы", "износ щёток"],
+    lifeScience: ["лабораторное оборудование", "контур промывки", "контур отходов", "самовсасывание", "газожидкостная смесь"],
   },
 };
 
@@ -437,47 +453,47 @@ export default function TechnicalArticleDetail({
           ],
         }
       : brushlessWiringCopy
-      ? {
-          title: brushlessWiringCopy.cta.title,
-          description: brushlessWiringCopy.cta.description,
-          actions: [
-            {
-              label: brushlessWiringCopy.cta.contactLabel,
-              href: `${localePrefix}/contact`,
-            },
-            {
-              label: brushlessWiringCopy.cta.productsLabel,
-              href: `${localePrefix}/products`,
-            },
-          ],
-        }
-      : pageData.bottomBanner,
+        ? {
+            title: brushlessWiringCopy.cta.title,
+            description: brushlessWiringCopy.cta.description,
+            actions: [
+              {
+                label: brushlessWiringCopy.cta.contactLabel,
+                href: `${localePrefix}/contact`,
+              },
+              {
+                label: brushlessWiringCopy.cta.productsLabel,
+                href: `${localePrefix}/products`,
+              },
+            ],
+          }
+        : pageData.bottomBanner,
   };
 
   const articleBody =
     diaphragmPumpEngineeringArticleSlug ? (
-      <DiaphragmPumpEngineeringArticle
-        articleSlug={diaphragmPumpEngineeringArticleSlug}
-        locale={locale}
-      />
-    ) : isBrushlessWiringArticle ? (
-      <BrushlessDiaphragmPumpWiringArticle locale={locale} />
-    ) : article.slug === "cv-kv-correction-for-microfluidics" ? (
-      <CvKvMicrofluidicsArticle locale={locale} />
-    ) : isDedicatedPumpArticle ? (
-      <Dpl30LiquidDiaphragmPumpArticle
-        locale={locale}
-        articleSeries={
-          isDpgl800Article
-            ? "dpgl800"
-            : isDpl30hArticle
-              ? "dpl30h"
-              : isDpl60Article
-                ? "dpl60"
-                : "dpl30"
-        }
-      />
-    ) : null;
+    <DiaphragmPumpEngineeringArticle
+      articleSlug={diaphragmPumpEngineeringArticleSlug}
+      locale={locale}
+    />
+  ) : isBrushlessWiringArticle ? (
+    <BrushlessDiaphragmPumpWiringArticle locale={locale} />
+  ) : article.slug === "cv-kv-correction-for-microfluidics" ? (
+    <CvKvMicrofluidicsArticle locale={locale} />
+  ) : isDedicatedPumpArticle ? (
+    <Dpl30LiquidDiaphragmPumpArticle
+      locale={locale}
+      articleSeries={
+        isDpgl800Article
+          ? "dpgl800"
+          : isDpl30hArticle
+            ? "dpl30h"
+            : isDpl60Article
+              ? "dpl60"
+              : "dpl30"
+      }
+    />
+  ) : null;
 
   const structuredDataSubject: TechnicalArticleSubject | undefined =
     isDpl30Article
@@ -523,11 +539,27 @@ export default function TechnicalArticleDetail({
                       about: (["dpl30", "dpl60"] as const).map(
                         (series) => getDiaphragmSeriesSchemaName(series, locale),
                       ),
-                    mentions: [
+                      mentions: [
                         ...ENGINEERING_ARTICLE_TOPIC_LABELS[locale].continuousDuty,
                       ],
                     }
-              : undefined;
+                  : article.slug === brushedVsBrushlessDiaphragmPumpMotorLifeSlug
+                    ? {
+                        about: (["dpl30", "dpl60"] as const).map((series) =>
+                          getDiaphragmSeriesSchemaName(series, locale),
+                        ),
+                        mentions: [
+                          ...ENGINEERING_ARTICLE_TOPIC_LABELS[locale].motorLife,
+                        ],
+                      }
+                    : article.slug === lifeScienceInstrumentDpl60SelectionSlug
+                      ? {
+                          about: [getDiaphragmSeriesSchemaName("dpl60", locale)],
+                          mentions: [
+                            ...ENGINEERING_ARTICLE_TOPIC_LABELS[locale].lifeScience,
+                          ],
+                        }
+                      : undefined;
 
   const structuredData = buildTechnicalArticleStructuredData(
     pageData,
@@ -541,7 +573,7 @@ export default function TechnicalArticleDetail({
           ? getBrushlessWiringArticleFaq(locale)
           : isDiaphragmPumpEngineeringArticle
             ? getDiaphragmPumpEngineeringArticleFaq(article.slug, locale)
-        : [],
+            : [],
     structuredDataSubject,
     isDedicatedPumpArticle ||
       isBrushlessWiringArticle ||
@@ -555,6 +587,10 @@ export default function TechnicalArticleDetail({
       className="newsArticleDetailPage"
       data-locale={locale}
       data-article-slug={article.slug}
+      {...(article.slug === brushedVsBrushlessDiaphragmPumpMotorLifeSlug ||
+      article.slug === lifeScienceInstrumentDpl60SelectionSlug
+        ? { lang: locale }
+        : {})}
     >
       <script
         type="application/ld+json"

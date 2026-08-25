@@ -1,6 +1,8 @@
 export type DiaphragmPumpEngineeringArticleSlug =
   | "diaphragm-pump-flow-pressure-curve-guide"
-  | "micro-diaphragm-pump-continuous-duty-life";
+  | "micro-diaphragm-pump-continuous-duty-life"
+  | "life-science-instrument-dpl60-diaphragm-pump-selection-guide"
+  | "brushed-vs-brushless-diaphragm-pump-3000h-10000h";
 
 export type EngineeringArticleFaqItem = {
   question: string;

@@ -30,7 +30,7 @@ const SUPPORTED_LOCALES: TechnicalArticleLocale[] = ["en", "es", "fr", "ko", "ru
 function getTechnicalArticleLanguageLinks(slug: string) {
   const basePath = `/resources/technical-articles/${slug}/`;
 
-  return {
+  const languageLinks: Record<string, string> = {
     "zh-CN": basePath,
     en: `/en${basePath}`,
     es: `/es${basePath}`,
@@ -38,6 +38,15 @@ function getTechnicalArticleLanguageLinks(slug: string) {
     ko: `/ko${basePath}`,
     ru: `/ru${basePath}`,
   };
+
+  if (
+    slug === "brushed-vs-brushless-diaphragm-pump-3000h-10000h" ||
+    slug === "life-science-instrument-dpl60-diaphragm-pump-selection-guide"
+  ) {
+    languageLinks["x-default"] = basePath;
+  }
+
+  return languageLinks;
 }
 
 interface TechnicalArticleIntlDetailPageProps {
