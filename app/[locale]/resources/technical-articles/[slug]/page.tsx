@@ -41,7 +41,7 @@ function getTechnicalArticleLanguageLinks(slug: string) {
 
   if (
     slug === "brushed-vs-brushless-diaphragm-pump-3000h-10000h" ||
-    slug === "life-science-instrument-dpl60-diaphragm-pump-selection-guide"
+    slug === "life-science-dpl60-600ml-min-diaphragm-pump-selection-guide"
   ) {
     languageLinks["x-default"] = basePath;
   }

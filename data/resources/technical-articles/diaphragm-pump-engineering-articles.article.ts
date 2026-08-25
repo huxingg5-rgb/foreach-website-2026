@@ -54,7 +54,7 @@ export const diaphragmPumpFlowPressureCurveSlug =
 export const microDiaphragmPumpContinuousDutyLifeSlug =
   "micro-diaphragm-pump-continuous-duty-life" as const;
 export const lifeScienceInstrumentDpl60SelectionSlug =
-  "life-science-instrument-dpl60-diaphragm-pump-selection-guide" as const;
+  "life-science-dpl60-600ml-min-diaphragm-pump-selection-guide" as const;
 export const brushedVsBrushlessDiaphragmPumpMotorLifeSlug =
   "brushed-vs-brushless-diaphragm-pump-3000h-10000h" as const;
 

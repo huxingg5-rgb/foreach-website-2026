@@ -38,7 +38,7 @@ FOREACH 恒永达科技为体外诊断、生命科学、实验室自动化和分
 - [微型隔膜泵连续运行与寿命](https://www.foreachtek.com/resources/technical-articles/micro-diaphragm-pump-continuous-duty-life/): 连续工作、温升和使用寿命的工程判断。
 - [无刷隔膜泵两线与五线控制区别](https://www.foreachtek.com/resources/technical-articles/brushless-diaphragm-pump-2-wire-vs-5-wire/): 接线、控制信号和系统集成。
 - [有刷与无刷隔膜泵寿命：3000 小时与 10000 小时](https://www.foreachtek.com/resources/technical-articles/brushed-vs-brushless-diaphragm-pump-3000h-10000h/): 比较额定条件下的寿命、占空比和维护需求。
-- [生命科学仪器 DPL60 隔膜泵选型](https://www.foreachtek.com/resources/technical-articles/life-science-instrument-dpl60-diaphragm-pump-selection-guide/): 生命科学设备中的液路任务和型号适配。
+- [生命科学仪器 DPL60 隔膜泵选型](https://www.foreachtek.com/resources/technical-articles/life-science-dpl60-600ml-min-diaphragm-pump-selection-guide/): 生命科学设备中的液路任务和型号适配。
 
 ### 行业应用
 
@@ -83,6 +83,7 @@ FOREACH develops miniature diaphragm pumps, precision fluid-control components a
 - [How to read a diaphragm pump flow-pressure curve](https://www.foreachtek.com/en/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide/): Free flow, system backpressure and installed operating points.
 - [Continuous duty and miniature diaphragm pump service life](https://www.foreachtek.com/en/resources/technical-articles/micro-diaphragm-pump-continuous-duty-life/): Duty cycle, temperature rise and lifetime evaluation.
 - [Two-wire versus five-wire brushless diaphragm pumps](https://www.foreachtek.com/en/resources/technical-articles/brushless-diaphragm-pump-2-wire-vs-5-wire/): Wiring, control signals and system integration.
+- [DPL60 diaphragm pump selection for life-science instruments](https://www.foreachtek.com/en/resources/technical-articles/life-science-dpl60-600ml-min-diaphragm-pump-selection-guide/): Washing, drainage and waste-fluid circuits for life-science equipment.
 
 ### Industry applications
 
@@ -127,6 +128,7 @@ FOREACH desarrolla componentes microfluídicos, bombas de diafragma en miniatura
 - [Interpretación de la curva caudal-presión](https://www.foreachtek.com/es/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide/): Caudal libre, contrapresión y punto de trabajo.
 - [Funcionamiento continuo y vida útil de las bombas de diafragma](https://www.foreachtek.com/es/resources/technical-articles/micro-diaphragm-pump-continuous-duty-life/): Ciclo de trabajo y duración del producto.
 - [Bombas sin escobillas de dos y cinco cables](https://www.foreachtek.com/es/resources/technical-articles/brushless-diaphragm-pump-2-wire-vs-5-wire/): Cableado, señales de control e integración.
+- [Selección de la bomba DPL60 para instrumentos de ciencias de la vida](https://www.foreachtek.com/es/resources/technical-articles/life-science-dpl60-600ml-min-diaphragm-pump-selection-guide/): Lavado, drenaje y gestión de residuos líquidos.
 
 ### Aplicaciones industriales
 
@@ -171,6 +173,7 @@ FOREACH conçoit des composants microfluidiques, des pompes à membrane miniatur
 - [Comprendre la courbe débit-pression](https://www.foreachtek.com/fr/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide/): Débit libre, contre-pression et point de fonctionnement.
 - [Fonctionnement continu et durée de vie des pompes à membrane](https://www.foreachtek.com/fr/resources/technical-articles/micro-diaphragm-pump-continuous-duty-life/): Cycle de fonctionnement et évaluation de la durée de service.
 - [Pompes sans balais à deux ou cinq fils](https://www.foreachtek.com/fr/resources/technical-articles/brushless-diaphragm-pump-2-wire-vs-5-wire/): Câblage, signaux de commande et intégration.
+- [Sélection de la pompe DPL60 pour les instruments de sciences de la vie](https://www.foreachtek.com/fr/resources/technical-articles/life-science-dpl60-600ml-min-diaphragm-pump-selection-guide/): Lavage, drainage et gestion des effluents.
 
 ### Applications
 
@@ -215,6 +218,7 @@ FOREACH는 체외진단, 생명과학, 실험실 자동화 및 분석기기를 �
 - [다이어프램 펌프 유량-압력 곡선 이해](https://www.foreachtek.com/ko/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide/): 무부하 유량, 배압 및 실제 작동점.
 - [연속 운전과 소형 다이어프램 펌프 수명](https://www.foreachtek.com/ko/resources/technical-articles/micro-diaphragm-pump-continuous-duty-life/): 듀티 사이클, 온도 상승 및 사용 수명.
 - [브러시리스 펌프 2선식과 5선식 비교](https://www.foreachtek.com/ko/resources/technical-articles/brushless-diaphragm-pump-2-wire-vs-5-wire/): 배선, 제어 신호 및 시스템 통합.
+- [생명과학 기기용 DPL60 다이어프램 펌프 선정](https://www.foreachtek.com/ko/resources/technical-articles/life-science-dpl60-600ml-min-diaphragm-pump-selection-guide/): 세척, 배액 및 폐액 처리 유체 회로.
 
 ### 산업 응용
 
@@ -259,6 +263,7 @@ FOREACH разрабатывает миниатюрные мембранные �
 - [Как читать характеристику расхода и давления](https://www.foreachtek.com/ru/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide/): Свободный расход, противодавление и рабочая точка.
 - [Непрерывная работа и срок службы мембранного насоса](https://www.foreachtek.com/ru/resources/technical-articles/micro-diaphragm-pump-continuous-duty-life/): Рабочий цикл, нагрев и ресурс оборудования.
 - [Бесщеточные насосы с двумя и пятью проводами](https://www.foreachtek.com/ru/resources/technical-articles/brushless-diaphragm-pump-2-wire-vs-5-wire/): Подключение, управляющие сигналы и интеграция.
+- [Подбор насоса DPL60 для приборов в области наук о жизни](https://www.foreachtek.com/ru/resources/technical-articles/life-science-dpl60-600ml-min-diaphragm-pump-selection-guide/): Промывка, дренаж и удаление жидких отходов.
 
 ### Области применения
 
