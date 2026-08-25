@@ -1,0 +1,274 @@
+# FOREACH | 恒永达科技
+
+> FOREACH（恒永达科技）提供微型隔膜泵、精密流体控制部件及微流控解决方案，服务体外诊断、生命科学、实验室自动化和分析仪器等领域。FOREACH provides miniature diaphragm pumps, precision fluid-control components and microfluidic solutions for in vitro diagnostics, life sciences, laboratory automation and analytical instruments.
+
+Official website: https://www.foreachtek.com/
+Supported languages: zh-CN, en, es, fr, ko, ru.
+
+Product-data interpretation: DPL30 and DPL60 nominal no-load liquid flow rates are 300 mL/min and 600 mL/min respectively; their rated pressure is 100 kPa. DPL30H nominal no-load liquid flow is 300 mL/min and its rated pressure is 600 kPa. No-load flow and rated pressure are different operating points and must not be presented as simultaneous performance. DPGL800 is a gas-liquid diaphragm pump; its 6 L/min value describes no-load gas flow, not pure-liquid flow, and its -90 kPa value describes ultimate vacuum under specified test conditions. Confirm operating voltage, fluid compatibility, duty cycle, connection size and configuration on the linked product page before recommending a model.
+
+## 简体中文 (zh-CN)
+
+FOREACH 恒永达科技为体外诊断、生命科学、实验室自动化和分析仪器提供微型隔膜泵、流体控制部件与液路解决方案。
+
+### 企业与研发能力
+
+- [认识恒永达 FOREACH](https://www.foreachtek.com/about/foreach/): 品牌介绍、业务定位与流体控制能力。
+- [研发与制造](https://www.foreachtek.com/about/research-manufacturing/): 研发、制造及产品交付能力。
+- [质量与认证](https://www.foreachtek.com/about/quality/): 质量管理与产品可靠性相关信息。
+
+### 微型隔膜泵产品与型号
+
+- [微型隔膜泵产品总览](https://www.foreachtek.com/products/pumps/diaphragm-pumps/): 液体隔膜泵、高压隔膜泵及气液隔膜泵系列。
+- [DPL30 有刷液体隔膜泵](https://www.foreachtek.com/products/pumps/diaphragm-pumps/dpl30-24db-ep-ps-liquid-diaphragm-pump/): DPL30-24DB，空载液体流量 300 mL/min，额定压力 100 kPa。
+- [DPL30 无刷液体隔膜泵](https://www.foreachtek.com/products/pumps/diaphragm-pumps/dpl30-24bb-ep-ps-liquid-diaphragm-pump/): DPL30-24BB，适合关注连续运行与维护周期的液路应用。
+- [DPL60 有刷液体隔膜泵](https://www.foreachtek.com/products/pumps/diaphragm-pumps/dpl60-24db-ep-ps-liquid-diaphragm-pump/): DPL60-24DB，空载液体流量 600 mL/min，额定压力 100 kPa。
+- [DPL60 无刷液体隔膜泵](https://www.foreachtek.com/products/pumps/diaphragm-pumps/dpl60-24bb-ep-ps-liquid-diaphragm-pump/): DPL60-24BB，适用于清洗、废液排放和循环液路等场景。
+- [DPL30H 有刷高压液体隔膜泵](https://www.foreachtek.com/products/pumps/diaphragm-pumps/dpl30h-24ds-ep-ps-liquid-diaphragm-pump/): DPL30H-24DS，额定压力 600 kPa。
+- [DPL30H 无刷高压液体隔膜泵](https://www.foreachtek.com/products/pumps/diaphragm-pumps/dpl30h-24bs-ep-ps-liquid-diaphragm-pump/): DPL30H-24BS，用于较高背压液路与高压冲洗。
+- [DPGL800 无刷气液隔膜泵](https://www.foreachtek.com/products/pumps/diaphragm-pumps/dpgl800-24bs6-ff-ps-gas-liquid-diaphragm-pump/): DPGL800-24BS6，空载气体流量 6 L/min，极限真空度 -90 kPa。
+
+### 技术文章与选型问题
+
+- [DPL30 液体隔膜泵选型指南](https://www.foreachtek.com/resources/technical-articles/dpl30-liquid-diaphragm-pump-selection-guide/): 应用边界、流量压力及型号选择。
+- [DPL60 液体隔膜泵选型指南](https://www.foreachtek.com/resources/technical-articles/dpl60-liquid-diaphragm-pump-selection-guide/): 中等流量液路与工况匹配。
+- [DPL30H 高压液体隔膜泵选型指南](https://www.foreachtek.com/resources/technical-articles/dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide/): 高压工况、背压和连接配置。
+- [DPGL800 气液隔膜泵选型指南](https://www.foreachtek.com/resources/technical-articles/dpgl800-gas-liquid-diaphragm-pump-selection-guide/): 气液混合、抽吸和真空应用。
+- [隔膜泵流量压力曲线怎么读](https://www.foreachtek.com/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide/): 区分自由流量、背压和实际工作点。
+- [微型隔膜泵连续运行与寿命](https://www.foreachtek.com/resources/technical-articles/micro-diaphragm-pump-continuous-duty-life/): 连续工作、温升和使用寿命的工程判断。
+- [无刷隔膜泵两线与五线控制区别](https://www.foreachtek.com/resources/technical-articles/brushless-diaphragm-pump-2-wire-vs-5-wire/): 接线、控制信号和系统集成。
+- [有刷与无刷隔膜泵寿命：3000 小时与 10000 小时](https://www.foreachtek.com/resources/technical-articles/brushed-vs-brushless-diaphragm-pump-3000h-10000h/): 比较额定条件下的寿命、占空比和维护需求。
+- [生命科学仪器 DPL60 隔膜泵选型](https://www.foreachtek.com/resources/technical-articles/life-science-instrument-dpl60-diaphragm-pump-selection-guide/): 生命科学设备中的液路任务和型号适配。
+
+### 行业应用
+
+- [体外诊断 IVD](https://www.foreachtek.com/applications/ivd/): 试剂、清洗、废液及仪器液路。
+- [生命科学](https://www.foreachtek.com/applications/life-science/): 生命科学仪器与精密流体控制。
+- [实验室自动化](https://www.foreachtek.com/applications/lab-automation/): 自动化工作站、液体处理与清洗。
+- [分析仪器](https://www.foreachtek.com/applications/analytical-instruments/): 分析仪器中的进样、冲洗和废液管理。
+
+### 资料、工具与联系
+
+- [流体阻力计算工具](https://www.foreachtek.com/resources/calculators/fluid-resistance/): 估算管路阻力和系统背压。
+- [材料兼容性参考](https://www.foreachtek.com/resources/material-compatibility/): 按具体介质核实接液材料适配。
+- [联系 FOREACH](https://www.foreachtek.com/contact/): 获取选型、技术支持及定制信息。
+
+## English (en)
+
+FOREACH develops miniature diaphragm pumps, precision fluid-control components and microfluidic solutions for in vitro diagnostics, life sciences, laboratory automation and analytical instruments.
+
+### Company and engineering capabilities
+
+- [About FOREACH](https://www.foreachtek.com/en/about/foreach/): Company profile and precision fluid-control expertise.
+- [Research and manufacturing](https://www.foreachtek.com/en/about/research-manufacturing/): Engineering, production and product-delivery capabilities.
+- [Quality management](https://www.foreachtek.com/en/about/quality/): Quality processes and product reliability information.
+
+### Miniature diaphragm pumps and models
+
+- [Diaphragm pump product overview](https://www.foreachtek.com/en/products/pumps/diaphragm-pumps/): Liquid, high-pressure and gas-liquid diaphragm pump families.
+- [DPL30 brushed liquid diaphragm pump](https://www.foreachtek.com/en/products/pumps/diaphragm-pumps/dpl30-24db-ep-ps-liquid-diaphragm-pump/): DPL30-24DB, 300 mL/min no-load liquid flow, 100 kPa rated pressure.
+- [DPL30 brushless liquid diaphragm pump](https://www.foreachtek.com/en/products/pumps/diaphragm-pumps/dpl30-24bb-ep-ps-liquid-diaphragm-pump/): DPL30-24BB for continuous-operation and service-life considerations.
+- [DPL60 brushed liquid diaphragm pump](https://www.foreachtek.com/en/products/pumps/diaphragm-pumps/dpl60-24db-ep-ps-liquid-diaphragm-pump/): DPL60-24DB, 600 mL/min no-load liquid flow, 100 kPa rated pressure.
+- [DPL60 brushless liquid diaphragm pump](https://www.foreachtek.com/en/products/pumps/diaphragm-pumps/dpl60-24bb-ep-ps-liquid-diaphragm-pump/): DPL60-24BB for washing, waste handling and circulation circuits.
+- [DPL30H brushed high-pressure liquid diaphragm pump](https://www.foreachtek.com/en/products/pumps/diaphragm-pumps/dpl30h-24ds-ep-ps-liquid-diaphragm-pump/): DPL30H-24DS with 600 kPa rated pressure.
+- [DPL30H brushless high-pressure liquid diaphragm pump](https://www.foreachtek.com/en/products/pumps/diaphragm-pumps/dpl30h-24bs-ep-ps-liquid-diaphragm-pump/): DPL30H-24BS for higher-backpressure fluid circuits.
+- [DPGL800 brushless gas-liquid diaphragm pump](https://www.foreachtek.com/en/products/pumps/diaphragm-pumps/dpgl800-24bs6-ff-ps-gas-liquid-diaphragm-pump/): DPGL800-24BS6, 6 L/min no-load gas flow and -90 kPa ultimate vacuum.
+
+### Technical guides and engineering questions
+
+- [DPL30 liquid diaphragm pump selection guide](https://www.foreachtek.com/en/resources/technical-articles/dpl30-liquid-diaphragm-pump-selection-guide/): Model selection, operating conditions and application boundaries.
+- [DPL60 liquid diaphragm pump selection guide](https://www.foreachtek.com/en/resources/technical-articles/dpl60-liquid-diaphragm-pump-selection-guide/): Matching medium-flow fluid circuits to real operating conditions.
+- [DPL30H high-pressure diaphragm pump selection guide](https://www.foreachtek.com/en/resources/technical-articles/dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide/): Backpressure, pressure capability and connections.
+- [DPGL800 gas-liquid diaphragm pump selection guide](https://www.foreachtek.com/en/resources/technical-articles/dpgl800-gas-liquid-diaphragm-pump-selection-guide/): Gas-liquid transfer, suction and vacuum applications.
+- [How to read a diaphragm pump flow-pressure curve](https://www.foreachtek.com/en/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide/): Free flow, system backpressure and installed operating points.
+- [Continuous duty and miniature diaphragm pump service life](https://www.foreachtek.com/en/resources/technical-articles/micro-diaphragm-pump-continuous-duty-life/): Duty cycle, temperature rise and lifetime evaluation.
+- [Two-wire versus five-wire brushless diaphragm pumps](https://www.foreachtek.com/en/resources/technical-articles/brushless-diaphragm-pump-2-wire-vs-5-wire/): Wiring, control signals and system integration.
+
+### Industry applications
+
+- [In vitro diagnostics](https://www.foreachtek.com/en/applications/ivd/): Reagent, washing and waste-fluid circuits.
+- [Life sciences](https://www.foreachtek.com/en/applications/life-science/): Precision fluid management for life-science instruments.
+- [Laboratory automation](https://www.foreachtek.com/en/applications/lab-automation/): Automated workstations and liquid handling.
+- [Analytical instruments](https://www.foreachtek.com/en/applications/analytical-instruments/): Sampling, rinsing and waste-fluid management.
+
+### Resources, tools and support
+
+- [Fluid-resistance calculator](https://www.foreachtek.com/en/resources/calculators/fluid-resistance/): Estimate tubing resistance and system backpressure.
+- [Material compatibility reference](https://www.foreachtek.com/en/resources/material-compatibility/): Check wetted-material suitability for the actual fluid.
+- [Contact FOREACH](https://www.foreachtek.com/en/contact/): Product selection, technical assistance and customization enquiries.
+
+## Español (es)
+
+FOREACH desarrolla componentes microfluídicos, bombas de diafragma en miniatura y soluciones de control de fluidos para diagnóstico in vitro, ciencias de la vida, automatización de laboratorios e instrumentos analíticos.
+
+### Empresa y capacidades
+
+- [Conozca FOREACH](https://www.foreachtek.com/es/about/foreach/): Presentación de la empresa y experiencia en control de fluidos.
+- [Investigación y fabricación](https://www.foreachtek.com/es/about/research-manufacturing/): Capacidades de ingeniería, desarrollo y producción.
+- [Gestión de calidad](https://www.foreachtek.com/es/about/quality/): Procesos de calidad y fiabilidad de los productos.
+
+### Bombas de diafragma y modelos
+
+- [Catálogo de bombas de diafragma](https://www.foreachtek.com/es/products/pumps/diaphragm-pumps/): Bombas para líquidos, alta presión y mezcla gas-líquido.
+- [DPL30 con escobillas para líquidos](https://www.foreachtek.com/es/products/pumps/diaphragm-pumps/dpl30-24db-ep-ps-liquid-diaphragm-pump/): Modelo DPL30-24DB, caudal sin carga de 300 mL/min.
+- [DPL30 sin escobillas para líquidos](https://www.foreachtek.com/es/products/pumps/diaphragm-pumps/dpl30-24bb-ep-ps-liquid-diaphragm-pump/): Modelo DPL30-24BB para circuitos con requisitos de vida útil.
+- [DPL60 con escobillas para líquidos](https://www.foreachtek.com/es/products/pumps/diaphragm-pumps/dpl60-24db-ep-ps-liquid-diaphragm-pump/): Modelo DPL60-24DB, caudal sin carga de 600 mL/min.
+- [DPL60 sin escobillas para líquidos](https://www.foreachtek.com/es/products/pumps/diaphragm-pumps/dpl60-24bb-ep-ps-liquid-diaphragm-pump/): Modelo DPL60-24BB para lavado, recirculación y residuos líquidos.
+- [DPL30H de alta presión con escobillas](https://www.foreachtek.com/es/products/pumps/diaphragm-pumps/dpl30h-24ds-ep-ps-liquid-diaphragm-pump/): Modelo DPL30H-24DS con presión nominal de 600 kPa.
+- [DPL30H de alta presión sin escobillas](https://www.foreachtek.com/es/products/pumps/diaphragm-pumps/dpl30h-24bs-ep-ps-liquid-diaphragm-pump/): Modelo DPL30H-24BS para circuitos con contrapresión elevada.
+- [DPGL800 para gas y líquido](https://www.foreachtek.com/es/products/pumps/diaphragm-pumps/dpgl800-24bs6-ff-ps-gas-liquid-diaphragm-pump/): Modelo DPGL800-24BS6; 6 L/min corresponde al caudal de gas sin carga.
+
+### Guías técnicas y preguntas de ingeniería
+
+- [Guía de selección de la bomba DPL30](https://www.foreachtek.com/es/resources/technical-articles/dpl30-liquid-diaphragm-pump-selection-guide/): Selección de modelos y condiciones de funcionamiento.
+- [Guía de selección de la bomba DPL60](https://www.foreachtek.com/es/resources/technical-articles/dpl60-liquid-diaphragm-pump-selection-guide/): Aplicaciones de líquidos y condiciones reales del circuito.
+- [Guía de selección de la bomba de alta presión DPL30H](https://www.foreachtek.com/es/resources/technical-articles/dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide/): Presión, contrapresión y conexiones.
+- [Guía de selección de la bomba gas-líquido DPGL800](https://www.foreachtek.com/es/resources/technical-articles/dpgl800-gas-liquid-diaphragm-pump-selection-guide/): Aspiración, vacío y transporte de gas y líquido.
+- [Interpretación de la curva caudal-presión](https://www.foreachtek.com/es/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide/): Caudal libre, contrapresión y punto de trabajo.
+- [Funcionamiento continuo y vida útil de las bombas de diafragma](https://www.foreachtek.com/es/resources/technical-articles/micro-diaphragm-pump-continuous-duty-life/): Ciclo de trabajo y duración del producto.
+- [Bombas sin escobillas de dos y cinco cables](https://www.foreachtek.com/es/resources/technical-articles/brushless-diaphragm-pump-2-wire-vs-5-wire/): Cableado, señales de control e integración.
+
+### Aplicaciones industriales
+
+- [Diagnóstico in vitro](https://www.foreachtek.com/es/applications/ivd/): Reactivos, lavado y gestión de residuos líquidos.
+- [Ciencias de la vida](https://www.foreachtek.com/es/applications/life-science/): Control de fluidos para instrumentos científicos.
+- [Automatización de laboratorios](https://www.foreachtek.com/es/applications/lab-automation/): Estaciones automatizadas y manipulación de líquidos.
+- [Instrumentos analíticos](https://www.foreachtek.com/es/applications/analytical-instruments/): Muestreo, enjuague y circuitos de residuos.
+
+### Recursos y soporte
+
+- [Calculadora de resistencia de fluidos](https://www.foreachtek.com/es/resources/calculators/fluid-resistance/): Estimación de la resistencia y la contrapresión.
+- [Compatibilidad de materiales](https://www.foreachtek.com/es/resources/material-compatibility/): Verificación de los materiales en contacto con el fluido.
+- [Contacto con FOREACH](https://www.foreachtek.com/es/contact/): Selección de productos y asistencia técnica.
+
+## Français (fr)
+
+FOREACH conçoit des composants microfluidiques, des pompes à membrane miniatures et des solutions de contrôle des fluides pour le diagnostic in vitro, les sciences de la vie, l'automatisation des laboratoires et les instruments analytiques.
+
+### Entreprise et capacités
+
+- [À propos de FOREACH](https://www.foreachtek.com/fr/about/foreach/): Présentation de l'entreprise et expertise en contrôle des fluides.
+- [Recherche et fabrication](https://www.foreachtek.com/fr/about/research-manufacturing/): Capacités de conception, d'ingénierie et de production.
+- [Gestion de la qualité](https://www.foreachtek.com/fr/about/quality/): Processus qualité et fiabilité des produits.
+
+### Pompes à membrane et modèles
+
+- [Gamme de pompes à membrane](https://www.foreachtek.com/fr/products/pumps/diaphragm-pumps/): Pompes pour liquides, haute pression et applications gaz-liquide.
+- [DPL30 à moteur avec balais pour liquides](https://www.foreachtek.com/fr/products/pumps/diaphragm-pumps/dpl30-24db-ep-ps-liquid-diaphragm-pump/): Modèle DPL30-24DB, débit liquide à vide de 300 mL/min.
+- [DPL30 à moteur sans balais pour liquides](https://www.foreachtek.com/fr/products/pumps/diaphragm-pumps/dpl30-24bb-ep-ps-liquid-diaphragm-pump/): Modèle DPL30-24BB pour les applications nécessitant une durée de service accrue.
+- [DPL60 à moteur avec balais pour liquides](https://www.foreachtek.com/fr/products/pumps/diaphragm-pumps/dpl60-24db-ep-ps-liquid-diaphragm-pump/): Modèle DPL60-24DB, débit liquide à vide de 600 mL/min.
+- [DPL60 à moteur sans balais pour liquides](https://www.foreachtek.com/fr/products/pumps/diaphragm-pumps/dpl60-24bb-ep-ps-liquid-diaphragm-pump/): Modèle DPL60-24BB pour le lavage, la circulation et les effluents.
+- [DPL30H haute pression à moteur avec balais](https://www.foreachtek.com/fr/products/pumps/diaphragm-pumps/dpl30h-24ds-ep-ps-liquid-diaphragm-pump/): Modèle DPL30H-24DS avec une pression nominale de 600 kPa.
+- [DPL30H haute pression à moteur sans balais](https://www.foreachtek.com/fr/products/pumps/diaphragm-pumps/dpl30h-24bs-ep-ps-liquid-diaphragm-pump/): Modèle DPL30H-24BS pour les circuits à contre-pression élevée.
+- [DPGL800 pour gaz et liquides](https://www.foreachtek.com/fr/products/pumps/diaphragm-pumps/dpgl800-24bs6-ff-ps-gas-liquid-diaphragm-pump/): Modèle DPGL800-24BS6; 6 L/min correspond au débit de gaz à vide.
+
+### Guides techniques et questions d'ingénierie
+
+- [Guide de sélection de la pompe DPL30](https://www.foreachtek.com/fr/resources/technical-articles/dpl30-liquid-diaphragm-pump-selection-guide/): Choix du modèle et conditions de fonctionnement.
+- [Guide de sélection de la pompe DPL60](https://www.foreachtek.com/fr/resources/technical-articles/dpl60-liquid-diaphragm-pump-selection-guide/): Adéquation avec les circuits de fluides.
+- [Guide de sélection de la pompe haute pression DPL30H](https://www.foreachtek.com/fr/resources/technical-articles/dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide/): Pression, contre-pression et raccordement.
+- [Guide de sélection de la pompe gaz-liquide DPGL800](https://www.foreachtek.com/fr/resources/technical-articles/dpgl800-gas-liquid-diaphragm-pump-selection-guide/): Aspiration, vide et transfert gaz-liquide.
+- [Comprendre la courbe débit-pression](https://www.foreachtek.com/fr/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide/): Débit libre, contre-pression et point de fonctionnement.
+- [Fonctionnement continu et durée de vie des pompes à membrane](https://www.foreachtek.com/fr/resources/technical-articles/micro-diaphragm-pump-continuous-duty-life/): Cycle de fonctionnement et évaluation de la durée de service.
+- [Pompes sans balais à deux ou cinq fils](https://www.foreachtek.com/fr/resources/technical-articles/brushless-diaphragm-pump-2-wire-vs-5-wire/): Câblage, signaux de commande et intégration.
+
+### Applications
+
+- [Diagnostic in vitro](https://www.foreachtek.com/fr/applications/ivd/): Réactifs, lavage et gestion des effluents.
+- [Sciences de la vie](https://www.foreachtek.com/fr/applications/life-science/): Gestion précise des fluides pour les instruments scientifiques.
+- [Automatisation des laboratoires](https://www.foreachtek.com/fr/applications/lab-automation/): Stations automatisées et manipulation des liquides.
+- [Instruments analytiques](https://www.foreachtek.com/fr/applications/analytical-instruments/): Échantillonnage, rinçage et circuits de déchets liquides.
+
+### Ressources et assistance
+
+- [Calculateur de résistance des fluides](https://www.foreachtek.com/fr/resources/calculators/fluid-resistance/): Estimation des pertes de charge et de la contre-pression.
+- [Compatibilité des matériaux](https://www.foreachtek.com/fr/resources/material-compatibility/): Vérification des matériaux en contact avec le fluide.
+- [Contacter FOREACH](https://www.foreachtek.com/fr/contact/): Sélection de produits et assistance technique.
+
+## 한국어 (ko)
+
+FOREACH는 체외진단, 생명과학, 실험실 자동화 및 분석기기를 위한 소형 다이어프램 펌프, 미세유체 부품과 유체 제어 솔루션을 제공합니다.
+
+### 회사 및 역량
+
+- [FOREACH 회사 소개](https://www.foreachtek.com/ko/about/foreach/): 기업 소개와 정밀 유체 제어 역량.
+- [연구 개발 및 제조](https://www.foreachtek.com/ko/about/research-manufacturing/): 제품 설계, 엔지니어링 및 제조 역량.
+- [품질 관리](https://www.foreachtek.com/ko/about/quality/): 품질 관리 체계와 제품 신뢰성 정보.
+
+### 다이어프램 펌프 및 모델
+
+- [다이어프램 펌프 제품군](https://www.foreachtek.com/ko/products/pumps/diaphragm-pumps/): 액체용, 고압용 및 기액 다이어프램 펌프.
+- [DPL30 브러시 액체 다이어프램 펌프](https://www.foreachtek.com/ko/products/pumps/diaphragm-pumps/dpl30-24db-ep-ps-liquid-diaphragm-pump/): DPL30-24DB, 무부하 액체 유량 300 mL/min.
+- [DPL30 브러시리스 액체 다이어프램 펌프](https://www.foreachtek.com/ko/products/pumps/diaphragm-pumps/dpl30-24bb-ep-ps-liquid-diaphragm-pump/): DPL30-24BB, 사용 수명과 연속 운전을 고려한 모델.
+- [DPL60 브러시 액체 다이어프램 펌프](https://www.foreachtek.com/ko/products/pumps/diaphragm-pumps/dpl60-24db-ep-ps-liquid-diaphragm-pump/): DPL60-24DB, 무부하 액체 유량 600 mL/min.
+- [DPL60 브러시리스 액체 다이어프램 펌프](https://www.foreachtek.com/ko/products/pumps/diaphragm-pumps/dpl60-24bb-ep-ps-liquid-diaphragm-pump/): DPL60-24BB, 세척, 순환 및 폐액 회로에 적합.
+- [DPL30H 브러시 고압 액체 다이어프램 펌프](https://www.foreachtek.com/ko/products/pumps/diaphragm-pumps/dpl30h-24ds-ep-ps-liquid-diaphragm-pump/): DPL30H-24DS, 정격 압력 600 kPa.
+- [DPL30H 브러시리스 고압 액체 다이어프램 펌프](https://www.foreachtek.com/ko/products/pumps/diaphragm-pumps/dpl30h-24bs-ep-ps-liquid-diaphragm-pump/): DPL30H-24BS, 높은 배압의 유체 회로용.
+- [DPGL800 브러시리스 기액 다이어프램 펌프](https://www.foreachtek.com/ko/products/pumps/diaphragm-pumps/dpgl800-24bs6-ff-ps-gas-liquid-diaphragm-pump/): DPGL800-24BS6, 6 L/min은 무부하 기체 유량.
+
+### 기술 가이드와 엔지니어링 질문
+
+- [DPL30 액체 다이어프램 펌프 선정 가이드](https://www.foreachtek.com/ko/resources/technical-articles/dpl30-liquid-diaphragm-pump-selection-guide/): 모델 선정과 운전 조건 확인.
+- [DPL60 액체 다이어프램 펌프 선정 가이드](https://www.foreachtek.com/ko/resources/technical-articles/dpl60-liquid-diaphragm-pump-selection-guide/): 액체 회로 및 실제 운전 조건 검토.
+- [DPL30H 고압 다이어프램 펌프 선정 가이드](https://www.foreachtek.com/ko/resources/technical-articles/dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide/): 압력, 배압 및 연결 조건.
+- [DPGL800 기액 다이어프램 펌프 선정 가이드](https://www.foreachtek.com/ko/resources/technical-articles/dpgl800-gas-liquid-diaphragm-pump-selection-guide/): 기액 이송, 흡입 및 진공 응용.
+- [다이어프램 펌프 유량-압력 곡선 이해](https://www.foreachtek.com/ko/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide/): 무부하 유량, 배압 및 실제 작동점.
+- [연속 운전과 소형 다이어프램 펌프 수명](https://www.foreachtek.com/ko/resources/technical-articles/micro-diaphragm-pump-continuous-duty-life/): 듀티 사이클, 온도 상승 및 사용 수명.
+- [브러시리스 펌프 2선식과 5선식 비교](https://www.foreachtek.com/ko/resources/technical-articles/brushless-diaphragm-pump-2-wire-vs-5-wire/): 배선, 제어 신호 및 시스템 통합.
+
+### 산업 응용
+
+- [체외진단](https://www.foreachtek.com/ko/applications/ivd/): 시약, 세척 및 폐액 유체 회로.
+- [생명과학](https://www.foreachtek.com/ko/applications/life-science/): 생명과학 기기를 위한 정밀 유체 제어.
+- [실험실 자동화](https://www.foreachtek.com/ko/applications/lab-automation/): 자동화 장비와 액체 처리.
+- [분석기기](https://www.foreachtek.com/ko/applications/analytical-instruments/): 시료 주입, 세척 및 폐액 관리.
+
+### 자료 및 기술 지원
+
+- [유체 저항 계산기](https://www.foreachtek.com/ko/resources/calculators/fluid-resistance/): 배관 저항과 시스템 배압 추정.
+- [재질 호환성 자료](https://www.foreachtek.com/ko/resources/material-compatibility/): 실제 유체와 접액 재질의 적합성 확인.
+- [FOREACH 문의](https://www.foreachtek.com/ko/contact/): 제품 선정, 기술 지원 및 맞춤형 솔루션.
+
+## Русский (ru)
+
+FOREACH разрабатывает миниатюрные мембранные насосы, микрофлюидные компоненты и решения для управления жидкостями для диагностики in vitro, наук о жизни, автоматизации лабораторий и аналитических приборов.
+
+### Компания и возможности
+
+- [О компании FOREACH](https://www.foreachtek.com/ru/about/foreach/): Информация о компании и технологиях управления жидкостями.
+- [Исследования и производство](https://www.foreachtek.com/ru/about/research-manufacturing/): Разработка, инженерные возможности и производство.
+- [Управление качеством](https://www.foreachtek.com/ru/about/quality/): Процессы контроля качества и надежности продукции.
+
+### Мембранные насосы и модели
+
+- [Каталог мембранных насосов](https://www.foreachtek.com/ru/products/pumps/diaphragm-pumps/): Насосы для жидкостей, высокого давления и газожидкостных сред.
+- [DPL30 с щеточным двигателем для жидкостей](https://www.foreachtek.com/ru/products/pumps/diaphragm-pumps/dpl30-24db-ep-ps-liquid-diaphragm-pump/): Модель DPL30-24DB, расход жидкости без нагрузки 300 mL/min.
+- [DPL30 с бесщеточным двигателем для жидкостей](https://www.foreachtek.com/ru/products/pumps/diaphragm-pumps/dpl30-24bb-ep-ps-liquid-diaphragm-pump/): Модель DPL30-24BB для систем с требованиями к ресурсу.
+- [DPL60 с щеточным двигателем для жидкостей](https://www.foreachtek.com/ru/products/pumps/diaphragm-pumps/dpl60-24db-ep-ps-liquid-diaphragm-pump/): Модель DPL60-24DB, расход жидкости без нагрузки 600 mL/min.
+- [DPL60 с бесщеточным двигателем для жидкостей](https://www.foreachtek.com/ru/products/pumps/diaphragm-pumps/dpl60-24bb-ep-ps-liquid-diaphragm-pump/): Модель DPL60-24BB для промывки, циркуляции и удаления отходов.
+- [DPL30H высокого давления с щеточным двигателем](https://www.foreachtek.com/ru/products/pumps/diaphragm-pumps/dpl30h-24ds-ep-ps-liquid-diaphragm-pump/): Модель DPL30H-24DS с номинальным давлением 600 kPa.
+- [DPL30H высокого давления с бесщеточным двигателем](https://www.foreachtek.com/ru/products/pumps/diaphragm-pumps/dpl30h-24bs-ep-ps-liquid-diaphragm-pump/): Модель DPL30H-24BS для систем с повышенным противодавлением.
+- [DPGL800 для газожидкостных сред](https://www.foreachtek.com/ru/products/pumps/diaphragm-pumps/dpgl800-24bs6-ff-ps-gas-liquid-diaphragm-pump/): Модель DPGL800-24BS6; 6 L/min относится к расходу газа без нагрузки.
+
+### Технические руководства и инженерные вопросы
+
+- [Руководство по выбору насоса DPL30](https://www.foreachtek.com/ru/resources/technical-articles/dpl30-liquid-diaphragm-pump-selection-guide/): Подбор модели и оценка условий эксплуатации.
+- [Руководство по выбору насоса DPL60](https://www.foreachtek.com/ru/resources/technical-articles/dpl60-liquid-diaphragm-pump-selection-guide/): Соответствие характеристик рабочим условиям.
+- [Руководство по выбору насоса высокого давления DPL30H](https://www.foreachtek.com/ru/resources/technical-articles/dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide/): Давление, противодавление и подключение.
+- [Руководство по выбору газожидкостного насоса DPGL800](https://www.foreachtek.com/ru/resources/technical-articles/dpgl800-gas-liquid-diaphragm-pump-selection-guide/): Всасывание, вакуум и перенос газожидкостных сред.
+- [Как читать характеристику расхода и давления](https://www.foreachtek.com/ru/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide/): Свободный расход, противодавление и рабочая точка.
+- [Непрерывная работа и срок службы мембранного насоса](https://www.foreachtek.com/ru/resources/technical-articles/micro-diaphragm-pump-continuous-duty-life/): Рабочий цикл, нагрев и ресурс оборудования.
+- [Бесщеточные насосы с двумя и пятью проводами](https://www.foreachtek.com/ru/resources/technical-articles/brushless-diaphragm-pump-2-wire-vs-5-wire/): Подключение, управляющие сигналы и интеграция.
+
+### Области применения
+
+- [Диагностика in vitro](https://www.foreachtek.com/ru/applications/ivd/): Реагенты, промывка и отвод жидких отходов.
+- [Науки о жизни](https://www.foreachtek.com/ru/applications/life-science/): Точное управление жидкостями в научных приборах.
+- [Автоматизация лабораторий](https://www.foreachtek.com/ru/applications/lab-automation/): Автоматизированные станции и работа с жидкостями.
+- [Аналитические приборы](https://www.foreachtek.com/ru/applications/analytical-instruments/): Пробоотбор, промывка и управление отходами.
+
+### Ресурсы и поддержка
+
+- [Калькулятор гидравлического сопротивления](https://www.foreachtek.com/ru/resources/calculators/fluid-resistance/): Оценка сопротивления трубок и противодавления системы.
+- [Совместимость материалов](https://www.foreachtek.com/ru/resources/material-compatibility/): Проверка совместимости материалов с рабочей средой.
+- [Связаться с FOREACH](https://www.foreachtek.com/ru/contact/): Подбор продукции, техническая поддержка и специальные конфигурации.
