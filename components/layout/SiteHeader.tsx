@@ -879,7 +879,7 @@ const isFittingReplacementDetailPage =
     ) {
       event.preventDefault();
 
-      void preloadGlobalSearchIndex();
+      void preloadGlobalSearchIndex(currentLocale);
 
       setOpenPanel("none");
       setOpenMobileSectionKey(null);
@@ -1184,13 +1184,13 @@ const isFittingReplacementDetailPage =
               aria-label={headerText.searchButtonAriaLabel}
               aria-expanded={isSearchOpen}
               onMouseEnter={() => {
-                void preloadGlobalSearchIndex();
+                void preloadGlobalSearchIndex(currentLocale);
               }}
               onFocus={() => {
-                void preloadGlobalSearchIndex();
+                void preloadGlobalSearchIndex(currentLocale);
               }}
               onTouchStart={() => {
-                void preloadGlobalSearchIndex();
+                void preloadGlobalSearchIndex(currentLocale);
               }}
               onClick={handleSearchButtonClick}
             >
@@ -1377,13 +1377,13 @@ const isFittingReplacementDetailPage =
                   aria-label={headerText.searchAriaLabel}
                   aria-expanded={isSearchOpen}
                   onMouseEnter={() => {
-                    void preloadGlobalSearchIndex();
+                    void preloadGlobalSearchIndex(currentLocale);
                   }}
                   onFocus={() => {
-                    void preloadGlobalSearchIndex();
+                    void preloadGlobalSearchIndex(currentLocale);
                   }}
                   onTouchStart={() => {
-                    void preloadGlobalSearchIndex();
+                    void preloadGlobalSearchIndex(currentLocale);
                   }}
                   onClick={handleMobileSearchButtonClick}
                 >

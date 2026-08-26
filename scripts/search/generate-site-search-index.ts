@@ -25,6 +25,8 @@ const OUTPUT_PATH = path.join(
   "site-search-index.generated.ts"
 );
 
+const CHECK_MODE = process.argv.includes("--check");
+
 const PRODUCT_SEARCH_DIRS = [
   path.join(ROOT, "data", "products", "selection"),
   path.join(ROOT, "data", "products", "detail"),
@@ -189,14 +191,146 @@ function isProductHref(href: string): boolean {
 }
 
 function cleanImagePath(imagePath: string): string {
+  const normalizedImagePath = imagePath
+    .replace(/\\/g, "/")
+    .replace(/^\/?public\//, "/");
+
   if (
-    imagePath.includes("/images/logo/") ||
-    imagePath.endsWith("foreach-logo-color.svg")
+    normalizedImagePath.includes("/images/logo/") ||
+    normalizedImagePath.endsWith("foreach-logo-color.svg")
   ) {
     return "";
   }
 
-  return imagePath.startsWith("/") ? imagePath : "";
+  return normalizedImagePath.startsWith("/")
+    ? normalizedImagePath
+    : "";
+}
+
+function getProductImage(object: UnknownObject): string {
+  const directImage = cleanImagePath(
+    firstText(object, [
+      "imageCard",
+      "imagePath",
+      "imageSrc",
+      "image",
+      "coverImage",
+      "mainImage",
+    ])
+  );
+
+  if (directImage) return directImage;
+
+  const media = Array.isArray(object.media)
+    ? object.media
+    : [];
+
+  const candidates = media.filter(
+    (item): item is UnknownObject =>
+      Boolean(item) &&
+      typeof item === "object" &&
+      !Array.isArray(item)
+  );
+
+  const preferred =
+    candidates.find((item) => {
+      const resourceType = firstText(item, [
+        "resourceType",
+        "pagePosition",
+      ]);
+
+      return /主图|缩略图|MAIN|THUMBNAIL/i.test(
+        resourceType
+      );
+    }) ?? candidates[0];
+
+  if (!preferred) return "";
+
+  const fullPath = cleanImagePath(
+    firstText(preferred, ["fullPath", "src", "url"])
+  );
+
+  if (fullPath) return fullPath;
+
+  const directory = firstText(preferred, ["path"])
+    .replace(/\\/g, "/")
+    .replace(/^\/?public\//, "/")
+    .replace(/\/+$/, "");
+  const fileName = firstText(preferred, ["fileName"])
+    .replace(/^\/+/, "");
+
+  return cleanImagePath(
+    directory && fileName
+      ? `${directory}/${fileName}`
+      : ""
+  );
+}
+
+function collectProductKeywords(
+  value: unknown,
+  depth = 0,
+  result: string[] = [],
+  seen = new WeakSet<object>()
+): string[] {
+  if (
+    !value ||
+    typeof value !== "object" ||
+    depth > 4 ||
+    seen.has(value as object)
+  ) {
+    return result;
+  }
+
+  seen.add(value as object);
+
+  if (Array.isArray(value)) {
+    for (const item of value) {
+      collectProductKeywords(
+        item,
+        depth + 1,
+        result,
+        seen
+      );
+    }
+
+    return result;
+  }
+
+  const searchableKeys = new Set([
+    "seriesId",
+    "category",
+    "title",
+    "displayName",
+    "description",
+    "commonApplications",
+    "modelDisplay",
+    "model",
+    "itemCode",
+    "productCode",
+    "keywords",
+    "tags",
+    "relationKeys",
+    "pageTitle",
+  ]);
+
+  for (const [key, child] of Object.entries(
+    value as UnknownObject
+  )) {
+    if (searchableKeys.has(key)) {
+      const keywordText = text(child);
+
+      if (keywordText) result.push(keywordText);
+    }
+
+    collectProductKeywords(
+      child,
+      depth + 1,
+      result,
+      seen
+    );
+  }
+
+  return result;
 }
 
 function collectProductItems(
@@ -220,19 +354,30 @@ function collectProductItems(
 
   const object = value as UnknownObject;
 
-  const href = firstText(object, [
+  const explicitHref = firstText(object, [
     "detailHref",
     "productHref",
     "href",
     "detailUrl",
     "url",
   ]);
+  const canonicalPath = firstText(object, ["path"]);
+  const href = explicitHref ||
+    (
+      canonicalPath &&
+      firstText(object, ["seriesId"]) &&
+      firstText(object, ["slug"]) &&
+      firstText(object, ["description"])
+        ? canonicalPath
+        : ""
+    );
 
   if (isProductHref(href)) {
     const rawModel = firstText(object, [
       "foreachModel",
       "model",
       "modelNumber",
+      "seriesId",
       "slug",
     ]);
 
@@ -289,19 +434,13 @@ function collectProductItems(
           "summary",
           "subtitle",
           "cardSubtitle",
+          "commonApplications",
         ]);
 
       const image = cleanImagePath(
         formalFittingProduct?.imageCard ||
           formalPumpProduct?.imageCard ||
-          firstText(object, [
-            "imageCard",
-            "imagePath",
-            "imageSrc",
-            "image",
-            "coverImage",
-            "mainImage",
-          ])
+          getProductImage(object)
       );
 
       const extraKeywords = firstText(object, [
@@ -313,6 +452,9 @@ function collectProductItems(
         "productType",
         "productSeries",
       ]);
+      const nestedKeywords = collectProductKeywords(
+        object
+      );
 
       if (title) {
         result.push({
@@ -341,6 +483,7 @@ function collectProductItems(
             description,
             formalPumpProduct?.subtitle,
             extraKeywords,
+            ...nestedKeywords,
             finalHref,
           ].filter(isNonEmptyString),
         });
@@ -372,12 +515,12 @@ async function loadProductItems(): Promise<SiteSearchItem[]> {
         continue;
       }
 
-      const module = await import(
+      const importedModule = await import(
         `${pathToFileURL(file).href}?search=${Date.now()}-${Math.random()}`
       );
 
       collectProductItems(
-        module,
+        importedModule,
         relativePath,
         result,
         new WeakSet<object>()
@@ -401,12 +544,12 @@ async function loadCompatibleItems(): Promise<SiteSearchItem[]> {
 
   if (!fs.existsSync(filePath)) return [];
 
-  const module = await import(
+  const importedModule = await import(
     `${pathToFileURL(filePath).href}?compatible=${Date.now()}`
   );
 
   const products =
-    module.fittingReplacementAllCompatibleProducts as Array<{
+    importedModule.fittingReplacementAllCompatibleProducts as Array<{
       productCode: string;
       foreachModel: string;
       competitorModels: string[];
@@ -462,11 +605,11 @@ async function loadDatasheetItems(): Promise<SiteSearchItem[]> {
 
   if (!fs.existsSync(filePath)) return [];
 
-  const module = await import(
+  const importedModule = await import(
     `${pathToFileURL(filePath).href}?datasheet=${Date.now()}`
   );
 
-  const items = module.datasheetZhItems as Array<{
+  const items = importedModule.datasheetZhItems as Array<{
     id: string;
     title: string;
     label: string;
@@ -602,8 +745,24 @@ async function main() {
     );
   }
 
-  fs.mkdirSync(path.dirname(OUTPUT_PATH), { recursive: true });
-  fs.writeFileSync(OUTPUT_PATH, buildOutput(finalItems), "utf8");
+  const output = buildOutput(finalItems);
+
+  if (CHECK_MODE) {
+    const currentOutput = fs.existsSync(OUTPUT_PATH)
+      ? fs.readFileSync(OUTPUT_PATH, "utf8")
+      : "";
+
+    if (currentOutput !== output) {
+      throw new Error(
+        "产品搜索索引已过期，请运行 npm run search:generate。"
+      );
+    }
+  } else {
+    fs.mkdirSync(path.dirname(OUTPUT_PATH), {
+      recursive: true,
+    });
+    fs.writeFileSync(OUTPUT_PATH, output, "utf8");
+  }
 
   const counts = finalItems.reduce<Record<string, number>>(
     (result, item) => {
@@ -614,7 +773,11 @@ async function main() {
   );
 
   console.log("============================================");
-  console.log("全站搜索索引生成完成");
+  console.log(
+    CHECK_MODE
+      ? "产品搜索索引检查通过"
+      : "产品搜索索引生成完成"
+  );
   console.log(`产品中心：${counts.products ?? 0}`);
   console.log(`兼容型号查询：${counts["compatible-models"] ?? 0}`);
   console.log(`规格书下载：${counts.datasheets ?? 0}`);
