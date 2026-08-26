@@ -3,7 +3,9 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
+        "predev": "npm run search:generate",
         "dev": "next dev",
+        "prebuild": "npm run search:generate",
         "build": "next build",
         "start": "next start",
         "lint": "eslint",
@@ -13,7 +15,9 @@
         "products:build-plunger-detail": "node ./scripts/products/build-plunger-pump-detail-data.js",
         "build:pump-series-data": "node scripts/products/build-pump-series-data.js && node scripts/products/apply-pump-series-faq-scope.js && node scripts/products/fix-pump-series-image-assets.js && node scripts/products/fix-pump-series-selection-card-assets.js",
         "generate:diaphragm-pumps": "node scripts/products/generate-diaphragm-pump-data.js",
-        "build:cloudflare": "node scripts/cloudflare/build-pages.mjs && node scripts/seo/normalize-static-urls.mjs && node scripts/seo/generate-sitemap.mjs",
+        "search:generate": "tsx scripts/search/generate-site-search-index.ts && tsx scripts/search/generate-global-search-overlay-index.ts",
+        "search:check": "tsx scripts/search/generate-site-search-index.ts --check && tsx scripts/search/generate-global-search-overlay-index.ts --check",
+        "build:cloudflare": "npm run search:generate && node scripts/cloudflare/build-pages.mjs && node scripts/seo/normalize-static-urls.mjs && node scripts/seo/generate-sitemap.mjs",
         "seo:audit": "node scripts/seo/audit-url-consistency.mjs"
     },
     "dependencies": {

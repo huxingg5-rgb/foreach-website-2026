@@ -31,6 +31,7 @@ type CompactSearchItem = {
   h: string;
   i?: string;
   x: string;
+  k?: string;
   a?: string;
 };
 
@@ -55,27 +56,59 @@ type IdleWindow = Window & {
   cancelIdleCallback?: (id: number) => void;
 };
 
-const SEARCH_INDEX_URL =
-  "/search-data/global-search-index.v2.json";
-
 const DEFAULT_VISIBLE_COUNT = 6;
 const LOAD_MORE_COUNT = 6;
 const SEARCH_DEBOUNCE_MS = 180;
 
-let cachedSearchItems: CompactSearchItem[] | null = null;
-let searchItemsPromise: Promise<CompactSearchItem[]> | null = null;
+const SEARCH_INDEX_LOCALES = new Set([
+  "en",
+  "es",
+  "fr",
+  "ko",
+  "ru",
+]);
 
-export function preloadGlobalSearchIndex():
+const cachedSearchItems = new Map<
+  string,
+  CompactSearchItem[]
+>();
+const searchItemsPromises = new Map<
+  string,
+  Promise<CompactSearchItem[]>
+>();
+
+function getSearchIndexUrl(locale: string): string {
+  const indexLocale = SEARCH_INDEX_LOCALES.has(locale)
+    ? locale
+    : "zh-CN";
+
+  return (
+    `/search-data/global-search-index.${indexLocale}.v3.json`
+  );
+}
+
+export function preloadGlobalSearchIndex(
+  locale = "zh-CN"
+):
   Promise<CompactSearchItem[]> {
-  if (cachedSearchItems) {
-    return Promise.resolve(cachedSearchItems);
+  const searchIndexUrl = getSearchIndexUrl(locale);
+  const cachedItems = cachedSearchItems.get(
+    searchIndexUrl
+  );
+
+  if (cachedItems) {
+    return Promise.resolve(cachedItems);
   }
 
-  if (searchItemsPromise) {
-    return searchItemsPromise;
+  const existingPromise = searchItemsPromises.get(
+    searchIndexUrl
+  );
+
+  if (existingPromise) {
+    return existingPromise;
   }
 
-  searchItemsPromise = fetch(SEARCH_INDEX_URL, {
+  const searchItemsPromise = fetch(searchIndexUrl, {
     /*
       搜索索引使用固定文件名，内容会随产品与资讯更新。
       必须向服务器重新验证，避免浏览器长期复用旧链接、
@@ -93,13 +126,18 @@ export function preloadGlobalSearchIndex():
       return response.json() as Promise<CompactSearchItem[]>;
     })
     .then((items) => {
-      cachedSearchItems = items;
+      cachedSearchItems.set(searchIndexUrl, items);
       return items;
     })
     .catch((error) => {
-      searchItemsPromise = null;
+      searchItemsPromises.delete(searchIndexUrl);
       throw error;
     });
+
+  searchItemsPromises.set(
+    searchIndexUrl,
+    searchItemsPromise
+  );
 
   return searchItemsPromise;
 }
@@ -218,85 +256,12 @@ const INITIAL_SUGGESTIONS_EN = [
   "ADLM",
 ];
 
-const ENGLISH_RESULT_DESCRIPTIONS: Record<SearchModule, string> = {
-  products: "View product details and selection information.",
-  "compatible-models": "View the corresponding FOREACH compatible product.",
-  datasheets: "View or download the available product datasheet.",
-  "installation-guides": "View product usage, operation, installation, and commissioning guidance.",
-  "technical-articles": "Read the full technical article.",
-  "material-compatibility": "Review material compatibility information.",
-  applications: "Explore the related fluid handling application.",
-  news: "Read the full FOREACH news update.",
-  pages: "Open this FOREACH website page.",
-};
-
-function containsHan(value: string): boolean {
-  return /[\u3400-\u9fff]/.test(value);
-}
-
-function getPathLabel(href: string): string {
-  const segment = href
-    .split(/[?#]/)[0]
-    .split("/")
-    .filter(Boolean)
-    .at(-1);
-
-  if (!segment) {
-    return "FOREACH";
-  }
-
-  return decodeURIComponent(segment)
-    .split(/[-_]+/)
-    .filter(Boolean)
-    .map((word) =>
-      /^[a-z]+$/.test(word)
-        ? word.charAt(0).toUpperCase() + word.slice(1)
-        : word.toUpperCase()
-    )
-    .join(" ");
-}
-
-function getTechnicalText(value: string | undefined): string {
-  return (value ?? "")
-    .replace(/[\u3400-\u9fff：]/g, "")
-    .replace(/^\s*[:：-]\s*/, "")
-    .trim();
-}
-
-function getEnglishSearchItem(item: CompactSearchItem, locale: LocaleCode): CompactSearchItem {
-  const technicalText = getTechnicalText(item.s);
-  const title = !containsHan(item.t)
-    ? item.t
-    : technicalText || getPathLabel(item.h);
-  const subtitle = item.s && !containsHan(item.s)
-    ? item.s
-    : undefined;
-  const pathKeywords = item.h
-    .split(/[/?#_-]+/)
-    .filter(Boolean)
-    .join(" ");
-
-  return {
-    ...item,
-    t: title,
-    s: subtitle,
-    d: getInternationalUiText(locale, ENGLISH_RESULT_DESCRIPTIONS[item.m]),
-    a: getInternationalUiText(locale, MODULE_TEXT_EN[item.m].action),
-    x: [
-      item.x,
-      normalize(title),
-      normalize(pathKeywords),
-      normalize(MODULE_TEXT_EN[item.m].title),
-    ].join(" "),
-  };
-}
-
 function normalize(value: string): string {
   return value
     .trim()
     .toUpperCase()
     .replace(/[‐‑‒–—―﹘﹣－]/g, "-")
-    .replace(/\s+/g, "");
+    .replace(/[\s\-_/·|.]+/g, "");
 }
 
 function isSearchQueryLongEnough(value: string): boolean {
@@ -334,9 +299,15 @@ function scoreItem(
   item: CompactSearchItem,
   normalizedQuery: string
 ): number {
+  const searchText = normalize(item.x);
+  const keywords = normalize(item.k ?? "");
+
   if (
     !normalizedQuery ||
-    !item.x.includes(normalizedQuery)
+    (
+      !searchText.includes(normalizedQuery) &&
+      !keywords.includes(normalizedQuery)
+    )
   ) {
     return 0;
   }
@@ -344,7 +315,11 @@ function scoreItem(
   const title = normalize(item.t);
   const subtitle = normalize(item.s ?? "");
 
-  let score = 30;
+  let score = 10;
+
+  if (keywords.includes(normalizedQuery)) {
+    score += 90;
+  }
 
   if (title === normalizedQuery) score += 1200;
 
@@ -449,9 +424,12 @@ export default function GlobalSearchPanel({
   onQueryChange,
   onClose,
 }: GlobalSearchPanelProps) {
-  // 国际语言优先使用英文索引内容作为回退，界面和结果链接保留当前 Locale。
+  // 每个语言加载自己的构建期索引，避免中文字段在外语界面降级显示。
   const isEnglish = locale !== "zh-CN" && locale !== "zh";
   const activeLocale = locale as LocaleCode;
+  const searchIndexUrl = getSearchIndexUrl(locale);
+  const initialCachedItems =
+    cachedSearchItems.get(searchIndexUrl) ?? null;
   const t = (text: string) => getInternationalUiText(activeLocale, text);
   const moduleText = isEnglish
     ? Object.fromEntries(Object.entries(MODULE_TEXT_EN).map(([key, value]) => [key, { title: t(value.title), action: t(value.action) }])) as typeof MODULE_TEXT_EN
@@ -467,12 +445,12 @@ export default function GlobalSearchPanel({
 
   const [items, setItems] =
     useState<CompactSearchItem[] | null>(
-      cachedSearchItems
+      initialCachedItems
     );
 
   const [loadState, setLoadState] = useState<
     "idle" | "loading" | "ready" | "error"
-  >(cachedSearchItems ? "ready" : "idle");
+  >(initialCachedItems ? "ready" : "idle");
 
   const [headerBottom, setHeaderBottom] =
     useState(84);
@@ -486,9 +464,12 @@ export default function GlobalSearchPanel({
     useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
-    if (cachedSearchItems) {
+    const localeCachedItems =
+      cachedSearchItems.get(searchIndexUrl);
+
+    if (localeCachedItems) {
       const cachedItemsTimer = window.setTimeout(() => {
-        setItems(cachedSearchItems);
+        setItems(localeCachedItems);
         setLoadState("ready");
       }, 0);
 
@@ -503,7 +484,7 @@ export default function GlobalSearchPanel({
     let cancelled = false;
 
     const preload = () => {
-      void preloadGlobalSearchIndex()
+      void preloadGlobalSearchIndex(locale)
         .then((loadedItems) => {
           if (cancelled) return;
 
@@ -541,7 +522,7 @@ export default function GlobalSearchPanel({
         window.clearTimeout(fallbackTimer);
       }
     };
-  }, []);
+  }, [locale, searchIndexUrl]);
 
   useEffect(() => {
     if (!isOpen || items) return;
@@ -554,7 +535,7 @@ export default function GlobalSearchPanel({
       }
     }, 0);
 
-    void preloadGlobalSearchIndex()
+    void preloadGlobalSearchIndex(locale)
       .then((loadedItems) => {
         if (cancelled) return;
 
@@ -570,7 +551,7 @@ export default function GlobalSearchPanel({
     return () => {
       cancelled = true;
     };
-  }, [isOpen, items]);
+  }, [isOpen, items, locale]);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -656,13 +637,7 @@ export default function GlobalSearchPanel({
   const queryIsLongEnough =
     isSearchQueryLongEnough(debouncedQuery);
 
-  const displayItems = useMemo(() => {
-    if (!items || !isEnglish) {
-      return items;
-    }
-
-    return items.map((item) => getEnglishSearchItem(item, activeLocale));
-  }, [activeLocale, isEnglish, items]);
+  const displayItems = items;
 
   const groupedResults = useMemo(() => {
     const grouped = new Map<
