@@ -205,7 +205,7 @@ export function createLocalizedMotorArticle(
         ...paragraphs([sections.commutation.paragraph]),
         figure(
           MOTOR_ASSET_BASE,
-          "brushed-vs-brushless-commutation.webp",
+          "brushed-vs-brushless-commutation-en.webp",
           1672,
           941,
           sections.commutation.figure,
@@ -220,7 +220,7 @@ export function createLocalizedMotorArticle(
         ...paragraphs(sections.brushlessLife.paragraphs),
         figure(
           MOTOR_ASSET_BASE,
-          "brushed-brushless-lifetime-mechanism.webp",
+          "brushed-brushless-lifetime-mechanism-en.webp",
           1448,
           1086,
           sections.brushlessLife.figure,
@@ -242,7 +242,7 @@ export function createLocalizedMotorArticle(
         },
         figure(
           MOTOR_ASSET_BASE,
-          "brushed-brushless-selection-flowchart.webp",
+          "brushed-brushless-selection-flowchart-en.webp",
           1448,
           1086,
           sections.selection.figure,
