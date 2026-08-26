@@ -448,7 +448,9 @@ export default function TechnicalArticleDetail({
             },
             {
               label: diaphragmPumpEngineeringCopy.cta.productsLabel,
-              href: `${localePrefix}/products/pumps/diaphragm-pumps`,
+              href:
+                diaphragmPumpEngineeringCopy.cta.productsHref ??
+                `${localePrefix}/products/pumps/diaphragm-pumps`,
             },
           ],
         }

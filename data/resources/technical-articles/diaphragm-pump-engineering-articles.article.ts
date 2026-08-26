@@ -1,4 +1,5 @@
 import type {
+  TechnicalArticleCategory,
   TechnicalArticleItem,
   TechnicalArticleLocale,
 } from "./technical-articles.types";
@@ -10,6 +11,108 @@ import { diaphragmPumpFlowPressureCurveZhCopy } from "./diaphragm-pump-flow-pres
 import { microDiaphragmPumpContinuousDutyLifeZhCopy } from "./micro-diaphragm-pump-continuous-duty-life.zh";
 import { lifeScienceInstrumentDpl60SelectionZhCopy } from "./life-science-instrument-dpl60-selection.zh";
 import { brushedVsBrushlessDiaphragmPumpMotorLifeZhCopy } from "./brushed-vs-brushless-diaphragm-pump-motor-life.zh";
+import {
+  ivdWasteAspirationPumpSelectionZhCopy,
+  labLiquidWasteAspirationTroubleshootingZhCopy,
+} from "./application-troubleshooting-articles.zh";
+import {
+  ivdWasteAspirationPumpSelectionEnCopy,
+  labLiquidWasteAspirationTroubleshootingEnCopy,
+} from "./application-troubleshooting-articles.en";
+import {
+  ivdWasteAspirationPumpSelectionEsCopy,
+  labLiquidWasteAspirationTroubleshootingEsCopy,
+} from "./application-troubleshooting-articles.es";
+import {
+  ivdWasteAspirationPumpSelectionFrCopy,
+  labLiquidWasteAspirationTroubleshootingFrCopy,
+} from "./application-troubleshooting-articles.fr";
+import {
+  ivdWasteAspirationPumpSelectionKoCopy,
+  labLiquidWasteAspirationTroubleshootingKoCopy,
+} from "./application-troubleshooting-articles.ko";
+import {
+  ivdWasteAspirationPumpSelectionRuCopy,
+  labLiquidWasteAspirationTroubleshootingRuCopy,
+} from "./application-troubleshooting-articles.ru";
+import {
+  diaphragmPump300MlMinFlowMarginZhCopy,
+  diaphragmPump300Vs600SelectionZhCopy,
+} from "./diaphragm-pump-flow-pressure-series-01-02.zh";
+import {
+  suctionVsDischargeResistanceDiaphragmPumpZhCopy,
+  tubeInnerDiameterAffectsDiaphragmPumpFlowZhCopy,
+} from "./diaphragm-pump-flow-pressure-series-03-04.zh";
+import {
+  diaphragmPump100KpaVs600KpaSelectionZhCopy,
+  diaphragmPumpPressureRatingTermsZhCopy,
+  highBackpressureFluidPathPressureBudgetZhCopy,
+} from "./diaphragm-pump-flow-pressure-series-05-07.zh";
+import {
+  diaphragmPump300MlMinFlowMarginEnCopy,
+  diaphragmPump300Vs600SelectionEnCopy,
+} from "./diaphragm-pump-flow-pressure-series-01-02.en";
+import {
+  suctionVsDischargeResistanceDiaphragmPumpEnCopy,
+  tubeInnerDiameterAffectsDiaphragmPumpFlowEnCopy,
+} from "./diaphragm-pump-flow-pressure-series-03-04.en";
+import {
+  diaphragmPump100KpaVs600KpaSelectionEnCopy,
+  diaphragmPumpPressureRatingTermsEnCopy,
+  highBackpressureFluidPathPressureBudgetEnCopy,
+} from "./diaphragm-pump-flow-pressure-series-05-07.en";
+import {
+  diaphragmPump300MlMinFlowMarginEsCopy,
+  diaphragmPump300Vs600SelectionEsCopy,
+} from "./diaphragm-pump-flow-pressure-series-01-02.es";
+import {
+  suctionVsDischargeResistanceDiaphragmPumpEsCopy,
+  tubeInnerDiameterAffectsDiaphragmPumpFlowEsCopy,
+} from "./diaphragm-pump-flow-pressure-series-03-04.es";
+import {
+  diaphragmPump100KpaVs600KpaSelectionEsCopy,
+  diaphragmPumpPressureRatingTermsEsCopy,
+  highBackpressureFluidPathPressureBudgetEsCopy,
+} from "./diaphragm-pump-flow-pressure-series-05-07.es";
+import {
+  diaphragmPump300MlMinFlowMarginFrCopy,
+  diaphragmPump300Vs600SelectionFrCopy,
+} from "./diaphragm-pump-flow-pressure-series-01-02.fr";
+import {
+  suctionVsDischargeResistanceDiaphragmPumpFrCopy,
+  tubeInnerDiameterAffectsDiaphragmPumpFlowFrCopy,
+} from "./diaphragm-pump-flow-pressure-series-03-04.fr";
+import {
+  diaphragmPump100KpaVs600KpaSelectionFrCopy,
+  diaphragmPumpPressureRatingTermsFrCopy,
+  highBackpressureFluidPathPressureBudgetFrCopy,
+} from "./diaphragm-pump-flow-pressure-series-05-07.fr";
+import {
+  diaphragmPump300MlMinFlowMarginKoCopy,
+  diaphragmPump300Vs600SelectionKoCopy,
+} from "./diaphragm-pump-flow-pressure-series-01-02.ko";
+import {
+  suctionVsDischargeResistanceDiaphragmPumpKoCopy,
+  tubeInnerDiameterAffectsDiaphragmPumpFlowKoCopy,
+} from "./diaphragm-pump-flow-pressure-series-03-04.ko";
+import {
+  diaphragmPump100KpaVs600KpaSelectionKoCopy,
+  diaphragmPumpPressureRatingTermsKoCopy,
+  highBackpressureFluidPathPressureBudgetKoCopy,
+} from "./diaphragm-pump-flow-pressure-series-05-07.ko";
+import {
+  diaphragmPump300MlMinFlowMarginRuCopy,
+  diaphragmPump300Vs600SelectionRuCopy,
+} from "./diaphragm-pump-flow-pressure-series-01-02.ru";
+import {
+  suctionVsDischargeResistanceDiaphragmPumpRuCopy,
+  tubeInnerDiameterAffectsDiaphragmPumpFlowRuCopy,
+} from "./diaphragm-pump-flow-pressure-series-03-04.ru";
+import {
+  diaphragmPump100KpaVs600KpaSelectionRuCopy,
+  diaphragmPumpPressureRatingTermsRuCopy,
+  highBackpressureFluidPathPressureBudgetRuCopy,
+} from "./diaphragm-pump-flow-pressure-series-05-07.ru";
 import { diaphragmPumpFlowPressureCurveEnCopy } from "./diaphragm-pump-flow-pressure-curve.en";
 import { microDiaphragmPumpContinuousDutyLifeEnCopy } from "./micro-diaphragm-pump-continuous-duty-life.en";
 import {
@@ -57,6 +160,24 @@ export const lifeScienceInstrumentDpl60SelectionSlug =
   "life-science-dpl60-600ml-min-diaphragm-pump-selection-guide" as const;
 export const brushedVsBrushlessDiaphragmPumpMotorLifeSlug =
   "brushed-vs-brushless-diaphragm-pump-3000h-10000h" as const;
+export const labLiquidWasteAspirationTroubleshootingSlug =
+  "lab-liquid-waste-aspiration-troubleshooting" as const;
+export const ivdWasteAspirationPumpSelectionSlug =
+  "ivd-waste-aspiration-liquid-pump-vs-vacuum-pump" as const;
+export const diaphragmPump300Vs600SelectionSlug =
+  "300-vs-600-ml-min-diaphragm-pump-selection" as const;
+export const diaphragmPump300MlMinFlowMarginSlug =
+  "300-ml-min-diaphragm-pump-flow-margin" as const;
+export const tubeInnerDiameterAffectsDiaphragmPumpFlowSlug =
+  "tube-inner-diameter-affects-diaphragm-pump-flow" as const;
+export const suctionVsDischargeResistanceDiaphragmPumpSlug =
+  "suction-vs-discharge-resistance-diaphragm-pump" as const;
+export const diaphragmPumpPressureRatingTermsSlug =
+  "diaphragm-pump-pressure-rating-terms" as const;
+export const diaphragmPump100KpaVs600KpaSelectionSlug =
+  "100-kpa-vs-600-kpa-diaphragm-pump-selection" as const;
+export const highBackpressureFluidPathPressureBudgetSlug =
+  "high-backpressure-fluid-path-pressure-budget" as const;
 
 const copyByLocale: Record<
   TechnicalArticleLocale,
@@ -75,6 +196,24 @@ const copyByLocale: Record<
       lifeScienceInstrumentDpl60SelectionZhCopy,
     [brushedVsBrushlessDiaphragmPumpMotorLifeSlug]:
       brushedVsBrushlessDiaphragmPumpMotorLifeZhCopy,
+    [labLiquidWasteAspirationTroubleshootingSlug]:
+      labLiquidWasteAspirationTroubleshootingZhCopy,
+    [ivdWasteAspirationPumpSelectionSlug]:
+      ivdWasteAspirationPumpSelectionZhCopy,
+    [diaphragmPump300Vs600SelectionSlug]:
+      diaphragmPump300Vs600SelectionZhCopy,
+    [diaphragmPump300MlMinFlowMarginSlug]:
+      diaphragmPump300MlMinFlowMarginZhCopy,
+    [tubeInnerDiameterAffectsDiaphragmPumpFlowSlug]:
+      tubeInnerDiameterAffectsDiaphragmPumpFlowZhCopy,
+    [suctionVsDischargeResistanceDiaphragmPumpSlug]:
+      suctionVsDischargeResistanceDiaphragmPumpZhCopy,
+    [diaphragmPumpPressureRatingTermsSlug]:
+      diaphragmPumpPressureRatingTermsZhCopy,
+    [diaphragmPump100KpaVs600KpaSelectionSlug]:
+      diaphragmPump100KpaVs600KpaSelectionZhCopy,
+    [highBackpressureFluidPathPressureBudgetSlug]:
+      highBackpressureFluidPathPressureBudgetZhCopy,
   },
   en: {
     [diaphragmPumpFlowPressureCurveSlug]: diaphragmPumpFlowPressureCurveEnCopy,
@@ -84,6 +223,24 @@ const copyByLocale: Record<
       lifeScienceInstrumentDpl60SelectionEnCopy,
     [brushedVsBrushlessDiaphragmPumpMotorLifeSlug]:
       brushedVsBrushlessDiaphragmPumpMotorLifeEnCopy,
+    [labLiquidWasteAspirationTroubleshootingSlug]:
+      labLiquidWasteAspirationTroubleshootingEnCopy,
+    [ivdWasteAspirationPumpSelectionSlug]:
+      ivdWasteAspirationPumpSelectionEnCopy,
+    [diaphragmPump300Vs600SelectionSlug]:
+      diaphragmPump300Vs600SelectionEnCopy,
+    [diaphragmPump300MlMinFlowMarginSlug]:
+      diaphragmPump300MlMinFlowMarginEnCopy,
+    [tubeInnerDiameterAffectsDiaphragmPumpFlowSlug]:
+      tubeInnerDiameterAffectsDiaphragmPumpFlowEnCopy,
+    [suctionVsDischargeResistanceDiaphragmPumpSlug]:
+      suctionVsDischargeResistanceDiaphragmPumpEnCopy,
+    [diaphragmPumpPressureRatingTermsSlug]:
+      diaphragmPumpPressureRatingTermsEnCopy,
+    [diaphragmPump100KpaVs600KpaSelectionSlug]:
+      diaphragmPump100KpaVs600KpaSelectionEnCopy,
+    [highBackpressureFluidPathPressureBudgetSlug]:
+      highBackpressureFluidPathPressureBudgetEnCopy,
   },
   es: {
     [diaphragmPumpFlowPressureCurveSlug]: diaphragmPumpFlowPressureCurveEsCopy,
@@ -93,6 +250,24 @@ const copyByLocale: Record<
       lifeScienceInstrumentDpl60SelectionEsCopy,
     [brushedVsBrushlessDiaphragmPumpMotorLifeSlug]:
       brushedVsBrushlessDiaphragmPumpMotorLifeEsCopy,
+    [labLiquidWasteAspirationTroubleshootingSlug]:
+      labLiquidWasteAspirationTroubleshootingEsCopy,
+    [ivdWasteAspirationPumpSelectionSlug]:
+      ivdWasteAspirationPumpSelectionEsCopy,
+    [diaphragmPump300Vs600SelectionSlug]:
+      diaphragmPump300Vs600SelectionEsCopy,
+    [diaphragmPump300MlMinFlowMarginSlug]:
+      diaphragmPump300MlMinFlowMarginEsCopy,
+    [tubeInnerDiameterAffectsDiaphragmPumpFlowSlug]:
+      tubeInnerDiameterAffectsDiaphragmPumpFlowEsCopy,
+    [suctionVsDischargeResistanceDiaphragmPumpSlug]:
+      suctionVsDischargeResistanceDiaphragmPumpEsCopy,
+    [diaphragmPumpPressureRatingTermsSlug]:
+      diaphragmPumpPressureRatingTermsEsCopy,
+    [diaphragmPump100KpaVs600KpaSelectionSlug]:
+      diaphragmPump100KpaVs600KpaSelectionEsCopy,
+    [highBackpressureFluidPathPressureBudgetSlug]:
+      highBackpressureFluidPathPressureBudgetEsCopy,
   },
   fr: {
     [diaphragmPumpFlowPressureCurveSlug]: diaphragmPumpFlowPressureCurveFrCopy,
@@ -102,6 +277,24 @@ const copyByLocale: Record<
       lifeScienceInstrumentDpl60SelectionFrCopy,
     [brushedVsBrushlessDiaphragmPumpMotorLifeSlug]:
       brushedVsBrushlessDiaphragmPumpMotorLifeFrCopy,
+    [labLiquidWasteAspirationTroubleshootingSlug]:
+      labLiquidWasteAspirationTroubleshootingFrCopy,
+    [ivdWasteAspirationPumpSelectionSlug]:
+      ivdWasteAspirationPumpSelectionFrCopy,
+    [diaphragmPump300Vs600SelectionSlug]:
+      diaphragmPump300Vs600SelectionFrCopy,
+    [diaphragmPump300MlMinFlowMarginSlug]:
+      diaphragmPump300MlMinFlowMarginFrCopy,
+    [tubeInnerDiameterAffectsDiaphragmPumpFlowSlug]:
+      tubeInnerDiameterAffectsDiaphragmPumpFlowFrCopy,
+    [suctionVsDischargeResistanceDiaphragmPumpSlug]:
+      suctionVsDischargeResistanceDiaphragmPumpFrCopy,
+    [diaphragmPumpPressureRatingTermsSlug]:
+      diaphragmPumpPressureRatingTermsFrCopy,
+    [diaphragmPump100KpaVs600KpaSelectionSlug]:
+      diaphragmPump100KpaVs600KpaSelectionFrCopy,
+    [highBackpressureFluidPathPressureBudgetSlug]:
+      highBackpressureFluidPathPressureBudgetFrCopy,
   },
   ko: {
     [diaphragmPumpFlowPressureCurveSlug]: diaphragmPumpFlowPressureCurveKoCopy,
@@ -111,6 +304,24 @@ const copyByLocale: Record<
       lifeScienceInstrumentDpl60SelectionKoCopy,
     [brushedVsBrushlessDiaphragmPumpMotorLifeSlug]:
       brushedVsBrushlessDiaphragmPumpMotorLifeKoCopy,
+    [labLiquidWasteAspirationTroubleshootingSlug]:
+      labLiquidWasteAspirationTroubleshootingKoCopy,
+    [ivdWasteAspirationPumpSelectionSlug]:
+      ivdWasteAspirationPumpSelectionKoCopy,
+    [diaphragmPump300Vs600SelectionSlug]:
+      diaphragmPump300Vs600SelectionKoCopy,
+    [diaphragmPump300MlMinFlowMarginSlug]:
+      diaphragmPump300MlMinFlowMarginKoCopy,
+    [tubeInnerDiameterAffectsDiaphragmPumpFlowSlug]:
+      tubeInnerDiameterAffectsDiaphragmPumpFlowKoCopy,
+    [suctionVsDischargeResistanceDiaphragmPumpSlug]:
+      suctionVsDischargeResistanceDiaphragmPumpKoCopy,
+    [diaphragmPumpPressureRatingTermsSlug]:
+      diaphragmPumpPressureRatingTermsKoCopy,
+    [diaphragmPump100KpaVs600KpaSelectionSlug]:
+      diaphragmPump100KpaVs600KpaSelectionKoCopy,
+    [highBackpressureFluidPathPressureBudgetSlug]:
+      highBackpressureFluidPathPressureBudgetKoCopy,
   },
   ru: {
     [diaphragmPumpFlowPressureCurveSlug]: diaphragmPumpFlowPressureCurveRuCopy,
@@ -120,6 +331,24 @@ const copyByLocale: Record<
       lifeScienceInstrumentDpl60SelectionRuCopy,
     [brushedVsBrushlessDiaphragmPumpMotorLifeSlug]:
       brushedVsBrushlessDiaphragmPumpMotorLifeRuCopy,
+    [labLiquidWasteAspirationTroubleshootingSlug]:
+      labLiquidWasteAspirationTroubleshootingRuCopy,
+    [ivdWasteAspirationPumpSelectionSlug]:
+      ivdWasteAspirationPumpSelectionRuCopy,
+    [diaphragmPump300Vs600SelectionSlug]:
+      diaphragmPump300Vs600SelectionRuCopy,
+    [diaphragmPump300MlMinFlowMarginSlug]:
+      diaphragmPump300MlMinFlowMarginRuCopy,
+    [tubeInnerDiameterAffectsDiaphragmPumpFlowSlug]:
+      tubeInnerDiameterAffectsDiaphragmPumpFlowRuCopy,
+    [suctionVsDischargeResistanceDiaphragmPumpSlug]:
+      suctionVsDischargeResistanceDiaphragmPumpRuCopy,
+    [diaphragmPumpPressureRatingTermsSlug]:
+      diaphragmPumpPressureRatingTermsRuCopy,
+    [diaphragmPump100KpaVs600KpaSelectionSlug]:
+      diaphragmPump100KpaVs600KpaSelectionRuCopy,
+    [highBackpressureFluidPathPressureBudgetSlug]:
+      highBackpressureFluidPathPressureBudgetRuCopy,
   },
 };
 
@@ -161,6 +390,7 @@ function createTechnicalArticle(
   relationKeys: string[],
   relationPriority: number,
   date = "2026-08-24",
+  category: TechnicalArticleCategory = "pumps-valves",
 ): TechnicalArticleItem {
   const copy = getDiaphragmPumpEngineeringArticleCopy(slug, locale);
 
@@ -169,7 +399,7 @@ function createTechnicalArticle(
     slug,
     relationKeys,
     relationPriority,
-    category: "pumps-valves",
+    category,
     title: copy.metadata.title,
     summary: copy.deck,
     date,
@@ -189,6 +419,77 @@ function createTechnicalArticle(
 export function getDiaphragmPumpEngineeringArticles(
   locale: TechnicalArticleLocale,
 ): TechnicalArticleItem[] {
+  const flowPressureArticles = [
+    createTechnicalArticle(
+      diaphragmPump300Vs600SelectionSlug,
+      locale,
+      ["series:dpl30", "series:dpl60"],
+      112,
+      "2026-08-26",
+    ),
+    createTechnicalArticle(
+      diaphragmPump300MlMinFlowMarginSlug,
+      locale,
+      ["series:dpl30"],
+      111,
+      "2026-08-26",
+    ),
+    createTechnicalArticle(
+      tubeInnerDiameterAffectsDiaphragmPumpFlowSlug,
+      locale,
+      ["series:dpl30", "series:dpl60", "series:dpl30h"],
+      110,
+      "2026-08-26",
+    ),
+    createTechnicalArticle(
+      suctionVsDischargeResistanceDiaphragmPumpSlug,
+      locale,
+      ["series:dpl30", "series:dpl60", "series:dpl30h"],
+      109,
+      "2026-08-26",
+    ),
+    createTechnicalArticle(
+      diaphragmPumpPressureRatingTermsSlug,
+      locale,
+      ["series:dpl30", "series:dpl60", "series:dpl30h"],
+      108,
+      "2026-08-26",
+    ),
+    createTechnicalArticle(
+      diaphragmPump100KpaVs600KpaSelectionSlug,
+      locale,
+      ["series:dpl30", "series:dpl60", "series:dpl30h"],
+      107,
+      "2026-08-26",
+    ),
+    createTechnicalArticle(
+      highBackpressureFluidPathPressureBudgetSlug,
+      locale,
+      ["series:dpl30h"],
+      106,
+      "2026-08-26",
+    ),
+  ];
+
+  const applicationArticles = [
+    createTechnicalArticle(
+      ivdWasteAspirationPumpSelectionSlug,
+      locale,
+      ["series:dpgl800"],
+      104,
+      "2026-08-26",
+      "applications",
+    ),
+    createTechnicalArticle(
+      labLiquidWasteAspirationTroubleshootingSlug,
+      locale,
+      ["series:dpgl800"],
+      103,
+      "2026-08-26",
+      "applications",
+    ),
+  ];
+
   const multilingualArticles = [
     createTechnicalArticle(
       diaphragmPumpFlowPressureCurveSlug,
@@ -205,6 +506,8 @@ export function getDiaphragmPumpEngineeringArticles(
   ];
 
   return [
+    ...flowPressureArticles,
+    ...applicationArticles,
     createTechnicalArticle(
       brushedVsBrushlessDiaphragmPumpMotorLifeSlug,
       locale,
