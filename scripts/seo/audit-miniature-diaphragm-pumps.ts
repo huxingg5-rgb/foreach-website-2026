@@ -16,6 +16,7 @@ import {
 } from "../../data/products/detail/diaphragm-pump-reference-models";
 import { getDiaphragmPumpCopy } from "../../data/products/detail/diaphragm-pump-copy";
 import { diaphragmPumpSelectionProducts } from "../../data/products/selection/diaphragm-pump-selection.generated";
+import { getProductTypeIntroByIds } from "../../data/products/selection/product-type-intro";
 import { siteSearchIndex } from "../../data/search/site-search-index.generated";
 
 const projectRoot = process.cwd();
@@ -265,8 +266,11 @@ for (const route of expectedRoutes) readRoute(route);
 
 for (const locale of DIAPHRAGM_PUMP_PUBLIC_LOCALES) {
   const copy = DIAPHRAGM_PUMP_CATEGORY_COPY[locale];
+  const parentIntroHeading =
+    getProductTypeIntroByIds("pumps", "diaphragm-pump", locale)?.title ||
+    copy.parent;
   const categoryChecks = [
-    { slug: "", h1: copy.parent, cards: 7 },
+    { slug: "", h1: parentIntroHeading, cards: 7 },
     { slug: "liquid-diaphragm-pumps", h1: copy.liquid, cards: 6 },
     { slug: "gas-liquid-diaphragm-pumps", h1: copy.gasLiquid, cards: 1 },
     { slug: "gas-diaphragm-pumps", h1: copy.gas, cards: 0 },

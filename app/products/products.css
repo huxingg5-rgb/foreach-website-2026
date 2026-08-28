@@ -2048,14 +2048,6 @@
   margin-right: auto !important;
 }
 
-.product-selection-page-title[data-product-type-id="diaphragm-pump"] {
-  margin: 0 0 24px;
-  color: #12284c;
-  font-size: clamp(32px, 4vw, 48px);
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-}
-
 .product-selection-layout,
 .selection-layout,
 .products-layout {
@@ -2604,7 +2596,7 @@
   padding-top: 2px !important;
 }
 
-.products-selection-page .product-type-intro-copy h2 {
+.products-selection-page .product-type-intro-copy .product-type-intro-heading {
   margin: 0 0 14px !important;
   color: var(--brand-blue) !important;
   font-size: 31px !important;
@@ -2667,7 +2659,7 @@
     transform: scale(1.14) !important;
   }
 
-  .products-selection-page .product-type-intro-copy h2 {
+  .products-selection-page .product-type-intro-copy .product-type-intro-heading {
     font-size: 28px !important;
   }
 
@@ -2707,7 +2699,7 @@
     padding-top: 0 !important;
   }
 
-  .products-selection-page .product-type-intro-copy h2 {
+  .products-selection-page .product-type-intro-copy .product-type-intro-heading {
     font-size: 22px !important;
     font-weight: 800 !important;
   }

@@ -3413,7 +3413,9 @@ export default function ProductSelectionClient({
     return options.map((option) => ({
       ...option,
       label: getLocalizedFilterOptionLabel(
-        option.label || option.value,
+        option.value === "diaphragm-pump"
+          ? "隔膜泵"
+          : option.label || option.value,
         locale
       ),
     }));
@@ -3676,6 +3678,10 @@ export default function ProductSelectionClient({
     activeProductTypeId,
     locale
   );
+  const activeProductTypeIntroHeading =
+    activeProductTypeId === "diaphragm-pump" && initialFilters?.filter01?.length
+      ? diaphragmCategoryHeading
+      : activeProductTypeIntro?.title || "";
   const selectedTagItems = useMemo<ProductSelectionSelectedTag[]>(() => {
     const tags: ProductSelectionSelectedTag[] = [];
 
@@ -4949,15 +4955,6 @@ function isFilterOptionActive(
       >
         <main className="products-main">
           <div className="products-container">
-            {diaphragmCategoryHeading ? (
-              <h1
-                className="product-selection-page-title"
-                data-product-type-id="diaphragm-pump"
-              >
-                {diaphragmCategoryHeading}
-              </h1>
-            ) : null}
-
             <ResourceSearchBar
               value={searchInputValue}
               onChange={handleSearchInputChange}
@@ -5002,7 +4999,15 @@ function isFilterOptionActive(
                 </div>
 
                 <div className="product-type-intro-copy">
-                  <h2>{activeProductTypeIntro.title}</h2>
+                  {activeProductTypeId === "diaphragm-pump" ? (
+                    <h1 className="product-type-intro-heading">
+                      {activeProductTypeIntroHeading}
+                    </h1>
+                  ) : (
+                    <h2 className="product-type-intro-heading">
+                      {activeProductTypeIntroHeading}
+                    </h2>
+                  )}
                   {activeProductTypeIntro.paragraphs.map((paragraph) => (
                     <p key={paragraph}>
                       {renderProductTypeIntroParagraph(paragraph)}
