@@ -231,12 +231,12 @@
     "dpgl800-brushless": {
       "title": "DPGL800系列无刷气液混合隔膜泵",
       "cardParameters": [
-        "流量 6 L/min",
-        "最大真空度 -90 kPa",
+        "单泵头空载气体流量 6 L/min",
+        "最大正压 +30 kPa · 最大负压 < -90 kPa",
         "寿命 10000 h"
       ],
-      "intro": "恒永达DPGL800系列无刷气液混合隔膜泵可用于气体、液体及气液混合介质的抽吸和输送，流量为6 L/min，最大真空度为-90 kPa，采用无刷电机，使用寿命为10000 h。产品适用于废液抽排、气液混合介质输送、管路排空及需要较强抽吸能力的自动化设备。具体性能会受到介质状态、管路结构和工作负载影响，参数以页面下方规格表为准。",
-      "applications": "废液抽排、气液混合介质输送、管路排空、气体抽吸",
+      "intro": "恒永达DPGL800系列无刷气液混合隔膜泵用于气体抽吸、负压建立以及气液混合介质的抽排和输送，采用24 V无刷电机，单泵头空载气体流量为6 L/min，最大正压为+30 kPa，最大负压小于-90 kPa（< -90 kPa），使用寿命为10000 h。产品适用于含气废液抽排、气液混合介质输送、管路排空及需要较强抽吸能力的自动化设备。实际性能会受到介质状态、管路结构和工作负载影响，具体参数以页面下方规格表为准。",
+      "applications": "气体抽吸、负压建立、含气废液抽排、气液混合介质输送、管路排空",
       "breadcrumbs": [
         "首页",
         "产品中心",
@@ -245,24 +245,24 @@
       ],
       "faqs": [
         {
-          "question": "DPGL800可以输送哪些介质？",
-          "answer": "DPGL800可用于气体、液体以及气液混合介质的抽吸和输送。实际使用前仍需确认介质与接液材质的兼容性。"
+          "question": "DPGL800适用哪些工作介质？",
+          "answer": "DPGL800的正式规格适用于气体和气液混合介质，不包括纯液体输送。实际使用前仍需确认介质与接液材质的兼容性。"
         },
         {
-          "question": "DPGL800的流量和最大真空度是多少？",
-          "answer": "该产品流量为6 L/min，最大真空度为-90 kPa。实际性能会受到介质状态、管路阻力和设备负载影响。"
+          "question": "DPGL800的流量和压力参数是多少？",
+          "answer": "DPGL800的单泵头空载气体流量为6 L/min，最大正压为+30 kPa，最大负压为< -90 kPa。实际性能会受到介质状态、管路阻力和设备负载影响。"
         },
         {
           "question": "DPGL800适合哪些应用？",
-          "answer": "可用于废液抽排、气液混合介质输送、管路排空和需要较强抽吸能力的自动化设备。"
+          "answer": "DPGL800适用于气体抽吸、负压建立、含气废液抽排、气液混合介质输送、管路排空，以及需要较强抽吸能力的自动化设备。"
         },
         {
-          "question": "DPGL800可以只抽液体吗？",
-          "answer": "产品可用于液体及气液混合介质输送，但是否适合具体液体，需要结合介质性质、工作时间和接液材质进行确认。"
+          "question": "DPGL800可以作为纯液体输送泵使用吗？",
+          "answer": "不建议按纯液体输送工况选用DPGL800。当前正式规格仅覆盖气体和气液混合介质；纯液体工况应选用液体隔膜泵，除非恒永达针对具体应用另行确认。"
         },
         {
           "question": "DPGL800选型前需要提供哪些参数？",
-          "answer": "建议提供介质状态、液体比例、目标流量、所需真空度、管路尺寸、连续运行时间、工作电压及安装空间。"
+          "answer": "建议提供介质状态、气液比例、目标气体流量、所需正压或负压、管路尺寸、连续运行时间、工作电压、接液材质和安装空间。"
         }
       ]
     }
@@ -271,11 +271,11 @@
     "dpl30-brushed": {
       "title": "DPL30 Series Brushed Liquid Diaphragm Pump",
       "cardParameters": [
-        "Flow Rate 300 mL/min",
+        "No-Load Flow 300 mL/min",
         "Pressure Rating 100 kPa",
         "Service Life 3000 h"
       ],
-      "intro": "The FOREACH DPL30 Series Brushed Liquid Diaphragm Pump is designed for liquid transfer, with a flow rate of 300 mL/min, a pressure rating of 100 kPa, a brushed motor, and a service life of 3000 h. It is suitable for cleaning-solution transfer, reagent transfer, waste-liquid discharge, line priming, and liquid circulation, and can be selected for IVD, life science, laboratory automation, and analytical instrument applications. Actual flow may vary with the medium, operating pressure, and tubing resistance. Refer to the specification table below for detailed parameters.",
+      "intro": "The FOREACH DPL30 Series Brushed Liquid Diaphragm Pump is designed for liquid transfer, with a no-load flow rate of 300 mL/min, a pressure rating of 100 kPa, a brushed motor, and a service life of 3000 h. It is suitable for cleaning-solution transfer, reagent transfer, waste-liquid discharge, line priming, and liquid circulation, and can be selected for IVD, life science, laboratory automation, and analytical instrument applications. Actual flow may vary with the medium, operating pressure, and tubing resistance. Refer to the specification table below for detailed parameters.",
       "applications": "Cleaning-solution transfer, reagent transfer, waste-liquid discharge, line priming, liquid circulation",
       "breadcrumbs": [
         "Home",
@@ -290,7 +290,7 @@
         },
         {
           "question": "What are the flow rate and pressure rating of the DPL30 Series Brushed Liquid Diaphragm Pump?",
-          "answer": "The flow rate is 300 mL/min and the pressure rating is 100 kPa. Actual flow may be affected by liquid viscosity, tubing length, tubing diameter, operating pressure, and fluid-path resistance."
+          "answer": "The no-load flow rate is 300 mL/min and the pressure rating is 100 kPa. Actual flow may be affected by liquid viscosity, tubing length, tubing diameter, operating pressure, and fluid-path resistance."
         },
         {
           "question": "Can the DPL30 Series Brushed Liquid Diaphragm Pump be used in IVD equipment?",
@@ -309,11 +309,11 @@
     "dpl30-brushless": {
       "title": "DPL30 Series Brushless Liquid Diaphragm Pump",
       "cardParameters": [
-        "Flow Rate 300 mL/min",
+        "No-Load Flow 300 mL/min",
         "Pressure Rating 100 kPa",
         "Service Life 10000 h"
       ],
-      "intro": "The FOREACH DPL30 Series Brushless Liquid Diaphragm Pump is designed for liquid transfer, with a flow rate of 300 mL/min, a pressure rating of 100 kPa, a brushless motor, and a service life of 10000 h. It is suitable for cleaning-solution transfer, reagent transfer, waste-liquid discharge, line priming, and liquid circulation, and can be selected for IVD, life science, laboratory automation, and analytical instrument applications. It is suitable for equipment that requires a longer operating life and longer maintenance intervals. Refer to the specification table below for detailed parameters.",
+      "intro": "The FOREACH DPL30 Series Brushless Liquid Diaphragm Pump is designed for liquid transfer, with a no-load flow rate of 300 mL/min, a pressure rating of 100 kPa, a brushless motor, and a service life of 10000 h. It is suitable for cleaning-solution transfer, reagent transfer, waste-liquid discharge, line priming, and liquid circulation, and can be selected for IVD, life science, laboratory automation, and analytical instrument applications. It is suitable for equipment that requires a longer operating life and longer maintenance intervals. Refer to the specification table below for detailed parameters.",
       "applications": "Cleaning-solution transfer, reagent transfer, waste-liquid discharge, line priming, liquid circulation",
       "breadcrumbs": [
         "Home",
@@ -328,7 +328,7 @@
         },
         {
           "question": "What are the flow rate and pressure rating of the DPL30 Series Brushless Liquid Diaphragm Pump?",
-          "answer": "The flow rate is 300 mL/min and the pressure rating is 100 kPa. Actual flow may decrease as tubing resistance and operating pressure increase."
+          "answer": "The no-load flow rate is 300 mL/min and the pressure rating is 100 kPa. Actual flow may decrease as tubing resistance and operating pressure increase."
         },
         {
           "question": "What is the difference between the brushless and brushed DPL30 versions?",
@@ -347,11 +347,11 @@
     "dpl60-brushed": {
       "title": "DPL60 Series Brushed Liquid Diaphragm Pump",
       "cardParameters": [
-        "Flow Rate 600 mL/min",
+        "No-Load Flow 600 mL/min",
         "Pressure Rating 100 kPa",
         "Service Life 3000 h"
       ],
-      "intro": "The FOREACH DPL60 Series Brushed Liquid Diaphragm Pump is designed for liquid transfer, with a flow rate of 600 mL/min, a pressure rating of 100 kPa, a brushed motor, and a service life of 3000 h. It is suitable for cleaning-solution transfer, waste-liquid discharge, line priming, and liquid circulation, and can be selected for IVD, life science, laboratory automation, and analytical instrument applications. Actual flow may vary with the medium, operating pressure, and tubing resistance. Refer to the specification table below for detailed parameters.",
+      "intro": "The FOREACH DPL60 Series Brushed Liquid Diaphragm Pump is designed for liquid transfer, with a no-load flow rate of 600 mL/min, a pressure rating of 100 kPa, a brushed motor, and a service life of 3000 h. It is suitable for cleaning-solution transfer, waste-liquid discharge, line priming, and liquid circulation, and can be selected for IVD, life science, laboratory automation, and analytical instrument applications. Actual flow may vary with the medium, operating pressure, and tubing resistance. Refer to the specification table below for detailed parameters.",
       "applications": "Cleaning-solution transfer, waste-liquid discharge, line priming, liquid circulation",
       "breadcrumbs": [
         "Home",
@@ -366,11 +366,11 @@
         },
         {
           "question": "What are the flow rate and pressure rating of the DPL60 Series Brushed Liquid Diaphragm Pump?",
-          "answer": "The flow rate is 600 mL/min and the pressure rating is 100 kPa. Actual flow may be affected by the medium and fluid-path resistance."
+          "answer": "The no-load flow rate is 600 mL/min and the pressure rating is 100 kPa. Actual flow may be affected by the medium and fluid-path resistance."
         },
         {
           "question": "How should I choose between DPL60 and DPL30?",
-          "answer": "DPL30 has a flow rate of 300 mL/min, while DPL60 has a flow rate of 600 mL/min. Select according to the required flow rate, tubing resistance, and operating time."
+          "answer": "DPL30 has a no-load flow rate of 300 mL/min, while DPL60 has a no-load flow rate of 600 mL/min. Select according to the required operating flow, tubing resistance, and operating time."
         },
         {
           "question": "What is the service life of the brushed DPL60 version?",
@@ -385,11 +385,11 @@
     "dpl60-brushless": {
       "title": "DPL60 Series Brushless Liquid Diaphragm Pump",
       "cardParameters": [
-        "Flow Rate 600 mL/min",
+        "No-Load Flow 600 mL/min",
         "Pressure Rating 100 kPa",
         "Service Life 10000 h"
       ],
-      "intro": "The FOREACH DPL60 Series Brushless Liquid Diaphragm Pump is designed for liquid transfer, with a flow rate of 600 mL/min, a pressure rating of 100 kPa, a brushless motor, and a service life of 10000 h. It is suitable for cleaning-solution transfer, waste-liquid discharge, line priming, and liquid circulation, and can be selected for IVD, life science, laboratory automation, and analytical instrument applications. It is suitable for equipment that requires longer operating periods or longer maintenance intervals. Refer to the specification table below for detailed parameters.",
+      "intro": "The FOREACH DPL60 Series Brushless Liquid Diaphragm Pump is designed for liquid transfer, with a no-load flow rate of 600 mL/min, a pressure rating of 100 kPa, a brushless motor, and a service life of 10000 h. It is suitable for cleaning-solution transfer, waste-liquid discharge, line priming, and liquid circulation, and can be selected for IVD, life science, laboratory automation, and analytical instrument applications. It is suitable for equipment that requires longer operating periods or longer maintenance intervals. Refer to the specification table below for detailed parameters.",
       "applications": "Cleaning-solution transfer, waste-liquid discharge, line priming, liquid circulation",
       "breadcrumbs": [
         "Home",
@@ -404,7 +404,7 @@
         },
         {
           "question": "What are the flow rate and pressure rating of the brushless DPL60 version?",
-          "answer": "The flow rate is 600 mL/min and the pressure rating is 100 kPa. Actual flow should be confirmed according to tubing length, tubing diameter, medium, and operating pressure."
+          "answer": "The no-load flow rate is 600 mL/min and the pressure rating is 100 kPa. Actual flow should be confirmed according to tubing length, tubing diameter, medium, and operating pressure."
         },
         {
           "question": "Is the brushless DPL60 version suitable for continuous operation?",
@@ -412,7 +412,7 @@
         },
         {
           "question": "What is the main difference between DPL60 and DPL30?",
-          "answer": "The main difference is flow rate. DPL30 is 300 mL/min and DPL60 is 600 mL/min. Select according to the required transfer rate of the equipment fluid path."
+          "answer": "The main difference is the no-load flow rating: 300 mL/min for DPL30 and 600 mL/min for DPL60. Select according to the required operating flow of the equipment fluid path."
         },
         {
           "question": "Why are tubing parameters required when selecting the DPL60 Series Brushless Liquid Diaphragm Pump?",
@@ -423,11 +423,11 @@
     "dpl30h-brushed": {
       "title": "DPL30H Series Brushed High-Pressure Liquid Diaphragm Pump",
       "cardParameters": [
-        "Flow Rate 300 mL/min",
+        "No-Load Flow 300 mL/min",
         "Pressure Rating 600 kPa",
         "Service Life 3000 h"
       ],
-      "intro": "The FOREACH DPL30H Series Brushed High-Pressure Liquid Diaphragm Pump is designed for liquid transfer under higher-pressure conditions, with a flow rate of 300 mL/min, a pressure rating of 600 kPa, a brushed motor, and a service life of 3000 h. It is suitable for automated instruments with higher tubing resistance, higher back pressure, or stable liquid-transfer requirements, and can be selected for IVD, life science, laboratory automation, and analytical instrument applications. Actual performance may vary with the medium, tubing, and operating pressure. Refer to the specification table below for detailed parameters.",
+      "intro": "The FOREACH DPL30H Series Brushed High-Pressure Liquid Diaphragm Pump is designed for liquid transfer under higher-pressure conditions, with a no-load flow rate of 300 mL/min, a pressure rating of 600 kPa, a brushed motor, and a service life of 3000 h. It is suitable for automated instruments with higher tubing resistance, higher back pressure, or stable liquid-transfer requirements, and can be selected for IVD, life science, laboratory automation, and analytical instrument applications. Actual performance may vary with the medium, tubing, and operating pressure. Refer to the specification table below for detailed parameters.",
       "applications": "High-back-pressure liquid transfer, cleaning-solution transfer, reagent transfer, liquid circulation",
       "breadcrumbs": [
         "Home",
@@ -438,7 +438,7 @@
       "faqs": [
         {
           "question": "What is the difference between DPL30H and the standard DPL30?",
-          "answer": "DPL30H is a high-pressure liquid diaphragm pump with a flow rate of 300 mL/min and a pressure rating of 600 kPa. The standard DPL30 has a flow rate of 300 mL/min and a pressure rating of 100 kPa. DPL30H is more suitable for fluid paths with higher back pressure or tubing resistance."
+          "answer": "DPL30H is a high-pressure liquid diaphragm pump with a no-load flow rate of 300 mL/min and a pressure rating of 600 kPa. The standard DPL30 has the same no-load flow rating and a pressure rating of 100 kPa. DPL30H is more suitable for fluid paths with higher back pressure or tubing resistance."
         },
         {
           "question": "What applications are suitable for the brushed DPL30H version?",
@@ -461,11 +461,11 @@
     "dpl30h-brushless": {
       "title": "DPL30H Series Brushless High-Pressure Liquid Diaphragm Pump",
       "cardParameters": [
-        "Flow Rate 300 mL/min",
+        "No-Load Flow 300 mL/min",
         "Pressure Rating 600 kPa",
         "Service Life 10000 h"
       ],
-      "intro": "The FOREACH DPL30H Series Brushless High-Pressure Liquid Diaphragm Pump is designed for liquid transfer under higher-pressure conditions, with a flow rate of 300 mL/min, a pressure rating of 600 kPa, a brushless motor, and a service life of 10000 h. It is suitable for automated instruments with higher tubing resistance, higher back pressure, or longer continuous operating periods, and can be selected for IVD, life science, laboratory automation, and analytical instrument applications. Refer to the specification table below for detailed parameters.",
+      "intro": "The FOREACH DPL30H Series Brushless High-Pressure Liquid Diaphragm Pump is designed for liquid transfer under higher-pressure conditions, with a no-load flow rate of 300 mL/min, a pressure rating of 600 kPa, a brushless motor, and a service life of 10000 h. It is suitable for automated instruments with higher tubing resistance, higher back pressure, or longer continuous operating periods, and can be selected for IVD, life science, laboratory automation, and analytical instrument applications. Refer to the specification table below for detailed parameters.",
       "applications": "High-back-pressure liquid transfer, cleaning-solution transfer, reagent transfer, liquid circulation",
       "breadcrumbs": [
         "Home",
@@ -480,11 +480,11 @@
         },
         {
           "question": "What are the flow rate and pressure rating of the brushless DPL30H version?",
-          "answer": "The flow rate is 300 mL/min and the pressure rating is 600 kPa. Actual performance should be confirmed according to the medium, tubing, and operating pressure."
+          "answer": "The no-load flow rate is 300 mL/min and the pressure rating is 600 kPa. Actual performance should be confirmed according to the medium, tubing, and operating pressure."
         },
         {
           "question": "What is the difference between the brushless and brushed DPL30H versions?",
-          "answer": "Both versions have the same flow rate and pressure rating. The main differences are motor type and service life. The brushless version has a service life of 10000 h, while the brushed version has a service life of 3000 h."
+          "answer": "Both versions have the same no-load flow and pressure ratings. The main differences are motor type and service life. The brushless version has a service life of 10000 h, while the brushed version has a service life of 3000 h."
         },
         {
           "question": "Can the DPL30H Series Brushless High-Pressure Liquid Diaphragm Pump be used in IVD equipment?",
@@ -499,12 +499,12 @@
     "dpgl800-brushless": {
       "title": "DPGL800 Series Brushless Gas-Liquid Diaphragm Pump",
       "cardParameters": [
-        "Flow Rate 6 L/min",
-        "Maximum Vacuum -90 kPa",
+        "Single-Head No-Load Gas Flow 6 L/min",
+        "Maximum Positive Pressure +30 kPa · Maximum Negative Pressure < -90 kPa",
         "Service Life 10000 h"
       ],
-      "intro": "The FOREACH DPGL800 Series Brushless Gas-Liquid Diaphragm Pump can be used to draw and transfer gas, liquid, and gas-liquid mixed media, with a flow rate of 6 L/min, a maximum vacuum of -90 kPa, a brushless motor, and a service life of 10000 h. It is suitable for waste-liquid extraction, gas-liquid mixed-media transfer, line evacuation, and automated equipment requiring strong suction performance. Actual performance may vary with the medium state, tubing configuration, and operating load. Refer to the specification table below for detailed parameters.",
-      "applications": "Waste-liquid extraction, gas-liquid mixed-media transfer, line evacuation, gas suction",
+      "intro": "The FOREACH DPGL800 Series Brushless Gas-Liquid Diaphragm Pump is designed to draw and transfer gas and gas-liquid mixtures. It has a single-head no-load gas flow rate of 6 L/min, a maximum positive pressure of +30 kPa, a maximum negative pressure of < -90 kPa, a 24 V brushless motor, and a service life of 10000 h. It is suitable for gas-liquid waste extraction, gas-liquid mixture transfer, line evacuation, and automated equipment requiring strong suction performance. Actual performance may vary with the medium state, tubing configuration, and operating load. Refer to the specification table below for detailed parameters.",
+      "applications": "Gas suction, vacuum generation, gas-liquid waste extraction, gas-liquid mixture transfer, line evacuation",
       "breadcrumbs": [
         "Home",
         "Product Center",
@@ -514,19 +514,19 @@
       "faqs": [
         {
           "question": "What media can the DPGL800 transfer?",
-          "answer": "DPGL800 can be used to draw and transfer gas, liquid, and gas-liquid mixed media. Before use, confirm the compatibility of the medium with the wetted materials."
+          "answer": "DPGL800 is specified for gas and gas-liquid mixtures. Before use, confirm the compatibility of the medium with the wetted materials."
         },
         {
-          "question": "What are the flow rate and maximum vacuum of the DPGL800?",
-          "answer": "The flow rate is 6 L/min and the maximum vacuum is -90 kPa. Actual performance may be affected by the medium state, tubing resistance, and equipment load."
+          "question": "What are the flow and pressure ratings of the DPGL800?",
+          "answer": "The single-head no-load gas flow rate is 6 L/min, the maximum positive pressure is +30 kPa, and the maximum negative pressure is < -90 kPa. Actual performance may be affected by the medium state, tubing resistance, and equipment load."
         },
         {
           "question": "What applications are suitable for the DPGL800?",
-          "answer": "It can be used for waste-liquid extraction, gas-liquid mixed-media transfer, line evacuation, and automated equipment requiring strong suction performance."
+          "answer": "It can be used for gas suction, vacuum generation, gas-liquid waste extraction, gas-liquid mixture transfer, line evacuation, and automated equipment requiring strong suction performance."
         },
         {
-          "question": "Can the DPGL800 pump liquid only?",
-          "answer": "It can be used for liquid and gas-liquid mixed-media transfer, but suitability for a specific liquid must be confirmed according to the medium properties, operating time, and wetted materials."
+          "question": "Can the DPGL800 be used as a pure-liquid transfer pump?",
+          "answer": "The current formal specification covers gas and gas-liquid mixtures, not pure-liquid transfer. Use a liquid diaphragm pump for a pure-liquid duty unless FOREACH confirms a specific DPGL800 application."
         },
         {
           "question": "What information is required before selecting the DPGL800?",
@@ -765,40 +765,40 @@
       ]
     },
     "dpgl800-brushless": {
-      "title": "Bomba de diafragma sin escobillas para gas y líquido serie DPGL800",
+      "title": "Bomba de diafragma sin escobillas de la serie DPGL800 para gases y mezclas gas-líquido",
       "cardParameters": [
-        "Caudal 6 L/min",
-        "Vacío máximo -90 kPa",
+        "Caudal de gas sin carga, con un solo cabezal: 6 L/min",
+        "Presión positiva máx. +30 kPa · presión negativa máx. < -90 kPa",
         "Vida útil 10000 h"
       ],
-      "intro": "La bomba de diafragma sin escobillas para gas y líquido serie DPGL800 de FOREACH puede utilizarse para la aspiración y el transporte de gases, líquidos y medios mixtos gas-líquido. Ofrece un caudal de 6 L/min, un vacío máximo de -90 kPa, utiliza un motor sin escobillas y tiene una vida útil de 10000 h. Es adecuada para la extracción de líquidos residuales, el transporte de medios mixtos gas-líquido, el vaciado de tuberías y equipos automatizados que requieren una elevada capacidad de aspiración. El rendimiento real puede variar según el estado del medio, la configuración de la tubería y la carga de trabajo. Consulte la tabla de especificaciones inferior para ver los parámetros detallados.",
-      "applications": "Extracción de líquidos residuales, transporte de medios mixtos gas-líquido, vaciado de tuberías, aspiración de gases",
+      "intro": "La bomba de diafragma sin escobillas de la serie DPGL800 de FOREACH está diseñada para la aspiración de gases, la generación de vacío y la extracción o transferencia de mezclas gas-líquido. Incorpora un motor sin escobillas de 24 V y ofrece, con un solo cabezal y sin carga, un caudal de gas de 6 L/min, una presión positiva máxima de +30 kPa, una presión negativa máxima de < -90 kPa y una vida útil de 10000 h. Es adecuada para la extracción de líquidos residuales con fase gaseosa, la transferencia de mezclas gas-líquido, el vaciado de tuberías y los equipos automatizados que requieren una alta capacidad de aspiración. El rendimiento real puede variar según el estado del medio, la configuración de las tuberías y la carga de trabajo. Consulte la tabla de especificaciones inferior para conocer los parámetros detallados.",
+      "applications": "Aspiración de gases, generación de vacío, extracción de líquidos residuales con fase gaseosa, transferencia de mezclas gas-líquido, vaciado de tuberías",
       "breadcrumbs": [
         "Inicio",
         "Centro de productos",
         "Bombas de diafragma",
-        "Bomba de diafragma sin escobillas para gas y líquido serie DPGL800"
+        "Bomba de diafragma sin escobillas de la serie DPGL800 para gases y mezclas gas-líquido"
       ],
       "faqs": [
         {
-          "question": "¿Qué medios puede transportar la DPGL800?",
-          "answer": "DPGL800 puede utilizarse para aspirar y transportar gases, líquidos y medios mixtos gas-líquido. Antes del uso, debe confirmarse la compatibilidad del medio con los materiales en contacto con el fluido."
+          "question": "¿Qué medios puede manejar la DPGL800?",
+          "answer": "La especificación vigente de la DPGL800 cubre gases y mezclas gas-líquido, no el trasvase de líquidos puros. Antes del uso, debe confirmarse la compatibilidad del medio con los materiales en contacto con el fluido."
         },
         {
-          "question": "¿Cuáles son el caudal y el vacío máximo de la DPGL800?",
-          "answer": "El caudal es de 6 L/min y el vacío máximo es de -90 kPa. El rendimiento real puede verse afectado por el estado del medio, la resistencia de la tubería y la carga del equipo."
+          "question": "¿Cuáles son el caudal y las presiones nominales de la DPGL800?",
+          "answer": "El caudal de gas sin carga con un solo cabezal es de 6 L/min, la presión positiva máxima es de +30 kPa y la presión negativa máxima es de < -90 kPa. El rendimiento real puede verse afectado por el estado del medio, la resistencia de las tuberías y la carga del equipo."
         },
         {
           "question": "¿Para qué aplicaciones es adecuada la DPGL800?",
-          "answer": "Puede utilizarse para la extracción de líquidos residuales, el transporte de medios mixtos gas-líquido, el vaciado de tuberías y equipos automatizados que requieren una elevada capacidad de aspiración."
+          "answer": "Es adecuada para la aspiración de gases, la generación de vacío, la extracción de líquidos residuales con fase gaseosa, la transferencia de mezclas gas-líquido, el vaciado de tuberías y los equipos automatizados que requieren una alta capacidad de aspiración."
         },
         {
-          "question": "¿Puede la DPGL800 bombear únicamente líquido?",
-          "answer": "Puede utilizarse para líquidos y medios mixtos gas-líquido, pero la idoneidad para un líquido concreto debe confirmarse según sus propiedades, el tiempo de funcionamiento y los materiales en contacto con el fluido."
+          "question": "¿Puede utilizarse la DPGL800 como bomba para líquidos puros?",
+          "answer": "La especificación formal vigente cubre gases y mezclas gas-líquido, no el trasvase de líquidos puros. Para una aplicación con líquido puro, utilice una bomba de diafragma para líquidos, salvo que FOREACH confirme expresamente una aplicación concreta de la DPGL800."
         },
         {
           "question": "¿Qué datos deben facilitarse antes de seleccionar la DPGL800?",
-          "answer": "Se recomienda facilitar el estado del medio, la proporción de líquido, el caudal objetivo, el vacío requerido, el tamaño de la tubería, el tiempo de funcionamiento continuo, la tensión de alimentación y el espacio de instalación."
+          "answer": "Facilite el estado del medio, la proporción gas-líquido, el caudal de gas objetivo, la presión positiva o el vacío requeridos, el tamaño de las tuberías, el tiempo de funcionamiento continuo, la tensión de alimentación, los materiales en contacto con el fluido y el espacio de instalación."
         }
       ]
     }
@@ -1033,40 +1033,40 @@
       ]
     },
     "dpgl800-brushless": {
-      "title": "Pompe à membrane sans balais pour gaz et liquides série DPGL800",
+      "title": "Pompe à membrane sans balais série DPGL800 pour gaz et mélanges gaz-liquide",
       "cardParameters": [
-        "Débit 6 L/min",
-        "Vide maximal -90 kPa",
+        "Débit de gaz à vide, une seule tête : 6 L/min",
+        "Pression positive max. +30 kPa · pression négative max. < -90 kPa",
         "Durée de vie 10000 h"
       ],
-      "intro": "La pompe à membrane sans balais pour gaz et liquides série DPGL800 de FOREACH peut être utilisée pour l’aspiration et le transfert de gaz, de liquides et de mélanges gaz-liquide. Elle offre un débit de 6 L/min, un vide maximal de -90 kPa, utilise un moteur sans balais et présente une durée de vie de 10000 h. Elle convient à l’extraction des liquides usagés, au transfert de mélanges gaz-liquide, à l’évacuation des conduites et aux équipements automatisés nécessitant une forte capacité d’aspiration. Les performances réelles peuvent varier selon l’état du fluide, la configuration des conduites et la charge de fonctionnement. Se reporter au tableau des spécifications ci-dessous pour les paramètres détaillés.",
-      "applications": "Extraction des liquides usagés, transfert de mélanges gaz-liquide, évacuation des conduites, aspiration de gaz",
+      "intro": "La pompe à membrane sans balais série DPGL800 de FOREACH est conçue pour l’aspiration de gaz, la création d’une dépression ainsi que l’extraction et le transfert de mélanges gaz-liquide. Équipée d’un moteur sans balais 24 V, elle offre, avec une seule tête et à vide, un débit de gaz de 6 L/min, une pression positive maximale de +30 kPa, une pression négative maximale de < -90 kPa et une durée de vie de 10000 h. Elle convient à l’extraction d’effluents contenant une phase gazeuse, au transfert de mélanges gaz-liquide, à l’évacuation des conduites et aux équipements automatisés nécessitant une forte capacité d’aspiration. Les performances réelles peuvent varier selon l’état du fluide, la configuration des conduites et la charge de fonctionnement. Se reporter au tableau des spécifications ci-dessous pour les paramètres détaillés.",
+      "applications": "Aspiration de gaz, création d’une dépression, extraction d’effluents contenant une phase gazeuse, transfert de mélanges gaz-liquide, évacuation des conduites",
       "breadcrumbs": [
         "Accueil",
         "Centre de produits",
         "Pompes à membrane",
-        "Pompe à membrane sans balais pour gaz et liquides série DPGL800"
+        "Pompe à membrane sans balais série DPGL800 pour gaz et mélanges gaz-liquide"
       ],
       "faqs": [
         {
-          "question": "Quels fluides la DPGL800 peut-elle transférer ?",
-          "answer": "DPGL800 peut être utilisée pour aspirer et transférer des gaz, des liquides et des mélanges gaz-liquide. Avant utilisation, vérifier la compatibilité du fluide avec les matériaux en contact avec le fluide."
+          "question": "Quels fluides la DPGL800 peut-elle prendre en charge ?",
+          "answer": "La spécification actuelle de la DPGL800 couvre les gaz et les mélanges gaz-liquide, et non le transfert de liquides purs. Avant utilisation, vérifier la compatibilité du fluide avec les matériaux en contact avec celui-ci."
         },
         {
-          "question": "Quels sont le débit et le vide maximal de la DPGL800 ?",
-          "answer": "Le débit est de 6 L/min et le vide maximal est de -90 kPa. Les performances réelles peuvent être influencées par l’état du fluide, la résistance des conduites et la charge de l’équipement."
+          "question": "Quels sont le débit et les niveaux de pression de la DPGL800 ?",
+          "answer": "Le débit de gaz à vide avec une seule tête est de 6 L/min, la pression positive maximale est de +30 kPa et la pression négative maximale est de < -90 kPa. Les performances réelles peuvent être influencées par l’état du fluide, la résistance des conduites et la charge de l’équipement."
         },
         {
           "question": "Pour quelles applications la DPGL800 est-elle adaptée ?",
-          "answer": "Elle peut être utilisée pour l’extraction des liquides usagés, le transfert de mélanges gaz-liquide, l’évacuation des conduites et les équipements automatisés nécessitant une forte capacité d’aspiration."
+          "answer": "Elle convient à l’aspiration de gaz, à la création d’une dépression, à l’extraction d’effluents contenant une phase gazeuse, au transfert de mélanges gaz-liquide, à l’évacuation des conduites et aux équipements automatisés nécessitant une forte capacité d’aspiration."
         },
         {
-          "question": "La DPGL800 peut-elle pomper uniquement du liquide ?",
-          "answer": "Elle peut être utilisée pour des liquides et des mélanges gaz-liquide, mais son adéquation à un liquide particulier doit être confirmée selon les propriétés du fluide, la durée de fonctionnement et les matériaux en contact avec le fluide."
+          "question": "La DPGL800 peut-elle être utilisée comme pompe de transfert de liquide pur ?",
+          "answer": "La spécification formelle actuelle couvre les gaz et les mélanges gaz-liquide, pas le transfert de liquides purs. Pour un liquide pur, utiliser une pompe à membrane pour liquides, sauf si FOREACH confirme expressément une application particulière de la DPGL800."
         },
         {
           "question": "Quelles informations faut-il fournir avant de sélectionner la DPGL800 ?",
-          "answer": "Fournir l’état du fluide, la proportion de liquide, le débit cible, le vide requis, les dimensions des conduites, la durée de fonctionnement continu, la tension d’alimentation et l’espace d’installation."
+          "answer": "Fournir l’état du fluide, la proportion gaz-liquide, le débit de gaz cible, la pression positive ou la dépression requise, les dimensions des conduites, la durée de fonctionnement continu, la tension d’alimentation, les matériaux en contact avec le fluide et l’espace d’installation."
         }
       ]
     }
@@ -1301,40 +1301,40 @@
       ]
     },
     "dpgl800-brushless": {
-      "title": "DPGL800 시리즈 브러시리스 기액 혼합 다이어프램 펌프",
+      "title": "DPGL800 시리즈 브러시리스 기체 및 기액 혼합용 다이어프램 펌프",
       "cardParameters": [
-        "유량 6 L/min",
-        "최대 진공도 -90 kPa",
+        "단일 펌프 헤드 무부하 기체 유량 6 L/min",
+        "최대 양압 +30 kPa · 최대 음압 < -90 kPa",
         "수명 10000 h"
       ],
-      "intro": "FOREACH DPGL800 시리즈 브러시리스 기액 혼합 다이어프램 펌프는 기체, 액체 및 기액 혼합 매질의 흡입과 이송에 사용할 수 있으며, 유량 6 L/min, 최대 진공도 -90 kPa, 브러시리스 모터, 수명 10000 h 사양을 갖습니다. 폐액 흡입 배출, 기액 혼합 매질 이송, 배관 배기 및 강한 흡입 성능이 필요한 자동화 장비에 적합합니다. 실제 성능은 매질 상태, 배관 구성 및 운전 부하에 따라 달라질 수 있습니다. 자세한 사양은 아래 사양표를 참조하십시오.",
-      "applications": "폐액 흡입 배출, 기액 혼합 매질 이송, 배관 배기, 기체 흡입",
+      "intro": "FOREACH DPGL800 시리즈 브러시리스 다이어프램 펌프는 기체 흡입, 음압 형성 및 기액 혼합 매질의 흡입·이송용으로 설계되었습니다. 24 V 브러시리스 모터를 사용하며, 단일 펌프 헤드 기준 무부하 기체 유량은 6 L/min, 최대 양압은 +30 kPa, 최대 음압은 < -90 kPa, 수명은 10000 h입니다. 기체가 포함된 폐액의 흡입 배출, 기액 혼합 매질 이송, 배관 배기 및 높은 흡입 성능이 필요한 자동화 장비에 적합합니다. 실제 성능은 매질 상태, 배관 구성 및 운전 부하에 따라 달라질 수 있으며, 자세한 수치는 아래 사양표를 참조하십시오.",
+      "applications": "기체 흡입, 음압 형성, 기체가 포함된 폐액 흡입 배출, 기액 혼합 매질 이송, 배관 배기",
       "breadcrumbs": [
         "홈",
         "제품 센터",
         "다이어프램 펌프",
-        "DPGL800 시리즈 브러시리스 기액 혼합 다이어프램 펌프"
+        "DPGL800 시리즈 브러시리스 기체 및 기액 혼합용 다이어프램 펌프"
       ],
       "faqs": [
         {
-          "question": "DPGL800은 어떤 매질을 이송할 수 있습니까?",
-          "answer": "DPGL800은 기체, 액체 및 기액 혼합 매질의 흡입과 이송에 사용할 수 있습니다. 사용 전에 매질과 접액 재질의 호환성을 확인해야 합니다."
+          "question": "DPGL800은 어떤 매질에 사용할 수 있습니까?",
+          "answer": "DPGL800의 현재 정식 사양은 기체와 기액 혼합 매질을 대상으로 하며, 순수 액체 이송은 포함하지 않습니다. 사용 전에 매질과 접액 재질의 호환성을 확인해야 합니다."
         },
         {
-          "question": "DPGL800의 유량과 최대 진공도는 얼마입니까?",
-          "answer": "유량은 6 L/min이고 최대 진공도는 -90 kPa입니다. 실제 성능은 매질 상태, 배관 저항 및 장비 부하의 영향을 받을 수 있습니다."
+          "question": "DPGL800의 유량과 압력 사양은 얼마입니까?",
+          "answer": "단일 펌프 헤드 기준 무부하 기체 유량은 6 L/min, 최대 양압은 +30 kPa, 최대 음압은 < -90 kPa입니다. 실제 성능은 매질 상태, 배관 저항 및 장비 부하의 영향을 받을 수 있습니다."
         },
         {
           "question": "DPGL800은 어떤 용도에 적합합니까?",
-          "answer": "폐액 흡입 배출, 기액 혼합 매질 이송, 배관 배기 및 강한 흡입 성능이 필요한 자동화 장비에 사용할 수 있습니다."
+          "answer": "기체 흡입, 음압 형성, 기체가 포함된 폐액 흡입 배출, 기액 혼합 매질 이송, 배관 배기 및 높은 흡입 성능이 필요한 자동화 장비에 적합합니다."
         },
         {
-          "question": "DPGL800으로 액체만 이송할 수 있습니까?",
-          "answer": "액체 및 기액 혼합 매질 이송에 사용할 수 있지만 특정 액체에 적합한지는 매질 특성, 운전 시간 및 접액 재질에 따라 확인해야 합니다."
+          "question": "DPGL800을 순수 액체 이송 펌프로 사용할 수 있습니까?",
+          "answer": "현재 정식 사양은 기체와 기액 혼합 매질만을 대상으로 하며, 순수 액체 이송은 포함하지 않습니다. 순수 액체 용도에는 액체용 다이어프램 펌프를 선택하고, DPGL800의 특정 적용은 FOREACH의 별도 확인을 받아야 합니다."
         },
         {
           "question": "DPGL800 선정 전에 어떤 정보를 제공해야 합니까?",
-          "answer": "매질 상태, 액체 비율, 목표 유량, 필요한 진공도, 배관 규격, 연속 운전 시간, 공급 전압 및 설치 공간을 제공하는 것이 좋습니다."
+          "answer": "매질 상태, 기액 비율, 목표 기체 유량, 필요한 양압 또는 진공도, 배관 규격, 연속 운전 시간, 공급 전압, 접액 재질 및 설치 공간을 제공하는 것이 좋습니다."
         }
       ]
     }
@@ -1569,40 +1569,40 @@
       ]
     },
     "dpgl800-brushless": {
-      "title": "Бесщёточный мембранный насос серии DPGL800 для газожидкостных сред",
+      "title": "Бесщёточный мембранный насос серии DPGL800 для газа и газожидкостных смесей",
       "cardParameters": [
-        "Расход 6 L/min",
-        "Максимальный вакуум -90 kPa",
+        "Расход газа одной головки без нагрузки 6 L/min",
+        "Макс. положительное давление +30 kPa · макс. отрицательное давление < -90 kPa",
         "Срок службы 10000 h"
       ],
-      "intro": "Бесщёточный мембранный насос серии DPGL800 для газожидкостных сред FOREACH предназначен для всасывания и перекачивания газа, жидкости и газожидкостных смесей. Расход составляет 6 L/min, максимальный вакуум — -90 kPa, используется бесщёточный двигатель, срок службы — 10000 h. Насос подходит для удаления отработанной жидкости, перекачивания газожидкостных смесей, опорожнения трубопроводов и автоматизированного оборудования, требующего высокой всасывающей способности. Фактические характеристики могут зависеть от состояния среды, конфигурации трубопровода и рабочей нагрузки. Подробные параметры приведены в таблице характеристик ниже.",
-      "applications": "Удаление отработанной жидкости, перекачивание газожидкостных смесей, опорожнение трубопроводов, всасывание газа",
+      "intro": "Бесщёточный мембранный насос FOREACH серии DPGL800 предназначен для всасывания газа, создания разрежения, а также откачивания и транспортирования газожидкостных смесей. Насос оснащён бесщёточным двигателем 24 V; расход газа одной насосной головки без нагрузки составляет 6 L/min, максимальное положительное давление — +30 kPa, максимальное отрицательное давление — < -90 kPa, срок службы — 10000 h. Он подходит для откачивания жидких отходов с газовой фазой, транспортирования газожидкостных смесей, опорожнения трубопроводов и автоматизированного оборудования, требующего высокой всасывающей способности. Фактические характеристики могут зависеть от состояния среды, конфигурации трубопровода и рабочей нагрузки. Подробные параметры приведены в таблице характеристик ниже.",
+      "applications": "Всасывание газа, создание разрежения, откачивание жидких отходов с газовой фазой, транспортирование газожидкостных смесей, опорожнение трубопроводов",
       "breadcrumbs": [
         "Главная",
         "Каталог продукции",
         "Мембранные насосы",
-        "Бесщёточный мембранный насос серии DPGL800 для газожидкостных сред"
+        "Бесщёточный мембранный насос серии DPGL800 для газа и газожидкостных смесей"
       ],
       "faqs": [
         {
-          "question": "Какие среды может перекачивать DPGL800?",
-          "answer": "DPGL800 можно использовать для всасывания и перекачивания газа, жидкости и газожидкостных смесей. Перед применением необходимо проверить совместимость среды со смачиваемыми материалами."
+          "question": "С какими средами может работать DPGL800?",
+          "answer": "Действующая спецификация DPGL800 предусматривает работу с газом и газожидкостными смесями; перекачивание чистой жидкости в неё не входит. Перед применением необходимо проверить совместимость среды со смачиваемыми материалами."
         },
         {
-          "question": "Каковы расход и максимальный вакуум DPGL800?",
-          "answer": "Расход составляет 6 L/min, максимальный вакуум — -90 kPa. Фактические характеристики могут зависеть от состояния среды, сопротивления трубопровода и нагрузки оборудования."
+          "question": "Каковы расход и параметры давления DPGL800?",
+          "answer": "Расход газа одной насосной головки без нагрузки составляет 6 L/min, максимальное положительное давление — +30 kPa, максимальное отрицательное давление — < -90 kPa. Фактические характеристики могут зависеть от состояния среды, сопротивления трубопровода и нагрузки оборудования."
         },
         {
           "question": "Для каких применений подходит DPGL800?",
-          "answer": "Насос можно использовать для удаления отработанной жидкости, перекачивания газожидкостных смесей, опорожнения трубопроводов и в автоматизированном оборудовании, требующем высокой всасывающей способности."
+          "answer": "Насос подходит для всасывания газа, создания разрежения, откачивания жидких отходов с газовой фазой, транспортирования газожидкостных смесей, опорожнения трубопроводов и автоматизированного оборудования, требующего высокой всасывающей способности."
         },
         {
-          "question": "Можно ли использовать DPGL800 только для жидкости?",
-          "answer": "Насос можно использовать для жидкости и газожидкостных смесей, но пригодность для конкретной жидкости необходимо подтвердить с учётом свойств среды, времени работы и смачиваемых материалов."
+          "question": "Можно ли использовать DPGL800 как насос для чистой жидкости?",
+          "answer": "Действующая официальная спецификация охватывает газ и газожидкостные смеси, но не перекачивание чистой жидкости. Для чистой жидкости следует выбрать жидкостный мембранный насос, если только FOREACH отдельно не подтвердит конкретное применение DPGL800."
         },
         {
           "question": "Какие данные нужны перед выбором DPGL800?",
-          "answer": "Рекомендуется предоставить сведения о состоянии среды, доле жидкости, требуемом расходе, необходимом вакууме, размерах трубок, времени непрерывной работы, напряжении питания и монтажном пространстве."
+          "answer": "Рекомендуется предоставить сведения о состоянии среды, соотношении газа и жидкости, требуемом расходе газа, необходимом положительном давлении или разрежении, размерах трубок, времени непрерывной работы, напряжении питания, смачиваемых материалах и монтажном пространстве."
         }
       ]
     }

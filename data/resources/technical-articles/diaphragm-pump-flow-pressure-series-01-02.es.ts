@@ -166,13 +166,13 @@ export const diaphragmPump300Vs600SelectionEsCopy = {
             {
               prefix: "Ver",
               label: "Bomba de diafragma líquido DPL30",
-              href: "/products/pumps/diaphragm-pumps/dpl30-liquid-diaphragm-pump",
+              href: "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump",
               suffix: ".",
             },
             {
               prefix: "Ver",
               label: "Bomba de diafragma líquido DPL60",
-              href: "/products/pumps/diaphragm-pumps/dpl60-liquid-diaphragm-pump",
+              href: "/products/pumps/miniature-diaphragm-pumps/dpl60-liquid-diaphragm-pump",
               suffix: ".",
             },
             {
@@ -451,7 +451,7 @@ export const diaphragmPump300MlMinFlowMarginEsCopy = {
             {
               prefix: "Ver",
               label: "Bomba de diafragma líquido DPL30",
-              href: "/products/pumps/diaphragm-pumps/dpl30-liquid-diaphragm-pump",
+              href: "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump",
               suffix: ".",
             },
             {

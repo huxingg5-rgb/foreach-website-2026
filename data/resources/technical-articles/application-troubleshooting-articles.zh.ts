@@ -5,7 +5,7 @@ const LAB_WASTE_ASSET_BASE =
 const IVD_WASTE_ASSET_BASE =
   "/images/resources/technical-articles/ivd-waste-aspiration-pump-selection";
 const GAS_LIQUID_PUMP_HREF =
-  "/products/pumps/diaphragm-pumps/dpgl800-gas-liquid-diaphragm-pump";
+  "/products/pumps/miniature-diaphragm-pumps/dpgl800-gas-liquid-diaphragm-pump";
 
 export const labLiquidWasteAspirationTroubleshootingZhCopy = {
   metadata: {

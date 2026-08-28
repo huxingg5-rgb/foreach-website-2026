@@ -507,13 +507,13 @@ function Dpgl800ArticleContent({
           prefix={copy.internalLinks.productPrefix}
           label={copy.internalLinks.productLabel}
           suffix={copy.internalLinks.productSuffix}
-          href={`${localePrefix}/products/pumps/diaphragm-pumps/dpgl800-gas-liquid-diaphragm-pump`}
+          href={`${localePrefix}/products/pumps/miniature-diaphragm-pumps/dpgl800-gas-liquid-diaphragm-pump`}
         />
         <InternalArticleLink
           prefix={copy.internalLinks.categoryPrefix}
           label={copy.internalLinks.categoryLabel}
           suffix={copy.internalLinks.categorySuffix}
-          href={`${localePrefix}/products/pumps/diaphragm-pumps`}
+          href={`${localePrefix}/products/pumps/miniature-diaphragm-pumps`}
         />
       </section>
     </div>
@@ -684,13 +684,13 @@ function Dpl30hArticleContent({
           prefix={copy.internalLinks.productPrefix}
           label={copy.internalLinks.productLabel}
           suffix={copy.internalLinks.productSuffix}
-          href={`${localePrefix}/products/pumps/diaphragm-pumps/dpl30h-liquid-diaphragm-pump`}
+          href={`${localePrefix}/products/pumps/miniature-diaphragm-pumps/dpl30h-liquid-diaphragm-pump`}
         />
         <InternalArticleLink
           prefix={copy.internalLinks.categoryPrefix}
           label={copy.internalLinks.categoryLabel}
           suffix={copy.internalLinks.categorySuffix}
-          href={`${localePrefix}/products/pumps/diaphragm-pumps`}
+          href={`${localePrefix}/products/pumps/miniature-diaphragm-pumps`}
         />
       </section>
     </div>
@@ -875,13 +875,13 @@ export default function Dpl30LiquidDiaphragmPumpArticle({
               prefix={dpl60Copy.internalLinks.productPrefix}
               label={dpl60Copy.internalLinks.productLabel}
               suffix={dpl60Copy.internalLinks.productSuffix}
-              href={`${localePrefix}/products/pumps/diaphragm-pumps/dpl60-liquid-diaphragm-pump`}
+              href={`${localePrefix}/products/pumps/miniature-diaphragm-pumps/dpl60-liquid-diaphragm-pump`}
             />
             <InternalArticleLink
               prefix={dpl60Copy.internalLinks.categoryPrefix}
               label={dpl60Copy.internalLinks.categoryLabel}
               suffix={dpl60Copy.internalLinks.categorySuffix}
-              href={`${localePrefix}/products/pumps/diaphragm-pumps`}
+              href={`${localePrefix}/products/pumps/miniature-diaphragm-pumps`}
             />
           </>
         ) : null}

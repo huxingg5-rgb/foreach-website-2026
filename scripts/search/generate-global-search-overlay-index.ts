@@ -2,6 +2,11 @@ import fs from "node:fs";
 import path from "node:path";
 
 import { siteSearchIndex } from "../../data/search/site-search-index.generated";
+import {
+  applyDiaphragmPumpReferenceSearchItem,
+  getDiaphragmPumpReferenceModel,
+} from "../../data/products/detail/diaphragm-pump-reference-models";
+import { isDiaphragmPumpPublicPath } from "../../data/products/detail/diaphragm-pump-routes";
 import { datasheetZhItems } from "../../data/resources/datasheets.zh";
 import { datasheetEnItems } from "../../data/resources/datasheets.en";
 import { installationGuideZhData } from "../../data/resources/installation-guide/installation-guide.zh";
@@ -402,11 +407,20 @@ function loadProductAndCompatibleItems(
 ): CompactSearchItem[] {
   const isChinese = locale === "zh-CN";
 
-  return siteSearchIndex.flatMap((item) => {
+  return siteSearchIndex.flatMap((sourceItem) => {
+    const item = applyDiaphragmPumpReferenceSearchItem(sourceItem, locale);
     const searchModule = item.module as SearchModule;
     if (
       searchModule !== "products" &&
       searchModule !== "compatible-models"
+    ) {
+      return [];
+    }
+
+    if (
+      searchModule === "products" &&
+      isDiaphragmPumpPublicPath(sourceItem.href) &&
+      !getDiaphragmPumpReferenceModel(item.href)
     ) {
       return [];
     }

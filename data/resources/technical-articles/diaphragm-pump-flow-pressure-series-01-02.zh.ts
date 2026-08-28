@@ -166,13 +166,13 @@ export const diaphragmPump300Vs600SelectionZhCopy = {
             {
               prefix: "查看",
               label: "DPL30液体隔膜泵",
-              href: "/products/pumps/diaphragm-pumps/dpl30-liquid-diaphragm-pump",
+              href: "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump",
               suffix: "。",
             },
             {
               prefix: "查看",
               label: "DPL60液体隔膜泵",
-              href: "/products/pumps/diaphragm-pumps/dpl60-liquid-diaphragm-pump",
+              href: "/products/pumps/miniature-diaphragm-pumps/dpl60-liquid-diaphragm-pump",
               suffix: "。",
             },
             {
@@ -451,7 +451,7 @@ export const diaphragmPump300MlMinFlowMarginZhCopy = {
             {
               prefix: "查看",
               label: "DPL30液体隔膜泵",
-              href: "/products/pumps/diaphragm-pumps/dpl30-liquid-diaphragm-pump",
+              href: "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump",
               suffix: "。",
             },
             {

@@ -241,13 +241,13 @@ export const diaphragmPump300Vs600SelectionRuCopy = {
             {
               prefix: "Открыть",
               label: "жидкостный диафрагменный насос DPL30",
-              href: "/products/pumps/diaphragm-pumps/dpl30-liquid-diaphragm-pump",
+              href: "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump",
               suffix: ".",
             },
             {
               prefix: "Открыть",
               label: "жидкостный диафрагменный насос DPL60",
-              href: "/products/pumps/diaphragm-pumps/dpl60-liquid-diaphragm-pump",
+              href: "/products/pumps/miniature-diaphragm-pumps/dpl60-liquid-diaphragm-pump",
               suffix: ".",
             },
             {
@@ -611,7 +611,7 @@ export const diaphragmPump300MlMinFlowMarginRuCopy = {
             {
               prefix: "Открыть",
               label: "жидкостный диафрагменный насос DPL30",
-              href: "/products/pumps/diaphragm-pumps/dpl30-liquid-diaphragm-pump",
+              href: "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump",
               suffix: ".",
             },
             {

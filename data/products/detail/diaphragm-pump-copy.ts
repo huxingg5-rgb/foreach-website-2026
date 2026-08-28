@@ -1,15 +1,13 @@
 import copyJson from "./diaphragm-pump-copy.generated.json";
+import {
+  getDiaphragmPumpCategoryCopy,
+  getDiaphragmPumpReferenceFromIdentity,
+  type DiaphragmPumpReferenceCopyKey,
+} from "./diaphragm-pump-reference-models";
 
 import type { SelectionLocale } from "@/data/products/selection/product-selection.types";
 
-export type DiaphragmPumpCopyKey =
-  | "dpl30-brushed"
-  | "dpl30-brushless"
-  | "dpl60-brushed"
-  | "dpl60-brushless"
-  | "dpl30h-brushed"
-  | "dpl30h-brushless"
-  | "dpgl800-brushless";
+export type DiaphragmPumpCopyKey = DiaphragmPumpReferenceCopyKey;
 
 export type DiaphragmPumpCopy = {
   title: string;
@@ -66,6 +64,12 @@ function getIdentityText(value: unknown) {
 export function getDiaphragmPumpCopyKey(
   value: unknown,
 ): DiaphragmPumpCopyKey | null {
+  const reference = getDiaphragmPumpReferenceFromIdentity(value);
+
+  if (reference) {
+    return reference.copyKey;
+  }
+
   const identity = getIdentityText(value);
 
   if (
@@ -73,7 +77,8 @@ export function getDiaphragmPumpCopyKey(
     (
       identity.includes("dpgl800-24bs6") ||
       identity.includes("dpgl800-brushless") ||
-      identity.includes("diaphragm-dpgl800-")
+      identity.includes("diaphragm-dpgl800-") ||
+      identity.includes("dpgl800-gas-liquid-diaphragm-pump")
     )
   ) {
     return "dpgl800-brushless";
@@ -83,7 +88,8 @@ export function getDiaphragmPumpCopyKey(
     if (
       identity.includes("dpl30h-24ds") ||
       identity.includes("dpl30h-brushed") ||
-      identity.includes("diaphragm-dpl30h-brushed")
+      identity.includes("diaphragm-dpl30h-brushed") ||
+      identity.includes("dpl30h-liquid-diaphragm-pump")
     ) {
       return "dpl30h-brushed";
     }
@@ -101,7 +107,8 @@ export function getDiaphragmPumpCopyKey(
     if (
       identity.includes("dpl60-24db") ||
       identity.includes("dpl60-brushed") ||
-      identity.includes("diaphragm-dpl60-brushed")
+      identity.includes("diaphragm-dpl60-brushed") ||
+      identity.includes("dpl60-liquid-diaphragm-pump")
     ) {
       return "dpl60-brushed";
     }
@@ -119,7 +126,8 @@ export function getDiaphragmPumpCopyKey(
     if (
       identity.includes("dpl30-24db") ||
       identity.includes("dpl30-brushed") ||
-      identity.includes("diaphragm-dpl30-brushed")
+      identity.includes("diaphragm-dpl30-brushed") ||
+      identity.includes("dpl30-liquid-diaphragm-pump")
     ) {
       return "dpl30-brushed";
     }
@@ -141,8 +149,26 @@ export function getDiaphragmPumpCopy(
   locale: SelectionLocale,
 ) {
   const key = getDiaphragmPumpCopyKey(value);
+  const reference = getDiaphragmPumpReferenceFromIdentity(value);
+  const baseCopy = key ? DIAPHRAGM_PUMP_COPY[locale]?.[key] || null : null;
 
-  return key ? DIAPHRAGM_PUMP_COPY[locale]?.[key] || null : null;
+  if (!baseCopy || !reference) {
+    return baseCopy;
+  }
+
+  const localized = reference.localized[locale];
+  const categoryCopy = getDiaphragmPumpCategoryCopy(locale);
+
+  return {
+    ...baseCopy,
+    title: localized.h1,
+    breadcrumbs: [
+      categoryCopy.home,
+      categoryCopy.products,
+      categoryCopy.parent,
+      reference.model,
+    ],
+  };
 }
 
 function getDiaphragmPumpGallery(
@@ -174,13 +200,14 @@ export function applyDiaphragmPumpDetailCopy<
   T extends Record<string, unknown>,
 >(data: T, locale: SelectionLocale): T {
   const key = getDiaphragmPumpCopyKey(data);
-  const copy = key ? DIAPHRAGM_PUMP_COPY[locale]?.[key] : null;
+  const copy = getDiaphragmPumpCopy(data, locale);
 
   if (!copy || !key) return data;
 
   const applications = [copy.applications];
   const faqs = copy.faqs.map((item) => ({ ...item }));
   const gallery = getDiaphragmPumpGallery(key, data);
+  const reference = getDiaphragmPumpReferenceFromIdentity(data);
 
   return {
     ...data,
@@ -196,6 +223,17 @@ export function applyDiaphragmPumpDetailCopy<
     faq: faqs,
     breadcrumbs: copy.breadcrumbs.map((label) => ({ label })),
     __diaphragmPumpCopyKey: key,
+    ...(reference
+      ? {
+          referenceModel: reference.model,
+          modelDisplay: reference.model,
+          displayModel: reference.model,
+          foreachModel: reference.model,
+          modelCode: reference.model,
+          seoTitle: reference.localized[locale].seoTitle,
+          seoDescription: reference.localized[locale].seoDescription,
+        }
+      : {}),
     ...(gallery || {}),
   } as T;
 }

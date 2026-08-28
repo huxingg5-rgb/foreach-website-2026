@@ -5,9 +5,74 @@ const xlsx = require("xlsx");
 const SOURCE_FILE = "data-source/product-center/pumps/FOREACH_隔膜泵系列_产品数据源.xlsx";
 const OUT_DIR = "data/products/generated/pumps/diaphragm-pumps";
 const DETAIL_INDEX_FILE = path.join(OUT_DIR, "detail", "index.json");
+const LEGACY_PUBLIC_PARENT = "/products/pumps/diaphragm-pumps";
+const FINAL_PUBLIC_PARENT = "/products/pumps/miniature-diaphragm-pumps";
+const PUBLIC_SELECTION_CARD_IDS = new Set([
+  "DPL30-BRUSHED",
+  "DPL30-BRUSHLESS",
+  "DPL60-BRUSHED",
+  "DPL60-BRUSHLESS",
+  "DPL30H-BRUSHED",
+  "DPL30H-BRUSHLESS",
+  "DPGL800-FF",
+]);
 
 function n(v) {
   return String(v ?? "").trim();
+}
+
+function migratePublicRoutePath(value) {
+  const routePath = n(value);
+
+  if (
+    routePath !== LEGACY_PUBLIC_PARENT &&
+    !routePath.startsWith(`${LEGACY_PUBLIC_PARENT}/`)
+  ) {
+    return routePath;
+  }
+
+  return `${FINAL_PUBLIC_PARENT}${routePath.slice(LEGACY_PUBLIC_PARENT.length)}`;
+}
+
+function normalizeDpl30hConnectionValue(value) {
+  return typeof value === "string"
+    ? value
+        .replaceAll("螺纹端口/卡套接头", "倒刺端口 + 卡箍/锁紧结构")
+        .replaceAll(
+          "卡套接头，连接 6×4 mm（外径×内径）硬管",
+          "倒刺端口 + 卡箍/锁紧结构",
+        )
+        .replaceAll(
+          "采用卡套接头结构，可连接 6×4 mm 硬管",
+          "采用倒刺接口，并通过卡箍/锁紧结构固定软管",
+        )
+        .replaceAll(
+          "采用 6×4 mm 硬管连接",
+          "采用倒刺接口并通过卡箍/锁紧结构固定软管",
+        )
+        .replaceAll("硬管连接方式", "倒刺加卡箍/锁紧连接方式")
+    : value;
+}
+
+function normalizeGeneratedDetail(detail) {
+  const normalized = {
+    ...detail,
+    path: migratePublicRoutePath(detail.path),
+    seo: detail.seo
+      ? {
+          ...detail.seo,
+          path: migratePublicRoutePath(detail.seo.path || detail.path),
+        }
+      : detail.seo,
+  };
+
+  if (n(detail.seriesId).toUpperCase() !== "DPL30H") return normalized;
+
+  return JSON.parse(
+    JSON.stringify(normalized, (_key, value) =>
+      normalizeDpl30hConnectionValue(value),
+    ),
+  );
 }
 
 function ensureDir(dir) {
@@ -320,32 +385,45 @@ function main() {
         status: item["状态/备注"],
       })),
     };
-  });
+  }).map(normalizeGeneratedDetail);
 
   checkDetailMotorConsistency(details);
 
   const mainSeriesSlugs = new Set(details.map(item => item.slug));
-  const preservedModelDetails = existingDetails.filter(item => {
-    const slug = n(item.slug);
-    return slug && !mainSeriesSlugs.has(slug);
-  });
+  const preservedModelDetails = existingDetails
+    .filter(item => {
+      const slug = n(item.slug);
+      return slug && !mainSeriesSlugs.has(slug);
+    })
+    .map(normalizeGeneratedDetail);
 
-  const cards = cardRows.map(row => ({
-    cardId: row["card_id"],
-    category: row["产品分类"],
-    series: row["系列"],
-    title: row["卡片标题/型号"],
-    description: row["卡片描述"],
-    flowRate: row["流量"],
-    pressure: row["压力字段"],
-    motorType: row["电机类型"],
-    targetSeriesSlug: row["目标系列slug"],
-    reservedConfigSlug: row["配置预留slug"],
-    imageKey: row["图片key"],
-    alt: row["ALT文本_EN"],
-  }));
+  const cards = cardRows
+    .filter(row => PUBLIC_SELECTION_CARD_IDS.has(n(row["card_id"]).toUpperCase()))
+    .map(row => ({
+      cardId: row["card_id"],
+      category: row["产品分类"],
+      series: row["系列"],
+      title: row["卡片标题/型号"],
+      description: row["卡片描述"],
+      flowRate: row["流量"],
+      pressure: row["压力字段"],
+      motorType: row["电机类型"],
+      targetSeriesSlug: row["目标系列slug"],
+      reservedConfigSlug: row["配置预留slug"],
+      imageKey: row["图片key"],
+      alt: row["ALT文本_EN"],
+    }));
 
-  const routes = routeRows.map(row => ({
+  const missingCardIds = [...PUBLIC_SELECTION_CARD_IDS].filter(
+    cardId => !cards.some(card => n(card.cardId).toUpperCase() === cardId),
+  );
+  if (cards.length !== PUBLIC_SELECTION_CARD_IDS.size || missingCardIds.length) {
+    throw new Error(
+      `最终公开选型卡必须为 7 张；缺少: ${missingCardIds.join(", ") || "none"}`,
+    );
+  }
+
+  const routes = routeRows.map(row => normalizeGeneratedDetail({
     pageType: row["页面类型"],
     seriesId: row["series_id"],
     pageTitle: row["中文页面标题"],

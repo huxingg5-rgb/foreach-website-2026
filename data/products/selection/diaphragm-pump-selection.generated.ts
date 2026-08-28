@@ -17,8 +17,8 @@ export const diaphragmPumpSelectionProducts = [
       "en": "DPL30-24DB-EP/PS"
     },
     "cardSubtitle": {
-      "zh": "有刷电机\n300 mL/min\n寿命 3000 h",
-      "en": "Brushed motor\n300 mL/min\nService life 3000 h"
+      "zh": "有刷电机 · 300 mL/min · 寿命 3000 h",
+      "en": "Brushed motor · 300 mL/min · Service life 3000 h"
     },
     "imageCard": "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushed-liquid-diaphragm-pump-main.webp",
     "imageAlt": {
@@ -39,7 +39,7 @@ export const diaphragmPumpSelectionProducts = [
     },
     "filters": {
       "productType": "diaphragm-pump",
-      "filter01": "液泵",
+      "filter01": "液体隔膜泵",
       "filter02": "有刷电机",
       "filter03": "300 mL/min",
       "filter04": "100 kPa",
@@ -49,7 +49,7 @@ export const diaphragmPumpSelectionProducts = [
       "pressure": "100 kPa",
       "serviceLife": "3000 h"
     },
-    "filter01": "液泵",
+    "filter01": "液体隔膜泵",
     "filter02": "有刷电机",
     "filter03": "300 mL/min",
     "filter04": "100 kPa",
@@ -84,8 +84,8 @@ export const diaphragmPumpSelectionProducts = [
       "en": "DPL30-24BB-EP/PS"
     },
     "cardSubtitle": {
-      "zh": "无刷电机\n300 mL/min\n寿命 10000 h",
-      "en": "Brushless motor\n300 mL/min\nService life 10000 h"
+      "zh": "无刷电机 · 300 mL/min · 寿命 10000 h",
+      "en": "Brushless motor · 300 mL/min · Service life 10000 h"
     },
     "imageCard": "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushless-liquid-diaphragm-pump-main.webp",
     "imageAlt": {
@@ -106,7 +106,7 @@ export const diaphragmPumpSelectionProducts = [
     },
     "filters": {
       "productType": "diaphragm-pump",
-      "filter01": "液泵",
+      "filter01": "液体隔膜泵",
       "filter02": "无刷电机",
       "filter03": "300 mL/min",
       "filter04": "100 kPa",
@@ -116,7 +116,7 @@ export const diaphragmPumpSelectionProducts = [
       "pressure": "100 kPa",
       "serviceLife": "10000 h"
     },
-    "filter01": "液泵",
+    "filter01": "液体隔膜泵",
     "filter02": "无刷电机",
     "filter03": "300 mL/min",
     "filter04": "100 kPa",
@@ -151,8 +151,8 @@ export const diaphragmPumpSelectionProducts = [
       "en": "DPL60-24DB-EP/PS"
     },
     "cardSubtitle": {
-      "zh": "有刷电机\n600 mL/min\n寿命 3000 h",
-      "en": "Brushed motor\n600 mL/min\nService life 3000 h"
+      "zh": "有刷电机 · 600 mL/min · 寿命 3000 h",
+      "en": "Brushed motor · 600 mL/min · Service life 3000 h"
     },
     "imageCard": "/images/products/pumps/diaphragm-pumps/dpl60/images/dpl60-brushed-liquid-diaphragm-pump-main.webp",
     "imageAlt": {
@@ -173,7 +173,7 @@ export const diaphragmPumpSelectionProducts = [
     },
     "filters": {
       "productType": "diaphragm-pump",
-      "filter01": "液泵",
+      "filter01": "液体隔膜泵",
       "filter02": "有刷电机",
       "filter03": "600 mL/min",
       "filter04": "100 kPa",
@@ -183,7 +183,7 @@ export const diaphragmPumpSelectionProducts = [
       "pressure": "100 kPa",
       "serviceLife": "3000 h"
     },
-    "filter01": "液泵",
+    "filter01": "液体隔膜泵",
     "filter02": "有刷电机",
     "filter03": "600 mL/min",
     "filter04": "100 kPa",
@@ -218,8 +218,8 @@ export const diaphragmPumpSelectionProducts = [
       "en": "DPL60-24BB-EP/PS"
     },
     "cardSubtitle": {
-      "zh": "无刷电机\n600 mL/min\n寿命 10000 h",
-      "en": "Brushless motor\n600 mL/min\nService life 10000 h"
+      "zh": "无刷电机 · 600 mL/min · 寿命 10000 h",
+      "en": "Brushless motor · 600 mL/min · Service life 10000 h"
     },
     "imageCard": "/images/products/pumps/diaphragm-pumps/dpl60/images/dpl60-brushless-liquid-diaphragm-pump-main.webp",
     "imageAlt": {
@@ -240,7 +240,7 @@ export const diaphragmPumpSelectionProducts = [
     },
     "filters": {
       "productType": "diaphragm-pump",
-      "filter01": "液泵",
+      "filter01": "液体隔膜泵",
       "filter02": "无刷电机",
       "filter03": "600 mL/min",
       "filter04": "100 kPa",
@@ -250,7 +250,7 @@ export const diaphragmPumpSelectionProducts = [
       "pressure": "100 kPa",
       "serviceLife": "10000 h"
     },
-    "filter01": "液泵",
+    "filter01": "液体隔膜泵",
     "filter02": "无刷电机",
     "filter03": "600 mL/min",
     "filter04": "100 kPa",
@@ -285,8 +285,8 @@ export const diaphragmPumpSelectionProducts = [
       "en": "DPL30H-24DS-EP/PS"
     },
     "cardSubtitle": {
-      "zh": "有刷电机\n300 mL/min\n寿命 3000 h",
-      "en": "Brushed motor\n300 mL/min\nService life 3000 h"
+      "zh": "有刷电机 · 300 mL/min · 寿命 3000 h",
+      "en": "Brushed motor · 300 mL/min · Service life 3000 h"
     },
     "imageCard": "/images/products/pumps/diaphragm-pumps/dpl30h/images/dpl30h-brushed-liquid-diaphragm-pump-main.webp",
     "imageAlt": {
@@ -307,7 +307,7 @@ export const diaphragmPumpSelectionProducts = [
     },
     "filters": {
       "productType": "diaphragm-pump",
-      "filter01": "液泵",
+      "filter01": "液体隔膜泵",
       "filter02": "有刷电机",
       "filter03": "300 mL/min",
       "filter04": "600 kPa",
@@ -317,7 +317,7 @@ export const diaphragmPumpSelectionProducts = [
       "pressure": "600 kPa",
       "serviceLife": "3000 h"
     },
-    "filter01": "液泵",
+    "filter01": "液体隔膜泵",
     "filter02": "有刷电机",
     "filter03": "300 mL/min",
     "filter04": "600 kPa",
@@ -352,8 +352,8 @@ export const diaphragmPumpSelectionProducts = [
       "en": "DPL30H-24BS-EP/PS"
     },
     "cardSubtitle": {
-      "zh": "无刷电机\n300 mL/min\n寿命 10000 h",
-      "en": "Brushless motor\n300 mL/min\nService life 10000 h"
+      "zh": "无刷电机 · 300 mL/min · 寿命 10000 h",
+      "en": "Brushless motor · 300 mL/min · Service life 10000 h"
     },
     "imageCard": "/images/products/pumps/diaphragm-pumps/dpl30h/images/dpl30h-brushless-liquid-diaphragm-pump-main.webp",
     "imageAlt": {
@@ -374,7 +374,7 @@ export const diaphragmPumpSelectionProducts = [
     },
     "filters": {
       "productType": "diaphragm-pump",
-      "filter01": "液泵",
+      "filter01": "液体隔膜泵",
       "filter02": "无刷电机",
       "filter03": "300 mL/min",
       "filter04": "600 kPa",
@@ -384,7 +384,7 @@ export const diaphragmPumpSelectionProducts = [
       "pressure": "600 kPa",
       "serviceLife": "10000 h"
     },
-    "filter01": "液泵",
+    "filter01": "液体隔膜泵",
     "filter02": "无刷电机",
     "filter03": "300 mL/min",
     "filter04": "600 kPa",
@@ -419,8 +419,8 @@ export const diaphragmPumpSelectionProducts = [
       "en": "DPGL800-24BS6-FF/PS"
     },
     "cardSubtitle": {
-      "zh": "无刷电机\n6 L/min\n寿命 10000 h",
-      "en": "Brushless motor\n6 L/min\nService life 10000 h"
+      "zh": "无刷电机 · 6 L/min · 寿命 10000 h",
+      "en": "Brushless motor · 6 L/min · Service life 10000 h"
     },
     "imageCard": "/images/products/pumps/diaphragm-pumps/dpgl800/images/dpgl800-gas-liquid-diaphragm-pump-main.webp",
     "imageAlt": {
@@ -441,28 +441,28 @@ export const diaphragmPumpSelectionProducts = [
     },
     "filters": {
       "productType": "diaphragm-pump",
-      "filter01": "气液混合泵",
+      "filter01": "气液混合隔膜泵",
       "filter02": "无刷电机",
       "filter03": "6 L/min",
       "filter04": "30 kPa",
       "series": "dpgl800-gas-liquid-diaphragm-pump",
       "motorType": "无刷电机",
       "flowRate": "6 L/min",
-      "pressure": "30 kPa",
+      "pressure": "+30 kPa / ＜-90 kPa",
       "serviceLife": "10000 h"
     },
-    "filter01": "气液混合泵",
+    "filter01": "气液混合隔膜泵",
     "filter02": "无刷电机",
     "filter03": "6 L/min",
     "filter04": "30 kPa",
     "motorType": "无刷电机",
     "flowRate": "6 L/min",
-    "pressure": "30 kPa",
+    "pressure": "+30 kPa / ＜-90 kPa",
     "serviceLife": "10000 h",
     "tags": [
       "无刷电机",
       "6 L/min",
-      "30 kPa",
+      "+30 kPa / ＜-90 kPa",
       "寿命 10000 h"
     ],
     "needDrawing": true,
@@ -478,10 +478,10 @@ export const diaphragmPumpTaxonomyItems = [
     "parentId": "pumps",
     "level": 2,
     "label": {
-      "zh": "隔膜泵",
-      "en": "Diaphragm Pumps"
+      "zh": "微型隔膜泵",
+      "en": "Miniature Diaphragm Pumps"
     },
-    "href": "/products/pumps/diaphragm-pumps",
+    "href": "/products/pumps/miniature-diaphragm-pumps",
     "enabled": true,
     "order": 20
   }

@@ -357,7 +357,7 @@ export default function BrushlessDiaphragmPumpWiringArticle({
           {copy.products.cards.map((card) => (
             <Link
               className={styles.productCard}
-              href={`${localePrefix}/products/pumps/diaphragm-pumps/${card.slug}`}
+              href={`${localePrefix}/products/pumps/miniature-diaphragm-pumps/${card.slug}`}
               key={card.model}
             >
               <span>{card.label}</span>

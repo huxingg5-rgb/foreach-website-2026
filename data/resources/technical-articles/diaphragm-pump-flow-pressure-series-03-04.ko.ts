@@ -313,7 +313,7 @@ export const tubeInnerDiameterAffectsDiaphragmPumpFlowKoCopy = {
       "펌프 모델, 유체, 실측 튜브 내경과 길이, 피팅 유로, 입구 압력, 출구 압력, 펌프 단자 전압 및 튜브 교체 전후 유량을 제공하면 엔지니어가 실제 작동점을 평가할 수 있습니다.",
     contactLabel: "엔지니어에게 문의",
     productsLabel: "다이어프램 펌프 보기",
-    productsHref: "/products/pumps/diaphragm-pumps",
+    productsHref: "/products/pumps/miniature-diaphragm-pumps",
   },
 } as const satisfies DiaphragmPumpEngineeringArticleCopy;
 
@@ -670,6 +670,6 @@ export const suctionVsDischargeResistanceDiaphragmPumpKoCopy = {
       "펌프 모델, 유체와 온도, 높이 차, 흡입관 및 토출관 치수, 필터 위치, 입구 절대압, 출구 배압 및 측정 유량을 제공하면 엔지니어가 전체 유로를 진단할 수 있습니다.",
     contactLabel: "엔지니어에게 문의",
     productsLabel: "다이어프램 펌프 보기",
-    productsHref: "/products/pumps/diaphragm-pumps",
+    productsHref: "/products/pumps/miniature-diaphragm-pumps",
   },
 } as const satisfies DiaphragmPumpEngineeringArticleCopy;

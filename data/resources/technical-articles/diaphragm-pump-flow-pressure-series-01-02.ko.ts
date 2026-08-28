@@ -242,13 +242,13 @@ export const diaphragmPump300Vs600SelectionKoCopy = {
             {
               prefix: "제품 보기: ",
               label: "DPL30 액체 다이어프램 펌프",
-              href: "/products/pumps/diaphragm-pumps/dpl30-liquid-diaphragm-pump",
+              href: "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump",
               suffix: ".",
             },
             {
               prefix: "제품 보기: ",
               label: "DPL60 액체 다이어프램 펌프",
-              href: "/products/pumps/diaphragm-pumps/dpl60-liquid-diaphragm-pump",
+              href: "/products/pumps/miniature-diaphragm-pumps/dpl60-liquid-diaphragm-pump",
               suffix: ".",
             },
             {
@@ -623,7 +623,7 @@ export const diaphragmPump300MlMinFlowMarginKoCopy = {
             {
               prefix: "제품 보기: ",
               label: "DPL30 액체 다이어프램 펌프",
-              href: "/products/pumps/diaphragm-pumps/dpl30-liquid-diaphragm-pump",
+              href: "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump",
               suffix: ".",
             },
             {

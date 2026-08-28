@@ -521,8 +521,8 @@ export const microDiaphragmPumpContinuousDutyLifeZhCopy = {
         {
           type: "links",
           items: [
-            { prefix: "查看", label: "DPL30液体隔膜泵", href: "/products/pumps/diaphragm-pumps/dpl30-liquid-diaphragm-pump", suffix: "的有刷与无刷配置。" },
-            { prefix: "查看", label: "DPL60液体隔膜泵", href: "/products/pumps/diaphragm-pumps/dpl60-liquid-diaphragm-pump", suffix: "的有刷与无刷配置。" },
+            { prefix: "查看", label: "DPL30液体隔膜泵", href: "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump", suffix: "的有刷与无刷配置。" },
+            { prefix: "查看", label: "DPL60液体隔膜泵", href: "/products/pumps/miniature-diaphragm-pumps/dpl60-liquid-diaphragm-pump", suffix: "的有刷与无刷配置。" },
           ],
         },
       ],

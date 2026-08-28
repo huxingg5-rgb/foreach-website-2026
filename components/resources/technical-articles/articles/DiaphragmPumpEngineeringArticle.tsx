@@ -9,6 +9,7 @@ import type {
   EngineeringArticleBlock,
 } from "@/data/resources/technical-articles/diaphragm-pump-engineering-article.types";
 import type { TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
+import { getLocalizedInternalHref } from "@/lib/seo/site-url";
 
 import newsStyles from "../../news/NewsArticleClient.module.css";
 import styles from "./DiaphragmPumpEngineeringArticle.module.css";
@@ -73,7 +74,13 @@ function ArticleFigure({
   );
 }
 
-function ArticleBlock({ block }: { block: EngineeringArticleBlock }) {
+function ArticleBlock({
+  block,
+  locale,
+}: {
+  block: EngineeringArticleBlock;
+  locale: TechnicalArticleLocale;
+}) {
   if (block.type === "paragraph") {
     return <p>{block.text}</p>;
   }
@@ -133,7 +140,9 @@ function ArticleBlock({ block }: { block: EngineeringArticleBlock }) {
       {block.items.map((item) => (
         <p key={`${item.href}-${item.label}`}>
           {item.prefix}
-          <Link href={item.href}>{item.label}</Link>
+          <Link href={getLocalizedInternalHref(item.href, locale)}>
+            {item.label}
+          </Link>
           {item.suffix}
         </p>
       ))}
@@ -151,7 +160,7 @@ export default function DiaphragmPumpEngineeringArticle({
     <div className={newsStyles.technicalArticleBody}>
       <section className={newsStyles.contentBlock}>
         {copy.leadBlocks.map((block, index) => (
-          <ArticleBlock block={block} key={`lead-${index}`} />
+          <ArticleBlock block={block} locale={locale} key={`lead-${index}`} />
         ))}
       </section>
 
@@ -159,7 +168,11 @@ export default function DiaphragmPumpEngineeringArticle({
         <section className={newsStyles.contentBlock} key={section.title}>
           <h2>{section.title}</h2>
           {section.blocks.map((block, index) => (
-            <ArticleBlock block={block} key={`${section.title}-${index}`} />
+            <ArticleBlock
+              block={block}
+              locale={locale}
+              key={`${section.title}-${index}`}
+            />
           ))}
         </section>
       ))}

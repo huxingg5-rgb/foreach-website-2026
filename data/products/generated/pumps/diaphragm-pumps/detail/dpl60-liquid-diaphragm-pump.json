@@ -8,7 +8,7 @@
   "category": "液体隔膜泵",
   "title": "DPL60 液体隔膜泵",
   "displayName": "DPL60 液体隔膜泵",
-  "path": "/products/pumps/diaphragm-pumps/dpl60-liquid-diaphragm-pump",
+  "path": "/products/pumps/miniature-diaphragm-pumps/dpl60-liquid-diaphragm-pump",
   "description": "DPL60 液体隔膜泵是一款适用于较高流量液体输送场景的隔膜泵，主要用于仪器内部清洗液输送、废液抽排、管路冲洗、液体循环和快速排液模块。与 DPL30 相比，DPL60 在相同 100 kPa 额定压力等级下提供更高流量，更适合对输送速度、清洗效率和排液效率要求更高的设备系统。\n\nDPL60 系列额定流量为 600 mL/min，额定压力为 100 kPa，自吸高度为 3 mH₂O，支持有刷电机和无刷电机配置。该系列可用于体外诊断设备、实验室自动化设备、生命科学仪器和分析检测系统中的清洗、排液、供液和液路循环模块。",
   "commonApplications": "清洗液输送、废液抽排、管路冲洗、液体循环、快速排液",
   "modelDisplay": "型号：DPL60 标准型号",
@@ -17,7 +17,7 @@
   "seo": {
     "type": "系列详情页",
     "slug": "dpl60-liquid-diaphragm-pump",
-    "path": "/products/pumps/diaphragm-pumps/dpl60-liquid-diaphragm-pump",
+    "path": "/products/pumps/miniature-diaphragm-pumps/dpl60-liquid-diaphragm-pump",
     "title": "DPL60 有刷液体隔膜泵｜600 mL/min 100 kPa｜FOREACH",
     "description": "DPL60 有刷液体隔膜泵适用于较高流量常规液体输送与排液场景，流量 600 mL/min，额定压力 100 kPa。",
     "pageTitle": "DPL60 有刷液体隔膜泵",

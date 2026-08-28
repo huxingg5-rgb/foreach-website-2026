@@ -236,13 +236,13 @@ export const diaphragmPump300Vs600SelectionEnCopy = {
             {
               prefix: "View the",
               label: "DPL30 liquid diaphragm pump",
-              href: "/products/pumps/diaphragm-pumps/dpl30-liquid-diaphragm-pump",
+              href: "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump",
               suffix: ".",
             },
             {
               prefix: "View the",
               label: "DPL60 liquid diaphragm pump",
-              href: "/products/pumps/diaphragm-pumps/dpl60-liquid-diaphragm-pump",
+              href: "/products/pumps/miniature-diaphragm-pumps/dpl60-liquid-diaphragm-pump",
               suffix: ".",
             },
             {
@@ -607,7 +607,7 @@ export const diaphragmPump300MlMinFlowMarginEnCopy = {
             {
               prefix: "View the",
               label: "DPL30 liquid diaphragm pump",
-              href: "/products/pumps/diaphragm-pumps/dpl30-liquid-diaphragm-pump",
+              href: "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump",
               suffix: ".",
             },
             {

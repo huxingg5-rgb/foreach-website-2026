@@ -195,7 +195,15 @@ export default function ProductSelectionCard({
   const locale = getLocaleFromPathname(pathname);
   const cardText = CARD_TEXT[locale];
   const safeTitle = toDisplayText(title) || product.productId;
-  const safeSubtitle = toDisplayText(subtitle);
+  const isDiaphragmPumpCard =
+    product.productTypeId === "diaphragm-pump" ||
+    product.productTypeSlug === "diaphragm-pumps";
+  const safeSubtitle = isDiaphragmPumpCard
+    ? toDisplayText(subtitle)
+        .split(/\s*\n+\s*/)
+        .filter(Boolean)
+        .join(" · ")
+    : toDisplayText(subtitle);
   const safeDetailHref = localizeCardDetailHref(
     normalizeCardDetailHref(product, detailHref),
     locale,
@@ -206,7 +214,11 @@ export default function ProductSelectionCard({
     .filter(Boolean);
 
   return (
-    <article className="product-card" title={safeTitle}>
+    <article
+      className="product-card"
+      data-product-type-id={product.productTypeId || undefined}
+      title={safeTitle}
+    >
       <span className="selected-bar" />
 
       <div className="product-image" aria-label={safeTitle}>

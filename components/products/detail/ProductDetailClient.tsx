@@ -9,6 +9,14 @@ import {
   applyDiaphragmPumpDetailCopy,
   getDiaphragmPumpCopy,
 } from "@/data/products/detail/diaphragm-pump-copy";
+import {
+  getDiaphragmPumpCategoryCopy,
+  getDiaphragmPumpReferenceFromIdentity,
+} from "@/data/products/detail/diaphragm-pump-reference-models";
+import {
+  getDiaphragmPumpPath,
+  isDiaphragmPumpPublicPath,
+} from "@/data/products/detail/diaphragm-pump-routes";
 import { useSelectionCart } from "@/components/selection-cart/SelectionCartProvider";
 import type { SelectionCartItemInput } from "@/components/selection-cart/selection-cart.types";
 /* =========================================================
@@ -934,6 +942,26 @@ function isCustomProductCategory(
   );
 }
 
+function isPublishedDiaphragmPumpDetail(
+  pathname: string | null,
+  data: unknown,
+): boolean {
+  const record =
+    data && typeof data === "object"
+      ? (data as Record<string, unknown>)
+      : {};
+  const productType = String(
+    record.productTypeId || record.productType || record.productTypeSlug || "",
+  )
+    .trim()
+    .toLowerCase();
+
+  return (
+    isDiaphragmPumpPublicPath(pathname) &&
+    (productType === "diaphragm-pump" || productType === "diaphragm-pumps")
+  );
+}
+
 
 function PlungerPumpBottomCta({
   data,
@@ -1057,7 +1085,9 @@ function getDiaphragmPumpSchemaName(
     locale === "zh-CN"
       ? data.seoTitle || data.metaTitle || data.title || data.name || data.model
       : localizedTitle || data.title || data.name || data.model;
-  const cleanTitle = cleanProductSchemaName(configuredTitle);
+  const cleanTitle = cleanProductSchemaName(configuredTitle)
+    .replace(/\s*｜\s*恒永达\s*$/u, "")
+    .trim();
 
   if (!productModel || cleanTitle.toUpperCase().includes(productModel.toUpperCase())) {
     return cleanTitle;
@@ -1086,8 +1116,11 @@ function buildProductPageStructuredData(data: any, pathname: string) {
     data.modelDisplay || data.displayModel || data.modelCode || data.model || "",
   ).trim();
   const isDiaphragmPump =
-    /(?:^|\/)products\/pumps\/diaphragm-pumps\/[^/]+/i.test(pathname) &&
+    isDiaphragmPumpPublicPath(pathname) &&
     isDiaphragmPumpDetailData(data);
+  const diaphragmReference = isDiaphragmPump
+    ? getDiaphragmPumpReferenceFromIdentity(data)
+    : null;
   const productModel = isDiaphragmPump
     ? getDiaphragmPumpSchemaModel(pathname, rawProductModel)
     : rawProductModel;
@@ -1113,6 +1146,42 @@ function buildProductPageStructuredData(data: any, pathname: string) {
   const localePrefix = locale === "zh-CN" ? "" : `/${locale}`;
   const breadcrumbCopy =
     PRODUCT_BREADCRUMB_COPY[locale] || PRODUCT_BREADCRUMB_COPY.en;
+  const diaphragmCategoryCopy = getDiaphragmPumpCategoryCopy(locale);
+  const breadcrumbItems = isDiaphragmPump
+    ? [
+        {
+          name: diaphragmCategoryCopy.home,
+          item: toAbsoluteProductUrl(`${localePrefix}/`),
+        },
+        {
+          name: diaphragmCategoryCopy.products,
+          item: toAbsoluteProductUrl(`${localePrefix}/products/`),
+        },
+        {
+          name: diaphragmCategoryCopy.parent,
+          item: toAbsoluteProductUrl(
+            getDiaphragmPumpPath(locale, undefined, { trailingSlash: true }),
+          ),
+        },
+        {
+          name: diaphragmReference?.model || productModel || productName,
+          item: canonicalUrl,
+        },
+      ]
+    : [
+        {
+          name: breadcrumbCopy.home,
+          item: toAbsoluteProductUrl(`${localePrefix}/`),
+        },
+        {
+          name: breadcrumbCopy.products,
+          item: toAbsoluteProductUrl(`${localePrefix}/products/`),
+        },
+        {
+          name: productName,
+          item: canonicalUrl,
+        },
+      ];
   const organizationId = `${PRODUCT_SITE_ORIGIN}/#organization`;
   const websiteId = `${PRODUCT_SITE_ORIGIN}/#website`;
   const webpageId = `${canonicalUrl}#webpage`;
@@ -1161,26 +1230,12 @@ function buildProductPageStructuredData(data: any, pathname: string) {
     {
       "@type": "BreadcrumbList",
       "@id": breadcrumbId,
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: breadcrumbCopy.home,
-          item: toAbsoluteProductUrl(`${localePrefix}/`),
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: breadcrumbCopy.products,
-          item: toAbsoluteProductUrl(`${localePrefix}/products/`),
-        },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: productName,
-          item: canonicalUrl,
-        },
-      ],
+      itemListElement: breadcrumbItems.map((item, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: item.name,
+        item: item.item,
+      })),
     },
     webPage,
     {
@@ -1324,6 +1379,11 @@ export default function ProductDetailClient({
     },
     [configuratorLocale, isEnglish, pathname, sourceData, targetLocale]
   );
+  const isDiaphragmPage = isPublishedDiaphragmPumpDetail(pathname, data);
+  const diaphragmReference = isDiaphragmPage
+    ? getDiaphragmPumpReferenceFromIdentity(data)
+    : null;
+  const diaphragmCategoryCopy = getDiaphragmPumpCategoryCopy(configuratorLocale);
   const datasheet = resourceLocale
     ? getProductDatasheet(sourceData.datasheetId)
     : null;
@@ -1345,7 +1405,8 @@ export default function ProductDetailClient({
       data.resources?.drawing2dUrl,
   );
   const drawingDocumentUrl = drawingPreviewUrl.split("#", 1)[0];
-  const isCustomProduct = isCustomProductCategory(pathname, data);
+  const isCustomProduct =
+    isDiaphragmPage || isCustomProductCategory(pathname, data);
   const customProductCopy =
     CUSTOM_PRODUCT_NOTICE_COPY[
       configuratorLocale as keyof typeof CUSTOM_PRODUCT_NOTICE_COPY
@@ -1469,24 +1530,22 @@ export default function ProductDetailClient({
         drawingPreview: "预览图纸",
         drawingDescription: (model: string) => `查看 ${model} 的技术图纸。`,
       };
-  const productBreadcrumbItems = diaphragmCopy
+  const productBreadcrumbItems = isDiaphragmPage
     ? [
         {
-          label: diaphragmCopy.breadcrumbs[0],
+          label: diaphragmCategoryCopy.home,
           href: localePrefix ? `${localePrefix}/` : "/",
         },
         {
-          label: diaphragmCopy.breadcrumbs[1],
+          label: diaphragmCategoryCopy.products,
           href: localePrefix ? `${localePrefix}/products/` : "/products/",
         },
         {
-          label: diaphragmCopy.breadcrumbs[2],
-          href: localePrefix
-            ? `${localePrefix}/products/pumps/diaphragm-pumps/`
-            : "/products/pumps/diaphragm-pumps/",
+          label: diaphragmCategoryCopy.parent,
+          href: getDiaphragmPumpPath(configuratorLocale),
         },
         {
-          label: diaphragmCopy.breadcrumbs[3],
+          label: diaphragmReference?.model || getDisplayModelText(data),
         },
       ]
     : [
@@ -1956,7 +2015,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
       ? isPlungerPumpDetailData(data)
         ? `/products/pumps/plunger-pumps/${data.slug}`
         : isDiaphragmPumpDetailData(data)
-          ? `/products/pumps/diaphragm-pumps/${data.slug}`
+          ? getDiaphragmPumpPath("zh", data.slug, { trailingSlash: false })
           : isPipettingPumpDetailData(data)
             ? `/products/pumps/pipetting-pumps/${data.slug}`
             : isTubingDetailData(data)
@@ -2662,7 +2721,10 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
       breadcrumbAriaLabel={copy.breadcrumb}
       breadcrumbItems={productBreadcrumbItems}
     >
-      <main className={styles.page} data-product-detail-page="true">
+      <main
+        className={styles.page}
+        data-product-detail-page="true"
+      >
       <div className={styles.container}>
 
         <section className={styles.productTop}>

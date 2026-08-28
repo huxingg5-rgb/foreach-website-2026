@@ -1,9 +1,9 @@
 {
   "sourceFile": "data-source/product-center/pumps/FOREACH_隔膜泵系列_产品数据源.xlsx",
-  "generatedAt": "2026-08-11T09:12:59.351Z",
+  "generatedAt": "2026-08-28T01:25:20.694Z",
   "seriesCount": 4,
   "modelDetailCount": 8,
-  "selectionCardCount": 8,
+  "selectionCardCount": 7,
   "specRowCount": 121,
   "modelConfigCount": 27,
   "faqCount": 6,
@@ -76,25 +76,25 @@
       "seriesId": "DPL30",
       "slug": "dpl30-liquid-diaphragm-pump",
       "title": "DPL30 液体隔膜泵",
-      "path": "/products/pumps/diaphragm-pumps/dpl30-liquid-diaphragm-pump"
+      "path": "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump"
     },
     {
       "seriesId": "DPL60",
       "slug": "dpl60-liquid-diaphragm-pump",
       "title": "DPL60 液体隔膜泵",
-      "path": "/products/pumps/diaphragm-pumps/dpl60-liquid-diaphragm-pump"
+      "path": "/products/pumps/miniature-diaphragm-pumps/dpl60-liquid-diaphragm-pump"
     },
     {
       "seriesId": "DPL30H",
       "slug": "dpl30h-liquid-diaphragm-pump",
       "title": "DPL30H 液体隔膜泵",
-      "path": "/products/pumps/diaphragm-pumps/dpl30h-liquid-diaphragm-pump"
+      "path": "/products/pumps/miniature-diaphragm-pumps/dpl30h-liquid-diaphragm-pump"
     },
     {
       "seriesId": "DPGL800",
       "slug": "dpgl800-gas-liquid-diaphragm-pump",
       "title": "DPGL800 气液混合隔膜泵",
-      "path": "/products/pumps/diaphragm-pumps/dpgl800-gas-liquid-diaphragm-pump"
+      "path": "/products/pumps/miniature-diaphragm-pumps/dpgl800-gas-liquid-diaphragm-pump"
     }
   ]
 }

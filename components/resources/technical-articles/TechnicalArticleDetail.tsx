@@ -46,6 +46,7 @@ import {
   dpl30hStandardModels,
 } from "@/data/resources/technical-articles/dpl30h-high-pressure-liquid-diaphragm-pump.article";
 import { getProductDetailTitleOverride } from "@/data/products/detail/product-detail-title-overrides";
+import { getLocalizedInternalHref } from "@/lib/seo/site-url";
 
 import type {
   TechnicalArticleItem,
@@ -448,9 +449,11 @@ export default function TechnicalArticleDetail({
             },
             {
               label: diaphragmPumpEngineeringCopy.cta.productsLabel,
-              href:
+              href: getLocalizedInternalHref(
                 diaphragmPumpEngineeringCopy.cta.productsHref ??
-                `${localePrefix}/products/pumps/diaphragm-pumps`,
+                  "/products/pumps/miniature-diaphragm-pumps/",
+                locale,
+              ),
             },
           ],
         }

@@ -233,7 +233,7 @@ export const tubeInnerDiameterAffectsDiaphragmPumpFlowEsCopy = {
       "Puede facilitar el modelo de bomba, el fluido, el diámetro interior y la longitud reales de la manguera, el paso del conector, las presiones de entrada y salida, la tensión en bornes de la bomba y el caudal antes y después de sustituir la tubería. Con esos datos, el ingeniero podrá evaluar el punto de funcionamiento real.",
     contactLabel: "contacta a un ingeniero",
     productsLabel: "Ver productos de bombas de diafragma",
-    productsHref: "/products/pumps/diaphragm-pumps",
+    productsHref: "/products/pumps/miniature-diaphragm-pumps",
   },
 } as const satisfies DiaphragmPumpEngineeringArticleCopy;
 
@@ -489,6 +489,6 @@ export const suctionVsDischargeResistanceDiaphragmPumpEsCopy = {
       "Puede facilitar el modelo de bomba, el fluido y su temperatura, la diferencia de nivel, las dimensiones de las tuberías de aspiración y descarga, la posición del filtro, la presión absoluta de entrada, la contrapresión de salida y el caudal medido. Con esos datos, el ingeniero podrá diagnosticar el circuito completo.",
     contactLabel: "contacta a un ingeniero",
     productsLabel: "Ver productos de bombas de diafragma",
-    productsHref: "/products/pumps/diaphragm-pumps",
+    productsHref: "/products/pumps/miniature-diaphragm-pumps",
   },
 } as const satisfies DiaphragmPumpEngineeringArticleCopy;

@@ -10,6 +10,12 @@ import {
 import { useRouter, useSearchParams } from "next/navigation";
 
 import { siteSearchIndex } from "@/data/search/site-search-index.generated";
+import {
+  applyDiaphragmPumpReferenceSearchItem,
+  getDiaphragmPumpReferenceByLegacySlug,
+  getDiaphragmPumpReferenceModel,
+} from "@/data/products/detail/diaphragm-pump-reference-models";
+import { isDiaphragmPumpPublicPath } from "@/data/products/detail/diaphragm-pump-routes";
 import type {
   SiteSearchItem,
   SiteSearchModule,
@@ -321,11 +327,40 @@ export default function SiteSearchClient({
     if (!queryFromUrl) return result;
 
     for (const sourceItem of siteSearchIndex) {
+      const scopedSourceItem = applyDiaphragmPumpReferenceSearchItem(
+        sourceItem,
+        locale,
+      );
+      const isDiaphragmProductItem =
+        sourceItem.module === "products" &&
+        isDiaphragmPumpPublicPath(sourceItem.href);
+
+      if (
+        isDiaphragmProductItem &&
+        !getDiaphragmPumpReferenceModel(scopedSourceItem.href)
+      ) {
+        continue;
+      }
+
       const item = isEnglish
-        ? getEnglishSearchItem(sourceItem, locale)
-        : sourceItem;
+        ? getEnglishSearchItem(scopedSourceItem, locale)
+        : scopedSourceItem;
       const score = scoreItem(item, queryFromUrl);
       if (score <= 0) continue;
+
+      const isScopedDiaphragmReference = Boolean(
+        getDiaphragmPumpReferenceByLegacySlug(sourceItem.href),
+      );
+
+      if (
+        isScopedDiaphragmReference &&
+        result[item.module].some(
+          (existing) =>
+            existing.href === item.href && existing.title === item.title,
+        )
+      ) {
+        continue;
+      }
 
       result[item.module].push({
         ...item,

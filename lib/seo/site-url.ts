@@ -11,6 +11,24 @@ const INTERNATIONAL_LOCALES = new Set<LocaleCode>([
   "ru",
 ]);
 
+const LOCALIZED_PATH_LOCALES = new Set<string>([
+  "zh-CN",
+  ...INTERNATIONAL_LOCALES,
+]);
+
+const NON_LOCALIZED_PATH_ROOTS = new Set([
+  "_next",
+  "api",
+  "assets",
+  "documents",
+  "downloads",
+  "images",
+  "models",
+  "pdfjs",
+  "search-data",
+  "videos",
+]);
+
 function hasFileExtension(pathname: string) {
   const lastSegment = pathname.split("/").filter(Boolean).at(-1) ?? "";
   return /\.[a-z0-9]{1,10}$/i.test(lastSegment);
@@ -95,4 +113,42 @@ export function getLocalizedSiteHref(value: string, locale: LocaleCode) {
 
   const localizedPath = segments.length > 0 ? `/${segments.join("/")}/` : "/";
   return `${localizedPath}${url.search}${url.hash}`;
+}
+
+/**
+ * Localize a root-relative page href while leaving explicit locale paths,
+ * external/protocol hrefs, anchors, and static assets unchanged.
+ */
+export function getLocalizedInternalHref(value: string, locale: LocaleCode) {
+  const href = value.trim();
+
+  if (
+    isNonNavigationalHref(href) ||
+    !href.startsWith("/") ||
+    href.startsWith("//")
+  ) {
+    return value;
+  }
+
+  let url: URL;
+
+  try {
+    url = new URL(href, SITE_ORIGIN);
+  }
+  catch {
+    return value;
+  }
+
+  const segments = url.pathname.split("/").filter(Boolean);
+  const firstSegment = segments[0] ?? "";
+
+  if (
+    LOCALIZED_PATH_LOCALES.has(firstSegment) ||
+    NON_LOCALIZED_PATH_ROOTS.has(firstSegment) ||
+    hasFileExtension(url.pathname)
+  ) {
+    return value;
+  }
+
+  return getLocalizedSiteHref(href, locale);
 }

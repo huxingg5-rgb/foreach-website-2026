@@ -404,9 +404,9 @@ export const diaphragmPumpFlowPressureCurveZhCopy = {
         {
           type: "links",
           items: [
-            { prefix: "进一步查看", label: "DPL30液体隔膜泵", href: "/products/pumps/diaphragm-pumps/dpl30-liquid-diaphragm-pump", suffix: "。" },
-            { prefix: "进一步查看", label: "DPL60液体隔膜泵", href: "/products/pumps/diaphragm-pumps/dpl60-liquid-diaphragm-pump", suffix: "。" },
-            { prefix: "进一步查看", label: "DPL30H高压液体隔膜泵", href: "/products/pumps/diaphragm-pumps/dpl30h-liquid-diaphragm-pump", suffix: "。" },
+            { prefix: "进一步查看", label: "DPL30液体隔膜泵", href: "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump", suffix: "。" },
+            { prefix: "进一步查看", label: "DPL60液体隔膜泵", href: "/products/pumps/miniature-diaphragm-pumps/dpl60-liquid-diaphragm-pump", suffix: "。" },
+            { prefix: "进一步查看", label: "DPL30H高压液体隔膜泵", href: "/products/pumps/miniature-diaphragm-pumps/dpl30h-liquid-diaphragm-pump", suffix: "。" },
           ],
         },
       ],

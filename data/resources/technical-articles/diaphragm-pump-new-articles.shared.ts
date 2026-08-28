@@ -272,10 +272,10 @@ export function createLocalizedLifeScienceArticle(
 ): DiaphragmPumpEngineeringArticleCopy {
   const { sections } = content;
   const productPaths = [
-    "/products/pumps/diaphragm-pumps/dpl60-liquid-diaphragm-pump",
-    "/products/pumps/diaphragm-pumps/dpl30-liquid-diaphragm-pump",
-    "/products/pumps/diaphragm-pumps/dpl30h-liquid-diaphragm-pump",
-    "/products/pumps/diaphragm-pumps/dpgl800-gas-liquid-diaphragm-pump",
+    "/products/pumps/miniature-diaphragm-pumps/dpl60-liquid-diaphragm-pump",
+    "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump",
+    "/products/pumps/miniature-diaphragm-pumps/dpl30h-liquid-diaphragm-pump",
+    "/products/pumps/miniature-diaphragm-pumps/dpgl800-gas-liquid-diaphragm-pump",
   ] as const;
 
   return {

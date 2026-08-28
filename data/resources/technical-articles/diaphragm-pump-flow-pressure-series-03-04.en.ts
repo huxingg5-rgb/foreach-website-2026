@@ -338,7 +338,7 @@ export const tubeInnerDiameterAffectsDiaphragmPumpFlowEnCopy = {
       "Provide the pump model, fluid, measured tubing ID and length, fitting bore, inlet pressure, outlet pressure, pump-terminal voltage, and flow before and after the tubing change so an engineer can assess the real operating point.",
     contactLabel: "Contact an Engineer",
     productsLabel: "View Diaphragm Pumps",
-    productsHref: "/products/pumps/diaphragm-pumps",
+    productsHref: "/products/pumps/miniature-diaphragm-pumps",
   },
 } as const satisfies DiaphragmPumpEngineeringArticleCopy;
 
@@ -724,6 +724,6 @@ export const suctionVsDischargeResistanceDiaphragmPumpEnCopy = {
       "Provide the pump model, fluid and temperature, elevation difference, suction- and discharge-line dimensions, filter location, inlet absolute pressure, outlet backpressure, and measured flow so an engineer can diagnose the complete fluid path.",
     contactLabel: "Contact an Engineer",
     productsLabel: "View Diaphragm Pumps",
-    productsHref: "/products/pumps/diaphragm-pumps",
+    productsHref: "/products/pumps/miniature-diaphragm-pumps",
   },
 } as const satisfies DiaphragmPumpEngineeringArticleCopy;

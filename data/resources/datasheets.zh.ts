@@ -223,7 +223,8 @@ export const datasheetZhItems: DatasheetItem[] = [
     description: "DPL30 隔膜泵适用于自动化仪器中的液体供给、自吸输送、清洗循环与废液处理。",
     image:
       "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushed-liquid-diaphragm-pump-main.webp",
-    productHref: "/products/pumps/diaphragm-pumps/liquid-diaphragm-pumps",
+    productHref:
+      "/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps",
     downloadHref:
       "/downloads/resources/datasheets/zh-CN/Pumps/ps-150b-2412-00001-a03-cn-dpl30-diaphragm-pump.pdf",
     actionType: "download",

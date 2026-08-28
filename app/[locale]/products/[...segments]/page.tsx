@@ -5,6 +5,18 @@ import { Suspense } from "react";
 import ProductPageSkeleton from "@/components/common/ProductPageSkeleton";
 import ProductSelectionClient from "@/components/products/selection/ProductSelectionClient";
 import { englishProductDetailRoutes } from "@/data/products/product-detail-routes.generated";
+import {
+  getDiaphragmPumpCategoryCopy,
+  getDiaphragmPumpReferenceModel,
+} from "@/data/products/detail/diaphragm-pump-reference-models";
+import {
+  DIAPHRAGM_PUMP_SERIES_SLUGS,
+  getDiaphragmPumpLanguageAlternates,
+  getDiaphragmPumpPath,
+  isDiaphragmPumpFinalSegments,
+  migrateDiaphragmPumpRouteSegments,
+  normalizeDiaphragmPumpLocale,
+} from "@/data/products/detail/diaphragm-pump-routes";
 import { siteSearchIndex } from "@/data/search/site-search-index.generated";
 import luerDetailsJson from "@/data/products/generated/fittings/luer-fittings/detail/index.json";
 import {
@@ -28,7 +40,9 @@ import QuickConnectFittingDetailPage from "@/app/products/fittings/quick-connect
 import QuickConnectQ20Page from "@/app/products/fittings/quick-connect-fittings/q20/page";
 import QuickConnectQ40Page from "@/app/products/fittings/quick-connect-fittings/q40/page";
 import QuickConnectQ60Page from "@/app/products/fittings/quick-connect-fittings/q60/page";
-import DiaphragmPumpDetailPage from "@/app/products/pumps/diaphragm-pumps/[slug]/page";
+import DiaphragmPumpDetailPage, {
+  getDiaphragmPumpMetadata,
+} from "@/components/products/diaphragm-pumps/DiaphragmPumpDetailRoute";
 import PipettingPumpDetailPage from "@/app/products/pumps/pipetting-pumps/[slug]/page";
 import PlungerPumpDetailPage from "@/app/products/pumps/plunger-pumps/[slug]/page";
 import SyringePumpDetailPage from "@/app/products/pumps/syringe-pumps/[slug]/page";
@@ -120,6 +134,7 @@ const ROUTE_TITLES: Record<string, string> = {
   "bulkhead-barbed-fittings": "Bulkhead Barbed Fittings",
   "check-valves": "Check Valves",
   "diaphragm-pumps": "Diaphragm Pumps",
+  "miniature-diaphragm-pumps": "Miniature Diaphragm Pumps",
   "female-thread-adapters": "Female Thread Adapters",
   filters: "Inline Filters",
   "hard-tube-fittings": "Hard Tube Fittings",
@@ -136,9 +151,13 @@ export const dynamicParams = false;
 
 const INTERNATIONAL_PRODUCT_LOCALES: LocaleCode[] = ["en", "es", "fr", "ko", "ru"];
 
+function getProductRoutesForLocale(_locale: LocaleCode | string) {
+  return migrateDiaphragmPumpRouteSegments(allEnglishProductDetailRoutes);
+}
+
 export function generateStaticParams() {
   return INTERNATIONAL_PRODUCT_LOCALES.flatMap((locale) =>
-    allEnglishProductDetailRoutes.map((segments) => ({
+    getProductRoutesForLocale(locale).map((segments) => ({
       locale,
       segments: [...segments],
     })),
@@ -165,10 +184,10 @@ function getRouteTitle(segments: string[]) {
   return ROUTE_TITLES[lastSegment] || titleFromSlug(lastSegment);
 }
 
-function routeExists(segments: string[]) {
+function routeExists(locale: string, segments: string[]) {
   const routeKey = segments.join("/");
 
-  return allEnglishProductDetailRoutes.some(
+  return getProductRoutesForLocale(locale).some(
     (route) => route.join("/") === routeKey
   );
 }
@@ -196,14 +215,79 @@ function renderSelectionPage({
   );
 }
 
+async function getDiaphragmPumpRouteMetadata(
+  locale: LocaleCode,
+  segments: string[],
+): Promise<Metadata | null> {
+  if (!isDiaphragmPumpFinalSegments(segments)) return null;
+
+  const childSlug = segments[2] || "";
+  const reference = getDiaphragmPumpReferenceModel(childSlug);
+  const isSeries = DIAPHRAGM_PUMP_SERIES_SLUGS.includes(childSlug as never);
+
+  if (reference || isSeries) {
+    return getDiaphragmPumpMetadata({
+      params: Promise.resolve({ slug: childSlug }),
+      locale,
+    });
+  }
+
+  const normalizedLocale = normalizeDiaphragmPumpLocale(locale);
+  const copy = getDiaphragmPumpCategoryCopy(normalizedLocale);
+  const heading = childSlug === "liquid-diaphragm-pumps"
+    ? copy.liquid
+    : childSlug === "gas-liquid-diaphragm-pumps"
+      ? copy.gasLiquid
+      : childSlug === "gas-diaphragm-pumps"
+        ? copy.gas
+        : copy.parent;
+  const title = childSlug ? `${heading} | FOREACH` : copy.seoTitle;
+  const description = copy.seoDescription;
+  const canonicalPath = getDiaphragmPumpPath(
+    normalizedLocale,
+    childSlug || undefined,
+  );
+
+  return {
+    title,
+    description,
+    keywords: [heading, "FOREACH", "miniature diaphragm pump"],
+    alternates: {
+      canonical: canonicalPath,
+      languages: getDiaphragmPumpLanguageAlternates(childSlug || undefined),
+    },
+    robots: { index: true, follow: true },
+    openGraph: {
+      type: "website",
+      locale: normalizedLocale,
+      url: canonicalPath,
+      siteName: "FOREACH",
+      title,
+      description,
+    },
+    twitter: {
+      card: "summary",
+      title,
+      description,
+    },
+  };
+}
+
 export async function generateMetadata({
   params,
 }: ProductLocaleRoutePageProps): Promise<Metadata> {
   const { locale, segments } = await params;
 
-  if (!isSupportedLocale(locale) || locale === "zh-CN" || !routeExists(segments)) {
+  if (!isSupportedLocale(locale) || locale === "zh-CN" || !routeExists(locale, segments)) {
     return {};
   }
+
+  const diaphragmMetadata = await getDiaphragmPumpRouteMetadata(
+    locale as LocaleCode,
+    segments,
+  );
+
+  if (diaphragmMetadata) return diaphragmMetadata;
 
   const title = getRouteTitle(segments);
   const canonicalPath = `/${locale}/products/${segments.join("/")}/`;
@@ -274,7 +358,7 @@ export default async function ProductLocaleRoutePage({
 }: ProductLocaleRoutePageProps) {
   const { locale, segments } = await params;
 
-  if (!isSupportedLocale(locale) || locale === "zh-CN" || !routeExists(segments)) {
+  if (!isSupportedLocale(locale) || locale === "zh-CN" || !routeExists(locale, segments)) {
     notFound();
   }
 
@@ -360,7 +444,7 @@ export default async function ProductLocaleRoutePage({
       return PlungerPumpDetailPage({ params: detailParams });
     }
 
-    if (slug === "diaphragm-pumps") {
+    if (slug === "miniature-diaphragm-pumps") {
       return DiaphragmPumpDetailPage({
         params: detailParams,
         locale: locale as LocaleCode,

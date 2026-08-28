@@ -233,7 +233,7 @@ export const tubeInnerDiameterAffectsDiaphragmPumpFlowFrCopy = {
       "Vous pouvez fournir le modèle de pompe, le fluide, le diamètre intérieur et la longueur réels du tuyau, le passage du raccord, les pressions d'entrée et de sortie, la tension aux bornes de la pompe et le débit avant et après remplacement. Ces données permettront à l'ingénieur d'évaluer le point de fonctionnement réel.",
     contactLabel: "Contacter un ingénieur",
     productsLabel: "Voir les produits de pompes à membrane",
-    productsHref: "/products/pumps/diaphragm-pumps",
+    productsHref: "/products/pumps/miniature-diaphragm-pumps",
   },
 } as const satisfies DiaphragmPumpEngineeringArticleCopy;
 
@@ -489,6 +489,6 @@ export const suctionVsDischargeResistanceDiaphragmPumpFrCopy = {
       "Vous pouvez fournir le modèle de pompe, le fluide et sa température, la différence de niveau, les dimensions des tuyaux d'aspiration et de refoulement, la position du filtre, la pression absolue d'entrée, la contre-pression de sortie et le débit mesuré. Ces données permettront à l'ingénieur de diagnostiquer l'ensemble du circuit.",
     contactLabel: "Contacter un ingénieur",
     productsLabel: "Voir les produits de pompes à membrane",
-    productsHref: "/products/pumps/diaphragm-pumps",
+    productsHref: "/products/pumps/miniature-diaphragm-pumps",
   },
 } as const satisfies DiaphragmPumpEngineeringArticleCopy;

@@ -233,7 +233,7 @@ export const tubeInnerDiameterAffectsDiaphragmPumpFlowZhCopy = {
       "可提供泵型号、介质、软管实际内径与长度、接头通径、入口压力、出口压力、泵端电压和换管前后流量，便于工程师按真实工作点协助判断。",
     contactLabel: "联系工程师",
     productsLabel: "查看隔膜泵产品",
-    productsHref: "/products/pumps/diaphragm-pumps",
+    productsHref: "/products/pumps/miniature-diaphragm-pumps",
   },
 } as const satisfies DiaphragmPumpEngineeringArticleCopy;
 
@@ -489,6 +489,6 @@ export const suctionVsDischargeResistanceDiaphragmPumpZhCopy = {
       "可提供泵型号、介质与温度、液位差、吸入管和排出管尺寸、过滤器位置、入口绝对压力、出口背压及实测流量，便于工程师按完整液路协助诊断。",
     contactLabel: "联系工程师",
     productsLabel: "查看隔膜泵产品",
-    productsHref: "/products/pumps/diaphragm-pumps",
+    productsHref: "/products/pumps/miniature-diaphragm-pumps",
   },
 } as const satisfies DiaphragmPumpEngineeringArticleCopy;

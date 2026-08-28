@@ -94,6 +94,23 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
     ru: "Мембранный насос DPL для газа и жидкости",
   },
 
+  "液体隔膜泵": {
+    zh: "液体隔膜泵",
+    en: "Liquid Diaphragm Pump",
+    es: "Bomba de diafragma para líquidos",
+    fr: "Pompe à membrane pour liquides",
+    ko: "액체 다이어프램 펌프",
+    ru: "Жидкостный мембранный насос",
+  },
+  "气液混合隔膜泵": {
+    zh: "气液混合隔膜泵",
+    en: "Gas-Liquid Diaphragm Pump",
+    es: "Bomba de diafragma para gas y líquido",
+    fr: "Pompe à membrane pour gaz et liquide",
+    ko: "기액 혼합 다이어프램 펌프",
+    ru: "Газожидкостный мембранный насос",
+  },
+
   "液泵": {
     zh: "液泵",
     en: "Liquid Pump",
@@ -109,6 +126,14 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
     fr: "Pompe de mélange gaz-liquide",
     ko: "기액 혼합 펌프",
     ru: "Насос для газожидкостной смеси",
+  },
+  "6 L/min": {
+    zh: "6 L/min（单头）",
+    en: "6 L/min per head",
+    es: "6 L/min por cabezal",
+    fr: "6 L/min par tête",
+    ko: "헤드당 6 L/min",
+    ru: "6 л/мин на одну головку",
   },
   "有刷电机": {
     zh: "有刷电机",

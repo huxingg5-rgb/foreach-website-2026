@@ -329,7 +329,7 @@ export const tubeInnerDiameterAffectsDiaphragmPumpFlowRuCopy = {
       "Предоставьте модель насоса, рабочую среду, измеренные внутренний диаметр и длину трубки, проход фитинга, давление на входе, давление на выходе, напряжение на клеммах насоса и расход до и после замены, чтобы инженер мог оценить фактическую рабочую точку.",
     contactLabel: "Связаться с инженером",
     productsLabel: "Смотреть диафрагменные насосы",
-    productsHref: "/products/pumps/diaphragm-pumps",
+    productsHref: "/products/pumps/miniature-diaphragm-pumps",
   },
 } as const satisfies DiaphragmPumpEngineeringArticleCopy;
 
@@ -707,6 +707,6 @@ export const suctionVsDischargeResistanceDiaphragmPumpRuCopy = {
       "Предоставьте модель насоса, рабочую среду и температуру, разность высот, размеры всасывающей и нагнетательной линий, место фильтра, абсолютное давление на входе, противодавление на выходе и измеренный расход, чтобы инженер мог диагностировать полный жидкостный тракт.",
     contactLabel: "Связаться с инженером",
     productsLabel: "Смотреть диафрагменные насосы",
-    productsHref: "/products/pumps/diaphragm-pumps",
+    productsHref: "/products/pumps/miniature-diaphragm-pumps",
   },
 } as const satisfies DiaphragmPumpEngineeringArticleCopy;
