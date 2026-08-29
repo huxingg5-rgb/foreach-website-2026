@@ -3,6 +3,11 @@ import type { ComponentType, ReactNode } from "react";
 import RelatedResources from "@/components/common/related-resources/RelatedResources";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
 import {
+  getDiaphragmPumpCopy,
+  getDiaphragmPumpSeriesSeoDescription,
+} from "@/data/products/detail/diaphragm-pump-copy";
+import { getProductDetailTitleOverride } from "@/data/products/detail/product-detail-title-overrides";
+import {
   diaphragmPumpReferenceModels,
   getDiaphragmPumpReferenceModel,
   isLegacyDiaphragmPumpSlug,
@@ -1044,8 +1049,16 @@ export async function getDiaphragmPumpMetadata({
   const slug = normalizeSlug(resolvedParams.slug);
   const reference = getDiaphragmPumpReferenceModel(slug);
   const localizedReference = reference?.localized[targetLocale];
+  const localizedSeriesCopy =
+    !reference && targetLocale !== "zh"
+      ? getDiaphragmPumpCopy(data, targetLocale)
+      : null;
+  const localizedSeriesTitle = localizedSeriesCopy
+    ? getProductDetailTitleOverride(data, targetLocale)
+    : "";
   const title = getText(
     localizedReference?.seoTitle ||
+      localizedSeriesTitle ||
       data.seoTitle ||
       data.metaTitle ||
       data.model ||
@@ -1053,6 +1066,13 @@ export async function getDiaphragmPumpMetadata({
   );
   const description = getText(
     localizedReference?.seoDescription ||
+      (localizedSeriesCopy
+        ? getDiaphragmPumpSeriesSeoDescription(
+            data,
+            targetLocale,
+            localizedSeriesTitle,
+          )
+        : "") ||
       data.seoDescription ||
       data.metaDescription ||
       data.description ||
@@ -1066,6 +1086,14 @@ export async function getDiaphragmPumpMetadata({
   const socialImage = data.mainImage
     ? new URL(data.mainImage, "https://www.foreachtek.com").toString()
     : undefined;
+  const socialImageAlt =
+    targetLocale === "zh"
+      ? getText(data.imageAlt || title)
+      : getText(
+          localizedReference?.h1 ||
+            localizedSeriesCopy?.title ||
+            title,
+        );
 
   return {
     title: metadataTitle,
@@ -1086,7 +1114,7 @@ export async function getDiaphragmPumpMetadata({
       title: metadataTitle,
       description,
       ...(socialImage
-        ? { images: [{ url: socialImage, alt: data.imageAlt || title }] }
+        ? { images: [{ url: socialImage, alt: socialImageAlt }] }
         : {}),
     },
     twitter: {

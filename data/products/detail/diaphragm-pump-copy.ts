@@ -171,6 +171,28 @@ export function getDiaphragmPumpCopy(
   };
 }
 
+export function getDiaphragmPumpSeriesSeoDescription(
+  value: unknown,
+  locale: SelectionLocale,
+  seriesTitle: string,
+) {
+  const copy = getDiaphragmPumpCopy(value, locale);
+
+  if (!copy) return "";
+
+  const separator = locale === "zh" ? "；" : "; ";
+  const titleSeparator = locale === "zh"
+    ? "："
+    : locale === "fr"
+      ? " : "
+      : ": ";
+  const terminator = locale === "zh" ? "。" : ".";
+
+  const sharedParameters = copy.cardParameters.slice(0, 2);
+
+  return `${seriesTitle}${titleSeparator}${sharedParameters.join(separator)}${terminator}`;
+}
+
 function getDiaphragmPumpGallery(
   key: DiaphragmPumpCopyKey,
   data: Record<string, unknown>,
@@ -215,6 +237,13 @@ export function applyDiaphragmPumpDetailCopy<
     title: copy.title,
     model: copy.title,
     productName: copy.title,
+    ...(locale !== "zh"
+      ? {
+          imageAlt: copy.title,
+          imageAltEn: copy.title,
+          mainImageAlt: copy.title,
+        }
+      : {}),
     description: copy.intro,
     commonApplications: applications,
     applications,
