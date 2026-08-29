@@ -188,6 +188,10 @@ function getMotorTerms(definition: ReferenceDefinition) {
   } as const;
 }
 
+function getReferenceServiceLifeHours(definition: ReferenceDefinition) {
+  return definition.motor === "brushless" ? "10,000 h" : "3,000 h";
+}
+
 function getReferenceLocalizedCopy(
   definition: ReferenceDefinition,
   locale: DiaphragmPumpReferenceLocale,
@@ -197,170 +201,153 @@ function getReferenceLocalizedCopy(
   const isHighPressure = definition.kind === "high-pressure";
   const flow = definition.flow;
   const model = definition.model;
+  const hours = getReferenceServiceLifeHours(definition);
   const applications = isGasLiquid ? GAS_LIQUID_APPLICATIONS[locale] : LIQUID_APPLICATIONS[locale];
 
   if (locale === "zh") {
-    const h1 = isGasLiquid
-      ? "恒永达科技 24 V 直流无刷电机气液混合微型隔膜泵"
+    const cardSubtitle = isGasLiquid
+      ? `24 V 直流无刷双头微型气液混合隔膜泵，单泵头空载气体流量 6 L/min，寿命 ${hours}`
       : isHighPressure
-        ? `恒永达科技 600 kPa ${motor.zh}高压微型隔膜泵，12 V / 24 V 可选`
-        : `恒永达科技 ${flow} mL/min ${motor.zh}微型隔膜泵，12 V / 24 V 可选`;
+        ? `600 kPa ${motor.zh}高压微型隔膜泵，寿命 ${hours}，12 V / 24 V 可选`
+        : `${flow} mL/min ${motor.zh}微型隔膜泵，寿命 ${hours}，12 V / 24 V 可选`;
+    const h1 = `FOREACH ${model} ${cardSubtitle}`;
     const description = isGasLiquid
-      ? `${model} 是 24 V 直流无刷气液混合隔膜泵，工作介质为气体及气液混合物。单泵头空载气体流量为 6 L/min，最大负压为 < -90 kPa，适用于真空抽吸和气液混合物抽排。`
+      ? `${model} 是 24 V 直流无刷双头微型气液混合隔膜泵，工作介质为气体及气液混合物。单泵头空载气体流量为 6 L/min，最大负压为 < -90 kPa，适用于真空抽吸和气液混合物抽排。`
       : isHighPressure
         ? `${model} 是 12 V / 24 V ${motor.zh}高压微型液体隔膜泵，额定压力为 600 kPa，空载流量为 300 mL/min。实际采用倒刺接口，并通过卡箍 / 锁紧结构固定软管。`
         : `${model} 是 12 V / 24 V ${motor.zh}微型液体隔膜泵，空载流量为 ${flow} mL/min，额定压力为 100 kPa，适用于仪器内部的清洗、试剂、废液与循环液路。`;
     const seoTitle = isGasLiquid
-      ? `气液混合隔膜泵与真空抽吸 | ${model} | 恒永达`
+      ? `双头微型气液混合隔膜泵与真空抽吸 | ${model} | 恒永达`
       : isHighPressure
         ? `600 kPa ${motor.zh}高压微型隔膜泵 | ${model} | 恒永达`
         : `${flow} mL/min ${motor.zh}微型液体隔膜泵 | ${model} | 恒永达`;
-    const cardSubtitle = isGasLiquid
-      ? "24 V 直流无刷双头微型气液混合隔膜泵，单泵头空载气体流量 6 L/min"
-      : h1.replace(/^恒永达科技\s*/, "");
     return { h1, cardSubtitle, description, applications, seoTitle, seoDescription: description };
   }
 
   if (locale === "en") {
-    const h1 = isGasLiquid
-      ? "FOREACH 24 V Brushless DC Gas-Liquid Diaphragm Pump for Vacuum Aspiration"
+    const cardSubtitle = isGasLiquid
+      ? `24 V Brushless DC Dual-Head Miniature Gas-Liquid Diaphragm Pump, 6 L/min No-Load Gas Flow per Head, ${hours} Service Life`
       : isHighPressure
-        ? `FOREACH 600 kPa ${motor.en} High-Pressure Miniature Liquid Diaphragm Pump, 12 V / 24 V`
-        : `FOREACH ${flow} mL/min ${motor.en} Miniature Liquid Diaphragm Pump, 12 V / 24 V`;
+        ? `600 kPa ${motor.en} High-Pressure Miniature Liquid Diaphragm Pump, ${hours} Service Life, 12 V / 24 V`
+        : `${flow} mL/min ${motor.en} Miniature Liquid Diaphragm Pump, ${hours} Service Life, 12 V / 24 V`;
+    const h1 = `FOREACH ${model} ${cardSubtitle}`;
     const description = isGasLiquid
-      ? `${model} is a 24 V brushless DC gas-liquid diaphragm pump for gas and gas-liquid mixtures. Its single-head no-load gas flow is 6 L/min and maximum negative pressure is < -90 kPa.`
+      ? `${model} is a 24 V brushless DC dual-head miniature gas-liquid diaphragm pump for gas and gas-liquid mixtures. Its single-head no-load gas flow is 6 L/min and maximum negative pressure is < -90 kPa.`
       : isHighPressure
         ? `${model} is a 12 V / 24 V ${motor.en.toLowerCase()} high-pressure miniature liquid diaphragm pump with 600 kPa rated pressure and 300 mL/min no-load flow. The physical connection is a hose barb secured by a clamp/locking structure.`
         : `${model} is a 12 V / 24 V ${motor.en.toLowerCase()} miniature liquid diaphragm pump with ${flow} mL/min no-load flow and 100 kPa rated pressure for instrument wash, reagent, waste, and circulation circuits.`;
     const seoTitle = isGasLiquid
-      ? `Gas-Liquid Diaphragm Pump for Vacuum Aspiration | ${model} | FOREACH`
+      ? `Dual-Head Miniature Gas-Liquid Diaphragm Pump for Vacuum Aspiration | ${model} | FOREACH`
       : isHighPressure
         ? `600 kPa ${motor.en} High-Pressure Diaphragm Pump | ${model} | FOREACH`
         : `${flow} mL/min ${motor.en} Liquid Diaphragm Pump | ${model} | FOREACH`;
-    const cardSubtitle = isGasLiquid
-      ? "24 V brushless DC dual-head miniature gas-liquid diaphragm pump, 6 L/min no-load gas flow per head"
-      : h1.replace(/^FOREACH\s*/, "");
     return { h1, cardSubtitle, description, applications, seoTitle, seoDescription: description };
   }
 
   if (locale === "es") {
-    const h1 = isGasLiquid
-      ? "FOREACH Bomba de diafragma gas-líquido de 24 V con motor CC sin escobillas para aspiración en vacío"
+    const cardSubtitle = isGasLiquid
+      ? `Bomba de diafragma miniatura gas-líquido de doble cabezal con motor CC sin escobillas de 24 V, caudal de gas sin carga de 6 L/min por cabezal, vida útil de ${hours}`
       : isHighPressure
-        ? `FOREACH Bomba miniatura de diafragma para líquidos de alta presión, 600 kPa, con ${motor.es}, 12 V / 24 V`
-        : `FOREACH Bomba miniatura de diafragma para líquidos de ${flow} mL/min con ${motor.es}, 12 V / 24 V`;
+        ? `Bomba miniatura de diafragma de alta presión para líquidos, 600 kPa, con ${motor.es}, vida útil de ${hours}, 12 V / 24 V`
+        : `Bomba miniatura de diafragma para líquidos de ${flow} mL/min con ${motor.es}, vida útil de ${hours}, 12 V / 24 V`;
+    const h1 = `FOREACH ${model} ${cardSubtitle}`;
     const description = isGasLiquid
-      ? `${model} es una bomba de diafragma gas-líquido de 24 V con motor CC sin escobillas para gas y mezclas gas-líquido. El caudal de gas sin carga de un cabezal es de 6 L/min y el vacío máximo es < -90 kPa.`
+      ? `${model} es una bomba de diafragma en miniatura gas-líquido de doble cabezal, 24 V, con motor CC sin escobillas para gas y mezclas gas-líquido. El caudal de gas sin carga de un cabezal es de 6 L/min y el vacío máximo es < -90 kPa.`
       : isHighPressure
         ? `${model} es una bomba miniatura de diafragma para líquidos con ${motor.es}: presión nominal de 600 kPa, caudal sin carga de 300 mL/min y 12 V / 24 V. La conexión física es una espiga fijada mediante abrazadera/estructura de bloqueo.`
         : `${model} es una bomba miniatura de diafragma para líquidos con ${motor.es}: caudal sin carga de ${flow} mL/min, presión nominal de 100 kPa y 12 V / 24 V para circuitos de instrumentos.`;
     const seoTitle = isGasLiquid
-      ? `Bomba de diafragma gas-líquido para aspiración en vacío | ${model} | FOREACH`
+      ? `Bomba de diafragma en miniatura gas-líquido de doble cabezal | ${model} | FOREACH`
       : isHighPressure
         ? `Bomba de diafragma de alta presión 600 kPa, ${motor.es} | ${model} | FOREACH`
         : `Bomba miniatura de diafragma para líquidos de ${flow} mL/min, ${motor.es} | ${model} | FOREACH`;
-    const cardSubtitle = isGasLiquid
-      ? "Bomba de diafragma miniatura gas-líquido de doble cabezal, 24 V CC sin escobillas, caudal de gas sin carga de 6 L/min por cabezal"
-      : h1.replace(/^FOREACH\s*/, "");
     return { h1, cardSubtitle, description, applications, seoTitle, seoDescription: description };
   }
 
   if (locale === "fr") {
-    const h1 = isGasLiquid
-      ? "FOREACH Pompe à membrane gaz-liquide 24 V avec moteur CC sans balais pour aspiration à vide"
+    const cardSubtitle = isGasLiquid
+      ? `Pompe à membrane miniature gaz-liquide à double tête avec moteur CC sans balais 24 V, débit de gaz à vide de 6 L/min par tête, durée de vie de ${hours}`
       : isHighPressure
-        ? `FOREACH Pompe à membrane miniature haute pression pour liquides, 600 kPa, avec ${motor.fr}, 12 V / 24 V`
-        : `FOREACH Pompe à membrane miniature pour liquides de ${flow} mL/min avec ${motor.fr}, 12 V / 24 V`;
+        ? `Pompe à membrane miniature haute pression pour liquides, 600 kPa, avec ${motor.fr}, durée de vie de ${hours}, 12 V / 24 V`
+        : `Pompe à membrane miniature pour liquides de ${flow} mL/min avec ${motor.fr}, durée de vie de ${hours}, 12 V / 24 V`;
+    const h1 = `FOREACH ${model} ${cardSubtitle}`;
     const description = isGasLiquid
-      ? `${model} est une pompe à membrane gaz-liquide 24 V à moteur CC sans balais pour les gaz et mélanges gaz-liquide. Le débit de gaz sans charge d’une seule tête est de 6 L/min et le vide maximal est < -90 kPa.`
+      ? `${model} est une pompe à membrane miniature gaz-liquide à double tête, 24 V, à moteur CC sans balais pour les gaz et mélanges gaz-liquide. Le débit de gaz sans charge d’une seule tête est de 6 L/min et le vide maximal est < -90 kPa.`
       : isHighPressure
         ? `${model} est une pompe à membrane miniature haute pression pour liquides avec ${motor.fr} : pression nominale de 600 kPa, débit à vide de 300 mL/min et 12 V / 24 V. Le raccord physique est cannelé et serré par collier/structure de verrouillage.`
         : `${model} est une pompe à membrane miniature pour liquides avec ${motor.fr} : débit à vide de ${flow} mL/min, pression nominale de 100 kPa et 12 V / 24 V pour les circuits d’instruments.`;
     const seoTitle = isGasLiquid
-      ? `Pompe à membrane gaz-liquide pour aspiration à vide | ${model} | FOREACH`
+      ? `Pompe à membrane miniature gaz-liquide à double tête | ${model} | FOREACH`
       : isHighPressure
         ? `Pompe à membrane haute pression 600 kPa, ${motor.fr} | ${model} | FOREACH`
         : `Pompe à membrane miniature pour liquides ${flow} mL/min, ${motor.fr} | ${model} | FOREACH`;
-    const cardSubtitle = isGasLiquid
-      ? "Pompe à membrane miniature gaz-liquide à double tête, 24 V CC sans balais, débit de gaz à vide de 6 L/min par tête"
-      : h1.replace(/^FOREACH\s*/, "");
     return { h1, cardSubtitle, description, applications, seoTitle, seoDescription: description };
   }
 
   if (locale === "ko") {
-    const h1 = isGasLiquid
-      ? "FOREACH 24 V 브러시리스 DC 기액 혼합 다이어프램 펌프, 진공 흡인용"
+    const cardSubtitle = isGasLiquid
+      ? `24 V 브러시리스 DC 듀얼 헤드 소형 기액 혼합 다이어프램 펌프, 헤드당 무부하 가스 유량 6 L/min, 수명 ${hours}`
       : isHighPressure
-        ? `FOREACH 600 kPa ${motor.ko} 고압 소형 액체 다이어프램 펌프, 12 V / 24 V`
-        : `FOREACH ${flow} mL/min ${motor.ko} 소형 액체 다이어프램 펌프, 12 V / 24 V`;
+        ? `600 kPa ${motor.ko} 고압 소형 액체 다이어프램 펌프, 수명 ${hours}, 12 V / 24 V`
+        : `${flow} mL/min ${motor.ko} 소형 액체 다이어프램 펌프, 수명 ${hours}, 12 V / 24 V`;
+    const h1 = `FOREACH ${model} ${cardSubtitle}`;
     const description = isGasLiquid
-      ? `${model}는 24 V 브러시리스 DC 기액 혼합 다이어프램 펌프로 가스 및 기액 혼합물에 사용됩니다. 단일 헤드 무부하 가스 유량은 6 L/min이고 최대 부압/진공은 < -90 kPa입니다.`
+      ? `${model}는 24 V 브러시리스 DC 듀얼 헤드 소형 기액 혼합 다이어프램 펌프로 가스 및 기액 혼합물에 사용됩니다. 단일 헤드 무부하 가스 유량은 6 L/min이고 최대 부압/진공은 < -90 kPa입니다.`
       : isHighPressure
         ? `${model}는 12 V / 24 V ${motor.ko} 고압 소형 액체 다이어프램 펌프로 정격 압력 600 kPa, 무부하 유량 300 mL/min입니다. 실제 연결은 바브 + 클램프/잠금 구조입니다.`
         : `${model}는 12 V / 24 V ${motor.ko} 소형 액체 다이어프램 펌프로 무부하 유량 ${flow} mL/min, 정격 압력 100 kPa이며 장비 내부 액체 회로에 적합합니다.`;
     const seoTitle = isGasLiquid
-      ? `진공 흡인용 기액 혼합 다이어프램 펌프 | ${model} | FOREACH`
+      ? `진공 흡인용 듀얼 헤드 소형 기액 혼합 다이어프램 펌프 | ${model} | FOREACH`
       : isHighPressure
         ? `600 kPa ${motor.ko} 고압 액체 다이어프램 펌프 | ${model} | FOREACH`
         : `${flow} mL/min ${motor.ko} 소형 액체 다이어프램 펌프 | ${model} | FOREACH`;
-    const cardSubtitle = isGasLiquid
-      ? "24 V 브러시리스 DC 듀얼 헤드 소형 기액 혼합 다이어프램 펌프, 헤드당 무부하 가스 유량 6 L/min"
-      : h1.replace(/^FOREACH\s*/, "");
     return { h1, cardSubtitle, description, applications, seoTitle, seoDescription: description };
   }
 
-  const h1 = isGasLiquid
-    ? "FOREACH Газожидкостный мембранный насос 24 V с бесщёточным двигателем постоянного тока для вакуумной аспирации"
+  const cardSubtitle = isGasLiquid
+    ? `Двухголовочный миниатюрный газожидкостный мембранный насос 24 V с бесщёточным двигателем постоянного тока, расход газа без нагрузки одной головки 6 L/min, срок службы ${hours}`
     : isHighPressure
-      ? `FOREACH Миниатюрный жидкостный мембранный насос высокого давления 600 kPa с ${motor.ru}, 12 V / 24 V`
-      : `FOREACH Миниатюрный жидкостный мембранный насос ${flow} mL/min с ${motor.ru}, 12 V / 24 V`;
+      ? `Миниатюрный жидкостный мембранный насос высокого давления 600 kPa с ${motor.ru}, срок службы ${hours}, 12 V / 24 V`
+      : `Миниатюрный жидкостный мембранный насос ${flow} mL/min с ${motor.ru}, срок службы ${hours}, 12 V / 24 V`;
+  const h1 = `FOREACH ${model} ${cardSubtitle}`;
   const description = isGasLiquid
-    ? `${model} — газожидкостный мембранный насос 24 V с бесщёточным двигателем для газа и газожидкостных смесей. Расход газа без нагрузки одной головки составляет 6 L/min, максимальное разрежение — < -90 kPa.`
+    ? `${model} — двухголовочный миниатюрный газожидкостный мембранный насос 24 V с бесщёточным двигателем для газа и газожидкостных смесей. Расход газа без нагрузки одной головки составляет 6 L/min, максимальное разрежение — < -90 kPa.`
     : isHighPressure
       ? `${model} — миниатюрный жидкостный мембранный насос высокого давления с ${motor.ru}: номинальное давление 600 kPa, расход без нагрузки 300 mL/min и 12 V / 24 V. Физическое соединение — штуцер с хомутом/фиксирующей конструкцией.`
       : `${model} — миниатюрный жидкостный мембранный насос с ${motor.ru}: расход без нагрузки ${flow} mL/min, номинальное давление 100 kPa и 12 V / 24 V для жидкостных контуров приборов.`;
   const seoTitle = isGasLiquid
-    ? `Газожидкостный мембранный насос для вакуумной аспирации | ${model} | FOREACH`
+    ? `Двухголовочный миниатюрный газожидкостный мембранный насос | ${model} | FOREACH`
     : isHighPressure
       ? `Мембранный насос высокого давления 600 kPa с ${motor.ru} | ${model} | FOREACH`
       : `Миниатюрный жидкостный мембранный насос ${flow} mL/min с ${motor.ru} | ${model} | FOREACH`;
-  const cardSubtitle = isGasLiquid
-    ? "Двухголовочный миниатюрный газожидкостный мембранный насос 24 В с бесщёточным двигателем, расход газа без нагрузки 6 л/мин на одну головку"
-    : h1.replace(/^FOREACH\s*/, "");
   return { h1, cardSubtitle, description, applications, seoTitle, seoDescription: description };
 }
 
 function getReferenceServiceLifeCopy(definition: ReferenceDefinition) {
-  const hours = definition.motor === "brushless" ? "10,000 h" : "3,000 h";
+  const hours = getReferenceServiceLifeHours(definition);
 
   return {
     zh: {
-      cardSuffix: `；规定寿命 ${hours}（额定电压、连续运行）`,
       descriptionSentence: `规定寿命为 ${hours}（额定电压、连续运行）。`,
       introConditionSentence: "上述规定寿命的条件为额定电压、连续运行。",
     },
     en: {
-      cardSuffix: `; specified service life ${hours} at rated voltage under continuous operation`,
       descriptionSentence: `The specified service life is ${hours} at rated voltage under continuous operation.`,
       introConditionSentence: "The stated service-life value applies at rated voltage under continuous operation.",
     },
     es: {
-      cardSuffix: `; vida útil especificada de ${hours} a tensión nominal y en funcionamiento continuo`,
       descriptionSentence: `La vida útil especificada es de ${hours} a tensión nominal y en funcionamiento continuo.`,
       introConditionSentence: "El valor de vida útil indicado corresponde a tensión nominal y funcionamiento continuo.",
     },
     fr: {
-      cardSuffix: `; durée de vie spécifiée de ${hours} à la tension nominale en fonctionnement continu`,
       descriptionSentence: `La durée de vie spécifiée est de ${hours} à la tension nominale en fonctionnement continu.`,
       introConditionSentence: "La valeur de durée de vie indiquée s’applique à la tension nominale en fonctionnement continu.",
     },
     ko: {
-      cardSuffix: `; 정격 전압 연속 운전 기준 규정 수명 ${hours}`,
       descriptionSentence: `정격 전압에서 연속 운전할 때의 규정 수명은 ${hours}입니다.`,
       introConditionSentence: "표기된 수명 값은 정격 전압에서의 연속 운전 기준입니다.",
     },
     ru: {
-      cardSuffix: `; указанный срок службы ${hours} при номинальном напряжении и непрерывной работе`,
       descriptionSentence: `Указанный срок службы составляет ${hours} при номинальном напряжении и непрерывной работе.`,
       introConditionSentence: "Указанный ресурс относится к работе при номинальном напряжении в непрерывном режиме.",
     },
@@ -377,7 +364,6 @@ function buildLocalizedCopy(definition: ReferenceDefinition) {
         locale,
         {
           ...copy,
-          cardSubtitle: `${copy.cardSubtitle}${serviceLife.cardSuffix}`,
           description: `${copy.description} ${serviceLife.descriptionSentence}`,
           introConditionSentence: serviceLife.introConditionSentence,
           seoDescription: `${copy.seoDescription} ${serviceLife.descriptionSentence}`,

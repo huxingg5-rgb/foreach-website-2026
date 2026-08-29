@@ -327,8 +327,8 @@ for (const locale of DIAPHRAGM_PUMP_PUBLIC_LOCALES) {
     if (h1 !== reference.localized[locale].h1) {
       fail(`Reference H1 不一致：${route} -> ${h1}`);
     }
-    if (h1.includes(reference.model)) {
-      fail(`H1 不应包含 Reference Model：${route}`);
+    if (!h1.startsWith(`FOREACH ${reference.model} `)) {
+      fail(`Reference H1 应以 FOREACH + Reference Model 开头：${route}`);
     }
 
     assertCustomProductRow(html, route, locale, reference.model);
