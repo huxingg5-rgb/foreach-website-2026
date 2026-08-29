@@ -244,7 +244,9 @@ export function applyDiaphragmPumpDetailCopy<
           mainImageAlt: copy.title,
         }
       : {}),
-    description: copy.intro,
+    description: reference
+      ? `${copy.intro} ${reference.localized[locale].introConditionSentence}`
+      : copy.intro,
     commonApplications: applications,
     applications,
     applicationScenarios: applications,

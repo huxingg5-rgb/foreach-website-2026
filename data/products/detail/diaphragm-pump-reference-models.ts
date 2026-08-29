@@ -23,6 +23,7 @@ export type DiaphragmPumpReferenceLocalizedCopy = {
   h1: string;
   cardSubtitle: string;
   description: string;
+  introConditionSentence: string;
   applications: string;
   seoTitle: string;
   seoDescription: string;
@@ -187,7 +188,10 @@ function getMotorTerms(definition: ReferenceDefinition) {
   } as const;
 }
 
-function getReferenceLocalizedCopy(definition: ReferenceDefinition, locale: DiaphragmPumpReferenceLocale): DiaphragmPumpReferenceLocalizedCopy {
+function getReferenceLocalizedCopy(
+  definition: ReferenceDefinition,
+  locale: DiaphragmPumpReferenceLocale,
+): Omit<DiaphragmPumpReferenceLocalizedCopy, "introConditionSentence"> {
   const motor = getMotorTerms(definition);
   const isGasLiquid = definition.kind === "gas-liquid";
   const isHighPressure = definition.kind === "high-pressure";
@@ -326,9 +330,60 @@ function getReferenceLocalizedCopy(definition: ReferenceDefinition, locale: Diap
   return { h1, cardSubtitle, description, applications, seoTitle, seoDescription: description };
 }
 
+function getReferenceServiceLifeCopy(definition: ReferenceDefinition) {
+  const hours = definition.motor === "brushless" ? "10,000 h" : "3,000 h";
+
+  return {
+    zh: {
+      cardSuffix: `；规定寿命 ${hours}（额定电压、连续运行）`,
+      descriptionSentence: `规定寿命为 ${hours}（额定电压、连续运行）。`,
+      introConditionSentence: "上述规定寿命的条件为额定电压、连续运行。",
+    },
+    en: {
+      cardSuffix: `; specified service life ${hours} at rated voltage under continuous operation`,
+      descriptionSentence: `The specified service life is ${hours} at rated voltage under continuous operation.`,
+      introConditionSentence: "The stated service-life value applies at rated voltage under continuous operation.",
+    },
+    es: {
+      cardSuffix: `; vida útil especificada de ${hours} a tensión nominal y en funcionamiento continuo`,
+      descriptionSentence: `La vida útil especificada es de ${hours} a tensión nominal y en funcionamiento continuo.`,
+      introConditionSentence: "El valor de vida útil indicado corresponde a tensión nominal y funcionamiento continuo.",
+    },
+    fr: {
+      cardSuffix: `; durée de vie spécifiée de ${hours} à la tension nominale en fonctionnement continu`,
+      descriptionSentence: `La durée de vie spécifiée est de ${hours} à la tension nominale en fonctionnement continu.`,
+      introConditionSentence: "La valeur de durée de vie indiquée s’applique à la tension nominale en fonctionnement continu.",
+    },
+    ko: {
+      cardSuffix: `; 정격 전압 연속 운전 기준 규정 수명 ${hours}`,
+      descriptionSentence: `정격 전압에서 연속 운전할 때의 규정 수명은 ${hours}입니다.`,
+      introConditionSentence: "표기된 수명 값은 정격 전압에서의 연속 운전 기준입니다.",
+    },
+    ru: {
+      cardSuffix: `; указанный срок службы ${hours} при номинальном напряжении и непрерывной работе`,
+      descriptionSentence: `Указанный срок службы составляет ${hours} при номинальном напряжении и непрерывной работе.`,
+      introConditionSentence: "Указанный ресурс относится к работе при номинальном напряжении в непрерывном режиме.",
+    },
+  } as const;
+}
+
 function buildLocalizedCopy(definition: ReferenceDefinition) {
   return Object.fromEntries(
-    (["zh", "en", "es", "fr", "ko", "ru"] as const).map((locale) => [locale, getReferenceLocalizedCopy(definition, locale)]),
+    (["zh", "en", "es", "fr", "ko", "ru"] as const).map((locale) => {
+      const copy = getReferenceLocalizedCopy(definition, locale);
+      const serviceLife = getReferenceServiceLifeCopy(definition)[locale];
+
+      return [
+        locale,
+        {
+          ...copy,
+          cardSubtitle: `${copy.cardSubtitle}${serviceLife.cardSuffix}`,
+          description: `${copy.description} ${serviceLife.descriptionSentence}`,
+          introConditionSentence: serviceLife.introConditionSentence,
+          seoDescription: `${copy.seoDescription} ${serviceLife.descriptionSentence}`,
+        },
+      ];
+    }),
   ) as Record<DiaphragmPumpReferenceLocale, DiaphragmPumpReferenceLocalizedCopy>;
 }
 
