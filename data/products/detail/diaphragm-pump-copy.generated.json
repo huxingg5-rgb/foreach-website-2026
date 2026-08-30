@@ -235,7 +235,7 @@
         "最大正压 +30 kPa · 最大负压 < -90 kPa",
         "寿命 10000 h"
       ],
-      "intro": "恒永达DPGL800系列无刷气液混合隔膜泵用于气体抽吸、负压建立以及气液混合介质的抽排和输送，采用24 V无刷电机，单泵头空载气体流量为6 L/min，最大正压为+30 kPa，最大负压小于-90 kPa（< -90 kPa），使用寿命为10000 h。产品适用于含气废液抽排、气液混合介质输送、管路排空及需要较强抽吸能力的自动化设备。实际性能会受到介质状态、管路结构和工作负载影响，具体参数以页面下方规格表为准。",
+      "intro": "恒永达 DPGL800 系列无刷气液混合隔膜泵专为气体及气液混合物设计，不适用于输送 100% 液体。产品采用 24 V 无刷电机，单泵头空载气体流量为 6 L/min，最大正压为 +30 kPa，最大负压为 < -90 kPa，使用寿命为 10000 h。产品适用于含气废液抽排、气液混合物输送、管路排空及需要较强抽吸能力的自动化设备。实际性能会受到介质状态、管路结构和工作负载影响，具体参数以页面下方规格表为准。",
       "applications": "气体抽吸、负压建立、含气废液抽排、气液混合介质输送、管路排空",
       "breadcrumbs": [
         "首页",
@@ -258,7 +258,7 @@
         },
         {
           "question": "DPGL800可以作为纯液体输送泵使用吗？",
-          "answer": "不建议按纯液体输送工况选用DPGL800。当前正式规格仅覆盖气体和气液混合介质；纯液体工况应选用液体隔膜泵，除非恒永达针对具体应用另行确认。"
+          "answer": "DPGL800 仅适用于气体和气液混合物，不适用于输送 100% 液体。纯液体工况应选用液体隔膜泵。"
         },
         {
           "question": "DPGL800选型前需要提供哪些参数？",
@@ -503,7 +503,7 @@
         "Maximum Positive Pressure +30 kPa · Maximum Negative Pressure < -90 kPa",
         "Service Life 10000 h"
       ],
-      "intro": "The FOREACH DPGL800 Series Brushless Gas-Liquid Diaphragm Pump is designed to draw and transfer gas and gas-liquid mixtures. It has a single-head no-load gas flow rate of 6 L/min, a maximum positive pressure of +30 kPa, a maximum negative pressure of < -90 kPa, a 24 V brushless motor, and a service life of 10000 h. It is suitable for gas-liquid waste extraction, gas-liquid mixture transfer, line evacuation, and automated equipment requiring strong suction performance. Actual performance may vary with the medium state, tubing configuration, and operating load. Refer to the specification table below for detailed parameters.",
+      "intro": "The FOREACH DPGL800 Series Brushless Gas-Liquid Diaphragm Pump is designed for gas and gas-liquid mixtures. It is not suitable for pumping 100% liquid. It has a single-head no-load gas flow rate of 6 L/min, a maximum positive pressure of +30 kPa, a maximum negative pressure of < -90 kPa, a 24 V brushless motor, and a service life of 10000 h. It is suitable for gas-liquid waste extraction, gas-liquid mixture transfer, line evacuation, and automated equipment requiring strong suction performance. Actual performance may vary with the medium state, tubing configuration, and operating load. Refer to the specification table below for detailed parameters.",
       "applications": "Gas suction, vacuum generation, gas-liquid waste extraction, gas-liquid mixture transfer, line evacuation",
       "breadcrumbs": [
         "Home",
@@ -526,7 +526,7 @@
         },
         {
           "question": "Can the DPGL800 be used as a pure-liquid transfer pump?",
-          "answer": "The current formal specification covers gas and gas-liquid mixtures, not pure-liquid transfer. Use a liquid diaphragm pump for a pure-liquid duty unless FOREACH confirms a specific DPGL800 application."
+          "answer": "Designed for gas and gas-liquid mixtures. It is not suitable for pumping 100% liquid. Use a liquid diaphragm pump for pure-liquid transfer."
         },
         {
           "question": "What information is required before selecting the DPGL800?",
@@ -771,7 +771,7 @@
         "Presión positiva máx. +30 kPa · presión negativa máx. < -90 kPa",
         "Vida útil 10000 h"
       ],
-      "intro": "La bomba de diafragma sin escobillas de la serie DPGL800 de FOREACH está diseñada para la aspiración de gases, la generación de vacío y la extracción o transferencia de mezclas gas-líquido. Incorpora un motor sin escobillas de 24 V y ofrece, con un solo cabezal y sin carga, un caudal de gas de 6 L/min, una presión positiva máxima de +30 kPa, una presión negativa máxima de < -90 kPa y una vida útil de 10000 h. Es adecuada para la extracción de líquidos residuales con fase gaseosa, la transferencia de mezclas gas-líquido, el vaciado de tuberías y los equipos automatizados que requieren una alta capacidad de aspiración. El rendimiento real puede variar según el estado del medio, la configuración de las tuberías y la carga de trabajo. Consulte la tabla de especificaciones inferior para conocer los parámetros detallados.",
+      "intro": "La bomba de diafragma sin escobillas de la serie DPGL800 de FOREACH está diseñada para gases y mezclas gas-líquido. No es adecuada para bombear líquido al 100 %. Incorpora un motor sin escobillas de 24 V y ofrece, con un solo cabezal y sin carga, un caudal de gas de 6 L/min, una presión positiva máxima de +30 kPa, una presión negativa máxima de < -90 kPa y una vida útil de 10000 h. Es adecuada para la extracción de líquidos residuales con fase gaseosa, la transferencia de mezclas gas-líquido, el vaciado de tuberías y los equipos automatizados que requieren una alta capacidad de aspiración. El rendimiento real puede variar según el estado del medio, la configuración de las tuberías y la carga de trabajo. Consulte la tabla de especificaciones inferior para conocer los parámetros detallados.",
       "applications": "Aspiración de gases, generación de vacío, extracción de líquidos residuales con fase gaseosa, transferencia de mezclas gas-líquido, vaciado de tuberías",
       "breadcrumbs": [
         "Inicio",
@@ -794,7 +794,7 @@
         },
         {
           "question": "¿Puede utilizarse la DPGL800 como bomba para líquidos puros?",
-          "answer": "La especificación formal vigente cubre gases y mezclas gas-líquido, no el trasvase de líquidos puros. Para una aplicación con líquido puro, utilice una bomba de diafragma para líquidos, salvo que FOREACH confirme expresamente una aplicación concreta de la DPGL800."
+          "answer": "La DPGL800 está diseñada para gases y mezclas gas-líquido. No es adecuada para bombear líquido al 100 %. Para el trasvase de líquidos puros, utilice una bomba de diafragma para líquidos."
         },
         {
           "question": "¿Qué datos deben facilitarse antes de seleccionar la DPGL800?",
@@ -1039,7 +1039,7 @@
         "Pression positive max. +30 kPa · pression négative max. < -90 kPa",
         "Durée de vie 10000 h"
       ],
-      "intro": "La pompe à membrane sans balais série DPGL800 de FOREACH est conçue pour l’aspiration de gaz, la création d’une dépression ainsi que l’extraction et le transfert de mélanges gaz-liquide. Équipée d’un moteur sans balais 24 V, elle offre, avec une seule tête et à vide, un débit de gaz de 6 L/min, une pression positive maximale de +30 kPa, une pression négative maximale de < -90 kPa et une durée de vie de 10000 h. Elle convient à l’extraction d’effluents contenant une phase gazeuse, au transfert de mélanges gaz-liquide, à l’évacuation des conduites et aux équipements automatisés nécessitant une forte capacité d’aspiration. Les performances réelles peuvent varier selon l’état du fluide, la configuration des conduites et la charge de fonctionnement. Se reporter au tableau des spécifications ci-dessous pour les paramètres détaillés.",
+      "intro": "La pompe à membrane sans balais série DPGL800 de FOREACH est conçue pour les gaz et les mélanges gaz-liquide. Elle ne convient pas au pompage de liquide à 100 %. Équipée d’un moteur sans balais 24 V, elle offre, avec une seule tête et à vide, un débit de gaz de 6 L/min, une pression positive maximale de +30 kPa, une pression négative maximale de < -90 kPa et une durée de vie de 10000 h. Elle convient à l’extraction d’effluents contenant une phase gazeuse, au transfert de mélanges gaz-liquide, à l’évacuation des conduites et aux équipements automatisés nécessitant une forte capacité d’aspiration. Les performances réelles peuvent varier selon l’état du fluide, la configuration des conduites et la charge de fonctionnement. Se reporter au tableau des spécifications ci-dessous pour les paramètres détaillés.",
       "applications": "Aspiration de gaz, création d’une dépression, extraction d’effluents contenant une phase gazeuse, transfert de mélanges gaz-liquide, évacuation des conduites",
       "breadcrumbs": [
         "Accueil",
@@ -1062,7 +1062,7 @@
         },
         {
           "question": "La DPGL800 peut-elle être utilisée comme pompe de transfert de liquide pur ?",
-          "answer": "La spécification formelle actuelle couvre les gaz et les mélanges gaz-liquide, pas le transfert de liquides purs. Pour un liquide pur, utiliser une pompe à membrane pour liquides, sauf si FOREACH confirme expressément une application particulière de la DPGL800."
+          "answer": "La DPGL800 est conçue pour les gaz et les mélanges gaz-liquide. Elle ne convient pas au pompage de liquide à 100 %. Pour le transfert de liquide pur, utilisez une pompe à membrane pour liquides."
         },
         {
           "question": "Quelles informations faut-il fournir avant de sélectionner la DPGL800 ?",
@@ -1307,7 +1307,7 @@
         "최대 양압 +30 kPa · 최대 음압 < -90 kPa",
         "수명 10000 h"
       ],
-      "intro": "FOREACH DPGL800 시리즈 브러시리스 다이어프램 펌프는 기체 흡입, 음압 형성 및 기액 혼합 매질의 흡입·이송용으로 설계되었습니다. 24 V 브러시리스 모터를 사용하며, 단일 펌프 헤드 기준 무부하 기체 유량은 6 L/min, 최대 양압은 +30 kPa, 최대 음압은 < -90 kPa, 수명은 10000 h입니다. 기체가 포함된 폐액의 흡입 배출, 기액 혼합 매질 이송, 배관 배기 및 높은 흡입 성능이 필요한 자동화 장비에 적합합니다. 실제 성능은 매질 상태, 배관 구성 및 운전 부하에 따라 달라질 수 있으며, 자세한 수치는 아래 사양표를 참조하십시오.",
+      "intro": "FOREACH DPGL800 시리즈 브러시리스 다이어프램 펌프는 가스 및 기액 혼합물용으로 설계되었으며 100% 액체 펌핑에는 적합하지 않습니다. 24 V 브러시리스 모터를 사용하며, 단일 펌프 헤드 기준 무부하 기체 유량은 6 L/min, 최대 양압은 +30 kPa, 최대 음압은 < -90 kPa, 수명은 10000 h입니다. 기체가 포함된 폐액의 흡입 배출, 기액 혼합물 이송, 배관 배기 및 높은 흡입 성능이 필요한 자동화 장비에 적합합니다. 실제 성능은 매질 상태, 배관 구성 및 운전 부하에 따라 달라질 수 있으며, 자세한 수치는 아래 사양표를 참조하십시오.",
       "applications": "기체 흡입, 음압 형성, 기체가 포함된 폐액 흡입 배출, 기액 혼합 매질 이송, 배관 배기",
       "breadcrumbs": [
         "홈",
@@ -1330,7 +1330,7 @@
         },
         {
           "question": "DPGL800을 순수 액체 이송 펌프로 사용할 수 있습니까?",
-          "answer": "현재 정식 사양은 기체와 기액 혼합 매질만을 대상으로 하며, 순수 액체 이송은 포함하지 않습니다. 순수 액체 용도에는 액체용 다이어프램 펌프를 선택하고, DPGL800의 특정 적용은 FOREACH의 별도 확인을 받아야 합니다."
+          "answer": "DPGL800은 가스 및 기액 혼합물용으로 설계되었으며 100% 액체 펌핑에는 적합하지 않습니다. 순수 액체 이송에는 액체용 다이어프램 펌프를 사용하십시오."
         },
         {
           "question": "DPGL800 선정 전에 어떤 정보를 제공해야 합니까?",
@@ -1575,7 +1575,7 @@
         "Макс. положительное давление +30 kPa · макс. отрицательное давление < -90 kPa",
         "Срок службы 10000 h"
       ],
-      "intro": "Бесщёточный мембранный насос FOREACH серии DPGL800 предназначен для всасывания газа, создания разрежения, а также откачивания и транспортирования газожидкостных смесей. Насос оснащён бесщёточным двигателем 24 V; расход газа одной насосной головки без нагрузки составляет 6 L/min, максимальное положительное давление — +30 kPa, максимальное отрицательное давление — < -90 kPa, срок службы — 10000 h. Он подходит для откачивания жидких отходов с газовой фазой, транспортирования газожидкостных смесей, опорожнения трубопроводов и автоматизированного оборудования, требующего высокой всасывающей способности. Фактические характеристики могут зависеть от состояния среды, конфигурации трубопровода и рабочей нагрузки. Подробные параметры приведены в таблице характеристик ниже.",
+      "intro": "Бесщёточный мембранный насос FOREACH серии DPGL800 предназначен для газа и газожидкостных смесей. Он не подходит для перекачивания 100 % жидкости. Насос оснащён бесщёточным двигателем 24 V; расход газа одной насосной головки без нагрузки составляет 6 L/min, максимальное положительное давление — +30 kPa, максимальное отрицательное давление — < -90 kPa, срок службы — 10000 h. Он подходит для откачивания жидких отходов с газовой фазой, транспортирования газожидкостных смесей, опорожнения трубопроводов и автоматизированного оборудования, требующего высокой всасывающей способности. Фактические характеристики могут зависеть от состояния среды, конфигурации трубопровода и рабочей нагрузки. Подробные параметры приведены в таблице характеристик ниже.",
       "applications": "Всасывание газа, создание разрежения, откачивание жидких отходов с газовой фазой, транспортирование газожидкостных смесей, опорожнение трубопроводов",
       "breadcrumbs": [
         "Главная",
@@ -1598,7 +1598,7 @@
         },
         {
           "question": "Можно ли использовать DPGL800 как насос для чистой жидкости?",
-          "answer": "Действующая официальная спецификация охватывает газ и газожидкостные смеси, но не перекачивание чистой жидкости. Для чистой жидкости следует выбрать жидкостный мембранный насос, если только FOREACH отдельно не подтвердит конкретное применение DPGL800."
+          "answer": "DPGL800 предназначен для газа и газожидкостных смесей. Он не подходит для перекачивания 100 % жидкости. Для чистой жидкости используйте жидкостный мембранный насос."
         },
         {
           "question": "Какие данные нужны перед выбором DPGL800?",

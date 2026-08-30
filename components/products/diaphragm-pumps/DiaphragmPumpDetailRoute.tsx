@@ -1016,9 +1016,7 @@ function getPreferredProductDetailData(
     return null;
   }
 
-  return adaptToProductDetailClientData(
-    applyDpl30hConnectionFacts(detail, locale),
-  );
+  return adaptToProductDetailClientData(detail);
 }
 
 export function getDiaphragmPumpStaticParams() {
@@ -1126,10 +1124,6 @@ export async function getDiaphragmPumpMetadata({
   };
 }
 
-const DPL30H_CONNECTION_DESCRIPTION = "倒刺接口 + 卡箍 / 锁紧结构";
-const DPL30H_SERIES_DESCRIPTION =
-  "DPL30H 液体隔膜泵面向较高出口压力的仪器液路，额定压力为 600 kPa，空载流量为 300 mL/min，适用于试剂转移、加压供液、较长管路输送和阻力较高的液路模块。\n\nDPL30H 系列提供有刷与无刷电机以及 12 V / 24 V DC 选项。实际产品采用倒刺接口，并通过卡箍 / 锁紧结构固定软管。";
-
 function filterReferenceModelConfigurations(
   detail: DiaphragmDetail,
   reference: DiaphragmPumpReferenceModel,
@@ -1185,50 +1179,6 @@ function createReferenceDetail(slug: string): DiaphragmDetail | null {
       seriesDetail,
       reference,
     ),
-  };
-}
-
-function applyDpl30hConnectionFacts(
-  detail: DiaphragmDetail,
-  _locale: DiaphragmPumpDetailRouteProps["locale"],
-): DiaphragmDetail {
-  const identity = [
-    detail.slug,
-    detail.seriesId,
-    detail.modelDisplay,
-    detail.title,
-  ]
-    .map(getText)
-    .join(" ")
-    .toLowerCase();
-
-  if (!identity.includes("dpl30h")) return detail;
-
-  const isReferenceDetail = Boolean(
-    getDiaphragmPumpReferenceModel(detail.slug),
-  );
-
-  return {
-    ...detail,
-    description: isReferenceDetail
-      ? detail.description
-      : DPL30H_SERIES_DESCRIPTION,
-    specifications: (detail.specifications || []).map((item) => {
-      const parameter = getText(item.parameter);
-      const value = getText(item.value);
-      const isConnectionRow =
-        parameter === "接管规格" ||
-        parameter === "接口" ||
-        /卡套接头|螺纹端口|硬管/.test(value);
-
-      return isConnectionRow
-        ? { ...item, value: DPL30H_CONNECTION_DESCRIPTION, note: "" }
-        : { ...item };
-    }),
-    modelConfigurations: (detail.modelConfigurations || []).map((item) => ({
-      ...item,
-      connectionType: DPL30H_CONNECTION_DESCRIPTION,
-    })),
   };
 }
 

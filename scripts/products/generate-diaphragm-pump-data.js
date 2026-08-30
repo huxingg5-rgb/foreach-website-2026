@@ -34,28 +34,8 @@ function migratePublicRoutePath(value) {
   return `${FINAL_PUBLIC_PARENT}${routePath.slice(LEGACY_PUBLIC_PARENT.length)}`;
 }
 
-function normalizeDpl30hConnectionValue(value) {
-  return typeof value === "string"
-    ? value
-        .replaceAll("螺纹端口/卡套接头", "倒刺端口 + 卡箍/锁紧结构")
-        .replaceAll(
-          "卡套接头，连接 6×4 mm（外径×内径）硬管",
-          "倒刺端口 + 卡箍/锁紧结构",
-        )
-        .replaceAll(
-          "采用卡套接头结构，可连接 6×4 mm 硬管",
-          "采用倒刺接口，并通过卡箍/锁紧结构固定软管",
-        )
-        .replaceAll(
-          "采用 6×4 mm 硬管连接",
-          "采用倒刺接口并通过卡箍/锁紧结构固定软管",
-        )
-        .replaceAll("硬管连接方式", "倒刺加卡箍/锁紧连接方式")
-    : value;
-}
-
 function normalizeGeneratedDetail(detail) {
-  const normalized = {
+  return {
     ...detail,
     path: migratePublicRoutePath(detail.path),
     seo: detail.seo
@@ -65,14 +45,6 @@ function normalizeGeneratedDetail(detail) {
         }
       : detail.seo,
   };
-
-  if (n(detail.seriesId).toUpperCase() !== "DPL30H") return normalized;
-
-  return JSON.parse(
-    JSON.stringify(normalized, (_key, value) =>
-      normalizeDpl30hConnectionValue(value),
-    ),
-  );
 }
 
 function ensureDir(dir) {
@@ -155,6 +127,64 @@ function checkDetailMotorConsistency(details) {
       `OK: ${detail.seriesId} 首个型号 ${detail.modelConfigurations?.[0]?.model || "-"} 与 SEO 电机事实一致`,
     );
   }
+}
+
+function toGeneratedSpecification(item) {
+  return {
+    tableName: item["规格表名称"],
+    parameter: item["参数"],
+    value: item["规格值"],
+    note: item["备注"],
+  };
+}
+
+function toGeneratedModelConfiguration(item) {
+  return {
+    itemCode: item["商品编码"],
+    model: item["产品型号"],
+    category: item["产品分类"],
+    motorType: item["电机类型"],
+    voltage: item["电压"],
+    connectionType: item["连接方式"],
+    portDirection: item["连接口方向"],
+    diaphragm: item["膜片"],
+    valvePlate: item["阀片"],
+    pumpHead: item["泵头"],
+    detailSlug: item["详情页slug"],
+    reservedModelSlug: item["单独型号页预留slug"],
+    note: item["备注"],
+  };
+}
+
+function refreshPreservedModelFacts(detail, specsBySeries, modelsBySeries) {
+  const seriesId = n(detail.seriesId);
+  const sourceSpecifications = specsBySeries[seriesId] || [];
+  const sourceModels = modelsBySeries[seriesId] || [];
+  const existingModels = Array.isArray(detail.modelConfigurations)
+    ? detail.modelConfigurations
+    : [];
+  const modelConfigurations = existingModels.map(existingModel => {
+    const sourceModel = sourceModels.find(item =>
+      n(item["产品型号"]) === n(existingModel.model) ||
+      (n(item["商品编码"]) && n(item["商品编码"]) === n(existingModel.itemCode))
+    );
+
+    return sourceModel
+      ? { ...existingModel, ...toGeneratedModelConfiguration(sourceModel) }
+      : existingModel;
+  });
+  const motorLabel = getMotorLabel(modelConfigurations[0]?.motorType);
+  const matchingSpecifications = motorLabel
+    ? sourceSpecifications.filter(item => n(item["规格表名称"]).includes(motorLabel))
+    : sourceSpecifications;
+
+  return {
+    ...detail,
+    ...(matchingSpecifications.length
+      ? { specifications: matchingSpecifications.map(toGeneratedSpecification) }
+      : {}),
+    ...(modelConfigurations.length ? { modelConfigurations } : {}),
+  };
 }
 
 function publicFullPath(dir, file) {
@@ -344,27 +374,8 @@ function main() {
         status: primaryRoute["上线状态"] || row["状态"],
         note: primaryRoute["备注"] || "",
       },
-      specifications: primarySpecifications.map(item => ({
-        tableName: item["规格表名称"],
-        parameter: item["参数"],
-        value: item["规格值"],
-        note: item["备注"],
-      })),
-      modelConfigurations: seriesModels.map(item => ({
-        itemCode: item["商品编码"],
-        model: item["产品型号"],
-        category: item["产品分类"],
-        motorType: item["电机类型"],
-        voltage: item["电压"],
-        connectionType: item["连接方式"],
-        portDirection: item["连接口方向"],
-        diaphragm: item["膜片"],
-        valvePlate: item["阀片"],
-        pumpHead: item["泵头"],
-        detailSlug: item["详情页slug"],
-        reservedModelSlug: item["单独型号页预留slug"],
-        note: item["备注"],
-      })),
+      specifications: primarySpecifications.map(toGeneratedSpecification),
+      modelConfigurations: seriesModels.map(toGeneratedModelConfiguration),
       faqs: (faqsBySeries[sid] || []).map(item => ({
         question: item["问题"],
         answer: item["答案"],
@@ -395,7 +406,8 @@ function main() {
       const slug = n(item.slug);
       return slug && !mainSeriesSlugs.has(slug);
     })
-    .map(normalizeGeneratedDetail);
+    .map(normalizeGeneratedDetail)
+    .map(item => refreshPreservedModelFacts(item, specsBySeries, modelsBySeries));
 
   const cards = cardRows
     .filter(row => PUBLIC_SELECTION_CARD_IDS.has(n(row["card_id"]).toUpperCase()))

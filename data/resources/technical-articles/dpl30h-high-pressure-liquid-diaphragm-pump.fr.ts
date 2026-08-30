@@ -45,7 +45,7 @@ export const dpl30hArticleFrCopy: Dpl30hArticleCopy = {
       ["Débit à vide", "300 mL/min", "Non garanti à 600 kPa"], ["Pression nominale", "600 kPa", "Lire le point sur la courbe débit-pression"],
       ["Hauteur d'auto-amorçage", "3 mH₂O", "Dépend du fluide, du tube et de l'étanchéité"], ["Puissance", "≤7 W", "Dimensionner l'alimentation pour le démarrage"],
       ["Fluide nominal", "Eau purifiée", "Évaluer les autres liquides en conditions réelles"], ["Température du fluide", "+5 °C à +40 °C", "Ne pas reprendre la limite DPL30 de +80 °C"],
-      ["Raccord", "Raccord à pince/compression pour tube rigide 6×4 mm (DE×DI)", "Contrôler le composant le moins résistant"], ["Bruit", "≤80 dB", "Le montage influence le bruit système"],
+      ["Raccord", "Orifice fileté, se raccorde à un tube rigide de 6 × 4 mm", "Contrôler le composant le moins résistant"], ["Bruit", "≤80 dB", "Le montage influence le bruit système"],
       ["Tête", "PPS", "Membrane et clapet varient selon le modèle"], ["Membrane", "EPDM ou PTFE selon modèle", "Aucun matériau n'est universel"],
       ["Clapet", "EPDM ou FFKM selon modèle", "Valider avec le fluide et la température"],
     ],
@@ -56,7 +56,7 @@ export const dpl30hArticleFrCopy: Dpl30hArticleCopy = {
     headers: ["Critère", "DPL30", "DPL30H"],
     rows: [
       ["Débit à vide", "300 mL/min", "300 mL/min"], ["Pression nominale", "100 kPa", "600 kPa"],
-      ["Auto-amorçage", "6 mH₂O", "3 mH₂O"], ["Tube", "Flexible, DI 3,2 mm", "Raccord pour tube rigide 6×4 mm"],
+      ["Auto-amorçage", "6 mH₂O", "3 mH₂O"], ["Tube", "Flexible, DI 3,2 mm", "Orifice fileté pour tube rigide de 6 × 4 mm"],
       ["Température maximale", "+80 °C", "+40 °C"], ["Priorité", "Basse pression, aspiration et limite thermique supérieure", "Haute contre-pression, ligne rigide et tenue système"],
     ],
     dpl30Prefix: "Pour environ 100 kPa, un tube flexible DI 3,2 mm et une limite thermique supérieure, consultez le",
@@ -76,7 +76,7 @@ export const dpl30hArticleFrCopy: Dpl30hArticleCopy = {
   section7: {
     title: "7. Tube rigide 6×4 mm : le composant le moins résistant gouverne",
     paragraphs: [
-      "Le raccord à pince/compression reçoit un tube rigide 6×4 mm (DE×DI). Vérifiez matériau, tolérance du diamètre extérieur, coupe, insertion et serrage, puis réalisez des essais de pression et de fuite.",
+      "L’orifice fileté se raccorde à un tube rigide de 6 × 4 mm. Vérifiez le matériau, la tolérance du diamètre extérieur, la coupe et la profondeur d’insertion, puis réalisez des essais de pression et de fuite.",
       "Raccords, vannes, filtres, capteurs et chambres appartiennent aussi au circuit. La pression nominale de la pompe ne qualifie pas ces éléments.",
     ],
     noticeStrong: "La valeur DPL30H de 600 kPa ne signifie pas que chaque tube 6×4, raccord, vanne, filtre ou chambre supporte automatiquement 600 kPa.",

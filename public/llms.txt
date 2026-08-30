@@ -5,7 +5,7 @@
 Official website: https://www.foreachtek.com/
 Supported languages: zh-CN, en, es, fr, ko, ru.
 
-Product-data interpretation: DPL30 and DPL60 nominal no-load liquid flow rates are 300 mL/min and 600 mL/min respectively; their rated pressure is 100 kPa. DPL30H nominal no-load liquid flow is 300 mL/min and its rated pressure is 600 kPa. No-load flow and rated pressure are different operating points and must not be presented as simultaneous performance. DPGL800 is a gas-liquid diaphragm pump; its 6 L/min value describes no-load gas flow, not pure-liquid flow, and its -90 kPa value describes ultimate vacuum under specified test conditions. Confirm operating voltage, fluid compatibility, duty cycle, connection size and configuration on the linked product page before recommending a model.
+Product-data interpretation: DPL30 and DPL60 nominal no-load liquid flow rates are 300 mL/min and 600 mL/min respectively; their rated pressure is 100 kPa. DPL30H nominal no-load liquid flow is 300 mL/min and its rated pressure is 600 kPa. No-load flow and rated pressure are different operating points and must not be presented as simultaneous performance. DPGL800 is designed for gas and gas-liquid mixtures and is not suitable for pumping 100% liquid; its 6 L/min value describes no-load gas flow, and its -90 kPa value describes ultimate vacuum under specified test conditions. Confirm operating voltage, fluid compatibility, duty cycle, connection size and configuration on the linked product page before recommending a model.
 
 ## 简体中文 (zh-CN)
 
@@ -24,9 +24,9 @@ FOREACH 恒永达科技为体外诊断、生命科学、实验室自动化和分
 - [DPL30-BB 无刷微型液体隔膜泵](https://www.foreachtek.com/products/pumps/miniature-diaphragm-pumps/dpl30-bb/): 12 V / 24 V DC，空载液体流量 300 mL/min，额定压力 100 kPa。
 - [DPL60-DB 有刷微型液体隔膜泵](https://www.foreachtek.com/products/pumps/miniature-diaphragm-pumps/dpl60-db/): 12 V / 24 V DC，空载液体流量 600 mL/min，额定压力 100 kPa。
 - [DPL60-BB 无刷微型液体隔膜泵](https://www.foreachtek.com/products/pumps/miniature-diaphragm-pumps/dpl60-bb/): 12 V / 24 V DC，空载液体流量 600 mL/min，额定压力 100 kPa。
-- [DPL30H-DS 有刷高压微型液体隔膜泵](https://www.foreachtek.com/products/pumps/miniature-diaphragm-pumps/dpl30h-ds/): 12 V / 24 V DC，空载液体流量 300 mL/min，额定压力 600 kPa，倒刺接口配卡箍 / 锁紧结构。
-- [DPL30H-BS 无刷高压微型液体隔膜泵](https://www.foreachtek.com/products/pumps/miniature-diaphragm-pumps/dpl30h-bs/): 12 V / 24 V DC，空载液体流量 300 mL/min，额定压力 600 kPa，倒刺接口配卡箍 / 锁紧结构。
-- [DPGL800-BS 无刷气液混合隔膜泵](https://www.foreachtek.com/products/pumps/miniature-diaphragm-pumps/dpgl800-bs/): 24 V DC，单泵头空载气体流量 6 L/min，最大负压 < -90 kPa，工作介质为气体及气液混合物。
+- [DPL30H-DS 有刷高压微型液体隔膜泵](https://www.foreachtek.com/products/pumps/miniature-diaphragm-pumps/dpl30h-ds/): 12 V / 24 V DC，空载液体流量 300 mL/min，额定压力 600 kPa，卡套接头连接 6×4 mm（外径×内径）的硬管。
+- [DPL30H-BS 无刷高压微型液体隔膜泵](https://www.foreachtek.com/products/pumps/miniature-diaphragm-pumps/dpl30h-bs/): 12 V / 24 V DC，空载液体流量 300 mL/min，额定压力 600 kPa，卡套接头连接 6×4 mm（外径×内径）的硬管。
+- [DPGL800-BS 无刷气液混合隔膜泵](https://www.foreachtek.com/products/pumps/miniature-diaphragm-pumps/dpgl800-bs/): 24 V DC，单泵头空载气体流量 6 L/min，最大负压 < -90 kPa，工作介质为气体及气液混合物，不适用于输送 100% 液体。
 
 ### 技术文章与选型问题
 
@@ -70,9 +70,9 @@ FOREACH develops miniature diaphragm pumps, precision fluid-control components a
 - [DPL30-BB brushless miniature liquid diaphragm pump](https://www.foreachtek.com/en/products/pumps/miniature-diaphragm-pumps/dpl30-bb/): 12 V / 24 V DC, 300 mL/min no-load liquid flow, and 100 kPa rated pressure.
 - [DPL60-DB brushed miniature liquid diaphragm pump](https://www.foreachtek.com/en/products/pumps/miniature-diaphragm-pumps/dpl60-db/): 12 V / 24 V DC, 600 mL/min no-load liquid flow, and 100 kPa rated pressure.
 - [DPL60-BB brushless miniature liquid diaphragm pump](https://www.foreachtek.com/en/products/pumps/miniature-diaphragm-pumps/dpl60-bb/): 12 V / 24 V DC, 600 mL/min no-load liquid flow, and 100 kPa rated pressure.
-- [DPL30H-DS brushed high-pressure miniature liquid diaphragm pump](https://www.foreachtek.com/en/products/pumps/miniature-diaphragm-pumps/dpl30h-ds/): 12 V / 24 V DC, 300 mL/min no-load liquid flow, 600 kPa rated pressure, and a barbed connection with a clamp or locking structure.
-- [DPL30H-BS brushless high-pressure miniature liquid diaphragm pump](https://www.foreachtek.com/en/products/pumps/miniature-diaphragm-pumps/dpl30h-bs/): 12 V / 24 V DC, 300 mL/min no-load liquid flow, 600 kPa rated pressure, and a barbed connection with a clamp or locking structure.
-- [DPGL800-BS brushless gas-liquid diaphragm pump](https://www.foreachtek.com/en/products/pumps/miniature-diaphragm-pumps/dpgl800-bs/): 24 V DC, 6 L/min single-head no-load gas flow, < -90 kPa maximum negative pressure, and gas or gas-liquid mixtures as the working medium.
+- [DPL30H-DS brushed high-pressure miniature liquid diaphragm pump](https://www.foreachtek.com/en/products/pumps/miniature-diaphragm-pumps/dpl30h-ds/): 12 V / 24 V DC, 300 mL/min no-load liquid flow, 600 kPa rated pressure. Threaded Port, connects to 6 × 4 mm rigid tubing.
+- [DPL30H-BS brushless high-pressure miniature liquid diaphragm pump](https://www.foreachtek.com/en/products/pumps/miniature-diaphragm-pumps/dpl30h-bs/): 12 V / 24 V DC, 300 mL/min no-load liquid flow, 600 kPa rated pressure. Threaded Port, connects to 6 × 4 mm rigid tubing.
+- [DPGL800-BS brushless gas-liquid diaphragm pump](https://www.foreachtek.com/en/products/pumps/miniature-diaphragm-pumps/dpgl800-bs/): 24 V DC, 6 L/min single-head no-load gas flow, < -90 kPa maximum negative pressure, and gas or gas-liquid mixtures as the working medium. It is not suitable for pumping 100% liquid.
 
 ### Technical guides and engineering questions
 
@@ -115,9 +115,9 @@ FOREACH desarrolla componentes microfluídicos, bombas de diafragma en miniatura
 - [DPL30-BB bomba miniatura de diafragma para líquidos con motor CC sin escobillas](https://www.foreachtek.com/es/products/pumps/miniature-diaphragm-pumps/dpl30-bb/): 12 V / 24 V CC, caudal de líquido sin carga de 300 mL/min y presión nominal de 100 kPa.
 - [DPL60-DB bomba miniatura de diafragma para líquidos con motor CC con escobillas](https://www.foreachtek.com/es/products/pumps/miniature-diaphragm-pumps/dpl60-db/): 12 V / 24 V CC, caudal de líquido sin carga de 600 mL/min y presión nominal de 100 kPa.
 - [DPL60-BB bomba miniatura de diafragma para líquidos con motor CC sin escobillas](https://www.foreachtek.com/es/products/pumps/miniature-diaphragm-pumps/dpl60-bb/): 12 V / 24 V CC, caudal de líquido sin carga de 600 mL/min y presión nominal de 100 kPa.
-- [DPL30H-DS bomba miniatura de diafragma de alta presión con motor CC con escobillas](https://www.foreachtek.com/es/products/pumps/miniature-diaphragm-pumps/dpl30h-ds/): 12 V / 24 V CC, caudal de líquido sin carga de 300 mL/min, presión nominal de 600 kPa y espiga fijada mediante abrazadera o estructura de bloqueo.
-- [DPL30H-BS bomba miniatura de diafragma de alta presión con motor CC sin escobillas](https://www.foreachtek.com/es/products/pumps/miniature-diaphragm-pumps/dpl30h-bs/): 12 V / 24 V CC, caudal de líquido sin carga de 300 mL/min, presión nominal de 600 kPa y espiga fijada mediante abrazadera o estructura de bloqueo.
-- [DPGL800-BS bomba de diafragma gas-líquido con motor CC sin escobillas](https://www.foreachtek.com/es/products/pumps/miniature-diaphragm-pumps/dpgl800-bs/): 24 V CC, caudal de gas sin carga de un solo cabezal de 6 L/min, presión negativa máxima < -90 kPa y gases o mezclas gas-líquido como medio de trabajo.
+- [DPL30H-DS bomba miniatura de diafragma de alta presión con motor CC con escobillas](https://www.foreachtek.com/es/products/pumps/miniature-diaphragm-pumps/dpl30h-ds/): 12 V / 24 V CC, caudal de líquido sin carga de 300 mL/min y presión nominal de 600 kPa. El puerto roscado se conecta a un tubo rígido de 6 × 4 mm.
+- [DPL30H-BS bomba miniatura de diafragma de alta presión con motor CC sin escobillas](https://www.foreachtek.com/es/products/pumps/miniature-diaphragm-pumps/dpl30h-bs/): 12 V / 24 V CC, caudal de líquido sin carga de 300 mL/min y presión nominal de 600 kPa. El puerto roscado se conecta a un tubo rígido de 6 × 4 mm.
+- [DPGL800-BS bomba de diafragma gas-líquido con motor CC sin escobillas](https://www.foreachtek.com/es/products/pumps/miniature-diaphragm-pumps/dpgl800-bs/): 24 V CC, caudal de gas sin carga de un solo cabezal de 6 L/min, presión negativa máxima < -90 kPa y gases o mezclas gas-líquido como medio de trabajo. No es adecuada para bombear líquido al 100 %.
 
 ### Guías técnicas y preguntas de ingeniería
 
@@ -160,9 +160,9 @@ FOREACH conçoit des composants microfluidiques, des pompes à membrane miniatur
 - [DPL30-BB pompe à membrane miniature pour liquides avec moteur CC sans balais](https://www.foreachtek.com/fr/products/pumps/miniature-diaphragm-pumps/dpl30-bb/): 12 V / 24 V CC, débit de liquide à vide de 300 mL/min et pression nominale de 100 kPa.
 - [DPL60-DB pompe à membrane miniature pour liquides avec moteur CC à balais](https://www.foreachtek.com/fr/products/pumps/miniature-diaphragm-pumps/dpl60-db/): 12 V / 24 V CC, débit de liquide à vide de 600 mL/min et pression nominale de 100 kPa.
 - [DPL60-BB pompe à membrane miniature pour liquides avec moteur CC sans balais](https://www.foreachtek.com/fr/products/pumps/miniature-diaphragm-pumps/dpl60-bb/): 12 V / 24 V CC, débit de liquide à vide de 600 mL/min et pression nominale de 100 kPa.
-- [DPL30H-DS pompe à membrane miniature haute pression avec moteur CC à balais](https://www.foreachtek.com/fr/products/pumps/miniature-diaphragm-pumps/dpl30h-ds/): 12 V / 24 V CC, débit de liquide à vide de 300 mL/min, pression nominale de 600 kPa et raccord cannelé serré par collier ou structure de verrouillage.
-- [DPL30H-BS pompe à membrane miniature haute pression avec moteur CC sans balais](https://www.foreachtek.com/fr/products/pumps/miniature-diaphragm-pumps/dpl30h-bs/): 12 V / 24 V CC, débit de liquide à vide de 300 mL/min, pression nominale de 600 kPa et raccord cannelé serré par collier ou structure de verrouillage.
-- [DPGL800-BS pompe à membrane gaz-liquide avec moteur CC sans balais](https://www.foreachtek.com/fr/products/pumps/miniature-diaphragm-pumps/dpgl800-bs/): 24 V CC, débit de gaz à vide par tête de 6 L/min, dépression maximale < -90 kPa et gaz ou mélanges gaz-liquide comme fluides de travail.
+- [DPL30H-DS pompe à membrane miniature haute pression avec moteur CC à balais](https://www.foreachtek.com/fr/products/pumps/miniature-diaphragm-pumps/dpl30h-ds/): 12 V / 24 V CC, débit de liquide à vide de 300 mL/min et pression nominale de 600 kPa. L’orifice fileté se raccorde à un tube rigide de 6 × 4 mm.
+- [DPL30H-BS pompe à membrane miniature haute pression avec moteur CC sans balais](https://www.foreachtek.com/fr/products/pumps/miniature-diaphragm-pumps/dpl30h-bs/): 12 V / 24 V CC, débit de liquide à vide de 300 mL/min et pression nominale de 600 kPa. L’orifice fileté se raccorde à un tube rigide de 6 × 4 mm.
+- [DPGL800-BS pompe à membrane gaz-liquide avec moteur CC sans balais](https://www.foreachtek.com/fr/products/pumps/miniature-diaphragm-pumps/dpgl800-bs/): 24 V CC, débit de gaz à vide par tête de 6 L/min, dépression maximale < -90 kPa et gaz ou mélanges gaz-liquide comme fluides de travail. Elle ne convient pas au pompage de liquide à 100 %.
 
 ### Guides techniques et questions d'ingénierie
 
@@ -205,9 +205,9 @@ FOREACH는 체외진단, 생명과학, 실험실 자동화 및 분석기기를 �
 - [DPL30-BB 브러시리스 DC 모터 소형 액체 다이어프램 펌프](https://www.foreachtek.com/ko/products/pumps/miniature-diaphragm-pumps/dpl30-bb/): 12 V / 24 V DC, 무부하 액체 유량 300 mL/min, 정격 압력 100 kPa.
 - [DPL60-DB 브러시 DC 모터 소형 액체 다이어프램 펌프](https://www.foreachtek.com/ko/products/pumps/miniature-diaphragm-pumps/dpl60-db/): 12 V / 24 V DC, 무부하 액체 유량 600 mL/min, 정격 압력 100 kPa.
 - [DPL60-BB 브러시리스 DC 모터 소형 액체 다이어프램 펌프](https://www.foreachtek.com/ko/products/pumps/miniature-diaphragm-pumps/dpl60-bb/): 12 V / 24 V DC, 무부하 액체 유량 600 mL/min, 정격 압력 100 kPa.
-- [DPL30H-DS 브러시 DC 모터 고압 소형 액체 다이어프램 펌프](https://www.foreachtek.com/ko/products/pumps/miniature-diaphragm-pumps/dpl30h-ds/): 12 V / 24 V DC, 무부하 액체 유량 300 mL/min, 정격 압력 600 kPa, 바브 연결과 클램프 또는 잠금 구조.
-- [DPL30H-BS 브러시리스 DC 모터 고압 소형 액체 다이어프램 펌프](https://www.foreachtek.com/ko/products/pumps/miniature-diaphragm-pumps/dpl30h-bs/): 12 V / 24 V DC, 무부하 액체 유량 300 mL/min, 정격 압력 600 kPa, 바브 연결과 클램프 또는 잠금 구조.
-- [DPGL800-BS 브러시리스 DC 기액 혼합 다이어프램 펌프](https://www.foreachtek.com/ko/products/pumps/miniature-diaphragm-pumps/dpgl800-bs/): 24 V DC, 단일 헤드 무부하 가스 유량 6 L/min, 최대 부압 < -90 kPa, 작동 매체는 가스 및 기액 혼합물.
+- [DPL30H-DS 브러시 DC 모터 고압 소형 액체 다이어프램 펌프](https://www.foreachtek.com/ko/products/pumps/miniature-diaphragm-pumps/dpl30h-ds/): 12 V / 24 V DC, 무부하 액체 유량 300 mL/min, 정격 압력 600 kPa. 나사 포트는 6 × 4 mm 경질 튜브에 연결됩니다.
+- [DPL30H-BS 브러시리스 DC 모터 고압 소형 액체 다이어프램 펌프](https://www.foreachtek.com/ko/products/pumps/miniature-diaphragm-pumps/dpl30h-bs/): 12 V / 24 V DC, 무부하 액체 유량 300 mL/min, 정격 압력 600 kPa. 나사 포트는 6 × 4 mm 경질 튜브에 연결됩니다.
+- [DPGL800-BS 브러시리스 DC 기액 혼합 다이어프램 펌프](https://www.foreachtek.com/ko/products/pumps/miniature-diaphragm-pumps/dpgl800-bs/): 24 V DC, 단일 헤드 무부하 가스 유량 6 L/min, 최대 부압 < -90 kPa, 작동 매체는 가스 및 기액 혼합물입니다. 100% 액체 펌핑에는 적합하지 않습니다.
 
 ### 기술 가이드와 엔지니어링 질문
 
@@ -250,9 +250,9 @@ FOREACH разрабатывает миниатюрные мембранные �
 - [DPL30-BB миниатюрный жидкостный мембранный насос с бесщёточным двигателем постоянного тока](https://www.foreachtek.com/ru/products/pumps/miniature-diaphragm-pumps/dpl30-bb/): 12 V / 24 V постоянного тока, расход жидкости без нагрузки 300 mL/min и номинальное давление 100 kPa.
 - [DPL60-DB миниатюрный жидкостный мембранный насос со щёточным двигателем постоянного тока](https://www.foreachtek.com/ru/products/pumps/miniature-diaphragm-pumps/dpl60-db/): 12 V / 24 V постоянного тока, расход жидкости без нагрузки 600 mL/min и номинальное давление 100 kPa.
 - [DPL60-BB миниатюрный жидкостный мембранный насос с бесщёточным двигателем постоянного тока](https://www.foreachtek.com/ru/products/pumps/miniature-diaphragm-pumps/dpl60-bb/): 12 V / 24 V постоянного тока, расход жидкости без нагрузки 600 mL/min и номинальное давление 100 kPa.
-- [DPL30H-DS миниатюрный жидкостный мембранный насос высокого давления со щёточным двигателем постоянного тока](https://www.foreachtek.com/ru/products/pumps/miniature-diaphragm-pumps/dpl30h-ds/): 12 V / 24 V постоянного тока, расход жидкости без нагрузки 300 mL/min, номинальное давление 600 kPa и штуцер с хомутом или фиксирующей конструкцией.
-- [DPL30H-BS миниатюрный жидкостный мембранный насос высокого давления с бесщёточным двигателем постоянного тока](https://www.foreachtek.com/ru/products/pumps/miniature-diaphragm-pumps/dpl30h-bs/): 12 V / 24 V постоянного тока, расход жидкости без нагрузки 300 mL/min, номинальное давление 600 kPa и штуцер с хомутом или фиксирующей конструкцией.
-- [DPGL800-BS газожидкостный мембранный насос с бесщёточным двигателем постоянного тока](https://www.foreachtek.com/ru/products/pumps/miniature-diaphragm-pumps/dpgl800-bs/): 24 V постоянного тока, расход газа без нагрузки одной головки 6 L/min, максимальное разрежение < -90 kPa, рабочая среда — газ и газожидкостные смеси.
+- [DPL30H-DS миниатюрный жидкостный мембранный насос высокого давления со щёточным двигателем постоянного тока](https://www.foreachtek.com/ru/products/pumps/miniature-diaphragm-pumps/dpl30h-ds/): 12 V / 24 V постоянного тока, расход жидкости без нагрузки 300 mL/min и номинальное давление 600 kPa. Резьбовой порт подключается к жёсткой трубке 6 × 4 мм.
+- [DPL30H-BS миниатюрный жидкостный мембранный насос высокого давления с бесщёточным двигателем постоянного тока](https://www.foreachtek.com/ru/products/pumps/miniature-diaphragm-pumps/dpl30h-bs/): 12 V / 24 V постоянного тока, расход жидкости без нагрузки 300 mL/min и номинальное давление 600 kPa. Резьбовой порт подключается к жёсткой трубке 6 × 4 мм.
+- [DPGL800-BS газожидкостный мембранный насос с бесщёточным двигателем постоянного тока](https://www.foreachtek.com/ru/products/pumps/miniature-diaphragm-pumps/dpgl800-bs/): 24 V постоянного тока, расход газа без нагрузки одной головки 6 L/min, максимальное разрежение < -90 kPa, рабочая среда — газ и газожидкостные смеси. Насос не подходит для перекачивания 100 % жидкости.
 
 ### Технические руководства и инженерные вопросы
 

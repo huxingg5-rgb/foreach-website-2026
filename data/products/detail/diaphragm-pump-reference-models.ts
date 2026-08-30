@@ -212,9 +212,9 @@ function getReferenceLocalizedCopy(
         : `${flow} mL/min ${motor.zh}微型隔膜泵，寿命 ${hours}，12 V / 24 V 可选`;
     const h1 = `FOREACH ${model} ${cardSubtitle}`;
     const description = isGasLiquid
-      ? `${model} 是 24 V 直流无刷双头微型气液混合隔膜泵，工作介质为气体及气液混合物。单泵头空载气体流量为 6 L/min，最大负压为 < -90 kPa，适用于真空抽吸和气液混合物抽排。`
+      ? `${model} 是 24 V 直流无刷双头微型气液混合隔膜泵，专为气体及气液混合物设计，不适用于输送 100% 液体。单泵头空载气体流量为 6 L/min，最大负压为 < -90 kPa，适用于真空抽吸和气液混合物抽排。`
       : isHighPressure
-        ? `${model} 是 12 V / 24 V ${motor.zh}高压微型液体隔膜泵，额定压力为 600 kPa，空载流量为 300 mL/min。实际采用倒刺接口，并通过卡箍 / 锁紧结构固定软管。`
+        ? `${model} 是 12 V / 24 V ${motor.zh}高压微型液体隔膜泵，额定压力为 600 kPa，空载流量为 300 mL/min。接口为卡套接头，连接 6×4 mm（外径×内径）的硬管。`
         : `${model} 是 12 V / 24 V ${motor.zh}微型液体隔膜泵，空载流量为 ${flow} mL/min，额定压力为 100 kPa，适用于仪器内部的清洗、试剂、废液与循环液路。`;
     const seoTitle = isGasLiquid
       ? `双头微型气液混合隔膜泵与真空抽吸 | ${model} | 恒永达`
@@ -232,9 +232,9 @@ function getReferenceLocalizedCopy(
         : `${flow} mL/min ${motor.en} Miniature Liquid Diaphragm Pump, ${hours} Service Life, 12 V / 24 V`;
     const h1 = `FOREACH ${model} ${cardSubtitle}`;
     const description = isGasLiquid
-      ? `${model} is a 24 V brushless DC dual-head miniature gas-liquid diaphragm pump for gas and gas-liquid mixtures. Its single-head no-load gas flow is 6 L/min and maximum negative pressure is < -90 kPa.`
+      ? `${model} is a 24 V brushless DC dual-head miniature gas-liquid diaphragm pump. Designed for gas and gas-liquid mixtures. It is not suitable for pumping 100% liquid. Its single-head no-load gas flow is 6 L/min and maximum negative pressure is < -90 kPa.`
       : isHighPressure
-        ? `${model} is a 12 V / 24 V ${motor.en.toLowerCase()} high-pressure miniature liquid diaphragm pump with 600 kPa rated pressure and 300 mL/min no-load flow. The physical connection is a hose barb secured by a clamp/locking structure.`
+        ? `${model} is a 12 V / 24 V ${motor.en.toLowerCase()} high-pressure miniature liquid diaphragm pump with 600 kPa rated pressure and 300 mL/min no-load flow. Threaded Port, connects to 6 × 4 mm rigid tubing.`
         : `${model} is a 12 V / 24 V ${motor.en.toLowerCase()} miniature liquid diaphragm pump with ${flow} mL/min no-load flow and 100 kPa rated pressure for instrument wash, reagent, waste, and circulation circuits.`;
     const seoTitle = isGasLiquid
       ? `Dual-Head Miniature Gas-Liquid Diaphragm Pump for Vacuum Aspiration | ${model} | FOREACH`
@@ -252,9 +252,9 @@ function getReferenceLocalizedCopy(
         : `Bomba miniatura de diafragma para líquidos de ${flow} mL/min con ${motor.es}, vida útil de ${hours}, 12 V / 24 V`;
     const h1 = `FOREACH ${model} ${cardSubtitle}`;
     const description = isGasLiquid
-      ? `${model} es una bomba de diafragma en miniatura gas-líquido de doble cabezal, 24 V, con motor CC sin escobillas para gas y mezclas gas-líquido. El caudal de gas sin carga de un cabezal es de 6 L/min y el vacío máximo es < -90 kPa.`
+      ? `${model} es una bomba de diafragma en miniatura gas-líquido de doble cabezal, 24 V, con motor CC sin escobillas, diseñada para gases y mezclas gas-líquido. No es adecuada para bombear líquido al 100 %. El caudal de gas sin carga de un cabezal es de 6 L/min y el vacío máximo es < -90 kPa.`
       : isHighPressure
-        ? `${model} es una bomba miniatura de diafragma para líquidos con ${motor.es}: presión nominal de 600 kPa, caudal sin carga de 300 mL/min y 12 V / 24 V. La conexión física es una espiga fijada mediante abrazadera/estructura de bloqueo.`
+        ? `${model} es una bomba miniatura de diafragma para líquidos con ${motor.es}: presión nominal de 600 kPa, caudal sin carga de 300 mL/min y 12 V / 24 V. El puerto roscado se conecta a un tubo rígido de 6 × 4 mm.`
         : `${model} es una bomba miniatura de diafragma para líquidos con ${motor.es}: caudal sin carga de ${flow} mL/min, presión nominal de 100 kPa y 12 V / 24 V para circuitos de instrumentos.`;
     const seoTitle = isGasLiquid
       ? `Bomba de diafragma en miniatura gas-líquido de doble cabezal | ${model} | FOREACH`
@@ -272,9 +272,9 @@ function getReferenceLocalizedCopy(
         : `Pompe à membrane miniature pour liquides de ${flow} mL/min avec ${motor.fr}, durée de vie de ${hours}, 12 V / 24 V`;
     const h1 = `FOREACH ${model} ${cardSubtitle}`;
     const description = isGasLiquid
-      ? `${model} est une pompe à membrane miniature gaz-liquide à double tête, 24 V, à moteur CC sans balais pour les gaz et mélanges gaz-liquide. Le débit de gaz sans charge d’une seule tête est de 6 L/min et le vide maximal est < -90 kPa.`
+      ? `${model} est une pompe à membrane miniature gaz-liquide à double tête, 24 V, à moteur CC sans balais, conçue pour les gaz et les mélanges gaz-liquide. Elle ne convient pas au pompage de liquide à 100 %. Le débit de gaz sans charge d’une seule tête est de 6 L/min et le vide maximal est < -90 kPa.`
       : isHighPressure
-        ? `${model} est une pompe à membrane miniature haute pression pour liquides avec ${motor.fr} : pression nominale de 600 kPa, débit à vide de 300 mL/min et 12 V / 24 V. Le raccord physique est cannelé et serré par collier/structure de verrouillage.`
+        ? `${model} est une pompe à membrane miniature haute pression pour liquides avec ${motor.fr} : pression nominale de 600 kPa, débit à vide de 300 mL/min et 12 V / 24 V. L’orifice fileté se raccorde à un tube rigide de 6 × 4 mm.`
         : `${model} est une pompe à membrane miniature pour liquides avec ${motor.fr} : débit à vide de ${flow} mL/min, pression nominale de 100 kPa et 12 V / 24 V pour les circuits d’instruments.`;
     const seoTitle = isGasLiquid
       ? `Pompe à membrane miniature gaz-liquide à double tête | ${model} | FOREACH`
@@ -292,9 +292,9 @@ function getReferenceLocalizedCopy(
         : `${flow} mL/min ${motor.ko} 소형 액체 다이어프램 펌프, 수명 ${hours}, 12 V / 24 V`;
     const h1 = `FOREACH ${model} ${cardSubtitle}`;
     const description = isGasLiquid
-      ? `${model}는 24 V 브러시리스 DC 듀얼 헤드 소형 기액 혼합 다이어프램 펌프로 가스 및 기액 혼합물에 사용됩니다. 단일 헤드 무부하 가스 유량은 6 L/min이고 최대 부압/진공은 < -90 kPa입니다.`
+      ? `${model}는 24 V 브러시리스 DC 듀얼 헤드 소형 기액 혼합 다이어프램 펌프로 가스 및 기액 혼합물용으로 설계되었습니다. 100% 액체 펌핑에는 적합하지 않습니다. 단일 헤드 무부하 가스 유량은 6 L/min이고 최대 부압/진공은 < -90 kPa입니다.`
       : isHighPressure
-        ? `${model}는 12 V / 24 V ${motor.ko} 고압 소형 액체 다이어프램 펌프로 정격 압력 600 kPa, 무부하 유량 300 mL/min입니다. 실제 연결은 바브 + 클램프/잠금 구조입니다.`
+        ? `${model}는 12 V / 24 V ${motor.ko} 고압 소형 액체 다이어프램 펌프로 정격 압력 600 kPa, 무부하 유량 300 mL/min입니다. 나사 포트는 6 × 4 mm 경질 튜브에 연결됩니다.`
         : `${model}는 12 V / 24 V ${motor.ko} 소형 액체 다이어프램 펌프로 무부하 유량 ${flow} mL/min, 정격 압력 100 kPa이며 장비 내부 액체 회로에 적합합니다.`;
     const seoTitle = isGasLiquid
       ? `진공 흡인용 듀얼 헤드 소형 기액 혼합 다이어프램 펌프 | ${model} | FOREACH`
@@ -311,9 +311,9 @@ function getReferenceLocalizedCopy(
       : `Миниатюрный жидкостный мембранный насос ${flow} mL/min с ${motor.ru}, срок службы ${hours}, 12 V / 24 V`;
   const h1 = `FOREACH ${model} ${cardSubtitle}`;
   const description = isGasLiquid
-    ? `${model} — двухголовочный миниатюрный газожидкостный мембранный насос 24 V с бесщёточным двигателем для газа и газожидкостных смесей. Расход газа без нагрузки одной головки составляет 6 L/min, максимальное разрежение — < -90 kPa.`
+    ? `${model} — двухголовочный миниатюрный газожидкостный мембранный насос 24 V с бесщёточным двигателем, предназначенный для газа и газожидкостных смесей. Он не подходит для перекачивания 100 % жидкости. Расход газа без нагрузки одной головки составляет 6 L/min, максимальное разрежение — < -90 kPa.`
     : isHighPressure
-      ? `${model} — миниатюрный жидкостный мембранный насос высокого давления с ${motor.ru}: номинальное давление 600 kPa, расход без нагрузки 300 mL/min и 12 V / 24 V. Физическое соединение — штуцер с хомутом/фиксирующей конструкцией.`
+      ? `${model} — миниатюрный жидкостный мембранный насос высокого давления с ${motor.ru}: номинальное давление 600 kPa, расход без нагрузки 300 mL/min и 12 V / 24 V. Резьбовой порт подключается к жёсткой трубке 6 × 4 мм.`
       : `${model} — миниатюрный жидкостный мембранный насос с ${motor.ru}: расход без нагрузки ${flow} mL/min, номинальное давление 100 kPa и 12 V / 24 V для жидкостных контуров приборов.`;
   const seoTitle = isGasLiquid
     ? `Двухголовочный миниатюрный газожидкостный мембранный насос | ${model} | FOREACH`

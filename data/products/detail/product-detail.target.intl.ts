@@ -167,22 +167,22 @@ const ADVANCED_SOURCE_SPEC_LABELS: Record<HardTubeTargetLocale, Record<string, s
 
 const SPECIAL_SOURCE_VALUE_COPY: Record<HardTubeTargetLocale, Record<string, string>> = {
   es: {
-    "气液混合隔膜泵": "Bomba de diafragma para gas y líquido", "气体、气液混合物": "Gas y mezcla gas-líquido", "G1/8（内螺纹）": "G1/8 (rosca hembra)", "倒刺接口 + 卡箍 / 锁紧结构": "Conexión de espiga con abrazadera/estructura de bloqueo",
+    "气液混合隔膜泵": "Bomba de diafragma para gas y líquido", "气体、气液混合物": "Gas y mezcla gas-líquido", "G1/8（内螺纹）": "G1/8 (rosca hembra)", "卡套接头，连接 6×4 mm（外径×内径）的硬管": "Puerto roscado, se conecta a tubo rígido de 6 × 4 mm",
     "标准模式 0.319μL/步；高分辨率模式 0.02μL/微步": "Modo estándar 0.319 μL/paso; modo de alta resolución 0.02 μL/micropaso", "标准模式 3143 步；高分辨率模式 48000 微步": "Modo estándar 3143 pasos; modo de alta resolución 48000 micropasos",
     "最多可级联 16 台泵": "Hasta 16 bombas en cascada", "<60 dBA，仅室内使用": "<60 dBA; solo para uso en interiores", "15°C to 40°C，20% to 95% RH at 40°C，无冷凝": "15 °C–40 °C; 20 %–95 % HR a 40 °C, sin condensación", "-20°C to 65°C，30% to 85% RH，无冷凝": "-20 °C–65 °C; 30 %–85 % HR, sin condensación", "支持主流一次性吸头及定制吸头适配，需根据客户设备结构确认": "Compatible con puntas desechables habituales y puntas personalizadas; debe confirmarse según la estructura del equipo",
   },
   fr: {
-    "气液混合隔膜泵": "Pompe à membrane pour gaz et liquide", "气体、气液混合物": "Gaz et mélange gaz-liquide", "G1/8（内螺纹）": "G1/8 (filetage femelle)", "倒刺接口 + 卡箍 / 锁紧结构": "Raccord cannelé avec collier/structure de verrouillage",
+    "气液混合隔膜泵": "Pompe à membrane pour gaz et liquide", "气体、气液混合物": "Gaz et mélange gaz-liquide", "G1/8（内螺纹）": "G1/8 (filetage femelle)", "卡套接头，连接 6×4 mm（外径×内径）的硬管": "Orifice fileté, se raccorde à un tube rigide de 6 × 4 mm",
     "标准模式 0.319μL/步；高分辨率模式 0.02μL/微步": "Mode standard 0,319 μL/pas ; mode haute résolution 0,02 μL/micropas", "标准模式 3143 步；高分辨率模式 48000 微步": "Mode standard 3143 pas ; mode haute résolution 48000 micropas",
     "最多可级联 16 台泵": "Jusqu’à 16 pompes en cascade", "<60 dBA，仅室内使用": "<60 dBA ; utilisation en intérieur uniquement", "15°C to 40°C，20% to 95% RH at 40°C，无冷凝": "15 °C–40 °C ; 20 %–95 % HR à 40 °C, sans condensation", "-20°C to 65°C，30% to 85% RH，无冷凝": "-20 °C–65 °C ; 30 %–85 % HR, sans condensation", "支持主流一次性吸头及定制吸头适配，需根据客户设备结构确认": "Compatible avec les embouts jetables courants et les embouts personnalisés ; à confirmer selon la structure de l’équipement",
   },
   ko: {
-    "气液混合隔膜泵": "기액 혼합 다이어프램 펌프", "气体、气液混合物": "가스 및 기액 혼합물", "G1/8（内螺纹）": "G1/8(암나사)", "倒刺接口 + 卡箍 / 锁紧结构": "바브 연결 + 클램프/잠금 구조",
+    "气液混合隔膜泵": "기액 혼합 다이어프램 펌프", "气体、气液混合物": "가스 및 기액 혼합물", "G1/8（内螺纹）": "G1/8(암나사)", "卡套接头，连接 6×4 mm（外径×内径）的硬管": "나사 포트, 6 × 4 mm 경질 튜브에 연결",
     "标准模式 0.319μL/步；高分辨率模式 0.02μL/微步": "표준 모드 0.319 μL/스텝, 고분해능 모드 0.02 μL/마이크로스텝", "标准模式 3143 步；高分辨率模式 48000 微步": "표준 모드 3143스텝, 고분해능 모드 48000마이크로스텝",
     "最多可级联 16 台泵": "최대 16대 펌프 캐스케이드 연결", "<60 dBA，仅室内使用": "<60 dBA, 실내 전용", "15°C to 40°C，20% to 95% RH at 40°C，无冷凝": "15 °C–40 °C, 40 °C에서 RH 20%–95%, 비응축", "-20°C to 65°C，30% to 85% RH，无冷凝": "-20 °C–65 °C, RH 30%–85%, 비응축", "支持主流一次性吸头及定制吸头适配，需根据客户设备结构确认": "주요 일회용 팁 및 맞춤형 팁과 호환되며 장비 구조에 따라 확인이 필요합니다",
   },
   ru: {
-    "气液混合隔膜泵": "Газожидкостный мембранный насос", "气体、气液混合物": "Газ и газожидкостная смесь", "G1/8（内螺纹）": "G1/8 (внутренняя резьба)", "倒刺接口 + 卡箍 / 锁紧结构": "Штуцерное соединение с хомутом/фиксирующей конструкцией",
+    "气液混合隔膜泵": "Газожидкостный мембранный насос", "气体、气液混合物": "Газ и газожидкостная смесь", "G1/8（内螺纹）": "G1/8 (внутренняя резьба)", "卡套接头，连接 6×4 mm（外径×内径）的硬管": "Резьбовой порт, подключается к жёсткой трубке 6 × 4 мм",
     "标准模式 0.319μL/步；高分辨率模式 0.02μL/微步": "Стандартный режим 0,319 μL/шаг; режим высокого разрешения 0,02 μL/микрошаг", "标准模式 3143 步；高分辨率模式 48000 微步": "Стандартный режим 3143 шага; режим высокого разрешения 48000 микрошагов",
     "最多可级联 16 台泵": "Каскадное подключение до 16 насосов", "<60 dBA，仅室内使用": "<60 dBA; только для эксплуатации в помещении", "15°C to 40°C，20% to 95% RH at 40°C，无冷凝": "15 °C–40 °C; 20 %–95 % RH при 40 °C, без конденсации", "-20°C to 65°C，30% to 85% RH，无冷凝": "-20 °C–65 °C; 30 %–85 % RH, без конденсации", "支持主流一次性吸头及定制吸头适配，需根据客户设备结构确认": "Совместим с распространёнными одноразовыми и заказными наконечниками; требуется подтверждение с учётом конструкции прибора",
   },

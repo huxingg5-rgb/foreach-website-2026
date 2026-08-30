@@ -143,7 +143,7 @@ export const ivdApplicationZhData: IvdApplicationPageData = {
       key: "diaphragmPump",
       name: "隔膜泵",
       ability: "清洗液输送、废液抽排与较大流量液体搬运",
-      params: ["300 / 600 mL/min", "自吸 5 m / 3 m", "压力 100 kPa", "无刷电机寿命 10000 h"],
+      params: ["300 / 600 mL/min", "自吸 6 mH₂O / 3 mH₂O", "压力 100 kPa", "无刷电机寿命 10000 h"],
       advantage:
         "适合样本针清洗、反应杯清洗、管路冲洗、废液抽排等不以微量精密分配为主、但需要稳定流量和自吸能力的位置。",
       solves:

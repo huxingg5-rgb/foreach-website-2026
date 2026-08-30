@@ -66,6 +66,18 @@ const SEARCH_LOCALES: SearchLocale[] = [
   "ru",
 ];
 const CHECK_MODE = process.argv.includes("--check");
+const LOCALES_ARGUMENT = process.argv.find((argument) =>
+  argument.startsWith("--locales="),
+);
+const REQUESTED_SEARCH_LOCALES = LOCALES_ARGUMENT
+  ? LOCALES_ARGUMENT
+      .slice("--locales=".length)
+      .split(",")
+      .map((locale) => locale.trim())
+      .filter((locale): locale is SearchLocale =>
+        SEARCH_LOCALES.includes(locale as SearchLocale),
+      )
+  : SEARCH_LOCALES;
 
 const MODULE_COPY: Record<
   SearchModule,
@@ -986,7 +998,7 @@ function getCounts(items: CompactSearchItem[]) {
 
 async function main() {
   const localeIndexes = await Promise.all(
-    SEARCH_LOCALES.map(async (locale) => ({
+    REQUESTED_SEARCH_LOCALES.map(async (locale) => ({
       locale,
       items: await buildLocaleIndex(locale),
     }))
