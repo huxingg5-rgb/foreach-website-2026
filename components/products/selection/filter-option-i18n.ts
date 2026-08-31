@@ -12,12 +12,12 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
     ru: "Плунжерный насос",
   },
   "隔膜泵": {
-    zh: "隔膜泵",
-    en: "Diaphragm Pump",
-    es: "Bomba de diafragma",
-    fr: "Pompe à membrane",
-    ko: "다이어프램 펌프",
-    ru: "Мембранный насос",
+    zh: "微型隔膜泵",
+    en: "Miniature Diaphragm Pump",
+    es: "Bomba de diafragma en miniatura",
+    fr: "Pompe à membrane miniature",
+    ko: "소형 다이어프램 펌프",
+    ru: "Миниатюрный мембранный насос",
   },
   "移液泵": {
     zh: "移液泵",
@@ -94,6 +94,31 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
     ru: "Мембранный насос DPL для газа и жидкости",
   },
 
+  "液体隔膜泵": {
+    zh: "微型液体隔膜泵",
+    en: "Miniature Liquid Diaphragm Pump",
+    es: "Bomba de diafragma en miniatura para líquidos",
+    fr: "Pompe à membrane miniature pour liquides",
+    ko: "소형 액체 다이어프램 펌프",
+    ru: "Миниатюрный жидкостный мембранный насос",
+  },
+  "气液混合隔膜泵": {
+    zh: "微型气液混合隔膜泵",
+    en: "Miniature Gas-Liquid Diaphragm Pump",
+    es: "Bomba de diafragma en miniatura para gas y líquido",
+    fr: "Pompe à membrane miniature pour gaz et liquide",
+    ko: "소형 기액 혼합 다이어프램 펌프",
+    ru: "Миниатюрный газожидкостный мембранный насос",
+  },
+  "气体隔膜泵": {
+    zh: "微型气体隔膜泵",
+    en: "Miniature Gas Diaphragm Pump",
+    es: "Bomba de diafragma en miniatura para gases",
+    fr: "Pompe à membrane miniature pour gaz",
+    ko: "소형 기체 다이어프램 펌프",
+    ru: "Миниатюрный газовый мембранный насос",
+  },
+
   "液泵": {
     zh: "液泵",
     en: "Liquid Pump",
@@ -109,6 +134,14 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
     fr: "Pompe de mélange gaz-liquide",
     ko: "기액 혼합 펌프",
     ru: "Насос для газожидкостной смеси",
+  },
+  "6 L/min": {
+    zh: "6 L/min（单头）",
+    en: "6 L/min per head",
+    es: "6 L/min por cabezal",
+    fr: "6 L/min par tête",
+    ko: "헤드당 6 L/min",
+    ru: "6 л/мин на одну головку",
   },
   "有刷电机": {
     zh: "有刷电机",

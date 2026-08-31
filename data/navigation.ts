@@ -425,7 +425,7 @@ const productMegaDropdown: MegaDropdown = {
           "/images/products/pumps/diaphragm-pump.webp",
           t("隔膜泵", "Diaphragm Pump", "Bomba de diafragma", "Pompe à membrane", "다이어프램 펌프", "Мембранный насос"),
           t("连续供液、清洗与废液处理", "Continuous supply, washing, and waste handling", "Suministro continuo, lavado y gestión de residuos", "Alimentation continue, lavage et gestion des déchets", "연속 공급, 세척 및 폐액 처리", "Непрерывная подача, промывка и обработка отходов"),
-          localizedPath("/products/pumps/diaphragm-pumps")
+          localizedPath("/products/pumps/miniature-diaphragm-pumps")
         ),
         productImage(
           "/images/products/pumps/pipetting-pump.jpg",

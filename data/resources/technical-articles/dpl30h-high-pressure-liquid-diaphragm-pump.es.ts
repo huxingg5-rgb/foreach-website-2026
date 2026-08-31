@@ -48,7 +48,7 @@ export const dpl30hArticleEsCopy: Dpl30hArticleCopy = {
       ["Potencia", "≤7 W", "Dimensione la fuente para arranque y marcha"],
       ["Medio nominal", "Agua purificada", "Evalúe otros líquidos en condiciones reales"],
       ["Temperatura del medio", "+5 °C a +40 °C", "No aplique el límite de +80 °C de la DPL30"],
-      ["Conexión", "Racor de pinza/compresión para tubo rígido 6×4 mm (DE×DI)", "Revise el componente de menor presión nominal"],
+      ["Conexión", "Puerto roscado, se conecta a tubo rígido de 6 × 4 mm", "Revise el componente de menor presión nominal"],
       ["Ruido", "≤80 dB", "La instalación afecta al ruido del equipo"],
       ["Cabezal", "PPS", "Diafragma y válvula dependen del modelo"],
       ["Diafragma", "EPDM o PTFE según modelo", "Ningún material es universal"],
@@ -63,7 +63,7 @@ export const dpl30hArticleEsCopy: Dpl30hArticleCopy = {
       ["Caudal sin carga", "300 mL/min", "300 mL/min"],
       ["Presión nominal", "100 kPa", "600 kPa"],
       ["Autocebado", "6 mH₂O", "3 mH₂O"],
-      ["Tubo", "Flexible, DI 3,2 mm", "Racor para tubo rígido 6×4 mm"],
+      ["Tubo", "Flexible, DI 3,2 mm", "Puerto roscado para tubo rígido de 6 × 4 mm"],
       ["Temperatura máxima del medio", "+80 °C", "+40 °C"],
       ["Prioridad", "Menor presión, aspiración y mayor límite térmico", "Alta contrapresión, línea rígida y presión del sistema"],
     ],
@@ -84,7 +84,7 @@ export const dpl30hArticleEsCopy: Dpl30hArticleCopy = {
   section7: {
     title: "7. Tubo rígido 6×4 mm: manda el componente menos resistente",
     paragraphs: [
-      "El racor de pinza/compresión conecta tubo rígido de 6×4 mm (DE×DI). Verifique material y tolerancia exterior, corte recto, profundidad y apriete; después realice pruebas de presión y fugas.",
+      "El puerto roscado se conecta a un tubo rígido de 6 × 4 mm. Verifique material y tolerancia exterior, corte recto y profundidad de inserción; después realice pruebas de presión y fugas.",
       "Racores, válvulas, filtros, sensores y cámaras también forman parte de la línea. La presión de la bomba no certifica esos componentes.",
     ],
     noticeStrong: "Que la DPL30H esté nominalmente a 600 kPa no significa que cada tubo 6×4, racor, válvula, filtro o cámara soporte automáticamente 600 kPa.",

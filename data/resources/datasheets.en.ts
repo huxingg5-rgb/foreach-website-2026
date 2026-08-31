@@ -277,7 +277,8 @@ export const datasheetEnItems: DatasheetItem[] = [
       "DPL30 diaphragm pump for compact liquid-transfer applications, with flow rates up to 300 mL/min.",
     image:
       "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushed-liquid-diaphragm-pump-main.webp",
-    productHref: "/en/products/pumps/diaphragm-pumps/liquid-diaphragm-pumps",
+    productHref:
+      "/en/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps",
     downloadHref:
       "/downloads/resources/datasheets/en/Pumps/ps-150b-2507-00001-001-en-dpl30-diaphragm-pump.pdf",
     actionType: "download",
@@ -295,7 +296,8 @@ export const datasheetEnItems: DatasheetItem[] = [
       "DPL60 diaphragm pump for liquid supply and transfer applications, with flow rates up to 600 mL/min.",
     image:
       "/images/products/pumps/diaphragm-pumps/dpl60/images/dpl60-brushed-liquid-diaphragm-pump-main.webp",
-    productHref: "/en/products/pumps/diaphragm-pumps/liquid-diaphragm-pumps",
+    productHref:
+      "/en/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps",
     downloadHref:
       "/downloads/resources/datasheets/en/Pumps/ps-150b-2507-00002-001-en-dpl60-diaphragm-pump.pdf",
     actionType: "download",

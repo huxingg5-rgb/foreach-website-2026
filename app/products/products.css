@@ -2596,7 +2596,7 @@
   padding-top: 2px !important;
 }
 
-.products-selection-page .product-type-intro-copy h2 {
+.products-selection-page .product-type-intro-copy .product-type-intro-heading {
   margin: 0 0 14px !important;
   color: var(--brand-blue) !important;
   font-size: 31px !important;
@@ -2659,7 +2659,7 @@
     transform: scale(1.14) !important;
   }
 
-  .products-selection-page .product-type-intro-copy h2 {
+  .products-selection-page .product-type-intro-copy .product-type-intro-heading {
     font-size: 28px !important;
   }
 
@@ -2699,7 +2699,7 @@
     padding-top: 0 !important;
   }
 
-  .products-selection-page .product-type-intro-copy h2 {
+  .products-selection-page .product-type-intro-copy .product-type-intro-heading {
     font-size: 22px !important;
     font-weight: 800 !important;
   }
@@ -2862,9 +2862,12 @@
    说明：
    1. 当前只保留 查看详情 / 加入清单
    2. 当前仅保留添加图纸与加入清单两个操作
-   3. 默认白底蓝字，选中后深蓝底 + 荧光字
+   3. 所有标准产品卡按钮使用自动上边距统一底部对齐
+   4. 默认白底蓝字，选中后深蓝底 + 荧光字
 ========================================================= */
 .products-selection-page .product-actions {
+  margin-top: auto !important;
+  padding-top: 12px !important;
   display: grid !important;
   grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   gap: 8px !important;
@@ -2958,11 +2961,12 @@
   line-height: 1.3;
 }
 
+/* 最终统一间距：标题下边距 10px + 摘要上边距 -4px，实际视觉间距约为 6px。 */
 .product-card-summary {
   color: #172033;
   font-size: 14px;
   line-height: 1.6;
-  margin-top: 6px;
+  margin-top: -4px;
 }
 
 /* 让“有刷电机 · 流量 · 压力”不要显得像正文大段 */
@@ -3023,6 +3027,24 @@
   text-overflow: clip;
 }
 
+/* 隔膜泵参数使用普通内联文本，按卡片可用宽度自然换行。 */
+.products-selection-page
+  .product-card[data-product-type-id="diaphragm-pump"]
+  .product-card-summary {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.products-selection-page
+  .product-card[data-product-type-id="diaphragm-pump"]
+  .product-title {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  font-size: 21px;
+  line-height: 1.35;
+}
 
 /* ===== FOREACH diaphragm product type intro brand word START ===== */
 .products-selection-page .product-type-intro-module[data-product-type-id="diaphragm-pump"]::after,

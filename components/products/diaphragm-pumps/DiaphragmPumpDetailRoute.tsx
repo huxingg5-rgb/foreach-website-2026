@@ -2,16 +2,30 @@ import { notFound } from "next/navigation";
 import type { ComponentType, ReactNode } from "react";
 import RelatedResources from "@/components/common/related-resources/RelatedResources";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
+import {
+  getDiaphragmPumpCopy,
+  getDiaphragmPumpSeriesSeoDescription,
+} from "@/data/products/detail/diaphragm-pump-copy";
+import { getProductDetailTitleOverride } from "@/data/products/detail/product-detail-title-overrides";
+import {
+  diaphragmPumpReferenceModels,
+  getDiaphragmPumpReferenceModel,
+  isLegacyDiaphragmPumpSlug,
+  type DiaphragmPumpReferenceModel,
+} from "@/data/products/detail/diaphragm-pump-reference-models";
+import {
+  getDiaphragmPumpLanguageAlternates,
+  getDiaphragmPumpPath,
+  normalizeDiaphragmPumpLocale,
+} from "@/data/products/detail/diaphragm-pump-routes";
 
 import detailsJson from "@/data/products/generated/pumps/diaphragm-pumps/detail/index.json";
-
-export const dynamicParams = false;
 
 type PageParams = {
   slug: string;
 };
 
-type PageProps = {
+export type DiaphragmPumpDetailRouteProps = {
   params: Promise<PageParams>;
   locale?: "zh-CN" | "en" | "es" | "fr" | "ko" | "ru";
 };
@@ -273,24 +287,6 @@ function normalizeFaqs(detail: DiaphragmDetail) {
     .filter((item) => item.question && item.answer);
 }
 
-function normalizeModelConfigurations(detail: DiaphragmDetail) {
-  return (detail.modelConfigurations || []).map((item) => ({
-    itemCode: getText(item.itemCode),
-    model: getText(item.model),
-    category: getText(item.category),
-    motorType: getText(item.motorType),
-    voltage: getText(item.voltage),
-    connectionType: getText(item.connectionType),
-    portDirection: getText(item.portDirection),
-    diaphragm: getText(item.diaphragm),
-    valvePlate: getText(item.valvePlate),
-    pumpHead: getText(item.pumpHead),
-    detailSlug: getText(item.detailSlug),
-    reservedModelSlug: getText(item.reservedModelSlug),
-    note: getText(item.note),
-  }));
-}
-
 function getSeriesTypeLabel(detail: DiaphragmDetail) {
   const category = getText(detail.category);
 
@@ -352,6 +348,20 @@ function findDiaphragmMediaUrlByPathKeywords(detail: DiaphragmDetail, keywords: 
 
 
 function getCleanDiaphragmModelCode(detail: DiaphragmDetail) {
+  const reference = getDiaphragmPumpReferenceModel(detail.slug);
+
+  if (reference) {
+    return reference.model;
+  }
+
+  const seriesSlugMatch = getText(detail.slug).match(
+    /^(DPL30H?|DPL60|DPGL800)-(?:liquid|gas-liquid)-diaphragm-pump$/i,
+  );
+
+  if (seriesSlugMatch) {
+    return seriesSlugMatch[1].toUpperCase();
+  }
+
   const text = [
     detail.modelDisplay,
     detail.modelConfigurations?.[0]?.model,
@@ -848,8 +858,10 @@ function adaptToProductDetailClientData(detail: DiaphragmDetail) {
   const applications = splitApplications(detail.commonApplications);
   const specifications = dedupeSpecifications(normalizeSpecifications(detail));
   const specGroups = groupSpecifications(detail);
-  const faqs = normalizeFaqs(detail);
-  const modelConfigurations = normalizeModelConfigurations(detail);
+  // The public FAQ copy is applied centrally in ProductDetailClient. Keeping
+  // source FAQs out of this DTO prevents stale selection instructions from
+  // being serialized into the public RSC payload.
+  const faqs: ReturnType<typeof normalizeFaqs> = [];
   const seriesTypeLabel = getSeriesTypeLabel(detail);
 
   const mainImageUrl =
@@ -876,16 +888,16 @@ function adaptToProductDetailClientData(detail: DiaphragmDetail) {
     findDiaphragmMediaUrlByPathKeywords(detail, ["datasheets", ".pdf"]);
 
   return {
-    ...detail,
-
     id: slug,
     productId: slug,
     slug,
     detailSlug: slug,
+    relationKeys: detail.relationKeys,
+    relationPriority: detail.relationPriority,
 
     name: seoProductTitle,
     title: seoProductTitle,
-    model: seoProductTitle,
+    model: cleanModelCode,
     productName: seoProductTitle,
     productCode: seriesId,
 
@@ -914,8 +926,7 @@ function adaptToProductDetailClientData(detail: DiaphragmDetail) {
     displayModel: cleanModelCode,
     foreachModel: cleanModelCode,
     modelCode: cleanModelCode,
-    modelButtonText: getText(detail.modelButtonText || "型号配置"),
-    modelConfigurations,
+    showConfigurator: false,
 
     image: mainImageUrl,
     imageUrl: mainImageUrl,
@@ -984,8 +995,8 @@ function adaptToProductDetailClientData(detail: DiaphragmDetail) {
     breadcrumbs: [
       { label: "产品中心", href: "/products" },
       { label: "泵", href: "/products/pumps" },
-      { label: "隔膜泵", href: "/products/pumps/diaphragm-pumps" },
-      { label: seoProductTitle, href: "/products/pumps/diaphragm-pumps/" + slug },
+      { label: "微型隔膜泵", href: "/products/pumps/miniature-diaphragm-pumps" },
+      { label: cleanModelCode, href: "/products/pumps/miniature-diaphragm-pumps/" + slug },
     ],
 
     seoTitle: getText(detail.seo?.title || seoProductTitle),
@@ -995,8 +1006,11 @@ function adaptToProductDetailClientData(detail: DiaphragmDetail) {
   };
 }
 
-function getPreferredProductDetailData(slug: string) {
-  const detail = findDetail(slug);
+function getPreferredProductDetailData(
+  slug: string,
+  locale: DiaphragmPumpDetailRouteProps["locale"] = "zh-CN",
+) {
+  const detail = createReferenceDetail(slug) || findDetail(slug);
 
   if (!detail) {
     return null;
@@ -1005,47 +1019,100 @@ function getPreferredProductDetailData(slug: string) {
   return adaptToProductDetailClientData(detail);
 }
 
-export function generateStaticParams() {
-  return details
-    .map((item) => normalizeSlug(item.slug))
-    .filter(Boolean)
-    .map((slug) => ({ slug }));
+export function getDiaphragmPumpStaticParams() {
+  const slugs = [
+    ...details
+      .map((item) => normalizeSlug(item.slug))
+      .filter((slug) => slug && !isLegacyDiaphragmPumpSlug(slug)),
+    ...diaphragmPumpReferenceModels.map((item) => item.slug),
+  ];
+
+  return Array.from(new Set(slugs)).map((slug) => ({ slug }));
 }
 
-export async function generateMetadata({ params }: PageProps) {
+export async function getDiaphragmPumpMetadata({
+  params,
+  locale = "zh-CN",
+}: DiaphragmPumpDetailRouteProps) {
   const resolvedParams = await params;
-  const data = getPreferredProductDetailData(resolvedParams.slug);
+  const data = getPreferredProductDetailData(resolvedParams.slug, locale);
+  const targetLocale = normalizeDiaphragmPumpLocale(locale);
 
   if (!data) {
     return {
-      title: "隔膜泵详情 | FOREACH",
+      title: "Diaphragm Pump | FOREACH",
     };
   }
 
-  const title =
-    getText(data.seoTitle || data.metaTitle || data.model || data.title) ||
-    "隔膜泵详情";
-
+  const slug = normalizeSlug(resolvedParams.slug);
+  const reference = getDiaphragmPumpReferenceModel(slug);
+  const localizedReference = reference?.localized[targetLocale];
+  const localizedSeriesCopy =
+    !reference && targetLocale !== "zh"
+      ? getDiaphragmPumpCopy(data, targetLocale)
+      : null;
+  const localizedSeriesTitle = localizedSeriesCopy
+    ? getProductDetailTitleOverride(data, targetLocale)
+    : "";
+  const title = getText(
+    localizedReference?.seoTitle ||
+      localizedSeriesTitle ||
+      data.seoTitle ||
+      data.metaTitle ||
+      data.model ||
+      data.title,
+  );
   const description = getText(
-    data.seoDescription ||
+    localizedReference?.seoDescription ||
+      (localizedSeriesCopy
+        ? getDiaphragmPumpSeriesSeoDescription(
+            data,
+            targetLocale,
+            localizedSeriesTitle,
+          )
+        : "") ||
+      data.seoDescription ||
       data.metaDescription ||
       data.description ||
-      data.summary
+      data.summary,
   );
-  const metadataTitle = title.includes("FOREACH") ? title : `${title} | FOREACH`;
+  const metadataTitle = /FOREACH|恒永达/i.test(title)
+    ? title
+    : `${title} | FOREACH`;
+  const canonicalPath = getDiaphragmPumpPath(targetLocale, slug);
+  const languageAlternates = getDiaphragmPumpLanguageAlternates(slug);
   const socialImage = data.mainImage
     ? new URL(data.mainImage, "https://www.foreachtek.com").toString()
     : undefined;
+  const socialImageAlt =
+    targetLocale === "zh"
+      ? getText(data.imageAlt || title)
+      : getText(
+          localizedReference?.h1 ||
+            localizedSeriesCopy?.title ||
+            title,
+        );
 
   return {
     title: metadataTitle,
     description,
+    alternates: {
+      canonical: canonicalPath,
+      languages: languageAlternates,
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
     openGraph: {
       type: "website",
+      locale: targetLocale === "zh" ? "zh_CN" : targetLocale,
+      url: canonicalPath,
+      siteName: "FOREACH",
       title: metadataTitle,
       description,
       ...(socialImage
-        ? { images: [{ url: socialImage, alt: data.imageAlt || title }] }
+        ? { images: [{ url: socialImage, alt: socialImageAlt }] }
         : {}),
     },
     twitter: {
@@ -1057,12 +1124,70 @@ export async function generateMetadata({ params }: PageProps) {
   };
 }
 
+function filterReferenceModelConfigurations(
+  detail: DiaphragmDetail,
+  reference: DiaphragmPumpReferenceModel,
+) {
+  const configurationCode = getText(reference.configurationCode).toUpperCase();
+
+  if (!configurationCode) {
+    return [...(detail.modelConfigurations || [])];
+  }
+
+  const configurationPattern = new RegExp(
+    `-\\d+${configurationCode}-`,
+    "i",
+  );
+
+  return (detail.modelConfigurations || []).filter((item) => {
+    return configurationPattern.test(getText(item.model));
+  });
+}
+
+function createReferenceDetail(slug: string): DiaphragmDetail | null {
+  const reference = getDiaphragmPumpReferenceModel(slug);
+
+  if (!reference) return null;
+
+  const seriesDetail = findDetail(reference.sourceSeriesSlug);
+  const sourceDetail = reference.configurationCode
+    ? findDetail(reference.legacySlugs[0]) || seriesDetail
+    : seriesDetail;
+
+  if (!sourceDetail || !seriesDetail) return null;
+
+  const path = getDiaphragmPumpPath("zh", reference.slug, {
+    trailingSlash: false,
+  });
+
+  return {
+    ...sourceDetail,
+    slug: reference.slug,
+    path,
+    title: reference.localized.zh.h1,
+    displayName: reference.localized.zh.h1,
+    description: reference.localized.zh.description,
+    modelDisplay: reference.model,
+    seo: {
+      ...sourceDetail.seo,
+      title: reference.localized.zh.h1,
+      description: reference.localized.zh.seoDescription,
+      pageTitle: reference.localized.zh.h1,
+      path,
+    },
+    modelConfigurations: filterReferenceModelConfigurations(
+      seriesDetail,
+      reference,
+    ),
+  };
+}
+
 export default async function DiaphragmPumpDetailPage({
   params,
   locale = "zh-CN",
-}: PageProps) {
+}: DiaphragmPumpDetailRouteProps) {
   const resolvedParams = await params;
-  const data = getPreferredProductDetailData(resolvedParams.slug);
+  const data = getPreferredProductDetailData(resolvedParams.slug, locale);
 
   if (!data) {
     notFound();

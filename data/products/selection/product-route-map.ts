@@ -106,14 +106,14 @@ export const productRouteMap: {
         "柱塞泵适用于自动化分析仪器、IVD、生命科学和实验室自动化设备中的精密液体处理。",
     },
 
-    "diaphragm-pumps": {
+    "miniature-diaphragm-pumps": {
       category: "pumps",
       categoryId: "pumps",
       productTypeId: "diaphragm-pump",
       label: "隔膜泵",
-      title: "隔膜泵 | FOREACH",
+      title: "微型隔膜泵｜恒永达",
       description:
-        "隔膜泵适用于清洗、废液、试剂输送和仪器内部中低流量液体传输场景。",
+        "恒永达微型隔膜泵覆盖液体输送与气液混合物抽排，可用于清洗液输送、试剂转移、废液抽排、负压建立和仪器内部流体处理。",
     },
 
     "pipetting-pumps": {
@@ -281,7 +281,7 @@ export const productRouteMap: {
   
     "gas-diaphragm-pumps": {
       category: "pumps",
-      slug: "diaphragm-pumps",
+      slug: "miniature-diaphragm-pumps",
       categoryId: "pumps",
       productTypeId: "diaphragm-pump",
       filterKey: "filter01",
@@ -297,7 +297,7 @@ export const productRouteMap: {
 
     "liquid-diaphragm-pumps": {
       category: "pumps",
-      slug: "diaphragm-pumps",
+      slug: "miniature-diaphragm-pumps",
       categoryId: "pumps",
       productTypeId: "diaphragm-pump",
       filterKey: "filter01",
@@ -306,14 +306,14 @@ export const productRouteMap: {
         filter01: ["液体隔膜泵"],
       },
       label: "液泵",
-      title: "液体隔膜泵 | FOREACH",
+      title: "微型液体隔膜泵｜恒永达",
       description:
-        "液体隔膜泵适用于仪器内部清洗液输送、试剂转移、废液抽排、管路预充和液体循环等场景。",
+        "恒永达微型液体隔膜泵适用于仪器内部清洗液输送、试剂转移、废液抽排、管路预充和液体循环等场景。",
     },
 
     "gas-liquid-diaphragm-pumps": {
       category: "pumps",
-      slug: "diaphragm-pumps",
+      slug: "miniature-diaphragm-pumps",
       categoryId: "pumps",
       productTypeId: "diaphragm-pump",
       filterKey: "filter01",
@@ -322,9 +322,9 @@ export const productRouteMap: {
         filter01: ["气液混合隔膜泵"],
       },
       label: "气液混合泵",
-      title: "气液混合隔膜泵 | FOREACH",
+      title: "气液混合隔膜泵｜恒永达",
       description:
-        "气液混合隔膜泵适用于气体抽吸、负压建立和气液混合物抽排等场景。",
+        "恒永达气液混合隔膜泵适用于气体抽吸、负压建立和气液混合物抽排等场景。",
     },
 },
 
@@ -514,7 +514,7 @@ export const productTypeIntroMap: Record<string, ProductTypeIntroEntry> = {
     title: "隔膜泵系列",
     paragraphs: [
       "恒永达隔膜泵涵盖液体、气体及气液混合类型，适用于液体输送、气体抽吸、清洗循环、废液排放及气液混合等场景。",
-      "选型时可根据输送介质、目标流量、工作压力或真空度、自吸高度、电机类型、接液材质、接口形式及安装空间进行筛选。隔膜泵包括 DPL30 300 mL/min、DPL60 600 mL/min、DPGL800 6 L/min 等型号，可面向 IVD、实验室分析及医疗设备液路进行选型。",
+      "选型时可根据输送介质、目标流量、工作压力或真空度、自吸高度、电机类型、接液材质、接口形式及安装空间进行筛选。隔膜泵包括 DPL30 300 mL/min、DPL60 600 mL/min，以及 DPGL800 双头微型气液混合隔膜泵（单泵头空载气体流量为 6 L/min）等型号，可面向 IVD、实验室分析及医疗设备液路进行选型。",
       "产品卡片展示常用配置，完整参数、尺寸图及规格书请进入产品详情页查看；如无法确定型号，可提交实际工况获取选型建议。",
     ],
     image: {

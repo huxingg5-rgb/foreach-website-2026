@@ -12,6 +12,8 @@ import TutorialVideoPlayerModal, {
 } from "@/components/resources/installation-guide/TutorialVideoPlayerModal";
 import TechnicalArticleCard from "@/components/resources/technical-articles/TechnicalArticleCard";
 import { getDiaphragmPumpCopy } from "@/data/products/detail/diaphragm-pump-copy";
+import { getDiaphragmPumpReferenceByProductId } from "@/data/products/detail/diaphragm-pump-reference-models";
+import { getDiaphragmPumpPath } from "@/data/products/detail/diaphragm-pump-routes";
 import { diaphragmPumpSelectionProducts } from "@/data/products/selection/diaphragm-pump-selection.generated";
 import type { ProductSelectionProduct } from "@/data/products/selection/product-selection.types";
 import type { InstallationGuideCard } from "@/data/resources/installation-guide/installation-guide.types";
@@ -240,6 +242,12 @@ function getProductDetailTitle(
   product: ProductSelectionProduct,
   locale: RelatedResourcesLocale,
 ) {
+  const reference = getDiaphragmPumpReferenceByProductId(product.productId);
+
+  if (reference) {
+    return reference.model;
+  }
+
   return (
     getDiaphragmPumpCopy(product, getProductLocale(locale))?.title ||
     getLocalizedProductText(product.cardTitle, locale)
@@ -250,20 +258,24 @@ function getProductDetailHref(
   locale: RelatedResourcesLocale,
   product: ProductSelectionProduct,
 ) {
+  const reference = getDiaphragmPumpReferenceByProductId(product.productId);
   const directHref =
     product.detailHref ?? product.productDetailHref ?? product.href;
 
-  const rawHref =
-    typeof directHref === "string" && directHref.trim()
+  const rawHref = reference
+    ? getDiaphragmPumpPath(getProductLocale(locale), reference.slug, {
+        trailingSlash: false,
+      })
+    : typeof directHref === "string" && directHref.trim()
       ? directHref.trim()
       : `/${[
-          "products",
-          product.categorySlug,
-          product.productTypeSlug,
-          product.detailSlug,
-        ]
-          .filter((value): value is string => Boolean(value))
-          .join("/")}`;
+            "products",
+            product.categorySlug,
+            product.productTypeSlug,
+            product.detailSlug,
+          ]
+            .filter((value): value is string => Boolean(value))
+            .join("/")}`;
 
   /* 外部链接保持原样；站内产品链接则补齐当前语言前缀。 */
   if (/^(?:https?:)?\/\//.test(rawHref)) {

@@ -109,7 +109,7 @@ export const environmentalMonitoringApplicationZhData: EnvironmentalMonitoringAp
     diaphragmPump: {
       name: "隔膜泵",
       ability: "水样取送、清洗液输送、废液抽排与较大流量搬运",
-      params: ["300 / 600 mL/min", "自吸 5 m / 3 m", "压力 100 kPa", "无刷电机寿命 10000 h"],
+      params: ["300 / 600 mL/min", "自吸 6 mH₂O / 3 mH₂O", "压力 100 kPa", "无刷电机寿命 10000 h"],
       advantage:
         "适合水样取送、清洗液供给、冷凝液排放、废液抽排和管路冲洗等位置，适合需要自吸和稳定流量的场景。",
       solves:

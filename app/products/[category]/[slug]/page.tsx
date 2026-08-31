@@ -191,6 +191,40 @@ export async function generateMetadata({
   const productTypeRoute = resolveProductTypeRoute(category, slug);
 
   if (productTypeRoute) {
+    if (productTypeRoute.productTypeId === "diaphragm-pump") {
+      const canonicalPath = `/products/${category}/${slug}/`;
+
+      return {
+        title: productTypeRoute.title,
+        description: productTypeRoute.description,
+        alternates: {
+          canonical: canonicalPath,
+          languages: {
+            "zh-CN": canonicalPath,
+            "en-US": `/en${canonicalPath}`,
+            es: `/es${canonicalPath}`,
+            fr: `/fr${canonicalPath}`,
+            ko: `/ko${canonicalPath}`,
+            ru: `/ru${canonicalPath}`,
+            "x-default": canonicalPath,
+          },
+        },
+        openGraph: {
+          type: "website",
+          locale: "zh_CN",
+          url: canonicalPath,
+          siteName: "FOREACH",
+          title: productTypeRoute.title,
+          description: productTypeRoute.description,
+        },
+        twitter: {
+          card: "summary",
+          title: productTypeRoute.title,
+          description: productTypeRoute.description,
+        },
+      };
+    }
+
     return {
       title: productTypeRoute.title,
       description: productTypeRoute.description,

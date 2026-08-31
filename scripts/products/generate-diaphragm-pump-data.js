@@ -5,9 +5,46 @@ const xlsx = require("xlsx");
 const SOURCE_FILE = "data-source/product-center/pumps/FOREACH_隔膜泵系列_产品数据源.xlsx";
 const OUT_DIR = "data/products/generated/pumps/diaphragm-pumps";
 const DETAIL_INDEX_FILE = path.join(OUT_DIR, "detail", "index.json");
+const LEGACY_PUBLIC_PARENT = "/products/pumps/diaphragm-pumps";
+const FINAL_PUBLIC_PARENT = "/products/pumps/miniature-diaphragm-pumps";
+const PUBLIC_SELECTION_CARD_IDS = new Set([
+  "DPL30-BRUSHED",
+  "DPL30-BRUSHLESS",
+  "DPL60-BRUSHED",
+  "DPL60-BRUSHLESS",
+  "DPL30H-BRUSHED",
+  "DPL30H-BRUSHLESS",
+  "DPGL800-FF",
+]);
 
 function n(v) {
   return String(v ?? "").trim();
+}
+
+function migratePublicRoutePath(value) {
+  const routePath = n(value);
+
+  if (
+    routePath !== LEGACY_PUBLIC_PARENT &&
+    !routePath.startsWith(`${LEGACY_PUBLIC_PARENT}/`)
+  ) {
+    return routePath;
+  }
+
+  return `${FINAL_PUBLIC_PARENT}${routePath.slice(LEGACY_PUBLIC_PARENT.length)}`;
+}
+
+function normalizeGeneratedDetail(detail) {
+  return {
+    ...detail,
+    path: migratePublicRoutePath(detail.path),
+    seo: detail.seo
+      ? {
+          ...detail.seo,
+          path: migratePublicRoutePath(detail.seo.path || detail.path),
+        }
+      : detail.seo,
+  };
 }
 
 function ensureDir(dir) {
@@ -90,6 +127,64 @@ function checkDetailMotorConsistency(details) {
       `OK: ${detail.seriesId} 首个型号 ${detail.modelConfigurations?.[0]?.model || "-"} 与 SEO 电机事实一致`,
     );
   }
+}
+
+function toGeneratedSpecification(item) {
+  return {
+    tableName: item["规格表名称"],
+    parameter: item["参数"],
+    value: item["规格值"],
+    note: item["备注"],
+  };
+}
+
+function toGeneratedModelConfiguration(item) {
+  return {
+    itemCode: item["商品编码"],
+    model: item["产品型号"],
+    category: item["产品分类"],
+    motorType: item["电机类型"],
+    voltage: item["电压"],
+    connectionType: item["连接方式"],
+    portDirection: item["连接口方向"],
+    diaphragm: item["膜片"],
+    valvePlate: item["阀片"],
+    pumpHead: item["泵头"],
+    detailSlug: item["详情页slug"],
+    reservedModelSlug: item["单独型号页预留slug"],
+    note: item["备注"],
+  };
+}
+
+function refreshPreservedModelFacts(detail, specsBySeries, modelsBySeries) {
+  const seriesId = n(detail.seriesId);
+  const sourceSpecifications = specsBySeries[seriesId] || [];
+  const sourceModels = modelsBySeries[seriesId] || [];
+  const existingModels = Array.isArray(detail.modelConfigurations)
+    ? detail.modelConfigurations
+    : [];
+  const modelConfigurations = existingModels.map(existingModel => {
+    const sourceModel = sourceModels.find(item =>
+      n(item["产品型号"]) === n(existingModel.model) ||
+      (n(item["商品编码"]) && n(item["商品编码"]) === n(existingModel.itemCode))
+    );
+
+    return sourceModel
+      ? { ...existingModel, ...toGeneratedModelConfiguration(sourceModel) }
+      : existingModel;
+  });
+  const motorLabel = getMotorLabel(modelConfigurations[0]?.motorType);
+  const matchingSpecifications = motorLabel
+    ? sourceSpecifications.filter(item => n(item["规格表名称"]).includes(motorLabel))
+    : sourceSpecifications;
+
+  return {
+    ...detail,
+    ...(matchingSpecifications.length
+      ? { specifications: matchingSpecifications.map(toGeneratedSpecification) }
+      : {}),
+    ...(modelConfigurations.length ? { modelConfigurations } : {}),
+  };
 }
 
 function publicFullPath(dir, file) {
@@ -279,27 +374,8 @@ function main() {
         status: primaryRoute["上线状态"] || row["状态"],
         note: primaryRoute["备注"] || "",
       },
-      specifications: primarySpecifications.map(item => ({
-        tableName: item["规格表名称"],
-        parameter: item["参数"],
-        value: item["规格值"],
-        note: item["备注"],
-      })),
-      modelConfigurations: seriesModels.map(item => ({
-        itemCode: item["商品编码"],
-        model: item["产品型号"],
-        category: item["产品分类"],
-        motorType: item["电机类型"],
-        voltage: item["电压"],
-        connectionType: item["连接方式"],
-        portDirection: item["连接口方向"],
-        diaphragm: item["膜片"],
-        valvePlate: item["阀片"],
-        pumpHead: item["泵头"],
-        detailSlug: item["详情页slug"],
-        reservedModelSlug: item["单独型号页预留slug"],
-        note: item["备注"],
-      })),
+      specifications: primarySpecifications.map(toGeneratedSpecification),
+      modelConfigurations: seriesModels.map(toGeneratedModelConfiguration),
       faqs: (faqsBySeries[sid] || []).map(item => ({
         question: item["问题"],
         answer: item["答案"],
@@ -320,32 +396,46 @@ function main() {
         status: item["状态/备注"],
       })),
     };
-  });
+  }).map(normalizeGeneratedDetail);
 
   checkDetailMotorConsistency(details);
 
   const mainSeriesSlugs = new Set(details.map(item => item.slug));
-  const preservedModelDetails = existingDetails.filter(item => {
-    const slug = n(item.slug);
-    return slug && !mainSeriesSlugs.has(slug);
-  });
+  const preservedModelDetails = existingDetails
+    .filter(item => {
+      const slug = n(item.slug);
+      return slug && !mainSeriesSlugs.has(slug);
+    })
+    .map(normalizeGeneratedDetail)
+    .map(item => refreshPreservedModelFacts(item, specsBySeries, modelsBySeries));
 
-  const cards = cardRows.map(row => ({
-    cardId: row["card_id"],
-    category: row["产品分类"],
-    series: row["系列"],
-    title: row["卡片标题/型号"],
-    description: row["卡片描述"],
-    flowRate: row["流量"],
-    pressure: row["压力字段"],
-    motorType: row["电机类型"],
-    targetSeriesSlug: row["目标系列slug"],
-    reservedConfigSlug: row["配置预留slug"],
-    imageKey: row["图片key"],
-    alt: row["ALT文本_EN"],
-  }));
+  const cards = cardRows
+    .filter(row => PUBLIC_SELECTION_CARD_IDS.has(n(row["card_id"]).toUpperCase()))
+    .map(row => ({
+      cardId: row["card_id"],
+      category: row["产品分类"],
+      series: row["系列"],
+      title: row["卡片标题/型号"],
+      description: row["卡片描述"],
+      flowRate: row["流量"],
+      pressure: row["压力字段"],
+      motorType: row["电机类型"],
+      targetSeriesSlug: row["目标系列slug"],
+      reservedConfigSlug: row["配置预留slug"],
+      imageKey: row["图片key"],
+      alt: row["ALT文本_EN"],
+    }));
 
-  const routes = routeRows.map(row => ({
+  const missingCardIds = [...PUBLIC_SELECTION_CARD_IDS].filter(
+    cardId => !cards.some(card => n(card.cardId).toUpperCase() === cardId),
+  );
+  if (cards.length !== PUBLIC_SELECTION_CARD_IDS.size || missingCardIds.length) {
+    throw new Error(
+      `最终公开选型卡必须为 7 张；缺少: ${missingCardIds.join(", ") || "none"}`,
+    );
+  }
+
+  const routes = routeRows.map(row => normalizeGeneratedDetail({
     pageType: row["页面类型"],
     seriesId: row["series_id"],
     pageTitle: row["中文页面标题"],

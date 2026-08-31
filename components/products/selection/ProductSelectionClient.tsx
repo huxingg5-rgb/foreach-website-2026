@@ -65,6 +65,11 @@ import {
   localizeProductCardTitle,
 } from "@/data/products/selection/card-copy/product-card-copy.intl";
 import {
+  applyDiaphragmPumpReferenceCard,
+  getDiaphragmPumpSelectionHeading,
+} from "@/data/products/detail/diaphragm-pump-reference-models";
+import { getDiaphragmPumpPath } from "@/data/products/detail/diaphragm-pump-routes";
+import {
   barbedFittingFilterLabels,
   barbedFittingSelectionProducts,
   barbedFittingTaxonomyItems,
@@ -2685,9 +2690,7 @@ const isDiaphragmPump =
       .filter(Boolean)
       .pop();
 
-    return slug
-      ? `/products/pumps/diaphragm-pumps/${slug}`
-      : "/products/pumps/diaphragm-pumps";
+    return getDiaphragmPumpPath("zh", slug, { trailingSlash: false });
   }  const isPipettingPump =
     product.categoryId === "pumps" &&
     ["pipette-pump", "pipetting-pump", "pipetting-pumps"].includes(String(product.productTypeId || ""));
@@ -3244,8 +3247,19 @@ export default function ProductSelectionClient({
   }, [activeCategoryId, categoryItems]);
 
   const categoryProducts = useMemo(() => {
-    return getProductsByCategory(activeCategoryId);
-  }, [activeCategoryId]);
+    return getProductsByCategory(activeCategoryId).map((product) =>
+      applyDiaphragmPumpReferenceCard(product, locale),
+    );
+  }, [activeCategoryId, locale]);
+
+  const diaphragmCategoryHeading = useMemo(() => {
+    if (activeProductTypeId !== "diaphragm-pump") {
+      return "";
+    }
+
+    const diaphragmType = initialFilters?.filter01?.[0] || "";
+    return getDiaphragmPumpSelectionHeading(locale, diaphragmType);
+  }, [activeProductTypeId, initialFilters, locale]);
 
   const productTypeOptions = useMemo(() => {
     const optionMap = new Map<string, { value: string; label: string }>();
@@ -3399,7 +3413,9 @@ export default function ProductSelectionClient({
     return options.map((option) => ({
       ...option,
       label: getLocalizedFilterOptionLabel(
-        option.label || option.value,
+        option.value === "diaphragm-pump"
+          ? "隔膜泵"
+          : option.label || option.value,
         locale
       ),
     }));
@@ -3662,6 +3678,10 @@ export default function ProductSelectionClient({
     activeProductTypeId,
     locale
   );
+  const activeProductTypeIntroHeading =
+    activeProductTypeId === "diaphragm-pump" && initialFilters?.filter01?.length
+      ? diaphragmCategoryHeading
+      : activeProductTypeIntro?.title || "";
   const selectedTagItems = useMemo<ProductSelectionSelectedTag[]>(() => {
     const tags: ProductSelectionSelectedTag[] = [];
 
@@ -3917,14 +3937,11 @@ export default function ProductSelectionClient({
 
         const allowedValues = allowedValuesByFilterKey.get(filterKey);
 
-        if (!allowedValues || allowedValues.size === 0) {
-          delete next[filterKey];
-          changed = true;
-          return;
-        }
-
-        const validValues = Array.from(currentValues).filter((value) =>
-          allowedValues.has(value)
+        const validValues = Array.from(currentValues).filter(
+          (value) =>
+            allowedValues?.has(value) ||
+            (activeProductTypeId === "diaphragm-pump" &&
+              initialFilters?.[filterKey]?.includes(value)),
         );
 
         if (validValues.length !== currentValues.size) {
@@ -3940,7 +3957,7 @@ export default function ProductSelectionClient({
 
       return changed ? next : current;
     });
-  }, [filterGroups]);
+  }, [activeProductTypeId, filterGroups, initialFilters]);
 
   function handleCategoryChange(categoryId: string) {
     const firstProductTypeId =
@@ -4982,7 +4999,15 @@ function isFilterOptionActive(
                 </div>
 
                 <div className="product-type-intro-copy">
-                  <h2>{activeProductTypeIntro.title}</h2>
+                  {activeProductTypeId === "diaphragm-pump" ? (
+                    <h1 className="product-type-intro-heading">
+                      {activeProductTypeIntroHeading}
+                    </h1>
+                  ) : (
+                    <h2 className="product-type-intro-heading">
+                      {activeProductTypeIntroHeading}
+                    </h2>
+                  )}
                   {activeProductTypeIntro.paragraphs.map((paragraph) => (
                     <p key={paragraph}>
                       {renderProductTypeIntroParagraph(paragraph)}

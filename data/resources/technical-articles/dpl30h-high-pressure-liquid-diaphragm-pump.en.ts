@@ -48,7 +48,7 @@ export const dpl30hArticleEnCopy: Dpl30hArticleCopy = {
       ["Power", "≤7 W", "Size the supply for starting and running"],
       ["Rated medium", "Purified water", "Evaluate other liquids under actual conditions"],
       ["Medium temperature", "+5°C to +40°C", "Do not apply the DPL30 +80°C limit"],
-      ["Connection", "Collet/compression fitting for 6×4 mm (OD×ID) rigid tubing", "Check the lowest-rated part in the line"],
+      ["Connection", "Threaded Port, connects to 6 × 4 mm rigid tubing", "Check the lowest-rated part in the line"],
       ["Noise", "≤80 dB", "Equipment structure affects system noise"],
       ["Pump head", "PPS", "Diaphragm and valve materials vary by model"],
       ["Diaphragm", "EPDM or PTFE, by model", "No material is universal"],
@@ -65,7 +65,7 @@ export const dpl30hArticleEnCopy: Dpl30hArticleCopy = {
       ["No-load flow", "300 mL/min", "300 mL/min"],
       ["Rated pressure", "100 kPa", "600 kPa"],
       ["Self-priming height", "6 mH₂O", "3 mH₂O"],
-      ["Tubing", "ID 3.2 mm flexible tubing", "Collet fitting for 6×4 mm rigid tubing"],
+      ["Tubing", "ID 3.2 mm flexible tubing", "Threaded Port, connects to 6 × 4 mm rigid tubing"],
       ["Maximum medium temperature", "+80°C", "+40°C"],
       ["Primary selection focus", "Lower pressure, suction lift and higher temperature limit", "High backpressure, rigid line and system pressure rating"],
     ],
@@ -86,7 +86,7 @@ export const dpl30hArticleEnCopy: Dpl30hArticleCopy = {
   section7: {
     title: "7. 6×4 mm rigid-tube connection: the lowest-rated component governs",
     paragraphs: [
-      "DPL30H uses a collet/compression fitting for 6×4 mm (OD×ID) rigid tubing. Confirm tubing material and OD tolerance, square cut, insertion depth and collet engagement, then perform pressure-hold and leak tests.",
+      "Threaded Port, connects to 6 × 4 mm rigid tubing. Confirm tubing material and OD tolerance, square cut and insertion depth, then perform pressure-hold and leak tests.",
       "The high-backpressure line may also contain fittings, valves, filters, sensors and chambers. The pump rating cannot replace the pressure qualification of those components.",
     ],
     noticeStrong: "A 600 kPa DPL30H rating does not automatically rate every 6×4 mm tube, fitting, valve, filter or chamber to 600 kPa.",

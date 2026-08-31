@@ -368,7 +368,7 @@ const HOME_FLOW_PRODUCT_PATHS: Record<string, string> = {
   "syringe-pump": "/products/pumps/syringe-pumps",
   "pipetting-pump": "/products/pumps/pipetting-pumps",
   "pipette-pump": "/products/pumps/pipetting-pumps",
-  "diaphragm-pump": "/products/pumps/diaphragm-pumps",
+  "diaphragm-pump": "/products/pumps/miniature-diaphragm-pumps",
   "piston-pump": "/products/pumps/plunger-pumps",
   "plunger-pump": "/products/pumps/plunger-pumps",
   "valveless-pump": "/products/pumps/valveless-pumps",

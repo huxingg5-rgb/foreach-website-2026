@@ -585,6 +585,40 @@ export async function generateMetadata({
     return {};
   }
 
+  if (route.productTypeId === "diaphragm-pump") {
+    const canonicalPath = `/products/${category}/${slug}/${seriesSlug}/`;
+
+    return {
+      title: route.title,
+      description: route.description,
+      alternates: {
+        canonical: canonicalPath,
+        languages: {
+          "zh-CN": canonicalPath,
+          "en-US": `/en${canonicalPath}`,
+          es: `/es${canonicalPath}`,
+          fr: `/fr${canonicalPath}`,
+          ko: `/ko${canonicalPath}`,
+          ru: `/ru${canonicalPath}`,
+          "x-default": canonicalPath,
+        },
+      },
+      openGraph: {
+        type: "website",
+        locale: "zh_CN",
+        url: canonicalPath,
+        siteName: "FOREACH",
+        title: route.title,
+        description: route.description,
+      },
+      twitter: {
+        card: "summary",
+        title: route.title,
+        description: route.description,
+      },
+    };
+  }
+
   return {
     title:
       route.title,

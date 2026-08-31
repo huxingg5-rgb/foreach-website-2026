@@ -109,7 +109,7 @@ export const syntheticBiologyApplicationZhData: SyntheticBiologyApplicationPageD
     diaphragmPump: {
       name: "隔膜泵",
       ability: "培养基转移、清洗液输送、废液抽排与较大流量搬运",
-      params: ["300 / 600 mL/min", "自吸 5 m / 3 m", "压力 100 kPa", "无刷电机寿命 10000 h"],
+      params: ["300 / 600 mL/min", "自吸 6 mH₂O / 3 mH₂O", "压力 100 kPa", "无刷电机寿命 10000 h"],
       advantage:
         "适合培养基转移、清洗液供给、废液抽排、管路冲洗和反应体系排液等需要稳定流量和自吸能力的位置。",
       solves:

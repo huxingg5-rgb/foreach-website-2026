@@ -8,6 +8,16 @@ import {
 import {
   pumpSeriesSelectionCards,
 } from "../../data/products/generated/pumps/pump-series.selection.generated";
+import {
+  diaphragmPumpReferenceModels,
+} from "../../data/products/detail/diaphragm-pump-reference-models";
+import {
+  getDiaphragmPumpPath,
+  isDiaphragmPumpPublicPath,
+} from "../../data/products/detail/diaphragm-pump-routes";
+import {
+  diaphragmPumpSelectionProducts,
+} from "../../data/products/selection/diaphragm-pump-selection.generated";
 
 import type {
   SiteSearchItem,
@@ -156,6 +166,42 @@ function buildPumpSearchProductByHref() {
 
 const pumpSearchProductByHref =
   buildPumpSearchProductByHref();
+
+function buildDiaphragmPumpReferenceSearchItems(): SiteSearchItem[] {
+  const selectionById = new Map(
+    diaphragmPumpSelectionProducts.map((product) => [product.productId, product]),
+  );
+
+  return diaphragmPumpReferenceModels.map((reference) => {
+    const localized = reference.localized.zh;
+    const selectionProduct = reference.selectionProductIds
+      .map((productId) => selectionById.get(productId))
+      .find(Boolean);
+    const href = getDiaphragmPumpPath("zh", reference.slug, {
+      trailingSlash: false,
+    });
+
+    return {
+      id: `product:diaphragm-reference:${reference.slug}`,
+      module: "products",
+      title: reference.model,
+      subtitle: localized.cardSubtitle,
+      description: localized.seoDescription,
+      href,
+      image: cleanImagePath(selectionProduct?.imageCard || ""),
+      model: reference.model,
+      productCode: "",
+      actionLabel: "查看产品",
+      keywords: [
+        reference.model,
+        localized.h1,
+        localized.cardSubtitle,
+        localized.seoDescription,
+        href,
+      ],
+    };
+  });
+}
 
 function getFiles(directory: string): string[] {
   if (!fs.existsSync(directory)) return [];
@@ -372,7 +418,7 @@ function collectProductItems(
         : ""
     );
 
-  if (isProductHref(href)) {
+  if (isProductHref(href) && !isDiaphragmPumpPublicPath(href)) {
     const rawModel = firstText(object, [
       "foreachModel",
       "model",
@@ -530,7 +576,10 @@ async function loadProductItems(): Promise<SiteSearchItem[]> {
     }
   }
 
-  return result;
+  return [
+    ...result,
+    ...buildDiaphragmPumpReferenceSearchItems(),
+  ];
 }
 
 async function loadCompatibleItems(): Promise<SiteSearchItem[]> {

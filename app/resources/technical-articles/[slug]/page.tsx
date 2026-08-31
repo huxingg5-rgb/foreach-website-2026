@@ -63,11 +63,20 @@ function getTechnicalArticleLanguageLinks(slug: string) {
     ru: `/ru${basePath}`,
   };
 
-  return Object.fromEntries(
+  const availableLanguageLinks = Object.fromEntries(
     TECHNICAL_ARTICLE_LOCALES.filter((locale) =>
       getTechnicalArticleData(locale, slug),
     ).map((locale) => [locale, languageLinks[locale]]),
   );
+
+  if (
+    slug === "brushed-vs-brushless-diaphragm-pump-3000h-10000h" ||
+    slug === "life-science-dpl60-600ml-min-diaphragm-pump-selection-guide"
+  ) {
+    availableLanguageLinks["x-default"] = basePath;
+  }
+
+  return availableLanguageLinks;
 }
 
 /* =========================================================

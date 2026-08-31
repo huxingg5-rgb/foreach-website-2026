@@ -1,6 +1,17 @@
 export type DiaphragmPumpEngineeringArticleSlug =
   | "diaphragm-pump-flow-pressure-curve-guide"
-  | "micro-diaphragm-pump-continuous-duty-life";
+  | "micro-diaphragm-pump-continuous-duty-life"
+  | "life-science-dpl60-600ml-min-diaphragm-pump-selection-guide"
+  | "brushed-vs-brushless-diaphragm-pump-3000h-10000h"
+  | "lab-liquid-waste-aspiration-troubleshooting"
+  | "ivd-waste-aspiration-liquid-pump-vs-vacuum-pump"
+  | "300-vs-600-ml-min-diaphragm-pump-selection"
+  | "300-ml-min-diaphragm-pump-flow-margin"
+  | "tube-inner-diameter-affects-diaphragm-pump-flow"
+  | "suction-vs-discharge-resistance-diaphragm-pump"
+  | "diaphragm-pump-pressure-rating-terms"
+  | "100-kpa-vs-600-kpa-diaphragm-pump-selection"
+  | "high-backpressure-fluid-path-pressure-budget";
 
 export type EngineeringArticleFaqItem = {
   question: string;
@@ -79,5 +90,6 @@ export type DiaphragmPumpEngineeringArticleCopy = {
     description: string;
     contactLabel: string;
     productsLabel: string;
+    productsHref?: string;
   };
 };

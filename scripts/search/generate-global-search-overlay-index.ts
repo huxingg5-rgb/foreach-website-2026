@@ -2,6 +2,11 @@ import fs from "node:fs";
 import path from "node:path";
 
 import { siteSearchIndex } from "../../data/search/site-search-index.generated";
+import {
+  applyDiaphragmPumpReferenceSearchItem,
+  getDiaphragmPumpReferenceModel,
+} from "../../data/products/detail/diaphragm-pump-reference-models";
+import { isDiaphragmPumpPublicPath } from "../../data/products/detail/diaphragm-pump-routes";
 import { datasheetZhItems } from "../../data/resources/datasheets.zh";
 import { datasheetEnItems } from "../../data/resources/datasheets.en";
 import { installationGuideZhData } from "../../data/resources/installation-guide/installation-guide.zh";
@@ -61,6 +66,18 @@ const SEARCH_LOCALES: SearchLocale[] = [
   "ru",
 ];
 const CHECK_MODE = process.argv.includes("--check");
+const LOCALES_ARGUMENT = process.argv.find((argument) =>
+  argument.startsWith("--locales="),
+);
+const REQUESTED_SEARCH_LOCALES = LOCALES_ARGUMENT
+  ? LOCALES_ARGUMENT
+      .slice("--locales=".length)
+      .split(",")
+      .map((locale) => locale.trim())
+      .filter((locale): locale is SearchLocale =>
+        SEARCH_LOCALES.includes(locale as SearchLocale),
+      )
+  : SEARCH_LOCALES;
 
 const MODULE_COPY: Record<
   SearchModule,
@@ -402,11 +419,20 @@ function loadProductAndCompatibleItems(
 ): CompactSearchItem[] {
   const isChinese = locale === "zh-CN";
 
-  return siteSearchIndex.flatMap((item) => {
+  return siteSearchIndex.flatMap((sourceItem) => {
+    const item = applyDiaphragmPumpReferenceSearchItem(sourceItem, locale);
     const searchModule = item.module as SearchModule;
     if (
       searchModule !== "products" &&
       searchModule !== "compatible-models"
+    ) {
+      return [];
+    }
+
+    if (
+      searchModule === "products" &&
+      isDiaphragmPumpPublicPath(sourceItem.href) &&
+      !getDiaphragmPumpReferenceModel(item.href)
     ) {
       return [];
     }
@@ -972,7 +998,7 @@ function getCounts(items: CompactSearchItem[]) {
 
 async function main() {
   const localeIndexes = await Promise.all(
-    SEARCH_LOCALES.map(async (locale) => ({
+    REQUESTED_SEARCH_LOCALES.map(async (locale) => ({
       locale,
       items: await buildLocaleIndex(locale),
     }))

@@ -97,7 +97,7 @@ export function localizeProductCardTitle(
 ) {
   const diaphragmCopy = getDiaphragmPumpCopy(product, locale);
 
-  if (diaphragmCopy) return diaphragmCopy.title;
+  if (diaphragmCopy) return title || diaphragmCopy.title;
   if (!isTargetLocale(locale) || !title) return title;
   return TITLE_COPY[locale][title] || replacePhrases(title, locale);
 }
@@ -109,7 +109,9 @@ export function localizeProductCardSubtitle(
 ) {
   const diaphragmCopy = getDiaphragmPumpCopy(product, locale);
 
-  if (diaphragmCopy) return diaphragmCopy.cardParameters.join("\n");
+  if (diaphragmCopy) {
+    return subtitle || diaphragmCopy.cardParameters.join(" · ");
+  }
   if (!isTargetLocale(locale) || !subtitle) return subtitle;
 
   const hardTubeLocalized = localizeHardTubeFittingCardSubtitle(product, locale, subtitle);
