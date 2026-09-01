@@ -631,6 +631,346 @@
         }
       }
     },
+    "dpl30h": {
+      "articleSlug": "dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide",
+      "locales": {
+        "en": {
+          "tabLabel": "Applications",
+          "title": "Typical Applications for a 300 mL/min 600 kPa High-Pressure Miniature Liquid Diaphragm Pump",
+          "variantIntros": {
+            "brushed": [
+              "A 300 mL/min high-pressure miniature liquid diaphragm pump is intended for high-resistance fluid paths that conventional low-pressure diaphragm pumps may not be able to serve, including narrow-bore tubing, filters, multiple valves, flow cells, needles and other components that create substantial pressure drop. The DPL30H has a free-flow rate of 300 mL/min, a rated pressure of 600 kPa and a self-priming height of 3 mH₂O for instrument fluid transfer requiring higher delivery pressure.",
+              "The 300 mL/min free-flow rate and 600 kPa rated pressure are not the same operating point. Selection must be based on the target flow, inlet conditions, discharge back pressure and total fluid-path resistance; it must not be interpreted as maintaining 300 mL/min at 600 kPa.",
+              "Depending on its function in the equipment, the same pump may be described as a high-pressure wash-solution pump, high-back-pressure transfer pump, rinse pump, auxiliary supply pump or circulation pump for a high-resistance fluid path."
+            ],
+            "brushless": [
+              "A 300 mL/min high-pressure miniature liquid diaphragm pump is intended for high-resistance fluid paths that conventional low-pressure diaphragm pumps may not be able to serve, including narrow-bore tubing, filters, multiple valves, flow cells, needles and other components that create substantial pressure drop. The DPL30H has a free-flow rate of 300 mL/min, a rated pressure of 600 kPa and a self-priming height of 3 mH₂O for instrument fluid transfer requiring higher delivery pressure.",
+              "The 300 mL/min free-flow rate and 600 kPa rated pressure are not the same operating point. Selection must be based on the target flow, inlet conditions, discharge back pressure and total fluid-path resistance; it must not be interpreted as maintaining 300 mL/min at 600 kPa.",
+              "Depending on its function in the equipment, the same pump may be described as a high-pressure wash-solution pump, high-back-pressure transfer pump, rinse pump, auxiliary supply pump or circulation pump for a high-resistance fluid path."
+            ]
+          },
+          "items": [
+            {
+              "title": "1. High-Resistance Wash-Solution Pump for IVD, Biochemical and Analytical Instruments",
+              "paragraphs": [
+                "In IVD, biochemical and other analytical instruments, wash solution may pass through solenoid valves, manifolds, filter assemblies, probes or narrow internal tubing before reaching the cleaning point. When several local restrictions are connected in series, the required pressure can be substantially higher than in an open, low-resistance transfer path.",
+                "In this type of circuit, the DPL30H can serve as a wash-solution or rinse pump for a high-resistance cleaning path. Whether the 600 kPa platform is required should be determined from the actual pressure drop at the target wash flow, not from the application label IVD washing alone."
+              ]
+            },
+            {
+              "title": "2. Long-Line and Multi-Valve Liquid Transfer in Laboratory Automation",
+              "paragraphs": [
+                "Laboratory automation equipment may contain a reservoir, solenoid valves, distribution manifolds, sensors, filters and multiple fluidic modules. Pressure losses accumulate when tubing is long or narrow, or when several valves and fittings are connected in series.",
+                "The DPL30H can be evaluated at the required operating point for auxiliary supply or washing circuits that must overcome this higher system resistance. The 300 mL/min value is a free-flow reference; installed flow still depends on tubing diameter and length, valve pressure drop, filter condition and discharge pressure."
+              ]
+            },
+            {
+              "title": "3. Supply Upstream of Filters and Flow Cells in Analytical Instruments",
+              "paragraphs": [
+                "Some analytical instruments must transfer liquid through filters, flow cells or other internal components with narrow passages. As filter resistance increases, or as the bore of the flow cell and connecting tubing decreases, the pump must generate a larger differential pressure to maintain the target flow.",
+                "The DPL30H can support non-metering auxiliary supply, washing and fluid-replacement duties in these circuits. Filter pressure drop may change from a new element to the end of its service interval, so selection should include the worst-case operating point after filter loading rather than only the initial condition."
+              ]
+            },
+            {
+              "title": "4. Pressurized Transfer Through Needles, Narrow Tubing and Small Outlets",
+              "paragraphs": [
+                "Needles, capillaries, small-ID rigid tubing and other small outlets increase flow resistance, and the resulting pressure drop changes significantly with flow rate, fluid viscosity, bore and effective length.",
+                "When an instrument must perform washing, auxiliary supply or fluid replacement through these high-resistance components, the DPL30H can be evaluated against the required flow and calculated or measured pressure demand. Its high-pressure capability is used to overcome fluid-path resistance and does not make it a high-accuracy metering pump."
+              ]
+            },
+            {
+              "title": "5. Liquid Circulation and Auxiliary Transfer with Higher Back Pressure",
+              "paragraphs": [
+                "Some instrument circuits must deliver wash solution, buffer or another compatible liquid to a downstream module that is already under pressure, or circulate liquid periodically through a loop containing multiple valves, sensors and fluidic components.",
+                "In these systems, the operating point is governed by the pressure difference between the inlet and outlet together with total circuit resistance. If a conventional 100 kPa diaphragm pump is already close to or beyond its applicable range at the target flow, the DPL30H 600 kPa platform can be evaluated, but final selection must be based on a complete fluid-path test and a valid flow-pressure curve."
+              ]
+            }
+          ],
+          "selectionNote": {
+            "title": "Application Selection Note",
+            "variantParagraphs": {
+              "brushed": [
+                "For the DPL30H, 300 mL/min is the free-flow rate and 600 kPa is the rated pressure; they are not the same operating point. Define the target flow first, then calculate the total pressure differential created by narrow tubing, valves, filters, flow cells, needles, discharge pressure and inlet conditions, and confirm the actual operating point with a valid flow-pressure curve.",
+                "The DPL30H is intended for high-resistance or higher-back-pressure circuits that conventional low-pressure diaphragm pumps may not be able to serve. Final validation must also consider medium compatibility, duty cycle, inlet conditions, system back pressure, ambient temperature and equipment-life requirements."
+              ],
+              "brushless": [
+                "For the DPL30H, 300 mL/min is the free-flow rate and 600 kPa is the rated pressure; they are not the same operating point. Define the target flow first, then calculate the total pressure differential created by narrow tubing, valves, filters, flow cells, needles, discharge pressure and inlet conditions, and confirm the actual operating point with a valid flow-pressure curve.",
+                "The DPL30H is intended for high-resistance or higher-back-pressure circuits that conventional low-pressure diaphragm pumps may not be able to serve. Final validation must also consider medium compatibility, duty cycle, inlet conditions, system back pressure, ambient temperature and equipment-life requirements."
+              ]
+            }
+          },
+          "linkText": "Learn more: Operating point and selection of the DPL30H high-pressure miniature liquid diaphragm pump →"
+        },
+        "es": {
+          "tabLabel": "Aplicaciones",
+          "title": "Aplicaciones típicas de una bomba miniatura de diafragma para líquidos de alta presión de 300 mL/min y 600 kPa",
+          "variantIntros": {
+            "brushed": [
+              "Una bomba miniatura de diafragma para líquidos de alta presión de 300 mL/min está destinada a circuitos de alta resistencia que una bomba de baja presión convencional puede no superar, como tubos de pequeño diámetro, filtros, varias válvulas en serie, celdas de flujo, agujas y otros componentes que generan una pérdida de presión elevada. La DPL30H tiene un caudal libre de 300 mL/min, una presión nominal de 600 kPa y una altura de autocebado de 3 mH₂O para la transferencia de líquidos en instrumentos que requieren mayor presión de impulsión.",
+              "El caudal libre de 300 mL/min y la presión nominal de 600 kPa no corresponden al mismo punto de funcionamiento. La selección debe basarse en el caudal objetivo, las condiciones de entrada, la contrapresión de salida y la resistencia total del circuito; no debe interpretarse que la bomba mantiene 300 mL/min a 600 kPa.",
+              "Según su función en el equipo, la misma bomba puede denominarse bomba de solución de lavado de alta presión, bomba de transferencia contra alta contrapresión, bomba de enjuague, bomba auxiliar de alimentación o bomba de circulación para circuitos de alta resistencia."
+            ],
+            "brushless": [
+              "Una bomba miniatura de diafragma para líquidos de alta presión de 300 mL/min está destinada a circuitos de alta resistencia que una bomba de baja presión convencional puede no superar, como tubos de pequeño diámetro, filtros, varias válvulas en serie, celdas de flujo, agujas y otros componentes que generan una pérdida de presión elevada. La DPL30H tiene un caudal libre de 300 mL/min, una presión nominal de 600 kPa y una altura de autocebado de 3 mH₂O para la transferencia de líquidos en instrumentos que requieren mayor presión de impulsión.",
+              "El caudal libre de 300 mL/min y la presión nominal de 600 kPa no corresponden al mismo punto de funcionamiento. La selección debe basarse en el caudal objetivo, las condiciones de entrada, la contrapresión de salida y la resistencia total del circuito; no debe interpretarse que la bomba mantiene 300 mL/min a 600 kPa.",
+              "Según su función en el equipo, la misma bomba puede denominarse bomba de solución de lavado de alta presión, bomba de transferencia contra alta contrapresión, bomba de enjuague, bomba auxiliar de alimentación o bomba de circulación para circuitos de alta resistencia."
+            ]
+          },
+          "items": [
+            {
+              "title": "1. Bomba de solución de lavado para circuitos de alta resistencia en equipos IVD, bioquímicos y analíticos",
+              "paragraphs": [
+                "En equipos IVD, bioquímicos y otros instrumentos analíticos, la solución de lavado puede atravesar electroválvulas, colectores, filtros, sondas o tuberías internas estrechas antes de llegar al punto de limpieza. Cuando varias restricciones locales se conectan en serie, la presión requerida puede ser claramente superior a la de un circuito abierto de transferencia.",
+                "En este tipo de circuito, la DPL30H puede trabajar como bomba de lavado o enjuague para transportar líquido a través de una trayectoria de alta resistencia. La necesidad de utilizar la plataforma de 600 kPa debe determinarse a partir de la pérdida de presión real al caudal de lavado objetivo, no solo por la denominación lavado IVD."
+              ]
+            },
+            {
+              "title": "2. Transferencia de líquidos por líneas largas y múltiples válvulas en automatización de laboratorio",
+              "paragraphs": [
+                "Los equipos de automatización de laboratorio pueden incorporar depósitos, electroválvulas, colectores de distribución, sensores, filtros y varios módulos fluídicos. Las pérdidas de presión se acumulan cuando la tubería es larga o estrecha, o cuando varias válvulas y conexiones están montadas en serie.",
+                "La DPL30H puede evaluarse en el punto de funcionamiento requerido para circuitos auxiliares de alimentación o lavado que deban vencer esta mayor resistencia del sistema. Los 300 mL/min son una referencia de caudal libre; el caudal instalado sigue dependiendo del diámetro y la longitud del tubo, la pérdida en válvulas, el estado del filtro y la presión de salida."
+              ]
+            },
+            {
+              "title": "3. Alimentación antes de filtros y celdas de flujo en instrumentos analíticos",
+              "paragraphs": [
+                "Algunos instrumentos analíticos deben impulsar líquido a través de filtros, celdas de flujo u otros componentes internos de paso reducido. A medida que aumenta la resistencia del filtro o disminuye el diámetro de la celda y de la tubería de conexión, la bomba debe generar una mayor presión diferencial para mantener el caudal objetivo.",
+                "La DPL30H puede utilizarse en tareas auxiliares no dosificadoras de alimentación, lavado y sustitución de líquido. La pérdida de presión del filtro puede cambiar desde que es nuevo hasta el final de su uso, por lo que la selección debe contemplar el punto de funcionamiento más desfavorable tras la carga del filtro y no solo el estado inicial."
+              ]
+            },
+            {
+              "title": "4. Transferencia presurizada a través de agujas, tubos estrechos y salidas pequeñas",
+              "paragraphs": [
+                "Las agujas, los capilares, los tubos rígidos de pequeño diámetro interior y otras salidas estrechas aumentan la resistencia al flujo. La pérdida de presión varía de forma importante con el caudal, la viscosidad, el diámetro y la longitud efectiva.",
+                "Cuando un instrumento debe lavar, alimentar o sustituir líquido a través de estos componentes de alta resistencia, la DPL30H puede evaluarse según el caudal requerido y la presión calculada o medida. Su capacidad de alta presión sirve para vencer la resistencia del circuito y no convierte el producto en una bomba dosificadora de alta precisión."
+              ]
+            },
+            {
+              "title": "5. Circulación y transferencia auxiliar de líquidos con contrapresión elevada",
+              "paragraphs": [
+                "Algunos circuitos de instrumentos deben transportar solución de lavado, tampón u otro líquido compatible hacia un módulo aguas abajo que ya presenta presión, o hacer circular el líquido periódicamente por un lazo con varias válvulas, sensores y componentes fluídicos.",
+                "En estos sistemas, el punto de funcionamiento depende de la diferencia entre la presión de entrada y de salida, junto con la resistencia total del circuito. Si una bomba de diafragma convencional de 100 kPa está cerca o fuera de su rango útil al caudal objetivo, puede evaluarse la plataforma DPL30H de 600 kPa, pero la selección final debe basarse en una prueba del circuito completo y una curva caudal-presión válida."
+              ]
+            }
+          ],
+          "selectionNote": {
+            "title": "Nota de selección para la aplicación",
+            "variantParagraphs": {
+              "brushed": [
+                "En la DPL30H, 300 mL/min es el caudal libre y 600 kPa es la presión nominal; no son el mismo punto de funcionamiento. Primero debe definirse el caudal objetivo y después calcular la presión diferencial total causada por tubos estrechos, válvulas, filtros, celdas de flujo, agujas, presión de salida y condiciones de entrada, confirmando el punto real con una curva caudal-presión válida.",
+                "La DPL30H está destinada a circuitos de alta resistencia o contrapresión elevada que una bomba de diafragma de baja presión convencional puede no satisfacer. La validación final también debe considerar la compatibilidad del medio, el ciclo de trabajo, las condiciones de entrada, la contrapresión del sistema, la temperatura ambiente y la vida útil requerida del equipo."
+              ],
+              "brushless": [
+                "En la DPL30H, 300 mL/min es el caudal libre y 600 kPa es la presión nominal; no son el mismo punto de funcionamiento. Primero debe definirse el caudal objetivo y después calcular la presión diferencial total causada por tubos estrechos, válvulas, filtros, celdas de flujo, agujas, presión de salida y condiciones de entrada, confirmando el punto real con una curva caudal-presión válida.",
+                "La DPL30H está destinada a circuitos de alta resistencia o contrapresión elevada que una bomba de diafragma de baja presión convencional puede no satisfacer. La validación final también debe considerar la compatibilidad del medio, el ciclo de trabajo, las condiciones de entrada, la contrapresión del sistema, la temperatura ambiente y la vida útil requerida del equipo."
+              ]
+            }
+          },
+          "linkText": "Más información: punto de funcionamiento y selección de la bomba miniatura de diafragma de alta presión DPL30H →"
+        },
+        "fr": {
+          "tabLabel": "Applications",
+          "title": "Applications typiques d’une pompe à membrane miniature haute pression pour liquides de 300 mL/min et 600 kPa",
+          "variantIntros": {
+            "brushed": [
+              "Une pompe à membrane miniature haute pression pour liquides de 300 mL/min est destinée aux circuits à forte résistance qu’une pompe basse pression conventionnelle peut ne pas pouvoir alimenter, notamment les tubes de faible diamètre, filtres, ensembles de vannes, cellules de mesure, aiguilles et autres composants générant une perte de charge importante. La DPL30H présente un débit libre de 300 mL/min, une pression nominale de 600 kPa et une hauteur d’auto-amorçage de 3 mH₂O pour le transfert de liquide dans les instruments nécessitant une pression de refoulement plus élevée.",
+              "Le débit libre de 300 mL/min et la pression nominale de 600 kPa ne correspondent pas au même point de fonctionnement. Le choix doit être fondé sur le débit visé, les conditions d’entrée, la contre-pression de sortie et la résistance totale du circuit ; il ne faut pas en déduire que la pompe maintient 300 mL/min à 600 kPa.",
+              "Selon sa fonction dans l’équipement, la même pompe peut être qualifiée de pompe haute pression pour solution de lavage, pompe de transfert à forte contre-pression, pompe de rinçage, pompe d’alimentation auxiliaire ou pompe de circulation pour circuit à forte résistance."
+            ],
+            "brushless": [
+              "Une pompe à membrane miniature haute pression pour liquides de 300 mL/min est destinée aux circuits à forte résistance qu’une pompe basse pression conventionnelle peut ne pas pouvoir alimenter, notamment les tubes de faible diamètre, filtres, ensembles de vannes, cellules de mesure, aiguilles et autres composants générant une perte de charge importante. La DPL30H présente un débit libre de 300 mL/min, une pression nominale de 600 kPa et une hauteur d’auto-amorçage de 3 mH₂O pour le transfert de liquide dans les instruments nécessitant une pression de refoulement plus élevée.",
+              "Le débit libre de 300 mL/min et la pression nominale de 600 kPa ne correspondent pas au même point de fonctionnement. Le choix doit être fondé sur le débit visé, les conditions d’entrée, la contre-pression de sortie et la résistance totale du circuit ; il ne faut pas en déduire que la pompe maintient 300 mL/min à 600 kPa.",
+              "Selon sa fonction dans l’équipement, la même pompe peut être qualifiée de pompe haute pression pour solution de lavage, pompe de transfert à forte contre-pression, pompe de rinçage, pompe d’alimentation auxiliaire ou pompe de circulation pour circuit à forte résistance."
+            ]
+          },
+          "items": [
+            {
+              "title": "1. Pompe de solution de lavage pour circuits à forte résistance dans les équipements IVD, biochimiques et analytiques",
+              "paragraphs": [
+                "Dans les équipements IVD, biochimiques et autres instruments analytiques, la solution de lavage peut traverser des électrovannes, collecteurs, filtres, sondes ou tubes internes étroits avant d’atteindre le point de nettoyage. Lorsque plusieurs restrictions locales sont montées en série, la pression requise peut être nettement supérieure à celle d’un circuit de transfert ouvert.",
+                "Dans ce type de circuit, la DPL30H peut servir de pompe de lavage ou de rinçage afin d’alimenter une voie de nettoyage à forte résistance. La nécessité d’utiliser la plate-forme 600 kPa doit être déterminée à partir de la perte de charge réelle au débit de lavage visé, et non du seul intitulé lavage IVD."
+              ]
+            },
+            {
+              "title": "2. Transfert de liquide dans des conduites longues et à travers plusieurs vannes en automatisation de laboratoire",
+              "paragraphs": [
+                "Un équipement d’automatisation de laboratoire peut intégrer un réservoir, des électrovannes, des collecteurs de distribution, des capteurs, des filtres et plusieurs modules fluidiques. Les pertes de charge s’additionnent lorsque les tubes sont longs ou étroits, ou lorsque plusieurs vannes et raccords sont montés en série.",
+                "La DPL30H peut être évaluée au point de fonctionnement requis pour les circuits auxiliaires d’alimentation ou de lavage devant vaincre cette résistance accrue. La valeur de 300 mL/min correspond au débit libre ; le débit après installation dépend toujours du diamètre et de la longueur des tubes, des pertes de charge des vannes, de l’état du filtre et de la pression de sortie."
+              ]
+            },
+            {
+              "title": "3. Alimentation en amont de filtres et de cellules de mesure dans les instruments analytiques",
+              "paragraphs": [
+                "Certains instruments analytiques doivent transférer un liquide à travers des filtres, des cellules de mesure ou d’autres composants internes à passage réduit. Lorsque la résistance du filtre augmente ou que le diamètre de la cellule et des tubes de raccordement diminue, la pompe doit générer une pression différentielle plus élevée pour maintenir le débit visé.",
+                "La DPL30H peut assurer des tâches auxiliaires non volumétriques d’alimentation, de lavage et de remplacement du liquide. La perte de charge du filtre peut évoluer entre l’état neuf et la fin d’utilisation ; le dimensionnement doit donc inclure le point de fonctionnement défavorable après chargement du filtre et pas seulement l’état initial."
+              ]
+            },
+            {
+              "title": "4. Transfert sous pression à travers des aiguilles, tubes étroits et petits orifices",
+              "paragraphs": [
+                "Les aiguilles, capillaires, tubes rigides de petit diamètre intérieur et autres petits orifices augmentent la résistance à l’écoulement. La perte de charge varie fortement avec le débit, la viscosité, le diamètre et la longueur effective.",
+                "Lorsqu’un instrument doit effectuer un lavage, une alimentation auxiliaire ou un remplacement de liquide à travers ces composants à forte résistance, la DPL30H peut être évaluée selon le débit requis et la pression calculée ou mesurée. Sa capacité haute pression sert à vaincre la résistance du circuit et ne fait pas de ce produit une pompe doseuse de haute précision."
+              ]
+            },
+            {
+              "title": "5. Circulation et transfert auxiliaire de liquide avec une contre-pression élevée",
+              "paragraphs": [
+                "Certains circuits d’instruments doivent envoyer une solution de lavage, un tampon ou un autre liquide compatible vers un module aval déjà sous pression, ou faire circuler périodiquement le liquide dans une boucle comportant plusieurs vannes, capteurs et composants fluidiques.",
+                "Dans ces systèmes, le point de fonctionnement dépend de la différence entre les pressions d’entrée et de sortie ainsi que de la résistance totale du circuit. Si une pompe à membrane conventionnelle de 100 kPa approche ou dépasse sa plage d’utilisation au débit visé, la plate-forme DPL30H de 600 kPa peut être évaluée, mais le choix final doit reposer sur un essai du circuit complet et une courbe débit-pression valide."
+              ]
+            }
+          ],
+          "selectionNote": {
+            "title": "Note de sélection pour l’application",
+            "variantParagraphs": {
+              "brushed": [
+                "Pour la DPL30H, 300 mL/min correspond au débit libre et 600 kPa à la pression nominale ; ces valeurs ne représentent pas le même point de fonctionnement. Il faut d’abord définir le débit visé, puis calculer la pression différentielle totale créée par les tubes étroits, vannes, filtres, cellules de mesure, aiguilles, pression de sortie et conditions d’entrée, et confirmer le point réel à l’aide d’une courbe débit-pression valide.",
+                "La DPL30H est destinée aux circuits à forte résistance ou à contre-pression élevée qu’une pompe à membrane basse pression conventionnelle peut ne pas pouvoir desservir. La validation finale doit également tenir compte de la compatibilité du fluide, du cycle de fonctionnement, des conditions d’entrée, de la contre-pression du système, de la température ambiante et des exigences de durée de vie de l’équipement."
+              ],
+              "brushless": [
+                "Pour la DPL30H, 300 mL/min correspond au débit libre et 600 kPa à la pression nominale ; ces valeurs ne représentent pas le même point de fonctionnement. Il faut d’abord définir le débit visé, puis calculer la pression différentielle totale créée par les tubes étroits, vannes, filtres, cellules de mesure, aiguilles, pression de sortie et conditions d’entrée, et confirmer le point réel à l’aide d’une courbe débit-pression valide.",
+                "La DPL30H est destinée aux circuits à forte résistance ou à contre-pression élevée qu’une pompe à membrane basse pression conventionnelle peut ne pas pouvoir desservir. La validation finale doit également tenir compte de la compatibilité du fluide, du cycle de fonctionnement, des conditions d’entrée, de la contre-pression du système, de la température ambiante et des exigences de durée de vie de l’équipement."
+              ]
+            }
+          },
+          "linkText": "En savoir plus : point de fonctionnement et sélection de la pompe à membrane miniature haute pression DPL30H →"
+        },
+        "ko": {
+          "tabLabel": "적용 분야",
+          "title": "300 mL/min 600 kPa 고압 소형 액체 다이어프램 펌프의 주요 적용 분야",
+          "variantIntros": {
+            "brushed": [
+              "300 mL/min 고압 소형 액체 다이어프램 펌프는 일반 저압 다이어프램 펌프로 대응하기 어려운 고저항 유로에 사용됩니다. 대표적으로 소구경 튜브, 필터, 다단 밸브, 플로우 셀, 니들 및 큰 압력 강하를 만드는 기타 유로 부품이 포함됩니다. DPL30H의 무부하 유량은 300 mL/min, 정격 압력은 600 kPa, 자흡 높이는 3 mH₂O이며 더 높은 토출 압력이 필요한 장비 내부 액체 이송에 적용할 수 있습니다.",
+              "300 mL/min 무부하 유량과 600 kPa 정격 압력은 동일한 운전점이 아닙니다. 목표 유량, 입구 조건, 출구 배압 및 전체 유로 저항을 기준으로 실제 운전점을 결정해야 하며, 600 kPa에서 300 mL/min을 유지한다는 의미로 해석해서는 안 됩니다.",
+              "장비 유로에서의 실제 역할에 따라 동일한 펌프를 고압 세정액 펌프, 고배압 이송 펌프, 린스 펌프, 보조 공급 펌프 또는 고저항 유로 순환 펌프로 부를 수 있습니다."
+            ],
+            "brushless": [
+              "300 mL/min 고압 소형 액체 다이어프램 펌프는 일반 저압 다이어프램 펌프로 대응하기 어려운 고저항 유로에 사용됩니다. 대표적으로 소구경 튜브, 필터, 다단 밸브, 플로우 셀, 니들 및 큰 압력 강하를 만드는 기타 유로 부품이 포함됩니다. DPL30H의 무부하 유량은 300 mL/min, 정격 압력은 600 kPa, 자흡 높이는 3 mH₂O이며 더 높은 토출 압력이 필요한 장비 내부 액체 이송에 적용할 수 있습니다.",
+              "300 mL/min 무부하 유량과 600 kPa 정격 압력은 동일한 운전점이 아닙니다. 목표 유량, 입구 조건, 출구 배압 및 전체 유로 저항을 기준으로 실제 운전점을 결정해야 하며, 600 kPa에서 300 mL/min을 유지한다는 의미로 해석해서는 안 됩니다.",
+              "장비 유로에서의 실제 역할에 따라 동일한 펌프를 고압 세정액 펌프, 고배압 이송 펌프, 린스 펌프, 보조 공급 펌프 또는 고저항 유로 순환 펌프로 부를 수 있습니다."
+            ]
+          },
+          "items": [
+            {
+              "title": "1. IVD, 생화학 및 분석 장비의 고저항 세정액 펌프",
+              "paragraphs": [
+                "IVD, 생화학 및 기타 분석 장비에서 세정액은 세정 위치에 도달하기 전에 솔레노이드 밸브, 매니폴드, 필터 어셈블리, 프로브 또는 좁은 내부 배관을 통과할 수 있습니다. 여러 국부 저항이 직렬로 연결되면 필요한 압력이 일반적인 개방형 이송 유로보다 크게 높아질 수 있습니다.",
+                "이러한 유로에서 DPL30H는 고저항 세정 경로에 액체를 공급하는 세정액 또는 린스 펌프로 사용할 수 있습니다. 600 kPa 플랫폼이 필요한지는 IVD 세정이라는 용도명만으로 판단하지 말고 목표 세정 유량에서의 실제 압력 강하를 기준으로 판단해야 합니다."
+              ]
+            },
+            {
+              "title": "2. 실험실 자동화 장비의 장거리 배관 및 다중 밸브 액체 이송",
+              "paragraphs": [
+                "실험실 자동화 장비에는 저장 용기, 솔레노이드 밸브, 분배 매니폴드, 센서, 필터 및 여러 유체 모듈이 포함될 수 있습니다. 배관이 길거나 내경이 작고 여러 밸브와 피팅이 직렬로 연결되면 전체 유로의 압력 손실이 누적됩니다.",
+                "이처럼 높은 시스템 저항을 극복해야 하는 보조 공급 또는 세정 유로에는 필요한 운전점을 기준으로 DPL30H를 검토할 수 있습니다. 300 mL/min은 무부하 유량 기준값이며 설치 후 유량은 배관 직경과 길이, 밸브 압력 강하, 필터 상태 및 출구 압력에 따라 달라집니다."
+              ]
+            },
+            {
+              "title": "3. 분석 장비의 필터 및 플로우 셀 전단 액체 공급",
+              "paragraphs": [
+                "일부 분석 장비는 필터, 플로우 셀 또는 유로가 좁은 기타 내부 부품을 통해 액체를 이송해야 합니다. 필터 저항이 증가하거나 플로우 셀과 연결 배관의 내경이 작아지면 목표 유량을 유지하기 위해 펌프가 더 큰 차압을 만들어야 합니다.",
+                "DPL30H는 이러한 유로에서 정밀 계량이 아닌 보조 공급, 세정 및 액체 치환에 사용할 수 있습니다. 필터 압력 강하는 새 필터 상태와 사용 후반에 달라질 수 있으므로 초기 상태만 검증하지 말고 필터 로딩 후의 최악 운전점도 고려해야 합니다."
+              ]
+            },
+            {
+              "title": "4. 니들, 소구경 튜브 및 작은 출구를 통한 가압 액체 이송",
+              "paragraphs": [
+                "니들, 모세관, 소내경 경질 튜브 및 기타 작은 출구는 유동 저항을 증가시키며 압력 강하는 유량, 액체 점도, 내경 및 유효 길이에 따라 크게 변합니다.",
+                "장비가 이러한 고저항 부품을 통해 세정, 보조 공급 또는 액체 치환을 수행해야 하는 경우 필요한 유량과 계산 또는 측정된 압력을 기준으로 DPL30H를 검토할 수 있습니다. 고압 성능은 유로 저항을 극복하기 위한 것이며 이 제품이 고정밀 계량 펌프라는 의미는 아닙니다."
+              ]
+            },
+            {
+              "title": "5. 높은 배압 조건의 액체 순환 및 보조 이송",
+              "paragraphs": [
+                "일부 장비 유로는 세정액, 버퍼 또는 기타 호환 액체를 일정한 압력이 존재하는 하류 모듈로 이송하거나 여러 밸브, 센서 및 유체 부품으로 구성된 루프에서 주기적으로 순환해야 합니다.",
+                "이러한 시스템의 운전점은 입구와 출구의 압력 차이와 전체 유로 저항에 의해 결정됩니다. 일반 100 kPa 다이어프램 펌프가 목표 유량에서 적용 범위에 근접하거나 이를 초과하면 DPL30H 600 kPa 플랫폼을 추가로 검토할 수 있지만, 최종 선정은 완성 유로 시험과 유효한 유량-압력 곡선을 기준으로 해야 합니다."
+              ]
+            }
+          ],
+          "selectionNote": {
+            "title": "적용 선정 참고 사항",
+            "variantParagraphs": {
+              "brushed": [
+                "DPL30H에서 300 mL/min은 무부하 유량이고 600 kPa는 정격 압력이며 동일한 운전점이 아닙니다. 먼저 목표 유량을 정한 뒤 소구경 튜브, 밸브, 필터, 플로우 셀, 니들, 출구 압력 및 입구 조건으로 발생하는 전체 차압을 계산하고 유효한 유량-압력 곡선으로 실제 운전점을 확인해야 합니다.",
+                "DPL30H는 일반 저압 다이어프램 펌프로 대응하기 어려운 고저항 또는 고배압 유로용입니다. 실제 적용에서는 매질 호환성, 운전 주기, 입구 조건, 시스템 배압, 주변 온도 및 장비 수명 요구 사항도 함께 검증해야 합니다."
+              ],
+              "brushless": [
+                "DPL30H에서 300 mL/min은 무부하 유량이고 600 kPa는 정격 압력이며 동일한 운전점이 아닙니다. 먼저 목표 유량을 정한 뒤 소구경 튜브, 밸브, 필터, 플로우 셀, 니들, 출구 압력 및 입구 조건으로 발생하는 전체 차압을 계산하고 유효한 유량-압력 곡선으로 실제 운전점을 확인해야 합니다.",
+                "DPL30H는 일반 저압 다이어프램 펌프로 대응하기 어려운 고저항 또는 고배압 유로용입니다. 실제 적용에서는 매질 호환성, 운전 주기, 입구 조건, 시스템 배압, 주변 온도 및 장비 수명 요구 사항도 함께 검증해야 합니다."
+              ]
+            }
+          },
+          "linkText": "자세히 보기: DPL30H 고압 소형 액체 다이어프램 펌프의 운전점과 선정 →"
+        },
+        "ru": {
+          "tabLabel": "Применение",
+          "title": "Типичные области применения миниатюрного жидкостного мембранного насоса высокого давления 300 mL/min и 600 kPa",
+          "variantIntros": {
+            "brushed": [
+              "Миниатюрный жидкостный мембранный насос высокого давления 300 mL/min предназначен для контуров с высоким гидравлическим сопротивлением, с которыми обычный низконапорный мембранный насос может не справиться. К таким элементам относятся трубки малого диаметра, фильтры, несколько последовательно установленных клапанов, проточные ячейки, иглы и другие компоненты с большой потерей давления. DPL30H имеет расход без нагрузки 300 mL/min, номинальное давление 600 kPa и высоту самовсасывания 3 mH₂O и применяется для подачи жидкости внутри приборов, где требуется более высокое давление нагнетания.",
+              "Расход без нагрузки 300 mL/min и номинальное давление 600 kPa не относятся к одной рабочей точке. Подбор должен учитывать целевой расход, условия на входе, противодавление на выходе и полное сопротивление контура; эти характеристики нельзя понимать как сохранение расхода 300 mL/min при 600 kPa.",
+              "В зависимости от функции в оборудовании один и тот же насос может называться насосом промывочного раствора высокого давления, насосом подачи при высоком противодавлении, промывочным насосом, вспомогательным подающим насосом или циркуляционным насосом для контура с высоким сопротивлением."
+            ],
+            "brushless": [
+              "Миниатюрный жидкостный мембранный насос высокого давления 300 mL/min предназначен для контуров с высоким гидравлическим сопротивлением, с которыми обычный низконапорный мембранный насос может не справиться. К таким элементам относятся трубки малого диаметра, фильтры, несколько последовательно установленных клапанов, проточные ячейки, иглы и другие компоненты с большой потерей давления. DPL30H имеет расход без нагрузки 300 mL/min, номинальное давление 600 kPa и высоту самовсасывания 3 mH₂O и применяется для подачи жидкости внутри приборов, где требуется более высокое давление нагнетания.",
+              "Расход без нагрузки 300 mL/min и номинальное давление 600 kPa не относятся к одной рабочей точке. Подбор должен учитывать целевой расход, условия на входе, противодавление на выходе и полное сопротивление контура; эти характеристики нельзя понимать как сохранение расхода 300 mL/min при 600 kPa.",
+              "В зависимости от функции в оборудовании один и тот же насос может называться насосом промывочного раствора высокого давления, насосом подачи при высоком противодавлении, промывочным насосом, вспомогательным подающим насосом или циркуляционным насосом для контура с высоким сопротивлением."
+            ]
+          },
+          "items": [
+            {
+              "title": "1. Насос промывочного раствора для контуров с высоким сопротивлением в IVD, биохимических и аналитических приборах",
+              "paragraphs": [
+                "В IVD, биохимических и других аналитических приборах промывочный раствор может проходить через электромагнитные клапаны, коллекторы, фильтрующие узлы, зонды или узкие внутренние трубки до точки очистки. При последовательном соединении нескольких местных сопротивлений требуемое давление может быть значительно выше, чем в открытом контуре подачи.",
+                "В таком контуре DPL30H может работать как насос промывочного или ополаскивающего раствора для подачи через канал с высоким сопротивлением. Необходимость платформы 600 kPa следует определять по фактической потере давления при целевом расходе промывки, а не только по названию процесса IVD-промывка."
+              ]
+            },
+            {
+              "title": "2. Подача жидкости по длинным линиям и через несколько клапанов в лабораторной автоматизации",
+              "paragraphs": [
+                "Оборудование лабораторной автоматизации может включать резервуар, электромагнитные клапаны, распределительные коллекторы, датчики, фильтры и несколько жидкостных модулей. Потери давления накапливаются при большой длине или малом диаметре трубок, а также при последовательном соединении нескольких клапанов и фитингов.",
+                "DPL30H можно оценивать по требуемой рабочей точке для вспомогательных контуров подачи или промывки, которым необходимо преодолеть повышенное сопротивление системы. Значение 300 mL/min относится к расходу без нагрузки; расход после установки зависит от диаметра и длины трубок, потерь на клапанах, состояния фильтра и давления на выходе."
+              ]
+            },
+            {
+              "title": "3. Подача перед фильтрами и проточными ячейками в аналитических приборах",
+              "paragraphs": [
+                "В некоторых аналитических приборах жидкость необходимо подавать через фильтры, проточные ячейки или другие внутренние компоненты с узкими каналами. По мере роста сопротивления фильтра или уменьшения проходного сечения ячейки и соединительных трубок насос должен создавать больший перепад давления для поддержания целевого расхода.",
+                "DPL30H можно применять для вспомогательной подачи, промывки и замещения жидкости без функции точного дозирования. Потеря давления на фильтре меняется от нового элемента до конца срока его использования, поэтому при подборе следует учитывать наиболее неблагоприятную рабочую точку после загрязнения фильтра, а не только исходное состояние."
+              ]
+            },
+            {
+              "title": "4. Подача под давлением через иглы, узкие трубки и малые выходные отверстия",
+              "paragraphs": [
+                "Иглы, капилляры, жесткие трубки малого внутреннего диаметра и другие малые выходные отверстия увеличивают сопротивление потоку. Потеря давления существенно зависит от расхода, вязкости жидкости, диаметра и эффективной длины.",
+                "Если прибор должен выполнять промывку, вспомогательную подачу или замещение жидкости через такие элементы с высоким сопротивлением, DPL30H можно оценить по требуемому расходу и расчетной или измеренной потребности в давлении. Высокое давление используется для преодоления сопротивления контура и не делает этот насос высокоточным дозирующим устройством."
+              ]
+            },
+            {
+              "title": "5. Циркуляция и вспомогательная подача жидкости при повышенном противодавлении",
+              "paragraphs": [
+                "Некоторые приборные контуры должны подавать промывочный раствор, буфер или другую совместимую жидкость в находящийся под давлением последующий модуль либо периодически циркулировать жидкость по контуру с несколькими клапанами, датчиками и жидкостными компонентами.",
+                "В таких системах рабочая точка определяется разностью давления на входе и выходе вместе с полным сопротивлением контура. Если обычный мембранный насос 100 kPa при целевом расходе приближается к границе применимости или выходит за нее, можно оценить платформу DPL30H 600 kPa, однако окончательный выбор должен опираться на испытание полного контура и действующую кривую расход-давление."
+              ]
+            }
+          ],
+          "selectionNote": {
+            "title": "Примечание по подбору для применения",
+            "variantParagraphs": {
+              "brushed": [
+                "Для DPL30H значение 300 mL/min является расходом без нагрузки, а 600 kPa — номинальным давлением; это не одна рабочая точка. Сначала определите целевой расход, затем рассчитайте суммарный перепад давления, создаваемый узкими трубками, клапанами, фильтрами, проточными ячейками, иглами, давлением на выходе и условиями на входе, и подтвердите фактическую рабочую точку по действующей кривой расход-давление.",
+                "DPL30H предназначен для контуров с высоким сопротивлением или повышенным противодавлением, где обычный низконапорный мембранный насос может быть недостаточен. При окончательной проверке также следует учитывать совместимость среды, рабочий цикл, условия на входе, противодавление системы, температуру окружающей среды и требования к сроку службы оборудования."
+              ],
+              "brushless": [
+                "Для DPL30H значение 300 mL/min является расходом без нагрузки, а 600 kPa — номинальным давлением; это не одна рабочая точка. Сначала определите целевой расход, затем рассчитайте суммарный перепад давления, создаваемый узкими трубками, клапанами, фильтрами, проточными ячейками, иглами, давлением на выходе и условиями на входе, и подтвердите фактическую рабочую точку по действующей кривой расход-давление.",
+                "DPL30H предназначен для контуров с высоким сопротивлением или повышенным противодавлением, где обычный низконапорный мембранный насос может быть недостаточен. При окончательной проверке также следует учитывать совместимость среды, рабочий цикл, условия на входе, противодавление системы, температуру окружающей среды и требования к сроку службы оборудования."
+              ]
+            }
+          },
+          "linkText": "Подробнее: рабочая точка и подбор миниатюрного жидкостного мембранного насоса высокого давления DPL30H →"
+        }
+      }
+    },
     "dpgl800": {
       "articleSlug": "dpgl800-gas-liquid-diaphragm-pump-selection-guide",
       "locales": {

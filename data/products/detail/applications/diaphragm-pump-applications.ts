@@ -12,7 +12,7 @@ import { getDiaphragmPumpMotorComparison } from "./diaphragm-pump-motor-comparis
 type ApplicationLocale = SelectionLocale;
 type InternationalApplicationLocale = Exclude<ApplicationLocale, "zh">;
 type LiquidVariant = "brushed" | "brushless";
-type LiquidSeriesKey = "dpl30" | "dpl60";
+type LiquidSeriesKey = "dpl30" | "dpl60" | "dpl30h";
 type ApplicationSeriesKey = LiquidSeriesKey | "dpgl800";
 
 type SharedLocaleContent = {
@@ -49,6 +49,10 @@ type ApplicationDataFile = {
       articleSlug: string;
       locales: Record<InternationalApplicationLocale, LiquidLocaleContent>;
     };
+    dpl30h: {
+      articleSlug: string;
+      locales: Record<InternationalApplicationLocale, LiquidLocaleContent>;
+    };
     dpgl800: {
       articleSlug: string;
       locales: Record<InternationalApplicationLocale, GasLiquidLocaleContent>;
@@ -69,6 +73,8 @@ const PRODUCT_APPLICATION_SOURCES: Partial<
   "dpl30-brushless": { series: "dpl30", variant: "brushless" },
   "dpl60-brushed": { series: "dpl60", variant: "brushed" },
   "dpl60-brushless": { series: "dpl60", variant: "brushless" },
+  "dpl30h-brushed": { series: "dpl30h", variant: "brushed" },
+  "dpl30h-brushless": { series: "dpl30h", variant: "brushless" },
   "dpgl800-brushless": { series: "dpgl800" },
 };
 
@@ -81,8 +87,8 @@ function buildArticleHref(locale: ApplicationLocale, articleSlug: string) {
 /**
  * 返回已按语言和具体电机版本整理好的 Applications 内容。
  *
- * 只有明确登记的详情页型号才会得到内容；系列页和 DPL30H 返回
- * undefined。通用详情组件不含任何隔膜泵判断。
+ * 只有明确登记的详情页型号才会得到内容；系列页返回 undefined。
+ * 通用详情组件不含任何隔膜泵判断。
  */
 export function getDiaphragmPumpApplicationDetails(
   copyKey: DiaphragmPumpReferenceCopyKey | null | undefined,
@@ -155,5 +161,6 @@ export const DIAPHRAGM_PUMP_APPLICATION_LOCALES = [
 export const DIAPHRAGM_PUMP_APPLICATION_SERIES = [
   "dpl30",
   "dpl60",
+  "dpl30h",
   "dpgl800",
 ] as const satisfies readonly ApplicationSeriesKey[];
