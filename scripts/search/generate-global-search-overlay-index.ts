@@ -15,6 +15,7 @@ import { getVisibleNavigationItems } from "../../data/navigation";
 import { getInternationalUiText } from "../../lib/international-ui";
 import type { LocaleCode } from "../../lib/i18n";
 import { getTechnicalArticlesPageData } from "../../services/resources/technical-articles/getTechnicalArticlesPageData";
+import { getTechnicalArticleCategoryPath } from "../../data/resources/technical-articles/technical-article-taxonomy";
 import { getNewsPageData } from "../../services/resources/news/getNewsPageData";
 import { getMaterialCompatibilityPageData } from "../../services/resources/material-compatibility/getMaterialCompatibilityPageData";
 import { getAnalyticalInstrumentsApplicationPageData } from "../../services/applications/analytical-instruments/getAnalyticalInstrumentsApplicationPageData";
@@ -600,10 +601,8 @@ async function loadTechnicalArticles(
     const title = text(article.title);
     if (!slug || !title) return [];
 
-    const subtitle = compactStrings([
-      article.category,
-      article.date,
-    ]).join(" · ");
+    const categoryPath = getTechnicalArticleCategoryPath(locale, article);
+    const subtitle = compactStrings([categoryPath, article.date]).join(" · ");
     const description = shorten(article.summary, 145) || copy.description;
     const image = cleanImage(article.coverImage);
     const sectionTitles = collectValuesByKeys(
@@ -614,7 +613,11 @@ async function loadTechnicalArticles(
     const keywords = buildSearchText([
       sectionTitles,
       article.relationKeys,
-      article.category,
+      article.tags,
+      article.relatedProducts,
+      categoryPath,
+      article.primaryCategory,
+      article.secondaryCategory,
       slug,
       copy.title,
     ]);

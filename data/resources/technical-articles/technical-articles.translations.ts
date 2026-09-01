@@ -1,6 +1,6 @@
 import type {
   TechnicalArticleLocale,
-  TechnicalArticlesPageData,
+  TechnicalArticlesSourcePageData,
 } from "./technical-articles.types";
 
 type ForeignLocale = Exclude<TechnicalArticleLocale, "zh-CN" | "en">;
@@ -13,7 +13,6 @@ const pageTranslations: Record<ForeignLocale, {
   resources: string;
   current: string;
   search: string;
-  categories: readonly [string, string, string, string, string];
   sectionTitle: string;
   bannerTitle: string;
   bannerDescription: string;
@@ -23,7 +22,6 @@ const pageTranslations: Record<ForeignLocale, {
     heroTitle: "Artículos técnicos",
     heroDescription: "Explore conocimientos técnicos de FOREACH sobre selección de productos, compatibilidad de materiales, conexiones de tubos, métodos de sellado y aplicaciones de sistemas microfluídicos.",
     home: "Inicio", resources: "Recursos", current: "Artículos técnicos", search: "Buscar artículos",
-    categories: ["Todos", "Racores y tubos", "Bombas y válvulas", "Materiales y compatibilidad", "Aplicaciones"],
     sectionTitle: "Artículos técnicos", bannerTitle: "¿Necesita asistencia técnica para seleccionar productos?",
     bannerDescription: "Comparta con FOREACH el fluido, el rango de presión, el tamaño del tubo, las condiciones de aplicación o los planos para confirmar el producto adecuado.", contact: "Contactar",
   },
@@ -31,7 +29,6 @@ const pageTranslations: Record<ForeignLocale, {
     heroTitle: "Articles techniques",
     heroDescription: "Découvrez l’expertise FOREACH sur la sélection des produits, la compatibilité des matériaux, les raccordements de tubes, l’étanchéité et les applications microfluidiques.",
     home: "Accueil", resources: "Ressources", current: "Articles techniques", search: "Rechercher des articles",
-    categories: ["Tous", "Raccords et tubes", "Pompes et vannes", "Matériaux et compatibilité", "Applications"],
     sectionTitle: "Articles techniques", bannerTitle: "Besoin d’une assistance technique pour votre sélection ?",
     bannerDescription: "Communiquez à FOREACH le fluide, la plage de pression, la taille du tube, les conditions d’application ou les plans afin de confirmer le produit adapté.", contact: "Nous contacter",
   },
@@ -39,7 +36,6 @@ const pageTranslations: Record<ForeignLocale, {
     heroTitle: "기술 자료",
     heroDescription: "제품 선정, 재질 호환성, 튜브 연결, 밀봉 방식 및 미세유체 시스템 적용에 관한 FOREACH의 기술 정보를 확인하세요.",
     home: "홈", resources: "자료", current: "기술 자료", search: "자료 검색",
-    categories: ["전체", "피팅 및 튜브", "펌프 및 밸브", "재질 및 호환성", "적용 분야"],
     sectionTitle: "기술 자료", bannerTitle: "제품 선정에 기술 지원이 필요하신가요?",
     bannerDescription: "유체, 압력 범위, 튜브 크기, 적용 조건 또는 도면을 FOREACH에 보내 주시면 제품 매칭과 기술 확인을 지원합니다.", contact: "문의하기",
   },
@@ -47,7 +43,6 @@ const pageTranslations: Record<ForeignLocale, {
     heroTitle: "Технические статьи",
     heroDescription: "Материалы FOREACH по подбору продукции, совместимости материалов, трубным соединениям, герметизации и применению микрофлюидных систем.",
     home: "Главная", resources: "Ресурсы", current: "Технические статьи", search: "Поиск статей",
-    categories: ["Все", "Фитинги и трубки", "Насосы и клапаны", "Материалы и совместимость", "Применение"],
     sectionTitle: "Технические статьи", bannerTitle: "Нужна техническая помощь при подборе?",
     bannerDescription: "Сообщите FOREACH рабочую среду, диапазон давления, размер трубки, условия применения или приложите чертежи для подбора и технического подтверждения.", contact: "Связаться",
   },
@@ -146,8 +141,8 @@ const articleTranslations: Record<ForeignLocale, readonly ArticleTranslation[]> 
 
 export function localizeTechnicalArticles(
   locale: ForeignLocale,
-  base: TechnicalArticlesPageData,
-): TechnicalArticlesPageData {
+  base: TechnicalArticlesSourcePageData,
+): TechnicalArticlesSourcePageData {
   const copy = pageTranslations[locale];
   const translations = articleTranslations[locale];
 
@@ -161,7 +156,6 @@ export function localizeTechnicalArticles(
       { label: copy.current },
     ],
     search: { placeholder: copy.search },
-    categories: base.categories.map((category, index) => ({ ...category, label: copy.categories[index] ?? category.label })),
     sectionTitle: copy.sectionTitle,
     articles: base.articles.map((article, index) => {
       const translation = translations[index];

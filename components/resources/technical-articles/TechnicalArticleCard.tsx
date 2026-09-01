@@ -7,11 +7,9 @@ import "@/app/resources/technical-articles/technical-articles.css";
 
 type TechnicalArticleCardProps = {
   article: TechnicalArticleItem;
-  categoryLabel: string;
   tags?: string[];
   href: string;
   locale: string;
-  categoryText?: string;
   detailText?: string;
   tagsText?: string;
   showSummary?: boolean;
@@ -29,11 +27,9 @@ function isChinesePage(locale: string) {
 
 export default function TechnicalArticleCard({
   article,
-  categoryLabel,
   tags = [],
   href,
   locale,
-  categoryText,
   detailText,
   tagsText,
   showSummary = false,
@@ -88,13 +84,6 @@ export default function TechnicalArticleCard({
       <div className="technicalArticleCard__body">
         <h3 className="technicalArticleCard__title">{article.title}</h3>
 
-        <div className="technicalArticleCard__meta">
-          <span>
-            {categoryText ?? (isChinesePage(locale) ? "分类：" : "Category:")}
-          </span>
-          <strong>{categoryLabel}</strong>
-        </div>
-
         {showSummary && article.summary ? (
           <p className="technicalArticleCard__summary">{article.summary}</p>
         ) : null}
@@ -107,7 +96,9 @@ export default function TechnicalArticleCard({
 
         {showTags && tags.length > 0 ? (
           <div className="technicalArticleCard__tags">
-            <span>{tagsText ?? (isChinesePage(locale) ? "标签：" : "Tags:")}</span>
+            <span className="technicalArticleCard__tagsLabel">
+              {tagsText ?? (isChinesePage(locale) ? "标签：" : "Tags:")}
+            </span>
             <div className="technicalArticleCard__tagList">
               {tags.map((tag) => (
                 <span key={tag} className="technicalArticleCard__tag">

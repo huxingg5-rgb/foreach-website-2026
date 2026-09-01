@@ -159,7 +159,7 @@ export type MegaDropdown = {
 export type NavigationItem = {
   key: NavigationKey; // 一级导航 key
   label: LocalizedText; // 一级导航显示名称
-  href: LocalizedHref; // 一级导航链接
+  href?: LocalizedHref; // 一级导航链接；纯下拉父级可以不设置
   order: number; // 排序
   enabled: boolean; // 是否启用
   dropdownType: DropdownType; // 是否有下拉
@@ -1766,16 +1766,7 @@ const navigationItems: NavigationItem[] = [
       "Ресурсы"
     ),
 
-    /*
-       资源中心一级入口
-
-       说明：
-       1. 当前资源中心首页如果还没完全做好，可以先指向规格书下载页
-       2. 这样点击「资源中心」本身不会进入空页面或 404
-       3. 后续资源中心首页 app/resources/page.tsx 完整做好后，
-          可以改成 localizedPath("/resources")
-    */
-    href: localizedPath("/resources/datasheets"),
+    // 资源中心只作为下拉父级，不对应页面，也不设置 href。
 
     order: 4,
     enabled: true,

@@ -4511,5 +4511,13 @@ export function localizeProductDetailData<T extends DetailRecord>(data: T): T {
       }
       /* FOREACH_EXPLICIT_EN_FIELDS_END */
 
+      /*
+       * Applications 长文由服务端按当前语言注入，已经是最终审核文案。
+       * 不进入通用逐词翻译，避免技术语义和段落结构被二次改写。
+       */
+      if (data.applicationDetails !== undefined) {
+        localized.applicationDetails = data.applicationDetails;
+      }
+
       return localized as T;
 }

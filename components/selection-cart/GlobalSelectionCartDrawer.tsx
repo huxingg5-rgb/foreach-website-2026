@@ -40,6 +40,7 @@ import CompanyInfoRequestModal, {
   type CompanyInfoRequestItem,
 } from "@/components/forms/company-info-request/CompanyInfoRequestModal";
 import { getDrawingRequestCopy } from "@/components/forms/company-info-request/copy";
+import { getLocalizedFilterOptionLabel } from "@/components/products/selection/filter-option-i18n";
 import { getLocaleFromPathname, isInternationalLocale, type LocaleCode } from "@/lib/i18n";
 import { getInternationalUiText } from "@/lib/international-ui";
 import { trackBeginInquiry } from "@/lib/analytics/track-event";
@@ -112,6 +113,16 @@ function getCartDetailHref(
   return `/${locale}${unprefixedHref}`;
 }
 
+function getLocalizedCartProductName(
+  productName: string,
+  sourceType: string,
+  locale: LocaleCode,
+) {
+  if (sourceType !== "pump-selection") return productName;
+
+  return getLocalizedFilterOptionLabel(productName, locale);
+}
+
 export default function GlobalSelectionCartDrawer() {
   const pathname = usePathname();
   const locale = getLocaleFromPathname(pathname);
@@ -178,13 +189,19 @@ export default function GlobalSelectionCartDrawer() {
   ========================================================= */
   const drawingRequestModalItems = useMemo<CompanyInfoRequestItem[]>(() => {
     return requestDrawingItems.map((item) => {
+      const localizedProductName = getLocalizedCartProductName(
+        item.productName,
+        item.sourceType,
+        locale,
+      );
+
       return {
         id: item.id,
         title: item.foreachModel,
         metaLines:
           item.sourceType === "pump-selection"
             ? [
-                `${isEnglish ? t("Product Type") : "产品类型"}: ${item.productName}`,
+                `${isEnglish ? t("Product Type") : "产品类型"}: ${localizedProductName}`,
                 `${isEnglish ? t("Product Model") : "产品型号"}: ${item.foreachModel}`,
                 `${isEnglish ? t("Quantity") : "数量"}: ${item.quantity}`,
               ]
@@ -345,10 +362,16 @@ export default function GlobalSelectionCartDrawer() {
 
     const requestedDrawingLines = requestDrawingItems.map(
       (item, index) => {
+        const localizedProductName = getLocalizedCartProductName(
+          item.productName,
+          item.sourceType,
+          locale,
+        );
+
         if (item.sourceType === "pump-selection") {
           return [
             `${index + 1}. ${item.foreachModel}`,
-            `Product Type: ${item.productName}`,
+            `Product Type: ${localizedProductName}`,
             `Product Model: ${item.foreachModel}`,
             `Quantity: ${item.quantity}`,
           ].join("\n");
@@ -356,7 +379,7 @@ export default function GlobalSelectionCartDrawer() {
 
         return [
           `${index + 1}. ${item.foreachModel}`,
-          `Product: ${item.productName}`,
+          `Product: ${localizedProductName}`,
           `Product Code: ${item.productCode}`,
           `Compatible Models: ${
             item.competitorModels.join(" / ") || "-"
@@ -368,7 +391,13 @@ export default function GlobalSelectionCartDrawer() {
 
     const productTypeText = Array.from(
       new Set(
-        requestDrawingItems.map((item) => item.productName),
+        requestDrawingItems.map((item) =>
+          getLocalizedCartProductName(
+            item.productName,
+            item.sourceType,
+            locale,
+          ),
+        ),
       ),
     ).join(" / ");
 
@@ -499,7 +528,11 @@ export default function GlobalSelectionCartDrawer() {
                       </td>
                       <td>
                         {item.sourceType === "pump-selection"
-                          ? item.productName
+                          ? getLocalizedCartProductName(
+                              item.productName,
+                              item.sourceType,
+                              locale,
+                            )
                           : item.productCode}
                       </td>
                       <td>
@@ -629,6 +662,12 @@ export default function GlobalSelectionCartDrawer() {
 
                   <div className={styles.list}>
                     {items.map((item) => {
+                      const localizedProductName = getLocalizedCartProductName(
+                        item.productName,
+                        item.sourceType,
+                        locale,
+                      );
+
                       return (
                         <article className={styles.item} key={item.id}>
                           <button
@@ -685,7 +724,7 @@ export default function GlobalSelectionCartDrawer() {
                           {item.sourceType === "pump-selection" ? (
                             <div className={styles.infoRow}>
                               <span>{isEnglish ? t("Product Type") : "产品类型"}</span>
-                              <strong>{item.productName}</strong>
+                              <strong>{localizedProductName}</strong>
                             </div>
                           ) : (
                             <>

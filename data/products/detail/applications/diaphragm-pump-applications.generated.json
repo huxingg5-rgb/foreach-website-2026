@@ -1,0 +1,860 @@
+{
+  "version": 1,
+  "series": {
+    "dpl30": {
+      "articleSlug": "dpl30-liquid-diaphragm-pump-selection-guide",
+      "locales": {
+        "en": {
+          "tabLabel": "Applications",
+          "title": "Typical Applications for a 300 mL/min Miniature Liquid Diaphragm Pump",
+          "variantIntros": {
+            "brushed": [
+              "A 300 mL/min miniature liquid diaphragm pump is commonly used for fluid withdrawal, drainage, washing, return flow and auxiliary refill functions inside compact instruments. The brushed version provides the same 300 mL/min flow class, 100 kPa pressure rating and 6 mH₂O self-priming specification as the brushless version, with a specified service life of 3,000 h. It is suited to equipment where the required duty cycle and service-life target fit the brushed-motor configuration.",
+              "The same pump technology may be described by its actual function in different systems, such as a waste liquid pump, wash solution pump, waste ink pump, ink return pump or small refill pump."
+            ],
+            "brushless": [
+              "A 300 mL/min miniature liquid diaphragm pump is commonly used for fluid withdrawal, drainage, washing, return flow and auxiliary refill functions inside compact instruments. The brushless version combines the 300 mL/min flow class, 100 kPa pressure rating and 6 mH₂O self-priming specification with a specified service life of 10,000 h, making it more suitable when a longer equipment operating life or maintenance interval is required.",
+              "The same pump technology may be described by its actual function in different systems, such as a waste liquid pump, wash solution pump, waste ink pump, ink return pump or small refill pump."
+            ]
+          },
+          "items": [
+            {
+              "title": "1. Waste Liquid Pump for IVD, Clinical Chemistry and Hematology Analyzers",
+              "paragraphs": [
+                "In IVD, clinical chemistry and hematology analyzers, reaction waste, wash solution and residual sample fluid must be transferred from reaction vessels, probes or waste manifolds to a waste container. At this point in the fluid path, the pump is primarily a waste liquid pump rather than a metering pump.",
+                "Waste lines may contain both air and liquid, so the pump must be able to re-establish suction after standby, air entry or bottle replacement. A self-priming diaphragm pump is well suited to this duty. A 300 mL/min flow class can support periodic drainage in compact analyzers, while actual discharge rate still depends on suction height, tubing ID, valves and total system resistance."
+              ]
+            },
+            {
+              "title": "2. Wash Solution Pump for Laboratory Automation",
+              "paragraphs": [
+                "In automated liquid handling, sample preparation and laboratory analyzers, wash solution is transferred from a reservoir to probes, reaction vessels, flow cells or internal tubing to remove sample and reagent residues. This fluid path is focused on supplying, flushing and replacing liquid rather than high-accuracy volumetric dosing.",
+                "A micro liquid pump can supply wash solution, flush tubing and prime the fluid path after startup or bottle replacement. The 300 mL/min flow class provides a practical balance between washing speed and compact installation, while self-priming helps the system recover when the inlet line is not completely filled with liquid."
+              ]
+            },
+            {
+              "title": "3. Waste Liquid and Rinse Pump for Water and Environmental Analyzers",
+              "paragraphs": [
+                "Online water-quality, environmental and chemical analyzers often contain separate paths for sample, reagent, rinse solution and waste liquid. High-accuracy reagent dosing is normally handled by a metering pump, while waste removal, internal rinsing and general fluid transfer can be handled by a diaphragm liquid pump.",
+                "In a drainage path it functions as a waste liquid pump; in an internal cleaning path it functions as a rinse or wash solution pump. Acids, alkalis, oxidizing liquids and special reagents require compatibility checks based on concentration, temperature and contact time with the pump head, diaphragm and valves."
+              ]
+            },
+            {
+              "title": "4. Waste Ink and Ink Return Pump for Inkjet Printers",
+              "paragraphs": [
+                "Auxiliary ink circuits in inkjet printers may need to remove waste ink after printhead cleaning, recover excess ink or maintain return flow between the printhead and ink reservoir. A pump used to discharge cleaning residue is commonly described as a waste ink pump, while a pump returning excess ink to the reservoir may be used as an ink return or recirculation pump.",
+                "Diaphragm pumping is suitable for auxiliary ink paths where air and liquid may alternate, but ink and cleaning-fluid chemistries vary widely. Wetted-material compatibility, flow stability and service life must be validated before use. This application refers to auxiliary waste and return paths, not high-pressure printhead ink delivery."
+              ]
+            },
+            {
+              "title": "5. Automatic Refill Pump for Compact Equipment",
+              "paragraphs": [
+                "Compact instruments may use a small auxiliary pump to replenish wash liquid, coolant or another service fluid from a lower reservoir when the local tank level falls. Working with a level sensor or controller, a self-priming liquid pump can draw fluid from the reservoir and restore the required level without manual priming.",
+                "The 6 mH₂O self-priming specification is useful when the reservoir is below the pump, but actual refill performance still depends on fluid viscosity, suction-line length, filter resistance, discharge pressure and wetted-material compatibility."
+              ]
+            }
+          ],
+          "selectionNote": {
+            "title": "Application Selection Note",
+            "variantParagraphs": {
+              "brushed": [
+                "300 mL/min is a flow value measured under specified test conditions and is not a fixed output in every installed system. Suction height, tubing diameter and length, filters, solenoid valves, fittings and discharge back pressure all change system resistance and therefore the actual operating point. For the brushed version, also confirm that the equipment duty cycle and required service-life target are compatible with the specified 3,000 h motor-life condition."
+              ],
+              "brushless": [
+                "300 mL/min is a flow value measured under specified test conditions and is not a fixed output in every installed system. Suction height, tubing diameter and length, filters, solenoid valves, fittings and discharge back pressure all change system resistance and therefore the actual operating point. For the brushless version, the specified 10,000 h life can support longer equipment-life targets, but the final duty cycle, load, temperature and installed fluid path still require validation."
+              ]
+            }
+          },
+          "linkText": "Learn more: Operating point and selection of a 300 mL/min diaphragm pump →"
+        },
+        "es": {
+          "tabLabel": "Aplicaciones",
+          "title": "Aplicaciones típicas de una bomba de diafragma para líquidos de 300 mL/min",
+          "variantIntros": {
+            "brushed": [
+              "Una bomba de diafragma para líquidos de 300 mL/min se utiliza habitualmente en instrumentos compactos para aspiración, evacuación, lavado, retorno de fluido y reposición auxiliar. La versión con motor con escobillas mantiene la misma clase de caudal de 300 mL/min, presión nominal de 100 kPa y autocebado de 6 mH₂O que la versión sin escobillas, con una vida útil especificada de 3.000 h. Es adecuada cuando el ciclo de trabajo y el objetivo de vida útil del equipo se ajustan a esta configuración de motor.",
+              "Según la función que desempeñe dentro del circuito, puede denominarse bomba para líquidos residuales, bomba de solución de lavado, bomba de tinta residual, bomba de retorno de tinta o bomba auxiliar de reposición."
+            ],
+            "brushless": [
+              "Una bomba de diafragma para líquidos de 300 mL/min se utiliza habitualmente en instrumentos compactos para aspiración, evacuación, lavado, retorno de fluido y reposición auxiliar. La versión sin escobillas combina la clase de caudal de 300 mL/min, presión nominal de 100 kPa y autocebado de 6 mH₂O con una vida útil especificada de 10.000 h, por lo que resulta más adecuada cuando se requiere una vida de equipo o un intervalo de mantenimiento más prolongados.",
+              "Según la función que desempeñe dentro del circuito, puede denominarse bomba para líquidos residuales, bomba de solución de lavado, bomba de tinta residual, bomba de retorno de tinta o bomba auxiliar de reposición."
+            ]
+          },
+          "items": [
+            {
+              "title": "1. Bomba para líquidos residuales en analizadores IVD, bioquímicos y hematológicos",
+              "paragraphs": [
+                "En analizadores IVD, bioquímicos y hematológicos, las muestras residuales, las soluciones de lavado y otros líquidos de desecho deben evacuarse desde cubetas de reacción, sondas o colectores hacia el recipiente de residuos. En este punto del circuito, la bomba trabaja principalmente como bomba para líquidos residuales y no como bomba dosificadora.",
+                "La tubería de residuos puede contener aire y líquido al mismo tiempo, por lo que es importante recuperar la aspiración después de una parada, la entrada de aire o el cambio del depósito. Una bomba de diafragma autocebante resulta adecuada para esta función. La clase de 300 mL/min puede cubrir descargas periódicas en analizadores compactos, aunque el caudal real depende de la altura de aspiración, el diámetro interior del tubo, las válvulas y la resistencia del circuito."
+              ]
+            },
+            {
+              "title": "2. Bomba de solución de lavado para automatización de laboratorio",
+              "paragraphs": [
+                "En sistemas de manipulación automática de líquidos, preparación de muestras y analizadores de laboratorio, la solución de lavado se transporta desde el depósito hasta sondas, cubetas, celdas de flujo o tuberías internas para eliminar restos de muestra y reactivos. En este circuito importa más el suministro, el enjuague y la renovación del líquido que la dosificación volumétrica de alta precisión.",
+                "Una microbomba de líquidos puede suministrar solución de lavado, enjuagar tuberías y cebar el circuito tras el arranque o el cambio del depósito. El caudal de 300 mL/min ofrece un equilibrio útil entre rapidez de lavado y tamaño compacto, mientras que el autocebado facilita recuperar el circuito cuando la línea de aspiración no está completamente llena."
+              ]
+            },
+            {
+              "title": "3. Bomba para líquidos residuales y bomba de enjuague en analizadores de agua y medio ambiente",
+              "paragraphs": [
+                "Los analizadores en línea de calidad del agua, control ambiental y análisis químico suelen disponer de circuitos separados para muestra, reactivos, solución de enjuague y residuos. La dosificación precisa de reactivos suele corresponder a una bomba dosificadora, mientras que la evacuación de residuos, el lavado interno y el trasvase general de líquidos pueden realizarse con una bomba de diafragma para líquidos.",
+                "En la línea de descarga funciona como bomba para líquidos residuales; en la línea de limpieza, como bomba de enjuague o de solución de lavado. Para ácidos, álcalis, líquidos oxidantes o reactivos especiales, la compatibilidad debe verificarse considerando concentración, temperatura y tiempo de contacto con el cabezal, el diafragma y las válvulas."
+              ]
+            },
+            {
+              "title": "4. Bomba de tinta residual y bomba de retorno de tinta en impresión inkjet",
+              "paragraphs": [
+                "Los circuitos auxiliares de una impresora inkjet pueden evacuar tinta residual después de la limpieza del cabezal, recuperar tinta sobrante o mantener un retorno hacia el depósito. La bomba que evacua tinta y líquido de limpieza suele denominarse bomba de tinta residual; la que devuelve tinta al depósito puede actuar como bomba de retorno o de recirculación de tinta.",
+                "El principio de diafragma es adecuado para circuitos auxiliares donde pueden alternarse aire y líquido, pero la formulación de tintas y líquidos de limpieza varía considerablemente. Antes de utilizarla deben verificarse la compatibilidad de materiales, la estabilidad del caudal y la vida útil. Esta aplicación se refiere al circuito auxiliar de residuos o retorno, no a la alimentación de tinta a alta presión del cabezal."
+              ]
+            },
+            {
+              "title": "5. Bomba automática de reposición para equipos compactos",
+              "paragraphs": [
+                "Los equipos compactos pueden utilizar una bomba auxiliar pequeña para reponer solución de lavado, refrigerante u otro fluido de servicio desde un depósito inferior cuando baja el nivel del tanque local. Junto con un sensor de nivel o un controlador, una bomba autocebante puede aspirar el líquido y restablecer el nivel sin cebado manual.",
+                "El autocebado de 6 mH₂O resulta útil cuando el depósito está por debajo de la bomba, pero el rendimiento real de reposición depende de la viscosidad, la longitud de la línea de aspiración, la resistencia de los filtros, la presión de descarga y la compatibilidad de los materiales."
+              ]
+            }
+          ],
+          "selectionNote": {
+            "title": "Nota de selección para la aplicación",
+            "variantParagraphs": {
+              "brushed": [
+                "300 mL/min es un caudal medido bajo condiciones de ensayo definidas y no representa un caudal fijo en cualquier instalación. La altura de aspiración, el diámetro y la longitud de los tubos, los filtros, las electroválvulas, los racores y la contrapresión modifican la resistencia del circuito y el punto real de funcionamiento. Para la versión con escobillas, confirme además que el ciclo de trabajo y la vida útil requerida del equipo sean compatibles con la condición especificada de 3.000 h."
+              ],
+              "brushless": [
+                "300 mL/min es un caudal medido bajo condiciones de ensayo definidas y no representa un caudal fijo en cualquier instalación. La altura de aspiración, el diámetro y la longitud de los tubos, los filtros, las electroválvulas, los racores y la contrapresión modifican la resistencia del circuito y el punto real de funcionamiento. La vida especificada de 10.000 h de la versión sin escobillas permite evaluar objetivos de vida de equipo más largos, pero el ciclo real, la carga, la temperatura y el circuito instalado deben validarse."
+              ]
+            }
+          },
+          "linkText": "Más información: punto de trabajo y selección de una bomba de diafragma de 300 mL/min →"
+        },
+        "fr": {
+          "tabLabel": "Applications",
+          "title": "Applications typiques d’une pompe à membrane pour liquides de 300 mL/min",
+          "variantIntros": {
+            "brushed": [
+              "Une pompe à membrane pour liquides de 300 mL/min peut assurer l’aspiration, l’évacuation, le lavage, le retour de fluide et l’appoint dans des instruments compacts. La version à moteur à balais conserve la même classe de débit de 300 mL/min, la pression nominale de 100 kPa et l’auto-amorçage de 6 mH₂O que la version sans balais, avec une durée de vie spécifiée de 3 000 h. Elle convient lorsque le cycle de fonctionnement et l’objectif de durée de vie de l’équipement correspondent à cette configuration moteur.",
+              "Selon sa fonction dans le circuit, elle peut être désignée comme pompe pour liquides usés, pompe de solution de lavage, pompe d’encre usagée, pompe de retour d’encre ou petite pompe d’appoint."
+            ],
+            "brushless": [
+              "Une pompe à membrane pour liquides de 300 mL/min peut assurer l’aspiration, l’évacuation, le lavage, le retour de fluide et l’appoint dans des instruments compacts. La version sans balais associe la classe de débit de 300 mL/min, la pression nominale de 100 kPa et l’auto-amorçage de 6 mH₂O à une durée de vie spécifiée de 10 000 h, ce qui la rend plus adaptée lorsqu’un cycle de vie d’équipement ou un intervalle de maintenance plus long est recherché.",
+              "Selon sa fonction dans le circuit, elle peut être désignée comme pompe pour liquides usés, pompe de solution de lavage, pompe d’encre usagée, pompe de retour d’encre ou petite pompe d’appoint."
+            ]
+          },
+          "items": [
+            {
+              "title": "1. Pompe pour liquides usés dans les analyseurs IVD, biochimiques et hématologiques",
+              "paragraphs": [
+                "Dans les analyseurs IVD, biochimiques et hématologiques, les résidus d’échantillons, les solutions de lavage et les liquides usés doivent être transférés depuis les cuves de réaction, les sondes ou les collecteurs vers le réservoir de déchets. À cet emplacement, la pompe assure avant tout l’aspiration et l’évacuation, et non un dosage de haute précision.",
+                "La ligne de déchets peut contenir simultanément de l’air et du liquide. La pompe doit donc pouvoir réamorcer l’aspiration après un arrêt, une entrée d’air ou le remplacement du réservoir. Une pompe à membrane auto-amorçante convient bien à cette fonction. La classe de 300 mL/min peut couvrir l’évacuation périodique d’analyseurs compacts, sous réserve de vérifier la hauteur d’aspiration, le diamètre intérieur des tuyaux, les vannes et les pertes de charge."
+              ]
+            },
+            {
+              "title": "2. Pompe de solution de lavage pour l’automatisation de laboratoire",
+              "paragraphs": [
+                "Dans les systèmes de manipulation automatisée de liquides, de préparation d’échantillons et d’analyse en laboratoire, la solution de lavage doit être transférée du réservoir vers les sondes, cuves, cellules de circulation ou conduites internes afin d’éliminer les résidus d’échantillons et de réactifs. Cette fonction privilégie l’alimentation, le rinçage et le renouvellement du liquide plutôt qu’un dosage volumétrique de haute précision.",
+                "Une micro-pompe pour liquides peut alimenter la solution de lavage, rincer les conduites et amorcer le circuit après le démarrage ou le remplacement d’un bidon. Un débit de 300 mL/min offre un compromis pratique entre vitesse de lavage et encombrement, tandis que l’auto-amorçage facilite le redémarrage lorsque la conduite d’aspiration n’est pas totalement remplie."
+              ]
+            },
+            {
+              "title": "3. Pompe pour liquides usés et pompe de rinçage pour analyseurs d’eau et de l’environnement",
+              "paragraphs": [
+                "Les analyseurs en ligne de qualité de l’eau, de surveillance environnementale et d’analyse chimique comportent souvent des circuits distincts pour l’échantillon, les réactifs, la solution de rinçage et les déchets. Le dosage précis des réactifs relève généralement d’une pompe de dosage dédiée, tandis que l’évacuation des déchets, le lavage interne et le transfert général de liquides peuvent être assurés par une pompe à membrane.",
+                "Dans le circuit d’évacuation, elle fonctionne comme pompe pour liquides usés ; dans le circuit de nettoyage, comme pompe de rinçage ou de solution de lavage. Pour les acides, bases, liquides oxydants ou réactifs particuliers, la compatibilité doit être vérifiée selon la concentration, la température et le temps de contact avec la tête, la membrane et les clapets."
+              ]
+            },
+            {
+              "title": "4. Pompe d’encre usagée et pompe de retour d’encre pour impression jet d’encre",
+              "paragraphs": [
+                "Les circuits auxiliaires d’une imprimante jet d’encre peuvent évacuer l’encre usagée après le nettoyage de la tête, récupérer l’excédent d’encre ou maintenir un retour vers le réservoir. La pompe qui évacue les résidus est couramment désignée comme pompe d’encre usagée ; celle qui renvoie l’encre peut servir de pompe de retour ou de recirculation.",
+                "La technologie à membrane convient aux circuits auxiliaires où l’air et le liquide peuvent alterner, mais les formulations d’encre et de liquide de nettoyage sont très variables. La compatibilité des matériaux, la stabilité du débit et la durée de vie doivent être validées avant intégration. Cette application concerne les circuits auxiliaires de déchets et de retour, et non l’alimentation haute pression de la tête d’impression."
+              ]
+            },
+            {
+              "title": "5. Pompe d’appoint automatique pour équipements compacts",
+              "paragraphs": [
+                "Les instruments compacts peuvent utiliser une petite pompe auxiliaire pour faire l’appoint en solution de lavage, liquide de refroidissement ou autre fluide de service depuis un réservoir situé plus bas lorsque le niveau local diminue. Associée à un capteur de niveau ou à un contrôleur, une pompe auto-amorçante peut aspirer le fluide et rétablir le niveau sans amorçage manuel.",
+                "L’auto-amorçage de 6 mH₂O est utile lorsque le réservoir est situé sous la pompe, mais le débit réel d’appoint dépend de la viscosité, de la longueur de la conduite d’aspiration, des filtres, de la pression de refoulement et de la compatibilité des matériaux."
+              ]
+            }
+          ],
+          "selectionNote": {
+            "title": "Remarque pour le choix de l’application",
+            "variantParagraphs": {
+              "brushed": [
+                "300 mL/min correspond à un débit mesuré dans des conditions d’essai définies et non à un débit fixe dans toutes les installations. La hauteur d’aspiration, le diamètre et la longueur des tuyaux, les filtres, les électrovannes, les raccords et la contre-pression modifient les pertes de charge et le point de fonctionnement réel. Pour la version à balais, vérifier également que le cycle d’utilisation et l’objectif de durée de vie de l’équipement sont compatibles avec la condition spécifiée de 3 000 h."
+              ],
+              "brushless": [
+                "300 mL/min correspond à un débit mesuré dans des conditions d’essai définies et non à un débit fixe dans toutes les installations. La hauteur d’aspiration, le diamètre et la longueur des tuyaux, les filtres, les électrovannes, les raccords et la contre-pression modifient les pertes de charge et le point de fonctionnement réel. La durée de vie spécifiée de 10 000 h de la version sans balais peut répondre à des objectifs d’exploitation plus longs, mais le cycle réel, la charge, la température et le circuit installé doivent être validés."
+              ]
+            }
+          },
+          "linkText": "En savoir plus : point de fonctionnement et choix d’une pompe à membrane de 300 mL/min →"
+        },
+        "ko": {
+          "tabLabel": "적용 분야",
+          "title": "300 mL/min 액체 다이어프램 펌프의 주요 적용 분야",
+          "variantIntros": {
+            "brushed": [
+              "300 mL/min급 액체 다이어프램 펌프는 소형 장비 내부에서 액체 흡입, 배액, 세척, 회수 및 보충 기능에 사용할 수 있습니다. 유브러시 모터 버전은 무브러시 버전과 동일한 300 mL/min급 유량, 100 kPa 정격 압력, 6 mH₂O 자흡 성능을 제공하며 규정 수명은 3,000 h입니다. 장비의 운전 주기와 목표 수명이 유브러시 모터 조건에 맞는 경우 적합한 선택이 될 수 있습니다.",
+              "같은 펌프 구조라도 장비에서 맡는 역할에 따라 폐액 펌프, 세척액 펌프, 폐잉크 펌프, 잉크 리턴 펌프 또는 소형 보충 펌프 등으로 불릴 수 있습니다."
+            ],
+            "brushless": [
+              "300 mL/min급 액체 다이어프램 펌프는 소형 장비 내부에서 액체 흡입, 배액, 세척, 회수 및 보충 기능에 사용할 수 있습니다. 무브러시 버전은 300 mL/min급 유량, 100 kPa 정격 압력, 6 mH₂O 자흡 성능과 함께 규정 수명 10,000 h를 제공하므로 장비 수명이나 유지보수 주기를 더 길게 설정해야 하는 시스템에 적합합니다.",
+              "같은 펌프 구조라도 장비에서 맡는 역할에 따라 폐액 펌프, 세척액 펌프, 폐잉크 펌프, 잉크 리턴 펌프 또는 소형 보충 펌프 등으로 불릴 수 있습니다."
+            ]
+          },
+          "items": [
+            {
+              "title": "1. IVD·생화학·혈액 분석기의 폐액 펌프",
+              "paragraphs": [
+                "IVD, 생화학 및 혈액 분석기에서는 반응 후 남은 시료, 세척액 및 잔류액을 반응조, 샘플 프로브 또는 폐액 매니폴드에서 폐액 용기로 이송해야 합니다. 이 위치의 펌프는 정밀 정량보다 흡입과 배액이 주된 역할이므로 일반적으로 폐액 펌프로 사용됩니다.",
+                "폐액 라인에는 공기와 액체가 함께 존재할 수 있어 장비 대기, 공기 유입 또는 폐액통 교체 후에도 다시 흡입을 형성해야 합니다. 자흡식 다이어프램 펌프는 이러한 조건에 적합합니다. 300 mL/min급 유량은 소형 분석기의 주기적 배액에 사용할 수 있으며, 실제 배액량은 흡입 높이, 튜브 내경, 밸브 및 전체 유로 저항에 따라 달라집니다."
+              ]
+            },
+            {
+              "title": "2. 실험실 자동화 장비의 세척액 펌프",
+              "paragraphs": [
+                "자동 액체 처리, 시료 전처리 및 실험실 분석 장비에서는 세척액을 저장 용기에서 프로브, 반응조, 플로우 셀 또는 내부 배관으로 보내 시료와 시약 잔류물을 제거합니다. 이 유로는 고정밀 정량보다 세척액 공급, 배관 세척 및 액체 교체가 더 중요합니다.",
+                "마이크로 액체 펌프는 세척액 공급, 배관 플러싱 및 장비 기동 후 유로 프라이밍에 사용할 수 있습니다. 300 mL/min급은 세척 속도와 소형 설치 공간 사이에서 균형을 제공하며, 자흡 기능은 흡입 라인이 완전히 액체로 채워지지 않은 상태에서도 유로를 다시 형성하는 데 도움이 됩니다."
+              ]
+            },
+            {
+              "title": "3. 수질·환경 분석 장비의 폐액 펌프 및 세척 펌프",
+              "paragraphs": [
+                "온라인 수질 분석기, 환경 모니터링 장비 및 화학 분석 장비에는 시료, 시약, 세척액 및 폐액을 위한 별도의 유로가 존재하는 경우가 많습니다. 정밀 시약 주입은 보통 정량 펌프가 담당하고, 측정 후 폐액 배출, 내부 세척 및 일반 액체 이송은 액체 다이어프램 펌프로 처리할 수 있습니다.",
+                "배액 유로에서는 폐액 펌프로, 내부 세척 유로에서는 세척 펌프 또는 세척액 펌프로 사용할 수 있습니다. 산·알칼리·산화성 액체 또는 특수 시약은 농도, 온도 및 접촉 시간을 기준으로 펌프 헤드, 다이어프램 및 밸브의 접액 재질 호환성을 확인해야 합니다."
+              ]
+            },
+            {
+              "title": "4. 잉크젯 프린터의 폐잉크 펌프 및 잉크 리턴 펌프",
+              "paragraphs": [
+                "잉크젯 프린터의 보조 잉크 유로에서는 헤드 세척 후 폐잉크 배출, 잉크 회수 또는 프린트헤드와 잉크 탱크 사이의 리턴 유로 유지가 필요할 수 있습니다. 세척 잔액을 폐잉크 탱크로 보내는 펌프는 폐잉크 펌프, 잉크를 저장 탱크로 되돌리는 펌프는 잉크 리턴 또는 순환 펌프로 사용할 수 있습니다.",
+                "다이어프램 방식은 공기와 액체가 번갈아 유입될 수 있는 보조 잉크 유로에 적합하지만, 잉크와 세척액의 용제 조성은 제품마다 크게 다릅니다. 적용 전에는 접액 재질 호환성, 유량 안정성 및 수명을 별도로 검증해야 합니다. 이 내용은 보조 폐잉크·리턴 유로를 의미하며 고압 프린트헤드 잉크 공급을 의미하지 않습니다."
+              ]
+            },
+            {
+              "title": "5. 소형 장비의 자동 보충 펌프",
+              "paragraphs": [
+                "소형 장비에서는 로컬 탱크의 액면이 낮아질 때 낮은 위치의 저장 용기에서 세척액, 냉각수 또는 기타 보조 액체를 보충하기 위해 별도의 소형 펌프를 사용할 수 있습니다. 수위 센서나 제어기와 연동하면 자흡식 액체 펌프가 수동 프라이밍 없이 액체를 흡입해 필요한 액면을 회복할 수 있습니다.",
+                "6 mH₂O 자흡 성능은 저장 용기가 펌프보다 낮은 위치에 있을 때 유용하지만, 실제 보충 유량은 액체 점도, 흡입 배관 길이, 필터 저항, 토출 압력 및 접액 재질 호환성에 따라 달라집니다."
+              ]
+            }
+          ],
+          "selectionNote": {
+            "title": "적용 선정 참고",
+            "variantParagraphs": {
+              "brushed": [
+                "300 mL/min은 규정된 시험 조건에서 측정한 유량이며 실제 장비에 설치한 뒤 항상 동일하게 유지되는 고정 유량이 아닙니다. 흡입 높이, 튜브 내경과 길이, 필터, 솔레노이드 밸브, 피팅 및 토출 배압은 모두 유로 저항과 실제 작동점을 변화시킵니다. 유브러시 버전은 장비의 실제 운전 주기와 목표 수명이 규정 3,000 h 수명 조건에 적합한지도 함께 확인해야 합니다."
+              ],
+              "brushless": [
+                "300 mL/min은 규정된 시험 조건에서 측정한 유량이며 실제 장비에 설치한 뒤 항상 동일하게 유지되는 고정 유량이 아닙니다. 흡입 높이, 튜브 내경과 길이, 필터, 솔레노이드 밸브, 피팅 및 토출 배압은 모두 유로 저항과 실제 작동점을 변화시킵니다. 무브러시 버전의 규정 수명 10,000 h는 더 긴 장비 수명 목표에 유리하지만 실제 운전 주기, 부하, 온도 및 완성 유로에서 검증해야 합니다."
+              ]
+            }
+          },
+          "linkText": "자세히 보기: 300 mL/min 다이어프램 펌프의 실제 작동점과 선정 방법 →"
+        },
+        "ru": {
+          "tabLabel": "Применение",
+          "title": "Типовые применения мембранного жидкостного насоса 300 mL/min",
+          "variantIntros": {
+            "brushed": [
+              "Мембранный жидкостный насос производительностью 300 mL/min может использоваться в компактном оборудовании для всасывания, отвода, промывки, возврата жидкости и вспомогательной подпитки. Версия со щеточным двигателем имеет тот же класс подачи 300 mL/min, номинальное давление 100 kPa и высоту самовсасывания 6 mH₂O, что и бесщеточная версия, при указанном ресурсе 3 000 h. Она подходит для оборудования, где режим работы и требуемый ресурс соответствуют условиям применения щеточного двигателя.",
+              "В зависимости от функции в системе такой насос может называться насосом для отработанной жидкости, насосом промывочной жидкости, насосом для отработанных чернил, насосом возврата чернил или малым насосом подпитки."
+            ],
+            "brushless": [
+              "Мембранный жидкостный насос производительностью 300 mL/min может использоваться в компактном оборудовании для всасывания, отвода, промывки, возврата жидкости и вспомогательной подпитки. Бесщеточная версия сочетает класс подачи 300 mL/min, номинальное давление 100 kPa и высоту самовсасывания 6 mH₂O с указанным ресурсом 10 000 h, поэтому лучше подходит для оборудования с более длительным сроком эксплуатации или увеличенными межсервисными интервалами.",
+              "В зависимости от функции в системе такой насос может называться насосом для отработанной жидкости, насосом промывочной жидкости, насосом для отработанных чернил, насосом возврата чернил или малым насосом подпитки."
+            ]
+          },
+          "items": [
+            {
+              "title": "1. Насос для отработанной жидкости в IVD-, биохимических и гематологических анализаторах",
+              "paragraphs": [
+                "В IVD-, биохимических и гематологических анализаторах остатки образцов, промывочная жидкость и другие отходы необходимо отводить из реакционных кювет, пробоотборных игл или коллекторов в ёмкость для отходов. На этом участке контура насос выполняет прежде всего функцию всасывания и отвода жидкости, а не точного дозирования.",
+                "В линии отходов одновременно могут находиться воздух и жидкость, поэтому после простоя, попадания воздуха или замены ёмкости насос должен снова создавать всасывание. Для такой задачи подходит самовсасывающий мембранный насос. Класс 300 mL/min подходит для периодического отвода жидкости в компактных анализаторах, однако фактическая подача зависит от высоты всасывания, внутреннего диаметра трубки, клапанов и сопротивления контура."
+              ]
+            },
+            {
+              "title": "2. Насос промывочной жидкости для лабораторной автоматизации",
+              "paragraphs": [
+                "В автоматических системах жидкостной обработки, подготовки проб и лабораторных анализаторах промывочная жидкость подаётся из резервуара к иглам, реакционным кюветам, проточным ячейкам или внутренним трубопроводам для удаления остатков образцов и реагентов. Здесь важнее подача, промывка и замещение жидкости, чем высокоточное объёмное дозирование.",
+                "Компактный жидкостный насос может подавать промывочную жидкость, промывать трубопроводы и заполнять контур после запуска или замены ёмкости. Производительность 300 mL/min обеспечивает разумный баланс между скоростью промывки и габаритами, а самовсасывание помогает восстановить подачу, когда всасывающая линия заполнена не полностью."
+              ]
+            },
+            {
+              "title": "3. Насос отработанной жидкости и промывочный насос для анализаторов воды и экологического контроля",
+              "paragraphs": [
+                "Онлайн-анализаторы качества воды, системы экологического мониторинга и химические анализаторы часто имеют отдельные линии для пробы, реагентов, промывочной жидкости и отходов. Точное дозирование реагентов обычно выполняет дозирующий насос, а отвод отходов, внутренняя промывка и обычная перекачка жидкостей могут выполняться мембранным жидкостным насосом.",
+                "В линии слива он работает как насос отработанной жидкости, а в линии очистки — как промывочный насос. Для кислот, щелочей, окислителей и специальных реагентов необходимо проверить совместимость материала головки, мембраны и клапанов с учётом концентрации, температуры и длительности контакта."
+              ]
+            },
+            {
+              "title": "4. Насос для отработанных чернил и насос возврата чернил для струйной печати",
+              "paragraphs": [
+                "Во вспомогательном чернильном контуре струйного принтера требуется удалять отработанные чернила после очистки печатающей головки, возвращать излишки чернил или поддерживать обратный поток между головкой и резервуаром. Насос, отводящий остатки после очистки, обычно называют насосом для отработанных чернил; насос возврата может работать как насос возврата или рециркуляции чернил.",
+                "Мембранная технология подходит для вспомогательных контуров, где чередуются воздух и жидкость, однако состав чернил и промывочных жидкостей сильно различается. Перед применением необходимо проверить совместимость материалов, стабильность подачи и ресурс в конкретной среде. Речь идёт о вспомогательном контуре отходов и возврата, а не о высоконапорной подаче чернил к печатающей головке."
+              ]
+            },
+            {
+              "title": "5. Автоматический насос подпитки для компактного оборудования",
+              "paragraphs": [
+                "В компактном оборудовании отдельный малогабаритный насос может использоваться для подпитки промывочной жидкости, охлаждающей жидкости или другого сервисного флюида из нижнего резервуара при снижении уровня в локальном баке. Совместно с датчиком уровня или контроллером самовсасывающий насос способен восстановить уровень без ручного заполнения всасывающей линии.",
+                "Высота самовсасывания 6 mH₂O полезна при расположении резервуара ниже насоса, однако фактическая производительность зависит от вязкости жидкости, длины всасывающей линии, сопротивления фильтра, давления на выходе и совместимости смачиваемых материалов."
+              ]
+            }
+          ],
+          "selectionNote": {
+            "title": "Примечание по подбору",
+            "variantParagraphs": {
+              "brushed": [
+                "300 mL/min — это подача, измеренная при заданных условиях испытания, а не постоянная подача в любой установленной системе. Высота всасывания, внутренний диаметр и длина трубок, фильтры, электромагнитные клапаны, фитинги и противодавление изменяют гидравлическое сопротивление и фактическую рабочую точку. Для версии со щеточным двигателем также необходимо проверить, соответствует ли фактический режим работы оборудования условию указанного ресурса 3 000 h."
+              ],
+              "brushless": [
+                "300 mL/min — это подача, измеренная при заданных условиях испытания, а не постоянная подача в любой установленной системе. Высота всасывания, внутренний диаметр и длина трубок, фильтры, электромагнитные клапаны, фитинги и противодавление изменяют гидравлическое сопротивление и фактическую рабочую точку. Указанный ресурс 10 000 h бесщеточной версии может соответствовать более длительным целям эксплуатации, но реальный режим, нагрузка, температура и собранный жидкостный контур должны быть проверены."
+              ]
+            }
+          },
+          "linkText": "Подробнее: рабочая точка и подбор мембранного насоса 300 mL/min →"
+        }
+      }
+    },
+    "dpl60": {
+      "articleSlug": "dpl60-liquid-diaphragm-pump-selection-guide",
+      "locales": {
+        "en": {
+          "tabLabel": "Applications",
+          "title": "Typical Applications for a 600 mL/min Liquid Diaphragm Pump",
+          "variantIntros": {
+            "brushed": [
+              "A 600 mL/min liquid diaphragm pump is intended for instrument fluid paths that need faster liquid exchange than a 300 mL/min-class pump. Typical duties include higher-rate waste removal, washing, rinsing, circulation and larger-volume auxiliary transfer. The DPL60 brushed version combines a 600 mL/min no-load flow reference, 100 kPa rated pressure and 3 mH₂O self-priming specification with a specified service life of 3,000 h."
+            ],
+            "brushless": [
+              "A 600 mL/min liquid diaphragm pump is intended for instrument fluid paths that need faster liquid exchange than a 300 mL/min-class pump. Typical duties include higher-rate waste removal, washing, rinsing, circulation and larger-volume auxiliary transfer. The DPL60 brushless version combines a 600 mL/min no-load flow reference, 100 kPa rated pressure and 3 mH₂O self-priming specification with a specified service life of 10,000 h for systems requiring a longer operating-life target."
+            ]
+          },
+          "items": [
+            {
+              "title": "1. Higher-Flow Waste Liquid Pump for IVD and Analytical Instruments",
+              "paragraphs": [
+                "In IVD and analytical instruments, waste liquid may need to be removed from reaction vessels, wash stations or collection manifolds within a limited process time. When the volume per cycle is higher or the drain step must be shorter, a 600 mL/min-class waste liquid pump provides more transfer capacity than a 300 mL/min-class pump.",
+                "The 600 mL/min value is a no-load reference, not the guaranteed drainage rate after installation. Suction lift, tubing ID, valves, filters and discharge back pressure must be included when determining whether the required waste-removal time can be achieved."
+              ]
+            },
+            {
+              "title": "2. Wash and Rinse Pump for Laboratory Automation",
+              "paragraphs": [
+                "Laboratory automation equipment may need to replace wash liquid quickly between samples, rinse probes or flow cells, or flush internal tubing after a process step. In these fluid paths the pump is commonly used as a wash solution pump or rinse pump rather than a precision dosing pump.",
+                "A 600 mL/min flow class can shorten liquid-exchange time when the tubing and downstream components allow the required flow. The 3 mH₂O self-priming specification can assist startup and bottle replacement, but a long or restrictive suction line can reduce the available flow."
+              ]
+            },
+            {
+              "title": "3. Waste and Rinse Pump for Water and Environmental Analyzers",
+              "paragraphs": [
+                "Online water-quality and environmental analyzers often repeat sample intake, internal rinsing and waste discharge throughout a measurement cycle. A higher-flow diaphragm liquid pump can be used in auxiliary rinse and waste paths when faster cleaning or larger liquid volumes are required.",
+                "When used with acids, alkalis, oxidizing solutions or other special media, the complete wetted-material set must be checked against concentration, temperature and contact time. High-accuracy reagent dosing should still be handled by a suitable metering technology."
+              ]
+            },
+            {
+              "title": "4. Auxiliary Liquid Circulation Pump for Instrument Systems",
+              "paragraphs": [
+                "Some instrument fluid paths require continuous or periodic low-pressure circulation to keep wash solution, service fluid or another compatible liquid moving between a reservoir and an internal module. In this position a 600 mL/min-class diaphragm pump can serve as an auxiliary liquid circulation pump.",
+                "This is not a high-pressure circulation pump. Actual circulation rate depends on the full circuit resistance, and the 100 kPa rated-pressure specification must not be interpreted as 600 mL/min at 100 kPa. Read the flow-pressure curve at the required operating point."
+              ]
+            },
+            {
+              "title": "5. Automatic Refill Pump for Larger Auxiliary Reservoirs",
+              "paragraphs": [
+                "Where an instrument uses a larger wash or service-fluid reservoir, a small automatic refill pump can restore the local level from a lower supply container. Compared with a 300 mL/min-class pump, the 600 mL/min class can reduce refill time when the fluid path has low enough resistance.",
+                "The 3 mH₂O self-priming specification helps with moderate level differences, but actual refill performance depends on fluid viscosity, suction-line length, filter resistance, discharge pressure and material compatibility."
+              ]
+            }
+          ],
+          "selectionNote": {
+            "title": "Application Selection Note",
+            "variantParagraphs": {
+              "brushed": [
+                "600 mL/min is the no-load flow reference, not a fixed installed flow. The DPL60 is rated at 100 kPa, but 600 mL/min and 100 kPa are not one operating point. Determine the actual system pressure, read the flow-pressure curve and validate the complete fluid path. For the brushed version, also confirm that the equipment duty cycle and required life target are compatible with the specified 3,000 h condition."
+              ],
+              "brushless": [
+                "600 mL/min is the no-load flow reference, not a fixed installed flow. The DPL60 is rated at 100 kPa, but 600 mL/min and 100 kPa are not one operating point. Determine the actual system pressure, read the flow-pressure curve and validate the complete fluid path. The brushless version has a specified 10,000 h life for longer equipment-life targets, but the actual load, temperature, switching frequency and fluid path must still be validated."
+              ]
+            }
+          },
+          "linkText": "Learn more: Operating point and selection of a 600 mL/min diaphragm pump →"
+        },
+        "es": {
+          "tabLabel": "Aplicaciones",
+          "title": "Aplicaciones típicas de una bomba de diafragma para líquidos de 600 mL/min",
+          "variantIntros": {
+            "brushed": [
+              "Una bomba de diafragma para líquidos de 600 mL/min está orientada a circuitos de instrumentos que necesitan un intercambio de líquido más rápido que una bomba de la clase de 300 mL/min. Sus tareas habituales incluyen evacuación de residuos a mayor caudal, lavado, enjuague, circulación y transferencia auxiliar de mayor volumen. La versión con escobillas combina un caudal en vacío de referencia de 600 mL/min, presión nominal de 100 kPa y autocebado de 3 mH₂O con una vida útil especificada de 3.000 h."
+            ],
+            "brushless": [
+              "Una bomba de diafragma para líquidos de 600 mL/min está orientada a circuitos de instrumentos que necesitan un intercambio de líquido más rápido que una bomba de la clase de 300 mL/min. Sus tareas habituales incluyen evacuación de residuos a mayor caudal, lavado, enjuague, circulación y transferencia auxiliar de mayor volumen. La versión sin escobillas combina un caudal en vacío de referencia de 600 mL/min, presión nominal de 100 kPa y autocebado de 3 mH₂O con una vida útil especificada de 10.000 h para equipos con objetivos de funcionamiento más prolongados."
+            ]
+          },
+          "items": [
+            {
+              "title": "1. Bomba de mayor caudal para líquidos residuales en IVD y equipos analíticos",
+              "paragraphs": [
+                "En equipos IVD y analizadores, los líquidos residuales deben retirarse de cubetas de reacción, estaciones de lavado o colectores dentro de un tiempo de proceso limitado. Cuando el volumen por ciclo es mayor o se necesita acortar la etapa de descarga, una bomba para líquidos residuales de la clase de 600 mL/min ofrece mayor capacidad de transferencia que una de 300 mL/min.",
+                "Los 600 mL/min son una referencia en vacío y no el caudal garantizado después de la instalación. La altura de aspiración, el diámetro interior de los tubos, las válvulas, los filtros y la contrapresión deben incluirse al calcular si puede alcanzarse el tiempo de evacuación requerido."
+              ]
+            },
+            {
+              "title": "2. Bomba de lavado y enjuague para automatización de laboratorio",
+              "paragraphs": [
+                "Los equipos de automatización de laboratorio pueden necesitar renovar rápidamente la solución de lavado entre muestras, enjuagar sondas o celdas de flujo y limpiar las tuberías internas después de una etapa de proceso. En estos circuitos la bomba se utiliza habitualmente como bomba de solución de lavado o bomba de enjuague, no como bomba de dosificación de precisión.",
+                "La clase de 600 mL/min puede reducir el tiempo de sustitución de líquido si las tuberías y los componentes aguas abajo permiten ese caudal. El autocebado de 3 mH₂O ayuda durante el arranque y el cambio de depósitos, aunque una línea de aspiración larga o restrictiva puede reducir el caudal disponible."
+              ]
+            },
+            {
+              "title": "3. Bomba de residuos y enjuague para analizadores de agua y medio ambiente",
+              "paragraphs": [
+                "Los analizadores en línea de calidad del agua y control ambiental repiten con frecuencia la toma de muestra, el enjuague interno y la descarga de residuos. Una bomba de diafragma para líquidos de mayor caudal puede utilizarse en los circuitos auxiliares de enjuague y residuos cuando se requiere una limpieza más rápida o se manejan mayores volúmenes.",
+                "Para ácidos, álcalis, soluciones oxidantes u otros medios especiales, debe comprobarse el conjunto completo de materiales en contacto con el líquido según concentración, temperatura y tiempo de contacto. La dosificación de reactivos de alta precisión debe seguir realizándose con una tecnología de dosificación adecuada."
+              ]
+            },
+            {
+              "title": "4. Bomba auxiliar de circulación de líquidos para instrumentos",
+              "paragraphs": [
+                "Algunos circuitos de instrumentos necesitan circulación continua o periódica a baja presión para mantener en movimiento una solución de lavado, un fluido de servicio u otro líquido compatible entre un depósito y un módulo interno. En esta posición, una bomba de la clase de 600 mL/min puede actuar como bomba auxiliar de circulación.",
+                "No se trata de una bomba de circulación de alta presión. El caudal real depende de la resistencia completa del circuito y la presión nominal de 100 kPa no debe interpretarse como 600 mL/min a 100 kPa. Debe consultarse la curva caudal-presión en el punto de trabajo requerido."
+              ]
+            },
+            {
+              "title": "5. Bomba automática de reposición para depósitos auxiliares de mayor volumen",
+              "paragraphs": [
+                "Cuando el instrumento utiliza un depósito local de lavado o de fluido de servicio de mayor capacidad, una bomba automática de reposición puede recuperar el nivel desde un recipiente de suministro inferior. Frente a la clase de 300 mL/min, la de 600 mL/min puede reducir el tiempo de reposición si la resistencia del circuito es suficientemente baja.",
+                "El autocebado de 3 mH₂O ayuda con diferencias de nivel moderadas, pero el rendimiento real depende de la viscosidad, la longitud de aspiración, la resistencia de filtros, la presión de descarga y la compatibilidad de materiales."
+              ]
+            }
+          ],
+          "selectionNote": {
+            "title": "Nota de selección para la aplicación",
+            "variantParagraphs": {
+              "brushed": [
+                "600 mL/min es el caudal de referencia en vacío, no un caudal fijo en la instalación. El DPL60 tiene una presión nominal de 100 kPa, pero 600 mL/min y 100 kPa no corresponden al mismo punto de funcionamiento. Determine la presión real del sistema, consulte la curva caudal-presión y valide el circuito completo. Para la versión con escobillas, confirme además que el ciclo de trabajo y la vida requerida del equipo sean compatibles con la condición especificada de 3.000 h."
+              ],
+              "brushless": [
+                "600 mL/min es el caudal de referencia en vacío, no un caudal fijo en la instalación. El DPL60 tiene una presión nominal de 100 kPa, pero 600 mL/min y 100 kPa no corresponden al mismo punto de funcionamiento. Determine la presión real del sistema, consulte la curva caudal-presión y valide el circuito completo. La versión sin escobillas tiene una vida especificada de 10.000 h, pero la carga, temperatura, frecuencia de arranque y circuito real deben validarse."
+              ]
+            }
+          },
+          "linkText": "Más información: punto de trabajo y selección de una bomba de diafragma de 600 mL/min →"
+        },
+        "fr": {
+          "tabLabel": "Applications",
+          "title": "Applications typiques d’une pompe à membrane pour liquides de 600 mL/min",
+          "variantIntros": {
+            "brushed": [
+              "Une pompe à membrane pour liquides de 600 mL/min s’adresse aux circuits d’instruments qui nécessitent un renouvellement de liquide plus rapide qu’une pompe de la classe de 300 mL/min. Les usages typiques comprennent l’évacuation plus rapide des déchets liquides, le lavage, le rinçage, la circulation et le transfert auxiliaire de volumes plus importants. La version à balais associe un débit à vide de référence de 600 mL/min, une pression nominale de 100 kPa et un auto-amorçage de 3 mH₂O à une durée de vie spécifiée de 3 000 h."
+            ],
+            "brushless": [
+              "Une pompe à membrane pour liquides de 600 mL/min s’adresse aux circuits d’instruments qui nécessitent un renouvellement de liquide plus rapide qu’une pompe de la classe de 300 mL/min. Les usages typiques comprennent l’évacuation plus rapide des déchets liquides, le lavage, le rinçage, la circulation et le transfert auxiliaire de volumes plus importants. La version sans balais associe un débit à vide de référence de 600 mL/min, une pression nominale de 100 kPa et un auto-amorçage de 3 mH₂O à une durée de vie spécifiée de 10 000 h."
+            ]
+          },
+          "items": [
+            {
+              "title": "1. Pompe à plus grand débit pour déchets liquides dans les systèmes IVD et analytiques",
+              "paragraphs": [
+                "Dans les équipements IVD et les instruments analytiques, les liquides usés doivent parfois être évacués depuis les cuves de réaction, les postes de lavage ou les collecteurs dans un temps de cycle limité. Lorsque le volume par cycle augmente ou que l’étape d’évacuation doit être raccourcie, une pompe pour liquides usés de la classe de 600 mL/min offre une capacité de transfert supérieure à une pompe de 300 mL/min.",
+                "Les 600 mL/min correspondent à une référence à vide et non au débit garanti après intégration. La hauteur d’aspiration, le diamètre des tuyaux, les vannes, les filtres et la contre-pression doivent être pris en compte pour vérifier le temps réel d’évacuation."
+              ]
+            },
+            {
+              "title": "2. Pompe de lavage et de rinçage pour l’automatisation de laboratoire",
+              "paragraphs": [
+                "Les équipements d’automatisation de laboratoire peuvent nécessiter un remplacement rapide de la solution de lavage entre deux échantillons, le rinçage des sondes ou cellules de circulation, ou le nettoyage des conduites internes après une étape de procédé. Dans ces circuits, la pompe est utilisée comme pompe de solution de lavage ou de rinçage plutôt que comme pompe de dosage de précision.",
+                "La classe de 600 mL/min peut réduire le temps de renouvellement du liquide lorsque les conduites et les composants en aval autorisent le débit requis. L’auto-amorçage de 3 mH₂O facilite le démarrage et le remplacement des réservoirs, mais une conduite d’aspiration longue ou restrictive peut réduire le débit disponible."
+              ]
+            },
+            {
+              "title": "3. Pompe d’évacuation et de rinçage pour analyseurs d’eau et de l’environnement",
+              "paragraphs": [
+                "Les analyseurs en ligne de qualité de l’eau et de surveillance environnementale répètent souvent les étapes de prélèvement, de rinçage interne et d’évacuation des déchets. Une pompe à membrane à plus grand débit peut être utilisée dans les circuits auxiliaires de rinçage et de déchets lorsque le nettoyage doit être plus rapide ou lorsque les volumes sont plus importants.",
+                "Pour les acides, bases, solutions oxydantes ou autres fluides spéciaux, l’ensemble des matériaux en contact avec le fluide doit être vérifié selon la concentration, la température et le temps de contact. Le dosage précis des réactifs doit rester confié à une technologie de dosage adaptée."
+              ]
+            },
+            {
+              "title": "4. Pompe auxiliaire de circulation de liquide pour instruments",
+              "paragraphs": [
+                "Certains circuits d’instruments nécessitent une circulation continue ou périodique à basse pression afin de maintenir en mouvement une solution de lavage, un fluide de service ou un autre liquide compatible entre un réservoir et un module interne. Dans cette fonction, une pompe de la classe de 600 mL/min peut servir de pompe auxiliaire de circulation.",
+                "Il ne s’agit pas d’une pompe de circulation haute pression. Le débit réel dépend des pertes de charge du circuit complet et la pression nominale de 100 kPa ne doit pas être interprétée comme un débit de 600 mL/min à 100 kPa. Il faut lire la courbe débit-pression au point de fonctionnement demandé."
+              ]
+            },
+            {
+              "title": "5. Pompe d’appoint automatique pour réservoirs auxiliaires de plus grande capacité",
+              "paragraphs": [
+                "Lorsqu’un instrument utilise un réservoir local de solution de lavage ou de fluide de service plus important, une pompe d’appoint automatique peut rétablir le niveau à partir d’un récipient d’alimentation placé plus bas. Par rapport à la classe de 300 mL/min, la classe de 600 mL/min peut réduire le temps d’appoint si les pertes de charge restent faibles.",
+                "L’auto-amorçage de 3 mH₂O convient aux différences de niveau modérées, mais le débit réel dépend de la viscosité, de la longueur de la conduite d’aspiration, des filtres, de la pression de refoulement et de la compatibilité des matériaux."
+              ]
+            }
+          ],
+          "selectionNote": {
+            "title": "Remarque pour le choix de l’application",
+            "variantParagraphs": {
+              "brushed": [
+                "600 mL/min est le débit de référence à vide et non un débit fixe après intégration. Le DPL60 est donné pour une pression nominale de 100 kPa, mais 600 mL/min et 100 kPa ne constituent pas un même point de fonctionnement. Déterminer la pression réelle du circuit, lire la courbe débit-pression et valider l’ensemble du circuit. Pour la version à balais, vérifier également que le cycle d’utilisation et l’objectif de durée de vie sont compatibles avec la condition spécifiée de 3 000 h."
+              ],
+              "brushless": [
+                "600 mL/min est le débit de référence à vide et non un débit fixe après intégration. Le DPL60 est donné pour une pression nominale de 100 kPa, mais 600 mL/min et 100 kPa ne constituent pas un même point de fonctionnement. Déterminer la pression réelle du circuit, lire la courbe débit-pression et valider l’ensemble du circuit. La version sans balais dispose d’une durée de vie spécifiée de 10 000 h, mais la charge, la température, la fréquence de démarrage et le circuit réel doivent être validés."
+              ]
+            }
+          },
+          "linkText": "En savoir plus : point de fonctionnement et choix d’une pompe à membrane de 600 mL/min →"
+        },
+        "ko": {
+          "tabLabel": "적용 분야",
+          "title": "600 mL/min 액체 다이어프램 펌프의 주요 적용 분야",
+          "variantIntros": {
+            "brushed": [
+              "600 mL/min급 액체 다이어프램 펌프는 300 mL/min급보다 더 빠른 액체 교환이 필요한 장비 유로에 적합합니다. 주요 용도는 더 빠른 폐액 배출, 세척, 플러싱, 액체 순환 및 비교적 큰 보조 이송량입니다. DPL60 유브러시 버전은 무부하 기준 600 mL/min, 100 kPa 정격 압력, 3 mH₂O 자흡 성능과 규정 수명 3,000 h를 제공합니다."
+            ],
+            "brushless": [
+              "600 mL/min급 액체 다이어프램 펌프는 300 mL/min급보다 더 빠른 액체 교환이 필요한 장비 유로에 적합합니다. 주요 용도는 더 빠른 폐액 배출, 세척, 플러싱, 액체 순환 및 비교적 큰 보조 이송량입니다. DPL60 무브러시 버전은 무부하 기준 600 mL/min, 100 kPa 정격 압력, 3 mH₂O 자흡 성능과 규정 수명 10,000 h를 제공합니다."
+            ]
+          },
+          "items": [
+            {
+              "title": "1. IVD 및 분석 장비의 고유량 폐액 펌프",
+              "paragraphs": [
+                "IVD 및 분석 장비에서는 반응조, 세척 위치 또는 폐액 매니폴드의 액체를 제한된 공정 시간 안에 배출해야 할 수 있습니다. 한 사이클의 폐액량이 많거나 배액 시간을 줄여야 하는 경우 600 mL/min급 폐액 펌프는 300 mL/min급보다 더 높은 이송 용량을 제공합니다.",
+                "600 mL/min은 무부하 기준값이며 실제 장비에 설치한 뒤 보장되는 배액량이 아닙니다. 필요한 배액 시간을 만족하는지 판단하려면 흡입 높이, 튜브 내경, 밸브, 필터 및 토출 배압을 함께 고려해야 합니다."
+              ]
+            },
+            {
+              "title": "2. 실험실 자동화용 세척액·플러싱 펌프",
+              "paragraphs": [
+                "실험실 자동화 장비에서는 샘플 사이에 세척액을 빠르게 교체하거나 프로브와 플로우 셀을 세척하고 공정 후 내부 배관을 플러싱해야 할 수 있습니다. 이 유로에서 펌프는 정밀 정량 펌프보다 세척액 펌프 또는 플러싱 펌프로 사용됩니다.",
+                "600 mL/min급은 배관과 하류 부품이 필요한 유량을 허용할 경우 액체 교환 시간을 줄이는 데 도움이 됩니다. 3 mH₂O 자흡 성능은 장비 기동과 저장 용기 교체 시 도움이 되지만 흡입 라인이 길거나 저항이 크면 실제 유량이 감소할 수 있습니다."
+              ]
+            },
+            {
+              "title": "3. 수질·환경 분석기의 폐액 및 세척 펌프",
+              "paragraphs": [
+                "온라인 수질 분석기와 환경 모니터링 장비는 측정 사이클 동안 시료 흡입, 내부 세척 및 폐액 배출을 반복하는 경우가 많습니다. 더 빠른 세척 또는 더 많은 액체 처리가 필요한 보조 세척·폐액 유로에는 600 mL/min급 액체 다이어프램 펌프를 적용할 수 있습니다.",
+                "산, 알칼리, 산화성 용액 또는 특수 매체를 사용할 경우 접액 재질 전체를 농도, 온도 및 접촉 시간을 기준으로 검토해야 합니다. 고정밀 시약 정량은 별도의 적합한 정량 펌프가 담당해야 합니다."
+              ]
+            },
+            {
+              "title": "4. 장비용 보조 액체 순환 펌프",
+              "paragraphs": [
+                "일부 장비 유로에서는 세척액, 서비스 액체 또는 기타 호환 액체를 저장 용기와 내부 모듈 사이에서 저압으로 연속 또는 주기적으로 순환시켜야 합니다. 이 위치에서 600 mL/min급 다이어프램 펌프는 보조 액체 순환 펌프로 사용할 수 있습니다.",
+                "이 펌프를 고압 순환 펌프로 해석해서는 안 됩니다. 실제 순환 유량은 전체 유로 저항에 따라 달라지며, 100 kPa 정격 압력은 100 kPa에서 600 mL/min이 나온다는 의미가 아닙니다. 필요한 작동점에서 유량-압력 곡선을 확인해야 합니다."
+              ]
+            },
+            {
+              "title": "5. 비교적 큰 보조 탱크용 자동 보충 펌프",
+              "paragraphs": [
+                "장비가 비교적 큰 세척액 또는 서비스 액체 탱크를 사용하는 경우 낮은 위치의 공급 용기에서 로컬 탱크로 자동 보충하는 별도 펌프를 사용할 수 있습니다. 유로 저항이 충분히 낮다면 600 mL/min급은 300 mL/min급보다 보충 시간을 줄일 수 있습니다.",
+                "3 mH₂O 자흡 성능은 중간 정도의 높이 차에 도움이 되지만 실제 보충 유량은 액체 점도, 흡입 라인 길이, 필터 저항, 토출 압력 및 접액 재질 호환성에 따라 달라집니다."
+              ]
+            }
+          ],
+          "selectionNote": {
+            "title": "적용 선정 참고",
+            "variantParagraphs": {
+              "brushed": [
+                "600 mL/min은 무부하 유량 기준이며 실제 설치 상태의 고정 유량이 아닙니다. DPL60의 정격 압력은 100 kPa이지만 600 mL/min과 100 kPa은 하나의 작동점을 의미하지 않습니다. 실제 시스템 압력을 계산하거나 측정하고 유량-압력 곡선을 확인한 뒤 완성 유로에서 검증해야 합니다. 유브러시 버전은 실제 운전 주기와 목표 수명이 규정 3,000 h 조건에 적합한지도 확인해야 합니다."
+              ],
+              "brushless": [
+                "600 mL/min은 무부하 유량 기준이며 실제 설치 상태의 고정 유량이 아닙니다. DPL60의 정격 압력은 100 kPa이지만 600 mL/min과 100 kPa은 하나의 작동점을 의미하지 않습니다. 실제 시스템 압력을 계산하거나 측정하고 유량-압력 곡선을 확인한 뒤 완성 유로에서 검증해야 합니다. 무브러시 버전은 규정 수명 10,000 h이지만 실제 부하, 온도, 기동 빈도 및 완성 유로에서 검증해야 합니다."
+              ]
+            }
+          },
+          "linkText": "자세히 보기: 600 mL/min 다이어프램 펌프의 실제 작동점과 선정 방법 →"
+        },
+        "ru": {
+          "tabLabel": "Применение",
+          "title": "Типовые применения мембранного жидкостного насоса 600 mL/min",
+          "variantIntros": {
+            "brushed": [
+              "Мембранный жидкостный насос класса 600 mL/min предназначен для контуров приборов, где требуется более быстрый обмен жидкости, чем у насоса класса 300 mL/min. Типовые задачи включают более быстрый отвод отходов, промывку, ополаскивание, циркуляцию и вспомогательную перекачку большего объёма. Щеточная версия DPL60 имеет расход без нагрузки 600 mL/min, номинальное давление 100 kPa, высоту самовсасывания 3 mH₂O и указанный ресурс 3 000 h."
+            ],
+            "brushless": [
+              "Мембранный жидкостный насос класса 600 mL/min предназначен для контуров приборов, где требуется более быстрый обмен жидкости, чем у насоса класса 300 mL/min. Типовые задачи включают более быстрый отвод отходов, промывку, ополаскивание, циркуляцию и вспомогательную перекачку большего объёма. Бесщеточная версия DPL60 имеет расход без нагрузки 600 mL/min, номинальное давление 100 kPa, высоту самовсасывания 3 mH₂O и указанный ресурс 10 000 h."
+            ]
+          },
+          "items": [
+            {
+              "title": "1. Насос повышенной подачи для отвода отходов в IVD и аналитическом оборудовании",
+              "paragraphs": [
+                "В IVD и аналитических приборах отходы необходимо отводить из реакционных ёмкостей, моечных станций или коллекторов в пределах заданного времени цикла. При большем объёме отходов за цикл или необходимости сократить время слива насос класса 600 mL/min обеспечивает более высокую производительность, чем насос класса 300 mL/min.",
+                "600 mL/min — это расход без нагрузки, а не гарантированная подача после установки. Для оценки требуемого времени слива необходимо учитывать высоту всасывания, внутренний диаметр трубок, клапаны, фильтры и противодавление."
+              ]
+            },
+            {
+              "title": "2. Насос промывочной жидкости для лабораторной автоматизации",
+              "paragraphs": [
+                "Лабораторному оборудованию может требоваться быстро менять промывочную жидкость между образцами, промывать иглы или проточные ячейки и очищать внутренние трубопроводы после этапа процесса. В таких контурах насос используется как насос промывочной жидкости, а не как высокоточный дозатор.",
+                "Класс 600 mL/min может сократить время замены жидкости, если трубопроводы и компоненты позволяют получить требуемый расход. Высота самовсасывания 3 mH₂O помогает при запуске и замене резервуара, но длинная или узкая линия всасывания может уменьшить фактическую подачу."
+              ]
+            },
+            {
+              "title": "3. Насос отходов и промывочный насос для анализаторов воды и экологического контроля",
+              "paragraphs": [
+                "Онлайн-анализаторы качества воды и экологического мониторинга часто повторяют отбор пробы, внутреннюю промывку и отвод отходов в каждом цикле измерения. Мембранный насос повышенной подачи можно использовать во вспомогательных контурах промывки и отходов, когда требуется более быстрое очищение или обработка большего объёма жидкости.",
+                "Для кислот, щелочей, окислительных растворов и других специальных сред необходимо проверить полный комплект смачиваемых материалов с учётом концентрации, температуры и времени контакта. Высокоточное дозирование реагентов следует выполнять специализированным дозирующим насосом."
+              ]
+            },
+            {
+              "title": "4. Вспомогательный насос циркуляции жидкости в приборных системах",
+              "paragraphs": [
+                "Некоторым приборным контурам требуется постоянная или периодическая низконапорная циркуляция промывочной, сервисной или другой совместимой жидкости между резервуаром и внутренним модулем. В этой позиции насос класса 600 mL/min может работать как вспомогательный циркуляционный насос.",
+                "Это не высоконапорный циркуляционный насос. Фактическая подача зависит от сопротивления всего контура, а номинальное давление 100 kPa не означает подачу 600 mL/min при 100 kPa. Рабочую точку следует определять по кривой расход-давление."
+              ]
+            },
+            {
+              "title": "5. Автоматический насос подпитки для более крупных вспомогательных резервуаров",
+              "paragraphs": [
+                "Если прибор использует более крупный локальный резервуар промывочной или сервисной жидкости, отдельный насос подпитки может восстанавливать уровень из нижней ёмкости. При небольшом сопротивлении контура класс 600 mL/min позволяет сократить время подпитки по сравнению с насосом 300 mL/min.",
+                "Высота самовсасывания 3 mH₂O подходит для умеренного перепада уровней, однако фактическая производительность зависит от вязкости жидкости, длины всасывающей линии, сопротивления фильтра, давления на выходе и совместимости материалов."
+              ]
+            }
+          ],
+          "selectionNote": {
+            "title": "Примечание по подбору",
+            "variantParagraphs": {
+              "brushed": [
+                "600 mL/min — это расход без нагрузки, а не постоянная подача в установленной системе. Номинальное давление DPL60 составляет 100 kPa, но 600 mL/min и 100 kPa не являются одной рабочей точкой. Определите фактическое давление в системе, используйте кривую расход-давление и проверьте собранный контур. Для щеточной версии также необходимо подтвердить соответствие режима работы и требуемого ресурса условию 3 000 h."
+              ],
+              "brushless": [
+                "600 mL/min — это расход без нагрузки, а не постоянная подача в установленной системе. Номинальное давление DPL60 составляет 100 kPa, но 600 mL/min и 100 kPa не являются одной рабочей точкой. Определите фактическое давление в системе, используйте кривую расход-давление и проверьте собранный контур. Для бесщеточной версии указан ресурс 10 000 h, но реальная нагрузка, температура, частота запусков и собранный контур должны быть проверены."
+              ]
+            }
+          },
+          "linkText": "Подробнее: рабочая точка и подбор мембранного насоса 600 mL/min →"
+        }
+      }
+    },
+    "dpgl800": {
+      "articleSlug": "dpgl800-gas-liquid-diaphragm-pump-selection-guide",
+      "locales": {
+        "en": {
+          "tabLabel": "Applications",
+          "title": "Typical Applications for a High-Vacuum Gas-Liquid Diaphragm Pump",
+          "intro": [
+            "The DPGL800 is designed for aspiration duties where the fluid path may contain gas, liquid or a gas-liquid mixture. Its key selection parameters are a 6 L/min free gas flow reference, maximum vacuum below -90 kPa, 30 kPa maximum positive pressure and brushless 24 V operation. Unlike a conventional liquid-transfer pump, it is selected primarily by aspiration behavior, target vacuum, system volume, medium state and line losses."
+          ],
+          "items": [
+            {
+              "title": "1. Vacuum Waste Aspiration Pump for IVD and Analytical Instruments",
+              "paragraphs": [
+                "In IVD and analytical instruments, waste removal may involve liquid mixed with air rather than a continuously filled liquid line. A vacuum waste aspiration pump can draw residual liquid, wash waste and entrained air from a collection point toward a waste container.",
+                "The DPGL800 is better matched to this type of aspiration duty than a conventional low-flow liquid transfer pump when a strong vacuum source is required. The 6 L/min specification refers to free gas flow; waste-liquid removal rate must be validated with the actual gas-liquid ratio, tubing, vacuum level and discharge condition."
+              ]
+            },
+            {
+              "title": "2. Gas-Liquid Aspiration Pump for Laboratory Automation",
+              "paragraphs": [
+                "Automated sample preparation, washing or liquid-handling equipment may need to aspirate residual liquid while air enters the line intermittently. In these systems the pump functions as a gas-liquid aspiration pump rather than a constant-flow liquid delivery pump.",
+                "Maximum vacuum below -90 kPa provides the suction capability for demanding aspiration paths, while the real evacuation time depends on system volume, tubing ID, restrictions and the proportion of gas and liquid reaching the pump."
+              ]
+            },
+            {
+              "title": "3. Line Evacuation Pump for Instrument Fluid Paths",
+              "paragraphs": [
+                "After draining, bottle replacement or maintenance, an instrument may need to evacuate air and residual liquid from tubing before the next fluidic step. A gas-liquid diaphragm pump can be used as a line evacuation pump to clear the path and establish the required negative pressure.",
+                "The 6 L/min free gas flow is relevant to how quickly an air-filled volume can be evacuated, but it must be combined with the target vacuum and system volume. Do not use the 6 L/min figure as a liquid-flow specification."
+              ]
+            },
+            {
+              "title": "4. Vacuum Source for Automated Aspiration Modules",
+              "paragraphs": [
+                "Some automated instruments use a central or local negative-pressure module to drive aspiration at probes, waste manifolds or collection chambers. In this role, the pump acts as a vacuum source for the aspiration module rather than directly defining the liquid flow at every branch.",
+                "Selection should be based on required vacuum, total aspirated volume, simultaneous branch demand, tubing losses, medium state and allowed build-up time. Wetted-material compatibility must be verified whenever liquid can reach the pump."
+              ]
+            }
+          ],
+          "selectionNote": {
+            "title": "Application Selection Note",
+            "paragraphs": [
+              "For DPGL800, do not select the pump from the 6 L/min number alone. The value is a free gas-flow reference. Define the medium as gas, gas-liquid mixture or intermittent liquid slug; then specify the target vacuum, system volume, acceptable evacuation time, tubing resistance, discharge condition and wetted materials. Final performance must be verified in the complete aspiration circuit."
+            ]
+          },
+          "linkText": "Learn more: Vacuum, build-up time and selection of a gas-liquid diaphragm pump →"
+        },
+        "es": {
+          "tabLabel": "Aplicaciones",
+          "title": "Aplicaciones típicas de una bomba de diafragma gas-líquido de alto vacío",
+          "intro": [
+            "La DPGL800 está diseñada para aplicaciones de aspiración en las que el circuito puede contener gas, líquido o una mezcla gas-líquido. Sus parámetros principales de selección son un caudal de gas libre de referencia de 6 L/min, vacío máximo inferior a -90 kPa, presión positiva máxima de 30 kPa y funcionamiento sin escobillas a 24 V. A diferencia de una bomba convencional de transferencia de líquidos, debe seleccionarse principalmente por el comportamiento de aspiración, el vacío requerido, el volumen del sistema, el estado del medio y las pérdidas de la línea."
+          ],
+          "items": [
+            {
+              "title": "1. Bomba de aspiración por vacío de líquidos residuales para IVD y equipos analíticos",
+              "paragraphs": [
+                "En equipos IVD y analizadores, la evacuación de residuos puede incluir líquido mezclado con aire y no una tubería continuamente llena. Una bomba de aspiración por vacío puede extraer líquido residual, residuos de lavado y aire arrastrado desde el punto de recogida hasta el recipiente de residuos.",
+                "La DPGL800 se adapta mejor a esta función que una bomba convencional de transferencia de bajo caudal cuando se necesita una fuente de vacío fuerte. La especificación de 6 L/min corresponde al caudal de gas libre; la velocidad real de evacuación de líquido debe validarse con la proporción gas-líquido, las tuberías, el nivel de vacío y la condición de descarga reales."
+              ]
+            },
+            {
+              "title": "2. Bomba de aspiración gas-líquido para automatización de laboratorio",
+              "paragraphs": [
+                "Los sistemas automáticos de preparación de muestras, lavado o manipulación de líquidos pueden necesitar aspirar líquido residual mientras entra aire de forma intermitente en la línea. En este caso la bomba funciona como bomba de aspiración gas-líquido y no como bomba de suministro de líquido a caudal constante.",
+                "El vacío máximo inferior a -90 kPa proporciona capacidad de aspiración para circuitos exigentes, mientras que el tiempo real de evacuación depende del volumen del sistema, el diámetro de la tubería, las restricciones y la proporción de gas y líquido que llega a la bomba."
+              ]
+            },
+            {
+              "title": "3. Bomba de evacuación de tuberías para circuitos de instrumentos",
+              "paragraphs": [
+                "Después de un vaciado, un cambio de depósito o mantenimiento, un instrumento puede necesitar evacuar aire y líquido residual de la tubería antes de la siguiente etapa del proceso. Una bomba de diafragma gas-líquido puede utilizarse para vaciar la línea y establecer la presión negativa requerida.",
+                "El caudal de gas libre de 6 L/min es relevante para calcular la velocidad de evacuación de un volumen lleno de aire, pero debe relacionarse con el vacío objetivo y el volumen total del sistema. No debe utilizarse como especificación de caudal de líquido."
+              ]
+            },
+            {
+              "title": "4. Fuente de vacío para módulos automáticos de aspiración",
+              "paragraphs": [
+                "Algunos instrumentos automáticos utilizan un módulo de presión negativa central o local para accionar la aspiración en sondas, colectores de residuos o cámaras de recogida. En esta función, la bomba actúa como fuente de vacío del módulo y no determina directamente el caudal de líquido de cada ramal.",
+                "La selección debe basarse en el vacío requerido, el volumen total aspirado, la demanda simultánea de los ramales, las pérdidas de tubería, el estado del medio y el tiempo de creación de vacío permitido. Si el líquido puede alcanzar la bomba, también debe verificarse la compatibilidad de los materiales en contacto."
+              ]
+            }
+          ],
+          "selectionNote": {
+            "title": "Nota de selección para la aplicación",
+            "paragraphs": [
+              "En la DPGL800 no debe seleccionarse la bomba únicamente por el valor de 6 L/min. Se trata de un caudal de gas libre de referencia. Defina si el medio es gas, mezcla gas-líquido o entradas intermitentes de líquido; después especifique el vacío objetivo, volumen del sistema, tiempo de evacuación permitido, resistencia de las tuberías, condición de descarga y materiales en contacto. El rendimiento final debe verificarse en el circuito completo."
+            ]
+          },
+          "linkText": "Más información: vacío, tiempo de evacuación y selección de una bomba de diafragma gas-líquido →"
+        },
+        "fr": {
+          "tabLabel": "Applications",
+          "title": "Applications typiques d’une pompe à membrane gaz-liquide à fort vide",
+          "intro": [
+            "La DPGL800 est conçue pour les fonctions d’aspiration dans lesquelles le circuit peut contenir du gaz, du liquide ou un mélange gaz-liquide. Ses principaux paramètres de sélection sont un débit de gaz libre de référence de 6 L/min, un vide maximal inférieur à -90 kPa, une pression positive maximale de 30 kPa et un moteur sans balais 24 V. Contrairement à une pompe classique de transfert de liquide, elle se sélectionne principalement selon le comportement d’aspiration, le vide cible, le volume du système, l’état du fluide et les pertes de charge."
+          ],
+          "items": [
+            {
+              "title": "1. Pompe d’aspiration sous vide des déchets liquides pour systèmes IVD et analytiques",
+              "paragraphs": [
+                "Dans les systèmes IVD et les instruments analytiques, l’évacuation des déchets peut concerner un liquide mélangé à de l’air plutôt qu’une conduite continuellement remplie. Une pompe d’aspiration sous vide peut extraire les résidus liquides, les déchets de lavage et l’air entraîné depuis un point de collecte vers le réservoir de déchets.",
+                "La DPGL800 convient mieux à cette fonction qu’une pompe classique de transfert à faible débit lorsqu’une forte capacité de vide est nécessaire. La valeur de 6 L/min correspond au débit de gaz libre ; le débit réel d’évacuation du liquide doit être validé selon le rapport gaz-liquide, les conduites, le niveau de vide et les conditions de refoulement réels."
+              ]
+            },
+            {
+              "title": "2. Pompe d’aspiration gaz-liquide pour l’automatisation de laboratoire",
+              "paragraphs": [
+                "Les équipements automatisés de préparation d’échantillons, de lavage ou de manipulation de liquides peuvent devoir aspirer des résidus liquides alors que de l’air entre de manière intermittente dans la conduite. La pompe fonctionne alors comme pompe d’aspiration gaz-liquide et non comme pompe d’alimentation de liquide à débit constant.",
+                "Un vide maximal inférieur à -90 kPa offre une capacité d’aspiration élevée, tandis que le temps réel d’évacuation dépend du volume du système, du diamètre des tuyaux, des restrictions et de la proportion de gaz et de liquide arrivant à la pompe."
+              ]
+            },
+            {
+              "title": "3. Pompe d’évacuation de ligne pour circuits fluidiques d’instruments",
+              "paragraphs": [
+                "Après une vidange, un remplacement de réservoir ou une opération de maintenance, un instrument peut avoir besoin d’évacuer l’air et le liquide résiduel des conduites avant l’étape fluidique suivante. Une pompe à membrane gaz-liquide peut être utilisée pour évacuer la ligne et établir la dépression requise.",
+                "Le débit de gaz libre de 6 L/min est pertinent pour la vitesse d’évacuation d’un volume rempli d’air, mais il doit être combiné au vide cible et au volume du système. Il ne doit pas être interprété comme un débit liquide de 6 L/min."
+              ]
+            },
+            {
+              "title": "4. Source de vide pour modules d’aspiration automatisés",
+              "paragraphs": [
+                "Certains instruments automatisés utilisent un module de dépression central ou local pour assurer l’aspiration au niveau des sondes, collecteurs de déchets ou chambres de collecte. Dans ce rôle, la pompe agit comme source de vide du module et ne définit pas directement le débit de liquide dans chaque branche.",
+                "Le choix doit tenir compte du vide requis, du volume total aspiré, des branches fonctionnant simultanément, des pertes de charge, de l’état du fluide et du temps de montée au vide autorisé. Lorsque du liquide peut atteindre la pompe, la compatibilité des matériaux en contact doit également être vérifiée."
+              ]
+            }
+          ],
+          "selectionNote": {
+            "title": "Remarque pour le choix de l’application",
+            "paragraphs": [
+              "Pour la DPGL800, ne pas sélectionner la pompe sur la seule valeur de 6 L/min. Cette valeur correspond à un débit de gaz libre de référence. Définir si le milieu est un gaz, un mélange gaz-liquide ou des arrivées intermittentes de liquide, puis préciser le vide cible, le volume du système, le temps d’évacuation admissible, la résistance des conduites, les conditions de refoulement et les matériaux en contact. Les performances finales doivent être validées dans le circuit d’aspiration complet."
+            ]
+          },
+          "linkText": "En savoir plus : vide, temps d’évacuation et choix d’une pompe à membrane gaz-liquide →"
+        },
+        "ko": {
+          "tabLabel": "적용 분야",
+          "title": "고진공 기액 다이어프램 펌프의 주요 적용 분야",
+          "intro": [
+            "DPGL800은 유로에 기체, 액체 또는 기액 혼합 상태가 존재할 수 있는 흡인 작업을 위해 설계된 펌프입니다. 주요 선정 기준은 6 L/min 자유 기체 유량 기준, -90 kPa 미만의 최대 진공도, 30 kPa 최대 양압 및 24 V 무브러시 구동입니다. 일반 액체 이송 펌프와 달리 흡인 특성, 목표 진공도, 시스템 용적, 매체 상태 및 배관 손실을 중심으로 선정해야 합니다."
+          ],
+          "items": [
+            {
+              "title": "1. IVD 및 분석 장비의 진공 폐액 흡인 펌프",
+              "paragraphs": [
+                "IVD 및 분석 장비의 폐액 제거 유로는 항상 액체로 가득 찬 상태가 아니라 액체와 공기가 함께 유입될 수 있습니다. 진공 폐액 흡인 펌프는 잔류 액체, 세척 폐액 및 함께 유입되는 공기를 수집 위치에서 폐액 용기로 흡인할 수 있습니다.",
+                "강한 진공원이 필요한 이러한 작업에서는 일반적인 저유량 액체 이송 펌프보다 DPGL800과 같은 기액 흡인 펌프가 더 적합할 수 있습니다. 6 L/min은 자유 기체 유량 기준이며 실제 폐액 제거 속도는 기액 비율, 배관, 진공도 및 토출 조건을 사용해 검증해야 합니다."
+              ]
+            },
+            {
+              "title": "2. 실험실 자동화용 기액 혼합 흡인 펌프",
+              "paragraphs": [
+                "자동 시료 전처리, 세척 또는 액체 처리 장비에서는 잔류 액체를 흡인하는 동안 공기가 간헐적으로 유입될 수 있습니다. 이 경우 펌프는 일정한 액체 공급 펌프가 아니라 기액 혼합 흡인 펌프로 동작합니다.",
+                "-90 kPa 미만의 최대 진공도는 높은 흡인 성능이 필요한 유로에 유리하며, 실제 배기 시간은 시스템 용적, 튜브 내경, 유로 제한 요소 및 펌프로 들어오는 기체와 액체의 비율에 따라 달라집니다."
+              ]
+            },
+            {
+              "title": "3. 장비 유로용 배관 진공 배기 펌프",
+              "paragraphs": [
+                "배액, 저장 용기 교체 또는 유지보수 후 다음 유체 공정 전에 배관 내부의 공기와 잔류 액체를 제거해야 할 수 있습니다. 기액 다이어프램 펌프는 배관을 비우고 필요한 음압을 형성하는 진공 배기 펌프로 사용할 수 있습니다.",
+                "6 L/min 자유 기체 유량은 공기로 채워진 용적을 얼마나 빠르게 배기할 수 있는지 판단할 때 유용하지만 목표 진공도와 시스템 용적을 함께 고려해야 합니다. 이 수치를 6 L/min 액체 유량으로 해석해서는 안 됩니다."
+              ]
+            },
+            {
+              "title": "4. 자동 흡인 모듈용 진공원",
+              "paragraphs": [
+                "일부 자동화 장비는 프로브, 폐액 매니폴드 또는 수집 챔버에서 흡인을 구동하기 위해 중앙 또는 로컬 음압 모듈을 사용합니다. 이 위치에서 펌프는 각 분기의 액체 유량을 직접 결정하는 펌프라기보다 흡인 모듈의 진공원으로 동작합니다.",
+                "필요 진공도, 총 흡인 용적, 동시 작동 분기 수, 배관 손실, 매체 상태 및 허용 진공 형성 시간을 기준으로 선정해야 합니다. 액체가 펌프까지 도달할 수 있다면 접액 재질 호환성도 반드시 확인해야 합니다."
+              ]
+            }
+          ],
+          "selectionNote": {
+            "title": "적용 선정 참고",
+            "paragraphs": [
+              "DPGL800은 6 L/min 숫자만으로 선정해서는 안 됩니다. 이 값은 자유 기체 유량 기준입니다. 매체가 기체인지, 기액 혼합인지, 또는 액체가 간헐적으로 유입되는지 먼저 정의한 뒤 목표 진공도, 시스템 용적, 허용 배기 시간, 배관 저항, 토출 조건 및 접액 재질을 함께 확인해야 합니다. 최종 성능은 완성된 흡인 유로에서 검증해야 합니다."
+            ]
+          },
+          "linkText": "자세히 보기: 기액 다이어프램 펌프의 진공도, 진공 형성 시간 및 선정 방법 →"
+        },
+        "ru": {
+          "tabLabel": "Применение",
+          "title": "Типовые применения высоковакуумного газожидкостного мембранного насоса",
+          "intro": [
+            "DPGL800 предназначен для задач аспирации, где в контуре могут присутствовать газ, жидкость или газожидкостная смесь. Основные параметры подбора — свободная подача газа 6 L/min, максимальный вакуум ниже -90 kPa, максимальное положительное давление 30 kPa и бесщеточный привод 24 V. В отличие от обычного жидкостного насоса, его следует подбирать прежде всего по характеру аспирации, требуемому вакууму, объёму системы, состоянию среды и потерям в трубопроводах."
+          ],
+          "items": [
+            {
+              "title": "1. Вакуумный насос для аспирации отходов в IVD и аналитическом оборудовании",
+              "paragraphs": [
+                "В IVD и аналитических приборах отвод отходов может происходить по линии, где жидкость смешивается с воздухом, а трубопровод не остаётся постоянно заполненным. Вакуумный насос для аспирации может удалять остаточную жидкость, промывочные отходы и воздух из точки сбора в ёмкость для отходов.",
+                "Если требуется сильный источник вакуума, DPGL800 лучше соответствует такой задаче, чем обычный малорасходный насос для перекачки жидкости. Значение 6 L/min относится к свободной подаче газа; фактическую скорость удаления жидкости необходимо проверять с учётом соотношения газ-жидкость, трубопроводов, уровня вакуума и условий на выходе."
+              ]
+            },
+            {
+              "title": "2. Газожидкостный аспирационный насос для лабораторной автоматизации",
+              "paragraphs": [
+                "Автоматические системы подготовки проб, промывки и жидкостной обработки могут аспирировать остаточную жидкость при периодическом поступлении воздуха в линию. В таком режиме насос работает как газожидкостный аспирационный насос, а не как насос постоянной подачи жидкости.",
+                "Максимальный вакуум ниже -90 kPa обеспечивает высокую способность к всасыванию, однако реальное время эвакуации зависит от объёма системы, внутреннего диаметра трубок, местных сопротивлений и доли газа и жидкости, поступающих к насосу."
+              ]
+            },
+            {
+              "title": "3. Насос для вакуумирования трубопроводов приборной системы",
+              "paragraphs": [
+                "После слива, замены ёмкости или технического обслуживания может потребоваться удалить воздух и остаточную жидкость из трубопроводов до следующего этапа работы. Газожидкостный мембранный насос может использоваться для вакуумирования линии и создания требуемого отрицательного давления.",
+                "Свободная подача газа 6 L/min важна при оценке скорости удаления воздуха из заданного объёма, однако её необходимо рассматривать вместе с требуемым вакуумом и объёмом системы. Это значение нельзя трактовать как расход жидкости 6 L/min."
+              ]
+            },
+            {
+              "title": "4. Источник вакуума для автоматических модулей аспирации",
+              "paragraphs": [
+                "Некоторые автоматические приборы используют центральный или локальный модуль отрицательного давления для аспирации через пробоотборные иглы, коллекторы отходов или камеры сбора. В этой роли насос служит источником вакуума для модуля, а не напрямую задаёт расход жидкости в каждой ветви.",
+                "Подбор следует выполнять по требуемому вакууму, суммарному аспирируемому объёму, одновременной нагрузке ветвей, потерям в трубопроводах, состоянию среды и допустимому времени создания вакуума. Если жидкость может достигать насоса, необходимо проверить совместимость всех смачиваемых материалов."
+              ]
+            }
+          ],
+          "selectionNote": {
+            "title": "Примечание по подбору",
+            "paragraphs": [
+              "DPGL800 нельзя выбирать только по значению 6 L/min. Это свободная подача газа. Сначала определите состояние среды: газ, газожидкостная смесь или периодические порции жидкости. Затем задайте требуемый вакуум, объём системы, допустимое время эвакуации, сопротивление трубопроводов, условия на выходе и смачиваемые материалы. Итоговые характеристики необходимо проверить в собранном аспирационном контуре."
+            ]
+          },
+          "linkText": "Подробнее: вакуум, время откачки и подбор газожидкостного мембранного насоса →"
+        }
+      }
+    }
+  }
+}

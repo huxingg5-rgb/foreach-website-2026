@@ -69,6 +69,7 @@
 @media (min-width: 1001px) {
   :global(.site-footer__title) {
     font-size: 16px !important;
+    font-weight: 600 !important;
   }
 
   :global(.site-footer__list a) {
@@ -76,7 +77,11 @@
   }
 
   :global(.site-footer__company) {
-    font-size: 26px !important;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    line-height: 1.35 !important;
+    white-space: nowrap !important;
+    overflow-wrap: normal !important;
   }
 
   :global(.site-footer__contact-text),

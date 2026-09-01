@@ -752,6 +752,16 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
 
 };
 
+/*
+ * 旧版清单可能保存英文基础分类名，而当前正式分类名已经更完整。
+ * 这里保留别名，确保切换语言后旧数据也能映射到当前语言。
+ */
+const FILTER_OPTION_LABEL_ALIASES: Record<string, string> = {
+  "Diaphragm Pump": "隔膜泵",
+  "Pipette Pump": "移液泵",
+  Probes: "针系列",
+};
+
 function normalizeProductFilterLocale(locale?: string): ProductFilterLocale {
   if (locale === "zh-CN") return "zh";
   if (locale === "en" || locale === "es" || locale === "fr" || locale === "ko" || locale === "ru") {
@@ -761,9 +771,14 @@ function normalizeProductFilterLocale(locale?: string): ProductFilterLocale {
 }
 
 export function getLocalizedFilterOptionLabel(value: string | number | null | undefined, locale?: string): string {
-  const rawValue = String(value ?? "");
+  const rawValue = String(value ?? "").trim();
   const normalizedLocale = normalizeProductFilterLocale(locale);
-  const localized = FILTER_OPTION_LABELS[rawValue];
+  const canonicalValue = FILTER_OPTION_LABEL_ALIASES[rawValue] ?? rawValue;
+  const localized =
+    FILTER_OPTION_LABELS[canonicalValue] ??
+    Object.values(FILTER_OPTION_LABELS).find((labels) =>
+      Object.values(labels).some((label) => label === rawValue),
+    );
 
   if (!localized) {
     return rawValue;

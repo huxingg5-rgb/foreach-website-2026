@@ -62,6 +62,11 @@
     box-shadow 0.18s ease;
 }
 
+/* 俄文按钮字形较宽，右下角两个短标签使用常规字重。 */
+:global(html[lang="ru"]) .floatingActions button {
+  font-weight: 400;
+}
+
 .floatingActions button:first-child {
   background: rgba(255, 255, 255, 0.94);
   color: rgba(23, 51, 104, 0.82);

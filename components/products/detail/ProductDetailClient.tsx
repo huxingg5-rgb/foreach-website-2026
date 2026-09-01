@@ -38,6 +38,7 @@ import type { SelectionCartItemInput } from "@/components/selection-cart/selecti
 import SitePageShell from "@/components/layout/SitePageShell";
 import PdfDrawingPreview from "@/components/common/PdfDrawingPreview";
 import CadRequestModal from "./CadRequestModal";
+import ProductApplicationsPanel from "./ProductApplicationsPanel";
 import ProductDatasheetPanel from "./ProductDatasheetPanel";
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -49,7 +50,10 @@ import {
   isHardTubeTargetLocale,
 } from "@/data/products/detail/hard-tube-fitting-detail.intl";
 import { localizeTargetProductDetailData } from "@/data/products/detail/product-detail.target.intl";
-import type { ProductDetailPageData } from "@/data/products/detail/product-detail.types";
+import type {
+  ProductApplicationsContent,
+  ProductDetailPageData,
+} from "@/data/products/detail/product-detail.types";
 import {
   getProductDatasheet,
   getProductDetailResourceCopy,
@@ -125,7 +129,79 @@ import {
 
 import styles from "./product-detail.module.css";
 
-type ProductDetailTab = "spec" | "model3d" | "drawing" | "datasheet";
+type ProductDetailTab =
+  | "spec"
+  | "applications"
+  | "model3d"
+  | "drawing"
+  | "datasheet";
+
+type ProductDetailTabLocale = "zh" | "en" | "es" | "fr" | "ko" | "ru";
+
+const MOBILE_PRODUCT_TAB_LABELS: Record<
+  ProductDetailTabLocale,
+  Record<ProductDetailTab, string>
+> = {
+  zh: {
+    spec: "规格",
+    applications: "应用",
+    model3d: "3D",
+    drawing: "图纸",
+    datasheet: "资料",
+  },
+  en: {
+    spec: "Specs",
+    applications: "Uses",
+    model3d: "3D",
+    drawing: "Drawing",
+    datasheet: "Sheet",
+  },
+  es: {
+    spec: "Espec.",
+    applications: "Usos",
+    model3d: "3D",
+    drawing: "Plano",
+    datasheet: "Ficha",
+  },
+  fr: {
+    spec: "Spéc.",
+    applications: "Usages",
+    model3d: "3D",
+    drawing: "Plan",
+    datasheet: "Fiche",
+  },
+  ko: {
+    spec: "사양",
+    applications: "용도",
+    model3d: "3D",
+    drawing: "도면",
+    datasheet: "자료",
+  },
+  ru: {
+    spec: "Парам.",
+    applications: "Примен.",
+    model3d: "3D",
+    drawing: "Чертёж",
+    datasheet: "Описание",
+  },
+};
+
+function ProductTabLabel({
+  fullLabel,
+  shortLabel,
+}: {
+  fullLabel: string;
+  shortLabel: string;
+}) {
+  return (
+    <>
+      <span className={styles.tabLabelFull}>{fullLabel}</span>
+      <span className={styles.tabLabelShort} aria-hidden="true">
+        {shortLabel}
+      </span>
+    </>
+  );
+}
 
 type ProductDetailClientProps = {
   data: ProductDetailPageData & Record<string, any>;
@@ -136,6 +212,10 @@ type ProductDetailClientProps = {
 type ZoomStyle = CSSProperties & {
   "--zoom-x"?: string;
   "--zoom-y"?: string;
+};
+
+type ProductTabNavStyle = CSSProperties & {
+  "--product-detail-tab-count"?: number;
 };
 
 function getProductDrawingPreviewUrl(slug: string, configuredUrl?: string) {
@@ -1359,6 +1439,10 @@ export default function ProductDetailClient({
     : null;
   const configuratorLocale =
     targetLocale || (isEnglish ? "en" : "zh");
+  const mobileTabLabels =
+    MOBILE_PRODUCT_TAB_LABELS[
+      configuratorLocale as ProductDetailTabLocale
+    ] || MOBILE_PRODUCT_TAB_LABELS.zh;
   const localePrefix = isEnglish
     ? "/en"
     : targetLocale
@@ -1379,6 +1463,17 @@ export default function ProductDetailClient({
     },
     [configuratorLocale, isEnglish, pathname, sourceData, targetLocale]
   );
+  const rawApplicationDetails = data.applicationDetails as
+    | ProductApplicationsContent
+    | undefined;
+  const applicationDetails =
+    rawApplicationDetails?.tabLabel &&
+    rawApplicationDetails.title &&
+    Array.isArray(rawApplicationDetails.items) &&
+    rawApplicationDetails.items.length > 0
+      ? rawApplicationDetails
+      : null;
+  const hasApplicationDetails = applicationDetails !== null;
   const isDiaphragmPage = isPublishedDiaphragmPumpDetail(pathname, data);
   const diaphragmReference = isDiaphragmPage
     ? getDiaphragmPumpReferenceFromIdentity(data)
@@ -1387,6 +1482,8 @@ export default function ProductDetailClient({
   const datasheet = resourceLocale
     ? getProductDatasheet(sourceData.datasheetId)
     : null;
+  const productDetailTabCount =
+    3 + (hasApplicationDetails ? 1 : 0) + (resourceLocale ? 1 : 0);
   const isCadRequestAvailable = Boolean(
     resourceLocale && sourceData.cadRequestAvailable !== false,
   );
@@ -2073,6 +2170,8 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
     const tabName =
       nextTab === "spec"
         ? "specifications"
+        : nextTab === "applications"
+          ? "applications"
         : nextTab === "model3d"
           ? "3d"
           : nextTab === "drawing"
@@ -3242,6 +3341,14 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
             className={styles.tabNav}
             aria-label={copy.tabs}
             data-has-datasheet-tab={resourceLocale ? "true" : undefined}
+            data-has-applications-tab={
+              hasApplicationDetails ? "true" : undefined
+            }
+            style={
+              {
+                "--product-detail-tab-count": productDetailTabCount,
+              } as ProductTabNavStyle
+            }
           >
             <button
               className={[
@@ -3251,10 +3358,33 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                 .filter(Boolean)
                 .join(" ")}
               type="button"
+              aria-label={copy.specifications}
               onClick={() => handleProductTabChange("spec")}
             >
-              {copy.specifications === "Технические характеристики" ? "Характеристики" : copy.specifications}
+              <ProductTabLabel
+                fullLabel={copy.specifications}
+                shortLabel={mobileTabLabels.spec}
+              />
             </button>
+
+            {applicationDetails ? (
+              <button
+                className={[
+                  styles.tabButton,
+                  activeTab === "applications" ? styles.isActive : "",
+                ]
+                  .filter(Boolean)
+                  .join(" ")}
+                type="button"
+                aria-label={applicationDetails.tabLabel}
+                onClick={() => handleProductTabChange("applications")}
+              >
+                <ProductTabLabel
+                  fullLabel={applicationDetails.tabLabel}
+                  shortLabel={mobileTabLabels.applications}
+                />
+              </button>
+            ) : null}
 
             <button
               className={[
@@ -3272,9 +3402,13 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
               }
               data-analytics-section="product_detail_tabs"
               data-analytics-skip="true"
+              aria-label={copy.model3d}
               onClick={() => handleProductTabChange("model3d")}
             >
-              {copy.model3d}
+              <ProductTabLabel
+                fullLabel={copy.model3d}
+                shortLabel={mobileTabLabels.model3d}
+              />
             </button>
 
             <button
@@ -3285,9 +3419,13 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                 .filter(Boolean)
                 .join(" ")}
               type="button"
+              aria-label={copy.technicalDrawing}
               onClick={() => handleProductTabChange("drawing")}
             >
-              {copy.technicalDrawing.startsWith("Технический ") ? "Чертёж" : copy.technicalDrawing}
+              <ProductTabLabel
+                fullLabel={copy.technicalDrawing}
+                shortLabel={mobileTabLabels.drawing}
+              />
             </button>
 
             {resourceLocale && resourceCopy ? (
@@ -3299,9 +3437,13 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                   .filter(Boolean)
                   .join(" ")}
                 type="button"
+                aria-label={resourceCopy.datasheetTab}
                 onClick={() => handleProductTabChange("datasheet")}
               >
-                {resourceCopy.datasheetTab}
+                <ProductTabLabel
+                  fullLabel={resourceCopy.datasheetTab}
+                  shortLabel={mobileTabLabels.datasheet}
+                />
               </button>
             ) : null}
           </nav>
@@ -3341,6 +3483,19 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                 </table>
               </div>
             </div>
+
+            {applicationDetails ? (
+              <div
+                className={[
+                  styles.panel,
+                  activeTab === "applications" ? styles.isActive : "",
+                ]
+                  .filter(Boolean)
+                  .join(" ")}
+              >
+                <ProductApplicationsPanel content={applicationDetails} />
+              </div>
+            ) : null}
 
             <div
               className={[

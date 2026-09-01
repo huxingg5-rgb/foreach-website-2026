@@ -34,7 +34,7 @@ export default function FluidResistancePage() {
         variant="bar"
         items={[
           { label: "首页", href: "/" },
-          { label: "资源中心", href: "/resources/datasheets" },
+          { label: "资源中心" },
           { label: "流阻计算器" },
         ]}
       />

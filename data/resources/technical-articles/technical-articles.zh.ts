@@ -8,7 +8,7 @@
    3. 技术文章用于沉淀产品选型、材料兼容、管路连接、密封方式与应用设计经验
 ========================================================= */
 
-import type { TechnicalArticlesPageData } from "./technical-articles.types";
+import type { TechnicalArticlesSourcePageData } from "./technical-articles.types";
 
 const technicalArticlesBannerImage =
   "/images/resources/technical-articles/banner/resources-technical-articles-banner-1920x520-v001.webp";
@@ -20,7 +20,7 @@ const technicalArticlesBannerImage =
 */
 const defaultCoverImage = technicalArticlesBannerImage;
 
-export const technicalArticlesZhData: TechnicalArticlesPageData = {
+export const technicalArticlesZhData: TechnicalArticlesSourcePageData = {
   locale: "zh-CN",
 
   hero: {
@@ -48,29 +48,6 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
     placeholder: "请输入关键词",
   },
 
-  categories: [
-    {
-      key: "all",
-      label: "全部",
-    },
-    {
-      key: "fittings-tubing",
-      label: "接头与管路",
-    },
-    {
-      key: "pumps-valves",
-      label: "泵阀与流体控制",
-    },
-    {
-      key: "materials-compatibility",
-      label: "材料与兼容",
-    },
-    {
-      key: "applications",
-      label: "应用说明",
-    },
-  ],
-
   sectionTitle: "技术文章",
 
   articles: [
@@ -82,7 +59,7 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       title:
         "300 mL/min液体隔膜泵怎么选？DPL30工作原理与型号选型指南",
       summary: "",
-      date: "2026-08-04",
+      date: "2026-07-10",
 
       /*
        * 第一阶段暂时沿用技术文章默认封面。
@@ -116,7 +93,7 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       title: "工程实践｜微流控与精密节流场景 Cv/Kv 系数计算失真分析与修正指南",
       summary:
         "传统 Cv/Kv 计算通常建立在充分湍流和阻力平方区假设之上。在微小通径、低流速和低雷诺数工况下，直接套用可能明显低估实际压降。本文分析失真原因，并介绍雷诺修正、Churchill 摩擦因子及小孔节流修正方法。",
-      date: "2026-07-23",
+      date: "2026-07-07",
       coverImage: defaultCoverImage,
       content: [
         {
@@ -166,7 +143,7 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       title: "微流体系统中如何选择合适的管路连接件",
       summary:
         "管路连接件不仅影响液路系统的密封性，也会影响装配效率、维护便利性和长期稳定性。选择接头时，需要综合考虑管材尺寸、连接方式、使用压力、介质类型和安装空间。",
-      date: "2026-06-08",
+      date: "2026-07-04",
       coverImage:
         "/images/resources/technical-articles/covers/selecting-microfluidic-fittings.webp",
       content: [
@@ -189,7 +166,7 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       title: "PEEK、PTFE、PFA 材料在液路系统中的应用差异",
       summary:
         "PEEK、PTFE、PFA 都是微流体系统中常见的高性能材料，但它们在机械强度、耐化学性、透明度、柔韧性和加工方式上存在明显差异。",
-      date: "2026-06-07",
+      date: "2026-07-01",
       coverImage:
         "/images/resources/technical-articles/covers/peek-ptfe-pfa-material-differences.webp",
       content: [
@@ -212,7 +189,7 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       title: "低压管路连接件和高压管路连接件有什么区别",
       summary:
         "低压连接件更关注装配效率和密封可靠性，高压连接件则更强调结构强度、密封方式和耐压稳定性。两者不能简单互相替代。",
-      date: "2026-06-06",
+      date: "2026-06-28",
       coverImage:
         "/images/resources/technical-articles/covers/low-pressure-vs-high-pressure-fittings.webp",
       content: [
@@ -235,7 +212,7 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       title: "硬管连接和软管连接的主要差异",
       summary:
         "硬管连接更适合尺寸稳定和定位明确的液路结构，软管连接则更适合需要弯曲、缓冲或灵活布管的场景。",
-      date: "2026-06-05",
+      date: "2026-06-25",
       coverImage:
         "/images/resources/technical-articles/covers/rigid-tubing-vs-flexible-tubing.webp",
       content: [
@@ -258,7 +235,7 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       title: "接头密封失效的常见原因",
       summary:
         "接头漏液不一定是接头本身问题，也可能与管材尺寸、安装方式、切管质量、密封件状态和系统压力有关。",
-      date: "2026-06-04",
+      date: "2026-06-22",
       coverImage:
         "/images/resources/technical-articles/covers/common-fitting-sealing-failure-causes.webp",
       content: [
@@ -281,7 +258,7 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       title: "微量柱塞泵选型时需要关注哪些指标",
       summary:
         "微量柱塞泵选型时，需要关注分配体积、精度、重复性、压力范围、接口形式、驱动方式和系统通信方式。",
-      date: "2026-06-03",
+      date: "2026-06-19",
       coverImage:
         "/images/resources/technical-articles/covers/micro-plunger-pump-selection.webp",
       content: [
@@ -304,7 +281,7 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       title: "电磁阀在微流体系统中的作用",
       summary:
         "电磁阀用于控制流路通断、切换和分配，是液路系统中实现自动化控制的重要部件。",
-      date: "2026-06-02",
+      date: "2026-06-16",
       coverImage:
         "/images/resources/technical-articles/covers/solenoid-valves-in-microfluidic-systems.webp",
       content: [
@@ -327,7 +304,7 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       title: "材料兼容表可以作为最终选型依据吗",
       summary:
         "材料兼容表适合作为初步筛选工具，但不能完全替代实际工况验证。最终选型仍需结合温度、浓度、压力和接触时间判断。",
-      date: "2026-06-01",
+      date: "2026-06-13",
       coverImage:
         "/images/resources/technical-articles/covers/material-compatibility-table-reference.webp",
       content: [
@@ -350,7 +327,7 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       title: "IVD 设备中液路系统选型需要关注哪些参数",
       summary:
         "IVD 设备液路系统通常需要兼顾精度、稳定性、洁净度、材料兼容和长期维护成本。单个零部件的选择会影响整机液路表现。",
-      date: "2026-05-31",
+      date: "2026-06-10",
       coverImage:
         "/images/resources/technical-articles/covers/ivd-fluidic-system-selection-parameters.webp",
       content: [
@@ -373,7 +350,7 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       title: "如何理解液路系统中的耐压、流量与材料兼容",
       summary:
         "耐压、流量和材料兼容是液路系统设计中的三个核心因素，它们相互影响，不能单独判断。",
-      date: "2026-05-30",
+      date: "2026-06-07",
       coverImage:
         "/images/resources/technical-articles/covers/pressure-flow-material-compatibility.webp",
       content: [
@@ -396,7 +373,7 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       title: "为什么微流体产品选型需要结合应用场景",
       summary:
         "同样的产品在不同应用场景下可能表现不同，因此微流体产品选型必须结合介质、压力、精度、安装空间和维护方式综合判断。",
-      date: "2026-05-29",
+      date: "2026-06-04",
       coverImage:
         "/images/resources/technical-articles/covers/why-application-context-matters.webp",
       content: [
@@ -419,7 +396,7 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       title: "如何根据图纸或样品进行接头替代选型",
       summary:
         "接头替代选型不仅要看外形尺寸，还要确认接口规格、密封方式、材料、耐压和实际应用条件。",
-      date: "2026-05-28",
+      date: "2026-06-01",
       coverImage:
         "/images/resources/technical-articles/covers/fitting-replacement-by-drawings-or-samples.webp",
       content: [

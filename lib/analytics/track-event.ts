@@ -274,6 +274,7 @@ export function trackProductTabSelect(input: {
     | "3d"
     | "2d"
     | "datasheet"
+    | "applications"
     | "faq"
     | "other";
   productId: string;

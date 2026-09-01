@@ -197,9 +197,7 @@ export default function DatasheetsClient({
 
           <span>/</span>
 
-          <Link href={pageText.breadcrumb.resourcesHref ?? "/resources"}>
-            {pageText.breadcrumb.resources}
-          </Link>
+          <span>{pageText.breadcrumb.resources}</span>
 
           <span>/</span>
 

@@ -6,6 +6,7 @@ import {
   getDiaphragmPumpCopy,
   getDiaphragmPumpSeriesSeoDescription,
 } from "@/data/products/detail/diaphragm-pump-copy";
+import { getDiaphragmPumpApplicationDetails } from "@/data/products/detail/applications/diaphragm-pump-applications";
 import { getProductDetailTitleOverride } from "@/data/products/detail/product-detail-title-overrides";
 import {
   diaphragmPumpReferenceModels,
@@ -848,7 +849,10 @@ function findPreferredDiaphragmAssetUrl(
 }
 // DIAPHRAGM_DETAIL_2D_3D_MAPPING_END
 
-function adaptToProductDetailClientData(detail: DiaphragmDetail) {
+function adaptToProductDetailClientData(
+  detail: DiaphragmDetail,
+  locale: ReturnType<typeof normalizeDiaphragmPumpLocale>,
+) {
   const slug = normalizeSlug(detail.slug);
   const title = getText(detail.title || detail.displayName || detail.seriesId);
   const cleanModelCode = getCleanDiaphragmModelCode(detail);
@@ -863,6 +867,11 @@ function adaptToProductDetailClientData(detail: DiaphragmDetail) {
   // being serialized into the public RSC payload.
   const faqs: ReturnType<typeof normalizeFaqs> = [];
   const seriesTypeLabel = getSeriesTypeLabel(detail);
+  const reference = getDiaphragmPumpReferenceModel(slug);
+  const applicationDetails = getDiaphragmPumpApplicationDetails(
+    reference?.copyKey,
+    locale,
+  );
 
   const mainImageUrl =
     findPreferredDiaphragmMainImageUrl(detail);
@@ -894,6 +903,8 @@ function adaptToProductDetailClientData(detail: DiaphragmDetail) {
     detailSlug: slug,
     relationKeys: detail.relationKeys,
     relationPriority: detail.relationPriority,
+    datasheetId: detail.datasheetId,
+    cadRequestAvailable: detail.cadRequestAvailable,
 
     name: seoProductTitle,
     title: seoProductTitle,
@@ -921,6 +932,7 @@ function adaptToProductDetailClientData(detail: DiaphragmDetail) {
     commonApplications: applications,
     applications,
     applicationScenarios: applications,
+    ...(applicationDetails ? { applicationDetails } : {}),
 
     modelDisplay: cleanModelCode,
     displayModel: cleanModelCode,
@@ -1016,7 +1028,10 @@ function getPreferredProductDetailData(
     return null;
   }
 
-  return adaptToProductDetailClientData(detail);
+  return adaptToProductDetailClientData(
+    detail,
+    normalizeDiaphragmPumpLocale(locale),
+  );
 }
 
 export function getDiaphragmPumpStaticParams() {

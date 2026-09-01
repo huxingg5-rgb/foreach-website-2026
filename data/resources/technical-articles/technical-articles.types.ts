@@ -16,14 +16,62 @@ export type TechnicalArticleCategory =
   | "materials-compatibility"
   | "applications";
 
+export type TechnicalArticlePrimaryCategory =
+  | "pumps"
+  | "valves"
+  | "fittings-tubing"
+  | "fluid-detection-control"
+  | "general-fluidics"
+  | "applications-solutions";
+
+export type TechnicalArticleSecondaryCategory =
+  | "miniature-diaphragm-pumps"
+  | "plunger-pumps"
+  | "syringe-pumps"
+  | "pipetting-pumps"
+  | "solenoid-valves"
+  | "multi-port-valves"
+  | "high-pressure-valves"
+  | "fluid-switching-valves"
+  | "fittings"
+  | "ferrules-connectors"
+  | "flexible-rigid-tubing"
+  | "tubing-accessories"
+  | "pressure-detection-control"
+  | "liquid-level-detection"
+  | "fluid-state-detection"
+  | "intelligent-fluid-control"
+  | "flow-operating-point"
+  | "pressure-backpressure"
+  | "self-priming-negative-pressure-vacuum"
+  | "tubing-resistance-pressure-drop"
+  | "material-chemical-compatibility"
+  | "sealing-leakage"
+  | "bubbles-pulsation"
+  | "lifetime-reliability"
+  | "testing-validation"
+  | "ivd-medical-devices"
+  | "life-science-synthetic-biology"
+  | "laboratory-automation"
+  | "analytical-instruments"
+  | "cleaning-waste"
+  | "reagent-sample-handling"
+  | "oem-fluidic-systems";
+
 export interface TechnicalArticleBreadcrumbItem {
   label: string;
   href?: string;
 }
 
-export interface TechnicalArticleCategoryOption {
-  key: "all" | TechnicalArticleCategory;
+export interface TechnicalArticleTaxonomySecondary {
+  key: TechnicalArticleSecondaryCategory;
   label: string;
+}
+
+export interface TechnicalArticleTaxonomyPrimary {
+  key: TechnicalArticlePrimaryCategory;
+  label: string;
+  children: TechnicalArticleTaxonomySecondary[];
 }
 
 export interface TechnicalArticleBlock {
@@ -47,12 +95,19 @@ export interface TechnicalArticleItem {
   seoDescription?: string;
 }
 
+export interface ClassifiedTechnicalArticleItem extends TechnicalArticleItem {
+  primaryCategory: TechnicalArticlePrimaryCategory;
+  secondaryCategory: TechnicalArticleSecondaryCategory;
+  tags: string[];
+  relatedProducts: string[];
+}
+
 export interface TechnicalArticleBottomAction {
   label: string;
   href: string;
 }
 
-export interface TechnicalArticlesPageData {
+export interface TechnicalArticlesSourcePageData {
   locale: TechnicalArticleLocale;
 
   hero: {
@@ -67,8 +122,6 @@ export interface TechnicalArticlesPageData {
     placeholder: string;
   };
 
-  categories: TechnicalArticleCategoryOption[];
-
   sectionTitle: string;
 
   articles: TechnicalArticleItem[];
@@ -78,4 +131,10 @@ export interface TechnicalArticlesPageData {
     description: string;
     actions: TechnicalArticleBottomAction[];
   };
+}
+
+export interface TechnicalArticlesPageData
+  extends Omit<TechnicalArticlesSourcePageData, "articles"> {
+  taxonomy: TechnicalArticleTaxonomyPrimary[];
+  articles: ClassifiedTechnicalArticleItem[];
 }

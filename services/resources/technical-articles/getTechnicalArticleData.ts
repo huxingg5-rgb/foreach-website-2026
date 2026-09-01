@@ -12,14 +12,14 @@
 import { getTechnicalArticlesPageData } from "./getTechnicalArticlesPageData";
 
 import type {
-  TechnicalArticleItem,
+  ClassifiedTechnicalArticleItem,
   TechnicalArticleLocale,
 } from "@/data/resources/technical-articles/technical-articles.types";
 
 export function getTechnicalArticleData(
   locale: TechnicalArticleLocale,
   slug: string
-): TechnicalArticleItem | null {
+): ClassifiedTechnicalArticleItem | null {
   const pageData = getTechnicalArticlesPageData(locale);
 
   return pageData.articles.find((article) => article.slug === slug) ?? null;

@@ -299,6 +299,7 @@
   margin-bottom: 18px;
   padding: 14px 16px;
   border: 1px solid var(--line);
+  border-radius: 8px;
   background: #ffffff;
   display: flex;
   align-items: center;
@@ -342,12 +343,12 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  border-radius: 999px;
+  border-radius: 6px;
   border: 1px solid rgba(9, 233, 180, 0.28);
   background: rgba(9, 233, 180, 0.11);
   color: var(--brand-blue);
   font-size: 12px;
-  font-weight: 850;
+  font-weight: 400;
   white-space: nowrap;
 }
 
@@ -374,13 +375,13 @@
 .products-selection-page .toolbar-reset {
   min-height: 34px;
   padding: 0 13px;
-  border-radius: 999px;
+  border-radius: 6px;
   border: 1px solid rgba(23, 51, 104, 0.16);
   background: #ffffff;
   color: var(--brand-blue);
   cursor: pointer;
   font-size: 13px;
-  font-weight: 850;
+  font-weight: 400;
   white-space: nowrap;
   transition:
     background 0.2s ease,
@@ -1577,12 +1578,12 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  border-radius: 999px;
+  border-radius: 6px;
   border: 1px solid rgba(9, 233, 180, 0.28);
   background: rgba(9, 233, 180, 0.11);
   color: var(--brand-blue);
   font-size: 12px;
-  font-weight: 850;
+  font-weight: 400;
   white-space: nowrap;
 }
 
@@ -1604,13 +1605,13 @@
 .products-selection-page .toolbar-reset {
   min-height: 34px;
   padding: 0 13px;
-  border-radius: 999px;
+  border-radius: 6px;
   border: 1px solid rgba(23, 51, 104, 0.16);
   background: #ffffff;
   color: var(--brand-blue);
   cursor: pointer;
   font-size: 13px;
-  font-weight: 850;
+  font-weight: 400;
   white-space: nowrap;
   transition:
     background 0.2s ease,
@@ -2600,7 +2601,7 @@
   margin: 0 0 14px !important;
   color: var(--brand-blue) !important;
   font-size: 31px !important;
-  font-weight: 820 !important;
+  font-weight: 700 !important;
   line-height: 1.22 !important;
 }
 
@@ -2608,18 +2609,18 @@
   margin: 0 !important;
   color: #111111 !important;
   font-size: 16.5px !important;
-  font-weight: 460 !important;
-  line-height: 1.95 !important;
+  font-weight: 400 !important;
+  line-height: 1.72 !important;
 }
 
 .products-selection-page .product-type-intro-copy p + p {
-  margin-top: 14px !important;
+  margin-top: 10px !important;
 }
 
 /* 只加粗指定文字，不加粗整段 */
 .products-selection-page .product-type-intro-copy .product-type-intro-emphasis {
   color: #111111 !important;
-  font-weight: 800 !important;
+  font-weight: 600 !important;
 }
 
 /* HaloFlx 右下角装饰字：背景层，不占空间 */
@@ -2665,7 +2666,7 @@
 
   .products-selection-page .product-type-intro-copy p {
     font-size: 16px !important;
-    line-height: 1.9 !important;
+    line-height: 1.72 !important;
   }
 
   .products-selection-page .product-type-intro-module::after {
@@ -2701,18 +2702,30 @@
 
   .products-selection-page .product-type-intro-copy .product-type-intro-heading {
     font-size: 22px !important;
-    font-weight: 800 !important;
+    font-weight: 700 !important;
   }
 
   .products-selection-page .product-type-intro-copy p {
     font-size: 14px !important;
-    line-height: 1.78 !important;
+    line-height: 1.65 !important;
   }
 
   .products-selection-page .product-type-intro-module::after {
     display: none !important;
   }
 }
+
+/*
+ * 拉丁字母与西里尔字母正文使用更紧凑的行距；
+ * 中文、韩文保留较宽行距，避免高密度字形显得拥挤。
+ */
+.products-selection-page:lang(en) .product-type-intro-copy p,
+.products-selection-page:lang(es) .product-type-intro-copy p,
+.products-selection-page:lang(fr) .product-type-intro-copy p,
+.products-selection-page:lang(ru) .product-type-intro-copy p {
+  line-height: 1.55 !important;
+}
+
 /* 产品中心：取消左侧筛选栏吸顶
    说明：
    1. 左侧筛选栏不再随着页面滚动一直停在顶部

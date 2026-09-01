@@ -279,6 +279,8 @@ const isFittingReplacementDetailPage =
     null,
   ); // 控制 PC 端当前打开哪个 mega / simple 下拉菜单
 
+  const desktopClickOpenKeyRef = useRef<NavigationKey | null>(null); // 区分 hover 临时展开与 click 锁定展开
+
   const [activeMegaCategoryKey, setActiveMegaCategoryKey] = useState<
     string | null
   >(null); // 控制 PC 端 mega 下拉左侧当前鼠标选中的分类
@@ -585,6 +587,18 @@ const isFittingReplacementDetailPage =
    * 3. About / Products / Applications 等栏目都能正常高亮
    */
   function isNavActive(item: NavigationItem) {
+    // 资源中心是无 href 的父级；其任意子页面都应保持栏目高亮。
+    if (item.key === "resources") {
+      return (
+        normalizedPathWithoutLocale === "/resources" ||
+        normalizedPathWithoutLocale.startsWith("/resources/")
+      );
+    }
+
+    if (!item.href) {
+      return false;
+    }
+
     const itemHref = getLocalizedHref(item.href, currentLocale);
 
     const itemPathWithoutLocale = stripLocalePrefixFromPath(itemHref);
@@ -622,6 +636,13 @@ const isFittingReplacementDetailPage =
       )
     );
 }
+
+    useEffect(() => {
+      if (desktopMegaKey === null) {
+        desktopClickOpenKeyRef.current = null;
+      }
+    }, [desktopMegaKey]);
+
     /**
      * 页面滚动监听
      *
@@ -763,6 +784,35 @@ const isFittingReplacementDetailPage =
       */
       setDesktopMegaKey(null);
       setActiveMegaCategoryKey(null);
+    }
+
+    /**
+     * 点击无链接的 PC 端父级导航时，只切换下拉菜单，不触发路由跳转。
+     */
+    function toggleDesktopParentMenu(item: NavigationItem) {
+      setIsSearchOpen(false);
+      setOpenPanel("none");
+      setActiveMegaCategoryKey(null);
+
+      // 鼠标进入按钮时 hover 已经会先展开；第一次点击应保持展开并锁定，
+      // 第二次点击同一父级时才收起。键盘 Enter / Space 也走同一逻辑。
+      if (desktopClickOpenKeyRef.current === item.key) {
+        desktopClickOpenKeyRef.current = null;
+        setDesktopMegaKey(null);
+        return;
+      }
+
+      desktopClickOpenKeyRef.current = item.key;
+      setDesktopMegaKey(item.key);
+    }
+
+    function handleDesktopParentMenuClick(
+      event: MouseEvent<HTMLButtonElement>,
+      item: NavigationItem,
+    ) {
+      event.preventDefault();
+      event.stopPropagation();
+      toggleDesktopParentMenu(item);
     }
 
     /**
@@ -1058,7 +1108,9 @@ const isFittingReplacementDetailPage =
               {navigationItems.map((item) => {
                 const navLabel = getLocalizedText(item.label, currentLocale);
 
-                const navHref = getLocalizedHref(item.href, currentLocale);
+                const navHref = item.href
+                  ? getLocalizedHref(item.href, currentLocale)
+                  : null;
 
                 // 判断是否是产品中心 / 关于我们这种复杂 Mega 下拉
                 const hasMegaDropdown =
@@ -1105,15 +1157,56 @@ const isFittingReplacementDetailPage =
                         setActiveMegaCategoryKey(null);
                       }
                     }}
+                    onBlur={(event) => {
+                      if (
+                        hasSimpleDropdown &&
+                        !event.currentTarget.contains(event.relatedTarget)
+                      ) {
+                        setDesktopMegaKey(null);
+                        setActiveMegaCategoryKey(null);
+                      }
+                    }}
+                    onKeyDown={(event) => {
+                      if (event.key === "Escape" && hasSimpleDropdown) {
+                        setDesktopMegaKey(null);
+                        setActiveMegaCategoryKey(null);
+                        return;
+                      }
+
+                      if (
+                        !navHref &&
+                        (event.key === "Enter" || event.key === " ")
+                      ) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        toggleDesktopParentMenu(item);
+                      }
+                    }}
                   >
-                    <Link
-                      href={navHref}
-                      className={`site-nav-link ${isNavActive(item) ? "site-nav-link-active" : ""
-                        }`}
-                      onClick={closeAllPanels}
-                    >
-                      {navLabel}
-                    </Link>
+                    {navHref ? (
+                      <Link
+                        href={navHref}
+                        className={`site-nav-link ${isNavActive(item) ? "site-nav-link-active" : ""
+                          }`}
+                        onClick={closeAllPanels}
+                      >
+                        {navLabel}
+                      </Link>
+                    ) : (
+                      <button
+                        type="button"
+                        className={`site-nav-link ${isNavActive(item) ? "site-nav-link-active" : ""
+                          }`}
+                        aria-haspopup="true"
+                        aria-expanded={isSimpleDropdownOpen}
+                        aria-controls={`site-nav-simple-${item.key}`}
+                        onClick={(event) => {
+                          handleDesktopParentMenuClick(event, item);
+                        }}
+                      >
+                        {navLabel}
+                      </button>
+                    )}
 
                     {/* ================================
                       PC 端 simple 简单下拉栏
@@ -1125,21 +1218,43 @@ const isFittingReplacementDetailPage =
                   ================================ */}
                     {isSimpleDropdownOpen ? (
                       <div
+                        id={`site-nav-simple-${item.key}`}
                         className="site-nav-simple-dropdown site-nav-simple-dropdown-open"
                         onMouseEnter={() => {
                           setDesktopMegaKey(item.key);
                           setActiveMegaCategoryKey(null);
                         }}
                       >
-                        {simpleChildren.map((child) => (
-                          <Link
-                            key={child.key}
-                            href={getLocalizedHref(child.href, currentLocale)}
-                            className="site-nav-simple-dropdown-link"                        onClick={closeAllPanels}
-                          >
-                            {getLocalizedText(child.label, currentLocale)}
-                          </Link>
-                        ))}
+                        {simpleChildren.map((child) => {
+                          const isCompactRussianResourceLabel =
+                            currentLocale === "ru" &&
+                            child.key ===
+                              "mobile-resource-fluid-resistance-calculator";
+
+                          return (
+                            <Link
+                              key={child.key}
+                              href={getLocalizedHref(child.href, currentLocale)}
+                              className="site-nav-simple-dropdown-link"
+                              onClick={closeAllPanels}
+                            >
+                              <span
+                                style={
+                                  isCompactRussianResourceLabel
+                                    ? {
+                                        display: "block",
+                                        width: "100%",
+                                        whiteSpace: "normal",
+                                        lineHeight: 1.12,
+                                      }
+                                    : undefined
+                                }
+                              >
+                                {getLocalizedText(child.label, currentLocale)}
+                              </span>
+                            </Link>
+                          );
+                        })}
                       </div>
                     ) : null}
                   </div>
@@ -1305,7 +1420,9 @@ const isFittingReplacementDetailPage =
                 {navigationItems.map((item) => {
                   const navLabel = getLocalizedText(item.label, currentLocale);
 
-                  const navHref = getLocalizedHref(item.href, currentLocale);
+                  const navHref = item.href
+                    ? getLocalizedHref(item.href, currentLocale)
+                    : null;
 
                   const mobileChildren = (item.mobileChildren || [])
                     .filter((child) => child.enabled)
@@ -1322,6 +1439,8 @@ const isFittingReplacementDetailPage =
                       >
                         <summary
                           className="mobile-nav-summary"
+                          aria-expanded={openMobileSectionKey === item.key}
+                          aria-controls={`mobile-nav-submenu-${item.key}`}
                           onClick={(event) => {
                             event.preventDefault();
 
@@ -1330,32 +1449,66 @@ const isFittingReplacementDetailPage =
                             );
                           }}
                         >
-                          <Link
-                            href={navHref}
-                            className="mobile-nav-summary-text"
-                            onClick={(event) => {
-                              // 阻止点击栏目标题时触发 summary 展开逻辑
-                              event.stopPropagation();
-                              closeAllPanels();
-                            }}
-                          >
-                            {navLabel}
-                          </Link>
+                          {navHref ? (
+                            <Link
+                              href={navHref}
+                              className="mobile-nav-summary-text"
+                              onClick={(event) => {
+                                // 阻止点击栏目标题时触发 summary 展开逻辑
+                                event.stopPropagation();
+                                closeAllPanels();
+                              }}
+                            >
+                              {navLabel}
+                            </Link>
+                          ) : (
+                            <span className="mobile-nav-summary-text">
+                              {navLabel}
+                            </span>
+                          )}
                         </summary>
 
-                        <div className="mobile-nav-submenu">
-                          {mobileChildren.map((child) => (
-                            <Link
-                              key={child.key}
-                              href={getLocalizedHref(child.href, currentLocale)}
-                              className="mobile-nav-submenu-link"                        onClick={closeAllPanels}
-                            >
-                              {getLocalizedText(child.label, currentLocale)}
-                            </Link>
-                          ))}
+                        <div
+                          id={`mobile-nav-submenu-${item.key}`}
+                          className="mobile-nav-submenu"
+                        >
+                          {mobileChildren.map((child) => {
+                            const isCompactRussianResourceLabel =
+                              currentLocale === "ru" &&
+                              child.key ===
+                                "mobile-resource-fluid-resistance-calculator";
+
+                            return (
+                              <Link
+                                key={child.key}
+                                href={getLocalizedHref(child.href, currentLocale)}
+                                className="mobile-nav-submenu-link"
+                                onClick={closeAllPanels}
+                              >
+                                <span
+                                  style={
+                                    isCompactRussianResourceLabel
+                                      ? {
+                                          display: "block",
+                                          width: "100%",
+                                          whiteSpace: "normal",
+                                          lineHeight: 1.12,
+                                        }
+                                      : undefined
+                                  }
+                                >
+                                  {getLocalizedText(child.label, currentLocale)}
+                                </span>
+                              </Link>
+                            );
+                          })}
                         </div>
                       </details>
                     );
+                  }
+
+                  if (!navHref) {
+                    return null;
                   }
 
                   return (

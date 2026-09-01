@@ -393,7 +393,7 @@ export default function RelatedResources({
                   primaryRelationKey,
                 )}`}
               >
-                {ui.viewAll} {allRelatedVideos.length}
+                {ui.viewAll}
               </Link>
             ) : null}
           </div>
@@ -481,33 +481,24 @@ export default function RelatedResources({
             itemCount={allRelatedArticles.length}
             trackClassName={styles.articleTrack}
           >
-            {allRelatedArticles.map((article) => {
-              const categoryLabel =
-                articlePageData.categories.find(
-                  (category) => category.key === article.category,
-                )?.label ?? article.category;
-
-              return (
-                <div
-                  key={article.id}
-                  className={styles.trackItem}
-                  data-related-track-item
-                >
-                  <TechnicalArticleCard
-                    article={article}
-                    categoryLabel={categoryLabel}
-                    href={getArticleHref(locale, article)}
-                    locale={locale}
-                    categoryText={ui.category}
-                    detailText={ui.viewDetails}
-                    showSummary
-                    showDate
-                    showTags={false}
-                    variant="related"
-                  />
-                </div>
-              );
-            })}
+            {allRelatedArticles.map((article) => (
+              <div
+                key={article.id}
+                className={styles.trackItem}
+                data-related-track-item
+              >
+                <TechnicalArticleCard
+                  article={article}
+                  href={getArticleHref(locale, article)}
+                  locale={locale}
+                  detailText={ui.viewDetails}
+                  showSummary
+                  showDate
+                  showTags={false}
+                  variant="related"
+                />
+              </div>
+            ))}
           </ResourceTrack>
         </section>
       ) : null}

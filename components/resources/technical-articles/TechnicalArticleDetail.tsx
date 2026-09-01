@@ -45,11 +45,12 @@ import {
 import {
   dpl30hStandardModels,
 } from "@/data/resources/technical-articles/dpl30h-high-pressure-liquid-diaphragm-pump.article";
+import { getTechnicalArticleCategoryPath } from "@/data/resources/technical-articles/technical-article-taxonomy";
 import { getProductDetailTitleOverride } from "@/data/products/detail/product-detail-title-overrides";
 import { getLocalizedInternalHref } from "@/lib/seo/site-url";
 
 import type {
-  TechnicalArticleItem,
+  ClassifiedTechnicalArticleItem,
   TechnicalArticlesPageData,
 } from "@/data/resources/technical-articles/technical-articles.types";
 
@@ -69,7 +70,7 @@ export type TechnicalArticlePagerItem = {
 
 interface TechnicalArticleDetailProps {
   pageData: TechnicalArticlesPageData;
-  article: TechnicalArticleItem;
+  article: ClassifiedTechnicalArticleItem;
   previousArticle?: TechnicalArticlePagerItem | null;
   nextArticle?: TechnicalArticlePagerItem | null;
 }
@@ -110,7 +111,7 @@ function getTechnicalArticleCanonicalUrl(
 
 function buildTechnicalArticleStructuredData(
   pageData: TechnicalArticlesPageData,
-  article: TechnicalArticleItem,
+  article: ClassifiedTechnicalArticleItem,
   locale: SupportedLocale,
   faqItems: readonly TechnicalArticleFaqItem[] = [],
   subject?: TechnicalArticleSubject,
@@ -125,9 +126,7 @@ function buildTechnicalArticleStructuredData(
   const description = String(
     article.seoDescription ?? article.summary ?? "",
   ).trim();
-  const categoryLabel =
-    pageData.categories.find((item) => item.key === article.category)?.label ??
-    pageData.sectionTitle;
+  const categoryLabel = getTechnicalArticleCategoryPath(locale, article);
   const breadcrumbItems = pageData.breadcrumbs.map((item, index) => ({
     "@type": "ListItem",
     position: index + 1,
@@ -411,7 +410,7 @@ export default function TechnicalArticleDetail({
   };
 
   const adaptedArticle = {
-    category: article.category,
+    category: getTechnicalArticleCategoryPath(locale, article),
     title: article.title,
     date: article.date,
     // DPL30 的 summary 供列表和关联卡片自动读取正文首段；

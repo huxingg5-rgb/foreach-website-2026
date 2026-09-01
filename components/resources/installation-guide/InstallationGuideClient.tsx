@@ -55,6 +55,13 @@ type InstallationGuideClientProps = {
   pageData: InstallationGuidePageData;
 };
 
+function formatInstallationGuideCount(
+  locale: InstallationGuidePageData["locale"],
+  count: number,
+) {
+  return locale === "zh-CN" ? `（${count}）` : ` (${count})`;
+}
+
 export default function InstallationGuideClient({
   pageData,
 }: InstallationGuideClientProps) {
@@ -143,6 +150,28 @@ export default function InstallationGuideClient({
         ? "欢迎发送邮件说明产品型号和具体问题，我们将与您沟通并评估制作相关教程。"
         : "Try another keyword or select a different product series.",
   };
+
+  const guideCounts = useMemo(() => {
+    const category = new Map<string, number>();
+    const series = new Map<string, number>();
+
+    for (const guide of pageData.guides) {
+      category.set(
+        guide.category,
+        (category.get(guide.category) ?? 0) + 1,
+      );
+      series.set(
+        guide.series,
+        (series.get(guide.series) ?? 0) + 1,
+      );
+    }
+
+    return {
+      all: pageData.guides.length,
+      category,
+      series,
+    };
+  }, [pageData.guides]);
 
   const relatedResourcesUi = getRelatedResourcesText(pageData.locale);
   const relationKey = normalizeRelationKey(
@@ -413,6 +442,13 @@ export default function InstallationGuideClient({
                   activeFilter.type === item.type &&
                   activeFilter.id === item.id;
 
+                const itemCount =
+                  item.type === "all"
+                    ? guideCounts.all
+                    : item.type === "series"
+                      ? (guideCounts.series.get(item.id) ?? 0)
+                      : (guideCounts.category.get(item.id) ?? 0);
+
                 return (
                   <div
                     key={item.id}
@@ -433,11 +469,20 @@ export default function InstallationGuideClient({
                         handleParentClick(item)
                       }
                     >
-                      <strong>
+                      <strong className="installation-guide-tree-parent-label">
                         {item.name}
+                        <span className="installation-guide-tree-count">
+                          {formatInstallationGuideCount(
+                            pageData.locale,
+                            itemCount,
+                          )}
+                        </span>
                       </strong>
 
-                      <span aria-hidden="true" />
+                      <span
+                        className="installation-guide-tree-toggle"
+                        aria-hidden="true"
+                      />
                     </button>
 
                     {hasChildren ? (
@@ -468,7 +513,17 @@ export default function InstallationGuideClient({
                                   )
                                 }
                               >
-                                {child.name}
+                                <span className="installation-guide-tree-child-label">
+                                  {child.name}
+                                  <span className="installation-guide-tree-count">
+                                    {formatInstallationGuideCount(
+                                      pageData.locale,
+                                      guideCounts.series.get(
+                                        child.id,
+                                      ) ?? 0,
+                                    )}
+                                  </span>
+                                </span>
                               </button>
                             );
                           },

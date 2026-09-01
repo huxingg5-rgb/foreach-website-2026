@@ -509,6 +509,9 @@ export function localizeTargetProductDetailData<T extends DetailRecord>(sourceDa
     customInquiryButtonText: ctaButton,
     customInquiryHref: `/${locale}/contact`,
     seo: { ...(english.seo || {}), title: `${model} ${productName} | FOREACH`, description },
+    ...(sourceData.applicationDetails !== undefined
+      ? { applicationDetails: sourceData.applicationDetails }
+      : {}),
   } as unknown as T;
 
   if (

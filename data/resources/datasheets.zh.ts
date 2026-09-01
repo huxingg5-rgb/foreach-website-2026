@@ -218,15 +218,69 @@ export const datasheetZhItems: DatasheetItem[] = [
     title: "DPL30 隔膜泵规格书",
     label: "泵系列",
     language: "中文",
-    version: "A03",
-    update: "2026-03",
+    version: "A04",
+    update: "2026-07",
     description: "DPL30 隔膜泵适用于自动化仪器中的液体供给、自吸输送、清洗循环与废液处理。",
     image:
       "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushed-liquid-diaphragm-pump-main.webp",
     productHref:
       "/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps",
     downloadHref:
-      "/downloads/resources/datasheets/zh-CN/Pumps/ps-150b-2412-00001-a03-cn-dpl30-diaphragm-pump.pdf",
+      "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00001_A04_cn_DPL30规格书.pdf",
+    actionType: "download",
+  },
+  {
+    id: "dpl60-diaphragm-pump",
+    category: "pump",
+    keywords: "DPL60 隔膜泵 diaphragm pump 600 mL/min 自吸 液体输送",
+    title: "DPL60 隔膜泵规格书",
+    label: "泵系列",
+    language: "中文",
+    version: "A02",
+    update: "2026-07",
+    description: "DPL60 隔膜泵适用于仪器中的液体供给、清洗循环、废液排放与辅助液体输送。",
+    image:
+      "/images/products/pumps/diaphragm-pumps/dpl60/images/dpl60-brushed-liquid-diaphragm-pump-main.webp",
+    productHref:
+      "/products/pumps/miniature-diaphragm-pumps/dpl60-liquid-diaphragm-pump",
+    downloadHref:
+      "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00002_A02_cn_DPL60规格书.pdf",
+    actionType: "download",
+  },
+  {
+    id: "dpl30h-diaphragm-pump",
+    category: "pump",
+    keywords: "DPL30H 高压隔膜泵 diaphragm pump 600 kPa 液体输送",
+    title: "DPL30H 高压隔膜泵规格书",
+    label: "泵系列",
+    language: "中文",
+    version: "A00",
+    update: "2026-03",
+    description: "DPL30H 高压隔膜泵适用于需要较高输出压力的仪器液路、过滤、喷淋与液体输送任务。",
+    image:
+      "/images/products/pumps/diaphragm-pumps/dpl30h/images/dpl30h-brushed-liquid-diaphragm-pump-main.webp",
+    productHref:
+      "/products/pumps/miniature-diaphragm-pumps/dpl30h-liquid-diaphragm-pump",
+    downloadHref:
+      "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2504-00001_A00_cn_DPL30H规格书.pdf",
+    actionType: "download",
+  },
+  {
+    id: "dpgl800-diaphragm-pump",
+    category: "pump",
+    keywords: "DPGL800 气液混合泵 diaphragm pump 6 L/min 真空 抽吸",
+    title: "DPGL800 气液混合隔膜泵规格书",
+    label: "泵系列",
+    language: "中文",
+    version: "A00",
+    update: "2026-03",
+    description: "DPGL800 气液混合隔膜泵适用于气体、气液混合物抽吸、负压建立与废液抽排。",
+    image:
+      "/images/products/pumps/diaphragm-pumps/dpgl800/images/dpgl800-gas-liquid-diaphragm-pump-main.webp",
+    productHref:
+      "/products/pumps/miniature-diaphragm-pumps/dpgl800-gas-liquid-diaphragm-pump",
+    downloadHref:
+      "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2506-00001_A00_cn_DPGL800气液混合泵规格书.pdf",
     actionType: "download",
   },
   {

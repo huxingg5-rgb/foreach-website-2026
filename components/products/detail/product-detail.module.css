@@ -211,9 +211,9 @@
 .productModelTitle {
   margin: 0;
   color: var(--blue);
-  font-size: 38px;
+  font-size: 34px;
   line-height: 1.08;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: -0.035em;
 }
 
@@ -227,7 +227,8 @@
 }
 
 .productDesc {
-  max-width: 640px;
+  width: 100%;
+  max-width: none;
   margin: 18px 0 0;
   color: #111111;
   font-size: 17px;
@@ -368,6 +369,14 @@
   font-size: 24px;
   line-height: 48px;
   font-weight: 500;
+}
+
+.tabLabelFull {
+  display: inline;
+}
+
+.tabLabelShort {
+  display: none;
 }
 
 .tabButton::after {
@@ -692,9 +701,6 @@
     max-width: none;
   }
 
-  .productDesc {
-    max-width: 860px;
-  }
 }
 
 /* =========================================================
@@ -1621,7 +1627,7 @@
 
   .faqQuestion {
     min-height: 60px !important;
-    padding: 0 16px !important;
+    padding: 0 16px 0 0 !important;
     grid-template-columns: minmax(0, 1fr) 30px !important;
     gap: 14px !important;
   }
@@ -1711,7 +1717,7 @@
   }
 
   .container .productModelTitle {
-    font-size: 28px !important;
+    font-size: 24px !important;
     line-height: 1.18 !important;
     letter-spacing: -0.02em !important;
   }
@@ -1889,7 +1895,7 @@
   }
 
   .container .productModelTitle {
-    font-size: 26px !important;
+    font-size: 22px !important;
     line-height: 1.2 !important;
   }
 
@@ -2326,14 +2332,18 @@
 
 /*
  * 产品详情页手机端资料标签：
- * - 中文保持三等分，海外 Datasheet 版本使用四等分
+ * - 根据实际标签数量等分
  * - 防止长外语标签挤出屏幕
- * - PC 端不受影响
+ * - 完整标签保留在静态 HTML，手机端只显示短标签
+ * - PC 端继续显示完整标签
  */
 @media (max-width: 768px) {
   .container .tabNav {
     display: grid !important;
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    grid-template-columns: repeat(
+      var(--product-detail-tab-count, 3),
+      minmax(0, 1fr)
+    ) !important;
     align-items: end !important;
     justify-content: stretch !important;
     gap: 0 !important;
@@ -2342,7 +2352,10 @@
   }
 
   .container .tabNav[data-has-datasheet-tab="true"] {
-    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    grid-template-columns: repeat(
+      var(--product-detail-tab-count, 4),
+      minmax(0, 1fr)
+    ) !important;
   }
 
   .container .tabNav .tabButton {
@@ -2355,6 +2368,23 @@
     line-height: 1.2 !important;
     text-align: center !important;
     white-space: nowrap !important;
+  }
+
+  .container .tabNav .tabLabelFull {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    clip-path: inset(50%) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+
+  .container .tabNav .tabLabelShort {
+    display: inline !important;
   }
 
   .container .tabNav[data-has-datasheet-tab="true"] .tabButton {
@@ -2380,11 +2410,11 @@
     font-size: 12px !important;
   }
 
-  :global(html[lang^="es"]) .container .tabNav[data-has-datasheet-tab="true"] {
+  :global(html[lang^="es"]) .container .tabNav[data-has-datasheet-tab="true"]:not([data-has-applications-tab="true"]) {
     grid-template-columns: 1.2fr 0.85fr 1fr 1fr !important;
   }
 
-  :global(html[lang^="fr"]) .container .tabNav[data-has-datasheet-tab="true"] {
+  :global(html[lang^="fr"]) .container .tabNav[data-has-datasheet-tab="true"]:not([data-has-applications-tab="true"]) {
     grid-template-columns: 1.3fr 0.8fr 1fr 1fr !important;
   }
 
@@ -2482,3 +2512,32 @@
 }
 
 /* ===== FOREACH_SPEC_TABLE_TEXT_WRAP_END ===== */
+
+/* ===== FOREACH RUSSIAN PRODUCT TITLE TYPOGRAPHY START ===== */
+
+/*
+ * 俄文产品名称通常更长、字形更密：
+ * - 仅降低俄文产品主标题的字号和字重
+ * - 不影响正文、其他语言或其他页面标题
+ */
+:global(html[lang^="ru"]) .container .productModelTitle {
+  font-size: 30px !important;
+  line-height: 1.16 !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.02em !important;
+}
+
+@media (max-width: 768px) {
+  :global(html[lang^="ru"]) .container .productModelTitle {
+    font-size: 21px !important;
+    line-height: 1.24 !important;
+  }
+}
+
+@media (max-width: 420px) {
+  :global(html[lang^="ru"]) .container .productModelTitle {
+    font-size: 20px !important;
+  }
+}
+
+/* ===== FOREACH RUSSIAN PRODUCT TITLE TYPOGRAPHY END ===== */

@@ -24,6 +24,7 @@ import {
 } from "react";
 import { usePathname } from "next/navigation";
 
+import { getLocalizedFilterOptionLabel } from "@/components/products/selection/filter-option-i18n";
 import { getLocaleFromPathname } from "@/lib/i18n";
 import {
   trackAddToInquiryList,
@@ -266,6 +267,9 @@ function buildCartText(
 
   const lines = items.map((item, index) => {
     const isPumpSelection = item.sourceType === "pump-selection";
+    const localizedProductName = isPumpSelection
+      ? getLocalizedFilterOptionLabel(item.productName, locale)
+      : item.productName;
     const sourceLabel = getCartText(
       locale,
       isPumpSelection ? "Products" : "Fitting Replacement Search",
@@ -276,7 +280,7 @@ function buildCartText(
       return [
         `#${index + 1}`,
         `${getCartText(locale, "Source", "来源")}: ${sourceLabel}`,
-        `${getCartText(locale, "Product Type", "产品类型")}: ${item.productName}`,
+        `${getCartText(locale, "Product Type", "产品类型")}: ${localizedProductName}`,
         `${getCartText(locale, "Product Model", "产品型号")}: ${item.foreachModel}`,
         `${getCartText(locale, "Quantity", "数量")}: ${item.quantity}`,
         `${getCartText(locale, "2D Drawing", "2D 图纸")}: ${

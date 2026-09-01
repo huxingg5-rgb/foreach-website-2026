@@ -26,6 +26,17 @@ interface BreadcrumbProps {
   ariaLabel?: string;
 }
 
+function isResourcesRootHref(href?: string) {
+  if (!href) {
+    return false;
+  }
+
+  const [pathname = ""] = href.split(/[?#]/);
+  const normalizedPath = pathname.replace(/\/+$/, "") || "/";
+
+  return /^\/(?:(?:en|es|fr|ko|ru)\/)?resources$/.test(normalizedPath);
+}
+
 export default function Breadcrumb({
   items,
   className,
@@ -48,7 +59,7 @@ export default function Breadcrumb({
             className={styles.item}
             key={`${item.label}-${index}`}
           >
-            {item.href && !isLast ? (
+            {item.href && !isLast && !isResourcesRootHref(item.href) ? (
               <Link href={item.href}>{item.label}</Link>
             ) : (
               <span>{item.label}</span>
