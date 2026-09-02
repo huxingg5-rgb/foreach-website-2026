@@ -222,6 +222,10 @@ interface ArticleClassificationDefinition {
 }
 
 const articleClassifications: Record<string, ArticleClassificationDefinition> = {
+  "300-ml-min-micro-liquid-diaphragm-pump-self-priming-loss": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["liquid-pump", "self-priming", "troubleshooting", "sealing-leakage"], literalTags: ["300 mL/min"], relatedProducts: ["DPL30"] },
+  "300-ml-min-micro-liquid-diaphragm-pump-motor-runs-no-flow": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["liquid-pump", "troubleshooting", "backpressure", "sealing-leakage"], literalTags: ["300 mL/min"], relatedProducts: ["DPL30"] },
+  "300-ml-min-micro-liquid-diaphragm-pump-water-vs-reagent": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["liquid-pump", "flow", "self-priming", "material-compatibility"], literalTags: ["300 mL/min"], relatedProducts: ["DPL30"] },
+  "300-ml-min-micro-liquid-diaphragm-pump-epdm-ptfe-ffkm": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["liquid-pump", "material-compatibility", "selection", "testing-validation"], literalTags: ["EPDM", "PTFE", "FFKM"], relatedProducts: ["DPL30"] },
   "300-vs-600-ml-min-diaphragm-pump-selection": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["selection", "flow", "operating-point"], literalTags: ["300 mL/min", "600 mL/min"], relatedProducts: ["DPL30", "DPL60"] },
   "300-ml-min-diaphragm-pump-flow-margin": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["flow", "operating-point", "selection"], literalTags: ["300 mL/min"], relatedProducts: ["DPL30"] },
   "tube-inner-diameter-affects-diaphragm-pump-flow": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["tubing-diameter", "flow", "pressure-drop", "tubing-resistance"], relatedProducts: ["DPL30", "DPL60", "DPL30H"] },

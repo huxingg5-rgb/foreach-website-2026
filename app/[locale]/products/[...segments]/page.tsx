@@ -238,11 +238,19 @@ async function getDiaphragmPumpRouteMetadata(
     ? copy.liquid
     : childSlug === "gas-liquid-diaphragm-pumps"
       ? copy.gasLiquid
-      : childSlug === "gas-diaphragm-pumps"
-        ? copy.gas
-        : copy.parent;
-  const title = childSlug ? `${heading} | FOREACH` : copy.seoTitle;
-  const description = copy.seoDescription;
+      : copy.parent;
+  const isLiquidCategory = childSlug === "liquid-diaphragm-pumps";
+  const isGasLiquidCategory = childSlug === "gas-liquid-diaphragm-pumps";
+  const title = childSlug
+    ? normalizedLocale === "zh" && (isLiquidCategory || isGasLiquidCategory)
+      ? `${heading}｜FOREACH`
+      : `${heading} | FOREACH`
+    : copy.seoTitle;
+  const description = isLiquidCategory
+    ? copy.liquidSeoDescription || copy.seoDescription
+    : isGasLiquidCategory
+      ? copy.gasLiquidSeoDescription || copy.seoDescription
+      : copy.seoDescription;
   const canonicalPath = getDiaphragmPumpPath(
     normalizedLocale,
     childSlug || undefined,
@@ -277,6 +285,14 @@ export async function generateMetadata({
   params,
 }: ProductLocaleRoutePageProps): Promise<Metadata> {
   const { locale, segments } = await params;
+
+  if (
+    segments[0] === "pumps" &&
+    segments[1] === "miniature-diaphragm-pumps" &&
+    segments[2] === "gas-diaphragm-pumps"
+  ) {
+    notFound();
+  }
 
   if (!isSupportedLocale(locale) || locale === "zh-CN" || !routeExists(locale, segments)) {
     return {};

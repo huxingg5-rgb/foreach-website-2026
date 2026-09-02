@@ -20,7 +20,10 @@ import {
   getSeriesHrefByFilterValue,
   hasProductTypeRouteByIds,
 } from "@/data/products/selection/product-route-map";
-import { getProductTypeIntroByIds } from "@/data/products/selection/product-type-intro";
+import {
+  getDiaphragmPumpCategoryIntro,
+  getProductTypeIntroByIds,
+} from "@/data/products/selection/product-type-intro";
 import { getProductFilterOptions } from "@/data/products/selection/filter-rules/product-filter-rules.index";
 import {
   isPublishedFittingProduct,
@@ -66,7 +69,6 @@ import {
 } from "@/data/products/selection/card-copy/product-card-copy.intl";
 import {
   applyDiaphragmPumpReferenceCard,
-  getDiaphragmPumpSelectionHeading,
 } from "@/data/products/detail/diaphragm-pump-reference-models";
 import { getDiaphragmPumpPath } from "@/data/products/detail/diaphragm-pump-routes";
 import {
@@ -2690,7 +2692,7 @@ const isDiaphragmPump =
       .filter(Boolean)
       .pop();
 
-    return getDiaphragmPumpPath("zh", slug, { trailingSlash: false });
+    return getDiaphragmPumpPath("zh", slug, { trailingSlash: true });
   }  const isPipettingPump =
     product.categoryId === "pumps" &&
     ["pipette-pump", "pipetting-pump", "pipetting-pumps"].includes(String(product.productTypeId || ""));
@@ -3252,15 +3254,6 @@ export default function ProductSelectionClient({
     );
   }, [activeCategoryId, locale]);
 
-  const diaphragmCategoryHeading = useMemo(() => {
-    if (activeProductTypeId !== "diaphragm-pump") {
-      return "";
-    }
-
-    const diaphragmType = initialFilters?.filter01?.[0] || "";
-    return getDiaphragmPumpSelectionHeading(locale, diaphragmType);
-  }, [activeProductTypeId, initialFilters, locale]);
-
   const productTypeOptions = useMemo(() => {
     const optionMap = new Map<string, { value: string; label: string }>();
 
@@ -3673,15 +3666,12 @@ export default function ProductSelectionClient({
    * 2. 例如 pumps + plunger-pump 会显示柱塞泵系列介绍
    * 3. 找不到时不显示横幅
    */
-  const activeProductTypeIntro = getProductTypeIntroByIds(
-    activeCategoryId,
-    activeProductTypeId,
-    locale
-  );
-  const activeProductTypeIntroHeading =
-    activeProductTypeId === "diaphragm-pump" && initialFilters?.filter01?.length
-      ? diaphragmCategoryHeading
-      : activeProductTypeIntro?.title || "";
+  const activeProductTypeIntro =
+    (activeProductTypeId === "diaphragm-pump"
+      ? getDiaphragmPumpCategoryIntro(initialFilters?.filter01?.[0], locale)
+      : null) ||
+    getProductTypeIntroByIds(activeCategoryId, activeProductTypeId, locale);
+  const activeProductTypeIntroHeading = activeProductTypeIntro?.title || "";
   const selectedTagItems = useMemo<ProductSelectionSelectedTag[]>(() => {
     const tags: ProductSelectionSelectedTag[] = [];
 

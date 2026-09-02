@@ -859,6 +859,12 @@ export const diaphragmPump100KpaVs600KpaSelectionEnCopy = {
           type: "links",
           items: [
             {
+              prefix: "For a 600 kPa-class product candidate, review the ",
+              label: "DPL30H high-pressure liquid diaphragm pump series",
+              href: "/products/pumps/miniature-diaphragm-pumps/dpl30h-liquid-diaphragm-pump",
+              suffix: " and confirm the required flow at the calculated operating pressure.",
+            },
+            {
               label:
                 "FOREACH: DPL30H High-Pressure Liquid Diaphragm Pump Selection Guide",
               href: "/resources/technical-articles/dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide",

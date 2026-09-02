@@ -279,22 +279,6 @@ export const productRouteMap: {
         "TM 超微型柱塞泵适用于对安装空间、结构集成度和微量液体处理要求更高的精密仪器场景。",
     },
   
-    "gas-diaphragm-pumps": {
-      category: "pumps",
-      slug: "miniature-diaphragm-pumps",
-      categoryId: "pumps",
-      productTypeId: "diaphragm-pump",
-      filterKey: "filter01",
-      filterValue: "气体隔膜泵",
-      initialFilters: {
-        filter01: ["气体隔膜泵"],
-      },
-      label: "气泵",
-      title: "气体隔膜泵 | FOREACH",
-      description:
-        "气体隔膜泵适用于仪器内部气体抽吸、正负压建立和气路辅助输送等场景。当前型号数据待补充。",
-    },
-
     "liquid-diaphragm-pumps": {
       category: "pumps",
       slug: "miniature-diaphragm-pumps",
@@ -513,7 +497,7 @@ export const productTypeIntroMap: Record<string, ProductTypeIntroEntry> = {
     productTypeId: "diaphragm-pump",
     title: "隔膜泵系列",
     paragraphs: [
-      "恒永达隔膜泵涵盖液体、气体及气液混合类型，适用于液体输送、气体抽吸、清洗循环、废液排放及气液混合等场景。",
+      "恒永达隔膜泵涵盖液体及气液混合类型，适用于液体输送、气体抽吸、真空建立、清洗循环、废液排放及气液混合物处理等场景。",
       "选型时可根据输送介质、目标流量、工作压力或真空度、自吸高度、电机类型、接液材质、接口形式及安装空间进行筛选。隔膜泵包括 DPL30 300 mL/min、DPL60 600 mL/min，以及 DPGL800 双头微型气液混合隔膜泵（单泵头空载气体流量为 6 L/min）等型号，可面向 IVD、实验室分析及医疗设备液路进行选型。",
       "产品卡片展示常用配置，完整参数、尺寸图及规格书请进入产品详情页查看；如无法确定型号，可提交实际工况获取选型建议。",
     ],

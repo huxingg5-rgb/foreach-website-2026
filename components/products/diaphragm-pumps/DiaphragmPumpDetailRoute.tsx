@@ -297,7 +297,6 @@ function getSeriesTypeLabel(detail: DiaphragmDetail) {
 
   if (title.includes("气液")) return "气液混合隔膜泵";
   if (title.includes("液体")) return "液体隔膜泵";
-  if (title.includes("气体")) return "气体隔膜泵";
 
   return "隔膜泵";
 }
@@ -875,6 +874,26 @@ function adaptToProductDetailClientData(
 
   const mainImageUrl =
     findPreferredDiaphragmMainImageUrl(detail);
+  const additionalImages =
+    reference?.copyKey === "dpl30-brushless"
+      ? [
+          "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushless-2-wire-real-product-photo.webp",
+          "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushless-liquid-diaphragm-pump-rear-three-quarter-view.webp",
+          "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushless-liquid-diaphragm-pump-side-two-wire-motor-view.webp",
+          "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushless-liquid-diaphragm-pump-bottom-mounting-view.webp",
+          "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushless-liquid-diaphragm-pump-front-port-view.webp",
+        ]
+      : [];
+  const additionalImageAlts =
+    reference?.copyKey === "dpl30-brushless"
+      ? [
+          "Front three-quarter view of FOREACH 300 mL/min brushless miniature liquid diaphragm pump",
+          "Rear three-quarter view of FOREACH 300 mL/min brushless miniature liquid diaphragm pump",
+          "Side view of FOREACH 300 mL/min brushless miniature liquid diaphragm pump with two-wire motor",
+          "Bottom view of FOREACH 300 mL/min brushless miniature liquid diaphragm pump showing the mounting surface",
+          "Front view of FOREACH 300 mL/min brushless miniature liquid diaphragm pump showing the inlet and outlet ports",
+        ]
+      : [];
 
   const drawing2dUrl =
     findPreferredDiaphragmAssetUrl(
@@ -949,8 +968,11 @@ function adaptToProductDetailClientData(
     imageAlt: seoProductTitle,
 
     images: mainImageUrl ? [{ src: mainImageUrl, alt: seoProductTitle }] : [],
-    additionalImages: [],
-    galleryImages: mainImageUrl ? [mainImageUrl] : [],
+    additionalImages,
+    additionalImageAlts,
+    galleryImages: mainImageUrl
+      ? [mainImageUrl, ...additionalImages]
+      : additionalImages,
 
     productImages: mainImageUrl
       ? {

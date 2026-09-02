@@ -4044,6 +4044,7 @@ export function localizeProductDetailData<T extends DetailRecord>(data: T): T {
     "imageAlt",
     "mainImageAlt",
     "imageAltEn",
+    "additionalImageAlts",
   ]) {
     if (data[key] !== undefined) {
       localized[key] = data[key];

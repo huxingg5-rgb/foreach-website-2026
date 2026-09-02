@@ -11,7 +11,11 @@ export type DiaphragmPumpEngineeringArticleSlug =
   | "suction-vs-discharge-resistance-diaphragm-pump"
   | "diaphragm-pump-pressure-rating-terms"
   | "100-kpa-vs-600-kpa-diaphragm-pump-selection"
-  | "high-backpressure-fluid-path-pressure-budget";
+  | "high-backpressure-fluid-path-pressure-budget"
+  | "300-ml-min-micro-liquid-diaphragm-pump-self-priming-loss"
+  | "300-ml-min-micro-liquid-diaphragm-pump-motor-runs-no-flow"
+  | "300-ml-min-micro-liquid-diaphragm-pump-water-vs-reagent"
+  | "300-ml-min-micro-liquid-diaphragm-pump-epdm-ptfe-ffkm";
 
 export type EngineeringArticleFaqItem = {
   question: string;

@@ -1909,10 +1909,23 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
   )
     .replace(/\s+/g, " ")
     .trim();
+  const additionalImageAlts = Array.isArray(data.additionalImageAlts)
+    ? data.additionalImageAlts.map((alt: unknown) =>
+        String(alt || "")
+          .replace(/\s+/g, " ")
+          .trim(),
+      )
+    : [];
   const galleryViewLabels = [copy.frontView, copy.sideView, copy.portDetail];
   const getProductImageAlt = (index: number) => {
     if (index === 0) {
       return productImageAlt;
+    }
+
+    const explicitAlt = additionalImageAlts[index - 1];
+
+    if (explicitAlt) {
+      return explicitAlt;
     }
 
     const viewLabel = galleryViewLabels[index] || String(index + 1);

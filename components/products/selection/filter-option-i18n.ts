@@ -77,14 +77,6 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
     ko: "DPL 액체 다이어프램 펌프",
     ru: "Мембранный насос DPL для жидкостей",
   },
-  "DPL 气体隔膜泵": {
-    zh: "DPL 气体隔膜泵",
-    en: "DPL Gas Diaphragm Pump",
-    es: "Bomba de diafragma para gas DPL",
-    fr: "Pompe à membrane gaz DPL",
-    ko: "DPL 가스 다이어프램 펌프",
-    ru: "Мембранный насос DPL для газа",
-  },
   "DPL 气液隔膜泵": {
     zh: "DPL 气液隔膜泵",
     en: "DPL Gas-Liquid Diaphragm Pump",
@@ -110,15 +102,6 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
     ko: "소형 기액 혼합 다이어프램 펌프",
     ru: "Миниатюрный газожидкостный мембранный насос",
   },
-  "气体隔膜泵": {
-    zh: "微型气体隔膜泵",
-    en: "Miniature Gas Diaphragm Pump",
-    es: "Bomba de diafragma en miniatura para gases",
-    fr: "Pompe à membrane miniature pour gaz",
-    ko: "소형 기체 다이어프램 펌프",
-    ru: "Миниатюрный газовый мембранный насос",
-  },
-
   "液泵": {
     zh: "液泵",
     en: "Liquid Pump",

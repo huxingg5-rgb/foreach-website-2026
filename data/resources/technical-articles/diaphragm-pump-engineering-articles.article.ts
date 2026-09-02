@@ -16,9 +16,21 @@ import {
   labLiquidWasteAspirationTroubleshootingZhCopy,
 } from "./application-troubleshooting-articles.zh";
 import {
+  dpl30EpdmPtfeFfkmSelectionZhCopy,
+  dpl30MotorRunsNoFlowZhCopy,
+  dpl30SelfPrimingDecreaseZhCopy,
+  dpl30WaterVsReagentZhCopy,
+} from "./dpl30-self-priming-troubleshooting-materials.zh";
+import {
   ivdWasteAspirationPumpSelectionEnCopy,
   labLiquidWasteAspirationTroubleshootingEnCopy,
 } from "./application-troubleshooting-articles.en";
+import {
+  dpl30EpdmPtfeFfkmSelectionEnCopy,
+  dpl30MotorRunsNoFlowEnCopy,
+  dpl30SelfPrimingDecreaseEnCopy,
+  dpl30WaterVsReagentEnCopy,
+} from "./dpl30-self-priming-troubleshooting-materials.en";
 import {
   ivdWasteAspirationPumpSelectionEsCopy,
   labLiquidWasteAspirationTroubleshootingEsCopy,
@@ -178,6 +190,14 @@ export const diaphragmPump100KpaVs600KpaSelectionSlug =
   "100-kpa-vs-600-kpa-diaphragm-pump-selection" as const;
 export const highBackpressureFluidPathPressureBudgetSlug =
   "high-backpressure-fluid-path-pressure-budget" as const;
+export const dpl30SelfPrimingDecreaseSlug =
+  "300-ml-min-micro-liquid-diaphragm-pump-self-priming-loss" as const;
+export const dpl30MotorRunsNoFlowSlug =
+  "300-ml-min-micro-liquid-diaphragm-pump-motor-runs-no-flow" as const;
+export const dpl30WaterVsReagentSlug =
+  "300-ml-min-micro-liquid-diaphragm-pump-water-vs-reagent" as const;
+export const dpl30EpdmPtfeFfkmSelectionSlug =
+  "300-ml-min-micro-liquid-diaphragm-pump-epdm-ptfe-ffkm" as const;
 
 const copyByLocale: Record<
   TechnicalArticleLocale,
@@ -214,6 +234,10 @@ const copyByLocale: Record<
       diaphragmPump100KpaVs600KpaSelectionZhCopy,
     [highBackpressureFluidPathPressureBudgetSlug]:
       highBackpressureFluidPathPressureBudgetZhCopy,
+    [dpl30SelfPrimingDecreaseSlug]: dpl30SelfPrimingDecreaseZhCopy,
+    [dpl30MotorRunsNoFlowSlug]: dpl30MotorRunsNoFlowZhCopy,
+    [dpl30WaterVsReagentSlug]: dpl30WaterVsReagentZhCopy,
+    [dpl30EpdmPtfeFfkmSelectionSlug]: dpl30EpdmPtfeFfkmSelectionZhCopy,
   },
   en: {
     [diaphragmPumpFlowPressureCurveSlug]: diaphragmPumpFlowPressureCurveEnCopy,
@@ -241,6 +265,10 @@ const copyByLocale: Record<
       diaphragmPump100KpaVs600KpaSelectionEnCopy,
     [highBackpressureFluidPathPressureBudgetSlug]:
       highBackpressureFluidPathPressureBudgetEnCopy,
+    [dpl30SelfPrimingDecreaseSlug]: dpl30SelfPrimingDecreaseEnCopy,
+    [dpl30MotorRunsNoFlowSlug]: dpl30MotorRunsNoFlowEnCopy,
+    [dpl30WaterVsReagentSlug]: dpl30WaterVsReagentEnCopy,
+    [dpl30EpdmPtfeFfkmSelectionSlug]: dpl30EpdmPtfeFfkmSelectionEnCopy,
   },
   es: {
     [diaphragmPumpFlowPressureCurveSlug]: diaphragmPumpFlowPressureCurveEsCopy,
@@ -419,6 +447,41 @@ function createTechnicalArticle(
 export function getDiaphragmPumpEngineeringArticles(
   locale: TechnicalArticleLocale,
 ): TechnicalArticleItem[] {
+  const dpl30TroubleshootingAndMaterialsArticles =
+    locale === "zh-CN" || locale === "en"
+      ? [
+          createTechnicalArticle(
+            dpl30SelfPrimingDecreaseSlug,
+            locale,
+            ["series:dpl30"],
+            116,
+            "2026-09-02",
+          ),
+          createTechnicalArticle(
+            dpl30MotorRunsNoFlowSlug,
+            locale,
+            ["series:dpl30"],
+            115,
+            "2026-09-01",
+          ),
+          createTechnicalArticle(
+            dpl30WaterVsReagentSlug,
+            locale,
+            ["series:dpl30"],
+            114,
+            "2026-08-31",
+          ),
+          createTechnicalArticle(
+            dpl30EpdmPtfeFfkmSelectionSlug,
+            locale,
+            ["series:dpl30"],
+            113,
+            "2026-08-30",
+            "materials-compatibility",
+          ),
+        ]
+      : [];
+
   const flowPressureArticles = [
     createTechnicalArticle(
       diaphragmPump300Vs600SelectionSlug,
@@ -508,6 +571,7 @@ export function getDiaphragmPumpEngineeringArticles(
   ];
 
   return [
+    ...dpl30TroubleshootingAndMaterialsArticles,
     ...flowPressureArticles,
     ...applicationArticles,
     createTechnicalArticle(

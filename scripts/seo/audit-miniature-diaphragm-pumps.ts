@@ -273,7 +273,6 @@ for (const locale of DIAPHRAGM_PUMP_PUBLIC_LOCALES) {
     { slug: "", h1: parentIntroHeading, cards: 7 },
     { slug: "liquid-diaphragm-pumps", h1: copy.liquid, cards: 6 },
     { slug: "gas-liquid-diaphragm-pumps", h1: copy.gasLiquid, cards: 1 },
-    { slug: "gas-diaphragm-pumps", h1: copy.gas, cards: 0 },
   ];
 
   for (const check of categoryChecks) {
@@ -327,8 +326,8 @@ for (const locale of DIAPHRAGM_PUMP_PUBLIC_LOCALES) {
     if (h1 !== reference.localized[locale].h1) {
       fail(`Reference H1 不一致：${route} -> ${h1}`);
     }
-    if (!h1.startsWith(`FOREACH ${reference.model} `)) {
-      fail(`Reference H1 应以 FOREACH + Reference Model 开头：${route}`);
+    if (/\breference model\b/i.test(h1)) {
+      fail(`H1 不应包含 Reference Model 标签：${route}`);
     }
 
     assertCustomProductRow(html, route, locale, reference.model);
@@ -345,9 +344,17 @@ for (const locale of DIAPHRAGM_PUMP_PUBLIC_LOCALES) {
       fail(`公开 HTML 含完整 Ordering Code：${route}`);
     }
 
+    const primaryProductText = visibleText(
+      html.replace(
+        /<section\b[^>]*class="[^"]*RelatedResources-module[^"]*"[^>]*>[\s\S]*?<\/section>/gi,
+        " ",
+      ),
+    );
     if (
       reference.model.startsWith("DPL30H") &&
-      /threaded|compression|螺纹端口|卡套接头/i.test(html)
+      /hose barb|barbed connection|倒刺接口|倒刺端口|卡箍|锁紧结构|espiga fijada|raccord cannelé|바브 연결|클램프|штуцер с хомутом|фиксирующей конструкцией/i.test(
+        primaryProductText,
+      )
     ) {
       fail(`DPL30H 公开 HTML 含错误接口映射：${route}`);
     }
@@ -498,7 +505,7 @@ const finalSitemapUrls = sitemapUrls.filter((url) =>
 const legacySitemapUrls = sitemapUrls.filter((url) =>
   /\/products\/pumps\/diaphragm-pumps(?:\/|$)/.test(url),
 );
-if (finalSitemapUrls.length !== 90) {
+if (finalSitemapUrls.length !== 84) {
   fail(`Sitemap 最终隔膜泵 URL 数量错误：${finalSitemapUrls.length}`);
 }
 if (legacySitemapUrls.length !== 0) {
@@ -524,7 +531,7 @@ const redirectMap = new Map(
 const expectedRedirects = getDiaphragmPumpRedirectPairs({
   includeDefensiveReferencePaths: true,
 });
-if (expectedRedirects.length !== 138) {
+if (expectedRedirects.length !== 144) {
   fail(`中央 redirect pair 数量错误：${expectedRedirects.length}`);
 }
 for (const pair of expectedRedirects) {
@@ -686,12 +693,14 @@ if (
 ) {
   fail("generated detail JSON 仍含旧网页父路径");
 }
-if (
-  generatedDetails
-    .filter((detail) => String(detail.seriesId).toUpperCase() === "DPL30H")
-    .some((detail) => /卡套接头|螺纹端口|硬管/.test(JSON.stringify(detail)))
-) {
+const generatedDpl30hText = JSON.stringify(
+  generatedDetails.filter((detail) => String(detail.seriesId).toUpperCase() === "DPL30H"),
+);
+if (/倒刺接口|倒刺端口|卡箍|锁紧结构/.test(generatedDpl30hText)) {
   fail("generated DPL30H JSON 仍含错误接口映射");
+}
+if (!generatedDpl30hText.includes("卡套接头，连接 6×4 mm（外径×内径）的硬管")) {
+  fail("generated DPL30H JSON 缺少正式卡套接头与 6×4 mm 硬管说明");
 }
 
 const llmsText = fs.readFileSync(path.join(projectRoot, "public", "llms.txt"), "utf8");

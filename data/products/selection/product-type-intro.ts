@@ -57,7 +57,7 @@ export const productTypeIntroMap: Record<string, ProductTypeIntroContent> = {
   "pumps:diaphragm-pump": {
     title: "微型隔膜泵系列",
     paragraphs: [
-      "恒永达微型隔膜泵涵盖**液体、气体及气液混合**类型，适用于液体输送、气体抽吸、清洗循环、废液排放及气液混合等场景。",
+      "恒永达微型隔膜泵涵盖**液体及气液混合**类型，适用于液体输送、气体抽吸、真空建立、清洗循环、废液排放及气液混合物处理等场景。",
       "选型时可根据**输送介质、目标流量、工作压力或真空度、自吸高度、电机类型、接液材质、接口形式及安装空间**进行筛选。微型隔膜泵包括 **DPL30 300 mL/min、DPL60 600 mL/min**，以及 **DPGL800 双头微型气液混合隔膜泵（单泵头空载气体流量为 6 L/min）** 等型号，可面向 IVD、实验室分析及医疗设备液路进行选型。",
       "产品卡片展示常用配置，完整参数、尺寸图及规格书请进入产品详情页查看；如无法确定型号，可提交实际工况获取选型建议。",
     ],
@@ -179,7 +179,7 @@ const productTypeIntroI18nMap: Record<string, ProductTypeIntroLocaleMap> = {
     en: {
       title: "Miniature Diaphragm Pump Series",
       paragraphs: [
-        "FOREACH miniature diaphragm pumps are available in **liquid, gas, and gas-liquid configurations** for liquid transfer, gas aspiration, wash circulation, waste-fluid discharge, and gas-liquid media handling.",
+        "FOREACH miniature diaphragm pumps are available in **liquid and gas-liquid configurations** for liquid transfer, gas aspiration, vacuum generation, wash circulation, waste-fluid discharge, and gas-liquid media handling.",
         "Selection can be filtered by **pumped medium, target flow rate, operating pressure or vacuum level, self-priming lift, motor type, wetted materials, port configuration, and available installation space**. Miniature diaphragm pump models include the **DPL30 at 300 mL/min and DPL60 at 600 mL/min**, as well as the **dual-head DPGL800 miniature gas-liquid diaphragm pump with a no-load gas flow of 6 L/min per head**, for fluidic systems in IVD, laboratory analysis, and medical equipment.",
         "Product cards show commonly specified configurations. For complete specifications, dimensional drawings, and datasheets, open the product detail page. If you are unsure which model to choose, submit your actual operating conditions for a selection recommendation.",
       ],
@@ -189,7 +189,7 @@ const productTypeIntroI18nMap: Record<string, ProductTypeIntroLocaleMap> = {
     es: {
       title: "Serie de bombas de diafragma en miniatura",
       paragraphs: [
-        "Las bombas de diafragma en miniatura FOREACH se ofrecen en versiones para **líquidos, gases y mezclas gas-líquido**, destinadas a la transferencia de líquidos, la aspiración de gases, la circulación de lavado, la evacuación de líquidos residuales y el manejo de mezclas gas-líquido.",
+        "Las bombas de diafragma en miniatura FOREACH se ofrecen en versiones para **líquidos y mezclas gas-líquido**, destinadas a la transferencia de líquidos, la aspiración de gases, la generación de vacío, la circulación de lavado, la evacuación de líquidos residuales y el manejo de mezclas gas-líquido.",
         "La selección puede filtrarse por **fluido bombeado, caudal objetivo, presión de trabajo o nivel de vacío, altura de autocebado, tipo de motor, materiales en contacto con el fluido, tipo de conexión y espacio de instalación disponible**. La gama de bombas de diafragma en miniatura incluye la **DPL30 de 300 mL/min y la DPL60 de 600 mL/min**, además de la **bomba de diafragma miniatura de doble cabezal DPGL800 para gas y líquido, con un caudal de gas sin carga de 6 L/min por cabezal**, para circuitos fluídicos de equipos IVD, análisis de laboratorio y dispositivos médicos.",
         "Las tarjetas de producto muestran las configuraciones habituales. Para consultar las especificaciones completas, los planos dimensionales y las fichas técnicas, acceda a la página de detalle del producto. Si no está seguro del modelo, envíe las condiciones reales de funcionamiento para recibir una recomendación de selección.",
       ],
@@ -199,7 +199,7 @@ const productTypeIntroI18nMap: Record<string, ProductTypeIntroLocaleMap> = {
     fr: {
       title: "Série de pompes à membrane miniatures",
       paragraphs: [
-        "Les pompes à membrane miniatures FOREACH sont proposées en versions pour **liquides, gaz et mélanges gaz-liquide**, destinées au transfert de liquides, à l'aspiration de gaz, à la circulation de lavage, à l'évacuation des liquides usagés et au traitement des mélanges gaz-liquide.",
+        "Les pompes à membrane miniatures FOREACH sont proposées en versions pour **liquides et mélanges gaz-liquide**, destinées au transfert de liquides, à l'aspiration de gaz, à la génération de vide, à la circulation de lavage, à l'évacuation des liquides usagés et au traitement des mélanges gaz-liquide.",
         "La sélection peut être filtrée selon **le fluide véhiculé, le débit cible, la pression de service ou le niveau de vide, la hauteur d'auto-amorçage, le type de moteur, les matériaux en contact avec le fluide, le type de raccordement et l'espace d'installation disponible**. La gamme de pompes à membrane miniatures comprend la **DPL30 de 300 mL/min et la DPL60 de 600 mL/min**, ainsi que la **pompe à membrane miniature gaz-liquide DPGL800 à double tête, avec un débit de gaz à vide de 6 L/min par tête**, pour les circuits fluidiques des équipements IVD, des systèmes d'analyse de laboratoire et des dispositifs médicaux.",
         "Les cartes produits présentent les configurations courantes. Pour consulter les caractéristiques complètes, les plans d'encombrement et les fiches techniques, ouvrez la page de détail du produit. Si le choix du modèle reste incertain, transmettez les conditions réelles de fonctionnement afin d'obtenir une recommandation de sélection.",
       ],
@@ -209,7 +209,7 @@ const productTypeIntroI18nMap: Record<string, ProductTypeIntroLocaleMap> = {
     ko: {
       title: "소형 다이어프램 펌프 시리즈",
       paragraphs: [
-        "FOREACH 소형 다이어프램 펌프는 **액체용, 가스용 및 기액 혼합용** 제품으로 구성되며 액체 이송, 가스 흡입, 세척액 순환, 폐액 배출 및 기액 혼합 유체 처리에 적용할 수 있습니다.",
+        "FOREACH 소형 다이어프램 펌프는 **액체용 및 기액 혼합용** 제품으로 구성되며 액체 이송, 가스 흡입, 진공 형성, 세척액 순환, 폐액 배출 및 기액 혼합 유체 처리에 적용할 수 있습니다.",
         "선정 시 **이송 유체, 목표 유량, 작동 압력 또는 진공도, 자흡 높이, 모터 유형, 접액부 재질, 포트 형식 및 설치 공간**을 기준으로 필터링할 수 있습니다. 소형 다이어프램 펌프에는 **DPL30 300 mL/min 및 DPL60 600 mL/min**과 **헤드당 무부하 가스 유량이 6 L/min인 DPGL800 듀얼 헤드 소형 기액 혼합 다이어프램 펌프**가 있으며 IVD, 실험실 분석 및 의료기기 유로용으로 선정할 수 있습니다.",
         "제품 카드에는 일반적으로 사용되는 구성이 표시됩니다. 전체 사양, 외형 치수도 및 데이터시트는 제품 상세 페이지에서 확인하십시오. 모델을 결정하기 어려운 경우 실제 사용 조건을 제출하면 선정 제안을 받을 수 있습니다.",
       ],
@@ -219,7 +219,7 @@ const productTypeIntroI18nMap: Record<string, ProductTypeIntroLocaleMap> = {
     ru: {
       title: "Серия миниатюрных мембранных насосов",
       paragraphs: [
-        "Миниатюрные мембранные насосы FOREACH выпускаются в исполнениях **для жидкостей, газов и газожидкостных сред** и применяются для перекачивания жидкостей, аспирации газов, циркуляции промывочной жидкости, отвода отработанной жидкости и работы с газожидкостными смесями.",
+        "Миниатюрные мембранные насосы FOREACH выпускаются в исполнениях **для жидкостей и газожидкостных сред** и применяются для перекачивания жидкостей, аспирации газов, создания вакуума, циркуляции промывочной жидкости, отвода отработанной жидкости и работы с газожидкостными смесями.",
         "Подбор можно выполнять по следующим параметрам: **перекачиваемая среда, требуемый расход, рабочее давление или степень вакуума, высота самовсасывания, тип двигателя, материалы, контактирующие с рабочей средой, тип присоединения и доступное монтажное пространство**. В линейку миниатюрных мембранных насосов входят **DPL30 с расходом 300 мл/мин и DPL60 с расходом 600 мл/мин**, а также **двухголовочный миниатюрный газожидкостный мембранный насос DPGL800 с расходом газа без нагрузки 6 л/мин на одну головку**; модели можно подбирать для жидкостных трактов оборудования IVD, лабораторных анализаторов и медицинских приборов.",
         "В карточках изделий приведены распространённые конфигурации. Полные характеристики, габаритные чертежи и технические описания доступны на странице изделия. Если выбор модели вызывает затруднения, укажите фактические условия эксплуатации, чтобы получить рекомендацию по подбору.",
       ],
@@ -441,6 +441,148 @@ const productTypeIntroI18nMap: Record<string, ProductTypeIntroLocaleMap> = {
   },
 };
 
+const diaphragmPumpCategoryIntroMap: Record<
+  "liquid" | "gas-liquid",
+  Partial<Record<SelectionLocale, ProductTypeIntroContent>>
+> = {
+  liquid: {
+    zh: {
+      title: "微型液体隔膜泵",
+      paragraphs: [
+        "FOREACH微型液体隔膜泵适用于仪器液路中的液体输送、清洗、试剂转移、废液排放和循环。当前DPL30、DPL60和DPL30H系列覆盖300 mL/min与600 mL/min空载流量等级，以及100 kPa与600 kPa额定压力等级。",
+        "产品提供有刷和无刷电机。接液部件可选择EPDM膜片和阀片，或PTFE膜片与FFKM阀片，泵头均采用PPS材料。选型时应综合考虑实际流量、背压、自吸、管路、介质兼容性和运行寿命。",
+      ],
+      image: {
+        src: "/images/resources/technical-articles/dpl60-liquid-diaphragm-pump/dpl60-article-cover.webp",
+        alt: "FOREACH DPL30、DPL60和DPL30H微型液体隔膜泵",
+      },
+    },
+    en: {
+      title: "Miniature Liquid Diaphragm Pumps",
+      paragraphs: [
+        "FOREACH miniature liquid diaphragm pumps support liquid transfer, wash-solution delivery, reagent transfer, waste-fluid discharge, and circulation in instrument fluid paths. The DPL30, DPL60, and DPL30H series cover 300 and 600 mL/min no-load flow classes and rated-pressure classes of 100 and 600 kPa.",
+        "Available options include brushed and brushless motors. Wetted parts use either an EPDM diaphragm and valves or a PTFE diaphragm with FFKM valves, with PPS pump heads. Select by required flow, backpressure, self-priming, tubing, fluid compatibility, and service life.",
+      ],
+      image: {
+        src: "/images/resources/technical-articles/dpl60-liquid-diaphragm-pump/dpl60-article-cover.webp",
+        alt: "FOREACH DPL30, DPL60 and DPL30H miniature liquid diaphragm pumps",
+      },
+    },
+    es: {
+      title: "Bombas miniatura de diafragma para líquidos",
+      paragraphs: [
+        "Las bombas miniatura de diafragma para líquidos FOREACH se utilizan para transferir líquidos, suministrar soluciones de lavado, transferir reactivos, evacuar líquidos residuales y realizar circulación en los circuitos de fluidos de los instrumentos. Las series DPL30, DPL60 y DPL30H cubren clases de caudal sin carga de 300 y 600 mL/min y clases de presión nominal de 100 y 600 kPa.",
+        "Hay disponibles motores con y sin escobillas. Las piezas en contacto con el fluido utilizan un diafragma y válvulas de EPDM, o un diafragma de PTFE con válvulas de FFKM; los cabezales de bomba son de PPS. La selección debe considerar el caudal requerido, la contrapresión, el autocebado, los tubos, la compatibilidad del fluido y la vida útil.",
+      ],
+      image: {
+        src: "/images/resources/technical-articles/dpl60-liquid-diaphragm-pump/dpl60-article-cover.webp",
+        alt: "Bombas miniatura de diafragma para líquidos FOREACH DPL30, DPL60 y DPL30H",
+      },
+    },
+    fr: {
+      title: "Pompes à membrane miniatures pour liquides",
+      paragraphs: [
+        "Les pompes à membrane miniatures pour liquides FOREACH assurent le transfert de liquides, l’alimentation en solution de lavage, le transfert de réactifs, l’évacuation des effluents et la circulation dans les circuits fluidiques des instruments. Les séries DPL30, DPL60 et DPL30H couvrent des classes de débit sans charge de 300 et 600 mL/min et des classes de pression nominale de 100 et 600 kPa.",
+        "Des moteurs à balais et sans balais sont disponibles. Les pièces en contact avec le fluide utilisent une membrane et des clapets en EPDM, ou une membrane en PTFE avec des clapets en FFKM ; les têtes de pompe sont en PPS. La sélection doit tenir compte du débit requis, de la contre-pression, de l’auto-amorçage, de la tuyauterie, de la compatibilité du fluide et de la durée de vie.",
+      ],
+      image: {
+        src: "/images/resources/technical-articles/dpl60-liquid-diaphragm-pump/dpl60-article-cover.webp",
+        alt: "Pompes à membrane miniatures pour liquides FOREACH DPL30, DPL60 et DPL30H",
+      },
+    },
+    ko: {
+      title: "소형 액체 다이어프램 펌프",
+      paragraphs: [
+        "FOREACH 소형 액체 다이어프램 펌프는 장비 유로의 액체 이송, 세척액 공급, 시약 이송, 폐액 배출 및 순환에 사용됩니다. DPL30, DPL60 및 DPL30H 시리즈는 300 및 600 mL/min 무부하 유량 등급과 100 및 600 kPa 정격 압력 등급을 제공합니다.",
+        "브러시 DC 모터와 브러시리스 DC 모터를 선택할 수 있습니다. 접액부는 EPDM 다이어프램과 밸브 조합 또는 PTFE 다이어프램과 FFKM 밸브 조합을 사용하며 펌프 헤드는 PPS 재질입니다. 필요한 유량, 배압, 자흡 성능, 튜빙, 유체 호환성 및 수명을 기준으로 선정하십시오.",
+      ],
+      image: {
+        src: "/images/resources/technical-articles/dpl60-liquid-diaphragm-pump/dpl60-article-cover.webp",
+        alt: "FOREACH DPL30, DPL60 및 DPL30H 소형 액체 다이어프램 펌프",
+      },
+    },
+    ru: {
+      title: "Миниатюрные жидкостные мембранные насосы",
+      paragraphs: [
+        "Миниатюрные жидкостные мембранные насосы FOREACH применяются для подачи жидкостей и промывочных растворов, переноса реагентов, отвода отработанной жидкости и циркуляции в жидкостных трактах приборов. Серии DPL30, DPL60 и DPL30H охватывают классы расхода без нагрузки 300 и 600 mL/min и номинального давления 100 и 600 kPa.",
+        "Предлагаются щёточные и бесщёточные двигатели. Детали, контактирующие со средой, используют диафрагму и клапаны из EPDM либо диафрагму из PTFE и клапаны из FFKM; головки насосов изготовлены из PPS. При подборе учитывайте требуемый расход, противодавление, самовсасывание, трубки, совместимость среды и срок службы.",
+      ],
+      image: {
+        src: "/images/resources/technical-articles/dpl60-liquid-diaphragm-pump/dpl60-article-cover.webp",
+        alt: "Миниатюрные жидкостные мембранные насосы FOREACH DPL30, DPL60 и DPL30H",
+      },
+    },
+  },
+  "gas-liquid": {
+    zh: {
+      title: "微型气液混合隔膜泵",
+      paragraphs: [
+        "FOREACH微型气液混合隔膜泵适用于气体和气液混合物的真空抽吸、管路抽空、负压建立及含气废液抽排。当前DPGL800平台的单头空载气体流量为6 L/min，最大正压为30 kPa，最大负压小于-90 kPa。",
+        "接液部件可选择EPDM膜片和阀片，或PTFE膜片与FFKM阀片，泵头均采用PPS材料。选型时应考虑介质状态、目标真空度、系统容积、管路阻力、材料兼容性和接口方向；6 L/min不能理解为纯液体流量。",
+      ],
+      image: {
+        src: "/images/resources/technical-articles/dpgl800-gas-liquid-diaphragm-pump/dpgl800-article-cover.webp",
+        alt: "FOREACH DPGL800微型气液混合隔膜泵",
+      },
+    },
+    en: {
+      title: "Miniature Gas-Liquid Diaphragm Pumps",
+      paragraphs: [
+        "FOREACH miniature gas-liquid diaphragm pumps support vacuum aspiration, line evacuation, negative-pressure generation, and waste-fluid extraction with entrained air. The current DPGL800 platform provides 6 L/min single-head no-load gas flow, 30 kPa maximum positive pressure, and maximum negative pressure below -90 kPa.",
+        "Wetted parts use either an EPDM diaphragm and valves or a PTFE diaphragm with FFKM valves, with PPS pump heads. Select by medium state, target vacuum, system volume, line resistance, material compatibility, and port direction. The 6 L/min value is not a pure-liquid flow rating.",
+      ],
+      image: {
+        src: "/images/resources/technical-articles/dpgl800-gas-liquid-diaphragm-pump/dpgl800-article-cover.webp",
+        alt: "FOREACH DPGL800 miniature gas-liquid diaphragm pump",
+      },
+    },
+    es: {
+      title: "Bombas de diafragma en miniatura gas-líquido",
+      paragraphs: [
+        "Las bombas de diafragma en miniatura gas-líquido FOREACH se utilizan para aspiración por vacío, evacuación de tuberías, generación de presión negativa y extracción de líquidos residuales con aire arrastrado. La plataforma DPGL800 ofrece un caudal de gas sin carga de 6 L/min por cabezal, una presión positiva máxima de 30 kPa y una presión negativa máxima inferior a -90 kPa.",
+        "Las piezas en contacto con el fluido utilizan un diafragma y válvulas de EPDM, o un diafragma de PTFE con válvulas de FFKM; los cabezales de bomba son de PPS. La selección debe considerar el estado del medio, el vacío objetivo, el volumen del sistema, la resistencia de la tubería, la compatibilidad de los materiales y la orientación de los puertos. El valor de 6 L/min no corresponde al caudal de un líquido puro.",
+      ],
+      image: {
+        src: "/images/resources/technical-articles/dpgl800-gas-liquid-diaphragm-pump/dpgl800-article-cover.webp",
+        alt: "Bomba de diafragma en miniatura gas-líquido FOREACH DPGL800",
+      },
+    },
+    fr: {
+      title: "Pompes à membrane miniatures gaz-liquide",
+      paragraphs: [
+        "Les pompes à membrane miniatures gaz-liquide FOREACH sont utilisées pour l’aspiration sous vide, la mise à vide des conduites, la génération de pression négative et l’extraction d’effluents contenant de l’air. La plateforme DPGL800 fournit un débit de gaz sans charge de 6 L/min par tête, une pression positive maximale de 30 kPa et une pression négative maximale inférieure à -90 kPa.",
+        "Les pièces en contact avec le fluide utilisent une membrane et des clapets en EPDM, ou une membrane en PTFE avec des clapets en FFKM ; les têtes de pompe sont en PPS. La sélection doit tenir compte de l’état du fluide, du niveau de vide cible, du volume du système, de la résistance des conduites, de la compatibilité des matériaux et de l’orientation des orifices. La valeur de 6 L/min ne correspond pas à un débit de liquide pur.",
+      ],
+      image: {
+        src: "/images/resources/technical-articles/dpgl800-gas-liquid-diaphragm-pump/dpgl800-article-cover.webp",
+        alt: "Pompe à membrane miniature gaz-liquide FOREACH DPGL800",
+      },
+    },
+    ko: {
+      title: "소형 기액 혼합 다이어프램 펌프",
+      paragraphs: [
+        "FOREACH 소형 기액 혼합 다이어프램 펌프는 진공 흡인, 배관 진공 형성, 부압 생성 및 공기가 혼입된 폐액 추출에 사용됩니다. DPGL800 플랫폼의 헤드당 무부하 가스 유량은 6 L/min이며 최대 양압은 30 kPa, 최대 부압은 -90 kPa 미만입니다.",
+        "접액부는 EPDM 다이어프램과 밸브 조합 또는 PTFE 다이어프램과 FFKM 밸브 조합을 사용하며 펌프 헤드는 PPS 재질입니다. 선정 시 유체 상태, 목표 진공도, 시스템 용적, 배관 저항, 재질 호환성 및 포트 방향을 고려하십시오. 6 L/min 값은 순수 액체 유량 정격이 아닙니다.",
+      ],
+      image: {
+        src: "/images/resources/technical-articles/dpgl800-gas-liquid-diaphragm-pump/dpgl800-article-cover.webp",
+        alt: "FOREACH DPGL800 소형 기액 혼합 다이어프램 펌프",
+      },
+    },
+    ru: {
+      title: "Миниатюрные газожидкостные мембранные насосы",
+      paragraphs: [
+        "Миниатюрные газожидкостные мембранные насосы FOREACH применяются для вакуумной аспирации, откачки трубопроводов, создания разрежения и удаления отработанной жидкости с примесью воздуха. Платформа DPGL800 обеспечивает расход газа без нагрузки 6 L/min на одну головку, максимальное положительное давление 30 kPa и максимальное отрицательное давление ниже -90 kPa.",
+        "Детали, контактирующие со средой, используют диафрагму и клапаны из EPDM либо диафрагму из PTFE и клапаны из FFKM; головки насосов изготовлены из PPS. При подборе учитывайте состояние среды, требуемый вакуум, объём системы, сопротивление трубопроводов, совместимость материалов и ориентацию портов. Значение 6 L/min не является расходом для чистой жидкости.",
+      ],
+      image: {
+        src: "/images/resources/technical-articles/dpgl800-gas-liquid-diaphragm-pump/dpgl800-article-cover.webp",
+        alt: "Миниатюрный газожидкостный мембранный насос FOREACH DPGL800",
+      },
+    },
+  },
+};
+
 function getRuntimeLocale(defaultLocale: SelectionLocale): SelectionLocale {
   if (defaultLocale !== "zh") {
     return defaultLocale;
@@ -491,4 +633,23 @@ export function getProductTypeIntroByIds(
       alt: localizedCopy.imageAlt,
     },
   };
+}
+
+export function getDiaphragmPumpCategoryIntro(
+  diaphragmType: unknown,
+  locale: SelectionLocale = "zh"
+) {
+  const type = String(diaphragmType || "");
+  const category = type === "液体隔膜泵"
+    ? "liquid"
+    : type === "气液混合隔膜泵"
+      ? "gas-liquid"
+      : null;
+
+  if (!category) {
+    return null;
+  }
+
+  const activeLocale = getRuntimeLocale(locale);
+  return diaphragmPumpCategoryIntroMap[category][activeLocale] || null;
 }
