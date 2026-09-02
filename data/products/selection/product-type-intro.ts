@@ -460,7 +460,7 @@ const diaphragmPumpCategoryIntroMap: Record<
     en: {
       title: "Miniature Liquid Diaphragm Pumps",
       paragraphs: [
-        "FOREACH miniature liquid diaphragm pumps support liquid transfer, wash-solution delivery, reagent transfer, waste-fluid discharge, and circulation in instrument fluid paths. The DPL30, DPL60, and DPL30H series cover 300 and 600 mL/min no-load flow classes and rated-pressure classes of 100 and 600 kPa.",
+        "FOREACH micro liquid diaphragm pumps are miniature diaphragm pumps designed for liquid transfer, wash-solution delivery, reagent handling, waste-fluid discharge, and circulation in instrument fluid paths. This micro diaphragm pump range includes the DPL30, DPL60, and DPL30H series, covering 300 and 600 mL/min no-load flow classes and rated-pressure classes of 100 and 600 kPa.",
         "Available options include brushed and brushless motors. Wetted parts use either an EPDM diaphragm and valves or a PTFE diaphragm with FFKM valves, with PPS pump heads. Select by required flow, backpressure, self-priming, tubing, fluid compatibility, and service life.",
       ],
       image: {

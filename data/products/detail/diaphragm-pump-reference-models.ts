@@ -52,6 +52,7 @@ export type DiaphragmPumpCategoryCopy = {
   modelLabel: string;
   seoTitle: string;
   seoDescription: string;
+  liquidSeoTitle?: string;
   liquidSeoDescription?: string;
   gasLiquidSeoDescription?: string;
 };
@@ -88,8 +89,9 @@ export const DIAPHRAGM_PUMP_CATEGORY_COPY: Record<
     seoTitle: "Miniature Diaphragm Pumps for Liquid and Vacuum | FOREACH",
     seoDescription:
       "Explore FOREACH miniature diaphragm pumps for liquid transfer, high-pressure fluid circuits, gas aspiration, vacuum generation, and gas-liquid mixture evacuation.",
+    liquidSeoTitle: "Micro Liquid Diaphragm Pumps for Instruments",
     liquidSeoDescription:
-      "Compare FOREACH DPL30, DPL60 and DPL30H miniature liquid diaphragm pumps by flow class, rated pressure, motor, wetted materials and fluid-path requirements.",
+      "Compare FOREACH DPL30, DPL60 and DPL30H micro liquid diaphragm pumps by 300/600 mL/min flow class, rated pressure, motor and wetted materials.",
     gasLiquidSeoDescription:
       "Explore the FOREACH DPGL800 miniature gas-liquid diaphragm pump by vacuum, per-head no-load gas flow, pressure, wetted materials and system requirements.",
   },

@@ -241,10 +241,13 @@ async function getDiaphragmPumpRouteMetadata(
       : copy.parent;
   const isLiquidCategory = childSlug === "liquid-diaphragm-pumps";
   const isGasLiquidCategory = childSlug === "gas-liquid-diaphragm-pumps";
+  const seoHeading = isLiquidCategory
+    ? copy.liquidSeoTitle || heading
+    : heading;
   const title = childSlug
     ? normalizedLocale === "zh" && (isLiquidCategory || isGasLiquidCategory)
       ? `${heading}｜FOREACH`
-      : `${heading} | FOREACH`
+      : `${seoHeading} | FOREACH`
     : copy.seoTitle;
   const description = isLiquidCategory
     ? copy.liquidSeoDescription || copy.seoDescription
@@ -259,7 +262,14 @@ async function getDiaphragmPumpRouteMetadata(
   return {
     title,
     description,
-    keywords: [heading, "FOREACH", "miniature diaphragm pump"],
+    keywords: [
+      heading,
+      "FOREACH",
+      "miniature diaphragm pump",
+      ...(normalizedLocale === "en" && isLiquidCategory
+        ? ["micro liquid diaphragm pump", "micro diaphragm pump"]
+        : []),
+    ],
     alternates: {
       canonical: canonicalPath,
       languages: getDiaphragmPumpLanguageAlternates(childSlug || undefined),
