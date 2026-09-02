@@ -36,6 +36,9 @@ type ResultRow = {
   regime: string;
 };
 
+type RowErrorField = "type" | "flow" | "diameter_cv" | "length" | "xi";
+type RowErrors = Record<number, Partial<Record<RowErrorField, string>>>;
+
 type FluidProperties = {
   rho: number;
   mu: number;
@@ -115,6 +118,7 @@ const PRESSURE_UNITS = [
 ] as const;
 
 const CV_MODELS = ["小孔节流（Cd 法）", "管道沿程（Churchill 法）"] as const;
+const ROW_TYPES = ["ID", "Cv"] as const;
 const CALCULATION_MODES = ["已知流量（求压降）", "已知压降（求流量）"] as const;
 const VISCOSITY_MODES = ["动力黏度", "运动黏度"] as const;
 const CUSTOM_FLUID = "其它自定义";
@@ -610,6 +614,7 @@ function calculateStatistics(
   rows: InputRow[],
   resultRows: ResultRow[],
   currentFlow: number,
+  useRowFlows: boolean,
   properties: FluidProperties,
   orificeShape: string,
   totalDPy: number,
@@ -631,12 +636,13 @@ function calculateStatistics(
 
   rows.forEach((row) => {
     const type = normalizedType(row.type);
+    const rowFlow = useRowFlows ? toNumber(row.flow, currentFlow) : currentFlow;
     const value = toNumber(row.diameter_cv);
     const length = toNumber(row.length);
 
     if (type === "ID" && value > 0 && length > 0) {
       const along = calculator.pressure_loss_along_length(
-        currentFlow / constants.M3S2MLMIN,
+        rowFlow / constants.M3S2MLMIN,
         value / 1000,
         length / 1000,
         nuWater,
@@ -649,7 +655,7 @@ function calculateStatistics(
           ? Math.sqrt(value / (constants.CV_TO_DIAMETER_COEFF * orifice.Cd_inf))
           : 1;
       waterDPj += calculator.cv_pressure_drop_corrected(
-        currentFlow,
+        rowFlow,
         value,
         rhoWater,
         muWater,
@@ -714,6 +720,7 @@ function calculateStatistics(
 function makePolynomial(
   rows: InputRow[],
   currentFlow: number,
+  useRowFlows: boolean,
   fluidType: string,
   temperature: number,
   properties: FluidProperties,
@@ -728,18 +735,38 @@ function makePolynomial(
     Math.pow(10, logMin + ((logMax - logMin) * index) / 17),
   );
   const pressureDrops = flows.map(
-    (flow) =>
-      calculator.compute_system_with_flow(
-        rows,
-        flow,
-        fluidType,
-        temperature,
-        properties.rho,
-        properties.mu,
-        properties.nu,
-        orificeShape,
-        cvModel,
-      ).total_dPt,
+    (flow) => {
+      const calculationRows = useRowFlows
+        ? rows.map((row) => ({
+            ...row,
+            flow: toNumber(row.flow, currentFlow) * (flow / currentFlow),
+          }))
+        : rows;
+      const result = useRowFlows
+        ? calculator.compute_system_with_row_flows(
+            calculationRows,
+            flow,
+            fluidType,
+            temperature,
+            properties.rho,
+            properties.mu,
+            properties.nu,
+            orificeShape,
+            cvModel,
+          )
+        : calculator.compute_system_with_flow(
+            calculationRows,
+            flow,
+            fluidType,
+            temperature,
+            properties.rho,
+            properties.mu,
+            properties.nu,
+            orificeShape,
+            cvModel,
+          );
+      return result.total_dPt;
+    },
   );
   const fit = fitPolynomialLikeDesktop(flows, pressureDrops, currentFlow);
   const samples = flows.map((q, index) => {
@@ -989,6 +1016,8 @@ export default function FluidResistanceCalculator({
     })),
   );
   const [selectedRowId, setSelectedRowId] = useState<number | null>(null);
+  const [openTypeRowId, setOpenTypeRowId] = useState<number | null>(null);
+  const [rowErrors, setRowErrors] = useState<RowErrors>({});
   const [calculation, setCalculation] = useState<CalculationState | null>(null);
   const [activeTab, setActiveTab] = useState<ActiveTab>("results");
 
@@ -1010,6 +1039,84 @@ export default function FluidResistanceCalculator({
     setRows((current) =>
       current.map((row) => (row.id === id ? { ...row, [field]: value } : row)),
     );
+    setCalculation(null);
+    setRowErrors((current) => {
+      const fieldErrors = current[id];
+      if (!fieldErrors || !(field in fieldErrors)) return current;
+      const nextFieldErrors = { ...fieldErrors };
+      delete nextFieldErrors[field as RowErrorField];
+      const next = { ...current };
+      if (Object.keys(nextFieldErrors).length) next[id] = nextFieldErrors;
+      else delete next[id];
+      return next;
+    });
+  }
+
+  function updateRowType(id: number, value: string) {
+    const type = normalizedType(value);
+    setRows((current) =>
+      current.map((row) => {
+        if (row.id !== id) return row;
+        if (type === "Cv") {
+          return { ...row, type, length: "0.0", xi: "0.0" };
+        }
+        return {
+          ...row,
+          type: "ID",
+          length: toNumber(row.length) > 0 ? row.length : "100.0",
+          xi: toNumber(row.xi, -1) >= 0 ? row.xi : "0.0",
+        };
+      }),
+    );
+    setCalculation(null);
+    setRowErrors((current) => {
+      if (!current[id]) return current;
+      const next = { ...current };
+      delete next[id];
+      return next;
+    });
+  }
+
+  function validateRows(currentRows: InputRow[]) {
+    const nextErrors: RowErrors = {};
+    const addError = (rowId: number, field: RowErrorField, message: string) => {
+      nextErrors[rowId] = { ...nextErrors[rowId], [field]: message };
+    };
+
+    currentRows.forEach((row) => {
+      const type = normalizedType(row.type);
+      const flow = toNumber(row.flow, Number.NaN);
+      const value = toNumber(row.diameter_cv, Number.NaN);
+
+      if (type !== "ID" && type !== "Cv") {
+        addError(row.id, "type", t("Select ID or Cv.", "请选择 ID 或 Cv"));
+      }
+      if (!Number.isFinite(flow) || flow <= 0) {
+        addError(row.id, "flow", t("Enter a value greater than 0.", "请输入大于 0 的流量"));
+      }
+      if (!Number.isFinite(value) || value <= 0) {
+        addError(
+          row.id,
+          "diameter_cv",
+          type === "Cv"
+            ? t("Enter a Cv greater than 0.", "请输入大于 0 的 Cv")
+            : t("Enter an ID greater than 0.", "请输入大于 0 的内径"),
+        );
+      }
+      if (type === "ID") {
+        const length = toNumber(row.length, Number.NaN);
+        const xi = toNumber(row.xi, Number.NaN);
+        if (!Number.isFinite(length) || length <= 0) {
+          addError(row.id, "length", t("Enter a length greater than 0.", "请输入大于 0 的管长"));
+        }
+        if (!Number.isFinite(xi) || xi < 0) {
+          addError(row.id, "xi", t("Enter 0 or a positive value.", "请输入 0 或正数"));
+        }
+      }
+    });
+
+    setRowErrors(nextErrors);
+    return Object.keys(nextErrors).length === 0;
   }
 
   function addRow() {
@@ -1027,6 +1134,7 @@ export default function FluidResistanceCalculator({
         notes: t("Tubing Notes", "管路备注"),
       },
     ]);
+    setCalculation(null);
   }
 
   function deleteSelectedRow() {
@@ -1035,16 +1143,25 @@ export default function FluidResistanceCalculator({
       return;
     }
     setRows((current) => current.filter((row) => row.id !== selectedRowId));
+    setRowErrors((current) => {
+      const next = { ...current };
+      delete next[selectedRowId];
+      return next;
+    });
+    setCalculation(null);
     setSelectedRowId(null);
   }
 
   function runCalculation() {
     const normalizedRows = rows
-      .map((row) => ({ ...row, type: normalizedType(row.type) }))
-      .filter((row) => toNumber(row.flow) > 0);
+      .map((row) => ({ ...row, type: normalizedType(row.type) }));
 
     if (!normalizedRows.length) {
       window.alert(t("Enter valid fluid-path data.", "请输入有效的管路数据"));
+      return;
+    }
+    if (!validateRows(normalizedRows)) {
+      setCalculation(null);
       return;
     }
 
@@ -1054,7 +1171,10 @@ export default function FluidResistanceCalculator({
 
     if (calculationMode === "已知流量（求压降）") {
       currentFlow = calculator.convert_flow_to_mlmin(toNumber(flowInput), flowUnit);
-      systemResult = calculator.compute_system_with_flow(
+      if (currentFlow <= 0) {
+        currentFlow = toNumber(normalizedRows[0]?.flow, 0.001);
+      }
+      systemResult = calculator.compute_system_with_row_flows(
         normalizedRows,
         currentFlow,
         fluidType,
@@ -1108,7 +1228,12 @@ export default function FluidResistanceCalculator({
         {
           source: normalizedRows[index],
           raw,
-          flow: calculator.fmt_num(currentFlow, 2),
+          flow: calculator.fmt_num(
+            calculationMode === "已知流量（求压降）"
+              ? toNumber(normalizedRows[index].flow, currentFlow)
+              : currentFlow,
+            2,
+          ),
           regime: calculator.get_flow_regime(toNumber(raw["雷诺数Re"])),
         },
       ];
@@ -1118,6 +1243,7 @@ export default function FluidResistanceCalculator({
       normalizedRows,
       resultRows,
       currentFlow,
+      calculationMode === "已知流量（求压降）",
       properties,
       orificeShape,
       systemResult.total_dPy,
@@ -1127,24 +1253,38 @@ export default function FluidResistanceCalculator({
     const polynomial = makePolynomial(
       normalizedRows,
       currentFlow,
+      calculationMode === "已知流量（求压降）",
       fluidType,
       temp,
       properties,
       orificeShape,
       cvModel,
     );
-    const pqData = calculator.generate_pq_curve(
-      normalizedRows,
-      fluidType,
-      temp,
-      properties.rho,
-      properties.mu,
-      properties.nu,
-      orificeShape,
-      cvModel,
-      currentFlow,
-      200,
-    );
+    const pqData = calculationMode === "已知流量（求压降）"
+      ? calculator.generate_pq_curve_with_row_flows(
+          normalizedRows,
+          fluidType,
+          temp,
+          properties.rho,
+          properties.mu,
+          properties.nu,
+          orificeShape,
+          cvModel,
+          currentFlow,
+          200,
+        )
+      : calculator.generate_pq_curve(
+          normalizedRows,
+          fluidType,
+          temp,
+          properties.rho,
+          properties.mu,
+          properties.nu,
+          orificeShape,
+          cvModel,
+          currentFlow,
+          200,
+        );
     const summary =
       calculationMode === "已知流量（求压降）"
         ? `${t("Calculation complete. Total pressure drop =", "计算完成！总压降 =")} ${calculator.fmt_num(systemResult.total_dPt, 2)} Pa`
@@ -1171,7 +1311,7 @@ export default function FluidResistanceCalculator({
           [
             index + 1,
             normalizedType(row.source.type),
-            calculation.currentFlow,
+            toNumber(row.flow),
             toNumber(row.source.diameter_cv),
             toNumber(row.source.length),
             toNumber(row.source.xi),
@@ -1214,7 +1354,7 @@ export default function FluidResistanceCalculator({
   }
 
   return (
-    <section className={styles.page} data-locale={locale}>
+    <section className={styles.page} data-locale={locale} onClick={() => setOpenTypeRowId(null)}>
       <div className={styles.workbench}>
         <aside className={styles.sidebar}>
           <section className={styles.section}>
@@ -1346,11 +1486,123 @@ export default function FluidResistanceCalculator({
                   {rows.map((row, index) => (
                     <tr key={row.id} className={selectedRowId === row.id ? styles.selectedRow : ""} onClick={() => setSelectedRowId(row.id)}>
                       <td>{index + 1}</td>
-                      <td><input aria-label={`${t("Row", "第")} ${index + 1} ${t("type", "行类型")}`} value={row.type} onChange={(event) => updateRow(row.id, "type", event.target.value)} /></td>
-                      <td><input aria-label={`${t("Row", "第")} ${index + 1} ${t("flow", "行流量")}`} value={row.flow} onChange={(event) => updateRow(row.id, "flow", event.target.value)} /></td>
-                      <td><input aria-label={`${t("Row", "第")} ${index + 1} ${t("ID or Cv", "行内径或 Cv")}`} value={String(row.diameter_cv)} onChange={(event) => updateRow(row.id, "diameter_cv", event.target.value)} /></td>
-                      <td><input aria-label={`${t("Row", "第")} ${index + 1} ${t("length", "行管长")}`} value={String(row.length)} onChange={(event) => updateRow(row.id, "length", event.target.value)} /></td>
-                      <td><input aria-label={`${t("Row", "第")} ${index + 1} ${t("local resistance coefficient", "行局部阻力系数")}`} value={String(row.xi)} onChange={(event) => updateRow(row.id, "xi", event.target.value)} /></td>
+                      <td>
+                        <div className={styles.cellField}>
+                          <div
+                            className={`${styles.typeSelect} ${openTypeRowId === row.id ? styles.typeSelectOpen : ""}`}
+                            onBlur={(event) => {
+                              if (!event.currentTarget.contains(event.relatedTarget)) setOpenTypeRowId(null);
+                            }}
+                            onKeyDown={(event) => {
+                              if (event.key === "Escape") setOpenTypeRowId(null);
+                            }}
+                          >
+                            <button
+                              type="button"
+                              role="combobox"
+                              aria-label={`${t("Row", "第")} ${index + 1} ${t("type", "行类型")}`}
+                              aria-haspopup="listbox"
+                              aria-expanded={openTypeRowId === row.id}
+                              aria-controls={`row-type-options-${row.id}`}
+                              aria-invalid={Boolean(rowErrors[row.id]?.type)}
+                              className={`${styles.typeSelectButton} ${rowErrors[row.id]?.type ? styles.invalidInput : ""}`}
+                              onClick={(event) => {
+                                event.stopPropagation();
+                                setSelectedRowId(row.id);
+                                setOpenTypeRowId((current) => current === row.id ? null : row.id);
+                              }}
+                            >
+                              <span>{normalizedType(row.type)}</span>
+                              <span className={styles.typeSelectArrow} aria-hidden="true" />
+                            </button>
+                            {openTypeRowId === row.id ? (
+                              <div
+                                id={`row-type-options-${row.id}`}
+                                className={styles.typeOptions}
+                                role="listbox"
+                                aria-label={`${t("Row", "第")} ${index + 1} ${t("type options", "行类型选项")}`}
+                                onClick={(event) => event.stopPropagation()}
+                              >
+                                {ROW_TYPES.map((type) => (
+                                  <button
+                                    key={type}
+                                    type="button"
+                                    role="option"
+                                    aria-selected={normalizedType(row.type) === type}
+                                    className={`${styles.typeOption} ${normalizedType(row.type) === type ? styles.typeOptionSelected : ""}`}
+                                    onClick={(event) => {
+                                      event.stopPropagation();
+                                      updateRowType(row.id, type);
+                                      setOpenTypeRowId(null);
+                                    }}
+                                  >
+                                    {type}
+                                  </button>
+                                ))}
+                              </div>
+                            ) : null}
+                          </div>
+                          {rowErrors[row.id]?.type ? <small className={styles.cellError}>{rowErrors[row.id].type}</small> : null}
+                        </div>
+                      </td>
+                      <td>
+                        <div className={styles.cellField}>
+                          <input
+                            aria-label={`${t("Row", "第")} ${index + 1} ${t("flow", "行流量")}`}
+                            aria-invalid={Boolean(rowErrors[row.id]?.flow)}
+                            className={rowErrors[row.id]?.flow ? styles.invalidInput : undefined}
+                            inputMode="decimal"
+                            value={row.flow}
+                            onChange={(event) => updateRow(row.id, "flow", event.target.value)}
+                          />
+                          {rowErrors[row.id]?.flow ? <small className={styles.cellError}>{rowErrors[row.id].flow}</small> : null}
+                        </div>
+                      </td>
+                      <td>
+                        <div className={styles.cellField}>
+                          <input
+                            aria-label={`${t("Row", "第")} ${index + 1} ${normalizedType(row.type) === "Cv" ? t("Cv value", "行 Cv 值") : t("ID in millimeters", "行内径 mm")}`}
+                            aria-invalid={Boolean(rowErrors[row.id]?.diameter_cv)}
+                            className={rowErrors[row.id]?.diameter_cv ? styles.invalidInput : undefined}
+                            inputMode="decimal"
+                            placeholder={normalizedType(row.type) === "Cv" ? t("Cv value", "Cv 值") : t("ID (mm)", "内径 (mm)")}
+                            title={normalizedType(row.type) === "Cv" ? t("Cv value", "Cv 值") : t("Inner diameter in millimeters", "内径，单位 mm")}
+                            value={String(row.diameter_cv)}
+                            onChange={(event) => updateRow(row.id, "diameter_cv", event.target.value)}
+                          />
+                          {rowErrors[row.id]?.diameter_cv ? <small className={styles.cellError}>{rowErrors[row.id].diameter_cv}</small> : null}
+                        </div>
+                      </td>
+                      <td>
+                        {normalizedType(row.type) === "ID" ? (
+                          <div className={styles.cellField}>
+                            <input
+                              aria-label={`${t("Row", "第")} ${index + 1} ${t("length", "行管长")}`}
+                              aria-invalid={Boolean(rowErrors[row.id]?.length)}
+                              className={rowErrors[row.id]?.length ? styles.invalidInput : undefined}
+                              inputMode="decimal"
+                              value={String(row.length)}
+                              onChange={(event) => updateRow(row.id, "length", event.target.value)}
+                            />
+                            {rowErrors[row.id]?.length ? <small className={styles.cellError}>{rowErrors[row.id].length}</small> : null}
+                          </div>
+                        ) : <span className={styles.notApplicable} aria-label={t("Not applicable for Cv", "Cv 类型不适用")}>—</span>}
+                      </td>
+                      <td>
+                        {normalizedType(row.type) === "ID" ? (
+                          <div className={styles.cellField}>
+                            <input
+                              aria-label={`${t("Row", "第")} ${index + 1} ${t("local resistance coefficient", "行局部阻力系数")}`}
+                              aria-invalid={Boolean(rowErrors[row.id]?.xi)}
+                              className={rowErrors[row.id]?.xi ? styles.invalidInput : undefined}
+                              inputMode="decimal"
+                              value={String(row.xi)}
+                              onChange={(event) => updateRow(row.id, "xi", event.target.value)}
+                            />
+                            {rowErrors[row.id]?.xi ? <small className={styles.cellError}>{rowErrors[row.id].xi}</small> : null}
+                          </div>
+                        ) : <span className={styles.notApplicable} aria-label={t("Not applicable for Cv", "Cv 类型不适用")}>—</span>}
+                      </td>
                       <td><input aria-label={`${t("Row", "第")} ${index + 1} ${t("name", "行 Name")}`} value={row.name ?? ""} onChange={(event) => updateRow(row.id, "name", event.target.value)} /></td>
                       <td><input aria-label={`${t("Row", "第")} ${index + 1} ${t("notes", "行 Notes")}`} value={row.notes ?? ""} onChange={(event) => updateRow(row.id, "notes", event.target.value)} /></td>
                     </tr>

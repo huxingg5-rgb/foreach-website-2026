@@ -1,5 +1,6 @@
 export type SourceRow = {
   type: string;
+  flow?: string | number;
   diameter_cv: string | number;
   length: string | number;
   xi: string | number;
@@ -71,6 +72,17 @@ declare const calculator: {
     orificeShape: string,
     cvModel: string,
   ): SystemResult;
+  compute_system_with_row_flows(
+    rows: SourceRow[],
+    fallbackFlowMlMin: number,
+    fluidType: string,
+    temperature: number,
+    userRho: number,
+    userMu: number,
+    userNu: number,
+    orificeShape: string,
+    cvModel: string,
+  ): SystemResult;
   find_flow_by_pressure(
     targetPa: number,
     rows: SourceRow[],
@@ -83,6 +95,18 @@ declare const calculator: {
     cvModel: string,
   ): { flow: number; pressure: number; error: number };
   generate_pq_curve(
+    rows: SourceRow[],
+    fluidType: string,
+    temperature: number,
+    userRho: number,
+    userMu: number,
+    userNu: number,
+    orificeShape: string,
+    cvModel: string,
+    centerFlow: number,
+    points?: number,
+  ): PQPoint[];
+  generate_pq_curve_with_row_flows(
     rows: SourceRow[],
     fluidType: string,
     temperature: number,
