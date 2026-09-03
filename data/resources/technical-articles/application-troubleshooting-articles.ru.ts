@@ -756,6 +756,12 @@ export const ivdWasteAspirationPumpSelectionRuCopy = {
               suffix: ".",
             },
             {
+              prefix: "Связанное руководство:",
+              label: "выбор жидкостного или газожидкостного насоса отходов IVD",
+              href: "/ru/resources/technical-articles/ivd-waste-liquid-pump-liquid-vs-gas-liquid-diaphragm-pump/",
+              suffix: ".",
+            },
+            {
               prefix: "Источник:",
               label: "Сравнение прямой перекачки и непрямой вакуумной аспирации KNF",
               href: "https://knf.com/en/it/stories-events/news-stories/article/direct-liquid-transfer-vs-vacuum-over-liquid-transfer",

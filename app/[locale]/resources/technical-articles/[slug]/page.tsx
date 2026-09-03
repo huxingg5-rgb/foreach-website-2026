@@ -50,6 +50,11 @@ function getTechnicalArticleLanguageLinks(slug: string) {
   );
 
   if (
+    slug === "ink-circulation-supply-return-pump-diaphragm-pump" ||
+    slug === "300-vs-600-ml-min-ink-circulation-return-pump-selection" ||
+    slug === "white-ink-circulation-pump-selection-sedimentation" ||
+    slug === "ivd-waste-liquid-pump-liquid-vs-gas-liquid-diaphragm-pump" ||
+    slug === "ivd-cleaning-wash-rinse-pump-diaphragm-pump" ||
     slug === "brushed-vs-brushless-diaphragm-pump-3000h-10000h" ||
     slug === "life-science-dpl60-600ml-min-diaphragm-pump-selection-guide"
   ) {

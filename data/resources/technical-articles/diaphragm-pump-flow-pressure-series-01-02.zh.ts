@@ -181,6 +181,12 @@ export const diaphragmPump300Vs600SelectionZhCopy = {
               href: "/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide",
               suffix: "。",
             },
+            {
+              prefix: "喷墨供回墨场景可进一步查看",
+              label: "300 与 600 mL/min Ink Circulation / Return Pump 选型",
+              href: "/resources/technical-articles/300-vs-600-ml-min-ink-circulation-return-pump-selection",
+              suffix: "。",
+            },
           ],
         },
       ],

@@ -241,14 +241,11 @@ async function getDiaphragmPumpRouteMetadata(
       : copy.parent;
   const isLiquidCategory = childSlug === "liquid-diaphragm-pumps";
   const isGasLiquidCategory = childSlug === "gas-liquid-diaphragm-pumps";
-  const seoHeading = isLiquidCategory
-    ? copy.liquidSeoTitle || heading
-    : heading;
-  const title = childSlug
-    ? normalizedLocale === "zh" && (isLiquidCategory || isGasLiquidCategory)
-      ? `${heading}｜FOREACH`
-      : `${seoHeading} | FOREACH`
-    : copy.seoTitle;
+  const title = isLiquidCategory
+    ? copy.liquidSeoTitle
+    : isGasLiquidCategory
+      ? copy.gasLiquidSeoTitle
+      : copy.seoTitle;
   const description = isLiquidCategory
     ? copy.liquidSeoDescription || copy.seoDescription
     : isGasLiquidCategory

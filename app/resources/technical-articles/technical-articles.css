@@ -407,6 +407,8 @@
   min-width: 0;
   flex-wrap: wrap;
   gap: 6px;
+  max-height: 54px;
+  overflow: hidden;
 }
 
 .technicalArticleCard__tag {

@@ -56,6 +56,7 @@ export type TechnicalArticleSecondaryCategory =
   | "analytical-instruments"
   | "cleaning-waste"
   | "reagent-sample-handling"
+  | "printing-inkjet"
   | "oem-fluidic-systems";
 
 export interface TechnicalArticleBreadcrumbItem {

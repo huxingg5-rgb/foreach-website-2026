@@ -2597,6 +2597,63 @@
   padding-top: 2px !important;
 }
 
+.products-selection-page .product-type-intro-copy--collapsible {
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.products-selection-page .product-type-intro-copy p[hidden] {
+  display: none !important;
+}
+
+.products-selection-page .product-type-intro-disclosure-row {
+  margin-top: 8px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.products-selection-page
+  .product-type-intro-copy--mobile-collapse-only
+  .product-type-intro-disclosure-row {
+  display: none;
+}
+
+.products-selection-page .product-type-intro-disclosure {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  appearance: none;
+  background: transparent;
+  color: var(--brand-blue);
+  font: inherit;
+  font-weight: 400;
+  line-height: inherit;
+  vertical-align: baseline;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 160ms ease;
+}
+
+.products-selection-page .product-type-intro-disclosure:hover,
+.products-selection-page .product-type-intro-disclosure:focus-visible {
+  color: var(--brand-cyan, #09e9b4);
+}
+
+.products-selection-page .product-type-intro-disclosure:focus-visible {
+  outline: 2px solid var(--brand-cyan, #09e9b4);
+  outline-offset: 3px;
+}
+
+.products-selection-page .product-type-intro-disclosure span {
+  font-size: 1em;
+  line-height: 1;
+}
+
 .products-selection-page .product-type-intro-copy .product-type-intro-heading {
   margin: 0 0 14px !important;
   color: var(--brand-blue) !important;
@@ -2621,6 +2678,50 @@
 .products-selection-page .product-type-intro-copy .product-type-intro-emphasis {
   color: #111111 !important;
   font-weight: 600 !important;
+}
+
+.products-selection-page .product-type-intro-copy .product-type-intro-link {
+  color: var(--brand-blue) !important;
+  font-weight: 600 !important;
+  text-decoration: underline !important;
+  text-decoration-thickness: 1px !important;
+  text-underline-offset: 2px !important;
+  transition:
+    color 160ms ease,
+    text-decoration-color 160ms ease !important;
+}
+
+.products-selection-page .product-type-intro-copy .product-type-intro-filter-action {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  appearance: none;
+  background: transparent;
+  font: inherit;
+  line-height: inherit;
+  vertical-align: baseline;
+  cursor: pointer;
+}
+
+.products-selection-page .product-type-intro-copy .product-type-intro-filter-action:focus-visible {
+  outline: 2px solid var(--brand-cyan, #09e9b4);
+  outline-offset: 2px;
+}
+
+.products-selection-page .product-type-intro-copy .product-type-intro-link:hover,
+.products-selection-page .product-type-intro-copy .product-type-intro-link:focus-visible {
+  color: var(--brand-cyan, #09e9b4) !important;
+  text-decoration-color: var(--brand-cyan, #09e9b4) !important;
+}
+
+.products-selection-page
+  .product-type-intro-module[data-product-type-id="diaphragm-pump"]
+  .product-type-intro-link,
+.products-selection-page
+  .product-type-intro-module[data-product-type-id="diaphragm-pumps"]
+  .product-type-intro-link {
+  text-decoration: none !important;
 }
 
 /* HaloFlx 右下角装饰字：背景层，不占空间 */
@@ -2669,6 +2770,10 @@
     line-height: 1.72 !important;
   }
 
+  .products-selection-page .product-type-intro-copy--collapsible {
+    min-height: 290px;
+  }
+
   .products-selection-page .product-type-intro-module::after {
     right: 18px !important;
     bottom: 16px !important;
@@ -2698,6 +2803,23 @@
   .products-selection-page .product-type-intro-copy {
     max-width: none !important;
     padding-top: 0 !important;
+  }
+
+  .products-selection-page .product-type-intro-copy--collapsible {
+    min-height: 230px;
+  }
+
+  .products-selection-page
+    .product-type-intro-copy--collapsible:not(.is-expanded)
+    .product-type-intro-paragraphs
+    p:nth-child(n + 2) {
+    display: none !important;
+  }
+
+  .products-selection-page
+    .product-type-intro-copy--mobile-collapse-only
+    .product-type-intro-disclosure-row {
+    display: flex;
   }
 
   .products-selection-page .product-type-intro-copy .product-type-intro-heading {

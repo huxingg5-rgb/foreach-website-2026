@@ -58,6 +58,15 @@
   font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 3px;
+  transition:
+    color 0.18s ease,
+    text-decoration-color 0.18s ease;
+}
+
+.linkList a:hover,
+.linkList a:focus-visible {
+  color: #09e9b4;
+  text-decoration-color: #09e9b4;
 }
 
 .faqList {

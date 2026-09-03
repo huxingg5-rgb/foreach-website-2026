@@ -52,9 +52,10 @@ export type DiaphragmPumpCategoryCopy = {
   modelLabel: string;
   seoTitle: string;
   seoDescription: string;
-  liquidSeoTitle?: string;
-  liquidSeoDescription?: string;
-  gasLiquidSeoDescription?: string;
+  liquidSeoTitle: string;
+  liquidSeoDescription: string;
+  gasLiquidSeoTitle: string;
+  gasLiquidSeoDescription: string;
 };
 
 export const DIAPHRAGM_PUMP_ROUTE_PREFIX =
@@ -68,92 +69,103 @@ export const DIAPHRAGM_PUMP_CATEGORY_COPY: Record<
     home: "首页",
     products: "产品中心",
     parent: "微型隔膜泵",
-    liquid: "微型液体隔膜泵",
-    gasLiquid: "微型气液混合隔膜泵",
+    liquid: "用于最高 600 mL/min 低流量液体处理的微型液体隔膜泵",
+    gasLiquid: "用于废液抽吸和真空处理的微型气液混合隔膜泵",
     modelLabel: "型号：",
-    seoTitle: "微型隔膜泵｜液体、气液混合与真空抽吸｜恒永达",
+    seoTitle: "微型隔膜泵：液体与气液混合处理｜恒永达",
     seoDescription:
-      "恒永达微型隔膜泵覆盖液体输送、高压液路、气体抽吸、负压建立与气液混合物抽排，适用于 IVD、生命科学和实验室自动化设备。",
+      "探索FOREACH微型隔膜泵，包括用于液体输送、清洗和循环的液体隔膜泵，以及用于废液抽吸、真空处理和气液混合介质的气液混合隔膜泵。",
+    liquidSeoTitle: "最高 600 mL/min 微型液体隔膜泵｜恒永达",
     liquidSeoDescription:
-      "对比FOREACH DPL30、DPL60和DPL30H微型液体隔膜泵的流量等级、额定压力、电机类型、接液材质及液路选型要求。",
+      "FOREACH微型液体隔膜泵适用于约0–600 mL/min的液体处理、清洗、循环和仪器液路，并提供标准压力与最高600 kPa高压选项。",
+    gasLiquidSeoTitle: "废液抽吸微型气液混合隔膜泵｜恒永达",
     gasLiquidSeoDescription:
-      "了解FOREACH DPGL800微型气液混合隔膜泵的真空能力、单头空载气体流量、压力、接液材质及选型要求。",
+      "FOREACH微型气液混合隔膜泵适用于废液抽吸、真空处理和气液混合介质；DPGL800单头空载气体流量6 L/min，最大负压小于-90 kPa。",
   },
   en: {
     home: "Home",
     products: "Product Center",
     parent: "Miniature Diaphragm Pumps",
-    liquid: "Miniature Liquid Diaphragm Pumps",
-    gasLiquid: "Miniature Gas-Liquid Diaphragm Pumps",
+    liquid: "Miniature Liquid Diaphragm Pumps for Low-Flow Liquid Handling up to 600 mL/min",
+    gasLiquid: "Miniature Gas-Liquid Diaphragm Pumps for Waste Aspiration and Vacuum Handling",
     modelLabel: "Model:",
-    seoTitle: "Miniature Diaphragm Pumps for Liquid and Vacuum | FOREACH",
+    seoTitle: "Miniature Diaphragm Pumps for Liquid & Gas-Liquid Handling | FOREACH",
     seoDescription:
-      "Explore FOREACH miniature diaphragm pumps for liquid transfer, high-pressure fluid circuits, gas aspiration, vacuum generation, and gas-liquid mixture evacuation.",
-    liquidSeoTitle: "Micro Liquid Diaphragm Pumps for Instruments",
+      "Explore FOREACH miniature diaphragm pumps for liquid transfer, washing, circulation, waste aspiration and vacuum handling, including liquid and gas-liquid diaphragm pump series.",
+    liquidSeoTitle: "Miniature Liquid Diaphragm Pumps up to 600 mL/min | FOREACH",
     liquidSeoDescription:
-      "Compare FOREACH DPL30, DPL60 and DPL30H micro liquid diaphragm pumps by 300/600 mL/min flow class, rated pressure, motor and wetted materials.",
+      "Miniature liquid diaphragm pumps for approximately 0–600 mL/min liquid handling, washing, circulation and instrument fluidics, with standard and high-pressure options.",
+    gasLiquidSeoTitle: "Miniature Gas-Liquid Diaphragm Pumps for Waste Aspiration | FOREACH",
     gasLiquidSeoDescription:
-      "Explore the FOREACH DPGL800 miniature gas-liquid diaphragm pump by vacuum, per-head no-load gas flow, pressure, wetted materials and system requirements.",
+      "Miniature gas-liquid diaphragm pumps for waste aspiration, vacuum handling and mixed gas-liquid media, including DPGL800 with 6 L/min single-head no-load gas flow and vacuum below -90 kPa.",
   },
   es: {
     home: "Inicio",
     products: "Centro de productos",
     parent: "Bombas de diafragma en miniatura",
-    liquid: "Bombas miniatura de diafragma para líquidos",
-    gasLiquid: "Bombas de diafragma en miniatura gas-líquido",
+    liquid: "Bombas miniatura de diafragma para líquidos de bajo caudal hasta 600 mL/min",
+    gasLiquid: "Bombas miniatura de diafragma gas-líquido para aspiración de residuos y manejo de vacío",
     modelLabel: "Modelo:",
-    seoTitle: "Bombas de diafragma en miniatura para líquidos y vacío | FOREACH",
+    seoTitle: "Bombas de diafragma en miniatura para líquidos y mezclas gas-líquido | FOREACH",
     seoDescription:
-      "Bombas de diafragma en miniatura FOREACH para transferencia de líquidos, circuitos de alta presión, aspiración de gases, generación de vacío y evacuación gas-líquido.",
+      "Explore las bombas de diafragma en miniatura FOREACH para transferencia, lavado, circulación, aspiración de residuos y vacío, con series para líquidos y mezclas gas-líquido.",
+    liquidSeoTitle: "Bombas miniatura de diafragma para líquidos hasta 600 mL/min | FOREACH",
     liquidSeoDescription:
-      "Compare las bombas miniatura de diafragma para líquidos FOREACH DPL30, DPL60 y DPL30H por caudal, presión nominal, motor, materiales en contacto con el fluido y requisitos del circuito.",
+      "Bombas miniatura de diafragma para manejar líquidos a aproximadamente 0–600 mL/min en lavado, circulación y circuitos de instrumentos, con opciones estándar y de alta presión.",
+    gasLiquidSeoTitle: "Bombas miniatura de diafragma gas-líquido para aspiración de residuos | FOREACH",
     gasLiquidSeoDescription:
-      "Explore la bomba de diafragma en miniatura gas-líquido FOREACH DPGL800 por vacío, caudal de gas sin carga por cabezal, presión, materiales y requisitos del sistema.",
+      "Bombas miniatura de diafragma gas-líquido para aspiración de residuos, vacío y medios mixtos; DPGL800 ofrece 6 L/min de gas sin carga por cabezal y vacío inferior a -90 kPa.",
   },
   fr: {
     home: "Accueil",
     products: "Centre de produits",
     parent: "Pompes à membrane miniatures",
-    liquid: "Pompes à membrane miniatures pour liquides",
-    gasLiquid: "Pompes à membrane miniatures gaz-liquide",
+    liquid: "Pompes à membrane miniatures pour liquides à faible débit jusqu’à 600 mL/min",
+    gasLiquid: "Pompes à membrane miniatures gaz-liquide pour l’aspiration des effluents et la gestion du vide",
     modelLabel: "Modèle :",
-    seoTitle: "Pompes à membrane miniatures pour liquides et vide | FOREACH",
+    seoTitle: "Pompes à membrane miniatures pour liquides et mélanges gaz-liquide | FOREACH",
     seoDescription:
-      "Pompes à membrane miniatures FOREACH pour le transfert de liquides, les circuits haute pression, l’aspiration de gaz, la génération de vide et l’évacuation gaz-liquide.",
+      "Découvrez les pompes à membrane miniatures FOREACH pour le transfert, le lavage, la circulation, l’aspiration des effluents et le vide, avec des séries pour liquides et mélanges gaz-liquide.",
+    liquidSeoTitle: "Pompes à membrane miniatures pour liquides jusqu’à 600 mL/min | FOREACH",
     liquidSeoDescription:
-      "Comparez les pompes à membrane miniatures pour liquides FOREACH DPL30, DPL60 et DPL30H selon le débit, la pression nominale, le moteur, les matériaux en contact avec le fluide et le circuit.",
+      "Pompes à membrane miniatures pour la gestion de liquides à environ 0–600 mL/min, le lavage, la circulation et les circuits d’instruments, avec options standard et haute pression.",
+    gasLiquidSeoTitle: "Pompes à membrane miniatures gaz-liquide pour aspiration des effluents | FOREACH",
     gasLiquidSeoDescription:
-      "Découvrez la pompe à membrane miniature gaz-liquide FOREACH DPGL800 selon le vide, le débit de gaz sans charge par tête, la pression, les matériaux et les exigences du système.",
+      "Pompes à membrane miniatures gaz-liquide pour l’aspiration des effluents, le vide et les fluides mixtes ; DPGL800 offre 6 L/min de gaz à vide par tête et un vide inférieur à -90 kPa.",
   },
   ko: {
     home: "홈",
     products: "제품 센터",
     parent: "소형 다이어프램 펌프",
-    liquid: "소형 액체 다이어프램 펌프",
-    gasLiquid: "소형 기액 혼합 다이어프램 펌프",
+    liquid: "최대 600 mL/min 저유량 액체 처리를 위한 소형 액체 다이어프램 펌프",
+    gasLiquid: "폐액 흡인 및 진공 처리를 위한 소형 기액 혼합 다이어프램 펌프",
     modelLabel: "모델:",
-    seoTitle: "액체 이송 및 진공용 소형 다이어프램 펌프 | FOREACH",
+    seoTitle: "액체 및 기액 혼합 처리를 위한 소형 다이어프램 펌프 | FOREACH",
     seoDescription:
-      "FOREACH 소형 다이어프램 펌프는 액체 이송, 고압 유로, 가스 흡입, 진공 형성 및 기액 혼합물 배출에 적용됩니다.",
+      "FOREACH 소형 다이어프램 펌프는 액체 이송, 세척, 순환, 폐액 흡인 및 진공 처리에 사용되며 액체용과 기액 혼합용 시리즈를 제공합니다.",
+    liquidSeoTitle: "최대 600 mL/min 소형 액체 다이어프램 펌프 | FOREACH",
     liquidSeoDescription:
-      "FOREACH DPL30, DPL60 및 DPL30H 소형 액체 다이어프램 펌프의 유량 등급, 정격 압력, 모터, 접액부 재질 및 유로 요구사항을 비교해 보십시오.",
+      "약 0–600 mL/min 액체 처리, 세척, 순환 및 장비 유로용 소형 액체 다이어프램 펌프로 표준 압력과 고압 옵션을 제공합니다.",
+    gasLiquidSeoTitle: "폐액 흡인용 소형 기액 혼합 다이어프램 펌프 | FOREACH",
     gasLiquidSeoDescription:
-      "FOREACH DPGL800 소형 기액 혼합 다이어프램 펌프의 진공 성능, 헤드당 무부하 가스 유량, 압력, 접액부 재질 및 시스템 요구사항을 확인하십시오.",
+      "폐액 흡인, 진공 처리 및 기액 혼합 유체용 소형 기액 혼합 다이어프램 펌프입니다. DPGL800은 헤드당 무부하 가스 유량이 6 L/min이고 진공은 -90 kPa 미만입니다.",
   },
   ru: {
     home: "Главная",
     products: "Каталог продукции",
     parent: "Миниатюрные мембранные насосы",
-    liquid: "Миниатюрные жидкостные мембранные насосы",
-    gasLiquid: "Миниатюрные газожидкостные мембранные насосы",
+    liquid: "Миниатюрные жидкостные мембранные насосы для малых расходов до 600 mL/min",
+    gasLiquid: "Миниатюрные газожидкостные мембранные насосы для аспирации отходов и вакуумирования",
     modelLabel: "Модель:",
-    seoTitle: "Миниатюрные мембранные насосы для жидкостей и вакуума | FOREACH",
+    seoTitle: "Миниатюрные мембранные насосы для жидкостей и газожидкостных сред | FOREACH",
     seoDescription:
-      "Миниатюрные мембранные насосы FOREACH для перекачивания жидкостей, контуров высокого давления, всасывания газа, создания вакуума и удаления газожидкостных смесей.",
+      "Миниатюрные мембранные насосы FOREACH для перекачивания, промывки, циркуляции, аспирации отходов и вакуума, включая серии для жидкостей и газожидкостных сред.",
+    liquidSeoTitle: "Миниатюрные жидкостные мембранные насосы до 600 mL/min | FOREACH",
     liquidSeoDescription:
-      "Сравните миниатюрные жидкостные мембранные насосы FOREACH DPL30, DPL60 и DPL30H по расходу, номинальному давлению, двигателю, контактирующим материалам и требованиям жидкостного тракта.",
+      "Миниатюрные жидкостные мембранные насосы для расхода примерно 0–600 mL/min, промывки, циркуляции и приборных трактов, со стандартными и высоконапорными вариантами.",
+    gasLiquidSeoTitle: "Газожидкостные мембранные насосы для аспирации отходов | FOREACH",
     gasLiquidSeoDescription:
-      "Изучите миниатюрный газожидкостный мембранный насос FOREACH DPGL800: вакуум, расход газа без нагрузки на головку, давление, контактирующие материалы и требования системы.",
+      "Миниатюрные газожидкостные насосы для аспирации отходов, вакуума и смешанных сред; DPGL800 обеспечивает 6 L/min газа без нагрузки на головку и вакуум ниже -90 kPa.",
   },
 };
 

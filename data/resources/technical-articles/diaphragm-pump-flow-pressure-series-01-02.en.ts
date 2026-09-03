@@ -252,6 +252,12 @@ export const diaphragmPump300Vs600SelectionEnCopy = {
               href: "/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide",
               suffix: ".",
             },
+            {
+              prefix: "For inkjet supply and return circuits, read the",
+              label: "300 vs 600 mL/min Ink Circulation / Return Pump guide",
+              href: "/resources/technical-articles/300-vs-600-ml-min-ink-circulation-return-pump-selection",
+              suffix: ".",
+            },
           ],
         },
       ],

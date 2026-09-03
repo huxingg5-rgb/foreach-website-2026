@@ -7,6 +7,15 @@ import type {
   DiaphragmPumpEngineeringArticleCopy,
   DiaphragmPumpEngineeringArticleSlug,
 } from "./diaphragm-pump-engineering-article.types";
+import { inkCirculationSupplyReturnPumpCopies } from "./ink-circulation-supply-return-pump.article";
+import { inkCirculationFlowSelectionCopies } from "./ink-circulation-flow-selection.article";
+import { whiteInkCirculationPumpCopies } from "./white-ink-circulation-pump.article";
+import {
+  ivdCleaningWashRinsePumpCopies,
+} from "./ivd-cleaning-wash-rinse-pump.article";
+import {
+  ivdWasteLiquidPumpSelectionCopies,
+} from "./ivd-waste-liquid-pump-selection.article";
 import { diaphragmPumpFlowPressureCurveZhCopy } from "./diaphragm-pump-flow-pressure-curve.zh";
 import { microDiaphragmPumpContinuousDutyLifeZhCopy } from "./micro-diaphragm-pump-continuous-duty-life.zh";
 import { lifeScienceInstrumentDpl60SelectionZhCopy } from "./life-science-instrument-dpl60-selection.zh";
@@ -166,6 +175,16 @@ import {
 
 export const diaphragmPumpFlowPressureCurveSlug =
   "diaphragm-pump-flow-pressure-curve-guide" as const;
+export const inkCirculationSupplyReturnPumpSlug =
+  "ink-circulation-supply-return-pump-diaphragm-pump" as const;
+export const inkCirculationFlowSelectionSlug =
+  "300-vs-600-ml-min-ink-circulation-return-pump-selection" as const;
+export const whiteInkCirculationPumpSlug =
+  "white-ink-circulation-pump-selection-sedimentation" as const;
+export const ivdWasteLiquidPumpSelectionSlug =
+  "ivd-waste-liquid-pump-liquid-vs-gas-liquid-diaphragm-pump" as const;
+export const ivdCleaningWashRinsePumpSlug =
+  "ivd-cleaning-wash-rinse-pump-diaphragm-pump" as const;
 export const microDiaphragmPumpContinuousDutyLifeSlug =
   "micro-diaphragm-pump-continuous-duty-life" as const;
 export const lifeScienceInstrumentDpl60SelectionSlug =
@@ -209,6 +228,14 @@ const copyByLocale: Record<
   >
 > = {
   "zh-CN": {
+    [inkCirculationSupplyReturnPumpSlug]:
+      inkCirculationSupplyReturnPumpCopies["zh-CN"],
+    [inkCirculationFlowSelectionSlug]:
+      inkCirculationFlowSelectionCopies["zh-CN"],
+    [whiteInkCirculationPumpSlug]: whiteInkCirculationPumpCopies["zh-CN"],
+    [ivdWasteLiquidPumpSelectionSlug]:
+      ivdWasteLiquidPumpSelectionCopies["zh-CN"],
+    [ivdCleaningWashRinsePumpSlug]: ivdCleaningWashRinsePumpCopies["zh-CN"],
     [diaphragmPumpFlowPressureCurveSlug]: diaphragmPumpFlowPressureCurveZhCopy,
     [microDiaphragmPumpContinuousDutyLifeSlug]:
       microDiaphragmPumpContinuousDutyLifeZhCopy,
@@ -240,6 +267,12 @@ const copyByLocale: Record<
     [dpl30EpdmPtfeFfkmSelectionSlug]: dpl30EpdmPtfeFfkmSelectionZhCopy,
   },
   en: {
+    [inkCirculationSupplyReturnPumpSlug]:
+      inkCirculationSupplyReturnPumpCopies.en,
+    [inkCirculationFlowSelectionSlug]: inkCirculationFlowSelectionCopies.en,
+    [whiteInkCirculationPumpSlug]: whiteInkCirculationPumpCopies.en,
+    [ivdWasteLiquidPumpSelectionSlug]: ivdWasteLiquidPumpSelectionCopies.en,
+    [ivdCleaningWashRinsePumpSlug]: ivdCleaningWashRinsePumpCopies.en,
     [diaphragmPumpFlowPressureCurveSlug]: diaphragmPumpFlowPressureCurveEnCopy,
     [microDiaphragmPumpContinuousDutyLifeSlug]:
       microDiaphragmPumpContinuousDutyLifeEnCopy,
@@ -271,6 +304,8 @@ const copyByLocale: Record<
     [dpl30EpdmPtfeFfkmSelectionSlug]: dpl30EpdmPtfeFfkmSelectionEnCopy,
   },
   es: {
+    [ivdWasteLiquidPumpSelectionSlug]: ivdWasteLiquidPumpSelectionCopies.es,
+    [ivdCleaningWashRinsePumpSlug]: ivdCleaningWashRinsePumpCopies.es,
     [diaphragmPumpFlowPressureCurveSlug]: diaphragmPumpFlowPressureCurveEsCopy,
     [microDiaphragmPumpContinuousDutyLifeSlug]:
       microDiaphragmPumpContinuousDutyLifeEsCopy,
@@ -298,6 +333,8 @@ const copyByLocale: Record<
       highBackpressureFluidPathPressureBudgetEsCopy,
   },
   fr: {
+    [ivdWasteLiquidPumpSelectionSlug]: ivdWasteLiquidPumpSelectionCopies.fr,
+    [ivdCleaningWashRinsePumpSlug]: ivdCleaningWashRinsePumpCopies.fr,
     [diaphragmPumpFlowPressureCurveSlug]: diaphragmPumpFlowPressureCurveFrCopy,
     [microDiaphragmPumpContinuousDutyLifeSlug]:
       microDiaphragmPumpContinuousDutyLifeFrCopy,
@@ -325,6 +362,8 @@ const copyByLocale: Record<
       highBackpressureFluidPathPressureBudgetFrCopy,
   },
   ko: {
+    [ivdWasteLiquidPumpSelectionSlug]: ivdWasteLiquidPumpSelectionCopies.ko,
+    [ivdCleaningWashRinsePumpSlug]: ivdCleaningWashRinsePumpCopies.ko,
     [diaphragmPumpFlowPressureCurveSlug]: diaphragmPumpFlowPressureCurveKoCopy,
     [microDiaphragmPumpContinuousDutyLifeSlug]:
       microDiaphragmPumpContinuousDutyLifeKoCopy,
@@ -352,6 +391,8 @@ const copyByLocale: Record<
       highBackpressureFluidPathPressureBudgetKoCopy,
   },
   ru: {
+    [ivdWasteLiquidPumpSelectionSlug]: ivdWasteLiquidPumpSelectionCopies.ru,
+    [ivdCleaningWashRinsePumpSlug]: ivdCleaningWashRinsePumpCopies.ru,
     [diaphragmPumpFlowPressureCurveSlug]: diaphragmPumpFlowPressureCurveRuCopy,
     [microDiaphragmPumpContinuousDutyLifeSlug]:
       microDiaphragmPumpContinuousDutyLifeRuCopy,
@@ -447,6 +488,36 @@ function createTechnicalArticle(
 export function getDiaphragmPumpEngineeringArticles(
   locale: TechnicalArticleLocale,
 ): TechnicalArticleItem[] {
+  const inkjetArticles =
+    locale === "zh-CN" || locale === "en"
+      ? [
+          createTechnicalArticle(
+            inkCirculationSupplyReturnPumpSlug,
+            locale,
+            ["series:dpl30", "series:dpl60"],
+            121,
+            "2026-09-03",
+            "applications",
+          ),
+          createTechnicalArticle(
+            inkCirculationFlowSelectionSlug,
+            locale,
+            ["series:dpl30", "series:dpl60"],
+            120,
+            "2026-09-03",
+            "applications",
+          ),
+          createTechnicalArticle(
+            whiteInkCirculationPumpSlug,
+            locale,
+            ["series:dpl30", "series:dpl60"],
+            119,
+            "2026-09-03",
+            "applications",
+          ),
+        ]
+      : [];
+
   const dpl30TroubleshootingAndMaterialsArticles =
     locale === "zh-CN" || locale === "en"
       ? [
@@ -534,6 +605,35 @@ export function getDiaphragmPumpEngineeringArticles(
     ),
   ];
 
+  const ivdWasteLiquidPumpSelectionArticle = createTechnicalArticle(
+    ivdWasteLiquidPumpSelectionSlug,
+    locale,
+    [
+      "series:dpl30",
+      "series:dpl60",
+      "series:dpgl800",
+      "application:ivd",
+    ],
+    118,
+    "2026-09-03",
+    "applications",
+  );
+
+  const ivdCleaningWashRinsePumpArticle = createTechnicalArticle(
+    ivdCleaningWashRinsePumpSlug,
+    locale,
+    [
+      "series:dpl30",
+      "series:dpl60",
+      "series:dpl30h",
+      "series:dpgl800",
+      "application:ivd",
+    ],
+    117,
+    "2026-09-03",
+    "applications",
+  );
+
   const applicationArticles = [
     createTechnicalArticle(
       ivdWasteAspirationPumpSelectionSlug,
@@ -571,6 +671,9 @@ export function getDiaphragmPumpEngineeringArticles(
   ];
 
   return [
+    ...inkjetArticles,
+    ivdWasteLiquidPumpSelectionArticle,
+    ivdCleaningWashRinsePumpArticle,
     ...dpl30TroubleshootingAndMaterialsArticles,
     ...flowPressureArticles,
     ...applicationArticles,

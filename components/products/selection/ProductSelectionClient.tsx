@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { Suspense, useCallback, useEffect, useId, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import ResourceSearchBar from "@/components/resources/ResourceSearchBar";
 import { useSelectionCart } from "@/components/selection-cart/SelectionCartProvider";
@@ -410,6 +410,7 @@ const PRODUCT_SELECTION_PAGE_TEXT: Record<SelectionLocale, import("./product-sel
     productTypeLabel: "Product Type",
     resultPrefix: "",
     resultSuffix: " configurations found",
+    resultSingularSuffix: " configuration found",
     resetFilters: "Clear Filters",
     submitRequirement: "Submit Request",
     detailButton: "View Details",
@@ -430,6 +431,7 @@ const PRODUCT_SELECTION_PAGE_TEXT: Record<SelectionLocale, import("./product-sel
     productTypeLabel: "Tipo de producto",
     resultPrefix: "",
     resultSuffix: " configuraciones encontradas",
+    resultSingularSuffix: " configuración encontrada",
     resetFilters: "Borrar filtros",
     submitRequirement: "Enviar solicitud",
     detailButton: "Ver detalles",
@@ -450,6 +452,7 @@ const PRODUCT_SELECTION_PAGE_TEXT: Record<SelectionLocale, import("./product-sel
     productTypeLabel: "Type de produit",
     resultPrefix: "",
     resultSuffix: " configurations trouvées",
+    resultSingularSuffix: " configuration trouvée",
     resetFilters: "Effacer les filtres",
     submitRequirement: "Envoyer une demande",
     detailButton: "Voir les détails",
@@ -490,6 +493,8 @@ const PRODUCT_SELECTION_PAGE_TEXT: Record<SelectionLocale, import("./product-sel
     productTypeLabel: "Тип продукта",
     resultPrefix: "Найдено ",
     resultSuffix: " конфигураций",
+    resultSingularPrefix: "Найдена ",
+    resultSingularSuffix: " конфигурация",
     resetFilters: "Сбросить фильтры",
     submitRequirement: "Отправить запрос",
     detailButton: "Подробнее",
@@ -901,17 +906,67 @@ function getTargetUiLabel(locale: SelectionLocale, value: string) {
   return TARGET_UI_LABEL_TRANSLATIONS[locale]?.[value] || value;
 }
 
-function renderProductTypeIntroParagraph(paragraph: string) {
+function renderProductTypeIntroParagraph(
+  paragraph: string,
+  onFilterAction?: (filterKey: SelectionFilterKey, value: string) => void,
+  selectedFilters?: SelectedFilterMap,
+) {
   const legacyEmphasisText = "详情页查看或提交选型需求确认";
   const paragraphWithEmphasis = paragraph.includes("**")
     ? paragraph
     : paragraph.replace(legacyEmphasisText, `**${legacyEmphasisText}**`);
 
   return paragraphWithEmphasis
-    .split(/(\*\*[^*]+\*\*)/g)
+    .split(
+      /(\*\*[^*]+\*\*|\[[^\]]+\]\((?:\/[^)\s]+|filter:filter\d{2}=[^)]+)\))/g,
+    )
     .filter(Boolean)
     .map((segment, index) => {
       const isEmphasized = segment.startsWith("**") && segment.endsWith("**");
+      const linkMatch = segment.match(/^\[([^\]]+)\]\((\/[^)\s]+)\)$/);
+      const filterMatch = segment.match(
+        /^\[([^\]]+)\]\(filter:(filter\d{2})=([^)]+)\)$/,
+      );
+
+      if (filterMatch && onFilterAction) {
+        const filterKey = filterMatch[2] as SelectionFilterKey;
+        let filterValue = filterMatch[3];
+
+        try {
+          filterValue = decodeURIComponent(filterValue);
+        } catch {
+          // Keep the source value when a future action token is not URI encoded.
+        }
+
+        if (FILTER_KEYS.includes(filterKey) && filterValue) {
+          return (
+            <button
+              aria-controls="product-selection-results"
+              aria-pressed={Boolean(selectedFilters?.[filterKey]?.has(filterValue))}
+              className="product-type-intro-link product-type-intro-filter-action"
+              data-filter-key={filterKey}
+              data-filter-value={filterValue}
+              key={`${index}-${filterKey}-${filterValue}`}
+              onClick={() => onFilterAction(filterKey, filterValue)}
+              type="button"
+            >
+              {filterMatch[1]}
+            </button>
+          );
+        }
+      }
+
+      if (linkMatch) {
+        return (
+          <a
+            className="product-type-intro-link"
+            href={linkMatch[2]}
+            key={`${index}-${linkMatch[2]}`}
+          >
+            {linkMatch[1]}
+          </a>
+        );
+      }
 
       if (!isEmphasized) {
         return segment;
@@ -926,6 +981,96 @@ function renderProductTypeIntroParagraph(paragraph: string) {
         </strong>
       );
     });
+}
+
+const PRODUCT_TYPE_INTRO_DISCLOSURE_TEXT: Record<
+  SelectionLocale,
+  { more: string; less: string }
+> = {
+  zh: { more: "查看更多", less: "收起" },
+  en: { more: "View more", less: "View less" },
+  es: { more: "Ver más", less: "Ver menos" },
+  fr: { more: "Voir plus", less: "Voir moins" },
+  ko: { more: "더 보기", less: "접기" },
+  ru: { more: "Показать больше", less: "Свернуть" },
+};
+
+type ProductTypeIntroCopyProps = {
+  title: string;
+  paragraphs: string[];
+  locale: SelectionLocale;
+  isPrimaryHeading: boolean;
+  onFilterAction: (filterKey: SelectionFilterKey, value: string) => void;
+  selectedFilters: SelectedFilterMap;
+};
+
+function ProductTypeIntroCopy({
+  title,
+  paragraphs,
+  locale,
+  isPrimaryHeading,
+  onFilterAction,
+  selectedFilters,
+}: ProductTypeIntroCopyProps) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const contentId = useId();
+  const desktopCollapsedParagraphCount = 2;
+  const hasHiddenParagraphs = paragraphs.length > 1;
+  const hasDesktopHiddenParagraphs =
+    paragraphs.length > desktopCollapsedParagraphCount;
+  const disclosureText = PRODUCT_TYPE_INTRO_DISCLOSURE_TEXT[locale];
+
+  return (
+    <div
+      className={`product-type-intro-copy${
+        hasHiddenParagraphs ? " product-type-intro-copy--collapsible" : ""
+      }${
+        hasHiddenParagraphs && !hasDesktopHiddenParagraphs
+          ? " product-type-intro-copy--mobile-collapse-only"
+          : ""
+      }${hasHiddenParagraphs && isExpanded ? " is-expanded" : ""}`}
+    >
+      {isPrimaryHeading ? (
+        <h1 className="product-type-intro-heading">{title}</h1>
+      ) : (
+        <h2 className="product-type-intro-heading">{title}</h2>
+      )}
+
+      <div className="product-type-intro-paragraphs" id={contentId}>
+        {paragraphs.map((paragraph, index) => (
+          <p
+            hidden={
+              hasDesktopHiddenParagraphs &&
+              !isExpanded &&
+              index >= desktopCollapsedParagraphCount
+            }
+            key={paragraph}
+          >
+            {renderProductTypeIntroParagraph(
+              paragraph,
+              onFilterAction,
+              selectedFilters,
+            )}
+          </p>
+        ))}
+      </div>
+
+      {hasHiddenParagraphs ? (
+        <div className="product-type-intro-disclosure-row">
+          <button
+            aria-controls={contentId}
+            aria-expanded={isExpanded}
+            className="product-type-intro-disclosure"
+            onClick={() => setIsExpanded((current) => !current)}
+            type="button"
+          >
+            {isExpanded ? disclosureText.less : disclosureText.more}
+            <span aria-hidden="true">{isExpanded ? "<" : ">"}</span>
+          </button>
+        </div>
+      ) : null}
+    </div>
+  );
 }
 
 function getCategoryDescription(
@@ -4218,6 +4363,34 @@ export default function ProductSelectionClient({
     });
   }
 
+  function handleProductTypeIntroFilterAction(
+    filterKey: SelectionFilterKey,
+    value: string,
+  ) {
+    pendingFilterRef.current = {
+      filterCategory: activeCategoryId,
+      filterName: filterKey,
+      filterValue: value,
+    };
+
+    setSelectedFilters((current) => ({
+      ...current,
+      [filterKey]: new Set([value]),
+    }));
+    setSearchInputValue("");
+    setSearchKeyword("");
+    setCurrentProductPage(1);
+
+    window.requestAnimationFrame(() => {
+      document.getElementById("product-selection-results")?.scrollIntoView({
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+          ? "auto"
+          : "smooth",
+        block: "start",
+      });
+    });
+  }
+
 /* BARBED_PORT_OPTION_DISABLED_START */
 
 
@@ -4988,22 +5161,17 @@ function isFilterOptionActive(
                   />
                 </div>
 
-                <div className="product-type-intro-copy">
-                  {activeProductTypeId === "diaphragm-pump" ? (
-                    <h1 className="product-type-intro-heading">
-                      {activeProductTypeIntroHeading}
-                    </h1>
-                  ) : (
-                    <h2 className="product-type-intro-heading">
-                      {activeProductTypeIntroHeading}
-                    </h2>
-                  )}
-                  {activeProductTypeIntro.paragraphs.map((paragraph) => (
-                    <p key={paragraph}>
-                      {renderProductTypeIntroParagraph(paragraph)}
-                    </p>
-                  ))}
-                </div>
+                <ProductTypeIntroCopy
+                  isPrimaryHeading={activeProductTypeId === "diaphragm-pump"}
+                  key={`${activeProductTypeId || "none"}-${
+                    initialFilters?.filter01?.[0] || "default"
+                  }-${locale}`}
+                  locale={locale}
+                  onFilterAction={handleProductTypeIntroFilterAction}
+                  paragraphs={activeProductTypeIntro.paragraphs}
+                  selectedFilters={selectedFilters}
+                  title={activeProductTypeIntroHeading}
+                />
               </section>
             ) : null}
         <section className="selection-section">
@@ -5028,15 +5196,24 @@ function isFilterOptionActive(
               emptyText={pageText.filterEmpty}
             />
 
-            <section className="product-area">
+            <section
+              className="product-area"
+              id="product-selection-results"
+            >
               <ProductSelectionToolbar
                 total={matchedProducts.length}
-                resultPrefix={pageText.resultPrefix}
+                resultPrefix={
+                  matchedProducts.length === 1
+                    ? pageText.resultSingularPrefix || pageText.resultPrefix
+                    : pageText.resultPrefix
+                }
                 resultSuffix={
                   activeCategoryId === "valves" &&
                   locale === "zh"
                     ? " 个阀系列"
-                    : pageText.resultSuffix
+                    : matchedProducts.length === 1
+                      ? pageText.resultSingularSuffix || pageText.resultSuffix
+                      : pageText.resultSuffix
                 }
                 resetButtonText={pageText.resetFilters}
                 selectedTags={selectedTagItems}

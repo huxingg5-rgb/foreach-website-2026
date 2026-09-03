@@ -831,6 +831,12 @@ export const ivdWasteAspirationPumpSelectionFrCopy = {
               suffix: ".",
             },
             {
+              prefix: "Guide de sélection associé :",
+              label: "pompe d’effluents IVD liquide ou gaz-liquide",
+              href: "/fr/resources/technical-articles/ivd-waste-liquid-pump-liquid-vs-gas-liquid-diaphragm-pump/",
+              suffix: ".",
+            },
+            {
               prefix: "Référence :",
               label:
                 "Comparaison KNF du transfert direct de liquide et du transfert indirect sous vide",

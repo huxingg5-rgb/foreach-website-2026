@@ -756,6 +756,12 @@ export const ivdWasteAspirationPumpSelectionKoCopy = {
               suffix: ".",
             },
             {
+              prefix: "관련 선정 가이드:",
+              label: "IVD 폐액용 액체 또는 기액 혼합 펌프 선정",
+              href: "/ko/resources/technical-articles/ivd-waste-liquid-pump-liquid-vs-gas-liquid-diaphragm-pump/",
+              suffix: ".",
+            },
+            {
               prefix: "참고:",
               label: "KNF의 액체 펌프 직접 흡인과 진공 간접 흡인 비교",
               href: "https://knf.com/en/it/stories-events/news-stories/article/direct-liquid-transfer-vs-vacuum-over-liquid-transfer",

@@ -797,6 +797,12 @@ export const ivdWasteAspirationPumpSelectionEnCopy = {
               suffix: ".",
             },
             {
+              prefix: "Related selection guide: ",
+              label: "IVD waste pump—liquid or gas-liquid diaphragm pump",
+              href: "/en/resources/technical-articles/ivd-waste-liquid-pump-liquid-vs-gas-liquid-diaphragm-pump/",
+              suffix: ".",
+            },
+            {
               prefix: "Reference: ",
               label: "KNF comparison of direct liquid transfer and indirect vacuum-over-liquid transfer",
               href: "https://knf.com/en/it/stories-events/news-stories/article/direct-liquid-transfer-vs-vacuum-over-liquid-transfer",

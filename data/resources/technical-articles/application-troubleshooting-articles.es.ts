@@ -823,6 +823,12 @@ export const ivdWasteAspirationPumpSelectionEsCopy = {
               suffix: ".",
             },
             {
+              prefix: "Guía de selección relacionada:",
+              label: "bomba de residuos IVD para líquido o gas-líquido",
+              href: "/es/resources/technical-articles/ivd-waste-liquid-pump-liquid-vs-gas-liquid-diaphragm-pump/",
+              suffix: ".",
+            },
+            {
               prefix: "Referencia:",
               label:
                 "Comparación de KNF entre transferencia directa de líquido y transferencia indirecta por vacío",

@@ -1,13 +1,13 @@
 import { notFound } from "next/navigation";
 import type { ComponentType, ReactNode } from "react";
 import RelatedResources from "@/components/common/related-resources/RelatedResources";
+import DiaphragmPumpSeriesOptions from "@/components/products/diaphragm-pumps/DiaphragmPumpSeriesOptions";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
 import {
   getDiaphragmPumpCopy,
   getDiaphragmPumpSeriesSeoDescription,
 } from "@/data/products/detail/diaphragm-pump-copy";
 import { getDiaphragmPumpApplicationDetails } from "@/data/products/detail/applications/diaphragm-pump-applications";
-import { getProductDetailTitleOverride } from "@/data/products/detail/product-detail-title-overrides";
 import {
   diaphragmPumpReferenceModels,
   getDiaphragmPumpReferenceModel,
@@ -19,6 +19,7 @@ import {
   getDiaphragmPumpPath,
   normalizeDiaphragmPumpLocale,
 } from "@/data/products/detail/diaphragm-pump-routes";
+import { getDiaphragmPumpNeutralSeriesSlug } from "@/data/products/detail/diaphragm-pump-series-copy";
 
 import detailsJson from "@/data/products/generated/pumps/diaphragm-pumps/detail/index.json";
 
@@ -853,6 +854,7 @@ function adaptToProductDetailClientData(
   locale: ReturnType<typeof normalizeDiaphragmPumpLocale>,
 ) {
   const slug = normalizeSlug(detail.slug);
+  const isNeutralSeries = Boolean(getDiaphragmPumpNeutralSeriesSlug(slug));
   const title = getText(detail.title || detail.displayName || detail.seriesId);
   const cleanModelCode = getCleanDiaphragmModelCode(detail);
   const seoProductTitle = getDiaphragmSeoProductTitle(detail, cleanModelCode, title);
@@ -895,17 +897,19 @@ function adaptToProductDetailClientData(
         ]
       : [];
 
-  const drawing2dUrl =
-    findPreferredDiaphragmAssetUrl(
-      detail,
-      "2D"
-    );
+  const drawing2dUrl = isNeutralSeries
+    ? ""
+    : findPreferredDiaphragmAssetUrl(
+        detail,
+        "2D"
+      );
 
-  const model3dUrl =
-    findPreferredDiaphragmAssetUrl(
-      detail,
-      "3D"
-    );
+  const model3dUrl = isNeutralSeries
+    ? ""
+    : findPreferredDiaphragmAssetUrl(
+        detail,
+        "3D"
+      );
 
   const curveImageUrl =
     findMediaUrlByType(detail, "曲线") ||
@@ -1085,11 +1089,11 @@ export async function getDiaphragmPumpMetadata({
   const reference = getDiaphragmPumpReferenceModel(slug);
   const localizedReference = reference?.localized[targetLocale];
   const localizedSeriesCopy =
-    !reference && targetLocale !== "zh"
+    !reference
       ? getDiaphragmPumpCopy(data, targetLocale)
       : null;
   const localizedSeriesTitle = localizedSeriesCopy
-    ? getProductDetailTitleOverride(data, targetLocale)
+    ? localizedSeriesCopy.seoTitle || localizedSeriesCopy.title
     : "";
   const title = getText(
     localizedReference?.seoTitle ||
@@ -1122,13 +1126,12 @@ export async function getDiaphragmPumpMetadata({
     ? new URL(data.mainImage, "https://www.foreachtek.com").toString()
     : undefined;
   const socialImageAlt =
-    targetLocale === "zh"
-      ? getText(data.imageAlt || title)
-      : getText(
-          localizedReference?.h1 ||
-            localizedSeriesCopy?.title ||
-            title,
-        );
+    getText(
+      localizedReference?.h1 ||
+        localizedSeriesCopy?.title ||
+        data.imageAlt ||
+        title,
+    );
 
   return {
     title: metadataTitle,
@@ -1234,14 +1237,20 @@ export default async function DiaphragmPumpDetailPage({
     <ProductDetailView
       data={data}
       afterContent={
-        <RelatedResources
-          key="product-related-resources"
-          sourceType="product"
-          sourceId={data.id}
-          sourceSlug={data.slug}
-          relationKeys={data.relationKeys}
-          locale={locale}
-        />
+        <>
+          <DiaphragmPumpSeriesOptions
+            locale={locale}
+            seriesSlug={data.slug}
+          />
+          <RelatedResources
+            key="product-related-resources"
+            sourceType="product"
+            sourceId={data.id}
+            sourceSlug={data.slug}
+            relationKeys={data.relationKeys}
+            locale={locale}
+          />
+        </>
       }
     />
   );

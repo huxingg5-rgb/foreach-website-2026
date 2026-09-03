@@ -1,4 +1,9 @@
 export type DiaphragmPumpEngineeringArticleSlug =
+  | "ink-circulation-supply-return-pump-diaphragm-pump"
+  | "300-vs-600-ml-min-ink-circulation-return-pump-selection"
+  | "white-ink-circulation-pump-selection-sedimentation"
+  | "ivd-waste-liquid-pump-liquid-vs-gas-liquid-diaphragm-pump"
+  | "ivd-cleaning-wash-rinse-pump-diaphragm-pump"
   | "diaphragm-pump-flow-pressure-curve-guide"
   | "micro-diaphragm-pump-continuous-duty-life"
   | "life-science-dpl60-600ml-min-diaphragm-pump-selection-guide"

@@ -49,7 +49,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const copy = getDiaphragmPumpCategoryCopy("zh");
     const isLiquidCategory = slug === "liquid-diaphragm-pumps";
     const heading = isLiquidCategory ? copy.liquid : copy.gasLiquid;
-    const title = `${heading}｜FOREACH`;
+    const title = isLiquidCategory
+      ? copy.liquidSeoTitle
+      : copy.gasLiquidSeoTitle;
     const description = isLiquidCategory
       ? copy.liquidSeoDescription || copy.seoDescription
       : copy.gasLiquidSeoDescription || copy.seoDescription;

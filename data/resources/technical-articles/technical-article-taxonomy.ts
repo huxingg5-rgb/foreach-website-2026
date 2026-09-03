@@ -83,6 +83,7 @@ const taxonomyStructure: ReadonlyArray<{
       "analytical-instruments",
       "cleaning-waste",
       "reagent-sample-handling",
+      "printing-inkjet",
       "oem-fluidic-systems",
     ],
   },
@@ -160,6 +161,7 @@ const secondaryLabels: Record<
   "analytical-instruments": localized("分析仪器", "Analytical Instruments", "Instrumentos analíticos", "Instruments analytiques", "분석 기기", "Аналитические приборы"),
   "cleaning-waste": localized("清洗与废液", "Cleaning & Waste", "Limpieza y residuos", "Nettoyage et effluents", "세척 및 폐액", "Промывка и отходы"),
   "reagent-sample-handling": localized("试剂与样本处理", "Reagent & Sample Handling", "Manipulación de reactivos y muestras", "Manipulation des réactifs et échantillons", "시약 및 시료 처리", "Работа с реагентами и образцами"),
+  "printing-inkjet": localized("喷墨与印刷", "Inkjet & Printing", "Impresión inkjet", "Impression jet d’encre", "잉크젯 및 인쇄", "Струйная печать"),
   "oem-fluidic-systems": localized("OEM液路系统", "OEM Fluidic Systems", "Sistemas de fluidos OEM", "Systèmes fluidiques OEM", "OEM 유로 시스템", "Жидкостные системы OEM"),
 };
 
@@ -209,6 +211,10 @@ const tagLabels = {
   "cv-kv": localized("Cv/Kv", "Cv/Kv", "Cv/Kv", "Cv/Kv", "Cv/Kv", "Cv/Kv"),
   calculation: localized("工程计算", "Engineering calculation", "Cálculo de ingeniería", "Calcul d’ingénierie", "엔지니어링 계산", "Инженерный расчёт"),
   "high-pressure": localized("高压", "High pressure", "Alta presión", "Haute pression", "고압", "Высокое давление"),
+  inkjet: localized("喷墨", "Inkjet", "Inkjet", "Jet d’encre", "잉크젯", "Струйная печать"),
+  "ink-circulation": localized("墨水循环", "Ink circulation", "Circulación de tinta", "Circulation d’encre", "잉크 순환", "Циркуляция чернил"),
+  "white-ink": localized("白墨", "White ink", "Tinta blanca", "Encre blanche", "화이트 잉크", "Белые чернила"),
+  "pigment-sedimentation": localized("颜料沉降", "Pigment sedimentation", "Sedimentación de pigmentos", "Sédimentation des pigments", "안료 침강", "Осаждение пигмента"),
 } satisfies Record<string, LocalizedLabel>;
 
 type TechnicalArticleTagKey = keyof typeof tagLabels;
@@ -222,6 +228,11 @@ interface ArticleClassificationDefinition {
 }
 
 const articleClassifications: Record<string, ArticleClassificationDefinition> = {
+  "ink-circulation-supply-return-pump-diaphragm-pump": { primaryCategory: "applications-solutions", secondaryCategory: "printing-inkjet", tagKeys: ["inkjet", "ink-circulation", "liquid-pump", "flow", "pressure", "material-compatibility", "oem-integration"], literalTags: ["Ink Supply Pump", "Ink Return Pump"], relatedProducts: ["DPL30", "DPL60"] },
+  "300-vs-600-ml-min-ink-circulation-return-pump-selection": { primaryCategory: "applications-solutions", secondaryCategory: "printing-inkjet", tagKeys: ["inkjet", "ink-circulation", "flow", "operating-point", "tubing-resistance", "pressure-drop", "selection"], literalTags: ["300 mL/min", "600 mL/min"], relatedProducts: ["DPL30", "DPL60"] },
+  "white-ink-circulation-pump-selection-sedimentation": { primaryCategory: "applications-solutions", secondaryCategory: "printing-inkjet", tagKeys: ["inkjet", "ink-circulation", "white-ink", "pigment-sedimentation", "material-compatibility", "testing-validation"], literalTags: ["TiO₂"], relatedProducts: ["DPL30", "DPL60"] },
+  "ivd-waste-liquid-pump-liquid-vs-gas-liquid-diaphragm-pump": { primaryCategory: "applications-solutions", secondaryCategory: "cleaning-waste", tagKeys: ["ivd", "waste-handling", "gas-liquid", "liquid-pump", "selection", "self-priming", "material-compatibility", "pressure"], literalTags: ["Waste Liquid Pump", "Waste Aspiration Pump", "Vacuum"], relatedProducts: ["DPL30", "DPL60", "DPGL800"] },
+  "ivd-cleaning-wash-rinse-pump-diaphragm-pump": { primaryCategory: "applications-solutions", secondaryCategory: "cleaning-waste", tagKeys: ["ivd", "cleaning", "selection", "flow", "pressure", "material-compatibility", "gas-liquid", "wiring-control"], literalTags: ["Cleaning Pump", "Wash Pump", "Rinse Pump"], relatedProducts: ["DPL30", "DPL60", "DPL30H", "DPGL800"] },
   "300-ml-min-micro-liquid-diaphragm-pump-self-priming-loss": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["liquid-pump", "self-priming", "troubleshooting", "sealing-leakage"], literalTags: ["300 mL/min"], relatedProducts: ["DPL30"] },
   "300-ml-min-micro-liquid-diaphragm-pump-motor-runs-no-flow": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["liquid-pump", "troubleshooting", "backpressure", "sealing-leakage"], literalTags: ["300 mL/min"], relatedProducts: ["DPL30"] },
   "300-ml-min-micro-liquid-diaphragm-pump-water-vs-reagent": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["liquid-pump", "flow", "self-priming", "material-compatibility"], literalTags: ["300 mL/min"], relatedProducts: ["DPL30"] },

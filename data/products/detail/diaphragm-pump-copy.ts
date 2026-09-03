@@ -4,6 +4,7 @@ import {
   getDiaphragmPumpReferenceFromIdentity,
   type DiaphragmPumpReferenceCopyKey,
 } from "./diaphragm-pump-reference-models";
+import { getDiaphragmPumpSeriesCopy } from "./diaphragm-pump-series-copy";
 
 import type { SelectionLocale } from "@/data/products/selection/product-selection.types";
 
@@ -19,6 +20,12 @@ export type DiaphragmPumpCopy = {
     question: string;
     answer: string;
   }>;
+  seoTitle?: string;
+  seoDescription?: string;
+  seriesSlug?: string;
+  specifications?: Array<{ label: string; value: string }>;
+  optionsTitle?: string;
+  optionsIntro?: string;
 };
 
 type CopyByKey = Record<DiaphragmPumpCopyKey, DiaphragmPumpCopy>;
@@ -314,6 +321,22 @@ export function getDiaphragmPumpCopy(
   value: unknown,
   locale: SelectionLocale,
 ) {
+  const seriesCopy = getDiaphragmPumpSeriesCopy(value, locale);
+
+  if (seriesCopy) {
+    const categoryCopy = getDiaphragmPumpCategoryCopy(locale);
+
+    return {
+      ...seriesCopy,
+      breadcrumbs: [
+        categoryCopy.home,
+        categoryCopy.products,
+        categoryCopy.parent,
+        seriesCopy.title,
+      ],
+    };
+  }
+
   const key = getDiaphragmPumpCopyKey(value);
   const reference = getDiaphragmPumpReferenceFromIdentity(value);
   const sourceCopy = key ? DIAPHRAGM_PUMP_COPY[locale]?.[key] || null : null;
@@ -360,6 +383,10 @@ export function getDiaphragmPumpSeriesSeoDescription(
 
   if (!copy) return "";
 
+  if (copy.seoDescription) {
+    return copy.seoDescription;
+  }
+
   const separator = locale === "zh" ? "；" : "; ";
   const titleSeparator = locale === "zh"
     ? "："
@@ -401,6 +428,7 @@ function getDiaphragmPumpGallery(
 export function applyDiaphragmPumpDetailCopy<
   T extends Record<string, unknown>,
 >(data: T, locale: SelectionLocale): T {
+  const seriesCopy = getDiaphragmPumpSeriesCopy(data, locale);
   const key = getDiaphragmPumpCopyKey(data);
   const copy = getDiaphragmPumpCopy(data, locale);
 
@@ -408,8 +436,8 @@ export function applyDiaphragmPumpDetailCopy<
 
   const applications = [copy.applications];
   const faqs = copy.faqs.map((item) => ({ ...item }));
-  const gallery = getDiaphragmPumpGallery(key, data);
   const reference = getDiaphragmPumpReferenceFromIdentity(data);
+  const gallery = reference ? getDiaphragmPumpGallery(key, data) : null;
   const categoryCopy = getDiaphragmPumpCategoryCopy(locale);
   const productType = getMiniatureProductType(key, locale);
   const specs = normalizeProductTypeSpecs(data.specs, productType);
@@ -451,6 +479,22 @@ export function applyDiaphragmPumpDetailCopy<
     ...(Array.isArray(data.specList) ? { specList } : {}),
     ...(Array.isArray(data.technicalSpecifications)
       ? { technicalSpecifications }
+      : {}),
+    ...(seriesCopy
+      ? {
+          specs: seriesCopy.specifications.map((item) => ({ ...item })),
+          specifications: seriesCopy.specifications.map((item) => ({ ...item })),
+          specList: seriesCopy.specifications.map((item) => ({ ...item })),
+          technicalSpecifications: seriesCopy.specifications.map((item) => ({ ...item })),
+          imageAlt: seriesCopy.title,
+          imageAltEn: seriesCopy.title,
+          mainImageAlt: seriesCopy.title,
+          seoTitle: seriesCopy.seoTitle,
+          metaTitle: seriesCopy.seoTitle,
+          seoDescription: seriesCopy.seoDescription,
+          metaDescription: seriesCopy.seoDescription,
+          __diaphragmPumpSeriesSlug: seriesCopy.seriesSlug,
+        }
       : {}),
     __diaphragmPumpCopyKey: key,
     ...(reference

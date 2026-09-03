@@ -111,9 +111,9 @@ export const productRouteMap: {
       categoryId: "pumps",
       productTypeId: "diaphragm-pump",
       label: "隔膜泵",
-      title: "微型隔膜泵｜恒永达",
+      title: "微型隔膜泵：液体与气液混合处理｜恒永达",
       description:
-        "恒永达微型隔膜泵覆盖液体输送与气液混合物抽排，可用于清洗液输送、试剂转移、废液抽排、负压建立和仪器内部流体处理。",
+        "探索FOREACH微型隔膜泵，包括用于液体输送、清洗和循环的液体隔膜泵，以及用于废液抽吸、真空处理和气液混合介质的气液混合隔膜泵。",
     },
 
     "pipetting-pumps": {
@@ -290,9 +290,9 @@ export const productRouteMap: {
         filter01: ["液体隔膜泵"],
       },
       label: "液泵",
-      title: "微型液体隔膜泵｜恒永达",
+      title: "最高 600 mL/min 微型液体隔膜泵｜恒永达",
       description:
-        "恒永达微型液体隔膜泵适用于仪器内部清洗液输送、试剂转移、废液抽排、管路预充和液体循环等场景。",
+        "FOREACH微型液体隔膜泵适用于约0–600 mL/min的液体处理、清洗、循环和仪器液路，并提供标准压力与最高600 kPa高压选项。",
     },
 
     "gas-liquid-diaphragm-pumps": {
@@ -306,9 +306,9 @@ export const productRouteMap: {
         filter01: ["气液混合隔膜泵"],
       },
       label: "气液混合泵",
-      title: "气液混合隔膜泵｜恒永达",
+      title: "废液抽吸微型气液混合隔膜泵｜恒永达",
       description:
-        "恒永达气液混合隔膜泵适用于气体抽吸、负压建立和气液混合物抽排等场景。",
+        "FOREACH微型气液混合隔膜泵适用于废液抽吸、真空处理和气液混合介质；DPGL800单头空载气体流量6 L/min，最大负压小于-90 kPa。",
     },
 },
 

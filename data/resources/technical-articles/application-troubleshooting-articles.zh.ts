@@ -679,6 +679,12 @@ export const ivdWasteAspirationPumpSelectionZhCopy = {
               suffix: "。",
             },
             {
+              prefix: "相关选型指南：",
+              label: "IVD 废液泵选液体隔膜泵还是气液混合隔膜泵",
+              href: "/resources/technical-articles/ivd-waste-liquid-pump-liquid-vs-gas-liquid-diaphragm-pump/",
+              suffix: "。",
+            },
+            {
               prefix: "参考：",
               label: "KNF对液泵直抽与真空间接抽吸的比较",
               href: "https://knf.com/en/it/stories-events/news-stories/article/direct-liquid-transfer-vs-vacuum-over-liquid-transfer",
