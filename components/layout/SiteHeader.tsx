@@ -2,7 +2,8 @@
 
 import Image from "next/image"; // 引入 Next.js 图片组件，用于导航栏产品图片展示
 import Link from "next/link"; // 引入 Next.js 的 Link 组件，用于站内跳转
-import { usePathname } from "next/navigation"; // 引入 usePathname，用于获取当前页面路径
+import dynamic from "next/dynamic";
+import { usePathname, useRouter } from "next/navigation"; // 引入路径和路由工具，用于语言判断与按意图预取
 import {
   useEffect,
   useMemo,
@@ -11,9 +12,7 @@ import {
   type MouseEvent,
 } from "react"; // 引入 React 状态、生命周期、缓存、Ref 和事件类型
 
-import GlobalSearchPanel, {
-  preloadGlobalSearchIndex,
-} from "@/components/search/GlobalSearchPanel";
+import { preloadGlobalSearchIndex } from "@/components/search/global-search-index";
 
 import {
   getLocalizedHref, // 从多语言路径对象中读取当前语言路径
@@ -33,6 +32,20 @@ import {
 } from "@/lib/i18n"; // 从 i18n 文件读取语言工具和语言文案
 import { getInternationalUiText } from "@/lib/international-ui";
 import { trackLanguageChange } from "@/lib/analytics/track-event";
+
+const loadGlobalSearchPanel = () =>
+  import("@/components/search/GlobalSearchPanel");
+
+const GlobalSearchPanel = dynamic(loadGlobalSearchPanel, {
+  ssr: false,
+});
+
+function preloadGlobalSearchResources(locale: string) {
+  void Promise.allSettled([
+    loadGlobalSearchPanel(),
+    preloadGlobalSearchIndex(locale),
+  ]);
+}
 
 // 顶部栏展开面板类型
 // none：没有展开
@@ -187,6 +200,7 @@ function buildLocalizedPathname(pathname: string, localeCode: LocaleCode) {
  */
 export default function SiteHeader() {
   const pathname = usePathname(); // 获取当前页面路径，例如 /、/about/culture、/en/resources/datasheets 等
+  const router = useRouter();
 
   /**
    * 当前顶部栏显示语言
@@ -748,6 +762,10 @@ const isFittingReplacementDetailPage =
      * PC 端鼠标进入导航项时执行
      */
     function handleDesktopNavMouseEnter(item: NavigationItem) {
+      if (item.href) {
+        router.prefetch(getLocalizedHref(item.href, currentLocale));
+      }
+
       if (!isPcHoverDevice()) {
         return;
       }
@@ -929,7 +947,7 @@ const isFittingReplacementDetailPage =
     ) {
       event.preventDefault();
 
-      void preloadGlobalSearchIndex(currentLocale);
+      preloadGlobalSearchResources(currentLocale);
 
       setOpenPanel("none");
       setOpenMobileSectionKey(null);
@@ -1186,8 +1204,15 @@ const isFittingReplacementDetailPage =
                     {navHref ? (
                       <Link
                         href={navHref}
+                        prefetch={false}
                         className={`site-nav-link ${isNavActive(item) ? "site-nav-link-active" : ""
                           }`}
+                        onFocus={() => {
+                          router.prefetch(navHref);
+                        }}
+                        onTouchStart={() => {
+                          router.prefetch(navHref);
+                        }}
                         onClick={closeAllPanels}
                       >
                         {navLabel}
@@ -1299,13 +1324,13 @@ const isFittingReplacementDetailPage =
               aria-label={headerText.searchButtonAriaLabel}
               aria-expanded={isSearchOpen}
               onMouseEnter={() => {
-                void preloadGlobalSearchIndex(currentLocale);
+                preloadGlobalSearchResources(currentLocale);
               }}
               onFocus={() => {
-                void preloadGlobalSearchIndex(currentLocale);
+                preloadGlobalSearchResources(currentLocale);
               }}
               onTouchStart={() => {
-                void preloadGlobalSearchIndex(currentLocale);
+                preloadGlobalSearchResources(currentLocale);
               }}
               onClick={handleSearchButtonClick}
             >
@@ -1530,13 +1555,13 @@ const isFittingReplacementDetailPage =
                   aria-label={headerText.searchAriaLabel}
                   aria-expanded={isSearchOpen}
                   onMouseEnter={() => {
-                    void preloadGlobalSearchIndex(currentLocale);
+                    preloadGlobalSearchResources(currentLocale);
                   }}
                   onFocus={() => {
-                    void preloadGlobalSearchIndex(currentLocale);
+                    preloadGlobalSearchResources(currentLocale);
                   }}
                   onTouchStart={() => {
-                    void preloadGlobalSearchIndex(currentLocale);
+                    preloadGlobalSearchResources(currentLocale);
                   }}
                   onClick={handleMobileSearchButtonClick}
                 >
@@ -1825,7 +1850,8 @@ const isFittingReplacementDetailPage =
           />
         )}
       
-        <GlobalSearchPanel
+        {isSearchOpen ? (
+          <GlobalSearchPanel
                 isOpen={isSearchOpen}
                 query={searchQuery}
                 locale={currentLocale}
@@ -1834,7 +1860,8 @@ const isFittingReplacementDetailPage =
                   setIsSearchOpen(false);
                   searchInputRef.current?.blur();
                 }}
-              /></header>
+              />
+        ) : null}</header>
     );
   }
 

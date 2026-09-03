@@ -22,17 +22,17 @@ type HomeCompanyStrengthSectionProps = { // 定义 HomeCompanyStrengthSection �
 /* HOME_HONOR_CERTIFICATE_IMAGE_MAP_START */
 const HOME_HONOR_CERTIFICATE_IMAGE_BY_KEY: Record<string, string> = {
   "national-high-tech":
-    "/images/home/company-honors-original/national-high-tech.png",
+    "/images/home/company-honors/national-high-tech.webp",
   "engineering-center":
-    "/images/home/company-honors-original/engineering-center.png",
+    "/images/home/company-honors/engineering-center.webp",
   "little-giant":
-    "/images/home/company-honors-original/little-giant.png",
+    "/images/home/company-honors/little-giant.webp",
   "gazelle-enterprise":
-    "/images/home/company-honors-original/gazelle-enterprise.png",
+    "/images/home/company-honors/gazelle-enterprise.webp",
   "iso-13485":
-    "/images/home/company-honors-original/iso-13485.png",
+    "/images/home/company-honors/iso-13485.webp",
   "iso-9001":
-    "/images/home/company-honors-original/iso-9001.png",
+    "/images/home/company-honors/iso-9001.webp",
 };
 /* HOME_HONOR_CERTIFICATE_IMAGE_MAP_END */
 
@@ -46,9 +46,11 @@ export default function HomeCompanyStrengthSection({ // 定义并导出首页公
   const advantages = homeCompanyStrengthData.advantages; // 读取企业优势卡片数据
 
   const metricsGridRef = useRef<HTMLDivElement | null>(null); // 数据卡片区域 DOM 引用，用于判断是否进入视口
+  const advantagesSectionRef = useRef<HTMLElement | null>(null); // 企业优势进入视口附近后再加载背景图
   const animationFrameRef = useRef<number | null>(null); // requestAnimationFrame 的 id，用于组件卸载时取消动画
 
   const [shouldAnimateMetrics, setShouldAnimateMetrics] = useState(false); // 是否开始数字计数动画
+  const [shouldLoadAdvantageMedia, setShouldLoadAdvantageMedia] = useState(false); // 第四屏接近视口时再启用背景图
   const [animatedMetricValues, setAnimatedMetricValues] = useState(() => // 当前动画中的数字值
     metrics.map(() => 0), // 初始时每个数字都从 0 开始
   ); // animatedMetricValues 状态定义结束
@@ -57,6 +59,34 @@ export default function HomeCompanyStrengthSection({ // 定义并导出首页公
     locale === "zh-CN"
       ? "/about/foreach"
       : `/${locale}/about/foreach`;
+
+  useEffect(() => {
+    const section = advantagesSectionRef.current;
+
+    if (!section || !("IntersectionObserver" in window)) {
+      setShouldLoadAdvantageMedia(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          setShouldLoadAdvantageMedia(true);
+          observer.disconnect();
+        }
+      },
+      {
+        rootMargin: "320px 0px",
+        threshold: 0.01,
+      },
+    );
+
+    observer.observe(section);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   useEffect(() => { // 监听数据卡片是否进入视口的副作用开始
     const metricsGrid = metricsGridRef.current; // 获取数据卡片区域 DOM
@@ -133,7 +163,9 @@ export default function HomeCompanyStrengthSection({ // 定义并导出首页公
 
 <HomeCompanyVideo
   videoSrc={companyVideoData.src} // 传入公司介绍视频地址，现在从 data/home-company-strength.ts 读取
-  posterSrc={companyVideoData.posterSrc} // 传入公司介绍视频封面地址，现在从 data/home-company-strength.ts 读取
+  posterSrc={
+    "/images/home/tv-foreach-1280.webp"
+  } // 所有语言首页统一使用按展示尺寸压缩的轻量 WebP 封面
   videoAriaLabel={getHomeCompanyText(aboutData.videoAriaLabel, locale)} // 传入视频区域无障碍说明
   videoPlayAriaLabel={getHomeCompanyText(aboutData.videoPlayAriaLabel, locale)} // 传入播放按钮无障碍说明
   posterAlt={getHomeCompanyText(companyVideoData.posterAlt, locale)} // 传入视频封面 alt 文案，现在从 video.posterAlt 读取
@@ -182,7 +214,7 @@ export default function HomeCompanyStrengthSection({ // 定义并导出首页公
               </div> {/* 数据卡片网格结束 */}
 
               <div className="home-company-about-actions"> {/* 公司介绍按钮区域 */}
-                <Link className="home-company-primary-btn brand-navy-button-motion" href={aboutForeachHref}> {/* 查看更多按钮 */}
+                <Link className="home-company-primary-btn brand-navy-button-motion" href={aboutForeachHref} prefetch={false}> {/* 查看更多按钮 */}
                   {getHomeCompanyText(aboutData.contactButton, locale)} {/* 联系我们按钮多语言文字 */}
                 </Link> {/* 联系我们按钮结束 */}
               </div> {/* 公司介绍按钮区域结束 */}
@@ -225,7 +257,9 @@ export default function HomeCompanyStrengthSection({ // 定义并导出首页公
       </section> {/* 第三屏：公司介绍区域结束 */}
 
       <section // 第四屏：企业优势区域开始
+        ref={advantagesSectionRef}
         className="home-company-advantages-section" // 企业优势区域 class
+        data-media-ready={shouldLoadAdvantageMedia ? "true" : "false"}
       > {/* 第四屏：企业优势区域开始标签结束 */}
         <div className="home-advantage-panels"> {/* 企业优势卡片区域 */}
           {advantages.map((advantage) => ( // 遍历企业优势卡片

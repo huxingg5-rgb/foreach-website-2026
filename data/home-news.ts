@@ -154,7 +154,7 @@ export const homeNewsData = {
     },
     date: "2026/07/30",
     image:
-      "/images/resources/news/adlm-2026-onsite/001.webp",
+      "/images/home/news/adlm-2026-onsite-1200.webp",
     title: {
       "zh-CN":
         "ADLM 2026现场直击｜恒永达亮相4105号展位",
@@ -251,7 +251,7 @@ export const homeNewsData = {
         ru: "Выставки",
       },
       date: "2026/03/17",
-      image: "/images/resources/news/articles/caclp-2026/cover.webp",
+      image: "/images/home/news/caclp-2026-480.webp",
       title: {
         "zh-CN": "邀请函｜恒永达诚邀您参加 2026 CACLP",
         en: "Invitation: Meet FOREACH at CACLP 2026",
@@ -295,7 +295,7 @@ export const homeNewsData = {
         ru: "Выставки",
       },
       date: "2026/03/27",
-      image: "/images/resources/news/articles/me-supply-chain-expo-2026/me-2026-news.webp",
+      image: "/images/home/news/me-supply-chain-expo-2026-480.webp",
       title: {
         "zh-CN": "2026 ME 供应链生态展｜恒永达诚邀您的莅临指导",
         en: "FOREACH to Exhibit at 2026 ME Supply Chain Expo",
@@ -339,7 +339,7 @@ export const homeNewsData = {
         ru: "Выставки",
       },
       date: "2026/03/26",
-      image: "/images/resources/news/articles/guangzhou-high-med-expo-2026/cover.webp",
+      image: "/images/home/news/guangzhou-high-med-expo-2026-480.webp",
       title: {
         "zh-CN": "2026 广州高医展｜恒永达科技诚邀您莅临展位参观交流",
         en: "FOREACH Invitation to Guangzhou High Medical Expo 2026",
@@ -383,7 +383,7 @@ export const homeNewsData = {
         ru: "Новости компании",
       },
       date: "2024/09/06",
-      image: "/images/resources/news/articles/national-little-giant-2024/cover.png",
+      image: "/images/home/news/national-little-giant-2024-480.webp",
       title: {
         "zh-CN": "恒永达荣获国家级专精特新“小巨人”称号",
         en: "FOREACH Recognized as a National Specialized and Innovative Little Giant Enterprise",

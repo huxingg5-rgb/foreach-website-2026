@@ -24,11 +24,14 @@ export default function HomeNewsListItem({ // 定义并导出首页新闻右侧�
 }: HomeNewsListItemProps) { // 组件参数定义结束
   return ( // 返回单条新闻卡片结构
     <article className="home-news-list-item"> {/* 单条新闻卡片最外层 */}
-      <div // 新闻缩略图容器开始
+      <img // 新闻缩略图容器开始
         className="home-news-list-thumb" // 新闻缩略图样式 class
-        style={{ // 设置内联背景图样式
-          backgroundImage: `url(${item.image})`, // 使用当前新闻的图片作为背景图
-        }} // 内联样式结束
+        src={item.image}
+        alt=""
+        width={480}
+        height={270}
+        loading="lazy"
+        decoding="async"
         aria-hidden="true" // 缩略图是装饰图，避免屏幕阅读器重复读取
       /> {/* 新闻缩略图容器结束 */}
 
@@ -44,7 +47,7 @@ export default function HomeNewsListItem({ // 定义并导出首页新闻右侧�
         <div className="home-news-list-bottom"> {/* 新闻底部区域：日期 + 查看详情 */}
           <span className="home-news-list-date">{item.date}</span> {/* 新闻发布日期 */}
 
-          <Link className="home-news-list-more" href={item.href}> {/* 查看详情链接 */}
+          <Link className="home-news-list-more" href={item.href} prefetch={false}> {/* 查看详情链接 */}
             {detailText} {/* 查看详情多语言文字 */}
           </Link> {/* 查看详情链接结束 */}
         </div> {/* 新闻底部区域结束 */}

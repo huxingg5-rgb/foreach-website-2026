@@ -136,7 +136,10 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
                   <ul className="site-footer__list">
                     {column.links.map((link) => (
                       <li key={link.key}>
-                        <Link href={getSiteFooterHref(link.href, activeLocale)}>
+                        <Link
+                          href={getSiteFooterHref(link.href, activeLocale)}
+                          prefetch={false}
+                        >
                           {getSiteFooterText(link.label, activeLocale)}
                         </Link>
                       </li>
@@ -275,6 +278,7 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
               <Link
                 className="site-footer__legal-link"
                 href={privacyPolicyHref}
+                prefetch={false}
               >
                 {legalCopy.privacyPolicy}
               </Link>

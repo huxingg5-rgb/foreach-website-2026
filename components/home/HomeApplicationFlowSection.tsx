@@ -50,7 +50,7 @@ type BackendHomeApplicationFlowResponse =
   | HomeApplicationFlowData;
 
 /* ================================
-   本次已经放入 public 目录的 5 张 JPG 图片
+   首页应用卡片使用的 5 张轻量 WebP 图片
 
    真实路径：
    F:\WebsiteProjects\foreach-website-2026\public\images\applications\
@@ -61,12 +61,12 @@ type BackendHomeApplicationFlowResponse =
    3. 错误写法是 /public/images/applications/xxx.jpg
 ================================ */
 const LOCAL_APPLICATION_IMAGE_PATHS = {
-  ivd: "/images/applications/application-ivd.jpg",
-  lifeScience: "/images/applications/application-life-science.jpg",
-  syntheticBiology: "/images/applications/application-synthetic-biology.jpg",
+  ivd: "/images/applications/application-ivd-960.webp",
+  lifeScience: "/images/applications/application-life-science-960.webp",
+  syntheticBiology: "/images/applications/application-synthetic-biology-960.webp",
   analyticalInstruments:
-    "/images/applications/application-analytical-instruments.jpg",
-  labAutomation: "/images/applications/application-lab-automation.jpg",
+    "/images/applications/application-analytical-instruments-960.webp",
+  labAutomation: "/images/applications/application-lab-automation-960.webp",
 };
 
 /* ================================
@@ -694,6 +694,7 @@ export default function HomeApplicationFlowSection({
     <Link
       key={tag.key}
       href={getHomeFlowProductHref(tag.key, locale)}
+      prefetch={false}
       className="home-flow-inline-link"
       aria-label={getHomeFlowText(tag.label, locale)}
     >
@@ -813,6 +814,7 @@ export default function HomeApplicationFlowSection({
     <Link
       key={tag.key}
       href={getHomeFlowProductHref(tag.key, locale)}
+      prefetch={false}
       className="home-flow-inline-link"
       aria-label={getHomeFlowText(tag.label, locale)}
       onClick={(event) => {
@@ -925,6 +927,7 @@ export default function HomeApplicationFlowSection({
     <Link
       key={tag.key}
       href={getHomeFlowProductHref(tag.key, locale)}
+      prefetch={false}
       className="home-flow-inline-link"
       aria-label={getHomeFlowText(tag.label, locale)}
     >

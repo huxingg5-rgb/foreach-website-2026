@@ -9,31 +9,14 @@ import {
   useState,
 } from "react";
 import { createPortal } from "react-dom";
+import {
+  getCachedGlobalSearchIndex,
+  preloadGlobalSearchIndex,
+  type CompactSearchItem,
+  type SearchModule,
+} from "@/components/search/global-search-index";
 import { getInternationalUiText } from "@/lib/international-ui";
 import type { LocaleCode } from "@/lib/i18n";
-
-type SearchModule =
-  | "products"
-  | "compatible-models"
-  | "datasheets"
-  | "installation-guides"
-  | "technical-articles"
-  | "material-compatibility"
-  | "applications"
-  | "news"
-  | "pages";
-
-type CompactSearchItem = {
-  m: SearchModule;
-  t: string;
-  s?: string;
-  d?: string;
-  h: string;
-  i?: string;
-  x: string;
-  k?: string;
-  a?: string;
-};
 
 type GlobalSearchPanelProps = {
   isOpen: boolean;
@@ -48,99 +31,9 @@ type ScoredItem = {
   score: number;
 };
 
-type IdleWindow = Window & {
-  requestIdleCallback?: (
-    callback: () => void,
-    options?: { timeout: number }
-  ) => number;
-  cancelIdleCallback?: (id: number) => void;
-};
-
 const DEFAULT_VISIBLE_COUNT = 6;
 const LOAD_MORE_COUNT = 6;
 const SEARCH_DEBOUNCE_MS = 180;
-
-const SEARCH_INDEX_LOCALES = new Set([
-  "en",
-  "es",
-  "fr",
-  "ko",
-  "ru",
-]);
-
-const cachedSearchItems = new Map<
-  string,
-  CompactSearchItem[]
->();
-const searchItemsPromises = new Map<
-  string,
-  Promise<CompactSearchItem[]>
->();
-
-function getSearchIndexUrl(locale: string): string {
-  const indexLocale = SEARCH_INDEX_LOCALES.has(locale)
-    ? locale
-    : "zh-CN";
-
-  return (
-    `/search-data/global-search-index.${indexLocale}.v3.json`
-  );
-}
-
-export function preloadGlobalSearchIndex(
-  locale = "zh-CN"
-):
-  Promise<CompactSearchItem[]> {
-  const searchIndexUrl = getSearchIndexUrl(locale);
-  const cachedItems = cachedSearchItems.get(
-    searchIndexUrl
-  );
-
-  if (cachedItems) {
-    return Promise.resolve(cachedItems);
-  }
-
-  const existingPromise = searchItemsPromises.get(
-    searchIndexUrl
-  );
-
-  if (existingPromise) {
-    return existingPromise;
-  }
-
-  const searchItemsPromise = fetch(searchIndexUrl, {
-    /*
-      搜索索引使用固定文件名，内容会随产品与资讯更新。
-      必须向服务器重新验证，避免浏览器长期复用旧链接、
-      旧图片字段和缺失的新内容。
-    */
-    cache: "no-cache",
-  })
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(
-          `全站搜索索引加载失败：${response.status}`
-        );
-      }
-
-      return response.json() as Promise<CompactSearchItem[]>;
-    })
-    .then((items) => {
-      cachedSearchItems.set(searchIndexUrl, items);
-      return items;
-    })
-    .catch((error) => {
-      searchItemsPromises.delete(searchIndexUrl);
-      throw error;
-    });
-
-  searchItemsPromises.set(
-    searchIndexUrl,
-    searchItemsPromise
-  );
-
-  return searchItemsPromise;
-}
 
 const MODULE_ORDER: SearchModule[] = [
   "products",
@@ -427,9 +320,7 @@ export default function GlobalSearchPanel({
   // 每个语言加载自己的构建期索引，避免中文字段在外语界面降级显示。
   const isEnglish = locale !== "zh-CN" && locale !== "zh";
   const activeLocale = locale as LocaleCode;
-  const searchIndexUrl = getSearchIndexUrl(locale);
-  const initialCachedItems =
-    cachedSearchItems.get(searchIndexUrl) ?? null;
+  const initialCachedItems = getCachedGlobalSearchIndex(locale);
   const t = (text: string) => getInternationalUiText(activeLocale, text);
   const moduleText = isEnglish
     ? Object.fromEntries(Object.entries(MODULE_TEXT_EN).map(([key, value]) => [key, { title: t(value.title), action: t(value.action) }])) as typeof MODULE_TEXT_EN
@@ -462,67 +353,6 @@ export default function GlobalSearchPanel({
 
   const mobileSearchInputRef =
     useRef<HTMLInputElement | null>(null);
-
-  useEffect(() => {
-    const localeCachedItems =
-      cachedSearchItems.get(searchIndexUrl);
-
-    if (localeCachedItems) {
-      const cachedItemsTimer = window.setTimeout(() => {
-        setItems(localeCachedItems);
-        setLoadState("ready");
-      }, 0);
-
-      return () => {
-        window.clearTimeout(cachedItemsTimer);
-      };
-    }
-
-    const idleWindow = window as IdleWindow;
-    let idleId: number | undefined;
-    let fallbackTimer: number | undefined;
-    let cancelled = false;
-
-    const preload = () => {
-      void preloadGlobalSearchIndex(locale)
-        .then((loadedItems) => {
-          if (cancelled) return;
-
-          setItems(loadedItems);
-          setLoadState("ready");
-        })
-        .catch(() => {
-          // 正式打开搜索时会再次尝试。
-        });
-    };
-
-    if (idleWindow.requestIdleCallback) {
-      idleId = idleWindow.requestIdleCallback(
-        preload,
-        { timeout: 1600 }
-      );
-    } else {
-      fallbackTimer = window.setTimeout(
-        preload,
-        600
-      );
-    }
-
-    return () => {
-      cancelled = true;
-
-      if (
-        idleId !== undefined &&
-        idleWindow.cancelIdleCallback
-      ) {
-        idleWindow.cancelIdleCallback(idleId);
-      }
-
-      if (fallbackTimer !== undefined) {
-        window.clearTimeout(fallbackTimer);
-      }
-    };
-  }, [locale, searchIndexUrl]);
 
   useEffect(() => {
     if (!isOpen || items) return;

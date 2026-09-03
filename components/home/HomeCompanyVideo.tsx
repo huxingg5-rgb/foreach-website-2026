@@ -30,12 +30,17 @@ export default function HomeCompanyVideo({ // 定义并导出 HomeCompanyVideo �
   function handleCompanyVideoPosterClick() { // 定义点击视频封面后的处理函数
     const video = companyVideoRef.current; // 获取当前 video DOM 元素
 
-    setIsCompanyVideoPosterVisible(false); // 点击封面后先隐藏封面层
-
     if (video) { // 如果 video 元素存在
+      if (!video.hasAttribute("src")) {
+        video.src = videoSrc;
+        video.load();
+      }
+
       video.controls = true; // 显示浏览器自带的视频控制条
       video.muted = true; // 设置视频开始播放时静音，用户后续可以在控制条里手动打开声音
-      void video.play(); // 播放视频，并用 void 忽略 Promise 返回值，避免控制台提示
+      void video.play().catch(() => {
+        setIsCompanyVideoPosterVisible(true);
+      });
     } // video 存在判断结束
   } // handleCompanyVideoPosterClick 函数结束
 
@@ -45,10 +50,8 @@ export default function HomeCompanyVideo({ // 定义并导出 HomeCompanyVideo �
       <video
         ref={companyVideoRef}
         className="home-company-video-media"
-        src={videoSrc}
-        poster={posterSrc}
         controls={!isCompanyVideoPosterVisible}
-        preload="metadata"
+        preload="none"
         playsInline
         muted
         onPlay={() => setIsCompanyVideoPosterVisible(false)}
@@ -77,6 +80,10 @@ export default function HomeCompanyVideo({ // 定义并导出 HomeCompanyVideo �
             className="home-company-video-poster-image"
             src={posterSrc}
             alt={posterAlt}
+            width={1280}
+            height={713}
+            loading="lazy"
+            decoding="async"
           />
 
           {/* 视频播放按钮图标 */}

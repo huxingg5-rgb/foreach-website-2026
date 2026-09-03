@@ -2,6 +2,7 @@
 
 ﻿
 import {
+  useCallback,
   useEffect,
   useRef,
   useState,
@@ -87,6 +88,7 @@ export default function HomeHeroSection({
   locale,
 }: HomeHeroSectionProps) {
   const homeText = homeI18n[locale];
+  const usesStaticHero = locale === "zh-CN";
   const [videoVisible, setVideoVisible] = useState(false);
   const [videoFailed, setVideoFailed] = useState(false);
   const heroVideoRef = useRef<HTMLVideoElement>(null);
@@ -104,9 +106,11 @@ export default function HomeHeroSection({
   const [
     desktopHeroActive,
     setDesktopHeroActive,
-  ] = useState(false);
+  ] = useState(usesStaticHero);
   const desktopHeroActiveRef =
-    useRef(false);
+    useRef(usesStaticHero);
+  const [isDesktopViewport, setIsDesktopViewport] =
+    useState(false);
   const [
     activeBannerIndex,
     setActiveBannerIndex,
@@ -129,6 +133,8 @@ export default function HomeHeroSection({
   ] = useState(true);
   const firstBannerCycleRef =
     useRef(true);
+  const pendingBannerIndexRef =
+    useRef<number | null>(null);
   const bannerTransitionHandledRef =
     useRef(false);
 
@@ -169,6 +175,8 @@ export default function HomeHeroSection({
     }
 
     function handleMediaChange() {
+      setIsDesktopViewport(desktopMedia.matches);
+
       const video =
         heroVideoRef.current;
 
@@ -337,13 +345,17 @@ export default function HomeHeroSection({
       window.setTimeout(() => {
         firstBannerCycleRef.current =
           false;
+        const targetBannerIndex =
+          activeBannerIndex === 0
+            ? 1
+            : 0;
+        pendingBannerIndexRef.current =
+          targetBannerIndex;
         bannerTransitionHandledRef.current =
           false;
         setBannerTransitioning(true);
 
-        if (
-          activeBannerIndex === 0
-        ) {
+        if (targetBannerIndex === 1) {
           setProductSlideOffset(-100);
           setFluidSlideOffset(0);
           return;
@@ -353,8 +365,10 @@ export default function HomeHeroSection({
         setProductSlideOffset(0);
       },
       firstBannerCycleRef.current
-        ? HOME_BANNER_REVEAL_MS +
-            HOME_BANNER_INTERVAL_MS
+        ? (usesStaticHero
+            ? 0
+            : HOME_BANNER_REVEAL_MS) +
+          HOME_BANNER_INTERVAL_MS
         : HOME_BANNER_INTERVAL_MS
       );
 
@@ -367,6 +381,7 @@ export default function HomeHeroSection({
     activeBannerIndex,
     bannerTransitioning,
     desktopHeroActive,
+    usesStaticHero,
   ]);
 
   const handleVideoPlaying = (
@@ -451,11 +466,13 @@ export default function HomeHeroSection({
 
     firstBannerCycleRef.current =
       false;
+    pendingBannerIndexRef.current =
+      targetBannerIndex;
     bannerTransitionHandledRef.current =
       false;
     setBannerTransitioning(true);
 
-    if (activeBannerIndex === 0) {
+    if (targetBannerIndex === 1) {
       setProductSlideOffset(-100);
       setFluidSlideOffset(0);
       return;
@@ -465,46 +482,86 @@ export default function HomeHeroSection({
     setProductSlideOffset(0);
   };
 
+  const finishBannerTransition =
+    useCallback(() => {
+      const nextBannerIndex =
+        pendingBannerIndexRef.current;
+
+      if (
+        nextBannerIndex === null ||
+        bannerTransitionHandledRef.current
+      ) {
+        return;
+      }
+
+      bannerTransitionHandledRef.current =
+        true;
+      pendingBannerIndexRef.current =
+        null;
+
+      setBannerTransitionEnabled(false);
+      setActiveBannerIndex(
+        nextBannerIndex
+      );
+      setBannerTransitioning(false);
+
+      if (nextBannerIndex === 1) {
+        setProductSlideOffset(100);
+        setFluidSlideOffset(0);
+      } else {
+        setProductSlideOffset(0);
+        setFluidSlideOffset(100);
+      }
+    }, []);
+
   const handleBannerTransitionEnd = (
     event: React.TransitionEvent<HTMLElement>
   ) => {
     if (
       event.propertyName !==
-        "transform" ||
-      !bannerTransitioning ||
-      bannerTransitionHandledRef.current
+      "transform"
     ) {
       return;
     }
 
-    bannerTransitionHandledRef.current =
-      true;
+    finishBannerTransition();
+  };
 
-    const nextBannerIndex =
-      activeBannerIndex === 0
-        ? 1
-        : 0;
-
-    setBannerTransitionEnabled(false);
-    setActiveBannerIndex(
-      nextBannerIndex
-    );
-    setBannerTransitioning(false);
-
-    if (nextBannerIndex === 1) {
-      setProductSlideOffset(100);
-      setFluidSlideOffset(0);
-    } else {
-      setProductSlideOffset(0);
-      setFluidSlideOffset(100);
+  useEffect(() => {
+    if (!bannerTransitioning) {
+      return;
     }
 
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
+    const fallbackTimer =
+      window.setTimeout(
+        finishBannerTransition,
+        HOME_BANNER_SLIDE_MS + 250
+      );
+
+    return () => {
+      window.clearTimeout(
+        fallbackTimer
+      );
+    };
+  }, [
+    bannerTransitioning,
+    finishBannerTransition,
+  ]);
+
+  useEffect(() => {
+    if (bannerTransitionEnabled) {
+      return;
+    }
+
+    const enableTimer =
+      window.setTimeout(() => {
         setBannerTransitionEnabled(true);
-      });
-    });
-  };
+      }, 50);
+
+    return () => {
+      window.clearTimeout(enableTimer);
+    };
+  }, [bannerTransitionEnabled]);
 
   const heroStyle = {
     "--home-hero-title-opacity":
@@ -566,6 +623,15 @@ export default function HomeHeroSection({
         ? "auto"
         : "none",
   } as CSSProperties;
+  const primaryCopyIsHidden =
+    isDesktopViewport &&
+    (
+      !desktopHeroActive ||
+      (
+        activeBannerIndex !== 0 &&
+        !bannerTransitioning
+      )
+    );
   /* HOME_DESKTOP_FINAL_BANNER_COMPONENT_END */
 
 return (
@@ -585,33 +651,69 @@ return (
             ? "true"
             : "false"
         }>
-      <video
-        ref={heroVideoRef}
-        className="home-hero-video"
-        autoPlay
-        muted
-        playsInline
-        preload="auto"
-        onPlaying={handleVideoPlaying}
-        onEnded={handleVideoEnded}
-        onError={handleVideoError}
-        aria-hidden="true"
-        tabIndex={-1}
-        disablePictureInPicture
-      >
-        <source
-          src="/images/home/home-banner-desktop.mp4?v=20260613"
-          type="video/mp4"
+      {usesStaticHero ? (
+        <Image
+          className="home-hero-video"
+          src="/images/home/home-hero-final-banner.webp"
+          alt=""
+          fill
+          sizes="100vw"
+          priority
+          aria-hidden="true"
+          data-home-hero-primary-media="true"
+          onLoad={() => setVideoVisible(true)}
+          onError={handleVideoError}
         />
-      </video>
+      ) : (
+        <video
+          ref={heroVideoRef}
+          className="home-hero-video"
+          autoPlay
+          muted
+          playsInline
+          preload="auto"
+          onPlaying={handleVideoPlaying}
+          onEnded={handleVideoEnded}
+          onError={handleVideoError}
+          aria-hidden="true"
+          tabIndex={-1}
+          disablePictureInPicture
+          data-home-hero-primary-media="true"
+        >
+          <source
+            src="/images/home/home-banner-desktop.mp4?v=20260613"
+            type="video/mp4"
+          />
+        </video>
+      )}
 
       <div
         className="home-hero-mobile-overlay"
         aria-hidden="true"
       />
 
-      <div className="home-hero-inner home-hero-mobile-copy">
-        <h1 className="home-hero-title">
+      <div
+        className="home-hero-inner home-hero-primary-copy"
+        style={{
+          opacity:
+            primaryCopyIsHidden
+              ? 0
+              : productSlideOffset === 0
+              ? 1
+              : 0.96,
+          visibility:
+            primaryCopyIsHidden
+              ? "hidden"
+              : "visible",
+          transform: `translate3d(${productSlideOffset}%, 0, 0)`,
+          transition:
+            bannerTransitionEnabled
+              ? `transform ${HOME_BANNER_SLIDE_MS}ms ${HOME_BANNER_SLIDE_EASING}, opacity ${HOME_BANNER_SLIDE_MS}ms ease`
+              : "none",
+        }}
+        aria-hidden={primaryCopyIsHidden}
+      >
+        <h1 className="home-hero-title" data-home-hero-title="true">
           {homeText.heroTitleLine1}
 
           <br />
@@ -619,7 +721,7 @@ return (
           {homeText.heroTitleLine2}
         </h1>
 
-        <p className="home-hero-subtitle">
+        <p className="home-hero-subtitle" data-home-hero-subtitle="true">
           {homeText.heroSubtitle}
         </p>
 
@@ -627,6 +729,7 @@ return (
           <Link
             href={productsHref}
             className="home-hero-btn home-hero-btn-primary"
+            tabIndex={primaryCopyIsHidden ? -1 : undefined}
           >
             {homeText.productButton}
           </Link>
@@ -634,6 +737,7 @@ return (
           <Link
             href={contactHref}
             className="home-hero-btn home-hero-btn-secondary"
+            tabIndex={primaryCopyIsHidden ? -1 : undefined}
           >
             {homeText.contactButton}
           </Link>
@@ -713,51 +817,10 @@ return (
               alt=""
               fill
               sizes="100vw"
-              priority
+              priority={usesStaticHero}
               aria-hidden="true"
             />
 
-            <div className="home-hero-inner">
-              <h1 className="home-hero-title" data-home-hero-title="true">
-                {homeText.heroTitleLine1}
-
-                <br />
-
-                {homeText.heroTitleLine2}
-              </h1>
-
-              <p className="home-hero-subtitle" data-home-hero-subtitle="true">
-                {homeText.heroSubtitle}
-              </p>
-
-              <div className="home-hero-actions">
-                <Link
-                  href={productsHref}
-                  className="home-hero-btn home-hero-btn-primary"
-                  tabIndex={
-                    desktopHeroActive &&
-                    activeBannerIndex === 0
-                      ? undefined
-                      : -1
-                  }
-                >
-                  {homeText.productButton}
-                </Link>
-
-                <Link
-                  href={contactHref}
-                  className="home-hero-btn home-hero-btn-secondary"
-                  tabIndex={
-                    desktopHeroActive &&
-                    activeBannerIndex === 0
-                      ? undefined
-                      : -1
-                  }
-                >
-                  {homeText.contactButton}
-                </Link>
-              </div>
-            </div>
           </article>
 
           <article
@@ -793,7 +856,6 @@ return (
               alt=""
               fill
               sizes="100vw"
-              priority
               aria-hidden="true"
             />
 
