@@ -173,13 +173,19 @@ function assertOrderedText(text: string, expected: readonly string[], route: str
   }
 }
 
+type AuditableDiaphragmPumpCopy = {
+  intro: string;
+  applications: string;
+  faqs: Array<{
+    question: string;
+    answer: string;
+  }>;
+};
+
 function assertLiveDetailCopy(
   html: string,
   route: string,
-  expectedCopy: Pick<
-    ReturnType<typeof getDiaphragmPumpCopy>,
-    "intro" | "applications" | "faqs"
-  > | null,
+  expectedCopy: AuditableDiaphragmPumpCopy | null,
   expectedFaqCount = 5,
 ) {
   if (!expectedCopy) {
