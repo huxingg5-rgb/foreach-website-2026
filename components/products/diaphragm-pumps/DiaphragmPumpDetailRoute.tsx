@@ -885,17 +885,64 @@ function adaptToProductDetailClientData(
           "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushless-liquid-diaphragm-pump-bottom-mounting-view.webp",
           "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushless-liquid-diaphragm-pump-front-port-view.webp",
         ]
-      : [];
+      : reference?.copyKey === "dpl60-brushless"
+        ? [
+            "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-600ml-min-brushless-pwm-miniature-liquid-diaphragm-pump-front-side.webp",
+            "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-600ml-min-brushless-pwm-miniature-liquid-diaphragm-pump-rear-angle.webp",
+            "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-600ml-min-brushless-pwm-miniature-liquid-diaphragm-pump-side-angle.webp",
+            "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-600ml-min-brushless-pwm-miniature-liquid-diaphragm-pump-rear.webp",
+            "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-600ml-min-brushless-pwm-miniature-liquid-diaphragm-pump-front.webp",
+          ]
+        : reference?.copyKey === "dpl60-brushed"
+          ? [
+              "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-600ml-min-brushed-miniature-liquid-diaphragm-pump-front-side.webp",
+              "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-600ml-min-brushed-miniature-liquid-diaphragm-pump-rear-angle.webp",
+            ]
+          : [];
   const additionalImageAlts =
     reference?.copyKey === "dpl30-brushless"
-      ? [
-          "Front three-quarter view of FOREACH 300 mL/min brushless miniature liquid diaphragm pump",
-          "Rear three-quarter view of FOREACH 300 mL/min brushless miniature liquid diaphragm pump",
-          "Side view of FOREACH 300 mL/min brushless miniature liquid diaphragm pump with two-wire motor",
-          "Bottom view of FOREACH 300 mL/min brushless miniature liquid diaphragm pump showing the mounting surface",
-          "Front view of FOREACH 300 mL/min brushless miniature liquid diaphragm pump showing the inlet and outlet ports",
-        ]
-      : [];
+      ? locale === "zh"
+        ? [
+            "恒永达 DPL30 直流无刷微型液体隔膜泵，流量范围 0–300 mL/min，正侧视图",
+            "恒永达 DPL30 直流无刷微型隔膜液泵，最高耐压 100 kPa，背面三分之四视图",
+            "恒永达 DPL30 直流无刷微型液体隔膜泵，流量范围 0–300 mL/min，横置侧视图，展示双软管接口",
+            "恒永达 DPL30 直流无刷微型隔膜液泵，最高耐压 100 kPa，底部安装面视图",
+            "恒永达 DPL30 直流无刷微型液体隔膜泵，流量范围 0–300 mL/min，正面视图，展示双软管接口",
+          ]
+        : [
+            "FOREACH DPL30 brushless DC miniature liquid diaphragm pump, 0–300 mL/min flow range, front three-quarter view",
+            "FOREACH DPL30 brushless micro liquid diaphragm pump, maximum pressure 100 kPa, rear three-quarter view",
+            "FOREACH DPL30 brushless DC micro liquid diaphragm pump, 0–300 mL/min flow range, side view showing twin hose barbs",
+            "FOREACH DPL30 brushless miniature liquid diaphragm pump, maximum pressure 100 kPa, bottom mounting view",
+            "FOREACH DPL30 brushless DC micro liquid diaphragm pump, 0–300 mL/min flow range, front port view",
+          ]
+      : reference?.copyKey === "dpl60-brushless"
+        ? locale === "zh"
+          ? [
+              "恒永达 DPL60 直流无刷微型液体隔膜泵，五线 PWM 调速，流量范围 0–600 mL/min，正侧视图",
+              "恒永达 DPL60 五线 PWM 调速直流无刷微型隔膜液泵，最高耐压 100 kPa，横置后侧视图",
+              "恒永达 DPL60 0–600 mL/min PWM 调速微型液体隔膜泵，展示五线电机引线和双软管接口",
+              "恒永达 DPL60 五线 PWM 调速直流无刷微型液体隔膜泵，背面结构视图",
+              "恒永达 DPL60 直流无刷微型隔膜液泵，流量范围 0–600 mL/min，最高耐压 100 kPa，正面视图",
+            ]
+          : [
+              "FOREACH DPL60 brushless DC miniature liquid diaphragm pump with five-wire PWM control, 0–600 mL/min flow range, front-side view",
+              "FOREACH DPL60 five-wire PWM brushless micro liquid diaphragm pump, maximum pressure 100 kPa, horizontal rear-side view",
+              "FOREACH DPL60 PWM-controlled micro liquid diaphragm pump with 0–600 mL/min flow range, showing five motor leads and twin hose barbs",
+              "FOREACH DPL60 five-wire PWM brushless DC miniature liquid diaphragm pump, rear structure view",
+              "FOREACH DPL60 brushless DC micro liquid diaphragm pump, 0–600 mL/min flow range and maximum pressure 100 kPa, front view",
+            ]
+        : reference?.copyKey === "dpl60-brushed"
+          ? locale === "zh"
+            ? [
+                "恒永达 DPL60 直流有刷微型液体隔膜泵，流量范围 0–600 mL/min，正侧视图",
+                "恒永达 DPL60 直流有刷微型隔膜液泵，最高耐压 100 kPa，横置后侧视图，展示电机端子",
+              ]
+            : [
+                "FOREACH DPL60 brushed DC miniature liquid diaphragm pump, 0–600 mL/min flow range, front-side view",
+                "FOREACH DPL60 brushed DC micro liquid diaphragm pump, maximum pressure 100 kPa, horizontal rear-side view showing motor terminals",
+              ]
+          : [];
 
   const drawing2dUrl = isNeutralSeries
     ? ""
