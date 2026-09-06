@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 /* =========================================================
    GlobalSelectionCartDrawer.tsx
@@ -475,7 +475,7 @@ export default function GlobalSelectionCartDrawer() {
 
         <main className={styles.printContent}>
           <section className={styles.printTitleBlock}>
-            <h1>{cartCopy.printTitle}</h1>
+            <h2>{cartCopy.printTitle}</h2>
             <p>{cartCopy.printDescription}</p>
           </section>
 

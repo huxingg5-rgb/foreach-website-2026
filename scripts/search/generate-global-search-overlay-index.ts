@@ -1,3 +1,4 @@
+import { getPumpSeriesProductDetailAdapter } from "../../services/products/adapters/getPumpSeriesProductDetailAdapter";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -443,6 +444,17 @@ function loadProductAndCompatibleItems(
     if (!sourceTitle || !href) return [];
 
     const copy = getModuleCopy(locale, searchModule);
+    const pistonSlug = /^\/products\/pumps\/piston-pump\/((?:ea|sm|tm)-\d+-(?:pmma|peek))\/?$/.exec(href)?.[1];
+    const piston = pistonSlug ? getPumpSeriesProductDetailAdapter(pistonSlug, isChinese ? "zh" : locale) : null;
+    if (piston) {
+      const title = String(piston.model);
+      const description = shorten(piston.advantages[0], 180);
+      const keywords = buildSearchText([pistonSlug, title, ...piston.commonApplications, "piston pump", "plunger pump"]);
+      return [{ m: searchModule, t: title, s: pistonSlug!.toUpperCase(), d: description, h: href,
+        ...(piston.mainImage ? { i: cleanImage(piston.mainImage) } : {}),
+        x: buildSearchText([title, description, keywords, href]), k: keywords, a: copy.action }];
+    }
+
     const technicalTitle = getTechnicalText(sourceTitle);
     const title = isChinese
       ? sourceTitle

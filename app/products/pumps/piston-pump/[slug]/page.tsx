@@ -1,11 +1,21 @@
+import { getPistonPumpRedirect } from "@/lib/seo/piston-pump-migration";
+import type { SelectionLocale } from "@/data/products/selection/product-selection.types";
+import { getPistonPumpMetadata } from "@/services/products/getPistonPumpMetadata";
 import { getPumpSeriesProductDetailAdapter } from "@/services/products/adapters/getPumpSeriesProductDetailAdapter";
 import nodePath from "node:path";
 import nodeFs from "node:fs";
 import { notFound } from "next/navigation";
-import type { ComponentType } from "react";
+import { Suspense, type ComponentType, type ReactNode } from "react";
+import ProductPageSkeleton from "@/components/common/ProductPageSkeleton";
+import RelatedResources from "@/components/common/related-resources/RelatedResources";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
+import ProductSelectionClient from "@/components/products/selection/ProductSelectionClient";
 import * as plungerPumpDetailModule from "@/data/products/detail/plunger-pump-detail.generated";
 import { selectionProducts } from "@/data/products/selection/product-selection.generated";
+import {
+  getSeriesRouteParams,
+  resolveSeriesRoute,
+} from "@/data/products/selection/product-route-map";
 import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 
 function getLocalizedSelectionText(
@@ -26,6 +36,7 @@ type PageParams = {
 
 type PageProps = {
   params: Promise<PageParams>;
+  locale?: SelectionLocale;
 };
 
 type DetailRecord = Record<string, any>;
@@ -33,14 +44,13 @@ type DetailRecord = Record<string, any>;
 const ProductDetailView = ProductDetailClient as unknown as ComponentType<{
   data: any;
   analyticsProductId?: string;
+  afterContent?: ReactNode;
 }>;
 
 const LEGACY_SLUG_ALIASES: Record<string, string> = {
-  "ea-standard-piston-pumps": "ea-100-pmma",
   "ea-standard-plunger-pumps": "ea-100-pmma",
   "sm-micro-piston-pumps": "sm-50-pmma",
   "sm-micro-plunger-pumps": "sm-50-pmma",
-  "sm-miniature-piston-pumps": "sm-50-pmma",
   "sm-miniature-plunger-pumps": "sm-50-pmma",
   "tm-ultra-micro-piston-pumps": "tm-50-pmma",
   "tm-ultra-micro-plunger-pumps": "tm-50-pmma",
@@ -556,8 +566,8 @@ function adaptToProductDetailClientData(detail: DetailRecord) {
     breadcrumbs: [
       { label: "产品中心", href: "/products" },
       { label: "泵", href: "/products/pumps" },
-      { label: "柱塞泵", href: "/products/pumps/plunger-pumps" },
-      { label: model, href: "/products/pumps/plunger-pumps/" + slug },
+      { label: "柱塞泵", href: "/products/pumps/piston-pump" },
+      { label: model, href: "/products/pumps/piston-pump/" + slug },
     ],
   };
 }
@@ -566,8 +576,11 @@ function adaptToProductDetailClientData(detail: DetailRecord) {
 
 
 
-function getPreferredProductDetailData(slug: string) {
-  const dbData = getPumpSeriesProductDetailAdapter(slug, "zh");
+function getPreferredProductDetailData(
+  slug: string,
+  locale: SelectionLocale = "zh",
+) {
+  const dbData = getPumpSeriesProductDetailAdapter(slug, locale);
 
   if (dbData) {
     return dbData;
@@ -582,6 +595,32 @@ function getPreferredProductDetailData(slug: string) {
   return adaptToProductDetailClientData(legacyDetail);
 }
 
+function getPistonPumpRelationKeys(data: DetailRecord) {
+  const existingKeys = Array.isArray(data.relationKeys)
+    ? data.relationKeys.map(getText).filter(Boolean)
+    : [];
+  const slugSeries = normalizeSlug(data.slug || data.detailSlug).split("-")[0];
+  const rawSeries = getText(data.seriesCode || data.seriesId).toLowerCase();
+  const series = [rawSeries, slugSeries].find((value) =>
+    ["ea", "sm", "tm"].includes(value),
+  );
+
+  return Array.from(
+    new Set([
+      ...existingKeys,
+      ...(series ? [`series:${series}`] : []),
+    ]),
+  );
+}
+
+function getPlungerSeriesRoute(slug: string) {
+  return resolveSeriesRoute(
+    "pumps",
+    "piston-pump",
+    normalizeSlug(slug),
+  );
+}
+
 export function generateStaticParams() {
   const detailParams = getDetailList()
     .map((item) => getRecordSlug(item))
@@ -592,23 +631,41 @@ export function generateStaticParams() {
     slug,
   }));
 
-  return [...detailParams, ...legacyParams];
+  const seriesParams = getSeriesRouteParams()
+    .filter(
+      (item) =>
+        item.category === "pumps" && item.slug === "piston-pump",
+    )
+    .map((item) => ({ slug: item.seriesSlug }));
+
+  return [...detailParams, ...legacyParams, ...seriesParams].filter(({ slug }) => !getPistonPumpRedirect(`/products/pumps/piston-pump/${slug}/`));
 }
 
 export async function generateMetadata({ params }: PageProps) {
   const resolvedParams = await params;
+  const localizedMetadata = getPistonPumpMetadata(resolvedParams.slug, "zh");
+  if (localizedMetadata) return localizedMetadata;
+  const seriesRoute = getPlungerSeriesRoute(resolvedParams.slug);
+
+  if (seriesRoute) {
+    return {
+      title: seriesRoute.title,
+      description: seriesRoute.description,
+    };
+  }
+
   const data = getPreferredProductDetailData(resolvedParams.slug);
 
   if (!data) {
     return {
-      title: "Plunger Pump Detail | FOREACH",
+      title: "Piston Pump Detail | FOREACH",
     };
   }
 
   const pageData = data as any;
   const title =
     getText(pageData.seoTitle || pageData.metaTitle || pageData.model || pageData.title) ||
-    "Plunger Pump";
+    "Piston Pump";
 
   const description = getText(
     pageData.seoDescription ||
@@ -624,14 +681,32 @@ export async function generateMetadata({ params }: PageProps) {
       data: pageData,
       title,
       description,
-      canonicalUrl: `/products/pumps/plunger-pumps/${resolvedParams.slug}/`,
+      canonicalUrl: `/products/pumps/piston-pump/${resolvedParams.slug}/`,
     }),
   };
 }
 
-export default async function PlungerPumpDetailPage({ params }: PageProps) {
+export default async function PlungerPumpDetailPage({
+  params,
+  locale = "zh",
+}: PageProps) {
   const resolvedParams = await params;
-  const data = getPreferredProductDetailData(resolvedParams.slug);
+  const seriesRoute = getPlungerSeriesRoute(resolvedParams.slug);
+
+  if (seriesRoute) {
+    return (
+      <Suspense fallback={<ProductPageSkeleton variant="selection" />}>
+        <ProductSelectionClient
+          locale={locale}
+          initialCategoryId={seriesRoute.categoryId}
+          initialProductTypeId={seriesRoute.productTypeId}
+          initialFilters={seriesRoute.initialFilters}
+        />
+      </Suspense>
+    );
+  }
+
+  const data = getPreferredProductDetailData(resolvedParams.slug, locale);
 
   if (!data) {
     notFound();
@@ -643,11 +718,27 @@ export default async function PlungerPumpDetailPage({ params }: PageProps) {
       (product) => normalizeSlug(product.detailSlug) === resolvedDetailSlug,
     )?.productId,
   );
+  const relationKeys = getPistonPumpRelationKeys(data);
+  const relatedResourcesLocale = locale === "zh" ? "zh-CN" : locale;
+  const productData = {
+    ...data,
+    relationKeys,
+  };
 
   return (
     <ProductDetailView
-      data={data}
+      data={productData}
       analyticsProductId={analyticsProductId}
+      afterContent={
+        <RelatedResources
+          key="product-related-resources"
+          sourceType="product"
+          sourceId={analyticsProductId || resolvedDetailSlug}
+          sourceSlug={getText(productData.slug)}
+          relationKeys={relationKeys}
+          locale={relatedResourcesLocale}
+        />
+      }
     />
   );
 }

@@ -34,6 +34,9 @@ import {
   getDiaphragmPumpEngineeringArticles,
 } from "@/data/resources/technical-articles/diaphragm-pump-engineering-articles.article";
 import {
+  getPistonPumpTechnicalArticles,
+} from "@/data/resources/technical-articles/piston-pump-articles.article";
+import {
   classifyTechnicalArticles,
   getTechnicalArticleTaxonomy,
 } from "@/data/resources/technical-articles/technical-article-taxonomy";
@@ -205,6 +208,32 @@ function withDiaphragmPumpEngineeringArticles(
   };
 }
 
+function withPistonPumpArticles(
+  locale: TechnicalArticleLocale,
+  pageData: TechnicalArticlesSourcePageData,
+): TechnicalArticlesSourcePageData {
+  const pistonPumpArticles = getPistonPumpTechnicalArticles(locale);
+
+  if (!pistonPumpArticles.length) {
+    return pageData;
+  }
+
+  const pistonPumpSlugs = new Set(
+    pistonPumpArticles.map((article) => article.slug),
+  );
+
+  return {
+    ...pageData,
+    locale,
+    articles: [
+      ...pistonPumpArticles,
+      ...pageData.articles.filter(
+        (article) => !pistonPumpSlugs.has(article.slug),
+      ),
+    ],
+  };
+}
+
 function getTechnicalArticlesSourcePageData(
   locale: TechnicalArticleLocale,
 ): TechnicalArticlesSourcePageData {
@@ -273,7 +302,10 @@ function getTechnicalArticlesSourcePageData(
 export function getTechnicalArticlesPageData(
   locale: TechnicalArticleLocale,
 ): TechnicalArticlesPageData {
-  const sourcePageData = getTechnicalArticlesSourcePageData(locale);
+  const sourcePageData = withPistonPumpArticles(
+    locale,
+    getTechnicalArticlesSourcePageData(locale),
+  );
 
   return {
     ...sourcePageData,

@@ -76,7 +76,7 @@ const technicalArticlesUi: Partial<
   es: {
     search: "Buscar",
     recent: "Recientes",
-    recentKeywords: ["Racores", "PEEK", "Compatibilidad", "Bomba de émbolo", "IVD"],
+    recentKeywords: ["Racores", "PEEK", "Compatibilidad", "Bomba de pistón", "IVD"],
     categories: "Categorías técnicas",
     allArticles: "Todos los artículos",
     empty: "No se encontraron artículos técnicos. Pruebe otra palabra clave o categoría.",
@@ -96,7 +96,7 @@ const technicalArticlesUi: Partial<
   ko: {
     search: "검색",
     recent: "최근 검색",
-    recentKeywords: ["피팅", "PEEK", "호환성", "플런저 펌프", "IVD"],
+    recentKeywords: ["피팅", "PEEK", "호환성", "피스톤 펌프", "IVD"],
     categories: "기술 분류",
     allArticles: "전체 문서",
     empty: "일치하는 기술 자료가 없습니다. 다른 키워드나 분류를 선택하세요.",
@@ -106,7 +106,7 @@ const technicalArticlesUi: Partial<
   ru: {
     search: "Найти",
     recent: "Недавние",
-    recentKeywords: ["Фитинги", "PEEK", "Совместимость", "Плунжерный насос", "IVD"],
+    recentKeywords: ["Фитинги", "PEEK", "Совместимость", "Поршневой насос", "IVD"],
     categories: "Технические категории",
     allArticles: "Все статьи",
     empty: "Подходящие технические статьи не найдены. Измените запрос или категорию.",
@@ -309,7 +309,7 @@ export default function TechnicalArticlesClient({
             ui?.recentKeywords ??
             (pageData.locale === "zh-CN"
               ? ["接头", "PEEK", "材料兼容", "柱塞泵", "IVD"]
-              : ["Fittings", "PEEK", "Compatibility", "Plunger Pump", "IVD"])
+              : ["Fittings", "PEEK", "Compatibility", "Piston Pump", "IVD"])
           }
           showRecentKeywords
         />

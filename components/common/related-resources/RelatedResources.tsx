@@ -15,6 +15,7 @@ import { getDiaphragmPumpCopy } from "@/data/products/detail/diaphragm-pump-copy
 import { getDiaphragmPumpReferenceByProductId } from "@/data/products/detail/diaphragm-pump-reference-models";
 import { getDiaphragmPumpPath } from "@/data/products/detail/diaphragm-pump-routes";
 import { diaphragmPumpSelectionProducts } from "@/data/products/selection/diaphragm-pump-selection.generated";
+import { pistonPumpRelatedProducts } from "@/data/products/selection/piston-pump-related-products";
 import type { ProductSelectionProduct } from "@/data/products/selection/product-selection.types";
 import type { InstallationGuideCard } from "@/data/resources/installation-guide/installation-guide.types";
 import {
@@ -34,10 +35,16 @@ import { getTechnicalArticlesPageData } from "@/services/resources/technical-art
 
 import styles from "./RelatedResources.module.css";
 
+const relatedResourceProducts: ProductSelectionProduct[] = [
+  ...diaphragmPumpSelectionProducts,
+  ...pistonPumpRelatedProducts,
+];
+
 export type RelatedResourceSourceType = "article" | "product" | "video";
 
 type RelatedResourcesProps = {
   sourceType: RelatedResourceSourceType;
+  includeRelatedArticles?: boolean;
   sourceId?: string;
   sourceSlug?: string;
   relationKeys?: readonly string[];
@@ -315,6 +322,7 @@ export default function RelatedResources({
   sourceId,
   sourceSlug,
   relationKeys = [],
+  includeRelatedArticles = false,
   locale: localeProp,
 }: RelatedResourcesProps) {
   const pathname = usePathname();
@@ -332,7 +340,7 @@ export default function RelatedResources({
 
   const guidePageData = getInstallationGuidePageData(locale);
   const articlePageData = getTechnicalArticlesPageData(locale);
-  const localizedProducts = diaphragmPumpSelectionProducts.filter((product) => {
+  const localizedProducts = relatedResourceProducts.filter((product) => {
     return Boolean(getProductDetailTitle(product, locale));
   });
 
@@ -350,7 +358,7 @@ export default function RelatedResources({
   const showProducts =
     sourceType !== "product" && featuredProducts.length > 0;
   const showArticles =
-    sourceType !== "article" && allRelatedArticles.length > 0;
+    (sourceType !== "article" || includeRelatedArticles) && allRelatedArticles.length > 0;
 
   if (!showVideos && !showProducts && !showArticles) {
     return null;

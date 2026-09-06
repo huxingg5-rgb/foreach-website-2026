@@ -220,7 +220,7 @@ const EXACT_TRANSLATIONS: Record<string, string> = {
   "非面板安装": "Non-Panel Mount",
   "单向阀": "Check Valve",
   "过滤器": "Inline Filter",
-  "柱塞泵": "Plunger Pump",
+  "柱塞泵": "Piston Pump",
   "隔膜泵": "Diaphragm Pump",
   "移液泵": "Pipetting Pump",
   "注射泵": "Syringe Pump",
@@ -429,7 +429,7 @@ const PHRASE_TRANSLATIONS: Array<[string, string]> = [
   ["电磁阀", "Solenoid Valve"],
   ["旋转阀", "Rotary Valve"],
   ["高压阀", "High-Pressure Valve"],
-  ["柱塞泵", "Plunger Pump"],
+  ["柱塞泵", "Piston Pump"],
   ["隔膜泵", "Diaphragm Pump"],
   ["移液泵", "Pipetting Pump"],
   ["注射泵", "Syringe Pump"],
@@ -2419,7 +2419,7 @@ function inferProductName(data: DetailRecord) {
     [/(注射泵|syringe-pump|hmd3|hmd6|hld3|hld6)/i, "Syringe Pump"],
     [/(隔膜泵|diaphragm)/i, "Diaphragm Pump"],
     [/(移液泵|pipetting|smtp)/i, "Pipetting Pump"],
-    [/(柱塞泵|plunger|ea-|eas-|sm-|tm-)/i, "Plunger Pump"],
+    [/(柱塞泵|plunger|ea-|eas-|sm-|tm-)/i, "Piston Pump"],
     [/(高压阀|high-pressure)/i, "High-Pressure Valve"],
     [/(电磁阀|solenoid)/i, "Solenoid Valve"],
     [/(旋转阀|rotary-valve|mrv)/i, "Rotary Valve"],
@@ -3930,16 +3930,16 @@ const PLUNGER_PUMP_FAQ_EXACT_TRANSLATIONS: Record<
 
   "EA 常规柱塞泵适合什么设备平台？": {
     question:
-      "What types of equipment are EA standard plunger pumps suitable for?",
+      "What types of equipment are EA standard piston pumps suitable for?",
     answer:
-      "EA standard plunger pumps are designed as platform-based precision liquid-handling modules for IVD systems, biochemical analyzers, immunoassay analyzers, life-science instruments, laboratory-automation equipment, and analytical instruments. They are particularly suitable for automated platforms that require stable volumetric delivery, long-term operating reliability, and flexible configuration options.",
+      "EA standard piston pumps are designed as platform-based precision liquid-handling modules for IVD systems, biochemical analyzers, immunoassay analyzers, life-science instruments, laboratory-automation equipment, and analytical instruments. They are particularly suitable for automated platforms that require stable volumetric delivery, long-term operating reliability, and flexible configuration options.",
   },
 
   "EA 系列支持哪些泵头材质？": {
     question:
       "Which pump-head materials are available for the EA series?",
     answer:
-      "Depending on the nominal volume, structural design, and project requirements, EA standard plunger pumps can be evaluated with pump heads made from engineering materials such as PCTG, PMMA, PPS, PVDF, PP, PTFE, PEEK, POM, PSU, PEI, and PC. The final material combination should be confirmed based on fluid compatibility, mechanical strength, manufacturing process, and production volume.",
+      "Depending on the nominal volume, structural design, and project requirements, EA standard piston pumps can be evaluated with pump heads made from engineering materials such as PCTG, PMMA, PPS, PVDF, PP, PTFE, PEEK, POM, PSU, PEI, and PC. The final material combination should be confirmed based on fluid compatibility, mechanical strength, manufacturing process, and production volume.",
   },
 
   "EA 系列是否可以进行泵阀一体或控制集成？": {

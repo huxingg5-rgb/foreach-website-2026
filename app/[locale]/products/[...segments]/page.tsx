@@ -1,3 +1,6 @@
+import { getPistonPumpRedirect } from "@/lib/seo/piston-pump-migration";
+import { getPistonPumpMetadata } from "@/services/products/getPistonPumpMetadata";
+import { getCompactPumpContent } from "@/data/products/detail/applications/compact-pump-content";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
@@ -44,7 +47,7 @@ import DiaphragmPumpDetailPage, {
   getDiaphragmPumpMetadata,
 } from "@/components/products/diaphragm-pumps/DiaphragmPumpDetailRoute";
 import PipettingPumpDetailPage from "@/app/products/pumps/pipetting-pumps/[slug]/page";
-import PlungerPumpDetailPage from "@/app/products/pumps/plunger-pumps/[slug]/page";
+import PlungerPumpDetailPage from "@/app/products/pumps/piston-pump/[slug]/page";
 import SyringePumpDetailPage from "@/app/products/pumps/syringe-pumps/[slug]/page";
 import ValvelessPumpDetailPage from "@/app/products/pumps/valveless-pumps/[slug]/page";
 import ProbeDetailPage from "@/app/products/probes/[slug]/page";
@@ -140,7 +143,7 @@ const ROUTE_TITLES: Record<string, string> = {
   "hard-tube-fittings": "Hard Tube Fittings",
   "luer-fittings": "Luer Fittings",
   "pipetting-pumps": "Pipetting Pumps",
-  "plunger-pumps": "Plunger Pumps",
+  "piston-pump": "Piston Pump",
   "quick-connect-fittings": "Quick-Connect Fittings",
   "syringe-pumps": "Syringe Pumps",
   "thread-to-barbed-fittings": "Thread-to-Barb Fittings",
@@ -152,7 +155,8 @@ export const dynamicParams = false;
 const INTERNATIONAL_PRODUCT_LOCALES: LocaleCode[] = ["en", "es", "fr", "ko", "ru"];
 
 function getProductRoutesForLocale(_locale: LocaleCode | string) {
-  return migrateDiaphragmPumpRouteSegments(allEnglishProductDetailRoutes);
+  return migrateDiaphragmPumpRouteSegments(allEnglishProductDetailRoutes)
+    .filter(segments => !getPistonPumpRedirect(`/products/${segments.join("/")}/`));
 }
 
 export function generateStaticParams() {
@@ -311,13 +315,19 @@ export async function generateMetadata({
   );
 
   if (diaphragmMetadata) return diaphragmMetadata;
+  if (segments[0] === "pumps" && segments[1] === "piston-pump" && segments.length <= 3) {
+    const metadata = getPistonPumpMetadata(segments[2] || "", locale);
+    if (metadata) return metadata;
+  }
 
-  const title = getRouteTitle(segments);
+  const compactContent = locale === "en" && segments.length === 3 && segments[0] === "pumps" && segments[1] === "piston-pump"
+    ? getCompactPumpContent(segments[2], "en") : undefined;
+  const title = compactContent ? compactContent.seoTitle.replace(/ \| FOREACH$/, "") : getRouteTitle(segments);
   const canonicalPath = `/${locale}/products/${segments.join("/")}/`;
   const isDetailRoute = segments.length >= 2;
-  const description = isDetailRoute
+  const description = compactContent?.metaDescription || (isDetailRoute
     ? `Explore ${title} specifications, materials, interfaces, model configurations, and fluidic applications from FOREACH.`
-    : `Explore FOREACH ${title} for precision fluid handling in IVD, life science, analytical instrumentation, and laboratory automation.`;
+    : `Explore FOREACH ${title} for precision fluid handling in IVD, life science, analytical instrumentation, and laboratory automation.`);
   const keywords = Array.from(
     new Set([
       title,
@@ -339,7 +349,7 @@ export async function generateMetadata({
     : undefined;
 
   return {
-    title: `${title} | FOREACH`,
+    title: compactContent ? { absolute: compactContent.seoTitle } : `${title} | FOREACH`,
     description,
     keywords,
     alternates: {
@@ -463,8 +473,11 @@ export default async function ProductLocaleRoutePage({
   if (category === "pumps") {
     const detailParams = Promise.resolve({ slug: seriesSlug });
 
-    if (slug === "plunger-pumps") {
-      return PlungerPumpDetailPage({ params: detailParams });
+    if (slug === "piston-pump") {
+      return PlungerPumpDetailPage({
+        params: detailParams,
+        locale,
+      });
     }
 
     if (slug === "miniature-diaphragm-pumps") {

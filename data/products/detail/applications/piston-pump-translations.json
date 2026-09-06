@@ -1,0 +1,1885 @@
+{
+  "version": 1,
+  "locales": [
+    "es",
+    "fr",
+    "ko",
+    "ru"
+  ],
+  "atoms": {
+    "microliter reagent addition in clinical chemistry and immunoassay analyzers, small-volume sample handling and reaction-liquid addition in life science instruments": {
+      "es": "la adición microlítica de reactivos en analizadores de química clínica e inmunoensayo, el manejo de pequeñas muestras y la adición de líquido de reacción en instrumentos de ciencias de la vida",
+      "fr": "l’ajout microlitrique de réactifs dans les analyseurs de chimie clinique et d’immunoanalyse, le traitement de petits échantillons et l’ajout de liquide réactionnel dans les instruments des sciences de la vie",
+      "ko": "임상화학 및 면역분석기의 미량 시약 첨가, 소량 샘플 처리 및 생명과학 장비의 반응액 첨가",
+      "ru": "микролитровое добавление реагентов в анализаторах клинической химии и иммуноанализа, обработка малых образцов и добавление реакционной жидкости в приборах наук о жизни"
+    },
+    "reagent dispensing in clinical chemistry analyzers, sample dilution in automated preparation systems and metered reaction-liquid addition": {
+      "es": "la dispensación de reactivos en analizadores de química clínica, la dilución de muestras en sistemas de preparación automatizada y la adición dosificada de líquido de reacción",
+      "fr": "la distribution de réactifs dans les analyseurs de chimie clinique, la dilution d’échantillons en préparation automatisée et l’ajout dosé de liquide réactionnel",
+      "ko": "임상화학 분석기의 시약 분주, 자동 전처리 시스템의 샘플 희석 및 반응액 정량 첨가",
+      "ru": "дозирование реагентов в анализаторах клинической химии, разведение образцов в автоматизированной пробоподготовке и дозированное добавление реакционной жидкости"
+    },
+    "reagent addition in clinical chemistry and immunoassay analyzers, automated sample dilution, buffer dispensing and standard-solution addition in water analyzers": {
+      "es": "la adición de reactivos en analizadores de química clínica e inmunoensayo, la dilución automática de muestras, la dispensación de tampones y la adición de patrones en analizadores de agua",
+      "fr": "l’ajout de réactifs en chimie clinique et immunoanalyse, la dilution automatisée d’échantillons, la distribution de tampons et l’ajout de solutions étalons dans les analyseurs d’eau",
+      "ko": "임상화학 및 면역분석기의 시약 첨가, 자동 샘플 희석, 완충액 분주 및 수질 분석기의 표준액 첨가",
+      "ru": "добавление реагентов в анализаторах клинической химии и иммуноанализа, автоматическое разведение образцов, распределение буферов и добавление стандартных растворов в анализаторах воды"
+    },
+    "milliliter-scale reagent transfer in diagnostic analyzers, diluent addition in sample preparation and automated buffer preparation": {
+      "es": "la transferencia mililítica de reactivos en analizadores de diagnóstico, la adición de diluyente en la preparación de muestras y la preparación automática de tampones",
+      "fr": "le transfert millilitrique de réactifs dans les analyseurs de diagnostic, l’ajout de diluant en préparation d’échantillons et la préparation automatisée de tampons",
+      "ko": "진단 분석기의 밀리리터 단위 시약 이송, 샘플 전처리의 희석액 첨가 및 자동 완충액 조제",
+      "ru": "перенос миллилитровых объёмов реагентов в диагностических анализаторах, добавление разбавителя при пробоподготовке и автоматическое приготовление буферов"
+    },
+    "automated buffer preparation, diluent addition in sample preparation and metered wash-liquid replenishment in analytical instruments": {
+      "es": "la preparación automática de tampones, la adición de diluyente en la preparación de muestras y la reposición dosificada de líquido de lavado en instrumentos analíticos",
+      "fr": "la préparation automatisée de tampons, l’ajout de diluant en préparation d’échantillons et l’appoint dosé de liquide de lavage dans les instruments d’analyse",
+      "ko": "자동 완충액 조제, 샘플 전처리의 희석액 첨가 및 분석 장비의 세척액 정량 보충",
+      "ru": "автоматическое приготовление буферов, добавление разбавителя при пробоподготовке и дозированное пополнение промывочной жидкости в аналитических приборах"
+    },
+    "buffer transfer in laboratory automation, metered wash-liquid addition in analyzers and priming of sample-preparation fluid paths": {
+      "es": "la transferencia de tampones en automatización de laboratorio, la adición dosificada de lavado en analizadores y el cebado de circuitos de preparación de muestras",
+      "fr": "le transfert de tampons en automatisation de laboratoire, l’ajout dosé de liquide de lavage dans les analyseurs et l’amorçage des circuits de préparation d’échantillons",
+      "ko": "실험실 자동화의 완충액 이송, 분석기의 세척액 정량 첨가 및 샘플 전처리 유로의 프라이밍",
+      "ru": "перенос буферов в автоматизации лабораторий, дозированное добавление промывочной жидкости в анализаторах и заполнение трактов пробоподготовки"
+    },
+    "larger wash-liquid transfers, metered system rinsing, automated solution preparation and instrument fluid-path priming": {
+      "es": "la transferencia de mayores volúmenes de lavado, el enjuague dosificado del sistema, la preparación automática de soluciones y el cebado del circuito del instrumento",
+      "fr": "le transfert de volumes importants de lavage, le rinçage dosé du système, la préparation automatisée de solutions et l’amorçage du circuit de l’instrument",
+      "ko": "대용량 세척액 이송, 시스템 정량 세척, 자동 용액 조제 및 장비 유로 프라이밍",
+      "ru": "перенос крупных объёмов промывочной жидкости, дозированная промывка системы, автоматическое приготовление растворов и заполнение жидкостного тракта прибора"
+    },
+    "microliter reagent addition and small-volume sample dispensing": {
+      "es": "la adición microlítica de reactivos y la dispensación de pequeñas muestras",
+      "fr": "l’ajout microlitrique de réactifs et la distribution de petits volumes d’échantillons",
+      "ko": "미량 시약 첨가 및 소량 샘플 분주",
+      "ru": "микролитровое добавление реагентов и дозирование малых объёмов образцов"
+    },
+    "automated sampling and sample dilution": {
+      "es": "el muestreo automático y la dilución de muestras",
+      "fr": "le prélèvement automatisé et la dilution d’échantillons",
+      "ko": "자동 샘플링 및 샘플 희석",
+      "ru": "автоматический отбор и разведение образцов"
+    },
+    "specialty reagent addition and small-volume dispensing": {
+      "es": "la adición de reactivos especiales y la dispensación de pequeños volúmenes",
+      "fr": "l’ajout de réactifs particuliers et la distribution de petits volumes",
+      "ko": "특수 시약 첨가 및 소량 액체 분주",
+      "ru": "добавление специальных реагентов и дозирование малых объёмов"
+    },
+    "reagent dispensing and metered reaction-liquid addition": {
+      "es": "la dispensación de reactivos y la adición dosificada de líquido de reacción",
+      "fr": "la distribution de réactifs et l’ajout dosé de liquide réactionnel",
+      "ko": "시약 분주 및 반응액 정량 첨가",
+      "ru": "дозирование реагентов и дозированное добавление реакционной жидкости"
+    },
+    "specialty reagent dispensing and reaction-liquid addition": {
+      "es": "la dispensación de reactivos especiales y la adición de líquido de reacción",
+      "fr": "la distribution de réactifs particuliers et l’ajout de liquide réactionnel",
+      "ko": "특수 시약 분주 및 반응액 첨가",
+      "ru": "дозирование специальных реагентов и добавление реакционной жидкости"
+    },
+    "reagent addition and metered diluent dosing": {
+      "es": "la adición de reactivos y la dosificación de diluyente",
+      "fr": "l’ajout de réactifs et le dosage de diluant",
+      "ko": "시약 첨가 및 희석액 정량 주입",
+      "ru": "добавление реагентов и дозирование разбавителя"
+    },
+    "diluent addition and buffer dispensing": {
+      "es": "la adición de diluyente y la dispensación de tampón",
+      "fr": "l’ajout de diluant et la distribution de tampon",
+      "ko": "희석액 첨가 및 완충액 분주",
+      "ru": "добавление разбавителя и распределение буфера"
+    },
+    "microliter reagent addition in compact fluid paths": {
+      "es": "la adición microlítica de reactivos en circuitos compactos",
+      "fr": "l’ajout microlitrique de réactifs dans des circuits compacts",
+      "ko": "소형 유로의 미량 시약 첨가",
+      "ru": "микролитровое добавление реагентов в компактных трактах"
+    },
+    "sample dispensing in small analytical modules": {
+      "es": "la dispensación de muestras en módulos analíticos pequeños",
+      "fr": "la distribution d’échantillons dans de petits modules d’analyse",
+      "ko": "소형 분석 모듈의 샘플 분주",
+      "ru": "дозирование образцов в небольших аналитических модулях"
+    },
+    "reaction-liquid addition in compact analytical modules": {
+      "es": "la adición de líquido de reacción en módulos analíticos compactos",
+      "fr": "l’ajout de liquide réactionnel dans des modules d’analyse compacts",
+      "ko": "소형 분석 모듈의 반응액 첨가",
+      "ru": "добавление реакционной жидкости в компактных аналитических модулях"
+    },
+    "reagent and buffer dispensing in modular fluid paths": {
+      "es": "la dispensación de reactivos y tampones en circuitos modulares",
+      "fr": "la distribution de réactifs et de tampons dans des circuits modulaires",
+      "ko": "모듈형 유로의 시약 및 완충액 분주",
+      "ru": "дозирование реагентов и буферов в модульных жидкостных трактах"
+    }
+  },
+  "templates": {
+    "{0} is a {1} precision ceramic piston pump with a PMMA pump head for {2}.": {
+      "es": "{0} es una bomba de pistón cerámico de precisión de {1}, con cabezal de PMMA, para {2}.",
+      "fr": "{0} est une pompe à piston céramique de précision de {1}, avec une tête en PMMA, conçue pour {2}.",
+      "ko": "{0}은 PMMA 헤드를 적용한 {1} 정밀 세라믹 피스톤 펌프로, {2}에 사용됩니다.",
+      "ru": "{0} — прецизионный насос с керамическим поршнем объёмом {1} и головкой из PMMA для таких задач, как {2}."
+    },
+    "It supports {0}/{1}-{2} UNF or M{3} ports and {4} full-stroke steps.": {
+      "es": "Admite puertos {0}/{1}-{2} UNF o M{3} y {4} pasos por carrera completa.",
+      "fr": "Elle accepte des raccordements {0}/{1}-{2} UNF ou M{3} et {4} pas sur la course complète.",
+      "ko": "{0}/{1}-{2} UNF 또는 M{3} 포트와 전체 행정 {4}스텝을 지원합니다.",
+      "ru": "Предусмотрены порты {0}/{1}-{2} UNF или M{3} и {4} шагов на полный ход."
+    },
+    "Accuracy and repeatability at {0}% full stroke are both ≤{1}% under the specified test conditions.": {
+      "es": "La exactitud y la repetibilidad al {0} % de la carrera completa son ambas ≤{1} % en las condiciones de ensayo especificadas.",
+      "fr": "L’exactitude et la répétabilité à {0} % de la course complète sont toutes deux ≤{1} % dans les conditions d’essai spécifiées.",
+      "ko": "지정된 시험 조건에서 {0}% 전체 행정의 정확도와 반복성은 모두 ≤{1}%입니다.",
+      "ru": "При {0}% полного хода точность и повторяемость составляют ≤{1}% в заданных условиях испытаний."
+    },
+    "Pump heads can be selected from PMMA, PCTG, PEEK and other project-assessed materials.": {
+      "es": "Los cabezales pueden ser de PMMA, PCTG, PEEK u otros materiales evaluados para el proyecto.",
+      "fr": "Les têtes peuvent être en PMMA, PCTG, PEEK ou en d’autres matériaux évalués pour le projet.",
+      "ko": "펌프 헤드는 PMMA, PCTG, PEEK 및 프로젝트별로 평가한 기타 재료 중에서 선택할 수 있습니다.",
+      "ru": "Для головки доступны PMMA, PCTG, PEEK и другие материалы после оценки требований проекта."
+    },
+    "Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire.": {
+      "es": "Las opciones de pistón incluyen cerámica de zirconia, cerámica de alúmina, PEEK y zafiro.",
+      "fr": "Les pistons peuvent être en céramique de zircone, en céramique d’alumine, en PEEK ou en saphir.",
+      "ko": "피스톤 재료로 지르코니아 세라믹, 알루미나 세라믹, PEEK 및 사파이어를 선택할 수 있습니다.",
+      "ru": "Для поршня доступны циркониевая и алюмооксидная керамика, PEEK и сапфир."
+    },
+    "Ports, motor, optical feedback, valves and controller can be configured for fluid compatibility, mounting space and system integration.": {
+      "es": "Los puertos, el motor, la realimentación óptica, las válvulas y el controlador pueden configurarse según la compatibilidad con el fluido, el espacio de montaje y la integración del sistema.",
+      "fr": "Les raccordements, le moteur, le retour optique, les vannes et le contrôleur peuvent être configurés selon la compatibilité avec le fluide, l’espace de montage et l’intégration du système.",
+      "ko": "유체 호환성, 설치 공간 및 시스템 통합 요구에 따라 포트, 모터, 광학 피드백, 밸브와 컨트롤러를 구성할 수 있습니다.",
+      "ru": "Порты, двигатель, оптическую обратную связь, клапаны и контроллер подбирают с учётом совместимости с жидкостью, монтажного пространства и интеграции системы."
+    },
+    "Reagent dosing": {
+      "es": "Dosificación de reactivos",
+      "fr": "Dosage de réactifs",
+      "ko": "시약 정량 주입",
+      "ru": "Дозирование реагентов"
+    },
+    "Sample dilution": {
+      "es": "Dilución de muestras",
+      "fr": "Dilution d’échantillons",
+      "ko": "샘플 희석",
+      "ru": "Разведение образцов"
+    },
+    "Buffer and reaction-liquid addition": {
+      "es": "Adición de tampón y líquido de reacción",
+      "fr": "Ajout de tampon et de liquide réactionnel",
+      "ko": "완충액 및 반응액 첨가",
+      "ru": "Добавление буфера и реакционной жидкости"
+    },
+    "Reagent metering and standard addition": {
+      "es": "Dosificación de reactivos y adición de patrones",
+      "fr": "Dosage de réactifs et ajout d’étalons",
+      "ko": "시약 계량 및 표준액 첨가",
+      "ru": "Дозирование реагентов и добавление стандартных растворов"
+    },
+    "Applications": {
+      "es": "Aplicaciones",
+      "fr": "Applications",
+      "ko": "응용 분야",
+      "ru": "Применение"
+    },
+    "Typical applications of the {0} PMMA-head precision piston pump": {
+      "es": "Aplicaciones habituales de la bomba de pistón de precisión de {0} con cabezal de PMMA",
+      "fr": "Applications types de la pompe à piston de précision de {0} avec tête en PMMA",
+      "ko": "{0} PMMA 헤드 정밀 피스톤 펌프의 주요 응용 분야",
+      "ru": "Типовые применения прецизионного поршневого насоса объёмом {0} с головкой из PMMA"
+    },
+    "EA supports metered liquid handling in clinical chemistry, immunoassay, laboratory automation, sample preparation and water or environmental analysis.": {
+      "es": "EA permite la manipulación dosificada de líquidos en química clínica, inmunoensayo, automatización de laboratorio, preparación de muestras y análisis de agua o ambiental.",
+      "fr": "EA permet le dosage de liquides en chimie clinique, immunoanalyse, automatisation de laboratoire, préparation d’échantillons et analyse de l’eau ou de l’environnement.",
+      "ko": "EA는 임상화학, 면역분석, 실험실 자동화, 샘플 전처리, 수질 및 환경 분석의 정량 액체 처리를 지원합니다.",
+      "ru": "EA поддерживает дозированную работу с жидкостями в клинической химии, иммуноанализе, автоматизации лабораторий, подготовке образцов, анализе воды и окружающей среды."
+    },
+    "Project configurations can also be assessed for life science and omics instruments, diagnostic reagent filling and industrial liquid dosing.": {
+      "es": "También pueden evaluarse configuraciones de proyecto para instrumentos de ciencias de la vida y ómicas, llenado de reactivos de diagnóstico y dosificación de líquidos industriales.",
+      "fr": "Des configurations spécifiques peuvent aussi être évaluées pour les instruments des sciences de la vie et des omiques, le conditionnement de réactifs de diagnostic et le dosage de liquides industriels.",
+      "ko": "생명과학 및 오믹스 장비, 진단 시약 분주 포장, 산업용 액체 정량 주입에 대해서도 프로젝트별 구성을 검토할 수 있습니다.",
+      "ru": "Также возможна оценка проектных конфигураций для приборов наук о жизни и омиксных исследований, фасовки диагностических реагентов и дозирования промышленных жидкостей."
+    },
+    "Tasks include reagent addition, dilution, standard addition, buffer dispensing, reaction-liquid addition, solution preparation, metered washing and priming.": {
+      "es": "Las tareas incluyen adición de reactivos, dilución, adición de patrones, dispensación de tampones, adición de líquido de reacción, preparación de soluciones, lavado dosificado y cebado.",
+      "fr": "Les tâches comprennent l’ajout de réactifs, la dilution, l’ajout d’étalons, la distribution de tampons, l’ajout de liquide réactionnel, la préparation de solutions, le lavage dosé et l’amorçage.",
+      "ko": "시약 첨가, 희석, 표준액 첨가, 완충액 분주, 반응액 보충, 용액 조제, 정량 세척 및 유로 프라이밍에 활용할 수 있습니다.",
+      "ru": "Задачи включают добавление реагентов, разведение, добавление стандартных растворов, распределение буферов, добавление реакционной жидкости, приготовление растворов, дозированную промывку и заполнение жидкостного тракта."
+    },
+    "Depending on its role, it may be described as a reagent, dilution, standard-addition, dispensing or reagent-filling pump.": {
+      "es": "Según su función, puede denominarse bomba de reactivos, de dilución, de adición de patrones, de dispensación o de llenado de reactivos.",
+      "fr": "Selon sa fonction, elle peut être désignée comme pompe à réactifs, de dilution, d’ajout d’étalons, de distribution ou de conditionnement de réactifs.",
+      "ko": "유로 기능에 따라 시약 펌프, 희석 펌프, 표준액 첨가 펌프, 정량 분주 펌프 또는 시약 충전 펌프로 부를 수 있습니다.",
+      "ru": "В зависимости от функции её называют насосом для реагентов, разведения, добавления стандартных растворов, дозирования или фасовки реагентов."
+    },
+    "Titrant addition requires additional minimum-dose validation.": {
+      "es": "La adición de titulante requiere validar adicionalmente la dosis mínima.",
+      "fr": "L’ajout de titrant nécessite une validation supplémentaire de la dose minimale.",
+      "ko": "적정액 첨가에는 최소 주입량을 추가로 검증해야 합니다.",
+      "ru": "Для подачи титранта требуется дополнительная проверка минимальной дозы."
+    },
+    "{0} focuses on {1}.": {
+      "es": "{0} se centra en {1}.",
+      "fr": "{0} est destiné à {1}.",
+      "ko": "{0}의 주요 용도는 {1}입니다.",
+      "ru": "Основные задачи {0}: {1}."
+    },
+    "The {0} capacity and smaller nominal volume per step support the design of small-volume aspiration and staged dispensing sequences.": {
+      "es": "La capacidad de {0} y el menor volumen nominal por paso permiten diseñar secuencias de aspiración de pequeños volúmenes y dispensación por etapas.",
+      "fr": "La capacité de {0} et le faible volume nominal par pas permettent de concevoir des séquences d’aspiration de petits volumes et de distribution par étapes.",
+      "ko": "{0} 용량과 작은 스텝당 명목 액량을 바탕으로 소량 흡입과 단계별 분주 절차를 설계할 수 있습니다.",
+      "ru": "Объём {0} и небольшой номинальный объём на шаг позволяют планировать всасывание малых объёмов и поэтапное дозирование."
+    },
+    "The displayed configuration uses a PMMA head; compatibility must be checked for the head, piston, seals and valves with the actual fluid.": {
+      "es": "La configuración mostrada utiliza un cabezal de PMMA; debe comprobarse la compatibilidad del cabezal, pistón, juntas y válvulas con el fluido real.",
+      "fr": "La configuration présentée utilise une tête en PMMA ; la compatibilité de la tête, du piston, des joints et des vannes doit être vérifiée avec le fluide réel.",
+      "ko": "표시 구성은 PMMA 헤드를 사용하며, 실제 유체로 헤드, 피스톤, 씰 및 밸브의 호환성을 확인해야 합니다.",
+      "ru": "В представленной конфигурации используется головка из PMMA; совместимость головки, поршня, уплотнений и клапанов проверяют с фактической жидкостью."
+    },
+    "The scenarios below connect instrument requirements with configurable capabilities; suitability is subject to application validation.": {
+      "es": "Los siguientes escenarios relacionan los requisitos del instrumento con las capacidades configurables; la idoneidad debe validarse para cada aplicación.",
+      "fr": "Les scénarios suivants relient les exigences de l’instrument aux possibilités de configuration ; l’adéquation doit être validée pour l’application.",
+      "ko": "다음 시나리오는 장비 요구 사항과 구성 가능한 기능을 연결하며, 실제 적합성은 해당 응용 조건에서 검증해야 합니다.",
+      "ru": "Следующие сценарии сопоставляют требования прибора с возможностями конфигурации; пригодность подтверждается испытаниями для конкретного применения."
+    },
+    "Reagent dispensing pumps for clinical chemistry and immunoassay analyzers": {
+      "es": "Bombas de dispensación de reactivos para analizadores de química clínica e inmunoensayo",
+      "fr": "Pompes de distribution de réactifs pour analyseurs de chimie clinique et d’immunoanalyse",
+      "ko": "임상화학 및 면역분석기용 시약 주입 펌프",
+      "ru": "Насосы для дозирования реагентов в анализаторах клинической химии и иммуноанализа"
+    },
+    "Clinical chemistry and immunoassay analyzers add defined reagent volumes to reaction units.": {
+      "es": "Los analizadores de química clínica e inmunoensayo añaden volúmenes definidos de reactivos a las unidades de reacción.",
+      "fr": "Les analyseurs de chimie clinique et d’immunoanalyse ajoutent des volumes définis de réactifs aux unités réactionnelles.",
+      "ko": "임상화학 및 면역분석기는 반응부에 정해진 양의 시약을 첨가합니다.",
+      "ru": "Анализаторы клинической химии и иммуноанализа подают заданные объёмы реагентов в реакционные блоки."
+    },
+    "A reagent dispensing pump must support consistent repeated doses and coordinated operation with selector valves, dispensing probes and instrument controls.": {
+      "es": "La bomba de dispensación de reactivos debe mantener dosis repetidas uniformes y coordinarse con las válvulas selectoras, las sondas de dispensación y el control del instrumento.",
+      "fr": "La pompe de distribution de réactifs doit assurer la régularité des doses répétées et fonctionner de manière coordonnée avec les vannes de sélection, les aiguilles de distribution et la commande de l’instrument.",
+      "ko": "시약 주입 펌프는 반복 주입량의 일관성을 유지하고 선택 밸브, 분주 프로브 및 장비 제어와 연동해야 합니다.",
+      "ru": "Насос для реагентов должен обеспечивать стабильность повторных доз и согласованную работу с переключающими клапанами, дозирующими зондами и системой управления прибором."
+    },
+    "{0}: Specified full-stroke accuracy and repeatability are both ≤{1}% under the stated test conditions.": {
+      "es": "{0}: la exactitud y la repetibilidad especificadas a carrera completa son ambas ≤{1} % en las condiciones de ensayo indicadas.",
+      "fr": "{0} : l’exactitude et la répétabilité spécifiées sur la course complète sont toutes deux ≤{1} % dans les conditions d’essai indiquées.",
+      "ko": "{0}: 명시된 시험 조건에서 전체 행정 정확도와 반복성은 모두 ≤{1}%입니다.",
+      "ru": "{0}: точность и повторяемость на полном ходе составляют ≤{1}% в указанных условиях испытаний."
+    },
+    "Motor, home-position optical sensor and valve options support integration; small-dose performance must be verified using the actual reagent and working volume.": {
+      "es": "Las opciones de motor, sensor óptico de posición inicial y válvulas facilitan la integración; las prestaciones a dosis pequeñas deben verificarse con el reactivo y el volumen de trabajo reales.",
+      "fr": "Les options de moteur, de capteur optique de position initiale et de vannes facilitent l’intégration ; les performances aux petites doses doivent être vérifiées avec le réactif et le volume de travail réels.",
+      "ko": "모터, 원점 광센서 및 밸브 옵션으로 통합할 수 있으며, 소량 분주 성능은 실제 시약과 작업 액량으로 검증해야 합니다.",
+      "ru": "Варианты двигателя, оптического датчика исходного положения и клапанов обеспечивают интеграцию; работу на малых дозах проверяют с фактическим реагентом и рабочим объёмом."
+    },
+    "Sample dilution pumps for automated sample preparation": {
+      "es": "Bombas de dilución de muestras para preparación automatizada de muestras",
+      "fr": "Pompes de dilution pour la préparation automatisée d’échantillons",
+      "ko": "자동 샘플 전처리용 샘플 희석 펌프",
+      "ru": "Насосы для разведения образцов в автоматизированной пробоподготовке"
+    },
+    "Sample-preparation instruments control sample and diluent volumes separately to achieve a programmed dilution ratio.": {
+      "es": "Los equipos de preparación de muestras controlan por separado los volúmenes de muestra y diluyente para obtener la proporción de dilución programada.",
+      "fr": "Les instruments de préparation d’échantillons contrôlent séparément les volumes d’échantillon et de diluant pour obtenir le rapport de dilution programmé.",
+      "ko": "샘플 전처리 장비는 설정된 희석 비율을 구현하기 위해 샘플과 희석액의 양을 각각 제어합니다.",
+      "ru": "Приборы пробоподготовки отдельно контролируют объёмы образца и разбавителя для получения заданного коэффициента разведения."
+    },
+    "A sample dilution or diluent dosing pump must coordinate repeated aspiration, dispensing, valve switching and between-sample washing.": {
+      "es": "La bomba de dilución o de dosificación de diluyente debe coordinar aspiraciones, dispensaciones, cambios de válvula y lavados entre muestras.",
+      "fr": "Une pompe de dilution ou de dosage de diluant doit coordonner les aspirations, les distributions, la commutation des vannes et les lavages entre échantillons.",
+      "ko": "샘플 희석 펌프 또는 희석액 첨가 펌프는 반복 흡입·토출, 밸브 전환 및 샘플 간 세척을 연동해야 합니다.",
+      "ru": "Насос для разведения или подачи разбавителя должен согласовывать повторное всасывание, дозирование, переключение клапанов и промывку между образцами."
+    },
+    "{0}: {1}/{2}-{3} UNF or M{4} ports connect to the instrument fluid path, with valves and a controller coordinating aspiration and dispensing.": {
+      "es": "{0}: los puertos {1}/{2}-{3} UNF o M{4} conectan con el circuito del instrumento; las válvulas y el controlador coordinan la aspiración y la dispensación.",
+      "fr": "{0} : les raccordements {1}/{2}-{3} UNF ou M{4} relient la pompe au circuit de l’instrument ; les vannes et le contrôleur coordonnent l’aspiration et la distribution.",
+      "ko": "{0}: {1}/{2}-{3} UNF 또는 M{4} 포트로 장비 유로에 연결하고, 밸브와 컨트롤러로 흡입·토출을 연동합니다.",
+      "ru": "{0}: порты {1}/{2}-{3} UNF или M{4} соединяют насос с трактом прибора, а клапаны и контроллер согласовывают всасывание и дозирование."
+    },
+    "Pump full-stroke specifications are not a guarantee of dilution-ratio accuracy; working volumes, backlash compensation, residual liquid and mixing must also be assessed.": {
+      "es": "Las especificaciones a carrera completa no garantizan la exactitud de la proporción de dilución; también deben evaluarse los volúmenes de trabajo, la compensación de holgura, el líquido residual y la mezcla.",
+      "fr": "Les caractéristiques à pleine course ne garantissent pas l’exactitude du rapport de dilution ; les volumes de travail, la compensation du jeu, le liquide résiduel et le mélange doivent aussi être évalués.",
+      "ko": "펌프의 전체 행정 사양이 장비의 희석 비율 정확도를 보장하지는 않으며, 실제 액량, 백래시 보정, 잔류액 및 혼합 방식도 평가해야 합니다.",
+      "ru": "Характеристики насоса на полном ходе не гарантируют точность разведения; также оценивают рабочие объёмы, компенсацию люфта, остаточную жидкость и смешивание."
+    },
+    "Buffer dispensing pumps for life science and omics instruments": {
+      "es": "Bombas de dispensación de tampones para instrumentos de ciencias de la vida y ómicas",
+      "fr": "Pompes de distribution de tampons pour instruments des sciences de la vie et des omiques",
+      "ko": "생명과학 및 오믹스 장비용 완충액 분주 펌프",
+      "ru": "Насосы для распределения буферов в приборах наук о жизни и омиксных исследований"
+    },
+    "Sample preparation in life science and omics instruments can require staged buffer, reagent and reaction-liquid addition.": {
+      "es": "La preparación de muestras en estos instrumentos puede requerir adiciones por etapas de tampón, reactivo y líquido de reacción.",
+      "fr": "La préparation d’échantillons dans ces instruments peut nécessiter l’ajout par étapes de tampon, de réactif et de liquide réactionnel.",
+      "ko": "생명과학 및 오믹스 장비의 샘플 전처리에서는 완충액, 시약 및 반응액을 단계적으로 첨가해야 할 수 있습니다.",
+      "ru": "Подготовка образцов в таких приборах может требовать поэтапного добавления буферов, реагентов и реакционных жидкостей."
+    },
+    "Buffer dispensing and reagent pumps must follow programmed doses while coordinating fluid switching and cleaning.": {
+      "es": "Las bombas de tampón y reactivos deben seguir las dosis programadas y coordinar el cambio de líquidos y la limpieza.",
+      "fr": "Les pompes à tampons et à réactifs doivent respecter les doses programmées tout en coordonnant le changement de fluide et le nettoyage.",
+      "ko": "완충액 및 시약 펌프는 설정된 양을 주입하면서 유체 전환과 세척을 연동해야 합니다.",
+      "ru": "Насосы для буферов и реагентов должны подавать заданные дозы, согласовывая смену жидкостей и очистку."
+    },
+    "{0}: Wetted-material, valve and control options support the design of a metered addition unit.": {
+      "es": "{0}: las opciones de materiales en contacto con el fluido, válvulas y control permiten diseñar una unidad de adición dosificada.",
+      "fr": "{0} : les options de matériaux en contact avec le fluide, de vannes et de commande permettent de concevoir une unité d’ajout dosé.",
+      "ko": "{0}: 접액 재료, 밸브 및 제어 옵션을 활용해 정량 첨가 모듈을 설계할 수 있습니다.",
+      "ru": "{0}: варианты контактирующих с жидкостью материалов, клапанов и управления позволяют спроектировать узел дозированной подачи."
+    },
+    "Omics applications need additional residual-volume, adsorption and carryover validation; cell- or particle-containing samples require separate assessment.": {
+      "es": "Las aplicaciones ómicas requieren validar además el volumen residual, la adsorción y el arrastre; las muestras con células o partículas necesitan una evaluación independiente.",
+      "fr": "Les applications omiques nécessitent une validation supplémentaire du volume résiduel, de l’adsorption et de la contamination croisée ; les échantillons contenant des cellules ou des particules nécessitent une évaluation distincte.",
+      "ko": "오믹스 응용에서는 잔류량, 흡착 및 캐리오버를 추가로 검증해야 하며, 세포나 입자가 포함된 샘플은 별도로 평가해야 합니다.",
+      "ru": "Омиксные применения требуют дополнительной проверки остаточного объёма, адсорбции и переноса загрязнений; образцы с клетками или частицами оценивают отдельно."
+    },
+    "Reagent metering and standard-addition pumps for water analyzers": {
+      "es": "Bombas de dosificación de reactivos y adición de patrones para analizadores de agua",
+      "fr": "Pompes de dosage de réactifs et d’ajout d’étalons pour analyseurs d’eau",
+      "ko": "수질 분석기용 시약 계량 및 표준액 첨가 펌프",
+      "ru": "Насосы для дозирования реагентов и добавления стандартных растворов в анализаторах воды"
+    },
+    "Water and environmental analyzers meter reagents, standards or diluents.": {
+      "es": "Los analizadores de agua y ambientales dosifican reactivos, patrones o diluyentes.",
+      "fr": "Les analyseurs d’eau et de l’environnement dosent des réactifs, des étalons ou des diluants.",
+      "ko": "수질 및 환경 분석기는 시약, 표준액 또는 희석액을 정량 주입합니다.",
+      "ru": "Анализаторы воды и окружающей среды дозируют реагенты, стандартные растворы или разбавители."
+    },
+    "A reagent metering or standard-addition pump must control dose volume while matching reagent composition, concentration and cleaning conditions.": {
+      "es": "La bomba debe controlar el volumen añadido y ser compatible con la composición, concentración y condiciones de limpieza del reactivo.",
+      "fr": "La pompe doit contrôler le volume ajouté tout en étant adaptée à la composition du réactif, à sa concentration et aux conditions de nettoyage.",
+      "ko": "시약 계량 또는 표준액 첨가 펌프는 주입량을 제어하면서 시약 성분, 농도 및 세척 조건에 맞아야 합니다.",
+      "ru": "Насос должен контролировать объём дозы с учётом состава и концентрации реагента, а также условий очистки."
+    },
+    "{0}: Pump-head, piston and valve materials can be matched to the fluid.": {
+      "es": "{0}: los materiales del cabezal, el pistón y las válvulas pueden seleccionarse según el fluido.",
+      "fr": "{0} : les matériaux de la tête, du piston et des vannes peuvent être adaptés au fluide.",
+      "ko": "{0}: 유체에 맞게 펌프 헤드, 피스톤 및 밸브 재료를 선택할 수 있습니다.",
+      "ru": "{0}: материалы головки, поршня и клапанов подбирают под конкретную жидкость."
+    },
+    "The EA specification includes an optional seal-wash arrangement for maintenance planning with crystallization-prone liquids.": {
+      "es": "La especificación EA incluye un sistema opcional de lavado de juntas para planificar el mantenimiento con líquidos propensos a cristalizar.",
+      "fr": "La fiche EA prévoit un dispositif optionnel de rinçage des joints pour organiser la maintenance avec des liquides sujets à la cristallisation.",
+      "ko": "EA 사양에는 결정화되기 쉬운 액체의 유지보수를 위한 씰 세척 옵션이 포함되어 있습니다.",
+      "ru": "Спецификация EA предусматривает опциональную промывку уплотнений для обслуживания при работе с кристаллизующимися жидкостями."
+    },
+    "This option does not establish universal reagent compatibility or replace fluid and cycling tests.": {
+      "es": "Esta opción no implica compatibilidad universal con reactivos ni sustituye los ensayos con el fluido y los ciclos de trabajo.",
+      "fr": "Cette option ne garantit pas une compatibilité universelle avec les réactifs et ne remplace pas les essais avec le fluide et les essais cycliques.",
+      "ko": "이 옵션이 모든 시약과의 호환성을 의미하거나 실제 유체 및 반복 작동 시험을 대체하지는 않습니다.",
+      "ru": "Эта опция не означает совместимость с любыми реагентами и не заменяет испытаний с жидкостью и циклических испытаний."
+    },
+    "Application selection guidance": {
+      "es": "Orientación para seleccionar la aplicación",
+      "fr": "Conseils de sélection pour l’application",
+      "ko": "응용 분야 선정 안내",
+      "ru": "Рекомендации по подбору для применения"
+    },
+    "{0} is the nominal capacity; nominal volume per step is approximately {1}.": {
+      "es": "{0} es la capacidad nominal; el volumen nominal por paso es aproximadamente {1}.",
+      "fr": "{0} est la capacité nominale ; le volume nominal par pas est d’environ {1}.",
+      "ko": "{0}은 명목 용량이며, 스텝당 명목 액량은 약 {1}입니다.",
+      "ru": "Номинальный объём составляет {0}, а номинальный объём на шаг — около {1}."
+    },
+    "Neither is a validated minimum dose.": {
+      "es": "Ninguno de estos valores es una dosis mínima validada.",
+      "fr": "Aucune de ces valeurs ne constitue une dose minimale validée.",
+      "ko": "두 값 모두 검증된 최소 분주량을 의미하지 않습니다.",
+      "ru": "Ни одно из этих значений не является подтверждённой минимальной дозой."
+    },
+    "Provide working volume, allowed error, timing, reagent, temperature and back pressure for configuration-specific testing.": {
+      "es": "Indique el volumen de trabajo, el error permitido, el tiempo, el reactivo, la temperatura y la contrapresión para ensayar la configuración concreta.",
+      "fr": "Précisez le volume de travail, l’erreur admissible, le délai, le réactif, la température et la contre-pression pour les essais de la configuration retenue.",
+      "ko": "구성별 시험을 위해 실제 액량, 허용 오차, 소요 시간, 시약, 온도 및 배압을 제공해 주십시오.",
+      "ru": "Для испытаний конкретной конфигурации укажите рабочий объём, допустимую погрешность, время, реагент, температуру и противодавление."
+    },
+    "The specification footnotes describe the {0}% stroke figures as displacement tests, not direct measurements of reagent dispensing.": {
+      "es": "Las notas de la especificación describen los valores al {0} % de carrera como ensayos de desplazamiento, no como mediciones directas de dispensación de reactivos.",
+      "fr": "Les notes de la fiche décrivent les valeurs à {0} % de course comme des essais de déplacement, et non comme des mesures directes de distribution de réactifs.",
+      "ko": "사양서 주석의 {0}% 행정 수치는 변위 시험 결과이며, 실제 시약 분주량을 직접 측정한 값이 아닙니다.",
+      "ru": "В примечаниях к спецификации значения при {0}% хода относятся к испытаниям перемещения, а не к прямым измерениям дозирования реагентов."
+    },
+    "The specified expected life of five million cycles uses pure water at room temperature and {0} kPa back pressure.": {
+      "es": "La vida útil prevista de cinco millones de ciclos se especifica con agua pura, temperatura ambiente y contrapresión de {0} kPa.",
+      "fr": "La durée de vie prévue de cinq millions de cycles est spécifiée avec de l’eau pure, à température ambiante et sous une contre-pression de {0} kPa.",
+      "ko": "명시된 예상 수명 500만 회는 순수, 상온 및 {0} kPa 배압 조건을 기준으로 합니다.",
+      "ru": "Заявленный ожидаемый ресурс в пять миллионов циклов относится к чистой воде при комнатной температуре и противодавлении {0} kPa."
+    },
+    "Saline or crystallization-prone fluids require a maintenance procedure.": {
+      "es": "Los líquidos salinos o propensos a cristalizar requieren un procedimiento de mantenimiento.",
+      "fr": "Les liquides salins ou sujets à la cristallisation nécessitent une procédure de maintenance.",
+      "ko": "염분이 있거나 결정화되기 쉬운 유체에는 유지보수 절차가 필요합니다.",
+      "ru": "Для солевых и кристаллизующихся жидкостей необходим регламент обслуживания."
+    },
+    "Pressure, seal wash, feedback and driver options follow the formal specification and project configuration.": {
+      "es": "Las opciones de presión, lavado de juntas, realimentación y controlador se definen según la especificación formal y la configuración del proyecto.",
+      "fr": "Les options de pression, de rinçage des joints, de retour d’information et de pilote suivent la spécification officielle et la configuration du projet.",
+      "ko": "압력, 씰 세척, 피드백 및 드라이버 옵션은 공식 사양과 프로젝트 구성에 따라 결정합니다.",
+      "ru": "Давление, промывку уплотнений, обратную связь и драйвер выбирают по официальной спецификации и конфигурации проекта."
+    },
+    "Omics, titration and filling require further carryover, minimum-dose, dripping or process validation.": {
+      "es": "Las aplicaciones ómicas, de titulación y de llenado requieren validar además el arrastre, la dosis mínima, el goteo u otros requisitos del proceso.",
+      "fr": "Les applications omiques, de titrage et de remplissage nécessitent des validations supplémentaires de contamination croisée, de dose minimale, de gouttes résiduelles ou du procédé.",
+      "ko": "오믹스, 적정 및 충전 응용에는 캐리오버, 최소 주입량, 액적 누출 또는 공정 요구 사항의 추가 검증이 필요합니다.",
+      "ru": "Омиксные исследования, титрование и фасовка требуют дополнительной проверки переноса загрязнений, минимальной дозы, каплеобразования и требований процесса."
+    },
+    "Which liquid-handling tasks suit {0}?": {
+      "es": "¿Para qué tareas de manipulación de líquidos es adecuado {0}?",
+      "fr": "Quelles tâches de gestion des liquides conviennent à {0} ?",
+      "ko": "{0}은 어떤 액체 처리 작업에 적합합니까?",
+      "ru": "Для каких задач работы с жидкостями подходит {0}?"
+    },
+    "This configuration targets {0}.": {
+      "es": "Esta configuración está destinada a {0}.",
+      "fr": "Cette configuration est conçue pour {0}.",
+      "ko": "이 구성의 주요 용도는 {0}입니다.",
+      "ru": "Эта конфигурация предназначена для таких задач, как {0}."
+    },
+    "Suitability depends on the fluid, working volume and instrument timing.": {
+      "es": "La idoneidad depende del fluido, el volumen de trabajo y el tiempo de ciclo del instrumento.",
+      "fr": "L’adéquation dépend du fluide, du volume de travail et du temps de cycle de l’instrument.",
+      "ko": "적합성은 유체, 실제 작업 액량 및 장비 사이클 시간에 따라 결정됩니다.",
+      "ru": "Пригодность зависит от жидкости, рабочего объёма и времени цикла прибора."
+    },
+    "Do {0} capacity and volume per step define the minimum dose?": {
+      "es": "¿La capacidad de {0} y el volumen por paso determinan la dosis mínima?",
+      "fr": "La capacité de {0} et le volume par pas définissent-ils la dose minimale ?",
+      "ko": "{0} 용량과 스텝당 액량이 최소 주입량을 의미합니까?",
+      "ru": "Определяют ли объём {0} и объём на шаг минимальную дозу?"
+    },
+    "No.": {
+      "es": "No.",
+      "fr": "Non.",
+      "ko": "아닙니다.",
+      "ru": "Нет."
+    },
+    "The {0} full-stroke steps give a nominal {1} per step.": {
+      "es": "Los {0} pasos por carrera completa equivalen nominalmente a {1} por paso.",
+      "fr": "Les {0} pas sur la course complète correspondent à un volume nominal de {1} par pas.",
+      "ko": "전체 행정 {0}스텝에서 스텝당 명목 액량은 {1}입니다.",
+      "ru": "При {0} шагах на полный ход номинальный объём составляет {1} на шаг."
+    },
+    "This is capacity divided by steps.": {
+      "es": "Es el cociente entre capacidad y número de pasos.",
+      "fr": "Il s’agit de la capacité divisée par le nombre de pas.",
+      "ko": "이는 용량을 스텝 수로 나눈 명목 관계입니다.",
+      "ru": "Это результат деления объёма на число шагов."
+    },
+    "The minimum reliable dose also depends on backlash, valves, bubbles, fluid and tubing and requires testing.": {
+      "es": "La dosis mínima fiable también depende de la holgura, las válvulas, las burbujas, el fluido y los tubos, y debe ensayarse.",
+      "fr": "La dose minimale fiable dépend aussi du jeu, des vannes, des bulles, du fluide et des tuyaux ; elle doit être mesurée.",
+      "ko": "최소 신뢰 분주량은 백래시, 밸브, 기포, 유체 및 배관의 영향도 받으므로 시험이 필요합니다.",
+      "ru": "Минимальная надёжная доза также зависит от люфта, клапанов, пузырьков, жидкости и трубок и требует испытаний."
+    },
+    "Does ≤{0}% accuracy and repeatability apply at every dose?": {
+      "es": "¿La exactitud y repetibilidad ≤{0} % se aplican a todas las dosis?",
+      "fr": "L’exactitude et la répétabilité ≤{0} % s’appliquent-elles à toutes les doses ?",
+      "ko": "정확도와 반복성 ≤{0}%가 모든 주입량에 적용됩니까?",
+      "ru": "Применимы ли точность и повторяемость ≤{0}% к любой дозе?"
+    },
+    "These figures apply at full stroke under the specified conditions.": {
+      "es": "Estos valores corresponden a carrera completa en las condiciones especificadas.",
+      "fr": "Ces valeurs s’appliquent à la course complète dans les conditions spécifiées.",
+      "ko": "해당 수치는 지정 조건의 전체 행정에 적용됩니다.",
+      "ru": "Эти значения относятся к полному ходу в заданных условиях."
+    },
+    "The {0}% stroke figures are ≤{1}% accuracy and ≤{2}% repeatability; the footnotes describe displacement testing, not a guarantee of reagent performance at arbitrary small doses.": {
+      "es": "Al {0} % de carrera, la exactitud es ≤{1} % y la repetibilidad ≤{2} %; las notas indican un ensayo de desplazamiento, no una garantía de dispensación del reactivo a cualquier dosis pequeña.",
+      "fr": "À {0} % de course, l’exactitude est ≤{1} % et la répétabilité ≤{2} % ; les notes décrivent un essai de déplacement, et non une garantie de distribution du réactif à n’importe quelle petite dose.",
+      "ko": "{0}% 행정에서 정확도는 ≤{1}%, 반복성은 ≤{2}%이며, 주석은 변위 시험임을 명시합니다. 임의의 소량에서 실제 시약 분주 성능을 보장하는 값은 아닙니다.",
+      "ru": "При {0}% хода точность составляет ≤{1}%, а повторяемость ≤{2}%; примечания описывают испытание перемещения, а не гарантию дозирования реагента при любых малых объёмах."
+    },
+    "How should PMMA and PEEK heads be selected, and can the piston be customized?": {
+      "es": "¿Cómo elegir entre cabezales de PMMA y PEEK y se puede personalizar el pistón?",
+      "fr": "Comment choisir entre les têtes en PMMA et en PEEK, et le piston est-il personnalisable ?",
+      "ko": "PMMA와 PEEK 헤드는 어떻게 선택하며 피스톤을 맞춤 구성할 수 있습니까?",
+      "ru": "Как выбрать головку из PMMA или PEEK и можно ли изменить материал поршня?"
+    },
+    "Head options include PMMA, PCTG and PEEK.": {
+      "es": "Las opciones de cabezal incluyen PMMA, PCTG y PEEK.",
+      "fr": "Les options de tête comprennent le PMMA, le PCTG et le PEEK.",
+      "ko": "헤드 옵션에는 PMMA, PCTG 및 PEEK가 포함됩니다.",
+      "ru": "Для головки доступны PMMA, PCTG и PEEK."
+    },
+    "Seals and other wetted parts must be considered together.": {
+      "es": "Deben considerarse conjuntamente las juntas y los demás componentes en contacto con el fluido.",
+      "fr": "Les joints et les autres pièces en contact avec le fluide doivent être évalués ensemble.",
+      "ko": "씰과 기타 접액 부품을 함께 검토해야 합니다.",
+      "ru": "Уплотнения и остальные контактирующие с жидкостью детали оценивают совместно."
+    },
+    "Can valves, optical feedback and a controller be integrated?": {
+      "es": "¿Se pueden integrar válvulas, realimentación óptica y controlador?",
+      "fr": "Peut-on intégrer des vannes, un retour optique et un contrôleur ?",
+      "ko": "밸브, 광학 피드백 및 컨트롤러를 통합할 수 있습니까?",
+      "ru": "Можно ли интегрировать клапаны, оптическую обратную связь и контроллер?"
+    },
+    "Motor, home-position optical sensing, valves and controls can be configured for the project.": {
+      "es": "El motor, la detección óptica de posición inicial, las válvulas y el control pueden configurarse para el proyecto.",
+      "fr": "Le moteur, la détection optique de position initiale, les vannes et la commande peuvent être configurés pour le projet.",
+      "ko": "프로젝트에 맞게 모터, 원점 광학 감지, 밸브 및 제어를 구성할 수 있습니다.",
+      "ru": "Двигатель, оптический датчик исходного положения, клапаны и управление подбирают под проект."
+    },
+    "Closed-loop feedback and an ISC{0} integrated driver are listed options; the driver supports RS-{1}, RS-{2} and CAN.": {
+      "es": "Se ofrecen realimentación en lazo cerrado y un controlador integrado ISC{0}; este admite RS-{1}, RS-{2} y CAN.",
+      "fr": "Un retour en boucle fermée et un pilote intégré ISC{0} sont proposés en option ; le pilote prend en charge RS-{1}, RS-{2} et CAN.",
+      "ko": "폐루프 피드백과 ISC{0} 통합 드라이버가 옵션으로 제공되며, 드라이버는 RS-{1}, RS-{2} 및 CAN을 지원합니다.",
+      "ru": "Предусмотрены опции обратной связи с замкнутым контуром и встроенного драйвера ISC{0}; драйвер поддерживает RS-{1}, RS-{2} и CAN."
+    },
+    "Home sensing and motion feedback are distinct functions.": {
+      "es": "La detección de origen y la realimentación del movimiento son funciones distintas.",
+      "fr": "La détection de la position initiale et le retour de mouvement sont des fonctions distinctes.",
+      "ko": "원점 감지와 운동 피드백은 서로 다른 기능입니다.",
+      "ru": "Определение исходного положения и обратная связь по движению — разные функции."
+    },
+    "What is required for saline or crystallization-prone reagents?": {
+      "es": "¿Qué requieren los reactivos salinos o propensos a cristalizar?",
+      "fr": "Quelles précautions prendre avec les réactifs salins ou sujets à la cristallisation ?",
+      "ko": "염분이 있거나 결정화되기 쉬운 시약에는 무엇이 필요합니까?",
+      "ru": "Что требуется при работе с солевыми или кристаллизующимися реагентами?"
+    },
+    "Check all wetted materials against composition, concentration and temperature and plan shutdown flushing and residual-liquid handling.": {
+      "es": "Compruebe todos los materiales en contacto según composición, concentración y temperatura, y planifique el lavado al detener el equipo y la gestión del líquido residual.",
+      "fr": "Vérifiez tous les matériaux en contact selon la composition, la concentration et la température, puis prévoyez le rinçage à l’arrêt et la gestion du liquide résiduel.",
+      "ko": "성분, 농도 및 온도에 따라 모든 접액 재료를 확인하고, 정지 시 세척과 잔류액 처리 절차를 설계하십시오.",
+      "ru": "Проверьте все контактирующие материалы с учётом состава, концентрации и температуры, предусмотрите промывку при остановке и удаление остаточной жидкости."
+    },
+    "Seal wash is a listed EA option.": {
+      "es": "EA dispone de una opción de lavado de juntas.",
+      "fr": "EA propose une option de rinçage des joints.",
+      "ko": "EA에는 씰 세척 옵션이 있습니다.",
+      "ru": "Для EA предусмотрена опция промывки уплотнений."
+    },
+    "The expected five-million-cycle life uses pure water at room temperature and {0} kPa back pressure and is not a universal reagent-life guarantee.": {
+      "es": "La vida prevista de cinco millones de ciclos corresponde a agua pura, temperatura ambiente y contrapresión de {0} kPa; no garantiza esa vida con cualquier reactivo.",
+      "fr": "La durée de vie prévue de cinq millions de cycles concerne l’eau pure à température ambiante sous {0} kPa de contre-pression ; elle n’est pas garantie avec tous les réactifs.",
+      "ko": "예상 수명 500만 회는 순수, 상온 및 {0} kPa 배압 조건을 기준으로 하며 모든 시약에서의 수명을 보장하지는 않습니다.",
+      "ru": "Ожидаемый ресурс в пять миллионов циклов относится к чистой воде при комнатной температуре и противодавлении {0} kPa и не гарантируется для любого реагента."
+    },
+    "What information is needed for application selection and customization?": {
+      "es": "¿Qué información se necesita para seleccionar y personalizar la aplicación?",
+      "fr": "Quelles informations fournir pour le choix de l’application et la personnalisation ?",
+      "ko": "응용 분야 선정 및 맞춤 구성에는 어떤 정보가 필요합니까?",
+      "ru": "Какие данные нужны для подбора и индивидуальной конфигурации?"
+    },
+    "Provide {0} or the target capacity, dose volume, allowed error, timing, fluid composition, temperature, back pressure, mounting space and control requirements.": {
+      "es": "Indique {0} o la capacidad objetivo, dosis, error permitido, tiempo, composición del fluido, temperatura, contrapresión, espacio de montaje y requisitos de control.",
+      "fr": "Indiquez {0} ou la capacité visée, le volume par dose, l’erreur admissible, le délai, la composition du fluide, la température, la contre-pression, l’espace de montage et les besoins de commande.",
+      "ko": "{0} 또는 목표 용량, 단회 주입량, 허용 오차, 소요 시간, 유체 성분, 온도, 배압, 설치 공간 및 제어 요구를 제공해 주십시오.",
+      "ru": "Укажите {0} или целевой объём, размер дозы, допустимую погрешность, время, состав жидкости, температуру, противодавление, монтажное пространство и требования к управлению."
+    },
+    "The page model identifies a display configuration; final materials, ports and assemblies are project-specific.": {
+      "es": "El modelo de la página identifica una configuración de muestra; los materiales, puertos y conjuntos definitivos se definen por proyecto.",
+      "fr": "Le modèle de la page identifie une configuration présentée ; les matériaux, raccordements et ensembles définitifs sont définis pour le projet.",
+      "ko": "페이지의 모델명은 표시 구성을 식별하며, 최종 재료, 포트 및 부품 조합은 프로젝트별로 결정합니다.",
+      "ru": "Модель на странице обозначает представленную конфигурацию; окончательные материалы, порты и узлы определяются проектом."
+    },
+    "{0} Precision Ceramic Piston Pump for Microliter Liquid Dispensing, Reaction-Liquid Addition and Small-Volume Sample Handling, with a PMMA Pump Head": {
+      "es": "Bomba de pistón cerámico de precisión de {0} para dispensación microlítica, adición de líquido de reacción y manejo de pequeñas muestras, con cabezal de PMMA",
+      "fr": "Pompe à piston céramique de précision de {0} pour distribution microlitrique, ajout de liquide réactionnel et traitement de petits échantillons, avec tête en PMMA",
+      "ko": "미량 액체 분주, 반응액 보충 및 소량 샘플 처리를 위한 {0} PMMA 헤드 정밀 세라믹 피스톤 펌프",
+      "ru": "Прецизионный насос с керамическим поршнем объёмом {0} для микролитрового дозирования, добавления реакционной жидкости и работы с малыми образцами, с головкой из PMMA"
+    },
+    "Volume": {
+      "es": "Volumen",
+      "fr": "Volume",
+      "ko": "용량",
+      "ru": "Объём"
+    },
+    "Displayed pump head material": {
+      "es": "Material del cabezal mostrado",
+      "fr": "Matériau de la tête présentée",
+      "ko": "표시 펌프 헤드 재료",
+      "ru": "Материал представленной головки"
+    },
+    "Poly(methyl methacrylate) (PMMA)": {
+      "es": "Polimetilmetacrilato (PMMA)",
+      "fr": "Polyméthacrylate de méthyle (PMMA)",
+      "ko": "폴리메틸메타크릴레이트(PMMA)",
+      "ru": "Полиметилметакрилат (PMMA)"
+    },
+    "Pump head material options": {
+      "es": "Materiales opcionales del cabezal",
+      "fr": "Matériaux de tête en option",
+      "ko": "펌프 헤드 재료 옵션",
+      "ru": "Варианты материала головки"
+    },
+    "PCTG / PMMA / PEEK; Other engineering materials can be assessed for fluid compatibility, structural strength, manufacturing process and project volume.": {
+      "es": "PCTG / PMMA / PEEK; pueden evaluarse otros materiales técnicos según la compatibilidad con el fluido, la resistencia estructural, el proceso de fabricación y el volumen del proyecto.",
+      "fr": "PCTG / PMMA / PEEK ; d’autres matériaux techniques peuvent être évalués selon la compatibilité avec le fluide, la résistance mécanique, la fabrication et le volume du projet.",
+      "ko": "PCTG / PMMA / PEEK; 기타 엔지니어링 재료는 유체 호환성, 구조 강도, 제조 공정 및 프로젝트 물량에 따라 평가할 수 있습니다.",
+      "ru": "PCTG / PMMA / PEEK; другие конструкционные материалы оцениваются по совместимости с жидкостью, прочности, технологии изготовления и объёму проекта."
+    },
+    "Piston material options": {
+      "es": "Materiales opcionales del pistón",
+      "fr": "Matériaux de piston en option",
+      "ko": "피스톤 재료 옵션",
+      "ru": "Варианты материала поршня"
+    },
+    "Zirconia ceramic / alumina ceramic / polyether ether ketone (PEEK) / sapphire; the combination is assessed for fluid properties, service-life requirements, installation space and project needs.": {
+      "es": "Cerámica de zirconia / cerámica de alúmina / poliéter éter cetona (PEEK) / zafiro; la combinación se evalúa según el fluido, la vida útil requerida, el espacio y las necesidades del proyecto.",
+      "fr": "Céramique de zircone / céramique d’alumine / polyétheréthercétone (PEEK) / saphir ; l’association est évaluée selon le fluide, la durée de vie requise, l’espace et les besoins du projet.",
+      "ko": "지르코니아 세라믹 / 알루미나 세라믹 / 폴리에테르에테르케톤(PEEK) / 사파이어; 유체 특성, 수명 요구, 설치 공간 및 프로젝트 요구에 따라 조합을 평가합니다.",
+      "ru": "Циркониевая керамика / алюмооксидная керамика / полиэфирэфиркетон (PEEK) / сапфир; сочетание оценивают по свойствам жидкости, требуемому ресурсу, монтажному пространству и условиям проекта."
+    },
+    "Fluidic interface": {
+      "es": "Interfaz fluídica",
+      "fr": "Raccordement fluidique",
+      "ko": "유체 인터페이스",
+      "ru": "Жидкостный интерфейс"
+    },
+    "Stroke": {
+      "es": "Carrera",
+      "fr": "Course",
+      "ko": "행정",
+      "ru": "Ход"
+    },
+    "Recommended max speed": {
+      "es": "Velocidad máxima recomendada",
+      "fr": "Vitesse maximale recommandée",
+      "ko": "권장 최대 속도",
+      "ru": "Рекомендуемая максимальная скорость"
+    },
+    "Motor step angle": {
+      "es": "Ángulo de paso del motor",
+      "fr": "Angle de pas du moteur",
+      "ko": "모터 스텝각",
+      "ru": "Шаговый угол двигателя"
+    },
+    "Lead": {
+      "es": "Avance del husillo",
+      "fr": "Avance de la vis",
+      "ko": "리드스크루 리드",
+      "ru": "Ход винта за оборот"
+    },
+    "Full-stroke steps": {
+      "es": "Pasos por carrera completa",
+      "fr": "Nombre de pas sur la course complète",
+      "ko": "전체 행정 스텝 수",
+      "ru": "Число шагов на полный ход"
+    },
+    "{0} Step": {
+      "es": "{0} pasos",
+      "fr": "{0} pas",
+      "ko": "{0}스텝",
+      "ru": "{0} шагов"
+    },
+    "Accuracy at {0}% stroke": {
+      "es": "Exactitud al {0} % de carrera",
+      "fr": "Exactitude à {0} % de course",
+      "ko": "{0}% 행정 정확도",
+      "ru": "Точность при {0}% хода"
+    },
+    "Repeatability at {0}% stroke": {
+      "es": "Repetibilidad al {0} % de carrera",
+      "fr": "Répétabilité à {0} % de course",
+      "ko": "{0}% 행정 반복성",
+      "ru": "Повторяемость при {0}% хода"
+    },
+    "Backlash": {
+      "es": "Holgura",
+      "fr": "Jeu mécanique",
+      "ko": "백래시",
+      "ru": "Люфт"
+    },
+    "Designed life": {
+      "es": "Vida útil de diseño",
+      "fr": "Durée de vie de conception",
+      "ko": "설계 수명",
+      "ru": "Расчётный ресурс"
+    },
+    "{0} million cycles": {
+      "es": "{0} millones de ciclos",
+      "fr": "{0} millions de cycles",
+      "ko": "{0}백만 회",
+      "ru": "{0} млн циклов"
+    },
+    "Max fluid pressure": {
+      "es": "Presión máxima del fluido",
+      "fr": "Pression maximale du fluide",
+      "ko": "최대 유체 압력",
+      "ru": "Максимальное давление жидкости"
+    },
+    "{0} is a {1} precision piston pump with a PEEK pump head for {2}.": {
+      "es": "{0} es una bomba de pistón de precisión de {1}, con cabezal de PEEK, para {2}.",
+      "fr": "{0} est une pompe à piston de précision de {1}, avec une tête en PEEK, conçue pour {2}.",
+      "ko": "{0}은 PEEK 헤드를 적용한 {1} 정밀 피스톤 펌프로, {2}에 사용됩니다.",
+      "ru": "{0} — прецизионный поршневой насос объёмом {1} с головкой из PEEK для таких задач, как {2}."
+    },
+    "The displayed PEEK pump head can be replaced by a project-matched PMMA or PCTG option.": {
+      "es": "El cabezal de PEEK mostrado puede sustituirse por una opción de PMMA o PCTG adaptada al proyecto.",
+      "fr": "La tête en PEEK présentée peut être remplacée par une option en PMMA ou PCTG adaptée au projet.",
+      "ko": "표시된 PEEK 헤드는 프로젝트 조건에 맞춰 PMMA 또는 PCTG 옵션으로 변경할 수 있습니다.",
+      "ru": "Представленную головку из PEEK можно заменить вариантом из PMMA или PCTG, подобранным под проект."
+    },
+    "Piston choices include zirconia ceramic, alumina ceramic, PEEK and sapphire.": {
+      "es": "El pistón puede ser de cerámica de zirconia, cerámica de alúmina, PEEK o zafiro.",
+      "fr": "Le piston peut être en céramique de zircone, en céramique d’alumine, en PEEK ou en saphir.",
+      "ko": "피스톤은 지르코니아 세라믹, 알루미나 세라믹, PEEK 또는 사파이어로 구성할 수 있습니다.",
+      "ru": "Для поршня можно выбрать циркониевую или алюмооксидную керамику, PEEK либо сапфир."
+    },
+    "Ports, motor, optical feedback, valves and controls can be configured to the instrument.": {
+      "es": "Los puertos, el motor, la realimentación óptica, las válvulas y el control pueden adaptarse al instrumento.",
+      "fr": "Les raccordements, le moteur, le retour optique, les vannes et la commande peuvent être adaptés à l’instrument.",
+      "ko": "장비 요구에 따라 포트, 모터, 광학 피드백, 밸브 및 제어를 구성할 수 있습니다.",
+      "ru": "Порты, двигатель, оптическую обратную связь, клапаны и управление можно адаптировать к прибору."
+    },
+    "All wetted materials must be assessed against reagent composition and operating conditions.": {
+      "es": "Todos los materiales en contacto con el fluido deben evaluarse según la composición del reactivo y las condiciones de uso.",
+      "fr": "Tous les matériaux en contact avec le fluide doivent être évalués selon la composition du réactif et les conditions d’utilisation.",
+      "ko": "시약 성분과 사용 조건에 따라 모든 접액 재료를 평가해야 합니다.",
+      "ru": "Все контактирующие с жидкостью материалы оценивают с учётом состава реагента и условий эксплуатации."
+    },
+    "Typical applications of the {0} PEEK-head precision piston pump": {
+      "es": "Aplicaciones habituales de la bomba de pistón de precisión de {0} con cabezal de PEEK",
+      "fr": "Applications types de la pompe à piston de précision de {0} avec tête en PEEK",
+      "ko": "{0} PEEK 헤드 정밀 피스톤 펌프의 주요 응용 분야",
+      "ru": "Типовые применения прецизионного поршневого насоса объёмом {0} с головкой из PEEK"
+    },
+    "The displayed PEEK head is a material option for specialty reagents.": {
+      "es": "El cabezal de PEEK mostrado es una opción de material para reactivos especiales.",
+      "fr": "La tête en PEEK présentée constitue une option de matériau pour les réactifs particuliers.",
+      "ko": "표시된 PEEK 헤드는 특수 시약의 재료 요구에 대응하는 옵션입니다.",
+      "ru": "Представленная головка из PEEK является вариантом материала для специальных реагентов."
+    },
+    "It does not establish compatibility of all wetted parts or light protection for the entire fluid path.": {
+      "es": "No garantiza la compatibilidad de todas las piezas en contacto ni la protección frente a la luz de todo el circuito.",
+      "fr": "Elle ne garantit ni la compatibilité de toutes les pièces en contact ni la protection contre la lumière de l’ensemble du circuit.",
+      "ko": "모든 접액 부품의 호환성이나 전체 유로의 차광을 보장하는 것은 아닙니다.",
+      "ru": "Это не подтверждает совместимость всех контактирующих деталей или защиту всего жидкостного тракта от света."
+    },
+    "{0} Precision Piston Pump for Specialty Reagent Dispensing and Small-Volume Reaction Systems, with a PEEK Pump Head for Fluid Paths Requiring Material Compatibility and Light Protection": {
+      "es": "Bomba de pistón de precisión de {0} para reactivos especiales y sistemas de reacción de pequeño volumen, con cabezal de PEEK para circuitos con requisitos de compatibilidad y protección de la luz",
+      "fr": "Pompe à piston de précision de {0} pour réactifs particuliers et systèmes réactionnels de petit volume, avec tête en PEEK pour circuits exigeant compatibilité des matériaux et protection contre la lumière",
+      "ko": "특수 시약 분주와 소용량 반응계를 위한 {0} 정밀 피스톤 펌프, 재료 호환성과 차광 요구 유로용 PEEK 헤드 적용",
+      "ru": "Прецизионный поршневой насос объёмом {0} для специальных реагентов и малообъёмных реакционных систем, с головкой из PEEK для трактов с требованиями к совместимости материалов и защите от света"
+    },
+    "Polyether ether ketone (PEEK)": {
+      "es": "Poliéter éter cetona (PEEK)",
+      "fr": "Polyétheréthercétone (PEEK)",
+      "ko": "폴리에테르에테르케톤(PEEK)",
+      "ru": "Полиэфирэфиркетон (PEEK)"
+    },
+    "Automated sampling and solution preparation": {
+      "es": "Muestreo automatizado y preparación de soluciones",
+      "fr": "Prélèvement automatisé et préparation de solutions",
+      "ko": "자동 샘플링 및 용액 조제",
+      "ru": "Автоматический отбор проб и приготовление растворов"
+    },
+    "The {0} capacity can be configured for small and intermediate sample or reagent volumes, matching the required dose to the available step control.": {
+      "es": "La capacidad de {0} permite trabajar con volúmenes pequeños e intermedios de muestras o reactivos, ajustando la dosis al control por pasos disponible.",
+      "fr": "La capacité de {0} convient à la configuration de petits et moyens volumes d’échantillons ou de réactifs, en adaptant la dose à la commande par pas disponible.",
+      "ko": "{0} 용량은 소량 및 중간 액량의 샘플이나 시약 처리에 맞춰 구성할 수 있으며, 실제 주입량과 스텝 제어를 함께 고려합니다.",
+      "ru": "Объём {0} позволяет подбирать конфигурацию для малых и средних объёмов образцов или реагентов, согласуя дозу с доступным шаговым управлением."
+    },
+    "Metered dispensing pumps for automated sampling and solution preparation": {
+      "es": "Bombas de dispensación dosificada para muestreo automatizado y preparación de soluciones",
+      "fr": "Pompes de distribution dosée pour prélèvement automatisé et préparation de solutions",
+      "ko": "자동 샘플링 및 용액 조제 장비용 정량 분주 펌프",
+      "ru": "Дозирующие насосы для автоматического отбора проб и приготовления растворов"
+    },
+    "Automated sampling and solution-preparation equipment delivers reagents, diluents or buffers to selected containers.": {
+      "es": "Los equipos de muestreo y preparación de soluciones suministran reactivos, diluyentes o tampones a los recipientes seleccionados.",
+      "fr": "Les équipements de prélèvement et de préparation de solutions acheminent réactifs, diluants ou tampons vers les récipients sélectionnés.",
+      "ko": "자동 샘플링 및 용액 조제 장비는 시약, 희석액 또는 완충액을 지정된 용기로 보냅니다.",
+      "ru": "Оборудование автоматического отбора проб и приготовления растворов подаёт реагенты, разбавители или буферы в выбранные ёмкости."
+    },
+    "The dispensing pump must match the dose volume, sequence timing, valves and instrument controls.": {
+      "es": "La bomba debe ajustarse al volumen por dosis, la secuencia, las válvulas y el control del instrumento.",
+      "fr": "La pompe doit être adaptée au volume par dose, à la séquence, aux vannes et à la commande de l’instrument.",
+      "ko": "분주 펌프는 단회 액량, 동작 순서, 밸브 및 장비 제어에 맞아야 합니다.",
+      "ru": "Насос должен соответствовать объёму дозы, времени последовательности, клапанам и управлению прибором."
+    },
+    "{0}: EA supports motor, optical feedback and valve configuration.": {
+      "es": "{0}: EA permite configurar el motor, la realimentación óptica y las válvulas.",
+      "fr": "{0} : EA permet de configurer le moteur, le retour optique et les vannes.",
+      "ko": "{0}: EA는 모터, 광학 피드백 및 밸브 구성을 지원합니다.",
+      "ru": "{0}: EA поддерживает подбор двигателя, оптической обратной связи и клапанов."
+    },
+    "The specification lists an optional ISC{0} integrated driver with RS-{1}, RS-{2} and CAN interfaces; these are driver capabilities, not interfaces built into the bare pump.": {
+      "es": "La especificación incluye un controlador integrado ISC{0} opcional con RS-{1}, RS-{2} y CAN; estas interfaces pertenecen al controlador, no a la bomba sin electrónica de control.",
+      "fr": "La fiche prévoit un pilote intégré ISC{0} en option avec RS-{1}, RS-{2} et CAN ; ces interfaces appartiennent au pilote et ne sont pas intégrées à la pompe seule.",
+      "ko": "사양서에는 RS-{1}, RS-{2} 및 CAN을 제공하는 ISC{0} 통합 드라이버 옵션이 있습니다. 이는 드라이버의 통신 기능이며 펌프 단품에 내장된 인터페이스가 아닙니다.",
+      "ru": "В спецификации указан опциональный встроенный драйвер ISC{0} с RS-{1}, RS-{2} и CAN; эти интерфейсы относятся к драйверу, а не к насосу без управляющей электроники."
+    },
+    "Positioning and cycle time depend on the instrument motion system and fluid path.": {
+      "es": "El posicionamiento y el tiempo de ciclo dependen del mecanismo de movimiento y del circuito fluídico del instrumento.",
+      "fr": "Le positionnement et le temps de cycle dépendent du mécanisme de déplacement et du circuit fluidique de l’instrument.",
+      "ko": "위치 결정과 사이클 시간은 장비의 운동 기구 및 실제 유로에 따라 달라집니다.",
+      "ru": "Позиционирование и время цикла зависят от механики перемещения и жидкостного тракта прибора."
+    },
+    "{0} Precision Ceramic Piston Pump for Sample Dilution, Reagent Dispensing and Small-to-Medium-Volume Reaction-Liquid Handling, with a PMMA Pump Head": {
+      "es": "Bomba de pistón cerámico de precisión de {0} para dilución de muestras, dispensación de reactivos y líquidos de reacción de pequeño a mediano volumen, con cabezal de PMMA",
+      "fr": "Pompe à piston céramique de précision de {0} pour dilution d’échantillons, distribution de réactifs et traitement de petits à moyens volumes réactionnels, avec tête en PMMA",
+      "ko": "샘플 희석, 시약 분주 및 중소량 반응액 처리를 위한 {0} PMMA 헤드 정밀 세라믹 피스톤 펌프",
+      "ru": "Прецизионный насос с керамическим поршнем объёмом {0} для разведения образцов, дозирования реагентов и малых и средних объёмов реакционной жидкости, с головкой из PMMA"
+    },
+    "PCTG / PMMA / PVDF / PPS / PEEK / POM; Other engineering materials can be assessed for the project.": {
+      "es": "PCTG / PMMA / PVDF / PPS / PEEK / POM; otros materiales técnicos pueden evaluarse para el proyecto.",
+      "fr": "PCTG / PMMA / PVDF / PPS / PEEK / POM ; d’autres matériaux techniques peuvent être évalués pour le projet.",
+      "ko": "PCTG / PMMA / PVDF / PPS / PEEK / POM; 기타 엔지니어링 재료는 프로젝트별로 평가할 수 있습니다.",
+      "ru": "PCTG / PMMA / PVDF / PPS / PEEK / POM; другие конструкционные материалы оцениваются для конкретного проекта."
+    },
+    "{0} Precision Piston Pump for Specialty Reagent Dispensing and Small-to-Medium-Volume Fluid Paths, with a PEEK Pump Head for Applications Requiring Material Compatibility and Light Protection": {
+      "es": "Bomba de pistón de precisión de {0} para reactivos especiales y circuitos de pequeño a mediano volumen, con cabezal de PEEK para requisitos de compatibilidad y protección de la luz",
+      "fr": "Pompe à piston de précision de {0} pour réactifs particuliers et circuits de petit à moyen volume, avec tête en PEEK pour les besoins de compatibilité et de protection contre la lumière",
+      "ko": "특수 시약과 중소량 유로를 위한 {0} 정밀 피스톤 펌프, 재료 호환성 및 차광 요구에 맞춘 PEEK 헤드 적용",
+      "ru": "Прецизионный поршневой насос объёмом {0} для специальных реагентов и мало- и среднеобъёмных трактов, с головкой из PEEK для требований к совместимости и защите от света"
+    },
+    "The {0} capacity can be configured for reagent, diluent and buffer handling, with valves coordinating the different dispensing steps.": {
+      "es": "La capacidad de {0} puede configurarse para reactivos, diluyentes y tampones, con válvulas que coordinan los distintos pasos de dispensación.",
+      "fr": "La capacité de {0} peut être configurée pour réactifs, diluants et tampons, avec des vannes coordonnant les différentes étapes de distribution.",
+      "ko": "{0} 용량으로 시약, 희석액 및 완충액 처리를 구성하고, 밸브를 통해 각 분주 단계를 연동할 수 있습니다.",
+      "ru": "Объём {0} позволяет работать с реагентами, разбавителями и буферами, согласуя этапы дозирования с помощью клапанов."
+    },
+    "{0} Precision Ceramic Piston Pump for Routine Reagent Transfer, Sample Dilution and Metered Buffer Dispensing, with a PMMA Pump Head": {
+      "es": "Bomba de pistón cerámico de precisión de {0} para transferencia de reactivos habituales, dilución de muestras y dispensación dosificada de tampones, con cabezal de PMMA",
+      "fr": "Pompe à piston céramique de précision de {0} pour transfert de réactifs courants, dilution d’échantillons et distribution dosée de tampons, avec tête en PMMA",
+      "ko": "일반 시약 이송, 샘플 희석 및 완충액 정량 분주용 {0} PMMA 헤드 정밀 세라믹 피스톤 펌프",
+      "ru": "Прецизионный насос с керамическим поршнем объёмом {0} для переноса обычных реагентов, разведения образцов и дозирования буферов, с головкой из PMMA"
+    },
+    "PCTG / PMMA / PPS / PVDF / PP / PTFE / PEEK / POM / PSU; Other engineering materials can be assessed for the project.": {
+      "es": "PCTG / PMMA / PPS / PVDF / PP / PTFE / PEEK / POM / PSU; otros materiales técnicos pueden evaluarse para el proyecto.",
+      "fr": "PCTG / PMMA / PPS / PVDF / PP / PTFE / PEEK / POM / PSU ; d’autres matériaux techniques peuvent être évalués pour le projet.",
+      "ko": "PCTG / PMMA / PPS / PVDF / PP / PTFE / PEEK / POM / PSU; 기타 엔지니어링 재료는 프로젝트별로 평가할 수 있습니다.",
+      "ru": "PCTG / PMMA / PPS / PVDF / PP / PTFE / PEEK / POM / PSU; другие конструкционные материалы оцениваются для конкретного проекта."
+    },
+    "{0} Precision Piston Pump for Specialty Reagent and Medium-Volume Liquid Transfer, with a PEEK Pump Head for Fluid Paths Requiring Material Compatibility and Long-Term Stability": {
+      "es": "Bomba de pistón de precisión de {0} para reactivos especiales y transferencia de volúmenes intermedios, con cabezal de PEEK para circuitos con requisitos de compatibilidad y estabilidad prolongada",
+      "fr": "Pompe à piston de précision de {0} pour réactifs particuliers et transfert de volumes moyens, avec tête en PEEK pour circuits exigeant compatibilité des matériaux et stabilité durable",
+      "ko": "특수 시약 및 중간 액량 이송용 {0} 정밀 피스톤 펌프, 재료 호환성과 장기 안정성 요구 유로용 PEEK 헤드 적용",
+      "ru": "Прецизионный поршневой насос объёмом {0} для специальных реагентов и средних объёмов жидкости, с головкой из PEEK для трактов с требованиями к совместимости и долговременной стабильности"
+    },
+    "The {0} capacity supports planning milliliter-scale transfers.": {
+      "es": "La capacidad de {0} permite planificar transferencias a escala de mililitros.",
+      "fr": "La capacité de {0} permet de prévoir des transferts à l’échelle du millilitre.",
+      "ko": "{0} 용량은 밀리리터 단위의 정량 이송을 계획하는 데 활용할 수 있습니다.",
+      "ru": "Объём {0} позволяет планировать перенос жидкости в миллилитровом диапазоне."
+    },
+    "Aspiration and dispense cycles should be matched to the total dose and instrument timing.": {
+      "es": "Los ciclos de aspiración y dispensación deben ajustarse a la dosis total y al tiempo de ciclo del instrumento.",
+      "fr": "Les cycles d’aspiration et de distribution doivent être adaptés au volume total et au temps de cycle de l’instrument.",
+      "ko": "흡입·토출 횟수는 총 주입량과 장비 사이클 시간에 맞춰야 합니다.",
+      "ru": "Циклы всасывания и дозирования согласуют с общим объёмом и временем цикла прибора."
+    },
+    "{0} Precision Ceramic Piston Pump for Reagent Transfer, {1}, with a PMMA Pump Head": {
+      "es": "Bomba de pistón cerámico de precisión de {0} para transferencia de reactivos, {1}, con cabezal de PMMA",
+      "fr": "Pompe à piston céramique de précision de {0} pour transfert de réactifs, {1}, avec tête en PMMA",
+      "ko": "시약 이송, {1}용 {0} PMMA 헤드 정밀 세라믹 피스톤 펌프",
+      "ru": "Прецизионный насос с керамическим поршнем объёмом {0} и головкой из PMMA; задачи: перенос реагентов, {1}"
+    },
+    "PCTG / PMMA / PPS / PVDF / POM / PEEK / PTFE / PSU; Other engineering materials can be assessed for the project.": {
+      "es": "PCTG / PMMA / PPS / PVDF / POM / PEEK / PTFE / PSU; otros materiales técnicos pueden evaluarse para el proyecto.",
+      "fr": "PCTG / PMMA / PPS / PVDF / POM / PEEK / PTFE / PSU ; d’autres matériaux techniques peuvent être évalués pour le projet.",
+      "ko": "PCTG / PMMA / PPS / PVDF / POM / PEEK / PTFE / PSU; 기타 엔지니어링 재료는 프로젝트별로 평가할 수 있습니다.",
+      "ru": "PCTG / PMMA / PPS / PVDF / POM / PEEK / PTFE / PSU; другие конструкционные материалы оцениваются для конкретного проекта."
+    },
+    "{0} Precision Piston Pump for Specialty Reagent Transfer and Automated Liquid Handling, with a PEEK Pump Head for Light-Sensitive and Material-Compatible Fluid Paths": {
+      "es": "Bomba de pistón de precisión de {0} para transferencia de reactivos especiales y manipulación automatizada de líquidos, con cabezal de PEEK para circuitos con requisitos de protección de la luz y compatibilidad",
+      "fr": "Pompe à piston de précision de {0} pour transfert de réactifs particuliers et gestion automatisée des liquides, avec tête en PEEK pour circuits sensibles à la lumière et exigeant une compatibilité adaptée",
+      "ko": "특수 시약 이송 및 자동 액체 처리용 {0} 정밀 피스톤 펌프, 차광 및 재료 호환성 요구 유로용 PEEK 헤드 적용",
+      "ru": "Прецизионный поршневой насос объёмом {0} для специальных реагентов и автоматизированной работы с жидкостями, с головкой из PEEK для трактов с требованиями к защите от света и совместимости"
+    },
+    "It supports {0}/{1}-{2} UNF or M{3} ports and {4} / {5} full-stroke steps, depending on the configuration.": {
+      "es": "Admite puertos {0}/{1}-{2} UNF o M{3} y {4} / {5} pasos por carrera completa, según la configuración.",
+      "fr": "Elle accepte des raccordements {0}/{1}-{2} UNF ou M{3} et {4} / {5} pas sur la course complète, selon la configuration.",
+      "ko": "{0}/{1}-{2} UNF 또는 M{3} 포트를 지원하며, 구성에 따라 전체 행정은 {4} / {5}스텝입니다.",
+      "ru": "Предусмотрены порты {0}/{1}-{2} UNF или M{3} и {4} / {5} шагов на полный ход в зависимости от конфигурации."
+    },
+    "Metered washing and priming": {
+      "es": "Lavado dosificado y cebado",
+      "fr": "Lavage dosé et amorçage",
+      "ko": "정량 세척 및 프라이밍",
+      "ru": "Дозированная промывка и заполнение тракта"
+    },
+    "Metered reagent filling": {
+      "es": "Llenado dosificado de reactivos",
+      "fr": "Conditionnement dosé de réactifs",
+      "ko": "시약 정량 충전",
+      "ru": "Дозированная фасовка реагентов"
+    },
+    "The {0} capacity targets larger individual doses.": {
+      "es": "La capacidad de {0} se orienta a dosis individuales mayores.",
+      "fr": "La capacité de {0} vise des doses individuelles plus importantes.",
+      "ko": "{0} 용량은 비교적 큰 단회 액량에 적합하도록 구성합니다.",
+      "ru": "Объём {0} рассчитан на более крупные отдельные дозы."
+    },
+    "Full-stroke options of {0} or {1} steps must be matched to the actual screw lead and stroke.": {
+      "es": "Las opciones de {0} o {1} pasos por carrera completa deben corresponder al avance del husillo y la carrera reales.",
+      "fr": "Les options de {0} ou {1} pas sur la course complète doivent correspondre à l’avance de vis et à la course réelles.",
+      "ko": "전체 행정 {0} 또는 {1}스텝 옵션은 실제 리드스크루 리드와 행정에 맞춰 확인해야 합니다.",
+      "ru": "Варианты с {0} или {1} шагами на полный ход должны соответствовать фактическому ходу винта за оборот и длине хода."
+    },
+    "Metered wash-liquid and priming pumps for analytical instruments": {
+      "es": "Bombas de líquido de lavado dosificado y cebado para instrumentos analíticos",
+      "fr": "Pompes de liquide de lavage dosé et d’amorçage pour instruments d’analyse",
+      "ko": "분석 장비용 정량 세척액 및 유로 프라이밍 펌프",
+      "ru": "Насосы для дозированной подачи промывочной жидкости и заполнения тракта аналитических приборов"
+    },
+    "Startup, fluid changes and maintenance can require defined wash-liquid volumes, liquid replacement and priming.": {
+      "es": "El arranque, el cambio de líquidos y el mantenimiento pueden requerir volúmenes definidos de lavado, sustitución de líquido y cebado.",
+      "fr": "Le démarrage, les changements de liquide et la maintenance peuvent nécessiter des volumes définis de lavage, un remplacement de liquide et un amorçage.",
+      "ko": "기동, 유체 변경 및 유지보수 시 정해진 세척액 공급, 유체 치환과 프라이밍이 필요할 수 있습니다.",
+      "ru": "Запуск, смена жидкости и обслуживание могут требовать заданных объёмов промывки, замещения жидкости и заполнения тракта."
+    },
+    "A wash-liquid dosing or priming pump must coordinate delivery with valves and an air-clearing procedure.": {
+      "es": "La bomba de lavado o cebado debe coordinar el suministro con las válvulas y el procedimiento de eliminación de aire.",
+      "fr": "La pompe de lavage ou d’amorçage doit coordonner la fourniture de liquide avec les vannes et la procédure de purge d’air.",
+      "ko": "세척액 또는 프라이밍 펌프는 밸브 및 공기 제거 절차와 액체 공급을 연동해야 합니다.",
+      "ru": "Насос для промывки или заполнения должен согласовывать подачу с клапанами и процедурой удаления воздуха."
+    },
+    "{0}: Capacity can be selected for the required wash volume, with matched valves, tubing and controls.": {
+      "es": "{0}: la capacidad puede seleccionarse según el volumen de lavado, con válvulas, tubos y control compatibles.",
+      "fr": "{0} : la capacité peut être choisie selon le volume de lavage, avec des vannes, tuyaux et commandes adaptés.",
+      "ko": "{0}: 필요한 세척액 양에 따라 용량을 선택하고 밸브, 배관 및 제어를 구성할 수 있습니다.",
+      "ru": "{0}: объём выбирают по потребности в промывочной жидкости с подбором клапанов, трубок и управления."
+    },
+    "A larger capacity can reduce refills but does not guarantee faster rinsing.": {
+      "es": "Una capacidad mayor puede reducir las recargas, pero no garantiza un lavado más rápido.",
+      "fr": "Une capacité supérieure peut réduire les remplissages, sans garantir un rinçage plus rapide.",
+      "ko": "큰 용량은 재충전 횟수를 줄일 수 있지만 더 빠른 세척을 보장하지는 않습니다.",
+      "ru": "Больший объём может сократить число повторных заполнений, но не гарантирует более быстрой промывки."
+    },
+    "Priming, air clearance and wash carryover require complete-system validation.": {
+      "es": "El cebado, la eliminación de aire y los residuos tras el lavado deben validarse en el sistema completo.",
+      "fr": "L’amorçage, la purge d’air et les résidus après lavage doivent être validés dans le système complet.",
+      "ko": "프라이밍, 공기 제거 및 세척 잔류 수준은 전체 시스템에서 검증해야 합니다.",
+      "ru": "Заполнение, удаление воздуха и остатки после промывки проверяют на полной системе."
+    },
+    "Small-volume reagent filling in diagnostic reagent production": {
+      "es": "Llenado de pequeños volúmenes en la producción de reactivos de diagnóstico",
+      "fr": "Conditionnement de petits volumes dans la production de réactifs de diagnostic",
+      "ko": "진단 시약 생산의 소량 정량 충전",
+      "ru": "Фасовка малых объёмов при производстве диагностических реагентов"
+    },
+    "Diagnostic reagent filling requires defined doses with consistent fill volumes, suitable timing and controlled dripping after dispensing stops.": {
+      "es": "El llenado requiere dosis definidas, uniformidad entre recipientes, un tiempo adecuado y control del goteo al detener la dispensación.",
+      "fr": "Le conditionnement exige des doses définies, des volumes réguliers, un rythme adapté et une maîtrise des gouttes après l’arrêt de la distribution.",
+      "ko": "시약 충전에는 정해진 액량, 충전 일관성, 적절한 작업 시간 및 토출 정지 후 액적 제어가 필요합니다.",
+      "ru": "Фасовка требует заданных и стабильных объёмов, подходящего времени цикла и контроля капель после остановки дозирования."
+    },
+    "Reagent filling pumps must be designed together with valves and filling nozzles.": {
+      "es": "Las bombas de llenado de reactivos deben diseñarse junto con las válvulas y las agujas de llenado.",
+      "fr": "Les pompes de conditionnement de réactifs doivent être conçues avec les vannes et les aiguilles de remplissage.",
+      "ko": "시약 충전 펌프는 밸브 및 충전 노즐과 함께 설계해야 합니다.",
+      "ru": "Насосы для фасовки реагентов проектируют совместно с клапанами и разливочными иглами."
+    },
+    "{0}: This capacity provides a starting point for matching the individual fill volume, with project-specific materials, valves and controls.": {
+      "es": "{0}: esta capacidad es un punto de partida para ajustar el volumen por llenado, con materiales, válvulas y control específicos del proyecto.",
+      "fr": "{0} : cette capacité sert de point de départ pour adapter le volume par remplissage, avec des matériaux, vannes et commandes propres au projet.",
+      "ko": "{0}: 해당 용량을 단회 충전량 선정의 출발점으로 삼아, 프로젝트에 맞게 재료, 밸브 및 제어를 구성할 수 있습니다.",
+      "ru": "{0}: этот объём служит отправной точкой для выбора разовой дозы с подбором материалов, клапанов и управления под проект."
+    },
+    "This is an application-development direction: fill accuracy, speed, dripping and cleanliness require tests with the reagent and filling system.": {
+      "es": "Es una línea de desarrollo de aplicación: la exactitud, velocidad, goteo y limpieza requieren ensayos con el reactivo y el sistema de llenado.",
+      "fr": "Il s’agit d’une piste de développement d’application : exactitude, vitesse, gouttes et propreté nécessitent des essais avec le réactif et le système de remplissage.",
+      "ko": "이는 프로젝트 검증이 필요한 응용 방향이며, 충전 정확도, 속도, 액적 누출 및 청정도는 실제 시약과 충전 시스템으로 시험해야 합니다.",
+      "ru": "Это направление разработки применения: точность, скорость, каплеобразование и чистота требуют испытаний с реагентом и системой фасовки."
+    },
+    "{0} is the nominal capacity; nominal volume per step is approximately {1} / ≈{2}.": {
+      "es": "{0} es la capacidad nominal; el volumen nominal por paso es aproximadamente {1} / ≈{2}.",
+      "fr": "{0} est la capacité nominale ; le volume nominal par pas est d’environ {1} / ≈{2}.",
+      "ko": "{0}은 명목 용량이며, 스텝당 명목 액량은 약 {1} / ≈{2}입니다.",
+      "ru": "Номинальный объём составляет {0}; номинальный объём на шаг — около {1} / ≈{2}."
+    },
+    "The {0} / {1} full-stroke steps give a nominal {2} / ≈{3} per step.": {
+      "es": "Los {0} / {1} pasos por carrera completa equivalen nominalmente a {2} / ≈{3} por paso.",
+      "fr": "Les {0} / {1} pas sur la course complète correspondent à un volume nominal de {2} / ≈{3} par pas.",
+      "ko": "전체 행정 {0} / {1}스텝에서 스텝당 명목 액량은 {2} / ≈{3}입니다.",
+      "ru": "При {0} / {1} шагах на полный ход номинальный объём составляет {2} / ≈{3} на шаг."
+    },
+    "Why are {0} and {1} steps listed for {2}?": {
+      "es": "¿Por qué se indican {0} y {1} pasos para {2}?",
+      "fr": "Pourquoi {0} et {1} pas sont-ils indiqués pour {2} ?",
+      "ko": "{2}에 {0} 및 {1}스텝이 함께 표시되는 이유는 무엇입니까?",
+      "ru": "Почему для {2} указаны {0} и {1} шагов?"
+    },
+    "The basic capacity table lists {0} steps with a {1} mm lead; the model data also lists a {2}-step option with a {3} mm lead.": {
+      "es": "La tabla básica indica {0} pasos con avance de {1} mm; los datos del modelo también incluyen una opción de {2} pasos con avance de {3} mm.",
+      "fr": "Le tableau de base indique {0} pas avec une avance de {1} mm ; les données du modèle incluent aussi une option de {2} pas avec une avance de {3} mm.",
+      "ko": "기본 용량표는 리드 {1} mm에서 {0}스텝을 명시하며, 모델 데이터에는 리드 {3} mm의 {2}스텝 옵션도 포함됩니다.",
+      "ru": "Базовая таблица указывает {0} шагов при ходе винта за оборот {1} mm; данные модели также содержат вариант с {2} шагами и ходом винта {3} mm."
+    },
+    "Confirm the actual stroke, lead and drawing and use the matching values in the controller.": {
+      "es": "Confirme la carrera, el avance y el plano reales, y utilice los valores correspondientes en el controlador.",
+      "fr": "Confirmez la course, l’avance et le plan réels, puis utilisez les valeurs correspondantes dans le contrôleur.",
+      "ko": "실제 행정, 리드 및 도면을 확인하고 컨트롤러에 해당 값을 적용하십시오.",
+      "ru": "Подтвердите фактический ход, параметры винта и чертёж и используйте соответствующие значения в контроллере."
+    },
+    "{0} Precision Ceramic Piston Pump for Buffer Transfer, Diluent Addition and Wash-Fluid Supply, with a PMMA Pump Head": {
+      "es": "Bomba de pistón cerámico de precisión de {0} para transferencia de tampones, adición de diluyente y suministro de lavado, con cabezal de PMMA",
+      "fr": "Pompe à piston céramique de précision de {0} pour transfert de tampons, ajout de diluant et alimentation en liquide de lavage, avec tête en PMMA",
+      "ko": "완충액 이송, 희석액 첨가 및 세척액 보충용 {0} PMMA 헤드 정밀 세라믹 피스톤 펌프",
+      "ru": "Прецизионный насос с керамическим поршнем объёмом {0} для переноса буферов, добавления разбавителя и подачи промывочной жидкости, с головкой из PMMA"
+    },
+    "PCTG / PMMA / PPS / POM / PEEK / PSU; Other engineering materials can be assessed for the project.": {
+      "es": "PCTG / PMMA / PPS / POM / PEEK / PSU; otros materiales técnicos pueden evaluarse para el proyecto.",
+      "fr": "PCTG / PMMA / PPS / POM / PEEK / PSU ; d’autres matériaux techniques peuvent être évalués pour le projet.",
+      "ko": "PCTG / PMMA / PPS / POM / PEEK / PSU; 기타 엔지니어링 재료는 프로젝트별로 평가할 수 있습니다.",
+      "ru": "PCTG / PMMA / PPS / POM / PEEK / PSU; другие конструкционные материалы оцениваются для конкретного проекта."
+    },
+    "{0} / {1} Step": {
+      "es": "{0} / {1} pasos",
+      "fr": "{0} / {1} pas",
+      "ko": "{0} / {1}스텝",
+      "ru": "{0} / {1} шагов"
+    },
+    "{0} Precision Piston Pump for Specialty Reagent, Buffer and Wash-Fluid Transfer, with a PEEK Pump Head for Material-Compatible Fluid Paths and Long-Term Operation": {
+      "es": "Bomba de pistón de precisión de {0} para reactivos especiales, tampones y líquidos de lavado, con cabezal de PEEK para circuitos con requisitos de compatibilidad y funcionamiento prolongado",
+      "fr": "Pompe à piston de précision de {0} pour réactifs particuliers, tampons et liquides de lavage, avec tête en PEEK pour circuits exigeant compatibilité et fonctionnement prolongé",
+      "ko": "특수 시약, 완충액 및 세척액 이송용 {0} 정밀 피스톤 펌프, 장기 운전과 재료 호환성 요구 유로용 PEEK 헤드 적용",
+      "ru": "Прецизионный поршневой насос объёмом {0} для специальных реагентов, буферов и промывочных жидкостей, с головкой из PEEK для совместимых трактов длительной эксплуатации"
+    },
+    "The {0} capacity supports larger metered doses, solution preparation and priming sequences.": {
+      "es": "La capacidad de {0} permite dosis mayores, preparación de soluciones y secuencias de cebado.",
+      "fr": "La capacité de {0} permet des doses plus importantes, la préparation de solutions et des séquences d’amorçage.",
+      "ko": "{0} 용량은 비교적 큰 정량 공급, 용액 조제 및 프라이밍 절차에 활용할 수 있습니다.",
+      "ru": "Объём {0} подходит для более крупных доз, приготовления растворов и последовательностей заполнения тракта."
+    },
+    "Delivery speed depends on the drive and complete fluid path.": {
+      "es": "La velocidad de suministro depende del accionamiento y del circuito completo.",
+      "fr": "La vitesse de fourniture dépend de l’entraînement et du circuit complet.",
+      "ko": "공급 속도는 구동 방식과 전체 유로에 따라 달라집니다.",
+      "ru": "Скорость подачи зависит от привода и полного жидкостного тракта."
+    },
+    "How do the {0} and {1} pumps differ?": {
+      "es": "¿En qué se diferencian las bombas de {0} y {1}?",
+      "fr": "Quelle différence entre les pompes de {0} et de {1} ?",
+      "ko": "{0} 및 {1} 펌프는 어떻게 다릅니까?",
+      "ru": "Чем различаются насосы объёмом {0} и {1}?"
+    },
+    "The basic {0} configuration uses {1} steps and {2} uses {3}; both provide a nominal {4} per step.": {
+      "es": "La configuración básica de {0} utiliza {1} pasos y la de {2}, {3}; ambas ofrecen un volumen nominal de {4} por paso.",
+      "fr": "La configuration de base de {0} utilise {1} pas et celle de {2}, {3} ; toutes deux donnent un volume nominal de {4} par pas.",
+      "ko": "기본 구성에서 {0}는 {1}스텝, {2}는 {3}스텝이며, 두 구성의 스텝당 명목 액량은 모두 {4}입니다.",
+      "ru": "Базовая конфигурация {0} использует {1} шагов, а {2} — {3}; обе дают номинальный объём {4} на шаг."
+    },
+    "The {0} version increases single-stroke capacity and may reduce refills, but does not guarantee finer or faster dispensing.": {
+      "es": "La versión de {0} aumenta la capacidad por carrera y puede reducir recargas, pero no garantiza una dispensación más fina ni más rápida.",
+      "fr": "La version de {0} augmente la capacité par course et peut réduire les remplissages, sans garantir une distribution plus fine ni plus rapide.",
+      "ko": "{0} 모델은 단회 용량을 늘려 재충전 횟수를 줄일 수 있지만, 더 세밀하거나 빠른 분주를 보장하지는 않습니다.",
+      "ru": "Версия {0} увеличивает объём одного хода и может сократить повторные заполнения, но не гарантирует более тонкого или быстрого дозирования."
+    },
+    "Check stroke, mounting space and valve timing.": {
+      "es": "Compruebe la carrera, el espacio de montaje y la secuencia de válvulas.",
+      "fr": "Vérifiez la course, l’espace de montage et la séquence des vannes.",
+      "ko": "행정, 설치 공간 및 밸브 동작 시간을 확인하십시오.",
+      "ru": "Проверьте ход, монтажное пространство и время работы клапанов."
+    },
+    "{0} Precision Ceramic Piston Pump for Wash-Fluid Supply, Buffer Transfer and Line Priming, with a PMMA Pump Head": {
+      "es": "Bomba de pistón cerámico de precisión de {0} para suministro de lavado, transferencia de tampones y cebado de líneas, con cabezal de PMMA",
+      "fr": "Pompe à piston céramique de précision de {0} pour alimentation en liquide de lavage, transfert de tampons et amorçage des conduites, avec tête en PMMA",
+      "ko": "세척액 공급, 완충액 이송 및 유로 프라이밍용 {0} PMMA 헤드 정밀 세라믹 피스톤 펌프",
+      "ru": "Прецизионный насос с керамическим поршнем объёмом {0} для подачи промывочной жидкости, переноса буферов и заполнения линий, с головкой из PMMA"
+    },
+    "PCTG / PMMA / PPS / PEEK / PVDF / POM / PSU / PC; Other engineering materials can be assessed for the project.": {
+      "es": "PCTG / PMMA / PPS / PEEK / PVDF / POM / PSU / PC; otros materiales técnicos pueden evaluarse para el proyecto.",
+      "fr": "PCTG / PMMA / PPS / PEEK / PVDF / POM / PSU / PC ; d’autres matériaux techniques peuvent être évalués pour le projet.",
+      "ko": "PCTG / PMMA / PPS / PEEK / PVDF / POM / PSU / PC; 기타 엔지니어링 재료는 프로젝트별로 평가할 수 있습니다.",
+      "ru": "PCTG / PMMA / PPS / PEEK / PVDF / POM / PSU / PC; другие конструкционные материалы оцениваются для конкретного проекта."
+    },
+    "{0} Precision Piston Pump for Specialty Wash Fluids, Buffers and Medium-to-Large-Volume Supply, with a PEEK Pump Head for Fluid Paths Requiring Material Compatibility and Stability": {
+      "es": "Bomba de pistón de precisión de {0} para líquidos de lavado especiales, tampones y suministro de volúmenes medianos a grandes, con cabezal de PEEK para requisitos de compatibilidad y estabilidad",
+      "fr": "Pompe à piston de précision de {0} pour liquides de lavage particuliers, tampons et volumes moyens à importants, avec tête en PEEK pour les besoins de compatibilité et de stabilité",
+      "ko": "특수 세척액, 완충액 및 중대량 공급용 {0} 정밀 피스톤 펌프, 재료 호환성 및 안정성 요구에 맞춘 PEEK 헤드 적용",
+      "ru": "Прецизионный поршневой насос объёмом {0} для специальных промывочных жидкостей, буферов и средних и крупных доз, с головкой из PEEK для требований к совместимости и стабильности"
+    },
+    "Metered process-liquid addition": {
+      "es": "Adición dosificada de líquido de proceso",
+      "fr": "Ajout dosé de liquide de procédé",
+      "ko": "공정액 정량 첨가",
+      "ru": "Дозированное добавление технологической жидкости"
+    },
+    "The {0} capacity can reduce refills during larger transfers.": {
+      "es": "La capacidad de {0} puede reducir las recargas durante transferencias de mayor volumen.",
+      "fr": "La capacité de {0} peut réduire les remplissages lors des transferts de volumes importants.",
+      "ko": "{0} 용량은 큰 액량을 이송할 때 재충전 횟수를 줄일 수 있습니다.",
+      "ru": "Объём {0} может уменьшить число повторных заполнений при переносе больших объёмов."
+    },
+    "Its nominal {0} per step matches the {1} configuration; greater capacity does not imply finer dispensing.": {
+      "es": "Su volumen nominal de {0} por paso coincide con la configuración de {1}; una capacidad mayor no implica una dispensación más fina.",
+      "fr": "Son volume nominal de {0} par pas correspond à la configuration de {1} ; une capacité supérieure n’implique pas une distribution plus fine.",
+      "ko": "스텝당 명목 액량 {0}은 {1} 구성과 같으므로, 용량 증가가 더 세밀한 분주를 의미하지는 않습니다.",
+      "ru": "Номинальные {0} на шаг соответствуют конфигурации {1}; больший объём не означает более тонкого дозирования."
+    },
+    "Metered process-liquid addition in industrial automation": {
+      "es": "Adición dosificada de líquidos de proceso en automatización industrial",
+      "fr": "Ajout dosé de liquides de procédé en automatisation industrielle",
+      "ko": "산업 자동화의 공정액 정량 첨가",
+      "ru": "Дозированное добавление технологических жидкостей в промышленной автоматизации"
+    },
+    "Some automated equipment adds defined process-liquid, diluent or maintenance-liquid volumes.": {
+      "es": "Algunos equipos automatizados añaden volúmenes definidos de líquido de proceso, diluyente o líquido de mantenimiento.",
+      "fr": "Certains équipements automatisés ajoutent des volumes définis de liquide de procédé, de diluant ou de liquide de maintenance.",
+      "ko": "일부 자동화 장비는 정해진 양의 공정액, 희석액 또는 유지보수용 액체를 첨가합니다.",
+      "ru": "Некоторое автоматизированное оборудование подаёт заданные объёмы технологических жидкостей, разбавителей или обслуживающих растворов."
+    },
+    "A process-liquid dosing pump must synchronize with the equipment and meet fluid, pressure and dose-volume requirements.": {
+      "es": "La bomba debe sincronizarse con el equipo y cumplir los requisitos de fluido, presión y volumen por dosis.",
+      "fr": "La pompe doit être synchronisée avec l’équipement et répondre aux exigences de fluide, de pression et de volume par dose.",
+      "ko": "공정액 정량 펌프는 장비 동작과 연동하면서 유체, 압력 및 단회 주입량 요구를 충족해야 합니다.",
+      "ru": "Насос должен работать синхронно с оборудованием и соответствовать требованиям по жидкости, давлению и объёму дозы."
+    },
+    "{0}: Pump head, piston, valves and controls can be configured for the specific liquid and dosing sequence.": {
+      "es": "{0}: el cabezal, pistón, válvulas y control pueden configurarse para el líquido y la secuencia de dosificación específicos.",
+      "fr": "{0} : la tête, le piston, les vannes et la commande peuvent être configurés pour le liquide et la séquence de dosage spécifiques.",
+      "ko": "{0}: 실제 유체와 주입 절차에 맞춰 헤드, 피스톤, 밸브 및 제어를 구성할 수 있습니다.",
+      "ru": "{0}: головку, поршень, клапаны и управление подбирают для конкретной жидкости и последовательности дозирования."
+    },
+    "Viscosity, particles, temperature and duty must be validated per project; this does not establish high-pressure or universal-fluid capability.": {
+      "es": "La viscosidad, partículas, temperatura y carga de trabajo deben validarse por proyecto; esto no implica capacidad de alta presión ni compatibilidad con cualquier fluido.",
+      "fr": "La viscosité, les particules, la température et la charge de fonctionnement doivent être validées par projet ; cela ne démontre ni une aptitude à la haute pression ni une compatibilité universelle.",
+      "ko": "점도, 입자, 온도 및 운전 부하는 프로젝트별로 검증해야 하며, 고압이나 모든 유체의 이송 능력을 의미하지는 않습니다.",
+      "ru": "Вязкость, частицы, температуру и нагрузку проверяют для каждого проекта; это не подтверждает работу при высоком давлении или с любой жидкостью."
+    },
+    "{0} Precision Ceramic Piston Pump for High-Volume Wash-Fluid Transfer, System Flushing and Line Priming, with a PMMA Pump Head": {
+      "es": "Bomba de pistón cerámico de precisión de {0} para grandes volúmenes de lavado, enjuague del sistema y cebado de líneas, con cabezal de PMMA",
+      "fr": "Pompe à piston céramique de précision de {0} pour grands volumes de lavage, rinçage du système et amorçage des conduites, avec tête en PMMA",
+      "ko": "대용량 세척액 이송, 시스템 세척 및 유로 프라이밍용 {0} PMMA 헤드 정밀 세라믹 피스톤 펌프",
+      "ru": "Прецизионный насос с керамическим поршнем объёмом {0} для больших объёмов промывочной жидкости, промывки системы и заполнения линий, с головкой из PMMA"
+    },
+    "PTFE / PEI / PSU / PMMA / PPS / PVDF / POM / PEEK; Other engineering materials can be assessed for the project.": {
+      "es": "PTFE / PEI / PSU / PMMA / PPS / PVDF / POM / PEEK; otros materiales técnicos pueden evaluarse para el proyecto.",
+      "fr": "PTFE / PEI / PSU / PMMA / PPS / PVDF / POM / PEEK ; d’autres matériaux techniques peuvent être évalués pour le projet.",
+      "ko": "PTFE / PEI / PSU / PMMA / PPS / PVDF / POM / PEEK; 기타 엔지니어링 재료는 프로젝트별로 평가할 수 있습니다.",
+      "ru": "PTFE / PEI / PSU / PMMA / PPS / PVDF / POM / PEEK; другие конструкционные материалы оцениваются для конкретного проекта."
+    },
+    "{0} Precision Piston Pump for High-Volume Specialty Liquid Transfer, System Flushing and Fluid-Line Maintenance, with a PEEK Pump Head for Material-Compatible Fluid Paths and Long-Term Operation": {
+      "es": "Bomba de pistón de precisión de {0} para grandes volúmenes de líquidos especiales, enjuague y mantenimiento de líneas, con cabezal de PEEK para circuitos compatibles y funcionamiento prolongado",
+      "fr": "Pompe à piston de précision de {0} pour grands volumes de liquides particuliers, rinçage et maintenance des conduites, avec tête en PEEK pour circuits compatibles et fonctionnement prolongé",
+      "ko": "대용량 특수 액체 이송, 시스템 세척 및 유로 유지보수용 {0} 정밀 피스톤 펌프, 재료 호환성과 장기 운전 요구에 맞춘 PEEK 헤드 적용",
+      "ru": "Прецизионный поршневой насос объёмом {0} для больших объёмов специальных жидкостей, промывки и обслуживания линий, с головкой из PEEK для совместимых трактов длительной эксплуатации"
+    },
+    "{0} Miniature Precision Ceramic Piston Pump for {1}, with a PMMA Pump Head": {
+      "es": "Bomba de pistón cerámico de precisión en miniatura de {0} para {1}, con cabezal de PMMA",
+      "fr": "Pompe à piston céramique de précision miniature de {0} pour {1}, avec tête en PMMA",
+      "ko": "{1}용 {0} PMMA 헤드 소형 정밀 세라믹 피스톤 펌프",
+      "ru": "Миниатюрный прецизионный насос с керамическим поршнем объёмом {0} и головкой из PMMA; задачи: {1}"
+    },
+    "{0} is a {1} miniature precision piston pump with a PMMA head for {2}.": {
+      "es": "{0} es una bomba de pistón de precisión en miniatura de {1}, con cabezal de PMMA, para {2}.",
+      "fr": "{0} est une pompe à piston de précision miniature de {1}, avec tête en PMMA, conçue pour {2}.",
+      "ko": "{0}은 PMMA 헤드를 적용한 {1} 소형 정밀 피스톤 펌프로, {2}에 사용됩니다.",
+      "ru": "{0} — миниатюрный прецизионный поршневой насос объёмом {1} с головкой из PMMA для таких задач, как {2}."
+    },
+    "Designed for integration into small automated instruments and sampling mechanisms, it supports {0}/{1}-{2} UNF or M{3} ports and {4} full-stroke steps.": {
+      "es": "Está diseñada para integrarse en instrumentos automatizados pequeños y mecanismos de muestreo, con puertos {0}/{1}-{2} UNF o M{3} y {4} pasos por carrera completa.",
+      "fr": "Elle est conçue pour l’intégration dans de petits instruments automatisés et mécanismes de prélèvement, avec des raccordements {0}/{1}-{2} UNF ou M{3} et {4} pas sur la course complète.",
+      "ko": "소형 자동화 장비 및 샘플링 기구의 유로 통합을 위한 제품으로, {0}/{1}-{2} UNF 또는 M{3} 포트와 전체 행정 {4}스텝을 지원합니다.",
+      "ru": "Насос предназначен для интеграции в небольшие автоматизированные приборы и механизмы отбора проб; предусмотрены порты {0}/{1}-{2} UNF или M{3} и {4} шагов на полный ход."
+    },
+    "Full-stroke repeatability is ≤{0}% under the specified conditions.": {
+      "es": "La repetibilidad a carrera completa es ≤{0} % en las condiciones especificadas.",
+      "fr": "La répétabilité sur la course complète est ≤{0} % dans les conditions spécifiées.",
+      "ko": "지정 조건에서 전체 행정 반복성은 ≤{0}%입니다.",
+      "ru": "Повторяемость на полном ходе составляет ≤{0}% в заданных условиях."
+    },
+    "SM head options include PMMA, PSU, POM and PEEK; piston options include ceramic, stainless steel and PEEK.": {
+      "es": "Los cabezales SM pueden ser de PMMA, PSU, POM o PEEK; los pistones, de cerámica, acero inoxidable o PEEK.",
+      "fr": "Les têtes SM peuvent être en PMMA, PSU, POM ou PEEK ; les pistons, en céramique, acier inoxydable ou PEEK.",
+      "ko": "SM 헤드는 PMMA, PSU, POM 또는 PEEK, 피스톤은 세라믹, 스테인리스강 또는 PEEK를 선택할 수 있습니다.",
+      "ru": "Для головок SM доступны PMMA, PSU, POM и PEEK; для поршней — керамика, нержавеющая сталь и PEEK."
+    },
+    "Optical sensors, valves, probes, tubing and a controller can be matched to the project.": {
+      "es": "Los sensores ópticos, válvulas, sondas, tubos y controlador pueden seleccionarse para el proyecto.",
+      "fr": "Les capteurs optiques, vannes, aiguilles, tuyaux et contrôleur peuvent être choisis pour le projet.",
+      "ko": "프로젝트에 맞춰 광센서, 밸브, 프로브, 배관 및 컨트롤러를 선택할 수 있습니다.",
+      "ru": "Оптические датчики, клапаны, зонды, трубки и контроллер подбирают под проект."
+    },
+    "Materials and mounting are selected for the fluid and instrument.": {
+      "es": "Los materiales y el montaje se eligen según el fluido y el instrumento.",
+      "fr": "Les matériaux et le montage sont choisis selon le fluide et l’instrument.",
+      "ko": "유체와 장비 요구에 따라 재료 및 설치 방식을 결정합니다.",
+      "ru": "Материалы и способ монтажа выбирают с учётом жидкости и прибора."
+    },
+    "Analyzer reagent dispensing": {
+      "es": "Dispensación de reactivos en analizadores",
+      "fr": "Distribution de réactifs dans les analyseurs",
+      "ko": "분석기 시약 주입",
+      "ru": "Дозирование реагентов в анализаторах"
+    },
+    "Metered reaction-liquid addition": {
+      "es": "Adición dosificada de líquido de reacción",
+      "fr": "Ajout dosé de liquide réactionnel",
+      "ko": "반응액 정량 첨가",
+      "ru": "Дозированное добавление реакционной жидкости"
+    },
+    "Water-analysis reagent metering": {
+      "es": "Dosificación de reactivos para análisis de agua",
+      "fr": "Dosage de réactifs pour l’analyse de l’eau",
+      "ko": "수질 분석 시약 계량",
+      "ru": "Дозирование реагентов для анализа воды"
+    },
+    "{0} applications and selection requirements": {
+      "es": "Aplicaciones y requisitos de selección de {0}",
+      "fr": "Applications et critères de sélection de {0}",
+      "ko": "{0}의 응용 분야 및 선정 요구 사항",
+      "ru": "Применение и требования к подбору {0}"
+    },
+    "SM miniature piston pumps can be configured for clinical chemistry, immunoassay, laboratory automation, sample preparation, life science instruments and water or environmental analysis.": {
+      "es": "Las bombas de pistón SM en miniatura pueden configurarse para química clínica, inmunoensayo, automatización de laboratorio, preparación de muestras, ciencias de la vida y análisis de agua o ambiental.",
+      "fr": "Les pompes à piston miniatures SM peuvent être configurées pour la chimie clinique, l’immunoanalyse, l’automatisation de laboratoire, la préparation d’échantillons, les sciences de la vie et l’analyse de l’eau ou de l’environnement.",
+      "ko": "SM 소형 피스톤 펌프는 임상화학, 면역분석, 실험실 자동화, 샘플 전처리, 생명과학 장비, 수질 및 환경 분석용 유로로 구성할 수 있습니다.",
+      "ru": "Миниатюрные поршневые насосы SM можно конфигурировать для клинической химии, иммуноанализа, автоматизации лабораторий, пробоподготовки, наук о жизни, анализа воды и окружающей среды."
+    },
+    "Depending on the fluidic task, selection may focus on a reagent dispensing pump, sampling pump, sample dilution pump, reaction-liquid dispensing pump, buffer dosing pump or standard-addition pump.": {
+      "es": "Según la tarea, puede seleccionarse como bomba de reactivos, de muestreo, de dilución de muestras, de líquido de reacción, de tampón o de adición de patrones.",
+      "fr": "Selon la tâche, elle peut être choisie comme pompe à réactifs, de prélèvement, de dilution d’échantillons, de liquide réactionnel, de tampon ou d’ajout d’étalons.",
+      "ko": "유로 기능에 따라 시약 주입 펌프, 자동 샘플링 펌프, 샘플 희석 펌프, 반응액 분주 펌프, 완충액 첨가 펌프 또는 표준액 첨가 펌프로 선정할 수 있습니다.",
+      "ru": "В зависимости от задачи насос подбирают для реагентов, отбора проб, разведения образцов, реакционных жидкостей, буферов или добавления стандартных растворов."
+    },
+    "The {0} capacity supports planning small-volume dosing; neither capacity nor nominal volume per step defines the minimum reliable dose.": {
+      "es": "La capacidad de {0} permite planificar dosis pequeñas; ni la capacidad ni el volumen nominal por paso determinan la dosis mínima fiable.",
+      "fr": "La capacité de {0} permet de planifier de petites doses ; ni la capacité ni le volume nominal par pas ne définissent la dose minimale fiable.",
+      "ko": "{0} 용량은 소량 주입 설계에 활용할 수 있지만, 명목 용량이나 스텝당 명목 액량이 최소 신뢰 분주량을 의미하지는 않습니다.",
+      "ru": "Объём {0} позволяет планировать малые дозы; ни номинальный объём, ни объём на шаг не определяют минимальную надёжную дозу."
+    },
+    "The displayed configuration uses a PMMA head and ceramic piston.": {
+      "es": "La configuración mostrada utiliza un cabezal de PMMA y un pistón cerámico.",
+      "fr": "La configuration présentée utilise une tête en PMMA et un piston céramique.",
+      "ko": "표시 구성은 PMMA 헤드와 세라믹 피스톤을 사용합니다.",
+      "ru": "В представленной конфигурации используются головка из PMMA и керамический поршень."
+    },
+    "All wetted materials must be checked against the actual fluid.": {
+      "es": "Todos los materiales en contacto deben comprobarse con el fluido real.",
+      "fr": "Tous les matériaux en contact doivent être vérifiés avec le fluide réel.",
+      "ko": "실제 유체로 모든 접액 재료를 확인해야 합니다.",
+      "ru": "Все контактирующие с жидкостью материалы проверяют с фактической средой."
+    },
+    "Clinical chemistry and immunoassay: reagent dispensing pump": {
+      "es": "Química clínica e inmunoensayo: bomba de dispensación de reactivos",
+      "fr": "Chimie clinique et immunoanalyse : pompe de distribution de réactifs",
+      "ko": "임상화학 및 면역분석: 시약 주입 펌프",
+      "ru": "Клиническая химия и иммуноанализ: насос для дозирования реагентов"
+    },
+    "Analyzers repeatedly add programmed reagent doses to reaction units.": {
+      "es": "Los analizadores añaden repetidamente las dosis programadas a las unidades de reacción.",
+      "fr": "Les analyseurs ajoutent de manière répétée les doses programmées aux unités réactionnelles.",
+      "ko": "분석기는 설정된 시약량을 반응부에 반복 첨가합니다.",
+      "ru": "Анализаторы многократно подают заданные дозы реагентов в реакционные блоки."
+    },
+    "Selection depends on consistency at the working dose and coordination between the pump, selector valve and dispensing probe.": {
+      "es": "La selección depende de la uniformidad a la dosis de trabajo y de la coordinación entre bomba, válvula selectora y sonda de dispensación.",
+      "fr": "Le choix dépend de la régularité à la dose de travail et de la coordination entre pompe, vanne de sélection et aiguille de distribution.",
+      "ko": "실제 작업 액량에서의 일관성과 펌프, 선택 밸브 및 분주 프로브의 연동을 기준으로 선정합니다.",
+      "ru": "При подборе учитывают стабильность рабочей дозы и согласованность насоса, переключающего клапана и дозирующего зонда."
+    },
+    "{0}: Aspiration and dispense strokes can be coordinated with reagent-routing valves; wetted materials are selected against reagent composition, temperature and cleaning conditions.": {
+      "es": "{0}: las carreras de aspiración y dispensación pueden coordinarse con las válvulas de reactivos; los materiales se eligen según composición, temperatura y limpieza.",
+      "fr": "{0} : les courses d’aspiration et de distribution peuvent être coordonnées avec les vannes de réactifs ; les matériaux sont choisis selon la composition, la température et le nettoyage.",
+      "ko": "{0}: 시약 선택 밸브와 흡입·토출 행정을 연동하고, 시약 성분, 온도 및 세척 조건에 맞춰 접액 재료를 선택할 수 있습니다.",
+      "ru": "{0}: ходы всасывания и дозирования согласуют с клапанами реагентов; материалы выбирают по составу, температуре и условиям очистки."
+    },
+    "SM supports integration with automated sampling mechanisms; {0} full-stroke steps provide position control for aspiration and dispensing.": {
+      "es": "SM permite integrarse con mecanismos de muestreo automático; {0} pasos por carrera completa proporcionan control de posición para aspiración y dispensación.",
+      "fr": "SM permet l’intégration avec des mécanismes de prélèvement automatique ; {0} pas sur la course complète assurent la commande de position pour l’aspiration et la distribution.",
+      "ko": "SM은 자동 샘플링 기구와 통합할 수 있으며, 전체 행정 {0}스텝으로 흡입·토출 위치를 제어합니다.",
+      "ru": "SM поддерживает интеграцию с механизмами автоматического отбора проб; {0} шагов на полный ход обеспечивают управление положением при всасывании и дозировании."
+    },
+    "Full-stroke repeatability does not establish performance at smaller doses.": {
+      "es": "La repetibilidad a carrera completa no determina las prestaciones a dosis menores.",
+      "fr": "La répétabilité à pleine course ne définit pas les performances aux doses plus faibles.",
+      "ko": "전체 행정 반복성이 더 작은 액량에서의 성능을 의미하지는 않습니다.",
+      "ru": "Повторяемость на полном ходе не определяет характеристики при меньших дозах."
+    },
+    "Laboratory automation: sampling and sample dilution pump": {
+      "es": "Automatización de laboratorio: bomba de muestreo y dilución",
+      "fr": "Automatisation de laboratoire : pompe de prélèvement et de dilution d’échantillons",
+      "ko": "실험실 자동화: 샘플링 및 샘플 희석 펌프",
+      "ru": "Автоматизация лабораторий: насос для отбора и разведения образцов"
+    },
+    "Automated sampling and sample preparation require separate control of sample and diluent volumes, together with management of carryover, bubbles and valve timing.": {
+      "es": "El muestreo y la preparación automatizados requieren controlar por separado muestra y diluyente, además de gestionar el arrastre, las burbujas y la secuencia de válvulas.",
+      "fr": "Le prélèvement et la préparation automatisés exigent un contrôle séparé de l’échantillon et du diluant, ainsi que la gestion de la contamination croisée, des bulles et de la séquence des vannes.",
+      "ko": "자동 샘플링과 전처리는 샘플 및 희석액의 양을 개별 제어하면서 캐리오버, 기포 및 밸브 전환 시간을 관리해야 합니다.",
+      "ru": "Автоматический отбор и пробоподготовка требуют раздельного контроля образца и разбавителя, а также управления переносом загрязнений, пузырьками и временем переключения клапанов."
+    },
+    "{0}: The pump can be configured with probes, tubing and valves for sampling and dispensing.": {
+      "es": "{0}: la bomba puede configurarse con sondas, tubos y válvulas para muestreo y dispensación.",
+      "fr": "{0} : la pompe peut être configurée avec des aiguilles, tuyaux et vannes pour le prélèvement et la distribution.",
+      "ko": "{0}: 샘플링과 분주를 위해 프로브, 배관 및 밸브와 함께 펌프를 구성할 수 있습니다.",
+      "ru": "{0}: насос можно комплектовать зондами, трубками и клапанами для отбора проб и дозирования."
+    },
+    "Dilution-ratio performance also requires validation of sample volume, diluent volume and mixing.": {
+      "es": "La proporción de dilución también requiere validar el volumen de muestra, el de diluyente y la mezcla.",
+      "fr": "Le rapport de dilution nécessite aussi la validation du volume d’échantillon, du volume de diluant et du mélange.",
+      "ko": "희석 비율 성능은 샘플량, 희석액량 및 혼합 방식도 함께 검증해야 합니다.",
+      "ru": "Коэффициент разведения также требует проверки объёма образца, объёма разбавителя и смешивания."
+    },
+    "Life science instruments: metered reaction-liquid dispensing pump": {
+      "es": "Instrumentos de ciencias de la vida: bomba de líquido de reacción dosificado",
+      "fr": "Instruments des sciences de la vie : pompe de distribution dosée de liquide réactionnel",
+      "ko": "생명과학 장비: 반응액 정량 분주 펌프",
+      "ru": "Приборы наук о жизни: насос для дозирования реакционной жидкости"
+    },
+    "Small-volume reaction systems add different liquids in sequence.": {
+      "es": "Los sistemas de reacción de pequeño volumen añaden diferentes líquidos en secuencia.",
+      "fr": "Les systèmes réactionnels de petit volume ajoutent différents liquides en séquence.",
+      "ko": "소용량 반응 시스템은 서로 다른 액체를 순차적으로 첨가합니다.",
+      "ru": "Малообъёмные реакционные системы последовательно добавляют разные жидкости."
+    },
+    "Important requirements include dose error, residual droplets, carryover and space for valves and detection components.": {
+      "es": "Se deben considerar el error por dosis, las gotas residuales, el arrastre y el espacio para válvulas y detectores.",
+      "fr": "Il faut considérer l’erreur par dose, les gouttes résiduelles, la contamination croisée et l’espace pour les vannes et les détecteurs.",
+      "ko": "단회 주입 오차, 잔류 액적, 캐리오버 및 밸브·검출부 설치 공간을 고려해야 합니다.",
+      "ru": "Учитывают погрешность дозы, остаточные капли, перенос загрязнений и пространство для клапанов и детекторов."
+    },
+    "{0}: Capacity, step count and control timing support staged dosing, with valves and outlet geometry matched to the instrument.": {
+      "es": "{0}: la capacidad, los pasos y la secuencia de control permiten dosificar por etapas, adaptando las válvulas y la geometría de salida al instrumento.",
+      "fr": "{0} : la capacité, le nombre de pas et la séquence de commande permettent le dosage par étapes, avec des vannes et une géométrie de sortie adaptées à l’instrument.",
+      "ko": "{0}: 용량, 스텝 수 및 제어 타이밍으로 단계별 주입을 계획하고, 밸브와 토출구 구조를 장비에 맞출 수 있습니다.",
+      "ru": "{0}: объём, число шагов и время управления позволяют организовать поэтапную подачу с подбором клапанов и геометрии выхода под прибор."
+    },
+    "Droplet retention and carryover must be tested in the complete fluid path.": {
+      "es": "La retención de gotas y el arrastre deben ensayarse en el circuito completo.",
+      "fr": "La rétention de gouttes et la contamination croisée doivent être testées dans le circuit complet.",
+      "ko": "잔류 액적과 캐리오버는 전체 유로에서 시험해야 합니다.",
+      "ru": "Удержание капель и перенос загрязнений проверяют в полном жидкостном тракте."
+    },
+    "Water and environmental analysis: reagent metering and standard-addition pump": {
+      "es": "Análisis de agua y ambiental: bomba de reactivos y adición de patrones",
+      "fr": "Analyse de l’eau et de l’environnement : pompe de dosage de réactifs et d’ajout d’étalons",
+      "ko": "수질 및 환경 분석: 시약 계량 및 표준액 첨가 펌프",
+      "ru": "Анализ воды и окружающей среды: насос для реагентов и стандартных растворов"
+    },
+    "Small water-analysis modules add defined reagent or standard volumes to measurement cells.": {
+      "es": "Los módulos pequeños de análisis de agua añaden volúmenes definidos de reactivo o patrón a las celdas de medida.",
+      "fr": "Les petits modules d’analyse d’eau ajoutent des volumes définis de réactif ou d’étalon aux cellules de mesure.",
+      "ko": "소형 수질 분석 모듈은 측정 셀에 정해진 양의 시약이나 표준액을 첨가합니다.",
+      "ru": "Небольшие модули анализа воды подают заданные объёмы реагентов или стандартных растворов в измерительные ячейки."
+    },
+    "Selection depends on the dosing range, fluid chemistry, concentration and maintenance conditions.": {
+      "es": "La selección depende del rango de dosis, la composición química, la concentración y las condiciones de mantenimiento.",
+      "fr": "Le choix dépend de la plage de dosage, de la composition chimique, de la concentration et des conditions de maintenance.",
+      "ko": "주입량 범위, 유체 성분, 농도 및 유지보수 조건에 따라 선정합니다.",
+      "ru": "Подбор зависит от диапазона дозирования, химического состава, концентрации и условий обслуживания."
+    },
+    "{0}: Dose capacity and fluid-path switching can be matched to the measurement sequence.": {
+      "es": "{0}: la capacidad por dosis y la conmutación del circuito pueden adaptarse a la secuencia de medida.",
+      "fr": "{0} : la capacité par dose et la commutation du circuit peuvent être adaptées à la séquence de mesure.",
+      "ko": "{0}: 측정 순서에 맞춰 주입 용량과 유로 전환을 구성할 수 있습니다.",
+      "ru": "{0}: объём дозы и переключение тракта можно согласовать с последовательностью измерений."
+    },
+    "The head, piston, seals and valves must be assessed together; corrosive, particulate or crystallization-prone fluids require specific validation.": {
+      "es": "Cabezal, pistón, juntas y válvulas deben evaluarse juntos; los líquidos corrosivos, con partículas o propensos a cristalizar requieren validación específica.",
+      "fr": "La tête, le piston, les joints et les vannes doivent être évalués ensemble ; les liquides corrosifs, chargés de particules ou sujets à la cristallisation nécessitent une validation spécifique.",
+      "ko": "헤드, 피스톤, 씰 및 밸브를 함께 평가해야 하며, 부식성·입자 함유·결정화 유체에는 별도 검증이 필요합니다.",
+      "ru": "Головку, поршень, уплотнения и клапаны оценивают совместно; коррозионные, содержащие частицы или кристаллизующиеся жидкости требуют отдельной проверки."
+    },
+    "Confirm the working conditions": {
+      "es": "Confirmar las condiciones de trabajo",
+      "fr": "Confirmer les conditions de fonctionnement",
+      "ko": "실제 운전 조건 확인",
+      "ru": "Подтверждение рабочих условий"
+    },
+    "Provide dose volume, allowed error, timing, fluid composition, temperature, back pressure and mounting space. {0} divided by {1} steps gives approximately {2} per step as a nominal calculation only.": {
+      "es": "Indique dosis, error permitido, tiempo, composición del fluido, temperatura, contrapresión y espacio de montaje. Al dividir {0} entre {1} pasos se obtienen aproximadamente {2} por paso, solo como cálculo nominal.",
+      "fr": "Indiquez le volume par dose, l’erreur admissible, le délai, la composition du fluide, la température, la contre-pression et l’espace de montage. La division de {0} par {1} pas donne environ {2} par pas, à titre de calcul nominal uniquement.",
+      "ko": "단회 주입량, 허용 오차, 시간, 유체 성분, 온도, 배압 및 설치 공간을 제공해 주십시오. {0}를 {1}스텝으로 나눈 약 {2}/스텝은 명목 환산값일 뿐입니다.",
+      "ru": "Укажите объём дозы, допустимую погрешность, время, состав жидкости, температуру, противодавление и монтажное пространство. Деление {0} на {1} шагов даёт около {2} на шаг только как номинальный расчёт."
+    },
+    "Validate minimum reliable dose, carryover and dripping in the complete fluid path.": {
+      "es": "Valide la dosis mínima fiable, el arrastre y el goteo en el circuito completo.",
+      "fr": "Validez la dose minimale fiable, la contamination croisée et les gouttes dans le circuit complet.",
+      "ko": "전체 유로에서 최소 신뢰 분주량, 캐리오버 및 액적 누출을 검증하십시오.",
+      "ru": "Проверьте минимальную надёжную дозу, перенос загрязнений и каплеобразование в полном тракте."
+    },
+    "The SM specification gives an expected life of five million cycles with pure water at room temperature and {0} kPa back pressure.": {
+      "es": "La especificación SM indica una vida prevista de cinco millones de ciclos con agua pura, temperatura ambiente y contrapresión de {0} kPa.",
+      "fr": "La fiche SM indique une durée de vie prévue de cinq millions de cycles avec de l’eau pure, à température ambiante et sous {0} kPa de contre-pression.",
+      "ko": "SM 사양서의 예상 수명 500만 회는 순수, 상온 및 {0} kPa 배압 조건에 해당합니다.",
+      "ru": "Спецификация SM указывает ожидаемый ресурс в пять миллионов циклов с чистой водой при комнатной температуре и противодавлении {0} kPa."
+    },
+    "Saline or crystallization-prone fluids require shutdown flushing and maintenance planning.": {
+      "es": "Los líquidos salinos o propensos a cristalizar requieren planificar el lavado al parar y el mantenimiento.",
+      "fr": "Les liquides salins ou sujets à la cristallisation nécessitent de prévoir le rinçage à l’arrêt et la maintenance.",
+      "ko": "염분이 있거나 결정화되기 쉬운 유체에는 정지 시 세척 및 유지보수 계획이 필요합니다.",
+      "ru": "Для солевых или кристаллизующихся жидкостей предусматривают промывку при остановке и обслуживание."
+    },
+    "Which applications suit {0}?": {
+      "es": "¿Para qué aplicaciones es adecuado {0}?",
+      "fr": "Quelles applications conviennent à {0} ?",
+      "ko": "{0}은 어떤 응용 분야에 적합합니까?",
+      "ru": "Для каких применений подходит {0}?"
+    },
+    "It focuses on {0}.": {
+      "es": "Se centra en {0}.",
+      "fr": "Elle est conçue pour {0}.",
+      "ko": "주요 용도는 {0}입니다.",
+      "ru": "Основные задачи: {0}."
+    },
+    "Related selection tasks include analyzer reagent dispensing, {0}, metered reaction-liquid addition, water-analysis reagent metering.": {
+      "es": "Otras tareas de selección incluyen dispensación de reactivos en analizadores, {0}, adición dosificada de líquido de reacción y dosificación de reactivos para análisis de agua.",
+      "fr": "Les autres tâches de sélection comprennent la distribution de réactifs dans les analyseurs, {0}, l’ajout dosé de liquide réactionnel et le dosage de réactifs pour l’analyse de l’eau.",
+      "ko": "관련 선정 용도에는 분석기 시약 주입, {0}, 반응액 정량 첨가 및 수질 분석 시약 계량이 포함됩니다.",
+      "ru": "Связанные задачи подбора: дозирование реагентов в анализаторах, {0}, дозированное добавление реакционной жидкости и реагентов для анализа воды."
+    },
+    "Is {0} the minimum dose?": {
+      "es": "¿Es {0} la dosis mínima?",
+      "fr": "{0} est-il le volume minimal par dose ?",
+      "ko": "{0}이 최소 주입량입니까?",
+      "ru": "Является ли {0} минимальной дозой?"
+    },
+    "No. {0} is the nominal capacity. {1} full-stroke steps give approximately {2} per step, which is not a validated minimum dose either.": {
+      "es": "No. {0} es la capacidad nominal. Los {1} pasos por carrera completa dan aproximadamente {2} por paso, que tampoco constituye una dosis mínima validada.",
+      "fr": "Non. {0} est la capacité nominale. Les {1} pas sur la course complète donnent environ {2} par pas, ce qui ne constitue pas non plus une dose minimale validée.",
+      "ko": "아닙니다. {0}은 명목 용량입니다. 전체 행정 {1}스텝의 약 {2}/스텝도 검증된 최소 주입량이 아닙니다.",
+      "ru": "Нет. {0} — номинальный объём. При {1} шагах на полный ход получается около {2} на шаг, что также не является подтверждённой минимальной дозой."
+    },
+    "Fluid, backlash, bubbles, valves and tubing affect results; test at the intended working volume.": {
+      "es": "El fluido, la holgura, las burbujas, las válvulas y los tubos afectan al resultado; ensaye al volumen de trabajo previsto.",
+      "fr": "Le fluide, le jeu, les bulles, les vannes et les tuyaux influencent le résultat ; effectuez les essais au volume de travail prévu.",
+      "ko": "유체, 백래시, 기포, 밸브 및 배관이 결과에 영향을 주므로 목표 작업 액량에서 시험해야 합니다.",
+      "ru": "Жидкость, люфт, пузырьки, клапаны и трубки влияют на результат; испытания проводят при целевом рабочем объёме."
+    },
+    "Which head and piston materials can be configured?": {
+      "es": "¿Qué materiales de cabezal y pistón pueden configurarse?",
+      "fr": "Quels matériaux de tête et de piston peut-on configurer ?",
+      "ko": "어떤 헤드 및 피스톤 재료를 구성할 수 있습니까?",
+      "ru": "Какие материалы головки и поршня доступны?"
+    },
+    "How much installation space is required?": {
+      "es": "¿Cuánto espacio de instalación se necesita?",
+      "fr": "Quel espace d’installation faut-il prévoir ?",
+      "ko": "얼마나 많은 설치 공간이 필요합니까?",
+      "ru": "Какое монтажное пространство требуется?"
+    },
+    "See the capacity-specific technical drawing on this page for dimensions.": {
+      "es": "Consulte las dimensiones en el plano técnico correspondiente a la capacidad de esta página.",
+      "fr": "Consultez les dimensions sur le plan technique correspondant à la capacité présentée sur cette page.",
+      "ko": "치수는 이 페이지에서 해당 용량의 기술 도면을 확인하십시오.",
+      "ru": "Размеры смотрите на этой странице в чертеже для соответствующего объёма."
+    },
+    "Body dimensions exclude external fittings and tubing clearance; the selected configuration drawing governs.": {
+      "es": "Las dimensiones del cuerpo no incluyen racores externos ni holgura para tubos; prevalece el plano de la configuración seleccionada.",
+      "fr": "Les dimensions du corps excluent les raccords externes et les dégagements pour les tuyaux ; le plan de la configuration retenue fait référence.",
+      "ko": "본체 치수에는 외부 피팅과 배관 여유 공간이 포함되지 않으며, 최종 치수는 선택한 구성의 도면을 기준으로 합니다.",
+      "ru": "Размеры корпуса не включают внешние фитинги и зазоры для трубок; определяющим является чертёж выбранной конфигурации."
+    },
+    "How are fluidic connections and controls configured?": {
+      "es": "¿Cómo se configuran las conexiones fluídicas y el control?",
+      "fr": "Comment configurer les raccordements fluidiques et la commande ?",
+      "ko": "유체 연결 및 제어 시스템은 어떻게 구성합니까?",
+      "ru": "Как настраиваются жидкостные соединения и управление?"
+    },
+    "The displayed configuration uses {0}/{1}-{2} UNF / M{3} ports.": {
+      "es": "La configuración mostrada utiliza puertos {0}/{1}-{2} UNF / M{3}.",
+      "fr": "La configuration présentée utilise des raccordements {0}/{1}-{2} UNF / M{3}.",
+      "ko": "표시 구성은 {0}/{1}-{2} UNF / M{3} 포트를 사용합니다.",
+      "ru": "В представленной конфигурации используются порты {0}/{1}-{2} UNF / M{3}."
+    },
+    "Home-position optical sensors, valves and an ISC{0} controller can be selected; RS-{1}, RS-{2} and CAN options depend on the chosen controller configuration.": {
+      "es": "Pueden seleccionarse sensores ópticos de posición inicial, válvulas y un controlador ISC{0}; las opciones RS-{1}, RS-{2} y CAN dependen de la configuración del controlador elegido.",
+      "fr": "Des capteurs optiques de position initiale, des vannes et un contrôleur ISC{0} peuvent être choisis ; les options RS-{1}, RS-{2} et CAN dépendent de la configuration du contrôleur retenu.",
+      "ko": "원점 광센서, 밸브 및 ISC{0} 컨트롤러를 선택할 수 있으며, RS-{1}, RS-{2} 및 CAN 옵션은 선택한 컨트롤러 구성에 따라 달라집니다.",
+      "ru": "Можно выбрать оптические датчики исходного положения, клапаны и контроллер ISC{0}; варианты RS-{1}, RS-{2} и CAN зависят от конфигурации выбранного контроллера."
+    },
+    "Tubing diameter, seals and mounting orientation must also be specified.": {
+      "es": "También deben especificarse el diámetro de los tubos, las juntas y la orientación de montaje.",
+      "fr": "Le diamètre des tuyaux, les joints et l’orientation de montage doivent également être précisés.",
+      "ko": "배관 직경, 씰 및 설치 방향도 함께 지정해야 합니다.",
+      "ru": "Также необходимо указать диаметр трубок, уплотнения и ориентацию монтажа."
+    },
+    "How should accuracy, repeatability and service life be confirmed?": {
+      "es": "¿Cómo confirmar la exactitud, repetibilidad y vida útil?",
+      "fr": "Comment confirmer l’exactitude, la répétabilité et la durée de vie ?",
+      "ko": "정확도, 반복성 및 수명은 어떻게 확인합니까?",
+      "ru": "Как подтвердить точность, повторяемость и ресурс?"
+    },
+    "SM full-stroke repeatability is ≤{0}% under the specified conditions, not at every small dose.": {
+      "es": "La repetibilidad SM a carrera completa es ≤{0} % en las condiciones especificadas, no a cualquier dosis pequeña.",
+      "fr": "La répétabilité SM sur la course complète est ≤{0} % dans les conditions spécifiées, et non à toutes les petites doses.",
+      "ko": "SM 전체 행정 반복성 ≤{0}%는 지정 조건의 값이며 임의의 소량에 적용되지 않습니다.",
+      "ru": "Повторяемость SM на полном ходе составляет ≤{0}% в заданных условиях, а не при любой малой дозе."
+    },
+    "Provide the working volume and allowed error to confirm configuration-specific accuracy.": {
+      "es": "Indique el volumen de trabajo y el error permitido para confirmar la exactitud de la configuración.",
+      "fr": "Précisez le volume de travail et l’erreur admissible pour confirmer l’exactitude de la configuration.",
+      "ko": "실제 작업 액량과 허용 오차를 제공하여 해당 구성의 정확도를 확인해야 합니다.",
+      "ru": "Для подтверждения точности конфигурации укажите рабочий объём и допустимую погрешность."
+    },
+    "The expected five-million-cycle life uses pure water at room temperature and {0} kPa back pressure; it is not a universal reagent-life guarantee.": {
+      "es": "La vida prevista de cinco millones de ciclos corresponde a agua pura, temperatura ambiente y contrapresión de {0} kPa; no es una garantía para cualquier reactivo.",
+      "fr": "La durée de vie prévue de cinq millions de cycles concerne l’eau pure à température ambiante sous {0} kPa de contre-pression ; elle n’est pas garantie avec tous les réactifs.",
+      "ko": "예상 수명 500만 회는 순수, 상온 및 {0} kPa 배압 조건이며 모든 시약에서의 수명을 보장하지는 않습니다.",
+      "ru": "Ожидаемый ресурс в пять миллионов циклов относится к чистой воде при комнатной температуре и противодавлении {0} kPa; для любого реагента он не гарантируется."
+    },
+    "{0} {1} PMMA Miniature Piston Pump | FOREACH": {
+      "es": "{0} Bomba de pistón en miniatura {1} PMMA | FOREACH",
+      "fr": "{0} Pompe à piston miniature {1} PMMA | FOREACH",
+      "ko": "{0} {1} PMMA 소형 피스톤 펌프 | FOREACH",
+      "ru": "{0} Миниатюрный поршневой насос {1} PMMA | FOREACH"
+    },
+    "{0}: {1} PMMA-head miniature piston pump for {2}.": {
+      "es": "{0}: bomba de pistón en miniatura de {1} con cabezal de PMMA para {2}.",
+      "fr": "{0} : pompe à piston miniature de {1} avec tête en PMMA pour {2}.",
+      "ko": "{0}: {2}용 {1} PMMA 헤드 소형 피스톤 펌프.",
+      "ru": "{0}: миниатюрный поршневой насос объёмом {1} с головкой из PMMA; задачи: {2}."
+    },
+    "Explore {0}/{1}-{2} UNF / M{3} ports, {4} steps and OEM integration options.": {
+      "es": "Consulte puertos {0}/{1}-{2} UNF / M{3}, {4} pasos y opciones de integración OEM.",
+      "fr": "Découvrez les raccordements {0}/{1}-{2} UNF / M{3}, les {4} pas et les options d’intégration OEM.",
+      "ko": "{0}/{1}-{2} UNF / M{3} 포트, {4}스텝 및 OEM 통합 옵션을 확인하십시오.",
+      "ru": "Смотрите порты {0}/{1}-{2} UNF / M{3}, {4} шагов и варианты OEM-интеграции."
+    },
+    "PMMA / PSU / POM / PEEK; final selection follows fluid and structural requirements.": {
+      "es": "PMMA / PSU / POM / PEEK; la selección final depende del fluido y los requisitos estructurales.",
+      "fr": "PMMA / PSU / POM / PEEK ; le choix final dépend du fluide et des exigences structurelles.",
+      "ko": "PMMA / PSU / POM / PEEK; 최종 선택은 유체 및 구조 요구에 따릅니다.",
+      "ru": "PMMA / PSU / POM / PEEK; окончательный выбор зависит от жидкости и конструктивных требований."
+    },
+    "Ceramic / stainless steel / PEEK; select with the seal and fluid.": {
+      "es": "Cerámica / acero inoxidable / PEEK; seleccionar junto con las juntas y el fluido.",
+      "fr": "Céramique / acier inoxydable / PEEK ; à choisir avec les joints et le fluide.",
+      "ko": "세라믹 / 스테인리스강 / PEEK; 씰과 유체를 함께 고려하여 선택합니다.",
+      "ru": "Керамика / нержавеющая сталь / PEEK; выбирают с учётом уплотнений и жидкости."
+    },
+    "Confirm for the selected configuration and working volume": {
+      "es": "Confirmar según la configuración y el volumen de trabajo seleccionados",
+      "fr": "À confirmer selon la configuration et le volume de travail retenus",
+      "ko": "선택한 구성 및 작업 액량에 따라 확인",
+      "ru": "Уточняется для выбранной конфигурации и рабочего объёма"
+    },
+    "≤{0}% (specified full-stroke conditions)": {
+      "es": "≤{0} % (condiciones especificadas a carrera completa)",
+      "fr": "≤{0} % (conditions spécifiées à pleine course)",
+      "ko": "≤{0}% (지정된 전체 행정 조건)",
+      "ru": "≤{0}% (заданные условия полного хода)"
+    },
+    "{0} million cycles (pure water, room temperature, {1} kPa back pressure)": {
+      "es": "{0} millones de ciclos (agua pura, temperatura ambiente, contrapresión de {1} kPa)",
+      "fr": "{0} millions de cycles (eau pure, température ambiante, contre-pression de {1} kPa)",
+      "ko": "{0}백만 회 (순수, 상온, 배압 {1} kPa)",
+      "ru": "{0} млн циклов (чистая вода, комнатная температура, противодавление {1} kPa)"
+    },
+    "Related selection tasks include {0}, analyzer reagent dispensing, metered reaction-liquid addition, water-analysis reagent metering.": {
+      "es": "Otras tareas de selección incluyen {0}, dispensación de reactivos en analizadores, adición dosificada de líquido de reacción y dosificación de reactivos para análisis de agua.",
+      "fr": "Les autres tâches de sélection comprennent {0}, la distribution de réactifs dans les analyseurs, l’ajout dosé de liquide réactionnel et le dosage de réactifs pour l’analyse de l’eau.",
+      "ko": "관련 선정 용도에는 {0}, 분석기 시약 주입, 반응액 정량 첨가 및 수질 분석 시약 계량이 포함됩니다.",
+      "ru": "Связанные задачи подбора: {0}, дозирование реагентов в анализаторах, дозированное добавление реакционной жидкости и реагентов для анализа воды."
+    },
+    "The {0} basic drawing shows a body envelope of approximately {1} × {2} × {3} mm.": {
+      "es": "El plano básico de {0} muestra un cuerpo de aproximadamente {1} × {2} × {3} mm.",
+      "fr": "Le plan de base de {0} indique un encombrement du corps d’environ {1} × {2} × {3} mm.",
+      "ko": "{0} 기본 도면의 본체 치수는 약 {1} × {2} × {3} mm입니다.",
+      "ru": "Базовый чертёж для {0} указывает габариты корпуса примерно {1} × {2} × {3} mm."
+    },
+    "{0} Miniature Precision Piston Pump for {1}, with a PEEK Pump Head": {
+      "es": "Bomba de pistón de precisión en miniatura de {0} para {1}, con cabezal de PEEK",
+      "fr": "Pompe à piston de précision miniature de {0} pour {1}, avec tête en PEEK",
+      "ko": "{1}용 {0} PEEK 헤드 소형 정밀 피스톤 펌프",
+      "ru": "Миниатюрный прецизионный поршневой насос объёмом {0} с головкой из PEEK; задачи: {1}"
+    },
+    "{0} is a {1} miniature precision piston pump with a PEEK head for {2}.": {
+      "es": "{0} es una bomba de pistón de precisión en miniatura de {1}, con cabezal de PEEK, para {2}.",
+      "fr": "{0} est une pompe à piston de précision miniature de {1}, avec tête en PEEK, conçue pour {2}.",
+      "ko": "{0}은 PEEK 헤드를 적용한 {1} 소형 정밀 피스톤 펌프로, {2}에 사용됩니다.",
+      "ru": "{0} — миниатюрный прецизионный поршневой насос объёмом {1} с головкой из PEEK для таких задач, как {2}."
+    },
+    "The PEEK head is a material option for the reagent; piston, seals, valves and tubing must also be checked.": {
+      "es": "El cabezal de PEEK es una opción de material para el reactivo; también deben comprobarse el pistón, juntas, válvulas y tubos.",
+      "fr": "La tête en PEEK est une option de matériau pour le réactif ; le piston, les joints, les vannes et les tuyaux doivent aussi être vérifiés.",
+      "ko": "PEEK 헤드는 시약에 맞춘 재료 옵션이며, 피스톤, 씰, 밸브 및 배관도 함께 확인해야 합니다.",
+      "ru": "Головка из PEEK является вариантом материала для реагента; также проверяют поршень, уплотнения, клапаны и трубки."
+    },
+    "Whole-path light protection requires a separate design assessment.": {
+      "es": "La protección de todo el circuito frente a la luz requiere una evaluación de diseño independiente.",
+      "fr": "La protection de l’ensemble du circuit contre la lumière nécessite une évaluation de conception distincte.",
+      "ko": "전체 유로의 차광은 별도 설계 검토가 필요합니다.",
+      "ru": "Защита всего тракта от света требует отдельной проектной оценки."
+    },
+    "Related selection tasks include analyzer reagent dispensing, metered reaction-liquid addition, {0}, water-analysis reagent metering.": {
+      "es": "Otras tareas de selección incluyen dispensación de reactivos en analizadores, adición dosificada de líquido de reacción, {0} y dosificación de reactivos para análisis de agua.",
+      "fr": "Les autres tâches de sélection comprennent la distribution de réactifs dans les analyseurs, l’ajout dosé de liquide réactionnel, {0} et le dosage de réactifs pour l’analyse de l’eau.",
+      "ko": "관련 선정 용도에는 분석기 시약 주입, 반응액 정량 첨가, {0} 및 수질 분석 시약 계량이 포함됩니다.",
+      "ru": "Связанные задачи подбора: дозирование реагентов в анализаторах, дозированное добавление реакционной жидкости, {0} и дозирование реагентов для анализа воды."
+    },
+    "{0} {1} PEEK Miniature Piston Pump | FOREACH": {
+      "es": "{0} Bomba de pistón en miniatura {1} PEEK | FOREACH",
+      "fr": "{0} Pompe à piston miniature {1} PEEK | FOREACH",
+      "ko": "{0} {1} PEEK 소형 피스톤 펌프 | FOREACH",
+      "ru": "{0} Миниатюрный поршневой насос {1} PEEK | FOREACH"
+    },
+    "{0}: {1} PEEK-head miniature piston pump for {2}.": {
+      "es": "{0}: bomba de pistón en miniatura de {1} con cabezal de PEEK para {2}.",
+      "fr": "{0} : pompe à piston miniature de {1} avec tête en PEEK pour {2}.",
+      "ko": "{0}: {2}용 {1} PEEK 헤드 소형 피스톤 펌프.",
+      "ru": "{0}: миниатюрный поршневой насос объёмом {1} с головкой из PEEK; задачи: {2}."
+    },
+    "Select the {0} capacity against the working dose.": {
+      "es": "Seleccione la capacidad de {0} según la dosis de trabajo.",
+      "fr": "Choisissez la capacité de {0} en fonction de la dose de travail.",
+      "ko": "{0} 용량은 실제 단회 주입량을 기준으로 선택하십시오.",
+      "ru": "Подбирайте объём {0} с учётом рабочей дозы."
+    },
+    "If the total transfer exceeds one stroke, include refill and valve-switching time.": {
+      "es": "Si la transferencia total supera una carrera, incluya el tiempo de recarga y conmutación de válvulas.",
+      "fr": "Si le transfert total dépasse une course, prévoyez le temps de remplissage et de commutation des vannes.",
+      "ko": "총 이송량이 단회 용량을 초과하면 재충전과 밸브 전환 시간을 포함해야 합니다.",
+      "ru": "Если общий перенос превышает один ход, учитывайте время повторного заполнения и переключения клапанов."
+    },
+    "Related selection tasks include metered reaction-liquid addition, analyzer reagent dispensing, water-analysis reagent metering, {0}.": {
+      "es": "Otras tareas de selección incluyen adición dosificada de líquido de reacción, dispensación de reactivos en analizadores, dosificación de reactivos para análisis de agua y {0}.",
+      "fr": "Les autres tâches de sélection comprennent l’ajout dosé de liquide réactionnel, la distribution de réactifs dans les analyseurs, le dosage de réactifs pour l’analyse de l’eau et {0}.",
+      "ko": "관련 선정 용도에는 반응액 정량 첨가, 분석기 시약 주입, 수질 분석 시약 계량 및 {0}이 포함됩니다.",
+      "ru": "Связанные задачи подбора: дозированное добавление реакционной жидкости, дозирование реагентов в анализаторах, реагентов для анализа воды и {0}."
+    },
+    "Diluent and buffer dispensing": {
+      "es": "Dispensación de diluyente y tampón",
+      "fr": "Distribution de diluant et de tampon",
+      "ko": "희석액 및 완충액 분주",
+      "ru": "Распределение разбавителей и буферов"
+    },
+    "Automated liquid preparation: diluent and buffer dosing pump": {
+      "es": "Preparación automatizada de líquidos: bomba de dosificación de diluyente y tampón",
+      "fr": "Préparation automatisée de liquides : pompe de dosage de diluant et de tampon",
+      "ko": "자동 용액 조제: 희석액 및 완충액 첨가 펌프",
+      "ru": "Автоматизированное приготовление растворов: насос для дозирования разбавителя и буфера"
+    },
+    "Liquid-preparation and analytical modules meter diluents or buffers.": {
+      "es": "Los módulos de preparación de líquidos y análisis dosifican diluyentes o tampones.",
+      "fr": "Les modules de préparation de liquides et d’analyse dosent des diluants ou des tampons.",
+      "ko": "용액 조제 및 분석 모듈은 희석액 또는 완충액을 정량 공급합니다.",
+      "ru": "Модули приготовления растворов и анализа дозируют разбавители или буферы."
+    },
+    "Capacity selection must account for dose volume, refill cycles and instrument timing.": {
+      "es": "La capacidad debe tener en cuenta la dosis, las recargas y el tiempo de ciclo del instrumento.",
+      "fr": "Le choix de la capacité doit tenir compte de la dose, des remplissages et du temps de cycle de l’instrument.",
+      "ko": "용량 선정 시 단회 액량, 재충전 횟수 및 장비 사이클 시간을 고려해야 합니다.",
+      "ru": "При выборе объёма учитывают дозу, циклы повторного заполнения и время цикла прибора."
+    },
+    "{0}: Metered additions can use a single stroke or repeated aspiration and dispense cycles.": {
+      "es": "{0}: las adiciones dosificadas pueden realizarse con una carrera o con ciclos repetidos de aspiración y dispensación.",
+      "fr": "{0} : les ajouts dosés peuvent utiliser une course unique ou des cycles répétés d’aspiration et de distribution.",
+      "ko": "{0}: 정량 첨가는 단일 행정 또는 반복 흡입·토출 사이클로 구성할 수 있습니다.",
+      "ru": "{0}: дозированная подача может выполняться одним ходом или повторными циклами всасывания и дозирования."
+    },
+    "Saline buffers require shutdown flushing and residual-liquid management to address crystallization.": {
+      "es": "Los tampones salinos requieren lavado al detener el equipo y gestión del líquido residual para controlar la cristalización.",
+      "fr": "Les tampons salins nécessitent un rinçage à l’arrêt et une gestion du liquide résiduel pour limiter la cristallisation.",
+      "ko": "염분이 포함된 완충액은 결정화에 대비하여 정지 시 세척과 잔류액 관리가 필요합니다.",
+      "ru": "Для солевых буферов необходимы промывка при остановке и удаление остаточной жидкости для ограничения кристаллизации."
+    },
+    "Related selection tasks include analyzer reagent dispensing, {0}, diluent and buffer dispensing, water-analysis reagent metering.": {
+      "es": "Otras tareas incluyen dispensación de reactivos en analizadores, {0}, dispensación de diluyente y tampón, y dosificación de reactivos para análisis de agua.",
+      "fr": "Les autres tâches comprennent la distribution de réactifs dans les analyseurs, {0}, la distribution de diluant et de tampon, et le dosage de réactifs pour l’analyse de l’eau.",
+      "ko": "관련 용도에는 분석기 시약 주입, {0}, 희석액 및 완충액 분주와 수질 분석 시약 계량이 포함됩니다.",
+      "ru": "Связанные задачи: дозирование реагентов в анализаторах, {0}, распределение разбавителя и буфера, дозирование реагентов для анализа воды."
+    },
+    "Related selection tasks include diluent and buffer dispensing, {0}, analyzer reagent dispensing, water-analysis reagent metering.": {
+      "es": "Otras tareas incluyen dispensación de diluyente y tampón, {0}, dispensación de reactivos en analizadores y dosificación de reactivos para análisis de agua.",
+      "fr": "Les autres tâches comprennent la distribution de diluant et de tampon, {0}, la distribution de réactifs dans les analyseurs et le dosage de réactifs pour l’analyse de l’eau.",
+      "ko": "관련 용도에는 희석액 및 완충액 분주, {0}, 분석기 시약 주입 및 수질 분석 시약 계량이 포함됩니다.",
+      "ru": "Связанные задачи: распределение разбавителя и буфера, {0}, дозирование реагентов в анализаторах и для анализа воды."
+    },
+    "{0} Ultra-Compact Precision Ceramic Piston Pump for {1}, with a PMMA Pump Head": {
+      "es": "Bomba de pistón cerámico de precisión ultracompacta de {0} para {1}, con cabezal de PMMA",
+      "fr": "Pompe à piston céramique de précision ultra-compacte de {0} pour {1}, avec tête en PMMA",
+      "ko": "{1}용 {0} PMMA 헤드 초소형 정밀 세라믹 피스톤 펌프",
+      "ru": "Ультракомпактный прецизионный насос с керамическим поршнем объёмом {0} и головкой из PMMA; задачи: {1}"
+    },
+    "{0} is a {1} ultra-compact precision piston pump with a PMMA head for {2}.": {
+      "es": "{0} es una bomba de pistón de precisión ultracompacta de {1}, con cabezal de PMMA, para {2}.",
+      "fr": "{0} est une pompe à piston de précision ultra-compacte de {1}, avec tête en PMMA, conçue pour {2}.",
+      "ko": "{0}은 PMMA 헤드를 적용한 {1} 초소형 정밀 피스톤 펌프로, {2}에 사용됩니다.",
+      "ru": "{0} — ультракомпактный прецизионный поршневой насос объёмом {1} с головкой из PMMA для таких задач, как {2}."
+    },
+    "It targets space-constrained OEM analytical modules.": {
+      "es": "Está orientada a módulos analíticos OEM con espacio limitado.",
+      "fr": "Elle vise les modules d’analyse OEM à espace limité.",
+      "ko": "설치 공간이 제한된 OEM 분석 모듈을 위한 제품입니다.",
+      "ru": "Он предназначен для OEM-модулей анализа с ограниченным пространством."
+    },
+    "The displayed configuration uses {0}-{1} UNF ports and {2} full-stroke steps for integration alongside valves and detection components.": {
+      "es": "La configuración mostrada utiliza puertos {0}-{1} UNF y {2} pasos por carrera completa para integrarse junto a válvulas y detectores.",
+      "fr": "La configuration présentée utilise des raccordements {0}-{1} UNF et {2} pas sur la course complète pour l’intégration avec les vannes et les détecteurs.",
+      "ko": "표시 구성은 {0}-{1} UNF 포트와 전체 행정 {2}스텝을 사용하며, 밸브 및 검출부와 함께 배치를 계획할 수 있습니다.",
+      "ru": "В представленной конфигурации используются порты {0}-{1} UNF и {2} шагов на полный ход для интеграции рядом с клапанами и детекторами."
+    },
+    "Mounting, tubing connections, valves and drive control can be configured for the project.": {
+      "es": "El montaje, las conexiones de tubos, las válvulas y el control del accionamiento pueden configurarse para el proyecto.",
+      "fr": "Le montage, les raccordements de tuyaux, les vannes et la commande d’entraînement peuvent être configurés pour le projet.",
+      "ko": "설치 방식, 배관 연결, 밸브 및 구동 제어는 프로젝트에 맞춰 구성할 수 있습니다.",
+      "ru": "Монтаж, соединения трубок, клапаны и управление приводом можно подобрать под проект."
+    },
+    "The displayed version uses a PMMA head and ceramic piston; alternative head or piston materials can be assessed against fluid chemistry, seal design and available space, subject to the project drawing.": {
+      "es": "La versión mostrada tiene cabezal de PMMA y pistón cerámico; otros materiales pueden evaluarse según la química del fluido, las juntas y el espacio, conforme al plano del proyecto.",
+      "fr": "La version présentée comporte une tête en PMMA et un piston céramique ; d’autres matériaux peuvent être évalués selon la chimie du fluide, les joints et l’espace, sous réserve du plan du projet.",
+      "ko": "표시 제품은 PMMA 헤드와 세라믹 피스톤을 사용합니다. 다른 재료는 유체 성분, 씰 설계 및 공간을 검토하여 프로젝트 도면에 따라 평가할 수 있습니다.",
+      "ru": "Представленная версия использует головку из PMMA и керамический поршень; другие материалы оценивают по химии жидкости, конструкции уплотнений и доступному месту согласно чертежу проекта."
+    },
+    "TM ultra-compact piston pumps can be configured for clinical chemistry, immunoassay, laboratory automation, sample preparation, life science instruments and water or environmental analysis.": {
+      "es": "Las bombas de pistón TM ultracompactas pueden configurarse para química clínica, inmunoensayo, automatización de laboratorio, preparación de muestras, ciencias de la vida y análisis de agua o ambiental.",
+      "fr": "Les pompes à piston ultra-compactes TM peuvent être configurées pour la chimie clinique, l’immunoanalyse, l’automatisation de laboratoire, la préparation d’échantillons, les sciences de la vie et l’analyse de l’eau ou de l’environnement.",
+      "ko": "TM 초소형 피스톤 펌프는 임상화학, 면역분석, 실험실 자동화, 샘플 전처리, 생명과학 장비, 수질 및 환경 분석용 유로로 구성할 수 있습니다.",
+      "ru": "Ультракомпактные поршневые насосы TM можно конфигурировать для клинической химии, иммуноанализа, автоматизации лабораторий, пробоподготовки, наук о жизни, анализа воды и окружающей среды."
+    },
+    "The ultra-compact TM structure and {0}-{1} UNF ports target restricted installation space.": {
+      "es": "La estructura ultracompacta TM y los puertos {0}-{1} UNF están orientados a espacios de instalación limitados.",
+      "fr": "La structure ultra-compacte TM et les raccordements {0}-{1} UNF visent les espaces d’installation limités.",
+      "ko": "TM 초소형 구조와 {0}-{1} UNF 포트는 제한된 설치 공간의 배치를 위한 것입니다.",
+      "ru": "Ультракомпактная конструкция TM и порты {0}-{1} UNF рассчитаны на ограниченное монтажное пространство."
+    },
+    "Use the capacity-specific drawing to allow for fittings, tubing bends and service access, then validate dosing performance.": {
+      "es": "Use el plano de la capacidad concreta para prever racores, curvas de tubos y acceso de mantenimiento, y valide después la dosificación.",
+      "fr": "Utilisez le plan de la capacité retenue pour prévoir les raccords, les courbures des tuyaux et l’accès de maintenance, puis validez le dosage.",
+      "ko": "해당 용량 도면을 기준으로 피팅, 배관 굽힘 및 유지보수 공간을 확보하고 실제 주입 성능을 검증하십시오.",
+      "ru": "По чертежу нужного объёма предусмотрите фитинги, изгибы трубок и доступ для обслуживания, затем проверьте дозирование."
+    },
+    "Confirm TM accuracy, repeatability, working pressure and life for the selected materials, drive and fluid.": {
+      "es": "Confirme la exactitud, repetibilidad, presión de trabajo y vida útil TM para los materiales, accionamiento y fluido seleccionados.",
+      "fr": "Confirmez l’exactitude, la répétabilité, la pression de travail et la durée de vie TM selon les matériaux, l’entraînement et le fluide retenus.",
+      "ko": "선택한 재료, 구동 방식 및 유체에 따라 TM의 정확도, 반복성, 작동 압력과 수명을 확인해야 합니다.",
+      "ru": "Точность, повторяемость, рабочее давление и ресурс TM подтверждают для выбранных материалов, привода и жидкости."
+    },
+    "Instrument validation also includes valve operation, bubble management, maintenance and cycle timing.": {
+      "es": "La validación del instrumento también incluye válvulas, gestión de burbujas, mantenimiento y tiempos de ciclo.",
+      "fr": "La validation de l’instrument inclut aussi les vannes, la gestion des bulles, la maintenance et les temps de cycle.",
+      "ko": "장비 검증에는 밸브 동작, 기포 관리, 유지보수 및 사이클 시간도 포함됩니다.",
+      "ru": "Проверка прибора также включает работу клапанов, управление пузырьками, обслуживание и время цикла."
+    },
+    "The displayed configuration uses {0}-{1} UNF ports.": {
+      "es": "La configuración mostrada utiliza puertos {0}-{1} UNF.",
+      "fr": "La configuration présentée utilise des raccordements {0}-{1} UNF.",
+      "ko": "표시 구성은 {0}-{1} UNF 포트를 사용합니다.",
+      "ru": "В представленной конфигурации используются порты {0}-{1} UNF."
+    },
+    "Provide driver, power and feedback requirements to coordinate motor control and valves.": {
+      "es": "Indique los requisitos de controlador, alimentación y realimentación para coordinar el motor y las válvulas.",
+      "fr": "Précisez les besoins de pilote, d’alimentation et de retour d’information pour coordonner le moteur et les vannes.",
+      "ko": "모터와 밸브 제어를 연동할 수 있도록 드라이버, 전원 및 피드백 요구를 제공해 주십시오.",
+      "ru": "Укажите требования к драйверу, питанию и обратной связи для согласования двигателя и клапанов."
+    },
+    "Communication interfaces cannot be inferred from fluidic ports or step count.": {
+      "es": "Las interfaces de comunicación no pueden deducirse de los puertos fluídicos ni del número de pasos.",
+      "fr": "Les interfaces de communication ne peuvent pas être déduites des raccordements fluidiques ni du nombre de pas.",
+      "ko": "유체 포트나 스텝 수만으로 통신 인터페이스를 추정할 수 없습니다.",
+      "ru": "Интерфейсы связи нельзя определить по жидкостным портам или числу шагов."
+    },
+    "Provide working volume, allowed error, reagent, temperature, back pressure and daily cycle count for dispensing and cycle testing.": {
+      "es": "Indique volumen de trabajo, error permitido, reactivo, temperatura, contrapresión y ciclos diarios para los ensayos de dispensación y duración.",
+      "fr": "Indiquez le volume de travail, l’erreur admissible, le réactif, la température, la contre-pression et les cycles quotidiens pour les essais de distribution et cycliques.",
+      "ko": "분주 및 반복 시험을 위해 실제 액량, 허용 오차, 시약, 온도, 배압 및 일일 작동 횟수를 제공해 주십시오.",
+      "ru": "Для испытаний дозирования и циклических испытаний укажите рабочий объём, допустимую погрешность, реагент, температуру, противодавление и число циклов в день."
+    },
+    "The {0} full-stroke steps do not establish accuracy, repeatability or service life.": {
+      "es": "Los {0} pasos por carrera completa no determinan la exactitud, repetibilidad ni vida útil.",
+      "fr": "Les {0} pas sur la course complète ne définissent ni l’exactitude, ni la répétabilité, ni la durée de vie.",
+      "ko": "전체 행정 {0}스텝이 정확도, 반복성 또는 수명을 의미하지는 않습니다.",
+      "ru": "Число {0} шагов на полный ход не определяет точность, повторяемость или ресурс."
+    },
+    "{0} {1} PMMA Ultra-Compact Piston Pump | FOREACH": {
+      "es": "{0} Bomba de pistón ultracompacta {1} PMMA | FOREACH",
+      "fr": "{0} Pompe à piston ultra-compacte {1} PMMA | FOREACH",
+      "ko": "{0} {1} PMMA 초소형 피스톤 펌프 | FOREACH",
+      "ru": "{0} Ультракомпактный поршневой насос {1} PMMA | FOREACH"
+    },
+    "{0}: {1} PMMA-head ultra-compact piston pump for {2}.": {
+      "es": "{0}: bomba de pistón ultracompacta de {1} con cabezal de PMMA para {2}.",
+      "fr": "{0} : pompe à piston ultra-compacte de {1} avec tête en PMMA pour {2}.",
+      "ko": "{0}: {2}용 {1} PMMA 헤드 초소형 피스톤 펌프.",
+      "ru": "{0}: ультракомпактный поршневой насос объёмом {1} с головкой из PMMA; задачи: {2}."
+    },
+    "Explore {0}-{1} UNF ports, {2} steps and OEM integration options.": {
+      "es": "Consulte puertos {0}-{1} UNF, {2} pasos y opciones de integración OEM.",
+      "fr": "Découvrez les raccordements {0}-{1} UNF, les {2} pas et les options d’intégration OEM.",
+      "ko": "{0}-{1} UNF 포트, {2}스텝 및 OEM 통합 옵션을 확인하십시오.",
+      "ru": "Смотрите порты {0}-{1} UNF, {2} шагов и варианты OEM-интеграции."
+    },
+    "Displayed PMMA; alternative materials subject to project assessment.": {
+      "es": "PMMA mostrado; otros materiales sujetos a evaluación del proyecto.",
+      "fr": "PMMA présenté ; autres matériaux soumis à l’évaluation du projet.",
+      "ko": "표시 재료는 PMMA이며, 다른 재료는 프로젝트별 평가가 필요합니다.",
+      "ru": "Представлен PMMA; другие материалы подлежат оценке для проекта."
+    },
+    "Displayed ceramic piston; alternative materials subject to project assessment.": {
+      "es": "Pistón cerámico mostrado; otros materiales sujetos a evaluación del proyecto.",
+      "fr": "Piston céramique présenté ; autres matériaux soumis à l’évaluation du projet.",
+      "ko": "표시 구성은 세라믹 피스톤이며, 다른 재료는 프로젝트별 평가가 필요합니다.",
+      "ru": "Представлен керамический поршень; другие материалы подлежат оценке для проекта."
+    },
+    "Related selection tasks include metered reaction-liquid addition, analyzer reagent dispensing, {0}, water-analysis reagent metering.": {
+      "es": "Otras tareas incluyen adición dosificada de líquido de reacción, dispensación de reactivos en analizadores, {0} y dosificación de reactivos para análisis de agua.",
+      "fr": "Les autres tâches comprennent l’ajout dosé de liquide réactionnel, la distribution de réactifs dans les analyseurs, {0} et le dosage de réactifs pour l’analyse de l’eau.",
+      "ko": "관련 용도에는 반응액 정량 첨가, 분석기 시약 주입, {0} 및 수질 분석 시약 계량이 포함됩니다.",
+      "ru": "Связанные задачи: дозированное добавление реакционной жидкости, дозирование реагентов в анализаторах, {0} и дозирование реагентов для анализа воды."
+    },
+    "Related selection tasks include diluent and buffer dispensing, analyzer reagent dispensing, {0}, water-analysis reagent metering.": {
+      "es": "Otras tareas incluyen dispensación de diluyente y tampón, dispensación de reactivos en analizadores, {0} y dosificación de reactivos para análisis de agua.",
+      "fr": "Les autres tâches comprennent la distribution de diluant et de tampon, la distribution de réactifs dans les analyseurs, {0} et le dosage de réactifs pour l’analyse de l’eau.",
+      "ko": "관련 용도에는 희석액 및 완충액 분주, 분석기 시약 주입, {0} 및 수질 분석 시약 계량이 포함됩니다.",
+      "ru": "Связанные задачи: распределение разбавителя и буфера, дозирование реагентов в анализаторах, {0} и дозирование реагентов для анализа воды."
+    },
+    "{0}": {
+      "es": "{0}",
+      "fr": "{0}",
+      "ko": "{0}",
+      "ru": "{0}"
+    },
+    "{0}/{1}-{2} UNF / M{3}": {
+      "es": "{0}/{1}-{2} UNF / M{3}",
+      "fr": "{0}/{1}-{2} UNF / M{3}",
+      "ko": "{0}/{1}-{2} UNF / M{3}",
+      "ru": "{0}/{1}-{2} UNF / M{3}"
+    },
+    "{0} mm": {
+      "es": "{0} mm",
+      "fr": "{0} mm",
+      "ko": "{0} mm",
+      "ru": "{0} mm"
+    },
+    "{0} RPM": {
+      "es": "{0} RPM",
+      "fr": "{0} RPM",
+      "ko": "{0} RPM",
+      "ru": "{0} RPM"
+    },
+    "{0}° / {1}°": {
+      "es": "{0}° / {1}°",
+      "fr": "{0}° / {1}°",
+      "ko": "{0}° / {1}°",
+      "ru": "{0}° / {1}°"
+    },
+    "≤{0}%": {
+      "es": "≤{0}%",
+      "fr": "≤{0}%",
+      "ko": "≤{0}%",
+      "ru": "≤{0}%"
+    },
+    "<{0} MPa": {
+      "es": "<{0} MPa",
+      "fr": "<{0} MPa",
+      "ko": "<{0} MPa",
+      "ru": "<{0} MPa"
+    },
+    "": {
+      "es": "",
+      "fr": "",
+      "ko": "",
+      "ru": ""
+    },
+    "{0} / {1} mm": {
+      "es": "{0} / {1} mm",
+      "fr": "{0} / {1} mm",
+      "ko": "{0} / {1} mm",
+      "ru": "{0} / {1} mm"
+    },
+    "{0}°": {
+      "es": "{0}°",
+      "fr": "{0}°",
+      "ko": "{0}°",
+      "ru": "{0}°"
+    },
+    "< {0}%": {
+      "es": "< {0}%",
+      "fr": "< {0}%",
+      "ko": "< {0}%",
+      "ru": "< {0}%"
+    },
+    "{0}-{1} UNF": {
+      "es": "{0}-{1} UNF",
+      "fr": "{0}-{1} UNF",
+      "ko": "{0}-{1} UNF",
+      "ru": "{0}-{1} UNF"
+    }
+  }
+}

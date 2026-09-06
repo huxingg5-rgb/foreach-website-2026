@@ -78,7 +78,7 @@ const LOCAL_APPLICATION_IMAGE_PATHS = {
 /* HOME_ANALYTICAL_PRODUCT_LINKS_START */
 const ANALYTICAL_PRODUCT_TAG_LINKS: Record<string, string> = {
   "high-pressure-valve": "/products/valves/high-pressure-valves",
-  "piston-pump": "/products/pumps/plunger-pumps/ea-100-pmma",
+  "piston-pump": "/products/pumps/piston-pump/ea-100-pmma",
   "pressure-sensor": "/products/control/pdm5-pressure-sensor",
   "peek-tubing": "/products/tubing/peek-tubing",
 };
@@ -369,8 +369,8 @@ const HOME_FLOW_PRODUCT_PATHS: Record<string, string> = {
   "pipetting-pump": "/products/pumps/pipetting-pumps",
   "pipette-pump": "/products/pumps/pipetting-pumps",
   "diaphragm-pump": "/products/pumps/miniature-diaphragm-pumps",
-  "piston-pump": "/products/pumps/plunger-pumps",
-  "plunger-pump": "/products/pumps/plunger-pumps",
+  "piston-pump": "/products/pumps/piston-pump",
+  "plunger-pump": "/products/pumps/piston-pump",
   "valveless-pump": "/products/pumps/valveless-pumps",
 
   "multi-channel-pump": "/products/pumps/syringe-pumps",

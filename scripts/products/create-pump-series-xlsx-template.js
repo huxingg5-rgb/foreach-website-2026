@@ -70,7 +70,7 @@ writeWorkbook(pumpWorkbookPath, [
       {
         pumpTypeSlug: "plunger-pumps",
         pumpTypeNameZh: "柱塞泵",
-        pumpTypeNameEn: "Plunger Pumps",
+        pumpTypeNameEn: "Piston Pump",
         detailMode: "custom_inquiry",
         showModelDefault: "no",
         selectorMode: "requirement_guide",
@@ -116,7 +116,7 @@ writeWorkbook(pumpWorkbookPath, [
         routeSlug: "ea-100-pmma",
         categorySlug: "pumps",
         pumpTypeSlug: "plunger-pumps",
-        seriesSlug: "ea-standard-piston-pumps",
+        seriesSlug: "standard-piston-pump",
         seriesCode: "EA",
         internalModelRef: "EA-100-PMMA",
         capacity: "100 µL",
@@ -131,7 +131,7 @@ writeWorkbook(pumpWorkbookPath, [
         routeSlug: "ea-250-pmma",
         categorySlug: "pumps",
         pumpTypeSlug: "plunger-pumps",
-        seriesSlug: "ea-standard-piston-pumps",
+        seriesSlug: "standard-piston-pump",
         seriesCode: "EA",
         internalModelRef: "EA-250-PMMA",
         capacity: "250 µL",
@@ -146,7 +146,7 @@ writeWorkbook(pumpWorkbookPath, [
         routeSlug: "sm-100-pmma",
         categorySlug: "pumps",
         pumpTypeSlug: "plunger-pumps",
-        seriesSlug: "sm-miniature-piston-pumps",
+        seriesSlug: "miniature-piston-pump",
         seriesCode: "SM",
         internalModelRef: "SM-100-PMMA",
         capacity: "100 µL",
@@ -163,27 +163,27 @@ writeWorkbook(pumpWorkbookPath, [
       {
         productId: "ea-100-pmma",
         routeSlug: "ea-100-pmma",
-        canonicalPath: "/products/pumps/plunger-pumps/ea-100-pmma",
-        detailHref: "/products/pumps/plunger-pumps/ea-100-pmma",
-        legacyRedirectFrom: "/products/pumps/plunger-pumps/ea-100-pmma/",
+        canonicalPath: "/products/pumps/piston-pump/ea-100-pmma",
+        detailHref: "/products/pumps/piston-pump/ea-100-pmma",
+        legacyRedirectFrom: "/products/pumps/piston-pump/ea-100-pmma/",
         trailingSlashPolicy: "no_trailing_slash",
         routeEnabled: "yes",
       },
       {
         productId: "ea-250-pmma",
         routeSlug: "ea-250-pmma",
-        canonicalPath: "/products/pumps/plunger-pumps/ea-250-pmma",
-        detailHref: "/products/pumps/plunger-pumps/ea-250-pmma",
-        legacyRedirectFrom: "/products/pumps/plunger-pumps/ea-250-pmma/",
+        canonicalPath: "/products/pumps/piston-pump/ea-250-pmma",
+        detailHref: "/products/pumps/piston-pump/ea-250-pmma",
+        legacyRedirectFrom: "/products/pumps/piston-pump/ea-250-pmma/",
         trailingSlashPolicy: "no_trailing_slash",
         routeEnabled: "yes",
       },
       {
         productId: "sm-100-pmma",
         routeSlug: "sm-100-pmma",
-        canonicalPath: "/products/pumps/plunger-pumps/sm-100-pmma",
-        detailHref: "/products/pumps/plunger-pumps/sm-100-pmma",
-        legacyRedirectFrom: "/products/pumps/plunger-pumps/sm-100-pmma/",
+        canonicalPath: "/products/pumps/piston-pump/sm-100-pmma",
+        detailHref: "/products/pumps/piston-pump/sm-100-pmma",
+        legacyRedirectFrom: "/products/pumps/piston-pump/sm-100-pmma/",
         trailingSlashPolicy: "no_trailing_slash",
         routeEnabled: "yes",
       },
@@ -264,7 +264,7 @@ writeWorkbook(pumpWorkbookPath, [
         metaDescription:
           "EA-100-PMMA 柱塞泵适用于精密液体分配、自动化分析仪器和 IVD 液路系统。柱塞泵为定制品，具体方案需根据应用确认。",
         h1: "EA-100-PMMA 柱塞泵",
-        canonicalPath: "/products/pumps/plunger-pumps/ea-100-pmma",
+        canonicalPath: "/products/pumps/piston-pump/ea-100-pmma",
         robots: "index,follow",
         ogTitle: "EA-100-PMMA 柱塞泵",
         ogDescription:
@@ -278,7 +278,7 @@ writeWorkbook(pumpWorkbookPath, [
         metaDescription:
           "100 µL PMMA plunger pump for precision dispensing, automated analyzers, IVD instruments, and custom fluidic systems. Final configuration is confirmed by FOREACH engineering.",
         h1: "100 µL PMMA Plunger Pump for Precision Dispensing",
-        canonicalPath: "/products/pumps/plunger-pumps/ea-100-pmma",
+        canonicalPath: "/products/pumps/piston-pump/ea-100-pmma",
         robots: "index,follow",
         ogTitle: "100 µL PMMA Plunger Pump for Precision Dispensing",
         ogDescription:
@@ -291,7 +291,7 @@ writeWorkbook(pumpWorkbookPath, [
         metaDescription:
           "EA-250-PMMA 柱塞泵适用于中小容量精密分配和自动化液路集成，最终方案需根据应用定制确认。",
         h1: "EA-250-PMMA 柱塞泵",
-        canonicalPath: "/products/pumps/plunger-pumps/ea-250-pmma",
+        canonicalPath: "/products/pumps/piston-pump/ea-250-pmma",
         robots: "index,follow",
         ogTitle: "EA-250-PMMA 柱塞泵",
         ogDescription:
@@ -305,7 +305,7 @@ writeWorkbook(pumpWorkbookPath, [
         metaDescription:
           "250 µL PMMA plunger pump for precision dispensing, fluid transfer, and custom liquid handling systems.",
         h1: "250 µL PMMA Plunger Pump for Precision Dispensing",
-        canonicalPath: "/products/pumps/plunger-pumps/ea-250-pmma",
+        canonicalPath: "/products/pumps/piston-pump/ea-250-pmma",
         robots: "index,follow",
         ogTitle: "250 µL PMMA Plunger Pump for Precision Dispensing",
         ogDescription:
@@ -318,7 +318,7 @@ writeWorkbook(pumpWorkbookPath, [
         metaDescription:
           "SM-100-PMMA 微型柱塞泵适用于空间紧凑型仪器中的精密液体分配和液路集成。",
         h1: "SM-100-PMMA 微型柱塞泵",
-        canonicalPath: "/products/pumps/plunger-pumps/sm-100-pmma",
+        canonicalPath: "/products/pumps/piston-pump/sm-100-pmma",
         robots: "index,follow",
         ogTitle: "SM-100-PMMA 微型柱塞泵",
         ogDescription:
@@ -332,7 +332,7 @@ writeWorkbook(pumpWorkbookPath, [
         metaDescription:
           "100 µL miniature PMMA plunger pump for compact automated instruments and custom fluidic systems.",
         h1: "100 µL Miniature PMMA Plunger Pump for Compact Fluidic Systems",
-        canonicalPath: "/products/pumps/plunger-pumps/sm-100-pmma",
+        canonicalPath: "/products/pumps/piston-pump/sm-100-pmma",
         robots: "index,follow",
         ogTitle:
           "100 µL Miniature PMMA Plunger Pump for Compact Fluidic Systems",
@@ -444,7 +444,7 @@ writeWorkbook(pumpWorkbookPath, [
       {
         productId: "ea-100-pmma",
         pumpTypeSlug: "plunger-pumps",
-        seriesSlug: "ea-standard-piston-pumps",
+        seriesSlug: "standard-piston-pump",
         cardTitleZh: "EA-100-PMMA 柱塞泵",
         cardTitleEn: "100 µL PMMA Plunger Pump",
         cardSubtitleZh: "适用于精密液体分配与自动化仪器液路集成",
@@ -459,7 +459,7 @@ writeWorkbook(pumpWorkbookPath, [
         cardBadges: "Custom|Precision Dispensing|PMMA",
         cardImage:
           "/images/products/pumps/plunger-pump/ea/ea-100-pmma-card.webp",
-        detailHref: "/products/pumps/plunger-pumps/ea-100-pmma",
+        detailHref: "/products/pumps/piston-pump/ea-100-pmma",
         showInSelection: "yes",
         sort: 100,
       },

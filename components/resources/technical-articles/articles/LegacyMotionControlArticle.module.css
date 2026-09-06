@@ -1,0 +1,290 @@
+.article {
+  max-width: 1040px;
+}
+
+.intro {
+  margin: 0 0 28px;
+  padding: 28px 30px;
+  border: 1px solid #dce5ef;
+  border-left: 4px solid var(--news-cyan);
+  background: linear-gradient(135deg, #f5f8fc 0%, #ffffff 78%);
+}
+
+.introLabel,
+.introText {
+  margin: 0;
+}
+
+.introLabel {
+  color: var(--news-blue);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.introText {
+  margin-top: 8px;
+  color: var(--news-text);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.85;
+}
+
+.toc {
+  margin: 0 0 48px;
+  padding: 26px 30px;
+  border: 1px solid #e1e7ef;
+}
+
+.tocTitle {
+  margin: 0 0 14px;
+  color: var(--news-text);
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.toc ol {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.toc a {
+  display: flex;
+  gap: 11px;
+  padding: 10px 0;
+  border-bottom: 1px solid #edf1f5;
+  color: #415168;
+  font-size: 15px;
+  line-height: 1.55;
+  text-decoration: none;
+}
+
+.toc a span {
+  color: #8794a6;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.section {
+  margin: 0 !important;
+  padding: 42px 0 48px;
+  border-top: 1px solid #dce5ef;
+  scroll-margin-top: 110px;
+}
+
+.sectionHeader {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 15px;
+  align-items: start;
+  margin-bottom: 24px;
+}
+
+.sectionHeader > span {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid #cbd7e5;
+  color: var(--news-blue);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.sectionHeader h2 {
+  margin: 2px 0 0;
+  color: var(--news-blue);
+  font-size: clamp(26px, 2.2vw, 32px);
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.copy,
+.tableWrap,
+.figureGrid {
+  margin-left: 57px;
+}
+
+.copy p {
+  color: #425168;
+  font-size: 17px;
+  line-height: 1.95;
+}
+
+.tableWrap {
+  width: calc(100% - 57px) !important;
+  margin-top: 28px !important;
+  margin-bottom: 0 !important;
+}
+
+.figureGrid {
+  display: grid;
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.figure {
+  margin: 0;
+  padding: 16px;
+  border: 1px solid #dce5ef;
+  background: #f8fafc;
+}
+
+.figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #ffffff;
+  object-fit: contain;
+}
+
+.figure figcaption {
+  margin-top: 11px;
+  color: #6b798d;
+  font-size: 13px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.related {
+  margin: 26px 0 0 !important;
+  padding: 34px !important;
+  border: 1px solid #dce5ef;
+  background: #f7f9fc;
+}
+
+.relatedEyebrow {
+  margin: 0 0 6px !important;
+  color: #6c7a8e !important;
+  font-size: 13px !important;
+  font-weight: 700;
+}
+
+.related h2 {
+  margin-bottom: 22px;
+  font-size: 28px;
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.relatedCard {
+  display: flex;
+  min-height: 158px;
+  padding: 22px 24px;
+  border: 1px solid #dce5ef;
+  background: #ffffff;
+  color: inherit;
+  flex-direction: column;
+  text-decoration: none;
+  transition: border-color 0.18s ease, transform 0.18s ease;
+}
+
+.relatedCard:hover,
+.relatedCard:focus-visible {
+  border-color: var(--news-blue);
+  transform: translateY(-2px);
+}
+
+.relatedCard > span {
+  color: #748196;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.relatedCard strong {
+  margin: 10px 0 18px;
+  color: var(--news-blue);
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.relatedCard small {
+  margin-top: auto;
+  color: #42536c;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.references {
+  margin: 34px 0 0 !important;
+  padding-top: 32px;
+  border-top: 1px solid #dce5ef;
+}
+
+.references h2 {
+  margin-bottom: 14px;
+  font-size: 24px;
+}
+
+.references ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.references a {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  color: var(--news-blue);
+  font-size: 15px;
+  font-weight: 700;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 760px) {
+  .intro,
+  .toc {
+    padding: 22px 20px;
+  }
+
+  .introText {
+    font-size: 16px;
+  }
+
+  .toc ol,
+  .relatedGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .sectionHeader {
+    grid-template-columns: 36px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .sectionHeader > span {
+    width: 36px;
+    height: 36px;
+  }
+
+  .sectionHeader h2 {
+    font-size: 23px;
+  }
+
+  .copy,
+  .figureGrid {
+    margin-left: 0;
+  }
+
+  .copy p {
+    font-size: 16px;
+    line-height: 1.88;
+  }
+
+  .tableWrap {
+    width: 100% !important;
+    margin-left: 0;
+  }
+
+  .related {
+    padding: 26px 20px !important;
+  }
+}

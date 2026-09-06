@@ -51,7 +51,7 @@ const created = [];
 const unchanged = [];
 
 for (const slug of slugs) {
-  const targetHref = `/products/pumps/plunger-pumps/${slug}`;
+  const targetHref = `/products/pumps/piston-pump/${slug}`;
   const routeFile = path.join(root, "app/products/probes", slug, "page.tsx");
 
   const pageCode = `const targetHref = "${targetHref}";
@@ -114,7 +114,7 @@ report.push("本次为 EA / SM / TM 柱塞泵型号生成静态兼容页，使�
 report.push("\n## 2. 正确跳转规则\n");
 report.push("```txt");
 for (const slug of slugs) {
-  report.push(`/products/probes/${slug}  ->  /products/pumps/plunger-pumps/${slug}`);
+  report.push(`/products/probes/${slug}  ->  /products/pumps/piston-pump/${slug}`);
 }
 report.push("```");
 
@@ -137,7 +137,7 @@ if (unchanged.length > 0) {
 }
 
 report.push("\n## 5. 后续验证\n");
-report.push("重新启动 dev 后，即使访问 `/products/probes/ea-100-pmma`，也应该自动跳到 `/products/pumps/plunger-pumps/ea-100-pmma`，不再出现 `generateStaticParams` missing param 报错。");
+report.push("重新启动 dev 后，即使访问 `/products/probes/ea-100-pmma`，也应该自动跳到 `/products/pumps/piston-pump/ea-100-pmma`，不再出现 `generateStaticParams` missing param 报错。");
 
 fs.writeFileSync(reportFile, report.join("\n"), "utf8");
 

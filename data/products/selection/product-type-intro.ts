@@ -1,3 +1,4 @@
+import { getPistonPumpIntroCopy } from "./piston-pump-series-copy";
 /* =========================================================
    product-type-intro.ts
    恒永达官网｜产品中心产品种类介绍数据
@@ -52,15 +53,10 @@ const PRODUCT_TYPE_INTRO_LOCALES: SelectionLocale[] = [
 
 export const productTypeIntroMap: Record<string, ProductTypeIntroContent> = {
   "pumps:plunger-pump": {
-    title: "柱塞泵系列",
-    paragraphs: [
-      "恒永达柱塞泵系列专为自动化分析仪器中的精密液体处理而设计，适用于体外诊断、生命科学、实验室自动化及分析检测设备中的试剂加注、样本分配、定量输送和微量液体控制场景。",
-      "产品覆盖 EA 常规柱塞泵、SM 微型柱塞泵和 TM 超微型柱塞泵等平台，可根据仪器空间、加液量程、泵头材质、接口方式和系统集成需求进行选型。",
-      "产品卡片展示常用基础型号，完整规格参数、性能曲线和可选配置可进入详情页查看；如有特殊工况或非标需求，可通过选型清单提交给工程师进一步确认。",
-    ],
+    ...getPistonPumpIntroCopy("category", "zh"),
     image: {
       src: "/images/products/pumps/product-types/plunger-pumps/foreach-plunger-pumps-product-type-intro.webp",
-      alt: "FOREACH 柱塞泵系列产品图，用于 IVD、生命科学和实验室自动化设备中的精密液体处理",
+      alt: getPistonPumpIntroCopy("category", "zh").imageAlt,
     },
   },
 
@@ -132,59 +128,6 @@ export const productTypeIntroMap: Record<string, ProductTypeIntroContent> = {
 };
 
 const productTypeIntroI18nMap: Record<string, ProductTypeIntroLocaleMap> = {
-  "pumps:plunger-pump": {
-    en: {
-      title: "Plunger Pump Series",
-      paragraphs: [
-        "FOREACH plunger pumps are designed for precision liquid handling in automated analytical instruments, including IVD, life science, laboratory automation, and analytical testing systems.",
-        "The range covers EA standard plunger pumps, SM miniature plunger pumps, and TM ultra-compact plunger pumps, supporting selection by instrument space, dispensing volume, pump head material, fluidic port, and system integration needs.",
-        "Product cards show common base models. For full specifications, performance curves, and optional configurations, open the detail page or submit a selection request for engineering confirmation.",
-      ],
-      imageAlt:
-        "FOREACH plunger pump series for precision liquid handling in IVD, life science, and laboratory automation instruments",
-    },
-    es: {
-      title: "Serie de bombas de émbolo",
-      paragraphs: [
-        "Las bombas de émbolo FOREACH están diseñadas para manipulación precisa de líquidos en instrumentos analíticos automatizados, IVD, ciencias de la vida, automatización de laboratorio y equipos de análisis.",
-        "La serie incluye las plataformas EA estándar, SM miniatura y TM ultracompacta. La selección se realiza según el espacio disponible, el volumen de dosificación, el material del cabezal, el puerto fluídico y los requisitos de integración del sistema.",
-        "Las tarjetas muestran modelos base habituales. Para especificaciones completas, curvas de rendimiento y configuraciones opcionales, consulte la página de detalle o envíe una solicitud de selección para confirmación de ingeniería.",
-      ],
-      imageAlt:
-        "Serie de bombas de émbolo FOREACH para manipulación precisa de líquidos en instrumentos IVD, ciencias de la vida y automatización de laboratorio",
-    },
-    fr: {
-      title: "Série de pompes à piston",
-      paragraphs: [
-        "Les pompes à piston FOREACH sont conçues pour la manipulation précise de liquides dans les instruments d'analyse automatisés, l'IVD, les sciences de la vie, l'automatisation de laboratoire et les systèmes de test analytique.",
-        "La gamme comprend les plateformes EA standard, SM miniature et TM ultra-compacte. La sélection s'effectue selon l'espace disponible, le volume de dosage, le matériau de la tête de pompe, le raccord fluidique et les besoins d'intégration du système.",
-        "Les cartes produits présentent les modèles de base courants. Pour les spécifications complètes, les courbes de performance et les options, consultez la page de détail ou envoyez une demande de sélection pour validation technique.",
-      ],
-      imageAlt:
-        "Série de pompes à piston FOREACH pour la manipulation précise de liquides dans l'IVD, les sciences de la vie et l'automatisation de laboratoire",
-    },
-    ko: {
-      title: "플런저 펌프 시리즈",
-      paragraphs: [
-        "FOREACH 플런저 펌프는 IVD, 생명과학, 실험실 자동화 및 분석 장비의 정밀 액체 처리 공정에 맞춰 설계되었습니다.",
-        "EA 표준형, SM 소형 및 TM 초소형 플런저 펌프 플랫폼을 제공하며 장비 공간, 분주 용량, 펌프 헤드 소재, 유체 포트 및 시스템 통합 조건에 따라 선택할 수 있습니다.",
-        "제품 카드는 일반적인 기본 모델을 보여줍니다. 전체 사양, 성능 곡선, 선택 구성을 확인하려면 상세 페이지를 보거나 엔지니어링 확인을 위해 선정 요청을 제출하십시오.",
-      ],
-      imageAlt:
-        "IVD, 생명과학 및 실험실 자동화 장비의 정밀 액체 처리를 위한 FOREACH 플런저 펌프 시리즈",
-    },
-    ru: {
-      title: "Серия плунжерных насосов",
-      paragraphs: [
-        "Плунжерные насосы FOREACH предназначены для точной работы с жидкостями в автоматизированных аналитических приборах, системах IVD, биологических исследований и лабораторной автоматизации.",
-        "Линейка включает стандартную платформу EA, миниатюрную SM и сверхкомпактную TM. Подбор выполняется по месту установки, объему дозирования, материалу головки, типу гидравлического порта и требованиям системной интеграции.",
-        "Карточки показывают распространенные базовые модели. Полные спецификации, кривые производительности и опции доступны на странице деталей либо через запрос подбора для инженерного подтверждения.",
-      ],
-      imageAlt:
-        "Серия плунжерных насосов FOREACH для точной работы с жидкостями в системах IVD, биологических исследований и лабораторной автоматизации",
-    },
-  },
-
   "pumps:diaphragm-pump": {
     en: {
       title: "Miniature Diaphragm Pumps",
@@ -641,6 +584,11 @@ export function getProductTypeIntroByIds(
 
   const activeLocale = getRuntimeLocale(locale);
 
+  if (key === "pumps:plunger-pump") {
+    const copy = getPistonPumpIntroCopy("category", activeLocale);
+    return { ...baseIntro, ...copy, image: { ...baseIntro.image, alt: copy.imageAlt } };
+  }
+
   if (activeLocale === "zh") {
     return baseIntro;
   }
@@ -661,6 +609,25 @@ export function getProductTypeIntroByIds(
       alt: localizedCopy.imageAlt,
     },
   };
+}
+
+export function getPlungerPumpCategoryIntro(
+  seriesValue: unknown,
+  locale: SelectionLocale = "zh"
+) {
+  const activeLocale = getRuntimeLocale(locale);
+  const value = String(seriesValue || "");
+  const series = value === "EA 常规柱塞泵"
+    ? "ea"
+    : value === "SM 微型柱塞泵"
+      ? "sm"
+      : value === "TM 超微型柱塞泵"
+        ? "tm"
+        : null;
+
+  if (!series) return null;
+  const copy = getPistonPumpIntroCopy(series, activeLocale);
+  return { ...copy, image: { ...productTypeIntroMap["pumps:plunger-pump"].image, alt: copy.imageAlt } };
 }
 
 export function getDiaphragmPumpCategoryIntro(

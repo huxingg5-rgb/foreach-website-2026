@@ -1,3 +1,4 @@
+import { getPistonPumpRedirect } from "../../lib/seo/piston-pump-migration";
 ﻿import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
@@ -769,7 +770,7 @@ async function main() {
     ...productItems,
     ...compatibleItems,
     ...datasheetItems,
-  ]);
+  ].map(item => ({ ...item, href: getPistonPumpRedirect(item.href) || item.href })));
   const invalidProductImages = finalItems.filter((item) => {
     if (item.module !== "products" || !item.image) {
       return item.module === "products";

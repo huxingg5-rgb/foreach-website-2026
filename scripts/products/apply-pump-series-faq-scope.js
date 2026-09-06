@@ -208,8 +208,17 @@ function matchFaqToRecord(faq, record, content, locale) {
 }
 
 function buildFaqsForRecord(faqRows, record, content, locale) {
-  const matched = faqRows
-    .filter((faq) => matchFaqToRecord(faq, record, content, locale))
+  const matches = faqRows.filter((faq) =>
+    matchFaqToRecord(faq, record, content, locale)
+  );
+  // Curated EA detail FAQs replace generic entries only for this product.
+  const eaOverrides = getRecordProductId(record, content).startsWith("ea-")
+    ? matches.filter((faq) => faq.scope === "product" && faq.faqId.startsWith("ea-detail-"))
+    : [];
+  const compactOverrides = /^(sm|tm)-/.test(getRecordProductId(record, content))
+    ? matches.filter((faq) => faq.scope === "product" && faq.faqId.startsWith("compact-detail-"))
+    : [];
+  const matched = (eaOverrides.length > 0 ? eaOverrides : compactOverrides.length > 0 ? compactOverrides : matches)
     .map((faq) => ({
       question: faq.question,
       answer: faq.answer,

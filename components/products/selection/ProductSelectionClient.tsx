@@ -1,5 +1,7 @@
 "use client";
 
+import { normalizePistonPumpPublicName } from "@/data/products/piston-pump-public-name";
+
 import { Suspense, useCallback, useEffect, useId, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import ResourceSearchBar from "@/components/resources/ResourceSearchBar";
@@ -22,6 +24,7 @@ import {
 } from "@/data/products/selection/product-route-map";
 import {
   getDiaphragmPumpCategoryIntro,
+  getPlungerPumpCategoryIntro,
   getProductTypeIntroByIds,
 } from "@/data/products/selection/product-type-intro";
 import { getProductFilterOptions } from "@/data/products/selection/filter-rules/product-filter-rules.index";
@@ -654,12 +657,12 @@ const TARGET_UI_LABEL_TRANSLATIONS: Record<
     Fittings: "Racores",
     Tubing: "Tubos",
     Control: "Control",
-    "Plunger Pump": "Bomba de émbolo",
+    "Piston Pump": "Bomba de pistón",
     "Diaphragm Pump": "Bomba de diafragma",
     "Pipette Pump": "Bomba de pipeteo",
     "Valveless Pump": "Bomba sin válvulas",
     "Syringe Pump": "Bomba de jeringa",
-    "EA Standard Plunger Pump": "Bomba de émbolo estándar EA",
+    "EA Standard Piston Pump": "Bomba de pistón estándar EA",
     Series: "Serie",
     Volume: "Volumen",
     "Pump Head Material": "Material del cabezal de la bomba",
@@ -717,12 +720,12 @@ const TARGET_UI_LABEL_TRANSLATIONS: Record<
     Fittings: "Raccords",
     Tubing: "Tubes",
     Control: "Commande",
-    "Plunger Pump": "Pompe à piston",
+    "Piston Pump": "Pompe à piston",
     "Diaphragm Pump": "Pompe à membrane",
     "Pipette Pump": "Pompe de pipetage",
     "Valveless Pump": "Pompe sans clapet",
     "Syringe Pump": "Pompe à seringue",
-    "EA Standard Plunger Pump": "Pompe à piston standard EA",
+    "EA Standard Piston Pump": "Pompe à piston standard EA",
     Series: "Série",
     Volume: "Volume",
     "Pump Head Material": "Matériau de la tête de pompe",
@@ -780,12 +783,12 @@ const TARGET_UI_LABEL_TRANSLATIONS: Record<
     Fittings: "피팅",
     Tubing: "튜빙",
     Control: "제어",
-    "Plunger Pump": "플런저 펌프",
+    "Piston Pump": "피스톤 펌프",
     "Diaphragm Pump": "다이어프램 펌프",
     "Pipette Pump": "피펫팅 펌프",
     "Valveless Pump": "밸브리스 펌프",
     "Syringe Pump": "시린지 펌프",
-    "EA Standard Plunger Pump": "EA 표준 플런저 펌프",
+    "EA Standard Piston Pump": "EA 표준 피스톤 펌프",
     Series: "시리즈",
     Volume: "용량",
     "Pump Head Material": "펌프 헤드 재질",
@@ -843,12 +846,12 @@ const TARGET_UI_LABEL_TRANSLATIONS: Record<
     Fittings: "Фитинги",
     Tubing: "Трубки",
     Control: "Управление",
-    "Plunger Pump": "Плунжерный насос",
+    "Piston Pump": "Поршневой насос",
     "Diaphragm Pump": "Мембранный насос",
     "Pipette Pump": "Пипетирующий насос",
     "Valveless Pump": "Бесклапанный насос",
     "Syringe Pump": "Шприцевой насос",
-    "EA Standard Plunger Pump": "Стандартный плунжерный насос EA",
+    "EA Standard Piston Pump": "Стандартный поршневой насос EA",
     Series: "Серия",
     Volume: "Объем",
     "Pump Head Material": "Материал головки насоса",
@@ -901,6 +904,7 @@ const TARGET_UI_LABEL_TRANSLATIONS: Record<
 };
 
 function getTargetUiLabel(locale: SelectionLocale, value: string) {
+  value = normalizePistonPumpPublicName(value);
   if (locale === "zh" || locale === "en") return value;
 
   return TARGET_UI_LABEL_TRANSLATIONS[locale]?.[value] || value;
@@ -1000,6 +1004,7 @@ type ProductTypeIntroCopyProps = {
   paragraphs: string[];
   locale: SelectionLocale;
   isPrimaryHeading: boolean;
+  preserveCollapsedContentInDom?: boolean;
   onFilterAction: (filterKey: SelectionFilterKey, value: string) => void;
   selectedFilters: SelectedFilterMap;
 };
@@ -1009,13 +1014,16 @@ function ProductTypeIntroCopy({
   paragraphs,
   locale,
   isPrimaryHeading,
+  preserveCollapsedContentInDom = false,
   onFilterAction,
   selectedFilters,
 }: ProductTypeIntroCopyProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const contentId = useId();
   const desktopCollapsedParagraphCount = 2;
-  const hasHiddenParagraphs = paragraphs.length > 1;
+  const hasHiddenParagraphs = preserveCollapsedContentInDom
+    ? paragraphs.length > desktopCollapsedParagraphCount
+    : paragraphs.length > 1;
   const hasDesktopHiddenParagraphs =
     paragraphs.length > desktopCollapsedParagraphCount;
   const disclosureText = PRODUCT_TYPE_INTRO_DISCLOSURE_TEXT[locale];
@@ -1028,6 +1036,10 @@ function ProductTypeIntroCopy({
         hasHiddenParagraphs && !hasDesktopHiddenParagraphs
           ? " product-type-intro-copy--mobile-collapse-only"
           : ""
+      }${
+        preserveCollapsedContentInDom
+          ? " product-type-intro-copy--seo-preserved"
+          : ""
       }${hasHiddenParagraphs && isExpanded ? " is-expanded" : ""}`}
     >
       {isPrimaryHeading ? (
@@ -1037,22 +1049,37 @@ function ProductTypeIntroCopy({
       )}
 
       <div className="product-type-intro-paragraphs" id={contentId}>
-        {paragraphs.map((paragraph, index) => (
-          <p
-            hidden={
-              hasDesktopHiddenParagraphs &&
-              !isExpanded &&
-              index >= desktopCollapsedParagraphCount
-            }
-            key={paragraph}
-          >
-            {renderProductTypeIntroParagraph(
-              paragraph,
-              onFilterAction,
-              selectedFilters,
-            )}
-          </p>
-        ))}
+        {paragraphs.map((paragraph, index) => {
+          const isCollapsedSeoParagraph =
+            preserveCollapsedContentInDom &&
+            index >= desktopCollapsedParagraphCount;
+
+          return (
+            <p
+              aria-hidden={
+                isCollapsedSeoParagraph && !isExpanded ? true : undefined
+              }
+              className={
+                isCollapsedSeoParagraph
+                  ? "product-type-intro-paragraph--collapsed"
+                  : undefined
+              }
+              hidden={
+                !preserveCollapsedContentInDom &&
+                hasDesktopHiddenParagraphs &&
+                !isExpanded &&
+                index >= desktopCollapsedParagraphCount
+              }
+              key={paragraph}
+            >
+              {renderProductTypeIntroParagraph(
+                paragraph,
+                onFilterAction,
+                selectedFilters,
+              )}
+            </p>
+          );
+        })}
       </div>
 
       {hasHiddenParagraphs ? (
@@ -1484,7 +1511,7 @@ function findPlungerPumpDetailSlug(product: ProductSelectionProduct) {
 }
 
 
-/* ===== FOREACH plunger pump model detail href helpers START ===== */
+/* ===== FOREACH piston pump model detail href helpers START ===== */
 
 function cleanPlungerHrefText(value: unknown) {
   return String(value || "").trim();
@@ -1551,7 +1578,7 @@ function getPlungerPumpModelSlugForDetailHref(product: ProductSelectionProduct) 
   return normalizePlungerModelSlug(getSelectionLocalizedText(product.cardTitle, "en") || getSelectionLocalizedText(product.cardTitle, "zh") || product.productId || product.detailSlug);
 }
 
-/* ===== FOREACH plunger pump model detail href helpers END ===== */
+/* ===== FOREACH piston pump model detail href helpers END ===== */
 
 
 
@@ -1587,7 +1614,7 @@ function normalizeFinalProductDetailHref(
     ?.toLowerCase();
 
   if (rawSlug && /^(ea|sm|tm)-\d+-(pmma|peek)$/.test(rawSlug)) {
-    return `/products/pumps/plunger-pumps/${rawSlug}`;
+    return `/products/pumps/piston-pump/${rawSlug}`;
   }
 
   if (
@@ -1595,7 +1622,7 @@ function normalizeFinalProductDetailHref(
     hrefSlug &&
     /^(ea|sm|tm)-\d+-(pmma|peek)$/.test(hrefSlug)
   ) {
-    return `/products/pumps/plunger-pumps/${hrefSlug}`;
+    return `/products/pumps/piston-pump/${hrefSlug}`;
   }
 
   return rawHref;
@@ -2429,7 +2456,7 @@ function makeDetailHref(product: ProductSelectionProduct) {
         ""
     ).trim();
 
-    if (rawHref.includes("/products/pumps/plunger-pumps/")) {
+    if (rawHref.includes("/products/pumps/piston-pump/")) {
       return rawHref;
     }
 
@@ -2445,7 +2472,7 @@ function makeDetailHref(product: ProductSelectionProduct) {
       ?.toLowerCase();
 
     if (rawSlug && /^(ea|sm|tm)-\d+-(pmma|peek)$/.test(rawSlug)) {
-      return `/products/pumps/plunger-pumps/${rawSlug}`;
+      return `/products/pumps/piston-pump/${rawSlug}`;
     }
 
     const textForModel = [
@@ -2462,7 +2489,7 @@ function makeDetailHref(product: ProductSelectionProduct) {
     const modelMatch = textForModel.match(/\b(ea|sm|tm)[-_\s]*(\d{2,5})[-_\s]*(pmma|peek)\b/i);
 
     if (modelMatch) {
-      return `/products/pumps/plunger-pumps/${modelMatch[1].toLowerCase()}-${modelMatch[2]}-${modelMatch[3].toLowerCase()}`;
+      return `/products/pumps/piston-pump/${modelMatch[1].toLowerCase()}-${modelMatch[2]}-${modelMatch[3].toLowerCase()}`;
     }
   }
 
@@ -2870,8 +2897,8 @@ const isDiaphragmPump =
     const slug = getPlungerPumpModelSlugForDetailHref(product);
 
     return slug
-      ? `/products/pumps/plunger-pumps/${slug}`
-      : "/products/pumps/plunger-pumps";
+      ? `/products/pumps/piston-pump/${slug}`
+      : "/products/pumps/piston-pump";
   }
 
   return `/products/${product.categoryId}/${product.detailSlug}`;
@@ -3811,10 +3838,19 @@ export default function ProductSelectionClient({
    * 2. 例如 pumps + plunger-pump 会显示柱塞泵系列介绍
    * 3. 找不到时不显示横幅
    */
+  const activeSeriesFilterValue = Array.from(
+    selectedFilters.filter01 || []
+  )[0];
+  const activeProductTypeIntroVariant =
+    locale === "zh" && activeProductTypeId === "plunger-pump"
+      ? activeSeriesFilterValue
+      : initialFilters?.filter01?.[0];
   const activeProductTypeIntro =
     (activeProductTypeId === "diaphragm-pump"
       ? getDiaphragmPumpCategoryIntro(initialFilters?.filter01?.[0], locale)
-      : null) ||
+      : activeProductTypeId === "plunger-pump"
+        ? getPlungerPumpCategoryIntro(activeSeriesFilterValue, locale)
+        : null) ||
     getProductTypeIntroByIds(activeCategoryId, activeProductTypeId, locale);
   const activeProductTypeIntroHeading = activeProductTypeIntro?.title || "";
   const selectedTagItems = useMemo<ProductSelectionSelectedTag[]>(() => {
@@ -4184,7 +4220,7 @@ export default function ProductSelectionClient({
     /*
      * 说明：
      * 1. 点击产品类型时，优先跳转正式 URL
-     * 2. 柱塞泵会跳到 /products/pumps/plunger-pumps/
+     * 2. 柱塞泵会跳到 /products/pumps/piston-pump/
      * 3. 没配置正式 URL 的类型，才走原来的前端筛选逻辑
      */
     const productTypeHref = getProductTypeHrefByIds(
@@ -4935,9 +4971,9 @@ function isFilterOptionActive(
      * 说明：
      * 1. 判断当前清除的标签是否命中正式系列路由
      * 2. 例如 EA 常规柱塞泵命中：
-     *    /products/pumps/plunger-pumps/ea-standard-piston-pumps/
+     *    /products/pumps/piston-pump/standard-piston-pump/
      * 3. 清除后跳回产品类型页：
-     *    /products/pumps/plunger-pumps/
+     *    /products/pumps/piston-pump/
      */
     const seriesHref = getSeriesHrefByFilterValue(
       activeCategoryId,
@@ -5162,13 +5198,19 @@ function isFilterOptionActive(
                 </div>
 
                 <ProductTypeIntroCopy
-                  isPrimaryHeading={activeProductTypeId === "diaphragm-pump"}
+                  isPrimaryHeading={
+                    activeProductTypeId === "diaphragm-pump" ||
+                    activeProductTypeId === "plunger-pump"
+                  }
                   key={`${activeProductTypeId || "none"}-${
-                    initialFilters?.filter01?.[0] || "default"
+                    activeProductTypeIntroVariant || "default"
                   }-${locale}`}
                   locale={locale}
                   onFilterAction={handleProductTypeIntroFilterAction}
                   paragraphs={activeProductTypeIntro.paragraphs}
+                  preserveCollapsedContentInDom={
+                    locale === "zh" && activeProductTypeId === "plunger-pump"
+                  }
                   selectedFilters={selectedFilters}
                   title={activeProductTypeIntroHeading}
                 />

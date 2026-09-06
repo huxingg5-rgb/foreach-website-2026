@@ -17,7 +17,7 @@ type ProductKind =
 
 const PRODUCT_NAMES: Record<HardTubeTargetLocale, Record<ProductKind, string>> = {
   es: {
-    "plunger-pump": "bomba de émbolo", "diaphragm-pump": "bomba de diafragma", "pipetting-pump": "bomba de pipeteo", "syringe-pump": "bomba de jeringa", "valveless-pump": "bomba sin válvulas",
+    "plunger-pump": "bomba de pistón", "diaphragm-pump": "bomba de diafragma", "pipetting-pump": "bomba de pipeteo", "syringe-pump": "bomba de jeringa", "valveless-pump": "bomba sin válvulas",
     "barbed-fitting": "racor de espiga", "bulkhead-barbed-fitting": "racor de espiga pasamuros", "hard-tube-fitting": "racor para tubo rígido", "thread-to-barbed-fitting": "racor de rosca a espiga", "quick-connect-fitting": "racor de conexión rápida", "luer-fitting": "racor Luer", "female-thread-adapter": "adaptador roscado hembra", filter: "filtro en línea", "check-valve": "válvula antirretorno",
     tubing: "tubo para fluidos", "rotary-valve": "válvula rotativa", "high-pressure-valve": "válvula de alta presión", "solenoid-valve": "electroválvula", "sampling-probe": "aguja de muestreo", "piercing-probe": "aguja de perforación", "wash-probe": "aguja de lavado", "mixing-paddle": "paleta mezcladora", "air-bubble-detector": "detector de burbujas de aire", "pressure-sensor": "sensor de presión", product: "componente fluídico de precisión",
   },
@@ -27,12 +27,12 @@ const PRODUCT_NAMES: Record<HardTubeTargetLocale, Record<ProductKind, string>> =
     tubing: "tube fluidique", "rotary-valve": "vanne rotative", "high-pressure-valve": "vanne haute pression", "solenoid-valve": "électrovanne", "sampling-probe": "aiguille de prélèvement", "piercing-probe": "aiguille de perçage", "wash-probe": "aiguille de lavage", "mixing-paddle": "palette de mélange", "air-bubble-detector": "détecteur de bulles d’air", "pressure-sensor": "capteur de pression", product: "composant fluidique de précision",
   },
   ko: {
-    "plunger-pump": "플런저 펌프", "diaphragm-pump": "다이어프램 펌프", "pipetting-pump": "피펫팅 펌프", "syringe-pump": "시린지 펌프", "valveless-pump": "무밸브 펌프",
+    "plunger-pump": "피스톤 펌프", "diaphragm-pump": "다이어프램 펌프", "pipetting-pump": "피펫팅 펌프", "syringe-pump": "시린지 펌프", "valveless-pump": "무밸브 펌프",
     "barbed-fitting": "바브 피팅", "bulkhead-barbed-fitting": "벌크헤드 바브 피팅", "hard-tube-fitting": "경질 튜브 피팅", "thread-to-barbed-fitting": "나사-바브 피팅", "quick-connect-fitting": "퀵 커넥트 피팅", "luer-fitting": "루어 피팅", "female-thread-adapter": "암나사 어댑터", filter: "인라인 필터", "check-valve": "체크 밸브",
     tubing: "유체 튜브", "rotary-valve": "로터리 밸브", "high-pressure-valve": "고압 밸브", "solenoid-valve": "솔레노이드 밸브", "sampling-probe": "샘플링 프로브", "piercing-probe": "피어싱 프로브", "wash-probe": "세척 프로브", "mixing-paddle": "혼합 패들", "air-bubble-detector": "기포 감지기", "pressure-sensor": "압력 센서", product: "정밀 유체 부품",
   },
   ru: {
-    "plunger-pump": "плунжерный насос", "diaphragm-pump": "мембранный насос", "pipetting-pump": "пипетирующий насос", "syringe-pump": "шприцевой насос", "valveless-pump": "бесклапанный насос",
+    "plunger-pump": "поршневой насос", "diaphragm-pump": "мембранный насос", "pipetting-pump": "пипетирующий насос", "syringe-pump": "шприцевой насос", "valveless-pump": "бесклапанный насос",
     "barbed-fitting": "штуцер", "bulkhead-barbed-fitting": "проходной штуцер", "hard-tube-fitting": "фитинг для жёстких трубок", "thread-to-barbed-fitting": "переходник резьба–штуцер", "quick-connect-fitting": "быстроразъёмное соединение", "luer-fitting": "фитинг Люэра", "female-thread-adapter": "адаптер с внутренней резьбой", filter: "линейный фильтр", "check-valve": "обратный клапан",
     tubing: "трубка для жидкостных систем", "rotary-valve": "поворотный клапан", "high-pressure-valve": "клапан высокого давления", "solenoid-valve": "электромагнитный клапан", "sampling-probe": "пробоотборная игла", "piercing-probe": "прокалывающая игла", "wash-probe": "промывочная игла", "mixing-paddle": "смесительная лопатка", "air-bubble-detector": "детектор воздушных пузырьков", "pressure-sensor": "датчик давления", product: "прецизионный компонент жидкостной системы",
   },
@@ -241,7 +241,7 @@ function inferKind(data: DetailRecord, pathname = ""): ProductKind {
   const text = [pathname, data.detailHref, data.href, data.selectionHref, data.productTypeId, data.productTypeName, data.categoryLabel, data.slug, data.title, data.name].filter(Boolean).join(" ").toLowerCase();
   const rules: Array<[ProductKind, RegExp]> = [
     ["hard-tube-fitting", /hard[- ]tube|硬管/], ["bulkhead-barbed-fitting", /bulkhead[- ]barbed|穿板倒刺/], ["thread-to-barbed-fitting", /thread[- ]to[- ]barb|thread to barb|螺纹转倒刺/], ["quick-connect-fitting", /quick[- ]connect|快插|快速接头/], ["luer-fitting", /luer|鲁尔/], ["female-thread-adapter", /female[- ]thread|内螺纹/], ["barbed-fitting", /barbed[- ]fitting|barbed fitting|倒刺接头/], ["check-valve", /check[- ]valve|单向阀/], ["filter", /filter|过滤器/],
-    ["plunger-pump", /plunger[- ]pump|柱塞泵/], ["diaphragm-pump", /diaphragm[- ]pump|隔膜泵/], ["pipetting-pump", /pipett|移液泵/], ["syringe-pump", /syringe[- ]pump|注射泵/], ["valveless-pump", /valveless|无阀/], ["tubing", /tubing|管路|软管/],
+    ["plunger-pump", /(?:piston|plunger)[- ]pump|柱塞泵/], ["diaphragm-pump", /diaphragm[- ]pump|隔膜泵/], ["pipetting-pump", /pipett|移液泵/], ["syringe-pump", /syringe[- ]pump|注射泵/], ["valveless-pump", /valveless|无阀/], ["tubing", /tubing|管路|软管/],
     ["high-pressure-valve", /high[- ]pressure[- ]valve|高压阀/], ["solenoid-valve", /solenoid[- ]valve|电磁阀/], ["rotary-valve", /rotary[- ]valve|旋转阀|转阀/], ["sampling-probe", /sampling[- ]probe|采样针/], ["piercing-probe", /piercing[- ]probe|穿刺针/], ["wash-probe", /wash[- ]probe|清洗针/], ["mixing-paddle", /mixing[- ]paddle|搅拌桨/], ["air-bubble-detector", /air[- ]bubble|气泡/], ["pressure-sensor", /pressure[- ]sensor|压力传感/],
   ];
   return rules.find(([, pattern]) => pattern.test(text))?.[0] || "product";
@@ -536,7 +536,7 @@ export function getTargetProductMetadataCopy(segments: string[], locale: HardTub
   const kind = inferKind({ detailHref: pathText }, pathText);
   const productName = PRODUCT_NAMES[locale][kind];
   const selectionSlugs = new Set([
-    "plunger-pumps", "diaphragm-pumps", "pipetting-pumps", "syringe-pumps", "valveless-pumps",
+    "piston-pump", "plunger-pumps", "diaphragm-pumps", "pipetting-pumps", "syringe-pumps", "valveless-pumps",
     "hard-tube-fittings", "barbed-fittings", "thread-to-barbed-fittings", "luer-fittings", "quick-connect-fittings", "female-thread-adapters", "bulkhead-barbed-fittings", "filters", "check-valves",
     "high-pressure-valves", "rotary-valves", "solenoid-valves", "piercing-probes", "sampling-probes", "stirring-paddles", "wash-probes",
   ]);

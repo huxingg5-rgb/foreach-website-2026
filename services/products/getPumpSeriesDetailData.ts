@@ -260,7 +260,7 @@ export function getPumpSeriesStaticParamsByType(pumpTypeSlug: string) {
 /* =========================================================
    鎸夋车绫诲瀷鑾峰彇甯︾郴鍒楀眰绾х殑闈欐€佽矾鐢卞弬鏁?
    鏁版嵁搴撻瑙堣矾鐢辩粨鏋勶細
-   /products/pumps/plunger-pumps/[slug]
+   /products/pumps/piston-pump/[slug]
 ========================================================= */
 export function getPumpSeriesStaticParamsByTypeWithSeries(pumpTypeSlug: string) {
   return pumpRoutes

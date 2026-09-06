@@ -415,7 +415,13 @@ function toFittingClientData(
 
 export function generateStaticParams() {
   const existingSeriesParams =
-    getSeriesRouteParams();
+    getSeriesRouteParams().filter(
+      (item) =>
+        !(
+          item.category === "pumps" &&
+          item.slug === "piston-pump"
+        )
+    );
 
   const hardTubeParams =
     hardTubeDetails.map(

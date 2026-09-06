@@ -1,3 +1,5 @@
+import type { SelectionLocale } from "@/data/products/selection/product-selection.types";
+import { getPistonPumpLocalizedContent } from "@/data/products/detail/applications/piston-pump-locales";
 /* =========================================================
    getPumpSeriesProductDetailAdapter.ts
    恒永达官网｜泵系列数据库数据 → 原详情页数据结构适配器
@@ -6,10 +8,16 @@
    1. Excel / generated 是正式资料来源
    2. 本文件只做字段映射，不重新创作文案
    3. 中文页面只读取中文正文、中文参数、中文 FAQ
-   4. 英文内容保留给未来英文详情页，不进入中文详情页
+   4. 西语、法语、韩语、俄语读取已审核的完整译文，保留原始图片与工程资源
    5. 图片和 FAQ 增加强兜底，避免前端拿不到数据
 ========================================================= */
 
+import { getCompactPumpContent } from "@/data/products/detail/applications/compact-pump-content";
+import { getEaPumpContent } from "@/data/products/detail/applications/ea-pump-content";
+import {
+  PLUNGER_PUMP_CARD_HEADING_ZH_BY_MODEL,
+  PLUNGER_PUMP_CARD_HEADING_EN_BY_MODEL,
+} from "@/data/products/selection/card-copy/plunger-pump-card-copy";
 import nodeFs from "node:fs";
 import nodePath from "node:path";
 
@@ -276,7 +284,7 @@ function dedupeSpecs(specs: ProductSpecItem[]) {
   });
 }
 
-function getSpecs(content: any, locale: "zh" | "en"): ProductSpecItem[] {
+function getSpecs(content: any, locale: "zh" | "en", strictLocale = false): ProductSpecItem[] {
   const parameters = Array.isArray(content?.parameters)
     ? content.parameters
     : [];
@@ -295,6 +303,10 @@ function getSpecs(content: any, locale: "zh" | "en"): ProductSpecItem[] {
     })
     .filter((item: ProductSpecItem) => {
       if (!item.label || !item.value) {
+        return false;
+      }
+
+      if (strictLocale && (locale === "zh" ? !hasChinese(item.label) : hasChinese(item.label))) {
         return false;
       }
 
@@ -503,7 +515,7 @@ function getDetailDescription(candidates: any[], locale: "zh" | "en") {
   );
 
   if (description) {
-    return [description];
+    return description.split(/\r?\n\s*\r?\n/).map((paragraph) => paragraph.trim()).filter(Boolean);
   }
 
   const body = getFirstObject(candidates, "body");
@@ -550,8 +562,25 @@ function getCommonApplications(candidates: any[], locale: "zh" | "en") {
 ========================================================= */
 export function getPumpSeriesProductDetailAdapter(
   slug: string,
-  locale: "zh" | "en" = "zh"
+  locale: SelectionLocale = "zh"
 ): ProductDetailPageData | null {
+  if (locale !== "zh" && locale !== "en") {
+    const base = getPumpSeriesProductDetailAdapter(slug, "en");
+    const localized = getPistonPumpLocalizedContent(slug, locale);
+    if (!base || !localized) return null;
+    return {
+      ...base,
+      ...localized,
+      __locale: locale,
+      model: `FOREACH ${localized.heading}`,
+      name: `FOREACH ${localized.heading}`,
+      advantages: localized.description,
+      description: localized.description.join("\n\n"),
+      imageAltEn: undefined,
+      mainImageAlt: localized.seoTitle.replace(/ \| FOREACH$/, ""),
+      imageAlt: localized.seoTitle.replace(/ \| FOREACH$/, ""),
+    } as ProductDetailPageData;
+  }
   const record = getPumpSeriesDetailData(slug, locale);
 
   if (!record) {
@@ -568,7 +597,14 @@ export function getPumpSeriesProductDetailAdapter(
   const mainImage = images[0] || null;
   const additionalImages = images.slice(1);
 
+  const eaContent = getEaPumpContent(toText(record.productId), locale);
+  const compactContent = getCompactPumpContent(toText(record.productId), locale);
+  const cardHeading = eaContent || compactContent
+    ? (locale === "zh" ? PLUNGER_PUMP_CARD_HEADING_ZH_BY_MODEL : PLUNGER_PUMP_CARD_HEADING_EN_BY_MODEL)[toText(record.productId).toUpperCase()]
+    : "";
+
   const pageTitle =
+    (cardHeading ? `FOREACH ${cardHeading}` : "") ||
     toText(content.h1) ||
     toText(content.title) ||
     toText(record.internalModelRef) ||
@@ -589,14 +625,18 @@ export function getPumpSeriesProductDetailAdapter(
   const showModelCode = hero.showModel !== false;
 
   const data: ProductDetailPageData & Record<string, any> = {
+    __locale: locale,
     category: "pumps",
-    slug: toText(record.slug),
+    slug: toText(record.slug) || toText(record.route?.routeSlug) || slug,
 
     model: pageTitle,
     name: productName,
 
     advantages: getDetailDescription(candidates, locale),
+    description: getDetailDescription(candidates, locale).join("\n\n"),
     commonApplications: getCommonApplications(candidates, locale),
+    ...(compactContent ? { compactDetailContent: true, applicationDetails: compactContent.applicationDetails, seoTitle: compactContent.seoTitle, metaDescription: compactContent.metaDescription, ...(toText(record.productId).startsWith("sm-") ? { datasheetId: "sm-series-en" } : {}) } : {}),
+    ...(eaContent ? { eaDetailContent: true, applicationDetails: eaContent.applicationDetails } : {}),
 
     mainImage,
     additionalImages,
@@ -607,11 +647,11 @@ export function getPumpSeriesProductDetailAdapter(
     show3DRequest: Boolean(resources.show3D),
 
     faqKey: "",
-    faqs: getFaqs(candidates, locale),
+    faqs: getFaqs(compactContent ? [content] : candidates, locale),
 
     specSeriesKey: toText(record.seriesSlug || record.pumpTypeSlug || "pumps"),
 
-    specs: getSpecs(content, locale),
+    specs: getSpecs(content, locale, Boolean(compactContent)),
 
     drawing2dUrl: toText(resources.drawing2dUrl),
     drawingPdfUrl: toText(resources.drawing2dUrl),
@@ -633,5 +673,11 @@ export function getPumpSeriesProductDetailAdapter(
     pageFootnotes: getPageFootnotes(content),
   };
 
+  if (eaContent) {
+    const capacity = /\b(\d+(?:\.\d+)? (?:μL|mL))/.exec(PLUNGER_PUMP_CARD_HEADING_EN_BY_MODEL[toText(record.productId).toUpperCase()] || "")?.[1] || "";
+    const material = toText(record.productId).toUpperCase().endsWith("PEEK") ? "PEEK" : "PMMA";
+    data.seoTitle = `${toText(record.productId).toUpperCase()} ${capacity} ${material} ${locale === "zh" ? "精密柱塞泵" : "Precision Piston Pump"} | FOREACH`;
+    data.metaDescription = eaContent.description[0];
+  }
   return data;
 }

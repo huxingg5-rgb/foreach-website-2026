@@ -96,14 +96,14 @@ export const productRouteMap: {
     },  },
 
   productTypes: {
-    "plunger-pumps": {
+    "piston-pump": {
       category: "pumps",
       categoryId: "pumps",
       productTypeId: "plunger-pump",
       label: "柱塞泵",
-      title: "柱塞泵 | FOREACH",
+      title: "精密柱塞泵｜微量至毫升级液体定量、吸取与分配 | FOREACH",
       description:
-        "柱塞泵适用于自动化分析仪器、IVD、生命科学和实验室自动化设备中的精密液体处理。",
+        "FOREACH 精密柱塞泵包括 EA、SM、TM 系列，用于微量至毫升级液体的精密吸取、定量、分配和加注。EA 系列覆盖 50 μL–20 mL，可选择多种柱塞及泵头材料、避光配置，以及 1/4-28UNF、M6 流体接口。",
     },
 
     "miniature-diaphragm-pumps": {
@@ -231,9 +231,9 @@ export const productRouteMap: {
   },
 
   series: {
-    "ea-standard-piston-pumps": {
+    "standard-piston-pump": {
       category: "pumps",
-      slug: "plunger-pumps",
+      slug: "piston-pump",
       categoryId: "pumps",
       productTypeId: "plunger-pump",
       filterKey: "filter01",
@@ -242,14 +242,14 @@ export const productRouteMap: {
         filter01: ["EA 常规柱塞泵"],
       },
       label: "EA 常规柱塞泵",
-      title: "EA 常规柱塞泵 | FOREACH",
+      title: "50 μL至20 mL精密柱塞泵用于液体定量与分配 | FOREACH",
       description:
-        "EA 常规柱塞泵适合作为自动化分析仪器中的标准平台型精密液体处理模块。",
+        "FOREACH EA 精密柱塞泵覆盖 50 μL–20 mL 多种容量，用于样本吸取、试剂加注、精密分液和定量加液。100%量程准确性和重复性 <0.5%，支持多种接液材料以及 1/4-28UNF、M6 流体接口。",
     },
 
-    "sm-miniature-piston-pumps": {
+    "miniature-piston-pump": {
       category: "pumps",
-      slug: "plunger-pumps",
+      slug: "piston-pump",
       categoryId: "pumps",
       productTypeId: "plunger-pump",
       filterKey: "filter01",
@@ -258,14 +258,14 @@ export const productRouteMap: {
         filter01: ["SM 微型柱塞泵"],
       },
       label: "SM 微型柱塞泵",
-      title: "SM 微型柱塞泵 | FOREACH",
+      title: "50 μL至1 mL微型柱塞泵用于微量液体处理 | FOREACH",
       description:
-        "SM 微型柱塞泵面向空间受限的自动化仪器液路模块，适用于小型化精密液体处理场景。",
+        "FOREACH SM 微型柱塞泵覆盖 50 μL、100 μL、250 μL、500 μL 和 1 mL，适用于紧凑型自动化设备中的微量吸液、分液、试剂加注和液体处理，可选择多种柱塞、泵头材料及 1/4-28UNF、M6 流体接口。",
     },
 
-    "tm-ultra-compact-piston-pumps": {
+    "ultra-compact-piston-pump": {
       category: "pumps",
-      slug: "plunger-pumps",
+      slug: "piston-pump",
       categoryId: "pumps",
       productTypeId: "plunger-pump",
       filterKey: "filter01",
@@ -274,9 +274,9 @@ export const productRouteMap: {
         filter01: ["TM 超微型柱塞泵"],
       },
       label: "TM 超微型柱塞泵",
-      title: "TM 超微型柱塞泵 | FOREACH",
+      title: "超微型柱塞泵用于超紧凑液路精密液体处理 | FOREACH",
       description:
-        "TM 超微型柱塞泵适用于对安装空间、结构集成度和微量液体处理要求更高的精密仪器场景。",
+        "FOREACH TM 超微型柱塞泵面向安装空间受限的小型自动化设备和高集成液路模块，可用于微量液体吸取、定量分配和加注，适合进一步小型化的液体处理系统设计。",
     },
   
     "liquid-diaphragm-pumps": {

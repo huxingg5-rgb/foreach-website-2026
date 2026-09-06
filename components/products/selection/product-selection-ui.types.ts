@@ -1,4 +1,4 @@
-﻿import type {
+import type {
   ProductSelectionProduct,
   SelectionFilterKey,
 } from "@/data/products/selection/product-selection.types";

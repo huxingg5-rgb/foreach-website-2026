@@ -517,6 +517,14 @@ function getModelActionText(data: any): string {
   return isCustomInquiryMode(data) ? "联系我们" : "型号选择";
 }
 
+function getPistonPumpCategoryLabel(locale: string): string {
+  const labels: Record<string, string> = {
+    zh: "柱塞泵", "zh-CN": "柱塞泵", en: "Piston Pump",
+    es: "Bomba de pistón", fr: "Pompe à piston", ko: "피스톤 펌프", ru: "Поршневой насос",
+  };
+  return labels[locale] || labels.en;
+}
+
 function isPlungerPumpDetailData(data: any): boolean {
   const text = JSON.stringify(data || {}).toLowerCase();
 
@@ -861,7 +869,7 @@ function getPlungerPumpBottomCta(data: any) {
   if (isPlungerPumpDetailData(data)) {
     if (data?.__locale === "en") {
       return {
-        title: "Plunger pumps configured for your instrument",
+        title: "Piston Pump Configured for Your Instrument",
         desc: "Share the target volume, fluid compatibility, port type, control method, installation space, and service-life requirements. The FOREACH engineering team can help confirm the pump configuration and wetted materials.",
         button: "Submit a Custom Request",
         href: "/en/contact",
@@ -1227,6 +1235,7 @@ function buildProductPageStructuredData(data: any, pathname: string) {
   const breadcrumbCopy =
     PRODUCT_BREADCRUMB_COPY[locale] || PRODUCT_BREADCRUMB_COPY.en;
   const diaphragmCategoryCopy = getDiaphragmPumpCategoryCopy(locale);
+  const isPistonPump = pathname.includes("/products/pumps/piston-pump/");
   const breadcrumbItems = isDiaphragmPump
     ? [
         {
@@ -1257,8 +1266,12 @@ function buildProductPageStructuredData(data: any, pathname: string) {
           name: breadcrumbCopy.products,
           item: toAbsoluteProductUrl(`${localePrefix}/products/`),
         },
+        ...(isPistonPump ? [{
+          name: getPistonPumpCategoryLabel(locale),
+          item: toAbsoluteProductUrl(`${localePrefix}/products/pumps/piston-pump/`),
+        }] : []),
         {
-          name: productName,
+          name: isPistonPump ? productModel : productName,
           item: canonicalUrl,
         },
       ];
@@ -1450,10 +1463,13 @@ export default function ProductDetailClient({
       : "";
   const data = useMemo(
     () => {
-      const localizedData = targetLocale
+      const hasLocalizedPistonCopy = (sourceData.eaDetailContent === true || sourceData.compactDetailContent === true) && sourceData.__locale === configuratorLocale;
+      const localizedData = hasLocalizedPistonCopy ? sourceData : targetLocale
         ? localizeTargetProductDetailData(sourceData, targetLocale, pathname || "")
         : isEnglish
-        ? localizeProductDetailData(sourceData)
+        ? sourceData.__locale === "en"
+          ? sourceData
+          : localizeProductDetailData(sourceData)
         : sourceData;
 
       return applyDiaphragmPumpDetailCopy(
@@ -1463,7 +1479,12 @@ export default function ProductDetailClient({
     },
     [configuratorLocale, isEnglish, pathname, sourceData, targetLocale]
   );
-  const rawApplicationDetails = data.applicationDetails as
+  const hasAuthoredPistonCopy = sourceData.eaDetailContent === true || sourceData.compactDetailContent === true;
+  const useAuthoredPistonCopy = hasAuthoredPistonCopy &&
+    sourceData.__locale === configuratorLocale;
+  const rawApplicationDetails = (hasAuthoredPistonCopy && !useAuthoredPistonCopy
+    ? undefined
+    : data.applicationDetails) as
     | ProductApplicationsContent
     | undefined;
   const applicationDetails =
@@ -1524,11 +1545,11 @@ export default function ProductDetailClient({
   const diaphragmCopy = getDiaphragmPumpCopy(data, configuratorLocale);
   const displayProductTitle =
     diaphragmCopy?.title ||
-    getScopedProductDisplayTitle(
+    (useAuthoredPistonCopy ? String(data.model || "") : getScopedProductDisplayTitle(
       data,
       targetLocale,
       String(data.model || "")
-    );
+    ));
   // ===== FOREACH TARGET PRODUCT DISPLAY TITLE END =====
   const structuredData = useMemo(
     () => buildProductPageStructuredData(data, pathname || "/"),
@@ -1654,8 +1675,14 @@ export default function ProductDetailClient({
           label: copy.products,
           href: localePrefix ? `${localePrefix}/products/` : "/products/",
         },
+        ...(pathname.includes("/products/pumps/piston-pump/") ? [{
+          label: getPistonPumpCategoryLabel(configuratorLocale),
+          href: `${localePrefix}/products/pumps/piston-pump/`,
+        }] : []),
         {
-          label: displayProductTitle,
+          label: pathname.includes("/products/pumps/piston-pump/")
+            ? String(sourceData.modelDisplay || sourceData.displayModel || sourceData.modelCode || data.slug || "").trim()
+            : displayProductTitle,
         },
       ];
     const { addItem, getItem, toggleDrawingNeed, removeItem } = useSelectionCart();
@@ -2082,7 +2109,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
 
     const productName = isPlungerPumpDetailData(data)
       ? isEnglish
-        ? "Plunger Pump"
+        ? "Piston Pump"
         : "柱塞泵"
       : String(
           data.productTypeName ||
@@ -2123,7 +2150,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
 
     const fallbackDetailHref = data.slug
       ? isPlungerPumpDetailData(data)
-        ? `/products/pumps/plunger-pumps/${data.slug}`
+        ? `/products/pumps/piston-pump/${data.slug}`
         : isDiaphragmPumpDetailData(data)
           ? getDiaphragmPumpPath("zh", data.slug, { trailingSlash: false })
           : isPipettingPumpDetailData(data)
@@ -2836,6 +2863,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
       <main
         className={styles.page}
         data-product-detail-page="true"
+        data-authored-piston-detail={hasAuthoredPistonCopy ? "true" : undefined}
       >
       <div className={styles.container}>
 
@@ -3105,9 +3133,17 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
               <h1 className={styles.productModelTitle}>{displayProductTitle}</h1>
             </div>
 
-            <p className={styles.productDesc}>
-              {(data as any).description || (Array.isArray(data.advantages) ? data.advantages.join("") : "")}
-            </p>
+            {useAuthoredPistonCopy ? (
+              <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-ea-description="true">
+                {data.advantages.map((paragraph: string, index: number) => (
+                  <p key={`${index}-${paragraph}`}>{paragraph}</p>
+                ))}
+              </div>
+            ) : (
+              <p className={styles.productDesc}>
+                {(data as any).description || (Array.isArray(data.advantages) ? data.advantages.join("") : "")}
+              </p>
+            )}
 
             <div className={styles.application}>
               <p className={styles.applicationTitle}>

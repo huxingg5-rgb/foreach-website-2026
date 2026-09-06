@@ -4,7 +4,10 @@ import { usePathname } from "next/navigation";
 
 import type { ProductSelectionProductItem } from "./product-selection-ui.types";
 import type { SelectionLocale } from "@/data/products/selection/product-selection.types";
-import { getProductCardSpecs } from "@/data/products/selection/card-copy/plunger-pump-card-copy";
+import {
+  getProductCardHeading,
+  getProductCardSpecs,
+} from "@/data/products/selection/card-copy/plunger-pump-card-copy";
 import { trackProductSelect } from "@/lib/analytics/track-event";
 
 type ProductSelectionCardProps = {
@@ -117,7 +120,7 @@ function toDisplayText(value: unknown): string {
 
   卡片最终 href 出口保护：
   如果 EA / SM / TM 柱塞泵被错误传成 /products/probes/[slug]，
-  在最终 <a> 前强制改回 /products/pumps/plunger-pumps/[slug]。
+  在最终 <a> 前强制改回 /products/pumps/piston-pump/[slug]。
 */
 function normalizeCardDetailHref(product: ProductSelectionProductItem, href: string): string {
   const rawHref = String(href || "").trim();
@@ -141,7 +144,7 @@ function normalizeCardDetailHref(product: ProductSelectionProductItem, href: str
     ?.toLowerCase();
 
   if (rawSlug && /^(ea|sm|tm)-\d+-(pmma|peek)$/.test(rawSlug)) {
-    return `/products/pumps/plunger-pumps/${rawSlug}`;
+    return `/products/pumps/piston-pump/${rawSlug}`;
   }
 
   if (
@@ -149,7 +152,7 @@ function normalizeCardDetailHref(product: ProductSelectionProductItem, href: str
     hrefSlug &&
     /^(ea|sm|tm)-\d+-(pmma|peek)$/.test(hrefSlug)
   ) {
-    return `/products/pumps/plunger-pumps/${hrefSlug}`;
+    return `/products/pumps/piston-pump/${hrefSlug}`;
   }
 
   return rawHref || "/products";
@@ -212,6 +215,11 @@ export default function ProductSelectionCard({
   const cardSpecs = getProductCardSpecs(product, locale)
     .map((spec) => toDisplayText(spec))
     .filter(Boolean);
+  const plungerCardHeading = getProductCardHeading(product, locale);
+  const descriptionHeading = isDiaphragmPumpCard
+    ? safeSubtitle
+    : plungerCardHeading;
+  const usesDescriptionHeading = Boolean(descriptionHeading);
 
   return (
     <article
@@ -230,9 +238,17 @@ export default function ProductSelectionCard({
       </div>
 
       <div className="product-body">
-        <h3 className="product-title">{safeTitle}</h3>
+        {usesDescriptionHeading ? (
+          <p className="product-title">{safeTitle}</p>
+        ) : (
+          <h3 className="product-title">{safeTitle}</h3>
+        )}
 
-        {cardSpecs.length > 0 ? (
+        {usesDescriptionHeading ? (
+          <h3 className="product-card-summary product-card-description-heading">
+            {descriptionHeading}
+          </h3>
+        ) : cardSpecs.length > 0 ? (
           <ul className="product-card-specs" aria-label={`${safeTitle} ${cardText.specsAriaSuffix}`}>
             {cardSpecs.map((spec, index) => (
               <li key={`${safeTitle}-spec-${index}`}>{spec}</li>

@@ -10,6 +10,8 @@
 ========================================================= */
 
 import type { ComponentType } from "react";
+import LegacyMotionControlArticle from "./articles/LegacyMotionControlArticle";
+import { legacyMotionArticles } from "@/data/resources/technical-articles/legacy-motion-control-articles.zh";
 
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
 import RelatedResources from "@/components/common/related-resources/RelatedResources";
@@ -18,6 +20,22 @@ import BrushlessDiaphragmPumpWiringArticle from "@/components/resources/technica
 import CvKvMicrofluidicsArticle from "@/components/resources/technical-articles/articles/CvKvMicrofluidicsArticle";
 import DiaphragmPumpEngineeringArticle from "@/components/resources/technical-articles/articles/DiaphragmPumpEngineeringArticle";
 import Dpl30LiquidDiaphragmPumpArticle from "@/components/resources/technical-articles/articles/Dpl30LiquidDiaphragmPumpArticle";
+import PistonPumpLocalizedArticle from "@/components/resources/technical-articles/articles/PistonPumpLocalizedArticle";
+import PistonPumpAccuracyArticle, {
+  pistonPumpAccuracyArticleCtaZh,
+  pistonPumpAccuracyArticleFaqZh,
+  pistonPumpAccuracyArticleSlug,
+} from "@/components/resources/technical-articles/articles/PistonPumpAccuracyArticle";
+import PistonPumpHeadMaterialArticle, {
+  pistonPumpHeadMaterialArticleCtaZh,
+  pistonPumpHeadMaterialArticleFaqZh,
+  pistonPumpHeadMaterialArticleSlug,
+} from "@/components/resources/technical-articles/articles/PistonPumpHeadMaterialArticle";
+import PrecisionPistonPumpArticle, {
+  precisionPistonPumpArticleCtaZh,
+  precisionPistonPumpArticleFaqZh,
+  precisionPistonPumpArticleSlug,
+} from "@/components/resources/technical-articles/articles/PrecisionPistonPumpArticle";
 import {
   brushlessWiringArticleSlug,
   getBrushlessWiringArticleCopy,
@@ -45,6 +63,10 @@ import {
 import {
   dpl30hStandardModels,
 } from "@/data/resources/technical-articles/dpl30h-high-pressure-liquid-diaphragm-pump.article";
+import {
+  getPistonPumpArticleCopy,
+  isPistonPumpArticleSlug,
+} from "@/data/resources/technical-articles/piston-pump-articles.article";
 import { getTechnicalArticleCategoryPath } from "@/data/resources/technical-articles/technical-article-taxonomy";
 import { getProductDetailTitleOverride } from "@/data/products/detail/product-detail-title-overrides";
 import { getLocalizedInternalHref } from "@/lib/seo/site-url";
@@ -361,6 +383,13 @@ export default function TechnicalArticleDetail({
 }: TechnicalArticleDetailProps) {
   const locale = normalizeLocale(pageData.locale);
   const listHref = getArticleListHref(locale);
+  const isPistonPumpArticle = isPistonPumpArticleSlug(article.slug);
+  const pistonPumpArticleCopy = getPistonPumpArticleCopy(
+    article.slug,
+    locale,
+  );
+  const isLocalizedPistonPumpArticle = pistonPumpArticleCopy !== null;
+  const isLegacyMotionArticle = locale === "zh-CN" && legacyMotionArticles.some(item => item.slug === article.slug);
   const isDpl30Article =
     article.slug === "dpl30-liquid-diaphragm-pump-selection-guide";
   const isDpl60Article =
@@ -371,6 +400,12 @@ export default function TechnicalArticleDetail({
     article.slug === "dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide";
   const isBrushlessWiringArticle =
     article.slug === brushlessWiringArticleSlug;
+  const isPrecisionPistonPumpArticle =
+    locale === "zh-CN" && article.slug === precisionPistonPumpArticleSlug;
+  const isPistonPumpAccuracyArticle =
+    locale === "zh-CN" && article.slug === pistonPumpAccuracyArticleSlug;
+  const isPistonPumpHeadMaterialArticle =
+    locale === "zh-CN" && article.slug === pistonPumpHeadMaterialArticleSlug;
   const diaphragmPumpEngineeringArticleSlug =
     isDiaphragmPumpEngineeringArticleSlug(article.slug)
       ? article.slug
@@ -415,12 +450,23 @@ export default function TechnicalArticleDetail({
     date: article.date,
     // DPL30 的 summary 供列表和关联卡片自动读取正文首段；
     // 详情页正文已经从同一首段开始，因此此处不重复显示摘要。
-    summary: isDedicatedPumpArticle ? "" : article.summary,
+    summary:
+      isDedicatedPumpArticle ||
+      isPrecisionPistonPumpArticle ||
+      isPistonPumpAccuracyArticle ||
+      isPistonPumpHeadMaterialArticle ||
+      isLocalizedPistonPumpArticle
+        ? ""
+        : article.summary,
     // The new wiring article uses both confirmed photos inside the body. Keep
     // the 2-wire photo for list cards and structured data without repeating it
     // as an oversized detail-page cover.
     coverImage:
-      isBrushlessWiringArticle || isDiaphragmPumpEngineeringArticle
+      isLegacyMotionArticle ||
+      isPistonPumpHeadMaterialArticle ||
+      isLocalizedPistonPumpArticle ||
+      isBrushlessWiringArticle ||
+      isDiaphragmPumpEngineeringArticle
         ? undefined
         : article.coverImage,
     coverAlt:
@@ -437,70 +483,203 @@ export default function TechnicalArticleDetail({
   const adaptedPageData = {
     listHref,
     backText: getBackText(locale),
-    bottomBanner: diaphragmPumpEngineeringCopy
+    bottomBanner: isPistonPumpHeadMaterialArticle
       ? {
-          title: diaphragmPumpEngineeringCopy.cta.title,
-          description: diaphragmPumpEngineeringCopy.cta.description,
+          title: pistonPumpHeadMaterialArticleCtaZh.title,
+          description: pistonPumpHeadMaterialArticleCtaZh.description,
           actions: [
             {
-              label: diaphragmPumpEngineeringCopy.cta.contactLabel,
-              href: `${localePrefix}/contact`,
+              label: pistonPumpHeadMaterialArticleCtaZh.contactLabel,
+              href: "/contact",
             },
             {
-              label: diaphragmPumpEngineeringCopy.cta.productsLabel,
-              href: getLocalizedInternalHref(
-                diaphragmPumpEngineeringCopy.cta.productsHref ??
-                  "/products/pumps/miniature-diaphragm-pumps/",
-                locale,
-              ),
+              label: pistonPumpHeadMaterialArticleCtaZh.productsLabel,
+              href: pistonPumpHeadMaterialArticleCtaZh.productsHref,
             },
           ],
         }
-      : brushlessWiringCopy
+      : isPistonPumpAccuracyArticle
+      ? {
+          title: pistonPumpAccuracyArticleCtaZh.title,
+          description: pistonPumpAccuracyArticleCtaZh.description,
+          actions: [
+            {
+              label: pistonPumpAccuracyArticleCtaZh.contactLabel,
+              href: "/contact",
+            },
+            {
+              label: pistonPumpAccuracyArticleCtaZh.productsLabel,
+              href: pistonPumpAccuracyArticleCtaZh.productsHref,
+            },
+          ],
+        }
+      : isPrecisionPistonPumpArticle
         ? {
-            title: brushlessWiringCopy.cta.title,
-            description: brushlessWiringCopy.cta.description,
+            title: precisionPistonPumpArticleCtaZh.title,
+            description: precisionPistonPumpArticleCtaZh.description,
             actions: [
               {
-                label: brushlessWiringCopy.cta.contactLabel,
-                href: `${localePrefix}/contact`,
+                label: precisionPistonPumpArticleCtaZh.contactLabel,
+                href: "/contact",
               },
               {
-                label: brushlessWiringCopy.cta.productsLabel,
-                href: `${localePrefix}/products`,
+                label: precisionPistonPumpArticleCtaZh.productsLabel,
+                href: precisionPistonPumpArticleCtaZh.productsHref,
               },
             ],
           }
-        : pageData.bottomBanner,
+        : pistonPumpArticleCopy
+          ? {
+              title: pistonPumpArticleCopy.cta.title,
+              description: pistonPumpArticleCopy.cta.description,
+              actions: [
+                {
+                  label: pistonPumpArticleCopy.cta.contactLabel,
+                  href: `${localePrefix}/contact`,
+                },
+                {
+                  label: pistonPumpArticleCopy.cta.productsLabel,
+                  href: getLocalizedInternalHref(
+                    "/products/pumps/piston-pump/",
+                    locale,
+                  ),
+                },
+              ],
+            }
+          : diaphragmPumpEngineeringCopy
+          ? {
+              title: diaphragmPumpEngineeringCopy.cta.title,
+              description: diaphragmPumpEngineeringCopy.cta.description,
+              actions: [
+                {
+                  label: diaphragmPumpEngineeringCopy.cta.contactLabel,
+                  href: `${localePrefix}/contact`,
+                },
+                {
+                  label: diaphragmPumpEngineeringCopy.cta.productsLabel,
+                  href: getLocalizedInternalHref(
+                    diaphragmPumpEngineeringCopy.cta.productsHref ??
+                      "/products/pumps/miniature-diaphragm-pumps/",
+                    locale,
+                  ),
+                },
+              ],
+            }
+          : brushlessWiringCopy
+            ? {
+                title: brushlessWiringCopy.cta.title,
+                description: brushlessWiringCopy.cta.description,
+                actions: [
+                  {
+                    label: brushlessWiringCopy.cta.contactLabel,
+                    href: `${localePrefix}/contact`,
+                  },
+                  {
+                    label: brushlessWiringCopy.cta.productsLabel,
+                    href: `${localePrefix}/products`,
+                  },
+                ],
+              }
+            : pageData.bottomBanner,
   };
 
   const articleBody =
-    diaphragmPumpEngineeringArticleSlug ? (
-    <DiaphragmPumpEngineeringArticle
-      articleSlug={diaphragmPumpEngineeringArticleSlug}
-      locale={locale}
-    />
-  ) : isBrushlessWiringArticle ? (
-    <BrushlessDiaphragmPumpWiringArticle locale={locale} />
-  ) : article.slug === "cv-kv-correction-for-microfluidics" ? (
-    <CvKvMicrofluidicsArticle locale={locale} />
-  ) : isDedicatedPumpArticle ? (
-    <Dpl30LiquidDiaphragmPumpArticle
-      locale={locale}
-      articleSeries={
-        isDpgl800Article
-          ? "dpgl800"
-          : isDpl30hArticle
-            ? "dpl30h"
-            : isDpl60Article
-              ? "dpl60"
-              : "dpl30"
-      }
-    />
-  ) : null;
+    isLegacyMotionArticle ? (
+      <LegacyMotionControlArticle slug={article.slug} />
+    ) : pistonPumpArticleCopy ? (
+      <PistonPumpLocalizedArticle copy={pistonPumpArticleCopy} locale={locale} />
+    ) : isPistonPumpHeadMaterialArticle ? (
+      <PistonPumpHeadMaterialArticle />
+    ) : isPistonPumpAccuracyArticle ? (
+      <PistonPumpAccuracyArticle />
+    ) : isPrecisionPistonPumpArticle ? (
+      <PrecisionPistonPumpArticle />
+    ) : diaphragmPumpEngineeringArticleSlug ? (
+      <DiaphragmPumpEngineeringArticle
+        articleSlug={diaphragmPumpEngineeringArticleSlug}
+        locale={locale}
+      />
+    ) : isBrushlessWiringArticle ? (
+      <BrushlessDiaphragmPumpWiringArticle locale={locale} />
+    ) : article.slug === "cv-kv-correction-for-microfluidics" ? (
+      <CvKvMicrofluidicsArticle locale={locale} />
+    ) : isDedicatedPumpArticle ? (
+      <Dpl30LiquidDiaphragmPumpArticle
+        locale={locale}
+        articleSeries={
+          isDpgl800Article
+            ? "dpgl800"
+            : isDpl30hArticle
+              ? "dpl30h"
+              : isDpl60Article
+                ? "dpl60"
+                : "dpl30"
+        }
+      />
+    ) : null;
 
   const structuredDataSubject: TechnicalArticleSubject | undefined =
-    isDpl30Article
+    pistonPumpArticleCopy
+      ? {
+          about: [...pistonPumpArticleCopy.subject.about],
+          mentions: [...pistonPumpArticleCopy.subject.mentions],
+        }
+      : isPistonPumpHeadMaterialArticle
+      ? {
+          about: [
+            "柱塞泵泵头材料",
+            "柱塞泵材料选择",
+            "接液材料兼容性",
+            "PMMA泵头",
+            "PEEK泵头",
+          ],
+          mentions: [
+            "PCTG",
+            "PMMA",
+            "PPS",
+            "PVDF",
+            "PP",
+            "PTFE",
+            "PEEK",
+            "POM",
+            "PSU",
+            "FOREACH EA-500-PMMA",
+            "FOREACH EA-500-PEEK",
+          ],
+        }
+      : isPistonPumpAccuracyArticle
+      ? {
+          about: [
+            "柱塞泵准确性",
+            "柱塞泵重复性",
+            "柱塞泵分辨率",
+            "小体积分液",
+          ],
+          mentions: [
+            "FOREACH EA精密柱塞泵",
+            "FOREACH SM微型柱塞泵",
+            "FOREACH TM超微型柱塞泵",
+            "最小可靠分液量",
+            "液体处理验证",
+          ],
+        }
+      : isPrecisionPistonPumpArticle
+      ? {
+          about: [
+            "精密柱塞泵",
+            "FOREACH EA精密柱塞泵",
+            "FOREACH SM微型柱塞泵",
+            "FOREACH TM超微型柱塞泵",
+          ],
+          mentions: [
+            "柱塞泵工作原理",
+            "容积式分液",
+            "体外诊断",
+            "实验室自动化",
+            "液体处理",
+          ],
+        }
+      : isDpl30Article
       ? {
           about: [getDiaphragmSeriesSchemaName("dpl30", locale)],
           mentions: DPL30_MENTIONED_MODELS,
@@ -569,17 +748,29 @@ export default function TechnicalArticleDetail({
     pageData,
     article,
     locale,
-    isDpl30Article
-      ? getDpl30ArticleFaq(locale)
-      : isDpl60Article
-        ? getDpl60ArticleFaq(locale)
-        : isBrushlessWiringArticle
-          ? getBrushlessWiringArticleFaq(locale)
-          : isDiaphragmPumpEngineeringArticle
-            ? getDiaphragmPumpEngineeringArticleFaq(article.slug, locale)
-            : [],
+    pistonPumpArticleCopy?.faq
+      ? [...pistonPumpArticleCopy.faq]
+      : isPistonPumpHeadMaterialArticle
+      ? pistonPumpHeadMaterialArticleFaqZh
+      : isPistonPumpAccuracyArticle
+      ? pistonPumpAccuracyArticleFaqZh
+      : isPrecisionPistonPumpArticle
+        ? precisionPistonPumpArticleFaqZh
+        : isDpl30Article
+          ? getDpl30ArticleFaq(locale)
+          : isDpl60Article
+            ? getDpl60ArticleFaq(locale)
+            : isBrushlessWiringArticle
+              ? getBrushlessWiringArticleFaq(locale)
+              : isDiaphragmPumpEngineeringArticle
+                ? getDiaphragmPumpEngineeringArticleFaq(article.slug, locale)
+                : [],
     structuredDataSubject,
-    isDedicatedPumpArticle ||
+    isPistonPumpHeadMaterialArticle ||
+      isPistonPumpAccuracyArticle ||
+      isPrecisionPistonPumpArticle ||
+      isPistonPumpArticle ||
+      isDedicatedPumpArticle ||
       isBrushlessWiringArticle ||
       isDiaphragmPumpEngineeringArticle
       ? "TechArticle"
@@ -592,7 +783,8 @@ export default function TechnicalArticleDetail({
       data-locale={locale}
       data-article-slug={article.slug}
       {...(article.slug === brushedVsBrushlessDiaphragmPumpMotorLifeSlug ||
-      article.slug === lifeScienceInstrumentDpl60SelectionSlug
+      article.slug === lifeScienceInstrumentDpl60SelectionSlug ||
+      isPistonPumpArticle
         ? { lang: locale }
         : {})}
     >
@@ -616,6 +808,7 @@ export default function TechnicalArticleDetail({
           <RelatedResources
             key="technical-article-related-resources"
             sourceType="article"
+            includeRelatedArticles={isLegacyMotionArticle || isPistonPumpArticle}
             sourceId={article.id}
             sourceSlug={article.slug}
             relationKeys={article.relationKeys}

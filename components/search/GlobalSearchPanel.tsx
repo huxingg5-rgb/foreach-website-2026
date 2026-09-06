@@ -143,7 +143,7 @@ const INITIAL_SUGGESTIONS = [
 const INITIAL_SUGGESTIONS_EN = [
   "Q2002",
   "PMC1702",
-  "Plunger Pump",
+  "Piston Pump",
   "PEEK",
   "Fitting Installation",
   "ADLM",

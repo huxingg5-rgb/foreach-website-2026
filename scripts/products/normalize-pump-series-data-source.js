@@ -5,7 +5,7 @@
    作用：
    1. 不改页面结构
    2. 只整理泵系列 xlsx 数据源
-   3. 正式页面路径保持 /products/pumps/plunger-pumps/[slug]
+   3. 正式页面路径保持 /products/pumps/piston-pump/[slug]
    4. 数据库预览路径单独使用 /products/pumps-db/plunger-pumps/[seriesSlug]/[slug]
    5. 补齐缺失的选型卡片
 ========================================================= */
@@ -53,7 +53,7 @@ const productMap = new Map(products.map((item) => [text(item.productId), item]))
    1. 规范路由表
 
    正式 canonicalPath：
-   /products/pumps/plunger-pumps/[slug]
+   /products/pumps/piston-pump/[slug]
 
    数据库预览 databasePreviewHref：
    /products/pumps-db/plunger-pumps/[seriesSlug]/[slug]
@@ -66,7 +66,8 @@ routes = routes.map((route) => {
   const seriesSlug = text(product.seriesSlug);
   const routeSlug = text(route.routeSlug || product.routeSlug || product.slug);
 
-  const officialPath = `/products/pumps/${pumpTypeSlug}/${routeSlug}`;
+  const publicPumpTypeSlug = pumpTypeSlug === "plunger-pumps" ? "piston-pump" : pumpTypeSlug;
+  const officialPath = `/products/pumps/${publicPumpTypeSlug}/${routeSlug}`;
   const previewPath = seriesSlug
     ? `/products/pumps-db/${pumpTypeSlug}/${seriesSlug}/${routeSlug}`
     : `/products/pumps-db/${pumpTypeSlug}/${routeSlug}`;

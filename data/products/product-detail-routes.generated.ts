@@ -4372,176 +4372,176 @@ export const englishProductDetailRoutes = [
   ],
   [
     "pumps",
-    "plunger-pumps"
+    "piston-pump"
   ],
   [
     "pumps",
-    "plunger-pumps",
+    "piston-pump",
     "ea-100-peek"
   ],
   [
     "pumps",
-    "plunger-pumps",
+    "piston-pump",
     "ea-100-pmma"
   ],
   [
     "pumps",
-    "plunger-pumps",
+    "piston-pump",
     "ea-1000-peek"
   ],
   [
     "pumps",
-    "plunger-pumps",
+    "piston-pump",
     "ea-1000-pmma"
   ],
   [
     "pumps",
-    "plunger-pumps",
+    "piston-pump",
     "ea-10000-peek"
   ],
   [
     "pumps",
-    "plunger-pumps",
+    "piston-pump",
     "ea-10000-pmma"
   ],
   [
     "pumps",
-    "plunger-pumps",
+    "piston-pump",
     "ea-250-peek"
   ],
   [
     "pumps",
-    "plunger-pumps",
+    "piston-pump",
     "ea-250-pmma"
   ],
   [
     "pumps",
-    "plunger-pumps",
+    "piston-pump",
     "ea-2500-peek"
   ],
   [
     "pumps",
-    "plunger-pumps",
+    "piston-pump",
     "ea-2500-pmma"
   ],
   [
     "pumps",
-    "plunger-pumps",
+    "piston-pump",
     "ea-500-peek"
   ],
   [
     "pumps",
-    "plunger-pumps",
+    "piston-pump",
     "ea-500-pmma"
   ],
   [
     "pumps",
-    "plunger-pumps",
+    "piston-pump",
     "ea-5000-peek"
   ],
   [
     "pumps",
-    "plunger-pumps",
+    "piston-pump",
     "ea-5000-pmma"
   ],
   [
     "pumps",
-    "plunger-pumps",
-    "ea-standard-piston-pumps"
+    "piston-pump",
+    "standard-piston-pump"
   ],
   [
     "pumps",
-    "plunger-pumps",
+    "piston-pump",
     "ea-standard-plunger-pumps"
   ],
   [
     "pumps",
-    "plunger-pumps",
+    "piston-pump",
     "sm-100-peek"
   ],
   [
     "pumps",
-    "plunger-pumps",
+    "piston-pump",
     "sm-100-pmma"
   ],
   [
     "pumps",
-    "plunger-pumps",
+    "piston-pump",
     "sm-1000-pmma"
   ],
   [
     "pumps",
-    "plunger-pumps",
+    "piston-pump",
     "sm-250-peek"
   ],
   [
     "pumps",
-    "plunger-pumps",
+    "piston-pump",
     "sm-250-pmma"
   ],
   [
     "pumps",
-    "plunger-pumps",
+    "piston-pump",
     "sm-50-pmma"
   ],
   [
     "pumps",
-    "plunger-pumps",
+    "piston-pump",
     "sm-500-pmma"
   ],
   [
     "pumps",
-    "plunger-pumps",
+    "piston-pump",
     "sm-micro-piston-pumps"
   ],
   [
     "pumps",
-    "plunger-pumps",
+    "piston-pump",
     "sm-micro-plunger-pumps"
   ],
   [
     "pumps",
-    "plunger-pumps",
-    "sm-miniature-piston-pumps"
+    "piston-pump",
+    "miniature-piston-pump"
   ],
   [
     "pumps",
-    "plunger-pumps",
+    "piston-pump",
     "sm-miniature-plunger-pumps"
   ],
   [
     "pumps",
-    "plunger-pumps",
+    "piston-pump",
     "tm-100-pmma"
   ],
   [
     "pumps",
-    "plunger-pumps",
+    "piston-pump",
     "tm-250-pmma"
   ],
   [
     "pumps",
-    "plunger-pumps",
+    "piston-pump",
     "tm-50-pmma"
   ],
   [
     "pumps",
-    "plunger-pumps",
+    "piston-pump",
     "tm-500-pmma"
   ],
   [
     "pumps",
-    "plunger-pumps",
-    "tm-ultra-compact-piston-pumps"
+    "piston-pump",
+    "ultra-compact-piston-pump"
   ],
   [
     "pumps",
-    "plunger-pumps",
+    "piston-pump",
     "tm-ultra-micro-piston-pumps"
   ],
   [
     "pumps",
-    "plunger-pumps",
+    "piston-pump",
     "tm-ultra-micro-plunger-pumps"
   ],
   [

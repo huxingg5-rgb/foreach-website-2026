@@ -5,11 +5,11 @@ type FilterOptionLabelMap = Partial<Record<ProductFilterLocale, string>>;
 const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
   "柱塞泵": {
     zh: "柱塞泵",
-    en: "Plunger Pump",
-    es: "Bomba de émbolo",
+    en: "Piston Pump",
+    es: "Bomba de pistón",
     fr: "Pompe à piston",
-    ko: "플런저 펌프",
-    ru: "Плунжерный насос",
+    ko: "피스톤 펌프",
+    ru: "Поршневой насос",
   },
   "隔膜泵": {
     zh: "微型隔膜泵",
@@ -46,27 +46,27 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
 
   "EA 常规柱塞泵": {
     zh: "EA 常规柱塞泵",
-    en: "EA Standard Plunger Pump",
-    es: "Bomba de émbolo estándar EA",
+    en: "EA Standard Piston Pump",
+    es: "Bomba de pistón estándar EA",
     fr: "Pompe à piston standard EA",
-    ko: "EA 표준 플런저 펌프",
-    ru: "Стандартный плунжерный насос EA",
+    ko: "EA 표준 피스톤 펌프",
+    ru: "Стандартный поршневой насос EA",
   },
   "SM 微型柱塞泵": {
     zh: "SM 微型柱塞泵",
-    en: "SM Miniature Plunger Pump",
-    es: "Bomba de émbolo miniatura SM",
+    en: "SM Miniature Piston Pump",
+    es: "Bomba de pistón miniatura SM",
     fr: "Pompe à piston miniature SM",
-    ko: "SM 소형 플런저 펌프",
-    ru: "Миниатюрный плунжерный насос SM",
+    ko: "SM 소형 피스톤 펌프",
+    ru: "Миниатюрный поршневой насос SM",
   },
   "TM 超微型柱塞泵": {
     zh: "TM 超微型柱塞泵",
-    en: "TM Ultra-Compact Plunger Pump",
-    es: "Bomba de émbolo ultracompacta TM",
+    en: "TM Ultra-Compact Piston Pump",
+    es: "Bomba de pistón ultracompacta TM",
     fr: "Pompe à piston ultra-compacte TM",
-    ko: "TM 초소형 플런저 펌프",
-    ru: "Сверхкомпактный плунжерный насос TM",
+    ko: "TM 초소형 피스톤 펌프",
+    ru: "Сверхкомпактный поршневой насос TM",
   },
 
   "DPL 液体隔膜泵": {

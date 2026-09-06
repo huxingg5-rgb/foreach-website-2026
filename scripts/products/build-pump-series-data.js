@@ -1,4 +1,4 @@
-﻿/* =========================================================
+/* =========================================================
    build-pump-series-data.js
    恒永达官网｜泵系列 xlsx 数据源解析脚本
 
@@ -622,6 +622,11 @@ function main() {
 
     const faqs = faqRows
       .filter((row) => {
+        // A product-scoped FAQ must not fall through to its broader pump type.
+        if (cleanText(row.scope).toLowerCase() === "product") {
+          return cleanText(row.productId) === productId &&
+            (!cleanText(row.locale) || cleanText(row.locale) === locale);
+        }
         return cleanText(row.productId) === productId ||
           cleanText(row.scope) === "global" ||
           cleanText(row.pumpTypeSlug) === pumpTypeSlug;
@@ -713,10 +718,10 @@ function main() {
       seriesSlug: cleanText(product.seriesSlug),
       canonicalPath:
         cleanText(route.canonicalPath) ||
-        `/products/pumps/${cleanText(product.pumpTypeSlug || product.productTypeSlug)}/${routeSlug}`,
+        `/products/pumps/${cleanText(product.pumpTypeSlug || product.productTypeSlug) === "plunger-pumps" ? "piston-pump" : cleanText(product.pumpTypeSlug || product.productTypeSlug)}/${routeSlug}`,
       detailHref:
         cleanText(route.detailHref) ||
-        `/products/pumps/${cleanText(product.pumpTypeSlug || product.productTypeSlug)}/${routeSlug}`,
+        `/products/pumps/${cleanText(product.pumpTypeSlug || product.productTypeSlug) === "plunger-pumps" ? "piston-pump" : cleanText(product.pumpTypeSlug || product.productTypeSlug)}/${routeSlug}`,
       legacyRedirectFrom: cleanText(route.legacyRedirectFrom),
       trailingSlashPolicy: cleanText(route.trailingSlashPolicy || "no_trailing_slash"),
     };

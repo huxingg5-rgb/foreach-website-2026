@@ -22,6 +22,12 @@ export type ProductDatasheet = {
  * a product-specific document can be added without changing the UI layer.
  */
 export const PRODUCT_DATASHEETS: Record<string, ProductDatasheet> = {
+  "sm-series-en": {
+    id: "sm-series-en",
+    file: "/downloads/resources/datasheets/en/Pumps/ps-120b-2507-00004-001-en-sm-piston-pump.pdf",
+    shortTitle: "SM",
+    title: "SM Piston Pump Specification Sheet",
+  },
   "dpl30-series-en": {
     id: "dpl30-series-en",
     file: "/downloads/resources/datasheets/en/Pumps/PS-150B-2507-00001_A03_en_DPL30 Diaphragm Pump Specification Sheet.pdf",

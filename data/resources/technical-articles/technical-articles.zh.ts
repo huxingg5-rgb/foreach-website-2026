@@ -8,6 +8,7 @@
    3. 技术文章用于沉淀产品选型、材料兼容、管路连接、密封方式与应用设计经验
 ========================================================= */
 
+import { legacyMotionArticleItems } from "./legacy-motion-control-articles.zh";
 import type { TechnicalArticlesSourcePageData } from "./technical-articles.types";
 
 const technicalArticlesBannerImage =
@@ -51,6 +52,61 @@ export const technicalArticlesZhData: TechnicalArticlesSourcePageData = {
   sectionTitle: "技术文章",
 
   articles: [
+    ...legacyMotionArticleItems,
+    {
+      id: "piston-pump-head-material-selection",
+      slug: "piston-pump-head-material-selection",
+      category: "pumps-valves",
+      title: "柱塞泵泵头材料怎么选？常用材料与选型方法",
+      summary:
+        "柱塞泵泵头材料会影响介质兼容性、结构稳定性、密封、清洗与项目成本。本文对比PMMA、PCTG、PPS、PVDF、PP、PTFE、PEEK、POM和PSU，并说明完整接液路径的验证方法。",
+      date: "2026-09-06",
+      coverImage:
+        "/images/resources/technical-articles/piston-pump/piston-pump-head-material-selection-cover.webp",
+      coverAlt: "FOREACH透明柱塞泵泵头材料与接液结构特写",
+      content: [
+        {
+          title: "柱塞泵泵头材料对比",
+          content:
+            "本文介绍PMMA、PCTG、PPS、PVDF、PP、PTFE、PEEK、POM和PSU的常见选型方向，并说明材料名称不能代替真实介质与工况验证。完整正文由柱塞泵泵头材料技术文章组件渲染。",
+        },
+        {
+          title: "完整接液路径与项目验证",
+          content:
+            "泵头选材需要同时核对柱塞、密封、阀、管路和接头，并结合介质、浓度、温度、接触时间、压力、清洗方式和目标工作液量完成样件及整机验证。",
+        },
+      ],
+      seoTitle: "柱塞泵泵头材料怎么选？PMMA、PEEK等材料对比 | FOREACH",
+      seoDescription:
+        "柱塞泵泵头材料怎么选？对比PMMA、PCTG、PPS、PVDF、PP、PTFE、PEEK、POM和PSU的选型方向，了解介质兼容、完整接液路径与验证方法。",
+    },
+    {
+      id: "piston-pump-accuracy-repeatability-resolution",
+      slug: "piston-pump-accuracy-repeatability-resolution",
+      category: "pumps-valves",
+      title: "柱塞泵的准确性、重复性和分辨率有什么区别？",
+      summary:
+        "柱塞泵分辨率不等于分液准确性。了解准确性、重复性和分辨率的区别，以及步数、行程、气泡、阀门和液体性质对小体积分液结果的影响。",
+      date: "2026-09-06",
+      coverImage:
+        "/images/resources/technical-articles/piston-pump/piston-pump-accuracy-repeatability-resolution-cover.webp",
+      coverAlt: "FOREACH SM系列精密柱塞泵实物图",
+      content: [
+        {
+          title: "柱塞泵准确性、重复性和分辨率",
+          content:
+            "本文解释柱塞泵准确性、重复性和分辨率的区别，并说明为什么理论每步液量不能直接作为最小可靠分液量。完整正文由柱塞泵性能技术文章组件渲染。",
+        },
+        {
+          title: "小体积分液与完整液路验证",
+          content:
+            "文章结合FOREACH EA-500-PMMA的满量程和2%量程参数，介绍机械背隙、阀门、气泡、介质、控制程序及测试方法对分液结果的影响。",
+        },
+      ],
+      seoTitle: "柱塞泵准确性、重复性与分辨率详解 | FOREACH",
+      seoDescription:
+        "柱塞泵分辨率不等于分液准确性。本文解释准确性、重复性和分辨率的区别，以及电机步数、工作行程、气泡、阀门和液体性质对小体积分液结果的影响。",
+    },
     {
       id: "dpl30-liquid-diaphragm-pump-selection-guide",
       slug: "dpl30-liquid-diaphragm-pump-selection-guide",
@@ -255,24 +311,28 @@ export const technicalArticlesZhData: TechnicalArticlesSourcePageData = {
       id: "micro-plunger-pump-selection",
       slug: "micro-plunger-pump-selection",
       category: "pumps-valves",
-      title: "微量柱塞泵选型时需要关注哪些指标",
+      title: "精密柱塞泵是什么？工作原理、优势与应用介绍",
       summary:
-        "微量柱塞泵选型时，需要关注分配体积、精度、重复性、压力范围、接口形式、驱动方式和系统通信方式。",
+        "了解精密柱塞泵的工作原理、主要优势、应用场景及基础选型方法，并认识FOREACH EA、SM和TM柱塞泵系列。",
       date: "2026-06-19",
       coverImage:
-        "/images/resources/technical-articles/covers/micro-plunger-pump-selection.webp",
+        "/images/resources/technical-articles/piston-pump/micro-plunger-pump-selection-cover.webp",
+      coverAlt: "FOREACH TM系列超微型精密柱塞泵实物图",
       content: [
         {
-          title: "核心参数不只是体积范围",
+          title: "精密柱塞泵如何工作",
           content:
-            "微量柱塞泵常用于 IVD、实验室自动化、分析仪器等场景，主要承担精准吸液、排液和定量分配任务。选型时首先需要确认单次分配体积范围和目标精度要求，其次需要确认系统压力、流体类型、运行频率和寿命要求。",
+            "精密柱塞泵利用柱塞往复运动完成液体吸取、计量和分配。完整正文由精密柱塞泵技术文章组件渲染。",
         },
         {
-          title: "需要和系统整体匹配",
+          title: "FOREACH柱塞泵系列与选型",
           content:
-            "除了泵本体参数，还需要关注接口形式、管路连接方式、控制协议和整机空间限制。对于设备厂商来说，柱塞泵并不是单独工作的部件，而是液路系统中的核心执行单元，需要与阀、管路、接头、传感器和控制系统协同匹配。",
+            "文章介绍EA、SM、TM系列，并从工作液量、准确性、重复性、介质、压力、接口、安装和控制等方面说明基础选型方法。",
         },
       ],
+      seoTitle: "精密柱塞泵是什么？工作原理、应用与选型 | FOREACH",
+      seoDescription:
+        "了解精密柱塞泵的工作原理、主要优势、应用场景及基础选型方法，并认识FOREACH EA、SM和TM柱塞泵系列。",
     },
     {
       id: "solenoid-valves-in-microfluidic-systems",

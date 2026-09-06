@@ -131,7 +131,7 @@ const secondaryLabels: Record<
   LocalizedLabel
 > = {
   "miniature-diaphragm-pumps": localized("微型隔膜泵", "Miniature Diaphragm Pumps", "Bombas miniatura de diafragma", "Pompes miniatures à membrane", "소형 다이어프램 펌프", "Миниатюрные мембранные насосы"),
-  "plunger-pumps": localized("柱塞泵", "Plunger Pumps", "Bombas de émbolo", "Pompes à piston", "플런저 펌프", "Плунжерные насосы"),
+  "plunger-pumps": localized("柱塞泵", "Piston Pump", "Bombas de pistón", "Pompes à piston", "피스톤 펌프", "Поршневые насосы"),
   "syringe-pumps": localized("注射泵", "Syringe Pumps", "Bombas de jeringa", "Pompes seringues", "시린지 펌프", "Шприцевые насосы"),
   "pipetting-pumps": localized("移液泵", "Pipetting Pumps", "Bombas de pipeteo", "Pompes de pipetage", "피펫팅 펌프", "Пипетирующие насосы"),
   "solenoid-valves": localized("电磁阀", "Solenoid Valves", "Válvulas solenoides", "Électrovannes", "솔레노이드 밸브", "Электромагнитные клапаны"),
@@ -190,7 +190,7 @@ const tagLabels = {
   "gas-liquid": localized("气液混合", "Gas-liquid", "Gas-líquido", "Gaz-liquide", "기액 혼합", "Газ-жидкость"),
   "self-priming": localized("自吸", "Self-priming", "Autocebado", "Auto-amorçage", "자흡", "Самовсасывание"),
   "waste-handling": localized("废液处理", "Waste handling", "Gestión de residuos", "Gestion des effluents", "폐액 처리", "Работа с отходами"),
-  "plunger-pump": localized("柱塞泵", "Plunger pump", "Bomba de émbolo", "Pompe à piston", "플런저 펌프", "Плунжерный насос"),
+  "plunger-pump": localized("柱塞泵", "Piston pump", "Bomba de pistón", "Pompe à piston", "피스톤 펌프", "Поршневой насос"),
   dosing: localized("定量输送", "Dosing", "Dosificación", "Dosage", "정량 이송", "Дозирование"),
   precision: localized("精度", "Precision", "Precisión", "Précision", "정밀도", "Точность"),
   "solenoid-valve": localized("电磁阀", "Solenoid valve", "Válvula solenoide", "Électrovanne", "솔레노이드 밸브", "Электромагнитный клапан"),
@@ -225,9 +225,16 @@ interface ArticleClassificationDefinition {
   tagKeys: readonly TechnicalArticleTagKey[];
   literalTags?: readonly string[];
   relatedProducts: readonly string[];
+  relationKeys?: readonly string[];
+  relationPriority?: number;
 }
 
 const articleClassifications: Record<string, ArticleClassificationDefinition> = {
+  "piston-pump-acceleration-deceleration-curves": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "testing-validation"], relatedProducts: ["EA", "SM", "TM"], relationKeys: ["series:ea", "series:sm", "series:tm"], relationPriority: 80 },
+  "precision-piston-pump-backlash-compensation": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "testing-validation"], relatedProducts: ["EA", "SM", "TM"], relationKeys: ["series:ea", "series:sm", "series:tm"], relationPriority: 70 },
+  "stepper-motor-calculation-selection": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "testing-validation"], relatedProducts: ["EA", "SM", "TM"], relationKeys: ["series:ea", "series:sm", "series:tm"], relationPriority: 60 },
+  "modbus-protocol-fluid-control": { primaryCategory: "fluid-detection-control", secondaryCategory: "intelligent-fluid-control", tagKeys: ["wiring-control", "testing-validation"], relatedProducts: [] },
+
   "ink-circulation-supply-return-pump-diaphragm-pump": { primaryCategory: "applications-solutions", secondaryCategory: "printing-inkjet", tagKeys: ["inkjet", "ink-circulation", "liquid-pump", "flow", "pressure", "material-compatibility", "oem-integration"], literalTags: ["Ink Supply Pump", "Ink Return Pump"], relatedProducts: ["DPL30", "DPL60"] },
   "300-vs-600-ml-min-ink-circulation-return-pump-selection": { primaryCategory: "applications-solutions", secondaryCategory: "printing-inkjet", tagKeys: ["inkjet", "ink-circulation", "flow", "operating-point", "tubing-resistance", "pressure-drop", "selection"], literalTags: ["300 mL/min", "600 mL/min"], relatedProducts: ["DPL30", "DPL60"] },
   "white-ink-circulation-pump-selection-sedimentation": { primaryCategory: "applications-solutions", secondaryCategory: "printing-inkjet", tagKeys: ["inkjet", "ink-circulation", "white-ink", "pigment-sedimentation", "material-compatibility", "testing-validation"], literalTags: ["TiO₂"], relatedProducts: ["DPL30", "DPL60"] },
@@ -253,7 +260,9 @@ const articleClassifications: Record<string, ArticleClassificationDefinition> = 
   "dpgl800-gas-liquid-diaphragm-pump-selection-guide": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["gas-liquid", "self-priming", "waste-handling", "selection"], relatedProducts: ["DPGL800"] },
   "dpl60-liquid-diaphragm-pump-selection-guide": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["liquid-pump", "flow", "operating-point", "selection"], relatedProducts: ["DPL60"] },
   "dpl30-liquid-diaphragm-pump-selection-guide": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["liquid-pump", "flow", "oem-integration", "selection"], relatedProducts: ["DPL30"] },
-  "micro-plunger-pump-selection": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "dosing", "precision", "selection"], relatedProducts: [] },
+  "piston-pump-head-material-selection": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "material-compatibility", "selection", "testing-validation"], literalTags: ["PMMA", "PCTG", "PPS", "PVDF", "PP", "PTFE", "PEEK", "POM", "PSU"], relatedProducts: ["EA", "SM", "TM"], relationKeys: ["series:ea", "series:sm", "series:tm"], relationPriority: 120 },
+  "piston-pump-accuracy-repeatability-resolution": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "precision", "dosing", "testing-validation"], relatedProducts: ["EA", "SM", "TM"], relationKeys: ["series:ea", "series:sm", "series:tm"], relationPriority: 110 },
+  "micro-plunger-pump-selection": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "dosing", "precision", "selection"], relatedProducts: ["EA", "SM", "TM"], relationKeys: ["series:ea", "series:sm", "series:tm"], relationPriority: 100 },
   "solenoid-valves-in-microfluidic-systems": { primaryCategory: "valves", secondaryCategory: "solenoid-valves", tagKeys: ["solenoid-valve", "fluid-switching", "fluidic-system", "selection"], relatedProducts: [] },
   "selecting-microfluidic-fittings": { primaryCategory: "fittings-tubing", secondaryCategory: "fittings", tagKeys: ["fittings", "selection", "sealing-leakage", "tubing"], relatedProducts: [] },
   "low-pressure-vs-high-pressure-fittings": { primaryCategory: "fittings-tubing", secondaryCategory: "fittings", tagKeys: ["fittings", "pressure", "high-pressure", "selection"], relatedProducts: [] },
@@ -316,6 +325,14 @@ export function classifyTechnicalArticles(
 
     return {
       ...article,
+      relationKeys: Array.from(
+        new Set([
+          ...(article.relationKeys ?? []),
+          ...(classification.relationKeys ?? []),
+        ]),
+      ),
+      relationPriority:
+        article.relationPriority ?? classification.relationPriority,
       primaryCategory: classification.primaryCategory,
       secondaryCategory: classification.secondaryCategory,
       tags: [

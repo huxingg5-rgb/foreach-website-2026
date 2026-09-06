@@ -1,3 +1,5 @@
+import { getPistonPumpRedirect } from "@/lib/seo/piston-pump-migration";
+import { getPistonPumpMetadata } from "@/services/products/getPistonPumpMetadata";
 ﻿/* =========================================================
    page.tsx
    恒永达官网｜中文产品类型页 / 旧产品详情页复用动态路由
@@ -8,13 +10,13 @@
    路由说明：
    1. /products/{category}/{slug}
    2. 如果 slug 命中 product-route-map.ts，则显示产品类型筛选页
-      示例：/products/pumps/plunger-pumps
+      示例：/products/pumps/piston-pump
    3. 如果 category === "control"，则显示智控模块详情页
       示例：/products/control/abd-air-bubble-detector
    4. 如果没有命中产品类型路由，则继续按旧逻辑显示产品详情页
    5. 这样可以保留原有产品详情页，同时支持新的产品中心 SEO 路径
    6. 柱塞泵具体型号详情页已单独使用：
-      /products/pumps/plunger-pumps/[slug]
+      /products/pumps/piston-pump/[slug]
 ========================================================= */
 
 import type { Metadata } from "next";
@@ -180,13 +182,17 @@ export function generateStaticParams() {
     ...detailParams,
     ...controlModuleParams,
     ...tubingStaticParams,
-  ];
+  ].filter(({ category, slug }) => !getPistonPumpRedirect(`/products/${category}/${slug}/`));
 }
 
 export async function generateMetadata({
   params,
 }: ProductDetailRoutePageProps): Promise<Metadata> {
   const { category, slug } = await params;
+  if (category === "pumps" && slug === "piston-pump") {
+    return getPistonPumpMetadata("", "zh") || {};
+  }
+
 
   const productTypeRoute = resolveProductTypeRoute(category, slug);
 

@@ -15,9 +15,9 @@
    2. 中文默认路径不加 /zh-CN，中文产品中心为 /products
    3. 当前外语产品中心使用 ProductSelectionClient 渲染
    4. 产品卡片详情链接目前统一跳转到中文正式详情页：
-      /products/pumps/plunger-pumps/[slug]
+      /products/pumps/piston-pump/[slug]
    5. 后续如果新增外语产品详情页，再单独增加：
-      app/[locale]/products/pumps/plunger-pumps/[slug]/page.tsx
+      app/[locale]/products/pumps/piston-pump/[slug]/page.tsx
 ========================================================= */
 
 import type { Metadata } from "next";
