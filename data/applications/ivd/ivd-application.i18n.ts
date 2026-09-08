@@ -107,6 +107,35 @@ const HERO_PANEL: Record<
   },
 };
 
+const CLEANING_ARTICLE_LINK: Record<
+  TargetLocale,
+  { articleText: string; articleHref: string }
+> = {
+  es: {
+    articleText:
+      "Cómo distinguir y seleccionar bombas de limpieza, lavado y enjuague IVD",
+    articleHref:
+      "/es/resources/technical-articles/ivd-cleaning-wash-rinse-pump-diaphragm-pump/",
+  },
+  fr: {
+    articleText:
+      "Distinguer et choisir les pompes de nettoyage, lavage et rinçage IVD",
+    articleHref:
+      "/fr/resources/technical-articles/ivd-cleaning-wash-rinse-pump-diaphragm-pump/",
+  },
+  ko: {
+    articleText: "IVD cleaning, wash, rinse 펌프의 차이와 선정 방법",
+    articleHref:
+      "/ko/resources/technical-articles/ivd-cleaning-wash-rinse-pump-diaphragm-pump/",
+  },
+  ru: {
+    articleText:
+      "Различия и выбор насосов очистки, промывки и ополаскивания IVD",
+    articleHref:
+      "/ru/resources/technical-articles/ivd-cleaning-wash-rinse-pump-diaphragm-pump/",
+  },
+};
+
 function localizeHref(value: string, locale: TargetLocale) {
   if (value === "/") {
     return `/${locale}`;
@@ -188,6 +217,10 @@ function createTargetLocaleData(
       panelTitle: heroPanel.title,
       panelItems: heroPanel.items,
     },
+    ctaBanner: {
+      ...data.ctaBanner,
+      ...CLEANING_ARTICLE_LINK[locale],
+    },
   };
 }
 
@@ -237,6 +270,10 @@ function createEnglishPlaceholderData(): IvdApplicationPageData {
       primaryHref: "/en/products",
       secondaryText: "Submit an Application Request",
       secondaryHref: "/en/contact",
+      articleText:
+        "How to distinguish and select IVD cleaning, wash and rinse pumps",
+      articleHref:
+        "/en/resources/technical-articles/ivd-cleaning-wash-rinse-pump-diaphragm-pump/",
     },
   };
 }

@@ -15,12 +15,8 @@ import {
   diaphragmPumpReferenceModels,
 } from "../../data/products/detail/diaphragm-pump-reference-models";
 import { getDiaphragmPumpCopy } from "../../data/products/detail/diaphragm-pump-copy";
-import { getDiaphragmPumpSeriesCopy } from "../../data/products/detail/diaphragm-pump-series-copy";
 import { diaphragmPumpSelectionProducts } from "../../data/products/selection/diaphragm-pump-selection.generated";
-import {
-  getDiaphragmPumpCategoryIntro,
-  getProductTypeIntroByIds,
-} from "../../data/products/selection/product-type-intro";
+import { getProductTypeIntroByIds } from "../../data/products/selection/product-type-intro";
 import { siteSearchIndex } from "../../data/search/site-search-index.generated";
 
 const projectRoot = process.cwd();
@@ -173,20 +169,10 @@ function assertOrderedText(text: string, expected: readonly string[], route: str
   }
 }
 
-type AuditableDiaphragmPumpCopy = {
-  intro: string;
-  applications: string;
-  faqs: Array<{
-    question: string;
-    answer: string;
-  }>;
-};
-
 function assertLiveDetailCopy(
   html: string,
   route: string,
-  expectedCopy: AuditableDiaphragmPumpCopy | null,
-  expectedFaqCount = 5,
+  expectedCopy: ReturnType<typeof getDiaphragmPumpCopy>,
 ) {
   if (!expectedCopy) {
     fail(`找不到详情文案：${route}`);
@@ -200,10 +186,8 @@ function assertLiveDetailCopy(
   if (!text.includes(expectedCopy.applications)) {
     fail(`常见应用未恢复：${route}`);
   }
-  if (expectedCopy.faqs.length !== expectedFaqCount) {
-    fail(
-      `FAQ 数据数量错误：${route} -> ${expectedCopy.faqs.length}，预期 ${expectedFaqCount}`,
-    );
+  if (expectedCopy.faqs.length !== 5) {
+    fail(`FAQ 数据不是 5 条：${route} -> ${expectedCopy.faqs.length}`);
   }
 
   const jsonLdObjects = parseJsonLd(html, route).flatMap((document) =>
@@ -287,20 +271,8 @@ for (const locale of DIAPHRAGM_PUMP_PUBLIC_LOCALES) {
     copy.parent;
   const categoryChecks = [
     { slug: "", h1: parentIntroHeading, cards: 7 },
-    {
-      slug: "liquid-diaphragm-pumps",
-      h1:
-        getDiaphragmPumpCategoryIntro("液体隔膜泵", locale)?.title ||
-        copy.liquid,
-      cards: 6,
-    },
-    {
-      slug: "gas-liquid-diaphragm-pumps",
-      h1:
-        getDiaphragmPumpCategoryIntro("气液混合隔膜泵", locale)?.title ||
-        copy.gasLiquid,
-      cards: 1,
-    },
+    { slug: "liquid-diaphragm-pumps", h1: copy.liquid, cards: 6 },
+    { slug: "gas-liquid-diaphragm-pumps", h1: copy.gasLiquid, cards: 1 },
   ];
 
   for (const check of categoryChecks) {
@@ -493,14 +465,11 @@ for (const locale of DIAPHRAGM_PUMP_PUBLIC_LOCALES) {
     const seriesReference = diaphragmPumpReferenceModels.find(
       (reference) => reference.sourceSeriesSlug === seriesSlug,
     );
-    const neutralSeriesCopy = getDiaphragmPumpSeriesCopy(seriesSlug, locale);
     assertCustomProductRow(html, route, locale);
     assertLiveDetailCopy(
       html,
       route,
-      neutralSeriesCopy ||
-        getDiaphragmPumpCopy({ slug: seriesReference?.slug }, locale),
-      neutralSeriesCopy ? 2 : 5,
+      getDiaphragmPumpCopy({ slug: seriesReference?.slug }, locale),
     );
     for (const token of privatePageTokens) {
       if (html.includes(token)) fail(`Series HTML 含私有型号字段：${route} -> ${token}`);

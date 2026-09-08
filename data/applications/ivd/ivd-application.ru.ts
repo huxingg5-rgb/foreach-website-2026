@@ -249,7 +249,7 @@ export const ivdRuExactText: Record<string, string> = {
 
 export const ivdRuTermText: Record<string, string> = {
   "注射泵": "Шприцевой насос",
-  "柱塞泵": "Плунжерный насос",
+  "柱塞泵": "Поршневой насос",
   "采样针": "Пробоотборная игла",
   "电磁阀": "Электромагнитный клапан",
   "旋转阀": "Поворотный клапан",

@@ -67,7 +67,7 @@ export const dpl30SelfPrimingDecreaseZhCopy = {
         },
         {
           type: "paragraph",
-          text: "内部回漏会把膜片刚建立的压差重新泄掉。相关微型隔膜泵研究也将阀的流向效率、静态泄漏、反应容积和空化列为影响有效流量与自吸的重要因素。研究模型用于解释机理，不能直接当作DPL30的产品性能数据。",
+          text: "内部回漏会把膜片刚建立的部分压差泄掉。阀片密封、残留容积以及气体或蒸气的存在都会影响有效流量与自吸。这里解释的是工作机理，不能直接当作DPL30的产品性能数据。",
         },
         {
           type: "notice",
@@ -86,7 +86,7 @@ export const dpl30SelfPrimingDecreaseZhCopy = {
         {
           type: "formula",
           expression: "Q_pump = Q_liquid + Q_air leak",
-          note: "每个吸入行程中被空气占据的容积，都会减少用于提升液体的有效容积。该式用于故障分解，不代表两相流精确模型。",
+          note: "在故障排查的近似分析中，空气占据部分吸入容积，使可用于液体输送的有效容积减少。各体积项应在相同参考压力下比较；气体具有可压缩性，该式不是完整的两相流模型。",
         },
         {
           type: "paragraph",
@@ -678,7 +678,7 @@ export const dpl30EpdmPtfeFfkmSelectionZhCopy = {
         {
           type: "formula",
           expression: "δ² = δ_D² + δ_P² + δ_H²",
-          note: "Hansen溶解度参数把相互作用分成色散、极性和氢键分量。相关研究证明它能帮助关联EPDM、FKM与不同溶剂的溶胀趋势，但仍需实验验证具体配方。",
+          note: "Hansen溶解度参数把相互作用分成色散、极性和氢键分量，可帮助理解材料与液体之间的亲和性及溶胀趋势，但实际材料配方仍需试验验证。",
         },
         {
           type: "paragraph",
@@ -691,7 +691,7 @@ export const dpl30EpdmPtfeFfkmSelectionZhCopy = {
       blocks: [
         {
           type: "paragraph",
-          text: "PTFE的高度氟化结构、强C–F键以及氟原子对碳骨架的屏蔽，是其高化学和热稳定性的主要原因。Chemours和Chemical Science资料都说明了PTFE广泛的化学耐受特征。",
+          text: "PTFE的高度氟化结构、强C–F键以及氟原子对碳骨架的屏蔽，使其具有较高的化学和热稳定性。这并不代表PTFE在任何条件下都具有无限的介质兼容性。",
         },
         {
           type: "paragraph",

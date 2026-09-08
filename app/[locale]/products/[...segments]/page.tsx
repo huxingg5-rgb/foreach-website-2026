@@ -263,14 +263,7 @@ async function getDiaphragmPumpRouteMetadata(
   return {
     title,
     description,
-    keywords: [
-      heading,
-      "FOREACH",
-      "miniature diaphragm pump",
-      ...(normalizedLocale === "en" && isLiquidCategory
-        ? ["micro liquid diaphragm pump", "micro diaphragm pump"]
-        : []),
-    ],
+    keywords: [heading, "FOREACH", "miniature diaphragm pump"],
     alternates: {
       canonical: canonicalPath,
       languages: getDiaphragmPumpLanguageAlternates(childSlug || undefined),

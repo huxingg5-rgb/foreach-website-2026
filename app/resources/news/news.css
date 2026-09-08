@@ -440,15 +440,11 @@
 ========================================================= */
 
 .newsArticleDetailPage .newsArticleBreadcrumbShell {
-  padding-top: 92px;
+  /* Keep every article locale aligned with the shared fixed header. */
+  padding-top: var(--site-header-height);
   background: #ffffff;
 }
 
-@media (max-width: 760px) {
-  .newsArticleDetailPage .newsArticleBreadcrumbShell {
-    padding-top: 74px;
-  }
-}
 /* =========================================================
    新闻列表分页
    说明：

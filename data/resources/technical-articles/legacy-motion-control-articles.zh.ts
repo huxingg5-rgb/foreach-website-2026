@@ -64,10 +64,7 @@ export const legacyMotionArticles: MotionArticle[] = [
       }
     ],
     "refs": [
-      {
-        "label": "Oriental Motor：步进电机基础",
-        "href": "https://www.orientalmotor.com/stepper-motors/technology/stepper-motor-basics.html"
-      }
+
     ]
   },
   {
@@ -238,10 +235,7 @@ export const legacyMotionArticles: MotionArticle[] = [
       }
     ],
     "refs": [
-      {
-        "label": "Oriental Motor：步进电机基础",
-        "href": "https://www.orientalmotor.com/stepper-motors/technology/stepper-motor-basics.html"
-      }
+
     ]
   },
   {

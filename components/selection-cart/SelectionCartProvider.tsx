@@ -380,7 +380,12 @@ export function SelectionCartProvider({
   useEffect(() => {
     if (!hasMounted) return;
 
-    window.localStorage.setItem(GLOBAL_CART_STORAGE_KEY, JSON.stringify(items));
+    // Storage can be blocked or full. Keep the current in-memory cart usable.
+    try {
+      window.localStorage.setItem(GLOBAL_CART_STORAGE_KEY, JSON.stringify(items));
+    } catch {
+      // Do not clear items or let persistence failure reach the page error boundary.
+    }
   }, [items, hasMounted]);
 
   function openCart() {

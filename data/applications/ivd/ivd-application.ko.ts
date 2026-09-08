@@ -208,7 +208,7 @@ export const ivdKoExactText: Record<string, string> = {
 
 export const ivdKoTermText: Record<string, string> = {
   "注射泵": "시린지 펌프",
-  "柱塞泵": "플런저 펌프",
+  "柱塞泵": "피스톤 펌프",
   "采样针": "샘플링 프로브",
   "电磁阀": "솔레노이드 밸브",
   "旋转阀": "로터리 밸브",

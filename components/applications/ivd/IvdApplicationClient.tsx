@@ -330,6 +330,13 @@ export default function IvdApplicationClient({ data }: IvdApplicationClientProps
               可提交仪器类型、液体介质、流量范围、压力要求、管路尺寸和当前问题，
               由恒永达工程团队协助评估产品组合与液路方案。
             </p>
+            {data.ctaBanner.articleHref && data.ctaBanner.articleText ? (
+              <p className="ivd-cta-resource">
+                <Link href={data.ctaBanner.articleHref}>
+                  {data.ctaBanner.articleText}
+                </Link>
+              </p>
+            ) : null}
           </div>
 
           <Link className="ivd-btn" href={data.ctaBanner.secondaryHref || "/contact"}>

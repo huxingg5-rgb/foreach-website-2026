@@ -176,6 +176,41 @@
   object-fit: contain;
 }
 
+/* 精密柱塞泵系列图采用 3:2 白底构图；详情页完整显示三款产品并控制占屏高度。 */
+:global(
+  .newsArticleDetailPage[data-article-slug="micro-plunger-pump-selection"]
+) .cover {
+  width: min(100%, 900px);
+  height: auto;
+  aspect-ratio: 3 / 2;
+  margin-inline: auto;
+  background: #ffffff;
+}
+
+:global(
+  .newsArticleDetailPage[data-article-slug="micro-plunger-pump-selection"]
+) .cover img {
+  object-fit: contain;
+  object-position: center center;
+}
+
+:global(
+  .newsArticleDetailPage[data-article-slug="piston-pump-accuracy-repeatability-resolution"]
+) .cover {
+  width: min(100%, 900px);
+  height: auto;
+  aspect-ratio: 3 / 2;
+  margin-inline: auto;
+  background: #ffffff;
+}
+
+:global(
+  .newsArticleDetailPage[data-article-slug="piston-pump-accuracy-repeatability-resolution"]
+) .cover img {
+  object-fit: contain;
+  object-position: center center;
+}
+
 /* =========================================================
    4. 正文区域
 
@@ -756,3 +791,12 @@
 }
 
 /* ADLM_2026_ONSITE_ARTICLE_STYLE_END */
+
+:global(.newsArticleDetailPage[data-article-slug="clinical-chemistry-piston-pump-100-250-500-ul-selection"]) .cover { width: min(100%, 960px); height: auto; aspect-ratio: 1895 / 1216; margin-inline: auto; background: #fff; }
+:global(.newsArticleDetailPage[data-article-slug="clinical-chemistry-piston-pump-100-250-500-ul-selection"]) .cover img { object-fit: contain; }
+
+:global(.newsArticleDetailPage[data-article-slug="diaphragm-pump-multiple-wash-nozzles-flow-balance"]) .cover { width: min(100%, 960px); height: auto; aspect-ratio: 16 / 9; margin-inline: auto; background: #fff; }
+:global(.newsArticleDetailPage[data-article-slug="diaphragm-pump-multiple-wash-nozzles-flow-balance"]) .cover img { object-fit: contain; }
+
+:global(.newsArticleDetailPage[data-article-slug="diaphragm-pump-flow-drop-reservoir-venting"]) .cover { width: min(100%, 960px); height: auto; aspect-ratio: 16 / 9; margin-inline: auto; background: #fff; }
+:global(.newsArticleDetailPage[data-article-slug="diaphragm-pump-flow-drop-reservoir-venting"]) .cover img { object-fit: contain; }

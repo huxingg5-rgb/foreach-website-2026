@@ -484,7 +484,7 @@ export default function SiteSearchClient({
             <h2>{isEnglish ? t("Enter a search term") : "请输入搜索关键词"}</h2>
             <p>
               {isEnglish
-                ? t("For example: Q2002, PMC1702, plunger pump, or diaphragm pump datasheet.")
+                ? t("For example: Q2002, PMC1702, piston pump, or diaphragm pump datasheet.")
                 : "例如：Q2002、PMC1702、柱塞泵、隔膜泵规格书。"}
             </p>
           </section>

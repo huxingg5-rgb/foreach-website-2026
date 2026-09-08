@@ -16,7 +16,7 @@ const installationGuideEnglishData: Omit<InstallationGuidePageData, "locale"> = 
     buttonText: "Search",
     recentLabel: "Recent searches",
     recentKeywords: [
-      "Plunger Pump",
+      "Piston Pump",
       "Q20",
       "Solenoid Valve",
       "High-Pressure Valve",
@@ -38,7 +38,7 @@ const installationGuideEnglishData: Omit<InstallationGuidePageData, "locale"> = 
         type: "category",
         name: "Pumps",
         children: [
-          { id: "plunger-pump", name: "Plunger Pumps" },
+          { id: "plunger-pump", name: "Piston Pump" },
           { id: "diaphragm-pump", name: "Diaphragm Pumps" },
           { id: "valveless-pump", name: "Valveless Pumps" },
           { id: "syringe-pump", name: "Syringe Pumps" },
@@ -104,13 +104,13 @@ const installationGuideEnglishData: Omit<InstallationGuidePageData, "locale"> = 
     },
     {
       id: "plunger-pump-install-guide",
-      title: "Plunger Pump Installation and Tubing Connections",
+      title: "Piston Pump Installation and Tubing Connections",
       category: "pumps",
       series: "plunger-pump",
       tags: ["Motor", "Wiring", "Commissioning"],
       description:
-        "Guidance for mounting a plunger pump, connecting its inlet and outlet, routing tubing and performing an initial operating check.",
-      keywords: ["plunger pump", "motor", "wiring", "installation", "commissioning", "tubing"],
+        "Guidance for mounting a piston pump, connecting its inlet and outlet, routing tubing and performing an initial operating check.",
+      keywords: ["piston pump", "motor", "wiring", "installation", "commissioning", "tubing"],
       videoPlatform: "youtube",
       steps: [
         {
@@ -242,12 +242,12 @@ const installationGuideTranslations: Record<
       placeholder: "Introduzca un producto o modelo",
       buttonText: "Buscar",
       recentLabel: "Búsquedas recientes",
-      recentKeywords: ["Bomba de émbolo", "Q20", "Electroválvula", "Válvula de alta presión", "Sensor de presión"],
+      recentKeywords: ["Bomba de pistón", "Q20", "Electroválvula", "Válvula de alta presión", "Sensor de presión"],
     },
     sidebarTitle: "Series de productos",
     treeNames: {
       all: "Todas las guías", fittings: "Racores y conexiones de tubos", pumps: "Bombas",
-      "plunger-pump": "Bombas de émbolo", "diaphragm-pump": "Bombas de diafragma",
+      "plunger-pump": "Bombas de pistón", "diaphragm-pump": "Bombas de diafragma",
       "valveless-pump": "Bombas sin válvulas", "syringe-pump": "Bombas de jeringa",
       "high-pressure-pump": "Bombas de alta presión", valves: "Válvulas",
       "rotary-valve": "Válvulas rotativas", "solenoid-valve": "Electroválvulas",
@@ -276,9 +276,9 @@ const installationGuideTranslations: Record<
         ],
       },
       "plunger-pump-install-guide": {
-        title: "Instalación y conexiones de tubos de una bomba de émbolo", tags: ["Motor", "Cableado", "Puesta en marcha"],
-        description: "Orientación para montar una bomba de émbolo, conectar la entrada y la salida, tender los tubos y efectuar la comprobación inicial.",
-        keywords: ["bomba de émbolo", "motor", "cableado", "instalación", "puesta en marcha", "tubos"],
+        title: "Instalación y conexiones de tubos de una bomba de pistón", tags: ["Motor", "Cableado", "Puesta en marcha"],
+        description: "Orientación para montar una bomba de pistón, conectar la entrada y la salida, tender los tubos y efectuar la comprobación inicial.",
+        keywords: ["bomba de pistón", "motor", "cableado", "instalación", "puesta en marcha", "tubos"],
         steps: [
           { title: "Confirme la orientación de montaje", description: "Utilice el plano del instrumento para confirmar la orientación de la bomba y las posiciones de entrada y salida." },
           { title: "Conecte los tubos", description: "Conecte los tubos de entrada y salida y compruebe que las especificaciones de los racores sean correctas." },
@@ -398,11 +398,11 @@ const installationGuideTranslations: Record<
     },
     search: {
       placeholder: "제품명 또는 모델을 입력하세요", buttonText: "검색", recentLabel: "최근 검색",
-      recentKeywords: ["플런저 펌프", "Q20", "솔레노이드 밸브", "고압 밸브", "압력 센서"],
+      recentKeywords: ["피스톤 펌프", "Q20", "솔레노이드 밸브", "고압 밸브", "압력 센서"],
     },
     sidebarTitle: "제품 시리즈",
     treeNames: {
-      all: "전체 가이드", fittings: "피팅 및 튜브 연결", pumps: "펌프", "plunger-pump": "플런저 펌프",
+      all: "전체 가이드", fittings: "피팅 및 튜브 연결", pumps: "펌프", "plunger-pump": "피스톤 펌프",
       "diaphragm-pump": "다이어프램 펌프", "valveless-pump": "무밸브 펌프", "syringe-pump": "시린지 펌프",
       "high-pressure-pump": "고압 펌프", valves: "밸브", "rotary-valve": "로터리 밸브", "solenoid-valve": "솔레노이드 밸브",
       "high-pressure-valve": "고압 밸브", "pinch-valve": "핀치 밸브", sensors: "센서", "quality-control": "품질 관리", needles: "프로브 및 니들",
@@ -426,8 +426,8 @@ const installationGuideTranslations: Record<
         ],
       },
       "plunger-pump-install-guide": {
-        title: "플런저 펌프 설치 및 튜브 연결", tags: ["모터", "배선", "시운전"],
-        description: "플런저 펌프 장착, 입출구 연결, 튜브 배치 및 초기 작동 점검 지침입니다.", keywords: ["플런저 펌프", "모터", "배선", "설치", "시운전", "튜브"],
+        title: "피스톤 펌프 설치 및 튜브 연결", tags: ["모터", "배선", "시운전"],
+        description: "피스톤 펌프 장착, 입출구 연결, 튜브 배치 및 초기 작동 점검 지침입니다.", keywords: ["피스톤 펌프", "모터", "배선", "설치", "시운전", "튜브"],
         steps: [
           { title: "장착 방향 확인", description: "장비 배치도를 사용해 펌프 방향과 입구 및 출구 위치를 확인합니다." },
           { title: "튜브 연결", description: "입출구 튜브를 연결하고 피팅 사양이 일치하는지 확인합니다." },
@@ -470,11 +470,11 @@ const installationGuideTranslations: Record<
     },
     search: {
       placeholder: "Введите название или модель изделия", buttonText: "Найти", recentLabel: "Недавние запросы",
-      recentKeywords: ["Плунжерный насос", "Q20", "Электромагнитный клапан", "Клапан высокого давления", "Датчик давления"],
+      recentKeywords: ["Поршневой насос", "Q20", "Электромагнитный клапан", "Клапан высокого давления", "Датчик давления"],
     },
     sidebarTitle: "Серии продукции",
     treeNames: {
-      all: "Все руководства", fittings: "Фитинги и трубные соединения", pumps: "Насосы", "plunger-pump": "Плунжерные насосы",
+      all: "Все руководства", fittings: "Фитинги и трубные соединения", pumps: "Насосы", "plunger-pump": "Поршневые насосы",
       "diaphragm-pump": "Мембранные насосы", "valveless-pump": "Бесклапанные насосы", "syringe-pump": "Шприцевые насосы",
       "high-pressure-pump": "Насосы высокого давления", valves: "Клапаны", "rotary-valve": "Поворотные клапаны",
       "solenoid-valve": "Электромагнитные клапаны", "high-pressure-valve": "Клапаны высокого давления",
@@ -499,8 +499,8 @@ const installationGuideTranslations: Record<
         ],
       },
       "plunger-pump-install-guide": {
-        title: "Монтаж и подключение трубок плунжерного насоса", tags: ["Двигатель", "Электропроводка", "Ввод в эксплуатацию"],
-        description: "Рекомендации по установке плунжерного насоса, подключению входа и выхода, прокладке трубок и первичной проверке.", keywords: ["плунжерный насос", "двигатель", "электропроводка", "монтаж", "ввод в эксплуатацию", "трубки"],
+        title: "Монтаж и подключение трубок поршневого насоса", tags: ["Двигатель", "Электропроводка", "Ввод в эксплуатацию"],
+        description: "Рекомендации по установке поршневого насоса, подключению входа и выхода, прокладке трубок и первичной проверке.", keywords: ["поршневой насос", "двигатель", "электропроводка", "монтаж", "ввод в эксплуатацию", "трубки"],
         steps: [
           { title: "Проверьте ориентацию при монтаже", description: "По компоновочному чертежу прибора проверьте ориентацию насоса и положение входа и выхода." },
           { title: "Подключите трубки", description: "Подключите входную и выходную трубки и убедитесь, что характеристики фитингов соответствуют требованиям." },

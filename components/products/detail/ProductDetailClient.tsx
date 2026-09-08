@@ -1236,6 +1236,9 @@ function buildProductPageStructuredData(data: any, pathname: string) {
     PRODUCT_BREADCRUMB_COPY[locale] || PRODUCT_BREADCRUMB_COPY.en;
   const diaphragmCategoryCopy = getDiaphragmPumpCategoryCopy(locale);
   const isPistonPump = pathname.includes("/products/pumps/piston-pump/");
+  // Q-series routes collect selectable models; other detail routes describe specifications.
+  const isProductCollectionPage =
+    /\/products\/fittings\/quick-connect-fittings\/q(?:20|40|60)\/?$/.test(pathname);
   const breadcrumbItems = isDiaphragmPump
     ? [
         {
@@ -1279,9 +1282,9 @@ function buildProductPageStructuredData(data: any, pathname: string) {
   const websiteId = `${PRODUCT_SITE_ORIGIN}/#website`;
   const webpageId = `${canonicalUrl}#webpage`;
   const breadcrumbId = `${canonicalUrl}#breadcrumb`;
-  const productId = `${canonicalUrl}#${isDiaphragmPump ? "product-model" : "product"}`;
+  const productId = `${canonicalUrl}#product-model`;
   const webPage: Record<string, unknown> = {
-    "@type": "WebPage",
+    "@type": isProductCollectionPage ? "CollectionPage" : "WebPage",
     "@id": webpageId,
     url: canonicalUrl,
     name: productName,
@@ -1295,9 +1298,11 @@ function buildProductPageStructuredData(data: any, pathname: string) {
     publisher: {
       "@id": organizationId,
     },
-    mainEntity: {
-      "@id": productId,
-    },
+    ...(isProductCollectionPage ? {} : {
+      mainEntity: {
+        "@id": productId,
+      },
+    }),
   };
 
   if (description) {
@@ -1331,26 +1336,28 @@ function buildProductPageStructuredData(data: any, pathname: string) {
       })),
     },
     webPage,
-    {
-      "@type": isDiaphragmPump ? "ProductModel" : "Product",
-      "@id": productId,
-      name: productName,
-      url: canonicalUrl,
-      ...(description ? { description } : {}),
-      ...(productImages.length > 0 ? { image: productImages } : {}),
-      brand: {
-        "@type": "Brand",
-        name: "FOREACH",
+    ...(isProductCollectionPage ? [] : [
+      {
+        "@type": "ProductModel",
+        "@id": productId,
+        name: productName,
+        url: canonicalUrl,
+        ...(description ? { description } : {}),
+        ...(productImages.length > 0 ? { image: productImages } : {}),
+        brand: {
+          "@type": "Brand",
+          name: "FOREACH",
+        },
+        manufacturer: {
+          "@id": organizationId,
+        },
+        ...(productModel ? { model: productModel } : {}),
+        ...(productSku ? { sku: productSku } : {}),
+        mainEntityOfPage: {
+          "@id": webpageId,
+        },
       },
-      manufacturer: {
-        "@id": organizationId,
-      },
-      ...(productModel ? { model: productModel } : {}),
-      ...(productSku ? { sku: productSku } : {}),
-      mainEntityOfPage: {
-        "@id": webpageId,
-      },
-    },
+    ]),
   ];
 
   if (faqs.length > 0) {
@@ -1742,6 +1749,7 @@ export default function ProductDetailClient({
   ]);
 
 const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
+const [hasOpenedModel, setHasOpenedModel] = useState(false);
   const [isCadRequestOpen, setIsCadRequestOpen] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
   const [activeThumb, setActiveThumb] = useState(0);
@@ -2204,6 +2212,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
     if (nextTab === activeTab) return;
 
     setActiveTab(nextTab);
+    if (nextTab === "model3d") setHasOpenedModel(true);
 
     if (!analyticsProductId) return;
 
@@ -3134,6 +3143,13 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
             </div>
 
             {useAuthoredPistonCopy ? (
+              <nav className={styles.mobileQuickLinks} aria-label={copy.tabs}>
+                <a href="#product-detail-resources" onClick={() => handleProductTabChange("spec")}>{copy.specifications}</a>
+                <a href="#product-detail-actions">{isCustomProduct ? customProductCopy.contact : isTargetLanguage ? copy.selectModel : getModelActionText(data)}</a>
+              </nav>
+            ) : null}
+
+            {useAuthoredPistonCopy ? (
               <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-ea-description="true">
                 {data.advantages.map((paragraph: string, index: number) => (
                   <p key={`${index}-${paragraph}`}>{paragraph}</p>
@@ -3156,7 +3172,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
               </p>
             </div>
 
-            <div className={styles.operationArea}>
+            <div id="product-detail-actions" className={styles.operationArea}>
               <div data-product-model-row="true" className={styles.modelLine}>
                 <div className={styles.modelCodeWrap}>
                   <div className={styles.modelCodeText}>
@@ -3385,7 +3401,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
           </div>
         </section>
 
-        <section className={styles.detailSection}>
+        <section id="product-detail-resources" className={styles.detailSection}>
           <nav
             className={styles.tabNav}
             aria-label={copy.tabs}
@@ -3558,7 +3574,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                   className={styles.panelBox}
                   data-product-model3d-panel="true"
                 >
-                {isPumpDetail ? (
+                {hasOpenedModel ? (isPumpDetail ? (
                   <PumpUploadedFileGuard
                     key={model3dUrl}
                     fileUrl={model3dUrl}
@@ -3577,6 +3593,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                       slug={data.slug}
                       modelName={data.model}
                       modelUrl={model3dUrl}
+                      isActive={activeTab === "model3d"}
                       locale={pumpFileDisplayLocale}
                     />
                   </PumpUploadedFileGuard>
@@ -3584,10 +3601,12 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                   <ProductModelViewer
                     slug={data.slug}
                     modelName={data.model}
+                    key={model3dUrl}
                     modelUrl={model3dUrl}
+                    isActive={activeTab === "model3d"}
                     locale={pumpFileDisplayLocale}
                   />
-                )}
+                )) : null}
               </div>
             </div>
 

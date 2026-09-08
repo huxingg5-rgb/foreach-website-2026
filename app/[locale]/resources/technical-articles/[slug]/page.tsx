@@ -1,4 +1,3 @@
-import { isPumpApplicationArticleSlug } from "@/data/resources/technical-articles/pump-application-articles.article";
 /* =========================================================
    page.tsx
    恒永达官网｜外语技术文章详情页入口
@@ -23,7 +22,8 @@ import {
 
 import "@/app/resources/technical-articles/technical-articles.css";
 
-import type { TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
+import type { TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
+
 import "@/app/resources/news/news.css";
 
 const SUPPORTED_LOCALES: TechnicalArticleLocale[] = ["en", "es", "fr", "ko", "ru"];
@@ -50,16 +50,7 @@ function getTechnicalArticleLanguageLinks(slug: string) {
     ).map((locale) => [locale, languageLinks[locale]]),
   );
 
-  if (
-    isPumpApplicationArticleSlug(slug) ||
-    slug === "ink-circulation-supply-return-pump-diaphragm-pump" ||
-    slug === "300-vs-600-ml-min-ink-circulation-return-pump-selection" ||
-    slug === "white-ink-circulation-pump-selection-sedimentation" ||
-    slug === "ivd-waste-liquid-pump-liquid-vs-gas-liquid-diaphragm-pump" ||
-    slug === "ivd-cleaning-wash-rinse-pump-diaphragm-pump" ||
-    slug === "brushed-vs-brushless-diaphragm-pump-3000h-10000h" ||
-    slug === "life-science-dpl60-600ml-min-diaphragm-pump-selection-guide"
-  ) {
+  if (availableLanguageLinks["zh-CN"]) {
     availableLanguageLinks["x-default"] = basePath;
   }
 

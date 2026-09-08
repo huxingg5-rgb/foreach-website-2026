@@ -19,7 +19,9 @@
         "products:build-plunger-detail": "node ./scripts/products/build-plunger-pump-detail-data.js",
         "build:pump-series-data": "node scripts/products/build-pump-series-data.js && node scripts/products/apply-pump-series-faq-scope.js && node scripts/products/fix-pump-series-image-assets.js && node scripts/products/fix-pump-series-selection-card-assets.js",
         "generate:diaphragm-pumps": "node scripts/products/generate-diaphragm-pump-data.js",
-        "search:generate": "npm run products:check-piston-redirects && npm run products:check-piston-locales && tsx scripts/search/generate-site-search-index.ts && tsx scripts/search/generate-global-search-overlay-index.ts",
+        "products:build-link-index": "node scripts/products/generate-hard-tube-link-index.mjs",
+        "products:check-link-index": "node scripts/products/generate-hard-tube-link-index.mjs --check",
+        "search:generate": "npm run products:build-link-index && npm run products:check-piston-redirects && npm run products:check-piston-locales && tsx scripts/search/generate-site-search-index.ts && tsx scripts/search/generate-global-search-overlay-index.ts",
         "search:check": "tsx scripts/search/generate-site-search-index.ts --check && tsx scripts/search/generate-global-search-overlay-index.ts --check",
         "build:cloudflare": "npm run search:generate && node scripts/cloudflare/build-pages.mjs && node scripts/seo/normalize-static-urls.mjs && node scripts/seo/generate-sitemap.mjs",
         "seo:audit": "node scripts/seo/audit-url-consistency.mjs"

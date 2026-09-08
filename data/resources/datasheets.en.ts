@@ -49,7 +49,7 @@ export const datasheetsEnPageText = {
 
   search: {
     placeholder:
-      "Search by product name or keyword, such as plunger pump, rotary valve, pressure sensor, tubing and fittings",
+      "Search by product name or keyword, such as piston pump, rotary valve, pressure sensor, tubing and fittings",
     buttonText: "Search",
   },
 
@@ -105,7 +105,7 @@ export const datasheetEnItems: DatasheetItem[] = [
   {
     id: "ea-piston-pump",
     category: "pump",
-    keywords: "EA piston pump plunger pump precision metering dispensing 50 uL 20 mL",
+    keywords: "EA piston pump piston pump precision metering dispensing 50 uL 20 mL",
     title: "EA Piston Pump Datasheet",
     label: "Pumps",
     language: "English",
@@ -115,7 +115,7 @@ export const datasheetEnItems: DatasheetItem[] = [
       "EA piston pumps for precise metering, dispensing, and automated liquid handling across capacities from 50 µL to 20 mL.",
     image:
       "/images/products/pumps/plunger-pump/ea/pump-ea-1000ul-pmma.webp",
-    productHref: "/en/products/pumps/plunger-pumps/ea-standard-piston-pumps",
+    productHref: "/en/products/pumps/piston-pump/standard-piston-pump",
     downloadHref:
       "/downloads/resources/datasheets/en/Pumps/ps-120b-2507-00001-001-en-ea-piston-pump.pdf",
     actionType: "download",
@@ -123,7 +123,7 @@ export const datasheetEnItems: DatasheetItem[] = [
   {
     id: "eas-piston-pump",
     category: "pump",
-    keywords: "EAS piston pump plunger pump easy deaeration priming bubble removal",
+    keywords: "EAS piston pump piston pump easy deaeration priming bubble removal",
     title: "EAS Piston Pump Datasheet",
     label: "Pumps",
     language: "English",
@@ -133,7 +133,7 @@ export const datasheetEnItems: DatasheetItem[] = [
       "EAS easy-deaeration piston pumps for precise liquid handling where fast priming and efficient bubble removal are important.",
     image:
       "/images/products/pumps/product-types/plunger-pumps/foreach-plunger-pumps-product-type-intro.webp",
-    productHref: "/en/products/pumps/plunger-pumps",
+    productHref: "/en/products/pumps/piston-pump",
     downloadHref:
       "/downloads/resources/datasheets/en/Pumps/ps-120b-2507-00002-001-en-eas-piston-pump.pdf",
     actionType: "download",
@@ -141,7 +141,7 @@ export const datasheetEnItems: DatasheetItem[] = [
   {
     id: "sm-piston-pump",
     category: "pump",
-    keywords: "SM piston pump compact plunger pump miniature instrument reagent dosing",
+    keywords: "SM piston pump compact piston pump miniature instrument reagent dosing",
     title: "SM Piston Pump Datasheet",
     label: "Pumps",
     language: "English",
@@ -151,7 +151,7 @@ export const datasheetEnItems: DatasheetItem[] = [
       "Compact SM piston pumps for precise small-volume dosing and integration into miniature automated instruments.",
     image:
       "/images/products/pumps/plunger-pump/sm/pump-sm-1000ul-pmma.webp",
-    productHref: "/en/products/pumps/plunger-pumps/sm-miniature-piston-pumps",
+    productHref: "/en/products/pumps/piston-pump/miniature-piston-pump",
     downloadHref:
       "/downloads/resources/datasheets/en/Pumps/ps-120b-2507-00004-001-en-sm-piston-pump.pdf",
     actionType: "download",

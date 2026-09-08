@@ -150,7 +150,7 @@ import type {
   ProductSelectionFilterGroup,
   ProductSelectionSelectedTag,
 } from "./product-selection-ui.types";
-import hardTubeDetailsJson from "@/data/products/generated/fittings/hard-tube-fittings/detail/index.json";
+import hardTubeLinkIndex from "@/data/products/selection/hard-tube-link-index.generated.json";
 
 /* HARD_TUBE_HFL_BEFORE_HF_START */
 
@@ -1814,7 +1814,7 @@ function makeDetailHref(product: ProductSelectionProduct) {
 
     const matchedDetail =
       (
-        hardTubeDetailsJson as any[]
+        hardTubeLinkIndex as any[]
       ).find((detail) => {
         const detailCandidates = [
           detail?.productId,

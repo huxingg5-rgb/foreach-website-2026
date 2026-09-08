@@ -1,6 +1,4 @@
-﻿"use client";
-
-import { pumpApplicationArticleSlugs } from "@/data/resources/technical-articles/pump-application-articles.types"; // 声明这是客户端组件，因为这里需要使用 useState、useEffect、window 等浏览器能力
+"use client"; // 声明这是客户端组件，因为这里需要使用 useState、useEffect、window 等浏览器能力
 
 import Image from "next/image"; // 引入 Next.js 图片组件，用于导航栏产品图片展示
 import Link from "next/link"; // 引入 Next.js 的 Link 组件，用于站内跳转
@@ -178,13 +176,6 @@ function buildLocalizedPathname(pathname: string, localeCode: LocaleCode) {
   const pathWithoutLocale = stripLocalePrefixFromPath(pathname);
 
   const localePrefix = getLocalePathPrefix(localeCode);
-  const isBilingualPumpArticle = pumpApplicationArticleSlugs.some(
-    (slug) => pathWithoutLocale.replace(/\/$/, "") === `/resources/technical-articles/${slug}`,
-  );
-  if (isBilingualPumpArticle && localeCode !== "zh-CN" && localeCode !== "en") {
-    return `${localePrefix}/resources/technical-articles/`;
-  }
-
 
   if (!localePrefix) {
     return pathWithoutLocale;
@@ -1374,7 +1365,7 @@ const isFittingReplacementDetailPage =
                 {languageItems.map((language) => (
                   <a
                     key={language.code}
-                    href={language.href}
+                    href={isTechnicalArticlePage ? buildLocalizedPathname(pathname || "/", language.code) : language.href}
                     className={`site-nav-simple-dropdown-link language-details-item ${language.code === currentLocale
                       ? "language-details-item-active"
                       : ""

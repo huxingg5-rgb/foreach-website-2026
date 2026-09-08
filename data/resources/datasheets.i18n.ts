@@ -79,7 +79,7 @@ const foreignPageTextMap: Record<
     },
     search: {
       placeholder:
-        "Buscar por nombre de producto o palabra clave, por ejemplo bomba de émbolo, válvula rotativa, sensor de presión, tubos y conectores",
+        "Buscar por nombre de producto o palabra clave, por ejemplo bomba de pistón, válvula rotativa, sensor de presión, tubos y conectores",
       buttonText: "Buscar",
     },
     section: {
@@ -185,7 +185,7 @@ const foreignPageTextMap: Record<
     },
     search: {
       placeholder:
-        "제품명 또는 키워드로 검색하세요. 예: 플런저 펌프, 로터리 밸브, 압력 센서, 튜빙 및 피팅",
+        "제품명 또는 키워드로 검색하세요. 예: 피스톤 펌프, 로터리 밸브, 압력 센서, 튜빙 및 피팅",
       buttonText: "검색",
     },
     section: {
@@ -238,7 +238,7 @@ const foreignPageTextMap: Record<
     },
     search: {
       placeholder:
-        "Поиск по названию продукта или ключевому слову, например плунжерный насос, роторный клапан, датчик давления, трубки и фитинги",
+        "Поиск по названию продукта или ключевому слову, например поршневой насос, роторный клапан, датчик давления, трубки и фитинги",
       buttonText: "Поиск",
     },
     section: {
@@ -338,12 +338,12 @@ const foreignItemTextMap: Record<
 > = {
   es: {
     "plunger-pump": {
-      title: "Ficha técnica de la serie de bombas de émbolo",
+      title: "Ficha técnica de la serie de bombas de pistón",
       label: "Bombas",
       language: "PDF en inglés",
       description:
         "Para dosificación precisa, distribución y sistemas fluídicos de instrumentos analíticos automatizados.",
-      keywords: "bomba de émbolo dosificación precisa plunger pump",
+      keywords: "bomba de pistón dosificación precisa piston pump",
     },
     "valveless-pump": {
       title: "Ficha técnica de bomba sin válvulas",
@@ -442,7 +442,7 @@ const foreignItemTextMap: Record<
       language: "PDF en anglais",
       description:
         "Pour le dosage de haute précision, la distribution et les systèmes fluidiques d’instruments d’analyse automatisés.",
-      keywords: "pompe à piston dosage précis plunger pump",
+      keywords: "pompe à piston dosage précis piston pump",
     },
     "valveless-pump": {
       title: "Fiche technique de pompe sans vanne",
@@ -536,12 +536,12 @@ const foreignItemTextMap: Record<
 
   ko: {
     "plunger-pump": {
-      title: "플런저 펌프 시리즈 사양서",
+      title: "피스톤 펌프 시리즈 사양서",
       label: "펌프",
       language: "영어 PDF",
       description:
         "고정밀 정량 이송, 분주 및 자동화 분석 장비의 유체 시스템에 적합합니다.",
-      keywords: "플런저 펌프 정밀 정량 분주 plunger pump",
+      keywords: "피스톤 펌프 정밀 정량 분주 piston pump",
     },
     "valveless-pump": {
       title: "무밸브 펌프 사양서",
@@ -635,12 +635,12 @@ const foreignItemTextMap: Record<
 
   ru: {
     "plunger-pump": {
-      title: "Спецификация серии плунжерных насосов",
+      title: "Спецификация серии поршневых насосов",
       label: "Насосы",
       language: "PDF на английском",
       description:
         "Для высокоточного дозирования, распределения и жидкостных систем автоматизированных аналитических приборов.",
-      keywords: "плунжерный насос точное дозирование plunger pump",
+      keywords: "поршневой насос точное дозирование piston pump",
     },
     "valveless-pump": {
       title: "Спецификация безклапанного насоса",
@@ -759,9 +759,9 @@ const currentItemTranslations: Record<
   Record<string, Pick<DatasheetItem, "title" | "description">>
 > = {
   es: {
-    "ea-piston-pump": { title: "Ficha técnica de la bomba de émbolo EA", description: "Bombas de émbolo EA para medición precisa, dosificación y manipulación automatizada de líquidos, con capacidades de 50 µL a 20 mL." },
-    "eas-piston-pump": { title: "Ficha técnica de la bomba de émbolo EAS", description: "Bombas de émbolo EAS de desaireación sencilla para manipulación precisa de líquidos cuando se requiere cebado rápido y eliminación eficaz de burbujas." },
-    "sm-piston-pump": { title: "Ficha técnica de la bomba de émbolo SM", description: "Bombas de émbolo SM compactas para dosificación precisa de pequeños volúmenes e integración en instrumentos automatizados miniaturizados." },
+    "ea-piston-pump": { title: "Ficha técnica de la bomba de pistón EA", description: "Bombas de pistón EA para medición precisa, dosificación y manipulación automatizada de líquidos, con capacidades de 50 µL a 20 mL." },
+    "eas-piston-pump": { title: "Ficha técnica de la bomba de pistón EAS", description: "Bombas de pistón EAS de desaireación sencilla para manipulación precisa de líquidos cuando se requiere cebado rápido y eliminación eficaz de burbujas." },
+    "sm-piston-pump": { title: "Ficha técnica de la bomba de pistón SM", description: "Bombas de pistón SM compactas para dosificación precisa de pequeños volúmenes e integración en instrumentos automatizados miniaturizados." },
     "rpl-p635-p15-valveless-pump": { title: "Ficha técnica de las bombas sin válvulas RPL-P6.35 / RPL-P15", description: "Ficha conjunta de las bombas sin válvulas RPL-P6.35 y RPL-P15, con rangos de dosificación precisa de 50 µL a 1200 µL." },
     "smtp2-smtp4-pipetting-pump": { title: "Ficha técnica de las bombas de pipeteo SMTP2 / SMTP4", description: "Ficha conjunta de las bombas de pipeteo por desplazamiento de aire SMTP2 y SMTP4 para la manipulación automatizada de muestras y reactivos." },
     "hld3-syringe-pump": { title: "Ficha técnica de la bomba de jeringa HLD3 con válvula rotativa", description: "Bomba de jeringa HLD3 con carrera de 30 mm y configuraciones de válvula rotativa para manipulación precisa de líquidos." },
@@ -799,9 +799,9 @@ const currentItemTranslations: Record<
     "pdm5-pressure-sensor": { title: "Manuel d’utilisation du capteur de pression PDM5", description: "Manuel PDM5 couvrant l’installation, la communication I2C, les spécifications et la surveillance de la pression du fluide." },
   },
   ru: {
-    "ea-piston-pump": { title: "Техническое описание плунжерного насоса EA", description: "Насосы EA для точного дозирования и автоматизированной работы с жидкостями, объём от 50 µL до 20 mL." },
-    "eas-piston-pump": { title: "Техническое описание плунжерного насоса EAS", description: "Насосы EAS с удобным удалением воздуха для точной подачи, быстрого заполнения и эффективного удаления пузырьков." },
-    "sm-piston-pump": { title: "Техническое описание плунжерного насоса SM", description: "Компактные насосы SM для точного дозирования малых объёмов и установки в миниатюрные автоматизированные приборы." },
+    "ea-piston-pump": { title: "Техническое описание поршневого насоса EA", description: "Насосы EA для точного дозирования и автоматизированной работы с жидкостями, объём от 50 µL до 20 mL." },
+    "eas-piston-pump": { title: "Техническое описание поршневого насоса EAS", description: "Насосы EAS с удобным удалением воздуха для точной подачи, быстрого заполнения и эффективного удаления пузырьков." },
+    "sm-piston-pump": { title: "Техническое описание поршневого насоса SM", description: "Компактные насосы SM для точного дозирования малых объёмов и установки в миниатюрные автоматизированные приборы." },
     "rpl-p635-p15-valveless-pump": { title: "Техническое описание бесклапанных насосов RPL-P6.35 / RPL-P15", description: "Общее описание насосов RPL-P6.35 и RPL-P15 с диапазоном точного дозирования от 50 µL до 1200 µL." },
     "smtp2-smtp4-pipetting-pump": { title: "Техническое описание пипеточных насосов SMTP2 / SMTP4", description: "Общее описание воздушно-вытеснительных насосов SMTP2 и SMTP4 для автоматической работы с образцами и реагентами." },
     "hld3-syringe-pump": { title: "Техническое описание шприцевого насоса HLD3 с поворотным клапаном", description: "Насос HLD3 с ходом 30 mm и поворотным клапаном для точной работы с жидкостями." },
@@ -819,9 +819,9 @@ const currentItemTranslations: Record<
     "pdm5-pressure-sensor": { title: "Руководство пользователя датчика давления PDM5", description: "Руководство PDM5 по монтажу, связи I2C, характеристикам и контролю давления жидкости." },
   },
   ko: {
-    "ea-piston-pump": { title: "EA 플런저 펌프 데이터시트", description: "50 µL~20 mL 용량 범위에서 정밀 계량, 분주 및 자동 액체 처리를 지원하는 EA 플런저 펌프입니다." },
-    "eas-piston-pump": { title: "EAS 플런저 펌프 데이터시트", description: "빠른 프라이밍과 효율적인 기포 제거가 필요한 정밀 액체 처리를 위한 간편 탈기형 EAS 플런저 펌프입니다." },
-    "sm-piston-pump": { title: "SM 플런저 펌프 데이터시트", description: "소용량 정밀 분주와 소형 자동화 장비 통합을 위한 콤팩트 SM 플런저 펌프입니다." },
+    "ea-piston-pump": { title: "EA 피스톤 펌프 데이터시트", description: "50 µL~20 mL 용량 범위에서 정밀 계량, 분주 및 자동 액체 처리를 지원하는 EA 피스톤 펌프입니다." },
+    "eas-piston-pump": { title: "EAS 피스톤 펌프 데이터시트", description: "빠른 프라이밍과 효율적인 기포 제거가 필요한 정밀 액체 처리를 위한 간편 탈기형 EAS 피스톤 펌프입니다." },
+    "sm-piston-pump": { title: "SM 피스톤 펌프 데이터시트", description: "소용량 정밀 분주와 소형 자동화 장비 통합을 위한 콤팩트 SM 피스톤 펌프입니다." },
     "rpl-p635-p15-valveless-pump": { title: "RPL-P6.35 / RPL-P15 무밸브 펌프 데이터시트", description: "50 µL~1200 µL 정밀 계량 범위를 지원하는 RPL-P6.35 및 RPL-P15 무밸브 펌프 통합 데이터시트입니다." },
     "smtp2-smtp4-pipetting-pump": { title: "SMTP2 / SMTP4 피펫팅 펌프 데이터시트", description: "샘플과 시약의 자동 처리를 위한 SMTP2 및 SMTP4 공기 치환식 피펫팅 펌프 통합 데이터시트입니다." },
     "hld3-syringe-pump": { title: "로터리 밸브형 HLD3 시린지 펌프 데이터시트", description: "정밀 액체 처리를 위한 30 mm 스트로크 및 로터리 밸브 구성의 HLD3 시린지 펌프입니다." },

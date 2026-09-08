@@ -1,3 +1,4 @@
+import { modbusProtocolArticles } from "./modbus-protocol-article.intl";
 import { pistonPumpArticlesEn } from "./piston-pump-articles.en";
 import { pistonPumpArticlesEs } from "./piston-pump-articles.es";
 import { pistonPumpArticlesFr } from "./piston-pump-articles.fr";
@@ -20,6 +21,7 @@ export const pistonPumpArticleSlugs = [
   "piston-pump-acceleration-deceleration-curves",
   "precision-piston-pump-backlash-compensation",
   "stepper-motor-calculation-selection",
+  "modbus-protocol-fluid-control",
 ] as const;
 
 export type PistonPumpArticleSlug =
@@ -29,11 +31,11 @@ const pistonPumpArticlesByLocale: Record<
   PistonPumpArticleLocale,
   readonly PistonPumpArticleCopy[]
 > = {
-  en: pistonPumpArticlesEn,
-  es: pistonPumpArticlesEs,
-  fr: pistonPumpArticlesFr,
-  ko: pistonPumpArticlesKo,
-  ru: pistonPumpArticlesRu,
+  en: [...pistonPumpArticlesEn, modbusProtocolArticles.en],
+  es: [...pistonPumpArticlesEs, modbusProtocolArticles.es],
+  fr: [...pistonPumpArticlesFr, modbusProtocolArticles.fr],
+  ko: [...pistonPumpArticlesKo, modbusProtocolArticles.ko],
+  ru: [...pistonPumpArticlesRu, modbusProtocolArticles.ru],
 };
 
 export function isPistonPumpArticleSlug(

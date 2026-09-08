@@ -6,7 +6,7 @@ import { getPumpApplicationArticles } from "@/data/resources/technical-articles/
    说明：
    1. 当前阶段读取本地静态数据
    2. 中文页面读取中文数据
-   3. 外语页面统一读取英文数据
+   3. 各语言读取对应译文，统一使用中文版文章顺序
    4. DPL30 多语言文章由独立数据文件统一注入
    5. 后期接 CMS / 后端 / 数据库时，优先改这个文件
 ========================================================= */
@@ -239,7 +239,7 @@ function getTechnicalArticlesSourcePageData(
   locale: TechnicalArticleLocale,
 ): TechnicalArticlesSourcePageData {
   if (isChineseLocale(locale)) {
-    return withDiaphragmPumpEngineeringArticles(
+    return withPistonPumpArticles(locale, withDiaphragmPumpEngineeringArticles(
       locale,
       withBrushlessWiringArticle(
         locale,
@@ -254,11 +254,11 @@ function getTechnicalArticlesSourcePageData(
           ),
         ),
       ),
-    );
+    ));
   }
 
   if (locale !== "en") {
-    return withDiaphragmPumpEngineeringArticles(
+    return withPistonPumpArticles(locale, withDiaphragmPumpEngineeringArticles(
       locale,
       withBrushlessWiringArticle(
         locale,
@@ -276,10 +276,10 @@ function getTechnicalArticlesSourcePageData(
           ),
         ),
       ),
-    );
+    ));
   }
 
-  return withDiaphragmPumpEngineeringArticles(
+  return withPistonPumpArticles(locale, withDiaphragmPumpEngineeringArticles(
     locale,
     withBrushlessWiringArticle(
       locale,
@@ -297,20 +297,41 @@ function getTechnicalArticlesSourcePageData(
         ),
       ),
     ),
-  );
+  ));
 }
+
+// Article identity determines the order, independent of localized insertion order.
+// Use the assembled Chinese list so new articles keep the same position in every locale.
+const technicalArticleOrder = new Map(
+  [
+    ...getPumpApplicationArticles("zh-CN"),
+    ...getTechnicalArticlesSourcePageData("zh-CN").articles,
+  ].map((article, index) => [article.slug, index]),
+);
 
 export function getTechnicalArticlesPageData(
   locale: TechnicalArticleLocale,
 ): TechnicalArticlesPageData {
-  const sourcePageData = withPistonPumpArticles(
-    locale,
-    getTechnicalArticlesSourcePageData(locale),
-  );
+  const sourcePageData = getTechnicalArticlesSourcePageData(locale);
 
   return {
     ...sourcePageData,
     taxonomy: getTechnicalArticleTaxonomy(locale),
-    articles: classifyTechnicalArticles([...getPumpApplicationArticles(locale), ...sourcePageData.articles], locale),
+    // Keep the withdrawn article in the source archive, outside all public routes and indexes.
+    articles: classifyTechnicalArticles(
+      [...getPumpApplicationArticles(locale), ...sourcePageData.articles]
+        .filter(
+          (article) => article.slug !== "pressure-flow-material-compatibility",
+        )
+        .sort((left, right) => {
+          const leftOrder =
+            technicalArticleOrder.get(left.slug) ?? Number.MAX_SAFE_INTEGER;
+          const rightOrder =
+            technicalArticleOrder.get(right.slug) ?? Number.MAX_SAFE_INTEGER;
+
+          return leftOrder - rightOrder || left.slug.localeCompare(right.slug, "en");
+        }),
+      locale,
+    ),
   };
 }

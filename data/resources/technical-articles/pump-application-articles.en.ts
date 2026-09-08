@@ -6,8 +6,8 @@ export const pumpApplicationArticlesEn = {
       "title": "Choosing a 100, 250 or 500 μL Piston Pump for Clinical Chemistry Dosing",
       "seoTitle": "100, 250 or 500 μL Piston Pump Selection for Clinical Chemistry | FOREACH",
       "seoDescription": "Compare dose volume, stroke utilization, dispensing count and refill timing, then assess FOREACH EA, SM and TM configurations using the actual clinical chemistry fluid path.",
-      "coverImage": "",
-      "coverAlt": "Awaiting upload"
+      "coverImage": "/images/resources/technical-articles/pump-application-guides/piston-capacity-series.png",
+      "coverAlt": "FOREACH piston pumps in multiple capacities, including 100, 250 and 500 μL"
     },
     "deck": "Compare dose volume, stroke utilization, dispensing count and refill timing, then assess FOREACH EA, SM and TM configurations using the actual clinical chemistry fluid path.",
     "leadBlocks": [
@@ -368,8 +368,8 @@ export const pumpApplicationArticlesEn = {
       "title": "Why do multiple wash nozzles deliver different flows from one miniature diaphragm pump?",
       "seoTitle": "Multiple wash nozzles: diaphragm pump flow balancing | FOREACH",
       "seoDescription": "Calculate demand from the volume and timing of each wash nozzle, separate insufficient pump output from unequal distribution, and verify each branch with collection and pressure measurements.",
-      "coverImage": "",
-      "coverAlt": "Awaiting upload"
+      "coverImage": "/images/resources/technical-articles/pump-application-guides/dpl60-brushless-side-photo.jpg",
+      "coverAlt": "Side view of a FOREACH DPL60 miniature diaphragm pump showing the pump head and fluid ports"
     },
     "deck": "Calculate demand from the volume and timing of each wash nozzle, separate insufficient pump output from unequal distribution, and verify each branch with collection and pressure measurements.",
     "leadBlocks": [
@@ -655,8 +655,8 @@ export const pumpApplicationArticlesEn = {
       "title": "Flow starts normally, then falls: how do you check reservoir venting for a miniature diaphragm pump?",
       "seoTitle": "Diaphragm pump flow drop: reservoir venting checks | FOREACH",
       "seoDescription": "Record reservoir headspace pressure, pump inlet pressure and delivery together to investigate restricted venting and distinguish liquid-level changes, blockage, air leaks and outlet backpressure.",
-      "coverImage": "",
-      "coverAlt": "Awaiting upload"
+      "coverImage": "/images/resources/technical-articles/pump-application-guides/dpl30-brushless-rear-photo.jpg",
+      "coverAlt": "Rear view of a FOREACH DPL30 miniature diaphragm pump showing the pump body and fluid ports"
     },
     "deck": "Record reservoir headspace pressure, pump inlet pressure and delivery together to investigate restricted venting and distinguish liquid-level changes, blockage, air leaks and outlet backpressure.",
     "leadBlocks": [

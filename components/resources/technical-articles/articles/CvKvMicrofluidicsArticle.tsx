@@ -78,84 +78,62 @@ const BASE_TABLE_ROWS = [
   {
     diameter: "0.1 mm",
     reynolds: "200",
-    friction: "0.320",
+    friction: "0.3200",
   },
   {
     diameter: "0.5 mm",
     reynolds: "1100",
-    friction: "0.058",
+    friction: "0.0582",
   },
   {
     diameter: "1.0 mm",
     reynolds: "2700",
-    friction: "0.029",
+    friction: "0.0396",
   },
   {
     diameter: "2.0 mm",
     reynolds: "8400",
-    friction: "0.024",
+    friction: "0.0325",
   },
   {
     diameter: "10.0 mm",
     reynolds: "78000",
-    friction: "0.019",
+    friction: "0.0188",
   },
 ];
 
 const PYTHON_CODE = [
-  "import numpy as np",
+  "import math",
   "",
   "def churchill_f(Re, eps_d):",
-  "    # Churchill 1977 unified friction-factor correlation",
-  "    Re = max(Re, 1e-12)",
-  "    A = (2.457 * np.log(",
+  "    # Darcy friction factor; scalar, single-phase pipe-flow example.",
+  "    if Re <= 0 or eps_d < 0:",
+  "        raise ValueError(\"Require Re > 0 and eps_d >= 0\")",
+  "    if Re < 2000:",
+  "        return 64.0 / Re",
+  "    A = (2.457 * math.log(",
   "        1.0 / ((7.0 / Re) ** 0.9 + 0.27 * eps_d)",
   "    )) ** 16",
   "    B = (37530.0 / Re) ** 16",
   "    return 8.0 * (",
-  "        (8.0 / Re) ** 12 +",
-  "        1.0 / (A + B) ** 1.5",
+  "        (8.0 / Re) ** 12 + 1.0 / (A + B) ** 1.5",
   "    ) ** (1.0 / 12.0)",
   "",
-  "def v_cal_max(",
-  "    d_mm,",
-  "    v_micro=2.0,",
-  "    v_macro=8.0,",
-  "    d_c=3.0,",
-  "    n=4,",
-  "):",
-  "    return v_macro + (v_micro - v_macro) / (",
-  "        1.0 + (d_mm / d_c) ** n",
-  "    ) ** 0.25",
-  "",
-  "def pipe_FR(",
-  "    Re,",
-  "    d_m,",
-  "    rho,",
-  "    mu,",
-  "    eps_d,",
-  "    L_over_d,",
-  "    zeta_local=0.0,",
-  "):",
-  "    if eps_d >= 0.001:",
-  "        f0 = churchill_f(1e9, eps_d)",
-  "    else:",
-  "        d_mm = d_m * 1000.0",
-  "        v_max = v_cal_max(d_mm)",
-  "        Re_cal = rho * v_max * d_m / mu",
-  "        f0 = churchill_f(Re_cal, eps_d)",
-  "",
+  "def pipe_FR(Re, Re_cal, eps_d, L_over_d, zeta_local=0.0):",
+  "    # Supply the measured calibration Re; do not infer it from diameter.",
+  "    if L_over_d <= 0 or zeta_local < 0:",
+  "        raise ValueError(\"Require L/d > 0 and local loss >= 0\")",
+  "    f0 = churchill_f(Re_cal, eps_d)",
   "    f_re = churchill_f(Re, eps_d)",
   "    K0 = f0 * L_over_d + zeta_local",
   "    K_re = f_re * L_over_d + zeta_local",
+  "    return math.sqrt(K0 / K_re)",
   "",
-  "    return np.sqrt(K0 / K_re)",
-  "",
-  "def orifice_FR(Re, Re_c=30):",
-  "    if Re < 0.01:",
-  "        return np.sqrt(Re / Re_c)",
-  "",
-  "    return 1.0 / np.sqrt(1.0 + Re_c / Re)",
+  "def orifice_FR(Re, Re_c):",
+  "    # Illustrative fit only: determine Re_c from component test data.",
+  "    if Re <= 0 or Re_c <= 0:",
+  "        raise ValueError(\"Require Re > 0 and fitted Re_c > 0\")",
+  "    return 1.0 / math.sqrt(1.0 + Re_c / Re)"
 ].join("\n");
 
 const COPY: Record<SupportedLocale, ArticleCopy> = {
@@ -205,7 +183,7 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
           label: "还原公式",
           value: "Kv = Q × √（SG ÷ Δp）",
           description:
-            "核心前提仍然是 Δp 与 Q² 成正比。",
+            "此式采用 Q 的单位 m³/h、Δp 的单位 bar，SG 为相对水的密度比；不能直接代入 mL/min 与 kPa。",
         },
       ],
     },
@@ -245,9 +223,10 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
         "长微通道与毛细管：Churchill 法",
 
       paragraphs: [
-        "当流道长径比 L/d 较大时，沿程摩擦通常是主要阻力来源。Churchill 公式可以连续覆盖层流、过渡区和紊流。",
-        "光滑微通道的基准摩擦因子应结合测试台实际可达到的标定雷诺数确定，不能直接套用大型工业管道的极限值。",
-      ],
+  "当流道长径比 L/d 较大时，沿程摩擦通常是主要阻力来源。Churchill 公式可以连续覆盖层流、过渡区和紊流。",
+  "光滑微通道的基准摩擦因子应结合测试台实际可达到的标定雷诺数确定，不能直接套用大型工业管道的极限值。",
+  "表内 Recal 是选定的计算示例，不是仅由管径决定的物理上限；f₀ 按光滑圆管、相对粗糙度为零的 Churchill 达西摩擦因子重新计算。真实标定点须实测确认。"
+],
 
       card: {
         label: "长通道修正",
@@ -259,7 +238,7 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
 
       tableHeaders: [
         "管径",
-        "物理可及 Recal",
+        "示例 Recal（需验证）",
         "对应 f₀",
         "工程评估",
       ],
@@ -267,7 +246,7 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
       assessments: [
         {
           assessment:
-            "微流控极限，摩擦很大，计算结果偏安全",
+            "层流示例；不构成保守性保证",
         },
         {
           assessment: "典型微通道标定工况",
@@ -276,10 +255,10 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
           assessment: "刚脱离层流区",
         },
         {
-          assessment: "由过渡区逐步进入紊流",
+          assessment: "紊流示例；仍需核对粗糙度",
         },
         {
-          assessment: "接近完全湍流工况",
+          assessment: "高雷诺数示例；不等于完全粗糙区",
         },
       ],
 
@@ -302,14 +281,14 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
           value:
             "Fᵣ（Re）= 1 ÷ √（1 + Rec ÷ Re）",
           description:
-            "锐边薄壁孔可以使用 Rec = 30 作为工程起点。",
+            "该式是用于拟合的简化模型，Rec 必须由对应几何和流体的试验确定；不指定通用的 Rec = 30。",
         },
         {
           label: "几何影响",
           value:
             "倒角和圆角会改变临界雷诺数",
           description:
-            "圆角孔的 Rec 可能提高至约 200～400。",
+            "圆角或倒角会改变流量系数；不能仅凭入口形状指定 Rec = 200～400。",
         },
       ],
     },
@@ -355,10 +334,10 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
       title: "Python 核心计算实现",
 
       introduction:
-        "以下代码包括 Churchill 摩擦因子、标定流速包络、长通道修正和小孔修正。",
+        "以下示例计算达西摩擦因子，并使用明确输入的实测标定雷诺数比较长通道阻力；孔口模型需要另行拟合 Rec。",
 
       note:
-        "临界雷诺数、粗糙度、局部损失系数和标定流速，仍需根据真实产品和测试数据调整。",
+        "适用于单相、不可压缩牛顿流体及所述几何假设。本文 Fᵣ 为相对选定标定点的比较系数，不是通用标准阀门选型公式；Recal、粗糙度和局部损失必须对应同一元件和测试装置。",
     },
 
     conclusion: {
@@ -419,7 +398,7 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
           label: "Equivalent equation",
           value: "Kv = Q × √(SG ÷ Δp)",
           description:
-            "The underlying assumption is still Δp proportional to Q².",
+            "Use Q in m³/h, Δp in bar and SG as density relative to water. Do not substitute mL/min and kPa directly.",
         },
       ],
     },
@@ -460,9 +439,10 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
         "Long microchannels and capillaries: the Churchill approach",
 
       paragraphs: [
-        "For passages with a high L/d ratio, distributed wall friction is usually the dominant resistance.",
-        "The Churchill correlation provides one continuous expression across laminar, transitional and turbulent regimes. Smooth microchannels should use a physically attainable calibration Reynolds number.",
-      ],
+  "For passages with a high L/d ratio, distributed wall friction is usually the dominant resistance.",
+  "The Churchill correlation provides one continuous expression across laminar, transitional and turbulent regimes. Smooth microchannels should use a physically attainable calibration Reynolds number.",
+  "The tabulated Recal values are selected calculation examples, not physical limits determined by diameter alone. The f₀ values are recalculated with the Churchill Darcy correlation for a smooth circular tube at zero relative roughness. Confirm the actual calibration point by measurement."
+],
 
       card: {
         label: "Long-channel correction",
@@ -474,7 +454,7 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
 
       tableHeaders: [
         "Diameter",
-        "Attainable Recal",
+        "Example Recal (verify)",
         "Reference f₀",
         "Engineering interpretation",
       ],
@@ -482,7 +462,7 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
       assessments: [
         {
           assessment:
-            "Extreme microscale condition with very high friction",
+            "Laminar example; no guarantee of conservatism",
         },
         {
           assessment:
@@ -494,11 +474,11 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
         },
         {
           assessment:
-            "Transitioning toward turbulent flow",
+            "Turbulent example; check roughness",
         },
         {
           assessment:
-            "Approaching fully turbulent flow",
+            "High-Re example; not necessarily fully rough flow",
         },
       ],
 
@@ -521,14 +501,14 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
           value:
             "Fᵣ(Re) = 1 ÷ √(1 + Rec ÷ Re)",
           description:
-            "Rec = 30 can be used as an initial engineering value for a sharp-edged thin orifice.",
+            "This is a simplified fitting model. Determine Rec experimentally for the actual geometry and fluid; no universal Rec = 30 is specified.",
         },
         {
           label: "Geometry dependence",
           value:
             "Chamfers and radiused entrances change Rec",
           description:
-            "A radiused entrance may increase Rec to approximately 200–400.",
+            "Radii and chamfers change discharge behavior; entrance shape alone does not justify Rec = 200–400.",
         },
       ],
     },
@@ -576,10 +556,10 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
         "Python implementation for engineering evaluation",
 
       introduction:
-        "The example implements the Churchill friction factor, an attainable calibration-velocity envelope and corrections for long channels and orifices.",
+        "The example computes the Darcy friction factor and compares long-channel resistance using an explicitly supplied measured calibration Reynolds number. The orifice model requires a separately fitted Rec.",
 
       note:
-        "Critical Reynolds number, roughness, local-loss coefficients and calibration velocity should be validated against the real component and test setup.",
+        "Use for single-phase incompressible Newtonian flow under the stated geometry assumptions. Fᵣ here compares a chosen calibration point; it is not a universal standard valve-sizing equation. Recal, roughness and local loss must describe the same component and test setup.",
     },
 
     conclusion: {
@@ -640,7 +620,7 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
           label: "Ecuación equivalente",
           value: "Kv = Q × √(SG ÷ Δp)",
           description:
-            "La hipótesis central sigue siendo Δp proporcional a Q².",
+            "Utilice Q en m³/h, Δp en bar y SG como densidad relativa al agua. No introduzca directamente mL/min y kPa.",
         },
       ],
     },
@@ -681,9 +661,10 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
         "Microcanales largos y capilares: método de Churchill",
 
       paragraphs: [
-        "Cuando la relación L/d es elevada, domina la fricción distribuida a lo largo del conducto.",
-        "La expresión de Churchill permite trabajar de forma continua entre flujo laminar, transición y turbulencia.",
-      ],
+  "Cuando la relación L/d es elevada, domina la fricción distribuida a lo largo del conducto.",
+  "La expresión de Churchill permite trabajar de forma continua entre flujo laminar, transición y turbulencia.",
+  "Los valores Recal de la tabla son ejemplos de cálculo elegidos, no límites físicos determinados solo por el diámetro. Los valores f₀ se recalculan mediante la correlación de Darcy de Churchill para un tubo circular liso con rugosidad relativa nula. Confirme el punto de calibración real mediante mediciones."
+],
 
       card: {
         label: "Corrección del canal",
@@ -695,7 +676,7 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
 
       tableHeaders: [
         "Diámetro",
-        "Recal alcanzable",
+        "Recal de ejemplo (verificar)",
         "f₀ de referencia",
         "Evaluación",
       ],
@@ -703,7 +684,7 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
       assessments: [
         {
           assessment:
-            "Condición microfluídica extrema",
+            "Ejemplo laminar; sin garantía de conservadurismo",
         },
         {
           assessment:
@@ -715,11 +696,11 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
         },
         {
           assessment:
-            "Transición hacia turbulencia",
+            "Ejemplo turbulento; comprobar rugosidad",
         },
         {
           assessment:
-            "Próximo al flujo plenamente turbulento",
+            "Ejemplo de Re alto; no implica régimen totalmente rugoso",
         },
       ],
 
@@ -742,14 +723,14 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
           value:
             "Fᵣ(Re) = 1 ÷ √(1 + Rec ÷ Re)",
           description:
-            "Rec = 30 puede utilizarse como punto inicial para un orificio de borde vivo.",
+            "Es un modelo simplificado de ajuste. Determine Rec experimentalmente para la geometría y el fluido reales; no se prescribe un Rec = 30 universal.",
         },
         {
           label: "Efecto geométrico",
           value:
             "El radio y el chaflán modifican Rec",
           description:
-            "Una entrada redondeada puede elevar Rec hasta aproximadamente 200–400.",
+            "Los radios y chaflanes alteran la descarga; la forma de entrada por sí sola no justifica Rec = 200–400.",
         },
       ],
     },
@@ -797,10 +778,10 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
         "Implementación Python para evaluación técnica",
 
       introduction:
-        "El ejemplo incluye el factor de Churchill, una envolvente de velocidad de calibración y las correcciones de canales y orificios.",
+        "El ejemplo calcula el factor de fricción de Darcy y compara la resistencia de canales largos usando un Reynolds de calibración medido que debe introducirse explícitamente. El modelo de orificio requiere un Rec ajustado por separado.",
 
       note:
-        "Los parámetros deben ajustarse con la geometría del producto, el fluido y los datos obtenidos durante las pruebas.",
+        "Úselo para flujo newtoniano monofásico e incompresible bajo las hipótesis geométricas indicadas. Fᵣ compara aquí un punto de calibración elegido; no es una ecuación normativa universal de dimensionamiento de válvulas. Recal, rugosidad y pérdida local deben corresponder al mismo componente y montaje de ensayo.",
     },
 
     conclusion: {
@@ -861,7 +842,7 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
           label: "Équation équivalente",
           value: "Kv = Q × √(SG ÷ Δp)",
           description:
-            "L’hypothèse reste Δp proportionnelle à Q².",
+            "Utiliser Q en m³/h, Δp en bar et SG comme densité relative à celle de l’eau. Ne pas introduire directement des mL/min et des kPa.",
         },
       ],
     },
@@ -902,9 +883,10 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
         "Microcanaux longs et capillaires : corrélation de Churchill",
 
       paragraphs: [
-        "Lorsque L/d est élevé, les pertes réparties le long de la paroi dominent généralement.",
-        "La corrélation de Churchill couvre de façon continue les régimes laminaire, transitoire et turbulent.",
-      ],
+  "Lorsque L/d est élevé, les pertes réparties le long de la paroi dominent généralement.",
+  "La corrélation de Churchill couvre de façon continue les régimes laminaire, transitoire et turbulent.",
+  "Les Recal du tableau sont des exemples de calcul choisis, et non des limites physiques fixées par le seul diamètre. Les f₀ sont recalculés avec la corrélation de Darcy de Churchill pour un tube circulaire lisse de rugosité relative nulle. Confirmer le point réel d’étalonnage par mesure."
+],
 
       card: {
         label: "Correction du canal",
@@ -916,7 +898,7 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
 
       tableHeaders: [
         "Diamètre",
-        "Recal accessible",
+        "Exemple de Recal (à vérifier)",
         "f₀ de référence",
         "Interprétation",
       ],
@@ -924,7 +906,7 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
       assessments: [
         {
           assessment:
-            "Condition microfluidique extrême",
+            "Exemple laminaire ; aucune garantie de prudence",
         },
         {
           assessment:
@@ -936,11 +918,11 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
         },
         {
           assessment:
-            "Transition vers la turbulence",
+            "Exemple turbulent ; vérifier la rugosité",
         },
         {
           assessment:
-            "Proche du régime pleinement turbulent",
+            "Exemple à Re élevé ; pas nécessairement entièrement rugueux",
         },
       ],
 
@@ -963,14 +945,14 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
           value:
             "Fᵣ(Re) = 1 ÷ √(1 + Rec ÷ Re)",
           description:
-            "Rec = 30 constitue un point de départ pour une arête vive.",
+            "Il s’agit d’un modèle simplifié d’ajustement. Déterminer Rec expérimentalement pour la géométrie et le fluide réels ; aucune valeur universelle Rec = 30 n’est prescrite.",
         },
         {
           label: "Influence géométrique",
           value:
             "Les rayons et chanfreins modifient Rec",
           description:
-            "Une entrée arrondie peut conduire à Rec ≈ 200–400.",
+            "Les rayons et chanfreins modifient le débit ; la seule forme d’entrée ne justifie pas Rec = 200–400.",
         },
       ],
     },
@@ -1018,10 +1000,10 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
         "Mise en œuvre Python pour l’évaluation",
 
       introduction:
-        "L’exemple regroupe la corrélation de Churchill, la vitesse d’étalonnage et les corrections de canal et d’orifice.",
+        "L’exemple calcule le facteur de frottement de Darcy et compare la résistance des canaux longs avec un Reynolds d’étalonnage mesuré fourni explicitement. Le modèle d’orifice nécessite un Rec ajusté séparément.",
 
       note:
-        "Les paramètres doivent être vérifiés à partir de la géométrie, du fluide et des essais du composant.",
+        "Utiliser pour un écoulement newtonien monophasique incompressible selon les hypothèses géométriques indiquées. Fᵣ compare ici un point d’étalonnage choisi ; ce n’est pas une équation normative universelle de dimensionnement des vannes. Recal, rugosité et pertes locales doivent décrire le même composant et le même banc d’essai.",
     },
 
     conclusion: {
@@ -1082,7 +1064,7 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
           label: "환산 공식",
           value: "Kv = Q × √(SG ÷ Δp)",
           description:
-            "기본 전제는 Δp가 Q²에 비례한다는 것입니다.",
+            "Q는 m³/h, Δp는 bar, SG는 물에 대한 상대 밀도를 사용하십시오. mL/min과 kPa를 그대로 대입하지 마십시오.",
         },
       ],
     },
@@ -1123,9 +1105,10 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
         "긴 미세 유로와 모세관: Churchill 방법",
 
       paragraphs: [
-        "L/d가 큰 유로에서는 벽면 마찰 손실이 주요 저항이 됩니다.",
-        "Churchill 식은 층류, 천이 및 난류 영역을 하나의 연속식으로 계산합니다.",
-      ],
+  "L/d가 큰 유로에서는 벽면 마찰 손실이 주요 저항이 됩니다.",
+  "Churchill 식은 층류, 천이 및 난류 영역을 하나의 연속식으로 계산합니다.",
+  "표의 Recal은 선택한 계산 예시이며 관경만으로 결정되는 물리적 한계가 아닙니다. f₀는 상대 조도가 0인 매끄러운 원형 관에 대해 Churchill의 Darcy 마찰계수 식으로 다시 계산했습니다. 실제 교정점은 측정으로 확인하십시오."
+],
 
       card: {
         label: "긴 유로 보정",
@@ -1137,7 +1120,7 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
 
       tableHeaders: [
         "유로 직경",
-        "도달 가능한 Recal",
+        "Recal 예시(검증 필요)",
         "기준 f₀",
         "평가",
       ],
@@ -1145,7 +1128,7 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
       assessments: [
         {
           assessment:
-            "마찰이 매우 큰 미세유체 조건",
+            "층류 예시; 보수적 결과를 보장하지 않음",
         },
         {
           assessment:
@@ -1157,11 +1140,11 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
         },
         {
           assessment:
-            "난류로 전환되는 조건",
+            "난류 예시; 조도 확인 필요",
         },
         {
           assessment:
-            "완전 난류에 가까운 조건",
+            "높은 Re 예시; 완전 조면 난류를 의미하지 않음",
         },
       ],
 
@@ -1184,14 +1167,14 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
           value:
             "Fᵣ(Re) = 1 ÷ √(1 + Rec ÷ Re)",
           description:
-            "날카로운 얇은 오리피스는 Rec = 30을 초기값으로 사용할 수 있습니다.",
+            "이 식은 단순화한 피팅 모델입니다. 실제 형상과 유체에 대한 시험으로 Rec를 결정해야 하며, Rec = 30을 보편값으로 지정하지 않습니다.",
         },
         {
           label: "형상 영향",
           value:
             "라운드와 모따기는 Rec를 변화시킵니다",
           description:
-            "라운드 입구의 Rec는 약 200～400까지 증가할 수 있습니다.",
+            "라운드와 모따기는 유출 특성을 바꾸지만 입구 형상만으로 Rec = 200～400을 지정할 수는 없습니다.",
         },
       ],
     },
@@ -1239,10 +1222,10 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
         "엔지니어링 검토용 Python 구현",
 
       introduction:
-        "예제에는 Churchill 마찰계수, 기준 시험 속도, 긴 유로 보정 및 오리피스 보정이 포함됩니다.",
+        "예제는 Darcy 마찰계수를 계산하고 명시적으로 입력한 실측 교정 Reynolds 수로 긴 유로의 저항을 비교합니다. 오리피스 모델의 Rec는 별도로 피팅해야 합니다.",
 
       note:
-        "임계 레이놀즈수와 손실계수는 실제 제품과 시험 데이터로 검증해야 합니다.",
+        "명시된 형상 가정에 따른 단상 비압축성 뉴턴 유체에 사용하십시오. 여기서 Fᵣ는 선택한 교정점에 대한 비교 계수이며 보편적인 표준 밸브 선정식이 아닙니다. Recal, 조도 및 국부 손실은 같은 부품과 시험 장치를 기준으로 해야 합니다.",
     },
 
     conclusion: {
@@ -1303,7 +1286,7 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
           label: "Эквивалентная формула",
           value: "Kv = Q × √(SG ÷ Δp)",
           description:
-            "Основная гипотеза: Δp пропорционален Q².",
+            "Используйте Q в м³/ч, Δp в bar и SG как плотность относительно воды. Нельзя напрямую подставлять мЛ/мин и кПа.",
         },
       ],
     },
@@ -1344,9 +1327,10 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
         "Длинные микроканалы и капилляры: метод Черчилля",
 
       paragraphs: [
-        "При большом отношении L/d основное сопротивление создаёт распределённое трение.",
-        "Формула Черчилля непрерывно описывает ламинарную, переходную и турбулентную области.",
-      ],
+  "При большом отношении L/d основное сопротивление создаёт распределённое трение.",
+  "Формула Черчилля непрерывно описывает ламинарную, переходную и турбулентную области.",
+  "Табличные Recal — выбранные расчётные примеры, а не физические пределы, определяемые одним диаметром. Значения f₀ пересчитаны по корреляции Черчилля для коэффициента Дарси в гладкой круглой трубе с нулевой относительной шероховатостью. Фактическую точку калибровки подтвердите измерением."
+],
 
       card: {
         label: "Коррекция длинного канала",
@@ -1358,7 +1342,7 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
 
       tableHeaders: [
         "Диаметр",
-        "Достижимый Recal",
+        "Пример Recal (проверить)",
         "Базовый f₀",
         "Оценка",
       ],
@@ -1366,7 +1350,7 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
       assessments: [
         {
           assessment:
-            "Предельный микромасштаб с высоким трением",
+            "Ламинарный пример; запас не гарантирован",
         },
         {
           assessment:
@@ -1378,11 +1362,11 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
         },
         {
           assessment:
-            "Переход к турбулентности",
+            "Турбулентный пример; проверить шероховатость",
         },
         {
           assessment:
-            "Режим, близкий к полностью турбулентному",
+            "Пример высокого Re; не обязательно полностью шероховатый режим",
         },
       ],
 
@@ -1405,14 +1389,14 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
           value:
             "Fᵣ(Re) = 1 ÷ √(1 + Rec ÷ Re)",
           description:
-            "Для отверстия с острой кромкой Rec = 30 можно использовать как начальное значение.",
+            "Это упрощённая аппроксимационная модель. Определяйте Rec экспериментально для реальной геометрии и жидкости; универсальное Rec = 30 не задаётся.",
         },
         {
           label: "Влияние геометрии",
           value:
             "Радиус и фаска изменяют Rec",
           description:
-            "Для скруглённого входа Rec может достигать примерно 200–400.",
+            "Скругления и фаски изменяют расходные характеристики, но одна форма входа не обосновывает Rec = 200–400.",
         },
       ],
     },
@@ -1460,10 +1444,10 @@ const COPY: Record<SupportedLocale, ArticleCopy> = {
         "Реализация расчёта на Python",
 
       introduction:
-        "Пример включает формулу Черчилля, модель калибровочной скорости и коррекции канала и отверстия.",
+        "Пример рассчитывает коэффициент трения Дарси и сравнивает сопротивление длинных каналов по явно заданному измеренному числу Рейнольдса калибровки. Модель отверстия требует отдельного подбора Rec.",
 
       note:
-        "Параметры должны подтверждаться испытаниями конкретного компонента.",
+        "Используйте для однофазной несжимаемой ньютоновской жидкости при указанных геометрических допущениях. Здесь Fᵣ сравнивает выбранную точку калибровки; это не универсальная нормативная формула подбора клапанов. Recal, шероховатость и местные потери должны относиться к одному компоненту и испытательной установке.",
     },
 
     conclusion: {

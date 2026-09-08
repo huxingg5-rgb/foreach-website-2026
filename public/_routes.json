@@ -15,6 +15,7 @@
                     "/en/NewsList.aspx",
                     "/en/contact.aspx",
                     "/api/inquiry/*",
+                    "/api/diagnostics/*",
                     "/_AMapService/*",
                     "/",
                     "/baidu_verify_codeva-3SytZbh1AT.html",

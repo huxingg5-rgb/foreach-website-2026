@@ -166,6 +166,9 @@ const secondaryLabels: Record<
 };
 
 const tagLabels = {
+  pulsation: localized("流量脉动", "Flow pulsation", "Pulsaciones de caudal", "Pulsations de débit", "유량 맥동", "Пульсации расхода"),
+  "noise-vibration": localized("噪声与振动", "Noise and vibration", "Ruido y vibraciones", "Bruit et vibrations", "소음과 진동", "Шум и вибрация"),
+  "check-valve": localized("止回阀", "Check valve", "Válvula antirretorno", "Clapet antiretour", "체크 밸브", "Обратный клапан"),
   selection: localized("选型", "Selection", "Selección", "Sélection", "선정", "Подбор"),
   flow: localized("流量", "Flow", "Caudal", "Débit", "유량", "Расход"),
   "operating-point": localized("工作点", "Operating point", "Punto de trabajo", "Point de fonctionnement", "작동점", "Рабочая точка"),
@@ -233,7 +236,10 @@ const articleClassifications: Record<string, ArticleClassificationDefinition> = 
   "clinical-chemistry-piston-pump-100-250-500-ul-selection": {"primaryCategory": "pumps", "secondaryCategory": "plunger-pumps", "tagKeys": ["plunger-pump", "dosing", "ivd", "selection", "testing-validation"], "relatedProducts": ["EA", "SM", "TM"]},
   "diaphragm-pump-multiple-wash-nozzles-flow-balance": {"primaryCategory": "applications-solutions", "secondaryCategory": "cleaning-waste", "tagKeys": ["cleaning", "flow", "pressure-drop", "testing-validation"], "relatedProducts": ["DPL30", "DPL60"]},
   "diaphragm-pump-flow-drop-reservoir-venting": {"primaryCategory": "pumps", "secondaryCategory": "miniature-diaphragm-pumps", "tagKeys": ["suction", "troubleshooting", "self-priming", "testing-validation"], "relatedProducts": ["DPL30", "DPL60"]},
-
+  "self-priming-miniature-liquid-diaphragm-pump-selection": {"primaryCategory": "pumps", "secondaryCategory": "miniature-diaphragm-pumps", "tagKeys": ["self-priming", "selection", "liquid-pump", "testing-validation"], "relatedProducts": ["DPL30", "DPL60", "DPL30H"]},
+  "miniature-diaphragm-pump-flow-pulsation-reduction": {"primaryCategory": "pumps", "secondaryCategory": "miniature-diaphragm-pumps", "tagKeys": ["pulsation", "flow", "troubleshooting", "testing-validation"], "relatedProducts": ["DPL30", "DPL60", "DPL30H"]},
+  "miniature-diaphragm-pump-noise-vibration-reduction": {"primaryCategory": "pumps", "secondaryCategory": "miniature-diaphragm-pumps", "tagKeys": ["noise-vibration", "installation", "troubleshooting", "testing-validation"], "relatedProducts": ["DPL30", "DPL60", "DPL30H"]},
+  "miniature-diaphragm-pump-backflow-check-valve": {"primaryCategory": "pumps", "secondaryCategory": "miniature-diaphragm-pumps", "tagKeys": ["check-valve", "sealing-leakage", "troubleshooting", "fluidic-system"], "relatedProducts": ["DPL30", "DPL60", "DPL30H"]},
   "piston-pump-acceleration-deceleration-curves": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "testing-validation"], relatedProducts: ["EA", "SM", "TM"], relationKeys: ["series:ea", "series:sm", "series:tm"], relationPriority: 80 },
   "precision-piston-pump-backlash-compensation": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "testing-validation"], relatedProducts: ["EA", "SM", "TM"], relationKeys: ["series:ea", "series:sm", "series:tm"], relationPriority: 70 },
   "stepper-motor-calculation-selection": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "testing-validation"], relatedProducts: ["EA", "SM", "TM"], relationKeys: ["series:ea", "series:sm", "series:tm"], relationPriority: 60 },
@@ -247,6 +253,7 @@ const articleClassifications: Record<string, ArticleClassificationDefinition> = 
   "300-ml-min-micro-liquid-diaphragm-pump-self-priming-loss": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["liquid-pump", "self-priming", "troubleshooting", "sealing-leakage"], literalTags: ["300 mL/min"], relatedProducts: ["DPL30"] },
   "300-ml-min-micro-liquid-diaphragm-pump-motor-runs-no-flow": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["liquid-pump", "troubleshooting", "backpressure", "sealing-leakage"], literalTags: ["300 mL/min"], relatedProducts: ["DPL30"] },
   "300-ml-min-micro-liquid-diaphragm-pump-water-vs-reagent": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["liquid-pump", "flow", "self-priming", "material-compatibility"], literalTags: ["300 mL/min"], relatedProducts: ["DPL30"] },
+  "micro-diaphragm-pump-materials-selection": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["material-compatibility", "selection", "testing-validation"], literalTags: ["PPS", "EPDM", "PTFE", "FFKM"], relatedProducts: ["DPL30", "DPL60", "DPL30H", "DPGL800"] },
   "300-ml-min-micro-liquid-diaphragm-pump-epdm-ptfe-ffkm": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["liquid-pump", "material-compatibility", "selection", "testing-validation"], literalTags: ["EPDM", "PTFE", "FFKM"], relatedProducts: ["DPL30"] },
   "300-vs-600-ml-min-diaphragm-pump-selection": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["selection", "flow", "operating-point"], literalTags: ["300 mL/min", "600 mL/min"], relatedProducts: ["DPL30", "DPL60"] },
   "300-ml-min-diaphragm-pump-flow-margin": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["flow", "operating-point", "selection"], literalTags: ["300 mL/min"], relatedProducts: ["DPL30"] },

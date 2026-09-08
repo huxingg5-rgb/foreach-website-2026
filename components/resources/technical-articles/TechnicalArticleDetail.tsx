@@ -599,7 +599,7 @@ export default function TechnicalArticleDetail({
 
   const articleBody =
     pumpApplicationCopy ? (
-      <EngineeringArticleContent copy={pumpApplicationCopy} locale={locale} coverPlaceholder={locale === "zh-CN" ? "待上传" : "Awaiting upload"} />
+      <EngineeringArticleContent copy={pumpApplicationCopy} locale={locale} />
     ) : isLegacyMotionArticle ? (
       <LegacyMotionControlArticle slug={article.slug} />
     ) : pistonPumpArticleCopy ? (
@@ -799,11 +799,7 @@ export default function TechnicalArticleDetail({
       className="newsArticleDetailPage"
       data-locale={locale}
       data-article-slug={article.slug}
-      {...(article.slug === brushedVsBrushlessDiaphragmPumpMotorLifeSlug ||
-      article.slug === lifeScienceInstrumentDpl60SelectionSlug ||
-      isPistonPumpArticle
-        ? { lang: locale }
-        : {})}
+      lang={locale}
     >
       <script
         type="application/ld+json"
@@ -836,7 +832,7 @@ export default function TechnicalArticleDetail({
         {articleBody}
         {applicationChildArticles.length > 0 ? (
           <section className="technicalArticleClusterLinks">
-            <h2>{locale === "zh-CN" ? "相关应用问题" : "Related application guides"}</h2>
+            <h2>{{ "zh-CN": "相关应用问题", en: "Related application guides", es: "Guías de aplicación relacionadas", fr: "Guides d’application associés", ko: "관련 적용 가이드", ru: "Руководства по связанным задачам" }[locale]}</h2>
             <ul>
               {applicationChildArticles.map((child) => (
                 <li key={child.slug}>

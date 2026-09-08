@@ -194,17 +194,17 @@ export const technicalArticlesIntlData: TechnicalArticlesSourcePageData = {
       id: "micro-plunger-pump-selection",
       slug: "micro-plunger-pump-selection",
       category: "pumps-valves",
-      title: "Key Parameters for Selecting a Micro Plunger Pump",
+      title: "Key Parameters for Selecting a Micro Piston Pump",
       summary:
-        "Micro plunger pump selection should consider dispensing volume, accuracy, repeatability, pressure range, interface type, drive method and communication protocol.",
+        "Micro piston pump selection should consider dispensing volume, accuracy, repeatability, pressure range, interface type, drive method and communication protocol.",
       date: "2026-06-19",
       coverImage:
-        "/images/resources/technical-articles/covers/micro-plunger-pump-selection.webp",
+        "/images/resources/technical-articles/piston-pump/micro-plunger-pump-selection-cover.webp",
       content: [
         {
           title: "Core parameters beyond volume range",
           content:
-            "Micro plunger pumps are used in IVD, laboratory automation and analytical instruments for aspiration, dispensing and quantitative transfer. Selection should start from volume range and accuracy, then consider pressure, media, duty cycle and lifetime.",
+            "Micro piston pumps are used in IVD, laboratory automation and analytical instruments for aspiration, dispensing and quantitative transfer. Selection should start from volume range and accuracy, then consider pressure, media, duty cycle and lifetime.",
         },
         {
           title: "System-level matching is important",

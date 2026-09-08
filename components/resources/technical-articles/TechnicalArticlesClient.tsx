@@ -6,7 +6,8 @@ import type { ComponentType } from "react";
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
 import ResourceSearchBar from "@/components/resources/ResourceSearchBar";
 import ResourceSupportCta from "@/components/resources/ResourceSupportCta";
-import TechnicalArticleCard from "@/components/resources/technical-articles/TechnicalArticleCard";
+import TechnicalArticleListItem from "@/components/resources/technical-articles/TechnicalArticleListItem";
+import articleListStyles from "./TechnicalArticleListItem.module.css";
 import type {
   ClassifiedTechnicalArticleItem,
   TechnicalArticleLocale,
@@ -440,15 +441,14 @@ export default function TechnicalArticlesClient({
         <div className="technicalArticlesMain">
           {filteredArticles.length > 0 ? (
             <>
-              <div className="technicalArticlesGrid">
+              <div className={articleListStyles.list}>
                 {pagedArticles.map((article) => (
-                  <TechnicalArticleCard
+                  <TechnicalArticleListItem
                     key={article.id}
                     article={article}
                     tags={article.tags}
                     href={getArticleHref(pageData.locale, article.slug)}
-                    locale={pageData.locale}
-                    tagsText={ui?.tags}
+                    categoryLabel={getCategoryPathLabel(pageData, article)}
                   />
                 ))}
               </div>

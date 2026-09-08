@@ -1,3 +1,7 @@
+import { pumpApplicationArticlesRu } from "./pump-application-articles.ru";
+import { pumpApplicationArticlesKo } from "./pump-application-articles.ko";
+import { pumpApplicationArticlesFr } from "./pump-application-articles.fr";
+import { pumpApplicationArticlesEs } from "./pump-application-articles.es";
 import type { EngineeringArticleBlock } from "./diaphragm-pump-engineering-article.types";
 import type { TechnicalArticleItem, TechnicalArticleLocale } from "./technical-articles.types";
 import { pumpApplicationArticlesZh } from "./pump-application-articles.zh";
@@ -15,6 +19,10 @@ export function getPumpApplicationArticleCopy(
   if (!isPumpApplicationArticleSlug(slug)) return null;
   if (locale === "zh-CN") return pumpApplicationArticlesZh[slug];
   if (locale === "en") return pumpApplicationArticlesEn[slug];
+  if (locale === "es") return pumpApplicationArticlesEs[slug];
+  if (locale === "fr") return pumpApplicationArticlesFr[slug];
+  if (locale === "ko") return pumpApplicationArticlesKo[slug];
+  if (locale === "ru") return pumpApplicationArticlesRu[slug];
   return null;
 }
 

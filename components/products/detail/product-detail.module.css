@@ -2560,3 +2560,12 @@
   white-space: normal !important;
   overflow-wrap: anywhere;
 }
+
+/* Mobile shortcuts preserve the full authored copy and the existing desktop layout. */
+.mobileQuickLinks { display: none; }
+.modelViewerError { max-width: 32rem; padding: 20px; text-align: center; }
+.operationArea, .detailSection { scroll-margin-top: 110px; }
+@media (max-width: 768px) {
+  .mobileQuickLinks { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 18px; }
+  .mobileQuickLinks a { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 14px; border: 1px solid #173368; border-radius: 4px; color: #173368; font-weight: 600; }
+}

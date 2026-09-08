@@ -155,7 +155,7 @@ export const datasheetZhItems: DatasheetItem[] = [
     description: "SM 微型柱塞泵适用于紧凑型自动化仪器中的微量液体定量、分配与试剂加注。",
     image:
       "/images/products/pumps/plunger-pump/sm/pump-sm-1000ul-pmma.webp",
-    productHref: "/products/pumps/plunger-pumps/sm-miniature-piston-pumps",
+    productHref: "/products/pumps/piston-pump/miniature-piston-pump",
     downloadHref:
       "/downloads/resources/datasheets/zh-CN/Pumps/ps-120b-013-001-cn-sm-piston-pump.pdf",
     actionType: "download",

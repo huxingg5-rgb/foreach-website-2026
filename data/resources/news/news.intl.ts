@@ -121,7 +121,7 @@ export const newsIntlData: NewsPageData = {
         {
           title: "For IVD and Laboratory Automation Applications",
           content:
-            "FOREACH will present core microfluidic components, including plunger pumps, syringe pumps, diaphragm pumps, solenoid valves, rotary valves, fittings, tubing, and sensors.",
+            "FOREACH will present core microfluidic components, including piston pumps, syringe pumps, diaphragm pumps, solenoid valves, rotary valves, fittings, tubing, and sensors.",
         },
         {
           title: "Reliable Fluid Control for Long-term Integration",

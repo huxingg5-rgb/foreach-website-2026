@@ -59,7 +59,8 @@ function ArticleFigure({
   width,
   height,
   caption,
-}: Extract<EngineeringArticleBlock, { type: "figure" }>) {
+  locale,
+}: Extract<EngineeringArticleBlock, { type: "figure" }> & { locale: TechnicalArticleLocale }) {
   return (
     <figure className={styles.figure}>
       <Image
@@ -73,7 +74,7 @@ function ArticleFigure({
       <figcaption>
         {caption}
         {src.includes("/pump-application-guides/") ? (
-          <> <a href={src} target="_blank" rel="noreferrer">{src.endsWith("-zh.svg") ? "查看大图" : "Open diagram"}</a></>
+          <> <a href={src} target="_blank" rel="noreferrer">{{ "zh-CN": "查看大图", en: "Open diagram", es: "Abrir diagrama", fr: "Ouvrir le schéma", ko: "도식 크게 보기", ru: "Открыть схему" }[locale]}</a></>
         ) : null}
       </figcaption>
     </figure>
@@ -114,7 +115,7 @@ function ArticleBlock({
   }
 
   if (block.type === "figure") {
-    return <ArticleFigure {...block} />;
+    return <ArticleFigure {...block} locale={locale} />;
   }
 
   if (block.type === "subheading") {
@@ -167,15 +168,12 @@ export default function DiaphragmPumpEngineeringArticle({
 export function EngineeringArticleContent({
   copy,
   locale,
-  coverPlaceholder,
 }: {
   copy: DiaphragmPumpEngineeringArticleCopy;
   locale: TechnicalArticleLocale;
-  coverPlaceholder?: string;
 }) {
   return (
     <div className={newsStyles.technicalArticleBody}>
-      {coverPlaceholder ? <div className={styles.coverPlaceholder}>{coverPlaceholder}</div> : null}
       <section className={newsStyles.contentBlock}>
         {copy.leadBlocks.map((block, index) => (
           <ArticleBlock block={block} locale={locale} key={`lead-${index}`} />
@@ -195,6 +193,7 @@ export function EngineeringArticleContent({
         </section>
       ))}
 
+      {copy.faqItems.length > 0 && (
       <section className={newsStyles.contentBlock}>
         <h2>{copy.faqTitle}</h2>
         <div className={styles.faqList}>
@@ -206,6 +205,7 @@ export function EngineeringArticleContent({
           ))}
         </div>
       </section>
+      )}
     </div>
   );
 }

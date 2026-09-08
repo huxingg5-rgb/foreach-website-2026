@@ -1,4 +1,9 @@
 export type DiaphragmPumpEngineeringArticleSlug =
+  | "self-priming-miniature-liquid-diaphragm-pump-selection"
+  | "miniature-diaphragm-pump-flow-pulsation-reduction"
+  | "miniature-diaphragm-pump-noise-vibration-reduction"
+  | "miniature-diaphragm-pump-backflow-check-valve"
+  | "micro-diaphragm-pump-materials-selection"
   | "ink-circulation-supply-return-pump-diaphragm-pump"
   | "300-vs-600-ml-min-ink-circulation-return-pump-selection"
   | "white-ink-circulation-pump-selection-sedimentation"

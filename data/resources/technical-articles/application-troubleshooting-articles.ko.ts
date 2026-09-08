@@ -335,24 +335,9 @@ export const labLiquidWasteAspirationTroubleshootingKoCopy = {
               href: "/ko/applications/lab-automation/",
               suffix: ".",
             },
-            {
-              prefix: "참고:",
-              label: "KNF의 실험실 유체 흡인 시스템 설명",
-              href: "https://knf.com/en/global/solutions/lab-applications/fluid-aspiration",
-              suffix: ".",
-            },
-            {
-              prefix: "참고:",
-              label: "INTEGRA 진공 폐액 흡인 시스템의 보호 및 유지보수 설명",
-              href: "https://www.integra-biosciences.com/global/en/aspiration-systems/vacusafe",
-              suffix: ".",
-            },
-            {
-              prefix: "참고:",
-              label: "진공 시스템 압력 상승법과 누설률 계산 설명",
-              href: "https://www.leybold.com/content/leybold/en-us/knowledge/vacuum-fundamentals/leak-detection/pressure-rise-and-drop-tests.html",
-              suffix: ".",
-            },
+
+
+
           ],
         },
         {
@@ -761,24 +746,9 @@ export const ivdWasteAspirationPumpSelectionKoCopy = {
               href: "/ko/resources/technical-articles/ivd-waste-liquid-pump-liquid-vs-gas-liquid-diaphragm-pump/",
               suffix: ".",
             },
-            {
-              prefix: "참고:",
-              label: "KNF의 액체 펌프 직접 흡인과 진공 간접 흡인 비교",
-              href: "https://knf.com/en/it/stories-events/news-stories/article/direct-liquid-transfer-vs-vacuum-over-liquid-transfer",
-              suffix: ".",
-            },
-            {
-              prefix: "참고:",
-              label: "KNF 세척 바늘 폐액 흡인과 기액 혼합 조건 설명",
-              href: "https://knf.com/fileadmin/Local_files/USA/Downloads/OEM_Process_downloads/application_note/Application_Note_needle-washing_KNF_USA.pdf",
-              suffix: ".",
-            },
-            {
-              prefix: "참고:",
-              label: "Iwaki 기액 이송 및 폐액 수집 펌프 자료",
-              href: "https://www.iwaki.hk/catalog/products_details.php?cPath=6&id=40&language=en",
-              suffix: ".",
-            },
+
+
+
           ],
         },
         {

@@ -394,6 +394,13 @@ export default function IvdLocalizedApplicationClient({
           <div>
             <h2>{data.ctaBanner.title}</h2>
             <p>{data.ctaBanner.description}</p>
+            {data.ctaBanner.articleHref && data.ctaBanner.articleText ? (
+              <p className="ivd-cta-resource">
+                <Link href={data.ctaBanner.articleHref}>
+                  {data.ctaBanner.articleText}
+                </Link>
+              </p>
+            ) : null}
           </div>
 
           <Link className="ivd-btn" href={data.ctaBanner.secondaryHref}>

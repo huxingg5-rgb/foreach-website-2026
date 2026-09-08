@@ -1,8 +1,16 @@
 import "@/app/contact/contact.css";
 
+import type { Metadata } from "next";
+
+import HomeStructuredData from "@/components/home/HomeStructuredData";
 import HomePageContent from "@/components/home/HomePageContent";
 import HomeLanguageRedirect from "@/components/i18n/HomeLanguageRedirect";
 import { defaultLocale } from "@/data/languages";
+import { SITE_NAME } from "@/lib/seo/site-identity";
+
+export const metadata: Metadata = {
+  openGraph: { siteName: SITE_NAME },
+};
 
 /**
  * 中文默认首页
@@ -17,6 +25,7 @@ import { defaultLocale } from "@/data/languages";
 export default function HomePage() {
   return (
     <>
+      <HomeStructuredData />
       <HomeLanguageRedirect />
       <HomePageContent locale={defaultLocale} />
     </>

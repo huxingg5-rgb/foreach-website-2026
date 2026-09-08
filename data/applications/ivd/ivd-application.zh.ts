@@ -58,6 +58,9 @@ export const ivdApplicationZhData: IvdApplicationPageData = {
     primaryHref: PRODUCT_HREF,
     secondaryText: "提交应用需求",
     secondaryHref: CONTACT_HREF,
+    articleText: "了解 IVD 中 Cleaning Pump、Wash Pump 和 Rinse Pump 的区别与选型",
+    articleHref:
+      "/resources/technical-articles/ivd-cleaning-wash-rinse-pump-diaphragm-pump/",
   },
 
   productAbilities: {

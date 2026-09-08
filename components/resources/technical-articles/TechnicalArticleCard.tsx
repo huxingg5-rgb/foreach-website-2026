@@ -6,7 +6,7 @@ import type { TechnicalArticleItem } from "@/data/resources/technical-articles/t
 import "@/app/resources/technical-articles/technical-articles.css";
 
 type TechnicalArticleCardProps = {
-  article: TechnicalArticleItem;
+  article: Pick<TechnicalArticleItem, "title" | "summary" | "date" | "coverImage" | "coverAlt">;
   tags?: string[];
   href: string;
   locale: string;
@@ -70,15 +70,19 @@ export default function TechnicalArticleCard({
     );
   }
 
+  const hasProductPhotoCover =
+    article.coverImage.includes("/pump-application-guides/") ||
+    article.coverImage.includes("/diaphragm-pump-rd/covers/");
+
   return (
     <Link className="technicalArticleCard" href={href}>
-      <div className="technicalArticleCard__image">
-        {article.coverImage ? <Image
+      <div className={"technicalArticleCard__image" + (hasProductPhotoCover ? " technicalArticleCard__image--pump-application" : "")}>
+        <Image
           src={article.coverImage}
-          alt={article.title}
+          alt={hasProductPhotoCover ? article.coverAlt ?? article.title : article.title}
           fill
           sizes="(max-width: 760px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        /> : <span className="technicalArticleCard__placeholder">{isChinesePage(locale) ? "待上传" : "Awaiting upload"}</span>}
+        />
       </div>
 
       <div className="technicalArticleCard__body">

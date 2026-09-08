@@ -69,7 +69,7 @@ export const dpl30SelfPrimingDecreaseEnCopy = {
         },
         {
           type: "paragraph",
-          text: "Reverse leakage dissipates part of the pressure difference that the diaphragm has just created. Micropump research likewise identifies valve redirection efficiency, static leakage, reactive volume and cavitation as important influences on effective flow and self-priming. That research explains mechanisms; it is not DPL30 performance data.",
+          text: "Reverse leakage dissipates part of the pressure difference created by the diaphragm. Valve sealing, retained volume and the presence of vapor or gas influence effective flow and self-priming. This explains mechanisms; it is not DPL30 performance data.",
         },
         {
           type: "notice",
@@ -88,7 +88,7 @@ export const dpl30SelfPrimingDecreaseEnCopy = {
         {
           type: "formula",
           expression: "Q_pump = Q_liquid + Q_air leak",
-          note: "Air occupying part of each suction stroke reduces the effective volume available to lift liquid. This is a fault-isolation relation, not a complete two-phase-flow model.",
+          note: "As a diagnostic approximation, air occupies part of the suction volume available to liquid. Volumetric terms must be compared at the same reference pressure; gas compressibility prevents this expression from being a complete two-phase-flow model.",
         },
         {
           type: "paragraph",
@@ -723,7 +723,7 @@ export const dpl30EpdmPtfeFfkmSelectionEnCopy = {
         {
           type: "formula",
           expression: "δ² = δ_D² + δ_P² + δ_H²",
-          note: "Hansen solubility parameters divide interaction into dispersion, polar and hydrogen-bonding components. Research correlates them with swelling trends in EPDM and FKM, but the actual compound still requires testing.",
+          note: "Hansen solubility parameters separate dispersion, polar and hydrogen-bonding interactions. They help interpret affinity and swelling trends, but the actual compound still requires testing.",
         },
         {
           type: "paragraph",
@@ -737,7 +737,7 @@ export const dpl30EpdmPtfeFfkmSelectionEnCopy = {
       blocks: [
         {
           type: "paragraph",
-          text: "PTFE's highly fluorinated structure, strong carbon–fluorine bonds and fluorine shielding around the carbon backbone support its high chemical and thermal stability. Chemours and Chemical Science sources describe this broad resistance.",
+          text: "PTFE's highly fluorinated structure, strong carbon–fluorine bonds and fluorine shielding around the carbon backbone contribute to its high chemical and thermal stability. This does not mean unlimited compatibility under every condition.",
         },
         {
           type: "paragraph",

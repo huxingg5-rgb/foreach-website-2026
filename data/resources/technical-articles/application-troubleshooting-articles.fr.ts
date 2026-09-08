@@ -353,27 +353,9 @@ export const labLiquidWasteAspirationTroubleshootingFrCopy = {
               href: "/fr/applications/lab-automation/",
               suffix: ".",
             },
-            {
-              prefix: "Référence :",
-              label:
-                "Présentation KNF des systèmes d’aspiration de fluides de laboratoire",
-              href: "https://knf.com/en/global/solutions/lab-applications/fluid-aspiration",
-              suffix: ".",
-            },
-            {
-              prefix: "Référence :",
-              label:
-                "Protection et maintenance du système d’aspiration sous vide VACUSAFE d’INTEGRA",
-              href: "https://www.integra-biosciences.com/global/en/aspiration-systems/vacusafe",
-              suffix: ".",
-            },
-            {
-              prefix: "Référence :",
-              label:
-                "Méthode de remontée de pression et calcul du taux de fuite d’un système de vide",
-              href: "https://www.leybold.com/content/leybold/en-us/knowledge/vacuum-fundamentals/leak-detection/pressure-rise-and-drop-tests.html",
-              suffix: ".",
-            },
+
+
+
           ],
         },
         {
@@ -836,27 +818,9 @@ export const ivdWasteAspirationPumpSelectionFrCopy = {
               href: "/fr/resources/technical-articles/ivd-waste-liquid-pump-liquid-vs-gas-liquid-diaphragm-pump/",
               suffix: ".",
             },
-            {
-              prefix: "Référence :",
-              label:
-                "Comparaison KNF du transfert direct de liquide et du transfert indirect sous vide",
-              href: "https://knf.com/en/it/stories-events/news-stories/article/direct-liquid-transfer-vs-vacuum-over-liquid-transfer",
-              suffix: ".",
-            },
-            {
-              prefix: "Référence :",
-              label:
-                "Note KNF sur les effluents de lavage d’aiguilles et les conditions gaz-liquide",
-              href: "https://knf.com/fileadmin/Local_files/USA/Downloads/OEM_Process_downloads/application_note/Application_Note_needle-washing_KNF_USA.pdf",
-              suffix: ".",
-            },
-            {
-              prefix: "Référence :",
-              label:
-                "Informations Iwaki sur les pompes de transfert gaz-liquide et de collecte d’effluents",
-              href: "https://www.iwaki.hk/catalog/products_details.php?cPath=6&id=40&language=en",
-              suffix: ".",
-            },
+
+
+
           ],
         },
         {

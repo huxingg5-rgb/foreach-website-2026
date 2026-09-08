@@ -752,6 +752,20 @@
   margin: 0;
 }
 
+.ivd-cta .ivd-cta-resource {
+  margin-top: 14px;
+}
+
+.ivd-cta-resource a {
+  color: #55f3ce;
+  font-weight: 750;
+  text-underline-offset: 4px;
+}
+
+.ivd-cta-resource a:hover {
+  color: var(--white);
+}
+
 .ivd-btn {
   display: inline-flex;
   align-items: center;

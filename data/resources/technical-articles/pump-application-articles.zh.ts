@@ -6,8 +6,8 @@ export const pumpApplicationArticlesZh = {
       "title": "生化分析仪加样，100、250、500 μL柱塞泵怎么选？",
       "seoTitle": "生化分析仪100、250、500 μL柱塞泵容量选型｜FOREACH",
       "seoDescription": "从实际加样量、行程占比、连续分配次数与补液节拍，比较100、250、500 μL柱塞泵，并结合EA、SM、TM的材料和安装条件建立验证方法。",
-      "coverImage": "",
-      "coverAlt": "待上传"
+      "coverImage": "/images/resources/technical-articles/pump-application-guides/piston-capacity-series.png",
+      "coverAlt": "FOREACH多容量柱塞泵系列，包含100、250、500 μL规格"
     },
     "deck": "从实际加样量、行程占比、连续分配次数与补液节拍，比较100、250、500 μL柱塞泵，并结合EA、SM、TM的材料和安装条件建立验证方法。",
     "leadBlocks": [
@@ -368,8 +368,8 @@ export const pumpApplicationArticlesZh = {
       "title": "一台微型隔膜泵带多路清洗针，为什么各支路流量不一致？",
       "seoTitle": "多路清洗针流量不一致：微型隔膜泵与分支液路排查 | FOREACH",
       "seoDescription": "从每针清洗液量和时间窗口计算总需求，区分泵流量不足与支路分配不均，并通过逐路收集、压力测量和管路核对建立验证方法。",
-      "coverImage": "",
-      "coverAlt": "待上传"
+      "coverImage": "/images/resources/technical-articles/pump-application-guides/dpl60-brushless-side-photo.jpg",
+      "coverAlt": "FOREACH DPL60微型隔膜泵侧面实拍，展示泵头与进出液接口"
     },
     "deck": "从每针清洗液量和时间窗口计算总需求，区分泵流量不足与支路分配不均，并通过逐路收集、压力测量和管路核对建立验证方法。",
     "leadBlocks": [
@@ -655,8 +655,8 @@ export const pumpApplicationArticlesZh = {
       "title": "微型隔膜泵开始正常，抽一会儿流量下降，怎样检查储液瓶通气？",
       "seoTitle": "隔膜泵运行后流量下降：储液瓶通气与入口排查 | FOREACH",
       "seoDescription": "通过瓶内气相压力、入口压力与流量的同步记录，判断储液瓶补气是否受限，并区分液位下降、堵塞、漏气和出口背压等原因。",
-      "coverImage": "",
-      "coverAlt": "待上传"
+      "coverImage": "/images/resources/technical-articles/pump-application-guides/dpl30-brushless-rear-photo.jpg",
+      "coverAlt": "FOREACH DPL30微型隔膜泵背面实拍，展示泵体与进出液接口"
     },
     "deck": "通过瓶内气相压力、入口压力与流量的同步记录，判断储液瓶补气是否受限，并区分液位下降、堵塞、漏气和出口背压等原因。",
     "leadBlocks": [
