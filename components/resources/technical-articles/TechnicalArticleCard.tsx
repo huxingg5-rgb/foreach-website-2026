@@ -73,12 +73,12 @@ export default function TechnicalArticleCard({
   return (
     <Link className="technicalArticleCard" href={href}>
       <div className="technicalArticleCard__image">
-        <Image
+        {article.coverImage ? <Image
           src={article.coverImage}
           alt={article.title}
           fill
           sizes="(max-width: 760px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        />
+        /> : <span className="technicalArticleCard__placeholder">{isChinesePage(locale) ? "待上传" : "Awaiting upload"}</span>}
       </div>
 
       <div className="technicalArticleCard__body">

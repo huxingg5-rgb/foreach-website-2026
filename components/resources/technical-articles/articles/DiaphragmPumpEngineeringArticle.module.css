@@ -101,3 +101,5 @@
     padding: 18px;
   }
 }
+
+.coverPlaceholder { display: flex; align-items: center; justify-content: center; min-height: clamp(150px, 20vw, 220px); margin-bottom: 28px; border: 1px dashed #cbd5e1; border-radius: 12px; background: #f5f7fa; color: #64748b; font-size: 20px; }

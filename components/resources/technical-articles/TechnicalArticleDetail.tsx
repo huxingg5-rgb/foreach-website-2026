@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { getPumpApplicationArticleCopy, getPumpApplicationChildArticles } from "@/data/resources/technical-articles/pump-application-articles.article";
 /* =========================================================
    TechnicalArticleDetail.tsx
    恒永达官网｜技术文章详情页适配组件
@@ -18,7 +20,7 @@ import RelatedResources from "@/components/common/related-resources/RelatedResou
 import NewsArticleClient from "@/components/resources/news/NewsArticleClient";
 import BrushlessDiaphragmPumpWiringArticle from "@/components/resources/technical-articles/articles/BrushlessDiaphragmPumpWiringArticle";
 import CvKvMicrofluidicsArticle from "@/components/resources/technical-articles/articles/CvKvMicrofluidicsArticle";
-import DiaphragmPumpEngineeringArticle from "@/components/resources/technical-articles/articles/DiaphragmPumpEngineeringArticle";
+import DiaphragmPumpEngineeringArticle, { EngineeringArticleContent } from "@/components/resources/technical-articles/articles/DiaphragmPumpEngineeringArticle";
 import Dpl30LiquidDiaphragmPumpArticle from "@/components/resources/technical-articles/articles/Dpl30LiquidDiaphragmPumpArticle";
 import PistonPumpLocalizedArticle from "@/components/resources/technical-articles/articles/PistonPumpLocalizedArticle";
 import PistonPumpAccuracyArticle, {
@@ -383,6 +385,8 @@ export default function TechnicalArticleDetail({
 }: TechnicalArticleDetailProps) {
   const locale = normalizeLocale(pageData.locale);
   const listHref = getArticleListHref(locale);
+  const pumpApplicationCopy = getPumpApplicationArticleCopy(article.slug, locale);
+  const applicationChildArticles = getPumpApplicationChildArticles(article.slug, locale);
   const isPistonPumpArticle = isPistonPumpArticleSlug(article.slug);
   const pistonPumpArticleCopy = getPistonPumpArticleCopy(
     article.slug,
@@ -451,6 +455,7 @@ export default function TechnicalArticleDetail({
     // DPL30 的 summary 供列表和关联卡片自动读取正文首段；
     // 详情页正文已经从同一首段开始，因此此处不重复显示摘要。
     summary:
+      pumpApplicationCopy !== null ||
       isDedicatedPumpArticle ||
       isPrecisionPistonPumpArticle ||
       isPistonPumpAccuracyArticle ||
@@ -483,7 +488,16 @@ export default function TechnicalArticleDetail({
   const adaptedPageData = {
     listHref,
     backText: getBackText(locale),
-    bottomBanner: isPistonPumpHeadMaterialArticle
+    bottomBanner: pumpApplicationCopy
+      ? {
+          title: pumpApplicationCopy.cta.title,
+          description: pumpApplicationCopy.cta.description,
+          actions: [
+            { label: pumpApplicationCopy.cta.contactLabel, href: `${localePrefix}/contact/` },
+            { label: pumpApplicationCopy.cta.productsLabel, href: getLocalizedInternalHref(pumpApplicationCopy.cta.productsHref ?? "/products/", locale) },
+          ],
+        }
+      : isPistonPumpHeadMaterialArticle
       ? {
           title: pistonPumpHeadMaterialArticleCtaZh.title,
           description: pistonPumpHeadMaterialArticleCtaZh.description,
@@ -584,7 +598,9 @@ export default function TechnicalArticleDetail({
   };
 
   const articleBody =
-    isLegacyMotionArticle ? (
+    pumpApplicationCopy ? (
+      <EngineeringArticleContent copy={pumpApplicationCopy} locale={locale} coverPlaceholder={locale === "zh-CN" ? "待上传" : "Awaiting upload"} />
+    ) : isLegacyMotionArticle ? (
       <LegacyMotionControlArticle slug={article.slug} />
     ) : pistonPumpArticleCopy ? (
       <PistonPumpLocalizedArticle copy={pistonPumpArticleCopy} locale={locale} />
@@ -748,7 +764,7 @@ export default function TechnicalArticleDetail({
     pageData,
     article,
     locale,
-    pistonPumpArticleCopy?.faq
+    pumpApplicationCopy ? [...pumpApplicationCopy.faqItems] : pistonPumpArticleCopy?.faq
       ? [...pistonPumpArticleCopy.faq]
       : isPistonPumpHeadMaterialArticle
       ? pistonPumpHeadMaterialArticleFaqZh
@@ -766,7 +782,8 @@ export default function TechnicalArticleDetail({
                 ? getDiaphragmPumpEngineeringArticleFaq(article.slug, locale)
                 : [],
     structuredDataSubject,
-    isPistonPumpHeadMaterialArticle ||
+    pumpApplicationCopy !== null ||
+      isPistonPumpHeadMaterialArticle ||
       isPistonPumpAccuracyArticle ||
       isPrecisionPistonPumpArticle ||
       isPistonPumpArticle ||
@@ -817,6 +834,18 @@ export default function TechnicalArticleDetail({
         }
       >
         {articleBody}
+        {applicationChildArticles.length > 0 ? (
+          <section className="technicalArticleClusterLinks">
+            <h2>{locale === "zh-CN" ? "相关应用问题" : "Related application guides"}</h2>
+            <ul>
+              {applicationChildArticles.map((child) => (
+                <li key={child.slug}>
+                  <Link href={getLocalizedInternalHref(`/resources/technical-articles/${child.slug}/`, locale)}>{child.title}</Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
       </NewsArticleClient>
     </div>
   );

@@ -230,6 +230,10 @@ interface ArticleClassificationDefinition {
 }
 
 const articleClassifications: Record<string, ArticleClassificationDefinition> = {
+  "clinical-chemistry-piston-pump-100-250-500-ul-selection": {"primaryCategory": "pumps", "secondaryCategory": "plunger-pumps", "tagKeys": ["plunger-pump", "dosing", "ivd", "selection", "testing-validation"], "relatedProducts": ["EA", "SM", "TM"]},
+  "diaphragm-pump-multiple-wash-nozzles-flow-balance": {"primaryCategory": "applications-solutions", "secondaryCategory": "cleaning-waste", "tagKeys": ["cleaning", "flow", "pressure-drop", "testing-validation"], "relatedProducts": ["DPL30", "DPL60"]},
+  "diaphragm-pump-flow-drop-reservoir-venting": {"primaryCategory": "pumps", "secondaryCategory": "miniature-diaphragm-pumps", "tagKeys": ["suction", "troubleshooting", "self-priming", "testing-validation"], "relatedProducts": ["DPL30", "DPL60"]},
+
   "piston-pump-acceleration-deceleration-curves": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "testing-validation"], relatedProducts: ["EA", "SM", "TM"], relationKeys: ["series:ea", "series:sm", "series:tm"], relationPriority: 80 },
   "precision-piston-pump-backlash-compensation": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "testing-validation"], relatedProducts: ["EA", "SM", "TM"], relationKeys: ["series:ea", "series:sm", "series:tm"], relationPriority: 70 },
   "stepper-motor-calculation-selection": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "testing-validation"], relatedProducts: ["EA", "SM", "TM"], relationKeys: ["series:ea", "series:sm", "series:tm"], relationPriority: 60 },

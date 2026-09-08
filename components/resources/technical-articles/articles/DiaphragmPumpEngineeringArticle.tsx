@@ -7,6 +7,7 @@ import {
 import type {
   DiaphragmPumpEngineeringArticleSlug,
   EngineeringArticleBlock,
+  DiaphragmPumpEngineeringArticleCopy,
 } from "@/data/resources/technical-articles/diaphragm-pump-engineering-article.types";
 import type { TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
 import { getLocalizedInternalHref } from "@/lib/seo/site-url";
@@ -69,7 +70,12 @@ function ArticleFigure({
         height={height}
         sizes="(max-width: 760px) 100vw, 900px"
       />
-      <figcaption>{caption}</figcaption>
+      <figcaption>
+        {caption}
+        {src.includes("/pump-application-guides/") ? (
+          <> <a href={src} target="_blank" rel="noreferrer">{src.endsWith("-zh.svg") ? "查看大图" : "Open diagram"}</a></>
+        ) : null}
+      </figcaption>
     </figure>
   );
 }
@@ -155,9 +161,21 @@ export default function DiaphragmPumpEngineeringArticle({
   locale,
 }: DiaphragmPumpEngineeringArticleProps) {
   const copy = getDiaphragmPumpEngineeringArticleCopy(articleSlug, locale);
+  return <EngineeringArticleContent copy={copy} locale={locale} />;
+}
 
+export function EngineeringArticleContent({
+  copy,
+  locale,
+  coverPlaceholder,
+}: {
+  copy: DiaphragmPumpEngineeringArticleCopy;
+  locale: TechnicalArticleLocale;
+  coverPlaceholder?: string;
+}) {
   return (
     <div className={newsStyles.technicalArticleBody}>
+      {coverPlaceholder ? <div className={styles.coverPlaceholder}>{coverPlaceholder}</div> : null}
       <section className={newsStyles.contentBlock}>
         {copy.leadBlocks.map((block, index) => (
           <ArticleBlock block={block} locale={locale} key={`lead-${index}`} />

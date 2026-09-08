@@ -1,3 +1,4 @@
+import { isPumpApplicationArticleSlug } from "@/data/resources/technical-articles/pump-application-articles.article";
 /* =========================================================
    page.tsx
    恒永达官网｜外语技术文章详情页入口
@@ -50,6 +51,7 @@ function getTechnicalArticleLanguageLinks(slug: string) {
   );
 
   if (
+    isPumpApplicationArticleSlug(slug) ||
     slug === "ink-circulation-supply-return-pump-diaphragm-pump" ||
     slug === "300-vs-600-ml-min-ink-circulation-return-pump-selection" ||
     slug === "white-ink-circulation-pump-selection-sedimentation" ||

@@ -1,3 +1,4 @@
+import { getPumpApplicationArticles } from "@/data/resources/technical-articles/pump-application-articles.article";
 /* =========================================================
    getTechnicalArticlesPageData.ts
    恒永达官网｜技术文章列表页数据服务层
@@ -310,6 +311,6 @@ export function getTechnicalArticlesPageData(
   return {
     ...sourcePageData,
     taxonomy: getTechnicalArticleTaxonomy(locale),
-    articles: classifyTechnicalArticles(sourcePageData.articles, locale),
+    articles: classifyTechnicalArticles([...getPumpApplicationArticles(locale), ...sourcePageData.articles], locale),
   };
 }
