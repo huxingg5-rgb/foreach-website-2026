@@ -23,7 +23,7 @@ export const HOME_SITE_IDENTITY = {
       "@type": "WebSite",
       "@id": homeUrl + "#website",
       name: SITE_NAME,
-      alternateName: ["FOREACH Technology", "恒永达"],
+      alternateName: ["FOREACH Technology"],
       url: homeUrl,
       publisher: { "@id": organizationId },
     },
