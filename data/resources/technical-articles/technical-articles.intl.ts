@@ -104,7 +104,7 @@ export const technicalArticlesIntlData: TechnicalArticlesSourcePageData = {
       category: "materials-compatibility",
       title: "Differences Between PEEK, PTFE and PFA in Fluidic Systems",
       summary:
-        "PEEK, PTFE and PFA are common high-performance materials in microfluidic systems, but they differ in mechanical strength, chemical resistance, transparency, flexibility and processing characteristics.",
+        "Polyether ether ketone (PEEK), polytetrafluoroethylene (PTFE) and perfluoroalkoxy polymer (PFA) are common high-performance materials in microfluidic systems, but they differ in mechanical strength, chemical resistance, transparency, flexibility and processing characteristics.",
       date: "2026-07-01",
       coverImage:
         "/images/resources/technical-articles/covers/peek-ptfe-pfa-material-differences.webp",
@@ -112,7 +112,7 @@ export const technicalArticlesIntlData: TechnicalArticlesSourcePageData = {
         {
           title: "Main differences between the three materials",
           content:
-            "PEEK provides high mechanical strength and pressure resistance, making it suitable for applications requiring structural stability and wear resistance. PTFE offers excellent chemical inertness and low surface energy, but lower mechanical strength. PFA combines chemical resistance with a degree of transparency, making it useful where visual inspection or cleanliness is required.",
+            "Polyether ether ketone (PEEK) provides high mechanical strength and pressure resistance, making it suitable for applications requiring structural stability and wear resistance. Polytetrafluoroethylene (PTFE) offers excellent chemical inertness and low surface energy, but lower mechanical strength. Perfluoroalkoxy polymer (PFA) combines chemical resistance with a degree of transparency, making it useful where visual inspection or cleanliness is required.",
         },
         {
           title: "Material compatibility depends on actual conditions",

@@ -80,20 +80,20 @@ export function getCompactPumpContent(slug: string, locale: Locale) {
     en: "The PEEK head is a material option for the reagent; piston, seals, valves and tubing must also be checked. Whole-path light protection requires a separate design assessment.",
   } : {
     zh: "当前展示 PMMA 泵头与陶瓷柱塞配置，需按实际液体核对所有接液材料。",
-    en: "The displayed configuration uses a PMMA head and ceramic piston. All wetted materials must be checked against the actual fluid.",
+    en: "The displayed configuration uses an acrylic (PMMA) head and ceramic piston. All wetted materials must be checked against the actual fluid.",
   };
   const customization: Localized = sm ? {
     zh: "支持按项目匹配泵头、柱塞及液路组件。SM 系列泵头可选 PMMA、PSU、POM、PEEK 等，柱塞可选陶瓷、不锈钢或 PEEK，并可配置光耦、阀组件、加样针、管路与控制器。材料组合及安装方式按介质和整机需求确定。",
-    en: "SM head options include PMMA, PSU, POM and PEEK; piston options include ceramic, stainless steel and PEEK. Optical sensors, valves, probes, tubing and a controller can be matched to the project. Materials and mounting are selected for the fluid and instrument.",
+    en: "SM head options include acrylic (PMMA), polysulfone (PSU), acetal (POM) and PEEK; piston options include ceramic, stainless steel and PEEK. Optical sensors, valves, probes, tubing and a controller can be matched to the project. Materials and mounting are selected for the fluid and instrument.",
   } : {
     zh: "可围绕安装方式、接管、阀组件与驱动控制开展项目配置。当前展示 PMMA 泵头与陶瓷柱塞；如需其他泵头或柱塞材料，可按试剂成分、密封配合和结构空间评估，具体组合以项目图纸为准。",
-    en: "Mounting, tubing connections, valves and drive control can be configured for the project. The displayed version uses a PMMA head and ceramic piston; alternative head or piston materials can be assessed against fluid chemistry, seal design and available space, subject to the project drawing.",
+    en: "Mounting, tubing connections, valves and drive control can be configured for the project. The displayed version uses an acrylic (PMMA) head and ceramic piston; alternative head or piston materials can be assessed against fluid chemistry, seal design and available space, subject to the project drawing.",
   };
   const description = locale === "zh" ? [
     `${model} 是标称容量 ${volume} 的${type}精密柱塞泵，采用 ${head} 泵头，面向${profile.tasks.zh}。${sm ? "适用于小型自动化仪器及加样机构的液路集成，支持 1/4-28 UNF 或 M6 接口，满量程为 2000 步；规定条件下的满量程重复性为 ≤0.5%。" : "面向安装空间受限的 OEM 分析模块，展示配置采用 6-40 UNF 接口，满量程为 2540 步，便于结合阀路和检测单元规划布局。"}`,
     customization.zh,
   ] : [
-    `${model} is a ${volume} ${type.toLowerCase()} precision piston pump with a ${head} head for ${profile.tasks.en.toLowerCase()}. ${sm ? "Designed for integration into small automated instruments and sampling mechanisms, it supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Full-stroke repeatability is ≤0.5% under the specified conditions." : "It targets space-constrained OEM analytical modules. The displayed configuration uses 6-40 UNF ports and 2540 full-stroke steps for integration alongside valves and detection components."}`,
+    `${model} is a ${volume} ${type.toLowerCase()} precision piston pump with ${head === "PMMA" ? "an acrylic (PMMA)" : "a PEEK"} head for ${profile.tasks.en.toLowerCase()}. ${sm ? "Designed for integration into small automated instruments and sampling mechanisms, it supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Full-stroke repeatability is ≤0.5% under the specified conditions." : "It targets space-constrained OEM analytical modules. The displayed configuration uses 6-40 UNF ports and 2540 full-stroke steps for integration alongside valves and detection components."}`,
     customization.en,
   ];
   const fit: Localized = Number(capacity) <= 100 ? {
@@ -142,6 +142,6 @@ export function getCompactPumpContent(slug: string, locale: Locale) {
     faq({ zh: "如何确认准确性、重复性和使用寿命？", en: "How should accuracy, repeatability and service life be confirmed?" }, { zh: sm ? "SM 满量程重复性在规定条件下为 ≤0.5%，不适用于任意小液量。请提供实际液量与允许误差，按所选配置确认准确性。500 万次预计寿命对应纯水、常温和 50 kPa 背压，不是任意试剂下的寿命保证。" : "请提供工作液量、允许误差、试剂、温度、背压及每日运行次数，按所选配置进行加液与循环验证。2540 步描述的是满量程步数，不能直接推定准确性、重复性或寿命。", en: sm ? "SM full-stroke repeatability is ≤0.5% under the specified conditions, not at every small dose. Provide the working volume and allowed error to confirm configuration-specific accuracy. The expected five-million-cycle life uses pure water at room temperature and 50 kPa back pressure; it is not a universal reagent-life guarantee." : "Provide working volume, allowed error, reagent, temperature, back pressure and daily cycle count for dispensing and cycle testing. The 2540 full-stroke steps do not establish accuracy, repeatability or service life." }),
   ];
   const seoTitle = locale === "zh" ? `${model} ${volume} ${head} ${type}柱塞泵 | FOREACH` : `${model} ${volume} ${head} ${type} Piston Pump | FOREACH`;
-  const metaDescription = locale === "zh" ? `${model} 为 ${volume} ${head} 泵头${type}柱塞泵，用于${profile.tasks.zh}。查看 ${port} 接口、${steps} 步配置、应用要求及泵头、柱塞与液路集成选项。` : `${model}: ${volume} ${head}-head ${type.toLowerCase()} piston pump for ${profile.tasks.en.toLowerCase()}. Explore ${port} ports, ${steps} steps and OEM integration options.`;
+  const metaDescription = locale === "zh" ? `${model} 为 ${volume} ${head} 泵头${type}柱塞泵，用于${profile.tasks.zh}。查看 ${port} 接口、${steps} 步配置、应用要求及泵头、柱塞与液路集成选项。` : `${model}: ${volume} ${head === "PMMA" ? "acrylic (PMMA) head" : head + "-head"} ${type.toLowerCase()} piston pump for ${profile.tasks.en.toLowerCase()}. Explore ${port} ports, ${steps} steps and OEM integration options.`;
   return { heading, description, commonApplications: profile.scenarios.map(k => SCENARIOS[k].tag[locale]), applicationDetails, faqs, seoTitle, metaDescription };
 }

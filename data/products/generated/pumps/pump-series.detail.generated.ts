@@ -93,7 +93,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Basic Specifications",
             "paramName": "Displayed pump head material",
-            "paramValue": "Poly(methyl methacrylate) (PMMA)",
+            "paramValue": "Acrylic (PMMA)",
             "unit": "",
             "sort": 20,
             "footnotes": []
@@ -109,7 +109,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PCTG / PMMA / PEEK; Other engineering materials can be assessed for fluid compatibility, structural strength, manufacturing process and project volume.",
+            "paramValue": "PCTG copolyester / Acrylic (PMMA) / PEEK; Other engineering materials can be assessed for fluid compatibility, structural strength, manufacturing process and project volume.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -451,14 +451,14 @@ export const pumpSeriesDetailRecords = [
       "en": {
         "locale": "en",
         "title": "100 µL PMMA Pump Head Standard Plunger Pump",
-        "h1": "FOREACH 100 μL Precision Ceramic Piston Pump for Microliter Liquid Dispensing, Reaction-Liquid Addition and Small-Volume Sample Handling, with a PMMA Pump Head",
+        "h1": "FOREACH 100 μL Precision Ceramic Piston Pump for Microliter Liquid Dispensing, Reaction-Liquid Addition and Small-Volume Sample Handling, with an Acrylic (PMMA) Pump Head",
         "seo": {
           "titleTag": "EA-100-PMMA Standard Plunger Pump | 100 µL PMMA Precision Dispensing Pump | FOREACH",
-          "metaDescription": "EA-100-PMMA is a custom-engineered 100 µL PMMA pump head standard plunger pump for micro-reagent dispensing, small-volume sample handling, reagent replenishment, and automated testing fluidics. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "metaDescription": "EA-100-PMMA is a custom-engineered 100 µL acrylic (PMMA) pump head standard plunger pump for micro-reagent dispensing, small-volume sample handling, reagent replenishment, and automated testing fluidics. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
           "canonicalPath": "/products/pumps/piston-pump/ea-100-pmma",
           "robots": "index,follow",
           "ogTitle": "100 µL PMMA Pump Head Standard Plunger Pump",
-          "ogDescription": "100 µL PMMA Pump Head Standard Plunger Pump for precision liquid handling in automated fluidic systems. Final configuration should be confirmed according to the application."
+          "ogDescription": "100 µL acrylic (PMMA) Pump Head Standard Plunger Pump for precision liquid handling in automated fluidic systems. Final configuration should be confirmed according to the application."
         },
         "hero": {
           "detailMode": "custom_inquiry",
@@ -473,7 +473,7 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "EA-100-PMMA is a 100 μL precision ceramic piston pump with a PMMA pump head for microliter reagent addition in clinical chemistry and immunoassay analyzers, small-volume sample handling and reaction-liquid addition in life science instruments. It supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Accuracy and repeatability at 100% full stroke are both ≤0.5% under the specified test conditions.\n\nPump heads can be selected from PMMA, PCTG, PEEK and other project-assessed materials. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Ports, motor, optical feedback, valves and controller can be configured for fluid compatibility, mounting space and system integration.",
+          "description": "EA-100-PMMA is a 100 μL precision ceramic piston pump with an acrylic (PMMA) pump head for microliter reagent addition in clinical chemistry and immunoassay analyzers, small-volume sample handling and reaction-liquid addition in life science instruments. It supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Accuracy and repeatability at 100% full stroke are both ≤0.5% under the specified test conditions.\n\nPump heads can be selected from acrylic (PMMA), PCTG copolyester, PEEK and other project-assessed materials. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Ports, motor, optical feedback, valves and controller can be configured for fluid compatibility, mounting space and system integration.",
           "advantages": [
             "Preliminary model identification",
             "configurable material and interface",
@@ -515,7 +515,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Basic Specifications",
             "paramName": "Displayed pump head material",
-            "paramValue": "Poly(methyl methacrylate) (PMMA)",
+            "paramValue": "Acrylic (PMMA)",
             "unit": "",
             "sort": 20,
             "footnotes": []
@@ -531,7 +531,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PCTG / PMMA / PEEK; Other engineering materials can be assessed for fluid compatibility, structural strength, manufacturing process and project volume.",
+            "paramValue": "PCTG copolyester / Acrylic (PMMA) / PEEK; Other engineering materials can be assessed for fluid compatibility, structural strength, manufacturing process and project volume.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -844,8 +844,8 @@ export const pumpSeriesDetailRecords = [
             "answer": "No. These figures apply at full stroke under the specified conditions. The 2% stroke figures are ≤2.0% accuracy and ≤1.5% repeatability; the footnotes describe displacement testing, not a guarantee of reagent performance at arbitrary small doses."
           },
           {
-            "question": "How should PMMA and PEEK heads be selected, and can the piston be customized?",
-            "answer": "The displayed configuration uses a PMMA head; compatibility must be checked for the head, piston, seals and valves with the actual fluid. Head options include PMMA, PCTG and PEEK. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Seals and other wetted parts must be considered together."
+            "question": "How should acrylic (PMMA) and PEEK heads be selected, and can the piston be customized?",
+            "answer": "The displayed configuration uses an acrylic (PMMA) head; compatibility must be checked for the head, piston, seals and valves with the actual fluid. Head options include acrylic (PMMA), PCTG copolyester and PEEK. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Seals and other wetted parts must be considered together."
           },
           {
             "question": "Can valves, optical feedback and a controller be integrated?",
@@ -982,7 +982,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PCTG / PMMA / PEEK; Other engineering materials can be assessed for fluid compatibility, structural strength, manufacturing process and project volume.",
+            "paramValue": "PCTG copolyester / Acrylic (PMMA) / PEEK; Other engineering materials can be assessed for fluid compatibility, structural strength, manufacturing process and project volume.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -1346,7 +1346,7 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "EA-100-PEEK is a 100 μL precision piston pump with a PEEK pump head for microliter reagent addition in clinical chemistry and immunoassay analyzers, small-volume sample handling and reaction-liquid addition in life science instruments. It supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Accuracy and repeatability at 100% full stroke are both ≤0.5% under the specified test conditions.\n\nThe displayed PEEK pump head can be replaced by a project-matched PMMA or PCTG option. Piston choices include zirconia ceramic, alumina ceramic, PEEK and sapphire. Ports, motor, optical feedback, valves and controls can be configured to the instrument. All wetted materials must be assessed against reagent composition and operating conditions.",
+          "description": "EA-100-PEEK is a 100 μL precision piston pump with a PEEK pump head for microliter reagent addition in clinical chemistry and immunoassay analyzers, small-volume sample handling and reaction-liquid addition in life science instruments. It supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Accuracy and repeatability at 100% full stroke are both ≤0.5% under the specified test conditions.\n\nThe displayed PEEK pump head can be replaced by a project-matched acrylic (PMMA) or PCTG copolyester option. Piston choices include zirconia ceramic, alumina ceramic, PEEK and sapphire. Ports, motor, optical feedback, valves and controls can be configured to the instrument. All wetted materials must be assessed against reagent composition and operating conditions.",
           "advantages": [
             "Preliminary model identification",
             "configurable material and interface",
@@ -1404,7 +1404,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PCTG / PMMA / PEEK; Other engineering materials can be assessed for fluid compatibility, structural strength, manufacturing process and project volume.",
+            "paramValue": "PCTG copolyester / Acrylic (PMMA) / PEEK; Other engineering materials can be assessed for fluid compatibility, structural strength, manufacturing process and project volume.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -1717,8 +1717,8 @@ export const pumpSeriesDetailRecords = [
             "answer": "No. These figures apply at full stroke under the specified conditions. The 2% stroke figures are ≤2.0% accuracy and ≤1.5% repeatability; the footnotes describe displacement testing, not a guarantee of reagent performance at arbitrary small doses."
           },
           {
-            "question": "How should PMMA and PEEK heads be selected, and can the piston be customized?",
-            "answer": "The displayed PEEK head is a material option for specialty reagents. It does not establish compatibility of all wetted parts or light protection for the entire fluid path. Head options include PMMA, PCTG and PEEK. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Seals and other wetted parts must be considered together."
+            "question": "How should acrylic (PMMA) and PEEK heads be selected, and can the piston be customized?",
+            "answer": "The displayed PEEK head is a material option for specialty reagents. It does not establish compatibility of all wetted parts or light protection for the entire fluid path. Head options include acrylic (PMMA), PCTG copolyester and PEEK. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Seals and other wetted parts must be considered together."
           },
           {
             "question": "Can valves, optical feedback and a controller be integrated?",
@@ -1839,7 +1839,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Basic Specifications",
             "paramName": "Displayed pump head material",
-            "paramValue": "Poly(methyl methacrylate) (PMMA)",
+            "paramValue": "Acrylic (PMMA)",
             "unit": "",
             "sort": 20,
             "footnotes": []
@@ -1855,7 +1855,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PCTG / PMMA / PVDF / PPS / PEEK / POM; Other engineering materials can be assessed for the project.",
+            "paramValue": "PCTG copolyester / Acrylic (PMMA) / PVDF / PPS / PEEK / Acetal (POM); Other engineering materials can be assessed for the project.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -2197,14 +2197,14 @@ export const pumpSeriesDetailRecords = [
       "en": {
         "locale": "en",
         "title": "250 µL PMMA Pump Head Standard Plunger Pump",
-        "h1": "FOREACH 250 μL Precision Ceramic Piston Pump for Sample Dilution, Reagent Dispensing and Small-to-Medium-Volume Reaction-Liquid Handling, with a PMMA Pump Head",
+        "h1": "FOREACH 250 μL Precision Ceramic Piston Pump for Sample Dilution, Reagent Dispensing and Small-to-Medium-Volume Reaction-Liquid Handling, with an Acrylic (PMMA) Pump Head",
         "seo": {
           "titleTag": "EA-250-PMMA Standard Plunger Pump | 250 µL PMMA Precision Dispensing Pump | FOREACH",
-          "metaDescription": "EA-250-PMMA is a custom-engineered 250 µL PMMA pump head standard plunger pump for micro-reagent dispensing, small-volume sample handling, reagent replenishment, and automated testing fluidics. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "metaDescription": "EA-250-PMMA is a custom-engineered 250 µL acrylic (PMMA) pump head standard plunger pump for micro-reagent dispensing, small-volume sample handling, reagent replenishment, and automated testing fluidics. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
           "canonicalPath": "/products/pumps/piston-pump/ea-250-pmma",
           "robots": "index,follow",
           "ogTitle": "250 µL PMMA Pump Head Standard Plunger Pump",
-          "ogDescription": "250 µL PMMA Pump Head Standard Plunger Pump for precision liquid handling in automated fluidic systems. Final configuration should be confirmed according to the application."
+          "ogDescription": "250 µL acrylic (PMMA) Pump Head Standard Plunger Pump for precision liquid handling in automated fluidic systems. Final configuration should be confirmed according to the application."
         },
         "hero": {
           "detailMode": "custom_inquiry",
@@ -2219,7 +2219,7 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "EA-250-PMMA is a 250 μL precision ceramic piston pump with a PMMA pump head for reagent dispensing in clinical chemistry analyzers, sample dilution in automated preparation systems and metered reaction-liquid addition. It supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Accuracy and repeatability at 100% full stroke are both ≤0.5% under the specified test conditions.\n\nPump heads can be selected from PMMA, PCTG, PEEK and other project-assessed materials. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Ports, motor, optical feedback, valves and controller can be configured for fluid compatibility, mounting space and system integration.",
+          "description": "EA-250-PMMA is a 250 μL precision ceramic piston pump with an acrylic (PMMA) pump head for reagent dispensing in clinical chemistry analyzers, sample dilution in automated preparation systems and metered reaction-liquid addition. It supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Accuracy and repeatability at 100% full stroke are both ≤0.5% under the specified test conditions.\n\nPump heads can be selected from acrylic (PMMA), PCTG copolyester, PEEK and other project-assessed materials. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Ports, motor, optical feedback, valves and controller can be configured for fluid compatibility, mounting space and system integration.",
           "advantages": [
             "Preliminary model identification",
             "configurable material and interface",
@@ -2261,7 +2261,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Basic Specifications",
             "paramName": "Displayed pump head material",
-            "paramValue": "Poly(methyl methacrylate) (PMMA)",
+            "paramValue": "Acrylic (PMMA)",
             "unit": "",
             "sort": 20,
             "footnotes": []
@@ -2277,7 +2277,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PCTG / PMMA / PVDF / PPS / PEEK / POM; Other engineering materials can be assessed for the project.",
+            "paramValue": "PCTG copolyester / Acrylic (PMMA) / PVDF / PPS / PEEK / Acetal (POM); Other engineering materials can be assessed for the project.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -2590,8 +2590,8 @@ export const pumpSeriesDetailRecords = [
             "answer": "No. These figures apply at full stroke under the specified conditions. The 2% stroke figures are ≤2.0% accuracy and ≤1.5% repeatability; the footnotes describe displacement testing, not a guarantee of reagent performance at arbitrary small doses."
           },
           {
-            "question": "How should PMMA and PEEK heads be selected, and can the piston be customized?",
-            "answer": "The displayed configuration uses a PMMA head; compatibility must be checked for the head, piston, seals and valves with the actual fluid. Head options include PMMA, PCTG and PEEK. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Seals and other wetted parts must be considered together."
+            "question": "How should acrylic (PMMA) and PEEK heads be selected, and can the piston be customized?",
+            "answer": "The displayed configuration uses an acrylic (PMMA) head; compatibility must be checked for the head, piston, seals and valves with the actual fluid. Head options include acrylic (PMMA), PCTG copolyester and PEEK. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Seals and other wetted parts must be considered together."
           },
           {
             "question": "Can valves, optical feedback and a controller be integrated?",
@@ -2728,7 +2728,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PCTG / PMMA / PVDF / PPS / PEEK / POM; Other engineering materials can be assessed for the project.",
+            "paramValue": "PCTG copolyester / Acrylic (PMMA) / PVDF / PPS / PEEK / Acetal (POM); Other engineering materials can be assessed for the project.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -3092,7 +3092,7 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "EA-250-PEEK is a 250 μL precision piston pump with a PEEK pump head for reagent dispensing in clinical chemistry analyzers, sample dilution in automated preparation systems and metered reaction-liquid addition. It supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Accuracy and repeatability at 100% full stroke are both ≤0.5% under the specified test conditions.\n\nThe displayed PEEK pump head can be replaced by a project-matched PMMA or PCTG option. Piston choices include zirconia ceramic, alumina ceramic, PEEK and sapphire. Ports, motor, optical feedback, valves and controls can be configured to the instrument. All wetted materials must be assessed against reagent composition and operating conditions.",
+          "description": "EA-250-PEEK is a 250 μL precision piston pump with a PEEK pump head for reagent dispensing in clinical chemistry analyzers, sample dilution in automated preparation systems and metered reaction-liquid addition. It supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Accuracy and repeatability at 100% full stroke are both ≤0.5% under the specified test conditions.\n\nThe displayed PEEK pump head can be replaced by a project-matched acrylic (PMMA) or PCTG copolyester option. Piston choices include zirconia ceramic, alumina ceramic, PEEK and sapphire. Ports, motor, optical feedback, valves and controls can be configured to the instrument. All wetted materials must be assessed against reagent composition and operating conditions.",
           "advantages": [
             "Preliminary model identification",
             "configurable material and interface",
@@ -3150,7 +3150,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PCTG / PMMA / PVDF / PPS / PEEK / POM; Other engineering materials can be assessed for the project.",
+            "paramValue": "PCTG copolyester / Acrylic (PMMA) / PVDF / PPS / PEEK / Acetal (POM); Other engineering materials can be assessed for the project.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -3463,8 +3463,8 @@ export const pumpSeriesDetailRecords = [
             "answer": "No. These figures apply at full stroke under the specified conditions. The 2% stroke figures are ≤2.0% accuracy and ≤1.5% repeatability; the footnotes describe displacement testing, not a guarantee of reagent performance at arbitrary small doses."
           },
           {
-            "question": "How should PMMA and PEEK heads be selected, and can the piston be customized?",
-            "answer": "The displayed PEEK head is a material option for specialty reagents. It does not establish compatibility of all wetted parts or light protection for the entire fluid path. Head options include PMMA, PCTG and PEEK. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Seals and other wetted parts must be considered together."
+            "question": "How should acrylic (PMMA) and PEEK heads be selected, and can the piston be customized?",
+            "answer": "The displayed PEEK head is a material option for specialty reagents. It does not establish compatibility of all wetted parts or light protection for the entire fluid path. Head options include acrylic (PMMA), PCTG copolyester and PEEK. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Seals and other wetted parts must be considered together."
           },
           {
             "question": "Can valves, optical feedback and a controller be integrated?",
@@ -3586,7 +3586,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Basic Specifications",
             "paramName": "Displayed pump head material",
-            "paramValue": "Poly(methyl methacrylate) (PMMA)",
+            "paramValue": "Acrylic (PMMA)",
             "unit": "",
             "sort": 20,
             "footnotes": []
@@ -3602,7 +3602,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PCTG / PMMA / PPS / PVDF / PP / PTFE / PEEK / POM / PSU; Other engineering materials can be assessed for the project.",
+            "paramValue": "PCTG copolyester / Acrylic (PMMA) / PPS / PVDF / Polypropylene (PP) / PTFE / PEEK / Acetal (POM) / Polysulfone (PSU); Other engineering materials can be assessed for the project.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -3944,14 +3944,14 @@ export const pumpSeriesDetailRecords = [
       "en": {
         "locale": "en",
         "title": "500 µL PMMA Pump Head Standard Plunger Pump",
-        "h1": "FOREACH 500 μL Precision Ceramic Piston Pump for Routine Reagent Transfer, Sample Dilution and Metered Buffer Dispensing, with a PMMA Pump Head",
+        "h1": "FOREACH 500 μL Precision Ceramic Piston Pump for Routine Reagent Transfer, Sample Dilution and Metered Buffer Dispensing, with an Acrylic (PMMA) Pump Head",
         "seo": {
           "titleTag": "EA-500-PMMA Standard Plunger Pump | 500 µL PMMA Precision Dispensing Pump | FOREACH",
-          "metaDescription": "EA-500-PMMA is a custom-engineered 500 µL PMMA pump head standard plunger pump for routine reagent transfer, sample dilution, reaction liquid handling, and laboratory automation fluidic modules. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "metaDescription": "EA-500-PMMA is a custom-engineered 500 µL acrylic (PMMA) pump head standard plunger pump for routine reagent transfer, sample dilution, reaction liquid handling, and laboratory automation fluidic modules. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
           "canonicalPath": "/products/pumps/piston-pump/ea-500-pmma",
           "robots": "index,follow",
           "ogTitle": "500 µL PMMA Pump Head Standard Plunger Pump",
-          "ogDescription": "500 µL PMMA Pump Head Standard Plunger Pump for precision liquid handling in automated fluidic systems. Final configuration should be confirmed according to the application."
+          "ogDescription": "500 µL acrylic (PMMA) Pump Head Standard Plunger Pump for precision liquid handling in automated fluidic systems. Final configuration should be confirmed according to the application."
         },
         "hero": {
           "detailMode": "custom_inquiry",
@@ -3966,7 +3966,7 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "EA-500-PMMA is a 500 μL precision ceramic piston pump with a PMMA pump head for reagent addition in clinical chemistry and immunoassay analyzers, automated sample dilution, buffer dispensing and standard-solution addition in water analyzers. It supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Accuracy and repeatability at 100% full stroke are both ≤0.5% under the specified test conditions.\n\nPump heads can be selected from PMMA, PCTG, PEEK and other project-assessed materials. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Ports, motor, optical feedback, valves and controller can be configured for fluid compatibility, mounting space and system integration.",
+          "description": "EA-500-PMMA is a 500 μL precision ceramic piston pump with an acrylic (PMMA) pump head for reagent addition in clinical chemistry and immunoassay analyzers, automated sample dilution, buffer dispensing and standard-solution addition in water analyzers. It supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Accuracy and repeatability at 100% full stroke are both ≤0.5% under the specified test conditions.\n\nPump heads can be selected from acrylic (PMMA), PCTG copolyester, PEEK and other project-assessed materials. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Ports, motor, optical feedback, valves and controller can be configured for fluid compatibility, mounting space and system integration.",
           "advantages": [
             "Preliminary model identification",
             "configurable material and interface",
@@ -4009,7 +4009,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Basic Specifications",
             "paramName": "Displayed pump head material",
-            "paramValue": "Poly(methyl methacrylate) (PMMA)",
+            "paramValue": "Acrylic (PMMA)",
             "unit": "",
             "sort": 20,
             "footnotes": []
@@ -4025,7 +4025,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PCTG / PMMA / PPS / PVDF / PP / PTFE / PEEK / POM / PSU; Other engineering materials can be assessed for the project.",
+            "paramValue": "PCTG copolyester / Acrylic (PMMA) / PPS / PVDF / Polypropylene (PP) / PTFE / PEEK / Acetal (POM) / Polysulfone (PSU); Other engineering materials can be assessed for the project.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -4338,8 +4338,8 @@ export const pumpSeriesDetailRecords = [
             "answer": "No. These figures apply at full stroke under the specified conditions. The 2% stroke figures are ≤2.0% accuracy and ≤1.5% repeatability; the footnotes describe displacement testing, not a guarantee of reagent performance at arbitrary small doses."
           },
           {
-            "question": "How should PMMA and PEEK heads be selected, and can the piston be customized?",
-            "answer": "The displayed configuration uses a PMMA head; compatibility must be checked for the head, piston, seals and valves with the actual fluid. Head options include PMMA, PCTG and PEEK. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Seals and other wetted parts must be considered together."
+            "question": "How should acrylic (PMMA) and PEEK heads be selected, and can the piston be customized?",
+            "answer": "The displayed configuration uses an acrylic (PMMA) head; compatibility must be checked for the head, piston, seals and valves with the actual fluid. Head options include acrylic (PMMA), PCTG copolyester and PEEK. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Seals and other wetted parts must be considered together."
           },
           {
             "question": "Can valves, optical feedback and a controller be integrated?",
@@ -4477,7 +4477,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PCTG / PMMA / PPS / PVDF / PP / PTFE / PEEK / POM / PSU; Other engineering materials can be assessed for the project.",
+            "paramValue": "PCTG copolyester / Acrylic (PMMA) / PPS / PVDF / Polypropylene (PP) / PTFE / PEEK / Acetal (POM) / Polysulfone (PSU); Other engineering materials can be assessed for the project.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -4841,7 +4841,7 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "EA-500-PEEK is a 500 μL precision piston pump with a PEEK pump head for reagent addition in clinical chemistry and immunoassay analyzers, automated sample dilution, buffer dispensing and standard-solution addition in water analyzers. It supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Accuracy and repeatability at 100% full stroke are both ≤0.5% under the specified test conditions.\n\nThe displayed PEEK pump head can be replaced by a project-matched PMMA or PCTG option. Piston choices include zirconia ceramic, alumina ceramic, PEEK and sapphire. Ports, motor, optical feedback, valves and controls can be configured to the instrument. All wetted materials must be assessed against reagent composition and operating conditions.",
+          "description": "EA-500-PEEK is a 500 μL precision piston pump with a PEEK pump head for reagent addition in clinical chemistry and immunoassay analyzers, automated sample dilution, buffer dispensing and standard-solution addition in water analyzers. It supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Accuracy and repeatability at 100% full stroke are both ≤0.5% under the specified test conditions.\n\nThe displayed PEEK pump head can be replaced by a project-matched acrylic (PMMA) or PCTG copolyester option. Piston choices include zirconia ceramic, alumina ceramic, PEEK and sapphire. Ports, motor, optical feedback, valves and controls can be configured to the instrument. All wetted materials must be assessed against reagent composition and operating conditions.",
           "advantages": [
             "Preliminary model identification",
             "configurable material and interface",
@@ -4900,7 +4900,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PCTG / PMMA / PPS / PVDF / PP / PTFE / PEEK / POM / PSU; Other engineering materials can be assessed for the project.",
+            "paramValue": "PCTG copolyester / Acrylic (PMMA) / PPS / PVDF / Polypropylene (PP) / PTFE / PEEK / Acetal (POM) / Polysulfone (PSU); Other engineering materials can be assessed for the project.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -5213,8 +5213,8 @@ export const pumpSeriesDetailRecords = [
             "answer": "No. These figures apply at full stroke under the specified conditions. The 2% stroke figures are ≤2.0% accuracy and ≤1.5% repeatability; the footnotes describe displacement testing, not a guarantee of reagent performance at arbitrary small doses."
           },
           {
-            "question": "How should PMMA and PEEK heads be selected, and can the piston be customized?",
-            "answer": "The displayed PEEK head is a material option for specialty reagents. It does not establish compatibility of all wetted parts or light protection for the entire fluid path. Head options include PMMA, PCTG and PEEK. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Seals and other wetted parts must be considered together."
+            "question": "How should acrylic (PMMA) and PEEK heads be selected, and can the piston be customized?",
+            "answer": "The displayed PEEK head is a material option for specialty reagents. It does not establish compatibility of all wetted parts or light protection for the entire fluid path. Head options include acrylic (PMMA), PCTG copolyester and PEEK. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Seals and other wetted parts must be considered together."
           },
           {
             "question": "Can valves, optical feedback and a controller be integrated?",
@@ -5336,7 +5336,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Basic Specifications",
             "paramName": "Displayed pump head material",
-            "paramValue": "Poly(methyl methacrylate) (PMMA)",
+            "paramValue": "Acrylic (PMMA)",
             "unit": "",
             "sort": 20,
             "footnotes": []
@@ -5352,7 +5352,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PCTG / PMMA / PPS / PVDF / POM / PEEK / PTFE / PSU; Other engineering materials can be assessed for the project.",
+            "paramValue": "PCTG copolyester / Acrylic (PMMA) / PPS / PVDF / Acetal (POM) / PEEK / PTFE / Polysulfone (PSU); Other engineering materials can be assessed for the project.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -5694,14 +5694,14 @@ export const pumpSeriesDetailRecords = [
       "en": {
         "locale": "en",
         "title": "1000 µL PMMA Pump Head Standard Plunger Pump",
-        "h1": "FOREACH 1 mL Precision Ceramic Piston Pump for Reagent Transfer, Diluent Addition and Buffer Dispensing, with a PMMA Pump Head",
+        "h1": "FOREACH 1 mL Precision Ceramic Piston Pump for Reagent Transfer, Diluent Addition and Buffer Dispensing, with an Acrylic (PMMA) Pump Head",
         "seo": {
           "titleTag": "EA-1000-PMMA Standard Plunger Pump | 1000 µL PMMA Precision Dispensing Pump | FOREACH",
-          "metaDescription": "EA-1000-PMMA is a custom-engineered 1000 µL PMMA pump head standard plunger pump for routine reagent transfer, sample dilution, reaction liquid handling, and laboratory automation fluidic modules. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "metaDescription": "EA-1000-PMMA is a custom-engineered 1000 µL acrylic (PMMA) pump head standard plunger pump for routine reagent transfer, sample dilution, reaction liquid handling, and laboratory automation fluidic modules. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
           "canonicalPath": "/products/pumps/piston-pump/ea-1000-pmma",
           "robots": "index,follow",
           "ogTitle": "1000 µL PMMA Pump Head Standard Plunger Pump",
-          "ogDescription": "1000 µL PMMA Pump Head Standard Plunger Pump for precision liquid handling in automated fluidic systems. Final configuration should be confirmed according to the application."
+          "ogDescription": "1000 µL acrylic (PMMA) Pump Head Standard Plunger Pump for precision liquid handling in automated fluidic systems. Final configuration should be confirmed according to the application."
         },
         "hero": {
           "detailMode": "custom_inquiry",
@@ -5716,7 +5716,7 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "EA-1000-PMMA is a 1 mL precision ceramic piston pump with a PMMA pump head for milliliter-scale reagent transfer in diagnostic analyzers, diluent addition in sample preparation and automated buffer preparation. It supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Accuracy and repeatability at 100% full stroke are both ≤0.5% under the specified test conditions.\n\nPump heads can be selected from PMMA, PCTG, PEEK and other project-assessed materials. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Ports, motor, optical feedback, valves and controller can be configured for fluid compatibility, mounting space and system integration.",
+          "description": "EA-1000-PMMA is a 1 mL precision ceramic piston pump with an acrylic (PMMA) pump head for milliliter-scale reagent transfer in diagnostic analyzers, diluent addition in sample preparation and automated buffer preparation. It supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Accuracy and repeatability at 100% full stroke are both ≤0.5% under the specified test conditions.\n\nPump heads can be selected from acrylic (PMMA), PCTG copolyester, PEEK and other project-assessed materials. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Ports, motor, optical feedback, valves and controller can be configured for fluid compatibility, mounting space and system integration.",
           "advantages": [
             "Preliminary model identification",
             "configurable material and interface",
@@ -5759,7 +5759,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Basic Specifications",
             "paramName": "Displayed pump head material",
-            "paramValue": "Poly(methyl methacrylate) (PMMA)",
+            "paramValue": "Acrylic (PMMA)",
             "unit": "",
             "sort": 20,
             "footnotes": []
@@ -5775,7 +5775,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PCTG / PMMA / PPS / PVDF / POM / PEEK / PTFE / PSU; Other engineering materials can be assessed for the project.",
+            "paramValue": "PCTG copolyester / Acrylic (PMMA) / PPS / PVDF / Acetal (POM) / PEEK / PTFE / Polysulfone (PSU); Other engineering materials can be assessed for the project.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -6088,8 +6088,8 @@ export const pumpSeriesDetailRecords = [
             "answer": "No. These figures apply at full stroke under the specified conditions. The 2% stroke figures are ≤2.0% accuracy and ≤1.5% repeatability; the footnotes describe displacement testing, not a guarantee of reagent performance at arbitrary small doses."
           },
           {
-            "question": "How should PMMA and PEEK heads be selected, and can the piston be customized?",
-            "answer": "The displayed configuration uses a PMMA head; compatibility must be checked for the head, piston, seals and valves with the actual fluid. Head options include PMMA, PCTG and PEEK. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Seals and other wetted parts must be considered together."
+            "question": "How should acrylic (PMMA) and PEEK heads be selected, and can the piston be customized?",
+            "answer": "The displayed configuration uses an acrylic (PMMA) head; compatibility must be checked for the head, piston, seals and valves with the actual fluid. Head options include acrylic (PMMA), PCTG copolyester and PEEK. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Seals and other wetted parts must be considered together."
           },
           {
             "question": "Can valves, optical feedback and a controller be integrated?",
@@ -6227,7 +6227,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PCTG / PMMA / PPS / PVDF / POM / PEEK / PTFE / PSU; Other engineering materials can be assessed for the project.",
+            "paramValue": "PCTG copolyester / Acrylic (PMMA) / PPS / PVDF / Acetal (POM) / PEEK / PTFE / Polysulfone (PSU); Other engineering materials can be assessed for the project.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -6591,7 +6591,7 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "EA-1000-PEEK is a 1 mL precision piston pump with a PEEK pump head for milliliter-scale reagent transfer in diagnostic analyzers, diluent addition in sample preparation and automated buffer preparation. It supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Accuracy and repeatability at 100% full stroke are both ≤0.5% under the specified test conditions.\n\nThe displayed PEEK pump head can be replaced by a project-matched PMMA or PCTG option. Piston choices include zirconia ceramic, alumina ceramic, PEEK and sapphire. Ports, motor, optical feedback, valves and controls can be configured to the instrument. All wetted materials must be assessed against reagent composition and operating conditions.",
+          "description": "EA-1000-PEEK is a 1 mL precision piston pump with a PEEK pump head for milliliter-scale reagent transfer in diagnostic analyzers, diluent addition in sample preparation and automated buffer preparation. It supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Accuracy and repeatability at 100% full stroke are both ≤0.5% under the specified test conditions.\n\nThe displayed PEEK pump head can be replaced by a project-matched acrylic (PMMA) or PCTG copolyester option. Piston choices include zirconia ceramic, alumina ceramic, PEEK and sapphire. Ports, motor, optical feedback, valves and controls can be configured to the instrument. All wetted materials must be assessed against reagent composition and operating conditions.",
           "advantages": [
             "Preliminary model identification",
             "configurable material and interface",
@@ -6650,7 +6650,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PCTG / PMMA / PPS / PVDF / POM / PEEK / PTFE / PSU; Other engineering materials can be assessed for the project.",
+            "paramValue": "PCTG copolyester / Acrylic (PMMA) / PPS / PVDF / Acetal (POM) / PEEK / PTFE / Polysulfone (PSU); Other engineering materials can be assessed for the project.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -6963,8 +6963,8 @@ export const pumpSeriesDetailRecords = [
             "answer": "No. These figures apply at full stroke under the specified conditions. The 2% stroke figures are ≤2.0% accuracy and ≤1.5% repeatability; the footnotes describe displacement testing, not a guarantee of reagent performance at arbitrary small doses."
           },
           {
-            "question": "How should PMMA and PEEK heads be selected, and can the piston be customized?",
-            "answer": "The displayed PEEK head is a material option for specialty reagents. It does not establish compatibility of all wetted parts or light protection for the entire fluid path. Head options include PMMA, PCTG and PEEK. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Seals and other wetted parts must be considered together."
+            "question": "How should acrylic (PMMA) and PEEK heads be selected, and can the piston be customized?",
+            "answer": "The displayed PEEK head is a material option for specialty reagents. It does not establish compatibility of all wetted parts or light protection for the entire fluid path. Head options include acrylic (PMMA), PCTG copolyester and PEEK. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Seals and other wetted parts must be considered together."
           },
           {
             "question": "Can valves, optical feedback and a controller be integrated?",
@@ -7086,7 +7086,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Basic Specifications",
             "paramName": "Displayed pump head material",
-            "paramValue": "Poly(methyl methacrylate) (PMMA)",
+            "paramValue": "Acrylic (PMMA)",
             "unit": "",
             "sort": 20,
             "footnotes": []
@@ -7102,7 +7102,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PCTG / PMMA / PPS / POM / PEEK / PSU; Other engineering materials can be assessed for the project.",
+            "paramValue": "PCTG copolyester / Acrylic (PMMA) / PPS / Acetal (POM) / PEEK / Polysulfone (PSU); Other engineering materials can be assessed for the project.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -7448,14 +7448,14 @@ export const pumpSeriesDetailRecords = [
       "en": {
         "locale": "en",
         "title": "2500 µL PMMA Pump Head Standard Plunger Pump",
-        "h1": "FOREACH 2.5 mL Precision Ceramic Piston Pump for Buffer Transfer, Diluent Addition and Wash-Fluid Supply, with a PMMA Pump Head",
+        "h1": "FOREACH 2.5 mL Precision Ceramic Piston Pump for Buffer Transfer, Diluent Addition and Wash-Fluid Supply, with an Acrylic (PMMA) Pump Head",
         "seo": {
           "titleTag": "EA-2500-PMMA Standard Plunger Pump | 2500 µL PMMA Precision Dispensing Pump | FOREACH",
-          "metaDescription": "EA-2500-PMMA is a custom-engineered 2500 µL PMMA pump head standard plunger pump for wash solution dosing, buffer transfer, line priming, medium-to-large volume replenishment, and analyzer fluidic supply. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "metaDescription": "EA-2500-PMMA is a custom-engineered 2500 µL acrylic (PMMA) pump head standard plunger pump for wash solution dosing, buffer transfer, line priming, medium-to-large volume replenishment, and analyzer fluidic supply. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
           "canonicalPath": "/products/pumps/piston-pump/ea-2500-pmma",
           "robots": "index,follow",
           "ogTitle": "2500 µL PMMA Pump Head Standard Plunger Pump",
-          "ogDescription": "2500 µL PMMA Pump Head Standard Plunger Pump for precision liquid handling in automated fluidic systems. Final configuration should be confirmed according to the application."
+          "ogDescription": "2500 µL acrylic (PMMA) Pump Head Standard Plunger Pump for precision liquid handling in automated fluidic systems. Final configuration should be confirmed according to the application."
         },
         "hero": {
           "detailMode": "custom_inquiry",
@@ -7470,7 +7470,7 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "EA-2500-PMMA is a 2.5 mL precision ceramic piston pump with a PMMA pump head for automated buffer preparation, diluent addition in sample preparation and metered wash-liquid replenishment in analytical instruments. It supports 1/4-28 UNF or M6 ports and 2000 / 2236 full-stroke steps, depending on the configuration. Accuracy and repeatability at 100% full stroke are both ≤0.5% under the specified test conditions.\n\nPump heads can be selected from PMMA, PCTG, PEEK and other project-assessed materials. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Ports, motor, optical feedback, valves and controller can be configured for fluid compatibility, mounting space and system integration.",
+          "description": "EA-2500-PMMA is a 2.5 mL precision ceramic piston pump with an acrylic (PMMA) pump head for automated buffer preparation, diluent addition in sample preparation and metered wash-liquid replenishment in analytical instruments. It supports 1/4-28 UNF or M6 ports and 2000 / 2236 full-stroke steps, depending on the configuration. Accuracy and repeatability at 100% full stroke are both ≤0.5% under the specified test conditions.\n\nPump heads can be selected from acrylic (PMMA), PCTG copolyester, PEEK and other project-assessed materials. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Ports, motor, optical feedback, valves and controller can be configured for fluid compatibility, mounting space and system integration.",
           "advantages": [
             "Preliminary model identification",
             "configurable material and interface",
@@ -7513,7 +7513,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Basic Specifications",
             "paramName": "Displayed pump head material",
-            "paramValue": "Poly(methyl methacrylate) (PMMA)",
+            "paramValue": "Acrylic (PMMA)",
             "unit": "",
             "sort": 20,
             "footnotes": []
@@ -7529,7 +7529,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PCTG / PMMA / PPS / POM / PEEK / PSU; Other engineering materials can be assessed for the project.",
+            "paramValue": "PCTG copolyester / Acrylic (PMMA) / PPS / Acetal (POM) / PEEK / Polysulfone (PSU); Other engineering materials can be assessed for the project.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -7846,8 +7846,8 @@ export const pumpSeriesDetailRecords = [
             "answer": "No. These figures apply at full stroke under the specified conditions. The 2% stroke figures are ≤2.0% accuracy and ≤1.5% repeatability; the footnotes describe displacement testing, not a guarantee of reagent performance at arbitrary small doses."
           },
           {
-            "question": "How should PMMA and PEEK heads be selected, and can the piston be customized?",
-            "answer": "The displayed configuration uses a PMMA head; compatibility must be checked for the head, piston, seals and valves with the actual fluid. Head options include PMMA, PCTG and PEEK. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Seals and other wetted parts must be considered together."
+            "question": "How should acrylic (PMMA) and PEEK heads be selected, and can the piston be customized?",
+            "answer": "The displayed configuration uses an acrylic (PMMA) head; compatibility must be checked for the head, piston, seals and valves with the actual fluid. Head options include acrylic (PMMA), PCTG copolyester and PEEK. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Seals and other wetted parts must be considered together."
           },
           {
             "question": "Can valves, optical feedback and a controller be integrated?",
@@ -7985,7 +7985,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PCTG / PMMA / PPS / POM / PEEK / PSU; Other engineering materials can be assessed for the project.",
+            "paramValue": "PCTG copolyester / Acrylic (PMMA) / PPS / Acetal (POM) / PEEK / Polysulfone (PSU); Other engineering materials can be assessed for the project.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -8353,7 +8353,7 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "EA-2500-PEEK is a 2.5 mL precision piston pump with a PEEK pump head for automated buffer preparation, diluent addition in sample preparation and metered wash-liquid replenishment in analytical instruments. It supports 1/4-28 UNF or M6 ports and 2000 / 2236 full-stroke steps, depending on the configuration. Accuracy and repeatability at 100% full stroke are both ≤0.5% under the specified test conditions.\n\nThe displayed PEEK pump head can be replaced by a project-matched PMMA or PCTG option. Piston choices include zirconia ceramic, alumina ceramic, PEEK and sapphire. Ports, motor, optical feedback, valves and controls can be configured to the instrument. All wetted materials must be assessed against reagent composition and operating conditions.",
+          "description": "EA-2500-PEEK is a 2.5 mL precision piston pump with a PEEK pump head for automated buffer preparation, diluent addition in sample preparation and metered wash-liquid replenishment in analytical instruments. It supports 1/4-28 UNF or M6 ports and 2000 / 2236 full-stroke steps, depending on the configuration. Accuracy and repeatability at 100% full stroke are both ≤0.5% under the specified test conditions.\n\nThe displayed PEEK pump head can be replaced by a project-matched acrylic (PMMA) or PCTG copolyester option. Piston choices include zirconia ceramic, alumina ceramic, PEEK and sapphire. Ports, motor, optical feedback, valves and controls can be configured to the instrument. All wetted materials must be assessed against reagent composition and operating conditions.",
           "advantages": [
             "Preliminary model identification",
             "configurable material and interface",
@@ -8412,7 +8412,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PCTG / PMMA / PPS / POM / PEEK / PSU; Other engineering materials can be assessed for the project.",
+            "paramValue": "PCTG copolyester / Acrylic (PMMA) / PPS / Acetal (POM) / PEEK / Polysulfone (PSU); Other engineering materials can be assessed for the project.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -8729,8 +8729,8 @@ export const pumpSeriesDetailRecords = [
             "answer": "No. These figures apply at full stroke under the specified conditions. The 2% stroke figures are ≤2.0% accuracy and ≤1.5% repeatability; the footnotes describe displacement testing, not a guarantee of reagent performance at arbitrary small doses."
           },
           {
-            "question": "How should PMMA and PEEK heads be selected, and can the piston be customized?",
-            "answer": "The displayed PEEK head is a material option for specialty reagents. It does not establish compatibility of all wetted parts or light protection for the entire fluid path. Head options include PMMA, PCTG and PEEK. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Seals and other wetted parts must be considered together."
+            "question": "How should acrylic (PMMA) and PEEK heads be selected, and can the piston be customized?",
+            "answer": "The displayed PEEK head is a material option for specialty reagents. It does not establish compatibility of all wetted parts or light protection for the entire fluid path. Head options include acrylic (PMMA), PCTG copolyester and PEEK. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Seals and other wetted parts must be considered together."
           },
           {
             "question": "Can valves, optical feedback and a controller be integrated?",
@@ -8851,7 +8851,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Basic Specifications",
             "paramName": "Displayed pump head material",
-            "paramValue": "Poly(methyl methacrylate) (PMMA)",
+            "paramValue": "Acrylic (PMMA)",
             "unit": "",
             "sort": 20,
             "footnotes": []
@@ -8867,7 +8867,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PCTG / PMMA / PPS / PEEK / PVDF / POM / PSU / PC; Other engineering materials can be assessed for the project.",
+            "paramValue": "PCTG copolyester / Acrylic (PMMA) / PPS / PEEK / PVDF / Acetal (POM) / Polysulfone (PSU) / Polycarbonate (PC); Other engineering materials can be assessed for the project.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -9213,14 +9213,14 @@ export const pumpSeriesDetailRecords = [
       "en": {
         "locale": "en",
         "title": "5000 µL PMMA Pump Head Standard Plunger Pump",
-        "h1": "FOREACH 5 mL Precision Ceramic Piston Pump for Wash-Fluid Supply, Buffer Transfer and Line Priming, with a PMMA Pump Head",
+        "h1": "FOREACH 5 mL Precision Ceramic Piston Pump for Wash-Fluid Supply, Buffer Transfer and Line Priming, with an Acrylic (PMMA) Pump Head",
         "seo": {
           "titleTag": "EA-5000-PMMA Standard Plunger Pump | 5000 µL PMMA Precision Dispensing Pump | FOREACH",
-          "metaDescription": "EA-5000-PMMA is a custom-engineered 5000 µL PMMA pump head standard plunger pump for wash solution dosing, buffer transfer, line priming, medium-to-large volume replenishment, and analyzer fluidic supply. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "metaDescription": "EA-5000-PMMA is a custom-engineered 5000 µL acrylic (PMMA) pump head standard plunger pump for wash solution dosing, buffer transfer, line priming, medium-to-large volume replenishment, and analyzer fluidic supply. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
           "canonicalPath": "/products/pumps/piston-pump/ea-5000-pmma",
           "robots": "index,follow",
           "ogTitle": "5000 µL PMMA Pump Head Standard Plunger Pump",
-          "ogDescription": "5000 µL PMMA Pump Head Standard Plunger Pump for precision liquid handling in automated fluidic systems. Final configuration should be confirmed according to the application."
+          "ogDescription": "5000 µL acrylic (PMMA) Pump Head Standard Plunger Pump for precision liquid handling in automated fluidic systems. Final configuration should be confirmed according to the application."
         },
         "hero": {
           "detailMode": "custom_inquiry",
@@ -9235,7 +9235,7 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "EA-5000-PMMA is a 5 mL precision ceramic piston pump with a PMMA pump head for buffer transfer in laboratory automation, metered wash-liquid addition in analyzers and priming of sample-preparation fluid paths. It supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Accuracy and repeatability at 100% full stroke are both ≤0.5% under the specified test conditions.\n\nPump heads can be selected from PMMA, PCTG, PEEK and other project-assessed materials. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Ports, motor, optical feedback, valves and controller can be configured for fluid compatibility, mounting space and system integration.",
+          "description": "EA-5000-PMMA is a 5 mL precision ceramic piston pump with an acrylic (PMMA) pump head for buffer transfer in laboratory automation, metered wash-liquid addition in analyzers and priming of sample-preparation fluid paths. It supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Accuracy and repeatability at 100% full stroke are both ≤0.5% under the specified test conditions.\n\nPump heads can be selected from acrylic (PMMA), PCTG copolyester, PEEK and other project-assessed materials. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Ports, motor, optical feedback, valves and controller can be configured for fluid compatibility, mounting space and system integration.",
           "advantages": [
             "Preliminary model identification",
             "configurable material and interface",
@@ -9277,7 +9277,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Basic Specifications",
             "paramName": "Displayed pump head material",
-            "paramValue": "Poly(methyl methacrylate) (PMMA)",
+            "paramValue": "Acrylic (PMMA)",
             "unit": "",
             "sort": 20,
             "footnotes": []
@@ -9293,7 +9293,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PCTG / PMMA / PPS / PEEK / PVDF / POM / PSU / PC; Other engineering materials can be assessed for the project.",
+            "paramValue": "PCTG copolyester / Acrylic (PMMA) / PPS / PEEK / PVDF / Acetal (POM) / Polysulfone (PSU) / Polycarbonate (PC); Other engineering materials can be assessed for the project.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -9610,8 +9610,8 @@ export const pumpSeriesDetailRecords = [
             "answer": "No. These figures apply at full stroke under the specified conditions. The 2% stroke figures are ≤2.0% accuracy and ≤1.5% repeatability; the footnotes describe displacement testing, not a guarantee of reagent performance at arbitrary small doses."
           },
           {
-            "question": "How should PMMA and PEEK heads be selected, and can the piston be customized?",
-            "answer": "The displayed configuration uses a PMMA head; compatibility must be checked for the head, piston, seals and valves with the actual fluid. Head options include PMMA, PCTG and PEEK. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Seals and other wetted parts must be considered together."
+            "question": "How should acrylic (PMMA) and PEEK heads be selected, and can the piston be customized?",
+            "answer": "The displayed configuration uses an acrylic (PMMA) head; compatibility must be checked for the head, piston, seals and valves with the actual fluid. Head options include acrylic (PMMA), PCTG copolyester and PEEK. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Seals and other wetted parts must be considered together."
           },
           {
             "question": "Can valves, optical feedback and a controller be integrated?",
@@ -9748,7 +9748,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PCTG / PMMA / PPS / PEEK / PVDF / POM / PSU / PC; Other engineering materials can be assessed for the project.",
+            "paramValue": "PCTG copolyester / Acrylic (PMMA) / PPS / PEEK / PVDF / Acetal (POM) / Polysulfone (PSU) / Polycarbonate (PC); Other engineering materials can be assessed for the project.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -10116,7 +10116,7 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "EA-5000-PEEK is a 5 mL precision piston pump with a PEEK pump head for buffer transfer in laboratory automation, metered wash-liquid addition in analyzers and priming of sample-preparation fluid paths. It supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Accuracy and repeatability at 100% full stroke are both ≤0.5% under the specified test conditions.\n\nThe displayed PEEK pump head can be replaced by a project-matched PMMA or PCTG option. Piston choices include zirconia ceramic, alumina ceramic, PEEK and sapphire. Ports, motor, optical feedback, valves and controls can be configured to the instrument. All wetted materials must be assessed against reagent composition and operating conditions.",
+          "description": "EA-5000-PEEK is a 5 mL precision piston pump with a PEEK pump head for buffer transfer in laboratory automation, metered wash-liquid addition in analyzers and priming of sample-preparation fluid paths. It supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Accuracy and repeatability at 100% full stroke are both ≤0.5% under the specified test conditions.\n\nThe displayed PEEK pump head can be replaced by a project-matched acrylic (PMMA) or PCTG copolyester option. Piston choices include zirconia ceramic, alumina ceramic, PEEK and sapphire. Ports, motor, optical feedback, valves and controls can be configured to the instrument. All wetted materials must be assessed against reagent composition and operating conditions.",
           "advantages": [
             "Preliminary model identification",
             "configurable material and interface",
@@ -10174,7 +10174,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PCTG / PMMA / PPS / PEEK / PVDF / POM / PSU / PC; Other engineering materials can be assessed for the project.",
+            "paramValue": "PCTG copolyester / Acrylic (PMMA) / PPS / PEEK / PVDF / Acetal (POM) / Polysulfone (PSU) / Polycarbonate (PC); Other engineering materials can be assessed for the project.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -10491,8 +10491,8 @@ export const pumpSeriesDetailRecords = [
             "answer": "No. These figures apply at full stroke under the specified conditions. The 2% stroke figures are ≤2.0% accuracy and ≤1.5% repeatability; the footnotes describe displacement testing, not a guarantee of reagent performance at arbitrary small doses."
           },
           {
-            "question": "How should PMMA and PEEK heads be selected, and can the piston be customized?",
-            "answer": "The displayed PEEK head is a material option for specialty reagents. It does not establish compatibility of all wetted parts or light protection for the entire fluid path. Head options include PMMA, PCTG and PEEK. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Seals and other wetted parts must be considered together."
+            "question": "How should acrylic (PMMA) and PEEK heads be selected, and can the piston be customized?",
+            "answer": "The displayed PEEK head is a material option for specialty reagents. It does not establish compatibility of all wetted parts or light protection for the entire fluid path. Head options include acrylic (PMMA), PCTG copolyester and PEEK. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Seals and other wetted parts must be considered together."
           },
           {
             "question": "Can valves, optical feedback and a controller be integrated?",
@@ -10613,7 +10613,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Basic Specifications",
             "paramName": "Displayed pump head material",
-            "paramValue": "Poly(methyl methacrylate) (PMMA)",
+            "paramValue": "Acrylic (PMMA)",
             "unit": "",
             "sort": 20,
             "footnotes": []
@@ -10629,7 +10629,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PTFE / PEI / PSU / PMMA / PPS / PVDF / POM / PEEK; Other engineering materials can be assessed for the project.",
+            "paramValue": "PTFE / PEI / Polysulfone (PSU) / Acrylic (PMMA) / PPS / PVDF / Acetal (POM) / PEEK; Other engineering materials can be assessed for the project.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -10975,14 +10975,14 @@ export const pumpSeriesDetailRecords = [
       "en": {
         "locale": "en",
         "title": "10000 µL PMMA Pump Head Standard Plunger Pump",
-        "h1": "FOREACH 10 mL Precision Ceramic Piston Pump for High-Volume Wash-Fluid Transfer, System Flushing and Line Priming, with a PMMA Pump Head",
+        "h1": "FOREACH 10 mL Precision Ceramic Piston Pump for High-Volume Wash-Fluid Transfer, System Flushing and Line Priming, with an Acrylic (PMMA) Pump Head",
         "seo": {
           "titleTag": "EA-10000-PMMA Standard Plunger Pump | 10000 µL PMMA Precision Dispensing Pump | FOREACH",
-          "metaDescription": "EA-10000-PMMA is a custom-engineered 10000 µL PMMA pump head standard plunger pump for wash solution dosing, buffer transfer, line priming, medium-to-large volume replenishment, and analyzer fluidic supply. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "metaDescription": "EA-10000-PMMA is a custom-engineered 10000 µL acrylic (PMMA) pump head standard plunger pump for wash solution dosing, buffer transfer, line priming, medium-to-large volume replenishment, and analyzer fluidic supply. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
           "canonicalPath": "/products/pumps/piston-pump/ea-10000-pmma",
           "robots": "index,follow",
           "ogTitle": "10000 µL PMMA Pump Head Standard Plunger Pump",
-          "ogDescription": "10000 µL PMMA Pump Head Standard Plunger Pump for precision liquid handling in automated fluidic systems. Final configuration should be confirmed according to the application."
+          "ogDescription": "10000 µL acrylic (PMMA) Pump Head Standard Plunger Pump for precision liquid handling in automated fluidic systems. Final configuration should be confirmed according to the application."
         },
         "hero": {
           "detailMode": "custom_inquiry",
@@ -10997,7 +10997,7 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "EA-10000-PMMA is a 10 mL precision ceramic piston pump with a PMMA pump head for larger wash-liquid transfers, metered system rinsing, automated solution preparation and instrument fluid-path priming. It supports 1/4-28 UNF or M6 ports and 4000 full-stroke steps. Accuracy and repeatability at 100% full stroke are both ≤0.5% under the specified test conditions.\n\nPump heads can be selected from PMMA, PCTG, PEEK and other project-assessed materials. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Ports, motor, optical feedback, valves and controller can be configured for fluid compatibility, mounting space and system integration.",
+          "description": "EA-10000-PMMA is a 10 mL precision ceramic piston pump with an acrylic (PMMA) pump head for larger wash-liquid transfers, metered system rinsing, automated solution preparation and instrument fluid-path priming. It supports 1/4-28 UNF or M6 ports and 4000 full-stroke steps. Accuracy and repeatability at 100% full stroke are both ≤0.5% under the specified test conditions.\n\nPump heads can be selected from acrylic (PMMA), PCTG copolyester, PEEK and other project-assessed materials. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Ports, motor, optical feedback, valves and controller can be configured for fluid compatibility, mounting space and system integration.",
           "advantages": [
             "Preliminary model identification",
             "configurable material and interface",
@@ -11039,7 +11039,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Basic Specifications",
             "paramName": "Displayed pump head material",
-            "paramValue": "Poly(methyl methacrylate) (PMMA)",
+            "paramValue": "Acrylic (PMMA)",
             "unit": "",
             "sort": 20,
             "footnotes": []
@@ -11055,7 +11055,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PTFE / PEI / PSU / PMMA / PPS / PVDF / POM / PEEK; Other engineering materials can be assessed for the project.",
+            "paramValue": "PTFE / PEI / Polysulfone (PSU) / Acrylic (PMMA) / PPS / PVDF / Acetal (POM) / PEEK; Other engineering materials can be assessed for the project.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -11372,8 +11372,8 @@ export const pumpSeriesDetailRecords = [
             "answer": "No. These figures apply at full stroke under the specified conditions. The 2% stroke figures are ≤2.0% accuracy and ≤1.5% repeatability; the footnotes describe displacement testing, not a guarantee of reagent performance at arbitrary small doses."
           },
           {
-            "question": "How should PMMA and PEEK heads be selected, and can the piston be customized?",
-            "answer": "The displayed configuration uses a PMMA head; compatibility must be checked for the head, piston, seals and valves with the actual fluid. Head options include PMMA, PCTG and PEEK. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Seals and other wetted parts must be considered together."
+            "question": "How should acrylic (PMMA) and PEEK heads be selected, and can the piston be customized?",
+            "answer": "The displayed configuration uses an acrylic (PMMA) head; compatibility must be checked for the head, piston, seals and valves with the actual fluid. Head options include acrylic (PMMA), PCTG copolyester and PEEK. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Seals and other wetted parts must be considered together."
           },
           {
             "question": "Can valves, optical feedback and a controller be integrated?",
@@ -11510,7 +11510,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PTFE / PEI / PSU / PMMA / PPS / PVDF / POM / PEEK; Other engineering materials can be assessed for the project.",
+            "paramValue": "PTFE / PEI / Polysulfone (PSU) / Acrylic (PMMA) / PPS / PVDF / Acetal (POM) / PEEK; Other engineering materials can be assessed for the project.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -11878,7 +11878,7 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "EA-10000-PEEK is a 10 mL precision piston pump with a PEEK pump head for larger wash-liquid transfers, metered system rinsing, automated solution preparation and instrument fluid-path priming. It supports 1/4-28 UNF or M6 ports and 4000 full-stroke steps. Accuracy and repeatability at 100% full stroke are both ≤0.5% under the specified test conditions.\n\nThe displayed PEEK pump head can be replaced by a project-matched PMMA or PCTG option. Piston choices include zirconia ceramic, alumina ceramic, PEEK and sapphire. Ports, motor, optical feedback, valves and controls can be configured to the instrument. All wetted materials must be assessed against reagent composition and operating conditions.",
+          "description": "EA-10000-PEEK is a 10 mL precision piston pump with a PEEK pump head for larger wash-liquid transfers, metered system rinsing, automated solution preparation and instrument fluid-path priming. It supports 1/4-28 UNF or M6 ports and 4000 full-stroke steps. Accuracy and repeatability at 100% full stroke are both ≤0.5% under the specified test conditions.\n\nThe displayed PEEK pump head can be replaced by a project-matched acrylic (PMMA) or PCTG copolyester option. Piston choices include zirconia ceramic, alumina ceramic, PEEK and sapphire. Ports, motor, optical feedback, valves and controls can be configured to the instrument. All wetted materials must be assessed against reagent composition and operating conditions.",
           "advantages": [
             "Preliminary model identification",
             "configurable material and interface",
@@ -11936,7 +11936,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PTFE / PEI / PSU / PMMA / PPS / PVDF / POM / PEEK; Other engineering materials can be assessed for the project.",
+            "paramValue": "PTFE / PEI / Polysulfone (PSU) / Acrylic (PMMA) / PPS / PVDF / Acetal (POM) / PEEK; Other engineering materials can be assessed for the project.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -12253,8 +12253,8 @@ export const pumpSeriesDetailRecords = [
             "answer": "No. These figures apply at full stroke under the specified conditions. The 2% stroke figures are ≤2.0% accuracy and ≤1.5% repeatability; the footnotes describe displacement testing, not a guarantee of reagent performance at arbitrary small doses."
           },
           {
-            "question": "How should PMMA and PEEK heads be selected, and can the piston be customized?",
-            "answer": "The displayed PEEK head is a material option for specialty reagents. It does not establish compatibility of all wetted parts or light protection for the entire fluid path. Head options include PMMA, PCTG and PEEK. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Seals and other wetted parts must be considered together."
+            "question": "How should acrylic (PMMA) and PEEK heads be selected, and can the piston be customized?",
+            "answer": "The displayed PEEK head is a material option for specialty reagents. It does not establish compatibility of all wetted parts or light protection for the entire fluid path. Head options include acrylic (PMMA), PCTG copolyester and PEEK. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Seals and other wetted parts must be considered together."
           },
           {
             "question": "Can valves, optical feedback and a controller be integrated?",
@@ -12379,7 +12379,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Basic Specifications",
             "paramName": "Displayed pump head material",
-            "paramValue": "Poly(methyl methacrylate) (PMMA)",
+            "paramValue": "Acrylic (PMMA)",
             "unit": "",
             "sort": 20,
             "footnotes": []
@@ -12395,7 +12395,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PMMA / PSU / POM / PEEK; final selection follows fluid and structural requirements.",
+            "paramValue": "Acrylic (PMMA) / Polysulfone (PSU) / Acetal (POM) / PEEK; final selection follows fluid and structural requirements.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -12716,15 +12716,15 @@ export const pumpSeriesDetailRecords = [
       },
       "en": {
         "locale": "en",
-        "title": "FOREACH 50 μL Miniature Precision Ceramic Piston Pump for Microliter Reagent Addition and Small-Volume Sample Dispensing, with a PMMA Pump Head",
-        "h1": "FOREACH 50 μL Miniature Precision Ceramic Piston Pump for Microliter Reagent Addition and Small-Volume Sample Dispensing, with a PMMA Pump Head",
+        "title": "FOREACH 50 μL Miniature Precision Ceramic Piston Pump for Microliter Reagent Addition and Small-Volume Sample Dispensing, with an Acrylic (PMMA) Pump Head",
+        "h1": "FOREACH 50 μL Miniature Precision Ceramic Piston Pump for Microliter Reagent Addition and Small-Volume Sample Dispensing, with an Acrylic (PMMA) Pump Head",
         "seo": {
           "titleTag": "SM-50-PMMA 50 μL PMMA Miniature Piston Pump | FOREACH",
-          "metaDescription": "SM-50-PMMA: 50 μL PMMA-head miniature piston pump for microliter reagent addition and small-volume sample dispensing. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
+          "metaDescription": "SM-50-PMMA: 50 μL acrylic (PMMA) head miniature piston pump for microliter reagent addition and small-volume sample dispensing. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
           "canonicalPath": "/products/pumps/piston-pump/sm-50-pmma",
           "robots": "index,follow",
           "ogTitle": "SM-50-PMMA 50 μL PMMA Miniature Piston Pump | FOREACH",
-          "ogDescription": "SM-50-PMMA: 50 μL PMMA-head miniature piston pump for microliter reagent addition and small-volume sample dispensing. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options."
+          "ogDescription": "SM-50-PMMA: 50 μL acrylic (PMMA) head miniature piston pump for microliter reagent addition and small-volume sample dispensing. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options."
         },
         "hero": {
           "detailMode": "custom_inquiry",
@@ -12739,11 +12739,11 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "SM-50-PMMA is a 50 μL miniature precision piston pump with a PMMA head for microliter reagent addition and small-volume sample dispensing. Designed for integration into small automated instruments and sampling mechanisms, it supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Full-stroke repeatability is ≤0.5% under the specified conditions.\n\nSM head options include PMMA, PSU, POM and PEEK; piston options include ceramic, stainless steel and PEEK. Optical sensors, valves, probes, tubing and a controller can be matched to the project. Materials and mounting are selected for the fluid and instrument.",
+          "description": "SM-50-PMMA is a 50 μL miniature precision piston pump with an acrylic (PMMA) head for microliter reagent addition and small-volume sample dispensing. Designed for integration into small automated instruments and sampling mechanisms, it supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Full-stroke repeatability is ≤0.5% under the specified conditions.\n\nSM head options include acrylic (PMMA), polysulfone (PSU), acetal (POM) and PEEK; piston options include ceramic, stainless steel and PEEK. Optical sensors, valves, probes, tubing and a controller can be matched to the project. Materials and mounting are selected for the fluid and instrument.",
           "advantages": [
-            "SM head options include PMMA",
-            "PSU",
-            "POM and PEEK",
+            "SM head options include acrylic (PMMA)",
+            "polysulfone (PSU)",
+            "acetal (POM) and PEEK",
             "piston options include ceramic",
             "stainless steel and PEEK. Optical sensors",
             "valves",
@@ -12786,7 +12786,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Basic Specifications",
             "paramName": "Displayed pump head material",
-            "paramValue": "Poly(methyl methacrylate) (PMMA)",
+            "paramValue": "Acrylic (PMMA)",
             "unit": "",
             "sort": 20,
             "footnotes": []
@@ -12802,7 +12802,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PMMA / PSU / POM / PEEK; final selection follows fluid and structural requirements.",
+            "paramValue": "Acrylic (PMMA) / Polysulfone (PSU) / Acetal (POM) / PEEK; final selection follows fluid and structural requirements.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -13096,7 +13096,7 @@ export const pumpSeriesDetailRecords = [
           },
           {
             "question": "Which head and piston materials can be configured?",
-            "answer": "The displayed configuration uses a PMMA head and ceramic piston. All wetted materials must be checked against the actual fluid. SM head options include PMMA, PSU, POM and PEEK; piston options include ceramic, stainless steel and PEEK. Optical sensors, valves, probes, tubing and a controller can be matched to the project. Materials and mounting are selected for the fluid and instrument."
+            "answer": "The displayed configuration uses an acrylic (PMMA) head and ceramic piston. All wetted materials must be checked against the actual fluid. SM head options include acrylic (PMMA), polysulfone (PSU), acetal (POM) and PEEK; piston options include ceramic, stainless steel and PEEK. Optical sensors, valves, probes, tubing and a controller can be matched to the project. Materials and mounting are selected for the fluid and instrument."
           },
           {
             "question": "How much installation space is required?",
@@ -13221,7 +13221,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Basic Specifications",
             "paramName": "Displayed pump head material",
-            "paramValue": "Poly(methyl methacrylate) (PMMA)",
+            "paramValue": "Acrylic (PMMA)",
             "unit": "",
             "sort": 20,
             "footnotes": []
@@ -13237,7 +13237,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PMMA / PSU / POM / PEEK; final selection follows fluid and structural requirements.",
+            "paramValue": "Acrylic (PMMA) / Polysulfone (PSU) / Acetal (POM) / PEEK; final selection follows fluid and structural requirements.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -13558,15 +13558,15 @@ export const pumpSeriesDetailRecords = [
       },
       "en": {
         "locale": "en",
-        "title": "FOREACH 100 μL Miniature Precision Ceramic Piston Pump for Automated Sampling and Sample Dilution, with a PMMA Pump Head",
-        "h1": "FOREACH 100 μL Miniature Precision Ceramic Piston Pump for Automated Sampling and Sample Dilution, with a PMMA Pump Head",
+        "title": "FOREACH 100 μL Miniature Precision Ceramic Piston Pump for Automated Sampling and Sample Dilution, with an Acrylic (PMMA) Pump Head",
+        "h1": "FOREACH 100 μL Miniature Precision Ceramic Piston Pump for Automated Sampling and Sample Dilution, with an Acrylic (PMMA) Pump Head",
         "seo": {
           "titleTag": "SM-100-PMMA 100 μL PMMA Miniature Piston Pump | FOREACH",
-          "metaDescription": "SM-100-PMMA: 100 μL PMMA-head miniature piston pump for automated sampling and sample dilution. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
+          "metaDescription": "SM-100-PMMA: 100 μL acrylic (PMMA) head miniature piston pump for automated sampling and sample dilution. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
           "canonicalPath": "/products/pumps/piston-pump/sm-100-pmma",
           "robots": "index,follow",
           "ogTitle": "SM-100-PMMA 100 μL PMMA Miniature Piston Pump | FOREACH",
-          "ogDescription": "SM-100-PMMA: 100 μL PMMA-head miniature piston pump for automated sampling and sample dilution. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options."
+          "ogDescription": "SM-100-PMMA: 100 μL acrylic (PMMA) head miniature piston pump for automated sampling and sample dilution. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options."
         },
         "hero": {
           "detailMode": "custom_inquiry",
@@ -13581,11 +13581,11 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "SM-100-PMMA is a 100 μL miniature precision piston pump with a PMMA head for automated sampling and sample dilution. Designed for integration into small automated instruments and sampling mechanisms, it supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Full-stroke repeatability is ≤0.5% under the specified conditions.\n\nSM head options include PMMA, PSU, POM and PEEK; piston options include ceramic, stainless steel and PEEK. Optical sensors, valves, probes, tubing and a controller can be matched to the project. Materials and mounting are selected for the fluid and instrument.",
+          "description": "SM-100-PMMA is a 100 μL miniature precision piston pump with an acrylic (PMMA) head for automated sampling and sample dilution. Designed for integration into small automated instruments and sampling mechanisms, it supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Full-stroke repeatability is ≤0.5% under the specified conditions.\n\nSM head options include acrylic (PMMA), polysulfone (PSU), acetal (POM) and PEEK; piston options include ceramic, stainless steel and PEEK. Optical sensors, valves, probes, tubing and a controller can be matched to the project. Materials and mounting are selected for the fluid and instrument.",
           "advantages": [
-            "SM head options include PMMA",
-            "PSU",
-            "POM and PEEK",
+            "SM head options include acrylic (PMMA)",
+            "polysulfone (PSU)",
+            "acetal (POM) and PEEK",
             "piston options include ceramic",
             "stainless steel and PEEK. Optical sensors",
             "valves",
@@ -13628,7 +13628,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Basic Specifications",
             "paramName": "Displayed pump head material",
-            "paramValue": "Poly(methyl methacrylate) (PMMA)",
+            "paramValue": "Acrylic (PMMA)",
             "unit": "",
             "sort": 20,
             "footnotes": []
@@ -13644,7 +13644,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PMMA / PSU / POM / PEEK; final selection follows fluid and structural requirements.",
+            "paramValue": "Acrylic (PMMA) / Polysulfone (PSU) / Acetal (POM) / PEEK; final selection follows fluid and structural requirements.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -13938,7 +13938,7 @@ export const pumpSeriesDetailRecords = [
           },
           {
             "question": "Which head and piston materials can be configured?",
-            "answer": "The displayed configuration uses a PMMA head and ceramic piston. All wetted materials must be checked against the actual fluid. SM head options include PMMA, PSU, POM and PEEK; piston options include ceramic, stainless steel and PEEK. Optical sensors, valves, probes, tubing and a controller can be matched to the project. Materials and mounting are selected for the fluid and instrument."
+            "answer": "The displayed configuration uses an acrylic (PMMA) head and ceramic piston. All wetted materials must be checked against the actual fluid. SM head options include acrylic (PMMA), polysulfone (PSU), acetal (POM) and PEEK; piston options include ceramic, stainless steel and PEEK. Optical sensors, valves, probes, tubing and a controller can be matched to the project. Materials and mounting are selected for the fluid and instrument."
           },
           {
             "question": "How much installation space is required?",
@@ -14079,7 +14079,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PMMA / PSU / POM / PEEK; final selection follows fluid and structural requirements.",
+            "paramValue": "Acrylic (PMMA) / Polysulfone (PSU) / Acetal (POM) / PEEK; final selection follows fluid and structural requirements.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -14423,11 +14423,11 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "SM-100-PEEK is a 100 μL miniature precision piston pump with a PEEK head for specialty reagent addition and small-volume dispensing. Designed for integration into small automated instruments and sampling mechanisms, it supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Full-stroke repeatability is ≤0.5% under the specified conditions.\n\nSM head options include PMMA, PSU, POM and PEEK; piston options include ceramic, stainless steel and PEEK. Optical sensors, valves, probes, tubing and a controller can be matched to the project. Materials and mounting are selected for the fluid and instrument.",
+          "description": "SM-100-PEEK is a 100 μL miniature precision piston pump with a PEEK head for specialty reagent addition and small-volume dispensing. Designed for integration into small automated instruments and sampling mechanisms, it supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Full-stroke repeatability is ≤0.5% under the specified conditions.\n\nSM head options include acrylic (PMMA), polysulfone (PSU), acetal (POM) and PEEK; piston options include ceramic, stainless steel and PEEK. Optical sensors, valves, probes, tubing and a controller can be matched to the project. Materials and mounting are selected for the fluid and instrument.",
           "advantages": [
-            "SM head options include PMMA",
-            "PSU",
-            "POM and PEEK",
+            "SM head options include acrylic (PMMA)",
+            "polysulfone (PSU)",
+            "acetal (POM) and PEEK",
             "piston options include ceramic",
             "stainless steel and PEEK. Optical sensors",
             "valves",
@@ -14486,7 +14486,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PMMA / PSU / POM / PEEK; final selection follows fluid and structural requirements.",
+            "paramValue": "Acrylic (PMMA) / Polysulfone (PSU) / Acetal (POM) / PEEK; final selection follows fluid and structural requirements.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -14780,7 +14780,7 @@ export const pumpSeriesDetailRecords = [
           },
           {
             "question": "Which head and piston materials can be configured?",
-            "answer": "The PEEK head is a material option for the reagent; piston, seals, valves and tubing must also be checked. Whole-path light protection requires a separate design assessment. SM head options include PMMA, PSU, POM and PEEK; piston options include ceramic, stainless steel and PEEK. Optical sensors, valves, probes, tubing and a controller can be matched to the project. Materials and mounting are selected for the fluid and instrument."
+            "answer": "The PEEK head is a material option for the reagent; piston, seals, valves and tubing must also be checked. Whole-path light protection requires a separate design assessment. SM head options include acrylic (PMMA), polysulfone (PSU), acetal (POM) and PEEK; piston options include ceramic, stainless steel and PEEK. Optical sensors, valves, probes, tubing and a controller can be matched to the project. Materials and mounting are selected for the fluid and instrument."
           },
           {
             "question": "How much installation space is required?",
@@ -14905,7 +14905,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Basic Specifications",
             "paramName": "Displayed pump head material",
-            "paramValue": "Poly(methyl methacrylate) (PMMA)",
+            "paramValue": "Acrylic (PMMA)",
             "unit": "",
             "sort": 20,
             "footnotes": []
@@ -14921,7 +14921,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PMMA / PSU / POM / PEEK; final selection follows fluid and structural requirements.",
+            "paramValue": "Acrylic (PMMA) / Polysulfone (PSU) / Acetal (POM) / PEEK; final selection follows fluid and structural requirements.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -15242,15 +15242,15 @@ export const pumpSeriesDetailRecords = [
       },
       "en": {
         "locale": "en",
-        "title": "FOREACH 250 μL Miniature Precision Ceramic Piston Pump for Reagent Dispensing and Metered Reaction-Liquid Addition, with a PMMA Pump Head",
-        "h1": "FOREACH 250 μL Miniature Precision Ceramic Piston Pump for Reagent Dispensing and Metered Reaction-Liquid Addition, with a PMMA Pump Head",
+        "title": "FOREACH 250 μL Miniature Precision Ceramic Piston Pump for Reagent Dispensing and Metered Reaction-Liquid Addition, with an Acrylic (PMMA) Pump Head",
+        "h1": "FOREACH 250 μL Miniature Precision Ceramic Piston Pump for Reagent Dispensing and Metered Reaction-Liquid Addition, with an Acrylic (PMMA) Pump Head",
         "seo": {
           "titleTag": "SM-250-PMMA 250 μL PMMA Miniature Piston Pump | FOREACH",
-          "metaDescription": "SM-250-PMMA: 250 μL PMMA-head miniature piston pump for reagent dispensing and metered reaction-liquid addition. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
+          "metaDescription": "SM-250-PMMA: 250 μL acrylic (PMMA) head miniature piston pump for reagent dispensing and metered reaction-liquid addition. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
           "canonicalPath": "/products/pumps/piston-pump/sm-250-pmma",
           "robots": "index,follow",
           "ogTitle": "SM-250-PMMA 250 μL PMMA Miniature Piston Pump | FOREACH",
-          "ogDescription": "SM-250-PMMA: 250 μL PMMA-head miniature piston pump for reagent dispensing and metered reaction-liquid addition. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options."
+          "ogDescription": "SM-250-PMMA: 250 μL acrylic (PMMA) head miniature piston pump for reagent dispensing and metered reaction-liquid addition. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options."
         },
         "hero": {
           "detailMode": "custom_inquiry",
@@ -15265,11 +15265,11 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "SM-250-PMMA is a 250 μL miniature precision piston pump with a PMMA head for reagent dispensing and metered reaction-liquid addition. Designed for integration into small automated instruments and sampling mechanisms, it supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Full-stroke repeatability is ≤0.5% under the specified conditions.\n\nSM head options include PMMA, PSU, POM and PEEK; piston options include ceramic, stainless steel and PEEK. Optical sensors, valves, probes, tubing and a controller can be matched to the project. Materials and mounting are selected for the fluid and instrument.",
+          "description": "SM-250-PMMA is a 250 μL miniature precision piston pump with an acrylic (PMMA) head for reagent dispensing and metered reaction-liquid addition. Designed for integration into small automated instruments and sampling mechanisms, it supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Full-stroke repeatability is ≤0.5% under the specified conditions.\n\nSM head options include acrylic (PMMA), polysulfone (PSU), acetal (POM) and PEEK; piston options include ceramic, stainless steel and PEEK. Optical sensors, valves, probes, tubing and a controller can be matched to the project. Materials and mounting are selected for the fluid and instrument.",
           "advantages": [
-            "SM head options include PMMA",
-            "PSU",
-            "POM and PEEK",
+            "SM head options include acrylic (PMMA)",
+            "polysulfone (PSU)",
+            "acetal (POM) and PEEK",
             "piston options include ceramic",
             "stainless steel and PEEK. Optical sensors",
             "valves",
@@ -15312,7 +15312,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Basic Specifications",
             "paramName": "Displayed pump head material",
-            "paramValue": "Poly(methyl methacrylate) (PMMA)",
+            "paramValue": "Acrylic (PMMA)",
             "unit": "",
             "sort": 20,
             "footnotes": []
@@ -15328,7 +15328,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PMMA / PSU / POM / PEEK; final selection follows fluid and structural requirements.",
+            "paramValue": "Acrylic (PMMA) / Polysulfone (PSU) / Acetal (POM) / PEEK; final selection follows fluid and structural requirements.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -15622,7 +15622,7 @@ export const pumpSeriesDetailRecords = [
           },
           {
             "question": "Which head and piston materials can be configured?",
-            "answer": "The displayed configuration uses a PMMA head and ceramic piston. All wetted materials must be checked against the actual fluid. SM head options include PMMA, PSU, POM and PEEK; piston options include ceramic, stainless steel and PEEK. Optical sensors, valves, probes, tubing and a controller can be matched to the project. Materials and mounting are selected for the fluid and instrument."
+            "answer": "The displayed configuration uses an acrylic (PMMA) head and ceramic piston. All wetted materials must be checked against the actual fluid. SM head options include acrylic (PMMA), polysulfone (PSU), acetal (POM) and PEEK; piston options include ceramic, stainless steel and PEEK. Optical sensors, valves, probes, tubing and a controller can be matched to the project. Materials and mounting are selected for the fluid and instrument."
           },
           {
             "question": "How much installation space is required?",
@@ -15763,7 +15763,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PMMA / PSU / POM / PEEK; final selection follows fluid and structural requirements.",
+            "paramValue": "Acrylic (PMMA) / Polysulfone (PSU) / Acetal (POM) / PEEK; final selection follows fluid and structural requirements.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -16107,11 +16107,11 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "SM-250-PEEK is a 250 μL miniature precision piston pump with a PEEK head for specialty reagent dispensing and reaction-liquid addition. Designed for integration into small automated instruments and sampling mechanisms, it supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Full-stroke repeatability is ≤0.5% under the specified conditions.\n\nSM head options include PMMA, PSU, POM and PEEK; piston options include ceramic, stainless steel and PEEK. Optical sensors, valves, probes, tubing and a controller can be matched to the project. Materials and mounting are selected for the fluid and instrument.",
+          "description": "SM-250-PEEK is a 250 μL miniature precision piston pump with a PEEK head for specialty reagent dispensing and reaction-liquid addition. Designed for integration into small automated instruments and sampling mechanisms, it supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Full-stroke repeatability is ≤0.5% under the specified conditions.\n\nSM head options include acrylic (PMMA), polysulfone (PSU), acetal (POM) and PEEK; piston options include ceramic, stainless steel and PEEK. Optical sensors, valves, probes, tubing and a controller can be matched to the project. Materials and mounting are selected for the fluid and instrument.",
           "advantages": [
-            "SM head options include PMMA",
-            "PSU",
-            "POM and PEEK",
+            "SM head options include acrylic (PMMA)",
+            "polysulfone (PSU)",
+            "acetal (POM) and PEEK",
             "piston options include ceramic",
             "stainless steel and PEEK. Optical sensors",
             "valves",
@@ -16170,7 +16170,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PMMA / PSU / POM / PEEK; final selection follows fluid and structural requirements.",
+            "paramValue": "Acrylic (PMMA) / Polysulfone (PSU) / Acetal (POM) / PEEK; final selection follows fluid and structural requirements.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -16464,7 +16464,7 @@ export const pumpSeriesDetailRecords = [
           },
           {
             "question": "Which head and piston materials can be configured?",
-            "answer": "The PEEK head is a material option for the reagent; piston, seals, valves and tubing must also be checked. Whole-path light protection requires a separate design assessment. SM head options include PMMA, PSU, POM and PEEK; piston options include ceramic, stainless steel and PEEK. Optical sensors, valves, probes, tubing and a controller can be matched to the project. Materials and mounting are selected for the fluid and instrument."
+            "answer": "The PEEK head is a material option for the reagent; piston, seals, valves and tubing must also be checked. Whole-path light protection requires a separate design assessment. SM head options include acrylic (PMMA), polysulfone (PSU), acetal (POM) and PEEK; piston options include ceramic, stainless steel and PEEK. Optical sensors, valves, probes, tubing and a controller can be matched to the project. Materials and mounting are selected for the fluid and instrument."
           },
           {
             "question": "How much installation space is required?",
@@ -16589,7 +16589,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Basic Specifications",
             "paramName": "Displayed pump head material",
-            "paramValue": "Poly(methyl methacrylate) (PMMA)",
+            "paramValue": "Acrylic (PMMA)",
             "unit": "",
             "sort": 20,
             "footnotes": []
@@ -16605,7 +16605,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PMMA / PSU / POM / PEEK; final selection follows fluid and structural requirements.",
+            "paramValue": "Acrylic (PMMA) / Polysulfone (PSU) / Acetal (POM) / PEEK; final selection follows fluid and structural requirements.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -16926,15 +16926,15 @@ export const pumpSeriesDetailRecords = [
       },
       "en": {
         "locale": "en",
-        "title": "FOREACH 500 μL Miniature Precision Ceramic Piston Pump for Reagent Addition and Metered Diluent Dosing, with a PMMA Pump Head",
-        "h1": "FOREACH 500 μL Miniature Precision Ceramic Piston Pump for Reagent Addition and Metered Diluent Dosing, with a PMMA Pump Head",
+        "title": "FOREACH 500 μL Miniature Precision Ceramic Piston Pump for Reagent Addition and Metered Diluent Dosing, with an Acrylic (PMMA) Pump Head",
+        "h1": "FOREACH 500 μL Miniature Precision Ceramic Piston Pump for Reagent Addition and Metered Diluent Dosing, with an Acrylic (PMMA) Pump Head",
         "seo": {
           "titleTag": "SM-500-PMMA 500 μL PMMA Miniature Piston Pump | FOREACH",
-          "metaDescription": "SM-500-PMMA: 500 μL PMMA-head miniature piston pump for reagent addition and metered diluent dosing. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
+          "metaDescription": "SM-500-PMMA: 500 μL acrylic (PMMA) head miniature piston pump for reagent addition and metered diluent dosing. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
           "canonicalPath": "/products/pumps/piston-pump/sm-500-pmma",
           "robots": "index,follow",
           "ogTitle": "SM-500-PMMA 500 μL PMMA Miniature Piston Pump | FOREACH",
-          "ogDescription": "SM-500-PMMA: 500 μL PMMA-head miniature piston pump for reagent addition and metered diluent dosing. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options."
+          "ogDescription": "SM-500-PMMA: 500 μL acrylic (PMMA) head miniature piston pump for reagent addition and metered diluent dosing. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options."
         },
         "hero": {
           "detailMode": "custom_inquiry",
@@ -16949,11 +16949,11 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "SM-500-PMMA is a 500 μL miniature precision piston pump with a PMMA head for reagent addition and metered diluent dosing. Designed for integration into small automated instruments and sampling mechanisms, it supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Full-stroke repeatability is ≤0.5% under the specified conditions.\n\nSM head options include PMMA, PSU, POM and PEEK; piston options include ceramic, stainless steel and PEEK. Optical sensors, valves, probes, tubing and a controller can be matched to the project. Materials and mounting are selected for the fluid and instrument.",
+          "description": "SM-500-PMMA is a 500 μL miniature precision piston pump with an acrylic (PMMA) head for reagent addition and metered diluent dosing. Designed for integration into small automated instruments and sampling mechanisms, it supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Full-stroke repeatability is ≤0.5% under the specified conditions.\n\nSM head options include acrylic (PMMA), polysulfone (PSU), acetal (POM) and PEEK; piston options include ceramic, stainless steel and PEEK. Optical sensors, valves, probes, tubing and a controller can be matched to the project. Materials and mounting are selected for the fluid and instrument.",
           "advantages": [
-            "SM head options include PMMA",
-            "PSU",
-            "POM and PEEK",
+            "SM head options include acrylic (PMMA)",
+            "polysulfone (PSU)",
+            "acetal (POM) and PEEK",
             "piston options include ceramic",
             "stainless steel and PEEK. Optical sensors",
             "valves",
@@ -16996,7 +16996,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Basic Specifications",
             "paramName": "Displayed pump head material",
-            "paramValue": "Poly(methyl methacrylate) (PMMA)",
+            "paramValue": "Acrylic (PMMA)",
             "unit": "",
             "sort": 20,
             "footnotes": []
@@ -17012,7 +17012,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PMMA / PSU / POM / PEEK; final selection follows fluid and structural requirements.",
+            "paramValue": "Acrylic (PMMA) / Polysulfone (PSU) / Acetal (POM) / PEEK; final selection follows fluid and structural requirements.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -17306,7 +17306,7 @@ export const pumpSeriesDetailRecords = [
           },
           {
             "question": "Which head and piston materials can be configured?",
-            "answer": "The displayed configuration uses a PMMA head and ceramic piston. All wetted materials must be checked against the actual fluid. SM head options include PMMA, PSU, POM and PEEK; piston options include ceramic, stainless steel and PEEK. Optical sensors, valves, probes, tubing and a controller can be matched to the project. Materials and mounting are selected for the fluid and instrument."
+            "answer": "The displayed configuration uses an acrylic (PMMA) head and ceramic piston. All wetted materials must be checked against the actual fluid. SM head options include acrylic (PMMA), polysulfone (PSU), acetal (POM) and PEEK; piston options include ceramic, stainless steel and PEEK. Optical sensors, valves, probes, tubing and a controller can be matched to the project. Materials and mounting are selected for the fluid and instrument."
           },
           {
             "question": "How much installation space is required?",
@@ -17431,7 +17431,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Basic Specifications",
             "paramName": "Displayed pump head material",
-            "paramValue": "Poly(methyl methacrylate) (PMMA)",
+            "paramValue": "Acrylic (PMMA)",
             "unit": "",
             "sort": 20,
             "footnotes": []
@@ -17447,7 +17447,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PMMA / PSU / POM / PEEK; final selection follows fluid and structural requirements.",
+            "paramValue": "Acrylic (PMMA) / Polysulfone (PSU) / Acetal (POM) / PEEK; final selection follows fluid and structural requirements.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -17768,15 +17768,15 @@ export const pumpSeriesDetailRecords = [
       },
       "en": {
         "locale": "en",
-        "title": "FOREACH 1 mL Miniature Precision Ceramic Piston Pump for Diluent Addition and Buffer Dispensing, with a PMMA Pump Head",
-        "h1": "FOREACH 1 mL Miniature Precision Ceramic Piston Pump for Diluent Addition and Buffer Dispensing, with a PMMA Pump Head",
+        "title": "FOREACH 1 mL Miniature Precision Ceramic Piston Pump for Diluent Addition and Buffer Dispensing, with an Acrylic (PMMA) Pump Head",
+        "h1": "FOREACH 1 mL Miniature Precision Ceramic Piston Pump for Diluent Addition and Buffer Dispensing, with an Acrylic (PMMA) Pump Head",
         "seo": {
           "titleTag": "SM-1000-PMMA 1 mL PMMA Miniature Piston Pump | FOREACH",
-          "metaDescription": "SM-1000-PMMA: 1 mL PMMA-head miniature piston pump for diluent addition and buffer dispensing. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
+          "metaDescription": "SM-1000-PMMA: 1 mL acrylic (PMMA) head miniature piston pump for diluent addition and buffer dispensing. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
           "canonicalPath": "/products/pumps/piston-pump/sm-1000-pmma",
           "robots": "index,follow",
           "ogTitle": "SM-1000-PMMA 1 mL PMMA Miniature Piston Pump | FOREACH",
-          "ogDescription": "SM-1000-PMMA: 1 mL PMMA-head miniature piston pump for diluent addition and buffer dispensing. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options."
+          "ogDescription": "SM-1000-PMMA: 1 mL acrylic (PMMA) head miniature piston pump for diluent addition and buffer dispensing. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options."
         },
         "hero": {
           "detailMode": "custom_inquiry",
@@ -17791,11 +17791,11 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "SM-1000-PMMA is a 1 mL miniature precision piston pump with a PMMA head for diluent addition and buffer dispensing. Designed for integration into small automated instruments and sampling mechanisms, it supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Full-stroke repeatability is ≤0.5% under the specified conditions.\n\nSM head options include PMMA, PSU, POM and PEEK; piston options include ceramic, stainless steel and PEEK. Optical sensors, valves, probes, tubing and a controller can be matched to the project. Materials and mounting are selected for the fluid and instrument.",
+          "description": "SM-1000-PMMA is a 1 mL miniature precision piston pump with an acrylic (PMMA) head for diluent addition and buffer dispensing. Designed for integration into small automated instruments and sampling mechanisms, it supports 1/4-28 UNF or M6 ports and 2000 full-stroke steps. Full-stroke repeatability is ≤0.5% under the specified conditions.\n\nSM head options include acrylic (PMMA), polysulfone (PSU), acetal (POM) and PEEK; piston options include ceramic, stainless steel and PEEK. Optical sensors, valves, probes, tubing and a controller can be matched to the project. Materials and mounting are selected for the fluid and instrument.",
           "advantages": [
-            "SM head options include PMMA",
-            "PSU",
-            "POM and PEEK",
+            "SM head options include acrylic (PMMA)",
+            "polysulfone (PSU)",
+            "acetal (POM) and PEEK",
             "piston options include ceramic",
             "stainless steel and PEEK. Optical sensors",
             "valves",
@@ -17838,7 +17838,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Basic Specifications",
             "paramName": "Displayed pump head material",
-            "paramValue": "Poly(methyl methacrylate) (PMMA)",
+            "paramValue": "Acrylic (PMMA)",
             "unit": "",
             "sort": 20,
             "footnotes": []
@@ -17854,7 +17854,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "PMMA / PSU / POM / PEEK; final selection follows fluid and structural requirements.",
+            "paramValue": "Acrylic (PMMA) / Polysulfone (PSU) / Acetal (POM) / PEEK; final selection follows fluid and structural requirements.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -18148,7 +18148,7 @@ export const pumpSeriesDetailRecords = [
           },
           {
             "question": "Which head and piston materials can be configured?",
-            "answer": "The displayed configuration uses a PMMA head and ceramic piston. All wetted materials must be checked against the actual fluid. SM head options include PMMA, PSU, POM and PEEK; piston options include ceramic, stainless steel and PEEK. Optical sensors, valves, probes, tubing and a controller can be matched to the project. Materials and mounting are selected for the fluid and instrument."
+            "answer": "The displayed configuration uses an acrylic (PMMA) head and ceramic piston. All wetted materials must be checked against the actual fluid. SM head options include acrylic (PMMA), polysulfone (PSU), acetal (POM) and PEEK; piston options include ceramic, stainless steel and PEEK. Optical sensors, valves, probes, tubing and a controller can be matched to the project. Materials and mounting are selected for the fluid and instrument."
           },
           {
             "question": "How much installation space is required?",
@@ -18269,7 +18269,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Basic Specifications",
             "paramName": "Displayed pump head material",
-            "paramValue": "Poly(methyl methacrylate) (PMMA)",
+            "paramValue": "Acrylic (PMMA)",
             "unit": "",
             "sort": 20,
             "footnotes": []
@@ -18285,7 +18285,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "Displayed PMMA; alternative materials subject to project assessment.",
+            "paramValue": "Displayed Acrylic (PMMA); alternative materials subject to project assessment.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -18606,15 +18606,15 @@ export const pumpSeriesDetailRecords = [
       },
       "en": {
         "locale": "en",
-        "title": "FOREACH 50 μL Ultra-Compact Precision Ceramic Piston Pump for Microliter Reagent Addition in Compact Fluid Paths, with a PMMA Pump Head",
-        "h1": "FOREACH 50 μL Ultra-Compact Precision Ceramic Piston Pump for Microliter Reagent Addition in Compact Fluid Paths, with a PMMA Pump Head",
+        "title": "FOREACH 50 μL Ultra-Compact Precision Ceramic Piston Pump for Microliter Reagent Addition in Compact Fluid Paths, with an Acrylic (PMMA) Pump Head",
+        "h1": "FOREACH 50 μL Ultra-Compact Precision Ceramic Piston Pump for Microliter Reagent Addition in Compact Fluid Paths, with an Acrylic (PMMA) Pump Head",
         "seo": {
           "titleTag": "TM-50-PMMA 50 μL PMMA Ultra-Compact Piston Pump | FOREACH",
-          "metaDescription": "TM-50-PMMA: 50 μL PMMA-head ultra-compact piston pump for microliter reagent addition in compact fluid paths. Explore 6-40 UNF ports, 2540 steps and OEM integration options.",
+          "metaDescription": "TM-50-PMMA: 50 μL acrylic (PMMA) head ultra-compact piston pump for microliter reagent addition in compact fluid paths. Explore 6-40 UNF ports, 2540 steps and OEM integration options.",
           "canonicalPath": "/products/pumps/piston-pump/tm-50-pmma",
           "robots": "index,follow",
           "ogTitle": "TM-50-PMMA 50 μL PMMA Ultra-Compact Piston Pump | FOREACH",
-          "ogDescription": "TM-50-PMMA: 50 μL PMMA-head ultra-compact piston pump for microliter reagent addition in compact fluid paths. Explore 6-40 UNF ports, 2540 steps and OEM integration options."
+          "ogDescription": "TM-50-PMMA: 50 μL acrylic (PMMA) head ultra-compact piston pump for microliter reagent addition in compact fluid paths. Explore 6-40 UNF ports, 2540 steps and OEM integration options."
         },
         "hero": {
           "detailMode": "custom_inquiry",
@@ -18629,11 +18629,11 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "TM-50-PMMA is a 50 μL ultra-compact precision piston pump with a PMMA head for microliter reagent addition in compact fluid paths. It targets space-constrained OEM analytical modules. The displayed configuration uses 6-40 UNF ports and 2540 full-stroke steps for integration alongside valves and detection components.\n\nMounting, tubing connections, valves and drive control can be configured for the project. The displayed version uses a PMMA head and ceramic piston; alternative head or piston materials can be assessed against fluid chemistry, seal design and available space, subject to the project drawing.",
+          "description": "TM-50-PMMA is a 50 μL ultra-compact precision piston pump with an acrylic (PMMA) head for microliter reagent addition in compact fluid paths. It targets space-constrained OEM analytical modules. The displayed configuration uses 6-40 UNF ports and 2540 full-stroke steps for integration alongside valves and detection components.\n\nMounting, tubing connections, valves and drive control can be configured for the project. The displayed version uses an acrylic (PMMA) head and ceramic piston; alternative head or piston materials can be assessed against fluid chemistry, seal design and available space, subject to the project drawing.",
           "advantages": [
             "Mounting",
             "tubing connections",
-            "valves and drive control can be configured for the project. The displayed version uses a PMMA head and ceramic piston",
+            "valves and drive control can be configured for the project. The displayed version uses an acrylic (PMMA) head and ceramic piston",
             "alternative head or piston materials can be assessed against fluid chemistry",
             "seal design and available space",
             "subject to the project drawing."
@@ -18674,7 +18674,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Basic Specifications",
             "paramName": "Displayed pump head material",
-            "paramValue": "Poly(methyl methacrylate) (PMMA)",
+            "paramValue": "Acrylic (PMMA)",
             "unit": "",
             "sort": 20,
             "footnotes": []
@@ -18690,7 +18690,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "Displayed PMMA; alternative materials subject to project assessment.",
+            "paramValue": "Displayed Acrylic (PMMA); alternative materials subject to project assessment.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -18984,7 +18984,7 @@ export const pumpSeriesDetailRecords = [
           },
           {
             "question": "Which head and piston materials can be configured?",
-            "answer": "The displayed configuration uses a PMMA head and ceramic piston. All wetted materials must be checked against the actual fluid. Mounting, tubing connections, valves and drive control can be configured for the project. The displayed version uses a PMMA head and ceramic piston; alternative head or piston materials can be assessed against fluid chemistry, seal design and available space, subject to the project drawing."
+            "answer": "The displayed configuration uses an acrylic (PMMA) head and ceramic piston. All wetted materials must be checked against the actual fluid. Mounting, tubing connections, valves and drive control can be configured for the project. The displayed version uses an acrylic (PMMA) head and ceramic piston; alternative head or piston materials can be assessed against fluid chemistry, seal design and available space, subject to the project drawing."
           },
           {
             "question": "How much installation space is required?",
@@ -19105,7 +19105,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Basic Specifications",
             "paramName": "Displayed pump head material",
-            "paramValue": "Poly(methyl methacrylate) (PMMA)",
+            "paramValue": "Acrylic (PMMA)",
             "unit": "",
             "sort": 20,
             "footnotes": []
@@ -19121,7 +19121,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "Displayed PMMA; alternative materials subject to project assessment.",
+            "paramValue": "Displayed Acrylic (PMMA); alternative materials subject to project assessment.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -19442,15 +19442,15 @@ export const pumpSeriesDetailRecords = [
       },
       "en": {
         "locale": "en",
-        "title": "FOREACH 100 μL Ultra-Compact Precision Ceramic Piston Pump for Sample Dispensing in Small Analytical Modules, with a PMMA Pump Head",
-        "h1": "FOREACH 100 μL Ultra-Compact Precision Ceramic Piston Pump for Sample Dispensing in Small Analytical Modules, with a PMMA Pump Head",
+        "title": "FOREACH 100 μL Ultra-Compact Precision Ceramic Piston Pump for Sample Dispensing in Small Analytical Modules, with an Acrylic (PMMA) Pump Head",
+        "h1": "FOREACH 100 μL Ultra-Compact Precision Ceramic Piston Pump for Sample Dispensing in Small Analytical Modules, with an Acrylic (PMMA) Pump Head",
         "seo": {
           "titleTag": "TM-100-PMMA 100 μL PMMA Ultra-Compact Piston Pump | FOREACH",
-          "metaDescription": "TM-100-PMMA: 100 μL PMMA-head ultra-compact piston pump for sample dispensing in small analytical modules. Explore 6-40 UNF ports, 2540 steps and OEM integration options.",
+          "metaDescription": "TM-100-PMMA: 100 μL acrylic (PMMA) head ultra-compact piston pump for sample dispensing in small analytical modules. Explore 6-40 UNF ports, 2540 steps and OEM integration options.",
           "canonicalPath": "/products/pumps/piston-pump/tm-100-pmma",
           "robots": "index,follow",
           "ogTitle": "TM-100-PMMA 100 μL PMMA Ultra-Compact Piston Pump | FOREACH",
-          "ogDescription": "TM-100-PMMA: 100 μL PMMA-head ultra-compact piston pump for sample dispensing in small analytical modules. Explore 6-40 UNF ports, 2540 steps and OEM integration options."
+          "ogDescription": "TM-100-PMMA: 100 μL acrylic (PMMA) head ultra-compact piston pump for sample dispensing in small analytical modules. Explore 6-40 UNF ports, 2540 steps and OEM integration options."
         },
         "hero": {
           "detailMode": "custom_inquiry",
@@ -19465,11 +19465,11 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "TM-100-PMMA is a 100 μL ultra-compact precision piston pump with a PMMA head for sample dispensing in small analytical modules. It targets space-constrained OEM analytical modules. The displayed configuration uses 6-40 UNF ports and 2540 full-stroke steps for integration alongside valves and detection components.\n\nMounting, tubing connections, valves and drive control can be configured for the project. The displayed version uses a PMMA head and ceramic piston; alternative head or piston materials can be assessed against fluid chemistry, seal design and available space, subject to the project drawing.",
+          "description": "TM-100-PMMA is a 100 μL ultra-compact precision piston pump with an acrylic (PMMA) head for sample dispensing in small analytical modules. It targets space-constrained OEM analytical modules. The displayed configuration uses 6-40 UNF ports and 2540 full-stroke steps for integration alongside valves and detection components.\n\nMounting, tubing connections, valves and drive control can be configured for the project. The displayed version uses an acrylic (PMMA) head and ceramic piston; alternative head or piston materials can be assessed against fluid chemistry, seal design and available space, subject to the project drawing.",
           "advantages": [
             "Mounting",
             "tubing connections",
-            "valves and drive control can be configured for the project. The displayed version uses a PMMA head and ceramic piston",
+            "valves and drive control can be configured for the project. The displayed version uses an acrylic (PMMA) head and ceramic piston",
             "alternative head or piston materials can be assessed against fluid chemistry",
             "seal design and available space",
             "subject to the project drawing."
@@ -19510,7 +19510,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Basic Specifications",
             "paramName": "Displayed pump head material",
-            "paramValue": "Poly(methyl methacrylate) (PMMA)",
+            "paramValue": "Acrylic (PMMA)",
             "unit": "",
             "sort": 20,
             "footnotes": []
@@ -19526,7 +19526,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "Displayed PMMA; alternative materials subject to project assessment.",
+            "paramValue": "Displayed Acrylic (PMMA); alternative materials subject to project assessment.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -19820,7 +19820,7 @@ export const pumpSeriesDetailRecords = [
           },
           {
             "question": "Which head and piston materials can be configured?",
-            "answer": "The displayed configuration uses a PMMA head and ceramic piston. All wetted materials must be checked against the actual fluid. Mounting, tubing connections, valves and drive control can be configured for the project. The displayed version uses a PMMA head and ceramic piston; alternative head or piston materials can be assessed against fluid chemistry, seal design and available space, subject to the project drawing."
+            "answer": "The displayed configuration uses an acrylic (PMMA) head and ceramic piston. All wetted materials must be checked against the actual fluid. Mounting, tubing connections, valves and drive control can be configured for the project. The displayed version uses an acrylic (PMMA) head and ceramic piston; alternative head or piston materials can be assessed against fluid chemistry, seal design and available space, subject to the project drawing."
           },
           {
             "question": "How much installation space is required?",
@@ -19941,7 +19941,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Basic Specifications",
             "paramName": "Displayed pump head material",
-            "paramValue": "Poly(methyl methacrylate) (PMMA)",
+            "paramValue": "Acrylic (PMMA)",
             "unit": "",
             "sort": 20,
             "footnotes": []
@@ -19957,7 +19957,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "Displayed PMMA; alternative materials subject to project assessment.",
+            "paramValue": "Displayed Acrylic (PMMA); alternative materials subject to project assessment.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -20278,15 +20278,15 @@ export const pumpSeriesDetailRecords = [
       },
       "en": {
         "locale": "en",
-        "title": "FOREACH 250 μL Ultra-Compact Precision Ceramic Piston Pump for Reaction-Liquid Addition in Compact Analytical Modules, with a PMMA Pump Head",
-        "h1": "FOREACH 250 μL Ultra-Compact Precision Ceramic Piston Pump for Reaction-Liquid Addition in Compact Analytical Modules, with a PMMA Pump Head",
+        "title": "FOREACH 250 μL Ultra-Compact Precision Ceramic Piston Pump for Reaction-Liquid Addition in Compact Analytical Modules, with an Acrylic (PMMA) Pump Head",
+        "h1": "FOREACH 250 μL Ultra-Compact Precision Ceramic Piston Pump for Reaction-Liquid Addition in Compact Analytical Modules, with an Acrylic (PMMA) Pump Head",
         "seo": {
           "titleTag": "TM-250-PMMA 250 μL PMMA Ultra-Compact Piston Pump | FOREACH",
-          "metaDescription": "TM-250-PMMA: 250 μL PMMA-head ultra-compact piston pump for reaction-liquid addition in compact analytical modules. Explore 6-40 UNF ports, 2540 steps and OEM integration options.",
+          "metaDescription": "TM-250-PMMA: 250 μL acrylic (PMMA) head ultra-compact piston pump for reaction-liquid addition in compact analytical modules. Explore 6-40 UNF ports, 2540 steps and OEM integration options.",
           "canonicalPath": "/products/pumps/piston-pump/tm-250-pmma",
           "robots": "index,follow",
           "ogTitle": "TM-250-PMMA 250 μL PMMA Ultra-Compact Piston Pump | FOREACH",
-          "ogDescription": "TM-250-PMMA: 250 μL PMMA-head ultra-compact piston pump for reaction-liquid addition in compact analytical modules. Explore 6-40 UNF ports, 2540 steps and OEM integration options."
+          "ogDescription": "TM-250-PMMA: 250 μL acrylic (PMMA) head ultra-compact piston pump for reaction-liquid addition in compact analytical modules. Explore 6-40 UNF ports, 2540 steps and OEM integration options."
         },
         "hero": {
           "detailMode": "custom_inquiry",
@@ -20301,11 +20301,11 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "TM-250-PMMA is a 250 μL ultra-compact precision piston pump with a PMMA head for reaction-liquid addition in compact analytical modules. It targets space-constrained OEM analytical modules. The displayed configuration uses 6-40 UNF ports and 2540 full-stroke steps for integration alongside valves and detection components.\n\nMounting, tubing connections, valves and drive control can be configured for the project. The displayed version uses a PMMA head and ceramic piston; alternative head or piston materials can be assessed against fluid chemistry, seal design and available space, subject to the project drawing.",
+          "description": "TM-250-PMMA is a 250 μL ultra-compact precision piston pump with an acrylic (PMMA) head for reaction-liquid addition in compact analytical modules. It targets space-constrained OEM analytical modules. The displayed configuration uses 6-40 UNF ports and 2540 full-stroke steps for integration alongside valves and detection components.\n\nMounting, tubing connections, valves and drive control can be configured for the project. The displayed version uses an acrylic (PMMA) head and ceramic piston; alternative head or piston materials can be assessed against fluid chemistry, seal design and available space, subject to the project drawing.",
           "advantages": [
             "Mounting",
             "tubing connections",
-            "valves and drive control can be configured for the project. The displayed version uses a PMMA head and ceramic piston",
+            "valves and drive control can be configured for the project. The displayed version uses an acrylic (PMMA) head and ceramic piston",
             "alternative head or piston materials can be assessed against fluid chemistry",
             "seal design and available space",
             "subject to the project drawing."
@@ -20346,7 +20346,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Basic Specifications",
             "paramName": "Displayed pump head material",
-            "paramValue": "Poly(methyl methacrylate) (PMMA)",
+            "paramValue": "Acrylic (PMMA)",
             "unit": "",
             "sort": 20,
             "footnotes": []
@@ -20362,7 +20362,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "Displayed PMMA; alternative materials subject to project assessment.",
+            "paramValue": "Displayed Acrylic (PMMA); alternative materials subject to project assessment.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -20656,7 +20656,7 @@ export const pumpSeriesDetailRecords = [
           },
           {
             "question": "Which head and piston materials can be configured?",
-            "answer": "The displayed configuration uses a PMMA head and ceramic piston. All wetted materials must be checked against the actual fluid. Mounting, tubing connections, valves and drive control can be configured for the project. The displayed version uses a PMMA head and ceramic piston; alternative head or piston materials can be assessed against fluid chemistry, seal design and available space, subject to the project drawing."
+            "answer": "The displayed configuration uses an acrylic (PMMA) head and ceramic piston. All wetted materials must be checked against the actual fluid. Mounting, tubing connections, valves and drive control can be configured for the project. The displayed version uses an acrylic (PMMA) head and ceramic piston; alternative head or piston materials can be assessed against fluid chemistry, seal design and available space, subject to the project drawing."
           },
           {
             "question": "How much installation space is required?",
@@ -20777,7 +20777,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Basic Specifications",
             "paramName": "Displayed pump head material",
-            "paramValue": "Poly(methyl methacrylate) (PMMA)",
+            "paramValue": "Acrylic (PMMA)",
             "unit": "",
             "sort": 20,
             "footnotes": []
@@ -20793,7 +20793,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "Displayed PMMA; alternative materials subject to project assessment.",
+            "paramValue": "Displayed Acrylic (PMMA); alternative materials subject to project assessment.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -21114,15 +21114,15 @@ export const pumpSeriesDetailRecords = [
       },
       "en": {
         "locale": "en",
-        "title": "FOREACH 500 μL Ultra-Compact Precision Ceramic Piston Pump for Reagent and Buffer Dispensing in Modular Fluid Paths, with a PMMA Pump Head",
-        "h1": "FOREACH 500 μL Ultra-Compact Precision Ceramic Piston Pump for Reagent and Buffer Dispensing in Modular Fluid Paths, with a PMMA Pump Head",
+        "title": "FOREACH 500 μL Ultra-Compact Precision Ceramic Piston Pump for Reagent and Buffer Dispensing in Modular Fluid Paths, with an Acrylic (PMMA) Pump Head",
+        "h1": "FOREACH 500 μL Ultra-Compact Precision Ceramic Piston Pump for Reagent and Buffer Dispensing in Modular Fluid Paths, with an Acrylic (PMMA) Pump Head",
         "seo": {
           "titleTag": "TM-500-PMMA 500 μL PMMA Ultra-Compact Piston Pump | FOREACH",
-          "metaDescription": "TM-500-PMMA: 500 μL PMMA-head ultra-compact piston pump for reagent and buffer dispensing in modular fluid paths. Explore 6-40 UNF ports, 2540 steps and OEM integration options.",
+          "metaDescription": "TM-500-PMMA: 500 μL acrylic (PMMA) head ultra-compact piston pump for reagent and buffer dispensing in modular fluid paths. Explore 6-40 UNF ports, 2540 steps and OEM integration options.",
           "canonicalPath": "/products/pumps/piston-pump/tm-500-pmma",
           "robots": "index,follow",
           "ogTitle": "TM-500-PMMA 500 μL PMMA Ultra-Compact Piston Pump | FOREACH",
-          "ogDescription": "TM-500-PMMA: 500 μL PMMA-head ultra-compact piston pump for reagent and buffer dispensing in modular fluid paths. Explore 6-40 UNF ports, 2540 steps and OEM integration options."
+          "ogDescription": "TM-500-PMMA: 500 μL acrylic (PMMA) head ultra-compact piston pump for reagent and buffer dispensing in modular fluid paths. Explore 6-40 UNF ports, 2540 steps and OEM integration options."
         },
         "hero": {
           "detailMode": "custom_inquiry",
@@ -21137,11 +21137,11 @@ export const pumpSeriesDetailRecords = [
           "showModelFilter": false
         },
         "body": {
-          "description": "TM-500-PMMA is a 500 μL ultra-compact precision piston pump with a PMMA head for reagent and buffer dispensing in modular fluid paths. It targets space-constrained OEM analytical modules. The displayed configuration uses 6-40 UNF ports and 2540 full-stroke steps for integration alongside valves and detection components.\n\nMounting, tubing connections, valves and drive control can be configured for the project. The displayed version uses a PMMA head and ceramic piston; alternative head or piston materials can be assessed against fluid chemistry, seal design and available space, subject to the project drawing.",
+          "description": "TM-500-PMMA is a 500 μL ultra-compact precision piston pump with an acrylic (PMMA) head for reagent and buffer dispensing in modular fluid paths. It targets space-constrained OEM analytical modules. The displayed configuration uses 6-40 UNF ports and 2540 full-stroke steps for integration alongside valves and detection components.\n\nMounting, tubing connections, valves and drive control can be configured for the project. The displayed version uses an acrylic (PMMA) head and ceramic piston; alternative head or piston materials can be assessed against fluid chemistry, seal design and available space, subject to the project drawing.",
           "advantages": [
             "Mounting",
             "tubing connections",
-            "valves and drive control can be configured for the project. The displayed version uses a PMMA head and ceramic piston",
+            "valves and drive control can be configured for the project. The displayed version uses an acrylic (PMMA) head and ceramic piston",
             "alternative head or piston materials can be assessed against fluid chemistry",
             "seal design and available space",
             "subject to the project drawing."
@@ -21182,7 +21182,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Basic Specifications",
             "paramName": "Displayed pump head material",
-            "paramValue": "Poly(methyl methacrylate) (PMMA)",
+            "paramValue": "Acrylic (PMMA)",
             "unit": "",
             "sort": 20,
             "footnotes": []
@@ -21198,7 +21198,7 @@ export const pumpSeriesDetailRecords = [
           {
             "groupName": "Materials & Compatibility",
             "paramName": "Pump head material options",
-            "paramValue": "Displayed PMMA; alternative materials subject to project assessment.",
+            "paramValue": "Displayed Acrylic (PMMA); alternative materials subject to project assessment.",
             "unit": "",
             "sort": 30,
             "footnotes": []
@@ -21492,7 +21492,7 @@ export const pumpSeriesDetailRecords = [
           },
           {
             "question": "Which head and piston materials can be configured?",
-            "answer": "The displayed configuration uses a PMMA head and ceramic piston. All wetted materials must be checked against the actual fluid. Mounting, tubing connections, valves and drive control can be configured for the project. The displayed version uses a PMMA head and ceramic piston; alternative head or piston materials can be assessed against fluid chemistry, seal design and available space, subject to the project drawing."
+            "answer": "The displayed configuration uses an acrylic (PMMA) head and ceramic piston. All wetted materials must be checked against the actual fluid. Mounting, tubing connections, valves and drive control can be configured for the project. The displayed version uses an acrylic (PMMA) head and ceramic piston; alternative head or piston materials can be assessed against fluid chemistry, seal design and available space, subject to the project drawing."
           },
           {
             "question": "How much installation space is required?",

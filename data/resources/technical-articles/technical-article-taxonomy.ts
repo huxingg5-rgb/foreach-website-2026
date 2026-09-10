@@ -233,6 +233,12 @@ interface ArticleClassificationDefinition {
 }
 
 const articleClassifications: Record<string, ArticleClassificationDefinition> = {
+  "piston-pump-air-bubbles-dispensing-error": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "dosing", "troubleshooting", "testing-validation"], relatedProducts: ["EA", "EAS"] },
+  "piston-pump-viscous-liquid-aspiration-speed": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "dosing", "pressure-drop", "testing-validation"], relatedProducts: ["EA", "SM", "TM"] },
+  "piston-pump-dispensing-drift-diagnosis": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "precision", "troubleshooting", "testing-validation"], relatedProducts: ["EA", "SM", "TM"] },
+  "miniature-diaphragm-pump-pulsation-damper-validation": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["pulsation", "flow", "testing-validation"], relatedProducts: ["DPL30", "DPL60"] },
+  "miniature-liquid-diaphragm-pump-cavitation-diagnosis": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["suction", "troubleshooting", "testing-validation"], relatedProducts: ["DPL30", "DPL60", "DPL30H"] },
+  "diaphragm-pump-flow-meter-totalizer-error": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["pulsation", "flow", "testing-validation"], relatedProducts: ["DPL30", "DPL60"] },
   "clinical-chemistry-piston-pump-100-250-500-ul-selection": {"primaryCategory": "pumps", "secondaryCategory": "plunger-pumps", "tagKeys": ["plunger-pump", "dosing", "ivd", "selection", "testing-validation"], "relatedProducts": ["EA", "SM", "TM"]},
   "diaphragm-pump-multiple-wash-nozzles-flow-balance": {"primaryCategory": "applications-solutions", "secondaryCategory": "cleaning-waste", "tagKeys": ["cleaning", "flow", "pressure-drop", "testing-validation"], "relatedProducts": ["DPL30", "DPL60"]},
   "diaphragm-pump-flow-drop-reservoir-venting": {"primaryCategory": "pumps", "secondaryCategory": "miniature-diaphragm-pumps", "tagKeys": ["suction", "troubleshooting", "self-priming", "testing-validation"], "relatedProducts": ["DPL30", "DPL60"]},

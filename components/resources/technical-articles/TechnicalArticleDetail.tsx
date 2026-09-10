@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getPumpApplicationArticleCopy, getPumpApplicationChildArticles } from "@/data/resources/technical-articles/pump-application-articles.article";
+import { getPumpDiagnosticsArticleCopy } from "@/data/resources/technical-articles/pump-diagnostics-articles.article";
 /* =========================================================
    TechnicalArticleDetail.tsx
    恒永达官网｜技术文章详情页适配组件
@@ -385,7 +386,10 @@ export default function TechnicalArticleDetail({
 }: TechnicalArticleDetailProps) {
   const locale = normalizeLocale(pageData.locale);
   const listHref = getArticleListHref(locale);
-  const pumpApplicationCopy = getPumpApplicationArticleCopy(article.slug, locale);
+  const pumpDiagnosticsCopy = getPumpDiagnosticsArticleCopy(article.slug, locale);
+  // Both batches share the existing engineering body, CTA and FAQ schema renderer.
+  const pumpApplicationCopy = getPumpApplicationArticleCopy(article.slug, locale)
+    ?? pumpDiagnosticsCopy;
   const applicationChildArticles = getPumpApplicationChildArticles(article.slug, locale);
   const isPistonPumpArticle = isPistonPumpArticleSlug(article.slug);
   const pistonPumpArticleCopy = getPistonPumpArticleCopy(
@@ -467,6 +471,7 @@ export default function TechnicalArticleDetail({
     // the 2-wire photo for list cards and structured data without repeating it
     // as an oversized detail-page cover.
     coverImage:
+      pumpDiagnosticsCopy !== null ||
       isLegacyMotionArticle ||
       isPistonPumpHeadMaterialArticle ||
       isLocalizedPistonPumpArticle ||

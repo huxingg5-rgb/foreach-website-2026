@@ -92,7 +92,7 @@ export const dpl60ArticleEnCopy = {
   section6: {
     title: "6. How should DPL60 wetted materials be selected?",
     intro:
-      "The principal wetted parts are the PPS pump head, diaphragm and valves. Compatibility must be assessed for the complete material set and actual fluid conditions.",
+      "The principal wetted parts are the polyphenylene sulfide (PPS) pump head, diaphragm and valves. Compatibility must be assessed for the complete material set and actual fluid conditions.",
     headers: ["Material set", "Diaphragm / valve", "Pump head and assessment"],
     rows: [
       ["EP/PS", "EPDM diaphragm + EPDM valve", "PPS head; confirm fluid, concentration, temperature and contact time"],

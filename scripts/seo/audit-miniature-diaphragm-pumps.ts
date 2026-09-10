@@ -186,8 +186,9 @@ function assertLiveDetailCopy(
   if (!text.includes(expectedCopy.applications)) {
     fail(`常见应用未恢复：${route}`);
   }
-  if (expectedCopy.faqs.length !== 5) {
-    fail(`FAQ 数据不是 5 条：${route} -> ${expectedCopy.faqs.length}`);
+  const expectedFaqCount = route.includes("dpgl800") ? 6 : 5;
+  if (expectedCopy.faqs.length !== expectedFaqCount) {
+    fail(`FAQ 数据不是 ${expectedFaqCount} 条：${route} -> ${expectedCopy.faqs.length}`);
   }
 
   const jsonLdObjects = parseJsonLd(html, route).flatMap((document) =>

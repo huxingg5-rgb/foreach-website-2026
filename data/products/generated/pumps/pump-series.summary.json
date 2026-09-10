@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-06T04:48:52.805Z",
+  "generatedAt": "2026-09-10T10:05:18.185Z",
   "pumpSource": "F:\\WebsiteProjects\\foreach-website-2026\\data-source\\product-center\\pumps\\FOREACH_泵系列_产品数据源.xlsx",
   "footnoteSource": "F:\\WebsiteProjects\\foreach-website-2026\\data-source\\global\\FOREACH_全站脚注库.xlsx",
   "sheets": {
@@ -31,7 +31,7 @@
       "canonicalPath": "/products/pumps/piston-pump/ea-100-pmma",
       "pumpTypeSlug": "plunger-pumps",
       "h1Zh": "FOREACH 100 μL精密陶瓷柱塞泵，用于微量液体分配、反应液补加和小体积样本处理，采用PMMA泵头",
-      "h1En": "FOREACH 100 μL Precision Ceramic Piston Pump for Microliter Liquid Dispensing, Reaction-Liquid Addition and Small-Volume Sample Handling, with a PMMA Pump Head",
+      "h1En": "FOREACH 100 μL Precision Ceramic Piston Pump for Microliter Liquid Dispensing, Reaction-Liquid Addition and Small-Volume Sample Handling, with an Acrylic (PMMA) Pump Head",
       "detailMode": "custom_inquiry",
       "showModel": false
     },
@@ -53,7 +53,7 @@
       "canonicalPath": "/products/pumps/piston-pump/ea-250-pmma",
       "pumpTypeSlug": "plunger-pumps",
       "h1Zh": "FOREACH 250 μL精密陶瓷柱塞泵，用于样本稀释、试剂分配和中小体积反应液处理，采用PMMA泵头",
-      "h1En": "FOREACH 250 μL Precision Ceramic Piston Pump for Sample Dilution, Reagent Dispensing and Small-to-Medium-Volume Reaction-Liquid Handling, with a PMMA Pump Head",
+      "h1En": "FOREACH 250 μL Precision Ceramic Piston Pump for Sample Dilution, Reagent Dispensing and Small-to-Medium-Volume Reaction-Liquid Handling, with an Acrylic (PMMA) Pump Head",
       "detailMode": "custom_inquiry",
       "showModel": false
     },
@@ -75,7 +75,7 @@
       "canonicalPath": "/products/pumps/piston-pump/ea-500-pmma",
       "pumpTypeSlug": "plunger-pumps",
       "h1Zh": "FOREACH 500 μL精密陶瓷柱塞泵，用于常规试剂输送、样本稀释和缓冲液定量分配，采用PMMA泵头",
-      "h1En": "FOREACH 500 μL Precision Ceramic Piston Pump for Routine Reagent Transfer, Sample Dilution and Metered Buffer Dispensing, with a PMMA Pump Head",
+      "h1En": "FOREACH 500 μL Precision Ceramic Piston Pump for Routine Reagent Transfer, Sample Dilution and Metered Buffer Dispensing, with an Acrylic (PMMA) Pump Head",
       "detailMode": "custom_inquiry",
       "showModel": false
     },
@@ -97,7 +97,7 @@
       "canonicalPath": "/products/pumps/piston-pump/ea-1000-pmma",
       "pumpTypeSlug": "plunger-pumps",
       "h1Zh": "FOREACH 1 mL精密陶瓷柱塞泵，用于试剂输送、稀释液添加和缓冲液分配，采用PMMA泵头",
-      "h1En": "FOREACH 1 mL Precision Ceramic Piston Pump for Reagent Transfer, Diluent Addition and Buffer Dispensing, with a PMMA Pump Head",
+      "h1En": "FOREACH 1 mL Precision Ceramic Piston Pump for Reagent Transfer, Diluent Addition and Buffer Dispensing, with an Acrylic (PMMA) Pump Head",
       "detailMode": "custom_inquiry",
       "showModel": false
     },
@@ -119,7 +119,7 @@
       "canonicalPath": "/products/pumps/piston-pump/ea-2500-pmma",
       "pumpTypeSlug": "plunger-pumps",
       "h1Zh": "FOREACH 2.5 mL精密陶瓷柱塞泵，用于缓冲液输送、稀释液添加和清洗液补充，采用PMMA泵头",
-      "h1En": "FOREACH 2.5 mL Precision Ceramic Piston Pump for Buffer Transfer, Diluent Addition and Wash-Fluid Supply, with a PMMA Pump Head",
+      "h1En": "FOREACH 2.5 mL Precision Ceramic Piston Pump for Buffer Transfer, Diluent Addition and Wash-Fluid Supply, with an Acrylic (PMMA) Pump Head",
       "detailMode": "custom_inquiry",
       "showModel": false
     },
@@ -141,7 +141,7 @@
       "canonicalPath": "/products/pumps/piston-pump/ea-5000-pmma",
       "pumpTypeSlug": "plunger-pumps",
       "h1Zh": "FOREACH 5 mL精密陶瓷柱塞泵，用于清洗液添加、缓冲液输送和管路预充，采用PMMA泵头",
-      "h1En": "FOREACH 5 mL Precision Ceramic Piston Pump for Wash-Fluid Supply, Buffer Transfer and Line Priming, with a PMMA Pump Head",
+      "h1En": "FOREACH 5 mL Precision Ceramic Piston Pump for Wash-Fluid Supply, Buffer Transfer and Line Priming, with an Acrylic (PMMA) Pump Head",
       "detailMode": "custom_inquiry",
       "showModel": false
     },
@@ -163,7 +163,7 @@
       "canonicalPath": "/products/pumps/piston-pump/ea-10000-pmma",
       "pumpTypeSlug": "plunger-pumps",
       "h1Zh": "FOREACH 10 mL精密陶瓷柱塞泵，用于大体积清洗液输送、系统冲洗和管路预充，采用PMMA泵头",
-      "h1En": "FOREACH 10 mL Precision Ceramic Piston Pump for High-Volume Wash-Fluid Transfer, System Flushing and Line Priming, with a PMMA Pump Head",
+      "h1En": "FOREACH 10 mL Precision Ceramic Piston Pump for High-Volume Wash-Fluid Transfer, System Flushing and Line Priming, with an Acrylic (PMMA) Pump Head",
       "detailMode": "custom_inquiry",
       "showModel": false
     },
@@ -185,7 +185,7 @@
       "canonicalPath": "/products/pumps/piston-pump/sm-50-pmma",
       "pumpTypeSlug": "plunger-pumps",
       "h1Zh": "FOREACH 50 μL微型精密陶瓷柱塞泵，用于微量试剂加注和小体积样本分配，采用PMMA泵头",
-      "h1En": "FOREACH 50 μL Miniature Precision Ceramic Piston Pump for Microliter Reagent Addition and Small-Volume Sample Dispensing, with a PMMA Pump Head",
+      "h1En": "FOREACH 50 μL Miniature Precision Ceramic Piston Pump for Microliter Reagent Addition and Small-Volume Sample Dispensing, with an Acrylic (PMMA) Pump Head",
       "detailMode": "custom_inquiry",
       "showModel": false
     },
@@ -196,7 +196,7 @@
       "canonicalPath": "/products/pumps/piston-pump/sm-100-pmma",
       "pumpTypeSlug": "plunger-pumps",
       "h1Zh": "FOREACH 100 μL微型精密陶瓷柱塞泵，用于自动加样和样本稀释，采用PMMA泵头",
-      "h1En": "FOREACH 100 μL Miniature Precision Ceramic Piston Pump for Automated Sampling and Sample Dilution, with a PMMA Pump Head",
+      "h1En": "FOREACH 100 μL Miniature Precision Ceramic Piston Pump for Automated Sampling and Sample Dilution, with an Acrylic (PMMA) Pump Head",
       "detailMode": "custom_inquiry",
       "showModel": false
     },
@@ -218,7 +218,7 @@
       "canonicalPath": "/products/pumps/piston-pump/sm-250-pmma",
       "pumpTypeSlug": "plunger-pumps",
       "h1Zh": "FOREACH 250 μL微型精密陶瓷柱塞泵，用于试剂分配和反应液定量添加，采用PMMA泵头",
-      "h1En": "FOREACH 250 μL Miniature Precision Ceramic Piston Pump for Reagent Dispensing and Metered Reaction-Liquid Addition, with a PMMA Pump Head",
+      "h1En": "FOREACH 250 μL Miniature Precision Ceramic Piston Pump for Reagent Dispensing and Metered Reaction-Liquid Addition, with an Acrylic (PMMA) Pump Head",
       "detailMode": "custom_inquiry",
       "showModel": false
     },
@@ -240,7 +240,7 @@
       "canonicalPath": "/products/pumps/piston-pump/sm-500-pmma",
       "pumpTypeSlug": "plunger-pumps",
       "h1Zh": "FOREACH 500 μL微型精密陶瓷柱塞泵，用于试剂加注和稀释液定量添加，采用PMMA泵头",
-      "h1En": "FOREACH 500 μL Miniature Precision Ceramic Piston Pump for Reagent Addition and Metered Diluent Dosing, with a PMMA Pump Head",
+      "h1En": "FOREACH 500 μL Miniature Precision Ceramic Piston Pump for Reagent Addition and Metered Diluent Dosing, with an Acrylic (PMMA) Pump Head",
       "detailMode": "custom_inquiry",
       "showModel": false
     },
@@ -251,7 +251,7 @@
       "canonicalPath": "/products/pumps/piston-pump/sm-1000-pmma",
       "pumpTypeSlug": "plunger-pumps",
       "h1Zh": "FOREACH 1 mL微型精密陶瓷柱塞泵，用于稀释液添加和缓冲液分配，采用PMMA泵头",
-      "h1En": "FOREACH 1 mL Miniature Precision Ceramic Piston Pump for Diluent Addition and Buffer Dispensing, with a PMMA Pump Head",
+      "h1En": "FOREACH 1 mL Miniature Precision Ceramic Piston Pump for Diluent Addition and Buffer Dispensing, with an Acrylic (PMMA) Pump Head",
       "detailMode": "custom_inquiry",
       "showModel": false
     },
@@ -262,7 +262,7 @@
       "canonicalPath": "/products/pumps/piston-pump/tm-50-pmma",
       "pumpTypeSlug": "plunger-pumps",
       "h1Zh": "FOREACH 50 μL超微型精密陶瓷柱塞泵，用于紧凑液路中的微量试剂加注，采用PMMA泵头",
-      "h1En": "FOREACH 50 μL Ultra-Compact Precision Ceramic Piston Pump for Microliter Reagent Addition in Compact Fluid Paths, with a PMMA Pump Head",
+      "h1En": "FOREACH 50 μL Ultra-Compact Precision Ceramic Piston Pump for Microliter Reagent Addition in Compact Fluid Paths, with an Acrylic (PMMA) Pump Head",
       "detailMode": "custom_inquiry",
       "showModel": false
     },
@@ -273,7 +273,7 @@
       "canonicalPath": "/products/pumps/piston-pump/tm-100-pmma",
       "pumpTypeSlug": "plunger-pumps",
       "h1Zh": "FOREACH 100 μL超微型精密陶瓷柱塞泵，用于小型检测模块中的样本分配，采用PMMA泵头",
-      "h1En": "FOREACH 100 μL Ultra-Compact Precision Ceramic Piston Pump for Sample Dispensing in Small Analytical Modules, with a PMMA Pump Head",
+      "h1En": "FOREACH 100 μL Ultra-Compact Precision Ceramic Piston Pump for Sample Dispensing in Small Analytical Modules, with an Acrylic (PMMA) Pump Head",
       "detailMode": "custom_inquiry",
       "showModel": false
     },
@@ -284,7 +284,7 @@
       "canonicalPath": "/products/pumps/piston-pump/tm-250-pmma",
       "pumpTypeSlug": "plunger-pumps",
       "h1Zh": "FOREACH 250 μL超微型精密陶瓷柱塞泵，用于紧凑分析模块中的反应液添加，采用PMMA泵头",
-      "h1En": "FOREACH 250 μL Ultra-Compact Precision Ceramic Piston Pump for Reaction-Liquid Addition in Compact Analytical Modules, with a PMMA Pump Head",
+      "h1En": "FOREACH 250 μL Ultra-Compact Precision Ceramic Piston Pump for Reaction-Liquid Addition in Compact Analytical Modules, with an Acrylic (PMMA) Pump Head",
       "detailMode": "custom_inquiry",
       "showModel": false
     },
@@ -295,7 +295,7 @@
       "canonicalPath": "/products/pumps/piston-pump/tm-500-pmma",
       "pumpTypeSlug": "plunger-pumps",
       "h1Zh": "FOREACH 500 μL超微型精密陶瓷柱塞泵，用于模块化液路中的试剂和缓冲液分配，采用PMMA泵头",
-      "h1En": "FOREACH 500 μL Ultra-Compact Precision Ceramic Piston Pump for Reagent and Buffer Dispensing in Modular Fluid Paths, with a PMMA Pump Head",
+      "h1En": "FOREACH 500 μL Ultra-Compact Precision Ceramic Piston Pump for Reagent and Buffer Dispensing in Modular Fluid Paths, with an Acrylic (PMMA) Pump Head",
       "detailMode": "custom_inquiry",
       "showModel": false
     }

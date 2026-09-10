@@ -231,7 +231,7 @@ export const pumpApplicationArticlesEn = {
               [
                 "TM ultra-compact piston pump",
                 "Integration where space is more restricted",
-                "Model drawing; displayed PMMA head and ceramic piston, with other configurations reviewed separately"
+                "Model drawing; displayed acrylic (PMMA) head and ceramic piston, with other configurations reviewed separately"
               ]
             ]
           },

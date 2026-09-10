@@ -1880,6 +1880,210 @@
       "fr": "{0}-{1} UNF",
       "ko": "{0}-{1} UNF",
       "ru": "{0}-{1} UNF"
+    },
+    "{0} is a {1} precision ceramic piston pump with an acrylic (PMMA) pump head for {2}.": {
+      "es": "{0} es una bomba de pistón cerámico de precisión de {1}, con cabezal de PMMA, para {2}.",
+      "fr": "{0} est une pompe à piston céramique de précision de {1}, avec une tête en PMMA, conçue pour {2}.",
+      "ko": "{0}은 PMMA 헤드를 적용한 {1} 정밀 세라믹 피스톤 펌프로, {2}에 사용됩니다.",
+      "ru": "{0} — прецизионный насос с керамическим поршнем объёмом {1} и головкой из PMMA для таких задач, как {2}."
+    },
+    "Pump heads can be selected from acrylic (PMMA), PCTG copolyester, PEEK and other project-assessed materials.": {
+      "es": "Los cabezales pueden ser de PMMA, PCTG, PEEK u otros materiales evaluados para el proyecto.",
+      "fr": "Les têtes peuvent être en PMMA, PCTG, PEEK ou en d’autres matériaux évalués pour le projet.",
+      "ko": "펌프 헤드는 PMMA, PCTG, PEEK 및 프로젝트별로 평가한 기타 재료 중에서 선택할 수 있습니다.",
+      "ru": "Для головки доступны PMMA, PCTG, PEEK и другие материалы после оценки требований проекта."
+    },
+    "Typical applications of the {0} acrylic (PMMA) head precision piston pump": {
+      "es": "Aplicaciones habituales de la bomba de pistón de precisión de {0} con cabezal de PMMA",
+      "fr": "Applications types de la pompe à piston de précision de {0} avec tête en PMMA",
+      "ko": "{0} PMMA 헤드 정밀 피스톤 펌프의 주요 응용 분야",
+      "ru": "Типовые применения прецизионного поршневого насоса объёмом {0} с головкой из PMMA"
+    },
+    "The displayed configuration uses an acrylic (PMMA) head; compatibility must be checked for the head, piston, seals and valves with the actual fluid.": {
+      "es": "La configuración mostrada utiliza un cabezal de PMMA; debe comprobarse la compatibilidad del cabezal, pistón, juntas y válvulas con el fluido real.",
+      "fr": "La configuration présentée utilise une tête en PMMA ; la compatibilité de la tête, du piston, des joints et des vannes doit être vérifiée avec le fluide réel.",
+      "ko": "표시 구성은 PMMA 헤드를 사용하며, 실제 유체로 헤드, 피스톤, 씰 및 밸브의 호환성을 확인해야 합니다.",
+      "ru": "В представленной конфигурации используется головка из PMMA; совместимость головки, поршня, уплотнений и клапанов проверяют с фактической жидкостью."
+    },
+    "How should acrylic (PMMA) and PEEK heads be selected, and can the piston be customized?": {
+      "es": "¿Cómo elegir entre cabezales de PMMA y PEEK y se puede personalizar el pistón?",
+      "fr": "Comment choisir entre les têtes en PMMA et en PEEK, et le piston est-il personnalisable ?",
+      "ko": "PMMA와 PEEK 헤드는 어떻게 선택하며 피스톤을 맞춤 구성할 수 있습니까?",
+      "ru": "Как выбрать головку из PMMA или PEEK и можно ли изменить материал поршня?"
+    },
+    "Head options include acrylic (PMMA), PCTG copolyester and PEEK.": {
+      "es": "Las opciones de cabezal incluyen PMMA, PCTG y PEEK.",
+      "fr": "Les options de tête comprennent le PMMA, le PCTG et le PEEK.",
+      "ko": "헤드 옵션에는 PMMA, PCTG 및 PEEK가 포함됩니다.",
+      "ru": "Для головки доступны PMMA, PCTG и PEEK."
+    },
+    "Acrylic (PMMA)": {
+      "es": "Polimetilmetacrilato (PMMA)",
+      "fr": "Polyméthacrylate de méthyle (PMMA)",
+      "ko": "폴리메틸메타크릴레이트(PMMA)",
+      "ru": "Полиметилметакрилат (PMMA)"
+    },
+    "PCTG copolyester / Acrylic (PMMA) / PEEK; Other engineering materials can be assessed for fluid compatibility, structural strength, manufacturing process and project volume.": {
+      "es": "PCTG / PMMA / PEEK; pueden evaluarse otros materiales técnicos según la compatibilidad con el fluido, la resistencia estructural, el proceso de fabricación y el volumen del proyecto.",
+      "fr": "PCTG / PMMA / PEEK ; d’autres matériaux techniques peuvent être évalués selon la compatibilité avec le fluide, la résistance mécanique, la fabrication et le volume du projet.",
+      "ko": "PCTG / PMMA / PEEK; 기타 엔지니어링 재료는 유체 호환성, 구조 강도, 제조 공정 및 프로젝트 물량에 따라 평가할 수 있습니다.",
+      "ru": "PCTG / PMMA / PEEK; другие конструкционные материалы оцениваются по совместимости с жидкостью, прочности, технологии изготовления и объёму проекта."
+    },
+    "The displayed PEEK pump head can be replaced by a project-matched acrylic (PMMA) or PCTG copolyester option.": {
+      "es": "El cabezal de PEEK mostrado puede sustituirse por una opción de PMMA o PCTG adaptada al proyecto.",
+      "fr": "La tête en PEEK présentée peut être remplacée par une option en PMMA ou PCTG adaptée au projet.",
+      "ko": "표시된 PEEK 헤드는 프로젝트 조건에 맞춰 PMMA 또는 PCTG 옵션으로 변경할 수 있습니다.",
+      "ru": "Представленную головку из PEEK можно заменить вариантом из PMMA или PCTG, подобранным под проект."
+    },
+    "Typical applications of the {0} PEEK head precision piston pump": {
+      "es": "Aplicaciones habituales de la bomba de pistón de precisión de {0} con cabezal de PEEK",
+      "fr": "Applications types de la pompe à piston de précision de {0} avec tête en PEEK",
+      "ko": "{0} PEEK 헤드 정밀 피스톤 펌프의 주요 응용 분야",
+      "ru": "Типовые применения прецизионного поршневого насоса объёмом {0} с головкой из PEEK"
+    },
+    "PCTG copolyester / Acrylic (PMMA) / PVDF / PPS / PEEK / Acetal (POM); Other engineering materials can be assessed for the project.": {
+      "es": "PCTG / PMMA / PVDF / PPS / PEEK / POM; otros materiales técnicos pueden evaluarse para el proyecto.",
+      "fr": "PCTG / PMMA / PVDF / PPS / PEEK / POM ; d’autres matériaux techniques peuvent être évalués pour le projet.",
+      "ko": "PCTG / PMMA / PVDF / PPS / PEEK / POM; 기타 엔지니어링 재료는 프로젝트별로 평가할 수 있습니다.",
+      "ru": "PCTG / PMMA / PVDF / PPS / PEEK / POM; другие конструкционные материалы оцениваются для конкретного проекта."
+    },
+    "PCTG copolyester / Acrylic (PMMA) / PPS / PVDF / Polypropylene (PP) / PTFE / PEEK / Acetal (POM) / Polysulfone (PSU); Other engineering materials can be assessed for the project.": {
+      "es": "PCTG / PMMA / PPS / PVDF / PP / PTFE / PEEK / POM / PSU; otros materiales técnicos pueden evaluarse para el proyecto.",
+      "fr": "PCTG / PMMA / PPS / PVDF / PP / PTFE / PEEK / POM / PSU ; d’autres matériaux techniques peuvent être évalués pour le projet.",
+      "ko": "PCTG / PMMA / PPS / PVDF / PP / PTFE / PEEK / POM / PSU; 기타 엔지니어링 재료는 프로젝트별로 평가할 수 있습니다.",
+      "ru": "PCTG / PMMA / PPS / PVDF / PP / PTFE / PEEK / POM / PSU; другие конструкционные материалы оцениваются для конкретного проекта."
+    },
+    "PCTG copolyester / Acrylic (PMMA) / PPS / PVDF / Acetal (POM) / PEEK / PTFE / Polysulfone (PSU); Other engineering materials can be assessed for the project.": {
+      "es": "PCTG / PMMA / PPS / PVDF / POM / PEEK / PTFE / PSU; otros materiales técnicos pueden evaluarse para el proyecto.",
+      "fr": "PCTG / PMMA / PPS / PVDF / POM / PEEK / PTFE / PSU ; d’autres matériaux techniques peuvent être évalués pour le projet.",
+      "ko": "PCTG / PMMA / PPS / PVDF / POM / PEEK / PTFE / PSU; 기타 엔지니어링 재료는 프로젝트별로 평가할 수 있습니다.",
+      "ru": "PCTG / PMMA / PPS / PVDF / POM / PEEK / PTFE / PSU; другие конструкционные материалы оцениваются для конкретного проекта."
+    },
+    "PCTG copolyester / Acrylic (PMMA) / PPS / Acetal (POM) / PEEK / Polysulfone (PSU); Other engineering materials can be assessed for the project.": {
+      "es": "PCTG / PMMA / PPS / POM / PEEK / PSU; otros materiales técnicos pueden evaluarse para el proyecto.",
+      "fr": "PCTG / PMMA / PPS / POM / PEEK / PSU ; d’autres matériaux techniques peuvent être évalués pour le projet.",
+      "ko": "PCTG / PMMA / PPS / POM / PEEK / PSU; 기타 엔지니어링 재료는 프로젝트별로 평가할 수 있습니다.",
+      "ru": "PCTG / PMMA / PPS / POM / PEEK / PSU; другие конструкционные материалы оцениваются для конкретного проекта."
+    },
+    "PCTG copolyester / Acrylic (PMMA) / PPS / PEEK / PVDF / Acetal (POM) / Polysulfone (PSU) / Polycarbonate (PC); Other engineering materials can be assessed for the project.": {
+      "es": "PCTG / PMMA / PPS / PEEK / PVDF / POM / PSU / PC; otros materiales técnicos pueden evaluarse para el proyecto.",
+      "fr": "PCTG / PMMA / PPS / PEEK / PVDF / POM / PSU / PC ; d’autres matériaux techniques peuvent être évalués pour le projet.",
+      "ko": "PCTG / PMMA / PPS / PEEK / PVDF / POM / PSU / PC; 기타 엔지니어링 재료는 프로젝트별로 평가할 수 있습니다.",
+      "ru": "PCTG / PMMA / PPS / PEEK / PVDF / POM / PSU / PC; другие конструкционные материалы оцениваются для конкретного проекта."
+    },
+    "PTFE / PEI / Polysulfone (PSU) / Acrylic (PMMA) / PPS / PVDF / Acetal (POM) / PEEK; Other engineering materials can be assessed for the project.": {
+      "es": "PTFE / PEI / PSU / PMMA / PPS / PVDF / POM / PEEK; otros materiales técnicos pueden evaluarse para el proyecto.",
+      "fr": "PTFE / PEI / PSU / PMMA / PPS / PVDF / POM / PEEK ; d’autres matériaux techniques peuvent être évalués pour le projet.",
+      "ko": "PTFE / PEI / PSU / PMMA / PPS / PVDF / POM / PEEK; 기타 엔지니어링 재료는 프로젝트별로 평가할 수 있습니다.",
+      "ru": "PTFE / PEI / PSU / PMMA / PPS / PVDF / POM / PEEK; другие конструкционные материалы оцениваются для конкретного проекта."
+    },
+    "{0} is a {1} miniature precision piston pump with an acrylic (PMMA) head for {2}.": {
+      "es": "{0} es una bomba de pistón de precisión en miniatura de {1}, con cabezal de PMMA, para {2}.",
+      "fr": "{0} est une pompe à piston de précision miniature de {1}, avec tête en PMMA, conçue pour {2}.",
+      "ko": "{0}은 PMMA 헤드를 적용한 {1} 소형 정밀 피스톤 펌프로, {2}에 사용됩니다.",
+      "ru": "{0} — миниатюрный прецизионный поршневой насос объёмом {1} с головкой из PMMA для таких задач, как {2}."
+    },
+    "SM head options include acrylic (PMMA), polysulfone (PSU), acetal (POM) and PEEK; piston options include ceramic, stainless steel and PEEK.": {
+      "es": "Los cabezales SM pueden ser de PMMA, PSU, POM o PEEK; los pistones, de cerámica, acero inoxidable o PEEK.",
+      "fr": "Les têtes SM peuvent être en PMMA, PSU, POM ou PEEK ; les pistons, en céramique, acier inoxydable ou PEEK.",
+      "ko": "SM 헤드는 PMMA, PSU, POM 또는 PEEK, 피스톤은 세라믹, 스테인리스강 또는 PEEK를 선택할 수 있습니다.",
+      "ru": "Для головок SM доступны PMMA, PSU, POM и PEEK; для поршней — керамика, нержавеющая сталь и PEEK."
+    },
+    "The displayed configuration uses an acrylic (PMMA) head and ceramic piston.": {
+      "es": "La configuración mostrada utiliza un cabezal de PMMA y un pistón cerámico.",
+      "fr": "La configuration présentée utilise une tête en PMMA et un piston céramique.",
+      "ko": "표시 구성은 PMMA 헤드와 세라믹 피스톤을 사용합니다.",
+      "ru": "В представленной конфигурации используются головка из PMMA и керамический поршень."
+    },
+    "{0}: {1} acrylic (PMMA) head miniature piston pump for {2}.": {
+      "es": "{0}: bomba de pistón en miniatura de {1} con cabezal de PMMA para {2}.",
+      "fr": "{0} : pompe à piston miniature de {1} avec tête en PMMA pour {2}.",
+      "ko": "{0}: {2}용 {1} PMMA 헤드 소형 피스톤 펌프.",
+      "ru": "{0}: миниатюрный поршневой насос объёмом {1} с головкой из PMMA; задачи: {2}."
+    },
+    "Acrylic (PMMA) / Polysulfone (PSU) / Acetal (POM) / PEEK; final selection follows fluid and structural requirements.": {
+      "es": "PMMA / PSU / POM / PEEK; la selección final depende del fluido y los requisitos estructurales.",
+      "fr": "PMMA / PSU / POM / PEEK ; le choix final dépend du fluide et des exigences structurelles.",
+      "ko": "PMMA / PSU / POM / PEEK; 최종 선택은 유체 및 구조 요구에 따릅니다.",
+      "ru": "PMMA / PSU / POM / PEEK; окончательный выбор зависит от жидкости и конструктивных требований."
+    },
+    "{0} is a {1} ultra-compact precision piston pump with an acrylic (PMMA) head for {2}.": {
+      "es": "{0} es una bomba de pistón de precisión ultracompacta de {1}, con cabezal de PMMA, para {2}.",
+      "fr": "{0} est une pompe à piston de précision ultra-compacte de {1}, avec tête en PMMA, conçue pour {2}.",
+      "ko": "{0}은 PMMA 헤드를 적용한 {1} 초소형 정밀 피스톤 펌프로, {2}에 사용됩니다.",
+      "ru": "{0} — ультракомпактный прецизионный поршневой насос объёмом {1} с головкой из PMMA для таких задач, как {2}."
+    },
+    "The displayed version uses an acrylic (PMMA) head and ceramic piston; alternative head or piston materials can be assessed against fluid chemistry, seal design and available space, subject to the project drawing.": {
+      "es": "La versión mostrada tiene cabezal de PMMA y pistón cerámico; otros materiales pueden evaluarse según la química del fluido, las juntas y el espacio, conforme al plano del proyecto.",
+      "fr": "La version présentée comporte une tête en PMMA et un piston céramique ; d’autres matériaux peuvent être évalués selon la chimie du fluide, les joints et l’espace, sous réserve du plan du projet.",
+      "ko": "표시 제품은 PMMA 헤드와 세라믹 피스톤을 사용합니다. 다른 재료는 유체 성분, 씰 설계 및 공간을 검토하여 프로젝트 도면에 따라 평가할 수 있습니다.",
+      "ru": "Представленная версия использует головку из PMMA и керамический поршень; другие материалы оценивают по химии жидкости, конструкции уплотнений и доступному месту согласно чертежу проекта."
+    },
+    "{0}: {1} acrylic (PMMA) head ultra-compact piston pump for {2}.": {
+      "es": "{0}: bomba de pistón ultracompacta de {1} con cabezal de PMMA para {2}.",
+      "fr": "{0} : pompe à piston ultra-compacte de {1} avec tête en PMMA pour {2}.",
+      "ko": "{0}: {2}용 {1} PMMA 헤드 초소형 피스톤 펌프.",
+      "ru": "{0}: ультракомпактный поршневой насос объёмом {1} с головкой из PMMA; задачи: {2}."
+    },
+    "Displayed Acrylic (PMMA); alternative materials subject to project assessment.": {
+      "es": "PMMA mostrado; otros materiales sujetos a evaluación del proyecto.",
+      "fr": "PMMA présenté ; autres matériaux soumis à l’évaluation du projet.",
+      "ko": "표시 재료는 PMMA이며, 다른 재료는 프로젝트별 평가가 필요합니다.",
+      "ru": "Представлен PMMA; другие материалы подлежат оценке для проекта."
+    },
+    "{0} Precision Ceramic Piston Pump for Microliter Liquid Dispensing, Reaction-Liquid Addition and Small-Volume Sample Handling, with an Acrylic (PMMA) Pump Head": {
+      "es": "Bomba de pistón cerámico de precisión de {0} para dispensación microlítica, adición de líquido de reacción y manejo de pequeñas muestras, con cabezal de PMMA",
+      "fr": "Pompe à piston céramique de précision de {0} pour distribution microlitrique, ajout de liquide réactionnel et traitement de petits échantillons, avec tête en PMMA",
+      "ko": "미량 액체 분주, 반응액 보충 및 소량 샘플 처리를 위한 {0} PMMA 헤드 정밀 세라믹 피스톤 펌프",
+      "ru": "Прецизионный насос с керамическим поршнем объёмом {0} для микролитрового дозирования, добавления реакционной жидкости и работы с малыми образцами, с головкой из PMMA"
+    },
+    "{0} Precision Ceramic Piston Pump for Sample Dilution, Reagent Dispensing and Small-to-Medium-Volume Reaction-Liquid Handling, with an Acrylic (PMMA) Pump Head": {
+      "es": "Bomba de pistón cerámico de precisión de {0} para dilución de muestras, dispensación de reactivos y líquidos de reacción de pequeño a mediano volumen, con cabezal de PMMA",
+      "fr": "Pompe à piston céramique de précision de {0} pour dilution d’échantillons, distribution de réactifs et traitement de petits à moyens volumes réactionnels, avec tête en PMMA",
+      "ko": "샘플 희석, 시약 분주 및 중소량 반응액 처리를 위한 {0} PMMA 헤드 정밀 세라믹 피스톤 펌프",
+      "ru": "Прецизионный насос с керамическим поршнем объёмом {0} для разведения образцов, дозирования реагентов и малых и средних объёмов реакционной жидкости, с головкой из PMMA"
+    },
+    "{0} Precision Ceramic Piston Pump for Routine Reagent Transfer, Sample Dilution and Metered Buffer Dispensing, with an Acrylic (PMMA) Pump Head": {
+      "es": "Bomba de pistón cerámico de precisión de {0} para transferencia de reactivos habituales, dilución de muestras y dispensación dosificada de tampones, con cabezal de PMMA",
+      "fr": "Pompe à piston céramique de précision de {0} pour transfert de réactifs courants, dilution d’échantillons et distribution dosée de tampons, avec tête en PMMA",
+      "ko": "일반 시약 이송, 샘플 희석 및 완충액 정량 분주용 {0} PMMA 헤드 정밀 세라믹 피스톤 펌프",
+      "ru": "Прецизионный насос с керамическим поршнем объёмом {0} для переноса обычных реагентов, разведения образцов и дозирования буферов, с головкой из PMMA"
+    },
+    "{0} Precision Ceramic Piston Pump for Reagent Transfer, {1}, with an Acrylic (PMMA) Pump Head": {
+      "es": "Bomba de pistón cerámico de precisión de {0} para transferencia de reactivos, {1}, con cabezal de PMMA",
+      "fr": "Pompe à piston céramique de précision de {0} pour transfert de réactifs, {1}, avec tête en PMMA",
+      "ko": "시약 이송, {1}용 {0} PMMA 헤드 정밀 세라믹 피스톤 펌프",
+      "ru": "Прецизионный насос с керамическим поршнем объёмом {0} и головкой из PMMA; задачи: перенос реагентов, {1}"
+    },
+    "{0} Precision Ceramic Piston Pump for Buffer Transfer, Diluent Addition and Wash-Fluid Supply, with an Acrylic (PMMA) Pump Head": {
+      "es": "Bomba de pistón cerámico de precisión de {0} para transferencia de tampones, adición de diluyente y suministro de lavado, con cabezal de PMMA",
+      "fr": "Pompe à piston céramique de précision de {0} pour transfert de tampons, ajout de diluant et alimentation en liquide de lavage, avec tête en PMMA",
+      "ko": "완충액 이송, 희석액 첨가 및 세척액 보충용 {0} PMMA 헤드 정밀 세라믹 피스톤 펌프",
+      "ru": "Прецизионный насос с керамическим поршнем объёмом {0} для переноса буферов, добавления разбавителя и подачи промывочной жидкости, с головкой из PMMA"
+    },
+    "{0} Precision Ceramic Piston Pump for Wash-Fluid Supply, Buffer Transfer and Line Priming, with an Acrylic (PMMA) Pump Head": {
+      "es": "Bomba de pistón cerámico de precisión de {0} para suministro de lavado, transferencia de tampones y cebado de líneas, con cabezal de PMMA",
+      "fr": "Pompe à piston céramique de précision de {0} pour alimentation en liquide de lavage, transfert de tampons et amorçage des conduites, avec tête en PMMA",
+      "ko": "세척액 공급, 완충액 이송 및 유로 프라이밍용 {0} PMMA 헤드 정밀 세라믹 피스톤 펌프",
+      "ru": "Прецизионный насос с керамическим поршнем объёмом {0} для подачи промывочной жидкости, переноса буферов и заполнения линий, с головкой из PMMA"
+    },
+    "{0} Precision Ceramic Piston Pump for High-Volume Wash-Fluid Transfer, System Flushing and Line Priming, with an Acrylic (PMMA) Pump Head": {
+      "es": "Bomba de pistón cerámico de precisión de {0} para grandes volúmenes de lavado, enjuague del sistema y cebado de líneas, con cabezal de PMMA",
+      "fr": "Pompe à piston céramique de précision de {0} pour grands volumes de lavage, rinçage du système et amorçage des conduites, avec tête en PMMA",
+      "ko": "대용량 세척액 이송, 시스템 세척 및 유로 프라이밍용 {0} PMMA 헤드 정밀 세라믹 피스톤 펌프",
+      "ru": "Прецизионный насос с керамическим поршнем объёмом {0} для больших объёмов промывочной жидкости, промывки системы и заполнения линий, с головкой из PMMA"
+    },
+    "{0} Miniature Precision Ceramic Piston Pump for {1}, with an Acrylic (PMMA) Pump Head": {
+      "es": "Bomba de pistón cerámico de precisión en miniatura de {0} para {1}, con cabezal de PMMA",
+      "fr": "Pompe à piston céramique de précision miniature de {0} pour {1}, avec tête en PMMA",
+      "ko": "{1}용 {0} PMMA 헤드 소형 정밀 세라믹 피스톤 펌프",
+      "ru": "Миниатюрный прецизионный насос с керамическим поршнем объёмом {0} и головкой из PMMA; задачи: {1}"
+    },
+    "{0} Ultra-Compact Precision Ceramic Piston Pump for {1}, with an Acrylic (PMMA) Pump Head": {
+      "es": "Bomba de pistón cerámico de precisión ultracompacta de {0} para {1}, con cabezal de PMMA",
+      "fr": "Pompe à piston céramique de précision ultra-compacte de {0} pour {1}, avec tête en PMMA",
+      "ko": "{1}용 {0} PMMA 헤드 초소형 정밀 세라믹 피스톤 펌프",
+      "ru": "Ультракомпактный прецизионный насос с керамическим поршнем объёмом {0} и головкой из PMMA; задачи: {1}"
     }
   }
 }

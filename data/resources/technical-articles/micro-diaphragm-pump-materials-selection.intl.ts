@@ -24,14 +24,14 @@ export const microDiaphragmPumpMaterialsCopies = {
         ],
         "rows": [
           [
-            "PPS (polyphenylene sulfide)",
-            "EPDM (ethylene propylene diene rubber)",
-            "EPDM (ethylene propylene diene rubber)"
+            "Polyphenylene sulfide (PPS)",
+            "Ethylene propylene diene rubber (EPDM)",
+            "Ethylene propylene diene rubber (EPDM)"
           ],
           [
-            "PPS (polyphenylene sulfide)",
-            "PTFE (polytetrafluoroethylene)",
-            "FFKM (perfluoroelastomer)"
+            "Polyphenylene sulfide (PPS)",
+            "Polytetrafluoroethylene (PTFE)",
+            "Perfluoroelastomer (FFKM)"
           ]
         ]
       },

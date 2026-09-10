@@ -688,14 +688,14 @@ export const pumpSeriesSelectionCards = [
     "content": {
       "zh": {
         "title": "SM-50-PMMA",
-        "subtitle": "50 μL Miniature Precision Ceramic Piston Pump for Microliter Reagent Addition and Small-Volume Sample Dispensing, with a PMMA Pump Head",
-        "description": "SM-50-PMMA: 50 μL PMMA-head miniature piston pump for microliter reagent addition and small-volume sample dispensing. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
+        "subtitle": "50 μL Miniature Precision Ceramic Piston Pump for Microliter Reagent Addition and Small-Volume Sample Dispensing, with an Acrylic (PMMA) Pump Head",
+        "description": "SM-50-PMMA: 50 μL acrylic (PMMA) head miniature piston pump for microliter reagent addition and small-volume sample dispensing. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
         "specs": []
       },
       "en": {
         "title": "SM-50-PMMA",
-        "subtitle": "50 μL Miniature Precision Ceramic Piston Pump for Microliter Reagent Addition and Small-Volume Sample Dispensing, with a PMMA Pump Head",
-        "description": "SM-50-PMMA: 50 μL PMMA-head miniature piston pump for microliter reagent addition and small-volume sample dispensing. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
+        "subtitle": "50 μL Miniature Precision Ceramic Piston Pump for Microliter Reagent Addition and Small-Volume Sample Dispensing, with an Acrylic (PMMA) Pump Head",
+        "description": "SM-50-PMMA: 50 μL acrylic (PMMA) head miniature piston pump for microliter reagent addition and small-volume sample dispensing. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
         "specs": []
       }
     }
@@ -734,14 +734,14 @@ export const pumpSeriesSelectionCards = [
     "content": {
       "zh": {
         "title": "SM-100-PMMA",
-        "subtitle": "100 μL Miniature Precision Ceramic Piston Pump for Automated Sampling and Sample Dilution, with a PMMA Pump Head",
-        "description": "SM-100-PMMA: 100 μL PMMA-head miniature piston pump for automated sampling and sample dilution. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
+        "subtitle": "100 μL Miniature Precision Ceramic Piston Pump for Automated Sampling and Sample Dilution, with an Acrylic (PMMA) Pump Head",
+        "description": "SM-100-PMMA: 100 μL acrylic (PMMA) head miniature piston pump for automated sampling and sample dilution. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
         "specs": []
       },
       "en": {
         "title": "SM-100-PMMA",
-        "subtitle": "100 μL Miniature Precision Ceramic Piston Pump for Automated Sampling and Sample Dilution, with a PMMA Pump Head",
-        "description": "SM-100-PMMA: 100 μL PMMA-head miniature piston pump for automated sampling and sample dilution. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
+        "subtitle": "100 μL Miniature Precision Ceramic Piston Pump for Automated Sampling and Sample Dilution, with an Acrylic (PMMA) Pump Head",
+        "description": "SM-100-PMMA: 100 μL acrylic (PMMA) head miniature piston pump for automated sampling and sample dilution. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
         "specs": []
       }
     }
@@ -826,14 +826,14 @@ export const pumpSeriesSelectionCards = [
     "content": {
       "zh": {
         "title": "SM-250-PMMA",
-        "subtitle": "250 μL Miniature Precision Ceramic Piston Pump for Reagent Dispensing and Metered Reaction-Liquid Addition, with a PMMA Pump Head",
-        "description": "SM-250-PMMA: 250 μL PMMA-head miniature piston pump for reagent dispensing and metered reaction-liquid addition. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
+        "subtitle": "250 μL Miniature Precision Ceramic Piston Pump for Reagent Dispensing and Metered Reaction-Liquid Addition, with an Acrylic (PMMA) Pump Head",
+        "description": "SM-250-PMMA: 250 μL acrylic (PMMA) head miniature piston pump for reagent dispensing and metered reaction-liquid addition. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
         "specs": []
       },
       "en": {
         "title": "SM-250-PMMA",
-        "subtitle": "250 μL Miniature Precision Ceramic Piston Pump for Reagent Dispensing and Metered Reaction-Liquid Addition, with a PMMA Pump Head",
-        "description": "SM-250-PMMA: 250 μL PMMA-head miniature piston pump for reagent dispensing and metered reaction-liquid addition. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
+        "subtitle": "250 μL Miniature Precision Ceramic Piston Pump for Reagent Dispensing and Metered Reaction-Liquid Addition, with an Acrylic (PMMA) Pump Head",
+        "description": "SM-250-PMMA: 250 μL acrylic (PMMA) head miniature piston pump for reagent dispensing and metered reaction-liquid addition. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
         "specs": []
       }
     }
@@ -918,14 +918,14 @@ export const pumpSeriesSelectionCards = [
     "content": {
       "zh": {
         "title": "SM-500-PMMA",
-        "subtitle": "500 μL Miniature Precision Ceramic Piston Pump for Reagent Addition and Metered Diluent Dosing, with a PMMA Pump Head",
-        "description": "SM-500-PMMA: 500 μL PMMA-head miniature piston pump for reagent addition and metered diluent dosing. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
+        "subtitle": "500 μL Miniature Precision Ceramic Piston Pump for Reagent Addition and Metered Diluent Dosing, with an Acrylic (PMMA) Pump Head",
+        "description": "SM-500-PMMA: 500 μL acrylic (PMMA) head miniature piston pump for reagent addition and metered diluent dosing. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
         "specs": []
       },
       "en": {
         "title": "SM-500-PMMA",
-        "subtitle": "500 μL Miniature Precision Ceramic Piston Pump for Reagent Addition and Metered Diluent Dosing, with a PMMA Pump Head",
-        "description": "SM-500-PMMA: 500 μL PMMA-head miniature piston pump for reagent addition and metered diluent dosing. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
+        "subtitle": "500 μL Miniature Precision Ceramic Piston Pump for Reagent Addition and Metered Diluent Dosing, with an Acrylic (PMMA) Pump Head",
+        "description": "SM-500-PMMA: 500 μL acrylic (PMMA) head miniature piston pump for reagent addition and metered diluent dosing. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
         "specs": []
       }
     }
@@ -964,14 +964,14 @@ export const pumpSeriesSelectionCards = [
     "content": {
       "zh": {
         "title": "SM-1000-PMMA",
-        "subtitle": "1 mL Miniature Precision Ceramic Piston Pump for Diluent Addition and Buffer Dispensing, with a PMMA Pump Head",
-        "description": "SM-1000-PMMA: 1 mL PMMA-head miniature piston pump for diluent addition and buffer dispensing. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
+        "subtitle": "1 mL Miniature Precision Ceramic Piston Pump for Diluent Addition and Buffer Dispensing, with an Acrylic (PMMA) Pump Head",
+        "description": "SM-1000-PMMA: 1 mL acrylic (PMMA) head miniature piston pump for diluent addition and buffer dispensing. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
         "specs": []
       },
       "en": {
         "title": "SM-1000-PMMA",
-        "subtitle": "1 mL Miniature Precision Ceramic Piston Pump for Diluent Addition and Buffer Dispensing, with a PMMA Pump Head",
-        "description": "SM-1000-PMMA: 1 mL PMMA-head miniature piston pump for diluent addition and buffer dispensing. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
+        "subtitle": "1 mL Miniature Precision Ceramic Piston Pump for Diluent Addition and Buffer Dispensing, with an Acrylic (PMMA) Pump Head",
+        "description": "SM-1000-PMMA: 1 mL acrylic (PMMA) head miniature piston pump for diluent addition and buffer dispensing. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
         "specs": []
       }
     }
@@ -1010,14 +1010,14 @@ export const pumpSeriesSelectionCards = [
     "content": {
       "zh": {
         "title": "TM-50-PMMA",
-        "subtitle": "50 μL Ultra-Compact Precision Ceramic Piston Pump for Microliter Reagent Addition in Compact Fluid Paths, with a PMMA Pump Head",
-        "description": "TM-50-PMMA: 50 μL PMMA-head ultra-compact piston pump for microliter reagent addition in compact fluid paths. Explore 6-40 UNF ports, 2540 steps and OEM integration options.",
+        "subtitle": "50 μL Ultra-Compact Precision Ceramic Piston Pump for Microliter Reagent Addition in Compact Fluid Paths, with an Acrylic (PMMA) Pump Head",
+        "description": "TM-50-PMMA: 50 μL acrylic (PMMA) head ultra-compact piston pump for microliter reagent addition in compact fluid paths. Explore 6-40 UNF ports, 2540 steps and OEM integration options.",
         "specs": []
       },
       "en": {
         "title": "TM-50-PMMA",
-        "subtitle": "50 μL Ultra-Compact Precision Ceramic Piston Pump for Microliter Reagent Addition in Compact Fluid Paths, with a PMMA Pump Head",
-        "description": "TM-50-PMMA: 50 μL PMMA-head ultra-compact piston pump for microliter reagent addition in compact fluid paths. Explore 6-40 UNF ports, 2540 steps and OEM integration options.",
+        "subtitle": "50 μL Ultra-Compact Precision Ceramic Piston Pump for Microliter Reagent Addition in Compact Fluid Paths, with an Acrylic (PMMA) Pump Head",
+        "description": "TM-50-PMMA: 50 μL acrylic (PMMA) head ultra-compact piston pump for microliter reagent addition in compact fluid paths. Explore 6-40 UNF ports, 2540 steps and OEM integration options.",
         "specs": []
       }
     }
@@ -1056,14 +1056,14 @@ export const pumpSeriesSelectionCards = [
     "content": {
       "zh": {
         "title": "TM-100-PMMA",
-        "subtitle": "100 μL Ultra-Compact Precision Ceramic Piston Pump for Sample Dispensing in Small Analytical Modules, with a PMMA Pump Head",
-        "description": "TM-100-PMMA: 100 μL PMMA-head ultra-compact piston pump for sample dispensing in small analytical modules. Explore 6-40 UNF ports, 2540 steps and OEM integration options.",
+        "subtitle": "100 μL Ultra-Compact Precision Ceramic Piston Pump for Sample Dispensing in Small Analytical Modules, with an Acrylic (PMMA) Pump Head",
+        "description": "TM-100-PMMA: 100 μL acrylic (PMMA) head ultra-compact piston pump for sample dispensing in small analytical modules. Explore 6-40 UNF ports, 2540 steps and OEM integration options.",
         "specs": []
       },
       "en": {
         "title": "TM-100-PMMA",
-        "subtitle": "100 μL Ultra-Compact Precision Ceramic Piston Pump for Sample Dispensing in Small Analytical Modules, with a PMMA Pump Head",
-        "description": "TM-100-PMMA: 100 μL PMMA-head ultra-compact piston pump for sample dispensing in small analytical modules. Explore 6-40 UNF ports, 2540 steps and OEM integration options.",
+        "subtitle": "100 μL Ultra-Compact Precision Ceramic Piston Pump for Sample Dispensing in Small Analytical Modules, with an Acrylic (PMMA) Pump Head",
+        "description": "TM-100-PMMA: 100 μL acrylic (PMMA) head ultra-compact piston pump for sample dispensing in small analytical modules. Explore 6-40 UNF ports, 2540 steps and OEM integration options.",
         "specs": []
       }
     }
@@ -1102,14 +1102,14 @@ export const pumpSeriesSelectionCards = [
     "content": {
       "zh": {
         "title": "TM-250-PMMA",
-        "subtitle": "250 μL Ultra-Compact Precision Ceramic Piston Pump for Reaction-Liquid Addition in Compact Analytical Modules, with a PMMA Pump Head",
-        "description": "TM-250-PMMA: 250 μL PMMA-head ultra-compact piston pump for reaction-liquid addition in compact analytical modules. Explore 6-40 UNF ports, 2540 steps and OEM integration options.",
+        "subtitle": "250 μL Ultra-Compact Precision Ceramic Piston Pump for Reaction-Liquid Addition in Compact Analytical Modules, with an Acrylic (PMMA) Pump Head",
+        "description": "TM-250-PMMA: 250 μL acrylic (PMMA) head ultra-compact piston pump for reaction-liquid addition in compact analytical modules. Explore 6-40 UNF ports, 2540 steps and OEM integration options.",
         "specs": []
       },
       "en": {
         "title": "TM-250-PMMA",
-        "subtitle": "250 μL Ultra-Compact Precision Ceramic Piston Pump for Reaction-Liquid Addition in Compact Analytical Modules, with a PMMA Pump Head",
-        "description": "TM-250-PMMA: 250 μL PMMA-head ultra-compact piston pump for reaction-liquid addition in compact analytical modules. Explore 6-40 UNF ports, 2540 steps and OEM integration options.",
+        "subtitle": "250 μL Ultra-Compact Precision Ceramic Piston Pump for Reaction-Liquid Addition in Compact Analytical Modules, with an Acrylic (PMMA) Pump Head",
+        "description": "TM-250-PMMA: 250 μL acrylic (PMMA) head ultra-compact piston pump for reaction-liquid addition in compact analytical modules. Explore 6-40 UNF ports, 2540 steps and OEM integration options.",
         "specs": []
       }
     }
@@ -1148,14 +1148,14 @@ export const pumpSeriesSelectionCards = [
     "content": {
       "zh": {
         "title": "TM-500-PMMA",
-        "subtitle": "500 μL Ultra-Compact Precision Ceramic Piston Pump for Reagent and Buffer Dispensing in Modular Fluid Paths, with a PMMA Pump Head",
-        "description": "TM-500-PMMA: 500 μL PMMA-head ultra-compact piston pump for reagent and buffer dispensing in modular fluid paths. Explore 6-40 UNF ports, 2540 steps and OEM integration options.",
+        "subtitle": "500 μL Ultra-Compact Precision Ceramic Piston Pump for Reagent and Buffer Dispensing in Modular Fluid Paths, with an Acrylic (PMMA) Pump Head",
+        "description": "TM-500-PMMA: 500 μL acrylic (PMMA) head ultra-compact piston pump for reagent and buffer dispensing in modular fluid paths. Explore 6-40 UNF ports, 2540 steps and OEM integration options.",
         "specs": []
       },
       "en": {
         "title": "TM-500-PMMA",
-        "subtitle": "500 μL Ultra-Compact Precision Ceramic Piston Pump for Reagent and Buffer Dispensing in Modular Fluid Paths, with a PMMA Pump Head",
-        "description": "TM-500-PMMA: 500 μL PMMA-head ultra-compact piston pump for reagent and buffer dispensing in modular fluid paths. Explore 6-40 UNF ports, 2540 steps and OEM integration options.",
+        "subtitle": "500 μL Ultra-Compact Precision Ceramic Piston Pump for Reagent and Buffer Dispensing in Modular Fluid Paths, with an Acrylic (PMMA) Pump Head",
+        "description": "TM-500-PMMA: 500 μL acrylic (PMMA) head ultra-compact piston pump for reagent and buffer dispensing in modular fluid paths. Explore 6-40 UNF ports, 2540 steps and OEM integration options.",
         "specs": []
       }
     }

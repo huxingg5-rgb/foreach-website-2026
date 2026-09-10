@@ -132,8 +132,8 @@ function identity(slug: string) {
 
 function materialCopy(material: Material, locale: Locale) {
   if (locale === "en") return material === "PMMA"
-    ? "Pump heads can be selected from PMMA, PCTG, PEEK and other project-assessed materials. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Ports, motor, optical feedback, valves and controller can be configured for fluid compatibility, mounting space and system integration."
-    : "The displayed PEEK pump head can be replaced by a project-matched PMMA or PCTG option. Piston choices include zirconia ceramic, alumina ceramic, PEEK and sapphire. Ports, motor, optical feedback, valves and controls can be configured to the instrument. All wetted materials must be assessed against reagent composition and operating conditions.";
+    ? "Pump heads can be selected from acrylic (PMMA), PCTG copolyester, PEEK and other project-assessed materials. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Ports, motor, optical feedback, valves and controller can be configured for fluid compatibility, mounting space and system integration."
+    : "The displayed PEEK pump head can be replaced by a project-matched acrylic (PMMA) or PCTG copolyester option. Piston choices include zirconia ceramic, alumina ceramic, PEEK and sapphire. Ports, motor, optical feedback, valves and controls can be configured to the instrument. All wetted materials must be assessed against reagent composition and operating conditions.";
   return material === "PMMA"
     ? "支持按项目定制泵头、柱塞及控制配置。泵头材料可选 PMMA、PCTG、PEEK 等，柱塞材料可选氧化锆陶瓷、氧化铝陶瓷、PEEK 或蓝宝石，并可匹配接口、电机、光耦反馈、阀组件和控制器。具体组合根据介质兼容性、安装空间及液路需求确定。"
     : "支持按介质匹配泵头与柱塞材料。除当前 PEEK 泵头外，可选 PMMA、PCTG 等方案；柱塞材料可选氧化锆陶瓷、氧化铝陶瓷、PEEK 或蓝宝石。接口、电机、光耦反馈、阀组件及控制方式可按整机需求配置，具体接液材料组合根据试剂成分和使用条件确定。";
@@ -147,7 +147,7 @@ export function getEaPumpContent(slug: string, locale: Locale) {
     `${model} 采用 ${material} 泵头${material === "PMMA" ? "与陶瓷柱塞" : ""}，标称容量为 ${p.volume}，面向${p.tasks.zh}。支持 1/4-28 UNF 或 M6 接口，满量程${capacity === "2500" ? "按配置" : ""}为 ${p.steps} 步；在规定测试条件下，100% 量程的准确性和重复性均为 ≤0.5%。`,
     materialCopy(material, locale),
   ] : [
-    `${model} is a ${p.volume} precision ${material === "PMMA" ? "ceramic " : ""}piston pump with a ${material} pump head for ${p.tasks.en}. It supports 1/4-28 UNF or M6 ports and ${p.steps} full-stroke steps${capacity === "2500" ? ", depending on the configuration" : ""}. Accuracy and repeatability at 100% full stroke are both ≤0.5% under the specified test conditions.`,
+    `${model} is a ${p.volume} precision ${material === "PMMA" ? "ceramic " : ""}piston pump with ${material === "PMMA" ? "an acrylic (PMMA)" : "a PEEK"} pump head for ${p.tasks.en}. It supports 1/4-28 UNF or M6 ports and ${p.steps} full-stroke steps${capacity === "2500" ? ", depending on the configuration" : ""}. Accuracy and repeatability at 100% full stroke are both ≤0.5% under the specified test conditions.`,
     materialCopy(material, locale),
   ];
   const materialNote = locale === "zh"
@@ -155,7 +155,7 @@ export function getEaPumpContent(slug: string, locale: Locale) {
       ? "当前展示 PMMA 泵头配置，按实际液体核对泵头、柱塞、密封和阀件的兼容性。"
       : "当前展示 PEEK 泵头配置，可围绕特殊试剂的材料需求选型；PEEK 泵头不代表全部接液部件均兼容，也不能单独保证整条液路避光。"
     : material === "PMMA"
-      ? "The displayed configuration uses a PMMA head; compatibility must be checked for the head, piston, seals and valves with the actual fluid."
+      ? "The displayed configuration uses an acrylic (PMMA) head; compatibility must be checked for the head, piston, seals and valves with the actual fluid."
       : "The displayed PEEK head is a material option for specialty reagents. It does not establish compatibility of all wetted parts or light protection for the entire fluid path.";
   const items: ProductApplicationItem[] = p.scenarios.map((key, index) => ({
     title: `${index + 1}. ${SCENARIOS[key].title[locale]}`,
@@ -163,7 +163,7 @@ export function getEaPumpContent(slug: string, locale: Locale) {
   }));
   const applicationDetails: ProductApplicationsContent = {
     tabLabel: locale === "zh" ? "应用" : "Applications",
-    title: locale === "zh" ? `${p.volume} ${material} 泵头精密柱塞泵的典型应用` : `Typical applications of the ${p.volume} ${material}-head precision piston pump`,
+    title: locale === "zh" ? `${p.volume} ${material} 泵头精密柱塞泵的典型应用` : `Typical applications of the ${p.volume} ${material === "PMMA" ? "acrylic (PMMA)" : material} head precision piston pump`,
     intro: locale === "zh" ? [
       "EA 系列面向生化与免疫分析、实验室自动化、样品前处理、水质与环境分析中的定量液体处理，也可围绕生命科学与组学、诊断试剂分装及工业工艺液添加开展项目配置。任务包括试剂加注、样本稀释、标准液加标、缓冲液分配、反应液补加、自动配液、定量清洗和预充。按液路功能，客户也会将其称为试剂泵、稀释泵、加标泵、定量分配泵或试剂分装泵。滴定液添加需进一步验证最小可靠加液量。",
       `${model} 的应用重点为${p.tasks.zh}。${p.fit.zh}${materialNote}下列场景说明设备要求与可匹配能力，实际适配性按工况验证。`,
@@ -188,7 +188,7 @@ export function getEaPumpContent(slug: string, locale: Locale) {
     faq(`${model} 适合哪些定量液体处理任务？`, `该型号面向${p.tasks.zh}。${p.fit.zh}具体适配性结合介质、单次液量与设备节拍确定。`, `Which liquid-handling tasks suit ${model}?`, `This configuration targets ${p.tasks.en}. ${p.fit.en} Suitability depends on the fluid, working volume and instrument timing.`),
     faq(`${p.volume} 容量和每步液量是否代表最小加液量？`, `不是。满量程为 ${p.steps} 步，基础每步液量约 ${p.stepVolume} μL，是容量除以步数的名义关系。实际最小可靠加液量还受背隙、阀动作、气泡、液体和管路影响，需要实测。`, `Do ${p.volume} capacity and volume per step define the minimum dose?`, `No. The ${p.steps} full-stroke steps give a nominal ${p.stepVolume} μL per step. This is capacity divided by steps. The minimum reliable dose also depends on backlash, valves, bubbles, fluid and tubing and requires testing.`),
     faq("准确性和重复性 ≤0.5% 适用于所有加液量吗？", "不是。该指标对应规格书中的满量程测试条件。2% 行程的准确性和重复性分别为 ≤2.0% 和 ≤1.5%，且注释说明采用位移测试方法，不能直接作为实际试剂在任意小液量下的分配保证。", "Does ≤0.5% accuracy and repeatability apply at every dose?", "No. These figures apply at full stroke under the specified conditions. The 2% stroke figures are ≤2.0% accuracy and ≤1.5% repeatability; the footnotes describe displacement testing, not a guarantee of reagent performance at arbitrary small doses."),
-    faq("PMMA 与 PEEK 泵头如何选择，柱塞能否定制？", `${materialNote}泵头可选 PMMA、PCTG、PEEK 等，柱塞可选氧化锆陶瓷、氧化铝陶瓷、PEEK 或蓝宝石；最终组合需同时匹配密封和其他接液部件。`, "How should PMMA and PEEK heads be selected, and can the piston be customized?", `${materialNote} Head options include PMMA, PCTG and PEEK. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Seals and other wetted parts must be considered together.`),
+    faq("PMMA 与 PEEK 泵头如何选择，柱塞能否定制？", `${materialNote}泵头可选 PMMA、PCTG、PEEK 等，柱塞可选氧化锆陶瓷、氧化铝陶瓷、PEEK 或蓝宝石；最终组合需同时匹配密封和其他接液部件。`, "How should acrylic (PMMA) and PEEK heads be selected, and can the piston be customized?", `${materialNote} Head options include acrylic (PMMA), PCTG copolyester and PEEK. Piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Seals and other wetted parts must be considered together.`),
     faq("可以匹配阀、光耦反馈和控制器吗？", "可以按项目匹配电机、初始位置光耦、阀组件及控制方式。规格书另列闭环反馈和 ISC1000 集成驱动器选项，驱动器可提供 RS-232、RS-485、CAN；初始位置检测与运动反馈应按实际配置区分。", "Can valves, optical feedback and a controller be integrated?", "Motor, home-position optical sensing, valves and controls can be configured for the project. Closed-loop feedback and an ISC1000 integrated driver are listed options; the driver supports RS-232, RS-485 and CAN. Home sensing and motion feedback are distinct functions."),
     faq("输送含盐或易结晶试剂时需要注意什么？", "需按试剂成分、浓度和温度核对全部接液材料，并设计停机冲洗和残液处理。EA 规格书列有密封冲洗选项。500 万次预计寿命采用纯水、常温、50 kPa 背压条件，不是任意试剂下的寿命保证。", "What is required for saline or crystallization-prone reagents?", "Check all wetted materials against composition, concentration and temperature and plan shutdown flushing and residual-liquid handling. Seal wash is a listed EA option. The expected five-million-cycle life uses pure water at room temperature and 50 kPa back pressure and is not a universal reagent-life guarantee."),
     faq("如何提交定制与应用选型需求？", `请提供 ${model} 或目标容量、单次加液量、允许误差、完成时间、介质成分、温度、背压、安装空间及控制需求。页面型号标识展示配置，最终材料、接口和部件组合按项目确定。`, "What information is needed for application selection and customization?", `Provide ${model} or the target capacity, dose volume, allowed error, timing, fluid composition, temperature, back pressure, mounting space and control requirements. The page model identifies a display configuration; final materials, ports and assemblies are project-specific.`),

@@ -79,59 +79,59 @@ export const PLUNGER_PUMP_CARD_HEADING_ZH_BY_MODEL: Record<string, string> = {
 export const PLUNGER_PUMP_CARD_HEADING_EN_BY_MODEL: Record<string, string> = {
   /* EA Series */
   "EA-100-PMMA":
-    "100 μL Precision Ceramic Piston Pump for Microliter Liquid Dispensing, Reaction-Liquid Addition and Small-Volume Sample Handling, with a PMMA Pump Head",
+    "100 μL Precision Ceramic Piston Pump for Microliter Liquid Dispensing, Reaction-Liquid Addition and Small-Volume Sample Handling, with an Acrylic (PMMA) Pump Head",
   "EA-100-PEEK":
     "100 μL Precision Piston Pump for Specialty Reagent Dispensing and Small-Volume Reaction Systems, with a PEEK Pump Head for Fluid Paths Requiring Material Compatibility and Light Protection",
   "EA-250-PMMA":
-    "250 μL Precision Ceramic Piston Pump for Sample Dilution, Reagent Dispensing and Small-to-Medium-Volume Reaction-Liquid Handling, with a PMMA Pump Head",
+    "250 μL Precision Ceramic Piston Pump for Sample Dilution, Reagent Dispensing and Small-to-Medium-Volume Reaction-Liquid Handling, with an Acrylic (PMMA) Pump Head",
   "EA-250-PEEK":
     "250 μL Precision Piston Pump for Specialty Reagent Dispensing and Small-to-Medium-Volume Fluid Paths, with a PEEK Pump Head for Applications Requiring Material Compatibility and Light Protection",
   "EA-500-PMMA":
-    "500 μL Precision Ceramic Piston Pump for Routine Reagent Transfer, Sample Dilution and Metered Buffer Dispensing, with a PMMA Pump Head",
+    "500 μL Precision Ceramic Piston Pump for Routine Reagent Transfer, Sample Dilution and Metered Buffer Dispensing, with an Acrylic (PMMA) Pump Head",
   "EA-500-PEEK":
     "500 μL Precision Piston Pump for Specialty Reagent and Medium-Volume Liquid Transfer, with a PEEK Pump Head for Fluid Paths Requiring Material Compatibility and Long-Term Stability",
   "EA-1000-PMMA":
-    "1 mL Precision Ceramic Piston Pump for Reagent Transfer, Diluent Addition and Buffer Dispensing, with a PMMA Pump Head",
+    "1 mL Precision Ceramic Piston Pump for Reagent Transfer, Diluent Addition and Buffer Dispensing, with an Acrylic (PMMA) Pump Head",
   "EA-1000-PEEK":
     "1 mL Precision Piston Pump for Specialty Reagent Transfer and Automated Liquid Handling, with a PEEK Pump Head for Light-Sensitive and Material-Compatible Fluid Paths",
   "EA-2500-PMMA":
-    "2.5 mL Precision Ceramic Piston Pump for Buffer Transfer, Diluent Addition and Wash-Fluid Supply, with a PMMA Pump Head",
+    "2.5 mL Precision Ceramic Piston Pump for Buffer Transfer, Diluent Addition and Wash-Fluid Supply, with an Acrylic (PMMA) Pump Head",
   "EA-2500-PEEK":
     "2.5 mL Precision Piston Pump for Specialty Reagent, Buffer and Wash-Fluid Transfer, with a PEEK Pump Head for Material-Compatible Fluid Paths and Long-Term Operation",
   "EA-5000-PMMA":
-    "5 mL Precision Ceramic Piston Pump for Wash-Fluid Supply, Buffer Transfer and Line Priming, with a PMMA Pump Head",
+    "5 mL Precision Ceramic Piston Pump for Wash-Fluid Supply, Buffer Transfer and Line Priming, with an Acrylic (PMMA) Pump Head",
   "EA-5000-PEEK":
     "5 mL Precision Piston Pump for Specialty Wash Fluids, Buffers and Medium-to-Large-Volume Supply, with a PEEK Pump Head for Fluid Paths Requiring Material Compatibility and Stability",
   "EA-10000-PMMA":
-    "10 mL Precision Ceramic Piston Pump for High-Volume Wash-Fluid Transfer, System Flushing and Line Priming, with a PMMA Pump Head",
+    "10 mL Precision Ceramic Piston Pump for High-Volume Wash-Fluid Transfer, System Flushing and Line Priming, with an Acrylic (PMMA) Pump Head",
   "EA-10000-PEEK":
     "10 mL Precision Piston Pump for High-Volume Specialty Liquid Transfer, System Flushing and Fluid-Line Maintenance, with a PEEK Pump Head for Material-Compatible Fluid Paths and Long-Term Operation",
 
   /* SM Series */
   "SM-50-PMMA":
-    "50 μL Miniature Precision Ceramic Piston Pump for Microliter Reagent Addition and Small-Volume Sample Dispensing, with a PMMA Pump Head",
+    "50 μL Miniature Precision Ceramic Piston Pump for Microliter Reagent Addition and Small-Volume Sample Dispensing, with an Acrylic (PMMA) Pump Head",
   "SM-100-PMMA":
-    "100 μL Miniature Precision Ceramic Piston Pump for Automated Sampling and Sample Dilution, with a PMMA Pump Head",
+    "100 μL Miniature Precision Ceramic Piston Pump for Automated Sampling and Sample Dilution, with an Acrylic (PMMA) Pump Head",
   "SM-100-PEEK":
     "100 μL Miniature Precision Piston Pump for Specialty Reagent Addition and Small-Volume Dispensing, with a PEEK Pump Head",
   "SM-250-PMMA":
-    "250 μL Miniature Precision Ceramic Piston Pump for Reagent Dispensing and Metered Reaction-Liquid Addition, with a PMMA Pump Head",
+    "250 μL Miniature Precision Ceramic Piston Pump for Reagent Dispensing and Metered Reaction-Liquid Addition, with an Acrylic (PMMA) Pump Head",
   "SM-250-PEEK":
     "250 μL Miniature Precision Piston Pump for Specialty Reagent Dispensing and Reaction-Liquid Addition, with a PEEK Pump Head",
   "SM-500-PMMA":
-    "500 μL Miniature Precision Ceramic Piston Pump for Reagent Addition and Metered Diluent Dosing, with a PMMA Pump Head",
+    "500 μL Miniature Precision Ceramic Piston Pump for Reagent Addition and Metered Diluent Dosing, with an Acrylic (PMMA) Pump Head",
   "SM-1000-PMMA":
-    "1 mL Miniature Precision Ceramic Piston Pump for Diluent Addition and Buffer Dispensing, with a PMMA Pump Head",
+    "1 mL Miniature Precision Ceramic Piston Pump for Diluent Addition and Buffer Dispensing, with an Acrylic (PMMA) Pump Head",
 
   /* TM Series */
   "TM-50-PMMA":
-    "50 μL Ultra-Compact Precision Ceramic Piston Pump for Microliter Reagent Addition in Compact Fluid Paths, with a PMMA Pump Head",
+    "50 μL Ultra-Compact Precision Ceramic Piston Pump for Microliter Reagent Addition in Compact Fluid Paths, with an Acrylic (PMMA) Pump Head",
   "TM-100-PMMA":
-    "100 μL Ultra-Compact Precision Ceramic Piston Pump for Sample Dispensing in Small Analytical Modules, with a PMMA Pump Head",
+    "100 μL Ultra-Compact Precision Ceramic Piston Pump for Sample Dispensing in Small Analytical Modules, with an Acrylic (PMMA) Pump Head",
   "TM-250-PMMA":
-    "250 μL Ultra-Compact Precision Ceramic Piston Pump for Reaction-Liquid Addition in Compact Analytical Modules, with a PMMA Pump Head",
+    "250 μL Ultra-Compact Precision Ceramic Piston Pump for Reaction-Liquid Addition in Compact Analytical Modules, with an Acrylic (PMMA) Pump Head",
   "TM-500-PMMA":
-    "500 μL Ultra-Compact Precision Ceramic Piston Pump for Reagent and Buffer Dispensing in Modular Fluid Paths, with a PMMA Pump Head",
+    "500 μL Ultra-Compact Precision Ceramic Piston Pump for Reagent and Buffer Dispensing in Modular Fluid Paths, with an Acrylic (PMMA) Pump Head",
 };
 
 type ProductCardSpecKey =
@@ -171,7 +171,7 @@ const PLUNGER_PUMP_CARD_SPEC_COPY: Record<
     ko: "전체 행정 반복성 ≤0.5% (지정 조건)", ru: "Повторяемость полного хода ≤0,5 % (заданные условия)",
   },
   pmma_head: {
-    zh: "展示泵头材质：PMMA", en: "Displayed pump head: PMMA", es: "Cabezal mostrado: PMMA",
+    zh: "展示泵头材质：PMMA", en: "Displayed pump head: Acrylic (PMMA)", es: "Cabezal mostrado: PMMA",
     fr: "Tête présentée : PMMA", ko: "표시 펌프 헤드: PMMA", ru: "Представленная головка: PMMA",
   },
   repeatability_cv_0_5: {

@@ -245,24 +245,28 @@
       ],
       "faqs": [
         {
-          "question": "DPGL800适用哪些工作介质？",
-          "answer": "DPGL800的正式规格适用于气体和气液混合介质，不包括纯液体输送。实际使用前仍需确认介质与接液材质的兼容性。"
+          "question": "DPGL800可以作为微型真空泵使用吗？",
+          "answer": "可以。在抽真空和负压抽吸应用中，DPGL800可作为微型隔膜真空泵，用于气体抽吸、管路抽空和负压建立。选型时应结合目标真空度、系统容积和允许抽空时间，并确认实际介质与接液材质的兼容性。"
         },
         {
-          "question": "DPGL800的流量和压力参数是多少？",
-          "answer": "DPGL800的单泵头空载气体流量为6 L/min，最大正压为+30 kPa，最大负压为< -90 kPa。实际性能会受到介质状态、管路阻力和设备负载影响。"
+          "question": "6 L/min是抽气流量还是废液排出流量？",
+          "answer": "6 L/min是DPGL800单泵头的空载自由气体流量，不是废液排出流量，也不代表在目标真空度下仍有相同抽气流量。含气废液的实际抽排能力取决于气液状态、吸入条件、管路阻力和出口负载，需要在实际液路中验证。"
         },
         {
-          "question": "DPGL800适合哪些应用？",
-          "answer": "DPGL800适用于气体抽吸、负压建立、含气废液抽排、气液混合介质输送、管路排空，以及需要较强抽吸能力的自动化设备。"
+          "question": "DPGL800能否抽吸含空气的废液？与纯液体输送有什么区别？",
+          "answer": "可以用于含空气的废液抽吸，其工作介质为气体和气液混合物，适合空气与液体同时或间歇进入的抽吸工况。连续输送100%液体不属于其适用工况，应选择液体隔膜泵。废液中的化学成分、浓度和温度还需与接液材质匹配。"
         },
         {
-          "question": "DPGL800可以作为纯液体输送泵使用吗？",
-          "answer": "DPGL800 仅适用于气体和气液混合物，不适用于输送 100% 液体。纯液体工况应选用液体隔膜泵。"
+          "question": "极限真空小于−90 kPa，是否代表实际系统都能达到？",
+          "answer": "不代表。小于−90 kPa是泵的极限负压参数，不能作为所有系统的实际真空度保证。系统泄漏、持续进入的气体、管路阻力、气液状态和出口条件都会影响实际结果。应在设备测量位置和实际工况下验证可达到的真空度。"
         },
         {
-          "question": "DPGL800选型前需要提供哪些参数？",
-          "answer": "建议提供介质状态、气液比例、目标气体流量、所需正压或负压、管路尺寸、连续运行时间、工作电压、接液材质和安装空间。"
+          "question": "如何判断DPGL800能否在规定时间内完成抽空？",
+          "answer": "先确定系统有效容积、初始压力、目标真空度和允许抽空时间，再结合气体流量—压力曲线及容器建压时间曲线评估，并核对管路阻力、泄漏和气液状态。不能直接用系统容积除以6 L/min计算实际抽空时间；最终应在完整系统中测试。"
+        },
+        {
+          "question": "咨询废液抽吸或真空应用选型时，需要提供哪些工况？",
+          "answer": "请提供介质成分、浓度、温度及气液状态（如连续含气或间歇液塞）；系统有效容积、初始压力、目标真空度和允许抽空时间；废液抽吸量及工作节拍；管路内径、长度、高差和出口条件；连续运行时间、供电电压、安装空间及接液材质要求。已知的气液比例、泄漏或持续进气情况也有助于判断。"
         }
       ]
     }
@@ -513,24 +517,28 @@
       ],
       "faqs": [
         {
-          "question": "What media can the DPGL800 transfer?",
-          "answer": "DPGL800 is specified for gas and gas-liquid mixtures. Before use, confirm the compatibility of the medium with the wetted materials."
+          "question": "Can the DPGL800 be used as a miniature vacuum pump?",
+          "answer": "Yes. In evacuation and vacuum aspiration applications, the DPGL800 can serve as a miniature diaphragm vacuum pump for gas aspiration, tubing evacuation, and vacuum generation. Select it according to the target vacuum level, system volume, and allowable evacuation time, and confirm compatibility between the actual medium and wetted materials."
         },
         {
-          "question": "What are the flow and pressure ratings of the DPGL800?",
-          "answer": "The single-head no-load gas flow rate is 6 L/min, the maximum positive pressure is +30 kPa, and the maximum negative pressure is < -90 kPa. Actual performance may be affected by the medium state, tubing resistance, and equipment load."
+          "question": "Does 6 L/min refer to gas flow or waste-liquid discharge flow?",
+          "answer": "6 L/min is the no-load, free-air flow per DPGL800 pump head. It is not a waste-liquid discharge rate, nor does it mean the same gas flow is available at the target vacuum level. Actual aspiration capacity for air-containing waste liquid depends on the gas-liquid condition, inlet conditions, line resistance, and outlet load, and must be verified in the actual fluid circuit."
         },
         {
-          "question": "What applications are suitable for the DPGL800?",
-          "answer": "It can be used for gas suction, vacuum generation, gas-liquid waste extraction, gas-liquid mixture transfer, line evacuation, and automated equipment requiring strong suction performance."
+          "question": "Can the DPGL800 aspirate waste liquid containing air, and how does this differ from liquid-only transfer?",
+          "answer": "Yes. Its specified media are gases and gas-liquid mixtures, making it suitable for aspiration where air and liquid enter together or intermittently. Continuous transfer of 100% liquid is outside its intended operating conditions; select a liquid diaphragm pump for that duty. The waste liquid's chemical composition, concentration, and temperature must also be compatible with the wetted materials."
         },
         {
-          "question": "Can the DPGL800 be used as a pure-liquid transfer pump?",
-          "answer": "Designed for gas and gas-liquid mixtures. It is not suitable for pumping 100% liquid. Use a liquid diaphragm pump for pure-liquid transfer."
+          "question": "Does an ultimate vacuum below −90 kPa mean every system can reach it?",
+          "answer": "No. Below −90 kPa is the pump's ultimate negative-pressure specification, not a guarantee of the vacuum achievable in every system. Leaks, continuous gas ingress, line resistance, gas-liquid conditions, and outlet conditions affect the result. Verify the achievable vacuum at the equipment's measurement point under actual operating conditions."
         },
         {
-          "question": "What information is required before selecting the DPGL800?",
-          "answer": "Provide the medium state, liquid ratio, target flow rate, required vacuum, tubing size, continuous operating time, supply voltage, and installation space."
+          "question": "How can I determine whether the DPGL800 will evacuate a system within the required time?",
+          "answer": "First define the effective system volume, initial pressure, target vacuum level, and allowable evacuation time. Then assess the gas flow–pressure and vessel pressure build-up time curves, accounting for line resistance, leaks, and gas-liquid conditions. Dividing system volume by 6 L/min does not give the actual evacuation time; confirm performance by testing the complete system."
+        },
+        {
+          "question": "What operating information is needed to select a pump for waste aspiration or vacuum applications?",
+          "answer": "Provide the medium's composition, concentration, temperature, and gas-liquid condition, such as continuous air entrainment or intermittent liquid slugs; effective system volume, initial pressure, target vacuum, and allowable evacuation time; waste-liquid volume per cycle and cycle timing; tubing internal diameter, length, elevation difference, and outlet conditions; continuous operating time, supply voltage, installation space, and wetted-material requirements. Include any known gas-liquid ratio, leakage, or continuous gas ingress."
         }
       ]
     }
@@ -781,24 +789,28 @@
       ],
       "faqs": [
         {
-          "question": "¿Qué medios puede manejar la DPGL800?",
-          "answer": "La especificación vigente de la DPGL800 cubre gases y mezclas gas-líquido, no el trasvase de líquidos puros. Antes del uso, debe confirmarse la compatibilidad del medio con los materiales en contacto con el fluido."
+          "question": "¿Puede utilizarse la DPGL800 como bomba de vacío en miniatura?",
+          "answer": "Sí. En aplicaciones de evacuación y aspiración por vacío, la DPGL800 puede funcionar como bomba de vacío de diafragma en miniatura para aspirar gas, evacuar tuberías y generar vacío. Selecciónela según el vacío objetivo, el volumen del sistema y el tiempo de evacuación permitido, y confirme la compatibilidad del fluido con los materiales en contacto."
         },
         {
-          "question": "¿Cuáles son el caudal y las presiones nominales de la DPGL800?",
-          "answer": "El caudal de gas sin carga con un solo cabezal es de 6 L/min, la presión positiva máxima es de +30 kPa y la presión negativa máxima es de < -90 kPa. El rendimiento real puede verse afectado por el estado del medio, la resistencia de las tuberías y la carga del equipo."
+          "question": "¿Los 6 L/min corresponden al caudal de gas o al caudal de descarga de líquido residual?",
+          "answer": "Los 6 L/min corresponden al caudal de aire libre sin carga por cabezal de la DPGL800. No son un caudal de descarga de líquido residual ni garantizan el mismo caudal de gas al vacío objetivo. La capacidad real de aspiración de residuos con aire depende del estado gas-líquido, las condiciones de entrada, la resistencia de las líneas y la carga de salida, y debe verificarse en el circuito real."
         },
         {
-          "question": "¿Para qué aplicaciones es adecuada la DPGL800?",
-          "answer": "Es adecuada para la aspiración de gases, la generación de vacío, la extracción de líquidos residuales con fase gaseosa, la transferencia de mezclas gas-líquido, el vaciado de tuberías y los equipos automatizados que requieren una alta capacidad de aspiración."
+          "question": "¿Puede la DPGL800 aspirar líquido residual con aire y en qué se diferencia de la transferencia de líquido puro?",
+          "answer": "Sí. Los medios especificados son gases y mezclas gas-líquido, por lo que admite aspiración con entrada simultánea o intermitente de aire y líquido. La transferencia continua de líquido al 100% queda fuera de sus condiciones de uso; para ello, seleccione una bomba de diafragma para líquidos. La composición química, concentración y temperatura del residuo deben ser compatibles con los materiales en contacto."
         },
         {
-          "question": "¿Puede utilizarse la DPGL800 como bomba para líquidos puros?",
-          "answer": "La DPGL800 está diseñada para gases y mezclas gas-líquido. No es adecuada para bombear líquido al 100 %. Para el trasvase de líquidos puros, utilice una bomba de diafragma para líquidos."
+          "question": "¿Un vacío límite inferior a −90 kPa significa que cualquier sistema puede alcanzarlo?",
+          "answer": "No. El valor inferior a −90 kPa es la especificación de presión negativa límite de la bomba, no una garantía del vacío alcanzable en cualquier sistema. Las fugas, la entrada continua de gas, la resistencia de las líneas, el estado gas-líquido y las condiciones de salida influyen en el resultado. Verifique el vacío en el punto de medición del equipo y en condiciones reales."
         },
         {
-          "question": "¿Qué datos deben facilitarse antes de seleccionar la DPGL800?",
-          "answer": "Facilite el estado del medio, la proporción gas-líquido, el caudal de gas objetivo, la presión positiva o el vacío requeridos, el tamaño de las tuberías, el tiempo de funcionamiento continuo, la tensión de alimentación, los materiales en contacto con el fluido y el espacio de instalación."
+          "question": "¿Cómo determinar si la DPGL800 puede evacuar el sistema en el tiempo requerido?",
+          "answer": "Defina primero el volumen efectivo del sistema, la presión inicial, el vacío objetivo y el tiempo permitido. Evalúe las curvas de caudal de gas–presión y de evolución de la presión en un recipiente, considerando la resistencia de las líneas, las fugas y el estado gas-líquido. Dividir el volumen entre 6 L/min no proporciona el tiempo real de evacuación; confirme el rendimiento mediante una prueba del sistema completo."
+        },
+        {
+          "question": "¿Qué condiciones deben facilitarse para seleccionar una bomba de aspiración de residuos o de vacío?",
+          "answer": "Indique la composición, concentración, temperatura y estado gas-líquido del medio, como aire continuo o tapones de líquido intermitentes; el volumen efectivo, la presión inicial, el vacío objetivo y el tiempo de evacuación permitido; el volumen residual por ciclo y los tiempos del ciclo; el diámetro interior, longitud y desnivel de las tuberías y las condiciones de salida; el tiempo de funcionamiento continuo, la tensión, el espacio disponible y los requisitos de materiales en contacto. Añada la proporción gas-líquido, las fugas o la entrada continua de gas si se conocen."
         }
       ]
     }
@@ -1049,24 +1061,28 @@
       ],
       "faqs": [
         {
-          "question": "Quels fluides la DPGL800 peut-elle prendre en charge ?",
-          "answer": "La spécification actuelle de la DPGL800 couvre les gaz et les mélanges gaz-liquide, et non le transfert de liquides purs. Avant utilisation, vérifier la compatibilité du fluide avec les matériaux en contact avec celui-ci."
+          "question": "La DPGL800 peut-elle servir de pompe à vide miniature ?",
+          "answer": "Oui. Pour la mise sous vide et l’aspiration sous vide, la DPGL800 peut servir de pompe à vide miniature à membrane pour aspirer du gaz, évacuer les conduites et créer une dépression. La sélection doit tenir compte du vide cible, du volume du système et du temps d’évacuation admissible, ainsi que de la compatibilité du fluide avec les matériaux en contact."
         },
         {
-          "question": "Quels sont le débit et les niveaux de pression de la DPGL800 ?",
-          "answer": "Le débit de gaz à vide avec une seule tête est de 6 L/min, la pression positive maximale est de +30 kPa et la pression négative maximale est de < -90 kPa. Les performances réelles peuvent être influencées par l’état du fluide, la résistance des conduites et la charge de l’équipement."
+          "question": "Les 6 L/min correspondent-ils au débit de gaz ou au débit d’évacuation des effluents ?",
+          "answer": "Les 6 L/min correspondent au débit d’air libre sans charge par tête de la DPGL800. Ce n’est ni un débit d’évacuation de liquide ni la garantie du même débit de gaz au vide cible. La capacité réelle d’aspiration des effluents contenant de l’air dépend de l’état gaz-liquide, des conditions d’entrée, de la résistance des conduites et de la charge en sortie ; elle doit être vérifiée dans le circuit réel."
         },
         {
-          "question": "Pour quelles applications la DPGL800 est-elle adaptée ?",
-          "answer": "Elle convient à l’aspiration de gaz, à la création d’une dépression, à l’extraction d’effluents contenant une phase gazeuse, au transfert de mélanges gaz-liquide, à l’évacuation des conduites et aux équipements automatisés nécessitant une forte capacité d’aspiration."
+          "question": "La DPGL800 peut-elle aspirer des effluents contenant de l’air, et en quoi cela diffère-t-il du transfert de liquide seul ?",
+          "answer": "Oui. Les fluides spécifiés sont les gaz et les mélanges gaz-liquide ; la pompe convient donc à une aspiration avec entrée simultanée ou intermittente d’air et de liquide. Le transfert continu de liquide à 100 % ne fait pas partie de ses conditions d’utilisation ; choisissez une pompe à membrane pour liquides pour cet usage. La composition chimique, la concentration et la température des effluents doivent être compatibles avec les matériaux en contact."
         },
         {
-          "question": "La DPGL800 peut-elle être utilisée comme pompe de transfert de liquide pur ?",
-          "answer": "La DPGL800 est conçue pour les gaz et les mélanges gaz-liquide. Elle ne convient pas au pompage de liquide à 100 %. Pour le transfert de liquide pur, utilisez une pompe à membrane pour liquides."
+          "question": "Un vide limite inférieur à −90 kPa signifie-t-il que tous les systèmes peuvent l’atteindre ?",
+          "answer": "Non. La valeur inférieure à −90 kPa est la spécification de pression négative limite de la pompe, pas une garantie du vide atteignable dans chaque système. Les fuites, l’entrée continue de gaz, la résistance des conduites, l’état gaz-liquide et les conditions de sortie influencent le résultat. Vérifiez le vide au point de mesure de l’équipement dans les conditions réelles de fonctionnement."
         },
         {
-          "question": "Quelles informations faut-il fournir avant de sélectionner la DPGL800 ?",
-          "answer": "Fournir l’état du fluide, la proportion gaz-liquide, le débit de gaz cible, la pression positive ou la dépression requise, les dimensions des conduites, la durée de fonctionnement continu, la tension d’alimentation, les matériaux en contact avec le fluide et l’espace d’installation."
+          "question": "Comment déterminer si la DPGL800 peut évacuer le système dans le temps requis ?",
+          "answer": "Définissez d’abord le volume effectif du système, la pression initiale, le vide cible et le temps admissible. Évaluez ensuite les courbes débit de gaz–pression et d’évolution de la pression dans un récipient, en tenant compte de la résistance des conduites, des fuites et de l’état gaz-liquide. Diviser le volume par 6 L/min ne donne pas le temps réel d’évacuation ; validez les performances sur le système complet."
+        },
+        {
+          "question": "Quelles conditions faut-il préciser pour sélectionner une pompe d’aspiration des effluents ou de mise sous vide ?",
+          "answer": "Précisez la composition, la concentration, la température et l’état gaz-liquide du fluide, par exemple une présence continue d’air ou des bouchons de liquide intermittents ; le volume effectif, la pression initiale, le vide cible et le temps d’évacuation admissible ; le volume d’effluents par cycle et la cadence ; le diamètre intérieur, la longueur et le dénivelé des conduites ainsi que les conditions de sortie ; la durée de fonctionnement continu, la tension, l’espace disponible et les exigences de matériaux en contact. Indiquez aussi le rapport gaz-liquide, les fuites ou l’entrée continue de gaz lorsqu’ils sont connus."
         }
       ]
     }
@@ -1317,24 +1333,28 @@
       ],
       "faqs": [
         {
-          "question": "DPGL800은 어떤 매질에 사용할 수 있습니까?",
-          "answer": "DPGL800의 현재 정식 사양은 기체와 기액 혼합 매질을 대상으로 하며, 순수 액체 이송은 포함하지 않습니다. 사용 전에 매질과 접액 재질의 호환성을 확인해야 합니다."
+          "question": "DPGL800을 소형 진공 펌프로 사용할 수 있나요?",
+          "answer": "네. 진공 배기 및 음압 흡인 용도에서 DPGL800은 가스 흡인, 배관 배기 및 음압 형성을 위한 소형 다이어프램 진공 펌프로 사용할 수 있습니다. 목표 진공도, 시스템 용적, 허용 배기 시간을 기준으로 선정하고 실제 유체와 접액부 재질의 호환성을 확인해야 합니다."
         },
         {
-          "question": "DPGL800의 유량과 압력 사양은 얼마입니까?",
-          "answer": "단일 펌프 헤드 기준 무부하 기체 유량은 6 L/min, 최대 양압은 +30 kPa, 최대 음압은 < -90 kPa입니다. 실제 성능은 매질 상태, 배관 저항 및 장비 부하의 영향을 받을 수 있습니다."
+          "question": "6 L/min은 가스 유량인가요, 폐액 배출 유량인가요?",
+          "answer": "6 L/min은 DPGL800의 헤드당 무부하 자유 공기 유량입니다. 폐액 배출 유량이 아니며, 목표 진공도에서도 같은 가스 유량이 나온다는 의미는 아닙니다. 공기가 포함된 폐액의 실제 흡인 성능은 기액 상태, 흡입 조건, 배관 저항 및 토출 부하에 따라 달라지므로 실제 유체 회로에서 검증해야 합니다."
         },
         {
-          "question": "DPGL800은 어떤 용도에 적합합니까?",
-          "answer": "기체 흡입, 음압 형성, 기체가 포함된 폐액 흡입 배출, 기액 혼합 매질 이송, 배관 배기 및 높은 흡입 성능이 필요한 자동화 장비에 적합합니다."
+          "question": "DPGL800으로 공기가 포함된 폐액을 흡인할 수 있나요? 순수 액체 이송과는 어떻게 다른가요?",
+          "answer": "네. 규정된 작동 유체는 가스와 기액 혼합물이며, 공기와 액체가 동시에 또는 간헐적으로 유입되는 흡인 조건에 적합합니다. 100% 액체를 연속 이송하는 용도는 적용 범위에 포함되지 않으므로 액체 다이어프램 펌프를 선택해야 합니다. 폐액의 화학 성분, 농도 및 온도도 접액부 재질과 호환되어야 합니다."
         },
         {
-          "question": "DPGL800을 순수 액체 이송 펌프로 사용할 수 있습니까?",
-          "answer": "DPGL800은 가스 및 기액 혼합물용으로 설계되었으며 100% 액체 펌핑에는 적합하지 않습니다. 순수 액체 이송에는 액체용 다이어프램 펌프를 사용하십시오."
+          "question": "도달 진공도가 −90 kPa 미만이면 모든 시스템에서 이 값에 도달할 수 있나요?",
+          "answer": "아니요. −90 kPa 미만은 펌프의 최대 음압 사양이며 모든 시스템의 실제 진공도를 보장하는 값은 아닙니다. 누설, 지속적인 가스 유입, 배관 저항, 기액 상태 및 토출 조건이 결과에 영향을 줍니다. 실제 운전 조건에서 장비의 측정 지점을 기준으로 도달 가능한 진공도를 확인해야 합니다."
         },
         {
-          "question": "DPGL800 선정 전에 어떤 정보를 제공해야 합니까?",
-          "answer": "매질 상태, 기액 비율, 목표 기체 유량, 필요한 양압 또는 진공도, 배관 규격, 연속 운전 시간, 공급 전압, 접액 재질 및 설치 공간을 제공하는 것이 좋습니다."
+          "question": "DPGL800이 정해진 시간 안에 배기를 완료할 수 있는지 어떻게 판단하나요?",
+          "answer": "먼저 시스템의 유효 용적, 초기 압력, 목표 진공도 및 허용 배기 시간을 정합니다. 이후 가스 유량–압력 곡선과 용기 압력 형성 시간 곡선을 검토하고 배관 저항, 누설 및 기액 상태를 고려합니다. 시스템 용적을 6 L/min으로 나누어 실제 배기 시간을 계산할 수는 없으며, 최종 성능은 전체 시스템에서 시험해야 합니다."
+        },
+        {
+          "question": "폐액 흡인 또는 진공용 펌프 선정 시 어떤 운전 조건을 제공해야 하나요?",
+          "answer": "유체의 성분, 농도, 온도 및 기액 상태(지속적인 공기 혼입 또는 간헐적인 액체 슬러그 등), 시스템 유효 용적, 초기 압력, 목표 진공도 및 허용 배기 시간, 사이클당 폐액량과 작동 주기를 제공해 주십시오. 배관 내경, 길이, 높이 차와 토출 조건, 연속 운전 시간, 공급 전압, 설치 공간 및 접액부 재질 요구사항도 필요합니다. 알려진 기액 비율, 누설 또는 지속적인 가스 유입 정보도 판단에 도움이 됩니다."
         }
       ]
     }
@@ -1585,24 +1605,28 @@
       ],
       "faqs": [
         {
-          "question": "С какими средами может работать DPGL800?",
-          "answer": "Действующая спецификация DPGL800 предусматривает работу с газом и газожидкостными смесями; перекачивание чистой жидкости в неё не входит. Перед применением необходимо проверить совместимость среды со смачиваемыми материалами."
+          "question": "Можно ли использовать DPGL800 как миниатюрный вакуумный насос?",
+          "answer": "Да. При вакуумировании и вакуумной аспирации DPGL800 может работать как миниатюрный мембранный вакуумный насос для откачки газа, опорожнения трубопроводов и создания разрежения. Выбор должен учитывать целевой вакуум, объём системы и допустимое время откачки, а также совместимость рабочей среды с контактирующими материалами."
         },
         {
-          "question": "Каковы расход и параметры давления DPGL800?",
-          "answer": "Расход газа одной насосной головки без нагрузки составляет 6 L/min, максимальное положительное давление — +30 kPa, максимальное отрицательное давление — < -90 kPa. Фактические характеристики могут зависеть от состояния среды, сопротивления трубопровода и нагрузки оборудования."
+          "question": "6 L/min — это расход газа или расход откачиваемой жидкости?",
+          "answer": "6 L/min — это расход свободного воздуха без нагрузки на одну головку DPGL800. Это не расход отработанной жидкости и не гарантия такого же расхода газа при целевом вакууме. Фактическая производительность при аспирации жидкости с воздухом зависит от газожидкостного состояния, условий на входе, сопротивления линий и нагрузки на выходе; её необходимо проверять в реальном контуре."
         },
         {
-          "question": "Для каких применений подходит DPGL800?",
-          "answer": "Насос подходит для всасывания газа, создания разрежения, откачивания жидких отходов с газовой фазой, транспортирования газожидкостных смесей, опорожнения трубопроводов и автоматизированного оборудования, требующего высокой всасывающей способности."
+          "question": "Может ли DPGL800 откачивать отработанную жидкость с воздухом и чем это отличается от перекачивания только жидкости?",
+          "answer": "Да. Указанные рабочие среды — газы и газожидкостные смеси, поэтому насос подходит для аспирации с одновременным или периодическим поступлением воздуха и жидкости. Непрерывное перекачивание 100% жидкости не входит в предусмотренные условия применения; для него следует выбрать жидкостный мембранный насос. Химический состав, концентрация и температура отходов также должны быть совместимы с контактирующими материалами."
         },
         {
-          "question": "Можно ли использовать DPGL800 как насос для чистой жидкости?",
-          "answer": "DPGL800 предназначен для газа и газожидкостных смесей. Он не подходит для перекачивания 100 % жидкости. Для чистой жидкости используйте жидкостный мембранный насос."
+          "question": "Означает ли предельное разрежение ниже −90 kPa, что его достигнет любая система?",
+          "answer": "Нет. Значение ниже −90 kPa — это характеристика предельного отрицательного давления насоса, а не гарантия вакуума в любой системе. На результат влияют утечки, постоянное поступление газа, сопротивление линий, газожидкостное состояние и условия на выходе. Достижимый вакуум следует проверять в точке измерения оборудования при реальных условиях работы."
         },
         {
-          "question": "Какие данные нужны перед выбором DPGL800?",
-          "answer": "Рекомендуется предоставить сведения о состоянии среды, соотношении газа и жидкости, требуемом расходе газа, необходимом положительном давлении или разрежении, размерах трубок, времени непрерывной работы, напряжении питания, смачиваемых материалах и монтажном пространстве."
+          "question": "Как определить, успеет ли DPGL800 откачать систему за требуемое время?",
+          "answer": "Сначала задайте эффективный объём системы, начальное давление, целевой вакуум и допустимое время откачки. Затем оцените кривые расхода газа в зависимости от давления и изменения давления в ёмкости во времени с учётом сопротивления линий, утечек и газожидкостного состояния. Деление объёма на 6 L/min не даёт фактического времени откачки; окончательную проверку проводят на полной системе."
+        },
+        {
+          "question": "Какие рабочие условия нужно указать для подбора насоса для аспирации отходов или вакуумирования?",
+          "answer": "Укажите состав, концентрацию, температуру и газожидкостное состояние среды, например постоянную примесь воздуха или периодические жидкостные пробки; эффективный объём системы, начальное давление, целевой вакуум и допустимое время откачки; объём отходов за цикл и длительность цикла; внутренний диаметр, длину и перепад высот трубопроводов, условия на выходе; время непрерывной работы, напряжение питания, место для монтажа и требования к контактирующим материалам. Также полезны известные данные о соотношении газа и жидкости, утечках или постоянном поступлении газа."
         }
       ]
     }

@@ -73,7 +73,7 @@ function ArticleFigure({
       />
       <figcaption>
         {caption}
-        {src.includes("/pump-application-guides/") ? (
+        {src.includes("/pump-application-guides/") || src.includes("/pump-diagnostics/") ? (
           <> <a href={src} target="_blank" rel="noreferrer">{{ "zh-CN": "查看大图", en: "Open diagram", es: "Abrir diagrama", fr: "Ouvrir le schéma", ko: "도식 크게 보기", ru: "Открыть схему" }[locale]}</a></>
         ) : null}
       </figcaption>

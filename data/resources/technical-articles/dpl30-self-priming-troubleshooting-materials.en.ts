@@ -737,7 +737,7 @@ export const dpl30EpdmPtfeFfkmSelectionEnCopy = {
       blocks: [
         {
           type: "paragraph",
-          text: "PTFE's highly fluorinated structure, strong carbon–fluorine bonds and fluorine shielding around the carbon backbone contribute to its high chemical and thermal stability. This does not mean unlimited compatibility under every condition.",
+          text: "Polytetrafluoroethylene (PTFE) has a highly fluorinated structure. Strong carbon–fluorine bonds and fluorine shielding around the carbon backbone contribute to its high chemical and thermal stability. This does not mean unlimited compatibility under every condition.",
         },
         {
           type: "paragraph",

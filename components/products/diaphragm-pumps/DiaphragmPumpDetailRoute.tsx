@@ -8,6 +8,7 @@ import {
   getDiaphragmPumpSeriesSeoDescription,
 } from "@/data/products/detail/diaphragm-pump-copy";
 import { getDiaphragmPumpApplicationDetails } from "@/data/products/detail/applications/diaphragm-pump-applications";
+import { getDiaphragmPumpProductPhotos } from "@/data/products/detail/diaphragm-pump-product-photos";
 import {
   diaphragmPumpReferenceModels,
   getDiaphragmPumpReferenceModel,
@@ -876,7 +877,9 @@ function adaptToProductDetailClientData(
 
   const mainImageUrl =
     findPreferredDiaphragmMainImageUrl(detail);
+  const productPhotos = getDiaphragmPumpProductPhotos(reference?.copyKey, locale);
   const additionalImages =
+    productPhotos?.map((photo) => photo.src) ?? (
     reference?.copyKey === "dpl30-brushless"
       ? [
           "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushless-2-wire-real-product-photo.webp",
@@ -898,8 +901,9 @@ function adaptToProductDetailClientData(
               "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-600ml-min-brushed-miniature-liquid-diaphragm-pump-front-side.webp",
               "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-600ml-min-brushed-miniature-liquid-diaphragm-pump-rear-angle.webp",
             ]
-          : [];
+          : []);
   const additionalImageAlts =
+    productPhotos?.map((photo) => photo.alt) ?? (
     reference?.copyKey === "dpl30-brushless"
       ? locale === "zh"
         ? [
@@ -942,7 +946,7 @@ function adaptToProductDetailClientData(
                 "FOREACH DPL60 brushed DC miniature liquid diaphragm pump, 0–600 mL/min flow range, front-side view",
                 "FOREACH DPL60 brushed DC micro liquid diaphragm pump, maximum pressure 100 kPa, horizontal rear-side view showing motor terminals",
               ]
-          : [];
+          : []);
 
   const drawing2dUrl = isNeutralSeries
     ? ""

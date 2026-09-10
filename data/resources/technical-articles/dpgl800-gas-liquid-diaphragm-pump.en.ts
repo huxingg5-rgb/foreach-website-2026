@@ -48,7 +48,7 @@ export const dpgl800ArticleEnCopy = {
       ["Media", "Gas and gas-liquid mixtures"], ["Medium / ambient temperature", "+5℃ to +40℃"],
       ["Ports", "G1/8 female thread"], ["Weight", "Approx. 600 g"],
       ["Specified life", "10000 h at rated voltage, continuous operation"],
-      ["Wetted materials", "PPS head; EPDM or PTFE diaphragm and EPDM or FFKM valve, depending on model"],
+      ["Wetted materials", "Polyphenylene sulfide (PPS) head; EPDM or PTFE diaphragm and EPDM or FFKM valve, depending on model"],
     ],
   },
   section5: {

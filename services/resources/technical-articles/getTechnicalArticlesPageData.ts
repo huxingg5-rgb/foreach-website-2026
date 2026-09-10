@@ -1,4 +1,5 @@
 import { getPumpApplicationArticles } from "@/data/resources/technical-articles/pump-application-articles.article";
+import { getPumpDiagnosticsArticles } from "@/data/resources/technical-articles/pump-diagnostics-articles.article";
 /* =========================================================
    getTechnicalArticlesPageData.ts
    恒永达官网｜技术文章列表页数据服务层
@@ -304,6 +305,7 @@ function getTechnicalArticlesSourcePageData(
 // Use the assembled Chinese list so new articles keep the same position in every locale.
 const technicalArticleOrder = new Map(
   [
+    ...getPumpDiagnosticsArticles("zh-CN"),
     ...getPumpApplicationArticles("zh-CN"),
     ...getTechnicalArticlesSourcePageData("zh-CN").articles,
   ].map((article, index) => [article.slug, index]),
@@ -319,7 +321,7 @@ export function getTechnicalArticlesPageData(
     taxonomy: getTechnicalArticleTaxonomy(locale),
     // Keep the withdrawn article in the source archive, outside all public routes and indexes.
     articles: classifyTechnicalArticles(
-      [...getPumpApplicationArticles(locale), ...sourcePageData.articles]
+      [...getPumpDiagnosticsArticles(locale), ...getPumpApplicationArticles(locale), ...sourcePageData.articles]
         .filter(
           (article) => article.slug !== "pressure-flow-material-compatibility",
         )
