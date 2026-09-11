@@ -9,7 +9,7 @@ const installationGuideEnglishData: Omit<InstallationGuidePageData, "locale"> = 
     kicker: "INSTALLATION GUIDE",
     title: "Product Installation and Operating Guides",
     description:
-      "Find installation steps, setup instructions, calibration methods and troubleshooting guidance for FOREACH microfluidic products.",
+      "Find installation steps, setup instructions, calibration methods and troubleshooting guidance for Foreach microfluidic products.",
   },
   search: {
     placeholder: "Enter a product name or model",
@@ -69,7 +69,7 @@ const installationGuideEnglishData: Omit<InstallationGuidePageData, "locale"> = 
   support: {
     title: "Cannot find the guide you need?",
     description:
-      "Send us the product model, application details or drawings if you need help with installation, parameter setup or calibration. The FOREACH technical team will assist you.",
+      "Send us the product model, application details or drawings if you need help with installation, parameter setup or calibration. The Foreach technical team will assist you.",
     buttonText: "Contact Technical Support",
     href: "/contact",
   },
@@ -236,7 +236,7 @@ const installationGuideTranslations: Record<
       kicker: "GUÍAS DE INSTALACIÓN",
       title: "Guías de instalación y funcionamiento de productos",
       description:
-        "Consulte los pasos de instalación, la configuración, los métodos de calibración y la solución de problemas de los productos microfluídicos FOREACH.",
+        "Consulte los pasos de instalación, la configuración, los métodos de calibración y la solución de problemas de los productos microfluídicos Foreach.",
     },
     search: {
       placeholder: "Introduzca un producto o modelo",
@@ -256,7 +256,7 @@ const installationGuideTranslations: Record<
     },
     support: {
       title: "¿Necesita otra guía?",
-      description: "Envíenos el modelo del producto, la aplicación o los detalles del problema y el equipo técnico de FOREACH le ayudará con la instalación, la puesta en marcha o la configuración de parámetros.",
+      description: "Envíenos el modelo del producto, la aplicación o los detalles del problema y el equipo técnico de Foreach le ayudará con la instalación, la puesta en marcha o la configuración de parámetros.",
       buttonText: "Solicitar una guía",
     },
     ui: {
@@ -321,7 +321,7 @@ const installationGuideTranslations: Record<
     hero: {
       kicker: "GUIDES D’INSTALLATION",
       title: "Guides d’installation et d’utilisation des produits",
-      description: "Retrouvez les étapes d’installation, les instructions de configuration, les méthodes d’étalonnage et le dépannage des produits microfluidiques FOREACH.",
+      description: "Retrouvez les étapes d’installation, les instructions de configuration, les méthodes d’étalonnage et le dépannage des produits microfluidiques Foreach.",
     },
     search: {
       placeholder: "Saisissez un produit ou un modèle", buttonText: "Rechercher", recentLabel: "Recherches récentes",
@@ -336,7 +336,7 @@ const installationGuideTranslations: Record<
       "pinch-valve": "Vannes à pincement", sensors: "Capteurs", "quality-control": "Contrôle qualité", needles: "Sondes et aiguilles",
     },
     support: {
-      title: "Besoin d’un autre guide ?", description: "Envoyez-nous le modèle du produit, l’application ou les détails du problème. L’équipe technique FOREACH vous aidera pour l’installation, la mise en service ou le réglage des paramètres.", buttonText: "Demander un guide",
+      title: "Besoin d’un autre guide ?", description: "Envoyez-nous le modèle du produit, l’application ou les détails du problème. L’équipe technique Foreach vous aidera pour l’installation, la mise en service ou le réglage des paramètres.", buttonText: "Demander un guide",
     },
     ui: {
       breadcrumbAriaLabel: "Fil d’Ariane", breadcrumbHome: "Accueil", breadcrumbResources: "Ressources", breadcrumbCurrent: "Guides d’installation",
@@ -394,7 +394,7 @@ const installationGuideTranslations: Record<
   ko: {
     hero: {
       kicker: "설치 가이드", title: "제품 설치 및 작동 가이드",
-      description: "FOREACH 미세유체 제품의 설치 절차, 설정 지침, 교정 방법 및 문제 해결 정보를 확인하세요.",
+      description: "Foreach 미세유체 제품의 설치 절차, 설정 지침, 교정 방법 및 문제 해결 정보를 확인하세요.",
     },
     search: {
       placeholder: "제품명 또는 모델을 입력하세요", buttonText: "검색", recentLabel: "최근 검색",
@@ -408,7 +408,7 @@ const installationGuideTranslations: Record<
       "high-pressure-valve": "고압 밸브", "pinch-valve": "핀치 밸브", sensors: "센서", "quality-control": "품질 관리", needles: "프로브 및 니들",
     },
     support: {
-      title: "다른 가이드가 필요하신가요?", description: "제품 모델, 적용 분야 또는 문제 내용을 보내 주시면 FOREACH 기술팀이 설치, 시운전 또는 파라미터 설정을 지원해 드립니다.", buttonText: "가이드 요청",
+      title: "다른 가이드가 필요하신가요?", description: "제품 모델, 적용 분야 또는 문제 내용을 보내 주시면 Foreach 기술팀이 설치, 시운전 또는 파라미터 설정을 지원해 드립니다.", buttonText: "가이드 요청",
     },
     ui: {
       breadcrumbAriaLabel: "이동 경로", breadcrumbHome: "홈", breadcrumbResources: "자료", breadcrumbCurrent: "설치 가이드",
@@ -466,7 +466,7 @@ const installationGuideTranslations: Record<
   ru: {
     hero: {
       kicker: "РУКОВОДСТВА ПО МОНТАЖУ", title: "Руководства по монтажу и эксплуатации оборудования",
-      description: "Инструкции по монтажу, настройке, калибровке и устранению неисправностей микрофлюидных изделий FOREACH.",
+      description: "Инструкции по монтажу, настройке, калибровке и устранению неисправностей микрофлюидных изделий Foreach.",
     },
     search: {
       placeholder: "Введите название или модель изделия", buttonText: "Найти", recentLabel: "Недавние запросы",
@@ -481,7 +481,7 @@ const installationGuideTranslations: Record<
       "pinch-valve": "Пережимные клапаны", sensors: "Датчики", "quality-control": "Контроль качества", needles: "Зонды и иглы",
     },
     support: {
-      title: "Нужно другое руководство?", description: "Сообщите модель изделия, область применения или подробности проблемы. Технические специалисты FOREACH помогут с монтажом, вводом в эксплуатацию и настройкой параметров.", buttonText: "Запросить руководство",
+      title: "Нужно другое руководство?", description: "Сообщите модель изделия, область применения или подробности проблемы. Технические специалисты Foreach помогут с монтажом, вводом в эксплуатацию и настройкой параметров.", buttonText: "Запросить руководство",
     },
     ui: {
       breadcrumbAriaLabel: "Навигационная цепочка", breadcrumbHome: "Главная", breadcrumbResources: "Ресурсы", breadcrumbCurrent: "Руководства по монтажу",

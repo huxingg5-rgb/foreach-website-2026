@@ -3,9 +3,9 @@ import type { Dpgl800ArticleCopy } from "./dpgl800-gas-liquid-diaphragm-pump.typ
 export const dpgl800ArticleFrCopy = {
   metadata: {
     title: "Comment choisir une pompe à membrane gaz-liquide : débit, vide et temps de mise sous vide du DPGL800",
-    seoTitle: "Comment choisir une pompe à membrane gaz-liquide | DPGL800 | FOREACH",
+    seoTitle: "Comment choisir une pompe à membrane gaz-liquide | DPGL800 | Foreach Technology",
     seoDescription: "Guide DPGL800 gaz-liquide : débit de gaz à vide de 6 L/min, vide ＜-90 kPa, pression 30 kPa et temps de mise sous vide d'une chambre d'essai de 5 L.",
-    coverAlt: "Pompe à membrane gaz-liquide sans balais FOREACH DPGL800, 6 L/min et vide ＜-90 kPa",
+    coverAlt: "Pompe à membrane gaz-liquide sans balais Foreach DPGL800, 6 L/min et vide ＜-90 kPa",
   },
   section1: {
     title: "1. Pourquoi le DPGL800 ne se choisit pas comme une pompe à liquide classique",

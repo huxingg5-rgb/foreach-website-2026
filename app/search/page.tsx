@@ -4,9 +4,9 @@ import { Suspense } from "react";
 import SiteSearchClient from "@/components/search/SiteSearchClient";
 
 export const metadata: Metadata = {
-  title: "全站搜索｜FOREACH 恒永达",
+  title: "全站搜索｜Foreach Technology 恒永达",
   description:
-    "搜索 FOREACH 恒永达产品、型号、兼容型号和产品规格书。",
+    "搜索 Foreach 恒永达产品、型号、兼容型号和产品规格书。",
   robots: {
     index: false,
     follow: true,

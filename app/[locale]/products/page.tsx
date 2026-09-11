@@ -36,29 +36,29 @@ type ProductLocale = (typeof PRODUCT_LOCALES)[number];
 
 const PRODUCT_METADATA: Record<ProductLocale, Metadata> = {
   en: {
-    title: "Precision Fluid Handling Products | FOREACH",
+    title: "Precision Fluid Handling Products | Foreach Technology",
     description:
-      "Explore FOREACH pumps, valves, probes and needles, fittings, tubing, sensors, and control modules for precision fluid handling in IVD, analytical instruments, and laboratory automation.",
+      "Explore Foreach pumps, valves, probes and needles, fittings, tubing, sensors, and control modules for precision fluid handling in IVD, analytical instruments, and laboratory automation.",
   },
   es: {
-    title: "Productos para el manejo preciso de fluidos | FOREACH",
+    title: "Productos para el manejo preciso de fluidos | Foreach Technology",
     description:
-      "Explore bombas, válvulas, agujas, conectores, tubos, sensores y módulos de control FOREACH para el manejo preciso de fluidos en IVD, instrumentación analítica y automatización de laboratorios.",
+      "Explore bombas, válvulas, agujas, conectores, tubos, sensores y módulos de control Foreach para el manejo preciso de fluidos en IVD, instrumentación analítica y automatización de laboratorios.",
   },
   fr: {
-    title: "Produits de gestion précise des fluides | FOREACH",
+    title: "Produits de gestion précise des fluides | Foreach Technology",
     description:
-      "Découvrez les pompes, vannes, aiguilles, raccords, tubes, capteurs et modules de commande FOREACH pour la gestion précise des fluides en IVD, instrumentation analytique et automatisation de laboratoire.",
+      "Découvrez les pompes, vannes, aiguilles, raccords, tubes, capteurs et modules de commande Foreach pour la gestion précise des fluides en IVD, instrumentation analytique et automatisation de laboratoire.",
   },
   ko: {
-    title: "정밀 유체 제어 제품 | FOREACH",
+    title: "정밀 유체 제어 제품 | Foreach Technology",
     description:
-      "IVD, 분석 장비 및 실험실 자동화를 위한 FOREACH 정밀 유체 제어 펌프, 밸브, 니들, 피팅, 튜브, 센서 및 제어 모듈을 확인하세요.",
+      "IVD, 분석 장비 및 실험실 자동화를 위한 Foreach 정밀 유체 제어 펌프, 밸브, 니들, 피팅, 튜브, 센서 및 제어 모듈을 확인하세요.",
   },
   ru: {
-    title: "Компоненты для точного управления жидкостями | FOREACH",
+    title: "Компоненты для точного управления жидкостями | Foreach Technology",
     description:
-      "Ознакомьтесь с насосами, клапанами, иглами, фитингами, трубками, датчиками и модулями управления FOREACH для IVD, аналитических приборов и лабораторной автоматизации.",
+      "Ознакомьтесь с насосами, клапанами, иглами, фитингами, трубками, датчиками и модулями управления Foreach для IVD, аналитических приборов и лабораторной автоматизации.",
   },
 };
 

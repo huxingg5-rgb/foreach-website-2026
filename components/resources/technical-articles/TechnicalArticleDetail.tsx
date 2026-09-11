@@ -211,14 +211,15 @@ function buildTechnicalArticleStructuredData(
     {
       "@type": "Organization",
       "@id": organizationId,
-      name: "Shenzhen FOREACH Technology Co., Ltd.",
+      name: "Foreach Technology",
+      legalName: "深圳市恒永达科技股份有限公司",
       url: `${TECHNICAL_ARTICLE_SITE_ORIGIN}/`,
     },
     {
       "@type": "WebSite",
       "@id": websiteId,
       url: `${TECHNICAL_ARTICLE_SITE_ORIGIN}/`,
-      name: "FOREACH",
+      name: "Foreach Technology",
       publisher: { "@id": organizationId },
     },
     {
@@ -482,7 +483,7 @@ export default function TechnicalArticleDetail({
     coverAlt:
       article.coverAlt ??
       (isDpl60Article
-        ? "FOREACH DPL60 brushed and brushless liquid diaphragm pumps, 600 mL/min"
+        ? "Foreach DPL60 brushed and brushless liquid diaphragm pumps, 600 mL/min"
         : article.title),
     content: article.content.map((block) => ({
       title: block.title,
@@ -664,8 +665,8 @@ export default function TechnicalArticleDetail({
             "PEEK",
             "POM",
             "PSU",
-            "FOREACH EA-500-PMMA",
-            "FOREACH EA-500-PEEK",
+            "Foreach EA-500-PMMA",
+            "Foreach EA-500-PEEK",
           ],
         }
       : isPistonPumpAccuracyArticle
@@ -677,9 +678,9 @@ export default function TechnicalArticleDetail({
             "小体积分液",
           ],
           mentions: [
-            "FOREACH EA精密柱塞泵",
-            "FOREACH SM微型柱塞泵",
-            "FOREACH TM超微型柱塞泵",
+            "Foreach EA精密柱塞泵",
+            "Foreach SM微型柱塞泵",
+            "Foreach TM超微型柱塞泵",
             "最小可靠分液量",
             "液体处理验证",
           ],
@@ -688,9 +689,9 @@ export default function TechnicalArticleDetail({
       ? {
           about: [
             "精密柱塞泵",
-            "FOREACH EA精密柱塞泵",
-            "FOREACH SM微型柱塞泵",
-            "FOREACH TM超微型柱塞泵",
+            "Foreach EA精密柱塞泵",
+            "Foreach SM微型柱塞泵",
+            "Foreach TM超微型柱塞泵",
           ],
           mentions: [
             "柱塞泵工作原理",

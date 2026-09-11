@@ -6,11 +6,11 @@ const ARTICLE_ASSET_BASE =
 export const brushedVsBrushlessDiaphragmPumpMotorLifeZhCopy = {
   metadata: {
     title: "为什么我们会说有刷约3000小时寿命，无刷约10000小时寿命？",
-    seoTitle: "有刷约3000小时、无刷约10000小时：隔膜泵电机寿命为什么不同？｜FOREACH",
+    seoTitle: "有刷约3000小时、无刷约10000小时：隔膜泵电机寿命为什么不同？｜Foreach Technology",
     seoDescription:
       "从机械换向、电子换向、电刷磨损、轴承温升和整泵工况出发，解释微型隔膜泵有刷约3000小时、无刷约10000小时的寿命差异及选型方法。",
     coverImage: `${ARTICLE_ASSET_BASE}/article-cover.webp`,
-    coverAlt: "FOREACH有刷与无刷微型隔膜泵实物对比",
+    coverAlt: "Foreach有刷与无刷微型隔膜泵实物对比",
   },
   deck: "微型隔膜泵有刷版本常见参考寿命约3000小时，无刷版本约10000小时。两者的差异来自换向方式、主要磨损源和实际工况，而不只是电机类型的简单比较。",
   leadBlocks: [

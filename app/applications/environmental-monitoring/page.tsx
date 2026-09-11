@@ -11,7 +11,7 @@ import { getEnvironmentalMonitoringApplicationPageData } from "@/services/applic
 import "./environmental-monitoring-application.css";
 
 export const metadata: Metadata = {
-  title: "环保监测应用领域｜FOREACH 恒永达",
+  title: "环保监测应用领域｜Foreach Technology 恒永达",
   description:
     "恒永达面向环保监测设备提供泵、阀、接头、管材、传感器及液路系统集成支持。",
 };

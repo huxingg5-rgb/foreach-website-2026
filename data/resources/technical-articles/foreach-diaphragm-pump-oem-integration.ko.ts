@@ -2,13 +2,13 @@ import type { DiaphragmPumpEngineeringArticleCopy } from "./diaphragm-pump-engin
 
 export const foreachDiaphragmPumpOemIntegrationKoCopy = {
   "metadata": {
-    "title": "FOREACH 소형 다이어프램 펌프 OEM 통합: 유로 작동점부터 장비 검증과 양산 도입까지",
-    "seoTitle": "FOREACH 다이어프램 펌프 OEM | 선정과 장비 검증",
+    "title": "Foreach 소형 다이어프램 펌프 OEM 통합: 유로 작동점부터 장비 검증과 양산 도입까지",
+    "seoTitle": "Foreach 다이어프램 펌프 OEM | 선정과 장비 검증",
     "seoDescription": "DPL30, DPL60, DPL30H, DPGL800의 유량·압력 계산, 자흡, 접액 재료, 모터 제어, 설치, 시제품 시험 및 양산 도입을 다루는 OEM 기술 가이드.",
     "coverImage": "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-600ml-min-brushless-pwm-miniature-liquid-diaphragm-pump-front-side.webp",
-    "coverAlt": "호스 바브 포트와 모터 구조를 보여 주는 FOREACH DPL60 소형 액체 다이어프램 펌프 실물 사진"
+    "coverAlt": "호스 바브 포트와 모터 구조를 보여 주는 Foreach DPL60 소형 액체 다이어프램 펌프 실물 사진"
   },
-  "deck": "OEM 장비에서 소형 다이어프램 펌프가 안정적으로 작동하려면 유로의 작업, 입출구 조건, 재료 조합, 제어 방식, 장비 구조가 함께 맞아야 합니다. FOREACH DPL30, DPL60, DPL30H, DPGL800을 예로 들어 유량·압력 예산, 기액 상태, 접액 재료와 전기 인터페이스를 검토하고, 후보 구성 선정, 재현 가능한 시제품 검증, 양산 공급 조건 수립 방법을 설명합니다.",
+  "deck": "OEM 장비에서 소형 다이어프램 펌프가 안정적으로 작동하려면 유로의 작업, 입출구 조건, 재료 조합, 제어 방식, 장비 구조가 함께 맞아야 합니다. Foreach DPL30, DPL60, DPL30H, DPGL800을 예로 들어 유량·압력 예산, 기액 상태, 접액 재료와 전기 인터페이스를 검토하고, 후보 구성 선정, 재현 가능한 시제품 검증, 양산 공급 조건 수립 방법을 설명합니다.",
   "leadBlocks": [
     {
       "type": "paragraph",
@@ -16,11 +16,11 @@ export const foreachDiaphragmPumpOemIntegrationKoCopy = {
     },
     {
       "type": "paragraph",
-      "text": "여기서 OEM 통합은 FOREACH 펌프를 장비 내부 부품으로 선정·적용·검증하는 것을 뜻합니다. 표준 모델, 선택 사양, 프로젝트 맞춤 개발은 구분하여 확인해야 합니다. 기술 자료에는 전체 모델명, 유로 경계, 전기·기계 인터페이스, 인수 시험과 변경 요구사항을 담아 연구개발, 구매, 생산, 서비스가 같은 기준을 사용하도록 합니다."
+      "text": "여기서 OEM 통합은 Foreach 펌프를 장비 내부 부품으로 선정·적용·검증하는 것을 뜻합니다. 표준 모델, 선택 사양, 프로젝트 맞춤 개발은 구분하여 확인해야 합니다. 기술 자료에는 전체 모델명, 유로 경계, 전기·기계 인터페이스, 인수 시험과 변경 요구사항을 담아 연구개발, 구매, 생산, 서비스가 같은 기준을 사용하도록 합니다."
     },
     {
       "type": "paragraph",
-      "text": "제품 수치는 말미에 나열한 FOREACH 중국어 사양서에 근거합니다. 계산 예시는 설계 방법 설명용이며 특정 모델의 실측 결과가 아닙니다. 실제 시약, 혼합 매체, 특수 설치 및 운전 주기는 해당 구성과 장비 전체 유로에서 검증해야 합니다."
+      "text": "제품 수치는 말미에 나열한 Foreach 중국어 사양서에 근거합니다. 계산 예시는 설계 방법 설명용이며 특정 모델의 실측 결과가 아닙니다. 실제 시약, 혼합 매체, 특수 설치 및 운전 주기는 해당 구성과 장비 전체 유로에서 검증해야 합니다."
     }
   ],
   "sections": [
@@ -77,7 +77,7 @@ export const foreachDiaphragmPumpOemIntegrationKoCopy = {
       ]
     },
     {
-      "title": "2. FOREACH 네 시리즈를 OEM 후보로 평가하는 방법",
+      "title": "2. Foreach 네 시리즈를 OEM 후보로 평가하는 방법",
       "blocks": [
         {
           "type": "paragraph",
@@ -120,7 +120,7 @@ export const foreachDiaphragmPumpOemIntegrationKoCopy = {
         {
           "type": "figure",
           "src": "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-600ml-min-brushless-pwm-miniature-liquid-diaphragm-pump-front-side.webp",
-          "alt": "펌프 헤드 양쪽의 호스 바브 포트를 보여 주는 FOREACH DPL60 브러시리스 실물 사진",
+          "alt": "펌프 헤드 양쪽의 호스 바브 포트를 보여 주는 Foreach DPL60 브러시리스 실물 사진",
           "width": 1500,
           "height": 1499,
           "caption": "DPL60 사진: 포트, 모터, 헤드의 상대 위치로 호스 경로와 설치 공간을 평가할 수 있습니다. 배선, 설치 치수와 재료 조합은 선택 모델의 자료로 확인해야 합니다."
@@ -135,7 +135,7 @@ export const foreachDiaphragmPumpOemIntegrationKoCopy = {
           "items": [
             {
               "href": "/products/pumps/miniature-diaphragm-pumps/",
-              "label": "FOREACH 소형 다이어프램 펌프와 기본 구성 보기"
+              "label": "Foreach 소형 다이어프램 펌프와 기본 구성 보기"
             }
           ]
         }
@@ -168,7 +168,7 @@ export const foreachDiaphragmPumpOemIntegrationKoCopy = {
         {
           "type": "formula",
           "expression": "M_Q = (Q_available,worst − Q_req) / Q_req × 100%",
-          "note": "Q_available,worst는 정의한 최악 조건의 가용 유량이며 해당 곡선이나 시험으로 구해야 합니다. 실측을 150 mL/min, 요구량을 120 mL/min으로 가정하면 여유는 25 %입니다. 여기의 150 mL/min은 가정값이지 특정 FOREACH 모델의 보증값이 아닙니다."
+          "note": "Q_available,worst는 정의한 최악 조건의 가용 유량이며 해당 곡선이나 시험으로 구해야 합니다. 실측을 150 mL/min, 요구량을 120 mL/min으로 가정하면 여유는 25 %입니다. 여기의 150 mL/min은 가정값이지 특정 Foreach 모델의 보증값이 아닙니다."
         },
         {
           "type": "paragraph",
@@ -302,7 +302,7 @@ export const foreachDiaphragmPumpOemIntegrationKoCopy = {
         {
           "type": "figure",
           "src": "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushless-2-wire-real-product-photo.webp",
-          "alt": "호스 바브, 헤드, 전원선을 보여 주는 FOREACH DPL30 2선 브러시리스 실물 사진",
+          "alt": "호스 바브, 헤드, 전원선을 보여 주는 Foreach DPL30 2선 브러시리스 실물 사진",
           "width": 1200,
           "height": 1200,
           "caption": "DPL30 2선 브러시리스 버전. 호스 내경, 삽입·고정, 굽힘 반경과 배선 하중을 검토해야 하며 사진은 치수도나 배선 정의를 대신하지 않습니다."
@@ -332,7 +332,7 @@ export const foreachDiaphragmPumpOemIntegrationKoCopy = {
         {
           "type": "figure",
           "src": "/images/products/pumps/diaphragm-pumps/dpl30h/images/foreach-dpl30h-300ml-min-brushless-diaphragm-analyzer-wash-pump.webp",
-          "alt": "압축 피팅과 설치 구멍이 보이는 FOREACH DPL30H 고압 브러시리스 실물 사진",
+          "alt": "압축 피팅과 설치 구멍이 보이는 Foreach DPL30H 고압 브러시리스 실물 사진",
           "width": 1500,
           "height": 1500,
           "caption": "DPL30H의 피팅·고정 구멍 위치는 강성 관 경로와 브래킷을 함께 평가합니다. 이번 사양은 외경 6 mm, 내경 4 mm 관입니다. DPL30/DPL60의 호스 연결 방법을 그대로 적용할 수 없습니다."
@@ -390,7 +390,7 @@ export const foreachDiaphragmPumpOemIntegrationKoCopy = {
         {
           "type": "figure",
           "src": "/images/products/pumps/diaphragm-pumps/dpgl800/images/foreach-dpgl800-6l-min-gas-brushless-diaphragm-vacuum-pump.webp",
-          "alt": "듀얼 헤드, 설치 구조, 배관 부속을 보여 주는 FOREACH DPGL800 실물 사진",
+          "alt": "듀얼 헤드, 설치 구조, 배관 부속을 보여 주는 Foreach DPGL800 실물 사진",
           "width": 1500,
           "height": 1500,
           "caption": "DPGL800 사진에는 장착된 연결 부속이 포함됩니다. 이번 사양서의 펌프 자체 포트는 G1/8 암나사입니다. 부속 구성과 두 헤드 연결은 따로 확인해야 합니다."
@@ -710,7 +710,7 @@ export const foreachDiaphragmPumpOemIntegrationKoCopy = {
       "blocks": [
         {
           "type": "paragraph",
-          "text": "FOREACH는 미세유체 핵심 부품과 유로 지원을 제공하며 시제품 검증, 파라미터 조합, 공간·연결·매체·제어 요구에 따른 기술 협의를 안내합니다. OEM 프로젝트는 기존 모델 충족 여부, 구성 조정, 전용 개발 필요성 순서로 평가하는 것이 좋습니다."
+          "text": "Foreach는 미세유체 핵심 부품과 유로 지원을 제공하며 시제품 검증, 파라미터 조합, 공간·연결·매체·제어 요구에 따른 기술 협의를 안내합니다. OEM 프로젝트는 기존 모델 충족 여부, 구성 조정, 전용 개발 필요성 순서로 평가하는 것이 좋습니다."
         },
         {
           "type": "table",
@@ -752,7 +752,7 @@ export const foreachDiaphragmPumpOemIntegrationKoCopy = {
       "blocks": [
         {
           "type": "paragraph",
-          "text": "시제품 합격 후에는 ‘이 샘플이 작동한다’를 ‘후속 공급을 같은 조건으로 인수할 수 있다’로 바꿔야 합니다. 아래는 권장 진행 방법이며 절차와 책임은 장비 제조사와 FOREACH가 프로젝트에 맞춰 정합니다."
+          "text": "시제품 합격 후에는 ‘이 샘플이 작동한다’를 ‘후속 공급을 같은 조건으로 인수할 수 있다’로 바꿔야 합니다. 아래는 권장 진행 방법이며 절차와 책임은 장비 제조사와 Foreach가 프로젝트에 맞춰 정합니다."
         },
         {
           "type": "list",
@@ -772,7 +772,7 @@ export const foreachDiaphragmPumpOemIntegrationKoCopy = {
         },
         {
           "type": "subheading",
-          "title": "FOREACH OEM 요구 제출 시 포함할 정보"
+          "title": "Foreach OEM 요구 제출 시 포함할 정보"
         },
         {
           "type": "table",
@@ -818,7 +818,7 @@ export const foreachDiaphragmPumpOemIntegrationKoCopy = {
       "blocks": [
         {
           "type": "paragraph",
-          "text": "수치는 아래 FOREACH 중국어 사양서에 근거합니다. 파라미터 페이지는 성능 조건, 선정표는 구성, 치수도와 전기 표는 설치에 사용합니다. 주문 전 버전을 확인하고 특수 매체·제어·포트 조정은 해당 구성의 확인 자료를 받아야 합니다."
+          "text": "수치는 아래 Foreach 중국어 사양서에 근거합니다. 파라미터 페이지는 성능 조건, 선정표는 구성, 치수도와 전기 표는 설치에 사용합니다. 주문 전 버전을 확인하고 특수 매체·제어·포트 조정은 해당 구성의 확인 자료를 받아야 합니다."
         },
         {
           "type": "links",
@@ -841,11 +841,11 @@ export const foreachDiaphragmPumpOemIntegrationKoCopy = {
             },
             {
               "href": "/resources/datasheets/",
-              "label": "FOREACH 사양서와 카탈로그"
+              "label": "Foreach 사양서와 카탈로그"
             },
             {
               "href": "/",
-              "label": "FOREACH 미세유체 부품과 기술 지원"
+              "label": "Foreach 미세유체 부품과 기술 지원"
             },
             {
               "href": "/resources/technical-articles/miniature-diaphragm-pump-flow-pulsation-reduction/",
@@ -860,7 +860,7 @@ export const foreachDiaphragmPumpOemIntegrationKoCopy = {
       ]
     }
   ],
-  "faqTitle": "FOREACH 다이어프램 펌프 OEM 기술 FAQ",
+  "faqTitle": "Foreach 다이어프램 펌프 OEM 기술 FAQ",
   "faqItems": [
     {
       "question": "OEM 통합은 반드시 새 펌프 개발이 필요한가요?",
@@ -897,7 +897,7 @@ export const foreachDiaphragmPumpOemIntegrationKoCopy = {
   ],
   "cta": {
     "title": "OEM 유로 조건을 제출하고 적합한 펌프 구성을 검토하세요",
-    "description": "작업, 매체·온도, 목표 유량, 입출구 압력, 운전 주기, 인터페이스·공간, 프로젝트 단계를 알려 주시면 FOREACH와 모델·구성 및 검증 조건을 협의할 수 있습니다.",
+    "description": "작업, 매체·온도, 목표 유량, 입출구 압력, 운전 주기, 인터페이스·공간, 프로젝트 단계를 알려 주시면 Foreach와 모델·구성 및 검증 조건을 협의할 수 있습니다.",
     "contactLabel": "기술 요구 제출",
     "productsLabel": "소형 다이어프램 펌프 보기",
     "productsHref": "/products/pumps/miniature-diaphragm-pumps/"

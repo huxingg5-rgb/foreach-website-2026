@@ -37,14 +37,14 @@ const privacyPolicyCopy: Record<
     eyebrow: "Privacy & Data Protection",
     title: "隐私政策",
     intro:
-      "深圳市恒永达科技股份有限公司（FOREACH）重视您的隐私。本政策说明您访问和使用本网站时，我们如何收集、使用、保存和保护相关信息。",
+      "深圳市恒永达科技股份有限公司（Foreach）重视您的隐私。本政策说明您访问和使用本网站时，我们如何收集、使用、保存和保护相关信息。",
     lastUpdated: "最后更新：2026年7月21日",
     home: "首页",
     sections: [
       {
         title: "1. 本政策的适用范围",
         paragraphs: [
-          "本政策适用于 FOREACH 官方网站以及网站中提供的产品查询、技术工具、资料下载、询盘和联系功能。",
+          "本政策适用于 Foreach 官方网站以及网站中提供的产品查询、技术工具、资料下载、询盘和联系功能。",
           "本政策不适用于通过链接访问的第三方网站、平台或服务。第三方服务将按照其自己的隐私政策处理信息。",
         ],
       },
@@ -71,7 +71,7 @@ const privacyPolicyCopy: Record<
           "生成和管理询盘记录，并安排后续业务或技术沟通。",
           "维护网站安全、排查错误、防止滥用和改善网站性能。",
           "在取得您的同意后，分析页面访问和功能使用情况，以优化网站内容与用户体验。",
-          "履行适用法律法规要求，或维护 FOREACH、客户和其他相关方的合法权益。",
+          "履行适用法律法规要求，或维护 Foreach、客户和其他相关方的合法权益。",
         ],
       },
       {
@@ -139,7 +139,7 @@ const privacyPolicyCopy: Record<
     contact: {
       title: "12. 联系我们",
       intro:
-        "如对本政策、Cookie 设置或个人信息处理有疑问，可通过以下方式联系 FOREACH：",
+        "如对本政策、Cookie 设置或个人信息处理有疑问，可通过以下方式联系 Foreach：",
       companyLabel: "公司",
       company: "深圳市恒永达科技股份有限公司",
       emailLabel: "电子邮箱",
@@ -153,7 +153,7 @@ const privacyPolicyCopy: Record<
     eyebrow: "Privacy & Data Protection",
     title: "Privacy Policy",
     intro:
-      "Shenzhen FOREACH Technology Co., Ltd. (“FOREACH”, “we”, “us” or “our”) respects your privacy. This policy explains how we collect, use, retain and protect information when you visit or use this website.",
+      "Shenzhen FOREACH Technology Co., Ltd. (“Foreach”, “we”, “us” or “our”) respects your privacy. This policy explains how we collect, use, retain and protect information when you visit or use this website.",
     lastUpdated: "Last updated: July 21, 2026",
     home: "Home",
     translationNotice:
@@ -162,7 +162,7 @@ const privacyPolicyCopy: Record<
       {
         title: "1. Scope of this policy",
         paragraphs: [
-          "This policy applies to the FOREACH official website and its product search, technical tools, downloads, inquiry and contact features.",
+          "This policy applies to the Foreach official website and its product search, technical tools, downloads, inquiry and contact features.",
           "It does not govern third-party websites, platforms or services reached through external links. Those services process information under their own privacy policies.",
         ],
       },
@@ -189,7 +189,7 @@ const privacyPolicyCopy: Record<
           "Create and manage inquiry records and arrange business or technical follow-up.",
           "Maintain security, diagnose errors, prevent misuse and improve website performance.",
           "With your consent, analyse page visits and feature usage to improve content and user experience.",
-          "Comply with applicable requirements and protect the lawful interests of FOREACH, our customers and other parties.",
+          "Comply with applicable requirements and protect the lawful interests of Foreach, our customers and other parties.",
         ],
       },
       {
@@ -257,7 +257,7 @@ const privacyPolicyCopy: Record<
     contact: {
       title: "12. Contact us",
       intro:
-        "For questions about this policy, cookie settings or our handling of personal information, contact FOREACH:",
+        "For questions about this policy, cookie settings or our handling of personal information, contact Foreach:",
       companyLabel: "Company",
       company: "Shenzhen FOREACH Technology Co., Ltd.",
       emailLabel: "Email",
@@ -271,7 +271,7 @@ const privacyPolicyCopy: Record<
     eyebrow: "Privacidad y protección de datos",
     title: "Política de privacidad",
     intro:
-      "Shenzhen FOREACH Technology Co., Ltd. (“FOREACH”, “nosotros” o “nuestro”) respeta su privacidad. Esta política explica cómo recopilamos, utilizamos, conservamos y protegemos la información cuando visita o utiliza este sitio web.",
+      "Shenzhen FOREACH Technology Co., Ltd. (“Foreach”, “nosotros” o “nuestro”) respeta su privacidad. Esta política explica cómo recopilamos, utilizamos, conservamos y protegemos la información cuando visita o utiliza este sitio web.",
     lastUpdated: "Última actualización: 21 de julio de 2026",
     home: "Inicio",
     translationNotice:
@@ -280,7 +280,7 @@ const privacyPolicyCopy: Record<
       {
         title: "1. Ámbito de esta política",
         paragraphs: [
-          "Esta política se aplica al sitio web oficial de FOREACH y a sus funciones de búsqueda de productos, herramientas técnicas, descargas, consultas y contacto.",
+          "Esta política se aplica al sitio web oficial de Foreach y a sus funciones de búsqueda de productos, herramientas técnicas, descargas, consultas y contacto.",
           "No se aplica a sitios web, plataformas o servicios de terceros accesibles mediante enlaces externos.",
         ],
       },
@@ -373,7 +373,7 @@ const privacyPolicyCopy: Record<
     contact: {
       title: "12. Contacto",
       intro:
-        "Para preguntas sobre esta política, las cookies o el tratamiento de información personal, contacte con FOREACH:",
+        "Para preguntas sobre esta política, las cookies o el tratamiento de información personal, contacte con Foreach:",
       companyLabel: "Empresa",
       company: "Shenzhen FOREACH Technology Co., Ltd.",
       emailLabel: "Correo electrónico",
@@ -387,7 +387,7 @@ const privacyPolicyCopy: Record<
     eyebrow: "Confidentialité et protection des données",
     title: "Politique de confidentialité",
     intro:
-      "Shenzhen FOREACH Technology Co., Ltd. (« FOREACH », « nous » ou « notre ») respecte votre vie privée. Cette politique décrit la manière dont nous collectons, utilisons, conservons et protégeons les informations lorsque vous utilisez ce site.",
+      "Shenzhen FOREACH Technology Co., Ltd. (« Foreach », « nous » ou « notre ») respecte votre vie privée. Cette politique décrit la manière dont nous collectons, utilisons, conservons et protégeons les informations lorsque vous utilisez ce site.",
     lastUpdated: "Dernière mise à jour : 21 juillet 2026",
     home: "Accueil",
     translationNotice:
@@ -396,7 +396,7 @@ const privacyPolicyCopy: Record<
       {
         title: "1. Champ d’application",
         paragraphs: [
-          "Cette politique s’applique au site officiel de FOREACH et à ses fonctions de recherche de produits, outils techniques, téléchargements, demandes et contacts.",
+          "Cette politique s’applique au site officiel de Foreach et à ses fonctions de recherche de produits, outils techniques, téléchargements, demandes et contacts.",
           "Elle ne régit pas les sites, plateformes ou services tiers accessibles par des liens externes.",
         ],
       },
@@ -489,7 +489,7 @@ const privacyPolicyCopy: Record<
     contact: {
       title: "12. Nous contacter",
       intro:
-        "Pour toute question concernant cette politique, les cookies ou le traitement des informations personnelles, contactez FOREACH :",
+        "Pour toute question concernant cette politique, les cookies ou le traitement des informations personnelles, contactez Foreach :",
       companyLabel: "Société",
       company: "Shenzhen FOREACH Technology Co., Ltd.",
       emailLabel: "E-mail",
@@ -503,7 +503,7 @@ const privacyPolicyCopy: Record<
     eyebrow: "개인정보 및 데이터 보호",
     title: "개인정보 처리방침",
     intro:
-      "Shenzhen FOREACH Technology Co., Ltd.(이하 “FOREACH” 또는 “당사”)는 개인정보를 중요하게 생각합니다. 본 방침은 웹사이트 이용 시 정보를 수집, 이용, 보관 및 보호하는 방법을 설명합니다.",
+      "Shenzhen FOREACH Technology Co., Ltd.(이하 “Foreach” 또는 “당사”)는 개인정보를 중요하게 생각합니다. 본 방침은 웹사이트 이용 시 정보를 수집, 이용, 보관 및 보호하는 방법을 설명합니다.",
     lastUpdated: "최종 업데이트: 2026년 7월 21일",
     home: "홈",
     translationNotice:
@@ -512,7 +512,7 @@ const privacyPolicyCopy: Record<
       {
         title: "1. 적용 범위",
         paragraphs: [
-          "본 방침은 FOREACH 공식 웹사이트와 제품 검색, 기술 도구, 자료 다운로드, 문의 및 연락 기능에 적용됩니다.",
+          "본 방침은 Foreach 공식 웹사이트와 제품 검색, 기술 도구, 자료 다운로드, 문의 및 연락 기능에 적용됩니다.",
           "외부 링크를 통해 방문하는 제3자 웹사이트, 플랫폼 또는 서비스에는 적용되지 않습니다.",
         ],
       },
@@ -605,7 +605,7 @@ const privacyPolicyCopy: Record<
     contact: {
       title: "12. 문의",
       intro:
-        "본 방침, 쿠키 설정 또는 개인정보 처리와 관련된 문의는 FOREACH로 연락해 주십시오.",
+        "본 방침, 쿠키 설정 또는 개인정보 처리와 관련된 문의는 Foreach로 연락해 주십시오.",
       companyLabel: "회사",
       company: "Shenzhen FOREACH Technology Co., Ltd.",
       emailLabel: "이메일",
@@ -619,7 +619,7 @@ const privacyPolicyCopy: Record<
     eyebrow: "Конфиденциальность и защита данных",
     title: "Политика конфиденциальности",
     intro:
-      "Shenzhen FOREACH Technology Co., Ltd. («FOREACH», «мы» или «наш») уважает вашу конфиденциальность. В этой политике описано, как мы собираем, используем, храним и защищаем информацию при использовании сайта.",
+      "Shenzhen FOREACH Technology Co., Ltd. («Foreach», «мы» или «наш») уважает вашу конфиденциальность. В этой политике описано, как мы собираем, используем, храним и защищаем информацию при использовании сайта.",
     lastUpdated: "Последнее обновление: 21 июля 2026 года",
     home: "Главная",
     translationNotice:
@@ -628,7 +628,7 @@ const privacyPolicyCopy: Record<
       {
         title: "1. Область применения",
         paragraphs: [
-          "Политика применяется к официальному сайту FOREACH, поиску продукции, техническим инструментам, загрузкам, запросам и контактным функциям.",
+          "Политика применяется к официальному сайту Foreach, поиску продукции, техническим инструментам, загрузкам, запросам и контактным функциям.",
           "Она не распространяется на сторонние сайты, платформы и сервисы, доступные по внешним ссылкам.",
         ],
       },
@@ -721,7 +721,7 @@ const privacyPolicyCopy: Record<
     contact: {
       title: "12. Связаться с нами",
       intro:
-        "По вопросам политики, Cookie или обработки персональной информации свяжитесь с FOREACH:",
+        "По вопросам политики, Cookie или обработки персональной информации свяжитесь с Foreach:",
       companyLabel: "Компания",
       company: "Shenzhen FOREACH Technology Co., Ltd.",
       emailLabel: "Электронная почта",

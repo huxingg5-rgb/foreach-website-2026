@@ -593,9 +593,9 @@ export default function InstallationGuideClient({
         }
         description={
           isChinesePage
-            ? "如果您不确定产品安装方式、调试步骤或参数设置方法，可以提交产品型号、应用场景或问题说明，FOREACH 技术团队将为您提供支持。"
+            ? "如果您不确定产品安装方式、调试步骤或参数设置方法，可以提交产品型号、应用场景或问题说明，Foreach 技术团队将为您提供支持。"
             : pageData.locale === "en"
-              ? "Send us the product model, application, or issue details, and the FOREACH technical team will help with installation, commissioning, or parameter setup."
+              ? "Send us the product model, application, or issue details, and the Foreach technical team will help with installation, commissioning, or parameter setup."
               : pageData.support.description
         }
         buttonText={

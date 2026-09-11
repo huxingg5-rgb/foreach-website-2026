@@ -338,7 +338,7 @@ export async function generateMetadata({
 
   return {
     title:
-      `${detail.model} ${productTypeName} | FOREACH`,
+      `${detail.model} ${productTypeName} | Foreach Technology`,
 
     description:
       detail.description || "",
@@ -350,7 +350,7 @@ export async function generateMetadata({
 
     ...buildProductSocialMetadata({
       data: detail,
-      title: `${detail.model} ${productTypeName} | FOREACH`,
+      title: `${detail.model} ${productTypeName} | Foreach Technology`,
       description: detail.description || "",
       canonicalUrl: `/${locale}/products/fittings/hard-tube-fittings/${detail.slug}/`,
     }),

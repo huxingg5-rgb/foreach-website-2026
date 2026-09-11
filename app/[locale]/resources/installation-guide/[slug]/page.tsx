@@ -41,8 +41,8 @@ export async function generateMetadata({
 
   if (locale === "en") {
     return {
-      title: "Installation Guide Detail｜FOREACH",
-      description: "FOREACH product installation guide detail page.",
+      title: "Installation Guide Detail｜Foreach Technology",
+      description: "Foreach product installation guide detail page.",
     };
   }
 
@@ -50,9 +50,9 @@ export async function generateMetadata({
   if (!guide) return {};
 
   return {
-    title: `${guide.title}｜FOREACH`,
+    title: `${guide.title}｜Foreach Technology`,
     description: guide.description,
-    openGraph: { title: `${guide.title}｜FOREACH`, description: guide.description },
+    openGraph: { title: `${guide.title}｜Foreach Technology`, description: guide.description },
   };
 }
 

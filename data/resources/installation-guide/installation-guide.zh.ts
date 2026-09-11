@@ -20,7 +20,7 @@ export const installationGuideZhData: InstallationGuidePageData = {
     kicker: "INSTALLATION GUIDE",
     title: "产品安装与使用教程",
     description:
-      "查看 FOREACH 微流体产品的安装步骤、调试说明、校准方法与常见问题处理建议。",
+      "查看 Foreach 微流体产品的安装步骤、调试说明、校准方法与常见问题处理建议。",
   },
 
   search: {
@@ -92,7 +92,7 @@ export const installationGuideZhData: InstallationGuidePageData = {
   support: {
     title: "没有找到对应教程？",
     description:
-      "如果您不确定产品安装方式、参数设置或校准方法，可以提交产品型号、应用场景或图纸资料，FOREACH 技术团队将为您提供支持。",
+      "如果您不确定产品安装方式、参数设置或校准方法，可以提交产品型号、应用场景或图纸资料，Foreach 技术团队将为您提供支持。",
     buttonText: "联系技术支持",
     href: "/contact",
   },

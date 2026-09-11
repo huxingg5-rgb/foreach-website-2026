@@ -27,12 +27,12 @@ export async function generateMetadata({
 
   if (!currentGuide) {
     return {
-      title: "使用教程｜FOREACH 恒永达",
+      title: "使用教程｜Foreach Technology 恒永达",
     };
   }
 
   return {
-    title: `${currentGuide.title}｜使用教程｜FOREACH 恒永达`,
+    title: `${currentGuide.title}｜使用教程｜Foreach Technology 恒永达`,
     description: currentGuide.description,
   };
 }

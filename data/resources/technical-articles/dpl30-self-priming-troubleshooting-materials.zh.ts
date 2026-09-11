@@ -14,11 +14,11 @@ const DPL30_PRODUCT_HREF =
 export const dpl30SelfPrimingDecreaseZhCopy = {
   metadata: {
     title: "300 mL/min微型隔膜液泵为什么用一段时间后自吸能力下降？",
-    seoTitle: "300 mL/min微型隔膜液泵自吸能力下降原因与排查方法｜FOREACH",
+    seoTitle: "300 mL/min微型隔膜液泵自吸能力下降原因与排查方法｜Foreach Technology",
     seoDescription:
       "300 mL/min微型隔膜液泵使用一段时间后自吸高度下降，不一定是电机老化。本文从单向阀密封、入口漏气、蒸气压、吸入阻力和材料变化解释机理，并给出可量化的排查方法。",
     coverImage: DPL30_SELF_PRIMING_COVER,
-    coverAlt: "FOREACH DPL30 300 mL/min微型隔膜液泵",
+    coverAlt: "Foreach DPL30 300 mL/min微型隔膜液泵",
   },
   deck: "自吸下降的直接含义，是泵与吸入液路无法像初始状态那样建立并保持足够低的入口绝对压力。单向阀微漏、吸入侧漏气、管路阻力、介质蒸气压和材料状态都可能造成同一种表象，不能只凭电机仍在转动就判断泵本体正常或失效。",
   leadBlocks: [
@@ -218,11 +218,11 @@ export const dpl30SelfPrimingDecreaseZhCopy = {
 export const dpl30MotorRunsNoFlowZhCopy = {
   metadata: {
     title: "300 mL/min微型隔膜液泵电机在转却不出液，应该先检查哪里？",
-    seoTitle: "微型隔膜液泵电机转但不出液：入口、阀片与背压排查｜FOREACH",
+    seoTitle: "微型隔膜液泵电机转但不出液：入口、阀片与背压排查｜Foreach Technology",
     seoDescription:
       "300 mL/min微型隔膜液泵电机正常旋转却没有液体输出时，如何用入口压力、出口压力、流量和电流区分漏气、堵塞、阀片、背压与驱动问题。",
     coverImage: DPL30_MOTOR_NO_FLOW_COVER,
-    coverAlt: "用于液路故障排查的FOREACH DPL30微型隔膜液泵",
+    coverAlt: "用于液路故障排查的Foreach DPL30微型隔膜液泵",
   },
   deck: "电机在转只能证明驱动系统有动作，不能证明泵腔已经有效充液、单向阀正在整流，也不能证明出口背压处于泵的工作范围。最有效的排查方法，是同时观察入口压力、出口压力、流量和电流。",
   leadBlocks: [
@@ -420,11 +420,11 @@ export const dpl30MotorRunsNoFlowZhCopy = {
 export const dpl30WaterVsReagentZhCopy = {
   metadata: {
     title: "300 mL/min微型隔膜液泵水测正常，换实际试剂后为何流量和自吸变差？",
-    seoTitle: "微型隔膜液泵水测正常、换试剂性能下降的原因｜FOREACH",
+    seoTitle: "微型隔膜液泵水测正常、换试剂性能下降的原因｜Foreach Technology",
     seoDescription:
       "300 mL/min微型隔膜液泵用水正常，换成实际试剂后流量下降、自吸变慢或气泡增加，可能与黏度、蒸气压、温度、析气和材料相容性有关。",
     coverImage: DPL30_WATER_REAGENT_COVER,
-    coverAlt: "用于实际试剂验证的FOREACH DPL30微型隔膜液泵",
+    coverAlt: "用于实际试剂验证的Foreach DPL30微型隔膜液泵",
   },
   deck: "水测通过只能证明泵在该水温、管路、液位、供电和测试时间下表现正常。换成实际试剂后，黏度、密度、蒸气压、表面张力、润湿、析气和材料状态都可能变化，同一台泵的工作点自然会移动。",
   leadBlocks: [
@@ -615,11 +615,11 @@ export const dpl30WaterVsReagentZhCopy = {
 export const dpl30EpdmPtfeFfkmSelectionZhCopy = {
   metadata: {
     title: "300 mL/min微型隔膜液泵的EPDM、PTFE、FFKM怎么选？",
-    seoTitle: "微型隔膜液泵EPDM、PTFE、FFKM材料选型与验证｜FOREACH",
+    seoTitle: "微型隔膜液泵EPDM、PTFE、FFKM材料选型与验证｜Foreach Technology",
     seoDescription:
       "微型隔膜液泵选择EPDM、PTFE或FFKM时，不能只看耐腐蚀等级。本文从材料功能、溶胀、动态密封和ISO/ASTM浸泡验证说明DPL30材料组合如何评估。",
     coverImage: DPL30_WETTED_MATERIALS_COVER,
-    coverAlt: "具有不同接液材料组合的FOREACH DPL30微型隔膜液泵",
+    coverAlt: "具有不同接液材料组合的Foreach DPL30微型隔膜液泵",
   },
   deck: "EPDM、PTFE和FFKM不能简单排成由低到高的材料等级。EPDM和FFKM是弹性体，PTFE是氟聚合物；膜片、阀片和泵头承担的机械任务不同。真正的选型对象不是一个材料名称，而是一整套接液材料与动态泵送结构。",
   leadBlocks: [

@@ -7,7 +7,7 @@ export const brushedVsBrushlessDiaphragmPumpMotorLifeEnCopy =
   createLocalizedMotorArticle("en", {
     metadata: {
       title: "Why Do Brushed Diaphragm Pumps Last Around 3,000 Hours and Brushless Pumps Around 10,000 Hours?",
-      seoTitle: "Brushed vs. Brushless Diaphragm Pump Life: 3,000 vs. 10,000 Hours | FOREACH",
+      seoTitle: "Brushed vs. Brushless Diaphragm Pump Life: 3,000 vs. 10,000 Hours | Foreach Technology",
       seoDescription: "Learn why brushed diaphragm pumps are commonly rated around 3,000 hours and brushless pumps around 10,000 hours, including commutation, brush wear, bearings and operating conditions.",
       coverAlt: "Engineering comparison of brushed and brushless DC motors used in miniature diaphragm pumps",
     },
@@ -82,12 +82,12 @@ export const lifeScienceInstrumentDpl60SelectionEnCopy =
   createLocalizedLifeScienceArticle("en", {
     metadata: {
       title: "How to Select a Miniature Diaphragm Pump for Life-Science Instruments: DPL60 Washing, Drainage and Waste-Fluid Guide",
-      seoTitle: "DPL60 Diaphragm Pump Selection for Life-Science Instrument Fluid Paths | FOREACH",
+      seoTitle: "DPL60 Diaphragm Pump Selection for Life-Science Instrument Fluid Paths | Foreach Technology",
       seoDescription: "Evaluate DPL60 miniature liquid diaphragm pumps for life-science instrument washing, flushing, drainage and waste lines using actual flow, back pressure, self-priming, materials and service-life tests.",
-      coverAlt: "FOREACH DPL60 miniature liquid diaphragm pump for life-science instrument washing and waste-fluid systems",
+      coverAlt: "Foreach DPL60 miniature liquid diaphragm pump for life-science instrument washing and waste-fluid systems",
     },
     deck: "Life-science instruments need more than accurate sample dispensing: they also wash reaction chambers, flush tubing, remove waste, prime lines and circulate liquid. Reliable diaphragm-pump selection depends on complete fluid-path resistance, suction conditions, wetted materials and long-term duty rather than catalog maximum flow alone.",
-    lead: ["Nucleic-acid extraction systems, immunoassay analyzers, cell-analysis platforms and laboratory automation equipment often combine precise metering with rapid fluid transfer. While piston or syringe pumps meter volume, miniature liquid diaphragm pumps commonly handle washing, flushing, draining, priming and circulation.", "Using the FOREACH DPL60 as an example, this guide explains how to evaluate a 600 mL/min-class pump against the actual instrument task, operating point, self-priming conditions, gas-liquid behavior, material compatibility, service life and mechanical integration."],
+    lead: ["Nucleic-acid extraction systems, immunoassay analyzers, cell-analysis platforms and laboratory automation equipment often combine precise metering with rapid fluid transfer. While piston or syringe pumps meter volume, miniature liquid diaphragm pumps commonly handle washing, flushing, draining, priming and circulation.", "Using the Foreach DPL60 as an example, this guide explains how to evaluate a 600 mL/min-class pump against the actual instrument task, operating point, self-priming conditions, gas-liquid behavior, material compatibility, service life and mechanical integration."],
     sections: {
       tasks: {
         title: "1. Define what the diaphragm pump must do inside the instrument",
@@ -99,7 +99,7 @@ export const lifeScienceInstrumentDpl60SelectionEnCopy =
       candidate: {
         title: "2. Why start with a 600 mL/min-class DPL60 diaphragm pump?",
         introduction: "When washing and drainage must finish within a limited cycle time, the DPL60 provides a useful starting point for comparing flow class, pressure capability, package size, electrical power, noise and service life. Its catalog values must still be interpreted within the complete fluid path.",
-        figure: { alt: "FOREACH DPL60 brushless miniature liquid diaphragm pump", caption: "Actual FOREACH DPL60 miniature liquid diaphragm pump; the accompanying system diagrams use technical engineering illustrations." },
+        figure: { alt: "Foreach DPL60 brushless miniature liquid diaphragm pump", caption: "Actual Foreach DPL60 miniature liquid diaphragm pump; the accompanying system diagrams use technical engineering illustrations." },
         headers: ["Selection item", "Representative DPL60 brushless specification", "Engineering interpretation"],
         rows: [["Pump type", "Liquid diaphragm pump", "Suitable for transfer, flushing, drainage, priming and circulation"], ["Rated voltage", "24 V DC ±10%; a 12 V DC ±10% version is also available", "Match the instrument power supply and control method"], ["Rated power", "≤8.4 W", "Check power capacity, wiring voltage drop and thermal dissipation"], ["Free-flow rate", "600 mL/min", "Low-resistance reference flow, not a guaranteed installed flow"], ["Rated pressure", "100 kPa", "Pressure capability limit; do not combine it with free flow as a single operating point"], ["Self-priming lift", "3 mH₂O", "Retest at the lowest liquid level, longest suction line and dry-start condition"], ["Tubing connection", "Compatible with 3.2 mm inside-diameter tubing", "Also verify tube length, bends and the minimum bore of fittings and valves"], ["Representative wetted materials", "PPS pump head; EPDM or PTFE diaphragm; EPDM or FFKM check valve", "Validate every wetted component for the actual fluid, temperature and exposure time"], ["Reference service life", "10,000 h for the brushless version", "Applies under specified voltage, fluid, load and duty-cycle conditions"]],
         conclusion: "These values define an initial selection window, not an equipment-level performance guarantee. Fluid properties, pressure, temperature, installation orientation, switching strategy and manufacturing variation can all alter actual results.",

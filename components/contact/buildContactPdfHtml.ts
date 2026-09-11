@@ -203,7 +203,7 @@ function buildHeaderHtml() {
       <img
         class="pdf-header-graphic"
         src="${PDF_HEADER_GRAPHIC_SRC}"
-        alt="FOREACH request form header"
+        alt="Foreach request form header"
       />
     </header>
   `;
@@ -219,7 +219,7 @@ function buildFooterHtml(pageNumber: number, totalPages: number) {
       <img
         class="pdf-footer-graphic"
         src="${PDF_FOOTER_GRAPHIC_SRC}"
-        alt="FOREACH request form footer"
+        alt="Foreach request form footer"
       />
 
       <div class="pdf-page-number">${pageNumber} / ${totalPages}</div>

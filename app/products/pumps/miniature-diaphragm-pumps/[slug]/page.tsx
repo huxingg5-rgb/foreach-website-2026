@@ -60,7 +60,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return {
       title,
       description,
-      keywords: [heading, "FOREACH", "微型隔膜泵"],
+      keywords: [heading, "Foreach Technology", "微型隔膜泵"],
       alternates: {
         canonical: canonicalPath,
         languages: getDiaphragmPumpLanguageAlternates(slug),
@@ -70,7 +70,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         type: "website",
         locale: "zh_CN",
         url: canonicalPath,
-        siteName: "FOREACH",
+        siteName: "Foreach Technology",
         title,
         description,
       },

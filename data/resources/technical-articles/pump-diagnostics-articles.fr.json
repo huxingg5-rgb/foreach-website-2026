@@ -8,7 +8,7 @@
         "title": "Où va le volume déplacé ?",
         "paragraphs": [
           "Le déplacement idéal correspond à la section efficace du piston multipliée par sa course. Gaz, tuyaux souples et cavités de vanne peuvent en stocker une partie. Le volume utile est celui reçu à destination ; petites courses, première dose après inversion et redémarrage sont particulièrement sensibles.",
-          "À titre d’exemple, une bulle fermée de 10 μL comprimée de 100 à 120 kPa absolus occupe environ 8,33 μL selon un modèle de gaz parfait isotherme. Les 1,67 μL stockés ne constituent ni une erreur mesurée FOREACH ni une perte définitive : ils peuvent ressortir en fin de dose ou au cycle suivant."
+          "À titre d’exemple, une bulle fermée de 10 μL comprimée de 100 à 120 kPa absolus occupe environ 8,33 μL selon un modèle de gaz parfait isotherme. Les 1,67 μL stockés ne constituent ni une erreur mesurée Foreach ni une perte définitive : ils peuvent ressortir en fin de dose ou au cycle suivant."
         ]
       },
       {
@@ -42,8 +42,8 @@
       {
         "title": "Évaluer EAS puis refaire l’essai complet",
         "paragraphs": [
-          "La spécification officielle FOREACH EAS décrit une chambre facilitant l’évacuation de l’air. C’est une piste pour réduire le gaz piégé, pas une garantie pour tout liquide, orientation ou circuit. Vérifiez capacité, interfaces et circuit de vannes dans la spécification officielle.",
-          "La configuration EA-500-PMMA présente 500 μL sur 2000 pas entiers, soit 0,25 μL théorique par pas ; ce n’est pas l’exactitude du liquide délivré. Revalidez réactif réel, volume minimal, première dose, régime établi et redémarrage. La référence Hamilton illustre l’observation pression/gaz, sans impliquer des capteurs équivalents intégrés chez FOREACH."
+          "La spécification officielle Foreach EAS décrit une chambre facilitant l’évacuation de l’air. C’est une piste pour réduire le gaz piégé, pas une garantie pour tout liquide, orientation ou circuit. Vérifiez capacité, interfaces et circuit de vannes dans la spécification officielle.",
+          "La configuration EA-500-PMMA présente 500 μL sur 2000 pas entiers, soit 0,25 μL théorique par pas ; ce n’est pas l’exactitude du liquide délivré. Revalidez réactif réel, volume minimal, première dose, régime établi et redémarrage. La référence Hamilton illustre l’observation pression/gaz, sans impliquer des capteurs équivalents intégrés chez Foreach."
         ]
       }
     ],
@@ -125,7 +125,7 @@
         "title": "Pourquoi attendre après l’arrêt du piston ?",
         "paragraphs": [
           "Le recul crée un volume que le liquide doit remplir à travers une résistance. Gaz et tuyaux élastiques peuvent prolonger remplissage et récupération de pression après l’arrêt. Une commutation immédiate transmet cet état transitoire à l’étape suivante.",
-          "Déterminez l’attente par la récupération de pression et des masses répétables. Les guides Tecan étayent le principe d’un réglage adapté, mais leurs valeurs de plateforme et d’embout ne définissent pas 200 ms ou 500 ms universels pour FOREACH."
+          "Déterminez l’attente par la récupération de pression et des masses répétables. Les guides Tecan étayent le principe d’un réglage adapté, mais leurs valeurs de plateforme et d’embout ne définissent pas 200 ms ou 500 ms universels pour Foreach."
         ]
       },
       {

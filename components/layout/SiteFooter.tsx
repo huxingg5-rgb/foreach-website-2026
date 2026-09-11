@@ -193,7 +193,7 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
               >
                 <div
                   className={styles.socialRow}
-                  aria-label="FOREACH social media"
+                  aria-label="Foreach social media"
                 >
                   {englishSocialLinks.map((item) => (
                     <a
@@ -202,7 +202,7 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
                       key={item.key}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label={"Visit FOREACH on " + item.label}
+                      aria-label={"Visit Foreach on " + item.label}
                       title={item.label}
                     >
                       <img

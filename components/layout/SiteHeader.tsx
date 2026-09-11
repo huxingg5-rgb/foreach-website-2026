@@ -1115,7 +1115,7 @@ const isFittingReplacementDetailPage =
             <img
               className="site-logo-color"
               src="/images/logo/foreach-logo-color.svg"
-              alt="FOREACH"
+              alt="Foreach Technology"
             />
           </Link>
 

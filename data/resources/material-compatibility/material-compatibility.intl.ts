@@ -756,7 +756,7 @@ const intlCopyMap: Record<MaterialCompatibilityIntlLocale, MaterialCompatibility
           kicker: "SELECTION SUPPORT",
           title: "Need help confirming material compatibility?",
           description:
-            "Submit the medium name, concentration, temperature, pressure, and contact time. The FOREACH technical team can help confirm material selection for your application.",
+            "Submit the medium name, concentration, temperature, pressure, and contact time. The Foreach technical team can help confirm material selection for your application.",
           buttonText: "Contact Technical Support",
         },
       },
@@ -852,7 +852,7 @@ const intlCopyMap: Record<MaterialCompatibilityIntlLocale, MaterialCompatibility
           kicker: "SOPORTE DE SELECCIÓN",
           title: "¿Necesita confirmar la compatibilidad del material?",
           description:
-            "Envíe el nombre del medio, la concentración, la temperatura, la presión y el tiempo de contacto. El equipo técnico de FOREACH puede ayudarle a confirmar la selección del material.",
+            "Envíe el nombre del medio, la concentración, la temperatura, la presión y el tiempo de contacto. El equipo técnico de Foreach puede ayudarle a confirmar la selección del material.",
           buttonText: "Contactar soporte técnico",
         },
       },
@@ -948,7 +948,7 @@ const intlCopyMap: Record<MaterialCompatibilityIntlLocale, MaterialCompatibility
           kicker: "SUPPORT DE SÉLECTION",
           title: "Besoin de confirmer la compatibilité du matériau ?",
           description:
-            "Indiquez le nom du milieu, la concentration, la température, la pression et le temps de contact. L’équipe technique FOREACH peut vous aider à confirmer le choix du matériau.",
+            "Indiquez le nom du milieu, la concentration, la température, la pression et le temps de contact. L’équipe technique Foreach peut vous aider à confirmer le choix du matériau.",
           buttonText: "Contacter le support technique",
         },
       },
@@ -1044,7 +1044,7 @@ const intlCopyMap: Record<MaterialCompatibilityIntlLocale, MaterialCompatibility
           kicker: "선정 지원",
           title: "재료 적합성 확인이 필요하신가요?",
           description:
-            "매질명, 농도, 온도, 압력 및 접촉 시간을 보내주시면 FOREACH 기술팀이 적용 조건에 맞는 재료 선정을 확인해 드립니다.",
+            "매질명, 농도, 온도, 압력 및 접촉 시간을 보내주시면 Foreach 기술팀이 적용 조건에 맞는 재료 선정을 확인해 드립니다.",
           buttonText: "기술 지원 문의",
         },
       },
@@ -1140,7 +1140,7 @@ const intlCopyMap: Record<MaterialCompatibilityIntlLocale, MaterialCompatibility
           kicker: "ПОДДЕРЖКА ПОДБОРА",
           title: "Нужно подтвердить совместимость материала?",
           description:
-            "Укажите название среды, концентрацию, температуру, давление и время контакта. Техническая команда FOREACH поможет подтвердить выбор материала для вашего применения.",
+            "Укажите название среды, концентрацию, температуру, давление и время контакта. Техническая команда Foreach поможет подтвердить выбор материала для вашего применения.",
           buttonText: "Связаться с техподдержкой",
         },
       },

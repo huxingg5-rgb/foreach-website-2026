@@ -26,7 +26,7 @@ export const ivdWasteLiquidPumpSelectionCopies = {
     metadata: {
       title: "IVD 废液泵怎么选？液体隔膜泵还是气液混合隔膜泵？",
       seoTitle:
-        "IVD 废液泵选型：液体隔膜泵还是气液混合隔膜泵？｜FOREACH",
+        "IVD 废液泵选型：液体隔膜泵还是气液混合隔膜泵？｜Foreach Technology",
       seoDescription:
         "按空气是否进入废液管路、真空度、系统容积、排空时间、管路阻力和介质兼容性，判断 IVD 废液抽吸应选液体隔膜泵还是气液混合隔膜泵。",
       coverImage: `${IMAGE_BASE}/ivd-waste-aspiration-pump-selection-cover.webp`,
@@ -282,7 +282,7 @@ export const ivdWasteLiquidPumpSelectionCopies = {
         blocks: [
           {
             type: "paragraph",
-            text: "IVD 废液管路若保持连续液体状态，可从 DPL30、DPL60 等液体隔膜泵候选开始；若会吸入空气、需要抽空或建立真空，则应评估气液混合隔膜泵。DPGL800 是 FOREACH 当前可评估的一款 24 V 无刷气体/气液混合候选，但必须用真实系统容积、目标真空、排空时间、阻力和废液介质完成验证。",
+            text: "IVD 废液管路若保持连续液体状态，可从 DPL30、DPL60 等液体隔膜泵候选开始；若会吸入空气、需要抽空或建立真空，则应评估气液混合隔膜泵。DPGL800 是 Foreach 当前可评估的一款 24 V 无刷气体/气液混合候选，但必须用真实系统容积、目标真空、排空时间、阻力和废液介质完成验证。",
           },
         ],
       },
@@ -313,7 +313,7 @@ export const ivdWasteLiquidPumpSelectionCopies = {
       title:
         "How to Select an IVD Waste Liquid Pump: Liquid or Gas-Liquid Diaphragm Pump?",
       seoTitle:
-        "IVD Waste Liquid Pump: Liquid vs Gas-Liquid | FOREACH",
+        "IVD Waste Liquid Pump: Liquid vs Gas-Liquid | Foreach Technology",
       seoDescription:
         "Select an IVD waste liquid pump by air ingestion, vacuum, system volume, evacuation time, line resistance, medium state and material compatibility.",
       coverImage: `${IMAGE_BASE}/ivd-waste-aspiration-pump-selection-cover.webp`,
@@ -567,7 +567,7 @@ export const ivdWasteLiquidPumpSelectionCopies = {
         blocks: [
           {
             type: "paragraph",
-            text: "If an IVD waste line remains continuously liquid-filled, start with liquid diaphragm pump candidates such as DPL30 or DPL60. If it ingests air, evacuates tubing or creates vacuum, evaluate a gas-liquid diaphragm pump. DPGL800 is one current FOREACH 24 V brushless gas/gas-liquid candidate, but it must be validated against real system volume, target vacuum, evacuation time, resistance and waste medium.",
+            text: "If an IVD waste line remains continuously liquid-filled, start with liquid diaphragm pump candidates such as DPL30 or DPL60. If it ingests air, evacuates tubing or creates vacuum, evaluate a gas-liquid diaphragm pump. DPGL800 is one current Foreach 24 V brushless gas/gas-liquid candidate, but it must be validated against real system volume, target vacuum, evacuation time, resistance and waste medium.",
           },
         ],
       },
@@ -596,7 +596,7 @@ export const ivdWasteLiquidPumpSelectionCopies = {
   es: {
     metadata: {
       title: "Cómo seleccionar una bomba de residuos IVD: ¿diafragma para líquido o gas-líquido?",
-      seoTitle: "Selección de bomba de residuos IVD: líquido vs gas-líquido | FOREACH",
+      seoTitle: "Selección de bomba de residuos IVD: líquido vs gas-líquido | Foreach Technology",
       seoDescription: "Seleccione una bomba de residuos o aspiración IVD según la entrada de aire, vacío, volumen del sistema, tiempo de evacuación, resistencia y compatibilidad.",
       coverImage: `${IMAGE_BASE}/ivd-waste-aspiration-pump-selection-cover.webp`,
       coverAlt: "Ruta de aspiración de residuos IVD desde el pozo de lavado, a través de una bomba de diafragma gas-líquido, hasta una botella sellada",
@@ -657,7 +657,7 @@ export const ivdWasteLiquidPumpSelectionCopies = {
         { type: "table", headers: ["Error", "Enfoque correcto"], rows: [["Elegir solo por caudal líquido", "Definir primero la entrada de aire y los cambios de fase"], ["Dividir 6 L/min entre 600 mL/min", "Separar caudal de gas sin carga y clase líquida"], ["Mirar solo el vacío máximo", "Validar volumen, vacío objetivo y tiempo"], ["Ignorar aspiración seca y re-cebado", "Probar Liquid → Air → Liquid"], ["Revisar solo materiales de la bomba", "Cubrir bomba, tubos, válvulas, racores, filtro y recipiente"], ["Tratar limpieza y residuos como una tarea", "Separar requisitos y aceptación"]] },
       ] },
       { title: "Conclusión: la entrada de aire suele decidir el tipo antes que los mL/min nominales", blocks: [
-        { type: "paragraph", text: "Si la línea de residuos permanece llena, empiece por candidatas para líquido como DPL30 o DPL60. Si entra aire, se evacua el tubo o se genera vacío, evalúe una bomba gas-líquido. DPGL800 es una candidata FOREACH actual de 24 V sin escobillas, pero debe validarse con volumen, vacío, tiempo, resistencia y residuos reales." },
+        { type: "paragraph", text: "Si la línea de residuos permanece llena, empiece por candidatas para líquido como DPL30 o DPL60. Si entra aire, se evacua el tubo o se genera vacío, evalúe una bomba gas-líquido. DPGL800 es una candidata Foreach actual de 24 V sin escobillas, pero debe validarse con volumen, vacío, tiempo, resistencia y residuos reales." },
       ] },
     ],
     faqTitle: "Preguntas frecuentes sobre bombas de residuos IVD",
@@ -678,7 +678,7 @@ export const ivdWasteLiquidPumpSelectionCopies = {
   fr: {
     metadata: {
       title: "Comment choisir une pompe d’effluents IVD : membrane liquide ou gaz-liquide ?",
-      seoTitle: "Pompe d’effluents IVD : liquide ou gaz-liquide | FOREACH",
+      seoTitle: "Pompe d’effluents IVD : liquide ou gaz-liquide | Foreach Technology",
       seoDescription: "Choisissez une pompe d’effluents ou d’aspiration IVD selon l’entrée d’air, le vide, le volume, le temps d’évacuation, les pertes de charge et la compatibilité.",
       coverImage: `${IMAGE_BASE}/ivd-waste-aspiration-pump-selection-cover.webp`,
       coverAlt: "Circuit d’aspiration des effluents IVD reliant le puits de lavage à un flacon fermé via une pompe à membrane gaz-liquide",
@@ -739,7 +739,7 @@ export const ivdWasteLiquidPumpSelectionCopies = {
         { type: "table", headers: ["Erreur", "Bonne approche"], rows: [["Choisir seulement par débit liquide", "Définir d’abord l’entrée d’air et les transitions"], ["Diviser 6 L/min par 600 mL/min", "Séparer débit de gaz à vide et classe liquide"], ["Ne lire que le vide maximal", "Valider volume, vide cible et temps"], ["Ignorer aspiration sèche et réamorçage", "Tester Liquid → Air → Liquid"], ["Vérifier seulement la pompe", "Inclure tubes, vannes, raccords, filtre et récipient"], ["Confondre lavage et effluents", "Séparer exigences et acceptation"]] },
       ] },
       { title: "Conclusion : l’entrée d’air détermine souvent le type avant les mL/min nominaux", blocks: [
-        { type: "paragraph", text: "Si la conduite reste pleine, commencez par DPL30 ou DPL60 comme candidates liquides. Si elle aspire de l’air, évacue la conduite ou crée du vide, évaluez une pompe gaz-liquide. DPGL800 est une candidate FOREACH actuelle, 24 V sans balais, à valider avec le volume, le vide, le temps, la résistance et l’effluent réels." },
+        { type: "paragraph", text: "Si la conduite reste pleine, commencez par DPL30 ou DPL60 comme candidates liquides. Si elle aspire de l’air, évacue la conduite ou crée du vide, évaluez une pompe gaz-liquide. DPGL800 est une candidate Foreach actuelle, 24 V sans balais, à valider avec le volume, le vide, le temps, la résistance et l’effluent réels." },
       ] },
     ],
     faqTitle: "FAQ sur les pompes d’effluents IVD",
@@ -760,7 +760,7 @@ export const ivdWasteLiquidPumpSelectionCopies = {
   ko: {
     metadata: {
       title: "IVD 폐액 펌프 선정: 액체용 또는 기액 혼합 다이어프램 펌프?",
-      seoTitle: "IVD 폐액 펌프 선정: 액체용 vs 기액 혼합 | FOREACH",
+      seoTitle: "IVD 폐액 펌프 선정: 액체용 vs 기액 혼합 | Foreach Technology",
       seoDescription: "공기 유입, 진공도, 시스템 체적, 배기 시간, 배관 저항과 재질 호환성을 기준으로 IVD 폐액 및 흡인 펌프를 선정합니다.",
       coverImage: `${IMAGE_BASE}/ivd-waste-aspiration-pump-selection-cover.webp`,
       coverAlt: "프로브 세척조에서 기액 혼합 다이어프램 펌프를 거쳐 밀폐 폐액병으로 이어지는 IVD 폐액 흡인 유로",
@@ -821,7 +821,7 @@ export const ivdWasteLiquidPumpSelectionCopies = {
         { type: "table", headers: ["오류", "올바른 접근"], rows: [["액체 유량만으로 선정", "공기 유입과 상태 전환을 먼저 정의"], ["6 L/min을 600 mL/min과 나눔", "무부하 기체 유량과 액체 등급 분리"], ["최대 진공만 확인", "체적, 목표 진공과 시간을 함께 검증"], ["흡기와 재자흡 무시", "Liquid → Air → Liquid 주기 시험"], ["펌프 재질만 검토", "배관, 밸브, 피팅, 필터와 용기 포함"], ["세척과 폐액을 같은 작업으로 취급", "요구사항과 합격 기준 분리"]] },
       ] },
       { title: "결론: 공기 유입 여부가 공칭 mL/min보다 먼저 펌프 유형을 결정한다", blocks: [
-        { type: "paragraph", text: "폐액 배관이 계속 액체로 채워지면 DPL30 또는 DPL60 같은 액체용 후보부터 검토합니다. 공기를 흡입하거나 배관을 비우고 진공을 만들면 기액 혼합 펌프를 검토합니다. DPGL800은 FOREACH의 현재 24 V 무브러시 후보 중 하나지만 실제 체적, 진공, 시간, 저항과 폐액으로 검증해야 합니다." },
+        { type: "paragraph", text: "폐액 배관이 계속 액체로 채워지면 DPL30 또는 DPL60 같은 액체용 후보부터 검토합니다. 공기를 흡입하거나 배관을 비우고 진공을 만들면 기액 혼합 펌프를 검토합니다. DPGL800은 Foreach의 현재 24 V 무브러시 후보 중 하나지만 실제 체적, 진공, 시간, 저항과 폐액으로 검증해야 합니다." },
       ] },
     ],
     faqTitle: "IVD 폐액 펌프 선정 FAQ",
@@ -842,7 +842,7 @@ export const ivdWasteLiquidPumpSelectionCopies = {
   ru: {
     metadata: {
       title: "Как выбрать насос отходов IVD: жидкостный или газожидкостный мембранный?",
-      seoTitle: "Насос отходов IVD: жидкостный или газожидкостный | FOREACH",
+      seoTitle: "Насос отходов IVD: жидкостный или газожидкостный | Foreach Technology",
       seoDescription: "Выбор насоса отходов и аспирации IVD по поступлению воздуха, вакууму, объёму, времени откачки, сопротивлению и совместимости материалов.",
       coverImage: `${IMAGE_BASE}/ivd-waste-aspiration-pump-selection-cover.webp`,
       coverAlt: "Контур аспирации отходов IVD от промывочной ванны зонда через газожидкостный мембранный насос к герметичной ёмкости",
@@ -903,7 +903,7 @@ export const ivdWasteLiquidPumpSelectionCopies = {
         { type: "table", headers: ["Ошибка", "Правильный подход"], rows: [["Выбор только по расходу жидкости", "Сначала определить воздух и смену фаз"], ["Деление 6 L/min на 600 mL/min", "Разделять газовый расход без нагрузки и класс жидкости"], ["Учёт только предельного вакуума", "Совместно проверить объём, целевой вакуум и время"], ["Игнорирование сухого всасывания", "Испытать Liquid → Air → Liquid"], ["Проверка только материалов насоса", "Включить трубки, клапаны, фитинги, фильтр и сосуд"], ["Смешение промывки и отходов", "Разделить требования и критерии"]] },
       ] },
       { title: "Вывод: поступление воздуха часто определяет тип раньше номинального mL/min", blocks: [
-        { type: "paragraph", text: "Если линия остаётся заполненной, начните с жидкостных кандидатов DPL30 или DPL60. Если она захватывает воздух, опорожняется или создаёт вакуум, оцените газожидкостный насос. DPGL800 — один из текущих бесщёточных кандидатов FOREACH на 24 V, но его нужно проверить с реальным объёмом, вакуумом, временем, сопротивлением и отходами." },
+        { type: "paragraph", text: "Если линия остаётся заполненной, начните с жидкостных кандидатов DPL30 или DPL60. Если она захватывает воздух, опорожняется или создаёт вакуум, оцените газожидкостный насос. DPGL800 — один из текущих бесщёточных кандидатов Foreach на 24 V, но его нужно проверить с реальным объёмом, вакуумом, временем, сопротивлением и отходами." },
       ] },
     ],
     faqTitle: "FAQ по выбору насоса отходов IVD",

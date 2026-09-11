@@ -10,11 +10,11 @@ export const diaphragmPump300Vs600SelectionZhCopy = {
     title:
       "300 mL/min 与 600 mL/min 微型隔膜泵怎么选？先算任务流量，再看真实工作点",
     seoTitle:
-      "300 mL/min与600 mL/min微型隔膜泵怎么选？任务流量与工作点指南｜FOREACH",
+      "300 mL/min与600 mL/min微型隔膜泵怎么选？任务流量与工作点指南｜Foreach Technology",
     seoDescription:
       "比较300 mL/min与600 mL/min微型隔膜泵时，不能只看空载流量。本文从任务体积、有效泵送时间、系统压差、泵曲线和样机验证建立选型路径。",
     coverImage: `${ARTICLE_01_ASSET_BASE}/article-cover.webp`,
-    coverAlt: "FOREACH官方抖音视频中的微型隔膜泵产品与流量测试实拍画面",
+    coverAlt: "Foreach官方抖音视频中的微型隔膜泵产品与流量测试实拍画面",
   },
   deck:
     "300 mL/min和600 mL/min首先是流量级别，不是装入设备后的固定输出。选型应先把单次液体任务换算成最低平均流量，再确定真实液路所需压差，最后在泵曲线与样机测试中确认工作点。",
@@ -275,11 +275,11 @@ export const diaphragmPump300MlMinFlowMarginZhCopy = {
   metadata: {
     title: "300 mL/min 微型隔膜泵装机时，流量余量应该怎么留？以恒永达为例",
     seoTitle:
-      "300 mL/min微型隔膜泵流量余量怎么留？最差工况与合格判据｜FOREACH",
+      "300 mL/min微型隔膜泵流量余量怎么留？最差工况与合格判据｜Foreach Technology",
     seoDescription:
       "300 mL/min微型隔膜泵的装机余量不是固定百分比。本文说明如何定义可发生的最差场景，并把背压、滤芯加载、供电、介质、样品差异、测量不确定度和放行判据纳入核算。",
     coverImage: `${ARTICLE_02_ASSET_BASE}/article-cover.webp`,
-    coverAlt: "FOREACH官方抖音视频中的微型隔膜泵装机流量测试实拍画面",
+    coverAlt: "Foreach官方抖音视频中的微型隔膜泵装机流量测试实拍画面",
   },
   deck:
     "流量余量不是把目标流量统一乘以1.2或1.3，而是比较同一个可发生的最不利场景中，泵的保守可用流量与设备最大需求。测试还要预先规定测量不确定度的处理方式和明确的合格判据。",

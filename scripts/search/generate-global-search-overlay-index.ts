@@ -92,7 +92,7 @@ const MODULE_COPY: Record<
   },
   "compatible-models": {
     title: "Compatible Model Search",
-    description: "View the corresponding FOREACH compatible product.",
+    description: "View the corresponding Foreach compatible product.",
     action: "View Compatible Product",
   },
   datasheets: {
@@ -122,12 +122,12 @@ const MODULE_COPY: Record<
   },
   news: {
     title: "News",
-    description: "Read the full FOREACH news update.",
+    description: "Read the full Foreach news update.",
     action: "View News",
   },
   pages: {
     title: "Pages",
-    description: "Open this FOREACH website page.",
+    description: "Open this Foreach website page.",
     action: "Open Page",
   },
 };
@@ -302,7 +302,7 @@ function getPathLabel(href: string): string {
     .filter(Boolean)
     .at(-1);
 
-  if (!segment) return "FOREACH";
+  if (!segment) return "Foreach Technology";
 
   return decodeURIComponent(segment)
     .split(/[-_]+/)

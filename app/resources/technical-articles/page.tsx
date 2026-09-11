@@ -14,7 +14,7 @@ import { getTechnicalArticlesPageData } from "@/services/resources/technical-art
 import "./technical-articles.css";
 
 export const metadata: Metadata = {
-  title: "技术文章｜资源中心｜FOREACH 恒永达",
+  title: "技术文章｜资源中心｜Foreach Technology 恒永达",
   description:
     "恒永达技术文章，分享微流体系统中的产品选型、材料兼容、管路连接、密封方式与应用设计经验。",
 };

@@ -22,16 +22,16 @@ export const pistonPumpArticlesEn: readonly PistonPumpArticleCopy[] = [
     summary:
       "Compare acrylic (PMMA), PCTG, PPS, PVDF, PP, PTFE, PEEK, acetal (POM) and polysulfone (PSU) pump-head options, and learn how to validate the complete wetted path.",
     seoTitle:
-      "Piston Pump Head Materials: PMMA, PEEK and More | FOREACH",
+      "Piston Pump Head Materials: PMMA, PEEK and More | Foreach Technology",
     seoDescription:
       "How should a piston pump head material be selected? Compare acrylic (PMMA), PCTG, PPS, PVDF, PP, PTFE, PEEK, acetal (POM) and polysulfone (PSU), then validate the full wetted path.",
     date: "2026-09-06",
     coverImage:
       "/images/resources/technical-articles/piston-pump/piston-pump-head-material-selection-cover.webp",
-    coverAlt: "FOREACH EA, SM and TM piston pumps for pump-head material selection",
+    coverAlt: "Foreach EA, SM and TM piston pumps for pump-head material selection",
     intro: [
       p("The pump head directly participates in aspiration, metering and discharge. Its material can affect chemical compatibility, structural stability, sealing, cleaning, service life and project cost. Selection therefore has to consider the actual fluid, temperature, pressure, contact time and the complete wetted path—not only which plastic appears most corrosion resistant."),
-      p("FOREACH can evaluate PCTG copolyester, acrylic (PMMA), polyphenylene sulfide (PPS), polyvinylidene fluoride (PVDF), polypropylene (PP), polytetrafluoroethylene (PTFE), polyether ether ketone (PEEK), acetal (POM), polysulfone (PSU) and other engineering materials for piston-pump heads. This is a configuration range, not a statement that every material and capacity is a standard stocked model. The final combination depends on fluid properties, head geometry, manufacturability, installation space and project requirements."),
+      p("Foreach can evaluate PCTG copolyester, acrylic (PMMA), polyphenylene sulfide (PPS), polyvinylidene fluoride (PVDF), polypropylene (PP), polytetrafluoroethylene (PTFE), polyether ether ketone (PEEK), acetal (POM), polysulfone (PSU) and other engineering materials for piston-pump heads. This is a configuration range, not a statement that every material and capacity is a standard stocked model. The final combination depends on fluid properties, head geometry, manufacturability, installation space and project requirements."),
       notice(
         "Selection principle: ",
         "Define the real fluid and operating conditions first, then evaluate the head, piston, seals, valves, tubing and fittings as one wetted system.",
@@ -88,7 +88,7 @@ export const pistonPumpArticlesEn: readonly PistonPumpArticleCopy[] = [
       {
         title: "EA-500-PMMA and EA-500-PEEK: a same-capacity example",
         parts: [
-          p("FOREACH EA-500-PMMA and EA-500-PEEK illustrate two head-material directions at the same nominal 500 μL capacity. The displayed configurations support 1/4-28 UNF or M6 ports and 2,000 full-stroke steps. Under specified test conditions, full-stroke accuracy and repeatability are both ≤0.5%."),
+          p("Foreach EA-500-PMMA and EA-500-PEEK illustrate two head-material directions at the same nominal 500 μL capacity. The displayed configurations support 1/4-28 UNF or M6 ports and 2,000 full-stroke steps. Under specified test conditions, full-stroke accuracy and repeatability are both ≤0.5%."),
           {
             type: "table",
             headers: ["Item", "EA-500-PMMA", "EA-500-PEEK"],
@@ -115,7 +115,7 @@ export const pistonPumpArticlesEn: readonly PistonPumpArticleCopy[] = [
       {
         title: "Evaluate the piston and complete wetted path",
         parts: [
-          p("The head is only one part of the wetted system. FOREACH can evaluate zirconia ceramic, alumina ceramic, PEEK and sapphire piston options and match ports, motors, optical feedback, valves and controllers to the project."),
+          p("The head is only one part of the wetted system. Foreach can evaluate zirconia ceramic, alumina ceramic, PEEK and sapphire piston options and match ports, motors, optical feedback, valves and controllers to the project."),
           { type: "bullets", items: ["Pump head and internal flow passages", "Piston and its sealing structure", "Valve body, element, diaphragm or check mechanism", "Tubing, fittings, filters, probes and nozzles", "Adhesives, lubricants and any auxiliary material that may contact the fluid"] },
           p("Changing only the head can leave swelling, adsorption, extractables, leakage, blockage or life problems elsewhere in the path."),
         ],
@@ -152,7 +152,7 @@ export const pistonPumpArticlesEn: readonly PistonPumpArticleCopy[] = [
     ],
     faqTitle: "Frequently asked questions",
     faq: [
-      { question: "Are acrylic (PMMA), PCTG and PEEK the only FOREACH head materials?", answer: "No. PCTG copolyester, acrylic (PMMA), PPS, PVDF, PP, PTFE, PEEK, acetal (POM), polysulfone (PSU) and other engineering materials can be evaluated by project." },
+      { question: "Are acrylic (PMMA), PCTG and PEEK the only Foreach head materials?", answer: "No. PCTG copolyester, acrylic (PMMA), PPS, PVDF, PP, PTFE, PEEK, acetal (POM), polysulfone (PSU) and other engineering materials can be evaluated by project." },
       { question: "Is every material available as a standard model at every capacity?", answer: "Not necessarily. Website models support initial selection; the final capacity-material combination must be confirmed against the fluid, ports, valves, space and project volume." },
       { question: "Which head material has the best corrosion resistance?", answer: "There is no condition-free answer. Compatibility depends on composition, concentration, temperature, pressure, contact time, cleaning and the complete wetted path." },
       { question: "Does a PEEK head still require compatibility testing?", answer: "Yes. Verify the exact medium and conditions through data review, soak tests, dimensional and sealing checks, and system operation." },
@@ -167,7 +167,7 @@ export const pistonPumpArticlesEn: readonly PistonPumpArticleCopy[] = [
         { type: "links", items: [
           { prefix: "For the fundamentals, read ", label: "What Is a Precision Piston Pump?", href: "/resources/technical-articles/micro-plunger-pump-selection/", suffix: "." },
           { prefix: "For performance definitions, read ", label: "Piston Pump Accuracy, Repeatability and Resolution", href: "/resources/technical-articles/piston-pump-accuracy-repeatability-resolution/", suffix: "." },
-          { prefix: "Browse ", label: "FOREACH piston-pump configurations", href: productsHref, suffix: "." },
+          { prefix: "Browse ", label: "Foreach piston-pump configurations", href: productsHref, suffix: "." },
         ] },
       ],
     },
@@ -185,11 +185,11 @@ export const pistonPumpArticlesEn: readonly PistonPumpArticleCopy[] = [
     slug: "piston-pump-accuracy-repeatability-resolution",
     title: "Piston Pump Accuracy, Repeatability and Resolution Explained",
     summary: "Learn why theoretical volume per step is not the minimum reliable dose, and how accuracy, repeatability, valves, bubbles and working stroke affect dispensing results.",
-    seoTitle: "Piston Pump Accuracy, Repeatability and Resolution | FOREACH",
+    seoTitle: "Piston Pump Accuracy, Repeatability and Resolution | Foreach Technology",
     seoDescription: "Understand piston-pump accuracy, repeatability and resolution, why motor steps do not define minimum reliable dose, and how to validate small-volume dispensing.",
     date: "2026-09-06",
     coverImage: "/images/resources/technical-articles/piston-pump/piston-pump-accuracy-repeatability-resolution-cover.webp",
-    coverAlt: "FOREACH piston pump head and connected fluid tubing",
+    coverAlt: "Foreach piston pump head and connected fluid tubing",
     intro: [
       p("Piston-pump specifications often list capacity, full-stroke steps, accuracy and repeatability together. These terms all relate to dispensing performance, but they describe different questions."),
       p("A common mistake is to treat more motor steps as automatically higher liquid accuracy, or to call theoretical volume per step the minimum reliable dose. Real delivery also depends on mechanics, valves, tubing, bubbles, fluid properties, motion control and the measurement method."),
@@ -261,7 +261,7 @@ export const pistonPumpArticlesEn: readonly PistonPumpArticleCopy[] = [
         ],
       },
       {
-        title: "How to read FOREACH EA, SM and TM specifications",
+        title: "How to read Foreach EA, SM and TM specifications",
         parts: [
           { type: "table", headers: ["Series", "Current information", "Selection focus"], rows: [
             ["EA precision piston pump", "2,000 full-stroke steps in base configurations; full-stroke and 2% stroke data under specified conditions", "Choose capacity around the critical working volumes"],
@@ -271,7 +271,7 @@ export const pistonPumpArticlesEn: readonly PistonPumpArticleCopy[] = [
           p("Step counts cannot be compared without capacity, piston diameter, transmission and test conditions. The largest pump that covers the maximum dose is not automatically the best choice for the smallest critical dose."),
           { type: "links", items: [
             { prefix: "Review the fundamentals in ", label: "What Is a Precision Piston Pump?", href: "/resources/technical-articles/micro-plunger-pump-selection/", suffix: "." },
-            { prefix: "Browse ", label: "FOREACH piston-pump configurations", href: productsHref, suffix: "." },
+            { prefix: "Browse ", label: "Foreach piston-pump configurations", href: productsHref, suffix: "." },
           ] },
         ],
       },
@@ -302,11 +302,11 @@ export const pistonPumpArticlesEn: readonly PistonPumpArticleCopy[] = [
     slug: "micro-plunger-pump-selection",
     title: "What Is a Precision Piston Pump? Working Principle, Benefits and Applications",
     summary: "Learn how precision piston pumps work, where they are used and how to select capacity, performance, materials, valves and controls for an OEM fluidic system.",
-    seoTitle: "What Is a Precision Piston Pump? Principle and Selection | FOREACH",
-    seoDescription: "An introductory guide to precision piston-pump operation, advantages, applications and selection, including FOREACH EA, SM and TM platforms.",
+    seoTitle: "What Is a Precision Piston Pump? Principle and Selection | Foreach Technology",
+    seoDescription: "An introductory guide to precision piston-pump operation, advantages, applications and selection, including Foreach EA, SM and TM platforms.",
     date: "2026-06-19",
     coverImage: "/images/resources/technical-articles/piston-pump/micro-plunger-pump-selection-cover.webp",
-    coverAlt: "FOREACH EA, SM and TM precision piston-pump platforms",
+    coverAlt: "Foreach EA, SM and TM precision piston-pump platforms",
     intro: [
       p("A precision piston pump is a positive-displacement pump that aspirates, meters and dispenses liquid by controlled reciprocating piston motion. A motor and transmission convert rotation into linear travel so that aspiration and discharge can be programmed."),
       p("Unlike a transfer pump whose main task is moving liquid between locations, a precision piston pump focuses on single-dose volume, accuracy, repeatability and long-term automated operation. It is widely integrated into IVD, life-science, laboratory automation and analytical instruments."),
@@ -367,7 +367,7 @@ export const pistonPumpArticlesEn: readonly PistonPumpArticleCopy[] = [
         ],
       },
       {
-        title: "FOREACH EA, SM and TM piston-pump platforms",
+        title: "Foreach EA, SM and TM piston-pump platforms",
         parts: [
           { type: "table", headers: ["Series", "Currently confirmed range", "Positioning", "Selection boundary"], rows: [
             ["EA precision piston pump", "50 μL–20 mL", "Microliter-to-milliliter metering and dispensing", "Full-stroke accuracy and repeatability ≤0.5% under specified conditions; 1/4-28 UNF or M6 ports; materials and controls by configuration"],
@@ -375,7 +375,7 @@ export const pistonPumpArticlesEn: readonly PistonPumpArticleCopy[] = [
             ["TM ultra-compact piston pump", "Displayed: 50, 100, 250 and 500 μL", "Space-constrained OEM analytical modules", "Displayed 6-40 UNF and 2,540-step configurations; validate accuracy, repeatability, pressure and life by configuration"],
           ] },
           p("The expected five-million-cycle life for EA and SM corresponds to specified conditions including pure water, room temperature and 50 kPa backpressure. Actual life depends on fluid, pressure, speed, stroke, temperature, cleaning and cycle rate."),
-          { type: "links", items: [{ prefix: "Browse ", label: "FOREACH piston-pump capacities and configurations", href: productsHref, suffix: "." }] },
+          { type: "links", items: [{ prefix: "Browse ", label: "Foreach piston-pump capacities and configurations", href: productsHref, suffix: "." }] },
         ],
       },
       {
@@ -415,7 +415,7 @@ export const pistonPumpArticlesEn: readonly PistonPumpArticleCopy[] = [
       title: "Conclusion: start with working volume and the complete fluid path",
       parts: [
         p("Do not select a precision piston pump by nominal capacity and motor steps alone. Define working volumes, accuracy and repeatability targets, then evaluate fluid, pressure, valves, tubing, space, controls and cycle time under one validation plan."),
-        p("FOREACH EA, SM and TM address wide-range, compact and ultra-compact liquid-handling needs. Confirm the final series, capacity, materials, ports and controls against current technical files and real operating conditions."),
+        p("Foreach EA, SM and TM address wide-range, compact and ultra-compact liquid-handling needs. Confirm the final series, capacity, materials, ports and controls against current technical files and real operating conditions."),
       ],
     },
     cta: {
@@ -429,7 +429,7 @@ export const pistonPumpArticlesEn: readonly PistonPumpArticleCopy[] = [
     slug: "piston-pump-acceleration-deceleration-curves",
     title: "Acceleration and Deceleration Curves for Piston-Pump Drives",
     summary: "Use stepper-motor torque-speed behavior to select linear, S-curve or parabolic motion profiles and prevent missed steps in piston-pump aspiration and dispensing.",
-    seoTitle: "Piston Pump Acceleration and Deceleration Curves | FOREACH",
+    seoTitle: "Piston Pump Acceleration and Deceleration Curves | Foreach Technology",
     seoDescription: "Understand linear, S-curve and parabolic motion profiles, stepper torque-speed limits, missed steps and piston-pump commissioning.",
     date: "2026-09-06",
     coverImage: "/images/resources/technical-articles/legacy-motion-control/acceleration-curve-2.png",
@@ -461,11 +461,11 @@ export const pistonPumpArticlesEn: readonly PistonPumpArticleCopy[] = [
     slug: "precision-piston-pump-backlash-compensation",
     title: "Precision Piston Pump Backlash Compensation Guide",
     summary: "Understand reversal backlash, measurement methods and compensation timing, and distinguish mechanical lost motion from actual aspirated or dispensed volume.",
-    seoTitle: "Precision Piston Pump Backlash Compensation | FOREACH",
+    seoTitle: "Precision Piston Pump Backlash Compensation | Foreach Technology",
     seoDescription: "Measure piston-pump reversal backlash, convert lost motion into full-step or pulse compensation and validate single or split dispensing sequences.",
     date: "2026-09-06",
     coverImage: "/images/resources/technical-articles/piston-pump/precision-piston-pump-backlash-compensation-cover.webp",
-    coverAlt: "FOREACH precision piston-pump drive and fluidic system",
+    coverAlt: "Foreach precision piston-pump drive and fluidic system",
     intro: [p("Clearance in lead-screw, nut and transmission interfaces can create lost motion after motor reversal before the piston moves in the new direction. This matters most in short-stroke dispensing and the first move after switching between aspiration and discharge.")],
     sections: [
       { title: "What is reversal backlash?", parts: [p("Backlash differs with design, assembly and wear. Mechanical preload can reduce it; software compensation addresses measured reversal lost motion. Compensation cannot replace bubble removal, valve maintenance or leak correction.")] },
@@ -483,7 +483,7 @@ export const pistonPumpArticlesEn: readonly PistonPumpArticleCopy[] = [
     slug: "stepper-motor-calculation-selection",
     title: "Precision Piston Pump Stepper Motor Calculation and Selection",
     summary: "Calculate pulse frequency, microstepping, transmission ratio and load torque, then verify speed and dynamic torque with a 400 mm reciprocating-platform example.",
-    seoTitle: "Precision Piston Pump Stepper Motor Calculation Guide | FOREACH",
+    seoTitle: "Precision Piston Pump Stepper Motor Calculation Guide | Foreach Technology",
     seoDescription: "A practical guide to stepper pulse frequency, microsteps, transmission ratio, pulse equivalent, load torque and dynamic torque verification.",
     date: "2026-09-06",
     coverImage: "/images/resources/technical-articles/piston-pump/precision-piston-pump-stepper-motor-selection-cover.webp",

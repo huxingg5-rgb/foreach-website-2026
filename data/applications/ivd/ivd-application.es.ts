@@ -15,7 +15,7 @@ export const ivdEsExactText: Record<string, string> = {
     "Seleccione un módulo fluídico para ver los productos relacionados. Abra cada producto para consultar parámetros, ventajas y problemas que ayuda a resolver.",
   "有具体仪器液路需求？": "¿Tiene requisitos específicos para el circuito fluídico de su instrumento?",
   "可提交仪器类型、液体介质、流量范围、压力要求、管路尺寸和当前问题，由恒永达工程团队协助评估产品组合与液路方案。":
-    "Indique el tipo de instrumento, el fluido, el rango de caudal, la presión, las dimensiones de los tubos y el problema actual. El equipo de ingeniería de FOREACH le ayudará a evaluar la combinación de productos y el diseño del circuito.",
+    "Indique el tipo de instrumento, el fluido, el rango de caudal, la presión, las dimensiones de los tubos y el problema actual. El equipo de ingeniería de Foreach le ayudará a evaluar la combinación de productos y el diseño del circuito.",
   "查看产品系列": "Ver series de productos",
   "提交应用需求": "Enviar requisitos de aplicación",
   "样本吸取、保持与推出的一体化液体处理":

@@ -25,9 +25,9 @@ export const pumpSeriesDetailRecords = [
       "zh": {
         "locale": "zh",
         "title": "100 μL PMMA 泵头常规柱塞泵",
-        "h1": "FOREACH 100 μL精密陶瓷柱塞泵，用于微量液体分配、反应液补加和小体积样本处理，采用PMMA泵头",
+        "h1": "Foreach 100 μL精密陶瓷柱塞泵，用于微量液体分配、反应液补加和小体积样本处理，采用PMMA泵头",
         "seo": {
-          "titleTag": "EA-100-PMMA 常规柱塞泵｜100 μL PMMA 精密液体分配泵｜FOREACH 恒永达",
+          "titleTag": "EA-100-PMMA 常规柱塞泵｜100 μL PMMA 精密液体分配泵｜Foreach Technology 恒永达",
           "metaDescription": "EA-100-PMMA 是100 μL PMMA 泵头常规柱塞泵，适用于微量试剂分配、小体积样本处理、反应液补加和自动化检测设备液路模块。适合对材料兼容性和项目成本平衡有要求的常规液路项目。页面型号用于初步选型和报价沟通，最终配置需结合液体介质、接口、阀体和控制方式确认。",
           "canonicalPath": "/products/pumps/piston-pump/ea-100-pmma",
           "robots": "index,follow",
@@ -451,10 +451,10 @@ export const pumpSeriesDetailRecords = [
       "en": {
         "locale": "en",
         "title": "100 µL PMMA Pump Head Standard Plunger Pump",
-        "h1": "FOREACH 100 μL Precision Ceramic Piston Pump for Microliter Liquid Dispensing, Reaction-Liquid Addition and Small-Volume Sample Handling, with an Acrylic (PMMA) Pump Head",
+        "h1": "Foreach 100 μL Precision Ceramic Piston Pump for Microliter Liquid Dispensing, Reaction-Liquid Addition and Small-Volume Sample Handling, with an Acrylic (PMMA) Pump Head",
         "seo": {
-          "titleTag": "EA-100-PMMA Standard Plunger Pump | 100 µL PMMA Precision Dispensing Pump | FOREACH",
-          "metaDescription": "EA-100-PMMA is a custom-engineered 100 µL acrylic (PMMA) pump head standard plunger pump for micro-reagent dispensing, small-volume sample handling, reagent replenishment, and automated testing fluidics. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "titleTag": "EA-100-PMMA Standard Plunger Pump | 100 µL PMMA Precision Dispensing Pump | Foreach Technology",
+          "metaDescription": "EA-100-PMMA is a custom-engineered 100 µL acrylic (PMMA) pump head standard plunger pump for micro-reagent dispensing, small-volume sample handling, reagent replenishment, and automated testing fluidics. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with Foreach.",
           "canonicalPath": "/products/pumps/piston-pump/ea-100-pmma",
           "robots": "index,follow",
           "ogTitle": "100 µL PMMA Pump Head Standard Plunger Pump",
@@ -898,9 +898,9 @@ export const pumpSeriesDetailRecords = [
       "zh": {
         "locale": "zh",
         "title": "100 μL PEEK 泵头常规柱塞泵",
-        "h1": "FOREACH 100 μL精密柱塞泵，用于特殊试剂分配和小体积反应体系，采用PEEK泵头，适合对材料兼容性和避光要求较高的液路",
+        "h1": "Foreach 100 μL精密柱塞泵，用于特殊试剂分配和小体积反应体系，采用PEEK泵头，适合对材料兼容性和避光要求较高的液路",
         "seo": {
-          "titleTag": "EA-100-PEEK 常规柱塞泵｜100 μL PEEK 精密液体分配泵｜FOREACH 恒永达",
+          "titleTag": "EA-100-PEEK 常规柱塞泵｜100 μL PEEK 精密液体分配泵｜Foreach Technology 恒永达",
           "metaDescription": "EA-100-PEEK 是100 μL PEEK 泵头常规柱塞泵，适用于微量试剂分配、小体积样本处理、反应液补加和自动化检测设备液路模块。适合对化学兼容性、低析出或避光性有要求的液路项目。页面型号用于初步选型和报价沟通，最终配置需结合液体介质、接口、阀体和控制方式确认。",
           "canonicalPath": "/products/pumps/piston-pump/ea-100-peek",
           "robots": "index,follow",
@@ -1324,10 +1324,10 @@ export const pumpSeriesDetailRecords = [
       "en": {
         "locale": "en",
         "title": "100 µL PEEK Pump Head Standard Plunger Pump",
-        "h1": "FOREACH 100 μL Precision Piston Pump for Specialty Reagent Dispensing and Small-Volume Reaction Systems, with a PEEK Pump Head for Fluid Paths Requiring Material Compatibility and Light Protection",
+        "h1": "Foreach 100 μL Precision Piston Pump for Specialty Reagent Dispensing and Small-Volume Reaction Systems, with a PEEK Pump Head for Fluid Paths Requiring Material Compatibility and Light Protection",
         "seo": {
-          "titleTag": "EA-100-PEEK Standard Plunger Pump | 100 µL PEEK Precision Dispensing Pump | FOREACH",
-          "metaDescription": "EA-100-PEEK is a custom-engineered 100 µL PEEK pump head standard plunger pump for micro-reagent dispensing, small-volume sample handling, reagent replenishment, and automated testing fluidics. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "titleTag": "EA-100-PEEK Standard Plunger Pump | 100 µL PEEK Precision Dispensing Pump | Foreach Technology",
+          "metaDescription": "EA-100-PEEK is a custom-engineered 100 µL PEEK pump head standard plunger pump for micro-reagent dispensing, small-volume sample handling, reagent replenishment, and automated testing fluidics. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with Foreach.",
           "canonicalPath": "/products/pumps/piston-pump/ea-100-peek",
           "robots": "index,follow",
           "ogTitle": "100 µL PEEK Pump Head Standard Plunger Pump",
@@ -1771,9 +1771,9 @@ export const pumpSeriesDetailRecords = [
       "zh": {
         "locale": "zh",
         "title": "250 μL PMMA 泵头常规柱塞泵",
-        "h1": "FOREACH 250 μL精密陶瓷柱塞泵，用于样本稀释、试剂分配和中小体积反应液处理，采用PMMA泵头",
+        "h1": "Foreach 250 μL精密陶瓷柱塞泵，用于样本稀释、试剂分配和中小体积反应液处理，采用PMMA泵头",
         "seo": {
-          "titleTag": "EA-250-PMMA 常规柱塞泵｜250 μL PMMA 精密液体分配泵｜FOREACH 恒永达",
+          "titleTag": "EA-250-PMMA 常规柱塞泵｜250 μL PMMA 精密液体分配泵｜Foreach Technology 恒永达",
           "metaDescription": "EA-250-PMMA 是250 μL PMMA 泵头常规柱塞泵，适用于微量试剂分配、小体积样本处理、反应液补加和自动化检测设备液路模块。适合对材料兼容性和项目成本平衡有要求的常规液路项目。页面型号用于初步选型和报价沟通，最终配置需结合液体介质、接口、阀体和控制方式确认。",
           "canonicalPath": "/products/pumps/piston-pump/ea-250-pmma",
           "robots": "index,follow",
@@ -2197,10 +2197,10 @@ export const pumpSeriesDetailRecords = [
       "en": {
         "locale": "en",
         "title": "250 µL PMMA Pump Head Standard Plunger Pump",
-        "h1": "FOREACH 250 μL Precision Ceramic Piston Pump for Sample Dilution, Reagent Dispensing and Small-to-Medium-Volume Reaction-Liquid Handling, with an Acrylic (PMMA) Pump Head",
+        "h1": "Foreach 250 μL Precision Ceramic Piston Pump for Sample Dilution, Reagent Dispensing and Small-to-Medium-Volume Reaction-Liquid Handling, with an Acrylic (PMMA) Pump Head",
         "seo": {
-          "titleTag": "EA-250-PMMA Standard Plunger Pump | 250 µL PMMA Precision Dispensing Pump | FOREACH",
-          "metaDescription": "EA-250-PMMA is a custom-engineered 250 µL acrylic (PMMA) pump head standard plunger pump for micro-reagent dispensing, small-volume sample handling, reagent replenishment, and automated testing fluidics. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "titleTag": "EA-250-PMMA Standard Plunger Pump | 250 µL PMMA Precision Dispensing Pump | Foreach Technology",
+          "metaDescription": "EA-250-PMMA is a custom-engineered 250 µL acrylic (PMMA) pump head standard plunger pump for micro-reagent dispensing, small-volume sample handling, reagent replenishment, and automated testing fluidics. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with Foreach.",
           "canonicalPath": "/products/pumps/piston-pump/ea-250-pmma",
           "robots": "index,follow",
           "ogTitle": "250 µL PMMA Pump Head Standard Plunger Pump",
@@ -2644,9 +2644,9 @@ export const pumpSeriesDetailRecords = [
       "zh": {
         "locale": "zh",
         "title": "250 μL PEEK 泵头常规柱塞泵",
-        "h1": "FOREACH 250 μL精密柱塞泵，用于特殊试剂分配和中小体积液路，采用PEEK泵头，适合对材料兼容性和避光要求较高的液路",
+        "h1": "Foreach 250 μL精密柱塞泵，用于特殊试剂分配和中小体积液路，采用PEEK泵头，适合对材料兼容性和避光要求较高的液路",
         "seo": {
-          "titleTag": "EA-250-PEEK 常规柱塞泵｜250 μL PEEK 精密液体分配泵｜FOREACH 恒永达",
+          "titleTag": "EA-250-PEEK 常规柱塞泵｜250 μL PEEK 精密液体分配泵｜Foreach Technology 恒永达",
           "metaDescription": "EA-250-PEEK 是250 μL PEEK 泵头常规柱塞泵，适用于微量试剂分配、小体积样本处理、反应液补加和自动化检测设备液路模块。适合对化学兼容性、低析出或避光性有要求的液路项目。页面型号用于初步选型和报价沟通，最终配置需结合液体介质、接口、阀体和控制方式确认。",
           "canonicalPath": "/products/pumps/piston-pump/ea-250-peek",
           "robots": "index,follow",
@@ -3070,10 +3070,10 @@ export const pumpSeriesDetailRecords = [
       "en": {
         "locale": "en",
         "title": "250 µL PEEK Pump Head Standard Plunger Pump",
-        "h1": "FOREACH 250 μL Precision Piston Pump for Specialty Reagent Dispensing and Small-to-Medium-Volume Fluid Paths, with a PEEK Pump Head for Applications Requiring Material Compatibility and Light Protection",
+        "h1": "Foreach 250 μL Precision Piston Pump for Specialty Reagent Dispensing and Small-to-Medium-Volume Fluid Paths, with a PEEK Pump Head for Applications Requiring Material Compatibility and Light Protection",
         "seo": {
-          "titleTag": "EA-250-PEEK Standard Plunger Pump | 250 µL PEEK Precision Dispensing Pump | FOREACH",
-          "metaDescription": "EA-250-PEEK is a custom-engineered 250 µL PEEK pump head standard plunger pump for micro-reagent dispensing, small-volume sample handling, reagent replenishment, and automated testing fluidics. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "titleTag": "EA-250-PEEK Standard Plunger Pump | 250 µL PEEK Precision Dispensing Pump | Foreach Technology",
+          "metaDescription": "EA-250-PEEK is a custom-engineered 250 µL PEEK pump head standard plunger pump for micro-reagent dispensing, small-volume sample handling, reagent replenishment, and automated testing fluidics. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with Foreach.",
           "canonicalPath": "/products/pumps/piston-pump/ea-250-peek",
           "robots": "index,follow",
           "ogTitle": "250 µL PEEK Pump Head Standard Plunger Pump",
@@ -3517,9 +3517,9 @@ export const pumpSeriesDetailRecords = [
       "zh": {
         "locale": "zh",
         "title": "500 μL PMMA 泵头常规柱塞泵",
-        "h1": "FOREACH 500 μL精密陶瓷柱塞泵，用于常规试剂输送、样本稀释和缓冲液定量分配，采用PMMA泵头",
+        "h1": "Foreach 500 μL精密陶瓷柱塞泵，用于常规试剂输送、样本稀释和缓冲液定量分配，采用PMMA泵头",
         "seo": {
-          "titleTag": "EA-500-PMMA 常规柱塞泵｜500 μL PMMA 精密液体分配泵｜FOREACH 恒永达",
+          "titleTag": "EA-500-PMMA 常规柱塞泵｜500 μL PMMA 精密液体分配泵｜Foreach Technology 恒永达",
           "metaDescription": "EA-500-PMMA 是500 μL PMMA 泵头常规柱塞泵，适用于常规试剂输送、样本稀释、反应液处理和实验室自动化液路模块。适合对材料兼容性和项目成本平衡有要求的常规液路项目。页面型号用于初步选型和报价沟通，最终配置需结合液体介质、接口、阀体和控制方式确认。",
           "canonicalPath": "/products/pumps/piston-pump/ea-500-pmma",
           "robots": "index,follow",
@@ -3944,10 +3944,10 @@ export const pumpSeriesDetailRecords = [
       "en": {
         "locale": "en",
         "title": "500 µL PMMA Pump Head Standard Plunger Pump",
-        "h1": "FOREACH 500 μL Precision Ceramic Piston Pump for Routine Reagent Transfer, Sample Dilution and Metered Buffer Dispensing, with an Acrylic (PMMA) Pump Head",
+        "h1": "Foreach 500 μL Precision Ceramic Piston Pump for Routine Reagent Transfer, Sample Dilution and Metered Buffer Dispensing, with an Acrylic (PMMA) Pump Head",
         "seo": {
-          "titleTag": "EA-500-PMMA Standard Plunger Pump | 500 µL PMMA Precision Dispensing Pump | FOREACH",
-          "metaDescription": "EA-500-PMMA is a custom-engineered 500 µL acrylic (PMMA) pump head standard plunger pump for routine reagent transfer, sample dilution, reaction liquid handling, and laboratory automation fluidic modules. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "titleTag": "EA-500-PMMA Standard Plunger Pump | 500 µL PMMA Precision Dispensing Pump | Foreach Technology",
+          "metaDescription": "EA-500-PMMA is a custom-engineered 500 µL acrylic (PMMA) pump head standard plunger pump for routine reagent transfer, sample dilution, reaction liquid handling, and laboratory automation fluidic modules. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with Foreach.",
           "canonicalPath": "/products/pumps/piston-pump/ea-500-pmma",
           "robots": "index,follow",
           "ogTitle": "500 µL PMMA Pump Head Standard Plunger Pump",
@@ -4392,9 +4392,9 @@ export const pumpSeriesDetailRecords = [
       "zh": {
         "locale": "zh",
         "title": "500 μL PEEK 泵头常规柱塞泵",
-        "h1": "FOREACH 500 μL精密柱塞泵，用于特殊试剂和中等体积液体输送，采用PEEK泵头，适合对材料兼容性和长期稳定性要求较高的液路",
+        "h1": "Foreach 500 μL精密柱塞泵，用于特殊试剂和中等体积液体输送，采用PEEK泵头，适合对材料兼容性和长期稳定性要求较高的液路",
         "seo": {
-          "titleTag": "EA-500-PEEK 常规柱塞泵｜500 μL PEEK 精密液体分配泵｜FOREACH 恒永达",
+          "titleTag": "EA-500-PEEK 常规柱塞泵｜500 μL PEEK 精密液体分配泵｜Foreach Technology 恒永达",
           "metaDescription": "EA-500-PEEK 是500 μL PEEK 泵头常规柱塞泵，适用于常规试剂输送、样本稀释、反应液处理和实验室自动化液路模块。适合对化学兼容性、低析出或避光性有要求的液路项目。页面型号用于初步选型和报价沟通，最终配置需结合液体介质、接口、阀体和控制方式确认。",
           "canonicalPath": "/products/pumps/piston-pump/ea-500-peek",
           "robots": "index,follow",
@@ -4819,10 +4819,10 @@ export const pumpSeriesDetailRecords = [
       "en": {
         "locale": "en",
         "title": "500 µL PEEK Pump Head Standard Plunger Pump",
-        "h1": "FOREACH 500 μL Precision Piston Pump for Specialty Reagent and Medium-Volume Liquid Transfer, with a PEEK Pump Head for Fluid Paths Requiring Material Compatibility and Long-Term Stability",
+        "h1": "Foreach 500 μL Precision Piston Pump for Specialty Reagent and Medium-Volume Liquid Transfer, with a PEEK Pump Head for Fluid Paths Requiring Material Compatibility and Long-Term Stability",
         "seo": {
-          "titleTag": "EA-500-PEEK Standard Plunger Pump | 500 µL PEEK Precision Dispensing Pump | FOREACH",
-          "metaDescription": "EA-500-PEEK is a custom-engineered 500 µL PEEK pump head standard plunger pump for routine reagent transfer, sample dilution, reaction liquid handling, and laboratory automation fluidic modules. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "titleTag": "EA-500-PEEK Standard Plunger Pump | 500 µL PEEK Precision Dispensing Pump | Foreach Technology",
+          "metaDescription": "EA-500-PEEK is a custom-engineered 500 µL PEEK pump head standard plunger pump for routine reagent transfer, sample dilution, reaction liquid handling, and laboratory automation fluidic modules. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with Foreach.",
           "canonicalPath": "/products/pumps/piston-pump/ea-500-peek",
           "robots": "index,follow",
           "ogTitle": "500 µL PEEK Pump Head Standard Plunger Pump",
@@ -5267,9 +5267,9 @@ export const pumpSeriesDetailRecords = [
       "zh": {
         "locale": "zh",
         "title": "1000 μL PMMA 泵头常规柱塞泵",
-        "h1": "FOREACH 1 mL精密陶瓷柱塞泵，用于试剂输送、稀释液添加和缓冲液分配，采用PMMA泵头",
+        "h1": "Foreach 1 mL精密陶瓷柱塞泵，用于试剂输送、稀释液添加和缓冲液分配，采用PMMA泵头",
         "seo": {
-          "titleTag": "EA-1000-PMMA 常规柱塞泵｜1000 μL PMMA 精密液体分配泵｜FOREACH 恒永达",
+          "titleTag": "EA-1000-PMMA 常规柱塞泵｜1000 μL PMMA 精密液体分配泵｜Foreach Technology 恒永达",
           "metaDescription": "EA-1000-PMMA 是1000 μL PMMA 泵头常规柱塞泵，适用于常规试剂输送、样本稀释、反应液处理和实验室自动化液路模块。适合对材料兼容性和项目成本平衡有要求的常规液路项目。页面型号用于初步选型和报价沟通，最终配置需结合液体介质、接口、阀体和控制方式确认。",
           "canonicalPath": "/products/pumps/piston-pump/ea-1000-pmma",
           "robots": "index,follow",
@@ -5694,10 +5694,10 @@ export const pumpSeriesDetailRecords = [
       "en": {
         "locale": "en",
         "title": "1000 µL PMMA Pump Head Standard Plunger Pump",
-        "h1": "FOREACH 1 mL Precision Ceramic Piston Pump for Reagent Transfer, Diluent Addition and Buffer Dispensing, with an Acrylic (PMMA) Pump Head",
+        "h1": "Foreach 1 mL Precision Ceramic Piston Pump for Reagent Transfer, Diluent Addition and Buffer Dispensing, with an Acrylic (PMMA) Pump Head",
         "seo": {
-          "titleTag": "EA-1000-PMMA Standard Plunger Pump | 1000 µL PMMA Precision Dispensing Pump | FOREACH",
-          "metaDescription": "EA-1000-PMMA is a custom-engineered 1000 µL acrylic (PMMA) pump head standard plunger pump for routine reagent transfer, sample dilution, reaction liquid handling, and laboratory automation fluidic modules. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "titleTag": "EA-1000-PMMA Standard Plunger Pump | 1000 µL PMMA Precision Dispensing Pump | Foreach Technology",
+          "metaDescription": "EA-1000-PMMA is a custom-engineered 1000 µL acrylic (PMMA) pump head standard plunger pump for routine reagent transfer, sample dilution, reaction liquid handling, and laboratory automation fluidic modules. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with Foreach.",
           "canonicalPath": "/products/pumps/piston-pump/ea-1000-pmma",
           "robots": "index,follow",
           "ogTitle": "1000 µL PMMA Pump Head Standard Plunger Pump",
@@ -6142,9 +6142,9 @@ export const pumpSeriesDetailRecords = [
       "zh": {
         "locale": "zh",
         "title": "1000 μL PEEK 泵头常规柱塞泵",
-        "h1": "FOREACH 1 mL精密柱塞泵，用于特殊试剂输送和自动化液体处理，采用PEEK泵头，适合避光和高材料兼容性液路",
+        "h1": "Foreach 1 mL精密柱塞泵，用于特殊试剂输送和自动化液体处理，采用PEEK泵头，适合避光和高材料兼容性液路",
         "seo": {
-          "titleTag": "EA-1000-PEEK 常规柱塞泵｜1000 μL PEEK 精密液体分配泵｜FOREACH 恒永达",
+          "titleTag": "EA-1000-PEEK 常规柱塞泵｜1000 μL PEEK 精密液体分配泵｜Foreach Technology 恒永达",
           "metaDescription": "EA-1000-PEEK 是1000 μL PEEK 泵头常规柱塞泵，适用于常规试剂输送、样本稀释、反应液处理和实验室自动化液路模块。适合对化学兼容性、低析出或避光性有要求的液路项目。页面型号用于初步选型和报价沟通，最终配置需结合液体介质、接口、阀体和控制方式确认。",
           "canonicalPath": "/products/pumps/piston-pump/ea-1000-peek",
           "robots": "index,follow",
@@ -6569,10 +6569,10 @@ export const pumpSeriesDetailRecords = [
       "en": {
         "locale": "en",
         "title": "1000 µL PEEK Pump Head Standard Plunger Pump",
-        "h1": "FOREACH 1 mL Precision Piston Pump for Specialty Reagent Transfer and Automated Liquid Handling, with a PEEK Pump Head for Light-Sensitive and Material-Compatible Fluid Paths",
+        "h1": "Foreach 1 mL Precision Piston Pump for Specialty Reagent Transfer and Automated Liquid Handling, with a PEEK Pump Head for Light-Sensitive and Material-Compatible Fluid Paths",
         "seo": {
-          "titleTag": "EA-1000-PEEK Standard Plunger Pump | 1000 µL PEEK Precision Dispensing Pump | FOREACH",
-          "metaDescription": "EA-1000-PEEK is a custom-engineered 1000 µL PEEK pump head standard plunger pump for routine reagent transfer, sample dilution, reaction liquid handling, and laboratory automation fluidic modules. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "titleTag": "EA-1000-PEEK Standard Plunger Pump | 1000 µL PEEK Precision Dispensing Pump | Foreach Technology",
+          "metaDescription": "EA-1000-PEEK is a custom-engineered 1000 µL PEEK pump head standard plunger pump for routine reagent transfer, sample dilution, reaction liquid handling, and laboratory automation fluidic modules. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with Foreach.",
           "canonicalPath": "/products/pumps/piston-pump/ea-1000-peek",
           "robots": "index,follow",
           "ogTitle": "1000 µL PEEK Pump Head Standard Plunger Pump",
@@ -7017,9 +7017,9 @@ export const pumpSeriesDetailRecords = [
       "zh": {
         "locale": "zh",
         "title": "2500 μL PMMA 泵头常规柱塞泵",
-        "h1": "FOREACH 2.5 mL精密陶瓷柱塞泵，用于缓冲液输送、稀释液添加和清洗液补充，采用PMMA泵头",
+        "h1": "Foreach 2.5 mL精密陶瓷柱塞泵，用于缓冲液输送、稀释液添加和清洗液补充，采用PMMA泵头",
         "seo": {
-          "titleTag": "EA-2500-PMMA 常规柱塞泵｜2500 μL PMMA 精密液体分配泵｜FOREACH 恒永达",
+          "titleTag": "EA-2500-PMMA 常规柱塞泵｜2500 μL PMMA 精密液体分配泵｜Foreach Technology 恒永达",
           "metaDescription": "EA-2500-PMMA 是2500 μL PMMA 泵头常规柱塞泵，适用于清洗液定量加入、缓冲液转移、管路预充、中大体积补液和分析仪器液路供液。适合对材料兼容性和项目成本平衡有要求的常规液路项目。页面型号用于初步选型和报价沟通，最终配置需结合液体介质、接口、阀体和控制方式确认。",
           "canonicalPath": "/products/pumps/piston-pump/ea-2500-pmma",
           "robots": "index,follow",
@@ -7448,10 +7448,10 @@ export const pumpSeriesDetailRecords = [
       "en": {
         "locale": "en",
         "title": "2500 µL PMMA Pump Head Standard Plunger Pump",
-        "h1": "FOREACH 2.5 mL Precision Ceramic Piston Pump for Buffer Transfer, Diluent Addition and Wash-Fluid Supply, with an Acrylic (PMMA) Pump Head",
+        "h1": "Foreach 2.5 mL Precision Ceramic Piston Pump for Buffer Transfer, Diluent Addition and Wash-Fluid Supply, with an Acrylic (PMMA) Pump Head",
         "seo": {
-          "titleTag": "EA-2500-PMMA Standard Plunger Pump | 2500 µL PMMA Precision Dispensing Pump | FOREACH",
-          "metaDescription": "EA-2500-PMMA is a custom-engineered 2500 µL acrylic (PMMA) pump head standard plunger pump for wash solution dosing, buffer transfer, line priming, medium-to-large volume replenishment, and analyzer fluidic supply. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "titleTag": "EA-2500-PMMA Standard Plunger Pump | 2500 µL PMMA Precision Dispensing Pump | Foreach Technology",
+          "metaDescription": "EA-2500-PMMA is a custom-engineered 2500 µL acrylic (PMMA) pump head standard plunger pump for wash solution dosing, buffer transfer, line priming, medium-to-large volume replenishment, and analyzer fluidic supply. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with Foreach.",
           "canonicalPath": "/products/pumps/piston-pump/ea-2500-pmma",
           "robots": "index,follow",
           "ogTitle": "2500 µL PMMA Pump Head Standard Plunger Pump",
@@ -7900,9 +7900,9 @@ export const pumpSeriesDetailRecords = [
       "zh": {
         "locale": "zh",
         "title": "2500 μL PEEK 泵头常规柱塞泵",
-        "h1": "FOREACH 2.5 mL精密柱塞泵，用于特殊试剂、缓冲液和清洗液输送，采用PEEK泵头，适合长期运行的高兼容性液路",
+        "h1": "Foreach 2.5 mL精密柱塞泵，用于特殊试剂、缓冲液和清洗液输送，采用PEEK泵头，适合长期运行的高兼容性液路",
         "seo": {
-          "titleTag": "EA-2500-PEEK 常规柱塞泵｜2500 μL PEEK 精密液体分配泵｜FOREACH 恒永达",
+          "titleTag": "EA-2500-PEEK 常规柱塞泵｜2500 μL PEEK 精密液体分配泵｜Foreach Technology 恒永达",
           "metaDescription": "EA-2500-PEEK 是2500 μL PEEK 泵头常规柱塞泵，适用于清洗液定量加入、缓冲液转移、管路预充、中大体积补液和分析仪器液路供液。适合对化学兼容性、低析出或避光性有要求的液路项目。页面型号用于初步选型和报价沟通，最终配置需结合液体介质、接口、阀体和控制方式确认。",
           "canonicalPath": "/products/pumps/piston-pump/ea-2500-peek",
           "robots": "index,follow",
@@ -8331,10 +8331,10 @@ export const pumpSeriesDetailRecords = [
       "en": {
         "locale": "en",
         "title": "2500 µL PEEK Pump Head Standard Plunger Pump",
-        "h1": "FOREACH 2.5 mL Precision Piston Pump for Specialty Reagent, Buffer and Wash-Fluid Transfer, with a PEEK Pump Head for Material-Compatible Fluid Paths and Long-Term Operation",
+        "h1": "Foreach 2.5 mL Precision Piston Pump for Specialty Reagent, Buffer and Wash-Fluid Transfer, with a PEEK Pump Head for Material-Compatible Fluid Paths and Long-Term Operation",
         "seo": {
-          "titleTag": "EA-2500-PEEK Standard Plunger Pump | 2500 µL PEEK Precision Dispensing Pump | FOREACH",
-          "metaDescription": "EA-2500-PEEK is a custom-engineered 2500 µL PEEK pump head standard plunger pump for wash solution dosing, buffer transfer, line priming, medium-to-large volume replenishment, and analyzer fluidic supply. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "titleTag": "EA-2500-PEEK Standard Plunger Pump | 2500 µL PEEK Precision Dispensing Pump | Foreach Technology",
+          "metaDescription": "EA-2500-PEEK is a custom-engineered 2500 µL PEEK pump head standard plunger pump for wash solution dosing, buffer transfer, line priming, medium-to-large volume replenishment, and analyzer fluidic supply. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with Foreach.",
           "canonicalPath": "/products/pumps/piston-pump/ea-2500-peek",
           "robots": "index,follow",
           "ogTitle": "2500 µL PEEK Pump Head Standard Plunger Pump",
@@ -8783,9 +8783,9 @@ export const pumpSeriesDetailRecords = [
       "zh": {
         "locale": "zh",
         "title": "5000 μL PMMA 泵头常规柱塞泵",
-        "h1": "FOREACH 5 mL精密陶瓷柱塞泵，用于清洗液添加、缓冲液输送和管路预充，采用PMMA泵头",
+        "h1": "Foreach 5 mL精密陶瓷柱塞泵，用于清洗液添加、缓冲液输送和管路预充，采用PMMA泵头",
         "seo": {
-          "titleTag": "EA-5000-PMMA 常规柱塞泵｜5000 μL PMMA 精密液体分配泵｜FOREACH 恒永达",
+          "titleTag": "EA-5000-PMMA 常规柱塞泵｜5000 μL PMMA 精密液体分配泵｜Foreach Technology 恒永达",
           "metaDescription": "EA-5000-PMMA 是5000 μL PMMA 泵头常规柱塞泵，适用于清洗液定量加入、缓冲液转移、管路预充、中大体积补液和分析仪器液路供液。适合对材料兼容性和项目成本平衡有要求的常规液路项目。页面型号用于初步选型和报价沟通，最终配置需结合液体介质、接口、阀体和控制方式确认。",
           "canonicalPath": "/products/pumps/piston-pump/ea-5000-pmma",
           "robots": "index,follow",
@@ -9213,10 +9213,10 @@ export const pumpSeriesDetailRecords = [
       "en": {
         "locale": "en",
         "title": "5000 µL PMMA Pump Head Standard Plunger Pump",
-        "h1": "FOREACH 5 mL Precision Ceramic Piston Pump for Wash-Fluid Supply, Buffer Transfer and Line Priming, with an Acrylic (PMMA) Pump Head",
+        "h1": "Foreach 5 mL Precision Ceramic Piston Pump for Wash-Fluid Supply, Buffer Transfer and Line Priming, with an Acrylic (PMMA) Pump Head",
         "seo": {
-          "titleTag": "EA-5000-PMMA Standard Plunger Pump | 5000 µL PMMA Precision Dispensing Pump | FOREACH",
-          "metaDescription": "EA-5000-PMMA is a custom-engineered 5000 µL acrylic (PMMA) pump head standard plunger pump for wash solution dosing, buffer transfer, line priming, medium-to-large volume replenishment, and analyzer fluidic supply. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "titleTag": "EA-5000-PMMA Standard Plunger Pump | 5000 µL PMMA Precision Dispensing Pump | Foreach Technology",
+          "metaDescription": "EA-5000-PMMA is a custom-engineered 5000 µL acrylic (PMMA) pump head standard plunger pump for wash solution dosing, buffer transfer, line priming, medium-to-large volume replenishment, and analyzer fluidic supply. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with Foreach.",
           "canonicalPath": "/products/pumps/piston-pump/ea-5000-pmma",
           "robots": "index,follow",
           "ogTitle": "5000 µL PMMA Pump Head Standard Plunger Pump",
@@ -9664,9 +9664,9 @@ export const pumpSeriesDetailRecords = [
       "zh": {
         "locale": "zh",
         "title": "5000 μL PEEK 泵头常规柱塞泵",
-        "h1": "FOREACH 5 mL精密柱塞泵，用于特殊清洗液、缓冲液和中大体积供液，采用PEEK泵头，适合对材料兼容性和稳定性要求较高的液路",
+        "h1": "Foreach 5 mL精密柱塞泵，用于特殊清洗液、缓冲液和中大体积供液，采用PEEK泵头，适合对材料兼容性和稳定性要求较高的液路",
         "seo": {
-          "titleTag": "EA-5000-PEEK 常规柱塞泵｜5000 μL PEEK 精密液体分配泵｜FOREACH 恒永达",
+          "titleTag": "EA-5000-PEEK 常规柱塞泵｜5000 μL PEEK 精密液体分配泵｜Foreach Technology 恒永达",
           "metaDescription": "EA-5000-PEEK 是5000 μL PEEK 泵头常规柱塞泵，适用于清洗液定量加入、缓冲液转移、管路预充、中大体积补液和分析仪器液路供液。适合对化学兼容性、低析出或避光性有要求的液路项目。页面型号用于初步选型和报价沟通，最终配置需结合液体介质、接口、阀体和控制方式确认。",
           "canonicalPath": "/products/pumps/piston-pump/ea-5000-peek",
           "robots": "index,follow",
@@ -10094,10 +10094,10 @@ export const pumpSeriesDetailRecords = [
       "en": {
         "locale": "en",
         "title": "5000 µL PEEK Pump Head Standard Plunger Pump",
-        "h1": "FOREACH 5 mL Precision Piston Pump for Specialty Wash Fluids, Buffers and Medium-to-Large-Volume Supply, with a PEEK Pump Head for Fluid Paths Requiring Material Compatibility and Stability",
+        "h1": "Foreach 5 mL Precision Piston Pump for Specialty Wash Fluids, Buffers and Medium-to-Large-Volume Supply, with a PEEK Pump Head for Fluid Paths Requiring Material Compatibility and Stability",
         "seo": {
-          "titleTag": "EA-5000-PEEK Standard Plunger Pump | 5000 µL PEEK Precision Dispensing Pump | FOREACH",
-          "metaDescription": "EA-5000-PEEK is a custom-engineered 5000 µL PEEK pump head standard plunger pump for wash solution dosing, buffer transfer, line priming, medium-to-large volume replenishment, and analyzer fluidic supply. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "titleTag": "EA-5000-PEEK Standard Plunger Pump | 5000 µL PEEK Precision Dispensing Pump | Foreach Technology",
+          "metaDescription": "EA-5000-PEEK is a custom-engineered 5000 µL PEEK pump head standard plunger pump for wash solution dosing, buffer transfer, line priming, medium-to-large volume replenishment, and analyzer fluidic supply. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with Foreach.",
           "canonicalPath": "/products/pumps/piston-pump/ea-5000-peek",
           "robots": "index,follow",
           "ogTitle": "5000 µL PEEK Pump Head Standard Plunger Pump",
@@ -10545,9 +10545,9 @@ export const pumpSeriesDetailRecords = [
       "zh": {
         "locale": "zh",
         "title": "10000 μL PMMA 泵头常规柱塞泵",
-        "h1": "FOREACH 10 mL精密陶瓷柱塞泵，用于大体积清洗液输送、系统冲洗和管路预充，采用PMMA泵头",
+        "h1": "Foreach 10 mL精密陶瓷柱塞泵，用于大体积清洗液输送、系统冲洗和管路预充，采用PMMA泵头",
         "seo": {
-          "titleTag": "EA-10000-PMMA 常规柱塞泵｜10000 μL PMMA 精密液体分配泵｜FOREACH 恒永达",
+          "titleTag": "EA-10000-PMMA 常规柱塞泵｜10000 μL PMMA 精密液体分配泵｜Foreach Technology 恒永达",
           "metaDescription": "EA-10000-PMMA 是10000 μL PMMA 泵头常规柱塞泵，适用于清洗液定量加入、缓冲液转移、管路预充、中大体积补液和分析仪器液路供液。适合对材料兼容性和项目成本平衡有要求的常规液路项目。页面型号用于初步选型和报价沟通，最终配置需结合液体介质、接口、阀体和控制方式确认。",
           "canonicalPath": "/products/pumps/piston-pump/ea-10000-pmma",
           "robots": "index,follow",
@@ -10975,10 +10975,10 @@ export const pumpSeriesDetailRecords = [
       "en": {
         "locale": "en",
         "title": "10000 µL PMMA Pump Head Standard Plunger Pump",
-        "h1": "FOREACH 10 mL Precision Ceramic Piston Pump for High-Volume Wash-Fluid Transfer, System Flushing and Line Priming, with an Acrylic (PMMA) Pump Head",
+        "h1": "Foreach 10 mL Precision Ceramic Piston Pump for High-Volume Wash-Fluid Transfer, System Flushing and Line Priming, with an Acrylic (PMMA) Pump Head",
         "seo": {
-          "titleTag": "EA-10000-PMMA Standard Plunger Pump | 10000 µL PMMA Precision Dispensing Pump | FOREACH",
-          "metaDescription": "EA-10000-PMMA is a custom-engineered 10000 µL acrylic (PMMA) pump head standard plunger pump for wash solution dosing, buffer transfer, line priming, medium-to-large volume replenishment, and analyzer fluidic supply. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "titleTag": "EA-10000-PMMA Standard Plunger Pump | 10000 µL PMMA Precision Dispensing Pump | Foreach Technology",
+          "metaDescription": "EA-10000-PMMA is a custom-engineered 10000 µL acrylic (PMMA) pump head standard plunger pump for wash solution dosing, buffer transfer, line priming, medium-to-large volume replenishment, and analyzer fluidic supply. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with Foreach.",
           "canonicalPath": "/products/pumps/piston-pump/ea-10000-pmma",
           "robots": "index,follow",
           "ogTitle": "10000 µL PMMA Pump Head Standard Plunger Pump",
@@ -11426,9 +11426,9 @@ export const pumpSeriesDetailRecords = [
       "zh": {
         "locale": "zh",
         "title": "10000 μL PEEK 泵头常规柱塞泵",
-        "h1": "FOREACH 10 mL精密柱塞泵，用于大体积特殊液体输送、系统冲洗和管路维护，采用PEEK泵头，适合高兼容性和长期运行液路",
+        "h1": "Foreach 10 mL精密柱塞泵，用于大体积特殊液体输送、系统冲洗和管路维护，采用PEEK泵头，适合高兼容性和长期运行液路",
         "seo": {
-          "titleTag": "EA-10000-PEEK 常规柱塞泵｜10000 μL PEEK 精密液体分配泵｜FOREACH 恒永达",
+          "titleTag": "EA-10000-PEEK 常规柱塞泵｜10000 μL PEEK 精密液体分配泵｜Foreach Technology 恒永达",
           "metaDescription": "EA-10000-PEEK 是10000 μL PEEK 泵头常规柱塞泵，适用于清洗液定量加入、缓冲液转移、管路预充、中大体积补液和分析仪器液路供液。适合对化学兼容性、低析出或避光性有要求的液路项目。页面型号用于初步选型和报价沟通，最终配置需结合液体介质、接口、阀体和控制方式确认。",
           "canonicalPath": "/products/pumps/piston-pump/ea-10000-peek",
           "robots": "index,follow",
@@ -11856,10 +11856,10 @@ export const pumpSeriesDetailRecords = [
       "en": {
         "locale": "en",
         "title": "10000 µL PEEK Pump Head Standard Plunger Pump",
-        "h1": "FOREACH 10 mL Precision Piston Pump for High-Volume Specialty Liquid Transfer, System Flushing and Fluid-Line Maintenance, with a PEEK Pump Head for Material-Compatible Fluid Paths and Long-Term Operation",
+        "h1": "Foreach 10 mL Precision Piston Pump for High-Volume Specialty Liquid Transfer, System Flushing and Fluid-Line Maintenance, with a PEEK Pump Head for Material-Compatible Fluid Paths and Long-Term Operation",
         "seo": {
-          "titleTag": "EA-10000-PEEK Standard Plunger Pump | 10000 µL PEEK Precision Dispensing Pump | FOREACH",
-          "metaDescription": "EA-10000-PEEK is a custom-engineered 10000 µL PEEK pump head standard plunger pump for wash solution dosing, buffer transfer, line priming, medium-to-large volume replenishment, and analyzer fluidic supply. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with FOREACH.",
+          "titleTag": "EA-10000-PEEK Standard Plunger Pump | 10000 µL PEEK Precision Dispensing Pump | Foreach Technology",
+          "metaDescription": "EA-10000-PEEK is a custom-engineered 10000 µL PEEK pump head standard plunger pump for wash solution dosing, buffer transfer, line priming, medium-to-large volume replenishment, and analyzer fluidic supply. The page model is for preliminary selection and quotation; final material, interface, valve, and control configuration should be confirmed with Foreach.",
           "canonicalPath": "/products/pumps/piston-pump/ea-10000-peek",
           "robots": "index,follow",
           "ogTitle": "10000 µL PEEK Pump Head Standard Plunger Pump",
@@ -12306,14 +12306,14 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "FOREACH 50 μL微型精密陶瓷柱塞泵，用于微量试剂加注和小体积样本分配，采用PMMA泵头",
-        "h1": "FOREACH 50 μL微型精密陶瓷柱塞泵，用于微量试剂加注和小体积样本分配，采用PMMA泵头",
+        "title": "Foreach 50 μL微型精密陶瓷柱塞泵，用于微量试剂加注和小体积样本分配，采用PMMA泵头",
+        "h1": "Foreach 50 μL微型精密陶瓷柱塞泵，用于微量试剂加注和小体积样本分配，采用PMMA泵头",
         "seo": {
-          "titleTag": "SM-50-PMMA 50 μL PMMA 微型柱塞泵 | FOREACH",
+          "titleTag": "SM-50-PMMA 50 μL PMMA 微型柱塞泵 | Foreach Technology",
           "metaDescription": "SM-50-PMMA 为 50 μL PMMA 泵头微型柱塞泵，用于微量试剂加注和小体积样本分配。查看 1/4-28 UNF / M6 接口、2000 步配置、应用要求及泵头、柱塞与液路集成选项。",
           "canonicalPath": "/products/pumps/piston-pump/sm-50-pmma",
           "robots": "index,follow",
-          "ogTitle": "SM-50-PMMA 50 μL PMMA 微型柱塞泵 | FOREACH",
+          "ogTitle": "SM-50-PMMA 50 μL PMMA 微型柱塞泵 | Foreach Technology",
           "ogDescription": "SM-50-PMMA 为 50 μL PMMA 泵头微型柱塞泵，用于微量试剂加注和小体积样本分配。查看 1/4-28 UNF / M6 接口、2000 步配置、应用要求及泵头、柱塞与液路集成选项。"
         },
         "hero": {
@@ -12716,14 +12716,14 @@ export const pumpSeriesDetailRecords = [
       },
       "en": {
         "locale": "en",
-        "title": "FOREACH 50 μL Miniature Precision Ceramic Piston Pump for Microliter Reagent Addition and Small-Volume Sample Dispensing, with an Acrylic (PMMA) Pump Head",
-        "h1": "FOREACH 50 μL Miniature Precision Ceramic Piston Pump for Microliter Reagent Addition and Small-Volume Sample Dispensing, with an Acrylic (PMMA) Pump Head",
+        "title": "Foreach 50 μL Miniature Precision Ceramic Piston Pump for Microliter Reagent Addition and Small-Volume Sample Dispensing, with an Acrylic (PMMA) Pump Head",
+        "h1": "Foreach 50 μL Miniature Precision Ceramic Piston Pump for Microliter Reagent Addition and Small-Volume Sample Dispensing, with an Acrylic (PMMA) Pump Head",
         "seo": {
-          "titleTag": "SM-50-PMMA 50 μL PMMA Miniature Piston Pump | FOREACH",
+          "titleTag": "SM-50-PMMA 50 μL PMMA Miniature Piston Pump | Foreach Technology",
           "metaDescription": "SM-50-PMMA: 50 μL acrylic (PMMA) head miniature piston pump for microliter reagent addition and small-volume sample dispensing. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
           "canonicalPath": "/products/pumps/piston-pump/sm-50-pmma",
           "robots": "index,follow",
-          "ogTitle": "SM-50-PMMA 50 μL PMMA Miniature Piston Pump | FOREACH",
+          "ogTitle": "SM-50-PMMA 50 μL PMMA Miniature Piston Pump | Foreach Technology",
           "ogDescription": "SM-50-PMMA: 50 μL acrylic (PMMA) head miniature piston pump for microliter reagent addition and small-volume sample dispensing. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options."
         },
         "hero": {
@@ -13148,14 +13148,14 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "FOREACH 100 μL微型精密陶瓷柱塞泵，用于自动加样和样本稀释，采用PMMA泵头",
-        "h1": "FOREACH 100 μL微型精密陶瓷柱塞泵，用于自动加样和样本稀释，采用PMMA泵头",
+        "title": "Foreach 100 μL微型精密陶瓷柱塞泵，用于自动加样和样本稀释，采用PMMA泵头",
+        "h1": "Foreach 100 μL微型精密陶瓷柱塞泵，用于自动加样和样本稀释，采用PMMA泵头",
         "seo": {
-          "titleTag": "SM-100-PMMA 100 μL PMMA 微型柱塞泵 | FOREACH",
+          "titleTag": "SM-100-PMMA 100 μL PMMA 微型柱塞泵 | Foreach Technology",
           "metaDescription": "SM-100-PMMA 为 100 μL PMMA 泵头微型柱塞泵，用于自动加样和样本稀释。查看 1/4-28 UNF / M6 接口、2000 步配置、应用要求及泵头、柱塞与液路集成选项。",
           "canonicalPath": "/products/pumps/piston-pump/sm-100-pmma",
           "robots": "index,follow",
-          "ogTitle": "SM-100-PMMA 100 μL PMMA 微型柱塞泵 | FOREACH",
+          "ogTitle": "SM-100-PMMA 100 μL PMMA 微型柱塞泵 | Foreach Technology",
           "ogDescription": "SM-100-PMMA 为 100 μL PMMA 泵头微型柱塞泵，用于自动加样和样本稀释。查看 1/4-28 UNF / M6 接口、2000 步配置、应用要求及泵头、柱塞与液路集成选项。"
         },
         "hero": {
@@ -13558,14 +13558,14 @@ export const pumpSeriesDetailRecords = [
       },
       "en": {
         "locale": "en",
-        "title": "FOREACH 100 μL Miniature Precision Ceramic Piston Pump for Automated Sampling and Sample Dilution, with an Acrylic (PMMA) Pump Head",
-        "h1": "FOREACH 100 μL Miniature Precision Ceramic Piston Pump for Automated Sampling and Sample Dilution, with an Acrylic (PMMA) Pump Head",
+        "title": "Foreach 100 μL Miniature Precision Ceramic Piston Pump for Automated Sampling and Sample Dilution, with an Acrylic (PMMA) Pump Head",
+        "h1": "Foreach 100 μL Miniature Precision Ceramic Piston Pump for Automated Sampling and Sample Dilution, with an Acrylic (PMMA) Pump Head",
         "seo": {
-          "titleTag": "SM-100-PMMA 100 μL PMMA Miniature Piston Pump | FOREACH",
+          "titleTag": "SM-100-PMMA 100 μL PMMA Miniature Piston Pump | Foreach Technology",
           "metaDescription": "SM-100-PMMA: 100 μL acrylic (PMMA) head miniature piston pump for automated sampling and sample dilution. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
           "canonicalPath": "/products/pumps/piston-pump/sm-100-pmma",
           "robots": "index,follow",
-          "ogTitle": "SM-100-PMMA 100 μL PMMA Miniature Piston Pump | FOREACH",
+          "ogTitle": "SM-100-PMMA 100 μL PMMA Miniature Piston Pump | Foreach Technology",
           "ogDescription": "SM-100-PMMA: 100 μL acrylic (PMMA) head miniature piston pump for automated sampling and sample dilution. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options."
         },
         "hero": {
@@ -13990,14 +13990,14 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "FOREACH 100 μL微型精密柱塞泵，用于特殊试剂加注和小体积液体分配，采用PEEK泵头",
-        "h1": "FOREACH 100 μL微型精密柱塞泵，用于特殊试剂加注和小体积液体分配，采用PEEK泵头",
+        "title": "Foreach 100 μL微型精密柱塞泵，用于特殊试剂加注和小体积液体分配，采用PEEK泵头",
+        "h1": "Foreach 100 μL微型精密柱塞泵，用于特殊试剂加注和小体积液体分配，采用PEEK泵头",
         "seo": {
-          "titleTag": "SM-100-PEEK 100 μL PEEK 微型柱塞泵 | FOREACH",
+          "titleTag": "SM-100-PEEK 100 μL PEEK 微型柱塞泵 | Foreach Technology",
           "metaDescription": "SM-100-PEEK 为 100 μL PEEK 泵头微型柱塞泵，用于特殊试剂加注和小体积液体分配。查看 1/4-28 UNF / M6 接口、2000 步配置、应用要求及泵头、柱塞与液路集成选项。",
           "canonicalPath": "/products/pumps/piston-pump/sm-100-peek",
           "robots": "index,follow",
-          "ogTitle": "SM-100-PEEK 100 μL PEEK 微型柱塞泵 | FOREACH",
+          "ogTitle": "SM-100-PEEK 100 μL PEEK 微型柱塞泵 | Foreach Technology",
           "ogDescription": "SM-100-PEEK 为 100 μL PEEK 泵头微型柱塞泵，用于特殊试剂加注和小体积液体分配。查看 1/4-28 UNF / M6 接口、2000 步配置、应用要求及泵头、柱塞与液路集成选项。"
         },
         "hero": {
@@ -14400,14 +14400,14 @@ export const pumpSeriesDetailRecords = [
       },
       "en": {
         "locale": "en",
-        "title": "FOREACH 100 μL Miniature Precision Piston Pump for Specialty Reagent Addition and Small-Volume Dispensing, with a PEEK Pump Head",
-        "h1": "FOREACH 100 μL Miniature Precision Piston Pump for Specialty Reagent Addition and Small-Volume Dispensing, with a PEEK Pump Head",
+        "title": "Foreach 100 μL Miniature Precision Piston Pump for Specialty Reagent Addition and Small-Volume Dispensing, with a PEEK Pump Head",
+        "h1": "Foreach 100 μL Miniature Precision Piston Pump for Specialty Reagent Addition and Small-Volume Dispensing, with a PEEK Pump Head",
         "seo": {
-          "titleTag": "SM-100-PEEK 100 μL PEEK Miniature Piston Pump | FOREACH",
+          "titleTag": "SM-100-PEEK 100 μL PEEK Miniature Piston Pump | Foreach Technology",
           "metaDescription": "SM-100-PEEK: 100 μL PEEK-head miniature piston pump for specialty reagent addition and small-volume dispensing. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
           "canonicalPath": "/products/pumps/piston-pump/sm-100-peek",
           "robots": "index,follow",
-          "ogTitle": "SM-100-PEEK 100 μL PEEK Miniature Piston Pump | FOREACH",
+          "ogTitle": "SM-100-PEEK 100 μL PEEK Miniature Piston Pump | Foreach Technology",
           "ogDescription": "SM-100-PEEK: 100 μL PEEK-head miniature piston pump for specialty reagent addition and small-volume dispensing. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options."
         },
         "hero": {
@@ -14832,14 +14832,14 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "FOREACH 250 μL微型精密陶瓷柱塞泵，用于试剂分配和反应液定量添加，采用PMMA泵头",
-        "h1": "FOREACH 250 μL微型精密陶瓷柱塞泵，用于试剂分配和反应液定量添加，采用PMMA泵头",
+        "title": "Foreach 250 μL微型精密陶瓷柱塞泵，用于试剂分配和反应液定量添加，采用PMMA泵头",
+        "h1": "Foreach 250 μL微型精密陶瓷柱塞泵，用于试剂分配和反应液定量添加，采用PMMA泵头",
         "seo": {
-          "titleTag": "SM-250-PMMA 250 μL PMMA 微型柱塞泵 | FOREACH",
+          "titleTag": "SM-250-PMMA 250 μL PMMA 微型柱塞泵 | Foreach Technology",
           "metaDescription": "SM-250-PMMA 为 250 μL PMMA 泵头微型柱塞泵，用于试剂分配和反应液定量添加。查看 1/4-28 UNF / M6 接口、2000 步配置、应用要求及泵头、柱塞与液路集成选项。",
           "canonicalPath": "/products/pumps/piston-pump/sm-250-pmma",
           "robots": "index,follow",
-          "ogTitle": "SM-250-PMMA 250 μL PMMA 微型柱塞泵 | FOREACH",
+          "ogTitle": "SM-250-PMMA 250 μL PMMA 微型柱塞泵 | Foreach Technology",
           "ogDescription": "SM-250-PMMA 为 250 μL PMMA 泵头微型柱塞泵，用于试剂分配和反应液定量添加。查看 1/4-28 UNF / M6 接口、2000 步配置、应用要求及泵头、柱塞与液路集成选项。"
         },
         "hero": {
@@ -15242,14 +15242,14 @@ export const pumpSeriesDetailRecords = [
       },
       "en": {
         "locale": "en",
-        "title": "FOREACH 250 μL Miniature Precision Ceramic Piston Pump for Reagent Dispensing and Metered Reaction-Liquid Addition, with an Acrylic (PMMA) Pump Head",
-        "h1": "FOREACH 250 μL Miniature Precision Ceramic Piston Pump for Reagent Dispensing and Metered Reaction-Liquid Addition, with an Acrylic (PMMA) Pump Head",
+        "title": "Foreach 250 μL Miniature Precision Ceramic Piston Pump for Reagent Dispensing and Metered Reaction-Liquid Addition, with an Acrylic (PMMA) Pump Head",
+        "h1": "Foreach 250 μL Miniature Precision Ceramic Piston Pump for Reagent Dispensing and Metered Reaction-Liquid Addition, with an Acrylic (PMMA) Pump Head",
         "seo": {
-          "titleTag": "SM-250-PMMA 250 μL PMMA Miniature Piston Pump | FOREACH",
+          "titleTag": "SM-250-PMMA 250 μL PMMA Miniature Piston Pump | Foreach Technology",
           "metaDescription": "SM-250-PMMA: 250 μL acrylic (PMMA) head miniature piston pump for reagent dispensing and metered reaction-liquid addition. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
           "canonicalPath": "/products/pumps/piston-pump/sm-250-pmma",
           "robots": "index,follow",
-          "ogTitle": "SM-250-PMMA 250 μL PMMA Miniature Piston Pump | FOREACH",
+          "ogTitle": "SM-250-PMMA 250 μL PMMA Miniature Piston Pump | Foreach Technology",
           "ogDescription": "SM-250-PMMA: 250 μL acrylic (PMMA) head miniature piston pump for reagent dispensing and metered reaction-liquid addition. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options."
         },
         "hero": {
@@ -15674,14 +15674,14 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "FOREACH 250 μL微型精密柱塞泵，用于特殊试剂分配和反应液添加，采用PEEK泵头",
-        "h1": "FOREACH 250 μL微型精密柱塞泵，用于特殊试剂分配和反应液添加，采用PEEK泵头",
+        "title": "Foreach 250 μL微型精密柱塞泵，用于特殊试剂分配和反应液添加，采用PEEK泵头",
+        "h1": "Foreach 250 μL微型精密柱塞泵，用于特殊试剂分配和反应液添加，采用PEEK泵头",
         "seo": {
-          "titleTag": "SM-250-PEEK 250 μL PEEK 微型柱塞泵 | FOREACH",
+          "titleTag": "SM-250-PEEK 250 μL PEEK 微型柱塞泵 | Foreach Technology",
           "metaDescription": "SM-250-PEEK 为 250 μL PEEK 泵头微型柱塞泵，用于特殊试剂分配和反应液添加。查看 1/4-28 UNF / M6 接口、2000 步配置、应用要求及泵头、柱塞与液路集成选项。",
           "canonicalPath": "/products/pumps/piston-pump/sm-250-peek",
           "robots": "index,follow",
-          "ogTitle": "SM-250-PEEK 250 μL PEEK 微型柱塞泵 | FOREACH",
+          "ogTitle": "SM-250-PEEK 250 μL PEEK 微型柱塞泵 | Foreach Technology",
           "ogDescription": "SM-250-PEEK 为 250 μL PEEK 泵头微型柱塞泵，用于特殊试剂分配和反应液添加。查看 1/4-28 UNF / M6 接口、2000 步配置、应用要求及泵头、柱塞与液路集成选项。"
         },
         "hero": {
@@ -16084,14 +16084,14 @@ export const pumpSeriesDetailRecords = [
       },
       "en": {
         "locale": "en",
-        "title": "FOREACH 250 μL Miniature Precision Piston Pump for Specialty Reagent Dispensing and Reaction-Liquid Addition, with a PEEK Pump Head",
-        "h1": "FOREACH 250 μL Miniature Precision Piston Pump for Specialty Reagent Dispensing and Reaction-Liquid Addition, with a PEEK Pump Head",
+        "title": "Foreach 250 μL Miniature Precision Piston Pump for Specialty Reagent Dispensing and Reaction-Liquid Addition, with a PEEK Pump Head",
+        "h1": "Foreach 250 μL Miniature Precision Piston Pump for Specialty Reagent Dispensing and Reaction-Liquid Addition, with a PEEK Pump Head",
         "seo": {
-          "titleTag": "SM-250-PEEK 250 μL PEEK Miniature Piston Pump | FOREACH",
+          "titleTag": "SM-250-PEEK 250 μL PEEK Miniature Piston Pump | Foreach Technology",
           "metaDescription": "SM-250-PEEK: 250 μL PEEK-head miniature piston pump for specialty reagent dispensing and reaction-liquid addition. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
           "canonicalPath": "/products/pumps/piston-pump/sm-250-peek",
           "robots": "index,follow",
-          "ogTitle": "SM-250-PEEK 250 μL PEEK Miniature Piston Pump | FOREACH",
+          "ogTitle": "SM-250-PEEK 250 μL PEEK Miniature Piston Pump | Foreach Technology",
           "ogDescription": "SM-250-PEEK: 250 μL PEEK-head miniature piston pump for specialty reagent dispensing and reaction-liquid addition. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options."
         },
         "hero": {
@@ -16516,14 +16516,14 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "FOREACH 500 μL微型精密陶瓷柱塞泵，用于试剂加注和稀释液定量添加，采用PMMA泵头",
-        "h1": "FOREACH 500 μL微型精密陶瓷柱塞泵，用于试剂加注和稀释液定量添加，采用PMMA泵头",
+        "title": "Foreach 500 μL微型精密陶瓷柱塞泵，用于试剂加注和稀释液定量添加，采用PMMA泵头",
+        "h1": "Foreach 500 μL微型精密陶瓷柱塞泵，用于试剂加注和稀释液定量添加，采用PMMA泵头",
         "seo": {
-          "titleTag": "SM-500-PMMA 500 μL PMMA 微型柱塞泵 | FOREACH",
+          "titleTag": "SM-500-PMMA 500 μL PMMA 微型柱塞泵 | Foreach Technology",
           "metaDescription": "SM-500-PMMA 为 500 μL PMMA 泵头微型柱塞泵，用于试剂加注和稀释液定量添加。查看 1/4-28 UNF / M6 接口、2000 步配置、应用要求及泵头、柱塞与液路集成选项。",
           "canonicalPath": "/products/pumps/piston-pump/sm-500-pmma",
           "robots": "index,follow",
-          "ogTitle": "SM-500-PMMA 500 μL PMMA 微型柱塞泵 | FOREACH",
+          "ogTitle": "SM-500-PMMA 500 μL PMMA 微型柱塞泵 | Foreach Technology",
           "ogDescription": "SM-500-PMMA 为 500 μL PMMA 泵头微型柱塞泵，用于试剂加注和稀释液定量添加。查看 1/4-28 UNF / M6 接口、2000 步配置、应用要求及泵头、柱塞与液路集成选项。"
         },
         "hero": {
@@ -16926,14 +16926,14 @@ export const pumpSeriesDetailRecords = [
       },
       "en": {
         "locale": "en",
-        "title": "FOREACH 500 μL Miniature Precision Ceramic Piston Pump for Reagent Addition and Metered Diluent Dosing, with an Acrylic (PMMA) Pump Head",
-        "h1": "FOREACH 500 μL Miniature Precision Ceramic Piston Pump for Reagent Addition and Metered Diluent Dosing, with an Acrylic (PMMA) Pump Head",
+        "title": "Foreach 500 μL Miniature Precision Ceramic Piston Pump for Reagent Addition and Metered Diluent Dosing, with an Acrylic (PMMA) Pump Head",
+        "h1": "Foreach 500 μL Miniature Precision Ceramic Piston Pump for Reagent Addition and Metered Diluent Dosing, with an Acrylic (PMMA) Pump Head",
         "seo": {
-          "titleTag": "SM-500-PMMA 500 μL PMMA Miniature Piston Pump | FOREACH",
+          "titleTag": "SM-500-PMMA 500 μL PMMA Miniature Piston Pump | Foreach Technology",
           "metaDescription": "SM-500-PMMA: 500 μL acrylic (PMMA) head miniature piston pump for reagent addition and metered diluent dosing. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
           "canonicalPath": "/products/pumps/piston-pump/sm-500-pmma",
           "robots": "index,follow",
-          "ogTitle": "SM-500-PMMA 500 μL PMMA Miniature Piston Pump | FOREACH",
+          "ogTitle": "SM-500-PMMA 500 μL PMMA Miniature Piston Pump | Foreach Technology",
           "ogDescription": "SM-500-PMMA: 500 μL acrylic (PMMA) head miniature piston pump for reagent addition and metered diluent dosing. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options."
         },
         "hero": {
@@ -17358,14 +17358,14 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "FOREACH 1 mL微型精密陶瓷柱塞泵，用于稀释液添加和缓冲液分配，采用PMMA泵头",
-        "h1": "FOREACH 1 mL微型精密陶瓷柱塞泵，用于稀释液添加和缓冲液分配，采用PMMA泵头",
+        "title": "Foreach 1 mL微型精密陶瓷柱塞泵，用于稀释液添加和缓冲液分配，采用PMMA泵头",
+        "h1": "Foreach 1 mL微型精密陶瓷柱塞泵，用于稀释液添加和缓冲液分配，采用PMMA泵头",
         "seo": {
-          "titleTag": "SM-1000-PMMA 1 mL PMMA 微型柱塞泵 | FOREACH",
+          "titleTag": "SM-1000-PMMA 1 mL PMMA 微型柱塞泵 | Foreach Technology",
           "metaDescription": "SM-1000-PMMA 为 1 mL PMMA 泵头微型柱塞泵，用于稀释液添加和缓冲液分配。查看 1/4-28 UNF / M6 接口、2000 步配置、应用要求及泵头、柱塞与液路集成选项。",
           "canonicalPath": "/products/pumps/piston-pump/sm-1000-pmma",
           "robots": "index,follow",
-          "ogTitle": "SM-1000-PMMA 1 mL PMMA 微型柱塞泵 | FOREACH",
+          "ogTitle": "SM-1000-PMMA 1 mL PMMA 微型柱塞泵 | Foreach Technology",
           "ogDescription": "SM-1000-PMMA 为 1 mL PMMA 泵头微型柱塞泵，用于稀释液添加和缓冲液分配。查看 1/4-28 UNF / M6 接口、2000 步配置、应用要求及泵头、柱塞与液路集成选项。"
         },
         "hero": {
@@ -17768,14 +17768,14 @@ export const pumpSeriesDetailRecords = [
       },
       "en": {
         "locale": "en",
-        "title": "FOREACH 1 mL Miniature Precision Ceramic Piston Pump for Diluent Addition and Buffer Dispensing, with an Acrylic (PMMA) Pump Head",
-        "h1": "FOREACH 1 mL Miniature Precision Ceramic Piston Pump for Diluent Addition and Buffer Dispensing, with an Acrylic (PMMA) Pump Head",
+        "title": "Foreach 1 mL Miniature Precision Ceramic Piston Pump for Diluent Addition and Buffer Dispensing, with an Acrylic (PMMA) Pump Head",
+        "h1": "Foreach 1 mL Miniature Precision Ceramic Piston Pump for Diluent Addition and Buffer Dispensing, with an Acrylic (PMMA) Pump Head",
         "seo": {
-          "titleTag": "SM-1000-PMMA 1 mL PMMA Miniature Piston Pump | FOREACH",
+          "titleTag": "SM-1000-PMMA 1 mL PMMA Miniature Piston Pump | Foreach Technology",
           "metaDescription": "SM-1000-PMMA: 1 mL acrylic (PMMA) head miniature piston pump for diluent addition and buffer dispensing. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options.",
           "canonicalPath": "/products/pumps/piston-pump/sm-1000-pmma",
           "robots": "index,follow",
-          "ogTitle": "SM-1000-PMMA 1 mL PMMA Miniature Piston Pump | FOREACH",
+          "ogTitle": "SM-1000-PMMA 1 mL PMMA Miniature Piston Pump | Foreach Technology",
           "ogDescription": "SM-1000-PMMA: 1 mL acrylic (PMMA) head miniature piston pump for diluent addition and buffer dispensing. Explore 1/4-28 UNF / M6 ports, 2000 steps and OEM integration options."
         },
         "hero": {
@@ -18200,14 +18200,14 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "FOREACH 50 μL超微型精密陶瓷柱塞泵，用于紧凑液路中的微量试剂加注，采用PMMA泵头",
-        "h1": "FOREACH 50 μL超微型精密陶瓷柱塞泵，用于紧凑液路中的微量试剂加注，采用PMMA泵头",
+        "title": "Foreach 50 μL超微型精密陶瓷柱塞泵，用于紧凑液路中的微量试剂加注，采用PMMA泵头",
+        "h1": "Foreach 50 μL超微型精密陶瓷柱塞泵，用于紧凑液路中的微量试剂加注，采用PMMA泵头",
         "seo": {
-          "titleTag": "TM-50-PMMA 50 μL PMMA 超微型柱塞泵 | FOREACH",
+          "titleTag": "TM-50-PMMA 50 μL PMMA 超微型柱塞泵 | Foreach Technology",
           "metaDescription": "TM-50-PMMA 为 50 μL PMMA 泵头超微型柱塞泵，用于紧凑液路中的微量试剂加注。查看 6-40 UNF 接口、2540 步配置、应用要求及泵头、柱塞与液路集成选项。",
           "canonicalPath": "/products/pumps/piston-pump/tm-50-pmma",
           "robots": "index,follow",
-          "ogTitle": "TM-50-PMMA 50 μL PMMA 超微型柱塞泵 | FOREACH",
+          "ogTitle": "TM-50-PMMA 50 μL PMMA 超微型柱塞泵 | Foreach Technology",
           "ogDescription": "TM-50-PMMA 为 50 μL PMMA 泵头超微型柱塞泵，用于紧凑液路中的微量试剂加注。查看 6-40 UNF 接口、2540 步配置、应用要求及泵头、柱塞与液路集成选项。"
         },
         "hero": {
@@ -18606,14 +18606,14 @@ export const pumpSeriesDetailRecords = [
       },
       "en": {
         "locale": "en",
-        "title": "FOREACH 50 μL Ultra-Compact Precision Ceramic Piston Pump for Microliter Reagent Addition in Compact Fluid Paths, with an Acrylic (PMMA) Pump Head",
-        "h1": "FOREACH 50 μL Ultra-Compact Precision Ceramic Piston Pump for Microliter Reagent Addition in Compact Fluid Paths, with an Acrylic (PMMA) Pump Head",
+        "title": "Foreach 50 μL Ultra-Compact Precision Ceramic Piston Pump for Microliter Reagent Addition in Compact Fluid Paths, with an Acrylic (PMMA) Pump Head",
+        "h1": "Foreach 50 μL Ultra-Compact Precision Ceramic Piston Pump for Microliter Reagent Addition in Compact Fluid Paths, with an Acrylic (PMMA) Pump Head",
         "seo": {
-          "titleTag": "TM-50-PMMA 50 μL PMMA Ultra-Compact Piston Pump | FOREACH",
+          "titleTag": "TM-50-PMMA 50 μL PMMA Ultra-Compact Piston Pump | Foreach Technology",
           "metaDescription": "TM-50-PMMA: 50 μL acrylic (PMMA) head ultra-compact piston pump for microliter reagent addition in compact fluid paths. Explore 6-40 UNF ports, 2540 steps and OEM integration options.",
           "canonicalPath": "/products/pumps/piston-pump/tm-50-pmma",
           "robots": "index,follow",
-          "ogTitle": "TM-50-PMMA 50 μL PMMA Ultra-Compact Piston Pump | FOREACH",
+          "ogTitle": "TM-50-PMMA 50 μL PMMA Ultra-Compact Piston Pump | Foreach Technology",
           "ogDescription": "TM-50-PMMA: 50 μL acrylic (PMMA) head ultra-compact piston pump for microliter reagent addition in compact fluid paths. Explore 6-40 UNF ports, 2540 steps and OEM integration options."
         },
         "hero": {
@@ -19036,14 +19036,14 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "FOREACH 100 μL超微型精密陶瓷柱塞泵，用于小型检测模块中的样本分配，采用PMMA泵头",
-        "h1": "FOREACH 100 μL超微型精密陶瓷柱塞泵，用于小型检测模块中的样本分配，采用PMMA泵头",
+        "title": "Foreach 100 μL超微型精密陶瓷柱塞泵，用于小型检测模块中的样本分配，采用PMMA泵头",
+        "h1": "Foreach 100 μL超微型精密陶瓷柱塞泵，用于小型检测模块中的样本分配，采用PMMA泵头",
         "seo": {
-          "titleTag": "TM-100-PMMA 100 μL PMMA 超微型柱塞泵 | FOREACH",
+          "titleTag": "TM-100-PMMA 100 μL PMMA 超微型柱塞泵 | Foreach Technology",
           "metaDescription": "TM-100-PMMA 为 100 μL PMMA 泵头超微型柱塞泵，用于小型检测模块中的样本分配。查看 6-40 UNF 接口、2540 步配置、应用要求及泵头、柱塞与液路集成选项。",
           "canonicalPath": "/products/pumps/piston-pump/tm-100-pmma",
           "robots": "index,follow",
-          "ogTitle": "TM-100-PMMA 100 μL PMMA 超微型柱塞泵 | FOREACH",
+          "ogTitle": "TM-100-PMMA 100 μL PMMA 超微型柱塞泵 | Foreach Technology",
           "ogDescription": "TM-100-PMMA 为 100 μL PMMA 泵头超微型柱塞泵，用于小型检测模块中的样本分配。查看 6-40 UNF 接口、2540 步配置、应用要求及泵头、柱塞与液路集成选项。"
         },
         "hero": {
@@ -19442,14 +19442,14 @@ export const pumpSeriesDetailRecords = [
       },
       "en": {
         "locale": "en",
-        "title": "FOREACH 100 μL Ultra-Compact Precision Ceramic Piston Pump for Sample Dispensing in Small Analytical Modules, with an Acrylic (PMMA) Pump Head",
-        "h1": "FOREACH 100 μL Ultra-Compact Precision Ceramic Piston Pump for Sample Dispensing in Small Analytical Modules, with an Acrylic (PMMA) Pump Head",
+        "title": "Foreach 100 μL Ultra-Compact Precision Ceramic Piston Pump for Sample Dispensing in Small Analytical Modules, with an Acrylic (PMMA) Pump Head",
+        "h1": "Foreach 100 μL Ultra-Compact Precision Ceramic Piston Pump for Sample Dispensing in Small Analytical Modules, with an Acrylic (PMMA) Pump Head",
         "seo": {
-          "titleTag": "TM-100-PMMA 100 μL PMMA Ultra-Compact Piston Pump | FOREACH",
+          "titleTag": "TM-100-PMMA 100 μL PMMA Ultra-Compact Piston Pump | Foreach Technology",
           "metaDescription": "TM-100-PMMA: 100 μL acrylic (PMMA) head ultra-compact piston pump for sample dispensing in small analytical modules. Explore 6-40 UNF ports, 2540 steps and OEM integration options.",
           "canonicalPath": "/products/pumps/piston-pump/tm-100-pmma",
           "robots": "index,follow",
-          "ogTitle": "TM-100-PMMA 100 μL PMMA Ultra-Compact Piston Pump | FOREACH",
+          "ogTitle": "TM-100-PMMA 100 μL PMMA Ultra-Compact Piston Pump | Foreach Technology",
           "ogDescription": "TM-100-PMMA: 100 μL acrylic (PMMA) head ultra-compact piston pump for sample dispensing in small analytical modules. Explore 6-40 UNF ports, 2540 steps and OEM integration options."
         },
         "hero": {
@@ -19872,14 +19872,14 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "FOREACH 250 μL超微型精密陶瓷柱塞泵，用于紧凑分析模块中的反应液添加，采用PMMA泵头",
-        "h1": "FOREACH 250 μL超微型精密陶瓷柱塞泵，用于紧凑分析模块中的反应液添加，采用PMMA泵头",
+        "title": "Foreach 250 μL超微型精密陶瓷柱塞泵，用于紧凑分析模块中的反应液添加，采用PMMA泵头",
+        "h1": "Foreach 250 μL超微型精密陶瓷柱塞泵，用于紧凑分析模块中的反应液添加，采用PMMA泵头",
         "seo": {
-          "titleTag": "TM-250-PMMA 250 μL PMMA 超微型柱塞泵 | FOREACH",
+          "titleTag": "TM-250-PMMA 250 μL PMMA 超微型柱塞泵 | Foreach Technology",
           "metaDescription": "TM-250-PMMA 为 250 μL PMMA 泵头超微型柱塞泵，用于紧凑分析模块中的反应液添加。查看 6-40 UNF 接口、2540 步配置、应用要求及泵头、柱塞与液路集成选项。",
           "canonicalPath": "/products/pumps/piston-pump/tm-250-pmma",
           "robots": "index,follow",
-          "ogTitle": "TM-250-PMMA 250 μL PMMA 超微型柱塞泵 | FOREACH",
+          "ogTitle": "TM-250-PMMA 250 μL PMMA 超微型柱塞泵 | Foreach Technology",
           "ogDescription": "TM-250-PMMA 为 250 μL PMMA 泵头超微型柱塞泵，用于紧凑分析模块中的反应液添加。查看 6-40 UNF 接口、2540 步配置、应用要求及泵头、柱塞与液路集成选项。"
         },
         "hero": {
@@ -20278,14 +20278,14 @@ export const pumpSeriesDetailRecords = [
       },
       "en": {
         "locale": "en",
-        "title": "FOREACH 250 μL Ultra-Compact Precision Ceramic Piston Pump for Reaction-Liquid Addition in Compact Analytical Modules, with an Acrylic (PMMA) Pump Head",
-        "h1": "FOREACH 250 μL Ultra-Compact Precision Ceramic Piston Pump for Reaction-Liquid Addition in Compact Analytical Modules, with an Acrylic (PMMA) Pump Head",
+        "title": "Foreach 250 μL Ultra-Compact Precision Ceramic Piston Pump for Reaction-Liquid Addition in Compact Analytical Modules, with an Acrylic (PMMA) Pump Head",
+        "h1": "Foreach 250 μL Ultra-Compact Precision Ceramic Piston Pump for Reaction-Liquid Addition in Compact Analytical Modules, with an Acrylic (PMMA) Pump Head",
         "seo": {
-          "titleTag": "TM-250-PMMA 250 μL PMMA Ultra-Compact Piston Pump | FOREACH",
+          "titleTag": "TM-250-PMMA 250 μL PMMA Ultra-Compact Piston Pump | Foreach Technology",
           "metaDescription": "TM-250-PMMA: 250 μL acrylic (PMMA) head ultra-compact piston pump for reaction-liquid addition in compact analytical modules. Explore 6-40 UNF ports, 2540 steps and OEM integration options.",
           "canonicalPath": "/products/pumps/piston-pump/tm-250-pmma",
           "robots": "index,follow",
-          "ogTitle": "TM-250-PMMA 250 μL PMMA Ultra-Compact Piston Pump | FOREACH",
+          "ogTitle": "TM-250-PMMA 250 μL PMMA Ultra-Compact Piston Pump | Foreach Technology",
           "ogDescription": "TM-250-PMMA: 250 μL acrylic (PMMA) head ultra-compact piston pump for reaction-liquid addition in compact analytical modules. Explore 6-40 UNF ports, 2540 steps and OEM integration options."
         },
         "hero": {
@@ -20708,14 +20708,14 @@ export const pumpSeriesDetailRecords = [
     "content": {
       "zh": {
         "locale": "zh",
-        "title": "FOREACH 500 μL超微型精密陶瓷柱塞泵，用于模块化液路中的试剂和缓冲液分配，采用PMMA泵头",
-        "h1": "FOREACH 500 μL超微型精密陶瓷柱塞泵，用于模块化液路中的试剂和缓冲液分配，采用PMMA泵头",
+        "title": "Foreach 500 μL超微型精密陶瓷柱塞泵，用于模块化液路中的试剂和缓冲液分配，采用PMMA泵头",
+        "h1": "Foreach 500 μL超微型精密陶瓷柱塞泵，用于模块化液路中的试剂和缓冲液分配，采用PMMA泵头",
         "seo": {
-          "titleTag": "TM-500-PMMA 500 μL PMMA 超微型柱塞泵 | FOREACH",
+          "titleTag": "TM-500-PMMA 500 μL PMMA 超微型柱塞泵 | Foreach Technology",
           "metaDescription": "TM-500-PMMA 为 500 μL PMMA 泵头超微型柱塞泵，用于模块化液路中的试剂和缓冲液分配。查看 6-40 UNF 接口、2540 步配置、应用要求及泵头、柱塞与液路集成选项。",
           "canonicalPath": "/products/pumps/piston-pump/tm-500-pmma",
           "robots": "index,follow",
-          "ogTitle": "TM-500-PMMA 500 μL PMMA 超微型柱塞泵 | FOREACH",
+          "ogTitle": "TM-500-PMMA 500 μL PMMA 超微型柱塞泵 | Foreach Technology",
           "ogDescription": "TM-500-PMMA 为 500 μL PMMA 泵头超微型柱塞泵，用于模块化液路中的试剂和缓冲液分配。查看 6-40 UNF 接口、2540 步配置、应用要求及泵头、柱塞与液路集成选项。"
         },
         "hero": {
@@ -21114,14 +21114,14 @@ export const pumpSeriesDetailRecords = [
       },
       "en": {
         "locale": "en",
-        "title": "FOREACH 500 μL Ultra-Compact Precision Ceramic Piston Pump for Reagent and Buffer Dispensing in Modular Fluid Paths, with an Acrylic (PMMA) Pump Head",
-        "h1": "FOREACH 500 μL Ultra-Compact Precision Ceramic Piston Pump for Reagent and Buffer Dispensing in Modular Fluid Paths, with an Acrylic (PMMA) Pump Head",
+        "title": "Foreach 500 μL Ultra-Compact Precision Ceramic Piston Pump for Reagent and Buffer Dispensing in Modular Fluid Paths, with an Acrylic (PMMA) Pump Head",
+        "h1": "Foreach 500 μL Ultra-Compact Precision Ceramic Piston Pump for Reagent and Buffer Dispensing in Modular Fluid Paths, with an Acrylic (PMMA) Pump Head",
         "seo": {
-          "titleTag": "TM-500-PMMA 500 μL PMMA Ultra-Compact Piston Pump | FOREACH",
+          "titleTag": "TM-500-PMMA 500 μL PMMA Ultra-Compact Piston Pump | Foreach Technology",
           "metaDescription": "TM-500-PMMA: 500 μL acrylic (PMMA) head ultra-compact piston pump for reagent and buffer dispensing in modular fluid paths. Explore 6-40 UNF ports, 2540 steps and OEM integration options.",
           "canonicalPath": "/products/pumps/piston-pump/tm-500-pmma",
           "robots": "index,follow",
-          "ogTitle": "TM-500-PMMA 500 μL PMMA Ultra-Compact Piston Pump | FOREACH",
+          "ogTitle": "TM-500-PMMA 500 μL PMMA Ultra-Compact Piston Pump | Foreach Technology",
           "ogDescription": "TM-500-PMMA: 500 μL acrylic (PMMA) head ultra-compact piston pump for reagent and buffer dispensing in modular fluid paths. Explore 6-40 UNF ports, 2540 steps and OEM integration options."
         },
         "hero": {

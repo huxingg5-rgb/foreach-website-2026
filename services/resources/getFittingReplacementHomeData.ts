@@ -118,8 +118,8 @@ export async function getFittingReplacementHomeData(
 
       description:
         isZh
-          ? "输入您当前使用的产品型号，查询对应的 FOREACH 恒永达兼容产品。"
-          : "Enter the model currently in use to find corresponding FOREACH compatible products.",
+          ? "输入您当前使用的产品型号，查询对应的 Foreach 恒永达兼容产品。"
+          : "Enter the model currently in use to find corresponding Foreach compatible products.",
     },
 
     breadcrumbs: [
@@ -206,8 +206,8 @@ export async function getFittingReplacementHomeData(
       productCard: {
         productName:
           isZh
-            ? "FOREACH 接头"
-            : "FOREACH Fitting",
+            ? "Foreach 接头"
+            : "Foreach Fitting",
 
         productCode:
           isZh
@@ -216,8 +216,8 @@ export async function getFittingReplacementHomeData(
 
         foreachModel:
           isZh
-            ? "FOREACH 型号："
-            : "FOREACH model:",
+            ? "Foreach 型号："
+            : "Foreach model:",
 
         compatibleModels:
           isZh

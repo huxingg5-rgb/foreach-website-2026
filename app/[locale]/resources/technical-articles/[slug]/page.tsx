@@ -92,8 +92,8 @@ export async function generateMetadata({
   const metaTitle = /FOREACH/i.test(seoTitle)
     ? seoTitle
     : locale === "en"
-      ? `${seoTitle}｜Technical Articles｜FOREACH`
-      : `${seoTitle}｜FOREACH`;
+      ? `${seoTitle}｜Technical Articles｜Foreach Technology`
+      : `${seoTitle}｜Foreach Technology`;
   const description = article.seoDescription ?? article.summary;
   const canonicalUrl =
     `https://www.foreachtek.com/${locale}/resources/technical-articles/${slug}/`;

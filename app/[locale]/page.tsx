@@ -105,9 +105,9 @@ export async function generateMetadata({
 
   return {
     openGraph: { siteName: SITE_NAME },
-    title: "FOREACH | Microfluidic Components and Fluidic Solutions",
+    title: "Foreach Technology | Microfluidic Components and Fluidic Solutions",
     description:
-      "FOREACH develops pumps, valves, probes, fittings, tubing, sensors, and control modules for IVD, life sciences, analytical instruments, synthetic biology, and laboratory automation.",
+      "Foreach Technology develops pumps, valves, probes, fittings, tubing, sensors, and control modules for IVD, life sciences, analytical instruments, synthetic biology, and laboratory automation.",
   };
 }
 

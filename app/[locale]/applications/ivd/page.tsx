@@ -47,35 +47,35 @@ const IVD_METADATA: Record<
   }
 > = {
   en: {
-    title: "IVD Fluidic System Solutions | FOREACH",
+    title: "IVD Fluidic System Solutions | Foreach Technology",
     description:
-      "FOREACH provides pumps, valves, fittings, tubing and sensors for sample, reagent, washing, waste and monitoring fluidics in IVD instruments.",
+      "Foreach provides pumps, valves, fittings, tubing and sensors for sample, reagent, washing, waste and monitoring fluidics in IVD instruments.",
     openGraphLocale: "en_US",
     imageAlt: "Fluidic system support for IVD instruments",
   },
   es: {
-    title: "Soluciones de circuitos fluídicos para IVD | FOREACH",
+    title: "Soluciones de circuitos fluídicos para IVD | Foreach Technology",
     description:
       "Bombas, válvulas, conexiones, tubos y sensores para la aspiración de muestras, dispensación de reactivos, lavado, residuos y monitorización en instrumentos IVD.",
     openGraphLocale: "es_ES",
     imageAlt: "Soluciones de circuitos fluídicos para instrumentos IVD",
   },
   fr: {
-    title: "Solutions de circuits fluidiques pour l’IVD | FOREACH",
+    title: "Solutions de circuits fluidiques pour l’IVD | Foreach Technology",
     description:
       "Pompes, vannes, raccords, tubes et capteurs pour l’aspiration des échantillons, la distribution des réactifs, le lavage, les déchets et la surveillance des instruments IVD.",
     openGraphLocale: "fr_FR",
     imageAlt: "Solutions de circuits fluidiques pour instruments IVD",
   },
   ko: {
-    title: "IVD 장비용 정밀 유로 솔루션 | FOREACH",
+    title: "IVD 장비용 정밀 유로 솔루션 | Foreach Technology",
     description:
       "IVD 장비의 샘플 흡입, 시약 분주, 세척, 폐액 처리 및 유로 모니터링을 위한 펌프, 밸브, 피팅, 튜빙과 센서를 제공합니다.",
     openGraphLocale: "ko_KR",
     imageAlt: "IVD 장비용 정밀 유로 솔루션",
   },
   ru: {
-    title: "Решения для жидкостных трактов IVD | FOREACH",
+    title: "Решения для жидкостных трактов IVD | Foreach Technology",
     description:
       "Насосы, клапаны, фитинги, трубки и датчики для аспирации образцов, дозирования реагентов, промывки, удаления отходов и контроля жидкостных трактов приборов IVD.",
     openGraphLocale: "ru_RU",

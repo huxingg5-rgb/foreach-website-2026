@@ -2,13 +2,13 @@ import type { DiaphragmPumpEngineeringArticleCopy } from "./diaphragm-pump-engin
 
 export const foreachDiaphragmPumpOemIntegrationEsCopy = {
   "metadata": {
-    "title": "Integración OEM de bombas de diafragma miniatura FOREACH: punto de funcionamiento, validación y producción en serie",
-    "seoTitle": "Bombas de diafragma OEM FOREACH | Selección y validación",
+    "title": "Integración OEM de bombas de diafragma miniatura Foreach: punto de funcionamiento, validación y producción en serie",
+    "seoTitle": "Bombas de diafragma OEM Foreach | Selección y validación",
     "seoDescription": "Guía de DPL30, DPL60, DPL30H y DPGL800: balances de caudal y presión, autocebado, materiales, control, montaje, ensayos de prototipos y producción en serie.",
     "coverImage": "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-600ml-min-brushless-pwm-miniature-liquid-diaphragm-pump-front-side.webp",
-    "coverAlt": "Fotografía de una bomba de diafragma para líquidos FOREACH DPL60 con espigas para manguera y motor"
+    "coverAlt": "Fotografía de una bomba de diafragma para líquidos Foreach DPL60 con espigas para manguera y motor"
   },
-  "deck": "Que la bomba de diafragma miniatura pueda funcionar de manera estable en instrumentos OEM depende de la combinación conjunta de las tareas de la ruta del líquido, las condiciones de entrada y salida, las combinaciones de materiales, los métodos de control y la estructura general de la máquina. Tomando como ejemplos FOREACH DPL30, DPL60, DPL30H y DPGL800, este artículo comienza con el presupuesto de flujo y presión, el estado gas-líquido, los materiales en contacto con el fluido y las interfaces eléctricas para explicar cómo establecer soluciones candidatas, llevar a cabo una verificación de prototipos reproducibles y convertir los resultados de la verificación en requisitos técnicos para la suministro en serie.",
+  "deck": "Que la bomba de diafragma miniatura pueda funcionar de manera estable en instrumentos OEM depende de la combinación conjunta de las tareas de la ruta del líquido, las condiciones de entrada y salida, las combinaciones de materiales, los métodos de control y la estructura general de la máquina. Tomando como ejemplos Foreach DPL30, DPL60, DPL30H y DPGL800, este artículo comienza con el presupuesto de flujo y presión, el estado gas-líquido, los materiales en contacto con el fluido y las interfaces eléctricas para explicar cómo establecer soluciones candidatas, llevar a cabo una verificación de prototipos reproducibles y convertir los resultados de la verificación en requisitos técnicos para la suministro en serie.",
   "leadBlocks": [
     {
       "type": "paragraph",
@@ -16,11 +16,11 @@ export const foreachDiaphragmPumpOemIntegrationEsCopy = {
     },
     {
       "type": "paragraph",
-      "text": "La integración OEM mencionada en este artículo se refiere a la selección, adaptación y verificación de la bomba de diafragma miniatura FOREACH como componente interno del instrumento. Los modelos estándar, las configuraciones opcionales y la personalización del proyecto deben confirmarse por separado. Los entregables del trabajo técnico deben incluir modelos completos, límites de circuitos de fluidos, interfaces eléctricas y mecánicas, métodos de aceptación y requisitos de cambio, de modo que I+D, adquisiciones, producción y posventa utilicen la misma base."
+      "text": "La integración OEM mencionada en este artículo se refiere a la selección, adaptación y verificación de la bomba de diafragma miniatura Foreach como componente interno del instrumento. Los modelos estándar, las configuraciones opcionales y la personalización del proyecto deben confirmarse por separado. Los entregables del trabajo técnico deben incluir modelos completos, límites de circuitos de fluidos, interfaces eléctricas y mecánicas, métodos de aceptación y requisitos de cambio, de modo que I+D, adquisiciones, producción y posventa utilicen la misma base."
     },
     {
       "type": "paragraph",
-      "text": "Los siguientes valores de producto se basan en las especificaciones chinas de FOREACH que se enumeran al final del artículo; Los ejemplos de cálculo se utilizan para explicar el método de diseño y no representan los resultados de medición reales de un determinado modelo. Los reactivos reales, los medios mixtos, la instalación especial y el ritmo de trabajo deben verificarse en la configuración correspondiente y en la ruta completa del fluido de la máquina."
+      "text": "Los siguientes valores de producto se basan en las especificaciones chinas de Foreach que se enumeran al final del artículo; Los ejemplos de cálculo se utilizan para explicar el método de diseño y no representan los resultados de medición reales de un determinado modelo. Los reactivos reales, los medios mixtos, la instalación especial y el ritmo de trabajo deben verificarse en la configuración correspondiente y en la ruta completa del fluido de la máquina."
     }
   ],
   "sections": [
@@ -77,7 +77,7 @@ export const foreachDiaphragmPumpOemIntegrationEsCopy = {
       ]
     },
     {
-      "title": "2. Cómo ingresar a la lista de candidatos OEM para las cuatro series de bombas de diafragma FOREACH",
+      "title": "2. Cómo ingresar a la lista de candidatos OEM para las cuatro series de bombas de diafragma Foreach",
       "blocks": [
         {
           "type": "paragraph",
@@ -120,7 +120,7 @@ export const foreachDiaphragmPumpOemIntegrationEsCopy = {
         {
           "type": "figure",
           "src": "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-600ml-min-brushless-pwm-miniature-liquid-diaphragm-pump-front-side.webp",
-          "alt": "Fotografía de la FOREACH DPL60 sin escobillas, con espigas para manguera a ambos lados del cabezal",
+          "alt": "Fotografía de la Foreach DPL60 sin escobillas, con espigas para manguera a ambos lados del cabezal",
           "width": 1500,
           "height": 1499,
           "caption": "DPL60: la posición relativa de espigas, motor y cabezal ayuda a evaluar el recorrido de las mangueras y el espacio de montaje. Confirme el conexionado, las dimensiones y los materiales con la documentación del modelo elegido."
@@ -135,7 +135,7 @@ export const foreachDiaphragmPumpOemIntegrationEsCopy = {
           "items": [
             {
               "href": "/products/pumps/miniature-diaphragm-pumps/",
-              "label": "Ver la serie de bombas de diafragma miniatura FOREACH y su configuración básica"
+              "label": "Ver la serie de bombas de diafragma miniatura Foreach y su configuración básica"
             }
           ]
         }
@@ -168,7 +168,7 @@ export const foreachDiaphragmPumpOemIntegrationEsCopy = {
         {
           "type": "formula",
           "expression": "M_Q = (Q_available,worst − Q_req) / Q_req × 100%",
-          "note": "Q_available,worst es el caudal disponible en las condiciones de trabajo más adversas definidas, que debe derivarse de la curva o prueba de las condiciones de trabajo correspondientes. Si la medición real en el ejemplo es 150 mL/min y la demanda es 120 mL/min, el margen es del 25 %; Los 150 mL/min aquí son un valor supuesto, no un valor garantizado para un determinado modelo FOREACH."
+          "note": "Q_available,worst es el caudal disponible en las condiciones de trabajo más adversas definidas, que debe derivarse de la curva o prueba de las condiciones de trabajo correspondientes. Si la medición real en el ejemplo es 150 mL/min y la demanda es 120 mL/min, el margen es del 25 %; Los 150 mL/min aquí son un valor supuesto, no un valor garantizado para un determinado modelo Foreach."
         },
         {
           "type": "paragraph",
@@ -302,7 +302,7 @@ export const foreachDiaphragmPumpOemIntegrationEsCopy = {
         {
           "type": "figure",
           "src": "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushless-2-wire-real-product-photo.webp",
-          "alt": "Fotografía de la DPL30 FOREACH sin escobillas de dos hilos, con espigas, cabezal y alimentación",
+          "alt": "Fotografía de la DPL30 Foreach sin escobillas de dos hilos, con espigas, cabezal y alimentación",
           "width": 1200,
           "height": 1200,
           "caption": "DPL30 sin escobillas de dos hilos. Evalúe diámetro interior, inserción y retención de la manguera, radio de curvatura y esfuerzos del cableado. La fotografía no sustituye planos de montaje ni definición de conexiones."
@@ -332,7 +332,7 @@ export const foreachDiaphragmPumpOemIntegrationEsCopy = {
         {
           "type": "figure",
           "src": "/images/products/pumps/diaphragm-pumps/dpl30h/images/foreach-dpl30h-300ml-min-brushless-diaphragm-analyzer-wash-pump.webp",
-          "alt": "Fotografía de la DPL30H FOREACH de alta presión sin escobillas, con racores de compresión y orificios de montaje",
+          "alt": "Fotografía de la DPL30H Foreach de alta presión sin escobillas, con racores de compresión y orificios de montaje",
           "width": 1500,
           "height": 1500,
           "caption": "DPL30H: evalúe racores y fijaciones junto con el recorrido del tubo rígido y el soporte. Esta ficha especifica tubo de diámetro exterior 6 mm e interior 4 mm. No se puede trasladar directamente el montaje de manguera DPL30/DPL60."
@@ -390,7 +390,7 @@ export const foreachDiaphragmPumpOemIntegrationEsCopy = {
         {
           "type": "figure",
           "src": "/images/products/pumps/diaphragm-pumps/dpgl800/images/foreach-dpgl800-6l-min-gas-brushless-diaphragm-vacuum-pump.webp",
-          "alt": "Fotografía de la DPGL800 FOREACH para gas/líquido, mostrando dos cabezales, montaje y adaptadores",
+          "alt": "Fotografía de la DPGL800 Foreach para gas/líquido, mostrando dos cabezales, montaje y adaptadores",
           "width": 1500,
           "height": 1500,
           "caption": "DPGL800 de dos cabezales: la fotografía incluye adaptadores montados. Los puertos propios de la bomba se especifican como rosca hembra G1/8. Confirme por separado los accesorios y la conexión de los cabezales."
@@ -710,7 +710,7 @@ export const foreachDiaphragmPumpOemIntegrationEsCopy = {
       "blocks": [
         {
           "type": "paragraph",
-          "text": "FOREACH brinda soporte para componentes centrales de microfluidos y soluciones de circuitos líquidos. La colaboración de ingeniería presentada públicamente incluye la verificación de prototipos, la coincidencia de parámetros y el ajuste de soluciones en función de los requisitos de espacio, interfaz, medios y control. Para un proyecto específico de bomba de diafragma OEM, se recomienda evaluar primero si el modelo existente puede cubrir la tarea, luego discutir la adaptación de la configuración y finalmente determinar si se requiere un desarrollo dedicado."
+          "text": "Foreach brinda soporte para componentes centrales de microfluidos y soluciones de circuitos líquidos. La colaboración de ingeniería presentada públicamente incluye la verificación de prototipos, la coincidencia de parámetros y el ajuste de soluciones en función de los requisitos de espacio, interfaz, medios y control. Para un proyecto específico de bomba de diafragma OEM, se recomienda evaluar primero si el modelo existente puede cubrir la tarea, luego discutir la adaptación de la configuración y finalmente determinar si se requiere un desarrollo dedicado."
         },
         {
           "type": "table",
@@ -752,7 +752,7 @@ export const foreachDiaphragmPumpOemIntegrationEsCopy = {
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Una vez superada la prueba del prototipo, el siguiente paso debería ser transformar \"Esta muestra puede funcionar\" en \"Se puede aceptar un suministro posterior en las mismas condiciones técnicas\". El siguiente es el método recomendado de promoción de proyectos. El proceso específico y las responsabilidades deben ser determinados conjuntamente por la fábrica de equipos y FOREACH junto con el proyecto."
+          "text": "Una vez superada la prueba del prototipo, el siguiente paso debería ser transformar \"Esta muestra puede funcionar\" en \"Se puede aceptar un suministro posterior en las mismas condiciones técnicas\". El siguiente es el método recomendado de promoción de proyectos. El proceso específico y las responsabilidades deben ser determinados conjuntamente por la fábrica de equipos y Foreach junto con el proyecto."
         },
         {
           "type": "list",
@@ -772,7 +772,7 @@ export const foreachDiaphragmPumpOemIntegrationEsCopy = {
         },
         {
           "type": "subheading",
-          "title": "Información que conviene adjuntar a una solicitud OEM FOREACH"
+          "title": "Información que conviene adjuntar a una solicitud OEM Foreach"
         },
         {
           "type": "table",
@@ -809,7 +809,7 @@ export const foreachDiaphragmPumpOemIntegrationEsCopy = {
         },
         {
           "type": "paragraph",
-          "text": "Cuando la información está incompleta, primero puede proporcionar el uso del equipo, los diagramas de circuitos de fluidos existentes y los problemas observados. La comunicación de ingeniería debería transformar gradualmente las condiciones desconocidas en tareas de medición o confirmación y, en última instancia, formar configuraciones candidatas y los planes de verificación correspondientes. Sólo la bomba de membrana FOREACH seleccionada de esta manera puede establecer una correspondencia técnica clara con las tareas de suministro de líquido, limpieza o bombeo del instrumento."
+          "text": "Cuando la información está incompleta, primero puede proporcionar el uso del equipo, los diagramas de circuitos de fluidos existentes y los problemas observados. La comunicación de ingeniería debería transformar gradualmente las condiciones desconocidas en tareas de medición o confirmación y, en última instancia, formar configuraciones candidatas y los planes de verificación correspondientes. Sólo la bomba de membrana Foreach seleccionada de esta manera puede establecer una correspondencia técnica clara con las tareas de suministro de líquido, limpieza o bombeo del instrumento."
         }
       ]
     },
@@ -818,7 +818,7 @@ export const foreachDiaphragmPumpOemIntegrationEsCopy = {
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Los parámetros del producto en este artículo se basan en las siguientes especificaciones chinas de FOREACH. La página de parámetros se utiliza para comprender las condiciones de rendimiento, la tabla de selección se utiliza para confirmar la configuración y el plano dimensional y la tabla eléctrica se utilizan para la instalación. La versión del archivo debe verificarse antes de realizar el pedido; cuando se trate de ajustes especiales de medios, controles o interfaces, se deberá obtener información de confirmación de la configuración correspondiente."
+          "text": "Los parámetros del producto en este artículo se basan en las siguientes especificaciones chinas de Foreach. La página de parámetros se utiliza para comprender las condiciones de rendimiento, la tabla de selección se utiliza para confirmar la configuración y el plano dimensional y la tabla eléctrica se utilizan para la instalación. La versión del archivo debe verificarse antes de realizar el pedido; cuando se trate de ajustes especiales de medios, controles o interfaces, se deberá obtener información de confirmación de la configuración correspondiente."
         },
         {
           "type": "links",
@@ -841,11 +841,11 @@ export const foreachDiaphragmPumpOemIntegrationEsCopy = {
             },
             {
               "href": "/resources/datasheets/",
-              "label": "Especificaciones y catálogos de productos FOREACH"
+              "label": "Especificaciones y catálogos de productos Foreach"
             },
             {
               "href": "/",
-              "label": "Componentes centrales de microfluidos y soporte de ingeniería de FOREACH"
+              "label": "Componentes centrales de microfluidos y soporte de ingeniería de Foreach"
             },
             {
               "href": "/resources/technical-articles/miniature-diaphragm-pump-flow-pulsation-reduction/",
@@ -860,10 +860,10 @@ export const foreachDiaphragmPumpOemIntegrationEsCopy = {
       ]
     }
   ],
-  "faqTitle": "Preguntas técnicas sobre integración OEM FOREACH",
+  "faqTitle": "Preguntas técnicas sobre integración OEM Foreach",
   "faqItems": [
     {
-      "question": "¿La integración OEM de la bomba de diafragma FOREACH requiere necesariamente un nuevo desarrollo de la bomba?",
+      "question": "¿La integración OEM de la bomba de diafragma Foreach requiere necesariamente un nuevo desarrollo de la bomba?",
       "answer": "No necesariamente. Los modelos estándar deben evaluarse primero con medios, puntos operativos, interfaces y requisitos de control claros. Cuando las soluciones estándar sean insuficientes, analice las configuraciones opcionales o la personalización del proyecto y confirme el impacto de los ajustes en el rendimiento, la estructura y el alcance de la verificación. Los límites de configuración y desarrollo disponibles deben confirmarse proyecto por proyecto."
     },
     {
@@ -897,7 +897,7 @@ export const foreachDiaphragmPumpOemIntegrationEsCopy = {
   ],
   "cta": {
     "title": "Envíe las condiciones de la línea de fluido OEM para evaluar las configuraciones adecuadas de la bomba de diafragma.",
-    "description": "Proporcione las tareas del equipo, medio y temperatura, flujo de trabajo objetivo, presión de entrada y salida, ciclo de trabajo, interfaz y espacio de instalación, así como la etapa actual del proyecto. FOREACH puede realizar una comunicación de modelo y configuración basada en esto y aclarar conjuntamente las condiciones que deben verificarse.",
+    "description": "Proporcione las tareas del equipo, medio y temperatura, flujo de trabajo objetivo, presión de entrada y salida, ciclo de trabajo, interfaz y espacio de instalación, así como la etapa actual del proyecto. Foreach puede realizar una comunicación de modelo y configuración basada en esto y aclarar conjuntamente las condiciones que deben verificarse.",
     "contactLabel": "Enviar una solicitud técnica",
     "productsLabel": "Ver serie de bombas de diafragma miniatura",
     "productsHref": "/products/pumps/miniature-diaphragm-pumps/"

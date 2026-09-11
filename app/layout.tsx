@@ -43,7 +43,7 @@ const gaMeasurementId =
 ========================================================= */
 export const metadata: Metadata = {
   metadataBase: SITE_URL,
-  title: "恒永达 FOREACH 官网",
+  title: "恒永达 Foreach Technology 官网",
   description:
     "恒永达专注于微流体系统核心零部件与液路系统解决方案，服务 IVD、生命科学、高端分析仪器、合成生物和实验室自动化领域。",
 };

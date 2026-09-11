@@ -21,16 +21,16 @@ export const pistonPumpArticlesKo: readonly PistonPumpArticleCopy[] = [
     title: "피스톤 펌프 헤드 재질 선택 방법: 주요 재질과 선정 기준",
     summary:
       "PMMA, PCTG, PPS, PVDF, PP, PTFE, PEEK, POM 및 PSU의 적용 방향과 전체 접액 유로를 검증하는 방법을 설명합니다.",
-    seoTitle: "피스톤 펌프 헤드 재질 선택: PMMA, PEEK 등 비교 | FOREACH",
+    seoTitle: "피스톤 펌프 헤드 재질 선택: PMMA, PEEK 등 비교 | Foreach Technology",
     seoDescription:
       "피스톤 펌프 헤드용 PMMA, PCTG, PPS, PVDF, PP, PTFE, PEEK, POM 및 PSU를 비교하고 실제 유체 조건과 전체 접액 경로 검증 방법을 확인하십시오.",
     date: "2026-09-06",
     coverImage:
       "/images/resources/technical-articles/piston-pump/piston-pump-head-material-selection-cover.webp",
-    coverAlt: "FOREACH 피스톤 펌프의 투명 헤드와 접액 구조 상세",
+    coverAlt: "Foreach 피스톤 펌프의 투명 헤드와 접액 구조 상세",
     intro: [
       p("펌프 헤드는 액체의 흡입, 계량 및 토출에 직접 관여합니다. 재질 선택은 화학적 호환성뿐 아니라 구조 안정성, 밀봉, 세정, 수명 및 프로젝트 비용에도 영향을 줍니다."),
-      p("FOREACH 피스톤 펌프는 프로젝트에 따라 PCTG, PMMA, PPS, PVDF, PP, PTFE, PEEK, POM, PSU 및 기타 엔지니어링 플라스틱을 평가할 수 있습니다. 그러나 모든 재질과 용량 조합이 표준 모델이라는 뜻은 아닙니다."),
+      p("Foreach 피스톤 펌프는 프로젝트에 따라 PCTG, PMMA, PPS, PVDF, PP, PTFE, PEEK, POM, PSU 및 기타 엔지니어링 플라스틱을 평가할 수 있습니다. 그러나 모든 재질과 용량 조합이 표준 모델이라는 뜻은 아닙니다."),
       notice("선정 원칙: ", "실제 유체와 운전 조건을 먼저 정의한 다음 펌프 헤드, 피스톤, 씰, 밸브, 튜브 및 피팅을 하나의 접액 경로로 함께 검토해야 합니다."),
     ],
     sections: [
@@ -98,7 +98,7 @@ export const pistonPumpArticlesKo: readonly PistonPumpArticleCopy[] = [
         ],
       },
       {
-        title: "FOREACH EA, SM 및 TM 재질 구성 확인",
+        title: "Foreach EA, SM 및 TM 재질 구성 확인",
         parts: [
           { type: "table", headers: ["시리즈", "헤드 재질 방향", "피스톤 재질 방향"], rows: [
             ["EA", "PMMA, PCTG, PEEK 등", "지르코니아 세라믹, 알루미나 세라믹, PEEK 또는 사파이어"],
@@ -109,7 +109,7 @@ export const pistonPumpArticlesKo: readonly PistonPumpArticleCopy[] = [
           { type: "links", items: [
             { prefix: "기초 원리는 ", label: "정밀 피스톤 펌프란?", href: "/resources/technical-articles/micro-plunger-pump-selection/", suffix: "에서 확인하십시오." },
             { prefix: "성능 용어는 ", label: "피스톤 펌프의 정확도, 반복성 및 분해능", href: "/resources/technical-articles/piston-pump-accuracy-repeatability-resolution/", suffix: "을 참조하십시오." },
-            { prefix: "제품 구성은 ", label: "FOREACH 피스톤 펌프", href: productsHref, suffix: "에서 확인하십시오." },
+            { prefix: "제품 구성은 ", label: "Foreach 피스톤 펌프", href: productsHref, suffix: "에서 확인하십시오." },
           ] },
         ],
       },
@@ -131,17 +131,17 @@ export const pistonPumpArticlesKo: readonly PistonPumpArticleCopy[] = [
       ],
     },
     cta: { title: "피스톤 펌프 접액 재질을 검토하시겠습니까?", description: "유체 조성, 농도, 온도, 압력, 세정 방식, 목표 액량과 수명 조건을 알려주시면 헤드와 전체 접액 경로 구성을 검토할 수 있습니다.", ...contactCta },
-    subject: { about: ["피스톤 펌프 헤드 재질", "피스톤 펌프 재질 선정", "접액 재질 호환성"], mentions: ["PMMA", "PCTG", "PPS", "PVDF", "PP", "PTFE", "PEEK", "POM", "PSU", "FOREACH EA", "FOREACH SM", "FOREACH TM"] },
+    subject: { about: ["피스톤 펌프 헤드 재질", "피스톤 펌프 재질 선정", "접액 재질 호환성"], mentions: ["PMMA", "PCTG", "PPS", "PVDF", "PP", "PTFE", "PEEK", "POM", "PSU", "Foreach EA", "Foreach SM", "Foreach TM"] },
   },
   {
     slug: "piston-pump-accuracy-repeatability-resolution",
     title: "피스톤 펌프의 정확도, 반복성 및 분해능 차이",
     summary: "스텝당 이론 액량이 최소 신뢰 분주량과 다른 이유와 행정, 밸브, 기포 및 유체가 결과에 미치는 영향을 설명합니다.",
-    seoTitle: "피스톤 펌프 정확도, 반복성 및 분해능의 차이 | FOREACH",
+    seoTitle: "피스톤 펌프 정확도, 반복성 및 분해능의 차이 | Foreach Technology",
     seoDescription: "피스톤 펌프의 정확도, 반복성, 분해능과 최소 신뢰 분주량의 차이 및 소량 분주 검증 방법을 알아보십시오.",
     date: "2026-09-06",
     coverImage: "/images/resources/technical-articles/piston-pump/piston-pump-accuracy-repeatability-resolution-cover.webp",
-    coverAlt: "FOREACH SM 정밀 피스톤 펌프 제품 이미지",
+    coverAlt: "Foreach SM 정밀 피스톤 펌프 제품 이미지",
     intro: [p("용량, 전체 행정 스텝 수, 정확도와 반복성은 같은 사양표에 표시될 수 있지만 서로 다른 질문에 답합니다."), p("스텝 수가 많다고 실제 분주 정확도가 자동으로 높아지는 것은 아니며, 스텝당 이론 액량은 최소 신뢰 분주량이 아닙니다. 구동부, 밸브, 튜브, 기포, 유체, 제어 및 측정 방법을 함께 보아야 합니다.")],
     sections: [
       { title: "피스톤 펌프 분해능이란", parts: [p("분해능은 구동계가 지령할 수 있는 가장 작은 이론 변위 증분입니다."), { type: "formula", expression: "스텝당 이론 액량 = 정격 용량 ÷ 전체 행정 스텝 수", note: "예: EA-500-PMMA는 500 μL ÷ 2,000 ≈ 0.25 μL/step입니다." }, p("이 값은 기하학적 지령 단위일 뿐이며 모든 액체와 유로에서 0.25 μL를 신뢰성 있게 토출할 수 있다는 증거가 아닙니다.")] },
@@ -162,13 +162,13 @@ export const pistonPumpArticlesKo: readonly PistonPumpArticleCopy[] = [
         { label: "반복 측정", text: "각 작업점에서 충분한 횟수를 측정하고 평균, 편향, 표준편차, CV 및 이상값을 기록합니다." },
         { label: "최악 조건 평가", text: "저액면, 최대 배압, 장기 운전, 세정 후 재시작과 온도 변화를 포함합니다." },
       ] }] },
-      { title: "FOREACH EA, SM 및 TM 사양을 읽는 방법", parts: [{ type: "table", headers: ["시리즈", "현재 확인 가능한 정보", "선정 시 중점"], rows: [
+      { title: "Foreach EA, SM 및 TM 사양을 읽는 방법", parts: [{ type: "table", headers: ["시리즈", "현재 확인 가능한 정보", "선정 시 중점"], rows: [
         ["EA", "2,000스텝 기본 구성, 지정 조건의 전체 행정 정확도·반복성 ≤0.5%", "중요 작업 액량에 맞는 용량을 선택하고 부분 행정을 실측"],
         ["SM", "2,000스텝 기본 구성, 지정 조건의 전체 행정 반복성 ≤0.5%; 정확도는 구성별 확인", "설치 공간, 용량 및 검증 요구의 균형"],
         ["TM", "현재 표시 구성은 2,540스텝", "스텝 수만으로 정확도나 최소 액량을 추정하지 않음"],
       ] }, p("용량, 피스톤 지름, 전송 구조와 시험 조건이 다르면 스텝 수만 직접 비교할 수 없습니다."), { type: "links", items: [
         { prefix: "기초 원리는 ", label: "정밀 피스톤 펌프란?", href: "/resources/technical-articles/micro-plunger-pump-selection/", suffix: "에서 확인하십시오." },
-        { prefix: "제품 구성은 ", label: "FOREACH 피스톤 펌프", href: productsHref, suffix: "에서 확인하십시오." },
+        { prefix: "제품 구성은 ", label: "Foreach 피스톤 펌프", href: productsHref, suffix: "에서 확인하십시오." },
       ] }] },
     ],
     faqTitle: "자주 묻는 질문",
@@ -186,12 +186,12 @@ export const pistonPumpArticlesKo: readonly PistonPumpArticleCopy[] = [
   {
     slug: "micro-plunger-pump-selection",
     title: "정밀 피스톤 펌프란? 원리, 장점 및 적용 분야",
-    summary: "정밀 피스톤 펌프의 작동 원리, 장점, 적용 분야와 기본 선정 방법 및 FOREACH EA, SM, TM 플랫폼을 소개합니다.",
-    seoTitle: "정밀 피스톤 펌프란? 원리, 적용 및 선정 | FOREACH",
+    summary: "정밀 피스톤 펌프의 작동 원리, 장점, 적용 분야와 기본 선정 방법 및 Foreach EA, SM, TM 플랫폼을 소개합니다.",
+    seoTitle: "정밀 피스톤 펌프란? 원리, 적용 및 선정 | Foreach Technology",
     seoDescription: "OEM 장비용 정밀 피스톤 펌프의 작동 원리, 장점, 적용 분야와 용량·재질·제어 선정 방법을 확인하십시오.",
     date: "2026-06-19",
     coverImage: "/images/resources/technical-articles/piston-pump/micro-plunger-pump-selection-cover.webp",
-    coverAlt: "FOREACH TM 초소형 정밀 피스톤 펌프 제품 이미지",
+    coverAlt: "Foreach TM 초소형 정밀 피스톤 펌프 제품 이미지",
     intro: [p("정밀 피스톤 펌프는 제어된 피스톤 왕복 운동으로 액체를 흡입, 계량 및 분주하는 용적식 펌프입니다."), p("단순 이송 펌프와 달리 단회 액량, 정확도, 반복성 및 자동화 장비의 장기 운전에 중점을 둡니다. IVD, 생명과학, 실험실 자동화와 분석 장비의 시약 및 샘플 유로에 사용할 수 있습니다.")],
     sections: [
       { title: "정밀 피스톤 펌프의 작동 원리", parts: [p("모터와 전송 기구가 회전을 피스톤의 직선 운동으로 변환합니다."), { type: "steps", items: [{ label: "흡입", text: "피스톤이 후퇴하여 챔버 체적이 증가하고 액체가 들어옵니다." }, { label: "토출", text: "피스톤이 전진하여 챔버 체적이 감소하고 액체를 출구로 밀어냅니다." }] }, p("솔레노이드 밸브, 체크 밸브 또는 로터리 밸브가 유동 방향을 제어하며 컨트롤러가 피스톤 운동과 밸브 전환을 동기화합니다."), notice("엔지니어링 경계: ", "이론 변위량은 최종 토출량과 같지 않습니다. 백래시, 밸브, 기포, 유로 탄성, 점도, 압력 및 출구 조건이 실제 결과에 영향을 줍니다.")] },
@@ -211,7 +211,7 @@ export const pistonPumpArticlesKo: readonly PistonPumpArticleCopy[] = [
         { title: "실험실 자동화", paragraphs: ["자동 샘플링, 희석, 표준액 첨가 및 멀티스텝 분주 시퀀스를 구성합니다."] },
         { title: "분석 및 환경 모니터링 장비", paragraphs: ["수질 분석의 표준액·시약 첨가와 샘플 전처리 유로에 사용할 수 있습니다."] },
       ] }] },
-      { title: "FOREACH EA, SM 및 TM 시리즈", parts: [{ type: "table", headers: ["시리즈", "현재 범위", "주요 선정 방향"], rows: [
+      { title: "Foreach EA, SM 및 TM 시리즈", parts: [{ type: "table", headers: ["시리즈", "현재 범위", "주요 선정 방향"], rows: [
         ["EA 정밀 피스톤 펌프", "50 μL–20 mL", "넓은 용량 범위와 다양한 헤드·피스톤 구성"],
         ["SM 소형 피스톤 펌프", "현재 표시 50 μL–1 mL", "소형 장비의 설치 공간과 미량 정량 처리"],
         ["TM 초소형 피스톤 펌프", "현재 표시 50–500 μL", "매우 제한된 공간의 고집적 유로"],
@@ -239,15 +239,15 @@ export const pistonPumpArticlesKo: readonly PistonPumpArticleCopy[] = [
       { question: "EA, SM, TM은 어떻게 구분합니까?", answer: "EA는 넓은 용량 범위, SM은 소형화, TM은 초소형 고집적 배치를 중심으로 선택합니다. 최종 모델은 작업 액량과 설치 조건으로 확정합니다." },
       { question: "펌프만으로 분주 정확도를 보장할 수 있습니까?", answer: "아닙니다. 밸브, 튜브, 피팅, 기포, 출구, 제어 및 교정이 함께 결과를 결정합니다." },
     ],
-    conclusion: { title: "결론: 작업 액량과 전체 유로에서 시작하십시오", parts: [p("정밀 피스톤 펌프 선정은 가장 큰 용량이나 가장 많은 스텝을 고르는 문제가 아닙니다. 장비의 실제 단회 액량, 사이클, 유체, 압력, 설치 공간과 제어 요구를 먼저 정의해야 합니다."), { type: "links", items: [{ prefix: "현재 구성은 ", label: "FOREACH 피스톤 펌프 제품", href: productsHref, suffix: "에서 확인하십시오." }] }] },
+    conclusion: { title: "결론: 작업 액량과 전체 유로에서 시작하십시오", parts: [p("정밀 피스톤 펌프 선정은 가장 큰 용량이나 가장 많은 스텝을 고르는 문제가 아닙니다. 장비의 실제 단회 액량, 사이클, 유체, 압력, 설치 공간과 제어 요구를 먼저 정의해야 합니다."), { type: "links", items: [{ prefix: "현재 구성은 ", label: "Foreach 피스톤 펌프 제품", href: productsHref, suffix: "에서 확인하십시오." }] }] },
     cta: { title: "정밀 피스톤 펌프를 선정하시겠습니까?", description: "단회 액량, 목표 사이클, 유체 조성, 배압, 설치 치수와 제어 요구를 알려주시면 EA, SM 또는 TM 구성을 검토할 수 있습니다.", ...contactCta },
-    subject: { about: ["정밀 피스톤 펌프", "FOREACH EA 피스톤 펌프", "FOREACH SM 피스톤 펌프", "FOREACH TM 피스톤 펌프"], mentions: ["피스톤 펌프 작동 원리", "용적식 분주", "IVD", "실험실 자동화", "액체 처리"] },
+    subject: { about: ["정밀 피스톤 펌프", "Foreach EA 피스톤 펌프", "Foreach SM 피스톤 펌프", "Foreach TM 피스톤 펌프"], mentions: ["피스톤 펌프 작동 원리", "용적식 분주", "IVD", "실험실 자동화", "액체 처리"] },
   },
   {
     slug: "piston-pump-acceleration-deceleration-curves",
     title: "피스톤 펌프 구동용 가감속 곡선",
     summary: "스테퍼 모터의 토크-속도 특성에 따라 선형, S자 및 포물선 램프를 설정하고 탈조를 줄이는 방법을 설명합니다.",
-    seoTitle: "피스톤 펌프 가감속 곡선과 스테퍼 모터 설정 | FOREACH",
+    seoTitle: "피스톤 펌프 가감속 곡선과 스테퍼 모터 설정 | Foreach Technology",
     seoDescription: "피스톤 펌프 스테퍼 모터의 선형, S자, 포물선 가감속 곡선, 토크-속도 한계와 탈조 검증 방법을 확인하십시오.",
     date: "2026-09-06",
     coverImage: "/images/resources/technical-articles/legacy-motion-control/acceleration-curve-2.png",
@@ -280,11 +280,11 @@ export const pistonPumpArticlesKo: readonly PistonPumpArticleCopy[] = [
     slug: "precision-piston-pump-backlash-compensation",
     title: "정밀 피스톤 펌프 백래시 보정 가이드",
     summary: "방향 전환 시 공행정을 측정하고 스텝 또는 펄스로 환산한 뒤 흡입·분주 시퀀스에서 검증하는 방법을 설명합니다.",
-    seoTitle: "정밀 피스톤 펌프 백래시 측정 및 보정 | FOREACH",
+    seoTitle: "정밀 피스톤 펌프 백래시 측정 및 보정 | Foreach Technology",
     seoDescription: "피스톤 펌프의 방향 전환 백래시를 측정하고 스텝·펄스로 보정하며 단회 및 분할 분주 시퀀스를 검증하는 방법입니다.",
     date: "2026-09-06",
     coverImage: "/images/resources/technical-articles/piston-pump/precision-piston-pump-backlash-compensation-cover.webp",
-    coverAlt: "FOREACH 정밀 피스톤 펌프의 투명 헤드와 전송 구조",
+    coverAlt: "Foreach 정밀 피스톤 펌프의 투명 헤드와 전송 구조",
     intro: [p("리드 스크루, 너트와 전송부의 유격 때문에 모터가 방향을 바꾼 뒤 피스톤이 실제로 반대 방향으로 움직이기 전까지 공행정이 발생할 수 있습니다. 짧은 행정 분주에서 그 비중이 커집니다.")],
     sections: [
       { title: "방향 전환 백래시란", parts: [p("백래시는 설계, 조립, 예압 및 마모에 따라 달라집니다. 기계적 예압은 유격을 줄이고 소프트웨어는 측정된 공행정을 보정할 수 있습니다."), notice("경계: ", "백래시 보정은 기포 제거, 밸브 유지보수, 누설 수리 또는 교정을 대신하지 않습니다.")] },
@@ -302,11 +302,11 @@ export const pistonPumpArticlesKo: readonly PistonPumpArticleCopy[] = [
     slug: "stepper-motor-calculation-selection",
     title: "정밀 피스톤 펌프용 스테퍼 모터 계산 및 선정",
     summary: "펄스 주파수, 마이크로스텝, 전송비와 부하 토크를 계산하고 400 mm 왕복 플랫폼 예제로 속도와 동적 토크를 검토합니다.",
-    seoTitle: "정밀 피스톤 펌프 스테퍼 모터 계산 및 선정 | FOREACH",
+    seoTitle: "정밀 피스톤 펌프 스테퍼 모터 계산 및 선정 | Foreach Technology",
     seoDescription: "정밀 피스톤 펌프용 스테퍼 모터의 펄스 주파수, 마이크로스텝, 전송비, 펄스 환산값과 동적 토크 계산 방법입니다.",
     date: "2026-09-06",
     coverImage: "/images/resources/technical-articles/piston-pump/precision-piston-pump-stepper-motor-selection-cover.webp",
-    coverAlt: "FOREACH 정밀 피스톤 펌프의 스테퍼 모터와 구동 구조 상세",
+    coverAlt: "Foreach 정밀 피스톤 펌프의 스테퍼 모터와 구동 구조 상세",
     intro: [p("드라이버는 입력 펄스를 스테퍼 모터의 이산 회전으로 변환합니다. 펄스 수는 변위를, 펄스 주파수는 속도를 계획하지만 실제 추종 가능성은 모터, 드라이버, 부하와 가감속 설정에 달려 있습니다.")],
     sections: [
       { title: "운동 요구에서 시작하는 선정", parts: [p("행정, 사이클 시간, 정지 시간, 이동 질량, 마찰, 외력, 위치 요구와 전송 구조를 정의하십시오. 피스톤 펌프에서는 유압 부하와 씰 마찰도 포함해야 합니다. 프레임 크기나 정지 토크만으로 모터를 선택하지 마십시오.")] },

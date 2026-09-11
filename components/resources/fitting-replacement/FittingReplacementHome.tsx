@@ -408,7 +408,7 @@ export default function FittingReplacementHome({
                           {
                             label:
                               homeText?.productCard.foreachModel ??
-                              "FOREACH 型号：",
+                              "Foreach 型号：",
                             value: product.foreachModel,
                           },
                           {

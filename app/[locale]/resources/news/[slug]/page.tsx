@@ -343,10 +343,10 @@ export async function generateMetadata({
 
   return {
     title: locale === "en"
-      ? `${article.seoTitle ?? article.title}｜Company News｜FOREACH`
-      : `${article.seoTitle ?? article.title}｜FOREACH`,
+      ? `${article.seoTitle ?? article.title}｜Company News｜Foreach Technology`
+      : `${article.seoTitle ?? article.title}｜Foreach Technology`,
     description: article.seoDescription ?? article.summary,
-    ...(locale === "en" ? {} : { openGraph: { title: `${article.seoTitle ?? article.title}｜FOREACH`, description: article.seoDescription ?? article.summary } }),
+    ...(locale === "en" ? {} : { openGraph: { title: `${article.seoTitle ?? article.title}｜Foreach Technology`, description: article.seoDescription ?? article.summary } }),
   };
 }
 

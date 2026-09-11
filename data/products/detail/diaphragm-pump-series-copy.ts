@@ -76,9 +76,9 @@ function buildZh(facts: SeriesFacts): DiaphragmPumpSeriesCopy {
   return {
     seriesSlug: facts.slug,
     title,
-    seoTitle: `${title} | FOREACH`,
+    seoTitle: `${title} | Foreach Technology`,
     seoDescription: `${facts.model} ${family}系列，空载流量 ${facts.flow} mL/min、额定压力 ${facts.ratedPressure} kPa，提供有刷和无刷电机配置，用于仪器液体输送、清洗和循环液路。`,
-    intro: `FOREACH ${facts.model} 系列属于${family}，空载流量为 ${facts.flow} mL/min，额定压力为 ${facts.ratedPressure} kPa，自吸高度为 ${facts.selfPriming} mH₂O。该系列提供 ${facts.brushedModel} 有刷和 ${facts.brushlessModel} 无刷电机配置，可用于仪器内部的液体输送、清洗、管路预充和循环液路。不同配置的电机寿命、接线和产品资源不同，具体参数请进入对应配置页确认。`,
+    intro: `Foreach ${facts.model} 系列属于${family}，空载流量为 ${facts.flow} mL/min，额定压力为 ${facts.ratedPressure} kPa，自吸高度为 ${facts.selfPriming} mH₂O。该系列提供 ${facts.brushedModel} 有刷和 ${facts.brushlessModel} 无刷电机配置，可用于仪器内部的液体输送、清洗、管路预充和循环液路。不同配置的电机寿命、接线和产品资源不同，具体参数请进入对应配置页确认。`,
     applications: "液体输送、清洗液输送、管路预充、液体循环和仪器内部液路",
     cardParameters: [
       `空载流量：${facts.flow} mL/min`,
@@ -135,9 +135,9 @@ function buildEn(facts: SeriesFacts): DiaphragmPumpSeriesCopy {
   return {
     seriesSlug: facts.slug,
     title,
-    seoTitle: `${title} | FOREACH`,
+    seoTitle: `${title} | Foreach Technology`,
     seoDescription: `${facts.model} ${family} series with ${facts.flow} mL/min no-load flow, ${facts.ratedPressure} kPa rated pressure, and brushed or brushless motor configurations for instrument fluidics.`,
-    intro: `The FOREACH ${facts.model} series is a ${family} family with ${facts.flow} mL/min no-load flow, ${facts.ratedPressure} kPa rated pressure, and ${facts.selfPriming} mH₂O self-priming lift. It is available as the brushed ${facts.brushedModel} and brushless ${facts.brushlessModel} for liquid transfer, washing, line priming, and circulation in compact instruments. Motor life, wiring, and product resources vary by configuration; refer to the corresponding configuration page for exact specifications.`,
+    intro: `The Foreach ${facts.model} series is a ${family} family with ${facts.flow} mL/min no-load flow, ${facts.ratedPressure} kPa rated pressure, and ${facts.selfPriming} mH₂O self-priming lift. It is available as the brushed ${facts.brushedModel} and brushless ${facts.brushlessModel} for liquid transfer, washing, line priming, and circulation in compact instruments. Motor life, wiring, and product resources vary by configuration; refer to the corresponding configuration page for exact specifications.`,
     applications:
       "Liquid transfer, wash-fluid delivery, line priming, liquid circulation, and instrument fluidics",
     cardParameters: [
@@ -198,9 +198,9 @@ function buildEs(facts: SeriesFacts): DiaphragmPumpSeriesCopy {
   return {
     seriesSlug: facts.slug,
     title,
-    seoTitle: `${title} | FOREACH`,
+    seoTitle: `${title} | Foreach Technology`,
     seoDescription: `Serie ${facts.model} de ${family}, con caudal sin carga de ${facts.flow} mL/min, presión nominal de ${facts.ratedPressure} kPa y configuraciones con o sin escobillas.`,
-    intro: `La serie FOREACH ${facts.model} es una familia de ${family} con caudal sin carga de ${facts.flow} mL/min, presión nominal de ${facts.ratedPressure} kPa y altura de autocebado de ${facts.selfPriming} mH₂O. Está disponible como ${facts.brushedModel} con escobillas y ${facts.brushlessModel} sin escobillas para transferencia, lavado, cebado y circulación en instrumentos compactos. La vida del motor, el cableado y los recursos varían según la configuración; consulte la página correspondiente para conocer las especificaciones exactas.`,
+    intro: `La serie Foreach ${facts.model} es una familia de ${family} con caudal sin carga de ${facts.flow} mL/min, presión nominal de ${facts.ratedPressure} kPa y altura de autocebado de ${facts.selfPriming} mH₂O. Está disponible como ${facts.brushedModel} con escobillas y ${facts.brushlessModel} sin escobillas para transferencia, lavado, cebado y circulación en instrumentos compactos. La vida del motor, el cableado y los recursos varían según la configuración; consulte la página correspondiente para conocer las especificaciones exactas.`,
     applications:
       "Transferencia de líquidos, lavado, cebado de líneas, circulación y circuitos de instrumentos",
     cardParameters: [
@@ -261,9 +261,9 @@ function buildFr(facts: SeriesFacts): DiaphragmPumpSeriesCopy {
   return {
     seriesSlug: facts.slug,
     title,
-    seoTitle: `${title} | FOREACH`,
+    seoTitle: `${title} | Foreach Technology`,
     seoDescription: `Série ${facts.model} de ${family}, avec débit à vide de ${facts.flow} mL/min, pression nominale de ${facts.ratedPressure} kPa et moteurs à balais ou sans balais.`,
-    intro: `La série FOREACH ${facts.model} est une famille de ${family} offrant un débit à vide de ${facts.flow} mL/min, une pression nominale de ${facts.ratedPressure} kPa et une hauteur d’auto-amorçage de ${facts.selfPriming} mH₂O. Elle comprend la version à balais ${facts.brushedModel} et la version sans balais ${facts.brushlessModel} pour le transfert, le lavage, l’amorçage et la circulation dans les instruments compacts. La durée de vie du moteur, le câblage et les ressources varient selon la configuration ; consultez la page correspondante pour les spécifications exactes.`,
+    intro: `La série Foreach ${facts.model} est une famille de ${family} offrant un débit à vide de ${facts.flow} mL/min, une pression nominale de ${facts.ratedPressure} kPa et une hauteur d’auto-amorçage de ${facts.selfPriming} mH₂O. Elle comprend la version à balais ${facts.brushedModel} et la version sans balais ${facts.brushlessModel} pour le transfert, le lavage, l’amorçage et la circulation dans les instruments compacts. La durée de vie du moteur, le câblage et les ressources varient selon la configuration ; consultez la page correspondante pour les spécifications exactes.`,
     applications:
       "Transfert de liquides, lavage, amorçage de lignes, circulation et circuits d’instruments",
     cardParameters: [
@@ -324,9 +324,9 @@ function buildKo(facts: SeriesFacts): DiaphragmPumpSeriesCopy {
   return {
     seriesSlug: facts.slug,
     title,
-    seoTitle: `${title} | FOREACH`,
+    seoTitle: `${title} | Foreach Technology`,
     seoDescription: `${facts.flow} mL/min 무부하 유량, ${facts.ratedPressure} kPa 정격 압력, 브러시 및 브러시리스 모터 구성을 제공하는 ${facts.model} ${family} 시리즈입니다.`,
-    intro: `FOREACH ${facts.model} 시리즈는 무부하 유량 ${facts.flow} mL/min, 정격 압력 ${facts.ratedPressure} kPa, 자흡 높이 ${facts.selfPriming} mH₂O의 ${family} 제품군입니다. 브러시 모터 ${facts.brushedModel}과 브러시리스 모터 ${facts.brushlessModel} 구성을 제공하며 소형 장비의 액체 이송, 세정, 배관 프라이밍 및 순환 회로에 사용할 수 있습니다. 모터 수명, 배선 및 제품 자료는 구성마다 다르므로 정확한 사양은 해당 구성 페이지에서 확인하십시오.`,
+    intro: `Foreach ${facts.model} 시리즈는 무부하 유량 ${facts.flow} mL/min, 정격 압력 ${facts.ratedPressure} kPa, 자흡 높이 ${facts.selfPriming} mH₂O의 ${family} 제품군입니다. 브러시 모터 ${facts.brushedModel}과 브러시리스 모터 ${facts.brushlessModel} 구성을 제공하며 소형 장비의 액체 이송, 세정, 배관 프라이밍 및 순환 회로에 사용할 수 있습니다. 모터 수명, 배선 및 제품 자료는 구성마다 다르므로 정확한 사양은 해당 구성 페이지에서 확인하십시오.`,
     applications:
       "액체 이송, 세정액 공급, 배관 프라이밍, 액체 순환 및 장비 내부 유로",
     cardParameters: [
@@ -385,9 +385,9 @@ function buildRu(facts: SeriesFacts): DiaphragmPumpSeriesCopy {
   return {
     seriesSlug: facts.slug,
     title,
-    seoTitle: `${title} | FOREACH`,
+    seoTitle: `${title} | Foreach Technology`,
     seoDescription: `Серия ${facts.model} ${family}: расход без нагрузки ${facts.flow} mL/min, номинальное давление ${facts.ratedPressure} kPa, щёточные и бесщёточные исполнения.`,
-    intro: `FOREACH ${facts.model} — серия ${family} с расходом без нагрузки ${facts.flow} mL/min, номинальным давлением ${facts.ratedPressure} kPa и высотой самовсасывания ${facts.selfPriming} mH₂O. Доступны щёточное исполнение ${facts.brushedModel} и бесщёточное ${facts.brushlessModel} для перекачивания, промывки, заполнения линий и циркуляции в компактных приборах. Ресурс двигателя, подключение и материалы изделия зависят от исполнения; точные характеристики приведены на соответствующей странице конфигурации.`,
+    intro: `Foreach ${facts.model} — серия ${family} с расходом без нагрузки ${facts.flow} mL/min, номинальным давлением ${facts.ratedPressure} kPa и высотой самовсасывания ${facts.selfPriming} mH₂O. Доступны щёточное исполнение ${facts.brushedModel} и бесщёточное ${facts.brushlessModel} для перекачивания, промывки, заполнения линий и циркуляции в компактных приборах. Ресурс двигателя, подключение и материалы изделия зависят от исполнения; точные характеристики приведены на соответствующей странице конфигурации.`,
     applications:
       "Перекачивание жидкостей, промывка, заполнение линий, циркуляция и внутренние контуры приборов",
     cardParameters: [

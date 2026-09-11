@@ -16,11 +16,11 @@ export const dpl30SelfPrimingDecreaseEnCopy = {
     title:
       "Why Does a 300 mL/min Micro Liquid Diaphragm Pump Lose Self-Priming Performance Over Time?",
     seoTitle:
-      "300 mL/min Micro Liquid Diaphragm Pump Self-Priming Loss | FOREACH",
+      "300 mL/min Micro Liquid Diaphragm Pump Self-Priming Loss | Foreach Technology",
     seoDescription:
       "Find out why a 300 mL/min micro liquid diaphragm pump loses self-priming, from check-valve or inlet air leaks to suction loss, vapor pressure and material changes.",
     coverImage: DPL30_SELF_PRIMING_COVER,
-    coverAlt: "FOREACH DPL30 300 mL/min micro liquid diaphragm pump",
+    coverAlt: "Foreach DPL30 300 mL/min micro liquid diaphragm pump",
   },
   deck: "A loss of self-priming means that the pump and suction path can no longer create and retain the same low inlet absolute pressure as they did initially. Check-valve leakage, inlet air leaks, higher suction losses, fluid vapor pressure and material changes can produce the same symptom, so motor rotation alone cannot identify the cause.",
   leadBlocks: [
@@ -230,12 +230,12 @@ export const dpl30MotorRunsNoFlowEnCopy = {
   metadata: {
     title:
       "A 300 mL/min Micro Liquid Diaphragm Pump Motor Runs but No Liquid Flows—What Should You Check First?",
-    seoTitle: "Micro Liquid Diaphragm Pump Motor Runs but No Flow | FOREACH",
+    seoTitle: "Micro Liquid Diaphragm Pump Motor Runs but No Flow | Foreach Technology",
     seoDescription:
       "Diagnose why a 300 mL/min micro liquid diaphragm pump motor runs without flow by checking inlet leaks, blockages, check valves, backpressure and drive current.",
     coverImage: DPL30_MOTOR_NO_FLOW_COVER,
     coverAlt:
-      "FOREACH DPL30 micro liquid diaphragm pump used for fluid-path troubleshooting",
+      "Foreach DPL30 micro liquid diaphragm pump used for fluid-path troubleshooting",
   },
   deck: "Motor rotation confirms drive activity, not effective chamber filling, check-valve rectification or an acceptable discharge load. The fastest diagnosis combines inlet pressure, outlet pressure, flow and motor current instead of relying on sound alone.",
   leadBlocks: [
@@ -444,12 +444,12 @@ export const dpl30WaterVsReagentEnCopy = {
     title:
       "Why Does a 300 mL/min Micro Liquid Diaphragm Pump Lose Flow and Self-Priming When Water Is Replaced by a Reagent?",
     seoTitle:
-      "Micro Liquid Diaphragm Pump: Water vs. Reagent Performance | FOREACH",
+      "Micro Liquid Diaphragm Pump: Water vs. Reagent Performance | Foreach Technology",
     seoDescription:
       "Learn why a 300 mL/min micro liquid diaphragm pump loses flow or self-priming with reagents due to viscosity, vapor pressure, outgassing or material compatibility.",
     coverImage: DPL30_WATER_REAGENT_COVER,
     coverAlt:
-      "FOREACH DPL30 micro liquid diaphragm pump for process-reagent validation",
+      "Foreach DPL30 micro liquid diaphragm pump for process-reagent validation",
   },
   deck: "Passing a water test proves performance only at that water temperature, tubing, liquid level, power supply and test duration. A process reagent can change viscosity, density, vapor pressure, surface tension, wetting, outgassing and material condition, moving the operating point of the same pump.",
   leadBlocks: [
@@ -658,12 +658,12 @@ export const dpl30EpdmPtfeFfkmSelectionEnCopy = {
     title:
       "How Should You Select EPDM, PTFE and FFKM for a 300 mL/min Micro Liquid Diaphragm Pump?",
     seoTitle:
-      "Micro Liquid Diaphragm Pump EPDM, PTFE and FFKM Selection | FOREACH",
+      "Micro Liquid Diaphragm Pump EPDM, PTFE and FFKM Selection | Foreach Technology",
     seoDescription:
       "Compare EPDM, PTFE and FFKM for a 300 mL/min micro liquid diaphragm pump by evaluating chemical compatibility, swelling, dynamic sealing and actual-fluid validation.",
     coverImage: DPL30_WETTED_MATERIALS_COVER,
     coverAlt:
-      "FOREACH DPL30 micro liquid diaphragm pump with alternative wetted material combinations",
+      "Foreach DPL30 micro liquid diaphragm pump with alternative wetted material combinations",
   },
   deck: "EPDM, PTFE and FFKM are not a simple low-to-high material ranking. EPDM and FFKM are elastomers, while PTFE is a fluoropolymer; the diaphragm, valves and pump head perform different mechanical jobs. Selection therefore applies to a complete wetted and dynamically loaded structure, not one material name.",
   leadBlocks: [

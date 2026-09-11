@@ -517,15 +517,15 @@ export const homeApplicationFlowData = {
     "zh-CN":
       "面向 IVD、生命科学、合成生物、高端分析仪器与实验室自动化设备，恒永达提供泵、阀、传感器、管路、连接件、采样针等核心液路组合支持。",
     en:
-      "FOREACH provides integrated fluidic solutions for IVD, life sciences, synthetic biology, analytical instruments, and laboratory automation—from pumps and valves to sensors, tubing, and connections.",
+      "Foreach provides integrated fluidic solutions for IVD, life sciences, synthetic biology, analytical instruments, and laboratory automation—from pumps and valves to sensors, tubing, and connections.",
     es:
-      "FOREACH ofrece soluciones fluídicas integradas para IVD, ciencias de la vida, biología sintética, instrumentación analítica y automatización de laboratorios, desde bombas y válvulas hasta sensores y conexiones.",
+      "Foreach ofrece soluciones fluídicas integradas para IVD, ciencias de la vida, biología sintética, instrumentación analítica y automatización de laboratorios, desde bombas y válvulas hasta sensores y conexiones.",
     fr:
-      "FOREACH fournit des solutions fluidiques intégrées pour l’IVD, les sciences de la vie, la biologie synthétique, l’analyse et l’automatisation de laboratoire, des pompes et vannes aux capteurs et raccords.",
+      "Foreach fournit des solutions fluidiques intégrées pour l’IVD, les sciences de la vie, la biologie synthétique, l’analyse et l’automatisation de laboratoire, des pompes et vannes aux capteurs et raccords.",
     ko:
-      "IVD, 생명과학, 합성생물학, 고급 분석 장비 및 실험실 자동화를 위해 FOREACH는 펌프, 밸브, 센서, 튜빙, 피팅, 샘플링 프로브 등 핵심 유체 부품을 포함한 통합 유체 제어 지원을 제공합니다.",
+      "IVD, 생명과학, 합성생물학, 고급 분석 장비 및 실험실 자동화를 위해 Foreach는 펌프, 밸브, 센서, 튜빙, 피팅, 샘플링 프로브 등 핵심 유체 부품을 포함한 통합 유체 제어 지원을 제공합니다.",
     ru:
-      "FOREACH предлагает комплексные жидкостные решения для IVD, наук о жизни, синтетической биологии, аналитических приборов и автоматизации лабораторий — от насосов и клапанов до датчиков и соединений.",
+      "Foreach предлагает комплексные жидкостные решения для IVD, наук о жизни, синтетической биологии, аналитических приборов и автоматизации лабораторий — от насосов и клапанов до датчиков и соединений.",
   },
 
   /* ================================

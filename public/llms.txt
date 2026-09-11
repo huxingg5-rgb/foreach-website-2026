@@ -1,6 +1,6 @@
-# FOREACH | 恒永达科技
+# Foreach Technology | 恒永达科技
 
-> FOREACH（恒永达科技）提供微型隔膜泵、精密流体控制部件及微流控解决方案，服务体外诊断、生命科学、实验室自动化和分析仪器等领域。FOREACH provides miniature diaphragm pumps, precision fluid-control components and microfluidic solutions for in vitro diagnostics, life sciences, laboratory automation and analytical instruments.
+> Foreach Technology（恒永达科技）提供微型隔膜泵、精密流体控制部件及微流控解决方案，服务体外诊断、生命科学、实验室自动化和分析仪器等领域。Foreach Technology provides miniature diaphragm pumps, precision fluid-control components and microfluidic solutions for in vitro diagnostics, life sciences, laboratory automation and analytical instruments.
 
 Official website: https://www.foreachtek.com/
 Supported languages: zh-CN, en, es, fr, ko, ru.
@@ -9,11 +9,11 @@ Product-data interpretation: DPL30 and DPL60 nominal no-load liquid flow rates a
 
 ## 简体中文 (zh-CN)
 
-FOREACH 恒永达科技为体外诊断、生命科学、实验室自动化和分析仪器提供微型隔膜泵、流体控制部件与液路解决方案。
+Foreach Technology 恒永达科技为体外诊断、生命科学、实验室自动化和分析仪器提供微型隔膜泵、流体控制部件与液路解决方案。
 
 ### 企业与研发能力
 
-- [认识恒永达 FOREACH](https://www.foreachtek.com/about/foreach/): 品牌介绍、业务定位与流体控制能力。
+- [认识恒永达 Foreach Technology](https://www.foreachtek.com/about/foreach/): 品牌介绍、业务定位与流体控制能力。
 - [研发与制造](https://www.foreachtek.com/about/research-manufacturing/): 研发、制造及产品交付能力。
 - [质量与认证](https://www.foreachtek.com/about/quality/): 质量管理与产品可靠性相关信息。
 
@@ -51,15 +51,15 @@ FOREACH 恒永达科技为体外诊断、生命科学、实验室自动化和分
 
 - [流体阻力计算工具](https://www.foreachtek.com/resources/calculators/fluid-resistance/): 估算管路阻力和系统背压。
 - [材料兼容性参考](https://www.foreachtek.com/resources/material-compatibility/): 按具体介质核实接液材料适配。
-- [联系 FOREACH](https://www.foreachtek.com/contact/): 获取选型、技术支持及定制信息。
+- [联系 Foreach Technology](https://www.foreachtek.com/contact/): 获取选型、技术支持及定制信息。
 
 ## English (en)
 
-FOREACH develops miniature diaphragm pumps, precision fluid-control components and microfluidic solutions for in vitro diagnostics, life sciences, laboratory automation and analytical instruments.
+Foreach Technology develops miniature diaphragm pumps, precision fluid-control components and microfluidic solutions for in vitro diagnostics, life sciences, laboratory automation and analytical instruments.
 
 ### Company and engineering capabilities
 
-- [About FOREACH](https://www.foreachtek.com/en/about/foreach/): Company profile and precision fluid-control expertise.
+- [About Foreach Technology](https://www.foreachtek.com/en/about/foreach/): Company profile and precision fluid-control expertise.
 - [Research and manufacturing](https://www.foreachtek.com/en/about/research-manufacturing/): Engineering, production and product-delivery capabilities.
 - [Quality management](https://www.foreachtek.com/en/about/quality/): Quality processes and product reliability information.
 
@@ -96,15 +96,15 @@ FOREACH develops miniature diaphragm pumps, precision fluid-control components a
 
 - [Fluid-resistance calculator](https://www.foreachtek.com/en/resources/calculators/fluid-resistance/): Estimate tubing resistance and system backpressure.
 - [Material compatibility reference](https://www.foreachtek.com/en/resources/material-compatibility/): Check wetted-material suitability for the actual fluid.
-- [Contact FOREACH](https://www.foreachtek.com/en/contact/): Product selection, technical assistance and customization enquiries.
+- [Contact Foreach Technology](https://www.foreachtek.com/en/contact/): Product selection, technical assistance and customization enquiries.
 
 ## Español (es)
 
-FOREACH desarrolla componentes microfluídicos, bombas de diafragma en miniatura y soluciones de control de fluidos para diagnóstico in vitro, ciencias de la vida, automatización de laboratorios e instrumentos analíticos.
+Foreach Technology desarrolla componentes microfluídicos, bombas de diafragma en miniatura y soluciones de control de fluidos para diagnóstico in vitro, ciencias de la vida, automatización de laboratorios e instrumentos analíticos.
 
 ### Empresa y capacidades
 
-- [Conozca FOREACH](https://www.foreachtek.com/es/about/foreach/): Presentación de la empresa y experiencia en control de fluidos.
+- [Conozca Foreach Technology](https://www.foreachtek.com/es/about/foreach/): Presentación de la empresa y experiencia en control de fluidos.
 - [Investigación y fabricación](https://www.foreachtek.com/es/about/research-manufacturing/): Capacidades de ingeniería, desarrollo y producción.
 - [Gestión de calidad](https://www.foreachtek.com/es/about/quality/): Procesos de calidad y fiabilidad de los productos.
 
@@ -141,15 +141,15 @@ FOREACH desarrolla componentes microfluídicos, bombas de diafragma en miniatura
 
 - [Calculadora de resistencia de fluidos](https://www.foreachtek.com/es/resources/calculators/fluid-resistance/): Estimación de la resistencia y la contrapresión.
 - [Compatibilidad de materiales](https://www.foreachtek.com/es/resources/material-compatibility/): Verificación de los materiales en contacto con el fluido.
-- [Contacto con FOREACH](https://www.foreachtek.com/es/contact/): Selección de productos y asistencia técnica.
+- [Contacto con Foreach Technology](https://www.foreachtek.com/es/contact/): Selección de productos y asistencia técnica.
 
 ## Français (fr)
 
-FOREACH conçoit des composants microfluidiques, des pompes à membrane miniatures et des solutions de contrôle des fluides pour le diagnostic in vitro, les sciences de la vie, l'automatisation des laboratoires et les instruments analytiques.
+Foreach Technology conçoit des composants microfluidiques, des pompes à membrane miniatures et des solutions de contrôle des fluides pour le diagnostic in vitro, les sciences de la vie, l'automatisation des laboratoires et les instruments analytiques.
 
 ### Entreprise et capacités
 
-- [À propos de FOREACH](https://www.foreachtek.com/fr/about/foreach/): Présentation de l'entreprise et expertise en contrôle des fluides.
+- [À propos de Foreach Technology](https://www.foreachtek.com/fr/about/foreach/): Présentation de l'entreprise et expertise en contrôle des fluides.
 - [Recherche et fabrication](https://www.foreachtek.com/fr/about/research-manufacturing/): Capacités de conception, d'ingénierie et de production.
 - [Gestion de la qualité](https://www.foreachtek.com/fr/about/quality/): Processus qualité et fiabilité des produits.
 
@@ -186,15 +186,15 @@ FOREACH conçoit des composants microfluidiques, des pompes à membrane miniatur
 
 - [Calculateur de résistance des fluides](https://www.foreachtek.com/fr/resources/calculators/fluid-resistance/): Estimation des pertes de charge et de la contre-pression.
 - [Compatibilité des matériaux](https://www.foreachtek.com/fr/resources/material-compatibility/): Vérification des matériaux en contact avec le fluide.
-- [Contacter FOREACH](https://www.foreachtek.com/fr/contact/): Sélection de produits et assistance technique.
+- [Contacter Foreach Technology](https://www.foreachtek.com/fr/contact/): Sélection de produits et assistance technique.
 
 ## 한국어 (ko)
 
-FOREACH는 체외진단, 생명과학, 실험실 자동화 및 분석기기를 위한 소형 다이어프램 펌프, 미세유체 부품과 유체 제어 솔루션을 제공합니다.
+Foreach Technology는 체외진단, 생명과학, 실험실 자동화 및 분석기기를 위한 소형 다이어프램 펌프, 미세유체 부품과 유체 제어 솔루션을 제공합니다.
 
 ### 회사 및 역량
 
-- [FOREACH 회사 소개](https://www.foreachtek.com/ko/about/foreach/): 기업 소개와 정밀 유체 제어 역량.
+- [Foreach Technology 회사 소개](https://www.foreachtek.com/ko/about/foreach/): 기업 소개와 정밀 유체 제어 역량.
 - [연구 개발 및 제조](https://www.foreachtek.com/ko/about/research-manufacturing/): 제품 설계, 엔지니어링 및 제조 역량.
 - [품질 관리](https://www.foreachtek.com/ko/about/quality/): 품질 관리 체계와 제품 신뢰성 정보.
 
@@ -231,15 +231,15 @@ FOREACH는 체외진단, 생명과학, 실험실 자동화 및 분석기기를 �
 
 - [유체 저항 계산기](https://www.foreachtek.com/ko/resources/calculators/fluid-resistance/): 배관 저항과 시스템 배압 추정.
 - [재질 호환성 자료](https://www.foreachtek.com/ko/resources/material-compatibility/): 실제 유체와 접액 재질의 적합성 확인.
-- [FOREACH 문의](https://www.foreachtek.com/ko/contact/): 제품 선정, 기술 지원 및 맞춤형 솔루션.
+- [Foreach Technology 문의](https://www.foreachtek.com/ko/contact/): 제품 선정, 기술 지원 및 맞춤형 솔루션.
 
 ## Русский (ru)
 
-FOREACH разрабатывает миниатюрные мембранные насосы, микрофлюидные компоненты и решения для управления жидкостями для диагностики in vitro, наук о жизни, автоматизации лабораторий и аналитических приборов.
+Foreach Technology разрабатывает миниатюрные мембранные насосы, микрофлюидные компоненты и решения для управления жидкостями для диагностики in vitro, наук о жизни, автоматизации лабораторий и аналитических приборов.
 
 ### Компания и возможности
 
-- [О компании FOREACH](https://www.foreachtek.com/ru/about/foreach/): Информация о компании и технологиях управления жидкостями.
+- [О компании Foreach Technology](https://www.foreachtek.com/ru/about/foreach/): Информация о компании и технологиях управления жидкостями.
 - [Исследования и производство](https://www.foreachtek.com/ru/about/research-manufacturing/): Разработка, инженерные возможности и производство.
 - [Управление качеством](https://www.foreachtek.com/ru/about/quality/): Процессы контроля качества и надежности продукции.
 
@@ -276,4 +276,4 @@ FOREACH разрабатывает миниатюрные мембранные �
 
 - [Калькулятор гидравлического сопротивления](https://www.foreachtek.com/ru/resources/calculators/fluid-resistance/): Оценка сопротивления трубок и противодавления системы.
 - [Совместимость материалов](https://www.foreachtek.com/ru/resources/material-compatibility/): Проверка совместимости материалов с рабочей средой.
-- [Связаться с FOREACH](https://www.foreachtek.com/ru/contact/): Подбор продукции, техническая поддержка и специальные конфигурации.
+- [Связаться с Foreach Technology](https://www.foreachtek.com/ru/contact/): Подбор продукции, техническая поддержка и специальные конфигурации.

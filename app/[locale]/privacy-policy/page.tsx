@@ -28,29 +28,29 @@ const metadataMap: Record<
   }
 > = {
   en: {
-    title: "Privacy Policy | FOREACH Technology",
+    title: "Privacy Policy | Foreach Technology",
     description:
-      "Learn how FOREACH handles inquiries, cookies, Google Analytics and website usage information.",
+      "Learn how Foreach handles inquiries, cookies, Google Analytics and website usage information.",
   },
   es: {
-    title: "Política de privacidad | FOREACH Technology",
+    title: "Política de privacidad | Foreach Technology",
     description:
-      "Información sobre consultas, cookies, Google Analytics y datos de uso del sitio web de FOREACH.",
+      "Información sobre consultas, cookies, Google Analytics y datos de uso del sitio web de Foreach.",
   },
   fr: {
-    title: "Politique de confidentialité | FOREACH Technology",
+    title: "Politique de confidentialité | Foreach Technology",
     description:
-      "Découvrez comment FOREACH traite les demandes, les cookies, Google Analytics et les données d’utilisation.",
+      "Découvrez comment Foreach traite les demandes, les cookies, Google Analytics et les données d’utilisation.",
   },
   ko: {
-    title: "개인정보 처리방침 | FOREACH Technology",
+    title: "개인정보 처리방침 | Foreach Technology",
     description:
-      "FOREACH의 문의 정보, 쿠키, Google Analytics 및 웹사이트 이용 정보 처리 방식을 확인하십시오.",
+      "Foreach의 문의 정보, 쿠키, Google Analytics 및 웹사이트 이용 정보 처리 방식을 확인하십시오.",
   },
   ru: {
-    title: "Политика конфиденциальности | FOREACH Technology",
+    title: "Политика конфиденциальности | Foreach Technology",
     description:
-      "Узнайте, как FOREACH обрабатывает запросы, Cookie, Google Analytics и данные об использовании сайта.",
+      "Узнайте, как Foreach обрабатывает запросы, Cookie, Google Analytics и данные об использовании сайта.",
   },
 };
 

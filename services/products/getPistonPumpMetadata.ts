@@ -14,7 +14,7 @@ export function getPistonPumpMetadata(slug = "", locale: SelectionLocale = "zh")
 
   const source = (detail || {}) as Record<string, unknown>;
   const rawTitle = intro?.title || String(source.seoTitle || source.model || "");
-  const title = rawTitle.includes("FOREACH") ? rawTitle : `${rawTitle} | FOREACH`;
+  const title = rawTitle.includes("Foreach Technology") ? rawTitle : `${rawTitle} | Foreach Technology`;
   const description = intro?.paragraphs[0] || String(source.metaDescription || (Array.isArray(source.advantages) ? source.advantages[0] : "") || "");
   const path = `/products/pumps/piston-pump/${slug ? `${slug}/` : ""}`;
   const canonical = locale === "zh" ? path : `/${locale}${path}`;

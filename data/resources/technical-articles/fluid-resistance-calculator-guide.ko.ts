@@ -2,11 +2,11 @@ import type { DiaphragmPumpEngineeringArticleCopy } from "./diaphragm-pump-engin
 
 export const fluidResistanceCalculatorGuideKoCopy = {
   "metadata": {
-    "title": "유로 저항 계산은 무엇에 쓰이나요? FOREACH 계산기를 활용한 유로 설계와 부품 선정",
-    "seoTitle": "유로 저항 계산기: 압력 손실과 유량 분석 | FOREACH",
+    "title": "유로 저항 계산은 무엇에 쓰이나요? Foreach 계산기를 활용한 유로 설계와 부품 선정",
+    "seoTitle": "유로 저항 계산기: 압력 손실과 유량 분석 | Foreach Technology",
     "seoDescription": "관 내경과 밸브 Cv 비교로 압력 손실·유량을 계산하고 주요 저항을 찾아 매체와 유로 대안을 평가하는 방법. 펌프 곡선과 실측을 연결한 설계 가이드.",
     "coverImage": "/images/resources/technical-articles/fluid-resistance-guide/comparison.ko.svg",
-    "coverAlt": "관 내경과 Cv 변경 전후의 FOREACH 유로 압력 손실 비교"
+    "coverAlt": "관 내경과 Cv 변경 전후의 Foreach 유로 압력 손실 비교"
   },
   "deck": "무부하 유량은 충분하지만 관, 밸브, 피팅을 연결하면 말단 공급이 부족해질 수 있습니다. 유로 저항 계산은 목표 유량에 필요한 차압, 주요 손실 위치, 내경·길이·Cv·점도 변경 영향을 비교 가능한 값으로 나눕니다. 실제 계산기 기능과 재계산 가능한 예제로 설계, 선정, 문제 분석, 시제품 검증에 활용하는 방법을 설명합니다.",
   "leadBlocks": [
@@ -16,7 +16,7 @@ export const fluidResistanceCalculatorGuideKoCopy = {
     },
     {
       "type": "paragraph",
-      "text": "FOREACH 계산기는 내경·길이로 ID 행을, 유량 계수로 Cv 행을 구성합니다. 유량에서 압력 손실 계산, 손실에서 유량 역산, 손실 통계, 유로 PQ 곡선, Excel 내보내기를 지원합니다. 초기 압력 예산을 만들거나 시험 뒤 확인된 값으로 재계산하는 데 적합합니다."
+      "text": "Foreach 계산기는 내경·길이로 ID 행을, 유량 계수로 Cv 행을 구성합니다. 유량에서 압력 손실 계산, 손실에서 유량 역산, 손실 통계, 유로 PQ 곡선, Excel 내보내기를 지원합니다. 초기 압력 예산을 만들거나 시험 뒤 확인된 값으로 재계산하는 데 적합합니다."
     },
     {
       "type": "paragraph",
@@ -27,7 +27,7 @@ export const fluidResistanceCalculatorGuideKoCopy = {
       "items": [
         {
           "href": "/resources/calculators/fluid-resistance/",
-          "label": "FOREACH 계산기를 열어 예제 재현하기"
+          "label": "Foreach 계산기를 열어 예제 재현하기"
         }
       ]
     }
@@ -207,7 +207,7 @@ export const fluidResistanceCalculatorGuideKoCopy = {
       "blocks": [
         {
           "type": "paragraph",
-          "text": "FOREACH 계산 코어로 20 ℃ 물, 60 mL/min, 1 m 직관과 Cv 부품의 직렬 예제를 계산합니다. 직관 추가 국소 계수는 0이며 Cv는 예리한 모서리의 얇은 오리피스 교축 모델입니다. 공급·말단 압력, 액위 차, 미기재 부품은 표에 포함하지 않습니다."
+          "text": "Foreach 계산 코어로 20 ℃ 물, 60 mL/min, 1 m 직관과 Cv 부품의 직렬 예제를 계산합니다. 직관 추가 국소 계수는 0이며 Cv는 예리한 모서리의 얇은 오리피스 교축 모델입니다. 공급·말단 압력, 액위 차, 미기재 부품은 표에 포함하지 않습니다."
         },
         {
           "type": "paragraph",
@@ -426,7 +426,7 @@ export const fluidResistanceCalculatorGuideKoCopy = {
       ]
     },
     {
-      "title": "11. FOREACH 펌프·밸브·배관 선정 협의에 활용하기",
+      "title": "11. Foreach 펌프·밸브·배관 선정 협의에 활용하기",
       "blocks": [
         {
           "type": "paragraph",
@@ -438,7 +438,7 @@ export const fluidResistanceCalculatorGuideKoCopy = {
         },
         {
           "type": "paragraph",
-          "text": "유로도, 입력, 계산값, 실측 유량·압력을 제출하면 FOREACH가 부품 파라미터와 함께 선정 협의를 하고 필요한 추가 데이터와 시제품 시험 조건을 정할 수 있습니다."
+          "text": "유로도, 입력, 계산값, 실측 유량·압력을 제출하면 Foreach가 부품 파라미터와 함께 선정 협의를 하고 필요한 추가 데이터와 시제품 시험 조건을 정할 수 있습니다."
         },
         {
           "type": "links",
@@ -449,11 +449,11 @@ export const fluidResistanceCalculatorGuideKoCopy = {
             },
             {
               "href": "/resources/technical-articles/foreach-miniature-diaphragm-pump-oem-integration/",
-              "label": "관련 글: FOREACH OEM 통합, 작동점과 장비 검증"
+              "label": "관련 글: Foreach OEM 통합, 작동점과 장비 검증"
             },
             {
               "href": "/products/",
-              "label": "FOREACH 펌프·밸브·유로 부품 보기"
+              "label": "Foreach 펌프·밸브·유로 부품 보기"
             }
           ]
         }
@@ -489,7 +489,7 @@ export const fluidResistanceCalculatorGuideKoCopy = {
   ],
   "cta": {
     "title": "유로 파라미터와 계산 결과로 부품 구성을 협의하세요",
-    "description": "매체, 온도, 목표 유량, 관 치수, 부품 파라미터, 입출구 압력, 계산·실측 결과를 제공하여 FOREACH와 선정 및 검증 요점을 정하세요.",
+    "description": "매체, 온도, 목표 유량, 관 치수, 부품 파라미터, 입출구 압력, 계산·실측 결과를 제공하여 Foreach와 선정 및 검증 요점을 정하세요.",
     "contactLabel": "유로 요구 제출",
     "productsLabel": "계산기 사용하기",
     "productsHref": "/resources/calculators/fluid-resistance/"

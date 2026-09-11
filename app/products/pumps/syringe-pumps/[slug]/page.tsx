@@ -104,7 +104,7 @@ export async function generateMetadata({
   }
 
   const data = toClientData(detail);
-  const title = `${data.title} | FOREACH`;
+  const title = `${data.title} | Foreach Technology`;
 
   return {
     title,

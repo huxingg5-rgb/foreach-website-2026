@@ -1503,11 +1503,11 @@
       "ko": "예상 수명 500만 회는 순수, 상온 및 {0} kPa 배압 조건이며 모든 시약에서의 수명을 보장하지는 않습니다.",
       "ru": "Ожидаемый ресурс в пять миллионов циклов относится к чистой воде при комнатной температуре и противодавлении {0} kPa; для любого реагента он не гарантируется."
     },
-    "{0} {1} PMMA Miniature Piston Pump | FOREACH": {
-      "es": "{0} Bomba de pistón en miniatura {1} PMMA | FOREACH",
-      "fr": "{0} Pompe à piston miniature {1} PMMA | FOREACH",
-      "ko": "{0} {1} PMMA 소형 피스톤 펌프 | FOREACH",
-      "ru": "{0} Миниатюрный поршневой насос {1} PMMA | FOREACH"
+    "{0} {1} PMMA Miniature Piston Pump | Foreach Technology": {
+      "es": "{0} Bomba de pistón en miniatura {1} PMMA | Foreach Technology",
+      "fr": "{0} Pompe à piston miniature {1} PMMA | Foreach Technology",
+      "ko": "{0} {1} PMMA 소형 피스톤 펌프 | Foreach Technology",
+      "ru": "{0} Миниатюрный поршневой насос {1} PMMA | Foreach Technology"
     },
     "{0}: {1} PMMA-head miniature piston pump for {2}.": {
       "es": "{0}: bomba de pistón en miniatura de {1} con cabezal de PMMA para {2}.",
@@ -1593,11 +1593,11 @@
       "ko": "관련 선정 용도에는 분석기 시약 주입, 반응액 정량 첨가, {0} 및 수질 분석 시약 계량이 포함됩니다.",
       "ru": "Связанные задачи подбора: дозирование реагентов в анализаторах, дозированное добавление реакционной жидкости, {0} и дозирование реагентов для анализа воды."
     },
-    "{0} {1} PEEK Miniature Piston Pump | FOREACH": {
-      "es": "{0} Bomba de pistón en miniatura {1} PEEK | FOREACH",
-      "fr": "{0} Pompe à piston miniature {1} PEEK | FOREACH",
-      "ko": "{0} {1} PEEK 소형 피스톤 펌프 | FOREACH",
-      "ru": "{0} Миниатюрный поршневой насос {1} PEEK | FOREACH"
+    "{0} {1} PEEK Miniature Piston Pump | Foreach Technology": {
+      "es": "{0} Bomba de pistón en miniatura {1} PEEK | Foreach Technology",
+      "fr": "{0} Pompe à piston miniature {1} PEEK | Foreach Technology",
+      "ko": "{0} {1} PEEK 소형 피스톤 펌프 | Foreach Technology",
+      "ru": "{0} Миниатюрный поршневой насос {1} PEEK | Foreach Technology"
     },
     "{0}: {1} PEEK-head miniature piston pump for {2}.": {
       "es": "{0}: bomba de pistón en miniatura de {1} con cabezal de PEEK para {2}.",
@@ -1767,11 +1767,11 @@
       "ko": "전체 행정 {0}스텝이 정확도, 반복성 또는 수명을 의미하지는 않습니다.",
       "ru": "Число {0} шагов на полный ход не определяет точность, повторяемость или ресурс."
     },
-    "{0} {1} PMMA Ultra-Compact Piston Pump | FOREACH": {
-      "es": "{0} Bomba de pistón ultracompacta {1} PMMA | FOREACH",
-      "fr": "{0} Pompe à piston ultra-compacte {1} PMMA | FOREACH",
-      "ko": "{0} {1} PMMA 초소형 피스톤 펌프 | FOREACH",
-      "ru": "{0} Ультракомпактный поршневой насос {1} PMMA | FOREACH"
+    "{0} {1} PMMA Ultra-Compact Piston Pump | Foreach Technology": {
+      "es": "{0} Bomba de pistón ultracompacta {1} PMMA | Foreach Technology",
+      "fr": "{0} Pompe à piston ultra-compacte {1} PMMA | Foreach Technology",
+      "ko": "{0} {1} PMMA 초소형 피스톤 펌프 | Foreach Technology",
+      "ru": "{0} Ультракомпактный поршневой насос {1} PMMA | Foreach Technology"
     },
     "{0}: {1} PMMA-head ultra-compact piston pump for {2}.": {
       "es": "{0}: bomba de pistón ultracompacta de {1} con cabezal de PMMA para {2}.",

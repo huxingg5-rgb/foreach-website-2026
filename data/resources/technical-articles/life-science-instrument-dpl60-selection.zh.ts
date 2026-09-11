@@ -6,11 +6,11 @@ const ARTICLE_ASSET_BASE =
 export const lifeScienceInstrumentDpl60SelectionZhCopy = {
   metadata: {
     title: "生命科学仪器中的微型隔膜泵怎么选？DPL60清洗、排液与废液液路指南",
-    seoTitle: "生命科学仪器微型隔膜泵怎么选？DPL60清洗与废液液路指南｜FOREACH",
+    seoTitle: "生命科学仪器微型隔膜泵怎么选？DPL60清洗与废液液路指南｜Foreach Technology",
     seoDescription:
       "以恒永达DPL60微型液体隔膜泵为例，说明生命科学仪器清洗、冲洗、排液、废液和循环液路的流量、背压、自吸、材料、寿命与样机验证方法。",
     coverImage: `${ARTICLE_ASSET_BASE}/article-cover.webp`,
-    coverAlt: "恒永达FOREACH DPL60微型液体隔膜泵",
+    coverAlt: "恒永达Foreach DPL60微型液体隔膜泵",
   },
   deck: "生命科学仪器除了精密加样，还需要完成清洗液输送、反应腔冲洗、废液排放、管路预充和循环等任务。微型液体隔膜泵能否稳定完成这些动作，取决于整条液路的阻力、自吸条件、接液材料和长期工作状态，而不只是目录中的最大流量。",
   leadBlocks: [

@@ -4,10 +4,10 @@ export const brushlessWiringArticleEsCopy = {
   metadata: {
     title:
       "Bomba de diafragma sin escobillas de 2 hilos vs. 5 hilos: diferencias y cómo elegir",
-    seoTitle: "Bomba de diafragma sin escobillas de 2 y 5 hilos | FOREACH",
+    seoTitle: "Bomba de diafragma sin escobillas de 2 y 5 hilos | Foreach Technology",
     seoDescription:
-      "Conozca las diferencias entre las configuraciones de 2 y 5 hilos de una bomba de diafragma sin escobillas, las funciones VCC, GND, PWM, DIR y FG, cuándo utilizar cada opción y las configuraciones disponibles para las series FOREACH DPL30, DPL60, DPL30H y DPGL800.",
-    coverAlt: "Motor sin escobillas FOREACH DPL60 de 2 hilos",
+      "Conozca las diferencias entre las configuraciones de 2 y 5 hilos de una bomba de diafragma sin escobillas, las funciones VCC, GND, PWM, DIR y FG, cuándo utilizar cada opción y las configuraciones disponibles para las series Foreach DPL30, DPL60, DPL30H y DPGL800.",
+    coverAlt: "Motor sin escobillas Foreach DPL60 de 2 hilos",
   },
   kicker: "Bomba de diafragma sin escobillas · 2 hilos vs. 5 hilos",
   deck:
@@ -30,7 +30,7 @@ export const brushlessWiringArticleEsCopy = {
       "El control básico de accionamiento ya está integrado en el motor. El motor funciona al recibir alimentación y se detiene cuando se interrumpe.",
       "Por tanto, las principales características de la configuración de 2 hilos son un cableado sencillo, un control sencillo y una integración fácil en el sistema.",
     ],
-    figureAlt: "Motor sin escobillas FOREACH DPL60 de 2 hilos",
+    figureAlt: "Motor sin escobillas Foreach DPL60 de 2 hilos",
     figureCaption:
       "Figura 1 | Motor sin escobillas DPL60 de 2 hilos. La configuración conserva las conexiones básicas de alimentación.",
     selectionTitle: "¿Cuándo elegir 2 hilos?",
@@ -64,7 +64,7 @@ export const brushlessWiringArticleEsCopy = {
       "Frente a 2 hilos, la ventaja principal de 5 hilos es que el controlador del equipo puede controlar con mayor detalle el funcionamiento del motor y recibir la realimentación de velocidad.",
       "Por ejemplo, una señal PWM puede ajustar la velocidad del motor y una señal FG puede ayudar a determinar si funciona correctamente. El orden exacto de los hilos y la lógica de control pueden variar según el modelo; se debe utilizar siempre la especificación eléctrica del producto seleccionado.",
     ],
-    figureAlt: "Motor sin escobillas FOREACH DPL60 de 5 hilos",
+    figureAlt: "Motor sin escobillas Foreach DPL60 de 5 hilos",
     figureCaption:
       "Figura 2 | Motor sin escobillas DPL60 de 5 hilos. Además de la alimentación, puede incorporar conexiones de control y realimentación.",
     selectionTitle: "¿Cuándo elegir 5 hilos?",
@@ -152,9 +152,9 @@ export const brushlessWiringArticleEsCopy = {
       "Con escobillas / sin escobillas describe el tipo de motor; 2 hilos / 5 hilos describe la salida de cables y el método de control. No son el mismo concepto. Dos hilos no significa motor con escobillas, ni cinco hilos es lo que convierte un motor en sin escobillas.",
   },
   products: {
-    title: "¿Qué bombas de diafragma en miniatura FOREACH pueden usar 2 o 5 hilos?",
+    title: "¿Qué bombas de diafragma en miniatura Foreach pueden usar 2 o 5 hilos?",
     intro:
-      "Varias series de bombas de diafragma en miniatura FOREACH permiten confirmar la configuración de salida adecuada según el modelo concreto y las necesidades de control del proyecto, entre ellas:",
+      "Varias series de bombas de diafragma en miniatura Foreach permiten confirmar la configuración de salida adecuada según el modelo concreto y las necesidades de control del proyecto, entre ellas:",
     cards: [
       {
         label: "Bomba de diafragma para líquidos",

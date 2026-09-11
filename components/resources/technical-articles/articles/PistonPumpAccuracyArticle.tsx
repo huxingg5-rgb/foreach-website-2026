@@ -100,7 +100,7 @@ export default function PistonPumpAccuracyArticle() {
           <strong>理论每步液量 = 标称容量 ÷ 满量程步数</strong>
         </div>
         <p>
-          以FOREACH EA-500-PMMA展示配置为例，其标称容量为500 μL，满量程为2000步。按理论计算，每步对应约0.25 μL。
+          以Foreach EA-500-PMMA展示配置为例，其标称容量为500 μL，满量程为2000步。按理论计算，每步对应约0.25 μL。
         </p>
         <p>
           但0.25 μL只是柱塞位移换算得到的理论体积增量，并不代表该泵能够在任意液体、任意液路中稳定、准确地分配0.25 μL。电机完成一步运动，不等于相同体积的液体一定从出液端完整排出。
@@ -183,7 +183,7 @@ export default function PistonPumpAccuracyArticle() {
         <p>
           固定机械误差、阀门响应和气泡压缩等因素，在大行程中所占比例可能较小；当工作行程缩短后，这些因素占目标液量的比例可能增大。因此，同一台柱塞泵在满行程和小比例行程下，准确性与重复性可能不同。
         </p>
-        <p>以FOREACH EA-500-PMMA展示配置为例：</p>
+        <p>以Foreach EA-500-PMMA展示配置为例：</p>
         <ArticleTable
           headers={["测试位置", "对应体积", "准确性", "重复性"]}
           rows={[
@@ -231,7 +231,7 @@ export default function PistonPumpAccuracyArticle() {
       </section>
 
       <section className={newsStyles.contentBlock}>
-        <h2>七、FOREACH EA、SM和TM系列应如何看这些指标？</h2>
+        <h2>七、Foreach EA、SM和TM系列应如何看这些指标？</h2>
         <ArticleTable
           headers={["系列", "当前性能信息", "选型时的重点"]}
           rows={[
@@ -266,7 +266,7 @@ export default function PistonPumpAccuracyArticle() {
           <p>
             查看
             <Link href="/products/pumps/piston-pump/">
-              FOREACH柱塞泵产品与容量配置
+              Foreach柱塞泵产品与容量配置
             </Link>
             ，再结合实际工作液量、介质和液路要求确定系列及配置。
           </p>
@@ -294,7 +294,7 @@ export default function PistonPumpAccuracyArticle() {
           在柱塞泵选型中，应先确定最小、常用和最大工作液量，再核对对应行程下的准确性与重复性。电机步数可以帮助理解控制结构，但不能直接作为最小可靠分液量或整机性能的结论。
         </p>
         <p>
-          如需评估FOREACH柱塞泵，请提供目标液量、允许偏差、重复性要求、液体类型、温度、背压、阀路、管路、运行节拍和安装空间，以便按照真实工况匹配EA、SM或TM系列及相应配置。
+          如需评估Foreach柱塞泵，请提供目标液量、允许偏差、重复性要求、液体类型、温度、背压、阀路、管路、运行节拍和安装空间，以便按照真实工况匹配EA、SM或TM系列及相应配置。
         </p>
       </section>
     </div>

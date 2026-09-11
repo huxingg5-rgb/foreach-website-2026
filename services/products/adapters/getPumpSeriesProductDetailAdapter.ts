@@ -572,13 +572,13 @@ export function getPumpSeriesProductDetailAdapter(
       ...base,
       ...localized,
       __locale: locale,
-      model: `FOREACH ${localized.heading}`,
-      name: `FOREACH ${localized.heading}`,
+      model: `Foreach ${localized.heading}`,
+      name: `Foreach ${localized.heading}`,
       advantages: localized.description,
       description: localized.description.join("\n\n"),
       imageAltEn: undefined,
-      mainImageAlt: localized.seoTitle.replace(/ \| FOREACH$/, ""),
-      imageAlt: localized.seoTitle.replace(/ \| FOREACH$/, ""),
+      mainImageAlt: localized.seoTitle.replace(/ \| Foreach(?: Technology)?$/i, ""),
+      imageAlt: localized.seoTitle.replace(/ \| Foreach(?: Technology)?$/i, ""),
     } as ProductDetailPageData;
   }
   const record = getPumpSeriesDetailData(slug, locale);
@@ -604,7 +604,7 @@ export function getPumpSeriesProductDetailAdapter(
     : "";
 
   const pageTitle =
-    (cardHeading ? `FOREACH ${cardHeading}` : "") ||
+    (cardHeading ? `Foreach ${cardHeading}` : "") ||
     toText(content.h1) ||
     toText(content.title) ||
     toText(record.internalModelRef) ||
@@ -676,7 +676,7 @@ export function getPumpSeriesProductDetailAdapter(
   if (eaContent) {
     const capacity = /\b(\d+(?:\.\d+)? (?:μL|mL))/.exec(PLUNGER_PUMP_CARD_HEADING_EN_BY_MODEL[toText(record.productId).toUpperCase()] || "")?.[1] || "";
     const material = toText(record.productId).toUpperCase().endsWith("PEEK") ? "PEEK" : "PMMA";
-    data.seoTitle = `${toText(record.productId).toUpperCase()} ${capacity} ${material} ${locale === "zh" ? "精密柱塞泵" : "Precision Piston Pump"} | FOREACH`;
+    data.seoTitle = `${toText(record.productId).toUpperCase()} ${capacity} ${material} ${locale === "zh" ? "精密柱塞泵" : "Precision Piston Pump"} | Foreach Technology`;
     data.metaDescription = eaContent.description[0];
   }
   return data;

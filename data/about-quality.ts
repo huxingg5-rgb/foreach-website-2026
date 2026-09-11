@@ -278,16 +278,16 @@ export const aboutQualityContent: Record<
      英文 en
   ================================ */
   en: {
-    metadataTitle: "Quality System and Compliance | FOREACH",
+    metadataTitle: "Quality System and Compliance | Foreach Technology",
     metadataDescription:
-      "FOREACH builds a traceable, verifiable and continuously improving quality management system for microfluidic core components.",
+      "Foreach builds a traceable, verifiable and continuously improving quality management system for microfluidic core components.",
 
     heroTitle: "Quality starts with end-to-end control",
     heroSubtitle:
       "Supporting stable delivery through a traceable, verifiable and continuously improving system",
 
     lifeTitle: "Quality as a foundation for long-term development",
-    lifeTextBeforeStrong: "FOREACH regards ",
+    lifeTextBeforeStrong: "Foreach regards ",
     lifeTextStrong: "product quality as a core foundation of long-term development",
     lifeTextAfterStrong:
       ", and integrates quality assurance into supply chain management, R&D validation, manufacturing, final inspection and after-sales service across the full product lifecycle.",
@@ -296,7 +296,7 @@ export const aboutQualityContent: Record<
 
     pathTitle: "Lifecycle Quality Path",
     pathSummary:
-      "FOREACH applies quality management across supplier control, R&D validation, incoming material confirmation, manufacturing, final release and customer feedback, using standardized processes and digital records to support traceable, verifiable and continuously improving quality.",
+      "Foreach applies quality management across supplier control, R&D validation, incoming material confirmation, manufacturing, final release and customer feedback, using standardized processes and digital records to support traceable, verifiable and continuously improving quality.",
     pathSteps: [
       {
         index: "01",
@@ -341,7 +341,7 @@ export const aboutQualityContent: Record<
 
     equipmentTitle: "Inspection Equipment and Quality Validation",
     equipmentIntro: [
-      "FOREACH is equipped with precision inspection equipment and validation methods for product function, key dimensions, appearance, structure and sealing confirmation",
+      "Foreach is equipped with precision inspection equipment and validation methods for product function, key dimensions, appearance, structure and sealing confirmation",
       "Equipment testing, test fixtures and data records provide evidence for quality consistency of core fluidic components",
     ],
     equipmentItems: [
@@ -350,7 +350,7 @@ export const aboutQualityContent: Record<
         description:
           "Used for spatial dimensions, geometric tolerances and assembly reference inspection of key parts.",
         image: aboutQualityImages.equipmentCmm,
-        alt: "FOREACH coordinate measuring machine",
+        alt: "Foreach coordinate measuring machine",
         parametersTitle: "Key Parameters",
         parameters: [
           "Maximum permissible indication error: 1.5 + L / 350 μm",
@@ -362,7 +362,7 @@ export const aboutQualityContent: Record<
         description:
           "Used for small structures, external dimensions, contours and local feature inspection of microfluidic components.",
         image: aboutQualityImages.equipmentImageMeasuring,
-        alt: "FOREACH image measuring instrument",
+        alt: "Foreach image measuring instrument",
         parametersTitle: "Key Parameters",
         parameters: [
           "Effective pixels: 2048 × 1536",
@@ -374,7 +374,7 @@ export const aboutQualityContent: Record<
         description:
           "Used for appearance, structural features, assembly status and key measurement points to improve inspection consistency.",
         image: aboutQualityImages.equipmentVision,
-        alt: "FOREACH vision measuring equipment",
+        alt: "Foreach vision measuring equipment",
         parametersTitle: "Key Parameters",
         parameters: [
           "Repeatability accuracy: ±0.5 μm to ±1.5 μm",
@@ -386,7 +386,7 @@ export const aboutQualityContent: Record<
         description:
           "Used for micro surface morphology, local height difference, fine structures and surface quality verification.",
         image: aboutQualityImages.equipmentConfocal,
-        alt: "FOREACH confocal microscope",
+        alt: "Foreach confocal microscope",
         parametersTitle: "Key Parameters",
         parameters: [
           "Height measurement accuracy: ±(0.2 + L / 100) μm",
@@ -395,7 +395,7 @@ export const aboutQualityContent: Record<
       },
     ],
     equipmentNote:
-      "Through the collaboration of inspection equipment, test fixtures, validation processes and data records, FOREACH continuously improves dimensional accuracy, functional performance and long-term stability of pumps, valves, sensors, tubing assemblies and connectors.",
+      "Through the collaboration of inspection equipment, test fixtures, validation processes and data records, Foreach continuously improves dimensional accuracy, functional performance and long-term stability of pumps, valves, sensors, tubing assemblies and connectors.",
 
     certTitle: "Quality System and Compliance Certification",
     certSummary:
@@ -406,14 +406,14 @@ export const aboutQualityContent: Record<
         description:
           "Supports quality management requirements for medical device-related products and services, providing a basis for customer project introduction and quality audits.",
         image: aboutQualityImages.certificateIso13485,
-        alt: "FOREACH ISO 13485 quality management system certification",
+        alt: "Foreach ISO 13485 quality management system certification",
       },
       {
         name: "ISO 9001 Quality Management System Certification",
         description:
           "Supports standardized management across R&D, manufacturing, inspection, delivery and continuous improvement.",
         image: aboutQualityImages.certificateIso9001,
-        alt: "FOREACH ISO 9001 quality management system certification",
+        alt: "Foreach ISO 9001 quality management system certification",
       },
     ],
   },
@@ -422,16 +422,16 @@ export const aboutQualityContent: Record<
      西班牙语 es
   ================================ */
   es: {
-    metadataTitle: "Sistema de calidad y certificaciones | FOREACH",
+    metadataTitle: "Sistema de calidad y certificaciones | Foreach Technology",
     metadataDescription:
-      "FOREACH construye un sistema de gestión de calidad trazable, verificable y de mejora continua para componentes microfluídicos.",
+      "Foreach construye un sistema de gestión de calidad trazable, verificable y de mejora continua para componentes microfluídicos.",
 
     heroTitle: "La calidad nace del control integral",
     heroSubtitle:
       "Un sistema trazable, verificable y mejorable que respalda entregas estables",
 
     lifeTitle: "La calidad como base del desarrollo a largo plazo",
-    lifeTextBeforeStrong: "FOREACH considera ",
+    lifeTextBeforeStrong: "Foreach considera ",
     lifeTextStrong:
       "la calidad del producto como base esencial del desarrollo a largo plazo",
     lifeTextAfterStrong:
@@ -441,7 +441,7 @@ export const aboutQualityContent: Record<
 
     pathTitle: "Ruta de calidad del ciclo de vida",
     pathSummary:
-      "FOREACH aplica la gestión de calidad en proveedores, validación de I+D, confirmación de materiales, fabricación, liberación final y retroalimentación del cliente, con procesos estandarizados y registros digitales.",
+      "Foreach aplica la gestión de calidad en proveedores, validación de I+D, confirmación de materiales, fabricación, liberación final y retroalimentación del cliente, con procesos estandarizados y registros digitales.",
     pathSteps: [
       {
         index: "01",
@@ -486,7 +486,7 @@ export const aboutQualityContent: Record<
 
     equipmentTitle: "Equipos de inspección y validación de calidad",
     equipmentIntro: [
-      "FOREACH cuenta con equipos de inspección de precisión para confirmar función, dimensiones clave, apariencia, estructura y estanqueidad",
+      "Foreach cuenta con equipos de inspección de precisión para confirmar función, dimensiones clave, apariencia, estructura y estanqueidad",
       "Las pruebas, los utillajes y los registros de datos respaldan la consistencia de calidad de los componentes fluídicos",
     ],
     equipmentItems: [
@@ -495,7 +495,7 @@ export const aboutQualityContent: Record<
         description:
           "Para medir dimensiones espaciales, tolerancias geométricas y referencias de montaje de piezas clave.",
         image: aboutQualityImages.equipmentCmm,
-        alt: "Máquina de medición por coordenadas FOREACH",
+        alt: "Máquina de medición por coordenadas Foreach",
         parametersTitle: "Parámetros clave",
         parameters: [
           "Error máximo permisible de indicación: 1.5 + L / 350 μm",
@@ -507,7 +507,7 @@ export const aboutQualityContent: Record<
         description:
           "Para inspeccionar estructuras pequeñas, dimensiones, contornos y características locales.",
         image: aboutQualityImages.equipmentImageMeasuring,
-        alt: "Instrumento de medición por imagen FOREACH",
+        alt: "Instrumento de medición por imagen Foreach",
         parametersTitle: "Parámetros clave",
         parameters: [
           "Píxeles efectivos: 2048 × 1536",
@@ -519,7 +519,7 @@ export const aboutQualityContent: Record<
         description:
           "Para apariencia, características estructurales, estado de montaje y puntos clave de medición.",
         image: aboutQualityImages.equipmentVision,
-        alt: "Equipo de medición visual FOREACH",
+        alt: "Equipo de medición visual Foreach",
         parametersTitle: "Parámetros clave",
         parameters: [
           "Precisión de repetibilidad: ±0.5 μm a ±1.5 μm",
@@ -531,7 +531,7 @@ export const aboutQualityContent: Record<
         description:
           "Para morfología superficial, diferencias de altura, estructuras finas y calidad superficial.",
         image: aboutQualityImages.equipmentConfocal,
-        alt: "Microscopio confocal FOREACH",
+        alt: "Microscopio confocal Foreach",
         parametersTitle: "Parámetros clave",
         parameters: [
           "Precisión de altura: ±(0.2 + L / 100) μm",
@@ -540,7 +540,7 @@ export const aboutQualityContent: Record<
       },
     ],
     equipmentNote:
-      "Mediante equipos de inspección, utillajes de prueba, procesos de validación y registros de datos, FOREACH mejora continuamente la estabilidad dimensional, funcional y de funcionamiento a largo plazo de bombas, válvulas, sensores, tubos y conectores.",
+      "Mediante equipos de inspección, utillajes de prueba, procesos de validación y registros de datos, Foreach mejora continuamente la estabilidad dimensional, funcional y de funcionamiento a largo plazo de bombas, válvulas, sensores, tubos y conectores.",
 
     certTitle: "Sistema de calidad y certificaciones",
     certSummary:
@@ -551,14 +551,14 @@ export const aboutQualityContent: Record<
         description:
           "Apoya los requisitos de gestión de calidad para productos y servicios relacionados con dispositivos médicos.",
         image: aboutQualityImages.certificateIso13485,
-        alt: "Certificación ISO 13485 de FOREACH",
+        alt: "Certificación ISO 13485 de Foreach",
       },
       {
         name: "Certificación ISO 9001 de gestión de calidad",
         description:
           "Respalda la gestión estandarizada de I+D, fabricación, inspección, entrega y mejora continua.",
         image: aboutQualityImages.certificateIso9001,
-        alt: "Certificación ISO 9001 de FOREACH",
+        alt: "Certificación ISO 9001 de Foreach",
       },
     ],
   },
@@ -567,16 +567,16 @@ export const aboutQualityContent: Record<
      法语 fr
   ================================ */
   fr: {
-    metadataTitle: "Système qualité et certifications | FOREACH",
+    metadataTitle: "Système qualité et certifications | Foreach Technology",
     metadataDescription:
-      "FOREACH met en place un système qualité traçable, vérifiable et en amélioration continue pour les composants microfluidiques.",
+      "Foreach met en place un système qualité traçable, vérifiable et en amélioration continue pour les composants microfluidiques.",
 
     heroTitle: "La qualité commence par le contrôle global",
     heroSubtitle:
       "Un système traçable, vérifiable et améliorable pour soutenir une livraison stable",
 
     lifeTitle: "La qualité comme fondement du développement durable",
-    lifeTextBeforeStrong: "FOREACH considère ",
+    lifeTextBeforeStrong: "Foreach considère ",
     lifeTextStrong:
       "la qualité produit comme un fondement essentiel du développement à long terme",
     lifeTextAfterStrong:
@@ -586,7 +586,7 @@ export const aboutQualityContent: Record<
 
     pathTitle: "Parcours qualité du cycle de vie",
     pathSummary:
-      "FOREACH applique la gestion qualité à la chaîne d’approvisionnement, à la validation R&D, à la confirmation des matériaux, à la fabrication, à la libération finale et aux retours clients.",
+      "Foreach applique la gestion qualité à la chaîne d’approvisionnement, à la validation R&D, à la confirmation des matériaux, à la fabrication, à la libération finale et aux retours clients.",
     pathSteps: [
       {
         index: "01",
@@ -631,7 +631,7 @@ export const aboutQualityContent: Record<
 
     equipmentTitle: "Équipements d’inspection et validation qualité",
     equipmentIntro: [
-      "FOREACH dispose d’équipements d’inspection de précision pour vérifier la fonction, les dimensions clés, l’apparence, la structure et l’étanchéité",
+      "Foreach dispose d’équipements d’inspection de précision pour vérifier la fonction, les dimensions clés, l’apparence, la structure et l’étanchéité",
       "Les essais, outillages et enregistrements de données soutiennent la constance qualité des composants fluidiques",
     ],
     equipmentItems: [
@@ -640,7 +640,7 @@ export const aboutQualityContent: Record<
         description:
           "Pour mesurer les dimensions spatiales, tolérances géométriques et références d’assemblage.",
         image: aboutQualityImages.equipmentCmm,
-        alt: "Machine de mesure tridimensionnelle FOREACH",
+        alt: "Machine de mesure tridimensionnelle Foreach",
         parametersTitle: "Paramètres clés",
         parameters: [
           "Erreur maximale admissible d’indication : 1.5 + L / 350 μm",
@@ -652,7 +652,7 @@ export const aboutQualityContent: Record<
         description:
           "Pour inspecter petites structures, dimensions, contours et caractéristiques locales.",
         image: aboutQualityImages.equipmentImageMeasuring,
-        alt: "Instrument de mesure par image FOREACH",
+        alt: "Instrument de mesure par image Foreach",
         parametersTitle: "Paramètres clés",
         parameters: [
           "Pixels effectifs : 2048 × 1536",
@@ -664,7 +664,7 @@ export const aboutQualityContent: Record<
         description:
           "Pour l’apparence, les caractéristiques structurelles, l’état d’assemblage et les points de mesure clés.",
         image: aboutQualityImages.equipmentVision,
-        alt: "Équipement de mesure visuelle FOREACH",
+        alt: "Équipement de mesure visuelle Foreach",
         parametersTitle: "Paramètres clés",
         parameters: [
           "Répétabilité : ±0.5 μm à ±1.5 μm",
@@ -676,7 +676,7 @@ export const aboutQualityContent: Record<
         description:
           "Pour la morphologie de surface, les différences de hauteur, les structures fines et la qualité de surface.",
         image: aboutQualityImages.equipmentConfocal,
-        alt: "Microscope confocal FOREACH",
+        alt: "Microscope confocal Foreach",
         parametersTitle: "Paramètres clés",
         parameters: [
           "Précision hauteur : ±(0.2 + L / 100) μm",
@@ -685,7 +685,7 @@ export const aboutQualityContent: Record<
       },
     ],
     equipmentNote:
-      "Grâce aux équipements d’inspection, outillages d’essai, processus de validation et enregistrements, FOREACH améliore continuellement la stabilité dimensionnelle, fonctionnelle et à long terme des pompes, vannes, capteurs, tubes et connecteurs.",
+      "Grâce aux équipements d’inspection, outillages d’essai, processus de validation et enregistrements, Foreach améliore continuellement la stabilité dimensionnelle, fonctionnelle et à long terme des pompes, vannes, capteurs, tubes et connecteurs.",
 
     certTitle: "Système qualité et certifications",
     certSummary:
@@ -696,14 +696,14 @@ export const aboutQualityContent: Record<
         description:
           "Soutient les exigences de gestion qualité pour les produits et services liés aux dispositifs médicaux.",
         image: aboutQualityImages.certificateIso13485,
-        alt: "Certification ISO 13485 FOREACH",
+        alt: "Certification ISO 13485 Foreach",
       },
       {
         name: "Certification ISO 9001 de gestion qualité",
         description:
           "Soutient la gestion standardisée de la R&D, de la fabrication, de l’inspection, de la livraison et de l’amélioration continue.",
         image: aboutQualityImages.certificateIso9001,
-        alt: "Certification ISO 9001 FOREACH",
+        alt: "Certification ISO 9001 Foreach",
       },
     ],
   },
@@ -712,16 +712,16 @@ export const aboutQualityContent: Record<
      韩语 ko
   ================================ */
   ko: {
-    metadataTitle: "품질 시스템 및 인증 | FOREACH",
+    metadataTitle: "품질 시스템 및 인증 | Foreach Technology",
     metadataDescription:
-      "FOREACH는 미세유체 핵심 부품을 위해 추적 가능하고 검증 가능하며 지속적으로 개선되는 품질 관리 체계를 구축합니다.",
+      "Foreach는 미세유체 핵심 부품을 위해 추적 가능하고 검증 가능하며 지속적으로 개선되는 품질 관리 체계를 구축합니다.",
 
     heroTitle: "품질은 전 과정 관리에서 시작됩니다",
     heroSubtitle:
       "추적 가능하고 검증 가능하며 개선 가능한 체계로 안정적인 납품을 지원합니다",
 
     lifeTitle: "장기적인 성장을 위한 품질 중심 원칙",
-    lifeTextBeforeStrong: "FOREACH는 ",
+    lifeTextBeforeStrong: "Foreach는 ",
     lifeTextStrong: "제품 품질을 장기적인 기업 발전의 핵심 기반",
     lifeTextAfterStrong:
       "으로 보고, 공급망 관리, 연구개발 검증, 제조, 출하 검사 및 사후 서비스 전 과정에 품질 보증을 적용합니다.",
@@ -730,7 +730,7 @@ export const aboutQualityContent: Record<
 
     pathTitle: "제품 전주기 품질 경로",
     pathSummary:
-      "FOREACH는 공급망, 연구개발 검증, 입고 확인, 제조 공정, 최종 검사 및 고객 피드백 전 과정에 품질 관리를 적용하고 표준화된 프로세스와 데이터 기록으로 품질을 지원합니다.",
+      "Foreach는 공급망, 연구개발 검증, 입고 확인, 제조 공정, 최종 검사 및 고객 피드백 전 과정에 품질 관리를 적용하고 표준화된 프로세스와 데이터 기록으로 품질을 지원합니다.",
     pathSteps: [
       {
         index: "01",
@@ -775,7 +775,7 @@ export const aboutQualityContent: Record<
 
     equipmentTitle: "검사 장비 및 품질 검증 역량",
     equipmentIntro: [
-      "FOREACH는 제품 기능, 핵심 치수, 외관 구조 및 밀봉성 확인을 위한 정밀 검사 장비와 검증 수단을 갖추고 있습니다",
+      "Foreach는 제품 기능, 핵심 치수, 외관 구조 및 밀봉성 확인을 위한 정밀 검사 장비와 검증 수단을 갖추고 있습니다",
       "장비 검사, 테스트 지그 및 데이터 기록을 통해 핵심 유체 부품의 품질 일관성을 뒷받침합니다",
     ],
     equipmentItems: [
@@ -784,7 +784,7 @@ export const aboutQualityContent: Record<
         description:
           "핵심 부품의 공간 치수, 형상 공차 및 조립 기준을 검사하는 데 사용됩니다.",
         image: aboutQualityImages.equipmentCmm,
-        alt: "FOREACH 3차원 측정기",
+        alt: "Foreach 3차원 측정기",
         parametersTitle: "주요 장비 사양",
         parameters: [
           "최대 허용 지시 오차: 1.5 + L / 350 μm",
@@ -796,7 +796,7 @@ export const aboutQualityContent: Record<
         description:
           "소형 구조, 외형 치수, 윤곽 및 국부 특징을 정밀하게 측정하는 데 사용됩니다.",
         image: aboutQualityImages.equipmentImageMeasuring,
-        alt: "FOREACH 영상 측정기",
+        alt: "Foreach 영상 측정기",
         parametersTitle: "주요 장비 사양",
         parameters: ["유효 픽셀: 2048 × 1536", "소형 구조 및 국부 특징 측정에 적합"],
       },
@@ -805,7 +805,7 @@ export const aboutQualityContent: Record<
         description:
           "외관, 구조 특징, 조립 상태 및 주요 측정 지점을 빠르게 검사합니다.",
         image: aboutQualityImages.equipmentVision,
-        alt: "FOREACH 비전 측정 장비",
+        alt: "Foreach 비전 측정 장비",
         parametersTitle: "주요 장비 사양",
         parameters: ["반복 정밀도: ±0.5 μm ~ ±1.5 μm", "측정 정밀도: ±2σ"],
       },
@@ -814,13 +814,13 @@ export const aboutQualityContent: Record<
         description:
           "미세 표면 형상, 국부 높이 차, 정밀 구조 및 표면 품질 검증에 사용됩니다.",
         image: aboutQualityImages.equipmentConfocal,
-        alt: "FOREACH 공초점 현미경",
+        alt: "Foreach 공초점 현미경",
         parametersTitle: "주요 장비 사양",
         parameters: ["높이 측정 정밀도: ±(0.2 + L / 100) μm", "폭 측정 정밀도: ±2%"],
       },
     ],
     equipmentNote:
-      "검사 장비, 테스트 지그, 검증 프로세스 및 데이터 기록을 통해 FOREACH는 펌프, 밸브, 센서, 튜빙 조립체 및 커넥터의 치수 안정성, 기능 성능 및 장기 안정성을 지속적으로 향상시킵니다.",
+      "검사 장비, 테스트 지그, 검증 프로세스 및 데이터 기록을 통해 Foreach는 펌프, 밸브, 센서, 튜빙 조립체 및 커넥터의 치수 안정성, 기능 성능 및 장기 안정성을 지속적으로 향상시킵니다.",
 
     certTitle: "품질 시스템 및 인증",
     certSummary:
@@ -831,14 +831,14 @@ export const aboutQualityContent: Record<
         description:
           "의료기기 관련 제품과 서비스 과정의 품질 관리 요구를 지원합니다.",
         image: aboutQualityImages.certificateIso13485,
-        alt: "FOREACH ISO 13485 인증",
+        alt: "Foreach ISO 13485 인증",
       },
       {
         name: "ISO 9001 품질경영시스템 인증",
         description:
           "연구개발, 제조, 검사, 납품 및 지속 개선 과정의 표준화 관리를 지원합니다.",
         image: aboutQualityImages.certificateIso9001,
-        alt: "FOREACH ISO 9001 인증",
+        alt: "Foreach ISO 9001 인증",
       },
     ],
   },
@@ -847,16 +847,16 @@ export const aboutQualityContent: Record<
      俄语 ru
   ================================ */
   ru: {
-    metadataTitle: "Система качества и сертификация | FOREACH",
+    metadataTitle: "Система качества и сертификация | Foreach Technology",
     metadataDescription:
-      "FOREACH формирует прослеживаемую, проверяемую и постоянно улучшаемую систему качества для микрофлюидных компонентов.",
+      "Foreach формирует прослеживаемую, проверяемую и постоянно улучшаемую систему качества для микрофлюидных компонентов.",
 
     heroTitle: "Качество начинается с контроля всего процесса",
     heroSubtitle:
       "Прослеживаемая, проверяемая и улучшаемая система для стабильных поставок",
 
     lifeTitle: "Качество как основа долгосрочного развития",
-    lifeTextBeforeStrong: "FOREACH рассматривает ",
+    lifeTextBeforeStrong: "Foreach рассматривает ",
     lifeTextStrong: "качество продукции как основу долгосрочного развития",
     lifeTextAfterStrong:
       " и внедряет управление качеством в цепочку поставок, НИОКР, производство, финальную проверку и сервисную поддержку.",
@@ -865,7 +865,7 @@ export const aboutQualityContent: Record<
 
     pathTitle: "Путь качества на всем жизненном цикле",
     pathSummary:
-      "FOREACH применяет управление качеством на этапах поставок, проверки НИОКР, входного контроля, производства, финальной приемки и обратной связи клиентов.",
+      "Foreach применяет управление качеством на этапах поставок, проверки НИОКР, входного контроля, производства, финальной приемки и обратной связи клиентов.",
     pathSteps: [
       {
         index: "01",
@@ -910,7 +910,7 @@ export const aboutQualityContent: Record<
 
     equipmentTitle: "Измерительное оборудование и проверка качества",
     equipmentIntro: [
-      "FOREACH использует точное измерительное оборудование для проверки функций, ключевых размеров, внешнего вида, структуры и герметичности",
+      "Foreach использует точное измерительное оборудование для проверки функций, ключевых размеров, внешнего вида, структуры и герметичности",
       "Испытания, оснастка и записи данных подтверждают стабильность качества ключевых жидкостных компонентов",
     ],
     equipmentItems: [
@@ -919,7 +919,7 @@ export const aboutQualityContent: Record<
         description:
           "Используется для измерения пространственных размеров, геометрических допусков и баз сборки.",
         image: aboutQualityImages.equipmentCmm,
-        alt: "Координатно-измерительная машина FOREACH",
+        alt: "Координатно-измерительная машина Foreach",
         parametersTitle: "Ключевые параметры",
         parameters: [
           "Макс. допустимая погрешность индикации: 1.5 + L / 350 μm",
@@ -931,7 +931,7 @@ export const aboutQualityContent: Record<
         description:
           "Используется для малых структур, размеров, контуров и локальных элементов.",
         image: aboutQualityImages.equipmentImageMeasuring,
-        alt: "Оптический измерительный прибор FOREACH",
+        alt: "Оптический измерительный прибор Foreach",
         parametersTitle: "Ключевые параметры",
         parameters: [
           "Эффективные пиксели: 2048 × 1536",
@@ -943,7 +943,7 @@ export const aboutQualityContent: Record<
         description:
           "Используется для внешнего вида, структурных особенностей, состояния сборки и ключевых точек измерения.",
         image: aboutQualityImages.equipmentVision,
-        alt: "Визуальное измерительное оборудование FOREACH",
+        alt: "Визуальное измерительное оборудование Foreach",
         parametersTitle: "Ключевые параметры",
         parameters: [
           "Повторяемость: ±0.5 μm до ±1.5 μm",
@@ -955,7 +955,7 @@ export const aboutQualityContent: Record<
         description:
           "Используется для микрорельефа поверхности, локальной высоты, тонких структур и качества поверхности.",
         image: aboutQualityImages.equipmentConfocal,
-        alt: "Конфокальный микроскоп FOREACH",
+        alt: "Конфокальный микроскоп Foreach",
         parametersTitle: "Ключевые параметры",
         parameters: [
           "Точность по высоте: ±(0.2 + L / 100) μm",
@@ -964,7 +964,7 @@ export const aboutQualityContent: Record<
       },
     ],
     equipmentNote:
-      "С помощью измерительного оборудования, испытательной оснастки, процессов валидации и записей данных FOREACH повышает стабильность размеров, функций и долгосрочной работы насосов, клапанов, датчиков, трубок и соединителей.",
+      "С помощью измерительного оборудования, испытательной оснастки, процессов валидации и записей данных Foreach повышает стабильность размеров, функций и долгосрочной работы насосов, клапанов, датчиков, трубок и соединителей.",
 
     certTitle: "Система качества и сертификация",
     certSummary:
@@ -975,14 +975,14 @@ export const aboutQualityContent: Record<
         description:
           "Поддерживает требования к управлению качеством для продуктов и услуг, связанных с медицинскими изделиями.",
         image: aboutQualityImages.certificateIso13485,
-        alt: "Сертификация ISO 13485 FOREACH",
+        alt: "Сертификация ISO 13485 Foreach",
       },
       {
         name: "Сертификация ISO 9001 системы менеджмента качества",
         description:
           "Поддерживает стандартизированное управление НИОКР, производством, проверкой, поставкой и улучшением.",
         image: aboutQualityImages.certificateIso9001,
-        alt: "Сертификация ISO 9001 FOREACH",
+        alt: "Сертификация ISO 9001 Foreach",
       },
     ],
   },

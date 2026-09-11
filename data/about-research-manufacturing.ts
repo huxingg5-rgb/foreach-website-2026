@@ -236,36 +236,36 @@ export const researchManufacturingSeoMap: Record<
 
   en: {
     title:
-      "R&D and Manufacturing Capabilities | FOREACH Microfluidic Components",
+      "R&D and Manufacturing Capabilities | Foreach Technology Microfluidic Components",
     description:
-      "FOREACH builds R&D, precision machining, extrusion manufacturing and engineering validation capabilities for pumps, valves, sensors, tubing, fittings, sampling probes and drive control modules.",
+      "Foreach builds R&D, precision machining, extrusion manufacturing and engineering validation capabilities for pumps, valves, sensors, tubing, fittings, sampling probes and drive control modules.",
   },
 
   es: {
     title:
-      "Capacidades de I+D y fabricación | Componentes microfluídicos FOREACH",
+      "Capacidades de I+D y fabricación | Componentes microfluídicos Foreach",
     description:
-      "FOREACH desarrolla capacidades de I+D, mecanizado de precisión, extrusión y validación de ingeniería para bombas, válvulas, sensores, tubos, conectores, agujas de muestreo y módulos de control.",
+      "Foreach desarrolla capacidades de I+D, mecanizado de precisión, extrusión y validación de ingeniería para bombas, válvulas, sensores, tubos, conectores, agujas de muestreo y módulos de control.",
   },
 
   fr: {
     title:
-      "Capacités R&D et fabrication | Composants microfluidiques FOREACH",
+      "Capacités R&D et fabrication | Composants microfluidiques Foreach",
     description:
-      "FOREACH développe des capacités de R&D, d’usinage de précision, d’extrusion et de validation d’ingénierie pour pompes, vannes, capteurs, tubes, raccords, aiguilles de prélèvement et modules de commande.",
+      "Foreach développe des capacités de R&D, d’usinage de précision, d’extrusion et de validation d’ingénierie pour pompes, vannes, capteurs, tubes, raccords, aiguilles de prélèvement et modules de commande.",
   },
 
   ko: {
-    title: "연구개발 및 제조 역량 | FOREACH 미세유체 핵심 부품",
+    title: "연구개발 및 제조 역량 | Foreach Technology 미세유체 핵심 부품",
     description:
-      "FOREACH는 펌프, 밸브, 센서, 튜빙, 피팅, 샘플링 프로브 및 구동 제어 모듈을 위한 연구개발, 정밀 가공, 압출 제조 및 엔지니어링 검증 역량을 구축합니다.",
+      "Foreach는 펌프, 밸브, 센서, 튜빙, 피팅, 샘플링 프로브 및 구동 제어 모듈을 위한 연구개발, 정밀 가공, 압출 제조 및 엔지니어링 검증 역량을 구축합니다.",
   },
 
   ru: {
     title:
-      "Возможности НИОКР и производства | Микрофлюидные компоненты FOREACH",
+      "Возможности НИОКР и производства | Микрофлюидные компоненты Foreach",
     description:
-      "FOREACH развивает возможности НИОКР, точной механообработки, экструзии и инженерной валидации для насосов, клапанов, датчиков, трубок, фитингов, пробоотборных игл и модулей управления.",
+      "Foreach развивает возможности НИОКР, точной механообработки, экструзии и инженерной валидации для насосов, клапанов, датчиков, трубок, фитингов, пробоотборных игл и модулей управления.",
   },
 };
 
@@ -463,14 +463,14 @@ export const researchManufacturingTextMap: Record<
     hero: {
       title: "R&D and Manufacturing Capabilities",
       desc: "Building full-process capabilities from product development, precision machining and extrusion manufacturing to engineering validation for microfluidic core components.",
-      alt: "FOREACH R&D and manufacturing capabilities banner",
+      alt: "Foreach R&D and manufacturing capabilities banner",
     },
 
     intro: {
       imageMark: " ",
       title: "From Product Design to Stable Delivery",
-      desc: "FOREACH’s R&D and engineering teams focus on microfluidic core components and fluidic application technologies, covering pumps, valves, sensors, tubing, fittings, sampling probes and drive control modules. With 60+ R&D and engineering personnel across product development, structural design, process validation and project support, FOREACH supports the full process from requirement analysis and concept design to prototyping, testing, validation and production introduction.",
-      alt: "FOREACH R&D, manufacturing, validation and delivery capabilities",
+      desc: "Foreach’s R&D and engineering teams focus on microfluidic core components and fluidic application technologies, covering pumps, valves, sensors, tubing, fittings, sampling probes and drive control modules. With 60+ R&D and engineering personnel across product development, structural design, process validation and project support, Foreach supports the full process from requirement analysis and concept design to prototyping, testing, validation and production introduction.",
+      alt: "Foreach R&D, manufacturing, validation and delivery capabilities",
     }, 
 
     abilityTitle: "R&D and Manufacturing Strengths",
@@ -478,7 +478,7 @@ export const researchManufacturingTextMap: Record<
     abilityCards: [
       {
         title: "R&D Center",
-        alt: "FOREACH R&D center for microfluidic core components",
+        alt: "Foreach R&D center for microfluidic core components",
         points: [
           "60+ R&D and engineering personnel covering product development, structural design, process validation and project support.",
           "Focused development of pumps, valves, sensors, tubing, fittings, sampling probes and drive control modules.",
@@ -487,7 +487,7 @@ export const researchManufacturingTextMap: Record<
       },
       {
         title: "Machining Center",
-        alt: "FOREACH machining center for core parts and structural components",
+        alt: "Foreach machining center for core parts and structural components",
         points: [
           "Experienced machining technicians and frontline process specialists.",
           "Manufacturing structural parts for pumps, valves, fittings, sampling probes and related core components.",
@@ -496,7 +496,7 @@ export const researchManufacturingTextMap: Record<
       },
       {
         title: "Extrusion Center",
-        alt: "FOREACH extrusion center for microfluidic tubing and elastomer components",
+        alt: "Foreach extrusion center for microfluidic tubing and elastomer components",
         points: [
           "Extrusion capability for microfluidic tubing, elastomer parts and related fluidic assemblies.",
           "Supporting tubing extrusion, material matching, dimensional control and assembly integration.",
@@ -508,7 +508,7 @@ export const researchManufacturingTextMap: Record<
     processDefault:
       "From customer requirements to batch delivery, integrating R&D, machining, extrusion, validation and delivery processes.",
 
-    processAlt: "FOREACH R&D and manufacturing process background",
+    processAlt: "Foreach R&D and manufacturing process background",
 
     processSteps: [
       {
@@ -582,7 +582,7 @@ export const researchManufacturingTextMap: Record<
 
     applications: {
       title: "Product Application and Validation Scenarios",
-      desc: "FOREACH microfluidic core components are applied in IVD, life science, high-end analytical instruments, synthetic biology and laboratory automation equipment, supporting selection, validation and project introduction.",
+      desc: "Foreach microfluidic core components are applied in IVD, life science, high-end analytical instruments, synthetic biology and laboratory automation equipment, supporting selection, validation and project introduction.",
       cards: [
         {
           title: "IVD Diagnostic Equipment",
@@ -613,9 +613,9 @@ export const researchManufacturingTextMap: Record<
     },
 
     why: {
-      title: "Why Choose FOREACH",
+      title: "Why Choose Foreach",
       subtitle: "R&D · Manufacturing · Service",
-      alt: "FOREACH R&D, manufacturing and engineering service background",
+      alt: "Foreach R&D, manufacturing and engineering service background",
       cards: [
         {
           title: "Early R&D Involvement",
@@ -634,9 +634,9 @@ export const researchManufacturingTextMap: Record<
 
     cta: {
       title: "Need Fluidic Product and Solution Support?",
-      desc: "FOREACH can support product selection, machining and extrusion matching, prototype validation, customized development and project introduction.",
-      button: "Contact FOREACH",
-      alt: "FOREACH fluidic product and solution support background",
+      desc: "Foreach can support product selection, machining and extrusion matching, prototype validation, customized development and project introduction.",
+      button: "Contact Foreach",
+      alt: "Foreach fluidic product and solution support background",
     },
   },
 
@@ -644,19 +644,19 @@ export const researchManufacturingTextMap: Record<
     hero: {
       title: "Capacidades de I+D y fabricación",
       desc: "Desarrollamos capacidades integradas desde el desarrollo de producto, mecanizado de precisión y extrusión hasta la validación de ingeniería para componentes microfluídicos.",
-      alt: "Banner de capacidades de I+D y fabricación de FOREACH",
+      alt: "Banner de capacidades de I+D y fabricación de Foreach",
     },
     intro: {
       imageMark: " ", 
       title: "Del diseño del producto a la entrega estable",
-      desc: "El equipo de I+D e ingeniería de FOREACH se centra en componentes microfluídicos clave y tecnologías de aplicación fluídica, incluyendo bombas, válvulas, sensores, tubos, conectores, agujas de muestreo y módulos de control. Con más de 60 personas en I+D e ingeniería, apoyamos el proceso completo desde el análisis de requisitos y diseño de soluciones hasta el prototipo, las pruebas, la validación y la introducción a producción.",
-      alt: "Capacidades de I+D, fabricación, validación y entrega de FOREACH",
+      desc: "El equipo de I+D e ingeniería de Foreach se centra en componentes microfluídicos clave y tecnologías de aplicación fluídica, incluyendo bombas, válvulas, sensores, tubos, conectores, agujas de muestreo y módulos de control. Con más de 60 personas en I+D e ingeniería, apoyamos el proceso completo desde el análisis de requisitos y diseño de soluciones hasta el prototipo, las pruebas, la validación y la introducción a producción.",
+      alt: "Capacidades de I+D, fabricación, validación y entrega de Foreach",
     },
     abilityTitle: "Fortalezas de I+D y fabricación",
     abilityCards: [
       {
         title: "Centro de I+D",
-        alt: "Centro de I+D de FOREACH para componentes microfluídicos",
+        alt: "Centro de I+D de Foreach para componentes microfluídicos",
         points: [
           "Más de 60 personas cubren desarrollo de producto, diseño estructural, validación de procesos y soporte de proyectos.",
           "Desarrollo enfocado en bombas, válvulas, sensores, tubos, conectores, agujas de muestreo y módulos de control.",
@@ -665,7 +665,7 @@ export const researchManufacturingTextMap: Record<
       },
       {
         title: "Centro de mecanizado",
-        alt: "Centro de mecanizado de FOREACH para piezas clave",
+        alt: "Centro de mecanizado de Foreach para piezas clave",
         points: [
           "Técnicos de mecanizado y especialistas de proceso con experiencia.",
           "Fabricación de piezas estructurales para bombas, válvulas, conectores, agujas de muestreo y componentes clave.",
@@ -674,7 +674,7 @@ export const researchManufacturingTextMap: Record<
       },
       {
         title: "Centro de extrusión",
-        alt: "Centro de extrusión de FOREACH para tubos microfluídicos",
+        alt: "Centro de extrusión de Foreach para tubos microfluídicos",
         points: [
           "Capacidad de extrusión para tubos microfluídicos, piezas elastoméricas y ensamblajes fluídicos.",
           "Soporte en extrusión de tubos, selección de materiales, control dimensional e integración de ensamblajes.",
@@ -684,7 +684,7 @@ export const researchManufacturingTextMap: Record<
     ],
     processDefault:
       "De los requisitos del cliente a la entrega por lotes, integrando I+D, mecanizado, extrusión, validación y entrega.",
-    processAlt: "Fondo del proceso de I+D y fabricación de FOREACH",
+    processAlt: "Fondo del proceso de I+D y fabricación de Foreach",
     processSteps: [
       {
         no: "01",
@@ -756,7 +756,7 @@ export const researchManufacturingTextMap: Record<
     ],
     applications: {
       title: "Escenarios de aplicación y validación",
-      desc: "Los componentes microfluídicos de FOREACH se aplican en IVD, ciencias de la vida, instrumentos analíticos de alta gama, biología sintética y automatización de laboratorio, apoyando la selección, validación e introducción de proyectos.",
+      desc: "Los componentes microfluídicos de Foreach se aplican en IVD, ciencias de la vida, instrumentos analíticos de alta gama, biología sintética y automatización de laboratorio, apoyando la selección, validación e introducción de proyectos.",
       cards: [
         {
           title: "Equipos IVD",
@@ -786,9 +786,9 @@ export const researchManufacturingTextMap: Record<
       ],
     },
     why: {
-      title: "Por qué elegir FOREACH",
+      title: "Por qué elegir Foreach",
       subtitle: "I+D · Fabricación · Servicio",
-      alt: "Fondo de I+D, fabricación y servicio de ingeniería de FOREACH",
+      alt: "Fondo de I+D, fabricación y servicio de ingeniería de Foreach",
       cards: [
         {
           title: "I+D desde la etapa inicial",
@@ -806,9 +806,9 @@ export const researchManufacturingTextMap: Record<
     },
     cta: {
       title: "¿Necesita soporte para productos y soluciones fluídicas?",
-      desc: "FOREACH puede apoyar la selección de productos, validación de muestras, desarrollo personalizado e introducción de proyectos.",
-      button: "Contactar con FOREACH",
-      alt: "Fondo de soporte de productos y soluciones fluídicas de FOREACH",
+      desc: "Foreach puede apoyar la selección de productos, validación de muestras, desarrollo personalizado e introducción de proyectos.",
+      button: "Contactar con Foreach",
+      alt: "Fondo de soporte de productos y soluciones fluídicas de Foreach",
     },
   },
 
@@ -816,19 +816,19 @@ export const researchManufacturingTextMap: Record<
     hero: {
       title: "Capacités R&D et fabrication",
       desc: "Des capacités intégrées allant du développement produit, de l’usinage de précision et de l’extrusion à la validation d’ingénierie pour les composants microfluidiques.",
-      alt: "Bannière des capacités R&D et fabrication de FOREACH",
+      alt: "Bannière des capacités R&D et fabrication de Foreach",
     },
     intro: {
       imageMark: " ", 
       title: "De la conception produit à la livraison stable",
-      desc: "Les équipes R&D et ingénierie de FOREACH se concentrent sur les composants microfluidiques clés et les technologies d’application fluidique, couvrant pompes, vannes, capteurs, tubes, raccords, aiguilles de prélèvement et modules de commande. Avec plus de 60 personnes en R&D et ingénierie, FOREACH accompagne l’analyse des besoins, la conception, le prototypage, les tests, la validation et l’introduction en production.",
-      alt: "Capacités R&D, fabrication, validation et livraison de FOREACH",
+      desc: "Les équipes R&D et ingénierie de Foreach se concentrent sur les composants microfluidiques clés et les technologies d’application fluidique, couvrant pompes, vannes, capteurs, tubes, raccords, aiguilles de prélèvement et modules de commande. Avec plus de 60 personnes en R&D et ingénierie, Foreach accompagne l’analyse des besoins, la conception, le prototypage, les tests, la validation et l’introduction en production.",
+      alt: "Capacités R&D, fabrication, validation et livraison de Foreach",
     },
     abilityTitle: "Forces R&D et fabrication",
     abilityCards: [
       {
         title: "Centre R&D",
-        alt: "Centre R&D FOREACH pour composants microfluidiques",
+        alt: "Centre R&D Foreach pour composants microfluidiques",
         points: [
           "Plus de 60 personnes couvrent le développement produit, la conception structurelle, la validation des procédés et le support projet.",
           "Développement de pompes, vannes, capteurs, tubes, raccords, aiguilles de prélèvement et modules de commande.",
@@ -837,7 +837,7 @@ export const researchManufacturingTextMap: Record<
       },
       {
         title: "Centre d’usinage",
-        alt: "Centre d’usinage FOREACH pour pièces clés",
+        alt: "Centre d’usinage Foreach pour pièces clés",
         points: [
           "Techniciens expérimentés en usinage et spécialistes de procédés.",
           "Fabrication de pièces structurelles pour pompes, vannes, raccords, aiguilles de prélèvement et composants clés.",
@@ -846,7 +846,7 @@ export const researchManufacturingTextMap: Record<
       },
       {
         title: "Centre d’extrusion",
-        alt: "Centre d’extrusion FOREACH pour tubes microfluidiques",
+        alt: "Centre d’extrusion Foreach pour tubes microfluidiques",
         points: [
           "Capacité d’extrusion pour tubes microfluidiques, pièces élastomères et assemblages fluidiques.",
           "Support de l’extrusion, de l’adaptation matière, du contrôle dimensionnel et de l’intégration d’assemblage.",
@@ -856,7 +856,7 @@ export const researchManufacturingTextMap: Record<
     ],
     processDefault:
       "Des besoins client à la livraison en série, en intégrant R&D, usinage, extrusion, validation et livraison.",
-    processAlt: "Fond du processus R&D et fabrication de FOREACH",
+    processAlt: "Fond du processus R&D et fabrication de Foreach",
     processSteps: [
       {
         no: "01",
@@ -928,7 +928,7 @@ export const researchManufacturingTextMap: Record<
     ],
     applications: {
       title: "Scénarios d’application et de validation",
-      desc: "Les composants microfluidiques FOREACH sont utilisés dans l’IVD, les sciences de la vie, les instruments analytiques haut de gamme, la biologie synthétique et l’automatisation de laboratoire.",
+      desc: "Les composants microfluidiques Foreach sont utilisés dans l’IVD, les sciences de la vie, les instruments analytiques haut de gamme, la biologie synthétique et l’automatisation de laboratoire.",
       cards: [
         {
           title: "Équipements IVD",
@@ -958,9 +958,9 @@ export const researchManufacturingTextMap: Record<
       ],
     },
     why: {
-      title: "Pourquoi choisir FOREACH",
+      title: "Pourquoi choisir Foreach",
       subtitle: "R&D · Fabrication · Service",
-      alt: "Fond R&D, fabrication et service d’ingénierie FOREACH",
+      alt: "Fond R&D, fabrication et service d’ingénierie Foreach",
       cards: [
         {
           title: "R&D en amont",
@@ -978,9 +978,9 @@ export const researchManufacturingTextMap: Record<
     },
     cta: {
       title: "Besoin de support pour vos produits et solutions fluidiques ?",
-      desc: "FOREACH peut accompagner la sélection produit, la validation d’échantillons, le développement personnalisé et l’introduction projet.",
-      button: "Contacter FOREACH",
-      alt: "Fond de support produit et solution fluidique FOREACH",
+      desc: "Foreach peut accompagner la sélection produit, la validation d’échantillons, le développement personnalisé et l’introduction projet.",
+      button: "Contacter Foreach",
+      alt: "Fond de support produit et solution fluidique Foreach",
     },
   },
 
@@ -988,19 +988,19 @@ export const researchManufacturingTextMap: Record<
     hero: {
       title: "연구개발 및 제조 역량",
       desc: "미세유체 핵심 부품을 위해 제품 개발, 정밀 가공, 압출 제조부터 엔지니어링 검증까지 전 과정 역량을 구축합니다.",
-      alt: "FOREACH 연구개발 및 제조 역량 배너",
+      alt: "Foreach 연구개발 및 제조 역량 배너",
     },
     intro: {
       imageMark: " ",
       title: "제품 설계부터 안정적인 납품까지",
-      desc: "FOREACH는 펌프, 밸브, 센서, 튜빙, 피팅, 샘플링 프로브 및 구동 제어 모듈을 포함한 미세유체 핵심 부품과 유로 응용 기술에 집중합니다. 60명 이상의 연구개발 및 엔지니어링 인력을 바탕으로 요구 분석, 설계, 시제품 제작, 테스트 검증 및 양산 도입을 지원합니다.",
-      alt: "FOREACH 연구개발, 제조, 검증 및 납품 역량",
+      desc: "Foreach는 펌프, 밸브, 센서, 튜빙, 피팅, 샘플링 프로브 및 구동 제어 모듈을 포함한 미세유체 핵심 부품과 유로 응용 기술에 집중합니다. 60명 이상의 연구개발 및 엔지니어링 인력을 바탕으로 요구 분석, 설계, 시제품 제작, 테스트 검증 및 양산 도입을 지원합니다.",
+      alt: "Foreach 연구개발, 제조, 검증 및 납품 역량",
     },
     abilityTitle: "연구개발 및 제조 강점",
     abilityCards: [
       {
         title: "연구개발 센터",
-        alt: "FOREACH 미세유체 핵심 부품 연구개발 센터",
+        alt: "Foreach 미세유체 핵심 부품 연구개발 센터",
         points: [
           "60명 이상의 인력이 제품 개발, 구조 설계, 공정 검증 및 프로젝트 지원을 담당합니다.",
           "펌프, 밸브, 센서, 튜빙, 피팅, 샘플링 프로브 및 제어 모듈 개발에 집중합니다.",
@@ -1009,7 +1009,7 @@ export const researchManufacturingTextMap: Record<
       },
       {
         title: "정밀 가공 센터",
-        alt: "FOREACH 핵심 부품 정밀 가공 센터",
+        alt: "Foreach 핵심 부품 정밀 가공 센터",
         points: [
           "풍부한 경험을 갖춘 가공 기술자와 현장 공정 인력을 보유하고 있습니다.",
           "펌프, 밸브, 피팅, 샘플링 프로브 및 핵심 구조 부품을 제조합니다.",
@@ -1018,7 +1018,7 @@ export const researchManufacturingTextMap: Record<
       },
       {
         title: "압출 센터",
-        alt: "FOREACH 미세유체 튜빙 및 탄성 부품 압출 센터",
+        alt: "Foreach 미세유체 튜빙 및 탄성 부품 압출 센터",
         points: [
           "미세유체 튜빙, 탄성 부품 및 관련 유체 어셈블리 압출 역량을 구축합니다.",
           "튜빙 압출, 소재 매칭, 치수 관리 및 어셈블리 통합을 지원합니다.",
@@ -1028,7 +1028,7 @@ export const researchManufacturingTextMap: Record<
     ],
     processDefault:
       "고객 요구부터 대량 납품까지 연구개발, 가공, 압출, 검증 및 납품 프로세스를 통합합니다.",
-    processAlt: "FOREACH 연구개발 및 제조 프로세스 배경",
+    processAlt: "Foreach 연구개발 및 제조 프로세스 배경",
     processSteps: [
       {
         no: "01",
@@ -1100,7 +1100,7 @@ export const researchManufacturingTextMap: Record<
     ],
     applications: {
       title: "제품 적용 및 검증 시나리오",
-      desc: "FOREACH 미세유체 핵심 부품은 IVD, 생명과학, 고급 분석기기, 합성생물학 및 실험실 자동화 장비에 적용됩니다.",
+      desc: "Foreach 미세유체 핵심 부품은 IVD, 생명과학, 고급 분석기기, 합성생물학 및 실험실 자동화 장비에 적용됩니다.",
       cards: [
         {
           title: "IVD 진단 장비",
@@ -1130,9 +1130,9 @@ export const researchManufacturingTextMap: Record<
       ],
     },
     why: {
-      title: "FOREACH를 선택해야 하는 이유",
+      title: "Foreach를 선택해야 하는 이유",
       subtitle: "연구개발 · 제조 · 서비스",
-      alt: "FOREACH 연구개발 제조 및 엔지니어링 서비스 배경",
+      alt: "Foreach 연구개발 제조 및 엔지니어링 서비스 배경",
       cards: [
         {
           title: "초기 단계 연구개발 참여",
@@ -1150,9 +1150,9 @@ export const researchManufacturingTextMap: Record<
     },
     cta: {
       title: "유체 제품 및 솔루션 지원이 필요하신가요?",
-      desc: "FOREACH는 제품 선정, 샘플 검증, 맞춤 개발 및 프로젝트 도입을 지원합니다.",
-      button: "FOREACH 문의하기",
-      alt: "FOREACH 유체 제품 및 솔루션 지원 배경",
+      desc: "Foreach는 제품 선정, 샘플 검증, 맞춤 개발 및 프로젝트 도입을 지원합니다.",
+      button: "Foreach 문의하기",
+      alt: "Foreach 유체 제품 및 솔루션 지원 배경",
     },
   },
 
@@ -1160,19 +1160,19 @@ export const researchManufacturingTextMap: Record<
     hero: {
       title: "Возможности НИОКР и производства",
       desc: "Комплексные возможности от разработки продукции, точной механообработки и экструзии до инженерной валидации микрофлюидных компонентов.",
-      alt: "Баннер возможностей НИОКР и производства FOREACH",
+      alt: "Баннер возможностей НИОКР и производства Foreach",
     },
     intro: {
       imageMark: " ",
       title: "От проектирования продукта до стабильной поставки",
-      desc: "FOREACH сосредоточена на ключевых микрофлюидных компонентах и технологиях жидкостных систем, включая насосы, клапаны, датчики, трубки, фитинги, пробоотборные иглы и модули управления. Команда НИОКР и инженерии численностью более 60 человек поддерживает анализ требований, проектирование, прототипирование, испытания, валидацию и внедрение в производство.",
-      alt: "Возможности FOREACH в НИОКР, производстве, валидации и поставке",
+      desc: "Foreach сосредоточена на ключевых микрофлюидных компонентах и технологиях жидкостных систем, включая насосы, клапаны, датчики, трубки, фитинги, пробоотборные иглы и модули управления. Команда НИОКР и инженерии численностью более 60 человек поддерживает анализ требований, проектирование, прототипирование, испытания, валидацию и внедрение в производство.",
+      alt: "Возможности Foreach в НИОКР, производстве, валидации и поставке",
     },
     abilityTitle: "Сильные стороны НИОКР и производства",
     abilityCards: [
       { 
         title: "Центр НИОКР",
-        alt: "Центр НИОКР FOREACH для микрофлюидных компонентов",
+        alt: "Центр НИОКР Foreach для микрофлюидных компонентов",
         points: [
           "Более 60 специалистов в разработке продукции, проектировании, валидации процессов и поддержке проектов.",
           "Разработка насосов, клапанов, датчиков, трубок, фитингов, пробоотборных игл и модулей управления.",
@@ -1181,7 +1181,7 @@ export const researchManufacturingTextMap: Record<
       },
       {
         title: "Центр механообработки",
-        alt: "Центр механообработки FOREACH для ключевых деталей",
+        alt: "Центр механообработки Foreach для ключевых деталей",
         points: [
           "Опытные специалисты по механообработке и технологическим процессам.",
           "Производство конструктивных деталей для насосов, клапанов, фитингов, пробоотборных игл и ключевых компонентов.",
@@ -1190,7 +1190,7 @@ export const researchManufacturingTextMap: Record<
       },
       {
         title: "Центр экструзии",
-        alt: "Центр экструзии FOREACH для микрофлюидных трубок",
+        alt: "Центр экструзии Foreach для микрофлюидных трубок",
         points: [
           "Экструзия микрофлюидных трубок, эластомерных деталей и жидкостных сборок.",
           "Поддержка экструзии трубок, подбора материалов, контроля размеров и интеграции сборок.",
@@ -1200,7 +1200,7 @@ export const researchManufacturingTextMap: Record<
     ],
     processDefault:
       "От требований клиента до серийной поставки с интеграцией НИОКР, механообработки, экструзии, валидации и поставки.",
-    processAlt: "Фон процесса НИОКР и производства FOREACH",
+    processAlt: "Фон процесса НИОКР и производства Foreach",
     processSteps: [
       {
         no: "01",
@@ -1272,7 +1272,7 @@ export const researchManufacturingTextMap: Record<
     ],
     applications: {
       title: "Сценарии применения и валидации",
-      desc: "Микрофлюидные компоненты FOREACH применяются в IVD, науках о жизни, аналитических приборах, синтетической биологии и лабораторной автоматизации.",
+      desc: "Микрофлюидные компоненты Foreach применяются в IVD, науках о жизни, аналитических приборах, синтетической биологии и лабораторной автоматизации.",
       cards: [
         {
           title: "IVD-оборудование",
@@ -1302,9 +1302,9 @@ export const researchManufacturingTextMap: Record<
       ],
     },
     why: {
-      title: "Почему выбирают FOREACH",
+      title: "Почему выбирают Foreach",
       subtitle: "НИОКР · Производство · Сервис",
-      alt: "Фон НИОКР, производства и инженерного сервиса FOREACH",
+      alt: "Фон НИОКР, производства и инженерного сервиса Foreach",
       cards: [
         {
           title: "Раннее участие НИОКР",
@@ -1322,9 +1322,9 @@ export const researchManufacturingTextMap: Record<
     },
     cta: {
       title: "Нужна поддержка по жидкостным продуктам и решениям?",
-      desc: "FOREACH поддерживает выбор продуктов, валидацию образцов, индивидуальную разработку и внедрение проектов.",
-      button: "Связаться с FOREACH",
-      alt: "Фон поддержки жидкостных продуктов и решений FOREACH",
+      desc: "Foreach поддерживает выбор продуктов, валидацию образцов, индивидуальную разработку и внедрение проектов.",
+      button: "Связаться с Foreach",
+      alt: "Фон поддержки жидкостных продуктов и решений Foreach",
     },
   },
 };

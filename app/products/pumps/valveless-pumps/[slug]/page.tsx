@@ -36,11 +36,11 @@ export async function generateMetadata({
   }
 
   return {
-    title: detail.seo?.title || `${detail.title} | FOREACH`,
+    title: detail.seo?.title || `${detail.title} | Foreach Technology`,
     description: detail.seo?.description || detail.description || detail.title,
     ...buildProductSocialMetadata({
       data: detail,
-      title: detail.seo?.title || `${detail.title} | FOREACH`,
+      title: detail.seo?.title || `${detail.title} | Foreach Technology`,
       description: detail.seo?.description || detail.description || detail.title,
       canonicalUrl: `/products/pumps/valveless-pumps/${slug}/`,
     }),
@@ -140,17 +140,17 @@ function toClientData(detail: ValvelessPumpDetail) {
       detail.imageAltEn ||
       detail.mainImageAlt ||
       detail.imageAlt ||
-      `${detail.model} FOREACH valveless pump`,
+      `${detail.model} Foreach valveless pump`,
     imageAlt:
       detail.imageAlt ||
       detail.imageAltEn ||
       detail.mainImageAlt ||
-      `${detail.model} FOREACH 无阀泵`,
+      `${detail.model} Foreach 无阀泵`,
     mainImageAlt:
       detail.mainImageAlt ||
       detail.imageAltEn ||
       detail.imageAlt ||
-      `${detail.model} FOREACH 无阀泵`,
+      `${detail.model} Foreach 无阀泵`,
   };
 }
 

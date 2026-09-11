@@ -12,11 +12,11 @@ export const diaphragmPumpPressureRatingTermsZhCopy = {
     title:
       "微型隔膜泵的额定工作压力、最大输出压力、耐压和爆破压力有什么区别？",
     seoTitle:
-      "隔膜泵额定工作压力、最大输出压力、耐压和爆破压力区别｜FOREACH",
+      "隔膜泵额定工作压力、最大输出压力、耐压和爆破压力区别｜Foreach Technology",
     seoDescription:
       "微型隔膜泵的额定工作压力、最大输出压力、耐压和爆破压力不是同一概念。本文给出术语对照、参数确认清单和规格书核对方法。",
     coverImage: PRESSURE_TERMS_ASSET_BASE + "/article-cover.webp",
-    coverAlt: "FOREACH官方抖音视频中的微型隔膜泵产品与压力测试实拍画面",
+    coverAlt: "Foreach官方抖音视频中的微型隔膜泵产品与压力测试实拍画面",
   },
   deck: "压力数字只有与术语定义、测试介质、入口条件、对应流量、持续时间和合格判据一起使用才有工程意义。额定工作压力可用于定义工作边界；最大输出压力、耐压试验和爆破压力不能直接当作连续工作点。",
   leadBlocks: [
@@ -109,7 +109,7 @@ export const diaphragmPumpPressureRatingTermsZhCopy = {
       blocks: [
         {
           type: "paragraph",
-          text: "以 FOREACH DPL30H 高压液体隔膜泵为例，站内资料使用“额定压力 600 kPa”。这个数字必须与对应流量、介质、入口条件、温度、工作制和完整流量—压力曲线一起理解，不能自动扩展为耐压、爆破压力或任意工况下的持续输送能力。",
+          text: "以 Foreach DPL30H 高压液体隔膜泵为例，站内资料使用“额定压力 600 kPa”。这个数字必须与对应流量、介质、入口条件、温度、工作制和完整流量—压力曲线一起理解，不能自动扩展为耐压、爆破压力或任意工况下的持续输送能力。",
         },
         {
           type: "paragraph",
@@ -172,18 +172,18 @@ export const diaphragmPumpPressureRatingTermsZhCopy = {
         },
         {
           type: "paragraph",
-          text: "对 FOREACH 自身内容应严格采用这一原则：受控规格书公开额定压力，就按额定压力描述；未公开的耐压与爆破数据，不从结构、材料或相近参数推测。网页文章只能解释选型方法，不能替代产品放行文件。",
+          text: "对 Foreach 自身内容应严格采用这一原则：受控规格书公开额定压力，就按额定压力描述；未公开的耐压与爆破数据，不从结构、材料或相近参数推测。网页文章只能解释选型方法，不能替代产品放行文件。",
         },
       ],
     },
     {
-      title: "FOREACH 站内资料与证据边界",
+      title: "Foreach 站内资料与证据边界",
       blocks: [
         {
           type: "links",
           items: [
             {
-              label: "FOREACH：DPL30H 高压液体隔膜泵选型指南",
+              label: "Foreach：DPL30H 高压液体隔膜泵选型指南",
               href: "/resources/technical-articles/dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide",
             },
           ],
@@ -236,11 +236,11 @@ export const diaphragmPumpPressureRatingTermsZhCopy = {
 export const diaphragmPump100KpaVs600KpaSelectionZhCopy = {
   metadata: {
     title: "100 kPa够不够？如何判断液路是否需要600 kPa高压微型隔膜泵",
-    seoTitle: "100 kPa与600 kPa微型隔膜泵怎么选？从液路压力预算判断｜FOREACH",
+    seoTitle: "100 kPa与600 kPa微型隔膜泵怎么选？从液路压力预算判断｜Foreach Technology",
     seoDescription:
       "判断100 kPa是否够用，不能只按应用名称。本文从目标流量、管路、阀、过滤器、针头、末端压力和泵曲线判断是否需要600 kPa高压微型隔膜泵。",
     coverImage: PRESSURE_LEVEL_SELECTION_ASSET_BASE + "/article-cover.webp",
-    coverAlt: "FOREACH官方抖音视频中的微型隔膜泵产品与液路压力测试实拍画面",
+    coverAlt: "Foreach官方抖音视频中的微型隔膜泵产品与液路压力测试实拍画面",
   },
   deck: "100 kPa 和 600 kPa 不是“普通版”与“加强版”的简单关系。应先在目标流量下完成整条液路的压力预算，再读取候选泵曲线；高压力等级只有在真实高背压工况中才有价值。",
   leadBlocks: [
@@ -333,7 +333,7 @@ export const diaphragmPump100KpaVs600KpaSelectionZhCopy = {
         },
         {
           type: "paragraph",
-          text: "FOREACH DPL30 与 DPL60 普通液体隔膜泵公开额定压力均为 100 kPa，对应的空载流量等级分别为 300 mL/min 和 600 mL/min。它们适合的不是某个固定行业名称，而是目标工作点能够落入受控曲线与允许工况范围的液路。",
+          text: "Foreach DPL30 与 DPL60 普通液体隔膜泵公开额定压力均为 100 kPa，对应的空载流量等级分别为 300 mL/min 和 600 mL/min。它们适合的不是某个固定行业名称，而是目标工作点能够落入受控曲线与允许工况范围的液路。",
         },
       ],
     },
@@ -353,7 +353,7 @@ export const diaphragmPump100KpaVs600KpaSelectionZhCopy = {
         },
         {
           type: "paragraph",
-          text: "FOREACH DPL30H 高压液体隔膜泵公开空载流量为 300 mL/min、额定压力为 600 kPa。这里的 300 mL/min 与 600 kPa 不是同一个工作点；高背压处还能保留多少流量，仍须读取有效版本的流量—压力曲线。",
+          text: "Foreach DPL30H 高压液体隔膜泵公开空载流量为 300 mL/min、额定压力为 600 kPa。这里的 300 mL/min 与 600 kPa 不是同一个工作点；高背压处还能保留多少流量，仍须读取有效版本的流量—压力曲线。",
         },
       ],
     },
@@ -400,7 +400,7 @@ export const diaphragmPump100KpaVs600KpaSelectionZhCopy = {
       blocks: [
         {
           type: "paragraph",
-          text: "若液路并不需要高背压，直接选择 600 kPa 平台可能增加对连接方式、材料与温度边界、供电功率、控制策略、安装空间和成本的约束。以 FOREACH 公开资料为例，DPL30 的自吸高度为 6 mH₂O、介质温度上限为 +80℃；DPL30H 的自吸高度为 3 mH₂O、介质温度上限为 +40℃，并采用 6×4 mm 硬管卡套连接。",
+          text: "若液路并不需要高背压，直接选择 600 kPa 平台可能增加对连接方式、材料与温度边界、供电功率、控制策略、安装空间和成本的约束。以 Foreach 公开资料为例，DPL30 的自吸高度为 6 mH₂O、介质温度上限为 +80℃；DPL30H 的自吸高度为 3 mH₂O、介质温度上限为 +40℃，并采用 6×4 mm 硬管卡套连接。",
         },
         {
           type: "paragraph",
@@ -429,21 +429,21 @@ export const diaphragmPump100KpaVs600KpaSelectionZhCopy = {
       ],
     },
     {
-      title: "FOREACH 站内资料与证据边界",
+      title: "Foreach 站内资料与证据边界",
       blocks: [
         {
           type: "links",
           items: [
             {
-              label: "FOREACH：DPL30H 高压液体隔膜泵选型指南",
+              label: "Foreach：DPL30H 高压液体隔膜泵选型指南",
               href: "/resources/technical-articles/dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide",
             },
             {
-              label: "FOREACH：DPL30 液体隔膜泵选型指南",
+              label: "Foreach：DPL30 液体隔膜泵选型指南",
               href: "/resources/technical-articles/dpl30-liquid-diaphragm-pump-selection-guide",
             },
             {
-              label: "FOREACH：DPL60 液体隔膜泵选型指南",
+              label: "Foreach：DPL60 液体隔膜泵选型指南",
               href: "/resources/technical-articles/dpl60-liquid-diaphragm-pump-selection-guide",
             },
           ],
@@ -496,11 +496,11 @@ export const diaphragmPump100KpaVs600KpaSelectionZhCopy = {
 export const highBackpressureFluidPathPressureBudgetZhCopy = {
   metadata: {
     title: "高背压液路的压力预算怎么做？以恒永达600 kPa微型隔膜泵选型为例",
-    seoTitle: "高背压液路压力预算怎么做？600 kPa微型隔膜泵选型方法｜FOREACH",
+    seoTitle: "高背压液路压力预算怎么做？600 kPa微型隔膜泵选型方法｜Foreach Technology",
     seoDescription:
       "高背压液路选泵前，应把吸入管、排出管、阀、过滤器、针头、末端腔体和静压逐项列入稳态预算，并单独核对瞬态保护与压力余量。",
     coverImage: HIGH_BACKPRESSURE_BUDGET_ASSET_BASE + "/article-cover.webp",
-    coverAlt: "FOREACH官方抖音视频中的微型隔膜泵高背压液路测试实拍画面",
+    coverAlt: "Foreach官方抖音视频中的微型隔膜泵高背压液路测试实拍画面",
   },
   deck: "高背压液路不能只向供应商报“需要6 bar”。应在目标流量下拆分各段稳态压降，分别建立正常稳态、最不利稳态、压力余量和瞬态保护边界，再与候选泵的受控曲线核对。",
   leadBlocks: [
@@ -699,11 +699,11 @@ export const highBackpressureFluidPathPressureBudgetZhCopy = {
       ],
     },
     {
-      title: "五、以FOREACH DPL30H为例，怎样进入产品承接",
+      title: "五、以Foreach DPL30H为例，怎样进入产品承接",
       blocks: [
         {
           type: "paragraph",
-          text: "FOREACH DPL30H 高压液体隔膜泵公开参数包括 300 mL/min 空载流量、600 kPa 额定压力、3 mH₂O 自吸高度和 6×4 mm 硬管卡套连接。它可以进入高背压候选池，但选型重点仍是目标背压处可提供的流量，以及该工作点是否落在受控规格书允许的介质、温度和工作制范围内。",
+          text: "Foreach DPL30H 高压液体隔膜泵公开参数包括 300 mL/min 空载流量、600 kPa 额定压力、3 mH₂O 自吸高度和 6×4 mm 硬管卡套连接。它可以进入高背压候选池，但选型重点仍是目标背压处可提供的流量，以及该工作点是否落在受控规格书允许的介质、温度和工作制范围内。",
         },
         {
           type: "paragraph",
@@ -776,13 +776,13 @@ export const highBackpressureFluidPathPressureBudgetZhCopy = {
       ],
     },
     {
-      title: "FOREACH 站内资料与证据边界",
+      title: "Foreach 站内资料与证据边界",
       blocks: [
         {
           type: "links",
           items: [
             {
-              label: "FOREACH：DPL30H 高压液体隔膜泵选型指南",
+              label: "Foreach：DPL30H 高压液体隔膜泵选型指南",
               href: "/resources/technical-articles/dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide",
             },
           ],

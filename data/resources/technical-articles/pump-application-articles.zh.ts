@@ -4,10 +4,10 @@ export const pumpApplicationArticlesZh = {
   "clinical-chemistry-piston-pump-100-250-500-ul-selection": {
     "metadata": {
       "title": "生化分析仪加样，100、250、500 μL柱塞泵怎么选？",
-      "seoTitle": "生化分析仪100、250、500 μL柱塞泵容量选型｜FOREACH",
+      "seoTitle": "生化分析仪100、250、500 μL柱塞泵容量选型｜Foreach Technology",
       "seoDescription": "从实际加样量、行程占比、连续分配次数与补液节拍，比较100、250、500 μL柱塞泵，并结合EA、SM、TM的材料和安装条件建立验证方法。",
       "coverImage": "/images/resources/technical-articles/pump-application-guides/piston-capacity-series.png",
-      "coverAlt": "FOREACH多容量柱塞泵系列，包含100、250、500 μL规格"
+      "coverAlt": "Foreach多容量柱塞泵系列，包含100、250、500 μL规格"
     },
     "deck": "从实际加样量、行程占比、连续分配次数与补液节拍，比较100、250、500 μL柱塞泵，并结合EA、SM、TM的材料和安装条件建立验证方法。",
     "leadBlocks": [
@@ -121,7 +121,7 @@ export const pumpApplicationArticlesZh = {
           },
           {
             "type": "notice",
-            "text": "以下仅为算术示例：假设每杯20 μL、一个批次8杯，各次吸液后保留10 μL，并暂将可用吸液量取为标称容量。10 μL不是任何FOREACH型号的统一要求；实际可用行程、预充与保留量必须按项目确认。",
+            "text": "以下仅为算术示例：假设每杯20 μL、一个批次8杯，各次吸液后保留10 μL，并暂将可用吸液量取为标称容量。10 μL不是任何Foreach型号的统一要求；实际可用行程、预充与保留量必须按项目确认。",
             "label": "示例前提"
           },
           {
@@ -208,7 +208,7 @@ export const pumpApplicationArticlesZh = {
         "blocks": [
           {
             "type": "paragraph",
-            "text": "FOREACH当前系列资料中，EA、SM、TM均有100、250、500 μL容量方向。系列定位与具体型号能力应分开确认；同容量不代表尺寸、材料、接口、驱动和性能口径相同。"
+            "text": "Foreach当前系列资料中，EA、SM、TM均有100、250、500 μL容量方向。系列定位与具体型号能力应分开确认；同容量不代表尺寸、材料、接口、驱动和性能口径相同。"
           },
           {
             "type": "table",
@@ -325,7 +325,7 @@ export const pumpApplicationArticlesZh = {
             "items": [
               {
                 "href": "/products/pumps/piston-pump/",
-                "label": "提交实际任务前，查看FOREACH柱塞泵产品与系列"
+                "label": "提交实际任务前，查看Foreach柱塞泵产品与系列"
               }
             ]
           }
@@ -366,10 +366,10 @@ export const pumpApplicationArticlesZh = {
   "diaphragm-pump-multiple-wash-nozzles-flow-balance": {
     "metadata": {
       "title": "一台微型隔膜泵带多路清洗针，为什么各支路流量不一致？",
-      "seoTitle": "多路清洗针流量不一致：微型隔膜泵与分支液路排查 | FOREACH",
+      "seoTitle": "多路清洗针流量不一致：微型隔膜泵与分支液路排查 | Foreach Technology",
       "seoDescription": "从每针清洗液量和时间窗口计算总需求，区分泵流量不足与支路分配不均，并通过逐路收集、压力测量和管路核对建立验证方法。",
       "coverImage": "/images/resources/technical-articles/pump-application-guides/dpl60-brushless-side-photo.jpg",
-      "coverAlt": "FOREACH DPL60微型隔膜泵侧面实拍，展示泵头与进出液接口"
+      "coverAlt": "Foreach DPL60微型隔膜泵侧面实拍，展示泵头与进出液接口"
     },
     "deck": "从每针清洗液量和时间窗口计算总需求，区分泵流量不足与支路分配不均，并通过逐路收集、压力测量和管路核对建立验证方法。",
     "leadBlocks": [
@@ -432,7 +432,7 @@ export const pumpApplicationArticlesZh = {
           },
           {
             "type": "paragraph",
-            "text": "FOREACH现有DPL30、DPL60选型资料分别使用300 mL/min和600 mL/min流量等级。不能用DPL30的300 mL/min标称值证明上述360 mL/min任务可完成；DPL60也只是进一步核对的候选，600 mL/min不能直接当成带管、带阀、带针时的可用流量。应在指定电压、液体、入口条件及目标出口压力下确认工作点。"
+            "text": "Foreach现有DPL30、DPL60选型资料分别使用300 mL/min和600 mL/min流量等级。不能用DPL30的300 mL/min标称值证明上述360 mL/min任务可完成；DPL60也只是进一步核对的候选，600 mL/min不能直接当成带管、带阀、带针时的可用流量。应在指定电压、液体、入口条件及目标出口压力下确认工作点。"
           },
           {
             "type": "notice",
@@ -653,10 +653,10 @@ export const pumpApplicationArticlesZh = {
   "diaphragm-pump-flow-drop-reservoir-venting": {
     "metadata": {
       "title": "微型隔膜泵开始正常，抽一会儿流量下降，怎样检查储液瓶通气？",
-      "seoTitle": "隔膜泵运行后流量下降：储液瓶通气与入口排查 | FOREACH",
+      "seoTitle": "隔膜泵运行后流量下降：储液瓶通气与入口排查 | Foreach Technology",
       "seoDescription": "通过瓶内气相压力、入口压力与流量的同步记录，判断储液瓶补气是否受限，并区分液位下降、堵塞、漏气和出口背压等原因。",
       "coverImage": "/images/resources/technical-articles/pump-application-guides/dpl30-brushless-rear-photo.jpg",
-      "coverAlt": "FOREACH DPL30微型隔膜泵背面实拍，展示泵体与进出液接口"
+      "coverAlt": "Foreach DPL30微型隔膜泵背面实拍，展示泵体与进出液接口"
     },
     "deck": "通过瓶内气相压力、入口压力与流量的同步记录，判断储液瓶补气是否受限，并区分液位下降、堵塞、漏气和出口背压等原因。",
     "leadBlocks": [
@@ -701,7 +701,7 @@ export const pumpApplicationArticlesZh = {
           },
           {
             "type": "paragraph",
-            "text": "假设初始气相100 mL、绝对压力101.3 kPa，抽出20 mL后，模型得到101.3 × 100/120 ≈ 84.4 kPa绝对压力，相对原先大气环境约为−16.9 kPa表压。这只是计算示例，不是FOREACH泵或任何实际储液瓶的测试数据。"
+            "text": "假设初始气相100 mL、绝对压力101.3 kPa，抽出20 mL后，模型得到101.3 × 100/120 ≈ 84.4 kPa绝对压力，相对原先大气环境约为−16.9 kPa表压。这只是计算示例，不是Foreach泵或任何实际储液瓶的测试数据。"
           },
           {
             "type": "paragraph",
@@ -855,7 +855,7 @@ export const pumpApplicationArticlesZh = {
         "blocks": [
           {
             "type": "paragraph",
-            "text": "先把储液瓶、入口管路和出口负载恢复到设计条件，再核对泵在这些条件下能否完成任务。FOREACH DPL30和DPL60的300 mL/min、600 mL/min流量等级可以用于建立候选范围，但实际可用流量仍需结合工作压力、液体和入口条件确认。"
+            "text": "先把储液瓶、入口管路和出口负载恢复到设计条件，再核对泵在这些条件下能否完成任务。Foreach DPL30和DPL60的300 mL/min、600 mL/min流量等级可以用于建立候选范围，但实际可用流量仍需结合工作压力、液体和入口条件确认。"
           },
           {
             "type": "paragraph",

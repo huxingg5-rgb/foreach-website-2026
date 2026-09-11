@@ -3,9 +3,9 @@ import type { Dpgl800ArticleCopy } from "./dpgl800-gas-liquid-diaphragm-pump.typ
 export const dpgl800ArticleEsCopy = {
   metadata: {
     title: "Cómo seleccionar una bomba de diafragma para gas y líquido: caudal, vacío y tiempo de generación de vacío del DPGL800",
-    seoTitle: "Cómo elegir una bomba de diafragma gas-líquido | DPGL800 | FOREACH",
+    seoTitle: "Cómo elegir una bomba de diafragma gas-líquido | DPGL800 | Foreach Technology",
     seoDescription: "Guía del DPGL800 para mezclas gas-líquido: 6 L/min de gas sin carga, vacío de ＜-90 kPa, presión de 30 kPa y tiempo de vacío en una cámara de ensayo de 5 L.",
-    coverAlt: "Bomba de diafragma gas-líquido FOREACH DPGL800 sin escobillas, 6 L/min y vacío de ＜-90 kPa",
+    coverAlt: "Bomba de diafragma gas-líquido Foreach DPGL800 sin escobillas, 6 L/min y vacío de ＜-90 kPa",
   },
   section1: {
     title: "1. Por qué el DPGL800 no se elige como una bomba para líquido convencional",

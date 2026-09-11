@@ -53,10 +53,10 @@ const seoNouns: Translation = {
   ko: "정밀 피스톤 펌프", ru: "Прецизионный поршневой насос",
 };
 const cta: Record<TargetLocale, { title: string; body: string; button: string }> = {
-  es: { title: "Confirme la configuración de", body: "Indique el fluido, volumen por dosis, error permitido, tiempo, temperatura, contrapresión, espacio y requisitos de control. FOREACH le ayudará a seleccionar materiales, puertos y componentes para su aplicación.", button: "Contactar con un ingeniero" },
-  fr: { title: "Confirmez la configuration de", body: "Précisez le fluide, le volume par dose, l’erreur admissible, le délai, la température, la contre-pression, l’espace et les besoins de commande. FOREACH vous aide à choisir les matériaux, raccordements et composants adaptés à votre application.", button: "Contacter un ingénieur" },
-  ko: { title: "구성 확인:", body: "유체, 단회 주입량, 허용 오차, 소요 시간, 온도, 배압, 설치 공간 및 제어 요구를 알려주십시오. FOREACH가 응용 조건에 맞는 재료, 포트 및 부품 선정을 지원합니다.", button: "엔지니어에게 문의" },
-  ru: { title: "Подтвердите конфигурацию", body: "Укажите жидкость, объём дозы, допустимую погрешность, время, температуру, противодавление, пространство и требования к управлению. FOREACH поможет подобрать материалы, порты и компоненты для вашего применения.", button: "Связаться с инженером" },
+  es: { title: "Confirme la configuración de", body: "Indique el fluido, volumen por dosis, error permitido, tiempo, temperatura, contrapresión, espacio y requisitos de control. Foreach le ayudará a seleccionar materiales, puertos y componentes para su aplicación.", button: "Contactar con un ingeniero" },
+  fr: { title: "Confirmez la configuration de", body: "Précisez le fluide, le volume par dose, l’erreur admissible, le délai, la température, la contre-pression, l’espace et les besoins de commande. Foreach vous aide à choisir les matériaux, raccordements et composants adaptés à votre application.", button: "Contacter un ingénieur" },
+  ko: { title: "구성 확인:", body: "유체, 단회 주입량, 허용 오차, 소요 시간, 온도, 배압, 설치 공간 및 제어 요구를 알려주십시오. Foreach가 응용 조건에 맞는 재료, 포트 및 부품 선정을 지원합니다.", button: "엔지니어에게 문의" },
+  ru: { title: "Подтвердите конфигурацию", body: "Укажите жидкость, объём дозы, допустимую погрешность, время, температуру, противодавление, пространство и требования к управлению. Foreach поможет подобрать материалы, порты и компоненты для вашего применения.", button: "Связаться с инженером" },
 };
 
 const generated: Record<string, Record<string, unknown>> = {};
@@ -81,7 +81,7 @@ for (const slug of [...EA_PUMP_MODELS, ...COMPACT_PUMP_MODELS]) {
     const [, capacity, material] = slug.split("-");
     const volume = Number(capacity) >= 1000 ? `${Number(capacity) / 1000} mL` : `${capacity} μL`;
     const compactSeo = translated as typeof translated & { seoTitle?: string; metaDescription?: string };
-    const seoTitle = compactSeo.seoTitle || `${model} ${volume} ${material.toUpperCase()} ${seoNouns[locale]} | FOREACH`;
+    const seoTitle = compactSeo.seoTitle || `${model} ${volume} ${material.toUpperCase()} ${seoNouns[locale]} | Foreach Technology`;
     headings[locale][model] = translated.heading;
     generated[locale][slug] = {
       ...translated, seoTitle, metaDescription: compactSeo.metaDescription || translated.description[0],

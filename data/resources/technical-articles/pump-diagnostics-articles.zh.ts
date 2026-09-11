@@ -187,7 +187,7 @@ export const pumpDiagnosticsChineseArticles: readonly DiaphragmPumpEngineeringAr
           },
           {
             "type": "paragraph",
-            "text": "FOREACH EAS 的正式规格书将易排气腔体设计列为特点，可以作为结构方案评估的依据。工程上应关注它在实际阀路、安装方向和介质下，是否减少灌注时间、第一针异常和停机重启后的恢复时间。规格特点提供候选方向，最终应由同条件对照给出选型结论。"
+            "text": "Foreach EAS 的正式规格书将易排气腔体设计列为特点，可以作为结构方案评估的依据。工程上应关注它在实际阀路、安装方向和介质下，是否减少灌注时间、第一针异常和停机重启后的恢复时间。规格特点提供候选方向，最终应由同条件对照给出选型结论。"
           },
           {
             "type": "paragraph",
@@ -223,7 +223,7 @@ export const pumpDiagnosticsChineseArticles: readonly DiaphragmPumpEngineeringAr
                 "href": "/resources/technical-articles/precision-piston-pump-backlash-compensation/"
               },
               {
-                "label": "FOREACH EAS 正式英文规格书",
+                "label": "Foreach EAS 正式英文规格书",
                 "href": "/downloads/resources/datasheets/en/Pumps/ps-120b-2507-00002-001-en-eas-piston-pump.pdf"
               },
               {
@@ -366,7 +366,7 @@ export const pumpDiagnosticsChineseArticles: readonly DiaphragmPumpEngineeringAr
           },
           {
             "type": "paragraph",
-            "text": "下面是一组人为构造的教学数据，非 FOREACH 实测，也不是推荐参数。假设目标体积 100 μL，台架已确认所列速度可用；示例项目要求均值偏差不超过 ±1%、CV 不超过 0.5%。每格的均值和 CV 视作一组重复测量的汇总，真实项目需另行确定样本量和验收标准。"
+            "text": "下面是一组人为构造的教学数据，非 Foreach 实测，也不是推荐参数。假设目标体积 100 μL，台架已确认所列速度可用；示例项目要求均值偏差不超过 ±1%、CV 不超过 0.5%。每格的均值和 CV 视作一组重复测量的汇总，真实项目需另行确定样本量和验收标准。"
           },
           {
             "type": "table",
@@ -832,7 +832,7 @@ export const pumpDiagnosticsChineseArticles: readonly DiaphragmPumpEngineeringAr
           },
           {
             "type": "paragraph",
-            "text": "FOREACH EA、EAS、SM、TM 的具体容量、步数和规定测试条件各有区别。某个配置的满行程指标，不能直接作为小体积、真实试剂和长期漂移的整机验收限值。应以实际任务、测量不确定度和项目要求定义各寿命节点的判定标准。"
+            "text": "Foreach EA、EAS、SM、TM 的具体容量、步数和规定测试条件各有区别。某个配置的满行程指标，不能直接作为小体积、真实试剂和长期漂移的整机验收限值。应以实际任务、测量不确定度和项目要求定义各寿命节点的判定标准。"
           }
         ]
       },
@@ -872,7 +872,7 @@ export const pumpDiagnosticsChineseArticles: readonly DiaphragmPumpEngineeringAr
                 "href": "/resources/technical-articles/piston-pump-head-material-selection/"
               },
               {
-                "label": "FOREACH精密柱塞泵产品分类",
+                "label": "Foreach精密柱塞泵产品分类",
                 "href": "/products/pumps/piston-pump/"
               }
             ]
@@ -1011,7 +1011,7 @@ export const pumpDiagnosticsChineseArticles: readonly DiaphragmPumpEngineeringAr
           },
           {
             "type": "paragraph",
-            "text": "下面是人为构造的教学对照，不对应任何FOREACH型号或实测数据。压力均为同一负载测点的表压，管路和处理带宽相同："
+            "text": "下面是人为构造的教学对照，不对应任何Foreach型号或实测数据。压力均为同一负载测点的表压，管路和处理带宽相同："
           },
           {
             "type": "table",
@@ -1124,7 +1124,7 @@ export const pumpDiagnosticsChineseArticles: readonly DiaphragmPumpEngineeringAr
         "blocks": [
           {
             "type": "paragraph",
-            "text": "FOREACH正式规格书给出的DPL30参数包括空载300 mL/min、额定100 kPa、自吸6 mH₂O；DPL60包括空载600 mL/min、额定100 kPa、自吸3 mH₂O。这些分别描述不同性能项目，不能解释为同一工作点同时达到，也不能由此推出固定脉动比例。"
+            "text": "Foreach正式规格书给出的DPL30参数包括空载300 mL/min、额定100 kPa、自吸6 mH₂O；DPL60包括空载600 mL/min、额定100 kPa、自吸3 mH₂O。这些分别描述不同性能项目，不能解释为同一工作点同时达到，也不能由此推出固定脉动比例。"
           },
           {
             "type": "paragraph",
@@ -1151,11 +1151,11 @@ export const pumpDiagnosticsChineseArticles: readonly DiaphragmPumpEngineeringAr
                 "href": "/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide/"
               },
               {
-                "label": "FOREACH DPL30 A04正式规格书",
+                "label": "Foreach DPL30 A04正式规格书",
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00001_A04_cn_DPL30规格书.pdf"
               },
               {
-                "label": "FOREACH DPL60 A02正式规格书",
+                "label": "Foreach DPL60 A02正式规格书",
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00002_A02_cn_DPL60规格书.pdf"
               }
             ]
@@ -1397,7 +1397,7 @@ export const pumpDiagnosticsChineseArticles: readonly DiaphragmPumpEngineeringAr
         "blocks": [
           {
             "type": "paragraph",
-            "text": "FOREACH DPL30正式规格中的自吸高度为6 mH₂O，DPL60为3 mH₂O。这些指标有各自的规定测试条件，不能等同于实际试剂在相同安装高度下的连续输送安全保证。"
+            "text": "Foreach DPL30正式规格中的自吸高度为6 mH₂O，DPL60为3 mH₂O。这些指标有各自的规定测试条件，不能等同于实际试剂在相同安装高度下的连续输送安全保证。"
           },
           {
             "type": "paragraph",
@@ -1441,15 +1441,15 @@ export const pumpDiagnosticsChineseArticles: readonly DiaphragmPumpEngineeringAr
                 "href": "/resources/technical-articles/300-ml-min-micro-liquid-diaphragm-pump-self-priming-loss/"
               },
               {
-                "label": "FOREACH DPL30 A04正式规格书",
+                "label": "Foreach DPL30 A04正式规格书",
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00001_A04_cn_DPL30规格书.pdf"
               },
               {
-                "label": "FOREACH DPL60 A02正式规格书",
+                "label": "Foreach DPL60 A02正式规格书",
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00002_A02_cn_DPL60规格书.pdf"
               },
               {
-                "label": "FOREACH DPL30H A00正式规格书",
+                "label": "Foreach DPL30H A00正式规格书",
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2504-00001_A00_cn_DPL30H规格书.pdf"
               }
             ]
@@ -1794,7 +1794,7 @@ export const pumpDiagnosticsChineseArticles: readonly DiaphragmPumpEngineeringAr
         "blocks": [
           {
             "type": "paragraph",
-            "text": "FOREACH DPL30的300 mL/min和DPL60的600 mL/min是相应空载流量等级，不能直接作为装机液路下应显示的数值。管路、过滤器、阀和背压改变后，实际工作点需要重新测量。"
+            "text": "Foreach DPL30的300 mL/min和DPL60的600 mL/min是相应空载流量等级，不能直接作为装机液路下应显示的数值。管路、过滤器、阀和背压改变后，实际工作点需要重新测量。"
           },
           {
             "type": "paragraph",
@@ -1821,7 +1821,7 @@ export const pumpDiagnosticsChineseArticles: readonly DiaphragmPumpEngineeringAr
                 "href": "/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide/"
               },
               {
-                "label": "FOREACH微型隔膜泵产品分类",
+                "label": "Foreach微型隔膜泵产品分类",
                 "href": "/products/pumps/miniature-diaphragm-pumps/"
               }
             ]

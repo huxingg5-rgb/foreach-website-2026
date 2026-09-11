@@ -9,11 +9,11 @@ const SUCTION_DISCHARGE_ARTICLE_ASSET_BASE =
 export const tubeInnerDiameterAffectsDiaphragmPumpFlowFrCopy = {
   metadata: {
     title: "Pourquoi le débit réel change-t-il autant lorsque le diamètre du tube est modifié avec la même micropompe à membrane ?",
-    seoTitle: "Débit après changement du diamètre intérieur du tube : diagnostic par pression | FOREACH",
+    seoTitle: "Débit après changement du diamètre intérieur du tube : diagnostic par pression | Foreach Technology",
     seoDescription:
       "Si le débit d'une micropompe à membrane diminue après un changement de tube, il faut distinguer diamètre intérieur, longueur, passage interne des raccords et état de la pompe. Ce guide propose de mesurer conjointement pression d'entrée, pression de sortie et débit.",
     coverImage: `${TUBE_DIAMETER_ARTICLE_ASSET_BASE}/article-cover.webp`,
-    coverAlt: "Tubes et essai de débit d'une micropompe à membrane FOREACH dans une vidéo Douyin officielle",
+    coverAlt: "Tubes et essai de débit d'une micropompe à membrane Foreach dans une vidéo Douyin officielle",
   },
   deck:
     "Même si la pompe n'est pas remplacée, le débit installé peut également changer en raison du diamètre intérieur, de la longueur, de la courbure et du diamètre minimum du tuyau. Lorsque vous rencontrez \"le débit chute après avoir changé les tuyaux\", le moyen efficace d'y remédier n'est pas de douter d'abord de la pompe, ni de rendre tous les tuyaux plus épais, mais de mesurer simultanément la pression d'entrée, la pression de sortie et le débit cumulé pour déterminer où la résistance est ajoutée.",
@@ -240,11 +240,11 @@ export const tubeInnerDiameterAffectsDiaphragmPumpFlowFrCopy = {
 export const suctionVsDischargeResistanceDiaphragmPumpFrCopy = {
   metadata: {
     title: "Quelle résistance affecte le plus une micropompe à membrane : celle du tube d'aspiration ou celle du tube de refoulement ?",
-    seoTitle: "Résistance d'aspiration et contre-pression de refoulement d'une micropompe | FOREACH",
+    seoTitle: "Résistance d'aspiration et contre-pression de refoulement d'une micropompe | Foreach Technology",
     seoDescription:
       "Les résistances d'aspiration et de refoulement augmentent la pression différentielle exigée, mais produisent des symptômes différents. Ce guide utilise la pression absolue d'entrée, la contre-pression de sortie et le débit pour distinguer problèmes d'amorçage, cavitation et pression sans débit.",
     coverImage: `${SUCTION_DISCHARGE_ARTICLE_ASSET_BASE}/article-cover.webp`,
-    coverAlt: "Essai d'aspiration et de refoulement d'une micropompe à membrane FOREACH dans une vidéo Douyin officielle",
+    coverAlt: "Essai d'aspiration et de refoulement d'une micropompe à membrane Foreach dans une vidéo Douyin officielle",
   },
   deck:
     "Les pertes des deux côtés augmentent la pression différentielle de la micropompe, sans qu'un côté soit toujours prioritaire. L'aspiration conditionne surtout l'amorçage, le remplissage de la chambre, la sensibilité aux prises d'air, le dégazage et la cavitation ; le refoulement se manifeste plutôt par une contre-pression accrue, un débit réduit ou un fonctionnement contre une obstruction. Le diagnostic doit enregistrer sur le même axe temporel la pression absolue d'entrée, la pression de sortie et le débit.",

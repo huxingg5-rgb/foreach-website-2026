@@ -13,7 +13,7 @@ export const environmentalMonitoringEsExactText: Record<string, string> = {
   "有环保设备液路设计或国产替代需求？":
     "¿Necesita diseñar el circuito fluídico de un equipo ambiental o evaluar una alternativa local?",
   "可提交环保类型、液体介质、目标流量、压力范围、管路尺寸、空间限制和当前问题，由恒永达工程团队协助评估泵阀管路组合、材料兼容性与环保监测液路方案。":
-    "Envíe el tipo de equipo, el fluido, el caudal objetivo, el rango de presión, las dimensiones de los tubos, las limitaciones de espacio y el problema actual para que el equipo de ingeniería de FOREACH evalúe la combinación de bombas, válvulas y tubos, la compatibilidad de materiales y la solución de monitoreo.",
+    "Envíe el tipo de equipo, el fluido, el caudal objetivo, el rango de presión, las dimensiones de los tubos, las limitaciones de espacio y el problema actual para que el equipo de ingeniería de Foreach evalúe la combinación de bombas, válvulas y tubos, la compatibilidad de materiales y la solución de monitoreo.",
 
   "样品、试剂和标定液的精密吸取与定量推出":
     "Aspiración precisa y dispensación cuantitativa de muestras, reactivos y soluciones de calibración",

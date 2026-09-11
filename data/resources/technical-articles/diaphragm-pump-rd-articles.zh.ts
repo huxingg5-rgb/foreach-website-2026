@@ -7,7 +7,7 @@ export const diaphragmPumpRdArticlesZh = {
       "seoTitle": "自吸式微型液体隔膜泵选型：吸程与启动时间｜恒永达",
       "seoDescription": "微型液体隔膜泵自吸选型需要同时确认吸程、首次引液时间、干湿启动和稳定供液条件。结合DPL30、DPL60和DPL30H规格，建立可以验收的启动试验。",
       "coverImage": "/images/resources/technical-articles/diaphragm-pump-rd/covers/dpl30-brushless-port-side-photo.jpg",
-      "coverAlt": "FOREACH DPL30微型隔膜泵接口侧实拍，展示进出液接口与电机"
+      "coverAlt": "Foreach DPL30微型隔膜泵接口侧实拍，展示进出液接口与电机"
     },
     "deck": "微型液体隔膜泵自吸选型需要同时确认吸程、首次引液时间、干湿启动和稳定供液条件。结合DPL30、DPL60和DPL30H规格，建立可以验收的启动试验。",
     "leadBlocks": [
@@ -241,22 +241,22 @@ export const diaphragmPumpRdArticlesZh = {
             "items": [
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00001_A04_cn_DPL30规格书.pdf",
-                "label": "[F1] FOREACH DPL30 中文规格书 (A04)",
+                "label": "[F1] Foreach DPL30 中文规格书 (A04)",
                 "suffix": "第 5–6 页：性能与配置；第 3–4 页：安装"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00002_A02_cn_DPL60规格书.pdf",
-                "label": "[F2] FOREACH DPL60 中文规格书 (A02)",
+                "label": "[F2] Foreach DPL60 中文规格书 (A02)",
                 "suffix": "第 5–6 页：性能与配置；第 3–4 页：安装"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2504-00001_A00_cn_DPL30H规格书.pdf",
-                "label": "[F3] FOREACH DPL30H 中文规格书 (A00)",
+                "label": "[F3] Foreach DPL30H 中文规格书 (A00)",
                 "suffix": "第 5–6 页：性能与配置；第 3–4 页：安装"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2506-00001_A00_cn_DPGL800气液混合泵规格书.pdf",
-                "label": "[F4] FOREACH DPGL800 中文规格书 (A00)",
+                "label": "[F4] Foreach DPGL800 中文规格书 (A00)",
                 "suffix": "第 5–6 页：性能与配置；第 3–4 页：安装"
               }
             ]
@@ -331,7 +331,7 @@ export const diaphragmPumpRdArticlesZh = {
       "seoTitle": "微型隔膜泵流量脉动大怎么办？测量与降低措施｜恒永达",
       "seoDescription": "微型隔膜泵流量脉动需要先区分真实波动与测量失真，再比较缓冲、管路与调速措施。本文说明称重核对、采样带宽和低脉动液路的验证方法。",
       "coverImage": "/images/resources/technical-articles/diaphragm-pump-rd/covers/dpl60-brushless-horizontal-photo.jpg",
-      "coverAlt": "FOREACH DPL60微型隔膜泵侧放实拍，展示泵头与电机"
+      "coverAlt": "Foreach DPL60微型隔膜泵侧放实拍，展示泵头与电机"
     },
     "deck": "微型隔膜泵流量脉动需要先区分真实波动与测量失真，再比较缓冲、管路与调速措施。本文说明称重核对、采样带宽和低脉动液路的验证方法。",
     "leadBlocks": [
@@ -550,17 +550,17 @@ export const diaphragmPumpRdArticlesZh = {
             "items": [
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00001_A04_cn_DPL30规格书.pdf",
-                "label": "[F1] FOREACH DPL30 中文规格书 (A04)",
+                "label": "[F1] Foreach DPL30 中文规格书 (A04)",
                 "suffix": "第 5–6 页：性能与配置；第 3–4 页：安装"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00002_A02_cn_DPL60规格书.pdf",
-                "label": "[F2] FOREACH DPL60 中文规格书 (A02)",
+                "label": "[F2] Foreach DPL60 中文规格书 (A02)",
                 "suffix": "第 5–6 页：性能与配置；第 3–4 页：安装"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2504-00001_A00_cn_DPL30H规格书.pdf",
-                "label": "[F3] FOREACH DPL30H 中文规格书 (A00)",
+                "label": "[F3] Foreach DPL30H 中文规格书 (A00)",
                 "suffix": "第 5–6 页：性能与配置；第 3–4 页：安装"
               },
               {
@@ -643,7 +643,7 @@ export const diaphragmPumpRdArticlesZh = {
       "seoTitle": "微型隔膜泵噪音大怎么办？原因与减振降噪｜恒永达",
       "seoDescription": "微型隔膜泵噪音大，应在相同工作点下检查电机与泵头、支架、管路和机壳。了解噪声测试条件、共振定位及减振降噪措施的性能复核。",
       "coverImage": "/images/resources/technical-articles/diaphragm-pump-rd/covers/dpl30-brushless-bottom-photo.jpg",
-      "coverAlt": "FOREACH DPL30微型隔膜泵底部实拍，展示泵体底面与安装孔"
+      "coverAlt": "Foreach DPL30微型隔膜泵底部实拍，展示泵体底面与安装孔"
     },
     "deck": "微型隔膜泵噪音大，应在相同工作点下检查电机与泵头、支架、管路和机壳。了解噪声测试条件、共振定位及减振降噪措施的性能复核。",
     "leadBlocks": [
@@ -855,17 +855,17 @@ export const diaphragmPumpRdArticlesZh = {
             "items": [
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00001_A04_cn_DPL30规格书.pdf",
-                "label": "[F1] FOREACH DPL30 中文规格书 (A04)",
+                "label": "[F1] Foreach DPL30 中文规格书 (A04)",
                 "suffix": "第 5–6 页：性能与配置；第 3–4 页：安装"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00002_A02_cn_DPL60规格书.pdf",
-                "label": "[F2] FOREACH DPL60 中文规格书 (A02)",
+                "label": "[F2] Foreach DPL60 中文规格书 (A02)",
                 "suffix": "第 5–6 页：性能与配置；第 3–4 页：安装"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2504-00001_A00_cn_DPL30H规格书.pdf",
-                "label": "[F3] FOREACH DPL30H 中文规格书 (A00)",
+                "label": "[F3] Foreach DPL30H 中文规格书 (A00)",
                 "suffix": "第 5–6 页：性能与配置；第 3–4 页：安装"
               }
             ]
@@ -944,7 +944,7 @@ export const diaphragmPumpRdArticlesZh = {
       "seoTitle": "微型隔膜泵停机回流怎么办？止回阀与防虹吸｜恒永达",
       "seoDescription": "微型隔膜泵停机回流需要区分反向泄漏、正向虹吸和短时滴液。了解止回阀开启与关闭条件、阀泵时序及停机密封的验证方法。",
       "coverImage": "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushless-2-wire-real-product-photo.webp",
-      "coverAlt": "FOREACH DPL30 两线无刷微型液体隔膜泵实物图"
+      "coverAlt": "Foreach DPL30 两线无刷微型液体隔膜泵实物图"
     },
     "deck": "微型隔膜泵停机回流需要区分反向泄漏、正向虹吸和短时滴液。了解止回阀开启与关闭条件、阀泵时序及停机密封的验证方法。",
     "leadBlocks": [
@@ -1150,17 +1150,17 @@ export const diaphragmPumpRdArticlesZh = {
             "items": [
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00001_A04_cn_DPL30规格书.pdf",
-                "label": "[F1] FOREACH DPL30 中文规格书 (A04)",
+                "label": "[F1] Foreach DPL30 中文规格书 (A04)",
                 "suffix": "第 5–6 页：性能与配置；第 3–4 页：安装"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00002_A02_cn_DPL60规格书.pdf",
-                "label": "[F2] FOREACH DPL60 中文规格书 (A02)",
+                "label": "[F2] Foreach DPL60 中文规格书 (A02)",
                 "suffix": "第 5–6 页：性能与配置；第 3–4 页：安装"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2504-00001_A00_cn_DPL30H规格书.pdf",
-                "label": "[F3] FOREACH DPL30H 中文规格书 (A00)",
+                "label": "[F3] Foreach DPL30H 中文规格书 (A00)",
                 "suffix": "第 5–6 页：性能与配置；第 3–4 页：安装"
               }
             ]

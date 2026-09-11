@@ -23,20 +23,20 @@ import type {
 
 export const datasheetsEnPageText = {
   seo: {
-    title: "Datasheets｜Resources｜FOREACH",
+    title: "Datasheets｜Resources｜Foreach Technology",
     description:
-      "Download FOREACH product datasheets for microfluidic pumps, valves, tubing, fittings, probes, and smart control modules.",
+      "Download Foreach product datasheets for microfluidic pumps, valves, tubing, fittings, probes, and smart control modules.",
   },
 
   hero: {
     title: "Datasheets",
     description:
-      "Find and download FOREACH product datasheets for pumps, valves, tubing, fittings, and smart control modules, and quickly review key specifications, materials, interfaces, and application information.",
+      "Find and download Foreach product datasheets for pumps, valves, tubing, fittings, and smart control modules, and quickly review key specifications, materials, interfaces, and application information.",
 
     image:
       "/images/resource/datasheets/banner/resource-datasheet-banner-1920x800-v001.webp",
 
-    imageAlt: "FOREACH resources datasheets page banner",
+    imageAlt: "Foreach resources datasheets page banner",
   },
 
   breadcrumb: {
@@ -385,7 +385,7 @@ export const datasheetEnItems: DatasheetItem[] = [
     version: "A02",
     update: "—",
     description:
-      "A combined English catalog covering FOREACH fittings, connectors, rigid tubing, flexible tubing, and tubing assemblies.",
+      "A combined English catalog covering Foreach fittings, connectors, rigid tubing, flexible tubing, and tubing assemblies.",
     image:
       "/images/products/fittings/barbed-fittings/products/ba-16c-pa-w-main.jpg",
     productHref: "/en/products/fittings",

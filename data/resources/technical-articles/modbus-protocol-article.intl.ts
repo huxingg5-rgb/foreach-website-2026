@@ -5,11 +5,11 @@ export const modbusProtocolArticles = {
     "slug": "modbus-protocol-fluid-control",
     "title": "Modbus Protocol: RTU, ASCII and TCP Basics",
     "summary": "Distinguish Modbus from RS-485, understand RTU, ASCII and TCP messages, serial addressing and request–response behavior, and commission fluid-control devices.",
-    "seoTitle": "Modbus Protocol: RTU, ASCII and TCP Basics | FOREACH",
+    "seoTitle": "Modbus Protocol: RTU, ASCII and TCP Basics | Foreach Technology",
     "seoDescription": "Distinguish Modbus from RS-485, understand RTU, ASCII and TCP messages, serial addressing and request–response behavior, and commission fluid-control devices.",
     "date": "2026-09-06",
     "coverImage": "/images/resources/technical-articles/covers/pressure-flow-material-compatibility.webp",
-    "coverAlt": "FOREACH precision fluid-system pump and connected tubing",
+    "coverAlt": "Foreach precision fluid-system pump and connected tubing",
     "intro": [],
     "sections": [
       {
@@ -21,7 +21,7 @@ export const modbusProtocolArticles = {
           },
           {
             "type": "paragraph",
-            "text": "In fluid control it may read status or transmit control parameters. Support, function codes and registers must be confirmed in the communication manual of the exact controller. This article does not claim that every FOREACH product supports these interfaces."
+            "text": "In fluid control it may read status or transmit control parameters. Support, function codes and registers must be confirmed in the communication manual of the exact controller. This article does not claim that every Foreach product supports these interfaces."
           }
         ]
       },
@@ -221,11 +221,11 @@ export const modbusProtocolArticles = {
     "slug": "modbus-protocol-fluid-control",
     "title": "Protocolo Modbus: fundamentos de RTU, ASCII y TCP",
     "summary": "Distinga Modbus de RS-485, conozca mensajes RTU, ASCII y TCP, direccionamiento serie y solicitud–respuesta, y prepare la integración de dispositivos de control de fluidos.",
-    "seoTitle": "Protocolo Modbus: fundamentos de RTU, ASCII y TCP | FOREACH",
+    "seoTitle": "Protocolo Modbus: fundamentos de RTU, ASCII y TCP | Foreach Technology",
     "seoDescription": "Distinga Modbus de RS-485, conozca mensajes RTU, ASCII y TCP, direccionamiento serie y solicitud–respuesta, y prepare la integración de dispositivos de control de fluidos.",
     "date": "2026-09-06",
     "coverImage": "/images/resources/technical-articles/covers/pressure-flow-material-compatibility.webp",
-    "coverAlt": "Bomba y tubos conectados de un sistema de fluidos de precisión FOREACH",
+    "coverAlt": "Bomba y tubos conectados de un sistema de fluidos de precisión Foreach",
     "intro": [],
     "sections": [
       {
@@ -237,7 +237,7 @@ export const modbusProtocolArticles = {
           },
           {
             "type": "paragraph",
-            "text": "En control de fluidos puede leer estados o transmitir parámetros. La compatibilidad, funciones y registros deben confirmarse en el manual de comunicación del controlador concreto. Este artículo no afirma que todos los productos FOREACH admitan estas interfaces."
+            "text": "En control de fluidos puede leer estados o transmitir parámetros. La compatibilidad, funciones y registros deben confirmarse en el manual de comunicación del controlador concreto. Este artículo no afirma que todos los productos Foreach admitan estas interfaces."
           }
         ]
       },
@@ -437,11 +437,11 @@ export const modbusProtocolArticles = {
     "slug": "modbus-protocol-fluid-control",
     "title": "Protocole Modbus : bases de RTU, ASCII et TCP",
     "summary": "Distinguer Modbus de RS-485, comprendre messages RTU, ASCII et TCP, adressage série et requête–réponse, puis intégrer des dispositifs de contrôle des fluides.",
-    "seoTitle": "Protocole Modbus : bases de RTU, ASCII et TCP | FOREACH",
+    "seoTitle": "Protocole Modbus : bases de RTU, ASCII et TCP | Foreach Technology",
     "seoDescription": "Distinguer Modbus de RS-485, comprendre messages RTU, ASCII et TCP, adressage série et requête–réponse, puis intégrer des dispositifs de contrôle des fluides.",
     "date": "2026-09-06",
     "coverImage": "/images/resources/technical-articles/covers/pressure-flow-material-compatibility.webp",
-    "coverAlt": "Pompe et tubes d’un système de fluides de précision FOREACH",
+    "coverAlt": "Pompe et tubes d’un système de fluides de précision Foreach",
     "intro": [],
     "sections": [
       {
@@ -453,7 +453,7 @@ export const modbusProtocolArticles = {
           },
           {
             "type": "paragraph",
-            "text": "En contrôle des fluides, il peut lire un état ou transmettre des paramètres. Prise en charge, fonctions et registres doivent être confirmés dans le manuel du contrôleur exact. Cet article ne prétend pas que tous les produits FOREACH disposent de ces interfaces."
+            "text": "En contrôle des fluides, il peut lire un état ou transmettre des paramètres. Prise en charge, fonctions et registres doivent être confirmés dans le manuel du contrôleur exact. Cet article ne prétend pas que tous les produits Foreach disposent de ces interfaces."
           }
         ]
       },
@@ -653,11 +653,11 @@ export const modbusProtocolArticles = {
     "slug": "modbus-protocol-fluid-control",
     "title": "Modbus 프로토콜: RTU, ASCII 및 TCP 통신의 기초",
     "summary": "Modbus와 RS-485의 차이, RTU·ASCII·TCP 메시지, 직렬 주소 지정 및 요청·응답 동작을 이해하고 유체 제어 장치를 시운전하는 방법을 살펴봅니다.",
-    "seoTitle": "Modbus 프로토콜: RTU, ASCII 및 TCP 통신의 기초 | FOREACH",
+    "seoTitle": "Modbus 프로토콜: RTU, ASCII 및 TCP 통신의 기초 | Foreach Technology",
     "seoDescription": "Modbus와 RS-485의 차이, RTU·ASCII·TCP 메시지, 직렬 주소 지정 및 요청·응답 동작을 이해하고 유체 제어 장치를 시운전하는 방법을 살펴봅니다.",
     "date": "2026-09-06",
     "coverImage": "/images/resources/technical-articles/covers/pressure-flow-material-compatibility.webp",
-    "coverAlt": "FOREACH 정밀 유체 시스템용 펌프와 연결 튜브",
+    "coverAlt": "Foreach 정밀 유체 시스템용 펌프와 연결 튜브",
     "intro": [],
     "sections": [
       {
@@ -669,7 +669,7 @@ export const modbusProtocolArticles = {
           },
           {
             "type": "paragraph",
-            "text": "유체 제어에서는 상태를 읽거나 제어 매개변수를 전달하는 데 사용할 수 있습니다. 지원 여부, 기능 코드 및 레지스터는 해당 제어기 모델의 통신 매뉴얼에서 확인해야 합니다. 이 글은 모든 FOREACH 제품이 이러한 인터페이스를 지원한다고 설명하는 것이 아닙니다."
+            "text": "유체 제어에서는 상태를 읽거나 제어 매개변수를 전달하는 데 사용할 수 있습니다. 지원 여부, 기능 코드 및 레지스터는 해당 제어기 모델의 통신 매뉴얼에서 확인해야 합니다. 이 글은 모든 Foreach 제품이 이러한 인터페이스를 지원한다고 설명하는 것이 아닙니다."
           }
         ]
       },
@@ -869,11 +869,11 @@ export const modbusProtocolArticles = {
     "slug": "modbus-protocol-fluid-control",
     "title": "Протокол Modbus: основы RTU, ASCII и TCP",
     "summary": "Различия между Modbus и RS-485, сообщения RTU, ASCII и TCP, адресация в последовательных сетях, обмен запросами и ответами и наладка устройств управления жидкостными системами.",
-    "seoTitle": "Протокол Modbus: основы RTU, ASCII и TCP | FOREACH",
+    "seoTitle": "Протокол Modbus: основы RTU, ASCII и TCP | Foreach Technology",
     "seoDescription": "Различия между Modbus и RS-485, сообщения RTU, ASCII и TCP, адресация в последовательных сетях, обмен запросами и ответами и наладка устройств управления жидкостными системами.",
     "date": "2026-09-06",
     "coverImage": "/images/resources/technical-articles/covers/pressure-flow-material-compatibility.webp",
-    "coverAlt": "Насос FOREACH для прецизионной жидкостной системы с подключёнными трубками",
+    "coverAlt": "Насос Foreach для прецизионной жидкостной системы с подключёнными трубками",
     "intro": [],
     "sections": [
       {
@@ -885,7 +885,7 @@ export const modbusProtocolArticles = {
           },
           {
             "type": "paragraph",
-            "text": "В жидкостных системах протокол может использоваться для чтения состояния и передачи параметров управления. Поддержку протокола, коды функций и регистры необходимо проверять в руководстве по связи для конкретной модели контроллера. Эта статья не утверждает, что все изделия FOREACH поддерживают перечисленные интерфейсы."
+            "text": "В жидкостных системах протокол может использоваться для чтения состояния и передачи параметров управления. Поддержку протокола, коды функций и регистры необходимо проверять в руководстве по связи для конкретной модели контроллера. Эта статья не утверждает, что все изделия Foreach поддерживают перечисленные интерфейсы."
           }
         ]
       },

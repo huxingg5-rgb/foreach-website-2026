@@ -197,21 +197,21 @@ type ContactIntlText = {
 
 const contactIntlText: Record<ContactIntlLocaleCode, ContactIntlText> = {
   en: {
-    seoTitle: "Contact Us | FOREACH",
+    seoTitle: "Contact Us | Foreach Technology",
     seoDescription:
-      "Contact FOREACH for product selection, technical support, sample testing, drawing requests, BOM review, and microfluidic system project communication.",
+      "Contact Foreach for product selection, technical support, sample testing, drawing requests, BOM review, and microfluidic system project communication.",
 
-    heroTitlePrefix: "Contact FOREACH for",
+    heroTitlePrefix: "Contact Foreach for",
     heroHighlightText: "Product Selection",
     heroTitleSuffix: "and Technical Support",
     heroImageAlt:
-      "FOREACH microfluidic product technical communication and cooperation support",
+      "Foreach microfluidic product technical communication and cooperation support",
     heroSupportButton: "View Support",
     heroFormButton: "Submit Inquiry",
 
     supportTitle: "Support Options",
     supportDescription:
-      "FOREACH provides communication support from early evaluation to project introduction, covering product selection, document requests, sample testing, solution discussion, customization, and after-sales feedback.",
+      "Foreach provides communication support from early evaluation to project introduction, covering product selection, document requests, sample testing, solution discussion, customization, and after-sales feedback.",
     supportItems: [
       {
         title: "Product Selection Support",
@@ -468,21 +468,21 @@ const contactIntlText: Record<ContactIntlLocaleCode, ContactIntlText> = {
   },
 
   es: {
-    seoTitle: "Contáctenos | FOREACH",
+    seoTitle: "Contáctenos | Foreach Technology",
     seoDescription:
-      "Contacte con FOREACH para selección de productos, soporte técnico, pruebas de muestras, solicitud de planos, revisión de BOM y comunicación de proyectos microfluídicos.",
+      "Contacte con Foreach para selección de productos, soporte técnico, pruebas de muestras, solicitud de planos, revisión de BOM y comunicación de proyectos microfluídicos.",
 
-    heroTitlePrefix: "Contacte con FOREACH para",
+    heroTitlePrefix: "Contacte con Foreach para",
     heroHighlightText: "selección de productos",
     heroTitleSuffix: "y soporte técnico",
     heroImageAlt:
-      "Soporte técnico y comunicación de proyectos de productos microfluídicos de FOREACH",
+      "Soporte técnico y comunicación de proyectos de productos microfluídicos de Foreach",
     heroSupportButton: "Ver soporte",
     heroFormButton: "Enviar consulta",
 
     supportTitle: "Opciones de soporte",
     supportDescription:
-      "FOREACH ofrece soporte desde la evaluación inicial hasta la introducción del proyecto, incluyendo selección de productos, solicitud de documentos, pruebas de muestras, soluciones, personalización y posventa.",
+      "Foreach ofrece soporte desde la evaluación inicial hasta la introducción del proyecto, incluyendo selección de productos, solicitud de documentos, pruebas de muestras, soluciones, personalización y posventa.",
     supportItems: [
       {
         title: "Soporte de selección de productos",
@@ -741,21 +741,21 @@ const contactIntlText: Record<ContactIntlLocaleCode, ContactIntlText> = {
   },
 
   fr: {
-    seoTitle: "Contactez-nous | FOREACH",
+    seoTitle: "Contactez-nous | Foreach Technology",
     seoDescription:
-      "Contactez FOREACH pour la sélection de produits, le support technique, les essais d’échantillons, les demandes de plans, la revue de BOM et les projets microfluidiques.",
+      "Contactez Foreach pour la sélection de produits, le support technique, les essais d’échantillons, les demandes de plans, la revue de BOM et les projets microfluidiques.",
 
-    heroTitlePrefix: "Contactez FOREACH pour",
+    heroTitlePrefix: "Contactez Foreach pour",
     heroHighlightText: "la sélection produit",
     heroTitleSuffix: "et le support technique",
     heroImageAlt:
-      "Support technique et communication de projet pour les produits microfluidiques FOREACH",
+      "Support technique et communication de projet pour les produits microfluidiques Foreach",
     heroSupportButton: "Voir le support",
     heroFormButton: "Envoyer une demande",
 
     supportTitle: "Options de support",
     supportDescription:
-      "FOREACH fournit un support depuis l’évaluation initiale jusqu’à l’introduction du projet, couvrant la sélection produit, les documents, les essais d’échantillons, les solutions, la personnalisation et l’après-vente.",
+      "Foreach fournit un support depuis l’évaluation initiale jusqu’à l’introduction du projet, couvrant la sélection produit, les documents, les essais d’échantillons, les solutions, la personnalisation et l’après-vente.",
     supportItems: [
       {
         title: "Support de sélection produit",
@@ -1015,21 +1015,21 @@ const contactIntlText: Record<ContactIntlLocaleCode, ContactIntlText> = {
   },
 
   ko: {
-    seoTitle: "문의하기 | FOREACH",
+    seoTitle: "문의하기 | Foreach Technology",
     seoDescription:
-      "제품 선정, 기술 지원, 샘플 테스트, 도면 요청, BOM 검토 및 마이크로플루이딕 시스템 프로젝트 상담을 위해 FOREACH에 문의하세요.",
+      "제품 선정, 기술 지원, 샘플 테스트, 도면 요청, BOM 검토 및 마이크로플루이딕 시스템 프로젝트 상담을 위해 Foreach에 문의하세요.",
 
-    heroTitlePrefix: "FOREACH에 문의하여",
+    heroTitlePrefix: "Foreach에 문의하여",
     heroHighlightText: "제품 선정",
     heroTitleSuffix: "및 기술 지원을 받으세요",
     heroImageAlt:
-      "FOREACH 마이크로플루이딕 제품 기술 상담 및 프로젝트 지원",
+      "Foreach 마이크로플루이딕 제품 기술 상담 및 프로젝트 지원",
     heroSupportButton: "지원 보기",
     heroFormButton: "문의 제출",
 
     supportTitle: "지원 항목",
     supportDescription:
-      "FOREACH는 초기 평가부터 프로젝트 도입까지 제품 선정, 자료 요청, 샘플 테스트, 솔루션 상담, 맞춤 요구 및 애프터서비스를 지원합니다.",
+      "Foreach는 초기 평가부터 프로젝트 도입까지 제품 선정, 자료 요청, 샘플 테스트, 솔루션 상담, 맞춤 요구 및 애프터서비스를 지원합니다.",
     supportItems: [
       {
         title: "제품 선정 지원",
@@ -1283,21 +1283,21 @@ const contactIntlText: Record<ContactIntlLocaleCode, ContactIntlText> = {
   },
 
   ru: {
-    seoTitle: "Свяжитесь с нами | FOREACH",
+    seoTitle: "Свяжитесь с нами | Foreach Technology",
     seoDescription:
-      "Свяжитесь с FOREACH по вопросам подбора продукции, технической поддержки, испытания образцов, запроса чертежей, проверки BOM и микрофлюидных проектов.",
+      "Свяжитесь с Foreach по вопросам подбора продукции, технической поддержки, испытания образцов, запроса чертежей, проверки BOM и микрофлюидных проектов.",
 
-    heroTitlePrefix: "Свяжитесь с FOREACH для",
+    heroTitlePrefix: "Свяжитесь с Foreach для",
     heroHighlightText: "подбора продукции",
     heroTitleSuffix: "и технической поддержки",
     heroImageAlt:
-      "Техническая коммуникация и поддержка проектов микрофлюидной продукции FOREACH",
+      "Техническая коммуникация и поддержка проектов микрофлюидной продукции Foreach",
     heroSupportButton: "Посмотреть поддержку",
     heroFormButton: "Отправить запрос",
 
     supportTitle: "Варианты поддержки",
     supportDescription:
-      "FOREACH предоставляет поддержку от первичной оценки до внедрения проекта, включая подбор продукции, запрос документов, испытания образцов, обсуждение решений, кастомизацию и послепродажную обратную связь.",
+      "Foreach предоставляет поддержку от первичной оценки до внедрения проекта, включая подбор продукции, запрос документов, испытания образцов, обсуждение решений, кастомизацию и послепродажную обратную связь.",
     supportItems: [
       {
         title: "Поддержка подбора продукции",

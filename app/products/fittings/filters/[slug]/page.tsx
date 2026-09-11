@@ -107,14 +107,14 @@ export async function generateMetadata({
   return {
     title:
       detail.seo?.title ||
-      `${detail.model} ${detail.name || detail.title || "过滤器"} | FOREACH`,
+      `${detail.model} ${detail.name || detail.title || "过滤器"} | Foreach Technology`,
 
     description:
       detail.seo?.description ||
       detail.description,
     ...buildProductSocialMetadata({
       data: detail,
-      title: detail.seo?.title || detail.model || detail.title || "FOREACH",
+      title: detail.seo?.title || detail.model || detail.title || "Foreach Technology",
       description: detail.seo?.description || detail.description,
       canonicalUrl: `/products/fittings/filters/${slug}/`,
     }),

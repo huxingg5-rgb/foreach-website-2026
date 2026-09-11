@@ -207,11 +207,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: detail.seo?.title || `${detail.model} | FOREACH`,
+    title: detail.seo?.title || `${detail.model} | Foreach Technology`,
     description: detail.seo?.description || detail.description || "",
     ...buildProductSocialMetadata({
       data: detail,
-      title: detail.seo?.title || `${detail.model} | FOREACH`,
+      title: detail.seo?.title || `${detail.model} | Foreach Technology`,
       description: detail.seo?.description || detail.description || "",
       canonicalUrl: `/products/pumps/pipetting-pumps/${slug}/`,
     }),

@@ -263,7 +263,7 @@ async function getDiaphragmPumpRouteMetadata(
   return {
     title,
     description,
-    keywords: [heading, "FOREACH", "miniature diaphragm pump"],
+    keywords: [heading, "Foreach Technology", "miniature diaphragm pump"],
     alternates: {
       canonical: canonicalPath,
       languages: getDiaphragmPumpLanguageAlternates(childSlug || undefined),
@@ -273,7 +273,7 @@ async function getDiaphragmPumpRouteMetadata(
       type: "website",
       locale: normalizedLocale,
       url: canonicalPath,
-      siteName: "FOREACH",
+      siteName: "Foreach Technology",
       title,
       description,
     },
@@ -315,16 +315,16 @@ export async function generateMetadata({
 
   const compactContent = locale === "en" && segments.length === 3 && segments[0] === "pumps" && segments[1] === "piston-pump"
     ? getCompactPumpContent(segments[2], "en") : undefined;
-  const title = compactContent ? compactContent.seoTitle.replace(/ \| FOREACH$/, "") : getRouteTitle(segments);
+  const title = compactContent ? compactContent.seoTitle.replace(/ \| Foreach(?: Technology)?$/i, "") : getRouteTitle(segments);
   const canonicalPath = `/${locale}/products/${segments.join("/")}/`;
   const isDetailRoute = segments.length >= 2;
   const description = compactContent?.metaDescription || (isDetailRoute
-    ? `Explore ${title} specifications, materials, interfaces, model configurations, and fluidic applications from FOREACH.`
-    : `Explore FOREACH ${title} for precision fluid handling in IVD, life science, analytical instrumentation, and laboratory automation.`);
+    ? `Explore ${title} specifications, materials, interfaces, model configurations, and fluidic applications from Foreach.`
+    : `Explore Foreach ${title} for precision fluid handling in IVD, life science, analytical instrumentation, and laboratory automation.`);
   const keywords = Array.from(
     new Set([
       title,
-      "FOREACH",
+      "Foreach Technology",
       "precision fluid handling",
       "microfluidic components",
       "fluidic systems",
@@ -342,7 +342,7 @@ export async function generateMetadata({
     : undefined;
 
   return {
-    title: compactContent ? { absolute: compactContent.seoTitle } : `${title} | FOREACH`,
+    title: compactContent ? { absolute: compactContent.seoTitle } : `${title} | Foreach Technology`,
     description,
     keywords,
     alternates: {
@@ -363,8 +363,8 @@ export async function generateMetadata({
       type: "website",
       locale: "en_US",
       url: canonicalPath,
-      siteName: "FOREACH",
-      title: `${title} | FOREACH`,
+      siteName: "Foreach Technology",
+      title: `${title} | Foreach Technology`,
       description,
       ...(socialImage
         ? { images: [{ url: socialImage, alt: title }] }
@@ -372,7 +372,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary",
-      title: `${title} | FOREACH`,
+      title: `${title} | Foreach Technology`,
       description,
       ...(socialImage ? { images: [socialImage] } : {}),
     },

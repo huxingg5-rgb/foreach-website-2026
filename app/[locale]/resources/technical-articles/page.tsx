@@ -41,8 +41,8 @@ export async function generateMetadata({ params }: TechnicalArticlesIntlPageProp
     "zh-CN": "资源中心", en: "Resources", es: "Recursos", fr: "Ressources", ko: "자료", ru: "Ресурсы",
   };
   const metadata = locale === "en"
-    ? { title: "Technical Articles｜Resources｜FOREACH", description: "FOREACH technical articles about product selection, material compatibility, tubing connections, sealing methods and microfluidic system applications." }
-    : { title: `${pageData.hero.title}｜${sectionLabels[locale]}｜FOREACH`, description: pageData.hero.description };
+    ? { title: "Technical Articles｜Resources｜Foreach Technology", description: "Foreach technical articles about product selection, material compatibility, tubing connections, sealing methods and microfluidic system applications." }
+    : { title: `${pageData.hero.title}｜${sectionLabels[locale]}｜Foreach Technology`, description: pageData.hero.description };
   return locale === "en" ? metadata : { ...metadata, openGraph: metadata };
 }
 

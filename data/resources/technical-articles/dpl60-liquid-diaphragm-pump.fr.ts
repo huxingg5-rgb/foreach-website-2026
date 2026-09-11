@@ -5,7 +5,7 @@ export const dpl60ArticleFrCopy = {
     title: "Comment choisir une pompe à membrane de 600 mL/min : guide DPL60 débit, pression et modèles",
     seoTitle: "Pompe à membrane 600 mL/min : point de fonctionnement et modèles DPL60",
     seoDescription:
-      "Guide de sélection de la pompe à membrane pour liquides FOREACH DPL60 : débit à vide 600 mL/min, pression nominale 100 kPa, courbe, moteurs, matériaux, codification, logique de configuration et méthode de sélection.",
+      "Guide de sélection de la pompe à membrane pour liquides Foreach DPL60 : débit à vide 600 mL/min, pression nominale 100 kPa, courbe, moteurs, matériaux, codification, logique de configuration et méthode de sélection.",
   },
   diagram: {
     ariaLabel: "Explication du point de fonctionnement de la pompe DPL60",
@@ -22,7 +22,7 @@ export const dpl60ArticleFrCopy = {
   section1: {
     title: "1. À quel besoin répond le DPL60 de 600 mL/min ?",
     paragraphs: [
-      "Le DPL60 est la pompe à membrane miniature pour liquides de FOREACH destinée aux circuits instrumentaux demandant un débit plus élevé. Elle convient au lavage, au rinçage, à la circulation, au transfert de volumes plus importants et à l'évacuation des effluents.",
+      "Le DPL60 est la pompe à membrane miniature pour liquides de Foreach destinée aux circuits instrumentaux demandant un débit plus élevé. Elle convient au lavage, au rinçage, à la circulation, au transfert de volumes plus importants et à l'évacuation des effluents.",
       "Les 600 mL/min correspondent au débit de référence à vide. La pression nominale est de 100 kPa, la hauteur d'auto-amorçage de 3 mH₂O, avec des versions 12 V ou 24 V CC, à balais ou sans balais, et des combinaisons EP/PS ou FF/PS.",
       "Comme toute pompe à membrane miniature, elle utilise le mouvement alternatif d'une membrane et des clapets anti-retour. Pour le DPL60, le point essentiel est cependant le fonctionnement après intégration dans le circuit fluidique réel.",
       "Pour un besoin principalement proche de 300 mL/min, comparez le DPL30. Si la contre-pression est la contrainte dominante, évaluez une pompe de pression supérieure plutôt que de vous fier au seul débit à vide.",

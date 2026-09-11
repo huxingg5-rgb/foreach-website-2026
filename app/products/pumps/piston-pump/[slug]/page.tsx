@@ -658,7 +658,7 @@ export async function generateMetadata({ params }: PageProps) {
 
   if (!data) {
     return {
-      title: "Piston Pump Detail | FOREACH",
+      title: "Piston Pump Detail | Foreach Technology",
     };
   }
 
@@ -675,7 +675,7 @@ export async function generateMetadata({ params }: PageProps) {
   );
 
   return {
-    title: title.includes("FOREACH") ? title : `${title} | FOREACH`,
+    title: title.includes("Foreach Technology") ? title : `${title} | Foreach Technology`,
     description,
     ...buildProductSocialMetadata({
       data: pageData,

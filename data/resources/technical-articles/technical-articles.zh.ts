@@ -63,7 +63,7 @@ export const technicalArticlesZhData: TechnicalArticlesSourcePageData = {
       date: "2026-09-06",
       coverImage:
         "/images/resources/technical-articles/piston-pump/piston-pump-head-material-selection-cover.webp",
-      coverAlt: "FOREACH透明柱塞泵泵头材料与接液结构特写",
+      coverAlt: "Foreach透明柱塞泵泵头材料与接液结构特写",
       content: [
         {
           title: "柱塞泵泵头材料对比",
@@ -76,7 +76,7 @@ export const technicalArticlesZhData: TechnicalArticlesSourcePageData = {
             "泵头选材需要同时核对柱塞、密封、阀、管路和接头，并结合介质、浓度、温度、接触时间、压力、清洗方式和目标工作液量完成样件及整机验证。",
         },
       ],
-      seoTitle: "柱塞泵泵头材料怎么选？PMMA、PEEK等材料对比 | FOREACH",
+      seoTitle: "柱塞泵泵头材料怎么选？PMMA、PEEK等材料对比 | Foreach Technology",
       seoDescription:
         "柱塞泵泵头材料怎么选？对比PMMA、PCTG、PPS、PVDF、PP、PTFE、PEEK、POM和PSU的选型方向，了解介质兼容、完整接液路径与验证方法。",
     },
@@ -90,7 +90,7 @@ export const technicalArticlesZhData: TechnicalArticlesSourcePageData = {
       date: "2026-09-06",
       coverImage:
         "/images/resources/technical-articles/piston-pump/piston-pump-accuracy-repeatability-resolution-cover.webp",
-      coverAlt: "FOREACH SM系列精密柱塞泵实物图",
+      coverAlt: "Foreach SM系列精密柱塞泵实物图",
       content: [
         {
           title: "柱塞泵准确性、重复性和分辨率",
@@ -100,10 +100,10 @@ export const technicalArticlesZhData: TechnicalArticlesSourcePageData = {
         {
           title: "小体积分液与完整液路验证",
           content:
-            "文章结合FOREACH EA-500-PMMA的满量程和2%量程参数，介绍机械背隙、阀门、气泡、介质、控制程序及测试方法对分液结果的影响。",
+            "文章结合Foreach EA-500-PMMA的满量程和2%量程参数，介绍机械背隙、阀门、气泡、介质、控制程序及测试方法对分液结果的影响。",
         },
       ],
-      seoTitle: "柱塞泵准确性、重复性与分辨率详解 | FOREACH",
+      seoTitle: "柱塞泵准确性、重复性与分辨率详解 | Foreach Technology",
       seoDescription:
         "柱塞泵分辨率不等于分液准确性。本文解释准确性、重复性和分辨率的区别，以及电机步数、工作行程、气泡、阀门和液体性质对小体积分液结果的影响。",
     },
@@ -313,11 +313,11 @@ export const technicalArticlesZhData: TechnicalArticlesSourcePageData = {
       category: "pumps-valves",
       title: "精密柱塞泵是什么？工作原理、优势与应用介绍",
       summary:
-        "了解精密柱塞泵的工作原理、主要优势、应用场景及基础选型方法，并认识FOREACH EA、SM和TM柱塞泵系列。",
+        "了解精密柱塞泵的工作原理、主要优势、应用场景及基础选型方法，并认识Foreach EA、SM和TM柱塞泵系列。",
       date: "2026-06-19",
       coverImage:
         "/images/resources/technical-articles/piston-pump/micro-plunger-pump-selection-cover.webp",
-      coverAlt: "FOREACH TM系列超微型精密柱塞泵实物图",
+      coverAlt: "Foreach TM系列超微型精密柱塞泵实物图",
       content: [
         {
           title: "精密柱塞泵如何工作",
@@ -325,14 +325,14 @@ export const technicalArticlesZhData: TechnicalArticlesSourcePageData = {
             "精密柱塞泵利用柱塞往复运动完成液体吸取、计量和分配。完整正文由精密柱塞泵技术文章组件渲染。",
         },
         {
-          title: "FOREACH柱塞泵系列与选型",
+          title: "Foreach柱塞泵系列与选型",
           content:
             "文章介绍EA、SM、TM系列，并从工作液量、准确性、重复性、介质、压力、接口、安装和控制等方面说明基础选型方法。",
         },
       ],
-      seoTitle: "精密柱塞泵是什么？工作原理、应用与选型 | FOREACH",
+      seoTitle: "精密柱塞泵是什么？工作原理、应用与选型 | Foreach Technology",
       seoDescription:
-        "了解精密柱塞泵的工作原理、主要优势、应用场景及基础选型方法，并认识FOREACH EA、SM和TM柱塞泵系列。",
+        "了解精密柱塞泵的工作原理、主要优势、应用场景及基础选型方法，并认识Foreach EA、SM和TM柱塞泵系列。",
     },
     {
       id: "solenoid-valves-in-microfluidic-systems",

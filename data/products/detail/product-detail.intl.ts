@@ -203,7 +203,7 @@ const EXACT_TRANSLATIONS: Record<string, string> = {
   "阀门配置": "Valve Configuration",
   "形状": "Shape",
   "完整型号": "Complete Model Numbers",
-  "恒永达型号": "FOREACH Model",
+  "恒永达型号": "Foreach Model",
   "常见问题": "Frequently Asked Questions",
   "常见应用": "Typical Applications",
   "规格参数": "Specifications",
@@ -1172,8 +1172,8 @@ const NARRATIVE_EXACT_TRANSLATIONS: Record<string, string> = {
     "Internal polishing can reduce liquid retention and wall adhesion, improving cleaning performance and helping to reduce cross-contamination in reagent, sample, and low-residue fluidic paths.",
   "可以根据项目需求确认电容式液位检测适配方式，需要结合针体结构、线缆连接、安装方式和整机检测方案确认。":
     "Capacitive liquid-level detection can be evaluated for the project. Confirmation should include the probe structure, cable connection, mounting method, and the instrument-level detection scheme.",
-  "建议优先提供 2D 图纸、3D 文件或实物样品。如果暂时没有完整图纸，也可以先提供仪器安装空间、目标液体、吸液容量、针体长度和接口要求，由 FOREACH 协助整理初步确认项。":
-    "Providing 2D drawings, 3D files, or a physical sample is preferred. If complete drawings are not yet available, provide the instrument installation space, target fluid, aspiration volume, probe length, and interface requirements so FOREACH can prepare an initial configuration review.",
+  "建议优先提供 2D 图纸、3D 文件或实物样品。如果暂时没有完整图纸，也可以先提供仪器安装空间、目标液体、吸液容量、针体长度和接口要求，由 Foreach 协助整理初步确认项。":
+    "Providing 2D drawings, 3D files, or a physical sample is preferred. If complete drawings are not yet available, provide the instrument installation space, target fluid, aspiration volume, probe length, and interface requirements so Foreach can prepare an initial configuration review.",
   "通常需要结合针尖形状、内壁抛光、外壁涂层、清洗方式和液体特性一起确认。对于高残留风险的样本或试剂，可重点评估内壁粗糙度、外壁防挂液处理和清洗站适配。":
     "Tip geometry, internal polishing, external coating, cleaning method, and fluid properties should be evaluated together. For samples or reagents with higher residue risk, review internal roughness, external anti-drip treatment, and cleaning-station compatibility in particular.",
   "采样针更偏液体吸取和分配，穿刺针更强调穿透封膜、瓶塞或密闭耗材后的取液能力，通常需要确认针尖强度、穿刺角度和排气结构。":
@@ -1631,7 +1631,7 @@ const SOURCE_ALIGNED_NARRATIVE_TRANSLATIONS: Record<string, string> = {
 
 const SOURCE_ALIGNED_CTA_TRANSLATIONS: Record<string, string> = {
   "注射泵可根据您的液路与结构需求进行定制": "Configure the syringe pump around your fluidic path and mechanical requirements.",
-  "恒永达可根据您的应用场景、注射器规格、行程平台、通道数量、阀门结构、通讯方式、安装空间和液路集成需求，协助确认适合自动化仪器集成的注射泵配置。": "FOREACH can help confirm a syringe-pump configuration for automated instrument integration based on the application, syringe specification, stroke platform, channel count, valve structure, communication interface, available space, and fluidic integration requirements.",
+  "恒永达可根据您的应用场景、注射器规格、行程平台、通道数量、阀门结构、通讯方式、安装空间和液路集成需求，协助确认适合自动化仪器集成的注射泵配置。": "Foreach can help confirm a syringe-pump configuration for automated instrument integration based on the application, syringe specification, stroke platform, channel count, valve structure, communication interface, available space, and fluidic integration requirements.",
   "需要确认倒刺接头规格？": "Need help confirming the barb fitting specification?",
   "提交软管内径、产品结构、材质、颜色及使用工况，由工程师协助确认标准型号或定制方案。": "Share the tube ID, fitting structure, material, color, and operating conditions so an engineer can confirm a standard model or custom configuration.",
   "需要确认穿板倒刺接头规格？": "Need help confirming the bulkhead barb fitting specification?",
@@ -1645,13 +1645,13 @@ const SOURCE_ALIGNED_CTA_TRANSLATIONS: Record<string, string> = {
   "需要确认快插接头型号？": "Need help confirming the push-in fitting model?",
   "提交接口尺寸、公母端、阀门配置、安装方式、材质及使用工况，由工程师协助确认标准型号。": "Share the port size, male or female end, valve configuration, mounting method, material, and operating conditions so an engineer can confirm the standard model.",
   "需要定制采样针结构？": "Need a custom sampling-needle design?",
-  "请提供针管外径、内径、长度、针尖形状、侧孔要求、安装空间、液体类型和是否需要液位检测，FOREACH 可协助确认采样针定制方案。": "Please provide the needle-tube OD, ID, length, tip geometry, side-hole requirements, available space, fluid type, and whether liquid-level detection is required. FOREACH can help confirm a custom sampling-needle design.",
+  "请提供针管外径、内径、长度、针尖形状、侧孔要求、安装空间、液体类型和是否需要液位检测，Foreach 可协助确认采样针定制方案。": "Please provide the needle-tube OD, ID, length, tip geometry, side-hole requirements, available space, fluid type, and whether liquid-level detection is required. Foreach can help confirm a custom sampling-needle design.",
   "需要确认穿刺针针尖、排气和取液结构？": "Need to confirm the piercing-tip, venting, and liquid-draw structure?",
-  "请提供耗材结构、穿刺对象、穿刺深度、排气方向、取液路径和安装空间，FOREACH 可协助确认穿刺针定制方案。": "Please provide the consumable structure, piercing target, piercing depth, venting direction, liquid-draw path, and available space. FOREACH can help confirm a custom piercing-needle design.",
+  "请提供耗材结构、穿刺对象、穿刺深度、排气方向、取液路径和安装空间，Foreach 可协助确认穿刺针定制方案。": "Please provide the consumable structure, piercing target, piercing depth, venting direction, liquid-draw path, and available space. Foreach can help confirm a custom piercing-needle design.",
   "需要定制清洗针或清洗站液路结构？": "Need a custom wash needle or wash-station fluidic design?",
-  "请提供清洗站空间、清洗液路径、废液路径、喷孔方向、针体数量和清洗动作要求，FOREACH 可协助确认清洗针定制方案。": "Please provide the wash-station space, wash-fluid path, waste-fluid path, spray-hole direction, needle count, and washing-motion requirements. FOREACH can help confirm a custom wash-needle design.",
+  "请提供清洗站空间、清洗液路径、废液路径、喷孔方向、针体数量和清洗动作要求，Foreach 可协助确认清洗针定制方案。": "Please provide the wash-station space, wash-fluid path, waste-fluid path, spray-hole direction, needle count, and washing-motion requirements. Foreach can help confirm a custom wash-needle design.",
   "需要确认搅拌桨叶片形状和混匀效果？": "Need to confirm the impeller geometry and mixing performance?",
-  "请提供反应杯尺寸、目标液量、转速范围、混匀时间、叶片形状、安装端结构和是否需要涂层，FOREACH 可协助确认搅拌桨定制方案。": "Please provide the reaction-cup dimensions, target liquid volume, speed range, mixing time, blade geometry, mounting-end structure, and whether a coating is required. FOREACH can help confirm a custom impeller design.",
+  "请提供反应杯尺寸、目标液量、转速范围、混匀时间、叶片形状、安装端结构和是否需要涂层，Foreach 可协助确认搅拌桨定制方案。": "Please provide the reaction-cup dimensions, target liquid volume, speed range, mixing time, blade geometry, mounting-end structure, and whether a coating is required. Foreach can help confirm a custom impeller design.",
   "实验室自动化设备管路": "Tubing for laboratory automation equipment",
 };
 const SOURCE_ALIGNED_DETAIL_TRANSLATIONS: Record<string, string> = {
@@ -1893,7 +1893,7 @@ function translateActualChineseNarrative(
 
     return `${pumpSeoTitleMatch[1]} ${[motor, type]
       .filter(Boolean)
-      .join(" ")} | ${pumpSeoTitleMatch[4]} | FOREACH`;
+      .join(" ")} | ${pumpSeoTitleMatch[4]} | Foreach Technology`;
   }
 
   const pumpSeoDescriptionMatch = source.match(
@@ -3297,7 +3297,7 @@ function translateNarrativePattern(
     const remainder = translateNarrativeSentences(value.slice(3));
     return remainder && !HAN_PATTERN.test(remainder)
       ? `Yes. ${remainder}`
-      : "Yes. Contact the FOREACH engineering team for configuration review.";
+      : "Yes. Contact the Foreach engineering team for configuration review.";
   }
 
   const questionPatterns: Array<{
@@ -3816,7 +3816,7 @@ function fallbackText(key: string, context: LocalizationContext) {
     normalizedKey === "content" ||
     normalizedKey === "desc"
   ) {
-    return `Confirm the fluid, operating range, wetted materials, connections, and installation requirements with the FOREACH engineering team.`;
+    return `Confirm the fluid, operating range, wetted materials, connections, and installation requirements with the Foreach engineering team.`;
   }
 
   if (
@@ -4311,7 +4311,7 @@ export function localizeProductDetailData<T extends DetailRecord>(data: T): T {
         String(sourceBottomCtaDescription),
         context
       )
-    : "Share the fluid, operating range, wetted materials, connections, control method, and installation requirements. The FOREACH engineering team can help confirm a suitable configuration.";
+    : "Share the fluid, operating range, wetted materials, connections, control method, and installation requirements. The Foreach engineering team can help confirm a suitable configuration.";
   localized.bottomCtaDesc = localized.bottomCtaDescription;
   localized.bottomCtaButtonText = sourceBottomCtaButton
     ? translateNarrativeText(

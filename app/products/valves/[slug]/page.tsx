@@ -266,12 +266,12 @@ export async function generateMetadata({ params }: ValveDetailPageProps) {
 
   if (!detail) {
     return {
-      title: "阀系列产品｜恒永达 FOREACH",
+      title: "阀系列产品｜恒永达 Foreach",
     };
   }
 
   return {
-    title: detail.seoTitle || detail.title + "｜" + detail.productTypeName + "｜恒永达 FOREACH",
+    title: detail.seoTitle || detail.title + "｜" + detail.productTypeName + "｜恒永达 Foreach",
     description: detail.seoDescription || detail.description,
     ...buildProductSocialMetadata({
       data: detail,

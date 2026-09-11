@@ -27,7 +27,7 @@ export const ivdCleaningWashRinsePumpCopies = {
       title:
         "IVD 中的 Cleaning Pump、Wash Pump 和 Rinse Pump 有什么区别？为什么清洗液路常用微型隔膜泵？",
       seoTitle:
-        "IVD Cleaning、Wash 与 Rinse Pump：为何使用微型隔膜泵？｜FOREACH 恒永达",
+        "IVD Cleaning、Wash 与 Rinse Pump：为何使用微型隔膜泵？｜Foreach Technology 恒永达",
       seoDescription:
         "了解 IVD 液路中的 Cleaning Pump、Wash Pump 和 Rinse Pump 如何工作、为何常用微型隔膜泵，以及如何按流量、压力、介质和泵型进行选型。",
       coverImage: COVER_IMAGE,
@@ -266,7 +266,7 @@ export const ivdCleaningWashRinsePumpCopies = {
   en: {
     metadata: {
       title: "What Are Cleaning, Wash and Rinse Pumps in IVD Systems, and Why Are Miniature Diaphragm Pumps Used?",
-      seoTitle: "IVD Cleaning, Wash & Rinse Pumps: Why Use Diaphragm Pumps? | FOREACH",
+      seoTitle: "IVD Cleaning, Wash & Rinse Pumps: Why Use Diaphragm Pumps? | Foreach Technology",
       seoDescription: "Learn how cleaning, wash and rinse pumps work in IVD fluidic systems, why miniature diaphragm pumps are commonly used, and how to select flow, pressure and pump type.",
       coverImage: COVER_IMAGE,
       coverAlt: "IVD cleaning-fluid supply path with a miniature diaphragm pump, filter, manifold and rinse nozzles",
@@ -366,7 +366,7 @@ export const ivdCleaningWashRinsePumpCopies = {
   es: {
     metadata: {
       title: "¿Qué son las bombas de limpieza, lavado y enjuague en los sistemas IVD y por qué se utilizan bombas miniatura de diafragma?",
-      seoTitle: "Bombas de limpieza, lavado y enjuague IVD: guía de selección | FOREACH",
+      seoTitle: "Bombas de limpieza, lavado y enjuague IVD: guía de selección | Foreach Technology",
       seoDescription: "Conozca la función de las bombas de limpieza, lavado y enjuague en sistemas fluídicos IVD y cómo seleccionar caudal, presión, materiales y tipo de bomba.",
       coverImage: COVER_IMAGE,
       coverAlt: "Circuito de suministro de líquido de limpieza IVD con bomba miniatura de diafragma, filtro, colector y boquillas de enjuague",
@@ -412,7 +412,7 @@ export const ivdCleaningWashRinsePumpCopies = {
   fr: {
     metadata: {
       title: "Que sont les pompes de nettoyage, de lavage et de rinçage dans les systèmes IVD, et pourquoi utiliser des pompes miniatures à membrane ?",
-      seoTitle: "Pompes de nettoyage, lavage et rinçage IVD : guide de sélection | FOREACH",
+      seoTitle: "Pompes de nettoyage, lavage et rinçage IVD : guide de sélection | Foreach Technology",
       seoDescription: "Comprendre le rôle des pompes de nettoyage, lavage et rinçage dans un circuit IVD et choisir débit, pression, matériaux et type de pompe.",
       coverImage: COVER_IMAGE,
       coverAlt: "Circuit d’alimentation en liquide de nettoyage IVD avec pompe miniature à membrane, filtre, collecteur et buses de rinçage",
@@ -454,7 +454,7 @@ export const ivdCleaningWashRinsePumpCopies = {
   ko: {
     metadata: {
       title: "IVD 시스템의 Cleaning Pump, Wash Pump, Rinse Pump는 무엇이며 왜 소형 다이어프램 펌프를 사용할까요?",
-      seoTitle: "IVD 세척·워시·린스 펌프 선정 가이드 | FOREACH",
+      seoTitle: "IVD 세척·워시·린스 펌프 선정 가이드 | Foreach Technology",
       seoDescription: "IVD 유로에서 cleaning, wash, rinse 펌프의 역할과 소형 다이어프램 펌프를 사용하는 이유, 유량·압력·재질·펌프 유형 선정 방법을 알아봅니다.",
       coverImage: COVER_IMAGE,
       coverAlt: "소형 다이어프램 펌프, 필터, 매니폴드 및 린스 노즐이 있는 IVD 세척액 공급 유로",
@@ -493,7 +493,7 @@ export const ivdCleaningWashRinsePumpCopies = {
   ru: {
     metadata: {
       title: "Что такое Cleaning Pump, Wash Pump и Rinse Pump в системах IVD и почему применяют миниатюрные мембранные насосы?",
-      seoTitle: "Насосы очистки, промывки и ополаскивания IVD: выбор | FOREACH",
+      seoTitle: "Насосы очистки, промывки и ополаскивания IVD: выбор | Foreach Technology",
       seoDescription: "Различия между насосами очистки, промывки и ополаскивания в IVD, причины применения мембранных насосов и выбор расхода, давления и материалов.",
       coverImage: COVER_IMAGE,
       coverAlt: "Контур подачи промывочной жидкости IVD с миниатюрным мембранным насосом, фильтром, коллектором и форсунками",

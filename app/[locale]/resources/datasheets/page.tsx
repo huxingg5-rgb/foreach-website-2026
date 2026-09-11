@@ -132,7 +132,7 @@ export async function generateMetadata({
   const metadata = {
     title:
       locale === "en"
-        ? "Resources | FOREACH"
+        ? "Resources | Foreach Technology"
         : pageData.pageText.seo.title,
     description: pageData.pageText.seo.description,
   };

@@ -83,7 +83,7 @@ export const fittingReplacementQuickConnectQ20PageIntl = {
       },
 
       productCard: {
-        productName: "FOREACH 接头",
+        productName: "Foreach 接头",
         productCode: "商品编码：",
         foreachModel: "恒永达型号：",
         compatibleModels: "兼容编码：",
@@ -109,7 +109,7 @@ export const fittingReplacementQuickConnectQ20PageIntl = {
     banner: {
       title: "Fitting Replacement Search",
       description:
-        "Enter a competitor model, product code, or FOREACH model to quickly find matching Q20 quick-connect fittings and model details.",
+        "Enter a competitor model, product code, or Foreach model to quickly find matching Q20 quick-connect fittings and model details.",
     },
 
     breadcrumbs: [
@@ -128,7 +128,7 @@ export const fittingReplacementQuickConnectQ20PageIntl = {
     ],
 
     search: {
-      placeholder: "Competitor model, product code, or FOREACH model",
+      placeholder: "Competitor model, product code, or Foreach model",
       buttonText: "Search",
     },
 
@@ -164,9 +164,9 @@ export const fittingReplacementQuickConnectQ20PageIntl = {
       },
 
       productCard: {
-        productName: "FOREACH Fitting",
+        productName: "Foreach Fitting",
         productCode: "Product Code:",
-        foreachModel: "FOREACH Model:",
+        foreachModel: "Foreach Model:",
         compatibleModels: "Compatible Models:",
         viewDetail: "View Details",
         addToCart: "Add to List",
@@ -190,7 +190,7 @@ export const fittingReplacementQuickConnectQ20PageIntl = {
     banner: {
       title: "Búsqueda de sustitución de conectores",
       description:
-        "Introduzca un modelo de la competencia, código de producto o modelo FOREACH para encontrar rápidamente conectores rápidos Q20 equivalentes y sus detalles.",
+        "Introduzca un modelo de la competencia, código de producto o modelo Foreach para encontrar rápidamente conectores rápidos Q20 equivalentes y sus detalles.",
     },
 
     breadcrumbs: [
@@ -209,7 +209,7 @@ export const fittingReplacementQuickConnectQ20PageIntl = {
     ],
 
     search: {
-      placeholder: "Modelo, código de producto o modelo FOREACH",
+      placeholder: "Modelo, código de producto o modelo Foreach",
       buttonText: "Buscar",
     },
 
@@ -245,7 +245,7 @@ export const fittingReplacementQuickConnectQ20PageIntl = {
       },
 
       productCard: {
-        productName: "Racor FOREACH",
+        productName: "Racor Foreach",
         productCode: "Código:",
         foreachModel: "Modelo:",
         compatibleModels: "Compatibles:",
@@ -271,7 +271,7 @@ export const fittingReplacementQuickConnectQ20PageIntl = {
     banner: {
       title: "Recherche de remplacement de raccords",
       description:
-        "Saisissez une référence concurrente, un code produit ou un modèle FOREACH pour trouver rapidement les raccords rapides Q20 correspondants et leurs détails.",
+        "Saisissez une référence concurrente, un code produit ou un modèle Foreach pour trouver rapidement les raccords rapides Q20 correspondants et leurs détails.",
     },
 
     breadcrumbs: [
@@ -290,7 +290,7 @@ export const fittingReplacementQuickConnectQ20PageIntl = {
     ],
 
     search: {
-      placeholder: "Référence, code produit ou modèle FOREACH",
+      placeholder: "Référence, code produit ou modèle Foreach",
       buttonText: "Rechercher",
     },
 
@@ -326,7 +326,7 @@ export const fittingReplacementQuickConnectQ20PageIntl = {
       },
 
       productCard: {
-        productName: "Raccord FOREACH",
+        productName: "Raccord Foreach",
         productCode: "Code :",
         foreachModel: "Modèle :",
         compatibleModels: "Compatibles :",
@@ -352,7 +352,7 @@ export const fittingReplacementQuickConnectQ20PageIntl = {
     banner: {
       title: "피팅 대체 조회",
       description:
-        "경쟁사 모델, 제품 코드 또는 FOREACH 모델을 입력하여 Q20 퀵 커넥트 피팅의 대응 제품과 모델 정보를 빠르게 확인할 수 있습니다.",
+        "경쟁사 모델, 제품 코드 또는 Foreach 모델을 입력하여 Q20 퀵 커넥트 피팅의 대응 제품과 모델 정보를 빠르게 확인할 수 있습니다.",
     },
 
     breadcrumbs: [
@@ -371,7 +371,7 @@ export const fittingReplacementQuickConnectQ20PageIntl = {
     ],
 
     search: {
-      placeholder: "경쟁사 모델, 제품 코드 또는 FOREACH 모델을 입력하세요",
+      placeholder: "경쟁사 모델, 제품 코드 또는 Foreach 모델을 입력하세요",
       buttonText: "검색",
     },
 
@@ -407,9 +407,9 @@ export const fittingReplacementQuickConnectQ20PageIntl = {
       },
 
       productCard: {
-        productName: "FOREACH 피팅",
+        productName: "Foreach 피팅",
         productCode: "제품 코드:",
-        foreachModel: "FOREACH 모델:",
+        foreachModel: "Foreach 모델:",
         compatibleModels: "호환 코드:",
         viewDetail: "상세 보기",
         addToCart: "목록에 추가",
@@ -433,7 +433,7 @@ export const fittingReplacementQuickConnectQ20PageIntl = {
     banner: {
       title: "Поиск аналогов фитингов",
       description:
-        "Введите модель конкурента, код изделия или модель FOREACH, чтобы быстро найти соответствующие быстросъемные фитинги Q20 и информацию о модели.",
+        "Введите модель конкурента, код изделия или модель Foreach, чтобы быстро найти соответствующие быстросъемные фитинги Q20 и информацию о модели.",
     },
 
     breadcrumbs: [
@@ -452,7 +452,7 @@ export const fittingReplacementQuickConnectQ20PageIntl = {
     ],
 
     search: {
-      placeholder: "Артикул, код или модель FOREACH",
+      placeholder: "Артикул, код или модель Foreach",
       buttonText: "Поиск",
     },
 
@@ -487,7 +487,7 @@ export const fittingReplacementQuickConnectQ20PageIntl = {
       },
 
       productCard: {
-        productName: "Фитинг FOREACH",
+        productName: "Фитинг Foreach",
         productCode: "Код:",
         foreachModel: "Модель:",
         compatibleModels: "Аналоги:",

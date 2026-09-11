@@ -2,13 +2,13 @@ import type { DiaphragmPumpEngineeringArticleCopy } from "./diaphragm-pump-engin
 
 export const fluidResistanceCalculatorGuideFrCopy = {
   "metadata": {
-    "title": "À quoi sert le calcul de résistance fluidique ? Utiliser le calculateur FOREACH pour concevoir un circuit",
-    "seoTitle": "Calculateur de résistance fluidique : débit et pertes | FOREACH",
+    "title": "À quoi sert le calcul de résistance fluidique ? Utiliser le calculateur Foreach pour concevoir un circuit",
+    "seoTitle": "Calculateur de résistance fluidique : débit et pertes | Foreach Technology",
     "seoDescription": "Comparez diamètres de tube et Cv de vanne pour estimer les pertes, calculer le débit disponible et identifier la résistance dominante, puis confrontez les résultats aux courbes de pompe et aux mesures.",
     "coverImage": "/images/resources/technical-articles/fluid-resistance-guide/comparison.fr.svg",
     "coverAlt": "Comparaison des pertes calculées avant et après modification du diamètre et du Cv"
   },
-  "deck": "Une pompe satisfait le débit à vide, mais l’alimentation devient insuffisante après ajout des tubes, vannes et raccords. Le calcul de résistance transforme ce problème en données comparables : différentiel nécessaire au débit cible, localisation des pertes et effets du diamètre, de la longueur, du Cv ou de la viscosité. À partir des fonctions réelles du calculateur FOREACH et d’un exemple reproductible, cet article montre comment utiliser les résultats pour concevoir, sélectionner, diagnostiquer et valider un prototype.",
+  "deck": "Une pompe satisfait le débit à vide, mais l’alimentation devient insuffisante après ajout des tubes, vannes et raccords. Le calcul de résistance transforme ce problème en données comparables : différentiel nécessaire au débit cible, localisation des pertes et effets du diamètre, de la longueur, du Cv ou de la viscosité. À partir des fonctions réelles du calculateur Foreach et d’un exemple reproductible, cet article montre comment utiliser les résultats pour concevoir, sélectionner, diagnostiquer et valider un prototype.",
   "leadBlocks": [
     {
       "type": "paragraph",
@@ -16,7 +16,7 @@ export const fluidResistanceCalculatorGuideFrCopy = {
     },
     {
       "type": "paragraph",
-      "text": "Le calculateur FOREACH accepte des lignes ID définies par diamètre intérieur et longueur, et des lignes Cv définies par coefficient de débit. Il calcule les pertes à débit connu, le débit à perte connue, les statistiques, la courbe PQ du circuit et un export Excel. Il aide à établir un premier bilan et à refaire les calculs après mesure des paramètres."
+      "text": "Le calculateur Foreach accepte des lignes ID définies par diamètre intérieur et longueur, et des lignes Cv définies par coefficient de débit. Il calcule les pertes à débit connu, le débit à perte connue, les statistiques, la courbe PQ du circuit et un export Excel. Il aide à établir un premier bilan et à refaire les calculs après mesure des paramètres."
     },
     {
       "type": "paragraph",
@@ -27,7 +27,7 @@ export const fluidResistanceCalculatorGuideFrCopy = {
       "items": [
         {
           "href": "/resources/calculators/fluid-resistance/",
-          "label": "Ouvrir le calculateur FOREACH et reproduire l’exemple"
+          "label": "Ouvrir le calculateur Foreach et reproduire l’exemple"
         }
       ]
     }
@@ -207,7 +207,7 @@ export const fluidResistanceCalculatorGuideFrCopy = {
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Exemple calculé avec le noyau FOREACH : eau à 20 ℃, débit 60 mL/min, tube droit de 1 m en série avec un composant Cv. Le coefficient local supplémentaire du tube est nul. Le composant utilise le modèle d’étranglement par orifice, supposé mince à arête vive. Pressions source et terminale, dénivelés et éléments non indiqués sont exclus."
+          "text": "Exemple calculé avec le noyau Foreach : eau à 20 ℃, débit 60 mL/min, tube droit de 1 m en série avec un composant Cv. Le coefficient local supplémentaire du tube est nul. Le composant utilise le modèle d’étranglement par orifice, supposé mince à arête vive. Pressions source et terminale, dénivelés et éléments non indiqués sont exclus."
         },
         {
           "type": "paragraph",
@@ -426,7 +426,7 @@ export const fluidResistanceCalculatorGuideFrCopy = {
       ]
     },
     {
-      "title": "11. Préparer la sélection des pompes, vannes et tubes FOREACH",
+      "title": "11. Préparer la sélection des pompes, vannes et tubes Foreach",
       "blocks": [
         {
           "type": "paragraph",
@@ -438,7 +438,7 @@ export const fluidResistanceCalculatorGuideFrCopy = {
         },
         {
           "type": "paragraph",
-          "text": "Joindre schéma, paramètres, calculs et débits/pressions mesurés. FOREACH peut s’appuyer sur les données des composants pour discuter la sélection et préciser les informations et essais de prototype encore nécessaires."
+          "text": "Joindre schéma, paramètres, calculs et débits/pressions mesurés. Foreach peut s’appuyer sur les données des composants pour discuter la sélection et préciser les informations et essais de prototype encore nécessaires."
         },
         {
           "type": "links",
@@ -449,11 +449,11 @@ export const fluidResistanceCalculatorGuideFrCopy = {
             },
             {
               "href": "/resources/technical-articles/foreach-miniature-diaphragm-pump-oem-integration/",
-              "label": "Pour approfondir : intégration OEM FOREACH, point de fonctionnement et validation"
+              "label": "Pour approfondir : intégration OEM Foreach, point de fonctionnement et validation"
             },
             {
               "href": "/products/",
-              "label": "Voir les pompes, vannes et composants FOREACH"
+              "label": "Voir les pompes, vannes et composants Foreach"
             }
           ]
         }
@@ -489,7 +489,7 @@ export const fluidResistanceCalculatorGuideFrCopy = {
   ],
   "cta": {
     "title": "Discutez des composants à partir de votre circuit et de ses pertes",
-    "description": "Indiquez fluide, température, débit cible, dimensions, paramètres des composants, pressions d’entrée/sortie et résultats calculés ou mesurés pour préciser la sélection et la validation avec FOREACH.",
+    "description": "Indiquez fluide, température, débit cible, dimensions, paramètres des composants, pressions d’entrée/sortie et résultats calculés ou mesurés pour préciser la sélection et la validation avec Foreach.",
     "contactLabel": "Soumettre les besoins du circuit",
     "productsLabel": "Utiliser le calculateur",
     "productsHref": "/resources/calculators/fluid-resistance/"

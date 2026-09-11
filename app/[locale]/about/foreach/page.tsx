@@ -40,29 +40,29 @@ const metadataMap: Record<
   }
 > = {
   en: {
-    title: "About FOREACH｜FOREACH Technology",
+    title: "About Foreach｜Foreach Technology",
     description:
-      "FOREACH focuses on microfluidic core components and fluidic system solutions for IVD, life sciences, high-end analytical instruments, synthetic biology, and laboratory automation.",
+      "Foreach focuses on microfluidic core components and fluidic system solutions for IVD, life sciences, high-end analytical instruments, synthetic biology, and laboratory automation.",
   },
   es: {
-    title: "Sobre FOREACH｜FOREACH Technology",
+    title: "Sobre Foreach｜Foreach Technology",
     description:
-      "FOREACH se centra en componentes centrales de microfluídica y soluciones de sistemas fluídicos para IVD, ciencias de la vida, instrumentos analíticos de alta gama, biología sintética y automatización de laboratorio.",
+      "Foreach se centra en componentes centrales de microfluídica y soluciones de sistemas fluídicos para IVD, ciencias de la vida, instrumentos analíticos de alta gama, biología sintética y automatización de laboratorio.",
   },
   fr: {
-    title: "À propos de FOREACH｜FOREACH Technology",
+    title: "À propos de Foreach｜Foreach Technology",
     description:
-      "FOREACH se concentre sur les composants clés de microfluidique et les solutions de systèmes fluidiques pour l’IVD, les sciences de la vie, les instruments analytiques haut de gamme, la biologie synthétique et l’automatisation de laboratoire.",
+      "Foreach se concentre sur les composants clés de microfluidique et les solutions de systèmes fluidiques pour l’IVD, les sciences de la vie, les instruments analytiques haut de gamme, la biologie synthétique et l’automatisation de laboratoire.",
   },
   ko: {
-    title: "FOREACH 소개｜FOREACH Technology",
+    title: "Foreach 소개｜Foreach Technology",
     description:
-      "FOREACH는 IVD, 생명과학, 고급 분석기기, 합성생물학 및 실험실 자동화를 위한 미세유체 핵심 부품과 유체 시스템 솔루션에 집중합니다.",
+      "Foreach는 IVD, 생명과학, 고급 분석기기, 합성생물학 및 실험실 자동화를 위한 미세유체 핵심 부품과 유체 시스템 솔루션에 집중합니다.",
   },
   ru: {
-    title: "О FOREACH｜FOREACH Technology",
+    title: "О Foreach｜Foreach Technology",
     description:
-      "FOREACH специализируется на ключевых компонентах микрофлюидики и решениях жидкостных систем для IVD, наук о жизни, высококлассных аналитических приборов, синтетической биологии и лабораторной автоматизации.",
+      "Foreach специализируется на ключевых компонентах микрофлюидики и решениях жидкостных систем для IVD, наук о жизни, высококлассных аналитических приборов, синтетической биологии и лабораторной автоматизации.",
   },
 };
 

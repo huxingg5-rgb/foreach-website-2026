@@ -59,16 +59,16 @@ const foreignPageTextMap: Record<
 > = {
   es: {
     seo: {
-      title: "Fichas técnicas | Recursos | FOREACH",
+      title: "Fichas técnicas | Recursos | Foreach Technology",
       description:
-        "Descargue fichas técnicas de productos FOREACH, incluidas bombas, válvulas, tubos y conectores, sondas, sensores y módulos de control.",
+        "Descargue fichas técnicas de productos Foreach, incluidas bombas, válvulas, tubos y conectores, sondas, sensores y módulos de control.",
     },
     hero: {
       title: "Fichas técnicas",
       description:
-        "Busque y descargue fichas técnicas de productos FOREACH para revisar rápidamente parámetros, materiales, interfaces e información de aplicación.",
+        "Busque y descargue fichas técnicas de productos Foreach para revisar rápidamente parámetros, materiales, interfaces e información de aplicación.",
       image: datasheetsEnPageText.hero.image,
-      imageAlt: "Banner de la página de fichas técnicas de FOREACH",
+      imageAlt: "Banner de la página de fichas técnicas de Foreach",
     },
     breadcrumb: {
       home: "Inicio",
@@ -112,16 +112,16 @@ const foreignPageTextMap: Record<
 
   fr: {
     seo: {
-      title: "Fiches techniques | Ressources | FOREACH",
+      title: "Fiches techniques | Ressources | Foreach Technology",
       description:
-        "Téléchargez les fiches techniques des produits FOREACH, notamment les pompes, vannes, tubes et raccords, sondes, capteurs et modules de contrôle.",
+        "Téléchargez les fiches techniques des produits Foreach, notamment les pompes, vannes, tubes et raccords, sondes, capteurs et modules de contrôle.",
     },
     hero: {
       title: "Fiches techniques",
       description:
-        "Recherchez et téléchargez les fiches techniques des produits FOREACH afin de consulter rapidement les paramètres, matériaux, interfaces et informations d’application.",
+        "Recherchez et téléchargez les fiches techniques des produits Foreach afin de consulter rapidement les paramètres, matériaux, interfaces et informations d’application.",
       image: datasheetsEnPageText.hero.image,
-      imageAlt: "Bannière de la page des fiches techniques FOREACH",
+      imageAlt: "Bannière de la page des fiches techniques Foreach",
     },
     breadcrumb: {
       home: "Accueil",
@@ -165,16 +165,16 @@ const foreignPageTextMap: Record<
 
   ko: {
     seo: {
-      title: "사양서 다운로드 | 자료실 | FOREACH",
+      title: "사양서 다운로드 | 자료실 | Foreach Technology",
       description:
-        "FOREACH의 펌프, 밸브, 튜빙 및 피팅, 프로브, 센서, 제어 모듈 관련 제품 사양서를 다운로드할 수 있습니다.",
+        "Foreach의 펌프, 밸브, 튜빙 및 피팅, 프로브, 센서, 제어 모듈 관련 제품 사양서를 다운로드할 수 있습니다.",
     },
     hero: {
       title: "사양서 다운로드",
       description:
-        "FOREACH 제품 사양서를 검색하고 다운로드하여 제품 파라미터, 소재, 인터페이스 및 적용 정보를 빠르게 확인할 수 있습니다.",
+        "Foreach 제품 사양서를 검색하고 다운로드하여 제품 파라미터, 소재, 인터페이스 및 적용 정보를 빠르게 확인할 수 있습니다.",
       image: datasheetsEnPageText.hero.image,
-      imageAlt: "FOREACH 자료실 사양서 다운로드 페이지 배너",
+      imageAlt: "Foreach 자료실 사양서 다운로드 페이지 배너",
     },
     breadcrumb: {
       home: "홈",
@@ -218,16 +218,16 @@ const foreignPageTextMap: Record<
 
   ru: {
     seo: {
-      title: "Спецификации | Ресурсы | FOREACH",
+      title: "Спецификации | Ресурсы | Foreach Technology",
       description:
-        "Скачайте спецификации продукции FOREACH, включая насосы, клапаны, трубки и фитинги, зонды, датчики и модули управления.",
+        "Скачайте спецификации продукции Foreach, включая насосы, клапаны, трубки и фитинги, зонды, датчики и модули управления.",
     },
     hero: {
       title: "Спецификации",
       description:
-        "Найдите и скачайте спецификации продукции FOREACH, чтобы быстро ознакомиться с параметрами, материалами, интерфейсами и областями применения.",
+        "Найдите и скачайте спецификации продукции Foreach, чтобы быстро ознакомиться с параметрами, материалами, интерфейсами и областями применения.",
       image: datasheetsEnPageText.hero.image,
-      imageAlt: "Баннер страницы спецификаций FOREACH",
+      imageAlt: "Баннер страницы спецификаций Foreach",
     },
     breadcrumb: {
       home: "Главная",
@@ -774,7 +774,7 @@ const currentItemTranslations: Record<
     "mrv3-multi-channel-rotary-valve": { title: "Ficha técnica de la válvula rotativa multicanal MRV3", description: "Válvula rotativa multicanal MRV3 para conmutación multipuerto, distribución de reactivos e integración fluídica." },
     "hp-2-position-6-port-high-pressure-valve": { title: "Ficha técnica de la válvula de alta presión HP de 2 posiciones y 6 puertos con venteo", description: "Válvula HP de alta presión, 2 posiciones y 6 puertos, con vía de venteo para conmutación de circuitos resistentes a la presión." },
     "6010-solenoid-valve": { title: "Ficha técnica de la electroválvula 6010", description: "Configuraciones de sustrato, roscadas y con espiga de la electroválvula 6010 para control de 2 y 3 vías." },
-    "fittings-and-tubing-catalog": { title: "Catálogo de racores y tubos", description: "Catálogo conjunto en inglés de racores, conectores, tubos rígidos y flexibles y conjuntos de tubos FOREACH." },
+    "fittings-and-tubing-catalog": { title: "Catálogo de racores y tubos", description: "Catálogo conjunto en inglés de racores, conectores, tubos rígidos y flexibles y conjuntos de tubos Foreach." },
     "abd-air-bubble-detector": { title: "Ficha técnica del detector de burbujas de aire ABD", description: "Detector ABD sin contacto de burbujas de aire y líquido para tubos transparentes, compatible con comunicación TTL y Modbus RTU." },
     "pdm5-pressure-sensor": { title: "Manual de usuario del sensor de presión PDM5", description: "Manual del sensor PDM5 sobre instalación, comunicación I2C, especificaciones y supervisión de la presión del fluido." },
   },
@@ -794,7 +794,7 @@ const currentItemTranslations: Record<
     "mrv3-multi-channel-rotary-valve": { title: "Fiche technique de la vanne rotative multicanal MRV3", description: "Vanne rotative multicanal MRV3 pour la commutation multipport, la distribution de réactifs et l’intégration fluidique." },
     "hp-2-position-6-port-high-pressure-valve": { title: "Fiche technique de la vanne haute pression HP 2 positions, 6 voies avec évent", description: "Vanne HP haute pression à 2 positions et 6 voies avec évent pour la commutation de circuits résistants à la pression." },
     "6010-solenoid-valve": { title: "Fiche technique de l’électrovanne 6010", description: "Configurations sur embase, filetées et cannelées de l’électrovanne 6010 pour la commande 2 et 3 voies." },
-    "fittings-and-tubing-catalog": { title: "Catalogue des raccords et tubes", description: "Catalogue commun en anglais des raccords, connecteurs, tubes rigides et souples et ensembles de tubes FOREACH." },
+    "fittings-and-tubing-catalog": { title: "Catalogue des raccords et tubes", description: "Catalogue commun en anglais des raccords, connecteurs, tubes rigides et souples et ensembles de tubes Foreach." },
     "abd-air-bubble-detector": { title: "Fiche technique du détecteur de bulles d’air ABD", description: "Détecteur ABD sans contact de bulles d’air et de liquide pour tubes transparents, avec communication TTL et prise en charge de Modbus RTU." },
     "pdm5-pressure-sensor": { title: "Manuel d’utilisation du capteur de pression PDM5", description: "Manuel PDM5 couvrant l’installation, la communication I2C, les spécifications et la surveillance de la pression du fluide." },
   },
@@ -814,7 +814,7 @@ const currentItemTranslations: Record<
     "mrv3-multi-channel-rotary-valve": { title: "Техническое описание многоканального поворотного клапана MRV3", description: "Клапан MRV3 для многопортового переключения потоков, распределения реагентов и интеграции гидравлической системы." },
     "hp-2-position-6-port-high-pressure-valve": { title: "Техническое описание клапана высокого давления HP: 2 положения, 6 портов и сброс", description: "Клапан HP с 2 положениями, 6 портами и каналом сброса для переключения жидкостных трактов высокого давления." },
     "6010-solenoid-valve": { title: "Техническое описание электромагнитного клапана 6010", description: "Исполнения клапана 6010 на подложке, с резьбой и штуцерами для 2- и 3-ходового управления." },
-    "fittings-and-tubing-catalog": { title: "Каталог фитингов и трубок", description: "Общий каталог на английском языке: фитинги, соединители, жёсткие и гибкие трубки и трубные сборки FOREACH." },
+    "fittings-and-tubing-catalog": { title: "Каталог фитингов и трубок", description: "Общий каталог на английском языке: фитинги, соединители, жёсткие и гибкие трубки и трубные сборки Foreach." },
     "abd-air-bubble-detector": { title: "Техническое описание датчика пузырьков воздуха ABD", description: "Бесконтактный датчик ABD для пузырьков воздуха и жидкости в прозрачных трубках с TTL и Modbus RTU." },
     "pdm5-pressure-sensor": { title: "Руководство пользователя датчика давления PDM5", description: "Руководство PDM5 по монтажу, связи I2C, характеристикам и контролю давления жидкости." },
   },
@@ -834,7 +834,7 @@ const currentItemTranslations: Record<
     "mrv3-multi-channel-rotary-valve": { title: "MRV3 다채널 로터리 밸브 데이터시트", description: "다중 포트 유로 전환, 시약 분배 및 유체 시스템 통합을 위한 MRV3 다채널 로터리 밸브입니다." },
     "hp-2-position-6-port-high-pressure-valve": { title: "벤트형 HP 2포지션 6포트 고압 밸브 데이터시트", description: "내압 유로 전환을 위한 벤트 유로 포함 HP 2포지션 6포트 고압 밸브입니다." },
     "6010-solenoid-valve": { title: "6010 솔레노이드 밸브 데이터시트", description: "2방향 및 3방향 제어를 위한 6010 솔레노이드 밸브의 기판형, 나사형 및 바브형 구성을 다룹니다." },
-    "fittings-and-tubing-catalog": { title: "피팅 및 튜빙 카탈로그", description: "FOREACH 피팅, 커넥터, 경질·연질 튜빙 및 튜빙 어셈블리를 수록한 영문 통합 카탈로그입니다." },
+    "fittings-and-tubing-catalog": { title: "피팅 및 튜빙 카탈로그", description: "Foreach 피팅, 커넥터, 경질·연질 튜빙 및 튜빙 어셈블리를 수록한 영문 통합 카탈로그입니다." },
     "abd-air-bubble-detector": { title: "ABD 기포 감지기 데이터시트", description: "투명 튜빙용 비접촉식 공기 기포 및 액체 감지기로 TTL 통신과 Modbus RTU를 지원합니다." },
     "pdm5-pressure-sensor": { title: "PDM5 압력 센서 사용자 설명서", description: "설치, I2C 통신, 사양 및 유체 압력 모니터링을 다루는 PDM5 압력 센서 사용자 설명서입니다." },
   },

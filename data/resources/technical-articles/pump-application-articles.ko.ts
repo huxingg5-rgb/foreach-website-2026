@@ -4,12 +4,12 @@ export const pumpApplicationArticlesKo = {
   "clinical-chemistry-piston-pump-100-250-500-ul-selection": {
     "metadata": {
       "title": "임상화학 분석기 분주용 100, 250, 500 μL 피스톤 펌프 선택 방법",
-      "seoTitle": "임상화학 분석기용 100, 250, 500 μL 피스톤 펌프 선정 | FOREACH",
-      "seoDescription": "1회 분주량, 스트로크 사용 비율, 연속 분주 횟수와 재충전 시간을 비교한 뒤 실제 분석기 유로를 기준으로 FOREACH EA, SM, TM 구성을 검토합니다.",
+      "seoTitle": "임상화학 분석기용 100, 250, 500 μL 피스톤 펌프 선정 | Foreach Technology",
+      "seoDescription": "1회 분주량, 스트로크 사용 비율, 연속 분주 횟수와 재충전 시간을 비교한 뒤 실제 분석기 유로를 기준으로 Foreach EA, SM, TM 구성을 검토합니다.",
       "coverImage": "/images/resources/technical-articles/pump-application-guides/piston-capacity-series.png",
-      "coverAlt": "100, 250, 500 μL를 포함한 다양한 용량의 FOREACH 피스톤 펌프"
+      "coverAlt": "100, 250, 500 μL를 포함한 다양한 용량의 Foreach 피스톤 펌프"
     },
-    "deck": "1회 분주량, 스트로크 사용 비율, 연속 분주 횟수와 재충전 시간을 비교한 뒤 실제 분석기 유로를 기준으로 FOREACH EA, SM, TM 구성을 검토합니다.",
+    "deck": "1회 분주량, 스트로크 사용 비율, 연속 분주 횟수와 재충전 시간을 비교한 뒤 실제 분석기 유로를 기준으로 Foreach EA, SM, TM 구성을 검토합니다.",
     "leadBlocks": [
       {
         "type": "paragraph",
@@ -121,7 +121,7 @@ export const pumpApplicationArticlesKo = {
           },
           {
             "type": "notice",
-            "text": "계산 예시일 뿐입니다. 8개 큐벳에 각각 20 μL를 분주하고 흡입할 때마다 10 μL를 남기며, 사용 가능한 흡입량이 공칭 용량과 같다고 임시로 가정합니다. 이 10 μL는 FOREACH의 공통 사양이 아닙니다. 실제 유로에서 유효 스트로크, 프라이밍, 예비 액량 요구사항을 확인해야 합니다.",
+            "text": "계산 예시일 뿐입니다. 8개 큐벳에 각각 20 μL를 분주하고 흡입할 때마다 10 μL를 남기며, 사용 가능한 흡입량이 공칭 용량과 같다고 임시로 가정합니다. 이 10 μL는 Foreach의 공통 사양이 아닙니다. 실제 유로에서 유효 스트로크, 프라이밍, 예비 액량 요구사항을 확인해야 합니다.",
             "label": "예시의 가정"
           },
           {
@@ -208,7 +208,7 @@ export const pumpApplicationArticlesKo = {
         "blocks": [
           {
             "type": "paragraph",
-            "text": "FOREACH EA, SM, TM 시리즈 정보에는 100, 250, 500 μL 용량 옵션이 포함되어 있습니다. 시리즈의 용도와 개별 구성의 성능은 구분해서 확인해야 합니다. 공칭 용량이 같다고 치수, 재료, 연결부, 구동 요구사항, 성능 조건이 같지는 않습니다."
+            "text": "Foreach EA, SM, TM 시리즈 정보에는 100, 250, 500 μL 용량 옵션이 포함되어 있습니다. 시리즈의 용도와 개별 구성의 성능은 구분해서 확인해야 합니다. 공칭 용량이 같다고 치수, 재료, 연결부, 구동 요구사항, 성능 조건이 같지는 않습니다."
           },
           {
             "type": "table",
@@ -325,7 +325,7 @@ export const pumpApplicationArticlesKo = {
             "items": [
               {
                 "href": "/products/pumps/piston-pump/",
-                "label": "FOREACH 피스톤 펌프 제품과 시리즈 살펴보기"
+                "label": "Foreach 피스톤 펌프 제품과 시리즈 살펴보기"
               }
             ]
           }
@@ -366,10 +366,10 @@ export const pumpApplicationArticlesKo = {
   "diaphragm-pump-multiple-wash-nozzles-flow-balance": {
     "metadata": {
       "title": "한 대의 소형 다이어프램 펌프에 연결된 여러 세척 노즐의 유량이 다른 이유",
-      "seoTitle": "다중 세척 노즐의 다이어프램 펌프 유량 균형 | FOREACH",
+      "seoTitle": "다중 세척 노즐의 다이어프램 펌프 유량 균형 | Foreach Technology",
       "seoDescription": "노즐별 액량과 시간으로 요구 유량을 계산하고, 펌프 공급 부족과 불균등 분배를 구분한 뒤 각 분기의 수집 액량 및 압력을 측정해 검증합니다.",
       "coverImage": "/images/resources/technical-articles/pump-application-guides/dpl60-brushless-side-photo.jpg",
-      "coverAlt": "펌프 헤드와 액체 입출구가 보이는 FOREACH DPL60 소형 다이어프램 펌프의 측면 실물 사진"
+      "coverAlt": "펌프 헤드와 액체 입출구가 보이는 Foreach DPL60 소형 다이어프램 펌프의 측면 실물 사진"
     },
     "deck": "노즐별 액량과 시간으로 요구 유량을 계산하고, 펌프 공급 부족과 불균등 분배를 구분한 뒤 각 분기의 수집 액량 및 압력을 측정해 검증합니다.",
     "leadBlocks": [
@@ -432,7 +432,7 @@ export const pumpApplicationArticlesKo = {
           },
           {
             "type": "paragraph",
-            "text": "FOREACH DPL30과 DPL60 선정 가이드는 각각 300 mL/min, 600 mL/min 유량급을 설명합니다. DPL30의 공칭 수치만으로 가상의 360 mL/min 작업을 충족한다고 볼 수 없습니다. DPL60은 추가 검토 후보이며, 600 mL/min이 설치된 튜브·밸브·노즐을 통과하는 실제 유량을 뜻하지는 않습니다. 지정 전압, 액체, 입구 조건, 필요한 출구 압력에서의 운전점을 확인해야 합니다."
+            "text": "Foreach DPL30과 DPL60 선정 가이드는 각각 300 mL/min, 600 mL/min 유량급을 설명합니다. DPL30의 공칭 수치만으로 가상의 360 mL/min 작업을 충족한다고 볼 수 없습니다. DPL60은 추가 검토 후보이며, 600 mL/min이 설치된 튜브·밸브·노즐을 통과하는 실제 유량을 뜻하지는 않습니다. 지정 전압, 액체, 입구 조건, 필요한 출구 압력에서의 운전점을 확인해야 합니다."
           },
           {
             "type": "notice",
@@ -653,10 +653,10 @@ export const pumpApplicationArticlesKo = {
   "diaphragm-pump-flow-drop-reservoir-venting": {
     "metadata": {
       "title": "처음에는 정상이다가 유량이 줄어드는 소형 다이어프램 펌프: 저장 용기 통기 점검 방법",
-      "seoTitle": "다이어프램 펌프 유량 감소와 저장 용기 통기 점검 | FOREACH",
+      "seoTitle": "다이어프램 펌프 유량 감소와 저장 용기 통기 점검 | Foreach Technology",
       "seoDescription": "저장 용기 기상부 압력, 펌프 입구 압력, 전달량을 함께 기록해 통기 제한을 조사하고 액면 변화, 막힘, 공기 유입, 출구 배압을 구분합니다.",
       "coverImage": "/images/resources/technical-articles/pump-application-guides/dpl30-brushless-rear-photo.jpg",
-      "coverAlt": "펌프 본체와 액체 입출구가 보이는 FOREACH DPL30 소형 다이어프램 펌프의 후면 실물 사진"
+      "coverAlt": "펌프 본체와 액체 입출구가 보이는 Foreach DPL30 소형 다이어프램 펌프의 후면 실물 사진"
     },
     "deck": "저장 용기 기상부 압력, 펌프 입구 압력, 전달량을 함께 기록해 통기 제한을 조사하고 액면 변화, 막힘, 공기 유입, 출구 배압을 구분합니다.",
     "leadBlocks": [
@@ -701,7 +701,7 @@ export const pumpApplicationArticlesKo = {
           },
           {
             "type": "paragraph",
-            "text": "초기 기상부가 100 mL이고 절대압이 101.3 kPa라고 가정합니다. 액체 20 mL를 빼내면 계산값은 101.3 × 100/120 ≈ 84.4 kPa 절대압이며, 초기 대기압을 기준으로 약 −16.9 kPa 게이지압입니다. 이는 설명용 계산이며 FOREACH 펌프나 실제 저장 용기의 측정값이 아닙니다."
+            "text": "초기 기상부가 100 mL이고 절대압이 101.3 kPa라고 가정합니다. 액체 20 mL를 빼내면 계산값은 101.3 × 100/120 ≈ 84.4 kPa 절대압이며, 초기 대기압을 기준으로 약 −16.9 kPa 게이지압입니다. 이는 설명용 계산이며 Foreach 펌프나 실제 저장 용기의 측정값이 아닙니다."
           },
           {
             "type": "paragraph",

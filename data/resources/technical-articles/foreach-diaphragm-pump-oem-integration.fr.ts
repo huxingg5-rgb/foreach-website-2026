@@ -2,13 +2,13 @@ import type { DiaphragmPumpEngineeringArticleCopy } from "./diaphragm-pump-engin
 
 export const foreachDiaphragmPumpOemIntegrationFrCopy = {
   "metadata": {
-    "title": "Intégration OEM des pompes à membrane miniatures FOREACH : point de fonctionnement, validation et mise en production",
-    "seoTitle": "Pompes à membrane OEM FOREACH | Sélection et validation",
+    "title": "Intégration OEM des pompes à membrane miniatures Foreach : point de fonctionnement, validation et mise en production",
+    "seoTitle": "Pompes à membrane OEM Foreach | Sélection et validation",
     "seoDescription": "Guide technique des DPL30, DPL60, DPL30H et DPGL800 : bilans de débit et de pression, autoamorçage, matériaux, commande moteur, montage, essais de prototypes et mise en production.",
     "coverImage": "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-600ml-min-brushless-pwm-miniature-liquid-diaphragm-pump-front-side.webp",
-    "coverAlt": "Photographie d’une pompe à membrane miniature pour liquides FOREACH DPL60, montrant les embouts cannelés et le moteur"
+    "coverAlt": "Photographie d’une pompe à membrane miniature pour liquides Foreach DPL60, montrant les embouts cannelés et le moteur"
   },
-  "deck": "La stabilité d’une pompe à membrane miniature intégrée dans un instrument OEM dépend de l’adéquation entre la fonction fluidique, les conditions d’entrée et de sortie, les matériaux, la commande et la structure de l’appareil. À partir des DPL30, DPL60, DPL30H et DPGL800 FOREACH, cet article explique comment établir des configurations candidates, réaliser des essais reproductibles et transformer les résultats en exigences de fourniture en série, en examinant débit, pression, présence de gaz, matériaux mouillés et interfaces électriques.",
+  "deck": "La stabilité d’une pompe à membrane miniature intégrée dans un instrument OEM dépend de l’adéquation entre la fonction fluidique, les conditions d’entrée et de sortie, les matériaux, la commande et la structure de l’appareil. À partir des DPL30, DPL60, DPL30H et DPGL800 Foreach, cet article explique comment établir des configurations candidates, réaliser des essais reproductibles et transformer les résultats en exigences de fourniture en série, en examinant débit, pression, présence de gaz, matériaux mouillés et interfaces électriques.",
   "leadBlocks": [
     {
       "type": "paragraph",
@@ -16,11 +16,11 @@ export const foreachDiaphragmPumpOemIntegrationFrCopy = {
     },
     {
       "type": "paragraph",
-      "text": "L’intégration OEM désigne ici la sélection, l’adaptation et la validation d’une pompe à membrane miniature FOREACH comme composant interne d’un instrument. Il faut distinguer modèles standard, configurations optionnelles et développement spécifique. Le dossier technique doit définir référence complète, limites du circuit, interfaces électriques et mécaniques, réception et gestion des modifications, afin d’unifier les bases utilisées par la R&D, les achats, la production et le service après-vente."
+      "text": "L’intégration OEM désigne ici la sélection, l’adaptation et la validation d’une pompe à membrane miniature Foreach comme composant interne d’un instrument. Il faut distinguer modèles standard, configurations optionnelles et développement spécifique. Le dossier technique doit définir référence complète, limites du circuit, interfaces électriques et mécaniques, réception et gestion des modifications, afin d’unifier les bases utilisées par la R&D, les achats, la production et le service après-vente."
     },
     {
       "type": "paragraph",
-      "text": "Les valeurs produit proviennent des fiches techniques chinoises FOREACH citées en fin d’article. Les exemples de calcul illustrent une méthode de conception et ne sont pas des mesures d’un modèle. Réactifs réels, mélanges, montages particuliers et cycles de travail doivent être validés avec la configuration concernée dans le circuit complet."
+      "text": "Les valeurs produit proviennent des fiches techniques chinoises Foreach citées en fin d’article. Les exemples de calcul illustrent une méthode de conception et ne sont pas des mesures d’un modèle. Réactifs réels, mélanges, montages particuliers et cycles de travail doivent être validés avec la configuration concernée dans le circuit complet."
     }
   ],
   "sections": [
@@ -77,7 +77,7 @@ export const foreachDiaphragmPumpOemIntegrationFrCopy = {
       ]
     },
     {
-      "title": "2. Présélectionner les quatre séries FOREACH pour un projet OEM",
+      "title": "2. Présélectionner les quatre séries Foreach pour un projet OEM",
       "blocks": [
         {
           "type": "paragraph",
@@ -120,7 +120,7 @@ export const foreachDiaphragmPumpOemIntegrationFrCopy = {
         {
           "type": "figure",
           "src": "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-600ml-min-brushless-pwm-miniature-liquid-diaphragm-pump-front-side.webp",
-          "alt": "Photographie d’une DPL60 FOREACH sans balais, avec embouts cannelés de chaque côté de la tête",
+          "alt": "Photographie d’une DPL60 Foreach sans balais, avec embouts cannelés de chaque côté de la tête",
           "width": 1500,
           "height": 1499,
           "caption": "DPL60 : la disposition des embouts, du moteur et de la tête aide à évaluer le cheminement des tuyaux et l’espace de montage. Brochage, dimensions et matériaux doivent être confirmés pour la référence choisie."
@@ -135,7 +135,7 @@ export const foreachDiaphragmPumpOemIntegrationFrCopy = {
           "items": [
             {
               "href": "/products/pumps/miniature-diaphragm-pumps/",
-              "label": "Consulter les pompes à membrane miniatures FOREACH et leurs configurations"
+              "label": "Consulter les pompes à membrane miniatures Foreach et leurs configurations"
             }
           ]
         }
@@ -168,7 +168,7 @@ export const foreachDiaphragmPumpOemIntegrationFrCopy = {
         {
           "type": "formula",
           "expression": "M_Q = (Q_available,worst − Q_req) / Q_req × 100%",
-          "note": "Q_available,worst est le débit disponible dans les conditions défavorables définies, établi par une courbe adaptée ou des essais. Si l’on mesure 150 mL/min pour un besoin de 120 mL/min, la marge est de 25 %. La valeur 150 mL/min est hypothétique et ne constitue pas une garantie d’un modèle FOREACH."
+          "note": "Q_available,worst est le débit disponible dans les conditions défavorables définies, établi par une courbe adaptée ou des essais. Si l’on mesure 150 mL/min pour un besoin de 120 mL/min, la marge est de 25 %. La valeur 150 mL/min est hypothétique et ne constitue pas une garantie d’un modèle Foreach."
         },
         {
           "type": "paragraph",
@@ -302,7 +302,7 @@ export const foreachDiaphragmPumpOemIntegrationFrCopy = {
         {
           "type": "figure",
           "src": "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushless-2-wire-real-product-photo.webp",
-          "alt": "Photographie de la DPL30 FOREACH sans balais à deux fils, avec embouts cannelés, tête et fils d’alimentation",
+          "alt": "Photographie de la DPL30 Foreach sans balais à deux fils, avec embouts cannelés, tête et fils d’alimentation",
           "width": 1200,
           "height": 1200,
           "caption": "DPL30 sans balais à deux fils : tenir compte du diamètre intérieur du tuyau, de son insertion et maintien, du rayon de courbure et des efforts sur le faisceau. La photo ne remplace ni plan coté ni définition du câblage."
@@ -390,7 +390,7 @@ export const foreachDiaphragmPumpOemIntegrationFrCopy = {
         {
           "type": "figure",
           "src": "/images/products/pumps/diaphragm-pumps/dpgl800/images/foreach-dpgl800-6l-min-gas-brushless-diaphragm-vacuum-pump.webp",
-          "alt": "Photographie du DPGL800 FOREACH gaz/liquide : deux têtes, montage et accessoires de raccordement",
+          "alt": "Photographie du DPGL800 Foreach gaz/liquide : deux têtes, montage et accessoires de raccordement",
           "width": 1500,
           "height": 1500,
           "caption": "DPGL800 à deux têtes : la photo comprend des adaptateurs montés. Les orifices nus sont indiqués G1/8 femelle dans cette fiche. Confirmer séparément accessoires et raccordement des têtes."
@@ -710,7 +710,7 @@ export const foreachDiaphragmPumpOemIntegrationFrCopy = {
       "blocks": [
         {
           "type": "paragraph",
-          "text": "FOREACH propose des composants microfluidiques et un accompagnement des circuits : validation de prototypes, adéquation des paramètres et adaptation à l’espace, aux interfaces, au fluide et à la commande. Pour un projet OEM, évaluer d’abord les modèles existants, puis les configurations, et enfin le besoin de développement dédié."
+          "text": "Foreach propose des composants microfluidiques et un accompagnement des circuits : validation de prototypes, adéquation des paramètres et adaptation à l’espace, aux interfaces, au fluide et à la commande. Pour un projet OEM, évaluer d’abord les modèles existants, puis les configurations, et enfin le besoin de développement dédié."
         },
         {
           "type": "table",
@@ -752,7 +752,7 @@ export const foreachDiaphragmPumpOemIntegrationFrCopy = {
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Après validation du prototype, transformer « cet échantillon fonctionne » en « les livraisons suivantes sont réceptionnées selon les mêmes conditions ». La démarche suivante est recommandée ; procédure et responsabilités doivent être convenues entre fabricant d’équipement et FOREACH."
+          "text": "Après validation du prototype, transformer « cet échantillon fonctionne » en « les livraisons suivantes sont réceptionnées selon les mêmes conditions ». La démarche suivante est recommandée ; procédure et responsabilités doivent être convenues entre fabricant d’équipement et Foreach."
         },
         {
           "type": "list",
@@ -772,7 +772,7 @@ export const foreachDiaphragmPumpOemIntegrationFrCopy = {
         },
         {
           "type": "subheading",
-          "title": "Informations à joindre à une demande OEM FOREACH"
+          "title": "Informations à joindre à une demande OEM Foreach"
         },
         {
           "type": "table",
@@ -818,7 +818,7 @@ export const foreachDiaphragmPumpOemIntegrationFrCopy = {
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Les paramètres proviennent des fiches chinoises FOREACH ci-dessous : pages de performances pour les conditions, tableaux de sélection pour les configurations, plans et tables électriques pour le montage. Vérifier la révision avant commande et obtenir une confirmation spécifique pour fluide, commande ou interface particuliers."
+          "text": "Les paramètres proviennent des fiches chinoises Foreach ci-dessous : pages de performances pour les conditions, tableaux de sélection pour les configurations, plans et tables électriques pour le montage. Vérifier la révision avant commande et obtenir une confirmation spécifique pour fluide, commande ou interface particuliers."
         },
         {
           "type": "links",
@@ -841,11 +841,11 @@ export const foreachDiaphragmPumpOemIntegrationFrCopy = {
             },
             {
               "href": "/resources/datasheets/",
-              "label": "Fiches techniques et catalogues FOREACH"
+              "label": "Fiches techniques et catalogues Foreach"
             },
             {
               "href": "/",
-              "label": "Composants microfluidiques et accompagnement technique FOREACH"
+              "label": "Composants microfluidiques et accompagnement technique Foreach"
             },
             {
               "href": "/resources/technical-articles/miniature-diaphragm-pump-flow-pulsation-reduction/",
@@ -860,7 +860,7 @@ export const foreachDiaphragmPumpOemIntegrationFrCopy = {
       ]
     }
   ],
-  "faqTitle": "Questions techniques sur l’intégration OEM FOREACH",
+  "faqTitle": "Questions techniques sur l’intégration OEM Foreach",
   "faqItems": [
     {
       "question": "L’intégration OEM exige-t-elle toujours de développer une nouvelle pompe ?",
@@ -897,7 +897,7 @@ export const foreachDiaphragmPumpOemIntegrationFrCopy = {
   ],
   "cta": {
     "title": "Décrivez votre circuit OEM pour évaluer une configuration adaptée",
-    "description": "Indiquez fonction, fluide et température, débit cible, pressions d’entrée/sortie, cycle, interfaces, espace et phase du projet. FOREACH pourra discuter modèle et configuration et préciser les conditions à valider.",
+    "description": "Indiquez fonction, fluide et température, débit cible, pressions d’entrée/sortie, cycle, interfaces, espace et phase du projet. Foreach pourra discuter modèle et configuration et préciser les conditions à valider.",
     "contactLabel": "Soumettre une demande technique",
     "productsLabel": "Voir les pompes à membrane miniatures",
     "productsHref": "/products/pumps/miniature-diaphragm-pumps/"

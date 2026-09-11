@@ -4,10 +4,10 @@ export const diaphragmPumpRdArticlesKo = {
   "self-priming-miniature-liquid-diaphragm-pump-selection": {
     "metadata": {
       "title": "자흡식 소형 액체 다이어프램 펌프 선정: 흡상 높이, 최초 액체 도달 시간, 건식·습식 기동",
-      "seoTitle": "자흡식 소형 액체 다이어프램 펌프 선정과 기동 시간 | FOREACH",
+      "seoTitle": "자흡식 소형 액체 다이어프램 펌프 선정과 기동 시간 | Foreach Technology",
       "seoDescription": "자흡식 소형 액체 다이어프램 펌프는 흡상 높이뿐 아니라 최초 액체 도달 시간, 건식·습식 기동 조건과 안정 토출까지 확인해야 합니다. DPL30·DPL60·DPL30H 사양을 바탕으로 장비 수준의 시험 항목을 정리합니다.",
       "coverImage": "/images/resources/technical-articles/diaphragm-pump-rd/covers/dpl30-brushless-port-side-photo.jpg",
-      "coverAlt": "액체 입출구와 모터가 보이는 FOREACH DPL30 소형 다이어프램 펌프의 포트 측면 실물 사진"
+      "coverAlt": "액체 입출구와 모터가 보이는 Foreach DPL30 소형 다이어프램 펌프의 포트 측면 실물 사진"
     },
     "deck": "자흡식 소형 액체 다이어프램 펌프는 흡상 높이뿐 아니라 최초 액체 도달 시간, 건식·습식 기동 조건과 안정 토출까지 확인해야 합니다. DPL30·DPL60·DPL30H 사양을 바탕으로 장비 수준의 시험 항목을 정리합니다.",
     "leadBlocks": [
@@ -17,7 +17,7 @@ export const diaphragmPumpRdArticlesKo = {
       },
       {
         "type": "paragraph",
-        "text": "흡상 높이는 자흡 성능의 일부만 설명합니다. 연구개발 단계에서는 펌프실과 배관의 초기 상태, 배출되는 공기의 통로, 최초 액체 도달 시점, 장비 말단에서 유량이 안정되는 시점을 함께 정의해야 합니다. FOREACH DPL 펌프의 실제 운전 유량도 이 조건에서 평가해야 합니다."
+        "text": "흡상 높이는 자흡 성능의 일부만 설명합니다. 연구개발 단계에서는 펌프실과 배관의 초기 상태, 배출되는 공기의 통로, 최초 액체 도달 시점, 장비 말단에서 유량이 안정되는 시점을 함께 정의해야 합니다. Foreach DPL 펌프의 실제 운전 유량도 이 조건에서 평가해야 합니다."
       }
     ],
     "sections": [
@@ -77,7 +77,7 @@ export const diaphragmPumpRdArticlesKo = {
         ]
       },
       {
-        "title": "FOREACH 사양의 각 성능값을 구분해서 읽기",
+        "title": "Foreach 사양의 각 성능값을 구분해서 읽기",
         "blocks": [
           {
             "type": "paragraph",
@@ -225,7 +225,7 @@ export const diaphragmPumpRdArticlesKo = {
           },
           {
             "type": "paragraph",
-            "text": "FOREACH DPL30·DPL60·DPL30H 검토 시 탱크 높이, 회로 체적·저항, 목표 유량, 출구 배압, 액체 조성, 초기 건식·습식 상태, 허용 대기 시간을 제공하면 평가 조건을 구체화할 수 있습니다."
+            "text": "Foreach DPL30·DPL60·DPL30H 검토 시 탱크 높이, 회로 체적·저항, 목표 유량, 출구 배압, 액체 조성, 초기 건식·습식 상태, 허용 대기 시간을 제공하면 평가 조건을 구체화할 수 있습니다."
           }
         ]
       },
@@ -234,29 +234,29 @@ export const diaphragmPumpRdArticlesKo = {
         "blocks": [
           {
             "type": "paragraph",
-            "text": "제품 매개변수는 아래 FOREACH 사양서를 근거로 합니다. 공학 원리와 시험 제안은 정확한 모델 및 실제 운전 조건에 맞춰 검증하십시오."
+            "text": "제품 매개변수는 아래 Foreach 사양서를 근거로 합니다. 공학 원리와 시험 제안은 정확한 모델 및 실제 운전 조건에 맞춰 검증하십시오."
           },
           {
             "type": "links",
             "items": [
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00001_A04_cn_DPL30规格书.pdf",
-                "label": "[F1] FOREACH DPL30 중국어 사양서 (A04)",
+                "label": "[F1] Foreach DPL30 중국어 사양서 (A04)",
                 "suffix": "5–6쪽: 성능·구성, 3–4쪽: 장착"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00002_A02_cn_DPL60规格书.pdf",
-                "label": "[F2] FOREACH DPL60 중국어 사양서 (A02)",
+                "label": "[F2] Foreach DPL60 중국어 사양서 (A02)",
                 "suffix": "5–6쪽: 성능·구성, 3–4쪽: 장착"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2504-00001_A00_cn_DPL30H规格书.pdf",
-                "label": "[F3] FOREACH DPL30H 중국어 사양서 (A00)",
+                "label": "[F3] Foreach DPL30H 중국어 사양서 (A00)",
                 "suffix": "5–6쪽: 성능·구성, 3–4쪽: 장착"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2506-00001_A00_cn_DPGL800气液混合泵规格书.pdf",
-                "label": "[F4] FOREACH DPGL800 중국어 사양서 (A00)",
+                "label": "[F4] Foreach DPGL800 중국어 사양서 (A00)",
                 "suffix": "5–6쪽: 성능·구성, 3–4쪽: 장착"
               }
             ]
@@ -328,10 +328,10 @@ export const diaphragmPumpRdArticlesKo = {
   "miniature-diaphragm-pump-flow-pulsation-reduction": {
     "metadata": {
       "title": "소형 다이어프램 펌프 유량 맥동 줄이기: 측정 방법과 개선 대책",
-      "seoTitle": "소형 다이어프램 펌프 유량 맥동 측정과 저감 방법 | FOREACH",
+      "seoTitle": "소형 다이어프램 펌프 유량 맥동 측정과 저감 방법 | Foreach Technology",
       "seoDescription": "실제 유량 맥동과 측정 오류를 구분하고 동일한 운전 조건에서 댐퍼, 배관, 속도 제어의 효과를 비교합니다. 소형 다이어프램 펌프의 누적 토출량과 부하 지점 파형으로 개선 결과를 검증하십시오.",
       "coverImage": "/images/resources/technical-articles/diaphragm-pump-rd/covers/dpl60-brushless-horizontal-photo.jpg",
-      "coverAlt": "펌프 헤드와 모터가 보이는 FOREACH DPL60 소형 다이어프램 펌프의 가로 방향 실물 사진"
+      "coverAlt": "펌프 헤드와 모터가 보이는 Foreach DPL60 소형 다이어프램 펌프의 가로 방향 실물 사진"
     },
     "deck": "실제 유량 맥동과 측정 오류를 구분하고 동일한 운전 조건에서 댐퍼, 배관, 속도 제어의 효과를 비교합니다. 소형 다이어프램 펌프의 누적 토출량과 부하 지점 파형으로 개선 결과를 검증하십시오.",
     "leadBlocks": [
@@ -366,7 +366,7 @@ export const diaphragmPumpRdArticlesKo = {
             "alt": "같은 평균, 다른 순간 유량",
             "width": 1000,
             "height": 650,
-            "caption": "원리 설명: 평균이 같고 진폭이 다른 합성 곡선입니다. 유량은 정규화했으며 FOREACH 실측 데이터가 아닙니다."
+            "caption": "원리 설명: 평균이 같고 진폭이 다른 합성 곡선입니다. 유량은 정규화했으며 Foreach 실측 데이터가 아닙니다."
           }
         ]
       },
@@ -522,7 +522,7 @@ export const diaphragmPumpRdArticlesKo = {
         ]
       },
       {
-        "title": "같은 조건에서 FOREACH DPL 시리즈 평가하기",
+        "title": "같은 조건에서 Foreach DPL 시리즈 평가하기",
         "blocks": [
           {
             "type": "paragraph",
@@ -543,24 +543,24 @@ export const diaphragmPumpRdArticlesKo = {
         "blocks": [
           {
             "type": "paragraph",
-            "text": "제품 매개변수는 아래 FOREACH 사양서를 근거로 합니다. 공학 원리와 시험 제안은 정확한 모델 및 실제 운전 조건에 맞춰 검증하십시오."
+            "text": "제품 매개변수는 아래 Foreach 사양서를 근거로 합니다. 공학 원리와 시험 제안은 정확한 모델 및 실제 운전 조건에 맞춰 검증하십시오."
           },
           {
             "type": "links",
             "items": [
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00001_A04_cn_DPL30规格书.pdf",
-                "label": "[F1] FOREACH DPL30 중국어 사양서 (A04)",
+                "label": "[F1] Foreach DPL30 중국어 사양서 (A04)",
                 "suffix": "5–6쪽: 성능·구성, 3–4쪽: 장착"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00002_A02_cn_DPL60规格书.pdf",
-                "label": "[F2] FOREACH DPL60 중국어 사양서 (A02)",
+                "label": "[F2] Foreach DPL60 중국어 사양서 (A02)",
                 "suffix": "5–6쪽: 성능·구성, 3–4쪽: 장착"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2504-00001_A00_cn_DPL30H规格书.pdf",
-                "label": "[F3] FOREACH DPL30H 중국어 사양서 (A00)",
+                "label": "[F3] Foreach DPL30H 중국어 사양서 (A00)",
                 "suffix": "5–6쪽: 성능·구성, 3–4쪽: 장착"
               },
               {
@@ -640,10 +640,10 @@ export const diaphragmPumpRdArticlesKo = {
   "miniature-diaphragm-pump-noise-vibration-reduction": {
     "metadata": {
       "title": "소형 다이어프램 펌프 소음 원인과 방진·소음 저감 방법",
-      "seoTitle": "소형 다이어프램 펌프 소음 원인과 방진 방법 | FOREACH",
+      "seoTitle": "소형 다이어프램 펌프 소음 원인과 방진 방법 | Foreach Technology",
       "seoDescription": "동일한 운전점에서 소형 다이어프램 펌프의 모터, 펌프 헤드, 지지대, 배관, 하우징을 점검합니다. 방진과 소음 저감 효과는 유량, 온도 상승, 연결 신뢰성과 함께 검증해야 합니다.",
       "coverImage": "/images/resources/technical-articles/diaphragm-pump-rd/covers/dpl30-brushless-bottom-photo.jpg",
-      "coverAlt": "펌프 바닥면과 장착 구멍이 보이는 FOREACH DPL30 소형 다이어프램 펌프의 하부 실물 사진"
+      "coverAlt": "펌프 바닥면과 장착 구멍이 보이는 Foreach DPL30 소형 다이어프램 펌프의 하부 실물 사진"
     },
     "deck": "동일한 운전점에서 소형 다이어프램 펌프의 모터, 펌프 헤드, 지지대, 배관, 하우징을 점검합니다. 방진과 소음 저감 효과는 유량, 온도 상승, 연결 신뢰성과 함께 검증해야 합니다.",
     "leadBlocks": [
@@ -670,7 +670,7 @@ export const diaphragmPumpRdArticlesKo = {
           },
           {
             "type": "paragraph",
-            "text": "기계적 결합을 줄이는 것은 진동 전달을 제한하는 한 가지 방법입니다. 액체 압력 변동이 배관과 하우징을 가진하는 경로도 조사해야 합니다. 실제 FOREACH 연결 방식, 장착 치수, 부하에 맞춰 방진을 설계하고 같은 운전점에서 비교하십시오."
+            "text": "기계적 결합을 줄이는 것은 진동 전달을 제한하는 한 가지 방법입니다. 액체 압력 변동이 배관과 하우징을 가진하는 경로도 조사해야 합니다. 실제 Foreach 연결 방식, 장착 치수, 부하에 맞춰 방진을 설계하고 같은 운전점에서 비교하십시오."
           },
           {
             "type": "figure",
@@ -819,7 +819,7 @@ export const diaphragmPumpRdArticlesKo = {
         ]
       },
       {
-        "title": "같은 장비 작업으로 FOREACH 모델 비교하기",
+        "title": "같은 장비 작업으로 Foreach 모델 비교하기",
         "blocks": [
           {
             "type": "paragraph",
@@ -831,7 +831,7 @@ export const diaphragmPumpRdArticlesKo = {
           },
           {
             "type": "paragraph",
-            "text": "주요 가진원, 중요한 전달 경로, 개선 전후 동일 조건, 기동·유량·온도 충족 여부를 정리하십시오. FOREACH와 기술 검토할 때 소리 파일과 함께 장착 사진, 회로도, 운전점 기록을 제공하면 원인 범위를 좁힐 수 있습니다."
+            "text": "주요 가진원, 중요한 전달 경로, 개선 전후 동일 조건, 기동·유량·온도 충족 여부를 정리하십시오. Foreach와 기술 검토할 때 소리 파일과 함께 장착 사진, 회로도, 운전점 기록을 제공하면 원인 범위를 좁힐 수 있습니다."
           }
         ]
       },
@@ -840,24 +840,24 @@ export const diaphragmPumpRdArticlesKo = {
         "blocks": [
           {
             "type": "paragraph",
-            "text": "제품 매개변수는 아래 FOREACH 사양서를 근거로 합니다. 공학 원리와 시험 제안은 정확한 모델 및 실제 운전 조건에 맞춰 검증하십시오."
+            "text": "제품 매개변수는 아래 Foreach 사양서를 근거로 합니다. 공학 원리와 시험 제안은 정확한 모델 및 실제 운전 조건에 맞춰 검증하십시오."
           },
           {
             "type": "links",
             "items": [
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00001_A04_cn_DPL30规格书.pdf",
-                "label": "[F1] FOREACH DPL30 중국어 사양서 (A04)",
+                "label": "[F1] Foreach DPL30 중국어 사양서 (A04)",
                 "suffix": "5–6쪽: 성능·구성, 3–4쪽: 장착"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00002_A02_cn_DPL60规格书.pdf",
-                "label": "[F2] FOREACH DPL60 중국어 사양서 (A02)",
+                "label": "[F2] Foreach DPL60 중국어 사양서 (A02)",
                 "suffix": "5–6쪽: 성능·구성, 3–4쪽: 장착"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2504-00001_A00_cn_DPL30H规格书.pdf",
-                "label": "[F3] FOREACH DPL30H 중국어 사양서 (A00)",
+                "label": "[F3] Foreach DPL30H 중국어 사양서 (A00)",
                 "suffix": "5–6쪽: 성능·구성, 3–4쪽: 장착"
               }
             ]
@@ -933,10 +933,10 @@ export const diaphragmPumpRdArticlesKo = {
   "miniature-diaphragm-pump-backflow-check-valve": {
     "metadata": {
       "title": "소형 다이어프램 펌프 정지 후 역류: 체크 밸브와 사이펀 방지 설계",
-      "seoTitle": "소형 다이어프램 펌프 정지 후 역류와 사이펀 방지 | FOREACH",
+      "seoTitle": "소형 다이어프램 펌프 정지 후 역류와 사이펀 방지 | Foreach Technology",
       "seoDescription": "펌프 정지 후 실제 역류를 정방향 사이펀·잔류 액적과 구분합니다. 압력차, 체크 밸브 특성, 밸브 동작 순서, 정적 밀봉을 전체 액체 회로에서 평가하는 방법을 설명합니다.",
       "coverImage": "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushless-2-wire-real-product-photo.webp",
-      "coverAlt": "FOREACH DPL30 2선 브러시리스 소형 액체 다이어프램 펌프 실물 사진"
+      "coverAlt": "Foreach DPL30 2선 브러시리스 소형 액체 다이어프램 펌프 실물 사진"
     },
     "deck": "펌프 정지 후 실제 역류를 정방향 사이펀·잔류 액적과 구분합니다. 압력차, 체크 밸브 특성, 밸브 동작 순서, 정적 밀봉을 전체 액체 회로에서 평가하는 방법을 설명합니다.",
     "leadBlocks": [
@@ -1023,7 +1023,7 @@ export const diaphragmPumpRdArticlesKo = {
           },
           {
             "type": "paragraph",
-            "text": "양쪽이 대기압이고 자유 토출하는 물 회로의 예에서 원액 액면이 출구보다 0.5 m 높으면 정적 구동 압력은 약 4.9 kPa입니다. 밀도 약 1000 kg/m³, 중력 가속도 약 9.81 m/s²를 적용하고 손실을 차감하기 전의 계산값입니다. FOREACH의 개방 압력·밀봉 사양이 아닙니다. 출구가 잠겨 있다면 수액 측 자유 액면 높이와 두 용기 상부 압력을 사용해야 합니다."
+            "text": "양쪽이 대기압이고 자유 토출하는 물 회로의 예에서 원액 액면이 출구보다 0.5 m 높으면 정적 구동 압력은 약 4.9 kPa입니다. 밀도 약 1000 kg/m³, 중력 가속도 약 9.81 m/s²를 적용하고 손실을 차감하기 전의 계산값입니다. Foreach의 개방 압력·밀봉 사양이 아닙니다. 출구가 잠겨 있다면 수액 측 자유 액면 높이와 두 용기 상부 압력을 사용해야 합니다."
           },
           {
             "type": "paragraph",
@@ -1118,7 +1118,7 @@ export const diaphragmPumpRdArticlesKo = {
         ]
       },
       {
-        "title": "FOREACH 선정에 필요한 정지 기능 정의하기",
+        "title": "Foreach 선정에 필요한 정지 기능 정의하기",
         "blocks": [
           {
             "type": "paragraph",
@@ -1135,24 +1135,24 @@ export const diaphragmPumpRdArticlesKo = {
         "blocks": [
           {
             "type": "paragraph",
-            "text": "제품 매개변수는 아래 FOREACH 사양서를 근거로 합니다. 공학 원리와 시험 제안은 정확한 모델 및 실제 운전 조건에 맞춰 검증하십시오."
+            "text": "제품 매개변수는 아래 Foreach 사양서를 근거로 합니다. 공학 원리와 시험 제안은 정확한 모델 및 실제 운전 조건에 맞춰 검증하십시오."
           },
           {
             "type": "links",
             "items": [
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00001_A04_cn_DPL30规格书.pdf",
-                "label": "[F1] FOREACH DPL30 중국어 사양서 (A04)",
+                "label": "[F1] Foreach DPL30 중국어 사양서 (A04)",
                 "suffix": "5–6쪽: 성능·구성, 3–4쪽: 장착"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00002_A02_cn_DPL60规格书.pdf",
-                "label": "[F2] FOREACH DPL60 중국어 사양서 (A02)",
+                "label": "[F2] Foreach DPL60 중국어 사양서 (A02)",
                 "suffix": "5–6쪽: 성능·구성, 3–4쪽: 장착"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2504-00001_A00_cn_DPL30H规格书.pdf",
-                "label": "[F3] FOREACH DPL30H 중국어 사양서 (A00)",
+                "label": "[F3] Foreach DPL30H 중국어 사양서 (A00)",
                 "suffix": "5–6쪽: 성능·구성, 3–4쪽: 장착"
               }
             ]

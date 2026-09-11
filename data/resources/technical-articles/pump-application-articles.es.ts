@@ -4,12 +4,12 @@ export const pumpApplicationArticlesEs = {
   "clinical-chemistry-piston-pump-100-250-500-ul-selection": {
     "metadata": {
       "title": "Selección de una bomba de pistón de 100, 250 o 500 μL para dosificación en química clínica",
-      "seoTitle": "Bombas de pistón de 100, 250 o 500 μL para química clínica | FOREACH",
-      "seoDescription": "Compare el volumen por dosis, el aprovechamiento de la carrera, el número de dispensaciones y los tiempos de recarga; después evalúe las configuraciones FOREACH EA, SM y TM con el circuito real del analizador.",
+      "seoTitle": "Bombas de pistón de 100, 250 o 500 μL para química clínica | Foreach Technology",
+      "seoDescription": "Compare el volumen por dosis, el aprovechamiento de la carrera, el número de dispensaciones y los tiempos de recarga; después evalúe las configuraciones Foreach EA, SM y TM con el circuito real del analizador.",
       "coverImage": "/images/resources/technical-articles/pump-application-guides/piston-capacity-series.png",
-      "coverAlt": "Bombas de pistón FOREACH de distintas capacidades, incluidas 100, 250 y 500 μL"
+      "coverAlt": "Bombas de pistón Foreach de distintas capacidades, incluidas 100, 250 y 500 μL"
     },
-    "deck": "Compare el volumen por dosis, el aprovechamiento de la carrera, el número de dispensaciones y los tiempos de recarga; después evalúe las configuraciones FOREACH EA, SM y TM con el circuito real del analizador.",
+    "deck": "Compare el volumen por dosis, el aprovechamiento de la carrera, el número de dispensaciones y los tiempos de recarga; después evalúe las configuraciones Foreach EA, SM y TM con el circuito real del analizador.",
     "leadBlocks": [
       {
         "type": "paragraph",
@@ -121,7 +121,7 @@ export const pumpApplicationArticlesEs = {
           },
           {
             "type": "notice",
-            "text": "Ejemplo exclusivamente aritmético: dispensar 20 μL en cada una de ocho cubetas, reservar 10 μL después de cada aspiración y suponer provisionalmente que el volumen aspirado utilizable coincide con la capacidad nominal. La reserva de 10 μL no es una especificación general de FOREACH. Confirme la carrera útil, el cebado y la reserva necesarios en el circuito real.",
+            "text": "Ejemplo exclusivamente aritmético: dispensar 20 μL en cada una de ocho cubetas, reservar 10 μL después de cada aspiración y suponer provisionalmente que el volumen aspirado utilizable coincide con la capacidad nominal. La reserva de 10 μL no es una especificación general de Foreach. Confirme la carrera útil, el cebado y la reserva necesarios en el circuito real.",
             "label": "Supuestos del ejemplo"
           },
           {
@@ -208,7 +208,7 @@ export const pumpApplicationArticlesEs = {
         "blocks": [
           {
             "type": "paragraph",
-            "text": "La información de las series FOREACH incluye opciones de 100, 250 y 500 μL en EA, SM y TM. Distinga el posicionamiento de cada serie de las capacidades de una configuración particular. Igual capacidad nominal no implica iguales dimensiones, materiales, conexiones, requisitos de accionamiento ni condiciones de rendimiento."
+            "text": "La información de las series Foreach incluye opciones de 100, 250 y 500 μL en EA, SM y TM. Distinga el posicionamiento de cada serie de las capacidades de una configuración particular. Igual capacidad nominal no implica iguales dimensiones, materiales, conexiones, requisitos de accionamiento ni condiciones de rendimiento."
           },
           {
             "type": "table",
@@ -325,7 +325,7 @@ export const pumpApplicationArticlesEs = {
             "items": [
               {
                 "href": "/products/pumps/piston-pump/",
-                "label": "Consulte los productos y series de bombas de pistón FOREACH"
+                "label": "Consulte los productos y series de bombas de pistón Foreach"
               }
             ]
           }
@@ -366,10 +366,10 @@ export const pumpApplicationArticlesEs = {
   "diaphragm-pump-multiple-wash-nozzles-flow-balance": {
     "metadata": {
       "title": "¿Por qué varias boquillas de lavado reciben caudales distintos de una sola bomba de diafragma miniatura?",
-      "seoTitle": "Varias boquillas de lavado: equilibrado de caudal con bomba de diafragma | FOREACH",
+      "seoTitle": "Varias boquillas de lavado: equilibrado de caudal con bomba de diafragma | Foreach Technology",
       "seoDescription": "Calcule la demanda a partir del volumen y el tiempo de cada boquilla, distinga una entrega total insuficiente de un reparto desigual y verifique cada ramal mediante recogida de líquido y mediciones de presión.",
       "coverImage": "/images/resources/technical-articles/pump-application-guides/dpl60-brushless-side-photo.jpg",
-      "coverAlt": "Vista lateral de una bomba de diafragma miniatura FOREACH DPL60 con el cabezal y las conexiones de líquido"
+      "coverAlt": "Vista lateral de una bomba de diafragma miniatura Foreach DPL60 con el cabezal y las conexiones de líquido"
     },
     "deck": "Calcule la demanda a partir del volumen y el tiempo de cada boquilla, distinga una entrega total insuficiente de un reparto desigual y verifique cada ramal mediante recogida de líquido y mediciones de presión.",
     "leadBlocks": [
@@ -432,7 +432,7 @@ export const pumpApplicationArticlesEs = {
           },
           {
             "type": "paragraph",
-            "text": "Las guías FOREACH DPL30 y DPL60 describen clases de caudal de 300 y 600 mL/min respectivamente. El valor nominal DPL30 no demuestra capacidad para esta tarea hipotética de 360 mL/min. DPL60 es un candidato que evaluar: sus 600 mL/min no equivalen automáticamente al caudal disponible a través de los tubos, válvulas y boquillas instalados. Confirme el punto de trabajo con la tensión, el líquido, las condiciones de entrada y la presión de salida requeridos."
+            "text": "Las guías Foreach DPL30 y DPL60 describen clases de caudal de 300 y 600 mL/min respectivamente. El valor nominal DPL30 no demuestra capacidad para esta tarea hipotética de 360 mL/min. DPL60 es un candidato que evaluar: sus 600 mL/min no equivalen automáticamente al caudal disponible a través de los tubos, válvulas y boquillas instalados. Confirme el punto de trabajo con la tensión, el líquido, las condiciones de entrada y la presión de salida requeridos."
           },
           {
             "type": "notice",
@@ -653,10 +653,10 @@ export const pumpApplicationArticlesEs = {
   "diaphragm-pump-flow-drop-reservoir-venting": {
     "metadata": {
       "title": "El caudal empieza bien y después baja: ¿cómo revisar la ventilación del depósito de una bomba de diafragma miniatura?",
-      "seoTitle": "Caída de caudal en bombas de diafragma: ventilación del depósito | FOREACH",
+      "seoTitle": "Caída de caudal en bombas de diafragma: ventilación del depósito | Foreach Technology",
       "seoDescription": "Registre conjuntamente la presión del espacio de gas, la presión de entrada y la entrega para investigar restricciones de ventilación y distinguir cambios de nivel, obstrucciones, entradas de aire y contrapresión de salida.",
       "coverImage": "/images/resources/technical-articles/pump-application-guides/dpl30-brushless-rear-photo.jpg",
-      "coverAlt": "Vista posterior de una bomba de diafragma miniatura FOREACH DPL30 con el cuerpo y las conexiones de líquido"
+      "coverAlt": "Vista posterior de una bomba de diafragma miniatura Foreach DPL30 con el cuerpo y las conexiones de líquido"
     },
     "deck": "Registre conjuntamente la presión del espacio de gas, la presión de entrada y la entrega para investigar restricciones de ventilación y distinguir cambios de nivel, obstrucciones, entradas de aire y contrapresión de salida.",
     "leadBlocks": [
@@ -701,7 +701,7 @@ export const pumpApplicationArticlesEs = {
           },
           {
             "type": "paragraph",
-            "text": "Suponga un espacio inicial de gas de 100 mL a 101.3 kPa absolutos. Tras retirar 20 mL, el modelo da 101.3 × 100/120 ≈ 84.4 kPa absolutos, equivalentes a unos −16.9 kPa manométricos respecto a la presión ambiental inicial. Son cálculos ilustrativos, no mediciones de una bomba FOREACH ni de un depósito real."
+            "text": "Suponga un espacio inicial de gas de 100 mL a 101.3 kPa absolutos. Tras retirar 20 mL, el modelo da 101.3 × 100/120 ≈ 84.4 kPa absolutos, equivalentes a unos −16.9 kPa manométricos respecto a la presión ambiental inicial. Son cálculos ilustrativos, no mediciones de una bomba Foreach ni de un depósito real."
           },
           {
             "type": "paragraph",

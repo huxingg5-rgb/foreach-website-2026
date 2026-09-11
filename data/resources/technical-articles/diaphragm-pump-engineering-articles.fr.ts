@@ -10,12 +10,12 @@ export const diaphragmPumpFlowPressureCurveFrCopy = {
     title:
       "Comment lire la courbe débit-pression d’une pompe à membrane ?",
     seoTitle:
-      "Courbe débit-pression d’une pompe à membrane et point de fonctionnement | FOREACH",
+      "Courbe débit-pression d’une pompe à membrane et point de fonctionnement | Foreach Technology",
     seoDescription:
       "Comprendre le débit installé à partir de la courbe de pompe, de la résistance du circuit, de la pression d’entrée et de sortie, de la viscosité et du diamètre du tube.",
     coverImage: `${FLOW_ASSET_BASE}/article-cover.webp`,
     coverAlt:
-      "Pompe à membrane miniature FOREACH sur un banc de mesure débit-pression",
+      "Pompe à membrane miniature Foreach sur un banc de mesure débit-pression",
   },
   deck:
     "Une valeur catalogue de 300 ou 600 mL/min n’est pas un débit fixe dans l’instrument. Le débit réel correspond à l’intersection de la courbe de pompe et de la courbe du circuit, dans les conditions réelles de fluide, de pression, de tuyauterie et d’alimentation.",
@@ -160,12 +160,12 @@ export const microDiaphragmPumpContinuousDutyLifeFrCopy = {
     title:
       "Combien de temps une pompe à membrane miniature peut-elle fonctionner en continu ?",
     seoTitle:
-      "Fonctionnement continu et durée de vie d’une pompe à membrane | FOREACH",
+      "Fonctionnement continu et durée de vie d’une pompe à membrane | Foreach Technology",
     seoDescription:
       "Comprendre service continu, heures cumulées, moteurs à balais et sans balais, profil de mission, critères de défaillance, essais d’endurance et fiabilité B10.",
     coverImage: `${LIFE_ASSET_BASE}/article-cover.webp`,
     coverAlt:
-      "Pompe à membrane miniature FOREACH pendant un essai de fonctionnement continu",
+      "Pompe à membrane miniature Foreach pendant un essai de fonctionnement continu",
   },
   deck:
     "Compatible avec un fonctionnement continu ne signifie pas durée de vie illimitée. Service continu, heures cumulées, vie calendaire et fiabilité statistique sont des notions différentes, toutes liées à la charge, au fluide, à la commande et à l’environnement.",
@@ -271,7 +271,7 @@ export const microDiaphragmPumpContinuousDutyLifeFrCopy = {
           width: 1200,
           height: 675,
           caption:
-            "B10 est le temps correspondant à 10 % de défaillances cumulées dans le modèle. Le graphique ne représente pas des données mesurées d’un modèle FOREACH.",
+            "B10 est le temps correspondant à 10 % de défaillances cumulées dans le modèle. Le graphique ne représente pas des données mesurées d’un modèle Foreach.",
         },
       ],
     },

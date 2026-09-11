@@ -513,11 +513,11 @@ export function localizeProbeDetailData<T extends DetailRecord>(
     bottomCtaDesc: bottomCtaDescription,
     customInquiryTitle: bottomCtaTitle,
     customInquiryDescription: bottomCtaDescription,
-    seoTitle: `${copy.title} | FOREACH`,
+    seoTitle: `${copy.title} | Foreach Technology`,
     seoDescription: copy.description,
     seo: {
       ...(localizedData.seo || {}),
-      title: `${copy.title} | FOREACH`,
+      title: `${copy.title} | Foreach Technology`,
       description: copy.description,
     },
   } as unknown as T;

@@ -616,7 +616,7 @@ async function loadCompatibleItems(): Promise<SiteSearchItem[]> {
         id: `compatible:${normalize(compatibleModel)}:${product.productCode}`,
         module: "compatible-models",
         title: compatibleModel,
-        subtitle: `对应 FOREACH 型号：${product.foreachModel}`,
+        subtitle: `对应 Foreach 型号：${product.foreachModel}`,
         description: [
           product.productType,
           product.productSeries,

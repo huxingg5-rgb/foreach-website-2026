@@ -219,7 +219,7 @@ export async function generateMetadata({
           type: "website",
           locale: "zh_CN",
           url: canonicalPath,
-          siteName: "FOREACH",
+          siteName: "Foreach Technology",
           title: productTypeRoute.title,
           description: productTypeRoute.description,
         },
@@ -245,7 +245,7 @@ export async function generateMetadata({
     }
 
     const pageData = getControlModuleProductDetailData(detail);
-    const title = `${detail.title} | FOREACH`;
+    const title = `${detail.title} | Foreach Technology`;
     const description = Array.isArray(detail.intro)
         ? detail.intro.join(" ").slice(0, 160)
         : detail.title;
@@ -272,10 +272,10 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${slug} | FOREACH`,
+    title: `${slug} | Foreach Technology`,
     ...buildProductSocialMetadata({
       data: pageData,
-      title: `${slug} | FOREACH`,
+      title: `${slug} | Foreach Technology`,
       canonicalUrl: `/products/${category}/${slug}/`,
     }),
   };

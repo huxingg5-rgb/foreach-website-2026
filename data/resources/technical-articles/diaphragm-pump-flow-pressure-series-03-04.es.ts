@@ -9,11 +9,11 @@ const SUCTION_DISCHARGE_ARTICLE_ASSET_BASE =
 export const tubeInnerDiameterAffectsDiaphragmPumpFlowEsCopy = {
   metadata: {
     title: "¿Por qué cambia tanto el caudal real al modificar el diámetro del tubo con la misma microbomba de diafragma?",
-    seoTitle: "Caudal tras cambiar el diámetro interior del tubo: diagnóstico por presión | FOREACH",
+    seoTitle: "Caudal tras cambiar el diámetro interior del tubo: diagnóstico por presión | Foreach Technology",
     seoDescription:
       "Si el caudal de una microbomba de diafragma disminuye tras cambiar el tubo, conviene distinguir entre diámetro interior, longitud, paso interno de los conectores y estado de la bomba. Esta guía propone medir conjuntamente presión de entrada, presión de salida y caudal.",
     coverImage: `${TUBE_DIAMETER_ARTICLE_ASSET_BASE}/article-cover.webp`,
-    coverAlt: "Tubos y ensayo de caudal de una microbomba de diafragma FOREACH en un vídeo oficial de Douyin",
+    coverAlt: "Tubos y ensayo de caudal de una microbomba de diafragma Foreach en un vídeo oficial de Douyin",
   },
   deck:
     "Incluso si no se reemplaza la bomba, el caudal instalado también puede cambiar debido al diámetro interior, la longitud, la curvatura y el diámetro mínimo de la manguera. Cuando se encuentra \"el caudal cae después de cambiar las tuberías\", la forma eficaz de solucionarlo no es dudar de la bomba primero, ni engrosar todas las mangueras, sino medir simultáneamente la presión de entrada, la presión de salida y el caudal acumulado para determinar dónde se agrega la resistencia.",
@@ -240,11 +240,11 @@ export const tubeInnerDiameterAffectsDiaphragmPumpFlowEsCopy = {
 export const suctionVsDischargeResistanceDiaphragmPumpEsCopy = {
   metadata: {
     title: "¿Qué resistencia afecta más a una microbomba de diafragma: la del tubo de aspiración o la del tubo de descarga?",
-    seoTitle: "Resistencia de aspiración y contrapresión de descarga en microbombas de diafragma | FOREACH",
+    seoTitle: "Resistencia de aspiración y contrapresión de descarga en microbombas de diafragma | Foreach Technology",
     seoDescription:
       "La resistencia de aspiración y la de descarga aumentan la presión diferencial exigida a la microbomba, pero producen síntomas distintos. Esta guía utiliza presión absoluta de entrada, contrapresión de salida y caudal para diferenciar problemas de cebado, cavitación y presión sin caudal.",
     coverImage: `${SUCTION_DISCHARGE_ARTICLE_ASSET_BASE}/article-cover.webp`,
-    coverAlt: "Ensayo de aspiración y descarga de una microbomba de diafragma FOREACH en un vídeo oficial de Douyin",
+    coverAlt: "Ensayo de aspiración y descarga de una microbomba de diafragma Foreach en un vídeo oficial de Douyin",
   },
   deck:
     "Las pérdidas de ambos lados aumentan la presión diferencial de la microbomba, pero ningún lado es siempre el más importante. La aspiración condiciona especialmente el cebado, el llenado de la cámara, la sensibilidad a fugas, la desgasificación y la cavitación; la descarga suele manifestarse como mayor contrapresión, menor caudal o funcionamiento contra una obstrucción. El diagnóstico debe registrar en el mismo eje temporal la presión absoluta de entrada, la presión de salida y el caudal.",

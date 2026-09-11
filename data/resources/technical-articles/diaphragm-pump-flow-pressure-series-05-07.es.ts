@@ -12,11 +12,11 @@ export const diaphragmPumpPressureRatingTermsEsCopy = {
     title:
       "¿En qué se diferencian la presión nominal de trabajo, la presión máxima de salida, la presión de prueba y la presión de rotura de una microbomba de diafragma?",
     seoTitle:
-      "Presión nominal, máxima, de prueba y de rotura de una microbomba de diafragma | FOREACH",
+      "Presión nominal, máxima, de prueba y de rotura de una microbomba de diafragma | Foreach Technology",
     seoDescription:
       "La presión nominal de trabajo, la presión máxima de salida, la presión de prueba y la presión de rotura describen límites distintos. Esta guía ofrece una tabla terminológica, una lista de datos que deben confirmarse y un método para revisar la especificación.",
     coverImage: PRESSURE_TERMS_ASSET_BASE + "/article-cover.webp",
-    coverAlt: "Microbomba de diafragma FOREACH y banco de ensayo de presión en un vídeo oficial de Douyin",
+    coverAlt: "Microbomba de diafragma Foreach y banco de ensayo de presión en un vídeo oficial de Douyin",
   },
   deck: "Un valor de presión solo tiene significado técnico cuando se acompaña de su definición, fluido de ensayo, condición de entrada, caudal, duración y criterio de aceptación. La presión nominal puede delimitar el funcionamiento permitido; la presión máxima de salida, la presión de prueba y la presión de rotura no son por sí mismas puntos de trabajo continuo.",
   leadBlocks: [
@@ -109,7 +109,7 @@ export const diaphragmPumpPressureRatingTermsEsCopy = {
       blocks: [
         {
           type: "paragraph",
-          text: "En la bomba de diafragma para líquidos de alta presión FOREACH DPL30H, la información del sitio indica una «presión nominal de 600 kPa». Ese valor debe interpretarse junto con el caudal correspondiente, el fluido, las condiciones de entrada, la temperatura, el régimen de servicio y la curva caudal-presión completa. No puede extrapolarse automáticamente como presión de prueba, presión de rotura o capacidad de transporte continuo en cualquier condición.",
+          text: "En la bomba de diafragma para líquidos de alta presión Foreach DPL30H, la información del sitio indica una «presión nominal de 600 kPa». Ese valor debe interpretarse junto con el caudal correspondiente, el fluido, las condiciones de entrada, la temperatura, el régimen de servicio y la curva caudal-presión completa. No puede extrapolarse automáticamente como presión de prueba, presión de rotura o capacidad de transporte continuo en cualquier condición.",
         },
         {
           type: "paragraph",
@@ -172,18 +172,18 @@ export const diaphragmPumpPressureRatingTermsEsCopy = {
         },
         {
           type: "paragraph",
-          text: "Este principio también se aplica estrictamente al contenido de FOREACH: si la especificación controlada publica una presión nominal, debe describirse como tal; los datos no publicados de presión de prueba o de rotura no deben deducirse de la estructura, el material ni de parámetros parecidos. Un artículo web puede explicar el método de selección, pero no sustituye la documentación de liberación del producto.",
+          text: "Este principio también se aplica estrictamente al contenido de Foreach: si la especificación controlada publica una presión nominal, debe describirse como tal; los datos no publicados de presión de prueba o de rotura no deben deducirse de la estructura, el material ni de parámetros parecidos. Un artículo web puede explicar el método de selección, pero no sustituye la documentación de liberación del producto.",
         },
       ],
     },
     {
-      title: "Datos del sitio FOREACH y límites de evidencia",
+      title: "Datos del sitio Foreach y límites de evidencia",
       blocks: [
         {
           type: "links",
           items: [
             {
-              label: "FOREACH: Guía de selección de bomba de diafragma para líquidos de alta presión DPL30H",
+              label: "Foreach: Guía de selección de bomba de diafragma para líquidos de alta presión DPL30H",
               href: "/resources/technical-articles/dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide",
             },
           ],
@@ -236,11 +236,11 @@ export const diaphragmPumpPressureRatingTermsEsCopy = {
 export const diaphragmPump100KpaVs600KpaSelectionEsCopy = {
   metadata: {
     title: "¿Bastan 100 kPa? Cómo decidir si el circuito necesita una microbomba de diafragma de 600 kPa",
-    seoTitle: "Microbomba de 100 o 600 kPa: selección mediante presupuesto de presión | FOREACH",
+    seoTitle: "Microbomba de 100 o 600 kPa: selección mediante presupuesto de presión | Foreach Technology",
     seoDescription:
       "El nombre de la aplicación no basta para decidir si 100 kPa son suficientes. La selección entre plataformas de 100 y 600 kPa debe considerar caudal objetivo, tuberías, válvulas, filtros, agujas, presión terminal y curva de la bomba.",
     coverImage: PRESSURE_LEVEL_SELECTION_ASSET_BASE + "/article-cover.webp",
-    coverAlt: "Microbomba de diafragma FOREACH y ensayo de presión del circuito en un vídeo oficial de Douyin",
+    coverAlt: "Microbomba de diafragma Foreach y ensayo de presión del circuito en un vídeo oficial de Douyin",
   },
   deck: "100 y 600 kPa no equivalen a una versión normal y otra simplemente mejorada. Primero debe calcularse el presupuesto de presión de todo el circuito al caudal objetivo y después leerse la curva de la bomba candidata. Una plataforma de mayor presión solo aporta valor cuando el circuito presenta una contrapresión real que la justifica.",
   leadBlocks: [
@@ -333,7 +333,7 @@ export const diaphragmPump100KpaVs600KpaSelectionEsCopy = {
         },
         {
           type: "paragraph",
-          text: "Las presiones nominales públicas de las bombas de diafragma para líquidos ordinarias FOREACH DPL30 y DPL60 son ambas de 100 kPa, y los niveles de caudal sin carga correspondientes son de 300 mL/min y 600 mL/min respectivamente. Para lo que son adecuados no es un nombre industrial fijo, sino un recorrido de líquido cuyo punto de operación objetivo puede caer dentro de la curva controlada y el rango de condiciones de operación permitidas.",
+          text: "Las presiones nominales públicas de las bombas de diafragma para líquidos ordinarias Foreach DPL30 y DPL60 son ambas de 100 kPa, y los niveles de caudal sin carga correspondientes son de 300 mL/min y 600 mL/min respectivamente. Para lo que son adecuados no es un nombre industrial fijo, sino un recorrido de líquido cuyo punto de operación objetivo puede caer dentro de la curva controlada y el rango de condiciones de operación permitidas.",
         },
       ],
     },
@@ -353,7 +353,7 @@ export const diaphragmPump100KpaVs600KpaSelectionEsCopy = {
         },
         {
           type: "paragraph",
-          text: "La bomba de diafragma para líquidos de alta presión FOREACH DPL30H publica un caudal sin carga de 300 mL/min y una presión nominal de 600 kPa. Esos dos valores no pertenecen al mismo punto de funcionamiento; para saber qué caudal queda a una contrapresión elevada debe consultarse una versión vigente de la curva caudal-presión.",
+          text: "La bomba de diafragma para líquidos de alta presión Foreach DPL30H publica un caudal sin carga de 300 mL/min y una presión nominal de 600 kPa. Esos dos valores no pertenecen al mismo punto de funcionamiento; para saber qué caudal queda a una contrapresión elevada debe consultarse una versión vigente de la curva caudal-presión.",
         },
       ],
     },
@@ -400,7 +400,7 @@ export const diaphragmPump100KpaVs600KpaSelectionEsCopy = {
       blocks: [
         {
           type: "paragraph",
-          text: "Si el circuito de líquido no requiere una contrapresión alta, la selección directa de una plataforma de 600 kPa puede aumentar las limitaciones en los métodos de conexión, los límites de material y temperatura, el suministro de energía, la estrategia de control, el espacio de instalación y el costo. Tomando como ejemplo la información pública de FOREACH, la altura autocebante del DPL30 es 6 mH₂O, el límite superior de temperatura media es +80 ℃; la altura autocebante del DPL30H es 3 mH₂O, el límite superior de temperatura media es +40 ℃ y utiliza una conexión de casquillo de tubo duro de 6×4 mm.",
+          text: "Si el circuito de líquido no requiere una contrapresión alta, la selección directa de una plataforma de 600 kPa puede aumentar las limitaciones en los métodos de conexión, los límites de material y temperatura, el suministro de energía, la estrategia de control, el espacio de instalación y el costo. Tomando como ejemplo la información pública de Foreach, la altura autocebante del DPL30 es 6 mH₂O, el límite superior de temperatura media es +80 ℃; la altura autocebante del DPL30H es 3 mH₂O, el límite superior de temperatura media es +40 ℃ y utiliza una conexión de casquillo de tubo duro de 6×4 mm.",
         },
         {
           type: "paragraph",
@@ -429,21 +429,21 @@ export const diaphragmPump100KpaVs600KpaSelectionEsCopy = {
       ],
     },
     {
-      title: "Datos del sitio FOREACH y límites de evidencia",
+      title: "Datos del sitio Foreach y límites de evidencia",
       blocks: [
         {
           type: "links",
           items: [
             {
-              label: "FOREACH: Guía de selección de bomba de diafragma para líquidos de alta presión DPL30H",
+              label: "Foreach: Guía de selección de bomba de diafragma para líquidos de alta presión DPL30H",
               href: "/resources/technical-articles/dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide",
             },
             {
-              label: "FOREACH: Guía de selección de bombas de diafragma para líquidos DPL30",
+              label: "Foreach: Guía de selección de bombas de diafragma para líquidos DPL30",
               href: "/resources/technical-articles/dpl30-liquid-diaphragm-pump-selection-guide",
             },
             {
-              label: "FOREACH: Guía de selección de bomba de diafragma para líquidos DPL60",
+              label: "Foreach: Guía de selección de bomba de diafragma para líquidos DPL60",
               href: "/resources/technical-articles/dpl60-liquid-diaphragm-pump-selection-guide",
             },
           ],
@@ -495,12 +495,12 @@ export const diaphragmPump100KpaVs600KpaSelectionEsCopy = {
 
 export const highBackpressureFluidPathPressureBudgetEsCopy = {
   metadata: {
-    title: "¿Cómo elaborar el presupuesto de presión de un circuito con alta contrapresión? Ejemplo de selección FOREACH de 600 kPa",
-    seoTitle: "Presupuesto de presión para circuitos de alta contrapresión y bombas de 600 kPa | FOREACH",
+    title: "¿Cómo elaborar el presupuesto de presión de un circuito con alta contrapresión? Ejemplo de selección Foreach de 600 kPa",
+    seoTitle: "Presupuesto de presión para circuitos de alta contrapresión y bombas de 600 kPa | Foreach Technology",
     seoDescription:
       "Antes de seleccionar una bomba para un circuito de alta contrapresión deben presupuestarse por separado las pérdidas de aspiración, descarga, válvulas, filtros, agujas, cámara terminal y altura estática; el margen y la protección frente a transitorios se verifican aparte.",
     coverImage: HIGH_BACKPRESSURE_BUDGET_ASSET_BASE + "/article-cover.webp",
-    coverAlt: "Ensayo de un circuito con contrapresión mediante una microbomba FOREACH en un vídeo oficial de Douyin",
+    coverAlt: "Ensayo de un circuito con contrapresión mediante una microbomba Foreach en un vídeo oficial de Douyin",
   },
   deck: "En un circuito de alta contrapresión no basta con indicar al proveedor que se necesitan 6 bar. Cada pérdida estable debe calcularse al caudal objetivo, separando el estado normal, el peor estado estable, el margen de presión y los límites de protección transitoria, para contrastarlos después con la curva controlada de la bomba candidata.",
   leadBlocks: [
@@ -699,11 +699,11 @@ export const highBackpressureFluidPathPressureBudgetEsCopy = {
       ],
     },
     {
-      title: "5. Ejemplo con FOREACH DPL30H: cómo trasladar el análisis a la selección del producto",
+      title: "5. Ejemplo con Foreach DPL30H: cómo trasladar el análisis a la selección del producto",
       blocks: [
         {
           type: "paragraph",
-          text: "Los parámetros públicos de la bomba de diafragma para líquidos de alta presión FOREACH DPL30H incluyen un caudal sin carga de 300 mL/min, una presión nominal de 600 kPa, una altura autocebante de 3 mH₂O y una conexión de casquillo de tubo duro de 6×4 mm. Puede ingresar al grupo de candidatos de alta contrapresión, pero el enfoque de selección aún está en el caudal que se puede proporcionar a la contrapresión objetivo y si el punto de operación se encuentra dentro del medio, la temperatura y el rango de operación permitido por la especificación controlada.",
+          text: "Los parámetros públicos de la bomba de diafragma para líquidos de alta presión Foreach DPL30H incluyen un caudal sin carga de 300 mL/min, una presión nominal de 600 kPa, una altura autocebante de 3 mH₂O y una conexión de casquillo de tubo duro de 6×4 mm. Puede ingresar al grupo de candidatos de alta contrapresión, pero el enfoque de selección aún está en el caudal que se puede proporcionar a la contrapresión objetivo y si el punto de operación se encuentra dentro del medio, la temperatura y el rango de operación permitido por la especificación controlada.",
         },
         {
           type: "paragraph",
@@ -776,13 +776,13 @@ export const highBackpressureFluidPathPressureBudgetEsCopy = {
       ],
     },
     {
-      title: "Datos del sitio FOREACH y límites de evidencia",
+      title: "Datos del sitio Foreach y límites de evidencia",
       blocks: [
         {
           type: "links",
           items: [
             {
-              label: "FOREACH: Guía de selección de bomba de diafragma para líquidos de alta presión DPL30H",
+              label: "Foreach: Guía de selección de bomba de diafragma para líquidos de alta presión DPL30H",
               href: "/resources/technical-articles/dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide",
             },
           ],

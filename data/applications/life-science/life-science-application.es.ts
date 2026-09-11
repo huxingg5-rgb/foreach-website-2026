@@ -16,7 +16,7 @@ export const lifeScienceEsExactText: Record<string, string> = {
   "有生命科学设备液路设计或国产替代需求？":
     "¿Necesita diseñar el circuito fluídico de un equipo de ciencias de la vida o evaluar una alternativa local?",
   "可提交应用类型、液体介质、目标流量、压力范围、管路尺寸、空间限制和当前问题，由恒永达工程团队协助评估泵阀管路组合、材料兼容性与实验液路方案。":
-    "Envíe el tipo de aplicación, el fluido, el caudal objetivo, el rango de presión, las dimensiones de los tubos, las limitaciones de espacio y el problema actual para que el equipo de ingeniería de FOREACH evalúe la combinación de bombas, válvulas y tubos, la compatibilidad de materiales y la solución fluídica.",
+    "Envíe el tipo de aplicación, el fluido, el caudal objetivo, el rango de presión, las dimensiones de los tubos, las limitaciones de espacio y el problema actual para que el equipo de ingeniería de Foreach evalúe la combinación de bombas, válvulas y tubos, la compatibilidad de materiales y la solución fluídica.",
   "提交应用需求": "Enviar requisitos de aplicación",
 
   "微量吸取、保持与推出的一体化液体处理":

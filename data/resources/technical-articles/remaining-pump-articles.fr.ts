@@ -4,10 +4,10 @@ export const remainingPumpArticlesFr = {
   "ink-circulation-supply-return-pump-diaphragm-pump": {
     "metadata": {
       "title": "Quelle différence entre une pompe de circulation, une pompe d’alimentation et une pompe de retour d’encre ?",
-      "seoTitle": "Circulation, alimentation et retour d’encre : les pompes | FOREACH",
+      "seoTitle": "Circulation, alimentation et retour d’encre : les pompes | Foreach Technology",
       "seoDescription": "Comprendre les fonctions des pompes d’encre, les architectures jet d’encre, la pression de tête, le débit installé et la validation des pompes à membrane.",
       "coverImage": "/images/resources/technical-articles/ink-circulation-supply-return-pump/ink-supply-return-circulation-cover.webp",
-      "coverAlt": "Pompe à membrane miniature pour liquides FOREACH série DPL présentée dans une vidéo produit"
+      "coverAlt": "Pompe à membrane miniature pour liquides Foreach série DPL présentée dans une vidéo produit"
     },
     "deck": "Alimentation, retour et circulation d’encre désignent des fonctions hydrauliques, pas trois technologies mécaniques fixes. La pompe d’alimentation transporte l’encre vers un réservoir secondaire ou la tête ; la pompe de retour ramène l’encre inutilisée vers un réservoir ; la pompe de circulation entretient le débit dans une boucle. Le besoin d’une, deux ou plusieurs pompes dépend de la tête, des réservoirs, de la régulation par gravité ou dépression, des filtres et de l’architecture aller-retour.",
     "leadBlocks": [
@@ -116,7 +116,7 @@ export const remainingPumpArticlesFr = {
           {
             "type": "notice",
             "label": "Performances propres au modèle :",
-            "text": "La faible pulsation, l’aptitude à fonctionner à sec, la résistance à l’abrasion et aux solvants, ainsi que l’aptitude à faire circuler durablement de l’encre blanche doivent être démontrées pour le modèle et les conditions précis. Les données publiques actuelles de FOREACH ne prouvent pas à elles seules que DPL30 ou DPL60 convient à une encre donnée."
+            "text": "La faible pulsation, l’aptitude à fonctionner à sec, la résistance à l’abrasion et aux solvants, ainsi que l’aptitude à faire circuler durablement de l’encre blanche doivent être démontrées pour le modèle et les conditions précis. Les données publiques actuelles de Foreach ne prouvent pas à elles seules que DPL30 ou DPL60 convient à une encre donnée."
           }
         ]
       },
@@ -167,7 +167,7 @@ export const remainingPumpArticlesFr = {
           {
             "type": "table",
             "headers": [
-              "Série FOREACH",
+              "Série Foreach",
               "Limites produit vérifiées",
               "Évaluation pour le jet d’encre"
             ],
@@ -288,10 +288,10 @@ export const remainingPumpArticlesFr = {
   "300-vs-600-ml-min-ink-circulation-return-pump-selection": {
     "metadata": {
       "title": "300 ou 600 mL/min : comment choisir une pompe de circulation ou de retour d’encre ?",
-      "seoTitle": "Choisir une pompe d’encre de 300 ou 600 mL/min | FOREACH",
+      "seoTitle": "Choisir une pompe d’encre de 300 ou 600 mL/min | Foreach Technology",
       "seoDescription": "Évaluez une pompe de circulation ou de retour d’encre de 300 ou 600 mL/min selon le débit cible, la courbe, la viscosité, le filtre, les tubes et les pressions aller-retour.",
       "coverImage": "/images/resources/technical-articles/ink-circulation-flow-selection/ink-pump-300-vs-600-flow-selection-cover.webp",
-      "coverAlt": "Pompes à membrane miniatures pour liquides FOREACH DPL30 et DPL60 présentées dans une vidéo produit"
+      "coverAlt": "Pompes à membrane miniatures pour liquides Foreach DPL30 et DPL60 présentées dans une vidéo produit"
     },
     "deck": "Définissez le débit de travail requis dans le circuit de circulation ou de retour, puis calculez ou mesurez la pression différentielle du système à ce débit. Les valeurs de 300 mL/min pour DPL30 et 600 mL/min pour DPL60 sont des classes de débit à vide, pas des débits garantis avec encre, filtres, tubes et tête. Plus la cible approche la limite nominale, plus la courbe et les essais du circuit installé sont déterminants.",
     "leadBlocks": [
@@ -598,7 +598,7 @@ export const remainingPumpArticlesFr = {
   "white-ink-circulation-pump-selection-sedimentation": {
     "metadata": {
       "title": "Pourquoi la recirculation de l’encre blanche est-elle plus difficile et comment choisir sa pompe ?",
-      "seoTitle": "Circulation d’encre blanche et sédimentation | FOREACH",
+      "seoTitle": "Circulation d’encre blanche et sédimentation | Foreach Technology",
       "seoDescription": "Comprendre la sédimentation du TiO₂, le trajet et le débit, les zones mortes, les filtres, la viscosité, la pression et le redémarrage avant de présélectionner DPL30 ou DPL60.",
       "coverImage": "/images/resources/technical-articles/white-ink-circulation-pump/white-ink-circulation-dead-zone-cover.webp",
       "coverAlt": "Boucle d’encre blanche avec réservoir, pompe à membrane, filtre et branche limitant les zones mortes"
@@ -885,10 +885,10 @@ export const remainingPumpArticlesFr = {
   "300-ml-min-micro-liquid-diaphragm-pump-self-priming-loss": {
     "metadata": {
       "title": "Pourquoi une pompe à membrane miniature de 300 mL/min perd-elle son auto-amorçage avec le temps ?",
-      "seoTitle": "Perte d’auto-amorçage d’une pompe de 300 mL/min | FOREACH",
+      "seoTitle": "Perte d’auto-amorçage d’une pompe de 300 mL/min | Foreach Technology",
       "seoDescription": "Diagnostiquer clapets non étanches, prises d’air, pertes à l’aspiration, pression de vapeur et évolution des matériaux d’une pompe à membrane miniature.",
       "coverImage": "/images/resources/technical-articles/dpl30-troubleshooting/300-ml-min-liquid-diaphragm-pump-self-priming-test.webp",
-      "coverAlt": "Pompe à membrane miniature pour liquides FOREACH DPL30 de 300 mL/min"
+      "coverAlt": "Pompe à membrane miniature pour liquides Foreach DPL30 de 300 mL/min"
     },
     "deck": "La perte d’auto-amorçage signifie que la pompe et son circuit d’aspiration ne créent et ne maintiennent plus la même faible pression absolue à l’entrée qu’à l’origine. Fuite des clapets, prise d’air, pertes accrues à l’aspiration, pression de vapeur et évolution des matériaux peuvent produire le même symptôme. La seule rotation du moteur ne permet pas d’en identifier la cause.",
     "leadBlocks": [
@@ -1084,10 +1084,10 @@ export const remainingPumpArticlesFr = {
   "300-ml-min-micro-liquid-diaphragm-pump-motor-runs-no-flow": {
     "metadata": {
       "title": "Le moteur d’une pompe à membrane miniature de 300 mL/min tourne sans débit : que vérifier d’abord ?",
-      "seoTitle": "Le moteur tourne, mais la pompe ne débite pas | FOREACH",
+      "seoTitle": "Le moteur tourne, mais la pompe ne débite pas | Foreach Technology",
       "seoDescription": "Diagnostiquer l’absence de débit par les prises d’air, obstructions, clapets, contre-pression et courant moteur.",
       "coverImage": "/images/resources/technical-articles/dpl30-troubleshooting/300-ml-min-liquid-diaphragm-pump-motor-power-check.webp",
-      "coverAlt": "Pompe à membrane miniature FOREACH DPL30 utilisée pour diagnostiquer un circuit liquide"
+      "coverAlt": "Pompe à membrane miniature Foreach DPL30 utilisée pour diagnostiquer un circuit liquide"
     },
     "deck": "La rotation du moteur confirme l’activité de l’entraînement, pas le remplissage effectif, l’action directionnelle des clapets ni une charge de refoulement admissible. Le diagnostic le plus rapide associe pression d’entrée, pression de sortie, débit et courant, au lieu de se fier seulement au bruit.",
     "leadBlocks": [
@@ -1283,10 +1283,10 @@ export const remainingPumpArticlesFr = {
   "300-ml-min-micro-liquid-diaphragm-pump-water-vs-reagent": {
     "metadata": {
       "title": "Pourquoi le débit et l’auto-amorçage d’une pompe de 300 mL/min baissent-ils en remplaçant l’eau par un réactif ?",
-      "seoTitle": "Pompe à membrane : performances avec eau et réactif | FOREACH",
+      "seoTitle": "Pompe à membrane : performances avec eau et réactif | Foreach Technology",
       "seoDescription": "Comprendre l’influence de la viscosité, de la pression de vapeur, du dégazage et des matériaux sur le débit et l’auto-amorçage avec un réactif.",
       "coverImage": "/images/resources/technical-articles/dpl30-troubleshooting/300-ml-min-liquid-diaphragm-pump-water-versus-reagent-flow-test.webp",
-      "coverAlt": "Pompe à membrane miniature FOREACH DPL30 pour valider un réactif de procédé"
+      "coverAlt": "Pompe à membrane miniature Foreach DPL30 pour valider un réactif de procédé"
     },
     "deck": "Réussir un essai à l’eau démontre une performance seulement à cette température, avec ces tubes, ce niveau, cette alimentation et cette durée. Un réactif peut modifier viscosité, densité, pression de vapeur, tension superficielle, mouillage, dégazage et matériaux, déplaçant le point de fonctionnement de la même pompe.",
     "leadBlocks": [
@@ -1479,10 +1479,10 @@ export const remainingPumpArticlesFr = {
   "300-ml-min-micro-liquid-diaphragm-pump-epdm-ptfe-ffkm": {
     "metadata": {
       "title": "Comment choisir EPDM, PTFE et FFKM pour une pompe à membrane miniature de 300 mL/min ?",
-      "seoTitle": "Choisir EPDM, PTFE et FFKM pour une micropompe | FOREACH",
+      "seoTitle": "Choisir EPDM, PTFE et FFKM pour une micropompe | Foreach Technology",
       "seoDescription": "Comparer compatibilité chimique, gonflement, étanchéité dynamique et validation au fluide réel pour sélectionner EPDM, PTFE et FFKM.",
       "coverImage": "/images/resources/technical-articles/dpl30-troubleshooting/300-ml-min-liquid-diaphragm-pump-wetted-material-inspection.webp",
-      "coverAlt": "Pompe à membrane miniature FOREACH DPL30 avec différentes associations de matériaux mouillés"
+      "coverAlt": "Pompe à membrane miniature Foreach DPL30 avec différentes associations de matériaux mouillés"
     },
     "deck": "EPDM, PTFE et FFKM ne forment pas un classement simple de qualité croissante. EPDM et FFKM sont des élastomères, PTFE un fluoropolymère ; membrane, clapets et tête remplissent des tâches mécaniques différentes. Le choix concerne une structure mouillée complète sollicitée dynamiquement, pas un seul nom.",
     "leadBlocks": [

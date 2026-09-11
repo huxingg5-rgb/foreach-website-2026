@@ -218,7 +218,7 @@ export async function generateMetadata({
   const seoTitle = article.seoTitle ?? article.title;
   const metaTitle = /FOREACH|恒永达/i.test(seoTitle)
     ? seoTitle
-    : `${seoTitle}｜技术文章｜FOREACH 恒永达`;
+    : `${seoTitle}｜技术文章｜Foreach Technology 恒永达`;
   const socialImage = article.coverImage
     ? new URL(article.coverImage, "https://www.foreachtek.com").toString()
     : undefined;

@@ -8,7 +8,7 @@
         "title": "Where does the displaced volume go?",
         "paragraphs": [
           "Ideal displacement equals effective piston area times travel. In a real fluid path, gas, flexible tubing and valve cavities can store part of that displacement. Delivered volume is the liquid that actually reaches the target. Short strokes, the first dispense after reversal and restart are particularly sensitive.",
-          "For illustration, a sealed 10 μL bubble compressed from 100 to 120 kPa absolute occupies about 8.33 μL under an isothermal ideal-gas assumption. Approximately 1.67 μL is temporarily stored. This is neither measured FOREACH error nor a prediction of permanent underdelivery: pressure recovery may release that volume later in the same or a subsequent cycle."
+          "For illustration, a sealed 10 μL bubble compressed from 100 to 120 kPa absolute occupies about 8.33 μL under an isothermal ideal-gas assumption. Approximately 1.67 μL is temporarily stored. This is neither measured Foreach error nor a prediction of permanent underdelivery: pressure recovery may release that volume later in the same or a subsequent cycle."
         ]
       },
       {
@@ -42,8 +42,8 @@
       {
         "title": "Evaluate the EAS chamber and repeat the complete test",
         "paragraphs": [
-          "The official FOREACH EAS specification describes an easy-deaeration chamber. It is a candidate for reducing trapped air, not a guarantee of bubble-free operation with every fluid, orientation and valve circuit. Confirm capacity, interfaces and the actual valve circuit against the official specification.",
-          "The EA-500-PMMA displayed configuration is 500 μL with 2000 full steps, or a theoretical 0.25 μL per step. Resolution does not establish delivered-liquid accuracy. Recheck the real fluid, minimum target volume, first dispense, steady operation and restart. Hamilton's pressure/bubble monitoring material supports the observation approach; it does not imply equivalent sensors are included in FOREACH pumps."
+          "The official Foreach EAS specification describes an easy-deaeration chamber. It is a candidate for reducing trapped air, not a guarantee of bubble-free operation with every fluid, orientation and valve circuit. Confirm capacity, interfaces and the actual valve circuit against the official specification.",
+          "The EA-500-PMMA displayed configuration is 500 μL with 2000 full steps, or a theoretical 0.25 μL per step. Resolution does not establish delivered-liquid accuracy. Recheck the real fluid, minimum target volume, first dispense, steady operation and restart. Hamilton's pressure/bubble monitoring material supports the observation approach; it does not imply equivalent sensors are included in Foreach pumps."
         ]
       }
     ],
@@ -125,7 +125,7 @@
         "title": "Why can filling continue after the piston stops?",
         "paragraphs": [
           "Retraction creates geometric volume that the upstream liquid must fill through a resistance. With gas or elastic tubing present, filling and pressure recovery can continue after motion stops. Immediate valve switching can carry an unsettled state into the next operation.",
-          "Choose dwell using pressure recovery and reproducible dispense mass. Tecan guidance supports appropriate speed and delay for viscous fluids, but its platform and tip settings do not establish a universal 200 ms or 500 ms setting for FOREACH pumps."
+          "Choose dwell using pressure recovery and reproducible dispense mass. Tecan guidance supports appropriate speed and delay for viscous fluids, but its platform and tip settings do not establish a universal 200 ms or 500 ms setting for Foreach pumps."
         ]
       },
       {

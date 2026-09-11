@@ -4,10 +4,10 @@ export const remainingPumpArticlesKo = {
   "ink-circulation-supply-return-pump-diaphragm-pump": {
     "metadata": {
       "title": "잉크 순환 펌프, 공급 펌프, 회수 펌프는 어떻게 다를까요?",
-      "seoTitle": "잉크 순환·공급·회수 펌프의 차이 | FOREACH",
+      "seoTitle": "잉크 순환·공급·회수 펌프의 차이 | Foreach Technology",
       "seoDescription": "잉크 공급·회수·순환 기능, 잉크젯 회로 구조, 프린트헤드 압력, 실제 설치 유량과 다이어프램 펌프 검증 방법을 살펴봅니다.",
       "coverImage": "/images/resources/technical-articles/ink-circulation-supply-return-pump/ink-supply-return-circulation-cover.webp",
-      "coverAlt": "제품 영상에 등장하는 FOREACH DPL 시리즈 소형 액체 다이어프램 펌프"
+      "coverAlt": "제품 영상에 등장하는 Foreach DPL 시리즈 소형 액체 다이어프램 펌프"
     },
     "deck": "잉크 공급 펌프, 회수 펌프, 순환 펌프는 정해진 세 가지 기계식 펌프 유형이 아니라 유로의 기능을 뜻합니다. 공급 펌프는 보조 탱크나 프린트헤드로 잉크를 보내고, 회수 펌프는 사용하지 않은 잉크를 탱크로 돌려보내며, 순환 펌프는 루프 내 흐름을 유지합니다. 이를 위해 펌프가 한 대, 두 대 또는 여러 대 필요한지는 프린트헤드, 탱크, 중력·진공 제어, 필터 및 공급·회수 구조에 따라 달라집니다.",
     "leadBlocks": [
@@ -116,7 +116,7 @@ export const remainingPumpArticlesKo = {
           {
             "type": "notice",
             "label": "모델별 검증 사항:",
-            "text": "저맥동, 공회전 허용, 내마모성, 내용제성 및 장기간 백색 잉크 순환 적합성은 해당 모델과 시험 조건에서 입증해야 합니다. 현재 FOREACH 공개 자료만으로 DPL30 또는 DPL60이 특정 잉크에 적합하다고 단정할 수 없습니다."
+            "text": "저맥동, 공회전 허용, 내마모성, 내용제성 및 장기간 백색 잉크 순환 적합성은 해당 모델과 시험 조건에서 입증해야 합니다. 현재 Foreach 공개 자료만으로 DPL30 또는 DPL60이 특정 잉크에 적합하다고 단정할 수 없습니다."
           }
         ]
       },
@@ -167,7 +167,7 @@ export const remainingPumpArticlesKo = {
           {
             "type": "table",
             "headers": [
-              "FOREACH 시리즈",
+              "Foreach 시리즈",
               "확인된 제품 사양 범위",
               "잉크젯 적용 평가"
             ],
@@ -288,10 +288,10 @@ export const remainingPumpArticlesKo = {
   "300-vs-600-ml-min-ink-circulation-return-pump-selection": {
     "metadata": {
       "title": "300 또는 600 mL/min: 잉크 순환·회수 펌프는 어떻게 선정하나요?",
-      "seoTitle": "300 및 600 mL/min 잉크 펌프 선정 | FOREACH",
+      "seoTitle": "300 및 600 mL/min 잉크 펌프 선정 | Foreach Technology",
       "seoDescription": "목표 운전 유량, 펌프 곡선, 점도, 필터, 튜브 및 공급·회수 압력으로 300 또는 600 mL/min 잉크 순환·회수 펌프를 평가합니다.",
       "coverImage": "/images/resources/technical-articles/ink-circulation-flow-selection/ink-pump-300-vs-600-flow-selection-cover.webp",
-      "coverAlt": "제품 영상에 등장하는 FOREACH DPL30 및 DPL60 소형 액체 다이어프램 펌프"
+      "coverAlt": "제품 영상에 등장하는 Foreach DPL30 및 DPL60 소형 액체 다이어프램 펌프"
     },
     "deck": "잉크 순환 또는 회수 회로의 목표 운전 유량을 정한 뒤 그 유량에서 시스템 차압을 계산하거나 측정하십시오. DPL30의 300 mL/min과 DPL60의 600 mL/min은 무부하 유량 등급이며, 잉크·필터·튜브·프린트헤드를 연결한 뒤 보장되는 유량이 아닙니다. 목표가 명목상 한계에 가까울수록 곡선 확인과 실제 설치 시험이 중요합니다.",
     "leadBlocks": [
@@ -598,7 +598,7 @@ export const remainingPumpArticlesKo = {
   "white-ink-circulation-pump-selection-sedimentation": {
     "metadata": {
       "title": "백색 잉크 재순환은 왜 더 어렵고 순환 펌프는 어떻게 선정하나요?",
-      "seoTitle": "백색 잉크 순환 펌프와 침전 | FOREACH",
+      "seoTitle": "백색 잉크 순환 펌프와 침전 | Foreach Technology",
       "seoDescription": "DPL30 또는 DPL60을 검토하기 전에 TiO₂ 안료 침전, 순환 경로와 유량, 정체 구간, 필터, 점도, 압력 및 재기동을 살펴봅니다.",
       "coverImage": "/images/resources/technical-articles/white-ink-circulation-pump/white-ink-circulation-dead-zone-cover.webp",
       "coverAlt": "탱크, 다이어프램 펌프, 필터 및 정체 구간을 줄인 분기로 구성된 백색 잉크 순환 루프"
@@ -885,10 +885,10 @@ export const remainingPumpArticlesKo = {
   "300-ml-min-micro-liquid-diaphragm-pump-self-priming-loss": {
     "metadata": {
       "title": "300 mL/min 소형 액체 다이어프램 펌프는 왜 사용하면서 자흡 성능이 떨어지나요?",
-      "seoTitle": "300 mL/min 소형 액체 다이어프램 펌프의 자흡 저하 | FOREACH",
+      "seoTitle": "300 mL/min 소형 액체 다이어프램 펌프의 자흡 저하 | Foreach Technology",
       "seoDescription": "체크 밸브 누설, 입구 공기 누설, 흡입 손실, 증기압과 재질 변화로 인한 자흡 저하 원인과 점검 방법을 살펴봅니다.",
       "coverImage": "/images/resources/technical-articles/dpl30-troubleshooting/300-ml-min-liquid-diaphragm-pump-self-priming-test.webp",
-      "coverAlt": "FOREACH DPL30 300 mL/min 소형 액체 다이어프램 펌프"
+      "coverAlt": "Foreach DPL30 300 mL/min 소형 액체 다이어프램 펌프"
     },
     "deck": "자흡 저하는 펌프와 흡입 유로가 초기처럼 낮은 입구 절대압을 만들고 유지하지 못한다는 뜻입니다. 체크 밸브 누설, 입구 공기 유입, 흡입 손실 증가, 액체 증기압과 재질 변화가 같은 증상을 만들 수 있으므로 모터 회전만으로 원인을 판단할 수 없습니다.",
     "leadBlocks": [
@@ -1084,10 +1084,10 @@ export const remainingPumpArticlesKo = {
   "300-ml-min-micro-liquid-diaphragm-pump-motor-runs-no-flow": {
     "metadata": {
       "title": "300 mL/min 소형 액체 다이어프램 펌프의 모터는 도는데 액체가 안 나오면 무엇부터 확인하나요?",
-      "seoTitle": "다이어프램 펌프 모터는 도는데 유량이 없을 때 | FOREACH",
+      "seoTitle": "다이어프램 펌프 모터는 도는데 유량이 없을 때 | Foreach Technology",
       "seoDescription": "입구 누설, 막힘, 체크 밸브, 배압과 구동 전류를 확인하여 모터는 회전하지만 액체가 나오지 않는 원인을 진단합니다.",
       "coverImage": "/images/resources/technical-articles/dpl30-troubleshooting/300-ml-min-liquid-diaphragm-pump-motor-power-check.webp",
-      "coverAlt": "유로 문제 진단에 사용되는 FOREACH DPL30 소형 액체 다이어프램 펌프"
+      "coverAlt": "유로 문제 진단에 사용되는 Foreach DPL30 소형 액체 다이어프램 펌프"
     },
     "deck": "모터 회전은 구동 중임을 뜻할 뿐 유효한 펌프실 충전, 체크 밸브의 방향성 또는 허용 가능한 토출 부하를 증명하지 않습니다. 소리만 듣기보다 입구 압력, 출구 압력, 유량과 전류를 함께 보면 더 빨리 진단할 수 있습니다.",
     "leadBlocks": [
@@ -1283,10 +1283,10 @@ export const remainingPumpArticlesKo = {
   "300-ml-min-micro-liquid-diaphragm-pump-water-vs-reagent": {
     "metadata": {
       "title": "300 mL/min 소형 액체 다이어프램 펌프는 왜 물을 시약으로 바꾸면 유량과 자흡이 떨어지나요?",
-      "seoTitle": "다이어프램 펌프의 물 시험과 시약 성능 차이 | FOREACH",
+      "seoTitle": "다이어프램 펌프의 물 시험과 시약 성능 차이 | Foreach Technology",
       "seoDescription": "점도, 증기압, 탈기 및 재질 적합성이 시약 사용 시 유량과 자흡에 미치는 영향을 설명합니다.",
       "coverImage": "/images/resources/technical-articles/dpl30-troubleshooting/300-ml-min-liquid-diaphragm-pump-water-versus-reagent-flow-test.webp",
-      "coverAlt": "실제 공정 시약 검증을 위한 FOREACH DPL30 소형 액체 다이어프램 펌프"
+      "coverAlt": "실제 공정 시약 검증을 위한 Foreach DPL30 소형 액체 다이어프램 펌프"
     },
     "deck": "물 시험 통과는 해당 수온, 튜브, 액면, 전원과 시험 시간에서의 성능만 입증합니다. 실제 시약은 점도, 밀도, 증기압, 표면장력, 젖음성, 기체 방출과 재질 상태를 바꾸어 같은 펌프의 운전점을 이동시킬 수 있습니다.",
     "leadBlocks": [
@@ -1479,10 +1479,10 @@ export const remainingPumpArticlesKo = {
   "300-ml-min-micro-liquid-diaphragm-pump-epdm-ptfe-ffkm": {
     "metadata": {
       "title": "300 mL/min 소형 액체 다이어프램 펌프의 EPDM, PTFE, FFKM은 어떻게 선정하나요?",
-      "seoTitle": "소형 다이어프램 펌프의 EPDM·PTFE·FFKM 선정 | FOREACH",
+      "seoTitle": "소형 다이어프램 펌프의 EPDM·PTFE·FFKM 선정 | Foreach Technology",
       "seoDescription": "화학적 적합성, 팽윤, 동적 밀봉과 실제 액체 검증을 통해 EPDM, PTFE 및 FFKM을 비교합니다.",
       "coverImage": "/images/resources/technical-articles/dpl30-troubleshooting/300-ml-min-liquid-diaphragm-pump-wetted-material-inspection.webp",
-      "coverAlt": "여러 접액 재질 조합을 제공하는 FOREACH DPL30 소형 액체 다이어프램 펌프"
+      "coverAlt": "여러 접액 재질 조합을 제공하는 Foreach DPL30 소형 액체 다이어프램 펌프"
     },
     "deck": "EPDM, PTFE와 FFKM은 단순한 하급–상급 재질 순위가 아닙니다. EPDM과 FFKM은 탄성체이고 PTFE는 불소중합체이며, 다이어프램·밸브·헤드는 서로 다른 기계적 역할을 합니다. 따라서 이름 하나가 아니라 동적 하중을 받는 전체 접액 구조를 선정해야 합니다.",
     "leadBlocks": [

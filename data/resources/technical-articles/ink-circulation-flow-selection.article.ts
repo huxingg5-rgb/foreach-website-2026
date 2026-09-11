@@ -26,12 +26,12 @@ export const inkCirculationFlowSelectionCopies = {
     metadata: {
       title:
         "300 mL/min 还是 600 mL/min？Ink Circulation Pump 和 Ink Return Pump 应该怎么选流量？",
-      seoTitle: "300 还是 600 mL/min？Ink Pump 流量选型｜FOREACH",
+      seoTitle: "300 还是 600 mL/min？Ink Pump 流量选型｜Foreach Technology",
       seoDescription:
         "按目标工作流量、泵曲线、墨水黏度、过滤器、管径、管长与供回压差，评估 300 或 600 mL/min Ink Circulation / Return Pump。",
       coverImage: `${IMAGE_BASE}/ink-pump-300-vs-600-flow-selection-cover.webp`,
       coverAlt:
-        "FOREACH DPL30 与 DPL60 微型液体隔膜泵产品视频对比画面",
+        "Foreach DPL30 与 DPL60 微型液体隔膜泵产品视频对比画面",
     },
     deck:
       "先确定 Ink Circulation 或 Return 回路的目标工作流量，再计算或测量目标流量下的系统压差。DPL30 的 300 mL/min 与 DPL60 的 600 mL/min 都是空载流量等级，不是安装过滤器、管路和打印头后的保证流量。目标越接近标称上限，越需要用泵曲线和整机测试确认余量。",
@@ -276,12 +276,12 @@ export const inkCirculationFlowSelectionCopies = {
     metadata: {
       title:
         "300 or 600 mL/min? How to Select an Ink Circulation or Ink Return Pump",
-      seoTitle: "300 vs 600 mL/min Ink Pump Selection | FOREACH",
+      seoTitle: "300 vs 600 mL/min Ink Pump Selection | Foreach Technology",
       seoDescription:
         "Evaluate a 300 or 600 mL/min ink circulation or return pump from target working flow, pump curve, viscosity, filter, tubing and supply-return pressure.",
       coverImage: `${IMAGE_BASE}/ink-pump-300-vs-600-flow-selection-cover.webp`,
       coverAlt:
-        "FOREACH DPL30 and DPL60 miniature liquid diaphragm pumps shown in a product video",
+        "Foreach DPL30 and DPL60 miniature liquid diaphragm pumps shown in a product video",
     },
     deck:
       "Define the target working flow in the ink circulation or return circuit, then calculate or measure system differential pressure at that flow. The DPL30 300 mL/min and DPL60 600 mL/min values are no-load flow classes, not guaranteed flow after adding ink, filters, tubing and a printhead. The closer the target is to the nominal limit, the more important curve and installed testing become.",

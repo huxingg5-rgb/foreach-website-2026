@@ -247,7 +247,7 @@ export const legacyMotionArticles: MotionArticle[] = [
         "title": "Modbus是什么？",
         "paragraphs": [
           "Modbus是一种应用层消息协议，可用于控制器与设备之间的数据交换。RS-485、RS-232是电气接口，Modbus RTU、ASCII和TCP则涉及相应的报文与传输方式。设备具有RS-485接口，并不意味着它一定支持Modbus。",
-          "在流体控制系统中，可用它读取状态或传递控制参数，但具体设备是否支持、支持哪些功能与寄存器，需要以该型号控制器的通信手册为准。本文不构成对全部FOREACH产品接口能力的承诺。"
+          "在流体控制系统中，可用它读取状态或传递控制参数，但具体设备是否支持、支持哪些功能与寄存器，需要以该型号控制器的通信手册为准。本文不构成对全部Foreach产品接口能力的承诺。"
         ]
       },
       {
@@ -333,15 +333,15 @@ const legacyMotionArticleCovers: Record<
   },
   "precision-piston-pump-backlash-compensation": {
     src: "/images/resources/technical-articles/piston-pump/precision-piston-pump-backlash-compensation-cover.webp",
-    alt: "FOREACH精密柱塞泵透明泵头与传动结构",
+    alt: "Foreach精密柱塞泵透明泵头与传动结构",
   },
   "stepper-motor-calculation-selection": {
     src: "/images/resources/technical-articles/piston-pump/precision-piston-pump-stepper-motor-selection-cover.webp",
-    alt: "FOREACH精密柱塞泵步进电机与驱动结构特写",
+    alt: "Foreach精密柱塞泵步进电机与驱动结构特写",
   },
   "modbus-protocol-fluid-control": {
     src: "/images/resources/technical-articles/covers/pressure-flow-material-compatibility.webp",
-    alt: "FOREACH精密流体系统泵与连接管路",
+    alt: "Foreach精密流体系统泵与连接管路",
   },
 };
 
@@ -366,7 +366,7 @@ export const legacyMotionArticleItems: TechnicalArticleItem[] =
           ...(section.table?.rows.map((row) => row.join("：")) ?? []),
         ].join("\n\n"),
       })),
-      seoTitle: `${article.title} | FOREACH`,
+      seoTitle: `${article.title} | Foreach Technology`,
       seoDescription: article.summary,
     };
   });

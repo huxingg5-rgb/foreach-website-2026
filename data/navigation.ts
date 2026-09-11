@@ -635,11 +635,11 @@ const productMegaDropdown: MegaDropdown = {
 
   footerText: t(
     "按产品类型、应用场景和系统参数快速了解恒永达产品矩阵。",
-    "Explore FOREACH products by product type, application scenario, and system requirements.",
-    "Explore los productos FOREACH por tipo, escenario de aplicación y requisitos del sistema.",
-    "Découvrez les produits FOREACH par type, application et exigences système.",
-    "제품 유형, 적용 분야 및 시스템 요구사항별로 FOREACH 제품을 살펴보세요.",
-    "Изучайте продукты FOREACH по типу, применению и системным требованиям."
+    "Explore Foreach products by product type, application scenario, and system requirements.",
+    "Explore los productos Foreach por tipo, escenario de aplicación y requisitos del sistema.",
+    "Découvrez les produits Foreach par type, application et exigences système.",
+    "제품 유형, 적용 분야 및 시스템 요구사항별로 Foreach 제품을 살펴보세요.",
+    "Изучайте продукты Foreach по типу, применению и системным требованиям."
   ),
 
   footerLinkLabel: t(
@@ -705,11 +705,11 @@ const applicationMegaDropdown: MegaDropdown = {
 
   description: t(
     "按应用行业、典型仪器和液路需求快速了解恒永达在微流体系统中的产品支持能力。",
-    "Explore FOREACH fluidic component capabilities by application, instrument type, and fluidic requirements.",
-    "Explore las capacidades de componentes fluídicos de FOREACH por aplicación, tipo de instrumento y requisitos de fluido.",
-    "Découvrez les capacités des composants fluidiques FOREACH par application, type d’instrument et besoins fluidiques.",
-    "응용 분야, 장비 유형 및 유체 요구 사항에 따라 FOREACH 유체 부품 역량을 확인하세요.",
-    "Ознакомьтесь с возможностями жидкостных компонентов FOREACH по областям применения, типам приборов и требованиям к жидкостным трактам."
+    "Explore Foreach fluidic component capabilities by application, instrument type, and fluidic requirements.",
+    "Explore las capacidades de componentes fluídicos de Foreach por aplicación, tipo de instrumento y requisitos de fluido.",
+    "Découvrez les capacités des composants fluidiques Foreach par application, type d’instrument et besoins fluidiques.",
+    "응용 분야, 장비 유형 및 유체 요구 사항에 따라 Foreach 유체 부품 역량을 확인하세요.",
+    "Ознакомьтесь с возможностями жидкостных компонентов Foreach по областям применения, типам приборов и требованиям к жидкостным трактам."
   ),
 
   categories: [
@@ -1422,11 +1422,11 @@ const applicationMegaDropdown: MegaDropdown = {
 
   footerText: t(
     "按应用场景、典型仪器和液路需求快速了解恒永达产品支持能力。",
-    "Explore FOREACH product support by application scenario, instrument type, and fluidic requirement.",
-    "Explore el soporte de productos FOREACH por aplicación, instrumento y requisito fluídico.",
-    "Découvrez le support produit FOREACH par application, instrument et besoin fluidique.",
-    "응용 분야, 장비 유형 및 유체 요구에 따른 FOREACH 제품 지원을 확인하세요.",
-    "Изучайте поддержку продукции FOREACH по применению, приборам и жидкостным требованиям."
+    "Explore Foreach product support by application scenario, instrument type, and fluidic requirement.",
+    "Explore el soporte de productos Foreach por aplicación, instrumento y requisito fluídico.",
+    "Découvrez le support produit Foreach par application, instrument et besoin fluidique.",
+    "응용 분야, 장비 유형 및 유체 요구에 따른 Foreach 제품 지원을 확인하세요.",
+    "Изучайте поддержку продукции Foreach по применению, приборам и жидкостным требованиям."
   ),
 
   footerLinkLabel: t(
@@ -1530,11 +1530,11 @@ const contactPartnershipMegaDropdown: MegaDropdown = {
 
   description: t(
     "联系恒永达，获取产品咨询、技术支持或合作机会。",
-    "Contact FOREACH for product inquiries, technical support, or partnership opportunities.",
-    "Contacte con FOREACH para consultas de productos, soporte técnico u oportunidades de cooperación.",
-    "Contactez FOREACH pour vos demandes produits, votre support technique ou vos opportunités de partenariat.",
-    "제품 문의, 기술 지원 또는 협력 기회를 위해 FOREACH에 문의하세요.",
-    "Свяжитесь с FOREACH по вопросам продукции, технической поддержки или партнерства."
+    "Contact Foreach for product inquiries, technical support, or partnership opportunities.",
+    "Contacte con Foreach para consultas de productos, soporte técnico u oportunidades de cooperación.",
+    "Contactez Foreach pour vos demandes produits, votre support technique ou vos opportunités de partenariat.",
+    "제품 문의, 기술 지원 또는 협력 기회를 위해 Foreach에 문의하세요.",
+    "Свяжитесь с Foreach по вопросам продукции, технической поддержки или партнерства."
   ),
 
   categories: [
@@ -1626,11 +1626,11 @@ const contactPartnershipMegaDropdown: MegaDropdown = {
       ),
       description: t(
         "了解恒永达海外渠道合作、代理支持与本地市场协同机会。",
-        "Explore FOREACH distributor partnerships, channel support, and local market cooperation.",
-        "Explore asociaciones de distribución, soporte de canal y cooperación local con FOREACH.",
-        "Découvrez les partenariats distributeurs, le support réseau et la coopération locale avec FOREACH.",
-        "FOREACH 대리점 파트너십, 채널 지원 및 현지 시장 협력 기회를 확인하세요.",
-        "Узнайте о партнерстве с дистрибьюторами, поддержке каналов и локальном сотрудничестве FOREACH."
+        "Explore Foreach distributor partnerships, channel support, and local market cooperation.",
+        "Explore asociaciones de distribución, soporte de canal y cooperación local con Foreach.",
+        "Découvrez les partenariats distributeurs, le support réseau et la coopération locale avec Foreach.",
+        "Foreach 대리점 파트너십, 채널 지원 및 현지 시장 협력 기회를 확인하세요.",
+        "Узнайте о партнерстве с дистрибьюторами, поддержке каналов и локальном сотрудничестве Foreach."
       ),
       href: t(
         "/contact",
@@ -1647,11 +1647,11 @@ const contactPartnershipMegaDropdown: MegaDropdown = {
 
   footerText: t(
     "选择合适的联系入口，恒永达团队将尽快跟进。",
-    "Choose the right contact option and the FOREACH team will follow up shortly.",
-    "Elija la opción de contacto adecuada y el equipo de FOREACH le responderá pronto.",
-    "Choisissez l’option adaptée et l’équipe FOREACH vous répondra rapidement.",
-    "적절한 문의 항목을 선택하시면 FOREACH 팀이 빠르게 연락드리겠습니다.",
-    "Выберите подходящий способ связи, и команда FOREACH свяжется с вами."
+    "Choose the right contact option and the Foreach team will follow up shortly.",
+    "Elija la opción de contacto adecuada y el equipo de Foreach le responderá pronto.",
+    "Choisissez l’option adaptée et l’équipe Foreach vous répondra rapidement.",
+    "적절한 문의 항목을 선택하시면 Foreach 팀이 빠르게 연락드리겠습니다.",
+    "Выберите подходящий способ связи, и команда Foreach свяжется с вами."
   ),
 
   footerLinkLabel: t(
@@ -1941,29 +1941,29 @@ const navigationItems: NavigationItem[] = [
 
       description: t(
         "了解恒永达的公司定位、研发制造能力、质量体系、发展历程与恒永达文化。",
-        "Learn about FOREACH, including our company profile, R&D and manufacturing capabilities, quality system, milestones, and culture.",
-        "Conozca FOREACH, incluyendo nuestro perfil corporativo, capacidades de I+D y fabricación, sistema de calidad, hitos y cultura.",
-        "Découvrez FOREACH, son profil d’entreprise, ses capacités de R&D et de fabrication, son système qualité, ses jalons et sa culture.",
-        "FOREACH의 회사 소개, 연구개발 및 제조 역량, 품질 시스템, 연혁과 기업 문화를 확인하세요.",
-        "Узнайте о FOREACH: профиль компании, возможности R&D и производства, система качества, история развития и корпоративная культура."
+        "Learn about Foreach, including our company profile, R&D and manufacturing capabilities, quality system, milestones, and culture.",
+        "Conozca Foreach, incluyendo nuestro perfil corporativo, capacidades de I+D y fabricación, sistema de calidad, hitos y cultura.",
+        "Découvrez Foreach, son profil d’entreprise, ses capacités de R&D et de fabrication, son système qualité, ses jalons et sa culture.",
+        "Foreach의 회사 소개, 연구개발 및 제조 역량, 품질 시스템, 연혁과 기업 문화를 확인하세요.",
+        "Узнайте о Foreach: профиль компании, возможности R&D и производства, система качества, история развития и корпоративная культура."
       ),
 
       footerText: t(
         "进入关于我们页面，进一步了解恒永达。",
-        "Visit the About Us page to learn more about FOREACH.",
-        "Visite la página Sobre nosotros para conocer más sobre FOREACH.",
-        "Accédez à la page À propos pour en savoir plus sur FOREACH.",
-        "회사 소개 페이지에서 FOREACH에 대해 자세히 알아보세요.",
-        "Перейдите на страницу «О нас», чтобы узнать больше о FOREACH."
+        "Visit the About Us page to learn more about Foreach.",
+        "Visite la página Sobre nosotros para conocer más sobre Foreach.",
+        "Accédez à la page À propos pour en savoir plus sur Foreach.",
+        "회사 소개 페이지에서 Foreach에 대해 자세히 알아보세요.",
+        "Перейдите на страницу «О нас», чтобы узнать больше о Foreach."
       ),
 
       footerLinkLabel: t(
         "查看关于恒永达 →",
-        "View About FOREACH →",
-        "Ver sobre FOREACH →",
-        "Voir à propos de FOREACH →",
-        "FOREACH 소개 보기 →",
-        "Подробнее о FOREACH →"
+        "View About Foreach →",
+        "Ver sobre Foreach →",
+        "Voir à propos de Foreach →",
+        "Foreach 소개 보기 →",
+        "Подробнее о Foreach →"
       ),
 
       footerHref: anchorPath("about"),
@@ -1980,11 +1980,11 @@ const navigationItems: NavigationItem[] = [
           key: "about-company",
           title: t(
             "关于恒永达",
-            "About FOREACH",
-            "Sobre FOREACH",
-            "À propos de FOREACH",
-            "FOREACH 소개",
-            "О FOREACH"
+            "About Foreach",
+            "Sobre Foreach",
+            "À propos de Foreach",
+            "Foreach 소개",
+            "О Foreach"
           ),
           description: t(
             "公司定位、服务行业与核心能力",
@@ -2064,11 +2064,11 @@ const navigationItems: NavigationItem[] = [
           key: "culture",
           title: t(
             "恒永达文化",
-            "FOREACH Culture",
-            "Cultura de FOREACH",
-            "Culture FOREACH",
-            "FOREACH 문화",
-            "Культура FOREACH"
+            "Foreach Culture",
+            "Cultura de Foreach",
+            "Culture Foreach",
+            "Foreach 문화",
+            "Культура Foreach"
           ),
           description: t(
             "团队协同、客户价值与长期主义",
@@ -2096,11 +2096,11 @@ const navigationItems: NavigationItem[] = [
           categoryKey: "about-company",
           title: t(
             "关于恒永达",
-            "About FOREACH",
-            "Sobre FOREACH",
-            "À propos de FOREACH",
-            "FOREACH 소개",
-            "О FOREACH"
+            "About Foreach",
+            "Sobre Foreach",
+            "À propos de Foreach",
+            "Foreach 소개",
+            "О Foreach"
           ),
           description: t(
             "专注微流体系统核心零部件与液路解决方案，服务 IVD、生命科学、高端分析仪器、合成生物与实验室自动化客户。",
@@ -2117,11 +2117,11 @@ const navigationItems: NavigationItem[] = [
             src: "/images/about/about-company.webp",
             alt: t(
               "恒永达公司形象",
-              "FOREACH company profile",
-              "Perfil corporativo de FOREACH",
-              "Profil de FOREACH",
-              "FOREACH 회사 이미지",
-              "Профиль компании FOREACH"
+              "Foreach company profile",
+              "Perfil corporativo de Foreach",
+              "Profil de Foreach",
+              "Foreach 회사 이미지",
+              "Профиль компании Foreach"
             ),
             width: 900,
             height: 520,
@@ -2160,11 +2160,11 @@ const navigationItems: NavigationItem[] = [
             src: "/images/about/rd-manufacturing.webp",
             alt: t(
               "恒永达研发与制造能力",
-              "FOREACH R&D and manufacturing capability",
-              "Capacidad de I+D y fabricación de FOREACH",
-              "Capacité R&D et fabrication de FOREACH",
-              "FOREACH R&D 및 제조 역량",
-              "НИОКР и производственные возможности FOREACH"
+              "Foreach R&D and manufacturing capability",
+              "Capacidad de I+D y fabricación de Foreach",
+              "Capacité R&D et fabrication de Foreach",
+              "Foreach R&D 및 제조 역량",
+              "НИОКР и производственные возможности Foreach"
             ),
             width: 900,
             height: 520,
@@ -2203,11 +2203,11 @@ const navigationItems: NavigationItem[] = [
             src: "/images/about/quality-management.webp",
             alt: t(
               "恒永达质量体系与合规认证",
-              "FOREACH quality system and compliance",
-              "Sistema de calidad y certificaciones de FOREACH",
-              "Système qualité et certifications de FOREACH",
-              "FOREACH 품질 시스템 및 인증",
-              "Система качества и сертификация FOREACH"
+              "Foreach quality system and compliance",
+              "Sistema de calidad y certificaciones de Foreach",
+              "Système qualité et certifications de Foreach",
+              "Foreach 품질 시스템 및 인증",
+              "Система качества и сертификация Foreach"
             ),
             width: 900,
             height: 520,
@@ -2226,11 +2226,11 @@ const navigationItems: NavigationItem[] = [
           ),
           description: t(
             "自 2012 年成立以来，持续积累产品、技术、制造与市场服务能力，形成面向多行业客户的长期支持。",
-            "Since 2012, FOREACH has continued to build product, technology, manufacturing, and market service capabilities for long-term support across industries.",
-            "Desde 2012, FOREACH ha desarrollado capacidades en productos, tecnología, fabricación y servicio para apoyar a clientes de múltiples sectores.",
-            "Depuis 2012, FOREACH développe ses capacités produits, technologies, fabrication et services afin d’accompagner durablement plusieurs secteurs.",
+            "Since 2012, Foreach has continued to build product, technology, manufacturing, and market service capabilities for long-term support across industries.",
+            "Desde 2012, Foreach ha desarrollado capacidades en productos, tecnología, fabricación y servicio para apoyar a clientes de múltiples sectores.",
+            "Depuis 2012, Foreach développe ses capacités produits, technologies, fabrication et services afin d’accompagner durablement plusieurs secteurs.",
             "2012년 이후 제품, 기술, 제조 및 시장 서비스 역량을 지속적으로 축적하여 다양한 산업 고객을 장기적으로 지원합니다.",
-            "С 2012 года FOREACH развивает продуктовые, технологические, производственные и сервисные возможности для долгосрочной поддержки разных отраслей."
+            "С 2012 года Foreach развивает продуктовые, технологические, производственные и сервисные возможности для долгосрочной поддержки разных отраслей."
           ),
           // 说明：
           // 1. 发展历程页面已经单独建立
@@ -2250,11 +2250,11 @@ const navigationItems: NavigationItem[] = [
             src: "/images/about/milestones.webp",
             alt: t(
               "恒永达发展历程",
-              "FOREACH milestones",
-              "Hitos de FOREACH",
-              "Jalons de FOREACH",
-              "FOREACH 연혁",
-              "История развития FOREACH"
+              "Foreach milestones",
+              "Hitos de Foreach",
+              "Jalons de Foreach",
+              "Foreach 연혁",
+              "История развития Foreach"
             ),
             width: 900,
             height: 520,
@@ -2265,19 +2265,19 @@ const navigationItems: NavigationItem[] = [
           categoryKey: "culture",
           title: t(
             "恒永达文化",
-            "FOREACH Culture",
-            "Cultura de FOREACH",
-            "Culture FOREACH",
-            "FOREACH 문화",
-            "Культура FOREACH"
+            "Foreach Culture",
+            "Cultura de Foreach",
+            "Culture Foreach",
+            "Foreach 문화",
+            "Культура Foreach"
           ),
           description: t(
             "以技术创新和客户价值为导向，重视团队协同、持续学习、工程实践与社会责任。",
-            "Driven by technical innovation and customer value, FOREACH values teamwork, continuous learning, engineering practice, and social responsibility.",
-            "Impulsada por la innovación técnica y el valor para el cliente, FOREACH valora el trabajo en equipo, el aprendizaje continuo, la práctica de ingeniería y la responsabilidad social.",
-            "Portée par l’innovation technique et la valeur client, FOREACH valorise la collaboration, l’apprentissage continu, la pratique d’ingénierie et la responsabilité sociale.",
+            "Driven by technical innovation and customer value, Foreach values teamwork, continuous learning, engineering practice, and social responsibility.",
+            "Impulsada por la innovación técnica y el valor para el cliente, Foreach valora el trabajo en equipo, el aprendizaje continuo, la práctica de ingeniería y la responsabilidad social.",
+            "Portée par l’innovation technique et la valeur client, Foreach valorise la collaboration, l’apprentissage continu, la pratique d’ingénierie et la responsabilité sociale.",
             "기술 혁신과 고객 가치를 중심으로 팀워크, 지속 학습, 엔지니어링 실천 및 사회적 책임을 중시합니다.",
-            "Ориентируясь на технические инновации и ценность для клиента, FOREACH ценит командную работу, постоянное обучение, инженерную практику и социальную ответственность."
+            "Ориентируясь на технические инновации и ценность для клиента, Foreach ценит командную работу, постоянное обучение, инженерную практику и социальную ответственность."
           ),
 
           href: localizedPath("/about/culture"),
@@ -2288,11 +2288,11 @@ const navigationItems: NavigationItem[] = [
             src: "/images/about/culture.webp",
             alt: t(
               "恒永达文化",
-              "FOREACH culture",
-              "Cultura de FOREACH",
-              "Culture FOREACH",
-              "FOREACH 문화",
-              "Культура FOREACH"
+              "Foreach culture",
+              "Cultura de Foreach",
+              "Culture Foreach",
+              "Foreach 문화",
+              "Культура Foreach"
             ),
             width: 900,
             height: 520,
@@ -2313,11 +2313,11 @@ const navigationItems: NavigationItem[] = [
         key: "about-company-mobile",
         label: t(
           "关于恒永达",
-          "About FOREACH",
-          "Sobre FOREACH",
-          "À propos de FOREACH",
-          "FOREACH 소개",
-          "О FOREACH"
+          "About Foreach",
+          "Sobre Foreach",
+          "À propos de Foreach",
+          "Foreach 소개",
+          "О Foreach"
         ),
         href: localizedPath("/about/foreach"),
         order: 1,
@@ -2376,11 +2376,11 @@ const navigationItems: NavigationItem[] = [
         key: "culture-mobile",
         label: t(
           "恒永达文化",
-          "FOREACH Culture",
-          "Cultura de FOREACH",
-          "Culture FOREACH",
-          "FOREACH 문화",
-          "Культура FOREACH"
+          "Foreach Culture",
+          "Cultura de Foreach",
+          "Culture Foreach",
+          "Foreach 문화",
+          "Культура Foreach"
         ),
 
         href: localizedPath("/about/culture"),

@@ -8,9 +8,9 @@ export const pistonPumpHeadMaterialArticleSlug =
 
 export const pistonPumpHeadMaterialArticleFaqZh = [
   {
-    question: "FOREACH柱塞泵只有PMMA、PCTG和PEEK泵头吗？",
+    question: "Foreach柱塞泵只有PMMA、PCTG和PEEK泵头吗？",
     answer:
-      "不是。FOREACH柱塞泵泵头材料可按项目评估PCTG、PMMA、PPS、PVDF、PP、PTFE、PEEK、POM和PSU，其他工程材料也可根据介质、结构、加工和项目需求评估。",
+      "不是。Foreach柱塞泵泵头材料可按项目评估PCTG、PMMA、PPS、PVDF、PP、PTFE、PEEK、POM和PSU，其他工程材料也可根据介质、结构、加工和项目需求评估。",
   },
   {
     question: "这些泵头材料在所有柱塞泵容量上都有标准型号吗？",
@@ -89,7 +89,7 @@ export default function PistonPumpHeadMaterialArticle() {
           柱塞泵泵头直接参与液体的吸入、计量和排出。材料选得是否合适，会影响介质兼容性、结构稳定性、密封可靠性、清洗方式、使用寿命和项目成本。选型时不能只问“哪种材料更耐腐蚀”，而应把介质、温度、压力、接触时间和完整接液路径放在一起判断。
         </p>
         <p>
-          FOREACH柱塞泵泵头可按项目评估PCTG、PMMA、PPS、PVDF、PP、PTFE、PEEK、POM和PSU；其他工程材料也可根据项目需求评估。上述范围是配置方向，不代表每一种材料与每一种容量都已有标准型号。最终材料组合需要结合液体特性、泵头结构、加工可行性、安装空间和项目数量确认。
+          Foreach柱塞泵泵头可按项目评估PCTG、PMMA、PPS、PVDF、PP、PTFE、PEEK、POM和PSU；其他工程材料也可根据项目需求评估。上述范围是配置方向，不代表每一种材料与每一种容量都已有标准型号。最终材料组合需要结合液体特性、泵头结构、加工可行性、安装空间和项目数量确认。
         </p>
         <div className={newsStyles.technicalNotice}>
           <strong>选型原则：</strong>
@@ -215,7 +215,7 @@ export default function PistonPumpHeadMaterialArticle() {
       <section className={newsStyles.contentBlock}>
         <h2>四、EA-500-PMMA与EA-500-PEEK：同容量材料配置示例</h2>
         <p>
-          FOREACH EA-500-PMMA与EA-500-PEEK可作为同一500 μL容量下不同泵头材料方向的对照。两款页面展示配置都支持1/4-28 UNF或M6接口，满量程为2000步；在规定测试条件下，100%量程的准确性和重复性均为≤0.5%。
+          Foreach EA-500-PMMA与EA-500-PEEK可作为同一500 μL容量下不同泵头材料方向的对照。两款页面展示配置都支持1/4-28 UNF或M6接口，满量程为2000步；在规定测试条件下，100%量程的准确性和重复性均为≤0.5%。
         </p>
         <ArticleTable
           headers={["项目", "EA-500-PMMA", "EA-500-PEEK"]}
@@ -251,7 +251,7 @@ export default function PistonPumpHeadMaterialArticle() {
       <section className={newsStyles.contentBlock}>
         <h2>五、泵头材料不能脱离柱塞和完整接液路径</h2>
         <p>
-          柱塞泵的接液系统不只有泵头。FOREACH柱塞材料可按项目评估氧化锆陶瓷、氧化铝陶瓷、PEEK和蓝宝石，并可匹配接口、电机、光耦反馈、阀组件和控制器。具体组合需要结合液体性质、寿命要求、结构空间和控制需求确认。
+          柱塞泵的接液系统不只有泵头。Foreach柱塞材料可按项目评估氧化锆陶瓷、氧化铝陶瓷、PEEK和蓝宝石，并可匹配接口、电机、光耦反馈、阀组件和控制器。具体组合需要结合液体性质、寿命要求、结构空间和控制需求确认。
         </p>
         <p>进行材料选型时，至少应同时检查以下部件：</p>
         <ul>
@@ -352,7 +352,7 @@ export default function PistonPumpHeadMaterialArticle() {
           <p>
             查看
             <Link href="/products/pumps/piston-pump/">
-              FOREACH柱塞泵产品与容量配置
+              Foreach柱塞泵产品与容量配置
             </Link>
             ，再根据真实介质和液路要求确认泵头与接液材料。
           </p>

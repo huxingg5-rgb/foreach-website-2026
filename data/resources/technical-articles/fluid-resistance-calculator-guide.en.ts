@@ -2,13 +2,13 @@ import type { DiaphragmPumpEngineeringArticleCopy } from "./diaphragm-pump-engin
 
 export const fluidResistanceCalculatorGuideEnCopy = {
   "metadata": {
-    "title": "What is flow resistance calculation for? Using the FOREACH calculator in fluid-path design and selection",
-    "seoTitle": "Flow resistance calculator: pressure drop and design | FOREACH",
-    "seoDescription": "Compare tube diameter and valve Cv to estimate pressure loss, solve for flow, locate dominant resistance and assess fluid-path options with the FOREACH calculator, pump curves and measurements.",
+    "title": "What is flow resistance calculation for? Using the Foreach calculator in fluid-path design and selection",
+    "seoTitle": "Flow resistance calculator: pressure drop and design | Foreach Technology",
+    "seoDescription": "Compare tube diameter and valve Cv to estimate pressure loss, solve for flow, locate dominant resistance and assess fluid-path options with the Foreach calculator, pump curves and measurements.",
     "coverImage": "/images/resources/technical-articles/fluid-resistance-guide/comparison.en.svg",
-    "coverAlt": "FOREACH flow resistance calculation case: pressure drop comparison before and after adjusting pipe diameter and valve Cv"
+    "coverAlt": "Foreach flow resistance calculation case: pressure drop comparison before and after adjusting pipe diameter and valve Cv"
   },
-  "deck": "The free flow rate of the pump meets the requirements. After installing the pipelines, valves and joints, the liquid supply at the end is insufficient. Flow resistance calculations can break the problem down into comparable data: what pressure differential is required at the target flow rate, where does the pressure loss mainly occur, and what happens if the pipe diameter, pipe length, component Cv or medium viscosity is changed. This article combines the actual function of the FOREACH flow resistance calculator with a recalculable fluid circuit case to explain how to use the calculation results for design, selection, troubleshooting and prototype verification.",
+  "deck": "The free flow rate of the pump meets the requirements. After installing the pipelines, valves and joints, the liquid supply at the end is insufficient. Flow resistance calculations can break the problem down into comparable data: what pressure differential is required at the target flow rate, where does the pressure loss mainly occur, and what happens if the pipe diameter, pipe length, component Cv or medium viscosity is changed. This article combines the actual function of the Foreach flow resistance calculator with a recalculable fluid circuit case to explain how to use the calculation results for design, selection, troubleshooting and prototype verification.",
   "leadBlocks": [
     {
       "type": "paragraph",
@@ -16,7 +16,7 @@ export const fluidResistanceCalculatorGuideEnCopy = {
     },
     {
       "type": "paragraph",
-      "text": "FOREACH flow resistance calculator supports the creation of ID rows according to the inner diameter and length of the pipeline, and the creation of Cv rows according to the flow coefficient of the component. It can also perform calculation of pressure drop with known flow rate, calculation of flow rate with known pressure drop, loss statistics, fluid path PQ curve calculation and Excel export. It is suitable for converting hydraulic circuit concepts into preliminary pressure estimates, and is also suitable for recalculation using known parameters after testing."
+      "text": "Foreach flow resistance calculator supports the creation of ID rows according to the inner diameter and length of the pipeline, and the creation of Cv rows according to the flow coefficient of the component. It can also perform calculation of pressure drop with known flow rate, calculation of flow rate with known pressure drop, loss statistics, fluid path PQ curve calculation and Excel export. It is suitable for converting hydraulic circuit concepts into preliminary pressure estimates, and is also suitable for recalculation using known parameters after testing."
     },
     {
       "type": "paragraph",
@@ -27,7 +27,7 @@ export const fluidResistanceCalculatorGuideEnCopy = {
       "items": [
         {
           "href": "/resources/calculators/fluid-resistance/",
-          "label": "Open the FOREACH flow resistance calculator and create calculations based on the case in this article"
+          "label": "Open the Foreach flow resistance calculator and create calculations based on the case in this article"
         }
       ]
     }
@@ -207,7 +207,7 @@ export const fluidResistanceCalculatorGuideEnCopy = {
       "blocks": [
         {
           "type": "paragraph",
-          "text": "The following example uses the FOREACH calculation core: water at 20 °C, target flow 60 mL/min, and a 1 m straight tube in series with a Cv component. Additional local loss coefficient for the tube is zero. The Cv component uses the orifice-throttling model with a sharp-edged thin-plate orifice assumption. The table excludes source and outlet pressures, elevation and any unlisted components."
+          "text": "The following example uses the Foreach calculation core: water at 20 °C, target flow 60 mL/min, and a 1 m straight tube in series with a Cv component. Additional local loss coefficient for the tube is zero. The Cv component uses the orifice-throttling model with a sharp-edged thin-plate orifice assumption. The table excludes source and outlet pressures, elevation and any unlisted components."
         },
         {
           "type": "paragraph",
@@ -426,11 +426,11 @@ export const fluidResistanceCalculatorGuideEnCopy = {
       ]
     },
     {
-      "title": "11. Use the results to discuss FOREACH pump, valve and tubing selection",
+      "title": "11. Use the results to discuss Foreach pump, valve and tubing selection",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "When selecting a FOREACH miniature pump or associated valves, fittings and tubing, provide target flow, individual pressure losses, suction conditions and outlet pressure. These support a more useful discussion than a free-flow value alone. Calculations help define the conditions under which candidate configurations must be validated and show whether tubing should be optimized first."
+          "text": "When selecting a Foreach miniature pump or associated valves, fittings and tubing, provide target flow, individual pressure losses, suction conditions and outlet pressure. These support a more useful discussion than a free-flow value alone. Calculations help define the conditions under which candidate configurations must be validated and show whether tubing should be optimized first."
         },
         {
           "type": "paragraph",
@@ -438,7 +438,7 @@ export const fluidResistanceCalculatorGuideEnCopy = {
         },
         {
           "type": "paragraph",
-          "text": "When submitting a request, it is recommended to attach a fluid path diagram, input parameters, calculation results, and measured flow and pressure. FOREACH can carry out model selection and engineering communication based on relevant component parameters, and further clarify the data and prototype verification conditions that need to be supplemented."
+          "text": "When submitting a request, it is recommended to attach a fluid path diagram, input parameters, calculation results, and measured flow and pressure. Foreach can carry out model selection and engineering communication based on relevant component parameters, and further clarify the data and prototype verification conditions that need to be supplemented."
         },
         {
           "type": "links",
@@ -449,11 +449,11 @@ export const fluidResistanceCalculatorGuideEnCopy = {
             },
             {
               "href": "/resources/technical-articles/foreach-miniature-diaphragm-pump-oem-integration/",
-              "label": "Further reading: FOREACH diaphragm pump OEM integration, operating points and instrument validation"
+              "label": "Further reading: Foreach diaphragm pump OEM integration, operating points and instrument validation"
             },
             {
               "href": "/products/",
-              "label": "View FOREACH pumps, valves and fluid line components"
+              "label": "View Foreach pumps, valves and fluid line components"
             }
           ]
         }
@@ -489,7 +489,7 @@ export const fluidResistanceCalculatorGuideEnCopy = {
   ],
   "cta": {
     "title": "Discuss component options using your fluid-path parameters and calculation results",
-    "description": "Please provide the medium, temperature, target flow, pipeline size, component parameters, inlet and outlet pressures and calculated or measured results so that FOREACH can assist in determining the key points of selection and verification.",
+    "description": "Please provide the medium, temperature, target flow, pipeline size, component parameters, inlet and outlet pressures and calculated or measured results so that Foreach can assist in determining the key points of selection and verification.",
     "contactLabel": "Submit fluid-path requirements",
     "productsLabel": "Use the flow resistance calculator",
     "productsHref": "/resources/calculators/fluid-resistance/"

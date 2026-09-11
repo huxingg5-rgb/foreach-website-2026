@@ -4,10 +4,10 @@ export const diaphragmPumpRdArticlesFr = {
   "self-priming-miniature-liquid-diaphragm-pump-selection": {
     "metadata": {
       "title": "Choisir une micropompe à membrane auto-amorçante pour liquides : hauteur, durée et démarrage à sec ou humide",
-      "seoTitle": "Pompe miniature à membrane auto-amorçante : sélection | FOREACH",
+      "seoTitle": "Pompe miniature à membrane auto-amorçante : sélection | Foreach Technology",
       "seoDescription": "Vérifiez la hauteur d’aspiration, le délai d’arrivée du liquide et la stabilité de l’alimentation. Les caractéristiques DPL30, DPL60 et DPL30H servent à présélectionner une pompe, puis à valider son démarrage dans l’instrument.",
       "coverImage": "/images/resources/technical-articles/diaphragm-pump-rd/covers/dpl30-brushless-port-side-photo.jpg",
-      "coverAlt": "Vue côté raccords d’une pompe à membrane miniature FOREACH DPL30 montrant les raccords de liquide et le moteur"
+      "coverAlt": "Vue côté raccords d’une pompe à membrane miniature Foreach DPL30 montrant les raccords de liquide et le moteur"
     },
     "deck": "Vérifiez la hauteur d’aspiration, le délai d’arrivée du liquide et la stabilité de l’alimentation. Les caractéristiques DPL30, DPL60 et DPL30H servent à présélectionner une pompe, puis à valider son démarrage dans l’instrument.",
     "leadBlocks": [
@@ -17,7 +17,7 @@ export const diaphragmPumpRdArticlesFr = {
       },
       {
         "type": "paragraph",
-        "text": "La hauteur ne décrit qu’une dimension de l’auto-amorçage. La R&D doit aussi préciser l’état initial de la chambre et des tuyaux, l’évacuation de l’air, l’arrivée du premier liquide et l’obtention d’un débit stable. Évaluez ces conditions avec le débit réel de fonctionnement de la pompe FOREACH DPL."
+        "text": "La hauteur ne décrit qu’une dimension de l’auto-amorçage. La R&D doit aussi préciser l’état initial de la chambre et des tuyaux, l’évacuation de l’air, l’arrivée du premier liquide et l’obtention d’un débit stable. Évaluez ces conditions avec le débit réel de fonctionnement de la pompe Foreach DPL."
       }
     ],
     "sections": [
@@ -77,7 +77,7 @@ export const diaphragmPumpRdArticlesFr = {
         ]
       },
       {
-        "title": "Séparer les caractéristiques FOREACH",
+        "title": "Séparer les caractéristiques Foreach",
         "blocks": [
           {
             "type": "paragraph",
@@ -230,29 +230,29 @@ export const diaphragmPumpRdArticlesFr = {
         "blocks": [
           {
             "type": "paragraph",
-            "text": "Les paramètres produits proviennent des spécifications FOREACH ci-dessous. Vérifiez les principes et essais proposés pour le modèle précis et les conditions réelles."
+            "text": "Les paramètres produits proviennent des spécifications Foreach ci-dessous. Vérifiez les principes et essais proposés pour le modèle précis et les conditions réelles."
           },
           {
             "type": "links",
             "items": [
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00001_A04_cn_DPL30规格书.pdf",
-                "label": "[F1] FOREACH DPL30 spécification en chinois (A04)",
+                "label": "[F1] Foreach DPL30 spécification en chinois (A04)",
                 "suffix": "p. 5–6 : performances et configuration ; p. 3–4 : montage"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00002_A02_cn_DPL60规格书.pdf",
-                "label": "[F2] FOREACH DPL60 spécification en chinois (A02)",
+                "label": "[F2] Foreach DPL60 spécification en chinois (A02)",
                 "suffix": "p. 5–6 : performances et configuration ; p. 3–4 : montage"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2504-00001_A00_cn_DPL30H规格书.pdf",
-                "label": "[F3] FOREACH DPL30H spécification en chinois (A00)",
+                "label": "[F3] Foreach DPL30H spécification en chinois (A00)",
                 "suffix": "p. 5–6 : performances et configuration ; p. 3–4 : montage"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2506-00001_A00_cn_DPGL800气液混合泵规格书.pdf",
-                "label": "[F4] FOREACH DPGL800 spécification en chinois (A00)",
+                "label": "[F4] Foreach DPGL800 spécification en chinois (A00)",
                 "suffix": "p. 5–6 : performances et configuration ; p. 3–4 : montage"
               }
             ]
@@ -324,10 +324,10 @@ export const diaphragmPumpRdArticlesFr = {
   "miniature-diaphragm-pump-flow-pulsation-reduction": {
     "metadata": {
       "title": "Pulsations de débit d’une micropompe à membrane : mesure et réduction",
-      "seoTitle": "Pulsations de débit des pompes miniatures : réduction | FOREACH",
+      "seoTitle": "Pulsations de débit des pompes miniatures : réduction | Foreach Technology",
       "seoDescription": "Distinguez les fluctuations réelles des erreurs de mesure, puis comparez amortissement, tuyauterie et vitesse. Validez au point d’utilisation et dans des conditions hydrauliques équivalentes.",
       "coverImage": "/images/resources/technical-articles/diaphragm-pump-rd/covers/dpl60-brushless-horizontal-photo.jpg",
-      "coverAlt": "Vue horizontale d’une pompe à membrane miniature FOREACH DPL60 montrant la tête et le moteur"
+      "coverAlt": "Vue horizontale d’une pompe à membrane miniature Foreach DPL60 montrant la tête et le moteur"
     },
     "deck": "Distinguez les fluctuations réelles des erreurs de mesure, puis comparez amortissement, tuyauterie et vitesse. Validez au point d’utilisation et dans des conditions hydrauliques équivalentes.",
     "leadBlocks": [
@@ -358,7 +358,7 @@ export const diaphragmPumpRdArticlesFr = {
             "alt": "Même moyenne, débits instantanés différents",
             "width": 1000,
             "height": 650,
-            "caption": "Schéma de principe : courbes synthétiques de même moyenne et d’amplitudes différentes. Le débit est normalisé ; il ne s’agit pas de mesures FOREACH."
+            "caption": "Schéma de principe : courbes synthétiques de même moyenne et d’amplitudes différentes. Le débit est normalisé ; il ne s’agit pas de mesures Foreach."
           }
         ]
       },
@@ -510,7 +510,7 @@ export const diaphragmPumpRdArticlesFr = {
         ]
       },
       {
-        "title": "Évaluer les séries FOREACH DPL",
+        "title": "Évaluer les séries Foreach DPL",
         "blocks": [
           {
             "type": "paragraph",
@@ -527,24 +527,24 @@ export const diaphragmPumpRdArticlesFr = {
         "blocks": [
           {
             "type": "paragraph",
-            "text": "Les paramètres produits proviennent des spécifications FOREACH ci-dessous. Vérifiez les principes et essais proposés pour le modèle précis et les conditions réelles."
+            "text": "Les paramètres produits proviennent des spécifications Foreach ci-dessous. Vérifiez les principes et essais proposés pour le modèle précis et les conditions réelles."
           },
           {
             "type": "links",
             "items": [
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00001_A04_cn_DPL30规格书.pdf",
-                "label": "[F1] FOREACH DPL30 spécification en chinois (A04)",
+                "label": "[F1] Foreach DPL30 spécification en chinois (A04)",
                 "suffix": "p. 5–6 : performances et configuration ; p. 3–4 : montage"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00002_A02_cn_DPL60规格书.pdf",
-                "label": "[F2] FOREACH DPL60 spécification en chinois (A02)",
+                "label": "[F2] Foreach DPL60 spécification en chinois (A02)",
                 "suffix": "p. 5–6 : performances et configuration ; p. 3–4 : montage"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2504-00001_A00_cn_DPL30H规格书.pdf",
-                "label": "[F3] FOREACH DPL30H spécification en chinois (A00)",
+                "label": "[F3] Foreach DPL30H spécification en chinois (A00)",
                 "suffix": "p. 5–6 : performances et configuration ; p. 3–4 : montage"
               },
               {
@@ -624,10 +624,10 @@ export const diaphragmPumpRdArticlesFr = {
   "miniature-diaphragm-pump-noise-vibration-reduction": {
     "metadata": {
       "title": "Bruit des micropompes à membrane : causes, isolation vibratoire et réduction",
-      "seoTitle": "Bruit des pompes miniatures à membrane : causes et solutions | FOREACH",
+      "seoTitle": "Bruit des pompes miniatures à membrane : causes et solutions | Foreach Technology",
       "seoDescription": "Analysez le bruit à point de fonctionnement identique. Vérifiez moteur, tête, support, tuyauterie et carter, puis contrôlez débit, échauffement et fiabilité après les modifications.",
       "coverImage": "/images/resources/technical-articles/diaphragm-pump-rd/covers/dpl30-brushless-bottom-photo.jpg",
-      "coverAlt": "Vue de dessous d’une pompe à membrane miniature FOREACH DPL30 montrant la base et les trous de fixation"
+      "coverAlt": "Vue de dessous d’une pompe à membrane miniature Foreach DPL30 montrant la base et les trous de fixation"
     },
     "deck": "Analysez le bruit à point de fonctionnement identique. Vérifiez moteur, tête, support, tuyauterie et carter, puis contrôlez débit, échauffement et fiabilité après les modifications.",
     "leadBlocks": [
@@ -650,7 +650,7 @@ export const diaphragmPumpRdArticlesFr = {
           },
           {
             "type": "paragraph",
-            "text": "L’installation peut dégrader l’aspiration, accroître la contre-pression ou perturber la tension. Elle peut aussi conserver le point de travail tout en augmentant la réponse structurelle. Les deux effets peuvent coexister. Réduire le couplage mécanique peut limiter la transmission vibratoire. Étudiez aussi l’excitation des conduites et du boîtier par les fluctuations de pression. Dimensionnez l’isolation selon les raccordements, dimensions et charges FOREACH réels, puis comparez au même point de fonctionnement."
+            "text": "L’installation peut dégrader l’aspiration, accroître la contre-pression ou perturber la tension. Elle peut aussi conserver le point de travail tout en augmentant la réponse structurelle. Les deux effets peuvent coexister. Réduire le couplage mécanique peut limiter la transmission vibratoire. Étudiez aussi l’excitation des conduites et du boîtier par les fluctuations de pression. Dimensionnez l’isolation selon les raccordements, dimensions et charges Foreach réels, puis comparez au même point de fonctionnement."
           },
           {
             "type": "figure",
@@ -799,7 +799,7 @@ export const diaphragmPumpRdArticlesFr = {
         ]
       },
       {
-        "title": "Comparer FOREACH pour une même tâche",
+        "title": "Comparer Foreach pour une même tâche",
         "blocks": [
           {
             "type": "paragraph",
@@ -807,7 +807,7 @@ export const diaphragmPumpRdArticlesFr = {
           },
           {
             "type": "paragraph",
-            "text": "Comparez au même débit demandé, à la contre-pression réelle, avec le même fluide et montage ; notez les vitesses différentes. La capacité de pression de DPL30H ne prouve pas un avantage acoustique général. Consignez excitation, transmission, conditions avant/après et respect du démarrage, débit et échauffement. Fournissez photos, schéma de circuit et point de travail avec les sons lors d’un échange technique FOREACH."
+            "text": "Comparez au même débit demandé, à la contre-pression réelle, avec le même fluide et montage ; notez les vitesses différentes. La capacité de pression de DPL30H ne prouve pas un avantage acoustique général. Consignez excitation, transmission, conditions avant/après et respect du démarrage, débit et échauffement. Fournissez photos, schéma de circuit et point de travail avec les sons lors d’un échange technique Foreach."
           }
         ]
       },
@@ -816,24 +816,24 @@ export const diaphragmPumpRdArticlesFr = {
         "blocks": [
           {
             "type": "paragraph",
-            "text": "Les paramètres produits proviennent des spécifications FOREACH ci-dessous. Vérifiez les principes et essais proposés pour le modèle précis et les conditions réelles."
+            "text": "Les paramètres produits proviennent des spécifications Foreach ci-dessous. Vérifiez les principes et essais proposés pour le modèle précis et les conditions réelles."
           },
           {
             "type": "links",
             "items": [
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00001_A04_cn_DPL30规格书.pdf",
-                "label": "[F1] FOREACH DPL30 spécification en chinois (A04)",
+                "label": "[F1] Foreach DPL30 spécification en chinois (A04)",
                 "suffix": "p. 5–6 : performances et configuration ; p. 3–4 : montage"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00002_A02_cn_DPL60规格书.pdf",
-                "label": "[F2] FOREACH DPL60 spécification en chinois (A02)",
+                "label": "[F2] Foreach DPL60 spécification en chinois (A02)",
                 "suffix": "p. 5–6 : performances et configuration ; p. 3–4 : montage"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2504-00001_A00_cn_DPL30H规格书.pdf",
-                "label": "[F3] FOREACH DPL30H spécification en chinois (A00)",
+                "label": "[F3] Foreach DPL30H spécification en chinois (A00)",
                 "suffix": "p. 5–6 : performances et configuration ; p. 3–4 : montage"
               }
             ]
@@ -909,10 +909,10 @@ export const diaphragmPumpRdArticlesFr = {
   "miniature-diaphragm-pump-backflow-check-valve": {
     "metadata": {
       "title": "Retour de liquide après arrêt d’une micropompe à membrane : clapet antiretour et prévention du siphonnage",
-      "seoTitle": "Retour de liquide à l’arrêt : clapet et conception anti-siphon | FOREACH",
+      "seoTitle": "Retour de liquide à l’arrêt : clapet et conception anti-siphon | Foreach Technology",
       "seoDescription": "Distinguez le retour vers l’amont du siphonnage dans le sens direct et des gouttes résiduelles. Vérifiez ouverture, refermeture, séquence de commande et étanchéité statique dans le circuit complet.",
       "coverImage": "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushless-2-wire-real-product-photo.webp",
-      "coverAlt": "Photographie de la pompe miniature à membrane pour liquides FOREACH DPL30 sans balais à deux fils"
+      "coverAlt": "Photographie de la pompe miniature à membrane pour liquides Foreach DPL30 sans balais à deux fils"
     },
     "deck": "Distinguez le retour vers l’amont du siphonnage dans le sens direct et des gouttes résiduelles. Vérifiez ouverture, refermeture, séquence de commande et étanchéité statique dans le circuit complet.",
     "leadBlocks": [
@@ -999,7 +999,7 @@ export const diaphragmPumpRdArticlesFr = {
           },
           {
             "type": "paragraph",
-            "text": "Exemple géométrique : avec de l’eau, deux extrémités à pression atmosphérique et une sortie libre, une surface source 0,5 m au-dessus de la sortie fournit environ 4,9 kPa statiques. Le calcul utilise environ 1000 kg/m³ et 9,81 m/s², avant pertes de charge ; il ne décrit pas l’ouverture ou l’étanchéité d’une pompe FOREACH. Pour une sortie immergée, utilisez le niveau libre du récipient récepteur et les pressions des deux volumes gazeux."
+            "text": "Exemple géométrique : avec de l’eau, deux extrémités à pression atmosphérique et une sortie libre, une surface source 0,5 m au-dessus de la sortie fournit environ 4,9 kPa statiques. Le calcul utilise environ 1000 kg/m³ et 9,81 m/s², avant pertes de charge ; il ne décrit pas l’ouverture ou l’étanchéité d’une pompe Foreach. Pour une sortie immergée, utilisez le niveau libre du récipient récepteur et les pressions des deux volumes gazeux."
           },
           {
             "type": "paragraph",
@@ -1098,7 +1098,7 @@ export const diaphragmPumpRdArticlesFr = {
         "blocks": [
           {
             "type": "paragraph",
-            "text": "Pour FOREACH, fournissez positions, récipients ouverts/fermés, contre-pression à l’arrêt, vannes et buse, attente maximale et volumes résiduel/inverse acceptables, en plus du débit normal. Les valeurs standard déterminent les candidats ; la commande à l’arrêt se valide avec le circuit et la séquence réels."
+            "text": "Pour Foreach, fournissez positions, récipients ouverts/fermés, contre-pression à l’arrêt, vannes et buse, attente maximale et volumes résiduel/inverse acceptables, en plus du débit normal. Les valeurs standard déterminent les candidats ; la commande à l’arrêt se valide avec le circuit et la séquence réels."
           },
           {
             "type": "paragraph",
@@ -1111,24 +1111,24 @@ export const diaphragmPumpRdArticlesFr = {
         "blocks": [
           {
             "type": "paragraph",
-            "text": "Les paramètres produits proviennent des spécifications FOREACH ci-dessous. Vérifiez les principes et essais proposés pour le modèle précis et les conditions réelles."
+            "text": "Les paramètres produits proviennent des spécifications Foreach ci-dessous. Vérifiez les principes et essais proposés pour le modèle précis et les conditions réelles."
           },
           {
             "type": "links",
             "items": [
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00001_A04_cn_DPL30规格书.pdf",
-                "label": "[F1] FOREACH DPL30 spécification en chinois (A04)",
+                "label": "[F1] Foreach DPL30 spécification en chinois (A04)",
                 "suffix": "p. 5–6 : performances et configuration ; p. 3–4 : montage"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00002_A02_cn_DPL60规格书.pdf",
-                "label": "[F2] FOREACH DPL60 spécification en chinois (A02)",
+                "label": "[F2] Foreach DPL60 spécification en chinois (A02)",
                 "suffix": "p. 5–6 : performances et configuration ; p. 3–4 : montage"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2504-00001_A00_cn_DPL30H规格书.pdf",
-                "label": "[F3] FOREACH DPL30H spécification en chinois (A00)",
+                "label": "[F3] Foreach DPL30H spécification en chinois (A00)",
                 "suffix": "p. 5–6 : performances et configuration ; p. 3–4 : montage"
               }
             ]

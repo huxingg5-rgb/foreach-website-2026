@@ -22,12 +22,12 @@ export const inkCirculationSupplyReturnPumpCopies = {
     metadata: {
       title:
         "Ink Circulation Pump、Ink Supply Pump 和 Ink Return Pump 有什么区别？为什么喷墨液路会使用微型隔膜泵？",
-      seoTitle: "Ink Circulation、Supply 与 Return Pump 区别｜FOREACH",
+      seoTitle: "Ink Circulation、Supply 与 Return Pump 区别｜Foreach Technology",
       seoDescription:
         "解释喷墨液路中 Ink Supply Pump、Ink Return Pump 与 Ink Circulation Pump 的功能边界、常见系统架构、喷头负压、工作流量和隔膜泵选型验证。",
       coverImage: `${IMAGE_BASE}/ink-supply-return-circulation-cover.webp`,
       coverAlt:
-        "FOREACH DPL 系列微型液体隔膜泵产品视频画面",
+        "Foreach DPL 系列微型液体隔膜泵产品视频画面",
     },
     deck:
       "Ink Supply Pump、Ink Return Pump 和 Ink Circulation Pump 是液路功能名称，不是三种固定的机械泵。供墨泵把墨水送往副墨箱或打印头，回墨泵把未喷出的墨水带回储液端，循环泵则描述闭合回路中的持续或间歇流动。是否需要三台独立泵，取决于打印头、主墨箱/副墨箱、重力或真空控制、过滤器和供回路架构。",
@@ -133,7 +133,7 @@ export const inkCirculationSupplyReturnPumpCopies = {
           {
             type: "notice",
             label: "不能泛化：",
-            text: "低脉动、可干转、耐磨、耐特定溶剂或适合长期白墨循环都必须落实到具体型号和测试条件。FOREACH 当前公开参数不能自动证明 DPL30 或 DPL60 适配某一种墨水。",
+            text: "低脉动、可干转、耐磨、耐特定溶剂或适合长期白墨循环都必须落实到具体型号和测试条件。Foreach 当前公开参数不能自动证明 DPL30 或 DPL60 适配某一种墨水。",
           },
         ],
       },
@@ -183,7 +183,7 @@ export const inkCirculationSupplyReturnPumpCopies = {
         blocks: [
           {
             type: "table",
-            headers: ["FOREACH 系列", "已确认产品边界", "Inkjet 评估方式"],
+            headers: ["Foreach 系列", "已确认产品边界", "Inkjet 评估方式"],
             rows: [
               [
                 "DPL30",
@@ -305,12 +305,12 @@ export const inkCirculationSupplyReturnPumpCopies = {
     metadata: {
       title:
         "What Is the Difference Between an Ink Circulation Pump, Ink Supply Pump and Ink Return Pump?",
-      seoTitle: "Ink Circulation, Supply & Return Pumps Explained | FOREACH",
+      seoTitle: "Ink Circulation, Supply & Return Pumps Explained | Foreach Technology",
       seoDescription:
         "Understand ink supply, return and circulation pump functions, common inkjet architectures, printhead pressure, installed flow and diaphragm pump validation.",
       coverImage: `${IMAGE_BASE}/ink-supply-return-circulation-cover.webp`,
       coverAlt:
-        "FOREACH DPL series miniature liquid diaphragm pump shown in a product video",
+        "Foreach DPL series miniature liquid diaphragm pump shown in a product video",
     },
     deck:
       "Ink supply pump, ink return pump and ink circulation pump are fluidic functions, not three fixed mechanical pump types. A supply pump moves ink toward a sub-tank or printhead, a return pump moves unused ink back toward a reservoir, and a circulation pump maintains flow around a loop. Whether those functions need one, two or several pumps depends on the printhead, reservoirs, gravity or vacuum control, filters and supply-return architecture.",
@@ -416,7 +416,7 @@ export const inkCirculationSupplyReturnPumpCopies = {
           {
             type: "notice",
             label: "Model-specific claims:",
-            text: "Low pulsation, dry-running capability, abrasion resistance, solvent resistance and suitability for long-term white ink circulation must be proven for the exact model and test conditions. Current FOREACH public data does not automatically prove that DPL30 or DPL60 fits a particular ink.",
+            text: "Low pulsation, dry-running capability, abrasion resistance, solvent resistance and suitability for long-term white ink circulation must be proven for the exact model and test conditions. Current Foreach public data does not automatically prove that DPL30 or DPL60 fits a particular ink.",
           },
         ],
       },
@@ -466,7 +466,7 @@ export const inkCirculationSupplyReturnPumpCopies = {
         blocks: [
           {
             type: "table",
-            headers: ["FOREACH series", "Verified product boundary", "Inkjet evaluation"],
+            headers: ["Foreach series", "Verified product boundary", "Inkjet evaluation"],
             rows: [
               [
                 "DPL30",

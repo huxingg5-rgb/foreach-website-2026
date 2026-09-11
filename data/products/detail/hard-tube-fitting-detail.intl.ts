@@ -79,7 +79,7 @@ export const HARD_TUBE_DETAIL_COPY: Record<HardTubeTargetLocale, DetailCopy> = {
     technicalDrawing: "Plano técnico",
     noDrawing: "No hay un plano técnico público disponible para este producto.",
     completeModels: "Modelos completos",
-    foreachModel: "Modelo FOREACH",
+    foreachModel: "Modelo Foreach",
     productCode: "Código de producto",
     connection: "Diámetro interior del tubo o rosca",
     gender: "Tipo de conexión",
@@ -124,7 +124,7 @@ export const HARD_TUBE_DETAIL_COPY: Record<HardTubeTargetLocale, DetailCopy> = {
     technicalDrawing: "Plan technique",
     noDrawing: "Aucun plan technique public n’est disponible pour ce produit.",
     completeModels: "Références complètes",
-    foreachModel: "Modèle FOREACH",
+    foreachModel: "Modèle Foreach",
     productCode: "Code produit",
     connection: "Diamètre intérieur du tube ou filetage",
     gender: "Type de raccord",
@@ -169,7 +169,7 @@ export const HARD_TUBE_DETAIL_COPY: Record<HardTubeTargetLocale, DetailCopy> = {
     technicalDrawing: "기술 도면",
     noDrawing: "이 제품에 공개된 기술 도면이 없습니다.",
     completeModels: "전체 모델",
-    foreachModel: "FOREACH 모델",
+    foreachModel: "Foreach 모델",
     productCode: "제품 코드",
     connection: "튜브 내경 또는 나사",
     gender: "연결 타입",
@@ -214,7 +214,7 @@ export const HARD_TUBE_DETAIL_COPY: Record<HardTubeTargetLocale, DetailCopy> = {
     technicalDrawing: "Технический чертёж",
     noDrawing: "Для этого продукта нет общедоступного технического чертежа.",
     completeModels: "Полный перечень моделей",
-    foreachModel: "Модель FOREACH",
+    foreachModel: "Модель Foreach",
     productCode: "Код продукта",
     connection: "Внутренний диаметр трубки или резьба",
     gender: "Тип соединения",
@@ -922,12 +922,12 @@ export function localizeHardTubeFittingDetailData<T extends DetailRecord>(
 
     bottomCtaDescription:
       locale === "es"
-        ? "FOREACH ofrece selección, suministro por volumen y personalización de racores según el tipo de conexión, el tamaño del tubo, el material, el elemento de sellado, el montaje y las condiciones de trabajo."
+        ? "Foreach ofrece selección, suministro por volumen y personalización de racores según el tipo de conexión, el tamaño del tubo, el material, el elemento de sellado, el montaje y las condiciones de trabajo."
         : locale === "fr"
-          ? "FOREACH assure la sélection, la fourniture en volume et la personnalisation des raccords selon le type de port, le diamètre du tube, le matériau, l’élément d’étanchéité, le montage et les conditions d’utilisation."
+          ? "Foreach assure la sélection, la fourniture en volume et la personnalisation des raccords selon le type de port, le diamètre du tube, le matériau, l’élément d’étanchéité, le montage et les conditions d’utilisation."
           : locale === "ko"
-            ? "FOREACH는 포트 형식, 튜브 규격, 재질, 밀봉 부품, 장착 구조 및 사용 조건에 따라 피팅 선정, 대량 공급 및 맞춤 제작을 지원합니다."
-            : "FOREACH помогает с подбором, серийной поставкой и изготовлением фитингов по требованиям к типу порта, размеру трубки, материалу, уплотнению, монтажной конструкции и условиям эксплуатации.",
+            ? "Foreach는 포트 형식, 튜브 규격, 재질, 밀봉 부품, 장착 구조 및 사용 조건에 따라 피팅 선정, 대량 공급 및 맞춤 제작을 지원합니다."
+            : "Foreach помогает с подбором, серийной поставкой и изготовлением фитингов по требованиям к типу порта, размеру трубки, материалу, уплотнению, монтажной конструкции и условиям эксплуатации.",
 
     bottomCtaButtonText:
       locale === "es"
@@ -943,7 +943,7 @@ export function localizeHardTubeFittingDetailData<T extends DetailRecord>(
 
     seo: {
       title:
-        `${model} ${localizedSeries} | FOREACH`,
+        `${model} ${localizedSeries} | Foreach Technology`,
       description,
     },
   } as DetailRecord;
@@ -956,14 +956,14 @@ export function localizeHardTubeFittingDetailData<T extends DetailRecord>(
 export function getHardTubeDetailMetadataCopy(model: string, locale: HardTubeTargetLocale) {
   const productName = locale === "es" ? "racor para tubo rígido" : locale === "fr" ? "raccord pour tube rigide" : locale === "ko" ? "경질 튜브 피팅" : "фитинг для жёстких трубок";
   const descriptions: Record<HardTubeTargetLocale, string> = {
-    es: `Consulte las especificaciones, materiales, rosca, sellado y aplicaciones del ${productName} ${model} de FOREACH.`,
-    fr: `Consultez les caractéristiques, les matériaux, le filetage, l’étanchéité et les applications du ${productName} ${model} de FOREACH.`,
-    ko: `FOREACH ${model} ${productName}의 사양, 재질, 나사, 밀봉 방식 및 적용 분야를 확인하십시오.`,
-    ru: `Характеристики, материалы, резьба, уплотнение и области применения модели FOREACH ${model} — ${productName}.`,
+    es: `Consulte las especificaciones, materiales, rosca, sellado y aplicaciones del ${productName} ${model} de Foreach.`,
+    fr: `Consultez les caractéristiques, les matériaux, le filetage, l’étanchéité et les applications du ${productName} ${model} de Foreach.`,
+    ko: `Foreach ${model} ${productName}의 사양, 재질, 나사, 밀봉 방식 및 적용 분야를 확인하십시오.`,
+    ru: `Характеристики, материалы, резьба, уплотнение и области применения модели Foreach ${model} — ${productName}.`,
   };
 
   return {
-    title: `${model} ${titleCaseFirst(productName)} | FOREACH`,
+    title: `${model} ${titleCaseFirst(productName)} | Foreach Technology`,
     description: descriptions[locale],
   };
 }

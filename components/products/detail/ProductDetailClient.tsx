@@ -646,7 +646,7 @@ function getValveDetailBottomCta(data: any) {
     data?.bottomCta?.description ||
     data?.customInquiryCta?.desc ||
     data?.customInquiryCta?.description ||
-    "请提供介质类型、压力范围、接口方式、通道数量、安装空间和控制方式，FOREACH 可协助确认适合您设备的阀系列配置。";
+    "请提供介质类型、压力范围、接口方式、通道数量、安装空间和控制方式，Foreach 可协助确认适合您设备的阀系列配置。";
 
   const button =
     data?.bottomCtaButtonText ||
@@ -712,7 +712,7 @@ function getProbeDetailBottomCta(data: any) {
     data?.bottomCta?.description ||
     data?.customInquiryCta?.desc ||
     data?.customInquiryCta?.description ||
-    "请提供图纸、样品、针管尺寸、针尖结构、安装空间和目标液体信息，FOREACH 可协助确认针系列定制方案。";
+    "请提供图纸、样品、针管尺寸、针尖结构、安装空间和目标液体信息，Foreach 可协助确认针系列定制方案。";
 
   const button =
     data?.bottomCtaButtonText ||
@@ -761,7 +761,7 @@ function getTubingBottomCtaData(data: any) {
     title: data?.bottomCtaTitle || "需要评估管路流阻与泵阀匹配？",
     desc:
       data?.bottomCtaDesc ||
-      "请提供液体介质、目标流量、管材、内径/外径、管路长度、接头数量、弯折情况、工作温度和压力范围。FOREACH 工程师可协助估算管路压降、流体阻力和死体积，并确认管材、接头与泵阀配置是否匹配。",
+      "请提供液体介质、目标流量、管材、内径/外径、管路长度、接头数量、弯折情况、工作温度和压力范围。Foreach 工程师可协助估算管路压降、流体阻力和死体积，并确认管材、接头与泵阀配置是否匹配。",
     button: data?.bottomCtaButton || "联系工程师",
     href: data?.bottomCtaHref || data?.contactHref || "/contact",
   };
@@ -793,7 +793,7 @@ function getPlungerPumpBottomCta(data: any) {
         title:
           "Fittings for volume orders and custom applications",
         desc:
-          "FOREACH can support fitting selection, volume supply, and customization based on port type, tube size, material, sealing element, mounting structure, and application conditions.",
+          "Foreach can support fitting selection, volume supply, and customization based on port type, tube size, material, sealing element, mounting structure, and application conditions.",
         button:
           "Contact Us",
         href:
@@ -835,7 +835,7 @@ function getPlungerPumpBottomCta(data: any) {
     if (data?.__locale === "en") {
       return {
         title: "Syringe pumps configured for your fluidic system",
-        desc: "Share the syringe size, stroke, channel count, valve arrangement, communication interface, installation space, and fluidic integration requirements. The FOREACH engineering team can help confirm a suitable configuration.",
+        desc: "Share the syringe size, stroke, channel count, valve arrangement, communication interface, installation space, and fluidic integration requirements. The Foreach engineering team can help confirm a suitable configuration.",
         button: "Submit a Custom Request",
         href: "/en/contact",
       };
@@ -853,7 +853,7 @@ function getPlungerPumpBottomCta(data: any) {
     if (data?.__locale === "en") {
       return {
         title: "Valveless pumps configured for your fluidic requirements",
-        desc: "Share the target displacement, ratio requirements, fluid compatibility, port type, cleaning requirements, and installation space. The FOREACH engineering team can help confirm a suitable configuration.",
+        desc: "Share the target displacement, ratio requirements, fluid compatibility, port type, cleaning requirements, and installation space. The Foreach engineering team can help confirm a suitable configuration.",
         button: "Submit a Custom Request",
         href: "/en/contact",
       };
@@ -870,7 +870,7 @@ function getPlungerPumpBottomCta(data: any) {
     if (data?.__locale === "en") {
       return {
         title: "Piston Pump Configured for Your Instrument",
-        desc: "Share the target volume, fluid compatibility, port type, control method, installation space, and service-life requirements. The FOREACH engineering team can help confirm the pump configuration and wetted materials.",
+        desc: "Share the target volume, fluid compatibility, port type, control method, installation space, and service-life requirements. The Foreach engineering team can help confirm the pump configuration and wetted materials.",
         button: "Submit a Custom Request",
         href: "/en/contact",
       };
@@ -888,7 +888,7 @@ function getPlungerPumpBottomCta(data: any) {
     if (data?.__locale === "en") {
       return {
         title: "Need help selecting a diaphragm pump?",
-        desc: "Share the fluid, flow rate, pressure, self-priming requirements, wetted materials, port type, and installation space. The FOREACH engineering team can help confirm a suitable diaphragm pump configuration.",
+        desc: "Share the fluid, flow rate, pressure, self-priming requirements, wetted materials, port type, and installation space. The Foreach engineering team can help confirm a suitable diaphragm pump configuration.",
         button: "Contact an Engineer",
         href: "/en/contact",
       };
@@ -906,7 +906,7 @@ function getPlungerPumpBottomCta(data: any) {
     if (data?.__locale === "en") {
       return {
         title: "Need help selecting a pipetting pump?",
-        desc: "Share the volume range, tip specification, liquid-level and clog-detection requirements, communication interface, installation space, and control method. The FOREACH engineering team can help confirm a suitable configuration.",
+        desc: "Share the volume range, tip specification, liquid-level and clog-detection requirements, communication interface, installation space, and control method. The Foreach engineering team can help confirm a suitable configuration.",
         button: "Contact an Engineer",
         href: "/en/contact",
       };
@@ -1154,7 +1154,7 @@ function getDiaphragmPumpSchemaModel(pathname: string, fallbackModel: string) {
 
 function cleanProductSchemaName(value: unknown) {
   return String(value || "")
-    .replace(/\s*[|｜]\s*FOREACH\s*$/i, "")
+    .replace(/\s*[|｜]\s*Foreach(?: Technology)?\s*$/i, "")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -1313,14 +1313,15 @@ function buildProductPageStructuredData(data: any, pathname: string) {
     {
       "@type": "Organization",
       "@id": organizationId,
-      name: "Shenzhen FOREACH Technology Co., Ltd.",
+      name: "Foreach Technology",
+      legalName: "深圳市恒永达科技股份有限公司",
       url: `${PRODUCT_SITE_ORIGIN}/`,
     },
     {
       "@type": "WebSite",
       "@id": websiteId,
       url: `${PRODUCT_SITE_ORIGIN}/`,
-      name: "FOREACH",
+      name: "Foreach Technology",
       publisher: {
         "@id": organizationId,
       },
@@ -1346,7 +1347,7 @@ function buildProductPageStructuredData(data: any, pathname: string) {
         ...(productImages.length > 0 ? { image: productImages } : {}),
         brand: {
           "@type": "Brand",
-          name: "FOREACH",
+          name: "Foreach Technology",
         },
         manufacturer: {
           "@id": organizationId,
@@ -1395,7 +1396,7 @@ function normalizeProductDisplayTitle(
   return String(value || "")
     .replace(/\s+/g, " ")
     .replace(
-      /\s*[|｜]\s*FOREACH\s*$/i,
+      /\s*[|｜]\s*Foreach(?: Technology)?\s*$/i,
       ""
     )
     .trim();
@@ -1591,7 +1592,7 @@ export default function ProductDetailClient({
         technicalDrawing: "Technical Drawing",
         noDrawing: "No public technical drawing is available for this product.",
         completeModels: "Complete Model Numbers",
-        foreachModel: "FOREACH Model",
+        foreachModel: "Foreach Model",
         productCode: "Product Code",
         connection: "Tube ID or Thread",
         gender: "Gender",

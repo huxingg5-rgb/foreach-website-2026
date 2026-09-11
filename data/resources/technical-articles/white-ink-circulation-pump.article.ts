@@ -20,7 +20,7 @@ export const whiteInkCirculationPumpCopies = {
     metadata: {
       title:
         "为什么白墨循环比普通墨水更难？White Ink Circulation Pump 应该怎么选？",
-      seoTitle: "White Ink Circulation Pump 选型与白墨沉降｜FOREACH",
+      seoTitle: "White Ink Circulation Pump 选型与白墨沉降｜Foreach Technology",
       seoDescription:
         "解释 TiO₂ 白色颜料沉降、循环路径与速度、死区、过滤器、黏度、压力和停机重启，并谨慎评估 DPL30 / DPL60 候选。",
       coverImage: `${IMAGE_BASE}/white-ink-circulation-dead-zone-cover.webp`,
@@ -268,7 +268,7 @@ export const whiteInkCirculationPumpCopies = {
     metadata: {
       title:
         "Why Is White Ink Recirculation More Difficult, and How Should a White Ink Circulation Pump Be Selected?",
-      seoTitle: "White Ink Circulation Pump & Sedimentation | FOREACH",
+      seoTitle: "White Ink Circulation Pump & Sedimentation | Foreach Technology",
       seoDescription:
         "Understand TiO₂ pigment settling, circulation path and rate, dead zones, filters, viscosity, pressure and restart before screening DPL30 or DPL60.",
       coverImage: `${IMAGE_BASE}/white-ink-circulation-dead-zone-cover.webp`,

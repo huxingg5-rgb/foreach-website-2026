@@ -147,9 +147,9 @@ const ARTICLE_COPY: Record<SupportedLocale, ArticleCopy> = {
   },
 
   en: {
-    introductionTitle: "Meet FOREACH in Anaheim",
+    introductionTitle: "Meet Foreach in Anaheim",
     introductionParagraphs: [
-      "FOREACH will participate in ADLM 2026, taking place in Anaheim, California, from July 26 to 30, 2026.",
+      "Foreach will participate in ADLM 2026, taking place in Anaheim, California, from July 26 to 30, 2026.",
       "At Booth 4105, our team will meet with instrument manufacturers, engineers, and industry partners to discuss fluid control challenges, component selection, and fluidic system integration.",
     ],
 
@@ -214,21 +214,21 @@ const ARTICLE_COPY: Record<SupportedLocale, ArticleCopy> = {
     applicationTitle:
       "Engineering Support for Instrument Applications",
     applicationParagraphs: [
-      "FOREACH supports applications in in vitro diagnostics, life science, analytical instruments, and laboratory automation.",
+      "Foreach supports applications in in vitro diagnostics, life science, analytical instruments, and laboratory automation.",
       "Beyond supplying individual components, our engineering team assists customers with material compatibility, product selection, alternative component evaluation, and fluidic system integration.",
     ],
 
     experienceTitle:
       "Experience in Precision Fluid Control",
     experienceParagraphs: [
-      "FOREACH continues to develop and industrialize precision fluid control technologies across pumps, valves, probes, fittings, tubing, sensors, and integrated fluidic solutions.",
+      "Foreach continues to develop and industrialize precision fluid control technologies across pumps, valves, probes, fittings, tubing, sensors, and integrated fluidic solutions.",
       "Our objective is to help instrument developers improve fluid control accuracy, simplify integration, and meet the requirements of compact and increasingly complex systems.",
     ],
 
     recognitionTitle:
       "Continued Investment in Engineering Capability",
     recognitionParagraph:
-      "FOREACH has received recognition in China for specialized innovation and high-growth development, reflecting continued investment in product development, engineering, and manufacturing.",
+      "Foreach has received recognition in China for specialized innovation and high-growth development, reflecting continued investment in product development, engineering, and manufacturing.",
     recognitionLabel: "Recognition",
     recognitionItems: [
       {
@@ -247,9 +247,9 @@ const ARTICLE_COPY: Record<SupportedLocale, ArticleCopy> = {
 
   es: {
     introductionTitle:
-      "FOREACH estará presente en ADLM 2026",
+      "Foreach estará presente en ADLM 2026",
     introductionParagraphs: [
-      "Del 26 al 30 de julio de 2026, FOREACH participará en ADLM 2026 en Anaheim, California.",
+      "Del 26 al 30 de julio de 2026, Foreach participará en ADLM 2026 en Anaheim, California.",
       "En el stand 4105, nuestro equipo conversará con fabricantes de instrumentos, ingenieros y socios del sector sobre selección de componentes, compatibilidad de materiales e integración de sistemas fluídicos.",
     ],
 
@@ -315,14 +315,14 @@ const ARTICLE_COPY: Record<SupportedLocale, ArticleCopy> = {
     applicationTitle:
       "Soporte para diferentes aplicaciones",
     applicationParagraphs: [
-      "FOREACH ofrece productos y soporte técnico para diagnóstico in vitro, ciencias de la vida, instrumentos analíticos y automatización de laboratorio.",
+      "Foreach ofrece productos y soporte técnico para diagnóstico in vitro, ciencias de la vida, instrumentos analíticos y automatización de laboratorio.",
       "Nuestro equipo ayuda a los clientes a evaluar productos alternativos, seleccionar materiales compatibles y simplificar la integración de los componentes en sus equipos.",
     ],
 
     experienceTitle:
       "Experiencia técnica y desarrollo continuo",
     experienceParagraphs: [
-      "FOREACH desarrolla tecnologías de control preciso de fluidos y ha creado una gama de productos que incluye bombas, válvulas, sondas, racores, tubos y sensores.",
+      "Foreach desarrolla tecnologías de control preciso de fluidos y ha creado una gama de productos que incluye bombas, válvulas, sondas, racores, tubos y sensores.",
       "Nuestro trabajo combina componentes fiables con asistencia de ingeniería adaptada a las necesidades de cada proyecto.",
     ],
 
@@ -348,9 +348,9 @@ const ARTICLE_COPY: Record<SupportedLocale, ArticleCopy> = {
 
   fr: {
     introductionTitle:
-      "FOREACH participera à l’ADLM 2026",
+      "Foreach participera à l’ADLM 2026",
     introductionParagraphs: [
-      "Du 26 au 30 juillet 2026, FOREACH participera à l’ADLM 2026 à Anaheim, en Californie.",
+      "Du 26 au 30 juillet 2026, Foreach participera à l’ADLM 2026 à Anaheim, en Californie.",
       "Au stand 4105, notre équipe échangera avec les fabricants d’instruments, les ingénieurs et les partenaires du secteur autour de la sélection des composants, de la compatibilité des matériaux et de l’intégration des circuits fluidiques.",
     ],
 
@@ -424,7 +424,7 @@ const ARTICLE_COPY: Record<SupportedLocale, ArticleCopy> = {
     experienceTitle:
       "Une expertise développée dans le contrôle des fluides",
     experienceParagraphs: [
-      "FOREACH développe et industrialise des technologies de contrôle précis des fluides couvrant les pompes, les vannes, les sondes, les raccords, les tubes, les capteurs et les solutions fluidiques intégrées.",
+      "Foreach développe et industrialise des technologies de contrôle précis des fluides couvrant les pompes, les vannes, les sondes, les raccords, les tubes, les capteurs et les solutions fluidiques intégrées.",
       "Cette approche vise à améliorer la précision du contrôle fluidique et à simplifier l’intégration dans des instruments compacts et complexes.",
     ],
 
@@ -450,9 +450,9 @@ const ARTICLE_COPY: Record<SupportedLocale, ArticleCopy> = {
 
   ko: {
     introductionTitle:
-      "FOREACH의 ADLM 2026 참가",
+      "Foreach의 ADLM 2026 참가",
     introductionParagraphs: [
-      "FOREACH는 2026년 7월 26일부터 30일까지 미국 캘리포니아 애너하임에서 개최되는 ADLM 2026에 참가합니다.",
+      "Foreach는 2026년 7월 26일부터 30일까지 미국 캘리포니아 애너하임에서 개최되는 ADLM 2026에 참가합니다.",
       "부스 4105에서 체외진단, 생명과학, 분석기기 및 실험실 자동화 장비 제조사와 엔지니어를 만나 유체 제어와 시스템 통합 요구사항을 상담할 예정입니다.",
     ],
 
@@ -517,21 +517,21 @@ const ARTICLE_COPY: Record<SupportedLocale, ArticleCopy> = {
     applicationTitle:
       "장비 적용을 위한 기술 지원",
     applicationParagraphs: [
-      "FOREACH는 체외진단, 생명과학, 분석기기 및 실험실 자동화 분야에 필요한 유체 제어 부품을 제공합니다.",
+      "Foreach는 체외진단, 생명과학, 분석기기 및 실험실 자동화 분야에 필요한 유체 제어 부품을 제공합니다.",
       "개별 부품 공급뿐만 아니라 재질 호환성 검토, 제품 선정, 대체품 검토 및 유로 시스템 통합을 지원합니다.",
     ],
 
     experienceTitle:
       "정밀 유체 제어 기술 역량",
     experienceParagraphs: [
-      "FOREACH는 펌프, 밸브, 프로브, 피팅, 튜빙, 센서 및 유로 솔루션 분야에서 정밀 유체 제어 기술을 지속적으로 개발해 왔습니다.",
+      "Foreach는 펌프, 밸브, 프로브, 피팅, 튜빙, 센서 및 유로 솔루션 분야에서 정밀 유체 제어 기술을 지속적으로 개발해 왔습니다.",
       "장비의 소형화, 자동화 및 복잡한 유로 설계 요구사항에 맞춰 필요한 부품과 기술 지원을 제공합니다.",
     ],
 
     recognitionTitle:
       "기술 전문성과 성장성 인정",
     recognitionParagraph:
-      "FOREACH는 기술 전문성, 제품 개발 능력 및 기업 성장성을 바탕으로 중국 내 전문 혁신 기업과 고성장 기업으로 인정받았습니다.",
+      "Foreach는 기술 전문성, 제품 개발 능력 및 기업 성장성을 바탕으로 중국 내 전문 혁신 기업과 고성장 기업으로 인정받았습니다.",
     recognitionLabel: "기업 인증",
     recognitionItems: [
       {
@@ -549,9 +549,9 @@ const ARTICLE_COPY: Record<SupportedLocale, ArticleCopy> = {
 
   ru: {
     introductionTitle:
-      "Участие FOREACH в ADLM 2026",
+      "Участие Foreach в ADLM 2026",
     introductionParagraphs: [
-      "С 26 по 30 июля 2026 года FOREACH примет участие в выставке ADLM 2026 в Анахайме, штат Калифорния.",
+      "С 26 по 30 июля 2026 года Foreach примет участие в выставке ADLM 2026 в Анахайме, штат Калифорния.",
       "На стенде 4105 специалисты компании будут обсуждать с производителями приборов и инженерами вопросы выбора компонентов, совместимости материалов и интеграции жидкостных систем.",
     ],
 
@@ -619,14 +619,14 @@ const ARTICLE_COPY: Record<SupportedLocale, ArticleCopy> = {
     applicationTitle:
       "Поддержка приборных применений",
     applicationParagraphs: [
-      "Решения FOREACH применяются в системах диагностики in vitro, оборудовании для наук о жизни, аналитических приборах и лабораторной автоматизации.",
+      "Решения Foreach применяются в системах диагностики in vitro, оборудовании для наук о жизни, аналитических приборах и лабораторной автоматизации.",
       "Компания оказывает поддержку при подборе компонентов, анализе химической совместимости материалов, поиске аналогов и интеграции компонентов в существующие системы.",
     ],
 
     experienceTitle:
       "Опыт в области точного управления жидкостями",
     experienceParagraphs: [
-      "FOREACH последовательно развивает технологии точного управления жидкостями, включая насосы, клапаны, зонды, фитинги, трубки, датчики и комплексные жидкостные решения.",
+      "Foreach последовательно развивает технологии точного управления жидкостями, включая насосы, клапаны, зонды, фитинги, трубки, датчики и комплексные жидкостные решения.",
       "Инженерная поддержка помогает заказчикам повысить точность управления потоком и упростить интеграцию компонентов в прибор.",
     ],
 
@@ -664,7 +664,7 @@ const SUPPORT_COPY: Record<
   },
 
   en: {
-    title: "Visit FOREACH at Booth 4105",
+    title: "Visit Foreach at Booth 4105",
     description:
       "Whether you are looking for a new fluidic component, an alternative to an existing product, or support with material compatibility and system integration, visit Booth 4105 and discuss your application with our team.",
     buttonLabel: "Contact Us",
@@ -680,7 +680,7 @@ const SUPPORT_COPY: Record<
   },
 
   fr: {
-    title: "Retrouvez FOREACH au stand 4105",
+    title: "Retrouvez Foreach au stand 4105",
     description:
       "Que vous recherchiez un composant fluidique, une solution de remplacement ou un accompagnement pour la compatibilité des matériaux et l’intégration du circuit, notre équipe sera disponible au stand 4105.",
     buttonLabel: "Nous contacter",
@@ -688,17 +688,17 @@ const SUPPORT_COPY: Record<
   },
 
   ko: {
-    title: "부스 4105에서 FOREACH를 만나보세요",
+    title: "부스 4105에서 Foreach를 만나보세요",
     description:
-      "새로운 유체 부품, 기존 제품의 대체품 또는 재질 호환성과 시스템 통합 지원이 필요한 경우 부스 4105에서 FOREACH 엔지니어와 상담해 주십시오.",
+      "새로운 유체 부품, 기존 제품의 대체품 또는 재질 호환성과 시스템 통합 지원이 필요한 경우 부스 4105에서 Foreach 엔지니어와 상담해 주십시오.",
     buttonLabel: "문의하기",
     href: "/ko/contact",
   },
 
   ru: {
-    title: "Посетите стенд FOREACH 4105",
+    title: "Посетите стенд Foreach 4105",
     description:
-      "Если вам требуется новый компонент, замена существующего изделия или техническая поддержка по совместимости материалов и интеграции системы, обсудите вашу задачу со специалистами FOREACH на стенде 4105.",
+      "Если вам требуется новый компонент, замена существующего изделия или техническая поддержка по совместимости материалов и интеграции системы, обсудите вашу задачу со специалистами Foreach на стенде 4105.",
     buttonLabel: "Связаться с нами",
     href: "/ru/contact",
   },

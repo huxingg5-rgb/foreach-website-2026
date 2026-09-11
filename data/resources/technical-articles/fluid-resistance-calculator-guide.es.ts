@@ -2,13 +2,13 @@ import type { DiaphragmPumpEngineeringArticleCopy } from "./diaphragm-pump-engin
 
 export const fluidResistanceCalculatorGuideEsCopy = {
   "metadata": {
-    "title": "¿Para qué sirve calcular la resistencia al flujo? Diseño y selección con el calculador FOREACH",
-    "seoTitle": "Calculador de resistencia: caudal y pérdidas | FOREACH",
-    "seoDescription": "Compare diámetro y Cv para estimar pérdidas, calcular caudal, localizar la resistencia dominante y evaluar fluidos y circuitos con el calculador FOREACH, curvas de bomba y mediciones.",
+    "title": "¿Para qué sirve calcular la resistencia al flujo? Diseño y selección con el calculador Foreach",
+    "seoTitle": "Calculador de resistencia: caudal y pérdidas | Foreach Technology",
+    "seoDescription": "Compare diámetro y Cv para estimar pérdidas, calcular caudal, localizar la resistencia dominante y evaluar fluidos y circuitos con el calculador Foreach, curvas de bomba y mediciones.",
     "coverImage": "/images/resources/technical-articles/fluid-resistance-guide/comparison.es.svg",
-    "coverAlt": "Caso de cálculo de la resistencia al flujo de FOREACH: comparación de la caída de presión antes y después de ajustar el diámetro de la tubería y el Cv de la válvula"
+    "coverAlt": "Caso de cálculo de la resistencia al flujo de Foreach: comparación de la caída de presión antes y después de ajustar el diámetro de la tubería y el Cv de la válvula"
   },
-  "deck": "El caudal en vacío de la bomba cumple los requisitos. Después de instalar las tuberías, válvulas y juntas, el suministro de líquido al final es insuficiente. Los cálculos de resistencia al flujo pueden dividir el problema en datos comparables: qué diferencial de presión se requiere para el caudal objetivo, dónde ocurre principalmente la pérdida de presión y qué sucede si se cambia el diámetro y la longitud de la tubería, el componente Cv o la viscosidad del medio. Este artículo combina la función real de la calculadora de resistencia al flujo FOREACH con un caso de circuito de líquido recalculable para explicar cómo utilizar los resultados del cálculo para el diseño, la selección, la resolución de problemas y la verificación del prototipo.",
+  "deck": "El caudal en vacío de la bomba cumple los requisitos. Después de instalar las tuberías, válvulas y juntas, el suministro de líquido al final es insuficiente. Los cálculos de resistencia al flujo pueden dividir el problema en datos comparables: qué diferencial de presión se requiere para el caudal objetivo, dónde ocurre principalmente la pérdida de presión y qué sucede si se cambia el diámetro y la longitud de la tubería, el componente Cv o la viscosidad del medio. Este artículo combina la función real de la calculadora de resistencia al flujo Foreach con un caso de circuito de líquido recalculable para explicar cómo utilizar los resultados del cálculo para el diseño, la selección, la resolución de problemas y la verificación del prototipo.",
   "leadBlocks": [
     {
       "type": "paragraph",
@@ -16,7 +16,7 @@ export const fluidResistanceCalculatorGuideEsCopy = {
     },
     {
       "type": "paragraph",
-      "text": "La calculadora de resistencia al flujo FOREACH admite la creación de filas de ID según el diámetro interior y la longitud de la tubería, y la creación de filas de Cv según el coeficiente de flujo del componente. También puede realizar cálculos de caída de presión con caudal conocido, cálculo de caudal con caída de presión conocida, estadísticas de pérdida, cálculo de la curva PQ de la trayectoria del líquido y exportación a Excel. Es adecuado para convertir conceptos de circuitos hidráulicos en estimaciones de presión preliminares y también es adecuado para recálculos utilizando parámetros conocidos después de las pruebas."
+      "text": "La calculadora de resistencia al flujo Foreach admite la creación de filas de ID según el diámetro interior y la longitud de la tubería, y la creación de filas de Cv según el coeficiente de flujo del componente. También puede realizar cálculos de caída de presión con caudal conocido, cálculo de caudal con caída de presión conocida, estadísticas de pérdida, cálculo de la curva PQ de la trayectoria del líquido y exportación a Excel. Es adecuado para convertir conceptos de circuitos hidráulicos en estimaciones de presión preliminares y también es adecuado para recálculos utilizando parámetros conocidos después de las pruebas."
     },
     {
       "type": "paragraph",
@@ -27,7 +27,7 @@ export const fluidResistanceCalculatorGuideEsCopy = {
       "items": [
         {
           "href": "/resources/calculators/fluid-resistance/",
-          "label": "Abra la calculadora de resistencia al flujo FOREACH y cree cálculos basados en el caso de este artículo."
+          "label": "Abra la calculadora de resistencia al flujo Foreach y cree cálculos basados en el caso de este artículo."
         }
       ]
     }
@@ -207,7 +207,7 @@ export const fluidResistanceCalculatorGuideEsCopy = {
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A continuación se utiliza el núcleo de cálculo de resistencia al flujo de FOREACH para calcular un caso simplificado: agua a 20 °C, caudal objetivo de 60 mL/min, tubería recta de 1 m conectada en serie con un elemento Cv. El coeficiente de resistencia local adicional de la tubería recta se establece en cero, y se supone el modelo de estrangulamiento de orificios pequeños y orificios de paredes delgadas y bordes afilados para el elemento Cv. Las presiones de fuente y terminal, las diferencias de nivel de líquido y otros componentes no enumerados no están incluidos en la tabla."
+          "text": "A continuación se utiliza el núcleo de cálculo de resistencia al flujo de Foreach para calcular un caso simplificado: agua a 20 °C, caudal objetivo de 60 mL/min, tubería recta de 1 m conectada en serie con un elemento Cv. El coeficiente de resistencia local adicional de la tubería recta se establece en cero, y se supone el modelo de estrangulamiento de orificios pequeños y orificios de paredes delgadas y bordes afilados para el elemento Cv. Las presiones de fuente y terminal, las diferencias de nivel de líquido y otros componentes no enumerados no están incluidos en la tabla."
         },
         {
           "type": "paragraph",
@@ -426,11 +426,11 @@ export const fluidResistanceCalculatorGuideEsCopy = {
       ]
     },
     {
-      "title": "11. Utilice los resultados de resistencia al flujo para la selección y comunicación de bombas, válvulas y tuberías FOREACH.",
+      "title": "11. Utilice los resultados de resistencia al flujo para la selección y comunicación de bombas, válvulas y tuberías Foreach.",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Al seleccionar una microbomba FOREACH o válvulas, conectores y tuberías de soporte, proporcionar \"flujo objetivo, pérdida por componente, condiciones de succión y presión terminal\" es más conveniente para la discusión que solo proporcionar un valor de caudal libre. Los resultados del cálculo pueden ayudar a aclarar las condiciones bajo las cuales se deben verificar las configuraciones candidatas y también pueden revelar si la canalización debe optimizarse primero."
+          "text": "Al seleccionar una microbomba Foreach o válvulas, conectores y tuberías de soporte, proporcionar \"flujo objetivo, pérdida por componente, condiciones de succión y presión terminal\" es más conveniente para la discusión que solo proporcionar un valor de caudal libre. Los resultados del cálculo pueden ayudar a aclarar las condiciones bajo las cuales se deben verificar las configuraciones candidatas y también pueden revelar si la canalización debe optimizarse primero."
         },
         {
           "type": "paragraph",
@@ -438,7 +438,7 @@ export const fluidResistanceCalculatorGuideEsCopy = {
         },
         {
           "type": "paragraph",
-          "text": "Al enviar una solicitud, se recomienda adjuntar un diagrama de ruta del fluido, parámetros de entrada, resultados de cálculo y flujo y presión medidos. FOREACH puede llevar a cabo la selección de modelos y la comunicación de ingeniería basada en parámetros de componentes relevantes, y aclarar aún más los datos y las condiciones de verificación del prototipo que deben complementarse."
+          "text": "Al enviar una solicitud, se recomienda adjuntar un diagrama de ruta del fluido, parámetros de entrada, resultados de cálculo y flujo y presión medidos. Foreach puede llevar a cabo la selección de modelos y la comunicación de ingeniería basada en parámetros de componentes relevantes, y aclarar aún más los datos y las condiciones de verificación del prototipo que deben complementarse."
         },
         {
           "type": "links",
@@ -449,11 +449,11 @@ export const fluidResistanceCalculatorGuideEsCopy = {
             },
             {
               "href": "/resources/technical-articles/foreach-miniature-diaphragm-pump-oem-integration/",
-              "label": "Lectura relacionada: integración OEM FOREACH, punto de funcionamiento y validación del instrumento"
+              "label": "Lectura relacionada: integración OEM Foreach, punto de funcionamiento y validación del instrumento"
             },
             {
               "href": "/products/",
-              "label": "Ver bombas, válvulas y componentes de líneas de fluido FOREACH"
+              "label": "Ver bombas, válvulas y componentes de líneas de fluido Foreach"
             }
           ]
         }
@@ -489,7 +489,7 @@ export const fluidResistanceCalculatorGuideEsCopy = {
   ],
   "cta": {
     "title": "Con los parámetros de la ruta del fluido y los resultados de los cálculos, analice las configuraciones de componentes más apropiadas.",
-    "description": "Proporcione el medio, la temperatura, el flujo objetivo, el tamaño de la tubería, los parámetros de los componentes, las presiones de entrada y salida y los resultados calculados o medidos para que FOREACH pueda ayudar a determinar los puntos clave de selección y verificación.",
+    "description": "Proporcione el medio, la temperatura, el flujo objetivo, el tamaño de la tubería, los parámetros de los componentes, las presiones de entrada y salida y los resultados calculados o medidos para que Foreach pueda ayudar a determinar los puntos clave de selección y verificación.",
     "contactLabel": "Enviar requisitos de línea de fluido",
     "productsLabel": "Utilice la calculadora de resistencia al flujo",
     "productsHref": "/resources/calculators/fluid-resistance/"

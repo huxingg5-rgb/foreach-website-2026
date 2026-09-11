@@ -33,9 +33,9 @@ export function generateStaticParams() {
 }
 
 const defaultMetadata: Metadata = {
-  title: "Analytical Instruments Applications｜FOREACH",
+  title: "Analytical Instruments Applications｜Foreach Technology",
   description:
-    "FOREACH provides pumps, valves, fittings, tubing, sensors and fluidic system support for analytical instruments.",
+    "Foreach provides pumps, valves, fittings, tubing, sensors and fluidic system support for analytical instruments.",
 };
 
 export async function generateMetadata({

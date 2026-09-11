@@ -265,7 +265,7 @@ function createEnglishPlaceholderData(): IvdApplicationPageData {
       eyebrow: "ENGINEERING SUPPORT",
       title: "Have a specific IVD fluidic requirement?",
       description:
-        "Share the instrument type, fluid, flow range, pressure, tubing dimensions and current issue with the FOREACH engineering team.",
+        "Share the instrument type, fluid, flow range, pressure, tubing dimensions and current issue with the Foreach engineering team.",
       primaryText: "View Product Series",
       primaryHref: "/en/products",
       secondaryText: "Submit an Application Request",

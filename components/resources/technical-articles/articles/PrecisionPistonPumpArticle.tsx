@@ -82,7 +82,7 @@ export default function PrecisionPistonPumpArticle() {
           与只负责把液体从一个位置输送到另一个位置的普通液泵不同，精密柱塞泵更关注单次分液体积、准确性、重复性以及长期自动运行能力。因此，它常用于体外诊断、生命科学仪器、实验室自动化、分析仪器和其他自动液体处理设备。
         </p>
         <p>
-          本文介绍精密柱塞泵的工作原理、主要特点、典型应用和基础选型方法，并说明 FOREACH EA、SM 和 TM 三个柱塞泵系列的定位与参数边界。
+          本文介绍精密柱塞泵的工作原理、主要特点、典型应用和基础选型方法，并说明 Foreach EA、SM 和 TM 三个柱塞泵系列的定位与参数边界。
         </p>
       </section>
 
@@ -197,9 +197,9 @@ export default function PrecisionPistonPumpArticle() {
       </section>
 
       <section className={newsStyles.contentBlock}>
-        <h2>六、FOREACH EA、SM、TM 柱塞泵系列介绍</h2>
+        <h2>六、Foreach EA、SM、TM 柱塞泵系列介绍</h2>
         <p>
-          FOREACH 目前提供 EA、SM 和 TM 三个柱塞泵平台，用于不同体积范围和安装空间的液体处理任务。
+          Foreach 目前提供 EA、SM 和 TM 三个柱塞泵平台，用于不同体积范围和安装空间的液体处理任务。
         </p>
         <ArticleTable
           headers={["系列", "当前确认范围", "主要定位", "参数与选型边界"]}
@@ -230,7 +230,7 @@ export default function PrecisionPistonPumpArticle() {
         <div className={styles.linkList}>
           <p>
             查看
-            <Link href="/products/pumps/piston-pump/">FOREACH 柱塞泵产品与容量配置</Link>
+            <Link href="/products/pumps/piston-pump/">Foreach 柱塞泵产品与容量配置</Link>
             ，并以最新规格书和项目液路要求完成正式选型。
           </p>
         </div>
@@ -310,7 +310,7 @@ export default function PrecisionPistonPumpArticle() {
           精密柱塞泵选型不应只比较标称容量和电机步数。更可靠的方法是先定义工作液量、准确性和重复性目标，再把介质、压力、阀门、管路、安装空间、控制和运行节拍放进同一套验证条件中。
         </p>
         <p>
-          FOREACH EA、SM 和 TM 分别覆盖宽量程、紧凑型和超紧凑型液体处理需求。最终系列、容量、材料、接口和控制配置，应以最新规格书、对应型号图纸和真实工况验证为准。
+          Foreach EA、SM 和 TM 分别覆盖宽量程、紧凑型和超紧凑型液体处理需求。最终系列、容量、材料、接口和控制配置，应以最新规格书、对应型号图纸和真实工况验证为准。
         </p>
       </section>
     </div>

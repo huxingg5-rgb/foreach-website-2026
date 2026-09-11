@@ -8,7 +8,7 @@
         "title": "¿Dónde queda el volumen desplazado?",
         "paragraphs": [
           "El desplazamiento ideal es el área efectiva del pistón multiplicada por su recorrido. El gas, los tubos flexibles y las cavidades de las válvulas pueden almacenar parte de ese volumen. La entrega útil es el líquido recibido en el destino; las carreras cortas y la primera dosis tras una inversión son especialmente sensibles.",
-          "Como ejemplo, una burbuja cerrada de 10 μL pasa a unos 8,33 μL al aumentar la presión absoluta de 100 a 120 kPa bajo una hipótesis isotérmica de gas ideal. Los aproximadamente 1,67 μL almacenados no son un error medido de FOREACH ni una pérdida definitiva: pueden liberarse al final de esa dosis o en otra posterior."
+          "Como ejemplo, una burbuja cerrada de 10 μL pasa a unos 8,33 μL al aumentar la presión absoluta de 100 a 120 kPa bajo una hipótesis isotérmica de gas ideal. Los aproximadamente 1,67 μL almacenados no son un error medido de Foreach ni una pérdida definitiva: pueden liberarse al final de esa dosis o en otra posterior."
         ]
       },
       {
@@ -42,8 +42,8 @@
       {
         "title": "Evaluar EAS y repetir la prueba completa",
         "paragraphs": [
-          "La especificación oficial de FOREACH EAS describe una cámara que facilita la expulsión del aire. Es una opción para reducir gas retenido, no una garantía para cualquier líquido, orientación o circuito. Confirme capacidad, conexiones y circuito de válvulas con la especificación oficial.",
-          "La configuración EA-500-PMMA muestra 500 μL y 2000 pasos completos:0,25 μL teóricos por paso, no una garantía de exactitud del líquido entregado. Repita ensayos con reactivo real, volumen mínimo, primera dosis, régimen estable y reinicio. La referencia Hamilton ilustra la observación conjunta de presión y gas, no sensores incluidos en FOREACH."
+          "La especificación oficial de Foreach EAS describe una cámara que facilita la expulsión del aire. Es una opción para reducir gas retenido, no una garantía para cualquier líquido, orientación o circuito. Confirme capacidad, conexiones y circuito de válvulas con la especificación oficial.",
+          "La configuración EA-500-PMMA muestra 500 μL y 2000 pasos completos:0,25 μL teóricos por paso, no una garantía de exactitud del líquido entregado. Repita ensayos con reactivo real, volumen mínimo, primera dosis, régimen estable y reinicio. La referencia Hamilton ilustra la observación conjunta de presión y gas, no sensores incluidos en Foreach."
         ]
       }
     ],
@@ -125,7 +125,7 @@
         "title": "El llenado puede continuar después del movimiento",
         "paragraphs": [
           "Al retroceder el pistón, el líquido debe llenar el volumen creado a través de una resistencia. Con gas y tubos elásticos, el llenado y la recuperación de presión pueden continuar después de parar. Conmutar inmediatamente puede trasladar ese transitorio a la siguiente etapa.",
-          "Defina la espera por presión y masa reproducibles. Las guías Tecan respaldan ajustar velocidad y demora para líquidos viscosos, pero sus valores corresponden a plataformas y puntas concretas; no establecen 200 ms o 500 ms universales para FOREACH."
+          "Defina la espera por presión y masa reproducibles. Las guías Tecan respaldan ajustar velocidad y demora para líquidos viscosos, pero sus valores corresponden a plataformas y puntas concretas; no establecen 200 ms o 500 ms universales para Foreach."
         ]
       },
       {

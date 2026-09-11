@@ -33,9 +33,9 @@ export function generateStaticParams() {
 }
 
 const defaultMetadata: Metadata = {
-  title: "Environmental Monitoring Applications｜FOREACH",
+  title: "Environmental Monitoring Applications｜Foreach Technology",
   description:
-    "FOREACH provides pumps, valves, fittings, tubing, sensors and fluidic system support for environmental monitoring systems.",
+    "Foreach provides pumps, valves, fittings, tubing, sensors and fluidic system support for environmental monitoring systems.",
 };
 
 export async function generateMetadata({

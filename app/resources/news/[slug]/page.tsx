@@ -245,7 +245,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${article.seoTitle ?? article.title}｜公司新闻｜FOREACH`,
+    title: `${article.seoTitle ?? article.title}｜公司新闻｜Foreach Technology`,
     description: article.seoDescription ?? article.summary,
   };
 }

@@ -706,7 +706,7 @@ export function getQuickConnectSeriesDetailData(
 
     seo: {
       title:
-        `${series} 快插接头系列｜FOREACH 恒永达`,
+        `${series} 快插接头系列｜Foreach Technology 恒永达`,
 
       description:
         `${series}快插接头系列共${rows.length}个在售型号，支持不同接口、公母端、阀门配置、安装方式、形状和外壳材质组合。`,
@@ -735,7 +735,7 @@ export function getQuickConnectSeriesMetadata(
   ) {
     return {
       title:
-        "快插接头｜FOREACH 恒永达",
+        "快插接头｜Foreach Technology 恒永达",
     };
   }
 

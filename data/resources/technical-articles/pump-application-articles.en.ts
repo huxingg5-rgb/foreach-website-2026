@@ -4,12 +4,12 @@ export const pumpApplicationArticlesEn = {
   "clinical-chemistry-piston-pump-100-250-500-ul-selection": {
     "metadata": {
       "title": "Choosing a 100, 250 or 500 μL Piston Pump for Clinical Chemistry Dosing",
-      "seoTitle": "100, 250 or 500 μL Piston Pump Selection for Clinical Chemistry | FOREACH",
-      "seoDescription": "Compare dose volume, stroke utilization, dispensing count and refill timing, then assess FOREACH EA, SM and TM configurations using the actual clinical chemistry fluid path.",
+      "seoTitle": "100, 250 or 500 μL Piston Pump Selection for Clinical Chemistry | Foreach Technology",
+      "seoDescription": "Compare dose volume, stroke utilization, dispensing count and refill timing, then assess Foreach EA, SM and TM configurations using the actual clinical chemistry fluid path.",
       "coverImage": "/images/resources/technical-articles/pump-application-guides/piston-capacity-series.png",
-      "coverAlt": "FOREACH piston pumps in multiple capacities, including 100, 250 and 500 μL"
+      "coverAlt": "Foreach piston pumps in multiple capacities, including 100, 250 and 500 μL"
     },
-    "deck": "Compare dose volume, stroke utilization, dispensing count and refill timing, then assess FOREACH EA, SM and TM configurations using the actual clinical chemistry fluid path.",
+    "deck": "Compare dose volume, stroke utilization, dispensing count and refill timing, then assess Foreach EA, SM and TM configurations using the actual clinical chemistry fluid path.",
     "leadBlocks": [
       {
         "type": "paragraph",
@@ -121,7 +121,7 @@ export const pumpApplicationArticlesEn = {
           },
           {
             "type": "notice",
-            "text": "Arithmetic example only: dispense 20 μL into each of eight cups, reserve 10 μL after each aspiration, and temporarily assume usable aspirated volume equals nominal capacity. The 10 μL reserve is not a common FOREACH specification. Confirm usable stroke, priming and reserve requirements for the actual fluid path.",
+            "text": "Arithmetic example only: dispense 20 μL into each of eight cups, reserve 10 μL after each aspiration, and temporarily assume usable aspirated volume equals nominal capacity. The 10 μL reserve is not a common Foreach specification. Confirm usable stroke, priming and reserve requirements for the actual fluid path.",
             "label": "Example assumptions"
           },
           {
@@ -208,7 +208,7 @@ export const pumpApplicationArticlesEn = {
         "blocks": [
           {
             "type": "paragraph",
-            "text": "FOREACH series information includes 100, 250 and 500 μL capacity options within EA, SM and TM. Check series positioning separately from the capabilities of an individual configuration. Equal nominal capacity does not establish matching dimensions, materials, interfaces, drive requirements or performance conditions."
+            "text": "Foreach series information includes 100, 250 and 500 μL capacity options within EA, SM and TM. Check series positioning separately from the capabilities of an individual configuration. Equal nominal capacity does not establish matching dimensions, materials, interfaces, drive requirements or performance conditions."
           },
           {
             "type": "table",
@@ -325,7 +325,7 @@ export const pumpApplicationArticlesEn = {
             "items": [
               {
                 "href": "/products/pumps/piston-pump/",
-                "label": "Explore FOREACH piston-pump products and series"
+                "label": "Explore Foreach piston-pump products and series"
               }
             ]
           }
@@ -366,10 +366,10 @@ export const pumpApplicationArticlesEn = {
   "diaphragm-pump-multiple-wash-nozzles-flow-balance": {
     "metadata": {
       "title": "Why do multiple wash nozzles deliver different flows from one miniature diaphragm pump?",
-      "seoTitle": "Multiple wash nozzles: diaphragm pump flow balancing | FOREACH",
+      "seoTitle": "Multiple wash nozzles: diaphragm pump flow balancing | Foreach Technology",
       "seoDescription": "Calculate demand from the volume and timing of each wash nozzle, separate insufficient pump output from unequal distribution, and verify each branch with collection and pressure measurements.",
       "coverImage": "/images/resources/technical-articles/pump-application-guides/dpl60-brushless-side-photo.jpg",
-      "coverAlt": "Side view of a FOREACH DPL60 miniature diaphragm pump showing the pump head and fluid ports"
+      "coverAlt": "Side view of a Foreach DPL60 miniature diaphragm pump showing the pump head and fluid ports"
     },
     "deck": "Calculate demand from the volume and timing of each wash nozzle, separate insufficient pump output from unequal distribution, and verify each branch with collection and pressure measurements.",
     "leadBlocks": [
@@ -432,7 +432,7 @@ export const pumpApplicationArticlesEn = {
           },
           {
             "type": "paragraph",
-            "text": "FOREACH DPL30 and DPL60 selection guides describe 300 mL/min and 600 mL/min flow classes respectively. The DPL30 nominal figure does not establish that it can meet this hypothetical 360 mL/min duty. DPL60 is a candidate for further evaluation: its 600 mL/min figure is not automatically the flow available through the installed tubing, valves and nozzles. Confirm the operating point at the specified voltage, liquid, inlet conditions and required outlet pressure."
+            "text": "Foreach DPL30 and DPL60 selection guides describe 300 mL/min and 600 mL/min flow classes respectively. The DPL30 nominal figure does not establish that it can meet this hypothetical 360 mL/min duty. DPL60 is a candidate for further evaluation: its 600 mL/min figure is not automatically the flow available through the installed tubing, valves and nozzles. Confirm the operating point at the specified voltage, liquid, inlet conditions and required outlet pressure."
           },
           {
             "type": "notice",
@@ -653,10 +653,10 @@ export const pumpApplicationArticlesEn = {
   "diaphragm-pump-flow-drop-reservoir-venting": {
     "metadata": {
       "title": "Flow starts normally, then falls: how do you check reservoir venting for a miniature diaphragm pump?",
-      "seoTitle": "Diaphragm pump flow drop: reservoir venting checks | FOREACH",
+      "seoTitle": "Diaphragm pump flow drop: reservoir venting checks | Foreach Technology",
       "seoDescription": "Record reservoir headspace pressure, pump inlet pressure and delivery together to investigate restricted venting and distinguish liquid-level changes, blockage, air leaks and outlet backpressure.",
       "coverImage": "/images/resources/technical-articles/pump-application-guides/dpl30-brushless-rear-photo.jpg",
-      "coverAlt": "Rear view of a FOREACH DPL30 miniature diaphragm pump showing the pump body and fluid ports"
+      "coverAlt": "Rear view of a Foreach DPL30 miniature diaphragm pump showing the pump body and fluid ports"
     },
     "deck": "Record reservoir headspace pressure, pump inlet pressure and delivery together to investigate restricted venting and distinguish liquid-level changes, blockage, air leaks and outlet backpressure.",
     "leadBlocks": [
@@ -701,7 +701,7 @@ export const pumpApplicationArticlesEn = {
           },
           {
             "type": "paragraph",
-            "text": "Assume an initial 100 mL headspace at 101.3 kPa absolute. After withdrawing 20 mL, the model gives 101.3 × 100/120 ≈ 84.4 kPa absolute, or approximately −16.9 kPa gauge relative to the original ambient pressure. These are illustrative calculations, not measurements from a FOREACH pump or a real reservoir."
+            "text": "Assume an initial 100 mL headspace at 101.3 kPa absolute. After withdrawing 20 mL, the model gives 101.3 × 100/120 ≈ 84.4 kPa absolute, or approximately −16.9 kPa gauge relative to the original ambient pressure. These are illustrative calculations, not measurements from a Foreach pump or a real reservoir."
           },
           {
             "type": "paragraph",

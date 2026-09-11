@@ -2,13 +2,13 @@ import type { DiaphragmPumpEngineeringArticleCopy } from "./diaphragm-pump-engin
 
 export const foreachDiaphragmPumpOemIntegrationEnCopy = {
   "metadata": {
-    "title": "FOREACH miniature diaphragm pumps for OEM integration: operating points, instrument validation and production introduction",
-    "seoTitle": "FOREACH diaphragm pump OEM integration | Selection and validation",
-    "seoDescription": "An engineering guide to FOREACH DPL30, DPL60, DPL30H and DPGL800 OEM integration: flow and pressure budgets, priming, wetted materials, controls, installation, prototype testing and production introduction.",
+    "title": "Foreach miniature diaphragm pumps for OEM integration: operating points, instrument validation and production introduction",
+    "seoTitle": "Foreach diaphragm pump OEM integration | Selection and validation",
+    "seoDescription": "An engineering guide to Foreach DPL30, DPL60, DPL30H and DPGL800 OEM integration: flow and pressure budgets, priming, wetted materials, controls, installation, prototype testing and production introduction.",
     "coverImage": "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-600ml-min-brushless-pwm-miniature-liquid-diaphragm-pump-front-side.webp",
-    "coverAlt": "Photograph of a FOREACH DPL60 miniature liquid diaphragm pump showing hose-barb ports and the motor"
+    "coverAlt": "Photograph of a Foreach DPL60 miniature liquid diaphragm pump showing hose-barb ports and the motor"
   },
-  "deck": "Whether the miniature diaphragm pump can work stably in OEM instruments depends on the joint matching of fluid path tasks, inlet and outlet conditions, material combinations, control methods and overall machine structure. Taking FOREACH DPL30, DPL60, DPL30H and DPGL800 as examples, this article starts from the flow and pressure budget, gas-liquid status, wetted materials and electrical interfaces to explain how to establish candidate solutions, carry out reproducible prototype verification, and convert the verification results into technical requirements for production supply.",
+  "deck": "Whether the miniature diaphragm pump can work stably in OEM instruments depends on the joint matching of fluid path tasks, inlet and outlet conditions, material combinations, control methods and overall machine structure. Taking Foreach DPL30, DPL60, DPL30H and DPGL800 as examples, this article starts from the flow and pressure budget, gas-liquid status, wetted materials and electrical interfaces to explain how to establish candidate solutions, carry out reproducible prototype verification, and convert the verification results into technical requirements for production supply.",
   "leadBlocks": [
     {
       "type": "paragraph",
@@ -16,11 +16,11 @@ export const foreachDiaphragmPumpOemIntegrationEnCopy = {
     },
     {
       "type": "paragraph",
-      "text": "The OEM integration mentioned in this article refers to the selection, adaptation and verification of the FOREACH miniature diaphragm pump as an internal component of the instrument. Standard models, optional configurations and project customization should be confirmed separately. The deliverables of technical work should include complete models, fluid circuit boundaries, electrical and mechanical interfaces, acceptance methods and change requirements, so that R&D, procurement, production and after-sales use the same basis."
+      "text": "The OEM integration mentioned in this article refers to the selection, adaptation and verification of the Foreach miniature diaphragm pump as an internal component of the instrument. Standard models, optional configurations and project customization should be confirmed separately. The deliverables of technical work should include complete models, fluid circuit boundaries, electrical and mechanical interfaces, acceptance methods and change requirements, so that R&D, procurement, production and after-sales use the same basis."
     },
     {
       "type": "paragraph",
-      "text": "The following product values are based on the FOREACH Chinese specifications listed at the end of the article; the calculation examples are used to explain the design method and do not represent the actual measurement results of a certain model. The actual reagents, mixed media, special installation and cycle-time requirements should be verified in the corresponding configuration and the complete instrument fluid path."
+      "text": "The following product values are based on the Foreach Chinese specifications listed at the end of the article; the calculation examples are used to explain the design method and do not represent the actual measurement results of a certain model. The actual reagents, mixed media, special installation and cycle-time requirements should be verified in the corresponding configuration and the complete instrument fluid path."
     }
   ],
   "sections": [
@@ -77,7 +77,7 @@ export const foreachDiaphragmPumpOemIntegrationEnCopy = {
       ]
     },
     {
-      "title": "2. Evaluating four FOREACH diaphragm pump series for an OEM shortlist",
+      "title": "2. Evaluating four Foreach diaphragm pump series for an OEM shortlist",
       "blocks": [
         {
           "type": "paragraph",
@@ -120,7 +120,7 @@ export const foreachDiaphragmPumpOemIntegrationEnCopy = {
         {
           "type": "figure",
           "src": "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-600ml-min-brushless-pwm-miniature-liquid-diaphragm-pump-front-side.webp",
-          "alt": "Photograph of the FOREACH DPL60 brushless miniature liquid diaphragm pump, showing hose-barb ports on both sides of the pump head",
+          "alt": "Photograph of the Foreach DPL60 brushless miniature liquid diaphragm pump, showing hose-barb ports on both sides of the pump head",
           "width": 1500,
           "height": 1499,
           "caption": "DPL60 photograph: the relative positions of the hose-barb ports, motor and pump head help assess hose routing and installation space. Confirm the pinout, mounting dimensions and materials against the documentation for the selected model."
@@ -135,7 +135,7 @@ export const foreachDiaphragmPumpOemIntegrationEnCopy = {
           "items": [
             {
               "href": "/products/pumps/miniature-diaphragm-pumps/",
-              "label": "View FOREACH miniature diaphragm pump series and basic configuration"
+              "label": "View Foreach miniature diaphragm pump series and basic configuration"
             }
           ]
         }
@@ -168,7 +168,7 @@ export const foreachDiaphragmPumpOemIntegrationEnCopy = {
         {
           "type": "formula",
           "expression": "M_Q = (Q_available,worst − Q_req) / Q_req × 100%",
-          "note": "Q_available,worst is the flow rate available under the defined most adverse working conditions, which should be derived from the curve or test of the corresponding working conditions. If the actual measurement in the example is 150 mL/min and the demand is 120 mL/min, the margin is 25%; the 150 mL/min here is an assumed value, not a guaranteed value for a certain FOREACH model."
+          "note": "Q_available,worst is the flow rate available under the defined most adverse working conditions, which should be derived from the curve or test of the corresponding working conditions. If the actual measurement in the example is 150 mL/min and the demand is 120 mL/min, the margin is 25%; the 150 mL/min here is an assumed value, not a guaranteed value for a certain Foreach model."
         },
         {
           "type": "paragraph",
@@ -302,7 +302,7 @@ export const foreachDiaphragmPumpOemIntegrationEnCopy = {
         {
           "type": "figure",
           "src": "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushless-2-wire-real-product-photo.webp",
-          "alt": "Photograph of a FOREACH DPL30 two-wire brushless liquid diaphragm pump showing hose-barb ports, pump head and power leads",
+          "alt": "Photograph of a Foreach DPL30 two-wire brushless liquid diaphragm pump showing hose-barb ports, pump head and power leads",
           "width": 1200,
           "height": 1200,
           "caption": "DPL30 two-wire brushless version. Installation must account for hose inner diameter, insertion and retention, bend radius and harness strain. A photograph does not replace a dimensional drawing or wiring definition."
@@ -332,7 +332,7 @@ export const foreachDiaphragmPumpOemIntegrationEnCopy = {
         {
           "type": "figure",
           "src": "/images/products/pumps/diaphragm-pumps/dpl30h/images/foreach-dpl30h-300ml-min-brushless-diaphragm-analyzer-wash-pump.webp",
-          "alt": "Photograph of a FOREACH DPL30H brushless high-pressure liquid diaphragm pump showing compression fittings and mounting holes",
+          "alt": "Photograph of a Foreach DPL30H brushless high-pressure liquid diaphragm pump showing compression fittings and mounting holes",
           "width": 1500,
           "height": 1500,
           "caption": "DPL30H photograph: assess compression-fitting and mounting-hole positions together with rigid-tube routing and bracket design. This datasheet revision specifies rigid tubing with 6 mm outer diameter and 4 mm inner diameter. The DPL30/DPL60 hose connection method cannot be transferred directly."
@@ -390,7 +390,7 @@ export const foreachDiaphragmPumpOemIntegrationEnCopy = {
         {
           "type": "figure",
           "src": "/images/products/pumps/diaphragm-pumps/dpgl800/images/foreach-dpgl800-6l-min-gas-brushless-diaphragm-vacuum-pump.webp",
-          "alt": "Photograph of a FOREACH DPGL800 gas/liquid diaphragm pump showing dual heads, mounting structure and tube fittings",
+          "alt": "Photograph of a Foreach DPGL800 gas/liquid diaphragm pump showing dual heads, mounting structure and tube fittings",
           "width": 1500,
           "height": 1500,
           "caption": "DPGL800 dual-head photograph. The image includes fitted tube adapters; the bare pump ports are specified as G1/8 female threads in this datasheet revision. Confirm the adapter configuration and dual-head plumbing separately."
@@ -710,7 +710,7 @@ export const foreachDiaphragmPumpOemIntegrationEnCopy = {
       "blocks": [
         {
           "type": "paragraph",
-          "text": "FOREACH provides support for microfluidic core components and fluid circuit solutions. The publicly introduced engineering collaboration includes prototype verification, parameter matching, and adjustment of solutions based on space, interface, media and control requirements. For a specific OEM diaphragm pump project, it is recommended to first evaluate whether the existing model can cover the task, then discuss configuration adaptation, and finally determine whether dedicated development is required."
+          "text": "Foreach provides support for microfluidic core components and fluid circuit solutions. The publicly introduced engineering collaboration includes prototype verification, parameter matching, and adjustment of solutions based on space, interface, media and control requirements. For a specific OEM diaphragm pump project, it is recommended to first evaluate whether the existing model can cover the task, then discuss configuration adaptation, and finally determine whether dedicated development is required."
         },
         {
           "type": "table",
@@ -752,7 +752,7 @@ export const foreachDiaphragmPumpOemIntegrationEnCopy = {
       "blocks": [
         {
           "type": "paragraph",
-          "text": "After the prototype test passes, the next step should be to transform \"This sample can work\" into \"Subsequent supply can be accepted under the same technical conditions.\" The following is the recommended project promotion method. The specific process and responsibilities should be jointly determined by the equipment factory and FOREACH in conjunction with the project."
+          "text": "After the prototype test passes, the next step should be to transform \"This sample can work\" into \"Subsequent supply can be accepted under the same technical conditions.\" The following is the recommended project promotion method. The specific process and responsibilities should be jointly determined by the equipment factory and Foreach in conjunction with the project."
         },
         {
           "type": "list",
@@ -772,7 +772,7 @@ export const foreachDiaphragmPumpOemIntegrationEnCopy = {
         },
         {
           "type": "subheading",
-          "title": "Information to include in an OEM request to FOREACH"
+          "title": "Information to include in an OEM request to Foreach"
         },
         {
           "type": "table",
@@ -809,7 +809,7 @@ export const foreachDiaphragmPumpOemIntegrationEnCopy = {
         },
         {
           "type": "paragraph",
-          "text": "When the information is incomplete, you can first provide equipment usage, existing fluid circuit diagrams, and observed problems. Engineering communication should gradually transform unknown conditions into measurement or confirmation tasks, and ultimately form candidate configurations and corresponding verification plans. Only the FOREACH diaphragm pump selected in this way can establish a clear technical correspondence with the liquid supply, cleaning or pumping tasks of the instrument."
+          "text": "When the information is incomplete, you can first provide equipment usage, existing fluid circuit diagrams, and observed problems. Engineering communication should gradually transform unknown conditions into measurement or confirmation tasks, and ultimately form candidate configurations and corresponding verification plans. Only the Foreach diaphragm pump selected in this way can establish a clear technical correspondence with the liquid supply, cleaning or pumping tasks of the instrument."
         }
       ]
     },
@@ -818,7 +818,7 @@ export const foreachDiaphragmPumpOemIntegrationEnCopy = {
       "blocks": [
         {
           "type": "paragraph",
-          "text": "The product parameters in this article are based on the following FOREACH Chinese specifications. The parameter page is used to understand the performance conditions, the selection table is used to confirm the configuration, and the dimensional drawing and electrical table are used for installation. The file version should be checked before ordering; when special media, control or interface adjustments are involved, confirmation information of the corresponding configuration should be obtained."
+          "text": "The product parameters in this article are based on the following Foreach Chinese specifications. The parameter page is used to understand the performance conditions, the selection table is used to confirm the configuration, and the dimensional drawing and electrical table are used for installation. The file version should be checked before ordering; when special media, control or interface adjustments are involved, confirmation information of the corresponding configuration should be obtained."
         },
         {
           "type": "links",
@@ -841,11 +841,11 @@ export const foreachDiaphragmPumpOemIntegrationEnCopy = {
             },
             {
               "href": "/resources/datasheets/",
-              "label": "FOREACH product specifications and catalogs"
+              "label": "Foreach product specifications and catalogs"
             },
             {
               "href": "/",
-              "label": "FOREACH microfluidic core components and engineering support"
+              "label": "Foreach microfluidic core components and engineering support"
             },
             {
               "href": "/resources/technical-articles/miniature-diaphragm-pump-flow-pulsation-reduction/",
@@ -860,10 +860,10 @@ export const foreachDiaphragmPumpOemIntegrationEnCopy = {
       ]
     }
   ],
-  "faqTitle": "Technical FAQ: FOREACH diaphragm pump OEM integration",
+  "faqTitle": "Technical FAQ: Foreach diaphragm pump OEM integration",
   "faqItems": [
     {
-      "question": "Does FOREACH diaphragm pump OEM integration always require a new pump design?",
+      "question": "Does Foreach diaphragm pump OEM integration always require a new pump design?",
       "answer": "Not necessarily. Standard models should be evaluated first with clear media, operating points, interfaces and control requirements. When standard solutions are insufficient, discuss optional configurations or project customization, and confirm the impact of adjustments on performance, structure, and verification scope. Available configuration and development boundaries need to be confirmed on a project-by-project basis."
     },
     {
@@ -897,7 +897,7 @@ export const foreachDiaphragmPumpOemIntegrationEnCopy = {
   ],
   "cta": {
     "title": "Submit OEM fluid line conditions to evaluate suitable diaphragm pump configurations",
-    "description": "Please provide equipment tasks, medium and temperature, target working flow, inlet and outlet pressure, working cycle, interface and installation space, as well as the current project stage. FOREACH can carry out model and configuration communication based on this, and jointly clarify the conditions that need to be verified.",
+    "description": "Please provide equipment tasks, medium and temperature, target working flow, inlet and outlet pressure, working cycle, interface and installation space, as well as the current project stage. Foreach can carry out model and configuration communication based on this, and jointly clarify the conditions that need to be verified.",
     "contactLabel": "Submit a technical request",
     "productsLabel": "View miniature diaphragm Pump Series",
     "productsHref": "/products/pumps/miniature-diaphragm-pumps/"

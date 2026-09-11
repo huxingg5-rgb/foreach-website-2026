@@ -3,10 +3,10 @@ import type { BrushlessWiringArticleCopy } from "./brushless-diaphragm-pump-2-wi
 export const brushlessWiringArticleZhCopy = {
   metadata: {
     title: "无刷隔膜泵2线与5线有什么区别？什么情况下分别使用？",
-    seoTitle: "无刷隔膜泵2线与5线有什么区别？选型与控制方式 | FOREACH",
+    seoTitle: "无刷隔膜泵2线与5线有什么区别？选型与控制方式 | Foreach Technology",
     seoDescription:
-      "了解无刷隔膜泵2线与5线的区别、VCC/GND/PWM/DIR/FG信号功能及适用场景，并了解FOREACH DPL30、DPL60、DPL30H和DPGL800系列的出线配置选择。",
-    coverAlt: "FOREACH DPL60 2线无刷电机实拍图",
+      "了解无刷隔膜泵2线与5线的区别、VCC/GND/PWM/DIR/FG信号功能及适用场景，并了解Foreach DPL30、DPL60、DPL30H和DPGL800系列的出线配置选择。",
+    coverAlt: "Foreach DPL60 2线无刷电机实拍图",
   },
   kicker: "无刷隔膜泵 · 2线与5线",
   deck:
@@ -29,7 +29,7 @@ export const brushlessWiringArticleZhCopy = {
       "电机内部已经集成基本驱动控制，设备给电后运行，断电后停止。",
       "因此，2线方案最大的特点是：接线简单、控制简单、系统集成方便。",
     ],
-    figureAlt: "FOREACH DPL60 2线无刷电机实拍图",
+    figureAlt: "Foreach DPL60 2线无刷电机实拍图",
     figureCaption: "图1｜DPL60 2线无刷电机实拍图。2线方案主要保留基本供电线路。",
     selectionTitle: "什么情况下选择2线？",
     selectionIntro: "如果设备满足下面这些条件，通常可以优先考虑2线方案：",
@@ -60,7 +60,7 @@ export const brushlessWiringArticleZhCopy = {
       "相比2线方案，5线的核心优势是：设备主控系统可以进一步控制电机运行状态，并获得转速反馈。",
       "例如通过PWM信号调整电机转速，或者通过FG信号判断电机当前是否正常运行。不同型号的具体线序和控制逻辑可能存在差异，实际使用时应以对应产品的电气规格为准。",
     ],
-    figureAlt: "FOREACH DPL60 5线无刷电机实拍图",
+    figureAlt: "Foreach DPL60 5线无刷电机实拍图",
     figureCaption:
       "图2｜DPL60 5线无刷电机实拍图。除供电之外，还可增加控制与反馈线路。",
     selectionTitle: "什么情况下选择5线？",
@@ -137,9 +137,9 @@ export const brushlessWiringArticleZhCopy = {
       "“有刷 / 无刷”描述的是电机类型；“2线 / 5线”描述的是出线和控制方式。两者不是同一个概念。因此，2线不等于有刷，5线也不等于无刷。",
   },
   products: {
-    title: "FOREACH哪些微型隔膜泵可以选择2线或5线？",
+    title: "Foreach哪些微型隔膜泵可以选择2线或5线？",
     intro:
-      "FOREACH恒永达目前多款微型隔膜泵均可以根据设备控制需求选择相应的出线方式，包括：",
+      "Foreach恒永达目前多款微型隔膜泵均可以根据设备控制需求选择相应的出线方式，包括：",
     cards: [
       {
         label: "微型液体隔膜泵",

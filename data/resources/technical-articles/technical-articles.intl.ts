@@ -21,7 +21,7 @@ export const technicalArticlesIntlData: TechnicalArticlesSourcePageData = {
   hero: {
     title: "Technical Articles",
     description:
-      "Explore FOREACH technical insights about product selection, material compatibility, tubing connections, sealing methods and microfluidic system applications.",
+      "Explore Foreach technical insights about product selection, material compatibility, tubing connections, sealing methods and microfluidic system applications.",
     backgroundImage: technicalArticlesBannerImage,
   },
 
@@ -356,7 +356,7 @@ export const technicalArticlesIntlData: TechnicalArticlesSourcePageData = {
   bottomBanner: {
     title: "Need technical support for product selection?",
     description:
-      "Share your media, pressure range, tubing size, application conditions or drawings with FOREACH for product matching and technical confirmation.",
+      "Share your media, pressure range, tubing size, application conditions or drawings with Foreach for product matching and technical confirmation.",
     actions: [
       {
         label: "Contact Us",

@@ -4,10 +4,10 @@ export const diaphragmPumpRdArticlesEn = {
   "self-priming-miniature-liquid-diaphragm-pump-selection": {
     "metadata": {
       "title": "Selecting a Self-Priming Miniature Liquid Diaphragm Pump: Lift, Priming Time and Dry or Wet Starts",
-      "seoTitle": "Self-Priming Miniature Liquid Diaphragm Pump Selection | FOREACH",
+      "seoTitle": "Self-Priming Miniature Liquid Diaphragm Pump Selection | Foreach Technology",
       "seoDescription": "Select a self-priming miniature liquid diaphragm pump by checking suction lift, time to first liquid, dry and wet starting conditions, and stable delivery. Use DPL30, DPL60 and DPL30H specifications to define an instrument-level test.",
       "coverImage": "/images/resources/technical-articles/diaphragm-pump-rd/covers/dpl30-brushless-port-side-photo.jpg",
-      "coverAlt": "Port-side view of a FOREACH DPL30 miniature diaphragm pump showing the fluid ports and motor"
+      "coverAlt": "Port-side view of a Foreach DPL30 miniature diaphragm pump showing the fluid ports and motor"
     },
     "deck": "Select a self-priming miniature liquid diaphragm pump by checking suction lift, time to first liquid, dry and wet starting conditions, and stable delivery. Use DPL30, DPL60 and DPL30H specifications to define an instrument-level test.",
     "leadBlocks": [
@@ -17,7 +17,7 @@ export const diaphragmPumpRdArticlesEn = {
       },
       {
         "type": "paragraph",
-        "text": "Suction lift describes only one aspect of self-priming. R&D must also establish the initial condition of the chamber and tubing, whether displaced air can escape, when liquid first arrives and when the instrument receives stable flow. Evaluate these conditions alongside the actual operating flow of a FOREACH DPL pump."
+        "text": "Suction lift describes only one aspect of self-priming. R&D must also establish the initial condition of the chamber and tubing, whether displaced air can escape, when liquid first arrives and when the instrument receives stable flow. Evaluate these conditions alongside the actual operating flow of a Foreach DPL pump."
       }
     ],
     "sections": [
@@ -77,7 +77,7 @@ export const diaphragmPumpRdArticlesEn = {
         ]
       },
       {
-        "title": "Read the FOREACH specifications as separate performance quantities",
+        "title": "Read the Foreach specifications as separate performance quantities",
         "blocks": [
           {
             "type": "paragraph",
@@ -225,7 +225,7 @@ export const diaphragmPumpRdArticlesEn = {
           },
           {
             "type": "paragraph",
-            "text": "For a FOREACH DPL30, DPL60 or DPL30H assessment, provide reservoir height, circuit volume and resistance, target flow, outlet backpressure, fluid formulation, initial dry/wet state and permitted waiting time."
+            "text": "For a Foreach DPL30, DPL60 or DPL30H assessment, provide reservoir height, circuit volume and resistance, target flow, outlet backpressure, fluid formulation, initial dry/wet state and permitted waiting time."
           }
         ]
       },
@@ -234,29 +234,29 @@ export const diaphragmPumpRdArticlesEn = {
         "blocks": [
           {
             "type": "paragraph",
-            "text": "Product parameters in this article come from the FOREACH specifications below. Verify engineering explanations and proposed tests for the exact model and actual operating conditions."
+            "text": "Product parameters in this article come from the Foreach specifications below. Verify engineering explanations and proposed tests for the exact model and actual operating conditions."
           },
           {
             "type": "links",
             "items": [
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00001_A04_cn_DPL30规格书.pdf",
-                "label": "[F1] FOREACH DPL30 Chinese specification (A04)",
+                "label": "[F1] Foreach DPL30 Chinese specification (A04)",
                 "suffix": "pp. 5–6: performance and configuration; pp. 3–4: mounting"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00002_A02_cn_DPL60规格书.pdf",
-                "label": "[F2] FOREACH DPL60 Chinese specification (A02)",
+                "label": "[F2] Foreach DPL60 Chinese specification (A02)",
                 "suffix": "pp. 5–6: performance and configuration; pp. 3–4: mounting"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2504-00001_A00_cn_DPL30H规格书.pdf",
-                "label": "[F3] FOREACH DPL30H Chinese specification (A00)",
+                "label": "[F3] Foreach DPL30H Chinese specification (A00)",
                 "suffix": "pp. 5–6: performance and configuration; pp. 3–4: mounting"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2506-00001_A00_cn_DPGL800气液混合泵规格书.pdf",
-                "label": "[F4] FOREACH DPGL800 Chinese specification (A00)",
+                "label": "[F4] Foreach DPGL800 Chinese specification (A00)",
                 "suffix": "pp. 5–6: performance and configuration; pp. 3–4: mounting"
               }
             ]
@@ -328,10 +328,10 @@ export const diaphragmPumpRdArticlesEn = {
   "miniature-diaphragm-pump-flow-pulsation-reduction": {
     "metadata": {
       "title": "Reducing Flow Pulsation in Miniature Diaphragm Pumps: Measurement and Practical Measures",
-      "seoTitle": "Miniature Diaphragm Pump Flow Pulsation: Reduction | FOREACH",
+      "seoTitle": "Miniature Diaphragm Pump Flow Pulsation: Reduction | Foreach Technology",
       "seoDescription": "Diagnose miniature diaphragm pump flow pulsation by separating real fluctuations from measurement errors. Compare damping, tubing and speed-control measures using matched operating conditions and endpoint measurements.",
       "coverImage": "/images/resources/technical-articles/diaphragm-pump-rd/covers/dpl60-brushless-horizontal-photo.jpg",
-      "coverAlt": "Horizontal view of a FOREACH DPL60 miniature diaphragm pump showing the pump head and motor"
+      "coverAlt": "Horizontal view of a Foreach DPL60 miniature diaphragm pump showing the pump head and motor"
     },
     "deck": "Diagnose miniature diaphragm pump flow pulsation by separating real fluctuations from measurement errors. Compare damping, tubing and speed-control measures using matched operating conditions and endpoint measurements.",
     "leadBlocks": [
@@ -366,7 +366,7 @@ export const diaphragmPumpRdArticlesEn = {
             "alt": "Same average, different instantaneous flow",
             "width": 1000,
             "height": 650,
-            "caption": "Principle only: synthetic curves have the same mean and different amplitudes. Flow is normalized; these are not FOREACH measurements."
+            "caption": "Principle only: synthetic curves have the same mean and different amplitudes. Flow is normalized; these are not Foreach measurements."
           }
         ]
       },
@@ -522,7 +522,7 @@ export const diaphragmPumpRdArticlesEn = {
         ]
       },
       {
-        "title": "Evaluate the FOREACH DPL series under matched conditions",
+        "title": "Evaluate the Foreach DPL series under matched conditions",
         "blocks": [
           {
             "type": "paragraph",
@@ -543,24 +543,24 @@ export const diaphragmPumpRdArticlesEn = {
         "blocks": [
           {
             "type": "paragraph",
-            "text": "Product parameters in this article come from the FOREACH specifications below. Verify engineering explanations and proposed tests for the exact model and actual operating conditions."
+            "text": "Product parameters in this article come from the Foreach specifications below. Verify engineering explanations and proposed tests for the exact model and actual operating conditions."
           },
           {
             "type": "links",
             "items": [
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00001_A04_cn_DPL30规格书.pdf",
-                "label": "[F1] FOREACH DPL30 Chinese specification (A04)",
+                "label": "[F1] Foreach DPL30 Chinese specification (A04)",
                 "suffix": "pp. 5–6: performance and configuration; pp. 3–4: mounting"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00002_A02_cn_DPL60规格书.pdf",
-                "label": "[F2] FOREACH DPL60 Chinese specification (A02)",
+                "label": "[F2] Foreach DPL60 Chinese specification (A02)",
                 "suffix": "pp. 5–6: performance and configuration; pp. 3–4: mounting"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2504-00001_A00_cn_DPL30H规格书.pdf",
-                "label": "[F3] FOREACH DPL30H Chinese specification (A00)",
+                "label": "[F3] Foreach DPL30H Chinese specification (A00)",
                 "suffix": "pp. 5–6: performance and configuration; pp. 3–4: mounting"
               },
               {
@@ -640,10 +640,10 @@ export const diaphragmPumpRdArticlesEn = {
   "miniature-diaphragm-pump-noise-vibration-reduction": {
     "metadata": {
       "title": "Miniature Diaphragm Pump Noise: Causes, Vibration Isolation and Noise Reduction",
-      "seoTitle": "Miniature Diaphragm Pump Noise and Vibration Reduction | FOREACH",
+      "seoTitle": "Miniature Diaphragm Pump Noise and Vibration Reduction | Foreach Technology",
       "seoDescription": "Investigate miniature diaphragm pump noise at a matched operating point. Check the motor, pump head, supports, tubing and enclosure, then validate noise-reduction measures against flow, temperature rise and reliability.",
       "coverImage": "/images/resources/technical-articles/diaphragm-pump-rd/covers/dpl30-brushless-bottom-photo.jpg",
-      "coverAlt": "Bottom view of a FOREACH DPL30 miniature diaphragm pump showing the base and mounting holes"
+      "coverAlt": "Bottom view of a Foreach DPL30 miniature diaphragm pump showing the base and mounting holes"
     },
     "deck": "Investigate miniature diaphragm pump noise at a matched operating point. Check the motor, pump head, supports, tubing and enclosure, then validate noise-reduction measures against flow, temperature rise and reliability.",
     "leadBlocks": [
@@ -670,7 +670,7 @@ export const diaphragmPumpRdArticlesEn = {
           },
           {
             "type": "paragraph",
-            "text": "Reducing mechanical coupling is one approach to limiting vibration transmission. Also investigate how hydraulic pressure fluctuations excite tubing and the enclosure. Design isolation around the actual FOREACH connections, mounting dimensions and load, and compare it at a matched operating point."
+            "text": "Reducing mechanical coupling is one approach to limiting vibration transmission. Also investigate how hydraulic pressure fluctuations excite tubing and the enclosure. Design isolation around the actual Foreach connections, mounting dimensions and load, and compare it at a matched operating point."
           },
           {
             "type": "figure",
@@ -819,7 +819,7 @@ export const diaphragmPumpRdArticlesEn = {
         ]
       },
       {
-        "title": "Compare FOREACH models against the same instrument task",
+        "title": "Compare Foreach models against the same instrument task",
         "blocks": [
           {
             "type": "paragraph",
@@ -831,7 +831,7 @@ export const diaphragmPumpRdArticlesEn = {
           },
           {
             "type": "paragraph",
-            "text": "Document the main excitation, important transmission paths, matched before/after conditions, and whether starting, flow and temperature still comply. For technical discussions with FOREACH, include installation photographs, a circuit diagram and operating-point records alongside sound files."
+            "text": "Document the main excitation, important transmission paths, matched before/after conditions, and whether starting, flow and temperature still comply. For technical discussions with Foreach, include installation photographs, a circuit diagram and operating-point records alongside sound files."
           }
         ]
       },
@@ -840,24 +840,24 @@ export const diaphragmPumpRdArticlesEn = {
         "blocks": [
           {
             "type": "paragraph",
-            "text": "Product parameters in this article come from the FOREACH specifications below. Verify engineering explanations and proposed tests for the exact model and actual operating conditions."
+            "text": "Product parameters in this article come from the Foreach specifications below. Verify engineering explanations and proposed tests for the exact model and actual operating conditions."
           },
           {
             "type": "links",
             "items": [
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00001_A04_cn_DPL30规格书.pdf",
-                "label": "[F1] FOREACH DPL30 Chinese specification (A04)",
+                "label": "[F1] Foreach DPL30 Chinese specification (A04)",
                 "suffix": "pp. 5–6: performance and configuration; pp. 3–4: mounting"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00002_A02_cn_DPL60规格书.pdf",
-                "label": "[F2] FOREACH DPL60 Chinese specification (A02)",
+                "label": "[F2] Foreach DPL60 Chinese specification (A02)",
                 "suffix": "pp. 5–6: performance and configuration; pp. 3–4: mounting"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2504-00001_A00_cn_DPL30H规格书.pdf",
-                "label": "[F3] FOREACH DPL30H Chinese specification (A00)",
+                "label": "[F3] Foreach DPL30H Chinese specification (A00)",
                 "suffix": "pp. 5–6: performance and configuration; pp. 3–4: mounting"
               }
             ]
@@ -933,10 +933,10 @@ export const diaphragmPumpRdArticlesEn = {
   "miniature-diaphragm-pump-backflow-check-valve": {
     "metadata": {
       "title": "Miniature Diaphragm Pump Backflow After Stopping: Check Valves and Anti-Siphon Design",
-      "seoTitle": "Miniature Diaphragm Pump Backflow and Anti-Siphon Design | FOREACH",
+      "seoTitle": "Miniature Diaphragm Pump Backflow and Anti-Siphon Design | Foreach Technology",
       "seoDescription": "Diagnose reverse flow after a miniature diaphragm pump stops, distinguish it from forward siphoning and residual dripping, and evaluate check-valve behavior, valve sequencing and static sealing in the complete circuit.",
       "coverImage": "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushless-2-wire-real-product-photo.webp",
-      "coverAlt": "FOREACH DPL30 two-wire brushless miniature liquid diaphragm pump product photograph"
+      "coverAlt": "Foreach DPL30 two-wire brushless miniature liquid diaphragm pump product photograph"
     },
     "deck": "Diagnose reverse flow after a miniature diaphragm pump stops, distinguish it from forward siphoning and residual dripping, and evaluate check-valve behavior, valve sequencing and static sealing in the complete circuit.",
     "leadBlocks": [
@@ -1023,7 +1023,7 @@ export const diaphragmPumpRdArticlesEn = {
           },
           {
             "type": "paragraph",
-            "text": "For an illustrative water circuit with both ends at atmospheric pressure and a free discharge, a source surface 0.5 m above the outlet provides approximately 4.9 kPa static driving pressure. This uses density approximately 1000 kg/m³ and gravity approximately 9.81 m/s² before subtracting losses. It is not a FOREACH opening-pressure or sealing specification. With a submerged outlet, use the receiving free-surface level and the two headspace pressures instead."
+            "text": "For an illustrative water circuit with both ends at atmospheric pressure and a free discharge, a source surface 0.5 m above the outlet provides approximately 4.9 kPa static driving pressure. This uses density approximately 1000 kg/m³ and gravity approximately 9.81 m/s² before subtracting losses. It is not a Foreach opening-pressure or sealing specification. With a submerged outlet, use the receiving free-surface level and the two headspace pressures instead."
           },
           {
             "type": "paragraph",
@@ -1118,7 +1118,7 @@ export const diaphragmPumpRdArticlesEn = {
         ]
       },
       {
-        "title": "Define the required stopped-state function for FOREACH selection",
+        "title": "Define the required stopped-state function for Foreach selection",
         "blocks": [
           {
             "type": "paragraph",
@@ -1135,24 +1135,24 @@ export const diaphragmPumpRdArticlesEn = {
         "blocks": [
           {
             "type": "paragraph",
-            "text": "Product parameters in this article come from the FOREACH specifications below. Verify engineering explanations and proposed tests for the exact model and actual operating conditions."
+            "text": "Product parameters in this article come from the Foreach specifications below. Verify engineering explanations and proposed tests for the exact model and actual operating conditions."
           },
           {
             "type": "links",
             "items": [
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00001_A04_cn_DPL30规格书.pdf",
-                "label": "[F1] FOREACH DPL30 Chinese specification (A04)",
+                "label": "[F1] Foreach DPL30 Chinese specification (A04)",
                 "suffix": "pp. 5–6: performance and configuration; pp. 3–4: mounting"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00002_A02_cn_DPL60规格书.pdf",
-                "label": "[F2] FOREACH DPL60 Chinese specification (A02)",
+                "label": "[F2] Foreach DPL60 Chinese specification (A02)",
                 "suffix": "pp. 5–6: performance and configuration; pp. 3–4: mounting"
               },
               {
                 "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2504-00001_A00_cn_DPL30H规格书.pdf",
-                "label": "[F3] FOREACH DPL30H Chinese specification (A00)",
+                "label": "[F3] Foreach DPL30H Chinese specification (A00)",
                 "suffix": "pp. 5–6: performance and configuration; pp. 3–4: mounting"
               }
             ]

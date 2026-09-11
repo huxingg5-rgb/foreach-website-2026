@@ -9,11 +9,11 @@ const SUCTION_DISCHARGE_ARTICLE_ASSET_BASE =
 export const tubeInnerDiameterAffectsDiaphragmPumpFlowZhCopy = {
   metadata: {
     title: "同一款微型隔膜泵换了管径，为什么实际流量会明显变化？",
-    seoTitle: "隔膜泵换管径后流量变化：从压力测量定位液路瓶颈｜FOREACH",
+    seoTitle: "隔膜泵换管径后流量变化：从压力测量定位液路瓶颈｜Foreach Technology",
     seoDescription:
       "微型隔膜泵换软管后流量下降，如何判断是管内径、管长、接头缩径还是泵本身？本文给出入口压力、出口压力与流量联测的诊断步骤。",
     coverImage: `${TUBE_DIAMETER_ARTICLE_ASSET_BASE}/article-cover.webp`,
-    coverAlt: "FOREACH官方抖音视频中的微型隔膜泵软管液路与流量测试实拍画面",
+    coverAlt: "Foreach官方抖音视频中的微型隔膜泵软管液路与流量测试实拍画面",
   },
   deck:
     "泵没有更换，装机流量也可能因为软管内径、长度、弯折和接头最小通径而改变。遇到“换管后流量下降”，有效的处理方式不是先怀疑泵，也不是把所有软管一律加粗，而是同步测量入口压力、出口压力和累计流量，判断阻力究竟新增在哪一段。",
@@ -240,11 +240,11 @@ export const tubeInnerDiameterAffectsDiaphragmPumpFlowZhCopy = {
 export const suctionVsDischargeResistanceDiaphragmPumpZhCopy = {
   metadata: {
     title: "吸液管和排液管，哪一侧的阻力对微型隔膜泵影响更大？",
-    seoTitle: "隔膜泵吸入阻力与出口背压：哪一侧影响更大？｜FOREACH",
+    seoTitle: "隔膜泵吸入阻力与出口背压：哪一侧影响更大？｜Foreach Technology",
     seoDescription:
       "吸入侧和排出侧阻力都会增加微型隔膜泵压差负担，但故障表现不同。本文用入口绝对压力、出口背压和流量测量区分吸不上液、气蚀与有压力无流量。",
     coverImage: `${SUCTION_DISCHARGE_ARTICLE_ASSET_BASE}/article-cover.webp`,
-    coverAlt: "FOREACH官方抖音视频中的微型隔膜泵吸液与排液测试实拍画面",
+    coverAlt: "Foreach官方抖音视频中的微型隔膜泵吸液与排液测试实拍画面",
   },
   deck:
     "吸入侧和排出侧的压力损失都会使微型隔膜泵承担更大压差，但不存在“永远是某一侧更重要”的通用答案。吸入侧更容易影响首次引液、泵腔补液、漏气敏感性、析气和气蚀；排出侧则更常表现为背压升高、流量下降和憋压。诊断时应把入口绝对压力、出口压力和流量放在同一时间轴上观察。",

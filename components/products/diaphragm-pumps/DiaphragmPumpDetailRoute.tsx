@@ -914,11 +914,11 @@ function adaptToProductDetailClientData(
             "恒永达 DPL30 直流无刷微型液体隔膜泵，流量范围 0–300 mL/min，正面视图，展示双软管接口",
           ]
         : [
-            "FOREACH DPL30 brushless DC miniature liquid diaphragm pump, 0–300 mL/min flow range, front three-quarter view",
-            "FOREACH DPL30 brushless micro liquid diaphragm pump, maximum pressure 100 kPa, rear three-quarter view",
-            "FOREACH DPL30 brushless DC micro liquid diaphragm pump, 0–300 mL/min flow range, side view showing twin hose barbs",
-            "FOREACH DPL30 brushless miniature liquid diaphragm pump, maximum pressure 100 kPa, bottom mounting view",
-            "FOREACH DPL30 brushless DC micro liquid diaphragm pump, 0–300 mL/min flow range, front port view",
+            "Foreach DPL30 brushless DC miniature liquid diaphragm pump, 0–300 mL/min flow range, front three-quarter view",
+            "Foreach DPL30 brushless micro liquid diaphragm pump, maximum pressure 100 kPa, rear three-quarter view",
+            "Foreach DPL30 brushless DC micro liquid diaphragm pump, 0–300 mL/min flow range, side view showing twin hose barbs",
+            "Foreach DPL30 brushless miniature liquid diaphragm pump, maximum pressure 100 kPa, bottom mounting view",
+            "Foreach DPL30 brushless DC micro liquid diaphragm pump, 0–300 mL/min flow range, front port view",
           ]
       : reference?.copyKey === "dpl60-brushless"
         ? locale === "zh"
@@ -930,11 +930,11 @@ function adaptToProductDetailClientData(
               "恒永达 DPL60 直流无刷微型隔膜液泵，流量范围 0–600 mL/min，最高耐压 100 kPa，正面视图",
             ]
           : [
-              "FOREACH DPL60 brushless DC miniature liquid diaphragm pump with five-wire PWM control, 0–600 mL/min flow range, front-side view",
-              "FOREACH DPL60 five-wire PWM brushless micro liquid diaphragm pump, maximum pressure 100 kPa, horizontal rear-side view",
-              "FOREACH DPL60 PWM-controlled micro liquid diaphragm pump with 0–600 mL/min flow range, showing five motor leads and twin hose barbs",
-              "FOREACH DPL60 five-wire PWM brushless DC miniature liquid diaphragm pump, rear structure view",
-              "FOREACH DPL60 brushless DC micro liquid diaphragm pump, 0–600 mL/min flow range and maximum pressure 100 kPa, front view",
+              "Foreach DPL60 brushless DC miniature liquid diaphragm pump with five-wire PWM control, 0–600 mL/min flow range, front-side view",
+              "Foreach DPL60 five-wire PWM brushless micro liquid diaphragm pump, maximum pressure 100 kPa, horizontal rear-side view",
+              "Foreach DPL60 PWM-controlled micro liquid diaphragm pump with 0–600 mL/min flow range, showing five motor leads and twin hose barbs",
+              "Foreach DPL60 five-wire PWM brushless DC miniature liquid diaphragm pump, rear structure view",
+              "Foreach DPL60 brushless DC micro liquid diaphragm pump, 0–600 mL/min flow range and maximum pressure 100 kPa, front view",
             ]
         : reference?.copyKey === "dpl60-brushed"
           ? locale === "zh"
@@ -943,8 +943,8 @@ function adaptToProductDetailClientData(
                 "恒永达 DPL60 直流有刷微型隔膜液泵，最高耐压 100 kPa，横置后侧视图，展示电机端子",
               ]
             : [
-                "FOREACH DPL60 brushed DC miniature liquid diaphragm pump, 0–600 mL/min flow range, front-side view",
-                "FOREACH DPL60 brushed DC micro liquid diaphragm pump, maximum pressure 100 kPa, horizontal rear-side view showing motor terminals",
+                "Foreach DPL60 brushed DC miniature liquid diaphragm pump, 0–600 mL/min flow range, front-side view",
+                "Foreach DPL60 brushed DC micro liquid diaphragm pump, maximum pressure 100 kPa, horizontal rear-side view showing motor terminals",
               ]
           : []);
 
@@ -1132,7 +1132,7 @@ export async function getDiaphragmPumpMetadata({
 
   if (!data) {
     return {
-      title: "Diaphragm Pump | FOREACH",
+      title: "Diaphragm Pump | Foreach Technology",
     };
   }
 
@@ -1170,7 +1170,7 @@ export async function getDiaphragmPumpMetadata({
   );
   const metadataTitle = /FOREACH|恒永达/i.test(title)
     ? title
-    : `${title} | FOREACH`;
+    : `${title} | Foreach Technology`;
   const canonicalPath = getDiaphragmPumpPath(targetLocale, slug);
   const languageAlternates = getDiaphragmPumpLanguageAlternates(slug);
   const socialImage = data.mainImage
@@ -1199,7 +1199,7 @@ export async function getDiaphragmPumpMetadata({
       type: "website",
       locale: targetLocale === "zh" ? "zh_CN" : targetLocale,
       url: canonicalPath,
-      siteName: "FOREACH",
+      siteName: "Foreach Technology",
       title: metadataTitle,
       description,
       ...(socialImage

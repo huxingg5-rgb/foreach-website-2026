@@ -4,12 +4,12 @@ export const pumpApplicationArticlesFr = {
   "clinical-chemistry-piston-pump-100-250-500-ul-selection": {
     "metadata": {
       "title": "Choisir une pompe à piston de 100, 250 ou 500 μL pour le dosage en biochimie clinique",
-      "seoTitle": "Pompes à piston de 100, 250 ou 500 μL en biochimie clinique | FOREACH",
-      "seoDescription": "Comparez le volume par dose, la fraction de course utilisée, le nombre de distributions et les temps de remplissage, puis évaluez les configurations FOREACH EA, SM et TM sur le circuit réel de l'analyseur.",
+      "seoTitle": "Pompes à piston de 100, 250 ou 500 μL en biochimie clinique | Foreach Technology",
+      "seoDescription": "Comparez le volume par dose, la fraction de course utilisée, le nombre de distributions et les temps de remplissage, puis évaluez les configurations Foreach EA, SM et TM sur le circuit réel de l'analyseur.",
       "coverImage": "/images/resources/technical-articles/pump-application-guides/piston-capacity-series.png",
-      "coverAlt": "Pompes à piston FOREACH de plusieurs capacités, notamment 100, 250 et 500 μL"
+      "coverAlt": "Pompes à piston Foreach de plusieurs capacités, notamment 100, 250 et 500 μL"
     },
-    "deck": "Comparez le volume par dose, la fraction de course utilisée, le nombre de distributions et les temps de remplissage, puis évaluez les configurations FOREACH EA, SM et TM sur le circuit réel de l'analyseur.",
+    "deck": "Comparez le volume par dose, la fraction de course utilisée, le nombre de distributions et les temps de remplissage, puis évaluez les configurations Foreach EA, SM et TM sur le circuit réel de l'analyseur.",
     "leadBlocks": [
       {
         "type": "paragraph",
@@ -121,7 +121,7 @@ export const pumpApplicationArticlesFr = {
           },
           {
             "type": "notice",
-            "text": "Exemple arithmétique uniquement : distribuer 20 μL dans chacune de huit cuvettes, réserver 10 μL après chaque aspiration et supposer provisoirement que le volume aspiré utilisable égale la capacité nominale. Cette réserve de 10 μL n'est pas une spécification générale FOREACH. Confirmez la course utile, l'amorçage et la réserve nécessaires pour le circuit réel.",
+            "text": "Exemple arithmétique uniquement : distribuer 20 μL dans chacune de huit cuvettes, réserver 10 μL après chaque aspiration et supposer provisoirement que le volume aspiré utilisable égale la capacité nominale. Cette réserve de 10 μL n'est pas une spécification générale Foreach. Confirmez la course utile, l'amorçage et la réserve nécessaires pour le circuit réel.",
             "label": "Hypothèses de l'exemple"
           },
           {
@@ -208,7 +208,7 @@ export const pumpApplicationArticlesFr = {
         "blocks": [
           {
             "type": "paragraph",
-            "text": "Les informations des séries FOREACH proposent des capacités de 100, 250 et 500 μL en EA, SM et TM. Distinguez le positionnement d'une série des possibilités d'une configuration particulière. Une capacité nominale identique ne garantit ni dimensions, ni matériaux, ni raccordements, ni entraînement, ni conditions de performance identiques."
+            "text": "Les informations des séries Foreach proposent des capacités de 100, 250 et 500 μL en EA, SM et TM. Distinguez le positionnement d'une série des possibilités d'une configuration particulière. Une capacité nominale identique ne garantit ni dimensions, ni matériaux, ni raccordements, ni entraînement, ni conditions de performance identiques."
           },
           {
             "type": "table",
@@ -325,7 +325,7 @@ export const pumpApplicationArticlesFr = {
             "items": [
               {
                 "href": "/products/pumps/piston-pump/",
-                "label": "Découvrir les produits et séries de pompes à piston FOREACH"
+                "label": "Découvrir les produits et séries de pompes à piston Foreach"
               }
             ]
           }
@@ -366,10 +366,10 @@ export const pumpApplicationArticlesFr = {
   "diaphragm-pump-multiple-wash-nozzles-flow-balance": {
     "metadata": {
       "title": "Pourquoi plusieurs buses de lavage alimentées par une seule pompe à membrane miniature ont-elles des débits différents ?",
-      "seoTitle": "Plusieurs buses de lavage : équilibrer les débits d'une pompe à membrane | FOREACH",
+      "seoTitle": "Plusieurs buses de lavage : équilibrer les débits d'une pompe à membrane | Foreach Technology",
       "seoDescription": "Calculez la demande à partir du volume et du temps de chaque buse, distinguez une alimentation totale insuffisante d'une répartition inégale, puis vérifiez chaque branche par collecte et mesures de pression.",
       "coverImage": "/images/resources/technical-articles/pump-application-guides/dpl60-brushless-side-photo.jpg",
-      "coverAlt": "Vue de côté d’une pompe à membrane miniature FOREACH DPL60 montrant la tête et les raccords de liquide"
+      "coverAlt": "Vue de côté d’une pompe à membrane miniature Foreach DPL60 montrant la tête et les raccords de liquide"
     },
     "deck": "Calculez la demande à partir du volume et du temps de chaque buse, distinguez une alimentation totale insuffisante d'une répartition inégale, puis vérifiez chaque branche par collecte et mesures de pression.",
     "leadBlocks": [
@@ -432,7 +432,7 @@ export const pumpApplicationArticlesFr = {
           },
           {
             "type": "paragraph",
-            "text": "Les guides FOREACH DPL30 et DPL60 décrivent respectivement des classes de débit de 300 et 600 mL/min. La valeur nominale DPL30 ne prouve pas qu'elle puisse assurer cette tâche hypothétique de 360 mL/min. DPL60 est un candidat à évaluer : 600 mL/min n'est pas automatiquement le débit disponible à travers les tubes, vannes et buses installés. Confirmez le point de fonctionnement à la tension, avec le liquide, les conditions d'entrée et la pression de sortie requis."
+            "text": "Les guides Foreach DPL30 et DPL60 décrivent respectivement des classes de débit de 300 et 600 mL/min. La valeur nominale DPL30 ne prouve pas qu'elle puisse assurer cette tâche hypothétique de 360 mL/min. DPL60 est un candidat à évaluer : 600 mL/min n'est pas automatiquement le débit disponible à travers les tubes, vannes et buses installés. Confirmez le point de fonctionnement à la tension, avec le liquide, les conditions d'entrée et la pression de sortie requis."
           },
           {
             "type": "notice",
@@ -653,10 +653,10 @@ export const pumpApplicationArticlesFr = {
   "diaphragm-pump-flow-drop-reservoir-venting": {
     "metadata": {
       "title": "Le débit est normal au départ, puis diminue : comment vérifier la mise à l'air du réservoir d'une pompe à membrane miniature ?",
-      "seoTitle": "Baisse de débit d'une pompe à membrane : mise à l'air du réservoir | FOREACH",
+      "seoTitle": "Baisse de débit d'une pompe à membrane : mise à l'air du réservoir | Foreach Technology",
       "seoDescription": "Relevez ensemble pression du ciel gazeux, pression d'entrée et distribution pour examiner une mise à l'air restrictive et distinguer niveau de liquide, obstruction, entrée d'air et contre-pression.",
       "coverImage": "/images/resources/technical-articles/pump-application-guides/dpl30-brushless-rear-photo.jpg",
-      "coverAlt": "Vue arrière d’une pompe à membrane miniature FOREACH DPL30 montrant le corps et les raccords de liquide"
+      "coverAlt": "Vue arrière d’une pompe à membrane miniature Foreach DPL30 montrant le corps et les raccords de liquide"
     },
     "deck": "Relevez ensemble pression du ciel gazeux, pression d'entrée et distribution pour examiner une mise à l'air restrictive et distinguer niveau de liquide, obstruction, entrée d'air et contre-pression.",
     "leadBlocks": [
@@ -701,7 +701,7 @@ export const pumpApplicationArticlesFr = {
           },
           {
             "type": "paragraph",
-            "text": "Supposons un volume gazeux initial de 100 mL à 101.3 kPa absolus. Après retrait de 20 mL, le modèle donne 101.3 × 100/120 ≈ 84.4 kPa absolus, soit environ −16.9 kPa relatifs à la pression ambiante initiale. Ce sont des calculs illustratifs, non des mesures sur une pompe FOREACH ou un réservoir réel."
+            "text": "Supposons un volume gazeux initial de 100 mL à 101.3 kPa absolus. Après retrait de 20 mL, le modèle donne 101.3 × 100/120 ≈ 84.4 kPa absolus, soit environ −16.9 kPa relatifs à la pression ambiante initiale. Ce sont des calculs illustratifs, non des mesures sur une pompe Foreach ou un réservoir réel."
           },
           {
             "type": "paragraph",

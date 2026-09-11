@@ -3,10 +3,10 @@ import type { DiaphragmPumpEngineeringArticleCopy } from "./diaphragm-pump-engin
 export const microDiaphragmPumpMaterialsSelectionZhCopy = {
   "metadata": {
     "title": "微型隔膜泵有哪些材质可选？选型时需要注意什么？",
-    "seoTitle": "微型隔膜泵材质选择：PPS、EPDM、PTFE与FFKM｜FOREACH",
-    "seoDescription": "了解FOREACH微型隔膜泵的PPS泵头、EPDM或PTFE膜片及EPDM或FFKM阀片组合，结合介质成分、浓度、温度、接触时间和清洗条件进行选型。",
+    "seoTitle": "微型隔膜泵材质选择：PPS、EPDM、PTFE与FFKM｜Foreach Technology",
+    "seoDescription": "了解Foreach微型隔膜泵的PPS泵头、EPDM或PTFE膜片及EPDM或FFKM阀片组合，结合介质成分、浓度、温度、接触时间和清洗条件进行选型。",
     "coverImage": "/images/resources/technical-articles/life-science-instrument-dpl60-diaphragm-pump-selection-guide/dpl60-product.webp",
-    "coverAlt": "FOREACH DPL60微型液体隔膜泵实物图"
+    "coverAlt": "Foreach DPL60微型液体隔膜泵实物图"
   },
   "deck": "了解微型隔膜泵的泵头、膜片与阀片材质组合，并结合介质成分、浓度、温度和清洗条件，确认适合实际液路的配置。",
   "leadBlocks": [
@@ -16,7 +16,7 @@ export const microDiaphragmPumpMaterialsSelectionZhCopy = {
     },
     {
       "type": "paragraph",
-      "text": "FOREACH（恒永达）微型隔膜泵主要提供以下两种材质组合，具体以所选型号为准："
+      "text": "Foreach（恒永达）微型隔膜泵主要提供以下两种材质组合，具体以所选型号为准："
     },
     {
       "type": "table",
@@ -53,7 +53,7 @@ export const microDiaphragmPumpMaterialsSelectionZhCopy = {
         },
         {
           "type": "paragraph",
-          "text": "FOREACH 上述材质组合采用 PPS 泵头。因此，即使选择 PTFE 膜片与 FFKM 阀片，仍然需要确认 PPS 泵头能否满足实际介质的使用要求。"
+          "text": "Foreach 上述材质组合采用 PPS 泵头。因此，即使选择 PTFE 膜片与 FFKM 阀片，仍然需要确认 PPS 泵头能否满足实际介质的使用要求。"
         },
         {
           "type": "paragraph",
@@ -70,7 +70,7 @@ export const microDiaphragmPumpMaterialsSelectionZhCopy = {
         },
         {
           "type": "paragraph",
-          "text": "FOREACH 提供 EPDM 和 PTFE 膜片配置，分别搭配 EPDM 和 FFKM 阀片。"
+          "text": "Foreach 提供 EPDM 和 PTFE 膜片配置，分别搭配 EPDM 和 FFKM 阀片。"
         },
         {
           "type": "paragraph",
@@ -95,7 +95,7 @@ export const microDiaphragmPumpMaterialsSelectionZhCopy = {
         },
         {
           "type": "paragraph",
-          "text": "FOREACH 的两类组合分别采用 EPDM 阀片和 FFKM 阀片。确认材料时，应同时核对泵头、膜片和阀片，避免只确认其中一种材料，就认为整台泵已经满足要求。"
+          "text": "Foreach 的两类组合分别采用 EPDM 阀片和 FFKM 阀片。确认材料时，应同时核对泵头、膜片和阀片，避免只确认其中一种材料，就认为整台泵已经满足要求。"
         }
       ]
     },
@@ -135,7 +135,7 @@ export const microDiaphragmPumpMaterialsSelectionZhCopy = {
         },
         {
           "type": "paragraph",
-          "text": "选择 FOREACH 微型隔膜泵时，可提供介质名称与浓度、工作温度、清洗方式，以及流量和压力要求，以便进一步匹配具体型号与材料组合。"
+          "text": "选择 Foreach 微型隔膜泵时，可提供介质名称与浓度、工作温度、清洗方式，以及流量和压力要求，以便进一步匹配具体型号与材料组合。"
         }
       ]
     }

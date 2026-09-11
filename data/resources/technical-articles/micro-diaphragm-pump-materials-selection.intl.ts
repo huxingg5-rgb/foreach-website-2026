@@ -4,16 +4,16 @@ export const microDiaphragmPumpMaterialsCopies = {
   "en": {
     "metadata": {
       "title": "Which Materials Are Available for Miniature Diaphragm Pumps? Selection Considerations",
-      "seoTitle": "Which Materials Are Available for Miniature Diaphragm Pumps? Selection Considerations | FOREACH",
+      "seoTitle": "Which Materials Are Available for Miniature Diaphragm Pumps? Selection Considerations | Foreach Technology",
       "seoDescription": "Compare pump-head, diaphragm and valve materials, then check fluid composition, concentration, temperature, exposure time and cleaning conditions before selecting a configuration.",
       "coverImage": "/images/resources/technical-articles/life-science-instrument-dpl60-diaphragm-pump-selection-guide/dpl60-product.webp",
-      "coverAlt": "FOREACH DPL60 miniature liquid diaphragm pump"
+      "coverAlt": "Foreach DPL60 miniature liquid diaphragm pump"
     },
     "deck": "Compare pump-head, diaphragm and valve materials, then check fluid composition, concentration, temperature, exposure time and cleaning conditions before selecting a configuration.",
     "leadBlocks": [
       {
         "type": "paragraph",
-        "text": "When selecting a miniature diaphragm pump, consider the materials in contact with the fluid as well as flow, pressure and installation dimensions. Compatibility requires particular attention when handling reagents, cleaning solutions or waste liquids. FOREACH offers the following two main material combinations; availability depends on the selected model."
+        "text": "When selecting a miniature diaphragm pump, consider the materials in contact with the fluid as well as flow, pressure and installation dimensions. Compatibility requires particular attention when handling reagents, cleaning solutions or waste liquids. Foreach offers the following two main material combinations; availability depends on the selected model."
       },
       {
         "type": "table",
@@ -46,7 +46,7 @@ export const microDiaphragmPumpMaterialsCopies = {
         "blocks": [
           {
             "type": "paragraph",
-            "text": "The pump head forms the chamber that holds and transfers the fluid, so its material must also be compatible. These FOREACH combinations use PPS pump heads. Even with a PTFE diaphragm and FFKM valves, confirm that PPS is suitable for the actual fluid."
+            "text": "The pump head forms the chamber that holds and transfers the fluid, so its material must also be compatible. These Foreach combinations use PPS pump heads. Even with a PTFE diaphragm and FFKM valves, confirm that PPS is suitable for the actual fluid."
           },
           {
             "type": "paragraph",
@@ -59,7 +59,7 @@ export const microDiaphragmPumpMaterialsCopies = {
         "blocks": [
           {
             "type": "paragraph",
-            "text": "The diaphragm moves back and forth to change chamber volume, enabling suction and discharge. Material selection must consider fluid compatibility and repeated movement under actual operating conditions. FOREACH offers EPDM diaphragms with EPDM valves, or PTFE diaphragms with FFKM valves."
+            "text": "The diaphragm moves back and forth to change chamber volume, enabling suction and discharge. Material selection must consider fluid compatibility and repeated movement under actual operating conditions. Foreach offers EPDM diaphragms with EPDM valves, or PTFE diaphragms with FFKM valves."
           },
           {
             "type": "paragraph",
@@ -76,7 +76,7 @@ export const microDiaphragmPumpMaterialsCopies = {
           },
           {
             "type": "paragraph",
-            "text": "FOREACH uses EPDM or FFKM valves in the two combinations shown. Confirm pump-head, diaphragm and valve materials together before considering the complete pump suitable."
+            "text": "Foreach uses EPDM or FFKM valves in the two combinations shown. Confirm pump-head, diaphragm and valve materials together before considering the complete pump suitable."
           }
         ]
       },
@@ -112,7 +112,7 @@ export const microDiaphragmPumpMaterialsCopies = {
           },
           {
             "type": "paragraph",
-            "text": "For FOREACH pump selection, provide fluid identity and concentration, operating temperature, cleaning method, and flow and pressure requirements to match a model and material combination."
+            "text": "For Foreach pump selection, provide fluid identity and concentration, operating temperature, cleaning method, and flow and pressure requirements to match a model and material combination."
           }
         ]
       }
@@ -121,7 +121,7 @@ export const microDiaphragmPumpMaterialsCopies = {
     "faqItems": [],
     "cta": {
       "title": "Discuss pump materials and selection",
-      "description": "For FOREACH pump selection, provide fluid identity and concentration, operating temperature, cleaning method, and flow and pressure requirements to match a model and material combination.",
+      "description": "For Foreach pump selection, provide fluid identity and concentration, operating temperature, cleaning method, and flow and pressure requirements to match a model and material combination.",
       "contactLabel": "Contact technical support",
       "productsLabel": "Explore miniature diaphragm pumps",
       "productsHref": "/products/pumps/miniature-diaphragm-pumps/"
@@ -130,16 +130,16 @@ export const microDiaphragmPumpMaterialsCopies = {
   "es": {
     "metadata": {
       "title": "¿Qué materiales ofrecen las bombas miniatura de diafragma y qué considerar al elegirlos?",
-      "seoTitle": "¿Qué materiales ofrecen las bombas miniatura de diafragma y qué considerar al elegirlos? | FOREACH",
+      "seoTitle": "¿Qué materiales ofrecen las bombas miniatura de diafragma y qué considerar al elegirlos? | Foreach Technology",
       "seoDescription": "Compare los materiales del cabezal, diafragma y válvulas y compruebe la composición, concentración, temperatura, tiempo de contacto y limpieza antes de elegir una configuración.",
       "coverImage": "/images/resources/technical-articles/life-science-instrument-dpl60-diaphragm-pump-selection-guide/dpl60-product.webp",
-      "coverAlt": "Bomba miniatura de diafragma para líquidos FOREACH DPL60"
+      "coverAlt": "Bomba miniatura de diafragma para líquidos Foreach DPL60"
     },
     "deck": "Compare los materiales del cabezal, diafragma y válvulas y compruebe la composición, concentración, temperatura, tiempo de contacto y limpieza antes de elegir una configuración.",
     "leadBlocks": [
       {
         "type": "paragraph",
-        "text": "Al elegir una bomba miniatura de diafragma, revise los materiales en contacto con el fluido, además del caudal, la presión y las dimensiones de instalación. La compatibilidad es especialmente importante para reactivos, soluciones de limpieza y residuos líquidos. FOREACH ofrece las siguientes dos combinaciones principales; la disponibilidad depende del modelo seleccionado."
+        "text": "Al elegir una bomba miniatura de diafragma, revise los materiales en contacto con el fluido, además del caudal, la presión y las dimensiones de instalación. La compatibilidad es especialmente importante para reactivos, soluciones de limpieza y residuos líquidos. Foreach ofrece las siguientes dos combinaciones principales; la disponibilidad depende del modelo seleccionado."
       },
       {
         "type": "table",
@@ -172,7 +172,7 @@ export const microDiaphragmPumpMaterialsCopies = {
         "blocks": [
           {
             "type": "paragraph",
-            "text": "El cabezal forma la cámara que contiene y transfiere el fluido, por lo que su material debe ser compatible. Estas combinaciones FOREACH utilizan PPS. Incluso con un diafragma de PTFE y válvulas de FFKM, debe confirmar la compatibilidad del PPS con el fluido real."
+            "text": "El cabezal forma la cámara que contiene y transfiere el fluido, por lo que su material debe ser compatible. Estas combinaciones Foreach utilizan PPS. Incluso con un diafragma de PTFE y válvulas de FFKM, debe confirmar la compatibilidad del PPS con el fluido real."
           },
           {
             "type": "paragraph",
@@ -185,7 +185,7 @@ export const microDiaphragmPumpMaterialsCopies = {
         "blocks": [
           {
             "type": "paragraph",
-            "text": "El movimiento alternativo del diafragma cambia el volumen de la cámara para aspirar y descargar. La selección debe considerar tanto la compatibilidad como las condiciones de movimiento repetido. FOREACH ofrece diafragmas de EPDM con válvulas de EPDM, o diafragmas de PTFE con válvulas de FFKM."
+            "text": "El movimiento alternativo del diafragma cambia el volumen de la cámara para aspirar y descargar. La selección debe considerar tanto la compatibilidad como las condiciones de movimiento repetido. Foreach ofrece diafragmas de EPDM con válvulas de EPDM, o diafragmas de PTFE con válvulas de FFKM."
           },
           {
             "type": "paragraph",
@@ -202,7 +202,7 @@ export const microDiaphragmPumpMaterialsCopies = {
           },
           {
             "type": "paragraph",
-            "text": "FOREACH utiliza válvulas de EPDM o FFKM en las combinaciones indicadas. Confirme el cabezal, el diafragma y las válvulas antes de considerar adecuada la bomba completa."
+            "text": "Foreach utiliza válvulas de EPDM o FFKM en las combinaciones indicadas. Confirme el cabezal, el diafragma y las válvulas antes de considerar adecuada la bomba completa."
           }
         ]
       },
@@ -238,7 +238,7 @@ export const microDiaphragmPumpMaterialsCopies = {
           },
           {
             "type": "paragraph",
-            "text": "Para seleccionar una bomba FOREACH, facilite el fluido y su concentración, temperatura, método de limpieza y requisitos de caudal y presión para definir modelo y combinación de materiales."
+            "text": "Para seleccionar una bomba Foreach, facilite el fluido y su concentración, temperatura, método de limpieza y requisitos de caudal y presión para definir modelo y combinación de materiales."
           }
         ]
       }
@@ -247,7 +247,7 @@ export const microDiaphragmPumpMaterialsCopies = {
     "faqItems": [],
     "cta": {
       "title": "Consulte sobre materiales y selección",
-      "description": "Para seleccionar una bomba FOREACH, facilite el fluido y su concentración, temperatura, método de limpieza y requisitos de caudal y presión para definir modelo y combinación de materiales.",
+      "description": "Para seleccionar una bomba Foreach, facilite el fluido y su concentración, temperatura, método de limpieza y requisitos de caudal y presión para definir modelo y combinación de materiales.",
       "contactLabel": "Contactar con soporte técnico",
       "productsLabel": "Ver bombas miniatura de diafragma",
       "productsHref": "/products/pumps/miniature-diaphragm-pumps/"
@@ -256,16 +256,16 @@ export const microDiaphragmPumpMaterialsCopies = {
   "fr": {
     "metadata": {
       "title": "Quels matériaux choisir pour une pompe à membrane miniature ?",
-      "seoTitle": "Quels matériaux choisir pour une pompe à membrane miniature ? | FOREACH",
+      "seoTitle": "Quels matériaux choisir pour une pompe à membrane miniature ? | Foreach Technology",
       "seoDescription": "Comparez les matériaux de la tête, de la membrane et des clapets, puis vérifiez composition, concentration, température, durée de contact et nettoyage avant de choisir une configuration.",
       "coverImage": "/images/resources/technical-articles/life-science-instrument-dpl60-diaphragm-pump-selection-guide/dpl60-product.webp",
-      "coverAlt": "Pompe à membrane miniature pour liquides FOREACH DPL60"
+      "coverAlt": "Pompe à membrane miniature pour liquides Foreach DPL60"
     },
     "deck": "Comparez les matériaux de la tête, de la membrane et des clapets, puis vérifiez composition, concentration, température, durée de contact et nettoyage avant de choisir une configuration.",
     "leadBlocks": [
       {
         "type": "paragraph",
-        "text": "Pour choisir une pompe à membrane miniature, examinez les matériaux en contact avec le fluide en plus du débit, de la pression et des dimensions de montage. La compatibilité est particulièrement importante pour les réactifs, les solutions de nettoyage et les effluents. FOREACH propose principalement les deux combinaisons suivantes, selon le modèle choisi."
+        "text": "Pour choisir une pompe à membrane miniature, examinez les matériaux en contact avec le fluide en plus du débit, de la pression et des dimensions de montage. La compatibilité est particulièrement importante pour les réactifs, les solutions de nettoyage et les effluents. Foreach propose principalement les deux combinaisons suivantes, selon le modèle choisi."
       },
       {
         "type": "table",
@@ -298,7 +298,7 @@ export const microDiaphragmPumpMaterialsCopies = {
         "blocks": [
           {
             "type": "paragraph",
-            "text": "La tête forme la chambre qui contient et transfère le fluide. Son matériau doit donc être compatible. Ces combinaisons FOREACH utilisent du PPS. Même avec une membrane en PTFE et des clapets en FFKM, vérifiez que le PPS convient au fluide réel."
+            "text": "La tête forme la chambre qui contient et transfère le fluide. Son matériau doit donc être compatible. Ces combinaisons Foreach utilisent du PPS. Même avec une membrane en PTFE et des clapets en FFKM, vérifiez que le PPS convient au fluide réel."
           },
           {
             "type": "paragraph",
@@ -311,7 +311,7 @@ export const microDiaphragmPumpMaterialsCopies = {
         "blocks": [
           {
             "type": "paragraph",
-            "text": "Le mouvement alternatif de la membrane modifie le volume de la chambre pour assurer aspiration et refoulement. Le choix doit tenir compte de la compatibilité et des conditions de mouvement répété. FOREACH propose une membrane EPDM avec des clapets EPDM, ou une membrane PTFE avec des clapets FFKM."
+            "text": "Le mouvement alternatif de la membrane modifie le volume de la chambre pour assurer aspiration et refoulement. Le choix doit tenir compte de la compatibilité et des conditions de mouvement répété. Foreach propose une membrane EPDM avec des clapets EPDM, ou une membrane PTFE avec des clapets FFKM."
           },
           {
             "type": "paragraph",
@@ -328,7 +328,7 @@ export const microDiaphragmPumpMaterialsCopies = {
           },
           {
             "type": "paragraph",
-            "text": "FOREACH utilise des clapets EPDM ou FFKM dans les deux combinaisons présentées. Vérifiez la tête, la membrane et les clapets avant de valider la pompe complète."
+            "text": "Foreach utilise des clapets EPDM ou FFKM dans les deux combinaisons présentées. Vérifiez la tête, la membrane et les clapets avant de valider la pompe complète."
           }
         ]
       },
@@ -364,7 +364,7 @@ export const microDiaphragmPumpMaterialsCopies = {
           },
           {
             "type": "paragraph",
-            "text": "Pour sélectionner une pompe FOREACH, indiquez le fluide et sa concentration, la température, le nettoyage ainsi que le débit et la pression requis afin de définir le modèle et les matériaux."
+            "text": "Pour sélectionner une pompe Foreach, indiquez le fluide et sa concentration, la température, le nettoyage ainsi que le débit et la pression requis afin de définir le modèle et les matériaux."
           }
         ]
       }
@@ -373,7 +373,7 @@ export const microDiaphragmPumpMaterialsCopies = {
     "faqItems": [],
     "cta": {
       "title": "Conseils sur les matériaux et la sélection",
-      "description": "Pour sélectionner une pompe FOREACH, indiquez le fluide et sa concentration, la température, le nettoyage ainsi que le débit et la pression requis afin de définir le modèle et les matériaux.",
+      "description": "Pour sélectionner une pompe Foreach, indiquez le fluide et sa concentration, la température, le nettoyage ainsi que le débit et la pression requis afin de définir le modèle et les matériaux.",
       "contactLabel": "Contacter l’assistance technique",
       "productsLabel": "Voir les pompes à membrane miniatures",
       "productsHref": "/products/pumps/miniature-diaphragm-pumps/"
@@ -382,16 +382,16 @@ export const microDiaphragmPumpMaterialsCopies = {
   "ko": {
     "metadata": {
       "title": "소형 다이어프램 펌프의 재질 선택과 선정 시 확인 사항",
-      "seoTitle": "소형 다이어프램 펌프의 재질 선택과 선정 시 확인 사항 | FOREACH",
+      "seoTitle": "소형 다이어프램 펌프의 재질 선택과 선정 시 확인 사항 | Foreach Technology",
       "seoDescription": "펌프 헤드, 다이어프램 및 밸브의 재질 조합을 비교하고 유체 성분, 농도, 온도, 접촉 시간과 세척 조건을 확인하여 구성을 선정하십시오.",
       "coverImage": "/images/resources/technical-articles/life-science-instrument-dpl60-diaphragm-pump-selection-guide/dpl60-product.webp",
-      "coverAlt": "FOREACH DPL60 소형 액체 다이어프램 펌프 실물"
+      "coverAlt": "Foreach DPL60 소형 액체 다이어프램 펌프 실물"
     },
     "deck": "펌프 헤드, 다이어프램 및 밸브의 재질 조합을 비교하고 유체 성분, 농도, 온도, 접촉 시간과 세척 조건을 확인하여 구성을 선정하십시오.",
     "leadBlocks": [
       {
         "type": "paragraph",
-        "text": "소형 다이어프램 펌프를 선정할 때는 유량, 압력, 설치 치수뿐 아니라 유체와 접촉하는 부품의 재질도 확인해야 합니다. 특히 시약, 세척액 또는 폐액을 이송할 때는 재질 호환성을 미리 검토해야 합니다. FOREACH는 다음 두 가지 주요 재질 조합을 제공하며, 실제 구성은 선택한 모델을 기준으로 확인해야 합니다."
+        "text": "소형 다이어프램 펌프를 선정할 때는 유량, 압력, 설치 치수뿐 아니라 유체와 접촉하는 부품의 재질도 확인해야 합니다. 특히 시약, 세척액 또는 폐액을 이송할 때는 재질 호환성을 미리 검토해야 합니다. Foreach는 다음 두 가지 주요 재질 조합을 제공하며, 실제 구성은 선택한 모델을 기준으로 확인해야 합니다."
       },
       {
         "type": "table",
@@ -424,7 +424,7 @@ export const microDiaphragmPumpMaterialsCopies = {
         "blocks": [
           {
             "type": "paragraph",
-            "text": "펌프 헤드는 유체를 담고 이송하는 펌프실을 형성하므로 유체와 호환되어야 합니다. 위 FOREACH 조합은 PPS 헤드를 사용합니다. PTFE 다이어프램과 FFKM 밸브를 선택하더라도 PPS가 실제 유체에 적합한지 확인해야 합니다."
+            "text": "펌프 헤드는 유체를 담고 이송하는 펌프실을 형성하므로 유체와 호환되어야 합니다. 위 Foreach 조합은 PPS 헤드를 사용합니다. PTFE 다이어프램과 FFKM 밸브를 선택하더라도 PPS가 실제 유체에 적합한지 확인해야 합니다."
           },
           {
             "type": "paragraph",
@@ -437,7 +437,7 @@ export const microDiaphragmPumpMaterialsCopies = {
         "blocks": [
           {
             "type": "paragraph",
-            "text": "다이어프램은 왕복 운동으로 펌프실 부피를 변화시켜 흡입과 토출을 수행합니다. 재질 선정 시 유체 호환성과 실제 반복 운동 조건을 함께 평가해야 합니다. FOREACH는 EPDM 다이어프램과 EPDM 밸브, 또는 PTFE 다이어프램과 FFKM 밸브의 조합을 제공합니다."
+            "text": "다이어프램은 왕복 운동으로 펌프실 부피를 변화시켜 흡입과 토출을 수행합니다. 재질 선정 시 유체 호환성과 실제 반복 운동 조건을 함께 평가해야 합니다. Foreach는 EPDM 다이어프램과 EPDM 밸브, 또는 PTFE 다이어프램과 FFKM 밸브의 조합을 제공합니다."
           },
           {
             "type": "paragraph",
@@ -454,7 +454,7 @@ export const microDiaphragmPumpMaterialsCopies = {
           },
           {
             "type": "paragraph",
-            "text": "FOREACH의 두 조합에는 각각 EPDM 또는 FFKM 밸브가 사용됩니다. 펌프 전체의 적합성을 판단하기 전에 헤드, 다이어프램과 밸브를 함께 확인하십시오."
+            "text": "Foreach의 두 조합에는 각각 EPDM 또는 FFKM 밸브가 사용됩니다. 펌프 전체의 적합성을 판단하기 전에 헤드, 다이어프램과 밸브를 함께 확인하십시오."
           }
         ]
       },
@@ -490,7 +490,7 @@ export const microDiaphragmPumpMaterialsCopies = {
           },
           {
             "type": "paragraph",
-            "text": "FOREACH 펌프 선정 시 유체명과 농도, 사용 온도, 세척 방식, 유량 및 압력 요구사항을 제공하면 모델과 재질 조합을 구체적으로 검토할 수 있습니다."
+            "text": "Foreach 펌프 선정 시 유체명과 농도, 사용 온도, 세척 방식, 유량 및 압력 요구사항을 제공하면 모델과 재질 조합을 구체적으로 검토할 수 있습니다."
           }
         ]
       }
@@ -499,7 +499,7 @@ export const microDiaphragmPumpMaterialsCopies = {
     "faqItems": [],
     "cta": {
       "title": "펌프 재질 및 선정 상담",
-      "description": "FOREACH 펌프 선정 시 유체명과 농도, 사용 온도, 세척 방식, 유량 및 압력 요구사항을 제공하면 모델과 재질 조합을 구체적으로 검토할 수 있습니다.",
+      "description": "Foreach 펌프 선정 시 유체명과 농도, 사용 온도, 세척 방식, 유량 및 압력 요구사항을 제공하면 모델과 재질 조합을 구체적으로 검토할 수 있습니다.",
       "contactLabel": "기술 지원 문의",
       "productsLabel": "소형 다이어프램 펌프 보기",
       "productsHref": "/products/pumps/miniature-diaphragm-pumps/"
@@ -508,16 +508,16 @@ export const microDiaphragmPumpMaterialsCopies = {
   "ru": {
     "metadata": {
       "title": "Материалы миниатюрных мембранных насосов: что учитывать при выборе?",
-      "seoTitle": "Материалы миниатюрных мембранных насосов: что учитывать при выборе? | FOREACH",
+      "seoTitle": "Материалы миниатюрных мембранных насосов: что учитывать при выборе? | Foreach Technology",
       "seoDescription": "Сравните материалы головки, мембраны и клапанов, затем проверьте состав, концентрацию, температуру, длительность контакта и условия очистки.",
       "coverImage": "/images/resources/technical-articles/life-science-instrument-dpl60-diaphragm-pump-selection-guide/dpl60-product.webp",
-      "coverAlt": "Миниатюрный жидкостный мембранный насос FOREACH DPL60"
+      "coverAlt": "Миниатюрный жидкостный мембранный насос Foreach DPL60"
     },
     "deck": "Сравните материалы головки, мембраны и клапанов, затем проверьте состав, концентрацию, температуру, длительность контакта и условия очистки.",
     "leadBlocks": [
       {
         "type": "paragraph",
-        "text": "При выборе миниатюрного мембранного насоса учитывайте материалы деталей, контактирующих со средой, наряду с расходом, давлением и монтажными размерами. Совместимость особенно важна при перекачивании реагентов, моющих растворов и жидких отходов. FOREACH предлагает две основные комбинации, указанные ниже; доступность зависит от выбранной модели."
+        "text": "При выборе миниатюрного мембранного насоса учитывайте материалы деталей, контактирующих со средой, наряду с расходом, давлением и монтажными размерами. Совместимость особенно важна при перекачивании реагентов, моющих растворов и жидких отходов. Foreach предлагает две основные комбинации, указанные ниже; доступность зависит от выбранной модели."
       },
       {
         "type": "table",
@@ -550,7 +550,7 @@ export const microDiaphragmPumpMaterialsCopies = {
         "blocks": [
           {
             "type": "paragraph",
-            "text": "Головка образует камеру, которая содержит и перемещает жидкость, поэтому её материал также должен быть совместим со средой. В этих комбинациях FOREACH применяется PPS. Даже с мембраной PTFE и клапанами FFKM необходимо проверить пригодность PPS для реальной среды."
+            "text": "Головка образует камеру, которая содержит и перемещает жидкость, поэтому её материал также должен быть совместим со средой. В этих комбинациях Foreach применяется PPS. Даже с мембраной PTFE и клапанами FFKM необходимо проверить пригодность PPS для реальной среды."
           },
           {
             "type": "paragraph",
@@ -563,7 +563,7 @@ export const microDiaphragmPumpMaterialsCopies = {
         "blocks": [
           {
             "type": "paragraph",
-            "text": "Возвратно-поступательное движение мембраны изменяет объём камеры, обеспечивая всасывание и нагнетание. При выборе учитывают совместимость со средой и условия многократного движения. FOREACH предлагает мембрану EPDM с клапанами EPDM либо мембрану PTFE с клапанами FFKM."
+            "text": "Возвратно-поступательное движение мембраны изменяет объём камеры, обеспечивая всасывание и нагнетание. При выборе учитывают совместимость со средой и условия многократного движения. Foreach предлагает мембрану EPDM с клапанами EPDM либо мембрану PTFE с клапанами FFKM."
           },
           {
             "type": "paragraph",
@@ -580,7 +580,7 @@ export const microDiaphragmPumpMaterialsCopies = {
           },
           {
             "type": "paragraph",
-            "text": "В представленных комбинациях FOREACH используются клапаны EPDM или FFKM. Проверьте головку, мембрану и клапаны вместе, прежде чем подтверждать пригодность всего насоса."
+            "text": "В представленных комбинациях Foreach используются клапаны EPDM или FFKM. Проверьте головку, мембрану и клапаны вместе, прежде чем подтверждать пригодность всего насоса."
           }
         ]
       },
@@ -616,7 +616,7 @@ export const microDiaphragmPumpMaterialsCopies = {
           },
           {
             "type": "paragraph",
-            "text": "Для подбора насоса FOREACH укажите среду и концентрацию, температуру, способ очистки, требуемые расход и давление, чтобы определить модель и комбинацию материалов."
+            "text": "Для подбора насоса Foreach укажите среду и концентрацию, температуру, способ очистки, требуемые расход и давление, чтобы определить модель и комбинацию материалов."
           }
         ]
       }
@@ -625,7 +625,7 @@ export const microDiaphragmPumpMaterialsCopies = {
     "faqItems": [],
     "cta": {
       "title": "Консультация по материалам и подбору",
-      "description": "Для подбора насоса FOREACH укажите среду и концентрацию, температуру, способ очистки, требуемые расход и давление, чтобы определить модель и комбинацию материалов.",
+      "description": "Для подбора насоса Foreach укажите среду и концентрацию, температуру, способ очистки, требуемые расход и давление, чтобы определить модель и комбинацию материалов.",
       "contactLabel": "Связаться с технической поддержкой",
       "productsLabel": "Миниатюрные мембранные насосы",
       "productsHref": "/products/pumps/miniature-diaphragm-pumps/"

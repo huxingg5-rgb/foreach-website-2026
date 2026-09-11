@@ -4,10 +4,10 @@ export const remainingPumpArticlesEs = {
   "ink-circulation-supply-return-pump-diaphragm-pump": {
     "metadata": {
       "title": "¿Qué diferencia hay entre una bomba de circulación, una bomba de suministro y una bomba de retorno de tinta?",
-      "seoTitle": "Bombas de circulación, suministro y retorno de tinta | FOREACH",
+      "seoTitle": "Bombas de circulación, suministro y retorno de tinta | Foreach Technology",
       "seoDescription": "Conozca las funciones de suministro, retorno y circulación de tinta, las arquitecturas de inyección, la presión del cabezal, el caudal instalado y la validación de bombas de diafragma.",
       "coverImage": "/images/resources/technical-articles/ink-circulation-supply-return-pump/ink-supply-return-circulation-cover.webp",
-      "coverAlt": "Bomba de diafragma miniatura para líquidos FOREACH serie DPL mostrada en un vídeo del producto"
+      "coverAlt": "Bomba de diafragma miniatura para líquidos Foreach serie DPL mostrada en un vídeo del producto"
     },
     "deck": "Suministro, retorno y circulación de tinta describen funciones del circuito, no tres tipos mecánicos fijos de bomba. La bomba de suministro lleva tinta al depósito auxiliar o al cabezal; la de retorno devuelve la tinta no utilizada al depósito; y la de circulación mantiene el flujo en un circuito. Que estas funciones requieran una, dos o varias bombas depende del cabezal, los depósitos, el control por gravedad o vacío, los filtros y la arquitectura de suministro y retorno.",
     "leadBlocks": [
@@ -116,7 +116,7 @@ export const remainingPumpArticlesEs = {
           {
             "type": "notice",
             "label": "Prestaciones específicas del modelo:",
-            "text": "La baja pulsación, la capacidad de funcionamiento en seco, la resistencia a la abrasión y a los disolventes, y la aptitud para circular tinta blanca a largo plazo deben demostrarse para el modelo y las condiciones concretas. Los datos públicos actuales de FOREACH no prueban por sí solos que DPL30 o DPL60 sea adecuado para una tinta determinada."
+            "text": "La baja pulsación, la capacidad de funcionamiento en seco, la resistencia a la abrasión y a los disolventes, y la aptitud para circular tinta blanca a largo plazo deben demostrarse para el modelo y las condiciones concretas. Los datos públicos actuales de Foreach no prueban por sí solos que DPL30 o DPL60 sea adecuado para una tinta determinada."
           }
         ]
       },
@@ -167,7 +167,7 @@ export const remainingPumpArticlesEs = {
           {
             "type": "table",
             "headers": [
-              "Serie FOREACH",
+              "Serie Foreach",
               "Límites de producto verificados",
               "Evaluación para inyección de tinta"
             ],
@@ -288,10 +288,10 @@ export const remainingPumpArticlesEs = {
   "300-vs-600-ml-min-ink-circulation-return-pump-selection": {
     "metadata": {
       "title": "¿300 o 600 mL/min? Cómo seleccionar una bomba de circulación o retorno de tinta",
-      "seoTitle": "Selección de bombas de tinta de 300 o 600 mL/min | FOREACH",
+      "seoTitle": "Selección de bombas de tinta de 300 o 600 mL/min | Foreach Technology",
       "seoDescription": "Evalúe bombas de circulación o retorno de tinta de 300 o 600 mL/min según el caudal de trabajo, la curva, la viscosidad, el filtro, los tubos y la presión de suministro y retorno.",
       "coverImage": "/images/resources/technical-articles/ink-circulation-flow-selection/ink-pump-300-vs-600-flow-selection-cover.webp",
-      "coverAlt": "Bombas de diafragma miniatura para líquidos FOREACH DPL30 y DPL60 mostradas en un vídeo del producto"
+      "coverAlt": "Bombas de diafragma miniatura para líquidos Foreach DPL30 y DPL60 mostradas en un vídeo del producto"
     },
     "deck": "Defina el caudal de trabajo objetivo del circuito de circulación o retorno y calcule o mida la presión diferencial del sistema a ese caudal. Los valores de 300 mL/min de DPL30 y 600 mL/min de DPL60 son clases de caudal sin carga, no caudales garantizados después de añadir tinta, filtros, tubos y un cabezal. Cuanto más se acerque el objetivo al límite nominal, más importantes serán la curva y las pruebas con el circuito instalado.",
     "leadBlocks": [
@@ -598,7 +598,7 @@ export const remainingPumpArticlesEs = {
   "white-ink-circulation-pump-selection-sedimentation": {
     "metadata": {
       "title": "¿Por qué es más difícil recircular tinta blanca y cómo seleccionar su bomba de circulación?",
-      "seoTitle": "Circulación de tinta blanca y sedimentación | FOREACH",
+      "seoTitle": "Circulación de tinta blanca y sedimentación | Foreach Technology",
       "seoDescription": "Comprenda la sedimentación del TiO₂, el recorrido y caudal de circulación, las zonas muertas, los filtros, la viscosidad, la presión y el rearranque antes de evaluar DPL30 o DPL60.",
       "coverImage": "/images/resources/technical-articles/white-ink-circulation-pump/white-ink-circulation-dead-zone-cover.webp",
       "coverAlt": "Circuito de tinta blanca con depósito, bomba de diafragma, filtro y ramal con pocas zonas muertas"
@@ -885,10 +885,10 @@ export const remainingPumpArticlesEs = {
   "300-ml-min-micro-liquid-diaphragm-pump-self-priming-loss": {
     "metadata": {
       "title": "¿Por qué una bomba de diafragma miniatura para líquidos de 300 mL/min pierde autocebado con el tiempo?",
-      "seoTitle": "Pérdida de autocebado en bombas de 300 mL/min | FOREACH",
+      "seoTitle": "Pérdida de autocebado en bombas de 300 mL/min | Foreach Technology",
       "seoDescription": "Analice la pérdida de autocebado: fugas en válvulas antirretorno o entrada, pérdidas de aspiración, presión de vapor y cambios de materiales.",
       "coverImage": "/images/resources/technical-articles/dpl30-troubleshooting/300-ml-min-liquid-diaphragm-pump-self-priming-test.webp",
-      "coverAlt": "Bomba de diafragma miniatura para líquidos FOREACH DPL30 de 300 mL/min"
+      "coverAlt": "Bomba de diafragma miniatura para líquidos Foreach DPL30 de 300 mL/min"
     },
     "deck": "La pérdida de autocebado significa que la bomba y el recorrido de aspiración ya no crean y mantienen la misma baja presión absoluta de entrada que al principio. Las fugas de válvulas antirretorno, entradas de aire, mayores pérdidas de aspiración, presión de vapor y cambios de materiales pueden producir el mismo síntoma. Que el motor gire no identifica la causa.",
     "leadBlocks": [
@@ -1084,10 +1084,10 @@ export const remainingPumpArticlesEs = {
   "300-ml-min-micro-liquid-diaphragm-pump-motor-runs-no-flow": {
     "metadata": {
       "title": "El motor de una bomba de diafragma miniatura de 300 mL/min gira, pero no sale líquido: ¿qué revisar primero?",
-      "seoTitle": "El motor de la bomba gira, pero no hay caudal | FOREACH",
+      "seoTitle": "El motor de la bomba gira, pero no hay caudal | Foreach Technology",
       "seoDescription": "Diagnostique falta de caudal revisando fugas de entrada, obstrucciones, válvulas antirretorno, contrapresión y corriente del motor.",
       "coverImage": "/images/resources/technical-articles/dpl30-troubleshooting/300-ml-min-liquid-diaphragm-pump-motor-power-check.webp",
-      "coverAlt": "Bomba de diafragma miniatura FOREACH DPL30 usada para diagnosticar un circuito de líquido"
+      "coverAlt": "Bomba de diafragma miniatura Foreach DPL30 usada para diagnosticar un circuito de líquido"
     },
     "deck": "La rotación del motor confirma actividad del accionamiento, no el llenado efectivo, la acción direccional de las válvulas ni una carga de salida admisible. El diagnóstico más rápido combina presión de entrada, presión de salida, caudal y corriente en lugar de basarse solo en el sonido.",
     "leadBlocks": [
@@ -1283,10 +1283,10 @@ export const remainingPumpArticlesEs = {
   "300-ml-min-micro-liquid-diaphragm-pump-water-vs-reagent": {
     "metadata": {
       "title": "¿Por qué una bomba de diafragma miniatura de 300 mL/min pierde caudal y autocebado al cambiar agua por un reactivo?",
-      "seoTitle": "Bomba de diafragma: rendimiento con agua y reactivo | FOREACH",
+      "seoTitle": "Bomba de diafragma: rendimiento con agua y reactivo | Foreach Technology",
       "seoDescription": "Comprenda cómo viscosidad, presión de vapor, desgasificación y compatibilidad de materiales reducen caudal o autocebado al usar reactivos.",
       "coverImage": "/images/resources/technical-articles/dpl30-troubleshooting/300-ml-min-liquid-diaphragm-pump-water-versus-reagent-flow-test.webp",
-      "coverAlt": "Bomba de diafragma miniatura FOREACH DPL30 para validar reactivos de proceso"
+      "coverAlt": "Bomba de diafragma miniatura Foreach DPL30 para validar reactivos de proceso"
     },
     "deck": "Superar una prueba con agua solo demuestra rendimiento con esa temperatura, tubos, nivel, alimentación y duración. Un reactivo puede cambiar viscosidad, densidad, presión de vapor, tensión superficial, humectación, desgasificación y estado de materiales, desplazando el punto de funcionamiento de la misma bomba.",
     "leadBlocks": [
@@ -1479,10 +1479,10 @@ export const remainingPumpArticlesEs = {
   "300-ml-min-micro-liquid-diaphragm-pump-epdm-ptfe-ffkm": {
     "metadata": {
       "title": "¿Cómo elegir EPDM, PTFE y FFKM para una bomba de diafragma miniatura de 300 mL/min?",
-      "seoTitle": "Selección de EPDM, PTFE y FFKM para bombas miniatura | FOREACH",
+      "seoTitle": "Selección de EPDM, PTFE y FFKM para bombas miniatura | Foreach Technology",
       "seoDescription": "Compare compatibilidad química, hinchamiento, sellado dinámico y validación con el líquido real al seleccionar EPDM, PTFE y FFKM.",
       "coverImage": "/images/resources/technical-articles/dpl30-troubleshooting/300-ml-min-liquid-diaphragm-pump-wetted-material-inspection.webp",
-      "coverAlt": "Bomba de diafragma miniatura FOREACH DPL30 con combinaciones alternativas de materiales mojados"
+      "coverAlt": "Bomba de diafragma miniatura Foreach DPL30 con combinaciones alternativas de materiales mojados"
     },
     "deck": "EPDM, PTFE y FFKM no forman una clasificación simple de menor a mayor calidad. EPDM y FFKM son elastómeros; PTFE es un fluoropolímero. Diafragma, válvulas y cabeza cumplen funciones mecánicas distintas. Se selecciona una estructura mojada completa sometida a cargas dinámicas, no un nombre de material.",
     "leadBlocks": [

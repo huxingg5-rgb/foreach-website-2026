@@ -58,7 +58,7 @@ export const productRouteMap: {
     pumps: {
       categoryId: "pumps",
       label: "泵系列",
-      title: "泵系列 | FOREACH",
+      title: "泵系列 | Foreach Technology",
       description:
         "恒永达泵系列产品覆盖自动化分析仪器、IVD、生命科学与实验室自动化设备中的精密液体处理需求。",
     },
@@ -66,7 +66,7 @@ export const productRouteMap: {
     valves: {
       categoryId: "valves",
       label: "阀系列",
-      title: "阀系列 | FOREACH",
+      title: "阀系列 | Foreach Technology",
       description:
         "恒永达阀系列产品覆盖旋转阀、高压阀、电磁阀等自动化仪器液路控制需求。",
     },
@@ -74,7 +74,7 @@ export const productRouteMap: {
     tubing: {
       categoryId: "tubing",
       label: "管路系列",
-      title: "管路系列 | FOREACH",
+      title: "管路系列 | Foreach Technology",
       description:
         "恒永达管路系列产品覆盖 FEP、PFA、PTFE、PEEK、PVC、TPU 等仪器液路连接需求。",
     },
@@ -82,7 +82,7 @@ export const productRouteMap: {
     probes: {
       categoryId: "needles",
       label: "针系列",
-      title: "针系列 | FOREACH",
+      title: "针系列 | Foreach Technology",
       description:
         "恒永达针系列产品覆盖采样针、穿刺针、清洗针和搅拌桨等自动化仪器定制需求。",
     },
@@ -90,7 +90,7 @@ export const productRouteMap: {
     fittings: {
       categoryId: "fittings",
       label: "接头系列",
-      title: "接头系列 | FOREACH",
+      title: "接头系列 | Foreach Technology",
       description:
         "恒永达接头产品覆盖硬管接头、软管接头、鲁尔接头、快插接头、内螺纹互转接头，以及过滤器与单向阀。",
     },  },
@@ -101,9 +101,9 @@ export const productRouteMap: {
       categoryId: "pumps",
       productTypeId: "plunger-pump",
       label: "柱塞泵",
-      title: "精密柱塞泵｜微量至毫升级液体定量、吸取与分配 | FOREACH",
+      title: "精密柱塞泵｜微量至毫升级液体定量、吸取与分配 | Foreach Technology",
       description:
-        "FOREACH 精密柱塞泵包括 EA、SM、TM 系列，用于微量至毫升级液体的精密吸取、定量、分配和加注。EA 系列覆盖 50 μL–20 mL，可选择多种柱塞及泵头材料、避光配置，以及 1/4-28UNF、M6 流体接口。",
+        "Foreach 精密柱塞泵包括 EA、SM、TM 系列，用于微量至毫升级液体的精密吸取、定量、分配和加注。EA 系列覆盖 50 μL–20 mL，可选择多种柱塞及泵头材料、避光配置，以及 1/4-28UNF、M6 流体接口。",
     },
 
     "miniature-diaphragm-pumps": {
@@ -113,7 +113,7 @@ export const productRouteMap: {
       label: "隔膜泵",
       title: "微型隔膜泵：液体与气液混合处理｜恒永达",
       description:
-        "探索FOREACH微型隔膜泵，包括用于液体输送、清洗和循环的液体隔膜泵，以及用于废液抽吸、真空处理和气液混合介质的气液混合隔膜泵。",
+        "探索Foreach微型隔膜泵，包括用于液体输送、清洗和循环的液体隔膜泵，以及用于废液抽吸、真空处理和气液混合介质的气液混合隔膜泵。",
     },
 
     "pipetting-pumps": {
@@ -121,7 +121,7 @@ export const productRouteMap: {
       categoryId: "pumps",
       productTypeId: "pipette-pump",
       label: "移液泵",
-      title: "移液泵 | FOREACH",
+      title: "移液泵 | Foreach Technology",
       description:
         "移液泵适用于自动化移液、加样、分液和微量液体处理场景。",
     },
@@ -131,7 +131,7 @@ export const productRouteMap: {
       categoryId: "pumps",
       productTypeId: "syringe-pump",
       label: "注射泵",
-      title: "注射泵 | FOREACH",
+      title: "注射泵 | Foreach Technology",
       description:
         "注射泵适用于高精度进样、注液、梯度控制和稳定流量输出场景。",
     },
@@ -141,7 +141,7 @@ export const productRouteMap: {
       categoryId: "pumps",
       productTypeId: "valveless-pump",
       label: "无阀泵",
-      title: "无阀泵 | FOREACH",
+      title: "无阀泵 | Foreach Technology",
       description:
         "无阀泵适用于简化液路结构、降低阀件依赖和提高系统集成度的精密液体处理场景。",
   
@@ -152,7 +152,7 @@ export const productRouteMap: {
       categoryId: "fittings",
       productTypeId: "hard-tube-fittings",
       label: "硬管接头",
-      title: "硬管接头 | FOREACH",
+      title: "硬管接头 | Foreach Technology",
       description:
         "硬管接头适用于PTFE、FEP、PFA和PEEK等硬管连接，可根据密封结构、接口螺纹、接管外径、材质和颜色进行选型。",
     },
@@ -162,7 +162,7 @@ export const productRouteMap: {
       categoryId: "fittings",
       productTypeId: "barbed-fittings",
       label: "倒刺接头",
-      title: "倒刺接头 | FOREACH",
+      title: "倒刺接头 | Foreach Technology",
       description:
         "倒刺接头用于软管之间的直通、转向、分流和汇流连接，可根据产品结构、接管内径、材质和颜色进行选型。",
     },
@@ -172,7 +172,7 @@ export const productRouteMap: {
       categoryId: "fittings",
       productTypeId: "thread-to-barbed-fittings",
       label: "螺纹转倒刺接头",
-      title: "螺纹转倒刺接头 | FOREACH",
+      title: "螺纹转倒刺接头 | Foreach Technology",
       description:
         "螺纹转倒刺接头用于设备螺纹接口与软管液路之间的转接，可根据连接结构、密封方式、螺纹规格、接管内径、材质和颜色进行选型。",
     },
@@ -182,7 +182,7 @@ export const productRouteMap: {
       categoryId: "fittings",
       productTypeId: "luer-fittings",
       label: "鲁尔接头",
-      title: "鲁尔接头 | FOREACH",
+      title: "鲁尔接头 | Foreach Technology",
       description:
         "鲁尔接头覆盖公鲁尔、母鲁尔、固定锁圈、旋转锁圈及穿板结构。",
     },
@@ -192,7 +192,7 @@ export const productRouteMap: {
       categoryId: "fittings",
       productTypeId: "quick-connect-fittings",
       label: "快插接头",
-      title: "快插接头 | FOREACH",
+      title: "快插接头 | Foreach Technology",
       description:
         "快插接头覆盖Q20、Q40和Q60系列，可根据管径、端口形式、阀门配置和安装结构进行选型。",
     },
@@ -202,7 +202,7 @@ export const productRouteMap: {
       categoryId: "fittings",
       productTypeId: "female-thread-adapters",
       label: "内螺纹互转接头",
-      title: "内螺纹互转接头 | FOREACH",
+      title: "内螺纹互转接头 | Foreach Technology",
       description:
         "内螺纹互转接头覆盖二通、三通、标准型、方型、穿板型、T型和Y型结构。",
     },
@@ -212,7 +212,7 @@ export const productRouteMap: {
       categoryId: "fittings",
       productTypeId: "bulkhead-barbed-fittings",
       label: "穿板倒刺接头",
-      title: "穿板倒刺接头 | FOREACH",
+      title: "穿板倒刺接头 | Foreach Technology",
       description:
         "穿板倒刺接头系列包含PMB穿板倒刺接头和PMBSN六角螺母，可根据产品结构、螺纹规格、接管内径、材质和颜色进行选型。",
     },
@@ -222,7 +222,7 @@ export const productRouteMap: {
       categoryId: "fittings",
       productTypeId: "filters",
       label: "过滤器与单向阀",
-      title: "过滤器与单向阀 | FOREACH",
+      title: "过滤器与单向阀 | Foreach Technology",
       description:
         "过滤器用于液路中的颗粒拦截与流体净化，单向阀用于控制流体单向流动并降低回流风险。",
     },
@@ -242,9 +242,9 @@ export const productRouteMap: {
         filter01: ["EA 常规柱塞泵"],
       },
       label: "EA 常规柱塞泵",
-      title: "50 μL至20 mL精密柱塞泵用于液体定量与分配 | FOREACH",
+      title: "50 μL至20 mL精密柱塞泵用于液体定量与分配 | Foreach Technology",
       description:
-        "FOREACH EA 精密柱塞泵覆盖 50 μL–20 mL 多种容量，用于样本吸取、试剂加注、精密分液和定量加液。100%量程准确性和重复性 <0.5%，支持多种接液材料以及 1/4-28UNF、M6 流体接口。",
+        "Foreach EA 精密柱塞泵覆盖 50 μL–20 mL 多种容量，用于样本吸取、试剂加注、精密分液和定量加液。100%量程准确性和重复性 <0.5%，支持多种接液材料以及 1/4-28UNF、M6 流体接口。",
     },
 
     "miniature-piston-pump": {
@@ -258,9 +258,9 @@ export const productRouteMap: {
         filter01: ["SM 微型柱塞泵"],
       },
       label: "SM 微型柱塞泵",
-      title: "50 μL至1 mL微型柱塞泵用于微量液体处理 | FOREACH",
+      title: "50 μL至1 mL微型柱塞泵用于微量液体处理 | Foreach Technology",
       description:
-        "FOREACH SM 微型柱塞泵覆盖 50 μL、100 μL、250 μL、500 μL 和 1 mL，适用于紧凑型自动化设备中的微量吸液、分液、试剂加注和液体处理，可选择多种柱塞、泵头材料及 1/4-28UNF、M6 流体接口。",
+        "Foreach SM 微型柱塞泵覆盖 50 μL、100 μL、250 μL、500 μL 和 1 mL，适用于紧凑型自动化设备中的微量吸液、分液、试剂加注和液体处理，可选择多种柱塞、泵头材料及 1/4-28UNF、M6 流体接口。",
     },
 
     "ultra-compact-piston-pump": {
@@ -274,9 +274,9 @@ export const productRouteMap: {
         filter01: ["TM 超微型柱塞泵"],
       },
       label: "TM 超微型柱塞泵",
-      title: "超微型柱塞泵用于超紧凑液路精密液体处理 | FOREACH",
+      title: "超微型柱塞泵用于超紧凑液路精密液体处理 | Foreach Technology",
       description:
-        "FOREACH TM 超微型柱塞泵面向安装空间受限的小型自动化设备和高集成液路模块，可用于微量液体吸取、定量分配和加注，适合进一步小型化的液体处理系统设计。",
+        "Foreach TM 超微型柱塞泵面向安装空间受限的小型自动化设备和高集成液路模块，可用于微量液体吸取、定量分配和加注，适合进一步小型化的液体处理系统设计。",
     },
   
     "liquid-diaphragm-pumps": {
@@ -292,7 +292,7 @@ export const productRouteMap: {
       label: "液泵",
       title: "最高 600 mL/min 微型液体隔膜泵｜恒永达",
       description:
-        "FOREACH微型液体隔膜泵适用于约0–600 mL/min的液体处理、清洗、循环和仪器液路，并提供标准压力与最高600 kPa高压选项。",
+        "Foreach微型液体隔膜泵适用于约0–600 mL/min的液体处理、清洗、循环和仪器液路，并提供标准压力与最高600 kPa高压选项。",
     },
 
     "gas-liquid-diaphragm-pumps": {
@@ -308,7 +308,7 @@ export const productRouteMap: {
       label: "气液混合泵",
       title: "废液抽吸微型气液混合隔膜泵｜恒永达",
       description:
-        "FOREACH微型气液混合隔膜泵适用于废液抽吸、真空处理和气液混合介质；DPGL800单头空载气体流量6 L/min，最大负压小于-90 kPa。",
+        "Foreach微型气液混合隔膜泵适用于废液抽吸、真空处理和气液混合介质；DPGL800单头空载气体流量6 L/min，最大负压小于-90 kPa。",
     },
 },
 
@@ -488,7 +488,7 @@ export const productTypeIntroMap: Record<string, ProductTypeIntroEntry> = {
     ],
     image: {
       src: "/images/products/pumps/product-types/plunger-pumps/foreach-plunger-pumps-product-type-intro.webp",
-      alt: "FOREACH 柱塞泵系列产品图，用于IVD、生命科学和实验室自动化设备中的精密液体处理"
+      alt: "Foreach 柱塞泵系列产品图，用于IVD、生命科学和实验室自动化设备中的精密液体处理"
     }
   },
 
@@ -503,7 +503,7 @@ export const productTypeIntroMap: Record<string, ProductTypeIntroEntry> = {
     ],
     image: {
       src: "/images/products/pumps/product-types/diaphragm-pumps/foreach-diaphragm-pumps-product-type-intro.webp",
-      alt: "FOREACH 隔膜泵系列产品图，用于清洗、废液和试剂输送液路"
+      alt: "Foreach 隔膜泵系列产品图，用于清洗、废液和试剂输送液路"
     }
   },
 
@@ -518,7 +518,7 @@ export const productTypeIntroMap: Record<string, ProductTypeIntroEntry> = {
     ],
     image: {
       src: "/images/products/pumps/product-types/pipetting-pumps/foreach-pipetting-pumps-product-type-intro.webp",
-      alt: "FOREACH 移液泵系列产品图，用于自动化移液、加样和样本处理"
+      alt: "Foreach 移液泵系列产品图，用于自动化移液、加样和样本处理"
     }
   },
 
@@ -533,7 +533,7 @@ export const productTypeIntroMap: Record<string, ProductTypeIntroEntry> = {
     ],
     image: {
       src: "/images/products/pumps/product-types/syringe-pumps/foreach-syringe-pumps-product-type-intro.webp",
-      alt: "FOREACH 注射泵系列产品图，用于高精度进样、注液和稳定流量输出"
+      alt: "Foreach 注射泵系列产品图，用于高精度进样、注液和稳定流量输出"
     }
   },
 
@@ -548,7 +548,7 @@ export const productTypeIntroMap: Record<string, ProductTypeIntroEntry> = {
     ],
     image: {
       src: "/images/products/pumps/product-types/valveless-pumps/foreach-valveless-pumps-product-type-intro.webp",
-      alt: "FOREACH 无阀泵系列产品图，用于紧凑型仪器中的精密液体处理"
+      alt: "Foreach 无阀泵系列产品图，用于紧凑型仪器中的精密液体处理"
     }
   },
 
@@ -563,7 +563,7 @@ export const productTypeIntroMap: Record<string, ProductTypeIntroEntry> = {
     ],
     image: {
       src: "/images/products/pumps/product-types/high-pressure-pumps/foreach-high-pressure-pumps-product-type-intro.webp",
-      alt: "FOREACH 高压泵系列产品图，用于高压力稳定输送和分析仪器液路"
+      alt: "Foreach 高压泵系列产品图，用于高压力稳定输送和分析仪器液路"
     }
   }
 };

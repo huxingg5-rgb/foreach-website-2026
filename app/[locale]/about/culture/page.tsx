@@ -49,29 +49,29 @@ const metadataMap: Record<
   }
 > = {
   en: {
-    title: "Corporate Culture｜FOREACH Technology",
+    title: "Corporate Culture｜Foreach Technology",
     description:
-      "Learn about FOREACH corporate culture, values, team spirit, social responsibility, and long-term commitment to microfluidic technology development.",
+      "Learn about Foreach corporate culture, values, team spirit, social responsibility, and long-term commitment to microfluidic technology development.",
   },
   es: {
-    title: "Cultura corporativa｜FOREACH Technology",
+    title: "Cultura corporativa｜Foreach Technology",
     description:
-      "Conozca la cultura corporativa, los valores, el espíritu de equipo, la responsabilidad social y el compromiso a largo plazo de FOREACH con la tecnología microfluídica.",
+      "Conozca la cultura corporativa, los valores, el espíritu de equipo, la responsabilidad social y el compromiso a largo plazo de Foreach con la tecnología microfluídica.",
   },
   fr: {
-    title: "Culture d’entreprise｜FOREACH Technology",
+    title: "Culture d’entreprise｜Foreach Technology",
     description:
-      "Découvrez la culture d’entreprise, les valeurs, l’esprit d’équipe, la responsabilité sociale et l’engagement à long terme de FOREACH dans la technologie microfluidique.",
+      "Découvrez la culture d’entreprise, les valeurs, l’esprit d’équipe, la responsabilité sociale et l’engagement à long terme de Foreach dans la technologie microfluidique.",
   },
   ko: {
-    title: "기업 문화｜FOREACH Technology",
+    title: "기업 문화｜Foreach Technology",
     description:
-      "FOREACH의 기업 문화, 가치관, 팀워크, 사회적 책임 및 미세유체 기술 발전에 대한 장기적인 노력을 소개합니다.",
+      "Foreach의 기업 문화, 가치관, 팀워크, 사회적 책임 및 미세유체 기술 발전에 대한 장기적인 노력을 소개합니다.",
   },
   ru: {
-    title: "Корпоративная культура｜FOREACH Technology",
+    title: "Корпоративная культура｜Foreach Technology",
     description:
-      "Узнайте о корпоративной культуре FOREACH, ценностях, командном духе, социальной ответственности и долгосрочной приверженности развитию микрофлюидных технологий.",
+      "Узнайте о корпоративной культуре Foreach, ценностях, командном духе, социальной ответственности и долгосрочной приверженности развитию микрофлюидных технологий.",
   },
 };
 

@@ -10,12 +10,12 @@ export const diaphragmPump300Vs600SelectionEnCopy = {
     title:
       "How Do You Choose Between a 300 mL/min and 600 mL/min Miniature Diaphragm Pump? Calculate Task Flow First, Then Check the Actual Operating Point",
     seoTitle:
-      "300 vs 600 mL/min Miniature Diaphragm Pump: Task Flow and Operating Point Guide | FOREACH",
+      "300 vs 600 mL/min Miniature Diaphragm Pump: Task Flow and Operating Point Guide | Foreach Technology",
     seoDescription:
       "When comparing 300 mL/min and 600 mL/min miniature diaphragm pumps, free-flow rate alone is not enough. This guide builds a selection path around task volume, effective pumping time, system differential pressure, pump curves and prototype validation.",
     coverImage: `${ARTICLE_01_ASSET_BASE}/article-cover.webp`,
     coverAlt:
-      "Miniature diaphragm pump product and flow-test footage from an official FOREACH Douyin video",
+      "Miniature diaphragm pump product and flow-test footage from an official Foreach Douyin video",
   },
   deck: "The 300 mL/min and 600 mL/min values are flow classes first, not fixed outputs after installation in an instrument. Selection should begin by converting the liquid-handling task into a minimum average flow rate, then determining the differential pressure required by the actual fluid path, and finally confirming the operating point on the pump curve and in prototype testing.",
   leadBlocks: [
@@ -179,11 +179,11 @@ export const diaphragmPump300Vs600SelectionEnCopy = {
     },
     {
       title:
-        "4. FOREACH Published Parameters Show Why More Flow Does Not Mean More of Every Capability",
+        "4. Foreach Published Parameters Show Why More Flow Does Not Mean More of Every Capability",
       blocks: [
         {
           type: "paragraph",
-          text: "Published FOREACH data for the DPL30 and DPL60 illustrate the different parameter dimensions. Their free-flow classes differ, their published rated pressure is the same at 100 kPa, and their self-priming lifts are 6 mH₂O and 3 mH₂O, respectively. Flow, self-priming and pressure must be checked separately.",
+          text: "Published Foreach data for the DPL30 and DPL60 illustrate the different parameter dimensions. Their free-flow classes differ, their published rated pressure is the same at 100 kPa, and their self-priming lifts are 6 mH₂O and 3 mH₂O, respectively. Flow, self-priming and pressure must be checked separately.",
         },
         {
           type: "table",
@@ -382,14 +382,14 @@ export const diaphragmPump300Vs600SelectionEnCopy = {
 export const diaphragmPump300MlMinFlowMarginEnCopy = {
   metadata: {
     title:
-      "How Much Installed Flow Margin Should a 300 mL/min Miniature Diaphragm Pump Have? A FOREACH Example",
+      "How Much Installed Flow Margin Should a 300 mL/min Miniature Diaphragm Pump Have? A Foreach Example",
     seoTitle:
-      "300 mL/min Miniature Diaphragm Pump Flow Margin: Worst-Case Conditions and Acceptance Criteria | FOREACH",
+      "300 mL/min Miniature Diaphragm Pump Flow Margin: Worst-Case Conditions and Acceptance Criteria | Foreach Technology",
     seoDescription:
       "Installed margin for a 300 mL/min miniature diaphragm pump is not a fixed percentage. Learn how to define credible worst-case scenarios and include backpressure, filter loading, power supply, fluid, sample variation, measurement uncertainty and release criteria in the calculation.",
     coverImage: `${ARTICLE_02_ASSET_BASE}/article-cover.webp`,
     coverAlt:
-      "Installed flow testing of a miniature diaphragm pump in an official FOREACH Douyin video",
+      "Installed flow testing of a miniature diaphragm pump in an official Foreach Douyin video",
   },
   deck: "Flow margin is not found by multiplying the target flow by 1.2 or 1.3 in every case. It is determined by comparing the pump's conservative available flow with the instrument's maximum demand within the same credible worst-case scenario. Testing must also define in advance how measurement uncertainty will be handled and what explicit acceptance criteria will apply.",
   leadBlocks: [
@@ -577,7 +577,7 @@ export const diaphragmPump300MlMinFlowMarginEnCopy = {
       blocks: [
         {
           type: "paragraph",
-          text: "The following values only illustrate the method; they are not measurements from a customer instrument or a FOREACH product. Assume maximum demand is 180 mL/min. A candidate pump can provide 260 mL/min at rated voltage and the target backpressure. In one confirmed credible worst-case scenario, the lowest measured available flow is 230 mL/min.",
+          text: "The following values only illustrate the method; they are not measurements from a customer instrument or a Foreach product. Assume maximum demand is 180 mL/min. A candidate pump can provide 260 mL/min at rated voltage and the target backpressure. In one confirmed credible worst-case scenario, the lowest measured available flow is 230 mL/min.",
         },
         {
           type: "formula",
@@ -597,11 +597,11 @@ export const diaphragmPump300MlMinFlowMarginEnCopy = {
     },
     {
       title:
-        "7. For a FOREACH 300 mL/min-Class Pump, Start with Target Backpressure",
+        "7. For a Foreach 300 mL/min-Class Pump, Start with Target Backpressure",
       blocks: [
         {
           type: "paragraph",
-          text: "Published FOREACH data for the DPL30 list a free-flow rate of 300 mL/min, rated pressure of 100 kPa and self-priming lift of 6 mH₂O. Installed margin cannot be calculated as ‘300 minus target flow.’ Start with the formal curve at the target backpressure, then validate inlet pressure, outlet pressure and actual flow in the final fluid path.",
+          text: "Published Foreach data for the DPL30 list a free-flow rate of 300 mL/min, rated pressure of 100 kPa and self-priming lift of 6 mH₂O. Installed margin cannot be calculated as ‘300 minus target flow.’ Start with the formal curve at the target backpressure, then validate inlet pressure, outlet pressure and actual flow in the final fluid path.",
         },
         {
           type: "paragraph",

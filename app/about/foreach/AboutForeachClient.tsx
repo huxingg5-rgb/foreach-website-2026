@@ -67,28 +67,28 @@ const pageText = {
   heroDescription: {
     "zh-CN":
       "恒永达科技专注于微流体系统核心零部件与液路解决方案，面向 IVD、生命科学、高端分析仪器、合成生物和实验室自动化等领域，提供关键流体控制产品与系统级支持。",
-    en: "FOREACH Technology focuses on core microfluidic components and fluidic system solutions, providing key fluid control products and system-level support for IVD, life sciences, high-end analytical instruments, synthetic biology, and laboratory automation.",
-    es: "FOREACH Technology se centra en componentes microfluídicos clave y soluciones de sistemas de fluidos, proporcionando productos de control de fluidos y soporte a nivel de sistema para IVD, ciencias de la vida, instrumentos analíticos avanzados, biología sintética y automatización de laboratorios.",
-    fr: "FOREACH Technology se concentre sur les composants microfluidiques essentiels et les solutions de systèmes fluidiques, en fournissant des produits clés de contrôle des fluides et un support au niveau système pour le DIV, les sciences de la vie, les instruments d’analyse haut de gamme, la biologie de synthèse et l’automatisation de laboratoire.",
-    ko: "FOREACH Technology는 미세유체 시스템 핵심 부품과 유체 시스템 솔루션에 집중하며, IVD, 생명과학, 고급 분석 장비, 합성생물학 및 실험실 자동화 분야에 핵심 유체 제어 제품과 시스템 수준의 지원을 제공합니다.",
-    ru: "FOREACH Technology специализируется на ключевых компонентах микрофлюидных систем и решениях для жидкостных трактов, предоставляя продукты управления потоками и системную поддержку для IVD, наук о жизни, высокоточного аналитического оборудования, синтетической биологии и лабораторной автоматизации.",
+    en: "Foreach Technology focuses on core microfluidic components and fluidic system solutions, providing key fluid control products and system-level support for IVD, life sciences, high-end analytical instruments, synthetic biology, and laboratory automation.",
+    es: "Foreach Technology se centra en componentes microfluídicos clave y soluciones de sistemas de fluidos, proporcionando productos de control de fluidos y soporte a nivel de sistema para IVD, ciencias de la vida, instrumentos analíticos avanzados, biología sintética y automatización de laboratorios.",
+    fr: "Foreach Technology se concentre sur les composants microfluidiques essentiels et les solutions de systèmes fluidiques, en fournissant des produits clés de contrôle des fluides et un support au niveau système pour le DIV, les sciences de la vie, les instruments d’analyse haut de gamme, la biologie de synthèse et l’automatisation de laboratoire.",
+    ko: "Foreach Technology는 미세유체 시스템 핵심 부품과 유체 시스템 솔루션에 집중하며, IVD, 생명과학, 고급 분석 장비, 합성생물학 및 실험실 자동화 분야에 핵심 유체 제어 제품과 시스템 수준의 지원을 제공합니다.",
+    ru: "Foreach Technology специализируется на ключевых компонентах микрофлюидных систем и решениях для жидкостных трактов, предоставляя продукты управления потоками и системную поддержку для IVD, наук о жизни, высокоточного аналитического оборудования, синтетической биологии и лабораторной автоматизации.",
   },
   introTitle: {
     "zh-CN": "恒永达科技",
-    en: "FOREACH Technology",
-    es: "FOREACH Technology",
-    fr: "FOREACH Technology",
-    ko: "FOREACH Technology",
-    ru: "FOREACH Technology",
+    en: "Foreach Technology",
+    es: "Foreach Technology",
+    fr: "Foreach Technology",
+    ko: "Foreach Technology",
+    ru: "Foreach Technology",
   },
   introParagraph1: {
     "zh-CN":
       "恒永达科技（股票代码：874030）成立于 2012 年，作为国家级专精特新“小巨人”企业、深圳市瞪羚企业、国家高新技术企业及广东省工程技术研究中心认定单位，始终以微流体系统领域的创新引领者姿态，深耕于微流体核心部件的研发与制造。公司构建了覆盖自动化分析仪器液路系统全链条的产品矩阵，涵盖泵、阀、采样针、连接件、橡塑管、驱动器、传感器等关键零部件，广泛应用于生命科学、合成生物、高端检测等多个领域，形成了高精度、全场景的微流体解决方案体系。",
-    en: "Founded in 2012, FOREACH Technology, stock code 874030, is recognized as a National Specialized and Sophisticated “Little Giant” enterprise, a Shenzhen Gazelle enterprise, a National High-Tech Enterprise, and a Guangdong Engineering Technology Research Center. As an innovation leader in the field of microfluidic systems, FOREACH has long been dedicated to the R&D and manufacturing of core microfluidic components. The company has built a product matrix covering the full chain of fluidic systems for automated analytical instruments, including pumps, valves, sampling needles, fittings, elastomeric tubing, drivers, sensors, and other key components. Its products are widely used in life sciences, synthetic biology, high-end testing, and other fields, forming a high-precision and full-scenario microfluidic solution system.",
-    es: "Fundada en 2012, FOREACH Technology, código bursátil 874030, es reconocida como una empresa nacional especializada y sofisticada “Little Giant”, una empresa Gazelle de Shenzhen, una empresa nacional de alta tecnología y un Centro de Investigación de Tecnología de Ingeniería de Guangdong. Como líder innovador en el campo de los sistemas microfluídicos, FOREACH se ha dedicado durante años a la I+D y fabricación de componentes microfluídicos clave. La empresa ha construido una matriz de productos que cubre toda la cadena de sistemas de fluidos para instrumentos analíticos automatizados, incluidos bombas, válvulas, agujas de muestreo, conectores, tubos elastoméricos, controladores, sensores y otros componentes clave. Sus productos se utilizan ampliamente en ciencias de la vida, biología sintética, pruebas de alta gama y otros campos, formando un sistema de soluciones microfluídicas de alta precisión y para múltiples escenarios.",
-    fr: "Fondée en 2012, FOREACH Technology, code boursier 874030, est reconnue comme une entreprise nationale spécialisée et innovante « Little Giant », une entreprise Gazelle de Shenzhen, une entreprise nationale de haute technologie et un centre de recherche en technologie d’ingénierie du Guangdong. En tant que leader de l’innovation dans le domaine des systèmes microfluidiques, FOREACH se consacre depuis longtemps à la R&D et à la fabrication de composants microfluidiques clés. L’entreprise a construit une matrice de produits couvrant toute la chaîne des systèmes fluidiques pour instruments d’analyse automatisés, notamment les pompes, valves, aiguilles de prélèvement, raccords, tubes élastomères, modules de commande, capteurs et autres composants essentiels. Ses produits sont largement utilisés dans les sciences de la vie, la biologie de synthèse, les tests haut de gamme et d’autres domaines, formant un système de solutions microfluidiques de haute précision et adapté à de multiples scénarios.",
-    ko: "2012년에 설립된 FOREACH Technology는 주식 코드 874030으로, 국가급 전문·정밀·특색·혁신 ‘작은 거인’ 기업, 선전시 가젤 기업, 국가 첨단기술기업 및 광둥성 공정기술연구센터 인정 기업입니다. FOREACH는 미세유체 시스템 분야의 혁신 리더로서 핵심 미세유체 부품의 연구개발과 제조에 지속적으로 집중해 왔습니다. 회사는 자동화 분석 장비의 유체 시스템 전반을 포괄하는 제품 매트릭스를 구축했으며, 펌프, 밸브, 샘플링 니들, 피팅, 탄성 튜빙, 드라이버, 센서 등 핵심 부품을 포함합니다. 해당 제품은 생명과학, 합성생물학, 고급 검사 등 다양한 분야에 널리 적용되며, 고정밀·전방위 미세유체 솔루션 체계를 형성하고 있습니다.",
-    ru: "Компания FOREACH Technology, основанная в 2012 году, с биржевым кодом 874030, признана национальным предприятием категории Specialized and Sophisticated “Little Giant”, предприятием Shenzhen Gazelle, национальным высокотехнологичным предприятием и инженерно-технологическим исследовательским центром провинции Гуандун. Как инновационный лидер в области микрофлюидных систем, FOREACH многие годы занимается разработкой и производством ключевых микрофлюидных компонентов. Компания сформировала продуктовую матрицу, охватывающую всю цепочку жидкостных систем для автоматизированных аналитических приборов, включая насосы, клапаны, пробоотборные иглы, фитинги, эластомерные трубки, драйверы, датчики и другие ключевые компоненты. Продукция широко применяется в науках о жизни, синтетической биологии, высокоточном тестировании и других областях, формируя высокоточную систему микрофлюидных решений для различных сценариев применения.",
+    en: "Founded in 2012, Foreach Technology, stock code 874030, is recognized as a National Specialized and Sophisticated “Little Giant” enterprise, a Shenzhen Gazelle enterprise, a National High-Tech Enterprise, and a Guangdong Engineering Technology Research Center. As an innovation leader in the field of microfluidic systems, Foreach has long been dedicated to the R&D and manufacturing of core microfluidic components. The company has built a product matrix covering the full chain of fluidic systems for automated analytical instruments, including pumps, valves, sampling needles, fittings, elastomeric tubing, drivers, sensors, and other key components. Its products are widely used in life sciences, synthetic biology, high-end testing, and other fields, forming a high-precision and full-scenario microfluidic solution system.",
+    es: "Fundada en 2012, Foreach Technology, código bursátil 874030, es reconocida como una empresa nacional especializada y sofisticada “Little Giant”, una empresa Gazelle de Shenzhen, una empresa nacional de alta tecnología y un Centro de Investigación de Tecnología de Ingeniería de Guangdong. Como líder innovador en el campo de los sistemas microfluídicos, Foreach se ha dedicado durante años a la I+D y fabricación de componentes microfluídicos clave. La empresa ha construido una matriz de productos que cubre toda la cadena de sistemas de fluidos para instrumentos analíticos automatizados, incluidos bombas, válvulas, agujas de muestreo, conectores, tubos elastoméricos, controladores, sensores y otros componentes clave. Sus productos se utilizan ampliamente en ciencias de la vida, biología sintética, pruebas de alta gama y otros campos, formando un sistema de soluciones microfluídicas de alta precisión y para múltiples escenarios.",
+    fr: "Fondée en 2012, Foreach Technology, code boursier 874030, est reconnue comme une entreprise nationale spécialisée et innovante « Little Giant », une entreprise Gazelle de Shenzhen, une entreprise nationale de haute technologie et un centre de recherche en technologie d’ingénierie du Guangdong. En tant que leader de l’innovation dans le domaine des systèmes microfluidiques, Foreach se consacre depuis longtemps à la R&D et à la fabrication de composants microfluidiques clés. L’entreprise a construit une matrice de produits couvrant toute la chaîne des systèmes fluidiques pour instruments d’analyse automatisés, notamment les pompes, valves, aiguilles de prélèvement, raccords, tubes élastomères, modules de commande, capteurs et autres composants essentiels. Ses produits sont largement utilisés dans les sciences de la vie, la biologie de synthèse, les tests haut de gamme et d’autres domaines, formant un système de solutions microfluidiques de haute précision et adapté à de multiples scénarios.",
+    ko: "2012년에 설립된 Foreach Technology는 주식 코드 874030으로, 국가급 전문·정밀·특색·혁신 ‘작은 거인’ 기업, 선전시 가젤 기업, 국가 첨단기술기업 및 광둥성 공정기술연구센터 인정 기업입니다. Foreach는 미세유체 시스템 분야의 혁신 리더로서 핵심 미세유체 부품의 연구개발과 제조에 지속적으로 집중해 왔습니다. 회사는 자동화 분석 장비의 유체 시스템 전반을 포괄하는 제품 매트릭스를 구축했으며, 펌프, 밸브, 샘플링 니들, 피팅, 탄성 튜빙, 드라이버, 센서 등 핵심 부품을 포함합니다. 해당 제품은 생명과학, 합성생물학, 고급 검사 등 다양한 분야에 널리 적용되며, 고정밀·전방위 미세유체 솔루션 체계를 형성하고 있습니다.",
+    ru: "Компания Foreach Technology, основанная в 2012 году, с биржевым кодом 874030, признана национальным предприятием категории Specialized and Sophisticated “Little Giant”, предприятием Shenzhen Gazelle, национальным высокотехнологичным предприятием и инженерно-технологическим исследовательским центром провинции Гуандун. Как инновационный лидер в области микрофлюидных систем, Foreach многие годы занимается разработкой и производством ключевых микрофлюидных компонентов. Компания сформировала продуктовую матрицу, охватывающую всю цепочку жидкостных систем для автоматизированных аналитических приборов, включая насосы, клапаны, пробоотборные иглы, фитинги, эластомерные трубки, драйверы, датчики и другие ключевые компоненты. Продукция широко применяется в науках о жизни, синтетической биологии, высокоточном тестировании и других областях, формируя высокоточную систему микрофлюидных решений для различных сценариев применения.",
   },
 
   honorTitle: {
@@ -407,7 +407,7 @@ export default function AboutForeachClient({
   const breadcrumb = getAboutBreadcrumb(
     locale,
     getLocalizedText(
-      { "zh-CN": "关于恒永达", en: "About FOREACH", es: "Sobre FOREACH", fr: "À propos de FOREACH", ko: "FOREACH 소개", ru: "О FOREACH" },
+      { "zh-CN": "关于恒永达", en: "About Foreach", es: "Sobre Foreach", fr: "À propos de Foreach", ko: "Foreach 소개", ru: "О Foreach" },
       locale,
     ),
   );
@@ -433,11 +433,11 @@ export default function AboutForeachClient({
           alt={getLocalizedText(
             {
               "zh-CN": "恒永达科技公司形象背景",
-              en: "FOREACH Technology corporate background",
-              es: "Imagen corporativa de FOREACH Technology",
-              fr: "Image institutionnelle de FOREACH Technology",
-              ko: "FOREACH Technology 기업 이미지 배경",
-              ru: "Корпоративный фон FOREACH Technology",
+              en: "Foreach Technology corporate background",
+              es: "Imagen corporativa de Foreach Technology",
+              fr: "Image institutionnelle de Foreach Technology",
+              ko: "Foreach Technology 기업 이미지 배경",
+              ru: "Корпоративный фон Foreach Technology",
             },
             locale
           )}
@@ -493,11 +493,11 @@ export default function AboutForeachClient({
             aria-label={getLocalizedText(
               {
                 "zh-CN": "恒永达公司介绍视频",
-                en: "FOREACH company introduction video",
-                es: "Vídeo de presentación de FOREACH",
-                fr: "Vidéo de présentation de FOREACH",
-                ko: "FOREACH 회사 소개 영상",
-                ru: "Видео о компании FOREACH",
+                en: "Foreach company introduction video",
+                es: "Vídeo de presentación de Foreach",
+                fr: "Vidéo de présentation de Foreach",
+                ko: "Foreach 회사 소개 영상",
+                ru: "Видео о компании Foreach",
               },
               locale
             )}
@@ -580,11 +580,11 @@ export default function AboutForeachClient({
                 aria-label={getLocalizedText(
                   {
                     "zh-CN": "恒永达荣誉数据",
-                    en: "FOREACH honor statistics",
-                    es: "Datos de honores de FOREACH",
-                    fr: "Données sur les distinctions de FOREACH",
-                    ko: "FOREACH honor statistics",
-                    ru: "Данные о наградах FOREACH",
+                    en: "Foreach honor statistics",
+                    es: "Datos de honores de Foreach",
+                    fr: "Données sur les distinctions de Foreach",
+                    ko: "Foreach honor statistics",
+                    ru: "Данные о наградах Foreach",
                   },
                   locale
                 )}

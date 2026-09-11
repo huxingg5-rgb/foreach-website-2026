@@ -3,9 +3,9 @@ import type { Dpl30hArticleCopy } from "./dpl30h-high-pressure-liquid-diaphragm-
 export const dpl30hArticleZhCopy: Dpl30hArticleCopy = {
   metadata: {
     title: "高背压液路为什么需要高压隔膜泵？从300 mL/min、600 kPa与硬管连接看DPL30H",
-    seoTitle: "DPL30H高压隔膜泵选型：300 mL/min、600 kPa与6×4 mm硬管 | FOREACH",
-    seoDescription: "从目标背压下的实际流量、600 kPa额定压力、6×4 mm硬管卡套连接、有刷/无刷电机、材料、型号编码与选型方法说明FOREACH DPL30H高压液体隔膜泵选型。",
-    coverAlt: "FOREACH DPL30H有刷与无刷高压液体隔膜泵，配6×4 mm硬管卡套接头",
+    seoTitle: "DPL30H高压隔膜泵选型：300 mL/min、600 kPa与6×4 mm硬管 | Foreach Technology",
+    seoDescription: "从目标背压下的实际流量、600 kPa额定压力、6×4 mm硬管卡套连接、有刷/无刷电机、材料、型号编码与选型方法说明Foreach DPL30H高压液体隔膜泵选型。",
+    coverAlt: "Foreach DPL30H有刷与无刷高压液体隔膜泵，配6×4 mm硬管卡套接头",
   },
   section1: {
     title: "一、高背压液路为什么不能只看空载流量？",

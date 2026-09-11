@@ -54,8 +54,8 @@ const SELECTION_CART_COPY: Record<LocaleCode, SelectionCartCopy> = {
     configuredProduct: "定制选型产品",
     required: "需要",
     notRequired: "暂不需要",
-    pdfHeaderAlt: "FOREACH PDF 页眉",
-    pdfFooterAlt: "FOREACH PDF 页脚",
+    pdfHeaderAlt: "Foreach PDF 页眉",
+    pdfFooterAlt: "Foreach PDF 页脚",
     sourceLabels: {
       products: "产品中心",
       fittingReplacement: "接头替代查询",
@@ -72,7 +72,7 @@ const SELECTION_CART_COPY: Record<LocaleCode, SelectionCartCopy> = {
     noteTitle: "List Notes",
     noteDescription:
       "1. The list is saved in the current browser and may be lost if browser data is cleared or a different browser is used.\n2. Drawings must be selected separately. Only models marked “Drawing Required” will be sent.",
-    printTitle: "FOREACH Product Selection List",
+    printTitle: "Foreach Product Selection List",
     printDescription:
       "This list is generated from the selected models for model confirmation, quotation discussions, and technical review.",
     generated: "Generated",
@@ -85,8 +85,8 @@ const SELECTION_CART_COPY: Record<LocaleCode, SelectionCartCopy> = {
     configuredProduct: "Configured Product",
     required: "Required",
     notRequired: "Not Required",
-    pdfHeaderAlt: "FOREACH PDF Header",
-    pdfFooterAlt: "FOREACH PDF Footer",
+    pdfHeaderAlt: "Foreach PDF Header",
+    pdfFooterAlt: "Foreach PDF Footer",
     sourceLabels: {
       products: "Products",
       fittingReplacement: "Fitting Replacement Search",
@@ -103,7 +103,7 @@ const SELECTION_CART_COPY: Record<LocaleCode, SelectionCartCopy> = {
     noteTitle: "Notas de la lista",
     noteDescription:
       "1. La lista se guarda en el navegador actual y puede perderse si borra los datos o cambia de navegador.\n2. Los planos deben seleccionarse por separado. Solo se enviarán los modelos marcados como «Plano requerido».",
-    printTitle: "Lista de selección de productos FOREACH",
+    printTitle: "Lista de selección de productos Foreach",
     printDescription:
       "Esta lista se genera a partir de los modelos seleccionados para confirmar modelos, preparar cotizaciones y realizar revisiones técnicas.",
     generated: "Generado",
@@ -116,8 +116,8 @@ const SELECTION_CART_COPY: Record<LocaleCode, SelectionCartCopy> = {
     configuredProduct: "Producto configurado",
     required: "Requerido",
     notRequired: "No requerido",
-    pdfHeaderAlt: "Encabezado del PDF de FOREACH",
-    pdfFooterAlt: "Pie del PDF de FOREACH",
+    pdfHeaderAlt: "Encabezado del PDF de Foreach",
+    pdfFooterAlt: "Pie del PDF de Foreach",
     sourceLabels: {
       products: "Productos",
       fittingReplacement: "Búsqueda de racores equivalentes",
@@ -134,7 +134,7 @@ const SELECTION_CART_COPY: Record<LocaleCode, SelectionCartCopy> = {
     noteTitle: "Notes de la liste",
     noteDescription:
       "1. La liste est enregistrée dans le navigateur actuel et peut être perdue si vous effacez les données ou changez de navigateur.\n2. Les plans doivent être sélectionnés séparément. Seuls les modèles marqués « Plan requis » seront envoyés.",
-    printTitle: "Liste de sélection de produits FOREACH",
+    printTitle: "Liste de sélection de produits Foreach",
     printDescription:
       "Cette liste est générée à partir des modèles sélectionnés pour la confirmation des modèles, les échanges de devis et la revue technique.",
     generated: "Généré",
@@ -147,8 +147,8 @@ const SELECTION_CART_COPY: Record<LocaleCode, SelectionCartCopy> = {
     configuredProduct: "Produit configuré",
     required: "Requis",
     notRequired: "Non requis",
-    pdfHeaderAlt: "En-tête du PDF FOREACH",
-    pdfFooterAlt: "Pied de page du PDF FOREACH",
+    pdfHeaderAlt: "En-tête du PDF Foreach",
+    pdfFooterAlt: "Pied de page du PDF Foreach",
     sourceLabels: {
       products: "Produits",
       fittingReplacement: "Recherche de raccords équivalents",
@@ -165,7 +165,7 @@ const SELECTION_CART_COPY: Record<LocaleCode, SelectionCartCopy> = {
     noteTitle: "목록 안내",
     noteDescription:
       "1. 목록은 현재 브라우저에 저장되며, 데이터를 삭제하거나 다른 브라우저를 사용하면 목록이 사라질 수 있습니다.\n2. 도면은 별도로 선택해야 하며, “도면 필요”로 표시된 모델만 전송됩니다.",
-    printTitle: "FOREACH 제품 선택 목록",
+    printTitle: "Foreach 제품 선택 목록",
     printDescription:
       "이 목록은 모델 확인, 견적 협의 및 기술 검토를 위해 선택한 모델을 기준으로 생성됩니다.",
     generated: "생성 일시",
@@ -178,8 +178,8 @@ const SELECTION_CART_COPY: Record<LocaleCode, SelectionCartCopy> = {
     configuredProduct: "구성 제품",
     required: "필요",
     notRequired: "불필요",
-    pdfHeaderAlt: "FOREACH PDF 머리글",
-    pdfFooterAlt: "FOREACH PDF 바닥글",
+    pdfHeaderAlt: "Foreach PDF 머리글",
+    pdfFooterAlt: "Foreach PDF 바닥글",
     sourceLabels: {
       products: "제품",
       fittingReplacement: "피팅 대체품 검색",
@@ -196,7 +196,7 @@ const SELECTION_CART_COPY: Record<LocaleCode, SelectionCartCopy> = {
     noteTitle: "Примечания к списку",
     noteDescription:
       "1. Список сохраняется в текущем браузере и может быть утрачен при очистке данных или использовании другого браузера.\n2. Чертежи необходимо отмечать отдельно. Будут отправлены только модели с отметкой «Требуется чертёж».",
-    printTitle: "Список выбранных продуктов FOREACH",
+    printTitle: "Список выбранных продуктов Foreach",
     printDescription:
       "Этот список сформирован на основе выбранных моделей для подтверждения, согласования предложения и технической проверки.",
     generated: "Сформировано",
@@ -209,8 +209,8 @@ const SELECTION_CART_COPY: Record<LocaleCode, SelectionCartCopy> = {
     configuredProduct: "Настроенный продукт",
     required: "Требуется",
     notRequired: "Не требуется",
-    pdfHeaderAlt: "Заголовок PDF FOREACH",
-    pdfFooterAlt: "Нижний колонтитул PDF FOREACH",
+    pdfHeaderAlt: "Заголовок PDF Foreach",
+    pdfFooterAlt: "Нижний колонтитул PDF Foreach",
     sourceLabels: {
       products: "Продукция",
       fittingReplacement: "Поиск аналогов фитингов",
