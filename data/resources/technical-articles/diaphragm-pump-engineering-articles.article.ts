@@ -1,3 +1,6 @@
+import { fluidResistanceCalculatorGuideZhCopy } from "./fluid-resistance-calculator-guide.zh";
+import { foreachDiaphragmPumpOemIntegrationIntlCopies, fluidResistanceCalculatorGuideIntlCopies } from "./oem-fluid-resistance-articles.intl";
+import { foreachDiaphragmPumpOemIntegrationZhCopy } from "./foreach-diaphragm-pump-oem-integration.zh";
 import { remainingPumpArticlesRu } from "./remaining-pump-articles.ru";
 import { remainingPumpArticlesKo } from "./remaining-pump-articles.ko";
 import { remainingPumpArticlesFr } from "./remaining-pump-articles.fr";
@@ -182,6 +185,9 @@ import {
 
 export const diaphragmPumpFlowPressureCurveSlug =
   "diaphragm-pump-flow-pressure-curve-guide" as const;
+export const fluidResistanceCalculatorGuideSlug = "fluid-resistance-calculator-liquid-path-design-guide" as const;
+export const foreachDiaphragmPumpOemIntegrationSlug =
+  "foreach-miniature-diaphragm-pump-oem-integration" as const;
 export const inkCirculationSupplyReturnPumpSlug =
   "ink-circulation-supply-return-pump-diaphragm-pump" as const;
 export const inkCirculationFlowSelectionSlug =
@@ -237,6 +243,8 @@ const copyByLocale: Record<
   >
 > = {
   "zh-CN": {
+    [fluidResistanceCalculatorGuideSlug]: fluidResistanceCalculatorGuideZhCopy,
+    [foreachDiaphragmPumpOemIntegrationSlug]: foreachDiaphragmPumpOemIntegrationZhCopy,
     ...diaphragmPumpRdArticles["zh-CN"],
     [microDiaphragmPumpMaterialsSelectionSlug]: microDiaphragmPumpMaterialsSelectionZhCopy,
     [inkCirculationSupplyReturnPumpSlug]:
@@ -278,6 +286,8 @@ const copyByLocale: Record<
     [dpl30EpdmPtfeFfkmSelectionSlug]: dpl30EpdmPtfeFfkmSelectionZhCopy,
   },
   en: {
+    [foreachDiaphragmPumpOemIntegrationSlug]: foreachDiaphragmPumpOemIntegrationIntlCopies.en,
+    [fluidResistanceCalculatorGuideSlug]: fluidResistanceCalculatorGuideIntlCopies.en,
     ...diaphragmPumpRdArticles["en"],
     [microDiaphragmPumpMaterialsSelectionSlug]: microDiaphragmPumpMaterialsCopies.en,
     [inkCirculationSupplyReturnPumpSlug]:
@@ -317,6 +327,8 @@ const copyByLocale: Record<
     [dpl30EpdmPtfeFfkmSelectionSlug]: dpl30EpdmPtfeFfkmSelectionEnCopy,
   },
   es: {
+    [foreachDiaphragmPumpOemIntegrationSlug]: foreachDiaphragmPumpOemIntegrationIntlCopies.es,
+    [fluidResistanceCalculatorGuideSlug]: fluidResistanceCalculatorGuideIntlCopies.es,
     ...diaphragmPumpRdArticles["es"],
     ...remainingPumpArticlesEs,
     [microDiaphragmPumpMaterialsSelectionSlug]: microDiaphragmPumpMaterialsCopies.es,
@@ -349,6 +361,8 @@ const copyByLocale: Record<
       highBackpressureFluidPathPressureBudgetEsCopy,
   },
   fr: {
+    [foreachDiaphragmPumpOemIntegrationSlug]: foreachDiaphragmPumpOemIntegrationIntlCopies.fr,
+    [fluidResistanceCalculatorGuideSlug]: fluidResistanceCalculatorGuideIntlCopies.fr,
     ...diaphragmPumpRdArticles["fr"],
     ...remainingPumpArticlesFr,
     [microDiaphragmPumpMaterialsSelectionSlug]: microDiaphragmPumpMaterialsCopies.fr,
@@ -381,6 +395,8 @@ const copyByLocale: Record<
       highBackpressureFluidPathPressureBudgetFrCopy,
   },
   ko: {
+    [foreachDiaphragmPumpOemIntegrationSlug]: foreachDiaphragmPumpOemIntegrationIntlCopies.ko,
+    [fluidResistanceCalculatorGuideSlug]: fluidResistanceCalculatorGuideIntlCopies.ko,
     ...diaphragmPumpRdArticles["ko"],
     ...remainingPumpArticlesKo,
     [microDiaphragmPumpMaterialsSelectionSlug]: microDiaphragmPumpMaterialsCopies.ko,
@@ -413,6 +429,8 @@ const copyByLocale: Record<
       highBackpressureFluidPathPressureBudgetKoCopy,
   },
   ru: {
+    [foreachDiaphragmPumpOemIntegrationSlug]: foreachDiaphragmPumpOemIntegrationIntlCopies.ru,
+    [fluidResistanceCalculatorGuideSlug]: fluidResistanceCalculatorGuideIntlCopies.ru,
     ...diaphragmPumpRdArticles["ru"],
     ...remainingPumpArticlesRu,
     [microDiaphragmPumpMaterialsSelectionSlug]: microDiaphragmPumpMaterialsCopies.ru,
@@ -690,6 +708,14 @@ export function getDiaphragmPumpEngineeringArticles(
   ];
 
   return [
+    createTechnicalArticle(
+      fluidResistanceCalculatorGuideSlug, locale, [], 128, "2026-09-11", "fittings-tubing",
+    ),
+    createTechnicalArticle(
+      foreachDiaphragmPumpOemIntegrationSlug, locale,
+      ["series:dpl30", "series:dpl60", "series:dpl30h", "series:dpgl800"],
+      127, "2026-09-11", "applications",
+    ),
     ...diaphragmPumpRdArticleSlugs.map((slug, index) =>
       createTechnicalArticle(slug, locale, ["series:dpl30", "series:dpl60", "series:dpl30h"], 126 - index, "2026-09-07"),
     ),

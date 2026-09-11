@@ -233,6 +233,8 @@ interface ArticleClassificationDefinition {
 }
 
 const articleClassifications: Record<string, ArticleClassificationDefinition> = {
+  "fluid-resistance-calculator-liquid-path-design-guide": { primaryCategory: "general-fluidics", secondaryCategory: "tubing-resistance-pressure-drop", tagKeys: ["calculation", "pressure-drop", "tubing-resistance", "selection"], relatedProducts: [] },
+  "foreach-miniature-diaphragm-pump-oem-integration": { primaryCategory: "applications-solutions", secondaryCategory: "oem-fluidic-systems", tagKeys: ["oem-integration", "selection", "fluidic-system", "testing-validation"], relatedProducts: ["DPL30", "DPL60", "DPL30H", "DPGL800"] },
   "piston-pump-air-bubbles-dispensing-error": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "dosing", "troubleshooting", "testing-validation"], relatedProducts: ["EA", "EAS"] },
   "piston-pump-viscous-liquid-aspiration-speed": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "dosing", "pressure-drop", "testing-validation"], relatedProducts: ["EA", "SM", "TM"] },
   "piston-pump-dispensing-drift-diagnosis": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "precision", "troubleshooting", "testing-validation"], relatedProducts: ["EA", "SM", "TM"] },

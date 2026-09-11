@@ -1,4 +1,6 @@
 export type DiaphragmPumpEngineeringArticleSlug =
+  | "fluid-resistance-calculator-liquid-path-design-guide"
+  | "foreach-miniature-diaphragm-pump-oem-integration"
   | "self-priming-miniature-liquid-diaphragm-pump-selection"
   | "miniature-diaphragm-pump-flow-pulsation-reduction"
   | "miniature-diaphragm-pump-noise-vibration-reduction"
