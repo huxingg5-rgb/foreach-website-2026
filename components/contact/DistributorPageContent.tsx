@@ -1330,7 +1330,7 @@ export default function DistributorPageContent({
             <h3>Submitted Successfully</h3>
 
             <p>
-              We have received your partnership application. The FOREACH team
+              We have received your partnership application. The Foreach team
               will review your information and follow up based on your market
               region, product interest, and cooperation needs.
             </p>

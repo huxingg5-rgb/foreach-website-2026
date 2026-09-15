@@ -19,7 +19,7 @@ import { getLabAutomationApplicationPageData } from "@/services/applications/lab
 import "./lab-automation-application.css";
 
 export const metadata: Metadata = {
-  title: "实验室自动化应用领域｜FOREACH 恒永达",
+  title: "实验室自动化应用领域｜Foreach Technology 恒永达",
   description:
     "恒永达面向实验室自动化设备提供泵、阀、接头、管材、传感器及液路系统集成支持。",
 };

@@ -1,31 +1,31 @@
 export const plungerPumpImageAltMap = {
-  "EA-100-PMMA": "FOREACH EA-100-PMMA 100 碌L standard piston pump with PMMA pump head for low-volume reagent dispensing and small-volume sample handling in IVD analyzers",
-  "EA-100-PEEK": "FOREACH EA-100-PEEK 100 碌L standard piston pump with PEEK pump head for special reagent dispensing and molecular diagnostics liquid handling",
-  "EA-250-PMMA": "FOREACH EA-250-PMMA 250 碌L standard piston pump with PMMA pump head for sample dilution and reagent dispensing in biochemistry and immunoassay analyzers",
-  "EA-250-PEEK": "FOREACH EA-250-PEEK 250 碌L standard piston pump with PEEK pump head for light-sensitive reagent transfer and high-compatibility fluidic modules",
-  "EA-500-PMMA": "FOREACH EA-500-PMMA 500 碌L standard piston pump with PMMA pump head for reagent transfer, sample dilution and buffer dispensing in automated analyzers",
-  "EA-500-PEEK": "FOREACH EA-500-PEEK 500 碌L standard piston pump with PEEK pump head for special reagent transfer in molecular diagnostics and analytical instruments",
-  "EA-1000-PMMA": "FOREACH EA-1000-PMMA 1000 碌L standard piston pump with PMMA pump head for reagent transfer, diluent addition and buffer dispensing in IVD systems",
-  "EA-1000-PEEK": "FOREACH EA-1000-PEEK 1000 碌L standard piston pump with PEEK pump head for light-sensitive reagent handling in molecular diagnostics and life science instruments",
-  "EA-2500-PMMA": "FOREACH EA-2500-PMMA 2.5 mL standard piston pump with PMMA pump head for buffer delivery, diluent addition and wash liquid supply in automated analyzers",
-  "EA-2500-PEEK": "FOREACH EA-2500-PEEK 2.5 mL standard piston pump with PEEK pump head for special reagent, buffer and wash liquid transfer in analytical instruments",
-  "EA-5000-PMMA": "FOREACH EA-5000-PMMA 5 mL standard piston pump with PMMA pump head for wash liquid addition, buffer delivery and line priming in automated analyzers",
-  "EA-5000-PEEK": "FOREACH EA-5000-PEEK 5 mL standard piston pump with PEEK pump head for chemically compatible wash liquid, buffer and life science reagent transfer",
-  "EA-10000-PMMA": "FOREACH EA-10000-PMMA 10 mL standard piston pump with PMMA pump head for high-volume wash liquid delivery, buffer refill and system rinsing",
-  "EA-10000-PEEK": "FOREACH EA-10000-PEEK 10 mL standard piston pump with PEEK pump head for high-volume special liquid, wash liquid and buffer transfer in analytical instruments",
+  "EA-100-PMMA": "Foreach EA-100-PMMA 100 碌L standard piston pump with PMMA pump head for low-volume reagent dispensing and small-volume sample handling in IVD analyzers",
+  "EA-100-PEEK": "Foreach EA-100-PEEK 100 碌L standard piston pump with PEEK pump head for special reagent dispensing and molecular diagnostics liquid handling",
+  "EA-250-PMMA": "Foreach EA-250-PMMA 250 碌L standard piston pump with PMMA pump head for sample dilution and reagent dispensing in biochemistry and immunoassay analyzers",
+  "EA-250-PEEK": "Foreach EA-250-PEEK 250 碌L standard piston pump with PEEK pump head for light-sensitive reagent transfer and high-compatibility fluidic modules",
+  "EA-500-PMMA": "Foreach EA-500-PMMA 500 碌L standard piston pump with PMMA pump head for reagent transfer, sample dilution and buffer dispensing in automated analyzers",
+  "EA-500-PEEK": "Foreach EA-500-PEEK 500 碌L standard piston pump with PEEK pump head for special reagent transfer in molecular diagnostics and analytical instruments",
+  "EA-1000-PMMA": "Foreach EA-1000-PMMA 1000 碌L standard piston pump with PMMA pump head for reagent transfer, diluent addition and buffer dispensing in IVD systems",
+  "EA-1000-PEEK": "Foreach EA-1000-PEEK 1000 碌L standard piston pump with PEEK pump head for light-sensitive reagent handling in molecular diagnostics and life science instruments",
+  "EA-2500-PMMA": "Foreach EA-2500-PMMA 2.5 mL standard piston pump with PMMA pump head for buffer delivery, diluent addition and wash liquid supply in automated analyzers",
+  "EA-2500-PEEK": "Foreach EA-2500-PEEK 2.5 mL standard piston pump with PEEK pump head for special reagent, buffer and wash liquid transfer in analytical instruments",
+  "EA-5000-PMMA": "Foreach EA-5000-PMMA 5 mL standard piston pump with PMMA pump head for wash liquid addition, buffer delivery and line priming in automated analyzers",
+  "EA-5000-PEEK": "Foreach EA-5000-PEEK 5 mL standard piston pump with PEEK pump head for chemically compatible wash liquid, buffer and life science reagent transfer",
+  "EA-10000-PMMA": "Foreach EA-10000-PMMA 10 mL standard piston pump with PMMA pump head for high-volume wash liquid delivery, buffer refill and system rinsing",
+  "EA-10000-PEEK": "Foreach EA-10000-PEEK 10 mL standard piston pump with PEEK pump head for high-volume special liquid, wash liquid and buffer transfer in analytical instruments",
 
-  "SM-50-PMMA": "FOREACH SM-50-PMMA 50 碌L miniature piston pump with PMMA pump head for micro-volume reagent dispensing and sample handling in compact IVD devices",
-  "SM-100-PMMA": "FOREACH SM-100-PMMA 100 碌L miniature piston pump with PMMA pump head for POCT analyzers, compact liquid handling modules and sample dilution",
-  "SM-100-PEEK": "FOREACH SM-100-PEEK 100 碌L miniature piston pump with PEEK pump head for special reagent handling in compact molecular diagnostics modules",
-  "SM-250-PMMA": "FOREACH SM-250-PMMA 250 碌L miniature piston pump with PMMA pump head for compact IVD sample processing and reaction liquid dispensing",
-  "SM-250-PEEK": "FOREACH SM-250-PEEK 250 碌L miniature piston pump with PEEK pump head for light-sensitive reagent transfer in compact diagnostic instruments",
-  "SM-500-PMMA": "FOREACH SM-500-PMMA 500 碌L miniature piston pump with PMMA pump head for reagent transfer and reaction liquid dispensing in compact automation modules",
-  "SM-1000-PMMA": "FOREACH SM-1000-PMMA 1000 碌L miniature piston pump with PMMA pump head for reagent transfer, diluent addition and buffer dispensing in compact instruments",
+  "SM-50-PMMA": "Foreach SM-50-PMMA 50 碌L miniature piston pump with PMMA pump head for micro-volume reagent dispensing and sample handling in compact IVD devices",
+  "SM-100-PMMA": "Foreach SM-100-PMMA 100 碌L miniature piston pump with PMMA pump head for POCT analyzers, compact liquid handling modules and sample dilution",
+  "SM-100-PEEK": "Foreach SM-100-PEEK 100 碌L miniature piston pump with PEEK pump head for special reagent handling in compact molecular diagnostics modules",
+  "SM-250-PMMA": "Foreach SM-250-PMMA 250 碌L miniature piston pump with PMMA pump head for compact IVD sample processing and reaction liquid dispensing",
+  "SM-250-PEEK": "Foreach SM-250-PEEK 250 碌L miniature piston pump with PEEK pump head for light-sensitive reagent transfer in compact diagnostic instruments",
+  "SM-500-PMMA": "Foreach SM-500-PMMA 500 碌L miniature piston pump with PMMA pump head for reagent transfer and reaction liquid dispensing in compact automation modules",
+  "SM-1000-PMMA": "Foreach SM-1000-PMMA 1000 碌L miniature piston pump with PMMA pump head for reagent transfer, diluent addition and buffer dispensing in compact instruments",
 
-  "TM-50-PMMA": "FOREACH TM-50-PMMA 50 碌L ultra-compact piston pump with PMMA pump head for portable analyzers and low-volume microfluidic control",
-  "TM-100-PMMA": "FOREACH TM-100-PMMA 100 碌L ultra-compact piston pump with PMMA pump head for portable IVD modules and small-volume liquid handling",
-  "TM-250-PMMA": "FOREACH TM-250-PMMA 250 碌L ultra-compact piston pump with PMMA pump head for micro-volume reagent transfer and sample processing in compact instruments",
-  "TM-500-PMMA": "FOREACH TM-500-PMMA 500 碌L ultra-compact piston pump with PMMA pump head for reagent transfer and compact fluid supply in modular liquid handling systems",
+  "TM-50-PMMA": "Foreach TM-50-PMMA 50 碌L ultra-compact piston pump with PMMA pump head for portable analyzers and low-volume microfluidic control",
+  "TM-100-PMMA": "Foreach TM-100-PMMA 100 碌L ultra-compact piston pump with PMMA pump head for portable IVD modules and small-volume liquid handling",
+  "TM-250-PMMA": "Foreach TM-250-PMMA 250 碌L ultra-compact piston pump with PMMA pump head for micro-volume reagent transfer and sample processing in compact instruments",
+  "TM-500-PMMA": "Foreach TM-500-PMMA 500 碌L ultra-compact piston pump with PMMA pump head for reagent transfer and compact fluid supply in modular liquid handling systems",
 } as const;
 
 
@@ -177,10 +177,10 @@ function buildFallbackPlungerPumpAlt(input: ProductImageAltInput): string {
   const capacityText = formatCapacity(capacity);
 
   if (model) {
-    return `FOREACH ${model} ${capacityText ? `${capacityText} ` : ""}${seriesPhrase} ${materialPhrase} for ${applicationPhrase}`;
+    return `Foreach ${model} ${capacityText ? `${capacityText} ` : ""}${seriesPhrase} ${materialPhrase} for ${applicationPhrase}`;
   }
 
-  return `FOREACH ${seriesPhrase} product image for ${getPlungerPumpDefaultApplicationPhrase()}`;
+  return `Foreach ${seriesPhrase} product image for ${getPlungerPumpDefaultApplicationPhrase()}`;
 }
 
 export function getPlungerPumpImageAlt(input: ProductImageAltInput): string {

@@ -101,24 +101,24 @@ function isSupportedResourceLocale(
 
 const resourcesMetadata = {
   es: {
-    title: "Centro de recursos | FOREACH",
+    title: "Centro de recursos | Foreach Technology",
     description:
-      "Consulte fichas técnicas, herramientas de selección, guías de instalación, compatibilidad de materiales, artículos técnicos y noticias de FOREACH.",
+      "Consulte fichas técnicas, herramientas de selección, guías de instalación, compatibilidad de materiales, artículos técnicos y noticias de Foreach.",
   },
   fr: {
-    title: "Centre de ressources | FOREACH",
+    title: "Centre de ressources | Foreach Technology",
     description:
-      "Consultez les fiches techniques, outils de sélection, guides d’installation, données de compatibilité, articles techniques et actualités FOREACH.",
+      "Consultez les fiches techniques, outils de sélection, guides d’installation, données de compatibilité, articles techniques et actualités Foreach.",
   },
   ru: {
-    title: "Центр ресурсов | FOREACH",
+    title: "Центр ресурсов | Foreach Technology",
     description:
-      "Спецификации, инструменты подбора, руководства по установке, данные о совместимости материалов, технические статьи и новости FOREACH.",
+      "Спецификации, инструменты подбора, руководства по установке, данные о совместимости материалов, технические статьи и новости Foreach.",
   },
   ko: {
-    title: "자료실 | FOREACH",
+    title: "자료실 | Foreach Technology",
     description:
-      "FOREACH 제품 사양서, 선정 도구, 설치 가이드, 소재 호환성 자료, 기술 문서 및 뉴스를 확인하세요.",
+      "Foreach 제품 사양서, 선정 도구, 설치 가이드, 소재 호환성 자료, 기술 문서 및 뉴스를 확인하세요.",
   },
 } as const;
 
@@ -163,9 +163,9 @@ export async function generateMetadata({
 
   if (locale === "en") {
     return {
-      title: "Resources | FOREACH Fluid",
+      title: "Resources | Foreach Technology Fluid",
       description:
-        "Access FOREACH product datasheets, selection support, installation guides, material compatibility information, FAQs, and company news.",
+        "Access Foreach product datasheets, selection support, installation guides, material compatibility information, FAQs, and company news.",
     };
   }
 

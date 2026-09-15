@@ -10,12 +10,12 @@ export const diaphragmPumpFlowPressureCurveEsCopy = {
     title:
       "Cómo interpretar la curva caudal-presión de una bomba de diafragma",
     seoTitle:
-      "Curva caudal-presión de una bomba de diafragma: punto de trabajo | FOREACH",
+      "Curva caudal-presión de una bomba de diafragma: punto de trabajo | Foreach Technology",
     seoDescription:
       "Guía para calcular el caudal instalado de una bomba de diafragma a partir de la curva de la bomba, la resistencia del circuito, la viscosidad, el diámetro del tubo y las condiciones de ensayo.",
     coverImage: `${FLOW_ASSET_BASE}/article-cover.webp`,
     coverAlt:
-      "Bomba de diafragma miniatura FOREACH en un banco de ensayo de caudal y presión",
+      "Bomba de diafragma miniatura Foreach en un banco de ensayo de caudal y presión",
   },
   deck:
     "Un valor de catálogo como 300 o 600 mL/min no es un caudal fijo dentro del equipo. El caudal real aparece donde la curva de la bomba se cruza con la curva del circuito, bajo las condiciones reales de presión, fluido, tubería y alimentación.",
@@ -165,12 +165,12 @@ export const microDiaphragmPumpContinuousDutyLifeEsCopy = {
     title:
       "¿Cuánto tiempo puede funcionar de forma continua una bomba de diafragma miniatura?",
     seoTitle:
-      "Funcionamiento continuo y vida útil de bombas de diafragma | FOREACH",
+      "Funcionamiento continuo y vida útil de bombas de diafragma | Foreach Technology",
     seoDescription:
       "Diferencias entre servicio continuo, vida acumulada, motores con escobillas y sin escobillas, perfil de misión, criterios de fallo, ensayos de duración y fiabilidad B10.",
     coverImage: `${LIFE_ASSET_BASE}/article-cover.webp`,
     coverAlt:
-      "Bomba de diafragma miniatura FOREACH durante un ensayo de funcionamiento continuo",
+      "Bomba de diafragma miniatura Foreach durante un ensayo de funcionamiento continuo",
   },
   deck:
     "Apta para servicio continuo no significa vida ilimitada. Capacidad de funcionamiento continuo, horas acumuladas, vida de calendario y fiabilidad estadística son especificaciones diferentes y dependen de carga, fluido, control y ambiente.",
@@ -276,7 +276,7 @@ export const microDiaphragmPumpContinuousDutyLifeEsCopy = {
           width: 1200,
           height: 675,
           caption:
-            "B10 es el tiempo asociado a un 10% de fallos acumulados en el modelo. El gráfico no representa datos medidos de un modelo FOREACH.",
+            "B10 es el tiempo asociado a un 10% de fallos acumulados en el modelo. El gráfico no representa datos medidos de un modelo Foreach.",
         },
       ],
     },

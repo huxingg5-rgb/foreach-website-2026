@@ -49,10 +49,13 @@ export type DiaphragmPumpCategoryCopy = {
   parent: string;
   liquid: string;
   gasLiquid: string;
-  gas: string;
   modelLabel: string;
   seoTitle: string;
   seoDescription: string;
+  liquidSeoTitle: string;
+  liquidSeoDescription: string;
+  gasLiquidSeoTitle: string;
+  gasLiquidSeoDescription: string;
 };
 
 export const DIAPHRAGM_PUMP_ROUTE_PREFIX =
@@ -66,73 +69,103 @@ export const DIAPHRAGM_PUMP_CATEGORY_COPY: Record<
     home: "首页",
     products: "产品中心",
     parent: "微型隔膜泵",
-    liquid: "微型液体隔膜泵",
-    gasLiquid: "微型气液混合隔膜泵",
-    gas: "微型气体隔膜泵",
+    liquid: "用于最高 600 mL/min 低流量液体处理的微型液体隔膜泵",
+    gasLiquid: "用于废液抽吸和真空处理的微型气液混合隔膜泵",
     modelLabel: "型号：",
-    seoTitle: "微型隔膜泵｜液体、气液混合与真空抽吸｜恒永达",
+    seoTitle: "微型隔膜泵：液体与气液混合处理｜恒永达",
     seoDescription:
-      "恒永达微型隔膜泵覆盖液体输送、高压液路、气体抽吸、负压建立与气液混合物抽排，适用于 IVD、生命科学和实验室自动化设备。",
+      "探索Foreach微型隔膜泵，包括用于液体输送、清洗和循环的液体隔膜泵，以及用于废液抽吸、真空处理和气液混合介质的气液混合隔膜泵。",
+    liquidSeoTitle: "最高 600 mL/min 微型液体隔膜泵｜恒永达",
+    liquidSeoDescription:
+      "Foreach微型液体隔膜泵适用于约0–600 mL/min的液体处理、清洗、循环和仪器液路，并提供标准压力与最高600 kPa高压选项。",
+    gasLiquidSeoTitle: "废液抽吸微型气液混合隔膜泵｜恒永达",
+    gasLiquidSeoDescription:
+      "Foreach微型气液混合隔膜泵适用于废液抽吸、真空处理和气液混合介质；DPGL800单头空载气体流量6 L/min，最大负压小于-90 kPa。",
   },
   en: {
     home: "Home",
     products: "Product Center",
     parent: "Miniature Diaphragm Pumps",
-    liquid: "Miniature Liquid Diaphragm Pumps",
-    gasLiquid: "Miniature Gas-Liquid Diaphragm Pumps",
-    gas: "Miniature Gas Diaphragm Pumps",
+    liquid: "Miniature Liquid Diaphragm Pumps for Low-Flow Liquid Handling up to 600 mL/min",
+    gasLiquid: "Miniature Gas-Liquid Diaphragm Pumps for Waste Aspiration and Vacuum Handling",
     modelLabel: "Model:",
-    seoTitle: "Miniature Diaphragm Pumps for Liquid and Vacuum | FOREACH",
+    seoTitle: "Miniature Diaphragm Pumps for Liquid & Gas-Liquid Handling | Foreach Technology",
     seoDescription:
-      "Explore FOREACH miniature diaphragm pumps for liquid transfer, high-pressure fluid circuits, gas aspiration, vacuum generation, and gas-liquid mixture evacuation.",
+      "Explore Foreach miniature diaphragm pumps for liquid transfer, washing, circulation, waste aspiration and vacuum handling, including liquid and gas-liquid diaphragm pump series.",
+    liquidSeoTitle: "Miniature Liquid Diaphragm Pumps up to 600 mL/min | Foreach Technology",
+    liquidSeoDescription:
+      "Miniature liquid diaphragm pumps for approximately 0–600 mL/min liquid handling, washing, circulation and instrument fluidics, with standard and high-pressure options.",
+    gasLiquidSeoTitle: "Miniature Gas-Liquid Diaphragm Pumps for Waste Aspiration | Foreach Technology",
+    gasLiquidSeoDescription:
+      "Miniature gas-liquid diaphragm pumps for waste aspiration, vacuum handling and mixed gas-liquid media, including DPGL800 with 6 L/min single-head no-load gas flow and vacuum below -90 kPa.",
   },
   es: {
     home: "Inicio",
     products: "Centro de productos",
     parent: "Bombas de diafragma en miniatura",
-    liquid: "Bombas miniatura de diafragma para líquidos",
-    gasLiquid: "Bombas de diafragma en miniatura gas-líquido",
-    gas: "Bombas de diafragma en miniatura para gases",
+    liquid: "Bombas miniatura de diafragma para líquidos de bajo caudal hasta 600 mL/min",
+    gasLiquid: "Bombas miniatura de diafragma gas-líquido para aspiración de residuos y manejo de vacío",
     modelLabel: "Modelo:",
-    seoTitle: "Bombas de diafragma en miniatura para líquidos y vacío | FOREACH",
+    seoTitle: "Bombas de diafragma en miniatura para líquidos y mezclas gas-líquido | Foreach Technology",
     seoDescription:
-      "Bombas de diafragma en miniatura FOREACH para transferencia de líquidos, circuitos de alta presión, aspiración de gases, generación de vacío y evacuación gas-líquido.",
+      "Explore las bombas de diafragma en miniatura Foreach para transferencia, lavado, circulación, aspiración de residuos y vacío, con series para líquidos y mezclas gas-líquido.",
+    liquidSeoTitle: "Bombas miniatura de diafragma para líquidos hasta 600 mL/min | Foreach Technology",
+    liquidSeoDescription:
+      "Bombas miniatura de diafragma para manejar líquidos a aproximadamente 0–600 mL/min en lavado, circulación y circuitos de instrumentos, con opciones estándar y de alta presión.",
+    gasLiquidSeoTitle: "Bombas miniatura de diafragma gas-líquido para aspiración de residuos | Foreach Technology",
+    gasLiquidSeoDescription:
+      "Bombas miniatura de diafragma gas-líquido para aspiración de residuos, vacío y medios mixtos; DPGL800 ofrece 6 L/min de gas sin carga por cabezal y vacío inferior a -90 kPa.",
   },
   fr: {
     home: "Accueil",
     products: "Centre de produits",
     parent: "Pompes à membrane miniatures",
-    liquid: "Pompes à membrane miniatures pour liquides",
-    gasLiquid: "Pompes à membrane miniatures gaz-liquide",
-    gas: "Pompes à membrane miniatures pour gaz",
+    liquid: "Pompes à membrane miniatures pour liquides à faible débit jusqu’à 600 mL/min",
+    gasLiquid: "Pompes à membrane miniatures gaz-liquide pour l’aspiration des effluents et la gestion du vide",
     modelLabel: "Modèle :",
-    seoTitle: "Pompes à membrane miniatures pour liquides et vide | FOREACH",
+    seoTitle: "Pompes à membrane miniatures pour liquides et mélanges gaz-liquide | Foreach Technology",
     seoDescription:
-      "Pompes à membrane miniatures FOREACH pour le transfert de liquides, les circuits haute pression, l’aspiration de gaz, la génération de vide et l’évacuation gaz-liquide.",
+      "Découvrez les pompes à membrane miniatures Foreach pour le transfert, le lavage, la circulation, l’aspiration des effluents et le vide, avec des séries pour liquides et mélanges gaz-liquide.",
+    liquidSeoTitle: "Pompes à membrane miniatures pour liquides jusqu’à 600 mL/min | Foreach Technology",
+    liquidSeoDescription:
+      "Pompes à membrane miniatures pour la gestion de liquides à environ 0–600 mL/min, le lavage, la circulation et les circuits d’instruments, avec options standard et haute pression.",
+    gasLiquidSeoTitle: "Pompes à membrane miniatures gaz-liquide pour aspiration des effluents | Foreach Technology",
+    gasLiquidSeoDescription:
+      "Pompes à membrane miniatures gaz-liquide pour l’aspiration des effluents, le vide et les fluides mixtes ; DPGL800 offre 6 L/min de gaz à vide par tête et un vide inférieur à -90 kPa.",
   },
   ko: {
     home: "홈",
     products: "제품 센터",
     parent: "소형 다이어프램 펌프",
-    liquid: "소형 액체 다이어프램 펌프",
-    gasLiquid: "소형 기액 혼합 다이어프램 펌프",
-    gas: "소형 기체 다이어프램 펌프",
+    liquid: "최대 600 mL/min 저유량 액체 처리를 위한 소형 액체 다이어프램 펌프",
+    gasLiquid: "폐액 흡인 및 진공 처리를 위한 소형 기액 혼합 다이어프램 펌프",
     modelLabel: "모델:",
-    seoTitle: "액체 이송 및 진공용 소형 다이어프램 펌프 | FOREACH",
+    seoTitle: "액체 및 기액 혼합 처리를 위한 소형 다이어프램 펌프 | Foreach Technology",
     seoDescription:
-      "FOREACH 소형 다이어프램 펌프는 액체 이송, 고압 유로, 가스 흡입, 진공 형성 및 기액 혼합물 배출에 적용됩니다.",
+      "Foreach 소형 다이어프램 펌프는 액체 이송, 세척, 순환, 폐액 흡인 및 진공 처리에 사용되며 액체용과 기액 혼합용 시리즈를 제공합니다.",
+    liquidSeoTitle: "최대 600 mL/min 소형 액체 다이어프램 펌프 | Foreach Technology",
+    liquidSeoDescription:
+      "약 0–600 mL/min 액체 처리, 세척, 순환 및 장비 유로용 소형 액체 다이어프램 펌프로 표준 압력과 고압 옵션을 제공합니다.",
+    gasLiquidSeoTitle: "폐액 흡인용 소형 기액 혼합 다이어프램 펌프 | Foreach Technology",
+    gasLiquidSeoDescription:
+      "폐액 흡인, 진공 처리 및 기액 혼합 유체용 소형 기액 혼합 다이어프램 펌프입니다. DPGL800은 헤드당 무부하 가스 유량이 6 L/min이고 진공은 -90 kPa 미만입니다.",
   },
   ru: {
     home: "Главная",
     products: "Каталог продукции",
     parent: "Миниатюрные мембранные насосы",
-    liquid: "Миниатюрные жидкостные мембранные насосы",
-    gasLiquid: "Миниатюрные газожидкостные мембранные насосы",
-    gas: "Миниатюрные газовые мембранные насосы",
+    liquid: "Миниатюрные жидкостные мембранные насосы для малых расходов до 600 mL/min",
+    gasLiquid: "Миниатюрные газожидкостные мембранные насосы для аспирации отходов и вакуумирования",
     modelLabel: "Модель:",
-    seoTitle: "Миниатюрные мембранные насосы для жидкостей и вакуума | FOREACH",
+    seoTitle: "Миниатюрные мембранные насосы для жидкостей и газожидкостных сред | Foreach Technology",
     seoDescription:
-      "Миниатюрные мембранные насосы FOREACH для перекачивания жидкостей, контуров высокого давления, всасывания газа, создания вакуума и удаления газожидкостных смесей.",
+      "Миниатюрные мембранные насосы Foreach для перекачивания, промывки, циркуляции, аспирации отходов и вакуума, включая серии для жидкостей и газожидкостных сред.",
+    liquidSeoTitle: "Миниатюрные жидкостные мембранные насосы до 600 mL/min | Foreach Technology",
+    liquidSeoDescription:
+      "Миниатюрные жидкостные мембранные насосы для расхода примерно 0–600 mL/min, промывки, циркуляции и приборных трактов, со стандартными и высоконапорными вариантами.",
+    gasLiquidSeoTitle: "Газожидкостные мембранные насосы для аспирации отходов | Foreach Technology",
+    gasLiquidSeoDescription:
+      "Миниатюрные газожидкостные насосы для аспирации отходов, вакуума и смешанных сред; DPGL800 обеспечивает 6 L/min газа без нагрузки на головку и вакуум ниже -90 kPa.",
   },
 };
 
@@ -210,7 +243,7 @@ function getReferenceLocalizedCopy(
       : isHighPressure
         ? `600 kPa ${motor.zh}高压微型隔膜泵，寿命 ${hours}，12 V / 24 V 可选`
         : `${flow} mL/min ${motor.zh}微型隔膜泵，寿命 ${hours}，12 V / 24 V 可选`;
-    const h1 = `FOREACH ${model} ${cardSubtitle}`;
+    const h1 = `Foreach ${model} ${cardSubtitle}`;
     const description = isGasLiquid
       ? `${model} 是 24 V 直流无刷双头微型气液混合隔膜泵，专为气体及气液混合物设计，不适用于输送 100% 液体。单泵头空载气体流量为 6 L/min，最大负压为 < -90 kPa，适用于真空抽吸和气液混合物抽排。`
       : isHighPressure
@@ -230,17 +263,17 @@ function getReferenceLocalizedCopy(
       : isHighPressure
         ? `600 kPa ${motor.en} High-Pressure Miniature Liquid Diaphragm Pump, ${hours} Service Life, 12 V / 24 V`
         : `${flow} mL/min ${motor.en} Miniature Liquid Diaphragm Pump, ${hours} Service Life, 12 V / 24 V`;
-    const h1 = `FOREACH ${model} ${cardSubtitle}`;
+    const h1 = `Foreach ${model} ${cardSubtitle}`;
     const description = isGasLiquid
       ? `${model} is a 24 V brushless DC dual-head miniature gas-liquid diaphragm pump. Designed for gas and gas-liquid mixtures. It is not suitable for pumping 100% liquid. Its single-head no-load gas flow is 6 L/min and maximum negative pressure is < -90 kPa.`
       : isHighPressure
         ? `${model} is a 12 V / 24 V ${motor.en.toLowerCase()} high-pressure miniature liquid diaphragm pump with 600 kPa rated pressure and 300 mL/min no-load flow. Threaded Port, connects to 6 × 4 mm rigid tubing.`
         : `${model} is a 12 V / 24 V ${motor.en.toLowerCase()} miniature liquid diaphragm pump with ${flow} mL/min no-load flow and 100 kPa rated pressure for instrument wash, reagent, waste, and circulation circuits.`;
     const seoTitle = isGasLiquid
-      ? `Dual-Head Miniature Gas-Liquid Diaphragm Pump for Vacuum Aspiration | ${model} | FOREACH`
+      ? `Dual-Head Miniature Gas-Liquid Diaphragm Pump for Vacuum Aspiration | ${model} | Foreach Technology`
       : isHighPressure
-        ? `600 kPa ${motor.en} High-Pressure Diaphragm Pump | ${model} | FOREACH`
-        : `${flow} mL/min ${motor.en} Liquid Diaphragm Pump | ${model} | FOREACH`;
+        ? `600 kPa ${motor.en} High-Pressure Diaphragm Pump | ${model} | Foreach Technology`
+        : `${flow} mL/min ${motor.en} Liquid Diaphragm Pump | ${model} | Foreach Technology`;
     return { h1, cardSubtitle, description, applications, seoTitle, seoDescription: description };
   }
 
@@ -250,17 +283,17 @@ function getReferenceLocalizedCopy(
       : isHighPressure
         ? `Bomba miniatura de diafragma de alta presión para líquidos, 600 kPa, con ${motor.es}, vida útil de ${hours}, 12 V / 24 V`
         : `Bomba miniatura de diafragma para líquidos de ${flow} mL/min con ${motor.es}, vida útil de ${hours}, 12 V / 24 V`;
-    const h1 = `FOREACH ${model} ${cardSubtitle}`;
+    const h1 = `Foreach ${model} ${cardSubtitle}`;
     const description = isGasLiquid
       ? `${model} es una bomba de diafragma en miniatura gas-líquido de doble cabezal, 24 V, con motor CC sin escobillas, diseñada para gases y mezclas gas-líquido. No es adecuada para bombear líquido al 100 %. El caudal de gas sin carga de un cabezal es de 6 L/min y el vacío máximo es < -90 kPa.`
       : isHighPressure
         ? `${model} es una bomba miniatura de diafragma para líquidos con ${motor.es}: presión nominal de 600 kPa, caudal sin carga de 300 mL/min y 12 V / 24 V. El puerto roscado se conecta a un tubo rígido de 6 × 4 mm.`
         : `${model} es una bomba miniatura de diafragma para líquidos con ${motor.es}: caudal sin carga de ${flow} mL/min, presión nominal de 100 kPa y 12 V / 24 V para circuitos de instrumentos.`;
     const seoTitle = isGasLiquid
-      ? `Bomba de diafragma en miniatura gas-líquido de doble cabezal | ${model} | FOREACH`
+      ? `Bomba de diafragma en miniatura gas-líquido de doble cabezal | ${model} | Foreach Technology`
       : isHighPressure
-        ? `Bomba de diafragma de alta presión 600 kPa, ${motor.es} | ${model} | FOREACH`
-        : `Bomba miniatura de diafragma para líquidos de ${flow} mL/min, ${motor.es} | ${model} | FOREACH`;
+        ? `Bomba de diafragma de alta presión 600 kPa, ${motor.es} | ${model} | Foreach Technology`
+        : `Bomba miniatura de diafragma para líquidos de ${flow} mL/min, ${motor.es} | ${model} | Foreach Technology`;
     return { h1, cardSubtitle, description, applications, seoTitle, seoDescription: description };
   }
 
@@ -270,17 +303,17 @@ function getReferenceLocalizedCopy(
       : isHighPressure
         ? `Pompe à membrane miniature haute pression pour liquides, 600 kPa, avec ${motor.fr}, durée de vie de ${hours}, 12 V / 24 V`
         : `Pompe à membrane miniature pour liquides de ${flow} mL/min avec ${motor.fr}, durée de vie de ${hours}, 12 V / 24 V`;
-    const h1 = `FOREACH ${model} ${cardSubtitle}`;
+    const h1 = `Foreach ${model} ${cardSubtitle}`;
     const description = isGasLiquid
       ? `${model} est une pompe à membrane miniature gaz-liquide à double tête, 24 V, à moteur CC sans balais, conçue pour les gaz et les mélanges gaz-liquide. Elle ne convient pas au pompage de liquide à 100 %. Le débit de gaz sans charge d’une seule tête est de 6 L/min et le vide maximal est < -90 kPa.`
       : isHighPressure
         ? `${model} est une pompe à membrane miniature haute pression pour liquides avec ${motor.fr} : pression nominale de 600 kPa, débit à vide de 300 mL/min et 12 V / 24 V. L’orifice fileté se raccorde à un tube rigide de 6 × 4 mm.`
         : `${model} est une pompe à membrane miniature pour liquides avec ${motor.fr} : débit à vide de ${flow} mL/min, pression nominale de 100 kPa et 12 V / 24 V pour les circuits d’instruments.`;
     const seoTitle = isGasLiquid
-      ? `Pompe à membrane miniature gaz-liquide à double tête | ${model} | FOREACH`
+      ? `Pompe à membrane miniature gaz-liquide à double tête | ${model} | Foreach Technology`
       : isHighPressure
-        ? `Pompe à membrane haute pression 600 kPa, ${motor.fr} | ${model} | FOREACH`
-        : `Pompe à membrane miniature pour liquides ${flow} mL/min, ${motor.fr} | ${model} | FOREACH`;
+        ? `Pompe à membrane haute pression 600 kPa, ${motor.fr} | ${model} | Foreach Technology`
+        : `Pompe à membrane miniature pour liquides ${flow} mL/min, ${motor.fr} | ${model} | Foreach Technology`;
     return { h1, cardSubtitle, description, applications, seoTitle, seoDescription: description };
   }
 
@@ -290,17 +323,17 @@ function getReferenceLocalizedCopy(
       : isHighPressure
         ? `600 kPa ${motor.ko} 고압 소형 액체 다이어프램 펌프, 수명 ${hours}, 12 V / 24 V`
         : `${flow} mL/min ${motor.ko} 소형 액체 다이어프램 펌프, 수명 ${hours}, 12 V / 24 V`;
-    const h1 = `FOREACH ${model} ${cardSubtitle}`;
+    const h1 = `Foreach ${model} ${cardSubtitle}`;
     const description = isGasLiquid
       ? `${model}는 24 V 브러시리스 DC 듀얼 헤드 소형 기액 혼합 다이어프램 펌프로 가스 및 기액 혼합물용으로 설계되었습니다. 100% 액체 펌핑에는 적합하지 않습니다. 단일 헤드 무부하 가스 유량은 6 L/min이고 최대 부압/진공은 < -90 kPa입니다.`
       : isHighPressure
         ? `${model}는 12 V / 24 V ${motor.ko} 고압 소형 액체 다이어프램 펌프로 정격 압력 600 kPa, 무부하 유량 300 mL/min입니다. 나사 포트는 6 × 4 mm 경질 튜브에 연결됩니다.`
         : `${model}는 12 V / 24 V ${motor.ko} 소형 액체 다이어프램 펌프로 무부하 유량 ${flow} mL/min, 정격 압력 100 kPa이며 장비 내부 액체 회로에 적합합니다.`;
     const seoTitle = isGasLiquid
-      ? `진공 흡인용 듀얼 헤드 소형 기액 혼합 다이어프램 펌프 | ${model} | FOREACH`
+      ? `진공 흡인용 듀얼 헤드 소형 기액 혼합 다이어프램 펌프 | ${model} | Foreach Technology`
       : isHighPressure
-        ? `600 kPa ${motor.ko} 고압 액체 다이어프램 펌프 | ${model} | FOREACH`
-        : `${flow} mL/min ${motor.ko} 소형 액체 다이어프램 펌프 | ${model} | FOREACH`;
+        ? `600 kPa ${motor.ko} 고압 액체 다이어프램 펌프 | ${model} | Foreach Technology`
+        : `${flow} mL/min ${motor.ko} 소형 액체 다이어프램 펌프 | ${model} | Foreach Technology`;
     return { h1, cardSubtitle, description, applications, seoTitle, seoDescription: description };
   }
 
@@ -309,17 +342,17 @@ function getReferenceLocalizedCopy(
     : isHighPressure
       ? `Миниатюрный жидкостный мембранный насос высокого давления 600 kPa с ${motor.ru}, срок службы ${hours}, 12 V / 24 V`
       : `Миниатюрный жидкостный мембранный насос ${flow} mL/min с ${motor.ru}, срок службы ${hours}, 12 V / 24 V`;
-  const h1 = `FOREACH ${model} ${cardSubtitle}`;
+  const h1 = `Foreach ${model} ${cardSubtitle}`;
   const description = isGasLiquid
     ? `${model} — двухголовочный миниатюрный газожидкостный мембранный насос 24 V с бесщёточным двигателем, предназначенный для газа и газожидкостных смесей. Он не подходит для перекачивания 100 % жидкости. Расход газа без нагрузки одной головки составляет 6 L/min, максимальное разрежение — < -90 kPa.`
     : isHighPressure
       ? `${model} — миниатюрный жидкостный мембранный насос высокого давления с ${motor.ru}: номинальное давление 600 kPa, расход без нагрузки 300 mL/min и 12 V / 24 V. Резьбовой порт подключается к жёсткой трубке 6 × 4 мм.`
       : `${model} — миниатюрный жидкостный мембранный насос с ${motor.ru}: расход без нагрузки ${flow} mL/min, номинальное давление 100 kPa и 12 V / 24 V для жидкостных контуров приборов.`;
   const seoTitle = isGasLiquid
-    ? `Двухголовочный миниатюрный газожидкостный мембранный насос | ${model} | FOREACH`
+    ? `Двухголовочный миниатюрный газожидкостный мембранный насос | ${model} | Foreach Technology`
     : isHighPressure
-      ? `Мембранный насос высокого давления 600 kPa с ${motor.ru} | ${model} | FOREACH`
-      : `Миниатюрный жидкостный мембранный насос ${flow} mL/min с ${motor.ru} | ${model} | FOREACH`;
+      ? `Мембранный насос высокого давления 600 kPa с ${motor.ru} | ${model} | Foreach Technology`
+      : `Миниатюрный жидкостный мембранный насос ${flow} mL/min с ${motor.ru} | ${model} | Foreach Technology`;
   return { h1, cardSubtitle, description, applications, seoTitle, seoDescription: description };
 }
 
@@ -403,7 +436,6 @@ export function getDiaphragmPumpSelectionHeading(locale: unknown, diaphragmType:
   const type = String(diaphragmType || "");
   if (type === "液体隔膜泵") return copy.liquid;
   if (type === "气液混合隔膜泵") return copy.gasLiquid;
-  if (type === "气体隔膜泵") return copy.gas;
   return copy.parent;
 }
 

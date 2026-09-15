@@ -3,9 +3,9 @@ import type { Dpgl800ArticleCopy } from "./dpgl800-gas-liquid-diaphragm-pump.typ
 export const dpgl800ArticleEnCopy = {
   metadata: {
     title: "How to Select a Gas-Liquid Diaphragm Pump: DPGL800 Flow, Vacuum and Build-Up Time",
-    seoTitle: "How to Select a Gas-Liquid Diaphragm Pump | DPGL800 Vacuum Guide | FOREACH",
+    seoTitle: "How to Select a Gas-Liquid Diaphragm Pump | DPGL800 Vacuum Guide | Foreach Technology",
     seoDescription: "Select the DPGL800 gas-liquid diaphragm pump by its 6 L/min no-load gas flow, ＜-90 kPa vacuum, 30 kPa pressure and 5 L test-chamber vacuum build-up time.",
-    coverAlt: "FOREACH DPGL800 brushless gas-liquid diaphragm pump rated at 6 L/min and ＜-90 kPa vacuum",
+    coverAlt: "Foreach DPGL800 brushless gas-liquid diaphragm pump rated at 6 L/min and ＜-90 kPa vacuum",
   },
   section1: {
     title: "1. Why DPGL800 is not selected like an ordinary liquid pump",
@@ -48,7 +48,7 @@ export const dpgl800ArticleEnCopy = {
       ["Media", "Gas and gas-liquid mixtures"], ["Medium / ambient temperature", "+5℃ to +40℃"],
       ["Ports", "G1/8 female thread"], ["Weight", "Approx. 600 g"],
       ["Specified life", "10000 h at rated voltage, continuous operation"],
-      ["Wetted materials", "PPS head; EPDM or PTFE diaphragm and EPDM or FFKM valve, depending on model"],
+      ["Wetted materials", "Polyphenylene sulfide (PPS) head; EPDM or PTFE diaphragm and EPDM or FFKM valve, depending on model"],
     ],
   },
   section5: {

@@ -219,12 +219,12 @@ export async function generateMetadata({ params }: ProbeDetailPageProps) {
 
   if (!detail) {
     return {
-      title: "针系列产品｜恒永达 FOREACH",
+      title: "针系列产品｜恒永达 Foreach",
     };
   }
 
   return {
-    title: detail.seoTitle || detail.title + "｜" + detail.productTypeName + "｜恒永达 FOREACH",
+    title: detail.seoTitle || detail.title + "｜" + detail.productTypeName + "｜恒永达 Foreach",
     description: detail.seoDescription || detail.description,
     ...buildProductSocialMetadata({
       data: detail,

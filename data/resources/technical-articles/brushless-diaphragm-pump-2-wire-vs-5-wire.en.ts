@@ -4,10 +4,10 @@ export const brushlessWiringArticleEnCopy = {
   metadata: {
     title:
       "2-Wire vs 5-Wire Brushless Diaphragm Pumps: What Is the Difference and Which Should You Choose?",
-    seoTitle: "2-Wire vs 5-Wire Brushless Diaphragm Pumps | FOREACH",
+    seoTitle: "2-Wire vs 5-Wire Brushless Diaphragm Pumps | Foreach Technology",
     seoDescription:
-      "Learn the differences between 2-wire and 5-wire brushless diaphragm pump configurations, including VCC, GND, PWM, DIR and FG signals, when to use each option, and configuration considerations for FOREACH DPL30, DPL60, DPL30H and DPGL800 series.",
-    coverAlt: "FOREACH DPL60 2-wire brushless motor",
+      "Learn the differences between 2-wire and 5-wire brushless diaphragm pump configurations, including VCC, GND, PWM, DIR and FG signals, when to use each option, and configuration considerations for Foreach DPL30, DPL60, DPL30H and DPGL800 series.",
+    coverAlt: "Foreach DPL60 2-wire brushless motor",
   },
   kicker: "Brushless Diaphragm Pump · 2-Wire vs 5-Wire",
   deck:
@@ -30,7 +30,7 @@ export const brushlessWiringArticleEnCopy = {
       "Basic drive control is integrated inside the motor. The motor runs when power is applied and stops when power is removed.",
       "The main advantages of a 2-wire configuration are therefore simple wiring, simple control and straightforward system integration.",
     ],
-    figureAlt: "FOREACH DPL60 2-wire brushless motor",
+    figureAlt: "Foreach DPL60 2-wire brushless motor",
     figureCaption:
       "Figure 1 | DPL60 2-wire brushless motor. The 2-wire configuration retains the basic power connections.",
     selectionTitle: "When should you choose 2-wire?",
@@ -64,7 +64,7 @@ export const brushlessWiringArticleEnCopy = {
       "Compared with 2-wire operation, the main advantage of 5-wire operation is that the host controller can further control motor operation and obtain speed feedback.",
       "For example, a PWM signal can adjust motor speed, while an FG signal can help determine whether the motor is running normally. Exact wire order and control logic may differ by model, so always follow the electrical specification for the selected product.",
     ],
-    figureAlt: "FOREACH DPL60 5-wire brushless motor",
+    figureAlt: "Foreach DPL60 5-wire brushless motor",
     figureCaption:
       "Figure 2 | DPL60 5-wire brushless motor. Control and feedback connections can be added in addition to power.",
     selectionTitle: "When should you choose 5-wire?",
@@ -152,9 +152,9 @@ export const brushlessWiringArticleEnCopy = {
       "Brushed / brushless describes the motor type; 2-wire / 5-wire describes the lead and control method. They are not the same concept. A 2-wire motor is not necessarily brushed, and a 5-wire motor is not what makes a motor brushless.",
   },
   products: {
-    title: "Which FOREACH Miniature Diaphragm Pumps Can Use 2-Wire or 5-Wire Configurations?",
+    title: "Which Foreach Miniature Diaphragm Pumps Can Use 2-Wire or 5-Wire Configurations?",
     intro:
-      "Several FOREACH miniature diaphragm pump series can be configured with the appropriate lead arrangement according to the specific model and project-control requirements, including:",
+      "Several Foreach miniature diaphragm pump series can be configured with the appropriate lead arrangement according to the specific model and project-control requirements, including:",
     cards: [
       {
         label: "Miniature liquid diaphragm pump",

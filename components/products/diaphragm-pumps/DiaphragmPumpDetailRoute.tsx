@@ -1,12 +1,14 @@
 import { notFound } from "next/navigation";
 import type { ComponentType, ReactNode } from "react";
 import RelatedResources from "@/components/common/related-resources/RelatedResources";
+import DiaphragmPumpSeriesOptions from "@/components/products/diaphragm-pumps/DiaphragmPumpSeriesOptions";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
 import {
   getDiaphragmPumpCopy,
   getDiaphragmPumpSeriesSeoDescription,
 } from "@/data/products/detail/diaphragm-pump-copy";
-import { getProductDetailTitleOverride } from "@/data/products/detail/product-detail-title-overrides";
+import { getDiaphragmPumpApplicationDetails } from "@/data/products/detail/applications/diaphragm-pump-applications";
+import { getDiaphragmPumpProductPhotos } from "@/data/products/detail/diaphragm-pump-product-photos";
 import {
   diaphragmPumpReferenceModels,
   getDiaphragmPumpReferenceModel,
@@ -18,6 +20,7 @@ import {
   getDiaphragmPumpPath,
   normalizeDiaphragmPumpLocale,
 } from "@/data/products/detail/diaphragm-pump-routes";
+import { getDiaphragmPumpNeutralSeriesSlug } from "@/data/products/detail/diaphragm-pump-series-copy";
 
 import detailsJson from "@/data/products/generated/pumps/diaphragm-pumps/detail/index.json";
 
@@ -296,7 +299,6 @@ function getSeriesTypeLabel(detail: DiaphragmDetail) {
 
   if (title.includes("气液")) return "气液混合隔膜泵";
   if (title.includes("液体")) return "液体隔膜泵";
-  if (title.includes("气体")) return "气体隔膜泵";
 
   return "隔膜泵";
 }
@@ -848,8 +850,12 @@ function findPreferredDiaphragmAssetUrl(
 }
 // DIAPHRAGM_DETAIL_2D_3D_MAPPING_END
 
-function adaptToProductDetailClientData(detail: DiaphragmDetail) {
+function adaptToProductDetailClientData(
+  detail: DiaphragmDetail,
+  locale: ReturnType<typeof normalizeDiaphragmPumpLocale>,
+) {
   const slug = normalizeSlug(detail.slug);
+  const isNeutralSeries = Boolean(getDiaphragmPumpNeutralSeriesSlug(slug));
   const title = getText(detail.title || detail.displayName || detail.seriesId);
   const cleanModelCode = getCleanDiaphragmModelCode(detail);
   const seoProductTitle = getDiaphragmSeoProductTitle(detail, cleanModelCode, title);
@@ -863,21 +869,98 @@ function adaptToProductDetailClientData(detail: DiaphragmDetail) {
   // being serialized into the public RSC payload.
   const faqs: ReturnType<typeof normalizeFaqs> = [];
   const seriesTypeLabel = getSeriesTypeLabel(detail);
+  const reference = getDiaphragmPumpReferenceModel(slug);
+  const applicationDetails = getDiaphragmPumpApplicationDetails(
+    reference?.copyKey,
+    locale,
+  );
 
   const mainImageUrl =
     findPreferredDiaphragmMainImageUrl(detail);
+  const productPhotos = getDiaphragmPumpProductPhotos(reference?.copyKey, locale);
+  const additionalImages =
+    productPhotos?.map((photo) => photo.src) ?? (
+    reference?.copyKey === "dpl30-brushless"
+      ? [
+          "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushless-2-wire-real-product-photo.webp",
+          "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushless-liquid-diaphragm-pump-rear-three-quarter-view.webp",
+          "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushless-liquid-diaphragm-pump-side-two-wire-motor-view.webp",
+          "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushless-liquid-diaphragm-pump-bottom-mounting-view.webp",
+          "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushless-liquid-diaphragm-pump-front-port-view.webp",
+        ]
+      : reference?.copyKey === "dpl60-brushless"
+        ? [
+            "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-600ml-min-brushless-pwm-miniature-liquid-diaphragm-pump-front-side.webp",
+            "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-600ml-min-brushless-pwm-miniature-liquid-diaphragm-pump-rear-angle.webp",
+            "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-600ml-min-brushless-pwm-miniature-liquid-diaphragm-pump-side-angle.webp",
+            "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-600ml-min-brushless-pwm-miniature-liquid-diaphragm-pump-rear.webp",
+            "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-600ml-min-brushless-pwm-miniature-liquid-diaphragm-pump-front.webp",
+          ]
+        : reference?.copyKey === "dpl60-brushed"
+          ? [
+              "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-600ml-min-brushed-miniature-liquid-diaphragm-pump-front-side.webp",
+              "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-600ml-min-brushed-miniature-liquid-diaphragm-pump-rear-angle.webp",
+            ]
+          : []);
+  const additionalImageAlts =
+    productPhotos?.map((photo) => photo.alt) ?? (
+    reference?.copyKey === "dpl30-brushless"
+      ? locale === "zh"
+        ? [
+            "恒永达 DPL30 直流无刷微型液体隔膜泵，流量范围 0–300 mL/min，正侧视图",
+            "恒永达 DPL30 直流无刷微型隔膜液泵，最高耐压 100 kPa，背面三分之四视图",
+            "恒永达 DPL30 直流无刷微型液体隔膜泵，流量范围 0–300 mL/min，横置侧视图，展示双软管接口",
+            "恒永达 DPL30 直流无刷微型隔膜液泵，最高耐压 100 kPa，底部安装面视图",
+            "恒永达 DPL30 直流无刷微型液体隔膜泵，流量范围 0–300 mL/min，正面视图，展示双软管接口",
+          ]
+        : [
+            "Foreach DPL30 brushless DC miniature liquid diaphragm pump, 0–300 mL/min flow range, front three-quarter view",
+            "Foreach DPL30 brushless micro liquid diaphragm pump, maximum pressure 100 kPa, rear three-quarter view",
+            "Foreach DPL30 brushless DC micro liquid diaphragm pump, 0–300 mL/min flow range, side view showing twin hose barbs",
+            "Foreach DPL30 brushless miniature liquid diaphragm pump, maximum pressure 100 kPa, bottom mounting view",
+            "Foreach DPL30 brushless DC micro liquid diaphragm pump, 0–300 mL/min flow range, front port view",
+          ]
+      : reference?.copyKey === "dpl60-brushless"
+        ? locale === "zh"
+          ? [
+              "恒永达 DPL60 直流无刷微型液体隔膜泵，五线 PWM 调速，流量范围 0–600 mL/min，正侧视图",
+              "恒永达 DPL60 五线 PWM 调速直流无刷微型隔膜液泵，最高耐压 100 kPa，横置后侧视图",
+              "恒永达 DPL60 0–600 mL/min PWM 调速微型液体隔膜泵，展示五线电机引线和双软管接口",
+              "恒永达 DPL60 五线 PWM 调速直流无刷微型液体隔膜泵，背面结构视图",
+              "恒永达 DPL60 直流无刷微型隔膜液泵，流量范围 0–600 mL/min，最高耐压 100 kPa，正面视图",
+            ]
+          : [
+              "Foreach DPL60 brushless DC miniature liquid diaphragm pump with five-wire PWM control, 0–600 mL/min flow range, front-side view",
+              "Foreach DPL60 five-wire PWM brushless micro liquid diaphragm pump, maximum pressure 100 kPa, horizontal rear-side view",
+              "Foreach DPL60 PWM-controlled micro liquid diaphragm pump with 0–600 mL/min flow range, showing five motor leads and twin hose barbs",
+              "Foreach DPL60 five-wire PWM brushless DC miniature liquid diaphragm pump, rear structure view",
+              "Foreach DPL60 brushless DC micro liquid diaphragm pump, 0–600 mL/min flow range and maximum pressure 100 kPa, front view",
+            ]
+        : reference?.copyKey === "dpl60-brushed"
+          ? locale === "zh"
+            ? [
+                "恒永达 DPL60 直流有刷微型液体隔膜泵，流量范围 0–600 mL/min，正侧视图",
+                "恒永达 DPL60 直流有刷微型隔膜液泵，最高耐压 100 kPa，横置后侧视图，展示电机端子",
+              ]
+            : [
+                "Foreach DPL60 brushed DC miniature liquid diaphragm pump, 0–600 mL/min flow range, front-side view",
+                "Foreach DPL60 brushed DC micro liquid diaphragm pump, maximum pressure 100 kPa, horizontal rear-side view showing motor terminals",
+              ]
+          : []);
 
-  const drawing2dUrl =
-    findPreferredDiaphragmAssetUrl(
-      detail,
-      "2D"
-    );
+  const drawing2dUrl = isNeutralSeries
+    ? ""
+    : findPreferredDiaphragmAssetUrl(
+        detail,
+        "2D"
+      );
 
-  const model3dUrl =
-    findPreferredDiaphragmAssetUrl(
-      detail,
-      "3D"
-    );
+  const model3dUrl = isNeutralSeries
+    ? ""
+    : findPreferredDiaphragmAssetUrl(
+        detail,
+        "3D"
+      );
 
   const curveImageUrl =
     findMediaUrlByType(detail, "曲线") ||
@@ -894,6 +977,8 @@ function adaptToProductDetailClientData(detail: DiaphragmDetail) {
     detailSlug: slug,
     relationKeys: detail.relationKeys,
     relationPriority: detail.relationPriority,
+    datasheetId: detail.datasheetId,
+    cadRequestAvailable: detail.cadRequestAvailable,
 
     name: seoProductTitle,
     title: seoProductTitle,
@@ -921,6 +1006,7 @@ function adaptToProductDetailClientData(detail: DiaphragmDetail) {
     commonApplications: applications,
     applications,
     applicationScenarios: applications,
+    ...(applicationDetails ? { applicationDetails } : {}),
 
     modelDisplay: cleanModelCode,
     displayModel: cleanModelCode,
@@ -937,8 +1023,11 @@ function adaptToProductDetailClientData(detail: DiaphragmDetail) {
     imageAlt: seoProductTitle,
 
     images: mainImageUrl ? [{ src: mainImageUrl, alt: seoProductTitle }] : [],
-    additionalImages: [],
-    galleryImages: mainImageUrl ? [mainImageUrl] : [],
+    additionalImages,
+    additionalImageAlts,
+    galleryImages: mainImageUrl
+      ? [mainImageUrl, ...additionalImages]
+      : additionalImages,
 
     productImages: mainImageUrl
       ? {
@@ -1016,7 +1105,10 @@ function getPreferredProductDetailData(
     return null;
   }
 
-  return adaptToProductDetailClientData(detail);
+  return adaptToProductDetailClientData(
+    detail,
+    normalizeDiaphragmPumpLocale(locale),
+  );
 }
 
 export function getDiaphragmPumpStaticParams() {
@@ -1040,7 +1132,7 @@ export async function getDiaphragmPumpMetadata({
 
   if (!data) {
     return {
-      title: "Diaphragm Pump | FOREACH",
+      title: "Diaphragm Pump | Foreach Technology",
     };
   }
 
@@ -1048,11 +1140,11 @@ export async function getDiaphragmPumpMetadata({
   const reference = getDiaphragmPumpReferenceModel(slug);
   const localizedReference = reference?.localized[targetLocale];
   const localizedSeriesCopy =
-    !reference && targetLocale !== "zh"
+    !reference
       ? getDiaphragmPumpCopy(data, targetLocale)
       : null;
   const localizedSeriesTitle = localizedSeriesCopy
-    ? getProductDetailTitleOverride(data, targetLocale)
+    ? localizedSeriesCopy.seoTitle || localizedSeriesCopy.title
     : "";
   const title = getText(
     localizedReference?.seoTitle ||
@@ -1078,20 +1170,19 @@ export async function getDiaphragmPumpMetadata({
   );
   const metadataTitle = /FOREACH|恒永达/i.test(title)
     ? title
-    : `${title} | FOREACH`;
+    : `${title} | Foreach Technology`;
   const canonicalPath = getDiaphragmPumpPath(targetLocale, slug);
   const languageAlternates = getDiaphragmPumpLanguageAlternates(slug);
   const socialImage = data.mainImage
     ? new URL(data.mainImage, "https://www.foreachtek.com").toString()
     : undefined;
   const socialImageAlt =
-    targetLocale === "zh"
-      ? getText(data.imageAlt || title)
-      : getText(
-          localizedReference?.h1 ||
-            localizedSeriesCopy?.title ||
-            title,
-        );
+    getText(
+      localizedReference?.h1 ||
+        localizedSeriesCopy?.title ||
+        data.imageAlt ||
+        title,
+    );
 
   return {
     title: metadataTitle,
@@ -1108,7 +1199,7 @@ export async function getDiaphragmPumpMetadata({
       type: "website",
       locale: targetLocale === "zh" ? "zh_CN" : targetLocale,
       url: canonicalPath,
-      siteName: "FOREACH",
+      siteName: "Foreach Technology",
       title: metadataTitle,
       description,
       ...(socialImage
@@ -1197,14 +1288,20 @@ export default async function DiaphragmPumpDetailPage({
     <ProductDetailView
       data={data}
       afterContent={
-        <RelatedResources
-          key="product-related-resources"
-          sourceType="product"
-          sourceId={data.id}
-          sourceSlug={data.slug}
-          relationKeys={data.relationKeys}
-          locale={locale}
-        />
+        <>
+          <DiaphragmPumpSeriesOptions
+            locale={locale}
+            seriesSlug={data.slug}
+          />
+          <RelatedResources
+            key="product-related-resources"
+            sourceType="product"
+            sourceId={data.id}
+            sourceSlug={data.slug}
+            relationKeys={data.relationKeys}
+            locale={locale}
+          />
+        </>
       }
     />
   );

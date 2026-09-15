@@ -22,17 +22,29 @@ export type ProductDatasheet = {
  * a product-specific document can be added without changing the UI layer.
  */
 export const PRODUCT_DATASHEETS: Record<string, ProductDatasheet> = {
+  "sm-series-en": {
+    id: "sm-series-en",
+    file: "/downloads/resources/datasheets/en/Pumps/ps-120b-2507-00004-001-en-sm-piston-pump.pdf",
+    shortTitle: "SM",
+    title: "SM Piston Pump Specification Sheet",
+  },
   "dpl30-series-en": {
     id: "dpl30-series-en",
-    file: "/downloads/resources/datasheets/en/Pumps/ps-150b-2507-00001-001-en-dpl30-diaphragm-pump.pdf",
+    file: "/downloads/resources/datasheets/en/Pumps/PS-150B-2507-00001_A03_en_DPL30 Diaphragm Pump Specification Sheet.pdf",
     shortTitle: "DPL30",
     title: "DPL30 Diaphragm Pump Specification Sheet",
   },
   "dpl60-series-en": {
     id: "dpl60-series-en",
-    file: "/downloads/resources/datasheets/en/Pumps/ps-150b-2507-00002-001-en-dpl60-diaphragm-pump.pdf",
+    file: "/downloads/resources/datasheets/en/Pumps/PS-150B-2607-00001_A00_en_DPL60 Diaphragm Pump Specification Sheet.pdf",
     shortTitle: "DPL60",
     title: "DPL60 Diaphragm Pump Specification Sheet",
+  },
+  "dpgl800-series-en": {
+    id: "dpgl800-series-en",
+    file: "/downloads/resources/datasheets/en/Pumps/PS-150B-2608-00005_A00_en_DPGL800 Diaphragm Pump Specification Sheet.pdf",
+    shortTitle: "DPGL800",
+    title: "DPGL800 Diaphragm Pump Specification Sheet",
   },
 };
 

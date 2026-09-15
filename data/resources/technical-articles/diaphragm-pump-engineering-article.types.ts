@@ -1,4 +1,16 @@
 export type DiaphragmPumpEngineeringArticleSlug =
+  | "fluid-resistance-calculator-liquid-path-design-guide"
+  | "foreach-miniature-diaphragm-pump-oem-integration"
+  | "self-priming-miniature-liquid-diaphragm-pump-selection"
+  | "miniature-diaphragm-pump-flow-pulsation-reduction"
+  | "miniature-diaphragm-pump-noise-vibration-reduction"
+  | "miniature-diaphragm-pump-backflow-check-valve"
+  | "micro-diaphragm-pump-materials-selection"
+  | "ink-circulation-supply-return-pump-diaphragm-pump"
+  | "300-vs-600-ml-min-ink-circulation-return-pump-selection"
+  | "white-ink-circulation-pump-selection-sedimentation"
+  | "ivd-waste-liquid-pump-liquid-vs-gas-liquid-diaphragm-pump"
+  | "ivd-cleaning-wash-rinse-pump-diaphragm-pump"
   | "diaphragm-pump-flow-pressure-curve-guide"
   | "micro-diaphragm-pump-continuous-duty-life"
   | "life-science-dpl60-600ml-min-diaphragm-pump-selection-guide"
@@ -11,7 +23,11 @@ export type DiaphragmPumpEngineeringArticleSlug =
   | "suction-vs-discharge-resistance-diaphragm-pump"
   | "diaphragm-pump-pressure-rating-terms"
   | "100-kpa-vs-600-kpa-diaphragm-pump-selection"
-  | "high-backpressure-fluid-path-pressure-budget";
+  | "high-backpressure-fluid-path-pressure-budget"
+  | "300-ml-min-micro-liquid-diaphragm-pump-self-priming-loss"
+  | "300-ml-min-micro-liquid-diaphragm-pump-motor-runs-no-flow"
+  | "300-ml-min-micro-liquid-diaphragm-pump-water-vs-reagent"
+  | "300-ml-min-micro-liquid-diaphragm-pump-epdm-ptfe-ffkm";
 
 export type EngineeringArticleFaqItem = {
   question: string;

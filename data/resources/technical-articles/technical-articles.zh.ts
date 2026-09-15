@@ -8,7 +8,8 @@
    3. 技术文章用于沉淀产品选型、材料兼容、管路连接、密封方式与应用设计经验
 ========================================================= */
 
-import type { TechnicalArticlesPageData } from "./technical-articles.types";
+import { legacyMotionArticleItems } from "./legacy-motion-control-articles.zh";
+import type { TechnicalArticlesSourcePageData } from "./technical-articles.types";
 
 const technicalArticlesBannerImage =
   "/images/resources/technical-articles/banner/resources-technical-articles-banner-1920x520-v001.webp";
@@ -20,7 +21,7 @@ const technicalArticlesBannerImage =
 */
 const defaultCoverImage = technicalArticlesBannerImage;
 
-export const technicalArticlesZhData: TechnicalArticlesPageData = {
+export const technicalArticlesZhData: TechnicalArticlesSourcePageData = {
   locale: "zh-CN",
 
   hero: {
@@ -48,32 +49,64 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
     placeholder: "请输入关键词",
   },
 
-  categories: [
-    {
-      key: "all",
-      label: "全部",
-    },
-    {
-      key: "fittings-tubing",
-      label: "接头与管路",
-    },
-    {
-      key: "pumps-valves",
-      label: "泵阀与流体控制",
-    },
-    {
-      key: "materials-compatibility",
-      label: "材料与兼容",
-    },
-    {
-      key: "applications",
-      label: "应用说明",
-    },
-  ],
-
   sectionTitle: "技术文章",
 
   articles: [
+    ...legacyMotionArticleItems,
+    {
+      id: "piston-pump-head-material-selection",
+      slug: "piston-pump-head-material-selection",
+      category: "pumps-valves",
+      title: "柱塞泵泵头材料怎么选？常用材料与选型方法",
+      summary:
+        "柱塞泵泵头材料会影响介质兼容性、结构稳定性、密封、清洗与项目成本。本文对比PMMA、PCTG、PPS、PVDF、PP、PTFE、PEEK、POM和PSU，并说明完整接液路径的验证方法。",
+      date: "2026-09-06",
+      coverImage:
+        "/images/resources/technical-articles/piston-pump/piston-pump-head-material-selection-cover.webp",
+      coverAlt: "Foreach透明柱塞泵泵头材料与接液结构特写",
+      content: [
+        {
+          title: "柱塞泵泵头材料对比",
+          content:
+            "本文介绍PMMA、PCTG、PPS、PVDF、PP、PTFE、PEEK、POM和PSU的常见选型方向，并说明材料名称不能代替真实介质与工况验证。完整正文由柱塞泵泵头材料技术文章组件渲染。",
+        },
+        {
+          title: "完整接液路径与项目验证",
+          content:
+            "泵头选材需要同时核对柱塞、密封、阀、管路和接头，并结合介质、浓度、温度、接触时间、压力、清洗方式和目标工作液量完成样件及整机验证。",
+        },
+      ],
+      seoTitle: "柱塞泵泵头材料怎么选？PMMA、PEEK等材料对比 | Foreach Technology",
+      seoDescription:
+        "柱塞泵泵头材料怎么选？对比PMMA、PCTG、PPS、PVDF、PP、PTFE、PEEK、POM和PSU的选型方向，了解介质兼容、完整接液路径与验证方法。",
+    },
+    {
+      id: "piston-pump-accuracy-repeatability-resolution",
+      slug: "piston-pump-accuracy-repeatability-resolution",
+      category: "pumps-valves",
+      title: "柱塞泵的准确性、重复性和分辨率有什么区别？",
+      summary:
+        "柱塞泵分辨率不等于分液准确性。了解准确性、重复性和分辨率的区别，以及步数、行程、气泡、阀门和液体性质对小体积分液结果的影响。",
+      date: "2026-09-06",
+      coverImage:
+        "/images/resources/technical-articles/piston-pump/piston-pump-accuracy-repeatability-resolution-cover.webp",
+      coverAlt: "Foreach SM系列精密柱塞泵实物图",
+      content: [
+        {
+          title: "柱塞泵准确性、重复性和分辨率",
+          content:
+            "本文解释柱塞泵准确性、重复性和分辨率的区别，并说明为什么理论每步液量不能直接作为最小可靠分液量。完整正文由柱塞泵性能技术文章组件渲染。",
+        },
+        {
+          title: "小体积分液与完整液路验证",
+          content:
+            "文章结合Foreach EA-500-PMMA的满量程和2%量程参数，介绍机械背隙、阀门、气泡、介质、控制程序及测试方法对分液结果的影响。",
+        },
+      ],
+      seoTitle: "柱塞泵准确性、重复性与分辨率详解 | Foreach Technology",
+      seoDescription:
+        "柱塞泵分辨率不等于分液准确性。本文解释准确性、重复性和分辨率的区别，以及电机步数、工作行程、气泡、阀门和液体性质对小体积分液结果的影响。",
+    },
     {
       id: "dpl30-liquid-diaphragm-pump-selection-guide",
       slug: "dpl30-liquid-diaphragm-pump-selection-guide",
@@ -82,7 +115,7 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       title:
         "300 mL/min液体隔膜泵怎么选？DPL30工作原理与型号选型指南",
       summary: "",
-      date: "2026-08-04",
+      date: "2026-07-10",
 
       /*
        * 第一阶段暂时沿用技术文章默认封面。
@@ -116,7 +149,7 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       title: "工程实践｜微流控与精密节流场景 Cv/Kv 系数计算失真分析与修正指南",
       summary:
         "传统 Cv/Kv 计算通常建立在充分湍流和阻力平方区假设之上。在微小通径、低流速和低雷诺数工况下，直接套用可能明显低估实际压降。本文分析失真原因，并介绍雷诺修正、Churchill 摩擦因子及小孔节流修正方法。",
-      date: "2026-07-23",
+      date: "2026-07-07",
       coverImage: defaultCoverImage,
       content: [
         {
@@ -166,7 +199,7 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       title: "微流体系统中如何选择合适的管路连接件",
       summary:
         "管路连接件不仅影响液路系统的密封性，也会影响装配效率、维护便利性和长期稳定性。选择接头时，需要综合考虑管材尺寸、连接方式、使用压力、介质类型和安装空间。",
-      date: "2026-06-08",
+      date: "2026-07-04",
       coverImage:
         "/images/resources/technical-articles/covers/selecting-microfluidic-fittings.webp",
       content: [
@@ -189,7 +222,7 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       title: "PEEK、PTFE、PFA 材料在液路系统中的应用差异",
       summary:
         "PEEK、PTFE、PFA 都是微流体系统中常见的高性能材料，但它们在机械强度、耐化学性、透明度、柔韧性和加工方式上存在明显差异。",
-      date: "2026-06-07",
+      date: "2026-07-01",
       coverImage:
         "/images/resources/technical-articles/covers/peek-ptfe-pfa-material-differences.webp",
       content: [
@@ -212,7 +245,7 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       title: "低压管路连接件和高压管路连接件有什么区别",
       summary:
         "低压连接件更关注装配效率和密封可靠性，高压连接件则更强调结构强度、密封方式和耐压稳定性。两者不能简单互相替代。",
-      date: "2026-06-06",
+      date: "2026-06-28",
       coverImage:
         "/images/resources/technical-articles/covers/low-pressure-vs-high-pressure-fittings.webp",
       content: [
@@ -235,7 +268,7 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       title: "硬管连接和软管连接的主要差异",
       summary:
         "硬管连接更适合尺寸稳定和定位明确的液路结构，软管连接则更适合需要弯曲、缓冲或灵活布管的场景。",
-      date: "2026-06-05",
+      date: "2026-06-25",
       coverImage:
         "/images/resources/technical-articles/covers/rigid-tubing-vs-flexible-tubing.webp",
       content: [
@@ -258,7 +291,7 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       title: "接头密封失效的常见原因",
       summary:
         "接头漏液不一定是接头本身问题，也可能与管材尺寸、安装方式、切管质量、密封件状态和系统压力有关。",
-      date: "2026-06-04",
+      date: "2026-06-22",
       coverImage:
         "/images/resources/technical-articles/covers/common-fitting-sealing-failure-causes.webp",
       content: [
@@ -278,24 +311,28 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       id: "micro-plunger-pump-selection",
       slug: "micro-plunger-pump-selection",
       category: "pumps-valves",
-      title: "微量柱塞泵选型时需要关注哪些指标",
+      title: "精密柱塞泵是什么？工作原理、优势与应用介绍",
       summary:
-        "微量柱塞泵选型时，需要关注分配体积、精度、重复性、压力范围、接口形式、驱动方式和系统通信方式。",
-      date: "2026-06-03",
+        "了解精密柱塞泵的工作原理、主要优势、应用场景及基础选型方法，并认识Foreach EA、SM和TM柱塞泵系列。",
+      date: "2026-06-19",
       coverImage:
-        "/images/resources/technical-articles/covers/micro-plunger-pump-selection.webp",
+        "/images/resources/technical-articles/piston-pump/micro-plunger-pump-selection-cover.webp",
+      coverAlt: "Foreach TM系列超微型精密柱塞泵实物图",
       content: [
         {
-          title: "核心参数不只是体积范围",
+          title: "精密柱塞泵如何工作",
           content:
-            "微量柱塞泵常用于 IVD、实验室自动化、分析仪器等场景，主要承担精准吸液、排液和定量分配任务。选型时首先需要确认单次分配体积范围和目标精度要求，其次需要确认系统压力、流体类型、运行频率和寿命要求。",
+            "精密柱塞泵利用柱塞往复运动完成液体吸取、计量和分配。完整正文由精密柱塞泵技术文章组件渲染。",
         },
         {
-          title: "需要和系统整体匹配",
+          title: "Foreach柱塞泵系列与选型",
           content:
-            "除了泵本体参数，还需要关注接口形式、管路连接方式、控制协议和整机空间限制。对于设备厂商来说，柱塞泵并不是单独工作的部件，而是液路系统中的核心执行单元，需要与阀、管路、接头、传感器和控制系统协同匹配。",
+            "文章介绍EA、SM、TM系列，并从工作液量、准确性、重复性、介质、压力、接口、安装和控制等方面说明基础选型方法。",
         },
       ],
+      seoTitle: "精密柱塞泵是什么？工作原理、应用与选型 | Foreach Technology",
+      seoDescription:
+        "了解精密柱塞泵的工作原理、主要优势、应用场景及基础选型方法，并认识Foreach EA、SM和TM柱塞泵系列。",
     },
     {
       id: "solenoid-valves-in-microfluidic-systems",
@@ -304,7 +341,7 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       title: "电磁阀在微流体系统中的作用",
       summary:
         "电磁阀用于控制流路通断、切换和分配，是液路系统中实现自动化控制的重要部件。",
-      date: "2026-06-02",
+      date: "2026-06-16",
       coverImage:
         "/images/resources/technical-articles/covers/solenoid-valves-in-microfluidic-systems.webp",
       content: [
@@ -327,7 +364,7 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       title: "材料兼容表可以作为最终选型依据吗",
       summary:
         "材料兼容表适合作为初步筛选工具，但不能完全替代实际工况验证。最终选型仍需结合温度、浓度、压力和接触时间判断。",
-      date: "2026-06-01",
+      date: "2026-06-13",
       coverImage:
         "/images/resources/technical-articles/covers/material-compatibility-table-reference.webp",
       content: [
@@ -350,7 +387,7 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       title: "IVD 设备中液路系统选型需要关注哪些参数",
       summary:
         "IVD 设备液路系统通常需要兼顾精度、稳定性、洁净度、材料兼容和长期维护成本。单个零部件的选择会影响整机液路表现。",
-      date: "2026-05-31",
+      date: "2026-06-10",
       coverImage:
         "/images/resources/technical-articles/covers/ivd-fluidic-system-selection-parameters.webp",
       content: [
@@ -373,7 +410,7 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       title: "如何理解液路系统中的耐压、流量与材料兼容",
       summary:
         "耐压、流量和材料兼容是液路系统设计中的三个核心因素，它们相互影响，不能单独判断。",
-      date: "2026-05-30",
+      date: "2026-06-07",
       coverImage:
         "/images/resources/technical-articles/covers/pressure-flow-material-compatibility.webp",
       content: [
@@ -396,7 +433,7 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       title: "为什么微流体产品选型需要结合应用场景",
       summary:
         "同样的产品在不同应用场景下可能表现不同，因此微流体产品选型必须结合介质、压力、精度、安装空间和维护方式综合判断。",
-      date: "2026-05-29",
+      date: "2026-06-04",
       coverImage:
         "/images/resources/technical-articles/covers/why-application-context-matters.webp",
       content: [
@@ -419,7 +456,7 @@ export const technicalArticlesZhData: TechnicalArticlesPageData = {
       title: "如何根据图纸或样品进行接头替代选型",
       summary:
         "接头替代选型不仅要看外形尺寸，还要确认接口规格、密封方式、材料、耐压和实际应用条件。",
-      date: "2026-05-28",
+      date: "2026-06-01",
       coverImage:
         "/images/resources/technical-articles/covers/fitting-replacement-by-drawings-or-samples.webp",
       content: [

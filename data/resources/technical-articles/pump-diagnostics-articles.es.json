@@ -1,0 +1,662 @@
+[
+  {
+    "title": "¿Por qué las burbujas retrasan o alteran la dosificación de una bomba de pistón?",
+    "seo": "Burbujas en bombas de pistón: error de dosificación y cebado",
+    "deck": "Completar la carrera del pistón no demuestra que todo el líquido haya llegado al recipiente. La compresión de una burbuja almacena temporalmente desplazamiento; su expansión puede producir goteo posterior o afectar al ciclo siguiente. Localice dónde aparece el gas y compare presión y masas individuales antes y después del cebado.",
+    "sections": [
+      {
+        "title": "¿Dónde queda el volumen desplazado?",
+        "paragraphs": [
+          "El desplazamiento ideal es el área efectiva del pistón multiplicada por su recorrido. El gas, los tubos flexibles y las cavidades de las válvulas pueden almacenar parte de ese volumen. La entrega útil es el líquido recibido en el destino; las carreras cortas y la primera dosis tras una inversión son especialmente sensibles.",
+          "Como ejemplo, una burbuja cerrada de 10 μL pasa a unos 8,33 μL al aumentar la presión absoluta de 100 a 120 kPa bajo una hipótesis isotérmica de gas ideal. Los aproximadamente 1,67 μL almacenados no son un error medido de Foreach ni una pérdida definitiva: pueden liberarse al final de esa dosis o en otra posterior."
+        ]
+      },
+      {
+        "title": "Relacionar posición y momento",
+        "paragraphs": [
+          "Registre si el gas aparece primero en la aspiración, cámara, válvula o salida, junto con los momentos de aspiración, conmutación y descarga. El tramo transparente debe modificar lo mínimo posible la resistencia y el volumen muerto; no permite descartar gas dentro de una cámara opaca.",
+          "Una primera dosis insuficiente también puede deberse a holgura mecánica, demora de válvula o elasticidad del tubo. La evidencia es más sólida si una modificación controlada del estado de gas produce una mejora repetible sin cambiar las demás condiciones."
+        ]
+      },
+      {
+        "title": "Separar aire residual, entrada de aire y desgasificación",
+        "paragraphs": [
+          "La estabilización rápida después del cebado apoya la hipótesis de aire residual de montaje o cambio de líquido. Si siguen apareciendo burbujas en una conexión de entrada, compruebe su estanqueidad durante la aspiración: puede entrar aire sin observar una fuga externa de líquido.",
+          "El calentamiento o la caída de presión pueden liberar gas disuelto. Compare el mismo líquido antes y después de desgasificarlo, a igual temperatura, nivel y condiciones de presión. Una mejora no permite atribuir la causa al gas disuelto si también cambian viscosidad o temperatura."
+        ]
+      },
+      {
+        "title": "Validar el cebado sin aplicar una corrección fija",
+        "paragraphs": [
+          "Fije volumen objetivo, temperatura, nivel, secuencia de válvulas y carga de salida. Pese cada dosis y registre presión de entrada y salida. Compare estado inicial, cebado controlado, funcionamiento prolongado y reinicio, separando primeras dosis y régimen estable.",
+          "Defina criterios de cebado del proyecto mediante masas repetibles, trazas de presión y observación del gas. Ni un número universal de ciclos ni un volumen adicional fijo resuelven todos los mecanismos. Compruebe si el síntoma reaparece con el tiempo."
+        ]
+      },
+      {
+        "title": "Distinguir descarga y transferencia de la gota",
+        "paragraphs": [
+          "Si el volumen recogido en la salida es correcto pero el pocillo recibe menos, revise gotas retenidas, salpicaduras, mojado exterior y tiempos de transferencia. Mantenga una carga equivalente al cambiar la recogida; retirar la aguja cambia la contrapresión.",
+          "Cuando el diseño admita una prueba de mantenimiento de presión, conserve posición de válvula, presión inicial y temperatura. Expansión del gas, relajación del tubo y fuga interna influyen en la caída de presión; su pendiente no identifica por sí sola una válvula defectuosa."
+        ]
+      },
+      {
+        "title": "Evaluar EAS y repetir la prueba completa",
+        "paragraphs": [
+          "La especificación oficial de Foreach EAS describe una cámara que facilita la expulsión del aire. Es una opción para reducir gas retenido, no una garantía para cualquier líquido, orientación o circuito. Confirme capacidad, conexiones y circuito de válvulas con la especificación oficial.",
+          "La configuración EA-500-PMMA muestra 500 μL y 2000 pasos completos:0,25 μL teóricos por paso, no una garantía de exactitud del líquido entregado. Repita ensayos con reactivo real, volumen mínimo, primera dosis, régimen estable y reinicio. La referencia Hamilton ilustra la observación conjunta de presión y gas, no sensores incluidos en Foreach."
+        ]
+      }
+    ],
+    "formula": {
+      "section": 0,
+      "expression": "P₁V₁ ≈ P₂V₂; ΔVgas = V₁(1 − P₁/P₂)",
+      "note": "Modelo aproximado para gas ideal cerrado, casi isotérmico y sin disolución ni transferencia de masa. Presiones absolutas. ΔVgas es almacenamiento temporal, no una fórmula del déficit final."
+    },
+    "table": {
+      "section": 1,
+      "headers": [
+        "Lugar o evento",
+        "Primera comprobación",
+        "Límite de interpretación"
+      ],
+      "rows": [
+        [
+          "Cámara; primera dosis tras inversión",
+          "Cebado y establecimiento de presión",
+          "También puede intervenir la holgura"
+        ],
+        [
+          "Burbujas continuas en entrada",
+          "Conexiones, nivel y temperatura",
+          "Pueden coexistir entrada y liberación de gas"
+        ],
+        [
+          "Goteo al parar",
+          "Almacenamiento y posición de válvula",
+          "No demuestra una fuga"
+        ],
+        [
+          "Déficit solo en el pocillo",
+          "Formación y transferencia de gota",
+          "Conservar la contrapresión de referencia"
+        ]
+      ]
+    },
+    "diagram": "Esquema de principio: el pistón comprime primero la burbuja y la recuperación de presión puede liberar líquido posterior. Las flechas indican flujo; las dimensiones no corresponden a un producto real.",
+    "faq": [
+      {
+        "question": "¿Las burbujas reducen siempre todas las dosis?",
+        "answer": "No. Pueden retrasar la entrega, causar goteo posterior o acoplar ciclos. El resultado depende de presión, válvulas y ventana de recogida."
+      },
+      {
+        "question": "¿Basta con recuperar el resultado tras cebar?",
+        "answer": "No. Repita funcionamiento prolongado y reinicio; una entrada continua de aire o desgasificación puede reproducir el problema."
+      },
+      {
+        "question": "¿Una resolución alta elimina este error?",
+        "answer": "No. La resolución geométrica no elimina almacenamiento en gas o tubos ni asegura la transferencia completa de gotas."
+      },
+      {
+        "question": "¿EAS garantiza ausencia de burbujas con cualquier reactivo?",
+        "answer": "No existe esa garantía general. Valide líquido, orientación, cavidades y secuencia de cebado reales."
+      }
+    ],
+    "links": [
+      "Exactitud, repetibilidad y resolución",
+      "Velocidad de aspiración y espera con líquidos viscosos",
+      "Especificación oficial EAS en inglés",
+      "Bombas de pistón de precisión"
+    ],
+    "description": "Diagnostique burbujas en bombas de pistón mediante presión, masas individuales y cebado controlado. Distinga gas retenido, entrada de aire y transferencia de gotas."
+  },
+  {
+    "title": "¿Cómo ajustar aspiración y espera de una bomba de pistón para reactivos viscosos?",
+    "seo": "Bomba de pistón: velocidad de aspiración y espera con líquidos viscosos",
+    "deck": "La ventana estable de aspiración depende de resistencia, tiempo de llenado y presión. Ensaye por separado velocidad y espera posterior; elija una combinación rápida que cumpla sesgo, repetibilidad, ausencia de gas y tiempo de ciclo. Los ajustes con agua no validan automáticamente el reactivo ni una carrera terminada demuestra equilibrio hidráulico.",
+    "sections": [
+      {
+        "title": "Relacionar viscosidad, diámetro y pérdida de presión",
+        "paragraphs": [
+          "En flujo laminar newtoniano plenamente desarrollado dentro de un tubo circular, la pérdida aumenta con viscosidad y longitud y depende de la cuarta potencia del diámetro. Ensanchar el tubo principal no resuelve necesariamente una restricción en válvula, filtro, conexión o aguja.",
+          "La relación estacionaria describe un tramo de tubo, no todos los transitorios de cámara. No debe aplicarse directamente a reactivos no newtonianos, con partículas o comportamiento pseudoplástico. Registre temperatura y condiciones reológicas y mida las pérdidas reales."
+        ]
+      },
+      {
+        "title": "El llenado puede continuar después del movimiento",
+        "paragraphs": [
+          "Al retroceder el pistón, el líquido debe llenar el volumen creado a través de una resistencia. Con gas y tubos elásticos, el llenado y la recuperación de presión pueden continuar después de parar. Conmutar inmediatamente puede trasladar ese transitorio a la siguiente etapa.",
+          "Defina la espera por presión y masa reproducibles. Las guías Tecan respaldan ajustar velocidad y demora para líquidos viscosos, pero sus valores corresponden a plataformas y puntas concretas; no establecen 200 ms o 500 ms universales para Foreach."
+        ]
+      },
+      {
+        "title": "Construir una matriz velocidad×espera",
+        "paragraphs": [
+          "Dentro del rango permitido de bomba y controlador, combine tres velocidades —baja, media y alta— con tres esperas —corta, media y larga— en un ensayo 3×3. Empiece de forma conservadora y mantenga volumen, descarga, nivel, válvulas y contrapresión.",
+          "Guarde masas individuales, sesgo medio, CV, mínima presión de entrada, burbujas y ciclo completo. El número de repeticiones depende de incertidumbre y aceptación del proyecto; los tres niveles son factores experimentales, no recomendaciones. Intercale repeticiones de referencia para detectar calentamiento."
+        ]
+      },
+      {
+        "title": "Optimizar descarga y separación de la gota",
+        "paragraphs": [
+          "La aspiración está limitada por llenado y margen de baja presión. La descarga también depende de contrapresión, salpicaduras y separación de gotas. Las velocidades no tienen por qué coincidir: estabilice primero la aspiración y después ajuste descarga, desaceleración final y movimiento de aguja.",
+          "Compare aspiración, espera, conmutación, descarga, caída de la gota y recarga. Un movimiento más rápido puede perder su ventaja si exige más espera o produce dosis rechazadas."
+        ]
+      },
+      {
+        "title": "Cuándo modificar el circuito",
+        "paragraphs": [
+          "Si solo pasa una aspiración muy lenta, mida pérdidas en tubos, válvulas y filtros. Cuando la aplicación lo admita, acorte la entrada o aumente su sección mínima. Revise volumen muerto, consumo, limpieza y espacio tras cada cambio.",
+          "Mantenga la temperatura del reactivo reproducible. Puede alterar simultáneamente viscosidad, densidad, presión de vapor y liberación de gas. No proponga calentar solo para bajar viscosidad ni valide una fórmula final con una muestra diluida o acondicionada de otra manera."
+        ]
+      },
+      {
+        "title": "Guardar una clase de líquido completa",
+        "paragraphs": [
+          "Conserve rango de volumen, lote y temperatura, geometría, válvulas, agujas, velocidades y aceleraciones de aspiración/descarga, esperas, retardos y resultados. Elija un ciclo breve dentro de todos los límites y con margen frente a temperatura y nivel.",
+          "Use pasos y capacidad del modelo concreto. EA-500-PMMA y SM-500-PMMA muestran 500 μL en 2000 pasos completos; TM-500-PMMA,500 μL en 2540. La misma frecuencia de pulsos no implica el mismo caudal geométrico; también hay que validar el reactivo."
+        ]
+      }
+    ],
+    "formula": {
+      "section": 0,
+      "expression": "ΔP = 128 μ L Q / (π d⁴)",
+      "note": "μ: viscosidad dinámica; L: longitud; Q: caudal volumétrico; d: diámetro interior. Unidades SI coherentes. Tubo circular rígido, flujo laminar newtoniano plenamente desarrollado; excluye entrada, componentes locales y transitorios."
+    },
+    "table": {
+      "section": 2,
+      "headers": [
+        "Factor",
+        "Mantener fijo",
+        "Registrar"
+      ],
+      "rows": [
+        [
+          "Velocidad baja/media/alta",
+          "Descarga, válvulas y volumen",
+          "Presión de entrada y burbujas"
+        ],
+        [
+          "Espera corta/media/larga",
+          "Velocidad elegida y circuito",
+          "Masas, sesgo y CV"
+        ],
+        [
+          "Referencia intercalada",
+          "Lote y contrapresión",
+          "Temperatura y orden"
+        ],
+        [
+          "Validación de ventana",
+          "Nivel mínimo y temperaturas límite",
+          "Tiempo total y tasa de aceptación"
+        ]
+      ]
+    },
+    "diagram": "Relación de ingeniería: viscosidad μ, longitud L y diámetro d afectan a la pérdida de aspiración. Compruebe la recuperación de presión antes de conmutar la válvula.",
+    "faq": [
+      {
+        "question": "¿Cuanto más lenta la aspiración, mejor?",
+        "answer": "No. Debe cumplir volumen, presión, gas y tiempo. Una lentitud excesiva desperdicia tiempo y no repara fugas."
+      },
+      {
+        "question": "¿Puedo fijar siempre 500 ms de espera?",
+        "answer": "No. Valide presión y dosis con el líquido, geometría y volumen de trabajo reales."
+      },
+      {
+        "question": "¿Por qué fallan los ajustes con agua?",
+        "answer": "Viscosidad, densidad, tensión superficial, volatilidad y gas disuelto cambian el llenado y las gotas. El agua solo valida sus condiciones."
+      },
+      {
+        "question": "¿La corriente del motor demuestra llenado completo?",
+        "answer": "No. Es una señal auxiliar; hacen falta presión, observación de gas y masa final."
+      }
+    ],
+    "links": [
+      "Aceleración y desaceleración del pistón",
+      "Materiales del cabezal",
+      "Error de dosificación por burbujas",
+      "Bombas de pistón de precisión"
+    ],
+    "description": "Ajuste aspiración y espera para reactivos viscosos con una matriz de presión, sesgo, repetibilidad, burbujas y tiempo completo de ciclo."
+  },
+  {
+    "title": "¿Cómo aislar la deriva de dosificación de una bomba de pistón?",
+    "seo": "Deriva de dosificación: tendencias y pruebas cruzadas de bombas de pistón",
+    "deck": "Una tendencia de volumen indica cambios del sistema, no demuestra desgaste. Guarde cada dosis con temperatura, nivel, inversión y cebado; después controle esas variables y cruce bombas, válvulas y circuitos. Analice sesgo medio y CV por separado antes de concluir que se han degradado piezas o juntas.",
+    "sections": [
+      {
+        "title": "Separar tendencia temporal y dispersión",
+        "paragraphs": [
+          "Calcule el error de cada dosis y conserve su orden temporal, sin limitarse a promedios iniciales y finales. Un CV pequeño en ventanas cortas puede coexistir con una media que se desplaza; un valor aislado tampoco demuestra deriva prolongada.",
+          "Use densidad a la temperatura real al convertir masas. Compruebe cero y deriva de la balanza, evaporación y recogida. Un ambiente de medición cambiante puede parecer una bomba cambiante."
+        ]
+      },
+      {
+        "title": "Marcar los eventos que desencadenan cambios",
+        "paragraphs": [
+          "Registre arranque, inversión, recarga, variación de nivel, cebado, parada y reinicio. Sincronice temperatura del líquido y entorno de la bomba con presión de entrada/salida. Las marcas orientan el siguiente ensayo; una forma de curva no identifica por sí sola la causa.",
+          "Un fallo tras inversión sugiere holgura, demora de válvula o establecimiento de presión. La dependencia del nivel orienta a altura estática o ventilación. La recuperación breve tras cebado apoya participación de gas, pero hay que localizar su origen."
+        ]
+      },
+      {
+        "title": "Probar primero las condiciones reversibles",
+        "paragraphs": [
+          "Mantenga programa, contrapresión y temperatura mientras prueba por separado cebado, nivel fijo, ventilación y una menor velocidad permitida. Cambie una variable y vuelva a referencia para distinguir causalidad de evolución temporal.",
+          "No sustituya bomba, líquido y tubos simultáneamente. El circuito de referencia debe conservar la secuencia de válvulas y una carga equivalente; de otro modo la recuperación solo demuestra un cambio global de condiciones."
+        ]
+      },
+      {
+        "title": "Cruzar las dos bombas con los dos circuitos",
+        "paragraphs": [
+          "Pruebe bomba sospechosa y bomba de referencia en el mismo circuito de referencia calificado y después ambas en el instrumento: comparación 2×2. Igualar volumen, temperatura, nivel, accionamiento y válvulas; confirmar que la bomba patrón está calificada.",
+          "Si el fallo sigue a una bomba, aísle válvula, junta y mecanismo. Si ambas derivan solo en el instrumento, investigue el sistema. Una interacción de carga y controlador puede impedir una atribución simple bomba/circuito."
+        ]
+      },
+      {
+        "title": "Límites de la prueba de mantenimiento de presión",
+        "paragraphs": [
+          "Cuando el diseño y la presión admisible lo permitan, compare la misma presión inicial, válvula y temperatura con una referencia histórica o nueva. Una caída más rápida apoya fuga o cambio de almacenamiento, pero no identifica un asiento defectuoso por sí sola.",
+          "Gas, relajación de tubos, temperatura y posición del sensor también cambian la curva. Ensaye la holgura con inversiones; aumentar continuamente la compensación puede ocultar gas, retorno o efectos térmicos."
+        ]
+      },
+      {
+        "title": "Exigir evidencias convergentes de desgaste",
+        "paragraphs": [
+          "Tras excluir medición, cebado, nivel y control, hay evidencia más sólida cuando la degradación sigue a una pieza envejecida, desaparece al sustituirla y concuerda con la inspección. Distinga contaminación, cristalización y cambio de material.",
+          "Conserve referencias de equipo nuevo, etapas de vida y mantenimiento. Repita la duración que originó el fallo y las condiciones desfavorables. Los valores a carrera completa de EA/EAS/SM/TM no definen límites de deriva para todos los reactivos y volúmenes; use requisitos del instrumento e incertidumbre."
+        ]
+      }
+    ],
+    "formula": {
+      "section": 0,
+      "expression": "eᵢ = (Vᵢ − Vtarget) / Vtarget × 100%",
+      "note": "Vtarget debe ser positivo. Conserve el orden temporal y calcule medias y CV en ventanas fijas por separado; un único CV puede ocultar la deriva."
+    },
+    "table": {
+      "section": 3,
+      "headers": [
+        "Combinación",
+        "Circuito de referencia",
+        "Circuito del instrumento"
+      ],
+      "rows": [
+        [
+          "Bomba de referencia",
+          "Confirmar condición calificada",
+          "¿El sistema provoca deriva?"
+        ],
+        [
+          "Bomba sospechosa",
+          "¿El fallo sigue a la bomba?",
+          "Reproducir síntoma original"
+        ],
+        [
+          "Controles comunes",
+          "Mismo líquido, temperatura y programa",
+          "Carga equivalente; presión de entrada"
+        ]
+      ]
+    },
+    "diagram": "Esquema diagnóstico: tendencia temporal, cebado, nivel fijo y sustituciones cruzadas. La curva es sintética, no un ensayo de vida medido. P₁/P₂: bombas de referencia/sospechosa; C₁/C₂: circuitos de referencia/instrumento.",
+    "faq": [
+      {
+        "question": "¿Una entrega decreciente demuestra retorno por válvula?",
+        "answer": "No. Nivel, ventilación, gas, temperatura y medición pueden producirlo. Use comparaciones controladas y presión."
+      },
+      {
+        "question": "¿Un CV aceptable descarta deriva?",
+        "answer": "No. La dispersión puede ser pequeña mientras cambia la media. Revise sesgo y serie temporal."
+      },
+      {
+        "question": "¿Recuperarse tras cebado descarta desgaste?",
+        "answer": "Solo apoya la participación de gas. Continúe la operación y compare recurrencia y componentes."
+      },
+      {
+        "question": "¿Cómo separar causas de bomba e instrumento?",
+        "answer": "Cruce bomba sospechosa/patrón con circuito de referencia/instrumento, manteniendo líquido, programa y carga equivalente; después aísle piezas."
+      }
+    ],
+    "links": [
+      "Exactitud, repetibilidad y resolución",
+      "Compensación de holgura",
+      "Materiales del cabezal",
+      "Burbujas y error de dosificación"
+    ],
+    "description": "Aísle la deriva de dosificación con tendencias, presión, temperatura y pruebas cruzadas de bombas y circuitos antes de concluir desgaste."
+  },
+  {
+    "title": "¿Necesita un amortiguador de pulsaciones la bomba de membrana? Validación A/B",
+    "seo": "Amortiguador de pulsaciones para bomba de membrana: validación A/B",
+    "deck": "Un amortiguador se justifica por la función de la carga y sus costes de arranque, líquido residual, limpieza y volumen muerto. Defina la ondulación admisible y compare régimen estable y arranque/parada con y sin amortiguación para la misma tarea. Una curva más suave no basta para aprobar.",
+    "sections": [
+      {
+        "title": "Convertir la suavidad en un requisito funcional",
+        "paragraphs": [
+          "La descarga alternativa genera caudal periódico y la resistencia, inercia y elasticidad del circuito determinan la presión en la carga. La guía general explica esas causas; aquí se decide si merece la pena conservar un amortiguador y cómo validarlo.",
+          "Defina posición de medida, ancho de banda, valor pico a pico admisible y función final: señal de celda, uniformidad de chorro o falsas protecciones. Si la transferencia total ya cumple, añadir un accesorio puede no aportar beneficio."
+        ]
+      },
+      {
+        "title": "El almacenamiento cambia arranque y parada",
+        "paragraphs": [
+          "El elemento almacena líquido cuando sube la presión y lo libera cuando baja. La compliancia efectiva relaciona volumen y presión, pero varía con presión y construcción. Un caudal nominal de 300 o 600 mL/min no determina un volumen universal.",
+          "Más almacenamiento puede alargar la presurización y generar líquido después de parar. Evalúe compatibilidad, limpieza, gas retenido, presión admisible y orientación. Dejar burbujas deliberadamente no equivale a un elemento de amortiguación aislado y calificado."
+        ]
+      },
+      {
+        "title": "Comparar la misma tarea y declarar cambios del punto de trabajo",
+        "paragraphs": [
+          "A es el circuito original y B incorpora el amortiguador. Mantenga bomba, temperatura, nivel, geometría principal, carga y puntos de medida. Registre modelo completo, mando y versión de control; instale según el fabricante.",
+          "Primero compare igual orden de accionamiento para observar cambios de caudal y presión. Si la configuración permite regular velocidad, añada una comparación a igual caudal medio declarando el nuevo mando. Suavidad con menos caudal no demuestra amortiguación en el mismo punto de trabajo."
+        ]
+      },
+      {
+        "title": "Medir régimen estable y ciclos cortos por separado",
+        "paragraphs": [
+          "Registre picos, valles, caudal medio y señal del proceso con el mismo ancho de banda. La ondulación relativa necesita media significativamente distinta de cero y referencia de presión coherente; cerca de cero, use pico a pico absoluto.",
+          "Ejecute la secuencia real y mida tiempo a presión funcional, volumen entregado, cola tras parada y estado inicial del siguiente ciclo. Iguale ventanas de contador y recogida: líquido retenido en el amortiguador no es automáticamente una fuga."
+        ]
+      },
+      {
+        "title": "Conservar o retirar según el resultado completo",
+        "paragraphs": [
+          "Conserve B cuando mejora función y pulsación y también cumplen volumen, arranque, cola y limpieza. Si mejora régimen estable pero falla la dosis corta o el goteo, revise geometría, montaje o control y repita.",
+          "Si A cumple y B solo estabiliza la pantalla aumentando retención y mantenimiento, puede convenir A. Si ninguno cumple, vuelva a suministro de entrada, resistencia o arquitectura de bomba; el amortiguador no es un remedio universal."
+        ]
+      },
+      {
+        "title": "Qué establecen las especificaciones DPL30 y DPL60",
+        "paragraphs": [
+          "DPL30 indica 300 mL/min sin carga,100 kPa de presión nominal y 6 mH₂O de autocebado; DPL60,600 mL/min,100 kPa y 3 mH₂O. Son magnitudes separadas, no condiciones simultáneas ni porcentajes de pulsación.",
+          "Regule solo configuraciones de cinco hilos u otras con interfaz explícitamente compatible. Sin escobillas no implica PWM por defecto. Conserve modelo, mando, punto de medida, temperatura, filtro y carga con los resultados A/B."
+        ]
+      }
+    ],
+    "formula": {
+      "section": 1,
+      "expression": "Ppp = Pmax − Pmin; Ceff ≈ ΔV / ΔP",
+      "note": "Compare Ppp en igual posición y ancho de banda. Ceff es la compliancia efectiva de un intervalo de presión, no una regla universal de tamaño ni una atenuación garantizada."
+    },
+    "table": {
+      "section": 4,
+      "headers": [
+        "Criterio",
+        "Medir en A y B",
+        "Condición para conservar B"
+      ],
+      "rows": [
+        [
+          "Función estable",
+          "Presión y señal de proceso",
+          "Cumple límites funcionales"
+        ],
+        [
+          "Transferencia",
+          "Caudal y volumen en la misma ventana",
+          "Tarea conforme y diferencias explicadas"
+        ],
+        [
+          "Arranque/parada",
+          "Presurización, cola y siguiente ciclo",
+          "Dentro de límites del proyecto"
+        ],
+        [
+          "Mantenimiento",
+          "Retención, limpieza, gas y materiales",
+          "Coste adicional aceptable"
+        ]
+      ]
+    },
+    "diagram": "Ondas sintéticas: el mismo caudal medio puede tener picos distintos con amortiguación. Una curva más suave no sustituye la prueba de arranque y líquido posterior.",
+    "faq": [
+      {
+        "question": "¿Todas las bombas de membrana necesitan amortiguador?",
+        "answer": "No. Primero demuestre impacto funcional y compare beneficio con volumen muerto, limpieza, arranque y cola."
+      },
+      {
+        "question": "¿Un amortiguador mayor siempre es mejor?",
+        "answer": "No. Importan presión, frecuencia, líquido y volumen; más almacenamiento puede aumentar demora y cola."
+      },
+      {
+        "question": "¿El filtro de software sustituye la amortiguación hidráulica?",
+        "answer": "No. Cambia la señal, no las oscilaciones físicas sobre válvulas, boquillas o celdas."
+      },
+      {
+        "question": "¿Cómo comparar si B reduce el caudal?",
+        "answer": "Informe primero a igual mando; si admite regulación, compare también igual caudal medio declarando mando y punto de trabajo nuevos."
+      }
+    ],
+    "links": [
+      "Guía general de pulsación y reducción",
+      "Contador de caudal frente a referencia gravimétrica",
+      "Curvas caudal-presión",
+      "Bombas de membrana en miniatura"
+    ],
+    "description": "Valide un amortiguador de pulsaciones mediante pruebas A/B de ondulación, entrega media, arranque, líquido posterior y limpieza."
+  },
+  {
+    "title": "Burbujas y ruido: ¿cavitación, entrada de aire o desgasificación?",
+    "seo": "Diagnóstico de cavitación en bombas de membrana en miniatura",
+    "deck": "Burbujas, ruido y menor caudal no demuestran cavitación por separado. Distinga aire exterior, gas disuelto y vapor local mediante presión absoluta de entrada, temperatura, posición de burbujas y caudal sincronizados. Una presión media normal no descarta mínimos internos breves; acumule evidencias con ensayos controlados.",
+    "sections": [
+      {
+        "title": "Usar presión absoluta para el límite de vaporización",
+        "paragraphs": [
+          "La cavitación implica formación de vapor a baja presión local y colapso al recuperarse la presión. La entrada de aire y liberación de gas disuelto son fuentes diferentes, con soluciones distintas, y pueden coexistir.",
+          "Sume presión atmosférica local a la manométrica antes de comparar con la presión de vapor del líquido a su temperatura. Hay pérdidas y transitorios entre sensor y cámara; una media de entrada superior no demuestra ausencia de cavitación."
+        ]
+      },
+      {
+        "title": "Qué evidencias distinguen los mecanismos",
+        "paragraphs": [
+          "Registre primera aparición de gas, presión durante aspiración y temperatura. Una conexión puede admitir aire sin fuga externa. Mejorar después de desgasificar apoya participación de gas disuelto, sin excluir por sí solo vaporización.",
+          "El vapor puede formarse y colapsar dentro de la bomba antes de verse en la salida. Ruido, menor respuesta de caudal a velocidad y fluctuación de presión son indicios; interprételos junto a mejoras controladas de la entrada."
+        ]
+      },
+      {
+        "title": "Inspeccionar restricciones y depósito",
+        "paragraphs": [
+          "Compruebe altura de aspiración, nivel mínimo, ventilación, filtro cargado, tubo aplastado y sección mínima de conexiones. Aumentar el tubo principal puede no corregir la válvula o el filtro; mida por tramos o sustituya lo permitido.",
+          "El calor puede reducir viscosidad pero elevar presión de vapor y liberar gas. Mayor facilidad de flujo no demuestra más margen; use propiedades de composición y temperatura reales para reactivos calientes o volátiles."
+        ]
+      },
+      {
+        "title": "Realizar tres comparaciones controladas",
+        "paragraphs": [
+          "Primero mantenga líquido y reduzca una pérdida de entrada confirmada. Después compruebe sellos y mejore altura estática dentro de límites permitidos. Finalmente compare desgasificación del mismo líquido a igual temperatura. Vuelva a referencia y registre presión mínima, caudal, ruido y gas.",
+          "Pruebe menor velocidad solo si esa configuración la admite. No aplique PWM incompatible a versiones de dos hilos o no verificadas. Mejorar al reducir demanda de entrada apoya varios mecanismos y no confirma por sí solo cavitación."
+        ]
+      },
+      {
+        "title": "Declarar límites de sensores e inferencia",
+        "paragraphs": [
+          "Sincronice presión absoluta de entrada, presión de salida, caudal y temperatura. Registre respuesta, muestreo, cavidades de montaje y distancia. Un instrumento lento oculta valles y su montaje puede añadir bolsas de aire o resistencia.",
+          "Determine margen con información del fabricante, evaluación dinámica y ensayos. No se propone un umbral universal en kPa ni un NPSH no medido. Si no se mide la zona crítica, informe hipótesis respaldadas o riesgo reducido, no una demostración directa."
+        ]
+      },
+      {
+        "title": "El autocebado no garantiza ausencia de cavitación",
+        "paragraphs": [
+          "DPL30 especifica 6 mH₂O y DPL60,3 mH₂O de autocebado. Son datos con agua, no garantías para cualquier reactivo a esas alturas. Los 600 kPa de salida nominal de DPL30H tampoco establecen margen de vaporización en entrada.",
+          "Revalide temperatura máxima, nivel mínimo, filtro representativo al final de vida, caudal máximo de tarea y reinicios. Guarde entrega media y señales dinámicas, respetando compatibilidad. Recuperarse con agua a temperatura ambiente no resuelve automáticamente el problema del reactivo."
+        ]
+      }
+    ],
+    "formula": {
+      "section": 0,
+      "expression": "Pabs = Pgauge + Patm; Plocal,min,abs > Pvapor(T) + margin",
+      "note": "La segunda relación es un objetivo de diseño, no una conclusión a partir del sensor de entrada. Presión de vapor del líquido y temperatura reales; margen validado para el sistema."
+    },
+    "table": {
+      "section": 1,
+      "headers": [
+        "Mecanismo",
+        "Origen",
+        "Comparación prioritaria"
+      ],
+      "rows": [
+        [
+          "Entrada de aire",
+          "Aire exterior",
+          "Sellado en aspiración y cambios por tramos"
+        ],
+        [
+          "Desgasificación",
+          "Gas disuelto",
+          "Mismo líquido y temperatura"
+        ],
+        [
+          "Vaporización/cavitación",
+          "Vapor del líquido",
+          "Pérdidas, presión absoluta y temperatura"
+        ],
+        [
+          "Mecanismos simultáneos",
+          "Orígenes combinados",
+          "Cambios sucesivos y retorno a referencia"
+        ]
+      ]
+    },
+    "diagram": "Diagnóstico de tres vías: aire exterior, gas disuelto o vapor local. Use presión absoluta; las ramas son hipótesis pendientes de comprobar. ① Entrada de aire; ② desgasificación; ③ vaporización local.",
+    "faq": [
+      {
+        "question": "¿Burbujas o ruido prueban cavitación?",
+        "answer": "No. Entrada de aire, gas residual y otros fallos pueden parecerse; combine presión y comparaciones."
+      },
+      {
+        "question": "¿Comparo−50 kPa manométricos directamente con vapor?",
+        "answer": "No. Convierta con presión atmosférica local y considere líquido, temperatura, posición y transitorios."
+      },
+      {
+        "question": "¿Menos ruido a menor velocidad confirma cavitación?",
+        "answer": "Solo apoya efectos dependientes de velocidad; también cambian entrada de aire, gas, resonancia y suministro."
+      },
+      {
+        "question": "¿Los 6 m de DPL30 garantizan seguridad a 6 m?",
+        "answer": "No. El autocebado no equivale al servicio continuo; líquido, temperatura, pérdidas, nivel y pulsación cambian el riesgo."
+      }
+    ],
+    "links": [
+      "Resistencia en aspiración y descarga",
+      "Pérdida de autocebado DPL30",
+      "Validación del amortiguador",
+      "Curvas caudal-presión"
+    ],
+    "description": "Distinga cavitación, entrada de aire y desgasificación con presión absoluta de entrada, presión de vapor y comparaciones controladas."
+  },
+  {
+    "title": "¿Por qué el totalizador de caudal de una bomba de membrana no coincide con la masa recogida?",
+    "seo": "Error del totalizador de caudal: comprobación gravimétrica en bombas de membrana",
+    "deck": "Una pantalla fluctuante y un total incorrecto son problemas distintos. Iguale ventanas y condiciones hidráulicas, convierta masa con densidad real y compruebe almacenamiento, cola, retorno, rango y muestreo. Solo una referencia independiente demuestra si filtrar o amortiguar mejora la exactitud.",
+    "sections": [
+      {
+        "title": "Definir la misma magnitud medida",
+        "paragraphs": [
+          "El medidor registra líquido que cruza su posición; la balanza, líquido recibido. Entre ambos puede haber tubos, amortiguador y boquilla. La comparación directa requiere régimen estable sin cambio de almacenamiento; en arranque y parada hay que contar retención, ramales y cola.",
+          "Use densidad de composición y temperatura reales y controle evaporación, salpicadura, gotas exteriores y tiempo. No retire la contrapresión para recoger: cambiaría el punto de trabajo."
+        ]
+      },
+      {
+        "title": "Aplicar balance de volumen en la misma ventana",
+        "paragraphs": [
+          "Alinee inicio, final y unidades del totalizador y recogida. Sin fugas, ramales ni cambio de fase entre ambos, la diferencia corresponde al cambio de almacenamiento. Los circuitos complejos necesitan términos explícitos de derivación y pérdidas.",
+          "Repita ventanas estables iguales y varíe su duración. Si la diferencia disminuye con ventanas largas, revise desplazamientos temporales, almacenamiento y cola; un sesgo relativo persistente requiere densidad, calibración, rango y dinámica."
+        ]
+      },
+      {
+        "title": "Comprobar retorno y saturación de picos",
+        "paragraphs": [
+          "Una media dentro del rango no descarta picos saturados. Puede haber retorno breve; contar solo flujo positivo o recortar negativos eleva el total. Revise capacidad bidireccional y signos de acumulación.",
+          "Siga requisitos específicos de tubería llena, calibración de líquido, orientación, tramos rectos y presión. La sensibilidad a gas, viscosidad y pulsación varía; un manual no define todos los medidores."
+        ]
+      },
+      {
+        "title": "Separar medición, comunicación y filtrado",
+        "paragraphs": [
+          "Leer una salida sin actualizar más veces no aporta datos nuevos. Registre ancho de banda, actualización/promedio internos, comunicaciones y filtros externos. Integre con marcas temporales reales; con intervalos desiguales no basta una media aritmética.",
+          "Muestrear siempre la misma fase puede producir sesgo o falsa oscilación lenta. Cubra varios períodos y compruebe antialiasing. El doble de frecuencia máxima es solo mínimo teórico, no garantía para picos estrechos. El resumen del artículo citado apoya promediar mejor, no corregir saturación o no linealidad."
+        ]
+      },
+      {
+        "title": "Elegir filtro, amortiguador o instrumento según evidencias",
+        "paragraphs": [
+          "Si los totales coinciden y solo salta la pantalla, ajuste el promedio conservando respuesta para detectar fallos. Si también falla el total, corrija rango, gas, montaje o procesamiento. Un filtro mayor no recupera información perdida.",
+          "Tras añadir amortiguador, repita pesaje en la misma ventana y tarea, con caudal y cola. Si la curva se suaviza pero el error persiste, investigue la cadena de medida. La configuración de pulsación del manual KROHNE citado se limita a ese instrumento."
+        ]
+      },
+      {
+        "title": "Conservar un registro reproducible",
+        "paragraphs": [
+          "Guarde modelo y control de bomba, temperatura/densidad, nivel, tubos, contrapresión, medidor/rango/filtros, tiempos, datos brutos y masas. Informe sesgo por ventana e incertidumbre, separando régimen estable y ciclos.",
+          "Los 300 mL/min de DPL30 y 600 mL/min de DPL60 son caudales sin carga, no patrones de calibración instalados. Evalúe carga y entrega reales. Varíe velocidad solo con control explícitamente compatible; sin escobillas no basta."
+        ]
+      }
+    ],
+    "formula": {
+      "section": 1,
+      "expression": "Qavg = 60 Δm / (ρ T); Vmeter − Vcollected = ΔVstored",
+      "note": "Qavg en mL/min: Δm en g,ρ en g/mL yT en s. Balance en la misma ventana sin ramales/fugas/cambio de fase y con densidad común aproximada. En régimen estable ΔVstored≈0; en ciclos incluya almacenamiento y cola."
+    },
+    "table": {
+      "section": 4,
+      "headers": [
+        "Observación",
+        "Comprobar",
+        "Acción"
+      ],
+      "rows": [
+        [
+          "Pantalla variable; totales iguales",
+          "Ventana e incertidumbre",
+          "Ajustar promedio según tarea"
+        ],
+        [
+          "Mayor diferencia en ventanas cortas",
+          "Almacenamiento, tiempo y cola",
+          "Repetir ciclo completo"
+        ],
+        [
+          "Total persistentemente alto",
+          "Signo de retorno, picos y densidad",
+          "Corregir y revalidar"
+        ],
+        [
+          "Error con burbujas",
+          "Tubería llena y origen del gas",
+          "Resolver gas primero"
+        ],
+        [
+          "Amortiguación estabiliza pantalla",
+          "Cambio de caudal y punto de trabajo",
+          "Comparar de nuevo sesgo gravimétrico"
+        ]
+      ]
+    },
+    "diagram": "Cadena de medida: el flujo pulsante cruza el medidor y se compara con masa en la misma ventana. Incluya almacenamiento entre medidor y recipiente; la curva es ilustrativa.",
+    "faq": [
+      {
+        "question": "¿Una pantalla inestable indica avería?",
+        "answer": "No necesariamente. Compare el total en la misma ventana con una masa independiente antes de atribuir el problema."
+      },
+      {
+        "question": "¿Diez lecturas promediadas dan el caudal verdadero?",
+        "answer": "No siempre. Verifique actualización, fases, intervalos y dinámica; releer un valor no crea muestras nuevas."
+      },
+      {
+        "question": "¿Estabilidad tras amortiguación demuestra más exactitud?",
+        "answer": "No. Compare total, masa, punto de trabajo y almacenamiento en la misma ventana."
+      },
+      {
+        "question": "¿Por qué difieren más durante el arranque?",
+        "answer": "El líquido puede llenar tubos o amortiguador antes de llegar al recipiente. Revise también tiempos, ramales, cola y densidad."
+      }
+    ],
+    "links": [
+      "Validación A/B del amortiguador",
+      "Guía general de medida de pulsación",
+      "Diámetro de tubo y punto de trabajo",
+      "Bombas de membrana en miniatura"
+    ],
+    "description": "Compare el totalizador con masa recogida: alinee ventanas y compruebe densidad, almacenamiento, líquido posterior, retorno y muestreo."
+  }
+]

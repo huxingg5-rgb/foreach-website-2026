@@ -6,12 +6,10 @@ import type { TechnicalArticleItem } from "@/data/resources/technical-articles/t
 import "@/app/resources/technical-articles/technical-articles.css";
 
 type TechnicalArticleCardProps = {
-  article: TechnicalArticleItem;
-  categoryLabel: string;
+  article: Pick<TechnicalArticleItem, "title" | "summary" | "date" | "coverImage" | "coverAlt">;
   tags?: string[];
   href: string;
   locale: string;
-  categoryText?: string;
   detailText?: string;
   tagsText?: string;
   showSummary?: boolean;
@@ -29,11 +27,9 @@ function isChinesePage(locale: string) {
 
 export default function TechnicalArticleCard({
   article,
-  categoryLabel,
   tags = [],
   href,
   locale,
-  categoryText,
   detailText,
   tagsText,
   showSummary = false,
@@ -74,12 +70,16 @@ export default function TechnicalArticleCard({
     );
   }
 
+  const hasProductPhotoCover =
+    article.coverImage.includes("/pump-application-guides/") ||
+    article.coverImage.includes("/diaphragm-pump-rd/covers/");
+
   return (
     <Link className="technicalArticleCard" href={href}>
-      <div className="technicalArticleCard__image">
+      <div className={"technicalArticleCard__image" + (hasProductPhotoCover ? " technicalArticleCard__image--pump-application" : "")}>
         <Image
           src={article.coverImage}
-          alt={article.title}
+          alt={hasProductPhotoCover ? article.coverAlt ?? article.title : article.title}
           fill
           sizes="(max-width: 760px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
@@ -87,13 +87,6 @@ export default function TechnicalArticleCard({
 
       <div className="technicalArticleCard__body">
         <h3 className="technicalArticleCard__title">{article.title}</h3>
-
-        <div className="technicalArticleCard__meta">
-          <span>
-            {categoryText ?? (isChinesePage(locale) ? "分类：" : "Category:")}
-          </span>
-          <strong>{categoryLabel}</strong>
-        </div>
 
         {showSummary && article.summary ? (
           <p className="technicalArticleCard__summary">{article.summary}</p>
@@ -107,7 +100,9 @@ export default function TechnicalArticleCard({
 
         {showTags && tags.length > 0 ? (
           <div className="technicalArticleCard__tags">
-            <span>{tagsText ?? (isChinesePage(locale) ? "标签：" : "Tags:")}</span>
+            <span className="technicalArticleCard__tagsLabel">
+              {tagsText ?? (isChinesePage(locale) ? "标签：" : "Tags:")}
+            </span>
             <div className="technicalArticleCard__tagList">
               {tags.map((tag) => (
                 <span key={tag} className="technicalArticleCard__tag">

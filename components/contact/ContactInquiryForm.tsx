@@ -1030,7 +1030,7 @@ export default function ContactInquiryForm({
 
       const requestNumber =
         nextReferenceId
-          ? "FOREACH-" +
+          ? "Foreach-" +
             nextReferenceId
           : createRequestNumber();
 

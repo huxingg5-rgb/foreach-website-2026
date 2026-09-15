@@ -316,24 +316,9 @@ export const labLiquidWasteAspirationTroubleshootingZhCopy = {
               href: "/applications/lab-automation/",
               suffix: "。",
             },
-            {
-              prefix: "参考：",
-              label: "KNF实验室流体抽吸的系统说明",
-              href: "https://knf.com/en/global/solutions/lab-applications/fluid-aspiration",
-              suffix: "。",
-            },
-            {
-              prefix: "参考：",
-              label: "INTEGRA真空废液抽吸系统的保护与维护说明",
-              href: "https://www.integra-biosciences.com/global/en/aspiration-systems/vacusafe",
-              suffix: "。",
-            },
-            {
-              prefix: "参考：",
-              label: "真空系统压力上升法与漏率计算说明",
-              href: "https://www.leybold.com/content/leybold/en-us/knowledge/vacuum-fundamentals/leak-detection/pressure-rise-and-drop-tests.html",
-              suffix: "。",
-            },
+            
+            
+            
           ],
         },
         {
@@ -679,23 +664,14 @@ export const ivdWasteAspirationPumpSelectionZhCopy = {
               suffix: "。",
             },
             {
-              prefix: "参考：",
-              label: "KNF对液泵直抽与真空间接抽吸的比较",
-              href: "https://knf.com/en/it/stories-events/news-stories/article/direct-liquid-transfer-vs-vacuum-over-liquid-transfer",
+              prefix: "相关选型指南：",
+              label: "IVD 废液泵选液体隔膜泵还是气液混合隔膜泵",
+              href: "/resources/technical-articles/ivd-waste-liquid-pump-liquid-vs-gas-liquid-diaphragm-pump/",
               suffix: "。",
             },
-            {
-              prefix: "参考：",
-              label: "KNF洗针废液抽吸与气液混合工况说明",
-              href: "https://knf.com/fileadmin/Local_files/USA/Downloads/OEM_Process_downloads/application_note/Application_Note_needle-washing_KNF_USA.pdf",
-              suffix: "。",
-            },
-            {
-              prefix: "参考：",
-              label: "Iwaki气液输送与废液收集泵资料",
-              href: "https://www.iwaki.hk/catalog/products_details.php?cPath=6&id=40&language=en",
-              suffix: "。",
-            },
+            
+            
+            
           ],
         },
         {

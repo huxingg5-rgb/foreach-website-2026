@@ -8,11 +8,11 @@ const LIFE_ASSET_BASE =
 export const diaphragmPumpFlowPressureCurveKoCopy = {
   metadata: {
     title: "다이어프램 펌프 유량-압력 곡선 읽는 법과 실제 작동점 계산",
-    seoTitle: "다이어프램 펌프 유량-압력 곡선과 시스템 작동점 | FOREACH",
+    seoTitle: "다이어프램 펌프 유량-압력 곡선과 시스템 작동점 | Foreach Technology",
     seoDescription:
       "펌프 곡선, 시스템 저항, 입구 음압, 출구 배압, 튜브 내경, 점도와 시험 조건으로 소형 다이어프램 펌프의 장착 유량을 판단하는 방법을 설명합니다.",
     coverImage: `${FLOW_ASSET_BASE}/article-cover.webp`,
-    coverAlt: "유량과 압력을 시험 중인 FOREACH 소형 다이어프램 펌프",
+    coverAlt: "유량과 압력을 시험 중인 Foreach 소형 다이어프램 펌프",
   },
   deck:
     "카탈로그의 300 또는 600 mL/min은 장비 내부에서 항상 유지되는 유량이 아닙니다. 실제 유량은 실제 유체, 입·출구 압력, 튜브, 밸브, 필터와 전원 조건에서 펌프 곡선과 시스템 곡선이 만나는 지점에서 결정됩니다.",
@@ -154,11 +154,11 @@ export const diaphragmPumpFlowPressureCurveKoCopy = {
 export const microDiaphragmPumpContinuousDutyLifeKoCopy = {
   metadata: {
     title: "소형 다이어프램 펌프는 얼마나 오래 연속 운전할 수 있습니까?",
-    seoTitle: "소형 다이어프램 펌프 연속 운전과 수명 평가 | FOREACH",
+    seoTitle: "소형 다이어프램 펌프 연속 운전과 수명 평가 | Foreach Technology",
     seoDescription:
       "연속 운전, 누적 수명, 브러시·브러시리스 모터, 임무 프로파일, 고장 기준, 내구 시험과 B10 신뢰성의 차이를 설명합니다.",
     coverImage: `${LIFE_ASSET_BASE}/article-cover.webp`,
-    coverAlt: "연속 운전 시험 중인 FOREACH 소형 다이어프램 펌프",
+    coverAlt: "연속 운전 시험 중인 Foreach 소형 다이어프램 펌프",
   },
   deck:
     "연속 운전 가능은 무제한 수명을 뜻하지 않습니다. 연속 운전 능력, 누적 운전 수명, 달력 수명과 통계적 신뢰성은 서로 다른 개념이며 실제 부하, 유체, 구동과 환경 조건에 따라 달라집니다.",
@@ -261,7 +261,7 @@ export const microDiaphragmPumpContinuousDutyLifeKoCopy = {
           width: 1200,
           height: 675,
           caption:
-            "B10은 모델에서 누적 고장률 10%에 해당하는 시간입니다. 그림은 개념도이며 FOREACH 모델의 측정 수명 분포가 아닙니다.",
+            "B10은 모델에서 누적 고장률 10%에 해당하는 시간입니다. 그림은 개념도이며 Foreach 모델의 측정 수명 분포가 아닙니다.",
         },
       ],
     },

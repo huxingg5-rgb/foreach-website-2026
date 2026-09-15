@@ -27,6 +27,61 @@ type InstallationGuideTutorialCopy = {
 
 const installationGuideYouTubeVideos = [
   {
+    "key": "dpl60-brushed-pressure-test",
+    "videoId": "yeOkzvD86xI",
+    "thumbnail": "/images/resources/installation-guide/youtube/dpl60-brushed-pressure-test-cover.jpg"
+  },
+  {
+    "key": "dpl60-brushed-flow-rate-test",
+    "videoId": "WRBdbi1A83U",
+    "thumbnail": "/images/resources/installation-guide/youtube/dpl60-brushed-flow-rate-test-cover.jpg"
+  },
+  {
+    "key": "dpl60-brushless-flow-rate-test",
+    "videoId": "pZV2uQOMt5I",
+    "thumbnail": "/images/resources/installation-guide/youtube/dpl60-brushless-flow-rate-test-cover.jpg"
+  },
+  {
+    "key": "dpl30-brushed-pressure-test",
+    "videoId": "p5_Brvhf9Qo",
+    "thumbnail": "/images/resources/installation-guide/youtube/dpl30-brushed-pressure-test-cover.jpg"
+  },
+  {
+    "key": "dpl30-brushless-pressure-test",
+    "videoId": "Lzox2V0DiYs",
+    "thumbnail": "/images/resources/installation-guide/youtube/dpl30-brushless-pressure-test-cover.jpg"
+  },
+  {
+    "key": "dpl30-brushless-flow-rate-test",
+    "videoId": "esCbqosu9NU",
+    "thumbnail": "/images/resources/installation-guide/youtube/dpl30-brushless-flow-rate-test-cover.jpg"
+  },
+  {
+    "key": "dpl30-brushed-flow-rate-test",
+    "videoId": "RqgFil-5YAo",
+    "thumbnail": "/images/resources/installation-guide/youtube/dpl30-brushed-flow-rate-test-cover.jpg"
+  },
+  {
+    "key": "five-wire-brushless-control-wires",
+    "videoId": "hIR9dg47_wU",
+    "thumbnail": "/images/resources/installation-guide/youtube/five-wire-brushless-control-wires-cover.jpg"
+  },
+  {
+    "key": "two-wire-brushless-diaphragm-pump",
+    "videoId": "p3PlAdfx9Sk",
+    "thumbnail": "/images/resources/installation-guide/youtube/two-wire-brushless-diaphragm-pump-cover.jpg"
+  },
+  {
+    "key": "diaphragm-pump-hose-barb-protection",
+    "videoId": "rSFDAexeFmU",
+    "thumbnail": "/images/resources/installation-guide/youtube/diaphragm-pump-hose-barb-protection-cover.jpg"
+  },
+  {
+    "key": "diaphragm-pump-placement-stability",
+    "videoId": "ag48EKqdPyU",
+    "thumbnail": "/images/resources/installation-guide/youtube/diaphragm-pump-placement-stability-cover.jpg"
+  },
+  {
     "key": "diaphragm-installation",
     "videoId": "bVbg038KImo",
     "thumbnail": "/images/resources/installation-guide/zh/zh-tutorial-001-6cadad8155.png"
@@ -68,6 +123,94 @@ const installationGuideYouTubeCopies: Record<
   Record<string, InstallationGuideTutorialCopy>
 > = {
   "en": {
+    "dpl60-brushed-pressure-test": {
+      "title": "600 mL/min Brushed Micro Diaphragm Pump Pressure Test",
+      "tags": [
+        "DPL60",
+        "Brushed Motor",
+        "Pressure Test"
+      ]
+    },
+    "dpl60-brushed-flow-rate-test": {
+      "title": "600 mL/min Brushed Diaphragm Pump Flow Rate Test",
+      "tags": [
+        "DPL60",
+        "Brushed Motor",
+        "Flow Rate Test"
+      ]
+    },
+    "dpl60-brushless-flow-rate-test": {
+      "title": "600 mL/min Brushless Micro Diaphragm Pump Flow Rate Test",
+      "tags": [
+        "DPL60",
+        "Brushless Motor",
+        "Flow Rate Test"
+      ]
+    },
+    "dpl30-brushed-pressure-test": {
+      "title": "DPL30 Brushed Micro Diaphragm Pump Pressure Test",
+      "tags": [
+        "DPL30",
+        "Brushed Motor",
+        "Pressure Test"
+      ]
+    },
+    "dpl30-brushless-pressure-test": {
+      "title": "300mL/min Brushless Diaphragm Pump Pressure Test! ⚡️",
+      "tags": [
+        "DPL30",
+        "Brushless Motor",
+        "Pressure Test"
+      ]
+    },
+    "dpl30-brushless-flow-rate-test": {
+      "title": "300 mL/min Brushless Diaphragm Pump - Flow Performance Test",
+      "tags": [
+        "DPL30",
+        "Brushless Motor",
+        "Flow Performance"
+      ]
+    },
+    "dpl30-brushed-flow-rate-test": {
+      "title": "DPL30 Brushed Diaphragm Pump - Flow Rate Test",
+      "tags": [
+        "DPL30",
+        "Brushed Motor",
+        "Flow Rate Test"
+      ]
+    },
+    "five-wire-brushless-control-wires": {
+      "title": "What is the Function of Control Wires in a 5-Wire Brushless Diaphragm Pump?",
+      "tags": [
+        "5-Wire Motor",
+        "Control Wires",
+        "Brushless Motor"
+      ]
+    },
+    "two-wire-brushless-diaphragm-pump": {
+      "title": "Why Choose a 2-Wire Brushless Diaphragm Pump?",
+      "tags": [
+        "2-Wire Motor",
+        "Brushless Motor",
+        "DPL60"
+      ]
+    },
+    "diaphragm-pump-hose-barb-protection": {
+      "title": "How to Prevent Diaphragm Pump Hose Barb Breakage",
+      "tags": [
+        "Hose Barb",
+        "Installation",
+        "Diaphragm Pump"
+      ]
+    },
+    "diaphragm-pump-placement-stability": {
+      "title": "Why is the diaphragm pump unstable when placed?",
+      "tags": [
+        "Mounting",
+        "Stability",
+        "Diaphragm Pump"
+      ]
+    },
     "diaphragm-installation": {
       "title": "Diaphragm Pump Installation and Precautions",
       "tags": [
@@ -126,6 +269,94 @@ const installationGuideYouTubeCopies: Record<
     }
   },
   "es": {
+    "dpl60-brushed-pressure-test": {
+      "title": "Prueba de presión de la microbomba de diafragma con escobillas de 600 mL/min",
+      "tags": [
+        "DPL60",
+        "Motor con escobillas",
+        "Prueba de presión"
+      ]
+    },
+    "dpl60-brushed-flow-rate-test": {
+      "title": "Prueba de caudal de la bomba de diafragma con escobillas de 600 mL/min",
+      "tags": [
+        "DPL60",
+        "Motor con escobillas",
+        "Prueba de caudal"
+      ]
+    },
+    "dpl60-brushless-flow-rate-test": {
+      "title": "Prueba de caudal de la microbomba de diafragma sin escobillas de 600 mL/min",
+      "tags": [
+        "DPL60",
+        "Motor sin escobillas",
+        "Prueba de caudal"
+      ]
+    },
+    "dpl30-brushed-pressure-test": {
+      "title": "Prueba de presión de la microbomba de diafragma DPL30 con escobillas",
+      "tags": [
+        "DPL30",
+        "Motor con escobillas",
+        "Prueba de presión"
+      ]
+    },
+    "dpl30-brushless-pressure-test": {
+      "title": "Prueba de presión de la bomba de diafragma sin escobillas de 300 mL/min",
+      "tags": [
+        "DPL30",
+        "Motor sin escobillas",
+        "Prueba de presión"
+      ]
+    },
+    "dpl30-brushless-flow-rate-test": {
+      "title": "Prueba de rendimiento de caudal de la bomba de diafragma sin escobillas de 300 mL/min",
+      "tags": [
+        "DPL30",
+        "Motor sin escobillas",
+        "Rendimiento de caudal"
+      ]
+    },
+    "dpl30-brushed-flow-rate-test": {
+      "title": "Prueba de caudal de la bomba de diafragma DPL30 con escobillas",
+      "tags": [
+        "DPL30",
+        "Motor con escobillas",
+        "Prueba de caudal"
+      ]
+    },
+    "five-wire-brushless-control-wires": {
+      "title": "¿Qué función cumplen los cables de control de una bomba de diafragma sin escobillas de 5 hilos?",
+      "tags": [
+        "Motor de 5 hilos",
+        "Cables de control",
+        "Motor sin escobillas"
+      ]
+    },
+    "two-wire-brushless-diaphragm-pump": {
+      "title": "¿Por qué elegir una bomba de diafragma sin escobillas de 2 hilos?",
+      "tags": [
+        "Motor de 2 hilos",
+        "Motor sin escobillas",
+        "DPL60"
+      ]
+    },
+    "diaphragm-pump-hose-barb-protection": {
+      "title": "Cómo evitar que se rompa la espiga de la bomba de diafragma",
+      "tags": [
+        "Espiga para manguera",
+        "Instalación",
+        "Bomba de diafragma"
+      ]
+    },
+    "diaphragm-pump-placement-stability": {
+      "title": "¿Por qué la bomba de diafragma es inestable cuando se coloca?",
+      "tags": [
+        "Montaje",
+        "Estabilidad",
+        "Bomba de diafragma"
+      ]
+    },
     "diaphragm-installation": {
       "title": "Instalación de una bomba de diafragma y precauciones",
       "tags": [
@@ -184,6 +415,94 @@ const installationGuideYouTubeCopies: Record<
     }
   },
   "fr": {
+    "dpl60-brushed-pressure-test": {
+      "title": "Essai de pression de la micropompe à membrane à balais de 600 mL/min",
+      "tags": [
+        "DPL60",
+        "Moteur à balais",
+        "Essai de pression"
+      ]
+    },
+    "dpl60-brushed-flow-rate-test": {
+      "title": "Essai de débit de la pompe à membrane à balais de 600 mL/min",
+      "tags": [
+        "DPL60",
+        "Moteur à balais",
+        "Essai de débit"
+      ]
+    },
+    "dpl60-brushless-flow-rate-test": {
+      "title": "Essai de débit de la micropompe à membrane brushless de 600 mL/min",
+      "tags": [
+        "DPL60",
+        "Moteur brushless",
+        "Essai de débit"
+      ]
+    },
+    "dpl30-brushed-pressure-test": {
+      "title": "Essai de pression de la micropompe à membrane DPL30 à balais",
+      "tags": [
+        "DPL30",
+        "Moteur à balais",
+        "Essai de pression"
+      ]
+    },
+    "dpl30-brushless-pressure-test": {
+      "title": "Essai de pression de la pompe à membrane brushless de 300 mL/min",
+      "tags": [
+        "DPL30",
+        "Moteur brushless",
+        "Essai de pression"
+      ]
+    },
+    "dpl30-brushless-flow-rate-test": {
+      "title": "Essai de performance de débit de la pompe à membrane brushless de 300 mL/min",
+      "tags": [
+        "DPL30",
+        "Moteur brushless",
+        "Performance de débit"
+      ]
+    },
+    "dpl30-brushed-flow-rate-test": {
+      "title": "Essai de débit de la pompe à membrane DPL30 à balais",
+      "tags": [
+        "DPL30",
+        "Moteur à balais",
+        "Essai de débit"
+      ]
+    },
+    "five-wire-brushless-control-wires": {
+      "title": "À quoi servent les fils de commande d’une pompe à membrane brushless à 5 fils ?",
+      "tags": [
+        "Moteur à 5 fils",
+        "Fils de commande",
+        "Moteur brushless"
+      ]
+    },
+    "two-wire-brushless-diaphragm-pump": {
+      "title": "Pourquoi choisir une pompe à membrane brushless à 2 fils ?",
+      "tags": [
+        "Moteur à 2 fils",
+        "Moteur brushless",
+        "DPL60"
+      ]
+    },
+    "diaphragm-pump-hose-barb-protection": {
+      "title": "Comment éviter la rupture de l’embout cannelé d’une pompe à membrane",
+      "tags": [
+        "Embout cannelé",
+        "Installation",
+        "Pompe à membrane"
+      ]
+    },
+    "diaphragm-pump-placement-stability": {
+      "title": "Pourquoi la pompe à membrane est-elle instable lorsqu’elle est posée ?",
+      "tags": [
+        "Montage",
+        "Stabilité",
+        "Pompe à membrane"
+      ]
+    },
     "diaphragm-installation": {
       "title": "Installation d’une pompe à membrane et précautions",
       "tags": [
@@ -242,6 +561,94 @@ const installationGuideYouTubeCopies: Record<
     }
   },
   "ko": {
+    "dpl60-brushed-pressure-test": {
+      "title": "600 mL/min 브러시형 미니 다이어프램 펌프 압력 테스트",
+      "tags": [
+        "DPL60",
+        "브러시 모터",
+        "압력 테스트"
+      ]
+    },
+    "dpl60-brushed-flow-rate-test": {
+      "title": "600 mL/min 브러시형 다이어프램 펌프 유량 테스트",
+      "tags": [
+        "DPL60",
+        "브러시 모터",
+        "유량 테스트"
+      ]
+    },
+    "dpl60-brushless-flow-rate-test": {
+      "title": "600 mL/min 브러시리스 미니 다이어프램 펌프 유량 테스트",
+      "tags": [
+        "DPL60",
+        "브러시리스 모터",
+        "유량 테스트"
+      ]
+    },
+    "dpl30-brushed-pressure-test": {
+      "title": "DPL30 브러시형 미니 다이어프램 펌프 압력 테스트",
+      "tags": [
+        "DPL30",
+        "브러시 모터",
+        "압력 테스트"
+      ]
+    },
+    "dpl30-brushless-pressure-test": {
+      "title": "300 mL/min 브러시리스 다이어프램 펌프 압력 테스트",
+      "tags": [
+        "DPL30",
+        "브러시리스 모터",
+        "압력 테스트"
+      ]
+    },
+    "dpl30-brushless-flow-rate-test": {
+      "title": "300 mL/min 브러시리스 다이어프램 펌프 유량 성능 테스트",
+      "tags": [
+        "DPL30",
+        "브러시리스 모터",
+        "유량 성능"
+      ]
+    },
+    "dpl30-brushed-flow-rate-test": {
+      "title": "DPL30 브러시형 다이어프램 펌프 유량 테스트",
+      "tags": [
+        "DPL30",
+        "브러시 모터",
+        "유량 테스트"
+      ]
+    },
+    "five-wire-brushless-control-wires": {
+      "title": "5선식 브러시리스 다이어프램 펌프 제어선의 기능은 무엇인가요?",
+      "tags": [
+        "5선식 모터",
+        "제어선",
+        "브러시리스 모터"
+      ]
+    },
+    "two-wire-brushless-diaphragm-pump": {
+      "title": "2선식 브러시리스 다이어프램 펌프를 선택하는 이유",
+      "tags": [
+        "2선식 모터",
+        "브러시리스 모터",
+        "DPL60"
+      ]
+    },
+    "diaphragm-pump-hose-barb-protection": {
+      "title": "다이어프램 펌프 호스 바브 파손을 방지하는 방법",
+      "tags": [
+        "호스 바브",
+        "설치",
+        "다이어프램 펌프"
+      ]
+    },
+    "diaphragm-pump-placement-stability": {
+      "title": "다이어프램 펌프를 놓았을 때 불안정한 이유는 무엇인가요?",
+      "tags": [
+        "장착",
+        "안정성",
+        "다이어프램 펌프"
+      ]
+    },
     "diaphragm-installation": {
       "title": "다이어프램 펌프 설치 방법 및 주의사항",
       "tags": [
@@ -300,6 +707,94 @@ const installationGuideYouTubeCopies: Record<
     }
   },
   "ru": {
+    "dpl60-brushed-pressure-test": {
+      "title": "Испытание давления щёточного микромембранного насоса 600 мл/мин",
+      "tags": [
+        "DPL60",
+        "Щёточный двигатель",
+        "Испытание давления"
+      ]
+    },
+    "dpl60-brushed-flow-rate-test": {
+      "title": "Испытание расхода щёточного мембранного насоса 600 мл/мин",
+      "tags": [
+        "DPL60",
+        "Щёточный двигатель",
+        "Испытание расхода"
+      ]
+    },
+    "dpl60-brushless-flow-rate-test": {
+      "title": "Испытание расхода бесщёточного микромембранного насоса 600 мл/мин",
+      "tags": [
+        "DPL60",
+        "Бесщёточный двигатель",
+        "Испытание расхода"
+      ]
+    },
+    "dpl30-brushed-pressure-test": {
+      "title": "Испытание давления щёточного микромембранного насоса DPL30",
+      "tags": [
+        "DPL30",
+        "Щёточный двигатель",
+        "Испытание давления"
+      ]
+    },
+    "dpl30-brushless-pressure-test": {
+      "title": "Испытание давления бесщёточного мембранного насоса 300 мл/мин",
+      "tags": [
+        "DPL30",
+        "Бесщёточный двигатель",
+        "Испытание давления"
+      ]
+    },
+    "dpl30-brushless-flow-rate-test": {
+      "title": "Испытание производительности по расходу бесщёточного мембранного насоса 300 мл/мин",
+      "tags": [
+        "DPL30",
+        "Бесщёточный двигатель",
+        "Расход"
+      ]
+    },
+    "dpl30-brushed-flow-rate-test": {
+      "title": "Испытание расхода щёточного мембранного насоса DPL30",
+      "tags": [
+        "DPL30",
+        "Щёточный двигатель",
+        "Испытание расхода"
+      ]
+    },
+    "five-wire-brushless-control-wires": {
+      "title": "Для чего нужны управляющие провода в 5-проводном бесщёточном мембранном насосе?",
+      "tags": [
+        "5-проводной двигатель",
+        "Управляющие провода",
+        "Бесщёточный двигатель"
+      ]
+    },
+    "two-wire-brushless-diaphragm-pump": {
+      "title": "Почему стоит выбрать 2-проводной бесщёточный мембранный насос?",
+      "tags": [
+        "2-проводной двигатель",
+        "Бесщёточный двигатель",
+        "DPL60"
+      ]
+    },
+    "diaphragm-pump-hose-barb-protection": {
+      "title": "Как предотвратить поломку штуцера мембранного насоса",
+      "tags": [
+        "Штуцер",
+        "Установка",
+        "Мембранный насос"
+      ]
+    },
+    "diaphragm-pump-placement-stability": {
+      "title": "Почему мембранный насос неустойчив при установке?",
+      "tags": [
+        "Монтаж",
+        "Устойчивость",
+        "Мембранный насос"
+      ]
+    },
     "diaphragm-installation": {
       "title": "Установка мембранного насоса и меры предосторожности",
       "tags": [
@@ -357,6 +852,38 @@ const installationGuideYouTubeCopies: Record<
       ]
     }
   }
+};
+
+const installationGuideYouTubeRelations: Record<
+  string,
+  string[]
+> = {
+  "dpl60-brushed-pressure-test": ["series:dpl60"],
+  "dpl60-brushed-flow-rate-test": ["series:dpl60"],
+  "dpl60-brushless-flow-rate-test": ["series:dpl60"],
+  "dpl30-brushed-pressure-test": ["series:dpl30"],
+  "dpl30-brushless-pressure-test": ["series:dpl30"],
+  "dpl30-brushless-flow-rate-test": ["series:dpl30"],
+  "dpl30-brushed-flow-rate-test": ["series:dpl30"],
+  "five-wire-brushless-control-wires": ["series:dpl60"],
+  "two-wire-brushless-diaphragm-pump": ["series:dpl60"],
+  "diaphragm-pump-hose-barb-protection": [
+    "series:dpl30",
+    "series:dpl60",
+    "series:dpl30h",
+  ],
+  "diaphragm-pump-placement-stability": [
+    "series:dpl30",
+    "series:dpl60",
+    "series:dpl30h",
+  ],
+  "diaphragm-installation": ["series:dpl30"],
+  "800-series-gas-liquid": ["series:dpgl800"],
+  "brushed-vs-brushless-lifespan": ["series:dpl30"],
+  "60-series-pressure": ["series:dpl60"],
+  "motor-selection": ["series:dpl30"],
+  "30h-series-pressure": ["series:dpl30h"],
+  "diaphragm-selection": ["series:dpl30"],
 };
 
 function normalizeInstallationGuideLocale(
@@ -428,18 +955,7 @@ export function getInstallationGuideYouTubeGuides(
     (video) => {
       const copy = copies[video.key];
       const relationKeys =
-        video.key === "800-series-gas-liquid"
-          ? ["series:dpgl800"]
-          : video.key === "60-series-pressure"
-            ? ["series:dpl60"]
-            : video.key === "30h-series-pressure"
-              ? ["series:dpl30h"]
-              : video.key === "diaphragm-installation" ||
-                  video.key === "brushed-vs-brushless-lifespan" ||
-                  video.key === "motor-selection" ||
-                  video.key === "diaphragm-selection"
-                ? ["series:dpl30"]
-                : [];
+        installationGuideYouTubeRelations[video.key] ?? [];
 
       return {
         id: `youtube-${video.key}`,

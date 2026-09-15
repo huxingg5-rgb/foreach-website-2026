@@ -1,6 +1,7 @@
 "use client";
 
 
+import { getChineseProductBreadcrumbs } from "@/data/products/detail/chinese-product-breadcrumbs";
 import {
   getProductDetailTitleOverride,
   type ProductDetailTitleLocale,
@@ -38,6 +39,7 @@ import type { SelectionCartItemInput } from "@/components/selection-cart/selecti
 import SitePageShell from "@/components/layout/SitePageShell";
 import PdfDrawingPreview from "@/components/common/PdfDrawingPreview";
 import CadRequestModal from "./CadRequestModal";
+import ProductApplicationsPanel from "./ProductApplicationsPanel";
 import ProductDatasheetPanel from "./ProductDatasheetPanel";
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -49,7 +51,10 @@ import {
   isHardTubeTargetLocale,
 } from "@/data/products/detail/hard-tube-fitting-detail.intl";
 import { localizeTargetProductDetailData } from "@/data/products/detail/product-detail.target.intl";
-import type { ProductDetailPageData } from "@/data/products/detail/product-detail.types";
+import type {
+  ProductApplicationsContent,
+  ProductDetailPageData,
+} from "@/data/products/detail/product-detail.types";
 import {
   getProductDatasheet,
   getProductDetailResourceCopy,
@@ -125,7 +130,79 @@ import {
 
 import styles from "./product-detail.module.css";
 
-type ProductDetailTab = "spec" | "model3d" | "drawing" | "datasheet";
+type ProductDetailTab =
+  | "spec"
+  | "applications"
+  | "model3d"
+  | "drawing"
+  | "datasheet";
+
+type ProductDetailTabLocale = "zh" | "en" | "es" | "fr" | "ko" | "ru";
+
+const MOBILE_PRODUCT_TAB_LABELS: Record<
+  ProductDetailTabLocale,
+  Record<ProductDetailTab, string>
+> = {
+  zh: {
+    spec: "规格",
+    applications: "应用",
+    model3d: "3D",
+    drawing: "图纸",
+    datasheet: "资料",
+  },
+  en: {
+    spec: "Specs",
+    applications: "Uses",
+    model3d: "3D",
+    drawing: "Drawing",
+    datasheet: "Sheet",
+  },
+  es: {
+    spec: "Espec.",
+    applications: "Usos",
+    model3d: "3D",
+    drawing: "Plano",
+    datasheet: "Ficha",
+  },
+  fr: {
+    spec: "Spéc.",
+    applications: "Usages",
+    model3d: "3D",
+    drawing: "Plan",
+    datasheet: "Fiche",
+  },
+  ko: {
+    spec: "사양",
+    applications: "용도",
+    model3d: "3D",
+    drawing: "도면",
+    datasheet: "자료",
+  },
+  ru: {
+    spec: "Парам.",
+    applications: "Примен.",
+    model3d: "3D",
+    drawing: "Чертёж",
+    datasheet: "Описание",
+  },
+};
+
+function ProductTabLabel({
+  fullLabel,
+  shortLabel,
+}: {
+  fullLabel: string;
+  shortLabel: string;
+}) {
+  return (
+    <>
+      <span className={styles.tabLabelFull}>{fullLabel}</span>
+      <span className={styles.tabLabelShort} aria-hidden="true">
+        {shortLabel}
+      </span>
+    </>
+  );
+}
 
 type ProductDetailClientProps = {
   data: ProductDetailPageData & Record<string, any>;
@@ -136,6 +213,10 @@ type ProductDetailClientProps = {
 type ZoomStyle = CSSProperties & {
   "--zoom-x"?: string;
   "--zoom-y"?: string;
+};
+
+type ProductTabNavStyle = CSSProperties & {
+  "--product-detail-tab-count"?: number;
 };
 
 function getProductDrawingPreviewUrl(slug: string, configuredUrl?: string) {
@@ -437,6 +518,14 @@ function getModelActionText(data: any): string {
   return isCustomInquiryMode(data) ? "联系我们" : "型号选择";
 }
 
+function getPistonPumpCategoryLabel(locale: string): string {
+  const labels: Record<string, string> = {
+    zh: "柱塞泵", "zh-CN": "柱塞泵", en: "Piston Pump",
+    es: "Bomba de pistón", fr: "Pompe à piston", ko: "피스톤 펌프", ru: "Поршневой насос",
+  };
+  return labels[locale] || labels.en;
+}
+
 function isPlungerPumpDetailData(data: any): boolean {
   const text = JSON.stringify(data || {}).toLowerCase();
 
@@ -558,7 +647,7 @@ function getValveDetailBottomCta(data: any) {
     data?.bottomCta?.description ||
     data?.customInquiryCta?.desc ||
     data?.customInquiryCta?.description ||
-    "请提供介质类型、压力范围、接口方式、通道数量、安装空间和控制方式，FOREACH 可协助确认适合您设备的阀系列配置。";
+    "请提供介质类型、压力范围、接口方式、通道数量、安装空间和控制方式，Foreach 可协助确认适合您设备的阀系列配置。";
 
   const button =
     data?.bottomCtaButtonText ||
@@ -624,7 +713,7 @@ function getProbeDetailBottomCta(data: any) {
     data?.bottomCta?.description ||
     data?.customInquiryCta?.desc ||
     data?.customInquiryCta?.description ||
-    "请提供图纸、样品、针管尺寸、针尖结构、安装空间和目标液体信息，FOREACH 可协助确认针系列定制方案。";
+    "请提供图纸、样品、针管尺寸、针尖结构、安装空间和目标液体信息，Foreach 可协助确认针系列定制方案。";
 
   const button =
     data?.bottomCtaButtonText ||
@@ -673,7 +762,7 @@ function getTubingBottomCtaData(data: any) {
     title: data?.bottomCtaTitle || "需要评估管路流阻与泵阀匹配？",
     desc:
       data?.bottomCtaDesc ||
-      "请提供液体介质、目标流量、管材、内径/外径、管路长度、接头数量、弯折情况、工作温度和压力范围。FOREACH 工程师可协助估算管路压降、流体阻力和死体积，并确认管材、接头与泵阀配置是否匹配。",
+      "请提供液体介质、目标流量、管材、内径/外径、管路长度、接头数量、弯折情况、工作温度和压力范围。Foreach 工程师可协助估算管路压降、流体阻力和死体积，并确认管材、接头与泵阀配置是否匹配。",
     button: data?.bottomCtaButton || "联系工程师",
     href: data?.bottomCtaHref || data?.contactHref || "/contact",
   };
@@ -705,7 +794,7 @@ function getPlungerPumpBottomCta(data: any) {
         title:
           "Fittings for volume orders and custom applications",
         desc:
-          "FOREACH can support fitting selection, volume supply, and customization based on port type, tube size, material, sealing element, mounting structure, and application conditions.",
+          "Foreach can support fitting selection, volume supply, and customization based on port type, tube size, material, sealing element, mounting structure, and application conditions.",
         button:
           "Contact Us",
         href:
@@ -747,7 +836,7 @@ function getPlungerPumpBottomCta(data: any) {
     if (data?.__locale === "en") {
       return {
         title: "Syringe pumps configured for your fluidic system",
-        desc: "Share the syringe size, stroke, channel count, valve arrangement, communication interface, installation space, and fluidic integration requirements. The FOREACH engineering team can help confirm a suitable configuration.",
+        desc: "Share the syringe size, stroke, channel count, valve arrangement, communication interface, installation space, and fluidic integration requirements. The Foreach engineering team can help confirm a suitable configuration.",
         button: "Submit a Custom Request",
         href: "/en/contact",
       };
@@ -765,7 +854,7 @@ function getPlungerPumpBottomCta(data: any) {
     if (data?.__locale === "en") {
       return {
         title: "Valveless pumps configured for your fluidic requirements",
-        desc: "Share the target displacement, ratio requirements, fluid compatibility, port type, cleaning requirements, and installation space. The FOREACH engineering team can help confirm a suitable configuration.",
+        desc: "Share the target displacement, ratio requirements, fluid compatibility, port type, cleaning requirements, and installation space. The Foreach engineering team can help confirm a suitable configuration.",
         button: "Submit a Custom Request",
         href: "/en/contact",
       };
@@ -781,8 +870,8 @@ function getPlungerPumpBottomCta(data: any) {
   if (isPlungerPumpDetailData(data)) {
     if (data?.__locale === "en") {
       return {
-        title: "Plunger pumps configured for your instrument",
-        desc: "Share the target volume, fluid compatibility, port type, control method, installation space, and service-life requirements. The FOREACH engineering team can help confirm the pump configuration and wetted materials.",
+        title: "Piston Pump Configured for Your Instrument",
+        desc: "Share the target volume, fluid compatibility, port type, control method, installation space, and service-life requirements. The Foreach engineering team can help confirm the pump configuration and wetted materials.",
         button: "Submit a Custom Request",
         href: "/en/contact",
       };
@@ -800,7 +889,7 @@ function getPlungerPumpBottomCta(data: any) {
     if (data?.__locale === "en") {
       return {
         title: "Need help selecting a diaphragm pump?",
-        desc: "Share the fluid, flow rate, pressure, self-priming requirements, wetted materials, port type, and installation space. The FOREACH engineering team can help confirm a suitable diaphragm pump configuration.",
+        desc: "Share the fluid, flow rate, pressure, self-priming requirements, wetted materials, port type, and installation space. The Foreach engineering team can help confirm a suitable diaphragm pump configuration.",
         button: "Contact an Engineer",
         href: "/en/contact",
       };
@@ -818,7 +907,7 @@ function getPlungerPumpBottomCta(data: any) {
     if (data?.__locale === "en") {
       return {
         title: "Need help selecting a pipetting pump?",
-        desc: "Share the volume range, tip specification, liquid-level and clog-detection requirements, communication interface, installation space, and control method. The FOREACH engineering team can help confirm a suitable configuration.",
+        desc: "Share the volume range, tip specification, liquid-level and clog-detection requirements, communication interface, installation space, and control method. The Foreach engineering team can help confirm a suitable configuration.",
         button: "Contact an Engineer",
         href: "/en/contact",
       };
@@ -1066,7 +1155,7 @@ function getDiaphragmPumpSchemaModel(pathname: string, fallbackModel: string) {
 
 function cleanProductSchemaName(value: unknown) {
   return String(value || "")
-    .replace(/\s*[|｜]\s*FOREACH\s*$/i, "")
+    .replace(/\s*[|｜]\s*Foreach(?: Technology)?\s*$/i, "")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -1147,7 +1236,14 @@ function buildProductPageStructuredData(data: any, pathname: string) {
   const breadcrumbCopy =
     PRODUCT_BREADCRUMB_COPY[locale] || PRODUCT_BREADCRUMB_COPY.en;
   const diaphragmCategoryCopy = getDiaphragmPumpCategoryCopy(locale);
-  const breadcrumbItems = isDiaphragmPump
+  const isPistonPump = pathname.includes("/products/pumps/piston-pump/");
+  // Q-series routes collect selectable models; other detail routes describe specifications.
+  const isProductCollectionPage =
+    /\/products\/fittings\/quick-connect-fittings\/q(?:20|40|60)\/?$/.test(pathname);
+  const compactChineseBreadcrumbs = getChineseProductBreadcrumbs(data, locale);
+  const breadcrumbItems = compactChineseBreadcrumbs
+    ? compactChineseBreadcrumbs.map((item) => ({name:item.label,item:item.href ? toAbsoluteProductUrl(item.href) : canonicalUrl}))
+    : isDiaphragmPump
     ? [
         {
           name: diaphragmCategoryCopy.home,
@@ -1177,8 +1273,12 @@ function buildProductPageStructuredData(data: any, pathname: string) {
           name: breadcrumbCopy.products,
           item: toAbsoluteProductUrl(`${localePrefix}/products/`),
         },
+        ...(isPistonPump ? [{
+          name: getPistonPumpCategoryLabel(locale),
+          item: toAbsoluteProductUrl(`${localePrefix}/products/pumps/piston-pump/`),
+        }] : []),
         {
-          name: productName,
+          name: isPistonPump ? productModel : productName,
           item: canonicalUrl,
         },
       ];
@@ -1186,9 +1286,9 @@ function buildProductPageStructuredData(data: any, pathname: string) {
   const websiteId = `${PRODUCT_SITE_ORIGIN}/#website`;
   const webpageId = `${canonicalUrl}#webpage`;
   const breadcrumbId = `${canonicalUrl}#breadcrumb`;
-  const productId = `${canonicalUrl}#${isDiaphragmPump ? "product-model" : "product"}`;
+  const productId = `${canonicalUrl}#product-model`;
   const webPage: Record<string, unknown> = {
-    "@type": "WebPage",
+    "@type": isProductCollectionPage ? "CollectionPage" : "WebPage",
     "@id": webpageId,
     url: canonicalUrl,
     name: productName,
@@ -1202,9 +1302,11 @@ function buildProductPageStructuredData(data: any, pathname: string) {
     publisher: {
       "@id": organizationId,
     },
-    mainEntity: {
-      "@id": productId,
-    },
+    ...(isProductCollectionPage ? {} : {
+      mainEntity: {
+        "@id": productId,
+      },
+    }),
   };
 
   if (description) {
@@ -1215,14 +1317,15 @@ function buildProductPageStructuredData(data: any, pathname: string) {
     {
       "@type": "Organization",
       "@id": organizationId,
-      name: "Shenzhen FOREACH Technology Co., Ltd.",
+      name: "Foreach Technology",
+      legalName: "深圳市恒永达科技股份有限公司",
       url: `${PRODUCT_SITE_ORIGIN}/`,
     },
     {
       "@type": "WebSite",
       "@id": websiteId,
       url: `${PRODUCT_SITE_ORIGIN}/`,
-      name: "FOREACH",
+      name: "Foreach Technology",
       publisher: {
         "@id": organizationId,
       },
@@ -1238,26 +1341,28 @@ function buildProductPageStructuredData(data: any, pathname: string) {
       })),
     },
     webPage,
-    {
-      "@type": isDiaphragmPump ? "ProductModel" : "Product",
-      "@id": productId,
-      name: productName,
-      url: canonicalUrl,
-      ...(description ? { description } : {}),
-      ...(productImages.length > 0 ? { image: productImages } : {}),
-      brand: {
-        "@type": "Brand",
-        name: "FOREACH",
+    ...(isProductCollectionPage ? [] : [
+      {
+        "@type": "ProductModel",
+        "@id": productId,
+        name: productName,
+        url: canonicalUrl,
+        ...(description ? { description } : {}),
+        ...(productImages.length > 0 ? { image: productImages } : {}),
+        brand: {
+          "@type": "Brand",
+          name: "Foreach Technology",
+        },
+        manufacturer: {
+          "@id": organizationId,
+        },
+        ...(productModel ? { model: productModel } : {}),
+        ...(productSku ? { sku: productSku } : {}),
+        mainEntityOfPage: {
+          "@id": webpageId,
+        },
       },
-      manufacturer: {
-        "@id": organizationId,
-      },
-      ...(productModel ? { model: productModel } : {}),
-      ...(productSku ? { sku: productSku } : {}),
-      mainEntityOfPage: {
-        "@id": webpageId,
-      },
-    },
+    ]),
   ];
 
   if (faqs.length > 0) {
@@ -1295,7 +1400,7 @@ function normalizeProductDisplayTitle(
   return String(value || "")
     .replace(/\s+/g, " ")
     .replace(
-      /\s*[|｜]\s*FOREACH\s*$/i,
+      /\s*[|｜]\s*Foreach(?: Technology)?\s*$/i,
       ""
     )
     .trim();
@@ -1359,6 +1464,10 @@ export default function ProductDetailClient({
     : null;
   const configuratorLocale =
     targetLocale || (isEnglish ? "en" : "zh");
+  const mobileTabLabels =
+    MOBILE_PRODUCT_TAB_LABELS[
+      configuratorLocale as ProductDetailTabLocale
+    ] || MOBILE_PRODUCT_TAB_LABELS.zh;
   const localePrefix = isEnglish
     ? "/en"
     : targetLocale
@@ -1366,10 +1475,13 @@ export default function ProductDetailClient({
       : "";
   const data = useMemo(
     () => {
-      const localizedData = targetLocale
+      const hasLocalizedPistonCopy = (sourceData.eaDetailContent === true || sourceData.compactDetailContent === true) && sourceData.__locale === configuratorLocale;
+      const localizedData = hasLocalizedPistonCopy ? sourceData : targetLocale
         ? localizeTargetProductDetailData(sourceData, targetLocale, pathname || "")
         : isEnglish
-        ? localizeProductDetailData(sourceData)
+        ? sourceData.__locale === "en"
+          ? sourceData
+          : localizeProductDetailData(sourceData)
         : sourceData;
 
       return applyDiaphragmPumpDetailCopy(
@@ -1379,6 +1491,22 @@ export default function ProductDetailClient({
     },
     [configuratorLocale, isEnglish, pathname, sourceData, targetLocale]
   );
+  const hasAuthoredPistonCopy = sourceData.eaDetailContent === true || sourceData.compactDetailContent === true;
+  const useAuthoredPistonCopy = hasAuthoredPistonCopy &&
+    sourceData.__locale === configuratorLocale;
+  const rawApplicationDetails = (hasAuthoredPistonCopy && !useAuthoredPistonCopy
+    ? undefined
+    : data.applicationDetails) as
+    | ProductApplicationsContent
+    | undefined;
+  const applicationDetails =
+    rawApplicationDetails?.tabLabel &&
+    rawApplicationDetails.title &&
+    Array.isArray(rawApplicationDetails.items) &&
+    rawApplicationDetails.items.length > 0
+      ? rawApplicationDetails
+      : null;
+  const hasApplicationDetails = applicationDetails !== null;
   const isDiaphragmPage = isPublishedDiaphragmPumpDetail(pathname, data);
   const diaphragmReference = isDiaphragmPage
     ? getDiaphragmPumpReferenceFromIdentity(data)
@@ -1387,6 +1515,8 @@ export default function ProductDetailClient({
   const datasheet = resourceLocale
     ? getProductDatasheet(sourceData.datasheetId)
     : null;
+  const productDetailTabCount =
+    3 + (hasApplicationDetails ? 1 : 0) + (resourceLocale ? 1 : 0);
   const isCadRequestAvailable = Boolean(
     resourceLocale && sourceData.cadRequestAvailable !== false,
   );
@@ -1427,11 +1557,11 @@ export default function ProductDetailClient({
   const diaphragmCopy = getDiaphragmPumpCopy(data, configuratorLocale);
   const displayProductTitle =
     diaphragmCopy?.title ||
-    getScopedProductDisplayTitle(
+    (useAuthoredPistonCopy ? String(data.model || "") : getScopedProductDisplayTitle(
       data,
       targetLocale,
       String(data.model || "")
-    );
+    ));
   // ===== FOREACH TARGET PRODUCT DISPLAY TITLE END =====
   const structuredData = useMemo(
     () => buildProductPageStructuredData(data, pathname || "/"),
@@ -1466,7 +1596,7 @@ export default function ProductDetailClient({
         technicalDrawing: "Technical Drawing",
         noDrawing: "No public technical drawing is available for this product.",
         completeModels: "Complete Model Numbers",
-        foreachModel: "FOREACH Model",
+        foreachModel: "Foreach Model",
         productCode: "Product Code",
         connection: "Tube ID or Thread",
         gender: "Gender",
@@ -1530,7 +1660,7 @@ export default function ProductDetailClient({
         drawingPreview: "预览图纸",
         drawingDescription: (model: string) => `查看 ${model} 的技术图纸。`,
       };
-  const productBreadcrumbItems = isDiaphragmPage
+  const productBreadcrumbItems = getChineseProductBreadcrumbs(data, configuratorLocale) || (isDiaphragmPage
     ? [
         {
           label: diaphragmCategoryCopy.home,
@@ -1557,10 +1687,16 @@ export default function ProductDetailClient({
           label: copy.products,
           href: localePrefix ? `${localePrefix}/products/` : "/products/",
         },
+        ...(pathname.includes("/products/pumps/piston-pump/") ? [{
+          label: getPistonPumpCategoryLabel(configuratorLocale),
+          href: `${localePrefix}/products/pumps/piston-pump/`,
+        }] : []),
         {
-          label: displayProductTitle,
+          label: pathname.includes("/products/pumps/piston-pump/")
+            ? String(sourceData.modelDisplay || sourceData.displayModel || sourceData.modelCode || data.slug || "").trim()
+            : displayProductTitle,
         },
-      ];
+      ]);
     const { addItem, getItem, toggleDrawingNeed, removeItem } = useSelectionCart();
 
   const analyticsProductId = String(
@@ -1618,6 +1754,7 @@ export default function ProductDetailClient({
   ]);
 
 const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
+const [hasOpenedModel, setHasOpenedModel] = useState(false);
   const [isCadRequestOpen, setIsCadRequestOpen] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
   const [activeThumb, setActiveThumb] = useState(0);
@@ -1812,10 +1949,23 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
   )
     .replace(/\s+/g, " ")
     .trim();
+  const additionalImageAlts = Array.isArray(data.additionalImageAlts)
+    ? data.additionalImageAlts.map((alt: unknown) =>
+        String(alt || "")
+          .replace(/\s+/g, " ")
+          .trim(),
+      )
+    : [];
   const galleryViewLabels = [copy.frontView, copy.sideView, copy.portDetail];
   const getProductImageAlt = (index: number) => {
     if (index === 0) {
       return productImageAlt;
+    }
+
+    const explicitAlt = additionalImageAlts[index - 1];
+
+    if (explicitAlt) {
+      return explicitAlt;
     }
 
     const viewLabel = galleryViewLabels[index] || String(index + 1);
@@ -1972,7 +2122,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
 
     const productName = isPlungerPumpDetailData(data)
       ? isEnglish
-        ? "Plunger Pump"
+        ? "Piston Pump"
         : "柱塞泵"
       : String(
           data.productTypeName ||
@@ -2013,7 +2163,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
 
     const fallbackDetailHref = data.slug
       ? isPlungerPumpDetailData(data)
-        ? `/products/pumps/plunger-pumps/${data.slug}`
+        ? `/products/pumps/piston-pump/${data.slug}`
         : isDiaphragmPumpDetailData(data)
           ? getDiaphragmPumpPath("zh", data.slug, { trailingSlash: false })
           : isPipettingPumpDetailData(data)
@@ -2067,12 +2217,15 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
     if (nextTab === activeTab) return;
 
     setActiveTab(nextTab);
+    if (nextTab === "model3d") setHasOpenedModel(true);
 
     if (!analyticsProductId) return;
 
     const tabName =
       nextTab === "spec"
         ? "specifications"
+        : nextTab === "applications"
+          ? "applications"
         : nextTab === "model3d"
           ? "3d"
           : nextTab === "drawing"
@@ -2724,6 +2877,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
       <main
         className={styles.page}
         data-product-detail-page="true"
+        data-authored-piston-detail={hasAuthoredPistonCopy ? "true" : undefined}
       >
       <div className={styles.container}>
 
@@ -2993,9 +3147,24 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
               <h1 className={styles.productModelTitle}>{displayProductTitle}</h1>
             </div>
 
-            <p className={styles.productDesc}>
-              {(data as any).description || (Array.isArray(data.advantages) ? data.advantages.join("") : "")}
-            </p>
+            {useAuthoredPistonCopy ? (
+              <nav className={styles.mobileQuickLinks} aria-label={copy.tabs}>
+                <a href="#product-detail-resources" onClick={() => handleProductTabChange("spec")}>{copy.specifications}</a>
+                <a href="#product-detail-actions">{isCustomProduct ? customProductCopy.contact : isTargetLanguage ? copy.selectModel : getModelActionText(data)}</a>
+              </nav>
+            ) : null}
+
+            {useAuthoredPistonCopy ? (
+              <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-ea-description="true">
+                {data.advantages.map((paragraph: string, index: number) => (
+                  <p key={`${index}-${paragraph}`}>{paragraph}</p>
+                ))}
+              </div>
+            ) : (
+              <p className={styles.productDesc}>
+                {(data as any).description || (Array.isArray(data.advantages) ? data.advantages.join("") : "")}
+              </p>
+            )}
 
             <div className={styles.application}>
               <p className={styles.applicationTitle}>
@@ -3008,7 +3177,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
               </p>
             </div>
 
-            <div className={styles.operationArea}>
+            <div id="product-detail-actions" className={styles.operationArea}>
               <div data-product-model-row="true" className={styles.modelLine}>
                 <div className={styles.modelCodeWrap}>
                   <div className={styles.modelCodeText}>
@@ -3237,11 +3406,19 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
           </div>
         </section>
 
-        <section className={styles.detailSection}>
+        <section id="product-detail-resources" className={styles.detailSection}>
           <nav
             className={styles.tabNav}
             aria-label={copy.tabs}
             data-has-datasheet-tab={resourceLocale ? "true" : undefined}
+            data-has-applications-tab={
+              hasApplicationDetails ? "true" : undefined
+            }
+            style={
+              {
+                "--product-detail-tab-count": productDetailTabCount,
+              } as ProductTabNavStyle
+            }
           >
             <button
               className={[
@@ -3251,10 +3428,33 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                 .filter(Boolean)
                 .join(" ")}
               type="button"
+              aria-label={copy.specifications}
               onClick={() => handleProductTabChange("spec")}
             >
-              {copy.specifications === "Технические характеристики" ? "Характеристики" : copy.specifications}
+              <ProductTabLabel
+                fullLabel={copy.specifications}
+                shortLabel={mobileTabLabels.spec}
+              />
             </button>
+
+            {applicationDetails ? (
+              <button
+                className={[
+                  styles.tabButton,
+                  activeTab === "applications" ? styles.isActive : "",
+                ]
+                  .filter(Boolean)
+                  .join(" ")}
+                type="button"
+                aria-label={applicationDetails.tabLabel}
+                onClick={() => handleProductTabChange("applications")}
+              >
+                <ProductTabLabel
+                  fullLabel={applicationDetails.tabLabel}
+                  shortLabel={mobileTabLabels.applications}
+                />
+              </button>
+            ) : null}
 
             <button
               className={[
@@ -3272,9 +3472,13 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
               }
               data-analytics-section="product_detail_tabs"
               data-analytics-skip="true"
+              aria-label={copy.model3d}
               onClick={() => handleProductTabChange("model3d")}
             >
-              {copy.model3d}
+              <ProductTabLabel
+                fullLabel={copy.model3d}
+                shortLabel={mobileTabLabels.model3d}
+              />
             </button>
 
             <button
@@ -3285,9 +3489,13 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                 .filter(Boolean)
                 .join(" ")}
               type="button"
+              aria-label={copy.technicalDrawing}
               onClick={() => handleProductTabChange("drawing")}
             >
-              {copy.technicalDrawing.startsWith("Технический ") ? "Чертёж" : copy.technicalDrawing}
+              <ProductTabLabel
+                fullLabel={copy.technicalDrawing}
+                shortLabel={mobileTabLabels.drawing}
+              />
             </button>
 
             {resourceLocale && resourceCopy ? (
@@ -3299,9 +3507,13 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                   .filter(Boolean)
                   .join(" ")}
                 type="button"
+                aria-label={resourceCopy.datasheetTab}
                 onClick={() => handleProductTabChange("datasheet")}
               >
-                {resourceCopy.datasheetTab}
+                <ProductTabLabel
+                  fullLabel={resourceCopy.datasheetTab}
+                  shortLabel={mobileTabLabels.datasheet}
+                />
               </button>
             ) : null}
           </nav>
@@ -3342,6 +3554,19 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
               </div>
             </div>
 
+            {applicationDetails ? (
+              <div
+                className={[
+                  styles.panel,
+                  activeTab === "applications" ? styles.isActive : "",
+                ]
+                  .filter(Boolean)
+                  .join(" ")}
+              >
+                <ProductApplicationsPanel content={applicationDetails} />
+              </div>
+            ) : null}
+
             <div
               className={[
                 styles.panel,
@@ -3354,7 +3579,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                   className={styles.panelBox}
                   data-product-model3d-panel="true"
                 >
-                {isPumpDetail ? (
+                {hasOpenedModel ? (isPumpDetail ? (
                   <PumpUploadedFileGuard
                     key={model3dUrl}
                     fileUrl={model3dUrl}
@@ -3373,6 +3598,7 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                       slug={data.slug}
                       modelName={data.model}
                       modelUrl={model3dUrl}
+                      isActive={activeTab === "model3d"}
                       locale={pumpFileDisplayLocale}
                     />
                   </PumpUploadedFileGuard>
@@ -3380,10 +3606,12 @@ const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
                   <ProductModelViewer
                     slug={data.slug}
                     modelName={data.model}
+                    key={model3dUrl}
                     modelUrl={model3dUrl}
+                    isActive={activeTab === "model3d"}
                     locale={pumpFileDisplayLocale}
                   />
-                )}
+                )) : null}
               </div>
             </div>
 

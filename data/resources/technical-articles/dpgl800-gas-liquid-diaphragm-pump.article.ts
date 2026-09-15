@@ -60,7 +60,7 @@ export function getDpgl800TechnicalArticle(
     category: "pumps-valves",
     title: articleCopy.metadata.title,
     summary: getDpgl800ArticleSummary(locale),
-    date: "2026-08-18",
+    date: "2026-07-16",
     coverImage: DPGL800_ARTICLE_COVER,
     coverAlt: articleCopy.metadata.coverAlt,
     content: [

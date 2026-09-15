@@ -165,17 +165,17 @@ const distributorProductImages = {
 const en: DistributorPageData = {
   hero: {
     titlePrefix: "Become a",
-    titleBrand: "FOREACH",
+    titleBrand: "Foreach Technology",
     titleSuffix: "Distributor",
     titleSecondLine: "",
-    desc: "Build a long-term partnership with FOREACH and expand local opportunities in microfluidic core components and fluidic system solutions for IVD, life sciences, analytical instruments, synthetic biology, and laboratory automation.",
+    desc: "Build a long-term partnership with Foreach and expand local opportunities in microfluidic core components and fluidic system solutions for IVD, life sciences, analytical instruments, synthetic biology, and laboratory automation.",
     primaryButton: "Apply for Partnership",
     secondaryButton: "View Products",
   },
 
   advantagesHead: {
     title: "Support local customers with a complete microfluidic product portfolio.",
-    desc: "FOREACH supports partners through a broad product matrix, technical documents, selection support, sample coordination, and project communication.",
+    desc: "Foreach supports partners through a broad product matrix, technical documents, selection support, sample coordination, and project communication.",
   },
 
   advantages: [
@@ -203,7 +203,7 @@ const en: DistributorPageData = {
 
   productsHead: {
     title: "Core product categories for distributor cooperation.",
-    desc: "For IVD, life sciences, analytical instruments, synthetic biology, and laboratory automation, FOREACH provides pumps, valves, intelligent control modules, fittings, tubing, and needle products.",
+    desc: "For IVD, life sciences, analytical instruments, synthetic biology, and laboratory automation, Foreach provides pumps, valves, intelligent control modules, fittings, tubing, and needle products.",
   },
 
   products: [
@@ -247,7 +247,7 @@ const en: DistributorPageData = {
 
   partnersHead: {
     title: "We welcome partners with local customer resources and technical communication capabilities.",
-    desc: "If your company has channel resources, project follow-up capabilities, technical sales experience, or local service support, FOREACH looks forward to building a stable long-term partnership with you.",
+    desc: "If your company has channel resources, project follow-up capabilities, technical sales experience, or local service support, Foreach looks forward to building a stable long-term partnership with you.",
   },
 
   partners: [
@@ -275,7 +275,7 @@ const en: DistributorPageData = {
 
   processHead: {
     title: "From initial communication to project cooperation.",
-    desc: "We aim to make the cooperation process clear, traceable, and practical. After submission, FOREACH will gradually confirm the suitable cooperation method and support scope based on market region, customer type, product direction, and project needs.",
+    desc: "We aim to make the cooperation process clear, traceable, and practical. After submission, Foreach will gradually confirm the suitable cooperation method and support scope based on market region, customer type, product direction, and project needs.",
   },
 
   process: [
@@ -358,11 +358,11 @@ const en: DistributorPageData = {
     industry: "Main Industry",
     industryPlaceholder: "Select industry",
 
-    productInterest: "Interested FOREACH Products",
+    productInterest: "Interested Foreach Products",
     productInterestPlaceholder: "e.g. Piston pump, solenoid valve, quick connector, custom tubing assembly",
 
     requirement: "Cooperation Background / Project Needs",
-    requirementPlaceholder: "Please briefly describe your local market, customer industry, existing projects, current needs, or support expected from FOREACH.",
+    requirementPlaceholder: "Please briefly describe your local market, customer industry, existing projects, current needs, or support expected from Foreach.",
 
     uploadTip: "Company profile, product list, BOM files, images, and project documents are supported. Each file should not exceed 20 MB.",
     uploadButton: "Upload Files",
@@ -386,12 +386,12 @@ const en: DistributorPageData = {
     fileTooLarge: "exceeds 20 MB.",
     needVerifyEmail: "Please verify your email before submission.",
     submitted:
-  "We have received your partnership application. The FOREACH team will review your information and follow up based on your market region, product interest, and cooperation needs.",
+  "We have received your partnership application. The Foreach team will review your information and follow up based on your market region, product interest, and cooperation needs.",
   },
 
   bottomCta: {
     title: "Looking for a long-term microfluidic partner?",
-    desc: "Work with FOREACH to bring product portfolios, technical documents, selection support, and project introduction capabilities to more local customers.",
+    desc: "Work with Foreach to bring product portfolios, technical documents, selection support, and project introduction capabilities to more local customers.",
     button: "Apply Now",
   },
 };
@@ -405,32 +405,32 @@ const es: DistributorPageData = {
 
   hero: {
     titlePrefix: "Conviértase en distribuidor de",
-    titleBrand: "FOREACH",
+    titleBrand: "Foreach Technology",
     titleSuffix: "",
     titleSecondLine: "",
-    desc: "Establezca una cooperación a largo plazo con FOREACH y amplíe las oportunidades locales en componentes microfluídicos clave y soluciones de sistemas fluídicos para IVD, ciencias de la vida, instrumentos analíticos, biología sintética y automatización de laboratorio.",
+    desc: "Establezca una cooperación a largo plazo con Foreach y amplíe las oportunidades locales en componentes microfluídicos clave y soluciones de sistemas fluídicos para IVD, ciencias de la vida, instrumentos analíticos, biología sintética y automatización de laboratorio.",
     primaryButton: "Solicitar cooperación",
     secondaryButton: "Ver productos",
   },
 
   advantagesHead: {
     title: "Apoye a sus clientes locales con una cartera completa de productos microfluídicos.",
-    desc: "FOREACH apoya a sus socios mediante una amplia matriz de productos, documentación técnica, soporte de selección, coordinación de muestras y comunicación de proyectos.",
+    desc: "Foreach apoya a sus socios mediante una amplia matriz de productos, documentación técnica, soporte de selección, coordinación de muestras y comunicación de proyectos.",
   },
 
   productsHead: {
     title: "Categorías principales de productos para la cooperación con distribuidores.",
-    desc: "Para IVD, ciencias de la vida, instrumentos analíticos, biología sintética y automatización de laboratorio, FOREACH ofrece bombas, válvulas, módulos de control inteligente, conexiones, tubos y productos de aguja.",
+    desc: "Para IVD, ciencias de la vida, instrumentos analíticos, biología sintética y automatización de laboratorio, Foreach ofrece bombas, válvulas, módulos de control inteligente, conexiones, tubos y productos de aguja.",
   },
 
   partnersHead: {
     title: "Damos la bienvenida a socios con recursos locales de clientes y capacidad de comunicación técnica.",
-    desc: "Si su empresa cuenta con canales, capacidad de seguimiento de proyectos, experiencia en ventas técnicas o soporte de servicio local, FOREACH espera construir una cooperación estable y a largo plazo con usted.",
+    desc: "Si su empresa cuenta con canales, capacidad de seguimiento de proyectos, experiencia en ventas técnicas o soporte de servicio local, Foreach espera construir una cooperación estable y a largo plazo con usted.",
   },
 
   processHead: {
     title: "Desde la comunicación inicial hasta la cooperación del proyecto.",
-    desc: "Buscamos que el proceso de cooperación sea claro, trazable y práctico. Después del envío, FOREACH confirmará gradualmente el método de cooperación y el alcance de soporte adecuados.",
+    desc: "Buscamos que el proceso de cooperación sea claro, trazable y práctico. Después del envío, Foreach confirmará gradualmente el método de cooperación y el alcance de soporte adecuados.",
   },
 
   guide: {
@@ -461,7 +461,7 @@ const es: DistributorPageData = {
     website: "Sitio web de la empresa",
     industry: "Industria principal",
     industryPlaceholder: "Seleccione industria",
-    productInterest: "Productos FOREACH de interés",
+    productInterest: "Productos Foreach de interés",
     requirement: "Antecedentes de cooperación / Necesidades del proyecto",
     uploadButton: "Subir archivos",
     submitButton: "Enviar solicitud",
@@ -479,7 +479,7 @@ const es: DistributorPageData = {
 
   bottomCta: {
     title: "¿Busca un socio microfluídico estable a largo plazo?",
-    desc: "Coopere con FOREACH para llevar carteras de productos, documentación técnica, soporte de selección y capacidades de introducción de proyectos a más clientes locales.",
+    desc: "Coopere con Foreach para llevar carteras de productos, documentación técnica, soporte de selección y capacidades de introducción de proyectos a más clientes locales.",
     button: "Solicitar ahora",
   },
 };
@@ -493,32 +493,32 @@ const fr: DistributorPageData = {
 
   hero: {
     titlePrefix: "Devenez distributeur",
-    titleBrand: "FOREACH",
+    titleBrand: "Foreach Technology",
     titleSuffix: "",
     titleSecondLine: "",
-    desc: "Construisez un partenariat à long terme avec FOREACH et développez les opportunités locales dans les composants microfluidiques essentiels et les solutions de systèmes fluidiques pour l’IVD, les sciences de la vie, les instruments analytiques, la biologie synthétique et l’automatisation de laboratoire.",
+    desc: "Construisez un partenariat à long terme avec Foreach et développez les opportunités locales dans les composants microfluidiques essentiels et les solutions de systèmes fluidiques pour l’IVD, les sciences de la vie, les instruments analytiques, la biologie synthétique et l’automatisation de laboratoire.",
     primaryButton: "Demander un partenariat",
     secondaryButton: "Voir les produits",
   },
 
   advantagesHead: {
     title: "Soutenez vos clients locaux avec une gamme complète de produits microfluidiques.",
-    desc: "FOREACH accompagne ses partenaires avec une large matrice de produits, des documents techniques, un support de sélection, une coordination des échantillons et une communication de projet.",
+    desc: "Foreach accompagne ses partenaires avec une large matrice de produits, des documents techniques, un support de sélection, une coordination des échantillons et une communication de projet.",
   },
 
   productsHead: {
     title: "Catégories principales de produits pour la coopération avec les distributeurs.",
-    desc: "Pour l’IVD, les sciences de la vie, les instruments analytiques, la biologie synthétique et l’automatisation de laboratoire, FOREACH fournit des pompes, vannes, modules de contrôle intelligents, raccords, tubes et aiguilles.",
+    desc: "Pour l’IVD, les sciences de la vie, les instruments analytiques, la biologie synthétique et l’automatisation de laboratoire, Foreach fournit des pompes, vannes, modules de contrôle intelligents, raccords, tubes et aiguilles.",
   },
 
   partnersHead: {
     title: "Nous accueillons les partenaires disposant de ressources clients locales et de capacités de communication technique.",
-    desc: "Si votre entreprise dispose de canaux, de capacités de suivi de projet, d’une expérience en vente technique ou d’un support de service local, FOREACH souhaite établir un partenariat stable et durable avec vous.",
+    desc: "Si votre entreprise dispose de canaux, de capacités de suivi de projet, d’une expérience en vente technique ou d’un support de service local, Foreach souhaite établir un partenariat stable et durable avec vous.",
   },
 
   processHead: {
     title: "De la communication initiale à la coopération de projet.",
-    desc: "Nous souhaitons rendre le processus de coopération clair, traçable et concret. Après la soumission, FOREACH confirmera progressivement la méthode de coopération et le périmètre de support adaptés.",
+    desc: "Nous souhaitons rendre le processus de coopération clair, traçable et concret. Après la soumission, Foreach confirmera progressivement la méthode de coopération et le périmètre de support adaptés.",
   },
 
   guide: {
@@ -549,7 +549,7 @@ const fr: DistributorPageData = {
     website: "Site web de l’entreprise",
     industry: "Secteur principal",
     industryPlaceholder: "Sélectionnez le secteur",
-    productInterest: "Produits FOREACH d’intérêt",
+    productInterest: "Produits Foreach d’intérêt",
     requirement: "Contexte de coopération / Besoins du projet",
     uploadButton: "Téléverser des fichiers",
     submitButton: "Soumettre la demande",
@@ -567,7 +567,7 @@ const fr: DistributorPageData = {
 
   bottomCta: {
     title: "Vous recherchez un partenaire microfluidique stable à long terme ?",
-    desc: "Collaborez avec FOREACH pour apporter des gammes de produits, des documents techniques, un support de sélection et des capacités d’introduction de projet à davantage de clients locaux.",
+    desc: "Collaborez avec Foreach pour apporter des gammes de produits, des documents techniques, un support de sélection et des capacités d’introduction de projet à davantage de clients locaux.",
     button: "Demander maintenant",
   },
 };
@@ -580,23 +580,23 @@ const ko: DistributorPageData = {
   ...en,
 
   hero: {
-    titlePrefix: "FOREACH",
+    titlePrefix: "Foreach Technology",
     titleBrand: "",
     titleSuffix: "공식 유통 파트너가 되세요",
     titleSecondLine: "",
-    desc: "FOREACH와 장기적인 파트너십을 구축하고 IVD, 생명과학, 분석기기, 합성생물학 및 실험실 자동화 분야에서 마이크로플루이딕 핵심 부품과 유체 시스템 솔루션의 현지 시장 기회를 확대하십시오.",
+    desc: "Foreach와 장기적인 파트너십을 구축하고 IVD, 생명과학, 분석기기, 합성생물학 및 실험실 자동화 분야에서 마이크로플루이딕 핵심 부품과 유체 시스템 솔루션의 현지 시장 기회를 확대하십시오.",
     primaryButton: "파트너십 신청",
     secondaryButton: "제품 보기",
   },
 
   advantagesHead: {
     title: "완전한 마이크로플루이딕 제품 포트폴리오로 현지 고객을 지원합니다.",
-    desc: "FOREACH는 폭넓은 제품 라인업, 기술 문서, 제품 선정 지원, 샘플 조율 및 프로젝트 커뮤니케이션을 통해 파트너를 지원합니다.",
+    desc: "Foreach는 폭넓은 제품 라인업, 기술 문서, 제품 선정 지원, 샘플 조율 및 프로젝트 커뮤니케이션을 통해 파트너를 지원합니다.",
   },
 
   productsHead: {
     title: "유통 파트너 협력에 적합한 핵심 제품군.",
-    desc: "FOREACH는 IVD, 생명과학, 분석기기, 합성생물학 및 실험실 자동화 분야를 위해 펌프, 밸브, 지능형 제어 모듈, 피팅, 튜빙 및 니들 제품을 제공합니다.",
+    desc: "Foreach는 IVD, 생명과학, 분석기기, 합성생물학 및 실험실 자동화 분야를 위해 펌프, 밸브, 지능형 제어 모듈, 피팅, 튜빙 및 니들 제품을 제공합니다.",
   },
 
   partnersHead: {
@@ -606,7 +606,7 @@ const ko: DistributorPageData = {
 
   processHead: {
     title: "초기 상담부터 프로젝트 협력까지.",
-    desc: "협력 절차를 명확하고 추적 가능하며 실행 가능하게 만들고자 합니다. 제출 후 FOREACH는 시장 지역, 고객 유형, 제품 방향 및 프로젝트 요구에 따라 적합한 협력 방식과 지원 범위를 확인합니다.",
+    desc: "협력 절차를 명확하고 추적 가능하며 실행 가능하게 만들고자 합니다. 제출 후 Foreach는 시장 지역, 고객 유형, 제품 방향 및 프로젝트 요구에 따라 적합한 협력 방식과 지원 범위를 확인합니다.",
   },
 
   guide: {
@@ -637,7 +637,7 @@ const ko: DistributorPageData = {
     website: "회사 웹사이트",
     industry: "주요 산업",
     industryPlaceholder: "산업을 선택하세요",
-    productInterest: "관심 있는 FOREACH 제품",
+    productInterest: "관심 있는 Foreach 제품",
     requirement: "협력 배경 / 프로젝트 요구",
     uploadButton: "파일 업로드",
     submitButton: "파트너십 신청 제출",
@@ -655,7 +655,7 @@ const ko: DistributorPageData = {
 
   bottomCta: {
     title: "장기적으로 안정적인 마이크로플루이딕 파트너를 찾고 계신가요?",
-    desc: "FOREACH와 협력하여 제품 포트폴리오, 기술 문서, 선정 지원 및 프로젝트 도입 역량을 더 많은 현지 고객에게 제공하십시오.",
+    desc: "Foreach와 협력하여 제품 포트폴리오, 기술 문서, 선정 지원 및 프로젝트 도입 역량을 더 많은 현지 고객에게 제공하십시오.",
     button: "지금 신청",
   },
 };
@@ -669,32 +669,32 @@ const ru: DistributorPageData = {
 
   hero: {
     titlePrefix: "Станьте дистрибьютором",
-    titleBrand: "FOREACH",
+    titleBrand: "Foreach Technology",
     titleSuffix: "",
     titleSecondLine: "",
-    desc: "Постройте долгосрочное партнерство с FOREACH и развивайте локальные возможности в области ключевых микрофлюидных компонентов и решений жидкостных систем для IVD, наук о жизни, аналитических приборов, синтетической биологии и лабораторной автоматизации.",
+    desc: "Постройте долгосрочное партнерство с Foreach и развивайте локальные возможности в области ключевых микрофлюидных компонентов и решений жидкостных систем для IVD, наук о жизни, аналитических приборов, синтетической биологии и лабораторной автоматизации.",
     primaryButton: "Подать заявку",
     secondaryButton: "Посмотреть продукты",
   },
 
   advantagesHead: {
     title: "Поддерживайте локальных клиентов с помощью полного портфеля микрофлюидных продуктов.",
-    desc: "FOREACH поддерживает партнеров широкой продуктовой матрицей, технической документацией, помощью в подборе, координацией образцов и проектной коммуникацией.",
+    desc: "Foreach поддерживает партнеров широкой продуктовой матрицей, технической документацией, помощью в подборе, координацией образцов и проектной коммуникацией.",
   },
 
   productsHead: {
     title: "Основные продуктовые направления для сотрудничества с дистрибьюторами.",
-    desc: "Для IVD, наук о жизни, аналитических приборов, синтетической биологии и лабораторной автоматизации FOREACH предлагает насосы, клапаны, интеллектуальные модули управления, фитинги, трубки и иглы.",
+    desc: "Для IVD, наук о жизни, аналитических приборов, синтетической биологии и лабораторной автоматизации Foreach предлагает насосы, клапаны, интеллектуальные модули управления, фитинги, трубки и иглы.",
   },
 
   partnersHead: {
     title: "Мы приветствуем партнеров с локальными клиентскими ресурсами и технической коммуникационной компетенцией.",
-    desc: "Если у вашей компании есть каналы продаж, опыт сопровождения проектов, технические продажи или локальная сервисная поддержка, FOREACH готова выстроить с вами стабильное долгосрочное партнерство.",
+    desc: "Если у вашей компании есть каналы продаж, опыт сопровождения проектов, технические продажи или локальная сервисная поддержка, Foreach готова выстроить с вами стабильное долгосрочное партнерство.",
   },
 
   processHead: {
     title: "От первичного общения до проектного сотрудничества.",
-    desc: "Мы стремимся сделать процесс сотрудничества понятным, отслеживаемым и практичным. После отправки заявки FOREACH постепенно подтвердит подходящий формат сотрудничества и объем поддержки.",
+    desc: "Мы стремимся сделать процесс сотрудничества понятным, отслеживаемым и практичным. После отправки заявки Foreach постепенно подтвердит подходящий формат сотрудничества и объем поддержки.",
   },
 
   guide: {
@@ -725,7 +725,7 @@ const ru: DistributorPageData = {
     website: "Сайт компании",
     industry: "Основная отрасль",
     industryPlaceholder: "Выберите отрасль",
-    productInterest: "Интересующие продукты FOREACH",
+    productInterest: "Интересующие продукты Foreach",
     requirement: "Контекст сотрудничества / Потребности проекта",
     uploadButton: "Загрузить файлы",
     submitButton: "Отправить заявку",
@@ -743,7 +743,7 @@ const ru: DistributorPageData = {
 
   bottomCta: {
     title: "Ищете долгосрочного и стабильного партнера в области микрофлюидики?",
-    desc: "Сотрудничайте с FOREACH, чтобы предоставить локальным клиентам продуктовые портфели, техническую документацию, поддержку подбора и возможности внедрения проектов.",
+    desc: "Сотрудничайте с Foreach, чтобы предоставить локальным клиентам продуктовые портфели, техническую документацию, поддержку подбора и возможности внедрения проектов.",
     button: "Подать заявку",
   },
 };

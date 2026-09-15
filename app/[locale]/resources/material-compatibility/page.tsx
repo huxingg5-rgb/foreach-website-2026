@@ -77,22 +77,22 @@ export function generateStaticParams() {
 ========================================================= */
 const materialCompatibilityMetadata = {
     es: {
-        title: "Compatibilidad de materiales | FOREACH",
+        title: "Compatibilidad de materiales | Foreach Technology",
         description:
             "Consulte la compatibilidad entre medios químicos y plásticos de ingeniería, sus propiedades y la documentación de conformidad disponible.",
     },
     fr: {
-        title: "Compatibilité des matériaux | FOREACH",
+        title: "Compatibilité des matériaux | Foreach Technology",
         description:
             "Consultez la compatibilité entre milieux chimiques et plastiques techniques, leurs propriétés et les documents de conformité disponibles.",
     },
     ko: {
-        title: "재료 적합성 | FOREACH",
+        title: "재료 적합성 | Foreach Technology",
         description:
             "화학 매질과 엔지니어링 플라스틱의 적합성, 주요 재료 특성 및 제공 가능한 인증 자료를 확인하세요.",
     },
     ru: {
-        title: "Совместимость материалов | FOREACH",
+        title: "Совместимость материалов | Foreach Technology",
         description:
             "Справочник по совместимости химических сред и инженерных пластиков, свойствам материалов и доступным документам соответствия.",
     },
@@ -107,9 +107,9 @@ export async function generateMetadata({
 
     if (locale === "en") {
         return {
-            title: "Material Compatibility｜FOREACH",
+            title: "Material Compatibility｜Foreach Technology",
             description:
-                "FOREACH material compatibility reference for chemical media, engineering plastics, material properties, and compliance documentation.",
+                "Foreach material compatibility reference for chemical media, engineering plastics, material properties, and compliance documentation.",
         };
     }
 
@@ -153,7 +153,7 @@ export default async function MaterialCompatibilityIntlPage({
         kicker: "SELECTION SUPPORT",
         title: "Need help confirming material compatibility?",
         description:
-            "Submit the medium name, concentration, temperature, pressure, and contact time. The FOREACH technical team can help confirm material selection for your application.",
+            "Submit the medium name, concentration, temperature, pressure, and contact time. The Foreach technical team can help confirm material selection for your application.",
         buttonText: "Contact Technical Support",
     };
 

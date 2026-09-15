@@ -1,0 +1,662 @@
+[
+  {
+    "title": "Pourquoi les bulles retardent-elles ou faussent-elles le dosage d’une pompe à piston ?",
+    "seo": "Bulles dans une pompe à piston : erreur de dosage et amorçage",
+    "deck": "Une course terminée ne prouve pas que le volume prévu a atteint le récipient. La compression d’une bulle stocke temporairement une partie du déplacement ; sa détente peut provoquer un écoulement résiduel ou perturber le cycle suivant. Repérez l’origine du gaz et comparez pression et masses individuelles avant et après amorçage.",
+    "sections": [
+      {
+        "title": "Où va le volume déplacé ?",
+        "paragraphs": [
+          "Le déplacement idéal correspond à la section efficace du piston multipliée par sa course. Gaz, tuyaux souples et cavités de vanne peuvent en stocker une partie. Le volume utile est celui reçu à destination ; petites courses, première dose après inversion et redémarrage sont particulièrement sensibles.",
+          "À titre d’exemple, une bulle fermée de 10 μL comprimée de 100 à 120 kPa absolus occupe environ 8,33 μL selon un modèle de gaz parfait isotherme. Les 1,67 μL stockés ne constituent ni une erreur mesurée Foreach ni une perte définitive : ils peuvent ressortir en fin de dose ou au cycle suivant."
+        ]
+      },
+      {
+        "title": "Relier emplacement et chronologie",
+        "paragraphs": [
+          "Notez si le gaz apparaît d’abord à l’aspiration, dans la chambre, la vanne ou la sortie, et synchronisez l’observation avec aspiration, commutation et dosage. Un tronçon transparent doit modifier le moins possible résistance et volume mort ; il ne permet pas d’exclure du gaz dans une chambre opaque.",
+          "Une première dose trop faible peut aussi provenir du jeu mécanique, d’un retard de vanne ou de la souplesse du tube. Une amélioration répétable après modification contrôlée de l’état gazeux apporte une preuve plus solide qu’un seul symptôme."
+        ]
+      },
+      {
+        "title": "Distinguer air résiduel, entrée d’air et dégazage",
+        "paragraphs": [
+          "Une stabilisation rapide après amorçage contrôlé suggère de l’air résiduel lié au montage ou au changement de liquide. Des bulles persistantes à un raccord d’entrée imposent une vérification sous aspiration : de l’air peut entrer sans fuite de liquide visible vers l’extérieur.",
+          "Échauffement et baisse de pression peuvent libérer du gaz dissous. Comparez le même liquide avant et après dégazage à température, niveau et pression comparables. Si la viscosité ou la température change aussi, l’amélioration ne peut pas être attribuée au seul gaz dissous."
+        ]
+      },
+      {
+        "title": "Valider l’amorçage plutôt qu’ajouter une correction fixe",
+        "paragraphs": [
+          "Fixez volume cible, température, niveau, séquence des vannes et charge de sortie. Pesez chaque dose avec les pressions d’entrée/sortie. Comparez état initial, amorçage, fonctionnement prolongé et redémarrage, en distinguant premières doses et régime établi.",
+          "Définissez les critères du projet à partir de masses répétables, de traces de pression et de l’état du gaz observable. Ni un nombre universel de cycles ni un supplément de volume constant ne résolvent tous les mécanismes. Vérifiez la réapparition éventuelle du défaut."
+        ]
+      },
+      {
+        "title": "Séparer débit de sortie et transfert de la goutte",
+        "paragraphs": [
+          "Si la collecte à la sortie est correcte mais que le puits reçoit moins, inspectez gouttes pendantes, éclaboussures, mouillage extérieur et synchronisation. Conservez une charge équivalente lors du changement de collecte : retirer l’aiguille modifie la contre-pression.",
+          "Lorsqu’un maintien en pression est permis, imposez la même position de vanne, pression initiale et température. Détente du gaz, relaxation du tube et fuite interne influencent toutes la décroissance ; sa pente seule ne désigne pas une vanne défaillante."
+        ]
+      },
+      {
+        "title": "Évaluer EAS puis refaire l’essai complet",
+        "paragraphs": [
+          "La spécification officielle Foreach EAS décrit une chambre facilitant l’évacuation de l’air. C’est une piste pour réduire le gaz piégé, pas une garantie pour tout liquide, orientation ou circuit. Vérifiez capacité, interfaces et circuit de vannes dans la spécification officielle.",
+          "La configuration EA-500-PMMA présente 500 μL sur 2000 pas entiers, soit 0,25 μL théorique par pas ; ce n’est pas l’exactitude du liquide délivré. Revalidez réactif réel, volume minimal, première dose, régime établi et redémarrage. La référence Hamilton illustre l’observation pression/gaz, sans impliquer des capteurs équivalents intégrés chez Foreach."
+        ]
+      }
+    ],
+    "formula": {
+      "section": 0,
+      "expression": "P₁V₁ ≈ P₂V₂; ΔVgas = V₁(1 − P₁/P₂)",
+      "note": "Estimation pour gaz parfait fermé, approximativement isotherme, sans dissolution ni transfert de masse. Pressions absolues. ΔVgas décrit un stockage temporaire, pas le déficit final."
+    },
+    "table": {
+      "section": 1,
+      "headers": [
+        "Lieu ou événement",
+        "À vérifier d’abord",
+        "Limite d’interprétation"
+      ],
+      "rows": [
+        [
+          "Chambre ; première dose après inversion",
+          "Amorçage et montée en pression",
+          "Le jeu peut aussi intervenir"
+        ],
+        [
+          "Bulles continues à l’entrée",
+          "Raccords, niveau, température",
+          "Entrée d’air et dégazage peuvent coexister"
+        ],
+        [
+          "Écoulement après arrêt",
+          "Stockage et position de vanne",
+          "Ne prouve pas une fuite"
+        ],
+        [
+          "Déficit uniquement dans le puits",
+          "Formation et transfert de goutte",
+          "Garder une contre-pression équivalente"
+        ]
+      ]
+    },
+    "diagram": "Schéma de principe : le piston comprime d’abord la bulle ; la détente peut libérer du liquide après le mouvement. Les flèches indiquent le sens du liquide, sans dimensions de produit réel.",
+    "faq": [
+      {
+        "question": "Les bulles réduisent-elles toutes les doses ?",
+        "answer": "Non. Elles peuvent retarder la livraison, provoquer une traîne ou coupler les cycles. Pression, vannes et fenêtre de collecte déterminent le résultat."
+      },
+      {
+        "question": "Le retour à la normale après amorçage suffit-il ?",
+        "answer": "Non. Testez la durée et le redémarrage ; une entrée d’air ou un dégazage continu peut recréer le défaut."
+      },
+      {
+        "question": "Une résolution élevée élimine-t-elle cette erreur ?",
+        "answer": "Non. La résolution géométrique ne supprime ni stockage dans le gaz et les tubes ni défaut de transfert des gouttes."
+      },
+      {
+        "question": "EAS garantit-elle l’absence de bulles pour tous les réactifs ?",
+        "answer": "Non. Validez le liquide, l’orientation, les cavités et la procédure d’amorçage réels."
+      }
+    ],
+    "links": [
+      "Exactitude, répétabilité et résolution",
+      "Vitesse d’aspiration et attente des liquides visqueux",
+      "Spécification officielle EAS en anglais",
+      "Pompes à piston de précision"
+    ],
+    "description": "Diagnostiquez les bulles par pression, masses individuelles et amorçage contrôlé. Distinguez gaz piégé, entrée d’air et transfert de gouttes."
+  },
+  {
+    "title": "Comment régler aspiration et temps d’attente d’une pompe à piston avec un réactif visqueux ?",
+    "seo": "Pompe à piston : aspiration et attente pour liquides visqueux",
+    "deck": "La plage stable dépend de la résistance, du temps de remplissage et de la pression. Testez séparément vitesse d’aspiration et attente, puis choisissez une combinaison rapide respectant biais, répétabilité, bulles et cycle. Les réglages à l’eau ne valident pas le réactif ; une course achevée ne prouve pas l’équilibre hydraulique.",
+    "sections": [
+      {
+        "title": "Relier viscosité, diamètre et perte de charge",
+        "paragraphs": [
+          "En écoulement laminaire newtonien pleinement développé dans un tube circulaire, la perte augmente avec viscosité et longueur et dépend de la puissance quatre du diamètre. Un tube principal élargi peut laisser la vanne, le filtre ou l’aiguille comme restriction dominante.",
+          "La relation stationnaire décrit un tronçon, pas tous les transitoires de chambre. Ne l’appliquez pas directement à des réactifs rhéofluidifiants, chargés ou fortement non newtoniens. Documentez température et rhéologie, puis mesurez les pertes."
+        ]
+      },
+      {
+        "title": "Pourquoi attendre après l’arrêt du piston ?",
+        "paragraphs": [
+          "Le recul crée un volume que le liquide doit remplir à travers une résistance. Gaz et tuyaux élastiques peuvent prolonger remplissage et récupération de pression après l’arrêt. Une commutation immédiate transmet cet état transitoire à l’étape suivante.",
+          "Déterminez l’attente par la récupération de pression et des masses répétables. Les guides Tecan étayent le principe d’un réglage adapté, mais leurs valeurs de plateforme et d’embout ne définissent pas 200 ms ou 500 ms universels pour Foreach."
+        ]
+      },
+      {
+        "title": "Construire une matrice vitesse×attente",
+        "paragraphs": [
+          "Dans la plage autorisée de pompe et commande, croisez trois vitesses avec trois attentes, soit 3×3 conditions. Commencez prudemment et fixez volume, paramètres de refoulement, niveau, séquence des vannes et contre-pression.",
+          "Conservez masses individuelles, biais moyen, CV, pression minimale d’entrée, bulles et durée totale. Choisissez les répétitions selon incertitude et critères du projet ; les trois niveaux ne sont pas des consignes recommandées. Intercalez la référence pour détecter une dérive thermique."
+        ]
+      },
+      {
+        "title": "Optimiser séparément refoulement et goutte",
+        "paragraphs": [
+          "L’aspiration dépend du remplissage et de la marge de basse pression. Le refoulement dépend aussi de contre-pression, éclaboussures et détachement. Les vitesses peuvent différer : stabilisez l’aspiration puis ajustez sortie, décélération, attente et déplacement de l’aiguille.",
+          "Comparez le cycle complet : aspiration, attente, commutation, refoulement, transfert et remplissage. Un mouvement accéléré peut perdre son intérêt s’il impose plus d’attente ou des doses rejetées."
+        ]
+      },
+      {
+        "title": "Quand modifier le circuit",
+        "paragraphs": [
+          "Si seule une aspiration très lente réussit, mesurez les pertes des tubes, vannes et filtres. Selon l’application, raccourcissez l’entrée ou augmentez son passage minimal. Réévaluez volume mort, consommation, nettoyage et encombrement après chaque changement.",
+          "Gardez la température reproductible : elle modifie viscosité, densité, pression de vapeur et dégazage ensemble. Ne conseillez pas le chauffage uniquement pour fluidifier, et ne qualifiez pas la formule finale avec un liquide dilué ou conditionné différemment."
+        ]
+      },
+      {
+        "title": "Conserver une classe de liquide complète",
+        "paragraphs": [
+          "Enregistrez plage de volume, lot, température, géométrie, vannes, aiguilles, vitesses/accélérations, attentes et résultats. Retenez un cycle court respectant tous les seuils avec une marge de niveau et de température.",
+          "Utilisez capacité et pas du modèle exact : EA-500-PMMA et SM-500-PMMA présentent 500 μL sur 2000 pas entiers, TM-500-PMMA sur 2540. Une même fréquence d’impulsions ne donne donc pas le même débit géométrique ; la validation avec le réactif reste nécessaire."
+        ]
+      }
+    ],
+    "formula": {
+      "section": 0,
+      "expression": "ΔP = 128 μ L Q / (π d⁴)",
+      "note": "μ : viscosité dynamique ; L : longueur ; Q : débit volumique ; d : diamètre intérieur. Unités SI cohérentes. Tube circulaire rigide, écoulement laminaire newtonien développé ; effets d’entrée, composants locaux et transitoires exclus."
+    },
+    "table": {
+      "section": 2,
+      "headers": [
+        "Facteur",
+        "À fixer",
+        "À enregistrer"
+      ],
+      "rows": [
+        [
+          "Vitesse faible/moyenne/élevée",
+          "Sortie, vannes, volume",
+          "Pression et bulles à l’entrée"
+        ],
+        [
+          "Attente courte/moyenne/longue",
+          "Vitesse choisie et circuit",
+          "Masses, biais et CV"
+        ],
+        [
+          "Référence intercalée",
+          "Lot et contre-pression",
+          "Température et ordre"
+        ],
+        [
+          "Qualification de plage",
+          "Niveau minimal, températures limites",
+          "Cycle total et taux conforme"
+        ]
+      ]
+    },
+    "diagram": "Relation de principe : viscosité μ, longueur L et diamètre d affectent la perte d’aspiration. Vérifier la récupération de pression avant de commuter.",
+    "faq": [
+      {
+        "question": "Une aspiration plus lente est-elle toujours meilleure ?",
+        "answer": "Non. Cherchez une plage conforme en volume, pression, gaz et temps ; ralentir excessivement ne répare pas une fuite."
+      },
+      {
+        "question": "Une attente fixe de 500 ms suffit-elle ?",
+        "answer": "Pas universellement. Testez pression et doses avec le liquide, le circuit et le volume réels."
+      },
+      {
+        "question": "Pourquoi les réglages à l’eau échouent-ils avec un réactif ?",
+        "answer": "Viscosité, densité, tension superficielle, volatilité et gaz dissous modifient remplissage et gouttes. L’eau ne valide que ses conditions."
+      },
+      {
+        "question": "Le courant moteur prouve-t-il un remplissage complet ?",
+        "answer": "Non. C’est une aide ; il faut pression, observation du gaz et masse finale."
+      }
+    ],
+    "links": [
+      "Accélération et décélération du piston",
+      "Matériaux de tête de pompe",
+      "Erreur de dosage liée aux bulles",
+      "Pompes à piston de précision"
+    ],
+    "description": "Réglez aspiration et attente des réactifs visqueux par une matrice de pression, biais, répétabilité, bulles et durée complète du cycle."
+  },
+  {
+    "title": "Comment isoler une dérive de dosage de pompe à piston au cours du temps ?",
+    "seo": "Dérive de dosage : tendances et essais croisés de pompe à piston",
+    "deck": "Une tendance de volume révèle un changement d’état du système, pas directement une usure. Enregistrez chaque dose avec température, niveau, inversion et amorçage, puis contrôlez ces facteurs et croisez pompes et circuits. Examinez biais moyen et CV séparément avant de conclure à une dégradation mécanique ou des joints.",
+    "sections": [
+      {
+        "title": "Séparer tendance et dispersion",
+        "paragraphs": [
+          "Calculez l’erreur de chaque dose dans l’ordre chronologique, au lieu de comparer seulement début et fin. Un petit CV sur une courte fenêtre peut accompagner une moyenne dérivante ; une valeur aberrante isolée n’est pas une dérive prolongée.",
+          "Convertissez les masses avec la densité à température réelle. Vérifiez zéro et dérive de balance, évaporation et collecte : une chaîne de mesure changeante peut imiter une pompe dégradée."
+        ]
+      },
+      {
+        "title": "Annoter les événements déclencheurs",
+        "paragraphs": [
+          "Marquez démarrage, inversion, remplissage, niveau, amorçage, arrêt et reprise. Synchronisez température du liquide, voisinage de la pompe et pressions. La forme d’une courbe ne suffit pas à identifier une cause ; les événements orientent l’essai.",
+          "Un défaut après inversion suggère jeu, vanne ou pression ; une dépendance au niveau oriente vers charge statique ou évent du réservoir. Une récupération brève après amorçage soutient un rôle du gaz, dont l’origine reste à trouver."
+        ]
+      },
+      {
+        "title": "Tester d’abord les variables réversibles",
+        "paragraphs": [
+          "Fixez programme, contre-pression et température ; testez séparément amorçage, niveau constant, ventilation et vitesse d’aspiration autorisée plus faible. Changez un facteur puis revenez à la référence pour distinguer cause et évolution temporelle.",
+          "Ne changez pas simultanément pompe, liquide et tubes. Le circuit de référence doit garder séquence de vannes et charge équivalente, sinon la récupération indique seulement des conditions globalement différentes."
+        ]
+      },
+      {
+        "title": "Croiser pompes et circuits",
+        "paragraphs": [
+          "Essayez pompe suspecte et pompe de référence dans le même circuit de référence qualifié, puis dans l’instrument : comparaison 2×2. Conservez volume, température, niveau, commande et vannes, et vérifiez la qualification de la pompe témoin.",
+          "Si le défaut suit une pompe, isolez ensuite vanne, joint et mécanisme. S’il apparaît avec les deux dans l’instrument uniquement, examinez le système. Une interaction charge/commande peut empêcher une attribution binaire."
+        ]
+      },
+      {
+        "title": "Interpréter prudemment le maintien en pression",
+        "paragraphs": [
+          "Si le design et la pression nominale l’autorisent, comparez même pression initiale, état de vanne et température à une référence historique ou neuve. Une décroissance accélérée soutient fuite ou stockage modifié, sans identifier seule un siège défaillant.",
+          "Gaz, relaxation des tuyaux, température et capteur affectent aussi la trace. Testez le jeu lors des inversions ; augmenter sans cesse la compensation peut masquer des effets thermiques, du gaz ou un retour interne."
+        ]
+      },
+      {
+        "title": "Conclure à l’usure avec des preuves convergentes",
+        "paragraphs": [
+          "Après exclusion de mesure, amorçage, niveau et commande, une dégradation qui suit une pièce vieillie, disparaît après son remplacement et concorde avec l’inspection étaye l’usure. Distinguez contamination, cristallisation et évolution des matériaux.",
+          "Conservez références neuves, jalons de durée de vie et après maintenance. Revalidez la durée déclenchante et les conditions défavorables. Les chiffres pleine course EA/EAS/SM/TM ne définissent pas la dérive admissible de tous les volumes/réactifs : appliquez exigences système et incertitude."
+        ]
+      }
+    ],
+    "formula": {
+      "section": 0,
+      "expression": "eᵢ = (Vᵢ − Vtarget) / Vtarget × 100%",
+      "note": "Vtarget doit être positif. Conservez la chronologie et calculez séparément moyennes et CV par fenêtres fixes ; un CV global peut masquer la dérive."
+    },
+    "table": {
+      "section": 3,
+      "headers": [
+        "Combinaison",
+        "Circuit de référence",
+        "Circuit instrument"
+      ],
+      "rows": [
+        [
+          "Pompe témoin",
+          "Confirmer la référence qualifiée",
+          "Le système déclenche-t-il la dérive ?"
+        ],
+        [
+          "Pompe suspecte",
+          "Le défaut suit-il la pompe ?",
+          "Reproduire le symptôme"
+        ],
+        [
+          "Contrôles communs",
+          "Même liquide, température, programme",
+          "Charge équivalente ; pression d’entrée"
+        ]
+      ]
+    },
+    "diagram": "Schéma de diagnostic : tendance, amorçage, niveau constant et permutations croisées. La courbe est synthétique, pas une mesure de durée de vie. P₁/P₂ : pompes témoin/suspecte ; C₁/C₂ : circuits référence/instrument.",
+    "faq": [
+      {
+        "question": "Une dose décroissante prouve-t-elle une fuite de vanne ?",
+        "answer": "Non. Niveau, ventilation, gaz, température et mesure peuvent produire cette tendance ; croisez essais et pression."
+      },
+      {
+        "question": "Un CV conforme exclut-il la dérive ?",
+        "answer": "Non. La dispersion peut rester faible pendant que la moyenne se déplace. Examinez biais et série temporelle."
+      },
+      {
+        "question": "La récupération après amorçage exclut-elle l’usure ?",
+        "answer": "Elle soutient le rôle du gaz sans exclure d’autres causes. Prolongez l’essai et comparez les composants."
+      },
+      {
+        "question": "Comment séparer pompe et instrument ?",
+        "answer": "Croisez pompe suspecte/témoin et circuit référence/instrument à liquide, programme et charge équivalents, puis isolez les composants."
+      }
+    ],
+    "links": [
+      "Exactitude, répétabilité et résolution",
+      "Compensation du jeu mécanique",
+      "Choix du matériau de tête",
+      "Bulles et erreur de dosage"
+    ],
+    "description": "Isolez la dérive par tendances, pression, température et essais croisés de pompes et circuits avant de conclure à une usure."
+  },
+  {
+    "title": "Faut-il un amortisseur de pulsations sur une pompe à membrane ? Validation A/B",
+    "seo": "Amortisseur de pulsations de pompe à membrane : validation A/B",
+    "deck": "L’amortisseur doit améliorer la fonction de la charge en tenant compte du démarrage, de l’écoulement résiduel, du nettoyage et du volume mort. Définissez l’ondulation acceptable puis comparez régime établi et cycles avec/sans amortisseur pour une même tâche. Une courbe plus lisse ne suffit pas à valider la solution.",
+    "sections": [
+      {
+        "title": "Transformer la régularité en critère fonctionnel",
+        "paragraphs": [
+          "Le refoulement alternatif produit un débit périodique ; résistance, inertie et compliance façonnent la pression à la charge. Le guide général traite des causes ; ce texte vise la décision plus précise de conserver ou non un amortisseur.",
+          "Définissez point de mesure, bande passante, pic-à-pic admissible et fonction : signal de cellule, homogénéité du jet ou déclenchements intempestifs. Si le transfert total est déjà conforme, un accessoire n’apporte pas nécessairement un bénéfice."
+        ]
+      },
+      {
+        "title": "Le stockage modifie démarrage et arrêt",
+        "paragraphs": [
+          "L’élément stocke du liquide à pression élevée et le restitue à pression faible. La compliance effective relie variations de volume et pression, mais dépend de la construction et du niveau de pression.300 ou 600 mL/min ne définissent pas une capacité universelle.",
+          "Davantage de stockage peut allonger la montée en pression et la traîne. Vérifiez compatibilité, nettoyage, gaz piégé, pression admissible et orientation. Laisser volontairement des bulles dans le procédé ne remplace pas un élément séparé et qualifié."
+        ]
+      },
+      {
+        "title": "Comparer la même tâche et déclarer le point de fonctionnement",
+        "paragraphs": [
+          "A est le circuit initial ; B ajoute l’amortisseur. Gardez pompe, température, niveau, géométrie principale, charge et mesures identiques. Notez modèle complet, consigne et version de commande ; suivez les instructions du fabricant de l’amortisseur.",
+          "Comparez d’abord à consigne identique pour révéler le changement de débit moyen et pression. Si la configuration permet la variation de vitesse, ajoutez un essai à débit moyen égal en déclarant la nouvelle consigne. Une courbe plus lisse à débit réduit n’est pas un résultat au même point."
+        ]
+      },
+      {
+        "title": "Séparer régime établi et cycles courts",
+        "paragraphs": [
+          "Mesurez pics, creux, débit moyen et signal de procédé avec la même bande passante. L’ondulation relative exige une moyenne nettement non nulle et une référence cohérente ; près de zéro, donnez le pic-à-pic absolu.",
+          "Exécutez la séquence réelle : délai jusqu’à pression utile, volume livré, traîne après arrêt et état initial du cycle suivant. Alignez totalisation et collecte ; du liquide conservé dans l’amortisseur n’est pas automatiquement une fuite."
+        ]
+      },
+      {
+        "title": "Décider avec le bilan complet",
+        "paragraphs": [
+          "Conservez B si pulsation et fonction s’améliorent tout en respectant volume, démarrage, traîne et nettoyage. Si le régime établi s’améliore mais que la dose courte ou le gouttage échoue, adaptez structure, montage ou commande et recommencez.",
+          "Si A passe et B stabilise seulement l’écran en ajoutant rétention et entretien, A peut être préférable. Si les deux échouent, réexaminez alimentation, résistance ou architecture de pompe ; l’amortisseur n’est pas universel."
+        ]
+      },
+      {
+        "title": "Portée des données DPL30 et DPL60",
+        "paragraphs": [
+          "DPL30 spécifie 300 mL/min à vide,100 kPa nominaux et 6 mH₂O d’auto-amorçage ; DPL60,600 mL/min,100 kPa et 3 mH₂O. Ce sont des paramètres distincts, pas une garantie simultanée ni un pourcentage de pulsation.",
+          "Ne variez la vitesse que sur une version cinq fils ou autre interface explicitement compatible. Sans balais ne signifie pas PWM par défaut. Archivez modèle, commande, mesure, température, filtre et charge avec l’essai A/B."
+        ]
+      }
+    ],
+    "formula": {
+      "section": 1,
+      "expression": "Ppp = Pmax − Pmin; Ceff ≈ ΔV / ΔP",
+      "note": "Comparez Ppp au même point et avec la même bande passante. Ceff décrit une compliance effective sur un intervalle de pression, pas un dimensionnement universel ni une atténuation garantie."
+    },
+    "table": {
+      "section": 4,
+      "headers": [
+        "Critère",
+        "Mesures A et B",
+        "Condition pour garder B"
+      ],
+      "rows": [
+        [
+          "Fonction stable",
+          "Pression et signal du procédé",
+          "Limites fonctionnelles respectées"
+        ],
+        [
+          "Transfert",
+          "Débit et volume sur même fenêtre",
+          "Tâche conforme, écarts expliqués"
+        ],
+        [
+          "Démarrage/arrêt",
+          "Montée en pression, traîne, cycle suivant",
+          "Limites du projet respectées"
+        ],
+        [
+          "Maintenance",
+          "Rétention, nettoyage, gaz, matériaux",
+          "Contraintes ajoutées acceptables"
+        ]
+      ]
+    },
+    "diagram": "Ondes synthétiques : un même débit moyen peut présenter des pics différents après amortissement. La régularité ne remplace pas les essais de démarrage et de traîne.",
+    "faq": [
+      {
+        "question": "Toutes les pompes à membrane ont-elles besoin d’amortissement ?",
+        "answer": "Non. Déterminez l’impact fonctionnel puis comparez bénéfices, volume mort, nettoyage, démarrage et traîne."
+      },
+      {
+        "question": "Un amortisseur plus grand est-il toujours préférable ?",
+        "answer": "Non. Pression, fréquence, liquide et capacité interagissent ; plus de stockage peut ajouter délai et traîne."
+      },
+      {
+        "question": "Le filtrage logiciel remplace-t-il l’amortissement hydraulique ?",
+        "answer": "Non. Il modifie un signal, pas la pression physique sur vannes, buses ou cellules."
+      },
+      {
+        "question": "Comment comparer si B diminue le débit ?",
+        "answer": "Rapportez d’abord la consigne identique, puis éventuellement le même débit moyen si la variation de vitesse est autorisée, en déclarant le nouveau point."
+      }
+    ],
+    "links": [
+      "Guide général de réduction des pulsations",
+      "Totalisation et référence gravimétrique",
+      "Courbes débit-pression",
+      "Pompes à membrane miniatures"
+    ],
+    "description": "Validez un amortisseur par essais A/B de pulsations, débit moyen, démarrage, écoulement résiduel et contraintes de nettoyage."
+  },
+  {
+    "title": "Bulles et bruit : cavitation, entrée d’air ou dégazage dans une pompe à membrane ?",
+    "seo": "Diagnostic de cavitation des pompes à membrane miniatures",
+    "deck": "Bulles, bruit et baisse de débit ne prouvent pas isolément une cavitation. Distinguez air extérieur, gaz dissous et vapeur locale avec pression absolue, température, position des bulles et débit synchronisés. Une moyenne d’entrée normale n’exclut pas un creux interne bref ; procédez par comparaisons contrôlées.",
+    "sections": [
+      {
+        "title": "Raisonner en pression absolue",
+        "paragraphs": [
+          "La cavitation associe formation de vapeur à basse pression locale puis effondrement lors de la récupération de pression. Entrée d’air et libération de gaz dissous ont d’autres origines et remèdes, tout en pouvant coexister.",
+          "Ajoutez la pression atmosphérique locale à la pression relative avant comparaison avec la vapeur du liquide à sa température. Pertes et transitoires subsistent entre capteur et chambre ; une moyenne supérieure ne garantit pas l’absence de cavitation."
+        ]
+      },
+      {
+        "title": "Quelles preuves séparent les mécanismes ?",
+        "paragraphs": [
+          "Repérez la première bulle, la pression pendant l’aspiration et la température. Un raccord peut aspirer de l’air sans fuite externe. Une amélioration après dégazage soutient l’implication du gaz dissous sans exclure seule la vaporisation.",
+          "Les bulles de vapeur peuvent s’effondrer à l’intérieur avant d’être visibles en sortie. Bruit, faible gain de débit avec vitesse et fluctuations sont des indices à rapprocher d’une amélioration contrôlée de l’entrée."
+        ]
+      },
+      {
+        "title": "Inspecter restrictions et réservoir",
+        "paragraphs": [
+          "Vérifiez hauteur d’aspiration, niveau minimal, évent, filtre chargé, tuyau écrasé et passage minimal des raccords. Agrandir le tube principal peut laisser une restriction de vanne ou filtre ; mesurez par tronçons ou substituez les éléments autorisés.",
+          "La chaleur peut réduire viscosité mais augmenter pression de vapeur et dégazage. Un écoulement facilité ne signifie pas davantage de marge. Utilisez les propriétés de la composition et température réelles."
+        ]
+      },
+      {
+        "title": "Faire trois comparaisons contrôlées",
+        "paragraphs": [
+          "Gardez d’abord le liquide et réduisez une perte d’entrée confirmée. Vérifiez ensuite les joints et améliorez la charge statique dans les limites admises. Enfin, comparez dégazage du même liquide à même température. Revenez à la référence et mesurez minimum de pression, débit, bruit et gaz.",
+          "Une réduction de vitesse exige une configuration compatible. N’appliquez pas de PWM inadaptée à une version deux fils ou non vérifiée. Une amélioration en réduisant la demande d’entrée soutient plusieurs mécanismes, pas uniquement la cavitation."
+        ]
+      },
+      {
+        "title": "Déclarer les limites de mesure",
+        "paragraphs": [
+          "Synchronisez pression absolue d’entrée, pression de sortie, débit et température. Notez réponse du capteur, échantillonnage, cavités et distance. Un capteur lent masque les creux et son montage peut ajouter une poche gazeuse ou une résistance.",
+          "Déterminez la marge avec données fabricant, analyse dynamique et essais. Aucun seuil universel en kPa ni NPSH non mesuré n’est proposé. Sans mesure de la zone critique, concluez à une hypothèse étayée ou un risque réduit, pas une preuve directe."
+        ]
+      },
+      {
+        "title": "L’auto-amorçage n’est pas une garantie anticavitation",
+        "paragraphs": [
+          "DPL30 indique 6 mH₂O et DPL60,3 mH₂O d’auto-amorçage. Ces valeurs à l’eau ne garantissent pas tout réactif à ces hauteurs. Les 600 kPa nominaux de sortie DPL30H ne définissent pas non plus la marge d’entrée.",
+          "Revalidez température maximale, niveau minimal, filtre représentatif de fin de vie, débit maximal de tâche et redémarrages. Conservez livraison moyenne et dynamique, avec limites de matériaux et de liquide. Un retour normal avec eau ambiante ne clôt pas un problème de réactif."
+        ]
+      }
+    ],
+    "formula": {
+      "section": 0,
+      "expression": "Pabs = Pgauge + Patm; Plocal,min,abs > Pvapor(T) + margin",
+      "note": "La seconde relation est un objectif de conception, pas une conclusion du seul capteur d’entrée. Pression de vapeur adaptée au liquide et à sa température ; marge validée sur le système."
+    },
+    "table": {
+      "section": 1,
+      "headers": [
+        "Mécanisme",
+        "Origine",
+        "Comparaison prioritaire"
+      ],
+      "rows": [
+        [
+          "Entrée d’air",
+          "Air extérieur",
+          "Étanchéité en aspiration, permutations"
+        ],
+        [
+          "Dégazage",
+          "Gaz dissous",
+          "Même liquide et température"
+        ],
+        [
+          "Vaporisation/cavitation",
+          "Vapeur du liquide",
+          "Pertes, pression absolue, température"
+        ],
+        [
+          "Coexistence",
+          "Origines combinées",
+          "Changements successifs et référence"
+        ]
+      ]
+    },
+    "diagram": "Diagnostic à trois branches : air extérieur, gaz dissous ou vapeur locale. La pression est absolue et les branches sont des hypothèses à vérifier. ① Entrée d’air ; ② dégazage ; ③ vaporisation locale.",
+    "faq": [
+      {
+        "question": "Bulles ou bruit prouvent-ils la cavitation ?",
+        "answer": "Non. Air entrant, gaz résiduel et autres défauts peuvent se ressembler ; combinez pression et comparaisons."
+      },
+      {
+        "question": "Peut-on comparer−50 kPa relatifs à la pression de vapeur ?",
+        "answer": "Pas directement. Convertissez avec la pression atmosphérique locale et considérez liquide, température, mesure et transitoires."
+      },
+      {
+        "question": "Moins de bruit à vitesse réduite confirme-t-il la cavitation ?",
+        "answer": "Cela indique seulement un effet lié à la vitesse ; entrée d’air, dégazage, résonance et alimentation peuvent aussi changer."
+      },
+      {
+        "question": "Les 6 m de DPL30 garantissent-ils l’absence de cavitation à 6 m ?",
+        "answer": "Non. Amorçage et fonctionnement continu diffèrent ; liquide, température, pertes, niveau et pulsation changent le risque."
+      }
+    ],
+    "links": [
+      "Résistance en aspiration et refoulement",
+      "Perte d’auto-amorçage DPL30",
+      "Validation de l’amortisseur",
+      "Courbes débit-pression"
+    ],
+    "description": "Distinguez cavitation, entrée d’air et dégazage avec pression absolue, pression de vapeur du liquide et comparaisons contrôlées."
+  },
+  {
+    "title": "Pourquoi le totalisateur de débit d’une pompe à membrane diffère-t-il de la masse collectée ?",
+    "seo": "Erreur de totalisation du débit : contrôle gravimétrique d’une pompe à membrane",
+    "deck": "Affichage fluctuant et total erroné sont deux problèmes différents. Alignez fenêtres et conditions hydrauliques, convertissez la masse avec la densité réelle puis examinez stockage, traîne, reflux, plage et échantillonnage. Seule une référence indépendante démontre un gain d’exactitude après filtrage ou amortissement.",
+    "sections": [
+      {
+        "title": "Définir la même grandeur mesurée",
+        "paragraphs": [
+          "Le débitmètre compte le liquide traversant sa position ; la balance compte celui reçu. Tubes, amortisseur et buse peuvent les séparer. La comparaison directe exige un stockage stable ; démarrage et arrêt nécessitent bilan des volumes retenus, dérivations et traîne.",
+          "Utilisez la densité réelle de composition et température, et maîtrisez évaporation, projections, gouttes externes et chronométrage. Retirer un élément de contre-pression pour collecter changerait le point de fonctionnement."
+        ]
+      },
+      {
+        "title": "Établir le bilan sur une même fenêtre",
+        "paragraphs": [
+          "Alignez débuts, fins et unités. Sans fuite, dérivation ni changement de phase entre mesure et récipient, la différence correspond au changement de stockage. Un circuit plus complexe exige des termes de pertes et de branches explicites.",
+          "Répétez des fenêtres stables égales puis variez leur durée. Si l’écart diminue sur une fenêtre longue, examinez décalage temporel, stockage et traîne. Un biais relatif persistant oriente vers densité, étalonnage, plage et dynamique."
+        ]
+      },
+      {
+        "title": "Vérifier reflux et saturation des crêtes",
+        "paragraphs": [
+          "Une moyenne dans la plage n’exclut pas des crêtes saturées. Un bref reflux est possible ; compter seulement le positif ou supprimer les valeurs négatives surestime le total. Vérifiez mesure bidirectionnelle et règles d’intégration signée.",
+          "Suivez les exigences du débitmètre pour conduite pleine, calibration du liquide, orientation, longueurs droites et pression. Sensibilité au gaz, viscosité et pulsation varie selon le principe ; un manuel ne définit pas tous les instruments."
+        ]
+      },
+      {
+        "title": "Séparer acquisition, communication et filtrage",
+        "paragraphs": [
+          "Lire plus souvent une sortie inchangée n’ajoute aucune information. Notez bande passante, mise à jour/moyenne internes, communication et filtrage externe. Intégrez avec horodatages réels ; une moyenne arithmétique ne convient pas aux intervalles irréguliers.",
+          "Échantillonner toujours la même phase peut créer biais ou fausse oscillation lente. Couvrez plusieurs périodes et vérifiez l’anti-repliement. Deux fois la fréquence maximale n’est qu’un minimum théorique, pas une garantie pour des pointes étroites. Le résumé de l’article cité étaye l’amélioration de moyenne, pas la correction de saturation ou non-linéarité."
+        ]
+      },
+      {
+        "title": "Choisir l’action d’après les résultats",
+        "paragraphs": [
+          "Si les totaux concordent et seul l’affichage oscille, adaptez sa moyenne en gardant la réponse aux défauts. Si le total diffère aussi, corrigez plage, gaz, montage ou traitement. Plus de filtrage ne récupère pas une information perdue.",
+          "Après ajout d’un amortisseur, repesez sur la même fenêtre et tâche, avec débit moyen et traîne. Une courbe lisse avec biais inchangé impose de poursuivre le diagnostic. Le réglage de pulsation du manuel KROHNE cité concerne cet instrument uniquement."
+        ]
+      },
+      {
+        "title": "Conserver un dossier reproductible",
+        "paragraphs": [
+          "Archivez modèle et commande de pompe, température/densité, niveau, dimensions des tubes, contre-pression, instrument/plage/filtres, temps, sorties brutes et masses. Donnez biais par fenêtre et incertitude, séparément pour régime établi et cycles.",
+          "Les 300 mL/min DPL30 et 600 mL/min DPL60 sont des débits à vide, pas des références d’étalonnage installées. Évaluez charge et collecte réelles. Ne balayez la vitesse qu’avec une commande explicitement compatible ; sans balais ne suffit pas."
+        ]
+      }
+    ],
+    "formula": {
+      "section": 1,
+      "expression": "Qavg = 60 Δm / (ρ T); Vmeter − Vcollected = ΔVstored",
+      "note": "Qavg en mL/min : Δm en g,ρ en g/mL,T en s. Bilan sur même fenêtre sans dérivation/fuite/changement de phase et avec approximation de densité commune. En régime établi ΔVstored≈0 ; en cycles, inclure stockage et traîne."
+    },
+    "table": {
+      "section": 4,
+      "headers": [
+        "Observation",
+        "Vérifier",
+        "Action suivante"
+      ],
+      "rows": [
+        [
+          "Affichage variable, totaux concordants",
+          "Fenêtre et incertitude",
+          "Adapter la moyenne à la tâche"
+        ],
+        [
+          "Écart accru sur fenêtre courte",
+          "Stockage, temps et traîne",
+          "Répéter le cycle complet"
+        ],
+        [
+          "Total durablement trop haut",
+          "Signe du reflux, crêtes, densité",
+          "Corriger puis revalider"
+        ],
+        [
+          "Erreur avec bulles",
+          "Conduite pleine et origine du gaz",
+          "Résoudre le gaz d’abord"
+        ],
+        [
+          "Affichage lissé par amortissement",
+          "Débit et point modifiés",
+          "Recomparer au pesage"
+        ]
+      ]
+    },
+    "diagram": "Chaîne de mesure : débit pulsé à travers le débitmètre puis comparaison à la masse sur la même fenêtre. Inclure le stockage jusqu’au récipient ; courbe illustrative.",
+    "faq": [
+      {
+        "question": "Un affichage instable signifie-t-il une panne ?",
+        "answer": "Pas forcément. Comparez le total sur la même fenêtre à une masse indépendante avant de conclure."
+      },
+      {
+        "question": "La moyenne de dix lectures donne-t-elle le vrai débit moyen ?",
+        "answer": "Pas toujours. Vérifiez mises à jour, phases, intervalles et dynamique ; relire une valeur ne crée pas un nouvel échantillon."
+      },
+      {
+        "question": "Un affichage stable après amortissement prouve-t-il une meilleure exactitude ?",
+        "answer": "Non. Recomparez total, masse, point de fonctionnement et stockage sur une même fenêtre."
+      },
+      {
+        "question": "Pourquoi l’écart augmente-t-il au démarrage ?",
+        "answer": "Le liquide peut remplir tubes ou amortisseur avant d’atteindre le récipient. Vérifiez aussi temps, dérivations, traîne et densité."
+      }
+    ],
+    "links": [
+      "Validation A/B de l’amortisseur",
+      "Guide général de mesure des pulsations",
+      "Diamètre du tube et point de fonctionnement",
+      "Pompes à membrane miniatures"
+    ],
+    "description": "Comparez totalisateur et masse : alignez les fenêtres et vérifiez densité, stockage, traîne, reflux, plage et échantillonnage."
+  }
+]

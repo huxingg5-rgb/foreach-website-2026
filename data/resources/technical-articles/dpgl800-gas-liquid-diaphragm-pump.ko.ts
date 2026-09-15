@@ -3,9 +3,9 @@ import type { Dpgl800ArticleCopy } from "./dpgl800-gas-liquid-diaphragm-pump.typ
 export const dpgl800ArticleKoCopy = {
   metadata: {
     title: "기액 혼합 다이어프램 펌프는 어떻게 선택할까? DPGL800의 6 L/min, -90 kPa 및 진공 형성 시간",
-    seoTitle: "기액 혼합 다이어프램 펌프 선택 가이드 | DPGL800 | FOREACH",
+    seoTitle: "기액 혼합 다이어프램 펌프 선택 가이드 | DPGL800 | Foreach Technology",
     seoDescription: "DPGL800 기액 혼합 펌프의 6 L/min 무부하 가스 유량, ＜-90 kPa 진공, 30 kPa 정압 및 5 L 시험 챔버 진공 형성 시간을 설명하는 선정 가이드입니다.",
-    coverAlt: "6 L/min 및 ＜-90 kPa 사양의 FOREACH DPGL800 브러시리스 기액 혼합 다이어프램 펌프",
+    coverAlt: "6 L/min 및 ＜-90 kPa 사양의 Foreach DPGL800 브러시리스 기액 혼합 다이어프램 펌프",
   },
   section1: {
     title: "1. DPGL800을 일반 액체 펌프처럼 선정하면 안 되는 이유",

@@ -68,11 +68,14 @@ export default function HomeNewsSection({ locale }: HomeNewsSectionProps) { // �
 
         <div className="home-news-layout"> {/* 新闻模块三栏布局 */}
           <article className="home-news-feature-card"> {/* 左侧：主推新闻大卡片 */}
-            <div // 左侧主推新闻图片容器开始
+            <img // 左侧主推新闻图片容器开始
               className="home-news-feature-image" // 左侧主推新闻图片 class
-              style={{ // 设置背景图样式
-                backgroundImage: `url(${featureNewsImage})`, // 使用 data/home-news.ts 中的图片路径
-              }} // 背景图样式结束
+              src={featureNewsImage}
+              alt=""
+              width={1200}
+              height={465}
+              loading="lazy"
+              decoding="async"
               aria-hidden="true" // 图片作为装饰背景，不重复朗读
             /> {/* 左侧主推新闻图片容器结束 */}
 
@@ -101,6 +104,7 @@ export default function HomeNewsSection({ locale }: HomeNewsSectionProps) { // �
                 <Link // 左侧主推新闻查看详情链接开始
                   className="home-news-text-link" // 查看详情链接 class
                   href={getHomeNewsHref(featureNews.href, locale)} // 根据当前语言读取跳转链接
+                  prefetch={false}
                 > {/* 左侧主推新闻查看详情链接开始标签结束 */}
                   {getHomeNewsText(homeNewsData.viewDetailLabel, locale)} {/* 查看详情按钮文字 */}
                 </Link> {/* 左侧主推新闻查看详情链接结束 */}
@@ -133,6 +137,7 @@ export default function HomeNewsSection({ locale }: HomeNewsSectionProps) { // �
               <Link // 中间公告查看详情链接开始
                 className="home-news-highlight-btn" // 中间公告按钮 class
                 href={getHomeNewsHref(highlightNews.href, locale)} // 根据当前语言读取公告跳转链接
+                prefetch={false}
                 aria-label={getHomeNewsText(homeNewsData.viewAnnouncementAriaLabel, locale)} // 公告按钮无障碍说明
               > {/* 中间公告查看详情链接开始标签结束 */}
                 {getHomeNewsText(homeNewsData.viewDetailLabel, locale)} {/* 查看详情按钮文字 */}
@@ -165,6 +170,7 @@ export default function HomeNewsSection({ locale }: HomeNewsSectionProps) { // �
               <Link // 查看更多新闻链接开始
                 className="home-news-view-all-btn" // 查看更多按钮 class
                 href={getHomeNewsHref(homeNewsData.moreNewsHref, locale)} // 根据当前语言读取更多新闻链接
+                prefetch={false}
               > {/* 查看更多新闻链接开始标签结束 */}
                 {getHomeNewsText(homeNewsData.moreNewsLabel, locale)} <span>›</span> {/* 更多新闻按钮文字和箭头 */}
               </Link> {/* 查看更多新闻链接结束 */}

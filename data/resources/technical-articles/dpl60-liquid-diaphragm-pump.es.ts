@@ -5,7 +5,7 @@ export const dpl60ArticleEsCopy = {
     title: "Cómo seleccionar una bomba de diafragma de 600 mL/min: guía DPL60 de caudal, presión y modelos",
     seoTitle: "Selección de bomba de diafragma de 600 mL/min: punto de trabajo y modelos DPL60",
     seoDescription:
-      "Guía de la bomba de diafragma para líquidos FOREACH DPL60: caudal sin carga de 600 mL/min, presión nominal de 100 kPa, curva, motores, materiales, codificación, lógica de configuración y método de selección.",
+      "Guía de la bomba de diafragma para líquidos Foreach DPL60: caudal sin carga de 600 mL/min, presión nominal de 100 kPa, curva, motores, materiales, codificación, lógica de configuración y método de selección.",
   },
   diagram: {
     ariaLabel: "Explicación del punto de trabajo de la bomba DPL60",
@@ -22,7 +22,7 @@ export const dpl60ArticleEsCopy = {
   section1: {
     title: "1. ¿Qué necesidad cubre el DPL60 de 600 mL/min?",
     paragraphs: [
-      "El DPL60 es la bomba miniatura de diafragma para líquidos de FOREACH destinada a circuitos instrumentales de mayor caudal. Resulta adecuada para lavado, enjuague, circulación, transferencia de volúmenes mayores y evacuación de residuos líquidos.",
+      "El DPL60 es la bomba miniatura de diafragma para líquidos de Foreach destinada a circuitos instrumentales de mayor caudal. Resulta adecuada para lavado, enjuague, circulación, transferencia de volúmenes mayores y evacuación de residuos líquidos.",
       "Los 600 mL/min son el caudal de referencia sin carga. La presión nominal es 100 kPa, la altura de autocebado 3 mH₂O y existen configuraciones de 12 V o 24 V CC, con o sin escobillas y con materiales EP/PS o FF/PS.",
       "Como otras bombas de diafragma, utiliza el movimiento alternativo de una membrana y válvulas antirretorno. En el DPL60, la cuestión decisiva es el punto de trabajo después de integrarlo en el circuito real.",
       "Para necesidades en torno a 300 mL/min conviene comparar el DPL30. Si la limitación principal es una contrapresión elevada, debe evaluarse una bomba de mayor presión y no seleccionar solo por el caudal sin carga.",

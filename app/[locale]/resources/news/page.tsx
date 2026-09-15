@@ -47,8 +47,8 @@ export async function generateMetadata({ params }: NewsIntlPageProps): Promise<M
     "zh-CN": "资源中心", en: "Resources", es: "Recursos", fr: "Ressources", ko: "자료", ru: "Ресурсы",
   };
   const metadata = locale === "en"
-    ? { title: "News｜Resources｜FOREACH", description: "Follow FOREACH updates in exhibitions, company development, technology innovation, quality systems and important announcements." }
-    : { title: `${pageData.hero.title}｜${sectionLabels[locale]}｜FOREACH`, description: pageData.hero.description };
+    ? { title: "News｜Resources｜Foreach Technology", description: "Follow Foreach updates in exhibitions, company development, technology innovation, quality systems and important announcements." }
+    : { title: `${pageData.hero.title}｜${sectionLabels[locale]}｜Foreach Technology`, description: pageData.hero.description };
   return locale === "en" ? metadata : { ...metadata, openGraph: metadata };
 }
 

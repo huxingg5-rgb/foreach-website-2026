@@ -1,6 +1,8 @@
 "use client";
 
-import { Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { normalizePistonPumpPublicName } from "@/data/products/piston-pump-public-name";
+
+import { Suspense, useCallback, useEffect, useId, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import ResourceSearchBar from "@/components/resources/ResourceSearchBar";
 import { useSelectionCart } from "@/components/selection-cart/SelectionCartProvider";
@@ -13,6 +15,8 @@ import {
 } from "@/lib/analytics/track-event";
 
 import SitePageShell from "@/components/layout/SitePageShell";
+import ProductSelectionStructuredData from "./ProductSelectionStructuredData";
+import { getProductSelectionCardName } from "./ProductSelectionCard";
 import {
   getProductTypeFilterOptionsByCategory,
   getProductTypeHrefByIds,
@@ -20,7 +24,13 @@ import {
   getSeriesHrefByFilterValue,
   hasProductTypeRouteByIds,
 } from "@/data/products/selection/product-route-map";
-import { getProductTypeIntroByIds } from "@/data/products/selection/product-type-intro";
+import {
+  getDiaphragmPumpCategoryIntro,
+  getPlungerPumpCategoryIntro,
+  getValvelessPumpCategoryIntro,
+  getInstrumentCategoryIntro,
+  getProductTypeIntroByIds,
+} from "@/data/products/selection/product-type-intro";
 import { getProductFilterOptions } from "@/data/products/selection/filter-rules/product-filter-rules.index";
 import {
   isPublishedFittingProduct,
@@ -66,7 +76,6 @@ import {
 } from "@/data/products/selection/card-copy/product-card-copy.intl";
 import {
   applyDiaphragmPumpReferenceCard,
-  getDiaphragmPumpSelectionHeading,
 } from "@/data/products/detail/diaphragm-pump-reference-models";
 import { getDiaphragmPumpPath } from "@/data/products/detail/diaphragm-pump-routes";
 import {
@@ -145,7 +154,7 @@ import type {
   ProductSelectionFilterGroup,
   ProductSelectionSelectedTag,
 } from "./product-selection-ui.types";
-import hardTubeDetailsJson from "@/data/products/generated/fittings/hard-tube-fittings/detail/index.json";
+import hardTubeLinkIndex from "@/data/products/selection/hard-tube-link-index.generated.json";
 
 /* HARD_TUBE_HFL_BEFORE_HF_START */
 
@@ -408,6 +417,7 @@ const PRODUCT_SELECTION_PAGE_TEXT: Record<SelectionLocale, import("./product-sel
     productTypeLabel: "Product Type",
     resultPrefix: "",
     resultSuffix: " configurations found",
+    resultSingularSuffix: " configuration found",
     resetFilters: "Clear Filters",
     submitRequirement: "Submit Request",
     detailButton: "View Details",
@@ -428,6 +438,7 @@ const PRODUCT_SELECTION_PAGE_TEXT: Record<SelectionLocale, import("./product-sel
     productTypeLabel: "Tipo de producto",
     resultPrefix: "",
     resultSuffix: " configuraciones encontradas",
+    resultSingularSuffix: " configuración encontrada",
     resetFilters: "Borrar filtros",
     submitRequirement: "Enviar solicitud",
     detailButton: "Ver detalles",
@@ -448,6 +459,7 @@ const PRODUCT_SELECTION_PAGE_TEXT: Record<SelectionLocale, import("./product-sel
     productTypeLabel: "Type de produit",
     resultPrefix: "",
     resultSuffix: " configurations trouvées",
+    resultSingularSuffix: " configuration trouvée",
     resetFilters: "Effacer les filtres",
     submitRequirement: "Envoyer une demande",
     detailButton: "Voir les détails",
@@ -488,6 +500,8 @@ const PRODUCT_SELECTION_PAGE_TEXT: Record<SelectionLocale, import("./product-sel
     productTypeLabel: "Тип продукта",
     resultPrefix: "Найдено ",
     resultSuffix: " конфигураций",
+    resultSingularPrefix: "Найдена ",
+    resultSingularSuffix: " конфигурация",
     resetFilters: "Сбросить фильтры",
     submitRequirement: "Отправить запрос",
     detailButton: "Подробнее",
@@ -647,12 +661,12 @@ const TARGET_UI_LABEL_TRANSLATIONS: Record<
     Fittings: "Racores",
     Tubing: "Tubos",
     Control: "Control",
-    "Plunger Pump": "Bomba de émbolo",
+    "Piston Pump": "Bomba de pistón",
     "Diaphragm Pump": "Bomba de diafragma",
     "Pipette Pump": "Bomba de pipeteo",
     "Valveless Pump": "Bomba sin válvulas",
     "Syringe Pump": "Bomba de jeringa",
-    "EA Standard Plunger Pump": "Bomba de émbolo estándar EA",
+    "EA Standard Piston Pump": "Bomba de pistón estándar EA",
     Series: "Serie",
     Volume: "Volumen",
     "Pump Head Material": "Material del cabezal de la bomba",
@@ -710,12 +724,12 @@ const TARGET_UI_LABEL_TRANSLATIONS: Record<
     Fittings: "Raccords",
     Tubing: "Tubes",
     Control: "Commande",
-    "Plunger Pump": "Pompe à piston",
+    "Piston Pump": "Pompe à piston",
     "Diaphragm Pump": "Pompe à membrane",
     "Pipette Pump": "Pompe de pipetage",
     "Valveless Pump": "Pompe sans clapet",
     "Syringe Pump": "Pompe à seringue",
-    "EA Standard Plunger Pump": "Pompe à piston standard EA",
+    "EA Standard Piston Pump": "Pompe à piston standard EA",
     Series: "Série",
     Volume: "Volume",
     "Pump Head Material": "Matériau de la tête de pompe",
@@ -773,12 +787,12 @@ const TARGET_UI_LABEL_TRANSLATIONS: Record<
     Fittings: "피팅",
     Tubing: "튜빙",
     Control: "제어",
-    "Plunger Pump": "플런저 펌프",
+    "Piston Pump": "피스톤 펌프",
     "Diaphragm Pump": "다이어프램 펌프",
     "Pipette Pump": "피펫팅 펌프",
     "Valveless Pump": "밸브리스 펌프",
     "Syringe Pump": "시린지 펌프",
-    "EA Standard Plunger Pump": "EA 표준 플런저 펌프",
+    "EA Standard Piston Pump": "EA 표준 피스톤 펌프",
     Series: "시리즈",
     Volume: "용량",
     "Pump Head Material": "펌프 헤드 재질",
@@ -836,12 +850,12 @@ const TARGET_UI_LABEL_TRANSLATIONS: Record<
     Fittings: "Фитинги",
     Tubing: "Трубки",
     Control: "Управление",
-    "Plunger Pump": "Плунжерный насос",
+    "Piston Pump": "Поршневой насос",
     "Diaphragm Pump": "Мембранный насос",
     "Pipette Pump": "Пипетирующий насос",
     "Valveless Pump": "Бесклапанный насос",
     "Syringe Pump": "Шприцевой насос",
-    "EA Standard Plunger Pump": "Стандартный плунжерный насос EA",
+    "EA Standard Piston Pump": "Стандартный поршневой насос EA",
     Series: "Серия",
     Volume: "Объем",
     "Pump Head Material": "Материал головки насоса",
@@ -894,22 +908,73 @@ const TARGET_UI_LABEL_TRANSLATIONS: Record<
 };
 
 function getTargetUiLabel(locale: SelectionLocale, value: string) {
+  value = normalizePistonPumpPublicName(value);
   if (locale === "zh" || locale === "en") return value;
 
   return TARGET_UI_LABEL_TRANSLATIONS[locale]?.[value] || value;
 }
 
-function renderProductTypeIntroParagraph(paragraph: string) {
+function renderProductTypeIntroParagraph(
+  paragraph: string,
+  onFilterAction?: (filterKey: SelectionFilterKey, value: string) => void,
+  selectedFilters?: SelectedFilterMap,
+) {
   const legacyEmphasisText = "详情页查看或提交选型需求确认";
   const paragraphWithEmphasis = paragraph.includes("**")
     ? paragraph
     : paragraph.replace(legacyEmphasisText, `**${legacyEmphasisText}**`);
 
   return paragraphWithEmphasis
-    .split(/(\*\*[^*]+\*\*)/g)
+    .split(
+      /(\*\*[^*]+\*\*|\[[^\]]+\]\((?:\/[^)\s]+|filter:filter\d{2}=[^)]+)\))/g,
+    )
     .filter(Boolean)
     .map((segment, index) => {
       const isEmphasized = segment.startsWith("**") && segment.endsWith("**");
+      const linkMatch = segment.match(/^\[([^\]]+)\]\((\/[^)\s]+)\)$/);
+      const filterMatch = segment.match(
+        /^\[([^\]]+)\]\(filter:(filter\d{2})=([^)]+)\)$/,
+      );
+
+      if (filterMatch && onFilterAction) {
+        const filterKey = filterMatch[2] as SelectionFilterKey;
+        let filterValue = filterMatch[3];
+
+        try {
+          filterValue = decodeURIComponent(filterValue);
+        } catch {
+          // Keep the source value when a future action token is not URI encoded.
+        }
+
+        if (FILTER_KEYS.includes(filterKey) && filterValue) {
+          return (
+            <button
+              aria-controls="product-selection-results"
+              aria-pressed={Boolean(selectedFilters?.[filterKey]?.has(filterValue))}
+              className="product-type-intro-link product-type-intro-filter-action"
+              data-filter-key={filterKey}
+              data-filter-value={filterValue}
+              key={`${index}-${filterKey}-${filterValue}`}
+              onClick={() => onFilterAction(filterKey, filterValue)}
+              type="button"
+            >
+              {filterMatch[1]}
+            </button>
+          );
+        }
+      }
+
+      if (linkMatch) {
+        return (
+          <a
+            className="product-type-intro-link"
+            href={linkMatch[2]}
+            key={`${index}-${linkMatch[2]}`}
+          >
+            {linkMatch[1]}
+          </a>
+        );
+      }
 
       if (!isEmphasized) {
         return segment;
@@ -924,6 +989,119 @@ function renderProductTypeIntroParagraph(paragraph: string) {
         </strong>
       );
     });
+}
+
+const PRODUCT_TYPE_INTRO_DISCLOSURE_TEXT: Record<
+  SelectionLocale,
+  { more: string; less: string }
+> = {
+  zh: { more: "查看更多", less: "收起" },
+  en: { more: "View more", less: "View less" },
+  es: { more: "Ver más", less: "Ver menos" },
+  fr: { more: "Voir plus", less: "Voir moins" },
+  ko: { more: "더 보기", less: "접기" },
+  ru: { more: "Показать больше", less: "Свернуть" },
+};
+
+type ProductTypeIntroCopyProps = {
+  title: string;
+  paragraphs: string[];
+  locale: SelectionLocale;
+  isPrimaryHeading: boolean;
+  preserveCollapsedContentInDom?: boolean;
+  onFilterAction: (filterKey: SelectionFilterKey, value: string) => void;
+  selectedFilters: SelectedFilterMap;
+};
+
+function ProductTypeIntroCopy({
+  title,
+  paragraphs,
+  locale,
+  isPrimaryHeading,
+  preserveCollapsedContentInDom = false,
+  onFilterAction,
+  selectedFilters,
+}: ProductTypeIntroCopyProps) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const contentId = useId();
+  const desktopCollapsedParagraphCount = 2;
+  const hasHiddenParagraphs = preserveCollapsedContentInDom
+    ? paragraphs.length > desktopCollapsedParagraphCount
+    : paragraphs.length > 1;
+  const hasDesktopHiddenParagraphs =
+    paragraphs.length > desktopCollapsedParagraphCount;
+  const disclosureText = PRODUCT_TYPE_INTRO_DISCLOSURE_TEXT[locale];
+
+  return (
+    <div
+      className={`product-type-intro-copy${
+        hasHiddenParagraphs ? " product-type-intro-copy--collapsible" : ""
+      }${
+        hasHiddenParagraphs && !hasDesktopHiddenParagraphs
+          ? " product-type-intro-copy--mobile-collapse-only"
+          : ""
+      }${
+        preserveCollapsedContentInDom
+          ? " product-type-intro-copy--seo-preserved"
+          : ""
+      }${hasHiddenParagraphs && isExpanded ? " is-expanded" : ""}`}
+    >
+      {isPrimaryHeading ? (
+        <h1 className="product-type-intro-heading">{title}</h1>
+      ) : (
+        <h2 className="product-type-intro-heading">{title}</h2>
+      )}
+
+      <div className="product-type-intro-paragraphs" id={contentId}>
+        {paragraphs.map((paragraph, index) => {
+          const isCollapsedSeoParagraph =
+            preserveCollapsedContentInDom &&
+            index >= desktopCollapsedParagraphCount;
+
+          return (
+            <p
+              aria-hidden={
+                isCollapsedSeoParagraph && !isExpanded ? true : undefined
+              }
+              className={
+                isCollapsedSeoParagraph
+                  ? "product-type-intro-paragraph--collapsed"
+                  : undefined
+              }
+              hidden={
+                !preserveCollapsedContentInDom &&
+                hasDesktopHiddenParagraphs &&
+                !isExpanded &&
+                index >= desktopCollapsedParagraphCount
+              }
+              key={paragraph}
+            >
+              {renderProductTypeIntroParagraph(
+                paragraph,
+                onFilterAction,
+                selectedFilters,
+              )}
+            </p>
+          );
+        })}
+      </div>
+
+      {hasHiddenParagraphs ? (
+        <div className="product-type-intro-disclosure-row">
+          <button
+            aria-controls={contentId}
+            aria-expanded={isExpanded}
+            className="product-type-intro-disclosure"
+            onClick={() => setIsExpanded((current) => !current)}
+            type="button"
+          >
+            {isExpanded ? disclosureText.less : disclosureText.more}
+            <span aria-hidden="true">{isExpanded ? "<" : ">"}</span>
+          </button>
+        </div>
+      ) : null}
+    </div>
+  );
 }
 
 function getCategoryDescription(
@@ -1337,7 +1515,7 @@ function findPlungerPumpDetailSlug(product: ProductSelectionProduct) {
 }
 
 
-/* ===== FOREACH plunger pump model detail href helpers START ===== */
+/* ===== FOREACH piston pump model detail href helpers START ===== */
 
 function cleanPlungerHrefText(value: unknown) {
   return String(value || "").trim();
@@ -1404,7 +1582,7 @@ function getPlungerPumpModelSlugForDetailHref(product: ProductSelectionProduct) 
   return normalizePlungerModelSlug(getSelectionLocalizedText(product.cardTitle, "en") || getSelectionLocalizedText(product.cardTitle, "zh") || product.productId || product.detailSlug);
 }
 
-/* ===== FOREACH plunger pump model detail href helpers END ===== */
+/* ===== FOREACH piston pump model detail href helpers END ===== */
 
 
 
@@ -1440,7 +1618,7 @@ function normalizeFinalProductDetailHref(
     ?.toLowerCase();
 
   if (rawSlug && /^(ea|sm|tm)-\d+-(pmma|peek)$/.test(rawSlug)) {
-    return `/products/pumps/plunger-pumps/${rawSlug}`;
+    return `/products/pumps/piston-pump/${rawSlug}`;
   }
 
   if (
@@ -1448,7 +1626,7 @@ function normalizeFinalProductDetailHref(
     hrefSlug &&
     /^(ea|sm|tm)-\d+-(pmma|peek)$/.test(hrefSlug)
   ) {
-    return `/products/pumps/plunger-pumps/${hrefSlug}`;
+    return `/products/pumps/piston-pump/${hrefSlug}`;
   }
 
   return rawHref;
@@ -1640,7 +1818,7 @@ function makeDetailHref(product: ProductSelectionProduct) {
 
     const matchedDetail =
       (
-        hardTubeDetailsJson as any[]
+        hardTubeLinkIndex as any[]
       ).find((detail) => {
         const detailCandidates = [
           detail?.productId,
@@ -2282,7 +2460,7 @@ function makeDetailHref(product: ProductSelectionProduct) {
         ""
     ).trim();
 
-    if (rawHref.includes("/products/pumps/plunger-pumps/")) {
+    if (rawHref.includes("/products/pumps/piston-pump/")) {
       return rawHref;
     }
 
@@ -2298,7 +2476,7 @@ function makeDetailHref(product: ProductSelectionProduct) {
       ?.toLowerCase();
 
     if (rawSlug && /^(ea|sm|tm)-\d+-(pmma|peek)$/.test(rawSlug)) {
-      return `/products/pumps/plunger-pumps/${rawSlug}`;
+      return `/products/pumps/piston-pump/${rawSlug}`;
     }
 
     const textForModel = [
@@ -2315,7 +2493,7 @@ function makeDetailHref(product: ProductSelectionProduct) {
     const modelMatch = textForModel.match(/\b(ea|sm|tm)[-_\s]*(\d{2,5})[-_\s]*(pmma|peek)\b/i);
 
     if (modelMatch) {
-      return `/products/pumps/plunger-pumps/${modelMatch[1].toLowerCase()}-${modelMatch[2]}-${modelMatch[3].toLowerCase()}`;
+      return `/products/pumps/piston-pump/${modelMatch[1].toLowerCase()}-${modelMatch[2]}-${modelMatch[3].toLowerCase()}`;
     }
   }
 
@@ -2690,7 +2868,7 @@ const isDiaphragmPump =
       .filter(Boolean)
       .pop();
 
-    return getDiaphragmPumpPath("zh", slug, { trailingSlash: false });
+    return getDiaphragmPumpPath("zh", slug, { trailingSlash: true });
   }  const isPipettingPump =
     product.categoryId === "pumps" &&
     ["pipette-pump", "pipetting-pump", "pipetting-pumps"].includes(String(product.productTypeId || ""));
@@ -2723,8 +2901,8 @@ const isDiaphragmPump =
     const slug = getPlungerPumpModelSlugForDetailHref(product);
 
     return slug
-      ? `/products/pumps/plunger-pumps/${slug}`
-      : "/products/pumps/plunger-pumps";
+      ? `/products/pumps/piston-pump/${slug}`
+      : "/products/pumps/piston-pump";
   }
 
   return `/products/${product.categoryId}/${product.detailSlug}`;
@@ -3252,15 +3430,6 @@ export default function ProductSelectionClient({
     );
   }, [activeCategoryId, locale]);
 
-  const diaphragmCategoryHeading = useMemo(() => {
-    if (activeProductTypeId !== "diaphragm-pump") {
-      return "";
-    }
-
-    const diaphragmType = initialFilters?.filter01?.[0] || "";
-    return getDiaphragmPumpSelectionHeading(locale, diaphragmType);
-  }, [activeProductTypeId, initialFilters, locale]);
-
   const productTypeOptions = useMemo(() => {
     const optionMap = new Map<string, { value: string; label: string }>();
 
@@ -3673,15 +3842,24 @@ export default function ProductSelectionClient({
    * 2. 例如 pumps + plunger-pump 会显示柱塞泵系列介绍
    * 3. 找不到时不显示横幅
    */
-  const activeProductTypeIntro = getProductTypeIntroByIds(
-    activeCategoryId,
-    activeProductTypeId,
-    locale
-  );
-  const activeProductTypeIntroHeading =
-    activeProductTypeId === "diaphragm-pump" && initialFilters?.filter01?.length
-      ? diaphragmCategoryHeading
-      : activeProductTypeIntro?.title || "";
+  const activeSeriesFilterValue = Array.from(
+    selectedFilters.filter01 || []
+  )[0];
+  const activeProductTypeIntroVariant =
+    locale === "zh" && ["plunger-pump", "valveless-pump", "pipette-pump", "syringe-pump"].includes(activeProductTypeId)
+      ? activeSeriesFilterValue
+      : initialFilters?.filter01?.[0];
+  const activeProductTypeIntro =
+    (activeProductTypeId === "diaphragm-pump"
+      ? getDiaphragmPumpCategoryIntro(initialFilters?.filter01?.[0], locale)
+      : activeProductTypeId === "plunger-pump"
+        ? getPlungerPumpCategoryIntro(activeSeriesFilterValue, locale)
+        : activeProductTypeId === "valveless-pump"
+          ? getValvelessPumpCategoryIntro(selectedFilters.filter01?.size === 1 ? activeSeriesFilterValue : undefined, locale)
+          : getInstrumentCategoryIntro(activeProductTypeId, selectedFilters.filter01?.size === 1 ? activeSeriesFilterValue : undefined, locale)) ||
+    getProductTypeIntroByIds(activeCategoryId, activeProductTypeId, locale);
+  const activeProductTypeIntroHeading = activeProductTypeIntro?.title || "";
+  const compactSelectionLabel = locale === "zh" ? ({"pipette-pump":"移液泵","syringe-pump":"注射泵","高压阀":"高压阀","high-pressure-valves":"高压阀","电磁阀":"电磁阀","solenoid-valves":"电磁阀","valveless-pump":"无阀泵"} as Record<string,string>)[activeProductTypeId] : undefined;
   const selectedTagItems = useMemo<ProductSelectionSelectedTag[]>(() => {
     const tags: ProductSelectionSelectedTag[] = [];
 
@@ -4049,7 +4227,7 @@ export default function ProductSelectionClient({
     /*
      * 说明：
      * 1. 点击产品类型时，优先跳转正式 URL
-     * 2. 柱塞泵会跳到 /products/pumps/plunger-pumps/
+     * 2. 柱塞泵会跳到 /products/pumps/piston-pump/
      * 3. 没配置正式 URL 的类型，才走原来的前端筛选逻辑
      */
     const productTypeHref = getProductTypeHrefByIds(
@@ -4225,6 +4403,34 @@ export default function ProductSelectionClient({
       }
 
       return next;
+    });
+  }
+
+  function handleProductTypeIntroFilterAction(
+    filterKey: SelectionFilterKey,
+    value: string,
+  ) {
+    pendingFilterRef.current = {
+      filterCategory: activeCategoryId,
+      filterName: filterKey,
+      filterValue: value,
+    };
+
+    setSelectedFilters((current) => ({
+      ...current,
+      [filterKey]: new Set([value]),
+    }));
+    setSearchInputValue("");
+    setSearchKeyword("");
+    setCurrentProductPage(1);
+
+    window.requestAnimationFrame(() => {
+      document.getElementById("product-selection-results")?.scrollIntoView({
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+          ? "auto"
+          : "smooth",
+        block: "start",
+      });
     });
   }
 
@@ -4772,9 +4978,9 @@ function isFilterOptionActive(
      * 说明：
      * 1. 判断当前清除的标签是否命中正式系列路由
      * 2. 例如 EA 常规柱塞泵命中：
-     *    /products/pumps/plunger-pumps/ea-standard-piston-pumps/
+     *    /products/pumps/piston-pump/standard-piston-pump/
      * 3. 清除后跳回产品类型页：
-     *    /products/pumps/plunger-pumps/
+     *    /products/pumps/piston-pump/
      */
     const seriesHref = getSeriesHrefByFilterValue(
       activeCategoryId,
@@ -4932,8 +5138,40 @@ function isFilterOptionActive(
     addItem(createProductCartItem(product));
   }
 
+  const breadcrumbItems = [
+    {
+      label: pageText.breadcrumbHome,
+      href: locale === "zh" ? "/" : `/${locale}`,
+    },
+    {
+      label: pageText.breadcrumbCurrent,
+      ...(compactSelectionLabel ? { href: "/products/" } : {}),
+    },
+    ...(compactSelectionLabel ? [{ label: compactSelectionLabel }] : []),
+  ];
+
   return (
     <div className="products-selection-page">
+      <ProductSelectionStructuredData
+        locale={locale}
+        name={activeProductTypeIntroHeading || activeCategory.label}
+        breadcrumbs={breadcrumbItems}
+        items={pagedProducts.map((product) => ({
+          name: getProductSelectionCardName(
+            product,
+            locale,
+            localizeProductCardTitle(
+              product,
+              locale,
+              getText(locale, product.cardTitle, product.productId),
+            ),
+          ),
+          href: localizeProductDetailHref(
+            normalizeFinalProductDetailHref(product, makeDetailHref(product)),
+            product,
+          ),
+        }))}
+      />
       <Suspense fallback={null}>
         <ProductSelectionSearchParamsSync onChange={handleSearchParamsChange} />
       </Suspense>
@@ -4943,15 +5181,7 @@ function isFilterOptionActive(
             ? "面包屑导航"
             : targetLocaleA11yText?.breadcrumbAriaLabel || "Breadcrumb"
         }
-        breadcrumbItems={[
-          {
-            label: pageText.breadcrumbHome,
-            href: locale === "zh" ? "/" : `/${locale}`,
-          },
-          {
-            label: pageText.breadcrumbCurrent,
-          },
-        ]}
+        breadcrumbItems={breadcrumbItems}
       >
         <main className="products-main">
           <div className="products-container">
@@ -4998,22 +5228,24 @@ function isFilterOptionActive(
                   />
                 </div>
 
-                <div className="product-type-intro-copy">
-                  {activeProductTypeId === "diaphragm-pump" ? (
-                    <h1 className="product-type-intro-heading">
-                      {activeProductTypeIntroHeading}
-                    </h1>
-                  ) : (
-                    <h2 className="product-type-intro-heading">
-                      {activeProductTypeIntroHeading}
-                    </h2>
-                  )}
-                  {activeProductTypeIntro.paragraphs.map((paragraph) => (
-                    <p key={paragraph}>
-                      {renderProductTypeIntroParagraph(paragraph)}
-                    </p>
-                  ))}
-                </div>
+                <ProductTypeIntroCopy
+                  isPrimaryHeading={
+                    activeProductTypeId === "diaphragm-pump" ||
+                    activeProductTypeId === "plunger-pump" ||
+                    (locale === "zh" && ["valveless-pump", "pipette-pump", "syringe-pump"].includes(activeProductTypeId))
+                  }
+                  key={`${activeProductTypeId || "none"}-${
+                    activeProductTypeIntroVariant || "default"
+                  }-${locale}`}
+                  locale={locale}
+                  onFilterAction={handleProductTypeIntroFilterAction}
+                  paragraphs={activeProductTypeIntro.paragraphs}
+                  preserveCollapsedContentInDom={
+                    locale === "zh" && activeProductTypeId === "plunger-pump"
+                  }
+                  selectedFilters={selectedFilters}
+                  title={activeProductTypeIntroHeading}
+                />
               </section>
             ) : null}
         <section className="selection-section">
@@ -5038,15 +5270,24 @@ function isFilterOptionActive(
               emptyText={pageText.filterEmpty}
             />
 
-            <section className="product-area">
+            <section
+              className="product-area"
+              id="product-selection-results"
+            >
               <ProductSelectionToolbar
                 total={matchedProducts.length}
-                resultPrefix={pageText.resultPrefix}
+                resultPrefix={
+                  matchedProducts.length === 1
+                    ? pageText.resultSingularPrefix || pageText.resultPrefix
+                    : pageText.resultPrefix
+                }
                 resultSuffix={
                   activeCategoryId === "valves" &&
                   locale === "zh"
                     ? " 个阀系列"
-                    : pageText.resultSuffix
+                    : matchedProducts.length === 1
+                      ? pageText.resultSingularSuffix || pageText.resultSuffix
+                      : pageText.resultSuffix
                 }
                 resetButtonText={pageText.resetFilters}
                 selectedTags={selectedTagItems}
@@ -5117,6 +5358,4 @@ function isFilterOptionActive(
 </div>
   );
 }
-
-
 

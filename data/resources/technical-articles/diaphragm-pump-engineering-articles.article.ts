@@ -1,3 +1,13 @@
+import { fluidResistanceCalculatorGuideZhCopy } from "./fluid-resistance-calculator-guide.zh";
+import { foreachDiaphragmPumpOemIntegrationIntlCopies, fluidResistanceCalculatorGuideIntlCopies } from "./oem-fluid-resistance-articles.intl";
+import { foreachDiaphragmPumpOemIntegrationZhCopy } from "./foreach-diaphragm-pump-oem-integration.zh";
+import { remainingPumpArticlesRu } from "./remaining-pump-articles.ru";
+import { remainingPumpArticlesKo } from "./remaining-pump-articles.ko";
+import { remainingPumpArticlesFr } from "./remaining-pump-articles.fr";
+import { remainingPumpArticlesEs } from "./remaining-pump-articles.es";
+import { diaphragmPumpRdArticleSlugs, diaphragmPumpRdArticles } from "./diaphragm-pump-rd-articles.article";
+import { microDiaphragmPumpMaterialsCopies } from "./micro-diaphragm-pump-materials-selection.intl";
+import { microDiaphragmPumpMaterialsSelectionZhCopy } from "./micro-diaphragm-pump-materials-selection.zh";
 import type {
   TechnicalArticleCategory,
   TechnicalArticleItem,
@@ -7,6 +17,15 @@ import type {
   DiaphragmPumpEngineeringArticleCopy,
   DiaphragmPumpEngineeringArticleSlug,
 } from "./diaphragm-pump-engineering-article.types";
+import { inkCirculationSupplyReturnPumpCopies } from "./ink-circulation-supply-return-pump.article";
+import { inkCirculationFlowSelectionCopies } from "./ink-circulation-flow-selection.article";
+import { whiteInkCirculationPumpCopies } from "./white-ink-circulation-pump.article";
+import {
+  ivdCleaningWashRinsePumpCopies,
+} from "./ivd-cleaning-wash-rinse-pump.article";
+import {
+  ivdWasteLiquidPumpSelectionCopies,
+} from "./ivd-waste-liquid-pump-selection.article";
 import { diaphragmPumpFlowPressureCurveZhCopy } from "./diaphragm-pump-flow-pressure-curve.zh";
 import { microDiaphragmPumpContinuousDutyLifeZhCopy } from "./micro-diaphragm-pump-continuous-duty-life.zh";
 import { lifeScienceInstrumentDpl60SelectionZhCopy } from "./life-science-instrument-dpl60-selection.zh";
@@ -16,9 +35,21 @@ import {
   labLiquidWasteAspirationTroubleshootingZhCopy,
 } from "./application-troubleshooting-articles.zh";
 import {
+  dpl30EpdmPtfeFfkmSelectionZhCopy,
+  dpl30MotorRunsNoFlowZhCopy,
+  dpl30SelfPrimingDecreaseZhCopy,
+  dpl30WaterVsReagentZhCopy,
+} from "./dpl30-self-priming-troubleshooting-materials.zh";
+import {
   ivdWasteAspirationPumpSelectionEnCopy,
   labLiquidWasteAspirationTroubleshootingEnCopy,
 } from "./application-troubleshooting-articles.en";
+import {
+  dpl30EpdmPtfeFfkmSelectionEnCopy,
+  dpl30MotorRunsNoFlowEnCopy,
+  dpl30SelfPrimingDecreaseEnCopy,
+  dpl30WaterVsReagentEnCopy,
+} from "./dpl30-self-priming-troubleshooting-materials.en";
 import {
   ivdWasteAspirationPumpSelectionEsCopy,
   labLiquidWasteAspirationTroubleshootingEsCopy,
@@ -154,6 +185,19 @@ import {
 
 export const diaphragmPumpFlowPressureCurveSlug =
   "diaphragm-pump-flow-pressure-curve-guide" as const;
+export const fluidResistanceCalculatorGuideSlug = "fluid-resistance-calculator-liquid-path-design-guide" as const;
+export const foreachDiaphragmPumpOemIntegrationSlug =
+  "foreach-miniature-diaphragm-pump-oem-integration" as const;
+export const inkCirculationSupplyReturnPumpSlug =
+  "ink-circulation-supply-return-pump-diaphragm-pump" as const;
+export const inkCirculationFlowSelectionSlug =
+  "300-vs-600-ml-min-ink-circulation-return-pump-selection" as const;
+export const whiteInkCirculationPumpSlug =
+  "white-ink-circulation-pump-selection-sedimentation" as const;
+export const ivdWasteLiquidPumpSelectionSlug =
+  "ivd-waste-liquid-pump-liquid-vs-gas-liquid-diaphragm-pump" as const;
+export const ivdCleaningWashRinsePumpSlug =
+  "ivd-cleaning-wash-rinse-pump-diaphragm-pump" as const;
 export const microDiaphragmPumpContinuousDutyLifeSlug =
   "micro-diaphragm-pump-continuous-duty-life" as const;
 export const lifeScienceInstrumentDpl60SelectionSlug =
@@ -178,6 +222,16 @@ export const diaphragmPump100KpaVs600KpaSelectionSlug =
   "100-kpa-vs-600-kpa-diaphragm-pump-selection" as const;
 export const highBackpressureFluidPathPressureBudgetSlug =
   "high-backpressure-fluid-path-pressure-budget" as const;
+export const dpl30SelfPrimingDecreaseSlug =
+  "300-ml-min-micro-liquid-diaphragm-pump-self-priming-loss" as const;
+export const dpl30MotorRunsNoFlowSlug =
+  "300-ml-min-micro-liquid-diaphragm-pump-motor-runs-no-flow" as const;
+export const dpl30WaterVsReagentSlug =
+  "300-ml-min-micro-liquid-diaphragm-pump-water-vs-reagent" as const;
+export const dpl30EpdmPtfeFfkmSelectionSlug =
+  "300-ml-min-micro-liquid-diaphragm-pump-epdm-ptfe-ffkm" as const;
+
+export const microDiaphragmPumpMaterialsSelectionSlug = "micro-diaphragm-pump-materials-selection" as const;
 
 const copyByLocale: Record<
   TechnicalArticleLocale,
@@ -189,6 +243,18 @@ const copyByLocale: Record<
   >
 > = {
   "zh-CN": {
+    [fluidResistanceCalculatorGuideSlug]: fluidResistanceCalculatorGuideZhCopy,
+    [foreachDiaphragmPumpOemIntegrationSlug]: foreachDiaphragmPumpOemIntegrationZhCopy,
+    ...diaphragmPumpRdArticles["zh-CN"],
+    [microDiaphragmPumpMaterialsSelectionSlug]: microDiaphragmPumpMaterialsSelectionZhCopy,
+    [inkCirculationSupplyReturnPumpSlug]:
+      inkCirculationSupplyReturnPumpCopies["zh-CN"],
+    [inkCirculationFlowSelectionSlug]:
+      inkCirculationFlowSelectionCopies["zh-CN"],
+    [whiteInkCirculationPumpSlug]: whiteInkCirculationPumpCopies["zh-CN"],
+    [ivdWasteLiquidPumpSelectionSlug]:
+      ivdWasteLiquidPumpSelectionCopies["zh-CN"],
+    [ivdCleaningWashRinsePumpSlug]: ivdCleaningWashRinsePumpCopies["zh-CN"],
     [diaphragmPumpFlowPressureCurveSlug]: diaphragmPumpFlowPressureCurveZhCopy,
     [microDiaphragmPumpContinuousDutyLifeSlug]:
       microDiaphragmPumpContinuousDutyLifeZhCopy,
@@ -214,8 +280,22 @@ const copyByLocale: Record<
       diaphragmPump100KpaVs600KpaSelectionZhCopy,
     [highBackpressureFluidPathPressureBudgetSlug]:
       highBackpressureFluidPathPressureBudgetZhCopy,
+    [dpl30SelfPrimingDecreaseSlug]: dpl30SelfPrimingDecreaseZhCopy,
+    [dpl30MotorRunsNoFlowSlug]: dpl30MotorRunsNoFlowZhCopy,
+    [dpl30WaterVsReagentSlug]: dpl30WaterVsReagentZhCopy,
+    [dpl30EpdmPtfeFfkmSelectionSlug]: dpl30EpdmPtfeFfkmSelectionZhCopy,
   },
   en: {
+    [foreachDiaphragmPumpOemIntegrationSlug]: foreachDiaphragmPumpOemIntegrationIntlCopies.en,
+    [fluidResistanceCalculatorGuideSlug]: fluidResistanceCalculatorGuideIntlCopies.en,
+    ...diaphragmPumpRdArticles["en"],
+    [microDiaphragmPumpMaterialsSelectionSlug]: microDiaphragmPumpMaterialsCopies.en,
+    [inkCirculationSupplyReturnPumpSlug]:
+      inkCirculationSupplyReturnPumpCopies.en,
+    [inkCirculationFlowSelectionSlug]: inkCirculationFlowSelectionCopies.en,
+    [whiteInkCirculationPumpSlug]: whiteInkCirculationPumpCopies.en,
+    [ivdWasteLiquidPumpSelectionSlug]: ivdWasteLiquidPumpSelectionCopies.en,
+    [ivdCleaningWashRinsePumpSlug]: ivdCleaningWashRinsePumpCopies.en,
     [diaphragmPumpFlowPressureCurveSlug]: diaphragmPumpFlowPressureCurveEnCopy,
     [microDiaphragmPumpContinuousDutyLifeSlug]:
       microDiaphragmPumpContinuousDutyLifeEnCopy,
@@ -241,8 +321,19 @@ const copyByLocale: Record<
       diaphragmPump100KpaVs600KpaSelectionEnCopy,
     [highBackpressureFluidPathPressureBudgetSlug]:
       highBackpressureFluidPathPressureBudgetEnCopy,
+    [dpl30SelfPrimingDecreaseSlug]: dpl30SelfPrimingDecreaseEnCopy,
+    [dpl30MotorRunsNoFlowSlug]: dpl30MotorRunsNoFlowEnCopy,
+    [dpl30WaterVsReagentSlug]: dpl30WaterVsReagentEnCopy,
+    [dpl30EpdmPtfeFfkmSelectionSlug]: dpl30EpdmPtfeFfkmSelectionEnCopy,
   },
   es: {
+    [foreachDiaphragmPumpOemIntegrationSlug]: foreachDiaphragmPumpOemIntegrationIntlCopies.es,
+    [fluidResistanceCalculatorGuideSlug]: fluidResistanceCalculatorGuideIntlCopies.es,
+    ...diaphragmPumpRdArticles["es"],
+    ...remainingPumpArticlesEs,
+    [microDiaphragmPumpMaterialsSelectionSlug]: microDiaphragmPumpMaterialsCopies.es,
+    [ivdWasteLiquidPumpSelectionSlug]: ivdWasteLiquidPumpSelectionCopies.es,
+    [ivdCleaningWashRinsePumpSlug]: ivdCleaningWashRinsePumpCopies.es,
     [diaphragmPumpFlowPressureCurveSlug]: diaphragmPumpFlowPressureCurveEsCopy,
     [microDiaphragmPumpContinuousDutyLifeSlug]:
       microDiaphragmPumpContinuousDutyLifeEsCopy,
@@ -270,6 +361,13 @@ const copyByLocale: Record<
       highBackpressureFluidPathPressureBudgetEsCopy,
   },
   fr: {
+    [foreachDiaphragmPumpOemIntegrationSlug]: foreachDiaphragmPumpOemIntegrationIntlCopies.fr,
+    [fluidResistanceCalculatorGuideSlug]: fluidResistanceCalculatorGuideIntlCopies.fr,
+    ...diaphragmPumpRdArticles["fr"],
+    ...remainingPumpArticlesFr,
+    [microDiaphragmPumpMaterialsSelectionSlug]: microDiaphragmPumpMaterialsCopies.fr,
+    [ivdWasteLiquidPumpSelectionSlug]: ivdWasteLiquidPumpSelectionCopies.fr,
+    [ivdCleaningWashRinsePumpSlug]: ivdCleaningWashRinsePumpCopies.fr,
     [diaphragmPumpFlowPressureCurveSlug]: diaphragmPumpFlowPressureCurveFrCopy,
     [microDiaphragmPumpContinuousDutyLifeSlug]:
       microDiaphragmPumpContinuousDutyLifeFrCopy,
@@ -297,6 +395,13 @@ const copyByLocale: Record<
       highBackpressureFluidPathPressureBudgetFrCopy,
   },
   ko: {
+    [foreachDiaphragmPumpOemIntegrationSlug]: foreachDiaphragmPumpOemIntegrationIntlCopies.ko,
+    [fluidResistanceCalculatorGuideSlug]: fluidResistanceCalculatorGuideIntlCopies.ko,
+    ...diaphragmPumpRdArticles["ko"],
+    ...remainingPumpArticlesKo,
+    [microDiaphragmPumpMaterialsSelectionSlug]: microDiaphragmPumpMaterialsCopies.ko,
+    [ivdWasteLiquidPumpSelectionSlug]: ivdWasteLiquidPumpSelectionCopies.ko,
+    [ivdCleaningWashRinsePumpSlug]: ivdCleaningWashRinsePumpCopies.ko,
     [diaphragmPumpFlowPressureCurveSlug]: diaphragmPumpFlowPressureCurveKoCopy,
     [microDiaphragmPumpContinuousDutyLifeSlug]:
       microDiaphragmPumpContinuousDutyLifeKoCopy,
@@ -324,6 +429,13 @@ const copyByLocale: Record<
       highBackpressureFluidPathPressureBudgetKoCopy,
   },
   ru: {
+    [foreachDiaphragmPumpOemIntegrationSlug]: foreachDiaphragmPumpOemIntegrationIntlCopies.ru,
+    [fluidResistanceCalculatorGuideSlug]: fluidResistanceCalculatorGuideIntlCopies.ru,
+    ...diaphragmPumpRdArticles["ru"],
+    ...remainingPumpArticlesRu,
+    [microDiaphragmPumpMaterialsSelectionSlug]: microDiaphragmPumpMaterialsCopies.ru,
+    [ivdWasteLiquidPumpSelectionSlug]: ivdWasteLiquidPumpSelectionCopies.ru,
+    [ivdCleaningWashRinsePumpSlug]: ivdCleaningWashRinsePumpCopies.ru,
     [diaphragmPumpFlowPressureCurveSlug]: diaphragmPumpFlowPressureCurveRuCopy,
     [microDiaphragmPumpContinuousDutyLifeSlug]:
       microDiaphragmPumpContinuousDutyLifeRuCopy,
@@ -419,57 +531,145 @@ function createTechnicalArticle(
 export function getDiaphragmPumpEngineeringArticles(
   locale: TechnicalArticleLocale,
 ): TechnicalArticleItem[] {
+  const inkjetArticles = [
+          createTechnicalArticle(
+            inkCirculationSupplyReturnPumpSlug,
+            locale,
+            ["series:dpl30", "series:dpl60"],
+            121,
+            "2026-09-03",
+            "applications",
+          ),
+          createTechnicalArticle(
+            inkCirculationFlowSelectionSlug,
+            locale,
+            ["series:dpl30", "series:dpl60"],
+            120,
+            "2026-09-03",
+            "applications",
+          ),
+          createTechnicalArticle(
+            whiteInkCirculationPumpSlug,
+            locale,
+            ["series:dpl30", "series:dpl60"],
+            119,
+            "2026-09-03",
+            "applications",
+          ),
+        ];
+
+  const dpl30TroubleshootingAndMaterialsArticles = [
+          createTechnicalArticle(
+            dpl30SelfPrimingDecreaseSlug,
+            locale,
+            ["series:dpl30"],
+            116,
+            "2026-09-02",
+          ),
+          createTechnicalArticle(
+            dpl30MotorRunsNoFlowSlug,
+            locale,
+            ["series:dpl30"],
+            115,
+            "2026-09-01",
+          ),
+          createTechnicalArticle(
+            dpl30WaterVsReagentSlug,
+            locale,
+            ["series:dpl30"],
+            114,
+            "2026-08-31",
+          ),
+          createTechnicalArticle(
+            dpl30EpdmPtfeFfkmSelectionSlug,
+            locale,
+            ["series:dpl30"],
+            113,
+            "2026-08-30",
+            "materials-compatibility",
+          ),
+        ];
+
   const flowPressureArticles = [
     createTechnicalArticle(
       diaphragmPump300Vs600SelectionSlug,
       locale,
       ["series:dpl30", "series:dpl60"],
       112,
-      "2026-08-26",
+      "2026-08-30",
     ),
     createTechnicalArticle(
       diaphragmPump300MlMinFlowMarginSlug,
       locale,
       ["series:dpl30"],
       111,
-      "2026-08-26",
+      "2026-08-27",
     ),
     createTechnicalArticle(
       tubeInnerDiameterAffectsDiaphragmPumpFlowSlug,
       locale,
       ["series:dpl30", "series:dpl60", "series:dpl30h"],
       110,
-      "2026-08-26",
+      "2026-08-24",
     ),
     createTechnicalArticle(
       suctionVsDischargeResistanceDiaphragmPumpSlug,
       locale,
       ["series:dpl30", "series:dpl60", "series:dpl30h"],
       109,
-      "2026-08-26",
+      "2026-08-21",
     ),
     createTechnicalArticle(
       diaphragmPumpPressureRatingTermsSlug,
       locale,
       ["series:dpl30", "series:dpl60", "series:dpl30h"],
       108,
-      "2026-08-26",
+      "2026-08-18",
     ),
     createTechnicalArticle(
       diaphragmPump100KpaVs600KpaSelectionSlug,
       locale,
       ["series:dpl30", "series:dpl60", "series:dpl30h"],
       107,
-      "2026-08-26",
+      "2026-08-15",
     ),
     createTechnicalArticle(
       highBackpressureFluidPathPressureBudgetSlug,
       locale,
       ["series:dpl30h"],
       106,
-      "2026-08-26",
+      "2026-08-12",
     ),
   ];
+
+  const ivdWasteLiquidPumpSelectionArticle = createTechnicalArticle(
+    ivdWasteLiquidPumpSelectionSlug,
+    locale,
+    [
+      "series:dpl30",
+      "series:dpl60",
+      "series:dpgl800",
+      "application:ivd",
+    ],
+    118,
+    "2026-09-03",
+    "applications",
+  );
+
+  const ivdCleaningWashRinsePumpArticle = createTechnicalArticle(
+    ivdCleaningWashRinsePumpSlug,
+    locale,
+    [
+      "series:dpl30",
+      "series:dpl60",
+      "series:dpl30h",
+      "series:dpgl800",
+      "application:ivd",
+    ],
+    117,
+    "2026-09-03",
+    "applications",
+  );
 
   const applicationArticles = [
     createTechnicalArticle(
@@ -477,7 +677,7 @@ export function getDiaphragmPumpEngineeringArticles(
       locale,
       ["series:dpgl800"],
       104,
-      "2026-08-26",
+      "2026-08-09",
       "applications",
     ),
     createTechnicalArticle(
@@ -485,7 +685,7 @@ export function getDiaphragmPumpEngineeringArticles(
       locale,
       ["series:dpgl800"],
       103,
-      "2026-08-26",
+      "2026-08-06",
       "applications",
     ),
   ];
@@ -496,16 +696,38 @@ export function getDiaphragmPumpEngineeringArticles(
       locale,
       ["series:dpl30", "series:dpl60", "series:dpl30h"],
       99,
+      "2026-07-28",
     ),
     createTechnicalArticle(
       microDiaphragmPumpContinuousDutyLifeSlug,
       locale,
       ["series:dpl30", "series:dpl60"],
       98,
+      "2026-07-25",
     ),
   ];
 
   return [
+    createTechnicalArticle(
+      fluidResistanceCalculatorGuideSlug, locale, [], 128, "2026-09-11", "fittings-tubing",
+    ),
+    createTechnicalArticle(
+      foreachDiaphragmPumpOemIntegrationSlug, locale,
+      ["series:dpl30", "series:dpl60", "series:dpl30h", "series:dpgl800"],
+      127, "2026-09-11", "applications",
+    ),
+    ...diaphragmPumpRdArticleSlugs.map((slug, index) =>
+      createTechnicalArticle(slug, locale, ["series:dpl30", "series:dpl60", "series:dpl30h"], 126 - index, "2026-09-07"),
+    ),
+    createTechnicalArticle(
+      microDiaphragmPumpMaterialsSelectionSlug, locale,
+      ["series:dpl30", "series:dpl60", "series:dpl30h", "series:dpgl800"],
+      122, "2026-09-07", "materials-compatibility",
+    ),
+    ...inkjetArticles,
+    ivdWasteLiquidPumpSelectionArticle,
+    ivdCleaningWashRinsePumpArticle,
+    ...dpl30TroubleshootingAndMaterialsArticles,
     ...flowPressureArticles,
     ...applicationArticles,
     createTechnicalArticle(
@@ -513,14 +735,14 @@ export function getDiaphragmPumpEngineeringArticles(
       locale,
       ["series:dpl30", "series:dpl60"],
       101,
-      "2026-08-25",
+      "2026-08-03",
     ),
     createTechnicalArticle(
       lifeScienceInstrumentDpl60SelectionSlug,
       locale,
       ["series:dpl60", "application:life-science"],
       100,
-      "2026-08-25",
+      "2026-07-31",
     ),
     ...multilingualArticles,
   ];

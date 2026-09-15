@@ -1,0 +1,662 @@
+[
+  {
+    "title": "Why Do Air Bubbles Delay or Bias Piston Pump Dispensing?",
+    "seo": "Piston Pump Air Bubbles: Dispensing Error and Priming Tests",
+    "deck": "A completed piston stroke does not prove that the intended liquid volume reached the vessel. Bubble compression temporarily stores displacement; expansion can then cause a trailing dispense or affect the next cycle. Locate where bubbles first appear and compare synchronized pressure and individual dispense masses before and after priming.",
+    "sections": [
+      {
+        "title": "Where does the displaced volume go?",
+        "paragraphs": [
+          "Ideal displacement equals effective piston area times travel. In a real fluid path, gas, flexible tubing and valve cavities can store part of that displacement. Delivered volume is the liquid that actually reaches the target. Short strokes, the first dispense after reversal and restart are particularly sensitive.",
+          "For illustration, a sealed 10 μL bubble compressed from 100 to 120 kPa absolute occupies about 8.33 μL under an isothermal ideal-gas assumption. Approximately 1.67 μL is temporarily stored. This is neither measured Foreach error nor a prediction of permanent underdelivery: pressure recovery may release that volume later in the same or a subsequent cycle."
+        ]
+      },
+      {
+        "title": "Use location and timing to select a hypothesis",
+        "paragraphs": [
+          "Record whether bubbles first appear upstream, in the chamber, around the valve or near the outlet. Align observations with aspiration, valve switching and dispensing. An observation tube should add minimal dead volume or resistance; clear tubing cannot exclude gas hidden in an opaque chamber.",
+          "A low first dispense is not specific to bubbles. Backlash, valve delay and tubing compliance can produce similar results. Stronger evidence requires repeatable improvement when gas conditions change while other variables remain controlled."
+        ]
+      },
+      {
+        "title": "Separate residual air, ingress and outgassing",
+        "paragraphs": [
+          "Rapid stabilization after controlled priming supports residual air after installation or fluid replacement. Persistent bubbles at an inlet connection suggest checking its seal under suction. An inlet can admit air without showing an external liquid leak.",
+          "Warming or local pressure reduction can release dissolved gas. Compare the same fluid before and after degassing at the same temperature, liquid level and pressure conditions. Improvement supports gas involvement; simultaneous temperature or viscosity changes prevent a clean attribution."
+        ]
+      },
+      {
+        "title": "Validate priming instead of adding a fixed correction",
+        "paragraphs": [
+          "Hold target volume, temperature, reservoir level, valve timing and outlet load constant. Weigh each dispense and record inlet and outlet pressure. Compare the initial state, controlled priming, extended operation and restart; identify first dispenses separately from steady operation.",
+          "Define project-specific priming acceptance using repeatable mass results, pressure traces and observable gas conditions. Neither a universal cycle count nor a fixed extra dispense volume resolves every bubble mechanism. Check whether the original symptom returns during extended operation."
+        ]
+      },
+      {
+        "title": "Distinguish pump delivery from droplet transfer",
+        "paragraphs": [
+          "If outlet collection is correct but the target well receives less, inspect hanging drops, splash, tip wetting and transfer timing. Preserve equivalent outlet loading when changing the collection arrangement; removing the tip also changes backpressure.",
+          "Where the design permits a pressure-hold test, keep valve position, initial pressure and temperature consistent. Gas expansion, tubing relaxation and internal leakage all influence pressure decay. A decay slope alone cannot identify a failed fitting or valve."
+        ]
+      },
+      {
+        "title": "Evaluate the EAS chamber and repeat the complete test",
+        "paragraphs": [
+          "The official Foreach EAS specification describes an easy-deaeration chamber. It is a candidate for reducing trapped air, not a guarantee of bubble-free operation with every fluid, orientation and valve circuit. Confirm capacity, interfaces and the actual valve circuit against the official specification.",
+          "The EA-500-PMMA displayed configuration is 500 μL with 2000 full steps, or a theoretical 0.25 μL per step. Resolution does not establish delivered-liquid accuracy. Recheck the real fluid, minimum target volume, first dispense, steady operation and restart. Hamilton's pressure/bubble monitoring material supports the observation approach; it does not imply equivalent sensors are included in Foreach pumps."
+        ]
+      }
+    ],
+    "formula": {
+      "section": 0,
+      "expression": "P₁V₁ ≈ P₂V₂; ΔVgas = V₁(1 − P₁/P₂)",
+      "note": "Order-of-magnitude model for sealed ideal gas, approximately isothermal, without dissolution or mass transfer. Use absolute pressure. ΔVgas is temporary compression volume, not a final underdelivery formula."
+    },
+    "table": {
+      "section": 1,
+      "headers": [
+        "Location or event",
+        "Check first",
+        "Interpretation limit"
+      ],
+      "rows": [
+        [
+          "Chamber; first reversal dispense",
+          "Priming and pressure establishment",
+          "Backlash may also contribute"
+        ],
+        [
+          "Continuous inlet bubbles",
+          "Connections, level and temperature",
+          "Ingress and outgassing may coexist"
+        ],
+        [
+          "Drops after stopping",
+          "Gas/tubing storage and valve state",
+          "Not necessarily leakage"
+        ],
+        [
+          "Only the target well is short",
+          "Droplet formation and transfer",
+          "Keep reference backpressure equivalent"
+        ]
+      ]
+    },
+    "diagram": "Principle diagram: piston displacement first compresses a bubble; pressure recovery can release trailing liquid. Arrows show liquid direction; dimensions do not represent a real product.",
+    "faq": [
+      {
+        "question": "Do bubbles always reduce every dispense?",
+        "answer": "No. Compression and expansion can delay delivery, generate trailing liquid or couple successive cycles. Valve state, pressure and collection timing determine the final result."
+      },
+      {
+        "question": "Is recovery after extra priming sufficient?",
+        "answer": "Repeat extended operation and restart testing. Persistent ingress or outgassing can recreate the problem; identify the source."
+      },
+      {
+        "question": "Does high piston pump resolution eliminate bubble error?",
+        "answer": "No. Geometric displacement resolution cannot remove gas or tubing storage, or ensure complete droplet transfer."
+      },
+      {
+        "question": "Does EAS guarantee bubble-free operation for all reagents?",
+        "answer": "No universal guarantee follows from the chamber design. Validate the actual fluid, orientation, valve cavities and priming sequence."
+      }
+    ],
+    "links": [
+      "Accuracy, repeatability and resolution",
+      "Viscous-liquid aspiration speed and dwell",
+      "Official EAS specification in English",
+      "Precision piston pump category"
+    ],
+    "description": "Diagnose piston pump bubble errors using pressure, individual dispense masses and controlled priming. Separate trapped gas, ingress and droplet transfer."
+  },
+  {
+    "title": "How Should Piston Pump Aspiration Speed and Dwell Be Set for Viscous Reagents?",
+    "seo": "Piston Pump Aspiration Speed and Dwell for Viscous Liquids",
+    "deck": "A stable aspiration window depends on resistance, filling time and pressure. Test aspiration speed and the subsequent dwell independently, then select a faster combination that satisfies bias, repeatability, bubbles and cycle-time requirements. Water settings do not automatically transfer to the reagent, and completed motion does not prove fluid equilibration.",
+    "sections": [
+      {
+        "title": "Relate viscosity and bore to aspiration pressure loss",
+        "paragraphs": [
+          "For fully developed Newtonian laminar flow in a circular tube, pressure loss increases with viscosity and length and depends strongly on the fourth power of bore. A larger main tube may help, but a valve, fitting, filter or needle can remain the narrowest restriction.",
+          "This steady relation explains a tube segment, not every chamber transient. Do not directly apply it to shear-thinning, particle-laden or strongly non-Newtonian reagents. Record temperature and rheological conditions and locate restrictions with pressure measurements."
+        ]
+      },
+      {
+        "title": "Why can filling continue after the piston stops?",
+        "paragraphs": [
+          "Retraction creates geometric volume that the upstream liquid must fill through a resistance. With gas or elastic tubing present, filling and pressure recovery can continue after motion stops. Immediate valve switching can carry an unsettled state into the next operation.",
+          "Choose dwell using pressure recovery and reproducible dispense mass. Tecan guidance supports appropriate speed and delay for viscous fluids, but its platform and tip settings do not establish a universal 200 ms or 500 ms setting for Foreach pumps."
+        ]
+      },
+      {
+        "title": "Build a speed-by-dwell test matrix",
+        "paragraphs": [
+          "Within the pump and driver's permitted range, compare low, medium and high aspiration speed with short, medium and long dwell: a 3×3 experiment. Begin conservatively. Keep target volume, dispense settings, reservoir level, valve sequence and backpressure fixed.",
+          "For every combination, retain individual masses, mean bias, CV, minimum inlet pressure, bubble observations and complete cycle time. Set repetition count from project uncertainty and acceptance needs. The three levels are experimental factors, not operating recommendations. Revisit the baseline between trials to expose thermal drift."
+        ]
+      },
+      {
+        "title": "Optimize dispensing and droplet transfer separately",
+        "paragraphs": [
+          "Aspiration is constrained by filling and low-pressure margin. Dispensing also depends on backpressure, splash and droplet detachment. The two speeds need not match. Stabilize aspiration first, then tune dispense speed, terminal deceleration, dwell and tip movement.",
+          "Compare the complete sequence: aspiration, settling, valve switching, dispensing, droplet transfer and refill. Faster motion can lose its throughput advantage if it requires longer settling or creates rejected dispenses."
+        ]
+      },
+      {
+        "title": "Decide when the fluid path needs redesign",
+        "paragraphs": [
+          "If only very slow aspiration passes, measure losses across tubing, valves and filters. Where the application allows, shorten the inlet or increase its minimum bore. Reassess dead volume, reagent consumption, cleaning and installation space after each change.",
+          "Keep reagent temperature repeatable. Temperature can change viscosity, density, vapor pressure and outgassing together. Do not recommend heating merely to reduce viscosity, or qualify a final formulation using a diluted or differently conditioned substitute."
+        ]
+      },
+      {
+        "title": "Save the operating window as a complete liquid class",
+        "paragraphs": [
+          "Retain volume range, fluid batch and temperature, tubing geometry, valves, tips, aspiration/dispense speeds and acceleration, dwell, valve delays and acceptance results. Select a shorter cycle that remains within all limits with margin for temperature and reservoir level.",
+          "Use model-specific capacity and step counts. For example, EA-500-PMMA and SM-500-PMMA display 500 μL over 2000 full steps; TM-500-PMMA displays 500 μL over 2540. Identical pulse frequency therefore does not imply identical geometric flow. Actual reagent validation remains necessary after conversion."
+        ]
+      }
+    ],
+    "formula": {
+      "section": 0,
+      "expression": "ΔP = 128 μ L Q / (π d⁴)",
+      "note": "μ: dynamic viscosity; L: length; Q: volume flow; d: internal diameter. Use consistent SI units. Fully developed Newtonian laminar flow in a rigid circular tube; entrance, local-component and transient effects are excluded."
+    },
+    "table": {
+      "section": 2,
+      "headers": [
+        "Factor",
+        "Keep fixed",
+        "Record"
+      ],
+      "rows": [
+        [
+          "Low/medium/high aspiration speed",
+          "Dispense, valve sequence, volume",
+          "Inlet pressure and bubbles"
+        ],
+        [
+          "Short/medium/long dwell",
+          "Selected speed and fluid path",
+          "Individual masses, bias and CV"
+        ],
+        [
+          "Interleaved baseline repeats",
+          "Fluid batch and backpressure",
+          "Temperature and trial order"
+        ],
+        [
+          "Window qualification",
+          "Lowest level and temperature limits",
+          "Full cycle time and pass rate"
+        ]
+      ]
+    },
+    "diagram": "Engineering relationship: viscosity μ, length L and bore d affect aspiration loss. After motion stops, verify pressure recovery before switching the valve.",
+    "faq": [
+      {
+        "question": "Is slower aspiration always better for viscous liquid?",
+        "answer": "No. Select a window satisfying volume, pressure, gas and cycle-time requirements. Excessive slowing wastes time and does not repair an inlet leak."
+      },
+      {
+        "question": "Can I always use a 500 ms dwell?",
+        "answer": "No. Verify pressure recovery and individual dispenses with the actual liquid, geometry and working volume."
+      },
+      {
+        "question": "Why do water settings fail with a reagent?",
+        "answer": "Viscosity, density, surface tension, volatility and dissolved gas can change filling and droplet transfer. A water test validates water conditions."
+      },
+      {
+        "question": "Can motor current prove aspiration is complete?",
+        "answer": "Current is an auxiliary signal, not proof of received volume. Use pressure, gas observations and final mass measurements."
+      }
+    ],
+    "links": [
+      "Piston pump acceleration and deceleration",
+      "Piston pump head materials",
+      "Bubble-related dispensing error",
+      "Precision piston pump category"
+    ],
+    "description": "Tune piston pump aspiration speed and dwell for viscous reagents with a test matrix covering pressure, bias, repeatability, bubbles and complete cycle time."
+  },
+  {
+    "title": "How Can You Isolate Piston Pump Dispensing Drift Over Time?",
+    "seo": "Piston Pump Dispensing Drift: Trends and Cross-Swap Tests",
+    "deck": "A volume trend shows that system conditions are changing; it does not identify pump wear. Save every dispense with temperature, level, reversal and priming events, then isolate causes using controlled priming, fixed level and pump/valve/circuit swaps. Review mean bias separately from CV before concluding that mechanical parts or seals have degraded.",
+    "sections": [
+      {
+        "title": "Separate a time trend from random scatter",
+        "paragraphs": [
+          "Calculate relative error for each dispense and preserve time order rather than only initial and final averages. A small short-window CV can coexist with a moving mean; an isolated outlier is not necessarily long-term drift.",
+          "Use density at the actual fluid temperature for gravimetric conversion. Check balance zero, drift, evaporation and collection technique first. A changing measurement environment can resemble a changing pump."
+        ]
+      },
+      {
+        "title": "Label the events that may trigger drift",
+        "paragraphs": [
+          "Record startup, direction reversal, refill, reservoir-level change, priming, stop and restart. Align fluid temperature, temperature near the pump and inlet/outlet pressure with each dispense. Similar trend shapes can have different causes; event labels select the next controlled test.",
+          "A reversal-specific first-dispense error suggests backlash, valve delay or pressure establishment. A level-dependent trend suggests static head or reservoir venting. Brief recovery after priming followed by recurrence supports ongoing gas ingress or release, but its source still needs confirmation."
+        ]
+      },
+      {
+        "title": "Test reversible conditions first",
+        "paragraphs": [
+          "Keep program, backpressure and temperature consistent while separately testing controlled priming, fixed reservoir level, reservoir venting and a permitted lower aspiration speed. Change one variable at a time and return to the baseline to distinguish cause from a time effect.",
+          "Do not replace the pump, fluid and tubing together. A reference circuit should preserve the necessary valve sequence and equivalent outlet loading. Otherwise recovery merely proves that the overall conditions changed."
+        ]
+      },
+      {
+        "title": "Cross-swap pumps and circuits",
+        "paragraphs": [
+          "Test the suspect and reference pumps in the same qualified reference circuit, then test both in the complete instrument circuit: a 2×2 comparison. Match target volume, fluid temperature, level, drive and valve sequence, and confirm that the reference pump is itself qualified.",
+          "If the problem follows one pump, isolate its valve, seal and motion components next. If both pumps drift only in the instrument circuit, investigate the system first. An interaction can involve load or driver matching; it need not fit a simple pump-versus-circuit diagnosis."
+        ]
+      },
+      {
+        "title": "Understand the limits of pressure-hold evidence",
+        "paragraphs": [
+          "Where permitted by the design and pressure rating, compare holds at the same initial pressure, valve state and temperature against a historical or new-part baseline. Faster decay supports leakage or changing stored volume, but cannot identify a specific failed valve seat by itself.",
+          "Gas, tubing relaxation, temperature and sensor location also affect the trace. Backlash usually relates to reversal and should be tested separately. Increasing compensation repeatedly can hide temperature, leakage or gas problems without resolving them."
+        ]
+      },
+      {
+        "title": "Require converging evidence before diagnosing wear",
+        "paragraphs": [
+          "After excluding measurement, priming, level and control differences, stronger wear evidence is repeatable degradation that follows an aged component, recovery after replacing that component, and inspection consistent with the observed failure. Record contamination, crystallization and material changes separately.",
+          "Maintain new-unit, life-stage and post-maintenance baselines. Requalify at the original trigger duration and adverse fluid/temperature conditions. EA, EAS, SM or TM full-stroke figures do not establish drift limits for every volume and reagent; instrument requirements and measurement uncertainty define acceptance."
+        ]
+      }
+    ],
+    "formula": {
+      "section": 0,
+      "expression": "eᵢ = (Vᵢ − Vtarget) / Vtarget × 100%",
+      "note": "Vtarget must be positive. Retain time-ordered dispense errors and calculate fixed-window means and CV separately; one whole-run CV can conceal drift."
+    },
+    "table": {
+      "section": 3,
+      "headers": [
+        "Combination",
+        "Reference circuit",
+        "Instrument circuit"
+      ],
+      "rows": [
+        [
+          "Reference pump",
+          "Confirm qualified baseline",
+          "Does the system trigger drift?"
+        ],
+        [
+          "Suspect pump",
+          "Does the problem follow the pump?",
+          "Reproduce the original symptom"
+        ],
+        [
+          "Common controls",
+          "Same fluid, temperature, program",
+          "Equivalent outlet load; record inlet pressure"
+        ]
+      ]
+    },
+    "diagram": "Diagnostic illustration: examine the time trend, then isolate through priming, fixed reservoir level and cross-swaps. The trend is synthetic, not measured life-test data. P₁/P₂ denote reference/suspect pumps; C₁/C₂ denote reference/instrument circuits.",
+    "faq": [
+      {
+        "question": "Does progressively lower delivery prove valve leakage?",
+        "answer": "No. Level, venting, gas, temperature and measurement error can produce similar trends. Use controlled comparisons and pressure-hold evidence."
+      },
+      {
+        "question": "Does a passing CV rule out drift?",
+        "answer": "No. Short-window scatter can remain small while the mean moves. Review mean bias and the time-ordered data."
+      },
+      {
+        "question": "Does recovery after priming rule out wear?",
+        "answer": "It supports gas involvement but does not exclude other mechanisms. Continue operation, observe recurrence and compare components."
+      },
+      {
+        "question": "How do I distinguish pump and instrument causes?",
+        "answer": "Cross the suspect/reference pumps with reference/instrument circuits, holding fluid, program and equivalent load constant, then isolate individual components."
+      }
+    ],
+    "links": [
+      "Accuracy, repeatability and resolution",
+      "Piston pump backlash compensation",
+      "Piston pump head material selection",
+      "Bubbles and dispensing error"
+    ],
+    "description": "Isolate piston pump dispensing drift with time trends, pressure, temperature and pump/circuit cross-swaps before concluding that valves or seals have worn."
+  },
+  {
+    "title": "Does a Miniature Diaphragm Pump Need a Pulsation Damper? Validate It with an A/B Test",
+    "seo": "Diaphragm Pump Pulsation Damper: A/B Validation",
+    "deck": "A damper is justified by load performance and its trade-offs in startup, trailing liquid, cleaning and dead volume. Define acceptable ripple at the load, then compare steady operation and start-stop delivery with and without damping under the same task. A smoother trace alone is not a passing result.",
+    "sections": [
+      {
+        "title": "Turn smoother flow into a load acceptance requirement",
+        "paragraphs": [
+          "Reciprocating delivery creates periodic flow; tubing resistance, inertia and compliance shape pressure at the load. The general pulsation guide covers those causes. This article addresses the narrower decision: whether an added damper is worth keeping and how to qualify it.",
+          "Specify measurement location, sensor bandwidth, allowed peak-to-peak ripple or another defined metric, and the final function: flow-cell signal, spray uniformity or nuisance protection trips. If the task only requires reliable bulk transfer and already passes, an accessory may offer little benefit."
+        ]
+      },
+      {
+        "title": "Stored liquid changes startup and stopping",
+        "paragraphs": [
+          "A damping element stores some liquid during higher pressure and releases it as pressure falls. Effective compliance can be understood as volume change per pressure change, but depends on pressure and construction. A 300 or 600 mL/min rating cannot determine a universal chamber volume.",
+          "More storage can lengthen pressure buildup and produce liquid after stopping. Assess compatibility, cleanability, trapped gas, pressure rating and orientation. Deliberately leaving bubbles in the process fluid is not equivalent to using a qualified, separated damping element."
+        ]
+      },
+      {
+        "title": "Compare the same task and disclose operating-point changes",
+        "paragraphs": [
+          "A is the original circuit; B adds the damper. Keep pump, fluid temperature, reservoir level, main geometry, end load and measurement locations consistent. Record the complete model, drive command and control version. Install and set the damper according to its manufacturer's requirements.",
+          "First compare identical drive commands to expose changes in mean flow and pressure. If the specific pump supports speed control, add a comparison at matched average flow and disclose the changed drive. A smoother trace at lower flow is not a matched-operating-point damping result."
+        ]
+      },
+      {
+        "title": "Measure steady flow and short cycles separately",
+        "paragraphs": [
+          "At steady state, record load pressure peaks and troughs, average flow and the process signal with the same bandwidth. Relative pressure ripple is useful only with a meaningful nonzero mean and a consistent pressure reference; near zero mean, report absolute peak-to-peak values.",
+          "Run the actual start-stop sequence and measure time to functional pressure, delivered volume, trailing liquid and the next cycle's initial state. Match totalizer and collection windows. Liquid retained in the damper is not automatically a leak."
+        ]
+      },
+      {
+        "title": "Keep or remove the damper using the complete result",
+        "paragraphs": [
+          "Keep B only when ripple and load function improve while task volume, startup, trailing liquid and cleaning also pass. If steady performance improves but short-cycle delivery or post-stop dripping fails, revise the geometry, installation or control and repeat the test.",
+          "If A already meets the function and B only steadies the display while adding retained liquid and maintenance, retaining A may be appropriate. If neither passes, reconsider inlet supply, resistance or pump architecture instead of treating a damper as a universal remedy."
+        ]
+      },
+      {
+        "title": "What DPL30 and DPL60 specifications establish",
+        "paragraphs": [
+          "Official specifications list DPL30 at 300 mL/min no-load flow, 100 kPa rated pressure and 6 mH₂O self-priming height; DPL60 at 600 mL/min, 100 kPa and 3 mH₂O respectively. These are separate performance items, not a simultaneous operating-point guarantee or a pulsation percentage.",
+          "Use speed control only on a specific five-wire or other configuration whose interface explicitly supports it. Brushless does not universally mean PWM-controllable. Retain model, drive, sensor location, fluid temperature, filter state and load conditions with the A/B results."
+        ]
+      }
+    ],
+    "formula": {
+      "section": 1,
+      "expression": "Ppp = Pmax − Pmin; Ceff ≈ ΔV / ΔP",
+      "note": "Compare Ppp at the same location and bandwidth. Ceff represents effective compliance over a selected pressure interval, not a universal sizing rule or guaranteed attenuation."
+    },
+    "table": {
+      "section": 4,
+      "headers": [
+        "Acceptance item",
+        "Measure in A and B",
+        "Condition for retaining B"
+      ],
+      "rows": [
+        [
+          "Steady function",
+          "Load pressure and process signal",
+          "Meets predefined functional limits"
+        ],
+        [
+          "Transfer task",
+          "Same-window flow and delivered volume",
+          "Task passes; differences are explained"
+        ],
+        [
+          "Start and stop",
+          "Pressure rise time, tail, next-cycle state",
+          "Within project limits"
+        ],
+        [
+          "Maintenance and compatibility",
+          "Retained liquid, cleaning, gas, materials",
+          "Added burden is acceptable"
+        ]
+      ]
+    },
+    "diagram": "Synthetic waveforms: equal mean flow can have different peaks and troughs before and after damping. A smoother curve does not replace startup and trailing-liquid acceptance tests.",
+    "faq": [
+      {
+        "question": "Does every miniature diaphragm pump need a damper?",
+        "answer": "No. Establish whether real pulsation affects the load, then weigh the benefit against dead volume, cleaning, startup and trailing liquid."
+      },
+      {
+        "question": "Is a larger damper always better?",
+        "answer": "No. Volume, pressure response, frequency and fluid all matter. More storage may increase delay and trailing liquid."
+      },
+      {
+        "question": "Can software filtering replace hydraulic damping?",
+        "answer": "Filtering changes a signal or display; it does not reduce physical pressure variations acting on valves, nozzles or flow cells."
+      },
+      {
+        "question": "How should a lower flow after damping be compared?",
+        "answer": "Report the identical-drive result first. If speed control is supported, also compare matched mean flow while disclosing the new drive and operating point."
+      }
+    ],
+    "links": [
+      "General flow pulsation and reduction guide",
+      "Flow totalizer versus gravimetric reference",
+      "Diaphragm pump flow-pressure curves",
+      "Miniature diaphragm pump category"
+    ],
+    "description": "Validate a diaphragm pump pulsation damper using matched A/B tests of load ripple, mean delivery, startup, trailing liquid and cleaning requirements."
+  },
+  {
+    "title": "Diaphragm Pump Bubbles and Noise: Cavitation, Air Ingress or Outgassing?",
+    "seo": "Miniature Diaphragm Pump Cavitation Diagnosis",
+    "deck": "Bubbles, noise and reduced flow do not individually prove cavitation. Separate incoming air, dissolved-gas release and local vapor formation using synchronized absolute inlet pressure, fluid temperature, bubble location and flow. A normal average inlet pressure cannot exclude a brief low-pressure region inside the pump; build evidence through controlled comparisons.",
+    "sections": [
+      {
+        "title": "Use absolute pressure for the vapor boundary",
+        "paragraphs": [
+          "Cavitation involves vapor formation at local low pressure and subsequent collapse when pressure recovers. External air ingress and dissolved-gas release are different sources, require different remedies and can coexist with vapor formation.",
+          "Add local atmospheric pressure to gauge pressure before comparing with the actual fluid's vapor pressure at its temperature. Losses and transients remain between the inlet sensor and chamber. An inlet average above vapor pressure is therefore not proof of cavitation-free operation."
+        ]
+      },
+      {
+        "title": "What evidence distinguishes the three mechanisms?",
+        "paragraphs": [
+          "Record where bubbles first appear, suction-stage pressure and fluid temperature. A connection may admit air under vacuum without leaking liquid outward. Improvement after degassing supports dissolved-gas involvement but does not independently exclude vapor formation.",
+          "Vapor bubbles can form and collapse inside the pump before they become visible downstream. Noise, reduced flow response to speed and pressure fluctuations are clues, not isolated proof. Interpret them together with the response to improved inlet conditions."
+        ]
+      },
+      {
+        "title": "Inspect inlet restrictions and reservoir conditions",
+        "paragraphs": [
+          "Check suction height, minimum level, reservoir venting, filter loading, flattened tubing and the smallest fitting bore. Increasing the main tube diameter may not fix a valve or filter restriction. Use sectional pressure readings or permitted substitution tests.",
+          "Higher temperature can reduce viscosity while increasing vapor pressure and encouraging outgassing. Easier flow does not necessarily mean a larger safety margin. Hot or volatile formulations require properties for the actual composition and temperature."
+        ]
+      },
+      {
+        "title": "Run three controlled comparisons",
+        "paragraphs": [
+          "First retain the liquid and shorten the inlet or replace a confirmed restrictive component. Second check seals and improve reservoir static head within permitted limits. Third compare the same fluid before and after degassing at equal temperature. Return to baseline and record minimum inlet pressure, flow, noise and bubbles.",
+          "A separate lower-speed test is useful only when the specific configuration supports controlled speed. Do not apply incompatible PWM to two-wire or unverified versions. Improvement from reduced inlet demand supports several mechanisms and cannot alone confirm cavitation."
+        ]
+      },
+      {
+        "title": "State the sensor and inference limits",
+        "paragraphs": [
+          "Synchronize inlet absolute pressure, outlet pressure, flow and temperature. Record sensor response, sampling, mounting cavities and distance to the pump. A slow instrument can hide troughs; its installation can introduce gas pockets or additional resistance.",
+          "Set pressure margin using manufacturer information, local dynamic assessment and testing. No universal kPa threshold or unmeasured NPSH requirement is supplied here. Where the critical region cannot be measured, report supported hypotheses or reduced risk rather than direct proof of the mechanism."
+        ]
+      },
+      {
+        "title": "Self-priming height is not a cavitation guarantee",
+        "paragraphs": [
+          "The official DPL30 self-priming height is 6 mH₂O and DPL60 is 3 mH₂O. These water-based figures do not guarantee safe operation for every reagent at a 6 m or 3 m installation height. DPL30H's 600 kPa rated outlet pressure likewise does not establish inlet vapor margin.",
+          "Requalify at maximum fluid temperature, minimum reservoir level, representative end-of-life filter loading, maximum task flow and start-stop/restart conditions. Preserve mean delivery and dynamic signals, and respect material/fluid limits. Recovery with room-temperature water does not close a real-reagent issue."
+        ]
+      }
+    ],
+    "formula": {
+      "section": 0,
+      "expression": "Pabs = Pgauge + Patm; Plocal,min,abs > Pvapor(T) + margin",
+      "note": "The second relation is a design target, not a safety conclusion from an inlet sensor alone. Vapor pressure must match fluid and temperature; validate the required margin for the actual system."
+    },
+    "table": {
+      "section": 1,
+      "headers": [
+        "Mechanism",
+        "Gas source",
+        "Priority comparison"
+      ],
+      "rows": [
+        [
+          "Air ingress",
+          "External air",
+          "Suction sealing and sectional swaps"
+        ],
+        [
+          "Outgassing",
+          "Dissolved gas",
+          "Same-fluid, same-temperature degassing"
+        ],
+        [
+          "Vapor formation/cavitation",
+          "Liquid vapor",
+          "Inlet losses, absolute pressure, temperature"
+        ],
+        [
+          "Coexisting mechanisms",
+          "Combined sources",
+          "Stepwise changes and baseline repeats"
+        ]
+      ]
+    },
+    "diagram": "Three-way diagnosis: bubbles can originate from external air, dissolved gas or local vapor formation. Use absolute pressure; the branches are hypotheses to test. ① Air ingress; ② outgassing; ③ local vapor formation.",
+    "faq": [
+      {
+        "question": "Do bubbles or noise prove cavitation?",
+        "answer": "No. Air ingress, outgassing, residual gas and other faults can look similar. Combine pressure evidence with controlled comparisons."
+      },
+      {
+        "question": "Can −50 kPa gauge be compared directly with vapor pressure?",
+        "answer": "No. Convert using local atmospheric pressure and account for actual fluid, temperature, sensor location and transient losses."
+      },
+      {
+        "question": "Does quieter operation at lower speed confirm cavitation?",
+        "answer": "It only supports speed-dependent inlet or system effects. Air ingress, outgassing, resonance and supply limitations can also change with speed."
+      },
+      {
+        "question": "Does DPL30's 6 m self-priming rating ensure no cavitation at 6 m?",
+        "answer": "No. Priming test conditions differ from continuous service. Fluid, temperature, tubing losses, level and pulsation change the risk."
+      }
+    ],
+    "links": [
+      "Suction versus discharge resistance",
+      "DPL30 self-priming loss diagnosis",
+      "Pulsation damper validation",
+      "Diaphragm pump flow-pressure curves"
+    ],
+    "description": "Distinguish diaphragm pump cavitation from air ingress and outgassing using absolute inlet pressure, fluid vapor pressure and controlled comparisons."
+  },
+  {
+    "title": "Why Does a Diaphragm Pump Flow Totalizer Disagree with Collected Mass?",
+    "seo": "Diaphragm Pump Flow Meter Totalizer Error: Gravimetric Checks",
+    "deck": "A fluctuating display and an incorrect total are different problems. Match collection windows and hydraulic conditions, convert mass using the real fluid density, then check storage changes, trailing liquid, reverse flow, range and sampling. Only an independent reference can establish whether filtering or damping improves measurement accuracy.",
+    "sections": [
+      {
+        "title": "Define the same measured quantity",
+        "paragraphs": [
+          "The meter measures liquid crossing its location; the balance measures liquid reaching the vessel. Tubing, a damper and a nozzle may separate them. Direct comparison is appropriate at steady state with unchanged storage; startup and stopping require accounting for stored volume, branches and trailing liquid.",
+          "Use density for the actual composition and temperature, and control evaporation, splash, exterior drops and timing error. Do not remove a backpressure component simply to collect liquid: that changes the pump's operating point."
+        ]
+      },
+      {
+        "title": "Apply a same-window volume balance",
+        "paragraphs": [
+          "Align totalizer and collection start/end times and volume units. Without leakage, branches or phase change between sensor and vessel, their difference is explained by the change in stored liquid. More complex circuits require explicit branch and loss terms.",
+          "Repeat equal-length steady windows, then vary window duration. If the discrepancy shrinks with longer windows, inspect fixed timing offsets, storage and trailing liquid. Persistent relative bias calls for density, calibration, range and dynamic-suitability checks."
+        ]
+      },
+      {
+        "title": "Check reverse-flow handling and peak saturation",
+        "paragraphs": [
+          "Mean flow inside the rated range does not exclude instantaneous saturation. Short reverse flow may occur. A totalizer that counts only forward flow or clips negative values can read high; verify bidirectional capability and signed accumulation rules.",
+          "Follow the specific meter's requirements for a full pipe, fluid calibration, orientation, straight runs and pressure. Sensitivity to gas, viscosity and pulsation varies by measurement principle. One instrument's installation settings do not define every flow meter."
+        ]
+      },
+      {
+        "title": "Separate sensing, communication and display filtering",
+        "paragraphs": [
+          "Reading an unchanged output more often adds no information. Record sensor bandwidth, internal update/averaging, communication rate and external filters. Integrate with real timestamps; an arithmetic mean does not replace time averaging when intervals vary.",
+          "Repeatedly sampling the same waveform phase can create bias or apparent slow oscillation. Use windows covering multiple complete periods and verify anti-aliasing. Twice the highest frequency of interest is only a theoretical minimum, not assurance of accurate narrow peaks. The cited paper's abstract supports improved averaging for sampling error, not correction of saturation or sensor nonlinearity."
+        ]
+      },
+      {
+        "title": "Choose filtering, damping or a different meter from the evidence",
+        "paragraphs": [
+          "When totals match the mass reference and only the display jumps, tune display averaging while preserving fault-detection response. If totals also disagree, address range, bubbles, installation or processing first. Stronger filtering cannot restore information already lost.",
+          "After adding a damper, reweigh over the same window and task, including mean flow and trailing liquid. A flatter trace with unchanged total error requires further investigation. Pulsation settings in the cited KROHNE manual apply to that instrument, not universally to all sensors."
+        ]
+      },
+      {
+        "title": "Retain a reproducible measurement record",
+        "paragraphs": [
+          "Save full pump model and control version, fluid temperature/density, reservoir level, tubing dimensions, backpressure, meter model/range/filtering, timestamps, raw output and mass records. Report per-window volume bias and uncertainty separately for steady and start-stop operation.",
+          "DPL30's 300 mL/min and DPL60's 600 mL/min are no-load flow levels, not installed-flow calibration standards. Evaluate the actual load using collected delivery. Sweep speed only on an explicitly supported control version; brushless alone does not establish adjustable speed."
+        ]
+      }
+    ],
+    "formula": {
+      "section": 1,
+      "expression": "Qavg = 60 Δm / (ρ T); Vmeter − Vcollected = ΔVstored",
+      "note": "For Qavg in mL/min use Δm in g, ρ in g/mL and T in s. The balance assumes the same window, no branches/leaks/phase change, and a common density approximation between meter and vessel. At steady state ΔVstored≈0; start-stop tests include storage and trailing liquid."
+    },
+    "table": {
+      "section": 4,
+      "headers": [
+        "Observation",
+        "Check first",
+        "Next action"
+      ],
+      "rows": [
+        [
+          "Display varies; totals agree",
+          "Window and uncertainty",
+          "Set application-appropriate averaging"
+        ],
+        [
+          "Short windows disagree more",
+          "Storage, timing and trailing liquid",
+          "Repeat complete start-stop cycle"
+        ],
+        [
+          "Persistent high total",
+          "Reverse-flow sign, peaks and density",
+          "Correct settings and revalidate"
+        ],
+        [
+          "Errors with bubbles",
+          "Full pipe and gas origin",
+          "Resolve gas before assessing meter"
+        ],
+        [
+          "Damping steadies display",
+          "Mean flow and operating-point change",
+          "Recompare gravimetric bias"
+        ]
+      ]
+    },
+    "diagram": "Measurement chain: pulsating pump flow crosses the meter and is compared with same-window mass collection. Account for storage between meter and vessel; the trace is illustrative, not product test data.",
+    "faq": [
+      {
+        "question": "Does a jumping display mean the meter is faulty?",
+        "answer": "Not necessarily. It may reflect real pulsation or sampling/display behavior. Compare same-window totals with independent mass collection."
+      },
+      {
+        "question": "Does the average of ten readings represent true mean flow?",
+        "answer": "Not necessarily. Verify effective updates, phase coverage, actual time intervals and sensor dynamics; repeated reads of one output are not new samples."
+      },
+      {
+        "question": "Does a stable display after damping prove better accuracy?",
+        "answer": "No. Recompare same-window total, mass, operating point and stored-volume change."
+      },
+      {
+        "question": "Why is disagreement largest during startup?",
+        "answer": "Liquid may first fill tubing or the damper, so meter throughput and collected delivery differ temporarily. Check timing, branches, trailing liquid and density as well."
+      }
+    ],
+    "links": [
+      "Pulsation damper A/B validation",
+      "General flow pulsation measurement guide",
+      "Tubing diameter and operating point",
+      "Miniature diaphragm pump category"
+    ],
+    "description": "Check diaphragm pump flow totalizer error against collected mass. Align windows and account for density, storage, trailing liquid, reverse flow and sampling."
+  }
+]

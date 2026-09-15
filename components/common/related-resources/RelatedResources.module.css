@@ -46,26 +46,28 @@
 }
 
 .viewAll {
-  min-height: 38px;
-  padding: 0 15px;
-  border: 1px solid var(--related-blue);
-  border-radius: 8px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  display: inline;
   flex: 0 0 auto;
   color: var(--related-blue);
-  font-size: 14px;
-  font-weight: 800;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 600;
   text-decoration: none;
-  transition: border-color 0.18s ease, color 0.18s ease;
+  transition: color 0.18s ease;
 }
 
-.viewAll:hover,
+.viewAll:hover {
+  color: var(--related-cyan);
+  text-decoration: none;
+}
+
 .viewAll:focus-visible {
-  border-color: var(--related-cyan);
   color: var(--related-blue);
-  outline: none;
+  outline: 1px solid var(--related-blue);
+  outline-offset: 4px;
 }
 
 /*
@@ -79,7 +81,7 @@
   min-width: 0;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
 }
 
 .trackViewport {
@@ -125,18 +127,30 @@
 
 .trackButton {
   position: relative;
-  width: 40px;
-  height: 40px;
+  width: 28px;
+  min-width: 28px;
+  max-width: 28px;
+  height: auto;
+  align-self: stretch;
+  margin: 5px 0 8px;
   padding: 0;
-  border: 1px solid rgba(23, 51, 104, 0.24);
-  border-radius: 50%;
+  border: 1px solid rgba(23, 51, 104, 0.16);
+  border-radius: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  flex: 0 0 40px;
+  flex: 0 0 28px;
   background: #ffffff;
   color: var(--related-blue);
   box-shadow: none;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 900;
+  text-shadow:
+    0.4px 0 currentColor,
+    -0.4px 0 currentColor;
   cursor: pointer;
   transition:
     color 0.18s ease,
@@ -146,37 +160,44 @@
 }
 
 .trackButton span {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 10px;
-  height: 10px;
-  box-sizing: border-box;
-  border: solid currentColor;
-  border-width: 0 2px 2px 0;
+  position: static;
+  width: auto;
+  height: auto;
+  border: 0;
   display: block;
-  font-size: 0;
-  line-height: 0;
-  transform-origin: center;
-}
-
-/* 使用等宽几何箭头，避免字体字形基线造成视觉上的上下偏移。 */
-.trackButtonPrevious span {
-  left: calc(50% + 1px);
-  transform: translate(-50%, -50%) rotate(135deg);
-}
-
-.trackButtonNext span {
-  left: calc(50% - 1px);
-  transform: translate(-50%, -50%) rotate(-45deg);
+  font: inherit;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1;
+  transform: none;
 }
 
 .trackButton:hover:not(:disabled),
-.trackButton:focus-visible:not(:disabled) {
+.trackButton:active:not(:disabled) {
   border-color: var(--related-blue);
   background: var(--related-blue);
   color: var(--related-cyan);
   outline: none;
+}
+
+.trackButton:focus:not(:hover):not(:disabled),
+.trackButton:focus-visible:not(:hover):not(:disabled) {
+  border-color: var(--related-blue);
+  background: #ffffff;
+  color: var(--related-blue);
+  outline: 1px solid var(--related-blue);
+  outline-offset: -1px;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .trackButton:hover:not(:active):not(:disabled),
+  .trackButton:focus:not(:active):not(:disabled),
+  .trackButton:focus-visible:not(:active):not(:disabled) {
+    border-color: rgba(23, 51, 104, 0.16);
+    background: #ffffff;
+    color: var(--related-blue);
+    outline: none;
+  }
 }
 
 .trackButton:disabled {
@@ -449,38 +470,45 @@
 
   .trackShell {
     gap: 0;
+    padding-right: 40px;
+    padding-left: 40px;
+    box-sizing: border-box;
+  }
+
+  .trackViewport {
+    margin: 0;
   }
 
   .videoTrack,
   .articleTrack,
   .productTrack {
-    grid-auto-columns: calc(100vw - 52px);
+    grid-auto-columns: 100%;
     column-gap: 14px;
   }
 
-  /* 手机端按钮叠放在轨道边缘，避免压缩单卡宽度。 */
+  /* 手机端按钮占满卡片高度，并继续使用独立侧栏避免覆盖内容。 */
   .trackButton {
     position: absolute;
     z-index: 4;
-    top: 50%;
-    width: 34px;
-    height: 34px;
-    flex-basis: 34px;
-    transform: translateY(-50%);
-    box-shadow: 0 5px 16px rgba(23, 51, 104, 0.12);
+    top: 5px;
+    bottom: 8px;
+    width: 28px;
+    min-width: 28px;
+    max-width: 28px;
+    height: auto;
+    margin: 0;
+    flex-basis: 28px;
+    border-radius: 0;
+    transform: none;
+    box-shadow: none;
   }
 
   .trackButtonPrevious {
-    left: 7px;
+    left: 0;
   }
 
   .trackButtonNext {
-    right: 7px;
-  }
-
-  .trackButton span {
-    width: 9px;
-    height: 9px;
+    right: 0;
   }
 
   .videoTrack

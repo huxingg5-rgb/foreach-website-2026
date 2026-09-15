@@ -82,7 +82,7 @@ export default function HistoryTimeline({
   return (
     <section
       className="about-history-section"
-      aria-label={locale === "zh-CN" ? "恒永达发展历程" : "FOREACH milestones"}
+      aria-label={locale === "zh-CN" ? "恒永达发展历程" : "Foreach milestones"}
     >
       <div className="about-history-container">
         {/* 中间竖线 */}

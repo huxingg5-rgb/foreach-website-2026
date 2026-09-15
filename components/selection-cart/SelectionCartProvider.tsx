@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 /* =========================================================
    SelectionCartProvider.tsx
@@ -24,6 +24,7 @@ import {
 } from "react";
 import { usePathname } from "next/navigation";
 
+import { getLocalizedFilterOptionLabel } from "@/components/products/selection/filter-option-i18n";
 import { getLocaleFromPathname } from "@/lib/i18n";
 import {
   trackAddToInquiryList,
@@ -66,7 +67,7 @@ const TARGET_CART_TEXT: Record<
     "Not Required": "No requerido",
     Product: "Producto",
     "Product Code": "Código de producto",
-    "FOREACH Model": "Modelo FOREACH",
+    "Foreach Model": "Modelo Foreach",
     "Compatible Models": "Modelos compatibles",
     "Clear the current product selection list?": "¿Desea vaciar la lista de selección de productos actual?",
     "Selection list copied": "Lista de selección copiada",
@@ -85,7 +86,7 @@ const TARGET_CART_TEXT: Record<
     "Not Required": "Non requis",
     Product: "Produit",
     "Product Code": "Code produit",
-    "FOREACH Model": "Modèle FOREACH",
+    "Foreach Model": "Modèle Foreach",
     "Compatible Models": "Modèles compatibles",
     "Clear the current product selection list?": "Vider la liste de sélection de produits actuelle ?",
     "Selection list copied": "Liste de sélection copiée",
@@ -104,7 +105,7 @@ const TARGET_CART_TEXT: Record<
     "Not Required": "불필요",
     Product: "제품",
     "Product Code": "제품 코드",
-    "FOREACH Model": "FOREACH 모델",
+    "Foreach Model": "Foreach 모델",
     "Compatible Models": "호환 모델",
     "Clear the current product selection list?": "현재 제품 선정 목록을 비우시겠습니까?",
     "Selection list copied": "제품 선정 목록을 복사했습니다",
@@ -123,7 +124,7 @@ const TARGET_CART_TEXT: Record<
     "Not Required": "Не требуется",
     Product: "Продукция",
     "Product Code": "Код продукции",
-    "FOREACH Model": "Модель FOREACH",
+    "Foreach Model": "Модель Foreach",
     "Compatible Models": "Совместимые модели",
     "Clear the current product selection list?": "Очистить текущий список выбранной продукции?",
     "Selection list copied": "Список выбранной продукции скопирован",
@@ -266,6 +267,9 @@ function buildCartText(
 
   const lines = items.map((item, index) => {
     const isPumpSelection = item.sourceType === "pump-selection";
+    const localizedProductName = isPumpSelection
+      ? getLocalizedFilterOptionLabel(item.productName, locale)
+      : item.productName;
     const sourceLabel = getCartText(
       locale,
       isPumpSelection ? "Products" : "Fitting Replacement Search",
@@ -276,7 +280,7 @@ function buildCartText(
       return [
         `#${index + 1}`,
         `${getCartText(locale, "Source", "来源")}: ${sourceLabel}`,
-        `${getCartText(locale, "Product Type", "产品类型")}: ${item.productName}`,
+        `${getCartText(locale, "Product Type", "产品类型")}: ${localizedProductName}`,
         `${getCartText(locale, "Product Model", "产品型号")}: ${item.foreachModel}`,
         `${getCartText(locale, "Quantity", "数量")}: ${item.quantity}`,
         `${getCartText(locale, "2D Drawing", "2D 图纸")}: ${
@@ -292,7 +296,7 @@ function buildCartText(
       `${getCartText(locale, "Source", "来源")}: ${sourceLabel}`,
       `${getCartText(locale, "Product", "产品")}: ${item.productName}`,
       `${getCartText(locale, "Product Code", "商品编码")}: ${item.productCode}`,
-      `${getCartText(locale, "FOREACH Model", "恒永达型号")}: ${item.foreachModel}`,
+      `${getCartText(locale, "Foreach Model", "恒永达型号")}: ${item.foreachModel}`,
       `${getCartText(locale, "Compatible Models", "兼容编码")}: ${item.competitorModels.join(" / ") || "-"}`,
       `${getCartText(locale, "Quantity", "数量")}: ${item.quantity}`,
       `${getCartText(locale, "2D Drawing", "2D 图纸")}: ${
@@ -376,7 +380,12 @@ export function SelectionCartProvider({
   useEffect(() => {
     if (!hasMounted) return;
 
-    window.localStorage.setItem(GLOBAL_CART_STORAGE_KEY, JSON.stringify(items));
+    // Storage can be blocked or full. Keep the current in-memory cart usable.
+    try {
+      window.localStorage.setItem(GLOBAL_CART_STORAGE_KEY, JSON.stringify(items));
+    } catch {
+      // Do not clear items or let persistence failure reach the page error boundary.
+    }
   }, [items, hasMounted]);
 
   function openCart() {

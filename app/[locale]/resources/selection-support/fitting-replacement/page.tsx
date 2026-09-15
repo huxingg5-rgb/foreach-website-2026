@@ -89,7 +89,7 @@ export async function generateMetadata({
 
   if (!isSupportedLocale(locale)) {
     return {
-      title: "Fitting Replacement Search｜FOREACH",
+      title: "Fitting Replacement Search｜Foreach Technology",
     };
   }
 
@@ -106,7 +106,7 @@ export async function generateMetadata({
     ru: "Поддержка подбора",
   } as const;
   const metadata = {
-    title: `${pageData.banner.title}｜${sectionLabels[locale]}｜FOREACH`,
+    title: `${pageData.banner.title}｜${sectionLabels[locale]}｜Foreach Technology`,
     description: pageData.banner.description,
   };
 

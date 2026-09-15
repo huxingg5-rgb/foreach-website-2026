@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650" role="img" aria-labelledby="title desc" lang="es">
+<title id="title">Rutas entre la excitación y el sonido</title>
+<desc id="desc">Esquema de diagnóstico: la excitación mecánica e hidráulica puede generar ruido por varias rutas. Valídelas en el mismo punto de trabajo.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#587080"/></marker></defs>
+<rect width="1000" height="650" rx="20" fill="#f3f8fb"/>
+<g font-family="Arial, Microsoft YaHei, Malgun Gothic, sans-serif" fill="#17394c">
+<text x="500" y="52" font-size="30" font-weight="700" text-anchor="middle" fill="#17394c">
+<tspan x="500" dy="0">Rutas entre la excitación y el sonido</tspan>
+</text>
+<text x="185" y="144" font-size="25" font-weight="700" text-anchor="middle" fill="#17394c">
+<tspan x="185" dy="0">Excitación</tspan>
+</text>
+<text x="500" y="144" font-size="25" font-weight="700" text-anchor="middle" fill="#17394c">
+<tspan x="500" dy="0">Ruta</tspan>
+</text>
+<text x="815" y="144" font-size="25" font-weight="700" text-anchor="middle" fill="#17394c">
+<tspan x="815" dy="0">Observación</tspan>
+</text>
+<rect x="40" y="178" width="290" height="116" rx="12" fill="#dfedf4"/>
+<text x="185" y="213" font-size="25" font-weight="400" text-anchor="middle" fill="#17394c">
+<tspan x="185" dy="0">Motor y cabezal</tspan>
+</text>
+<rect x="355" y="178" width="290" height="116" rx="12" fill="#e8f1f4"/>
+<text x="500" y="213" font-size="25" font-weight="400" text-anchor="middle" fill="#17394c">
+<tspan x="500" dy="0">Aire</tspan>
+</text>
+<rect x="670" y="178" width="290" height="116" rx="12" fill="#e0f0eb"/>
+<text x="815" y="213" font-size="25" font-weight="400" text-anchor="middle" fill="#17394c">
+<tspan x="815" dy="0">Presión sonora</tspan>
+</text>
+<line x1="331" y1="236" x2="351" y2="236" stroke="#587080" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="646" y1="236" x2="666" y2="236" stroke="#587080" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="40" y="321" width="290" height="116" rx="12" fill="#dfedf4"/>
+<text x="185" y="356" font-size="25" font-weight="400" text-anchor="middle" fill="#17394c">
+<tspan x="185" dy="0">Movimiento</tspan>
+<tspan x="185" dy="32.0">mecánico</tspan>
+</text>
+<rect x="355" y="321" width="290" height="116" rx="12" fill="#e8f1f4"/>
+<text x="500" y="356" font-size="25" font-weight="400" text-anchor="middle" fill="#17394c">
+<tspan x="500" dy="0">Soportes,</tspan>
+<tspan x="500" dy="32.0">abrazaderas,</tspan>
+<tspan x="500" dy="32.0">carcasa</tspan>
+</text>
+<rect x="670" y="321" width="290" height="116" rx="12" fill="#e0f0eb"/>
+<text x="815" y="356" font-size="25" font-weight="400" text-anchor="middle" fill="#17394c">
+<tspan x="815" dy="0">Vibración y</tspan>
+<tspan x="815" dy="32.0">sonido</tspan>
+</text>
+<line x1="331" y1="379" x2="351" y2="379" stroke="#587080" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="646" y1="379" x2="666" y2="379" stroke="#587080" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="40" y="464" width="290" height="116" rx="12" fill="#dfedf4"/>
+<text x="185" y="499" font-size="25" font-weight="400" text-anchor="middle" fill="#17394c">
+<tspan x="185" dy="0">Pulsación de</tspan>
+<tspan x="185" dy="32.0">presión</tspan>
+</text>
+<rect x="355" y="464" width="290" height="116" rx="12" fill="#e8f1f4"/>
+<text x="500" y="499" font-size="25" font-weight="400" text-anchor="middle" fill="#17394c">
+<tspan x="500" dy="0">Tubos, racores,</tspan>
+<tspan x="500" dy="32.0">carga</tspan>
+</text>
+<rect x="670" y="464" width="290" height="116" rx="12" fill="#e0f0eb"/>
+<text x="815" y="499" font-size="25" font-weight="400" text-anchor="middle" fill="#17394c">
+<tspan x="815" dy="0">Presión y sonido</tspan>
+</text>
+<line x1="331" y1="522" x2="351" y2="522" stroke="#587080" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="646" y1="522" x2="666" y2="522" stroke="#587080" stroke-width="2" marker-end="url(#arrow)"/>
+</g>
+</svg>

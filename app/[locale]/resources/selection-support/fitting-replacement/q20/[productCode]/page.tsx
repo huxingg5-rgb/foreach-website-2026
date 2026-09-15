@@ -93,7 +93,7 @@ export async function generateMetadata({
 
   if (!isSupportedLocale(locale)) {
     return {
-      title: "Fitting Detail｜FOREACH",
+      title: "Fitting Detail｜Foreach Technology",
     };
   }
 
@@ -105,7 +105,7 @@ export async function generateMetadata({
 
   if (!pageData) {
     return {
-      title: "Fitting Detail｜FOREACH",
+      title: "Fitting Detail｜Foreach Technology",
     };
   }
 
@@ -124,7 +124,7 @@ export async function generateMetadata({
     ru: `Код изделия, совместимые модели, характеристики и сведения о 2D-чертеже ${pageData.product.foreachModel}.`,
   } as const;
   const metadata = {
-    title: `${pageData.product.foreachModel}｜${productLabels[locale]}｜FOREACH`,
+    title: `${pageData.product.foreachModel}｜${productLabels[locale]}｜Foreach Technology`,
     description: descriptions[locale],
   };
 

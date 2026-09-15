@@ -67,11 +67,11 @@ export const homeCompanyStrengthData = {
 
     title: {
       "zh-CN": "走进恒永达科技",
-      en: "ABOUT FOREACH",
-      es: "ABOUT FOREACH",
-      fr: "ABOUT FOREACH",
-      ko: "ABOUT FOREACH",
-      ru: "ABOUT FOREACH",
+      en: "ABOUT Foreach",
+      es: "ABOUT Foreach",
+      fr: "ABOUT Foreach",
+      ko: "ABOUT Foreach",
+      ru: "ABOUT Foreach",
     },
 
     subtitle: {
@@ -106,11 +106,11 @@ export const homeCompanyStrengthData = {
   posterSrc: "/images/home/tv-foreach.png", // 公司介绍视频封面地址，当前使用 public 目录下的本地图片
   posterAlt: { // 公司介绍视频封面图片 alt 文案，方便 SEO 和无障碍识别
     "zh-CN": "恒永达科技公司介绍视频封面", // 中文封面 alt 文案
-    en: "FOREACH Technology company introduction video cover", // 英文封面 alt 文案
-    es: "Portada del video de presentación de FOREACH Technology", // 西班牙语封面 alt 文案
-    fr: "Couverture de la vidéo de présentation de FOREACH Technology", // 法语封面 alt 文案
-    ko: "FOREACH Technology 회사 소개 영상 커버", // 韩语封面 alt 文案
-    ru: "Обложка видео о компании FOREACH Technology", // 俄语封面 alt 文案
+    en: "Foreach Technology company introduction video cover", // 英文封面 alt 文案
+    es: "Portada del video de presentación de Foreach Technology", // 西班牙语封面 alt 文案
+    fr: "Couverture de la vidéo de présentation de Foreach Technology", // 法语封面 alt 文案
+    ko: "Foreach Technology 회사 소개 영상 커버", // 韩语封面 alt 文案
+    ru: "Обложка видео о компании Foreach Technology", // 俄语封面 alt 文案
   }, // posterAlt 结束
 }, // video 数据结束
 
@@ -127,15 +127,15 @@ export const homeCompanyStrengthData = {
       "zh-CN":
         "恒永达科技（股票代码：874030）成立于 2012 年，是国家级专精特新“小巨人”企业、深圳市瞪羚企业、国家高新技术企业及广东省工程技术研究中心认定单位。公司始终专注于微流体系统核心零部件与液路解决方案，深耕泵、阀、采样针、连接件、橡塑管、驱动器、传感器等关键零部件的研发与制造，产品广泛应用于生命科学、合成生物、高端检测、IVD 和实验室自动化等领域，形成高精度、全场景的微流体解决方案体系，并持续推动高端仪器设备核心流体零部件的国产化替代。",
       en:
-        "Founded in 2012, FOREACH Technology focuses on core microfluidic components and fluidic solutions. As a specialized and innovation-driven enterprise, the company develops and manufactures pumps, valves, sampling probes, fittings, tubing, drivers, sensors, and other key fluid control components for life sciences, synthetic biology, high-end testing, IVD, and laboratory automation applications.",
+        "Founded in 2012, Foreach Technology focuses on core microfluidic components and fluidic solutions. As a specialized and innovation-driven enterprise, the company develops and manufactures pumps, valves, sampling probes, fittings, tubing, drivers, sensors, and other key fluid control components for life sciences, synthetic biology, high-end testing, IVD, and laboratory automation applications.",
       es:
-        "Fundada en 2012, FOREACH Technology se centra en componentes microfluídicos clave y soluciones fluídicas. La empresa desarrolla y fabrica bombas, válvulas, agujas de muestreo, conectores, tubos, controladores, sensores y otros componentes esenciales para ciencias de la vida, biología sintética, pruebas avanzadas, IVD y automatización de laboratorios.",
+        "Fundada en 2012, Foreach Technology se centra en componentes microfluídicos clave y soluciones fluídicas. La empresa desarrolla y fabrica bombas, válvulas, agujas de muestreo, conectores, tubos, controladores, sensores y otros componentes esenciales para ciencias de la vida, biología sintética, pruebas avanzadas, IVD y automatización de laboratorios.",
       fr:
-        "Fondée en 2012, FOREACH Technology se concentre sur les composants microfluidiques clés et les solutions fluidiques. L’entreprise développe et fabrique des pompes, vannes, aiguilles de prélèvement, raccords, tubes, contrôleurs, capteurs et autres composants essentiels pour les sciences de la vie, la biologie synthétique, les analyses avancées, l’IVD et l’automatisation de laboratoire.",
+        "Fondée en 2012, Foreach Technology se concentre sur les composants microfluidiques clés et les solutions fluidiques. L’entreprise développe et fabrique des pompes, vannes, aiguilles de prélèvement, raccords, tubes, contrôleurs, capteurs et autres composants essentiels pour les sciences de la vie, la biologie synthétique, les analyses avancées, l’IVD et l’automatisation de laboratoire.",
       ko:
-        "2012년에 설립된 FOREACH Technology는 마이크로플루이딕 핵심 부품과 유체 솔루션에 집중합니다. 펌프, 밸브, 샘플링 프로브, 피팅, 튜빙, 드라이버, 센서 등 핵심 유체 제어 부품을 생명과학, 합성생물학, 고급 검사, IVD 및 실험실 자동화 분야에 제공합니다.",
+        "2012년에 설립된 Foreach Technology는 마이크로플루이딕 핵심 부품과 유체 솔루션에 집중합니다. 펌프, 밸브, 샘플링 프로브, 피팅, 튜빙, 드라이버, 센서 등 핵심 유체 제어 부품을 생명과학, 합성생물학, 고급 검사, IVD 및 실험실 자동화 분야에 제공합니다.",
       ru:
-        "Компания FOREACH Technology, основанная в 2012 году, специализируется на ключевых компонентах микрофлюидных систем и жидкостных решениях. Компания разрабатывает и производит насосы, клапаны, пробоотборные иглы, соединители, трубки, драйверы, датчики и другие ключевые компоненты для наук о жизни, синтетической биологии, высокоточных испытаний, IVD и лабораторной автоматизации.",
+        "Компания Foreach Technology, основанная в 2012 году, специализируется на ключевых компонентах микрофлюидных систем и жидкостных решениях. Компания разрабатывает и производит насосы, клапаны, пробоотборные иглы, соединители, трубки, драйверы, датчики и другие ключевые компоненты для наук о жизни, синтетической биологии, высокоточных испытаний, IVD и лабораторной автоматизации.",
     },
     
 contactButton: {
@@ -367,15 +367,15 @@ contactButton: {
       "zh-CN":
         "围绕研发、制造、质量与定制服务能力，为 IVD、生命科学、高端分析仪器和实验室自动化客户提供长期可靠的流体控制支持。",
       en:
-        "Built on R&D, manufacturing, quality control, and customization capabilities, FOREACH provides long-term fluid control support for IVD, life science, analytical instrument, and laboratory automation customers.",
+        "Built on R&D, manufacturing, quality control, and customization capabilities, Foreach provides long-term fluid control support for IVD, life science, analytical instrument, and laboratory automation customers.",
       es:
-        "Con capacidades en I+D, fabricación, control de calidad y personalización, FOREACH ofrece soporte fiable de control de fluidos para clientes de IVD, ciencias de la vida, instrumentos analíticos y automatización de laboratorio.",
+        "Con capacidades en I+D, fabricación, control de calidad y personalización, Foreach ofrece soporte fiable de control de fluidos para clientes de IVD, ciencias de la vida, instrumentos analíticos y automatización de laboratorio.",
       fr:
-        "Grâce à ses capacités en R&D, fabrication, qualité et personnalisation, FOREACH accompagne durablement les clients des secteurs IVD, sciences de la vie, instruments analytiques et automatisation de laboratoire.",
+        "Grâce à ses capacités en R&D, fabrication, qualité et personnalisation, Foreach accompagne durablement les clients des secteurs IVD, sciences de la vie, instruments analytiques et automatisation de laboratoire.",
       ko:
-        "연구개발, 제조, 품질 관리 및 맞춤형 서비스 역량을 기반으로 FOREACH는 IVD, 생명과학, 고급 분석기기 및 실험실 자동화 고객에게 장기적이고 안정적인 유체 제어 지원을 제공합니다.",
+        "연구개발, 제조, 품질 관리 및 맞춤형 서비스 역량을 기반으로 Foreach는 IVD, 생명과학, 고급 분석기기 및 실험실 자동화 고객에게 장기적이고 안정적인 유체 제어 지원을 제공합니다.",
       ru:
-        "Опираясь на возможности НИОКР, производства, контроля качества и индивидуальной разработки, FOREACH обеспечивает долгосрочную поддержку в области управления жидкостными системами для IVD, наук о жизни, аналитических приборов и лабораторной автоматизации.",
+        "Опираясь на возможности НИОКР, производства, контроля качества и индивидуальной разработки, Foreach обеспечивает долгосрочную поддержку в области управления жидкостными системами для IVD, наук о жизни, аналитических приборов и лабораторной автоматизации.",
     },
   },
 

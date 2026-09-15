@@ -87,6 +87,8 @@ export type EnglishApplicationPageData = {
     description: string;
     buttonLabel: string;
     href: string;
+    resourceLabel?: string;
+    resourceHref?: string;
   };
   groups: EnglishApplicationGroup[];
   products: Record<string, EnglishApplicationProduct>;
@@ -192,6 +194,10 @@ const PAGE_CONFIG: Record<EnglishApplicationKind, PageConfig> = {
         "Share the instrument type, medium, flow range, pressure and connection requirements with our engineering team.",
       buttonLabel: "Submit an Application Request",
       href: "/en/contact",
+      resourceLabel:
+        "How to distinguish and select IVD cleaning, wash and rinse pumps",
+      resourceHref:
+        "/en/resources/technical-articles/ivd-cleaning-wash-rinse-pump-diaphragm-pump/",
     },
   },
   "lab-automation": {
@@ -300,7 +306,7 @@ const PRODUCT_COPY: Record<
     solves: "Helps manage low-volume transfer, aspiration and dispense steps.",
   },
   pistonPump: {
-    name: "Plunger Pump",
+    name: "Piston Pump",
     ability: "Repeatable metering for high-frequency liquid dispensing.",
     advantage: "Provides consistent volumetric delivery in automated workflows.",
     solves: "Helps maintain repeatable dosing across repeated operating cycles.",

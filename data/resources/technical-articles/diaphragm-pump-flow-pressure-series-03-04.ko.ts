@@ -11,12 +11,12 @@ export const tubeInnerDiameterAffectsDiaphragmPumpFlowKoCopy = {
     title:
       "같은 소형 다이어프램 펌프에서 튜브 크기를 바꾸면 실제 유량이 크게 달라지는 이유는 무엇일까요?",
     seoTitle:
-      "튜브 교체 후 다이어프램 펌프 유량: 압력 측정으로 유로 제한 찾기 | FOREACH",
+      "튜브 교체 후 다이어프램 펌프 유량: 압력 측정으로 유로 제한 찾기 | Foreach Technology",
     seoDescription:
       "소형 다이어프램 펌프의 튜브를 교체한 뒤 유량이 감소했을 때 원인이 튜브 내경, 길이, 좁은 피팅 또는 펌프인지 구분하는 방법을 설명합니다. 입구 압력, 출구 압력 및 유량을 동시에 측정하는 진단 절차를 제공합니다.",
     coverImage: `${TUBE_DIAMETER_ARTICLE_ASSET_BASE}/article-cover.webp`,
     coverAlt:
-      "FOREACH 공식 Douyin 채널의 소형 다이어프램 펌프 튜브 유로와 유량 시험 장면",
+      "Foreach 공식 Douyin 채널의 소형 다이어프램 펌프 튜브 유로와 유량 시험 장면",
   },
   deck:
     "펌프가 같아도 튜브 내경, 길이, 굽힘 및 피팅의 최소 유로 때문에 장착 유량이 달라질 수 있습니다. 튜브 교체 후 유량이 떨어졌다면 먼저 펌프를 의심하거나 모든 튜브를 무작정 키우지 마십시오. 입구 압력, 출구 압력 및 누적 유량을 함께 측정하여 추가 저항이 실제로 어디에서 생겼는지 찾으십시오.",
@@ -322,12 +322,12 @@ export const suctionVsDischargeResistanceDiaphragmPumpKoCopy = {
     title:
       "소형 다이어프램 펌프에는 흡입관 저항과 토출관 저항 중 어느 쪽이 더 큰 영향을 줄까요?",
     seoTitle:
-      "다이어프램 펌프 흡입 저항 vs 출구 배압: 어느 쪽이 더 중요할까요? | FOREACH",
+      "다이어프램 펌프 흡입 저항 vs 출구 배압: 어느 쪽이 더 중요할까요? | Foreach Technology",
     seoDescription:
       "흡입 측과 토출 측 저항은 모두 소형 다이어프램 펌프의 차압 부담을 늘리지만 고장 증상은 다릅니다. 입구 절대압, 출구 배압 및 유량 측정으로 프라이밍 실패, 캐비테이션과 압력만 있고 유량이 없는 상태를 구분하는 방법을 설명합니다.",
     coverImage: `${SUCTION_DISCHARGE_ARTICLE_ASSET_BASE}/article-cover.webp`,
     coverAlt:
-      "FOREACH 공식 Douyin 채널의 소형 다이어프램 펌프 흡입 및 토출 시험 장면",
+      "Foreach 공식 Douyin 채널의 소형 다이어프램 펌프 흡입 및 토출 시험 장면",
   },
   deck:
     "흡입 또는 토출 어느 쪽의 압력 손실도 소형 다이어프램 펌프가 부담하는 차압을 늘리며, 한쪽이 항상 더 중요하다는 보편적 규칙은 없습니다. 흡입 측은 최초 프라이밍, 챔버 충전, 공기 누설 민감도, 가스 방출 및 캐비테이션에 더 쉽게 영향을 줍니다. 토출 측은 주로 배압 상승, 유량 감소 및 막힘 상태로 나타납니다. 입구 절대압, 출구 압력과 유량을 같은 시간축에서 관찰하여 진단하십시오.",

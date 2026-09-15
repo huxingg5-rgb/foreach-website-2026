@@ -90,9 +90,9 @@ export async function generateMetadata({
   }
 
   return {
-    title: "Distributor Partnerships | FOREACH",
+    title: "Distributor Partnerships | Foreach Technology",
     description:
-      "Learn about distributor partnership opportunities with FOREACH for microfluidic components and fluid handling solutions.",
+      "Learn about distributor partnership opportunities with Foreach for microfluidic components and fluid handling solutions.",
   };
 }
 

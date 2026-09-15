@@ -38,7 +38,7 @@ const PAGE_LOCALE = "zh";
 ========================================================= */
 export const metadata: Metadata = {
   title: `${SERIES_CONFIG.sourceLabel}｜资源中心｜恒永达`,
-  description: "输入兼容型号，查询对应的 FOREACH 恒永达接头产品。",
+  description: "输入兼容型号，查询对应的 Foreach 恒永达接头产品。",
 };
 
 /* =========================================================

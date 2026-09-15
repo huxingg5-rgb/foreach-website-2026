@@ -44,7 +44,7 @@
 .banner {
   position: relative;
   height: 450px;
-  padding-top: 82px;
+  padding-top: var(--site-header-height);
   background: #dfe7ef;
 }
 
@@ -237,7 +237,6 @@
 
   .banner {
     height: 360px;
-    padding-top: 70px;
   }
 
   .bannerTitle {

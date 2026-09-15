@@ -6,11 +6,11 @@ const ARTICLE_ASSET_BASE =
 export const microDiaphragmPumpContinuousDutyLifeZhCopy = {
   metadata: {
     title: "微型隔膜泵可以连续工作多久？从3000小时、10000小时看有刷与无刷寿命",
-    seoTitle: "微型隔膜泵可以连续工作多久？3000小时与10000小时寿命解析 | FOREACH",
+    seoTitle: "微型隔膜泵可以连续工作多久？3000小时与10000小时寿命解析 | Foreach Technology",
     seoDescription:
       "说明微型隔膜泵连续运行、累计寿命、占空比和日历寿命的区别，并从任务剖面、有刷与无刷电机、失效判据、耐久试验和B10可靠性解读3000 h与10000 h。",
     coverImage: `${ARTICLE_ASSET_BASE}/article-cover.webp`,
-    coverAlt: "FOREACH微型隔膜泵连续运行测试现场",
+    coverAlt: "Foreach微型隔膜泵连续运行测试现场",
   },
   deck:
     "在微型隔膜泵规格书中，经常会看到使用寿命3000 h或使用寿命10000 h。对设备选型来说，这两个数字不能只理解为“能转多久”，更不能直接换算成整机一定可以使用多少年。",
@@ -27,11 +27,11 @@ export const microDiaphragmPumpContinuousDutyLifeZhCopy = {
     {
       type: "figure",
       src: `${ARTICLE_ASSET_BASE}/article-cover.webp`,
-      alt: "FOREACH微型隔膜泵连续运行测试现场",
+      alt: "Foreach微型隔膜泵连续运行测试现场",
       width: 1028,
       height: 674,
       caption:
-        "FOREACH微型隔膜泵连续运行测试现场。寿命数据需要结合供电、负载、启停、温度和失效判据理解。",
+        "Foreach微型隔膜泵连续运行测试现场。寿命数据需要结合供电、负载、启停、温度和失效判据理解。",
     },
   ],
   sections: [
@@ -134,7 +134,7 @@ export const microDiaphragmPumpContinuousDutyLifeZhCopy = {
         {
           type: "paragraph",
           text:
-            "以FOREACH DPL30和DPL60系列微型液体隔膜泵为例，当前产品配置提供有刷和无刷版本，两类版本对应不同的参考寿命等级。",
+            "以Foreach DPL30和DPL60系列微型液体隔膜泵为例，当前产品配置提供有刷和无刷版本，两类版本对应不同的参考寿命等级。",
         },
         {
           type: "table",
@@ -433,7 +433,7 @@ export const microDiaphragmPumpContinuousDutyLifeZhCopy = {
           width: 1200,
           height: 675,
           caption:
-            "B10对应累计失效10%、可靠度R(t)=0.9的寿命点；示意图不代表任何FOREACH型号的实测分布。",
+            "B10对应累计失效10%、可靠度R(t)=0.9的寿命点；示意图不代表任何Foreach型号的实测分布。",
         },
         {
           type: "paragraph",

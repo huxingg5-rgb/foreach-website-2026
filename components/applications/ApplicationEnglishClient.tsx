@@ -311,6 +311,11 @@ export default function ApplicationEnglishClient({
           <div>
             <h2>{data.cta.title}</h2>
             <p>{data.cta.description}</p>
+            {data.cta.resourceHref && data.cta.resourceLabel ? (
+              <p className="ivd-cta-resource">
+                <Link href={data.cta.resourceHref}>{data.cta.resourceLabel}</Link>
+              </p>
+            ) : null}
           </div>
           <Link className="ivd-btn" href={data.cta.href}>
             {data.cta.buttonLabel}

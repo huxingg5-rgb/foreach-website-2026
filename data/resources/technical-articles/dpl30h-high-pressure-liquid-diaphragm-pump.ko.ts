@@ -3,9 +3,9 @@ import type { Dpl30hArticleCopy } from "./dpl30h-high-pressure-liquid-diaphragm-
 export const dpl30hArticleKoCopy: Dpl30hArticleCopy = {
   metadata: {
     title: "고압 다이어프램 펌프는 어떻게 선택할까? DPL30H 300 mL/min 및 600 kPa 가이드",
-    seoTitle: "DPL30H 고압 다이어프램 펌프 선정 가이드 | FOREACH",
-    seoDescription: "목표 배압에서의 유량, 정격 압력 600 kPa, 6×4 mm 경질 튜브, 모터, 접액 재질, 모델 코드 및 선정 방법을 기준으로 FOREACH DPL30H를 선정합니다.",
-    coverAlt: "6×4 mm 경질 튜브 피팅이 적용된 FOREACH DPL30H 브러시 및 브러시리스 고압 액체 다이어프램 펌프",
+    seoTitle: "DPL30H 고압 다이어프램 펌프 선정 가이드 | Foreach Technology",
+    seoDescription: "목표 배압에서의 유량, 정격 압력 600 kPa, 6×4 mm 경질 튜브, 모터, 접액 재질, 모델 코드 및 선정 방법을 기준으로 Foreach DPL30H를 선정합니다.",
+    coverAlt: "6×4 mm 경질 튜브 피팅이 적용된 Foreach DPL30H 브러시 및 브러시리스 고압 액체 다이어프램 펌프",
   },
   section1: {
     title: "1. 고배압 유로에는 왜 다른 펌프 선정이 필요한가",

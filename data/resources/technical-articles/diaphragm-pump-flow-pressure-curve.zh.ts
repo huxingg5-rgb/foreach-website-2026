@@ -6,11 +6,11 @@ const ARTICLE_ASSET_BASE =
 export const diaphragmPumpFlowPressureCurveZhCopy = {
   metadata: {
     title: "隔膜泵流量—压力曲线怎么看？为什么装机后的流量和规格书不一样？",
-    seoTitle: "隔膜泵流量—压力曲线怎么看？装机流量与工作点分析 | FOREACH",
+    seoTitle: "隔膜泵流量—压力曲线怎么看？装机流量与工作点分析 | Foreach Technology",
     seoDescription:
       "从泵曲线、系统曲线、入口负压、出口背压、管径、黏度和测试条件，说明微型隔膜泵装机流量为什么与规格书不同，并给出工作点读取与验证方法。",
     coverImage: `${ARTICLE_ASSET_BASE}/article-cover.webp`,
-    coverAlt: "FOREACH微型隔膜泵流量—压力测试现场",
+    coverAlt: "Foreach微型隔膜泵流量—压力测试现场",
   },
   deck:
     "选微型隔膜液泵时，规格书中的300 mL/min、600 mL/min很容易被当成设备装机后的固定流量。但工程上真正需要确认的并不是一个孤立的流量端点，而是：在设备真实入口负压、出口背压、介质、管路和供电条件下，泵最终会运行在哪一个工作点。",
@@ -27,11 +27,11 @@ export const diaphragmPumpFlowPressureCurveZhCopy = {
     {
       type: "figure",
       src: `${ARTICLE_ASSET_BASE}/article-cover.webp`,
-      alt: "FOREACH微型隔膜泵流量—压力测试现场",
+      alt: "Foreach微型隔膜泵流量—压力测试现场",
       width: 1304,
       height: 837,
       caption:
-        "FOREACH微型隔膜泵流量—压力测试现场。规格书中的空载流量仍需结合压力曲线与整机液路确认实际工作点。",
+        "Foreach微型隔膜泵流量—压力测试现场。规格书中的空载流量仍需结合压力曲线与整机液路确认实际工作点。",
     },
   ],
   sections: [
@@ -273,7 +273,7 @@ export const diaphragmPumpFlowPressureCurveZhCopy = {
         {
           type: "paragraph",
           text:
-            "以下示例只用于说明计算方法，不代表任何FOREACH型号的实测性能。假设介质为约20℃水，动力黏度取1.0 mPa·s，密度取998 kg/m³；直管长度为1 m，目标流量为100 mL/min，不计弯头、阀、接头、过滤器和高度差。",
+            "以下示例只用于说明计算方法，不代表任何Foreach型号的实测性能。假设介质为约20℃水，动力黏度取1.0 mPa·s，密度取998 kg/m³；直管长度为1 m，目标流量为100 mL/min，不计弯头、阀、接头、过滤器和高度差。",
         },
         {
           type: "table",

@@ -11,7 +11,7 @@ import { getAnalyticalInstrumentsApplicationPageData } from "@/services/applicat
 import "./analytical-instruments-application.css";
 
 export const metadata: Metadata = {
-  title: "分析仪器应用领域｜FOREACH 恒永达",
+  title: "分析仪器应用领域｜Foreach Technology 恒永达",
   description:
     "恒永达面向分析检测设备提供泵、阀、接头、管材、传感器及液路系统集成支持。",
 };

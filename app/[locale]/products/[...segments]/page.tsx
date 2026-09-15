@@ -1,3 +1,11 @@
+import { getControlModuleDetailBySlug } from "@/data/products/control-modules/control-module-detail.generated";
+import { getControlModuleProductDetailData } from "@/services/products/adapters/getControlModuleProductDetailData";
+import { getQuickConnectSeriesDetailData } from "@/data/products/detail/getQuickConnectSeriesDetailData";
+import syringePumpDetails from "@/data/products/generated/pumps/syringe-pumps/detail/index.json";
+import { getSyringePumpProductDetailData } from "@/services/products/adapters/getSyringePumpProductDetailData";
+import { getPistonPumpRedirect } from "@/lib/seo/piston-pump-migration";
+import { getPistonPumpMetadata } from "@/services/products/getPistonPumpMetadata";
+import { getCompactPumpContent } from "@/data/products/detail/applications/compact-pump-content";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
@@ -44,7 +52,7 @@ import DiaphragmPumpDetailPage, {
   getDiaphragmPumpMetadata,
 } from "@/components/products/diaphragm-pumps/DiaphragmPumpDetailRoute";
 import PipettingPumpDetailPage from "@/app/products/pumps/pipetting-pumps/[slug]/page";
-import PlungerPumpDetailPage from "@/app/products/pumps/plunger-pumps/[slug]/page";
+import PlungerPumpDetailPage from "@/app/products/pumps/piston-pump/[slug]/page";
 import SyringePumpDetailPage from "@/app/products/pumps/syringe-pumps/[slug]/page";
 import ValvelessPumpDetailPage from "@/app/products/pumps/valveless-pumps/[slug]/page";
 import ProbeDetailPage from "@/app/products/probes/[slug]/page";
@@ -140,7 +148,7 @@ const ROUTE_TITLES: Record<string, string> = {
   "hard-tube-fittings": "Hard Tube Fittings",
   "luer-fittings": "Luer Fittings",
   "pipetting-pumps": "Pipetting Pumps",
-  "plunger-pumps": "Plunger Pumps",
+  "piston-pump": "Piston Pump",
   "quick-connect-fittings": "Quick-Connect Fittings",
   "syringe-pumps": "Syringe Pumps",
   "thread-to-barbed-fittings": "Thread-to-Barb Fittings",
@@ -152,7 +160,8 @@ export const dynamicParams = false;
 const INTERNATIONAL_PRODUCT_LOCALES: LocaleCode[] = ["en", "es", "fr", "ko", "ru"];
 
 function getProductRoutesForLocale(_locale: LocaleCode | string) {
-  return migrateDiaphragmPumpRouteSegments(allEnglishProductDetailRoutes);
+  return migrateDiaphragmPumpRouteSegments(allEnglishProductDetailRoutes)
+    .filter(segments => !getPistonPumpRedirect(`/products/${segments.join("/")}/`));
 }
 
 export function generateStaticParams() {
@@ -238,11 +247,19 @@ async function getDiaphragmPumpRouteMetadata(
     ? copy.liquid
     : childSlug === "gas-liquid-diaphragm-pumps"
       ? copy.gasLiquid
-      : childSlug === "gas-diaphragm-pumps"
-        ? copy.gas
-        : copy.parent;
-  const title = childSlug ? `${heading} | FOREACH` : copy.seoTitle;
-  const description = copy.seoDescription;
+      : copy.parent;
+  const isLiquidCategory = childSlug === "liquid-diaphragm-pumps";
+  const isGasLiquidCategory = childSlug === "gas-liquid-diaphragm-pumps";
+  const title = isLiquidCategory
+    ? copy.liquidSeoTitle
+    : isGasLiquidCategory
+      ? copy.gasLiquidSeoTitle
+      : copy.seoTitle;
+  const description = isLiquidCategory
+    ? copy.liquidSeoDescription || copy.seoDescription
+    : isGasLiquidCategory
+      ? copy.gasLiquidSeoDescription || copy.seoDescription
+      : copy.seoDescription;
   const canonicalPath = getDiaphragmPumpPath(
     normalizedLocale,
     childSlug || undefined,
@@ -251,7 +268,7 @@ async function getDiaphragmPumpRouteMetadata(
   return {
     title,
     description,
-    keywords: [heading, "FOREACH", "miniature diaphragm pump"],
+    keywords: [heading, "Foreach Technology", "miniature diaphragm pump"],
     alternates: {
       canonical: canonicalPath,
       languages: getDiaphragmPumpLanguageAlternates(childSlug || undefined),
@@ -261,7 +278,7 @@ async function getDiaphragmPumpRouteMetadata(
       type: "website",
       locale: normalizedLocale,
       url: canonicalPath,
-      siteName: "FOREACH",
+      siteName: "Foreach Technology",
       title,
       description,
     },
@@ -278,6 +295,14 @@ export async function generateMetadata({
 }: ProductLocaleRoutePageProps): Promise<Metadata> {
   const { locale, segments } = await params;
 
+  if (
+    segments[0] === "pumps" &&
+    segments[1] === "miniature-diaphragm-pumps" &&
+    segments[2] === "gas-diaphragm-pumps"
+  ) {
+    notFound();
+  }
+
   if (!isSupportedLocale(locale) || locale === "zh-CN" || !routeExists(locale, segments)) {
     return {};
   }
@@ -288,17 +313,23 @@ export async function generateMetadata({
   );
 
   if (diaphragmMetadata) return diaphragmMetadata;
+  if (segments[0] === "pumps" && segments[1] === "piston-pump" && segments.length <= 3) {
+    const metadata = getPistonPumpMetadata(segments[2] || "", locale);
+    if (metadata) return metadata;
+  }
 
-  const title = getRouteTitle(segments);
+  const compactContent = locale === "en" && segments.length === 3 && segments[0] === "pumps" && segments[1] === "piston-pump"
+    ? getCompactPumpContent(segments[2], "en") : undefined;
+  const title = compactContent ? compactContent.seoTitle.replace(/ \| Foreach(?: Technology)?$/i, "") : getRouteTitle(segments);
   const canonicalPath = `/${locale}/products/${segments.join("/")}/`;
   const isDetailRoute = segments.length >= 2;
-  const description = isDetailRoute
-    ? `Explore ${title} specifications, materials, interfaces, model configurations, and fluidic applications from FOREACH.`
-    : `Explore FOREACH ${title} for precision fluid handling in IVD, life science, analytical instrumentation, and laboratory automation.`;
+  const description = compactContent?.metaDescription || (isDetailRoute
+    ? `Explore ${title} specifications, materials, interfaces, model configurations, and fluidic applications from Foreach.`
+    : `Explore Foreach ${title} for precision fluid handling in IVD, life science, analytical instrumentation, and laboratory automation.`);
   const keywords = Array.from(
     new Set([
       title,
-      "FOREACH",
+      "Foreach Technology",
       "precision fluid handling",
       "microfluidic components",
       "fluidic systems",
@@ -306,7 +337,27 @@ export async function generateMetadata({
     ])
   );
   const productPath = `/products/${segments.join("/")}`;
-  const socialImagePath = siteSearchIndex.find(
+  // These templates share the body's adapter result instead of a search-index image.
+  let productImageData: { mainImage?: string } | null = null;
+  if (segments.length === 2 && segments[0] === "control") {
+    const detail = getControlModuleDetailBySlug(segments[1]);
+    if (detail) productImageData = getControlModuleProductDetailData(detail);
+  } else if (
+    segments.length === 3 &&
+    segments[0] === "fittings" &&
+    segments[1] === "quick-connect-fittings" &&
+    ["q20", "q40", "q60"].includes(segments[2])
+  ) {
+    productImageData = getQuickConnectSeriesDetailData(segments[2]);
+  } else if (
+    segments.length === 3 &&
+    segments[0] === "pumps" &&
+    segments[1] === "syringe-pumps"
+  ) {
+    const detail = syringePumpDetails.find((item) => item.slug === segments[2]);
+    if (detail) productImageData = getSyringePumpProductDetailData(detail);
+  }
+  const socialImagePath = productImageData ? productImageData.mainImage : siteSearchIndex.find(
     (item) =>
       item.module === "products" &&
       item.href.replace(/\/$/, "") === productPath,
@@ -316,7 +367,7 @@ export async function generateMetadata({
     : undefined;
 
   return {
-    title: `${title} | FOREACH`,
+    title: compactContent ? { absolute: compactContent.seoTitle } : `${title} | Foreach Technology`,
     description,
     keywords,
     alternates: {
@@ -337,8 +388,8 @@ export async function generateMetadata({
       type: "website",
       locale: "en_US",
       url: canonicalPath,
-      siteName: "FOREACH",
-      title: `${title} | FOREACH`,
+      siteName: "Foreach Technology",
+      title: `${title} | Foreach Technology`,
       description,
       ...(socialImage
         ? { images: [{ url: socialImage, alt: title }] }
@@ -346,7 +397,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary",
-      title: `${title} | FOREACH`,
+      title: `${title} | Foreach Technology`,
       description,
       ...(socialImage ? { images: [socialImage] } : {}),
     },
@@ -440,8 +491,11 @@ export default async function ProductLocaleRoutePage({
   if (category === "pumps") {
     const detailParams = Promise.resolve({ slug: seriesSlug });
 
-    if (slug === "plunger-pumps") {
-      return PlungerPumpDetailPage({ params: detailParams });
+    if (slug === "piston-pump") {
+      return PlungerPumpDetailPage({
+        params: detailParams,
+        locale,
+      });
     }
 
     if (slug === "miniature-diaphragm-pumps") {

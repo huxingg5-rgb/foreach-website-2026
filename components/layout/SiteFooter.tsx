@@ -136,7 +136,10 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
                   <ul className="site-footer__list">
                     {column.links.map((link) => (
                       <li key={link.key}>
-                        <Link href={getSiteFooterHref(link.href, activeLocale)}>
+                        <Link
+                          href={getSiteFooterHref(link.href, activeLocale)}
+                          prefetch={false}
+                        >
                           {getSiteFooterText(link.label, activeLocale)}
                         </Link>
                       </li>
@@ -190,7 +193,7 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
               >
                 <div
                   className={styles.socialRow}
-                  aria-label="FOREACH social media"
+                  aria-label="Foreach social media"
                 >
                   {englishSocialLinks.map((item) => (
                     <a
@@ -199,13 +202,13 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
                       key={item.key}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label={"Visit FOREACH on " + item.label}
+                      aria-label={"Visit Foreach on " + item.label}
                       title={item.label}
                     >
                       <img
                         className={styles.socialIcon}
                         src={item.icon}
-                        alt=""
+                        alt={item.label}
                         loading="lazy"
                         aria-hidden="true"
                       />
@@ -275,6 +278,7 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
               <Link
                 className="site-footer__legal-link"
                 href={privacyPolicyHref}
+                prefetch={false}
               >
                 {legalCopy.privacyPolicy}
               </Link>

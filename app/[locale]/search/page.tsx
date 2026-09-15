@@ -22,9 +22,9 @@ export async function generateMetadata({
   }
 
   return {
-    title: "Search | FOREACH",
+    title: "Search | Foreach Technology",
     description:
-      "Search FOREACH products, applications, technical resources, and company information.",
+      "Search Foreach products, applications, technical resources, and company information.",
     robots: {
       index: false,
       follow: true,

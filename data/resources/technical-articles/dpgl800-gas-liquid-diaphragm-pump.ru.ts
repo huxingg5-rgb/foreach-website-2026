@@ -3,9 +3,9 @@ import type { Dpgl800ArticleCopy } from "./dpgl800-gas-liquid-diaphragm-pump.typ
 export const dpgl800ArticleRuCopy = {
   metadata: {
     title: "Как выбрать мембранный насос для газожидкостной смеси: расход, вакуум и время создания разрежения DPGL800",
-    seoTitle: "Как выбрать мембранный насос для газожидкостной смеси | DPGL800 | FOREACH",
+    seoTitle: "Как выбрать мембранный насос для газожидкостной смеси | DPGL800 | Foreach Technology",
     seoDescription: "Подбор DPGL800 для газожидкостной смеси: 6 L/min газа без нагрузки, вакуум ＜-90 kPa, давление 30 kPa и время откачки испытательной камеры 5 L.",
-    coverAlt: "Бесщёточный мембранный насос FOREACH DPGL800 для газожидкостной смеси, 6 L/min и вакуум ＜-90 kPa",
+    coverAlt: "Бесщёточный мембранный насос Foreach DPGL800 для газожидкостной смеси, 6 L/min и вакуум ＜-90 kPa",
   },
   section1: {
     title: "1. Почему DPGL800 нельзя подбирать как обычный жидкостный насос",

@@ -62,13 +62,18 @@
     box-shadow 0.18s ease;
 }
 
-.floatingActions button:first-child {
+/* 俄文按钮字形较宽，右下角两个短标签使用常规字重。 */
+:global(html[lang="ru"]) .floatingActions button {
+  font-weight: 400;
+}
+
+.floatingActions .backToTopButton {
   background: rgba(255, 255, 255, 0.94);
   color: rgba(23, 51, 104, 0.82);
   box-shadow: 0 8px 22px rgba(23, 51, 104, 0.08);
 }
 
-.floatingActions button:last-child {
+.floatingActions .cartEntryButton {
   border-color: #173368;
   background: #173368;
   color: #ffffff;
@@ -82,7 +87,7 @@
   box-shadow: 0 16px 34px rgba(23, 51, 104, 0.18);
 }
 
-.floatingActions button:last-child:hover {
+.floatingActions .cartEntryButton:hover {
   border-color: #09e9b4;
   background: #09e9b4;
   color: #173368;
@@ -93,7 +98,7 @@
  * Top 默认保持白底，仅在手指按下时显示深蓝点击反馈。
  */
 @media (hover: none), (pointer: coarse) {
-  .floatingActions button:first-child:hover {
+  .floatingActions .backToTopButton:hover {
     transform: none;
     border-color: rgba(23, 51, 104, 0.22);
     background: rgba(255, 255, 255, 0.94);
@@ -101,7 +106,7 @@
     box-shadow: 0 8px 22px rgba(23, 51, 104, 0.08);
   }
 
-  .floatingActions button:first-child:active {
+  .floatingActions .backToTopButton:active {
     transform: translateY(1px) scale(0.96);
     border-color: #173368;
     background: #173368;
@@ -131,7 +136,7 @@
   box-shadow: 0 6px 14px rgba(23, 51, 104, 0.16);
 }
 
-.floatingActions button:last-child:hover span {
+.floatingActions .cartEntryButton:hover span {
   background: #173368;
   color: #09e9b4;
 }
@@ -140,7 +145,7 @@
    加入清单后的轻动效
 ========================================================= */
 
-.floatingActions.bump button:last-child {
+.floatingActions.bump .cartEntryButton {
   animation: selectionCartBump 0.42s ease;
 }
 
@@ -699,7 +704,7 @@
     padding: 6mm 14mm 32mm;
   }
 
-  .printTitleBlock h1 {
+  .printTitleBlock h2 {
     margin: 0;
     color: #173368;
     font-size: 24px;
@@ -796,10 +801,19 @@
 
 @media (max-width: 720px) {
   .floatingActions {
-    right: 14px;
-    bottom: 14px;
-    gap: 8px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 8px max(14px, env(safe-area-inset-right)) calc(8px + env(safe-area-inset-bottom)) max(14px, env(safe-area-inset-left));
+    border-top: 1px solid rgba(23, 51, 104, 0.16);
+    background: #fff;
   }
+
+  /* Reserve end space so the fixed mobile action bar never traps the last content. */
+  :global(body):has(.floatingActions) { padding-bottom: calc(68px + env(safe-area-inset-bottom)); }
 
   .floatingActions button {
     width: 52px;
@@ -866,9 +880,9 @@
  * 真正的图纸选中状态仍由 .drawingButton.active 保持。
  */
 @media (hover: none), (pointer: coarse) {
-  .floatingActions button:first-child:hover:not(:active),
-  .floatingActions button:first-child:focus:not(:active),
-  .floatingActions button:first-child:focus-visible:not(:active) {
+  .floatingActions .backToTopButton:hover:not(:active),
+  .floatingActions .backToTopButton:focus:not(:active),
+  .floatingActions .backToTopButton:focus-visible:not(:active) {
     transform: none;
     border-color: rgba(23, 51, 104, 0.22);
     background: rgba(255, 255, 255, 0.94);
@@ -877,9 +891,9 @@
     outline: none;
   }
 
-  .floatingActions button:last-child:hover:not(:active),
-  .floatingActions button:last-child:focus:not(:active),
-  .floatingActions button:last-child:focus-visible:not(:active) {
+  .floatingActions .cartEntryButton:hover:not(:active),
+  .floatingActions .cartEntryButton:focus:not(:active),
+  .floatingActions .cartEntryButton:focus-visible:not(:active) {
     transform: none;
     border-color: #173368;
     background: #173368;
@@ -888,9 +902,9 @@
     outline: none;
   }
 
-  .floatingActions button:last-child:hover:not(:active) span,
-  .floatingActions button:last-child:focus:not(:active) span,
-  .floatingActions button:last-child:focus-visible:not(:active) span {
+  .floatingActions .cartEntryButton:hover:not(:active) span,
+  .floatingActions .cartEntryButton:focus:not(:active) span,
+  .floatingActions .cartEntryButton:focus-visible:not(:active) span {
     background: #09e9b4;
     color: #173368;
   }

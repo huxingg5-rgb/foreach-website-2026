@@ -37,6 +37,17 @@ type SiteBreadcrumbProps = {
   className?: string;
 };
 
+function isResourcesRootHref(href?: string) {
+  if (!href) {
+    return false;
+  }
+
+  const [pathname = ""] = href.split(/[?#]/);
+  const normalizedPath = pathname.replace(/\/+$/, "") || "/";
+
+  return /^\/(?:(?:en|es|fr|ko|ru)\/)?resources$/.test(normalizedPath);
+}
+
 export default function SiteBreadcrumb({
   items,
   ariaLabel = "Breadcrumb",
@@ -58,10 +69,12 @@ export default function SiteBreadcrumb({
 
           return (
             <span className={styles.item} key={`${item.label}-${index}`}>
-              {item.href && !isLast ? (
+              {item.href && !isLast && !isResourcesRootHref(item.href) ? (
                 <Link href={item.href}>{item.label}</Link>
-              ) : (
+              ) : isLast ? (
                 <strong>{item.label}</strong>
+              ) : (
+                <span>{item.label}</span>
               )}
 
               {!isLast ? (

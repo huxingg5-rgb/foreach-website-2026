@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650" role="img" aria-labelledby="title desc" lang="ko">
+<title id="title">가진원에서 소리까지 전달 경로 추적</title>
+<desc id="desc">진단 개념도: 기계·유압 가진이 여러 경로로 소음을 만들 수 있습니다. 같은 운전점에서 경로별로 검증하십시오.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#587080"/></marker></defs>
+<rect width="1000" height="650" rx="20" fill="#f3f8fb"/>
+<g font-family="Arial, Microsoft YaHei, Malgun Gothic, sans-serif" fill="#17394c">
+<text x="500" y="52" font-size="30" font-weight="700" text-anchor="middle" fill="#17394c">
+<tspan x="500" dy="0">가진원에서 소리까지 전달 경로 추적</tspan>
+</text>
+<text x="185" y="144" font-size="25" font-weight="700" text-anchor="middle" fill="#17394c">
+<tspan x="185" dy="0">가진원</tspan>
+</text>
+<text x="500" y="144" font-size="25" font-weight="700" text-anchor="middle" fill="#17394c">
+<tspan x="500" dy="0">전달 경로</tspan>
+</text>
+<text x="815" y="144" font-size="25" font-weight="700" text-anchor="middle" fill="#17394c">
+<tspan x="815" dy="0">관찰량</tspan>
+</text>
+<rect x="40" y="178" width="290" height="116" rx="12" fill="#dfedf4"/>
+<text x="185" y="213" font-size="25" font-weight="400" text-anchor="middle" fill="#17394c">
+<tspan x="185" dy="0">모터·펌프 헤드</tspan>
+</text>
+<rect x="355" y="178" width="290" height="116" rx="12" fill="#e8f1f4"/>
+<text x="500" y="213" font-size="25" font-weight="400" text-anchor="middle" fill="#17394c">
+<tspan x="500" dy="0">공기</tspan>
+</text>
+<rect x="670" y="178" width="290" height="116" rx="12" fill="#e0f0eb"/>
+<text x="815" y="213" font-size="25" font-weight="400" text-anchor="middle" fill="#17394c">
+<tspan x="815" dy="0">음압</tspan>
+</text>
+<line x1="331" y1="236" x2="351" y2="236" stroke="#587080" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="646" y1="236" x2="666" y2="236" stroke="#587080" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="40" y="321" width="290" height="116" rx="12" fill="#dfedf4"/>
+<text x="185" y="356" font-size="25" font-weight="400" text-anchor="middle" fill="#17394c">
+<tspan x="185" dy="0">기계적 운동</tspan>
+</text>
+<rect x="355" y="321" width="290" height="116" rx="12" fill="#e8f1f4"/>
+<text x="500" y="356" font-size="25" font-weight="400" text-anchor="middle" fill="#17394c">
+<tspan x="500" dy="0">지지대·클램프·하우징</tspan>
+</text>
+<rect x="670" y="321" width="290" height="116" rx="12" fill="#e0f0eb"/>
+<text x="815" y="356" font-size="25" font-weight="400" text-anchor="middle" fill="#17394c">
+<tspan x="815" dy="0">진동과 소리</tspan>
+</text>
+<line x1="331" y1="379" x2="351" y2="379" stroke="#587080" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="646" y1="379" x2="666" y2="379" stroke="#587080" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="40" y="464" width="290" height="116" rx="12" fill="#dfedf4"/>
+<text x="185" y="499" font-size="25" font-weight="400" text-anchor="middle" fill="#17394c">
+<tspan x="185" dy="0">압력 맥동</tspan>
+</text>
+<rect x="355" y="464" width="290" height="116" rx="12" fill="#e8f1f4"/>
+<text x="500" y="499" font-size="25" font-weight="400" text-anchor="middle" fill="#17394c">
+<tspan x="500" dy="0">배관·피팅·부하</tspan>
+</text>
+<rect x="670" y="464" width="290" height="116" rx="12" fill="#e0f0eb"/>
+<text x="815" y="499" font-size="25" font-weight="400" text-anchor="middle" fill="#17394c">
+<tspan x="815" dy="0">압력과 소리</tspan>
+</text>
+<line x1="331" y1="522" x2="351" y2="522" stroke="#587080" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="646" y1="522" x2="666" y2="522" stroke="#587080" stroke-width="2" marker-end="url(#arrow)"/>
+</g>
+</svg>

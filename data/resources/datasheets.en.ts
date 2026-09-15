@@ -23,20 +23,20 @@ import type {
 
 export const datasheetsEnPageText = {
   seo: {
-    title: "Datasheets｜Resources｜FOREACH",
+    title: "Datasheets｜Resources｜Foreach Technology",
     description:
-      "Download FOREACH product datasheets for microfluidic pumps, valves, tubing, fittings, probes, and smart control modules.",
+      "Download Foreach product datasheets for microfluidic pumps, valves, tubing, fittings, probes, and smart control modules.",
   },
 
   hero: {
     title: "Datasheets",
     description:
-      "Find and download FOREACH product datasheets for pumps, valves, tubing, fittings, and smart control modules, and quickly review key specifications, materials, interfaces, and application information.",
+      "Find and download Foreach product datasheets for pumps, valves, tubing, fittings, and smart control modules, and quickly review key specifications, materials, interfaces, and application information.",
 
     image:
       "/images/resource/datasheets/banner/resource-datasheet-banner-1920x800-v001.webp",
 
-    imageAlt: "FOREACH resources datasheets page banner",
+    imageAlt: "Foreach resources datasheets page banner",
   },
 
   breadcrumb: {
@@ -49,7 +49,7 @@ export const datasheetsEnPageText = {
 
   search: {
     placeholder:
-      "Search by product name or keyword, such as plunger pump, rotary valve, pressure sensor, tubing and fittings",
+      "Search by product name or keyword, such as piston pump, rotary valve, pressure sensor, tubing and fittings",
     buttonText: "Search",
   },
 
@@ -105,7 +105,7 @@ export const datasheetEnItems: DatasheetItem[] = [
   {
     id: "ea-piston-pump",
     category: "pump",
-    keywords: "EA piston pump plunger pump precision metering dispensing 50 uL 20 mL",
+    keywords: "EA piston pump piston pump precision metering dispensing 50 uL 20 mL",
     title: "EA Piston Pump Datasheet",
     label: "Pumps",
     language: "English",
@@ -115,7 +115,7 @@ export const datasheetEnItems: DatasheetItem[] = [
       "EA piston pumps for precise metering, dispensing, and automated liquid handling across capacities from 50 µL to 20 mL.",
     image:
       "/images/products/pumps/plunger-pump/ea/pump-ea-1000ul-pmma.webp",
-    productHref: "/en/products/pumps/plunger-pumps/ea-standard-piston-pumps",
+    productHref: "/en/products/pumps/piston-pump/standard-piston-pump",
     downloadHref:
       "/downloads/resources/datasheets/en/Pumps/ps-120b-2507-00001-001-en-ea-piston-pump.pdf",
     actionType: "download",
@@ -123,7 +123,7 @@ export const datasheetEnItems: DatasheetItem[] = [
   {
     id: "eas-piston-pump",
     category: "pump",
-    keywords: "EAS piston pump plunger pump easy deaeration priming bubble removal",
+    keywords: "EAS piston pump piston pump easy deaeration priming bubble removal",
     title: "EAS Piston Pump Datasheet",
     label: "Pumps",
     language: "English",
@@ -133,7 +133,7 @@ export const datasheetEnItems: DatasheetItem[] = [
       "EAS easy-deaeration piston pumps for precise liquid handling where fast priming and efficient bubble removal are important.",
     image:
       "/images/products/pumps/product-types/plunger-pumps/foreach-plunger-pumps-product-type-intro.webp",
-    productHref: "/en/products/pumps/plunger-pumps",
+    productHref: "/en/products/pumps/piston-pump",
     downloadHref:
       "/downloads/resources/datasheets/en/Pumps/ps-120b-2507-00002-001-en-eas-piston-pump.pdf",
     actionType: "download",
@@ -141,7 +141,7 @@ export const datasheetEnItems: DatasheetItem[] = [
   {
     id: "sm-piston-pump",
     category: "pump",
-    keywords: "SM piston pump compact plunger pump miniature instrument reagent dosing",
+    keywords: "SM piston pump compact piston pump miniature instrument reagent dosing",
     title: "SM Piston Pump Datasheet",
     label: "Pumps",
     language: "English",
@@ -151,7 +151,7 @@ export const datasheetEnItems: DatasheetItem[] = [
       "Compact SM piston pumps for precise small-volume dosing and integration into miniature automated instruments.",
     image:
       "/images/products/pumps/plunger-pump/sm/pump-sm-1000ul-pmma.webp",
-    productHref: "/en/products/pumps/plunger-pumps/sm-miniature-piston-pumps",
+    productHref: "/en/products/pumps/piston-pump/miniature-piston-pump",
     downloadHref:
       "/downloads/resources/datasheets/en/Pumps/ps-120b-2507-00004-001-en-sm-piston-pump.pdf",
     actionType: "download",
@@ -271,8 +271,8 @@ export const datasheetEnItems: DatasheetItem[] = [
     title: "DPL30 Diaphragm Pump Datasheet",
     label: "Pumps",
     language: "English",
-    version: "001",
-    update: "2025-07",
+    version: "A03",
+    update: "2026-08",
     description:
       "DPL30 diaphragm pump for compact liquid-transfer applications, with flow rates up to 300 mL/min.",
     image:
@@ -280,7 +280,7 @@ export const datasheetEnItems: DatasheetItem[] = [
     productHref:
       "/en/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps",
     downloadHref:
-      "/downloads/resources/datasheets/en/Pumps/ps-150b-2507-00001-001-en-dpl30-diaphragm-pump.pdf",
+      "/downloads/resources/datasheets/en/Pumps/PS-150B-2507-00001_A03_en_DPL30 Diaphragm Pump Specification Sheet.pdf",
     actionType: "download",
   },
   {
@@ -290,8 +290,8 @@ export const datasheetEnItems: DatasheetItem[] = [
     title: "DPL60 Diaphragm Pump Datasheet",
     label: "Pumps",
     language: "English",
-    version: "001",
-    update: "2025-07",
+    version: "A00",
+    update: "2026-07",
     description:
       "DPL60 diaphragm pump for liquid supply and transfer applications, with flow rates up to 600 mL/min.",
     image:
@@ -299,7 +299,26 @@ export const datasheetEnItems: DatasheetItem[] = [
     productHref:
       "/en/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps",
     downloadHref:
-      "/downloads/resources/datasheets/en/Pumps/ps-150b-2507-00002-001-en-dpl60-diaphragm-pump.pdf",
+      "/downloads/resources/datasheets/en/Pumps/PS-150B-2607-00001_A00_en_DPL60 Diaphragm Pump Specification Sheet.pdf",
+    actionType: "download",
+  },
+  {
+    id: "dpgl800-diaphragm-pump",
+    category: "pump",
+    keywords: "DPGL800 diaphragm pump gas liquid 6 L min vacuum aspiration",
+    title: "DPGL800 Diaphragm Pump Specification Sheet",
+    label: "Pumps",
+    language: "English",
+    version: "A00",
+    update: "2026-08",
+    description:
+      "DPGL800 gas-liquid diaphragm pump for gas and gas-liquid aspiration, vacuum generation, and waste-fluid removal.",
+    image:
+      "/images/products/pumps/diaphragm-pumps/dpgl800/images/dpgl800-gas-liquid-diaphragm-pump-main.webp",
+    productHref:
+      "/en/products/pumps/miniature-diaphragm-pumps/dpgl800-gas-liquid-diaphragm-pump",
+    downloadHref:
+      "/downloads/resources/datasheets/en/Pumps/PS-150B-2608-00005_A00_en_DPGL800 Diaphragm Pump Specification Sheet.pdf",
     actionType: "download",
   },
   {
@@ -366,7 +385,7 @@ export const datasheetEnItems: DatasheetItem[] = [
     version: "A02",
     update: "—",
     description:
-      "A combined English catalog covering FOREACH fittings, connectors, rigid tubing, flexible tubing, and tubing assemblies.",
+      "A combined English catalog covering Foreach fittings, connectors, rigid tubing, flexible tubing, and tubing assemblies.",
     image:
       "/images/products/fittings/barbed-fittings/products/ba-16c-pa-w-main.jpg",
     productHref: "/en/products/fittings",

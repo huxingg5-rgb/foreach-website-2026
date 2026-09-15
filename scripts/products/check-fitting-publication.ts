@@ -217,7 +217,7 @@ async function main() {
     assert(
       normalize(formalProduct.foreachModel) ===
         normalize(product.foreachModel),
-      `型号替代 FOREACH 型号不一致：${product.productCode}`
+      `型号替代 Foreach 型号不一致：${product.productCode}`
     );
     assert(
       formalProduct.imageCard === product.imagePath,

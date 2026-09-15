@@ -78,6 +78,8 @@ export type IvdCtaBannerData = {
   primaryHref: string;
   secondaryText: string;
   secondaryHref: string;
+  articleText?: string;
+  articleHref?: string;
 };
 
 export type IvdApplicationPageData = {

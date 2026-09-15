@@ -5,7 +5,7 @@ export const dpl60ArticleEnCopy = {
     title: "How to Select a 600 mL/min Liquid Diaphragm Pump: DPL60 Flow, Pressure and Model Guide",
     seoTitle: "600 mL/min Liquid Diaphragm Pump Selection: DPL60 Operating Point and Models",
     seoDescription:
-      "Select a FOREACH DPL60 miniature liquid diaphragm pump by no-load flow, 100 kPa rated pressure, flow-pressure curve, motor, wetted materials, model coding, configuration logic and selection method.",
+      "Select a Foreach DPL60 miniature liquid diaphragm pump by no-load flow, 100 kPa rated pressure, flow-pressure curve, motor, wetted materials, model coding, configuration logic and selection method.",
   },
   diagram: {
     ariaLabel: "DPL60 liquid diaphragm pump operating-point explanation",
@@ -22,7 +22,7 @@ export const dpl60ArticleEnCopy = {
   section1: {
     title: "1. What problem does a 600 mL/min DPL60 solve?",
     paragraphs: [
-      "The DPL60 is FOREACH's miniature liquid diaphragm pump for higher-flow instrument circuits. It is intended for washing, flushing, circulation, larger-volume transfer and waste-liquid removal where liquid exchange must be faster than in a 300 mL/min-class circuit.",
+      "The DPL60 is Foreach's miniature liquid diaphragm pump for higher-flow instrument circuits. It is intended for washing, flushing, circulation, larger-volume transfer and waste-liquid removal where liquid exchange must be faster than in a 300 mL/min-class circuit.",
       "Its 600 mL/min value is the no-load flow reference. Rated pressure is 100 kPa, self-priming height is 3 mH₂O, and standard choices include DC 12 V or 24 V, brushed or brushless motors, and EP/PS or FF/PS wetted-material sets.",
       "Like other miniature liquid diaphragm pumps, it uses reciprocating diaphragm motion and check valves. The central DPL60 question, however, is not the generic pumping principle but the operating point after the pump is installed in a real fluidic circuit.",
       "If the required duty is mainly around 300 mL/min, compare the DPL30. If back pressure rather than flow is the limiting factor, evaluate a higher-pressure pump instead of selecting only by the no-load flow number.",
@@ -92,7 +92,7 @@ export const dpl60ArticleEnCopy = {
   section6: {
     title: "6. How should DPL60 wetted materials be selected?",
     intro:
-      "The principal wetted parts are the PPS pump head, diaphragm and valves. Compatibility must be assessed for the complete material set and actual fluid conditions.",
+      "The principal wetted parts are the polyphenylene sulfide (PPS) pump head, diaphragm and valves. Compatibility must be assessed for the complete material set and actual fluid conditions.",
     headers: ["Material set", "Diaphragm / valve", "Pump head and assessment"],
     rows: [
       ["EP/PS", "EPDM diaphragm + EPDM valve", "PPS head; confirm fluid, concentration, temperature and contact time"],

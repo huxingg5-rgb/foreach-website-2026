@@ -1,3 +1,4 @@
+import { applyInstrumentFluidicsChineseCopy } from "@/data/products/detail/instrument-fluidics-copy.zh";
 import { notFound } from "next/navigation";
 import type { ComponentType } from "react";
 import type { Metadata } from "next";
@@ -207,11 +208,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: detail.seo?.title || `${detail.model} | FOREACH`,
+    title: detail.seo?.title || `${detail.model} | Foreach Technology`,
     description: detail.seo?.description || detail.description || "",
     ...buildProductSocialMetadata({
       data: detail,
-      title: detail.seo?.title || `${detail.model} | FOREACH`,
+      title: detail.seo?.title || `${detail.model} | Foreach Technology`,
       description: detail.seo?.description || detail.description || "",
       canonicalUrl: `/products/pumps/pipetting-pumps/${slug}/`,
     }),
@@ -226,5 +227,5 @@ export default async function PipettingPumpDetailPage({ params }: PageProps) {
     notFound();
   }
 
-  return <ProductDetailView data={toClientData(detail)} />;
+  return <ProductDetailView data={applyInstrumentFluidicsChineseCopy(toClientData(detail), "zh")} />;
 }

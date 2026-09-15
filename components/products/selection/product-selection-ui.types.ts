@@ -40,6 +40,8 @@ export type ProductSelectionPageText = {
   productTypeLabel: string;
   resultPrefix: string;
   resultSuffix: string;
+  resultSingularPrefix?: string;
+  resultSingularSuffix?: string;
   resetFilters: string;
   submitRequirement: string;
   detailButton: string;

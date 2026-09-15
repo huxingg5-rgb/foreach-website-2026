@@ -9,14 +9,14 @@ const installationGuideEnglishData: Omit<InstallationGuidePageData, "locale"> = 
     kicker: "INSTALLATION GUIDE",
     title: "Product Installation and Operating Guides",
     description:
-      "Find installation steps, setup instructions, calibration methods and troubleshooting guidance for FOREACH microfluidic products.",
+      "Find installation steps, setup instructions, calibration methods and troubleshooting guidance for Foreach microfluidic products.",
   },
   search: {
     placeholder: "Enter a product name or model",
     buttonText: "Search",
     recentLabel: "Recent searches",
     recentKeywords: [
-      "Plunger Pump",
+      "Piston Pump",
       "Q20",
       "Solenoid Valve",
       "High-Pressure Valve",
@@ -38,7 +38,7 @@ const installationGuideEnglishData: Omit<InstallationGuidePageData, "locale"> = 
         type: "category",
         name: "Pumps",
         children: [
-          { id: "plunger-pump", name: "Plunger Pumps" },
+          { id: "plunger-pump", name: "Piston Pump" },
           { id: "diaphragm-pump", name: "Diaphragm Pumps" },
           { id: "valveless-pump", name: "Valveless Pumps" },
           { id: "syringe-pump", name: "Syringe Pumps" },
@@ -69,7 +69,7 @@ const installationGuideEnglishData: Omit<InstallationGuidePageData, "locale"> = 
   support: {
     title: "Cannot find the guide you need?",
     description:
-      "Send us the product model, application details or drawings if you need help with installation, parameter setup or calibration. The FOREACH technical team will assist you.",
+      "Send us the product model, application details or drawings if you need help with installation, parameter setup or calibration. The Foreach technical team will assist you.",
     buttonText: "Contact Technical Support",
     href: "/contact",
   },
@@ -104,13 +104,13 @@ const installationGuideEnglishData: Omit<InstallationGuidePageData, "locale"> = 
     },
     {
       id: "plunger-pump-install-guide",
-      title: "Plunger Pump Installation and Tubing Connections",
+      title: "Piston Pump Installation and Tubing Connections",
       category: "pumps",
       series: "plunger-pump",
       tags: ["Motor", "Wiring", "Commissioning"],
       description:
-        "Guidance for mounting a plunger pump, connecting its inlet and outlet, routing tubing and performing an initial operating check.",
-      keywords: ["plunger pump", "motor", "wiring", "installation", "commissioning", "tubing"],
+        "Guidance for mounting a piston pump, connecting its inlet and outlet, routing tubing and performing an initial operating check.",
+      keywords: ["piston pump", "motor", "wiring", "installation", "commissioning", "tubing"],
       videoPlatform: "youtube",
       steps: [
         {
@@ -236,18 +236,18 @@ const installationGuideTranslations: Record<
       kicker: "GUÍAS DE INSTALACIÓN",
       title: "Guías de instalación y funcionamiento de productos",
       description:
-        "Consulte los pasos de instalación, la configuración, los métodos de calibración y la solución de problemas de los productos microfluídicos FOREACH.",
+        "Consulte los pasos de instalación, la configuración, los métodos de calibración y la solución de problemas de los productos microfluídicos Foreach.",
     },
     search: {
       placeholder: "Introduzca un producto o modelo",
       buttonText: "Buscar",
       recentLabel: "Búsquedas recientes",
-      recentKeywords: ["Bomba de émbolo", "Q20", "Electroválvula", "Válvula de alta presión", "Sensor de presión"],
+      recentKeywords: ["Bomba de pistón", "Q20", "Electroválvula", "Válvula de alta presión", "Sensor de presión"],
     },
     sidebarTitle: "Series de productos",
     treeNames: {
       all: "Todas las guías", fittings: "Racores y conexiones de tubos", pumps: "Bombas",
-      "plunger-pump": "Bombas de émbolo", "diaphragm-pump": "Bombas de diafragma",
+      "plunger-pump": "Bombas de pistón", "diaphragm-pump": "Bombas de diafragma",
       "valveless-pump": "Bombas sin válvulas", "syringe-pump": "Bombas de jeringa",
       "high-pressure-pump": "Bombas de alta presión", valves: "Válvulas",
       "rotary-valve": "Válvulas rotativas", "solenoid-valve": "Electroválvulas",
@@ -256,7 +256,7 @@ const installationGuideTranslations: Record<
     },
     support: {
       title: "¿Necesita otra guía?",
-      description: "Envíenos el modelo del producto, la aplicación o los detalles del problema y el equipo técnico de FOREACH le ayudará con la instalación, la puesta en marcha o la configuración de parámetros.",
+      description: "Envíenos el modelo del producto, la aplicación o los detalles del problema y el equipo técnico de Foreach le ayudará con la instalación, la puesta en marcha o la configuración de parámetros.",
       buttonText: "Solicitar una guía",
     },
     ui: {
@@ -276,9 +276,9 @@ const installationGuideTranslations: Record<
         ],
       },
       "plunger-pump-install-guide": {
-        title: "Instalación y conexiones de tubos de una bomba de émbolo", tags: ["Motor", "Cableado", "Puesta en marcha"],
-        description: "Orientación para montar una bomba de émbolo, conectar la entrada y la salida, tender los tubos y efectuar la comprobación inicial.",
-        keywords: ["bomba de émbolo", "motor", "cableado", "instalación", "puesta en marcha", "tubos"],
+        title: "Instalación y conexiones de tubos de una bomba de pistón", tags: ["Motor", "Cableado", "Puesta en marcha"],
+        description: "Orientación para montar una bomba de pistón, conectar la entrada y la salida, tender los tubos y efectuar la comprobación inicial.",
+        keywords: ["bomba de pistón", "motor", "cableado", "instalación", "puesta en marcha", "tubos"],
         steps: [
           { title: "Confirme la orientación de montaje", description: "Utilice el plano del instrumento para confirmar la orientación de la bomba y las posiciones de entrada y salida." },
           { title: "Conecte los tubos", description: "Conecte los tubos de entrada y salida y compruebe que las especificaciones de los racores sean correctas." },
@@ -321,7 +321,7 @@ const installationGuideTranslations: Record<
     hero: {
       kicker: "GUIDES D’INSTALLATION",
       title: "Guides d’installation et d’utilisation des produits",
-      description: "Retrouvez les étapes d’installation, les instructions de configuration, les méthodes d’étalonnage et le dépannage des produits microfluidiques FOREACH.",
+      description: "Retrouvez les étapes d’installation, les instructions de configuration, les méthodes d’étalonnage et le dépannage des produits microfluidiques Foreach.",
     },
     search: {
       placeholder: "Saisissez un produit ou un modèle", buttonText: "Rechercher", recentLabel: "Recherches récentes",
@@ -336,7 +336,7 @@ const installationGuideTranslations: Record<
       "pinch-valve": "Vannes à pincement", sensors: "Capteurs", "quality-control": "Contrôle qualité", needles: "Sondes et aiguilles",
     },
     support: {
-      title: "Besoin d’un autre guide ?", description: "Envoyez-nous le modèle du produit, l’application ou les détails du problème. L’équipe technique FOREACH vous aidera pour l’installation, la mise en service ou le réglage des paramètres.", buttonText: "Demander un guide",
+      title: "Besoin d’un autre guide ?", description: "Envoyez-nous le modèle du produit, l’application ou les détails du problème. L’équipe technique Foreach vous aidera pour l’installation, la mise en service ou le réglage des paramètres.", buttonText: "Demander un guide",
     },
     ui: {
       breadcrumbAriaLabel: "Fil d’Ariane", breadcrumbHome: "Accueil", breadcrumbResources: "Ressources", breadcrumbCurrent: "Guides d’installation",
@@ -394,21 +394,21 @@ const installationGuideTranslations: Record<
   ko: {
     hero: {
       kicker: "설치 가이드", title: "제품 설치 및 작동 가이드",
-      description: "FOREACH 미세유체 제품의 설치 절차, 설정 지침, 교정 방법 및 문제 해결 정보를 확인하세요.",
+      description: "Foreach 미세유체 제품의 설치 절차, 설정 지침, 교정 방법 및 문제 해결 정보를 확인하세요.",
     },
     search: {
       placeholder: "제품명 또는 모델을 입력하세요", buttonText: "검색", recentLabel: "최근 검색",
-      recentKeywords: ["플런저 펌프", "Q20", "솔레노이드 밸브", "고압 밸브", "압력 센서"],
+      recentKeywords: ["피스톤 펌프", "Q20", "솔레노이드 밸브", "고압 밸브", "압력 센서"],
     },
     sidebarTitle: "제품 시리즈",
     treeNames: {
-      all: "전체 가이드", fittings: "피팅 및 튜브 연결", pumps: "펌프", "plunger-pump": "플런저 펌프",
+      all: "전체 가이드", fittings: "피팅 및 튜브 연결", pumps: "펌프", "plunger-pump": "피스톤 펌프",
       "diaphragm-pump": "다이어프램 펌프", "valveless-pump": "무밸브 펌프", "syringe-pump": "시린지 펌프",
       "high-pressure-pump": "고압 펌프", valves: "밸브", "rotary-valve": "로터리 밸브", "solenoid-valve": "솔레노이드 밸브",
       "high-pressure-valve": "고압 밸브", "pinch-valve": "핀치 밸브", sensors: "센서", "quality-control": "품질 관리", needles: "프로브 및 니들",
     },
     support: {
-      title: "다른 가이드가 필요하신가요?", description: "제품 모델, 적용 분야 또는 문제 내용을 보내 주시면 FOREACH 기술팀이 설치, 시운전 또는 파라미터 설정을 지원해 드립니다.", buttonText: "가이드 요청",
+      title: "다른 가이드가 필요하신가요?", description: "제품 모델, 적용 분야 또는 문제 내용을 보내 주시면 Foreach 기술팀이 설치, 시운전 또는 파라미터 설정을 지원해 드립니다.", buttonText: "가이드 요청",
     },
     ui: {
       breadcrumbAriaLabel: "이동 경로", breadcrumbHome: "홈", breadcrumbResources: "자료", breadcrumbCurrent: "설치 가이드",
@@ -426,8 +426,8 @@ const installationGuideTranslations: Record<
         ],
       },
       "plunger-pump-install-guide": {
-        title: "플런저 펌프 설치 및 튜브 연결", tags: ["모터", "배선", "시운전"],
-        description: "플런저 펌프 장착, 입출구 연결, 튜브 배치 및 초기 작동 점검 지침입니다.", keywords: ["플런저 펌프", "모터", "배선", "설치", "시운전", "튜브"],
+        title: "피스톤 펌프 설치 및 튜브 연결", tags: ["모터", "배선", "시운전"],
+        description: "피스톤 펌프 장착, 입출구 연결, 튜브 배치 및 초기 작동 점검 지침입니다.", keywords: ["피스톤 펌프", "모터", "배선", "설치", "시운전", "튜브"],
         steps: [
           { title: "장착 방향 확인", description: "장비 배치도를 사용해 펌프 방향과 입구 및 출구 위치를 확인합니다." },
           { title: "튜브 연결", description: "입출구 튜브를 연결하고 피팅 사양이 일치하는지 확인합니다." },
@@ -466,22 +466,22 @@ const installationGuideTranslations: Record<
   ru: {
     hero: {
       kicker: "РУКОВОДСТВА ПО МОНТАЖУ", title: "Руководства по монтажу и эксплуатации оборудования",
-      description: "Инструкции по монтажу, настройке, калибровке и устранению неисправностей микрофлюидных изделий FOREACH.",
+      description: "Инструкции по монтажу, настройке, калибровке и устранению неисправностей микрофлюидных изделий Foreach.",
     },
     search: {
       placeholder: "Введите название или модель изделия", buttonText: "Найти", recentLabel: "Недавние запросы",
-      recentKeywords: ["Плунжерный насос", "Q20", "Электромагнитный клапан", "Клапан высокого давления", "Датчик давления"],
+      recentKeywords: ["Поршневой насос", "Q20", "Электромагнитный клапан", "Клапан высокого давления", "Датчик давления"],
     },
     sidebarTitle: "Серии продукции",
     treeNames: {
-      all: "Все руководства", fittings: "Фитинги и трубные соединения", pumps: "Насосы", "plunger-pump": "Плунжерные насосы",
+      all: "Все руководства", fittings: "Фитинги и трубные соединения", pumps: "Насосы", "plunger-pump": "Поршневые насосы",
       "diaphragm-pump": "Мембранные насосы", "valveless-pump": "Бесклапанные насосы", "syringe-pump": "Шприцевые насосы",
       "high-pressure-pump": "Насосы высокого давления", valves: "Клапаны", "rotary-valve": "Поворотные клапаны",
       "solenoid-valve": "Электромагнитные клапаны", "high-pressure-valve": "Клапаны высокого давления",
       "pinch-valve": "Пережимные клапаны", sensors: "Датчики", "quality-control": "Контроль качества", needles: "Зонды и иглы",
     },
     support: {
-      title: "Нужно другое руководство?", description: "Сообщите модель изделия, область применения или подробности проблемы. Технические специалисты FOREACH помогут с монтажом, вводом в эксплуатацию и настройкой параметров.", buttonText: "Запросить руководство",
+      title: "Нужно другое руководство?", description: "Сообщите модель изделия, область применения или подробности проблемы. Технические специалисты Foreach помогут с монтажом, вводом в эксплуатацию и настройкой параметров.", buttonText: "Запросить руководство",
     },
     ui: {
       breadcrumbAriaLabel: "Навигационная цепочка", breadcrumbHome: "Главная", breadcrumbResources: "Ресурсы", breadcrumbCurrent: "Руководства по монтажу",
@@ -499,8 +499,8 @@ const installationGuideTranslations: Record<
         ],
       },
       "plunger-pump-install-guide": {
-        title: "Монтаж и подключение трубок плунжерного насоса", tags: ["Двигатель", "Электропроводка", "Ввод в эксплуатацию"],
-        description: "Рекомендации по установке плунжерного насоса, подключению входа и выхода, прокладке трубок и первичной проверке.", keywords: ["плунжерный насос", "двигатель", "электропроводка", "монтаж", "ввод в эксплуатацию", "трубки"],
+        title: "Монтаж и подключение трубок поршневого насоса", tags: ["Двигатель", "Электропроводка", "Ввод в эксплуатацию"],
+        description: "Рекомендации по установке поршневого насоса, подключению входа и выхода, прокладке трубок и первичной проверке.", keywords: ["поршневой насос", "двигатель", "электропроводка", "монтаж", "ввод в эксплуатацию", "трубки"],
         steps: [
           { title: "Проверьте ориентацию при монтаже", description: "По компоновочному чертежу прибора проверьте ориентацию насоса и положение входа и выхода." },
           { title: "Подключите трубки", description: "Подключите входную и выходную трубки и убедитесь, что характеристики фитингов соответствуют требованиям." },

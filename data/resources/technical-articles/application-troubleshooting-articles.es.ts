@@ -354,27 +354,9 @@ export const labLiquidWasteAspirationTroubleshootingEsCopy = {
               href: "/es/applications/lab-automation/",
               suffix: ".",
             },
-            {
-              prefix: "Referencia:",
-              label:
-                "Descripción de KNF sobre sistemas de aspiración de fluidos de laboratorio",
-              href: "https://knf.com/en/global/solutions/lab-applications/fluid-aspiration",
-              suffix: ".",
-            },
-            {
-              prefix: "Referencia:",
-              label:
-                "Protección y mantenimiento del sistema de aspiración por vacío VACUSAFE de INTEGRA",
-              href: "https://www.integra-biosciences.com/global/en/aspiration-systems/vacusafe",
-              suffix: ".",
-            },
-            {
-              prefix: "Referencia:",
-              label:
-                "Método de aumento de presión y cálculo de fugas en sistemas de vacío",
-              href: "https://www.leybold.com/content/leybold/en-us/knowledge/vacuum-fundamentals/leak-detection/pressure-rise-and-drop-tests.html",
-              suffix: ".",
-            },
+            
+            
+            
           ],
         },
         {
@@ -823,26 +805,14 @@ export const ivdWasteAspirationPumpSelectionEsCopy = {
               suffix: ".",
             },
             {
-              prefix: "Referencia:",
-              label:
-                "Comparación de KNF entre transferencia directa de líquido y transferencia indirecta por vacío",
-              href: "https://knf.com/en/it/stories-events/news-stories/article/direct-liquid-transfer-vs-vacuum-over-liquid-transfer",
+              prefix: "Guía de selección relacionada:",
+              label: "bomba de residuos IVD para líquido o gas-líquido",
+              href: "/es/resources/technical-articles/ivd-waste-liquid-pump-liquid-vs-gas-liquid-diaphragm-pump/",
               suffix: ".",
             },
-            {
-              prefix: "Referencia:",
-              label:
-                "Nota de KNF sobre residuos de lavado de agujas y condiciones gas-líquido",
-              href: "https://knf.com/fileadmin/Local_files/USA/Downloads/OEM_Process_downloads/application_note/Application_Note_needle-washing_KNF_USA.pdf",
-              suffix: ".",
-            },
-            {
-              prefix: "Referencia:",
-              label:
-                "Información de Iwaki sobre bombas para transferencia gas-líquido y recogida de residuos",
-              href: "https://www.iwaki.hk/catalog/products_details.php?cPath=6&id=40&language=en",
-              suffix: ".",
-            },
+            
+            
+            
           ],
         },
         {

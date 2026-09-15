@@ -66,7 +66,7 @@ export function getBrushlessWiringTechnicalArticle(
     category: "pumps-valves",
     title: copy.metadata.title,
     summary: copy.deck,
-    date: "2026-08-18",
+    date: "2026-07-22",
     coverImage: brushlessWiringArticleImages.twoWire,
     coverAlt: copy.metadata.coverAlt,
     content: [

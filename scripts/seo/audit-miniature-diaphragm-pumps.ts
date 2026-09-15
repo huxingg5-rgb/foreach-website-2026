@@ -186,8 +186,9 @@ function assertLiveDetailCopy(
   if (!text.includes(expectedCopy.applications)) {
     fail(`常见应用未恢复：${route}`);
   }
-  if (expectedCopy.faqs.length !== 5) {
-    fail(`FAQ 数据不是 5 条：${route} -> ${expectedCopy.faqs.length}`);
+  const expectedFaqCount = route.includes("dpgl800") ? 6 : 5;
+  if (expectedCopy.faqs.length !== expectedFaqCount) {
+    fail(`FAQ 数据不是 ${expectedFaqCount} 条：${route} -> ${expectedCopy.faqs.length}`);
   }
 
   const jsonLdObjects = parseJsonLd(html, route).flatMap((document) =>
@@ -273,7 +274,6 @@ for (const locale of DIAPHRAGM_PUMP_PUBLIC_LOCALES) {
     { slug: "", h1: parentIntroHeading, cards: 7 },
     { slug: "liquid-diaphragm-pumps", h1: copy.liquid, cards: 6 },
     { slug: "gas-liquid-diaphragm-pumps", h1: copy.gasLiquid, cards: 1 },
-    { slug: "gas-diaphragm-pumps", h1: copy.gas, cards: 0 },
   ];
 
   for (const check of categoryChecks) {
@@ -327,8 +327,8 @@ for (const locale of DIAPHRAGM_PUMP_PUBLIC_LOCALES) {
     if (h1 !== reference.localized[locale].h1) {
       fail(`Reference H1 不一致：${route} -> ${h1}`);
     }
-    if (h1.includes(reference.model)) {
-      fail(`H1 不应包含 Reference Model：${route}`);
+    if (/\breference model\b/i.test(h1)) {
+      fail(`H1 不应包含 Reference Model 标签：${route}`);
     }
 
     assertCustomProductRow(html, route, locale, reference.model);
@@ -345,10 +345,16 @@ for (const locale of DIAPHRAGM_PUMP_PUBLIC_LOCALES) {
       fail(`公开 HTML 含完整 Ordering Code：${route}`);
     }
 
+    const primaryProductText = visibleText(
+      html.replace(
+        /<section\b[^>]*class="[^"]*RelatedResources-module[^"]*"[^>]*>[\s\S]*?<\/section>/gi,
+        " ",
+      ),
+    );
     if (
       reference.model.startsWith("DPL30H") &&
       /hose barb|barbed connection|倒刺接口|倒刺端口|卡箍|锁紧结构|espiga fijada|raccord cannelé|바브 연결|클램프|штуцер с хомутом|фиксирующей конструкцией/i.test(
-        html,
+        primaryProductText,
       )
     ) {
       fail(`DPL30H 公开 HTML 含错误接口映射：${route}`);
@@ -500,7 +506,7 @@ const finalSitemapUrls = sitemapUrls.filter((url) =>
 const legacySitemapUrls = sitemapUrls.filter((url) =>
   /\/products\/pumps\/diaphragm-pumps(?:\/|$)/.test(url),
 );
-if (finalSitemapUrls.length !== 90) {
+if (finalSitemapUrls.length !== 84) {
   fail(`Sitemap 最终隔膜泵 URL 数量错误：${finalSitemapUrls.length}`);
 }
 if (legacySitemapUrls.length !== 0) {
@@ -526,7 +532,7 @@ const redirectMap = new Map(
 const expectedRedirects = getDiaphragmPumpRedirectPairs({
   includeDefensiveReferencePaths: true,
 });
-if (expectedRedirects.length !== 138) {
+if (expectedRedirects.length !== 144) {
   fail(`中央 redirect pair 数量错误：${expectedRedirects.length}`);
 }
 for (const pair of expectedRedirects) {

@@ -87,7 +87,7 @@ export function getDpl30TechnicalArticle(
     category: "pumps-valves",
     title: articleCopy.metadata.title,
     summary: getDpl30ArticleSummary(locale),
-    date: "2026-08-04",
+    date: "2026-07-10",
     coverImage: DPL30_ARTICLE_COVER,
     content: [
       {

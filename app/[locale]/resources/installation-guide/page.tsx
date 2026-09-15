@@ -65,10 +65,10 @@ const INSTALLATION_METADATA: Record<
   Exclude<InstallationGuideLocaleParam, "en">,
   { title: string; description: string }
 > = {
-  es: { title: "Guías de instalación｜FOREACH", description: "Consulte las guías de instalación, configuración, calibración y solución de problemas de los productos FOREACH." },
-  fr: { title: "Guides d’installation｜FOREACH", description: "Consultez les guides d’installation, de configuration, d’étalonnage et de dépannage des produits FOREACH." },
-  ko: { title: "설치 가이드｜FOREACH", description: "FOREACH 제품의 설치, 설정, 교정 및 문제 해결 가이드를 확인하세요." },
-  ru: { title: "Руководства по монтажу｜FOREACH", description: "Руководства по монтажу, настройке, калибровке и устранению неисправностей продукции FOREACH." },
+  es: { title: "Guías de instalación｜Foreach Technology", description: "Consulte las guías de instalación, configuración, calibración y solución de problemas de los productos Foreach." },
+  fr: { title: "Guides d’installation｜Foreach Technology", description: "Consultez les guides d’installation, de configuration, d’étalonnage et de dépannage des produits Foreach." },
+  ko: { title: "설치 가이드｜Foreach Technology", description: "Foreach 제품의 설치, 설정, 교정 및 문제 해결 가이드를 확인하세요." },
+  ru: { title: "Руководства по монтажу｜Foreach Technology", description: "Руководства по монтажу, настройке, калибровке и устранению неисправностей продукции Foreach." },
 };
 
 export async function generateMetadata({
@@ -77,8 +77,8 @@ export async function generateMetadata({
   const { locale } = await params;
   const metadata = locale === "en"
     ? {
-        title: "Installation Guide｜FOREACH",
-        description: "View FOREACH product installation, setup, calibration and troubleshooting guides.",
+        title: "Installation Guide｜Foreach Technology",
+        description: "View Foreach product installation, setup, calibration and troubleshooting guides.",
       }
     : INSTALLATION_METADATA[locale];
 

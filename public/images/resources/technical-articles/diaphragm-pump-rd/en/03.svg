@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650" role="img" aria-labelledby="title desc" lang="en">
+<title id="title">Trace the paths from excitation to sound</title>
+<desc id="desc">Diagnostic schematic: mechanical and hydraulic excitation can reach the listener through different paths. Validate each at a matched operating point.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#587080"/></marker></defs>
+<rect width="1000" height="650" rx="20" fill="#f3f8fb"/>
+<g font-family="Arial, Microsoft YaHei, Malgun Gothic, sans-serif" fill="#17394c">
+<text x="500" y="52" font-size="30" font-weight="700" text-anchor="middle" fill="#17394c">
+<tspan x="500" dy="0">Trace the paths from excitation to sound</tspan>
+</text>
+<text x="185" y="144" font-size="25" font-weight="700" text-anchor="middle" fill="#17394c">
+<tspan x="185" dy="0">Excitation</tspan>
+</text>
+<text x="500" y="144" font-size="25" font-weight="700" text-anchor="middle" fill="#17394c">
+<tspan x="500" dy="0">Path</tspan>
+</text>
+<text x="815" y="144" font-size="25" font-weight="700" text-anchor="middle" fill="#17394c">
+<tspan x="815" dy="0">Observation</tspan>
+</text>
+<rect x="40" y="178" width="290" height="116" rx="12" fill="#dfedf4"/>
+<text x="185" y="213" font-size="25" font-weight="400" text-anchor="middle" fill="#17394c">
+<tspan x="185" dy="0">Motor and pump</tspan>
+<tspan x="185" dy="32.0">head</tspan>
+</text>
+<rect x="355" y="178" width="290" height="116" rx="12" fill="#e8f1f4"/>
+<text x="500" y="213" font-size="25" font-weight="400" text-anchor="middle" fill="#17394c">
+<tspan x="500" dy="0">Air</tspan>
+</text>
+<rect x="670" y="178" width="290" height="116" rx="12" fill="#e0f0eb"/>
+<text x="815" y="213" font-size="25" font-weight="400" text-anchor="middle" fill="#17394c">
+<tspan x="815" dy="0">Sound pressure</tspan>
+</text>
+<line x1="331" y1="236" x2="351" y2="236" stroke="#587080" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="646" y1="236" x2="666" y2="236" stroke="#587080" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="40" y="321" width="290" height="116" rx="12" fill="#dfedf4"/>
+<text x="185" y="356" font-size="25" font-weight="400" text-anchor="middle" fill="#17394c">
+<tspan x="185" dy="0">Mechanical motion</tspan>
+</text>
+<rect x="355" y="321" width="290" height="116" rx="12" fill="#e8f1f4"/>
+<text x="500" y="356" font-size="25" font-weight="400" text-anchor="middle" fill="#17394c">
+<tspan x="500" dy="0">Supports, clamps,</tspan>
+<tspan x="500" dy="32.0">enclosure</tspan>
+</text>
+<rect x="670" y="321" width="290" height="116" rx="12" fill="#e0f0eb"/>
+<text x="815" y="356" font-size="25" font-weight="400" text-anchor="middle" fill="#17394c">
+<tspan x="815" dy="0">Vibration and</tspan>
+<tspan x="815" dy="32.0">sound</tspan>
+</text>
+<line x1="331" y1="379" x2="351" y2="379" stroke="#587080" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="646" y1="379" x2="666" y2="379" stroke="#587080" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="40" y="464" width="290" height="116" rx="12" fill="#dfedf4"/>
+<text x="185" y="499" font-size="25" font-weight="400" text-anchor="middle" fill="#17394c">
+<tspan x="185" dy="0">Pressure</tspan>
+<tspan x="185" dy="32.0">pulsation</tspan>
+</text>
+<rect x="355" y="464" width="290" height="116" rx="12" fill="#e8f1f4"/>
+<text x="500" y="499" font-size="25" font-weight="400" text-anchor="middle" fill="#17394c">
+<tspan x="500" dy="0">Tubes, fittings,</tspan>
+<tspan x="500" dy="32.0">load</tspan>
+</text>
+<rect x="670" y="464" width="290" height="116" rx="12" fill="#e0f0eb"/>
+<text x="815" y="499" font-size="25" font-weight="400" text-anchor="middle" fill="#17394c">
+<tspan x="815" dy="0">Pressure and</tspan>
+<tspan x="815" dy="32.0">sound</tspan>
+</text>
+<line x1="331" y1="522" x2="351" y2="522" stroke="#587080" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="646" y1="522" x2="666" y2="522" stroke="#587080" stroke-width="2" marker-end="url(#arrow)"/>
+</g>
+</svg>

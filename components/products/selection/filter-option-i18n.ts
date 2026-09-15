@@ -5,11 +5,11 @@ type FilterOptionLabelMap = Partial<Record<ProductFilterLocale, string>>;
 const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
   "柱塞泵": {
     zh: "柱塞泵",
-    en: "Plunger Pump",
-    es: "Bomba de émbolo",
+    en: "Piston Pump",
+    es: "Bomba de pistón",
     fr: "Pompe à piston",
-    ko: "플런저 펌프",
-    ru: "Плунжерный насос",
+    ko: "피스톤 펌프",
+    ru: "Поршневой насос",
   },
   "隔膜泵": {
     zh: "微型隔膜泵",
@@ -46,27 +46,27 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
 
   "EA 常规柱塞泵": {
     zh: "EA 常规柱塞泵",
-    en: "EA Standard Plunger Pump",
-    es: "Bomba de émbolo estándar EA",
+    en: "EA Standard Piston Pump",
+    es: "Bomba de pistón estándar EA",
     fr: "Pompe à piston standard EA",
-    ko: "EA 표준 플런저 펌프",
-    ru: "Стандартный плунжерный насос EA",
+    ko: "EA 표준 피스톤 펌프",
+    ru: "Стандартный поршневой насос EA",
   },
   "SM 微型柱塞泵": {
     zh: "SM 微型柱塞泵",
-    en: "SM Miniature Plunger Pump",
-    es: "Bomba de émbolo miniatura SM",
+    en: "SM Miniature Piston Pump",
+    es: "Bomba de pistón miniatura SM",
     fr: "Pompe à piston miniature SM",
-    ko: "SM 소형 플런저 펌프",
-    ru: "Миниатюрный плунжерный насос SM",
+    ko: "SM 소형 피스톤 펌프",
+    ru: "Миниатюрный поршневой насос SM",
   },
   "TM 超微型柱塞泵": {
     zh: "TM 超微型柱塞泵",
-    en: "TM Ultra-Compact Plunger Pump",
-    es: "Bomba de émbolo ultracompacta TM",
+    en: "TM Ultra-Compact Piston Pump",
+    es: "Bomba de pistón ultracompacta TM",
     fr: "Pompe à piston ultra-compacte TM",
-    ko: "TM 초소형 플런저 펌프",
-    ru: "Сверхкомпактный плунжерный насос TM",
+    ko: "TM 초소형 피스톤 펌프",
+    ru: "Сверхкомпактный поршневой насос TM",
   },
 
   "DPL 液体隔膜泵": {
@@ -76,14 +76,6 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
     fr: "Pompe à membrane liquide DPL",
     ko: "DPL 액체 다이어프램 펌프",
     ru: "Мембранный насос DPL для жидкостей",
-  },
-  "DPL 气体隔膜泵": {
-    zh: "DPL 气体隔膜泵",
-    en: "DPL Gas Diaphragm Pump",
-    es: "Bomba de diafragma para gas DPL",
-    fr: "Pompe à membrane gaz DPL",
-    ko: "DPL 가스 다이어프램 펌프",
-    ru: "Мембранный насос DPL для газа",
   },
   "DPL 气液隔膜泵": {
     zh: "DPL 气液隔膜泵",
@@ -110,15 +102,6 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
     ko: "소형 기액 혼합 다이어프램 펌프",
     ru: "Миниатюрный газожидкостный мембранный насос",
   },
-  "气体隔膜泵": {
-    zh: "微型气体隔膜泵",
-    en: "Miniature Gas Diaphragm Pump",
-    es: "Bomba de diafragma en miniatura para gases",
-    fr: "Pompe à membrane miniature pour gaz",
-    ko: "소형 기체 다이어프램 펌프",
-    ru: "Миниатюрный газовый мембранный насос",
-  },
-
   "液泵": {
     zh: "液泵",
     en: "Liquid Pump",
@@ -752,6 +735,16 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
 
 };
 
+/*
+ * 旧版清单可能保存英文基础分类名，而当前正式分类名已经更完整。
+ * 这里保留别名，确保切换语言后旧数据也能映射到当前语言。
+ */
+const FILTER_OPTION_LABEL_ALIASES: Record<string, string> = {
+  "Diaphragm Pump": "隔膜泵",
+  "Pipette Pump": "移液泵",
+  Probes: "针系列",
+};
+
 function normalizeProductFilterLocale(locale?: string): ProductFilterLocale {
   if (locale === "zh-CN") return "zh";
   if (locale === "en" || locale === "es" || locale === "fr" || locale === "ko" || locale === "ru") {
@@ -761,9 +754,14 @@ function normalizeProductFilterLocale(locale?: string): ProductFilterLocale {
 }
 
 export function getLocalizedFilterOptionLabel(value: string | number | null | undefined, locale?: string): string {
-  const rawValue = String(value ?? "");
+  const rawValue = String(value ?? "").trim();
   const normalizedLocale = normalizeProductFilterLocale(locale);
-  const localized = FILTER_OPTION_LABELS[rawValue];
+  const canonicalValue = FILTER_OPTION_LABEL_ALIASES[rawValue] ?? rawValue;
+  const localized =
+    FILTER_OPTION_LABELS[canonicalValue] ??
+    Object.values(FILTER_OPTION_LABELS).find((labels) =>
+      Object.values(labels).some((label) => label === rawValue),
+    );
 
   if (!localized) {
     return rawValue;

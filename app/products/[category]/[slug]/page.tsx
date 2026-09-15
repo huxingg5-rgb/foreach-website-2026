@@ -1,3 +1,6 @@
+import { getControlModuleProductDetailData } from "@/services/products/adapters/getControlModuleProductDetailData";
+import { getPistonPumpRedirect } from "@/lib/seo/piston-pump-migration";
+import { getPistonPumpMetadata } from "@/services/products/getPistonPumpMetadata";
 ﻿/* =========================================================
    page.tsx
    恒永达官网｜中文产品类型页 / 旧产品详情页复用动态路由
@@ -8,13 +11,13 @@
    路由说明：
    1. /products/{category}/{slug}
    2. 如果 slug 命中 product-route-map.ts，则显示产品类型筛选页
-      示例：/products/pumps/plunger-pumps
+      示例：/products/pumps/piston-pump
    3. 如果 category === "control"，则显示智控模块详情页
       示例：/products/control/abd-air-bubble-detector
    4. 如果没有命中产品类型路由，则继续按旧逻辑显示产品详情页
    5. 这样可以保留原有产品详情页，同时支持新的产品中心 SEO 路径
    6. 柱塞泵具体型号详情页已单独使用：
-      /products/pumps/plunger-pumps/[slug]
+      /products/pumps/piston-pump/[slug]
 ========================================================= */
 
 import type { Metadata } from "next";
@@ -39,7 +42,6 @@ import {
 import {
   getControlModuleDetailBySlug,
   getControlModuleDetailSlugs,
-  type ControlModuleDetail,
 } from "@/data/products/control-modules/control-module-detail.generated";
 
 import "../../products.css";
@@ -79,95 +81,6 @@ function getControlModuleStaticParams() {
   }));
 }
 
-/* =========================================================
-   智控模块详情数据适配器
-
-   说明：
-   1. control-module-detail.generated.ts 是智控模块自己的数据结构；
-   2. ProductDetailClient 使用的是统一详情页展示结构；
-   3. 这里把智控数据转成 ProductDetailClient 可以直接渲染的字段；
-   4. 不新建独立页面，不新建独立样式，继续复用公共详情页。
-========================================================= */
-
-const CONTROL_MODULE_DETAIL_IMAGE_MAP: Record<string, string> = {
-  "abd-air-bubble-detector": "/images/products/control/foreach-abd-air-bubble-detector.webp",
-  "pdm5-pressure-sensor": "/images/products/control/foreach-pdm5-pressure-sensor.webp",
-};
-
-function getControlModuleProductDetailData(detail: ControlModuleDetail) {
-  const controlModuleMainImage =
-    CONTROL_MODULE_DETAIL_IMAGE_MAP[detail.slug] ||
-    (detail as any).mainImage ||
-    ((detail as any).images && (detail as any).images[0]) ||
-    (detail as any).image ||
-    "/images/logo/foreach-logo-color.svg";
-
-  const images = Array.isArray(detail.media?.images) ? detail.media.images : [];
-
-  const mainImage = controlModuleMainImage;
-
-  const drawing2dUrl = detail.media?.drawing2d || "";
-
-  const model3dUrl = detail.media?.model3d || "";
-
-  return {
-    slug: detail.slug,
-
-    model: detail.title,
-    displayModel: detail.title,
-    foreachModel: detail.title,
-    name: detail.title,
-    title: detail.title,
-
-    category: CONTROL_CATEGORY_ID,
-    categoryId: CONTROL_CATEGORY_ID,
-    productTypeId: "control-module",
-    productTypeName: "智控模块",
-    seriesName: detail.categoryLabel || "智控系列",
-    series: detail.categoryLabel || "智控系列",
-
-    description: Array.isArray(detail.intro) ? detail.intro.join("\n\n") : "",
-    advantages: detail.highlights || [],
-    commonApplications: detail.applications || [],
-
-    specs: detail.specs || [],
-    faqs: detail.faqs || [],
-
-    mainImage,
-    imageCard: controlModuleMainImage,
-    image: controlModuleMainImage,
-    imagePath: controlModuleMainImage,
-    imageUrl: controlModuleMainImage,
-    heroImage: mainImage,
-    additionalImages: [],
-
-    detailHref: `/products/control/${detail.slug}`,
-    href: `/products/control/${detail.slug}`,
-    selectionHref: "/products",
-    modelSelectionHref: "/products",
-    contactHref: "/contact",
-
-    primaryButtonText: "提交定制需求",
-    primaryButtonHref: "/contact",
-    requestHref: "/contact",
-
-    showConfigurator: false,
-    showDatasheetRequest: true,
-    showDrawingRequest: Boolean(drawing2dUrl),
-    show3DRequest: Boolean(model3dUrl),
-
-    drawing2dUrl,
-    drawingPdfUrl: drawing2dUrl,
-    partDrawingUrl: drawing2dUrl,
-    model3dUrl,
-
-    resources: {
-      drawing2dUrl,
-      model3dUrl,
-    },
-  } as any;
-}
-
 export function generateStaticParams() {
   const detailParams = getAllProductDetailRouteParams();
 
@@ -180,13 +93,17 @@ export function generateStaticParams() {
     ...detailParams,
     ...controlModuleParams,
     ...tubingStaticParams,
-  ];
+  ].filter(({ category, slug }) => !getPistonPumpRedirect(`/products/${category}/${slug}/`));
 }
 
 export async function generateMetadata({
   params,
 }: ProductDetailRoutePageProps): Promise<Metadata> {
   const { category, slug } = await params;
+  if (category === "pumps" && slug === "piston-pump") {
+    return getPistonPumpMetadata("", "zh") || {};
+  }
+
 
   const productTypeRoute = resolveProductTypeRoute(category, slug);
 
@@ -213,7 +130,7 @@ export async function generateMetadata({
           type: "website",
           locale: "zh_CN",
           url: canonicalPath,
-          siteName: "FOREACH",
+          siteName: "Foreach Technology",
           title: productTypeRoute.title,
           description: productTypeRoute.description,
         },
@@ -239,7 +156,7 @@ export async function generateMetadata({
     }
 
     const pageData = getControlModuleProductDetailData(detail);
-    const title = `${detail.title} | FOREACH`;
+    const title = `${detail.title} | Foreach Technology`;
     const description = Array.isArray(detail.intro)
         ? detail.intro.join(" ").slice(0, 160)
         : detail.title;
@@ -266,10 +183,10 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${slug} | FOREACH`,
+    title: `${slug} | Foreach Technology`,
     ...buildProductSocialMetadata({
       data: pageData,
-      title: `${slug} | FOREACH`,
+      title: `${slug} | Foreach Technology`,
       canonicalUrl: `/products/${category}/${slug}/`,
     }),
   };

@@ -415,7 +415,13 @@ function toFittingClientData(
 
 export function generateStaticParams() {
   const existingSeriesParams =
-    getSeriesRouteParams();
+    getSeriesRouteParams().filter(
+      (item) =>
+        !(
+          item.category === "pumps" &&
+          item.slug === "piston-pump"
+        )
+    );
 
   const hardTubeParams =
     hardTubeDetails.map(
@@ -556,7 +562,7 @@ export async function generateMetadata({
         detail.name ||
         detail.title ||
         fallbackName
-      } | FOREACH`;
+      } | Foreach Technology`;
     const description =
       detail.seo?.description ||
       detail.description ||
@@ -607,7 +613,7 @@ export async function generateMetadata({
         type: "website",
         locale: "zh_CN",
         url: canonicalPath,
-        siteName: "FOREACH",
+        siteName: "Foreach Technology",
         title: route.title,
         description: route.description,
       },

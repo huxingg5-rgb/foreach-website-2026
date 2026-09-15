@@ -335,24 +335,9 @@ export const labLiquidWasteAspirationTroubleshootingRuCopy = {
               href: "/ru/applications/lab-automation/",
               suffix: ".",
             },
-            {
-              prefix: "Источник:",
-              label: "Описание системы лабораторной аспирации жидкостей KNF",
-              href: "https://knf.com/en/global/solutions/lab-applications/fluid-aspiration",
-              suffix: ".",
-            },
-            {
-              prefix: "Источник:",
-              label: "Защита и обслуживание вакуумной системы отходов INTEGRA",
-              href: "https://www.integra-biosciences.com/global/en/aspiration-systems/vacusafe",
-              suffix: ".",
-            },
-            {
-              prefix: "Источник:",
-              label: "Метод роста давления и расчёт утечки вакуумной системы",
-              href: "https://www.leybold.com/content/leybold/en-us/knowledge/vacuum-fundamentals/leak-detection/pressure-rise-and-drop-tests.html",
-              suffix: ".",
-            },
+            
+            
+            
           ],
         },
         {
@@ -756,23 +741,14 @@ export const ivdWasteAspirationPumpSelectionRuCopy = {
               suffix: ".",
             },
             {
-              prefix: "Источник:",
-              label: "Сравнение прямой перекачки и непрямой вакуумной аспирации KNF",
-              href: "https://knf.com/en/it/stories-events/news-stories/article/direct-liquid-transfer-vs-vacuum-over-liquid-transfer",
+              prefix: "Связанное руководство:",
+              label: "выбор жидкостного или газожидкостного насоса отходов IVD",
+              href: "/ru/resources/technical-articles/ivd-waste-liquid-pump-liquid-vs-gas-liquid-diaphragm-pump/",
               suffix: ".",
             },
-            {
-              prefix: "Источник:",
-              label: "Описание KNF аспирации отходов промывки игл и газожидкостного режима",
-              href: "https://knf.com/fileadmin/Local_files/USA/Downloads/OEM_Process_downloads/application_note/Application_Note_needle-washing_KNF_USA.pdf",
-              suffix: ".",
-            },
-            {
-              prefix: "Источник:",
-              label: "Данные Iwaki по газожидкостной перекачке и сбору отходов",
-              href: "https://www.iwaki.hk/catalog/products_details.php?cPath=6&id=40&language=en",
-              suffix: ".",
-            },
+            
+            
+            
           ],
         },
         {

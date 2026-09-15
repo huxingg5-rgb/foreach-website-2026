@@ -4,10 +4,10 @@ export const brushlessWiringArticleFrCopy = {
   metadata: {
     title:
       "Pompe à membrane brushless 2 fils ou 5 fils : quelles différences et comment choisir ?",
-    seoTitle: "Pompe à membrane brushless 2 fils vs 5 fils | FOREACH",
+    seoTitle: "Pompe à membrane brushless 2 fils vs 5 fils | Foreach Technology",
     seoDescription:
-      "Découvrez les différences entre les configurations 2 fils et 5 fils d'une pompe à membrane brushless, les fonctions VCC, GND, PWM, DIR et FG, les cas d'utilisation et les options disponibles pour les séries FOREACH DPL30, DPL60, DPL30H et DPGL800.",
-    coverAlt: "Moteur brushless FOREACH DPL60 à 2 fils",
+      "Découvrez les différences entre les configurations 2 fils et 5 fils d'une pompe à membrane brushless, les fonctions VCC, GND, PWM, DIR et FG, les cas d'utilisation et les options disponibles pour les séries Foreach DPL30, DPL60, DPL30H et DPGL800.",
+    coverAlt: "Moteur brushless Foreach DPL60 à 2 fils",
   },
   kicker: "Pompe à membrane brushless · 2 fils ou 5 fils",
   deck:
@@ -30,7 +30,7 @@ export const brushlessWiringArticleFrCopy = {
       "La commande d'entraînement de base est déjà intégrée dans le moteur. Le moteur fonctionne lorsqu'il est alimenté et s'arrête lorsque l'alimentation est coupée.",
       "Les principaux avantages de la configuration 2 fils sont donc un câblage simple, une commande simple et une intégration aisée dans le système.",
     ],
-    figureAlt: "Moteur brushless FOREACH DPL60 à 2 fils",
+    figureAlt: "Moteur brushless Foreach DPL60 à 2 fils",
     figureCaption:
       "Figure 1 | Moteur brushless DPL60 à 2 fils. La configuration conserve les connexions d'alimentation de base.",
     selectionTitle: "Quand choisir 2 fils ?",
@@ -64,7 +64,7 @@ export const brushlessWiringArticleFrCopy = {
       "Par rapport à 2 fils, le principal avantage de 5 fils est que le contrôleur de l'équipement peut piloter plus précisément le fonctionnement du moteur et obtenir un retour de vitesse.",
       "Par exemple, un signal PWM permet de régler la vitesse du moteur, tandis qu'un signal FG peut aider à déterminer si le moteur fonctionne normalement. L'ordre exact des fils et la logique de commande peuvent varier selon le modèle ; il faut toujours suivre la spécification électrique du produit choisi.",
     ],
-    figureAlt: "Moteur brushless FOREACH DPL60 à 5 fils",
+    figureAlt: "Moteur brushless Foreach DPL60 à 5 fils",
     figureCaption:
       "Figure 2 | Moteur brushless DPL60 à 5 fils. Des connexions de commande et de retour peuvent s'ajouter à l'alimentation.",
     selectionTitle: "Quand choisir 5 fils ?",
@@ -152,9 +152,9 @@ export const brushlessWiringArticleFrCopy = {
       "Avec balais / brushless décrit le type de moteur ; 2 fils / 5 fils décrit la sortie des fils et le mode de commande. Ce ne sont pas les mêmes notions. Deux fils ne signifie pas moteur à balais, et cinq fils ne définit pas à lui seul un moteur brushless.",
   },
   products: {
-    title: "Quelles pompes à membrane miniatures FOREACH peuvent utiliser 2 ou 5 fils ?",
+    title: "Quelles pompes à membrane miniatures Foreach peuvent utiliser 2 ou 5 fils ?",
     intro:
-      "Plusieurs séries de pompes à membrane miniatures FOREACH permettent de confirmer une sortie de fils adaptée au modèle précis et aux besoins de commande du projet, notamment :",
+      "Plusieurs séries de pompes à membrane miniatures Foreach permettent de confirmer une sortie de fils adaptée au modèle précis et aux besoins de commande du projet, notamment :",
     cards: [
       {
         label: "Pompe à membrane miniature pour liquide",

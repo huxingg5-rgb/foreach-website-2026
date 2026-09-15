@@ -3,10 +3,10 @@ import type { BrushlessWiringArticleCopy } from "./brushless-diaphragm-pump-2-wi
 export const brushlessWiringArticleKoCopy = {
   metadata: {
     title: "브러시리스 다이어프램 펌프 2선식과 5선식의 차이와 선택 방법",
-    seoTitle: "브러시리스 다이어프램 펌프 2선식 vs 5선식 | FOREACH",
+    seoTitle: "브러시리스 다이어프램 펌프 2선식 vs 5선식 | Foreach Technology",
     seoDescription:
-      "브러시리스 다이어프램 펌프의 2선식과 5선식 차이, VCC·GND·PWM·DIR·FG 신호 기능, 적용 조건과 FOREACH DPL30, DPL60, DPL30H 및 DPGL800 시리즈의 배선 구성 선택 방법을 설명합니다.",
-    coverAlt: "FOREACH DPL60 2선식 브러시리스 모터",
+      "브러시리스 다이어프램 펌프의 2선식과 5선식 차이, VCC·GND·PWM·DIR·FG 신호 기능, 적용 조건과 Foreach DPL30, DPL60, DPL30H 및 DPGL800 시리즈의 배선 구성 선택 방법을 설명합니다.",
+    coverAlt: "Foreach DPL60 2선식 브러시리스 모터",
   },
   kicker: "브러시리스 다이어프램 펌프 · 2선식과 5선식",
   deck:
@@ -29,7 +29,7 @@ export const brushlessWiringArticleKoCopy = {
       "기본 구동 제어가 모터 내부에 통합되어 있어 전원이 공급되면 운전하고 전원이 차단되면 정지합니다.",
       "따라서 2선식의 가장 큰 특징은 간단한 배선, 간단한 제어와 편리한 시스템 통합입니다.",
     ],
-    figureAlt: "FOREACH DPL60 2선식 브러시리스 모터",
+    figureAlt: "Foreach DPL60 2선식 브러시리스 모터",
     figureCaption:
       "그림 1 | DPL60 2선식 브러시리스 모터. 2선식 구성은 기본 전원 연결을 사용합니다.",
     selectionTitle: "어떤 경우에 2선식을 선택합니까?",
@@ -61,7 +61,7 @@ export const brushlessWiringArticleKoCopy = {
       "2선식과 비교하면 5선식의 핵심 장점은 장비의 메인 컨트롤러가 모터 운전 상태를 더 세밀하게 제어하고 회전 속도 피드백을 받을 수 있다는 점입니다.",
       "예를 들어 PWM 신호로 모터 속도를 조절하고 FG 신호로 모터가 정상적으로 운전 중인지 판단할 수 있습니다. 정확한 선 순서와 제어 로직은 모델마다 다를 수 있으므로 실제 사용 시에는 선택한 제품의 전기 사양을 따라야 합니다.",
     ],
-    figureAlt: "FOREACH DPL60 5선식 브러시리스 모터",
+    figureAlt: "Foreach DPL60 5선식 브러시리스 모터",
     figureCaption:
       "그림 2 | DPL60 5선식 브러시리스 모터. 전원 외에 제어 및 피드백 연결을 추가할 수 있습니다.",
     selectionTitle: "어떤 경우에 5선식을 선택합니까?",
@@ -139,9 +139,9 @@ export const brushlessWiringArticleKoCopy = {
       "브러시 / 브러시리스는 모터 유형을 설명하고, 2선식 / 5선식은 배선 출력과 제어 방식을 설명합니다. 두 개념은 서로 다릅니다. 2선식이 브러시 모터를 의미하지 않으며, 5선식 자체가 브러시리스 모터를 의미하는 것도 아닙니다.",
   },
   products: {
-    title: "FOREACH의 어떤 소형 다이어프램 펌프에서 2선식 또는 5선식을 선택할 수 있습니까?",
+    title: "Foreach의 어떤 소형 다이어프램 펌프에서 2선식 또는 5선식을 선택할 수 있습니까?",
     intro:
-      "FOREACH의 여러 소형 다이어프램 펌프 시리즈는 구체적인 모델과 프로젝트 제어 요구에 따라 적절한 배선 구성을 확인할 수 있습니다. 해당 시리즈는 다음과 같습니다.",
+      "Foreach의 여러 소형 다이어프램 펌프 시리즈는 구체적인 모델과 프로젝트 제어 요구에 따라 적절한 배선 구성을 확인할 수 있습니다. 해당 시리즈는 다음과 같습니다.",
     cards: [
       {
         label: "소형 액체 다이어프램 펌프",

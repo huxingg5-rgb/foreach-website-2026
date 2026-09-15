@@ -12,11 +12,11 @@ export const diaphragmPumpPressureRatingTermsFrCopy = {
     title:
       "Quelle différence entre pression nominale de service, pression de sortie maximale, pression d'épreuve et pression d'éclatement d'une micropompe à membrane ?",
     seoTitle:
-      "Pression nominale, maximale, d'épreuve et d'éclatement d'une micropompe | FOREACH",
+      "Pression nominale, maximale, d'épreuve et d'éclatement d'une micropompe | Foreach Technology",
     seoDescription:
       "La pression nominale de service, la pression de sortie maximale, la pression d'épreuve et la pression d'éclatement décrivent des limites différentes. Ce guide fournit un tableau terminologique, une liste des données à confirmer et une méthode de vérification des spécifications.",
     coverImage: PRESSURE_TERMS_ASSET_BASE + "/article-cover.webp",
-    coverAlt: "Micropompe à membrane FOREACH et banc d'essai de pression dans une vidéo Douyin officielle",
+    coverAlt: "Micropompe à membrane Foreach et banc d'essai de pression dans une vidéo Douyin officielle",
   },
   deck: "Une valeur de pression n'a de sens technique qu'avec sa définition, le fluide d'essai, la condition d'entrée, le débit, la durée et le critère d'acceptation. La pression nominale peut délimiter le fonctionnement autorisé ; la pression de sortie maximale, la pression d'épreuve et la pression d'éclatement ne constituent pas à elles seules des points de fonctionnement continu.",
   leadBlocks: [
@@ -109,7 +109,7 @@ export const diaphragmPumpPressureRatingTermsFrCopy = {
       blocks: [
         {
           type: "paragraph",
-          text: "Pour la pompe à membrane pour liquides haute pression FOREACH DPL30H, le site indique une « pression nominale de 600 kPa ». Cette valeur doit être interprétée avec le débit correspondant, le fluide, les conditions d'entrée, la température, le régime de service et la courbe débit-pression complète. Elle ne peut pas être extrapolée automatiquement comme pression d'épreuve, pression d'éclatement ou capacité de transfert continu dans n'importe quelles conditions.",
+          text: "Pour la pompe à membrane pour liquides haute pression Foreach DPL30H, le site indique une « pression nominale de 600 kPa ». Cette valeur doit être interprétée avec le débit correspondant, le fluide, les conditions d'entrée, la température, le régime de service et la courbe débit-pression complète. Elle ne peut pas être extrapolée automatiquement comme pression d'épreuve, pression d'éclatement ou capacité de transfert continu dans n'importe quelles conditions.",
         },
         {
           type: "paragraph",
@@ -172,18 +172,18 @@ export const diaphragmPumpPressureRatingTermsFrCopy = {
         },
         {
           type: "paragraph",
-          text: "Ce principe s'applique aussi strictement au contenu de FOREACH : si la spécification contrôlée publie une pression nominale, elle doit être décrite comme telle ; les valeurs non publiées de pression d'épreuve ou d'éclatement ne doivent pas être déduites de la structure, du matériau ou de paramètres voisins. Un article Web peut expliquer la méthode de sélection, mais ne remplace pas le dossier de libération du produit.",
+          text: "Ce principe s'applique aussi strictement au contenu de Foreach : si la spécification contrôlée publie une pression nominale, elle doit être décrite comme telle ; les valeurs non publiées de pression d'épreuve ou d'éclatement ne doivent pas être déduites de la structure, du matériau ou de paramètres voisins. Un article Web peut expliquer la méthode de sélection, mais ne remplace pas le dossier de libération du produit.",
         },
       ],
     },
     {
-      title: "Données du site FOREACH et limites des preuves",
+      title: "Données du site Foreach et limites des preuves",
       blocks: [
         {
           type: "links",
           items: [
             {
-              label: "FOREACH : Guide de sélection de la pompe à membrane pour liquide haute pression DPL30H",
+              label: "Foreach : Guide de sélection de la pompe à membrane pour liquide haute pression DPL30H",
               href: "/resources/technical-articles/dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide",
             },
           ],
@@ -236,11 +236,11 @@ export const diaphragmPumpPressureRatingTermsFrCopy = {
 export const diaphragmPump100KpaVs600KpaSelectionFrCopy = {
   metadata: {
     title: "100 kPa suffisent-ils ? Comment décider si le circuit exige une micropompe à membrane de 600 kPa",
-    seoTitle: "Micropompe de 100 ou 600 kPa : sélection par bilan de pression | FOREACH",
+    seoTitle: "Micropompe de 100 ou 600 kPa : sélection par bilan de pression | Foreach Technology",
     seoDescription:
       "Le nom de l'application ne suffit pas pour décider si 100 kPa conviennent. Le choix entre 100 et 600 kPa doit tenir compte du débit cible, des tubes, vannes, filtres, aiguilles, de la pression terminale et de la courbe de pompe.",
     coverImage: PRESSURE_LEVEL_SELECTION_ASSET_BASE + "/article-cover.webp",
-    coverAlt: "Micropompe à membrane FOREACH et essai de pression du circuit dans une vidéo Douyin officielle",
+    coverAlt: "Micropompe à membrane Foreach et essai de pression du circuit dans une vidéo Douyin officielle",
   },
   deck: "100 et 600 kPa ne correspondent pas à une version normale et à une version simplement améliorée. Il faut d'abord établir le bilan de pression de tout le circuit au débit cible, puis lire la courbe de la pompe candidate. Une classe de pression supérieure n'est utile que si la contre-pression réelle du circuit la justifie.",
   leadBlocks: [
@@ -333,7 +333,7 @@ export const diaphragmPump100KpaVs600KpaSelectionFrCopy = {
         },
         {
           type: "paragraph",
-          text: "Les pressions nominales publiques des pompes à membrane liquide ordinaires FOREACH DPL30 et DPL60 sont toutes deux de 100 kPa et les niveaux de débit à vide correspondants sont respectivement de 300 mL/min et 600 mL/min. Ils ne conviennent pas à un nom industriel fixe, mais à un chemin de liquide dont le point de fonctionnement cible peut se situer dans la courbe contrôlée et la plage de conditions de fonctionnement autorisées.",
+          text: "Les pressions nominales publiques des pompes à membrane liquide ordinaires Foreach DPL30 et DPL60 sont toutes deux de 100 kPa et les niveaux de débit à vide correspondants sont respectivement de 300 mL/min et 600 mL/min. Ils ne conviennent pas à un nom industriel fixe, mais à un chemin de liquide dont le point de fonctionnement cible peut se situer dans la courbe contrôlée et la plage de conditions de fonctionnement autorisées.",
         },
       ],
     },
@@ -353,7 +353,7 @@ export const diaphragmPump100KpaVs600KpaSelectionFrCopy = {
         },
         {
           type: "paragraph",
-          text: "La pompe à membrane pour liquides haute pression FOREACH DPL30H publie un débit à vide de 300 mL/min et une pression nominale de 600 kPa. Ces deux valeurs ne correspondent pas au même point de fonctionnement ; pour connaître le débit restant sous forte contre-pression, il faut consulter une version en vigueur de la courbe débit-pression.",
+          text: "La pompe à membrane pour liquides haute pression Foreach DPL30H publie un débit à vide de 300 mL/min et une pression nominale de 600 kPa. Ces deux valeurs ne correspondent pas au même point de fonctionnement ; pour connaître le débit restant sous forte contre-pression, il faut consulter une version en vigueur de la courbe débit-pression.",
         },
       ],
     },
@@ -400,7 +400,7 @@ export const diaphragmPump100KpaVs600KpaSelectionFrCopy = {
       blocks: [
         {
           type: "paragraph",
-          text: "Si le circuit de liquide ne nécessite pas de contre-pression élevée, la sélection directe d'une plate-forme de 600 kPa peut augmenter les contraintes sur les méthodes de connexion, les limites de matériaux et de température, l'alimentation électrique, la stratégie de contrôle, l'espace d'installation et le coût. En prenant comme exemple les informations publiques FOREACH, la hauteur d'auto-amorçage du DPL30 est de 6 mH₂O, la limite supérieure de la température du milieu est de +80 ℃ ; la hauteur d'auto-amorçage du DPL30H est de 3 mH₂O, la limite supérieure de la température du milieu est de +40 ℃ et il utilise une connexion par virole de tube dur de 6 × 4 mm.",
+          text: "Si le circuit de liquide ne nécessite pas de contre-pression élevée, la sélection directe d'une plate-forme de 600 kPa peut augmenter les contraintes sur les méthodes de connexion, les limites de matériaux et de température, l'alimentation électrique, la stratégie de contrôle, l'espace d'installation et le coût. En prenant comme exemple les informations publiques Foreach, la hauteur d'auto-amorçage du DPL30 est de 6 mH₂O, la limite supérieure de la température du milieu est de +80 ℃ ; la hauteur d'auto-amorçage du DPL30H est de 3 mH₂O, la limite supérieure de la température du milieu est de +40 ℃ et il utilise une connexion par virole de tube dur de 6 × 4 mm.",
         },
         {
           type: "paragraph",
@@ -429,21 +429,21 @@ export const diaphragmPump100KpaVs600KpaSelectionFrCopy = {
       ],
     },
     {
-      title: "Données du site FOREACH et limites des preuves",
+      title: "Données du site Foreach et limites des preuves",
       blocks: [
         {
           type: "links",
           items: [
             {
-              label: "FOREACH : Guide de sélection de la pompe à membrane pour liquide haute pression DPL30H",
+              label: "Foreach : Guide de sélection de la pompe à membrane pour liquide haute pression DPL30H",
               href: "/resources/technical-articles/dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide",
             },
             {
-              label: "FOREACH : Guide de sélection de la pompe à membrane liquide DPL30",
+              label: "Foreach : Guide de sélection de la pompe à membrane liquide DPL30",
               href: "/resources/technical-articles/dpl30-liquid-diaphragm-pump-selection-guide",
             },
             {
-              label: "FOREACH : Guide de sélection de la pompe à membrane liquide DPL60",
+              label: "Foreach : Guide de sélection de la pompe à membrane liquide DPL60",
               href: "/resources/technical-articles/dpl60-liquid-diaphragm-pump-selection-guide",
             },
           ],
@@ -495,12 +495,12 @@ export const diaphragmPump100KpaVs600KpaSelectionFrCopy = {
 
 export const highBackpressureFluidPathPressureBudgetFrCopy = {
   metadata: {
-    title: "Comment établir le bilan de pression d'un circuit à forte contre-pression ? Exemple de sélection FOREACH à 600 kPa",
-    seoTitle: "Bilan de pression d'un circuit à forte contre-pression et pompe de 600 kPa | FOREACH",
+    title: "Comment établir le bilan de pression d'un circuit à forte contre-pression ? Exemple de sélection Foreach à 600 kPa",
+    seoTitle: "Bilan de pression d'un circuit à forte contre-pression et pompe de 600 kPa | Foreach Technology",
     seoDescription:
       "Avant de choisir une pompe pour un circuit à forte contre-pression, il faut budgétiser séparément les pertes d'aspiration, de refoulement, des vannes, filtres, aiguilles, de la chambre terminale et de la hauteur statique ; marge et protection transitoire sont vérifiées à part.",
     coverImage: HIGH_BACKPRESSURE_BUDGET_ASSET_BASE + "/article-cover.webp",
-    coverAlt: "Essai d'un circuit sous contre-pression avec une micropompe FOREACH dans une vidéo Douyin officielle",
+    coverAlt: "Essai d'un circuit sous contre-pression avec une micropompe Foreach dans une vidéo Douyin officielle",
   },
   deck: "Dans un circuit à forte contre-pression, indiquer simplement au fournisseur que 6 bar sont requis ne suffit pas. Chaque perte stable doit être calculée au débit cible, en séparant régime normal, pire régime permanent, marge de pression et limites de protection transitoire, puis comparée à la courbe contrôlée de la pompe candidate.",
   leadBlocks: [
@@ -699,11 +699,11 @@ export const highBackpressureFluidPathPressureBudgetFrCopy = {
       ],
     },
     {
-      title: "5. Exemple avec FOREACH DPL30H : traduire l'analyse en sélection de produit",
+      title: "5. Exemple avec Foreach DPL30H : traduire l'analyse en sélection de produit",
       blocks: [
         {
           type: "paragraph",
-          text: "Les paramètres publics de la pompe à membrane liquide haute pression FOREACH DPL30H comprennent un débit à vide de 300 mL/min, une pression nominale de 600 kPa, une hauteur d'auto-amorçage de 3 mH₂O et une connexion par virole à tube dur de 6 × 4 mm. Il peut entrer dans le pool de candidats à haute contre-pression, mais la sélection se concentre toujours sur le débit qui peut être fourni à la contre-pression cible et si le point de fonctionnement se situe dans le milieu, la température et la plage de fonctionnement autorisées par les spécifications contrôlées.",
+          text: "Les paramètres publics de la pompe à membrane liquide haute pression Foreach DPL30H comprennent un débit à vide de 300 mL/min, une pression nominale de 600 kPa, une hauteur d'auto-amorçage de 3 mH₂O et une connexion par virole à tube dur de 6 × 4 mm. Il peut entrer dans le pool de candidats à haute contre-pression, mais la sélection se concentre toujours sur le débit qui peut être fourni à la contre-pression cible et si le point de fonctionnement se situe dans le milieu, la température et la plage de fonctionnement autorisées par les spécifications contrôlées.",
         },
         {
           type: "paragraph",
@@ -776,13 +776,13 @@ export const highBackpressureFluidPathPressureBudgetFrCopy = {
       ],
     },
     {
-      title: "Données du site FOREACH et limites des preuves",
+      title: "Données du site Foreach et limites des preuves",
       blocks: [
         {
           type: "links",
           items: [
             {
-              label: "FOREACH : Guide de sélection de la pompe à membrane pour liquide haute pression DPL30H",
+              label: "Foreach : Guide de sélection de la pompe à membrane pour liquide haute pression DPL30H",
               href: "/resources/technical-articles/dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide",
             },
           ],

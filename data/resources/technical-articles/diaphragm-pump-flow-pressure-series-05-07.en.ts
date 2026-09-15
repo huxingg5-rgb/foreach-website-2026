@@ -12,12 +12,12 @@ export const diaphragmPumpPressureRatingTermsEnCopy = {
     title:
       "What Is the Difference Between Rated Working Pressure, Maximum Output Pressure, Proof Pressure, and Burst Pressure for a Miniature Diaphragm Pump?",
     seoTitle:
-      "Diaphragm Pump Rated Pressure vs Maximum Output, Proof, and Burst Pressure | FOREACH",
+      "Diaphragm Pump Rated Pressure vs Maximum Output, Proof, and Burst Pressure | Foreach Technology",
     seoDescription:
       "Rated working pressure, maximum output pressure, proof pressure, and burst pressure are not interchangeable for a miniature diaphragm pump. This guide compares the terms and provides a parameter checklist and specification-review method.",
     coverImage: `${PRESSURE_TERMS_ASSET_BASE}/article-cover.webp`,
     coverAlt:
-      "Real-world miniature diaphragm pump and pressure-test footage from the official FOREACH Douyin channel",
+      "Real-world miniature diaphragm pump and pressure-test footage from the official Foreach Douyin channel",
   },
   deck:
     "A pressure value has engineering meaning only when it is paired with a term definition, test fluid, inlet condition, corresponding flow rate, duration, and acceptance criteria. Rated working pressure can define an operating boundary; maximum output pressure, proof-test pressure, and burst pressure cannot be treated directly as continuous operating points.",
@@ -118,7 +118,7 @@ export const diaphragmPumpPressureRatingTermsEnCopy = {
         {
           type: "paragraph",
           text:
-            "Take the FOREACH DPL30H high-pressure liquid diaphragm pump as an example. The website lists a rated pressure of 600 kPa. This value must be interpreted together with the corresponding flow rate, fluid, inlet condition, temperature, duty cycle, and complete flow-pressure curve. It cannot be extended automatically to proof pressure, burst pressure, or continuous delivery capability under arbitrary conditions.",
+            "Take the Foreach DPL30H high-pressure liquid diaphragm pump as an example. The website lists a rated pressure of 600 kPa. This value must be interpreted together with the corresponding flow rate, fluid, inlet condition, temperature, duty cycle, and complete flow-pressure curve. It cannot be extended automatically to proof pressure, burst pressure, or continuous delivery capability under arbitrary conditions.",
         },
         {
           type: "paragraph",
@@ -188,19 +188,19 @@ export const diaphragmPumpPressureRatingTermsEnCopy = {
         {
           type: "paragraph",
           text:
-            "FOREACH content follows the same principle: when the controlled specification publishes rated pressure, it is described as rated pressure. Undisclosed proof and burst values are not estimated from construction, materials, or similar parameters. A webpage can explain a selection method, but it cannot replace product-release documentation.",
+            "Foreach content follows the same principle: when the controlled specification publishes rated pressure, it is described as rated pressure. Undisclosed proof and burst values are not estimated from construction, materials, or similar parameters. A webpage can explain a selection method, but it cannot replace product-release documentation.",
         },
       ],
     },
     {
-      title: "FOREACH Resources and Evidence Boundary",
+      title: "Foreach Resources and Evidence Boundary",
       blocks: [
         {
           type: "links",
           items: [
             {
               label:
-                "FOREACH: DPL30H High-Pressure Liquid Diaphragm Pump Selection Guide",
+                "Foreach: DPL30H High-Pressure Liquid Diaphragm Pump Selection Guide",
               href: "/resources/technical-articles/dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide",
             },
           ],
@@ -209,7 +209,7 @@ export const diaphragmPumpPressureRatingTermsEnCopy = {
           type: "notice",
           label: "Evidence boundary:",
           text:
-            "Public FOREACH resources explain pressure terminology and selection methods. Formulas and examples are for preliminary engineering screening only; they do not replace a controlled specification, evaluation with the actual fluid, or full-system prototype validation.",
+            "Public Foreach resources explain pressure terminology and selection methods. Formulas and examples are for preliminary engineering screening only; they do not replace a controlled specification, evaluation with the actual fluid, or full-system prototype validation.",
         },
       ],
     },
@@ -255,14 +255,14 @@ export const diaphragmPumpPressureRatingTermsEnCopy = {
 export const highBackpressureFluidPathPressureBudgetEnCopy = {
   metadata: {
     title:
-      "How Do You Build a Pressure Budget for a High-Backpressure Fluid Path? A FOREACH 600 kPa Miniature Diaphragm Pump Selection Example",
+      "How Do You Build a Pressure Budget for a High-Backpressure Fluid Path? A Foreach 600 kPa Miniature Diaphragm Pump Selection Example",
     seoTitle:
-      "High-Backpressure Fluid-Path Pressure Budget: 600 kPa Miniature Diaphragm Pump Selection | FOREACH",
+      "High-Backpressure Fluid-Path Pressure Budget: 600 kPa Miniature Diaphragm Pump Selection | Foreach Technology",
     seoDescription:
       "Before selecting a pump for a high-backpressure fluid path, include the suction tube, discharge tube, valves, filter, needle, endpoint chamber, and static head in the steady-state budget, then review transient protection and pressure margin separately.",
     coverImage: `${HIGH_BACKPRESSURE_BUDGET_ASSET_BASE}/article-cover.webp`,
     coverAlt:
-      "Real-world high-backpressure fluid-path testing of a miniature diaphragm pump from the official FOREACH Douyin channel",
+      "Real-world high-backpressure fluid-path testing of a miniature diaphragm pump from the official Foreach Douyin channel",
   },
   deck:
     "For a high-backpressure fluid path, do not tell a supplier only that you need 6 bar. Break down steady-state pressure losses at the target flow, establish normal steady-state, worst steady-state, pressure-margin, and transient-protection boundaries separately, and then compare them with the candidate pump's controlled curve.",
@@ -484,12 +484,12 @@ export const highBackpressureFluidPathPressureBudgetEnCopy = {
       ],
     },
     {
-      title: "5. How the FOREACH DPL30H Enters the Product Shortlist",
+      title: "5. How the Foreach DPL30H Enters the Product Shortlist",
       blocks: [
         {
           type: "paragraph",
           text:
-            "Published parameters for the FOREACH DPL30H high-pressure liquid diaphragm pump include a 300 mL/min no-load flow, 600 kPa rated pressure, 3 mH₂O self-priming height, and a compression connection for 6 × 4 mm rigid tubing. This makes it a candidate for high-backpressure applications, but selection still centers on the flow available at the target backpressure and whether that point falls within the fluid, temperature, and duty-cycle limits of the controlled specification.",
+            "Published parameters for the Foreach DPL30H high-pressure liquid diaphragm pump include a 300 mL/min no-load flow, 600 kPa rated pressure, 3 mH₂O self-priming height, and a compression connection for 6 × 4 mm rigid tubing. This makes it a candidate for high-backpressure applications, but selection still centers on the flow available at the target backpressure and whether that point falls within the fluid, temperature, and duty-cycle limits of the controlled specification.",
         },
         {
           type: "paragraph",
@@ -573,14 +573,14 @@ export const highBackpressureFluidPathPressureBudgetEnCopy = {
       ],
     },
     {
-      title: "FOREACH Resources and Evidence Boundary",
+      title: "Foreach Resources and Evidence Boundary",
       blocks: [
         {
           type: "links",
           items: [
             {
               label:
-                "FOREACH: DPL30H High-Pressure Liquid Diaphragm Pump Selection Guide",
+                "Foreach: DPL30H High-Pressure Liquid Diaphragm Pump Selection Guide",
               href: "/resources/technical-articles/dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide",
             },
           ],
@@ -589,7 +589,7 @@ export const highBackpressureFluidPathPressureBudgetEnCopy = {
           type: "notice",
           label: "Evidence boundary:",
           text:
-            "Public FOREACH resources explain terminology only. Final design inputs must come from the controlled specification, evaluation with the actual fluid, dynamic pressure testing, and full-system validation.",
+            "Public Foreach resources explain terminology only. Final design inputs must come from the controlled specification, evaluation with the actual fluid, dynamic pressure testing, and full-system validation.",
         },
       ],
     },
@@ -641,12 +641,12 @@ export const diaphragmPump100KpaVs600KpaSelectionEnCopy = {
     title:
       "Is 100 kPa Enough? How to Determine Whether a Fluid Path Needs a 600 kPa High-Pressure Miniature Diaphragm Pump",
     seoTitle:
-      "100 kPa vs 600 kPa Miniature Diaphragm Pumps: Select by Fluid-Path Pressure Budget | FOREACH",
+      "100 kPa vs 600 kPa Miniature Diaphragm Pumps: Select by Fluid-Path Pressure Budget | Foreach Technology",
     seoDescription:
       "Whether 100 kPa is sufficient cannot be decided from the application name alone. Evaluate target flow, tubing, valves, filter, needle, endpoint pressure, and the pump curve to determine whether a 600 kPa high-pressure miniature diaphragm pump is needed.",
     coverImage: `${PRESSURE_LEVEL_SELECTION_ASSET_BASE}/article-cover.webp`,
     coverAlt:
-      "Real-world miniature diaphragm pump and fluid-path pressure-test footage from the official FOREACH Douyin channel",
+      "Real-world miniature diaphragm pump and fluid-path pressure-test footage from the official Foreach Douyin channel",
   },
   deck:
     "100 kPa and 600 kPa are not simply a standard version and an upgraded version. First complete a pressure budget for the entire fluid path at the target flow, then read the candidate pump curve. A higher pressure rating has value only when the application truly has high backpressure.",
@@ -752,7 +752,7 @@ export const diaphragmPump100KpaVs600KpaSelectionEnCopy = {
         {
           type: "paragraph",
           text:
-            "The published rated pressure of both the FOREACH DPL30 and DPL60 standard liquid diaphragm pumps is 100 kPa, with no-load flow classes of 300 mL/min and 600 mL/min, respectively. Their suitability is not tied to a fixed industry label; it depends on whether the target operating point lies within the controlled curve and allowable operating conditions.",
+            "The published rated pressure of both the Foreach DPL30 and DPL60 standard liquid diaphragm pumps is 100 kPa, with no-load flow classes of 300 mL/min and 600 mL/min, respectively. Their suitability is not tied to a fixed industry label; it depends on whether the target operating point lies within the controlled curve and allowable operating conditions.",
         },
       ],
     },
@@ -773,7 +773,7 @@ export const diaphragmPump100KpaVs600KpaSelectionEnCopy = {
         {
           type: "paragraph",
           text:
-            "The published no-load flow of the FOREACH DPL30H high-pressure liquid diaphragm pump is 300 mL/min, and its rated pressure is 600 kPa. The 300 mL/min and 600 kPa values do not represent the same operating point. Read a valid revision of the flow-pressure curve to determine how much flow remains at high backpressure.",
+            "The published no-load flow of the Foreach DPL30H high-pressure liquid diaphragm pump is 300 mL/min, and its rated pressure is 600 kPa. The 300 mL/min and 600 kPa values do not represent the same operating point. Read a valid revision of the flow-pressure curve to determine how much flow remains at high backpressure.",
         },
       ],
     },
@@ -822,7 +822,7 @@ export const diaphragmPump100KpaVs600KpaSelectionEnCopy = {
         {
           type: "paragraph",
           text:
-            "If the fluid path does not require high backpressure, selecting a 600 kPa platform directly can add constraints on connections, material and temperature boundaries, supply power, control strategy, installation space, and cost. For example, published FOREACH data list a self-priming height of 6 mH₂O and a maximum fluid temperature of +80°C for the DPL30. The DPL30H lists a self-priming height of 3 mH₂O, a maximum fluid temperature of +40°C, and a 6 × 4 mm rigid-tube compression connection.",
+            "If the fluid path does not require high backpressure, selecting a 600 kPa platform directly can add constraints on connections, material and temperature boundaries, supply power, control strategy, installation space, and cost. For example, published Foreach data list a self-priming height of 6 mH₂O and a maximum fluid temperature of +80°C for the DPL30. The DPL30H lists a self-priming height of 3 mH₂O, a maximum fluid temperature of +40°C, and a 6 × 4 mm rigid-tube compression connection.",
         },
         {
           type: "paragraph",
@@ -853,22 +853,28 @@ export const diaphragmPump100KpaVs600KpaSelectionEnCopy = {
       ],
     },
     {
-      title: "FOREACH Resources and Evidence Boundary",
+      title: "Foreach Resources and Evidence Boundary",
       blocks: [
         {
           type: "links",
           items: [
             {
+              prefix: "For a 600 kPa-class product candidate, review the ",
+              label: "DPL30H high-pressure liquid diaphragm pump series",
+              href: "/products/pumps/miniature-diaphragm-pumps/dpl30h-liquid-diaphragm-pump",
+              suffix: " and confirm the required flow at the calculated operating pressure.",
+            },
+            {
               label:
-                "FOREACH: DPL30H High-Pressure Liquid Diaphragm Pump Selection Guide",
+                "Foreach: DPL30H High-Pressure Liquid Diaphragm Pump Selection Guide",
               href: "/resources/technical-articles/dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide",
             },
             {
-              label: "FOREACH: DPL30 Liquid Diaphragm Pump Selection Guide",
+              label: "Foreach: DPL30 Liquid Diaphragm Pump Selection Guide",
               href: "/resources/technical-articles/dpl30-liquid-diaphragm-pump-selection-guide",
             },
             {
-              label: "FOREACH: DPL60 Liquid Diaphragm Pump Selection Guide",
+              label: "Foreach: DPL60 Liquid Diaphragm Pump Selection Guide",
               href: "/resources/technical-articles/dpl60-liquid-diaphragm-pump-selection-guide",
             },
           ],
@@ -877,7 +883,7 @@ export const diaphragmPump100KpaVs600KpaSelectionEnCopy = {
           type: "notice",
           label: "Evidence boundary:",
           text:
-            "FOREACH resources, formulas, and examples are for preliminary engineering screening only. They do not replace a controlled specification, complete curves, evaluation with the actual fluid, or full-system prototype validation.",
+            "Foreach resources, formulas, and examples are for preliminary engineering screening only. They do not replace a controlled specification, complete curves, evaluation with the actual fluid, or full-system prototype validation.",
         },
       ],
     },

@@ -33,9 +33,9 @@
         "selectionHref":  "/products/pumps/pipetting-pumps",
         "specSeriesKey":  "smtp2-1000ul",
         "mainImage":  "/images/products/pumps/pipetting-pumps/foreach-smtp2-1000ul-programmable-gas-displacement-pipetting-pump.webp",
-        "imageAltEn":  "FOREACH SMTP2 1000μL programmable gas displacement pipetting pump for automated sample transfer and reagent dispensing",
-        "imageAlt":  "FOREACH SMTP2 1000μL programmable gas displacement pipetting pump for automated sample transfer and reagent dispensing",
-        "mainImageAlt":  "FOREACH SMTP2 1000μL programmable gas displacement pipetting pump for automated sample transfer and reagent dispensing",
+        "imageAltEn":  "Foreach SMTP2 1000μL programmable gas displacement pipetting pump for automated sample transfer and reagent dispensing",
+        "imageAlt":  "Foreach SMTP2 1000μL programmable gas displacement pipetting pump for automated sample transfer and reagent dispensing",
+        "mainImageAlt":  "Foreach SMTP2 1000μL programmable gas displacement pipetting pump for automated sample transfer and reagent dispensing",
         "model3dUrl":  "/models/products/pumps/pipetting-pumps/foreach-smtp2-1000ul-programmable-gas-displacement-pipetting-pump.glb",
         "drawing2dUrl":  "/documents/products/pumps/pipetting-pumps/2d-drawings/foreach-smtp2-1000ul-programmable-gas-displacement-pipetting-pump-2d-drawing.pdf",
         "drawingPdfUrl":  "/documents/products/pumps/pipetting-pumps/2d-drawings/foreach-smtp2-1000ul-programmable-gas-displacement-pipetting-pump-2d-drawing.pdf",
@@ -43,7 +43,7 @@
                           "model3dUrl":  "/models/products/pumps/pipetting-pumps/foreach-smtp2-1000ul-programmable-gas-displacement-pipetting-pump.glb",
                           "drawing2dUrl":  "/documents/products/pumps/pipetting-pumps/2d-drawings/foreach-smtp2-1000ul-programmable-gas-displacement-pipetting-pump-2d-drawing.pdf",
                           "drawingPdfUrl":  "/documents/products/pumps/pipetting-pumps/2d-drawings/foreach-smtp2-1000ul-programmable-gas-displacement-pipetting-pump-2d-drawing.pdf",
-                          "imageAltEn":  "FOREACH SMTP2 1000μL programmable gas displacement pipetting pump for automated sample transfer and reagent dispensing"
+                          "imageAltEn":  "Foreach SMTP2 1000μL programmable gas displacement pipetting pump for automated sample transfer and reagent dispensing"
                       },
         "plannedFiles":  {
                              "mainImage":  "public/images/products/pumps/pipetting-pumps/foreach-smtp2-1000ul-programmable-gas-displacement-pipetting-pump.webp",
@@ -219,8 +219,8 @@
                      }
                  ],
         "seo":  {
-                    "title":  "SMTP2 1000μL 可编程气体置换式移液泵 | FOREACH",
-                    "description":  "FOREACH SMTP2 1000μL 可编程气体置换式移液泵，支持液面检测、尖端堵塞检测、吸头有无检测、自动脱吸头和 RS232/RS485/CAN 通讯，适用于自动化样本转移、试剂加样和微量液体处理。"
+                    "title":  "SMTP2 1000μL 可编程气体置换式移液泵 | Foreach Technology",
+                    "description":  "Foreach SMTP2 1000μL 可编程气体置换式移液泵，支持液面检测、尖端堵塞检测、吸头有无检测、自动脱吸头和 RS232/RS485/CAN 通讯，适用于自动化样本转移、试剂加样和微量液体处理。"
                 },
         "advantages":  [
 
@@ -549,9 +549,9 @@
         "selectionHref":  "/products/pumps/pipetting-pumps",
         "specSeriesKey":  "smtp4-100ul",
         "mainImage":  "/images/products/pumps/pipetting-pumps/foreach-smtp4-100ul-gas-displacement-pipetting-pump.webp",
-        "imageAltEn":  "FOREACH SMTP4 100μL gas displacement pipetting pump for small-volume automated pipetting",
-        "imageAlt":  "FOREACH SMTP4 100μL gas displacement pipetting pump for small-volume automated pipetting",
-        "mainImageAlt":  "FOREACH SMTP4 100μL gas displacement pipetting pump for small-volume automated pipetting",
+        "imageAltEn":  "Foreach SMTP4 100μL gas displacement pipetting pump for small-volume automated pipetting",
+        "imageAlt":  "Foreach SMTP4 100μL gas displacement pipetting pump for small-volume automated pipetting",
+        "mainImageAlt":  "Foreach SMTP4 100μL gas displacement pipetting pump for small-volume automated pipetting",
         "model3dUrl":  "/models/products/pumps/pipetting-pumps/foreach-smtp4-100ul-gas-displacement-pipetting-pump.glb",
         "drawing2dUrl":  "/documents/products/pumps/pipetting-pumps/2d-drawings/foreach-smtp4-100ul-gas-displacement-pipetting-pump-2d-drawing.pdf",
         "drawingPdfUrl":  "/documents/products/pumps/pipetting-pumps/2d-drawings/foreach-smtp4-100ul-gas-displacement-pipetting-pump-2d-drawing.pdf",
@@ -559,7 +559,7 @@
                           "model3dUrl":  "/models/products/pumps/pipetting-pumps/foreach-smtp4-100ul-gas-displacement-pipetting-pump.glb",
                           "drawing2dUrl":  "/documents/products/pumps/pipetting-pumps/2d-drawings/foreach-smtp4-100ul-gas-displacement-pipetting-pump-2d-drawing.pdf",
                           "drawingPdfUrl":  "/documents/products/pumps/pipetting-pumps/2d-drawings/foreach-smtp4-100ul-gas-displacement-pipetting-pump-2d-drawing.pdf",
-                          "imageAltEn":  "FOREACH SMTP4 100μL gas displacement pipetting pump for small-volume automated pipetting"
+                          "imageAltEn":  "Foreach SMTP4 100μL gas displacement pipetting pump for small-volume automated pipetting"
                       },
         "plannedFiles":  {
                              "mainImage":  "public/images/products/pumps/pipetting-pumps/foreach-smtp4-100ul-gas-displacement-pipetting-pump.webp",
@@ -731,8 +731,8 @@
                      }
                  ],
         "seo":  {
-                    "title":  "SMTP4 100μL 气体置换式移液泵 | FOREACH",
-                    "description":  "FOREACH SMTP4 100μL 气体置换式移液泵，定量分辨率 0.05μL/步，支持自动脱吸头和定制吸头适配，适用于小体积样本转移、试剂加样和自动化移液。"
+                    "title":  "SMTP4 100μL 气体置换式移液泵 | Foreach Technology",
+                    "description":  "Foreach SMTP4 100μL 气体置换式移液泵，定量分辨率 0.05μL/步，支持自动脱吸头和定制吸头适配，适用于小体积样本转移、试剂加样和自动化移液。"
                 },
         "advantages":  [
 
@@ -1061,9 +1061,9 @@
         "selectionHref":  "/products/pumps/pipetting-pumps",
         "specSeriesKey":  "smtp4-500ul",
         "mainImage":  "/images/products/pumps/pipetting-pumps/foreach-smtp4-500ul-gas-displacement-pipetting-pump.webp",
-        "imageAltEn":  "FOREACH SMTP4 500μL gas displacement pipetting pump for automated sample transfer and reagent dispensing",
-        "imageAlt":  "FOREACH SMTP4 500μL gas displacement pipetting pump for automated sample transfer and reagent dispensing",
-        "mainImageAlt":  "FOREACH SMTP4 500μL gas displacement pipetting pump for automated sample transfer and reagent dispensing",
+        "imageAltEn":  "Foreach SMTP4 500μL gas displacement pipetting pump for automated sample transfer and reagent dispensing",
+        "imageAlt":  "Foreach SMTP4 500μL gas displacement pipetting pump for automated sample transfer and reagent dispensing",
+        "mainImageAlt":  "Foreach SMTP4 500μL gas displacement pipetting pump for automated sample transfer and reagent dispensing",
         "model3dUrl":  "/models/products/pumps/pipetting-pumps/foreach-smtp4-500ul-gas-displacement-pipetting-pump.glb",
         "drawing2dUrl":  "/documents/products/pumps/pipetting-pumps/2d-drawings/foreach-smtp4-500ul-gas-displacement-pipetting-pump-2d-drawing.pdf",
         "drawingPdfUrl":  "/documents/products/pumps/pipetting-pumps/2d-drawings/foreach-smtp4-500ul-gas-displacement-pipetting-pump-2d-drawing.pdf",
@@ -1071,7 +1071,7 @@
                           "model3dUrl":  "/models/products/pumps/pipetting-pumps/foreach-smtp4-500ul-gas-displacement-pipetting-pump.glb",
                           "drawing2dUrl":  "/documents/products/pumps/pipetting-pumps/2d-drawings/foreach-smtp4-500ul-gas-displacement-pipetting-pump-2d-drawing.pdf",
                           "drawingPdfUrl":  "/documents/products/pumps/pipetting-pumps/2d-drawings/foreach-smtp4-500ul-gas-displacement-pipetting-pump-2d-drawing.pdf",
-                          "imageAltEn":  "FOREACH SMTP4 500μL gas displacement pipetting pump for automated sample transfer and reagent dispensing"
+                          "imageAltEn":  "Foreach SMTP4 500μL gas displacement pipetting pump for automated sample transfer and reagent dispensing"
                       },
         "plannedFiles":  {
                              "mainImage":  "public/images/products/pumps/pipetting-pumps/foreach-smtp4-500ul-gas-displacement-pipetting-pump.webp",
@@ -1243,8 +1243,8 @@
                      }
                  ],
         "seo":  {
-                    "title":  "SMTP4 500μL 气体置换式移液泵 | FOREACH",
-                    "description":  "FOREACH SMTP4 500μL 气体置换式移液泵，定量分辨率 0.25μL/步，支持自动脱吸头和定制吸头适配，适用于样本转移、试剂加样和中等体积自动化移液。"
+                    "title":  "SMTP4 500μL 气体置换式移液泵 | Foreach Technology",
+                    "description":  "Foreach SMTP4 500μL 气体置换式移液泵，定量分辨率 0.25μL/步，支持自动脱吸头和定制吸头适配，适用于样本转移、试剂加样和中等体积自动化移液。"
                 },
         "advantages":  [
 

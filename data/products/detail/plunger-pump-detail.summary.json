@@ -12,275 +12,275 @@
     {
       "model": "EA-100-PMMA",
       "drawing2d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/2d/ea/EA-0100UL.pdf",
+        "relativePath": "private-assets/products/pumps/piston-pump/2d/ea/EA-0100UL.pdf",
         "exists": true
       },
       "model3d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/3d/ea/EA-0100UL.glb",
+        "relativePath": "private-assets/products/pumps/piston-pump/3d/ea/EA-0100UL.glb",
         "exists": true
       }
     },
     {
       "model": "EA-100-PEEK",
       "drawing2d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/2d/ea/EA-0100UL.pdf",
+        "relativePath": "private-assets/products/pumps/piston-pump/2d/ea/EA-0100UL.pdf",
         "exists": true
       },
       "model3d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/3d/ea/EA-0100UL.glb",
+        "relativePath": "private-assets/products/pumps/piston-pump/3d/ea/EA-0100UL.glb",
         "exists": true
       }
     },
     {
       "model": "EA-250-PMMA",
       "drawing2d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/2d/ea/EA-0250UL.pdf",
+        "relativePath": "private-assets/products/pumps/piston-pump/2d/ea/EA-0250UL.pdf",
         "exists": true
       },
       "model3d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/3d/ea/EA-0250UL.glb",
+        "relativePath": "private-assets/products/pumps/piston-pump/3d/ea/EA-0250UL.glb",
         "exists": true
       }
     },
     {
       "model": "EA-250-PEEK",
       "drawing2d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/2d/ea/EA-0250UL.pdf",
+        "relativePath": "private-assets/products/pumps/piston-pump/2d/ea/EA-0250UL.pdf",
         "exists": true
       },
       "model3d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/3d/ea/EA-0250UL.glb",
+        "relativePath": "private-assets/products/pumps/piston-pump/3d/ea/EA-0250UL.glb",
         "exists": true
       }
     },
     {
       "model": "EA-500-PMMA",
       "drawing2d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/2d/ea/EA-0500UL.pdf",
+        "relativePath": "private-assets/products/pumps/piston-pump/2d/ea/EA-0500UL.pdf",
         "exists": true
       },
       "model3d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/3d/ea/EA-0500UL.glb",
+        "relativePath": "private-assets/products/pumps/piston-pump/3d/ea/EA-0500UL.glb",
         "exists": true
       }
     },
     {
       "model": "EA-500-PEEK",
       "drawing2d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/2d/ea/EA-0500UL.pdf",
+        "relativePath": "private-assets/products/pumps/piston-pump/2d/ea/EA-0500UL.pdf",
         "exists": true
       },
       "model3d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/3d/ea/EA-0500UL.glb",
+        "relativePath": "private-assets/products/pumps/piston-pump/3d/ea/EA-0500UL.glb",
         "exists": true
       }
     },
     {
       "model": "EA-1000-PMMA",
       "drawing2d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/2d/ea/EA-1000UL.pdf",
+        "relativePath": "private-assets/products/pumps/piston-pump/2d/ea/EA-1000UL.pdf",
         "exists": true
       },
       "model3d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/3d/ea/EA-1000UL.glb",
+        "relativePath": "private-assets/products/pumps/piston-pump/3d/ea/EA-1000UL.glb",
         "exists": true
       }
     },
     {
       "model": "EA-1000-PEEK",
       "drawing2d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/2d/ea/EA-1000UL.pdf",
+        "relativePath": "private-assets/products/pumps/piston-pump/2d/ea/EA-1000UL.pdf",
         "exists": true
       },
       "model3d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/3d/ea/EA-1000UL.glb",
+        "relativePath": "private-assets/products/pumps/piston-pump/3d/ea/EA-1000UL.glb",
         "exists": true
       }
     },
     {
       "model": "EA-2500-PMMA",
       "drawing2d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/2d/ea/EA-2500UL.pdf",
+        "relativePath": "private-assets/products/pumps/piston-pump/2d/ea/EA-2500UL.pdf",
         "exists": true
       },
       "model3d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/3d/ea/EA-2500UL.glb",
+        "relativePath": "private-assets/products/pumps/piston-pump/3d/ea/EA-2500UL.glb",
         "exists": true
       }
     },
     {
       "model": "EA-2500-PEEK",
       "drawing2d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/2d/ea/EA-2500UL.pdf",
+        "relativePath": "private-assets/products/pumps/piston-pump/2d/ea/EA-2500UL.pdf",
         "exists": true
       },
       "model3d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/3d/ea/EA-2500UL.glb",
+        "relativePath": "private-assets/products/pumps/piston-pump/3d/ea/EA-2500UL.glb",
         "exists": true
       }
     },
     {
       "model": "EA-5000-PMMA",
       "drawing2d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/2d/ea/EA-5000UL.pdf",
+        "relativePath": "private-assets/products/pumps/piston-pump/2d/ea/EA-5000UL.pdf",
         "exists": true
       },
       "model3d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/3d/ea/EA-5000UL.glb",
+        "relativePath": "private-assets/products/pumps/piston-pump/3d/ea/EA-5000UL.glb",
         "exists": true
       }
     },
     {
       "model": "EA-5000-PEEK",
       "drawing2d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/2d/ea/EA-5000UL.pdf",
+        "relativePath": "private-assets/products/pumps/piston-pump/2d/ea/EA-5000UL.pdf",
         "exists": true
       },
       "model3d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/3d/ea/EA-5000UL.glb",
+        "relativePath": "private-assets/products/pumps/piston-pump/3d/ea/EA-5000UL.glb",
         "exists": true
       }
     },
     {
       "model": "EA-10000-PMMA",
       "drawing2d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/2d/ea/EA-10000UL.pdf",
+        "relativePath": "private-assets/products/pumps/piston-pump/2d/ea/EA-10000UL.pdf",
         "exists": true
       },
       "model3d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/3d/ea/EA-10000UL.glb",
+        "relativePath": "private-assets/products/pumps/piston-pump/3d/ea/EA-10000UL.glb",
         "exists": true
       }
     },
     {
       "model": "EA-10000-PEEK",
       "drawing2d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/2d/ea/EA-10000UL.pdf",
+        "relativePath": "private-assets/products/pumps/piston-pump/2d/ea/EA-10000UL.pdf",
         "exists": true
       },
       "model3d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/3d/ea/EA-10000UL.glb",
+        "relativePath": "private-assets/products/pumps/piston-pump/3d/ea/EA-10000UL.glb",
         "exists": true
       }
     },
     {
       "model": "SM-50-PMMA",
       "drawing2d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/2d/sm/SM-0050UL.pdf",
+        "relativePath": "private-assets/products/pumps/piston-pump/2d/sm/SM-0050UL.pdf",
         "exists": true
       },
       "model3d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/3d/sm/SM-0050UL.glb",
+        "relativePath": "private-assets/products/pumps/piston-pump/3d/sm/SM-0050UL.glb",
         "exists": true
       }
     },
     {
       "model": "SM-100-PMMA",
       "drawing2d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/2d/sm/SM-0100UL.pdf",
+        "relativePath": "private-assets/products/pumps/piston-pump/2d/sm/SM-0100UL.pdf",
         "exists": true
       },
       "model3d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/3d/sm/SM-0100UL.glb",
+        "relativePath": "private-assets/products/pumps/piston-pump/3d/sm/SM-0100UL.glb",
         "exists": true
       }
     },
     {
       "model": "SM-100-PEEK",
       "drawing2d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/2d/sm/SM-0100UL.pdf",
+        "relativePath": "private-assets/products/pumps/piston-pump/2d/sm/SM-0100UL.pdf",
         "exists": true
       },
       "model3d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/3d/sm/SM-0100UL.glb",
+        "relativePath": "private-assets/products/pumps/piston-pump/3d/sm/SM-0100UL.glb",
         "exists": true
       }
     },
     {
       "model": "SM-250-PMMA",
       "drawing2d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/2d/sm/SM-0250UL.pdf",
+        "relativePath": "private-assets/products/pumps/piston-pump/2d/sm/SM-0250UL.pdf",
         "exists": true
       },
       "model3d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/3d/sm/SM-0250UL.glb",
+        "relativePath": "private-assets/products/pumps/piston-pump/3d/sm/SM-0250UL.glb",
         "exists": true
       }
     },
     {
       "model": "SM-250-PEEK",
       "drawing2d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/2d/sm/SM-0250UL.pdf",
+        "relativePath": "private-assets/products/pumps/piston-pump/2d/sm/SM-0250UL.pdf",
         "exists": true
       },
       "model3d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/3d/sm/SM-0250UL.glb",
+        "relativePath": "private-assets/products/pumps/piston-pump/3d/sm/SM-0250UL.glb",
         "exists": true
       }
     },
     {
       "model": "SM-500-PMMA",
       "drawing2d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/2d/sm/SM-0500UL.pdf",
+        "relativePath": "private-assets/products/pumps/piston-pump/2d/sm/SM-0500UL.pdf",
         "exists": true
       },
       "model3d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/3d/sm/SM-0500UL.glb",
+        "relativePath": "private-assets/products/pumps/piston-pump/3d/sm/SM-0500UL.glb",
         "exists": true
       }
     },
     {
       "model": "SM-1000-PMMA",
       "drawing2d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/2d/sm/SM-1000UL.pdf",
+        "relativePath": "private-assets/products/pumps/piston-pump/2d/sm/SM-1000UL.pdf",
         "exists": true
       },
       "model3d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/3d/sm/SM-1000UL.glb",
+        "relativePath": "private-assets/products/pumps/piston-pump/3d/sm/SM-1000UL.glb",
         "exists": true
       }
     },
     {
       "model": "TM-50-PMMA",
       "drawing2d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/2d/tm/TM-0050UL.pdf",
+        "relativePath": "private-assets/products/pumps/piston-pump/2d/tm/TM-0050UL.pdf",
         "exists": true
       },
       "model3d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/3d/tm/TM-0050UL.glb",
+        "relativePath": "private-assets/products/pumps/piston-pump/3d/tm/TM-0050UL.glb",
         "exists": true
       }
     },
     {
       "model": "TM-100-PMMA",
       "drawing2d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/2d/tm/TM-0100UL.pdf",
+        "relativePath": "private-assets/products/pumps/piston-pump/2d/tm/TM-0100UL.pdf",
         "exists": true
       },
       "model3d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/3d/tm/TM-0100UL.glb",
+        "relativePath": "private-assets/products/pumps/piston-pump/3d/tm/TM-0100UL.glb",
         "exists": true
       }
     },
     {
       "model": "TM-250-PMMA",
       "drawing2d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/2d/tm/TM-0250UL.pdf",
+        "relativePath": "private-assets/products/pumps/piston-pump/2d/tm/TM-0250UL.pdf",
         "exists": true
       },
       "model3d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/3d/tm/TM-0250UL.glb",
+        "relativePath": "private-assets/products/pumps/piston-pump/3d/tm/TM-0250UL.glb",
         "exists": true
       }
     },
     {
       "model": "TM-500-PMMA",
       "drawing2d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/2d/tm/TM-0500UL.pdf",
+        "relativePath": "private-assets/products/pumps/piston-pump/2d/tm/TM-0500UL.pdf",
         "exists": true
       },
       "model3d": {
-        "relativePath": "private-assets/products/pumps/plunger-pumps/3d/tm/TM-0500UL.glb",
+        "relativePath": "private-assets/products/pumps/piston-pump/3d/tm/TM-0500UL.glb",
         "exists": true
       }
     }

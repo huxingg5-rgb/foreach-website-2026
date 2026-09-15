@@ -8,12 +8,12 @@ export const microDiaphragmPumpContinuousDutyLifeEnCopy = {
     title:
       "How Long Can a Miniature Diaphragm Pump Run Continuously? A Duty-Cycle and Life Guide",
     seoTitle:
-      "Miniature Diaphragm Pump Continuous Duty and Service Life | FOREACH",
+      "Miniature Diaphragm Pump Continuous Duty and Service Life | Foreach Technology",
     seoDescription:
       "Understand continuous duty, brushed versus brushless life, duty profiles, load, start-stop cycles, failure criteria, durability tests and B10 reliability for miniature diaphragm pumps.",
     coverImage: `${ARTICLE_ASSET_BASE}/article-cover.webp`,
     coverAlt:
-      "FOREACH miniature liquid diaphragm pump undergoing a continuous-duty laboratory test",
+      "Foreach miniature liquid diaphragm pump undergoing a continuous-duty laboratory test",
   },
   deck:
     "A pump described as suitable for continuous operation is not a pump with unlimited life. Continuous-duty capability, accumulated service life, calendar life and statistical reliability answer different engineering questions—and all depend on the stated load, fluid, electrical drive and environment.",
@@ -237,7 +237,7 @@ export const microDiaphragmPumpContinuousDutyLifeEnCopy = {
           width: 1200,
           height: 675,
           caption:
-            "B10 is the time at which the modeled cumulative failure proportion reaches 10%, so R(t)=0.9. The diagram is conceptual and is not measured life data for a FOREACH model.",
+            "B10 is the time at which the modeled cumulative failure proportion reaches 10%, so R(t)=0.9. The diagram is conceptual and is not measured life data for a Foreach model.",
         },
         {
           type: "formula",
@@ -347,7 +347,7 @@ export const microDiaphragmPumpContinuousDutyLifeEnCopy = {
   cta: {
     title: "Need to compare brushed and brushless life for your instrument?",
     description:
-      "Share the target service years, actual daily run time, start count, fluid, inlet and outlet pressure, PWM method, ambient temperature and maintenance strategy. FOREACH engineers can help define a DPL30 or DPL60 candidate and a realistic validation plan.",
+      "Share the target service years, actual daily run time, start count, fluid, inlet and outlet pressure, PWM method, ambient temperature and maintenance strategy. Foreach engineers can help define a DPL30 or DPL60 candidate and a realistic validation plan.",
     contactLabel: "Contact an engineer",
     productsLabel: "View diaphragm pumps",
   },

@@ -21,7 +21,7 @@ export const lifeScienceFrExactText = createFrenchExactText(
     "有生命科学设备液路设计或国产替代需求？":
       "Vous devez concevoir le circuit fluidique d’un équipement de sciences de la vie ou évaluer une solution de remplacement locale ?",
     "可提交应用类型、液体介质、目标流量、压力范围、管路尺寸、空间限制和当前问题，由恒永达工程团队协助评估泵阀管路组合、材料兼容性与实验液路方案。":
-      "Transmettez le type d’application, le fluide, le débit cible, la plage de pression, les dimensions des tubes, les contraintes d’encombrement et le problème actuel. L’équipe d’ingénierie FOREACH vous aidera à évaluer la combinaison de pompes, de vannes et de tubes, la compatibilité des matériaux et la solution fluidique.",
+      "Transmettez le type d’application, le fluide, le débit cible, la plage de pression, les dimensions des tubes, les contraintes d’encombrement et le problème actuel. L’équipe d’ingénierie Foreach vous aidera à évaluer la combinaison de pompes, de vannes et de tubes, la compatibilité des matériaux et la solution fluidique.",
     "提交应用需求": "Soumettre les exigences de l’application",
   },
 );

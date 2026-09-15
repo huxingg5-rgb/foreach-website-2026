@@ -19,7 +19,7 @@ import { getNewsPageData } from "@/services/resources/news/getNewsPageData";
 import "./news.css";
 
 export const metadata: Metadata = {
-  title: "公司新闻｜资源中心｜FOREACH 恒永达",
+  title: "公司新闻｜资源中心｜Foreach Technology 恒永达",
   description:
     "了解恒永达在展会活动、企业发展、技术创新、质量体系与重要公告中的最新动态。",
 };

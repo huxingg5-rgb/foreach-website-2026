@@ -66,12 +66,12 @@ const qualityAndRecognitionArticles: LocalizedArticleDefinition[] = [
         "seoDescription": "了解恒永达如何通过供应链管理、研发验证、生产制造、精密检测和数字化记录，保障微流体核心部件稳定交付。"
       },
       "en": {
-        "title": "From Engineering Validation to Reliable Delivery: Inside FOREACH Manufacturing and Quality Assurance",
-        "summary": "FOREACH integrates quality management across supplier control, engineering validation, manufacturing, final inspection, delivery, and customer feedback to support reliable microfluidic component supply.",
+        "title": "From Engineering Validation to Reliable Delivery: Inside Foreach Manufacturing and Quality Assurance",
+        "summary": "Foreach integrates quality management across supplier control, engineering validation, manufacturing, final inspection, delivery, and customer feedback to support reliable microfluidic component supply.",
         "content": [
           {
             "title": "Quality Across the Product Lifecycle",
-            "content": "Although microfluidic components are compact, they directly affect flow, pressure, sealing, and long-term instrument stability. FOREACH applies quality requirements across supplier management, material verification, engineering validation, assembly, final inspection, and delivery."
+            "content": "Although microfluidic components are compact, they directly affect flow, pressure, sealing, and long-term instrument stability. Foreach applies quality requirements across supplier management, material verification, engineering validation, assembly, final inspection, and delivery."
           },
           {
             "title": "Standardized Processes and Digital Records",
@@ -79,23 +79,23 @@ const qualityAndRecognitionArticles: LocalizedArticleDefinition[] = [
           },
           {
             "title": "Inspection and Validation for Reliable Delivery",
-            "content": "FOREACH verifies critical dimensions, appearance, assembly status, sealing, pressure, flow, and electrical performance through precision measuring equipment, dedicated fixtures, and process records."
+            "content": "Foreach verifies critical dimensions, appearance, assembly status, sealing, pressure, flow, and electrical performance through precision measuring equipment, dedicated fixtures, and process records."
           },
           {
             "title": "Continuous Improvement for Customer Applications",
             "content": "Quality issues identified during incoming inspection, manufacturing, final inspection, or customer use enter a closed-loop process covering nonconforming product control, cause analysis, corrective action, reinspection, and improvement."
           }
         ],
-        "seoTitle": "FOREACH Manufacturing and Quality Assurance | Reliable Microfluidic Component Delivery",
-        "seoDescription": "Learn how FOREACH uses supplier control, engineering validation, manufacturing, precision inspection, and digital records to support reliable microfluidic component delivery."
+        "seoTitle": "Foreach Manufacturing and Quality Assurance | Reliable Microfluidic Component Delivery",
+        "seoDescription": "Learn how Foreach uses supplier control, engineering validation, manufacturing, precision inspection, and digital records to support reliable microfluidic component delivery."
       },
       "es": {
-        "title": "De la validación de ingeniería a una entrega fiable: fabricación y aseguramiento de calidad en FOREACH",
-        "summary": "FOREACH integra la gestión de calidad en el control de proveedores, la validación, la fabricación, la inspección final, la entrega y la retroalimentación del cliente.",
+        "title": "De la validación de ingeniería a una entrega fiable: fabricación y aseguramiento de calidad en Foreach",
+        "summary": "Foreach integra la gestión de calidad en el control de proveedores, la validación, la fabricación, la inspección final, la entrega y la retroalimentación del cliente.",
         "content": [
           {
             "title": "Calidad durante todo el ciclo de vida",
-            "content": "Aunque los componentes microfluídicos son pequeños, influyen directamente en el caudal, la presión, la estanqueidad y la estabilidad del instrumento. FOREACH aplica requisitos de calidad desde los proveedores hasta la entrega."
+            "content": "Aunque los componentes microfluídicos son pequeños, influyen directamente en el caudal, la presión, la estanqueidad y la estabilidad del instrumento. Foreach aplica requisitos de calidad desde los proveedores hasta la entrega."
           },
           {
             "title": "Procesos estandarizados y registros digitales",
@@ -103,23 +103,23 @@ const qualityAndRecognitionArticles: LocalizedArticleDefinition[] = [
           },
           {
             "title": "Inspección y validación para una entrega estable",
-            "content": "FOREACH verifica dimensiones, apariencia, montaje, estanqueidad, presión, caudal y rendimiento eléctrico mediante equipos de medición, utillajes y registros de proceso."
+            "content": "Foreach verifica dimensiones, apariencia, montaje, estanqueidad, presión, caudal y rendimiento eléctrico mediante equipos de medición, utillajes y registros de proceso."
           },
           {
             "title": "Mejora continua orientada a la aplicación",
             "content": "Las incidencias detectadas durante la recepción, fabricación, inspección final o uso del cliente se gestionan mediante análisis de causas, acciones correctivas, reinspección y mejora."
           }
         ],
-        "seoTitle": "Fabricación y aseguramiento de calidad FOREACH",
-        "seoDescription": "Conozca cómo FOREACH utiliza validación, fabricación, inspección de precisión y registros digitales para garantizar componentes microfluídicos fiables."
+        "seoTitle": "Fabricación y aseguramiento de calidad Foreach",
+        "seoDescription": "Conozca cómo Foreach utiliza validación, fabricación, inspección de precisión y registros digitales para garantizar componentes microfluídicos fiables."
       },
       "fr": {
-        "title": "De la validation technique à une livraison fiable : fabrication et assurance qualité chez FOREACH",
-        "summary": "FOREACH intègre la qualité dans le contrôle fournisseurs, la validation, la fabrication, le contrôle final, la livraison et le retour client.",
+        "title": "De la validation technique à une livraison fiable : fabrication et assurance qualité chez Foreach",
+        "summary": "Foreach intègre la qualité dans le contrôle fournisseurs, la validation, la fabrication, le contrôle final, la livraison et le retour client.",
         "content": [
           {
             "title": "La qualité sur tout le cycle de vie",
-            "content": "Malgré leur petite taille, les composants microfluidiques influencent directement le débit, la pression, l’étanchéité et la stabilité des instruments. FOREACH applique des exigences qualité de l’approvisionnement à la livraison."
+            "content": "Malgré leur petite taille, les composants microfluidiques influencent directement le débit, la pression, l’étanchéité et la stabilité des instruments. Foreach applique des exigences qualité de l’approvisionnement à la livraison."
           },
           {
             "title": "Processus standardisés et données numériques",
@@ -127,23 +127,23 @@ const qualityAndRecognitionArticles: LocalizedArticleDefinition[] = [
           },
           {
             "title": "Contrôle et validation pour une livraison stable",
-            "content": "FOREACH vérifie les dimensions critiques, l’apparence, l’assemblage, l’étanchéité, la pression, le débit et les performances électriques."
+            "content": "Foreach vérifie les dimensions critiques, l’apparence, l’assemblage, l’étanchéité, la pression, le débit et les performances électriques."
           },
           {
             "title": "Amélioration continue orientée client",
             "content": "Les anomalies détectées à la réception, en fabrication, au contrôle final ou chez le client sont traitées par analyse des causes, action corrective, recontrôle et amélioration."
           }
         ],
-        "seoTitle": "Fabrication et assurance qualité FOREACH",
-        "seoDescription": "Découvrez comment FOREACH associe validation, fabrication, contrôle de précision et traçabilité numérique pour fournir des composants microfluidiques fiables."
+        "seoTitle": "Fabrication et assurance qualité Foreach",
+        "seoDescription": "Découvrez comment Foreach associe validation, fabrication, contrôle de précision et traçabilité numérique pour fournir des composants microfluidiques fiables."
       },
       "ko": {
-        "title": "설계 검증부터 안정적인 납품까지: FOREACH 생산 및 품질 보증 체계",
-        "summary": "FOREACH는 공급망, 설계 검증, 생산, 최종 검사, 납품 및 고객 피드백 전 과정에 품질 관리를 적용합니다.",
+        "title": "설계 검증부터 안정적인 납품까지: Foreach 생산 및 품질 보증 체계",
+        "summary": "Foreach는 공급망, 설계 검증, 생산, 최종 검사, 납품 및 고객 피드백 전 과정에 품질 관리를 적용합니다.",
         "content": [
           {
             "title": "제품 전 수명주기에 적용되는 품질 관리",
-            "content": "미세유체 부품은 크기가 작지만 유량, 압력, 밀봉 성능과 장비 안정성에 직접적인 영향을 줍니다. FOREACH는 공급업체 관리부터 최종 납품까지 품질 요구사항을 적용합니다."
+            "content": "미세유체 부품은 크기가 작지만 유량, 압력, 밀봉 성능과 장비 안정성에 직접적인 영향을 줍니다. Foreach는 공급업체 관리부터 최종 납품까지 품질 요구사항을 적용합니다."
           },
           {
             "title": "표준화된 프로세스와 디지털 기록",
@@ -158,16 +158,16 @@ const qualityAndRecognitionArticles: LocalizedArticleDefinition[] = [
             "content": "입고, 생산, 최종 검사 또는 고객 사용 과정에서 발견된 이상은 원인 분석, 시정 조치, 재검사 및 개선 절차를 통해 관리됩니다."
           }
         ],
-        "seoTitle": "FOREACH 생산 및 품질 보증 체계",
-        "seoDescription": "FOREACH가 설계 검증, 생산, 정밀 검사 및 디지털 기록을 통해 미세유체 부품의 안정적인 납품을 지원하는 방법을 소개합니다."
+        "seoTitle": "Foreach 생산 및 품질 보증 체계",
+        "seoDescription": "Foreach가 설계 검증, 생산, 정밀 검사 및 디지털 기록을 통해 미세유체 부품의 안정적인 납품을 지원하는 방법을 소개합니다."
       },
       "ru": {
-        "title": "От инженерной валидации до стабильных поставок: производство и обеспечение качества FOREACH",
-        "summary": "FOREACH применяет управление качеством на этапах работы с поставщиками, валидации, производства, финального контроля, поставки и обратной связи.",
+        "title": "От инженерной валидации до стабильных поставок: производство и обеспечение качества Foreach",
+        "summary": "Foreach применяет управление качеством на этапах работы с поставщиками, валидации, производства, финального контроля, поставки и обратной связи.",
         "content": [
           {
             "title": "Качество на всем жизненном цикле",
-            "content": "Несмотря на малые размеры, микрофлюидные компоненты напрямую влияют на расход, давление, герметичность и стабильность оборудования. FOREACH контролирует качество от поставщиков до поставки."
+            "content": "Несмотря на малые размеры, микрофлюидные компоненты напрямую влияют на расход, давление, герметичность и стабильность оборудования. Foreach контролирует качество от поставщиков до поставки."
           },
           {
             "title": "Стандартизированные процессы и цифровые записи",
@@ -175,15 +175,15 @@ const qualityAndRecognitionArticles: LocalizedArticleDefinition[] = [
           },
           {
             "title": "Контроль и валидация для надежной поставки",
-            "content": "FOREACH проверяет размеры, внешний вид, сборку, герметичность, давление, расход и электрические характеристики с помощью измерительного оборудования и испытательной оснастки."
+            "content": "Foreach проверяет размеры, внешний вид, сборку, герметичность, давление, расход и электрические характеристики с помощью измерительного оборудования и испытательной оснастки."
           },
           {
             "title": "Непрерывное улучшение для задач клиентов",
             "content": "Несоответствия, выявленные при приемке, производстве, финальном контроле или эксплуатации, проходят анализ причин, корректирующие действия, повторную проверку и улучшение."
           }
         ],
-        "seoTitle": "Производство и обеспечение качества FOREACH",
-        "seoDescription": "Узнайте, как FOREACH использует валидацию, производство, точный контроль и цифровую прослеживаемость для стабильных поставок микрофлюидных компонентов."
+        "seoTitle": "Производство и обеспечение качества Foreach",
+        "seoDescription": "Узнайте, как Foreach использует валидацию, производство, точный контроль и цифровую прослеживаемость для стабильных поставок микрофлюидных компонентов."
       }
     }
   },
@@ -215,104 +215,104 @@ const qualityAndRecognitionArticles: LocalizedArticleDefinition[] = [
         "seoDescription": "恒永达凭借在微流体控制领域的长期专注、技术积累与创新能力，获评国家级专精特新“小巨人”企业。"
       },
       "en": {
-        "title": "FOREACH Recognized as a National-Level Specialized and Innovative “Little Giant” Enterprise",
-        "summary": "FOREACH received national-level recognition for its specialization, technology development, and innovation in microfluidic control.",
+        "title": "Foreach Recognized as a National-Level Specialized and Innovative “Little Giant” Enterprise",
+        "summary": "Foreach received national-level recognition for its specialization, technology development, and innovation in microfluidic control.",
         "content": [
           {
             "title": "National-Level Enterprise Recognition",
-            "content": "FOREACH was included in the national-level list of Specialized, Sophisticated, Distinctive and Innovative “Little Giant” enterprises, recognizing its focused development and innovation capability in microfluidic control."
+            "content": "Foreach was included in the national-level list of Specialized, Sophisticated, Distinctive and Innovative “Little Giant” enterprises, recognizing its focused development and innovation capability in microfluidic control."
           },
           {
             "title": "Long-Term Focus on Core Microfluidic Components",
-            "content": "FOREACH develops pumps, valves, probes, sensors, fittings, tubing components, and fluidic system support for IVD, life science, laboratory automation, and analytical instruments."
+            "content": "Foreach develops pumps, valves, probes, sensors, fittings, tubing components, and fluidic system support for IVD, life science, laboratory automation, and analytical instruments."
           },
           {
             "title": "Professional Capability for Customer Applications",
-            "content": "The recognition reflects the company’s specialization and innovation. FOREACH will continue to strengthen product development, manufacturing, quality assurance, and engineering support."
+            "content": "The recognition reflects the company’s specialization and innovation. Foreach will continue to strengthen product development, manufacturing, quality assurance, and engineering support."
           }
         ],
-        "seoTitle": "FOREACH Recognized as a National-Level Specialized and Innovative Little Giant Enterprise",
-        "seoDescription": "FOREACH received national-level recognition for specialization and innovation in microfluidic components and fluid control technologies."
+        "seoTitle": "Foreach Recognized as a National-Level Specialized and Innovative Little Giant Enterprise",
+        "seoDescription": "Foreach received national-level recognition for specialization and innovation in microfluidic components and fluid control technologies."
       },
       "es": {
-        "title": "FOREACH reconocida como empresa nacional especializada e innovadora “Pequeño Gigante”",
-        "summary": "FOREACH recibió este reconocimiento nacional por su especialización, desarrollo tecnológico e innovación en control microfluídico.",
+        "title": "Foreach reconocida como empresa nacional especializada e innovadora “Pequeño Gigante”",
+        "summary": "Foreach recibió este reconocimiento nacional por su especialización, desarrollo tecnológico e innovación en control microfluídico.",
         "content": [
           {
             "title": "Reconocimiento empresarial nacional",
-            "content": "FOREACH fue incluida en la lista nacional de empresas especializadas, refinadas, diferenciadas e innovadoras conocidas como “Pequeño Gigante”."
+            "content": "Foreach fue incluida en la lista nacional de empresas especializadas, refinadas, diferenciadas e innovadoras conocidas como “Pequeño Gigante”."
           },
           {
             "title": "Enfoque continuo en componentes microfluídicos",
-            "content": "FOREACH desarrolla bombas, válvulas, sondas, sensores, racores, tubos y soporte de sistemas para IVD, ciencias de la vida, automatización de laboratorio e instrumentos analíticos."
+            "content": "Foreach desarrolla bombas, válvulas, sondas, sensores, racores, tubos y soporte de sistemas para IVD, ciencias de la vida, automatización de laboratorio e instrumentos analíticos."
           },
           {
             "title": "Capacidad profesional para los clientes",
-            "content": "El reconocimiento refleja la especialización e innovación de la empresa. FOREACH continuará reforzando el desarrollo, la fabricación, la calidad y el soporte técnico."
+            "content": "El reconocimiento refleja la especialización e innovación de la empresa. Foreach continuará reforzando el desarrollo, la fabricación, la calidad y el soporte técnico."
           }
         ],
-        "seoTitle": "FOREACH reconocida como empresa nacional Pequeño Gigante",
-        "seoDescription": "FOREACH obtuvo reconocimiento nacional por su especialización e innovación en componentes microfluídicos y control de fluidos."
+        "seoTitle": "Foreach reconocida como empresa nacional Pequeño Gigante",
+        "seoDescription": "Foreach obtuvo reconocimiento nacional por su especialización e innovación en componentes microfluídicos y control de fluidos."
       },
       "fr": {
-        "title": "FOREACH reconnue comme entreprise nationale spécialisée et innovante « Little Giant »",
-        "summary": "Cette reconnaissance nationale souligne la spécialisation, le développement technologique et l’innovation de FOREACH dans le contrôle microfluidique.",
+        "title": "Foreach reconnue comme entreprise nationale spécialisée et innovante « Little Giant »",
+        "summary": "Cette reconnaissance nationale souligne la spécialisation, le développement technologique et l’innovation de Foreach dans le contrôle microfluidique.",
         "content": [
           {
             "title": "Une reconnaissance nationale",
-            "content": "FOREACH a intégré la liste nationale des entreprises spécialisées, performantes, distinctives et innovantes dites « Little Giant »."
+            "content": "Foreach a intégré la liste nationale des entreprises spécialisées, performantes, distinctives et innovantes dites « Little Giant »."
           },
           {
             "title": "Un engagement durable dans la microfluidique",
-            "content": "FOREACH développe pompes, vannes, sondes, capteurs, raccords, tubes et support de systèmes pour l’IVD, les sciences de la vie, l’automatisation de laboratoire et l’analyse."
+            "content": "Foreach développe pompes, vannes, sondes, capteurs, raccords, tubes et support de systèmes pour l’IVD, les sciences de la vie, l’automatisation de laboratoire et l’analyse."
           },
           {
             "title": "Des compétences au service des clients",
-            "content": "Cette reconnaissance reflète la spécialisation et l’innovation de l’entreprise. FOREACH continuera de renforcer le développement produit, la fabrication, la qualité et l’accompagnement technique."
+            "content": "Cette reconnaissance reflète la spécialisation et l’innovation de l’entreprise. Foreach continuera de renforcer le développement produit, la fabrication, la qualité et l’accompagnement technique."
           }
         ],
-        "seoTitle": "FOREACH reconnue entreprise nationale Little Giant",
-        "seoDescription": "FOREACH obtient une reconnaissance nationale pour sa spécialisation et son innovation dans les composants microfluidiques."
+        "seoTitle": "Foreach reconnue entreprise nationale Little Giant",
+        "seoDescription": "Foreach obtient une reconnaissance nationale pour sa spécialisation et son innovation dans les composants microfluidiques."
       },
       "ko": {
-        "title": "FOREACH, 중국 국가급 전정특신 ‘작은 거인’ 기업으로 선정",
-        "summary": "FOREACH는 미세유체 제어 분야의 전문성, 기술 개발 및 혁신 역량을 인정받았습니다.",
+        "title": "Foreach, 중국 국가급 전정특신 ‘작은 거인’ 기업으로 선정",
+        "summary": "Foreach는 미세유체 제어 분야의 전문성, 기술 개발 및 혁신 역량을 인정받았습니다.",
         "content": [
           {
             "title": "국가급 기업 인정",
-            "content": "FOREACH는 전문화·정밀화·특색화·혁신 역량을 갖춘 기업을 대상으로 하는 중국 국가급 전정특신 ‘작은 거인’ 기업 명단에 선정되었습니다."
+            "content": "Foreach는 전문화·정밀화·특색화·혁신 역량을 갖춘 기업을 대상으로 하는 중국 국가급 전정특신 ‘작은 거인’ 기업 명단에 선정되었습니다."
           },
           {
             "title": "미세유체 핵심 부품에 대한 지속적인 집중",
-            "content": "FOREACH는 IVD, 생명과학, 실험실 자동화 및 분석기기를 위한 펌프, 밸브, 프로브, 센서, 피팅 및 튜빙 부품을 개발합니다."
+            "content": "Foreach는 IVD, 생명과학, 실험실 자동화 및 분석기기를 위한 펌프, 밸브, 프로브, 센서, 피팅 및 튜빙 부품을 개발합니다."
           },
           {
             "title": "고객 적용을 위한 전문 역량",
-            "content": "이번 선정은 회사의 전문성과 혁신 역량을 보여 줍니다. FOREACH는 제품 개발, 생산, 품질 관리 및 엔지니어링 지원을 지속적으로 강화할 것입니다."
+            "content": "이번 선정은 회사의 전문성과 혁신 역량을 보여 줍니다. Foreach는 제품 개발, 생산, 품질 관리 및 엔지니어링 지원을 지속적으로 강화할 것입니다."
           }
         ],
-        "seoTitle": "FOREACH, 국가급 전정특신 작은 거인 기업 선정",
-        "seoDescription": "FOREACH가 미세유체 핵심 부품과 유체 제어 분야의 전문성 및 혁신 역량을 인정받았습니다."
+        "seoTitle": "Foreach, 국가급 전정특신 작은 거인 기업 선정",
+        "seoDescription": "Foreach가 미세유체 핵심 부품과 유체 제어 분야의 전문성 및 혁신 역량을 인정받았습니다."
       },
       "ru": {
-        "title": "FOREACH получила статус национального специализированного и инновационного предприятия «Little Giant»",
-        "summary": "Национальное признание отражает специализацию, технологическое развитие и инновационный потенциал FOREACH в микрофлюидике.",
+        "title": "Foreach получила статус национального специализированного и инновационного предприятия «Little Giant»",
+        "summary": "Национальное признание отражает специализацию, технологическое развитие и инновационный потенциал Foreach в микрофлюидике.",
         "content": [
           {
             "title": "Национальное признание предприятия",
-            "content": "FOREACH была включена в национальный список специализированных и инновационных предприятий категории «Little Giant»."
+            "content": "Foreach была включена в национальный список специализированных и инновационных предприятий категории «Little Giant»."
           },
           {
             "title": "Долгосрочная специализация в микрофлюидике",
-            "content": "FOREACH разрабатывает насосы, клапаны, пробоотборные элементы, датчики, фитинги, трубки и системные компоненты для IVD, наук о жизни, лабораторной автоматизации и аналитических приборов."
+            "content": "Foreach разрабатывает насосы, клапаны, пробоотборные элементы, датчики, фитинги, трубки и системные компоненты для IVD, наук о жизни, лабораторной автоматизации и аналитических приборов."
           },
           {
             "title": "Профессиональная поддержка клиентов",
-            "content": "Статус подтверждает специализацию и инновационный потенциал компании. FOREACH продолжит развивать продукцию, производство, качество и инженерную поддержку."
+            "content": "Статус подтверждает специализацию и инновационный потенциал компании. Foreach продолжит развивать продукцию, производство, качество и инженерную поддержку."
           }
         ],
-        "seoTitle": "FOREACH получила национальный статус предприятия Little Giant",
-        "seoDescription": "FOREACH получила национальное признание за специализацию и инновации в области микрофлюидных компонентов."
+        "seoTitle": "Foreach получила национальный статус предприятия Little Giant",
+        "seoDescription": "Foreach получила национальное признание за специализацию и инновации в области микрофлюидных компонентов."
       }
     }
   },
@@ -344,12 +344,12 @@ const qualityAndRecognitionArticles: LocalizedArticleDefinition[] = [
         "seoDescription": "恒永达通过 ISO 9001 质量管理体系认证，以标准化管理支撑产品研发、生产制造、质量检测、交付与持续改进。"
       },
       "en": {
-        "title": "FOREACH Achieves ISO 9001 Quality Management System Certification",
-        "summary": "ISO 9001 certification strengthens standardized management across product development, manufacturing, inspection, delivery, and continual improvement at FOREACH.",
+        "title": "Foreach Achieves ISO 9001 Quality Management System Certification",
+        "summary": "ISO 9001 certification strengthens standardized management across product development, manufacturing, inspection, delivery, and continual improvement at Foreach.",
         "content": [
           {
             "title": "A Standardized Quality Management System",
-            "content": "FOREACH has achieved ISO 9001 certification, providing a structured foundation for quality objectives, process control, document management, internal audits, and continual improvement."
+            "content": "Foreach has achieved ISO 9001 certification, providing a structured foundation for quality objectives, process control, document management, internal audits, and continual improvement."
           },
           {
             "title": "Supporting Development, Manufacturing, and Delivery",
@@ -357,19 +357,19 @@ const qualityAndRecognitionArticles: LocalizedArticleDefinition[] = [
           },
           {
             "title": "Continual Improvement for Customer Value",
-            "content": "Through process records, closed-loop issue management, and improvement actions, FOREACH continues to strengthen product consistency, delivery reliability, and customer response."
+            "content": "Through process records, closed-loop issue management, and improvement actions, Foreach continues to strengthen product consistency, delivery reliability, and customer response."
           }
         ],
-        "seoTitle": "FOREACH Achieves ISO 9001 Certification",
-        "seoDescription": "FOREACH has achieved ISO 9001 quality management system certification to support standardized development, manufacturing, inspection, delivery, and continual improvement."
+        "seoTitle": "Foreach Achieves ISO 9001 Certification",
+        "seoDescription": "Foreach has achieved ISO 9001 quality management system certification to support standardized development, manufacturing, inspection, delivery, and continual improvement."
       },
       "es": {
-        "title": "FOREACH obtiene la certificación del sistema de gestión de calidad ISO 9001",
+        "title": "Foreach obtiene la certificación del sistema de gestión de calidad ISO 9001",
         "summary": "La certificación ISO 9001 refuerza la gestión estandarizada del desarrollo, la fabricación, la inspección, la entrega y la mejora continua.",
         "content": [
           {
             "title": "Un sistema de gestión de calidad estandarizado",
-            "content": "FOREACH ha obtenido la certificación ISO 9001, estableciendo una base estructurada para objetivos de calidad, control de procesos, documentos, auditorías internas y mejora continua."
+            "content": "Foreach ha obtenido la certificación ISO 9001, estableciendo una base estructurada para objetivos de calidad, control de procesos, documentos, auditorías internas y mejora continua."
           },
           {
             "title": "Apoyo al desarrollo, la fabricación y la entrega",
@@ -377,19 +377,19 @@ const qualityAndRecognitionArticles: LocalizedArticleDefinition[] = [
           },
           {
             "title": "Mejora continua para el cliente",
-            "content": "Mediante registros de proceso y gestión cerrada de incidencias, FOREACH mejora la consistencia del producto, la fiabilidad de entrega y la capacidad de respuesta."
+            "content": "Mediante registros de proceso y gestión cerrada de incidencias, Foreach mejora la consistencia del producto, la fiabilidad de entrega y la capacidad de respuesta."
           }
         ],
-        "seoTitle": "FOREACH obtiene la certificación ISO 9001",
-        "seoDescription": "FOREACH obtiene la certificación ISO 9001 para reforzar el desarrollo, la fabricación, la inspección, la entrega y la mejora continua."
+        "seoTitle": "Foreach obtiene la certificación ISO 9001",
+        "seoDescription": "Foreach obtiene la certificación ISO 9001 para reforzar el desarrollo, la fabricación, la inspección, la entrega y la mejora continua."
       },
       "fr": {
-        "title": "FOREACH obtient la certification du système de management de la qualité ISO 9001",
+        "title": "Foreach obtient la certification du système de management de la qualité ISO 9001",
         "summary": "La certification ISO 9001 renforce la gestion standardisée du développement, de la fabrication, du contrôle, de la livraison et de l’amélioration continue.",
         "content": [
           {
             "title": "Un système qualité standardisé",
-            "content": "FOREACH a obtenu la certification ISO 9001, établissant un cadre structuré pour les objectifs qualité, la maîtrise des processus, les documents, les audits internes et l’amélioration continue."
+            "content": "Foreach a obtenu la certification ISO 9001, établissant un cadre structuré pour les objectifs qualité, la maîtrise des processus, les documents, les audits internes et l’amélioration continue."
           },
           {
             "title": "Soutenir le développement, la fabrication et la livraison",
@@ -397,19 +397,19 @@ const qualityAndRecognitionArticles: LocalizedArticleDefinition[] = [
           },
           {
             "title": "Amélioration continue au service du client",
-            "content": "Grâce aux enregistrements et au traitement en boucle fermée des problèmes, FOREACH améliore la régularité des produits, la fiabilité des livraisons et la réactivité."
+            "content": "Grâce aux enregistrements et au traitement en boucle fermée des problèmes, Foreach améliore la régularité des produits, la fiabilité des livraisons et la réactivité."
           }
         ],
-        "seoTitle": "FOREACH obtient la certification ISO 9001",
-        "seoDescription": "FOREACH obtient la certification ISO 9001 pour renforcer le développement, la fabrication, le contrôle, la livraison et l’amélioration continue."
+        "seoTitle": "Foreach obtient la certification ISO 9001",
+        "seoDescription": "Foreach obtient la certification ISO 9001 pour renforcer le développement, la fabrication, le contrôle, la livraison et l’amélioration continue."
       },
       "ko": {
-        "title": "FOREACH, ISO 9001 품질경영시스템 인증 획득",
+        "title": "Foreach, ISO 9001 품질경영시스템 인증 획득",
         "summary": "ISO 9001 인증을 통해 제품 개발, 생산, 검사, 납품 및 지속적인 개선을 위한 표준화된 관리 체계를 강화했습니다.",
         "content": [
           {
             "title": "표준화된 품질경영시스템",
-            "content": "FOREACH는 ISO 9001 인증을 획득하여 품질 목표, 공정 관리, 문서 관리, 내부 심사 및 지속적인 개선을 위한 체계적인 기반을 구축했습니다."
+            "content": "Foreach는 ISO 9001 인증을 획득하여 품질 목표, 공정 관리, 문서 관리, 내부 심사 및 지속적인 개선을 위한 체계적인 기반을 구축했습니다."
           },
           {
             "title": "개발·생산·납품 과정 지원",
@@ -420,16 +420,16 @@ const qualityAndRecognitionArticles: LocalizedArticleDefinition[] = [
             "content": "공정 기록과 문제 해결 절차를 통해 제품 일관성, 납품 신뢰성 및 고객 대응 역량을 지속적으로 향상합니다."
           }
         ],
-        "seoTitle": "FOREACH ISO 9001 인증 획득",
-        "seoDescription": "FOREACH가 제품 개발, 생산, 검사, 납품 및 지속적인 개선을 지원하는 ISO 9001 품질경영시스템 인증을 획득했습니다."
+        "seoTitle": "Foreach ISO 9001 인증 획득",
+        "seoDescription": "Foreach가 제품 개발, 생산, 검사, 납품 및 지속적인 개선을 지원하는 ISO 9001 품질경영시스템 인증을 획득했습니다."
       },
       "ru": {
-        "title": "FOREACH получила сертификат системы менеджмента качества ISO 9001",
+        "title": "Foreach получила сертификат системы менеджмента качества ISO 9001",
         "summary": "Сертификация ISO 9001 укрепляет стандартизированное управление разработкой, производством, контролем, поставкой и непрерывным улучшением.",
         "content": [
           {
             "title": "Стандартизированная система менеджмента качества",
-            "content": "FOREACH получила сертификат ISO 9001, создав структурированную основу для целей в области качества, управления процессами, документации, внутренних аудитов и улучшений."
+            "content": "Foreach получила сертификат ISO 9001, создав структурированную основу для целей в области качества, управления процессами, документации, внутренних аудитов и улучшений."
           },
           {
             "title": "Поддержка разработки, производства и поставки",
@@ -437,11 +437,11 @@ const qualityAndRecognitionArticles: LocalizedArticleDefinition[] = [
           },
           {
             "title": "Непрерывное улучшение для клиентов",
-            "content": "С помощью записей процессов и замкнутого управления проблемами FOREACH повышает стабильность продукции, надежность поставок и скорость реагирования."
+            "content": "С помощью записей процессов и замкнутого управления проблемами Foreach повышает стабильность продукции, надежность поставок и скорость реагирования."
           }
         ],
-        "seoTitle": "FOREACH получила сертификат ISO 9001",
-        "seoDescription": "FOREACH получила сертификат ISO 9001 для стандартизации разработки, производства, контроля, поставки и непрерывного улучшения."
+        "seoTitle": "Foreach получила сертификат ISO 9001",
+        "seoDescription": "Foreach получила сертификат ISO 9001 для стандартизации разработки, производства, контроля, поставки и непрерывного улучшения."
       }
     }
   },
@@ -477,12 +477,12 @@ const qualityAndRecognitionArticles: LocalizedArticleDefinition[] = [
         "seoDescription": "恒永达通过 ISO 13485 认证，强化面向医疗器械、IVD 与生命科学项目的过程控制、文件管理和产品追溯能力。"
       },
       "en": {
-        "title": "FOREACH Achieves ISO 13485 Medical Device Quality Management System Certification",
+        "title": "Foreach Achieves ISO 13485 Medical Device Quality Management System Certification",
         "summary": "ISO 13485 certification strengthens process control, documentation, traceability, and continual improvement for medical device, IVD, and life science customer projects.",
         "content": [
           {
             "title": "Strengthening Medical Device Quality Management",
-            "content": "ISO 13485 specifies quality management requirements for medical devices and related services. The certification strengthens FOREACH processes for risk awareness, documentation, process control, quality records, and continual improvement."
+            "content": "ISO 13485 specifies quality management requirements for medical devices and related services. The certification strengthens Foreach processes for risk awareness, documentation, process control, quality records, and continual improvement."
           },
           {
             "title": "Supporting IVD and Life Science Projects",
@@ -494,14 +494,14 @@ const qualityAndRecognitionArticles: LocalizedArticleDefinition[] = [
           },
           {
             "title": "Quality System Certification",
-            "content": "ISO 13485 certification applies to the quality management system. It does not mean that every FOREACH product has received separate medical device registration or individual product certification."
+            "content": "ISO 13485 certification applies to the quality management system. It does not mean that every Foreach product has received separate medical device registration or individual product certification."
           }
         ],
-        "seoTitle": "FOREACH Achieves ISO 13485 Certification",
-        "seoDescription": "FOREACH has achieved ISO 13485 certification, strengthening process control, documentation, and traceability for medical device, IVD, and life science applications."
+        "seoTitle": "Foreach Achieves ISO 13485 Certification",
+        "seoDescription": "Foreach has achieved ISO 13485 certification, strengthening process control, documentation, and traceability for medical device, IVD, and life science applications."
       },
       "es": {
-        "title": "FOREACH obtiene la certificación ISO 13485 para sistemas de gestión de calidad de dispositivos médicos",
+        "title": "Foreach obtiene la certificación ISO 13485 para sistemas de gestión de calidad de dispositivos médicos",
         "summary": "La certificación ISO 13485 refuerza el control de procesos, la documentación y la trazabilidad para proyectos médicos, IVD y ciencias de la vida.",
         "content": [
           {
@@ -521,11 +521,11 @@ const qualityAndRecognitionArticles: LocalizedArticleDefinition[] = [
             "content": "La certificación ISO 13485 se aplica al sistema de gestión de calidad y no significa que todos los productos hayan obtenido un registro médico o una certificación individual."
           }
         ],
-        "seoTitle": "FOREACH obtiene la certificación ISO 13485",
-        "seoDescription": "FOREACH obtiene ISO 13485 para reforzar el control, la documentación y la trazabilidad en proyectos médicos, IVD y ciencias de la vida."
+        "seoTitle": "Foreach obtiene la certificación ISO 13485",
+        "seoDescription": "Foreach obtiene ISO 13485 para reforzar el control, la documentación y la trazabilidad en proyectos médicos, IVD y ciencias de la vida."
       },
       "fr": {
-        "title": "FOREACH obtient la certification ISO 13485 pour le management de la qualité des dispositifs médicaux",
+        "title": "Foreach obtient la certification ISO 13485 pour le management de la qualité des dispositifs médicaux",
         "summary": "La certification ISO 13485 renforce la maîtrise des processus, la documentation et la traçabilité pour les projets médicaux, IVD et sciences de la vie.",
         "content": [
           {
@@ -545,11 +545,11 @@ const qualityAndRecognitionArticles: LocalizedArticleDefinition[] = [
             "content": "La certification ISO 13485 concerne le système de management de la qualité. Elle ne signifie pas que chaque produit dispose d’un enregistrement médical ou d’une certification produit individuelle."
           }
         ],
-        "seoTitle": "FOREACH obtient la certification ISO 13485",
-        "seoDescription": "FOREACH obtient ISO 13485 et renforce la maîtrise des processus, la documentation et la traçabilité pour les applications médicales et IVD."
+        "seoTitle": "Foreach obtient la certification ISO 13485",
+        "seoDescription": "Foreach obtient ISO 13485 et renforce la maîtrise des processus, la documentation et la traçabilité pour les applications médicales et IVD."
       },
       "ko": {
-        "title": "FOREACH, ISO 13485 의료기기 품질경영시스템 인증 획득",
+        "title": "Foreach, ISO 13485 의료기기 품질경영시스템 인증 획득",
         "summary": "ISO 13485 인증을 통해 의료기기, IVD 및 생명과학 프로젝트를 위한 공정 관리, 문서화 및 추적성을 강화했습니다.",
         "content": [
           {
@@ -569,11 +569,11 @@ const qualityAndRecognitionArticles: LocalizedArticleDefinition[] = [
             "content": "ISO 13485는 품질경영시스템에 대한 인증이며, 모든 제품이 개별 의료기기 등록 또는 제품 인증을 취득했다는 의미는 아닙니다."
           }
         ],
-        "seoTitle": "FOREACH ISO 13485 인증 획득",
-        "seoDescription": "FOREACH가 의료기기, IVD 및 생명과학 분야의 공정 관리, 문서화 및 추적성을 강화하는 ISO 13485 인증을 획득했습니다."
+        "seoTitle": "Foreach ISO 13485 인증 획득",
+        "seoDescription": "Foreach가 의료기기, IVD 및 생명과학 분야의 공정 관리, 문서화 및 추적성을 강화하는 ISO 13485 인증을 획득했습니다."
       },
       "ru": {
-        "title": "FOREACH получила сертификат ISO 13485 для системы менеджмента качества медицинских изделий",
+        "title": "Foreach получила сертификат ISO 13485 для системы менеджмента качества медицинских изделий",
         "summary": "Сертификация ISO 13485 усиливает управление процессами, документацию и прослеживаемость для медицинских, IVD- и биотехнологических проектов.",
         "content": [
           {
@@ -593,8 +593,8 @@ const qualityAndRecognitionArticles: LocalizedArticleDefinition[] = [
             "content": "ISO 13485 относится к системе менеджмента качества и не означает, что каждое изделие получило отдельную регистрацию медицинского изделия или индивидуальный сертификат."
           }
         ],
-        "seoTitle": "FOREACH получила сертификат ISO 13485",
-        "seoDescription": "FOREACH получила ISO 13485, усилив управление процессами, документацию и прослеживаемость для медицинских и IVD-применений."
+        "seoTitle": "Foreach получила сертификат ISO 13485",
+        "seoDescription": "Foreach получила ISO 13485, усилив управление процессами, документацию и прослеживаемость для медицинских и IVD-применений."
       }
     }
   }

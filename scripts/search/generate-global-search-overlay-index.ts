@@ -1,3 +1,4 @@
+import { getPumpSeriesProductDetailAdapter } from "../../services/products/adapters/getPumpSeriesProductDetailAdapter";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -15,6 +16,7 @@ import { getVisibleNavigationItems } from "../../data/navigation";
 import { getInternationalUiText } from "../../lib/international-ui";
 import type { LocaleCode } from "../../lib/i18n";
 import { getTechnicalArticlesPageData } from "../../services/resources/technical-articles/getTechnicalArticlesPageData";
+import { getTechnicalArticleCategoryPath } from "../../data/resources/technical-articles/technical-article-taxonomy";
 import { getNewsPageData } from "../../services/resources/news/getNewsPageData";
 import { getMaterialCompatibilityPageData } from "../../services/resources/material-compatibility/getMaterialCompatibilityPageData";
 import { getAnalyticalInstrumentsApplicationPageData } from "../../services/applications/analytical-instruments/getAnalyticalInstrumentsApplicationPageData";
@@ -90,7 +92,7 @@ const MODULE_COPY: Record<
   },
   "compatible-models": {
     title: "Compatible Model Search",
-    description: "View the corresponding FOREACH compatible product.",
+    description: "View the corresponding Foreach compatible product.",
     action: "View Compatible Product",
   },
   datasheets: {
@@ -120,12 +122,12 @@ const MODULE_COPY: Record<
   },
   news: {
     title: "News",
-    description: "Read the full FOREACH news update.",
+    description: "Read the full Foreach news update.",
     action: "View News",
   },
   pages: {
     title: "Pages",
-    description: "Open this FOREACH website page.",
+    description: "Open this Foreach website page.",
     action: "Open Page",
   },
 };
@@ -300,7 +302,7 @@ function getPathLabel(href: string): string {
     .filter(Boolean)
     .at(-1);
 
-  if (!segment) return "FOREACH";
+  if (!segment) return "Foreach Technology";
 
   return decodeURIComponent(segment)
     .split(/[-_]+/)
@@ -442,6 +444,17 @@ function loadProductAndCompatibleItems(
     if (!sourceTitle || !href) return [];
 
     const copy = getModuleCopy(locale, searchModule);
+    const pistonSlug = /^\/products\/pumps\/piston-pump\/((?:ea|sm|tm)-\d+-(?:pmma|peek))\/?$/.exec(href)?.[1];
+    const piston = pistonSlug ? getPumpSeriesProductDetailAdapter(pistonSlug, isChinese ? "zh" : locale) : null;
+    if (piston) {
+      const title = String(piston.model);
+      const description = shorten(piston.advantages[0], 180);
+      const keywords = buildSearchText([pistonSlug, title, ...piston.commonApplications, "piston pump", "plunger pump"]);
+      return [{ m: searchModule, t: title, s: pistonSlug!.toUpperCase(), d: description, h: href,
+        ...(piston.mainImage ? { i: cleanImage(piston.mainImage) } : {}),
+        x: buildSearchText([title, description, keywords, href]), k: keywords, a: copy.action }];
+    }
+
     const technicalTitle = getTechnicalText(sourceTitle);
     const title = isChinese
       ? sourceTitle
@@ -600,10 +613,8 @@ async function loadTechnicalArticles(
     const title = text(article.title);
     if (!slug || !title) return [];
 
-    const subtitle = compactStrings([
-      article.category,
-      article.date,
-    ]).join(" · ");
+    const categoryPath = getTechnicalArticleCategoryPath(locale, article);
+    const subtitle = compactStrings([categoryPath, article.date]).join(" · ");
     const description = shorten(article.summary, 145) || copy.description;
     const image = cleanImage(article.coverImage);
     const sectionTitles = collectValuesByKeys(
@@ -614,7 +625,11 @@ async function loadTechnicalArticles(
     const keywords = buildSearchText([
       sectionTitles,
       article.relationKeys,
-      article.category,
+      article.tags,
+      article.relatedProducts,
+      categoryPath,
+      article.primaryCategory,
+      article.secondaryCategory,
       slug,
       copy.title,
     ]);

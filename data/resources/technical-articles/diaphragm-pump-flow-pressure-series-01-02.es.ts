@@ -10,11 +10,11 @@ export const diaphragmPump300Vs600SelectionEsCopy = {
     title:
       "¿Cómo elegir entre microbombas de diafragma de 300 y 600 mL/min? Calcule primero el caudal requerido y después el punto de funcionamiento real",
     seoTitle:
-      "Microbomba de diafragma de 300 o 600 mL/min: caudal y punto de funcionamiento | FOREACH",
+      "Microbomba de diafragma de 300 o 600 mL/min: caudal y punto de funcionamiento | Foreach Technology",
     seoDescription:
       "Para comparar microbombas de diafragma de 300 y 600 mL/min no basta con mirar el caudal sin carga. Esta guía relaciona el volumen por ciclo, el tiempo efectivo de bombeo, la presión del circuito, la curva de la bomba y la validación en prototipo.",
     coverImage: `${ARTICLE_01_ASSET_BASE}/article-cover.webp`,
-    coverAlt: "Microbombas de diafragma FOREACH y ensayo de caudal en un vídeo oficial de Douyin",
+    coverAlt: "Microbombas de diafragma Foreach y ensayo de caudal en un vídeo oficial de Douyin",
   },
   deck:
     "300 y 600 mL/min son clases de caudal, no valores fijos después de instalar la bomba. La selección debe convertir primero la tarea de líquido en un caudal mínimo, determinar después la presión que exige el circuito real y, por último, confirmar el punto de funcionamiento mediante la curva de la bomba y un ensayo del prototipo.",
@@ -134,11 +134,11 @@ export const diaphragmPump300Vs600SelectionEsCopy = {
       ],
     },
     {
-      title: "4. Ejemplo con parámetros públicos de FOREACH: un caudal mayor no implica mayor capacidad en todos los aspectos",
+      title: "4. Ejemplo con parámetros públicos de Foreach: un caudal mayor no implica mayor capacidad en todos los aspectos",
       blocks: [
         {
           type: "paragraph",
-          text: "DPL30 y DPL60 en la información pública de FOREACH se pueden utilizar para ilustrar diferentes dimensiones de parámetros. Los niveles de caudal sin carga de los dos son diferentes, la presión nominal pública es de 100 kPa y las alturas de autocebado son de 6 mH₂O y 3 mH₂O respectivamente. El caudal, la autocebación y la presión deben comprobarse por separado.",
+          text: "DPL30 y DPL60 en la información pública de Foreach se pueden utilizar para ilustrar diferentes dimensiones de parámetros. Los niveles de caudal sin carga de los dos son diferentes, la presión nominal pública es de 100 kPa y las alturas de autocebado son de 6 mH₂O y 3 mH₂O respectivamente. El caudal, la autocebación y la presión deben comprobarse por separado.",
         },
         {
           type: "table",
@@ -267,13 +267,13 @@ export const diaphragmPump300Vs600SelectionEsCopy = {
 
 export const diaphragmPump300MlMinFlowMarginEsCopy = {
   metadata: {
-    title: "¿Qué margen de caudal debe dejarse al integrar una microbomba de diafragma de 300 mL/min? Ejemplo con FOREACH",
+    title: "¿Qué margen de caudal debe dejarse al integrar una microbomba de diafragma de 300 mL/min? Ejemplo con Foreach",
     seoTitle:
-      "Margen de caudal para una microbomba de 300 mL/min: peor caso y aceptación | FOREACH",
+      "Margen de caudal para una microbomba de 300 mL/min: peor caso y aceptación | Foreach Technology",
     seoDescription:
       "El margen de caudal instalado de una microbomba de diafragma de 300 mL/min no es un porcentaje fijo. La guía define escenarios de peor caso e incorpora contrapresión, carga del filtro, alimentación, fluido, variación entre muestras, incertidumbre de medida y criterios de aceptación.",
     coverImage: `${ARTICLE_02_ASSET_BASE}/article-cover.webp`,
-    coverAlt: "Ensayo de caudal de una microbomba de diafragma FOREACH en un vídeo oficial de Douyin",
+    coverAlt: "Ensayo de caudal de una microbomba de diafragma Foreach en un vídeo oficial de Douyin",
   },
   deck:
     "El margen no se obtiene multiplicando siempre el caudal objetivo por 1,2 o 1,3. Debe comparar el caudal conservador disponible con la demanda máxima del equipo dentro de un mismo escenario de peor caso, con un tratamiento predefinido de la incertidumbre de medida y criterios de aceptación explícitos.",
@@ -416,7 +416,7 @@ export const diaphragmPump300MlMinFlowMarginEsCopy = {
       blocks: [
         {
           type: "paragraph",
-          text: "Los siguientes números sólo se utilizan para ilustrar el método y no representan la medición real de los equipos del cliente ni de los productos FOREACH. Suponga una demanda máxima de 180 mL/min; la bomba candidata puede suministrar 260 mL/min a voltaje nominal y contrapresión objetivo; En el peor de los casos confirmado que podría ocurrir, el caudal disponible medido en el peor de los casos es de 230 mL/min.",
+          text: "Los siguientes números sólo se utilizan para ilustrar el método y no representan la medición real de los equipos del cliente ni de los productos Foreach. Suponga una demanda máxima de 180 mL/min; la bomba candidata puede suministrar 260 mL/min a voltaje nominal y contrapresión objetivo; En el peor de los casos confirmado que podría ocurrir, el caudal disponible medido en el peor de los casos es de 230 mL/min.",
         },
         {
           type: "formula",
@@ -435,11 +435,11 @@ export const diaphragmPump300MlMinFlowMarginEsCopy = {
       ],
     },
     {
-      title: "7. Tomando como ejemplo la bomba FOREACH de 300 mL/min, debe comenzar desde la contrapresión objetivo.",
+      title: "7. Tomando como ejemplo la bomba Foreach de 300 mL/min, debe comenzar desde la contrapresión objetivo.",
       blocks: [
         {
           type: "paragraph",
-          text: "La información pública de FOREACH DPL30 indica 300 mL/min de caudal sin carga, 100 kPa de presión nominal y 6 mH₂O de altura de autocebado. El margen disponible no se obtiene con «300 menos el caudal objetivo»: debe partir de la curva oficial a la contrapresión objetivo y verificarse después en el circuito final, midiendo entrada, salida y caudal real.",
+          text: "La información pública de Foreach DPL30 indica 300 mL/min de caudal sin carga, 100 kPa de presión nominal y 6 mH₂O de altura de autocebado. El margen disponible no se obtiene con «300 menos el caudal objetivo»: debe partir de la curva oficial a la contrapresión objetivo y verificarse después en el circuito final, midiendo entrada, salida y caudal real.",
         },
         {
           type: "paragraph",

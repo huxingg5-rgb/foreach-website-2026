@@ -62,6 +62,30 @@
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* Share the fixed header height with the product page offset at every breakpoint. */
+
+:root {
+  --site-header-height: 82px;
+}
+
+@media (min-width: 1921px) {
+  :root {
+    --site-header-height: 90px;
+  }
+}
+
+@media (min-width: 1281px) and (max-width: 1440px) {
+  :root {
+    --site-header-height: 66px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --site-header-height: 60px;
+  }
+}
+
 
 /* ================================
    01. 闂傚倸鍊搁崐鎼佸磹閻戣姤鍤勯柛顐ｆ磵閳ь剨绠撳畷濂稿閳ュ啿绨ラ梻浣稿閸嬩線宕曟潏鈺冪焼濠㈣泛澶囬崑鎾诲礂婢跺﹣澹曢梻浣告啞濞诧箓宕滃▎鎾崇闁告劕妯婂〒濠氭煏閸繃顥滅紒妤佸浮閹顫濋悡搴♀拫閻庢鍠曢崡铏繆閻戣棄鐓涢柛灞剧矊瀵即姊绘繝搴′簻婵炶绠撳畷娆掋亹閹烘垵鎯為梺鍛婂姦閸犳鎮″☉銏＄厓鐟滄粓宕滈悢闀愮箚闁归棿绀侀悡娑㈡煕鐏炲墽鐓柛鏍ㄧ墪閳规垿鎮欓懜闈涙锭缂備焦褰冨锟犲灳閿曞倸閱囬柕澶堝劤閸橀亶姊洪崫鍕殭闁绘锕幃?
@@ -141,7 +165,7 @@ button {
   align-items: center; /* 闂傚倸鍊搁崐鎼佸磹妞嬪海鐭嗗〒姘ｅ亾妤犵偛顦甸弫鎾绘偐閼碱剦妲烽梻浣告惈濞层垽宕归崷顓犱笉闁绘顕х粻褰掓煙绾板崬骞橀柛妯荤洴閺屸剝鎷呴棃鈺勫惈闂佸搫鐬奸崰鏍箖瑜斿畷濂告偄閸濆嫬娈ラ梻鍌欑劍閹爼宕濆畝鍕９闁秆勵殔閽冪喐绻涢幋鐐电叝婵炲矈浜弻娑㈠箻濡も偓閹虫劙宕㈤幋鐘电＝闁稿本鐟ㄩ崗宀勬煣韫囨捇鍙勭€规洖缍婂畷濂稿即閻愮數鏆繝娈垮枟閵囨盯宕戦幘缁樼厵妞ゆ梻鏅幊鍥┾偓瑙勬穿缁叉儳顕ラ崟顒傜瘈闁告劕褰為幋鐑芥⒒?*/
   justify-content: space-between; /* Logo 闂傚倸鍊搁崐鎼佸磹閹间礁纾归柟闂寸绾惧綊鏌熼梻瀵稿妽闁稿顑夐悡顐﹀炊閵婏腹鎷归梺鍛婄懃缁绘﹢骞冨Δ鈧埥澶娾枎濡厧濮洪梻浣哥－缁垰煤閻斿吋鍋傛い鎰剁畱閻愬﹪鏌曟繛褉鍋撳┑顔兼喘濮婃椽宕崟顒€顎涢梺鍛婃尵閸犳牠鐛崘顭戞建闁逞屽墴楠炲啫鈻庨幘宕囬獓闂佺懓顕慨鎶藉窗婵犲嫮纾介柛灞剧懅閸斿秹鏌涢悙璺哄惞缂佽京鍋炵粭鐔煎焵椤掆偓椤曪絿鎷犲ù瀣潔濠电姴锕ら幊鎰板级閹间焦鈷戦悷娆忓缁€鍐╃箾閸涱喗纾荤紒銊︽そ濮婄粯鎷呯粵瀣缂備胶绮崝鏇㈡箒濠殿喗顭堝▔娑㈠垂閸岀偞鍋ｉ弶鐐村缁夋寧绻涢幋娆忕仼缂佲偓閸愨斂浜滈柡鍐ㄦ处椤ュ霉濠婂啰绉烘慨濠冩そ瀹曠兘顢橀悩鑼偧闂佹眹鍩勯崹鎶藉磻閵堝牊顥?*/
   width: min(100% - 48px, 1600px); /* 闂傚倸鍊搁崐鎼佸磹妞嬪海鐭嗗〒姘ｅ亾妤犵偞鐗犻、鏇㈡晝閳ь剛绮婚鐐村€甸柨婵嗛閺嬫盯姊婚崒銈呯仸闁哄被鍔岄埞鎴﹀幢閳哄倐锕傛⒑?PC 闂傚倸鍊搁崐鎼佸磹妞嬪海鐭嗗〒姘ｅ亾妤犵偞鐗犻、鏇㈡晜閽樺缃曢梻浣告啞閸旓箓宕伴弽顐㈩棜濠电姵纰嶉悡娆撴煟閹伴潧澧褜鍨堕弻锝夊棘閹稿寒妫﹂梺鍝勬湰閻╊垶銆侀弴銏狀潊闁宠棄妫欓ˉ锝夋⒒娴ｅ憡鎲搁柛锝冨劦瀹曟垶绻濋崒銈呮濡炪倖鍔х粻鎴︽煁閸ヮ剚鐓涢柛銉㈡櫅閺嬪酣鏌嶈閸撴盯寮繝姘摕婵炴垯鍨洪弲婊堟偣閸ャ劌绲荤紒鐘虫そ濮婃椽骞栭悙娴嬪亾閹版澘纾婚柟鍓х節缁诲棝鏌ｉ幇鍏哥盎闁逞屽墯閻楁洟锝炶箛娑欏仭闂侇叏闄勭紞搴ㄦ偡濠婂懎顣奸悽顖涘笧缁?*/
-  height: 82px; /* 闂傚倸鍊搁崐鎼佸磹妞嬪海鐭嗗〒姘ｅ亾妤犵偞鐗犻、鏇㈡晝閳ь剛绮婚鐐村€甸柨婵嗛閺嬫盯姊婚崒銈呯仸闁哄被鍔岄埞鎴﹀幢閳哄倐锕傛⒑?PC Top 闂傚倸鍊搁崐鎼佸磹妞嬪海鐭嗗〒姘ｅ亾妤犵偞鐗犻、鏇㈠Χ閸モ晝鍘犻梺璇查叄濞佳囧箟閳ュ磭鏆﹂柛娆忣槹閸欏繑淇婇悙棰濆殭濞存粓绠栧铏规嫚閳ヨ櫕鐏撻梺杞扮椤兘濡存担绯曟瀻闁圭偓娼欏▓鐔兼⒑闂堟侗妲堕柛搴ら哺娣?*/
+  height: var(--site-header-height); /* 闂傚倸鍊搁崐鎼佸磹妞嬪海鐭嗗〒姘ｅ亾妤犵偞鐗犻、鏇㈡晝閳ь剛绮婚鐐村€甸柨婵嗛閺嬫盯姊婚崒銈呯仸闁哄被鍔岄埞鎴﹀幢閳哄倐锕傛⒑?PC Top 闂傚倸鍊搁崐鎼佸磹妞嬪海鐭嗗〒姘ｅ亾妤犵偞鐗犻、鏇㈠Χ閸モ晝鍘犻梺璇查叄濞佳囧箟閳ュ磭鏆﹂柛娆忣槹閸欏繑淇婇悙棰濆殭濞存粓绠栧铏规嫚閳ヨ櫕鐏撻梺杞扮椤兘濡存担绯曟瀻闁圭偓娼欏▓鐔兼⒑闂堟侗妲堕柛搴ら哺娣?*/
   margin: 0 auto; /* 濠电姷鏁告慨鐑姐€傞鐐潟闁哄洢鍨圭壕濠氭煙鏉堝墽鐣辩痪鎯х秺閺岋繝宕堕妷銉т痪闂佺顑呴ˇ顖炲煘閹达箑纾兼繝濠傛捣閸斿摜绱掗悙顒€鍔ゆ繛纭风節瀵鎮㈤搹鍦紲闂侀潧绻掓慨鐢告倶閸儲鈷戦柛娑橈工婵偓闂佺顑嗛幑鍥ь潖缂佹绡€閹肩补鈧尙鐩庢繝鐢靛仩椤曟粎绮婚幘鑽ゅ祦闁圭増婢樼粻鐟懊归敐鍛暈闁诲寒鍓熷娲礈閹绘帊绨煎┑鐐插级閿曘垹鐣烽幇鐗堝仺闁汇垹鐏氶敍蹇擃渻閵堝棙灏甸柛瀣仦閸掑﹪宕楅懖鈺冾啎闂佺绻掗崢褎鎱ㄥ澶嬬厸鐎光偓鐎ｎ剛鐦堥悗瑙勬礋娴滃爼銆佸鈧幃鈺呮儔椤忓懎鐏存慨濠冩そ閹兘寮堕幐骞晠姊虹涵鍛彧闁挎洏鍨介幃浼搭敊閸㈠鍠栭幖鍦喆閸曨剦鍟庨梻鍌欑劍閹爼宕曢鐐茬閹艰揪绲洪崑鎾愁潩椤掑倐銏ゆ煃?*/
 }
 
@@ -239,6 +263,17 @@ button {
   font-weight: 400; /* 濠电姷鏁告慨鐢割敊閺嶎厼绐楁俊銈呭暞閺嗘粍淇婇妶鍛殶闁活厽鐟╅弻鐔兼倻濡晲绮堕梺閫炲苯澧剧紒鐘虫尭閻ｉ攱绺界粙璇俱劍銇勯弮鍥撴繛鍛Ч濮婄粯鎷呴崫鍕粯濡炪値鍋呭ú鐔风暦閹版澘绠涢柡澶庢硶閿涙盯姊洪崷顓炰壕闁哄鍘у嵄闁割偆鍠撶粻楣冩煕閳╁啨鈧偤骞嬮敂钘変痪婵炴挻鍩冮崑鎾存叏?*/
   letter-spacing: 0.04em; /* 濠电姷鏁告慨鐑藉极閹间礁纾婚柣鎰惈閸ㄥ倿鏌涢锝嗙缂佺姴缍婇弻宥夊传閸曨剙娅ｉ梺绋胯閸斿矂婀侀梺缁樏Ο濠囧磿韫囨稒鐓曢柟瀵稿Т閳诲牓鏌＄仦鍓ф创妤犵偛娲畷妤呭传閵夛箑鐦婚梻鍌欒兌椤牓顢栭崱娑樼濠电姵鑹剧粻顖炴煕濞戞瑦缍戠紒鈧崘鈹夸簻妞ゆ挾鍠庨悘锔姐亜閵夈儳效婵﹦绮幏鍛存惞楠炲簱鍋撴繝鍥ㄧ厸闁告侗鍠氬ú瀛橆殽閻愯榫氱紒鐘崇☉閳藉骞掗崱妞惧闂佸搫鍟悧鍡涙倿閸偁浜滈柟鍝勭У椤﹂绱掔拠鍙夘棡闁靛洤瀚板浠嬪Ω閵堝洨绠掗梻浣侯焾缁ㄦ椽宕曢悽绋胯摕婵炴垶锕╁鈺傘亜閹哄秶顦﹂柡瀣█濮婅櫣鎷犻垾铏亶濡炪們鍔岄幊姗€宕洪妷锕€绶炲┑鐐靛亾閻庤鈹戦埥鍡楃仴鐎规洜鏁诲鎶筋敍濠婂懐锛?*/
   text-decoration: none; /* 闂傚倸鍊搁崐鎼佸磹妞嬪海鐭嗗〒姘ｅ亾妤犵偛顦甸弫鎾绘偐椤愮喎浜鹃柨鏇炲€搁悙濠囨煃鏉炴壆顦﹂柣蹇擄工椤啴濡堕崱娆忣潷缂備緡鍠栫粔鐟邦嚕閸愬樊鐓ラ柛顐ゅ枔閸樻捇鎮峰鍕煉鐎规洘绮撻幃銏＄附婢跺绋佹繝鐢靛仜濡﹥绂嶅鍛焼闁割偁鍨洪崰鎰偓骞垮劚濡盯銆呴幓鎹ㄦ棃鏁愰崨顓熸闂佺顑冮崝宥夊Φ閸曨垰鍐€闁靛濡囧▓銈夋⒑閸︻厽娅曞┑顕€顥撳Σ鎰板箳閺傚搫浜鹃柨婵嗙凹閹茬偓淇婇崣澶嬨仢闁哄苯绉烽¨渚€鏌涢幘鍗炲缂佽京鍋ゅ畷鍗炍熺喊杈ㄩ敜婵犵數濮撮敃銈夋偋婵犲洤纾归悹楦裤€€閺€浠嬫煟濡绲绘い蹇ｅ亞閻?*/
+}
+
+button.site-nav-link {
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-family: inherit;
+  line-height: 20px;
+  cursor: pointer;
 }
 
 /* PC 缂?mega 濠电姷鏁告慨鐑藉极閹间礁纾婚柣鎰惈閸ㄥ倿鏌涢锝嗙缂佺姳鍗抽弻鐔兼⒒鐎垫瓕绐楅梺杞扮鐎氫即寮诲☉銏犵労闁稿繒濯禍顏勭暦瑜版帒绫嶉柍褜鍓涢幑銏犫槈濮楀棗鏅犲銈嗘瀹曠敻宕欒ぐ鎺撯拺闁告繂瀚刊濂告煕閹炬潙鍝烘鐐茬墦婵℃悂濡烽钘夌紦闂備胶纭堕崜婵嬨€冮崨杈剧稏闁冲搫鎳忛悡鐔兼煏韫囧﹥娅呴柣蹇旂洴閺屾稒鎯旈敐鍡樻瘓閻庢鍠栭…鐑藉箖閵忋倕浼犻柛鏇ㄥ墰閳ь剚濞婂娲川婵犲孩鐣奸梺绋款儐缁嬫挾鍒掗弰蹇嬩汗闁圭儤鎸撮幏娲⒒閸屾氨澧涚紒瀣尰閺呭爼寮崒婊咃紲濡炪倖姊婚弲顐﹀箠閸愨斂浜滈柡鍥朵簽缁夘噣鏌熺粙鍖℃敾鐎垫澘瀚禒锕傛倷椤掑倹婢撻梻鍌氬€峰ù鍥綖婢舵劦鏁婇柡宥庡幖缁愭鎱ㄥΟ璺ㄥ牚闁逞屽厸缁舵艾鐣烽妸鈺婃晩闁煎鍊楅悾楣冩⒒娓氣偓濞佳囨偋閸℃娲Χ閸艾寰旈梻鍌氬€风粈渚€骞夐敓鐘茶摕闁靛ě鍛厠閻熸粎澧楃敮鎺旂不閺嶃劍鍙忔俊鐐额嚙娴滈箖姊烘潪鎵槮闁哥喐娼欓悾鐑藉箳閹存梹顫嶅┑鐐叉閸旀銇愰妸鈺傗拻濞达絿鐡旈崵娆戠磼缂佹ê娴€规洘鍨块幃鈺呮惞椤愩垹浼庨梻渚€娼ч悧鍡浰囬婊冾棜鐟滅増甯楅悡鐔兼煏韫囧鐏柡鍡忔櫇閻ヮ亪骞戦幇顓ф闂侀潧妫欑敮鎺楋綖濠靛鏁嗗ù锝堫潐閸婇攱淇婇妶鍥ラ柛瀣仱閹囨偐鐠囪尪鎽曞┑鐐村灟閸ㄦ椽宕愭搴樺亾閻熸澘顥忛柛鐘崇墪閳绘捇宕奸弴鐔叉嫼闂備緡鍋嗛崑娑㈡嚐椤栨稒娅犳い鏃傛櫕缁♀偓闂侀€炲苯澧撮柡灞芥椤撳ジ宕ㄩ婊勭€梻鍌欐祰椤宕曞畷鍥╀笉鐎广儱妫涢々鑼喐閻楀牆绗氶柣鎾存礃缁绘盯宕卞Δ浣侯洶濠德ゅ皺閸庛倝濡甸崟顖氱厸闁告劑鍔岄獮瀣旈悩闈涗沪闁绘绮撻崺鈧い鎺嶈兌閳洘銇勯鐐村窛缂侇喖顭烽幃娆撴倻濡厧骞楁繝鐢靛仦閸ㄥ爼鎮烽敃鈧悾宄扮暆閸曨剛鍘?/ 闂傚倸鍊搁崐椋庣矆娴ｉ潻鑰块梺顒€绉撮崒銊ф喐閺冨牆绠栨繛宸簻鎯熼梺闈涱樈閸犳绱炴惔銏㈢瘈闁汇垽娼ф牎闂佺厧缍婄粻鏍ь嚕?/ 闂傚倸鍊搁崐宄懊归崶褏鏆﹂柛顭戝亝閸欏繒鈧箍鍎遍ˇ顖滅矆閸愨斂浜滄い鎾跺枎閻忥綁鏌ｉ妷顔荤敖缂佽鲸鎹囧畷鎺戔枎閹达絿鐛ラ梻浣虹帛閹告悂鎮ч幘宕囨殾闁规儼濮ら弲鏌ユ煕濠娾偓缁€浣糕枔閵娿儺娓婚柕鍫濇婵囨⒒閸曨偄顏€规洘鍨归埀顒婄秵閸犳鎮￠弴鐔翠簻闁规澘澧庨幃鑲╃磼閻樼鑰块柡灞炬礋瀹曞ジ顢楅崒婊勬婵犳鍠栭敃銊モ枍閿濆绠熼柟缁㈠枛缁€瀣亜韫囨挻鎼愰柣鎺戭煼濮婄粯鎷呮笟顖滃姼闂備礁搴滅徊鍓х矉瀹ュ洦宕夐柧蹇氼潐濞?*/
@@ -1181,7 +1216,7 @@ html[lang="ru"] .home-hero-btn:hover {
 @media (min-width: 1921px) {
   .site-header-inner {
     width: min(100% - 48px, 1760px); /* 2K 濠电姷鏁告慨鐑藉极閹间礁纾绘繛鎴欏焺閺佸銇勯幘璺烘瀾闁告瑥绻愰湁闁稿繐鍚嬬紞鎴犵棯閹勫仴闁哄瞼鍠庨埢鎾诲垂椤旂晫浜剧紓?Top 闂傚倸鍊搁崐鎼佸磹妞嬪海鐭嗗〒姘ｅ亾妤犵偞鐗犻、鏇㈠Χ閸モ晝鍘犻梺璇查叄濞佳囧箟閳ュ磭鏆﹂柡灞诲劜閻撴瑩鎮楀☉娆樼劷缂傚倹宀搁弻宥堫檨闁告挻姘ㄩ弫顕€鏁撻悩鑼枃濠电姴锕ら悧濠囁夐崼鐔虹闁瑰鍋為惃鎴︽煟濞戝崬娅嶉柡宀嬬秮閹垽宕妷褏鍘愮紓鍌欑椤︻垳绱炴繝鍥ュù锝囩《閺嬪酣鏌熼幆褏锛嶉柣顐㈠濮婃椽鏌呴悙鑼跺濠⒀冪摠椤?*/
-    height: 90px; /* 2K 濠电姷鏁告慨鐑藉极閹间礁纾绘繛鎴欏焺閺佸銇勯幘璺烘瀾闁告瑥绻愰湁闁稿繐鍚嬬紞鎴犵棯閹勫仴闁哄瞼鍠庨埢鎾诲垂椤旂晫浜剧紓?Top 闂傚倸鍊搁崐鎼佸磹妞嬪海鐭嗗〒姘ｅ亾妤犵偞鐗犻、鏇㈠Χ閸モ晝鍘犻梺璇查叄濞佳囧箟閳ュ磭鏆﹂柛娆忣槹閸欏繑淇婇悙棰濆殭濞存粓绠栧铏规嫚閳ヨ櫕鐏撻梺杞扮椤兘濡存担绯曟瀻闁圭偓娼欏▓鐔兼⒑闂堟侗妲堕柛搴ら哺娣?*/
+    height: var(--site-header-height); /* 2K 濠电姷鏁告慨鐑藉极閹间礁纾绘繛鎴欏焺閺佸銇勯幘璺烘瀾闁告瑥绻愰湁闁稿繐鍚嬬紞鎴犵棯閹勫仴闁哄瞼鍠庨埢鎾诲垂椤旂晫浜剧紓?Top 闂傚倸鍊搁崐鎼佸磹妞嬪海鐭嗗〒姘ｅ亾妤犵偞鐗犻、鏇㈠Χ閸モ晝鍘犻梺璇查叄濞佳囧箟閳ュ磭鏆﹂柛娆忣槹閸欏繑淇婇悙棰濆殭濞存粓绠栧铏规嫚閳ヨ櫕鐏撻梺杞扮椤兘濡存担绯曟瀻闁圭偓娼欏▓鐔兼⒑闂堟侗妲堕柛搴ら哺娣?*/
   }
 
   .site-logo {
@@ -1599,7 +1634,7 @@ html[lang="ru"] .home-hero-btn:hover {
 @media (max-width: 640px) {
   .site-header-inner {
     width: min(100% - 28px, 1600px); /* 闂傚倸鍊搁崐鎼佸磹妞嬪海鐭嗗ù锝堟缁€濠傗攽閻樻彃浜為柣鎺旀櫕閹叉悂寮崼娑掑亾娓氣偓瀵粙顢橀悙鑼垛偓鍨攽閿涘嫬浠х紒顕呭灦瀵偊鎮╃紒妯锋嫼闂備緡鍋嗛崑娑㈡嚐椤栨稒娅犻柟娈垮枤绾?Top 闂傚倸鍊搁崐鎼佸磹妞嬪海鐭嗗〒姘ｅ亾妤犵偞鐗犻、鏇㈠Χ閸モ晝鍘犻梺璇查叄濞佳囧箟閳ュ磭鏆﹂柡灞诲劜閻撴瑩姊洪銊х暠妤犵偞锕㈤弻宥囩磼濡崵顦伴梺缁樻惄閸嬪﹤鐣烽崼鏇炍╃憸澶娢ｉ崼銉︹拺婵炶尪顕ч獮妤併亜閵娿儻韬鐐插暙铻栭柛娑卞幗瀹撳秴顪冮妶鍡樺暗闁稿鍋婃俊鐑藉煛閸屾粌骞楁繝鐢靛█濞佳兾涘☉銏犳槬闁挎繂顦伴悡?*/
-    height: 70px; /* 闂傚倸鍊搁崐鎼佸磹妞嬪海鐭嗗ù锝堟缁€濠傗攽閻樻彃浜為柣鎺旀櫕閹叉悂寮崼娑掑亾娓氣偓瀵粙顢橀悙鑼垛偓鍨攽閿涘嫬浠х紒顕呭灦瀵偊鎮╃紒妯锋嫼闂備緡鍋嗛崑娑㈡嚐椤栨稒娅犻柟娈垮枤绾?Top 闂傚倸鍊搁崐鎼佸磹妞嬪海鐭嗗〒姘ｅ亾妤犵偞鐗犻、鏇㈠Χ閸モ晝鍘犻梺璇查叄濞佳囧箟閳ュ磭鏆﹂柛娆忣槹閸欏繑淇婇悙棰濆殭濞存粓绠栧铏规嫚閳ヨ櫕鐏撻梺杞扮椤兘濡存担绯曟瀻闁圭偓娼欏▓鐔兼⒑闂堟侗妲堕柛搴ら哺娣?*/
+    height: var(--site-header-height); /* 闂傚倸鍊搁崐鎼佸磹妞嬪海鐭嗗ù锝堟缁€濠傗攽閻樻彃浜為柣鎺旀櫕閹叉悂寮崼娑掑亾娓氣偓瀵粙顢橀悙鑼垛偓鍨攽閿涘嫬浠х紒顕呭灦瀵偊鎮╃紒妯锋嫼闂備緡鍋嗛崑娑㈡嚐椤栨稒娅犻柟娈垮枤绾?Top 闂傚倸鍊搁崐鎼佸磹妞嬪海鐭嗗〒姘ｅ亾妤犵偞鐗犻、鏇㈠Χ閸モ晝鍘犻梺璇查叄濞佳囧箟閳ュ磭鏆﹂柛娆忣槹閸欏繑淇婇悙棰濆殭濞存粓绠栧铏规嫚閳ヨ櫕鐏撻梺杞扮椤兘濡存担绯曟瀻闁圭偓娼欏▓鐔兼⒑闂堟侗妲堕柛搴ら哺娣?*/
   }
 
   .site-logo {
@@ -4588,28 +4623,33 @@ html[lang="ru"] .home-hero-btn:hover {
 ========================================================= */
 
 /* 缂?1 闂傚倸鍊峰ù鍥敋瑜忛埀顒佺▓閺呯娀銆佸▎鎾冲唨妞ゆ挾鍋熼悰銉モ攽椤旀枻渚涢柛妯恒偢瀹曞綊寮崼鐔封偓鐢告⒒閸喓鈯曢柛鐔哄仦閵囧嫰顢曢敐鍡欘槹闂?D 闂傚倸鍊搁崐鎼佸磹閻戣姤鍊块柨鏇楀亾妞ゎ亜鍟村畷绋课旈埀顒傜玻濡や椒绻嗛柕鍫濇噺閸ｅ綊鏌﹂崘顏勬灈闁哄本娲樼换娑㈠垂椤斿槈鈺傜箾鐎涙鐭婄紓宥咃躬瀵鈽夊Ο鍏兼畷闂侀€炲苯澧寸€规洘鍨块幃娆撳传閸曨偅鍎梻浣告啞濞诧箓宕归柆宥嗗亗闁靛繆鈧尙绠氬銈嗙墬閻熴劑顢楅悢闀愮箚闁圭粯甯楅崯鐐烘煏?*/
-.home-advantage-panel:nth-child(1) {
-  background-image: url("/images/home/advantages/advantage-01-rd.webp");
+.home-company-advantages-section[data-media-ready="true"]
+  .home-advantage-panel:nth-child(1) {
+  background-image: url("/images/home/advantages/advantage-01-rd-800.webp");
 }
 
 /* 缂?2 闂傚倸鍊峰ù鍥敋瑜忛埀顒佺▓閺呯娀銆佸▎鎾冲唨妞ゆ挾鍋熼悰銉モ攽椤旀枻渚涢柛妯恒偢瀹曞綊寮崼鐔封偓鐢告⒒閸喓鈯曢柛鐔哄仦閵囧嫰顢曢敐鍡欘槬闂傚洤顦甸弻娑滅疀閹捐櫕鍊紓鍌氱У閸ㄥ湱妲愰幒妤€鐒垫い鎺戝楠炪垺绻涢幋鐐垫噮闁告ê宕—鍐Χ閸℃衼缂備焦褰冩晶鑺ョ珶閺囥垺鍋ㄩ柛娑橈功閸橀亶鏌ｆ惔顖滅У闁稿鎳庨悾宄扮暆閸曨剛鍘靛銈嗘椤鈻嶉崱妯肩闁绘挸娴风粻濠氭煕閳哄绡€鐎规洘锕㈤崺鈩冩媴閸︻厺绮氬┑鐘垫暩婵兘寮幖浣哥；婵炴垯鍨洪崑銈夋煏婵炵偓娅呴柛姘秺楠炴牕菐椤掆偓婵¤偐鐥幆褏绉洪柡宀€鍠栭獮鎴﹀箛椤撶姰鈧劙姊?*/
-.home-advantage-panel:nth-child(2) {
-  background-image: url("/images/home/advantages/advantage-02-manufacturing.webp");
+.home-company-advantages-section[data-media-ready="true"]
+  .home-advantage-panel:nth-child(2) {
+  background-image: url("/images/home/advantages/advantage-02-manufacturing-800.webp");
 }
 
 /* 缂?3 闂傚倸鍊峰ù鍥敋瑜忛埀顒佺▓閺呯娀銆佸▎鎾冲唨妞ゆ挾鍋熼悰銉モ攽椤旀枻渚涢柛妯恒偢瀹曞綊寮崼鐔封偓鐢告⒒閸喓鈯曢柛鐔哄仦閵囧嫰顢曢敐鍡欘槹闂佸搫鐬奸崰搴ㄥ煝閹捐鍨傛い鏃傛櫕娴滃爼姊虹拠鎻掝劉闁煎綊绠栭垾锕傛倻閽樺鎽曢梺鍝勬川閸犳挾绮绘ィ鍐╃厽闁逛即娼ф晶顖炴煟濠靛洦鐓ラ柍瑙勫灴閹瑩宕ｆ径濠冾仦闂備胶顭堥敃銉ッ洪悢鍑よ€垮〒姘ｅ亾婵﹥妞介獮鎰償閿濆洨鏆ゆ繝纰樻閸嬪懘鎮疯缁傚秹骞栨担鐟颁缓闂佸憡绋戣墝闁?*/
-.home-advantage-panel:nth-child(3) {
-  background-image: url("/images/home/advantages/advantage-03-quality.webp");
+.home-company-advantages-section[data-media-ready="true"]
+  .home-advantage-panel:nth-child(3) {
+  background-image: url("/images/home/advantages/advantage-03-quality-800.webp");
 }
 
 /* 缂?4 闂傚倸鍊峰ù鍥敋瑜忛埀顒佺▓閺呯娀銆佸▎鎾冲唨妞ゆ挾鍋熼悰銉モ攽椤旀枻渚涢柛妯恒偢瀹曞綊寮崼鐔封偓鐢告⒒閸喓鈯曢柛鐔哄仦閵囧嫰顢曢敐鍡欘槹闂佸搫鐬奸崰搴ㄥ煝閹捐鍨傛い鏃傛櫕娴滄劙姊绘担渚劸妞ゆ垵妫濋獮鎰偅閸愩劎鐤呴梺鍦檸閸犳牜绮堢€ｎ偁浜滈柡鍐ㄥ€甸幏鈩冧繆椤愩倕鏋涙慨濠勭帛閹峰懘鎼归獮搴撳亾婵犲洦鐓涢柛娑卞枤閻帡鏌曢崱妤€鏆炵紒缁樼箞瀹曟帡濡堕崨顕呭悪闂傚倷绶氬褑澧濋梺鍝勬噳閺呯姴顕ｉ銏╁悑闁糕剝鐟ч鏇㈡⒑閻熼偊鍤熼柛搴㈠姍閹偤鎳為妷銈囩畾?*/
-.home-advantage-panel:nth-child(4) {
-  background-image: url("/images/home/advantages/advantage-04-custom.webp");
+.home-company-advantages-section[data-media-ready="true"]
+  .home-advantage-panel:nth-child(4) {
+  background-image: url("/images/home/advantages/advantage-04-custom-800.webp");
 }
 
 /* 缂?5 闂傚倸鍊峰ù鍥敋瑜忛埀顒佺▓閺呯娀銆佸▎鎾冲唨妞ゆ挾鍋熼悰銉モ攽椤旀枻渚涢柛妯恒偢瀹曞綊寮崼鐔封偓鐢告⒒閸喓鈯曢柛鐔哄仦閵囧嫰顢曢敐鍡欘槬闂傚洤顦甸弻娑滅疀閹捐櫕鍊紓鍌氱У閸ㄥ湱妲愰幒妤佸亼闁逞屽墴瀹曟娊鏁愭径濠呮憰閻庡箍鍎遍悧婊冾瀶閵娾晜鈷戦柛娑橈攻鐏忕敻鏌涢悩鏌ュ弰妞ゃ垺宀搁弫鎰緞鐎ｎ亙缂撻梻浣告啞閹哥顕ｉ崼鏇炵柧妞ゆ巻鍋撻柍瑙勫灴閹瑩寮堕幋鐘辨闂備浇宕甸崯娆撳炊閵娿儰鐥梻渚€鈧偛鑻晶瀛樻叏?*/
-.home-advantage-panel:nth-child(5) {
-  background-image: url("/images/home/advantages/advantage-05-service.webp");
+.home-company-advantages-section[data-media-ready="true"]
+  .home-advantage-panel:nth-child(5) {
+  background-image: url("/images/home/advantages/advantage-05-service-800.webp");
 }
 
 /* 闂傚倸鍊搁崐鎼佸磹妞嬪海鐭嗗〒姘ｅ亾妤犵偛顦甸弫鎾绘偐椤旂懓浜鹃柛鎰靛枛缁犳稒銇勯弮鍌滄憘婵炶偐鍠栧娲传閸曨剙绐涢梺鍝ュУ閸旀洟鍩㈠澶嬪亹缂備焦顭囬崢鎼佹倵楠炲灝鍔氬Δ鐘虫倐閻涱噣寮介鐔哄幐闂佸憡娲嶉弲娑㈠礉閿曞倹鐓涢悘鐐靛枎濡盯鎮块埀顒€鈹戦绛嬬劷闁告鍐ｆ灁闁规壆澧楅埛鎴︽偠濞戞巻鍋撻崗鍛棜闂傚倷绶氬褑澧濋梺鍝勬噺缁捇骞冮敓鐘冲亹缂備焦顭囬崢閬嶆⒑瑜版帒浜伴柛鎾寸懅閻ヮ亣顦崇紒缁樼箞閸┾偓妞ゆ帒瀚崑瀣煕椤愮姴鐏い鏃€娲熷娲川婵犱胶绻侀梺鍝ュУ瀹€鎼佺嵁婵犲洤宸濋悗娑欘焽閸樼敻鎮楅悷鏉款伃闁稿锕畷鏇㈠籍閸屾浜鹃悷娆忓缁€鍐磼椤旇偐绠婚挊婵嬫煙缂併垹鏋熼柣?*/
@@ -4964,12 +5004,13 @@ html[lang="ru"] .home-hero-btn:hover {
 
 .home-news-feature-image {
   position: relative;
+  display: block;
+  width: 100%;
   height: 400px;
   overflow: hidden;
   background-color: #e8eff5;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  object-fit: cover;
+  object-position: center;
   transition:
     transform 0.42s cubic-bezier(0.22, 1, 0.36, 1),
     filter 0.3s cubic-bezier(0.22, 1, 0.36, 1);
@@ -5203,13 +5244,14 @@ html[lang="ru"] .home-hero-btn:hover {
 
 .home-news-list-thumb {
   position: relative;
+  display: block;
+  width: 100%;
   height: 100%;
   min-height: 128px;
   overflow: hidden;
   background-color: #e8eff5;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  object-fit: cover;
+  object-position: center;
 }
 
 .home-news-list-content {
@@ -5743,7 +5785,7 @@ html[lang="ru"] .home-hero-btn:hover {
   text-align: left;
   font-size: 15px;
   line-height: 1.4;
-  font-weight: 800;
+  font-weight: 600;
   cursor: default;
 }
 
@@ -5809,7 +5851,7 @@ html[lang="ru"] .home-hero-btn:hover {
   color: var(--brand-blue);
   font-size: 24px;
   line-height: 1.45;
-  font-weight: 800;
+  font-weight: 600;
   margin: 0 0 8px;
 }
 
@@ -6927,7 +6969,7 @@ html[lang="ru"] .home-hero-btn:hover {
   ================================ */
 
   .site-header-inner {
-    height: 66px !important;
+    height: var(--site-header-height) !important;
   }
 
   .site-logo {
@@ -7839,7 +7881,7 @@ html[lang="ru"] .home-hero-btn:hover {
 @media (min-width: 1281px) and (max-width: 1440px) {
   .site-header-inner {
     width: min(1180px, calc(100% - 56px)) !important; /* 1440 濠电姷鏁告慨鐑藉极閹间礁纾婚柣鎰惈閸ㄥ倿鏌涢锝嗙缂佺姳鍗抽弻鐔兼⒒鐎垫瓕绐楅梺杞扮鐎氫即寮诲☉妯锋婵炲棙鍔曢崜褰掓⒑鏉炴壆顦︽い鎴濐槸椤繐煤椤忓秵鏅㈤梺閫炲苯澧扮紒顔芥閹晫绮欓崹顔藉劒闂佽鍑界紞鍡涘磻娴ｅ湱顩叉繝濠傜墢閸欐捇鏌涢妷锝呭閻忓浚鍘介妵鍕疀婵犲啯鐝氶梺鍝勫閸撴繈骞忛崨鏉戜紶闁靛鍎抽崢浠嬫⒒娴ｇ瓔鍤冮柛鐘愁殜閵嗗啯绻濋崒婊勬闂佺粯鍨归悺鏃堝极閸ヮ剚鐓熼柡鍐ㄧ墛閺侀亶鏌ｉ敐搴″濞ｅ洤锕幃娆擃敂閸曘劌浜鹃柡宓本缍庨梺鑽ゅ枛閸嬪﹤顭囬弽顐ｅ枑闁绘鐗嗙粭鎺旂磼閻樺啿鍝洪柡宀嬬節瀹曟﹢濡歌椤も偓闂備礁鎼幊蹇曞垝閹捐钃熼柕鍫濐槸缁犳帡鏌熼悜妯虹仴濠殿喗娲栭埞鎴︻敋閸℃瑥鍩屽┑鈽嗗亝缁嬫挸危?*/
-    height: 66px !important; /* 1440 濠电姷鏁告慨鐑藉极閹间礁纾婚柣鎰惈閸ㄥ倿鏌涢锝嗙缂佺姳鍗抽弻鐔兼⒒鐎垫瓕绐楅梺杞扮鐎氫即寮诲☉妯锋婵炲棙鍔曢崜褰掓⒑鏉炴壆顦︽い鎴濐槸椤繐煤椤忓秵鏅㈤梺閫炲苯澧扮紒顔芥閹晫绮欓崹顔藉劒闂佽鍑界紞鍡涘磻娴ｅ湱顩叉繝濠傜墢閸欐捇鏌涢妷锝呭閻忓繋鍗抽弻娑㈡晲閸曨厾鐓撻梺鍝勬湰閻╊垶宕洪埄鍐懝闁搞儯鍓遍敃鍌涚叄缂備焦顭囨晶鐢告煛鐏炲墽銆掑ù鐙呯畵楠炴垿骞囬妸銉ゅ婵炲濮撮鎰板极閸岀偞鐓曢柍銉ョ－缁犳澘霉濠婂牏鐣洪柟顔煎槻閳诲氦绠涢幙鍐ф偅闂備礁纾划顖毭哄鈧獮鍫ュΩ閿斿墽鐦堥梺鍛婁緱閸ｎ喖螞閸曨偒娓婚柕鍫濇鐏忣參鏌曢崼銏╃劸闁伙絿鍏橀幃銏㈠枈鏉堛劍娅嶉梻?*/
+    height: var(--site-header-height) !important; /* 1440 濠电姷鏁告慨鐑藉极閹间礁纾婚柣鎰惈閸ㄥ倿鏌涢锝嗙缂佺姳鍗抽弻鐔兼⒒鐎垫瓕绐楅梺杞扮鐎氫即寮诲☉妯锋婵炲棙鍔曢崜褰掓⒑鏉炴壆顦︽い鎴濐槸椤繐煤椤忓秵鏅㈤梺閫炲苯澧扮紒顔芥閹晫绮欓崹顔藉劒闂佽鍑界紞鍡涘磻娴ｅ湱顩叉繝濠傜墢閸欐捇鏌涢妷锝呭閻忓繋鍗抽弻娑㈡晲閸曨厾鐓撻梺鍝勬湰閻╊垶宕洪埄鍐懝闁搞儯鍓遍敃鍌涚叄缂備焦顭囨晶鐢告煛鐏炲墽銆掑ù鐙呯畵楠炴垿骞囬妸銉ゅ婵炲濮撮鎰板极閸岀偞鐓曢柍銉ョ－缁犳澘霉濠婂牏鐣洪柟顔煎槻閳诲氦绠涢幙鍐ф偅闂備礁纾划顖毭哄鈧獮鍫ュΩ閿斿墽鐦堥梺鍛婁緱閸ｎ喖螞閸曨偒娓婚柕鍫濇鐏忣參鏌曢崼銏╃劸闁伙絿鍏橀幃銏㈠枈鏉堛劍娅嶉梻?*/
   }
 
   .site-logo {
@@ -7906,7 +7948,7 @@ html[lang="ru"] .home-hero-btn:hover {
 @media (max-width: 768px) {
   .site-header-inner {
     width: calc(100% - 28px) !important; /* 闂傚倸鍊搁崐鎼佸磹妞嬪海鐭嗗ù锝堟缁€濠傗攽閻樻彃浜為柣鎺旀櫕閹叉悂寮崼娑掑亾娓氣偓瀵粙顢橀悙鑼垛偓鍨攽閿涘嫬浠х紒顕呭灦瀵偊鎮╃紒妯锋嫼闂備緡鍋嗛崑娑㈡嚐椤栨稒娅犻柟娈垮枤绾惧ジ寮堕崼娑樺婵炴惌鍠氶埀顒侇問閸ｎ噣宕抽敐澶屽祦閻庯綆浜栭弨浠嬫煕椤愶絿鐭婇柟钘夘儏閳规垿鏁嶉崟顐℃澀闂佺锕ラ悧鏇犲弲闂佺粯鏌ㄩ幗婊堛€呴弻銉︾厱妞ゆ劧绲剧粈鈧紓浣哄Х婵數鎹㈠┑鍥╃瘈闁稿本绮岄埛鍫ユ⒑鏉炴壆顦﹂柛濠傛健瀵鈽夐姀鐘插祮闂侀潧顭堥崐妤呭极閺嵮屾富闁靛牆妫欓悡銉︿繆椤愶絿绠撴い顐㈢箰鐓ゆい蹇撳缁愭稒绻濋悽闈浶㈤悗姘煎弮瀹曞疇顦寸紒杈ㄥ浮瀹曟粏顦舵俊鐐倐閺屾稑鈻庤箛鎾存濡炪倖娲╃紞渚€鐛惔銊﹀癄濠㈣泛鑻慨锔戒繆閻愵亜鈧牜鏁幒鏂哄亾濮樼厧寮柟?*/
-    height: 60px !important; /* 闂傚倸鍊搁崐鎼佸磹妞嬪海鐭嗗ù锝堟缁€濠傗攽閻樻彃浜為柣鎺旀櫕閹叉悂寮崼娑掑亾娓氣偓瀵粙顢橀悙鑼垛偓鍨攽閿涘嫬浠х紒顕呭灦瀵偊鎮╃紒妯锋嫼闂備緡鍋嗛崑娑㈡嚐椤栨稒娅犻柟娈垮枤绾惧ジ寮堕崼娑樺婵炴惌鍠氶埀顒侇問閸ｎ噣宕抽敐澶屽祦閻庯綆浜栭弨浠嬫煕椤愶絿鐭婇柟钘夘儏閳规垿鏁嶉崟顐℃澀闂佺锕ラ悧鏇犲弲闂佺粯鏌ㄩ幗婊堛€呴弻銉︾厱妞ゆ劧绲剧粈鈧紓浣哄Х婵數鎹㈠┑鍥╃瘈闁稿本绮岄埛鍫ユ⒑鏉炴壆顦﹂柛濠傛健瀵鈽夊Ο閿嬵潔闂佸憡顨堥崑鐔哥閳哄懏鈷戠紓浣姑粭姘舵倵缁楁稑瀚埞宥呪攽閻樺弶鎼愰崶鎾⒑閸涘﹣绶遍柛妯绘倐瀹曟垿骞橀獮澶告睏闂佸湱鍎ら幐璇测枍閺冨牊鈷?*/
+    height: var(--site-header-height) !important; /* 闂傚倸鍊搁崐鎼佸磹妞嬪海鐭嗗ù锝堟缁€濠傗攽閻樻彃浜為柣鎺旀櫕閹叉悂寮崼娑掑亾娓氣偓瀵粙顢橀悙鑼垛偓鍨攽閿涘嫬浠х紒顕呭灦瀵偊鎮╃紒妯锋嫼闂備緡鍋嗛崑娑㈡嚐椤栨稒娅犻柟娈垮枤绾惧ジ寮堕崼娑樺婵炴惌鍠氶埀顒侇問閸ｎ噣宕抽敐澶屽祦閻庯綆浜栭弨浠嬫煕椤愶絿鐭婇柟钘夘儏閳规垿鏁嶉崟顐℃澀闂佺锕ラ悧鏇犲弲闂佺粯鏌ㄩ幗婊堛€呴弻銉︾厱妞ゆ劧绲剧粈鈧紓浣哄Х婵數鎹㈠┑鍥╃瘈闁稿本绮岄埛鍫ユ⒑鏉炴壆顦﹂柛濠傛健瀵鈽夊Ο閿嬵潔闂佸憡顨堥崑鐔哥閳哄懏鈷戠紓浣姑粭姘舵倵缁楁稑瀚埞宥呪攽閻樺弶鎼愰崶鎾⒑閸涘﹣绶遍柛妯绘倐瀹曟垿骞橀獮澶告睏闂佸湱鍎ら幐璇测枍閺冨牊鈷?*/
   }
 
   .site-logo {
@@ -8039,7 +8081,7 @@ html[lang="ru"] .home-hero-btn:hover {
   ================================ */
 
   .site-header-inner {
-    height: 66px !important;
+    height: var(--site-header-height) !important;
   }
 
   .site-logo {
@@ -21658,8 +21700,7 @@ html[data-global-touch-device="true"]
 /* HOME_HERO_TWO_BANNERS_VISUALS_END */
 
 /* HOME_HERO_MOBILE_COPY_START */
-.home-hero-mobile-overlay,
-.home-hero-mobile-copy {
+.home-hero-mobile-overlay {
   display: none;
 }
 
@@ -21683,7 +21724,7 @@ html[data-global-touch-device="true"]
 
   html body
     .home-hero-scroll-shell
-    .home-hero-mobile-copy {
+    .home-hero-primary-copy {
     position: absolute !important;
     top: auto !important;
     right: clamp(18px, 5vw, 48px) !important;
@@ -21709,20 +21750,20 @@ html[data-global-touch-device="true"]
   }
 
   html body
-    .home-hero-mobile-copy
+    .home-hero-primary-copy
     .home-hero-title,
   html body
-    .home-hero-mobile-copy
+    .home-hero-primary-copy
     .home-hero-subtitle,
   html body
-    .home-hero-mobile-copy
+    .home-hero-primary-copy
     .home-hero-actions {
     opacity: 1 !important;
     transform: none !important;
   }
 
   html body
-    .home-hero-mobile-copy
+    .home-hero-primary-copy
     .home-hero-title {
     max-width: 760px !important;
     margin: 0 !important;
@@ -21737,7 +21778,7 @@ html[data-global-touch-device="true"]
   }
 
   html body
-    .home-hero-mobile-copy
+    .home-hero-primary-copy
     .home-hero-subtitle {
     max-width: 720px !important;
     margin: 22px 0 0 !important;
@@ -21752,7 +21793,7 @@ html[data-global-touch-device="true"]
   }
 
   html body
-    .home-hero-mobile-copy
+    .home-hero-primary-copy
     .home-hero-actions {
     display: grid !important;
     width: min(100%, 330px) !important;
@@ -21763,7 +21804,7 @@ html[data-global-touch-device="true"]
   }
 
   html body
-    .home-hero-mobile-copy
+    .home-hero-primary-copy
     .home-hero-btn {
     width: 100% !important;
     min-width: 0 !important;
@@ -21773,13 +21814,13 @@ html[data-global-touch-device="true"]
 
 @media (max-width: 480px) {
   html body
-    .home-hero-mobile-copy
+    .home-hero-primary-copy
     .home-hero-title {
     font-size: clamp(27px, 7.8vw, 34px) !important;
   }
 
   html body
-    .home-hero-mobile-copy
+    .home-hero-primary-copy
     .home-hero-subtitle {
     margin-top: 18px !important;
     font-size: 15px !important;
@@ -21787,12 +21828,67 @@ html[data-global-touch-device="true"]
   }
 
   html body
-    .home-hero-mobile-copy
+    .home-hero-primary-copy
     .home-hero-actions {
     margin-top: 24px !important;
   }
 }
 /* HOME_HERO_MOBILE_COPY_END */
+
+/* HOME_HERO_SHARED_PRIMARY_COPY_START
+ * The main Hero heading, description and actions are a single DOM branch.
+ * Desktop moves that branch with the first carousel slide; mobile reuses the
+ * existing mobile-copy positioning rules above.
+ */
+@media (min-width: 1001px) {
+  html body
+    .home-hero-scroll-shell
+    .home-hero-primary-copy {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 3 !important;
+
+    display: block !important;
+    height: 100% !important;
+    padding-top: 250px !important;
+
+    box-sizing: border-box !important;
+    pointer-events: none !important;
+    will-change: transform, opacity;
+  }
+
+  html body
+    .home-hero-scroll-shell
+    .home-hero-primary-copy
+    :is(
+      .home-hero-title,
+      .home-hero-subtitle
+    ) {
+    color: #ffffff !important;
+    text-shadow:
+      0 2px 8px rgb(12 43 94 / 58%),
+      0 1px 2px rgb(12 43 94 / 38%) !important;
+  }
+
+  html body
+    .home-hero-scroll-shell
+    .home-hero-primary-copy
+    .home-hero-actions {
+    pointer-events:
+      var(
+        --home-hero-content-pointer-events,
+        none
+      ) !important;
+  }
+
+  html body
+    .home-hero-scroll-shell
+    .home-hero-primary-copy
+    .home-hero-btn {
+    border-width: 1px !important;
+  }
+}
+/* HOME_HERO_SHARED_PRIMARY_COPY_END */
 
 /* =========================================================
    首页｜白色竖条加载画面
@@ -21811,3 +21907,83 @@ html[data-global-touch-device="true"]
    - 无阴影
    - 无文字
 ========================================================= */
+
+/* SITE_HEADER_LOCALE_STABLE_NAV_START
+ * Keep every desktop navigation label in the same horizontal slot across
+ * locales. Translation length and locale-specific font metrics may change,
+ * but they must not move the neighboring navigation labels.
+ */
+@media (min-width: 1001px) {
+  .site-header .site-header-center .site-nav {
+    display: grid !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr)) minmax(188px, 1fr);
+    align-items: center;
+    justify-content: initial;
+    gap: 0 !important;
+    width: min(100%, 672px) !important;
+    max-width: 100% !important;
+  }
+
+  .site-header .site-nav-item {
+    display: flex;
+    min-width: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .site-header .site-nav-link,
+  .site-header button.site-nav-link {
+    display: inline-flex;
+    min-height: 30px;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px !important;
+    line-height: 1.2 !important;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 1001px) and (max-width: 1100px) {
+  .site-header .site-nav-link,
+  .site-header button.site-nav-link {
+    font-size: 12px !important;
+  }
+}
+
+@media (min-width: 1001px) and (max-width: 1120px) {
+  .site-header .site-header-center .site-nav {
+    grid-template-columns: repeat(5, minmax(0, 1fr)) minmax(188px, 1fr) !important;
+  }
+}
+
+@media (min-width: 1281px) {
+  .site-header .site-header-center .site-nav {
+    width: min(100%, 720px) !important;
+  }
+}
+
+@media (min-width: 1600px) {
+  .site-header .site-header-center .site-nav {
+    width: min(100%, 900px) !important;
+  }
+
+  .site-header .site-nav-link,
+  .site-header button.site-nav-link,
+  .site-header-locale-ru .site-nav-link {
+    font-size: 15px !important;
+  }
+}
+
+@media (min-width: 1921px) {
+  .site-header .site-header-center .site-nav {
+    width: min(100%, 1032px) !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr)) minmax(250px, 1fr) !important;
+  }
+
+  .site-header .site-nav-link,
+  .site-header button.site-nav-link,
+  .site-header-locale-ru .site-nav-link {
+    font-size: 20px !important;
+  }
+}
+/* SITE_HEADER_LOCALE_STABLE_NAV_END */

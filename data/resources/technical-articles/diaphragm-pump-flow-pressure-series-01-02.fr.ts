@@ -10,11 +10,11 @@ export const diaphragmPump300Vs600SelectionFrCopy = {
     title:
       "Comment choisir entre des micropompes à membrane de 300 et 600 mL/min ? Calculez d'abord le débit requis, puis le point de fonctionnement réel",
     seoTitle:
-      "Micropompe à membrane de 300 ou 600 mL/min : débit et point de fonctionnement | FOREACH",
+      "Micropompe à membrane de 300 ou 600 mL/min : débit et point de fonctionnement | Foreach Technology",
     seoDescription:
       "Comparer des micropompes à membrane de 300 et 600 mL/min ne se limite pas au débit à vide. Ce guide relie le volume par cycle, le temps de pompage effectif, la pression du circuit, la courbe de pompe et la validation sur prototype.",
     coverImage: `${ARTICLE_01_ASSET_BASE}/article-cover.webp`,
-    coverAlt: "Micropompes à membrane FOREACH et essai de débit dans une vidéo Douyin officielle",
+    coverAlt: "Micropompes à membrane Foreach et essai de débit dans une vidéo Douyin officielle",
   },
   deck:
     "300 et 600 mL/min désignent des classes de débit, pas des valeurs fixes une fois la pompe intégrée. Il faut convertir la tâche liquide en débit minimal, déterminer la pression exigée par le circuit réel, puis confirmer le point de fonctionnement à l'aide de la courbe de pompe et d'un essai sur prototype.",
@@ -134,11 +134,11 @@ export const diaphragmPump300Vs600SelectionFrCopy = {
       ],
     },
     {
-      title: "4. Exemple avec les paramètres publics de FOREACH : un débit supérieur n'implique pas une capacité supérieure sur tous les plans",
+      title: "4. Exemple avec les paramètres publics de Foreach : un débit supérieur n'implique pas une capacité supérieure sur tous les plans",
       blocks: [
         {
           type: "paragraph",
-          text: "Les DPL30 et DPL60 dans les informations publiques de FOREACH peuvent être utilisés pour illustrer différentes dimensions de paramètres. Les niveaux de débit à vide des deux sont différents, la pression nominale publique est de 100 kPa et les hauteurs d'auto-amorçage sont respectivement de 6 mH₂O et 3 mH₂O. Le débit, l'auto-amorçage et la pression doivent être vérifiés séparément.",
+          text: "Les DPL30 et DPL60 dans les informations publiques de Foreach peuvent être utilisés pour illustrer différentes dimensions de paramètres. Les niveaux de débit à vide des deux sont différents, la pression nominale publique est de 100 kPa et les hauteurs d'auto-amorçage sont respectivement de 6 mH₂O et 3 mH₂O. Le débit, l'auto-amorçage et la pression doivent être vérifiés séparément.",
         },
         {
           type: "table",
@@ -267,13 +267,13 @@ export const diaphragmPump300Vs600SelectionFrCopy = {
 
 export const diaphragmPump300MlMinFlowMarginFrCopy = {
   metadata: {
-    title: "Quelle marge de débit prévoir lors de l'intégration d'une micropompe à membrane de 300 mL/min ? Exemple FOREACH",
+    title: "Quelle marge de débit prévoir lors de l'intégration d'une micropompe à membrane de 300 mL/min ? Exemple Foreach",
     seoTitle:
-      "Marge de débit d'une micropompe de 300 mL/min : pire cas et critères d'acceptation | FOREACH",
+      "Marge de débit d'une micropompe de 300 mL/min : pire cas et critères d'acceptation | Foreach Technology",
     seoDescription:
       "La marge de débit installé d'une micropompe à membrane de 300 mL/min n'est pas un pourcentage fixe. Le guide définit des scénarios de pire cas et intègre contre-pression, colmatage du filtre, alimentation, fluide, dispersion des échantillons, incertitude de mesure et critères d'acceptation.",
     coverImage: `${ARTICLE_02_ASSET_BASE}/article-cover.webp`,
-    coverAlt: "Essai de débit d'une micropompe à membrane FOREACH dans une vidéo Douyin officielle",
+    coverAlt: "Essai de débit d'une micropompe à membrane Foreach dans une vidéo Douyin officielle",
   },
   deck:
     "La marge ne s'obtient pas en multipliant systématiquement le débit cible par 1,2 ou 1,3. Elle compare le débit disponible conservateur à la demande maximale dans un même scénario de pire cas, selon une méthode prédéfinie de traitement de l'incertitude et des critères d'acceptation explicites.",
@@ -416,7 +416,7 @@ export const diaphragmPump300MlMinFlowMarginFrCopy = {
       blocks: [
         {
           type: "paragraph",
-          text: "Les chiffres suivants sont uniquement utilisés pour illustrer la méthode et ne représentent pas la mesure réelle de l'équipement du client ou des produits FOREACH. Supposons une demande maximale de 180 mL/min ; la pompe candidate peut délivrer 260 mL/min à la tension nominale et à la contre-pression cible ; dans le pire des cas confirmé qui pourrait se produire, le débit disponible mesuré dans le pire des cas est de 230 mL/min.",
+          text: "Les chiffres suivants sont uniquement utilisés pour illustrer la méthode et ne représentent pas la mesure réelle de l'équipement du client ou des produits Foreach. Supposons une demande maximale de 180 mL/min ; la pompe candidate peut délivrer 260 mL/min à la tension nominale et à la contre-pression cible ; dans le pire des cas confirmé qui pourrait se produire, le débit disponible mesuré dans le pire des cas est de 230 mL/min.",
         },
         {
           type: "formula",
@@ -435,11 +435,11 @@ export const diaphragmPump300MlMinFlowMarginFrCopy = {
       ],
     },
     {
-      title: "7. En prenant comme exemple la pompe FOREACH 300 mL/min, vous devez partir de la contre-pression cible.",
+      title: "7. En prenant comme exemple la pompe Foreach 300 mL/min, vous devez partir de la contre-pression cible.",
       blocks: [
         {
           type: "paragraph",
-          text: "Les informations publiques du FOREACH DPL30 indiquent un débit à vide de 300 mL/min, une pression nominale de 100 kPa et une hauteur d'auto-amorçage de 6 mH₂O. La marge disponible ne se calcule pas par « 300 moins le débit cible » : elle doit partir de la courbe officielle à la contre-pression cible, puis être vérifiée sur le circuit final en mesurant l'entrée, la sortie et le débit réel.",
+          text: "Les informations publiques du Foreach DPL30 indiquent un débit à vide de 300 mL/min, une pression nominale de 100 kPa et une hauteur d'auto-amorçage de 6 mH₂O. La marge disponible ne se calcule pas par « 300 moins le débit cible » : elle doit partir de la courbe officielle à la contre-pression cible, puis être vérifiée sur le circuit final en mesurant l'entrée, la sortie et le débit réel.",
         },
         {
           type: "paragraph",

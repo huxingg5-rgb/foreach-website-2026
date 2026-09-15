@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650" role="img" aria-labelledby="title desc" lang="es">
+<title id="title">Tres eventos durante el autocebado</title>
+<desc id="desc">Esquema: la primera aparición de líquido y la entrega estable al destino son eventos distintos. Las separaciones no representan tiempos medidos de una bomba.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#587080"/></marker></defs>
+<rect width="1000" height="650" rx="20" fill="#f3f8fb"/>
+<g font-family="Arial, Microsoft YaHei, Malgun Gothic, sans-serif" fill="#17394c">
+<text x="500" y="52" font-size="30" font-weight="700" text-anchor="middle" fill="#17394c">
+<tspan x="500" dy="0">Tres eventos durante el autocebado</tspan>
+</text>
+<rect x="23" y="155" width="254" height="130" rx="14" fill="#e0eff6" stroke="#bbd7e4"/>
+<text x="150" y="190" font-size="26" font-weight="700" text-anchor="middle" fill="#17394c">
+<tspan x="150" dy="0">Arranque</tspan>
+<tspan x="150" dy="33.28">efectivo</tspan>
+</text>
+<line x1="150" y1="285" x2="150" y2="352" stroke="#587080" stroke-width="3" stroke-dasharray="9 8"/>
+<circle cx="150" cy="352" r="8" fill="#0b7995"/>
+<rect x="353" y="155" width="254" height="130" rx="14" fill="#e0eff6" stroke="#bbd7e4"/>
+<text x="480" y="190" font-size="26" font-weight="700" text-anchor="middle" fill="#17394c">
+<tspan x="480" dy="0">Primer líquido</tspan>
+<tspan x="480" dy="33.28">en el punto</tspan>
+<tspan x="480" dy="33.28">observado</tspan>
+</text>
+<line x1="480" y1="285" x2="480" y2="352" stroke="#587080" stroke-width="3" stroke-dasharray="9 8"/>
+<circle cx="480" cy="352" r="8" fill="#0b7995"/>
+<rect x="723" y="155" width="254" height="130" rx="14" fill="#e0eff6" stroke="#bbd7e4"/>
+<text x="850" y="190" font-size="26" font-weight="700" text-anchor="middle" fill="#17394c">
+<tspan x="850" dy="0">Entrega</tspan>
+<tspan x="850" dy="33.28">estable al</tspan>
+<tspan x="850" dy="33.28">destino</tspan>
+</text>
+<line x1="850" y1="285" x2="850" y2="352" stroke="#587080" stroke-width="3" stroke-dasharray="9 8"/>
+<circle cx="850" cy="352" r="8" fill="#0b7995"/>
+<line x1="75" y1="352" x2="943" y2="352" stroke="#587080" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="150" y1="418" x2="480" y2="418" stroke="#1687a0" stroke-width="3"/>
+<line x1="150" y1="402" x2="150" y2="429" stroke="#587080" stroke-width="3"/>
+<line x1="480" y1="402" x2="480" y2="429" stroke="#587080" stroke-width="3"/>
+<text x="315" y="462" font-size="25" font-weight="400" text-anchor="middle" fill="#17394c">
+<tspan x="315" dy="0">Tiempo hasta el primer</tspan>
+<tspan x="315" dy="32.0">líquido</tspan>
+</text>
+<line x1="150" y1="523" x2="850" y2="523" stroke="#1687a0" stroke-width="3"/>
+<line x1="150" y1="507" x2="150" y2="534" stroke="#587080" stroke-width="3"/>
+<line x1="850" y1="507" x2="850" y2="534" stroke="#587080" stroke-width="3"/>
+<text x="500" y="567" font-size="25" font-weight="400" text-anchor="middle" fill="#17394c">
+<tspan x="500" dy="0">Tiempo hasta la entrega estable</tspan>
+</text>
+<text x="925" y="612" font-size="22" font-weight="400" text-anchor="end" fill="#17394c">
+<tspan x="925" dy="0">Tiempo (esquema)</tspan>
+</text>
+</g>
+</svg>

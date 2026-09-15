@@ -3,10 +3,10 @@ import type { Dpgl800ArticleCopy } from "./dpgl800-gas-liquid-diaphragm-pump.typ
 export const dpgl800ArticleZhCopy = {
   metadata: {
     title: "气液混合隔膜泵怎么选？从6 L/min、-90 kPa与建压时间看DPGL800",
-    seoTitle: "气液混合隔膜泵怎么选？DPGL800 6 L/min、-90 kPa 与建压时间｜FOREACH",
+    seoTitle: "气液混合隔膜泵怎么选？DPGL800 6 L/min、-90 kPa 与建压时间｜Foreach Technology",
     seoDescription:
       "DPGL800气液混合隔膜泵选型指南：解释6 L/min气体空载流量、＜-90 kPa真空能力、30 kPa正压、5 L测试腔体建压时间、接液材料、型号编码与选型方法。",
-    coverAlt: "FOREACH DPGL800无刷气液混合隔膜泵产品外观，6 L/min、＜-90 kPa",
+    coverAlt: "Foreach DPGL800无刷气液混合隔膜泵产品外观，6 L/min、＜-90 kPa",
   },
   section1: {
     title: "一、为什么DPGL800不能按普通液体隔膜泵选？",

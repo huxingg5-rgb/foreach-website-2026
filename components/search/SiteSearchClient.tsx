@@ -56,7 +56,7 @@ const MODULE_TEXT: Record<
   },
   "compatible-models": {
     title: "兼容型号查询",
-    description: "根据现用型号查询对应的 FOREACH 兼容产品。",
+    description: "根据现用型号查询对应的 Foreach 兼容产品。",
     empty: "兼容型号查询暂无匹配结果。",
   },
   datasheets: {
@@ -74,7 +74,7 @@ const MODULE_TEXT_EN: typeof MODULE_TEXT = {
   },
   "compatible-models": {
     title: "Compatible Model Search",
-    description: "Find the corresponding FOREACH product for an existing model.",
+    description: "Find the corresponding Foreach product for an existing model.",
     empty: "No matching compatible models were found.",
   },
   datasheets: {
@@ -86,7 +86,7 @@ const MODULE_TEXT_EN: typeof MODULE_TEXT = {
 
 const ENGLISH_RESULT_DESCRIPTIONS: Record<SiteSearchModule, string> = {
   products: "View product details and selection information.",
-  "compatible-models": "View the corresponding FOREACH compatible product.",
+  "compatible-models": "View the corresponding Foreach compatible product.",
   datasheets: "View or download the available product datasheet.",
 };
 
@@ -102,7 +102,7 @@ function getPathLabel(href: string): string {
     .at(-1);
 
   if (!segment) {
-    return "FOREACH";
+    return "Foreach Technology";
   }
 
   return decodeURIComponent(segment)
@@ -271,7 +271,7 @@ function SearchResultItem({
           className="site-search-result-image site-search-result-image-empty"
           aria-hidden="true"
         >
-          <span>FOREACH</span>
+          <span>Foreach Technology</span>
         </div>
       )}
 
@@ -451,11 +451,11 @@ export default function SiteSearchClient({
     <main className="site-search-page">
       <section className="site-search-hero">
         <div className="site-search-container">
-          <p className="site-search-eyebrow">FOREACH SEARCH</p>
+          <p className="site-search-eyebrow">Foreach SEARCH</p>
           <h1>{isEnglish ? t("Site Search") : "全站搜索"}</h1>
           <p>
             {isEnglish
-              ? t("Search products, models, compatible models, and datasheets across the FOREACH website.")
+              ? t("Search products, models, compatible models, and datasheets across the Foreach website.")
               : "搜索产品、型号、兼容型号和规格书，并在对应模块中查看结果。"}
           </p>
 
@@ -484,7 +484,7 @@ export default function SiteSearchClient({
             <h2>{isEnglish ? t("Enter a search term") : "请输入搜索关键词"}</h2>
             <p>
               {isEnglish
-                ? t("For example: Q2002, PMC1702, plunger pump, or diaphragm pump datasheet.")
+                ? t("For example: Q2002, PMC1702, piston pump, or diaphragm pump datasheet.")
                 : "例如：Q2002、PMC1702、柱塞泵、隔膜泵规格书。"}
             </p>
           </section>

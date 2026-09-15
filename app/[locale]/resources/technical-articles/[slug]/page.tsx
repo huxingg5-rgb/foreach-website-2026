@@ -22,10 +22,15 @@ import {
 
 import "@/app/resources/technical-articles/technical-articles.css";
 
-import type { TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
+import type { TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
+
 import "@/app/resources/news/news.css";
 
 const SUPPORTED_LOCALES: TechnicalArticleLocale[] = ["en", "es", "fr", "ko", "ru"];
+const TECHNICAL_ARTICLE_LOCALES: TechnicalArticleLocale[] = [
+  "zh-CN",
+  ...SUPPORTED_LOCALES,
+];
 
 function getTechnicalArticleLanguageLinks(slug: string) {
   const basePath = `/resources/technical-articles/${slug}/`;
@@ -39,14 +44,17 @@ function getTechnicalArticleLanguageLinks(slug: string) {
     ru: `/ru${basePath}`,
   };
 
-  if (
-    slug === "brushed-vs-brushless-diaphragm-pump-3000h-10000h" ||
-    slug === "life-science-dpl60-600ml-min-diaphragm-pump-selection-guide"
-  ) {
-    languageLinks["x-default"] = basePath;
+  const availableLanguageLinks = Object.fromEntries(
+    TECHNICAL_ARTICLE_LOCALES.filter((locale) =>
+      getTechnicalArticleData(locale, slug),
+    ).map((locale) => [locale, languageLinks[locale]]),
+  );
+
+  if (availableLanguageLinks["zh-CN"]) {
+    availableLanguageLinks["x-default"] = basePath;
   }
 
-  return languageLinks;
+  return availableLanguageLinks;
 }
 
 interface TechnicalArticleIntlDetailPageProps {
@@ -84,8 +92,8 @@ export async function generateMetadata({
   const metaTitle = /FOREACH/i.test(seoTitle)
     ? seoTitle
     : locale === "en"
-      ? `${seoTitle}｜Technical Articles｜FOREACH`
-      : `${seoTitle}｜FOREACH`;
+      ? `${seoTitle}｜Technical Articles｜Foreach Technology`
+      : `${seoTitle}｜Foreach Technology`;
   const description = article.seoDescription ?? article.summary;
   const canonicalUrl =
     `https://www.foreachtek.com/${locale}/resources/technical-articles/${slug}/`;

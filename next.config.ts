@@ -1,3 +1,4 @@
+import { getPistonPumpRedirectEntries } from "./lib/seo/piston-pump-migration";
 /* =========================================================
    next.config.ts
    恒永达官网｜Vercel、本地与 Cloudflare 双模式配置
@@ -37,6 +38,15 @@ const nextConfig: NextConfig = {
   ...(isCloudflarePagesBuild
     ? {
         output: "export" as const,
+      }
+    : {}),
+
+  // Next.js serves local redirects; Cloudflare uses public/_redirects.
+  ...(!isCloudflarePagesBuild
+    ? {
+        async redirects() {
+          return getPistonPumpRedirectEntries();
+        },
       }
     : {}),
 

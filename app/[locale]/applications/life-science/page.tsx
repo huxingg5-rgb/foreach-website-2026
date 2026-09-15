@@ -41,9 +41,9 @@ export function generateStaticParams() {
 }
 
 const defaultMetadata: Metadata = {
-  title: "Life Science Applications｜FOREACH",
+  title: "Life Science Applications｜Foreach Technology",
   description:
-    "FOREACH provides pumps, valves, fittings, tubing, sensors and fluidic system support for life science instruments.",
+    "Foreach provides pumps, valves, fittings, tubing, sensors and fluidic system support for life science instruments.",
 };
 
 export async function generateMetadata({

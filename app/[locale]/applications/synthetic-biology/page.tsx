@@ -33,9 +33,9 @@ export function generateStaticParams() {
 }
 
 const defaultMetadata: Metadata = {
-  title: "Synthetic Biology Applications｜FOREACH",
+  title: "Synthetic Biology Applications｜Foreach Technology",
   description:
-    "FOREACH provides pumps, valves, fittings, tubing, sensors and fluidic system support for synthetic biology systems.",
+    "Foreach provides pumps, valves, fittings, tubing, sensors and fluidic system support for synthetic biology systems.",
 };
 
 export async function generateMetadata({

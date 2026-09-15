@@ -12,12 +12,12 @@ export const diaphragmPumpPressureRatingTermsKoCopy = {
     title:
       "소형 다이어프램 펌프의 정격 작동 압력, 최대 토출 압력, 내압 및 파열 압력은 어떻게 다를까요?",
     seoTitle:
-      "다이어프램 펌프 정격 압력 vs 최대 토출, 내압 및 파열 압력 | FOREACH",
+      "다이어프램 펌프 정격 압력 vs 최대 토출, 내압 및 파열 압력 | Foreach Technology",
     seoDescription:
       "소형 다이어프램 펌프의 정격 작동 압력, 최대 토출 압력, 내압 시험 압력 및 파열 압력은 서로 같은 개념이 아닙니다. 용어 비교, 사양 확인 목록 및 사양서 검토 방법을 제공합니다.",
     coverImage: `${PRESSURE_TERMS_ASSET_BASE}/article-cover.webp`,
     coverAlt:
-      "FOREACH 공식 Douyin 채널의 소형 다이어프램 펌프 제품 및 압력 시험 장면",
+      "Foreach 공식 Douyin 채널의 소형 다이어프램 펌프 제품 및 압력 시험 장면",
   },
   deck:
     "압력 수치는 용어 정의, 시험 유체, 입구 조건, 해당 유량, 지속 시간 및 합격 기준과 함께 사용할 때만 엔지니어링 의미가 있습니다. 정격 작동 압력은 운전 경계를 정의할 수 있지만 최대 토출 압력, 내압 시험 압력과 파열 압력을 연속 작동점으로 직접 사용할 수는 없습니다.",
@@ -118,7 +118,7 @@ export const diaphragmPumpPressureRatingTermsKoCopy = {
         {
           type: "paragraph",
           text:
-            "FOREACH DPL30H 고압 액체 다이어프램 펌프를 예로 들면 웹사이트는 정격 압력 600 kPa를 제시합니다. 이 값은 해당 유량, 유체, 입구 조건, 온도, 듀티 사이클 및 전체 유량-압력 곡선과 함께 해석해야 합니다. 내압, 파열 압력 또는 임의 조건의 연속 이송 능력으로 자동 확대할 수 없습니다.",
+            "Foreach DPL30H 고압 액체 다이어프램 펌프를 예로 들면 웹사이트는 정격 압력 600 kPa를 제시합니다. 이 값은 해당 유량, 유체, 입구 조건, 온도, 듀티 사이클 및 전체 유량-압력 곡선과 함께 해석해야 합니다. 내압, 파열 압력 또는 임의 조건의 연속 이송 능력으로 자동 확대할 수 없습니다.",
         },
         {
           type: "paragraph",
@@ -184,18 +184,18 @@ export const diaphragmPumpPressureRatingTermsKoCopy = {
         {
           type: "paragraph",
           text:
-            "FOREACH 콘텐츠에도 동일한 원칙을 적용합니다. 관리 사양서가 정격 압력을 공개하면 정격 압력으로 설명하고, 공개하지 않은 내압과 파열 값은 구조, 재질 또는 유사 사양으로 추정하지 않습니다. 웹페이지는 선정 방법을 설명할 수 있지만 제품 승인 문서를 대체할 수 없습니다.",
+            "Foreach 콘텐츠에도 동일한 원칙을 적용합니다. 관리 사양서가 정격 압력을 공개하면 정격 압력으로 설명하고, 공개하지 않은 내압과 파열 값은 구조, 재질 또는 유사 사양으로 추정하지 않습니다. 웹페이지는 선정 방법을 설명할 수 있지만 제품 승인 문서를 대체할 수 없습니다.",
         },
       ],
     },
     {
-      title: "FOREACH 자료 및 근거 범위",
+      title: "Foreach 자료 및 근거 범위",
       blocks: [
         {
           type: "links",
           items: [
             {
-              label: "FOREACH: DPL30H 고압 액체 다이어프램 펌프 선정 가이드",
+              label: "Foreach: DPL30H 고압 액체 다이어프램 펌프 선정 가이드",
               href: "/resources/technical-articles/dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide",
             },
           ],
@@ -204,7 +204,7 @@ export const diaphragmPumpPressureRatingTermsKoCopy = {
           type: "notice",
           label: "근거 범위:",
           text:
-            "FOREACH 공개 자료는 압력 용어와 선정 방법을 설명합니다. 공식과 예시는 엔지니어링 초기 선별 전용이며 관리 사양서, 실제 유체 평가 또는 전체 시스템 시제품 검증을 대체하지 않습니다.",
+            "Foreach 공개 자료는 압력 용어와 선정 방법을 설명합니다. 공식과 예시는 엔지니어링 초기 선별 전용이며 관리 사양서, 실제 유체 평가 또는 전체 시스템 시제품 검증을 대체하지 않습니다.",
         },
       ],
     },
@@ -251,12 +251,12 @@ export const diaphragmPump100KpaVs600KpaSelectionKoCopy = {
     title:
       "100 kPa로 충분할까요? 유로에 600 kPa 고압 소형 다이어프램 펌프가 필요한지 판단하는 방법",
     seoTitle:
-      "100 kPa vs 600 kPa 소형 다이어프램 펌프: 유로 압력 예산으로 선택 | FOREACH",
+      "100 kPa vs 600 kPa 소형 다이어프램 펌프: 유로 압력 예산으로 선택 | Foreach Technology",
     seoDescription:
       "100 kPa가 충분한지는 용도 이름만으로 결정할 수 없습니다. 목표 유량, 튜브, 밸브, 필터, 니들, 말단 압력 및 펌프 곡선으로 600 kPa 고압 소형 다이어프램 펌프의 필요 여부를 판단하는 방법을 설명합니다.",
     coverImage: `${PRESSURE_LEVEL_SELECTION_ASSET_BASE}/article-cover.webp`,
     coverAlt:
-      "FOREACH 공식 Douyin 채널의 소형 다이어프램 펌프 제품 및 유로 압력 시험 장면",
+      "Foreach 공식 Douyin 채널의 소형 다이어프램 펌프 제품 및 유로 압력 시험 장면",
   },
   deck:
     "100 kPa와 600 kPa는 단순한 일반형과 강화형의 관계가 아닙니다. 먼저 목표 유량에서 전체 유로의 압력 예산을 완성한 다음 후보 펌프 곡선을 읽으십시오. 더 높은 압력 등급은 실제 고배압 조건에서만 가치가 있습니다.",
@@ -358,7 +358,7 @@ export const diaphragmPump100KpaVs600KpaSelectionKoCopy = {
         {
           type: "paragraph",
           text:
-            "FOREACH DPL30과 DPL60 일반 액체 다이어프램 펌프의 공개 정격 압력은 모두 100 kPa이며 자유 유량 등급은 각각 300 mL/min과 600 mL/min입니다. 적합성은 고정된 산업 이름이 아니라 목표 작동점이 관리 곡선과 허용 운전 조건 안에 있는지로 결정됩니다.",
+            "Foreach DPL30과 DPL60 일반 액체 다이어프램 펌프의 공개 정격 압력은 모두 100 kPa이며 자유 유량 등급은 각각 300 mL/min과 600 mL/min입니다. 적합성은 고정된 산업 이름이 아니라 목표 작동점이 관리 곡선과 허용 운전 조건 안에 있는지로 결정됩니다.",
         },
       ],
     },
@@ -379,7 +379,7 @@ export const diaphragmPump100KpaVs600KpaSelectionKoCopy = {
         {
           type: "paragraph",
           text:
-            "FOREACH DPL30H 고압 액체 다이어프램 펌프의 공개 자유 유량은 300 mL/min이고 정격 압력은 600 kPa입니다. 300 mL/min과 600 kPa는 같은 작동점을 나타내지 않습니다. 고배압에서 남는 유량은 유효한 개정판의 유량-압력 곡선에서 읽어야 합니다.",
+            "Foreach DPL30H 고압 액체 다이어프램 펌프의 공개 자유 유량은 300 mL/min이고 정격 압력은 600 kPa입니다. 300 mL/min과 600 kPa는 같은 작동점을 나타내지 않습니다. 고배압에서 남는 유량은 유효한 개정판의 유량-압력 곡선에서 읽어야 합니다.",
         },
       ],
     },
@@ -428,7 +428,7 @@ export const diaphragmPump100KpaVs600KpaSelectionKoCopy = {
         {
           type: "paragraph",
           text:
-            "유로가 고배압을 요구하지 않는데 600 kPa 플랫폼을 바로 선택하면 연결 방식, 재질과 온도 경계, 전원, 제어 전략, 설치 공간 및 비용에 제약이 늘 수 있습니다. FOREACH 공개 자료에서 DPL30의 자흡 높이는 6 mH₂O이고 최대 유체 온도는 +80°C입니다. DPL30H의 자흡 높이는 3 mH₂O, 최대 유체 온도는 +40°C이며 6 × 4 mm 경질 튜브 압축 연결을 사용합니다.",
+            "유로가 고배압을 요구하지 않는데 600 kPa 플랫폼을 바로 선택하면 연결 방식, 재질과 온도 경계, 전원, 제어 전략, 설치 공간 및 비용에 제약이 늘 수 있습니다. Foreach 공개 자료에서 DPL30의 자흡 높이는 6 mH₂O이고 최대 유체 온도는 +80°C입니다. DPL30H의 자흡 높이는 3 mH₂O, 최대 유체 온도는 +40°C이며 6 × 4 mm 경질 튜브 압축 연결을 사용합니다.",
         },
         {
           type: "paragraph",
@@ -459,21 +459,21 @@ export const diaphragmPump100KpaVs600KpaSelectionKoCopy = {
       ],
     },
     {
-      title: "FOREACH 자료 및 근거 범위",
+      title: "Foreach 자료 및 근거 범위",
       blocks: [
         {
           type: "links",
           items: [
             {
-              label: "FOREACH: DPL30H 고압 액체 다이어프램 펌프 선정 가이드",
+              label: "Foreach: DPL30H 고압 액체 다이어프램 펌프 선정 가이드",
               href: "/resources/technical-articles/dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide",
             },
             {
-              label: "FOREACH: DPL30 액체 다이어프램 펌프 선정 가이드",
+              label: "Foreach: DPL30 액체 다이어프램 펌프 선정 가이드",
               href: "/resources/technical-articles/dpl30-liquid-diaphragm-pump-selection-guide",
             },
             {
-              label: "FOREACH: DPL60 액체 다이어프램 펌프 선정 가이드",
+              label: "Foreach: DPL60 액체 다이어프램 펌프 선정 가이드",
               href: "/resources/technical-articles/dpl60-liquid-diaphragm-pump-selection-guide",
             },
           ],
@@ -482,7 +482,7 @@ export const diaphragmPump100KpaVs600KpaSelectionKoCopy = {
           type: "notice",
           label: "근거 범위:",
           text:
-            "FOREACH 자료, 공식 및 예시는 엔지니어링 초기 선별 전용입니다. 관리 사양서, 전체 곡선, 실제 유체 평가 또는 전체 시스템 시제품 검증을 대체하지 않습니다.",
+            "Foreach 자료, 공식 및 예시는 엔지니어링 초기 선별 전용입니다. 관리 사양서, 전체 곡선, 실제 유체 평가 또는 전체 시스템 시제품 검증을 대체하지 않습니다.",
         },
       ],
     },
@@ -527,14 +527,14 @@ export const diaphragmPump100KpaVs600KpaSelectionKoCopy = {
 export const highBackpressureFluidPathPressureBudgetKoCopy = {
   metadata: {
     title:
-      "고배압 유로의 압력 예산은 어떻게 작성할까요? FOREACH 600 kPa 소형 다이어프램 펌프 선정 사례",
+      "고배압 유로의 압력 예산은 어떻게 작성할까요? Foreach 600 kPa 소형 다이어프램 펌프 선정 사례",
     seoTitle:
-      "고배압 유로 압력 예산: 600 kPa 소형 다이어프램 펌프 선정 | FOREACH",
+      "고배압 유로 압력 예산: 600 kPa 소형 다이어프램 펌프 선정 | Foreach Technology",
     seoDescription:
       "고배압 유로용 펌프를 선택하기 전에 흡입 튜브, 토출 튜브, 밸브, 필터, 니들, 말단 챔버 및 정수압을 정상 상태 예산에 포함하고 순간 보호와 압력 여유를 별도로 검토해야 합니다.",
     coverImage: `${HIGH_BACKPRESSURE_BUDGET_ASSET_BASE}/article-cover.webp`,
     coverAlt:
-      "FOREACH 공식 Douyin 채널의 소형 다이어프램 펌프 고배압 유로 시험 장면",
+      "Foreach 공식 Douyin 채널의 소형 다이어프램 펌프 고배압 유로 시험 장면",
   },
   deck:
     "고배압 유로에서는 공급사에 6 bar가 필요하다고만 말해서는 안 됩니다. 목표 유량에서 정상 상태 압력 손실을 구간별로 나누고 정상 상태, 최악 정상 상태, 압력 여유 및 순간 보호 경계를 각각 설정한 뒤 후보 펌프의 관리 곡선과 비교하십시오.",
@@ -752,12 +752,12 @@ export const highBackpressureFluidPathPressureBudgetKoCopy = {
       ],
     },
     {
-      title: "5. FOREACH DPL30H를 제품 후보에 포함하는 방법",
+      title: "5. Foreach DPL30H를 제품 후보에 포함하는 방법",
       blocks: [
         {
           type: "paragraph",
           text:
-            "FOREACH DPL30H 고압 액체 다이어프램 펌프의 공개 사양에는 자유 유량 300 mL/min, 정격 압력 600 kPa, 자흡 높이 3 mH₂O 및 6 × 4 mm 경질 튜브 압축 연결이 포함됩니다. 고배압 용도의 후보가 될 수 있지만 선정의 핵심은 목표 배압에서 사용할 수 있는 유량과 그 지점이 관리 사양서의 유체, 온도 및 듀티 사이클 한계 안에 있는지입니다.",
+            "Foreach DPL30H 고압 액체 다이어프램 펌프의 공개 사양에는 자유 유량 300 mL/min, 정격 압력 600 kPa, 자흡 높이 3 mH₂O 및 6 × 4 mm 경질 튜브 압축 연결이 포함됩니다. 고배압 용도의 후보가 될 수 있지만 선정의 핵심은 목표 배압에서 사용할 수 있는 유량과 그 지점이 관리 사양서의 유체, 온도 및 듀티 사이클 한계 안에 있는지입니다.",
         },
         {
           type: "paragraph",
@@ -835,13 +835,13 @@ export const highBackpressureFluidPathPressureBudgetKoCopy = {
       ],
     },
     {
-      title: "FOREACH 자료 및 근거 범위",
+      title: "Foreach 자료 및 근거 범위",
       blocks: [
         {
           type: "links",
           items: [
             {
-              label: "FOREACH: DPL30H 고압 액체 다이어프램 펌프 선정 가이드",
+              label: "Foreach: DPL30H 고압 액체 다이어프램 펌프 선정 가이드",
               href: "/resources/technical-articles/dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide",
             },
           ],
@@ -850,7 +850,7 @@ export const highBackpressureFluidPathPressureBudgetKoCopy = {
           type: "notice",
           label: "근거 범위:",
           text:
-            "FOREACH 공개 자료는 용어 설명에만 사용됩니다. 최종 설계 입력은 관리 사양서, 실제 유체 평가, 동적 압력 시험 및 전체 시스템 검증을 기준으로 해야 합니다.",
+            "Foreach 공개 자료는 용어 설명에만 사용됩니다. 최종 설계 입력은 관리 사양서, 실제 유체 평가, 동적 압력 시험 및 전체 시스템 검증을 기준으로 해야 합니다.",
         },
       ],
     },

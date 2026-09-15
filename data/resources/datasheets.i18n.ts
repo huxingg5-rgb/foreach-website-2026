@@ -59,16 +59,16 @@ const foreignPageTextMap: Record<
 > = {
   es: {
     seo: {
-      title: "Fichas técnicas | Recursos | FOREACH",
+      title: "Fichas técnicas | Recursos | Foreach Technology",
       description:
-        "Descargue fichas técnicas de productos FOREACH, incluidas bombas, válvulas, tubos y conectores, sondas, sensores y módulos de control.",
+        "Descargue fichas técnicas de productos Foreach, incluidas bombas, válvulas, tubos y conectores, sondas, sensores y módulos de control.",
     },
     hero: {
       title: "Fichas técnicas",
       description:
-        "Busque y descargue fichas técnicas de productos FOREACH para revisar rápidamente parámetros, materiales, interfaces e información de aplicación.",
+        "Busque y descargue fichas técnicas de productos Foreach para revisar rápidamente parámetros, materiales, interfaces e información de aplicación.",
       image: datasheetsEnPageText.hero.image,
-      imageAlt: "Banner de la página de fichas técnicas de FOREACH",
+      imageAlt: "Banner de la página de fichas técnicas de Foreach",
     },
     breadcrumb: {
       home: "Inicio",
@@ -79,7 +79,7 @@ const foreignPageTextMap: Record<
     },
     search: {
       placeholder:
-        "Buscar por nombre de producto o palabra clave, por ejemplo bomba de émbolo, válvula rotativa, sensor de presión, tubos y conectores",
+        "Buscar por nombre de producto o palabra clave, por ejemplo bomba de pistón, válvula rotativa, sensor de presión, tubos y conectores",
       buttonText: "Buscar",
     },
     section: {
@@ -112,16 +112,16 @@ const foreignPageTextMap: Record<
 
   fr: {
     seo: {
-      title: "Fiches techniques | Ressources | FOREACH",
+      title: "Fiches techniques | Ressources | Foreach Technology",
       description:
-        "Téléchargez les fiches techniques des produits FOREACH, notamment les pompes, vannes, tubes et raccords, sondes, capteurs et modules de contrôle.",
+        "Téléchargez les fiches techniques des produits Foreach, notamment les pompes, vannes, tubes et raccords, sondes, capteurs et modules de contrôle.",
     },
     hero: {
       title: "Fiches techniques",
       description:
-        "Recherchez et téléchargez les fiches techniques des produits FOREACH afin de consulter rapidement les paramètres, matériaux, interfaces et informations d’application.",
+        "Recherchez et téléchargez les fiches techniques des produits Foreach afin de consulter rapidement les paramètres, matériaux, interfaces et informations d’application.",
       image: datasheetsEnPageText.hero.image,
-      imageAlt: "Bannière de la page des fiches techniques FOREACH",
+      imageAlt: "Bannière de la page des fiches techniques Foreach",
     },
     breadcrumb: {
       home: "Accueil",
@@ -165,16 +165,16 @@ const foreignPageTextMap: Record<
 
   ko: {
     seo: {
-      title: "사양서 다운로드 | 자료실 | FOREACH",
+      title: "사양서 다운로드 | 자료실 | Foreach Technology",
       description:
-        "FOREACH의 펌프, 밸브, 튜빙 및 피팅, 프로브, 센서, 제어 모듈 관련 제품 사양서를 다운로드할 수 있습니다.",
+        "Foreach의 펌프, 밸브, 튜빙 및 피팅, 프로브, 센서, 제어 모듈 관련 제품 사양서를 다운로드할 수 있습니다.",
     },
     hero: {
       title: "사양서 다운로드",
       description:
-        "FOREACH 제품 사양서를 검색하고 다운로드하여 제품 파라미터, 소재, 인터페이스 및 적용 정보를 빠르게 확인할 수 있습니다.",
+        "Foreach 제품 사양서를 검색하고 다운로드하여 제품 파라미터, 소재, 인터페이스 및 적용 정보를 빠르게 확인할 수 있습니다.",
       image: datasheetsEnPageText.hero.image,
-      imageAlt: "FOREACH 자료실 사양서 다운로드 페이지 배너",
+      imageAlt: "Foreach 자료실 사양서 다운로드 페이지 배너",
     },
     breadcrumb: {
       home: "홈",
@@ -185,7 +185,7 @@ const foreignPageTextMap: Record<
     },
     search: {
       placeholder:
-        "제품명 또는 키워드로 검색하세요. 예: 플런저 펌프, 로터리 밸브, 압력 센서, 튜빙 및 피팅",
+        "제품명 또는 키워드로 검색하세요. 예: 피스톤 펌프, 로터리 밸브, 압력 센서, 튜빙 및 피팅",
       buttonText: "검색",
     },
     section: {
@@ -218,16 +218,16 @@ const foreignPageTextMap: Record<
 
   ru: {
     seo: {
-      title: "Спецификации | Ресурсы | FOREACH",
+      title: "Спецификации | Ресурсы | Foreach Technology",
       description:
-        "Скачайте спецификации продукции FOREACH, включая насосы, клапаны, трубки и фитинги, зонды, датчики и модули управления.",
+        "Скачайте спецификации продукции Foreach, включая насосы, клапаны, трубки и фитинги, зонды, датчики и модули управления.",
     },
     hero: {
       title: "Спецификации",
       description:
-        "Найдите и скачайте спецификации продукции FOREACH, чтобы быстро ознакомиться с параметрами, материалами, интерфейсами и областями применения.",
+        "Найдите и скачайте спецификации продукции Foreach, чтобы быстро ознакомиться с параметрами, материалами, интерфейсами и областями применения.",
       image: datasheetsEnPageText.hero.image,
-      imageAlt: "Баннер страницы спецификаций FOREACH",
+      imageAlt: "Баннер страницы спецификаций Foreach",
     },
     breadcrumb: {
       home: "Главная",
@@ -238,7 +238,7 @@ const foreignPageTextMap: Record<
     },
     search: {
       placeholder:
-        "Поиск по названию продукта или ключевому слову, например плунжерный насос, роторный клапан, датчик давления, трубки и фитинги",
+        "Поиск по названию продукта или ключевому слову, например поршневой насос, роторный клапан, датчик давления, трубки и фитинги",
       buttonText: "Поиск",
     },
     section: {
@@ -338,12 +338,12 @@ const foreignItemTextMap: Record<
 > = {
   es: {
     "plunger-pump": {
-      title: "Ficha técnica de la serie de bombas de émbolo",
+      title: "Ficha técnica de la serie de bombas de pistón",
       label: "Bombas",
       language: "PDF en inglés",
       description:
         "Para dosificación precisa, distribución y sistemas fluídicos de instrumentos analíticos automatizados.",
-      keywords: "bomba de émbolo dosificación precisa plunger pump",
+      keywords: "bomba de pistón dosificación precisa piston pump",
     },
     "valveless-pump": {
       title: "Ficha técnica de bomba sin válvulas",
@@ -442,7 +442,7 @@ const foreignItemTextMap: Record<
       language: "PDF en anglais",
       description:
         "Pour le dosage de haute précision, la distribution et les systèmes fluidiques d’instruments d’analyse automatisés.",
-      keywords: "pompe à piston dosage précis plunger pump",
+      keywords: "pompe à piston dosage précis piston pump",
     },
     "valveless-pump": {
       title: "Fiche technique de pompe sans vanne",
@@ -536,12 +536,12 @@ const foreignItemTextMap: Record<
 
   ko: {
     "plunger-pump": {
-      title: "플런저 펌프 시리즈 사양서",
+      title: "피스톤 펌프 시리즈 사양서",
       label: "펌프",
       language: "영어 PDF",
       description:
         "고정밀 정량 이송, 분주 및 자동화 분석 장비의 유체 시스템에 적합합니다.",
-      keywords: "플런저 펌프 정밀 정량 분주 plunger pump",
+      keywords: "피스톤 펌프 정밀 정량 분주 piston pump",
     },
     "valveless-pump": {
       title: "무밸브 펌프 사양서",
@@ -635,12 +635,12 @@ const foreignItemTextMap: Record<
 
   ru: {
     "plunger-pump": {
-      title: "Спецификация серии плунжерных насосов",
+      title: "Спецификация серии поршневых насосов",
       label: "Насосы",
       language: "PDF на английском",
       description:
         "Для высокоточного дозирования, распределения и жидкостных систем автоматизированных аналитических приборов.",
-      keywords: "плунжерный насос точное дозирование plunger pump",
+      keywords: "поршневой насос точное дозирование piston pump",
     },
     "valveless-pump": {
       title: "Спецификация безклапанного насоса",
@@ -745,6 +745,7 @@ const currentItemGenericKey: Record<string, string> = {
   "hmd6-syringe-pump": "syringe-pump",
   "dpl30-diaphragm-pump": "diaphragm-pump",
   "dpl60-diaphragm-pump": "diaphragm-pump",
+  "dpgl800-diaphragm-pump": "diaphragm-pump",
   "mrv3-multi-channel-rotary-valve": "rotary-valve",
   "hp-2-position-6-port-high-pressure-valve": "high-pressure-valve",
   "6010-solenoid-valve": "solenoid-valve",
@@ -758,9 +759,9 @@ const currentItemTranslations: Record<
   Record<string, Pick<DatasheetItem, "title" | "description">>
 > = {
   es: {
-    "ea-piston-pump": { title: "Ficha técnica de la bomba de émbolo EA", description: "Bombas de émbolo EA para medición precisa, dosificación y manipulación automatizada de líquidos, con capacidades de 50 µL a 20 mL." },
-    "eas-piston-pump": { title: "Ficha técnica de la bomba de émbolo EAS", description: "Bombas de émbolo EAS de desaireación sencilla para manipulación precisa de líquidos cuando se requiere cebado rápido y eliminación eficaz de burbujas." },
-    "sm-piston-pump": { title: "Ficha técnica de la bomba de émbolo SM", description: "Bombas de émbolo SM compactas para dosificación precisa de pequeños volúmenes e integración en instrumentos automatizados miniaturizados." },
+    "ea-piston-pump": { title: "Ficha técnica de la bomba de pistón EA", description: "Bombas de pistón EA para medición precisa, dosificación y manipulación automatizada de líquidos, con capacidades de 50 µL a 20 mL." },
+    "eas-piston-pump": { title: "Ficha técnica de la bomba de pistón EAS", description: "Bombas de pistón EAS de desaireación sencilla para manipulación precisa de líquidos cuando se requiere cebado rápido y eliminación eficaz de burbujas." },
+    "sm-piston-pump": { title: "Ficha técnica de la bomba de pistón SM", description: "Bombas de pistón SM compactas para dosificación precisa de pequeños volúmenes e integración en instrumentos automatizados miniaturizados." },
     "rpl-p635-p15-valveless-pump": { title: "Ficha técnica de las bombas sin válvulas RPL-P6.35 / RPL-P15", description: "Ficha conjunta de las bombas sin válvulas RPL-P6.35 y RPL-P15, con rangos de dosificación precisa de 50 µL a 1200 µL." },
     "smtp2-smtp4-pipetting-pump": { title: "Ficha técnica de las bombas de pipeteo SMTP2 / SMTP4", description: "Ficha conjunta de las bombas de pipeteo por desplazamiento de aire SMTP2 y SMTP4 para la manipulación automatizada de muestras y reactivos." },
     "hld3-syringe-pump": { title: "Ficha técnica de la bomba de jeringa HLD3 con válvula rotativa", description: "Bomba de jeringa HLD3 con carrera de 30 mm y configuraciones de válvula rotativa para manipulación precisa de líquidos." },
@@ -769,10 +770,11 @@ const currentItemTranslations: Record<
     "hmd6-syringe-pump": { title: "Ficha técnica de la bomba de jeringa HMD6 con electroválvula", description: "Bomba de jeringa HMD6 con carrera de 60 mm y electroválvulas integradas para manipulación multicanal de líquidos." },
     "dpl30-diaphragm-pump": { title: "Ficha técnica de la bomba de diafragma DPL30", description: "Bomba de diafragma DPL30 para transferencia compacta de líquidos, con caudales de hasta 300 mL/min." },
     "dpl60-diaphragm-pump": { title: "Ficha técnica de la bomba de diafragma DPL60", description: "Bomba de diafragma DPL60 para suministro y transferencia de líquidos, con caudales de hasta 600 mL/min." },
+    "dpgl800-diaphragm-pump": { title: "Ficha técnica de la bomba de diafragma gas-líquido DPGL800", description: "Bomba DPGL800 para aspiración de gas y mezclas gas-líquido, generación de vacío y evacuación de residuos líquidos." },
     "mrv3-multi-channel-rotary-valve": { title: "Ficha técnica de la válvula rotativa multicanal MRV3", description: "Válvula rotativa multicanal MRV3 para conmutación multipuerto, distribución de reactivos e integración fluídica." },
     "hp-2-position-6-port-high-pressure-valve": { title: "Ficha técnica de la válvula de alta presión HP de 2 posiciones y 6 puertos con venteo", description: "Válvula HP de alta presión, 2 posiciones y 6 puertos, con vía de venteo para conmutación de circuitos resistentes a la presión." },
     "6010-solenoid-valve": { title: "Ficha técnica de la electroválvula 6010", description: "Configuraciones de sustrato, roscadas y con espiga de la electroválvula 6010 para control de 2 y 3 vías." },
-    "fittings-and-tubing-catalog": { title: "Catálogo de racores y tubos", description: "Catálogo conjunto en inglés de racores, conectores, tubos rígidos y flexibles y conjuntos de tubos FOREACH." },
+    "fittings-and-tubing-catalog": { title: "Catálogo de racores y tubos", description: "Catálogo conjunto en inglés de racores, conectores, tubos rígidos y flexibles y conjuntos de tubos Foreach." },
     "abd-air-bubble-detector": { title: "Ficha técnica del detector de burbujas de aire ABD", description: "Detector ABD sin contacto de burbujas de aire y líquido para tubos transparentes, compatible con comunicación TTL y Modbus RTU." },
     "pdm5-pressure-sensor": { title: "Manual de usuario del sensor de presión PDM5", description: "Manual del sensor PDM5 sobre instalación, comunicación I2C, especificaciones y supervisión de la presión del fluido." },
   },
@@ -788,17 +790,18 @@ const currentItemTranslations: Record<
     "hmd6-syringe-pump": { title: "Fiche technique de la pompe à seringue HMD6 avec électrovanne", description: "Pompe à seringue HMD6 avec course de 60 mm et électrovannes intégrées pour la manipulation multicanal des liquides." },
     "dpl30-diaphragm-pump": { title: "Fiche technique de la pompe à membrane DPL30", description: "Pompe à membrane DPL30 pour les applications compactes de transfert de liquides, avec un débit maximal de 300 mL/min." },
     "dpl60-diaphragm-pump": { title: "Fiche technique de la pompe à membrane DPL60", description: "Pompe à membrane DPL60 pour l’alimentation et le transfert de liquides, avec un débit maximal de 600 mL/min." },
+    "dpgl800-diaphragm-pump": { title: "Fiche technique de la pompe à membrane gaz-liquide DPGL800", description: "Pompe DPGL800 pour l’aspiration de gaz et de mélanges gaz-liquide, la création de vide et l’évacuation des effluents." },
     "mrv3-multi-channel-rotary-valve": { title: "Fiche technique de la vanne rotative multicanal MRV3", description: "Vanne rotative multicanal MRV3 pour la commutation multipport, la distribution de réactifs et l’intégration fluidique." },
     "hp-2-position-6-port-high-pressure-valve": { title: "Fiche technique de la vanne haute pression HP 2 positions, 6 voies avec évent", description: "Vanne HP haute pression à 2 positions et 6 voies avec évent pour la commutation de circuits résistants à la pression." },
     "6010-solenoid-valve": { title: "Fiche technique de l’électrovanne 6010", description: "Configurations sur embase, filetées et cannelées de l’électrovanne 6010 pour la commande 2 et 3 voies." },
-    "fittings-and-tubing-catalog": { title: "Catalogue des raccords et tubes", description: "Catalogue commun en anglais des raccords, connecteurs, tubes rigides et souples et ensembles de tubes FOREACH." },
+    "fittings-and-tubing-catalog": { title: "Catalogue des raccords et tubes", description: "Catalogue commun en anglais des raccords, connecteurs, tubes rigides et souples et ensembles de tubes Foreach." },
     "abd-air-bubble-detector": { title: "Fiche technique du détecteur de bulles d’air ABD", description: "Détecteur ABD sans contact de bulles d’air et de liquide pour tubes transparents, avec communication TTL et prise en charge de Modbus RTU." },
     "pdm5-pressure-sensor": { title: "Manuel d’utilisation du capteur de pression PDM5", description: "Manuel PDM5 couvrant l’installation, la communication I2C, les spécifications et la surveillance de la pression du fluide." },
   },
   ru: {
-    "ea-piston-pump": { title: "Техническое описание плунжерного насоса EA", description: "Насосы EA для точного дозирования и автоматизированной работы с жидкостями, объём от 50 µL до 20 mL." },
-    "eas-piston-pump": { title: "Техническое описание плунжерного насоса EAS", description: "Насосы EAS с удобным удалением воздуха для точной подачи, быстрого заполнения и эффективного удаления пузырьков." },
-    "sm-piston-pump": { title: "Техническое описание плунжерного насоса SM", description: "Компактные насосы SM для точного дозирования малых объёмов и установки в миниатюрные автоматизированные приборы." },
+    "ea-piston-pump": { title: "Техническое описание поршневого насоса EA", description: "Насосы EA для точного дозирования и автоматизированной работы с жидкостями, объём от 50 µL до 20 mL." },
+    "eas-piston-pump": { title: "Техническое описание поршневого насоса EAS", description: "Насосы EAS с удобным удалением воздуха для точной подачи, быстрого заполнения и эффективного удаления пузырьков." },
+    "sm-piston-pump": { title: "Техническое описание поршневого насоса SM", description: "Компактные насосы SM для точного дозирования малых объёмов и установки в миниатюрные автоматизированные приборы." },
     "rpl-p635-p15-valveless-pump": { title: "Техническое описание бесклапанных насосов RPL-P6.35 / RPL-P15", description: "Общее описание насосов RPL-P6.35 и RPL-P15 с диапазоном точного дозирования от 50 µL до 1200 µL." },
     "smtp2-smtp4-pipetting-pump": { title: "Техническое описание пипеточных насосов SMTP2 / SMTP4", description: "Общее описание воздушно-вытеснительных насосов SMTP2 и SMTP4 для автоматической работы с образцами и реагентами." },
     "hld3-syringe-pump": { title: "Техническое описание шприцевого насоса HLD3 с поворотным клапаном", description: "Насос HLD3 с ходом 30 mm и поворотным клапаном для точной работы с жидкостями." },
@@ -807,17 +810,18 @@ const currentItemTranslations: Record<
     "hmd6-syringe-pump": { title: "Техническое описание шприцевого насоса HMD6 с электромагнитным клапаном", description: "Насос HMD6 с ходом 60 mm и встроенными электромагнитными клапанами для многоканальной подачи." },
     "dpl30-diaphragm-pump": { title: "Техническое описание мембранного насоса DPL30", description: "Насос DPL30 для компактных систем перекачивания жидкости с расходом до 300 mL/min." },
     "dpl60-diaphragm-pump": { title: "Техническое описание мембранного насоса DPL60", description: "Насос DPL60 для подачи и перекачивания жидкости с расходом до 600 mL/min." },
+    "dpgl800-diaphragm-pump": { title: "Техническое описание газожидкостного мембранного насоса DPGL800", description: "Насос DPGL800 для аспирации газа и газожидкостных смесей, создания вакуума и удаления отработанной жидкости." },
     "mrv3-multi-channel-rotary-valve": { title: "Техническое описание многоканального поворотного клапана MRV3", description: "Клапан MRV3 для многопортового переключения потоков, распределения реагентов и интеграции гидравлической системы." },
     "hp-2-position-6-port-high-pressure-valve": { title: "Техническое описание клапана высокого давления HP: 2 положения, 6 портов и сброс", description: "Клапан HP с 2 положениями, 6 портами и каналом сброса для переключения жидкостных трактов высокого давления." },
     "6010-solenoid-valve": { title: "Техническое описание электромагнитного клапана 6010", description: "Исполнения клапана 6010 на подложке, с резьбой и штуцерами для 2- и 3-ходового управления." },
-    "fittings-and-tubing-catalog": { title: "Каталог фитингов и трубок", description: "Общий каталог на английском языке: фитинги, соединители, жёсткие и гибкие трубки и трубные сборки FOREACH." },
+    "fittings-and-tubing-catalog": { title: "Каталог фитингов и трубок", description: "Общий каталог на английском языке: фитинги, соединители, жёсткие и гибкие трубки и трубные сборки Foreach." },
     "abd-air-bubble-detector": { title: "Техническое описание датчика пузырьков воздуха ABD", description: "Бесконтактный датчик ABD для пузырьков воздуха и жидкости в прозрачных трубках с TTL и Modbus RTU." },
     "pdm5-pressure-sensor": { title: "Руководство пользователя датчика давления PDM5", description: "Руководство PDM5 по монтажу, связи I2C, характеристикам и контролю давления жидкости." },
   },
   ko: {
-    "ea-piston-pump": { title: "EA 플런저 펌프 데이터시트", description: "50 µL~20 mL 용량 범위에서 정밀 계량, 분주 및 자동 액체 처리를 지원하는 EA 플런저 펌프입니다." },
-    "eas-piston-pump": { title: "EAS 플런저 펌프 데이터시트", description: "빠른 프라이밍과 효율적인 기포 제거가 필요한 정밀 액체 처리를 위한 간편 탈기형 EAS 플런저 펌프입니다." },
-    "sm-piston-pump": { title: "SM 플런저 펌프 데이터시트", description: "소용량 정밀 분주와 소형 자동화 장비 통합을 위한 콤팩트 SM 플런저 펌프입니다." },
+    "ea-piston-pump": { title: "EA 피스톤 펌프 데이터시트", description: "50 µL~20 mL 용량 범위에서 정밀 계량, 분주 및 자동 액체 처리를 지원하는 EA 피스톤 펌프입니다." },
+    "eas-piston-pump": { title: "EAS 피스톤 펌프 데이터시트", description: "빠른 프라이밍과 효율적인 기포 제거가 필요한 정밀 액체 처리를 위한 간편 탈기형 EAS 피스톤 펌프입니다." },
+    "sm-piston-pump": { title: "SM 피스톤 펌프 데이터시트", description: "소용량 정밀 분주와 소형 자동화 장비 통합을 위한 콤팩트 SM 피스톤 펌프입니다." },
     "rpl-p635-p15-valveless-pump": { title: "RPL-P6.35 / RPL-P15 무밸브 펌프 데이터시트", description: "50 µL~1200 µL 정밀 계량 범위를 지원하는 RPL-P6.35 및 RPL-P15 무밸브 펌프 통합 데이터시트입니다." },
     "smtp2-smtp4-pipetting-pump": { title: "SMTP2 / SMTP4 피펫팅 펌프 데이터시트", description: "샘플과 시약의 자동 처리를 위한 SMTP2 및 SMTP4 공기 치환식 피펫팅 펌프 통합 데이터시트입니다." },
     "hld3-syringe-pump": { title: "로터리 밸브형 HLD3 시린지 펌프 데이터시트", description: "정밀 액체 처리를 위한 30 mm 스트로크 및 로터리 밸브 구성의 HLD3 시린지 펌프입니다." },
@@ -826,10 +830,11 @@ const currentItemTranslations: Record<
     "hmd6-syringe-pump": { title: "솔레노이드 밸브형 HMD6 시린지 펌프 데이터시트", description: "다채널 액체 처리를 위한 60 mm 스트로크와 통합 솔레노이드 밸브 구성의 HMD6 시린지 펌프입니다." },
     "dpl30-diaphragm-pump": { title: "DPL30 다이어프램 펌프 데이터시트", description: "최대 300 mL/min 유량을 지원하는 콤팩트 액체 이송용 DPL30 다이어프램 펌프입니다." },
     "dpl60-diaphragm-pump": { title: "DPL60 다이어프램 펌프 데이터시트", description: "최대 600 mL/min 유량을 지원하는 액체 공급 및 이송용 DPL60 다이어프램 펌프입니다." },
+    "dpgl800-diaphragm-pump": { title: "DPGL800 기액 혼합 다이어프램 펌프 데이터시트", description: "기체 및 기액 혼합물 흡인, 진공 형성, 폐액 배출용 DPGL800 다이어프램 펌프입니다." },
     "mrv3-multi-channel-rotary-valve": { title: "MRV3 다채널 로터리 밸브 데이터시트", description: "다중 포트 유로 전환, 시약 분배 및 유체 시스템 통합을 위한 MRV3 다채널 로터리 밸브입니다." },
     "hp-2-position-6-port-high-pressure-valve": { title: "벤트형 HP 2포지션 6포트 고압 밸브 데이터시트", description: "내압 유로 전환을 위한 벤트 유로 포함 HP 2포지션 6포트 고압 밸브입니다." },
     "6010-solenoid-valve": { title: "6010 솔레노이드 밸브 데이터시트", description: "2방향 및 3방향 제어를 위한 6010 솔레노이드 밸브의 기판형, 나사형 및 바브형 구성을 다룹니다." },
-    "fittings-and-tubing-catalog": { title: "피팅 및 튜빙 카탈로그", description: "FOREACH 피팅, 커넥터, 경질·연질 튜빙 및 튜빙 어셈블리를 수록한 영문 통합 카탈로그입니다." },
+    "fittings-and-tubing-catalog": { title: "피팅 및 튜빙 카탈로그", description: "Foreach 피팅, 커넥터, 경질·연질 튜빙 및 튜빙 어셈블리를 수록한 영문 통합 카탈로그입니다." },
     "abd-air-bubble-detector": { title: "ABD 기포 감지기 데이터시트", description: "투명 튜빙용 비접촉식 공기 기포 및 액체 감지기로 TTL 통신과 Modbus RTU를 지원합니다." },
     "pdm5-pressure-sensor": { title: "PDM5 압력 센서 사용자 설명서", description: "설치, I2C 통신, 사양 및 유체 압력 모니터링을 다루는 PDM5 압력 센서 사용자 설명서입니다." },
   },

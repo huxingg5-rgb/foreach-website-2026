@@ -10,12 +10,12 @@ export const diaphragmPump300Vs600SelectionKoCopy = {
     title:
       "300 mL/min과 600 mL/min 소형 다이어프램 펌프는 어떻게 선택할까요? 먼저 작업 유량을 계산한 다음 실제 작동점을 확인하십시오",
     seoTitle:
-      "300 vs 600 mL/min 소형 다이어프램 펌프: 작업 유량과 작동점 가이드 | FOREACH",
+      "300 vs 600 mL/min 소형 다이어프램 펌프: 작업 유량과 작동점 가이드 | Foreach Technology",
     seoDescription:
       "300 mL/min과 600 mL/min 소형 다이어프램 펌프를 비교할 때 자유 유량만으로는 부족합니다. 작업 부피, 유효 펌핑 시간, 시스템 차압, 펌프 곡선과 시제품 검증을 중심으로 선택 절차를 설명합니다.",
     coverImage: `${ARTICLE_01_ASSET_BASE}/article-cover.webp`,
     coverAlt:
-      "FOREACH 공식 Douyin 영상의 소형 다이어프램 펌프 제품 및 유량 시험 장면",
+      "Foreach 공식 Douyin 영상의 소형 다이어프램 펌프 제품 및 유량 시험 장면",
   },
   deck:
     "300 mL/min과 600 mL/min은 우선 유량 등급이며, 장비에 장착한 뒤 항상 유지되는 고정 출력이 아닙니다. 액체 이송 작업을 최소 평균 유량으로 환산하고, 실제 유로가 요구하는 차압을 산정한 다음, 펌프 곡선과 시제품 시험에서 작동점을 확인하여 선택해야 합니다.",
@@ -183,12 +183,12 @@ export const diaphragmPump300Vs600SelectionKoCopy = {
       ],
     },
     {
-      title: "4. FOREACH 공개 사양은 더 큰 유량이 모든 성능의 향상을 뜻하지 않음을 보여 줍니다",
+      title: "4. Foreach 공개 사양은 더 큰 유량이 모든 성능의 향상을 뜻하지 않음을 보여 줍니다",
       blocks: [
         {
           type: "paragraph",
           text:
-            "FOREACH가 공개한 DPL30과 DPL60 데이터는 서로 다른 사양 차원을 보여 줍니다. 자유 유량 등급은 서로 다르지만 공개 정격 압력은 모두 100 kPa이며, 자흡 높이는 각각 6 mH₂O와 3 mH₂O입니다. 유량, 자흡 및 압력은 따로 확인해야 합니다.",
+            "Foreach가 공개한 DPL30과 DPL60 데이터는 서로 다른 사양 차원을 보여 줍니다. 자유 유량 등급은 서로 다르지만 공개 정격 압력은 모두 100 kPa이며, 자흡 높이는 각각 6 mH₂O와 3 mH₂O입니다. 유량, 자흡 및 압력은 따로 확인해야 합니다.",
         },
         {
           type: "table",
@@ -376,14 +376,14 @@ export const diaphragmPump300Vs600SelectionKoCopy = {
 export const diaphragmPump300MlMinFlowMarginKoCopy = {
   metadata: {
     title:
-      "300 mL/min 소형 다이어프램 펌프의 장착 유량 여유는 얼마나 필요할까요? FOREACH 사례",
+      "300 mL/min 소형 다이어프램 펌프의 장착 유량 여유는 얼마나 필요할까요? Foreach 사례",
     seoTitle:
-      "300 mL/min 소형 다이어프램 펌프 유량 여유: 최악 조건과 합격 기준 | FOREACH",
+      "300 mL/min 소형 다이어프램 펌프 유량 여유: 최악 조건과 합격 기준 | Foreach Technology",
     seoDescription:
       "300 mL/min 소형 다이어프램 펌프의 장착 여유는 고정 비율이 아닙니다. 신뢰할 수 있는 최악 시나리오를 정의하고 배압, 필터 로딩, 전원, 유체, 샘플 편차, 측정 불확도와 승인 기준을 계산에 포함하는 방법을 설명합니다.",
     coverImage: `${ARTICLE_02_ASSET_BASE}/article-cover.webp`,
     coverAlt:
-      "FOREACH 공식 Douyin 영상의 소형 다이어프램 펌프 장착 유량 시험",
+      "Foreach 공식 Douyin 영상의 소형 다이어프램 펌프 장착 유량 시험",
   },
   deck:
     "모든 경우에 목표 유량에 1.2 또는 1.3을 곱해 유량 여유를 정할 수는 없습니다. 동일하게 발생 가능한 최악 시나리오 안에서 펌프의 보수적 가용 유량과 장비의 최대 요구량을 비교하여 결정해야 합니다. 시험 전에는 측정 불확도를 어떻게 처리할지와 어떤 명시적 합격 기준을 적용할지도 정의해야 합니다.",
@@ -583,7 +583,7 @@ export const diaphragmPump300MlMinFlowMarginKoCopy = {
         {
           type: "paragraph",
           text:
-            "다음 수치는 방법만 설명하며 고객 장비나 FOREACH 제품의 측정값이 아닙니다. 최대 요구량을 180 mL/min으로 가정합니다. 후보 펌프는 정격 전압과 목표 배압에서 260 mL/min을 제공할 수 있고, 확인된 하나의 발생 가능한 최악 시나리오에서 측정된 최저 가용 유량은 230 mL/min입니다.",
+            "다음 수치는 방법만 설명하며 고객 장비나 Foreach 제품의 측정값이 아닙니다. 최대 요구량을 180 mL/min으로 가정합니다. 후보 펌프는 정격 전압과 목표 배압에서 260 mL/min을 제공할 수 있고, 확인된 하나의 발생 가능한 최악 시나리오에서 측정된 최저 가용 유량은 230 mL/min입니다.",
         },
         {
           type: "formula",
@@ -605,12 +605,12 @@ export const diaphragmPump300MlMinFlowMarginKoCopy = {
       ],
     },
     {
-      title: "7. FOREACH 300 mL/min급 펌프는 목표 배압에서 평가를 시작하십시오",
+      title: "7. Foreach 300 mL/min급 펌프는 목표 배압에서 평가를 시작하십시오",
       blocks: [
         {
           type: "paragraph",
           text:
-            "FOREACH가 공개한 DPL30 데이터는 자유 유량 300 mL/min, 정격 압력 100 kPa 및 자흡 높이 6 mH₂O입니다. 장착 여유를 '300에서 목표 유량을 뺀 값'으로 계산할 수 없습니다. 목표 배압의 정식 곡선부터 확인하고 최종 유로에서 입구 압력, 출구 압력 및 실제 유량을 검증하십시오.",
+            "Foreach가 공개한 DPL30 데이터는 자유 유량 300 mL/min, 정격 압력 100 kPa 및 자흡 높이 6 mH₂O입니다. 장착 여유를 '300에서 목표 유량을 뺀 값'으로 계산할 수 없습니다. 목표 배압의 정식 곡선부터 확인하고 최종 유로에서 입구 압력, 출구 압력 및 실제 유량을 검증하십시오.",
         },
         {
           type: "paragraph",

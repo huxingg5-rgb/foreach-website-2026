@@ -3,9 +3,9 @@ import type { Dpl30hArticleCopy } from "./dpl30h-high-pressure-liquid-diaphragm-
 export const dpl30hArticleEnCopy: Dpl30hArticleCopy = {
   metadata: {
     title: "How to Select a High-Pressure Diaphragm Pump: DPL30H 300 mL/min and 600 kPa Guide",
-    seoTitle: "DPL30H High-Pressure Diaphragm Pump Selection Guide | FOREACH",
-    seoDescription: "Select the FOREACH DPL30H by flow at target backpressure, 600 kPa rated pressure, 6×4 mm rigid tubing, motor, wetted materials, model code and selection method.",
-    coverAlt: "FOREACH DPL30H brushed and brushless high-pressure liquid diaphragm pumps with 6×4 mm rigid-tube fittings",
+    seoTitle: "DPL30H High-Pressure Diaphragm Pump Selection Guide | Foreach Technology",
+    seoDescription: "Select the Foreach DPL30H by flow at target backpressure, 600 kPa rated pressure, 6×4 mm rigid tubing, motor, wetted materials, model code and selection method.",
+    coverAlt: "Foreach DPL30H brushed and brushless high-pressure liquid diaphragm pumps with 6×4 mm rigid-tube fittings",
   },
   section1: {
     title: "1. Why high-backpressure fluid paths need a different pump",
@@ -50,7 +50,7 @@ export const dpl30hArticleEnCopy: Dpl30hArticleCopy = {
       ["Medium temperature", "+5°C to +40°C", "Do not apply the DPL30 +80°C limit"],
       ["Connection", "Threaded Port, connects to 6 × 4 mm rigid tubing", "Check the lowest-rated part in the line"],
       ["Noise", "≤80 dB", "Equipment structure affects system noise"],
-      ["Pump head", "PPS", "Diaphragm and valve materials vary by model"],
+      ["Pump head", "Polyphenylene sulfide (PPS)", "Diaphragm and valve materials vary by model"],
       ["Diaphragm", "EPDM or PTFE, by model", "No material is universal"],
       ["Valve", "EPDM or FFKM, by model", "Validate against medium and temperature"],
     ],

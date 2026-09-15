@@ -27,6 +27,9 @@ export const DIAPHRAGM_PUMP_LEGACY_ROUTE_PREFIX = [
 export const DIAPHRAGM_PUMP_SUBCATEGORY_SLUGS = [
   "liquid-diaphragm-pumps",
   "gas-liquid-diaphragm-pumps",
+] as const;
+
+export const DIAPHRAGM_PUMP_RETIRED_SUBCATEGORY_SLUGS = [
   "gas-diaphragm-pumps",
 ] as const;
 
@@ -230,6 +233,18 @@ export function getDiaphragmPumpRedirectPairs(options?: {
       source: getDiaphragmPumpPath(locale, childSlug, { legacyParent: true }),
       destination: getDiaphragmPumpPath(locale, childSlug),
     }));
+    const retiredCategoryPairs = DIAPHRAGM_PUMP_RETIRED_SUBCATEGORY_SLUGS.flatMap(
+      (childSlug) => [
+        {
+          source: getDiaphragmPumpPath(locale, childSlug, { legacyParent: true }),
+          destination: getDiaphragmPumpPath(locale),
+        },
+        {
+          source: getDiaphragmPumpPath(locale, childSlug),
+          destination: getDiaphragmPumpPath(locale),
+        },
+      ],
+    );
     const legacyDetailPairs = DIAPHRAGM_PUMP_REFERENCE_ROUTES.flatMap(
       (reference) =>
         reference.legacySlugs.map((legacySlug) => ({
@@ -250,6 +265,11 @@ export function getDiaphragmPumpRedirectPairs(options?: {
         }))
       : [];
 
-    return [...categoryPairs, ...legacyDetailPairs, ...intermediatePairs];
+    return [
+      ...categoryPairs,
+      ...retiredCategoryPairs,
+      ...legacyDetailPairs,
+      ...intermediatePairs,
+    ];
   });
 }

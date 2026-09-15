@@ -1,3 +1,5 @@
+import { getPumpApplicationArticles } from "@/data/resources/technical-articles/pump-application-articles.article";
+import { getPumpDiagnosticsArticles } from "@/data/resources/technical-articles/pump-diagnostics-articles.article";
 /* =========================================================
    getTechnicalArticlesPageData.ts
    恒永达官网｜技术文章列表页数据服务层
@@ -5,7 +7,7 @@
    说明：
    1. 当前阶段读取本地静态数据
    2. 中文页面读取中文数据
-   3. 外语页面统一读取英文数据
+   3. 各语言读取对应译文，统一使用中文版文章顺序
    4. DPL30 多语言文章由独立数据文件统一注入
    5. 后期接 CMS / 后端 / 数据库时，优先改这个文件
 ========================================================= */
@@ -33,11 +35,19 @@ import {
 import {
   getDiaphragmPumpEngineeringArticles,
 } from "@/data/resources/technical-articles/diaphragm-pump-engineering-articles.article";
+import {
+  getPistonPumpTechnicalArticles,
+} from "@/data/resources/technical-articles/piston-pump-articles.article";
+import {
+  classifyTechnicalArticles,
+  getTechnicalArticleTaxonomy,
+} from "@/data/resources/technical-articles/technical-article-taxonomy";
 import { technicalArticlesIntlData } from "@/data/resources/technical-articles/technical-articles.intl";
 import { localizeTechnicalArticles } from "@/data/resources/technical-articles/technical-articles.translations";
 import type {
   TechnicalArticleLocale,
   TechnicalArticlesPageData,
+  TechnicalArticlesSourcePageData,
 } from "@/data/resources/technical-articles/technical-articles.types";
 import { technicalArticlesZhData } from "@/data/resources/technical-articles/technical-articles.zh";
 
@@ -55,7 +65,7 @@ function getLocalePrefix(locale: TechnicalArticleLocale) {
 
 function getLocalizedIntlTechnicalArticlesData(
   locale: TechnicalArticleLocale,
-): TechnicalArticlesPageData {
+): TechnicalArticlesSourcePageData {
   const prefix = getLocalePrefix(locale);
 
   return {
@@ -90,8 +100,8 @@ function getLocalizedIntlTechnicalArticlesData(
  */
 function withDpl30Article(
   locale: TechnicalArticleLocale,
-  pageData: TechnicalArticlesPageData,
-): TechnicalArticlesPageData {
+  pageData: TechnicalArticlesSourcePageData,
+): TechnicalArticlesSourcePageData {
   const dpl30Article = getDpl30TechnicalArticle(locale);
 
   return {
@@ -108,8 +118,8 @@ function withDpl30Article(
 
 function withDpl60Article(
   locale: TechnicalArticleLocale,
-  pageData: TechnicalArticlesPageData,
-): TechnicalArticlesPageData {
+  pageData: TechnicalArticlesSourcePageData,
+): TechnicalArticlesSourcePageData {
   const dpl60Article = getDpl60TechnicalArticle(locale);
 
   return {
@@ -126,8 +136,8 @@ function withDpl60Article(
 
 function withDpgl800Article(
   locale: TechnicalArticleLocale,
-  pageData: TechnicalArticlesPageData,
-): TechnicalArticlesPageData {
+  pageData: TechnicalArticlesSourcePageData,
+): TechnicalArticlesSourcePageData {
   const dpgl800Article = getDpgl800TechnicalArticle(locale);
 
   return {
@@ -144,8 +154,8 @@ function withDpgl800Article(
 
 function withDpl30hArticle(
   locale: TechnicalArticleLocale,
-  pageData: TechnicalArticlesPageData,
-): TechnicalArticlesPageData {
+  pageData: TechnicalArticlesSourcePageData,
+): TechnicalArticlesSourcePageData {
   const dpl30hArticle = getDpl30hTechnicalArticle(locale);
 
   return {
@@ -162,8 +172,8 @@ function withDpl30hArticle(
 
 function withBrushlessWiringArticle(
   locale: TechnicalArticleLocale,
-  pageData: TechnicalArticlesPageData,
-): TechnicalArticlesPageData {
+  pageData: TechnicalArticlesSourcePageData,
+): TechnicalArticlesSourcePageData {
   const brushlessWiringArticle =
     getBrushlessWiringTechnicalArticle(locale);
 
@@ -181,8 +191,8 @@ function withBrushlessWiringArticle(
 
 function withDiaphragmPumpEngineeringArticles(
   locale: TechnicalArticleLocale,
-  pageData: TechnicalArticlesPageData,
-): TechnicalArticlesPageData {
+  pageData: TechnicalArticlesSourcePageData,
+): TechnicalArticlesSourcePageData {
   const engineeringArticles = getDiaphragmPumpEngineeringArticles(locale);
   const engineeringSlugs = new Set(
     engineeringArticles.map((article) => article.slug),
@@ -200,11 +210,37 @@ function withDiaphragmPumpEngineeringArticles(
   };
 }
 
-export function getTechnicalArticlesPageData(
+function withPistonPumpArticles(
   locale: TechnicalArticleLocale,
-): TechnicalArticlesPageData {
+  pageData: TechnicalArticlesSourcePageData,
+): TechnicalArticlesSourcePageData {
+  const pistonPumpArticles = getPistonPumpTechnicalArticles(locale);
+
+  if (!pistonPumpArticles.length) {
+    return pageData;
+  }
+
+  const pistonPumpSlugs = new Set(
+    pistonPumpArticles.map((article) => article.slug),
+  );
+
+  return {
+    ...pageData,
+    locale,
+    articles: [
+      ...pistonPumpArticles,
+      ...pageData.articles.filter(
+        (article) => !pistonPumpSlugs.has(article.slug),
+      ),
+    ],
+  };
+}
+
+function getTechnicalArticlesSourcePageData(
+  locale: TechnicalArticleLocale,
+): TechnicalArticlesSourcePageData {
   if (isChineseLocale(locale)) {
-    return withDiaphragmPumpEngineeringArticles(
+    return withPistonPumpArticles(locale, withDiaphragmPumpEngineeringArticles(
       locale,
       withBrushlessWiringArticle(
         locale,
@@ -219,11 +255,11 @@ export function getTechnicalArticlesPageData(
           ),
         ),
       ),
-    );
+    ));
   }
 
   if (locale !== "en") {
-    return withDiaphragmPumpEngineeringArticles(
+    return withPistonPumpArticles(locale, withDiaphragmPumpEngineeringArticles(
       locale,
       withBrushlessWiringArticle(
         locale,
@@ -241,10 +277,10 @@ export function getTechnicalArticlesPageData(
           ),
         ),
       ),
-    );
+    ));
   }
 
-  return withDiaphragmPumpEngineeringArticles(
+  return withPistonPumpArticles(locale, withDiaphragmPumpEngineeringArticles(
     locale,
     withBrushlessWiringArticle(
       locale,
@@ -262,5 +298,42 @@ export function getTechnicalArticlesPageData(
         ),
       ),
     ),
-  );
+  ));
+}
+
+// Article identity determines the order, independent of localized insertion order.
+// Use the assembled Chinese list so new articles keep the same position in every locale.
+const technicalArticleOrder = new Map(
+  [
+    ...getPumpDiagnosticsArticles("zh-CN"),
+    ...getPumpApplicationArticles("zh-CN"),
+    ...getTechnicalArticlesSourcePageData("zh-CN").articles,
+  ].map((article, index) => [article.slug, index]),
+);
+
+export function getTechnicalArticlesPageData(
+  locale: TechnicalArticleLocale,
+): TechnicalArticlesPageData {
+  const sourcePageData = getTechnicalArticlesSourcePageData(locale);
+
+  return {
+    ...sourcePageData,
+    taxonomy: getTechnicalArticleTaxonomy(locale),
+    // Keep the withdrawn article in the source archive, outside all public routes and indexes.
+    articles: classifyTechnicalArticles(
+      [...getPumpDiagnosticsArticles(locale), ...getPumpApplicationArticles(locale), ...sourcePageData.articles]
+        .filter(
+          (article) => article.slug !== "pressure-flow-material-compatibility",
+        )
+        .sort((left, right) => {
+          const leftOrder =
+            technicalArticleOrder.get(left.slug) ?? Number.MAX_SAFE_INTEGER;
+          const rightOrder =
+            technicalArticleOrder.get(right.slug) ?? Number.MAX_SAFE_INTEGER;
+
+          return leftOrder - rightOrder || left.slug.localeCompare(right.slug, "en");
+        }),
+      locale,
+    ),
+  };
 }

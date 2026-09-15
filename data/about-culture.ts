@@ -109,27 +109,27 @@ export function getCultureText(
 ================================ */
 
 export const aboutCulturePageText: AboutCulturePageText = {
-  metadataTitle: "恒永达文化｜恒永达 FOREACH",
+  metadataTitle: "恒永达文化｜恒永达 Foreach",
   metadataDescription:
     "了解恒永达文化、企业愿景、核心价值观、行为准则、爱心品牌、健康品牌与三大工程。",
 
   bannerTitle: {
     "zh-CN": "恒永达文化",
-    en: "FOREACH Culture",
-    es: "Cultura de FOREACH",
-    fr: "Culture FOREACH",
-    ko: "FOREACH 문화",
-    ru: "Культура FOREACH",
+    en: "Foreach Culture",
+    es: "Cultura de Foreach",
+    fr: "Culture Foreach",
+    ko: "Foreach 문화",
+    ru: "Культура Foreach",
   },
 
   bannerDesc: {
     "zh-CN":
       "以客户价值为导向，以工程实践为基础，在持续创新、团队协同与长期主义中，建设积极、可靠、向上的组织文化。",
-    en: "Guided by customer value and grounded in engineering practice, FOREACH builds a positive, reliable, and long-term-oriented culture through continuous innovation and teamwork.",
-    es: "Guiada por el valor para el cliente y basada en la práctica de ingeniería, FOREACH construye una cultura positiva, confiable y orientada al largo plazo mediante innovación continua y trabajo en equipo.",
-    fr: "Guidée par la valeur client et fondée sur la pratique d’ingénierie, FOREACH développe une culture positive, fiable et orientée long terme grâce à l’innovation continue et au travail d’équipe.",
-    ko: "FOREACH는 고객 가치와 엔지니어링 실천을 기반으로 지속적인 혁신과 팀워크를 통해 긍정적이고 신뢰할 수 있는 장기 지향의 조직 문화를 구축합니다.",
-    ru: "Ориентируясь на ценность для клиента и опираясь на инженерную практику, FOREACH формирует позитивную, надежную и долгосрочно ориентированную организационную культуру.",
+    en: "Guided by customer value and grounded in engineering practice, Foreach builds a positive, reliable, and long-term-oriented culture through continuous innovation and teamwork.",
+    es: "Guiada por el valor para el cliente y basada en la práctica de ingeniería, Foreach construye una cultura positiva, confiable y orientada al largo plazo mediante innovación continua y trabajo en equipo.",
+    fr: "Guidée par la valeur client et fondée sur la pratique d’ingénierie, Foreach développe une culture positive, fiable et orientée long terme grâce à l’innovation continue et au travail d’équipe.",
+    ko: "Foreach는 고객 가치와 엔지니어링 실천을 기반으로 지속적인 혁신과 팀워크를 통해 긍정적이고 신뢰할 수 있는 장기 지향의 조직 문화를 구축합니다.",
+    ru: "Ориентируясь на ценность для клиента и опираясь на инженерную практику, Foreach формирует позитивную, надежную и долгосрочно ориентированную организационную культуру.",
   },
 
   breadcrumbHome: {
@@ -152,11 +152,11 @@ export const aboutCulturePageText: AboutCulturePageText = {
 
   sectionTitle: {
     "zh-CN": "恒永达文化",
-    en: "FOREACH Culture",
-    es: "Cultura de FOREACH",
-    fr: "Culture FOREACH",
-    ko: "FOREACH 문화",
-    ru: "Культура FOREACH",
+    en: "Foreach Culture",
+    es: "Cultura de Foreach",
+    fr: "Culture Foreach",
+    ko: "Foreach 문화",
+    ru: "Культура Foreach",
   },
 
   organizationTitle: {
@@ -171,11 +171,11 @@ export const aboutCulturePageText: AboutCulturePageText = {
   organizationDesc: {
     "zh-CN":
       "恒永达重视研发、制造、质量、销售与服务团队之间的协同，通过持续学习、工程实践、团队活动和社会责任行动，推动企业文化融入日常工作，形成稳定向上、务实协作的组织氛围。",
-    en: "FOREACH values collaboration among R&D, manufacturing, quality, sales, and service teams. Through continuous learning, engineering practice, team activities, and social responsibility initiatives, we integrate culture into daily work and build a stable, practical, and collaborative organization.",
-    es: "FOREACH valora la colaboración entre los equipos de I+D, fabricación, calidad, ventas y servicio. Mediante aprendizaje continuo, práctica de ingeniería, actividades de equipo e iniciativas de responsabilidad social, integramos la cultura en el trabajo diario y construimos una organización estable, práctica y colaborativa.",
-    fr: "FOREACH valorise la collaboration entre les équipes R&D, fabrication, qualité, ventes et service. Grâce à l’apprentissage continu, à la pratique d’ingénierie, aux activités d’équipe et aux actions de responsabilité sociale, nous intégrons la culture dans le travail quotidien et construisons une organisation stable, pragmatique et collaborative.",
-    ko: "FOREACH는 연구개발, 제조, 품질, 영업 및 서비스 팀 간의 협업을 중시합니다. 지속 학습, 엔지니어링 실천, 팀 활동 및 사회적 책임 활동을 통해 기업 문화를 일상 업무에 녹여 안정적이고 실용적이며 협력적인 조직 분위기를 만들어 갑니다.",
-    ru: "FOREACH ценит взаимодействие между командами R&D, производства, качества, продаж и сервиса. Через постоянное обучение, инженерную практику, командные мероприятия и социальную ответственность мы внедряем культуру в повседневную работу и формируем стабильную, практичную и совместную организацию.",
+    en: "Foreach values collaboration among R&D, manufacturing, quality, sales, and service teams. Through continuous learning, engineering practice, team activities, and social responsibility initiatives, we integrate culture into daily work and build a stable, practical, and collaborative organization.",
+    es: "Foreach valora la colaboración entre los equipos de I+D, fabricación, calidad, ventas y servicio. Mediante aprendizaje continuo, práctica de ingeniería, actividades de equipo e iniciativas de responsabilidad social, integramos la cultura en el trabajo diario y construimos una organización estable, práctica y colaborativa.",
+    fr: "Foreach valorise la collaboration entre les équipes R&D, fabrication, qualité, ventes et service. Grâce à l’apprentissage continu, à la pratique d’ingénierie, aux activités d’équipe et aux actions de responsabilité sociale, nous intégrons la culture dans le travail quotidien et construisons une organisation stable, pragmatique et collaborative.",
+    ko: "Foreach는 연구개발, 제조, 품질, 영업 및 서비스 팀 간의 협업을 중시합니다. 지속 학습, 엔지니어링 실천, 팀 활동 및 사회적 책임 활동을 통해 기업 문화를 일상 업무에 녹여 안정적이고 실용적이며 협력적인 조직 분위기를 만들어 갑니다.",
+    ru: "Foreach ценит взаимодействие между командами R&D, производства, качества, продаж и сервиса. Через постоянное обучение, инженерную практику, командные мероприятия и социальную ответственность мы внедряем культуру в повседневную работу и формируем стабильную, практичную и совместную организацию.",
   },
 
   projectMainTitle: {
@@ -278,20 +278,20 @@ export const brandActionItems: CultureBrandActionItem[] = [
     description: {
       "zh-CN":
         "恒永达关注社会责任与公益行动，在企业发展的同时积极回馈社会。通过公益捐赠、物资支持等实际行动，传递企业温度，践行长期向善的责任理念。",
-      en: "FOREACH cares about social responsibility and public welfare. While developing the company, we give back to society through donations, material support, and practical actions that reflect warmth and long-term responsibility.",
-      es: "FOREACH presta atención a la responsabilidad social y a las acciones de bienestar público. Mientras desarrolla la empresa, retribuye a la sociedad mediante donaciones, apoyo material y acciones concretas que transmiten calidez y responsabilidad a largo plazo.",
-      fr: "FOREACH accorde de l’importance à la responsabilité sociale et aux actions d’intérêt public. Tout en développant l’entreprise, nous redonnons à la société par des dons, du soutien matériel et des actions concrètes qui reflètent chaleur humaine et responsabilité durable.",
-      ko: "FOREACH는 사회적 책임과 공익 활동을 중요하게 생각합니다. 회사의 성장과 함께 기부, 물품 지원 등 실질적인 활동을 통해 사회에 따뜻함을 전하고 장기적인 책임 의식을 실천합니다.",
-      ru: "FOREACH уделяет внимание социальной ответственности и общественно полезным действиям. Развивая компанию, мы возвращаем пользу обществу через пожертвования, материальную поддержку и практические инициативы, отражающие заботу и долгосрочную ответственность.",
+      en: "Foreach cares about social responsibility and public welfare. While developing the company, we give back to society through donations, material support, and practical actions that reflect warmth and long-term responsibility.",
+      es: "Foreach presta atención a la responsabilidad social y a las acciones de bienestar público. Mientras desarrolla la empresa, retribuye a la sociedad mediante donaciones, apoyo material y acciones concretas que transmiten calidez y responsabilidad a largo plazo.",
+      fr: "Foreach accorde de l’importance à la responsabilité sociale et aux actions d’intérêt public. Tout en développant l’entreprise, nous redonnons à la société par des dons, du soutien matériel et des actions concrètes qui reflètent chaleur humaine et responsabilité durable.",
+      ko: "Foreach는 사회적 책임과 공익 활동을 중요하게 생각합니다. 회사의 성장과 함께 기부, 물품 지원 등 실질적인 활동을 통해 사회에 따뜻함을 전하고 장기적인 책임 의식을 실천합니다.",
+      ru: "Foreach уделяет внимание социальной ответственности и общественно полезным действиям. Развивая компанию, мы возвращаем пользу обществу через пожертвования, материальную поддержку и практические инициативы, отражающие заботу и долгосрочную ответственность.",
     },
     imageSrc: "/images/about/culture/love-brand.webp",
     imageAlt: {
       "zh-CN": "恒永达爱心品牌公益活动",
-      en: "FOREACH charity brand activity",
-      es: "Actividad solidaria de FOREACH",
-      fr: "Activité solidaire de FOREACH",
-      ko: "FOREACH 나눔 활동",
-      ru: "Благотворительная деятельность FOREACH",
+      en: "Foreach charity brand activity",
+      es: "Actividad solidaria de Foreach",
+      fr: "Activité solidaire de Foreach",
+      ko: "Foreach 나눔 활동",
+      ru: "Благотворительная деятельность Foreach",
     },
     reverse: false,
   },
@@ -307,20 +307,20 @@ export const brandActionItems: CultureBrandActionItem[] = [
     description: {
       "zh-CN":
         "恒永达重视员工身心健康与团队凝聚力，通过运动、文体活动和团队交流，营造积极、协作、健康的工作氛围，让团队在共同成长中保持活力。",
-      en: "FOREACH values employee well-being and team cohesion. Through sports, cultural activities, and team communication, we create a positive, collaborative, and healthy working atmosphere.",
-      es: "FOREACH valora el bienestar físico y mental de los empleados y la cohesión del equipo. Mediante deportes, actividades culturales y comunicación interna, creamos un ambiente de trabajo positivo, colaborativo y saludable.",
-      fr: "FOREACH valorise le bien-être des employés et la cohésion d’équipe. Grâce au sport, aux activités culturelles et aux échanges internes, nous créons un environnement de travail positif, collaboratif et sain.",
-      ko: "FOREACH는 직원의 심신 건강과 팀 결속력을 중시합니다. 스포츠, 문화 활동 및 팀 교류를 통해 긍정적이고 협력적이며 건강한 근무 분위기를 조성합니다.",
-      ru: "FOREACH ценит благополучие сотрудников и сплоченность команды. Через спорт, культурные мероприятия и командное общение мы создаем позитивную, совместную и здоровую рабочую атмосферу.",
+      en: "Foreach values employee well-being and team cohesion. Through sports, cultural activities, and team communication, we create a positive, collaborative, and healthy working atmosphere.",
+      es: "Foreach valora el bienestar físico y mental de los empleados y la cohesión del equipo. Mediante deportes, actividades culturales y comunicación interna, creamos un ambiente de trabajo positivo, colaborativo y saludable.",
+      fr: "Foreach valorise le bien-être des employés et la cohésion d’équipe. Grâce au sport, aux activités culturelles et aux échanges internes, nous créons un environnement de travail positif, collaboratif et sain.",
+      ko: "Foreach는 직원의 심신 건강과 팀 결속력을 중시합니다. 스포츠, 문화 활동 및 팀 교류를 통해 긍정적이고 협력적이며 건강한 근무 분위기를 조성합니다.",
+      ru: "Foreach ценит благополучие сотрудников и сплоченность команды. Через спорт, культурные мероприятия и командное общение мы создаем позитивную, совместную и здоровую рабочую атмосферу.",
     },
     imageSrc: "/images/about/culture/health-brand.webp",
     imageAlt: {
       "zh-CN": "恒永达健康品牌团队活动",
-      en: "FOREACH health brand team activity",
-      es: "Actividad de equipo saludable de FOREACH",
-      fr: "Activité d’équipe santé de FOREACH",
-      ko: "FOREACH 건강 팀 활동",
-      ru: "Командная активность FOREACH в сфере здоровья",
+      en: "Foreach health brand team activity",
+      es: "Actividad de equipo saludable de Foreach",
+      fr: "Activité d’équipe santé de Foreach",
+      ko: "Foreach 건강 팀 활동",
+      ru: "Командная активность Foreach в сфере здоровья",
     },
     reverse: true,
   },
@@ -343,20 +343,20 @@ export const cultureProjectItems: CultureProjectItem[] = [
     description: {
       "zh-CN":
         "围绕公益捐赠、物资支持和社会责任行动，恒永达在力所能及的范围内持续传递企业温度，推动爱心文化长期落地。",
-      en: "Through donations, material support, and social responsibility actions, FOREACH continues to share warmth within its capabilities and promote a long-term culture of care.",
-      es: "A través de donaciones, apoyo material y acciones de responsabilidad social, FOREACH continúa transmitiendo calidez dentro de sus capacidades y promueve una cultura solidaria a largo plazo.",
-      fr: "Par des dons, du soutien matériel et des actions de responsabilité sociale, FOREACH continue de transmettre de la chaleur humaine selon ses moyens et de promouvoir une culture solidaire durable.",
-      ko: "기부, 물품 지원 및 사회적 책임 활동을 통해 FOREACH는 가능한 범위에서 따뜻함을 전하고 장기적인 나눔 문화를 실천합니다.",
-      ru: "Через пожертвования, материальную поддержку и социальную ответственность FOREACH продолжает делиться заботой в пределах своих возможностей и развивать долгосрочную культуру помощи.",
+      en: "Through donations, material support, and social responsibility actions, Foreach continues to share warmth within its capabilities and promote a long-term culture of care.",
+      es: "A través de donaciones, apoyo material y acciones de responsabilidad social, Foreach continúa transmitiendo calidez dentro de sus capacidades y promueve una cultura solidaria a largo plazo.",
+      fr: "Par des dons, du soutien matériel et des actions de responsabilité sociale, Foreach continue de transmettre de la chaleur humaine selon ses moyens et de promouvoir une culture solidaire durable.",
+      ko: "기부, 물품 지원 및 사회적 책임 활동을 통해 Foreach는 가능한 범위에서 따뜻함을 전하고 장기적인 나눔 문화를 실천합니다.",
+      ru: "Через пожертвования, материальную поддержку и социальную ответственность Foreach продолжает делиться заботой в пределах своих возможностей и развивать долгосрочную культуру помощи.",
     },
     imageSrc: "/images/about/culture/project-love.webp",
     imageAlt: {
       "zh-CN": "恒永达社会爱心工程",
-      en: "FOREACH social care initiative",
-      es: "Iniciativa de apoyo social de FOREACH",
-      fr: "Initiative de solidarité sociale de FOREACH",
-      ko: "FOREACH 사회 나눔 활동",
-      ru: "Социальная инициатива заботы FOREACH",
+      en: "Foreach social care initiative",
+      es: "Iniciativa de apoyo social de Foreach",
+      fr: "Initiative de solidarité sociale de Foreach",
+      ko: "Foreach 사회 나눔 활동",
+      ru: "Социальная инициатива заботы Foreach",
     },
   },
   {
@@ -380,21 +380,21 @@ export const cultureProjectItems: CultureProjectItem[] = [
     imageSrc: "/images/about/culture/project-health.webp",
     imageAlt: {
       "zh-CN": "恒永达健康活力工程",
-      en: "FOREACH health and vitality initiative",
-      es: "Iniciativa de salud y vitalidad de FOREACH",
-      fr: "Initiative santé et vitalité de FOREACH",
-      ko: "FOREACH 건강 활력 활동",
-      ru: "Инициатива здоровья и энергии FOREACH",
+      en: "Foreach health and vitality initiative",
+      es: "Iniciativa de salud y vitalidad de Foreach",
+      fr: "Initiative santé et vitalité de Foreach",
+      ko: "Foreach 건강 활력 활동",
+      ru: "Инициатива здоровья и энергии Foreach",
     },
   },
   {
     title: {
       "zh-CN": "恒永达文化工程",
-      en: "FOREACH Culture Initiative",
-      es: "Iniciativa cultural de FOREACH",
-      fr: "Initiative culturelle FOREACH",
-      ko: "FOREACH 문화 활동",
-      ru: "Культурная инициатива FOREACH",
+      en: "Foreach Culture Initiative",
+      es: "Iniciativa cultural de Foreach",
+      fr: "Initiative culturelle Foreach",
+      ko: "Foreach 문화 활동",
+      ru: "Культурная инициатива Foreach",
     },
     description: {
       "zh-CN":
@@ -408,11 +408,11 @@ export const cultureProjectItems: CultureProjectItem[] = [
     imageSrc: "/images/about/culture/project-culture.webp",
     imageAlt: {
       "zh-CN": "恒永达文化工程",
-      en: "FOREACH culture initiative",
-      es: "Iniciativa cultural de FOREACH",
-      fr: "Initiative culturelle FOREACH",
-      ko: "FOREACH 문화 활동",
-      ru: "Культурная инициатива FOREACH",
+      en: "Foreach culture initiative",
+      es: "Iniciativa cultural de Foreach",
+      fr: "Initiative culturelle Foreach",
+      ko: "Foreach 문화 활동",
+      ru: "Культурная инициатива Foreach",
     },
   },
 ];    

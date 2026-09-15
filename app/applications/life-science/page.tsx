@@ -19,7 +19,7 @@ import { getLifeScienceApplicationPageData } from "@/services/applications/life-
 import "./life-science-application.css";
 
 export const metadata: Metadata = {
-  title: "生命科学应用领域｜FOREACH 恒永达",
+  title: "生命科学应用领域｜Foreach Technology 恒永达",
   description:
     "恒永达面向生命科学设备提供泵、阀、接头、管材、传感器及液路系统集成支持。",
 };

@@ -1,6 +1,6 @@
 import type {
   TechnicalArticleLocale,
-  TechnicalArticlesPageData,
+  TechnicalArticlesSourcePageData,
 } from "./technical-articles.types";
 
 type ForeignLocale = Exclude<TechnicalArticleLocale, "zh-CN" | "en">;
@@ -13,7 +13,6 @@ const pageTranslations: Record<ForeignLocale, {
   resources: string;
   current: string;
   search: string;
-  categories: readonly [string, string, string, string, string];
   sectionTitle: string;
   bannerTitle: string;
   bannerDescription: string;
@@ -21,35 +20,31 @@ const pageTranslations: Record<ForeignLocale, {
 }> = {
   es: {
     heroTitle: "Artículos técnicos",
-    heroDescription: "Explore conocimientos técnicos de FOREACH sobre selección de productos, compatibilidad de materiales, conexiones de tubos, métodos de sellado y aplicaciones de sistemas microfluídicos.",
+    heroDescription: "Explore conocimientos técnicos de Foreach sobre selección de productos, compatibilidad de materiales, conexiones de tubos, métodos de sellado y aplicaciones de sistemas microfluídicos.",
     home: "Inicio", resources: "Recursos", current: "Artículos técnicos", search: "Buscar artículos",
-    categories: ["Todos", "Racores y tubos", "Bombas y válvulas", "Materiales y compatibilidad", "Aplicaciones"],
     sectionTitle: "Artículos técnicos", bannerTitle: "¿Necesita asistencia técnica para seleccionar productos?",
-    bannerDescription: "Comparta con FOREACH el fluido, el rango de presión, el tamaño del tubo, las condiciones de aplicación o los planos para confirmar el producto adecuado.", contact: "Contactar",
+    bannerDescription: "Comparta con Foreach el fluido, el rango de presión, el tamaño del tubo, las condiciones de aplicación o los planos para confirmar el producto adecuado.", contact: "Contactar",
   },
   fr: {
     heroTitle: "Articles techniques",
-    heroDescription: "Découvrez l’expertise FOREACH sur la sélection des produits, la compatibilité des matériaux, les raccordements de tubes, l’étanchéité et les applications microfluidiques.",
+    heroDescription: "Découvrez l’expertise Foreach sur la sélection des produits, la compatibilité des matériaux, les raccordements de tubes, l’étanchéité et les applications microfluidiques.",
     home: "Accueil", resources: "Ressources", current: "Articles techniques", search: "Rechercher des articles",
-    categories: ["Tous", "Raccords et tubes", "Pompes et vannes", "Matériaux et compatibilité", "Applications"],
     sectionTitle: "Articles techniques", bannerTitle: "Besoin d’une assistance technique pour votre sélection ?",
-    bannerDescription: "Communiquez à FOREACH le fluide, la plage de pression, la taille du tube, les conditions d’application ou les plans afin de confirmer le produit adapté.", contact: "Nous contacter",
+    bannerDescription: "Communiquez à Foreach le fluide, la plage de pression, la taille du tube, les conditions d’application ou les plans afin de confirmer le produit adapté.", contact: "Nous contacter",
   },
   ko: {
     heroTitle: "기술 자료",
-    heroDescription: "제품 선정, 재질 호환성, 튜브 연결, 밀봉 방식 및 미세유체 시스템 적용에 관한 FOREACH의 기술 정보를 확인하세요.",
+    heroDescription: "제품 선정, 재질 호환성, 튜브 연결, 밀봉 방식 및 미세유체 시스템 적용에 관한 Foreach의 기술 정보를 확인하세요.",
     home: "홈", resources: "자료", current: "기술 자료", search: "자료 검색",
-    categories: ["전체", "피팅 및 튜브", "펌프 및 밸브", "재질 및 호환성", "적용 분야"],
     sectionTitle: "기술 자료", bannerTitle: "제품 선정에 기술 지원이 필요하신가요?",
-    bannerDescription: "유체, 압력 범위, 튜브 크기, 적용 조건 또는 도면을 FOREACH에 보내 주시면 제품 매칭과 기술 확인을 지원합니다.", contact: "문의하기",
+    bannerDescription: "유체, 압력 범위, 튜브 크기, 적용 조건 또는 도면을 Foreach에 보내 주시면 제품 매칭과 기술 확인을 지원합니다.", contact: "문의하기",
   },
   ru: {
     heroTitle: "Технические статьи",
-    heroDescription: "Материалы FOREACH по подбору продукции, совместимости материалов, трубным соединениям, герметизации и применению микрофлюидных систем.",
+    heroDescription: "Материалы Foreach по подбору продукции, совместимости материалов, трубным соединениям, герметизации и применению микрофлюидных систем.",
     home: "Главная", resources: "Ресурсы", current: "Технические статьи", search: "Поиск статей",
-    categories: ["Все", "Фитинги и трубки", "Насосы и клапаны", "Материалы и совместимость", "Применение"],
     sectionTitle: "Технические статьи", bannerTitle: "Нужна техническая помощь при подборе?",
-    bannerDescription: "Сообщите FOREACH рабочую среду, диапазон давления, размер трубки, условия применения или приложите чертежи для подбора и технического подтверждения.", contact: "Связаться",
+    bannerDescription: "Сообщите Foreach рабочую среду, диапазон давления, размер трубки, условия применения или приложите чертежи для подбора и технического подтверждения.", contact: "Связаться",
   },
 };
 
@@ -68,7 +63,7 @@ const articleTranslations: Record<ForeignLocale, readonly ArticleTranslation[]> 
     ["Racores de baja y alta presión: diferencias clave", "Los racores de baja presión priorizan el montaje y el sellado; los de alta presión requieren una estructura, un diseño de sellado y una estabilidad más robustos.", "Requisitos de aplicación diferentes", "Los racores de baja presión se usan en transferencia de reactivos, lavado y manipulación general. Los de alta presión son habituales en instrumentos analíticos o sistemas sensibles a las variaciones de presión.", "La apariencia no basta para sustituirlos", "Aunque dos racores parezcan iguales, pueden diferir en presión nominal, sellado, tubo aplicable y montaje. Confirme el rango de presión y el conjunto completo de tubos."],
     ["Tubos rígidos y flexibles en conexiones fluídicas", "Los tubos rígidos sirven para recorridos estables y definidos; los flexibles facilitan el encaminamiento, la curvatura y la tolerancia a vibraciones.", "Diferencias estructurales", "El tubo rígido conserva mejor las dimensiones y reduce la deformación. El flexible se curva con facilidad y se adapta a espacios limitados o recorridos variables.", "La selección depende del diseño del sistema", "En tubos rígidos cuide el corte, la profundidad de inserción y el sellado. En tubos flexibles evalúe elasticidad, fuerza de sujeción y envejecimiento."],
     ["Causas frecuentes de fallos de sellado en racores", "Las fugas pueden deberse al tubo, la instalación, el corte, las juntas o la presión del sistema, y no solo al racor.", "Causas típicas de fuga", "Entre las causas habituales están un tamaño de tubo incorrecto, corte irregular, inserción insuficiente, roscas flojas, juntas dañadas, incompatibilidad de materiales o presión excesiva.", "Pasos de diagnóstico recomendados", "Compruebe primero las especificaciones del tubo y el racor y después el extremo, la junta y la alineación. Con reactivos corrosivos o limpiadores, confirme la compatibilidad a largo plazo."],
-    ["Parámetros clave para seleccionar una microbomba de émbolo", "La selección debe considerar volumen, precisión, repetibilidad, presión, interfaz, accionamiento y protocolo de comunicación.", "Parámetros esenciales además del volumen", "Estas bombas realizan aspiración, dosificación y transferencia cuantitativa en IVD, automatización e instrumentos analíticos. Tras el volumen y la precisión, evalúe presión, fluido, ciclo de trabajo y vida útil.", "Es importante la compatibilidad del sistema", "La bomba debe funcionar con válvulas, tubos, racores, sensores y lógica de control. La interfaz, el método de conexión y el protocolo de comunicación también condicionan la integración."],
+    ["Parámetros clave para seleccionar una microbomba de pistón", "La selección debe considerar volumen, precisión, repetibilidad, presión, interfaz, accionamiento y protocolo de comunicación.", "Parámetros esenciales además del volumen", "Estas bombas realizan aspiración, dosificación y transferencia cuantitativa en IVD, automatización e instrumentos analíticos. Tras el volumen y la precisión, evalúe presión, fluido, ciclo de trabajo y vida útil.", "Es importante la compatibilidad del sistema", "La bomba debe funcionar con válvulas, tubos, racores, sensores y lógica de control. La interfaz, el método de conexión y el protocolo de comunicación también condicionan la integración."],
     ["Función de las electroválvulas en sistemas microfluídicos", "Las electroválvulas controlan apertura, cierre, conmutación y distribución del flujo en sistemas automatizados.", "Control del circuito de fluido", "Se emplean para controlar reactivos, cambiar soluciones de lavado, descargar residuos y conmutar gas y líquido. Pueden ofrecer dos, tres o más vías según su estructura.", "Factores de selección", "Confirme canales, diámetro de paso, presión, tipo de fluido y material de sellado. Para medios corrosivos o con riesgo de cristalización, evalúe el cuerpo y la estabilidad a largo plazo."],
     ["¿Puede una tabla de compatibilidad ser la base final de selección?", "Una tabla resulta útil para el cribado inicial, pero la selección final también debe considerar temperatura, concentración, presión y tiempo de contacto.", "Las tablas son útiles para el cribado", "Se basan en la experiencia con materiales y sustancias habituales y permiten descartar opciones inadecuadas, pero una aplicación real puede incluir mezclas y condiciones distintas.", "Las condiciones complejas deben confirmarse", "Para disolventes mezclados, altas concentraciones, inmersión prolongada o alta temperatura, aporte información detallada y realice pruebas antes de la selección final."],
     ["Parámetros clave para seleccionar el sistema fluídico de un equipo IVD", "Un sistema IVD exige precisión, estabilidad, limpieza, compatibilidad y facilidad de mantenimiento; cada componente afecta al conjunto.", "El sistema depende de varios componentes", "Bombas, válvulas, tubos, racores, agujas y sensores deben trabajar juntos durante aspiración, dosificación, lavado, reacción y gestión de residuos.", "Parámetros y capacidad de suministro", "Evalúe precisión, repetibilidad, compatibilidad, burbujas, volumen muerto, residuos, interfaces y vida útil. Para producción en serie también importan la uniformidad y un suministro estable."],
@@ -112,7 +107,7 @@ const articleTranslations: Record<ForeignLocale, readonly ArticleTranslation[]> 
     ["저압 피팅과 고압 피팅의 주요 차이", "저압 피팅은 조립성과 밀봉 신뢰성을, 고압 피팅은 강한 구조와 밀봉 설계 및 압력 안정성을 중시합니다.", "서로 다른 적용 요구", "저압 피팅은 시약 이송과 세척에, 고압 피팅은 분석 장비나 압력 변동에 민감한 시스템에 주로 사용됩니다.", "외관만으로 대체할 수 없음", "모양이 비슷해도 정격 압력, 밀봉 구조, 적용 튜브 및 설치 방식이 다를 수 있으므로 실제 압력과 전체 튜브 조립체를 확인해야 합니다."],
     ["유체 연결의 경질 튜브와 연질 튜브", "경질 튜브는 안정된 유로에, 연질 튜브는 배치, 굽힘 및 진동 허용이 필요한 구조에 적합합니다.", "구조적 차이", "경질 튜브는 치수 안정성이 높고 변형이 적습니다. 연질 튜브는 잘 휘어 제한된 공간에 적합합니다.", "시스템 배치에 따른 선정", "경질 튜브는 절단, 삽입 깊이와 밀봉을, 연질 튜브는 탄성, 체결력과 장기 노화를 고려합니다."],
     ["피팅 밀봉 불량의 일반적인 원인", "누출은 피팅 자체뿐 아니라 튜브 불일치, 설치, 절단, 밀봉 부품 또는 시스템 압력 때문에 발생할 수 있습니다.", "주요 누출 원인", "튜브 규격 불일치, 불균일한 절단, 삽입 부족, 느슨한 나사, 손상된 씰, 재질 비호환 또는 과압이 흔한 원인입니다.", "권장 점검 절차", "튜브와 피팅 사양을 먼저 확인하고 튜브 끝, 씰 상태와 정렬을 점검합니다. 부식성 시약에는 장기 호환성도 확인합니다."],
-    ["마이크로 플런저 펌프 선정의 핵심 파라미터", "토출량, 정확도, 반복성, 압력, 인터페이스, 구동 방식과 통신 프로토콜을 고려해야 합니다.", "용량 범위 이외의 핵심 파라미터", "흡입, 분주와 정량 이송에 사용되므로 용량과 정확도에 이어 압력, 유체, 듀티 사이클과 수명을 평가합니다.", "시스템 단위 매칭의 중요성", "펌프는 밸브, 튜브, 피팅, 센서 및 제어 로직과 맞아야 하며 인터페이스, 연결 방식과 통신 프로토콜도 중요합니다."],
+    ["마이크로 피스톤 펌프 선정의 핵심 파라미터", "토출량, 정확도, 반복성, 압력, 인터페이스, 구동 방식과 통신 프로토콜을 고려해야 합니다.", "용량 범위 이외의 핵심 파라미터", "흡입, 분주와 정량 이송에 사용되므로 용량과 정확도에 이어 압력, 유체, 듀티 사이클과 수명을 평가합니다.", "시스템 단위 매칭의 중요성", "펌프는 밸브, 튜브, 피팅, 센서 및 제어 로직과 맞아야 하며 인터페이스, 연결 방식과 통신 프로토콜도 중요합니다."],
     ["미세유체 시스템에서 솔레노이드 밸브의 역할", "솔레노이드 밸브는 유로의 개폐, 전환과 분배를 제어하는 자동화 핵심 부품입니다.", "유로 제어", "시약 개폐, 세척액 전환, 폐액 배출 및 기액 전환에 사용되며 구조에 따라 2방향, 3방향 이상의 제어를 제공합니다.", "선정 요소", "채널, 오리피스, 압력, 유체와 씰 재질을 확인하십시오. 부식성 유체나 결정화 위험이 있으면 밸브 본체와 장기 안정성을 평가합니다."],
     ["재질 호환성 표를 최종 선정 기준으로 사용할 수 있을까?", "호환성 표는 1차 선별에 유용하지만 온도, 농도, 압력과 접촉 시간도 고려해야 합니다.", "선별에 유용한 호환성 표", "일반적인 경험을 바탕으로 부적합 재질을 빠르게 제외할 수 있지만 실제 적용에는 혼합 유체와 다른 조건이 있을 수 있습니다.", "복잡한 조건은 확인 필요", "혼합 용매, 고농도, 장기 침지 또는 고온 조건에서는 상세 유체 정보와 샘플 시험 후 최종 선정하십시오."],
     ["IVD 장비 유체 시스템 선정의 핵심 파라미터", "IVD 유체 시스템은 정확도, 안정성, 청정도, 재질 호환성과 유지보수성이 필요하며 각 부품이 전체에 영향을 줍니다.", "여러 부품으로 구성되는 유체 시스템", "펌프, 밸브, 튜브, 피팅, 니들과 센서가 함께 흡입, 분주, 세척, 반응 및 폐액 처리를 수행합니다.", "파라미터와 공급 능력", "정확도, 반복성, 호환성, 기포, 데드 볼륨, 잔류, 인터페이스와 수명을 평가합니다. 양산 장비는 일관성과 안정 공급도 중요합니다."],
@@ -134,7 +129,7 @@ const articleTranslations: Record<ForeignLocale, readonly ArticleTranslation[]> 
     ["Фитинги низкого и высокого давления: основные различия", "Для низкого давления важны удобство сборки и герметичность, для высокого — усиленная конструкция и стабильность.", "Разные требования к применению", "Низкое давление характерно для подачи реагентов и промывки, высокое — для аналитических приборов и чувствительных к колебаниям систем.", "Внешнего сходства недостаточно", "Похожие фитинги могут иметь разное номинальное давление, уплотнение, трубку и монтаж. Проверяйте реальный диапазон и весь трубопровод."],
     ["Жёсткие и гибкие трубки в гидравлических соединениях", "Жёсткие трубки подходят для стабильных трасс, гибкие — для изгибов, прокладки и компенсации вибрации.", "Конструктивные различия", "Жёсткая трубка лучше сохраняет размеры, гибкая удобнее в ограниченном пространстве.", "Выбор зависит от компоновки", "Для жёсткой трубки важны качество среза, глубина установки и уплотнение; для гибкой — эластичность, усилие зажима и старение."],
     ["Типичные причины нарушения герметичности фитингов", "Утечка может быть связана с трубкой, монтажом, срезом, уплотнением или давлением, а не только с фитингом.", "Причины утечек", "Несоответствие размера, неровный срез, малая глубина, слабая резьба, повреждённое уплотнение, несовместимость и превышение давления — частые причины.", "Рекомендуемая диагностика", "Проверьте спецификации, конец трубки, уплотнение и соосность. Для агрессивных реагентов подтвердите долгосрочную совместимость."],
-    ["Ключевые параметры выбора микроплунжерного насоса", "Учитывайте объём, точность, повторяемость, давление, интерфейс, привод и протокол связи.", "Параметры помимо диапазона объёма", "Насосы выполняют аспирацию, дозирование и количественную подачу. После объёма и точности оцените давление, среду, цикл и ресурс.", "Важно системное согласование", "Насос должен соответствовать клапанам, трубкам, фитингам, датчикам и логике управления. Важны также интерфейс, соединение и связь."],
+    ["Ключевые параметры выбора микропоршневого насоса", "Учитывайте объём, точность, повторяемость, давление, интерфейс, привод и протокол связи.", "Параметры помимо диапазона объёма", "Насосы выполняют аспирацию, дозирование и количественную подачу. После объёма и точности оцените давление, среду, цикл и ресурс.", "Важно системное согласование", "Насос должен соответствовать клапанам, трубкам, фитингам, датчикам и логике управления. Важны также интерфейс, соединение и связь."],
     ["Роль электромагнитных клапанов в микрофлюидных системах", "Они управляют открытием, закрытием, переключением и распределением потока в автоматизированной системе.", "Управление гидравлическим контуром", "Клапаны управляют реагентами, промывкой, сливом и переключением газа и жидкости и могут иметь два, три и более каналов.", "Критерии выбора", "Проверьте каналы, отверстие, давление, среду и материал уплотнения. Для агрессивных и кристаллизующихся сред оцените корпус и стабильность."],
     ["Можно ли считать таблицу совместимости окончательным основанием выбора?", "Таблица полезна для первичного отбора, но нужно учитывать температуру, концентрацию, давление и время контакта.", "Таблицы помогают при отборе", "Они позволяют исключить явно неподходящие материалы, однако реальные условия могут включать смеси.", "Сложные условия требуют проверки", "Для смесей, высокой концентрации, длительного погружения и высокой температуры предоставьте подробности и проведите испытания."],
     ["Ключевые параметры гидравлической системы прибора IVD", "Для IVD нужны точность, стабильность, чистота, совместимость и ремонтопригодность; каждый компонент влияет на систему.", "Система состоит из многих компонентов", "Насосы, клапаны, трубки, фитинги, иглы и датчики совместно обеспечивают аспирацию, дозирование, промывку, реакцию и слив.", "Параметры и поставки", "Оценивайте точность, повторяемость, совместимость, пузырьки, мёртвый объём, остатки, интерфейсы и ресурс. Для серийного выпуска важны стабильные поставки."],
@@ -146,8 +141,8 @@ const articleTranslations: Record<ForeignLocale, readonly ArticleTranslation[]> 
 
 export function localizeTechnicalArticles(
   locale: ForeignLocale,
-  base: TechnicalArticlesPageData,
-): TechnicalArticlesPageData {
+  base: TechnicalArticlesSourcePageData,
+): TechnicalArticlesSourcePageData {
   const copy = pageTranslations[locale];
   const translations = articleTranslations[locale];
 
@@ -161,7 +156,6 @@ export function localizeTechnicalArticles(
       { label: copy.current },
     ],
     search: { placeholder: copy.search },
-    categories: base.categories.map((category, index) => ({ ...category, label: copy.categories[index] ?? category.label })),
     sectionTitle: copy.sectionTitle,
     articles: base.articles.map((article, index) => {
       const translation = translations[index];

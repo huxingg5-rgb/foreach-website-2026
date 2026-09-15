@@ -124,11 +124,11 @@ function getLocalizedText(
 const historyPageTextSource: HistoryPageTextSource = {
   metadataTitle: t(
     "发展历程｜恒永达科技",
-    "History｜FOREACH Technology",
-    "Historia｜FOREACH Technology",
-    "Historique｜FOREACH Technology",
-    "연혁｜FOREACH Technology",
-    "История｜FOREACH Technology"
+    "History｜Foreach Technology",
+    "Historia｜Foreach Technology",
+    "Historique｜Foreach Technology",
+    "연혁｜Foreach Technology",
+    "История｜Foreach Technology"
   ),
   metadataDescription: t(
     "深圳市恒永达科技股份有限公司发展历程，展示公司在微流体核心部件、泵阀产品、技术攻关、企业认证与市场拓展方面的关键节点。",
@@ -164,19 +164,19 @@ const historyPageTextSource: HistoryPageTextSource = {
   ),
   topBannerAriaLabel: t(
     "恒永达发展历程 Banner",
-    "FOREACH history banner",
-    "Banner de historia de FOREACH",
-    "Bannière historique de FOREACH",
-    "FOREACH 연혁 배너",
-    "Баннер истории FOREACH"
+    "Foreach history banner",
+    "Banner de historia de Foreach",
+    "Bannière historique de Foreach",
+    "Foreach 연혁 배너",
+    "Баннер истории Foreach"
   ),
   bottomBannerAriaLabel: t(
     "恒永达发展历程底部图片 Banner",
-    "FOREACH history bottom image banner",
-    "Banner inferior de imagen de historia de FOREACH",
-    "Bannière image inférieure de l’historique de FOREACH",
-    "FOREACH 연혁 하단 이미지 배너",
-    "Нижний графический баннер истории FOREACH"
+    "Foreach history bottom image banner",
+    "Banner inferior de imagen de historia de Foreach",
+    "Bannière image inférieure de l’historique de Foreach",
+    "Foreach 연혁 하단 이미지 배너",
+    "Нижний графический баннер истории Foreach"
   ),
 };
 
@@ -215,11 +215,11 @@ const historyMilestoneSources: HistoryMilestoneSource[] = [
     image: "/images/about/history/history-2025-certificate-clean.webp",
     imageAlt: t(
       "恒永达 2025 年发展历程配图",
-      "FOREACH 2025 milestone image",
-      "Imagen de hito de FOREACH en 2025",
-      "Image du jalon FOREACH 2025",
-      "FOREACH 2025년 연혁 이미지",
-      "Изображение этапа FOREACH 2025"
+      "Foreach 2025 milestone image",
+      "Imagen de hito de Foreach en 2025",
+      "Image du jalon Foreach 2025",
+      "Foreach 2025년 연혁 이미지",
+      "Изображение этапа Foreach 2025"
     ),
     imageSide: "left",
     events: [
@@ -248,11 +248,11 @@ const historyMilestoneSources: HistoryMilestoneSource[] = [
     image: "/images/about/history/history-2024-certificate-clean.webp",
     imageAlt: t(
       "恒永达 2024 年发展历程配图",
-      "FOREACH 2024 milestone image",
-      "Imagen de hito de FOREACH en 2024",
-      "Image du jalon FOREACH 2024",
-      "FOREACH 2024년 연혁 이미지",
-      "Изображение этапа FOREACH 2024"
+      "Foreach 2024 milestone image",
+      "Imagen de hito de Foreach en 2024",
+      "Image du jalon Foreach 2024",
+      "Foreach 2024년 연혁 이미지",
+      "Изображение этапа Foreach 2024"
     ),
     imageSide: "right",
     events: [
@@ -297,11 +297,11 @@ const historyMilestoneSources: HistoryMilestoneSource[] = [
     image: "",
     imageAlt: t(
       "恒永达 2023 年发展历程配图",
-      "FOREACH 2023 milestone image",
-      "Imagen de hito de FOREACH en 2023",
-      "Image du jalon FOREACH 2023",
-      "FOREACH 2023년 연혁 이미지",
-      "Изображение этапа FOREACH 2023"
+      "Foreach 2023 milestone image",
+      "Imagen de hito de Foreach en 2023",
+      "Image du jalon Foreach 2023",
+      "Foreach 2023년 연혁 이미지",
+      "Изображение этапа Foreach 2023"
     ),
     imageSide: "left",
     events: [
@@ -346,11 +346,11 @@ const historyMilestoneSources: HistoryMilestoneSource[] = [
     image: "",
     imageAlt: t(
       "恒永达 2022 年发展历程配图",
-      "FOREACH 2022 milestone image",
-      "Imagen de hito de FOREACH en 2022",
-      "Image du jalon FOREACH 2022",
-      "FOREACH 2022년 연혁 이미지",
-      "Изображение этапа FOREACH 2022"
+      "Foreach 2022 milestone image",
+      "Imagen de hito de Foreach en 2022",
+      "Image du jalon Foreach 2022",
+      "Foreach 2022년 연혁 이미지",
+      "Изображение этапа Foreach 2022"
     ),
     imageSide: "right",
     events: [
@@ -395,11 +395,11 @@ const historyMilestoneSources: HistoryMilestoneSource[] = [
     image: "",
     imageAlt: t(
       "恒永达 2020 年发展历程配图",
-      "FOREACH 2020 milestone image",
-      "Imagen de hito de FOREACH en 2020",
-      "Image du jalon FOREACH 2020",
-      "FOREACH 2020년 연혁 이미지",
-      "Изображение этапа FOREACH 2020"
+      "Foreach 2020 milestone image",
+      "Imagen de hito de Foreach en 2020",
+      "Image du jalon Foreach 2020",
+      "Foreach 2020년 연혁 이미지",
+      "Изображение этапа Foreach 2020"
     ),
     imageSide: "left",
     events: [
@@ -424,7 +424,7 @@ const historyMilestoneSources: HistoryMilestoneSource[] = [
         "Industry-university-research experimental base established with Southern University of Science and Technology",
         "Establecimiento de una base experimental de industria-universidad-investigación con Southern University of Science and Technology",
         "Création d’une base expérimentale industrie-université-recherche avec la Southern University of Science and Technology",
-        "남방과학기술대학교-FOREACH 산학연 실험기지 설립",
+        "남방과학기술대학교-Foreach 산학연 실험기지 설립",
         "Создана экспериментальная база сотрудничества промышленности, университета и исследований с Southern University of Science and Technology"
       ),
       t(
@@ -444,11 +444,11 @@ const historyMilestoneSources: HistoryMilestoneSource[] = [
     image: "",
     imageAlt: t(
       "恒永达 2019 年发展历程配图",
-      "FOREACH 2019 milestone image",
-      "Imagen de hito de FOREACH en 2019",
-      "Image du jalon FOREACH 2019",
-      "FOREACH 2019년 연혁 이미지",
-      "Изображение этапа FOREACH 2019"
+      "Foreach 2019 milestone image",
+      "Imagen de hito de Foreach en 2019",
+      "Image du jalon Foreach 2019",
+      "Foreach 2019년 연혁 이미지",
+      "Изображение этапа Foreach 2019"
     ),
     imageSide: "right",
     events: [
@@ -485,11 +485,11 @@ const historyMilestoneSources: HistoryMilestoneSource[] = [
     image: "",
     imageAlt: t(
       "恒永达 2018 年发展历程配图",
-      "FOREACH 2018 milestone image",
-      "Imagen de hito de FOREACH en 2018",
-      "Image du jalon FOREACH 2018",
-      "FOREACH 2018년 연혁 이미지",
-      "Изображение этапа FOREACH 2018"
+      "Foreach 2018 milestone image",
+      "Imagen de hito de Foreach en 2018",
+      "Image du jalon Foreach 2018",
+      "Foreach 2018년 연혁 이미지",
+      "Изображение этапа Foreach 2018"
     ),
     imageSide: "left",
     events: [
@@ -526,11 +526,11 @@ const historyMilestoneSources: HistoryMilestoneSource[] = [
     image: "",
     imageAlt: t(
       "恒永达 2017 年发展历程配图",
-      "FOREACH 2017 milestone image",
-      "Imagen de hito de FOREACH en 2017",
-      "Image du jalon FOREACH 2017",
-      "FOREACH 2017년 연혁 이미지",
-      "Изображение этапа FOREACH 2017"
+      "Foreach 2017 milestone image",
+      "Imagen de hito de Foreach en 2017",
+      "Image du jalon Foreach 2017",
+      "Foreach 2017년 연혁 이미지",
+      "Изображение этапа Foreach 2017"
     ),
     imageSide: "right",
     events: [
@@ -575,11 +575,11 @@ const historyMilestoneSources: HistoryMilestoneSource[] = [
     image: "/images/about/history/history-2016-certificate-clean.webp",
     imageAlt: t(
       "恒永达 2016 年发展历程配图",
-      "FOREACH 2016 milestone image",
-      "Imagen de hito de FOREACH en 2016",
-      "Image du jalon FOREACH 2016",
-      "FOREACH 2016년 연혁 이미지",
-      "Изображение этапа FOREACH 2016"
+      "Foreach 2016 milestone image",
+      "Imagen de hito de Foreach en 2016",
+      "Image du jalon Foreach 2016",
+      "Foreach 2016년 연혁 이미지",
+      "Изображение этапа Foreach 2016"
     ),
     imageSide: "left",
     events: [
@@ -624,11 +624,11 @@ const historyMilestoneSources: HistoryMilestoneSource[] = [
     image: "",
     imageAlt: t(
       "恒永达 2015 年发展历程配图",
-      "FOREACH 2015 milestone image",
-      "Imagen de hito de FOREACH en 2015",
-      "Image du jalon FOREACH 2015",
-      "FOREACH 2015년 연혁 이미지",
-      "Изображение этапа FOREACH 2015"
+      "Foreach 2015 milestone image",
+      "Imagen de hito de Foreach en 2015",
+      "Image du jalon Foreach 2015",
+      "Foreach 2015년 연혁 이미지",
+      "Изображение этапа Foreach 2015"
     ),
     imageSide: "right",
     events: [
@@ -665,11 +665,11 @@ const historyMilestoneSources: HistoryMilestoneSource[] = [
     image: "",
     imageAlt: t(
       "恒永达 2014 年发展历程配图",
-      "FOREACH 2014 milestone image",
-      "Imagen de hito de FOREACH en 2014",
-      "Image du jalon FOREACH 2014",
-      "FOREACH 2014년 연혁 이미지",
-      "Изображение этапа FOREACH 2014"
+      "Foreach 2014 milestone image",
+      "Imagen de hito de Foreach en 2014",
+      "Image du jalon Foreach 2014",
+      "Foreach 2014년 연혁 이미지",
+      "Изображение этапа Foreach 2014"
     ),
     imageSide: "left",
     events: [
@@ -690,11 +690,11 @@ const historyMilestoneSources: HistoryMilestoneSource[] = [
     image: "",
     imageAlt: t(
       "恒永达 2013 年发展历程配图",
-      "FOREACH 2013 milestone image",
-      "Imagen de hito de FOREACH en 2013",
-      "Image du jalon FOREACH 2013",
-      "FOREACH 2013년 연혁 이미지",
-      "Изображение этапа FOREACH 2013"
+      "Foreach 2013 milestone image",
+      "Imagen de hito de Foreach en 2013",
+      "Image du jalon Foreach 2013",
+      "Foreach 2013년 연혁 이미지",
+      "Изображение этапа Foreach 2013"
     ),
     imageSide: "right",
     events: [
@@ -715,21 +715,21 @@ const historyMilestoneSources: HistoryMilestoneSource[] = [
     image: "",
     imageAlt: t(
       "恒永达 2012 年发展历程配图",
-      "FOREACH 2012 milestone image",
-      "Imagen de hito de FOREACH en 2012",
-      "Image du jalon FOREACH 2012",
-      "FOREACH 2012년 연혁 이미지",
-      "Изображение этапа FOREACH 2012"
+      "Foreach 2012 milestone image",
+      "Imagen de hito de Foreach en 2012",
+      "Image du jalon Foreach 2012",
+      "Foreach 2012년 연혁 이미지",
+      "Изображение этапа Foreach 2012"
     ),
     imageSide: "left",
     events: [
       t(
         "恒永达成立",
-        "FOREACH founded",
-        "Fundación de FOREACH",
-        "Création de FOREACH",
-        "FOREACH 설립",
-        "Основание FOREACH"
+        "Foreach founded",
+        "Fundación de Foreach",
+        "Création de Foreach",
+        "Foreach 설립",
+        "Основание Foreach"
       ),
     ],
     enabled: true,

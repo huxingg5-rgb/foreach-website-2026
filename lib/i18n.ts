@@ -88,7 +88,7 @@ export const languageItems: LanguageItem[] = getEnabledLanguages().map(
 // 2. 导航菜单名称已经迁移到 data/navigation.ts
 export const headerI18n: Record<LocaleCode, HeaderText> = {
   "zh-CN": {
-    logoAriaLabel: "FOREACH 首页",
+    logoAriaLabel: "Foreach Technology 首页",
     navAriaLabel: "主导航",
     mobileNavAriaLabel: "移动端导航",
     searchPlaceholder: "搜索产品 / 型号",
@@ -101,7 +101,7 @@ export const headerI18n: Record<LocaleCode, HeaderText> = {
   },
 
   en: {
-    logoAriaLabel: "FOREACH Home",
+    logoAriaLabel: "Foreach Technology Home",
     navAriaLabel: "Main navigation",
     mobileNavAriaLabel: "Mobile navigation",
     searchPlaceholder: "Search products / models",
@@ -114,7 +114,7 @@ export const headerI18n: Record<LocaleCode, HeaderText> = {
   },
 
   es: {
-    logoAriaLabel: "Inicio de FOREACH",
+    logoAriaLabel: "Inicio de Foreach Technology",
     navAriaLabel: "Navegación principal",
     mobileNavAriaLabel: "Navegación móvil",
     searchPlaceholder: "Buscar productos / modelos",
@@ -127,7 +127,7 @@ export const headerI18n: Record<LocaleCode, HeaderText> = {
   },
 
   fr: {
-    logoAriaLabel: "Accueil FOREACH",
+    logoAriaLabel: "Accueil Foreach Technology",
     navAriaLabel: "Navigation principale",
     mobileNavAriaLabel: "Navigation mobile",
     searchPlaceholder: "Rechercher produits / modèles",
@@ -140,7 +140,7 @@ export const headerI18n: Record<LocaleCode, HeaderText> = {
   },
 
   ko: {
-    logoAriaLabel: "FOREACH 홈",
+    logoAriaLabel: "Foreach Technology 홈",
     navAriaLabel: "주요 내비게이션",
     mobileNavAriaLabel: "모바일 내비게이션",
     searchPlaceholder: "제품 / 모델 검색",
@@ -153,7 +153,7 @@ export const headerI18n: Record<LocaleCode, HeaderText> = {
   },
 
   ru: {
-    logoAriaLabel: "Главная FOREACH",
+    logoAriaLabel: "Главная Foreach Technology",
     navAriaLabel: "Основная навигация",
     mobileNavAriaLabel: "Мобильная навигация",
     searchPlaceholder: "Поиск продукции / моделей",

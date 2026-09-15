@@ -11,12 +11,12 @@ export const tubeInnerDiameterAffectsDiaphragmPumpFlowEnCopy = {
     title:
       "Why Does Actual Flow Change So Much When the Tubing Size Changes on the Same Miniature Diaphragm Pump?",
     seoTitle:
-      "Diaphragm Pump Flow After a Tubing Change: Find Fluid-Path Restrictions with Pressure Measurements | FOREACH",
+      "Diaphragm Pump Flow After a Tubing Change: Find Fluid-Path Restrictions with Pressure Measurements | Foreach Technology",
     seoDescription:
       "When flow drops after replacing tubing on a miniature diaphragm pump, how can you tell whether the cause is tube ID, tube length, a restricted fitting, or the pump? This guide provides a diagnostic procedure based on simultaneous inlet-pressure, outlet-pressure, and flow measurements.",
     coverImage: `${TUBE_DIAMETER_ARTICLE_ASSET_BASE}/article-cover.webp`,
     coverAlt:
-      "Real-world footage of a miniature diaphragm pump tubing circuit and flow test from the official FOREACH Douyin channel",
+      "Real-world footage of a miniature diaphragm pump tubing circuit and flow test from the official Foreach Douyin channel",
   },
   deck:
     "Even when the pump is unchanged, installed flow can change because of tubing inner diameter, length, bends, and the minimum bore of fittings. When flow falls after a tubing change, the effective response is neither to blame the pump first nor to enlarge every tube indiscriminately. Measure inlet pressure, outlet pressure, and accumulated flow together to determine where the added restriction actually occurs.",
@@ -347,12 +347,12 @@ export const suctionVsDischargeResistanceDiaphragmPumpEnCopy = {
     title:
       "Which Has a Greater Effect on a Miniature Diaphragm Pump: Suction-Line or Discharge-Line Resistance?",
     seoTitle:
-      "Diaphragm Pump Suction Resistance vs. Outlet Backpressure: Which Matters More? | FOREACH",
+      "Diaphragm Pump Suction Resistance vs. Outlet Backpressure: Which Matters More? | Foreach Technology",
     seoDescription:
       "Resistance on both the suction and discharge sides increases the differential-pressure burden on a miniature diaphragm pump, but the failure symptoms differ. This guide uses inlet absolute pressure, outlet backpressure, and flow measurements to distinguish failure to prime, cavitation, and pressure without flow.",
     coverImage: `${SUCTION_DISCHARGE_ARTICLE_ASSET_BASE}/article-cover.webp`,
     coverAlt:
-      "Real-world footage of miniature diaphragm pump suction and discharge testing from the official FOREACH Douyin channel",
+      "Real-world footage of miniature diaphragm pump suction and discharge testing from the official Foreach Douyin channel",
   },
   deck:
     "Pressure loss on either the suction or discharge side increases the differential pressure carried by a miniature diaphragm pump, but there is no universal rule that one side is always more important. The suction side more readily affects initial priming, chamber filling, sensitivity to air leakage, outgassing, and cavitation. The discharge side more often appears as increased backpressure, reduced flow, and deadheading. Diagnose the system by observing inlet absolute pressure, outlet pressure, and flow on the same time axis.",
@@ -629,6 +629,24 @@ export const suctionVsDischargeResistanceDiaphragmPumpEnCopy = {
               prefix: "For more on operating points and pressure curves, see",
               label: "How to Read a Diaphragm Pump Flow-Pressure Curve",
               href: "/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide",
+              suffix: ".",
+            },
+            {
+              prefix: "For 300 mL/min-class liquid circuits, review the ",
+              label: "DPL30 liquid diaphragm pump series",
+              href: "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump",
+              suffix: ".",
+            },
+            {
+              prefix: "For higher-flow liquid circuits, review the ",
+              label: "DPL60 liquid diaphragm pump series",
+              href: "/products/pumps/miniature-diaphragm-pumps/dpl60-liquid-diaphragm-pump",
+              suffix: ".",
+            },
+            {
+              prefix: "When discharge resistance creates a high-backpressure operating point, review the ",
+              label: "DPL30H high-pressure liquid diaphragm pump series",
+              href: "/products/pumps/miniature-diaphragm-pumps/dpl30h-liquid-diaphragm-pump",
               suffix: ".",
             },
           ],

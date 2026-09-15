@@ -162,7 +162,7 @@ const APPLICATION_ES_REPLACEMENTS: ReadonlyArray<readonly [string, string]> = [
   ["重点关注", "con especial atención a "],
   ["重点控制", "controlando "],
   ["重点降低", "reduciendo "],
-  ["由恒永达工程团队协助评估", "para que el equipo de ingeniería de FOREACH evalúe "],
+  ["由恒永达工程团队协助评估", "para que el equipo de ingeniería de Foreach evalúe "],
   ["可提交", "Puede enviar "],
   ["有", "¿Tiene "],
   ["需求？", "necesidades?"],

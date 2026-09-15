@@ -8,12 +8,12 @@ export const diaphragmPumpFlowPressureCurveEnCopy = {
     title:
       "How to Read a Diaphragm Pump Flow-Pressure Curve—and Predict Installed Flow",
     seoTitle:
-      "Diaphragm Pump Flow-Pressure Curves: Operating Point Guide | FOREACH",
+      "Diaphragm Pump Flow-Pressure Curves: Operating Point Guide | Foreach Technology",
     seoDescription:
       "Learn how pump curves, system resistance, inlet vacuum, outlet backpressure, tubing ID, viscosity and test conditions determine the installed flow of a miniature diaphragm pump.",
     coverImage: `${ARTICLE_ASSET_BASE}/article-cover.webp`,
     coverAlt:
-      "FOREACH miniature diaphragm pump being evaluated on a flow and pressure test bench",
+      "Foreach miniature diaphragm pump being evaluated on a flow and pressure test bench",
   },
   deck:
     "A catalogue value such as 300 or 600 mL/min is not a fixed flow rate inside an instrument. The useful engineering question is: at the actual inlet pressure, outlet backpressure, fluid, tubing and supply voltage, where will the pump and the fluidic circuit settle?",
@@ -33,7 +33,7 @@ export const diaphragmPumpFlowPressureCurveEnCopy = {
       type: "figure",
       src: `${ARTICLE_ASSET_BASE}/article-cover.webp`,
       alt:
-        "FOREACH miniature diaphragm pump connected to laboratory flow and pressure instrumentation",
+        "Foreach miniature diaphragm pump connected to laboratory flow and pressure instrumentation",
       width: 1304,
       height: 837,
       caption:
@@ -221,7 +221,7 @@ export const diaphragmPumpFlowPressureCurveEnCopy = {
         {
           type: "notice",
           text:
-            "The calculation illustrates sensitivity; it is not a measured performance claim for any FOREACH pump model.",
+            "The calculation illustrates sensitivity; it is not a measured performance claim for any Foreach pump model.",
         },
       ],
     },
@@ -305,6 +305,24 @@ export const diaphragmPumpFlowPressureCurveEnCopy = {
               href: "/en/resources/technical-articles/dpl60-liquid-diaphragm-pump-selection-guide",
               suffix: " for a higher-flow option.",
             },
+            {
+              prefix: "Review the ",
+              label: "DPL30 300 mL/min liquid diaphragm pump series",
+              href: "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump",
+              suffix: " when the required operating point is in the lower-flow range.",
+            },
+            {
+              prefix: "Review the ",
+              label: "DPL60 600 mL/min liquid diaphragm pump series",
+              href: "/products/pumps/miniature-diaphragm-pumps/dpl60-liquid-diaphragm-pump",
+              suffix: " when the application needs a higher free-flow class.",
+            },
+            {
+              prefix: "For higher-backpressure circuits, review the ",
+              label: "DPL30H 600 kPa high-pressure liquid diaphragm pump series",
+              href: "/products/pumps/miniature-diaphragm-pumps/dpl30h-liquid-diaphragm-pump",
+              suffix: " and verify the target flow on the controlled curve.",
+            },
           ],
         },
       ],
@@ -351,7 +369,7 @@ export const diaphragmPumpFlowPressureCurveEnCopy = {
   cta: {
     title: "Need help locating the real operating point?",
     description:
-      "Share the target flow, inlet and outlet pressure range, fluid and viscosity, tube ID and length, filters, valves, supply method and duty cycle. FOREACH engineers can help narrow the pump and test conditions for your circuit.",
+      "Share the target flow, inlet and outlet pressure range, fluid and viscosity, tube ID and length, filters, valves, supply method and duty cycle. Foreach engineers can help narrow the pump and test conditions for your circuit.",
     contactLabel: "Contact an engineer",
     productsLabel: "View diaphragm pumps",
   },

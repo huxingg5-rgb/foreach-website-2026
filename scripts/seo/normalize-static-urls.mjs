@@ -291,6 +291,18 @@ function injectSeoLinks(html, canonicalUrl, alternates) {
   return html.replace(/<\/head>/i, `${tags}</head>`);
 }
 
+// Keep article exports readable in the correct language before JavaScript runs.
+function normalizeTechnicalArticleLanguage(html, route) {
+  const { locale, baseSegments } = routeLocaleAndBase(route);
+  if (baseSegments[0] !== "resources" || baseSegments[1] !== "technical-articles") {
+    return html;
+  }
+  return html.replace(/<html\b[^>]*>/i, (tag) => {
+    const withoutLang = tag.replace(/\s+lang\s*=\s*(?:"[^"]*"|'[^']*')/i, "");
+    return withoutLang.replace(/>$/, ` lang="${locale}">`);
+  });
+}
+
 async function main() {
   const htmlFiles = await collectHtmlFiles(OUTPUT_ROOT);
   const pages = [];
@@ -319,6 +331,7 @@ async function main() {
     html = normalizeJsonLd(html, routeSet, stats);
     html = normalizeOpenGraphUrl(html, canonicalUrl);
     html = injectSeoLinks(html, canonicalUrl, alternates);
+    html = normalizeTechnicalArticleLanguage(html, page.route);
     await writeFile(page.filePath, html, "utf8");
 
     stats.canonicalLinks += 1;

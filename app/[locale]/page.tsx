@@ -19,7 +19,9 @@
 
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { SITE_NAME } from "@/lib/seo/site-identity";
 
+import HomeStructuredData from "@/components/home/HomeStructuredData";
 import HomePageContent from "@/components/home/HomePageContent";
 import {
   getEnabledLanguages,
@@ -98,13 +100,14 @@ export async function generateMetadata({
   const { locale } = await params;
 
   if (locale !== "en") {
-    return {};
+    return { openGraph: { siteName: SITE_NAME } };
   }
 
   return {
-    title: "FOREACH | Microfluidic Components and Fluidic Solutions",
+    openGraph: { siteName: SITE_NAME },
+    title: "Foreach Technology | Microfluidic Components and Fluidic Solutions",
     description:
-      "FOREACH develops pumps, valves, probes, fittings, tubing, sensors, and control modules for IVD, life sciences, analytical instruments, synthetic biology, and laboratory automation.",
+      "Foreach Technology develops pumps, valves, probes, fittings, tubing, sensors, and control modules for IVD, life sciences, analytical instruments, synthetic biology, and laboratory automation.",
   };
 }
 
@@ -121,5 +124,10 @@ export default async function LocalePage({ params }: LocalePageProps) {
     notFound();
   }
 
-  return <HomePageContent locale={currentLocale} />;
+  return (
+    <>
+      <HomeStructuredData />
+      <HomePageContent locale={currentLocale} />
+    </>
+  );
 }

@@ -74,8 +74,8 @@ export function buildGenericProductImageAlt(productId: string): string {
   const safeProductId = normalizeText(productId);
 
   if (!safeProductId) {
-    return "FOREACH precision fluidic component for liquid handling systems";
+    return "Foreach precision fluidic component for liquid handling systems";
   }
 
-  return `FOREACH ${safeProductId} precision fluidic component for liquid handling systems`;
+  return `Foreach ${safeProductId} precision fluidic component for liquid handling systems`;
 }

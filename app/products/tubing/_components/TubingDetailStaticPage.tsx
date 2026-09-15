@@ -139,12 +139,12 @@ export function getTubingMetadata(slug: string): Metadata {
 
   if (!detail) {
     return {
-      title: "管路系列 | FOREACH",
+      title: "管路系列 | Foreach Technology",
     };
   }
 
   return {
-    title: `${detail.title} | FOREACH 管路系列`,
+    title: `${detail.title} | Foreach Technology 管路系列`,
     description: detail.description,
     ...buildProductSocialMetadata({
       data: detail,

@@ -299,6 +299,7 @@
   margin-bottom: 18px;
   padding: 14px 16px;
   border: 1px solid var(--line);
+  border-radius: 8px;
   background: #ffffff;
   display: flex;
   align-items: center;
@@ -342,12 +343,12 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  border-radius: 999px;
+  border-radius: 6px;
   border: 1px solid rgba(9, 233, 180, 0.28);
   background: rgba(9, 233, 180, 0.11);
   color: var(--brand-blue);
   font-size: 12px;
-  font-weight: 850;
+  font-weight: 400;
   white-space: nowrap;
 }
 
@@ -374,13 +375,13 @@
 .products-selection-page .toolbar-reset {
   min-height: 34px;
   padding: 0 13px;
-  border-radius: 999px;
+  border-radius: 6px;
   border: 1px solid rgba(23, 51, 104, 0.16);
   background: #ffffff;
   color: var(--brand-blue);
   cursor: pointer;
   font-size: 13px;
-  font-weight: 850;
+  font-weight: 400;
   white-space: nowrap;
   transition:
     background 0.2s ease,
@@ -1577,12 +1578,12 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  border-radius: 999px;
+  border-radius: 6px;
   border: 1px solid rgba(9, 233, 180, 0.28);
   background: rgba(9, 233, 180, 0.11);
   color: var(--brand-blue);
   font-size: 12px;
-  font-weight: 850;
+  font-weight: 400;
   white-space: nowrap;
 }
 
@@ -1604,13 +1605,13 @@
 .products-selection-page .toolbar-reset {
   min-height: 34px;
   padding: 0 13px;
-  border-radius: 999px;
+  border-radius: 6px;
   border: 1px solid rgba(23, 51, 104, 0.16);
   background: #ffffff;
   color: var(--brand-blue);
   cursor: pointer;
   font-size: 13px;
-  font-weight: 850;
+  font-weight: 400;
   white-space: nowrap;
   transition:
     background 0.2s ease,
@@ -2596,11 +2597,89 @@
   padding-top: 2px !important;
 }
 
+.products-selection-page .product-type-intro-copy--collapsible {
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.products-selection-page .product-type-intro-copy p[hidden] {
+  display: none !important;
+}
+
+.products-selection-page
+  .product-type-intro-copy--seo-preserved
+  .product-type-intro-paragraph--collapsed {
+  max-height: 0;
+  margin-top: 0 !important;
+  overflow: hidden;
+  opacity: 0;
+  transition:
+    max-height 0.2s ease,
+    margin-top 0.2s ease,
+    opacity 0.16s ease;
+}
+
+.products-selection-page
+  .product-type-intro-copy--seo-preserved.is-expanded
+  .product-type-intro-paragraph--collapsed {
+  max-height: 36rem;
+  margin-top: 10px !important;
+  opacity: 1;
+}
+
+.products-selection-page .product-type-intro-disclosure-row {
+  margin-top: 8px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.products-selection-page
+  .product-type-intro-copy--mobile-collapse-only
+  .product-type-intro-disclosure-row {
+  display: none;
+}
+
+.products-selection-page .product-type-intro-disclosure {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  appearance: none;
+  background: transparent;
+  color: var(--brand-blue);
+  font: inherit;
+  font-weight: 400;
+  line-height: inherit;
+  vertical-align: baseline;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 160ms ease;
+}
+
+.products-selection-page .product-type-intro-disclosure:hover,
+.products-selection-page .product-type-intro-disclosure:focus-visible {
+  color: var(--brand-cyan, #09e9b4);
+}
+
+.products-selection-page .product-type-intro-disclosure:focus-visible {
+  outline: 2px solid var(--brand-cyan, #09e9b4);
+  outline-offset: 3px;
+}
+
+.products-selection-page .product-type-intro-disclosure span {
+  font-size: 1em;
+  line-height: 1;
+}
+
 .products-selection-page .product-type-intro-copy .product-type-intro-heading {
   margin: 0 0 14px !important;
   color: var(--brand-blue) !important;
   font-size: 31px !important;
-  font-weight: 820 !important;
+  font-weight: 700 !important;
   line-height: 1.22 !important;
 }
 
@@ -2608,18 +2687,65 @@
   margin: 0 !important;
   color: #111111 !important;
   font-size: 16.5px !important;
-  font-weight: 460 !important;
-  line-height: 1.95 !important;
+  font-weight: 400 !important;
+  line-height: 1.72 !important;
 }
 
 .products-selection-page .product-type-intro-copy p + p {
-  margin-top: 14px !important;
+  margin-top: 10px !important;
 }
 
 /* 只加粗指定文字，不加粗整段 */
 .products-selection-page .product-type-intro-copy .product-type-intro-emphasis {
   color: #111111 !important;
-  font-weight: 800 !important;
+  font-weight: 600 !important;
+}
+
+.products-selection-page .product-type-intro-copy .product-type-intro-link {
+  color: var(--brand-blue) !important;
+  font-weight: 600 !important;
+  text-decoration: underline !important;
+  text-decoration-thickness: 1px !important;
+  text-underline-offset: 2px !important;
+  transition:
+    color 160ms ease,
+    text-decoration-color 160ms ease !important;
+}
+
+.products-selection-page .product-type-intro-copy .product-type-intro-filter-action {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  appearance: none;
+  background: transparent;
+  font: inherit;
+  line-height: inherit;
+  vertical-align: baseline;
+  cursor: pointer;
+}
+
+.products-selection-page .product-type-intro-copy .product-type-intro-filter-action:focus-visible {
+  outline: 2px solid var(--brand-cyan, #09e9b4);
+  outline-offset: 2px;
+}
+
+.products-selection-page .product-type-intro-copy .product-type-intro-link:hover,
+.products-selection-page .product-type-intro-copy .product-type-intro-link:focus-visible {
+  color: var(--brand-cyan, #09e9b4) !important;
+  text-decoration-color: var(--brand-cyan, #09e9b4) !important;
+}
+
+.products-selection-page
+  .product-type-intro-module[data-product-type-id="diaphragm-pump"]
+  .product-type-intro-link,
+.products-selection-page
+  .product-type-intro-module[data-product-type-id="diaphragm-pumps"]
+  .product-type-intro-link,
+.products-selection-page
+  .product-type-intro-module[data-product-type-id="plunger-pump"]
+  .product-type-intro-link {
+  text-decoration: none !important;
 }
 
 /* HaloFlx 右下角装饰字：背景层，不占空间 */
@@ -2665,7 +2791,11 @@
 
   .products-selection-page .product-type-intro-copy p {
     font-size: 16px !important;
-    line-height: 1.9 !important;
+    line-height: 1.72 !important;
+  }
+
+  .products-selection-page .product-type-intro-copy--collapsible {
+    min-height: 290px;
   }
 
   .products-selection-page .product-type-intro-module::after {
@@ -2699,20 +2829,56 @@
     padding-top: 0 !important;
   }
 
+  .products-selection-page .product-type-intro-copy--collapsible {
+    min-height: 230px;
+  }
+
+  .products-selection-page
+    .product-type-intro-copy--collapsible:not(.is-expanded)
+    .product-type-intro-paragraphs
+    p:nth-child(n + 2) {
+    display: none !important;
+  }
+
+  .products-selection-page
+    .product-type-intro-copy--seo-preserved:not(.is-expanded)
+    .product-type-intro-paragraphs
+    p:nth-child(n + 2) {
+    display: block !important;
+  }
+
+  .products-selection-page
+    .product-type-intro-copy--mobile-collapse-only
+    .product-type-intro-disclosure-row {
+    display: flex;
+  }
+
   .products-selection-page .product-type-intro-copy .product-type-intro-heading {
     font-size: 22px !important;
-    font-weight: 800 !important;
+    font-weight: 700 !important;
   }
 
   .products-selection-page .product-type-intro-copy p {
     font-size: 14px !important;
-    line-height: 1.78 !important;
+    line-height: 1.65 !important;
   }
 
   .products-selection-page .product-type-intro-module::after {
     display: none !important;
   }
 }
+
+/*
+ * 拉丁字母与西里尔字母正文使用更紧凑的行距；
+ * 中文、韩文保留较宽行距，避免高密度字形显得拥挤。
+ */
+.products-selection-page:lang(en) .product-type-intro-copy p,
+.products-selection-page:lang(es) .product-type-intro-copy p,
+.products-selection-page:lang(fr) .product-type-intro-copy p,
+.products-selection-page:lang(ru) .product-type-intro-copy p {
+  line-height: 1.55 !important;
+}
+
 /* 产品中心：取消左侧筛选栏吸顶
    说明：
    1. 左侧筛选栏不再随着页面滚动一直停在顶部
@@ -3044,6 +3210,27 @@
   overflow-wrap: anywhere;
   font-size: 21px;
   line-height: 1.35;
+}
+
+/* 产品卡片语义标题：型号保持粗体主视觉，描述性 H3 使用正文视觉。 */
+.products-selection-page .product-card .product-card-description-heading {
+  margin-bottom: 0;
+  color: #172033;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+@media (max-width: 900px) {
+  .products-selection-page
+    .product-card
+    h3.product-card-description-heading {
+    margin-top: -2px !important;
+    margin-bottom: 0 !important;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    line-height: 1.38 !important;
+  }
 }
 
 /* ===== FOREACH diaphragm product type intro brand word START ===== */

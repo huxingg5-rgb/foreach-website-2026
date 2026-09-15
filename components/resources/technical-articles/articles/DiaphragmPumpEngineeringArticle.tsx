@@ -7,6 +7,7 @@ import {
 import type {
   DiaphragmPumpEngineeringArticleSlug,
   EngineeringArticleBlock,
+  DiaphragmPumpEngineeringArticleCopy,
 } from "@/data/resources/technical-articles/diaphragm-pump-engineering-article.types";
 import type { TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
 import { getLocalizedInternalHref } from "@/lib/seo/site-url";
@@ -58,7 +59,8 @@ function ArticleFigure({
   width,
   height,
   caption,
-}: Extract<EngineeringArticleBlock, { type: "figure" }>) {
+  locale,
+}: Extract<EngineeringArticleBlock, { type: "figure" }> & { locale: TechnicalArticleLocale }) {
   return (
     <figure className={styles.figure}>
       <Image
@@ -69,7 +71,12 @@ function ArticleFigure({
         height={height}
         sizes="(max-width: 760px) 100vw, 900px"
       />
-      <figcaption>{caption}</figcaption>
+      <figcaption>
+        {caption}
+        {src.includes("/pump-application-guides/") || src.includes("/pump-diagnostics/") ? (
+          <> <a href={src} target="_blank" rel="noreferrer">{{ "zh-CN": "查看大图", en: "Open diagram", es: "Abrir diagrama", fr: "Ouvrir le schéma", ko: "도식 크게 보기", ru: "Открыть схему" }[locale]}</a></>
+        ) : null}
+      </figcaption>
     </figure>
   );
 }
@@ -108,7 +115,7 @@ function ArticleBlock({
   }
 
   if (block.type === "figure") {
-    return <ArticleFigure {...block} />;
+    return <ArticleFigure {...block} locale={locale} />;
   }
 
   if (block.type === "subheading") {
@@ -155,7 +162,16 @@ export default function DiaphragmPumpEngineeringArticle({
   locale,
 }: DiaphragmPumpEngineeringArticleProps) {
   const copy = getDiaphragmPumpEngineeringArticleCopy(articleSlug, locale);
+  return <EngineeringArticleContent copy={copy} locale={locale} />;
+}
 
+export function EngineeringArticleContent({
+  copy,
+  locale,
+}: {
+  copy: DiaphragmPumpEngineeringArticleCopy;
+  locale: TechnicalArticleLocale;
+}) {
   return (
     <div className={newsStyles.technicalArticleBody}>
       <section className={newsStyles.contentBlock}>
@@ -177,6 +193,7 @@ export default function DiaphragmPumpEngineeringArticle({
         </section>
       ))}
 
+      {copy.faqItems.length > 0 && (
       <section className={newsStyles.contentBlock}>
         <h2>{copy.faqTitle}</h2>
         <div className={styles.faqList}>
@@ -188,6 +205,7 @@ export default function DiaphragmPumpEngineeringArticle({
           ))}
         </div>
       </section>
+      )}
     </div>
   );
 }

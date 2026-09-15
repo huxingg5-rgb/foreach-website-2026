@@ -18,31 +18,31 @@ const SPANISH_APPLICATION_METADATA: Record<
   SpanishApplicationMetadataConfig
 > = {
   "analytical-instruments": {
-    title: "Soluciones fluídicas para instrumentos analíticos | FOREACH",
+    title: "Soluciones fluídicas para instrumentos analíticos | Foreach Technology",
     description:
       "Bombas, válvulas, sondas, racores, tubos y sensores para introducción de muestras, reactivos, lavado, evacuación y control fluídico en instrumentos analíticos.",
     imageAlt: "Soluciones fluídicas para instrumentos analíticos",
   },
   "environmental-monitoring": {
-    title: "Soluciones fluídicas para monitoreo ambiental | FOREACH",
+    title: "Soluciones fluídicas para monitoreo ambiental | Foreach Technology",
     description:
       "Componentes fluídicos para muestreo de agua, dosificación de reactivos, filtración, lavado, drenaje y funcionamiento continuo en equipos ambientales.",
     imageAlt: "Soluciones fluídicas para equipos de monitoreo ambiental",
   },
   "lab-automation": {
-    title: "Soluciones fluídicas para automatización de laboratorio | FOREACH",
+    title: "Soluciones fluídicas para automatización de laboratorio | Foreach Technology",
     description:
       "Bombas, válvulas, sondas, racores, tubos y sensores para pipeteo, dispensación, lavado, microplacas e integración de sistemas automatizados.",
     imageAlt: "Soluciones fluídicas para automatización de laboratorio",
   },
   "life-science": {
-    title: "Soluciones fluídicas para ciencias de la vida | FOREACH",
+    title: "Soluciones fluídicas para ciencias de la vida | Foreach Technology",
     description:
       "Componentes fluídicos para preparación de muestras, cultivo celular, pipeteo, análisis de proteínas, bioprocesos y automatización en ciencias de la vida.",
     imageAlt: "Soluciones fluídicas para instrumentos de ciencias de la vida",
   },
   "synthetic-biology": {
-    title: "Soluciones fluídicas para biología sintética | FOREACH",
+    title: "Soluciones fluídicas para biología sintética | Foreach Technology",
     description:
       "Bombas, válvulas, sondas, racores, tubos y sensores para alimentación, muestreo, cribado, lavado y control de procesos de biología sintética.",
     imageAlt: "Soluciones fluídicas para sistemas de biología sintética",

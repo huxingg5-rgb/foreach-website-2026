@@ -168,6 +168,7 @@
 }
 
 .installation-guide-tree-group {
+  min-width: 0;
   padding: 7px 0;
   border-bottom: 1px solid var(--installation-guide-soft-line);
 }
@@ -179,7 +180,8 @@
 .installation-guide-tree-parent {
   position: relative;
   width: 100%;
-  height: 40px;
+  min-width: 0;
+  min-height: 54px;
   padding: 0 14px;
   border: 0;
   border-radius: 8px;
@@ -192,12 +194,18 @@
   text-align: left;
   cursor: pointer;
   transition:
-    background 0.18s ease,
-    color 0.18s ease;
+    color 0.18s ease,
+    background-color 0.18s ease;
 }
 
 .installation-guide-tree-parent:hover {
   background: var(--installation-guide-bg-soft);
+}
+
+.installation-guide-tree-parent:focus-visible,
+.installation-guide-tree-child:focus-visible {
+  outline: 2px solid var(--installation-guide-blue);
+  outline-offset: 2px;
 }
 
 .installation-guide-tree-parent.is-active {
@@ -206,25 +214,27 @@
 }
 
 .installation-guide-tree-parent strong {
+  min-width: 0;
   font-size: 15px;
   line-height: 1.2;
   font-weight: 500;
   letter-spacing: -0.02em;
+  overflow-wrap: anywhere;
 }
 
 .installation-guide-tree-parent.is-active strong {
   font-weight: 600;
 }
 
-.installation-guide-tree-parent span {
+.installation-guide-tree-toggle {
   position: relative;
   width: 32px;
   height: 32px;
   justify-self: end;
 }
 
-.installation-guide-tree-parent span::before,
-.installation-guide-tree-parent span::after {
+.installation-guide-tree-toggle::before,
+.installation-guide-tree-toggle::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -234,24 +244,26 @@
   transform: translate(-50%, -50%);
 }
 
-.installation-guide-tree-parent span::before {
-  width: 16px;
+.installation-guide-tree-toggle::before {
+  width: 12px;
   height: 2px;
 }
 
-.installation-guide-tree-parent span::after {
+.installation-guide-tree-toggle::after {
   width: 2px;
-  height: 16px;
+  height: 12px;
 }
 
 .installation-guide-tree-group.is-open
   > .installation-guide-tree-parent
-  span::after {
+  .installation-guide-tree-toggle::after {
   display: none;
 }
 
-.installation-guide-tree-parent.no-children span::before,
-.installation-guide-tree-parent.no-children span::after {
+.installation-guide-tree-parent.no-children
+  .installation-guide-tree-toggle::before,
+.installation-guide-tree-parent.no-children
+  .installation-guide-tree-toggle::after {
   display: none;
 }
 
@@ -271,19 +283,37 @@
 
 .installation-guide-tree-child {
   width: 100%;
-  height: 34px;
-  padding: 0 12px 0 16px;
+  min-width: 0;
+  min-height: 34px;
+  padding: 5px 12px 5px 16px;
   border: 0;
-  border-radius: 8px;
+  border-radius: 6px;
   display: flex;
   align-items: center;
   color: #707b8d;
   background: #ffffff;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
   text-align: left;
   cursor: pointer;
   transition:
     background 0.18s ease,
     color 0.18s ease;
+}
+
+.installation-guide-tree-child-label {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.installation-guide-tree-count {
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
 }
 
 .installation-guide-tree-child + .installation-guide-tree-child {
@@ -298,6 +328,7 @@
 .installation-guide-tree-child.is-active {
   background: var(--installation-guide-blue);
   color: var(--installation-guide-cyan);
+  font-weight: 500;
 }
 
 /* =========================================================
