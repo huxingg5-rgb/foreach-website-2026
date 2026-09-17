@@ -104,8 +104,8 @@ export type TechnicalArticlePagerItem = {
 interface TechnicalArticleDetailProps {
   pageData: TechnicalArticlesPageData;
   article: ClassifiedTechnicalArticleItem;
-  previousArticle?: TechnicalArticlePagerItem | null;
-  nextArticle?: TechnicalArticlePagerItem | null;
+  previousArticle: TechnicalArticlePagerItem | null;
+  nextArticle: TechnicalArticlePagerItem | null;
 }
 
 type SharedComponentProps = Record<string, unknown>;
@@ -840,7 +840,7 @@ export default function TechnicalArticleDetail({
               imageAlt: product.alt,
             }))}
           />
-          <NewsArticlePager locale={locale} previousArticle={previousArticle} nextArticle={nextArticle} />
+          <NewsArticlePager locale={locale} previousArticle={previousArticle} nextArticle={nextArticle} contentType="article" />
         </div>
       </div>
     );
@@ -865,6 +865,7 @@ export default function TechnicalArticleDetail({
 
       <NewsArticleClient
         locale={locale}
+        pagerContentType="article"
         article={adaptedArticle}
         pageData={adaptedPageData}
         previousArticle={previousArticle}

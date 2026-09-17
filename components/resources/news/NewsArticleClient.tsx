@@ -102,6 +102,7 @@ type NewsArticlePageData = {
 
 type NewsArticleClientProps = {
   locale?: "zh-CN" | "en" | "es" | "fr" | "ko" | "ru";
+  pagerContentType?: "news" | "article";
   article: NewsArticle;
   pageData: NewsArticlePageData;
   previousArticle?: NewsPagerItem | null;
@@ -173,14 +174,15 @@ function splitParagraphs(value?: string) {
 
 function getNewsArticleUiText(
   locale: "zh-CN" | "en" | "es" | "fr" | "ko" | "ru",
+  contentType: "news" | "article" = "news",
 ) {
   if (locale === "en") {
     return {
       back: "Back",
       previous: "Previous",
       next: "Next",
-      noPrevious: "No previous news",
-      noNext: "No next news",
+      noPrevious: contentType === "article" ? "No previous article" : "No previous news",
+      noNext: contentType === "article" ? "No next article" : "No next news",
       fallbackContact: "Contact Us",
       fallbackContactHref: "/en/contact",
       listHref: "/en/resources/news",
@@ -192,8 +194,8 @@ function getNewsArticleUiText(
       back: "Volver",
       previous: "Anterior",
       next: "Siguiente",
-      noPrevious: "No hay noticia anterior",
-      noNext: "No hay noticia siguiente",
+      noPrevious: contentType === "article" ? "No hay artículo anterior" : "No hay noticia anterior",
+      noNext: contentType === "article" ? "No hay artículo siguiente" : "No hay noticia siguiente",
       fallbackContact: "Contactar",
       fallbackContactHref: "/es/contact",
       listHref: "/es/resources/news",
@@ -205,8 +207,8 @@ function getNewsArticleUiText(
       back: "Retour",
       previous: "Précédent",
       next: "Suivant",
-      noPrevious: "Aucune actualité précédente",
-      noNext: "Aucune actualité suivante",
+      noPrevious: contentType === "article" ? "Aucun article précédent" : "Aucune actualité précédente",
+      noNext: contentType === "article" ? "Aucun article suivant" : "Aucune actualité suivante",
       fallbackContact: "Nous contacter",
       fallbackContactHref: "/fr/contact",
       listHref: "/fr/resources/news",
@@ -218,8 +220,8 @@ function getNewsArticleUiText(
       back: "돌아가기",
       previous: "이전 글",
       next: "다음 글",
-      noPrevious: "이전 뉴스가 없습니다",
-      noNext: "다음 뉴스가 없습니다",
+      noPrevious: contentType === "article" ? "이전 글이 없습니다" : "이전 뉴스가 없습니다",
+      noNext: contentType === "article" ? "다음 글이 없습니다" : "다음 뉴스가 없습니다",
       fallbackContact: "문의하기",
       fallbackContactHref: "/ko/contact",
       listHref: "/ko/resources/news",
@@ -231,8 +233,8 @@ function getNewsArticleUiText(
       back: "Назад",
       previous: "Предыдущая",
       next: "Следующая",
-      noPrevious: "Предыдущей новости нет",
-      noNext: "Следующей новости нет",
+      noPrevious: contentType === "article" ? "Предыдущей статьи нет" : "Предыдущей новости нет",
+      noNext: contentType === "article" ? "Следующей статьи нет" : "Следующей новости нет",
       fallbackContact: "Связаться",
       fallbackContactHref: "/ru/contact",
       listHref: "/ru/resources/news",
@@ -291,12 +293,13 @@ function NewsPagerCard({
 }
 
 /** Shared article navigation; retains the existing cards, copy and responsive styles. */
-export function NewsArticlePager({ locale, previousArticle, nextArticle }: {
+export function NewsArticlePager({ locale, previousArticle, nextArticle, contentType = "news" }: {
   locale: NonNullable<NewsArticleClientProps["locale"]>;
+  contentType?: "news" | "article";
   previousArticle?: NewsPagerItem | null;
   nextArticle?: NewsPagerItem | null;
 }) {
-  const uiText = getNewsArticleUiText(locale);
+  const uiText = getNewsArticleUiText(locale, contentType);
   return (
     <section className={styles.pagerSection}>
       <div className={styles.container}>
@@ -316,6 +319,7 @@ export function NewsArticlePager({ locale, previousArticle, nextArticle }: {
 
 export default function NewsArticleClient({
   locale,
+  pagerContentType = "news",
   article,
   pageData,
   previousArticle,
@@ -538,7 +542,7 @@ export default function NewsArticleClient({
       {/* =====================================================
           4. 上一篇 / 下一篇
       ====================================================== */}
-      <NewsArticlePager locale={currentLocale} previousArticle={previous} nextArticle={next} />
+      <NewsArticlePager locale={currentLocale} previousArticle={previous} nextArticle={next} contentType={pagerContentType} />
 
       {/* =====================================================
           5. 底部 CTA
