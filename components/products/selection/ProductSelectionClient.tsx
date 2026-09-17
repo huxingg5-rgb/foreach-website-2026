@@ -5151,7 +5151,9 @@ function isFilterOptionActive(
     },
     {
       label: pageText.breadcrumbCurrent,
-      ...(compactSelectionLabel ? { href: "/products/" } : {}),
+      ...(compactSelectionLabel
+        ? { href: locale === "zh" ? "/products/" : `/${locale}/products/` }
+        : {}),
     },
     ...(compactSelectionLabel ? [{ label: compactSelectionLabel }] : []),
   ];
