@@ -79,7 +79,7 @@ console.log("PASS: P4 reviewed copy, unchanged H1/model notice/numeric specs/rou
 
 async function checkHttp() {
   const origin = process.env.VALVELESS_CHECK_ORIGIN || "http://127.0.0.1:3000";
-  const path = "/products/pumps/valveless-pumps/rpl-p4/";
+  const path = "/products/pumps/valveless-metering-pump/rpl-p4/";
   const response = await fetch(`${origin}${path}`, { redirect: "manual" });
   assert.equal(response.status, 200);
   const html = await response.text();

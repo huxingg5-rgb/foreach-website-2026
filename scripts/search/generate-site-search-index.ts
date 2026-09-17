@@ -1,4 +1,5 @@
 import { getPistonPumpRedirect } from "../../lib/seo/piston-pump-migration";
+import { getValvelessPumpPath } from "../../data/products/selection/valveless-pump-routes";
 import valvelessDetails from "../../data/products/generated/pumps/valveless-pumps/detail/index.json";
 import { applyValvelessPumpChineseCopy } from "../../data/products/detail/valveless-pump-copy.zh";
 import { getValvelessPumpSeoTitle } from "../../data/products/detail/valveless-pump-seo";
@@ -763,7 +764,7 @@ export const siteSearchIndex =
 // generic directory scan. Unknown retired model routes must not enter search.
 function normalizeValvelessSearchItem(item: SiteSearchItem): SiteSearchItem[] {
   if (item.module !== "products") return [item];
-  const slug = /^\/products\/pumps\/valveless-pumps\/([^/]+)\/?$/.exec(item.href)?.[1];
+  const slug = /^\/products\/pumps\/(?:valveless-pumps|valveless-metering-pump)\/([^/]+)\/?$/.exec(item.href)?.[1];
   if (!slug) return [item];
   const source = valvelessDetails.find(detail => detail.slug === slug);
   if (!source) return [];
@@ -772,7 +773,7 @@ function normalizeValvelessSearchItem(item: SiteSearchItem): SiteSearchItem[] {
   return [{ ...item, id: `product:${source.productId}`, model,
     title: getValvelessPumpSeoTitle(slug, "zh")!.split("｜")[0],
     subtitle: model, description: data.description, image: data.mainImage,
-    href: source.detailHref,
+    href: getValvelessPumpPath("zh", slug).replace(/\/$/, ""),
     keywords: [model, "无阀计量泵", "valveless metering pump", ...data.commonApplications],
   }];
 }
@@ -859,5 +860,4 @@ async function main() {
 }
 
 main();
-
 

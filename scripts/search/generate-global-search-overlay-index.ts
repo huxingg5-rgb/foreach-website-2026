@@ -446,7 +446,7 @@ function loadProductAndCompatibleItems(
     if (!sourceTitle || !href) return [];
 
     const copy = getModuleCopy(locale, searchModule);
-    const valvelessSlug = /^\/products\/pumps\/valveless-pumps\/([^/]+)\/?$/.exec(href)?.[1];
+    const valvelessSlug = /^\/products\/pumps\/valveless-metering-pump\/([^/]+)\/?$/.exec(href)?.[1];
     const valveless = !isChinese && valvelessSlug ? getValvelessForeignContent(valvelessSlug, locale) : undefined;
     if (valveless) {
       const title = `${valveless.model} ${getValvelessLocaleCopy(locale).categoryName}`;

@@ -22,6 +22,9 @@ export function applyValvelessPumpLocalizedCopy<T extends { slug?: string; produ
     breadcrumbLabel: content.model,
     breadcrumbParentLabel: copy.categoryName,
     breadcrumbParentHref: getValvelessPumpPath(locale),
+    detailHref: getValvelessPumpPath(locale, data.slug),
+    href: getValvelessPumpPath(locale, data.slug),
+    selectionHref: getValvelessPumpPath(locale),
     imageAlt: content.imageAlt, mainImageAlt: content.imageAlt, imageAltEn: content.imageAlt,
     valvelessPresentation: content.presentation,
     // Both models are covered by the approved English series specification.

@@ -49,8 +49,8 @@ async function check() {
         const languageCode = staticOutput && language === "en-US" ? "en" : language;
         assert.ok(new RegExp(`<link[^>]+(?:hrefLang|hreflang)="${languageCode}"[^>]+href="https://www.foreachtek.com${target}"`).test(html), `${path}: ${language}`);
       }
-      // Only exact obsolete category anchors are forbidden; detail and asset parents remain valid.
-      assert.doesNotMatch(html, /href="(?:https:\/\/www\.foreachtek\.com)?(?:\/(?:en|es|fr|ko|ru))?\/products\/pumps\/valveless-pumps\/?(?:[?#][^"]*)?"/, `Old category anchor: ${path}`);
+      // Both category and model anchors must be canonical; asset URLs stay unchanged.
+      assert.doesNotMatch(html, /href="(?:https:\/\/www\.foreachtek\.com)?(?:\/(?:en|es|fr|ko|ru))?\/products\/pumps\/valveless-pumps(?:\/|[?"#])/, `Old page anchor: ${path}`);
       if (slug) assert.ok(html.includes(`href="${categoryPath}"`), `Category breadcrumb/navigation: ${path}`);
       if (!slug) {
         const description = meta(html, "description");
@@ -117,13 +117,13 @@ async function check() {
         if (entry.isDirectory()) checkAllLinks(file);
         else if (entry.name.endsWith(".html")) {
           htmlCount++;
-          assert.doesNotMatch(readFileSync(file, "utf8"), /href="(?:https:\/\/www\.foreachtek\.com)?(?:\/(?:en|es|fr|ko|ru))?\/products\/pumps\/valveless-pumps\/?(?:[?#][^"]*)?"/, `Retired category link in export: ${file}`);
+          assert.doesNotMatch(readFileSync(file, "utf8"), /href="(?:https:\/\/www\.foreachtek\.com)?(?:\/(?:en|es|fr|ko|ru))?\/products\/pumps\/valveless-pumps(?:\/|[?"#])/, `Retired page link in export: ${file}`);
         }
       }
     }
     checkAllLinks("out");
-    console.log(`PASS: Sitemap and ${htmlCount} exported HTML files contain no obsolete valveless category links.`);
+    console.log(`PASS: Sitemap and ${htmlCount} exported HTML files contain no obsolete valveless category/model links.`);
   }
-  console.log(`PASS: ${pages} product pages and 17 resource/cooperation pages; preserved detail addresses and custom-product notices.`);
+  console.log(`PASS: ${pages} product pages and 17 resource/cooperation pages; migrated detail addresses and preserved custom-product notices.`);
 }
 check().catch(error => { console.error(error); process.exitCode = 1; });

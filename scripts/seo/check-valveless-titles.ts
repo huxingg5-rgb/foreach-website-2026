@@ -30,7 +30,7 @@ async function check() {
   for (const locale of locales) {
     const prefix = locale === "zh" ? "" : `/${locale}`;
     const category = `${prefix}/products/pumps/valveless-metering-pump/`;
-    const routes = [category, ...valvelessPumpSelectionProducts.map(item => `${prefix}/products/pumps/valveless-pumps/${item.detailSlug}/`)];
+    const routes = [category, ...valvelessPumpSelectionProducts.map(item => `${prefix}/products/pumps/valveless-metering-pump/${item.detailSlug}/`)];
     for (const route of routes) {
       const response = await fetch(origin + route, { headers: { "user-agent": "Bingbot" } });
       assert.equal(response.status, 200, route);

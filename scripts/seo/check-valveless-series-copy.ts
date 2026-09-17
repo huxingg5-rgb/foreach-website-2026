@@ -51,7 +51,7 @@ async function checkHttp() {
   const origin = process.env.VALVELESS_CHECK_ORIGIN || "http://127.0.0.1:3000";
   for (const original of details) {
     const copy = getValvelessPumpChineseContent(original.slug)!;
-    const route = `/products/pumps/valveless-pumps/${original.slug}/`;
+    const route = `/products/pumps/valveless-metering-pump/${original.slug}/`;
     const response = await fetch(origin + route);
     assert.equal(response.status, 200);
     const html = await response.text();

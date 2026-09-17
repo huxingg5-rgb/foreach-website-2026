@@ -2,6 +2,7 @@
 
 import { normalizePistonPumpPublicName } from "@/data/products/piston-pump-public-name";
 import {
+  getValvelessPumpPath,
   localizeValvelessPumpCategoryPath,
   VALVELESS_PUMP_CATEGORY_LABEL_ZH,
 } from "@/data/products/selection/valveless-pump-routes";
@@ -2836,9 +2837,7 @@ function makeDetailHref(product: ProductSelectionProduct) {
       .filter(Boolean)
       .pop();
 
-    return slug
-      ? `/products/pumps/valveless-pumps/${slug}`
-      : "/products/pumps/valveless-pumps";
+    return getValvelessPumpPath("zh", slug);
   }
 
   if (isSyringePump) {

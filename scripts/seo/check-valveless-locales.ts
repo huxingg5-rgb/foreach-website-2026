@@ -70,12 +70,12 @@ async function checkHttp() {
   for (const locale of ["zh", ...valvelessForeignLocales]) {
     const prefix = locale === "zh" ? "" : `/${locale}`;
     for (const slug of ["category", ...details.map(item=>item.slug)]) {
-      const path = slug === "category" ? `${prefix}/products/pumps/valveless-metering-pump/` : `${prefix}/products/pumps/valveless-pumps/${slug}/`;
+      const path = slug === "category" ? `${prefix}/products/pumps/valveless-metering-pump/` : `${prefix}/products/pumps/valveless-metering-pump/${slug}/`;
       const res = await fetch(origin + path, {headers: {"user-agent":"Bingbot"}});
       assert.equal(res.status,200,path);
       const html = await res.text();
       const body = main(html), text = clean(body);
-      const old = baseline.get(slug === "category" && locale !== "zh" ? `${prefix}/products/pumps/valveless-pumps/` : path)!;
+      const old = baseline.get(slug === "category" ? (locale !== "zh" ? `${prefix}/products/pumps/valveless-pumps/` : path) : `${prefix}/products/pumps/valveless-pumps/${slug}/`)!;
       assert.ok(old, `Baseline ${path}`);
       assert.ok(links(html).some(link => link.includes(`rel="canonical" href="https://www.foreachtek.com${path}"`)), `Canonical ${path}`);
       for (const [language, href] of Object.entries(getValvelessPumpLanguageAlternates(slug === "category" ? undefined : slug))) {

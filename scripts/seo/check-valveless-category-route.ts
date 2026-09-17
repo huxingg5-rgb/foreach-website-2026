@@ -58,8 +58,8 @@ for (const locale of locales) {
   assert.equal(getLocalizedSiteHref(`/${locale}${oldPath}`, "zh-CN"), newPath);
   for (const model of models) {
     const path = `${oldPath}${model}/`;
-    assert.equal(getLocalizedSiteHref(path, "zh-CN"), path);
-    assert.equal(getLocalizedSiteHref(path, locale), `/${locale}${path}`);
+    assert.equal(getLocalizedSiteHref(path, "zh-CN"), `${newPath}${model}/`);
+    assert.equal(getLocalizedSiteHref(path, locale), `/${locale}${newPath}${model}/`);
   }
 }
 
@@ -75,7 +75,7 @@ const searchIndex = JSON.parse(readFileSync("public/search-data/global-search-in
 assert.ok(searchIndex.some((item) => item.h.replace(/\/$/, "") === newPath.slice(0, -1) && item.t === VALVELESS_PUMP_CATEGORY_LABEL_ZH));
 assert.ok(!searchIndex.some((item) => item.h.replace(/\/$/, "") === oldPath.slice(0, -1)));
 
-console.log("PASS: Six-language category routes, locale links, unchanged model URLs, breadcrumbs, navigation and search index.");
+console.log("PASS: Six-language category routes, locale links, migrated model URLs, breadcrumbs, navigation and search index.");
 
 async function checkHttp() {
   const origin = process.env.VALVELESS_CHECK_ORIGIN || "http://127.0.0.1:3000";
@@ -102,7 +102,11 @@ async function checkHttp() {
   assert.ok(html.includes(`<span class="filter-check"></span><span>${VALVELESS_PUMP_CATEGORY_LABEL_ZH}</span>`), "Product-type filter label");
   assert.ok(html.includes(`<span class="selected-tag">${VALVELESS_PUMP_CATEGORY_LABEL_ZH}</span>`), "Selected category tag");
   assert.ok(!html.includes(`href="${oldPath}"`));
-  for (const paragraph of valvelessPumpIntroZh.category.paragraphs) assert.ok(html.includes(paragraph));
+  const visibleText = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, "").replace(/<[^>]+>/g, "").replace(/&amp;/g, "&");
+  for (const paragraph of valvelessPumpIntroZh.category.paragraphs) {
+    const paragraphText = paragraph.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1");
+    assert.ok(visibleText.includes(paragraphText), `Category paragraph: ${paragraphText}`);
+  }
   for (const series of seriesLabels) assert.ok(html.includes(`<span>${series.label}</span>`), `Series filter: ${series.label}`);
   const cardHtml = html.match(/<article\b[^>]*data-product-type-id="valveless-pump"[^>]*>[\s\S]*?<\/article>/g) || [];
   assert.equal(cardHtml.length, 5);
@@ -110,7 +114,7 @@ async function checkHttp() {
     assert.ok(cardHtml[index].includes(`<p class="product-title">${product.cardTitle.zh}</p>`), `Model heading: ${product.detailSlug}`);
     assert.ok(cardHtml[index].includes(`<h3 class="product-card-summary product-card-description-heading">${product.cardSubtitle.zh}</h3>`), `Card H3: ${product.detailSlug}`);
   }
-  const detailPaths = [...new Set([...html.matchAll(/href="(\/products\/pumps\/valveless-pumps\/[^"?#]+)"/g)].map((match) => match[1]))];
+  const detailPaths = [...new Set([...html.matchAll(/href="(\/products\/pumps\/valveless-metering-pump\/[^"?#]+)"/g)].map((match) => match[1]))];
   assert.equal(detailPaths.length, 5);
   for (const path of detailPaths) {
     const detail = await fetch(`${origin}${path.endsWith("/") ? path : `${path}/`}`, { redirect: "manual" });
@@ -132,7 +136,7 @@ async function checkHttp() {
     assert.ok(foreignHtml.includes(`hrefLang="zh-CN" href="https://www.foreachtek.com${newPath}"`), `Chinese hreflang: ${locale}`);
     await assertUnavailable(`/${locale}${oldPath}`);
   }
-  console.log("PASS: Local category, canonical/hreflang, series labels, five card H3/detail H1 pairs, unchanged routes and unavailable obsolete routes.");
+  console.log("PASS: Local category, canonical/hreflang, series labels, five card H3/detail H1 pairs, migrated model routes and unavailable obsolete categories.");
 }
 
 if (process.argv.includes("--http")) checkHttp().catch((error) => { console.error(error); process.exitCode = 1; });

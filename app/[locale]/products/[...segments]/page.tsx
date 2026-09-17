@@ -54,7 +54,7 @@ import DiaphragmPumpDetailPage, {
 import PipettingPumpDetailPage from "@/app/products/pumps/pipetting-pumps/[slug]/page";
 import PlungerPumpDetailPage from "@/app/products/pumps/piston-pump/[slug]/page";
 import SyringePumpDetailPage from "@/app/products/pumps/syringe-pumps/[slug]/page";
-import ValvelessPumpDetailPage from "@/app/products/pumps/valveless-pumps/[slug]/page";
+import ValvelessPumpDetailPage from "@/app/products/pumps/valveless-metering-pump/[slug]/page";
 import { getValvelessPumpSeoTitle } from "@/data/products/detail/valveless-pump-seo";
 import { getValvelessForeignContent, getValvelessLocaleCopy } from "@/data/products/detail/valveless-pump-locales";
 import { getValvelessPumpLanguageAlternates, VALVELESS_PUMP_CATEGORY_SLUG_INTL, VALVELESS_PUMP_LEGACY_CATEGORY_SLUG } from "@/data/products/selection/valveless-pump-routes";
@@ -164,8 +164,8 @@ const INTERNATIONAL_PRODUCT_LOCALES: LocaleCode[] = ["en", "es", "fr", "ko", "ru
 
 function getProductRoutesForLocale(_locale: LocaleCode | string) {
   return migrateDiaphragmPumpRouteSegments(allEnglishProductDetailRoutes)
-    .map(segments => segments.length === 2 && segments[0] === "pumps" && segments[1] === VALVELESS_PUMP_LEGACY_CATEGORY_SLUG
-      ? ["pumps", VALVELESS_PUMP_CATEGORY_SLUG_INTL] : segments)
+    .map(segments => segments[0] === "pumps" && segments[1] === VALVELESS_PUMP_LEGACY_CATEGORY_SLUG
+      ? ["pumps", VALVELESS_PUMP_CATEGORY_SLUG_INTL, ...segments.slice(2)] : segments)
     .filter(segments => !getPistonPumpRedirect(`/products/${segments.join("/")}/`));
 }
 
@@ -327,7 +327,7 @@ export async function generateMetadata({
     ? getCompactPumpContent(segments[2], "en") : undefined;
   const isValvelessRoute = segments[0] === "pumps" && (
     (segments.length === 2 && segments[1] === VALVELESS_PUMP_CATEGORY_SLUG_INTL) ||
-    (segments.length === 3 && segments[1] === VALVELESS_PUMP_LEGACY_CATEGORY_SLUG)
+    (segments.length === 3 && segments[1] === VALVELESS_PUMP_CATEGORY_SLUG_INTL)
   );
   const valvelessContent = isValvelessRoute && segments.length === 3 ? getValvelessForeignContent(segments[2], locale) : undefined;
   const valvelessCategory = isValvelessRoute && segments.length === 2 ? getValvelessLocaleCopy(locale) : undefined;
@@ -528,7 +528,7 @@ export default async function ProductLocaleRoutePage({
       return SyringePumpDetailPage({ params: detailParams });
     }
 
-    if (slug === "valveless-pumps") {
+    if (slug === VALVELESS_PUMP_CATEGORY_SLUG_INTL) {
       return ValvelessPumpDetailPage({ params: detailParams, renderLocale: locale });
     }
   }

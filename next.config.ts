@@ -1,4 +1,5 @@
 import { getPistonPumpRedirectEntries } from "./lib/seo/piston-pump-migration";
+import { getValvelessPumpRedirectEntries } from "./lib/seo/valveless-pump-migration";
 /* =========================================================
    next.config.ts
    恒永达官网｜Vercel、本地与 Cloudflare 双模式配置
@@ -45,7 +46,7 @@ const nextConfig: NextConfig = {
   ...(!isCloudflarePagesBuild
     ? {
         async redirects() {
-          return getPistonPumpRedirectEntries();
+          return [...getPistonPumpRedirectEntries(), ...getValvelessPumpRedirectEntries()];
         },
       }
     : {}),

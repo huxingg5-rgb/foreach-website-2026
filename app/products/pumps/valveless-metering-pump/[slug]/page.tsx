@@ -120,10 +120,9 @@ function toClientData(detail: ValvelessPumpDetail) {
 
     faqs,
 
-    detailHref:
-      detail.detailHref || `/products/pumps/valveless-pumps/${detail.slug}`,
-    href: detail.href || `/products/pumps/valveless-pumps/${detail.slug}`,
-    selectionHref: detail.selectionHref || "/products/pumps/valveless-pumps",
+    detailHref: getValvelessPumpPath("zh", detail.slug),
+    href: getValvelessPumpPath("zh", detail.slug),
+    selectionHref: getValvelessPumpPath("zh"),
 
     modelDisplay: detail.modelDisplay || "定制配置请联系我们",
     displayModel: detail.displayModel || "定制配置请联系我们",
