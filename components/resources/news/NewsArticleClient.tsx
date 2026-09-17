@@ -290,6 +290,25 @@ function NewsPagerCard({
   );
 }
 
+/** Shared article navigation; retains the existing cards, copy and responsive styles. */
+export function NewsArticlePager({ locale, previousArticle, nextArticle }: {
+  locale: NonNullable<NewsArticleClientProps["locale"]>;
+  previousArticle?: NewsPagerItem | null;
+  nextArticle?: NewsPagerItem | null;
+}) {
+  const uiText = getNewsArticleUiText(locale);
+  return (
+    <section className={styles.pagerSection}>
+      <div className={styles.container}>
+        <div className={styles.pagerGrid}>
+          <NewsPagerCard label={uiText.previous} emptyText={uiText.noPrevious} item={previousArticle} align="prev" />
+          <NewsPagerCard label={uiText.next} emptyText={uiText.noNext} item={nextArticle} align="next" />
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* =========================================================
    NewsArticleClient
    新闻详情页主体组件
@@ -519,25 +538,7 @@ export default function NewsArticleClient({
       {/* =====================================================
           4. 上一篇 / 下一篇
       ====================================================== */}
-      <section className={styles.pagerSection}>
-        <div className={styles.container}>
-          <div className={styles.pagerGrid}>
-            <NewsPagerCard
-              label={uiText.previous}
-              emptyText={uiText.noPrevious}
-              item={previous}
-              align="prev"
-            />
-
-            <NewsPagerCard
-              label={uiText.next}
-              emptyText={uiText.noNext}
-              item={next}
-              align="next"
-            />
-          </div>
-        </div>
-      </section>
+      <NewsArticlePager locale={currentLocale} previousArticle={previous} nextArticle={next} />
 
       {/* =====================================================
           5. 底部 CTA

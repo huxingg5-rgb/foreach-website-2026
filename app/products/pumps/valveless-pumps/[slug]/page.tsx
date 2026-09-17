@@ -1,13 +1,19 @@
+import { applyValvelessPumpChineseCopy } from "@/data/products/detail/valveless-pump-copy.zh";
+import { applyValvelessPumpLocalizedCopy } from "@/data/products/detail/valveless-pump-localized-adapter";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
+import RelatedResources from "@/components/common/related-resources/RelatedResources";
+import { getRplSelectionGuide, rplSelectionModelSlugs, rplSelectionRelationKeys } from "@/data/resources/technical-articles/rpl-selection-links";
 import details from "@/data/products/generated/pumps/valveless-pumps/detail/index.json";
 import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
+import { getValvelessPumpPath, getValvelessPumpLanguageAlternates } from "@/data/products/selection/valveless-pump-routes";
 
 type ValvelessPumpDetail = (typeof details)[number];
 
 type ValvelessPumpDetailPageProps = {
+  renderLocale?: string;
   params: Promise<{
     slug: string;
   }>;
@@ -35,14 +41,22 @@ export async function generateMetadata({
     return {};
   }
 
+  // Metadata and body share the reviewed model-specific Chinese copy.
+  const metadataDetail = applyValvelessPumpChineseCopy(detail, "zh");
+  const title = metadataDetail.seo?.title || `${metadataDetail.title} | Foreach Technology`;
+  const description = metadataDetail.seo?.description || metadataDetail.description || metadataDetail.title;
   return {
-    title: detail.seo?.title || `${detail.title} | Foreach Technology`,
-    description: detail.seo?.description || detail.description || detail.title,
+    title,
+    description,
+    alternates: {
+      canonical: getValvelessPumpPath("zh", slug),
+      languages: getValvelessPumpLanguageAlternates(slug),
+    },
     ...buildProductSocialMetadata({
-      data: detail,
-      title: detail.seo?.title || `${detail.title} | Foreach Technology`,
-      description: detail.seo?.description || detail.description || detail.title,
-      canonicalUrl: `/products/pumps/valveless-pumps/${slug}/`,
+      data: metadataDetail,
+      title,
+      description,
+      canonicalUrl: getValvelessPumpPath("zh", slug),
     }),
   };
 }
@@ -156,6 +170,7 @@ function toClientData(detail: ValvelessPumpDetail) {
 
 export default async function ValvelessPumpDetailPage({
   params,
+  renderLocale = "zh",
 }: ValvelessPumpDetailPageProps) {
   const { slug } = await params;
   const detail = getDetailBySlug(slug);
@@ -164,5 +179,20 @@ export default async function ValvelessPumpDetailPage({
     notFound();
   }
 
-  return <ProductDetailClient data={toClientData(detail) as any} />;
+  const data = renderLocale === "zh"
+    ? applyValvelessPumpChineseCopy(toClientData(detail), "zh")
+    : applyValvelessPumpLocalizedCopy(toClientData(detail), renderLocale);
+  return (
+    <ProductDetailClient
+      data={data as any}
+      afterContent={rplSelectionModelSlugs.includes(slug) ? (
+        <RelatedResources
+          sourceType="product"
+          sourceSlug={slug}
+          relationKeys={rplSelectionRelationKeys}
+          locale={getRplSelectionGuide(renderLocale).locale}
+        />
+      ) : undefined}
+    />
+  );
 }

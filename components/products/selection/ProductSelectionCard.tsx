@@ -1,5 +1,6 @@
 "use client";
 
+import { instrumentCardsZh } from "@/data/products/selection/instrument-fluidics-copy.zh";
 import { usePathname } from "next/navigation";
 
 import type { ProductSelectionProductItem } from "./product-selection-ui.types";
@@ -179,6 +180,15 @@ function localizeCardDetailHref(
 }
 
 
+export function getProductSelectionCardName(
+  product: ProductSelectionProductItem,
+  locale: SelectionLocale,
+  title: string,
+) {
+  const authoredCard = locale === "zh" ? instrumentCardsZh[String(product.detailSlug || product.slug || "")] : undefined;
+  return authoredCard?.model || toDisplayText(title) || product.productId;
+}
+
 export default function ProductSelectionCard({
   product,
   title,
@@ -197,7 +207,8 @@ export default function ProductSelectionCard({
   const pathname = usePathname();
   const locale = getLocaleFromPathname(pathname);
   const cardText = CARD_TEXT[locale];
-  const safeTitle = toDisplayText(title) || product.productId;
+  const authoredCard = locale === "zh" ? instrumentCardsZh[String(product.detailSlug || product.slug || "")] : undefined;
+  const safeTitle = getProductSelectionCardName(product, locale, title);
   const isDiaphragmPumpCard =
     product.productTypeId === "diaphragm-pump" ||
     product.productTypeSlug === "diaphragm-pumps";
@@ -216,9 +227,9 @@ export default function ProductSelectionCard({
     .map((spec) => toDisplayText(spec))
     .filter(Boolean);
   const plungerCardHeading = getProductCardHeading(product, locale);
-  const descriptionHeading = isDiaphragmPumpCard
+  const descriptionHeading = authoredCard?.heading || ((isDiaphragmPumpCard || product.productTypeId === "valveless-pump")
     ? safeSubtitle
-    : plungerCardHeading;
+    : plungerCardHeading);
   const usesDescriptionHeading = Boolean(descriptionHeading);
 
   return (

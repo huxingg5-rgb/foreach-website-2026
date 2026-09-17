@@ -1,0 +1,25 @@
+export type ValvelessForeignLocale = "en" | "es" | "fr" | "ko" | "ru";
+export type ValvelessScenario = "reagent" | "titration" | "smallfill" | "midfill" | "largefill" | "buffer" | "continuous" | "dilution" | "preparation" | "batch";
+export type ValvelessLocaleCopy = {
+  categoryName: string; singleName: string; dualName: string;
+  category: { title: string; metaDescription: string; paragraphs: string[] };
+  single: { title: string; paragraphs: string[] };
+  dual: { title: string; paragraphs: string[] };
+  materials: { pvdf: string; alumina: string; zirconia: string };
+  cards: { p4: string; p635: string; p15: string; dual: string };
+  descriptions: { p4: string; p635: string; p15: string; dual: string };
+  intros: { p4: string; p635: string; p15: string; dual: string };
+  reagentSetup: { p4: string; p635: string };
+  applications: Record<ValvelessScenario, { title: string; paragraphs: string[] }>;
+  faqSingle: { question: string; answer: string }[];
+  faqDual: { question: string; answer: string }[];
+  materialDetails: { p4: string; p635: string; p15: string };
+  seoSingle: string; seoDual: string;
+  selectionSingle: string; selectionDual: string;
+  specs: Record<string, string>;
+  customConfiguration: string; metalFitting: string;
+  applicationsTab: string; applicationsTitle: string; selectionTitle: string;
+  ctaTitle: string; ctaButton: string;
+  drawingUnavailable: string; modelUnavailable: string;
+  specNotesSingle: string[]; specNotesDual: string[];
+};

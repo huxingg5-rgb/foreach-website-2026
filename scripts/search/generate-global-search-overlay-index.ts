@@ -1,4 +1,6 @@
 import { getPumpSeriesProductDetailAdapter } from "../../services/products/adapters/getPumpSeriesProductDetailAdapter";
+import { getValvelessForeignContent, getValvelessLocaleCopy } from "../../data/products/detail/valveless-pump-locales";
+import { getDatasheetsStaticPageData } from "../../data/resources/datasheets.i18n";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -444,6 +446,16 @@ function loadProductAndCompatibleItems(
     if (!sourceTitle || !href) return [];
 
     const copy = getModuleCopy(locale, searchModule);
+    const valvelessSlug = /^\/products\/pumps\/valveless-pumps\/([^/]+)\/?$/.exec(href)?.[1];
+    const valveless = !isChinese && valvelessSlug ? getValvelessForeignContent(valvelessSlug, locale) : undefined;
+    if (valveless) {
+      const title = `${valveless.model} ${getValvelessLocaleCopy(locale).categoryName}`;
+      const description = shorten(valveless.cardSummary, 180);
+      const keywords = buildSearchText([valveless.model, valveless.cardSummary, ...valveless.commonApplications]);
+      return [{ m: searchModule, t: title, s: valveless.model, d: description, h: href,
+        i: cleanImage(valveless.source.mainImage),
+        x: buildSearchText([title, description, keywords, href]), k: keywords, a: copy.action }];
+    }
     const pistonSlug = /^\/products\/pumps\/piston-pump\/((?:ea|sm|tm)-\d+-(?:pmma|peek))\/?$/.exec(href)?.[1];
     const piston = pistonSlug ? getPumpSeriesProductDetailAdapter(pistonSlug, isChinese ? "zh" : locale) : null;
     if (piston) {
@@ -509,9 +521,12 @@ function loadProductAndCompatibleItems(
 }
 
 function loadDatasheets(locale: SearchLocale): CompactSearchItem[] {
-  const items = locale === "zh-CN"
+  const sourceItems = locale === "zh-CN"
     ? datasheetZhItems
     : datasheetEnItems;
+  // Scope this localization repair to the RPL resource; keep unrelated results unchanged.
+  const localizedRpl = getDatasheetsStaticPageData(locale).datasheetItems.find(item => item.id.includes("valveless-pump"));
+  const items = sourceItems.map(item => item.id.includes("valveless-pump") && localizedRpl ? localizedRpl : item);
   const copy = getModuleCopy(locale, "datasheets");
 
   return items.flatMap((item) => {

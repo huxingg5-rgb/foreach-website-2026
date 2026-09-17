@@ -1,4 +1,7 @@
 import { getPistonPumpRedirect } from "../../lib/seo/piston-pump-migration";
+import valvelessDetails from "../../data/products/generated/pumps/valveless-pumps/detail/index.json";
+import { applyValvelessPumpChineseCopy } from "../../data/products/detail/valveless-pump-copy.zh";
+import { getValvelessPumpSeoTitle } from "../../data/products/detail/valveless-pump-seo";
 ﻿import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
@@ -755,6 +758,25 @@ export const siteSearchIndex =
   JSON.parse(siteSearchIndexJson) as SiteSearchItem[];
 `;
 }
+
+// Reuse the detail adapter instead of indexing legacy copies found during the
+// generic directory scan. Unknown retired model routes must not enter search.
+function normalizeValvelessSearchItem(item: SiteSearchItem): SiteSearchItem[] {
+  if (item.module !== "products") return [item];
+  const slug = /^\/products\/pumps\/valveless-pumps\/([^/]+)\/?$/.exec(item.href)?.[1];
+  if (!slug) return [item];
+  const source = valvelessDetails.find(detail => detail.slug === slug);
+  if (!source) return [];
+  const data = applyValvelessPumpChineseCopy(source, "zh");
+  const model = source.productCode.replace(/^(DRPL-\d{4})-\d+$/, "$1");
+  return [{ ...item, id: `product:${source.productId}`, model,
+    title: getValvelessPumpSeoTitle(slug, "zh")!.split("｜")[0],
+    subtitle: model, description: data.description, image: data.mainImage,
+    href: source.detailHref,
+    keywords: [model, "无阀计量泵", "valveless metering pump", ...data.commonApplications],
+  }];
+}
+
 async function main() {
   const [
     productItems,
@@ -770,7 +792,7 @@ async function main() {
     ...productItems,
     ...compatibleItems,
     ...datasheetItems,
-  ].map(item => ({ ...item, href: getPistonPumpRedirect(item.href) || item.href })));
+  ].map(item => ({ ...item, href: getPistonPumpRedirect(item.href) || item.href })).flatMap(normalizeValvelessSearchItem));
   const invalidProductImages = finalItems.filter((item) => {
     if (item.module !== "products" || !item.image) {
       return item.module === "products";
@@ -837,6 +859,5 @@ async function main() {
 }
 
 main();
-
 
 

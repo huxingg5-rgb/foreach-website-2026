@@ -12,15 +12,16 @@ import type {
   ProductSelectionFilterLabel,
   ProductSelectionProduct,
 } from "./product-selection.types";
+import { getValvelessForeignContent, valvelessForeignLocales } from "../detail/valveless-pump-locales";
 
-export const valvelessPumpSelectionProducts: ProductSelectionProduct[] = [
+const baseValvelessPumpSelectionProducts: ProductSelectionProduct[] = [
   {
     productId: "pump-rpl-p4-valveless",
     categoryId: "pumps",
     productTypeId: "valveless-pump",
     seriesId: "rpl-p4",
     cardTitle: {
-      zh: "RPL-P4 小量程无阀泵",
+      zh: "RPL-P4",
       en: "RPL-P4 Small-Volume Valveless Pump",
       es: "RPL-P4 bomba sin válvulas de pequeño volumen",
       fr: "RPL-P4 pompe sans valve petit volume",
@@ -28,7 +29,7 @@ export const valvelessPumpSelectionProducts: ProductSelectionProduct[] = [
       ru: "RPL-P4 бесклапанный насос малого объема",
     },
     cardSubtitle: {
-      zh: "12–80 μL/rev 小量程输送\n适用于微量加样、滴定场景\n支持定制排量与接口配置",
+      zh: "单头陶瓷柱塞无阀计量泵，单圈排量 12–80 μL/rev，用于小体积试剂定量加注、滴定加液和重复分装。",
       en: "12–80 μL/rev small-volume dispensing\nFor micro dispensing and titration\nCustom displacement and port options",
       es: "Dosificación de pequeño volumen 12–80 μL/rev\nPara microdosificación y titulación\nOpciones personalizadas de desplazamiento y puerto",
       fr: "Dosage petit volume 12–80 μL/rev\nPour microdosage et titration\nOptions personnalisées de déplacement et de port",
@@ -57,7 +58,7 @@ export const valvelessPumpSelectionProducts: ProductSelectionProduct[] = [
     productTypeId: "valveless-pump",
     seriesId: "rpl-p635",
     cardTitle: {
-      zh: "RPL-P6.35 中小量程无阀泵",
+      zh: "RPL-P6.35",
       en: "RPL-P6.35 Mid-Small Volume Valveless Pump",
       es: "RPL-P6.35 bomba sin válvulas de volumen medio-bajo",
       fr: "RPL-P6.35 pompe sans valve moyen-petit volume",
@@ -65,7 +66,7 @@ export const valvelessPumpSelectionProducts: ProductSelectionProduct[] = [
       ru: "RPL-P6.35 бесклапанный насос среднего-малого объема",
     },
     cardSubtitle: {
-      zh: "50–300 μL/rev 中小量程输送\n适用于加样、灌装场景\n支持清洗口与液路配置",
+      zh: "单头陶瓷柱塞无阀计量泵，单圈排量 50–300 μL/rev，用于试剂分配、滴定加液和定量灌装。采用聚偏二氟乙烯（PVDF）泵头与氧化锆陶瓷套件。",
       en: "50–300 μL/rev mid-small volume dispensing\nFor reagent dispensing and filling\nWash port and fluidic configuration options",
       es: "Dosificación de volumen medio-bajo 50–300 μL/rev\nPara dispensación de reactivos y llenado\nOpciones de puerto de lavado y configuración fluídica",
       fr: "Dosage moyen-petit volume 50–300 μL/rev\nPour distribution de réactifs et remplissage\nOptions de port de lavage et de configuration fluidique",
@@ -94,7 +95,7 @@ export const valvelessPumpSelectionProducts: ProductSelectionProduct[] = [
     productTypeId: "valveless-pump",
     seriesId: "rpl-p15",
     cardTitle: {
-      zh: "RPL-P15 中大量程无阀泵",
+      zh: "RPL-P15",
       en: "RPL-P15 Mid-Large Volume Valveless Pump",
       es: "RPL-P15 bomba sin válvulas de volumen medio-alto",
       fr: "RPL-P15 pompe sans valve moyen-grand volume",
@@ -102,7 +103,7 @@ export const valvelessPumpSelectionProducts: ProductSelectionProduct[] = [
       ru: "RPL-P15 бесклапанный насос среднего-большого объема",
     },
     cardSubtitle: {
-      zh: "300–1200 μL/rev 中大量程输送\n适用于加液、灌装场景\n支持接口与安装方式定制",
+      zh: "单头陶瓷柱塞无阀计量泵，单圈排量 300–1200 μL/rev，用于较大体积的试剂灌装、缓冲液添加和定量输送。采用聚偏二氟乙烯（PVDF）泵头与氧化铝陶瓷套件。",
       en: "300–1200 μL/rev mid-large volume dispensing\nFor liquid addition and filling\nCustom ports and mounting options",
       es: "Dosificación de volumen medio-alto 300–1200 μL/rev\nPara adición de líquidos y llenado\nOpciones personalizadas de puertos y montaje",
       fr: "Dosage moyen-grand volume 300–1200 μL/rev\nPour ajout de liquide et remplissage\nOptions personnalisées de ports et de montage",
@@ -131,7 +132,7 @@ export const valvelessPumpSelectionProducts: ProductSelectionProduct[] = [
     productTypeId: "valveless-pump",
     seriesId: "drpl-0109",
     cardTitle: {
-      zh: "DRPL-0109 双头无阀泵",
+      zh: "DRPL-0109",
       en: "DRPL-0109 Dual-Head Valveless Pump",
       es: "DRPL-0109 bomba sin válvulas de doble cabezal",
       fr: "DRPL-0109 pompe sans valve à double tête",
@@ -139,7 +140,7 @@ export const valvelessPumpSelectionProducts: ProductSelectionProduct[] = [
       ru: "DRPL-0109 двухголовочный бесклапанный насос",
     },
     cardSubtitle: {
-      zh: "1:9 双头比例输送结构\n浓缩液 100 μL，稀释液 900 μL\n适用于 1 mL 配液量场景",
+      zh: "双头无阀计量泵，用于浓缩试剂稀释和双液路比例加液。浓缩液与稀释液体积比为 1:9，当前展示配置为 100 μL＋900 μL。",
       en: "1:9 dual-head proportional dispensing\n100 μL concentrate and 900 μL diluent\nFor 1 mL dilution and dispensing",
       es: "Dosificación proporcional de doble cabezal 1:9\n100 μL de concentrado y 900 μL de diluyente\nPara dilución y dosificación de 1 mL",
       fr: "Distribution proportionnelle double tête 1:9\n100 μL de concentré et 900 μL de diluant\nPour dilution et distribution de 1 mL",
@@ -168,7 +169,7 @@ export const valvelessPumpSelectionProducts: ProductSelectionProduct[] = [
     productTypeId: "valveless-pump",
     seriesId: "drpl-0119",
     cardTitle: {
-      zh: "DRPL-0119 双头无阀泵",
+      zh: "DRPL-0119",
       en: "DRPL-0119 Dual-Head Valveless Pump",
       es: "DRPL-0119 bomba sin válvulas de doble cabezal",
       fr: "DRPL-0119 pompe sans valve à double tête",
@@ -176,7 +177,7 @@ export const valvelessPumpSelectionProducts: ProductSelectionProduct[] = [
       ru: "DRPL-0119 двухголовочный бесклапанный насос",
     },
     cardSubtitle: {
-      zh: "1:19 双头比例输送结构\n浓缩液 60 μL，稀释液 1140 μL\n适用于 1.2 mL 配液量场景",
+      zh: "双头无阀计量泵，用于浓缩试剂稀释和双液路比例加液。浓缩液与稀释液体积比为 1:19，当前展示配置为 60 μL＋1140 μL。",
       en: "1:19 dual-head proportional dispensing\n60 μL concentrate and 1140 μL diluent\nFor 1.2 mL dilution and dispensing",
       es: "Dosificación proporcional de doble cabezal 1:19\n60 μL de concentrado y 1140 μL de diluyente\nPara dilución y dosificación de 1.2 mL",
       fr: "Distribution proportionnelle double tête 1:19\n60 μL de concentré et 1140 μL de diluant\nPour dilution et distribution de 1.2 mL",
@@ -200,6 +201,21 @@ export const valvelessPumpSelectionProducts: ProductSelectionProduct[] = [
     },
   },
 ];
+
+// Cards and detail pages share complete authored summaries in every foreign locale.
+export const valvelessPumpSelectionProducts: ProductSelectionProduct[] = baseValvelessPumpSelectionProducts.map(product => {
+  const cardTitle = { ...product.cardTitle };
+  const cardSubtitle = { ...product.cardSubtitle };
+  const searchKeywords = { ...product.searchKeywords };
+  for (const locale of valvelessForeignLocales) {
+    const copy = getValvelessForeignContent(product.detailSlug || "", locale);
+    if (!copy) continue;
+    cardTitle[locale] = copy.model;
+    cardSubtitle[locale] = copy.cardSummary;
+    searchKeywords[locale] = `${copy.model} ${copy.cardSummary} ${copy.commonApplications.join(" ")}`;
+  }
+  return { ...product, cardTitle, cardSubtitle, searchKeywords };
+});
 
 export const valvelessPumpFilterLabels: ProductSelectionFilterLabel[] = [
   {

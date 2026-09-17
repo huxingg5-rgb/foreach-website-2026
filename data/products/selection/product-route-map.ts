@@ -15,6 +15,11 @@
 ========================================================= */
 
 import type { SelectionFilterKey } from "./product-selection.types";
+import { valvelessPumpIntroZh } from "./valveless-pump-copy.zh";
+import {
+  VALVELESS_PUMP_CATEGORY_LABEL_ZH,
+  VALVELESS_PUMP_CATEGORY_SLUG_ZH,
+} from "./valveless-pump-routes";
 
 export type ProductRouteInitialFilters = Partial<
   Record<SelectionFilterKey, string[]>
@@ -136,14 +141,14 @@ export const productRouteMap: {
         "注射泵适用于高精度进样、注液、梯度控制和稳定流量输出场景。",
     },
 
-    "valveless-pumps": {
+    [VALVELESS_PUMP_CATEGORY_SLUG_ZH]: {
       category: "pumps",
       categoryId: "pumps",
       productTypeId: "valveless-pump",
-      label: "无阀泵",
-      title: "无阀泵 | Foreach Technology",
+      label: VALVELESS_PUMP_CATEGORY_LABEL_ZH,
+      title: `${valvelessPumpIntroZh.category.title} | Foreach Technology`,
       description:
-        "无阀泵适用于简化液路结构、降低阀件依赖和提高系统集成度的精密液体处理场景。",
+        valvelessPumpIntroZh.category.metaDescription,
   
     },
 
@@ -340,7 +345,7 @@ export function resolveCategoryRoute(category: string) {
   return productRouteMap.categories[category] || null;
 }
 
-export function resolveProductTypeRoute(category: string, slug: string) {
+export function resolveProductTypeRoute(category: string, slug: string, locale = "zh") {
   const route = productRouteMap.productTypes[slug];
 
   if (!route || route.category !== category) {

@@ -1,3 +1,6 @@
+import { instrumentIntrosZh, instrumentSeriesIntrosZh } from "./instrument-fluidics-copy.zh";
+import { valvelessPumpIntroZh } from "./valveless-pump-copy.zh";
+import { getValvelessLocaleCopy } from "../detail/valveless-pump-locales";
 import { getPistonPumpIntroCopy } from "./piston-pump-series-copy";
 /* =========================================================
    product-type-intro.ts
@@ -101,12 +104,7 @@ export const productTypeIntroMap: Record<string, ProductTypeIntroContent> = {
   },
 
   "pumps:valveless-pump": {
-    title: "无阀泵系列",
-    paragraphs: [
-      "恒永达无阀泵系列适用于自动化分析仪器中的加样、滴定、灌装、定量输送和比例输送场景，可减少外置电磁阀使用，降低液路复杂度。",
-      "产品覆盖 12–80 μL/rev、50–250 μL/rev、300–1200 μL/rev 单圈排量，并支持 1:9 至 1:19 双头比例输送配置。",
-      "所有无阀泵均按项目需求定制，具体排量、接口、清洗口和安装方式可进一步确认。",
-    ],
+    ...valvelessPumpIntroZh.category,
     image: {
       src: "/images/products/pumps/product-types/valveless-pumps/foreach-valveless-pumps-product-type-intro.webp",
       alt: "Foreach 无阀泵系列产品图，用于紧凑型仪器中的精密液体处理",
@@ -482,7 +480,7 @@ const diaphragmPumpCategoryIntroMap: Record<
     zh: {
       title: "用于废液抽吸和真空处理的微型气液混合隔膜泵",
       paragraphs: [
-        `Foreach微型气液混合隔膜泵专为管路中空气与液体同时或间歇进入的流体系统设计。与常规纯液体泵不同，[DPGL800系列](${getDiaphragmPumpPath("zh", "dpgl800-gas-liquid-diaphragm-pump")})可在介质于气体和气液混合状态之间变化时继续抽吸，适用于废液抽吸、管路抽空和真空建立。`,
+        `Foreach微型气液混合隔膜泵专为管路中空气与液体同时或间歇进入的流体系统设计。与常规纯液体泵不同，[DPGL800系列](${getDiaphragmPumpPath("zh", "dpgl800-gas-liquid-diaphragm-pump")})可在介质于气体和气液混合状态之间变化时继续抽吸，适用于废液抽吸、管路抽空和真空建立。在抽真空和负压抽吸应用中，这类泵也称为微型隔膜真空泵，用于抽出系统中的气体并建立所需负压。`,
         "DPGL800每个泵头的空载气体流量为6 L/min，最大正压约30 kPa，极限真空小于−90 kPa。选型应根据所需真空度、抽空时间、系统容积、管路阻力和实际气液状态进行，不能把6 L/min当作液体流量额定值。",
         `在[IVD体外诊断](${getApplicationPath("zh", "ivd")})和实验室仪器中，这类泵也常按功能称为废液泵、废液抽吸泵、真空抽吸泵或排液泵。在打印及其他混合介质流体系统中，类似气液混合隔膜泵还可用于墨水回收或废墨抽吸，具体取决于实际液路、工况和介质兼容性。`,
         `若要先判断连续液体转移还是会吸入空气的气液混合抽吸，请查看[IVD 废液泵液体与气液混合选型指南](${getTechnicalArticlePath("zh", "ivd-waste-liquid-pump-liquid-vs-gas-liquid-diaphragm-pump")})。`,
@@ -495,7 +493,7 @@ const diaphragmPumpCategoryIntroMap: Record<
     en: {
       title: "Miniature Gas-Liquid Diaphragm Pumps for Waste Aspiration and Vacuum Handling",
       paragraphs: [
-        `Foreach miniature gas-liquid diaphragm pumps are designed for fluidic systems where air and liquid may enter the tubing together or intermittently. Unlike conventional liquid-only pumps, the [DPGL800 series](${getDiaphragmPumpPath("en", "dpgl800-gas-liquid-diaphragm-pump")}) can continue aspirating when the medium changes between gas and gas-liquid conditions, making it suitable for waste-fluid suction, tubing evacuation, and vacuum-generation duties.`,
+        `Foreach miniature gas-liquid diaphragm pumps are designed for fluidic systems where air and liquid may enter the tubing together or intermittently. Unlike conventional liquid-only pumps, the [DPGL800 series](${getDiaphragmPumpPath("en", "dpgl800-gas-liquid-diaphragm-pump")}) can continue aspirating when the medium changes between gas and gas-liquid conditions, making it suitable for waste-fluid suction, tubing evacuation, and vacuum-generation duties. In evacuation and vacuum aspiration applications, these pumps are also known as miniature diaphragm vacuum pumps, removing gas from the system to establish the required negative pressure.`,
         "The DPGL800 delivers a no-load gas flow of 6 L/min per head, maximum positive pressure of approximately 30 kPa, and ultimate vacuum below −90 kPa. Select according to the required vacuum level, evacuation time, system volume, line resistance, and actual gas-liquid condition; do not treat 6 L/min as a liquid-flow rating.",
         `In [IVD diagnostics](${getApplicationPath("en", "ivd")}) and laboratory instruments, this type of pump may also be described by its function as a waste liquid pump, waste aspiration pump, vacuum aspiration pump, or drainage pump. In printing and other mixed-media fluid systems, similar gas-liquid diaphragm pumps may also be used for ink recovery or waste-ink suction, depending on the actual circuit, operating conditions, and media compatibility.`,
         `To decide between continuous liquid transfer and aspiration that ingests air, see the [IVD waste liquid versus gas-liquid pump selection guide](${getTechnicalArticlePath("en", "ivd-waste-liquid-pump-liquid-vs-gas-liquid-diaphragm-pump")}).`,
@@ -508,7 +506,7 @@ const diaphragmPumpCategoryIntroMap: Record<
     es: {
       title: "Bombas miniatura de diafragma gas-líquido para aspiración de residuos y manejo de vacío",
       paragraphs: [
-        `Las bombas miniatura de diafragma gas-líquido Foreach están diseñadas para sistemas fluídicos en los que pueden entrar aire y líquido juntos o de forma intermitente. A diferencia de las bombas convencionales para líquido puro, la [serie DPGL800](${getDiaphragmPumpPath("es", "dpgl800-gas-liquid-diaphragm-pump")}) puede seguir aspirando cuando el medio cambia entre gas y mezcla gas-líquido, por lo que resulta adecuada para aspiración de fluidos residuales, evacuación de tuberías y generación de vacío.`,
+        `Las bombas miniatura de diafragma gas-líquido Foreach están diseñadas para sistemas fluídicos en los que pueden entrar aire y líquido juntos o de forma intermitente. A diferencia de las bombas convencionales para líquido puro, la [serie DPGL800](${getDiaphragmPumpPath("es", "dpgl800-gas-liquid-diaphragm-pump")}) puede seguir aspirando cuando el medio cambia entre gas y mezcla gas-líquido, por lo que resulta adecuada para aspiración de fluidos residuales, evacuación de tuberías y generación de vacío. En aplicaciones de evacuación y aspiración por vacío, estas bombas también se conocen como bombas de vacío de diafragma en miniatura, que extraen el gas del sistema para generar la presión negativa requerida.`,
         "La DPGL800 ofrece un caudal de gas sin carga de 6 L/min por cabezal, una presión positiva máxima de aproximadamente 30 kPa y un vacío límite inferior a −90 kPa. Seleccione según el nivel de vacío requerido, el tiempo de evacuación, el volumen del sistema, la resistencia de las líneas y el estado gas-líquido real; no interprete 6 L/min como caudal de líquido.",
         `En el [diagnóstico IVD](${getApplicationPath("es", "ivd")}) y los instrumentos de laboratorio, esta bomba también puede denominarse por su función bomba de líquido residual, bomba de aspiración de residuos, bomba de aspiración por vacío o bomba de drenaje. En impresión y otros sistemas con medios mixtos, bombas similares pueden utilizarse para recuperación de tinta o aspiración de tinta residual, según el circuito, las condiciones de trabajo y la compatibilidad del medio.`,
         `Para distinguir la transferencia continua de líquido de la aspiración con entrada de aire, consulte la [guía de selección de bombas de residuos IVD para líquido o gas-líquido](${getTechnicalArticlePath("es", "ivd-waste-liquid-pump-liquid-vs-gas-liquid-diaphragm-pump")}).`,
@@ -521,7 +519,7 @@ const diaphragmPumpCategoryIntroMap: Record<
     fr: {
       title: "Pompes à membrane miniatures gaz-liquide pour l’aspiration des effluents et la gestion du vide",
       paragraphs: [
-        `Les pompes à membrane miniatures gaz-liquide Foreach sont conçues pour les systèmes fluidiques dans lesquels l’air et le liquide peuvent entrer ensemble ou par intermittence. Contrairement aux pompes classiques réservées aux liquides, la [série DPGL800](${getDiaphragmPumpPath("fr", "dpgl800-gas-liquid-diaphragm-pump")}) peut poursuivre l’aspiration lorsque le fluide alterne entre gaz et mélange gaz-liquide ; elle convient donc à l’aspiration des effluents, à l’évacuation des conduites et à la génération de vide.`,
+        `Les pompes à membrane miniatures gaz-liquide Foreach sont conçues pour les systèmes fluidiques dans lesquels l’air et le liquide peuvent entrer ensemble ou par intermittence. Contrairement aux pompes classiques réservées aux liquides, la [série DPGL800](${getDiaphragmPumpPath("fr", "dpgl800-gas-liquid-diaphragm-pump")}) peut poursuivre l’aspiration lorsque le fluide alterne entre gaz et mélange gaz-liquide ; elle convient donc à l’aspiration des effluents, à l’évacuation des conduites et à la génération de vide. Dans les applications de mise sous vide et d’aspiration sous vide, ces pompes sont également appelées pompes à vide miniatures à membrane ; elles extraient le gaz du système pour créer la dépression requise.`,
         "La DPGL800 fournit un débit de gaz sans charge de 6 L/min par tête, une pression positive maximale d’environ 30 kPa et un vide limite inférieur à −90 kPa. Sélectionnez selon le niveau de vide requis, le temps d’évacuation, le volume du système, la résistance des conduites et l’état gaz-liquide réel ; ne considérez pas 6 L/min comme un débit de liquide.",
         `Dans le [diagnostic IVD](${getApplicationPath("fr", "ivd")}) et les instruments de laboratoire, ce type de pompe est aussi désigné par sa fonction : pompe d’effluents, pompe d’aspiration des déchets, pompe d’aspiration sous vide ou pompe de vidange. Dans l’impression et d’autres systèmes à fluides mixtes, des pompes comparables peuvent servir à la récupération d’encre ou à l’aspiration des encres usagées, selon le circuit, les conditions de fonctionnement et la compatibilité du fluide.`,
         `Pour distinguer le transfert liquide continu de l’aspiration avec entrée d’air, consultez le [guide de sélection d’une pompe d’effluents IVD liquide ou gaz-liquide](${getTechnicalArticlePath("fr", "ivd-waste-liquid-pump-liquid-vs-gas-liquid-diaphragm-pump")}).`,
@@ -534,7 +532,7 @@ const diaphragmPumpCategoryIntroMap: Record<
     ko: {
       title: "폐액 흡인 및 진공 처리를 위한 소형 기액 혼합 다이어프램 펌프",
       paragraphs: [
-        `Foreach 소형 기액 혼합 다이어프램 펌프는 공기와 액체가 배관에 함께 또는 간헐적으로 유입되는 유체 시스템용으로 설계되었습니다. 일반적인 액체 전용 펌프와 달리 [DPGL800 시리즈](${getDiaphragmPumpPath("ko", "dpgl800-gas-liquid-diaphragm-pump")})는 유체 상태가 가스와 기액 혼합 사이에서 바뀌어도 흡인을 계속할 수 있어 폐액 흡입, 배관 배기 및 진공 형성에 적합합니다.`,
+        `Foreach 소형 기액 혼합 다이어프램 펌프는 공기와 액체가 배관에 함께 또는 간헐적으로 유입되는 유체 시스템용으로 설계되었습니다. 일반적인 액체 전용 펌프와 달리 [DPGL800 시리즈](${getDiaphragmPumpPath("ko", "dpgl800-gas-liquid-diaphragm-pump")})는 유체 상태가 가스와 기액 혼합 사이에서 바뀌어도 흡인을 계속할 수 있어 폐액 흡입, 배관 배기 및 진공 형성에 적합합니다. 진공 배기 및 음압 흡인 용도에서는 소형 다이어프램 진공 펌프라고도 하며, 시스템 내부의 가스를 배출하여 필요한 음압을 형성합니다.`,
         "DPGL800의 각 헤드당 무부하 가스 유량은 6 L/min이고 최대 양압은 약 30 kPa이며 도달 진공도는 −90 kPa 미만입니다. 필요한 진공도, 배기 시간, 시스템 용적, 배관 저항 및 실제 기액 상태를 기준으로 선정하고, 6 L/min을 액체 유량 정격으로 해석하지 마십시오.",
         `[IVD 체외진단](${getApplicationPath("ko", "ivd")}) 및 실험실 장비에서는 기능에 따라 폐액 펌프, 폐액 흡인 펌프, 진공 흡인 펌프 또는 배수 펌프로도 부릅니다. 인쇄 및 기타 혼합 유체 시스템에서는 실제 회로, 운전 조건 및 유체 호환성에 따라 잉크 회수나 폐잉크 흡인에도 유사한 기액 혼합 다이어프램 펌프를 사용할 수 있습니다.`,
         `연속 액체 이송과 공기 유입 흡인을 구분하려면 [IVD 폐액용 액체 또는 기액 혼합 펌프 선정 가이드](${getTechnicalArticlePath("ko", "ivd-waste-liquid-pump-liquid-vs-gas-liquid-diaphragm-pump")})를 참조하십시오.`,
@@ -547,7 +545,7 @@ const diaphragmPumpCategoryIntroMap: Record<
     ru: {
       title: "Миниатюрные газожидкостные мембранные насосы для аспирации отходов и вакуумирования",
       paragraphs: [
-        `Миниатюрные газожидкостные мембранные насосы Foreach предназначены для систем, в которых воздух и жидкость могут одновременно или периодически поступать в трубку. В отличие от обычных насосов только для жидкости, [серия DPGL800](${getDiaphragmPumpPath("ru", "dpgl800-gas-liquid-diaphragm-pump")}) продолжает всасывание при переходе среды между газовым и газожидкостным состояниями и подходит для аспирации отходов, откачки трубопроводов и создания вакуума.`,
+        `Миниатюрные газожидкостные мембранные насосы Foreach предназначены для систем, в которых воздух и жидкость могут одновременно или периодически поступать в трубку. В отличие от обычных насосов только для жидкости, [серия DPGL800](${getDiaphragmPumpPath("ru", "dpgl800-gas-liquid-diaphragm-pump")}) продолжает всасывание при переходе среды между газовым и газожидкостным состояниями и подходит для аспирации отходов, откачки трубопроводов и создания вакуума. При вакуумировании и вакуумной аспирации такие насосы также называют миниатюрными мембранными вакуумными насосами: они удаляют газ из системы и создают необходимое разрежение.`,
         "DPGL800 обеспечивает расход газа без нагрузки 6 L/min на каждую головку, максимальное положительное давление около 30 kPa и предельное разрежение ниже −90 kPa. Выбирайте насос с учетом требуемого вакуума, времени откачки, объёма системы, сопротивления линий и фактического газожидкостного состояния; не считайте 6 L/min расходом жидкости.",
         `В системах [IVD-диагностики](${getApplicationPath("ru", "ivd")}) и лабораторных приборах такой насос также называют по функции насосом для отработанной жидкости, насосом аспирации отходов, вакуумным аспирационным или дренажным насосом. В печатных и других системах со смешанными средами аналогичные насосы могут применяться для возврата чернил или аспирации отработанных чернил в зависимости от схемы, условий работы и совместимости среды.`,
         `Чтобы отличить непрерывный перенос жидкости от аспирации с поступлением воздуха, см. [руководство по выбору жидкостного или газожидкостного насоса отходов IVD](${getTechnicalArticlePath("ru", "ivd-waste-liquid-pump-liquid-vs-gas-liquid-diaphragm-pump")}).`,
@@ -590,13 +588,16 @@ export function getProductTypeIntroByIds(
 
   const activeLocale = getRuntimeLocale(locale);
 
+  if (key === "pumps:valveless-pump") return getValvelessPumpCategoryIntro(undefined, activeLocale);
+
   if (key === "pumps:plunger-pump") {
     const copy = getPistonPumpIntroCopy("category", activeLocale);
     return { ...baseIntro, ...copy, image: { ...baseIntro.image, alt: copy.imageAlt } };
   }
 
   if (activeLocale === "zh") {
-    return baseIntro;
+    const copy = categoryId === "pumps" ? instrumentIntrosZh[productTypeId] : undefined;
+    return copy ? { ...baseIntro, ...copy } : baseIntro;
   }
 
   const localizedCopy =
@@ -653,4 +654,19 @@ export function getDiaphragmPumpCategoryIntro(
 
   const activeLocale = getRuntimeLocale(locale);
   return diaphragmPumpCategoryIntroMap[category][activeLocale] || null;
+}
+
+export function getValvelessPumpCategoryIntro(seriesValue: string | undefined, locale: SelectionLocale): ProductTypeIntroContent | null {
+  const localized = locale === "zh" ? valvelessPumpIntroZh : getValvelessLocaleCopy(locale);
+  if (!localized) return null;
+  const copy = seriesValue === "RPL 无阀泵" ? localized.single : seriesValue === "DRPL 双头无阀泵" ? localized.dual : localized.category;
+  const image = productTypeIntroMap["pumps:valveless-pump"].image;
+  return { ...copy, image: locale === "zh" ? image : { ...image, alt: `FOREACH ${copy.title}` } };
+}
+
+export function getInstrumentCategoryIntro(productTypeId:string, seriesValue:string|undefined, locale:SelectionLocale):ProductTypeIntroContent|null {
+  if(locale !== "zh" || !instrumentIntrosZh[productTypeId]) return null;
+  const base=productTypeIntroMap[`pumps:${productTypeId}`];
+  const copy=(seriesValue && instrumentSeriesIntrosZh[seriesValue]) || instrumentIntrosZh[productTypeId];
+  return {...base,...copy};
 }

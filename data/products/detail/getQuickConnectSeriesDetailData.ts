@@ -1,3 +1,4 @@
+import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 import quickConnectRowsJson from "@/data/products/generated/fittings/quick-connect-fittings/index.json";
 import {
   quickConnectFittingSelectionProducts,
@@ -745,5 +746,12 @@ export function getQuickConnectSeriesMetadata(
 
     description:
       detail.seo.description,
+
+    ...buildProductSocialMetadata({
+      data: detail,
+      title: detail.seo.title,
+      description: detail.seo.description,
+      canonicalUrl: `${detail.detailHref}/`,
+    }),
   };
 }

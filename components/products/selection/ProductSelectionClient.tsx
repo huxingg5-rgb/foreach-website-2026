@@ -1,6 +1,10 @@
 "use client";
 
 import { normalizePistonPumpPublicName } from "@/data/products/piston-pump-public-name";
+import {
+  localizeValvelessPumpCategoryPath,
+  VALVELESS_PUMP_CATEGORY_LABEL_ZH,
+} from "@/data/products/selection/valveless-pump-routes";
 
 import { Suspense, useCallback, useEffect, useId, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -15,6 +19,8 @@ import {
 } from "@/lib/analytics/track-event";
 
 import SitePageShell from "@/components/layout/SitePageShell";
+import ProductSelectionStructuredData from "./ProductSelectionStructuredData";
+import { getProductSelectionCardName } from "./ProductSelectionCard";
 import {
   getProductTypeFilterOptionsByCategory,
   getProductTypeHrefByIds,
@@ -25,6 +31,8 @@ import {
 import {
   getDiaphragmPumpCategoryIntro,
   getPlungerPumpCategoryIntro,
+  getValvelessPumpCategoryIntro,
+  getInstrumentCategoryIntro,
   getProductTypeIntroByIds,
 } from "@/data/products/selection/product-type-intro";
 import { getProductFilterOptions } from "@/data/products/selection/filter-rules/product-filter-rules.index";
@@ -1139,6 +1147,7 @@ function getText(
 }
 
 function getTaxonomyLabel(locale: SelectionLocale, id: string) {
+  if (id === "valveless-pump") return locale === "zh" ? VALVELESS_PUMP_CATEGORY_LABEL_ZH : getLocalizedFilterOptionLabel("无阀泵", locale);
   const item = selectionTaxonomyItems.find((entry) => entry.id === id);
 
   return getText(locale, item?.label, id);
@@ -3842,7 +3851,7 @@ export default function ProductSelectionClient({
     selectedFilters.filter01 || []
   )[0];
   const activeProductTypeIntroVariant =
-    locale === "zh" && activeProductTypeId === "plunger-pump"
+    activeProductTypeId === "valveless-pump" || (locale === "zh" && ["plunger-pump", "pipette-pump", "syringe-pump"].includes(activeProductTypeId))
       ? activeSeriesFilterValue
       : initialFilters?.filter01?.[0];
   const activeProductTypeIntro =
@@ -3850,9 +3859,12 @@ export default function ProductSelectionClient({
       ? getDiaphragmPumpCategoryIntro(initialFilters?.filter01?.[0], locale)
       : activeProductTypeId === "plunger-pump"
         ? getPlungerPumpCategoryIntro(activeSeriesFilterValue, locale)
-        : null) ||
+        : activeProductTypeId === "valveless-pump"
+          ? getValvelessPumpCategoryIntro(selectedFilters.filter01?.size === 1 ? activeSeriesFilterValue : undefined, locale)
+          : getInstrumentCategoryIntro(activeProductTypeId, selectedFilters.filter01?.size === 1 ? activeSeriesFilterValue : undefined, locale)) ||
     getProductTypeIntroByIds(activeCategoryId, activeProductTypeId, locale);
   const activeProductTypeIntroHeading = activeProductTypeIntro?.title || "";
+  const compactSelectionLabel = activeProductTypeId === "valveless-pump" ? getTaxonomyLabel(locale, activeProductTypeId) : locale === "zh" ? ({"pipette-pump":"移液泵","syringe-pump":"注射泵","高压阀":"高压阀","high-pressure-valves":"高压阀","电磁阀":"电磁阀","solenoid-valves":"电磁阀"} as Record<string,string>)[activeProductTypeId] : undefined;
   const selectedTagItems = useMemo<ProductSelectionSelectedTag[]>(() => {
     const tags: ProductSelectionSelectedTag[] = [];
 
@@ -5054,6 +5066,7 @@ function isFilterOptionActive(
     href: string,
     product?: ProductSelectionProduct,
   ) {
+    href = localizeValvelessPumpCategoryPath(href, locale);
     if (
       locale === "zh" ||
       !href.startsWith("/") ||
@@ -5131,8 +5144,40 @@ function isFilterOptionActive(
     addItem(createProductCartItem(product));
   }
 
+  const breadcrumbItems = [
+    {
+      label: pageText.breadcrumbHome,
+      href: locale === "zh" ? "/" : `/${locale}`,
+    },
+    {
+      label: pageText.breadcrumbCurrent,
+      ...(compactSelectionLabel ? { href: "/products/" } : {}),
+    },
+    ...(compactSelectionLabel ? [{ label: compactSelectionLabel }] : []),
+  ];
+
   return (
     <div className="products-selection-page">
+      <ProductSelectionStructuredData
+        locale={locale}
+        name={activeProductTypeIntroHeading || activeCategory.label}
+        breadcrumbs={breadcrumbItems}
+        items={pagedProducts.map((product) => ({
+          name: getProductSelectionCardName(
+            product,
+            locale,
+            localizeProductCardTitle(
+              product,
+              locale,
+              getText(locale, product.cardTitle, product.productId),
+            ),
+          ),
+          href: localizeProductDetailHref(
+            normalizeFinalProductDetailHref(product, makeDetailHref(product)),
+            product,
+          ),
+        }))}
+      />
       <Suspense fallback={null}>
         <ProductSelectionSearchParamsSync onChange={handleSearchParamsChange} />
       </Suspense>
@@ -5142,15 +5187,7 @@ function isFilterOptionActive(
             ? "面包屑导航"
             : targetLocaleA11yText?.breadcrumbAriaLabel || "Breadcrumb"
         }
-        breadcrumbItems={[
-          {
-            label: pageText.breadcrumbHome,
-            href: locale === "zh" ? "/" : `/${locale}`,
-          },
-          {
-            label: pageText.breadcrumbCurrent,
-          },
-        ]}
+        breadcrumbItems={breadcrumbItems}
       >
         <main className="products-main">
           <div className="products-container">
@@ -5200,7 +5237,9 @@ function isFilterOptionActive(
                 <ProductTypeIntroCopy
                   isPrimaryHeading={
                     activeProductTypeId === "diaphragm-pump" ||
-                    activeProductTypeId === "plunger-pump"
+                    activeProductTypeId === "plunger-pump" ||
+                    activeProductTypeId === "valveless-pump" ||
+                    (locale === "zh" && ["pipette-pump", "syringe-pump"].includes(activeProductTypeId))
                   }
                   key={`${activeProductTypeId || "none"}-${
                     activeProductTypeIntroVariant || "default"
@@ -5326,6 +5365,3 @@ function isFilterOptionActive(
 </div>
   );
 }
-
-
-

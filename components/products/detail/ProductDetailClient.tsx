@@ -1,6 +1,7 @@
 "use client";
 
 
+import { getChineseProductBreadcrumbs } from "@/data/products/detail/chinese-product-breadcrumbs";
 import {
   getProductDetailTitleOverride,
   type ProductDetailTitleLocale,
@@ -45,6 +46,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 
 import type { CSSProperties, MouseEvent, ReactNode } from "react";
 import { localizeProductDetailData } from "@/data/products/detail/product-detail.intl";
+import { applyValvelessEnglishMaterialNames } from "@/data/products/detail/valveless-pump-materials.en";
 import {
   HARD_TUBE_DETAIL_COPY,
   isHardTubeTargetLocale,
@@ -768,6 +770,9 @@ function getTubingBottomCtaData(data: any) {
 }
 
 function getPlungerPumpBottomCta(data: any) {
+  if (data.valvelessDetailContent === true && data.valvelessPresentation?.bottomCta) {
+    return data.valvelessPresentation.bottomCta;
+  }
   if (isHardTubeTargetLocale(String(data?.__locale || ""))) {
     return {
       title: data.bottomCtaTitle,
@@ -850,9 +855,12 @@ function getPlungerPumpBottomCta(data: any) {
   }
 
   if (isValvelessPumpDetailData(data)) {
+    if (data.slug === "rpl-p4" && data.rplP4ChineseCopy) {
+      return data.rplP4ChineseCopy.bottomCta;
+    }
     if (data?.__locale === "en") {
       return {
-        title: "Valveless pumps configured for your fluidic requirements",
+        title: "Valveless metering pumps configured for your fluidic requirements",
         desc: "Share the target displacement, ratio requirements, fluid compatibility, port type, cleaning requirements, and installation space. The Foreach engineering team can help confirm a suitable configuration.",
         button: "Submit a Custom Request",
         href: "/en/contact",
@@ -860,8 +868,8 @@ function getPlungerPumpBottomCta(data: any) {
     }
 
     return {
-      title: "无阀泵可根据您的液路需求进行定制",
-      desc: "恒永达可根据您的应用场景、目标排量、配比要求、液体兼容性、接口方式、清洗口和安装空间，协助确认适合自动化仪器集成的无阀泵配置。",
+      title: "无阀计量泵可根据您的液路需求进行定制",
+      desc: "请提供目标加液量或流量、工作节拍、液体成分、背压、接口和安装空间；双液路配液还需提供目标体积比。FOREACH 可协助确认适合设备集成的无阀计量泵配置。",
       button: "提交定制需求",
       href: "/contact",
     };
@@ -1201,7 +1209,7 @@ function buildProductPageStructuredData(data: any, pathname: string) {
     ),
   );
   const rawProductModel = String(
-    data.modelDisplay || data.displayModel || data.modelCode || data.model || "",
+    data.valvelessDetailContent === true ? data.productCode : data.modelDisplay || data.displayModel || data.modelCode || data.model || "",
   ).trim();
   const isDiaphragmPump =
     isDiaphragmPumpPublicPath(pathname) &&
@@ -1239,7 +1247,17 @@ function buildProductPageStructuredData(data: any, pathname: string) {
   // Q-series routes collect selectable models; other detail routes describe specifications.
   const isProductCollectionPage =
     /\/products\/fittings\/quick-connect-fittings\/q(?:20|40|60)\/?$/.test(pathname);
-  const breadcrumbItems = isDiaphragmPump
+  const compactChineseBreadcrumbs = getChineseProductBreadcrumbs(data, locale);
+  const breadcrumbItems = compactChineseBreadcrumbs
+    ? compactChineseBreadcrumbs.map((item) => ({name:item.label,item:item.href ? toAbsoluteProductUrl(item.href) : canonicalUrl}))
+    : data.valvelessDetailContent === true
+    ? [
+        { name: breadcrumbCopy.home, item: toAbsoluteProductUrl(`${localePrefix}/`) },
+        { name: breadcrumbCopy.products, item: toAbsoluteProductUrl(`${localePrefix}/products/`) },
+        { name: data.breadcrumbParentLabel, item: toAbsoluteProductUrl(data.breadcrumbParentHref) },
+        { name: data.breadcrumbLabel, item: canonicalUrl },
+      ]
+    : isDiaphragmPump
     ? [
         {
           name: diaphragmCategoryCopy.home,
@@ -1471,7 +1489,7 @@ export default function ProductDetailClient({
       : "";
   const data = useMemo(
     () => {
-      const hasLocalizedPistonCopy = (sourceData.eaDetailContent === true || sourceData.compactDetailContent === true) && sourceData.__locale === configuratorLocale;
+      const hasLocalizedPistonCopy = (sourceData.eaDetailContent === true || sourceData.compactDetailContent === true || sourceData.valvelessDetailContent === true) && sourceData.__locale === configuratorLocale;
       const localizedData = hasLocalizedPistonCopy ? sourceData : targetLocale
         ? localizeTargetProductDetailData(sourceData, targetLocale, pathname || "")
         : isEnglish
@@ -1481,7 +1499,7 @@ export default function ProductDetailClient({
         : sourceData;
 
       return applyDiaphragmPumpDetailCopy(
-        localizedData,
+        applyValvelessEnglishMaterialNames(localizedData, configuratorLocale),
         configuratorLocale,
       );
     },
@@ -1490,6 +1508,7 @@ export default function ProductDetailClient({
   const hasAuthoredPistonCopy = sourceData.eaDetailContent === true || sourceData.compactDetailContent === true;
   const useAuthoredPistonCopy = hasAuthoredPistonCopy &&
     sourceData.__locale === configuratorLocale;
+  const useAuthoredValvelessCopy = sourceData.valvelessDetailContent === true && sourceData.__locale === configuratorLocale;
   const rawApplicationDetails = (hasAuthoredPistonCopy && !useAuthoredPistonCopy
     ? undefined
     : data.applicationDetails) as
@@ -1503,6 +1522,10 @@ export default function ProductDetailClient({
       ? rawApplicationDetails
       : null;
   const hasApplicationDetails = applicationDetails !== null;
+  // Scoped presentation copy: retain Chinese P4 guidance and localize this series only.
+  const rplP4Copy = useAuthoredValvelessCopy ? data.valvelessPresentation : configuratorLocale === "zh" && data.slug === "rpl-p4"
+    ? data.rplP4ChineseCopy
+    : undefined;
   const isDiaphragmPage = isPublishedDiaphragmPumpDetail(pathname, data);
   const diaphragmReference = isDiaphragmPage
     ? getDiaphragmPumpReferenceFromIdentity(data)
@@ -1553,7 +1576,7 @@ export default function ProductDetailClient({
   const diaphragmCopy = getDiaphragmPumpCopy(data, configuratorLocale);
   const displayProductTitle =
     diaphragmCopy?.title ||
-    (useAuthoredPistonCopy ? String(data.model || "") : getScopedProductDisplayTitle(
+    (useAuthoredPistonCopy || useAuthoredValvelessCopy ? String(data.model || "") : getScopedProductDisplayTitle(
       data,
       targetLocale,
       String(data.model || "")
@@ -1656,7 +1679,14 @@ export default function ProductDetailClient({
         drawingPreview: "预览图纸",
         drawingDescription: (model: string) => `查看 ${model} 的技术图纸。`,
       };
-  const productBreadcrumbItems = isDiaphragmPage
+  const productBreadcrumbItems = getChineseProductBreadcrumbs(data, configuratorLocale) || (useAuthoredValvelessCopy
+    ? [
+        { label: copy.home, href: `${localePrefix}/` },
+        { label: copy.products, href: `${localePrefix}/products/` },
+        { label: data.breadcrumbParentLabel, href: data.breadcrumbParentHref },
+        { label: data.breadcrumbLabel },
+      ]
+    : isDiaphragmPage
     ? [
         {
           label: diaphragmCategoryCopy.home,
@@ -1692,7 +1722,7 @@ export default function ProductDetailClient({
             ? String(sourceData.modelDisplay || sourceData.displayModel || sourceData.modelCode || data.slug || "").trim()
             : displayProductTitle,
         },
-      ];
+      ]);
     const { addItem, getItem, toggleDrawingNeed, removeItem } = useSelectionCart();
 
   const analyticsProductId = String(
@@ -3360,7 +3390,7 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
                     aria-pressed={isDetailDrawingSelected}
                     onClick={handleAddDrawing}
                   >
-                    {isDetailDrawingSelected ? copy.drawingAdded : copy.drawing}
+                    {isDetailDrawingSelected ? rplP4Copy?.drawingAdded || copy.drawingAdded : rplP4Copy?.drawing || copy.drawing}
                   </button>
                 ) : null}
 
@@ -3547,6 +3577,9 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
                     ))}
                   </tbody>
                 </table>
+                {rplP4Copy?.specNotes.map((note: string) => (
+                  <p key={note} className={styles.rplP4SpecNote} data-product-spec-note="true">{note}</p>
+                ))}
               </div>
             </div>
 
@@ -3582,11 +3615,13 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
                     loadingFallback={
                       <Pump3DFileCheckingDisplay
                         locale={pumpFileDisplayLocale}
+                        title={useAuthoredValvelessCopy ? copy.model3d : undefined}
                       />
                     }
                     missingFallback={
                       <ThreeDFileNotUploadedDisplay
                         locale={pumpFileDisplayLocale}
+                        description={rplP4Copy?.modelUnavailable}
                       />
                     }
                   >
@@ -3627,11 +3662,14 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
                   loadingFallback={
                     <Pump2DFileCheckingDisplay
                       locale={pumpFileDisplayLocale}
+                      title={useAuthoredValvelessCopy ? copy.drawingLoading : undefined}
                     />
                   }
                   missingFallback={
                     <TwoDFileNotUploadedDisplay
                       locale={pumpFileDisplayLocale}
+                      title={useAuthoredValvelessCopy ? copy.no2dYet : undefined}
+                      description={rplP4Copy?.drawingUnavailable}
                     />
                   }
                 >

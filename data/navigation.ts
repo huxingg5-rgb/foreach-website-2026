@@ -1,4 +1,6 @@
 import { getLocalizedSiteHref } from "@/lib/seo/site-url";
+import { VALVELESS_PUMP_CATEGORY_LABEL_ZH } from "@/data/products/selection/valveless-pump-routes";
+import { getValvelessPumpNames } from "@/data/products/detail/valveless-pump-names";
 
 /* ================================
    navigation.ts
@@ -417,7 +419,7 @@ const productMegaDropdown: MegaDropdown = {
         ),
         productImage(
           "/images/products/pumps/rotary-pump.jpg",
-          t("无阀泵", "Valveless Pump", "Bomba sin válvula", "Pompe sans clapet", "무밸브 펌프", "Бесклапанный насос"),
+          t(VALVELESS_PUMP_CATEGORY_LABEL_ZH, getValvelessPumpNames("en").categoryName, getValvelessPumpNames("es").categoryName, getValvelessPumpNames("fr").categoryName, getValvelessPumpNames("ko").categoryName, getValvelessPumpNames("ru").categoryName),
           t("连续定量输送与比例加液", "Continuous metering and proportional dispensing", "Dosificación continua y dispensación proporcional", "Dosage continu et distribution proportionnelle", "연속 정량 이송 및 비례 분주", "Непрерывное дозирование и пропорциональная подача"),
           localizedPath("/products/pumps/valveless-pumps")
         ),
@@ -2599,7 +2601,7 @@ export function getProductImageDisplayMeta(src: string, locale: string) {
 
   if (src.includes("rotary-pump")) {
     return {
-      title: useEnglish ? "Valveless Pump" : "无阀泵",
+      title: useEnglish ? "Valveless Pump" : VALVELESS_PUMP_CATEGORY_LABEL_ZH,
       description: useEnglish
         ? "Continuous metering and proportional dispensing"
         : "连续定量输送与比例加液",

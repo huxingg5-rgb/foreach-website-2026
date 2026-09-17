@@ -52,7 +52,7 @@ export const installationGuideZhData: InstallationGuidePageData = {
         children: [
           { id: "plunger-pump", name: "柱塞泵" },
           { id: "diaphragm-pump", name: "隔膜泵" },
-          { id: "valveless-pump", name: "无阀泵" },
+          { id: "valveless-pump", name: "无阀计量泵" },
           { id: "syringe-pump", name: "注射泵" },
           { id: "high-pressure-pump", name: "高压泵" },
         ],

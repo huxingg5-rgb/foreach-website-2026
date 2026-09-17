@@ -1,3 +1,4 @@
+import { applyInstrumentFluidicsChineseCopy } from "@/data/products/detail/instrument-fluidics-copy.zh";
 import { notFound } from "next/navigation";
 import type { ComponentType } from "react";
 import type { Metadata } from "next";
@@ -226,5 +227,5 @@ export default async function PipettingPumpDetailPage({ params }: PageProps) {
     notFound();
   }
 
-  return <ProductDetailView data={toClientData(detail)} />;
+  return <ProductDetailView data={applyInstrumentFluidicsChineseCopy(toClientData(detail), "zh")} />;
 }

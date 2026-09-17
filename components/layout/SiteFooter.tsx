@@ -208,7 +208,7 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
                       <img
                         className={styles.socialIcon}
                         src={item.icon}
-                        alt=""
+                        alt={item.label}
                         loading="lazy"
                         aria-hidden="true"
                       />

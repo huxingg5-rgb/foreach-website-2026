@@ -1,3 +1,4 @@
+import { applyInstrumentFluidicsChineseCopy } from "@/data/products/detail/instrument-fluidics-copy.zh";
 import type { ComponentType } from "react";
 
 import { notFound } from "next/navigation";
@@ -291,7 +292,12 @@ export default async function ValveDetailPage({ params }: ValveDetailPageProps) 
   }
 
   return (
-    <div data-valve-detail-page="true">
+    <div
+      data-valve-detail-page="true"
+      data-fluidics-copy-review={
+        slug === "high-pressure-valves" || slug === "solenoid-valves" ? "true" : undefined
+      }
+    >
       {/*
         VALVE_DETAIL_CTA_SAFE_SPACING_20260708
 
@@ -344,7 +350,21 @@ export default async function ValveDetailPage({ params }: ValveDetailPageProps) 
           `,
         }}
       />
-      <ProductDetailView data={toClientData(detail)} />
+      {/* Keep the existing FAQ and CTA structure while allowing the reviewed Chinese answers to fit. */}
+      <style dangerouslySetInnerHTML={{ __html: `
+        [data-valve-detail-page="true"][data-fluidics-copy-review="true"] section[class*="faqSection"] {
+          height: auto !important;
+          overflow: visible !important;
+        }
+        [data-valve-detail-page="true"][data-fluidics-copy-review="true"] [class*="faqItemOpen"] [class*="faqAnswerWrap"] {
+          max-height: none !important;
+        }
+        [data-valve-detail-page="true"][data-fluidics-copy-review="true"] [data-product-bottom-cta="true"],
+        [data-valve-detail-page="true"][data-fluidics-copy-review="true"] [data-product-bottom-cta="true"] [class*="BottomCta"] {
+          margin-top: 0 !important;
+        }
+      ` }} />
+      <ProductDetailView data={applyInstrumentFluidicsChineseCopy(toClientData(detail), "zh")} />
     </div>
   );
 }
