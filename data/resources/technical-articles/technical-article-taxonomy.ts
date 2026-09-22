@@ -7,6 +7,7 @@ import type {
   TechnicalArticleTaxonomyPrimary,
 } from "./technical-articles.types";
 import { rplSelectionArticleSlug, rplSelectionRelationKeys } from "./rpl-selection-links";
+import { valvelessMeteringPumpOverviewSlug } from "./what-is-a-valveless-metering-pump.article";
 
 type LocalizedLabel = Record<TechnicalArticleLocale, string>;
 
@@ -237,6 +238,24 @@ interface ArticleClassificationDefinition {
 }
 
 const articleClassifications: Record<string, ArticleClassificationDefinition> = {
+  [valvelessMeteringPumpOverviewSlug]: {
+    primaryCategory: "pumps",
+    secondaryCategory: "valveless-metering-pump",
+    tagKeys: ["dosing", "selection", "testing-validation"],
+    localizedLiteralTags: {
+      "zh-CN": ["无阀计量泵", "工作原理", "RPL", "DRPL"],
+      en: ["Valveless metering pump", "Working principle", "RPL", "DRPL"],
+    },
+    relatedProducts: [
+      "RPL-P4",
+      "RPL-P6.35",
+      "RPL-P15",
+      "DRPL-0109",
+      "DRPL-0119",
+    ],
+    relationKeys: ["series:rpl", "series:drpl"],
+    relationPriority: 150,
+  },
   [rplSelectionArticleSlug]: {
     primaryCategory: "pumps", secondaryCategory: "valveless-metering-pump",
     tagKeys: ["dosing", "selection", "testing-validation"],

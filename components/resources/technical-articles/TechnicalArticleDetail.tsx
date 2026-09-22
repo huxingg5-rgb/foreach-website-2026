@@ -2,6 +2,11 @@ import Link from "next/link";
 import { getPumpApplicationArticleCopy, getPumpApplicationChildArticles } from "@/data/resources/technical-articles/pump-application-articles.article";
 import { getPumpDiagnosticsArticleCopy } from "@/data/resources/technical-articles/pump-diagnostics-articles.article";
 import { getRplSelectionArticleCopy, getRplSelectionFaqItems, getRplSelectionProducts } from "@/data/resources/technical-articles/rpl-valveless-metering-pump-selection.article";
+import {
+  getValvelessMeteringPumpOverviewCopy,
+  getValvelessMeteringPumpOverviewNavigation,
+  getValvelessMeteringPumpOverviewProducts,
+} from "@/data/resources/technical-articles/what-is-a-valveless-metering-pump.article";
 import RplSelectionArticle from "./articles/RplSelectionArticle";
 import rplArticleStyles from "./articles/RplSelectionArticle.module.css";
 import { rplSelectionArticleSlug } from "@/data/resources/technical-articles/rpl-selection-links";
@@ -14,7 +19,7 @@ import { getCanonicalUrl } from "@/lib/seo/site-url";
    说明：
    1. 技术文章仍然保留自己的栏目和 URL
    2. 原有文章详情页继续复用新闻中心 NewsArticleClient
-   3. 中文 RPL 选型文章单独启用隔离的新模板，不改变旧文章
+   3. RPL 选型文章与无阀计量泵基础文章复用隔离模板
    4. 面包屑只显示栏目层级，不显示完整文章标题
 ========================================================= */
 
@@ -402,6 +407,8 @@ export default function TechnicalArticleDetail({
   const locale = normalizeLocale(pageData.locale);
   const listHref = getArticleListHref(locale);
   const rplSelectionCopy = getRplSelectionArticleCopy(article.slug, locale);
+  const valvelessMeteringPumpOverviewCopy =
+    getValvelessMeteringPumpOverviewCopy(article.slug, locale);
   const pumpDiagnosticsCopy = getPumpDiagnosticsArticleCopy(article.slug, locale);
   // Both batches share the existing engineering body, CTA and FAQ schema renderer.
   const pumpApplicationCopy = getPumpApplicationArticleCopy(article.slug, locale)
@@ -785,7 +792,7 @@ export default function TechnicalArticleDetail({
     pageData,
     article,
     locale,
-    rplSelectionCopy ? getRplSelectionFaqItems(locale) : pumpApplicationCopy ? [...pumpApplicationCopy.faqItems] : pistonPumpArticleCopy?.faq
+    valvelessMeteringPumpOverviewCopy ? [...valvelessMeteringPumpOverviewCopy.faqItems] : rplSelectionCopy ? getRplSelectionFaqItems(locale) : pumpApplicationCopy ? [...pumpApplicationCopy.faqItems] : pistonPumpArticleCopy?.faq
       ? [...pistonPumpArticleCopy.faq]
       : isPistonPumpHeadMaterialArticle
       ? pistonPumpHeadMaterialArticleFaqZh
@@ -804,6 +811,7 @@ export default function TechnicalArticleDetail({
                 : [],
     structuredDataSubject,
     rplSelectionCopy !== null ||
+      valvelessMeteringPumpOverviewCopy !== null ||
       pumpApplicationCopy !== null ||
       isPistonPumpHeadMaterialArticle ||
       isPistonPumpAccuracyArticle ||
@@ -833,6 +841,49 @@ export default function TechnicalArticleDetail({
             videos={[]}
             articles={[]}
             products={getRplSelectionProducts(locale).map(product => ({
+              id: product.name,
+              title: product.name,
+              href: product.href,
+              imageSrc: product.image,
+              imageAlt: product.alt,
+            }))}
+          />
+          <NewsArticlePager locale={locale} previousArticle={previousArticle} nextArticle={nextArticle} contentType="article" />
+        </div>
+      </div>
+    );
+  }
+
+  if (valvelessMeteringPumpOverviewCopy) {
+    return (
+      <div className={`newsArticleDetailPage ${rplArticleStyles.pageSurface}`} data-locale={locale} data-article-slug={article.slug} lang={locale}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
+        />
+        <div className="newsArticleBreadcrumbShell">
+          <BreadcrumbComponent {...breadcrumbData} />
+        </div>
+        <RplSelectionArticle
+          copy={valvelessMeteringPumpOverviewCopy}
+          date={article.date}
+          locale={locale}
+          listHref={listHref}
+          backText={getBackText(locale)}
+          articleId={article.slug}
+          sectionNavigation={getValvelessMeteringPumpOverviewNavigation(locale)}
+          faq={{
+            id: "faq",
+            label: valvelessMeteringPumpOverviewCopy.faqTitle,
+            items: valvelessMeteringPumpOverviewCopy.faqItems,
+          }}
+        />
+        <div className={newsArticleStyles.page} data-rpl-article-footer>
+          <RelatedResourcesLoader
+            locale={locale}
+            videos={[]}
+            articles={[]}
+            products={getValvelessMeteringPumpOverviewProducts(locale).map(product => ({
               id: product.name,
               title: product.name,
               href: product.href,

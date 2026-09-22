@@ -4,6 +4,7 @@ import { Fragment, type ReactNode } from "react";
 import type {
   DiaphragmPumpEngineeringArticleCopy,
   EngineeringArticleBlock,
+  EngineeringArticleFaqItem,
 } from "@/data/resources/technical-articles/diaphragm-pump-engineering-article.types";
 import { ArticleEnhancements, ArticleShare } from "./RplSelectionArticleControls";
 import type { TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
@@ -14,6 +15,17 @@ import styles from "./RplSelectionArticle.module.css";
 
 const sectionIds = ["parameters", "models", "task", "validation", "faq"] as const;
 
+export type RplArticleSectionNavigationItem = {
+  id: string;
+  label: string;
+};
+
+type RplArticleFaq = {
+  id: string;
+  label: string;
+  items: readonly EngineeringArticleFaqItem[];
+};
+
 function renderBlock(block: EngineeringArticleBlock, key: number, headerLinks?: ReadonlyMap<string, string>): ReactNode {
   switch (block.type) {
     case "paragraph": return <p key={key}>{block.text}</p>;
@@ -21,17 +33,28 @@ function renderBlock(block: EngineeringArticleBlock, key: number, headerLinks?: 
     case "formula": return <div className={styles.formula} key={key}><p>{block.expression}</p>{block.note && <p className={styles.note}>{block.note}</p>}</div>;
     case "notice": return <aside className={styles.notice} key={key}>{block.label && <p>{block.label}</p>}<p>{block.text}</p></aside>;
     case "figure": return (
-      <figure key={key}>
-        <Image src={block.src} alt={block.alt} width={block.width} height={block.height} sizes="(max-width: 600px) 28vw, 255px" />
+      <figure key={key} data-square={block.width === block.height ? "true" : undefined}>
+        <Image
+          src={block.src}
+          alt={block.alt}
+          width={block.width}
+          height={block.height}
+          sizes={block.width === block.height ? "(max-width: 700px) 100vw, 620px" : "(max-width: 820px) 100vw, 790px"}
+        />
         <figcaption>{block.caption}</figcaption>
       </figure>
     );
     case "table": return renderTable(block, key, undefined, headerLinks);
     case "list": {
       const List = block.ordered ? "ol" : "ul";
-      return <List key={key}>{block.items.map((item, index) => <li key={index}>{item}</li>)}</List>;
+      return <List className={block.ordered ? styles.numberedList : undefined} key={key}>{block.items.map((item, index) => <li key={index}>{item}</li>)}</List>;
     }
-    case "links": return <p key={key}>{block.items.map((item, index) => <Fragment key={index}>{item.prefix}<a href={item.href}>{item.label}</a>{item.suffix}</Fragment>)}</p>;
+    case "links": {
+      if (block.ordered) {
+        return <ol className={`${styles.numberedList} ${styles.resourceList}`} key={key}>{block.items.map((item, index) => <li key={index}>{item.prefix}<a href={item.href}>{item.label}</a>{item.suffix}</li>)}</ol>;
+      }
+      return <p key={key}>{block.items.map((item, index) => <Fragment key={index}>{item.prefix}<a href={item.href}>{item.label}</a>{item.suffix}</Fragment>)}</p>;
+    }
   }
 }
 
@@ -100,17 +123,43 @@ function renderSection(blocks: readonly EngineeringArticleBlock[], id: string, m
   return renderBlocks(blocks, id === "models" ? modelLinks : undefined);
 }
 
-/** Opt-in template for this RPL article in six languages. Other article layouts remain intact. */
-export default function RplSelectionArticle({ copy, date, locale, listHref, backText }: {
+/** Opt-in editorial template first used by the RPL guide and reusable by selected technical articles. */
+export default function RplSelectionArticle({
+  copy,
+  date,
+  locale,
+  listHref,
+  backText,
+  articleId = "rpl-selection",
+  sectionNavigation: suppliedSectionNavigation,
+  faq,
+  modelLinks: suppliedModelLinks,
+}: {
   copy: DiaphragmPumpEngineeringArticleCopy;
   date: string;
   locale: TechnicalArticleLocale;
   listHref: string;
   backText: string;
+  articleId?: string;
+  sectionNavigation?: readonly RplArticleSectionNavigationItem[];
+  faq?: RplArticleFaq;
+  modelLinks?: ReadonlyMap<string, string>;
 }) {
   const ui = rplArticleUi[locale];
-  const modelLinks = new Map(getRplSelectionProducts(locale).map(product => [product.name, product.href]));
-  const sectionNavigation = sectionIds.map((id, index) => ({ id, label: ui.sections[index] }));
+  const defaultModelLinks = new Map(getRplSelectionProducts(locale).map(product => [product.name, product.href]));
+  const modelLinks = suppliedModelLinks ?? defaultModelLinks;
+  const defaultSectionNavigation = sectionIds.map((id, index) => ({ id, label: ui.sections[index] }));
+  const sectionNavigation = copy.sections.map((section, index) =>
+    suppliedSectionNavigation?.[index] ??
+      defaultSectionNavigation[index] ?? {
+        id: `section-${index + 1}`,
+        label: section.title,
+      },
+  );
+  const fullNavigation = faq?.items.length
+    ? [...sectionNavigation, { id: faq.id, label: faq.label }]
+    : sectionNavigation;
+  const titleId = `${articleId}-article-title`;
   const formattedDate = new Intl.DateTimeFormat(locale, { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" }).format(new Date(`${date}T00:00:00Z`));
   return (
     <>
@@ -119,10 +168,10 @@ export default function RplSelectionArticle({ copy, date, locale, listHref, back
           {`< ${backText}`}
         </Link>
       </div>
-    <main className={styles.root} id="rpl-selection-article" data-editorial-article>
-      <article className={styles.layout} aria-labelledby="rpl-article-title">
+    <main className={styles.root} id={`${articleId}-article`} data-editorial-article>
+      <article className={styles.layout} aria-labelledby={titleId}>
         <header className={styles.header} data-article-header>
-          <h1 id="rpl-article-title">{copy.metadata.title}</h1>
+          <h1 id={titleId}>{copy.metadata.title}</h1>
           <time className={styles.date} dateTime={date}>{formattedDate}</time>
           <div className={`${styles.meta} ${locale === "zh-CN" ? styles.metaWithoutShare : ""}`}>
             <span className={styles.rule} data-meta-rule aria-hidden="true" />
@@ -133,7 +182,7 @@ export default function RplSelectionArticle({ copy, date, locale, listHref, back
         <aside className={styles.sidebar} data-article-sidebar>
           <nav className={styles.toc} aria-label={ui.contents}>
             <p className={styles.tocLabel} data-toc-label>{ui.contents}</p>
-            {sectionNavigation.map((item, index) => <a key={item.id} href={`#${item.id}`} data-toc-link aria-current={index === 0 ? "location" : undefined}><span>{String(index + 1).padStart(2, "0")}</span>{item.label}</a>)}
+            {fullNavigation.map((item, index) => <a key={item.id} href={`#${item.id}`} data-toc-link aria-current={index === 0 ? "location" : undefined}><span>{String(index + 1).padStart(2, "0")}</span>{item.label}</a>)}
           </nav>
         </aside>
         <div className={styles.body} data-article-body>
@@ -141,9 +190,25 @@ export default function RplSelectionArticle({ copy, date, locale, listHref, back
             const id = sectionNavigation[index].id;
             return <section id={id} key={id} aria-labelledby={`${id}-title`}><h2 className={styles.numberedHeading} id={`${id}-title`}><span className={styles.sectionNumber}>{String(index + 1).padStart(2, "0")}</span><span>{section.title}</span></h2>{renderSection(section.blocks, id, modelLinks)}</section>;
           })}
+          {faq?.items.length ? (
+            <section id={faq.id} aria-labelledby={`${faq.id}-title`}>
+              <h2 className={styles.numberedHeading} id={`${faq.id}-title`}>
+                <span className={styles.sectionNumber}>{String(copy.sections.length + 1).padStart(2, "0")}</span>
+                <span>{faq.label}</span>
+              </h2>
+              <div className={styles.faq}>
+                {faq.items.map((item, index) => (
+                  <details key={item.question} open={index === 0}>
+                    <summary>{item.question}</summary>
+                    <p>{item.answer}</p>
+                  </details>
+                ))}
+              </div>
+            </section>
+          ) : null}
         </div>
       </article>
-      <ArticleEnhancements />
+      <ArticleEnhancements articleId={articleId} locale={locale} />
     </main>
     </>
   );

@@ -44,32 +44,50 @@ export function ArticleShare({ title, locale }: { title: string; locale: Technic
 }
 
 // Progressive enhancement only: article text, navigation and FAQ work without JavaScript.
-export function ArticleEnhancements() {
+export function ArticleEnhancements({ articleId, locale }: { articleId: string; locale: TechnicalArticleLocale }) {
   useEffect(() => {
-    const root = document.getElementById("rpl-selection-article");
+    const root = document.getElementById(`${articleId}-article`);
     if (!root) return;
     const sections = [...root.querySelectorAll<HTMLElement>("[data-article-body] > section")];
     const links = [...root.querySelectorAll<HTMLAnchorElement>("[data-toc-link]")];
     let frame = 0;
-    function updateActive() {
-      frame = 0;
-      const threshold = (parseFloat(getComputedStyle(root!).getPropertyValue("--site-header-height")) || 90) + 48;
-      let active = sections[0]?.id;
-      for (const section of sections) if (section.getBoundingClientRect().top <= threshold) active = section.id;
+    function setActive(active?: string) {
       links.forEach(link => {
         if (link.hash === `#${active}`) link.setAttribute("aria-current", "location");
         else link.removeAttribute("aria-current");
       });
     }
+    function updateActive() {
+      frame = 0;
+      const threshold = (parseFloat(getComputedStyle(root!).getPropertyValue("--site-header-height")) || 90) + 48;
+      let active = sections[0]?.id;
+      for (const section of sections) if (section.getBoundingClientRect().top <= threshold) active = section.id;
+      setActive(active);
+    }
+    function updateFromHash() {
+      const active = links.find(link => link.hash === window.location.hash)?.hash.slice(1);
+      if (active) {
+        setActive(active);
+        document.getElementById(active)?.scrollIntoView({ block: "start" });
+      }
+      else updateActive();
+    }
     function onScroll() { if (!frame) frame = requestAnimationFrame(updateActive); }
-    updateActive();
+    function onHashChange() {
+      if (frame) cancelAnimationFrame(frame);
+      frame = 0;
+      updateFromHash();
+    }
+    updateFromHash();
     window.addEventListener("resize", onScroll);
     window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("hashchange", onHashChange);
     return () => {
       window.removeEventListener("resize", onScroll);
       window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("hashchange", onHashChange);
       cancelAnimationFrame(frame);
     };
-  }, []);
+  }, [articleId, locale]);
   return null;
 }

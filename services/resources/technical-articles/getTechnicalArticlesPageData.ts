@@ -1,6 +1,7 @@
 import { getPumpApplicationArticles } from "@/data/resources/technical-articles/pump-application-articles.article";
 import { getPumpDiagnosticsArticles } from "@/data/resources/technical-articles/pump-diagnostics-articles.article";
 import { getRplSelectionArticles } from "@/data/resources/technical-articles/rpl-valveless-metering-pump-selection.article";
+import { getValvelessMeteringPumpOverviewArticles } from "@/data/resources/technical-articles/what-is-a-valveless-metering-pump.article";
 /* =========================================================
    getTechnicalArticlesPageData.ts
    恒永达官网｜技术文章列表页数据服务层
@@ -306,6 +307,7 @@ function getTechnicalArticlesSourcePageData(
 // Use the assembled Chinese list so new articles keep the same position in every locale.
 const technicalArticleOrder = new Map(
   [
+    ...getValvelessMeteringPumpOverviewArticles("zh-CN"),
     ...getRplSelectionArticles("zh-CN"),
     ...getPumpDiagnosticsArticles("zh-CN"),
     ...getPumpApplicationArticles("zh-CN"),
@@ -323,7 +325,7 @@ export function getTechnicalArticlesPageData(
     taxonomy: getTechnicalArticleTaxonomy(locale),
     // Keep the withdrawn article in the source archive, outside all public routes and indexes.
     articles: classifyTechnicalArticles(
-      [...getRplSelectionArticles(locale), ...getPumpDiagnosticsArticles(locale), ...getPumpApplicationArticles(locale), ...sourcePageData.articles]
+      [...getValvelessMeteringPumpOverviewArticles(locale), ...getRplSelectionArticles(locale), ...getPumpDiagnosticsArticles(locale), ...getPumpApplicationArticles(locale), ...sourcePageData.articles]
         .filter(
           (article) => article.slug !== "pressure-flow-material-compatibility",
         )

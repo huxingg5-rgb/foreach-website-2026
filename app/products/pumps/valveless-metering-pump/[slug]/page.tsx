@@ -181,14 +181,19 @@ export default async function ValvelessPumpDetailPage({
   const data = renderLocale === "zh"
     ? applyValvelessPumpChineseCopy(toClientData(detail), "zh")
     : applyValvelessPumpLocalizedCopy(toClientData(detail), renderLocale);
+  const articleRelationKeys = rplSelectionModelSlugs.includes(slug)
+    ? rplSelectionRelationKeys
+    : ["drpl-0109", "drpl-0119"].includes(slug)
+      ? ["series:drpl"]
+      : [];
   return (
     <ProductDetailClient
       data={data as any}
-      afterContent={rplSelectionModelSlugs.includes(slug) ? (
+      afterContent={articleRelationKeys.length ? (
         <RelatedResources
           sourceType="product"
           sourceSlug={slug}
-          relationKeys={rplSelectionRelationKeys}
+          relationKeys={articleRelationKeys}
           locale={getRplSelectionGuide(renderLocale).locale}
         />
       ) : undefined}
