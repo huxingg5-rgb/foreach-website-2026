@@ -21,6 +21,7 @@ import { getTechnicalArticlesPageData } from "@/services/resources/technical-art
 
 import {
   getTechnicalArticleData,
+  getTechnicalArticlePagerData,
   getTechnicalArticleSlugs,
 } from "@/services/resources/technical-articles/getTechnicalArticleData";
 import type { TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
@@ -84,102 +85,6 @@ interface TechnicalArticleDetailPageProps {
   params: Promise<{
     slug: string;
   }>;
-}
-
-/* =========================================================
-   上一篇 / 下一篇字段
-========================================================= */
-
-type TechnicalPagerItem = {
-  title: string;
-  href: string;
-  date?: string;
-};
-
-/* =========================================================
-   获取上一篇 / 下一篇
-========================================================= */
-
-function getTechnicalArticlePagerData(
-  currentSlug: string
-): {
-  previousArticle: TechnicalPagerItem | null;
-  nextArticle: TechnicalPagerItem | null;
-} {
-  const slugs =
-    getTechnicalArticleSlugs(
-      TECHNICAL_ARTICLE_LOCALE
-    );
-
-  const currentIndex =
-    slugs.findIndex(
-      (item) => item === currentSlug
-    );
-
-  if (currentIndex < 0) {
-    return {
-      previousArticle: null,
-      nextArticle: null,
-    };
-  }
-
-  const previousSlug =
-    currentIndex > 0
-      ? slugs[currentIndex - 1]
-      : null;
-
-  const nextSlug =
-    currentIndex < slugs.length - 1
-      ? slugs[currentIndex + 1]
-      : null;
-
-  const previousArticleData =
-    previousSlug
-      ? getTechnicalArticleData(
-          TECHNICAL_ARTICLE_LOCALE,
-          previousSlug
-        )
-      : null;
-
-  const nextArticleData =
-    nextSlug
-      ? getTechnicalArticleData(
-          TECHNICAL_ARTICLE_LOCALE,
-          nextSlug
-        )
-      : null;
-
-  return {
-    previousArticle:
-      previousSlug &&
-      previousArticleData
-        ? {
-            title:
-              previousArticleData.title,
-
-            href:
-              `/resources/technical-articles/${previousSlug}`,
-
-            date:
-              previousArticleData.date,
-          }
-        : null,
-
-    nextArticle:
-      nextSlug &&
-      nextArticleData
-        ? {
-            title:
-              nextArticleData.title,
-
-            href:
-              `/resources/technical-articles/${nextSlug}`,
-
-            date:
-              nextArticleData.date,
-          }
-        : null,
-  };
 }
 
 /* =========================================================
@@ -282,7 +187,7 @@ export default async function TechnicalArticleDetailPage({
     previousArticle,
     nextArticle,
   } =
-    getTechnicalArticlePagerData(slug);
+    getTechnicalArticlePagerData(TECHNICAL_ARTICLE_LOCALE, slug);
 
   return (
     <TechnicalArticleDetail

@@ -6,6 +6,8 @@ import type {
   TechnicalArticleSecondaryCategory,
   TechnicalArticleTaxonomyPrimary,
 } from "./technical-articles.types";
+import { rplSelectionArticleSlug, rplSelectionRelationKeys } from "./rpl-selection-links";
+import { valvelessMeteringPumpOverviewSlug } from "./what-is-a-valveless-metering-pump.article";
 
 type LocalizedLabel = Record<TechnicalArticleLocale, string>;
 
@@ -29,6 +31,7 @@ const taxonomyStructure: ReadonlyArray<{
     children: [
       "miniature-diaphragm-pumps",
       "plunger-pumps",
+      "valveless-metering-pump",
       "syringe-pumps",
       "pipetting-pumps",
     ],
@@ -132,6 +135,7 @@ const secondaryLabels: Record<
 > = {
   "miniature-diaphragm-pumps": localized("微型隔膜泵", "Miniature Diaphragm Pumps", "Bombas miniatura de diafragma", "Pompes miniatures à membrane", "소형 다이어프램 펌프", "Миниатюрные мембранные насосы"),
   "plunger-pumps": localized("柱塞泵", "Piston Pump", "Bombas de pistón", "Pompes à piston", "피스톤 펌프", "Поршневые насосы"),
+  "valveless-metering-pump": localized("无阀计量泵", "Valveless Metering Pump", "Bomba dosificadora sin válvulas", "Pompe doseuse sans valve", "무밸브 정량 펌프", "Бесклапанный дозирующий насос"),
   "syringe-pumps": localized("注射泵", "Syringe Pumps", "Bombas de jeringa", "Pompes seringues", "시린지 펌프", "Шприцевые насосы"),
   "pipetting-pumps": localized("移液泵", "Pipetting Pumps", "Bombas de pipeteo", "Pompes de pipetage", "피펫팅 펌프", "Пипетирующие насосы"),
   "solenoid-valves": localized("电磁阀", "Solenoid Valves", "Válvulas solenoides", "Électrovannes", "솔레노이드 밸브", "Электромагнитные клапаны"),
@@ -227,12 +231,45 @@ interface ArticleClassificationDefinition {
   secondaryCategory: TechnicalArticleSecondaryCategory;
   tagKeys: readonly TechnicalArticleTagKey[];
   literalTags?: readonly string[];
+  localizedLiteralTags?: Partial<Record<TechnicalArticleLocale, readonly string[]>>;
   relatedProducts: readonly string[];
   relationKeys?: readonly string[];
   relationPriority?: number;
 }
 
 const articleClassifications: Record<string, ArticleClassificationDefinition> = {
+  [valvelessMeteringPumpOverviewSlug]: {
+    primaryCategory: "pumps",
+    secondaryCategory: "valveless-metering-pump",
+    tagKeys: ["dosing", "selection", "testing-validation"],
+    localizedLiteralTags: {
+      "zh-CN": ["无阀计量泵", "工作原理", "RPL", "DRPL"],
+      en: ["Valveless metering pump", "Working principle", "RPL", "DRPL"],
+    },
+    relatedProducts: [
+      "RPL-P4",
+      "RPL-P6.35",
+      "RPL-P15",
+      "DRPL-0109",
+      "DRPL-0119",
+    ],
+    relationKeys: ["series:rpl", "series:drpl"],
+    relationPriority: 150,
+  },
+  [rplSelectionArticleSlug]: {
+    primaryCategory: "pumps", secondaryCategory: "valveless-metering-pump",
+    tagKeys: ["dosing", "selection", "testing-validation"],
+    localizedLiteralTags: {
+      "zh-CN": ["RPL", "无阀计量泵"],
+      en: ["RPL", "Valveless metering pump"],
+      es: ["RPL", "Bomba dosificadora sin válvulas"],
+      fr: ["RPL", "Pompe doseuse sans clapet"],
+      ko: ["RPL", "무밸브 정량펌프"],
+      ru: ["RPL", "Бесклапанный дозирующий насос"],
+    },
+    relatedProducts: ["RPL-P4", "RPL-P6.35", "RPL-P15"],
+    relationKeys: rplSelectionRelationKeys,
+  },
   "fluid-resistance-calculator-liquid-path-design-guide": { primaryCategory: "general-fluidics", secondaryCategory: "tubing-resistance-pressure-drop", tagKeys: ["calculation", "pressure-drop", "tubing-resistance", "selection"], relatedProducts: [] },
   "foreach-miniature-diaphragm-pump-oem-integration": { primaryCategory: "applications-solutions", secondaryCategory: "oem-fluidic-systems", tagKeys: ["oem-integration", "selection", "fluidic-system", "testing-validation"], relatedProducts: ["DPL30", "DPL60", "DPL30H", "DPGL800"] },
   "piston-pump-air-bubbles-dispensing-error": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "dosing", "troubleshooting", "testing-validation"], relatedProducts: ["EA", "EAS"] },
@@ -356,7 +393,7 @@ export function classifyTechnicalArticles(
       secondaryCategory: classification.secondaryCategory,
       tags: [
         ...classification.tagKeys.map((tagKey) => tagLabels[tagKey][locale]),
-        ...(classification.literalTags ?? []),
+        ...(classification.localizedLiteralTags?.[locale] ?? classification.literalTags ?? []),
       ],
       relatedProducts: [...classification.relatedProducts],
     };

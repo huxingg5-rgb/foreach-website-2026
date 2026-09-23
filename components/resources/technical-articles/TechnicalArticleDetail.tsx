@@ -1,14 +1,29 @@
 import Link from "next/link";
 import { getPumpApplicationArticleCopy, getPumpApplicationChildArticles } from "@/data/resources/technical-articles/pump-application-articles.article";
 import { getPumpDiagnosticsArticleCopy } from "@/data/resources/technical-articles/pump-diagnostics-articles.article";
+import { getRplSelectionArticleCopy, getRplSelectionFaqItems, getRplSelectionProducts } from "@/data/resources/technical-articles/rpl-valveless-metering-pump-selection.article";
+import {
+  getValvelessMeteringPumpOverviewCopy,
+  getValvelessMeteringPumpOverviewNavigation,
+  getValvelessMeteringPumpOverviewProducts,
+} from "@/data/resources/technical-articles/what-is-a-valveless-metering-pump.article";
+import {
+  getPistonPumpRplStyleArticleCopy,
+  getPistonPumpRplStyleNavigation,
+} from "@/data/resources/technical-articles/piston-pump-rpl-style-articles.zh";
+import RplSelectionArticle from "./articles/RplSelectionArticle";
+import rplArticleStyles from "./articles/RplSelectionArticle.module.css";
+import { rplSelectionArticleSlug } from "@/data/resources/technical-articles/rpl-selection-links";
+import { getRplSelectionSourceHrefs } from "@/data/resources/technical-articles/rpl-selection-sources";
+import { getCanonicalUrl } from "@/lib/seo/site-url";
 /* =========================================================
    TechnicalArticleDetail.tsx
    恒永达官网｜技术文章详情页适配组件
 
    说明：
    1. 技术文章仍然保留自己的栏目和 URL
-   2. 打开后的详情页直接复用新闻中心 NewsArticleClient
-   3. 不再维护独立的技术文章详情页样式
+   2. 原有文章详情页继续复用新闻中心 NewsArticleClient
+   3. RPL 选型文章与指定柱塞泵文章启用同一套隔离模板
    4. 面包屑只显示栏目层级，不显示完整文章标题
 ========================================================= */
 
@@ -18,7 +33,9 @@ import { legacyMotionArticles } from "@/data/resources/technical-articles/legacy
 
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
 import RelatedResources from "@/components/common/related-resources/RelatedResources";
-import NewsArticleClient from "@/components/resources/news/NewsArticleClient";
+import NewsArticleClient, { NewsArticlePager } from "@/components/resources/news/NewsArticleClient";
+import newsArticleStyles from "@/components/resources/news/NewsArticleClient.module.css";
+import RelatedResourcesLoader from "@/components/common/related-resources/RelatedResourcesLoader";
 import BrushlessDiaphragmPumpWiringArticle from "@/components/resources/technical-articles/articles/BrushlessDiaphragmPumpWiringArticle";
 import CvKvMicrofluidicsArticle from "@/components/resources/technical-articles/articles/CvKvMicrofluidicsArticle";
 import DiaphragmPumpEngineeringArticle, { EngineeringArticleContent } from "@/components/resources/technical-articles/articles/DiaphragmPumpEngineeringArticle";
@@ -96,8 +113,8 @@ export type TechnicalArticlePagerItem = {
 interface TechnicalArticleDetailProps {
   pageData: TechnicalArticlesPageData;
   article: ClassifiedTechnicalArticleItem;
-  previousArticle?: TechnicalArticlePagerItem | null;
-  nextArticle?: TechnicalArticlePagerItem | null;
+  previousArticle: TechnicalArticlePagerItem | null;
+  nextArticle: TechnicalArticlePagerItem | null;
 }
 
 type SharedComponentProps = Record<string, unknown>;
@@ -152,14 +169,19 @@ function buildTechnicalArticleStructuredData(
     article.seoDescription ?? article.summary ?? "",
   ).trim();
   const categoryLabel = getTechnicalArticleCategoryPath(locale, article);
+  const rplSources = article.slug === rplSelectionArticleSlug
+    ? getRplSelectionSourceHrefs(locale)
+    : null;
+  // Match the RPL page's canonical URL policy without changing other articles.
+  const structuredUrl = rplSources ? getCanonicalUrl : toAbsoluteTechnicalArticleUrl;
   const breadcrumbItems = pageData.breadcrumbs.map((item, index) => ({
     "@type": "ListItem",
     position: index + 1,
     name: item.label,
     ...(item.href
-      ? { item: toAbsoluteTechnicalArticleUrl(item.href) }
+      ? { item: structuredUrl(item.href) }
       : index === pageData.breadcrumbs.length - 1
-        ? { item: toAbsoluteTechnicalArticleUrl(getArticleListHref(locale)) }
+        ? { item: structuredUrl(getArticleListHref(locale)) }
         : {}),
   }));
 
@@ -189,6 +211,7 @@ function buildTechnicalArticleStructuredData(
     inLanguage: locale,
     articleSection: categoryLabel,
     isAccessibleForFree: true,
+    ...(rplSources ? { citation: [getCanonicalUrl(rplSources.product), getCanonicalUrl(rplSources.datasheet)] } : {}),
     ...(subject?.about.length
       ? {
           about: subject.about.map((name) => ({
@@ -387,7 +410,14 @@ export default function TechnicalArticleDetail({
 }: TechnicalArticleDetailProps) {
   const locale = normalizeLocale(pageData.locale);
   const listHref = getArticleListHref(locale);
+  const rplSelectionCopy = getRplSelectionArticleCopy(article.slug, locale);
+  const pistonPumpRplStyleCopy = getPistonPumpRplStyleArticleCopy(
+    article.slug,
+    locale,
+  );
   const pumpDiagnosticsCopy = getPumpDiagnosticsArticleCopy(article.slug, locale);
+  const valvelessMeteringPumpOverviewCopy =
+    getValvelessMeteringPumpOverviewCopy(article.slug, locale);
   // Both batches share the existing engineering body, CTA and FAQ schema renderer.
   const pumpApplicationCopy = getPumpApplicationArticleCopy(article.slug, locale)
     ?? pumpDiagnosticsCopy;
@@ -766,29 +796,42 @@ export default function TechnicalArticleDetail({
                         }
                       : undefined;
 
+  const structuredDataFaqItems = pistonPumpRplStyleCopy
+    ? [...pistonPumpRplStyleCopy.faqItems]
+    : rplSelectionCopy
+      ? getRplSelectionFaqItems(locale)
+      : valvelessMeteringPumpOverviewCopy
+        ? [...valvelessMeteringPumpOverviewCopy.faqItems]
+      : pumpApplicationCopy
+        ? [...pumpApplicationCopy.faqItems]
+        : pistonPumpArticleCopy?.faq
+      ? [...pistonPumpArticleCopy.faq]
+      : isPistonPumpHeadMaterialArticle
+        ? pistonPumpHeadMaterialArticleFaqZh
+        : isPistonPumpAccuracyArticle
+          ? pistonPumpAccuracyArticleFaqZh
+          : isPrecisionPistonPumpArticle
+            ? precisionPistonPumpArticleFaqZh
+            : isDpl30Article
+              ? getDpl30ArticleFaq(locale)
+              : isDpl60Article
+                ? getDpl60ArticleFaq(locale)
+                : isBrushlessWiringArticle
+                  ? getBrushlessWiringArticleFaq(locale)
+                  : isDiaphragmPumpEngineeringArticle
+                    ? getDiaphragmPumpEngineeringArticleFaq(article.slug, locale)
+                    : [];
+
   const structuredData = buildTechnicalArticleStructuredData(
     pageData,
     article,
     locale,
-    pumpApplicationCopy ? [...pumpApplicationCopy.faqItems] : pistonPumpArticleCopy?.faq
-      ? [...pistonPumpArticleCopy.faq]
-      : isPistonPumpHeadMaterialArticle
-      ? pistonPumpHeadMaterialArticleFaqZh
-      : isPistonPumpAccuracyArticle
-      ? pistonPumpAccuracyArticleFaqZh
-      : isPrecisionPistonPumpArticle
-        ? precisionPistonPumpArticleFaqZh
-        : isDpl30Article
-          ? getDpl30ArticleFaq(locale)
-          : isDpl60Article
-            ? getDpl60ArticleFaq(locale)
-            : isBrushlessWiringArticle
-              ? getBrushlessWiringArticleFaq(locale)
-              : isDiaphragmPumpEngineeringArticle
-                ? getDiaphragmPumpEngineeringArticleFaq(article.slug, locale)
-                : [],
+    structuredDataFaqItems,
     structuredDataSubject,
-    pumpApplicationCopy !== null ||
+    rplSelectionCopy !== null ||
+      valvelessMeteringPumpOverviewCopy !== null ||
+      pistonPumpRplStyleCopy !== null ||
+      pumpApplicationCopy !== null ||
       isPistonPumpHeadMaterialArticle ||
       isPistonPumpAccuracyArticle ||
       isPrecisionPistonPumpArticle ||
@@ -799,6 +842,118 @@ export default function TechnicalArticleDetail({
       ? "TechArticle"
       : "Article",
   );
+
+  if (rplSelectionCopy) {
+    return (
+      <div className={`newsArticleDetailPage ${rplArticleStyles.pageSurface}`} data-locale={locale} data-article-slug={article.slug} lang={locale}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
+        />
+        <div className="newsArticleBreadcrumbShell">
+          <BreadcrumbComponent {...breadcrumbData} />
+        </div>
+        <RplSelectionArticle copy={rplSelectionCopy} date={article.date} locale={locale} listHref={listHref} backText={getBackText(locale)} />
+        <div className={newsArticleStyles.page} data-rpl-article-footer>
+          <RelatedResourcesLoader
+            locale={locale}
+            videos={[]}
+            articles={[]}
+            products={getRplSelectionProducts(locale).map(product => ({
+              id: product.name,
+              title: product.name,
+              href: product.href,
+              imageSrc: product.image,
+              imageAlt: product.alt,
+            }))}
+          />
+          <NewsArticlePager locale={locale} previousArticle={previousArticle} nextArticle={nextArticle} contentType="article" />
+        </div>
+      </div>
+    );
+  }
+
+  if (valvelessMeteringPumpOverviewCopy) {
+    return (
+      <div className={`newsArticleDetailPage ${rplArticleStyles.pageSurface}`} data-locale={locale} data-article-slug={article.slug} lang={locale}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
+        />
+        <div className="newsArticleBreadcrumbShell">
+          <BreadcrumbComponent {...breadcrumbData} />
+        </div>
+        <RplSelectionArticle
+          copy={valvelessMeteringPumpOverviewCopy}
+          date={article.date}
+          locale={locale}
+          listHref={listHref}
+          backText={getBackText(locale)}
+          articleId={article.slug}
+          sectionNavigation={getValvelessMeteringPumpOverviewNavigation(locale)}
+          faq={{
+            id: "faq",
+            label: valvelessMeteringPumpOverviewCopy.faqTitle,
+            items: valvelessMeteringPumpOverviewCopy.faqItems,
+          }}
+        />
+        <div className={newsArticleStyles.page} data-rpl-article-footer>
+          <RelatedResourcesLoader
+            locale={locale}
+            videos={[]}
+            articles={[]}
+            products={getValvelessMeteringPumpOverviewProducts(locale).map(product => ({
+              id: product.name,
+              title: product.name,
+              href: product.href,
+              imageSrc: product.image,
+              imageAlt: product.alt,
+            }))}
+          />
+          <NewsArticlePager locale={locale} previousArticle={previousArticle} nextArticle={nextArticle} contentType="article" />
+        </div>
+      </div>
+    );
+  }
+
+  if (pistonPumpRplStyleCopy) {
+    return (
+      <div className={`newsArticleDetailPage ${rplArticleStyles.pageSurface}`} data-locale={locale} data-article-slug={article.slug} lang={locale}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
+        />
+        <div className="newsArticleBreadcrumbShell">
+          <BreadcrumbComponent {...breadcrumbData} />
+        </div>
+        <RplSelectionArticle
+          copy={pistonPumpRplStyleCopy}
+          date={article.date}
+          locale={locale}
+          listHref={listHref}
+          backText={getBackText(locale)}
+          articleId={article.slug}
+          sectionNavigation={getPistonPumpRplStyleNavigation(article.slug)}
+          faq={{
+            id: "faq",
+            label: pistonPumpRplStyleCopy.faqTitle,
+            items: pistonPumpRplStyleCopy.faqItems,
+          }}
+        />
+        <div className={newsArticleStyles.page} data-rpl-article-footer>
+          <RelatedResources
+            sourceType="article"
+            includeRelatedArticles
+            sourceId={article.id}
+            sourceSlug={article.slug}
+            relationKeys={article.relationKeys}
+            locale={locale}
+          />
+          <NewsArticlePager locale={locale} previousArticle={previousArticle} nextArticle={nextArticle} contentType="article" />
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div
@@ -819,6 +974,7 @@ export default function TechnicalArticleDetail({
 
       <NewsArticleClient
         locale={locale}
+        pagerContentType="article"
         article={adaptedArticle}
         pageData={adaptedPageData}
         previousArticle={previousArticle}

@@ -1,6 +1,11 @@
 "use client";
 
 import { normalizePistonPumpPublicName } from "@/data/products/piston-pump-public-name";
+import {
+  getValvelessPumpPath,
+  localizeValvelessPumpCategoryPath,
+  VALVELESS_PUMP_CATEGORY_LABEL_ZH,
+} from "@/data/products/selection/valveless-pump-routes";
 
 import { Suspense, useCallback, useEffect, useId, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -1143,6 +1148,7 @@ function getText(
 }
 
 function getTaxonomyLabel(locale: SelectionLocale, id: string) {
+  if (id === "valveless-pump") return locale === "zh" ? VALVELESS_PUMP_CATEGORY_LABEL_ZH : getLocalizedFilterOptionLabel("无阀泵", locale);
   const item = selectionTaxonomyItems.find((entry) => entry.id === id);
 
   return getText(locale, item?.label, id);
@@ -2831,9 +2837,7 @@ function makeDetailHref(product: ProductSelectionProduct) {
       .filter(Boolean)
       .pop();
 
-    return slug
-      ? `/products/pumps/valveless-pumps/${slug}`
-      : "/products/pumps/valveless-pumps";
+    return getValvelessPumpPath("zh", slug);
   }
 
   if (isSyringePump) {
@@ -3846,7 +3850,7 @@ export default function ProductSelectionClient({
     selectedFilters.filter01 || []
   )[0];
   const activeProductTypeIntroVariant =
-    locale === "zh" && ["plunger-pump", "valveless-pump", "pipette-pump", "syringe-pump"].includes(activeProductTypeId)
+    activeProductTypeId === "valveless-pump" || (locale === "zh" && ["plunger-pump", "pipette-pump", "syringe-pump"].includes(activeProductTypeId))
       ? activeSeriesFilterValue
       : initialFilters?.filter01?.[0];
   const activeProductTypeIntro =
@@ -3859,7 +3863,7 @@ export default function ProductSelectionClient({
           : getInstrumentCategoryIntro(activeProductTypeId, selectedFilters.filter01?.size === 1 ? activeSeriesFilterValue : undefined, locale)) ||
     getProductTypeIntroByIds(activeCategoryId, activeProductTypeId, locale);
   const activeProductTypeIntroHeading = activeProductTypeIntro?.title || "";
-  const compactSelectionLabel = locale === "zh" ? ({"pipette-pump":"移液泵","syringe-pump":"注射泵","高压阀":"高压阀","high-pressure-valves":"高压阀","电磁阀":"电磁阀","solenoid-valves":"电磁阀","valveless-pump":"无阀泵"} as Record<string,string>)[activeProductTypeId] : undefined;
+  const compactSelectionLabel = activeProductTypeId === "valveless-pump" ? getTaxonomyLabel(locale, activeProductTypeId) : locale === "zh" ? ({"pipette-pump":"移液泵","syringe-pump":"注射泵","高压阀":"高压阀","high-pressure-valves":"高压阀","电磁阀":"电磁阀","solenoid-valves":"电磁阀"} as Record<string,string>)[activeProductTypeId] : undefined;
   const selectedTagItems = useMemo<ProductSelectionSelectedTag[]>(() => {
     const tags: ProductSelectionSelectedTag[] = [];
 
@@ -5061,6 +5065,7 @@ function isFilterOptionActive(
     href: string,
     product?: ProductSelectionProduct,
   ) {
+    href = localizeValvelessPumpCategoryPath(href, locale);
     if (
       locale === "zh" ||
       !href.startsWith("/") ||
@@ -5145,7 +5150,9 @@ function isFilterOptionActive(
     },
     {
       label: pageText.breadcrumbCurrent,
-      ...(compactSelectionLabel ? { href: "/products/" } : {}),
+      ...(compactSelectionLabel
+        ? { href: locale === "zh" ? "/products/" : `/${locale}/products/` }
+        : {}),
     },
     ...(compactSelectionLabel ? [{ label: compactSelectionLabel }] : []),
   ];
@@ -5232,7 +5239,8 @@ function isFilterOptionActive(
                   isPrimaryHeading={
                     activeProductTypeId === "diaphragm-pump" ||
                     activeProductTypeId === "plunger-pump" ||
-                    (locale === "zh" && ["valveless-pump", "pipette-pump", "syringe-pump"].includes(activeProductTypeId))
+                    activeProductTypeId === "valveless-pump" ||
+                    (locale === "zh" && ["pipette-pump", "syringe-pump"].includes(activeProductTypeId))
                   }
                   key={`${activeProductTypeId || "none"}-${
                     activeProductTypeIntroVariant || "default"
@@ -5358,4 +5366,3 @@ function isFilterOptionActive(
 </div>
   );
 }
-

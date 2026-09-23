@@ -163,16 +163,16 @@ export const datasheetZhItems: DatasheetItem[] = [
   {
     id: "rpl-p635-valveless-pump",
     category: "pump",
-    keywords: "RPL-P6.35 无阀泵 valveless pump 微量定量 液体输送",
-    title: "RPL-P6.35 系列无阀泵规格书",
+    keywords: "RPL-P6.35 无阀计量泵 valveless metering pump 试剂分配 滴定加液",
+    title: "RPL-P6.35 无阀计量泵规格书",
     label: "泵系列",
     language: "中文",
     version: "A01",
     update: "2022-03",
-    description: "RPL-P6.35 系列无阀泵适用于自动化分析仪器中的微量定量、加样、滴定与液体输送。",
+    description: "RPL-P6.35 无阀计量泵规格书，涵盖单圈排量、接液材料、接口、安装与驱动配置，用于试剂分配、滴定加液和定量灌装选型。",
     image:
       "/images/products/pumps/valveless-pumps/foreach-rpl-p635-valveless-pump.webp",
-    productHref: "/products/pumps/valveless-pumps",
+    productHref: "/products/pumps/valveless-metering-pump/",
     downloadHref:
       "/downloads/resources/datasheets/zh-CN/Pumps/ps-121b-011-a01-cn-rpl-p635-valveless-pump.pdf",
     actionType: "download",

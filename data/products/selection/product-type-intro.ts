@@ -1,5 +1,6 @@
 import { instrumentIntrosZh, instrumentSeriesIntrosZh } from "./instrument-fluidics-copy.zh";
 import { valvelessPumpIntroZh } from "./valveless-pump-copy.zh";
+import { getValvelessLocaleCopy } from "../detail/valveless-pump-locales";
 import { getPistonPumpIntroCopy } from "./piston-pump-series-copy";
 /* =========================================================
    product-type-intro.ts
@@ -587,6 +588,8 @@ export function getProductTypeIntroByIds(
 
   const activeLocale = getRuntimeLocale(locale);
 
+  if (key === "pumps:valveless-pump") return getValvelessPumpCategoryIntro(undefined, activeLocale);
+
   if (key === "pumps:plunger-pump") {
     const copy = getPistonPumpIntroCopy("category", activeLocale);
     return { ...baseIntro, ...copy, image: { ...baseIntro.image, alt: copy.imageAlt } };
@@ -654,9 +657,11 @@ export function getDiaphragmPumpCategoryIntro(
 }
 
 export function getValvelessPumpCategoryIntro(seriesValue: string | undefined, locale: SelectionLocale): ProductTypeIntroContent | null {
-  if (locale !== "zh") return null;
-  const copy = seriesValue === "RPL 无阀泵" ? valvelessPumpIntroZh.single : seriesValue === "DRPL 双头无阀泵" ? valvelessPumpIntroZh.dual : valvelessPumpIntroZh.category;
-  return { ...copy, image: productTypeIntroMap["pumps:valveless-pump"].image };
+  const localized = locale === "zh" ? valvelessPumpIntroZh : getValvelessLocaleCopy(locale);
+  if (!localized) return null;
+  const copy = seriesValue === "RPL 无阀泵" ? localized.single : seriesValue === "DRPL 双头无阀泵" ? localized.dual : localized.category;
+  const image = productTypeIntroMap["pumps:valveless-pump"].image;
+  return { ...copy, image: locale === "zh" ? image : { ...image, alt: `FOREACH ${copy.title}` } };
 }
 
 export function getInstrumentCategoryIntro(productTypeId:string, seriesValue:string|undefined, locale:SelectionLocale):ProductTypeIntroContent|null {

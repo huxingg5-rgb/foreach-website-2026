@@ -66,6 +66,13 @@ export default function RootLayout({
   return (
     <html lang="zh-CN" suppressHydrationWarning>
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="96x96"
+          href="/favicon-96x96.png"
+        />
         <meta
           name="bytedance-verification-code"
           content="xuvAY4ELXA9YlGkNyt5R"

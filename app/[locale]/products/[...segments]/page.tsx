@@ -54,7 +54,10 @@ import DiaphragmPumpDetailPage, {
 import PipettingPumpDetailPage from "@/app/products/pumps/pipetting-pumps/[slug]/page";
 import PlungerPumpDetailPage from "@/app/products/pumps/piston-pump/[slug]/page";
 import SyringePumpDetailPage from "@/app/products/pumps/syringe-pumps/[slug]/page";
-import ValvelessPumpDetailPage from "@/app/products/pumps/valveless-pumps/[slug]/page";
+import ValvelessPumpDetailPage from "@/app/products/pumps/valveless-metering-pump/[slug]/page";
+import { getValvelessPumpSeoTitle } from "@/data/products/detail/valveless-pump-seo";
+import { getValvelessForeignContent, getValvelessLocaleCopy } from "@/data/products/detail/valveless-pump-locales";
+import { getValvelessPumpLanguageAlternates, VALVELESS_PUMP_CATEGORY_SLUG_INTL, VALVELESS_PUMP_LEGACY_CATEGORY_SLUG } from "@/data/products/selection/valveless-pump-routes";
 import ProbeDetailPage from "@/app/products/probes/[slug]/page";
 import TubingDetailStaticPage from "@/app/products/tubing/_components/TubingDetailStaticPage";
 import ValveDetailPage from "@/app/products/valves/[slug]/page";
@@ -161,6 +164,8 @@ const INTERNATIONAL_PRODUCT_LOCALES: LocaleCode[] = ["en", "es", "fr", "ko", "ru
 
 function getProductRoutesForLocale(_locale: LocaleCode | string) {
   return migrateDiaphragmPumpRouteSegments(allEnglishProductDetailRoutes)
+    .map(segments => segments[0] === "pumps" && segments[1] === VALVELESS_PUMP_LEGACY_CATEGORY_SLUG
+      ? ["pumps", VALVELESS_PUMP_CATEGORY_SLUG_INTL, ...segments.slice(2)] : segments)
     .filter(segments => !getPistonPumpRedirect(`/products/${segments.join("/")}/`));
 }
 
@@ -320,10 +325,18 @@ export async function generateMetadata({
 
   const compactContent = locale === "en" && segments.length === 3 && segments[0] === "pumps" && segments[1] === "piston-pump"
     ? getCompactPumpContent(segments[2], "en") : undefined;
+  const isValvelessRoute = segments[0] === "pumps" && (
+    (segments.length === 2 && segments[1] === VALVELESS_PUMP_CATEGORY_SLUG_INTL) ||
+    (segments.length === 3 && segments[1] === VALVELESS_PUMP_CATEGORY_SLUG_INTL)
+  );
+  const valvelessContent = isValvelessRoute && segments.length === 3 ? getValvelessForeignContent(segments[2], locale) : undefined;
+  const valvelessCategory = isValvelessRoute && segments.length === 2 ? getValvelessLocaleCopy(locale) : undefined;
+  const valvelessSeoTitle = valvelessContent ? getValvelessPumpSeoTitle(segments[2], locale)
+    : valvelessCategory ? `${valvelessCategory.category.title} | FOREACH` : undefined;
   const title = compactContent ? compactContent.seoTitle.replace(/ \| Foreach(?: Technology)?$/i, "") : getRouteTitle(segments);
   const canonicalPath = `/${locale}/products/${segments.join("/")}/`;
   const isDetailRoute = segments.length >= 2;
-  const description = compactContent?.metaDescription || (isDetailRoute
+  const description = valvelessContent?.metaDescription || valvelessCategory?.category.metaDescription || compactContent?.metaDescription || (isDetailRoute
     ? `Explore ${title} specifications, materials, interfaces, model configurations, and fluidic applications from Foreach.`
     : `Explore Foreach ${title} for precision fluid handling in IVD, life science, analytical instrumentation, and laboratory automation.`);
   const keywords = Array.from(
@@ -339,7 +352,9 @@ export async function generateMetadata({
   const productPath = `/products/${segments.join("/")}`;
   // These templates share the body's adapter result instead of a search-index image.
   let productImageData: { mainImage?: string } | null = null;
-  if (segments.length === 2 && segments[0] === "control") {
+  if (valvelessContent) {
+    productImageData = valvelessContent.source;
+  } else if (segments.length === 2 && segments[0] === "control") {
     const detail = getControlModuleDetailBySlug(segments[1]);
     if (detail) productImageData = getControlModuleProductDetailData(detail);
   } else if (
@@ -367,12 +382,12 @@ export async function generateMetadata({
     : undefined;
 
   return {
-    title: compactContent ? { absolute: compactContent.seoTitle } : `${title} | Foreach Technology`,
+    title: valvelessSeoTitle ? { absolute: valvelessSeoTitle } : compactContent ? { absolute: compactContent.seoTitle } : `${title} | Foreach Technology`,
     description,
-    keywords,
+    keywords: isValvelessRoute ? [valvelessContent?.model || valvelessCategory?.categoryName || title, getValvelessLocaleCopy(locale)?.categoryName || title, "FOREACH"] : keywords,
     alternates: {
       canonical: canonicalPath,
-      languages: {
+      languages: isValvelessRoute ? getValvelessPumpLanguageAlternates(segments[2]) : {
         "en-US": `/en/products/${segments.join("/")}/`,
         "es": `/es/products/${segments.join("/")}/`,
         "fr": `/fr/products/${segments.join("/")}/`,
@@ -386,18 +401,18 @@ export async function generateMetadata({
     },
     openGraph: {
       type: "website",
-      locale: "en_US",
+      locale: isValvelessRoute ? ({ en: "en_US", es: "es_ES", fr: "fr_FR", ko: "ko_KR", ru: "ru_RU" }[locale] || "en_US") : "en_US",
       url: canonicalPath,
       siteName: "Foreach Technology",
-      title: `${title} | Foreach Technology`,
+      title: valvelessSeoTitle || `${title} | Foreach Technology`,
       description,
       ...(socialImage
-        ? { images: [{ url: socialImage, alt: title }] }
+        ? { images: [{ url: socialImage, alt: valvelessContent?.imageAlt || valvelessCategory?.category.title || title }] }
         : {}),
     },
     twitter: {
       card: "summary",
-      title: `${title} | Foreach Technology`,
+      title: valvelessSeoTitle || `${title} | Foreach Technology`,
       description,
       ...(socialImage ? { images: [socialImage] } : {}),
     },
@@ -429,7 +444,7 @@ export default async function ProductLocaleRoutePage({
   }
 
   if (segments.length === 2) {
-    const productTypeRoute = resolveProductTypeRoute(category, slug);
+    const productTypeRoute = resolveProductTypeRoute(category, slug, locale);
 
     if (productTypeRoute) {
       return renderSelectionPage({
@@ -513,8 +528,8 @@ export default async function ProductLocaleRoutePage({
       return SyringePumpDetailPage({ params: detailParams });
     }
 
-    if (slug === "valveless-pumps") {
-      return ValvelessPumpDetailPage({ params: detailParams });
+    if (slug === VALVELESS_PUMP_CATEGORY_SLUG_INTL) {
+      return ValvelessPumpDetailPage({ params: detailParams, renderLocale: locale });
     }
   }
 

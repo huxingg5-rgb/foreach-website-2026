@@ -227,7 +227,7 @@ export default function ProductSelectionCard({
     .map((spec) => toDisplayText(spec))
     .filter(Boolean);
   const plungerCardHeading = getProductCardHeading(product, locale);
-  const descriptionHeading = authoredCard?.heading || ((isDiaphragmPumpCard || (locale === "zh" && product.productTypeId === "valveless-pump"))
+  const descriptionHeading = authoredCard?.heading || ((isDiaphragmPumpCard || product.productTypeId === "valveless-pump")
     ? safeSubtitle
     : plungerCardHeading);
   const usesDescriptionHeading = Boolean(descriptionHeading);

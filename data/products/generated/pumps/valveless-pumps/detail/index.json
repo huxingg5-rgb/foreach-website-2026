@@ -866,8 +866,8 @@
                           "label":  "转速",
                           "name":  "转速",
                           "title":  "转速",
-                          "value":  "5–500 rpm",
-                          "content":  "5–500 rpm"
+                          "value":  "5–300 rpm",
+                          "content":  "5–300 rpm"
                       },
                       {
                           "label":  "准确度",
@@ -1024,8 +1024,8 @@
                                    "label":  "转速",
                                    "name":  "转速",
                                    "title":  "转速",
-                                   "value":  "5–500 rpm",
-                                   "content":  "5–500 rpm"
+                                   "value":  "5–300 rpm",
+                                   "content":  "5–300 rpm"
                                },
                                {
                                    "label":  "准确度",
@@ -1134,8 +1134,8 @@
                                                           "label":  "转速",
                                                           "name":  "转速",
                                                           "title":  "转速",
-                                                          "value":  "5–500 rpm",
-                                                          "content":  "5–500 rpm"
+                                                          "value":  "5–300 rpm",
+                                                          "content":  "5–300 rpm"
                                                       },
                                                       {
                                                           "label":  "准确度",

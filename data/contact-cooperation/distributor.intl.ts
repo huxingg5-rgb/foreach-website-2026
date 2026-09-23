@@ -14,6 +14,8 @@
    01. 语言类型
 ========================================================= */
 
+import { getValvelessPumpNames } from "../products/detail/valveless-pump-names";
+
 export type DistributorLocale = "en" | "es" | "fr" | "ko" | "ru";
 
 /* =========================================================
@@ -780,5 +782,8 @@ export function normalizeDistributorLocale(locale?: string): DistributorLocale {
 export function getDistributorPageData(locale?: string): DistributorPageData {
   const normalizedLocale = normalizeDistributorLocale(locale);
 
-  return distributorIntlData[normalizedLocale] || distributorIntlData.en;
-} 
+  const data = distributorIntlData[normalizedLocale] || distributorIntlData.en;
+  return { ...data, products: data.products.map(product => ({ ...product,
+    tags: product.tags.map(tag => tag === "Valveless Pump" ? getValvelessPumpNames(normalizedLocale).categoryName : tag),
+  })) };
+}

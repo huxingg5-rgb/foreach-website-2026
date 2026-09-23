@@ -1,3 +1,4 @@
+import { getValvelessPumpNames } from "@/data/products/detail/valveless-pump-names";
 export type ProductFilterLocale = "zh" | "zh-CN" | "en" | "es" | "fr" | "ko" | "ru";
 
 type FilterOptionLabelMap = Partial<Record<ProductFilterLocale, string>>;
@@ -177,7 +178,7 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
   },
 
   "RPL 单头无阀泵": {
-    zh: "RPL 单头无阀泵",
+    zh: "RPL 单头无阀计量泵",
     en: "RPL Single-Head Valveless Pump",
     es: "Bomba sin válvulas de un cabezal RPL",
     fr: "Pompe sans valve mono-tête RPL",
@@ -185,7 +186,7 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
     ru: "Одноголовочный бесклапанный насос RPL",
   },
   "RPL 无阀泵": {
-    zh: "RPL 无阀泵",
+    zh: "RPL 单头无阀计量泵",
     en: "RPL Single-Head Valveless Pump",
     es: "Bomba sin válvulas de un cabezal RPL",
     fr: "Pompe sans valve mono-tête RPL",
@@ -193,7 +194,7 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
     ru: "Одноголовочный бесклапанный насос RPL",
   },
   "DRPL 双头无阀泵": {
-    zh: "DRPL 双头无阀泵",
+    zh: "DRPL 双头无阀计量泵",
     en: "DRPL Dual-Head Valveless Pump",
     es: "Bomba sin válvulas de doble cabezal DRPL",
     fr: "Pompe sans valve double tête DRPL",
@@ -757,6 +758,12 @@ export function getLocalizedFilterOptionLabel(value: string | number | null | un
   const rawValue = String(value ?? "").trim();
   const normalizedLocale = normalizeProductFilterLocale(locale);
   const canonicalValue = FILTER_OPTION_LABEL_ALIASES[rawValue] ?? rawValue;
+  const valvelessNames = getValvelessPumpNames(normalizedLocale);
+  if (valvelessNames) {
+    if (["无阀泵", "无阀计量泵", "Valveless Pump", "Valveless Piston Pumps"].includes(canonicalValue)) return valvelessNames.categoryName;
+    if (["RPL 无阀泵", "RPL 单头无阀泵", "RPL 单头无阀计量泵"].includes(canonicalValue)) return valvelessNames.singleName;
+    if (["DRPL 双头无阀泵", "DRPL 双头无阀计量泵"].includes(canonicalValue)) return valvelessNames.dualName;
+  }
   const localized =
     FILTER_OPTION_LABELS[canonicalValue] ??
     Object.values(FILTER_OPTION_LABELS).find((labels) =>

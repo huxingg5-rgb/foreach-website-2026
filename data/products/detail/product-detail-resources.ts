@@ -1,3 +1,5 @@
+import { datasheetEnItems } from "../../resources/datasheets.en";
+
 export const PRODUCT_DETAIL_RESOURCE_LOCALES = [
   "en",
   "es",
@@ -22,6 +24,12 @@ export type ProductDatasheet = {
  * a product-specific document can be added without changing the UI layer.
  */
 export const PRODUCT_DATASHEETS: Record<string, ProductDatasheet> = {
+  "rpl-series-en": {
+    id: "rpl-series-en",
+    file: datasheetEnItems.find(item => item.id === "rpl-p635-p15-valveless-pump")!.downloadHref!,
+    shortTitle: "RPL-P6.35 / RPL-P15 (English, 001 / 2025-07)",
+    title: datasheetEnItems.find(item => item.id === "rpl-p635-p15-valveless-pump")!.title,
+  },
   "sm-series-en": {
     id: "sm-series-en",
     file: "/downloads/resources/datasheets/en/Pumps/ps-120b-2507-00004-001-en-sm-piston-pump.pdf",

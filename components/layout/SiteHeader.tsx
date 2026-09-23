@@ -13,6 +13,7 @@ import {
 } from "react"; // 引入 React 状态、生命周期、缓存、Ref 和事件类型
 
 import { preloadGlobalSearchIndex } from "@/components/search/global-search-index";
+import { localizeValvelessPumpCategoryPath } from "@/data/products/selection/valveless-pump-routes";
 
 import {
   getLocalizedHref, // 从多语言路径对象中读取当前语言路径
@@ -173,7 +174,9 @@ function getLocalePathPrefix(localeCode: LocaleCode) {
    当前 /en，切中文 → /
 ================================ */
 function buildLocalizedPathname(pathname: string, localeCode: LocaleCode) {
-  const pathWithoutLocale = stripLocalePrefixFromPath(pathname);
+  const pathWithoutLocale = localizeValvelessPumpCategoryPath(
+    stripLocalePrefixFromPath(pathname), localeCode,
+  );
 
   const localePrefix = getLocalePathPrefix(localeCode);
 

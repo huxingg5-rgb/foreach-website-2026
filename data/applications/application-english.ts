@@ -560,7 +560,7 @@ export function createEnglishApplicationData(
     queryKey: config.queryKey,
     breadcrumb: [
       { label: "Home", href: "/en" },
-      { label: "Applications", href: "/en/applications" },
+      { label: "Applications" },
       { label: config.breadcrumbLabel },
     ],
     hero: {

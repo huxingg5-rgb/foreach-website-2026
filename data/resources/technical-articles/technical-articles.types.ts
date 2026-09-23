@@ -27,6 +27,7 @@ export type TechnicalArticlePrimaryCategory =
 export type TechnicalArticleSecondaryCategory =
   | "miniature-diaphragm-pumps"
   | "plunger-pumps"
+  | "valveless-metering-pump"
   | "syringe-pumps"
   | "pipetting-pumps"
   | "solenoid-valves"

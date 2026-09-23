@@ -1,4 +1,5 @@
 import { getInstallationGuideYouTubeGuides } from "./installation-guide.youtube.generated";
+import { getValvelessPumpNames } from "../../products/detail/valveless-pump-names";
 import type {
   InstallationGuideLocale,
   InstallationGuidePageData,
@@ -595,6 +596,13 @@ export function getInstallationGuideIntlData(
 
   return {
     ...baseData,
+    sidebar: {
+      ...baseData.sidebar,
+      tree: baseData.sidebar.tree.map(item => ({ ...item,
+        children: item.children.map(child => child.id === "valveless-pump"
+          ? { ...child, name: getValvelessPumpNames(locale)?.categoryName || "无阀计量泵" } : child),
+      })),
+    },
     guides:
       getInstallationGuideYouTubeGuides(locale),
   };

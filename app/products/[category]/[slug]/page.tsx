@@ -28,6 +28,8 @@ import ProductPageSkeleton from "@/components/common/ProductPageSkeleton";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
 import ProductSelectionClient from "@/components/products/selection/ProductSelectionClient";
 import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
+import { getLocalizedSiteHref } from "@/lib/seo/site-url";
+import { VALVELESS_PUMP_LEGACY_CATEGORY_SLUG } from "@/data/products/selection/valveless-pump-routes";
 
 import {
   getProductTypeRouteParams,
@@ -100,6 +102,9 @@ export async function generateMetadata({
   params,
 }: ProductDetailRoutePageProps): Promise<Metadata> {
   const { category, slug } = await params;
+  if (category === "pumps" && slug === VALVELESS_PUMP_LEGACY_CATEGORY_SLUG) {
+    notFound();
+  }
   if (category === "pumps" && slug === "piston-pump") {
     return getPistonPumpMetadata("", "zh") || {};
   }
@@ -108,7 +113,7 @@ export async function generateMetadata({
   const productTypeRoute = resolveProductTypeRoute(category, slug);
 
   if (productTypeRoute) {
-    if (productTypeRoute.productTypeId === "diaphragm-pump") {
+    if (["diaphragm-pump", "valveless-pump"].includes(productTypeRoute.productTypeId)) {
       const canonicalPath = `/products/${category}/${slug}/`;
 
       return {
@@ -118,11 +123,11 @@ export async function generateMetadata({
           canonical: canonicalPath,
           languages: {
             "zh-CN": canonicalPath,
-            "en-US": `/en${canonicalPath}`,
-            es: `/es${canonicalPath}`,
-            fr: `/fr${canonicalPath}`,
-            ko: `/ko${canonicalPath}`,
-            ru: `/ru${canonicalPath}`,
+            "en-US": getLocalizedSiteHref(canonicalPath, "en"),
+            es: getLocalizedSiteHref(canonicalPath, "es"),
+            fr: getLocalizedSiteHref(canonicalPath, "fr"),
+            ko: getLocalizedSiteHref(canonicalPath, "ko"),
+            ru: getLocalizedSiteHref(canonicalPath, "ru"),
             "x-default": canonicalPath,
           },
         },

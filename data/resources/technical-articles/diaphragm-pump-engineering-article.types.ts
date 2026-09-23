@@ -81,6 +81,7 @@ export type EngineeringArticleBlock =
   | {
       type: "links";
       items: readonly EngineeringArticleLink[];
+      ordered?: boolean;
     };
 
 export type EngineeringArticleSection = {

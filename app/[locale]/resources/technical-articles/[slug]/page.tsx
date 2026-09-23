@@ -17,6 +17,7 @@ import TechnicalArticleDetail from "@/components/resources/technical-articles/Te
 import { getTechnicalArticlesPageData } from "@/services/resources/technical-articles/getTechnicalArticlesPageData";
 import {
   getTechnicalArticleData,
+  getTechnicalArticlePagerData,
   getTechnicalArticleSlugs,
 } from "@/services/resources/technical-articles/getTechnicalArticleData";
 
@@ -142,5 +143,14 @@ export default async function TechnicalArticleIntlDetailPage({
     notFound();
   }
 
-  return <TechnicalArticleDetail pageData={pageData} article={article} />;
+  const { previousArticle, nextArticle } = getTechnicalArticlePagerData(locale, slug);
+
+  return (
+    <TechnicalArticleDetail
+      pageData={pageData}
+      article={article}
+      previousArticle={previousArticle}
+      nextArticle={nextArticle}
+    />
+  );
 }

@@ -438,6 +438,15 @@
   background: #ffffff;
 }
 
+/* Used only by the Chinese RPL-P4 specification notes. */
+.rplP4SpecNote {
+  margin: 14px 0 0;
+  color: #596579;
+  font-size: 14px;
+  line-height: 1.75;
+  text-align: left;
+}
+
 .specTable {
   width: 100%;
   border: 1px solid #cbd5e3;

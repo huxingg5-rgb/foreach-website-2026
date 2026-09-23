@@ -1,4 +1,5 @@
 import type { LocaleCode } from "@/data/languages";
+import { localizeValvelessPumpCategoryPath, normalizeValvelessPumpPath } from "@/data/products/selection/valveless-pump-routes";
 
 export const SITE_ORIGIN = "https://www.foreachtek.com";
 export const SITE_URL = new URL(SITE_ORIGIN);
@@ -71,6 +72,7 @@ export function normalizeSiteHref(value: string) {
     return value;
   }
 
+  url.pathname = normalizeValvelessPumpPath(url.pathname);
   if (url.pathname !== "/" && !hasFileExtension(url.pathname)) {
     url.pathname = `${url.pathname.replace(/\/+$/, "")}/`;
   }
@@ -109,9 +111,9 @@ export function getLocalizedSiteHref(value: string, locale: LocaleCode) {
     segments.shift();
   }
 
-  if (locale !== "zh-CN") segments.unshift(locale);
-
-  const localizedPath = segments.length > 0 ? `/${segments.join("/")}/` : "/";
+  const basePath = segments.length > 0 ? `/${segments.join("/")}/` : "/";
+  const categoryPath = localizeValvelessPumpCategoryPath(basePath, locale);
+  const localizedPath = locale === "zh-CN" ? categoryPath : `/${locale}${categoryPath}`;
   return `${localizedPath}${url.search}${url.hash}`;
 }
 

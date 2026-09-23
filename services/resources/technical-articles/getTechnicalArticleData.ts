@@ -32,3 +32,38 @@ export function getTechnicalArticleSlugs(
 
   return pageData.articles.map((article) => article.slug);
 }
+
+export type TechnicalArticlePagerItem = {
+  title: string;
+  href: string;
+  date?: string;
+};
+
+/** Use the public article order and keep both navigation targets in this locale. */
+export function getTechnicalArticlePagerData(
+  locale: TechnicalArticleLocale,
+  currentSlug: string,
+): {
+  previousArticle: TechnicalArticlePagerItem | null;
+  nextArticle: TechnicalArticlePagerItem | null;
+} {
+  const { articles } = getTechnicalArticlesPageData(locale);
+  const index = articles.findIndex((article) => article.slug === currentSlug);
+  const prefix = locale === "zh-CN" ? "" : `/${locale}`;
+  const toPagerItem = (
+    article: ClassifiedTechnicalArticleItem | undefined,
+  ): TechnicalArticlePagerItem | null => article ? {
+    title: article.title,
+    href: `${prefix}/resources/technical-articles/${article.slug}/`,
+    date: article.date,
+  } : null;
+
+  if (index < 0) {
+    return { previousArticle: null, nextArticle: null };
+  }
+
+  return {
+    previousArticle: toPagerItem(articles[index - 1]),
+    nextArticle: toPagerItem(articles[index + 1]),
+  };
+}
