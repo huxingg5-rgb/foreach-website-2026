@@ -33,6 +33,7 @@ type ProductFilterPanelProps = {
     group: ProductSelectionFilterGroup,
     value: string
   ) => void;
+  getOptionHref?: (group: ProductSelectionFilterGroup, value: string) => string | undefined;
   onResetFilters?: () => void;
 };
 
@@ -253,6 +254,7 @@ function BarbedPortFilterGroup({
 
 
 export default function ProductFilterPanel({
+  getOptionHref,
   activeCategory,
   activeProductTypeId,
   filterGroups,
@@ -626,6 +628,8 @@ const inferredShouldUseTwoColumns =
                     )
                   );
 
+                const href = getOptionHref?.(group, option.value);
+                if (href) return <a key={option.value} href={href} className={["filter-option", optionTypeClass, active ? "active" : ""].filter(Boolean).join(" ")} aria-current={active ? "page" : undefined}><span className="filter-check" /><span>{option.label}</span></a>;
                 return (
                   <button
                     className={[

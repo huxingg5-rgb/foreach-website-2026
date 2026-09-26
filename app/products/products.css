@@ -4642,3 +4642,33 @@
 }
 
 /* UNIFIED_FILTER_DISABLED_VISUAL_END */
+
+/* Consistent regular-weight filter text across locales, products and states. */
+.products-selection-page .filter-panel,
+.products-selection-page .filter-panel :is(h2, h3, p, button, label, strong, b),
+.products-selection-page .filter-panel button span:not(.filter-group-symbol):not(.filter-check),
+.products-selection-page .filter-panel .barbed-port-heading-grid,
+.products-selection-page .filter-panel .barbed-port-column-title,
+.products-selection-page .filter-panel .filter-empty {
+  font-weight: 400 !important;
+}
+
+/* Series links retain the regular-weight filter presentation. */
+.products-selection-page .filter-panel a.filter-option,
+.products-selection-page .filter-panel a.filter-option span:not(.filter-check) {
+  font-weight: 400 !important;
+  text-decoration: none;
+}
+
+/* Shared desktop filter hierarchy; mobile and helper copy retain regular weight. */
+@media (min-width: 1025px) {
+  .products-selection-page .filter-panel .filter-panel-head h2,
+  .products-selection-page .filter-panel .filter-group-trigger,
+  .products-selection-page .filter-panel .filter-group-trigger span:not(.filter-group-symbol),
+  .products-selection-page .filter-panel .filter-option,
+  .products-selection-page .filter-panel .filter-option span:not(.filter-check),
+  .products-selection-page .filter-panel .barbed-port-heading-grid,
+  .products-selection-page .filter-panel .barbed-port-column-title {
+    font-weight: 500 !important;
+  }
+}

@@ -1,4 +1,5 @@
 "use client";
+import { getPipettingCategoryLabel } from "@/data/products/selection/pipetting-pump-breadcrumbs";
 
 import { normalizePistonPumpPublicName } from "@/data/products/piston-pump-public-name";
 import {
@@ -9,6 +10,7 @@ import {
 
 import { Suspense, useCallback, useEffect, useId, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import { getPipettingPath, pipettingSeriesFilters } from "@/data/products/selection/pipetting-pump-seo";
 import ResourceSearchBar from "@/components/resources/ResourceSearchBar";
 import { useSelectionCart } from "@/components/selection-cart/SelectionCartProvider";
 import type { SelectionCartItemInput } from "@/components/selection-cart/selection-cart.types";
@@ -3850,7 +3852,7 @@ export default function ProductSelectionClient({
     selectedFilters.filter01 || []
   )[0];
   const activeProductTypeIntroVariant =
-    activeProductTypeId === "valveless-pump" || (locale === "zh" && ["plunger-pump", "pipette-pump", "syringe-pump"].includes(activeProductTypeId))
+    activeProductTypeId === "valveless-pump" || activeProductTypeId === "pipette-pump" || (locale === "zh" && ["plunger-pump", "pipette-pump", "syringe-pump"].includes(activeProductTypeId))
       ? activeSeriesFilterValue
       : initialFilters?.filter01?.[0];
   const activeProductTypeIntro =
@@ -5046,6 +5048,13 @@ function isFilterOptionActive(
     });
   }
   function resetCurrentFilters() {
+    if (activeProductTypeId === "pipette-pump") {
+      setSelectedFilters({});
+      setSearchInputValue("");
+      setSearchKeyword("");
+      router.push(getPipettingPath(locale));
+      return;
+    }
     const firstProductTypeId =
       getCategoryDefaultProductTypeId(activeCategoryId);
 
@@ -5143,7 +5152,13 @@ function isFilterOptionActive(
     addItem(createProductCartItem(product));
   }
 
-  const breadcrumbItems = [
+  const pipettingSeriesIndex = pipettingSeriesFilters.indexOf(initialFilters?.filter01?.[0] || "");
+  const breadcrumbItems = activeProductTypeId === "pipette-pump" ? [
+    {label: pageText.breadcrumbHome, href: locale === "zh" ? "/" : `/${locale}/`},
+    {label: pageText.breadcrumbCurrent, href: locale === "zh" ? "/products/" : `/${locale}/products/`},
+    {label: getPipettingCategoryLabel(locale), ...(pipettingSeriesIndex >= 0 ? {href: getPipettingPath(locale)} : {})},
+    ...(pipettingSeriesIndex >= 0 ? [{label: pipettingSeriesIndex === 0 ? "SMTP2" : "SMTP4"}] : [])
+  ] : [
     {
       label: pageText.breadcrumbHome,
       href: locale === "zh" ? "/" : `/${locale}`,
@@ -5237,9 +5252,11 @@ function isFilterOptionActive(
 
                 <ProductTypeIntroCopy
                   isPrimaryHeading={
+                    activeProductTypeId === "syringe-pump" ||
                     activeProductTypeId === "diaphragm-pump" ||
                     activeProductTypeId === "plunger-pump" ||
                     activeProductTypeId === "valveless-pump" ||
+                    activeProductTypeId === "pipette-pump" ||
                     (locale === "zh" && ["pipette-pump", "syringe-pump"].includes(activeProductTypeId))
                   }
                   key={`${activeProductTypeId || "none"}-${
@@ -5259,6 +5276,11 @@ function isFilterOptionActive(
         <section className="selection-section">
           <div className="selection-layout">
             <ProductFilterPanel
+              getOptionHref={(group, value) => {
+                if (!["syringe-pump", "pipette-pump"].includes(activeProductTypeId)) return undefined;
+                const href = getSeriesHrefByFilterValue(activeCategoryId, activeProductTypeId, group.key, value);
+                return href ? localizeProductDetailHref(href + "/") : undefined;
+              }}
               activeCategory={{
                 ...activeCategory,
                 description:

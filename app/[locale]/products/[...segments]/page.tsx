@@ -1,3 +1,10 @@
+import { syringeModelRoutes } from "@/data/products/selection/syringe-pump-routes";
+import { getSyringeModelMetadata } from "@/services/products/getSyringeModelMetadata";
+import { getSyringeSeriesIndex, syringeSeriesSlugs } from "@/data/products/selection/syringe-pump-series";
+import { getSyringeSeriesMetadata } from "@/services/products/getSyringeSeriesMetadata";
+import { getPipettingMetadata } from "@/services/products/getPipettingMetadata";
+import { pipettingSeriesSlugs, isPipettingPageKey } from "@/data/products/selection/pipetting-pump-seo";
+import { syringePumpIntroLocales } from "@/data/products/selection/syringe-pump-intro.locales";
 import { getControlModuleDetailBySlug } from "@/data/products/control-modules/control-module-detail.generated";
 import { getControlModuleProductDetailData } from "@/services/products/adapters/getControlModuleProductDetailData";
 import { getQuickConnectSeriesDetailData } from "@/data/products/detail/getQuickConnectSeriesDetailData";
@@ -109,6 +116,7 @@ const allEnglishProductDetailRoutes:
       ]
     ),
     ...luerEnglishProductDetailRoutes,
+    ...pipettingSeriesSlugs.map(slug => ["pumps", "pipetting-pumps", slug]),
   ].filter((segments) => {
     const [category, productTypeId, slug] = segments;
 
@@ -163,9 +171,10 @@ export const dynamicParams = false;
 const INTERNATIONAL_PRODUCT_LOCALES: LocaleCode[] = ["en", "es", "fr", "ko", "ru"];
 
 function getProductRoutesForLocale(_locale: LocaleCode | string) {
-  return migrateDiaphragmPumpRouteSegments(allEnglishProductDetailRoutes)
+  return migrateDiaphragmPumpRouteSegments([...allEnglishProductDetailRoutes, ...syringeSeriesSlugs.map(slug => ["pumps", "syringe-pumps", slug])])
     .map(segments => segments[0] === "pumps" && segments[1] === VALVELESS_PUMP_LEGACY_CATEGORY_SLUG
       ? ["pumps", VALVELESS_PUMP_CATEGORY_SLUG_INTL, ...segments.slice(2)] : segments)
+    .map(segments => { const r = segments.length === 3 && segments[0] === "pumps" && segments[1] === "syringe-pumps" ? syringeModelRoutes.find(r => r.legacy === segments[2]) : undefined; return r ? ["pumps", "syringe-pumps", r.series, r.model] : segments; })
     .filter(segments => !getPistonPumpRedirect(`/products/${segments.join("/")}/`));
 }
 
@@ -318,6 +327,10 @@ export async function generateMetadata({
   );
 
   if (diaphragmMetadata) return diaphragmMetadata;
+  if (segments[0] === "pumps" && segments[1] === "pipetting-pumps" && (segments.length === 2 || (segments.length === 3 && pipettingSeriesSlugs.includes(segments[2] as "smtp2" | "smtp4")))) {
+    const key = segments[2] || "category";
+    if (isPipettingPageKey(key)) return getPipettingMetadata(locale, key);
+  }
   if (segments[0] === "pumps" && segments[1] === "piston-pump" && segments.length <= 3) {
     const metadata = getPistonPumpMetadata(segments[2] || "", locale);
     if (metadata) return metadata;
@@ -334,9 +347,16 @@ export async function generateMetadata({
   const valvelessSeoTitle = valvelessContent ? getValvelessPumpSeoTitle(segments[2], locale)
     : valvelessCategory ? `${valvelessCategory.category.title} | FOREACH` : undefined;
   const title = compactContent ? compactContent.seoTitle.replace(/ \| Foreach(?: Technology)?$/i, "") : getRouteTitle(segments);
+  const syringeModel = segments.length === 4 && segments[0] === "pumps" && segments[1] === "syringe-pumps" ? syringeModelRoutes.find(r => r.series === segments[2] && r.model === segments[3]) : undefined;
+  if (syringeModel) return getSyringeModelMetadata(locale, syringeModel.legacy);
+  const syringeSeriesIndex = segments.length === 3 && segments[0] === "pumps" && segments[1] === "syringe-pumps" ? getSyringeSeriesIndex(segments[2]) : -1;
+  if (syringeSeriesIndex >= 0) return getSyringeSeriesMetadata(locale, syringeSeriesIndex);
   const canonicalPath = `/${locale}/products/${segments.join("/")}/`;
+  const syringeLocaleCopy = segments.length === 2 && segments[0] === "pumps" && segments[1] === "syringe-pumps" ? syringePumpIntroLocales[locale] : undefined;
+  const isEnglishSyringeCategory = locale === "en" && segments.length === 2 && segments[0] === "pumps" && segments[1] === "syringe-pumps";
+  const syringeSeoTitle = isEnglishSyringeCategory ? "OEM Syringe Pumps for Automated Liquid Handling | FOREACH" : syringeLocaleCopy?.seoTitle;
   const isDetailRoute = segments.length >= 2;
-  const description = valvelessContent?.metaDescription || valvelessCategory?.category.metaDescription || compactContent?.metaDescription || (isDetailRoute
+  const description = syringeLocaleCopy?.description || (isEnglishSyringeCategory ? "Explore FOREACH OEM syringe pumps with solenoid or rotary valves, 30/60 mm strokes and single- or multichannel configurations for automated liquid handling." : undefined) || valvelessContent?.metaDescription || valvelessCategory?.category.metaDescription || compactContent?.metaDescription || (isDetailRoute
     ? `Explore ${title} specifications, materials, interfaces, model configurations, and fluidic applications from Foreach.`
     : `Explore Foreach ${title} for precision fluid handling in IVD, life science, analytical instrumentation, and laboratory automation.`);
   const keywords = Array.from(
@@ -382,12 +402,13 @@ export async function generateMetadata({
     : undefined;
 
   return {
-    title: valvelessSeoTitle ? { absolute: valvelessSeoTitle } : compactContent ? { absolute: compactContent.seoTitle } : `${title} | Foreach Technology`,
+    title: syringeSeoTitle ? { absolute: syringeSeoTitle } : valvelessSeoTitle ? { absolute: valvelessSeoTitle } : compactContent ? { absolute: compactContent.seoTitle } : `${title} | Foreach Technology`,
     description,
     keywords: isValvelessRoute ? [valvelessContent?.model || valvelessCategory?.categoryName || title, getValvelessLocaleCopy(locale)?.categoryName || title, "FOREACH"] : keywords,
     alternates: {
       canonical: canonicalPath,
       languages: isValvelessRoute ? getValvelessPumpLanguageAlternates(segments[2]) : {
+        ...((isEnglishSyringeCategory || syringeLocaleCopy) ? { "zh-CN": "/products/pumps/syringe-pumps/", "x-default": "/products/pumps/syringe-pumps/" } : {}),
         "en-US": `/en/products/${segments.join("/")}/`,
         "es": `/es/products/${segments.join("/")}/`,
         "fr": `/fr/products/${segments.join("/")}/`,
@@ -404,7 +425,7 @@ export async function generateMetadata({
       locale: isValvelessRoute ? ({ en: "en_US", es: "es_ES", fr: "fr_FR", ko: "ko_KR", ru: "ru_RU" }[locale] || "en_US") : "en_US",
       url: canonicalPath,
       siteName: "Foreach Technology",
-      title: valvelessSeoTitle || `${title} | Foreach Technology`,
+      title: syringeSeoTitle || valvelessSeoTitle || `${title} | Foreach Technology`,
       description,
       ...(socialImage
         ? { images: [{ url: socialImage, alt: valvelessContent?.imageAlt || valvelessCategory?.category.title || title }] }
@@ -412,7 +433,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary",
-      title: valvelessSeoTitle || `${title} | Foreach Technology`,
+      title: syringeSeoTitle || valvelessSeoTitle || `${title} | Foreach Technology`,
       description,
       ...(socialImage ? { images: [socialImage] } : {}),
     },
@@ -428,6 +449,8 @@ export default async function ProductLocaleRoutePage({
     notFound();
   }
 
+  const syringeModel = segments.length === 4 && segments[0] === "pumps" && segments[1] === "syringe-pumps" ? syringeModelRoutes.find(r => r.series === segments[2] && r.model === segments[3]) : undefined;
+  if (syringeModel) return SyringePumpDetailPage({ params: Promise.resolve({ slug: syringeModel.legacy }) });
   const [category, slug, seriesSlug] = segments;
 
   if (segments.length === 1) {

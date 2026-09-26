@@ -1,3 +1,4 @@
+import { getSyringeModelPath } from "@/data/products/selection/syringe-pump-routes";
 import syringePumpDetails from "@/data/products/generated/pumps/syringe-pumps/detail/index.json";
 
 type Detail = (typeof syringePumpDetails)[number];
@@ -40,7 +41,7 @@ export function getSyringePumpProductDetailData(detail: Detail) {
     customInquiryHref: "/contact",
     contactHref: "/contact",
     selectionHref: "/products/pumps/syringe-pumps",
-    detailHref: `/products/pumps/syringe-pumps/${detail.slug}`,
+    detailHref: getSyringeModelPath("zh", detail.slug) || `/products/pumps/syringe-pumps/${detail.slug}`,
 
     specs: Array.isArray((detail as any).specs)
       ? (detail as any).specs
@@ -82,3 +83,4 @@ export function getSyringePumpProductDetailData(detail: Detail) {
     thumbnails: Array.isArray(detail.thumbnails) ? detail.thumbnails : [],
   };
 }
+

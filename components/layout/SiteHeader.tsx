@@ -13,6 +13,7 @@ import {
 } from "react"; // 引入 React 状态、生命周期、缓存、Ref 和事件类型
 
 import { preloadGlobalSearchIndex } from "@/components/search/global-search-index";
+import { ANALYTICAL_APPLICATION_BASE } from "@/data/applications/analytical-documents/registry";
 import { localizeValvelessPumpCategoryPath } from "@/data/products/selection/valveless-pump-routes";
 
 import {
@@ -204,6 +205,10 @@ function buildLocalizedPathname(pathname: string, localeCode: LocaleCode) {
 export default function SiteHeader() {
   const pathname = usePathname(); // 获取当前页面路径，例如 /、/about/culture、/en/resources/datasheets 等
   const router = useRouter();
+  const normalizedPathname = pathname.replace(/\/+$/, "");
+  const normalizedAnalyticalApplicationBase = ANALYTICAL_APPLICATION_BASE.replace(/\/+$/, "");
+  const isEnglishAnalyticalApplicationDetailPage =
+    normalizedPathname.startsWith(`${normalizedAnalyticalApplicationBase}/`);
 
   /**
    * 当前顶部栏显示语言
@@ -1065,8 +1070,11 @@ const isFittingReplacementDetailPage =
       closeAllPanels();
 
       // 根据当前路径生成目标语言路径
+      const languageSourcePathname = isEnglishAnalyticalApplicationDetailPage && localeCode !== "en"
+        ? ANALYTICAL_APPLICATION_BASE
+        : window.location.pathname;
       const nextPathname = buildLocalizedPathname(
-        window.location.pathname,
+        languageSourcePathname,
         localeCode,
       );
 
@@ -1368,7 +1376,11 @@ const isFittingReplacementDetailPage =
                 {languageItems.map((language) => (
                   <a
                     key={language.code}
-                    href={isTechnicalArticlePage ? buildLocalizedPathname(pathname || "/", language.code) : language.href}
+                    href={isEnglishAnalyticalApplicationDetailPage && language.code !== "en"
+                      ? buildLocalizedPathname(ANALYTICAL_APPLICATION_BASE, language.code)
+                      : isTechnicalArticlePage
+                        ? buildLocalizedPathname(pathname || "/", language.code)
+                        : language.href}
                     className={`site-nav-simple-dropdown-link language-details-item ${language.code === currentLocale
                       ? "language-details-item-active"
                       : ""

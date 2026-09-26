@@ -335,9 +335,9 @@ export const labLiquidWasteAspirationTroubleshootingRuCopy = {
               href: "/ru/applications/lab-automation/",
               suffix: ".",
             },
-
-
-
+            
+            
+            
           ],
         },
         {
@@ -746,9 +746,9 @@ export const ivdWasteAspirationPumpSelectionRuCopy = {
               href: "/ru/resources/technical-articles/ivd-waste-liquid-pump-liquid-vs-gas-liquid-diaphragm-pump/",
               suffix: ".",
             },
-
-
-
+            
+            
+            
           ],
         },
         {

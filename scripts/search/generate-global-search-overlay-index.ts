@@ -27,6 +27,7 @@ import { getIvdApplicationPageData } from "../../services/applications/ivd/getIv
 import { getLabAutomationApplicationPageData } from "../../services/applications/lab-automation/getLabAutomationApplicationPageData";
 import { getLifeScienceApplicationPageData } from "../../services/applications/life-science/getLifeScienceApplicationPageData";
 import { getSyntheticBiologyApplicationPageData } from "../../services/applications/synthetic-biology/getSyntheticBiologyApplicationPageData";
+import { analyticalDocumentHref, analyticalDocuments } from "../../data/applications/analytical-documents/registry";
 
 type SearchLocale = "zh-CN" | "en" | "es" | "fr" | "ko" | "ru";
 
@@ -797,7 +798,22 @@ async function loadMaterialCompatibility(
 function loadApplications(locale: SearchLocale): CompactSearchItem[] {
   const copy = getModuleCopy(locale, "applications");
 
-  return APPLICATION_LOADERS.flatMap(({ slug, load }) => {
+  return APPLICATION_LOADERS.flatMap<CompactSearchItem>(({ slug, load }) => {
+    if (locale === "en" && slug === "analytical-instruments") {
+      return analyticalDocuments.map((document) => {
+        const keywords = buildSearchText([document.navLabel, document.keywords]);
+        return {
+          m: "applications" as const,
+          t: document.title,
+          d: document.description,
+          h: analyticalDocumentHref(document.slug),
+          x: buildSearchText([document.title, document.description, keywords]),
+          k: keywords,
+          a: copy.action,
+        };
+      });
+    }
+
     const loaded = load(locale);
     if (!loaded || typeof loaded !== "object" || Array.isArray(loaded)) {
       return [];
@@ -900,6 +916,10 @@ function loadSitePages(locale: SearchLocale): CompactSearchItem[] {
   const copy = getModuleCopy(locale, "pages");
   const items: CompactSearchItem[] = [];
   const seen = new WeakSet<object>();
+  // These English routes already have richer entries in the applications module.
+  const analyticalDocumentHrefs = locale === "en"
+    ? new Set(analyticalDocuments.map((document) => normalizePageHref(analyticalDocumentHref(document.slug))))
+    : null;
 
   function visit(value: unknown) {
     if (!value || typeof value !== "object") return;
@@ -931,7 +951,11 @@ function loadSitePages(locale: SearchLocale): CompactSearchItem[] {
       : null;
     const image = cleanImage(imageObject?.src || object.src);
 
-    if (title && href) {
+    const analyticalPathname = href.split(/[?#]/, 1)[0];
+    const isAnalyticalDocument = analyticalDocumentHrefs?.has(
+      analyticalPathname.startsWith("/en/") ? analyticalPathname : `/en${analyticalPathname}`,
+    );
+    if (title && href && !isAnalyticalDocument) {
       items.push({
         m: "pages",
         t: title,

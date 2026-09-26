@@ -89,6 +89,20 @@ export default function HomeHeroSection({
 }: HomeHeroSectionProps) {
   const homeText = homeI18n[locale];
   const usesStaticHero = locale === "zh-CN";
+  const [isCompactDesktop, setIsCompactDesktop] = useState(false);
+  const [queuedBannerIndex, setQueuedBannerIndex] = useState<number | null>(null);
+  const [requestedBannerIndex, setRequestedBannerIndex] = useState(0);
+  const slideDuration = isCompactDesktop ? 600 : HOME_BANNER_SLIDE_MS;
+  const slideEasing = isCompactDesktop ? "cubic-bezier(0.22, 1, 0.36, 1)" : HOME_BANNER_SLIDE_EASING;
+
+  useEffect(() => {
+    const media = window.matchMedia("(min-width: 1025px) and (max-width: 1599px)");
+    const update = () => setIsCompactDesktop(media.matches);
+    update();
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
+  }, []);
+
   const [videoVisible, setVideoVisible] = useState(false);
   const [videoFailed, setVideoFailed] = useState(false);
   const heroVideoRef = useRef<HTMLVideoElement>(null);
@@ -328,7 +342,9 @@ export default function HomeHeroSection({
   useEffect(() => {
     if (
       !desktopHeroActive ||
-      bannerTransitioning
+      bannerTransitioning ||
+      !bannerTransitionEnabled ||
+      queuedBannerIndex !== null
     ) {
       return;
     }
@@ -349,6 +365,7 @@ export default function HomeHeroSection({
           activeBannerIndex === 0
             ? 1
             : 0;
+        setRequestedBannerIndex(targetBannerIndex);
         pendingBannerIndexRef.current =
           targetBannerIndex;
         bannerTransitionHandledRef.current =
@@ -380,6 +397,8 @@ export default function HomeHeroSection({
   }, [
     activeBannerIndex,
     bannerTransitioning,
+    bannerTransitionEnabled,
+    queuedBannerIndex,
     desktopHeroActive,
     usesStaticHero,
   ]);
@@ -452,35 +471,33 @@ export default function HomeHeroSection({
     void video.play();
   };
 
-  const startBannerTransition = (
-    targetBannerIndex: number
-  ) => {
-    if (
-      !desktopHeroActive ||
-      bannerTransitioning ||
-      targetBannerIndex ===
-        activeBannerIndex
-    ) {
+  const startBannerTransition = useCallback((targetBannerIndex: number) => {
+    if (!desktopHeroActive) return;
+    if (bannerTransitioning || !bannerTransitionEnabled) {
+      if (isCompactDesktop) {
+        setRequestedBannerIndex(targetBannerIndex);
+        setQueuedBannerIndex(targetBannerIndex);
+      }
       return;
     }
-
-    firstBannerCycleRef.current =
-      false;
-    pendingBannerIndexRef.current =
-      targetBannerIndex;
-    bannerTransitionHandledRef.current =
-      false;
+    setRequestedBannerIndex(targetBannerIndex);
+    if (targetBannerIndex === activeBannerIndex) return;
+    firstBannerCycleRef.current = false;
+    pendingBannerIndexRef.current = targetBannerIndex;
+    bannerTransitionHandledRef.current = false;
     setBannerTransitioning(true);
+    setProductSlideOffset(targetBannerIndex === 1 ? -100 : 0);
+    setFluidSlideOffset(targetBannerIndex === 1 ? 0 : -100);
+  }, [activeBannerIndex, bannerTransitionEnabled, bannerTransitioning, desktopHeroActive, isCompactDesktop]);
 
-    if (targetBannerIndex === 1) {
-      setProductSlideOffset(-100);
-      setFluidSlideOffset(0);
-      return;
-    }
-
-    setFluidSlideOffset(-100);
-    setProductSlideOffset(0);
-  };
+  useEffect(() => {
+    if (queuedBannerIndex === null || bannerTransitioning || !bannerTransitionEnabled) return;
+    const frame = window.requestAnimationFrame(() => {
+      setQueuedBannerIndex(null);
+      startBannerTransition(queuedBannerIndex);
+    });
+    return () => window.cancelAnimationFrame(frame);
+  }, [queuedBannerIndex, bannerTransitioning, bannerTransitionEnabled, startBannerTransition]);
 
   const finishBannerTransition =
     useCallback(() => {
@@ -518,8 +535,8 @@ export default function HomeHeroSection({
     event: React.TransitionEvent<HTMLElement>
   ) => {
     if (
-      event.propertyName !==
-      "transform"
+      event.target !== event.currentTarget ||
+      event.propertyName !== "transform"
     ) {
       return;
     }
@@ -535,7 +552,7 @@ export default function HomeHeroSection({
     const fallbackTimer =
       window.setTimeout(
         finishBannerTransition,
-        HOME_BANNER_SLIDE_MS + 250
+        slideDuration + 150
       );
 
     return () => {
@@ -546,6 +563,7 @@ export default function HomeHeroSection({
   }, [
     bannerTransitioning,
     finishBannerTransition,
+    slideDuration,
   ]);
 
   useEffect(() => {
@@ -634,6 +652,60 @@ export default function HomeHeroSection({
     );
   /* HOME_DESKTOP_FINAL_BANNER_COMPONENT_END */
 
+  const primaryHeroCopy = (
+      <div
+        className="home-hero-inner home-hero-primary-copy"
+        style={{
+          opacity:
+            primaryCopyIsHidden
+              ? 0
+              : productSlideOffset === 0
+              ? 1
+              : 0.96,
+          visibility:
+            primaryCopyIsHidden
+              ? "hidden"
+              : "visible",
+          transform: isCompactDesktop ? "none" : `translate3d(${productSlideOffset}%, 0, 0)`,
+          transition:
+            !isCompactDesktop && bannerTransitionEnabled
+              ? `transform ${slideDuration}ms ${slideEasing}, opacity ${slideDuration}ms ease`
+              : "none",
+        }}
+        aria-hidden={primaryCopyIsHidden}
+      >
+        <h1 className="home-hero-title" data-home-hero-title="true">
+          {homeText.heroTitleLine1}
+
+          <br />
+
+          {homeText.heroTitleLine2}
+        </h1>
+
+        <p className="home-hero-subtitle" data-home-hero-subtitle="true">
+          {homeText.heroSubtitle}
+        </p>
+
+        <div className="home-hero-actions">
+          <Link
+            href={productsHref}
+            className="home-hero-btn home-hero-btn-primary"
+            tabIndex={primaryCopyIsHidden ? -1 : undefined}
+          >
+            {homeText.productButton}
+          </Link>
+
+          <Link
+            href={contactHref}
+            className="home-hero-btn home-hero-btn-secondary"
+            tabIndex={primaryCopyIsHidden ? -1 : undefined}
+          >
+            {homeText.contactButton}
+          </Link>
+        </div>
+      </div>
+  );
+
 return (
     <div className="home-hero-scroll-shell">
       <section
@@ -692,57 +764,7 @@ return (
         aria-hidden="true"
       />
 
-      <div
-        className="home-hero-inner home-hero-primary-copy"
-        style={{
-          opacity:
-            primaryCopyIsHidden
-              ? 0
-              : productSlideOffset === 0
-              ? 1
-              : 0.96,
-          visibility:
-            primaryCopyIsHidden
-              ? "hidden"
-              : "visible",
-          transform: `translate3d(${productSlideOffset}%, 0, 0)`,
-          transition:
-            bannerTransitionEnabled
-              ? `transform ${HOME_BANNER_SLIDE_MS}ms ${HOME_BANNER_SLIDE_EASING}, opacity ${HOME_BANNER_SLIDE_MS}ms ease`
-              : "none",
-        }}
-        aria-hidden={primaryCopyIsHidden}
-      >
-        <h1 className="home-hero-title" data-home-hero-title="true">
-          {homeText.heroTitleLine1}
-
-          <br />
-
-          {homeText.heroTitleLine2}
-        </h1>
-
-        <p className="home-hero-subtitle" data-home-hero-subtitle="true">
-          {homeText.heroSubtitle}
-        </p>
-
-        <div className="home-hero-actions">
-          <Link
-            href={productsHref}
-            className="home-hero-btn home-hero-btn-primary"
-            tabIndex={primaryCopyIsHidden ? -1 : undefined}
-          >
-            {homeText.productButton}
-          </Link>
-
-          <Link
-            href={contactHref}
-            className="home-hero-btn home-hero-btn-secondary"
-            tabIndex={primaryCopyIsHidden ? -1 : undefined}
-          >
-            {homeText.contactButton}
-          </Link>
-        </div>
-      </div>
+      {!isCompactDesktop && primaryHeroCopy}
 
       <div
         className="home-hero-carousel"
@@ -807,7 +829,7 @@ return (
               transform: `translate3d(${productSlideOffset}%, 0, 0)`,
               transition:
                 bannerTransitionEnabled
-                  ? `transform ${HOME_BANNER_SLIDE_MS}ms ${HOME_BANNER_SLIDE_EASING}, opacity ${HOME_BANNER_SLIDE_MS}ms ease`
+                  ? `transform ${slideDuration}ms ${slideEasing}, opacity ${slideDuration}ms ease`
                   : "none",
             }}
           >
@@ -821,6 +843,7 @@ return (
               aria-hidden="true"
             />
 
+            {isCompactDesktop && primaryHeroCopy}
           </article>
 
           <article
@@ -846,7 +869,7 @@ return (
               transform: `translate3d(${fluidSlideOffset}%, 0, 0)`,
               transition:
                 bannerTransitionEnabled
-                  ? `transform ${HOME_BANNER_SLIDE_MS}ms ${HOME_BANNER_SLIDE_EASING}, opacity ${HOME_BANNER_SLIDE_MS}ms ease`
+                  ? `transform ${slideDuration}ms ${slideEasing}, opacity ${slideDuration}ms ease`
                   : "none",
             }}
           >
@@ -921,7 +944,7 @@ return (
               type="button"
               className="home-hero-carousel-dot"
               data-active={
-                activeBannerIndex ===
+                (isCompactDesktop ? requestedBannerIndex : activeBannerIndex) ===
                 bannerIndex
                   ? "true"
                   : "false"
@@ -932,7 +955,7 @@ return (
                   : `Show banner ${bannerIndex + 1}`
               }
               aria-current={
-                activeBannerIndex ===
+                (isCompactDesktop ? requestedBannerIndex : activeBannerIndex) ===
                 bannerIndex
                   ? "true"
                   : undefined

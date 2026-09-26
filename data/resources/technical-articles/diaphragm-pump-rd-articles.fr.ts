@@ -68,7 +68,7 @@ export const diaphragmPumpRdArticlesFr = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/diaphragm-pump-rd/fr/01.webp",
+            "src": "/images/resources/technical-articles/diaphragm-pump-rd/fr/01.svg",
             "alt": "Trois événements pendant l’amorçage",
             "width": 1000,
             "height": 650,
@@ -354,7 +354,7 @@ export const diaphragmPumpRdArticlesFr = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/diaphragm-pump-rd/fr/02.webp",
+            "src": "/images/resources/technical-articles/diaphragm-pump-rd/fr/02.svg",
             "alt": "Même moyenne, débits instantanés différents",
             "width": 1000,
             "height": 650,
@@ -654,7 +654,7 @@ export const diaphragmPumpRdArticlesFr = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/diaphragm-pump-rd/fr/03.webp",
+            "src": "/images/resources/technical-articles/diaphragm-pump-rd/fr/03.svg",
             "alt": "Suivre les chemins de transmission du bruit",
             "width": 1000,
             "height": 650,
@@ -982,7 +982,7 @@ export const diaphragmPumpRdArticlesFr = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/diaphragm-pump-rd/fr/04.webp",
+            "src": "/images/resources/technical-articles/diaphragm-pump-rd/fr/04.svg",
             "alt": "Volume cumulé après l’arrêt",
             "width": 1000,
             "height": 650,

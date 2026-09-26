@@ -1096,7 +1096,10 @@ const applicationMegaDropdown: MegaDropdown = {
             "샘플 주입, 용매 전환, 세척, 폐액 배출 및 저잔류 유로",
             "Ввод образцов, переключение растворителей, промывка, слив и тракты с низким остаточным объёмом",
           ),
-          localizedPath("/applications/analytical-instruments?application=chromatography"),
+          {
+            ...localizedPath("/applications/analytical-instruments?application=chromatography"),
+            en: "/en/applications/analytical-instruments/liquid-chromatography/",
+          },
         ),
         applicationSceneImage(
           "/images/application-center/analytical-spectroscopy-elemental-analysis.webp",

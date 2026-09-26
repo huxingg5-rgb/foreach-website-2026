@@ -2,7 +2,7 @@ import type { InstallationGuideCard } from "@/data/resources/installation-guide/
 import type { RelatedResourcesLocale } from "@/data/resources/related-resources/related-resources.intl";
 import type { TechnicalArticleItem } from "@/data/resources/technical-articles/technical-articles.types";
 
-export type RelatedResourceSourceType = "article" | "product" | "video";
+export type RelatedResourceSourceType = "application" | "article" | "product" | "video";
 export type RelatedResourcesProps = {
   sourceType: RelatedResourceSourceType;
   includeRelatedArticles?: boolean;

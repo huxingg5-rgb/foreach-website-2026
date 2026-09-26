@@ -6,6 +6,7 @@ import type {
   TechnicalArticleSecondaryCategory,
   TechnicalArticleTaxonomyPrimary,
 } from "./technical-articles.types";
+import { meteringPumpAccuracyRepeatabilitySlug } from "./metering-pump-accuracy-repeatability.article";
 import { rplSelectionArticleSlug, rplSelectionRelationKeys } from "./rpl-selection-links";
 import { valvelessMeteringPumpOverviewSlug } from "./what-is-a-valveless-metering-pump.article";
 
@@ -238,6 +239,17 @@ interface ArticleClassificationDefinition {
 }
 
 const articleClassifications: Record<string, ArticleClassificationDefinition> = {
+  [meteringPumpAccuracyRepeatabilitySlug]: {
+    primaryCategory: "pumps",
+    secondaryCategory: "valveless-metering-pump",
+    tagKeys: ["precision", "dosing", "testing-validation"],
+    localizedLiteralTags: {
+      "zh-CN": ["计量泵准确性", "计量泵重复性", "试剂加液", "RPL"],
+    },
+    relatedProducts: ["RPL-P4", "RPL-P6.35", "RPL-P15"],
+    relationKeys: ["series:rpl"],
+    relationPriority: 165,
+  },
   [valvelessMeteringPumpOverviewSlug]: {
     primaryCategory: "pumps",
     secondaryCategory: "valveless-metering-pump",
@@ -272,9 +284,9 @@ const articleClassifications: Record<string, ArticleClassificationDefinition> = 
   },
   "fluid-resistance-calculator-liquid-path-design-guide": { primaryCategory: "general-fluidics", secondaryCategory: "tubing-resistance-pressure-drop", tagKeys: ["calculation", "pressure-drop", "tubing-resistance", "selection"], relatedProducts: [] },
   "foreach-miniature-diaphragm-pump-oem-integration": { primaryCategory: "applications-solutions", secondaryCategory: "oem-fluidic-systems", tagKeys: ["oem-integration", "selection", "fluidic-system", "testing-validation"], relatedProducts: ["DPL30", "DPL60", "DPL30H", "DPGL800"] },
-  "piston-pump-air-bubbles-dispensing-error": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "dosing", "troubleshooting", "testing-validation"], relatedProducts: ["EA", "EAS"] },
-  "piston-pump-viscous-liquid-aspiration-speed": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "dosing", "pressure-drop", "testing-validation"], relatedProducts: ["EA", "SM", "TM"] },
-  "piston-pump-dispensing-drift-diagnosis": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "precision", "troubleshooting", "testing-validation"], relatedProducts: ["EA", "SM", "TM"] },
+  "piston-pump-air-bubbles-dispensing-error": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "dosing", "troubleshooting", "testing-validation"], relatedProducts: ["EA", "EAS"], relationKeys: ["series:ea", "series:sm", "series:tm"], relationPriority: 95 },
+  "piston-pump-viscous-liquid-aspiration-speed": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "dosing", "pressure-drop", "testing-validation"], relatedProducts: ["EA", "SM", "TM"], relationKeys: ["series:ea", "series:sm", "series:tm"], relationPriority: 90 },
+  "piston-pump-dispensing-drift-diagnosis": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "precision", "troubleshooting", "testing-validation"], relatedProducts: ["EA", "SM", "TM"], relationKeys: ["series:ea", "series:sm", "series:tm"], relationPriority: 85 },
   "miniature-diaphragm-pump-pulsation-damper-validation": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["pulsation", "flow", "testing-validation"], relatedProducts: ["DPL30", "DPL60"] },
   "miniature-liquid-diaphragm-pump-cavitation-diagnosis": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["suction", "troubleshooting", "testing-validation"], relatedProducts: ["DPL30", "DPL60", "DPL30H"] },
   "diaphragm-pump-flow-meter-totalizer-error": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["pulsation", "flow", "testing-validation"], relatedProducts: ["DPL30", "DPL60"] },

@@ -159,7 +159,7 @@ export const pumpApplicationArticlesKo = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/pump-application-guides/piston-cycle-ko.webp",
+            "src": "/images/resources/technical-articles/pump-application-guides/piston-cycle-ko.svg",
             "alt": "저장 용기, 전환 밸브, 피스톤 펌프를 이용해 여러 큐벳에 분주하는 구성",
             "width": 1200,
             "height": 500,
@@ -445,7 +445,7 @@ export const pumpApplicationArticlesKo = {
         "blocks": [
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/pump-application-guides/wash-branches-ko.webp",
+            "src": "/images/resources/technical-articles/pump-application-guides/wash-branches-ko.svg",
             "alt": "펌프가 매니폴드에 공급하고 개별 튜브와 노즐이 각각 측정하는 수집 용기로 배출하는 구성",
             "width": 1200,
             "height": 500,
@@ -679,7 +679,7 @@ export const pumpApplicationArticlesKo = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/pump-application-guides/reservoir-vent-ko.webp",
+            "src": "/images/resources/technical-articles/pump-application-guides/reservoir-vent-ko.svg",
             "alt": "설계된 통기구로 기체가 들어오고 액체는 잠긴 흡입관을 통해 펌프로 이동하며, 기상부와 펌프 입구 압력은 별도로 측정하는 구성",
             "width": 1200,
             "height": 500,

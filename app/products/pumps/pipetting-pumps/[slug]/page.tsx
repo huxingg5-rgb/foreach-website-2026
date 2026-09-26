@@ -1,4 +1,10 @@
 import { applyInstrumentFluidicsChineseCopy } from "@/data/products/detail/instrument-fluidics-copy.zh";
+import { Suspense } from "react";
+import ProductSelectionClient from "@/components/products/selection/ProductSelectionClient";
+import ProductPageSkeleton from "@/components/common/ProductPageSkeleton";
+import { pipettingSeriesSlugs, pipettingSeriesFilters, isPipettingPageKey } from "@/data/products/selection/pipetting-pump-seo";
+import { getPipettingMetadata } from "@/services/products/getPipettingMetadata";
+import "@/app/products/products.css";
 import { notFound } from "next/navigation";
 import type { ComponentType } from "react";
 import type { Metadata } from "next";
@@ -194,13 +200,14 @@ function toClientData(detail: DetailRecord) {
 }
 
 export function generateStaticParams() {
-  return details.map((item) => ({
+  return [...pipettingSeriesSlugs.map(slug => ({slug})), ...details.map((item) => ({
     slug: normalizeSlug(item.slug),
-  }));
+  }))];
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
+  if (slug !== "category" && isPipettingPageKey(slug)) return getPipettingMetadata("zh", slug);
   const detail = findDetail(slug);
 
   if (!detail) {
@@ -221,6 +228,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function PipettingPumpDetailPage({ params }: PageProps) {
   const { slug } = await params;
+  const seriesIndex = pipettingSeriesSlugs.indexOf(slug as "smtp2" | "smtp4");
+  if (seriesIndex >= 0) {
+    return <Suspense fallback={<ProductPageSkeleton variant="selection" />}>
+      <ProductSelectionClient locale="zh" initialCategoryId="pumps" initialProductTypeId="pipette-pump" initialFilters={{filter01: [pipettingSeriesFilters[seriesIndex]]}} />
+    </Suspense>;
+  }
   const detail = findDetail(slug);
 
   if (!detail) {

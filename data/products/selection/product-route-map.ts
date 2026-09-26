@@ -15,6 +15,7 @@
 ========================================================= */
 
 import type { SelectionFilterKey } from "./product-selection.types";
+import { getPipettingCopy, pipettingSeriesFilters, pipettingSeriesSlugs } from "./pipetting-pump-seo";
 import { valvelessPumpIntroZh } from "./valveless-pump-copy.zh";
 import {
   VALVELESS_PUMP_CATEGORY_LABEL_ZH,
@@ -126,9 +127,8 @@ export const productRouteMap: {
       categoryId: "pumps",
       productTypeId: "pipette-pump",
       label: "移液泵",
-      title: "移液泵 | Foreach Technology",
-      description:
-        "移液泵适用于自动化移液、加样、分液和微量液体处理场景。",
+      title: getPipettingCopy("zh").seoTitle,
+      description: getPipettingCopy("zh").description,
     },
 
     "syringe-pumps": {
@@ -136,9 +136,9 @@ export const productRouteMap: {
       categoryId: "pumps",
       productTypeId: "syringe-pump",
       label: "注射泵",
-      title: "注射泵 | Foreach Technology",
+      title: "注射泵｜OEM 电磁阀与旋转阀注射泵｜恒永达 FOREACH",
       description:
-        "注射泵适用于高精度进样、注液、梯度控制和稳定流量输出场景。",
+        "恒永达 OEM 注射泵提供电磁阀与旋转阀配置，支持 30 mm、60 mm 行程及单通道、2、3、4、6、8 通道配置，用于试剂定量加液、样本稀释和自动化液体处理，支持液路定制。",
     },
 
     [VALVELESS_PUMP_CATEGORY_SLUG_ZH]: {
@@ -236,6 +236,17 @@ export const productRouteMap: {
   },
 
   series: {
+    ...Object.fromEntries(pipettingSeriesSlugs.map((key, index) => [key, {
+      category: "pumps", slug: "pipetting-pumps", categoryId: "pumps", productTypeId: "pipette-pump",
+      filterKey: "filter01" as const, filterValue: pipettingSeriesFilters[index],
+      initialFilters: { filter01: [pipettingSeriesFilters[index]] },
+      label: getPipettingCopy("zh", key).title,
+      title: getPipettingCopy("zh", key).seoTitle,
+      description: getPipettingCopy("zh", key).description
+    }])),
+    "solenoid-valve-syringe-pumps": { category: "pumps", slug: "syringe-pumps", categoryId: "pumps", productTypeId: "syringe-pump", filterKey: "filter01", filterValue: "HMD 电磁阀系列注射泵", initialFilters: { filter01: ["HMD 电磁阀系列注射泵"] }, label: "HMD 电磁阀系列注射泵", title: "HMD 系列电磁阀注射泵 | FOREACH", description: "恒永达 HMD 电磁阀注射泵将玻璃注射器计量与电磁阀液路切换结合，用于自动化分析仪器的试剂定量加液、样本稀释和多通道液体分配。注射器驱动机构控制吸液与排液，电磁阀切换连接的液体路径。" },
+    "rotary-valve-syringe-pumps": { category: "pumps", slug: "syringe-pumps", categoryId: "pumps", productTypeId: "syringe-pump", filterKey: "filter01", filterValue: "HLD 旋转阀系列注射泵", initialFilters: { filter01: ["HLD 旋转阀系列注射泵"] }, label: "HLD 旋转阀系列注射泵", title: "HLD 系列旋转阀注射泵 | FOREACH", description: "恒永达 HLD 旋转阀注射泵将玻璃注射器计量与多通旋转阀选路结合，用于自动化分析仪器的多试剂选择、样本稀释和定量分配。旋转阀选择连接的液源或输出路径，注射器完成吸液与排液。" },
+
     "standard-piston-pump": {
       category: "pumps",
       slug: "piston-pump",

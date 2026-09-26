@@ -92,6 +92,14 @@ Foreach Technology develops miniature diaphragm pumps, precision fluid-control c
 - [Laboratory automation](https://www.foreachtek.com/en/applications/lab-automation/): Automated workstations and liquid handling.
 - [Analytical instruments](https://www.foreachtek.com/en/applications/analytical-instruments/): Sampling, rinsing and waste-fluid management.
 
+### Piston-pump application guides for analytical instruments
+
+- [Piston pumps in analytical instruments](https://www.foreachtek.com/en/applications/analytical-instruments/piston-pump/): Match EA, SM, TM and EAS configurations to sample, reagent, diluent and titrant metering tasks.
+- [Sample aspiration and transfer](https://www.foreachtek.com/en/applications/analytical-instruments/piston-sample-transfer/): Define sample dose, system-fluid displacement, probe delivery, carryover and bubble controls.
+- [Reagent and standard dispensing](https://www.foreachtek.com/en/applications/analytical-instruments/piston-reagent-dispensing/): Match working dose, wetted materials, valve paths and first-dose recovery.
+- [Dilution, spiking and proportioning](https://www.foreachtek.com/en/applications/analytical-instruments/piston-dilution/): Convert ratios into sample and diluent volumes, mixing steps and concentration-error checks.
+- [Incremental titrant dosing](https://www.foreachtek.com/en/applications/analytical-instruments/piston-titration/): Select capacity and dosing increments from endpoint volume, error budget and refill requirements.
+
 ### Resources, tools and support
 
 - [Fluid-resistance calculator](https://www.foreachtek.com/en/resources/calculators/fluid-resistance/): Estimate tubing resistance and system backpressure.

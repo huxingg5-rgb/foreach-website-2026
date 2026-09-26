@@ -159,7 +159,7 @@ export const pumpApplicationArticlesEs = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/pump-application-guides/piston-cycle-es.webp",
+            "src": "/images/resources/technical-articles/pump-application-guides/piston-cycle-es.svg",
             "alt": "Depósito, válvula de conmutación y bomba de pistón que dispensa en varias cubetas",
             "width": 1200,
             "height": 500,
@@ -445,7 +445,7 @@ export const pumpApplicationArticlesEs = {
         "blocks": [
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/pump-application-guides/wash-branches-es.webp",
+            "src": "/images/resources/technical-articles/pump-application-guides/wash-branches-es.svg",
             "alt": "Una bomba alimenta un colector y varios tubos y boquillas descargan en recipientes de recogida medidos individualmente",
             "width": 1200,
             "height": 500,
@@ -679,7 +679,7 @@ export const pumpApplicationArticlesEs = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/pump-application-guides/reservoir-vent-es.webp",
+            "src": "/images/resources/technical-articles/pump-application-guides/reservoir-vent-es.svg",
             "alt": "El gas entra por la ventilación prevista y el líquido sale por una toma sumergida hacia la bomba; las presiones del espacio de gas y de entrada se miden por separado",
             "width": 1200,
             "height": 500,

@@ -68,7 +68,7 @@ export const diaphragmPumpRdArticlesKo = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/diaphragm-pump-rd/ko/01.webp",
+            "src": "/images/resources/technical-articles/diaphragm-pump-rd/ko/01.svg",
             "alt": "자흡 기동의 세 가지 관찰 시점",
             "width": 1000,
             "height": 650,
@@ -362,7 +362,7 @@ export const diaphragmPumpRdArticlesKo = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/diaphragm-pump-rd/ko/02.webp",
+            "src": "/images/resources/technical-articles/diaphragm-pump-rd/ko/02.svg",
             "alt": "같은 평균, 다른 순간 유량",
             "width": 1000,
             "height": 650,
@@ -674,7 +674,7 @@ export const diaphragmPumpRdArticlesKo = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/diaphragm-pump-rd/ko/03.webp",
+            "src": "/images/resources/technical-articles/diaphragm-pump-rd/ko/03.svg",
             "alt": "가진원에서 소리까지 전달 경로 추적",
             "width": 1000,
             "height": 650,
@@ -1006,7 +1006,7 @@ export const diaphragmPumpRdArticlesKo = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/diaphragm-pump-rd/ko/04.webp",
+            "src": "/images/resources/technical-articles/diaphragm-pump-rd/ko/04.svg",
             "alt": "정지 후 누적 토출량 변화",
             "width": 1000,
             "height": 650,

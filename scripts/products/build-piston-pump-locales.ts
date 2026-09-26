@@ -67,9 +67,18 @@ for (const slug of [...EA_PUMP_MODELS, ...COMPACT_PUMP_MODELS]) {
   const content = getEaPumpContent(slug, "en") || getCompactPumpContent(slug, "en");
   const data = getPumpSeriesProductDetailAdapter(slug, "en");
   if (!content || !data) throw new Error(`Missing authoritative source for ${slug}`);
+  // Application-guide backlinks currently exist only on the new English
+  // analytical-instrument pages. Keep this locale-scoped navigation out of
+  // the shared translation catalog until those guides have real translations.
+  const translatableApplicationDetails = { ...content.applicationDetails };
+  delete translatableApplicationDetails.relatedGuides;
+  const translatableContent = {
+    ...content,
+    applicationDetails: translatableApplicationDetails,
+  };
   const extra = data as typeof data & { parameterFootnotes?: string[]; resourceFootnotes?: string[]; pageFootnotes?: string[]; imageCaption?: string; imageFootnotes?: string[]; sectionTitleMap?: Record<string, string> };
   const english = {
-    ...content, heading: PLUNGER_PUMP_CARD_HEADING_EN_BY_MODEL[slug.toUpperCase()],
+    ...translatableContent, heading: PLUNGER_PUMP_CARD_HEADING_EN_BY_MODEL[slug.toUpperCase()],
     specs: data.specs, parameterFootnotes: extra.parameterFootnotes, resourceFootnotes: extra.resourceFootnotes,
     pageFootnotes: extra.pageFootnotes, imageCaption: extra.imageCaption, imageFootnotes: extra.imageFootnotes,
     sectionTitleMap: extra.sectionTitleMap,

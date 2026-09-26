@@ -156,18 +156,6 @@ export default function GlobalSelectionCartDrawer() {
      3. 所以需要等组件挂载后再创建 portal
   ========================================================= */
   const [isMounted, setIsMounted] = useState(false);
-  const [showBackToTop, setShowBackToTop] = useState(false);
-  useEffect(() => {
-    const update = () => setShowBackToTop(window.scrollY > window.innerHeight);
-    const frame = window.requestAnimationFrame(update);
-    window.addEventListener("scroll", update, { passive: true });
-    window.addEventListener("resize", update);
-    return () => {
-      window.cancelAnimationFrame(frame);
-      window.removeEventListener("scroll", update);
-      window.removeEventListener("resize", update);
-    };
-  }, []);
 
   /* 已经标记“已添加图纸”的型号 */
   const requestDrawingItems = useMemo(() => {
@@ -587,7 +575,7 @@ export default function GlobalSelectionCartDrawer() {
           isOpen ? styles.hidden : ""
         } ${isCartButtonBumping ? styles.bump : ""}`}
       >
-        {showBackToTop && <button
+        <button
           className={styles.backToTopButton}
           type="button"
           onClick={() => {
@@ -598,7 +586,7 @@ export default function GlobalSelectionCartDrawer() {
           }}
         >
           {isEnglish ? t("Top") : "顶部"}
-        </button>}
+        </button>
 
         <button className={styles.cartEntryButton} type="button" onClick={openCart}>
           {isEnglish ? t("List") : "清单"}
@@ -858,7 +846,6 @@ export default function GlobalSelectionCartDrawer() {
     </>
   );
 }
-
 
 
 

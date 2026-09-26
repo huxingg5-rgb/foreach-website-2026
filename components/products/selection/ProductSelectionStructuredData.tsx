@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation";
 import { HOME_SITE_IDENTITY } from "@/lib/seo/site-identity";
 import { getCanonicalUrl } from "@/lib/seo/site-url";
+import { normalizeProductBreadcrumbLabel } from "@/lib/seo/product-breadcrumb-label";
 
 type Props = {
   locale: string;
@@ -33,7 +34,7 @@ export default function ProductSelectionStructuredData({
         "@type": "CollectionPage",
         "@id": `${url}#webpage`,
         url,
-        name: isProductCenter ? breadcrumbs[1].label : name,
+        name: isProductCenter ? normalizeProductBreadcrumbLabel(breadcrumbs[1].label, url) : name,
         inLanguage: locale === "zh" ? "zh-CN" : locale,
         isPartOf: { "@id": `${getCanonicalUrl("/")}#website` },
         breadcrumb: { "@id": breadcrumbId },
@@ -45,7 +46,7 @@ export default function ProductSelectionStructuredData({
         itemListElement: breadcrumbs.map((item, index) => ({
           "@type": "ListItem",
           position: index + 1,
-          name: item.label,
+          name: normalizeProductBreadcrumbLabel(item.label, item.href || url),
           item: item.href ? getCanonicalUrl(item.href) : url,
         })),
       },
