@@ -1,4 +1,6 @@
 import { getPipettingModelPath } from "@/data/products/selection/pipetting-pump-routes";
+import { getPipettingApplications } from "./pipetting-pump-applications.locales";
+import { getPipettingSpecs } from "./pipetting-pump-specs.locales";
 export const pipettingPumpIntroductions: Record<string, Record<string, string[]>> = {
   zh: {
     "smtp2-1000ul": [
@@ -120,9 +122,15 @@ export function applyPipettingPumpIntroduction<T extends Record<string, any>>(da
   const description = pipettingIntroductionParagraphs.join("\n\n");
   const labels = applicationLabels[lang];
   const index = ["smtp2-1000ul", "smtp4-100ul", "smtp4-500ul"].indexOf(data.slug);
+  const applicationDetails = getPipettingApplications(lang, data.slug);
+  const specs = getPipettingSpecs(lang, data.slug);
   return {
     ...data, detailHref: getPipettingModelPath(locale, String(data.slug || "")), description, summary: description, overview: description, pipettingIntroductionParagraphs,
     commonApplications: labels.tags[index],
-    ...(data.applicationDetails ? { applicationDetails: { ...data.applicationDetails, tabLabel: labels.tab } } : {}),
+    ...(applicationDetails ? { applicationDetails } : {}),
+    ...(specs ? {
+      specs, specifications: specs, model: specs[0].value,
+      imageAltEn: `FOREACH ${specs[0].value}`, mainImageAlt: `FOREACH ${specs[0].value}`, imageAlt: `FOREACH ${specs[0].value}`,
+    } : {}),
   };
 }

@@ -145,7 +145,7 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
   },
   "SMTP2 可编程气体置换式移液泵": {
     zh: "SMTP2 可编程气体置换式移液泵",
-    en: "SMTP2 Programmable Gas Displacement Pipetting Pump",
+    en: "SMTP2 Programmable Air Displacement Pipetting Pump",
     es: "Bomba de pipeteo por desplazamiento de aire programable SMTP2",
     fr: "Pompe de pipetage à déplacement d’air programmable SMTP2",
     ko: "SMTP2 프로그래머블 공기 치환식 피펫팅 펌프",
@@ -153,7 +153,7 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
   },
   "SMTP4 气体置换式移液泵": {
     zh: "SMTP4 气体置换式移液泵",
-    en: "SMTP4 Gas Displacement Pipetting Pump",
+    en: "SMTP4 Air Displacement Pipetting Pump",
     es: "Bomba de pipeteo por desplazamiento de aire SMTP4",
     fr: "Pompe de pipetage à déplacement d’air SMTP4",
     ko: "SMTP4 공기 치환식 피펫팅 펌프",
