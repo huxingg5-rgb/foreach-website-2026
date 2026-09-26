@@ -68,7 +68,7 @@ export const diaphragmPumpRdArticlesEn = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/diaphragm-pump-rd/en/01.webp",
+            "src": "/images/resources/technical-articles/diaphragm-pump-rd/en/01.svg",
             "alt": "Three events during self-priming",
             "width": 1000,
             "height": 650,
@@ -362,7 +362,7 @@ export const diaphragmPumpRdArticlesEn = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/diaphragm-pump-rd/en/02.webp",
+            "src": "/images/resources/technical-articles/diaphragm-pump-rd/en/02.svg",
             "alt": "Same average, different instantaneous flow",
             "width": 1000,
             "height": 650,
@@ -674,7 +674,7 @@ export const diaphragmPumpRdArticlesEn = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/diaphragm-pump-rd/en/03.webp",
+            "src": "/images/resources/technical-articles/diaphragm-pump-rd/en/03.svg",
             "alt": "Trace the paths from excitation to sound",
             "width": 1000,
             "height": 650,
@@ -1006,7 +1006,7 @@ export const diaphragmPumpRdArticlesEn = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/diaphragm-pump-rd/en/04.webp",
+            "src": "/images/resources/technical-articles/diaphragm-pump-rd/en/04.svg",
             "alt": "Cumulative delivery after stopping",
             "width": 1000,
             "height": 650,

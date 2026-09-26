@@ -159,7 +159,7 @@ export const pumpApplicationArticlesRu = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/pump-application-guides/piston-cycle-ru.webp",
+            "src": "/images/resources/technical-articles/pump-application-guides/piston-cycle-ru.svg",
             "alt": "Резервуар, переключающий клапан и поршневой насос, подающий жидкость в несколько кювет",
             "width": 1200,
             "height": 500,
@@ -445,7 +445,7 @@ export const pumpApplicationArticlesRu = {
         "blocks": [
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/pump-application-guides/wash-branches-ru.webp",
+            "src": "/images/resources/technical-articles/pump-application-guides/wash-branches-ru.svg",
             "alt": "Насос питает коллектор, а отдельные трубки и форсунки подают жидкость в индивидуально измеряемые приёмные ёмкости",
             "width": 1200,
             "height": 500,
@@ -679,7 +679,7 @@ export const pumpApplicationArticlesRu = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/pump-application-guides/reservoir-vent-ru.webp",
+            "src": "/images/resources/technical-articles/pump-application-guides/reservoir-vent-ru.svg",
             "alt": "Газ поступает через предусмотренный канал вентиляции, жидкость идёт через погружённый заборник к насосу; давление газового пространства и входа измеряют отдельно",
             "width": 1200,
             "height": 500,

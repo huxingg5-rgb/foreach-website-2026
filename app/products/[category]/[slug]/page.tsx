@@ -1,6 +1,7 @@
 import { getControlModuleProductDetailData } from "@/services/products/adapters/getControlModuleProductDetailData";
 import { getPistonPumpRedirect } from "@/lib/seo/piston-pump-migration";
 import { getPistonPumpMetadata } from "@/services/products/getPistonPumpMetadata";
+import { getPipettingMetadata } from "@/services/products/getPipettingMetadata";
 ﻿/* =========================================================
    page.tsx
    恒永达官网｜中文产品类型页 / 旧产品详情页复用动态路由
@@ -102,6 +103,7 @@ export async function generateMetadata({
   params,
 }: ProductDetailRoutePageProps): Promise<Metadata> {
   const { category, slug } = await params;
+  if (category === "pumps" && slug === "pipetting-pumps") return getPipettingMetadata("zh");
   if (category === "pumps" && slug === VALVELESS_PUMP_LEGACY_CATEGORY_SLUG) {
     notFound();
   }
@@ -113,12 +115,15 @@ export async function generateMetadata({
   const productTypeRoute = resolveProductTypeRoute(category, slug);
 
   if (productTypeRoute) {
-    if (["diaphragm-pump", "valveless-pump"].includes(productTypeRoute.productTypeId)) {
+    if (["diaphragm-pump", "valveless-pump", "syringe-pump"].includes(productTypeRoute.productTypeId)) {
       const canonicalPath = `/products/${category}/${slug}/`;
 
       return {
         title: productTypeRoute.title,
         description: productTypeRoute.description,
+        ...(productTypeRoute.productTypeId === "syringe-pump"
+          ? { robots: { index: true, follow: true } }
+          : {}),
         alternates: {
           canonical: canonicalPath,
           languages: {

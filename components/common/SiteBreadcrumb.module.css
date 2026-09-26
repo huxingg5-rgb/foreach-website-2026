@@ -79,3 +79,14 @@
     width: min(100% - 32px, 1600px);
   }
 }
+/* Shared desktop breadcrumb text; keep mobile typography unchanged. */
+@media (min-width: 1025px) {
+  .breadcrumb {
+    font-size: 16px;
+  }
+}
+
+/* Smaller breadcrumb text on compact desktop screens. */
+@media (min-width: 1025px) and (max-width: 1599px) {
+  .breadcrumb { font-size: 14px; line-height: 25.6px; }
+}

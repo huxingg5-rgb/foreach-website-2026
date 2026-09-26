@@ -91,17 +91,19 @@
   font-style: normal;
 }
 
-.ivd-hero h1 {
+.ivd-hero h1,
+.ivd-hero-title {
   max-width: 860px;
   color: var(--white);
   font-size: clamp(40px, 4.8vw, 64px);
   line-height: 1.08;
   letter-spacing: -0.04em;
-  font-weight: 760;
+  font-weight: 500;
   margin: 0 0 22px;
 }
 
-.ivd-hero h1 span {
+.ivd-hero h1 span,
+.ivd-hero-title span {
   color: var(--cyan);
 }
 
@@ -1028,7 +1030,8 @@
   display: none !important;
 }
 
-.ivd-page .ivd-hero h1 {
+.ivd-page .ivd-hero h1,
+.ivd-page .ivd-hero-title {
   max-width: 760px !important;
 }
 
@@ -1125,7 +1128,8 @@
  * 电脑端不受影响。
  */
 @media (max-width: 760px) {
-  .ivd-page .ivd-hero h1 {
+  .ivd-page .ivd-hero h1,
+  .ivd-page .ivd-hero-title {
     max-width: 100% !important;
     font-size: 28px !important;
     line-height: 1.12 !important;

@@ -68,7 +68,7 @@ export const diaphragmPumpRdArticlesEs = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/diaphragm-pump-rd/es/01.webp",
+            "src": "/images/resources/technical-articles/diaphragm-pump-rd/es/01.svg",
             "alt": "Tres eventos durante el autocebado",
             "width": 1000,
             "height": 650,
@@ -354,7 +354,7 @@ export const diaphragmPumpRdArticlesEs = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/diaphragm-pump-rd/es/02.webp",
+            "src": "/images/resources/technical-articles/diaphragm-pump-rd/es/02.svg",
             "alt": "Misma media, distinto caudal instantáneo",
             "width": 1000,
             "height": 650,
@@ -654,7 +654,7 @@ export const diaphragmPumpRdArticlesEs = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/diaphragm-pump-rd/es/03.webp",
+            "src": "/images/resources/technical-articles/diaphragm-pump-rd/es/03.svg",
             "alt": "Rutas entre la excitación y el sonido",
             "width": 1000,
             "height": 650,
@@ -982,7 +982,7 @@ export const diaphragmPumpRdArticlesEs = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/diaphragm-pump-rd/es/04.webp",
+            "src": "/images/resources/technical-articles/diaphragm-pump-rd/es/04.svg",
             "alt": "Volumen acumulado después de parar",
             "width": 1000,
             "height": 650,

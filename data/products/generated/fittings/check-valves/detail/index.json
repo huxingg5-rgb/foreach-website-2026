@@ -2717,15 +2717,10 @@
     "showDatasheetRequest": false,
     "showDrawingRequest": true,
     "show3DRequest": false,
-    "drawing2dUrl": "/resources/drawings/fittings/check-valves/cv-be-32-pp-n-443-02-00281-drawing.pdf",
-    "drawingPdfUrl": "/resources/drawings/fittings/check-valves/cv-be-32-pp-n-443-02-00281-drawing.pdf",
+    "drawing2dUrl": "",
+    "drawingPdfUrl": "",
     "resources": {
-      "drawings": [
-        {
-          "label": "二维图纸 443-02-00281",
-          "href": "/resources/drawings/fittings/check-valves/cv-be-32-pp-n-443-02-00281-drawing.pdf"
-        }
-      ]
+      "drawings": []
     },
     "specs": [
       {

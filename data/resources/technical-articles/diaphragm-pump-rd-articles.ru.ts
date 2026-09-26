@@ -68,7 +68,7 @@ export const diaphragmPumpRdArticlesRu = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/diaphragm-pump-rd/ru/01.webp",
+            "src": "/images/resources/technical-articles/diaphragm-pump-rd/ru/01.svg",
             "alt": "Три события при самовсасывании",
             "width": 1000,
             "height": 650,
@@ -362,7 +362,7 @@ export const diaphragmPumpRdArticlesRu = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/diaphragm-pump-rd/ru/02.webp",
+            "src": "/images/resources/technical-articles/diaphragm-pump-rd/ru/02.svg",
             "alt": "Одинаковое среднее, разный мгновенный поток",
             "width": 1000,
             "height": 650,
@@ -674,7 +674,7 @@ export const diaphragmPumpRdArticlesRu = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/diaphragm-pump-rd/ru/03.webp",
+            "src": "/images/resources/technical-articles/diaphragm-pump-rd/ru/03.svg",
             "alt": "Пути от возбуждения к слышимому шуму",
             "width": 1000,
             "height": 650,
@@ -1006,7 +1006,7 @@ export const diaphragmPumpRdArticlesRu = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/diaphragm-pump-rd/ru/04.webp",
+            "src": "/images/resources/technical-articles/diaphragm-pump-rd/ru/04.svg",
             "alt": "Накопленный объём после остановки",
             "width": 1000,
             "height": 650,

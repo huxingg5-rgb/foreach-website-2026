@@ -173,6 +173,11 @@ export default function RelatedResourcesClient({
   const showVideos = allRelatedVideos.length > 0;
   const showProducts = featuredProducts.length > 0;
   const showArticles = allRelatedArticles.length > 0;
+  const resourceGroupLabel = [
+    showVideos ? ui.relatedVideos : null,
+    showProducts ? ui.relatedProducts : null,
+    showArticles ? ui.relatedArticles : null,
+  ].filter((label): label is string => Boolean(label)).join(", ");
 
   function handleVideoSelect(guide: InstallationGuideCard) {
     setSelectedVideo(guide);
@@ -198,7 +203,7 @@ export default function RelatedResourcesClient({
   }
 
   return (
-    <aside className={styles.root} aria-label={ui.relatedVideos}>
+    <aside className={styles.root} aria-label={resourceGroupLabel}>
       {showVideos ? (
         <section className={styles.section}>
           <div className={styles.headingRow}>

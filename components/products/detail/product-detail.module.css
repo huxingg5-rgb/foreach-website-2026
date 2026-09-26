@@ -46,7 +46,7 @@
 }
 
 .container {
-  width: min(calc(100% - 96px), var(--page-width));
+  width: var(--product-detail-container-width, min(calc(100% - 96px), var(--page-width)));
   margin: 0 auto;
 }
 
@@ -213,7 +213,7 @@
   color: var(--blue);
   font-size: 34px;
   line-height: 1.08;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: -0.035em;
 }
 
@@ -253,7 +253,7 @@
   color: #111111;
   font-size: 24px;
   line-height: 1.35;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .applicationText {
@@ -262,6 +262,19 @@
   font-size: 24px;
   line-height: 1.65;
   font-weight: 400;
+}
+
+.applicationAreaLink {
+  color: inherit;
+  font: inherit;
+  text-decoration: none;
+}
+
+.applicationAreaLink:hover,
+.applicationAreaLink:focus-visible {
+  color: var(--brand-cyan, #09e9b4);
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
 }
 
 /* =========================================================
@@ -575,7 +588,7 @@
   .applicationTitle {
     font-size: 20px;
     line-height: 1.35;
-    font-weight: 700;
+    font-weight: 600;
   }
 
   .modelLine {
@@ -2534,13 +2547,13 @@
 
 /*
  * 俄文产品名称通常更长、字形更密：
- * - 仅降低俄文产品主标题的字号和字重
+ * - 仅调整俄文产品主标题的字号和行距
  * - 不影响正文、其他语言或其他页面标题
  */
 :global(html[lang^="ru"]) .container .productModelTitle {
   font-size: 30px !important;
   line-height: 1.16 !important;
-  font-weight: 600 !important;
+  font-weight: 400 !important;
   letter-spacing: -0.02em !important;
 }
 
@@ -2570,11 +2583,108 @@
   overflow-wrap: anywhere;
 }
 
-/* Mobile shortcuts preserve the full authored copy and the existing desktop layout. */
-.mobileQuickLinks { display: none; }
 .modelViewerError { max-width: 32rem; padding: 20px; text-align: center; }
 .operationArea, .detailSection { scroll-margin-top: 110px; }
+
+
+/* Give Chinese product detail headings more room between lines. */
+:global(html[lang^="zh"]) .container .productModelTitle {
+  line-height: 1.4 !important;
+}
+
 @media (max-width: 768px) {
-  .mobileQuickLinks { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 18px; }
-  .mobileQuickLinks a { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 14px; border: 1px solid #173368; border-radius: 4px; color: #173368; font-weight: 600; }
+  :global(html[lang^="zh"]) .container .productModelTitle {
+    line-height: 1.45 !important;
+  }
+}
+
+/* Shared fluid desktop detail layout; preserve all mobile rules. */
+@media (min-width: 1025px) {
+  .page .container .productTop {
+    grid-template-columns: minmax(0, 35%) minmax(0, 1fr) !important;
+    gap: clamp(28px, 3.3vw, 64px) !important;
+  }
+  .page .container .productInfo { min-width: 0; max-width: none; }
+  .page .container .operationArea .button {
+    height: auto !important;
+    min-height: 44px !important;
+    padding-top: 9px !important;
+    padding-bottom: 9px !important;
+    line-height: 1.35 !important;
+    white-space: normal !important;
+  }
+  .page[data-product-detail-page] .container .productModelTitle {
+    font-size: clamp(28px, calc(1.08vw + 13.25px), 34px) !important;
+    line-height: 1.25 !important;
+  }
+  :global(html[lang^="zh"]) .page[data-product-detail-page] .container .productModelTitle { line-height: 1.4 !important; }
+  .page .container .productDesc,
+  .page .container .applicationText { font-size: clamp(16px, calc(0.18vw + 13.54px), 17px); line-height: 1.7; }
+  .page .container .applicationTitle,
+  .page .container .modelLabel,
+  .page .container .modelCode { font-size: clamp(20px, calc(0.72vw + 10.16px), 24px) !important; }
+  .page .container .tabNav .tabButton { font-size: clamp(18px, calc(1.08vw + 3.25px), 24px) !important; }
+}
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .page .container .thumbRow { height: 80px !important; }
+  .page .container .thumbViewport > .thumb {
+    width: 80px !important;
+    min-width: 80px !important;
+    max-width: 80px !important;
+    height: 100% !important;
+    flex: 0 0 80px !important;
+  }
+}
+/* Keep long product headings proportionate on small desktop screens. */
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .page[data-product-detail-page] .container .productModelTitle {
+    font-size: 24px !important;
+    line-height: 1.3 !important;
+  }
+  :global(html[lang^="zh"]) .page[data-product-detail-page] .container .productModelTitle {
+    line-height: 1.4 !important;
+  }
+}
+/* Compact resource typography; preserve existing colors and spacing. */
+@media (min-width: 1025px) and (max-width: 1599px) {
+  .page .container .tabNav { height: 44px; }
+  .page .container .tabNav .tabButton {
+    height: 44px;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+  }
+  .page .container .tabNav .tabButton.isActive {
+    font-weight: 500 !important;
+  }
+}
+/* Match the header's centered underline reveal on compact desktop tabs. */
+@media (min-width: 1025px) and (max-width: 1599px) {
+  .page .container .tabNav .tabButton::after {
+    width: 0 !important;
+    height: 2px !important;
+    background: #00d6aa !important;
+    transform: translateX(-50%) !important;
+    transition: width 0.28s ease !important;
+  }
+  .page .container .tabNav .tabButton:hover::after,
+  .page .container .tabNav .tabButton.isActive::after {
+    width: 46px !important;
+    height: 2px !important;
+  }
+}
+/* Shared FAQ typography for compact desktop screens only. */
+@media (min-width: 1025px) and (max-width: 1599px) {
+  .page .container .faqHeader h2 {
+    font-size: 22px !important;
+    font-weight: 500 !important;
+  }
+  .page .container .faqQuestionText {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+  }
+  .page .container .faqAnswer {
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 1.7 !important;
+  }
 }

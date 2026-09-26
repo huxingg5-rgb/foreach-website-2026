@@ -1,6 +1,9 @@
 "use client";
+import { getSyringeModelRedirect } from "@/data/products/selection/syringe-pump-routes";
 
+import { syringePumpCardsLocales } from "@/data/products/selection/syringe-pump-cards.locales";
 import { instrumentCardsZh } from "@/data/products/selection/instrument-fluidics-copy.zh";
+import { getPipettingCardCopy } from "@/data/products/selection/pipetting-pump-cards.locales";
 import { usePathname } from "next/navigation";
 
 import type { ProductSelectionProductItem } from "./product-selection-ui.types";
@@ -156,7 +159,7 @@ function normalizeCardDetailHref(product: ProductSelectionProductItem, href: str
     return `/products/pumps/piston-pump/${hrefSlug}`;
   }
 
-  return rawHref || "/products";
+  return getSyringeModelRedirect(rawHref) || rawHref || "/products";
 }
 
 function localizeCardDetailHref(
@@ -185,7 +188,8 @@ export function getProductSelectionCardName(
   locale: SelectionLocale,
   title: string,
 ) {
-  const authoredCard = locale === "zh" ? instrumentCardsZh[String(product.detailSlug || product.slug || "")] : undefined;
+  const slug = String(product.detailSlug || product.slug || "");
+  const authoredCard = getPipettingCardCopy(locale, slug) || (locale === "zh" ? instrumentCardsZh : syringePumpCardsLocales[locale])?.[slug];
   return authoredCard?.model || toDisplayText(title) || product.productId;
 }
 
@@ -207,7 +211,8 @@ export default function ProductSelectionCard({
   const pathname = usePathname();
   const locale = getLocaleFromPathname(pathname);
   const cardText = CARD_TEXT[locale];
-  const authoredCard = locale === "zh" ? instrumentCardsZh[String(product.detailSlug || product.slug || "")] : undefined;
+  const slug = String(product.detailSlug || product.slug || "");
+  const authoredCard = getPipettingCardCopy(locale, slug) || (locale === "zh" ? instrumentCardsZh : syringePumpCardsLocales[locale])?.[slug];
   const safeTitle = getProductSelectionCardName(product, locale, title);
   const isDiaphragmPumpCard =
     product.productTypeId === "diaphragm-pump" ||

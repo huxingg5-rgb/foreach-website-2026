@@ -159,7 +159,7 @@ export const pumpApplicationArticlesFr = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/pump-application-guides/piston-cycle-fr.webp",
+            "src": "/images/resources/technical-articles/pump-application-guides/piston-cycle-fr.svg",
             "alt": "Réservoir, vanne de commutation et pompe à piston distribuant dans plusieurs cuvettes",
             "width": 1200,
             "height": 500,
@@ -445,7 +445,7 @@ export const pumpApplicationArticlesFr = {
         "blocks": [
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/pump-application-guides/wash-branches-fr.webp",
+            "src": "/images/resources/technical-articles/pump-application-guides/wash-branches-fr.svg",
             "alt": "Une pompe alimente un collecteur ; des tubes et buses séparés débouchent dans des récipients de collecte mesurés individuellement",
             "width": 1200,
             "height": 500,
@@ -679,7 +679,7 @@ export const pumpApplicationArticlesFr = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/pump-application-guides/reservoir-vent-fr.webp",
+            "src": "/images/resources/technical-articles/pump-application-guides/reservoir-vent-fr.svg",
             "alt": "Le gaz entre par l'évent prévu tandis que le liquide rejoint la pompe par une prise immergée ; les pressions du ciel gazeux et de l'entrée sont mesurées séparément",
             "width": 1200,
             "height": 500,

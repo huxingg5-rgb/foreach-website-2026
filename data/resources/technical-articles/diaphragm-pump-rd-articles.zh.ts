@@ -68,7 +68,7 @@ export const diaphragmPumpRdArticlesZh = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/diaphragm-pump-rd/zh-CN/01.webp",
+            "src": "/images/resources/technical-articles/diaphragm-pump-rd/zh-CN/01.svg",
             "alt": "自吸启动的三个观察事件",
             "width": 1000,
             "height": 650,
@@ -362,7 +362,7 @@ export const diaphragmPumpRdArticlesZh = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/diaphragm-pump-rd/zh-CN/02.webp",
+            "src": "/images/resources/technical-articles/diaphragm-pump-rd/zh-CN/02.svg",
             "alt": "相同平均值，不同瞬时流量",
             "width": 1000,
             "height": 650,
@@ -678,7 +678,7 @@ export const diaphragmPumpRdArticlesZh = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/diaphragm-pump-rd/zh-CN/03.webp",
+            "src": "/images/resources/technical-articles/diaphragm-pump-rd/zh-CN/03.svg",
             "alt": "从激励源追踪噪声传递路径",
             "width": 1000,
             "height": 650,
@@ -1014,7 +1014,7 @@ export const diaphragmPumpRdArticlesZh = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/diaphragm-pump-rd/zh-CN/04.webp",
+            "src": "/images/resources/technical-articles/diaphragm-pump-rd/zh-CN/04.svg",
             "alt": "停机后累计出液量的变化",
             "width": 1000,
             "height": 650,

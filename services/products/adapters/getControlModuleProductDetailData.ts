@@ -90,3 +90,4 @@ export function getControlModuleProductDetailData(detail: ControlModuleDetail) {
     },
   } as any;
 }
+

@@ -1,3 +1,9 @@
+import { Suspense } from "react";
+import ProductSelectionClient from "@/components/products/selection/ProductSelectionClient";
+import ProductPageSkeleton from "@/components/common/ProductPageSkeleton";
+import { getSyringeSeriesIndex, syringeSeriesSlugs, syringeSeriesFilters } from "@/data/products/selection/syringe-pump-series";
+import { getSyringeSeriesMetadata } from "@/services/products/getSyringeSeriesMetadata";
+import "@/app/products/products.css";
 import { getSyringePumpProductDetailData } from "@/services/products/adapters/getSyringePumpProductDetailData";
 import { applyInstrumentFluidicsChineseCopy } from "@/data/products/detail/instrument-fluidics-copy.zh";
 import { notFound } from "next/navigation";
@@ -9,9 +15,7 @@ import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 type Detail = (typeof syringePumpDetails)[number];
 
 export function generateStaticParams() {
-  return (syringePumpDetails as Detail[]).map((detail) => ({
-    slug: detail.slug,
-  }));
+  return syringeSeriesSlugs.map(slug => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -20,6 +24,8 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
+  const seriesIndex = getSyringeSeriesIndex(slug);
+  if (seriesIndex >= 0) return getSyringeSeriesMetadata("zh", seriesIndex);
   const detail = (syringePumpDetails as Detail[]).find(
     (item) => item.slug === slug,
   );
@@ -49,6 +55,8 @@ export default async function SyringePumpDetailPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+  const seriesIndex = getSyringeSeriesIndex(slug);
+  if (seriesIndex >= 0) return <Suspense fallback={<ProductPageSkeleton variant="selection" />}><ProductSelectionClient locale="zh" initialCategoryId="pumps" initialProductTypeId="syringe-pump" initialFilters={{ filter01: [syringeSeriesFilters[seriesIndex]] }} /></Suspense>;
   const detail = (syringePumpDetails as Detail[]).find((item) => item.slug === slug);
 
   if (!detail) {

@@ -30,10 +30,10 @@ export const en: ValvelessLocaleCopy = {
   ] },
   materials: { pvdf: "polyvinylidene fluoride (PVDF)", alumina: "aluminium oxide (Al₂O₃)", zirconia: "zirconium dioxide (ZrO₂)" },
   cards: {
-    p4: "Single-head ceramic-piston valveless metering pump, 12–80 μL/rev, for small-volume reagent dosing, titrant delivery and repeated dispensing.",
-    p635: "Single-head ceramic-piston valveless metering pump, 50–300 μL/rev, for reagent dispensing, titrant delivery and volumetric filling. Polyvinylidene fluoride (PVDF) head and zirconium dioxide (ZrO₂) ceramic set.",
-    p15: "Single-head ceramic-piston valveless metering pump, 300–1200 μL/rev, for larger-volume reagent filling, buffer addition and quantitative delivery. Polyvinylidene fluoride (PVDF) head and aluminium oxide (Al₂O₃) ceramic set.",
-    dual: "Dual-head valveless metering pump for concentrate dilution and proportional dosing. Concentrate-to-diluent volume ratio {{ratio}}; shown configuration: {{concentrate}} μL + {{diluent}} μL."
+    p4: "Micro precision metering pump with a valveless ceramic-piston design for reagent and titrant dispensing, with a displacement range of 12–80 μL/rev.",
+    p635: "Precision metering pump with a valveless zirconia ceramic-piston design for reagent dispensing, titrant delivery, and volumetric filling, with a displacement range of 50–300 μL/rev.",
+    p15: "Precision metering pump with a valveless alumina ceramic-piston design for reagent filling, buffer addition, and quantitative dispensing, with a displacement range of 300–1200 μL/rev.",
+    dual: "Dual-head precision metering pump with a valveless ceramic-piston design for concentrate dilution and proportional dosing, configured at a {{ratio}} volume ratio of {{concentrate}} μL + {{diluent}} μL."
   },
   descriptions: {
     p4: "FOREACH RPL-P4 is a single-head ceramic-piston valveless metering pump with a displacement of 12–80 μL/rev for small-volume reagent dispensing, titrant dosing and repeated filling. Rotary and reciprocating piston motion handles suction and discharge. The shown configuration uses a polyvinylidene fluoride (PVDF) head, an aluminium oxide (Al₂O₃) ceramic set and a 1/4-28 UNF-2B working-fluid port. Match displacement and operating cycles to dose volume, then assess the drive against the available time; displacement per revolution is not the minimum reliable dose.",

@@ -208,3 +208,11 @@
     outline: none;
   }
 }
+
+/* Shared desktop search button typography; preserve mobile styling. */
+@media (min-width: 1025px) {
+  .searchButton {
+    font-weight: 400;
+    letter-spacing: 0.1em;
+  }
+}

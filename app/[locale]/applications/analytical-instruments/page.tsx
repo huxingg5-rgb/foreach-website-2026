@@ -6,11 +6,15 @@
 import type { Metadata } from "next";
 
 import ApplicationEnglishClient from "@/components/applications/ApplicationEnglishClient";
+import AnalyticalApplicationDocument from "@/components/applications/analytical-documents/AnalyticalApplicationDocument";
+import AnalyticalInstrumentsLandingShell from "@/components/applications/analytical-instruments/AnalyticalInstrumentsLandingShell";
 import FrenchIndustryApplicationClient from "@/components/applications/FrenchIndustryApplicationClient";
 import RussianIndustryApplicationClient from "@/components/applications/RussianIndustryApplicationClient";
 import SpanishIndustryApplicationClient, { KOREAN_INDUSTRY_UI_TEXT } from "@/components/applications/SpanishIndustryApplicationClient";
 import AnalyticalInstrumentsApplicationClient from "@/components/applications/analytical-instruments/AnalyticalInstrumentsApplicationClient";
+import { analyticalDocuments } from "@/data/applications/analytical-documents/registry";
 import { createEnglishApplicationData } from "@/data/applications/application-english";
+import { createAnalyticalDocumentMetadata, createAnalyticalDocumentSchema, getEnglishAnalyticalDocument } from "@/services/applications/analytical-documents";
 import { createFrenchApplicationMetadata } from "@/data/applications/application-french-metadata";
 import { createRussianApplicationMetadata } from "@/data/applications/application-russian-metadata";
 import { createSpanishApplicationMetadata } from "@/data/applications/application-spanish-metadata";
@@ -25,6 +29,9 @@ const ENABLED_LOCALES = ["en", "es", "fr", "ko", "ru"] as const;
 type AnalyticalInstrumentsApplicationLocalePageProps = {
   params: Promise<{
     locale: string;
+  }>;
+  searchParams: Promise<{
+    application?: string | string[];
   }>;
 };
 
@@ -42,6 +49,10 @@ export async function generateMetadata({
   params,
 }: AnalyticalInstrumentsApplicationLocalePageProps): Promise<Metadata> {
   const { locale } = await params;
+
+  if (locale === "en") {
+    return createAnalyticalDocumentMetadata(analyticalDocuments[0]);
+  }
 
   if (locale === "es") {
     return createSpanishApplicationMetadata("analytical-instruments");
@@ -64,15 +75,39 @@ export async function generateMetadata({
 
 export default async function AnalyticalInstrumentsApplicationLocalePage({
   params,
+  searchParams,
 }: AnalyticalInstrumentsApplicationLocalePageProps) {
   const { locale } = await params;
+  const requestedApplicationParam = (await searchParams).application;
+  const requestedApplication = Array.isArray(requestedApplicationParam)
+    ? requestedApplicationParam[0]
+    : requestedApplicationParam;
   const data = getAnalyticalInstrumentsApplicationPageData(locale);
 
   if (locale === "en") {
+    const hasRequestedApplication = data.applications.some(
+      (application) => application.key === requestedApplication,
+    );
+
+    if (hasRequestedApplication) {
+      return (
+        <ApplicationEnglishClient
+          key={requestedApplication}
+          data={createEnglishApplicationData("analytical-instruments", data)}
+        />
+      );
+    }
+
+    const document = await getEnglishAnalyticalDocument("");
+    if (!document) throw new Error("Missing English analytical application overview");
+    const landingData = createEnglishApplicationData("analytical-instruments", data);
     return (
-      <ApplicationEnglishClient
-        data={createEnglishApplicationData("analytical-instruments", data)}
-      />
+      <>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(createAnalyticalDocumentSchema(document)).replace(/</g, "\\u003c") }} />
+        <AnalyticalInstrumentsLandingShell data={landingData} showInstrumentNavigation={false}>
+          <AnalyticalApplicationDocument document={document} embedded />
+        </AnalyticalInstrumentsLandingShell>
+      </>
     );
   }
 

@@ -1,4 +1,13 @@
 "use client";
+import { getSyringeModelBreadcrumbs } from "@/data/products/selection/syringe-pump-routes";
+
+import { applySyringePumpDetailCopy } from "@/data/products/detail/syringe-pump-detail-copy";
+import { applyPipettingPumpIntroduction } from "@/data/products/detail/pipetting-pump-introductions.locales";
+import { applyPipettingPumpFaq } from "@/data/products/detail/pipetting-pump-faq.locales";
+import { getPipettingModelBreadcrumbs } from "@/data/products/selection/pipetting-pump-breadcrumbs";
+import { normalizeProductBreadcrumbLabel } from "@/lib/seo/product-breadcrumb-label";
+
+import { syringePumpCardsLocales } from "@/data/products/selection/syringe-pump-cards.locales";
 
 
 import { getChineseProductBreadcrumbs } from "@/data/products/detail/chinese-product-breadcrumbs";
@@ -1247,7 +1256,7 @@ function buildProductPageStructuredData(data: any, pathname: string) {
   // Q-series routes collect selectable models; other detail routes describe specifications.
   const isProductCollectionPage =
     /\/products\/fittings\/quick-connect-fittings\/q(?:20|40|60)\/?$/.test(pathname);
-  const compactChineseBreadcrumbs = getChineseProductBreadcrumbs(data, locale);
+  const compactChineseBreadcrumbs = getPipettingModelBreadcrumbs(String(data.slug || ""), locale) || getSyringeModelBreadcrumbs(String(data.slug || ""), locale) || getChineseProductBreadcrumbs(data, locale);
   const breadcrumbItems = compactChineseBreadcrumbs
     ? compactChineseBreadcrumbs.map((item) => ({name:item.label,item:item.href ? toAbsoluteProductUrl(item.href) : canonicalUrl}))
     : data.valvelessDetailContent === true
@@ -1350,7 +1359,7 @@ function buildProductPageStructuredData(data: any, pathname: string) {
       itemListElement: breadcrumbItems.map((item, index) => ({
         "@type": "ListItem",
         position: index + 1,
-        name: item.name,
+        name: normalizeProductBreadcrumbLabel(item.name, item.item),
         item: item.item,
       })),
     },
@@ -1499,7 +1508,7 @@ export default function ProductDetailClient({
         : sourceData;
 
       return applyDiaphragmPumpDetailCopy(
-        applyValvelessEnglishMaterialNames(localizedData, configuratorLocale),
+        applyPipettingPumpFaq(applyPipettingPumpIntroduction(applySyringePumpDetailCopy(applyValvelessEnglishMaterialNames(localizedData, configuratorLocale), configuratorLocale), configuratorLocale), configuratorLocale),
         configuratorLocale,
       );
     },
@@ -1581,6 +1590,9 @@ export default function ProductDetailClient({
       targetLocale,
       String(data.model || "")
     ));
+  const syringeDetailH1 = pathname?.includes("/products/pumps/syringe-pumps/")
+    ? syringePumpCardsLocales[getProductPageLocale(pathname)]?.[String(data.slug || "")]?.heading
+    : undefined;
   // ===== FOREACH TARGET PRODUCT DISPLAY TITLE END =====
   const structuredData = useMemo(
     () => buildProductPageStructuredData(data, pathname || "/"),
@@ -1679,7 +1691,7 @@ export default function ProductDetailClient({
         drawingPreview: "预览图纸",
         drawingDescription: (model: string) => `查看 ${model} 的技术图纸。`,
       };
-  const productBreadcrumbItems = getChineseProductBreadcrumbs(data, configuratorLocale) || (useAuthoredValvelessCopy
+  const productBreadcrumbItems = getPipettingModelBreadcrumbs(String(data.slug || ""), configuratorLocale) || getSyringeModelBreadcrumbs(String(data.slug || ""), configuratorLocale) || getChineseProductBreadcrumbs(data, configuratorLocale) || (useAuthoredValvelessCopy
     ? [
         { label: copy.home, href: `${localePrefix}/` },
         { label: copy.products, href: `${localePrefix}/products/` },
@@ -3170,17 +3182,19 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
 
           <div className={styles.productInfo}>
             <div className={styles.titleGroup}>
-              <h1 className={styles.productModelTitle}>{displayProductTitle}</h1>
+              <h1 className={styles.productModelTitle}>{syringeDetailH1 ? `FOREACH ${syringeDetailH1.replace(/^FOREACH\s+/i, "")}` : displayProductTitle}</h1>
             </div>
 
-            {useAuthoredPistonCopy ? (
-              <nav className={styles.mobileQuickLinks} aria-label={copy.tabs}>
-                <a href="#product-detail-resources" onClick={() => handleProductTabChange("spec")}>{copy.specifications}</a>
-                <a href="#product-detail-actions">{isCustomProduct ? customProductCopy.contact : isTargetLanguage ? copy.selectModel : getModelActionText(data)}</a>
-              </nav>
-            ) : null}
 
-            {useAuthoredPistonCopy ? (
+            {Array.isArray(data.pipettingIntroductionParagraphs) ? (
+              <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-pipetting-description="true">
+                {data.pipettingIntroductionParagraphs.map((paragraph: string, index: number) => <p key={index}>{paragraph}</p>)}
+              </div>
+            ) : Array.isArray(data.syringeIntroductionParagraphs) ? (
+              <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-syringe-description="true">
+                {data.syringeIntroductionParagraphs.map((paragraph: string, index: number) => <p key={index}>{paragraph}</p>)}
+              </div>
+            ) : useAuthoredPistonCopy ? (
               <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-ea-description="true">
                 {data.advantages.map((paragraph: string, index: number) => (
                   <p key={`${index}-${paragraph}`}>{paragraph}</p>
@@ -3194,12 +3208,23 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
 
             <div className={styles.application}>
               <p className={styles.applicationTitle}>
-                {isLocalizedDetail
+                {isEnglish && data.applicationAreas?.length
+                  ? "Application Areas:"
+                  : isLocalizedDetail
                   ? copy.applications
                   : getDbSectionTitle("applications", copy.applications)}
               </p>
               <p className={styles.applicationText}>
-                {data.commonApplications.join(isLocalizedDetail ? ", " : "、")}
+                {isEnglish && data.applicationAreas?.length
+                  ? data.applicationAreas.map((area, index) => (
+                      <span key={area.href}>
+                        {index > 0 ? ", " : null}
+                        <a className={styles.applicationAreaLink} href={area.href}>
+                          {area.label}
+                        </a>
+                      </span>
+                    ))
+                  : data.commonApplications.join(isLocalizedDetail ? ", " : "、")}
               </p>
             </div>
 
