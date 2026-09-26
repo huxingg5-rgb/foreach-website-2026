@@ -10,6 +10,8 @@ import { readFile, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
 
+const pipettingPaths = JSON.parse(await readFile(new URL("../../data/products/selection/pipetting-pump-paths.json", import.meta.url), "utf8"));
+
 const OUTPUT_ROOT = path.join(process.cwd(), "out");
 const SITE_ORIGIN = "https://www.foreachtek.com";
 const SITE_HOSTNAME = new URL(SITE_ORIGIN).hostname;
@@ -196,6 +198,7 @@ function normalizeInternalReference(value, routeSet, { stripQuery = false } = {}
 
   if (isAbsolute && !/(^|\.)foreachtek\.com$/i.test(url.hostname)) return value;
 
+  url.pathname = url.pathname.replace(/^(\/(?:en\/|es\/|fr\/|ko\/|ru\/)?products\/pumps\/pipetting-pumps\/)([^/]+)\/?$/, (all, base, slug) => pipettingPaths[slug] ? `${base}${pipettingPaths[slug]}/` : all);
   const candidateRoute = url.pathname === "/"
     ? "/"
     : `${url.pathname.replace(/\/+$/, "")}/`;

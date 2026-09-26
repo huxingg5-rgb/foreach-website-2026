@@ -1,3 +1,4 @@
+import { getPipettingRedirectEntries } from "./data/products/selection/pipetting-pump-routes";
 import { getSyringeModelRedirectEntries } from "./data/products/selection/syringe-pump-routes";
 import { getPistonPumpRedirectEntries } from "./lib/seo/piston-pump-migration";
 import { getValvelessPumpRedirectEntries } from "./lib/seo/valveless-pump-migration";
@@ -47,7 +48,7 @@ const nextConfig: NextConfig = {
   ...(!isCloudflarePagesBuild
     ? {
         async redirects() {
-          return [...getSyringeModelRedirectEntries(), ...getPistonPumpRedirectEntries(), ...getValvelessPumpRedirectEntries()];
+          return [...getPipettingRedirectEntries(), ...getSyringeModelRedirectEntries(), ...getPistonPumpRedirectEntries(), ...getValvelessPumpRedirectEntries()];
         },
       }
     : {}),

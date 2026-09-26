@@ -1,3 +1,4 @@
+import { normalizePipettingPath } from "../../data/products/selection/pipetting-pump-routes";
 import { getSyringeModelRedirect } from "../../data/products/selection/syringe-pump-routes";
 import { getPistonPumpRedirect } from "../../lib/seo/piston-pump-migration";
 import { getValvelessPumpPath } from "../../data/products/selection/valveless-pump-routes";
@@ -794,7 +795,7 @@ async function main() {
     ...productItems,
     ...compatibleItems,
     ...datasheetItems,
-  ].map(item => ({ ...item, href: getSyringeModelRedirect(item.href) || getPistonPumpRedirect(item.href) || item.href })).flatMap(normalizeValvelessSearchItem));
+  ].map(item => ({ ...item, href: normalizePipettingPath(getSyringeModelRedirect(item.href) || getPistonPumpRedirect(item.href) || item.href) })).flatMap(normalizeValvelessSearchItem));
   const invalidProductImages = finalItems.filter((item) => {
     if (item.module !== "products" || !item.image) {
       return item.module === "products";

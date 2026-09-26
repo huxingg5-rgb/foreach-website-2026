@@ -1,3 +1,4 @@
+import { normalizePipettingPath } from "@/data/products/selection/pipetting-pump-routes";
 import type { LocaleCode } from "@/data/languages";
 import { localizeValvelessPumpCategoryPath, normalizeValvelessPumpPath } from "@/data/products/selection/valveless-pump-routes";
 
@@ -72,7 +73,7 @@ export function normalizeSiteHref(value: string) {
     return value;
   }
 
-  url.pathname = normalizeValvelessPumpPath(url.pathname);
+  url.pathname = normalizePipettingPath(normalizeValvelessPumpPath(url.pathname));
   if (url.pathname !== "/" && !hasFileExtension(url.pathname)) {
     url.pathname = `${url.pathname.replace(/\/+$/, "")}/`;
   }

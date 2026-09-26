@@ -1,3 +1,4 @@
+import { getPipettingModelPath } from "../../data/products/selection/pipetting-pump-routes";
 import assert from "node:assert/strict";
 import {readFile} from "node:fs/promises";
 import path from "node:path";
@@ -34,7 +35,7 @@ async function main() {
     assert(body.includes(`<link rel="canonical" href="${origin+route}"`),route+" canonical");
     assert(body.includes('<meta name="robots" content="index, follow"'),route+" robots");
     assert(!body.includes('content="noindex'),route+" noindex");
-    for(const [lang,href] of Object.entries(getPipettingAlternates(key))) assert(body.includes(`hrefLang="${lang}" href="${origin+href}"`),route+" hreflang "+lang);
+    for(const [lang,href] of Object.entries(getPipettingAlternates(key))) assert(body.toLowerCase().includes(`hreflang="${lang === "en-US" && exported ? "en" : lang}" href="${origin+href}"`.toLowerCase()),route+" hreflang "+lang);
     for(const series of pipettingSeriesSlugs) assert(body.includes(`href="${getPipettingPath(locale,series)}"`),route+" series link");
     if(key!=="category") assert(body.includes(`href="${getPipettingPath(locale)}"`),route+" parent link");
     const schemaMatch=html.match(/<script[^>]*id="product-selection-structured-data"[^>]*>([\s\S]*?)<\/script>/);
@@ -44,7 +45,7 @@ async function main() {
     assert.equal(collection.url,origin+route,route+" schema URL");
     const items=graph.find((x:{"@type":string})=>x["@type"]==="ItemList");
     assert.equal(items.numberOfItems,expectedModels[key].length,route+" filtered card count");
-    for(const model of expectedModels[key]) assert(items.itemListElement.some((x:{url:string})=>x.url===origin+getPipettingPath(locale)+model+"/"),route+" model "+model);
+    for(const model of expectedModels[key]) assert(items.itemListElement.some((x:{url:string})=>x.url===origin+getPipettingModelPath(locale,model)),route+" model "+model);
     if(exported) assert(sitemap.includes(`<loc>${origin+route}</loc>`),route+" sitemap");
     count++;
   }

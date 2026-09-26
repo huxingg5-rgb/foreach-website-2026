@@ -1,0 +1,7 @@
+{
+  "smtp2": "smtp2-programmable-pipetting-module",
+  "smtp4": "smtp4-pipetting-module",
+  "smtp2-1000ul": "smtp2-programmable-pipetting-module/smtp2-1000ul",
+  "smtp4-100ul": "smtp4-pipetting-module/smtp4-100ul",
+  "smtp4-500ul": "smtp4-pipetting-module/smtp4-500ul"
+}

@@ -28,6 +28,7 @@ export function getPipettingModelBreadcrumbs(slug: string, locale: string) {
     { label: copy[0], href: `${prefix}/` },
     { label: copy[1], href: `${prefix}/products/` },
     { label: copy[2], href: getPipettingPath(lang) },
+    { label: slug.startsWith("smtp2-") ? "SMTP2" : "SMTP4", href: getPipettingPath(lang, slug.startsWith("smtp2-") ? "smtp2" : "smtp4") },
     { label: models[slug] },
   ];
 }

@@ -1,3 +1,4 @@
+import { normalizePipettingPath } from "../../data/products/selection/pipetting-pump-routes";
 import { getPumpSeriesProductDetailAdapter } from "../../services/products/adapters/getPumpSeriesProductDetailAdapter";
 import { getValvelessForeignContent, getValvelessLocaleCopy } from "../../data/products/detail/valveless-pump-locales";
 import { getDatasheetsStaticPageData } from "../../data/resources/datasheets.i18n";
@@ -893,7 +894,7 @@ function getLocalizedValue(
 }
 
 function normalizePageHref(href: string): string {
-  const trimmed = href.trim();
+  const trimmed = normalizePipettingPath(href.trim());
   if (
     !trimmed.startsWith("/") ||
     trimmed.startsWith("//") ||

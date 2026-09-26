@@ -1,3 +1,4 @@
+import { getPipettingSeriesSlug } from "./pipetting-pump-routes";
 /* =========================================================
    product-route-map.ts
    恒永达官网｜产品中心动态路由映射表
@@ -236,7 +237,7 @@ export const productRouteMap: {
   },
 
   series: {
-    ...Object.fromEntries(pipettingSeriesSlugs.map((key, index) => [key, {
+    ...Object.fromEntries(pipettingSeriesSlugs.map((key, index) => [getPipettingSeriesSlug(key), {
       category: "pumps", slug: "pipetting-pumps", categoryId: "pumps", productTypeId: "pipette-pump",
       filterKey: "filter01" as const, filterValue: pipettingSeriesFilters[index],
       initialFilters: { filter01: [pipettingSeriesFilters[index]] },

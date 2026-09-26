@@ -1,4 +1,5 @@
 "use client";
+import { normalizePipettingPath } from "@/data/products/selection/pipetting-pump-routes";
 import { getPipettingCategoryLabel } from "@/data/products/selection/pipetting-pump-breadcrumbs";
 
 import { normalizePistonPumpPublicName } from "@/data/products/piston-pump-public-name";
@@ -5074,7 +5075,7 @@ function isFilterOptionActive(
     href: string,
     product?: ProductSelectionProduct,
   ) {
-    href = localizeValvelessPumpCategoryPath(href, locale);
+    href = normalizePipettingPath(localizeValvelessPumpCategoryPath(href, locale));
     if (
       locale === "zh" ||
       !href.startsWith("/") ||

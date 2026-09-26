@@ -1,3 +1,4 @@
+import { getPipettingSeriesSlug } from "./pipetting-pump-routes";
 import { instrumentIntrosZh, instrumentSeriesIntrosZh } from "./instrument-fluidics-copy.zh";
 import { pipettingPumpIntroEn } from "./pipetting-pump-intro.en";
 import translated from "./pipetting-pump-intro.locales.json";
@@ -24,7 +25,7 @@ export function isPipettingPageKey(key: string): key is PipettingPageKey {
   return key === "category" || key === "smtp2" || key === "smtp4";
 }
 export function getPipettingPath(locale: string, key: PipettingPageKey = "category") {
-  return `${locale === "zh" || locale === "zh-CN" ? "" : `/${locale}`}/products/pumps/pipetting-pumps/${key === "category" ? "" : `${key}/`}`;
+  return `${locale === "zh" || locale === "zh-CN" ? "" : `/${locale}`}/products/pumps/pipetting-pumps/${key === "category" ? "" : `${getPipettingSeriesSlug(key)}/`}`;
 }
 export function getPipettingCopy(locale: string, key: PipettingPageKey = "category"): Copy & {imageAlt: string} {
   const lang = locale === "zh-CN" ? "zh" : locale;

@@ -1,3 +1,4 @@
+import { getPipettingModelPath } from "@/data/products/selection/pipetting-pump-routes";
 export const pipettingPumpIntroductions: Record<string, Record<string, string[]>> = {
   zh: {
     "smtp2-1000ul": [
@@ -120,7 +121,7 @@ export function applyPipettingPumpIntroduction<T extends Record<string, any>>(da
   const labels = applicationLabels[lang];
   const index = ["smtp2-1000ul", "smtp4-100ul", "smtp4-500ul"].indexOf(data.slug);
   return {
-    ...data, description, summary: description, overview: description, pipettingIntroductionParagraphs,
+    ...data, detailHref: getPipettingModelPath(locale, String(data.slug || "")), description, summary: description, overview: description, pipettingIntroductionParagraphs,
     commonApplications: labels.tags[index],
     ...(data.applicationDetails ? { applicationDetails: { ...data.applicationDetails, tabLabel: labels.tab } } : {}),
   };

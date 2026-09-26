@@ -1,3 +1,5 @@
+import { getPipettingSeriesSlug, getPipettingSeriesKey, migratePipettingSegments, isPipettingModelRoute } from "@/data/products/selection/pipetting-pump-routes";
+import { getPipettingModelMetadata } from "@/services/products/getPipettingModelMetadata";
 import { syringeModelRoutes } from "@/data/products/selection/syringe-pump-routes";
 import { getSyringeModelMetadata } from "@/services/products/getSyringeModelMetadata";
 import { getSyringeSeriesIndex, syringeSeriesSlugs } from "@/data/products/selection/syringe-pump-series";
@@ -175,6 +177,7 @@ function getProductRoutesForLocale(_locale: LocaleCode | string) {
     .map(segments => segments[0] === "pumps" && segments[1] === VALVELESS_PUMP_LEGACY_CATEGORY_SLUG
       ? ["pumps", VALVELESS_PUMP_CATEGORY_SLUG_INTL, ...segments.slice(2)] : segments)
     .map(segments => { const r = segments.length === 3 && segments[0] === "pumps" && segments[1] === "syringe-pumps" ? syringeModelRoutes.find(r => r.legacy === segments[2]) : undefined; return r ? ["pumps", "syringe-pumps", r.series, r.model] : segments; })
+    .map(migratePipettingSegments)
     .filter(segments => !getPistonPumpRedirect(`/products/${segments.join("/")}/`));
 }
 
@@ -321,14 +324,15 @@ export async function generateMetadata({
     return {};
   }
 
+  if (isPipettingModelRoute(segments)) return getPipettingModelMetadata(locale, segments[3]);
   const diaphragmMetadata = await getDiaphragmPumpRouteMetadata(
     locale as LocaleCode,
     segments,
   );
 
   if (diaphragmMetadata) return diaphragmMetadata;
-  if (segments[0] === "pumps" && segments[1] === "pipetting-pumps" && (segments.length === 2 || (segments.length === 3 && pipettingSeriesSlugs.includes(segments[2] as "smtp2" | "smtp4")))) {
-    const key = segments[2] || "category";
+  if (segments[0] === "pumps" && segments[1] === "pipetting-pumps" && (segments.length === 2 || (segments.length === 3 && getPipettingSeriesKey(segments[2])))) {
+    const key = segments[2] ? getPipettingSeriesKey(segments[2])! : "category";
     if (isPipettingPageKey(key)) return getPipettingMetadata(locale, key);
   }
   if (segments[0] === "pumps" && segments[1] === "piston-pump" && segments.length <= 3) {
@@ -449,6 +453,7 @@ export default async function ProductLocaleRoutePage({
     notFound();
   }
 
+  if (isPipettingModelRoute(segments)) return PipettingPumpDetailPage({params:Promise.resolve({slug:segments[3]})});
   const syringeModel = segments.length === 4 && segments[0] === "pumps" && segments[1] === "syringe-pumps" ? syringeModelRoutes.find(r => r.series === segments[2] && r.model === segments[3]) : undefined;
   if (syringeModel) return SyringePumpDetailPage({ params: Promise.resolve({ slug: syringeModel.legacy }) });
   const [category, slug, seriesSlug] = segments;
