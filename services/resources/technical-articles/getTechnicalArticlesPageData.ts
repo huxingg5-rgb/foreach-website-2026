@@ -1,3 +1,5 @@
+import { getProgrammableSyringeArticles } from "@/data/resources/technical-articles/programmable-syringe-pump.article";
+import { getProgrammablePipettingArticles } from "@/data/resources/technical-articles/programmable-pipetting-pump.article";
 import { getPumpApplicationArticles } from "@/data/resources/technical-articles/pump-application-articles.article";
 import { getPumpDiagnosticsArticles } from "@/data/resources/technical-articles/pump-diagnostics-articles.article";
 import { getMeteringPumpAccuracyRepeatabilityArticles } from "@/data/resources/technical-articles/metering-pump-accuracy-repeatability.article";
@@ -324,6 +326,8 @@ function getTechnicalArticlesSourcePageData(
 // Use the assembled Chinese list so new articles keep the same position in every locale.
 const technicalArticleOrder = new Map(
   [
+    ...getProgrammableSyringeArticles("zh-CN"),
+    ...getProgrammablePipettingArticles("zh-CN"),
     ...getMeteringPumpAccuracyRepeatabilityArticles("zh-CN"),
     ...getValvelessMeteringPumpOverviewArticles("zh-CN"),
     ...getRplSelectionArticles("zh-CN"),
@@ -343,7 +347,7 @@ export function getTechnicalArticlesPageData(
     taxonomy: getTechnicalArticleTaxonomy(locale),
     // Keep withdrawn drafts in the source archive, outside all public routes and indexes.
     articles: classifyTechnicalArticles(
-      [...getMeteringPumpAccuracyRepeatabilityArticles(locale), ...getValvelessMeteringPumpOverviewArticles(locale), ...getRplSelectionArticles(locale), ...getPumpDiagnosticsArticles(locale), ...getPumpApplicationArticles(locale), ...sourcePageData.articles]
+      [...getProgrammableSyringeArticles(locale), ...getProgrammablePipettingArticles(locale), ...getMeteringPumpAccuracyRepeatabilityArticles(locale), ...getValvelessMeteringPumpOverviewArticles(locale), ...getRplSelectionArticles(locale), ...getPumpDiagnosticsArticles(locale), ...getPumpApplicationArticles(locale), ...sourcePageData.articles]
         .filter(
           (article) => !withdrawnTechnicalArticleSlugs.has(article.slug),
         )

@@ -239,6 +239,22 @@ interface ArticleClassificationDefinition {
 }
 
 const articleClassifications: Record<string, ArticleClassificationDefinition> = {
+  "what-is-a-programmable-syringe-pump": {
+    primaryCategory: "pumps",
+    secondaryCategory: "syringe-pumps",
+    tagKeys: ["oem-integration", "dosing", "testing-validation"],
+    relatedProducts: ["HMD3", "HMD6", "HLD3", "HLD6"],
+    relationKeys: ["series:hmd3", "series:hmd6", "series:hld3", "series:hld6", "category:syringe-pumps"],
+    relationPriority: 150,
+  },
+  "what-is-a-programmable-pipetting-pump": {
+    primaryCategory: "pumps",
+    secondaryCategory: "pipetting-pumps",
+    tagKeys: ["oem-integration", "dosing", "testing-validation"],
+    relatedProducts: ["SMTP2-1000 μL"],
+    relationKeys: ["series:smtp2", "category:pipetting-pumps"],
+    relationPriority: 150,
+  },
   [meteringPumpAccuracyRepeatabilitySlug]: {
     primaryCategory: "pumps",
     secondaryCategory: "valveless-metering-pump",

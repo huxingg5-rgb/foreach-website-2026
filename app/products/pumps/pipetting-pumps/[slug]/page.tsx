@@ -7,9 +7,11 @@ import { pipettingSeriesSlugs, pipettingSeriesFilters, isPipettingPageKey } from
 import { getPipettingMetadata } from "@/services/products/getPipettingMetadata";
 import "@/app/products/products.css";
 import { notFound } from "next/navigation";
-import type { ComponentType } from "react";
+import type { ComponentProps } from "react";
 import type { Metadata } from "next";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
+import RelatedResources from "@/components/common/related-resources/RelatedResources";
+import type { RelatedResourcesLocale } from "@/data/resources/related-resources/related-resources.intl";
 import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 
 import detailsJson from "@/data/products/generated/pumps/pipetting-pumps/detail/index.json";
@@ -22,6 +24,7 @@ type PageParams = {
 
 type PageProps = {
   params: Promise<PageParams>;
+  renderLocale?: RelatedResourcesLocale;
 };
 
 type SpecItem = {
@@ -87,10 +90,6 @@ type DetailRecord = {
 };
 
 const details = detailsJson as DetailRecord[];
-
-const ProductDetailView = ProductDetailClient as unknown as ComponentType<{
-  data: any;
-}>;
 
 function getText(value: unknown) {
   return String(value || "").trim();
@@ -226,7 +225,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default async function PipettingPumpDetailPage({ params }: PageProps) {
+export default async function PipettingPumpDetailPage({ params, renderLocale = "zh-CN" }: PageProps) {
   const { slug } = await params;
   const seriesIndex = pipettingSeriesSlugs.indexOf(getPipettingSeriesKey(slug)!);
   if (seriesIndex >= 0) {
@@ -240,5 +239,19 @@ export default async function PipettingPumpDetailPage({ params }: PageProps) {
     notFound();
   }
 
-  return <ProductDetailView data={applyInstrumentFluidicsChineseCopy(toClientData(detail), "zh")} />;
+  const series = detail.slug.split("-")[0];
+  return (
+    <ProductDetailClient
+      data={applyInstrumentFluidicsChineseCopy(toClientData(detail), "zh") as ComponentProps<typeof ProductDetailClient>["data"]}
+      afterContent={
+        <RelatedResources
+          sourceType="product"
+          sourceId={detail.productId}
+          sourceSlug={detail.slug}
+          relationKeys={[`series:${series}`]}
+          locale={renderLocale}
+        />
+      }
+    />
+  );
 }

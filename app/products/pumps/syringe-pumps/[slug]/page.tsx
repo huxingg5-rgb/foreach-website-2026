@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, type ComponentProps } from "react";
 import ProductSelectionClient from "@/components/products/selection/ProductSelectionClient";
 import ProductPageSkeleton from "@/components/common/ProductPageSkeleton";
 import { getSyringeSeriesIndex, syringeSeriesSlugs, syringeSeriesFilters } from "@/data/products/selection/syringe-pump-series";
@@ -11,6 +11,9 @@ import type { Metadata } from "next";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
 import syringePumpDetails from "@/data/products/generated/pumps/syringe-pumps/detail/index.json";
 import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
+import RelatedResources from "@/components/common/related-resources/RelatedResources";
+import type { RelatedResourcesLocale } from "@/data/resources/related-resources/related-resources.intl";
+import { syringeModelRoutes } from "@/data/products/selection/syringe-pump-routes";
 
 type Detail = (typeof syringePumpDetails)[number];
 
@@ -51,8 +54,10 @@ export async function generateMetadata({
 
 export default async function SyringePumpDetailPage({
   params,
+  renderLocale = "zh-CN",
 }: {
   params: Promise<{ slug: string }>;
+  renderLocale?: RelatedResourcesLocale;
 }) {
   const { slug } = await params;
   const seriesIndex = getSyringeSeriesIndex(slug);
@@ -63,5 +68,23 @@ export default async function SyringePumpDetailPage({
     notFound();
   }
 
-  return <ProductDetailClient data={applyInstrumentFluidicsChineseCopy(getSyringePumpProductDetailData(detail), "zh") as any} />;
+  const modelRoute = syringeModelRoutes.find(route => route.legacy === slug);
+  const relationKeys = [
+    ...(modelRoute ? [`series:${modelRoute.model}`] : []),
+    "category:syringe-pumps",
+  ];
+
+  return (
+    <ProductDetailClient
+      data={applyInstrumentFluidicsChineseCopy(getSyringePumpProductDetailData(detail), "zh") as ComponentProps<typeof ProductDetailClient>["data"]}
+      afterContent={
+        <RelatedResources
+          sourceType="product"
+          sourceSlug={slug}
+          relationKeys={relationKeys}
+          locale={renderLocale}
+        />
+      }
+    />
+  );
 }

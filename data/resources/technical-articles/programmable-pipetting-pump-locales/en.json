@@ -1,0 +1,123 @@
+{
+  "title": "What is a programmable automatic air-displacement pipetting pump?",
+  "description": "How programmable automatic air-displacement pipetting pumps work: SMTP2 aspiration, dispense, level detection and OEM integration, with performance limits.",
+  "deck": "A programmable automatic air-displacement pipetting pump is a liquid-handling component whose aspiration, dispense, speeds and sequence are set through control commands. This article focuses on air-displacement modules that use disposable tips in OEM instruments, with FOREACH SMTP2 as an example of operation, monitoring and selection limits.",
+  "scope": "The module handles aspiration, dispense and relevant status feedback. The instrument also needs motion, labware and tip management, and a control program. Some modules include a motion axis, but a module alone is not a complete automated pipetting workstation.",
+  "titles": [
+    "How does air-displacement pipetting work?",
+    "What can be programmed?",
+    "What do liquid-level detection and pressure monitoring do?",
+    "Which automated tasks can it support?",
+    "How should actual pipetting performance be verified?",
+    "SMTP2 capabilities and selection limits"
+  ],
+  "paragraphs": [
+    [
+      "A motor moves a piston inside a sealed chamber. An air cushion separates the piston from liquid in the tip. During aspiration, piston retraction increases air-chamber volume and reduces pressure, allowing external pressure to drive liquid into the tip. During dispense, the piston advances and compresses the air cushion to expel liquid.",
+      "In normal use, sample remains mainly in the disposable tip. Appropriate tip changes help reduce carry-over and cross-contamination, but do not exclude contamination from over-aspiration, aerosols or incorrect handling. Air compressibility, liquid viscosity, volatility, temperature, tip sealing and geometry all affect delivered volume."
+    ],
+    [
+      "Programming covers more than the target volume: it can include aspiration and dispense speeds, settling times and action sequences. Instrument software coordinates these actions with positioning, tip handling and exception handling. Confirm the available settings and ranges against the module's control protocol.",
+      "A 100 μL transfer may need different settings for an aqueous solution, a viscous reagent or a volatile liquid. Automation software often groups parameters for a liquid, tip and dispense mode into a Liquid Class. This is a method-development concept, not a claim that SMTP2 includes a universal liquid library or automatic compensation algorithm. Parameter changes may be insufficient for demanding liquids; special consumables or positive-displacement techniques may need evaluation."
+    ],
+    [
+      "Pressure-based liquid-level detection, pLLD, identifies a pressure change in the air path when the tip contacts liquid, typically coordinated with slow air aspiration and Z-axis approach. Capacitive detection, cLLD, senses a capacitance change when a conductive tip or probe contacts liquid. Tip design, electrical reference and liquid properties must be considered.",
+      "SMTP2 supports pLLD, cLLD and hybrid hLLD liquid-level detection. Select the method for the tip, liquid properties and instrument electrical conditions. Confirm how detection signals are combined and triggered, then verify stability under actual operating conditions.",
+      "Pressure and tip-status information can support detection of blockage, insufficient liquid or tip-loading problems. Detectable events depend on algorithms, thresholds and operating conditions. The instrument defines alarms, stopping and recovery; an error should not automatically trigger another aspiration. A cycle without an alarm is not proof that the delivered volume meets its specification."
+    ],
+    [
+      "Candidate tasks include sample transfer from collection tubes to reaction vessels, reagent addition, aliquoting and microplate liquid handling. Relevant equipment includes IVD analyzers, molecular-diagnostic instruments, sample-preparation systems and laboratory automation. These are potential applications, not evidence that a particular instrument or assay has been validated.",
+      "Sample transfer and repeated aliquoting can require different tips, action settings and contamination controls within the same project. Specify source and destination vessels, minimum and routine volumes, tip-change frequency and cycle time, rather than capacity alone."
+    ],
+    [
+      "For a target transfer of 100 μL, the following is a verification approach, not measured results or a fixed acceptance standard. Fix the actual liquid, tip part number, vessels and environmental conditions, then repeat measurements using one defined set of action parameters.",
+      "Nominal capacity describes the module's nominal volume; drive resolution describes its control increment; accuracy and repeatability describe delivered-volume performance. These are different quantities. Evaluate single dispensing and multiple aliquots separately, and record the measurement method and number of repetitions."
+    ],
+    [
+      "FOREACH SMTP2 is a programmable automatic air-displacement pipetting pump with a nominal capacity of 1000 μL and integrated drive and control. With disposable tips and instrument motion, it supports aspiration, transfer, dispense and tip ejection.",
+      "Actual pipetting performance depends on the tip, target volume, liquid properties and single- or multiple-dispense mode. Fix the test liquid, tip, measurement method and environment when evaluating deviation and repeatability. A nominal capacity of 1000 μL does not establish a usable range for every liquid, and high-resolution microstepping does not define the minimum reliable transfer volume."
+    ]
+  ],
+  "controlHeaders": [
+    "Control",
+    "Purpose",
+    "What to verify"
+  ],
+  "controlRows": [
+    [
+      "Piston position and stroke",
+      "Set nominal aspiration or dispense volume",
+      "Calibration and usable stroke"
+    ],
+    [
+      "Aspiration and dispense speeds",
+      "Match liquid behavior, tip geometry and cycle time",
+      "Incomplete aspiration, residual drops or splashing"
+    ],
+    [
+      "Settling time and sequence",
+      "Allow pressure equilibration, dispensing and motion coordination",
+      "Instrument timing and delivered volume"
+    ]
+  ],
+  "steps": [
+    "Check tip loading, sealing and liquid-level positioning; look for air aspiration or bubbles.",
+    "Check dripping during transfer, liquid on the tip exterior, and residue or splashing during dispense.",
+    "Choose a measurement method appropriate for the target volume. For gravimetric measurement, account for liquid density, evaporation and environmental conditions before calculating volume and deviation.",
+    "Verify minimum, routine and maximum working volumes. For aliquoting, check the first, middle and last portions separately. Revalidate after changing the liquid or tip."
+  ],
+  "specHeaders": [
+    "Item",
+    "Parameters and functions",
+    "Integration limit"
+  ],
+  "specRows": [
+    [
+      "Nominal capacity",
+      "1000 μL",
+      "Working range depends on tip, liquid and performance requirements"
+    ],
+    [
+      "Liquid-level detection",
+      "pLLD / cLLD / hLLD",
+      "Confirm consumables, electrical conditions and trigger logic"
+    ],
+    [
+      "Process and tip handling",
+      "Pressure monitoring, tip-blockage and tip-presence detection, automatic tip ejection",
+      "Instrument software implements recovery and motion coordination"
+    ],
+    [
+      "Communication",
+      "RS232 / RS485 / CAN",
+      "Confirm wiring and protocol for the chosen configuration"
+    ]
+  ],
+  "figureAlts": [
+    "Original color product image of a FOREACH programmable automatic air-displacement pipetting pump with housing, drive assembly and detached tip",
+    "SMTP2 exterior line drawing showing the circuit board, drive assembly and detached and fitted tip configurations",
+    "Manufacturer-supplied tip-interface reference showing LTE045 (45 mm), mating diameter 5.43 mm, tip length and total length"
+  ],
+  "figureCaptions": [
+    "Figure 1. FOREACH programmable automatic air-displacement pipetting pump and tip. The exterior and interface depend on the selected configuration.",
+    "Figure 3. SMTP2 exterior reference: detached tip on the left and fitted tip on the right. Drawn from a product image; this is not an internal cross-section.",
+    "Figure 2. Tip-interface reference adapted from the manufacturer’s drawing. LTE045 (45 mm) and the 5.43 mm mating diameter apply only to the illustrated interface. Confirm tip length, overall length and compatibility for the selected consumable and configuration."
+  ],
+  "faqTitle": "Frequently asked questions",
+  "faq": [
+    [
+      "Can the same settings be used with a different tip of the same capacity?",
+      "Capacity alone does not establish compatibility. Check the exact part number, loading and ejection, sealing and geometry, then verify aspiration and dispense with the target liquid and volume."
+    ],
+    [
+      "Can one aspiration supply several aliquots?",
+      "Yes. SMTP2 can dispense several defined portions after one aspiration; distributing them among different vessels requires coordinated positioning by the instrument. The total aspirated volume must cover all portions and the process allowance without exceeding the usable capacity of either pump or tip. Verify the actual volume of the first, middle and final portions before use."
+    ]
+  ],
+  "cta": {
+    "title": "Define your pipetting and integration requirements",
+    "description": "Provide liquid properties, minimum/routine/maximum volumes, tip part number, vessel dimensions, dispense mode, cycle time and detection needs to assess SMTP2 configuration and prototype verification.",
+    "contactLabel": "Contact an engineer",
+    "productsLabel": "View SMTP2"
+  }
+}

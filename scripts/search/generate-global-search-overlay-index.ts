@@ -13,8 +13,7 @@ import {
 import { isDiaphragmPumpPublicPath } from "../../data/products/detail/diaphragm-pump-routes";
 import { datasheetZhItems } from "../../data/resources/datasheets.zh";
 import { datasheetEnItems } from "../../data/resources/datasheets.en";
-import { installationGuideZhData } from "../../data/resources/installation-guide/installation-guide.zh";
-import { getInstallationGuideIntlData } from "../../data/resources/installation-guide/installation-guide.intl";
+import { getInstallationGuidePageData } from "../../services/resources/installation-guide/getInstallationGuidePageData";
 import { getVisibleNavigationItems } from "../../data/navigation";
 import { getInternationalUiText } from "../../lib/international-ui";
 import type { LocaleCode } from "../../lib/i18n";
@@ -579,9 +578,7 @@ function loadDatasheets(locale: SearchLocale): CompactSearchItem[] {
 function loadInstallationGuides(
   locale: SearchLocale
 ): CompactSearchItem[] {
-  const pageData = locale === "zh-CN"
-    ? installationGuideZhData
-    : getInstallationGuideIntlData(locale);
+  const pageData = getInstallationGuidePageData(locale);
   const copy = getModuleCopy(locale, "installation-guides");
 
   return pageData.guides.flatMap((guide) => {

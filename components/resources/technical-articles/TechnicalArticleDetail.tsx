@@ -1,5 +1,17 @@
 import Link from "next/link";
 import {
+  getProgrammableSyringeCopy,
+  getProgrammableSyringeNavigation,
+  getProgrammableSyringeSources,
+  programmableSyringePumpSlug,
+} from "@/data/resources/technical-articles/programmable-syringe-pump.article";
+import {
+  getProgrammablePipettingCopy,
+  getProgrammablePipettingNavigation,
+  getProgrammablePipettingSources,
+  programmablePipettingPumpSlug,
+} from "@/data/resources/technical-articles/programmable-pipetting-pump.article";
+import {
   getPumpApplicationArticleCopy,
   getPumpApplicationChildArticles,
 } from "@/data/resources/technical-articles/pump-application-articles.article";
@@ -187,6 +199,10 @@ function buildTechnicalArticleStructuredData(
       ]
     : article.slug === meteringPumpAccuracyRepeatabilitySlug
       ? [...meteringPumpAccuracyRepeatabilitySourceHrefs]
+      : article.slug === programmableSyringePumpSlug
+        ? getProgrammableSyringeSources(locale).map(href => href.startsWith("/") ? getCanonicalUrl(href) : href)
+      : article.slug === programmablePipettingPumpSlug
+        ? getProgrammablePipettingSources(locale).map(href => href.startsWith("/") ? getCanonicalUrl(href) : href)
       : [];
   // Match the RPL page's canonical URL policy without changing other articles.
   const structuredUrl = rplSources
@@ -551,6 +567,8 @@ export default function TechnicalArticleDetail({
 }: TechnicalArticleDetailProps) {
   const locale = normalizeLocale(pageData.locale);
   const listHref = getArticleListHref(locale);
+  const programmableSyringeCopy = getProgrammableSyringeCopy(article.slug, locale);
+  const programmablePipettingCopy = getProgrammablePipettingCopy(article.slug, locale);
   const meteringPumpAccuracyRepeatabilityCopy =
     getMeteringPumpAccuracyRepeatabilityCopy(article.slug, locale);
   const rplSelectionCopy = getRplSelectionArticleCopy(article.slug, locale);
@@ -985,7 +1003,11 @@ export default function TechnicalArticleDetail({
                                   }
                                 : undefined;
 
-  const structuredDataFaqItems = meteringPumpAccuracyRepeatabilityCopy
+  const structuredDataFaqItems = programmableSyringeCopy
+    ? [...programmableSyringeCopy.faqItems]
+    : programmablePipettingCopy
+    ? [...programmablePipettingCopy.faqItems]
+    : meteringPumpAccuracyRepeatabilityCopy
     ? [...meteringPumpAccuracyRepeatabilityCopy.faqItems]
     : pistonPumpRplStyleCopy
       ? [...pistonPumpRplStyleCopy.faqItems]
@@ -1022,7 +1044,9 @@ export default function TechnicalArticleDetail({
     locale,
     structuredDataFaqItems,
     structuredDataSubject,
-    meteringPumpAccuracyRepeatabilityCopy !== null ||
+    programmableSyringeCopy !== null ||
+      programmablePipettingCopy !== null ||
+      meteringPumpAccuracyRepeatabilityCopy !== null ||
       rplSelectionCopy !== null ||
       valvelessMeteringPumpOverviewCopy !== null ||
       pistonPumpRplStyleCopy !== null ||
@@ -1037,6 +1061,79 @@ export default function TechnicalArticleDetail({
       ? "TechArticle"
       : "Article",
   );
+
+  if (programmableSyringeCopy) {
+    return (
+      <div
+        className={`newsArticleDetailPage ${rplArticleStyles.pageSurface}`}
+        data-locale={locale}
+        data-article-slug={article.slug}
+        lang={locale}
+      >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
+        />
+        <div className="newsArticleBreadcrumbShell">
+          <BreadcrumbComponent {...breadcrumbData} />
+        </div>
+        <RplSelectionArticle
+          copy={programmableSyringeCopy}
+          date={article.date}
+          locale={locale}
+          listHref={listHref}
+          backText={getBackText(locale)}
+          articleId={article.slug}
+          sectionNavigation={getProgrammableSyringeNavigation(locale)}
+          modelLinks={new Map()}
+          faq={{ id: "faq", label: programmableSyringeCopy.faqTitle, items: programmableSyringeCopy.faqItems }}
+        />
+        <div className={newsArticleStyles.page} data-rpl-article-footer>
+          <RelatedResources
+            sourceType="article"
+            sourceId={article.id}
+            sourceSlug={article.slug}
+            relationKeys={article.relationKeys}
+            locale={locale}
+          />
+          <NewsArticlePager locale={locale} previousArticle={previousArticle} nextArticle={nextArticle} contentType="article" />
+        </div>
+      </div>
+    );
+  }
+
+  if (programmablePipettingCopy) {
+    return (
+      <div
+        className={`newsArticleDetailPage ${rplArticleStyles.pageSurface}`}
+        data-locale={locale}
+        data-article-slug={article.slug}
+        lang={locale}
+      >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
+        />
+        <div className="newsArticleBreadcrumbShell">
+          <BreadcrumbComponent {...breadcrumbData} />
+        </div>
+        <RplSelectionArticle
+          copy={programmablePipettingCopy}
+          date={article.date}
+          locale={locale}
+          listHref={listHref}
+          backText={getBackText(locale)}
+          articleId={article.slug}
+          sectionNavigation={getProgrammablePipettingNavigation(locale)}
+          modelLinks={new Map()}
+          faq={{ id: "faq", label: programmablePipettingCopy.faqTitle, items: programmablePipettingCopy.faqItems }}
+        />
+        <div className={newsArticleStyles.page} data-rpl-article-footer>
+          <NewsArticlePager locale={locale} previousArticle={previousArticle} nextArticle={nextArticle} contentType="article" />
+        </div>
+      </div>
+    );
+  }
 
   if (meteringPumpAccuracyRepeatabilityCopy) {
     return (

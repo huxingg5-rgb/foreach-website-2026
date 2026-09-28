@@ -453,9 +453,9 @@ export default async function ProductLocaleRoutePage({
     notFound();
   }
 
-  if (isPipettingModelRoute(segments)) return PipettingPumpDetailPage({params:Promise.resolve({slug:segments[3]})});
+  if (isPipettingModelRoute(segments)) return PipettingPumpDetailPage({params:Promise.resolve({slug:segments[3]}), renderLocale: locale});
   const syringeModel = segments.length === 4 && segments[0] === "pumps" && segments[1] === "syringe-pumps" ? syringeModelRoutes.find(r => r.series === segments[2] && r.model === segments[3]) : undefined;
-  if (syringeModel) return SyringePumpDetailPage({ params: Promise.resolve({ slug: syringeModel.legacy }) });
+  if (syringeModel) return SyringePumpDetailPage({ params: Promise.resolve({ slug: syringeModel.legacy }), renderLocale: locale });
   const [category, slug, seriesSlug] = segments;
 
   if (segments.length === 1) {
@@ -549,11 +549,11 @@ export default async function ProductLocaleRoutePage({
     }
 
     if (slug === "pipetting-pumps") {
-      return PipettingPumpDetailPage({ params: detailParams });
+      return PipettingPumpDetailPage({ params: detailParams, renderLocale: locale });
     }
 
     if (slug === "syringe-pumps") {
-      return SyringePumpDetailPage({ params: detailParams });
+      return SyringePumpDetailPage({ params: detailParams, renderLocale: locale });
     }
 
     if (slug === VALVELESS_PUMP_CATEGORY_SLUG_INTL) {

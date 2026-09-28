@@ -19,6 +19,10 @@ const rootLabelLocales: Record<string, string> = {
 
 export function normalizeProductBreadcrumbLabel(label: string, href?: string): string {
   if (href) {
+    // Filtered product links represent categories or series, not the product-center root.
+    const query = href.split("?")[1]?.split("#")[0];
+    const params = new URLSearchParams(query);
+    if (params.get("category") || params.get("productType")) return label;
     const path = href.replace(/^https?:\/\/[^/]+/, "").split(/[?#]/)[0];
     const root = path.match(/^\/(?:(en|es|fr|ko|ru|zh|zh-CN)\/)?products\/?$/);
     if (root) return PRODUCT_CENTER_BREADCRUMB_LABELS[root[1] === "zh-CN" ? "zh" : root[1] || "zh"];
