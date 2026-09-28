@@ -1129,6 +1129,13 @@ export default function TechnicalArticleDetail({
           faq={{ id: "faq", label: programmablePipettingCopy.faqTitle, items: programmablePipettingCopy.faqItems }}
         />
         <div className={newsArticleStyles.page} data-rpl-article-footer>
+          <RelatedResources
+            sourceType="article"
+            sourceId={article.id}
+            sourceSlug={article.slug}
+            relationKeys={article.relationKeys}
+            locale={locale}
+          />
           <NewsArticlePager locale={locale} previousArticle={previousArticle} nextArticle={nextArticle} contentType="article" />
         </div>
       </div>
