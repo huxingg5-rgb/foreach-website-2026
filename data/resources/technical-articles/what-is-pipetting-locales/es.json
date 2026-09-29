@@ -1,0 +1,458 @@
+{
+  "copy": {
+    "metadata": {
+      "title": "¿Qué es el pipeteo? Procesos manuales y automatizados",
+      "seoTitle": "¿Qué es el pipeteo? Manual y automatizado | FOREACH",
+      "seoDescription": "Un ejemplo de 100 µL explica el pipeteo manual y automatizado: bomba, válvula y bandeja, ventajas, limitaciones, desviación media y repetibilidad mediante CV.",
+      "coverImage": "/images/resources/technical-articles/what-is-pipetting/manual-and-automated-pipetting-es.webp",
+      "coverAlt": "Comparación del pipeteo manual y automatizado: una persona transfiere el líquido; una bomba de jeringa, una válvula, una aguja y una bandeja dosifican en recipientes sucesivos."
+    },
+    "deck": "El pipeteo consiste en transferir un volumen determinado de líquido de un lugar a otro. Por ejemplo, trasladar 100 µL de un tubo de muestra a un recipiente de reacción, o añadir muestra y diluyente en una proporción definida.",
+    "leadBlocks": [
+      {
+        "type": "paragraph",
+        "text": "El pipeteo consiste en transferir un volumen determinado de líquido de un lugar a otro. Por ejemplo, trasladar 100 µL de un tubo de muestra a un recipiente de reacción, o añadir muestra y diluyente en una proporción definida."
+      },
+      {
+        "type": "paragraph",
+        "text": "Cada transferencia exige identificar el origen del líquido, el destino y el volumen, y realizar la aspiración y la dispensación de forma adecuada. Con una herramienta manual, la persona realiza y coordina estas tareas; en un proceso totalmente automatizado, el equipo sigue una secuencia programada. Una misma tarea, transferir 100 µL, permite entender la diferencia."
+      },
+      {
+        "type": "figure",
+        "src": "/images/resources/technical-articles/what-is-pipetting/manual-and-automated-pipetting-es.webp",
+        "alt": "Comparación del pipeteo manual y automatizado: una persona transfiere el líquido; una bomba de jeringa, una válvula, una aguja y una bandeja dosifican en recipientes sucesivos.",
+        "width": 1200,
+        "height": 630,
+        "caption": "Ambos métodos transfieren un volumen definido. En el pipeteo manual, la persona organiza las operaciones; en el automatizado, el programa coordina el equipo."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Pipeteo manual: la persona aspira y transfiere el líquido",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "En el pipeteo manual, una persona transfiere líquido con una micropipeta o con una pipeta y un controlador de pipeteo. En una micropipeta mecánica, la persona acciona la aspiración y la dispensación. Una micropipeta electrónica puede accionar esas funciones, pero la elección de la muestra, el desplazamiento de la herramienta y la comprobación del destino siguen siendo manuales."
+          },
+          {
+            "type": "subheading",
+            "title": "¿Cómo realiza una persona una transferencia?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Consideremos la transferencia de 100 µL desde un tubo de muestra hasta un recipiente de reacción con una micropipeta y una punta desechable."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Confirmar la tarea y elegir la herramienta. Comprobar la muestra y el recipiente de destino, seleccionar una micropipeta y una punta adecuadas y ajustar 100 µL. No basta con que el intervalo de trabajo incluya ese volumen: también hay que comprobar el rendimiento metrológico en ese punto.",
+              "Colocar la punta y preparar la aspiración. Comprobar el ajuste y la estanqueidad de la punta y realizar la preparación prevista por el método. Un acoplamiento deficiente puede afectar a la aspiración y la dispensación.",
+              "Introducir la punta y aspirar. Controlar la posición, la profundidad de inmersión y la aspiración; esperar a que entre el líquido antes de retirar la punta. Observar si aparecen burbujas o fugas evidentes.",
+              "Desplazarse al recipiente de destino y dispensar. Confirmar el destino y seguir el método en cuanto a velocidad, posición y tiempo de espera para que el líquido llegue al recipiente previsto.",
+              "Terminar y preparar la siguiente muestra. Cambiar la punta según los requisitos de la muestra y del control de contaminación, registrar la muestra completada y continuar."
+            ]
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "https://milnepublishing.geneseo.edu/molecular-techniques/front-matter/pipetting/",
+                "label": "Referencia del procedimiento de pipeteo manual"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "La persona toma decisiones, posiciona la herramienta y organiza la secuencia. Observar la punta ayuda a detectar anomalías evidentes; el volumen realmente transferido debe comprobarse mediante medición."
+          },
+          {
+            "type": "subheading",
+            "title": "Ventajas y limitaciones del pipeteo manual"
+          },
+          {
+            "type": "paragraph",
+            "text": "El trabajo manual se adapta fácilmente. Si cambia la posición de una muestra, se necesita una adición extra o hay que observar el líquido, la persona puede intervenir directamente. Esta flexibilidad resulta útil para desarrollar métodos, realizar ensayos pequeños y procesar muestras adicionales. Las herramientas manuales convencionales ocupan poco espacio y suelen ser más fáciles de poner en servicio que un sistema automatizado completo."
+          },
+          {
+            "type": "paragraph",
+            "text": "Las herramientas multicanal o electrónicas reducen algunas acciones repetitivas. Las multicanal trabajan en varias posiciones a la vez; las electrónicas con dispensación repetitiva pueden reducir el número de aspiraciones. La identificación de las muestras, el movimiento de la herramienta y la coordinación de las tareas siguen a cargo de la persona."
+          },
+          {
+            "type": "paragraph",
+            "text": "Las tareas repetitivas consumen tiempo y atención. Cada aspiración, desplazamiento, dispensación y cambio de punta exige una acción. Al aumentar el trabajo, hay que mantener una técnica constante, comprobar el orden de las muestras y registrar los resultados. Las variaciones de ritmo, profundidad de inmersión y tiempo de espera pueden modificar el volumen entregado."
+          },
+          {
+            "type": "subheading",
+            "title": "¿Cómo se evalúan la exactitud y la repetibilidad del pipeteo?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Para una tarea de 100 µL, conviene evaluar por separado el volumen medio entregado y la dispersión entre resultados repetidos."
+          },
+          {
+            "type": "notice",
+            "text": "Los siguientes valores son solo un ejemplo de cálculo; no representan el rendimiento medido de ningún equipo. Supongamos que varias transferencias en las mismas condiciones dan un volumen medio de 99,5 µL y una desviación estándar de 0,20 µL:"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Indicador",
+              "Resultado del ejemplo",
+              "Interpretación"
+            ],
+            "rows": [
+              [
+                "Desviación media",
+                "99,5 − 100 = −0,5 µL",
+                "En promedio se entregan 0,5 µL menos que el objetivo."
+              ],
+              [
+                "Desviación media relativa",
+                "−0,5 ÷ 100 × 100 % = −0,5 %",
+                "Desviación media respecto al volumen objetivo, para evaluar el error sistemático."
+              ],
+              [
+                "CV de repetibilidad",
+                "0,20 ÷ 99,5 × 100 % ≈ 0,20 %",
+                "Dispersión de los resultados respecto a su media bajo las mismas condiciones."
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "El CV es la desviación estándar dividida por la media, expresada aquí como porcentaje. Un CV pequeño indica resultados repetidos próximos entre sí; si la media se aleja del objetivo, hay que investigar y ajustar. Un CV del 0,20 % no significa que el error de cada transferencia esté dentro de ±0,20 %."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "https://www.itl.nist.gov/div898/software/dataplot/refman2/auxillar/coefvari.htm",
+                "label": "Definición del CV"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "La aceptación depende también de la desviación permitida para la tarea. Por ejemplo, si se exige una desviación media relativa dentro de ±1 %, el límite de desviación media será ±1 µL para 100 µL y ±0,1 µL para 10 µL. Ese ±1 % es un requisito ilustrativo, no una norma universal para equipos manuales o automatizados. El límite de repetibilidad debe definirse por separado."
+          },
+          {
+            "type": "paragraph",
+            "text": "Por tanto, hay que medir la desviación media y la repetibilidad al volumen objetivo, con el líquido y las puntas reales. El intervalo nominal o el número de decimales de la pantalla no bastan para evaluar el rendimiento."
+          }
+        ]
+      },
+      {
+        "title": "Pipeteo totalmente automatizado: ¿cómo se añade reactivo a una fila de recipientes?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Supongamos que cada recipiente de una fila debe recibir 100 µL del mismo reactivo. Con una herramienta manual, una persona repite la aspiración, el desplazamiento y la dispensación. Una configuración con aguja fija y recipientes móviles permite explicar cómo automatizar esas acciones. Los 100 µL son el volumen objetivo de este ejemplo."
+          },
+          {
+            "type": "subheading",
+            "title": "¿Qué función cumple cada componente?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Un tubo conecta el frasco de reactivo con una válvula de conmutación de tres vías de control eléctrico. El puerto común conecta con la jeringa; los otros dos, con el frasco y la aguja dosificadora. Los recipientes se colocan en una bandeja motorizada."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Componente",
+              "Función en este ejemplo"
+            ],
+            "rows": [
+              [
+                "Bomba de jeringa motorizada",
+                "Retrae el émbolo para aspirar reactivo y lo avanza para dispensarlo; el recorrido programado determina el volumen objetivo."
+              ],
+              [
+                "Válvula eléctrica de tres vías",
+                "Conecta frasco y jeringa durante la aspiración, y jeringa y aguja durante la dispensación, aislando la otra rama."
+              ],
+              [
+                "Aguja dosificadora fija",
+                "Entrega el reactivo al recipiente situado debajo."
+              ],
+              [
+                "Bandeja motorizada",
+                "Coloca sucesivamente los recipientes bajo la aguja."
+              ],
+              [
+                "Programa de control",
+                "Coordina la conmutación de la válvula, el movimiento del émbolo y el posicionamiento de la bandeja."
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Esta es una configuración para explicar la dispensación automática; existen otras arquitecturas de pipeteo automatizado. La investigación publicada sobre manipulación automática de líquidos incluye implementaciones que coordinan por programa el volumen, el sentido de movimiento de la bomba de jeringa y la posición de la válvula."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "https://www.mdpi.com/1420-3049/27/19/6665",
+                "label": "Ejemplo de control programado de bomba y válvula"
+              }
+            ]
+          },
+          {
+            "type": "links",
+            "ordered": true,
+            "items": [
+              {
+                "href": "/es/products/pumps/syringe-pumps/solenoid-valve-syringe-pumps/",
+                "label": "Bombas de jeringa FOREACH HMD con electroválvula",
+                "suffix": ": consulte la combinación de dosificación por jeringa y selección de vías por electroválvula para evaluar tareas con aguja fija."
+              },
+              {
+                "href": "/es/products/pumps/syringe-pumps/rotary-valve-syringe-pumps/",
+                "label": "Bombas de jeringa FOREACH HLD con válvula rotativa",
+                "suffix": ": consulte otra configuración de selección de vías y compruebe los puertos y conexiones según el número de fuentes y salidas."
+              },
+              {
+                "href": "/es/products/valves/",
+                "label": "Válvulas de control de fluidos FOREACH",
+                "suffix": ": al elegir una válvula independiente, compruebe las conexiones, los materiales en contacto con el líquido, la presión y el método de control."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "El módulo de bomba y válvula realiza la dosificación y la selección del recorrido. El instrumento completo debe posicionar los recipientes, mover la bandeja y coordinar las acciones. El ejemplo explica el proceso; el volumen real debe verificarse con la jeringa, los tubos y la aguja elegidos."
+          },
+          {
+            "type": "subheading",
+            "title": "¿Cómo llega el reactivo a un recipiente?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Antes de iniciar, la persona coloca el reactivo y los recipientes, ajusta el volumen por recipiente y la cantidad de recipientes, y ceba y purga de aire el circuito. La aguja permanece sobre la abertura para la dispensación sin contacto de este ejemplo."
+          },
+          {
+            "type": "paragraph",
+            "text": "Paso 1: aspirar desde el frasco de reactivo. La válvula conecta el frasco con la jeringa y cierra la rama de la aguja. El motor retrae el émbolo, aumenta el volumen interno de la jeringa y aspira el reactivo a través del tubo.",
+            "lead": "Paso 1: aspirar desde el frasco de reactivo."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/what-is-pipetting/automatic-pipetting-aspiration-es.svg",
+            "alt": "Recorrido de aspiración: el motor retrae el émbolo y el reactivo pasa del frasco a la jeringa a través de la válvula.",
+            "width": 680,
+            "height": 166,
+            "caption": "Aspiración: frasco de reactivo → válvula → jeringa; la rama de la aguja queda cerrada.",
+            "flowNodes": [
+              {
+                "label": "Frasco",
+                "detail": "Fuente de líquido"
+              },
+              {
+                "label": "Válvula",
+                "detail": "Entrada conectada"
+              },
+              {
+                "label": "Jeringa",
+                "detail": "Émbolo retrocede"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Paso 2: cambiar el recorrido y dispensar en el recipiente. Al terminar la aspiración, la bomba se detiene. La válvula conecta la jeringa con la aguja y cierra la rama del frasco. La bandeja coloca el primer recipiente bajo la aguja y se detiene. El motor avanza el émbolo y el reactivo entra en el recipiente por la aguja; el émbolo se detiene al completar el recorrido programado para el volumen objetivo.",
+            "lead": "Paso 2: cambiar el recorrido y dispensar en el recipiente."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/what-is-pipetting/automatic-pipetting-dispensing-es.svg",
+            "alt": "Recorrido de dispensación: el motor avanza el émbolo y el reactivo pasa por la válvula y la aguja fija hasta el recipiente de reacción.",
+            "width": 680,
+            "height": 166,
+            "caption": "Dispensación: jeringa → válvula → aguja → recipiente de reacción; la rama del frasco queda cerrada. Volumen objetivo: 100 µL.",
+            "flowNodes": [
+              {
+                "label": "Jeringa",
+                "detail": "Émbolo avanza"
+              },
+              {
+                "label": "Válvula",
+                "detail": "Salida conectada"
+              },
+              {
+                "label": "Aguja",
+                "detail": "Posición fija"
+              },
+              {
+                "label": "Recipiente",
+                "detail": "Recibe reactivo"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Paso 3: avanzar la bandeja y repetir. Tras la dispensación, el motor de la bandeja coloca el siguiente recipiente bajo la aguja. El programa devuelve la válvula a la rama de entrada y repite la aspiración, la conmutación y la dispensación hasta completar la cantidad prevista.",
+            "lead": "Paso 3: avanzar la bandeja y repetir."
+          },
+          {
+            "type": "paragraph",
+            "text": "La bomba de jeringa mueve el líquido, la válvula selecciona el recorrido, la bandeja presenta el siguiente recipiente y el programa determina cuándo actúa cada componente. La persona prepara el sistema antes de arrancar; el equipo asume la aspiración, la dispensación y el posicionamiento repetitivos del lote."
+          },
+          {
+            "type": "subheading",
+            "title": "¿Qué ventajas aporta este proceso automático?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Para adiciones sucesivas del mismo reactivo y volumen, la persona no necesita tomar la herramienta, aspirar y apuntar a cada recipiente. El programa puede repetir el recorrido del émbolo, las velocidades y el orden de los recipientes ya verificados, reduciendo la influencia de los cambios de ritmo manual."
+          },
+          {
+            "type": "paragraph",
+            "text": "A cambio, es necesario definir previamente las posiciones de los recipientes y la aguja y el programa de dosificación. Al cambiar de reactivo, hay que gestionar los residuos del circuito compartido y comprobar la limpieza. Cambiar el tipo de recipiente o el volumen exige ajustar y verificar el método. En tareas pequeñas o que cambian con frecuencia, esta preparación debe incluirse en el tiempo total."
+          },
+          {
+            "type": "subheading",
+            "title": "Si se ajustan 100 µL, ¿cómo se comprueba el volumen real?"
+          },
+          {
+            "type": "paragraph",
+            "text": "La bomba de jeringa controla la dispensación mediante el desplazamiento del émbolo. Idealmente, el área efectiva de la sección de la jeringa multiplicada por el recorrido equivale al volumen desplazado. Las burbujas, las fugas y el líquido residual en la aguja pueden hacer que el volumen recibido difiera del ajuste. Por eso, el cebado y la purga de aire son preparativos necesarios en este ejemplo."
+          },
+          {
+            "type": "paragraph",
+            "text": "Mida el volumen que reciben los recipientes, calcule la desviación media y el CV según el método anterior y compruebe los resultados al principio, en medio y al final del lote. Programar un recorrido equivalente a 100 µL no demuestra que cada recipiente reciba exactamente 100 µL."
+          },
+          {
+            "type": "paragraph",
+            "text": "En el pipeteo manual, una persona aspira, transfiere y dispensa, con flexibilidad para hacer cambios. La automatización asigna las acciones repetitivas a componentes coordinados. La elección debe considerar la estabilidad de la tarea, el número de repeticiones y el tiempo de preparación y limpieza."
+          },
+          {
+            "type": "subheading",
+            "title": "Lecturas complementarias"
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "prefix": "Para transferencias entre recipientes con puntas desechables, consulte la ",
+                "href": "/es/products/pumps/pipetting-pumps/smtp2-programmable-pipetting-module/smtp2-1000ul/",
+                "label": "bomba de pipeteo automática programable por desplazamiento de aire FOREACH SMTP2",
+                "suffix": ". Es otra configuración de pipeteo: el instrumento completo debe aportar posicionamiento y control del proceso, y el rendimiento debe verificarse con el líquido, las puntas y el volumen objetivo."
+              }
+            ]
+          },
+          {
+            "type": "links",
+            "ordered": true,
+            "items": [
+              {
+                "href": "/es/resources/technical-articles/what-is-a-programmable-syringe-pump/",
+                "label": "¿Qué es una bomba de jeringa programable? Coordinación entre bomba, válvula y accionamiento"
+              },
+              {
+                "href": "/es/resources/technical-articles/what-is-a-programmable-pipetting-pump/",
+                "label": "¿Qué es una bomba de pipeteo automática programable por desplazamiento de aire? Otra configuración de pipeteo"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "faqTitle": "Preguntas frecuentes",
+    "faqItems": [],
+    "cta": {
+      "title": "Elegir la configuración según la tarea",
+      "description": "Evalúe el volumen, el líquido, los recipientes y el número de repeticiones para seleccionar una configuración automática.",
+      "contactLabel": "Contactar con ingeniería",
+      "productsLabel": "Ver bombas",
+      "productsHref": "/es/products/pumps/"
+    }
+  },
+  "navigation": [
+    {
+      "id": "manual-pipetting",
+      "label": "Pipeteo manual",
+      "children": [
+        {
+          "id": "manual-pipetting-steps",
+          "label": "Procedimiento"
+        },
+        {
+          "id": "manual-pipetting-tradeoffs",
+          "label": "Ventajas y limitaciones"
+        },
+        {
+          "id": "pipetting-accuracy",
+          "label": "Exactitud y repetibilidad"
+        }
+      ]
+    },
+    {
+      "id": "automated-pipetting-example",
+      "label": "Pipeteo automatizado",
+      "children": [
+        {
+          "id": "automated-pipetting-components",
+          "label": "Función de los componentes"
+        },
+        {
+          "id": "automated-pipetting-cycle",
+          "label": "Ciclo por recipiente"
+        },
+        {
+          "id": "automated-pipetting-tradeoffs",
+          "label": "Ventajas y limitaciones"
+        },
+        {
+          "id": "automated-pipetting-verification",
+          "label": "Verificación del volumen"
+        },
+        {
+          "id": "pipetting-further-reading",
+          "label": "Lecturas complementarias"
+        }
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "label": "Pipeteo manual",
+      "description": "La persona coordina cada paso",
+      "steps": [
+        "Aspirar líquido",
+        "Mover la herramienta",
+        "Dispensar al destino",
+        "Siguiente muestra"
+      ]
+    },
+    {
+      "label": "Ejemplo automático",
+      "description": "El programa coordina el equipo",
+      "steps": [
+        "La bomba aspira",
+        "La válvula conmuta",
+        "Dispensar por la aguja",
+        "Avanzar la bandeja"
+      ]
+    }
+  ],
+  "subject": {
+    "about": [
+      "Pipeteo",
+      "Pipeteo manual",
+      "Pipeteo automatizado"
+    ],
+    "mentions": [
+      "Bomba de jeringa",
+      "Válvula de conmutación",
+      "Desviación media",
+      "Coeficiente de variación CV"
+    ]
+  },
+  "cover": {
+    "title": "¿Qué es el pipeteo?",
+    "subtitle": "Transferir un volumen definido desde un origen hasta un destino",
+    "footer": "Verificar por separado el volumen ajustado, la secuencia y el resultado."
+  }
+}

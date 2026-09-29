@@ -48,8 +48,10 @@ export function ArticleEnhancements({ articleId, locale }: { articleId: string; 
   useEffect(() => {
     const root = document.getElementById(`${articleId}-article`);
     if (!root) return;
-    const sections = [...root.querySelectorAll<HTMLElement>("[data-article-body] > section")];
     const links = [...root.querySelectorAll<HTMLAnchorElement>("[data-toc-link]")];
+    const sections = links
+      .map(link => document.getElementById(link.hash.slice(1)))
+      .filter((section): section is HTMLElement => section !== null && root.contains(section));
     let frame = 0;
     function setActive(active?: string) {
       links.forEach(link => {

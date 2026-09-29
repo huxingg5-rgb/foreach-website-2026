@@ -1,4 +1,4 @@
-import styles from "../../news/NewsArticleClient.module.css";
+import styles from "./TechnicalArticleBody.module.css";
 
 type SupportedLocale =
   | "zh-CN"

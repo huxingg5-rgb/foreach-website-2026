@@ -18,6 +18,7 @@ const sectionIds = ["parameters", "models", "task", "validation", "faq"] as cons
 export type RplArticleSectionNavigationItem = {
   id: string;
   label: string;
+  children?: readonly { id: string; label: string }[];
 };
 
 type RplArticleFaq = {
@@ -26,21 +27,28 @@ type RplArticleFaq = {
   items: readonly EngineeringArticleFaqItem[];
 };
 
-function renderBlock(block: EngineeringArticleBlock, key: number, headerLinks?: ReadonlyMap<string, string>): ReactNode {
+function renderBlock(block: EngineeringArticleBlock, key: number, headerLinks?: ReadonlyMap<string, string>, headingId?: string): ReactNode {
   switch (block.type) {
-    case "paragraph": return <p key={key}>{block.text}</p>;
-    case "subheading": return <h3 className={styles.topicHeading} key={key}><span className={styles.topicMarker} aria-hidden="true" /><span>{block.title}</span></h3>;
+    case "paragraph": return <p key={key}>{block.lead && block.text.startsWith(block.lead)
+      ? <><strong>{block.lead}</strong>{block.text.slice(block.lead.length)}</>
+      : block.text}</p>;
+    case "subheading": return <h3 className={styles.topicHeading} id={headingId} key={key}><span className={styles.topicMarker} aria-hidden="true" /><span>{block.title}</span></h3>;
     case "formula": return <div className={styles.formula} key={key}><p>{block.expression}</p>{block.note && <p className={styles.note}>{block.note}</p>}</div>;
     case "notice": return <aside className={styles.notice} key={key}>{block.label && <p>{block.label}</p>}<p>{block.text}</p></aside>;
     case "figure": return (
-      <figure key={key} data-square={block.width === block.height ? "true" : undefined}>
-        <Image
+      <figure key={key} data-article-figure aria-label={block.flowNodes ? block.alt : undefined} data-square={block.width === block.height ? "true" : undefined}>
+        {block.flowNodes ? <ol className={styles.flowDiagram} data-nodes={block.flowNodes.length} aria-label={block.alt}>
+          {block.flowNodes.map((node, index) => <li key={node.label}>
+            {index > 0 && <span className={styles.flowArrow} aria-hidden="true">→</span>}
+            <strong>{node.label}</strong><span>{node.detail}</span>
+          </li>)}
+        </ol> : <Image
           src={block.src}
           alt={block.alt}
           width={block.width}
           height={block.height}
           sizes={block.width === block.height ? "(max-width: 700px) 100vw, 620px" : "(max-width: 820px) 100vw, 790px"}
-        />
+        />}
         <figcaption>{block.caption}</figcaption>
       </figure>
     );
@@ -61,7 +69,7 @@ function renderBlock(block: EngineeringArticleBlock, key: number, headerLinks?: 
 function renderTable(block: Extract<EngineeringArticleBlock, { type: "table" }>, key: number, caption?: string, headerLinks?: ReadonlyMap<string, string>) {
   return (
     <div className={styles.tableWrap} key={key} tabIndex={0} role="region" aria-label={caption ?? block.headers.join(" / ")}>
-      <table>
+      <table data-columns={block.headers.length}>
         {caption && <caption>{caption}</caption>}
         <thead><tr>{block.headers.map((cell, index) => <th scope="col" key={index}>{headerLinks?.has(cell) ? <a href={headerLinks.get(cell)}>{cell}</a> : cell}</th>)}</tr></thead>
         <tbody>{block.rows.map((row, index) => <tr key={index}>{row.map((cell, column) => column === 0
@@ -72,8 +80,9 @@ function renderTable(block: Extract<EngineeringArticleBlock, { type: "table" }>,
   );
 }
 
-function renderBlocks(blocks: readonly EngineeringArticleBlock[], headerLinks?: ReadonlyMap<string, string>) {
+function renderBlocks(blocks: readonly EngineeringArticleBlock[], headerLinks?: ReadonlyMap<string, string>, subheadingIds?: readonly string[]) {
   const nodes: ReactNode[] = [];
+  let subheadingIndex = 0;
   for (let index = 0; index < blocks.length; index++) {
     const block = blocks[index];
     const next = blocks[index + 1];
@@ -87,16 +96,17 @@ function renderBlocks(blocks: readonly EngineeringArticleBlock[], headerLinks?: 
         figures.push(renderBlock(blocks[index], index));
         index++;
       }
-      nodes.push(<div className={styles.gallery} key={start}>{figures}</div>);
+      nodes.push(<div className={styles.gallery} data-article-gallery key={start}>{figures}</div>);
       index--;
     } else {
-      nodes.push(renderBlock(block, index, headerLinks));
+      const headingId = block.type === "subheading" ? subheadingIds?.[subheadingIndex++] : undefined;
+      nodes.push(renderBlock(block, index, headerLinks, headingId));
     }
   }
   return nodes;
 }
 
-function renderSection(blocks: readonly EngineeringArticleBlock[], id: string, modelLinks: ReadonlyMap<string, string>) {
+function renderSection(blocks: readonly EngineeringArticleBlock[], id: string, modelLinks: ReadonlyMap<string, string>, subheadingIds?: readonly string[]) {
   if (id === "faq") {
     return <div className={styles.faq}>{blocks.map((block, index) => {
       const answer = blocks[index + 1];
@@ -120,7 +130,7 @@ function renderSection(blocks: readonly EngineeringArticleBlock[], id: string, m
       {renderBlocks(blocks.slice(end))}
     </>;
   }
-  return renderBlocks(blocks, id === "models" ? modelLinks : undefined);
+  return renderBlocks(blocks, id === "models" ? modelLinks : undefined, subheadingIds);
 }
 
 /** Opt-in editorial template first used by the RPL guide and reusable by selected technical articles. */
@@ -134,6 +144,8 @@ export default function RplSelectionArticle({
   sectionNavigation: suppliedSectionNavigation,
   faq,
   modelLinks: suppliedModelLinks,
+  className,
+  leadContent,
 }: {
   copy: DiaphragmPumpEngineeringArticleCopy;
   date: string;
@@ -144,19 +156,21 @@ export default function RplSelectionArticle({
   sectionNavigation?: readonly RplArticleSectionNavigationItem[];
   faq?: RplArticleFaq;
   modelLinks?: ReadonlyMap<string, string>;
+  className?: string;
+  leadContent?: ReactNode;
 }) {
   const ui = rplArticleUi[locale];
   const defaultModelLinks = new Map(getRplSelectionProducts(locale).map(product => [product.name, product.href]));
   const modelLinks = suppliedModelLinks ?? defaultModelLinks;
   const defaultSectionNavigation = sectionIds.map((id, index) => ({ id, label: ui.sections[index] }));
-  const sectionNavigation = copy.sections.map((section, index) =>
+  const sectionNavigation: RplArticleSectionNavigationItem[] = copy.sections.map((section, index) =>
     suppliedSectionNavigation?.[index] ??
       defaultSectionNavigation[index] ?? {
         id: `section-${index + 1}`,
         label: section.title,
       },
   );
-  const fullNavigation = faq?.items.length
+  const fullNavigation: readonly RplArticleSectionNavigationItem[] = faq?.items.length
     ? [...sectionNavigation, { id: faq.id, label: faq.label }]
     : sectionNavigation;
   const titleId = `${articleId}-article-title`;
@@ -168,27 +182,40 @@ export default function RplSelectionArticle({
           {`< ${backText}`}
         </Link>
       </div>
-    <main className={styles.root} id={`${articleId}-article`} data-editorial-article>
+    <main className={[styles.root, className].filter(Boolean).join(" ")} id={`${articleId}-article`} data-editorial-article>
       <article className={styles.layout} aria-labelledby={titleId}>
         <header className={styles.header} data-article-header>
           <h1 id={titleId}>{copy.metadata.title}</h1>
           <time className={styles.date} dateTime={date}>{formattedDate}</time>
-          <div className={`${styles.meta} ${locale === "zh-CN" ? styles.metaWithoutShare : ""}`}>
+          <div className={`${styles.meta} ${locale === "zh-CN" ? styles.metaWithoutShare : ""}`} data-article-meta>
             <span className={styles.rule} data-meta-rule aria-hidden="true" />
             {locale !== "zh-CN" && <ArticleShare title={copy.metadata.title} locale={locale} />}
           </div>
-          <div className={styles.intro}>{renderBlocks(copy.leadBlocks)}</div>
+          <div className={styles.intro}>{leadContent ?? renderBlocks(copy.leadBlocks)}</div>
         </header>
         <aside className={styles.sidebar} data-article-sidebar>
           <nav className={styles.toc} aria-label={ui.contents}>
             <p className={styles.tocLabel} data-toc-label>{ui.contents}</p>
-            {fullNavigation.map((item, index) => <a key={item.id} href={`#${item.id}`} data-toc-link aria-current={index === 0 ? "location" : undefined}><span>{String(index + 1).padStart(2, "0")}</span>{item.label}</a>)}
+            {fullNavigation.some(item => item.children?.length) ? (
+              <ul className={styles.tocList}>
+                {fullNavigation.map((item, index) => (
+                  <li key={item.id}>
+                    <a href={`#${item.id}`} data-toc-link aria-current={index === 0 ? "location" : undefined}><span>{String(index + 1).padStart(2, "0")}</span>{item.label}</a>
+                    {item.children?.length ? (
+                      <ul className={styles.tocChildren}>
+                        {item.children.map(child => <li key={child.id}><a href={`#${child.id}`} data-toc-link>{child.label}</a></li>)}
+                      </ul>
+                    ) : null}
+                  </li>
+                ))}
+              </ul>
+            ) : fullNavigation.map((item, index) => <a key={item.id} href={`#${item.id}`} data-toc-link aria-current={index === 0 ? "location" : undefined}><span>{String(index + 1).padStart(2, "0")}</span>{item.label}</a>)}
           </nav>
         </aside>
         <div className={styles.body} data-article-body>
           {copy.sections.map((section, index) => {
             const id = sectionNavigation[index].id;
-            return <section id={id} key={id} aria-labelledby={`${id}-title`}><h2 className={styles.numberedHeading} id={`${id}-title`}><span className={styles.sectionNumber}>{String(index + 1).padStart(2, "0")}</span><span>{section.title}</span></h2>{renderSection(section.blocks, id, modelLinks)}</section>;
+            return <section id={id} key={id} aria-labelledby={`${id}-title`}><h2 className={styles.numberedHeading} id={`${id}-title`}><span className={styles.sectionNumber}>{String(index + 1).padStart(2, "0")}</span><span>{section.title}</span></h2>{renderSection(section.blocks, id, modelLinks, sectionNavigation[index].children?.map(child => child.id))}</section>;
           })}
           {faq?.items.length ? (
             <section id={faq.id} aria-labelledby={`${faq.id}-title`}>

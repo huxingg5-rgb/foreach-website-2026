@@ -1,4 +1,6 @@
 "use client";
+import { getSolenoidContent } from "@/data/products/detail/solenoid-content";
+import { getMrv3Content } from "@/data/products/detail/mrv3-content";
 import { getSyringeModelBreadcrumbs } from "@/data/products/selection/syringe-pump-routes";
 
 import { applySyringePumpDetailCopy } from "@/data/products/detail/syringe-pump-detail-copy";
@@ -8,6 +10,8 @@ import { getPipettingModelBreadcrumbs } from "@/data/products/selection/pipettin
 import { normalizeProductBreadcrumbLabel } from "@/lib/seo/product-breadcrumb-label";
 
 import { syringePumpCardsLocales } from "@/data/products/selection/syringe-pump-cards.locales";
+import { getValveDetailHeading } from "@/data/products/selection/valve-card-copy";
+import { formatProductHeading } from "@/lib/format-product-heading";
 
 
 import { getChineseProductBreadcrumbs } from "@/data/products/detail/chinese-product-breadcrumbs";
@@ -1257,7 +1261,13 @@ function buildProductPageStructuredData(data: any, pathname: string) {
   const isProductCollectionPage =
     /\/products\/fittings\/quick-connect-fittings\/q(?:20|40|60)\/?$/.test(pathname);
   const compactChineseBreadcrumbs = getPipettingModelBreadcrumbs(String(data.slug || ""), locale) || getSyringeModelBreadcrumbs(String(data.slug || ""), locale) || getChineseProductBreadcrumbs(data, locale);
-  const breadcrumbItems = compactChineseBreadcrumbs
+  const breadcrumbItems = (data.mrv3AuthoredContent || data.solenoidAuthoredContent) ? [
+    { name: breadcrumbCopy.home, item: toAbsoluteProductUrl(`${localePrefix}/`) },
+    { name: breadcrumbCopy.products, item: toAbsoluteProductUrl(`${localePrefix}/products/`) },
+    { name: data.breadcrumbCategoryLabel, item: toAbsoluteProductUrl(data.breadcrumbCategoryHref) },
+    ...(!["rotary-valves", "solenoid-valves"].includes(data.slug) ? [{ name: data.breadcrumbSeriesLabel, item: toAbsoluteProductUrl(data.breadcrumbSeriesHref) }] : []),
+    { name: data.breadcrumbLabel, item: canonicalUrl },
+  ] : compactChineseBreadcrumbs
     ? compactChineseBreadcrumbs.map((item) => ({name:item.label,item:item.href ? toAbsoluteProductUrl(item.href) : canonicalUrl}))
     : data.valvelessDetailContent === true
     ? [
@@ -1498,6 +1508,11 @@ export default function ProductDetailClient({
       : "";
   const data = useMemo(
     () => {
+      const mrv3Copy = sourceData.category === "valves" ? (getMrv3Content(sourceData.slug, configuratorLocale) || getSolenoidContent(sourceData.slug, configuratorLocale)) : null;
+      if (mrv3Copy) {
+        const mrv3Data: typeof sourceData = { ...sourceData, ...mrv3Copy, category: "valves" };
+        return applyDiaphragmPumpDetailCopy(mrv3Data, configuratorLocale);
+      }
       const hasLocalizedPistonCopy = (sourceData.eaDetailContent === true || sourceData.compactDetailContent === true || sourceData.valvelessDetailContent === true) && sourceData.__locale === configuratorLocale;
       const localizedData = hasLocalizedPistonCopy ? sourceData : targetLocale
         ? localizeTargetProductDetailData(sourceData, targetLocale, pathname || "")
@@ -1564,7 +1579,7 @@ export default function ProductDetailClient({
   );
   const drawingDocumentUrl = drawingPreviewUrl.split("#", 1)[0];
   const isCustomProduct =
-    isDiaphragmPage || isCustomProductCategory(pathname, data);
+    ((data.mrv3AuthoredContent || data.solenoidAuthoredContent) && isCustomInquiryMode(data)) || isDiaphragmPage || isCustomProductCategory(pathname, data);
   const customProductCopy =
     CUSTOM_PRODUCT_NOTICE_COPY[
       configuratorLocale as keyof typeof CUSTOM_PRODUCT_NOTICE_COPY
@@ -1584,6 +1599,7 @@ export default function ProductDetailClient({
    */
   const diaphragmCopy = getDiaphragmPumpCopy(data, configuratorLocale);
   const displayProductTitle =
+    ((data.mrv3AuthoredContent || data.solenoidAuthoredContent) ? data.h1Title : undefined) ||
     diaphragmCopy?.title ||
     (useAuthoredPistonCopy || useAuthoredValvelessCopy ? String(data.model || "") : getScopedProductDisplayTitle(
       data,
@@ -1593,6 +1609,10 @@ export default function ProductDetailClient({
   const syringeDetailH1 = pathname?.includes("/products/pumps/syringe-pumps/")
     ? syringePumpCardsLocales[getProductPageLocale(pathname)]?.[String(data.slug || "")]?.heading
     : undefined;
+  const valveDetailH1 = pathname?.includes("/products/valves/")
+    ? getValveDetailHeading(String(data.slug || ""), configuratorLocale)
+    : undefined;
+  const inheritedDetailH1 = valveDetailH1 || syringeDetailH1;
   // ===== FOREACH TARGET PRODUCT DISPLAY TITLE END =====
   const structuredData = useMemo(
     () => buildProductPageStructuredData(data, pathname || "/"),
@@ -1691,7 +1711,13 @@ export default function ProductDetailClient({
         drawingPreview: "预览图纸",
         drawingDescription: (model: string) => `查看 ${model} 的技术图纸。`,
       };
-  const productBreadcrumbItems = getPipettingModelBreadcrumbs(String(data.slug || ""), configuratorLocale) || getSyringeModelBreadcrumbs(String(data.slug || ""), configuratorLocale) || getChineseProductBreadcrumbs(data, configuratorLocale) || (useAuthoredValvelessCopy
+  const productBreadcrumbItems = ((data.mrv3AuthoredContent || data.solenoidAuthoredContent) ? [
+    { label: copy.home, href: `${localePrefix}/` },
+    { label: copy.products, href: `${localePrefix}/products/` },
+    { label: data.breadcrumbCategoryLabel, href: data.breadcrumbCategoryHref },
+    ...(!["rotary-valves", "solenoid-valves"].includes(data.slug) ? [{ label: data.breadcrumbSeriesLabel, href: data.breadcrumbSeriesHref }] : []),
+    { label: String(data.breadcrumbLabel) },
+  ] : null) || getPipettingModelBreadcrumbs(String(data.slug || ""), configuratorLocale) || getSyringeModelBreadcrumbs(String(data.slug || ""), configuratorLocale) || getChineseProductBreadcrumbs(data, configuratorLocale) || (useAuthoredValvelessCopy
     ? [
         { label: copy.home, href: `${localePrefix}/` },
         { label: copy.products, href: `${localePrefix}/products/` },
@@ -3182,13 +3208,21 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
 
           <div className={styles.productInfo}>
             <div className={styles.titleGroup}>
-              <h1 className={styles.productModelTitle}>{syringeDetailH1 ? `FOREACH ${syringeDetailH1.replace(/^FOREACH\s+/i, "")}` : displayProductTitle}</h1>
+              <h1 className={styles.productModelTitle}>{formatProductHeading(inheritedDetailH1 ? `FOREACH ${inheritedDetailH1.replace(/^FOREACH\s+/i, "")}` : displayProductTitle)}</h1>
             </div>
 
 
             {Array.isArray(data.pipettingIntroductionParagraphs) ? (
               <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-pipetting-description="true">
                 {data.pipettingIntroductionParagraphs.map((paragraph: string, index: number) => <p key={index}>{paragraph}</p>)}
+              </div>
+            ) : Array.isArray(data.valveIntroductionParagraphs) ? (
+              <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-solenoid-description="true">
+                {data.valveIntroductionParagraphs.map((paragraph: string, index: number) => <p key={index}>{paragraph}</p>)}
+              </div>
+            ) : Array.isArray(data.mrv3IntroductionParagraphs) ? (
+              <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-mrv3-description="true">
+                {data.mrv3IntroductionParagraphs.map((paragraph: string, index: number) => <p key={index}>{paragraph}</p>)}
               </div>
             ) : Array.isArray(data.syringeIntroductionParagraphs) ? (
               <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-syringe-description="true">
@@ -3264,7 +3298,7 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
                     className={styles.button}
                     type="button"
                     onClick={() => {
-                      if (isCustomProduct) {
+                      if (isCustomProduct || (data.mrv3AuthoredContent || data.solenoidAuthoredContent)) {
                         trackContactClick({
                           contactChannel: "contact_form",
                           sourceSection: "product_detail",
@@ -3371,7 +3405,7 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
                       window.open(href, "_blank", "noopener,noreferrer");
                     }}
                   >
-                    {isCustomProduct
+                    {isCustomProduct || (data.mrv3AuthoredContent || data.solenoidAuthoredContent)
                       ? customProductCopy.contact
                       : isTubingConfiguratorEnabled &&
                           selectedTubingVariant

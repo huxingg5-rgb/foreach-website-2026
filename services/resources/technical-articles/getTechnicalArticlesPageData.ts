@@ -1,3 +1,5 @@
+import { getValveEngineeringArticles } from "@/data/resources/technical-articles/valve-engineering-articles.article";
+import { getPipettingBasicsArticles } from "@/data/resources/technical-articles/what-is-pipetting.article";
 import { getProgrammableSyringeArticles } from "@/data/resources/technical-articles/programmable-syringe-pump.article";
 import { getProgrammablePipettingArticles } from "@/data/resources/technical-articles/programmable-pipetting-pump.article";
 import { getPumpApplicationArticles } from "@/data/resources/technical-articles/pump-application-articles.article";
@@ -326,6 +328,8 @@ function getTechnicalArticlesSourcePageData(
 // Use the assembled Chinese list so new articles keep the same position in every locale.
 const technicalArticleOrder = new Map(
   [
+    ...getValveEngineeringArticles("zh-CN"),
+    ...getPipettingBasicsArticles("zh-CN"),
     ...getProgrammableSyringeArticles("zh-CN"),
     ...getProgrammablePipettingArticles("zh-CN"),
     ...getMeteringPumpAccuracyRepeatabilityArticles("zh-CN"),
@@ -347,7 +351,7 @@ export function getTechnicalArticlesPageData(
     taxonomy: getTechnicalArticleTaxonomy(locale),
     // Keep withdrawn drafts in the source archive, outside all public routes and indexes.
     articles: classifyTechnicalArticles(
-      [...getProgrammableSyringeArticles(locale), ...getProgrammablePipettingArticles(locale), ...getMeteringPumpAccuracyRepeatabilityArticles(locale), ...getValvelessMeteringPumpOverviewArticles(locale), ...getRplSelectionArticles(locale), ...getPumpDiagnosticsArticles(locale), ...getPumpApplicationArticles(locale), ...sourcePageData.articles]
+      [...getValveEngineeringArticles(locale), ...getPipettingBasicsArticles(locale), ...getProgrammableSyringeArticles(locale), ...getProgrammablePipettingArticles(locale), ...getMeteringPumpAccuracyRepeatabilityArticles(locale), ...getValvelessMeteringPumpOverviewArticles(locale), ...getRplSelectionArticles(locale), ...getPumpDiagnosticsArticles(locale), ...getPumpApplicationArticles(locale), ...sourcePageData.articles]
         .filter(
           (article) => !withdrawnTechnicalArticleSlugs.has(article.slug),
         )

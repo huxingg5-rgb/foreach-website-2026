@@ -416,11 +416,11 @@ export const PRODUCT_DETAIL_TITLE_OVERRIDES: Record<
     ru: "MRV3 Керамический многоканальный поворотный клапан",
   },
   "solenoid-valves": {
-    en: "6010 Series Solenoid Valve",
-    es: "Electroválvula serie 6010",
-    fr: "Électrovanne série 6010",
-    ko: "6010 시리즈 솔레노이드 밸브",
-    ru: "Электромагнитный клапан серии 6010",
+    en: "SV10 Series Solenoid Valve",
+    es: "Electroválvula serie SV10",
+    fr: "Électrovanne série SV10",
+    ko: "SV10 시리즈 솔레노이드 밸브",
+    ru: "Электромагнитный клапан серии SV10",
   },
   "abd-air-bubble-detector": {
     en: "ABD Air Bubble Detection Module",

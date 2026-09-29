@@ -38,12 +38,17 @@
 .root .toc a[aria-current="location"] { border-left-color: var(--brand-blue, #173368); }
 .root .toc a:hover, .root .toc a:focus-visible { color: var(--brand-cyan, #09e9b4); border-left-color: var(--brand-cyan, #09e9b4); }
 .toc a[aria-current="location"] { font-weight: 400; }
+.root .tocList, .root .tocChildren { list-style: none; margin: 0; padding: 0; }
+.root .tocList li { margin: 0; padding: 0; }
+.root .tocList > li + li { margin-top: 14px; }
+.root .tocChildren a { padding: 6px 0 6px 41px; font-size: 13px; line-height: 1.6; }
 .root h1, .root h2, .root h3 { color: #111; text-wrap: pretty; }
 .root h1 { font-size: var(--h1-size); line-height: 1.4; font-weight: 600; margin: 0 0 28px; letter-spacing: -.025em; }
 .root h2 { font-size: var(--h2-size); line-height: 1.5; font-weight: 500; margin: 0 0 20px; letter-spacing: -.02em; }
 .root h3 { font-size: var(--h3-size); line-height: 1.65; font-weight: 400; margin: 30px 0 12px; }
 .numberedHeading { display: flex; align-items: baseline; gap: .55em; }
 .topicHeading { display: flex; align-items: flex-start; gap: 8px; }
+.topicHeading[id] { scroll-margin-top: calc(var(--site-header-height, 90px) + 24px); }
 .sectionNumber { flex: 0 0 auto; font-variant-numeric: tabular-nums; }
 .topicMarker { flex: 0 0 6px; width: 6px; height: 6px; margin-top: calc((1.65em - 6px) / 2); border-radius: 50%; background: currentColor; }
 .root p { margin: 0 0 18px; }
@@ -84,6 +89,12 @@
 .gallery > figure:only-child img { aspect-ratio: auto; }
 .gallery > figure:only-child[data-square="true"] { width: min(100%, 620px); justify-self: center; }
 .gallery figcaption { border-top: 1px solid var(--line); padding-top: 10px; text-align: center; font-size: 15px; font-weight: 400; }
+.root .flowDiagram { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; list-style: none; padding: 0; margin: 0; }
+.root .flowDiagram[data-nodes="3"] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.root .flowDiagram li { position: relative; display: grid; align-content: center; gap: 4px; min-height: 76px; padding: 12px 8px; margin: 0; border: 1px solid #575757; border-radius: 3px; text-align: center; background: #fff; }
+.flowDiagram strong { font-size: 16px; font-weight: 600; line-height: 1.5; }
+.flowDiagram li > span:not(.flowArrow) { font-size: 13px; color: var(--muted); line-height: 1.5; }
+.flowArrow { position: absolute; left: -23px; top: 50%; width: 22px; transform: translateY(-50%); color: var(--muted); }
 .numberedList { list-style: decimal outside; padding-left: 1.7em; margin: 18px 0 24px; }
 .numberedList li { padding-left: .35em; margin-bottom: 12px; }
 .numberedList li:last-child { margin-bottom: 0; }
@@ -110,9 +121,15 @@
   .toc { position: static; max-height: none; overflow: visible; margin: 28px 0 0; padding: 20px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
   .root .tocLabel { margin: 0 0 12px; }
   .root .toc a { border-left: 0; padding: 7px 0; }
+  .root .tocChildren a { padding: 5px 0 5px 26px; }
   .body > section:first-child { border-top: 0; margin-top: 0; padding-top: 32px; }
 }
 @media (max-width: 600px) {
+  .root .flowDiagram { gap: 18px; }
+  .root .flowDiagram li { padding: 10px 4px; }
+  .flowDiagram strong { font-size: 14px; }
+  .flowDiagram li > span:not(.flowArrow) { font-size: 12px; }
+  .flowArrow { left: -19px; width: 18px; }
   .root { --body-size: 15px; --h1-size: 24px; --h2-size: 20px; --h3-size: 17px; }
   .backNav { padding-left: 20px; padding-right: 20px; }
   .layout { padding: 18px 20px 42px; }

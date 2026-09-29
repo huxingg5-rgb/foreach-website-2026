@@ -1,0 +1,18 @@
+/* Keep the existing monochrome article layout; stack flow steps on narrow screens. */
+@media (max-width: 600px) {
+  .article [data-article-figure] ol[data-nodes] {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .article [data-article-figure] ol[data-nodes] li {
+    min-height: 62px;
+    padding: 10px 14px;
+  }
+  .article [data-article-figure] ol[data-nodes] li > span[aria-hidden] {
+    left: 50%;
+    top: -23px;
+    width: 22px;
+    height: 22px;
+    transform: translateX(-50%) rotate(90deg);
+  }
+}

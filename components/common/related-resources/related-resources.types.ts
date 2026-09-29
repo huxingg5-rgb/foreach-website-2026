@@ -9,6 +9,8 @@ export type RelatedResourcesProps = {
   sourceId?: string;
   sourceSlug?: string;
   relationKeys?: readonly string[];
+  /** An explicit, ordered card selection; omit to use automatic relations. */
+  featuredProductIds?: readonly string[];
   locale: RelatedResourcesLocale;
 };
 export type RelatedArticleCard = Pick<TechnicalArticleItem, "id" | "slug" | "title" | "summary" | "date" | "coverImage">;

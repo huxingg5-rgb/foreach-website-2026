@@ -4,6 +4,8 @@ import { getSyringeModelRedirect } from "@/data/products/selection/syringe-pump-
 import { syringePumpCardsLocales } from "@/data/products/selection/syringe-pump-cards.locales";
 import { instrumentCardsZh } from "@/data/products/selection/instrument-fluidics-copy.zh";
 import { getPipettingCardCopy } from "@/data/products/selection/pipetting-pump-cards.locales";
+import { getValveCardCopy } from "@/data/products/selection/valve-card-copy";
+import { formatProductHeading } from "@/lib/format-product-heading";
 import { usePathname } from "next/navigation";
 
 import type { ProductSelectionProductItem } from "./product-selection-ui.types";
@@ -188,6 +190,11 @@ export function getProductSelectionCardName(
   locale: SelectionLocale,
   title: string,
 ) {
+  const valveCard = getValveCardCopy(product, locale);
+  if (valveCard) return valveCard.model;
+  if (product.seriesId === "MRV3" && /^mrv3-d(?:10|16|24)$/.test(product.productId)) {
+    return product.productId.toUpperCase();
+  }
   const slug = String(product.detailSlug || product.slug || "");
   const authoredCard = getPipettingCardCopy(locale, slug) || (locale === "zh" ? instrumentCardsZh : syringePumpCardsLocales[locale])?.[slug];
   return authoredCard?.model || toDisplayText(title) || product.productId;
@@ -211,9 +218,10 @@ export default function ProductSelectionCard({
   const pathname = usePathname();
   const locale = getLocaleFromPathname(pathname);
   const cardText = CARD_TEXT[locale];
+  const valveCard = getValveCardCopy(product, locale);
   const slug = String(product.detailSlug || product.slug || "");
   const authoredCard = getPipettingCardCopy(locale, slug) || (locale === "zh" ? instrumentCardsZh : syringePumpCardsLocales[locale])?.[slug];
-  const safeTitle = getProductSelectionCardName(product, locale, title);
+  const safeTitle = formatProductHeading(getProductSelectionCardName(product, locale, title));
   const isDiaphragmPumpCard =
     product.productTypeId === "diaphragm-pump" ||
     product.productTypeSlug === "diaphragm-pumps";
@@ -232,22 +240,28 @@ export default function ProductSelectionCard({
     .map((spec) => toDisplayText(spec))
     .filter(Boolean);
   const plungerCardHeading = getProductCardHeading(product, locale);
-  const descriptionHeading = authoredCard?.heading || ((isDiaphragmPumpCard || product.productTypeId === "valveless-pump")
+  const isMrv3Configuration = product.seriesId === "MRV3" && /^mrv3-d(?:10|16|24)$/.test(product.productId);
+  const isSolenoidConfiguration = product.seriesId === "6010" && /^(?:2|3)-way$/.test(product.productId);
+  const imageAlt = (isMrv3Configuration || isSolenoidConfiguration) && typeof product.imageAlt === "string" && product.imageAlt.trim()
+    ? product.imageAlt
+    : valveCard ? `FOREACH ${valveCard.model} ${valveCard.name}` : safeTitle;
+  const descriptionHeading = valveCard?.heading || ((isMrv3Configuration || product.seriesId === "6010") ? safeSubtitle : authoredCard?.heading || ((isDiaphragmPumpCard || product.productTypeId === "valveless-pump")
     ? safeSubtitle
-    : plungerCardHeading);
+    : plungerCardHeading));
   const usesDescriptionHeading = Boolean(descriptionHeading);
+  const DescriptionHeading = product.categoryId === "valves" ? "h2" : "h3";
 
   return (
     <article
       className="product-card"
       data-product-type-id={product.productTypeId || undefined}
-      title={safeTitle}
+      title={valveCard ? `${safeTitle} ${valveCard.name}` : safeTitle}
     >
       <span className="selected-bar" />
 
-      <div className="product-image" aria-label={safeTitle}>
+      <div className="product-image" aria-label={imageAlt}>
         {product.imageCard ? (
-          <img src={product.imageCard} alt={safeTitle} loading="lazy" />
+          <img src={product.imageCard} alt={imageAlt} loading="lazy" />
         ) : (
           <div className="product-image-placeholder">{cardText.imagePlaceholder}</div>
         )}
@@ -261,9 +275,9 @@ export default function ProductSelectionCard({
         )}
 
         {usesDescriptionHeading ? (
-          <h3 className="product-card-summary product-card-description-heading">
-            {descriptionHeading}
-          </h3>
+          <DescriptionHeading className="product-card-summary product-card-description-heading">
+            {formatProductHeading(descriptionHeading || "")}
+          </DescriptionHeading>
         ) : cardSpecs.length > 0 ? (
           <ul className="product-card-specs" aria-label={`${safeTitle} ${cardText.specsAriaSuffix}`}>
             {cardSpecs.map((spec, index) => (
@@ -271,7 +285,7 @@ export default function ProductSelectionCard({
             ))}
           </ul>
         ) : safeSubtitle ? (
-          <p className="product-card-summary">{safeSubtitle}</p>
+          <p className="product-card-summary">{formatProductHeading(safeSubtitle)}</p>
         ) : null}
 
         <div className="product-actions">

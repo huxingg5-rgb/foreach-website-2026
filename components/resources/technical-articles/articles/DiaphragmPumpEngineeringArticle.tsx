@@ -12,8 +12,8 @@ import type {
 import type { TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
 import { getLocalizedInternalHref } from "@/lib/seo/site-url";
 
-import newsStyles from "../../news/NewsArticleClient.module.css";
-import styles from "./DiaphragmPumpEngineeringArticle.module.css";
+import newsStyles from "./TechnicalArticleBody.module.css";
+import styles from "./TechnicalArticleBody.module.css";
 
 type DiaphragmPumpEngineeringArticleProps = {
   articleSlug: DiaphragmPumpEngineeringArticleSlug;
@@ -197,11 +197,11 @@ export function EngineeringArticleContent({
       <section className={newsStyles.contentBlock}>
         <h2>{copy.faqTitle}</h2>
         <div className={styles.faqList}>
-          {copy.faqItems.map((item) => (
-            <article className={styles.faqItem} key={item.question}>
-              <h3>{item.question}</h3>
+          {copy.faqItems.map((item, index) => (
+            <details className={styles.faqItem} key={item.question} open={index === 0}>
+              <summary><h3>{item.question}</h3></summary>
               <p>{item.answer}</p>
-            </article>
+            </details>
           ))}
         </div>
       </section>

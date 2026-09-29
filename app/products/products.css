@@ -1356,7 +1356,8 @@
   border-bottom: 1px solid var(--line);
 }
 
-.products-selection-page .filter-panel-head h2 {
+.products-selection-page .filter-panel-head h2,
+.products-selection-page .filter-panel-head .filter-panel-title {
   margin: 0;
   color: var(--brand-blue);
   font-size: 20px;
@@ -2748,6 +2749,25 @@
   text-decoration: none !important;
 }
 
+/* MRV3 intro links share body typography; highlight only on interaction. */
+.products-selection-page
+  .product-type-intro-module[data-product-type-id="旋转阀"]
+  .product-type-intro-link {
+  font: inherit !important;
+  text-decoration: none !important;
+}
+
+.products-selection-page
+  .product-type-intro-module[data-product-type-id="旋转阀"]
+  .product-type-intro-link:hover,
+.products-selection-page
+  .product-type-intro-module[data-product-type-id="旋转阀"]
+  .product-type-intro-link:focus-visible {
+  color: var(--brand-cyan, #09e9b4) !important;
+  text-decoration: underline !important;
+  text-decoration-color: var(--brand-cyan, #09e9b4) !important;
+}
+
 /* HaloFlx 右下角装饰字：背景层，不占空间 */
 .products-selection-page .product-type-intro-module::after {
   content: "HaloFlx";
@@ -3212,7 +3232,7 @@
   line-height: 1.35;
 }
 
-/* 产品卡片语义标题：型号保持粗体主视觉，描述性 H3 使用正文视觉。 */
+/* 产品卡片语义标题：型号保持粗体主视觉，描述性标题使用正文视觉。 */
 .products-selection-page .product-card .product-card-description-heading {
   margin-bottom: 0;
   color: #172033;
@@ -3224,7 +3244,7 @@
 @media (max-width: 900px) {
   .products-selection-page
     .product-card
-    h3.product-card-description-heading {
+    :is(h2, h3).product-card-description-heading {
     margin-top: -2px !important;
     margin-bottom: 0 !important;
     font-size: 12px !important;
@@ -3831,36 +3851,6 @@
 }
 
 /* LUER_FILTER_DISABLED_STYLE_END */
-
-/* VALVE_SERIES_FILTER_THREE_COLUMNS_START */
-
-/*
- * 阀系列的三个筛选项在PC端同一行显示。
- * 该规则只作用于阀系列，不影响泵、针、接头和其他筛选页面。
- */
-@media (min-width: 761px) {
-  .products-selection-page
-    .filter-panel[data-category-id="valves"]
-    .product-type-filter-group
-    .filter-options {
-    grid-template-columns: repeat(
-      3,
-      minmax(0, 1fr)
-    );
-    gap: 6px;
-  }
-
-  .products-selection-page
-    .filter-panel[data-category-id="valves"]
-    .product-type-filter-group
-    .filter-option {
-    min-width: 0;
-    padding-left: 8px;
-    padding-right: 8px;
-  }
-}
-
-/* VALVE_SERIES_FILTER_THREE_COLUMNS_END */
 
 /* MOBILE_FILTER_COLLAPSE_V2_CSS_START */
 
@@ -4663,6 +4653,7 @@
 /* Shared desktop filter hierarchy; mobile and helper copy retain regular weight. */
 @media (min-width: 1025px) {
   .products-selection-page .filter-panel .filter-panel-head h2,
+  .products-selection-page .filter-panel .filter-panel-head .filter-panel-title,
   .products-selection-page .filter-panel .filter-group-trigger,
   .products-selection-page .filter-panel .filter-group-trigger span:not(.filter-group-symbol),
   .products-selection-page .filter-panel .filter-option,

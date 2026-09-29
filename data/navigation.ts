@@ -458,19 +458,19 @@ const productMegaDropdown: MegaDropdown = {
           "/images/products/valves/rotary-valves/foreach-rotary-valve-main.webp",
           t("旋转阀", "Rotary Valve", "Válvula rotativa", "Vanne rotative", "로터리 밸브", "Роторный клапан"),
           t("多通道流路选择与切换", "Multi-port flow path selection and switching", "Selección y conmutación de rutas multicanal", "Sélection et commutation de voies multicanaux", "다중 포트 유로 선택 및 전환", "Выбор и переключение многоканальных потоков"),
-          localizedPath("/products/valves/rotary-valves")
+          localizedPath("/products/valves?productType=旋转阀")
         ),
         productImage(
           "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp",
           t("高压阀", "High Pressure Valve", "Válvula de alta presión", "Vanne haute pression", "고압 밸브", "Клапан высокого давления"),
           t("适用于高压流路切换与精密控制", "For high-pressure flow switching and precise control", "Para conmutación de flujo de alta presión y control preciso", "Pour commutation de flux haute pression et contrôle précis", "고압 유로 전환 및 정밀 제어용", "Для переключения потоков высокого давления и точного управления"),
-          localizedPath("/products/valves/high-pressure-valves")
+          localizedPath("/products/valves?productType=高压阀")
         ),
         productImage(
           "/images/products/valves/solenoid-valves/foreach-solenoid-valve-main.webp",
           t("电磁阀", "Solenoid Valve", "Válvula solenoide", "Électrovanne", "솔레노이드 밸브", "Соленоидный клапан"),
           t("流路通断控制与精密切换", "On/off control and precise flow switching", "Control de apertura/cierre y conmutación precisa", "Commande marche/arrêt et commutation précise", "유로 온오프 제어 및 정밀 전환", "Управление вкл./выкл. и точное переключение потока"),
-          localizedPath("/products/valves/solenoid-valves")
+          localizedPath("/products/valves?productType=电磁阀")
         ),
       ],
       order: 2,

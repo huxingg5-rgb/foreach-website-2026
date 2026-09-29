@@ -7,6 +7,7 @@ import { instrumentIntrosZh, instrumentSeriesIntrosZh } from "./instrument-fluid
 import { valvelessPumpIntroZh } from "./valveless-pump-copy.zh";
 import { getValvelessLocaleCopy } from "../detail/valveless-pump-locales";
 import { getPistonPumpIntroCopy } from "./piston-pump-series-copy";
+import { getHpValveIntro } from "./hp-valve-intro";
 /* =========================================================
    product-type-intro.ts
    恒永达官网｜产品中心产品种类介绍数据
@@ -530,13 +531,16 @@ export function getProductTypeIntroByIds(
   locale: SelectionLocale = "zh"
 ) {
   const key = `${categoryId}:${productTypeId}`;
+  const activeLocale = getRuntimeLocale(locale);
+  if (categoryId === "valves" && ["高压阀", "high-pressure-valves"].includes(productTypeId)) {
+    return getHpValveIntro(activeLocale);
+  }
   const baseIntro = productTypeIntroMap[key];
 
   if (!baseIntro) {
     return null;
   }
 
-  const activeLocale = getRuntimeLocale(locale);
   if (key === "pumps:pipette-pump") {
     const copy = getPipettingCopy(activeLocale);
     return { ...baseIntro, ...copy, image: { ...baseIntro.image, alt: copy.imageAlt } };

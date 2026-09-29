@@ -239,6 +239,40 @@ interface ArticleClassificationDefinition {
 }
 
 const articleClassifications: Record<string, ArticleClassificationDefinition> = {
+  "how-does-a-rotary-selector-valve-work": {
+    primaryCategory: "valves", secondaryCategory: "multi-port-valves",
+    tagKeys: ["fluid-switching", "cleaning", "oem-integration"],
+    relatedProducts: ["MRV3"],
+    relationKeys: ["series:mrv3", "category:rotary-valves"], relationPriority: 160,
+  },
+  "what-is-a-solenoid-valve": {
+    primaryCategory: "valves", secondaryCategory: "solenoid-valves",
+    tagKeys: ["solenoid-valve", "fluid-switching", "testing-validation"],
+    relatedProducts: ["6010"],
+    relationKeys: ["series:6010", "category:solenoid-valves"], relationPriority: 160,
+  },
+  "how-does-an-hplc-injection-valve-work": {
+    primaryCategory: "valves", secondaryCategory: "high-pressure-valves",
+    tagKeys: ["high-pressure", "fluid-switching", "testing-validation"],
+    relatedProducts: ["HP"],
+    relationKeys: ["series:hp", "category:high-pressure-valves"], relationPriority: 160,
+  },
+  "what-is-pipetting": {
+    primaryCategory: "applications-solutions",
+    secondaryCategory: "reagent-sample-handling",
+    tagKeys: ["dosing", "precision", "testing-validation"],
+    localizedLiteralTags: {
+      "zh-CN": ["移液", "手持移液", "自动移液"],
+      en: ["Pipetting", "Manual pipetting", "Automated pipetting"],
+      es: ["Pipeteo", "Pipeteo manual", "Pipeteo automatizado"],
+      fr: ["Pipetage", "Pipetage manuel", "Pipetage automatisé"],
+      ko: ["피펫팅", "수동 피펫팅", "자동 피펫팅"],
+      ru: ["Пипетирование", "Ручное пипетирование", "Автоматизированное пипетирование"],
+    },
+    relatedProducts: [],
+    relationKeys: ["category:syringe-pumps", "category:pipetting-pumps"],
+    relationPriority: 100,
+  },
   "what-is-a-programmable-syringe-pump": {
     primaryCategory: "pumps",
     secondaryCategory: "syringe-pumps",

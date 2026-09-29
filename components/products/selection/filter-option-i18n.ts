@@ -203,12 +203,12 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
   },
 
   "多通道旋转阀": {
-    zh: "多通道旋转阀",
-    en: "Multi-Channel Rotary Valve",
-    es: "Válvula rotativa multicanal",
-    fr: "Vanne rotative multicanal",
-    ko: "다채널 로터리 밸브",
-    ru: "Многоканальный поворотный клапан",
+    zh: "旋转选择阀",
+    en: "Rotary Selector Valves",
+    es: "Válvulas selectoras rotativas",
+    fr: "Vannes de sélection rotatives",
+    ko: "로터리 셀렉터 밸브",
+    ru: "Роторные клапаны-селекторы",
   },
   "高压旋转阀": {
     zh: "高压旋转阀",

@@ -1,5 +1,9 @@
 import { applyInstrumentFluidicsChineseCopy } from "@/data/products/detail/instrument-fluidics-copy.zh";
-import type { ComponentType } from "react";
+import SolenoidConfigurationPage, { getSolenoidMetadata } from "@/components/products/detail/SolenoidConfigurationPage";
+import { getMrv3Content } from "@/data/products/detail/mrv3-content";
+import { getMrv3Metadata } from "@/components/products/detail/Mrv3ConfigurationPage";
+import type { ComponentType, ReactNode } from "react";
+import RelatedResources from "@/components/common/related-resources/RelatedResources";
 
 import { notFound } from "next/navigation";
 
@@ -47,6 +51,7 @@ const details = valveDetailData as ValveDetailRecord[];
 */
 const ProductDetailView = ProductDetailClient as unknown as ComponentType<{
   data: any;
+  afterContent?: ReactNode;
 }>;
 
 export const dynamicParams = false;
@@ -263,7 +268,10 @@ function toClientData(detail: ValveDetailRecord) {
 
 export async function generateMetadata({ params }: ValveDetailPageProps) {
   const { slug } = await params;
-  const detail = getDetailBySlug(slug);
+  if (slug === "rotary-valves") return getMrv3Metadata(slug, "zh");
+  if (slug === "solenoid-valves") return getSolenoidMetadata(slug, "zh");
+  const baseDetail = getDetailBySlug(slug);
+  const detail = baseDetail ? { ...baseDetail, ...getMrv3Content(slug, "zh") } : undefined;
 
   if (!detail) {
     return {
@@ -286,6 +294,7 @@ export async function generateMetadata({ params }: ValveDetailPageProps) {
 export default async function ValveDetailPage({ params }: ValveDetailPageProps) {
   const { slug } = await params;
   const detail = getDetailBySlug(slug);
+  if (slug === "solenoid-valves") return <SolenoidConfigurationPage slug={slug} locale="zh" />;
 
   if (!detail) {
     notFound();
@@ -364,7 +373,11 @@ export default async function ValveDetailPage({ params }: ValveDetailPageProps) 
           margin-top: 0 !important;
         }
       ` }} />
-      <ProductDetailView data={applyInstrumentFluidicsChineseCopy(toClientData(detail), "zh")} />
+      <ProductDetailView data={applyInstrumentFluidicsChineseCopy(toClientData(detail), "zh")}
+        afterContent={slug === "high-pressure-valves" || slug === "rotary-valves" ? (
+          <RelatedResources sourceType="product" sourceSlug={slug}
+            relationKeys={[slug === "high-pressure-valves" ? "series:hp" : "series:mrv3"]} locale="zh-CN" />
+        ) : undefined} />
     </div>
   );
 }

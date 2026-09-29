@@ -1,0 +1,155 @@
+{
+  "seriesTitle": "Électrovannes miniatures à membrane",
+  "seriesDescription": "Les électrovannes miniatures FOREACH SV10 utilisent une membrane à bascule pour ouvrir, fermer ou commuter les connexions fluidiques des équipements automatisés. Choisissez une version à 2 voies normalement fermée, à 2 voies normalement ouverte ou à 3 voies pour l’alimentation en réactifs et le rinçage.",
+  "seriesIntegration": "Comparez le montage sur embase, les raccords filetés et les embouts cannelés selon votre manifold, vos raccords ou vos tuyaux souples. Les membranes sont proposées en EPDM, FKM ou FFKM, avec une alimentation de 12 ou 24 V CC et un circuit économiseur en option.",
+  "seriesCompare": "Choisissez d’abord la commande tout ou rien à 2 voies ou la commutation à 3 voies. Pour 2 voies, choisissez normalement fermée ou ouverte, puis les raccords, les matériaux et la tension.",
+  "seriesSeo": "Comparez les électrovannes miniatures FOREACH SV10 à 2 ou 3 voies : montage sur embase, raccords filetés ou embouts cannelés, alimentation 12/24 V CC.",
+  "valves": "Vannes",
+  "seriesLabel": "Électrovannes SV10",
+  "productType": "Électrovannes à membrane",
+  "models": {
+    "base": {
+      "descriptor": "Électrovanne à membrane sur embase",
+      "heading": "Électrovanne à membrane sur embase pour intégration sur manifold, à 2 ou 3 voies",
+      "definition": "La FOREACH SV10-P est une électrovanne à membrane à bascule sur embase de la série SV10. Elle se monte directement sur un manifold fluidique pour contrôler les connexions de réactif ou de rinçage.",
+      "installation": "La plaque de base en PEEK assure l’étanchéité avec le manifold. Vérifiez les orifices, les trous de positionnement et les joints de la version à 2 ou 3 voies avant de concevoir la surface de montage.",
+      "connection": "Surface de montage sur manifold",
+      "seo": "Électrovanne SV10-P sur embase pour manifolds fluidiques : versions à 2 voies NF/NO ou à 3 voies, choix de membrane et alimentation 12/24 V CC."
+    },
+    "threaded": {
+      "descriptor": "Électrovanne à membrane à raccords filetés",
+      "heading": "Électrovanne à membrane pour circuits de réactif et de rinçage, avec raccords M6 ou 1/4-28 UNF",
+      "definition": "Les FOREACH SV10-M6 et SV10-U28 sont des électrovannes à membrane à bascule de la série SV10, à raccords filetés. Elles se raccordent aux tubes pour ouvrir ou fermer une ligne de réactif, ou commuter entre réactif et liquide de rinçage.",
+      "installation": "Choisissez des raccords M6 ou 1/4-28 UNF correspondant à la vanne. La profondeur d’engagement recommandée est de 5 mm et le couple de serrage de 0,25–0,3 N·m. Utilisez une rondelle adaptée à l’étanchéité en fond de raccord.",
+      "connection": "M6 / 1/4-28 UNF",
+      "seo": "Électrovannes SV10-M6 et SV10-U28 pour réactifs et rinçage. Raccords M6 ou 1/4-28 UNF ; versions à 2 voies NF/NO ou à 3 voies."
+    },
+    "barbed": {
+      "descriptor": "Électrovanne à membrane à embouts cannelés",
+      "heading": "Électrovanne à membrane à embouts cannelés pour tuyaux souples, à 2 ou 3 voies",
+      "definition": "La FOREACH SV10-B16 est une électrovanne à membrane à bascule de la série SV10, à embouts cannelés. Elle se raccorde directement aux tuyaux souples pour commander et commuter les circuits de réactif et de rinçage.",
+      "installation": "Utilisez un tuyau de diamètre intérieur 1,5–2,0 mm, de dureté 55–65 Shore A et de diamètre extérieur inférieur à 4,5 mm. Un support de montage personnalisé est disponible.",
+      "connection": "Embouts cannelés ; diamètre intérieur du tuyau 1,5–2,0 mm",
+      "seo": "Électrovanne SV10-B16 à embouts cannelés pour tuyaux souples. Versions à 2 voies NF/NO ou à 3 voies, choix de membrane et alimentation 12/24 V CC."
+    }
+  },
+  "functionIntro": "Une vanne à 2 voies ouvre ou ferme une connexion ; choisissez l’état normalement fermé ou ouvert selon le besoin hors tension. Une vanne à 3 voies commute l’orifice commun entre les deux autres orifices. La pompe ou une différence de pression déplace le fluide ; la vanne en contrôle le trajet.",
+  "materialIntro": "Choisissez une membrane et des joints toriques en EPDM, FKM ou FFKM selon le réactif et le liquide de rinçage. Les versions sur embase et à embouts cannelés ont une plaque de base en PEEK. Les versions filetées offrent plusieurs matériaux de siège ; les configurations avec siège ou plaque de base en PFA nécessitent une vérification spécifique.",
+  "labels": [
+    "Famille de modèles",
+    "Structure",
+    "Orifices et fonction",
+    "Connexion",
+    "Pression de service",
+    "Diamètre d’orifice",
+    "Volume de chambre",
+    "Coefficient de débit Cv",
+    "Membrane et joints toriques",
+    "Plaque de base",
+    "Matériaux du siège des versions filetées",
+    "Tension nominale",
+    "Puissance standard",
+    "Circuit économiseur",
+    "Temps de réponse standard",
+    "Temps de réponse avec économiseur",
+    "Température ambiante",
+    "Température du fluide",
+    "Classe d’isolation de la bobine",
+    "Masse",
+    "Conditions de mesure du temps de réponse"
+  ],
+  "structure": "Vanne à membrane à bascule",
+  "functions": "2 voies NF / 2 voies NO / 3 voies universelle",
+  "baseMaterial": "PEEK ; PFA sur versions filetées selon configuration",
+  "seatMaterial": "PVDF / PTFE / PMMA / POM / PEEK ; PFA après vérification",
+  "saving": "Démarrage : 2,5 W ; maintien : ≤1 W",
+  "standardResponse": "≤15 ms, à vide",
+  "savingResponse": "≤25 ms, à vide",
+  "fluidTemperature": "0–50 °C, sans gel",
+  "testConditions": "25 °C, tension nominale, pression maximale de service avec air appliquée à l’orifice commun. Le temps dépend du fluide, de la pression, des tubes et de la température.",
+  "applications": "Applications",
+  "typicalApplications": "Applications courantes",
+  "applicationsIntro": "La série SV10 détermine quand une connexion est ouverte et quel trajet est sélectionné. Choisissez la fonction selon le procédé, puis la connexion selon l’implantation de l’équipement.",
+  "applicationItems": [
+    {
+      "title": "Alimentation en réactif : ouvrir au bon moment",
+      "paragraphs": [
+        "Dans un analyseur automatisé, une vanne à 2 voies peut ouvrir la ligne pendant l’ajout de réactif, puis la fermer. Choisissez NF pour une connexion fermée hors tension, ou NO pour une connexion ouverte hors tension.",
+        "Coordonnez la vanne, la pompe et le programme. La vanne contrôle la connexion ; la pompe et sa séquence de fonctionnement déterminent la quantité transférée."
+      ]
+    },
+    {
+      "title": "Rinçage : commuter entre réactif et liquide de nettoyage",
+      "paragraphs": [
+        "Une vanne à 3 voies peut relier une ligne commune alternativement au réactif et au liquide de rinçage. Après l’utilisation du réactif, commutez vers le rinçage et utilisez la pompe pour nettoyer les tubes communs.",
+        "Définissez le volume et le nombre de rinçages selon les fluides, la longueur des tubes et les résidus acceptables, puis vérifiez le cycle réel."
+      ]
+    },
+    {
+      "title": "Intégration : manifold ou tuyauterie",
+      "paragraphs": [
+        "Utilisez la version sur embase pour regrouper des vannes sur un manifold. Choisissez les connexions filetées pour des raccords de tubes, ou les embouts cannelés pour des tuyaux souples.",
+        "Prévoyez l’accès au montage, au remplacement des tuyaux et au câblage. Les trois formes de connexion permettent de choisir une fonction à 2 ou 3 voies."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Comment choisir entre 2 et 3 voies ?",
+      "answer": "Une vanne à 2 voies ouvre ou ferme une connexion. Une vanne à 3 voies commute une connexion commune entre deux autres orifices, par exemple réactif et rinçage. Définissez d’abord le raccordement des orifices au circuit."
+    },
+    {
+      "question": "Que signifient normalement fermée et normalement ouverte ?",
+      "answer": "Ces termes décrivent l’état hors tension. Une vanne normalement fermée (NF) est fermée sans alimentation et s’ouvre sous tension. Une vanne normalement ouverte (NO) fonctionne à l’inverse. Choisissez l’état hors tension requis par l’équipement."
+    },
+    {
+      "question": "Comment choisir les matériaux de membrane et de siège ?",
+      "answer": "Indiquez la composition, la concentration, la température et la durée de contact des réactifs et produits de rinçage. Vérifiez ensemble membrane, joints, plaque de base et siège des versions filetées. Le seul nom du matériau ne garantit pas la compatibilité avec tous les fluides."
+    },
+    {
+      "question": "Quelles alimentations et options d’économie d’énergie sont proposées ?",
+      "answer": "La série propose 12 ou 24 V CC avec une tolérance de ±10 %. La puissance standard est de 2,5 W. Le circuit économiseur utilise 2,5 W au démarrage et au plus 1 W au maintien. Respectez la polarité : rouge positif, noir négatif."
+    },
+    {
+      "question": "Quel est le temps de réponse ?",
+      "answer": "Il est de ≤15 ms en version standard et ≤25 ms avec économiseur, à vide, à 25 °C, sous tension nominale et pression maximale de service avec air à l’orifice commun. Il varie selon le circuit et le fluide. Les membranes FFKM répondent plus lentement à 15 °C ou moins."
+    },
+    {
+      "question": "Quelles informations fournir pour configurer la vanne ?",
+      "answer": "Envoyez le schéma fluidique, le nombre de voies, l’état hors tension, les raccords, les fluides, la pression, la température et la tension. Ajoutez l’espace disponible et la cadence pour choisir les connexions, les matériaux et l’économiseur."
+    }
+  ],
+  "needsTitle": "Décrivez votre application",
+  "needsText": "Précisez quel fluide doit circuler à chaque étape et l’état souhaité hors tension. Joignez le schéma, les fluides, la pression, la température, la tension et l’espace de montage.",
+  "compareTitle": "Comparer les électrovannes à 2 et 3 voies",
+  "allModels": "Toutes les électrovannes SV10",
+  "ctaTitle": "Configurez votre électrovanne SV10",
+  "ctaText": "Adaptez la fonction, la connexion, les matériaux en contact avec le fluide et la tension à votre équipement.",
+  "ctaButton": "Discuter de votre besoin",
+  "flowTypes": {
+    "two": {
+      "cardName": "SV10-2",
+      "heading": "Électrovannes miniatures à 2 voies",
+      "functionValue": "2 voies normalement fermée / normalement ouverte",
+      "definition": "Les électrovannes miniatures FOREACH SV10 à 2 voies utilisent une membrane à bascule pour ouvrir ou fermer les lignes de réactif et de rinçage des équipements automatisés. Elles existent en versions normalement fermées ou normalement ouvertes.",
+      "operation": "Une version normalement fermée ferme la connexion hors tension et l’ouvre sous tension. Une version normalement ouverte fonctionne à l’inverse. Coordonnez la vanne, la pompe et le programme : la vanne commande la connexion, tandis que la pompe ou une différence de pression déplace le fluide.",
+      "selection": "Choisissez SV10-P pour le montage sur manifold, SV10-M6 ou SV10-U28 pour les raccords filetés, ou SV10-B16 pour les tuyaux souples. Adaptez les matériaux aux fluides et choisissez une bobine de 12 V CC ou de 24 V CC selon l’alimentation.",
+      "seo": "Électrovannes miniatures FOREACH SV10 à 2 voies, normalement fermées ou ouvertes. Montage sur embase, raccords filetés ou cannelés, alimentation 12/24 V CC.",
+      "applicationTitle": "État hors tension : normalement fermée ou ouverte",
+      "applicationText": "Choisissez normalement fermée si la ligne doit se fermer sans alimentation, ou normalement ouverte si elle doit rester ouverte. Intégrez cet état aux séquences d’arrêt et de redémarrage.",
+      "faqQuestion": "Comment une électrovanne à 2 voies commande-t-elle le passage du fluide ?"
+    },
+    "three": {
+      "cardName": "SV10-3",
+      "heading": "Électrovannes miniatures à 3 voies",
+      "functionValue": "3 voies universelle",
+      "definition": "Les électrovannes miniatures FOREACH SV10 à 3 voies utilisent une membrane à bascule pour relier alternativement un orifice commun aux deux autres orifices. Elles sélectionnent le réactif ou le liquide de rinçage dans les équipements automatisés.",
+      "operation": "Raccordez l’orifice commun à la ligne partagée et les deux autres orifices aux trajets à sélectionner. Coordonnez la commutation avec la pompe et le programme. Trois orifices ne signifient ni trois débits simultanés ni un mélange proportionnel.",
+      "selection": "Choisissez SV10-P pour le manifold, SV10-M6 ou SV10-U28 pour les raccords filetés, ou SV10-B16 pour les tuyaux souples. Confirmez l’orifice commun et les connexions sous et hors tension, puis les matériaux et la bobine de 12 V CC ou 24 V CC.",
+      "seo": "Électrovannes miniatures FOREACH SV10 à 3 voies pour réactifs et rinçage. Comparez les raccords sur embase, filetés ou cannelés et les options 12/24 V CC.",
+      "applicationTitle": "Raccordement : identifier l’orifice commun",
+      "applicationText": "Identifiez la ligne partagée et les deux trajets à sélectionner. Vérifiez les connexions sous et hors tension, puis coordonnez la commutation avec la séquence de la pompe.",
+      "faqQuestion": "Comment une électrovanne à 3 voies commute-t-elle les trajets du fluide ?"
+    }
+  }
+}

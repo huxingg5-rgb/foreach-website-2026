@@ -1,7 +1,7 @@
 import Link from "next/link";
 
-import newsStyles from "../../news/NewsArticleClient.module.css";
-import styles from "./DiaphragmPumpEngineeringArticle.module.css";
+import newsStyles from "./TechnicalArticleBody.module.css";
+import styles from "./TechnicalArticleBody.module.css";
 
 export const pistonPumpHeadMaterialArticleSlug =
   "piston-pump-head-material-selection" as const;
@@ -317,11 +317,11 @@ export default function PistonPumpHeadMaterialArticle() {
       <section className={newsStyles.contentBlock}>
         <h2>FAQ</h2>
         <div className={styles.faqList}>
-          {pistonPumpHeadMaterialArticleFaqZh.map((item) => (
-            <article className={styles.faqItem} key={item.question}>
-              <h3>{item.question}</h3>
+          {pistonPumpHeadMaterialArticleFaqZh.map((item, index) => (
+            <details className={styles.faqItem} key={item.question} open={index === 0}>
+              <summary><h3>{item.question}</h3></summary>
               <p>{item.answer}</p>
-            </article>
+            </details>
           ))}
         </div>
       </section>

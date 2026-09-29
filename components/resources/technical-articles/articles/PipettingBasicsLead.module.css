@@ -1,0 +1,93 @@
+/* Article-only spacing: other technical articles keep the shared template. */
+.article [data-article-header] > h1 { margin-bottom: 16px; }
+.article [data-article-header] > time { margin-bottom: 16px; }
+.article [data-article-meta] { min-height: 1px; margin-bottom: 24px; }
+.article [data-article-sidebar] { grid-row: 4 / span 2; padding-top: 0; }
+.article [data-article-body] > section:first-child { margin-top: 28px; padding-top: 28px; }
+.article [data-article-body] p > strong { font-weight: 600; }
+.article [data-article-body] ol + p { margin-top: 18px; }
+.article [data-article-body] caption { color: #171717; font-size: 15px; line-height: 1.8; margin-bottom: 16px; }
+.article [data-article-body] [data-article-gallery] { margin: 16px 0 24px; }
+.article [data-article-body] [data-article-figure] figcaption { border-top: 0; padding-top: 8px; text-align: left; color: #575757; font-size: 14px; }
+.article [data-article-body] table[data-columns="2"] { min-width: 0; }
+.article [data-article-body] table[data-columns="2"] th:first-child { width: 28%; }
+.article [data-article-body] table[data-columns="2"] th,
+.article [data-article-body] table[data-columns="2"] td { overflow-wrap: anywhere; }
+
+.article .overview { margin: 24px 0 0; }
+.flowRow {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  align-items: center;
+  gap: 20px;
+  padding: 16px 0;
+  border-top: 1px solid #d9d9d9;
+}
+.flowLabel { display: grid; gap: 4px; }
+.flowLabel strong { font-size: 16px; font-weight: 600; color: #171717; }
+.flowLabel > span { color: #575757; font-size: 13px; line-height: 1.6; }
+.article .flowSteps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.article .flowSteps li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  margin: 0;
+  padding: 8px 6px;
+  border: 1px solid #575757;
+  border-radius: 3px;
+  background: #fff;
+  color: #171717;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+}
+.arrow { position: absolute; left: -23px; top: 50%; width: 22px; transform: translateY(-50%); color: #575757; }
+.overview figcaption { margin-top: 4px; color: #575757; font-size: 14px; line-height: 1.7; text-align: left; }
+
+@media (max-width: 1100px) {
+  .flowRow { grid-template-columns: 1fr; gap: 12px; }
+  .flowLabel { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 12px; }
+}
+@media (max-width: 900px) {
+  .article [data-article-body] > section:first-child { margin-top: 0; }
+}
+@media (max-width: 600px) {
+  .article [data-article-header] > h1 { margin-bottom: 12px; }
+  .article .overview { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 20px; }
+  .flowRow { align-items: start; }
+  .flowLabel { display: grid; gap: 4px; }
+  .flowLabel > span { font-size: 12px; }
+  .article .flowSteps { grid-template-columns: 1fr; gap: 24px; }
+  .article .flowSteps li { min-height: 40px; padding: 7px 6px; font-size: 15px; }
+  .arrow { left: calc(50% - 11px); top: -25px; width: 22px; height: 24px; line-height: 24px; text-align: center; transform: rotate(90deg); }
+  .overview figcaption { grid-column: 1 / -1; }
+  /* Stack detailed flows on phones so long translated labels stay readable. */
+  .article [data-article-figure] > ol[data-nodes] { grid-template-columns: 1fr; gap: 24px; }
+  .article [data-article-figure] > ol[data-nodes] li {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    min-height: 48px;
+    padding: 10px 14px;
+    gap: 12px;
+    text-align: left;
+    overflow-wrap: anywhere;
+  }
+  .article [data-article-figure] > ol[data-nodes] li > [aria-hidden="true"] {
+    left: calc(50% - 11px);
+    top: -25px;
+    width: 22px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    transform: rotate(90deg);
+  }
+}

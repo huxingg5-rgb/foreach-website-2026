@@ -49,7 +49,7 @@ export const instrumentCardsZh: Record<string, { model: string; type: string; pa
     "heading": "25 MPa 二位六通带排气高压旋转阀，用于 HPLC 自动进样与定量环切换，采用 10-32 UNF 接口"
   },
   "solenoid-valves": {
-    "model": "6010 系列",
+    "model": "SV10 系列",
     "type": "电磁阀",
     "parent": "/products/valves/",
     "heading": "微型摆臂隔膜电磁阀，用于试剂、清洗液和稀释液通断控制，提供二通、三通及多种安装配置"

@@ -3,6 +3,7 @@ import { getDiaphragmPumpReferenceByProductId } from "@/data/products/detail/dia
 import { getDiaphragmPumpPath } from "@/data/products/detail/diaphragm-pump-routes";
 import { diaphragmPumpSelectionProducts } from "@/data/products/selection/diaphragm-pump-selection.generated";
 import { pistonPumpRelatedProducts } from "@/data/products/selection/piston-pump-related-products";
+import { valveSelectionProducts } from "@/data/products/selection/valve-selection.generated";
 import { pipettingPumpSelectionProducts } from "@/data/products/selection/pipetting-pump-selection.generated";
 import { getPipettingModelPath } from "@/data/products/selection/pipetting-pump-routes";
 import { syringePumpSelectionProducts } from "@/data/products/selection/syringe-pump-selection.generated";
@@ -24,6 +25,10 @@ import { getTechnicalArticlesPageData } from "@/services/resources/technical-art
 import type { RelatedResourcesProps, RelatedResourcesData } from "@/components/common/related-resources/related-resources.types";
 
 const relatedResourceProducts: ProductSelectionProduct[] = [
+  ...valveSelectionProducts.map(product => ({
+    ...product,
+    relationKeys: [`series:${String(product.code).toLowerCase()}`, `category:${product.productTypeSlug}`],
+  })),
   ...diaphragmPumpSelectionProducts,
   ...pistonPumpRelatedProducts,
   ...syringeModelRoutes.flatMap(({ model, legacy }) => {
@@ -167,7 +172,7 @@ function selectFeaturedProducts(products: ProductSelectionProduct[]) {
 
 /** Resolve relations at build/render time. Never pass full article bodies to a Client Component. */
 export function getRelatedResourcesData({
-  sourceType, sourceId, sourceSlug, relationKeys = [], includeRelatedArticles = false, locale,
+  sourceType, sourceId, sourceSlug, relationKeys = [], featuredProductIds, includeRelatedArticles = false, locale,
 }: RelatedResourcesProps): RelatedResourcesData {
   const query = { id: sourceId, slug: sourceSlug, relationKeys };
   const videos = sourceType === "video" ? [] : getRelatedVideos(getInstallationGuidePageData(locale).guides, query);
@@ -175,9 +180,14 @@ export function getRelatedResourcesData({
     getRelatedArticles(getTechnicalArticlesPageData(locale).articles, query).map(
       ({ id, slug, title, summary, date, coverImage }) => ({ id, slug, title, summary, date, coverImage }),
     );
-  const products = sourceType === "product" ? [] : selectFeaturedProducts(getRelatedProducts(
-    relatedResourceProducts.filter(product => Boolean(getProductDetailTitle(product, locale))), query,
-  )).map(product => {
+  const availableProducts = relatedResourceProducts.filter(product => Boolean(getProductDetailTitle(product, locale)));
+  const selectedProducts = featuredProductIds
+    ? [...new Set(featuredProductIds)].flatMap(id => {
+      const product = availableProducts.find(item => item.productId === id);
+      return product ? [product] : [];
+    })
+    : selectFeaturedProducts(getRelatedProducts(availableProducts, query));
+  const products = sourceType === "product" ? [] : selectedProducts.map(product => {
     const title = getProductDetailTitle(product, locale);
     return {
       id: product.productId, title,

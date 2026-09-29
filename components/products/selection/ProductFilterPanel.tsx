@@ -285,10 +285,15 @@ export default function ProductFilterPanel({
   return (
     <aside
       className="filter-panel"
+      aria-label={activeCategory.id === "valves" ? activeCategory.label : undefined}
       data-category-id={activeCategory.id}
       data-product-type-id={activeProductTypeId || ""}>
       <div className="filter-panel-head">
-        <h2>{activeCategory.label}</h2>
+        {activeCategory.id === "valves" ? (
+          <p className="filter-panel-title">{activeCategory.label}</p>
+        ) : (
+          <h2>{activeCategory.label}</h2>
+        )}
         <p>{activeCategory.description}</p>
       </div>
 
@@ -751,4 +756,3 @@ const inferredShouldUseTwoColumns =
     </aside>
   );
 }
-
