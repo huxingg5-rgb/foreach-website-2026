@@ -357,6 +357,16 @@ export function resolveCategoryRoute(category: string) {
   return productRouteMap.categories[category] || null;
 }
 
+export function getCategoryHrefById(categoryId: string) {
+  const matchedRoute = Object.entries(productRouteMap.categories).find(
+    ([, route]) => route.categoryId === categoryId
+  );
+
+  return matchedRoute
+    ? `/products/${matchedRoute[0]}/`
+    : `/products/?category=${encodeURIComponent(categoryId)}`;
+}
+
 export function resolveProductTypeRoute(category: string, slug: string, locale = "zh") {
   const route = productRouteMap.productTypes[slug];
 

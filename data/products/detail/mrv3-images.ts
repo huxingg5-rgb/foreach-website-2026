@@ -1,7 +1,7 @@
 import type { Mrv3Locale } from "./mrv3-locales";
 
 const imageAltByLocale: Record<Mrv3Locale, (model: string, channels: string) => string> = {
-  zh: (model, channels) => `FOREACH ${model} ${channels}通道陶瓷旋转选择阀，配备电机和控制器`,
+  zh: (model, channels) => `FOREACH ${model} ${channels}通道陶瓷旋转阀，配备电机和控制器`,
   en: (model, channels) => `FOREACH ${model} ${channels}-channel ceramic rotary selector valve with motor and controller`,
   es: (model, channels) => `Válvula selectora rotativa cerámica FOREACH ${model} de ${channels} canales, con motor y controlador`,
   fr: (model, channels) => `Vanne de sélection rotative en céramique FOREACH ${model} à ${channels} voies, avec moteur et contrôleur`,

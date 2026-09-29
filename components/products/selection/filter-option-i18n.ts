@@ -203,7 +203,7 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
   },
 
   "多通道旋转阀": {
-    zh: "旋转选择阀",
+    zh: "旋转阀",
     en: "Rotary Selector Valves",
     es: "Válvulas selectoras rotativas",
     fr: "Vannes de sélection rotatives",

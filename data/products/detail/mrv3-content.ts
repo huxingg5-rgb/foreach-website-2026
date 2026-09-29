@@ -20,9 +20,9 @@ export function getMrv3Content(slug: string, locale: string) {
   const prefix = locale === "zh" ? "" : `/${locale}`;
   const descriptor = c
     ? t(`${c.channels}通道陶瓷旋转阀`, "descriptor", [c.channels])
-    : t("陶瓷旋转选择阀", "seriesDescriptor");
+    : t("陶瓷旋转阀", "seriesDescriptor");
   const shortModel = c ? c.slug.toUpperCase() : "MRV3";
-  const seriesTitle = t("多通道旋转选择阀，提供PEEK或PCTFE阀头配置", "seriesTitle");
+  const seriesTitle = t("多通道旋转阀，提供PEEK或PCTFE阀头配置", "seriesTitle");
   const cardHeading = c ? t(`${c.channels}通道陶瓷旋转阀，用于试剂选择与清洗路径切换，采用${c.bore} mm通径和${c.port}接口`, "cardHeading", [c.channels, c.bore, c.port]) : seriesTitle;
   const title = c ? `FOREACH ${cardHeading}` : seriesTitle;
   const mrv3IntroductionParagraphs = c ? [
@@ -32,7 +32,7 @@ export function getMrv3Content(slug: string, locale: string) {
   ] : undefined;
   const description = c
     ? mrv3IntroductionParagraphs!.join("\n\n")
-    : t("FOREACH MRV3旋转选择阀是面向分析仪器和实验室自动化设备的OEM液路部件，用于试剂选择与清洗路径切换。系列提供10、16、24通道配置，通过电动旋转切换液体连接路径，配合系统完成自动化液路控制。", "seriesDescription");
+    : t("FOREACH MRV3旋转阀是面向分析仪器和实验室自动化设备的OEM液路部件，用于试剂选择与清洗路径切换。系列提供10、16、24通道配置，通过电动旋转切换液体连接路径，配合系统完成自动化液路控制。", "seriesDescription");
   const integrationIntro = t("MRV3采用氧化锆定子和蓝宝石转子，支持RS232 / RS485通信。PEEK或PCTFE阀头的可用配置依具体型号而定。选型时，根据流路连接需求比较通道数、通径、螺纹接口和内容积，并结合试剂与清洗液确认接液材料兼容性。", "seriesIntegration");
   const configurationIntro = t(`按流路连接需求比较10、16、24通道配置。查看[MRV3-D10](${prefix}${mrv3BasePath}mrv3-d10/)、[MRV3-D16](${prefix}${mrv3BasePath}mrv3-d16/)和[MRV3-D24](${prefix}${mrv3BasePath}mrv3-d24/)详情，比较通径、内容积与接口，并确认对应型号的接液材料。`, "seriesConfigurationLinks", [prefix, mrv3BasePath, prefix, mrv3BasePath, prefix, mrv3BasePath]);
   const selection = c?.channels === "10"
@@ -102,7 +102,7 @@ export function getMrv3Content(slug: string, locale: string) {
       mainImage: configurationImage.src, image: configurationImage.src, imageCard: configurationImage.src,
       imageAlt: configurationImage.alt, mainImageAlt: configurationImage.alt,
     } : {}),
-    productTypeId: "rotary-valves", productTypeSlug: "rotary-valves", productTypeName: t("旋转选择阀", "rotaryValves"),
+    productTypeId: "rotary-valves", productTypeSlug: "rotary-valves", productTypeName: t("旋转阀", "rotaryValves"),
     model: title, title, name: title, h1Title: title, pageTitle: title, productName: title, cardHeading,
     modelName: shortModel, displayModel: shortModel, modelDisplay: shortModel, productCode: shortModel, breadcrumbLabel: shortModel,
     breadcrumbCategoryLabel: t("阀", "valves"),
@@ -111,7 +111,7 @@ export function getMrv3Content(slug: string, locale: string) {
     breadcrumbSeriesHref: `${prefix}/products/?category=valves&productType=${encodeURIComponent("旋转阀")}`,
     seoTitle: c ? `${shortModel} ${descriptor} | FOREACH` : `${seriesTitle} | MRV3 | FOREACH`, seoDescription: c
       ? t(`${shortModel}：${c.channels}通道陶瓷旋转阀，用于试剂选择与清洗路径切换。比较通径、接口及PEEK或PCTFE阀头配置。FOREACH恒永达。`, "seoConfiguration", [shortModel, c.channels])
-      : t("比较MRV3系列10、16、24通道旋转选择阀，提供PEEK或PCTFE阀头配置，用于自动化试剂选择与清洗路径切换。", "seoSeries"),
+      : t("比较MRV3系列10、16、24通道旋转阀，提供PEEK或PCTFE阀头配置，用于自动化试剂选择与清洗路径切换。", "seoSeries"),
     seriesTitle, introParagraphs: [description, integrationIntro, configurationIntro],
     description, summary: description, overview: description, mrv3IntroductionParagraphs,
     isCustomOnly: true, isCustomInquiry: true, detailMode: "custom_inquiry", showCustomInquiryCta: true,

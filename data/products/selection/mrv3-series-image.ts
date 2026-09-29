@@ -1,7 +1,7 @@
 import type { SelectionLocale } from "./product-selection.types";
 
 const mrv3SeriesImageAlt: Record<SelectionLocale, string> = {
-  zh: "FOREACH MRV3 陶瓷多通道旋转选择阀，两种阀头配置及配套电机和控制器",
+  zh: "FOREACH MRV3 陶瓷多通道旋转阀，两种阀头配置及配套电机和控制器",
   en: "FOREACH MRV3 ceramic multi-channel rotary selector valves, showing two valve-head configurations with motors and controllers",
   es: "Válvulas selectoras rotativas cerámicas multicanal FOREACH MRV3, con dos configuraciones de cabezal, motores y controladores",
   fr: "Vannes de sélection rotatives multivoies en céramique FOREACH MRV3, avec deux configurations de tête, moteurs et contrôleurs",

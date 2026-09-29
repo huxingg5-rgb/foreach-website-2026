@@ -29,6 +29,7 @@ import SitePageShell from "@/components/layout/SitePageShell";
 import ProductSelectionStructuredData from "./ProductSelectionStructuredData";
 import { getProductSelectionCardName } from "./ProductSelectionCard";
 import {
+  getCategoryHrefById,
   getProductTypeFilterOptionsByCategory,
   getProductTypeHrefByIds,
   getSeriesFilterOptionsByProductType,
@@ -4157,6 +4158,19 @@ export default function ProductSelectionClient({
     });
   }, [activeProductTypeId, filterGroups, initialFilters]);
 
+  function navigateCategorySelection(categoryId: string, productTypeId?: string) {
+    const categoryHref = getCategoryHrefById(categoryId);
+    const href = localizeProductDetailHref(
+      productTypeId
+        ? `${categoryHref}${categoryHref.includes("?") ? "&" : "?"}productType=${encodeURIComponent(productTypeId)}`
+        : categoryHref
+    );
+
+    if (`${window.location.pathname}${window.location.search}` !== href) {
+      router.push(href, { scroll: false });
+    }
+  }
+
   function handleCategoryChange(categoryId: string) {
     const firstProductTypeId =
       getCategoryDefaultProductTypeId(categoryId);
@@ -4174,6 +4188,7 @@ export default function ProductSelectionClient({
     setSearchKeyword("");
     setMobileCategoryOpen(false);
     setMobileOpenFilterGroups(getDefaultMobileOpenFilterGroups(firstProductTypeId));
+    navigateCategorySelection(categoryId);
   }
 
   function toggleMobileFilterGroup(key: ProductSelectionFilterGroup["key"]) {
@@ -4206,7 +4221,7 @@ export default function ProductSelectionClient({
       return;
     }
 
-    // 阀系列在当前列表筛选，详情页仍由卡片入口打开。
+    // 阀系列保持列表视图，并将筛选写入 URL，供刷新及前进后退恢复。
     if (activeCategoryId === "valves") {
       pendingFilterRef.current = {
         filterCategory: activeCategoryId,
@@ -4234,6 +4249,7 @@ export default function ProductSelectionClient({
       );
 
       setCurrentProductPage(1);
+      navigateCategorySelection(activeCategoryId, productTypeId);
       return;
     }
 
@@ -4984,6 +5000,9 @@ function isFilterOptionActive(
       };
       setActiveProductTypeId("");
       setSelectedFilters({});
+      if (activeCategoryId === "valves") {
+        navigateCategorySelection(activeCategoryId);
+      }
       return;
     }
 
@@ -5078,6 +5097,9 @@ function isFilterOptionActive(
     setSearchInputValue("");
     setSearchKeyword("");
     setMobileOpenFilterGroups(getDefaultMobileOpenFilterGroups(defaultProductTypeId));
+    if (activeCategoryId === "valves") {
+      navigateCategorySelection(activeCategoryId);
+    }
   }
 
   function localizeProductDetailHref(
